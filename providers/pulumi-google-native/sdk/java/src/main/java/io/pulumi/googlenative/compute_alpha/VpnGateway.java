@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.VpnGatewayArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.VpnGatewayVpnGatewayInterfaceResponse;
@@ -176,6 +176,37 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
         return this.vpnInterfaces;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VpnGatewayArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.compute_alpha.VpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.compute_alpha.VpnGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VpnGateway(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VpnGateway(String name) {
+        this(name, VpnGatewayArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VpnGateway(String name, VpnGatewayArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

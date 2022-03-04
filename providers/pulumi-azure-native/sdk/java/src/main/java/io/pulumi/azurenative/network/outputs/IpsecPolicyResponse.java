@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -74,56 +74,56 @@ public final class IpsecPolicyResponse {
     /**
      * The DH Group used in IKE Phase 1 for initial SA.
      * 
-     */
+    */
     public String getDhGroup() {
         return this.dhGroup;
     }
     /**
      * The IKE encryption algorithm (IKE phase 2).
      * 
-     */
+    */
     public String getIkeEncryption() {
         return this.ikeEncryption;
     }
     /**
      * The IKE integrity algorithm (IKE phase 2).
      * 
-     */
+    */
     public String getIkeIntegrity() {
         return this.ikeIntegrity;
     }
     /**
      * The IPSec encryption algorithm (IKE phase 1).
      * 
-     */
+    */
     public String getIpsecEncryption() {
         return this.ipsecEncryption;
     }
     /**
      * The IPSec integrity algorithm (IKE phase 1).
      * 
-     */
+    */
     public String getIpsecIntegrity() {
         return this.ipsecIntegrity;
     }
     /**
      * The Pfs Group used in IKE Phase 2 for new child SA.
      * 
-     */
+    */
     public String getPfsGroup() {
         return this.pfsGroup;
     }
     /**
      * The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
      * 
-     */
+    */
     public Integer getSaDataSizeKilobytes() {
         return this.saDataSizeKilobytes;
     }
     /**
      * The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
      * 
-     */
+    */
     public Integer getSaLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
     }
@@ -201,7 +201,6 @@ public final class IpsecPolicyResponse {
             this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds);
             return this;
         }
-
         public IpsecPolicyResponse build() {
             return new IpsecPolicyResponse(dhGroup, ikeEncryption, ikeIntegrity, ipsecEncryption, ipsecIntegrity, pfsGroup, saDataSizeKilobytes, saLifeTimeSeconds);
         }

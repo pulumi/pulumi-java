@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DWCopyCommandDefaultValueResponse {
     /**
      * Column name. Type: object (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getColumnName() {
         return Optional.ofNullable(this.columnName);
     }
     /**
      * The default value of the column. Type: object (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -76,7 +76,6 @@ public final class DWCopyCommandDefaultValueResponse {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public DWCopyCommandDefaultValueResponse build() {
             return new DWCopyCommandDefaultValueResponse(columnName, defaultValue);
         }

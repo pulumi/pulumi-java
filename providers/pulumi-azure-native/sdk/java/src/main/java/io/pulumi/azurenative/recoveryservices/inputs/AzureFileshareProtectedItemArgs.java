@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.AzureFileshareProtectedItem
 import io.pulumi.azurenative.recoveryservices.inputs.KPIResourceHealthDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -32,7 +32,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -43,7 +43,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="backupSetName")
-    private final @Nullable Input<String> backupSetName;
+      private final @Nullable Input<String> backupSetName;
 
     public Input<String> getBackupSetName() {
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
@@ -54,7 +54,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+      private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -65,7 +65,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="createMode")
-    private final @Nullable Input<Either<String,CreateMode>> createMode;
+      private final @Nullable Input<Either<String,CreateMode>> createMode;
 
     public Input<Either<String,CreateMode>> getCreateMode() {
         return this.createMode == null ? Input.empty() : this.createMode;
@@ -76,7 +76,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deferredDeleteTimeInUTC")
-    private final @Nullable Input<String> deferredDeleteTimeInUTC;
+      private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
     public Input<String> getDeferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
@@ -87,7 +87,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deferredDeleteTimeRemaining")
-    private final @Nullable Input<String> deferredDeleteTimeRemaining;
+      private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
     public Input<String> getDeferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
@@ -98,7 +98,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="extendedInfo")
-    private final @Nullable Input<AzureFileshareProtectedItemExtendedInfoArgs> extendedInfo;
+      private final @Nullable Input<AzureFileshareProtectedItemExtendedInfoArgs> extendedInfo;
 
     public Input<AzureFileshareProtectedItemExtendedInfoArgs> getExtendedInfo() {
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
@@ -109,7 +109,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -120,7 +120,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
-    private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
+      private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
     public Input<Boolean> getIsDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
@@ -131,7 +131,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="isRehydrate")
-    private final @Nullable Input<Boolean> isRehydrate;
+      private final @Nullable Input<Boolean> isRehydrate;
 
     public Input<Boolean> getIsRehydrate() {
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
@@ -142,7 +142,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="isScheduledForDeferredDelete")
-    private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
+      private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
     public Input<Boolean> getIsScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
@@ -153,7 +153,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kpisHealths")
-    private final @Nullable Input<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
+      private final @Nullable Input<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
 
     public Input<Map<String,KPIResourceHealthDetailsArgs>> getKpisHealths() {
         return this.kpisHealths == null ? Input.empty() : this.kpisHealths;
@@ -164,7 +164,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="lastBackupStatus")
-    private final @Nullable Input<String> lastBackupStatus;
+      private final @Nullable Input<String> lastBackupStatus;
 
     public Input<String> getLastBackupStatus() {
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
@@ -175,7 +175,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="lastBackupTime")
-    private final @Nullable Input<String> lastBackupTime;
+      private final @Nullable Input<String> lastBackupTime;
 
     public Input<String> getLastBackupTime() {
         return this.lastBackupTime == null ? Input.empty() : this.lastBackupTime;
@@ -186,7 +186,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="lastRecoveryPoint")
-    private final @Nullable Input<String> lastRecoveryPoint;
+      private final @Nullable Input<String> lastRecoveryPoint;
 
     public Input<String> getLastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
@@ -197,7 +197,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable Input<String> policyId;
+      private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -209,7 +209,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="protectedItemType", required=true)
-    private final Input<String> protectedItemType;
+      private final Input<String> protectedItemType;
 
     public Input<String> getProtectedItemType() {
         return this.protectedItemType;
@@ -220,7 +220,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="protectionState")
-    private final @Nullable Input<Either<String,ProtectionState>> protectionState;
+      private final @Nullable Input<Either<String,ProtectionState>> protectionState;
 
     public Input<Either<String,ProtectionState>> getProtectionState() {
         return this.protectionState == null ? Input.empty() : this.protectionState;
@@ -231,7 +231,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="protectionStatus")
-    private final @Nullable Input<String> protectionStatus;
+      private final @Nullable Input<String> protectionStatus;
 
     public Input<String> getProtectionStatus() {
         return this.protectionStatus == null ? Input.empty() : this.protectionStatus;
@@ -242,7 +242,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
@@ -253,7 +253,7 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="workloadType")
-    private final @Nullable Input<Either<String,DataSourceType>> workloadType;
+      private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 
     public Input<Either<String,DataSourceType>> getWorkloadType() {
         return this.workloadType == null ? Input.empty() : this.workloadType;
@@ -597,7 +597,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
             this.workloadType = Input.ofNullable(workloadType);
             return this;
         }
-
         public AzureFileshareProtectedItemArgs build() {
             return new AzureFileshareProtectedItemArgs(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemType, protectionState, protectionStatus, sourceResourceId, workloadType);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.pinpoint;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.pinpoint.inputs.GetInAppTemplateArgs;
 import io.pulumi.awsnative.pinpoint.outputs.GetInAppTemplateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInAppTemplate {
-/**
- * Resource Type definition for AWS::Pinpoint::InAppTemplate
+    private GetInAppTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetInAppTemplateArgs.Builder a);
+    }
+    private static GetInAppTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInAppTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Pinpoint::InAppTemplate
  * 
- */
+     */
+    public static CompletableFuture<GetInAppTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Pinpoint::InAppTemplate
+     * 
+     */
     public static CompletableFuture<GetInAppTemplateResult> invokeAsync(GetInAppTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:pinpoint:getInAppTemplate", TypeShape.of(GetInAppTemplateResult.class), args == null ? GetInAppTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

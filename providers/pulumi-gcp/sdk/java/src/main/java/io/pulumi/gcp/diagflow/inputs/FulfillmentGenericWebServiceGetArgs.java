@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -31,7 +31,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="requestHeaders")
-    private final @Nullable Input<Map<String,String>> requestHeaders;
+      private final @Nullable Input<Map<String,String>> requestHeaders;
 
     public Input<Map<String,String>> getRequestHeaders() {
         return this.requestHeaders == null ? Input.empty() : this.requestHeaders;
@@ -42,7 +42,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -53,7 +53,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -142,7 +142,6 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public FulfillmentGenericWebServiceGetArgs build() {
             return new FulfillmentGenericWebServiceGetArgs(password, requestHeaders, uri, username);
         }

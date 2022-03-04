@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class IdentityResponse {
     /**
      * The list of identities.
      * 
-     */
+    */
     public List<String> getIdentityIds() {
         return this.identityIds;
     }
     /**
      * The identity type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -75,7 +75,6 @@ public final class IdentityResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IdentityResponse build() {
             return new IdentityResponse(identityIds, type);
         }

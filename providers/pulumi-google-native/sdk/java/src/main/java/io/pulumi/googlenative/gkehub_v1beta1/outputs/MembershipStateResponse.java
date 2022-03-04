@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class MembershipStateResponse {
     /**
      * The current state of the Membership resource.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * This field is never set by the Hub Service.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * This field is never set by the Hub Service.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -95,7 +95,6 @@ public final class MembershipStateResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public MembershipStateResponse build() {
             return new MembershipStateResponse(code, description, updateTime);
         }

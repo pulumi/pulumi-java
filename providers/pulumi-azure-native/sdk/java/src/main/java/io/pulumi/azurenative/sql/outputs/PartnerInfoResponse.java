@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class PartnerInfoResponse {
     /**
      * Resource identifier of the partner server.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Geo location of the partner server.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Replication role of the partner server.
      * 
-     */
+    */
     public String getReplicationRole() {
         return this.replicationRole;
     }
@@ -95,7 +95,6 @@ public final class PartnerInfoResponse {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }
-
         public PartnerInfoResponse build() {
             return new PartnerInfoResponse(id, location, replicationRole);
         }

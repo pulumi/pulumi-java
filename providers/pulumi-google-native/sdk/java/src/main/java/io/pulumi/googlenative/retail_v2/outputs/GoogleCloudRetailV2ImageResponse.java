@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudRetailV2ImageResponse {
     /**
      * Height of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
      * 
-     */
+    */
     public Integer getHeight() {
         return this.height;
     }
     /**
      * URI of the image. This field must be a valid UTF-8 encoded URI with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * Width of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
      * 
-     */
+    */
     public Integer getWidth() {
         return this.width;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudRetailV2ImageResponse {
             this.width = Objects.requireNonNull(width);
             return this;
         }
-
         public GoogleCloudRetailV2ImageResponse build() {
             return new GoogleCloudRetailV2ImageResponse(height, uri, width);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.finspace.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
@@ -55,7 +55,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public GetEnvironmentArgs build() {
             return new GetEnvironmentArgs(environmentId);
         }

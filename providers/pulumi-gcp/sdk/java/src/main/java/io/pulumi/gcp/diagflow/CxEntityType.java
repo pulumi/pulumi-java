@@ -5,8 +5,8 @@ package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxEntityTypeArgs;
 import io.pulumi.gcp.diagflow.inputs.CxEntityTypeState;
@@ -217,6 +217,37 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
         return this.redact;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CxEntityTypeArgs.Builder a);
+    }
+    private static io.pulumi.gcp.diagflow.CxEntityTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.diagflow.CxEntityTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CxEntityType(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CxEntityType(String name) {
+        this(name, CxEntityTypeArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CxEntityType(String name, CxEntityTypeArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

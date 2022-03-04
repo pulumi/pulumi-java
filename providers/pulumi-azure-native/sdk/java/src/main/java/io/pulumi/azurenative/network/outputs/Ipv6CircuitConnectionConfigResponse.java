@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class Ipv6CircuitConnectionConfigResponse {
     /**
      * /125 IP address space to carve out customer addresses for global reach.
      * 
-     */
+    */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * Express Route Circuit connection state.
      * 
-     */
+    */
     public String getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
@@ -76,7 +76,6 @@ public final class Ipv6CircuitConnectionConfigResponse {
             this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
             return this;
         }
-
         public Ipv6CircuitConnectionConfigResponse build() {
             return new Ipv6CircuitConnectionConfigResponse(addressPrefix, circuitConnectionStatus);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.firebaserules_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebaserules_v1.RulesetArgs;
 import io.pulumi.googlenative.firebaserules_v1.outputs.MetadataResponse;
@@ -78,6 +78,37 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
         return this.source;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RulesetArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.firebaserules_v1.RulesetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.firebaserules_v1.RulesetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Ruleset(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Ruleset(String name) {
+        this(name, RulesetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Ruleset(String name, RulesetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

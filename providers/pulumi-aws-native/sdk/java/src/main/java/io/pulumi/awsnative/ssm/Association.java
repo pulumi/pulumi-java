@@ -11,8 +11,8 @@ import io.pulumi.awsnative.ssm.outputs.AssociationInstanceAssociationOutputLocat
 import io.pulumi.awsnative.ssm.outputs.AssociationTarget;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -195,6 +195,37 @@ public class Association extends io.pulumi.resources.CustomResource {
         return this.waitForSuccessTimeoutSeconds;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable AssociationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ssm.AssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ssm.AssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Association(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Association(String name) {
+        this(name, AssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Association(String name, @Nullable AssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

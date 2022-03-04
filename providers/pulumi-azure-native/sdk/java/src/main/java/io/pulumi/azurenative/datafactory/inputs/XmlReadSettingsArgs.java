@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.TarGZipReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="compressionProperties")
-    private final @Nullable Input<Object> compressionProperties;
+      private final @Nullable Input<Object> compressionProperties;
 
     public Input<Object> getCompressionProperties() {
         return this.compressionProperties == null ? Input.empty() : this.compressionProperties;
@@ -38,7 +38,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="detectDataType")
-    private final @Nullable Input<Object> detectDataType;
+      private final @Nullable Input<Object> detectDataType;
 
     public Input<Object> getDetectDataType() {
         return this.detectDataType == null ? Input.empty() : this.detectDataType;
@@ -49,7 +49,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespacePrefixes")
-    private final @Nullable Input<Object> namespacePrefixes;
+      private final @Nullable Input<Object> namespacePrefixes;
 
     public Input<Object> getNamespacePrefixes() {
         return this.namespacePrefixes == null ? Input.empty() : this.namespacePrefixes;
@@ -60,7 +60,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespaces")
-    private final @Nullable Input<Object> namespaces;
+      private final @Nullable Input<Object> namespaces;
 
     public Input<Object> getNamespaces() {
         return this.namespaces == null ? Input.empty() : this.namespaces;
@@ -72,7 +72,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -83,7 +83,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="validationMode")
-    private final @Nullable Input<Object> validationMode;
+      private final @Nullable Input<Object> validationMode;
 
     public Input<Object> getValidationMode() {
         return this.validationMode == null ? Input.empty() : this.validationMode;
@@ -202,7 +202,6 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.validationMode = Input.ofNullable(validationMode);
             return this;
         }
-
         public XmlReadSettingsArgs build() {
             return new XmlReadSettingsArgs(compressionProperties, detectDataType, namespacePrefixes, namespaces, type, validationMode);
         }

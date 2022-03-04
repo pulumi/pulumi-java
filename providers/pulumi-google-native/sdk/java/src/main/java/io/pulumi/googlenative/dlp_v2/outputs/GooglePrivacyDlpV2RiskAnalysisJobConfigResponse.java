@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ActionResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PrivacyMetricResponse;
@@ -41,21 +41,21 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
     /**
      * Actions to execute at the completion of the job. Are executed in the order provided.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2ActionResponse> getActions() {
         return this.actions;
     }
     /**
      * Privacy metric to compute.
      * 
-     */
+    */
     public GooglePrivacyDlpV2PrivacyMetricResponse getPrivacyMetric() {
         return this.privacyMetric;
     }
     /**
      * Input dataset to compute metrics over.
      * 
-     */
+    */
     public GooglePrivacyDlpV2BigQueryTableResponse getSourceTable() {
         return this.sourceTable;
     }
@@ -98,7 +98,6 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
-
         public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse build() {
             return new GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(actions, privacyMetric, sourceTable);
         }

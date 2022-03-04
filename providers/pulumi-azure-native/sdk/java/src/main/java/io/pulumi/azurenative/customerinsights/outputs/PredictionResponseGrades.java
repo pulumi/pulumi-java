@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class PredictionResponseGrades {
     /**
      * Name of the grade.
      * 
-     */
+    */
     public Optional<String> getGradeName() {
         return Optional.ofNullable(this.gradeName);
     }
     /**
      * Maximum score threshold.
      * 
-     */
+    */
     public Optional<Integer> getMaxScoreThreshold() {
         return Optional.ofNullable(this.maxScoreThreshold);
     }
     /**
      * Minimum score threshold.
      * 
-     */
+    */
     public Optional<Integer> getMinScoreThreshold() {
         return Optional.ofNullable(this.minScoreThreshold);
     }
@@ -98,7 +98,6 @@ public final class PredictionResponseGrades {
             this.minScoreThreshold = minScoreThreshold;
             return this;
         }
-
         public PredictionResponseGrades build() {
             return new PredictionResponseGrades(gradeName, maxScoreThreshold, minScoreThreshold);
         }

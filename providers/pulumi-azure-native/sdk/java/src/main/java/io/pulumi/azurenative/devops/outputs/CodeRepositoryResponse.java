@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devops.outputs;
 
 import io.pulumi.azurenative.devops.outputs.AuthorizationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class CodeRepositoryResponse {
     /**
      * Authorization info to access the code repository.
      * 
-     */
+    */
     public Optional<AuthorizationResponse> getAuthorization() {
         return Optional.ofNullable(this.authorization);
     }
     /**
      * Default branch used to configure Continuous Integration (CI) in the pipeline.
      * 
-     */
+    */
     public String getDefaultBranch() {
         return this.defaultBranch;
     }
     /**
      * Unique immutable identifier of the code repository.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Repository-specific properties.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Type of code repository.
      * 
-     */
+    */
     public String getRepositoryType() {
         return this.repositoryType;
     }
@@ -141,7 +141,6 @@ public final class CodeRepositoryResponse {
             this.repositoryType = Objects.requireNonNull(repositoryType);
             return this;
         }
-
         public CodeRepositoryResponse build() {
             return new CodeRepositoryResponse(authorization, defaultBranch, id, properties, repositoryType);
         }

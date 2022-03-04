@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.enums.PortMirroringDirectionEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+      private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -33,7 +33,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable Input<Either<String,PortMirroringDirectionEnum>> direction;
+      private final @Nullable Input<Either<String,PortMirroringDirectionEnum>> direction;
 
     public Input<Either<String,PortMirroringDirectionEnum>> getDirection() {
         return this.direction == null ? Input.empty() : this.direction;
@@ -44,7 +44,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -55,7 +55,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="portMirroringId")
-    private final @Nullable Input<String> portMirroringId;
+      private final @Nullable Input<String> portMirroringId;
 
     public Input<String> getPortMirroringId() {
         return this.portMirroringId == null ? Input.empty() : this.portMirroringId;
@@ -66,7 +66,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+      private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -77,7 +77,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<Double> revision;
+      private final @Nullable Input<Double> revision;
 
     public Input<Double> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -99,7 +99,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -248,7 +248,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public WorkloadNetworkPortMirroringArgs build() {
             return new WorkloadNetworkPortMirroringArgs(destination, direction, displayName, portMirroringId, privateCloudName, resourceGroupName, revision, source);
         }

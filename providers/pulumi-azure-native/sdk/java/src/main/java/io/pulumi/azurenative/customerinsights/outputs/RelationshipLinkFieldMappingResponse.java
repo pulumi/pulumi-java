@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class RelationshipLinkFieldMappingResponse {
     /**
      * The field name on the Interaction Type.
      * 
-     */
+    */
     public String getInteractionFieldName() {
         return this.interactionFieldName;
     }
     /**
      * Link type.
      * 
-     */
+    */
     public Optional<String> getLinkType() {
         return Optional.ofNullable(this.linkType);
     }
     /**
      * The field name on the Relationship metadata.
      * 
-     */
+    */
     public String getRelationshipFieldName() {
         return this.relationshipFieldName;
     }
@@ -97,7 +97,6 @@ public final class RelationshipLinkFieldMappingResponse {
             this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName);
             return this;
         }
-
         public RelationshipLinkFieldMappingResponse build() {
             return new RelationshipLinkFieldMappingResponse(interactionFieldName, linkType, relationshipFieldName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigAdditionalExtension;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigCaOptions;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigKeyUsage;
@@ -64,7 +64,7 @@ public final class AuthorityConfigX509Config {
      * Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
      * Structure is documented below.
      * 
-     */
+    */
     public List<AuthorityConfigX509ConfigAdditionalExtension> getAdditionalExtensions() {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
@@ -72,7 +72,7 @@ public final class AuthorityConfigX509Config {
      * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
      * "Authority Information Access" extension in the certificate.
      * 
-     */
+    */
     public List<String> getAiaOcspServers() {
         return this.aiaOcspServers == null ? List.of() : this.aiaOcspServers;
     }
@@ -80,7 +80,7 @@ public final class AuthorityConfigX509Config {
      * Describes values that are relevant in a CA certificate.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigX509ConfigCaOptions getCaOptions() {
         return this.caOptions;
     }
@@ -88,7 +88,7 @@ public final class AuthorityConfigX509Config {
      * Indicates the intended use for keys that correspond to a certificate.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigX509ConfigKeyUsage getKeyUsage() {
         return this.keyUsage;
     }
@@ -96,7 +96,7 @@ public final class AuthorityConfigX509Config {
      * Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
      * Structure is documented below.
      * 
-     */
+    */
     public List<AuthorityConfigX509ConfigPolicyId> getPolicyIds() {
         return this.policyIds == null ? List.of() : this.policyIds;
     }
@@ -153,7 +153,6 @@ public final class AuthorityConfigX509Config {
             this.policyIds = policyIds;
             return this;
         }
-
         public AuthorityConfigX509Config build() {
             return new AuthorityConfigX509Config(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

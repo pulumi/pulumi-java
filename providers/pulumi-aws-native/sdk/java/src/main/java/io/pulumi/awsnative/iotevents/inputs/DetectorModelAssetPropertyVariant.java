@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
      * 
      */
     @InputImport(name="booleanValue")
-    private final @Nullable String booleanValue;
+      private final @Nullable String booleanValue;
 
     public Optional<String> getBooleanValue() {
         return this.booleanValue == null ? Optional.empty() : Optional.ofNullable(this.booleanValue);
@@ -34,7 +34,7 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
      * 
      */
     @InputImport(name="doubleValue")
-    private final @Nullable String doubleValue;
+      private final @Nullable String doubleValue;
 
     public Optional<String> getDoubleValue() {
         return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
@@ -45,7 +45,7 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
      * 
      */
     @InputImport(name="integerValue")
-    private final @Nullable String integerValue;
+      private final @Nullable String integerValue;
 
     public Optional<String> getIntegerValue() {
         return this.integerValue == null ? Optional.empty() : Optional.ofNullable(this.integerValue);
@@ -56,7 +56,7 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
      * 
      */
     @InputImport(name="stringValue")
-    private final @Nullable String stringValue;
+      private final @Nullable String stringValue;
 
     public Optional<String> getStringValue() {
         return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
@@ -125,7 +125,6 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
             this.stringValue = stringValue;
             return this;
         }
-
         public DetectorModelAssetPropertyVariant build() {
             return new DetectorModelAssetPropertyVariant(booleanValue, doubleValue, integerValue, stringValue);
         }

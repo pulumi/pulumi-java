@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetRouteTableArgs;
 import io.pulumi.awsnative.ec2.outputs.GetRouteTableResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouteTable {
-/**
- * Resource Type definition for AWS::EC2::RouteTable
+    private GetRouteTable() {}
+    public interface BuilderApplicator {
+        public void apply(GetRouteTableArgs.Builder a);
+    }
+    private static GetRouteTableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRouteTableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::EC2::RouteTable
  * 
- */
+     */
+    public static CompletableFuture<GetRouteTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::EC2::RouteTable
+     * 
+     */
     public static CompletableFuture<GetRouteTableResult> invokeAsync(GetRouteTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getRouteTable", TypeShape.of(GetRouteTableResult.class), args == null ? GetRouteTableArgs.Empty : args, Utilities.withVersion(options));
     }

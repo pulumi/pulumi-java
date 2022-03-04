@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ServiceSkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -98,77 +98,77 @@ public final class GetServiceResult {
     /**
      * HTTP strong entity tag value. Ignored if submitted
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource kind. Only 'vm' (the default) is supported.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource's provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The public key of the service, used to encrypt secrets sent to the service
      * 
-     */
+    */
     public Optional<String> getPublicKey() {
         return Optional.ofNullable(this.publicKey);
     }
     /**
      * Service SKU
      * 
-     */
+    */
     public Optional<ServiceSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
      * 
-     */
+    */
     public String getVirtualSubnetId() {
         return this.virtualSubnetId;
     }
@@ -267,7 +267,6 @@ public final class GetServiceResult {
             this.virtualSubnetId = Objects.requireNonNull(virtualSubnetId);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(etag, id, kind, location, name, provisioningState, publicKey, sku, tags, type, virtualSubnetId);
         }

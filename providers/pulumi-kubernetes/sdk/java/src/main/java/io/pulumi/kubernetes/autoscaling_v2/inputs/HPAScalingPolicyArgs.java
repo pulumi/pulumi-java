@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="periodSeconds", required=true)
-    private final Input<Integer> periodSeconds;
+      private final Input<Integer> periodSeconds;
 
     public Input<Integer> getPeriodSeconds() {
         return this.periodSeconds;
@@ -34,7 +34,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -45,7 +45,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<Integer> value;
+      private final Input<Integer> value;
 
     public Input<Integer> getValue() {
         return this.value;
@@ -119,7 +119,6 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public HPAScalingPolicyArgs build() {
             return new HPAScalingPolicyArgs(periodSeconds, type, value);
         }

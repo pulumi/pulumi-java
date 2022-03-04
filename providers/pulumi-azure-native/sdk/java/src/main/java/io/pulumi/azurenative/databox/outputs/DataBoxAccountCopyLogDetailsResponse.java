@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,7 +46,7 @@ public final class DataBoxAccountCopyLogDetailsResponse {
     /**
      * Account name.
      * 
-     */
+    */
     public String getAccountName() {
         return this.accountName;
     }
@@ -54,21 +54,21 @@ public final class DataBoxAccountCopyLogDetailsResponse {
      * Indicates the type of job details.
      * Expected value is 'DataBox'.
      * 
-     */
+    */
     public String getCopyLogDetailsType() {
         return this.copyLogDetailsType;
     }
     /**
      * Link for copy logs.
      * 
-     */
+    */
     public String getCopyLogLink() {
         return this.copyLogLink;
     }
     /**
      * Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
      * 
-     */
+    */
     public String getCopyVerboseLogLink() {
         return this.copyVerboseLogLink;
     }
@@ -118,7 +118,6 @@ public final class DataBoxAccountCopyLogDetailsResponse {
             this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink);
             return this;
         }
-
         public DataBoxAccountCopyLogDetailsResponse build() {
             return new DataBoxAccountCopyLogDetailsResponse(accountName, copyLogDetailsType, copyLogLink, copyVerboseLogLink);
         }

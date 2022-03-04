@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -97,77 +97,77 @@ public final class EdifactFramingSettingsResponse {
     /**
      * The character encoding.
      * 
-     */
+    */
     public Optional<String> getCharacterEncoding() {
         return Optional.ofNullable(this.characterEncoding);
     }
     /**
      * The EDIFACT frame setting characterSet.
      * 
-     */
+    */
     public String getCharacterSet() {
         return this.characterSet;
     }
     /**
      * The component separator.
      * 
-     */
+    */
     public Integer getComponentSeparator() {
         return this.componentSeparator;
     }
     /**
      * The data element separator.
      * 
-     */
+    */
     public Integer getDataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
      * The EDIFACT frame setting decimal indicator.
      * 
-     */
+    */
     public String getDecimalPointIndicator() {
         return this.decimalPointIndicator;
     }
     /**
      * The protocol version.
      * 
-     */
+    */
     public Integer getProtocolVersion() {
         return this.protocolVersion;
     }
     /**
      * The release indicator.
      * 
-     */
+    */
     public Integer getReleaseIndicator() {
         return this.releaseIndicator;
     }
     /**
      * The repetition separator.
      * 
-     */
+    */
     public Integer getRepetitionSeparator() {
         return this.repetitionSeparator;
     }
     /**
      * The segment terminator.
      * 
-     */
+    */
     public Integer getSegmentTerminator() {
         return this.segmentTerminator;
     }
     /**
      * The EDIFACT frame setting segment terminator suffix.
      * 
-     */
+    */
     public String getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
     /**
      * The service code list directory version.
      * 
-     */
+    */
     public Optional<String> getServiceCodeListDirectoryVersion() {
         return Optional.ofNullable(this.serviceCodeListDirectoryVersion);
     }
@@ -266,7 +266,6 @@ public final class EdifactFramingSettingsResponse {
             this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
             return this;
         }
-
         public EdifactFramingSettingsResponse build() {
             return new EdifactFramingSettingsResponse(characterEncoding, characterSet, componentSeparator, dataElementSeparator, decimalPointIndicator, protocolVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, serviceCodeListDirectoryVersion);
         }

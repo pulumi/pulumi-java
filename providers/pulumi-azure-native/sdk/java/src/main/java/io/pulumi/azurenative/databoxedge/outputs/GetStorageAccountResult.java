@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -91,70 +91,70 @@ public final class GetStorageAccountResult {
     /**
      * BlobEndpoint of Storage Account
      * 
-     */
+    */
     public String getBlobEndpoint() {
         return this.blobEndpoint;
     }
     /**
      * The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud.
      * 
-     */
+    */
     public Integer getContainerCount() {
         return this.containerCount;
     }
     /**
      * Data policy of the storage Account.
      * 
-     */
+    */
     public String getDataPolicy() {
         return this.dataPolicy;
     }
     /**
      * Description for the storage Account.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Storage Account Credential Id
      * 
-     */
+    */
     public Optional<String> getStorageAccountCredentialId() {
         return Optional.ofNullable(this.storageAccountCredentialId);
     }
     /**
      * Current status of the storage account
      * 
-     */
+    */
     public Optional<String> getStorageAccountStatus() {
         return Optional.ofNullable(this.storageAccountStatus);
     }
     /**
      * StorageAccount object on ASE device
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -246,7 +246,6 @@ public final class GetStorageAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStorageAccountResult build() {
             return new GetStorageAccountResult(blobEndpoint, containerCount, dataPolicy, description, id, name, storageAccountCredentialId, storageAccountStatus, systemData, type);
         }

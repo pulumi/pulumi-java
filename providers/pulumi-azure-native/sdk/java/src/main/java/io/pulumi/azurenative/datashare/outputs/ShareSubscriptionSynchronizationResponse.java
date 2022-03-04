@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class ShareSubscriptionSynchronizationResponse {
     /**
      * Synchronization duration
      * 
-     */
+    */
     public Integer getDurationMs() {
         return this.durationMs;
     }
     /**
      * End time of synchronization
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * message of Synchronization
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * start time of synchronization
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Raw Status
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Synchronization id
      * 
-     */
+    */
     public String getSynchronizationId() {
         return this.synchronizationId;
     }
     /**
      * Synchronization Mode
      * 
-     */
+    */
     public String getSynchronizationMode() {
         return this.synchronizationMode;
     }
@@ -180,7 +180,6 @@ public final class ShareSubscriptionSynchronizationResponse {
             this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
             return this;
         }
-
         public ShareSubscriptionSynchronizationResponse build() {
             return new ShareSubscriptionSynchronizationResponse(durationMs, endTime, message, startTime, status, synchronizationId, synchronizationMode);
         }

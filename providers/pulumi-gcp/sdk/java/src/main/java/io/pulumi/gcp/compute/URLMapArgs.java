@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionArgs;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultUrlRedirectArgs;
 import io.pulumi.gcp.compute.inputs.URLMapHeaderActionArgs;
@@ -31,7 +31,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRouteAction")
-    private final @Nullable Input<URLMapDefaultRouteActionArgs> defaultRouteAction;
+      private final @Nullable Input<URLMapDefaultRouteActionArgs> defaultRouteAction;
 
     public Input<URLMapDefaultRouteActionArgs> getDefaultRouteAction() {
         return this.defaultRouteAction == null ? Input.empty() : this.defaultRouteAction;
@@ -42,7 +42,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultService")
-    private final @Nullable Input<String> defaultService;
+      private final @Nullable Input<String> defaultService;
 
     public Input<String> getDefaultService() {
         return this.defaultService == null ? Input.empty() : this.defaultService;
@@ -56,7 +56,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultUrlRedirect")
-    private final @Nullable Input<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect;
+      private final @Nullable Input<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect;
 
     public Input<URLMapDefaultUrlRedirectArgs> getDefaultUrlRedirect() {
         return this.defaultUrlRedirect == null ? Input.empty() : this.defaultUrlRedirect;
@@ -67,7 +67,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -82,7 +82,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<URLMapHeaderActionArgs> headerAction;
+      private final @Nullable Input<URLMapHeaderActionArgs> headerAction;
 
     public Input<URLMapHeaderActionArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -94,7 +94,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostRules")
-    private final @Nullable Input<List<URLMapHostRuleArgs>> hostRules;
+      private final @Nullable Input<List<URLMapHostRuleArgs>> hostRules;
 
     public Input<List<URLMapHostRuleArgs>> getHostRules() {
         return this.hostRules == null ? Input.empty() : this.hostRules;
@@ -106,7 +106,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -118,7 +118,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathMatchers")
-    private final @Nullable Input<List<URLMapPathMatcherArgs>> pathMatchers;
+      private final @Nullable Input<List<URLMapPathMatcherArgs>> pathMatchers;
 
     public Input<List<URLMapPathMatcherArgs>> getPathMatchers() {
         return this.pathMatchers == null ? Input.empty() : this.pathMatchers;
@@ -130,7 +130,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -144,7 +144,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tests")
-    private final @Nullable Input<List<URLMapTestArgs>> tests;
+      private final @Nullable Input<List<URLMapTestArgs>> tests;
 
     public Input<List<URLMapTestArgs>> getTests() {
         return this.tests == null ? Input.empty() : this.tests;
@@ -323,7 +323,6 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             this.tests = Input.ofNullable(tests);
             return this;
         }
-
         public URLMapArgs build() {
             return new URLMapArgs(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, hostRules, name, pathMatchers, project, tests);
         }

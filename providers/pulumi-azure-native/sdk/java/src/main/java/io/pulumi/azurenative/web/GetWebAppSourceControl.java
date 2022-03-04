@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetWebAppSourceControlArgs;
 import io.pulumi.azurenative.web.outputs.GetWebAppSourceControlResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppSourceControl {
-/**
- * Source control configuration for an app.
+    private GetWebAppSourceControl() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppSourceControlArgs.Builder a);
+    }
+    private static GetWebAppSourceControlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppSourceControlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Source control configuration for an app.
  * API Version: 2020-12-01.
  * 
- *
- * Source control configuration for an app.
+     *
+     * Source control configuration for an app.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppSourceControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Source control configuration for an app.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Source control configuration for an app.
+     * 
+     */
     public static CompletableFuture<GetWebAppSourceControlResult> invokeAsync(GetWebAppSourceControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSourceControl", TypeShape.of(GetWebAppSourceControlResult.class), args == null ? GetWebAppSourceControlArgs.Empty : args, Utilities.withVersion(options));
     }

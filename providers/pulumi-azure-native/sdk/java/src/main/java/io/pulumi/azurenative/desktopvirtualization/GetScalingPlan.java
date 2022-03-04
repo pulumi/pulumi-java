@@ -6,21 +6,41 @@ package io.pulumi.azurenative.desktopvirtualization;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.desktopvirtualization.inputs.GetScalingPlanArgs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.GetScalingPlanResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScalingPlan {
-/**
- * Represents a scaling plan definition.
+    private GetScalingPlan() {}
+    public interface BuilderApplicator {
+        public void apply(GetScalingPlanArgs.Builder a);
+    }
+    private static GetScalingPlanArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScalingPlanArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a scaling plan definition.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Represents a scaling plan definition.
+     *
+     * Represents a scaling plan definition.
  * 
- */
+     */
+    public static CompletableFuture<GetScalingPlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a scaling plan definition.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Represents a scaling plan definition.
+     * 
+     */
     public static CompletableFuture<GetScalingPlanResult> invokeAsync(GetScalingPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getScalingPlan", TypeShape.of(GetScalingPlanResult.class), args == null ? GetScalingPlanArgs.Empty : args, Utilities.withVersion(options));
     }

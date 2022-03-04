@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketLifecycleRuleItemActionResponse;
 import io.pulumi.googlenative.storage_v1.outputs.BucketLifecycleRuleItemConditionResponse;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class BucketLifecycleRuleItemResponse {
     /**
      * The action to take.
      * 
-     */
+    */
     public BucketLifecycleRuleItemActionResponse getAction() {
         return this.action;
     }
     /**
      * The condition(s) under which the action will be taken.
      * 
-     */
+    */
     public BucketLifecycleRuleItemConditionResponse getCondition() {
         return this.condition;
     }
@@ -75,7 +75,6 @@ public final class BucketLifecycleRuleItemResponse {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public BucketLifecycleRuleItemResponse build() {
             return new BucketLifecycleRuleItemResponse(action, condition);
         }

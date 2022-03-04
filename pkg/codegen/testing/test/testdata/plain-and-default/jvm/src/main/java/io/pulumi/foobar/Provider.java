@@ -4,13 +4,44 @@
 package io.pulumi.foobar;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.foobar.ProviderArgs;
 import io.pulumi.foobar.Utilities;
 import javax.annotation.Nullable;
 
 @ResourceType(type="pulumi:providers:foobar")
 public class Provider extends io.pulumi.resources.ProviderResource {
+    public interface BuilderApplicator {
+        public void apply(@Nullable ProviderArgs.Builder a);
+    }
+    private static io.pulumi.foobar.ProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.foobar.ProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Provider(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Provider(String name) {
+        this(name, ProviderArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Provider(String name, @Nullable ProviderArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

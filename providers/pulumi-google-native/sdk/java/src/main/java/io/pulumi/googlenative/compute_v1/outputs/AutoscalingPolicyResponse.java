@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AutoscalingPolicyCpuUtilizationResponse;
 import io.pulumi.googlenative.compute_v1.outputs.AutoscalingPolicyCustomMetricUtilizationResponse;
 import io.pulumi.googlenative.compute_v1.outputs.AutoscalingPolicyLoadBalancingUtilizationResponse;
@@ -83,49 +83,49 @@ public final class AutoscalingPolicyResponse {
     /**
      * The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.
      * 
-     */
+    */
     public Integer getCoolDownPeriodSec() {
         return this.coolDownPeriodSec;
     }
     /**
      * Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.
      * 
-     */
+    */
     public AutoscalingPolicyCpuUtilizationResponse getCpuUtilization() {
         return this.cpuUtilization;
     }
     /**
      * Configuration parameters of autoscaling based on a custom metric.
      * 
-     */
+    */
     public List<AutoscalingPolicyCustomMetricUtilizationResponse> getCustomMetricUtilizations() {
         return this.customMetricUtilizations;
     }
     /**
      * Configuration parameters of autoscaling based on load balancer.
      * 
-     */
+    */
     public AutoscalingPolicyLoadBalancingUtilizationResponse getLoadBalancingUtilization() {
         return this.loadBalancingUtilization;
     }
     /**
      * The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.
      * 
-     */
+    */
     public Integer getMaxNumReplicas() {
         return this.maxNumReplicas;
     }
     /**
      * The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.
      * 
-     */
+    */
     public Integer getMinNumReplicas() {
         return this.minNumReplicas;
     }
     /**
      * Defines operating mode for this policy.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
@@ -135,7 +135,7 @@ public final class AutoscalingPolicyResponse {
     /**
      * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.
      * 
-     */
+    */
     public Map<String,String> getScalingSchedules() {
         return this.scalingSchedules;
     }
@@ -220,7 +220,6 @@ public final class AutoscalingPolicyResponse {
             this.scalingSchedules = Objects.requireNonNull(scalingSchedules);
             return this;
         }
-
         public AutoscalingPolicyResponse build() {
             return new AutoscalingPolicyResponse(coolDownPeriodSec, cpuUtilization, customMetricUtilizations, loadBalancingUtilization, maxNumReplicas, minNumReplicas, mode, scaleInControl, scalingSchedules);
         }

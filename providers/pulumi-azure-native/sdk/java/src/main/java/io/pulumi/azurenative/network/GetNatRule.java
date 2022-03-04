@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetNatRuleArgs;
 import io.pulumi.azurenative.network.outputs.GetNatRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNatRule {
-/**
- * VpnGatewayNatRule Resource.
+    private GetNatRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetNatRuleArgs.Builder a);
+    }
+    private static GetNatRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNatRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * VpnGatewayNatRule Resource.
  * API Version: 2020-11-01.
  * 
- *
- * VpnGatewayNatRule Resource.
+     *
+     * VpnGatewayNatRule Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetNatRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * VpnGatewayNatRule Resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * VpnGatewayNatRule Resource.
+     * 
+     */
     public static CompletableFuture<GetNatRuleResult> invokeAsync(GetNatRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNatRule", TypeShape.of(GetNatRuleResult.class), args == null ? GetNatRuleArgs.Empty : args, Utilities.withVersion(options));
     }

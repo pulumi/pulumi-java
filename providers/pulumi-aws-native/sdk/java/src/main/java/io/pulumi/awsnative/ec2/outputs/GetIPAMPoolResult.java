@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ec2.enums.IPAMPoolIpamScopeType;
 import io.pulumi.awsnative.ec2.enums.IPAMPoolState;
 import io.pulumi.awsnative.ec2.outputs.IPAMPoolProvisionedCidr;
 import io.pulumi.awsnative.ec2.outputs.IPAMPoolTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -134,42 +134,42 @@ public final class GetIPAMPoolResult {
     /**
      * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
      * 
-     */
+    */
     public Optional<Integer> getAllocationDefaultNetmaskLength() {
         return Optional.ofNullable(this.allocationDefaultNetmaskLength);
     }
     /**
      * The maximum allowed netmask length for allocations made from this pool.
      * 
-     */
+    */
     public Optional<Integer> getAllocationMaxNetmaskLength() {
         return Optional.ofNullable(this.allocationMaxNetmaskLength);
     }
     /**
      * The minimum allowed netmask length for allocations made from this pool.
      * 
-     */
+    */
     public Optional<Integer> getAllocationMinNetmaskLength() {
         return Optional.ofNullable(this.allocationMinNetmaskLength);
     }
     /**
      * When specified, an allocation will not be allowed unless a resource has a matching set of tags.
      * 
-     */
+    */
     public List<IPAMPoolTag> getAllocationResourceTags() {
         return this.allocationResourceTags == null ? List.of() : this.allocationResourceTags;
     }
     /**
      * The Amazon Resource Name (ARN) of the IPAM Pool.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
      * 
-     */
+    */
     public Optional<Boolean> getAutoImport() {
         return Optional.ofNullable(this.autoImport);
     }
@@ -179,63 +179,63 @@ public final class GetIPAMPoolResult {
     /**
      * The Amazon Resource Name (ARN) of the IPAM this pool is a part of.
      * 
-     */
+    */
     public Optional<String> getIpamArn() {
         return Optional.ofNullable(this.ipamArn);
     }
     /**
      * Id of the IPAM Pool.
      * 
-     */
+    */
     public Optional<String> getIpamPoolId() {
         return Optional.ofNullable(this.ipamPoolId);
     }
     /**
      * The Amazon Resource Name (ARN) of the scope this pool is a part of.
      * 
-     */
+    */
     public Optional<String> getIpamScopeArn() {
         return Optional.ofNullable(this.ipamScopeArn);
     }
     /**
      * Determines whether this scope contains publicly routable space or space for a private network
      * 
-     */
+    */
     public Optional<IPAMPoolIpamScopeType> getIpamScopeType() {
         return Optional.ofNullable(this.ipamScopeType);
     }
     /**
      * The depth of this pool in the source pool hierarchy.
      * 
-     */
+    */
     public Optional<Integer> getPoolDepth() {
         return Optional.ofNullable(this.poolDepth);
     }
     /**
      * A list of cidrs representing the address space available for allocation in this pool.
      * 
-     */
+    */
     public List<IPAMPoolProvisionedCidr> getProvisionedCidrs() {
         return this.provisionedCidrs == null ? List.of() : this.provisionedCidrs;
     }
     /**
      * The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
      * 
-     */
+    */
     public Optional<IPAMPoolState> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * An explanation of how the pool arrived at it current state.
      * 
-     */
+    */
     public Optional<String> getStateMessage() {
         return Optional.ofNullable(this.stateMessage);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<IPAMPoolTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -369,7 +369,6 @@ public final class GetIPAMPoolResult {
             this.tags = tags;
             return this;
         }
-
         public GetIPAMPoolResult build() {
             return new GetIPAMPoolResult(allocationDefaultNetmaskLength, allocationMaxNetmaskLength, allocationMinNetmaskLength, allocationResourceTags, arn, autoImport, description, ipamArn, ipamPoolId, ipamScopeArn, ipamScopeType, poolDepth, provisionedCidrs, state, stateMessage, tags);
         }

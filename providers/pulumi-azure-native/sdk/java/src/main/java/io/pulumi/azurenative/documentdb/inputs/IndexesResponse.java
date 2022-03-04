@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IndexesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataType")
-    private final @Nullable String dataType;
+      private final @Nullable String dataType;
 
     public Optional<String> getDataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
@@ -35,7 +35,7 @@ public final class IndexesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+      private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -46,7 +46,7 @@ public final class IndexesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="precision")
-    private final @Nullable Integer precision;
+      private final @Nullable Integer precision;
 
     public Optional<Integer> getPrecision() {
         return this.precision == null ? Optional.empty() : Optional.ofNullable(this.precision);
@@ -105,7 +105,6 @@ public final class IndexesResponse extends io.pulumi.resources.InvokeArgs {
             this.precision = precision;
             return this;
         }
-
         public IndexesResponse build() {
             return new IndexesResponse(dataType, kind, precision);
         }

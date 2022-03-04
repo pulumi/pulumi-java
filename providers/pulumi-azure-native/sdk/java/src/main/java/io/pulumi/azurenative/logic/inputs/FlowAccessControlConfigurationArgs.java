@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.FlowAccessControlConfigurationPolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> actions;
+      private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> actions;
 
     public Input<FlowAccessControlConfigurationPolicyArgs> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -34,7 +34,7 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="contents")
-    private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> contents;
+      private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> contents;
 
     public Input<FlowAccessControlConfigurationPolicyArgs> getContents() {
         return this.contents == null ? Input.empty() : this.contents;
@@ -45,7 +45,7 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="triggers")
-    private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> triggers;
+      private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> triggers;
 
     public Input<FlowAccessControlConfigurationPolicyArgs> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;
@@ -56,7 +56,7 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="workflowManagement")
-    private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
+      private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
 
     public Input<FlowAccessControlConfigurationPolicyArgs> getWorkflowManagement() {
         return this.workflowManagement == null ? Input.empty() : this.workflowManagement;
@@ -145,7 +145,6 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
             this.workflowManagement = Input.ofNullable(workflowManagement);
             return this;
         }
-
         public FlowAccessControlConfigurationArgs build() {
             return new FlowAccessControlConfigurationArgs(actions, contents, triggers, workflowManagement);
         }

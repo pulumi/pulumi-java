@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="action")
-    private final @Nullable String action;
+      private final @Nullable String action;
 
     public Optional<String> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -37,7 +37,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -63,7 +63,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Map<String,List<String>> headers;
+      private final @Nullable Map<String,List<String>> headers;
 
     public Map<String,List<String>> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
@@ -77,7 +77,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable String ipAddress;
+      private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
@@ -88,7 +88,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -99,7 +99,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Integer priority;
+      private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -110,7 +110,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="subnetMask")
-    private final @Nullable String subnetMask;
+      private final @Nullable String subnetMask;
 
     public Optional<String> getSubnetMask() {
         return this.subnetMask == null ? Optional.empty() : Optional.ofNullable(this.subnetMask);
@@ -121,7 +121,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="subnetTrafficTag")
-    private final @Nullable Integer subnetTrafficTag;
+      private final @Nullable Integer subnetTrafficTag;
 
     public Optional<Integer> getSubnetTrafficTag() {
         return this.subnetTrafficTag == null ? Optional.empty() : Optional.ofNullable(this.subnetTrafficTag);
@@ -132,7 +132,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable String tag;
+      private final @Nullable String tag;
 
     public Optional<String> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -143,7 +143,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="vnetSubnetResourceId")
-    private final @Nullable String vnetSubnetResourceId;
+      private final @Nullable String vnetSubnetResourceId;
 
     public Optional<String> getVnetSubnetResourceId() {
         return this.vnetSubnetResourceId == null ? Optional.empty() : Optional.ofNullable(this.vnetSubnetResourceId);
@@ -154,7 +154,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="vnetTrafficTag")
-    private final @Nullable Integer vnetTrafficTag;
+      private final @Nullable Integer vnetTrafficTag;
 
     public Optional<Integer> getVnetTrafficTag() {
         return this.vnetTrafficTag == null ? Optional.empty() : Optional.ofNullable(this.vnetTrafficTag);
@@ -293,7 +293,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
             this.vnetTrafficTag = vnetTrafficTag;
             return this;
         }
-
         public IpSecurityRestrictionResponse build() {
             return new IpSecurityRestrictionResponse(action, description, headers, ipAddress, name, priority, subnetMask, subnetTrafficTag, tag, vnetSubnetResourceId, vnetTrafficTag);
         }

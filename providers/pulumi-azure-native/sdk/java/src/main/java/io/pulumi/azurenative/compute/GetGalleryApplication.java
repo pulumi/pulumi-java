@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetGalleryApplicationArgs;
 import io.pulumi.azurenative.compute.outputs.GetGalleryApplicationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGalleryApplication {
-/**
- * Specifies information about the gallery Application Definition that you want to create or update.
+    private GetGalleryApplication() {}
+    public interface BuilderApplicator {
+        public void apply(GetGalleryApplicationArgs.Builder a);
+    }
+    private static GetGalleryApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGalleryApplicationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Specifies information about the gallery Application Definition that you want to create or update.
  * API Version: 2020-09-30.
  * 
- *
- * Specifies information about the gallery Application Definition that you want to create or update.
+     *
+     * Specifies information about the gallery Application Definition that you want to create or update.
  * 
- */
+     */
+    public static CompletableFuture<GetGalleryApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Specifies information about the gallery Application Definition that you want to create or update.
+     * API Version: 2020-09-30.
+     * 
+     *
+         * Specifies information about the gallery Application Definition that you want to create or update.
+     * 
+     */
     public static CompletableFuture<GetGalleryApplicationResult> invokeAsync(GetGalleryApplicationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGalleryApplication", TypeShape.of(GetGalleryApplicationResult.class), args == null ? GetGalleryApplicationArgs.Empty : args, Utilities.withVersion(options));
     }

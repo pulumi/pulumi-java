@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class GetBackupResult {
     /**
      * The time the backups was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Resource labels to represent user provided metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The unique name of the Backup in the form of projects/{project_id}/locations/global/domains/{domain_name}/backups/{name}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current state of the backup.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Additional information about the current status of this backup, if available.
      * 
-     */
+    */
     public String getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * Indicates whether it’s an on-demand backup or scheduled.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Last update time.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -180,7 +180,6 @@ public final class GetBackupResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(createTime, labels, name, state, statusMessage, type, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automanage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class AccountIdentityResponse {
     /**
      * The principal id of Automanage account identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant id associated with the Automanage account.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class AccountIdentityResponse {
             this.type = type;
             return this;
         }
-
         public AccountIdentityResponse build() {
             return new AccountIdentityResponse(principalId, tenantId, type);
         }

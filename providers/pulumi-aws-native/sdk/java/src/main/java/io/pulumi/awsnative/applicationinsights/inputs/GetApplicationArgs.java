@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="applicationARN", required=true)
-    private final String applicationARN;
+      private final String applicationARN;
 
     public String getApplicationARN() {
         return this.applicationARN;
@@ -55,7 +55,6 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
             this.applicationARN = Objects.requireNonNull(applicationARN);
             return this;
         }
-
         public GetApplicationArgs build() {
             return new GetApplicationArgs(applicationARN);
         }

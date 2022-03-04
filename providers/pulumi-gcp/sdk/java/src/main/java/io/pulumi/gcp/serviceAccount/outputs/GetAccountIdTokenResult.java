@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,14 +50,14 @@ public final class GetAccountIdTokenResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The `id_token` representing the new generated identity.
      * 
-     */
+    */
     public String getIdToken() {
         return this.idToken;
     }
@@ -130,7 +130,6 @@ public final class GetAccountIdTokenResult {
             this.targetServiceAccount = targetServiceAccount;
             return this;
         }
-
         public GetAccountIdTokenResult build() {
             return new GetAccountIdTokenResult(delegates, id, idToken, includeEmail, targetAudience, targetServiceAccount);
         }

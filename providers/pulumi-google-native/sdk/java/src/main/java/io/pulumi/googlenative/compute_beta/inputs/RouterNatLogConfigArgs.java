@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.RouterNatLogConfigFilter;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -35,7 +35,7 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<RouterNatLogConfigFilter> filter;
+      private final @Nullable Input<RouterNatLogConfigFilter> filter;
 
     public Input<RouterNatLogConfigFilter> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -94,7 +94,6 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
             this.filter = Input.ofNullable(filter);
             return this;
         }
-
         public RouterNatLogConfigArgs build() {
             return new RouterNatLogConfigArgs(enable, filter);
         }

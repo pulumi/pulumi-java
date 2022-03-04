@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.inputs.NotificationConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -17,14 +17,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final DicomStoreArgs Empty = new DicomStoreArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="dicomStoreId")
-    private final @Nullable Input<String> dicomStoreId;
+      private final @Nullable Input<String> dicomStoreId;
 
     public Input<String> getDicomStoreId() {
         return this.dicomStoreId == null ? Input.empty() : this.dicomStoreId;
@@ -35,14 +35,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -53,7 +53,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -64,14 +64,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-    private final @Nullable Input<NotificationConfigArgs> notificationConfig;
+      private final @Nullable Input<NotificationConfigArgs> notificationConfig;
 
     public Input<NotificationConfigArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -205,7 +205,6 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DicomStoreArgs build() {
             return new DicomStoreArgs(datasetId, dicomStoreId, labels, location, name, notificationConfig, project);
         }

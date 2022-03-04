@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable String keyName;
+      private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
@@ -34,7 +34,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keyVaultUri")
-    private final @Nullable String keyVaultUri;
+      private final @Nullable String keyVaultUri;
 
     public Optional<String> getKeyVaultUri() {
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
@@ -45,7 +45,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keyVersion")
-    private final @Nullable String keyVersion;
+      private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
@@ -104,7 +104,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
             this.keyVersion = keyVersion;
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyName, keyVaultUri, keyVersion);
         }

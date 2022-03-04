@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.IntentFollowupIntentInfoGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -37,7 +37,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultResponsePlatforms")
-    private final @Nullable Input<List<String>> defaultResponsePlatforms;
+      private final @Nullable Input<List<String>> defaultResponsePlatforms;
 
     public Input<List<String>> getDefaultResponsePlatforms() {
         return this.defaultResponsePlatforms == null ? Input.empty() : this.defaultResponsePlatforms;
@@ -48,7 +48,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -61,7 +61,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="events")
-    private final @Nullable Input<List<String>> events;
+      private final @Nullable Input<List<String>> events;
 
     public Input<List<String>> getEvents() {
         return this.events == null ? Input.empty() : this.events;
@@ -73,7 +73,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="followupIntentInfos")
-    private final @Nullable Input<List<IntentFollowupIntentInfoGetArgs>> followupIntentInfos;
+      private final @Nullable Input<List<IntentFollowupIntentInfoGetArgs>> followupIntentInfos;
 
     public Input<List<IntentFollowupIntentInfoGetArgs>> getFollowupIntentInfos() {
         return this.followupIntentInfos == null ? Input.empty() : this.followupIntentInfos;
@@ -85,7 +85,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputContextNames")
-    private final @Nullable Input<List<String>> inputContextNames;
+      private final @Nullable Input<List<String>> inputContextNames;
 
     public Input<List<String>> getInputContextNames() {
         return this.inputContextNames == null ? Input.empty() : this.inputContextNames;
@@ -96,7 +96,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isFallback")
-    private final @Nullable Input<Boolean> isFallback;
+      private final @Nullable Input<Boolean> isFallback;
 
     public Input<Boolean> getIsFallback() {
         return this.isFallback == null ? Input.empty() : this.isFallback;
@@ -109,7 +109,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mlDisabled")
-    private final @Nullable Input<Boolean> mlDisabled;
+      private final @Nullable Input<Boolean> mlDisabled;
 
     public Input<Boolean> getMlDisabled() {
         return this.mlDisabled == null ? Input.empty() : this.mlDisabled;
@@ -120,7 +120,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -132,7 +132,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentFollowupIntentName")
-    private final @Nullable Input<String> parentFollowupIntentName;
+      private final @Nullable Input<String> parentFollowupIntentName;
 
     public Input<String> getParentFollowupIntentName() {
         return this.parentFollowupIntentName == null ? Input.empty() : this.parentFollowupIntentName;
@@ -146,7 +146,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -158,7 +158,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -169,7 +169,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resetContexts")
-    private final @Nullable Input<Boolean> resetContexts;
+      private final @Nullable Input<Boolean> resetContexts;
 
     public Input<Boolean> getResetContexts() {
         return this.resetContexts == null ? Input.empty() : this.resetContexts;
@@ -181,7 +181,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootFollowupIntentName")
-    private final @Nullable Input<String> rootFollowupIntentName;
+      private final @Nullable Input<String> rootFollowupIntentName;
 
     public Input<String> getRootFollowupIntentName() {
         return this.rootFollowupIntentName == null ? Input.empty() : this.rootFollowupIntentName;
@@ -196,7 +196,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookState")
-    private final @Nullable Input<String> webhookState;
+      private final @Nullable Input<String> webhookState;
 
     public Input<String> getWebhookState() {
         return this.webhookState == null ? Input.empty() : this.webhookState;
@@ -450,7 +450,6 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
             this.webhookState = Input.ofNullable(webhookState);
             return this;
         }
-
         public IntentState build() {
             return new IntentState(action, defaultResponsePlatforms, displayName, events, followupIntentInfos, inputContextNames, isFallback, mlDisabled, name, parentFollowupIntentName, priority, project, resetContexts, rootFollowupIntentName, webhookState);
         }

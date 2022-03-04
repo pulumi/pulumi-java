@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.NotificationChannelSensitiveLabelsGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -44,7 +44,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -60,7 +60,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -72,7 +72,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -84,7 +84,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -101,7 +101,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sensitiveLabels")
-    private final @Nullable Input<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
+      private final @Nullable Input<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
 
     public Input<NotificationChannelSensitiveLabelsGetArgs> getSensitiveLabels() {
         return this.sensitiveLabels == null ? Input.empty() : this.sensitiveLabels;
@@ -112,7 +112,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -123,7 +123,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userLabels")
-    private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Input<Map<String,String>> userLabels;
 
     public Input<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Input.empty() : this.userLabels;
@@ -140,7 +140,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="verificationStatus")
-    private final @Nullable Input<String> verificationStatus;
+      private final @Nullable Input<String> verificationStatus;
 
     public Input<String> getVerificationStatus() {
         return this.verificationStatus == null ? Input.empty() : this.verificationStatus;
@@ -319,7 +319,6 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
             this.verificationStatus = Input.ofNullable(verificationStatus);
             return this;
         }
-
         public NotificationChannelState build() {
             return new NotificationChannelState(description, displayName, enabled, labels, name, project, sensitiveLabels, type, userLabels, verificationStatus);
         }

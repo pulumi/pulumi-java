@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.DestinationResponse;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.SourceResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinations", required=true)
-    private final List<DestinationResponse> destinations;
+      private final List<DestinationResponse> destinations;
 
     public List<DestinationResponse> getDestinations() {
         return this.destinations;
@@ -34,7 +34,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sources", required=true)
-    private final List<SourceResponse> sources;
+      private final List<SourceResponse> sources;
 
     public List<SourceResponse> getSources() {
         return this.sources;
@@ -83,7 +83,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public RuleResponse build() {
             return new RuleResponse(destinations, sources);
         }

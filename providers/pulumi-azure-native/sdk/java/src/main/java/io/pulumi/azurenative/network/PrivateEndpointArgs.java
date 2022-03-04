@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionArgs;
 import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customDnsConfigs")
-    private final @Nullable Input<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
+      private final @Nullable Input<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
 
     public Input<List<CustomDnsConfigPropertiesFormatArgs>> getCustomDnsConfigs() {
         return this.customDnsConfigs == null ? Input.empty() : this.customDnsConfigs;
@@ -36,7 +36,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -47,7 +47,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -58,7 +58,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -69,7 +69,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="manualPrivateLinkServiceConnections")
-    private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
+      private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
     public Input<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? Input.empty() : this.manualPrivateLinkServiceConnections;
@@ -80,7 +80,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateEndpointName")
-    private final @Nullable Input<String> privateEndpointName;
+      private final @Nullable Input<String> privateEndpointName;
 
     public Input<String> getPrivateEndpointName() {
         return this.privateEndpointName == null ? Input.empty() : this.privateEndpointName;
@@ -91,7 +91,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateLinkServiceConnections")
-    private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
+      private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
     public Input<List<PrivateLinkServiceConnectionArgs>> getPrivateLinkServiceConnections() {
         return this.privateLinkServiceConnections == null ? Input.empty() : this.privateLinkServiceConnections;
@@ -102,7 +102,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -113,7 +113,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubnetArgs> subnet;
+      private final @Nullable Input<SubnetArgs> subnet;
 
     public Input<SubnetArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -124,7 +124,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -303,7 +303,6 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PrivateEndpointArgs build() {
             return new PrivateEndpointArgs(customDnsConfigs, extendedLocation, id, location, manualPrivateLinkServiceConnections, privateEndpointName, privateLinkServiceConnections, resourceGroupName, subnet, tags);
         }

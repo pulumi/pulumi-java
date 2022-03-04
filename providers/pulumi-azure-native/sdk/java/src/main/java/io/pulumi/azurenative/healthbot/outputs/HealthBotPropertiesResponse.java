@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthbot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class HealthBotPropertiesResponse {
     /**
      * The link.
      * 
-     */
+    */
     public String getBotManagementPortalLink() {
         return this.botManagementPortalLink;
     }
     /**
      * The provisioning state of the Healthbot resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -74,7 +74,6 @@ public final class HealthBotPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public HealthBotPropertiesResponse build() {
             return new HealthBotPropertiesResponse(botManagementPortalLink, provisioningState);
         }

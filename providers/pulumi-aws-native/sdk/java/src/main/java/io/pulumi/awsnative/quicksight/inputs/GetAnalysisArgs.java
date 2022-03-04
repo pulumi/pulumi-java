@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetAnalysisArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAnalysisArgs Empty = new GetAnalysisArgs();
 
     @InputImport(name="analysisId", required=true)
-    private final String analysisId;
+      private final String analysisId;
 
     public String getAnalysisId() {
         return this.analysisId;
     }
 
     @InputImport(name="awsAccountId", required=true)
-    private final String awsAccountId;
+      private final String awsAccountId;
 
     public String getAwsAccountId() {
         return this.awsAccountId;
@@ -69,7 +69,6 @@ public final class GetAnalysisArgs extends io.pulumi.resources.InvokeArgs {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
-
         public GetAnalysisArgs build() {
             return new GetAnalysisArgs(analysisId, awsAccountId);
         }

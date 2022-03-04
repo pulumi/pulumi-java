@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.ContainerEnvironmentVariable;
 import io.pulumi.awsnative.lightsail.outputs.ContainerPortInfo;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,35 +57,35 @@ public final class Container {
     /**
      * The launch command for the container.
      * 
-     */
+    */
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * The name of the container.
      * 
-     */
+    */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * The environment variables of the container.
      * 
-     */
+    */
     public List<ContainerEnvironmentVariable> getEnvironment() {
         return this.environment == null ? List.of() : this.environment;
     }
     /**
      * The name of the image used for the container.
      * 
-     */
+    */
     public Optional<String> getImage() {
         return Optional.ofNullable(this.image);
     }
     /**
      * The open firewall ports of the container.
      * 
-     */
+    */
     public List<ContainerPortInfo> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }
@@ -142,7 +142,6 @@ public final class Container {
             this.ports = ports;
             return this;
         }
-
         public Container build() {
             return new Container(command, containerName, environment, image, ports);
         }

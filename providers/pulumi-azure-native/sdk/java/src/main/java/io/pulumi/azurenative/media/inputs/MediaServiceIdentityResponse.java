@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class MediaServiceIdentityResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -28,7 +28,7 @@ public final class MediaServiceIdentityResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -39,7 +39,7 @@ public final class MediaServiceIdentityResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -98,7 +98,6 @@ public final class MediaServiceIdentityResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MediaServiceIdentityResponse build() {
             return new MediaServiceIdentityResponse(principalId, tenantId, type);
         }

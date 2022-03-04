@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs exte
     public static final InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs Empty = new InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs();
 
     @InputImport(name="externalIpv6")
-    private final @Nullable Input<String> externalIpv6;
+      private final @Nullable Input<String> externalIpv6;
 
     public Input<String> getExternalIpv6() {
         return this.externalIpv6 == null ? Input.empty() : this.externalIpv6;
     }
 
     @InputImport(name="externalIpv6PrefixLength")
-    private final @Nullable Input<String> externalIpv6PrefixLength;
+      private final @Nullable Input<String> externalIpv6PrefixLength;
 
     public Input<String> getExternalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength == null ? Input.empty() : this.externalIpv6PrefixLength;
     }
 
     @InputImport(name="networkTier", required=true)
-    private final Input<String> networkTier;
+      private final Input<String> networkTier;
 
     public Input<String> getNetworkTier() {
         return this.networkTier;
     }
 
     @InputImport(name="publicPtrDomainName")
-    private final @Nullable Input<String> publicPtrDomainName;
+      private final @Nullable Input<String> publicPtrDomainName;
 
     public Input<String> getPublicPtrDomainName() {
         return this.publicPtrDomainName == null ? Input.empty() : this.publicPtrDomainName;
@@ -125,7 +125,6 @@ public final class InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs exte
             this.publicPtrDomainName = Input.ofNullable(publicPtrDomainName);
             return this;
         }
-
         public InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs build() {
             return new InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);
         }

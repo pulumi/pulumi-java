@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class Int64RangeMatchResponse {
     /**
      * The end of the range (exclusive) in signed long integer format.
      * 
-     */
+    */
     public String getRangeEnd() {
         return this.rangeEnd;
     }
     /**
      * The start of the range (inclusive) in signed long integer format.
      * 
-     */
+    */
     public String getRangeStart() {
         return this.rangeStart;
     }
@@ -74,7 +74,6 @@ public final class Int64RangeMatchResponse {
             this.rangeStart = Objects.requireNonNull(rangeStart);
             return this;
         }
-
         public Int64RangeMatchResponse build() {
             return new Int64RangeMatchResponse(rangeEnd, rangeStart);
         }

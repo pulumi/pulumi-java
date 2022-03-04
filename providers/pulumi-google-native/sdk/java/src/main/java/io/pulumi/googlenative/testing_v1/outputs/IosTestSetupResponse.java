@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import io.pulumi.googlenative.testing_v1.outputs.IosDeviceFileResponse;
 import java.lang.String;
@@ -48,28 +48,28 @@ public final class IosTestSetupResponse {
     /**
      * iOS apps to install in addition to those being directly tested.
      * 
-     */
+    */
     public List<FileReferenceResponse> getAdditionalIpas() {
         return this.additionalIpas;
     }
     /**
      * The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
      * 
-     */
+    */
     public String getNetworkProfile() {
         return this.networkProfile;
     }
     /**
      * List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.
      * 
-     */
+    */
     public List<IosDeviceFileResponse> getPullDirectories() {
         return this.pullDirectories;
     }
     /**
      * List of files to push to the device before starting the test.
      * 
-     */
+    */
     public List<IosDeviceFileResponse> getPushFiles() {
         return this.pushFiles;
     }
@@ -119,7 +119,6 @@ public final class IosTestSetupResponse {
             this.pushFiles = Objects.requireNonNull(pushFiles);
             return this;
         }
-
         public IosTestSetupResponse build() {
             return new IosTestSetupResponse(additionalIpas, networkProfile, pullDirectories, pushFiles);
         }

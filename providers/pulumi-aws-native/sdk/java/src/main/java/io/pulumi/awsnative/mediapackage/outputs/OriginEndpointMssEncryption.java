@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointSpekeKeyProvider;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class OriginEndpointMssEncryption {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public OriginEndpointMssEncryption build() {
             return new OriginEndpointMssEncryption(spekeKeyProvider);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -31,7 +31,7 @@ public final class PreventionJobTriggerTriggerSchedule {
      * This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getRecurrencePeriodDuration() {
         return Optional.ofNullable(this.recurrencePeriodDuration);
     }
@@ -60,7 +60,6 @@ public final class PreventionJobTriggerTriggerSchedule {
             this.recurrencePeriodDuration = recurrencePeriodDuration;
             return this;
         }
-
         public PreventionJobTriggerTriggerSchedule build() {
             return new PreventionJobTriggerTriggerSchedule(recurrencePeriodDuration);
         }

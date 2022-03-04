@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class MaintenanceScheduleResponse {
     /**
      * If the scheduled maintenance can be rescheduled, default is true.
      * 
-     */
+    */
     public Boolean getCanReschedule() {
         return this.canReschedule;
     }
     /**
      * The end time of any upcoming scheduled maintenance for this instance.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The deadline that the maintenance schedule start time can not go beyond, including reschedule.
      * 
-     */
+    */
     public String getScheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
     /**
      * The start time of any upcoming scheduled maintenance for this instance.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -117,7 +117,6 @@ public final class MaintenanceScheduleResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public MaintenanceScheduleResponse build() {
             return new MaintenanceScheduleResponse(canReschedule, endTime, scheduleDeadlineTime, startTime);
         }

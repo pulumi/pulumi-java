@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.DPMContainerExtendedInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -118,21 +118,21 @@ public final class DpmContainerResponse {
     /**
      * Type of backup management for the container.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * Specifies whether the container is re-registrable.
      * 
-     */
+    */
     public Optional<Boolean> getCanReRegister() {
         return Optional.ofNullable(this.canReRegister);
     }
     /**
      * ID of container.
      * 
-     */
+    */
     public Optional<String> getContainerId() {
         return Optional.ofNullable(this.containerId);
     }
@@ -143,70 +143,70 @@ public final class DpmContainerResponse {
      * Backup is VMAppContainer
      * Expected value is 'DPMContainer'.
      * 
-     */
+    */
     public String getContainerType() {
         return this.containerType;
     }
     /**
      * Backup engine Agent version
      * 
-     */
+    */
     public Optional<String> getDpmAgentVersion() {
         return Optional.ofNullable(this.dpmAgentVersion);
     }
     /**
      * List of BackupEngines protecting the container
      * 
-     */
+    */
     public List<String> getDpmServers() {
         return this.dpmServers == null ? List.of() : this.dpmServers;
     }
     /**
      * Extended Info of the container.
      * 
-     */
+    */
     public Optional<DPMContainerExtendedInfoResponse> getExtendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Friendly name of the container.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
-     */
+    */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Number of protected items in the BackupEngine
      * 
-     */
+    */
     public Optional<Double> getProtectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
     /**
      * Protection status of the container.
      * 
-     */
+    */
     public Optional<String> getProtectionStatus() {
         return Optional.ofNullable(this.protectionStatus);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
-     */
+    */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
      * To check if upgrade available
      * 
-     */
+    */
     public Optional<Boolean> getUpgradeAvailable() {
         return Optional.ofNullable(this.upgradeAvailable);
     }
@@ -319,7 +319,6 @@ public final class DpmContainerResponse {
             this.upgradeAvailable = upgradeAvailable;
             return this;
         }
-
         public DpmContainerResponse build() {
             return new DpmContainerResponse(backupManagementType, canReRegister, containerId, containerType, dpmAgentVersion, dpmServers, extendedInfo, friendlyName, healthStatus, protectedItemCount, protectionStatus, registrationStatus, upgradeAvailable);
         }

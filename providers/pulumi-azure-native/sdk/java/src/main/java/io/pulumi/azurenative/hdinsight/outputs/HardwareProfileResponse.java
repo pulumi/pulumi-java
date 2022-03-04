@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class HardwareProfileResponse {
     /**
      * The size of the VM
      * 
-     */
+    */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -54,7 +54,6 @@ public final class HardwareProfileResponse {
             this.vmSize = vmSize;
             return this;
         }
-
         public HardwareProfileResponse build() {
             return new HardwareProfileResponse(vmSize);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GatewayGreengrassV2 {
     /**
      * The name of the CoreDevice in GreenGrass V2.
      * 
-     */
+    */
     public String getCoreDeviceThingName() {
         return this.coreDeviceThingName;
     }
@@ -52,7 +52,6 @@ public final class GatewayGreengrassV2 {
             this.coreDeviceThingName = Objects.requireNonNull(coreDeviceThingName);
             return this;
         }
-
         public GatewayGreengrassV2 build() {
             return new GatewayGreengrassV2(coreDeviceThingName);
         }

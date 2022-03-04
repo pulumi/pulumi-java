@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class HybridRunbookWorkerLegacyResponse {
     /**
      * Gets or sets the assigned machine IP address.
      * 
-     */
+    */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * Last Heartbeat from the Worker
      * 
-     */
+    */
     public Optional<String> getLastSeenDateTime() {
         return Optional.ofNullable(this.lastSeenDateTime);
     }
     /**
      * Gets or sets the worker machine name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets or sets the registration time of the worker machine.
      * 
-     */
+    */
     public Optional<String> getRegistrationTime() {
         return Optional.ofNullable(this.registrationTime);
     }
@@ -118,7 +118,6 @@ public final class HybridRunbookWorkerLegacyResponse {
             this.registrationTime = registrationTime;
             return this;
         }
-
         public HybridRunbookWorkerLegacyResponse build() {
             return new HybridRunbookWorkerLegacyResponse(ip, lastSeenDateTime, name, registrationTime);
         }

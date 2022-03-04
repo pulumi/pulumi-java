@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AlertSNSConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -33,7 +33,7 @@ public final class AlertSNSConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="snsTopicArn", required=true)
-    private final Input<String> snsTopicArn;
+      private final Input<String> snsTopicArn;
 
     public Input<String> getSnsTopicArn() {
         return this.snsTopicArn;
@@ -92,7 +92,6 @@ public final class AlertSNSConfigurationArgs extends io.pulumi.resources.Resourc
             this.snsTopicArn = Input.of(Objects.requireNonNull(snsTopicArn));
             return this;
         }
-
         public AlertSNSConfigurationArgs build() {
             return new AlertSNSConfigurationArgs(roleArn, snsTopicArn);
         }

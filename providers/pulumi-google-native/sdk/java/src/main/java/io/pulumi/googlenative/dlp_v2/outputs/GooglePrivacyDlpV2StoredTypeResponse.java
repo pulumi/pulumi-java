@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GooglePrivacyDlpV2StoredTypeResponse {
     /**
      * Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class GooglePrivacyDlpV2StoredTypeResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredTypeResponse build() {
             return new GooglePrivacyDlpV2StoredTypeResponse(createTime, name);
         }

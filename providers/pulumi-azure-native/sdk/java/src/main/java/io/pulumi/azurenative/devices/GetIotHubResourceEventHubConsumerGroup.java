@@ -6,21 +6,41 @@ package io.pulumi.azurenative.devices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devices.inputs.GetIotHubResourceEventHubConsumerGroupArgs;
 import io.pulumi.azurenative.devices.outputs.GetIotHubResourceEventHubConsumerGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIotHubResourceEventHubConsumerGroup {
-/**
- * The properties of the EventHubConsumerGroupInfo object.
+    private GetIotHubResourceEventHubConsumerGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetIotHubResourceEventHubConsumerGroupArgs.Builder a);
+    }
+    private static GetIotHubResourceEventHubConsumerGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIotHubResourceEventHubConsumerGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The properties of the EventHubConsumerGroupInfo object.
  * API Version: 2020-08-31.
  * 
- *
- * The properties of the EventHubConsumerGroupInfo object.
+     *
+     * The properties of the EventHubConsumerGroupInfo object.
  * 
- */
+     */
+    public static CompletableFuture<GetIotHubResourceEventHubConsumerGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The properties of the EventHubConsumerGroupInfo object.
+     * API Version: 2020-08-31.
+     * 
+     *
+         * The properties of the EventHubConsumerGroupInfo object.
+     * 
+     */
     public static CompletableFuture<GetIotHubResourceEventHubConsumerGroupResult> invokeAsync(GetIotHubResourceEventHubConsumerGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getIotHubResourceEventHubConsumerGroup", TypeShape.of(GetIotHubResourceEventHubConsumerGroupResult.class), args == null ? GetIotHubResourceEventHubConsumerGroupArgs.Empty : args, Utilities.withVersion(options));
     }

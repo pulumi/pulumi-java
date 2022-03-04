@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class Ipv6CircuitConnectionConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="addressPrefix")
-    private final @Nullable Input<String> addressPrefix;
+      private final @Nullable Input<String> addressPrefix;
 
     public Input<String> getAddressPrefix() {
         return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
@@ -66,7 +66,6 @@ public final class Ipv6CircuitConnectionConfigArgs extends io.pulumi.resources.R
             this.addressPrefix = Input.ofNullable(addressPrefix);
             return this;
         }
-
         public Ipv6CircuitConnectionConfigArgs build() {
             return new Ipv6CircuitConnectionConfigArgs(addressPrefix);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterStatusIngressPolicyIngressFrom;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo;
 import java.util.Objects;
@@ -40,7 +40,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicy {
      * to apply.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFrom> getIngressFrom() {
         return Optional.ofNullable(this.ingressFrom);
     }
@@ -49,7 +49,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicy {
      * this `IngressPolicy` to apply.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo> getIngressTo() {
         return Optional.ofNullable(this.ingressTo);
     }
@@ -85,7 +85,6 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicy {
             this.ingressTo = ingressTo;
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusIngressPolicy build() {
             return new ServicePerimetersServicePerimeterStatusIngressPolicy(ingressFrom, ingressTo);
         }

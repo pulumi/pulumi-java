@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class DatasetResponseSqlDataPath {
     /**
      * SQL query timeout. Unit in seconds.
      * 
-     */
+    */
     public Double getQueryTimeout() {
         return this.queryTimeout;
     }
     /**
      * SQL query
      * 
-     */
+    */
     public String getSqlQuery() {
         return this.sqlQuery;
     }
     /**
      * SQL storedProcedure name
      * 
-     */
+    */
     public String getSqlStoredProcedureName() {
         return this.sqlStoredProcedureName;
     }
     /**
      * SQL table name
      * 
-     */
+    */
     public String getSqlTableName() {
         return this.sqlTableName;
     }
@@ -117,7 +117,6 @@ public final class DatasetResponseSqlDataPath {
             this.sqlTableName = Objects.requireNonNull(sqlTableName);
             return this;
         }
-
         public DatasetResponseSqlDataPath build() {
             return new DatasetResponseSqlDataPath(queryTimeout, sqlQuery, sqlStoredProcedureName, sqlTableName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends io.pulumi.
      * 
      */
     @InputImport(name="day", required=true)
-    private final String day;
+      private final String day;
 
     public String getDay() {
         return this.day;
@@ -28,7 +28,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends io.pulumi.
      * 
      */
     @InputImport(name="duration", required=true)
-    private final String duration;
+      private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -39,7 +39,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends io.pulumi.
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -98,7 +98,6 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends io.pulumi.
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ResourcePolicyWeeklyCycleDayOfWeekResponse build() {
             return new ResourcePolicyWeeklyCycleDayOfWeekResponse(day, duration, startTime);
         }

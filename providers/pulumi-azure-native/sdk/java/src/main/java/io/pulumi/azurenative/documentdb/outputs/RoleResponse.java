@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class RoleResponse {
     /**
      * The database name the role is applied.
      * 
-     */
+    */
     public Optional<String> getDb() {
         return Optional.ofNullable(this.db);
     }
     /**
      * The role name.
      * 
-     */
+    */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }
@@ -76,7 +76,6 @@ public final class RoleResponse {
             this.role = role;
             return this;
         }
-
         public RoleResponse build() {
             return new RoleResponse(db, role);
         }

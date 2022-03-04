@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.enums.AccessPolicyRsaAlgo;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alg", required=true)
-    private final Input<Either<String,AccessPolicyRsaAlgo>> alg;
+      private final Input<Either<String,AccessPolicyRsaAlgo>> alg;
 
     public Input<Either<String,AccessPolicyRsaAlgo>> getAlg() {
         return this.alg;
@@ -35,7 +35,7 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="e", required=true)
-    private final Input<String> e;
+      private final Input<String> e;
 
     public Input<String> getE() {
         return this.e;
@@ -46,7 +46,7 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kid", required=true)
-    private final Input<String> kid;
+      private final Input<String> kid;
 
     public Input<String> getKid() {
         return this.kid;
@@ -57,7 +57,7 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="n", required=true)
-    private final Input<String> n;
+      private final Input<String> n;
 
     public Input<String> getN() {
         return this.n;
@@ -69,7 +69,7 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -173,7 +173,6 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public RsaTokenKeyArgs build() {
             return new RsaTokenKeyArgs(alg, e, kid, n, type);
         }

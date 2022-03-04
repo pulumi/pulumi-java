@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,28 +57,28 @@ public final class Taint {
      *  - `"NoSchedule"` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
      *  - `"PreferNoSchedule"` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
      * 
-     */
+    */
     public String getEffect() {
         return this.effect;
     }
     /**
      * Required. The taint key to be applied to a node.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
      * 
-     */
+    */
     public Optional<String> getTimeAdded() {
         return Optional.ofNullable(this.timeAdded);
     }
     /**
      * The taint value corresponding to the taint key.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -128,7 +128,6 @@ public final class Taint {
             this.value = value;
             return this;
         }
-
         public Taint build() {
             return new Taint(effect, key, timeAdded, value);
         }

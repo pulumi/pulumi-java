@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dynamicTagsJson")
-    private final @Nullable Input<String> dynamicTagsJson;
+      private final @Nullable Input<String> dynamicTagsJson;
 
     public Input<String> getDynamicTagsJson() {
         return this.dynamicTagsJson == null ? Input.empty() : this.dynamicTagsJson;
@@ -31,7 +31,7 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isPushEnabled", required=true)
-    private final Input<Boolean> isPushEnabled;
+      private final Input<Boolean> isPushEnabled;
 
     public Input<Boolean> getIsPushEnabled() {
         return this.isPushEnabled;
@@ -42,7 +42,7 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -53,7 +53,7 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -64,7 +64,7 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+      private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -86,7 +86,7 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tagWhitelistJson")
-    private final @Nullable Input<String> tagWhitelistJson;
+      private final @Nullable Input<String> tagWhitelistJson;
 
     public Input<String> getTagWhitelistJson() {
         return this.tagWhitelistJson == null ? Input.empty() : this.tagWhitelistJson;
@@ -100,7 +100,7 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tagsRequiringAuth")
-    private final @Nullable Input<String> tagsRequiringAuth;
+      private final @Nullable Input<String> tagsRequiringAuth;
 
     public Input<String> getTagsRequiringAuth() {
         return this.tagsRequiringAuth == null ? Input.empty() : this.tagsRequiringAuth;
@@ -249,7 +249,6 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
             this.tagsRequiringAuth = Input.ofNullable(tagsRequiringAuth);
             return this;
         }
-
         public WebAppSitePushSettingsSlotArgs build() {
             return new WebAppSitePushSettingsSlotArgs(dynamicTagsJson, isPushEnabled, kind, name, resourceGroupName, slot, tagWhitelistJson, tagsRequiringAuth);
         }

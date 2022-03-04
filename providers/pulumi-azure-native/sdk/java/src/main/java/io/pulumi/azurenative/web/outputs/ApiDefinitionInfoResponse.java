@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ApiDefinitionInfoResponse {
     /**
      * The URL of the API definition.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
@@ -54,7 +54,6 @@ public final class ApiDefinitionInfoResponse {
             this.url = url;
             return this;
         }
-
         public ApiDefinitionInfoResponse build() {
             return new ApiDefinitionInfoResponse(url);
         }

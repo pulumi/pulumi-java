@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class AzPowerShellSetupResponse {
      * The type of custom setup.
      * Expected value is 'AzPowerShellSetup'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The required version of Azure PowerShell to install.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -76,7 +76,6 @@ public final class AzPowerShellSetupResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public AzPowerShellSetupResponse build() {
             return new AzPowerShellSetupResponse(type, version);
         }

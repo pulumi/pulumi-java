@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,35 +54,35 @@ public final class RedisInstanceDetailsResponse {
     /**
      * Specifies whether the instance is a master node.
      * 
-     */
+    */
     public Boolean getIsMaster() {
         return this.isMaster;
     }
     /**
      * If enableNonSslPort is true, provides Redis instance Non-SSL port.
      * 
-     */
+    */
     public Integer getNonSslPort() {
         return this.nonSslPort;
     }
     /**
      * If clustering is enabled, the Shard ID of Redis Instance
      * 
-     */
+    */
     public Integer getShardId() {
         return this.shardId;
     }
     /**
      * Redis instance SSL port.
      * 
-     */
+    */
     public Integer getSslPort() {
         return this.sslPort;
     }
     /**
      * If the Cache uses availability zones, specifies availability zone where this instance is located.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }
@@ -139,7 +139,6 @@ public final class RedisInstanceDetailsResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public RedisInstanceDetailsResponse build() {
             return new RedisInstanceDetailsResponse(isMaster, nonSslPort, shardId, sslPort, zone);
         }

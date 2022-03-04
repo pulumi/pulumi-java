@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class FacetOptionsResponse {
     /**
      * Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
      * 
-     */
+    */
     public Integer getNumFacetBuckets() {
         return this.numFacetBuckets;
     }
     /**
      * If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
      * 
-     */
+    */
     public String getOperatorName() {
         return this.operatorName;
     }
     /**
      * Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
      * 
-     */
+    */
     public String getSourceName() {
         return this.sourceName;
     }
@@ -117,7 +117,6 @@ public final class FacetOptionsResponse {
             this.sourceName = Objects.requireNonNull(sourceName);
             return this;
         }
-
         public FacetOptionsResponse build() {
             return new FacetOptionsResponse(numFacetBuckets, objectType, operatorName, sourceName);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayPathRuleResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultBackendAddressPool")
-    private final @Nullable SubResourceResponse defaultBackendAddressPool;
+      private final @Nullable SubResourceResponse defaultBackendAddressPool;
 
     public Optional<SubResourceResponse> getDefaultBackendAddressPool() {
         return this.defaultBackendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.defaultBackendAddressPool);
@@ -37,7 +37,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultBackendHttpSettings")
-    private final @Nullable SubResourceResponse defaultBackendHttpSettings;
+      private final @Nullable SubResourceResponse defaultBackendHttpSettings;
 
     public Optional<SubResourceResponse> getDefaultBackendHttpSettings() {
         return this.defaultBackendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.defaultBackendHttpSettings);
@@ -48,7 +48,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultRedirectConfiguration")
-    private final @Nullable SubResourceResponse defaultRedirectConfiguration;
+      private final @Nullable SubResourceResponse defaultRedirectConfiguration;
 
     public Optional<SubResourceResponse> getDefaultRedirectConfiguration() {
         return this.defaultRedirectConfiguration == null ? Optional.empty() : Optional.ofNullable(this.defaultRedirectConfiguration);
@@ -59,7 +59,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultRewriteRuleSet")
-    private final @Nullable SubResourceResponse defaultRewriteRuleSet;
+      private final @Nullable SubResourceResponse defaultRewriteRuleSet;
 
     public Optional<SubResourceResponse> getDefaultRewriteRuleSet() {
         return this.defaultRewriteRuleSet == null ? Optional.empty() : Optional.ofNullable(this.defaultRewriteRuleSet);
@@ -70,7 +70,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -81,7 +81,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -92,7 +92,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -103,7 +103,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="pathRules")
-    private final @Nullable List<ApplicationGatewayPathRuleResponse> pathRules;
+      private final @Nullable List<ApplicationGatewayPathRuleResponse> pathRules;
 
     public List<ApplicationGatewayPathRuleResponse> getPathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
@@ -114,7 +114,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -125,7 +125,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -254,7 +254,6 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayUrlPathMapResponse build() {
             return new ApplicationGatewayUrlPathMapResponse(defaultBackendAddressPool, defaultBackendHttpSettings, defaultRedirectConfiguration, defaultRewriteRuleSet, etag, id, name, pathRules, provisioningState, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.organizations.outputs.GetIAMPolicyAuditConfigAuditLogConfig;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GetIAMPolicyAuditConfig {
     /**
      * A nested block that defines the operations you'd like to log.
      * 
-     */
+    */
     public List<GetIAMPolicyAuditConfigAuditLogConfig> getAuditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
      * Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
-     */
+    */
     public String getService() {
         return this.service;
     }
@@ -76,7 +76,6 @@ public final class GetIAMPolicyAuditConfig {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GetIAMPolicyAuditConfig build() {
             return new GetIAMPolicyAuditConfig(auditLogConfigs, service);
         }

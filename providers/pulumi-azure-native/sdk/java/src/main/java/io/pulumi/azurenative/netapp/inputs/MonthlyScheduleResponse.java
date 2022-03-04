@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="daysOfMonth")
-    private final @Nullable String daysOfMonth;
+      private final @Nullable String daysOfMonth;
 
     public Optional<String> getDaysOfMonth() {
         return this.daysOfMonth == null ? Optional.empty() : Optional.ofNullable(this.daysOfMonth);
@@ -36,7 +36,7 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="hour")
-    private final @Nullable Integer hour;
+      private final @Nullable Integer hour;
 
     public Optional<Integer> getHour() {
         return this.hour == null ? Optional.empty() : Optional.ofNullable(this.hour);
@@ -47,7 +47,7 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="minute")
-    private final @Nullable Integer minute;
+      private final @Nullable Integer minute;
 
     public Optional<Integer> getMinute() {
         return this.minute == null ? Optional.empty() : Optional.ofNullable(this.minute);
@@ -58,7 +58,7 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="snapshotsToKeep")
-    private final @Nullable Integer snapshotsToKeep;
+      private final @Nullable Integer snapshotsToKeep;
 
     public Optional<Integer> getSnapshotsToKeep() {
         return this.snapshotsToKeep == null ? Optional.empty() : Optional.ofNullable(this.snapshotsToKeep);
@@ -69,7 +69,7 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="usedBytes")
-    private final @Nullable Double usedBytes;
+      private final @Nullable Double usedBytes;
 
     public Optional<Double> getUsedBytes() {
         return this.usedBytes == null ? Optional.empty() : Optional.ofNullable(this.usedBytes);
@@ -148,7 +148,6 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
             this.usedBytes = usedBytes;
             return this;
         }
-
         public MonthlyScheduleResponse build() {
             return new MonthlyScheduleResponse(daysOfMonth, hour, minute, snapshotsToKeep, usedBytes);
         }

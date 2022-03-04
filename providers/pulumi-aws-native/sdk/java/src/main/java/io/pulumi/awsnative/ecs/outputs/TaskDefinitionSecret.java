@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class TaskDefinitionSecret {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
         }
-
         public TaskDefinitionSecret build() {
             return new TaskDefinitionSecret(name, valueFrom);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,7 +41,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressFrom {
      * Should be in the format of email address. The email address should
      * represent individual user or service account only.
      * 
-     */
+    */
     public List<String> getIdentities() {
         return this.identities == null ? List.of() : this.identities;
     }
@@ -51,7 +51,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressFrom {
      * be allowed access.
      * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
      * 
-     */
+    */
     public Optional<String> getIdentityType() {
         return Optional.ofNullable(this.identityType);
     }
@@ -87,7 +87,6 @@ public final class ServicePerimeterStatusEgressPolicyEgressFrom {
             this.identityType = identityType;
             return this;
         }
-
         public ServicePerimeterStatusEgressPolicyEgressFrom build() {
             return new ServicePerimeterStatusEgressPolicyEgressFrom(identities, identityType);
         }

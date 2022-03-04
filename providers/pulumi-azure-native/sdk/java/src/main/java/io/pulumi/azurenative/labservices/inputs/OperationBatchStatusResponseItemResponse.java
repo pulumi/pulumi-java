@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class OperationBatchStatusResponseItemResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="operationUrl", required=true)
-    private final String operationUrl;
+      private final String operationUrl;
 
     public String getOperationUrl() {
         return this.operationUrl;
@@ -32,7 +32,7 @@ public final class OperationBatchStatusResponseItemResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -81,7 +81,6 @@ public final class OperationBatchStatusResponseItemResponse extends io.pulumi.re
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public OperationBatchStatusResponseItemResponse build() {
             return new OperationBatchStatusResponseItemResponse(operationUrl, status);
         }

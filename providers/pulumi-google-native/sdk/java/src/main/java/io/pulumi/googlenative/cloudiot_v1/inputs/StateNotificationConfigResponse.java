@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StateNotificationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="pubsubTopicName", required=true)
-    private final String pubsubTopicName;
+      private final String pubsubTopicName;
 
     public String getPubsubTopicName() {
         return this.pubsubTopicName;
@@ -59,7 +59,6 @@ public final class StateNotificationConfigResponse extends io.pulumi.resources.I
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
         }
-
         public StateNotificationConfigResponse build() {
             return new StateNotificationConfigResponse(pubsubTopicName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ArtifactResponse {
     /**
      * Hash or checksum value of a binary, or Docker Registry 2.0 digest of a container.
      * 
-     */
+    */
     public String getChecksum() {
         return this.checksum;
     }
     /**
      * Related artifact names. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. Note that a single Artifact ID can have multiple names, for example if two tags are applied to one image.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }
@@ -75,7 +75,6 @@ public final class ArtifactResponse {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public ArtifactResponse build() {
             return new ArtifactResponse(checksum, names);
         }

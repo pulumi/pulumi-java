@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="endpointNames", required=true)
-    private final List<String> endpointNames;
+      private final List<String> endpointNames;
 
     public List<String> getEndpointNames() {
         return this.endpointNames;
@@ -33,7 +33,7 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -44,7 +44,7 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -103,7 +103,6 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EnrichmentPropertiesResponse build() {
             return new EnrichmentPropertiesResponse(endpointNames, key, value);
         }

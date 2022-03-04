@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="endpoints", required=true)
-    private final Input<String> endpoints;
+      private final Input<String> endpoints;
 
     public Input<String> getEndpoints() {
         return this.endpoints;
@@ -35,7 +35,7 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="endpointsNamespace")
-    private final @Nullable Input<String> endpointsNamespace;
+      private final @Nullable Input<String> endpointsNamespace;
 
     public Input<String> getEndpointsNamespace() {
         return this.endpointsNamespace == null ? Input.empty() : this.endpointsNamespace;
@@ -46,7 +46,7 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -57,7 +57,7 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -146,7 +146,6 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
-
         public GlusterfsPersistentVolumeSourceArgs build() {
             return new GlusterfsPersistentVolumeSourceArgs(endpoints, endpointsNamespace, path, readOnly);
         }

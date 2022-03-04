@@ -6,21 +6,41 @@ package io.pulumi.azurenative.portal;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.portal.inputs.GetTenantConfigurationArgs;
 import io.pulumi.azurenative.portal.outputs.GetTenantConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTenantConfiguration {
-/**
- * Tenant configuration.
+    private GetTenantConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetTenantConfigurationArgs.Builder a);
+    }
+    private static GetTenantConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTenantConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Tenant configuration.
  * API Version: 2020-09-01-preview.
  * 
- *
- * Tenant configuration.
+     *
+     * Tenant configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetTenantConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Tenant configuration.
+     * API Version: 2020-09-01-preview.
+     * 
+     *
+         * Tenant configuration.
+     * 
+     */
     public static CompletableFuture<GetTenantConfigurationResult> invokeAsync(GetTenantConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getTenantConfiguration", TypeShape.of(GetTenantConfigurationResult.class), args == null ? GetTenantConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

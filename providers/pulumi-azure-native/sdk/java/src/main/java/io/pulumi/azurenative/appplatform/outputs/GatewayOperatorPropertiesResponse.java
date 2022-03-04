@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.GatewayInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.GatewayOperatorResourceRequestsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class GatewayOperatorPropertiesResponse {
     /**
      * Collection of instances belong to Spring Cloud Gateway operator.
      * 
-     */
+    */
     public List<GatewayInstanceResponse> getInstances() {
         return this.instances;
     }
     /**
      * The requested resource quantity for required CPU and Memory.
      * 
-     */
+    */
     public GatewayOperatorResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
     }
@@ -76,7 +76,6 @@ public final class GatewayOperatorPropertiesResponse {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }
-
         public GatewayOperatorPropertiesResponse build() {
             return new GatewayOperatorPropertiesResponse(instances, resourceRequests);
         }

@@ -30,7 +30,6 @@ public final class ComponentTagsArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(ComponentTagsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ComponentTagsArgs build() {
             return new ComponentTagsArgs();
         }

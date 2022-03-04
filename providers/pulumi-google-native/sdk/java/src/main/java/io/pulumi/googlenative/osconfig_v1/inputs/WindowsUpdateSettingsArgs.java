@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.enums.WindowsUpdateSettingsClassificationsItem;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="classifications")
-    private final @Nullable Input<List<WindowsUpdateSettingsClassificationsItem>> classifications;
+      private final @Nullable Input<List<WindowsUpdateSettingsClassificationsItem>> classifications;
 
     public Input<List<WindowsUpdateSettingsClassificationsItem>> getClassifications() {
         return this.classifications == null ? Input.empty() : this.classifications;
@@ -36,7 +36,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="excludes")
-    private final @Nullable Input<List<String>> excludes;
+      private final @Nullable Input<List<String>> excludes;
 
     public Input<List<String>> getExcludes() {
         return this.excludes == null ? Input.empty() : this.excludes;
@@ -47,7 +47,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="exclusivePatches")
-    private final @Nullable Input<List<String>> exclusivePatches;
+      private final @Nullable Input<List<String>> exclusivePatches;
 
     public Input<List<String>> getExclusivePatches() {
         return this.exclusivePatches == null ? Input.empty() : this.exclusivePatches;
@@ -121,7 +121,6 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
             this.exclusivePatches = Input.ofNullable(exclusivePatches);
             return this;
         }
-
         public WindowsUpdateSettingsArgs build() {
             return new WindowsUpdateSettingsArgs(classifications, excludes, exclusivePatches);
         }

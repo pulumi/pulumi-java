@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,7 +34,7 @@ public final class RouterPeerAdvertisedIpRange {
     /**
      * User-specified description for the IP range.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -42,7 +42,7 @@ public final class RouterPeerAdvertisedIpRange {
      * The IP range to advertise. The value must be a
      * CIDR-formatted string.
      * 
-     */
+    */
     public String getRange() {
         return this.range;
     }
@@ -78,7 +78,6 @@ public final class RouterPeerAdvertisedIpRange {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public RouterPeerAdvertisedIpRange build() {
             return new RouterPeerAdvertisedIpRange(description, range);
         }

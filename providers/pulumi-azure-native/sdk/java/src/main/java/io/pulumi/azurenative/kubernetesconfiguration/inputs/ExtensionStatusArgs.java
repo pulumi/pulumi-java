@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 import io.pulumi.azurenative.kubernetesconfiguration.enums.LevelType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<String> code;
+      private final @Nullable Input<String> code;
 
     public Input<String> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -36,7 +36,7 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="displayStatus")
-    private final @Nullable Input<String> displayStatus;
+      private final @Nullable Input<String> displayStatus;
 
     public Input<String> getDisplayStatus() {
         return this.displayStatus == null ? Input.empty() : this.displayStatus;
@@ -47,7 +47,7 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="level")
-    private final @Nullable Input<Either<String,LevelType>> level;
+      private final @Nullable Input<Either<String,LevelType>> level;
 
     public Input<Either<String,LevelType>> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -58,7 +58,7 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -69,7 +69,7 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="time")
-    private final @Nullable Input<String> time;
+      private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;
@@ -173,7 +173,6 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
             this.time = Input.ofNullable(time);
             return this;
         }
-
         public ExtensionStatusArgs build() {
             return new ExtensionStatusArgs(code, displayStatus, level, message, time);
         }

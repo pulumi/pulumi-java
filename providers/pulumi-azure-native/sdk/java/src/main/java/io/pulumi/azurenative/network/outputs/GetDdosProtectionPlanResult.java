@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -85,63 +85,63 @@ public final class GetDdosProtectionPlanResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the DDoS protection plan resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the DDoS protection plan resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The list of virtual networks associated with the DDoS protection plan resource. This list is read-only.
      * 
-     */
+    */
     public List<SubResourceResponse> getVirtualNetworks() {
         return this.virtualNetworks;
     }
@@ -226,7 +226,6 @@ public final class GetDdosProtectionPlanResult {
             this.virtualNetworks = Objects.requireNonNull(virtualNetworks);
             return this;
         }
-
         public GetDdosProtectionPlanResult build() {
             return new GetDdosProtectionPlanResult(etag, id, location, name, provisioningState, resourceGuid, tags, type, virtualNetworks);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class PublicIPAddressSkuResponse {
     /**
      * Specify public IP sku name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specify public IP sku tier
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -76,7 +76,6 @@ public final class PublicIPAddressSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public PublicIPAddressSkuResponse build() {
             return new PublicIPAddressSkuResponse(name, tier);
         }

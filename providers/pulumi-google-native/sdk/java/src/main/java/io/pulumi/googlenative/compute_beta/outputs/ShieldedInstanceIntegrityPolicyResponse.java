@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ShieldedInstanceIntegrityPolicyResponse {
     /**
      * Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.
      * 
-     */
+    */
     public Boolean getUpdateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy;
     }
@@ -52,7 +52,6 @@ public final class ShieldedInstanceIntegrityPolicyResponse {
             this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
             return this;
         }
-
         public ShieldedInstanceIntegrityPolicyResponse build() {
             return new ShieldedInstanceIntegrityPolicyResponse(updateAutoLearnPolicy);
         }

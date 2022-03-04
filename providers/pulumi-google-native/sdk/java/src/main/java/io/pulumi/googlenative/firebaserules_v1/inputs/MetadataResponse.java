@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="services", required=true)
-    private final List<String> services;
+      private final List<String> services;
 
     public List<String> getServices() {
         return this.services;
@@ -60,7 +60,6 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
             this.services = Objects.requireNonNull(services);
             return this;
         }
-
         public MetadataResponse build() {
             return new MetadataResponse(services);
         }

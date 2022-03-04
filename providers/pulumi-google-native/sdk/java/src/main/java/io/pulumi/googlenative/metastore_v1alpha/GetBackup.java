@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackup {
-/**
- * Gets details of a single backup.
+    private GetBackup() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupArgs.Builder a);
+    }
+    private static GetBackupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single backup.
  * 
- */
+     */
+    public static CompletableFuture<GetBackupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single backup.
+     * 
+     */
     public static CompletableFuture<GetBackupResult> invokeAsync(GetBackupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:metastore/v1alpha:getBackup", TypeShape.of(GetBackupResult.class), args == null ? GetBackupArgs.Empty : args, Utilities.withVersion(options));
     }

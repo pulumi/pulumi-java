@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -64,14 +64,14 @@ public final class PatchDeploymentPatchConfigZypper {
     /**
      * Install only patches with these categories. Common categories include security, recommended, and feature.
      * 
-     */
+    */
     public List<String> getCategories() {
         return this.categories == null ? List.of() : this.categories;
     }
     /**
      * List of KBs to exclude from update.
      * 
-     */
+    */
     public List<String> getExcludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
@@ -79,28 +79,28 @@ public final class PatchDeploymentPatchConfigZypper {
      * An exclusive list of kbs to be updated. These are the only patches that will be updated.
      * This field must not be used with other patch configurations.
      * 
-     */
+    */
     public List<String> getExclusivePatches() {
         return this.exclusivePatches == null ? List.of() : this.exclusivePatches;
     }
     /**
      * Install only patches with these severities. Common severities include critical, important, moderate, and low.
      * 
-     */
+    */
     public List<String> getSeverities() {
         return this.severities == null ? List.of() : this.severities;
     }
     /**
      * Adds the --with-optional flag to zypper patch.
      * 
-     */
+    */
     public Optional<Boolean> getWithOptional() {
         return Optional.ofNullable(this.withOptional);
     }
     /**
      * Adds the --with-update flag, to zypper patch.
      * 
-     */
+    */
     public Optional<Boolean> getWithUpdate() {
         return Optional.ofNullable(this.withUpdate);
     }
@@ -164,7 +164,6 @@ public final class PatchDeploymentPatchConfigZypper {
             this.withUpdate = withUpdate;
             return this;
         }
-
         public PatchDeploymentPatchConfigZypper build() {
             return new PatchDeploymentPatchConfigZypper(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);
         }

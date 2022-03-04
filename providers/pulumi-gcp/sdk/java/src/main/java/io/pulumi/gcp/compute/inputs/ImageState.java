@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ImageGuestOsFeatureGetArgs;
 import io.pulumi.gcp.compute.inputs.ImageRawDiskGetArgs;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveSizeBytes")
-    private final @Nullable Input<Integer> archiveSizeBytes;
+      private final @Nullable Input<Integer> archiveSizeBytes;
 
     public Input<Integer> getArchiveSizeBytes() {
         return this.archiveSizeBytes == null ? Input.empty() : this.archiveSizeBytes;
@@ -35,7 +35,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -47,7 +47,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -73,7 +73,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family")
-    private final @Nullable Input<String> family;
+      private final @Nullable Input<String> family;
 
     public Input<String> getFamily() {
         return this.family == null ? Input.empty() : this.family;
@@ -86,7 +86,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guestOsFeatures")
-    private final @Nullable Input<List<ImageGuestOsFeatureGetArgs>> guestOsFeatures;
+      private final @Nullable Input<List<ImageGuestOsFeatureGetArgs>> guestOsFeatures;
 
     public Input<List<ImageGuestOsFeatureGetArgs>> getGuestOsFeatures() {
         return this.guestOsFeatures == null ? Input.empty() : this.guestOsFeatures;
@@ -97,7 +97,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelFingerprint")
-    private final @Nullable Input<String> labelFingerprint;
+      private final @Nullable Input<String> labelFingerprint;
 
     public Input<String> getLabelFingerprint() {
         return this.labelFingerprint == null ? Input.empty() : this.labelFingerprint;
@@ -108,7 +108,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -119,7 +119,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenses")
-    private final @Nullable Input<List<String>> licenses;
+      private final @Nullable Input<List<String>> licenses;
 
     public Input<List<String>> getLicenses() {
         return this.licenses == null ? Input.empty() : this.licenses;
@@ -136,7 +136,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -148,7 +148,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -160,7 +160,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rawDisk")
-    private final @Nullable Input<ImageRawDiskGetArgs> rawDisk;
+      private final @Nullable Input<ImageRawDiskGetArgs> rawDisk;
 
     public Input<ImageRawDiskGetArgs> getRawDisk() {
         return this.rawDisk == null ? Input.empty() : this.rawDisk;
@@ -171,7 +171,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -184,7 +184,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk")
-    private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Input<String> sourceDisk;
 
     public Input<String> getSourceDisk() {
         return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
@@ -200,7 +200,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImage")
-    private final @Nullable Input<String> sourceImage;
+      private final @Nullable Input<String> sourceImage;
 
     public Input<String> getSourceImage() {
         return this.sourceImage == null ? Input.empty() : this.sourceImage;
@@ -217,7 +217,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshot")
-    private final @Nullable Input<String> sourceSnapshot;
+      private final @Nullable Input<String> sourceSnapshot;
 
     public Input<String> getSourceSnapshot() {
         return this.sourceSnapshot == null ? Input.empty() : this.sourceSnapshot;
@@ -486,7 +486,6 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             this.sourceSnapshot = Input.ofNullable(sourceSnapshot);
             return this;
         }
-
         public ImageState build() {
             return new ImageState(archiveSizeBytes, creationTimestamp, description, diskSizeGb, family, guestOsFeatures, labelFingerprint, labels, licenses, name, project, rawDisk, selfLink, sourceDisk, sourceImage, sourceSnapshot);
         }

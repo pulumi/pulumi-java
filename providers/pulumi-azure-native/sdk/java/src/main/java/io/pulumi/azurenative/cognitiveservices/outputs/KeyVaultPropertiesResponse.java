@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class KeyVaultPropertiesResponse {
     /**
      * Name of the Key from KeyVault
      * 
-     */
+    */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * Uri of KeyVault
      * 
-     */
+    */
     public Optional<String> getKeyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
      * Version of the Key from KeyVault
      * 
-     */
+    */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -97,7 +97,6 @@ public final class KeyVaultPropertiesResponse {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyName, keyVaultUri, keyVersion);
         }

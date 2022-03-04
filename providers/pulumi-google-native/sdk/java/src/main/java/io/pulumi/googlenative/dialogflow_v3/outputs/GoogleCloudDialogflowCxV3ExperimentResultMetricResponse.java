@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -54,35 +54,35 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse {
     /**
      * The probability that the treatment is better than all other treatments in the experiment
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse getConfidenceInterval() {
         return this.confidenceInterval;
     }
     /**
      * Count value of a metric.
      * 
-     */
+    */
     public Double getCount() {
         return this.count;
     }
     /**
      * Count-based metric type. Only one of type or count_type is specified in each Metric.
      * 
-     */
+    */
     public String getCountType() {
         return this.countType;
     }
     /**
      * Ratio value of a metric.
      * 
-     */
+    */
     public Double getRatio() {
         return this.ratio;
     }
     /**
      * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentResultMetricResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultMetricResponse(confidenceInterval, count, countType, ratio, type);
         }

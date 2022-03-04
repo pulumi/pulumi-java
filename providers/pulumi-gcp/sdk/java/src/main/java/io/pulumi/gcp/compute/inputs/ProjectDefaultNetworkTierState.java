@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkTier")
-    private final @Nullable Input<String> networkTier;
+      private final @Nullable Input<String> networkTier;
 
     public Input<String> getNetworkTier() {
         return this.networkTier == null ? Input.empty() : this.networkTier;
@@ -32,7 +32,7 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -91,7 +91,6 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ProjectDefaultNetworkTierState build() {
             return new ProjectDefaultNetworkTierState(networkTier, project);
         }

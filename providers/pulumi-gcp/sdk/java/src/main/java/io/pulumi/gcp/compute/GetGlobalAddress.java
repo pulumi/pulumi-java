@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalAddress {
-/**
- * Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
+    private GetGlobalAddress() {}
+    public interface BuilderApplicator {
+        public void apply(GetGlobalAddressArgs.Builder a);
+    }
+    private static GetGlobalAddressArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGlobalAddressArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
  * the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getGlobalAddress.
+     *
+     * A collection of arguments for invoking getGlobalAddress.
  * 
- *
- * A collection of values returned by getGlobalAddress.
+     *
+     * A collection of values returned by getGlobalAddress.
  * 
- */
+     */
+    public static CompletableFuture<GetGlobalAddressResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
+     * the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getGlobalAddress.
+     * 
+     *
+         * A collection of values returned by getGlobalAddress.
+     * 
+     */
     public static CompletableFuture<GetGlobalAddressResult> invokeAsync(GetGlobalAddressArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getGlobalAddress:getGlobalAddress", TypeShape.of(GetGlobalAddressResult.class), args == null ? GetGlobalAddressArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      * 
      */
     @InputImport(name="badServiceFilter")
-    private final @Nullable Input<String> badServiceFilter;
+      private final @Nullable Input<String> badServiceFilter;
 
     public Input<String> getBadServiceFilter() {
         return this.badServiceFilter == null ? Input.empty() : this.badServiceFilter;
@@ -42,7 +42,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      * 
      */
     @InputImport(name="goodServiceFilter")
-    private final @Nullable Input<String> goodServiceFilter;
+      private final @Nullable Input<String> goodServiceFilter;
 
     public Input<String> getGoodServiceFilter() {
         return this.goodServiceFilter == null ? Input.empty() : this.goodServiceFilter;
@@ -58,7 +58,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      * 
      */
     @InputImport(name="totalServiceFilter")
-    private final @Nullable Input<String> totalServiceFilter;
+      private final @Nullable Input<String> totalServiceFilter;
 
     public Input<String> getTotalServiceFilter() {
         return this.totalServiceFilter == null ? Input.empty() : this.totalServiceFilter;
@@ -132,7 +132,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
             this.totalServiceFilter = Input.ofNullable(totalServiceFilter);
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs(badServiceFilter, goodServiceFilter, totalServiceFilter);
         }

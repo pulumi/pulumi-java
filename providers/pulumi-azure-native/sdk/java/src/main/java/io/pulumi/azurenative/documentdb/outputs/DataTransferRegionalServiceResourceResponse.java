@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class DataTransferRegionalServiceResourceResponse {
     /**
      * The location name.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The regional service name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Describes the status of a service.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -95,7 +95,6 @@ public final class DataTransferRegionalServiceResourceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataTransferRegionalServiceResourceResponse build() {
             return new DataTransferRegionalServiceResourceResponse(location, name, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class TestBaseAccountSKUCapabilityResponse {
     /**
      * An invariant to describe the feature, such as 'SLA'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * An invariant if the feature is measured by quantity, such as 99.9%.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class TestBaseAccountSKUCapabilityResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TestBaseAccountSKUCapabilityResponse build() {
             return new TestBaseAccountSKUCapabilityResponse(name, value);
         }

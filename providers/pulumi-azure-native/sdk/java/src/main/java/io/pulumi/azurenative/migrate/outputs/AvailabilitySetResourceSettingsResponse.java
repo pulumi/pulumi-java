@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +49,7 @@ public final class AvailabilitySetResourceSettingsResponse {
     /**
      * Gets or sets the target fault domain.
      * 
-     */
+    */
     public Optional<Integer> getFaultDomain() {
         return Optional.ofNullable(this.faultDomain);
     }
@@ -57,21 +57,21 @@ public final class AvailabilitySetResourceSettingsResponse {
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Compute/availabilitySets'.
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets the target Resource name.
      * 
-     */
+    */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }
     /**
      * Gets or sets the target update domain.
      * 
-     */
+    */
     public Optional<Integer> getUpdateDomain() {
         return Optional.ofNullable(this.updateDomain);
     }
@@ -121,7 +121,6 @@ public final class AvailabilitySetResourceSettingsResponse {
             this.updateDomain = updateDomain;
             return this;
         }
-
         public AvailabilitySetResourceSettingsResponse build() {
             return new AvailabilitySetResourceSettingsResponse(faultDomain, resourceType, targetResourceName, updateDomain);
         }

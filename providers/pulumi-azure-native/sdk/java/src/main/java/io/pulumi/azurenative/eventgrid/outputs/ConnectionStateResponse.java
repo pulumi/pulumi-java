@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ConnectionStateResponse {
     /**
      * Actions required (if any).
      * 
-     */
+    */
     public Optional<String> getActionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
      * Description of the connection state.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Status of the connection.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -97,7 +97,6 @@ public final class ConnectionStateResponse {
             this.status = status;
             return this;
         }
-
         public ConnectionStateResponse build() {
             return new ConnectionStateResponse(actionsRequired, description, status);
         }

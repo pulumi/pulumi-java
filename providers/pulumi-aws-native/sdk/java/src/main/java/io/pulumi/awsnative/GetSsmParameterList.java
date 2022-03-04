@@ -6,13 +6,25 @@ package io.pulumi.awsnative;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.inputs.GetSsmParameterListArgs;
 import io.pulumi.awsnative.outputs.GetSsmParameterListResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSsmParameterList {
+    private GetSsmParameterList() {}
+    public interface BuilderApplicator {
+        public void apply(GetSsmParameterListArgs.Builder a);
+    }
+    private static GetSsmParameterListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSsmParameterListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<GetSsmParameterListResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<GetSsmParameterListResult> invokeAsync(GetSsmParameterListArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getSsmParameterList", TypeShape.of(GetSsmParameterListResult.class), args == null ? GetSsmParameterListArgs.Empty : args, Utilities.withVersion(options));
     }

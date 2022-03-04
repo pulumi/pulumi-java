@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1.enums.SchedulingNodeAffinityOperator;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -36,7 +36,7 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="operator")
-    private final @Nullable Input<SchedulingNodeAffinityOperator> operator;
+      private final @Nullable Input<SchedulingNodeAffinityOperator> operator;
 
     public Input<SchedulingNodeAffinityOperator> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -47,7 +47,7 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -121,7 +121,6 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public SchedulingNodeAffinityArgs build() {
             return new SchedulingNodeAffinityArgs(key, operator, values);
         }

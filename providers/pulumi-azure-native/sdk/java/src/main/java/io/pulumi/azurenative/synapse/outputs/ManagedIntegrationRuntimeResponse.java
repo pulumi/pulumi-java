@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeComputePropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeSsisPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,28 +57,28 @@ public final class ManagedIntegrationRuntimeResponse {
     /**
      * The compute resource for managed integration runtime.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeComputePropertiesResponse> getComputeProperties() {
         return Optional.ofNullable(this.computeProperties);
     }
     /**
      * Integration runtime description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * SSIS properties for managed integration runtime.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeSsisPropertiesResponse> getSsisProperties() {
         return Optional.ofNullable(this.ssisProperties);
     }
     /**
      * Integration runtime state, only valid for managed dedicated integration runtime.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -86,7 +86,7 @@ public final class ManagedIntegrationRuntimeResponse {
      * The type of integration runtime.
      * Expected value is 'Managed'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -143,7 +143,6 @@ public final class ManagedIntegrationRuntimeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIntegrationRuntimeResponse build() {
             return new ManagedIntegrationRuntimeResponse(computeProperties, description, ssisProperties, state, type);
         }

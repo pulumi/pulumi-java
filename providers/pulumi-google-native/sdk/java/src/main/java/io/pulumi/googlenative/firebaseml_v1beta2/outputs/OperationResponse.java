@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.StatusResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -55,35 +55,35 @@ public final class OperationResponse {
     /**
      * If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.
      * 
-     */
+    */
     public Boolean getDone() {
         return this.done;
     }
     /**
      * The error result of the operation in case of failure or cancellation.
      * 
-     */
+    */
     public StatusResponse getError() {
         return this.error;
     }
     /**
      * Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
     /**
      * The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.
      * 
-     */
+    */
     public Map<String,String> getResponse() {
         return this.response;
     }
@@ -140,7 +140,6 @@ public final class OperationResponse {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public OperationResponse build() {
             return new OperationResponse(done, error, metadata, name, response);
         }

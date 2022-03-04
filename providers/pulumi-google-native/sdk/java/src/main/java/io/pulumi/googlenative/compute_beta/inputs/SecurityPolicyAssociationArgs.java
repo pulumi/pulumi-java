@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attachmentId")
-    private final @Nullable Input<String> attachmentId;
+      private final @Nullable Input<String> attachmentId;
 
     public Input<String> getAttachmentId() {
         return this.attachmentId == null ? Input.empty() : this.attachmentId;
@@ -30,7 +30,7 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,6 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public SecurityPolicyAssociationArgs build() {
             return new SecurityPolicyAssociationArgs(attachmentId, name);
         }

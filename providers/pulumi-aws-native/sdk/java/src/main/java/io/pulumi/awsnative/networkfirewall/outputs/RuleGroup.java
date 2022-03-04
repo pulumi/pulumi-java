@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupRuleVariables;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupRulesSource;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupStatefulRuleOptions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -75,7 +75,6 @@ public final class RuleGroup {
             this.statefulRuleOptions = statefulRuleOptions;
             return this;
         }
-
         public RuleGroup build() {
             return new RuleGroup(ruleVariables, rulesSource, statefulRuleOptions);
         }

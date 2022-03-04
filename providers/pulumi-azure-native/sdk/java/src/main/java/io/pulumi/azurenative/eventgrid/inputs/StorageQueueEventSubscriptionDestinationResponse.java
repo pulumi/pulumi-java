@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class StorageQueueEventSubscriptionDestinationResponse extends io.p
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final String endpointType;
+      private final String endpointType;
 
     public String getEndpointType() {
         return this.endpointType;
@@ -35,7 +35,7 @@ public final class StorageQueueEventSubscriptionDestinationResponse extends io.p
      * 
      */
     @InputImport(name="queueName")
-    private final @Nullable String queueName;
+      private final @Nullable String queueName;
 
     public Optional<String> getQueueName() {
         return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
@@ -46,7 +46,7 @@ public final class StorageQueueEventSubscriptionDestinationResponse extends io.p
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+      private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -105,7 +105,6 @@ public final class StorageQueueEventSubscriptionDestinationResponse extends io.p
             this.resourceId = resourceId;
             return this;
         }
-
         public StorageQueueEventSubscriptionDestinationResponse build() {
             return new StorageQueueEventSubscriptionDestinationResponse(endpointType, queueName, resourceId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SecurityPolicyCloudArmorConfigResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableMl", required=true)
-    private final Boolean enableMl;
+      private final Boolean enableMl;
 
     public Boolean getEnableMl() {
         return this.enableMl;
@@ -59,7 +59,6 @@ public final class SecurityPolicyCloudArmorConfigResponse extends io.pulumi.reso
             this.enableMl = Objects.requireNonNull(enableMl);
             return this;
         }
-
         public SecurityPolicyCloudArmorConfigResponse build() {
             return new SecurityPolicyCloudArmorConfigResponse(enableMl);
         }

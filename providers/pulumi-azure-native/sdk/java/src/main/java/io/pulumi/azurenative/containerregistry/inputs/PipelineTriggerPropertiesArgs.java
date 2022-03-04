@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.PipelineSourceTriggerPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class PipelineTriggerPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourceTrigger")
-    private final @Nullable Input<PipelineSourceTriggerPropertiesArgs> sourceTrigger;
+      private final @Nullable Input<PipelineSourceTriggerPropertiesArgs> sourceTrigger;
 
     public Input<PipelineSourceTriggerPropertiesArgs> getSourceTrigger() {
         return this.sourceTrigger == null ? Input.empty() : this.sourceTrigger;
@@ -62,7 +62,6 @@ public final class PipelineTriggerPropertiesArgs extends io.pulumi.resources.Res
             this.sourceTrigger = Input.ofNullable(sourceTrigger);
             return this;
         }
-
         public PipelineTriggerPropertiesArgs build() {
             return new PipelineTriggerPropertiesArgs(sourceTrigger);
         }

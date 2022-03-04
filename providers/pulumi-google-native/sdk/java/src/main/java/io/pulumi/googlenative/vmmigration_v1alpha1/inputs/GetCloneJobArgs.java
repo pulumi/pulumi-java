@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class GetCloneJobArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCloneJobArgs Empty = new GetCloneJobArgs();
 
     @InputImport(name="cloneJobId", required=true)
-    private final String cloneJobId;
+      private final String cloneJobId;
 
     public String getCloneJobId() {
         return this.cloneJobId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="migratingVmId", required=true)
-    private final String migratingVmId;
+      private final String migratingVmId;
 
     public String getMigratingVmId() {
         return this.migratingVmId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="sourceId", required=true)
-    private final String sourceId;
+      private final String sourceId;
 
     public String getSourceId() {
         return this.sourceId;
@@ -122,7 +122,6 @@ public final class GetCloneJobArgs extends io.pulumi.resources.InvokeArgs {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public GetCloneJobArgs build() {
             return new GetCloneJobArgs(cloneJobId, location, migratingVmId, project, sourceId);
         }

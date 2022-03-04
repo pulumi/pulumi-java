@@ -6,21 +6,41 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kusto.inputs.GetEventGridDataConnectionArgs;
 import io.pulumi.azurenative.kusto.outputs.GetEventGridDataConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventGridDataConnection {
-/**
- * Class representing an Event Grid data connection.
+    private GetEventGridDataConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventGridDataConnectionArgs.Builder a);
+    }
+    private static GetEventGridDataConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventGridDataConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing an Event Grid data connection.
  * API Version: 2021-01-01.
  * 
- *
- * Class representing an Event Grid data connection.
+     *
+     * Class representing an Event Grid data connection.
  * 
- */
+     */
+    public static CompletableFuture<GetEventGridDataConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing an Event Grid data connection.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Class representing an Event Grid data connection.
+     * 
+     */
     public static CompletableFuture<GetEventGridDataConnectionResult> invokeAsync(GetEventGridDataConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getEventGridDataConnection", TypeShape.of(GetEventGridDataConnectionResult.class), args == null ? GetEventGridDataConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

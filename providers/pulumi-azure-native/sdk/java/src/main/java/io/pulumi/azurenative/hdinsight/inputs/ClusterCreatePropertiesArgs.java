@@ -15,7 +15,7 @@ import io.pulumi.azurenative.hdinsight.inputs.NetworkPropertiesArgs;
 import io.pulumi.azurenative.hdinsight.inputs.SecurityProfileArgs;
 import io.pulumi.azurenative.hdinsight.inputs.StorageProfileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clusterDefinition")
-    private final @Nullable Input<ClusterDefinitionArgs> clusterDefinition;
+      private final @Nullable Input<ClusterDefinitionArgs> clusterDefinition;
 
     public Input<ClusterDefinitionArgs> getClusterDefinition() {
         return this.clusterDefinition == null ? Input.empty() : this.clusterDefinition;
@@ -45,7 +45,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clusterVersion")
-    private final @Nullable Input<String> clusterVersion;
+      private final @Nullable Input<String> clusterVersion;
 
     public Input<String> getClusterVersion() {
         return this.clusterVersion == null ? Input.empty() : this.clusterVersion;
@@ -56,7 +56,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="computeIsolationProperties")
-    private final @Nullable Input<ComputeIsolationPropertiesArgs> computeIsolationProperties;
+      private final @Nullable Input<ComputeIsolationPropertiesArgs> computeIsolationProperties;
 
     public Input<ComputeIsolationPropertiesArgs> getComputeIsolationProperties() {
         return this.computeIsolationProperties == null ? Input.empty() : this.computeIsolationProperties;
@@ -67,7 +67,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="computeProfile")
-    private final @Nullable Input<ComputeProfileArgs> computeProfile;
+      private final @Nullable Input<ComputeProfileArgs> computeProfile;
 
     public Input<ComputeProfileArgs> getComputeProfile() {
         return this.computeProfile == null ? Input.empty() : this.computeProfile;
@@ -78,7 +78,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diskEncryptionProperties")
-    private final @Nullable Input<DiskEncryptionPropertiesArgs> diskEncryptionProperties;
+      private final @Nullable Input<DiskEncryptionPropertiesArgs> diskEncryptionProperties;
 
     public Input<DiskEncryptionPropertiesArgs> getDiskEncryptionProperties() {
         return this.diskEncryptionProperties == null ? Input.empty() : this.diskEncryptionProperties;
@@ -89,7 +89,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptionInTransitProperties")
-    private final @Nullable Input<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties;
+      private final @Nullable Input<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties;
 
     public Input<EncryptionInTransitPropertiesArgs> getEncryptionInTransitProperties() {
         return this.encryptionInTransitProperties == null ? Input.empty() : this.encryptionInTransitProperties;
@@ -100,7 +100,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kafkaRestProperties")
-    private final @Nullable Input<KafkaRestPropertiesArgs> kafkaRestProperties;
+      private final @Nullable Input<KafkaRestPropertiesArgs> kafkaRestProperties;
 
     public Input<KafkaRestPropertiesArgs> getKafkaRestProperties() {
         return this.kafkaRestProperties == null ? Input.empty() : this.kafkaRestProperties;
@@ -111,7 +111,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="minSupportedTlsVersion")
-    private final @Nullable Input<String> minSupportedTlsVersion;
+      private final @Nullable Input<String> minSupportedTlsVersion;
 
     public Input<String> getMinSupportedTlsVersion() {
         return this.minSupportedTlsVersion == null ? Input.empty() : this.minSupportedTlsVersion;
@@ -122,7 +122,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="networkProperties")
-    private final @Nullable Input<NetworkPropertiesArgs> networkProperties;
+      private final @Nullable Input<NetworkPropertiesArgs> networkProperties;
 
     public Input<NetworkPropertiesArgs> getNetworkProperties() {
         return this.networkProperties == null ? Input.empty() : this.networkProperties;
@@ -133,7 +133,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable Input<OSType> osType;
+      private final @Nullable Input<OSType> osType;
 
     public Input<OSType> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -144,7 +144,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityProfile")
-    private final @Nullable Input<SecurityProfileArgs> securityProfile;
+      private final @Nullable Input<SecurityProfileArgs> securityProfile;
 
     public Input<SecurityProfileArgs> getSecurityProfile() {
         return this.securityProfile == null ? Input.empty() : this.securityProfile;
@@ -155,7 +155,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="storageProfile")
-    private final @Nullable Input<StorageProfileArgs> storageProfile;
+      private final @Nullable Input<StorageProfileArgs> storageProfile;
 
     public Input<StorageProfileArgs> getStorageProfile() {
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
@@ -166,7 +166,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<Tier> tier;
+      private final @Nullable Input<Tier> tier;
 
     public Input<Tier> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -390,7 +390,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public ClusterCreatePropertiesArgs build() {
             return new ClusterCreatePropertiesArgs(clusterDefinition, clusterVersion, computeIsolationProperties, computeProfile, diskEncryptionProperties, encryptionInTransitProperties, kafkaRestProperties, minSupportedTlsVersion, networkProperties, osType, securityProfile, storageProfile, tier);
         }

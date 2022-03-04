@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.DashboardPartsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -44,21 +44,21 @@ public final class DashboardLensResponse {
     /**
      * The dashboard len's metadata.
      * 
-     */
+    */
     public Map<String,Object> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The lens order.
      * 
-     */
+    */
     public Integer getOrder() {
         return this.order;
     }
     /**
      * The dashboard parts.
      * 
-     */
+    */
     public List<DashboardPartsResponse> getParts() {
         return this.parts;
     }
@@ -101,7 +101,6 @@ public final class DashboardLensResponse {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-
         public DashboardLensResponse build() {
             return new DashboardLensResponse(metadata, order, parts);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionCookies;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,28 +18,28 @@ public final class DistributionForwardedValues extends io.pulumi.resources.Invok
     public static final DistributionForwardedValues Empty = new DistributionForwardedValues();
 
     @InputImport(name="cookies")
-    private final @Nullable DistributionCookies cookies;
+      private final @Nullable DistributionCookies cookies;
 
     public Optional<DistributionCookies> getCookies() {
         return this.cookies == null ? Optional.empty() : Optional.ofNullable(this.cookies);
     }
 
     @InputImport(name="headers")
-    private final @Nullable List<String> headers;
+      private final @Nullable List<String> headers;
 
     public List<String> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
 
     @InputImport(name="queryString", required=true)
-    private final Boolean queryString;
+      private final Boolean queryString;
 
     public Boolean getQueryString() {
         return this.queryString;
     }
 
     @InputImport(name="queryStringCacheKeys")
-    private final @Nullable List<String> queryStringCacheKeys;
+      private final @Nullable List<String> queryStringCacheKeys;
 
     public List<String> getQueryStringCacheKeys() {
         return this.queryStringCacheKeys == null ? List.of() : this.queryStringCacheKeys;
@@ -108,7 +108,6 @@ public final class DistributionForwardedValues extends io.pulumi.resources.Invok
             this.queryStringCacheKeys = queryStringCacheKeys;
             return this;
         }
-
         public DistributionForwardedValues build() {
             return new DistributionForwardedValues(cookies, headers, queryString, queryStringCacheKeys);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -32,7 +32,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="machineName", required=true)
-    private final String machineName;
+      private final String machineName;
 
     public String getMachineName() {
         return this.machineName;
@@ -43,7 +43,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -55,7 +55,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -66,7 +66,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sourceComputerId", required=true)
-    private final String sourceComputerId;
+      private final String sourceComputerId;
 
     public String getSourceComputerId() {
         return this.sourceComputerId;
@@ -77,7 +77,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="vmuuid", required=true)
-    private final String vmuuid;
+      private final String vmuuid;
 
     public String getVmuuid() {
         return this.vmuuid;
@@ -88,7 +88,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workspaceId", required=true)
-    private final String workspaceId;
+      private final String workspaceId;
 
     public String getWorkspaceId() {
         return this.workspaceId;
@@ -187,7 +187,6 @@ public final class OnPremiseSqlResourceDetailsResponse extends io.pulumi.resourc
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public OnPremiseSqlResourceDetailsResponse build() {
             return new OnPremiseSqlResourceDetailsResponse(databaseName, machineName, serverName, source, sourceComputerId, vmuuid, workspaceId);
         }

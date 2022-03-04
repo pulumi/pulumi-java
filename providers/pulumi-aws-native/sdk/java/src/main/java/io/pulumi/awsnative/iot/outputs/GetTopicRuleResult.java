@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRulePayload;
 import io.pulumi.awsnative.iot.outputs.TopicRuleTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class GetTopicRuleResult {
             this.topicRulePayload = topicRulePayload;
             return this;
         }
-
         public GetTopicRuleResult build() {
             return new GetTopicRuleResult(arn, tags, topicRulePayload);
         }

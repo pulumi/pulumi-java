@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class SourceTriggerDescriptorResponse {
     /**
      * The branch name in the repository.
      * 
-     */
+    */
     public Optional<String> getBranchName() {
         return Optional.ofNullable(this.branchName);
     }
     /**
      * The unique ID that identifies a commit.
      * 
-     */
+    */
     public Optional<String> getCommitId() {
         return Optional.ofNullable(this.commitId);
     }
     /**
      * The event type of the trigger.
      * 
-     */
+    */
     public Optional<String> getEventType() {
         return Optional.ofNullable(this.eventType);
     }
     /**
      * The unique ID of the trigger.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The source control provider type.
      * 
-     */
+    */
     public Optional<String> getProviderType() {
         return Optional.ofNullable(this.providerType);
     }
     /**
      * The unique ID that identifies pull request.
      * 
-     */
+    */
     public Optional<String> getPullRequestId() {
         return Optional.ofNullable(this.pullRequestId);
     }
     /**
      * The repository URL.
      * 
-     */
+    */
     public Optional<String> getRepositoryUrl() {
         return Optional.ofNullable(this.repositoryUrl);
     }
@@ -181,7 +181,6 @@ public final class SourceTriggerDescriptorResponse {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
-
         public SourceTriggerDescriptorResponse build() {
             return new SourceTriggerDescriptorResponse(branchName, commitId, eventType, id, providerType, pullRequestId, repositoryUrl);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="function")
-    private final @Nullable Input<String> function;
+      private final @Nullable Input<String> function;
 
     public Input<String> getFunction() {
         return this.function == null ? Input.empty() : this.function;
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,6 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public GoogleCloudApigeeV1CustomReportMetricArgs build() {
             return new GoogleCloudApigeeV1CustomReportMetricArgs(function, name);
         }

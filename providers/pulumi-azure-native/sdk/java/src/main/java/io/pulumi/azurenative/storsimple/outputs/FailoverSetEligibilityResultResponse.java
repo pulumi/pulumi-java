@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class FailoverSetEligibilityResultResponse {
     /**
      * The error message, if the failover set is not eligible for failover.
      * 
-     */
+    */
     public Optional<String> getErrorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * Represents if this failover set is eligible for failover or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsEligibleForFailover() {
         return Optional.ofNullable(this.isEligibleForFailover);
     }
@@ -77,7 +77,6 @@ public final class FailoverSetEligibilityResultResponse {
             this.isEligibleForFailover = isEligibleForFailover;
             return this;
         }
-
         public FailoverSetEligibilityResultResponse build() {
             return new FailoverSetEligibilityResultResponse(errorMessage, isEligibleForFailover);
         }

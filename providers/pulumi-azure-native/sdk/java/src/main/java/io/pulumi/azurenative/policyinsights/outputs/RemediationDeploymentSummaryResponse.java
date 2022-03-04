@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class RemediationDeploymentSummaryResponse {
     /**
      * The number of deployments required by the remediation that have failed.
      * 
-     */
+    */
     public Integer getFailedDeployments() {
         return this.failedDeployments;
     }
     /**
      * The number of deployments required by the remediation that have succeeded.
      * 
-     */
+    */
     public Integer getSuccessfulDeployments() {
         return this.successfulDeployments;
     }
     /**
      * The number of deployments required by the remediation.
      * 
-     */
+    */
     public Integer getTotalDeployments() {
         return this.totalDeployments;
     }
@@ -95,7 +95,6 @@ public final class RemediationDeploymentSummaryResponse {
             this.totalDeployments = Objects.requireNonNull(totalDeployments);
             return this;
         }
-
         public RemediationDeploymentSummaryResponse build() {
             return new RemediationDeploymentSummaryResponse(failedDeployments, successfulDeployments, totalDeployments);
         }

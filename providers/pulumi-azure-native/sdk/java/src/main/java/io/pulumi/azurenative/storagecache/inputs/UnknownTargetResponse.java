@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class UnknownTargetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Map<String,String> attributes;
+      private final @Nullable Map<String,String> attributes;
 
     public Map<String,String> getAttributes() {
         return this.attributes == null ? Map.of() : this.attributes;
@@ -62,7 +62,6 @@ public final class UnknownTargetResponse extends io.pulumi.resources.InvokeArgs 
             this.attributes = attributes;
             return this;
         }
-
         public UnknownTargetResponse build() {
             return new UnknownTargetResponse(attributes);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRolloutDisruptionBudgetGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disruptionBudget", required=true)
-    private final Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget;
+      private final Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget;
 
     public Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> getDisruptionBudget() {
         return this.disruptionBudget;
@@ -36,7 +36,7 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="mode", required=true)
-    private final Input<String> mode;
+      private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;
@@ -95,7 +95,6 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
-
         public PatchDeploymentRolloutGetArgs build() {
             return new PatchDeploymentRolloutGetArgs(disruptionBudget, mode);
         }

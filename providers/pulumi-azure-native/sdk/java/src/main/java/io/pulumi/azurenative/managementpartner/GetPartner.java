@@ -6,21 +6,41 @@ package io.pulumi.azurenative.managementpartner;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.managementpartner.inputs.GetPartnerArgs;
 import io.pulumi.azurenative.managementpartner.outputs.GetPartnerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPartner {
-/**
- * this is the management partner operations response
+    private GetPartner() {}
+    public interface BuilderApplicator {
+        public void apply(GetPartnerArgs.Builder a);
+    }
+    private static GetPartnerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPartnerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * this is the management partner operations response
  * API Version: 2018-02-01.
  * 
- *
- * this is the management partner operations response
+     *
+     * this is the management partner operations response
  * 
- */
+     */
+    public static CompletableFuture<GetPartnerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * this is the management partner operations response
+     * API Version: 2018-02-01.
+     * 
+     *
+         * this is the management partner operations response
+     * 
+     */
     public static CompletableFuture<GetPartnerResult> invokeAsync(GetPartnerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managementpartner:getPartner", TypeShape.of(GetPartnerResult.class), args == null ? GetPartnerArgs.Empty : args, Utilities.withVersion(options));
     }

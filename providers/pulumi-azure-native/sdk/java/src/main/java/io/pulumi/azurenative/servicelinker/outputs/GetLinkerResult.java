@@ -9,7 +9,7 @@ import io.pulumi.azurenative.servicelinker.outputs.ServicePrincipalSecretAuthInf
 import io.pulumi.azurenative.servicelinker.outputs.SystemAssignedIdentityAuthInfoResponse;
 import io.pulumi.azurenative.servicelinker.outputs.SystemDataResponse;
 import io.pulumi.azurenative.servicelinker.outputs.UserAssignedIdentityAuthInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -82,56 +82,56 @@ public final class GetLinkerResult {
     /**
      * The authentication type.
      * 
-     */
+    */
     public Optional<Object> getAuthInfo() {
         return Optional.ofNullable(this.authInfo);
     }
     /**
      * The application client type
      * 
-     */
+    */
     public Optional<String> getClientType() {
         return Optional.ofNullable(this.clientType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system data.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The resource Id of target service.
      * 
-     */
+    */
     public Optional<String> getTargetId() {
         return Optional.ofNullable(this.targetId);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -209,7 +209,6 @@ public final class GetLinkerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkerResult build() {
             return new GetLinkerResult(authInfo, clientType, id, name, provisioningState, systemData, targetId, type);
         }

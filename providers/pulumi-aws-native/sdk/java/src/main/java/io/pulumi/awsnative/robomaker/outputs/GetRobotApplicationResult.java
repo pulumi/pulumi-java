@@ -6,7 +6,7 @@ package io.pulumi.awsnative.robomaker.outputs;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationRobotSoftwareSuite;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationSourceConfig;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationTags;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,14 +56,14 @@ public final class GetRobotApplicationResult {
     /**
      * The revision ID of robot application.
      * 
-     */
+    */
     public Optional<String> getCurrentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
     /**
      * The URI of the Docker image for the robot application.
      * 
-     */
+    */
     public Optional<String> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
@@ -73,7 +73,7 @@ public final class GetRobotApplicationResult {
     /**
      * The sources of the robot application.
      * 
-     */
+    */
     public List<RobotApplicationSourceConfig> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }
@@ -140,7 +140,6 @@ public final class GetRobotApplicationResult {
             this.tags = tags;
             return this;
         }
-
         public GetRobotApplicationResult build() {
             return new GetRobotApplicationResult(arn, currentRevisionId, environment, robotSoftwareSuite, sources, tags);
         }

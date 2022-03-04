@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs;
 import java.lang.String;
@@ -17,7 +17,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     public static final FeedbackMessageArgs Empty = new FeedbackMessageArgs();
 
     @InputImport(name="annotatedDatasetId", required=true)
-    private final Input<String> annotatedDatasetId;
+      private final Input<String> annotatedDatasetId;
 
     public Input<String> getAnnotatedDatasetId() {
         return this.annotatedDatasetId;
@@ -28,7 +28,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -39,21 +39,21 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="feedbackThreadId", required=true)
-    private final Input<String> feedbackThreadId;
+      private final Input<String> feedbackThreadId;
 
     public Input<String> getFeedbackThreadId() {
         return this.feedbackThreadId;
@@ -64,7 +64,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -75,28 +75,28 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="operatorFeedbackMetadata")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata;
 
     public Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> getOperatorFeedbackMetadata() {
         return this.operatorFeedbackMetadata == null ? Input.empty() : this.operatorFeedbackMetadata;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requesterFeedbackMetadata")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata;
 
     public Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> getRequesterFeedbackMetadata() {
         return this.requesterFeedbackMetadata == null ? Input.empty() : this.requesterFeedbackMetadata;
@@ -275,7 +275,6 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
             this.requesterFeedbackMetadata = Input.ofNullable(requesterFeedbackMetadata);
             return this;
         }
-
         public FeedbackMessageArgs build() {
             return new FeedbackMessageArgs(annotatedDatasetId, body, createTime, datasetId, feedbackThreadId, image, name, operatorFeedbackMetadata, project, requesterFeedbackMetadata);
         }

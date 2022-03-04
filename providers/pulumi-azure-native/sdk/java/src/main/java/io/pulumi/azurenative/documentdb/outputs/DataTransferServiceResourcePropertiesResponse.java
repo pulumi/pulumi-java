@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.DataTransferRegionalServiceResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -65,28 +65,28 @@ public final class DataTransferServiceResourcePropertiesResponse {
     /**
      * Time of the last state change (ISO-8601 format).
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Instance count for the service.
      * 
-     */
+    */
     public Optional<Integer> getInstanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
      * Instance type for the service.
      * 
-     */
+    */
     public Optional<String> getInstanceSize() {
         return Optional.ofNullable(this.instanceSize);
     }
     /**
      * An array that contains all of the locations for the service.
      * 
-     */
+    */
     public List<DataTransferRegionalServiceResourceResponse> getLocations() {
         return this.locations;
     }
@@ -94,14 +94,14 @@ public final class DataTransferServiceResourcePropertiesResponse {
      * ServiceType for the service.
      * Expected value is 'DataTransfer'.
      * 
-     */
+    */
     public String getServiceType() {
         return this.serviceType;
     }
     /**
      * Describes the status of a service.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -165,7 +165,6 @@ public final class DataTransferServiceResourcePropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataTransferServiceResourcePropertiesResponse build() {
             return new DataTransferServiceResourcePropertiesResponse(creationTime, instanceCount, instanceSize, locations, serviceType, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class LatLngResponse {
     /**
      * The latitude in degrees. It must be in the range [-90.0, +90.0].
      * 
-     */
+    */
     public Double getLatitude() {
         return this.latitude;
     }
     /**
      * The longitude in degrees. It must be in the range [-180.0, +180.0].
      * 
-     */
+    */
     public Double getLongitude() {
         return this.longitude;
     }
@@ -74,7 +74,6 @@ public final class LatLngResponse {
             this.longitude = Objects.requireNonNull(longitude);
             return this;
         }
-
         public LatLngResponse build() {
             return new LatLngResponse(latitude, longitude);
         }

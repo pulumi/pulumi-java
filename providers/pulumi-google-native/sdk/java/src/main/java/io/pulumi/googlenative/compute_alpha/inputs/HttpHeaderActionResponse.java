@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpHeaderOptionResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="requestHeadersToAdd", required=true)
-    private final List<HttpHeaderOptionResponse> requestHeadersToAdd;
+      private final List<HttpHeaderOptionResponse> requestHeadersToAdd;
 
     public List<HttpHeaderOptionResponse> getRequestHeadersToAdd() {
         return this.requestHeadersToAdd;
@@ -34,7 +34,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="requestHeadersToRemove", required=true)
-    private final List<String> requestHeadersToRemove;
+      private final List<String> requestHeadersToRemove;
 
     public List<String> getRequestHeadersToRemove() {
         return this.requestHeadersToRemove;
@@ -45,7 +45,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="responseHeadersToAdd", required=true)
-    private final List<HttpHeaderOptionResponse> responseHeadersToAdd;
+      private final List<HttpHeaderOptionResponse> responseHeadersToAdd;
 
     public List<HttpHeaderOptionResponse> getResponseHeadersToAdd() {
         return this.responseHeadersToAdd;
@@ -56,7 +56,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="responseHeadersToRemove", required=true)
-    private final List<String> responseHeadersToRemove;
+      private final List<String> responseHeadersToRemove;
 
     public List<String> getResponseHeadersToRemove() {
         return this.responseHeadersToRemove;
@@ -125,7 +125,6 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
             this.responseHeadersToRemove = Objects.requireNonNull(responseHeadersToRemove);
             return this;
         }
-
         public HttpHeaderActionResponse build() {
             return new HttpHeaderActionResponse(requestHeadersToAdd, requestHeadersToRemove, responseHeadersToAdd, responseHeadersToRemove);
         }

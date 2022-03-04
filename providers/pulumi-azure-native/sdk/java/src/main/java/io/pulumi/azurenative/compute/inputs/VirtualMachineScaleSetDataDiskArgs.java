@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.enums.DiskCreateOptionTypes;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetManagedDiskParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -30,7 +30,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="caching")
-    private final @Nullable Input<CachingTypes> caching;
+      private final @Nullable Input<CachingTypes> caching;
 
     public Input<CachingTypes> getCaching() {
         return this.caching == null ? Input.empty() : this.caching;
@@ -41,7 +41,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="createOption", required=true)
-    private final Input<Either<String,DiskCreateOptionTypes>> createOption;
+      private final Input<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Input<Either<String,DiskCreateOptionTypes>> getCreateOption() {
         return this.createOption;
@@ -52,7 +52,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskIOPSReadWrite")
-    private final @Nullable Input<Double> diskIOPSReadWrite;
+      private final @Nullable Input<Double> diskIOPSReadWrite;
 
     public Input<Double> getDiskIOPSReadWrite() {
         return this.diskIOPSReadWrite == null ? Input.empty() : this.diskIOPSReadWrite;
@@ -63,7 +63,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskMBpsReadWrite")
-    private final @Nullable Input<Double> diskMBpsReadWrite;
+      private final @Nullable Input<Double> diskMBpsReadWrite;
 
     public Input<Double> getDiskMBpsReadWrite() {
         return this.diskMBpsReadWrite == null ? Input.empty() : this.diskMBpsReadWrite;
@@ -74,7 +74,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskSizeGB")
-    private final @Nullable Input<Integer> diskSizeGB;
+      private final @Nullable Input<Integer> diskSizeGB;
 
     public Input<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
@@ -85,7 +85,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="lun", required=true)
-    private final Input<Integer> lun;
+      private final Input<Integer> lun;
 
     public Input<Integer> getLun() {
         return this.lun;
@@ -96,7 +96,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="managedDisk")
-    private final @Nullable Input<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
+      private final @Nullable Input<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
 
     public Input<VirtualMachineScaleSetManagedDiskParametersArgs> getManagedDisk() {
         return this.managedDisk == null ? Input.empty() : this.managedDisk;
@@ -107,7 +107,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -118,7 +118,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="writeAcceleratorEnabled")
-    private final @Nullable Input<Boolean> writeAcceleratorEnabled;
+      private final @Nullable Input<Boolean> writeAcceleratorEnabled;
 
     public Input<Boolean> getWriteAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Input.empty() : this.writeAcceleratorEnabled;
@@ -282,7 +282,6 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
             this.writeAcceleratorEnabled = Input.ofNullable(writeAcceleratorEnabled);
             return this;
         }
-
         public VirtualMachineScaleSetDataDiskArgs build() {
             return new VirtualMachineScaleSetDataDiskArgs(caching, createOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, lun, managedDisk, name, writeAcceleratorEnabled);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="created")
-    private final @Nullable String created;
+      private final @Nullable String created;
 
     public Optional<String> getCreated() {
         return this.created == null ? Optional.empty() : Optional.ofNullable(this.created);
@@ -30,7 +30,7 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="createdBy")
-    private final @Nullable String createdBy;
+      private final @Nullable String createdBy;
 
     public Optional<String> getCreatedBy() {
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
@@ -41,7 +41,7 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -52,7 +52,7 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -121,7 +121,6 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
             this.name = name;
             return this;
         }
-
         public DatadogApiKeyResponse build() {
             return new DatadogApiKeyResponse(created, createdBy, key, name);
         }

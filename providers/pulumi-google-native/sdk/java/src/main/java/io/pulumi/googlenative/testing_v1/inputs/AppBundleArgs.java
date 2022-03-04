@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AppBundleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleLocation")
-    private final @Nullable Input<FileReferenceArgs> bundleLocation;
+      private final @Nullable Input<FileReferenceArgs> bundleLocation;
 
     public Input<FileReferenceArgs> getBundleLocation() {
         return this.bundleLocation == null ? Input.empty() : this.bundleLocation;
@@ -66,7 +66,6 @@ public final class AppBundleArgs extends io.pulumi.resources.ResourceArgs {
             this.bundleLocation = Input.ofNullable(bundleLocation);
             return this;
         }
-
         public AppBundleArgs build() {
             return new AppBundleArgs(bundleLocation);
         }

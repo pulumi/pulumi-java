@@ -3,7 +3,7 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.example.Cat;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -75,7 +75,6 @@ public final class Laser {
             this.light = light;
             return this;
         }
-
         public Laser build() {
             return new Laser(animal, batteries, light);
         }

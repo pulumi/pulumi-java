@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
      * 
      */
     @InputImport(name="enableInsightsExport", required=true)
-    private final Boolean enableInsightsExport;
+      private final Boolean enableInsightsExport;
 
     public Boolean getEnableInsightsExport() {
         return this.enableInsightsExport;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
             this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(enableInsightsExport);
         }

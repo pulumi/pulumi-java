@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ParameterDefinitionsValueResponseMetadata extends io.pulumi.r
      * 
      */
     @InputImport(name="assignPermissions")
-    private final @Nullable Boolean assignPermissions;
+      private final @Nullable Boolean assignPermissions;
 
     public Optional<Boolean> getAssignPermissions() {
         return this.assignPermissions == null ? Optional.empty() : Optional.ofNullable(this.assignPermissions);
@@ -35,7 +35,7 @@ public final class ParameterDefinitionsValueResponseMetadata extends io.pulumi.r
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -46,7 +46,7 @@ public final class ParameterDefinitionsValueResponseMetadata extends io.pulumi.r
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -57,7 +57,7 @@ public final class ParameterDefinitionsValueResponseMetadata extends io.pulumi.r
      * 
      */
     @InputImport(name="strongType")
-    private final @Nullable String strongType;
+      private final @Nullable String strongType;
 
     public Optional<String> getStrongType() {
         return this.strongType == null ? Optional.empty() : Optional.ofNullable(this.strongType);
@@ -126,7 +126,6 @@ public final class ParameterDefinitionsValueResponseMetadata extends io.pulumi.r
             this.strongType = strongType;
             return this;
         }
-
         public ParameterDefinitionsValueResponseMetadata build() {
             return new ParameterDefinitionsValueResponseMetadata(assignPermissions, description, displayName, strongType);
         }

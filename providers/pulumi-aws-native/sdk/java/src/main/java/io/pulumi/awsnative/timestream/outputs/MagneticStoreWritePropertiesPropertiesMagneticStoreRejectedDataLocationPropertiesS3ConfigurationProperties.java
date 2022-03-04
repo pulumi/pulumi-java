@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.timestream.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     /**
      * The bucket name used to store the data.
      * 
-     */
+    */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * Either SSE_KMS or SSE_S3.
      * 
-     */
+    */
     public String getEncryptionOption() {
         return this.encryptionOption;
     }
     /**
      * Must be provided if SSE_KMS is specified as the encryption option
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * String used to prefix all data in the bucket.
      * 
-     */
+    */
     public Optional<String> getObjectKeyPrefix() {
         return Optional.ofNullable(this.objectKeyPrefix);
     }
@@ -118,7 +118,6 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
-
         public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties build() {
             return new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties(bucketName, encryptionOption, kmsKeyId, objectKeyPrefix);
         }

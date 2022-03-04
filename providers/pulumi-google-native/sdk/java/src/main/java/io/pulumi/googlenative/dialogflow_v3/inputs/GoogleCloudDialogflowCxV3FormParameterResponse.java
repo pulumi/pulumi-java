@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * 
      */
     @InputImport(name="defaultValue", required=true)
-    private final Object defaultValue;
+      private final Object defaultValue;
 
     public Object getDefaultValue() {
         return this.defaultValue;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * 
      */
     @InputImport(name="entityType", required=true)
-    private final String entityType;
+      private final String entityType;
 
     public String getEntityType() {
         return this.entityType;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * 
      */
     @InputImport(name="fillBehavior", required=true)
-    private final GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior;
+      private final GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior;
 
     public GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse getFillBehavior() {
         return this.fillBehavior;
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * 
      */
     @InputImport(name="isList", required=true)
-    private final Boolean isList;
+      private final Boolean isList;
 
     public Boolean getIsList() {
         return this.isList;
@@ -79,7 +79,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * 
      */
     @InputImport(name="redact", required=true)
-    private final Boolean redact;
+      private final Boolean redact;
 
     public Boolean getRedact() {
         return this.redact;
@@ -90,7 +90,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * 
      */
     @InputImport(name="required", required=true)
-    private final Boolean required;
+      private final Boolean required;
 
     public Boolean getRequired() {
         return this.required;
@@ -189,7 +189,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
             this.required = Objects.requireNonNull(required);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FormParameterResponse build() {
             return new GoogleCloudDialogflowCxV3FormParameterResponse(defaultValue, displayName, entityType, fillBehavior, isList, redact, required);
         }

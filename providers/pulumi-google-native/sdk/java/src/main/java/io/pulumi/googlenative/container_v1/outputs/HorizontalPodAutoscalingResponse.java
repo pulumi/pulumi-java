@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class HorizontalPodAutoscalingResponse {
     /**
      * Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it ensures that metrics are collected into Stackdriver Monitoring.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
@@ -52,7 +52,6 @@ public final class HorizontalPodAutoscalingResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public HorizontalPodAutoscalingResponse build() {
             return new HorizontalPodAutoscalingResponse(disabled);
         }

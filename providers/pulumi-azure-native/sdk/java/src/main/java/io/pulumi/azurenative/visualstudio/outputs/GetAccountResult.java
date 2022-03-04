@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.visualstudio.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class GetAccountResult {
     /**
      * Unique identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource properties.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(id, location, name, properties, tags, type);
         }

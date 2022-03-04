@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetInboundNatRuleArgs;
 import io.pulumi.azurenative.network.outputs.GetInboundNatRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInboundNatRule {
-/**
- * Inbound NAT rule of the load balancer.
+    private GetInboundNatRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetInboundNatRuleArgs.Builder a);
+    }
+    private static GetInboundNatRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInboundNatRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Inbound NAT rule of the load balancer.
  * API Version: 2020-11-01.
  * 
- *
- * Inbound NAT rule of the load balancer.
+     *
+     * Inbound NAT rule of the load balancer.
  * 
- */
+     */
+    public static CompletableFuture<GetInboundNatRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Inbound NAT rule of the load balancer.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Inbound NAT rule of the load balancer.
+     * 
+     */
     public static CompletableFuture<GetInboundNatRuleResult> invokeAsync(GetInboundNatRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getInboundNatRule", TypeShape.of(GetInboundNatRuleResult.class), args == null ? GetInboundNatRuleArgs.Empty : args, Utilities.withVersion(options));
     }

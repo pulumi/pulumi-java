@@ -9,7 +9,7 @@ import io.pulumi.azurenative.portal.inputs.StorageProfileArgs;
 import io.pulumi.azurenative.portal.inputs.TerminalSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +27,7 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredLocation", required=true)
-    private final Input<String> preferredLocation;
+      private final Input<String> preferredLocation;
 
     public Input<String> getPreferredLocation() {
         return this.preferredLocation;
@@ -38,7 +38,7 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredOsType", required=true)
-    private final Input<Either<String,OsType>> preferredOsType;
+      private final Input<Either<String,OsType>> preferredOsType;
 
     public Input<Either<String,OsType>> getPreferredOsType() {
         return this.preferredOsType;
@@ -49,7 +49,7 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredShellType", required=true)
-    private final Input<Either<String,ShellType>> preferredShellType;
+      private final Input<Either<String,ShellType>> preferredShellType;
 
     public Input<Either<String,ShellType>> getPreferredShellType() {
         return this.preferredShellType;
@@ -60,7 +60,7 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageProfile", required=true)
-    private final Input<StorageProfileArgs> storageProfile;
+      private final Input<StorageProfileArgs> storageProfile;
 
     public Input<StorageProfileArgs> getStorageProfile() {
         return this.storageProfile;
@@ -71,7 +71,7 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminalSettings", required=true)
-    private final Input<TerminalSettingsArgs> terminalSettings;
+      private final Input<TerminalSettingsArgs> terminalSettings;
 
     public Input<TerminalSettingsArgs> getTerminalSettings() {
         return this.terminalSettings;
@@ -175,7 +175,6 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.terminalSettings = Input.of(Objects.requireNonNull(terminalSettings));
             return this;
         }
-
         public UserPropertiesArgs build() {
             return new UserPropertiesArgs(preferredLocation, preferredOsType, preferredShellType, storageProfile, terminalSettings);
         }

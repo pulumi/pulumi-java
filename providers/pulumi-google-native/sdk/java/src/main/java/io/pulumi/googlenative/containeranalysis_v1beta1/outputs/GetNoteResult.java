@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.AuthorityResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.BasisResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.BuildResponse;
@@ -178,147 +178,147 @@ public final class GetNoteResult {
     /**
      * A note describing an attestation role.
      * 
-     */
+    */
     public AuthorityResponse getAttestationAuthority() {
         return this.attestationAuthority;
     }
     /**
      * A note describing a base image.
      * 
-     */
+    */
     public BasisResponse getBaseImage() {
         return this.baseImage;
     }
     /**
      * A note describing build provenance for a verifiable build.
      * 
-     */
+    */
     public BuildResponse getBuild() {
         return this.build;
     }
     /**
      * The time this note was created. This field can be used as a filter in list requests.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * A note describing something that can be deployed.
      * 
-     */
+    */
     public DeployableResponse getDeployable() {
         return this.deployable;
     }
     /**
      * A note describing the initial analysis of a resource.
      * 
-     */
+    */
     public DiscoveryResponse getDiscovery() {
         return this.discovery;
     }
     /**
      * Time of expiration for this note. Empty if note does not expire.
      * 
-     */
+    */
     public String getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * A note describing an in-toto link.
      * 
-     */
+    */
     public InTotoResponse getIntoto() {
         return this.intoto;
     }
     /**
      * The type of analysis. This field can be used as a filter in list requests.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * A detailed description of this note.
      * 
-     */
+    */
     public String getLongDescription() {
         return this.longDescription;
     }
     /**
      * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A note describing a package hosted by various package managers.
      * 
-     */
+    */
     public PackageResponse get$package() {
         return this.$package;
     }
     /**
      * Other notes related to this note.
      * 
-     */
+    */
     public List<String> getRelatedNoteNames() {
         return this.relatedNoteNames;
     }
     /**
      * URLs associated with this note.
      * 
-     */
+    */
     public List<RelatedUrlResponse> getRelatedUrl() {
         return this.relatedUrl;
     }
     /**
      * A note describing a software bill of materials.
      * 
-     */
+    */
     public DocumentNoteResponse getSbom() {
         return this.sbom;
     }
     /**
      * A one sentence description of this note.
      * 
-     */
+    */
     public String getShortDescription() {
         return this.shortDescription;
     }
     /**
      * A note describing an SPDX File.
      * 
-     */
+    */
     public FileNoteResponse getSpdxFile() {
         return this.spdxFile;
     }
     /**
      * A note describing an SPDX Package.
      * 
-     */
+    */
     public PackageInfoNoteResponse getSpdxPackage() {
         return this.spdxPackage;
     }
     /**
      * A note describing an SPDX File.
      * 
-     */
+    */
     public RelationshipNoteResponse getSpdxRelationship() {
         return this.spdxRelationship;
     }
     /**
      * The time this note was last updated. This field can be used as a filter in list requests.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * A note describing a package vulnerability.
      * 
-     */
+    */
     public VulnerabilityResponse getVulnerability() {
         return this.vulnerability;
     }
@@ -487,7 +487,6 @@ public final class GetNoteResult {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }
-
         public GetNoteResult build() {
             return new GetNoteResult(attestationAuthority, baseImage, build, createTime, deployable, discovery, expirationTime, intoto, kind, longDescription, name, $package, relatedNoteNames, relatedUrl, sbom, shortDescription, spdxFile, spdxPackage, spdxRelationship, updateTime, vulnerability);
         }

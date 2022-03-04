@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
      * 
      */
     @InputImport(name="backendService")
-    private final @Nullable Input<String> backendService;
+      private final @Nullable Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -36,7 +36,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
+      private final @Nullable Input<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
 
     public Input<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -52,7 +52,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+      private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -126,7 +126,6 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs build() {
             return new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs(backendService, headerAction, weight);
         }

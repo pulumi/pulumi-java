@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryDimensionValueType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,14 +19,14 @@ public final class ScheduledQueryDimensionMappingArgs extends io.pulumi.resource
     public static final ScheduledQueryDimensionMappingArgs Empty = new ScheduledQueryDimensionMappingArgs();
 
     @InputImport(name="dimensionValueType", required=true)
-    private final Input<ScheduledQueryDimensionValueType> dimensionValueType;
+      private final Input<ScheduledQueryDimensionValueType> dimensionValueType;
 
     public Input<ScheduledQueryDimensionValueType> getDimensionValueType() {
         return this.dimensionValueType;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -85,7 +85,6 @@ public final class ScheduledQueryDimensionMappingArgs extends io.pulumi.resource
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ScheduledQueryDimensionMappingArgs build() {
             return new ScheduledQueryDimensionMappingArgs(dimensionValueType, name);
         }

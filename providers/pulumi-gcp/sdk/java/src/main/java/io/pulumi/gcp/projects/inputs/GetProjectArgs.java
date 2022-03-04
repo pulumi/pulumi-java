@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -55,7 +55,6 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public GetProjectArgs build() {
             return new GetProjectArgs(filter);
         }

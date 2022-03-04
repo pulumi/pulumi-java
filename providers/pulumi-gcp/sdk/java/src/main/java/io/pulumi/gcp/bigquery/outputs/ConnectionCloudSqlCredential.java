@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class ConnectionCloudSqlCredential {
      * Password for database.
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * Username for database.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -76,7 +76,6 @@ public final class ConnectionCloudSqlCredential {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ConnectionCloudSqlCredential build() {
             return new ConnectionCloudSqlCredential(password, username);
         }

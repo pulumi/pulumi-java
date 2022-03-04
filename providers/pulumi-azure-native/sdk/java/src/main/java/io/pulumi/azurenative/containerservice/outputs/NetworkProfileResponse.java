@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class NetworkProfileResponse {
     /**
      * CIDR of the Vnet to peer.
      * 
-     */
+    */
     public Optional<String> getPeerVnetId() {
         return Optional.ofNullable(this.peerVnetId);
     }
     /**
      * CIDR for the OpenShift Vnet.
      * 
-     */
+    */
     public Optional<String> getVnetCidr() {
         return Optional.ofNullable(this.vnetCidr);
     }
     /**
      * ID of the Vnet created for OSA cluster.
      * 
-     */
+    */
     public Optional<String> getVnetId() {
         return Optional.ofNullable(this.vnetId);
     }
@@ -97,7 +97,6 @@ public final class NetworkProfileResponse {
             this.vnetId = vnetId;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(peerVnetId, vnetCidr, vnetId);
         }

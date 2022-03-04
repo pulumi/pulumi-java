@@ -4,7 +4,7 @@
 package io.pulumi.awsnative;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<Map<String,Object>> properties;
+      private final Input<Map<String,Object>> properties;
 
     public Input<Map<String,Object>> getProperties() {
         return this.properties;
@@ -31,7 +31,7 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -90,7 +90,6 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ExtensionResourceArgs build() {
             return new ExtensionResourceArgs(properties, type);
         }

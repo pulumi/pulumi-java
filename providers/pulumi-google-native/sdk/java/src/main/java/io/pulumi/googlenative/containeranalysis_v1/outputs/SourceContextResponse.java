@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.CloudRepoSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.GerritSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.GitSourceContextResponse;
@@ -49,28 +49,28 @@ public final class SourceContextResponse {
     /**
      * A SourceContext referring to a revision in a Google Cloud Source Repo.
      * 
-     */
+    */
     public CloudRepoSourceContextResponse getCloudRepo() {
         return this.cloudRepo;
     }
     /**
      * A SourceContext referring to a Gerrit project.
      * 
-     */
+    */
     public GerritSourceContextResponse getGerrit() {
         return this.gerrit;
     }
     /**
      * A SourceContext referring to any third party Git repo (e.g., GitHub).
      * 
-     */
+    */
     public GitSourceContextResponse getGit() {
         return this.git;
     }
     /**
      * Labels with user defined metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
@@ -120,7 +120,6 @@ public final class SourceContextResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public SourceContextResponse build() {
             return new SourceContextResponse(cloudRepo, gerrit, git, labels);
         }

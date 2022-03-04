@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs.TokenRequestArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachRequired")
-    private final @Nullable Input<Boolean> attachRequired;
+      private final @Nullable Input<Boolean> attachRequired;
 
     public Input<Boolean> getAttachRequired() {
         return this.attachRequired == null ? Input.empty() : this.attachRequired;
@@ -37,7 +37,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fsGroupPolicy")
-    private final @Nullable Input<String> fsGroupPolicy;
+      private final @Nullable Input<String> fsGroupPolicy;
 
     public Input<String> getFsGroupPolicy() {
         return this.fsGroupPolicy == null ? Input.empty() : this.fsGroupPolicy;
@@ -51,7 +51,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podInfoOnMount")
-    private final @Nullable Input<Boolean> podInfoOnMount;
+      private final @Nullable Input<Boolean> podInfoOnMount;
 
     public Input<Boolean> getPodInfoOnMount() {
         return this.podInfoOnMount == null ? Input.empty() : this.podInfoOnMount;
@@ -66,7 +66,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresRepublish")
-    private final @Nullable Input<Boolean> requiresRepublish;
+      private final @Nullable Input<Boolean> requiresRepublish;
 
     public Input<Boolean> getRequiresRepublish() {
         return this.requiresRepublish == null ? Input.empty() : this.requiresRepublish;
@@ -83,7 +83,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageCapacity")
-    private final @Nullable Input<Boolean> storageCapacity;
+      private final @Nullable Input<Boolean> storageCapacity;
 
     public Input<Boolean> getStorageCapacity() {
         return this.storageCapacity == null ? Input.empty() : this.storageCapacity;
@@ -104,7 +104,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenRequests")
-    private final @Nullable Input<List<TokenRequestArgs>> tokenRequests;
+      private final @Nullable Input<List<TokenRequestArgs>> tokenRequests;
 
     public Input<List<TokenRequestArgs>> getTokenRequests() {
         return this.tokenRequests == null ? Input.empty() : this.tokenRequests;
@@ -115,7 +115,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeLifecycleModes")
-    private final @Nullable Input<List<String>> volumeLifecycleModes;
+      private final @Nullable Input<List<String>> volumeLifecycleModes;
 
     public Input<List<String>> getVolumeLifecycleModes() {
         return this.volumeLifecycleModes == null ? Input.empty() : this.volumeLifecycleModes;
@@ -249,7 +249,6 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.volumeLifecycleModes = Input.ofNullable(volumeLifecycleModes);
             return this;
         }
-
         public CSIDriverSpecArgs build() {
             return new CSIDriverSpecArgs(attachRequired, fsGroupPolicy, podInfoOnMount, requiresRepublish, storageCapacity, tokenRequests, volumeLifecycleModes);
         }

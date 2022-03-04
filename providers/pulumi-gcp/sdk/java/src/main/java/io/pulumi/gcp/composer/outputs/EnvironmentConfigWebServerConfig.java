@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class EnvironmentConfigWebServerConfig {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public EnvironmentConfigWebServerConfig build() {
             return new EnvironmentConfigWebServerConfig(machineType);
         }

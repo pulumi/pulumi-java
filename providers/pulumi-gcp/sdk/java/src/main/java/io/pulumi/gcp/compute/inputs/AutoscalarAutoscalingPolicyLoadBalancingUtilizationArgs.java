@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs exten
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<Double> target;
+      private final Input<Double> target;
 
     public Input<Double> getTarget() {
         return this.target;
@@ -63,7 +63,6 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs exten
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
-
         public AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs build() {
             return new AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs(target);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.GroupMembersItemResponse;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -99,77 +99,77 @@ public final class GetNetworkGroupResult {
     /**
      * Network group conditional filter.
      * 
-     */
+    */
     public Optional<String> getConditionalMembership() {
         return Optional.ofNullable(this.conditionalMembership);
     }
     /**
      * A description of the network group.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A friendly name for the network group.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Group members of network group.
      * 
-     */
+    */
     public List<GroupMembersItemResponse> getGroupMembers() {
         return this.groupMembers == null ? List.of() : this.groupMembers;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Group member type.
      * 
-     */
+    */
     public Optional<String> getMemberType() {
         return Optional.ofNullable(this.memberType);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the scope assignment resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata related to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -268,7 +268,6 @@ public final class GetNetworkGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkGroupResult build() {
             return new GetNetworkGroupResult(conditionalMembership, description, displayName, etag, groupMembers, id, memberType, name, provisioningState, systemData, type);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.inspectorv2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.inspectorv2.inputs.GetFilterArgs;
 import io.pulumi.awsnative.inspectorv2.outputs.GetFilterResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFilter {
-/**
- * Inspector Filter resource schema
+    private GetFilter() {}
+    public interface BuilderApplicator {
+        public void apply(GetFilterArgs.Builder a);
+    }
+    private static GetFilterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFilterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Inspector Filter resource schema
  * 
- */
+     */
+    public static CompletableFuture<GetFilterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Inspector Filter resource schema
+     * 
+     */
     public static CompletableFuture<GetFilterResult> invokeAsync(GetFilterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:inspectorv2:getFilter", TypeShape.of(GetFilterResult.class), args == null ? GetFilterArgs.Empty : args, Utilities.withVersion(options));
     }

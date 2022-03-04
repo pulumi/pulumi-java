@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketVersioningConfigurationStatus;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class BucketVersioningConfiguration extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="status", required=true)
-    private final BucketVersioningConfigurationStatus status;
+      private final BucketVersioningConfigurationStatus status;
 
     public BucketVersioningConfigurationStatus getStatus() {
         return this.status;
@@ -59,7 +59,6 @@ public final class BucketVersioningConfiguration extends io.pulumi.resources.Inv
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketVersioningConfiguration build() {
             return new BucketVersioningConfiguration(status);
         }

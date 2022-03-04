@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleted")
-    private final @Nullable Input<Boolean> deleted;
+      private final @Nullable Input<Boolean> deleted;
 
     public Input<Boolean> getDeleted() {
         return this.deleted == null ? Input.empty() : this.deleted;
@@ -32,7 +32,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId")
-    private final @Nullable Input<String> orgId;
+      private final @Nullable Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId == null ? Input.empty() : this.orgId;
@@ -65,7 +65,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<List<String>> permissions;
+      private final @Nullable Input<List<String>> permissions;
 
     public Input<List<String>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -76,7 +76,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleId")
-    private final @Nullable Input<String> roleId;
+      private final @Nullable Input<String> roleId;
 
     public Input<String> getRoleId() {
         return this.roleId == null ? Input.empty() : this.roleId;
@@ -89,7 +89,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stage")
-    private final @Nullable Input<String> stage;
+      private final @Nullable Input<String> stage;
 
     public Input<String> getStage() {
         return this.stage == null ? Input.empty() : this.stage;
@@ -100,7 +100,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -249,7 +249,6 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public IAMCustomRoleState build() {
             return new IAMCustomRoleState(deleted, description, name, orgId, permissions, roleId, stage, title);
         }

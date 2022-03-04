@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class DataSourceS3Path {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public DataSourceS3Path build() {
             return new DataSourceS3Path(bucket, key);
         }

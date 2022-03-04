@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.PortResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class IpAddressResponse {
     /**
      * The Dns name label for the IP.
      * 
-     */
+    */
     public Optional<String> getDnsNameLabel() {
         return Optional.ofNullable(this.dnsNameLabel);
     }
     /**
      * The FQDN for the IP.
      * 
-     */
+    */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * The IP exposed to the public internet.
      * 
-     */
+    */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * The list of ports exposed on the container group.
      * 
-     */
+    */
     public List<PortResponse> getPorts() {
         return this.ports;
     }
     /**
      * Specifies if the IP is exposed to the public internet or private VNET.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -141,7 +141,6 @@ public final class IpAddressResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IpAddressResponse build() {
             return new IpAddressResponse(dnsNameLabel, fqdn, ip, ports, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplify.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class AppEnvironmentVariable {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AppEnvironmentVariable build() {
             return new AppEnvironmentVariable(name, value);
         }

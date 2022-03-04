@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LogsPanelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -33,7 +33,7 @@ public final class LogsPanelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceNames", required=true)
-    private final List<String> resourceNames;
+      private final List<String> resourceNames;
 
     public List<String> getResourceNames() {
         return this.resourceNames;
@@ -82,7 +82,6 @@ public final class LogsPanelResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceNames = Objects.requireNonNull(resourceNames);
             return this;
         }
-
         public LogsPanelResponse build() {
             return new LogsPanelResponse(filter, resourceNames);
         }

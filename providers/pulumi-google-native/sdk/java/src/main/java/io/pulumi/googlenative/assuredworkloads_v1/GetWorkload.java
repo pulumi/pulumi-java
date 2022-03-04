@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkload {
-/**
- * Gets Assured Workload associated with a CRM Node
+    private GetWorkload() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkloadArgs.Builder a);
+    }
+    private static GetWorkloadArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkloadArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets Assured Workload associated with a CRM Node
  * 
- */
+     */
+    public static CompletableFuture<GetWorkloadResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets Assured Workload associated with a CRM Node
+     * 
+     */
     public static CompletableFuture<GetWorkloadResult> invokeAsync(GetWorkloadArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:assuredworkloads/v1:getWorkload", TypeShape.of(GetWorkloadResult.class), args == null ? GetWorkloadArgs.Empty : args, Utilities.withVersion(options));
     }

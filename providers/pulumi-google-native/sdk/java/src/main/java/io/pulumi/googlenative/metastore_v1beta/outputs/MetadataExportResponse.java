@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class MetadataExportResponse {
     /**
      * The type of the database dump.
      * 
-     */
+    */
     public String getDatabaseDumpType() {
         return this.databaseDumpType;
     }
     /**
      * A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.
      * 
-     */
+    */
     public String getDestinationGcsUri() {
         return this.destinationGcsUri;
     }
     /**
      * The time when the export ended.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The time when the export started.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The current state of the export.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -137,7 +137,6 @@ public final class MetadataExportResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MetadataExportResponse build() {
             return new MetadataExportResponse(databaseDumpType, destinationGcsUri, endTime, startTime, state);
         }

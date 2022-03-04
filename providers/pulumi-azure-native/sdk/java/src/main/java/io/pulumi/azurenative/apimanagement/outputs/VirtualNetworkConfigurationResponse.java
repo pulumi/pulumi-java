@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class VirtualNetworkConfigurationResponse {
     /**
      * The full resource ID of a subnet in a virtual network to deploy the API Management service in.
      * 
-     */
+    */
     public Optional<String> getSubnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }
     /**
      * The name of the subnet.
      * 
-     */
+    */
     public String getSubnetname() {
         return this.subnetname;
     }
     /**
      * The virtual network ID. This is typically a GUID. Expect a null GUID by default.
      * 
-     */
+    */
     public String getVnetid() {
         return this.vnetid;
     }
@@ -97,7 +97,6 @@ public final class VirtualNetworkConfigurationResponse {
             this.vnetid = Objects.requireNonNull(vnetid);
             return this;
         }
-
         public VirtualNetworkConfigurationResponse build() {
             return new VirtualNetworkConfigurationResponse(subnetResourceId, subnetname, vnetid);
         }

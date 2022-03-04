@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.NetworkSecurityGroupRuleAccess;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
     public static final NetworkSecurityGroupRuleArgs Empty = new NetworkSecurityGroupRuleArgs();
 
     @InputImport(name="access", required=true)
-    private final Input<NetworkSecurityGroupRuleAccess> access;
+      private final Input<NetworkSecurityGroupRuleAccess> access;
 
     public Input<NetworkSecurityGroupRuleAccess> getAccess() {
         return this.access;
@@ -29,7 +29,7 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -40,7 +40,7 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceAddressPrefix", required=true)
-    private final Input<String> sourceAddressPrefix;
+      private final Input<String> sourceAddressPrefix;
 
     public Input<String> getSourceAddressPrefix() {
         return this.sourceAddressPrefix;
@@ -51,7 +51,7 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourcePortRanges")
-    private final @Nullable Input<List<String>> sourcePortRanges;
+      private final @Nullable Input<List<String>> sourcePortRanges;
 
     public Input<List<String>> getSourcePortRanges() {
         return this.sourcePortRanges == null ? Input.empty() : this.sourcePortRanges;
@@ -140,7 +140,6 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
             this.sourcePortRanges = Input.ofNullable(sourcePortRanges);
             return this;
         }
-
         public NetworkSecurityGroupRuleArgs build() {
             return new NetworkSecurityGroupRuleArgs(access, priority, sourceAddressPrefix, sourcePortRanges);
         }

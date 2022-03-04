@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketVersioningConfigurationStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -23,7 +23,7 @@ public final class BucketVersioningConfiguration {
     /**
      * The versioning state of the bucket.
      * 
-     */
+    */
     public BucketVersioningConfigurationStatus getStatus() {
         return this.status;
     }
@@ -52,7 +52,6 @@ public final class BucketVersioningConfiguration {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketVersioningConfiguration build() {
             return new BucketVersioningConfiguration(status);
         }

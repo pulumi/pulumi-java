@@ -6,21 +6,41 @@ package io.pulumi.azurenative.billing;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.billing.inputs.GetBillingRoleAssignmentByBillingAccountArgs;
 import io.pulumi.azurenative.billing.outputs.GetBillingRoleAssignmentByBillingAccountResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingRoleAssignmentByBillingAccount {
-/**
- * The role assignment
+    private GetBillingRoleAssignmentByBillingAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetBillingRoleAssignmentByBillingAccountArgs.Builder a);
+    }
+    private static GetBillingRoleAssignmentByBillingAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBillingRoleAssignmentByBillingAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The role assignment
  * API Version: 2019-10-01-preview.
  * 
- *
- * The role assignment
+     *
+     * The role assignment
  * 
- */
+     */
+    public static CompletableFuture<GetBillingRoleAssignmentByBillingAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The role assignment
+     * API Version: 2019-10-01-preview.
+     * 
+     *
+         * The role assignment
+     * 
+     */
     public static CompletableFuture<GetBillingRoleAssignmentByBillingAccountResult> invokeAsync(GetBillingRoleAssignmentByBillingAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:billing:getBillingRoleAssignmentByBillingAccount", TypeShape.of(GetBillingRoleAssignmentByBillingAccountResult.class), args == null ? GetBillingRoleAssignmentByBillingAccountArgs.Empty : args, Utilities.withVersion(options));
     }

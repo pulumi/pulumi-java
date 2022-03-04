@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MultiRegionAccessPointPublicAccessBlockConfigurationArgs exte
      * 
      */
     @InputImport(name="blockPublicAcls")
-    private final @Nullable Input<Boolean> blockPublicAcls;
+      private final @Nullable Input<Boolean> blockPublicAcls;
 
     public Input<Boolean> getBlockPublicAcls() {
         return this.blockPublicAcls == null ? Input.empty() : this.blockPublicAcls;
@@ -34,7 +34,7 @@ public final class MultiRegionAccessPointPublicAccessBlockConfigurationArgs exte
      * 
      */
     @InputImport(name="blockPublicPolicy")
-    private final @Nullable Input<Boolean> blockPublicPolicy;
+      private final @Nullable Input<Boolean> blockPublicPolicy;
 
     public Input<Boolean> getBlockPublicPolicy() {
         return this.blockPublicPolicy == null ? Input.empty() : this.blockPublicPolicy;
@@ -45,7 +45,7 @@ public final class MultiRegionAccessPointPublicAccessBlockConfigurationArgs exte
      * 
      */
     @InputImport(name="ignorePublicAcls")
-    private final @Nullable Input<Boolean> ignorePublicAcls;
+      private final @Nullable Input<Boolean> ignorePublicAcls;
 
     public Input<Boolean> getIgnorePublicAcls() {
         return this.ignorePublicAcls == null ? Input.empty() : this.ignorePublicAcls;
@@ -57,7 +57,7 @@ public final class MultiRegionAccessPointPublicAccessBlockConfigurationArgs exte
      * 
      */
     @InputImport(name="restrictPublicBuckets")
-    private final @Nullable Input<Boolean> restrictPublicBuckets;
+      private final @Nullable Input<Boolean> restrictPublicBuckets;
 
     public Input<Boolean> getRestrictPublicBuckets() {
         return this.restrictPublicBuckets == null ? Input.empty() : this.restrictPublicBuckets;
@@ -146,7 +146,6 @@ public final class MultiRegionAccessPointPublicAccessBlockConfigurationArgs exte
             this.restrictPublicBuckets = Input.ofNullable(restrictPublicBuckets);
             return this;
         }
-
         public MultiRegionAccessPointPublicAccessBlockConfigurationArgs build() {
             return new MultiRegionAccessPointPublicAccessBlockConfigurationArgs(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
         }

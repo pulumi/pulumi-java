@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class DataSourceToIndexFieldMappingArgs extends io.pulumi.resources
     public static final DataSourceToIndexFieldMappingArgs Empty = new DataSourceToIndexFieldMappingArgs();
 
     @InputImport(name="dataSourceFieldName", required=true)
-    private final Input<String> dataSourceFieldName;
+      private final Input<String> dataSourceFieldName;
 
     public Input<String> getDataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @InputImport(name="dateFieldFormat")
-    private final @Nullable Input<String> dateFieldFormat;
+      private final @Nullable Input<String> dateFieldFormat;
 
     public Input<String> getDateFieldFormat() {
         return this.dateFieldFormat == null ? Input.empty() : this.dateFieldFormat;
     }
 
     @InputImport(name="indexFieldName", required=true)
-    private final Input<String> indexFieldName;
+      private final Input<String> indexFieldName;
 
     public Input<String> getIndexFieldName() {
         return this.indexFieldName;
@@ -103,7 +103,6 @@ public final class DataSourceToIndexFieldMappingArgs extends io.pulumi.resources
             this.indexFieldName = Input.of(Objects.requireNonNull(indexFieldName));
             return this;
         }
-
         public DataSourceToIndexFieldMappingArgs build() {
             return new DataSourceToIndexFieldMappingArgs(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

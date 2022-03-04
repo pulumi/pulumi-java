@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.StackSetRegionConcurrencyType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -115,7 +115,6 @@ public final class StackSetOperationPreferences {
             this.regionOrder = regionOrder;
             return this;
         }
-
         public StackSetOperationPreferences build() {
             return new StackSetOperationPreferences(failureToleranceCount, failureTolerancePercentage, maxConcurrentCount, maxConcurrentPercentage, regionConcurrencyType, regionOrder);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.inputs.GetLinkedWorkspaceArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.GetLinkedWorkspaceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinkedWorkspace {
-/**
- * Linked workspace.
+    private GetLinkedWorkspace() {}
+    public interface BuilderApplicator {
+        public void apply(GetLinkedWorkspaceArgs.Builder a);
+    }
+    private static GetLinkedWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLinkedWorkspaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Linked workspace.
  * API Version: 2020-03-01.
  * 
- *
- * Linked workspace.
+     *
+     * Linked workspace.
  * 
- */
+     */
+    public static CompletableFuture<GetLinkedWorkspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Linked workspace.
+     * API Version: 2020-03-01.
+     * 
+     *
+         * Linked workspace.
+     * 
+     */
     public static CompletableFuture<GetLinkedWorkspaceResult> invokeAsync(GetLinkedWorkspaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getLinkedWorkspace", TypeShape.of(GetLinkedWorkspaceResult.class), args == null ? GetLinkedWorkspaceArgs.Empty : args, Utilities.withVersion(options));
     }

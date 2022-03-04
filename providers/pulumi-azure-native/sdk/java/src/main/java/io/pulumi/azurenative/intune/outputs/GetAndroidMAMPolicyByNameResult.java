@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.intune.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -155,7 +155,7 @@ public final class GetAndroidMAMPolicyByNameResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -165,7 +165,7 @@ public final class GetAndroidMAMPolicyByNameResult {
     /**
      * Resource Location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
@@ -175,7 +175,7 @@ public final class GetAndroidMAMPolicyByNameResult {
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -197,14 +197,14 @@ public final class GetAndroidMAMPolicyByNameResult {
     /**
      * Resource Tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -401,7 +401,6 @@ public final class GetAndroidMAMPolicyByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAndroidMAMPolicyByNameResult build() {
             return new GetAndroidMAMPolicyByNameResult(accessRecheckOfflineTimeout, accessRecheckOnlineTimeout, appSharingFromLevel, appSharingToLevel, authentication, clipboardSharingLevel, dataBackup, description, deviceCompliance, fileEncryption, fileSharingSaveAs, friendlyName, groupStatus, id, lastModifiedTime, location, managedBrowser, name, numOfApps, offlineWipeTimeout, pin, pinNumRetry, screenCapture, tags, type);
         }

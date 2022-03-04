@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionLoRaWANUpdateGatewayTaskCreate;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate {
             this.updateDataSource = updateDataSource;
             return this;
         }
-
         public TaskDefinitionUpdateWirelessGatewayTaskCreate build() {
             return new TaskDefinitionUpdateWirelessGatewayTaskCreate(loRaWAN, updateDataRole, updateDataSource);
         }

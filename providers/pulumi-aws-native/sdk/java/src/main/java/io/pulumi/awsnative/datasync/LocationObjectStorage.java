@@ -9,8 +9,8 @@ import io.pulumi.awsnative.datasync.enums.LocationObjectStorageServerProtocol;
 import io.pulumi.awsnative.datasync.outputs.LocationObjectStorageTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -179,6 +179,37 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    public interface BuilderApplicator {
+        public void apply(LocationObjectStorageArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.datasync.LocationObjectStorageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.datasync.LocationObjectStorageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public LocationObjectStorage(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public LocationObjectStorage(String name) {
+        this(name, LocationObjectStorageArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public LocationObjectStorage(String name, LocationObjectStorageArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

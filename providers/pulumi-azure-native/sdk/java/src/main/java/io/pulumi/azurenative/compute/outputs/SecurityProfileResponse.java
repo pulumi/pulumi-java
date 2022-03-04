@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.UefiSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class SecurityProfileResponse {
     /**
      * This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.
      * 
-     */
+    */
     public Optional<Boolean> getEncryptionAtHost() {
         return Optional.ofNullable(this.encryptionAtHost);
     }
     /**
      * Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.
      * 
-     */
+    */
     public Optional<String> getSecurityType() {
         return Optional.ofNullable(this.securityType);
     }
     /**
      * Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01
      * 
-     */
+    */
     public Optional<UefiSettingsResponse> getUefiSettings() {
         return Optional.ofNullable(this.uefiSettings);
     }
@@ -99,7 +99,6 @@ public final class SecurityProfileResponse {
             this.uefiSettings = uefiSettings;
             return this;
         }
-
         public SecurityProfileResponse build() {
             return new SecurityProfileResponse(encryptionAtHost, securityType, uefiSettings);
         }

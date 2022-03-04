@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -89,70 +89,70 @@ public final class FirewallInfoResponse {
     /**
      * Possible values: ALLOW, DENY
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * Possible values: INGRESS, EGRESS
      * 
-     */
+    */
     public String getDirection() {
         return this.direction;
     }
     /**
      * The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The firewall rule's type.
      * 
-     */
+    */
     public String getFirewallRuleType() {
         return this.firewallRuleType;
     }
     /**
      * The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.
      * 
-     */
+    */
     public String getNetworkUri() {
         return this.networkUri;
     }
     /**
      * The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.
      * 
-     */
+    */
     public String getPolicy() {
         return this.policy;
     }
     /**
      * The priority of the firewall rule.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
     /**
      * The target service accounts specified by the firewall rule.
      * 
-     */
+    */
     public List<String> getTargetServiceAccounts() {
         return this.targetServiceAccounts;
     }
     /**
      * The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
      * 
-     */
+    */
     public List<String> getTargetTags() {
         return this.targetTags;
     }
     /**
      * The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -244,7 +244,6 @@ public final class FirewallInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public FirewallInfoResponse build() {
             return new FirewallInfoResponse(action, direction, displayName, firewallRuleType, networkUri, policy, priority, targetServiceAccounts, targetTags, uri);
         }

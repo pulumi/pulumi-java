@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.OverrideTaskStepPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -64,35 +64,35 @@ public final class TaskRunRequestResponse {
     /**
      * The dedicated agent pool for the run.
      * 
-     */
+    */
     public Optional<String> getAgentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
      * The value that indicates whether archiving is enabled for the run or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
     /**
      * The template that describes the repository and tag information for run log artifact.
      * 
-     */
+    */
     public Optional<String> getLogTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
     /**
      * Set of overridable parameters that can be passed when running a Task.
      * 
-     */
+    */
     public Optional<OverrideTaskStepPropertiesResponse> getOverrideTaskStepProperties() {
         return Optional.ofNullable(this.overrideTaskStepProperties);
     }
     /**
      * The resource ID of task against which run has to be queued.
      * 
-     */
+    */
     public String getTaskId() {
         return this.taskId;
     }
@@ -100,7 +100,7 @@ public final class TaskRunRequestResponse {
      * The type of the run request.
      * Expected value is 'TaskRunRequest'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -164,7 +164,6 @@ public final class TaskRunRequestResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TaskRunRequestResponse build() {
             return new TaskRunRequestResponse(agentPoolName, isArchiveEnabled, logTemplate, overrideTaskStepProperties, taskId, type);
         }

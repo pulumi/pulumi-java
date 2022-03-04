@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,14 +41,14 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtraction {
     /**
      * The id of the relevant artifact in the recipe.
      * 
-     */
+    */
     public String getArtifactId() {
         return this.artifactId;
     }
     /**
      * Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
      * 
-     */
+    */
     public Optional<String> getDestination() {
         return Optional.ofNullable(this.destination);
     }
@@ -56,7 +56,7 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtraction {
      * The type of the archive to extract.
      * Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -99,7 +99,6 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtraction {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GuestPoliciesRecipeInstallStepArchiveExtraction build() {
             return new GuestPoliciesRecipeInstallStepArchiveExtraction(artifactId, destination, type);
         }

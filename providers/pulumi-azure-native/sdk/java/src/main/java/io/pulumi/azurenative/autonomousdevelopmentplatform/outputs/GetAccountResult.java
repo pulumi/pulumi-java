@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.autonomousdevelopmentplatform.outputs;
 
 import io.pulumi.azurenative.autonomousdevelopmentplatform.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class GetAccountResult {
     /**
      * The account's data-plane ID
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the status of the account at the time the operation was called
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system meta data relating to this resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -203,7 +203,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, id, location, name, provisioningState, systemData, tags, type);
         }

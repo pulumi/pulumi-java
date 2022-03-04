@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vision_v1.inputs.NormalizedVertexResponse;
 import io.pulumi.googlenative.vision_v1.inputs.VertexResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="normalizedVertices", required=true)
-    private final List<NormalizedVertexResponse> normalizedVertices;
+      private final List<NormalizedVertexResponse> normalizedVertices;
 
     public List<NormalizedVertexResponse> getNormalizedVertices() {
         return this.normalizedVertices;
@@ -34,7 +34,7 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vertices", required=true)
-    private final List<VertexResponse> vertices;
+      private final List<VertexResponse> vertices;
 
     public List<VertexResponse> getVertices() {
         return this.vertices;
@@ -83,7 +83,6 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
             this.vertices = Objects.requireNonNull(vertices);
             return this;
         }
-
         public BoundingPolyResponse build() {
             return new BoundingPolyResponse(normalizedVertices, vertices);
         }

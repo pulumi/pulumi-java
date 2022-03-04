@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ClusterNodeConfigLinuxNodeConfig {
      * and all pods running on the nodes. Specified as a map from the key, such as
      * `net.core.wmem_max`, to a string value.
      * 
-     */
+    */
     public Map<String,String> getSysctls() {
         return this.sysctls;
     }
@@ -57,7 +57,6 @@ public final class ClusterNodeConfigLinuxNodeConfig {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }
-
         public ClusterNodeConfigLinuxNodeConfig build() {
             return new ClusterNodeConfigLinuxNodeConfig(sysctls);
         }

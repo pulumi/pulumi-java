@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.AppResourceSpec;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class GetAppResult {
     /**
      * The Amazon Resource Name (ARN) of the app.
      * 
-     */
+    */
     public Optional<String> getAppArn() {
         return Optional.ofNullable(this.appArn);
     }
     /**
      * The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
      * 
-     */
+    */
     public Optional<AppResourceSpec> getResourceSpec() {
         return Optional.ofNullable(this.resourceSpec);
     }
@@ -77,7 +77,6 @@ public final class GetAppResult {
             this.resourceSpec = resourceSpec;
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(appArn, resourceSpec);
         }

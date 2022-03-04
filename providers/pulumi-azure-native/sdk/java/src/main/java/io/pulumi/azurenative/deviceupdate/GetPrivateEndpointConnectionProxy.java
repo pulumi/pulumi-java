@@ -6,21 +6,41 @@ package io.pulumi.azurenative.deviceupdate;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.deviceupdate.inputs.GetPrivateEndpointConnectionProxyArgs;
 import io.pulumi.azurenative.deviceupdate.outputs.GetPrivateEndpointConnectionProxyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionProxy {
-/**
- * Private endpoint connection proxy details.
+    private GetPrivateEndpointConnectionProxy() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionProxyArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionProxyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionProxyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Private endpoint connection proxy details.
  * API Version: 2020-03-01-preview.
  * 
- *
- * Private endpoint connection proxy details.
+     *
+     * Private endpoint connection proxy details.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Private endpoint connection proxy details.
+     * API Version: 2020-03-01-preview.
+     * 
+     *
+         * Private endpoint connection proxy details.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionProxyResult> invokeAsync(GetPrivateEndpointConnectionProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deviceupdate:getPrivateEndpointConnectionProxy", TypeShape.of(GetPrivateEndpointConnectionProxyResult.class), args == null ? GetPrivateEndpointConnectionProxyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,14 +67,14 @@ public final class ResourceSkuResponse {
      *     Free: 1
      *     Standard: 1,2,5,10,20,50,100
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Not used. Retained for future use.
      * 
-     */
+    */
     public String getFamily() {
         return this.family;
     }
@@ -83,14 +83,14 @@ public final class ResourceSkuResponse {
      * 
      * Allowed values: Standard_S1, Free_F1
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Not used. Retained for future use.
      * 
-     */
+    */
     public String getSize() {
         return this.size;
     }
@@ -99,7 +99,7 @@ public final class ResourceSkuResponse {
      * 
      * `Basic` is deprecated, use `Standard` instead.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -156,7 +156,6 @@ public final class ResourceSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public ResourceSkuResponse build() {
             return new ResourceSkuResponse(capacity, family, name, size, tier);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.migrate.inputs.GetProjectArgs;
 import io.pulumi.azurenative.migrate.outputs.GetProjectResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProject {
-/**
- * Azure Migrate Project.
+    private GetProject() {}
+    public interface BuilderApplicator {
+        public void apply(GetProjectArgs.Builder a);
+    }
+    private static GetProjectArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProjectArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Azure Migrate Project.
  * API Version: 2019-10-01.
  * 
- *
- * Azure Migrate Project.
+     *
+     * Azure Migrate Project.
  * 
- */
+     */
+    public static CompletableFuture<GetProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Azure Migrate Project.
+     * API Version: 2019-10-01.
+     * 
+     *
+         * Azure Migrate Project.
+     * 
+     */
     public static CompletableFuture<GetProjectResult> invokeAsync(GetProjectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getProject", TypeShape.of(GetProjectResult.class), args == null ? GetProjectArgs.Empty : args, Utilities.withVersion(options));
     }

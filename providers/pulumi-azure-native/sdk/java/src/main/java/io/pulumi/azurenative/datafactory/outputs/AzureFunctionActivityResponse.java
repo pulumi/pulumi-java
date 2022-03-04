@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -103,63 +103,63 @@ public final class AzureFunctionActivityResponse {
     /**
      * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getBody() {
         return Optional.ofNullable(this.body);
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Object getFunctionName() {
         return this.functionName;
     }
     /**
      * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getHeaders() {
         return Optional.ofNullable(this.headers);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Rest API method for target endpoint.
      * 
-     */
+    */
     public String getMethod() {
         return this.method;
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
@@ -167,14 +167,14 @@ public final class AzureFunctionActivityResponse {
      * Type of activity.
      * Expected value is 'AzureFunctionActivity'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -273,7 +273,6 @@ public final class AzureFunctionActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public AzureFunctionActivityResponse build() {
             return new AzureFunctionActivityResponse(body, dependsOn, description, functionName, headers, linkedServiceName, method, name, policy, type, userProperties);
         }

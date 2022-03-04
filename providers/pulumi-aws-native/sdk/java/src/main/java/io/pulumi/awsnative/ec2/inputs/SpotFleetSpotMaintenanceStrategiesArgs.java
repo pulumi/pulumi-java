@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetSpotCapacityRebalanceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class SpotFleetSpotMaintenanceStrategiesArgs extends io.pulumi.reso
     public static final SpotFleetSpotMaintenanceStrategiesArgs Empty = new SpotFleetSpotMaintenanceStrategiesArgs();
 
     @InputImport(name="capacityRebalance")
-    private final @Nullable Input<SpotFleetSpotCapacityRebalanceArgs> capacityRebalance;
+      private final @Nullable Input<SpotFleetSpotCapacityRebalanceArgs> capacityRebalance;
 
     public Input<SpotFleetSpotCapacityRebalanceArgs> getCapacityRebalance() {
         return this.capacityRebalance == null ? Input.empty() : this.capacityRebalance;
@@ -58,7 +58,6 @@ public final class SpotFleetSpotMaintenanceStrategiesArgs extends io.pulumi.reso
             this.capacityRebalance = Input.ofNullable(capacityRebalance);
             return this;
         }
-
         public SpotFleetSpotMaintenanceStrategiesArgs build() {
             return new SpotFleetSpotMaintenanceStrategiesArgs(capacityRebalance);
         }

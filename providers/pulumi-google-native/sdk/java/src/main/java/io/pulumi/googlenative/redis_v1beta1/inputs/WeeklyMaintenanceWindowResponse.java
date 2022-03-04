@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.redis_v1beta1.inputs.TimeOfDayResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="day", required=true)
-    private final String day;
+      private final String day;
 
     public String getDay() {
         return this.day;
@@ -33,7 +33,7 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="duration", required=true)
-    private final String duration;
+      private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -44,7 +44,7 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final TimeOfDayResponse startTime;
+      private final TimeOfDayResponse startTime;
 
     public TimeOfDayResponse getStartTime() {
         return this.startTime;
@@ -103,7 +103,6 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public WeeklyMaintenanceWindowResponse build() {
             return new WeeklyMaintenanceWindowResponse(day, duration, startTime);
         }

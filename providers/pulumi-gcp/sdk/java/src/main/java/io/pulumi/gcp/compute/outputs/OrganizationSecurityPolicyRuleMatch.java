@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.OrganizationSecurityPolicyRuleMatchConfig;
 import java.lang.String;
 import java.util.Objects;
@@ -46,14 +46,14 @@ public final class OrganizationSecurityPolicyRuleMatch {
      * The configuration options for matching the rule.
      * Structure is documented below.
      * 
-     */
+    */
     public OrganizationSecurityPolicyRuleMatchConfig getConfig() {
         return this.config;
     }
     /**
      * A description of the rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -63,7 +63,7 @@ public final class OrganizationSecurityPolicyRuleMatch {
      * Default value is `FIREWALL`.
      * Possible values are `FIREWALL`.
      * 
-     */
+    */
     public Optional<String> getVersionedExpr() {
         return Optional.ofNullable(this.versionedExpr);
     }
@@ -106,7 +106,6 @@ public final class OrganizationSecurityPolicyRuleMatch {
             this.versionedExpr = versionedExpr;
             return this;
         }
-
         public OrganizationSecurityPolicyRuleMatch build() {
             return new OrganizationSecurityPolicyRuleMatch(config, description, versionedExpr);
         }

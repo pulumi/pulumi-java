@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="checkPermissionsGroup")
-    private final @Nullable String checkPermissionsGroup;
+      private final @Nullable String checkPermissionsGroup;
 
     public Optional<String> getCheckPermissionsGroup() {
         return this.checkPermissionsGroup == null ? Optional.empty() : Optional.ofNullable(this.checkPermissionsGroup);
@@ -36,7 +36,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="collectAgentJobs")
-    private final @Nullable Boolean collectAgentJobs;
+      private final @Nullable Boolean collectAgentJobs;
 
     public Optional<Boolean> getCollectAgentJobs() {
         return this.collectAgentJobs == null ? Optional.empty() : Optional.ofNullable(this.collectAgentJobs);
@@ -47,7 +47,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="collectLogins")
-    private final @Nullable Boolean collectLogins;
+      private final @Nullable Boolean collectLogins;
 
     public Optional<Boolean> getCollectLogins() {
         return this.collectLogins == null ? Optional.empty() : Optional.ofNullable(this.collectLogins);
@@ -58,7 +58,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final SqlConnectionInfoResponse sourceConnectionInfo;
+      private final SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -127,7 +127,6 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskInputResponse build() {
             return new ConnectToSourceSqlServerTaskInputResponse(checkPermissionsGroup, collectAgentJobs, collectLogins, sourceConnectionInfo);
         }

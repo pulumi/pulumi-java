@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.WeekDayOfMonthResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class MonthlyScheduleResponse {
     /**
      * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.
      * 
-     */
+    */
     public Integer getMonthDay() {
         return this.monthDay;
     }
     /**
      * Week day in a month.
      * 
-     */
+    */
     public WeekDayOfMonthResponse getWeekDayOfMonth() {
         return this.weekDayOfMonth;
     }
@@ -75,7 +75,6 @@ public final class MonthlyScheduleResponse {
             this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth);
             return this;
         }
-
         public MonthlyScheduleResponse build() {
             return new MonthlyScheduleResponse(monthDay, weekDayOfMonth);
         }

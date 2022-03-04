@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.inputs.GetVolumeArgs;
 import io.pulumi.azurenative.storsimple.outputs.GetVolumeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVolume {
-/**
- * The volume.
+    private GetVolume() {}
+    public interface BuilderApplicator {
+        public void apply(GetVolumeArgs.Builder a);
+    }
+    private static GetVolumeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVolumeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The volume.
  * API Version: 2017-06-01.
  * 
- *
- * The volume.
+     *
+     * The volume.
  * 
- */
+     */
+    public static CompletableFuture<GetVolumeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The volume.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * The volume.
+     * 
+     */
     public static CompletableFuture<GetVolumeResult> invokeAsync(GetVolumeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getVolume", TypeShape.of(GetVolumeResult.class), args == null ? GetVolumeArgs.Empty : args, Utilities.withVersion(options));
     }

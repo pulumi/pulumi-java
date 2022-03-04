@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetNetworkManagerArgs;
 import io.pulumi.azurenative.network.outputs.GetNetworkManagerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkManager {
-/**
- * The Managed Network resource
+    private GetNetworkManager() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkManagerArgs.Builder a);
+    }
+    private static GetNetworkManagerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkManagerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Managed Network resource
  * API Version: 2021-02-01-preview.
  * 
- *
- * The Managed Network resource
+     *
+     * The Managed Network resource
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkManagerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Managed Network resource
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * The Managed Network resource
+     * 
+     */
     public static CompletableFuture<GetNetworkManagerResult> invokeAsync(GetNetworkManagerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkManager", TypeShape.of(GetNetworkManagerResult.class), args == null ? GetNetworkManagerArgs.Empty : args, Utilities.withVersion(options));
     }

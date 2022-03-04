@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformance;
 import java.lang.Double;
@@ -47,7 +47,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      * Basic SLI to evaluate to judge window quality.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance> getBasicSliPerformance() {
         return Optional.ofNullable(this.basicSliPerformance);
     }
@@ -55,7 +55,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      * Request-based SLI to evaluate to judge window quality.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformance> getPerformance() {
         return Optional.ofNullable(this.performance);
     }
@@ -64,7 +64,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      * Good service is defined to be the count of requests made to
      * this service that return in no more than threshold.
      * 
-     */
+    */
     public Optional<Double> getThreshold() {
         return Optional.ofNullable(this.threshold);
     }
@@ -107,7 +107,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
             this.threshold = threshold;
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThreshold build() {
             return new SloWindowsBasedSliGoodTotalRatioThreshold(basicSliPerformance, performance, threshold);
         }

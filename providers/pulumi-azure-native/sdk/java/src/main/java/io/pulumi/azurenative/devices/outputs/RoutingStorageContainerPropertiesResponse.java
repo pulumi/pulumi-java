@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -104,84 +104,84 @@ public final class RoutingStorageContainerPropertiesResponse {
     /**
      * Method used to authenticate against the storage endpoint
      * 
-     */
+    */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
      * 
-     */
+    */
     public Optional<Integer> getBatchFrequencyInSeconds() {
         return Optional.ofNullable(this.batchFrequencyInSeconds);
     }
     /**
      * The connection string of the storage account.
      * 
-     */
+    */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The name of storage container in the storage account.
      * 
-     */
+    */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
      * 
-     */
+    */
     public Optional<String> getEncoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
      * The url of the storage endpoint. It must include the protocol https://
      * 
-     */
+    */
     public Optional<String> getEndpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
     /**
      * File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
      * 
-     */
+    */
     public Optional<String> getFileNameFormat() {
         return Optional.ofNullable(this.fileNameFormat);
     }
     /**
      * Id of the storage container endpoint
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
      * 
-     */
+    */
     public Optional<Integer> getMaxChunkSizeInBytes() {
         return Optional.ofNullable(this.maxChunkSizeInBytes);
     }
     /**
      * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the resource group of the storage account.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * The subscription identifier of the storage account.
      * 
-     */
+    */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -287,7 +287,6 @@ public final class RoutingStorageContainerPropertiesResponse {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public RoutingStorageContainerPropertiesResponse build() {
             return new RoutingStorageContainerPropertiesResponse(authenticationType, batchFrequencyInSeconds, connectionString, containerName, encoding, endpointUri, fileNameFormat, id, maxChunkSizeInBytes, name, resourceGroup, subscriptionId);
         }

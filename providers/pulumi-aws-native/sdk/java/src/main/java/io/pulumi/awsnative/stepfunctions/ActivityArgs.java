@@ -5,7 +5,7 @@ package io.pulumi.awsnative.stepfunctions;
 
 import io.pulumi.awsnative.stepfunctions.inputs.ActivityTagsEntryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class ActivityArgs extends io.pulumi.resources.ResourceArgs {
     public static final ActivityArgs Empty = new ActivityArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<ActivityTagsEntryArgs>> tags;
+      private final @Nullable Input<List<ActivityTagsEntryArgs>> tags;
 
     public Input<List<ActivityTagsEntryArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -83,7 +83,6 @@ public final class ActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ActivityArgs build() {
             return new ActivityArgs(name, tags);
         }

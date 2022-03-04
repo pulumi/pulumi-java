@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DeploymentLabelEntryResponse {
     /**
      * Key of the label
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value of the label
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class DeploymentLabelEntryResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DeploymentLabelEntryResponse build() {
             return new DeploymentLabelEntryResponse(key, value);
         }

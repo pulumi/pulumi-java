@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.EncryptionPropertiesResponseIdentity;
 import io.pulumi.azurenative.automation.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class EncryptionPropertiesResponse {
     /**
      * User identity used for CMK.
      * 
-     */
+    */
     public Optional<EncryptionPropertiesResponseIdentity> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Encryption Key Source
      * 
-     */
+    */
     public Optional<String> getKeySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
      * Key vault properties.
      * 
-     */
+    */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -99,7 +99,6 @@ public final class EncryptionPropertiesResponse {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public EncryptionPropertiesResponse build() {
             return new EncryptionPropertiesResponse(identity, keySource, keyVaultProperties);
         }

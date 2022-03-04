@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.transfer.outputs;
 
 import io.pulumi.awsnative.transfer.outputs.WorkflowS3Tag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class WorkflowStepTagStepDetailsProperties {
     /**
      * The name of the step, used as an identifier.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Array that contains from 1 to 10 key/value pairs.
      * 
-     */
+    */
     public List<WorkflowS3Tag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -78,7 +78,6 @@ public final class WorkflowStepTagStepDetailsProperties {
             this.tags = tags;
             return this;
         }
-
         public WorkflowStepTagStepDetailsProperties build() {
             return new WorkflowStepTagStepDetailsProperties(name, tags);
         }

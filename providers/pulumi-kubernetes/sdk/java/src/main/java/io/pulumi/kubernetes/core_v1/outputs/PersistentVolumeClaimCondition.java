@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -59,28 +59,28 @@ public final class PersistentVolumeClaimCondition {
     /**
      * Last time we probed the condition.
      * 
-     */
+    */
     public Optional<String> getLastProbeTime() {
         return Optional.ofNullable(this.lastProbeTime);
     }
     /**
      * Last time the condition transitioned from one status to another.
      * 
-     */
+    */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * Human-readable message indicating details about last transition.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports "ResizeStarted" that means the underlying persistent volume is being resized.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
@@ -92,7 +92,7 @@ public final class PersistentVolumeClaimCondition {
      *  - `"FileSystemResizePending"` - controller resize is finished and a file system resize is pending on node
      *  - `"Resizing"` - a user trigger resize of pvc has been started
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -156,7 +156,6 @@ public final class PersistentVolumeClaimCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PersistentVolumeClaimCondition build() {
             return new PersistentVolumeClaimCondition(lastProbeTime, lastTransitionTime, message, reason, status, type);
         }

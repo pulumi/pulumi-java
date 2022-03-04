@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,21 +49,21 @@ public final class UrlSigningKeyParametersResponse {
     /**
      * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
      * 
-     */
+    */
     public String getKeyId() {
         return this.keyId;
     }
     /**
      * Resource reference to the KV secret
      * 
-     */
+    */
     public ResourceReferenceResponse getSecretSource() {
         return this.secretSource;
     }
     /**
      * Version of the secret to be used
      * 
-     */
+    */
     public Optional<String> getSecretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
@@ -71,7 +71,7 @@ public final class UrlSigningKeyParametersResponse {
      * The type of the Secret to create.
      * Expected value is 'UrlSigningKey'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -121,7 +121,6 @@ public final class UrlSigningKeyParametersResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public UrlSigningKeyParametersResponse build() {
             return new UrlSigningKeyParametersResponse(keyId, secretSource, secretVersion, type);
         }

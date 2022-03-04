@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UsageExportBucketState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -30,7 +30,7 @@ public final class UsageExportBucketState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -41,7 +41,7 @@ public final class UsageExportBucketState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -115,7 +115,6 @@ public final class UsageExportBucketState extends io.pulumi.resources.ResourceAr
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public UsageExportBucketState build() {
             return new UsageExportBucketState(bucketName, prefix, project);
         }

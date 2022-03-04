@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.inputs.ListIntegrationAccountCallbackUrlArgs;
 import io.pulumi.azurenative.logic.outputs.ListIntegrationAccountCallbackUrlResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIntegrationAccountCallbackUrl {
-/**
- * The callback url.
+    private ListIntegrationAccountCallbackUrl() {}
+    public interface BuilderApplicator {
+        public void apply(ListIntegrationAccountCallbackUrlArgs.Builder a);
+    }
+    private static ListIntegrationAccountCallbackUrlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListIntegrationAccountCallbackUrlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The callback url.
  * API Version: 2019-05-01.
  * 
- *
- * The callback url.
+     *
+     * The callback url.
  * 
- */
+     */
+    public static CompletableFuture<ListIntegrationAccountCallbackUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The callback url.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The callback url.
+     * 
+     */
     public static CompletableFuture<ListIntegrationAccountCallbackUrlResult> invokeAsync(ListIntegrationAccountCallbackUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountCallbackUrl", TypeShape.of(ListIntegrationAccountCallbackUrlResult.class), args == null ? ListIntegrationAccountCallbackUrlArgs.Empty : args, Utilities.withVersion(options));
     }

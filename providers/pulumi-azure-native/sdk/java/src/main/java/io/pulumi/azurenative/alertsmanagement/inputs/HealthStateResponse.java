@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class HealthStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="healthStateName", required=true)
-    private final String healthStateName;
+      private final String healthStateName;
 
     public String getHealthStateName() {
         return this.healthStateName;
@@ -33,7 +33,7 @@ public final class HealthStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-    private final Double severity;
+      private final Double severity;
 
     public Double getSeverity() {
         return this.severity;
@@ -82,7 +82,6 @@ public final class HealthStateResponse extends io.pulumi.resources.InvokeArgs {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public HealthStateResponse build() {
             return new HealthStateResponse(healthStateName, severity);
         }

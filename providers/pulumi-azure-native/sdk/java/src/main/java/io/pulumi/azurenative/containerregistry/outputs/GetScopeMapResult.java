@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -81,56 +81,56 @@ public final class GetScopeMapResult {
      * E.g. repositories/repository-name/content/read,
      * repositories/repository-name/metadata/write
      * 
-     */
+    */
     public List<String> getActions() {
         return this.actions;
     }
     /**
      * The creation date of scope map.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The user friendly description of the scope map.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -208,7 +208,6 @@ public final class GetScopeMapResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScopeMapResult build() {
             return new GetScopeMapResult(actions, creationDate, description, id, name, provisioningState, systemData, type);
         }

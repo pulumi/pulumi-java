@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,7 +43,7 @@ public final class EntityTypeEntity {
      * For KIND_LIST entity types:
      * * This collection must contain exactly one synonym equal to value.
      * 
-     */
+    */
     public List<String> getSynonyms() {
         return this.synonyms;
     }
@@ -55,7 +55,7 @@ public final class EntityTypeEntity {
      *   For KIND_LIST entity types:
      * * A string that can contain references to other entity types (with or without aliases).
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -91,7 +91,6 @@ public final class EntityTypeEntity {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EntityTypeEntity build() {
             return new EntityTypeEntity(synonyms, value);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storagesync.outputs.CloudTieringDatePolicyStatusRes
 import io.pulumi.azurenative.storagesync.outputs.CloudTieringFilesNotTieringResponse;
 import io.pulumi.azurenative.storagesync.outputs.CloudTieringSpaceSavingsResponse;
 import io.pulumi.azurenative.storagesync.outputs.CloudTieringVolumeFreeSpacePolicyStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -93,70 +93,70 @@ public final class ServerEndpointCloudTieringStatusResponse {
     /**
      * Information regarding how well the local cache on the server is performing.
      * 
-     */
+    */
     public CloudTieringCachePerformanceResponse getCachePerformance() {
         return this.cachePerformance;
     }
     /**
      * Status of the date policy
      * 
-     */
+    */
     public CloudTieringDatePolicyStatusResponse getDatePolicyStatus() {
         return this.datePolicyStatus;
     }
     /**
      * Information regarding files that failed to be tiered
      * 
-     */
+    */
     public CloudTieringFilesNotTieringResponse getFilesNotTiering() {
         return this.filesNotTiering;
     }
     /**
      * Cloud tiering health state.
      * 
-     */
+    */
     public String getHealth() {
         return this.health;
     }
     /**
      * The last updated timestamp of health state
      * 
-     */
+    */
     public String getHealthLastUpdatedTimestamp() {
         return this.healthLastUpdatedTimestamp;
     }
     /**
      * Last cloud tiering result (HResult)
      * 
-     */
+    */
     public Integer getLastCloudTieringResult() {
         return this.lastCloudTieringResult;
     }
     /**
      * Last cloud tiering success timestamp
      * 
-     */
+    */
     public String getLastSuccessTimestamp() {
         return this.lastSuccessTimestamp;
     }
     /**
      * Last updated timestamp
      * 
-     */
+    */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Information regarding how much local space cloud tiering is saving.
      * 
-     */
+    */
     public CloudTieringSpaceSavingsResponse getSpaceSavings() {
         return this.spaceSavings;
     }
     /**
      * Status of the volume free space policy
      * 
-     */
+    */
     public CloudTieringVolumeFreeSpacePolicyStatusResponse getVolumeFreeSpacePolicyStatus() {
         return this.volumeFreeSpacePolicyStatus;
     }
@@ -248,7 +248,6 @@ public final class ServerEndpointCloudTieringStatusResponse {
             this.volumeFreeSpacePolicyStatus = Objects.requireNonNull(volumeFreeSpacePolicyStatus);
             return this;
         }
-
         public ServerEndpointCloudTieringStatusResponse build() {
             return new ServerEndpointCloudTieringStatusResponse(cachePerformance, datePolicyStatus, filesNotTiering, health, healthLastUpdatedTimestamp, lastCloudTieringResult, lastSuccessTimestamp, lastUpdatedTimestamp, spaceSavings, volumeFreeSpacePolicyStatus);
         }

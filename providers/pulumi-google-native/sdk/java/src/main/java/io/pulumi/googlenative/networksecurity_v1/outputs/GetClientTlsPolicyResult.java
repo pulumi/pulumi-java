@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.GoogleCloudNetworksecurityV1CertificateProviderResponse;
 import io.pulumi.googlenative.networksecurity_v1.outputs.ValidationCAResponse;
 import java.lang.String;
@@ -77,56 +77,56 @@ public final class GetClientTlsPolicyResult {
     /**
      * Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
      * 
-     */
+    */
     public GoogleCloudNetworksecurityV1CertificateProviderResponse getClientCertificate() {
         return this.clientCertificate;
     }
     /**
      * The timestamp when the resource was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Free-text description of the resource.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. Set of label tags associated with the resource.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
      * 
-     */
+    */
     public List<ValidationCAResponse> getServerValidationCa() {
         return this.serverValidationCa;
     }
     /**
      * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
      * 
-     */
+    */
     public String getSni() {
         return this.sni;
     }
     /**
      * The timestamp when the resource was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -204,7 +204,6 @@ public final class GetClientTlsPolicyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetClientTlsPolicyResult build() {
             return new GetClientTlsPolicyResult(clientCertificate, createTime, description, labels, name, serverValidationCa, sni, updateTime);
         }

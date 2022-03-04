@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appstream.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetApplicationEntitlementAssociationResult {
         public Builder(GetApplicationEntitlementAssociationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetApplicationEntitlementAssociationResult build() {
             return new GetApplicationEntitlementAssociationResult();
         }

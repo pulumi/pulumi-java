@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
      * 
      */
     @InputImport(name="expireTime", required=true)
-    private final String expireTime;
+      private final String expireTime;
 
     public String getExpireTime() {
         return this.expireTime;
@@ -43,7 +43,7 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -102,7 +102,6 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1SystemTimestampsResponse build() {
             return new GoogleCloudDatacatalogV1beta1SystemTimestampsResponse(createTime, expireTime, updateTime);
         }

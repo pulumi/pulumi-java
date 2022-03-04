@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.policysimulator_v1.outputs.GoogleTypeDateResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse {
     /**
      * The number of replayed log entries with a difference between baseline and simulated policies.
      * 
-     */
+    */
     public Integer getDifferenceCount() {
         return this.differenceCount;
     }
     /**
      * The number of log entries that could not be replayed.
      * 
-     */
+    */
     public Integer getErrorCount() {
         return this.errorCount;
     }
     /**
      * The total number of log entries replayed.
      * 
-     */
+    */
     public Integer getLogCount() {
         return this.logCount;
     }
     /**
      * The date of the newest log entry replayed.
      * 
-     */
+    */
     public GoogleTypeDateResponse getNewestDate() {
         return this.newestDate;
     }
     /**
      * The date of the oldest log entry replayed.
      * 
-     */
+    */
     public GoogleTypeDateResponse getOldestDate() {
         return this.oldestDate;
     }
     /**
      * The number of replayed log entries with no difference between baseline and simulated policies.
      * 
-     */
+    */
     public Integer getUnchangedCount() {
         return this.unchangedCount;
     }
@@ -159,7 +159,6 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse {
             this.unchangedCount = Objects.requireNonNull(unchangedCount);
             return this;
         }
-
         public GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse build() {
             return new GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse(differenceCount, errorCount, logCount, newestDate, oldestDate, unchangedCount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource;
 import java.lang.String;
 import java.util.List;
@@ -34,14 +34,14 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi {
     /**
      * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
      * 
-     */
+    */
     public List<String> getProperties() {
         return this.properties == null ? List.of() : this.properties;
     }
     /**
      * Required. An rpm package.
      * 
-     */
+    */
     public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource getSource() {
         return this.source;
     }
@@ -77,7 +77,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi(properties, source);
         }

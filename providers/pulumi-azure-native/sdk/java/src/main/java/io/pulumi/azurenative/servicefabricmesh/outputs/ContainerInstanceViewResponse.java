@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.ContainerEventResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.ContainerStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class ContainerInstanceViewResponse {
     /**
      * Current container instance state.
      * 
-     */
+    */
     public Optional<ContainerStateResponse> getCurrentState() {
         return Optional.ofNullable(this.currentState);
     }
     /**
      * The events of this container instance.
      * 
-     */
+    */
     public List<ContainerEventResponse> getEvents() {
         return this.events == null ? List.of() : this.events;
     }
     /**
      * Previous container instance state.
      * 
-     */
+    */
     public Optional<ContainerStateResponse> getPreviousState() {
         return Optional.ofNullable(this.previousState);
     }
     /**
      * The number of times the container has been restarted.
      * 
-     */
+    */
     public Optional<Integer> getRestartCount() {
         return Optional.ofNullable(this.restartCount);
     }
@@ -121,7 +121,6 @@ public final class ContainerInstanceViewResponse {
             this.restartCount = restartCount;
             return this;
         }
-
         public ContainerInstanceViewResponse build() {
             return new ContainerInstanceViewResponse(currentState, events, previousState, restartCount);
         }

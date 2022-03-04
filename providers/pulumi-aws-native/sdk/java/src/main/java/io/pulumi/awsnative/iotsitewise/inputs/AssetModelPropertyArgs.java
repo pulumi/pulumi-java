@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataType;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataTypeSpec;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyTypeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataType", required=true)
-    private final Input<AssetModelDataType> dataType;
+      private final Input<AssetModelDataType> dataType;
 
     public Input<AssetModelDataType> getDataType() {
         return this.dataType;
@@ -37,7 +37,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataTypeSpec")
-    private final @Nullable Input<AssetModelDataTypeSpec> dataTypeSpec;
+      private final @Nullable Input<AssetModelDataTypeSpec> dataTypeSpec;
 
     public Input<AssetModelDataTypeSpec> getDataTypeSpec() {
         return this.dataTypeSpec == null ? Input.empty() : this.dataTypeSpec;
@@ -48,7 +48,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logicalId", required=true)
-    private final Input<String> logicalId;
+      private final Input<String> logicalId;
 
     public Input<String> getLogicalId() {
         return this.logicalId;
@@ -59,7 +59,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -70,7 +70,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<AssetModelPropertyTypeArgs> type;
+      private final Input<AssetModelPropertyTypeArgs> type;
 
     public Input<AssetModelPropertyTypeArgs> getType() {
         return this.type;
@@ -81,7 +81,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+      private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -200,7 +200,6 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
             this.unit = Input.ofNullable(unit);
             return this;
         }
-
         public AssetModelPropertyArgs build() {
             return new AssetModelPropertyArgs(dataType, dataTypeSpec, logicalId, name, type, unit);
         }

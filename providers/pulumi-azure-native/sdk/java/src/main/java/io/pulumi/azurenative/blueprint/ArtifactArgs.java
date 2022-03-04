@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blueprint;
 import io.pulumi.azurenative.blueprint.enums.ArtifactKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactName")
-    private final @Nullable Input<String> artifactName;
+      private final @Nullable Input<String> artifactName;
 
     public Input<String> getArtifactName() {
         return this.artifactName == null ? Input.empty() : this.artifactName;
@@ -32,7 +32,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintName", required=true)
-    private final Input<String> blueprintName;
+      private final Input<String> blueprintName;
 
     public Input<String> getBlueprintName() {
         return this.blueprintName;
@@ -43,7 +43,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,ArtifactKind>> kind;
+      private final Input<Either<String,ArtifactKind>> kind;
 
     public Input<Either<String,ArtifactKind>> getKind() {
         return this.kind;
@@ -54,7 +54,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceScope", required=true)
-    private final Input<String> resourceScope;
+      private final Input<String> resourceScope;
 
     public Input<String> getResourceScope() {
         return this.resourceScope;
@@ -143,7 +143,6 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceScope = Input.of(Objects.requireNonNull(resourceScope));
             return this;
         }
-
         public ArtifactArgs build() {
             return new ArtifactArgs(artifactName, blueprintName, kind, resourceScope);
         }

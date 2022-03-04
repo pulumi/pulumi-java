@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -35,7 +35,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="internalDnsNameLabel")
-    private final @Nullable Input<String> internalDnsNameLabel;
+      private final @Nullable Input<String> internalDnsNameLabel;
 
     public Input<String> getInternalDnsNameLabel() {
         return this.internalDnsNameLabel == null ? Input.empty() : this.internalDnsNameLabel;
@@ -94,7 +94,6 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
             this.internalDnsNameLabel = Input.ofNullable(internalDnsNameLabel);
             return this;
         }
-
         public NetworkInterfaceDnsSettingsArgs build() {
             return new NetworkInterfaceDnsSettingsArgs(dnsServers, internalDnsNameLabel);
         }

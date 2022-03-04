@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageImageResponse;
@@ -64,42 +64,42 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse {
     /**
      * Optional. List of buttons for the card.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> getButtons() {
         return this.buttons;
     }
     /**
      * Optional. Display properties for the columns in this table.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> getColumnProperties() {
         return this.columnProperties;
     }
     /**
      * Optional. Image which should be displayed on the card.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
         return this.image;
     }
     /**
      * Optional. Rows in this table of data.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> getRows() {
         return this.rows;
     }
     /**
      * Optional. Subtitle to the title.
      * 
-     */
+    */
     public String getSubtitle() {
         return this.subtitle;
     }
     /**
      * Title of the card.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -163,7 +163,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse(buttons, columnProperties, image, rows, subtitle, title);
         }

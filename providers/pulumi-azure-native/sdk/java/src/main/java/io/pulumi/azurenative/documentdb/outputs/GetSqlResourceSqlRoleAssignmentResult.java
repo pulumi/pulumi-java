@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class GetSqlResourceSqlRoleAssignmentResult {
     /**
      * The unique resource identifier of the database account.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the database account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The unique identifier for the associated Role Definition.
      * 
-     */
+    */
     public Optional<String> getRoleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
     /**
      * The data plane resource path for which access is being granted through this Role Assignment.
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The type of Azure resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -160,7 +160,6 @@ public final class GetSqlResourceSqlRoleAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlResourceSqlRoleAssignmentResult build() {
             return new GetSqlResourceSqlRoleAssignmentResult(id, name, principalId, roleDefinitionId, scope, type);
         }

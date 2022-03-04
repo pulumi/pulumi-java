@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificatePolicyQualifierInfo;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class CertificatePolicyInformation {
             this.policyQualifiers = policyQualifiers;
             return this;
         }
-
         public CertificatePolicyInformation build() {
             return new CertificatePolicyInformation(certPolicyId, policyQualifiers);
         }

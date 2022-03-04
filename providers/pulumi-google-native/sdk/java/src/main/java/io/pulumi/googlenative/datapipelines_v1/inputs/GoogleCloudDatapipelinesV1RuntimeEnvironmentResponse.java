@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="additionalExperiments", required=true)
-    private final List<String> additionalExperiments;
+      private final List<String> additionalExperiments;
 
     public List<String> getAdditionalExperiments() {
         return this.additionalExperiments;
@@ -36,7 +36,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="additionalUserLabels", required=true)
-    private final Map<String,String> additionalUserLabels;
+      private final Map<String,String> additionalUserLabels;
 
     public Map<String,String> getAdditionalUserLabels() {
         return this.additionalUserLabels;
@@ -47,7 +47,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="bypassTempDirValidation", required=true)
-    private final Boolean bypassTempDirValidation;
+      private final Boolean bypassTempDirValidation;
 
     public Boolean getBypassTempDirValidation() {
         return this.bypassTempDirValidation;
@@ -58,7 +58,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="enableStreamingEngine", required=true)
-    private final Boolean enableStreamingEngine;
+      private final Boolean enableStreamingEngine;
 
     public Boolean getEnableStreamingEngine() {
         return this.enableStreamingEngine;
@@ -69,7 +69,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="ipConfiguration", required=true)
-    private final String ipConfiguration;
+      private final String ipConfiguration;
 
     public String getIpConfiguration() {
         return this.ipConfiguration;
@@ -80,7 +80,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final String kmsKeyName;
+      private final String kmsKeyName;
 
     public String getKmsKeyName() {
         return this.kmsKeyName;
@@ -91,7 +91,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -102,7 +102,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="maxWorkers", required=true)
-    private final Integer maxWorkers;
+      private final Integer maxWorkers;
 
     public Integer getMaxWorkers() {
         return this.maxWorkers;
@@ -113,7 +113,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -124,7 +124,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="numWorkers", required=true)
-    private final Integer numWorkers;
+      private final Integer numWorkers;
 
     public Integer getNumWorkers() {
         return this.numWorkers;
@@ -135,7 +135,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="serviceAccountEmail", required=true)
-    private final String serviceAccountEmail;
+      private final String serviceAccountEmail;
 
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
@@ -146,7 +146,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -157,7 +157,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="tempLocation", required=true)
-    private final String tempLocation;
+      private final String tempLocation;
 
     public String getTempLocation() {
         return this.tempLocation;
@@ -168,7 +168,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="workerRegion", required=true)
-    private final String workerRegion;
+      private final String workerRegion;
 
     public String getWorkerRegion() {
         return this.workerRegion;
@@ -179,7 +179,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="workerZone", required=true)
-    private final String workerZone;
+      private final String workerZone;
 
     public String getWorkerZone() {
         return this.workerZone;
@@ -190,7 +190,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -379,7 +379,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse build() {
             return new GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse(additionalExperiments, additionalUserLabels, bypassTempDirValidation, enableStreamingEngine, ipConfiguration, kmsKeyName, machineType, maxWorkers, network, numWorkers, serviceAccountEmail, subnetwork, tempLocation, workerRegion, workerZone, zone);
         }

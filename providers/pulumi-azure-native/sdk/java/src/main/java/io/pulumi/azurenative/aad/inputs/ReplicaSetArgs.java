@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aad.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -34,7 +34,7 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -93,7 +93,6 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
-
         public ReplicaSetArgs build() {
             return new ReplicaSetArgs(location, subnetId);
         }

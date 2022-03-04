@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsLogStreamingOption;
 import io.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsLogging;
 import io.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsMachineType;
@@ -33,7 +33,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Input<String> diskSizeGb;
 
     public Input<String> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -44,7 +44,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dynamicSubstitutions")
-    private final @Nullable Input<Boolean> dynamicSubstitutions;
+      private final @Nullable Input<Boolean> dynamicSubstitutions;
 
     public Input<Boolean> getDynamicSubstitutions() {
         return this.dynamicSubstitutions == null ? Input.empty() : this.dynamicSubstitutions;
@@ -55,7 +55,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-    private final @Nullable Input<List<String>> env;
+      private final @Nullable Input<List<String>> env;
 
     public Input<List<String>> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -66,7 +66,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logStreamingOption")
-    private final @Nullable Input<BuildOptionsLogStreamingOption> logStreamingOption;
+      private final @Nullable Input<BuildOptionsLogStreamingOption> logStreamingOption;
 
     public Input<BuildOptionsLogStreamingOption> getLogStreamingOption() {
         return this.logStreamingOption == null ? Input.empty() : this.logStreamingOption;
@@ -77,7 +77,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logging")
-    private final @Nullable Input<BuildOptionsLogging> logging;
+      private final @Nullable Input<BuildOptionsLogging> logging;
 
     public Input<BuildOptionsLogging> getLogging() {
         return this.logging == null ? Input.empty() : this.logging;
@@ -88,7 +88,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<BuildOptionsMachineType> machineType;
+      private final @Nullable Input<BuildOptionsMachineType> machineType;
 
     public Input<BuildOptionsMachineType> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -99,7 +99,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pool")
-    private final @Nullable Input<PoolOptionArgs> pool;
+      private final @Nullable Input<PoolOptionArgs> pool;
 
     public Input<PoolOptionArgs> getPool() {
         return this.pool == null ? Input.empty() : this.pool;
@@ -110,7 +110,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestedVerifyOption")
-    private final @Nullable Input<BuildOptionsRequestedVerifyOption> requestedVerifyOption;
+      private final @Nullable Input<BuildOptionsRequestedVerifyOption> requestedVerifyOption;
 
     public Input<BuildOptionsRequestedVerifyOption> getRequestedVerifyOption() {
         return this.requestedVerifyOption == null ? Input.empty() : this.requestedVerifyOption;
@@ -121,7 +121,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretEnv")
-    private final @Nullable Input<List<String>> secretEnv;
+      private final @Nullable Input<List<String>> secretEnv;
 
     public Input<List<String>> getSecretEnv() {
         return this.secretEnv == null ? Input.empty() : this.secretEnv;
@@ -132,7 +132,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceProvenanceHash")
-    private final @Nullable Input<List<BuildOptionsSourceProvenanceHashItem>> sourceProvenanceHash;
+      private final @Nullable Input<List<BuildOptionsSourceProvenanceHashItem>> sourceProvenanceHash;
 
     public Input<List<BuildOptionsSourceProvenanceHashItem>> getSourceProvenanceHash() {
         return this.sourceProvenanceHash == null ? Input.empty() : this.sourceProvenanceHash;
@@ -143,7 +143,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="substitutionOption")
-    private final @Nullable Input<BuildOptionsSubstitutionOption> substitutionOption;
+      private final @Nullable Input<BuildOptionsSubstitutionOption> substitutionOption;
 
     public Input<BuildOptionsSubstitutionOption> getSubstitutionOption() {
         return this.substitutionOption == null ? Input.empty() : this.substitutionOption;
@@ -154,7 +154,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Input<List<VolumeArgs>> volumes;
 
     public Input<List<VolumeArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -165,7 +165,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerPool")
-    private final @Nullable Input<String> workerPool;
+      private final @Nullable Input<String> workerPool;
 
     public Input<String> getWorkerPool() {
         return this.workerPool == null ? Input.empty() : this.workerPool;
@@ -389,7 +389,6 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.workerPool = Input.ofNullable(workerPool);
             return this;
         }
-
         public BuildOptionsArgs build() {
             return new BuildOptionsArgs(diskSizeGb, dynamicSubstitutions, env, logStreamingOption, logging, machineType, pool, requestedVerifyOption, secretEnv, sourceProvenanceHash, substitutionOption, volumes, workerPool);
         }

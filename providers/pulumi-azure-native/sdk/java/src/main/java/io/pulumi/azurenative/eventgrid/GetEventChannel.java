@@ -6,21 +6,41 @@ package io.pulumi.azurenative.eventgrid;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventgrid.inputs.GetEventChannelArgs;
 import io.pulumi.azurenative.eventgrid.outputs.GetEventChannelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventChannel {
-/**
- * Event Channel.
+    private GetEventChannel() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventChannelArgs.Builder a);
+    }
+    private static GetEventChannelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventChannelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Event Channel.
  * API Version: 2021-06-01-preview.
  * 
- *
- * Event Channel.
+     *
+     * Event Channel.
  * 
- */
+     */
+    public static CompletableFuture<GetEventChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Event Channel.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * Event Channel.
+     * 
+     */
     public static CompletableFuture<GetEventChannelResult> invokeAsync(GetEventChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventChannel", TypeShape.of(GetEventChannelResult.class), args == null ? GetEventChannelArgs.Empty : args, Utilities.withVersion(options));
     }

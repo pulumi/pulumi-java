@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EncryptionConfigResponse {
     /**
      * The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a disks. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
      * 
-     */
+    */
     public String getKmsKey() {
         return this.kmsKey;
     }
@@ -52,7 +52,6 @@ public final class EncryptionConfigResponse {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
-
         public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(kmsKey);
         }

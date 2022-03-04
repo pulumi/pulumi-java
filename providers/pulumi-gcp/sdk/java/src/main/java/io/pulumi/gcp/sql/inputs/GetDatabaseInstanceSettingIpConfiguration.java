@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,35 +16,35 @@ public final class GetDatabaseInstanceSettingIpConfiguration extends io.pulumi.r
     public static final GetDatabaseInstanceSettingIpConfiguration Empty = new GetDatabaseInstanceSettingIpConfiguration();
 
     @InputImport(name="allocatedIpRange", required=true)
-    private final String allocatedIpRange;
+      private final String allocatedIpRange;
 
     public String getAllocatedIpRange() {
         return this.allocatedIpRange;
     }
 
     @InputImport(name="authorizedNetworks", required=true)
-    private final List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks;
+      private final List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks;
 
     public List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> getAuthorizedNetworks() {
         return this.authorizedNetworks;
     }
 
     @InputImport(name="ipv4Enabled", required=true)
-    private final Boolean ipv4Enabled;
+      private final Boolean ipv4Enabled;
 
     public Boolean getIpv4Enabled() {
         return this.ipv4Enabled;
     }
 
     @InputImport(name="privateNetwork", required=true)
-    private final String privateNetwork;
+      private final String privateNetwork;
 
     public String getPrivateNetwork() {
         return this.privateNetwork;
     }
 
     @InputImport(name="requireSsl", required=true)
-    private final Boolean requireSsl;
+      private final Boolean requireSsl;
 
     public Boolean getRequireSsl() {
         return this.requireSsl;
@@ -123,7 +123,6 @@ public final class GetDatabaseInstanceSettingIpConfiguration extends io.pulumi.r
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }
-
         public GetDatabaseInstanceSettingIpConfiguration build() {
             return new GetDatabaseInstanceSettingIpConfiguration(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }

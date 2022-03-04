@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse {
     /**
      * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
      * 
-     */
+    */
     public String getTestingChallenge() {
         return this.testingChallenge;
     }
     /**
      * All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
      * 
-     */
+    */
     public Double getTestingScore() {
         return this.testingScore;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse {
             this.testingScore = Objects.requireNonNull(testingScore);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(testingChallenge, testingScore);
         }

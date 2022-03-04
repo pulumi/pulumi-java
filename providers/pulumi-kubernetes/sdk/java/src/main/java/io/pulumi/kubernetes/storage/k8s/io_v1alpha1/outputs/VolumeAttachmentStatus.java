@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.storage.k8s.io_v1alpha1.outputs.VolumeError;
 import java.lang.Boolean;
 import java.lang.String;
@@ -50,28 +50,28 @@ public final class VolumeAttachmentStatus {
     /**
      * The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
      * 
-     */
+    */
     public Optional<VolumeError> getAttachError() {
         return Optional.ofNullable(this.attachError);
     }
     /**
      * Indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
      * 
-     */
+    */
     public Boolean getAttached() {
         return this.attached;
     }
     /**
      * Upon successful attach, this field is populated with any information returned by the attach operation that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
      * 
-     */
+    */
     public Map<String,String> getAttachmentMetadata() {
         return this.attachmentMetadata == null ? Map.of() : this.attachmentMetadata;
     }
     /**
      * The last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher.
      * 
-     */
+    */
     public Optional<VolumeError> getDetachError() {
         return Optional.ofNullable(this.detachError);
     }
@@ -121,7 +121,6 @@ public final class VolumeAttachmentStatus {
             this.detachError = detachError;
             return this;
         }
-
         public VolumeAttachmentStatus build() {
             return new VolumeAttachmentStatus(attachError, attached, attachmentMetadata, detachError);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.LoadBalancerConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -79,56 +79,56 @@ public final class GetAvailabilityGroupListenerResult {
     /**
      * Name of the availability group.
      * 
-     */
+    */
     public Optional<String> getAvailabilityGroupName() {
         return Optional.ofNullable(this.availabilityGroupName);
     }
     /**
      * Create a default availability group if it does not exist.
      * 
-     */
+    */
     public Optional<Boolean> getCreateDefaultAvailabilityGroupIfNotExist() {
         return Optional.ofNullable(this.createDefaultAvailabilityGroupIfNotExist);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of load balancer configurations for an availability group listener.
      * 
-     */
+    */
     public List<LoadBalancerConfigurationResponse> getLoadBalancerConfigurations() {
         return this.loadBalancerConfigurations == null ? List.of() : this.loadBalancerConfigurations;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Listener port.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Provisioning state to track the async operation status.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -206,7 +206,6 @@ public final class GetAvailabilityGroupListenerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAvailabilityGroupListenerResult build() {
             return new GetAvailabilityGroupListenerResult(availabilityGroupName, createDefaultAvailabilityGroupIfNotExist, id, loadBalancerConfigurations, name, port, provisioningState, type);
         }

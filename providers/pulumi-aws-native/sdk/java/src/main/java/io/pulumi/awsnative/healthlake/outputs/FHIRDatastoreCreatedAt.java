@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.healthlake.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class FHIRDatastoreCreatedAt {
     /**
      * Nanoseconds.
      * 
-     */
+    */
     public Integer getNanos() {
         return this.nanos;
     }
     /**
      * Seconds since epoch.
      * 
-     */
+    */
     public String getSeconds() {
         return this.seconds;
     }
@@ -75,7 +75,6 @@ public final class FHIRDatastoreCreatedAt {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public FHIRDatastoreCreatedAt build() {
             return new FHIRDatastoreCreatedAt(nanos, seconds);
         }

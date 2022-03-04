@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class TokenRequest {
     /**
      * Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.
      * 
-     */
+    */
     public String getAudience() {
         return this.audience;
     }
     /**
      * ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"
      * 
-     */
+    */
     public Optional<Integer> getExpirationSeconds() {
         return Optional.ofNullable(this.expirationSeconds);
     }
@@ -77,7 +77,6 @@ public final class TokenRequest {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
-
         public TokenRequest build() {
             return new TokenRequest(audience, expirationSeconds);
         }

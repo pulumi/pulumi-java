@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetADLSGen2FileDataSetArgs;
 import io.pulumi.azurenative.datashare.outputs.GetADLSGen2FileDataSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetADLSGen2FileDataSet {
-/**
- * An ADLS Gen 2 file data set.
+    private GetADLSGen2FileDataSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetADLSGen2FileDataSetArgs.Builder a);
+    }
+    private static GetADLSGen2FileDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetADLSGen2FileDataSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An ADLS Gen 2 file data set.
  * API Version: 2020-09-01.
  * 
- *
- * An ADLS Gen 2 file data set.
+     *
+     * An ADLS Gen 2 file data set.
  * 
- */
+     */
+    public static CompletableFuture<GetADLSGen2FileDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An ADLS Gen 2 file data set.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * An ADLS Gen 2 file data set.
+     * 
+     */
     public static CompletableFuture<GetADLSGen2FileDataSetResult> invokeAsync(GetADLSGen2FileDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FileDataSet", TypeShape.of(GetADLSGen2FileDataSetResult.class), args == null ? GetADLSGen2FileDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureFileShareName")
-    private final @Nullable Input<String> azureFileShareName;
+      private final @Nullable Input<String> azureFileShareName;
 
     public Input<String> getAzureFileShareName() {
         return this.azureFileShareName == null ? Input.empty() : this.azureFileShareName;
@@ -30,7 +30,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudEndpointName")
-    private final @Nullable Input<String> cloudEndpointName;
+      private final @Nullable Input<String> cloudEndpointName;
 
     public Input<String> getCloudEndpointName() {
         return this.cloudEndpointName == null ? Input.empty() : this.cloudEndpointName;
@@ -41,7 +41,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -52,7 +52,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountResourceId")
-    private final @Nullable Input<String> storageAccountResourceId;
+      private final @Nullable Input<String> storageAccountResourceId;
 
     public Input<String> getStorageAccountResourceId() {
         return this.storageAccountResourceId == null ? Input.empty() : this.storageAccountResourceId;
@@ -74,7 +74,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountTenantId")
-    private final @Nullable Input<String> storageAccountTenantId;
+      private final @Nullable Input<String> storageAccountTenantId;
 
     public Input<String> getStorageAccountTenantId() {
         return this.storageAccountTenantId == null ? Input.empty() : this.storageAccountTenantId;
@@ -85,7 +85,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageSyncServiceName", required=true)
-    private final Input<String> storageSyncServiceName;
+      private final Input<String> storageSyncServiceName;
 
     public Input<String> getStorageSyncServiceName() {
         return this.storageSyncServiceName;
@@ -96,7 +96,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncGroupName", required=true)
-    private final Input<String> syncGroupName;
+      private final Input<String> syncGroupName;
 
     public Input<String> getSyncGroupName() {
         return this.syncGroupName;
@@ -245,7 +245,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.syncGroupName = Input.of(Objects.requireNonNull(syncGroupName));
             return this;
         }
-
         public CloudEndpointArgs build() {
             return new CloudEndpointArgs(azureFileShareName, cloudEndpointName, friendlyName, resourceGroupName, storageAccountResourceId, storageAccountTenantId, storageSyncServiceName, syncGroupName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.delegatednetwork.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -90,70 +90,70 @@ public final class GetControllerDetailsResult {
     /**
      * dnc application id should be used by customer to authenticate with dnc gateway.
      * 
-     */
+    */
     public String getDncAppId() {
         return this.dncAppId;
     }
     /**
      * dnc endpoint url that customers can use to connect to
      * 
-     */
+    */
     public String getDncEndpoint() {
         return this.dncEndpoint;
     }
     /**
      * tenant id of dnc application id
      * 
-     */
+    */
     public String getDncTenantId() {
         return this.dncTenantId;
     }
     /**
      * An identifier that represents the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current state of dnc controller resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource guid.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -245,7 +245,6 @@ public final class GetControllerDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetControllerDetailsResult build() {
             return new GetControllerDetailsResult(dncAppId, dncEndpoint, dncTenantId, id, location, name, provisioningState, resourceGuid, tags, type);
         }

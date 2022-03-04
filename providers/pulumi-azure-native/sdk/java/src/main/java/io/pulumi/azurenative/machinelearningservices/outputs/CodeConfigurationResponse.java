@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class CodeConfigurationResponse {
     /**
      * ARM resource ID of the code asset.
      * 
-     */
+    */
     public Optional<String> getCodeId() {
         return Optional.ofNullable(this.codeId);
     }
     /**
      * The script to execute on startup. eg. "score.py"
      * 
-     */
+    */
     public String getScoringScript() {
         return this.scoringScript;
     }
@@ -76,7 +76,6 @@ public final class CodeConfigurationResponse {
             this.scoringScript = Objects.requireNonNull(scoringScript);
             return this;
         }
-
         public CodeConfigurationResponse build() {
             return new CodeConfigurationResponse(codeId, scoringScript);
         }

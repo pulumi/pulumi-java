@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1.outputs.PostalAddressResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class ContactResponse {
     /**
      * Email address of the contact.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
      * 
-     */
+    */
     public String getFaxNumber() {
         return this.faxNumber;
     }
     /**
      * Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
      * 
-     */
+    */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
     /**
      * Postal address of the contact.
      * 
-     */
+    */
     public PostalAddressResponse getPostalAddress() {
         return this.postalAddress;
     }
@@ -117,7 +117,6 @@ public final class ContactResponse {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }
-
         public ContactResponse build() {
             return new ContactResponse(email, faxNumber, phoneNumber, postalAddress);
         }

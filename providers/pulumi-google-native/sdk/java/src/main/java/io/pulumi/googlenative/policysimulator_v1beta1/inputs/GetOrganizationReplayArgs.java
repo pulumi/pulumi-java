@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetOrganizationReplayArgs extends io.pulumi.resources.InvokeA
     public static final GetOrganizationReplayArgs Empty = new GetOrganizationReplayArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="replayId", required=true)
-    private final String replayId;
+      private final String replayId;
 
     public String getReplayId() {
         return this.replayId;
@@ -86,7 +86,6 @@ public final class GetOrganizationReplayArgs extends io.pulumi.resources.InvokeA
             this.replayId = Objects.requireNonNull(replayId);
             return this;
         }
-
         public GetOrganizationReplayArgs build() {
             return new GetOrganizationReplayArgs(location, organizationId, replayId);
         }

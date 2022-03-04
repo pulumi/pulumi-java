@@ -7,7 +7,7 @@ import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleDetailTyp
 import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleStatus;
 import io.pulumi.awsnative.codestarnotifications.inputs.NotificationRuleTargetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,70 +20,70 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     public static final NotificationRuleArgs Empty = new NotificationRuleArgs();
 
     @InputImport(name="createdBy")
-    private final @Nullable Input<String> createdBy;
+      private final @Nullable Input<String> createdBy;
 
     public Input<String> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
     }
 
     @InputImport(name="detailType", required=true)
-    private final Input<NotificationRuleDetailType> detailType;
+      private final Input<NotificationRuleDetailType> detailType;
 
     public Input<NotificationRuleDetailType> getDetailType() {
         return this.detailType;
     }
 
     @InputImport(name="eventTypeId")
-    private final @Nullable Input<String> eventTypeId;
+      private final @Nullable Input<String> eventTypeId;
 
     public Input<String> getEventTypeId() {
         return this.eventTypeId == null ? Input.empty() : this.eventTypeId;
     }
 
     @InputImport(name="eventTypeIds", required=true)
-    private final Input<List<String>> eventTypeIds;
+      private final Input<List<String>> eventTypeIds;
 
     public Input<List<String>> getEventTypeIds() {
         return this.eventTypeIds;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="resource", required=true)
-    private final Input<String> resource;
+      private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<NotificationRuleStatus> status;
+      private final @Nullable Input<NotificationRuleStatus> status;
 
     public Input<NotificationRuleStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<Object> tags;
+      private final @Nullable Input<Object> tags;
 
     public Input<Object> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="targetAddress")
-    private final @Nullable Input<String> targetAddress;
+      private final @Nullable Input<String> targetAddress;
 
     public Input<String> getTargetAddress() {
         return this.targetAddress == null ? Input.empty() : this.targetAddress;
     }
 
     @InputImport(name="targets", required=true)
-    private final Input<List<NotificationRuleTargetArgs>> targets;
+      private final Input<List<NotificationRuleTargetArgs>> targets;
 
     public Input<List<NotificationRuleTargetArgs>> getTargets() {
         return this.targets;
@@ -262,7 +262,6 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             this.targets = Input.of(Objects.requireNonNull(targets));
             return this;
         }
-
         public NotificationRuleArgs build() {
             return new NotificationRuleArgs(createdBy, detailType, eventTypeId, eventTypeIds, name, resource, status, tags, targetAddress, targets);
         }

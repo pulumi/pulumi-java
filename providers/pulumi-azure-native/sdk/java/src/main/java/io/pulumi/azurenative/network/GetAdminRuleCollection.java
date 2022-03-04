@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetAdminRuleCollectionArgs;
 import io.pulumi.azurenative.network.outputs.GetAdminRuleCollectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAdminRuleCollection {
-/**
- * Defines the rule collection.
+    private GetAdminRuleCollection() {}
+    public interface BuilderApplicator {
+        public void apply(GetAdminRuleCollectionArgs.Builder a);
+    }
+    private static GetAdminRuleCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAdminRuleCollectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Defines the rule collection.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Defines the rule collection.
+     *
+     * Defines the rule collection.
  * 
- */
+     */
+    public static CompletableFuture<GetAdminRuleCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Defines the rule collection.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Defines the rule collection.
+     * 
+     */
     public static CompletableFuture<GetAdminRuleCollectionResult> invokeAsync(GetAdminRuleCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getAdminRuleCollection", TypeShape.of(GetAdminRuleCollectionResult.class), args == null ? GetAdminRuleCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

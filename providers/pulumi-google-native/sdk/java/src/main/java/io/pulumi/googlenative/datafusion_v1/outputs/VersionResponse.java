@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class VersionResponse {
     /**
      * Represents a list of available feature names for a given version.
      * 
-     */
+    */
     public List<String> getAvailableFeatures() {
         return this.availableFeatures;
     }
     /**
      * Whether this is currently the default version for Cloud Data Fusion
      * 
-     */
+    */
     public Boolean getDefaultVersion() {
         return this.defaultVersion;
     }
     /**
      * Type represents the release availability of the version
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The version number of the Data Fusion instance, such as '6.0.1.0'.
      * 
-     */
+    */
     public String getVersionNumber() {
         return this.versionNumber;
     }
@@ -118,7 +118,6 @@ public final class VersionResponse {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }
-
         public VersionResponse build() {
             return new VersionResponse(availableFeatures, defaultVersion, type, versionNumber);
         }

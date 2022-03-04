@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apprunner.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class GetVpcConnectorResult {
     /**
      * The Amazon Resource Name (ARN) of this VPC connector.
      * 
-     */
+    */
     public Optional<String> getVpcConnectorArn() {
         return Optional.ofNullable(this.vpcConnectorArn);
     }
     /**
      * The revision of this VPC connector. It's unique among all the active connectors ("Status": "ACTIVE") that share the same Name.
      * 
-     */
+    */
     public Optional<Integer> getVpcConnectorRevision() {
         return Optional.ofNullable(this.vpcConnectorRevision);
     }
@@ -77,7 +77,6 @@ public final class GetVpcConnectorResult {
             this.vpcConnectorRevision = vpcConnectorRevision;
             return this;
         }
-
         public GetVpcConnectorResult build() {
             return new GetVpcConnectorResult(vpcConnectorArn, vpcConnectorRevision);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidInstrumentationTestArgs;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidRoboTestArgs;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidTestLoopArgs;
@@ -31,7 +31,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="androidInstrumentationTest")
-    private final @Nullable Input<AndroidInstrumentationTestArgs> androidInstrumentationTest;
+      private final @Nullable Input<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
     public Input<AndroidInstrumentationTestArgs> getAndroidInstrumentationTest() {
         return this.androidInstrumentationTest == null ? Input.empty() : this.androidInstrumentationTest;
@@ -42,7 +42,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="androidRoboTest")
-    private final @Nullable Input<AndroidRoboTestArgs> androidRoboTest;
+      private final @Nullable Input<AndroidRoboTestArgs> androidRoboTest;
 
     public Input<AndroidRoboTestArgs> getAndroidRoboTest() {
         return this.androidRoboTest == null ? Input.empty() : this.androidRoboTest;
@@ -53,7 +53,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="androidTestLoop")
-    private final @Nullable Input<AndroidTestLoopArgs> androidTestLoop;
+      private final @Nullable Input<AndroidTestLoopArgs> androidTestLoop;
 
     public Input<AndroidTestLoopArgs> getAndroidTestLoop() {
         return this.androidTestLoop == null ? Input.empty() : this.androidTestLoop;
@@ -64,7 +64,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disablePerformanceMetrics")
-    private final @Nullable Input<Boolean> disablePerformanceMetrics;
+      private final @Nullable Input<Boolean> disablePerformanceMetrics;
 
     public Input<Boolean> getDisablePerformanceMetrics() {
         return this.disablePerformanceMetrics == null ? Input.empty() : this.disablePerformanceMetrics;
@@ -75,7 +75,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableVideoRecording")
-    private final @Nullable Input<Boolean> disableVideoRecording;
+      private final @Nullable Input<Boolean> disableVideoRecording;
 
     public Input<Boolean> getDisableVideoRecording() {
         return this.disableVideoRecording == null ? Input.empty() : this.disableVideoRecording;
@@ -86,7 +86,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iosTestLoop")
-    private final @Nullable Input<IosTestLoopArgs> iosTestLoop;
+      private final @Nullable Input<IosTestLoopArgs> iosTestLoop;
 
     public Input<IosTestLoopArgs> getIosTestLoop() {
         return this.iosTestLoop == null ? Input.empty() : this.iosTestLoop;
@@ -97,7 +97,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iosTestSetup")
-    private final @Nullable Input<IosTestSetupArgs> iosTestSetup;
+      private final @Nullable Input<IosTestSetupArgs> iosTestSetup;
 
     public Input<IosTestSetupArgs> getIosTestSetup() {
         return this.iosTestSetup == null ? Input.empty() : this.iosTestSetup;
@@ -108,7 +108,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iosXcTest")
-    private final @Nullable Input<IosXcTestArgs> iosXcTest;
+      private final @Nullable Input<IosXcTestArgs> iosXcTest;
 
     public Input<IosXcTestArgs> getIosXcTest() {
         return this.iosXcTest == null ? Input.empty() : this.iosXcTest;
@@ -119,7 +119,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testSetup")
-    private final @Nullable Input<TestSetupArgs> testSetup;
+      private final @Nullable Input<TestSetupArgs> testSetup;
 
     public Input<TestSetupArgs> getTestSetup() {
         return this.testSetup == null ? Input.empty() : this.testSetup;
@@ -130,7 +130,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testTimeout")
-    private final @Nullable Input<String> testTimeout;
+      private final @Nullable Input<String> testTimeout;
 
     public Input<String> getTestTimeout() {
         return this.testTimeout == null ? Input.empty() : this.testTimeout;
@@ -309,7 +309,6 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
             this.testTimeout = Input.ofNullable(testTimeout);
             return this;
         }
-
         public TestSpecificationArgs build() {
             return new TestSpecificationArgs(androidInstrumentationTest, androidRoboTest, androidTestLoop, disablePerformanceMetrics, disableVideoRecording, iosTestLoop, iosTestSetup, iosXcTest, testSetup, testTimeout);
         }

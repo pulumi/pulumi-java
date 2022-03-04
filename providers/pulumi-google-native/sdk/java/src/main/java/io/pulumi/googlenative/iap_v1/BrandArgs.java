@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iap_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationTitle")
-    private final @Nullable Input<String> applicationTitle;
+      private final @Nullable Input<String> applicationTitle;
 
     public Input<String> getApplicationTitle() {
         return this.applicationTitle == null ? Input.empty() : this.applicationTitle;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -37,7 +37,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportEmail")
-    private final @Nullable Input<String> supportEmail;
+      private final @Nullable Input<String> supportEmail;
 
     public Input<String> getSupportEmail() {
         return this.supportEmail == null ? Input.empty() : this.supportEmail;
@@ -111,7 +111,6 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
             this.supportEmail = Input.ofNullable(supportEmail);
             return this;
         }
-
         public BrandArgs build() {
             return new BrandArgs(applicationTitle, project, supportEmail);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 import io.pulumi.azurenative.videoanalyzer.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.PipelineJobErrorResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -93,70 +93,70 @@ public final class GetPipelineJobResult {
     /**
      * An optional description for the pipeline.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Details about the error, in case the pipeline job fails.
      * 
-     */
+    */
     public PipelineJobErrorResponse getError() {
         return this.error;
     }
     /**
      * The date-time by when this pipeline job will be automatically deleted from your account.
      * 
-     */
+    */
     public String getExpiration() {
         return this.expiration;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
      * 
-     */
+    */
     public List<ParameterDefinitionResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Current state of the pipeline (read-only).
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Reference to an existing pipeline topology. When activated, this pipeline job will process content according to the pipeline topology definition.
      * 
-     */
+    */
     public String getTopologyName() {
         return this.topologyName;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -248,7 +248,6 @@ public final class GetPipelineJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPipelineJobResult build() {
             return new GetPipelineJobResult(description, error, expiration, id, name, parameters, state, systemData, topologyName, type);
         }

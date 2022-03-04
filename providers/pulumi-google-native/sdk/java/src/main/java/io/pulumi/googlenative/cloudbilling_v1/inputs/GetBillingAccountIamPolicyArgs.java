@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbilling_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetBillingAccountIamPolicyArgs extends io.pulumi.resources.In
     public static final GetBillingAccountIamPolicyArgs Empty = new GetBillingAccountIamPolicyArgs();
 
     @InputImport(name="billingAccountId", required=true)
-    private final String billingAccountId;
+      private final String billingAccountId;
 
     public String getBillingAccountId() {
         return this.billingAccountId;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
@@ -71,7 +71,6 @@ public final class GetBillingAccountIamPolicyArgs extends io.pulumi.resources.In
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public GetBillingAccountIamPolicyArgs build() {
             return new GetBillingAccountIamPolicyArgs(billingAccountId, optionsRequestedPolicyVersion);
         }

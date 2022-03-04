@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ModelBiasJobDefinitionStoppingConditionArgs extends io.pulumi
      * 
      */
     @InputImport(name="maxRuntimeInSeconds", required=true)
-    private final Input<Integer> maxRuntimeInSeconds;
+      private final Input<Integer> maxRuntimeInSeconds;
 
     public Input<Integer> getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
@@ -65,7 +65,6 @@ public final class ModelBiasJobDefinitionStoppingConditionArgs extends io.pulumi
             this.maxRuntimeInSeconds = Input.of(Objects.requireNonNull(maxRuntimeInSeconds));
             return this;
         }
-
         public ModelBiasJobDefinitionStoppingConditionArgs build() {
             return new ModelBiasJobDefinitionStoppingConditionArgs(maxRuntimeInSeconds);
         }

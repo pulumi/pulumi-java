@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="organizationArns")
-    private final @Nullable List<String> organizationArns;
+      private final @Nullable List<String> organizationArns;
 
     public List<String> getOrganizationArns() {
         return this.organizationArns == null ? List.of() : this.organizationArns;
@@ -35,7 +35,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="organizationalUnitArns")
-    private final @Nullable List<String> organizationalUnitArns;
+      private final @Nullable List<String> organizationalUnitArns;
 
     public List<String> getOrganizationalUnitArns() {
         return this.organizationalUnitArns == null ? List.of() : this.organizationalUnitArns;
@@ -46,7 +46,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userGroups")
-    private final @Nullable List<String> userGroups;
+      private final @Nullable List<String> userGroups;
 
     public List<String> getUserGroups() {
         return this.userGroups == null ? List.of() : this.userGroups;
@@ -57,7 +57,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userIds")
-    private final @Nullable List<String> userIds;
+      private final @Nullable List<String> userIds;
 
     public List<String> getUserIds() {
         return this.userIds == null ? List.of() : this.userIds;
@@ -126,7 +126,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.userIds = userIds;
             return this;
         }
-
         public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(organizationArns, organizationalUnitArns, userGroups, userIds);
         }

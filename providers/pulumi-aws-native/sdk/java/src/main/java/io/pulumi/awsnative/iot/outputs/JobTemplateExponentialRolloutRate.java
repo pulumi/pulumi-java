@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.JobTemplateRateIncreaseCriteria;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -40,21 +40,21 @@ public final class JobTemplateExponentialRolloutRate {
     /**
      * The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
      * 
-     */
+    */
     public Integer getBaseRatePerMinute() {
         return this.baseRatePerMinute;
     }
     /**
      * The exponential factor to increase the rate of rollout for a job.
      * 
-     */
+    */
     public Double getIncrementFactor() {
         return this.incrementFactor;
     }
     /**
      * The criteria to initiate the increase in rate of rollout for a job.
      * 
-     */
+    */
     public JobTemplateRateIncreaseCriteria getRateIncreaseCriteria() {
         return this.rateIncreaseCriteria;
     }
@@ -97,7 +97,6 @@ public final class JobTemplateExponentialRolloutRate {
             this.rateIncreaseCriteria = Objects.requireNonNull(rateIncreaseCriteria);
             return this;
         }
-
         public JobTemplateExponentialRolloutRate build() {
             return new JobTemplateExponentialRolloutRate(baseRatePerMinute, incrementFactor, rateIncreaseCriteria);
         }

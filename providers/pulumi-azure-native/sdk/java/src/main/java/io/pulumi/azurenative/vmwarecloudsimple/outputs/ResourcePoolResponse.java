@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,42 +59,42 @@ public final class ResourcePoolResponse {
     /**
      * Hierarchical resource pool name
      * 
-     */
+    */
     public String getFullName() {
         return this.fullName;
     }
     /**
      * resource pool id (privateCloudId:vsphereId)
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure region
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * {ResourcePoolName}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Private Cloud Id
      * 
-     */
+    */
     public String getPrivateCloudId() {
         return this.privateCloudId;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -158,7 +158,6 @@ public final class ResourcePoolResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourcePoolResponse build() {
             return new ResourcePoolResponse(fullName, id, location, name, privateCloudId, type);
         }

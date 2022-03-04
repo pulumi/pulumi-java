@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class GetServerTrustCertificateResult {
     /**
      * The certificate name
      * 
-     */
+    */
     public String getCertificateName() {
         return this.certificateName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The certificate public blob
      * 
-     */
+    */
     public Optional<String> getPublicBlob() {
         return Optional.ofNullable(this.publicBlob);
     }
     /**
      * The certificate thumbprint
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -160,7 +160,6 @@ public final class GetServerTrustCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerTrustCertificateResult build() {
             return new GetServerTrustCertificateResult(certificateName, id, name, publicBlob, thumbprint, type);
         }

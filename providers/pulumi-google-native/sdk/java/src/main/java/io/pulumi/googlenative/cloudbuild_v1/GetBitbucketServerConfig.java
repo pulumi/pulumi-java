@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBitbucketServerConfig {
-/**
- * Retrieve a `BitbucketServerConfig`. This API is experimental.
+    private GetBitbucketServerConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetBitbucketServerConfigArgs.Builder a);
+    }
+    private static GetBitbucketServerConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBitbucketServerConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve a `BitbucketServerConfig`. This API is experimental.
  * 
- */
+     */
+    public static CompletableFuture<GetBitbucketServerConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve a `BitbucketServerConfig`. This API is experimental.
+     * 
+     */
     public static CompletableFuture<GetBitbucketServerConfigResult> invokeAsync(GetBitbucketServerConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getBitbucketServerConfig", TypeShape.of(GetBitbucketServerConfigResult.class), args == null ? GetBitbucketServerConfigArgs.Empty : args, Utilities.withVersion(options));
     }

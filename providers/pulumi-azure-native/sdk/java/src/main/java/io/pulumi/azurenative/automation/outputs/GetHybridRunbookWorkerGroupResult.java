@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.outputs;
 import io.pulumi.azurenative.automation.outputs.HybridRunbookWorkerLegacyResponse;
 import io.pulumi.azurenative.automation.outputs.RunAsCredentialAssociationPropertyResponse;
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -72,49 +72,49 @@ public final class GetHybridRunbookWorkerGroupResult {
     /**
      * Sets the credential of a worker group.
      * 
-     */
+    */
     public Optional<RunAsCredentialAssociationPropertyResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Type of the HybridWorkerGroup.
      * 
-     */
+    */
     public Optional<String> getGroupType() {
         return Optional.ofNullable(this.groupType);
     }
     /**
      * Gets or sets the list of hybrid runbook workers.
      * 
-     */
+    */
     public List<HybridRunbookWorkerLegacyResponse> getHybridRunbookWorkers() {
         return this.hybridRunbookWorkers == null ? List.of() : this.hybridRunbookWorkers;
     }
     /**
      * Gets or sets the id of the resource.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Gets or sets the name of the group.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Resource system metadata.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -185,7 +185,6 @@ public final class GetHybridRunbookWorkerGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHybridRunbookWorkerGroupResult build() {
             return new GetHybridRunbookWorkerGroupResult(credential, groupType, hybridRunbookWorkers, id, name, systemData, type);
         }

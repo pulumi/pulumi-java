@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.Boolean;
 import java.lang.String;
@@ -64,42 +64,42 @@ public final class ConfigMap {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * BinaryData contains the binary data. Each key must consist of alphanumeric characters, '-', '_' or '.'. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys stored in BinaryData must not overlap with the ones in the Data field, this is enforced during validation process. Using this field will require 1.10+ apiserver and kubelet.
      * 
-     */
+    */
     public Map<String,String> getBinaryData() {
         return this.binaryData == null ? Map.of() : this.binaryData;
     }
     /**
      * Data contains the configuration data. Each key must consist of alphanumeric characters, '-', '_' or '.'. Values with non-UTF-8 byte sequences must use the BinaryData field. The keys stored in Data must not overlap with the keys in the BinaryData field, this is enforced during validation process.
      * 
-     */
+    */
     public Map<String,String> getData() {
         return this.data == null ? Map.of() : this.data;
     }
     /**
      * Immutable, if set to true, ensures that data stored in the ConfigMap cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil.
      * 
-     */
+    */
     public Optional<Boolean> getImmutable() {
         return Optional.ofNullable(this.immutable);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
-     */
+    */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -163,7 +163,6 @@ public final class ConfigMap {
             this.metadata = metadata;
             return this;
         }
-
         public ConfigMap build() {
             return new ConfigMap(apiVersion, binaryData, data, immutable, kind, metadata);
         }

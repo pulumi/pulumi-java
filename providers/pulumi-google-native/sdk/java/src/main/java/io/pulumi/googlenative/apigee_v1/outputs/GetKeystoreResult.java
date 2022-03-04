@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GetKeystoreResult {
     /**
      * Aliases in this keystore.
      * 
-     */
+    */
     public List<String> getAliases() {
         return this.aliases;
     }
     /**
      * Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -75,7 +75,6 @@ public final class GetKeystoreResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetKeystoreResult build() {
             return new GetKeystoreResult(aliases, name);
         }

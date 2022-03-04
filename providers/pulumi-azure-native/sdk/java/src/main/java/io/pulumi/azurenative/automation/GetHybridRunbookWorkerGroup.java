@@ -6,21 +6,41 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automation.inputs.GetHybridRunbookWorkerGroupArgs;
 import io.pulumi.azurenative.automation.outputs.GetHybridRunbookWorkerGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHybridRunbookWorkerGroup {
-/**
- * Definition of hybrid runbook worker group.
+    private GetHybridRunbookWorkerGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetHybridRunbookWorkerGroupArgs.Builder a);
+    }
+    private static GetHybridRunbookWorkerGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHybridRunbookWorkerGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of hybrid runbook worker group.
  * API Version: 2021-06-22.
  * 
- *
- * Definition of hybrid runbook worker group.
+     *
+     * Definition of hybrid runbook worker group.
  * 
- */
+     */
+    public static CompletableFuture<GetHybridRunbookWorkerGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of hybrid runbook worker group.
+     * API Version: 2021-06-22.
+     * 
+     *
+         * Definition of hybrid runbook worker group.
+     * 
+     */
     public static CompletableFuture<GetHybridRunbookWorkerGroupResult> invokeAsync(GetHybridRunbookWorkerGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getHybridRunbookWorkerGroup", TypeShape.of(GetHybridRunbookWorkerGroupResult.class), args == null ? GetHybridRunbookWorkerGroupArgs.Empty : args, Utilities.withVersion(options));
     }

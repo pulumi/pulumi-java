@@ -7,7 +7,7 @@ import io.pulumi.azurenative.deploymentmanager.outputs.IdentityResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.RolloutOperationInfoResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.ServiceResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.StepGroupResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -124,98 +124,98 @@ public final class GetRolloutResult {
     /**
      * The reference to the artifact source resource Id where the payload is located.
      * 
-     */
+    */
     public Optional<String> getArtifactSourceId() {
         return Optional.ofNullable(this.artifactSourceId);
     }
     /**
      * The version of the build being deployed.
      * 
-     */
+    */
     public String getBuildVersion() {
         return this.buildVersion;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Operational information of the rollout.
      * 
-     */
+    */
     public RolloutOperationInfoResponse getOperationInfo() {
         return this.operationInfo;
     }
     /**
      * The detailed information on the services being deployed.
      * 
-     */
+    */
     public List<ServiceResponse> getServices() {
         return this.services;
     }
     /**
      * The current status of the rollout.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The list of step groups that define the orchestration.
      * 
-     */
+    */
     public List<StepGroupResponse> getStepGroups() {
         return this.stepGroups;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
      * 
-     */
+    */
     public String getTargetServiceTopologyId() {
         return this.targetServiceTopologyId;
     }
     /**
      * The cardinal count of total number of retries performed on the rollout at a given time.
      * 
-     */
+    */
     public Integer getTotalRetryAttempts() {
         return this.totalRetryAttempts;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -335,7 +335,6 @@ public final class GetRolloutResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRolloutResult build() {
             return new GetRolloutResult(artifactSourceId, buildVersion, id, identity, location, name, operationInfo, services, status, stepGroups, tags, targetServiceTopologyId, totalRetryAttempts, type);
         }

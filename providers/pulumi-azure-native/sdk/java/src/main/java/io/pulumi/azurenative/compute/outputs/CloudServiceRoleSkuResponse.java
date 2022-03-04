@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class CloudServiceRoleSkuResponse {
     /**
      * Specifies the number of role instances in the cloud service.
      * 
-     */
+    */
     public Optional<Double> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -98,7 +98,6 @@ public final class CloudServiceRoleSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public CloudServiceRoleSkuResponse build() {
             return new CloudServiceRoleSkuResponse(capacity, name, tier);
         }

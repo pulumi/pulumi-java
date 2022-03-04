@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleIamV1AuditLogConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleIamV1AuditConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-    private final List<GoogleIamV1AuditLogConfigResponse> auditLogConfigs;
+      private final List<GoogleIamV1AuditLogConfigResponse> auditLogConfigs;
 
     public List<GoogleIamV1AuditLogConfigResponse> getAuditLogConfigs() {
         return this.auditLogConfigs;
@@ -34,7 +34,7 @@ public final class GoogleIamV1AuditConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -83,7 +83,6 @@ public final class GoogleIamV1AuditConfigResponse extends io.pulumi.resources.In
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GoogleIamV1AuditConfigResponse build() {
             return new GoogleIamV1AuditConfigResponse(auditLogConfigs, service);
         }

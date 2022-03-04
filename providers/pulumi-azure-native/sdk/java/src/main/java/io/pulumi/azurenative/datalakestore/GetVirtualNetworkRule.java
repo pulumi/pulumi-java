@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datalakestore;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datalakestore.inputs.GetVirtualNetworkRuleArgs;
 import io.pulumi.azurenative.datalakestore.outputs.GetVirtualNetworkRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkRule {
-/**
- * Data Lake Store virtual network rule information.
+    private GetVirtualNetworkRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkRuleArgs.Builder a);
+    }
+    private static GetVirtualNetworkRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Data Lake Store virtual network rule information.
  * API Version: 2016-11-01.
  * 
- *
- * Data Lake Store virtual network rule information.
+     *
+     * Data Lake Store virtual network rule information.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Data Lake Store virtual network rule information.
+     * API Version: 2016-11-01.
+     * 
+     *
+         * Data Lake Store virtual network rule information.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkRuleResult> invokeAsync(GetVirtualNetworkRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args == null ? GetVirtualNetworkRuleArgs.Empty : args, Utilities.withVersion(options));
     }

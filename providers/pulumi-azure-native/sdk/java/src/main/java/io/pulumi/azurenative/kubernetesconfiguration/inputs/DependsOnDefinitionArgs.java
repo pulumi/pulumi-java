@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kustomizationName")
-    private final @Nullable Input<String> kustomizationName;
+      private final @Nullable Input<String> kustomizationName;
 
     public Input<String> getKustomizationName() {
         return this.kustomizationName == null ? Input.empty() : this.kustomizationName;
@@ -66,7 +66,6 @@ public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceA
             this.kustomizationName = Input.ofNullable(kustomizationName);
             return this;
         }
-
         public DependsOnDefinitionArgs build() {
             return new DependsOnDefinitionArgs(kustomizationName);
         }

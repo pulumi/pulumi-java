@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DiscoveryResponse {
     /**
      * Immutable. The kind of analysis that is handled by this discovery.
      * 
-     */
+    */
     public String getAnalysisKind() {
         return this.analysisKind;
     }
@@ -52,7 +52,6 @@ public final class DiscoveryResponse {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
         }
-
         public DiscoveryResponse build() {
             return new DiscoveryResponse(analysisKind);
         }

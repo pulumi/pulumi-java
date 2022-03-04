@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.WebChatSiteResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WebChatChannelPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sites")
-    private final @Nullable List<WebChatSiteResponse> sites;
+      private final @Nullable List<WebChatSiteResponse> sites;
 
     public List<WebChatSiteResponse> getSites() {
         return this.sites == null ? List.of() : this.sites;
@@ -36,7 +36,7 @@ public final class WebChatChannelPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="webChatEmbedCode", required=true)
-    private final String webChatEmbedCode;
+      private final String webChatEmbedCode;
 
     public String getWebChatEmbedCode() {
         return this.webChatEmbedCode;
@@ -85,7 +85,6 @@ public final class WebChatChannelPropertiesResponse extends io.pulumi.resources.
             this.webChatEmbedCode = Objects.requireNonNull(webChatEmbedCode);
             return this;
         }
-
         public WebChatChannelPropertiesResponse build() {
             return new WebChatChannelPropertiesResponse(sites, webChatEmbedCode);
         }

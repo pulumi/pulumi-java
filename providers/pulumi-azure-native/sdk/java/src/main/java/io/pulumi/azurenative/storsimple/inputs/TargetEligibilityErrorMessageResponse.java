@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -34,7 +34,7 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="resolution")
-    private final @Nullable String resolution;
+      private final @Nullable String resolution;
 
     public Optional<String> getResolution() {
         return this.resolution == null ? Optional.empty() : Optional.ofNullable(this.resolution);
@@ -45,7 +45,7 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="resultCode")
-    private final @Nullable String resultCode;
+      private final @Nullable String resultCode;
 
     public Optional<String> getResultCode() {
         return this.resultCode == null ? Optional.empty() : Optional.ofNullable(this.resultCode);
@@ -104,7 +104,6 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
             this.resultCode = resultCode;
             return this;
         }
-
         public TargetEligibilityErrorMessageResponse build() {
             return new TargetEligibilityErrorMessageResponse(message, resolution, resultCode);
         }

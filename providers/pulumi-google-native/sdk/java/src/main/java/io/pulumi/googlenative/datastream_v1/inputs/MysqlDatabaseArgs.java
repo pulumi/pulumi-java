@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.inputs.MysqlTableArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+      private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -36,7 +36,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mysqlTables")
-    private final @Nullable Input<List<MysqlTableArgs>> mysqlTables;
+      private final @Nullable Input<List<MysqlTableArgs>> mysqlTables;
 
     public Input<List<MysqlTableArgs>> getMysqlTables() {
         return this.mysqlTables == null ? Input.empty() : this.mysqlTables;
@@ -95,7 +95,6 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.mysqlTables = Input.ofNullable(mysqlTables);
             return this;
         }
-
         public MysqlDatabaseArgs build() {
             return new MysqlDatabaseArgs(database, mysqlTables);
         }

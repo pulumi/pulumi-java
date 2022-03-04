@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.securitycenter_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.securitycenter_v1.inputs.StreamingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     public static final NotificationConfigArgs Empty = new NotificationConfigArgs();
 
     @InputImport(name="configId", required=true)
-    private final Input<String> configId;
+      private final Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId;
@@ -27,7 +27,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,14 +38,14 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -56,7 +56,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pubsubTopic")
-    private final @Nullable Input<String> pubsubTopic;
+      private final @Nullable Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic == null ? Input.empty() : this.pubsubTopic;
@@ -67,7 +67,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="streamingConfig")
-    private final @Nullable Input<StreamingConfigArgs> streamingConfig;
+      private final @Nullable Input<StreamingConfigArgs> streamingConfig;
 
     public Input<StreamingConfigArgs> getStreamingConfig() {
         return this.streamingConfig == null ? Input.empty() : this.streamingConfig;
@@ -186,7 +186,6 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             this.streamingConfig = Input.ofNullable(streamingConfig);
             return this;
         }
-
         public NotificationConfigArgs build() {
             return new NotificationConfigArgs(configId, description, name, organizationId, pubsubTopic, streamingConfig);
         }

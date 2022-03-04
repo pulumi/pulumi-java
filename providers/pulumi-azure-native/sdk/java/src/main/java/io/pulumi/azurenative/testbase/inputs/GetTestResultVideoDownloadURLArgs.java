@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="packageName", required=true)
-    private final String packageName;
+      private final String packageName;
 
     public String getPackageName() {
         return this.packageName;
@@ -28,7 +28,7 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-    private final String testBaseAccountName;
+      private final String testBaseAccountName;
 
     public String getTestBaseAccountName() {
         return this.testBaseAccountName;
@@ -50,7 +50,7 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="testResultName", required=true)
-    private final String testResultName;
+      private final String testResultName;
 
     public String getTestResultName() {
         return this.testResultName;
@@ -119,7 +119,6 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
             this.testResultName = Objects.requireNonNull(testResultName);
             return this;
         }
-
         public GetTestResultVideoDownloadURLArgs build() {
             return new GetTestResultVideoDownloadURLArgs(packageName, resourceGroupName, testBaseAccountName, testResultName);
         }

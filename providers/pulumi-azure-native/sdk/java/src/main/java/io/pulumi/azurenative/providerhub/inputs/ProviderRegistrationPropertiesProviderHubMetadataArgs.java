@@ -7,7 +7,7 @@ import io.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataProviderAuthe
 import io.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataThirdPartyProviderAuthorizationArgs;
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderAuthorizationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +18,21 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
     public static final ProviderRegistrationPropertiesProviderHubMetadataArgs Empty = new ProviderRegistrationPropertiesProviderHubMetadataArgs();
 
     @InputImport(name="providerAuthentication")
-    private final @Nullable Input<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
+      private final @Nullable Input<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
 
     public Input<ProviderHubMetadataProviderAuthenticationArgs> getProviderAuthentication() {
         return this.providerAuthentication == null ? Input.empty() : this.providerAuthentication;
     }
 
     @InputImport(name="providerAuthorizations")
-    private final @Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
+      private final @Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
 
     public Input<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
         return this.providerAuthorizations == null ? Input.empty() : this.providerAuthorizations;
     }
 
     @InputImport(name="thirdPartyProviderAuthorization")
-    private final @Nullable Input<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
+      private final @Nullable Input<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
 
     public Input<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> getThirdPartyProviderAuthorization() {
         return this.thirdPartyProviderAuthorization == null ? Input.empty() : this.thirdPartyProviderAuthorization;
@@ -106,7 +106,6 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
             this.thirdPartyProviderAuthorization = Input.ofNullable(thirdPartyProviderAuthorization);
             return this;
         }
-
         public ProviderRegistrationPropertiesProviderHubMetadataArgs build() {
             return new ProviderRegistrationPropertiesProviderHubMetadataArgs(providerAuthentication, providerAuthorizations, thirdPartyProviderAuthorization);
         }

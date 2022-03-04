@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1TraceSamplingConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GetOverrideResult {
     /**
      * ID of the API proxy that will have its trace configuration overridden.
      * 
-     */
+    */
     public String getApiProxy() {
         return this.apiProxy;
     }
     /**
      * ID of the trace configuration override specified as a system-generated UUID.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Trace configuration to override.
      * 
-     */
+    */
     public GoogleCloudApigeeV1TraceSamplingConfigResponse getSamplingConfig() {
         return this.samplingConfig;
     }
@@ -96,7 +96,6 @@ public final class GetOverrideResult {
             this.samplingConfig = Objects.requireNonNull(samplingConfig);
             return this;
         }
-
         public GetOverrideResult build() {
             return new GetOverrideResult(apiProxy, name, samplingConfig);
         }

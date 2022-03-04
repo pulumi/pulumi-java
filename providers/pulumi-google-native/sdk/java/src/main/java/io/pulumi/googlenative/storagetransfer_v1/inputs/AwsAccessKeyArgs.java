@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AwsAccessKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessKeyId", required=true)
-    private final Input<String> accessKeyId;
+      private final Input<String> accessKeyId;
 
     public Input<String> getAccessKeyId() {
         return this.accessKeyId;
@@ -33,7 +33,7 @@ public final class AwsAccessKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretAccessKey", required=true)
-    private final Input<String> secretAccessKey;
+      private final Input<String> secretAccessKey;
 
     public Input<String> getSecretAccessKey() {
         return this.secretAccessKey;
@@ -92,7 +92,6 @@ public final class AwsAccessKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.secretAccessKey = Input.of(Objects.requireNonNull(secretAccessKey));
             return this;
         }
-
         public AwsAccessKeyArgs build() {
             return new AwsAccessKeyArgs(accessKeyId, secretAccessKey);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.connectedvmwarevsphere;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetClusterArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.GetClusterResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCluster {
-/**
- * Define the cluster.
+    private GetCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetClusterArgs.Builder a);
+    }
+    private static GetClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Define the cluster.
  * API Version: 2020-10-01-preview.
  * 
- *
- * Define the cluster.
+     *
+     * Define the cluster.
  * 
- */
+     */
+    public static CompletableFuture<GetClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Define the cluster.
+     * API Version: 2020-10-01-preview.
+     * 
+     *
+         * Define the cluster.
+     * 
+     */
     public static CompletableFuture<GetClusterResult> invokeAsync(GetClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getCluster", TypeShape.of(GetClusterResult.class), args == null ? GetClusterArgs.Empty : args, Utilities.withVersion(options));
     }

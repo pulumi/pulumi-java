@@ -4,7 +4,7 @@
 package io.pulumi.random.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-    private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Input<Map<String,Object>> keepers;
 
     public Input<Map<String,Object>> getKeepers() {
         return this.keepers == null ? Input.empty() : this.keepers;
@@ -33,7 +33,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="length")
-    private final @Nullable Input<Integer> length;
+      private final @Nullable Input<Integer> length;
 
     public Input<Integer> getLength() {
         return this.length == null ? Input.empty() : this.length;
@@ -44,7 +44,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -55,7 +55,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="separator")
-    private final @Nullable Input<String> separator;
+      private final @Nullable Input<String> separator;
 
     public Input<String> getSeparator() {
         return this.separator == null ? Input.empty() : this.separator;
@@ -144,7 +144,6 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
             this.separator = Input.ofNullable(separator);
             return this;
         }
-
         public RandomPetState build() {
             return new RandomPetState(keepers, length, prefix, separator);
         }

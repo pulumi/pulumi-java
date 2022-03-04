@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPolicyName")
-    private final @Nullable Input<String> backupPolicyName;
+      private final @Nullable Input<String> backupPolicyName;
 
     public Input<String> getBackupPolicyName() {
         return this.backupPolicyName == null ? Input.empty() : this.backupPolicyName;
@@ -30,7 +30,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
+      private final @Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
 
     public Input<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -41,7 +41,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final Input<String> vaultName;
+      private final Input<String> vaultName;
 
     public Input<String> getVaultName() {
         return this.vaultName;
@@ -141,7 +141,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.vaultName = Input.of(Objects.requireNonNull(vaultName));
             return this;
         }
-
         public BackupPolicyArgs build() {
             return new BackupPolicyArgs(backupPolicyName, properties, resourceGroupName, vaultName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedBy")
-    private final @Nullable Input<String> managedBy;
+      private final @Nullable Input<String> managedBy;
 
     public Input<String> getManagedBy() {
         return this.managedBy == null ? Input.empty() : this.managedBy;
@@ -42,7 +42,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName")
-    private final @Nullable Input<String> resourceGroupName;
+      private final @Nullable Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -142,7 +142,6 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ResourceGroupArgs build() {
             return new ResourceGroupArgs(location, managedBy, resourceGroupName, tags);
         }

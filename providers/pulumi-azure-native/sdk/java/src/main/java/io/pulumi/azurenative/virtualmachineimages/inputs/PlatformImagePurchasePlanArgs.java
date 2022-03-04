@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="planName", required=true)
-    private final Input<String> planName;
+      private final Input<String> planName;
 
     public Input<String> getPlanName() {
         return this.planName;
@@ -33,7 +33,7 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="planProduct", required=true)
-    private final Input<String> planProduct;
+      private final Input<String> planProduct;
 
     public Input<String> getPlanProduct() {
         return this.planProduct;
@@ -44,7 +44,7 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="planPublisher", required=true)
-    private final Input<String> planPublisher;
+      private final Input<String> planPublisher;
 
     public Input<String> getPlanPublisher() {
         return this.planPublisher;
@@ -118,7 +118,6 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
             this.planPublisher = Input.of(Objects.requireNonNull(planPublisher));
             return this;
         }
-
         public PlatformImagePurchasePlanArgs build() {
             return new PlatformImagePurchasePlanArgs(planName, planProduct, planPublisher);
         }

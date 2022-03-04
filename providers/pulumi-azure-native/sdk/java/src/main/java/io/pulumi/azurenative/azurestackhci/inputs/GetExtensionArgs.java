@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestackhci.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="arcSettingName", required=true)
-    private final String arcSettingName;
+      private final String arcSettingName;
 
     public String getArcSettingName() {
         return this.arcSettingName;
@@ -28,7 +28,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -39,7 +39,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="extensionName", required=true)
-    private final String extensionName;
+      private final String extensionName;
 
     public String getExtensionName() {
         return this.extensionName;
@@ -50,7 +50,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetExtensionArgs build() {
             return new GetExtensionArgs(arcSettingName, clusterName, extensionName, resourceGroupName);
         }

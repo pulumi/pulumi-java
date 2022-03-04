@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.DatabaseSummaryResultResponse;
 import io.pulumi.azurenative.datamigration.inputs.MigrationReportResultResponse;
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="databaseSummary", required=true)
-    private final Map<String,DatabaseSummaryResultResponse> databaseSummary;
+      private final Map<String,DatabaseSummaryResultResponse> databaseSummary;
 
     public Map<String,DatabaseSummaryResultResponse> getDatabaseSummary() {
         return this.databaseSummary;
@@ -38,7 +38,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="databases", required=true)
-    private final Map<String,String> databases;
+      private final Map<String,String> databases;
 
     public Map<String,String> getDatabases() {
         return this.databases;
@@ -49,7 +49,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="durationInSeconds", required=true)
-    private final Double durationInSeconds;
+      private final Double durationInSeconds;
 
     public Double getDurationInSeconds() {
         return this.durationInSeconds;
@@ -60,7 +60,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="endedOn", required=true)
-    private final String endedOn;
+      private final String endedOn;
 
     public String getEndedOn() {
         return this.endedOn;
@@ -71,7 +71,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="exceptionsAndWarnings", required=true)
-    private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+      private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -82,7 +82,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -93,7 +93,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -104,7 +104,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="migrationReport", required=true)
-    private final MigrationReportResultResponse migrationReport;
+      private final MigrationReportResultResponse migrationReport;
 
     public MigrationReportResultResponse getMigrationReport() {
         return this.migrationReport;
@@ -116,7 +116,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="resultType", required=true)
-    private final String resultType;
+      private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -127,7 +127,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="sourceServerBrandVersion", required=true)
-    private final String sourceServerBrandVersion;
+      private final String sourceServerBrandVersion;
 
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
@@ -138,7 +138,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="sourceServerVersion", required=true)
-    private final String sourceServerVersion;
+      private final String sourceServerVersion;
 
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
@@ -149,7 +149,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="startedOn", required=true)
-    private final String startedOn;
+      private final String startedOn;
 
     public String getStartedOn() {
         return this.startedOn;
@@ -160,7 +160,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -171,7 +171,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="statusMessage", required=true)
-    private final String statusMessage;
+      private final String statusMessage;
 
     public String getStatusMessage() {
         return this.statusMessage;
@@ -182,7 +182,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="targetServerBrandVersion", required=true)
-    private final String targetServerBrandVersion;
+      private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -193,7 +193,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="targetServerVersion", required=true)
-    private final String targetServerVersion;
+      private final String targetServerVersion;
 
     public String getTargetServerVersion() {
         return this.targetServerVersion;
@@ -382,7 +382,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(databaseSummary, databases, durationInSeconds, endedOn, exceptionsAndWarnings, id, message, migrationReport, resultType, sourceServerBrandVersion, sourceServerVersion, startedOn, status, statusMessage, targetServerBrandVersion, targetServerVersion);
         }

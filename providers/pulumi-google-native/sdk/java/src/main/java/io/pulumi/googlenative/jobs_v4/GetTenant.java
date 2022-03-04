@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTenant {
-/**
- * Retrieves specified tenant.
+    private GetTenant() {}
+    public interface BuilderApplicator {
+        public void apply(GetTenantArgs.Builder a);
+    }
+    private static GetTenantArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTenantArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves specified tenant.
  * 
- */
+     */
+    public static CompletableFuture<GetTenantResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves specified tenant.
+     * 
+     */
     public static CompletableFuture<GetTenantResult> invokeAsync(GetTenantArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v4:getTenant", TypeShape.of(GetTenantResult.class), args == null ? GetTenantArgs.Empty : args, Utilities.withVersion(options));
     }

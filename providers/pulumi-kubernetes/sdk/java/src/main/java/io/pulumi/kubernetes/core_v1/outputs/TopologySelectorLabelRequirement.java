@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class TopologySelectorLabelRequirement {
     /**
      * The label key that the selector applies to.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -75,7 +75,6 @@ public final class TopologySelectorLabelRequirement {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public TopologySelectorLabelRequirement build() {
             return new TopologySelectorLabelRequirement(key, values);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.InstanceStatusArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.JobConditionArgs;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-    private final @Nullable Input<Integer> active;
+      private final @Nullable Input<Integer> active;
 
     public Input<Integer> getActive() {
         return this.active == null ? Input.empty() : this.active;
@@ -38,7 +38,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completionTime")
-    private final @Nullable Input<String> completionTime;
+      private final @Nullable Input<String> completionTime;
 
     public Input<String> getCompletionTime() {
         return this.completionTime == null ? Input.empty() : this.completionTime;
@@ -49,7 +49,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<JobConditionArgs>> conditions;
+      private final @Nullable Input<List<JobConditionArgs>> conditions;
 
     public Input<List<JobConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -60,7 +60,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failed")
-    private final @Nullable Input<Integer> failed;
+      private final @Nullable Input<Integer> failed;
 
     public Input<Integer> getFailed() {
         return this.failed == null ? Input.empty() : this.failed;
@@ -71,7 +71,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageDigest")
-    private final @Nullable Input<String> imageDigest;
+      private final @Nullable Input<String> imageDigest;
 
     public Input<String> getImageDigest() {
         return this.imageDigest == null ? Input.empty() : this.imageDigest;
@@ -82,7 +82,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<InstanceStatusArgs>> instances;
+      private final @Nullable Input<List<InstanceStatusArgs>> instances;
 
     public Input<List<InstanceStatusArgs>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -93,7 +93,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
@@ -104,7 +104,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -115,7 +115,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="succeeded")
-    private final @Nullable Input<Integer> succeeded;
+      private final @Nullable Input<Integer> succeeded;
 
     public Input<Integer> getSucceeded() {
         return this.succeeded == null ? Input.empty() : this.succeeded;
@@ -279,7 +279,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.succeeded = Input.ofNullable(succeeded);
             return this;
         }
-
         public JobStatusArgs build() {
             return new JobStatusArgs(active, completionTime, conditions, failed, imageDigest, instances, observedGeneration, startTime, succeeded);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="connectTimeout")
-    private final @Nullable Input<DurationArgs> connectTimeout;
+      private final @Nullable Input<DurationArgs> connectTimeout;
 
     public Input<DurationArgs> getConnectTimeout() {
         return this.connectTimeout == null ? Input.empty() : this.connectTimeout;
@@ -35,7 +35,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxConnections")
-    private final @Nullable Input<Integer> maxConnections;
+      private final @Nullable Input<Integer> maxConnections;
 
     public Input<Integer> getMaxConnections() {
         return this.maxConnections == null ? Input.empty() : this.maxConnections;
@@ -46,7 +46,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxPendingRequests")
-    private final @Nullable Input<Integer> maxPendingRequests;
+      private final @Nullable Input<Integer> maxPendingRequests;
 
     public Input<Integer> getMaxPendingRequests() {
         return this.maxPendingRequests == null ? Input.empty() : this.maxPendingRequests;
@@ -57,7 +57,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxRequests")
-    private final @Nullable Input<Integer> maxRequests;
+      private final @Nullable Input<Integer> maxRequests;
 
     public Input<Integer> getMaxRequests() {
         return this.maxRequests == null ? Input.empty() : this.maxRequests;
@@ -68,7 +68,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxRequestsPerConnection")
-    private final @Nullable Input<Integer> maxRequestsPerConnection;
+      private final @Nullable Input<Integer> maxRequestsPerConnection;
 
     public Input<Integer> getMaxRequestsPerConnection() {
         return this.maxRequestsPerConnection == null ? Input.empty() : this.maxRequestsPerConnection;
@@ -79,7 +79,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxRetries")
-    private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Input<Integer> maxRetries;
 
     public Input<Integer> getMaxRetries() {
         return this.maxRetries == null ? Input.empty() : this.maxRetries;
@@ -198,7 +198,6 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
             this.maxRetries = Input.ofNullable(maxRetries);
             return this;
         }
-
         public CircuitBreakersArgs build() {
             return new CircuitBreakersArgs(connectTimeout, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }

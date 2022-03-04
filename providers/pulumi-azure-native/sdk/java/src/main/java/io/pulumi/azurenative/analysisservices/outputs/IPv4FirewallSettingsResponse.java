@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.analysisservices.outputs;
 
 import io.pulumi.azurenative.analysisservices.outputs.IPv4FirewallRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class IPv4FirewallSettingsResponse {
     /**
      * The indicator of enabling PBI service.
      * 
-     */
+    */
     public Optional<Boolean> getEnablePowerBIService() {
         return Optional.ofNullable(this.enablePowerBIService);
     }
     /**
      * An array of firewall rules.
      * 
-     */
+    */
     public List<IPv4FirewallRuleResponse> getFirewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;
     }
@@ -78,7 +78,6 @@ public final class IPv4FirewallSettingsResponse {
             this.firewallRules = firewallRules;
             return this;
         }
-
         public IPv4FirewallSettingsResponse build() {
             return new IPv4FirewallSettingsResponse(enablePowerBIService, firewallRules);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.timeseriesinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.timeseriesinsights.inputs.GetIoTHubEventSourceArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.GetIoTHubEventSourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIoTHubEventSource {
-/**
- * An event source that receives its data from an Azure IoTHub.
+    private GetIoTHubEventSource() {}
+    public interface BuilderApplicator {
+        public void apply(GetIoTHubEventSourceArgs.Builder a);
+    }
+    private static GetIoTHubEventSourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIoTHubEventSourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An event source that receives its data from an Azure IoTHub.
  * API Version: 2020-05-15.
  * 
- *
- * An event source that receives its data from an Azure IoTHub.
+     *
+     * An event source that receives its data from an Azure IoTHub.
  * 
- */
+     */
+    public static CompletableFuture<GetIoTHubEventSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An event source that receives its data from an Azure IoTHub.
+     * API Version: 2020-05-15.
+     * 
+     *
+         * An event source that receives its data from an Azure IoTHub.
+     * 
+     */
     public static CompletableFuture<GetIoTHubEventSourceResult> invokeAsync(GetIoTHubEventSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getIoTHubEventSource", TypeShape.of(GetIoTHubEventSourceResult.class), args == null ? GetIoTHubEventSourceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class MediaServiceIdentityResponse {
     /**
      * The Principal ID of the identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The Tenant ID of the identity.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The identity type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -95,7 +95,6 @@ public final class MediaServiceIdentityResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MediaServiceIdentityResponse build() {
             return new MediaServiceIdentityResponse(principalId, tenantId, type);
         }

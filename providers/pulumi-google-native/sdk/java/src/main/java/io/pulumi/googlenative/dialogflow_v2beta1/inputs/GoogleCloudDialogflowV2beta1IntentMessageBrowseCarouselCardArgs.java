@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
      * 
      */
     @InputImport(name="imageDisplayOptions")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> getImageDisplayOptions() {
         return this.imageDisplayOptions == null ? Input.empty() : this.imageDisplayOptions;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
      * 
      */
     @InputImport(name="items", required=true)
-    private final Input<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
+      private final Input<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
 
     public Input<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> getItems() {
         return this.items;
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs(imageDisplayOptions, items);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class GetObjectIamPolicyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetObjectIamPolicyArgs Empty = new GetObjectIamPolicyArgs();
 
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="generation")
-    private final @Nullable String generation;
+      private final @Nullable String generation;
 
     public Optional<String> getGeneration() {
         return this.generation == null ? Optional.empty() : Optional.ofNullable(this.generation);
     }
 
     @InputImport(name="object", required=true)
-    private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;
     }
 
     @InputImport(name="provisionalUserProject")
-    private final @Nullable String provisionalUserProject;
+      private final @Nullable String provisionalUserProject;
 
     public Optional<String> getProvisionalUserProject() {
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
     @InputImport(name="userProject")
-    private final @Nullable String userProject;
+      private final @Nullable String userProject;
 
     public Optional<String> getUserProject() {
         return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
@@ -122,7 +122,6 @@ public final class GetObjectIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.userProject = userProject;
             return this;
         }
-
         public GetObjectIamPolicyArgs build() {
             return new GetObjectIamPolicyArgs(bucket, generation, object, provisionalUserProject, userProject);
         }

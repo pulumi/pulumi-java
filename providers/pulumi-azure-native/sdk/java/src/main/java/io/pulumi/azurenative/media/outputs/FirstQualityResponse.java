@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class FirstQualityResponse {
     /**
      * The first quality bitrate.
      * 
-     */
+    */
     public Integer getBitrate() {
         return this.bitrate;
     }
@@ -52,7 +52,6 @@ public final class FirstQualityResponse {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }
-
         public FirstQualityResponse build() {
             return new FirstQualityResponse(bitrate);
         }

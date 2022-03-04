@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -78,49 +78,49 @@ public final class AzureTableOutputDataSourceResponse {
     /**
      * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * The number of rows to write to the Azure Table at a time.
      * 
-     */
+    */
     public Optional<Integer> getBatchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
      * If specified, each item in the array is the name of a column to remove (if present) from output event entities.
      * 
-     */
+    */
     public List<String> getColumnsToRemove() {
         return this.columnsToRemove == null ? List.of() : this.columnsToRemove;
     }
     /**
      * This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getPartitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
      * This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getRowKey() {
         return Optional.ofNullable(this.rowKey);
     }
     /**
      * The name of the Azure Table. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getTable() {
         return Optional.ofNullable(this.table);
     }
@@ -128,7 +128,7 @@ public final class AzureTableOutputDataSourceResponse {
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.Storage/Table'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -206,7 +206,6 @@ public final class AzureTableOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureTableOutputDataSourceResponse build() {
             return new AzureTableOutputDataSourceResponse(accountKey, accountName, batchSize, columnsToRemove, partitionKey, rowKey, table, type);
         }

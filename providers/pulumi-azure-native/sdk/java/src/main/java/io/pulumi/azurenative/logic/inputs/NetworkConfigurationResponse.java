@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentAccessEndpointResponse;
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="accessEndpoint")
-    private final @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint;
+      private final @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint;
 
     public Optional<IntegrationServiceEnvironmentAccessEndpointResponse> getAccessEndpoint() {
         return this.accessEndpoint == null ? Optional.empty() : Optional.ofNullable(this.accessEndpoint);
@@ -37,7 +37,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="subnets")
-    private final @Nullable List<ResourceReferenceResponse> subnets;
+      private final @Nullable List<ResourceReferenceResponse> subnets;
 
     public List<ResourceReferenceResponse> getSubnets() {
         return this.subnets == null ? List.of() : this.subnets;
@@ -48,7 +48,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="virtualNetworkAddressSpace")
-    private final @Nullable String virtualNetworkAddressSpace;
+      private final @Nullable String virtualNetworkAddressSpace;
 
     public Optional<String> getVirtualNetworkAddressSpace() {
         return this.virtualNetworkAddressSpace == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkAddressSpace);
@@ -107,7 +107,6 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
             this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
             return this;
         }
-
         public NetworkConfigurationResponse build() {
             return new NetworkConfigurationResponse(accessEndpoint, subnets, virtualNetworkAddressSpace);
         }

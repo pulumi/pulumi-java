@@ -5,8 +5,8 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.ConsentStoreIamPolicyArgs;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamPolicyState;
@@ -120,6 +120,37 @@ public class ConsentStoreIamPolicy extends io.pulumi.resources.CustomResource {
         return this.policyData;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ConsentStoreIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.healthcare.ConsentStoreIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.healthcare.ConsentStoreIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ConsentStoreIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ConsentStoreIamPolicy(String name) {
+        this(name, ConsentStoreIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ConsentStoreIamPolicy(String name, ConsentStoreIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

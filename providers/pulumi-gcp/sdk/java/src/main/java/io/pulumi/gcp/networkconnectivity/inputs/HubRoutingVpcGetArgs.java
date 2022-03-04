@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkconnectivity.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class HubRoutingVpcGetArgs extends io.pulumi.resources.ResourceArgs
     public static final HubRoutingVpcGetArgs Empty = new HubRoutingVpcGetArgs();
 
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -58,7 +58,6 @@ public final class HubRoutingVpcGetArgs extends io.pulumi.resources.ResourceArgs
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public HubRoutingVpcGetArgs build() {
             return new HubRoutingVpcGetArgs(uri);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeys {
-/**
- * Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more information see the
+    private GetKeys() {}
+    public interface BuilderApplicator {
+        public void apply(GetKeysArgs.Builder a);
+    }
+    private static GetKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more information see the
  * [official documentation](https://cloud.google.com/dns/docs/dnskeys/)
  * and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getKeys.
+     *
+     * A collection of arguments for invoking getKeys.
  * 
- *
- * A collection of values returned by getKeys.
+     *
+     * A collection of values returned by getKeys.
  * 
- */
+     */
+    public static CompletableFuture<GetKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more information see the
+     * [official documentation](https://cloud.google.com/dns/docs/dnskeys/)
+     * and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getKeys.
+     * 
+     *
+         * A collection of values returned by getKeys.
+     * 
+     */
     public static CompletableFuture<GetKeysResult> invokeAsync(GetKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:dns/getKeys:getKeys", TypeShape.of(GetKeysResult.class), args == null ? GetKeysArgs.Empty : args, Utilities.withVersion(options));
     }

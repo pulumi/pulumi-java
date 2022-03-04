@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.MysqlSourceConfigResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.OracleSourceConfigResponse;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class SourceConfigResponse {
     /**
      * MySQL data source configuration
      * 
-     */
+    */
     public MysqlSourceConfigResponse getMysqlSourceConfig() {
         return this.mysqlSourceConfig;
     }
     /**
      * Oracle data source configuration
      * 
-     */
+    */
     public OracleSourceConfigResponse getOracleSourceConfig() {
         return this.oracleSourceConfig;
     }
     /**
      * Source connection profile resoource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
      * 
-     */
+    */
     public String getSourceConnectionProfile() {
         return this.sourceConnectionProfile;
     }
@@ -97,7 +97,6 @@ public final class SourceConfigResponse {
             this.sourceConnectionProfile = Objects.requireNonNull(sourceConnectionProfile);
             return this;
         }
-
         public SourceConfigResponse build() {
             return new SourceConfigResponse(mysqlSourceConfig, oracleSourceConfig, sourceConnectionProfile);
         }

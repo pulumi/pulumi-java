@@ -6,21 +6,41 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.inputs.ListDatabaseAccountKeysArgs;
 import io.pulumi.azurenative.documentdb.outputs.ListDatabaseAccountKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDatabaseAccountKeys {
-/**
- * The access keys for the given database account.
+    private ListDatabaseAccountKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListDatabaseAccountKeysArgs.Builder a);
+    }
+    private static ListDatabaseAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListDatabaseAccountKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The access keys for the given database account.
  * API Version: 2021-03-15.
  * 
- *
- * The access keys for the given database account.
+     *
+     * The access keys for the given database account.
  * 
- */
+     */
+    public static CompletableFuture<ListDatabaseAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The access keys for the given database account.
+     * API Version: 2021-03-15.
+     * 
+     *
+         * The access keys for the given database account.
+     * 
+     */
     public static CompletableFuture<ListDatabaseAccountKeysResult> invokeAsync(ListDatabaseAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:listDatabaseAccountKeys", TypeShape.of(ListDatabaseAccountKeysResult.class), args == null ? ListDatabaseAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupActionDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,14 +15,14 @@ public final class RuleGroupCustomActionArgs extends io.pulumi.resources.Resourc
     public static final RuleGroupCustomActionArgs Empty = new RuleGroupCustomActionArgs();
 
     @InputImport(name="actionDefinition", required=true)
-    private final Input<RuleGroupActionDefinitionArgs> actionDefinition;
+      private final Input<RuleGroupActionDefinitionArgs> actionDefinition;
 
     public Input<RuleGroupActionDefinitionArgs> getActionDefinition() {
         return this.actionDefinition;
     }
 
     @InputImport(name="actionName", required=true)
-    private final Input<String> actionName;
+      private final Input<String> actionName;
 
     public Input<String> getActionName() {
         return this.actionName;
@@ -81,7 +81,6 @@ public final class RuleGroupCustomActionArgs extends io.pulumi.resources.Resourc
             this.actionName = Input.of(Objects.requireNonNull(actionName));
             return this;
         }
-
         public RuleGroupCustomActionArgs build() {
             return new RuleGroupCustomActionArgs(actionDefinition, actionName);
         }

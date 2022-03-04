@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.rum.inputs;
 
 import io.pulumi.awsnative.rum.enums.AppMonitorTelemetry;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="allowCookies")
-    private final @Nullable Boolean allowCookies;
+      private final @Nullable Boolean allowCookies;
 
     public Optional<Boolean> getAllowCookies() {
         return this.allowCookies == null ? Optional.empty() : Optional.ofNullable(this.allowCookies);
@@ -38,7 +38,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enableXRay")
-    private final @Nullable Boolean enableXRay;
+      private final @Nullable Boolean enableXRay;
 
     public Optional<Boolean> getEnableXRay() {
         return this.enableXRay == null ? Optional.empty() : Optional.ofNullable(this.enableXRay);
@@ -49,7 +49,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="excludedPages")
-    private final @Nullable List<String> excludedPages;
+      private final @Nullable List<String> excludedPages;
 
     public List<String> getExcludedPages() {
         return this.excludedPages == null ? List.of() : this.excludedPages;
@@ -60,7 +60,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="favoritePages")
-    private final @Nullable List<String> favoritePages;
+      private final @Nullable List<String> favoritePages;
 
     public List<String> getFavoritePages() {
         return this.favoritePages == null ? List.of() : this.favoritePages;
@@ -71,7 +71,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="guestRoleArn")
-    private final @Nullable String guestRoleArn;
+      private final @Nullable String guestRoleArn;
 
     public Optional<String> getGuestRoleArn() {
         return this.guestRoleArn == null ? Optional.empty() : Optional.ofNullable(this.guestRoleArn);
@@ -82,7 +82,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="identityPoolId")
-    private final @Nullable String identityPoolId;
+      private final @Nullable String identityPoolId;
 
     public Optional<String> getIdentityPoolId() {
         return this.identityPoolId == null ? Optional.empty() : Optional.ofNullable(this.identityPoolId);
@@ -93,7 +93,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="includedPages")
-    private final @Nullable List<String> includedPages;
+      private final @Nullable List<String> includedPages;
 
     public List<String> getIncludedPages() {
         return this.includedPages == null ? List.of() : this.includedPages;
@@ -104,7 +104,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sessionSampleRate")
-    private final @Nullable Double sessionSampleRate;
+      private final @Nullable Double sessionSampleRate;
 
     public Optional<Double> getSessionSampleRate() {
         return this.sessionSampleRate == null ? Optional.empty() : Optional.ofNullable(this.sessionSampleRate);
@@ -115,7 +115,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="telemetries")
-    private final @Nullable List<AppMonitorTelemetry> telemetries;
+      private final @Nullable List<AppMonitorTelemetry> telemetries;
 
     public List<AppMonitorTelemetry> getTelemetries() {
         return this.telemetries == null ? List.of() : this.telemetries;
@@ -234,7 +234,6 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
             this.telemetries = telemetries;
             return this;
         }
-
         public AppMonitorConfiguration build() {
             return new AppMonitorConfiguration(allowCookies, enableXRay, excludedPages, favoritePages, guestRoleArn, identityPoolId, includedPages, sessionSampleRate, telemetries);
         }

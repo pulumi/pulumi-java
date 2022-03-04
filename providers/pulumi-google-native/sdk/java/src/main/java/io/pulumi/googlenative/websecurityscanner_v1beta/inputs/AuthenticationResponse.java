@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.CustomAccountResponse;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.GoogleAccountResponse;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.IapCredentialResponse;
@@ -23,7 +23,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="customAccount", required=true)
-    private final CustomAccountResponse customAccount;
+      private final CustomAccountResponse customAccount;
 
     public CustomAccountResponse getCustomAccount() {
         return this.customAccount;
@@ -34,7 +34,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="googleAccount", required=true)
-    private final GoogleAccountResponse googleAccount;
+      private final GoogleAccountResponse googleAccount;
 
     public GoogleAccountResponse getGoogleAccount() {
         return this.googleAccount;
@@ -45,7 +45,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="iapCredential", required=true)
-    private final IapCredentialResponse iapCredential;
+      private final IapCredentialResponse iapCredential;
 
     public IapCredentialResponse getIapCredential() {
         return this.iapCredential;
@@ -104,7 +104,6 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
             this.iapCredential = Objects.requireNonNull(iapCredential);
             return this;
         }
-
         public AuthenticationResponse build() {
             return new AuthenticationResponse(customAccount, googleAccount, iapCredential);
         }

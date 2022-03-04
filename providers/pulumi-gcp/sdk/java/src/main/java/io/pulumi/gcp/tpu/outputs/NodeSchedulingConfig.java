@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tpu.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class NodeSchedulingConfig {
     /**
      * Defines whether the TPU instance is preemptible.
      * 
-     */
+    */
     public Boolean getPreemptible() {
         return this.preemptible;
     }
@@ -52,7 +52,6 @@ public final class NodeSchedulingConfig {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public NodeSchedulingConfig build() {
             return new NodeSchedulingConfig(preemptible);
         }

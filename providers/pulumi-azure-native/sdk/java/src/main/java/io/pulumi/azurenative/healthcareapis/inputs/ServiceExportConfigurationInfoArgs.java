@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ServiceExportConfigurationInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storageAccountName")
-    private final @Nullable Input<String> storageAccountName;
+      private final @Nullable Input<String> storageAccountName;
 
     public Input<String> getStorageAccountName() {
         return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
@@ -66,7 +66,6 @@ public final class ServiceExportConfigurationInfoArgs extends io.pulumi.resource
             this.storageAccountName = Input.ofNullable(storageAccountName);
             return this;
         }
-
         public ServiceExportConfigurationInfoArgs build() {
             return new ServiceExportConfigurationInfoArgs(storageAccountName);
         }

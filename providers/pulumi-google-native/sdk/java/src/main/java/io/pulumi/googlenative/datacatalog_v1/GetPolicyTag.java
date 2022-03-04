@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicyTag {
-/**
- * Gets a policy tag.
+    private GetPolicyTag() {}
+    public interface BuilderApplicator {
+        public void apply(GetPolicyTagArgs.Builder a);
+    }
+    private static GetPolicyTagArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPolicyTagArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a policy tag.
  * 
- */
+     */
+    public static CompletableFuture<GetPolicyTagResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a policy tag.
+     * 
+     */
     public static CompletableFuture<GetPolicyTagResult> invokeAsync(GetPolicyTagArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1:getPolicyTag", TypeShape.of(GetPolicyTagResult.class), args == null ? GetPolicyTagArgs.Empty : args, Utilities.withVersion(options));
     }

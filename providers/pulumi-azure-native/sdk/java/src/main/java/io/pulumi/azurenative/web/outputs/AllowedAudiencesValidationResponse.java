@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AllowedAudiencesValidationResponse {
     /**
      * The configuration settings of the allowed list of audiences from which to validate the JWT token.
      * 
-     */
+    */
     public List<String> getAllowedAudiences() {
         return this.allowedAudiences == null ? List.of() : this.allowedAudiences;
     }
@@ -54,7 +54,6 @@ public final class AllowedAudiencesValidationResponse {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
-
         public AllowedAudiencesValidationResponse build() {
             return new AllowedAudiencesValidationResponse(allowedAudiences);
         }

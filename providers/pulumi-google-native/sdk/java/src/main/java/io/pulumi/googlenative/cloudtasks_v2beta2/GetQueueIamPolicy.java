@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueueIamPolicy {
-/**
- * Gets the access control policy for a Queue. Returns an empty policy if the resource exists and does not have a policy set. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on the specified resource parent: * `cloudtasks.queues.getIamPolicy`
+    private GetQueueIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetQueueIamPolicyArgs.Builder a);
+    }
+    private static GetQueueIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetQueueIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a Queue. Returns an empty policy if the resource exists and does not have a policy set. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on the specified resource parent: * `cloudtasks.queues.getIamPolicy`
  * 
- */
+     */
+    public static CompletableFuture<GetQueueIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a Queue. Returns an empty policy if the resource exists and does not have a policy set. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on the specified resource parent: * `cloudtasks.queues.getIamPolicy`
+     * 
+     */
     public static CompletableFuture<GetQueueIamPolicyResult> invokeAsync(GetQueueIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtasks/v2beta2:getQueueIamPolicy", TypeShape.of(GetQueueIamPolicyResult.class), args == null ? GetQueueIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

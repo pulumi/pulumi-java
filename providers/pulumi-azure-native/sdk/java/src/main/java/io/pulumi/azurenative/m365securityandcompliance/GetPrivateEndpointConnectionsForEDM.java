@@ -6,21 +6,41 @@ package io.pulumi.azurenative.m365securityandcompliance;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.GetPrivateEndpointConnectionsForEDMArgs;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.GetPrivateEndpointConnectionsForEDMResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionsForEDM {
-/**
- * The Private Endpoint Connection resource.
+    private GetPrivateEndpointConnectionsForEDM() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionsForEDMArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionsForEDMArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionsForEDMArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Private Endpoint Connection resource.
  * API Version: 2021-03-25-preview.
  * 
- *
- * The Private Endpoint Connection resource.
+     *
+     * The Private Endpoint Connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionsForEDMResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Private Endpoint Connection resource.
+     * API Version: 2021-03-25-preview.
+     * 
+     *
+         * The Private Endpoint Connection resource.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionsForEDMResult> invokeAsync(GetPrivateEndpointConnectionsForEDMArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:m365securityandcompliance:getPrivateEndpointConnectionsForEDM", TypeShape.of(GetPrivateEndpointConnectionsForEDMResult.class), args == null ? GetPrivateEndpointConnectionsForEDMArgs.Empty : args, Utilities.withVersion(options));
     }

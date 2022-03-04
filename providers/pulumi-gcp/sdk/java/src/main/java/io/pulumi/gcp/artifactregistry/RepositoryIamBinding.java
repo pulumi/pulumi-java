@@ -5,8 +5,8 @@ package io.pulumi.gcp.artifactregistry;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.artifactregistry.RepositoryIamBindingArgs;
 import io.pulumi.gcp.artifactregistry.inputs.RepositoryIamBindingState;
@@ -150,6 +150,37 @@ public class RepositoryIamBinding extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RepositoryIamBindingArgs.Builder a);
+    }
+    private static io.pulumi.gcp.artifactregistry.RepositoryIamBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.artifactregistry.RepositoryIamBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RepositoryIamBinding(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RepositoryIamBinding(String name) {
+        this(name, RepositoryIamBindingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RepositoryIamBinding(String name, RepositoryIamBindingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

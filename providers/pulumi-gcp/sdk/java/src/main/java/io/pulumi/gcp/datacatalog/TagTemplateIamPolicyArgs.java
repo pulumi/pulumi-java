@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     public static final TagTemplateIamPolicyArgs Empty = new TagTemplateIamPolicyArgs();
 
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
     @InputImport(name="tagTemplate", required=true)
-    private final Input<String> tagTemplate;
+      private final Input<String> tagTemplate;
 
     public Input<String> getTagTemplate() {
         return this.tagTemplate;
@@ -125,7 +125,6 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
             this.tagTemplate = Input.of(Objects.requireNonNull(tagTemplate));
             return this;
         }
-
         public TagTemplateIamPolicyArgs build() {
             return new TagTemplateIamPolicyArgs(policyData, project, region, tagTemplate);
         }

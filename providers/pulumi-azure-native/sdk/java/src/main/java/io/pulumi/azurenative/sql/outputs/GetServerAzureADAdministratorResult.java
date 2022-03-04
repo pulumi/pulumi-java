@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class GetServerAzureADAdministratorResult {
     /**
      * Type of the sever administrator.
      * 
-     */
+    */
     public String getAdministratorType() {
         return this.administratorType;
     }
     /**
      * Azure Active Directory only Authentication enabled.
      * 
-     */
+    */
     public Boolean getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Login name of the server administrator.
      * 
-     */
+    */
     public String getLogin() {
         return this.login;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * SID (object ID) of the server administrator.
      * 
-     */
+    */
     public String getSid() {
         return this.sid;
     }
     /**
      * Tenant ID of the administrator.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -203,7 +203,6 @@ public final class GetServerAzureADAdministratorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerAzureADAdministratorResult build() {
             return new GetServerAzureADAdministratorResult(administratorType, azureADOnlyAuthentication, id, login, name, sid, tenantId, type);
         }

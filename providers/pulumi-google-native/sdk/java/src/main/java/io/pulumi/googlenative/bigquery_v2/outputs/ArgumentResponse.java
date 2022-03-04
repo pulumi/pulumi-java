@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class ArgumentResponse {
     /**
      * Optional. Defaults to FIXED_TYPE.
      * 
-     */
+    */
     public String getArgumentKind() {
         return this.argumentKind;
     }
     /**
      * Required unless argument_kind = ANY_TYPE.
      * 
-     */
+    */
     public StandardSqlDataTypeResponse getDataType() {
         return this.dataType;
     }
     /**
      * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * Optional. The name of this argument. Can be absent for function return argument.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -117,7 +117,6 @@ public final class ArgumentResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ArgumentResponse build() {
             return new ArgumentResponse(argumentKind, dataType, mode, name);
         }

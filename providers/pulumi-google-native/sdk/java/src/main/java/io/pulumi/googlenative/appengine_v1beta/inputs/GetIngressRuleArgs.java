@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetIngressRuleArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetIngressRuleArgs Empty = new GetIngressRuleArgs();
 
     @InputImport(name="appId", required=true)
-    private final String appId;
+      private final String appId;
 
     public String getAppId() {
         return this.appId;
     }
 
     @InputImport(name="ingressRuleId", required=true)
-    private final String ingressRuleId;
+      private final String ingressRuleId;
 
     public String getIngressRuleId() {
         return this.ingressRuleId;
@@ -69,7 +69,6 @@ public final class GetIngressRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.ingressRuleId = Objects.requireNonNull(ingressRuleId);
             return this;
         }
-
         public GetIngressRuleArgs build() {
             return new GetIngressRuleArgs(appId, ingressRuleId);
         }

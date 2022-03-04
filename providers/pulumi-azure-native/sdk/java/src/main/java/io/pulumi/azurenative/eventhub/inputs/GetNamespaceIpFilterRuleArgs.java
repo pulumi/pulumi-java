@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="ipFilterRuleName", required=true)
-    private final String ipFilterRuleName;
+      private final String ipFilterRuleName;
 
     public String getIpFilterRuleName() {
         return this.ipFilterRuleName;
@@ -28,7 +28,7 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+      private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetNamespaceIpFilterRuleArgs build() {
             return new GetNamespaceIpFilterRuleArgs(ipFilterRuleName, namespaceName, resourceGroupName);
         }

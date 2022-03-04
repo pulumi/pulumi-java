@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CmkKeyVaultPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyUri")
-    private final @Nullable Input<String> keyUri;
+      private final @Nullable Input<String> keyUri;
 
     public Input<String> getKeyUri() {
         return this.keyUri == null ? Input.empty() : this.keyUri;
@@ -66,7 +66,6 @@ public final class CmkKeyVaultPropertiesArgs extends io.pulumi.resources.Resourc
             this.keyUri = Input.ofNullable(keyUri);
             return this;
         }
-
         public CmkKeyVaultPropertiesArgs build() {
             return new CmkKeyVaultPropertiesArgs(keyUri);
         }

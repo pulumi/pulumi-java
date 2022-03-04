@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AdvancedMachineFeaturesResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AttachedDiskResponse;
@@ -209,175 +209,175 @@ public final class InstancePropertiesResponse {
     /**
      * Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
      * 
-     */
+    */
     public AdvancedMachineFeaturesResponse getAdvancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
     /**
      * Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
      * 
-     */
+    */
     public Boolean getCanIpForward() {
         return this.canIpForward;
     }
     /**
      * Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
      * 
-     */
+    */
     public ConfidentialInstanceConfigResponse getConfidentialInstanceConfig() {
         return this.confidentialInstanceConfig;
     }
     /**
      * An optional text description for the instances that are created from these properties.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * An array of disks that are associated with the instances that are created from these properties.
      * 
-     */
+    */
     public List<AttachedDiskResponse> getDisks() {
         return this.disks;
     }
     /**
      * Display Device properties to enable support for remote display products like: Teradici, VNC and TeamViewer Note that for MachineImage, this is not supported yet.
      * 
-     */
+    */
     public DisplayDeviceResponse getDisplayDevice() {
         return this.displayDevice;
     }
     /**
      * A list of guest accelerator cards' type and count to use for instances created from these properties.
      * 
-     */
+    */
     public List<AcceleratorConfigResponse> getGuestAccelerators() {
         return this.guestAccelerators;
     }
     /**
      * KeyRevocationActionType of the instance.
      * 
-     */
+    */
     public String getKeyRevocationActionType() {
         return this.keyRevocationActionType;
     }
     /**
      * Labels to apply to instances that are created from these properties.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The machine type to use for instances that are created from these properties.
      * 
-     */
+    */
     public String getMachineType() {
         return this.machineType;
     }
     /**
      * The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
      * 
-     */
+    */
     public MetadataResponse getMetadata() {
         return this.metadata;
     }
     /**
      * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
      * 
-     */
+    */
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
      * An array of network access configurations for this interface.
      * 
-     */
+    */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * Note that for MachineImage, this is not supported yet.
      * 
-     */
+    */
     public NetworkPerformanceConfigResponse getNetworkPerformanceConfig() {
         return this.networkPerformanceConfig;
     }
     /**
      * PostKeyRevocationActionType of the instance.
      * 
-     */
+    */
     public String getPostKeyRevocationActionType() {
         return this.postKeyRevocationActionType;
     }
     /**
      * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
      * 
-     */
+    */
     public String getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
     /**
      * Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
      * 
-     */
+    */
     public ReservationAffinityResponse getReservationAffinity() {
         return this.reservationAffinity;
     }
     /**
      * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
      * 
-     */
+    */
     public Map<String,String> getResourceManagerTags() {
         return this.resourceManagerTags;
     }
     /**
      * Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
      * 
-     */
+    */
     public List<String> getResourcePolicies() {
         return this.resourcePolicies;
     }
     /**
      * Specifies the scheduling options for the instances that are created from these properties.
      * 
-     */
+    */
     public SchedulingResponse getScheduling() {
         return this.scheduling;
     }
     /**
      * [Input Only] Secure tags to apply to this instance. Maximum number of secure tags allowed is 50. Note that for MachineImage, this is not supported yet.
      * 
-     */
+    */
     public List<String> getSecureTags() {
         return this.secureTags;
     }
     /**
      * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
      * 
-     */
+    */
     public List<ServiceAccountResponse> getServiceAccounts() {
         return this.serviceAccounts;
     }
     /**
      * Note that for MachineImage, this is not supported yet.
      * 
-     */
+    */
     public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
      * Specifies the Shielded VM options for the instances that are created from these properties.
      * 
-     */
+    */
     public ShieldedVmConfigResponse getShieldedVmConfig() {
         return this.shieldedVmConfig;
     }
     /**
      * A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
      * 
-     */
+    */
     public TagsResponse getTags() {
         return this.tags;
     }
@@ -574,7 +574,6 @@ public final class InstancePropertiesResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public InstancePropertiesResponse build() {
             return new InstancePropertiesResponse(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, description, disks, displayDevice, guestAccelerators, keyRevocationActionType, labels, machineType, metadata, minCpuPlatform, networkInterfaces, networkPerformanceConfig, postKeyRevocationActionType, privateIpv6GoogleAccess, reservationAffinity, resourceManagerTags, resourcePolicies, scheduling, secureTags, serviceAccounts, shieldedInstanceConfig, shieldedVmConfig, tags);
         }

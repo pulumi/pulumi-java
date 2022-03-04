@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -68,49 +68,49 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse {
     /**
      * The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).
      * 
-     */
+    */
     public Double getCost() {
         return this.cost;
     }
     /**
      * The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.
      * 
-     */
+    */
     public String getCurrencyCode() {
         return this.currencyCode;
     }
     /**
      * Price of the product without any discount. If zero, by default set to be the price.
      * 
-     */
+    */
     public Double getOriginalPrice() {
         return this.originalPrice;
     }
     /**
      * Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.price](https://schema.org/price).
      * 
-     */
+    */
     public Double getPrice() {
         return this.price;
     }
     /**
      * The timestamp when the price starts to be effective. This can be set as a future timestamp, and the price is only used for search after price_effective_time. If so, the original_price must be set and original_price is used before price_effective_time. Do not set if price is always effective because it will cause additional latency during search.
      * 
-     */
+    */
     public String getPriceEffectiveTime() {
         return this.priceEffectiveTime;
     }
     /**
      * The timestamp when the price stops to be effective. The price is used for search before price_expire_time. If this field is set, the original_price must be set and original_price is used after price_expire_time. Do not set if price is always effective because it will cause additional latency during search.
      * 
-     */
+    */
     public String getPriceExpireTime() {
         return this.priceExpireTime;
     }
     /**
      * The price range of all the child Product.Type.VARIANT Products grouped together on the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse getPriceRange() {
         return this.priceRange;
     }
@@ -181,7 +181,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse {
             this.priceRange = Objects.requireNonNull(priceRange);
             return this;
         }
-
         public GoogleCloudRetailV2alphaPriceInfoResponse build() {
             return new GoogleCloudRetailV2alphaPriceInfoResponse(cost, currencyCode, originalPrice, price, priceEffectiveTime, priceExpireTime, priceRange);
         }

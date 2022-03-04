@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="windowAfter", required=true)
-    private final Integer windowAfter;
+      private final Integer windowAfter;
 
     public Integer getWindowAfter() {
         return this.windowAfter;
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="windowBefore", required=true)
-    private final Integer windowBefore;
+      private final Integer windowBefore;
 
     public Integer getWindowBefore() {
         return this.windowBefore;
@@ -81,7 +81,6 @@ public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resourc
             this.windowBefore = Objects.requireNonNull(windowBefore);
             return this;
         }
-
         public GooglePrivacyDlpV2ProximityResponse build() {
             return new GooglePrivacyDlpV2ProximityResponse(windowAfter, windowBefore);
         }

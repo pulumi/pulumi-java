@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,28 +56,28 @@ public final class ImageTemplateShellCustomizerResponse {
     /**
      * Array of shell commands to execute
      * 
-     */
+    */
     public List<String> getInline() {
         return this.inline == null ? List.of() : this.inline;
     }
     /**
      * Friendly Name to provide context on what this customization step does
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
      * 
-     */
+    */
     public Optional<String> getScriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }
     /**
      * SHA256 checksum of the shell script provided in the scriptUri field
      * 
-     */
+    */
     public Optional<String> getSha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
@@ -85,7 +85,7 @@ public final class ImageTemplateShellCustomizerResponse {
      * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
      * Expected value is 'Shell'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -142,7 +142,6 @@ public final class ImageTemplateShellCustomizerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateShellCustomizerResponse build() {
             return new ImageTemplateShellCustomizerResponse(inline, name, scriptUri, sha256Checksum, type);
         }

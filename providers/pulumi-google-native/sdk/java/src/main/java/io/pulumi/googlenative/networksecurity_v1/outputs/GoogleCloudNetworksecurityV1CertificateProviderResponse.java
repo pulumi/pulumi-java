@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.CertificateProviderInstanceResponse;
 import io.pulumi.googlenative.networksecurity_v1.outputs.GoogleCloudNetworksecurityV1GrpcEndpointResponse;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse {
     /**
      * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
      * 
-     */
+    */
     public CertificateProviderInstanceResponse getCertificateProviderInstance() {
         return this.certificateProviderInstance;
     }
     /**
      * gRPC specific configuration to access the gRPC server to obtain the cert and private key.
      * 
-     */
+    */
     public GoogleCloudNetworksecurityV1GrpcEndpointResponse getGrpcEndpoint() {
         return this.grpcEndpoint;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse {
             this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
             return this;
         }
-
         public GoogleCloudNetworksecurityV1CertificateProviderResponse build() {
             return new GoogleCloudNetworksecurityV1CertificateProviderResponse(certificateProviderInstance, grpcEndpoint);
         }

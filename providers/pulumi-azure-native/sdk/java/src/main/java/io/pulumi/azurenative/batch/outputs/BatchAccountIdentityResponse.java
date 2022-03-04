@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.BatchAccountIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class BatchAccountIdentityResponse {
     /**
      * The principal id of the Batch account. This property will only be provided for a system assigned identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity used for the Batch account.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
-     */
+    */
     public Map<String,BatchAccountIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
@@ -119,7 +119,6 @@ public final class BatchAccountIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public BatchAccountIdentityResponse build() {
             return new BatchAccountIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

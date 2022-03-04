@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.DependsOnDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -79,56 +79,56 @@ public final class KustomizationDefinitionResponse {
     /**
      * Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
      * 
-     */
+    */
     public List<DependsOnDefinitionResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field change.
      * 
-     */
+    */
     public Optional<Boolean> getForce() {
         return Optional.ofNullable(this.force);
     }
     /**
      * The path in the source reference to reconcile on the cluster.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Enable/disable garbage collections of Kubernetes objects created by this Kustomization.
      * 
-     */
+    */
     public Optional<Boolean> getPrune() {
         return Optional.ofNullable(this.prune);
     }
     /**
      * The interval at which to re-reconcile the Kustomization on the cluster in the event of failure on reconciliation.
      * 
-     */
+    */
     public Optional<Double> getRetryIntervalInSeconds() {
         return Optional.ofNullable(this.retryIntervalInSeconds);
     }
     /**
      * The interval at which to re-reconcile the Kustomization on the cluster.
      * 
-     */
+    */
     public Optional<Double> getSyncIntervalInSeconds() {
         return Optional.ofNullable(this.syncIntervalInSeconds);
     }
     /**
      * The maximum time to attempt to reconcile the Kustomization on the cluster.
      * 
-     */
+    */
     public Optional<Double> getTimeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
     /**
      * Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
      * 
-     */
+    */
     public Optional<String> getValidation() {
         return Optional.ofNullable(this.validation);
     }
@@ -206,7 +206,6 @@ public final class KustomizationDefinitionResponse {
             this.validation = validation;
             return this;
         }
-
         public KustomizationDefinitionResponse build() {
             return new KustomizationDefinitionResponse(dependsOn, force, path, prune, retryIntervalInSeconds, syncIntervalInSeconds, timeoutInSeconds, validation);
         }

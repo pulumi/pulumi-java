@@ -5,7 +5,7 @@ package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.azurenative.netapp.inputs.ExportPolicyRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class VolumePropertiesExportPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<ExportPolicyRuleArgs>> rules;
+      private final @Nullable Input<List<ExportPolicyRuleArgs>> rules;
 
     public Input<List<ExportPolicyRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -67,7 +67,6 @@ public final class VolumePropertiesExportPolicyArgs extends io.pulumi.resources.
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public VolumePropertiesExportPolicyArgs build() {
             return new VolumePropertiesExportPolicyArgs(rules);
         }

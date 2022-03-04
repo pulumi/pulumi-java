@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class TemplateDataSetReference {
     /**
      * <p>Dataset Amazon Resource Name (ARN).</p>
      * 
-     */
+    */
     public String getDataSetArn() {
         return this.dataSetArn;
     }
     /**
      * <p>Dataset placeholder.</p>
      * 
-     */
+    */
     public String getDataSetPlaceholder() {
         return this.dataSetPlaceholder;
     }
@@ -74,7 +74,6 @@ public final class TemplateDataSetReference {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
         }
-
         public TemplateDataSetReference build() {
             return new TemplateDataSetReference(dataSetArn, dataSetPlaceholder);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iotevents;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotevents.inputs.GetInputArgs;
 import io.pulumi.awsnative.iotevents.outputs.GetInputResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInput {
-/**
- * The AWS::IoTEvents::Input resource creates an input. To monitor your devices and processes, they must have a way to get telemetry data into AWS IoT Events. This is done by sending messages as *inputs* to AWS IoT Events. For more information, see [How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*.
+    private GetInput() {}
+    public interface BuilderApplicator {
+        public void apply(GetInputArgs.Builder a);
+    }
+    private static GetInputArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInputArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::IoTEvents::Input resource creates an input. To monitor your devices and processes, they must have a way to get telemetry data into AWS IoT Events. This is done by sending messages as *inputs* to AWS IoT Events. For more information, see [How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*.
  * 
- */
+     */
+    public static CompletableFuture<GetInputResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::IoTEvents::Input resource creates an input. To monitor your devices and processes, they must have a way to get telemetry data into AWS IoT Events. This is done by sending messages as *inputs* to AWS IoT Events. For more information, see [How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*.
+     * 
+     */
     public static CompletableFuture<GetInputResult> invokeAsync(GetInputArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotevents:getInput", TypeShape.of(GetInputResult.class), args == null ? GetInputArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +27,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
      * Good service is defined to be the count of requests made to
      * this service that return in no more than threshold.
      * 
-     */
+    */
     public String getThreshold() {
         return this.threshold;
     }
@@ -56,7 +56,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency(threshold);
         }

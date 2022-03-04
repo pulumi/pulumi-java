@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="packageName", required=true)
-    private final String packageName;
+      private final String packageName;
 
     public String getPackageName() {
         return this.packageName;
@@ -28,7 +28,7 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-    private final String testBaseAccountName;
+      private final String testBaseAccountName;
 
     public String getTestBaseAccountName() {
         return this.testBaseAccountName;
@@ -98,7 +98,6 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
-
         public GetPackageDownloadURLArgs build() {
             return new GetPackageDownloadURLArgs(packageName, resourceGroupName, testBaseAccountName);
         }

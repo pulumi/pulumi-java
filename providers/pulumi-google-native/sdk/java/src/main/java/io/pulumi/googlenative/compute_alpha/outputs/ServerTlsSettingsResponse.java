@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.TlsContextResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class ServerTlsSettingsResponse {
     /**
      * Configures the mechanism to obtain security certificates and identity information.
      * 
-     */
+    */
     public TlsContextResponse getProxyTlsContext() {
         return this.proxyTlsContext;
     }
     /**
      * A list of alternate names to verify the subject identity in the certificate presented by the client.
      * 
-     */
+    */
     public List<String> getSubjectAltNames() {
         return this.subjectAltNames;
     }
     /**
      * Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following: - SIMPLE Secure connections with standard TLS semantics. - MUTUAL Secure connections to the backends using mutual TLS by presenting client certificates for authentication.
      * 
-     */
+    */
     public String getTlsMode() {
         return this.tlsMode;
     }
@@ -97,7 +97,6 @@ public final class ServerTlsSettingsResponse {
             this.tlsMode = Objects.requireNonNull(tlsMode);
             return this;
         }
-
         public ServerTlsSettingsResponse build() {
             return new ServerTlsSettingsResponse(proxyTlsContext, subjectAltNames, tlsMode);
         }

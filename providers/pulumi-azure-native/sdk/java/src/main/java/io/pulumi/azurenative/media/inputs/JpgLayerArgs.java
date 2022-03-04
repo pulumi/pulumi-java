@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="height")
-    private final @Nullable Input<String> height;
+      private final @Nullable Input<String> height;
 
     public Input<String> getHeight() {
         return this.height == null ? Input.empty() : this.height;
@@ -35,7 +35,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -47,7 +47,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -58,7 +58,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quality")
-    private final @Nullable Input<Integer> quality;
+      private final @Nullable Input<Integer> quality;
 
     public Input<Integer> getQuality() {
         return this.quality == null ? Input.empty() : this.quality;
@@ -69,7 +69,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="width")
-    private final @Nullable Input<String> width;
+      private final @Nullable Input<String> width;
 
     public Input<String> getWidth() {
         return this.width == null ? Input.empty() : this.width;
@@ -173,7 +173,6 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
             this.width = Input.ofNullable(width);
             return this;
         }
-
         public JpgLayerArgs build() {
             return new JpgLayerArgs(height, label, odataType, quality, width);
         }

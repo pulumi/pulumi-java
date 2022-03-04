@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyLicenseArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="licenses", required=true)
-    private final Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
+      private final Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
 
     public Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> getLicenses() {
         return this.licenses;
@@ -37,7 +37,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -48,7 +48,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="responseCustomData")
-    private final @Nullable Input<String> responseCustomData;
+      private final @Nullable Input<String> responseCustomData;
 
     public Input<String> getResponseCustomData() {
         return this.responseCustomData == null ? Input.empty() : this.responseCustomData;
@@ -122,7 +122,6 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
             this.responseCustomData = Input.ofNullable(responseCustomData);
             return this;
         }
-
         public ContentKeyPolicyPlayReadyConfigurationArgs build() {
             return new ContentKeyPolicyPlayReadyConfigurationArgs(licenses, odataType, responseCustomData);
         }

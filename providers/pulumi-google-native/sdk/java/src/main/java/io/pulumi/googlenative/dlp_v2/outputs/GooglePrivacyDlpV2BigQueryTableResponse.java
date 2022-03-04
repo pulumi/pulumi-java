@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse {
     /**
      * Dataset ID of the table.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * Name of the table.
      * 
-     */
+    */
     public String getTableId() {
         return this.tableId;
     }
@@ -95,7 +95,6 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public GooglePrivacyDlpV2BigQueryTableResponse build() {
             return new GooglePrivacyDlpV2BigQueryTableResponse(datasetId, project, tableId);
         }

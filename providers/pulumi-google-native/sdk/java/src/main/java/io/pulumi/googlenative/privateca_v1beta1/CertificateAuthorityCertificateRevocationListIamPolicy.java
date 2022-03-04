@@ -5,8 +5,8 @@ package io.pulumi.googlenative.privateca_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1beta1.CertificateAuthorityCertificateRevocationListIamPolicyArgs;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.AuditConfigResponse;
@@ -81,6 +81,37 @@ public class CertificateAuthorityCertificateRevocationListIamPolicy extends io.p
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CertificateAuthorityCertificateRevocationListIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.privateca_v1beta1.CertificateAuthorityCertificateRevocationListIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.privateca_v1beta1.CertificateAuthorityCertificateRevocationListIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CertificateAuthorityCertificateRevocationListIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CertificateAuthorityCertificateRevocationListIamPolicy(String name) {
+        this(name, CertificateAuthorityCertificateRevocationListIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CertificateAuthorityCertificateRevocationListIamPolicy(String name, CertificateAuthorityCertificateRevocationListIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

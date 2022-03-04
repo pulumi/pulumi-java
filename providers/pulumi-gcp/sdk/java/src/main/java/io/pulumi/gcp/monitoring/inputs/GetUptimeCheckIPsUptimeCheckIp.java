@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -32,7 +32,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -43,7 +43,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -102,7 +102,6 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetUptimeCheckIPsUptimeCheckIp build() {
             return new GetUptimeCheckIPsUptimeCheckIp(ipAddress, location, region);
         }

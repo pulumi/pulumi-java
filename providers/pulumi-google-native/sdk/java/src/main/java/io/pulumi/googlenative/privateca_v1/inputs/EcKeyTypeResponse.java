@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EcKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="signatureAlgorithm", required=true)
-    private final String signatureAlgorithm;
+      private final String signatureAlgorithm;
 
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
@@ -59,7 +59,6 @@ public final class EcKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public EcKeyTypeResponse build() {
             return new EcKeyTypeResponse(signatureAlgorithm);
         }

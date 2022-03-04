@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2DiskInputDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-    private final @Nullable Input<String> diskEncryptionSetId;
+      private final @Nullable Input<String> diskEncryptionSetId;
 
     public Input<String> getDiskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
@@ -38,7 +38,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<Either<String,DiskAccountType>> diskType;
+      private final @Nullable Input<Either<String,DiskAccountType>> diskType;
 
     public Input<Either<String,DiskAccountType>> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -49,7 +49,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="disksToInclude")
-    private final @Nullable Input<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude;
+      private final @Nullable Input<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude;
 
     public Input<List<InMageAzureV2DiskInputDetailsArgs>> getDisksToInclude() {
         return this.disksToInclude == null ? Input.empty() : this.disksToInclude;
@@ -60,7 +60,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableRdpOnTargetOption")
-    private final @Nullable Input<String> enableRdpOnTargetOption;
+      private final @Nullable Input<String> enableRdpOnTargetOption;
 
     public Input<String> getEnableRdpOnTargetOption() {
         return this.enableRdpOnTargetOption == null ? Input.empty() : this.enableRdpOnTargetOption;
@@ -72,7 +72,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -83,7 +83,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="logStorageAccountId")
-    private final @Nullable Input<String> logStorageAccountId;
+      private final @Nullable Input<String> logStorageAccountId;
 
     public Input<String> getLogStorageAccountId() {
         return this.logStorageAccountId == null ? Input.empty() : this.logStorageAccountId;
@@ -94,7 +94,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="masterTargetId")
-    private final @Nullable Input<String> masterTargetId;
+      private final @Nullable Input<String> masterTargetId;
 
     public Input<String> getMasterTargetId() {
         return this.masterTargetId == null ? Input.empty() : this.masterTargetId;
@@ -105,7 +105,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="multiVmGroupId")
-    private final @Nullable Input<String> multiVmGroupId;
+      private final @Nullable Input<String> multiVmGroupId;
 
     public Input<String> getMultiVmGroupId() {
         return this.multiVmGroupId == null ? Input.empty() : this.multiVmGroupId;
@@ -116,7 +116,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="multiVmGroupName")
-    private final @Nullable Input<String> multiVmGroupName;
+      private final @Nullable Input<String> multiVmGroupName;
 
     public Input<String> getMultiVmGroupName() {
         return this.multiVmGroupName == null ? Input.empty() : this.multiVmGroupName;
@@ -127,7 +127,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="processServerId")
-    private final @Nullable Input<String> processServerId;
+      private final @Nullable Input<String> processServerId;
 
     public Input<String> getProcessServerId() {
         return this.processServerId == null ? Input.empty() : this.processServerId;
@@ -138,7 +138,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="runAsAccountId")
-    private final @Nullable Input<String> runAsAccountId;
+      private final @Nullable Input<String> runAsAccountId;
 
     public Input<String> getRunAsAccountId() {
         return this.runAsAccountId == null ? Input.empty() : this.runAsAccountId;
@@ -149,7 +149,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="storageAccountId")
-    private final @Nullable Input<String> storageAccountId;
+      private final @Nullable Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
@@ -160,7 +160,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetAvailabilitySetId")
-    private final @Nullable Input<String> targetAvailabilitySetId;
+      private final @Nullable Input<String> targetAvailabilitySetId;
 
     public Input<String> getTargetAvailabilitySetId() {
         return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
@@ -171,7 +171,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetAvailabilityZone")
-    private final @Nullable Input<String> targetAvailabilityZone;
+      private final @Nullable Input<String> targetAvailabilityZone;
 
     public Input<String> getTargetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Input.empty() : this.targetAvailabilityZone;
@@ -182,7 +182,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetAzureNetworkId")
-    private final @Nullable Input<String> targetAzureNetworkId;
+      private final @Nullable Input<String> targetAzureNetworkId;
 
     public Input<String> getTargetAzureNetworkId() {
         return this.targetAzureNetworkId == null ? Input.empty() : this.targetAzureNetworkId;
@@ -193,7 +193,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetAzureSubnetId")
-    private final @Nullable Input<String> targetAzureSubnetId;
+      private final @Nullable Input<String> targetAzureSubnetId;
 
     public Input<String> getTargetAzureSubnetId() {
         return this.targetAzureSubnetId == null ? Input.empty() : this.targetAzureSubnetId;
@@ -204,7 +204,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetAzureV1ResourceGroupId")
-    private final @Nullable Input<String> targetAzureV1ResourceGroupId;
+      private final @Nullable Input<String> targetAzureV1ResourceGroupId;
 
     public Input<String> getTargetAzureV1ResourceGroupId() {
         return this.targetAzureV1ResourceGroupId == null ? Input.empty() : this.targetAzureV1ResourceGroupId;
@@ -215,7 +215,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetAzureV2ResourceGroupId")
-    private final @Nullable Input<String> targetAzureV2ResourceGroupId;
+      private final @Nullable Input<String> targetAzureV2ResourceGroupId;
 
     public Input<String> getTargetAzureV2ResourceGroupId() {
         return this.targetAzureV2ResourceGroupId == null ? Input.empty() : this.targetAzureV2ResourceGroupId;
@@ -226,7 +226,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetAzureVmName")
-    private final @Nullable Input<String> targetAzureVmName;
+      private final @Nullable Input<String> targetAzureVmName;
 
     public Input<String> getTargetAzureVmName() {
         return this.targetAzureVmName == null ? Input.empty() : this.targetAzureVmName;
@@ -237,7 +237,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetProximityPlacementGroupId")
-    private final @Nullable Input<String> targetProximityPlacementGroupId;
+      private final @Nullable Input<String> targetProximityPlacementGroupId;
 
     public Input<String> getTargetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId == null ? Input.empty() : this.targetProximityPlacementGroupId;
@@ -248,7 +248,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetVmSize")
-    private final @Nullable Input<String> targetVmSize;
+      private final @Nullable Input<String> targetVmSize;
 
     public Input<String> getTargetVmSize() {
         return this.targetVmSize == null ? Input.empty() : this.targetVmSize;
@@ -592,7 +592,6 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
             this.targetVmSize = Input.ofNullable(targetVmSize);
             return this;
         }
-
         public InMageAzureV2EnableProtectionInputArgs build() {
             return new InMageAzureV2EnableProtectionInputArgs(diskEncryptionSetId, diskType, disksToInclude, enableRdpOnTargetOption, instanceType, logStorageAccountId, masterTargetId, multiVmGroupId, multiVmGroupName, processServerId, runAsAccountId, storageAccountId, targetAvailabilitySetId, targetAvailabilityZone, targetAzureNetworkId, targetAzureSubnetId, targetAzureV1ResourceGroupId, targetAzureV2ResourceGroupId, targetAzureVmName, targetProximityPlacementGroupId, targetVmSize);
         }

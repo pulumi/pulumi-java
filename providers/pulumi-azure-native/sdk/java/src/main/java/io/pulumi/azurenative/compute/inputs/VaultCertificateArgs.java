@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certificateStore")
-    private final @Nullable Input<String> certificateStore;
+      private final @Nullable Input<String> certificateStore;
 
     public Input<String> getCertificateStore() {
         return this.certificateStore == null ? Input.empty() : this.certificateStore;
@@ -34,7 +34,7 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certificateUrl")
-    private final @Nullable Input<String> certificateUrl;
+      private final @Nullable Input<String> certificateUrl;
 
     public Input<String> getCertificateUrl() {
         return this.certificateUrl == null ? Input.empty() : this.certificateUrl;
@@ -93,7 +93,6 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
             this.certificateUrl = Input.ofNullable(certificateUrl);
             return this;
         }
-
         public VaultCertificateArgs build() {
             return new VaultCertificateArgs(certificateStore, certificateUrl);
         }

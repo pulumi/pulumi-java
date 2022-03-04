@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ApplicationGetEndpointResponse {
     /**
      * The destination port to connect to.
      * 
-     */
+    */
     public Optional<Integer> getDestinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
      * The location of the endpoint.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The private ip address of the endpoint.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The public port to connect to.
      * 
-     */
+    */
     public Optional<Integer> getPublicPort() {
         return Optional.ofNullable(this.publicPort);
     }
@@ -119,7 +119,6 @@ public final class ApplicationGetEndpointResponse {
             this.publicPort = publicPort;
             return this;
         }
-
         public ApplicationGetEndpointResponse build() {
             return new ApplicationGetEndpointResponse(destinationPort, location, privateIPAddress, publicPort);
         }

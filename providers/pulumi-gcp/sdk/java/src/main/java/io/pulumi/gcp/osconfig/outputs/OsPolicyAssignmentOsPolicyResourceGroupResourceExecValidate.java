@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile;
 import java.lang.String;
 import java.util.List;
@@ -56,35 +56,35 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate {
     /**
      * Optional arguments to pass to the source during execution.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args == null ? List.of() : this.args;
     }
     /**
      * A remote or local source.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile> getFile() {
         return Optional.ofNullable(this.file);
     }
     /**
      * Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL
      * 
-     */
+    */
     public String getInterpreter() {
         return this.interpreter;
     }
     /**
      * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
      * 
-     */
+    */
     public Optional<String> getOutputFilePath() {
         return Optional.ofNullable(this.outputFilePath);
     }
     /**
      * An inline script. The size of the script is limited to 1024 characters.
      * 
-     */
+    */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);
     }
@@ -141,7 +141,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate {
             this.script = script;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate(args, file, interpreter, outputFilePath, script);
         }

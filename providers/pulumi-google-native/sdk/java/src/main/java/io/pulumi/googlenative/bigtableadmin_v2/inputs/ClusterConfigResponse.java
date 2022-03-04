@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.ClusterAutoscalingConfigResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clusterAutoscalingConfig", required=true)
-    private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
+      private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 
     public ClusterAutoscalingConfigResponse getClusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig;
@@ -59,7 +59,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.clusterAutoscalingConfig = Objects.requireNonNull(clusterAutoscalingConfig);
             return this;
         }
-
         public ClusterConfigResponse build() {
             return new ClusterConfigResponse(clusterAutoscalingConfig);
         }

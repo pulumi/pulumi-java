@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -33,7 +33,7 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="scopes", required=true)
-    private final List<String> scopes;
+      private final List<String> scopes;
 
     public List<String> getScopes() {
         return this.scopes;
@@ -82,7 +82,6 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public ServiceAccountResponse build() {
             return new ServiceAccountResponse(email, scopes);
         }

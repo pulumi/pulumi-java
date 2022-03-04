@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceGroupManagerStatusVersionTargetResponse extends io.pu
      * 
      */
     @InputImport(name="isReached", required=true)
-    private final Boolean isReached;
+      private final Boolean isReached;
 
     public Boolean getIsReached() {
         return this.isReached;
@@ -55,7 +55,6 @@ public final class InstanceGroupManagerStatusVersionTargetResponse extends io.pu
             this.isReached = Objects.requireNonNull(isReached);
             return this;
         }
-
         public InstanceGroupManagerStatusVersionTargetResponse build() {
             return new InstanceGroupManagerStatusVersionTargetResponse(isReached);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -73,21 +73,21 @@ public final class SetVariableActivityResponse {
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -95,28 +95,28 @@ public final class SetVariableActivityResponse {
      * Type of activity.
      * Expected value is 'SetVariable'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * Value to be set. Could be a static value or Expression
      * 
-     */
+    */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }
     /**
      * Name of the variable whose value needs to be set.
      * 
-     */
+    */
     public Optional<String> getVariableName() {
         return Optional.ofNullable(this.variableName);
     }
@@ -187,7 +187,6 @@ public final class SetVariableActivityResponse {
             this.variableName = variableName;
             return this;
         }
-
         public SetVariableActivityResponse build() {
             return new SetVariableActivityResponse(dependsOn, description, name, type, userProperties, value, variableName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -45,14 +45,14 @@ public final class GameServerConfigFleetConfig {
      *   The format of the spec can be found :
      *   `https://agones.dev/site/docs/reference/fleet/`.
      * 
-     */
+    */
     public String getFleetSpec() {
         return this.fleetSpec;
     }
     /**
      * The name of the ScalingConfig
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -88,7 +88,6 @@ public final class GameServerConfigFleetConfig {
             this.name = name;
             return this;
         }
-
         public GameServerConfigFleetConfig build() {
             return new GameServerConfigFleetConfig(fleetSpec, name);
         }

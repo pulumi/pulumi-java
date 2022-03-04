@@ -15,7 +15,7 @@ import io.pulumi.azurenative.network.outputs.ServiceAssociationLinkResponse;
 import io.pulumi.azurenative.network.outputs.ServiceEndpointPolicyResponse;
 import io.pulumi.azurenative.network.outputs.ServiceEndpointPropertiesFormatResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -193,161 +193,161 @@ public final class GetSubnetResult {
     /**
      * The address prefix for the subnet.
      * 
-     */
+    */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * List of address prefixes for the subnet.
      * 
-     */
+    */
     public List<String> getAddressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
     /**
      * Application gateway IP configurations of virtual network resource.
      * 
-     */
+    */
     public List<ApplicationGatewayIPConfigurationResponse> getApplicationGatewayIpConfigurations() {
         return this.applicationGatewayIpConfigurations == null ? List.of() : this.applicationGatewayIpConfigurations;
     }
     /**
      * An array of references to the delegations on the subnet.
      * 
-     */
+    */
     public List<DelegationResponse> getDelegations() {
         return this.delegations == null ? List.of() : this.delegations;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Array of IpAllocation which reference this subnet.
      * 
-     */
+    */
     public List<SubResourceResponse> getIpAllocations() {
         return this.ipAllocations == null ? List.of() : this.ipAllocations;
     }
     /**
      * Array of IP configuration profiles which reference this subnet.
      * 
-     */
+    */
     public List<IPConfigurationProfileResponse> getIpConfigurationProfiles() {
         return this.ipConfigurationProfiles;
     }
     /**
      * An array of references to the network interface IP configurations using subnet.
      * 
-     */
+    */
     public List<IPConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Nat gateway associated with this subnet.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getNatGateway() {
         return Optional.ofNullable(this.natGateway);
     }
     /**
      * The reference to the NetworkSecurityGroup resource.
      * 
-     */
+    */
     public Optional<NetworkSecurityGroupResponse> getNetworkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
     /**
      * Enable or Disable apply network policies on private end point in the subnet.
      * 
-     */
+    */
     public Optional<String> getPrivateEndpointNetworkPolicies() {
         return Optional.ofNullable(this.privateEndpointNetworkPolicies);
     }
     /**
      * An array of references to private endpoints.
      * 
-     */
+    */
     public List<PrivateEndpointResponse> getPrivateEndpoints() {
         return this.privateEndpoints;
     }
     /**
      * Enable or Disable apply network policies on private link service in the subnet.
      * 
-     */
+    */
     public Optional<String> getPrivateLinkServiceNetworkPolicies() {
         return Optional.ofNullable(this.privateLinkServiceNetworkPolicies);
     }
     /**
      * The provisioning state of the subnet resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
      * 
-     */
+    */
     public String getPurpose() {
         return this.purpose;
     }
     /**
      * An array of references to the external resources using subnet.
      * 
-     */
+    */
     public List<ResourceNavigationLinkResponse> getResourceNavigationLinks() {
         return this.resourceNavigationLinks;
     }
     /**
      * The reference to the RouteTable resource.
      * 
-     */
+    */
     public Optional<RouteTableResponse> getRouteTable() {
         return Optional.ofNullable(this.routeTable);
     }
     /**
      * An array of references to services injecting into this subnet.
      * 
-     */
+    */
     public List<ServiceAssociationLinkResponse> getServiceAssociationLinks() {
         return this.serviceAssociationLinks;
     }
     /**
      * An array of service endpoint policies.
      * 
-     */
+    */
     public List<ServiceEndpointPolicyResponse> getServiceEndpointPolicies() {
         return this.serviceEndpointPolicies == null ? List.of() : this.serviceEndpointPolicies;
     }
     /**
      * An array of service endpoints.
      * 
-     */
+    */
     public List<ServiceEndpointPropertiesFormatResponse> getServiceEndpoints() {
         return this.serviceEndpoints == null ? List.of() : this.serviceEndpoints;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -530,7 +530,6 @@ public final class GetSubnetResult {
             this.type = type;
             return this;
         }
-
         public GetSubnetResult build() {
             return new GetSubnetResult(addressPrefix, addressPrefixes, applicationGatewayIpConfigurations, delegations, etag, id, ipAllocations, ipConfigurationProfiles, ipConfigurations, name, natGateway, networkSecurityGroup, privateEndpointNetworkPolicies, privateEndpoints, privateLinkServiceNetworkPolicies, provisioningState, purpose, resourceNavigationLinks, routeTable, serviceAssociationLinks, serviceEndpointPolicies, serviceEndpoints, type);
         }

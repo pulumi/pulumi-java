@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class RetryPolicyResponse {
     /**
      * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Interval between retries in seconds. Default is 30.
      * 
-     */
+    */
     public Optional<Integer> getIntervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
@@ -77,7 +77,6 @@ public final class RetryPolicyResponse {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public RetryPolicyResponse build() {
             return new RetryPolicyResponse(count, intervalInSeconds);
         }

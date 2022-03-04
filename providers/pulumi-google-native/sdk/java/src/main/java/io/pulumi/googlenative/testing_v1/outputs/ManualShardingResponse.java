@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.TestTargetsForShardResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManualShardingResponse {
     /**
      * Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be >= 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
      * 
-     */
+    */
     public List<TestTargetsForShardResponse> getTestTargetsForShard() {
         return this.testTargetsForShard;
     }
@@ -53,7 +53,6 @@ public final class ManualShardingResponse {
             this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
             return this;
         }
-
         public ManualShardingResponse build() {
             return new ManualShardingResponse(testTargetsForShard);
         }

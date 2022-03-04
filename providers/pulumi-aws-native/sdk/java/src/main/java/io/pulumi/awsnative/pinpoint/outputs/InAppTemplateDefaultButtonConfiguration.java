@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.pinpoint.outputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -114,7 +114,6 @@ public final class InAppTemplateDefaultButtonConfiguration {
             this.textColor = textColor;
             return this;
         }
-
         public InAppTemplateDefaultButtonConfiguration build() {
             return new InAppTemplateDefaultButtonConfiguration(backgroundColor, borderRadius, buttonAction, link, text, textColor);
         }

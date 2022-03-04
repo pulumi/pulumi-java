@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ConnectionMonitorHttpConfigurationR
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorIcmpConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorSuccessThresholdResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorTcpConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -80,56 +80,56 @@ public final class ConnectionMonitorTestConfigurationResponse {
     /**
      * The parameters used to perform test evaluation over HTTP.
      * 
-     */
+    */
     public Optional<ConnectionMonitorHttpConfigurationResponse> getHttpConfiguration() {
         return Optional.ofNullable(this.httpConfiguration);
     }
     /**
      * The parameters used to perform test evaluation over ICMP.
      * 
-     */
+    */
     public Optional<ConnectionMonitorIcmpConfigurationResponse> getIcmpConfiguration() {
         return Optional.ofNullable(this.icmpConfiguration);
     }
     /**
      * The name of the connection monitor test configuration.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.
      * 
-     */
+    */
     public Optional<String> getPreferredIPVersion() {
         return Optional.ofNullable(this.preferredIPVersion);
     }
     /**
      * The protocol to use in test evaluation.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * The threshold for declaring a test successful.
      * 
-     */
+    */
     public Optional<ConnectionMonitorSuccessThresholdResponse> getSuccessThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * The parameters used to perform test evaluation over TCP.
      * 
-     */
+    */
     public Optional<ConnectionMonitorTcpConfigurationResponse> getTcpConfiguration() {
         return Optional.ofNullable(this.tcpConfiguration);
     }
     /**
      * The frequency of test evaluation, in seconds.
      * 
-     */
+    */
     public Optional<Integer> getTestFrequencySec() {
         return Optional.ofNullable(this.testFrequencySec);
     }
@@ -207,7 +207,6 @@ public final class ConnectionMonitorTestConfigurationResponse {
             this.testFrequencySec = testFrequencySec;
             return this;
         }
-
         public ConnectionMonitorTestConfigurationResponse build() {
             return new ConnectionMonitorTestConfigurationResponse(httpConfiguration, icmpConfiguration, name, preferredIPVersion, protocol, successThreshold, tcpConfiguration, testFrequencySec);
         }

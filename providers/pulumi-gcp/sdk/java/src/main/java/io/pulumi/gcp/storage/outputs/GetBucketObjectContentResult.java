@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.GetBucketObjectContentCustomerEncryption;
 import java.lang.Boolean;
 import java.lang.String;
@@ -103,7 +103,7 @@ public final class GetBucketObjectContentResult {
     /**
      * (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
@@ -134,7 +134,7 @@ public final class GetBucketObjectContentResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -340,7 +340,6 @@ public final class GetBucketObjectContentResult {
             this.temporaryHold = Objects.requireNonNull(temporaryHold);
             return this;
         }
-
         public GetBucketObjectContentResult build() {
             return new GetBucketObjectContentResult(bucket, cacheControl, content, contentDisposition, contentEncoding, contentLanguage, contentType, crc32c, customerEncryptions, detectMd5hash, eventBasedHold, id, kmsKeyName, md5hash, mediaLink, metadata, name, outputName, selfLink, source, storageClass, temporaryHold);
         }

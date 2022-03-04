@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.saas.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListSaasResourceAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -55,7 +55,6 @@ public final class ListSaasResourceAccessTokenArgs extends io.pulumi.resources.I
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public ListSaasResourceAccessTokenArgs build() {
             return new ListSaasResourceAccessTokenArgs(resourceId);
         }

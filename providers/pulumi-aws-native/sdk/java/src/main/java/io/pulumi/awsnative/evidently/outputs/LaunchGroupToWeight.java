@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class LaunchGroupToWeight {
             this.splitWeight = Objects.requireNonNull(splitWeight);
             return this;
         }
-
         public LaunchGroupToWeight build() {
             return new LaunchGroupToWeight(groupName, splitWeight);
         }

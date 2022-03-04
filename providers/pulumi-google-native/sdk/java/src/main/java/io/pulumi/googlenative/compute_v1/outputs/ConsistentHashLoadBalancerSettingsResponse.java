@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.ConsistentHashLoadBalancerSettingsHttpCookieResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ConsistentHashLoadBalancerSettingsResponse {
     /**
      * Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
-     */
+    */
     public ConsistentHashLoadBalancerSettingsHttpCookieResponse getHttpCookie() {
         return this.httpCookie;
     }
     /**
      * The hash based on the value of the specified header field. This field is applicable if the sessionAffinity is set to HEADER_FIELD.
      * 
-     */
+    */
     public String getHttpHeaderName() {
         return this.httpHeaderName;
     }
     /**
      * The minimum number of virtual nodes to use for the hash ring. Defaults to 1024. Larger ring sizes result in more granular load distributions. If the number of hosts in the load balancing pool is larger than the ring size, each host will be assigned a single virtual node.
      * 
-     */
+    */
     public String getMinimumRingSize() {
         return this.minimumRingSize;
     }
@@ -96,7 +96,6 @@ public final class ConsistentHashLoadBalancerSettingsResponse {
             this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
             return this;
         }
-
         public ConsistentHashLoadBalancerSettingsResponse build() {
             return new ConsistentHashLoadBalancerSettingsResponse(httpCookie, httpHeaderName, minimumRingSize);
         }

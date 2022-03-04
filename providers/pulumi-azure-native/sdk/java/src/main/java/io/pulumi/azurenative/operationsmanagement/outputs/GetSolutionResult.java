@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationsmanagement.outputs;
 
 import io.pulumi.azurenative.operationsmanagement.outputs.SolutionPlanResponse;
 import io.pulumi.azurenative.operationsmanagement.outputs.SolutionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class GetSolutionResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Plan for solution object supported by the OperationsManagement resource provider.
      * 
-     */
+    */
     public Optional<SolutionPlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * Properties for solution object supported by the OperationsManagement resource provider.
      * 
-     */
+    */
     public SolutionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class GetSolutionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSolutionResult build() {
             return new GetSolutionResult(id, location, name, plan, properties, tags, type);
         }

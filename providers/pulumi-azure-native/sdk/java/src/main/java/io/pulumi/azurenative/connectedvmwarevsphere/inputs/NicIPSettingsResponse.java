@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.NicIPAddressSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="allocationMethod")
-    private final @Nullable String allocationMethod;
+      private final @Nullable String allocationMethod;
 
     public Optional<String> getAllocationMethod() {
         return this.allocationMethod == null ? Optional.empty() : Optional.ofNullable(this.allocationMethod);
@@ -36,7 +36,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable List<String> dnsServers;
+      private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
@@ -47,7 +47,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="gateway")
-    private final @Nullable List<String> gateway;
+      private final @Nullable List<String> gateway;
 
     public List<String> getGateway() {
         return this.gateway == null ? List.of() : this.gateway;
@@ -58,7 +58,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable String ipAddress;
+      private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
@@ -69,7 +69,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ipAddressInfo", required=true)
-    private final List<NicIPAddressSettingsResponse> ipAddressInfo;
+      private final List<NicIPAddressSettingsResponse> ipAddressInfo;
 
     public List<NicIPAddressSettingsResponse> getIpAddressInfo() {
         return this.ipAddressInfo;
@@ -80,7 +80,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="primaryWinsServer", required=true)
-    private final String primaryWinsServer;
+      private final String primaryWinsServer;
 
     public String getPrimaryWinsServer() {
         return this.primaryWinsServer;
@@ -91,7 +91,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="secondaryWinsServer", required=true)
-    private final String secondaryWinsServer;
+      private final String secondaryWinsServer;
 
     public String getSecondaryWinsServer() {
         return this.secondaryWinsServer;
@@ -102,7 +102,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="subnetMask")
-    private final @Nullable String subnetMask;
+      private final @Nullable String subnetMask;
 
     public Optional<String> getSubnetMask() {
         return this.subnetMask == null ? Optional.empty() : Optional.ofNullable(this.subnetMask);
@@ -211,7 +211,6 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
             this.subnetMask = subnetMask;
             return this;
         }
-
         public NicIPSettingsResponse build() {
             return new NicIPSettingsResponse(allocationMethod, dnsServers, gateway, ipAddress, ipAddressInfo, primaryWinsServer, secondaryWinsServer, subnetMask);
         }

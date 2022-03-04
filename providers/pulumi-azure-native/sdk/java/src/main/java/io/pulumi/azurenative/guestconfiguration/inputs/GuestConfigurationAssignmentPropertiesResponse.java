@@ -6,7 +6,7 @@ package io.pulumi.azurenative.guestconfiguration.inputs;
 import io.pulumi.azurenative.guestconfiguration.inputs.AssignmentReportResponse;
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationNavigationResponse;
 import io.pulumi.azurenative.guestconfiguration.inputs.VMSSVMInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="assignmentHash", required=true)
-    private final String assignmentHash;
+      private final String assignmentHash;
 
     public String getAssignmentHash() {
         return this.assignmentHash;
@@ -38,7 +38,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="complianceStatus", required=true)
-    private final String complianceStatus;
+      private final String complianceStatus;
 
     public String getComplianceStatus() {
         return this.complianceStatus;
@@ -49,7 +49,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="context")
-    private final @Nullable String context;
+      private final @Nullable String context;
 
     public Optional<String> getContext() {
         return this.context == null ? Optional.empty() : Optional.ofNullable(this.context);
@@ -60,7 +60,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="guestConfiguration")
-    private final @Nullable GuestConfigurationNavigationResponse guestConfiguration;
+      private final @Nullable GuestConfigurationNavigationResponse guestConfiguration;
 
     public Optional<GuestConfigurationNavigationResponse> getGuestConfiguration() {
         return this.guestConfiguration == null ? Optional.empty() : Optional.ofNullable(this.guestConfiguration);
@@ -71,7 +71,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="lastComplianceStatusChecked", required=true)
-    private final String lastComplianceStatusChecked;
+      private final String lastComplianceStatusChecked;
 
     public String getLastComplianceStatusChecked() {
         return this.lastComplianceStatusChecked;
@@ -82,7 +82,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="latestAssignmentReport")
-    private final @Nullable AssignmentReportResponse latestAssignmentReport;
+      private final @Nullable AssignmentReportResponse latestAssignmentReport;
 
     public Optional<AssignmentReportResponse> getLatestAssignmentReport() {
         return this.latestAssignmentReport == null ? Optional.empty() : Optional.ofNullable(this.latestAssignmentReport);
@@ -93,7 +93,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="latestReportId", required=true)
-    private final String latestReportId;
+      private final String latestReportId;
 
     public String getLatestReportId() {
         return this.latestReportId;
@@ -104,7 +104,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="parameterHash", required=true)
-    private final String parameterHash;
+      private final String parameterHash;
 
     public String getParameterHash() {
         return this.parameterHash;
@@ -115,7 +115,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -126,7 +126,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -137,7 +137,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="targetResourceId", required=true)
-    private final String targetResourceId;
+      private final String targetResourceId;
 
     public String getTargetResourceId() {
         return this.targetResourceId;
@@ -148,7 +148,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="vmssVMList")
-    private final @Nullable List<VMSSVMInfoResponse> vmssVMList;
+      private final @Nullable List<VMSSVMInfoResponse> vmssVMList;
 
     public List<VMSSVMInfoResponse> getVmssVMList() {
         return this.vmssVMList == null ? List.of() : this.vmssVMList;
@@ -297,7 +297,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
             this.vmssVMList = vmssVMList;
             return this;
         }
-
         public GuestConfigurationAssignmentPropertiesResponse build() {
             return new GuestConfigurationAssignmentPropertiesResponse(assignmentHash, complianceStatus, context, guestConfiguration, lastComplianceStatusChecked, latestAssignmentReport, latestReportId, parameterHash, provisioningState, resourceType, targetResourceId, vmssVMList);
         }

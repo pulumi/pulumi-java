@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetADLSGen1FolderDataSetArgs;
 import io.pulumi.azurenative.datashare.outputs.GetADLSGen1FolderDataSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetADLSGen1FolderDataSet {
-/**
- * An ADLS Gen 1 folder data set.
+    private GetADLSGen1FolderDataSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetADLSGen1FolderDataSetArgs.Builder a);
+    }
+    private static GetADLSGen1FolderDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetADLSGen1FolderDataSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An ADLS Gen 1 folder data set.
  * API Version: 2020-09-01.
  * 
- *
- * An ADLS Gen 1 folder data set.
+     *
+     * An ADLS Gen 1 folder data set.
  * 
- */
+     */
+    public static CompletableFuture<GetADLSGen1FolderDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An ADLS Gen 1 folder data set.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * An ADLS Gen 1 folder data set.
+     * 
+     */
     public static CompletableFuture<GetADLSGen1FolderDataSetResult> invokeAsync(GetADLSGen1FolderDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen1FolderDataSet", TypeShape.of(GetADLSGen1FolderDataSetResult.class), args == null ? GetADLSGen1FolderDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

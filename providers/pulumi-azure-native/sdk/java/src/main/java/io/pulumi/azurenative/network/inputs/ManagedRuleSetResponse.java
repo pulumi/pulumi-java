@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ManagedRuleGroupOverrideResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ruleGroupOverrides")
-    private final @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
+      private final @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
 
     public List<ManagedRuleGroupOverrideResponse> getRuleGroupOverrides() {
         return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
@@ -36,7 +36,7 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ruleSetType", required=true)
-    private final String ruleSetType;
+      private final String ruleSetType;
 
     public String getRuleSetType() {
         return this.ruleSetType;
@@ -47,7 +47,7 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ruleSetVersion", required=true)
-    private final String ruleSetVersion;
+      private final String ruleSetVersion;
 
     public String getRuleSetVersion() {
         return this.ruleSetVersion;
@@ -106,7 +106,6 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
-
         public ManagedRuleSetResponse build() {
             return new ManagedRuleSetResponse(ruleGroupOverrides, ruleSetType, ruleSetVersion);
         }

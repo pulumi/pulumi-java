@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<String> objectId;
+      private final Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId;
@@ -33,7 +33,7 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final Input<String> tenantId;
+      private final Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId;
@@ -92,7 +92,6 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }
-
         public AssignedUserArgs build() {
             return new AssignedUserArgs(objectId, tenantId);
         }

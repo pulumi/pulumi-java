@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class MetastoreServiceMaintenanceWindow {
      * The day of week, when the window starts.
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-     */
+    */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }
     /**
      * The hour of day (0-23) when the window starts.
      * 
-     */
+    */
     public Integer getHourOfDay() {
         return this.hourOfDay;
     }
@@ -77,7 +77,6 @@ public final class MetastoreServiceMaintenanceWindow {
             this.hourOfDay = Objects.requireNonNull(hourOfDay);
             return this;
         }
-
         public MetastoreServiceMaintenanceWindow build() {
             return new MetastoreServiceMaintenanceWindow(dayOfWeek, hourOfDay);
         }

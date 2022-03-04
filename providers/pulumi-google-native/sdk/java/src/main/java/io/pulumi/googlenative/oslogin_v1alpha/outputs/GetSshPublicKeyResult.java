@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.oslogin_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GetSshPublicKeyResult {
     /**
      * An expiration time in microseconds since epoch.
      * 
-     */
+    */
     public String getExpirationTimeUsec() {
         return this.expirationTimeUsec;
     }
     /**
      * The SHA-256 fingerprint of the SSH public key.
      * 
-     */
+    */
     public String getFingerprint() {
         return this.fingerprint;
     }
     /**
      * Public key text in SSH format, defined by RFC4253 section 6.6.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The canonical resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -116,7 +116,6 @@ public final class GetSshPublicKeyResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSshPublicKeyResult build() {
             return new GetSshPublicKeyResult(expirationTimeUsec, fingerprint, key, name);
         }

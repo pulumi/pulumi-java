@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.EcKeyTypeArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.RsaKeyTypeArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ellipticCurve")
-    private final @Nullable Input<EcKeyTypeArgs> ellipticCurve;
+      private final @Nullable Input<EcKeyTypeArgs> ellipticCurve;
 
     public Input<EcKeyTypeArgs> getEllipticCurve() {
         return this.ellipticCurve == null ? Input.empty() : this.ellipticCurve;
@@ -35,7 +35,7 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rsa")
-    private final @Nullable Input<RsaKeyTypeArgs> rsa;
+      private final @Nullable Input<RsaKeyTypeArgs> rsa;
 
     public Input<RsaKeyTypeArgs> getRsa() {
         return this.rsa == null ? Input.empty() : this.rsa;
@@ -94,7 +94,6 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.rsa = Input.ofNullable(rsa);
             return this;
         }
-
         public AllowedKeyTypeArgs build() {
             return new AllowedKeyTypeArgs(ellipticCurve, rsa);
         }

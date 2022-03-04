@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.ConfigVariableResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.Oauth2ClientCredentialsResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.Oauth2JwtBearerResponse;
@@ -57,35 +57,35 @@ public final class AuthConfigResponse {
     /**
      * List containing additional auth configs.
      * 
-     */
+    */
     public List<ConfigVariableResponse> getAdditionalVariables() {
         return this.additionalVariables;
     }
     /**
      * The type of authentication configured.
      * 
-     */
+    */
     public String getAuthType() {
         return this.authType;
     }
     /**
      * Oauth2ClientCredentials.
      * 
-     */
+    */
     public Oauth2ClientCredentialsResponse getOauth2ClientCredentials() {
         return this.oauth2ClientCredentials;
     }
     /**
      * Oauth2JwtBearer.
      * 
-     */
+    */
     public Oauth2JwtBearerResponse getOauth2JwtBearer() {
         return this.oauth2JwtBearer;
     }
     /**
      * UserPassword.
      * 
-     */
+    */
     public UserPasswordResponse getUserPassword() {
         return this.userPassword;
     }
@@ -142,7 +142,6 @@ public final class AuthConfigResponse {
             this.userPassword = Objects.requireNonNull(userPassword);
             return this;
         }
-
         public AuthConfigResponse build() {
             return new AuthConfigResponse(additionalVariables, authType, oauth2ClientCredentials, oauth2JwtBearer, userPassword);
         }

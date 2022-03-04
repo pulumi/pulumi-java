@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DiscoveredResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
     /**
      * Analysis status for the discovered resource.
      * 
-     */
+    */
     public DiscoveredResponse getDiscovered() {
         return this.discovered;
     }
@@ -52,7 +52,6 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }
-
         public GrafeasV1beta1DiscoveryDetailsResponse build() {
             return new GrafeasV1beta1DiscoveryDetailsResponse(discovered);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.outputs;
 import io.pulumi.azurenative.edgeorder.outputs.ContactDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ShippingAddressResponse;
 import io.pulumi.azurenative.edgeorder.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -86,63 +86,63 @@ public final class GetAddressByNameResult {
     /**
      * Status of address validation
      * 
-     */
+    */
     public String getAddressValidationStatus() {
         return this.addressValidationStatus;
     }
     /**
      * Contact details for the address
      * 
-     */
+    */
     public ContactDetailsResponse getContactDetails() {
         return this.contactDetails;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Shipping details for the address
      * 
-     */
+    */
     public Optional<ShippingAddressResponse> getShippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
     /**
      * Represents resource creation and update time
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -227,7 +227,6 @@ public final class GetAddressByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAddressByNameResult build() {
             return new GetAddressByNameResult(addressValidationStatus, contactDetails, id, location, name, shippingAddress, systemData, tags, type);
         }

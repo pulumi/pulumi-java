@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class AttestorIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="attestor", required=true)
-    private final Input<String> attestor;
+      private final Input<String> attestor;
 
     public Input<String> getAttestor() {
         return this.attestor;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<AttestorIamMemberConditionArgs> condition;
+      private final @Nullable Input<AttestorIamMemberConditionArgs> condition;
 
     public Input<AttestorIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -46,7 +46,7 @@ public final class AttestorIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class AttestorIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -163,7 +163,6 @@ public final class AttestorIamMemberArgs extends io.pulumi.resources.ResourceArg
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public AttestorIamMemberArgs build() {
             return new AttestorIamMemberArgs(attestor, condition, member, project, role);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse;
@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="conversationModelConfig", required=true)
-    private final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig;
+      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse getConversationModelConfig() {
         return this.conversationModelConfig;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="conversationProcessConfig", required=true)
-    private final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig;
+      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse getConversationProcessConfig() {
         return this.conversationProcessConfig;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="enableEventBasedSuggestion", required=true)
-    private final Boolean enableEventBasedSuggestion;
+      private final Boolean enableEventBasedSuggestion;
 
     public Boolean getEnableEventBasedSuggestion() {
         return this.enableEventBasedSuggestion;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="queryConfig", required=true)
-    private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig;
+      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse getQueryConfig() {
         return this.queryConfig;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="suggestionFeature", required=true)
-    private final GoogleCloudDialogflowV2SuggestionFeatureResponse suggestionFeature;
+      private final GoogleCloudDialogflowV2SuggestionFeatureResponse suggestionFeature;
 
     public GoogleCloudDialogflowV2SuggestionFeatureResponse getSuggestionFeature() {
         return this.suggestionFeature;
@@ -81,7 +81,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="suggestionTriggerSettings", required=true)
-    private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
+      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse getSuggestionTriggerSettings() {
         return this.suggestionTriggerSettings;
@@ -170,7 +170,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
             this.suggestionTriggerSettings = Objects.requireNonNull(suggestionTriggerSettings);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse(conversationModelConfig, conversationProcessConfig, enableEventBasedSuggestion, queryConfig, suggestionFeature, suggestionTriggerSettings);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.security.inputs.GetAlertsSuppressionRuleArgs;
 import io.pulumi.azurenative.security.outputs.GetAlertsSuppressionRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAlertsSuppressionRule {
-/**
- * Describes the suppression rule
+    private GetAlertsSuppressionRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetAlertsSuppressionRuleArgs.Builder a);
+    }
+    private static GetAlertsSuppressionRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAlertsSuppressionRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes the suppression rule
  * API Version: 2019-01-01-preview.
  * 
- *
- * Describes the suppression rule
+     *
+     * Describes the suppression rule
  * 
- */
+     */
+    public static CompletableFuture<GetAlertsSuppressionRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes the suppression rule
+     * API Version: 2019-01-01-preview.
+     * 
+     *
+         * Describes the suppression rule
+     * 
+     */
     public static CompletableFuture<GetAlertsSuppressionRuleResult> invokeAsync(GetAlertsSuppressionRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getAlertsSuppressionRule", TypeShape.of(GetAlertsSuppressionRuleResult.class), args == null ? GetAlertsSuppressionRuleArgs.Empty : args, Utilities.withVersion(options));
     }

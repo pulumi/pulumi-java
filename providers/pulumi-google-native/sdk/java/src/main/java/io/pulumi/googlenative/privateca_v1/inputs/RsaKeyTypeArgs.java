@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxModulusSize")
-    private final @Nullable Input<String> maxModulusSize;
+      private final @Nullable Input<String> maxModulusSize;
 
     public Input<String> getMaxModulusSize() {
         return this.maxModulusSize == null ? Input.empty() : this.maxModulusSize;
@@ -34,7 +34,7 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minModulusSize")
-    private final @Nullable Input<String> minModulusSize;
+      private final @Nullable Input<String> minModulusSize;
 
     public Input<String> getMinModulusSize() {
         return this.minModulusSize == null ? Input.empty() : this.minModulusSize;
@@ -93,7 +93,6 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.minModulusSize = Input.ofNullable(minModulusSize);
             return this;
         }
-
         public RsaKeyTypeArgs build() {
             return new RsaKeyTypeArgs(maxModulusSize, minModulusSize);
         }

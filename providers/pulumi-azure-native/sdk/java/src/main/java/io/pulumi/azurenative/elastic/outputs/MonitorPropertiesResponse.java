@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.elastic.outputs;
 
 import io.pulumi.azurenative.elastic.outputs.ElasticPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -52,7 +52,7 @@ public final class MonitorPropertiesResponse {
     /**
      * Elastic cloud properties.
      * 
-     */
+    */
     public Optional<ElasticPropertiesResponse> getElasticProperties() {
         return Optional.ofNullable(this.elasticProperties);
     }
@@ -62,21 +62,21 @@ public final class MonitorPropertiesResponse {
     /**
      * The priority of the resource.
      * 
-     */
+    */
     public Integer getLiftrResourcePreference() {
         return this.liftrResourcePreference;
     }
     /**
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
-     */
+    */
     public Optional<String> getMonitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
     /**
      * Provisioning state of the monitor resource.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -133,7 +133,6 @@ public final class MonitorPropertiesResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public MonitorPropertiesResponse build() {
             return new MonitorPropertiesResponse(elasticProperties, liftrResourceCategory, liftrResourcePreference, monitoringStatus, provisioningState);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.resiliencehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class AppTagMap {
         public Builder(AppTagMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AppTagMap build() {
             return new AppTagMap();
         }

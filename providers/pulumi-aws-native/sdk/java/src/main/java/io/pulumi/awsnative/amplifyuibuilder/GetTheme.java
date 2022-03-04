@@ -6,17 +6,33 @@ package io.pulumi.awsnative.amplifyuibuilder;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.GetThemeArgs;
 import io.pulumi.awsnative.amplifyuibuilder.outputs.GetThemeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTheme {
-/**
- * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
+    private GetTheme() {}
+    public interface BuilderApplicator {
+        public void apply(GetThemeArgs.Builder a);
+    }
+    private static GetThemeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetThemeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
  * 
- */
+     */
+    public static CompletableFuture<GetThemeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
+     * 
+     */
     public static CompletableFuture<GetThemeResult> invokeAsync(GetThemeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplifyuibuilder:getTheme", TypeShape.of(GetThemeResult.class), args == null ? GetThemeArgs.Empty : args, Utilities.withVersion(options));
     }

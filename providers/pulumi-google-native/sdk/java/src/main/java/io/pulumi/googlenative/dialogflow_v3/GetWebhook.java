@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebhook {
-/**
- * Retrieves the specified webhook.
+    private GetWebhook() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebhookArgs.Builder a);
+    }
+    private static GetWebhookArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebhookArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified webhook.
  * 
- */
+     */
+    public static CompletableFuture<GetWebhookResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified webhook.
+     * 
+     */
     public static CompletableFuture<GetWebhookResult> invokeAsync(GetWebhookArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getWebhook", TypeShape.of(GetWebhookResult.class), args == null ? GetWebhookArgs.Empty : args, Utilities.withVersion(options));
     }

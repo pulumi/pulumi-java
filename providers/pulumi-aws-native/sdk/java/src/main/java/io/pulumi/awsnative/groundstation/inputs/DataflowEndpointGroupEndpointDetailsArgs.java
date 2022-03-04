@@ -6,7 +6,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupDataflowEndpointArgs;
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupSecurityDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,14 +16,14 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
     public static final DataflowEndpointGroupEndpointDetailsArgs Empty = new DataflowEndpointGroupEndpointDetailsArgs();
 
     @InputImport(name="endpoint")
-    private final @Nullable Input<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
+      private final @Nullable Input<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
 
     public Input<DataflowEndpointGroupDataflowEndpointArgs> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
     }
 
     @InputImport(name="securityDetails")
-    private final @Nullable Input<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
+      private final @Nullable Input<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
 
     public Input<DataflowEndpointGroupSecurityDetailsArgs> getSecurityDetails() {
         return this.securityDetails == null ? Input.empty() : this.securityDetails;
@@ -82,7 +82,6 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
             this.securityDetails = Input.ofNullable(securityDetails);
             return this;
         }
-
         public DataflowEndpointGroupEndpointDetailsArgs build() {
             return new DataflowEndpointGroupEndpointDetailsArgs(endpoint, securityDetails);
         }

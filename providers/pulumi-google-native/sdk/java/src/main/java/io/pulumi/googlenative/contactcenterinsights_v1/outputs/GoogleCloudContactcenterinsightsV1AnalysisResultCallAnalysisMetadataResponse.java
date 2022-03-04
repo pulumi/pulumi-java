@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1CallAnnotationResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1IssueModelResultResponse;
@@ -64,42 +64,42 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     /**
      * A list of call annotations that apply to this call.
      * 
-     */
+    */
     public List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> getAnnotations() {
         return this.annotations;
     }
     /**
      * All the entities in the call.
      * 
-     */
+    */
     public Map<String,String> getEntities() {
         return this.entities;
     }
     /**
      * All the matched intents in the call.
      * 
-     */
+    */
     public Map<String,String> getIntents() {
         return this.intents;
     }
     /**
      * Overall conversation-level issue modeling result.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1IssueModelResultResponse getIssueModelResult() {
         return this.issueModelResult;
     }
     /**
      * All the matched phrase matchers in the call.
      * 
-     */
+    */
     public Map<String,String> getPhraseMatchers() {
         return this.phraseMatchers;
     }
     /**
      * Overall conversation-level sentiment for each channel of the call.
      * 
-     */
+    */
     public List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> getSentiments() {
         return this.sentiments;
     }
@@ -163,7 +163,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
             this.sentiments = Objects.requireNonNull(sentiments);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(annotations, entities, intents, issueModelResult, phraseMatchers, sentiments);
         }

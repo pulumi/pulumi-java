@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -42,14 +42,14 @@ public final class OrcWriteSettingsResponse {
     /**
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileNamePrefix() {
         return Optional.ofNullable(this.fileNamePrefix);
     }
     /**
      * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxRowsPerFile() {
         return Optional.ofNullable(this.maxRowsPerFile);
     }
@@ -57,7 +57,7 @@ public final class OrcWriteSettingsResponse {
      * The write setting type.
      * Expected value is 'OrcWriteSettings'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -100,7 +100,6 @@ public final class OrcWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OrcWriteSettingsResponse build() {
             return new OrcWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, type);
         }

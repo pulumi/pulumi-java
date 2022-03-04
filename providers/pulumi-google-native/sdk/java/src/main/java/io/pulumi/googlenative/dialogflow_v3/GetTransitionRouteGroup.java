@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitionRouteGroup {
-/**
- * Retrieves the specified TransitionRouteGroup.
+    private GetTransitionRouteGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransitionRouteGroupArgs.Builder a);
+    }
+    private static GetTransitionRouteGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransitionRouteGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified TransitionRouteGroup.
  * 
- */
+     */
+    public static CompletableFuture<GetTransitionRouteGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified TransitionRouteGroup.
+     * 
+     */
     public static CompletableFuture<GetTransitionRouteGroupResult> invokeAsync(GetTransitionRouteGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getTransitionRouteGroup", TypeShape.of(GetTransitionRouteGroupResult.class), args == null ? GetTransitionRouteGroupArgs.Empty : args, Utilities.withVersion(options));
     }

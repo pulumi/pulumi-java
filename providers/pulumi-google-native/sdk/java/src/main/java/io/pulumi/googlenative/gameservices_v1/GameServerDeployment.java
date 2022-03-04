@@ -5,8 +5,8 @@ package io.pulumi.googlenative.gameservices_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1.GameServerDeploymentArgs;
 import java.lang.String;
@@ -104,6 +104,37 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(GameServerDeploymentArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.gameservices_v1.GameServerDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.gameservices_v1.GameServerDeploymentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public GameServerDeployment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public GameServerDeployment(String name) {
+        this(name, GameServerDeploymentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public GameServerDeployment(String name, GameServerDeploymentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GatewayResourceRequestsResponse {
     /**
      * Cpu allocated to each Spring Cloud Gateway instance.
      * 
-     */
+    */
     public Optional<String> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * Memory allocated to each Spring Cloud Gateway instance.
      * 
-     */
+    */
     public Optional<String> getMemory() {
         return Optional.ofNullable(this.memory);
     }
@@ -76,7 +76,6 @@ public final class GatewayResourceRequestsResponse {
             this.memory = memory;
             return this;
         }
-
         public GatewayResourceRequestsResponse build() {
             return new GatewayResourceRequestsResponse(cpu, memory);
         }

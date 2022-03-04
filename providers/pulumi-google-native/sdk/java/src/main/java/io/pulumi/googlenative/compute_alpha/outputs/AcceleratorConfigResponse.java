@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class AcceleratorConfigResponse {
     /**
      * The number of the guest accelerator cards exposed to this instance.
      * 
-     */
+    */
     public Integer getAcceleratorCount() {
         return this.acceleratorCount;
     }
     /**
      * Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.
      * 
-     */
+    */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }
@@ -75,7 +75,6 @@ public final class AcceleratorConfigResponse {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public AcceleratorConfigResponse build() {
             return new AcceleratorConfigResponse(acceleratorCount, acceleratorType);
         }

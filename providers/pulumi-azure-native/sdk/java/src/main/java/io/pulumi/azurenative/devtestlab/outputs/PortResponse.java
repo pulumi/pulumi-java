@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class PortResponse {
     /**
      * Backend port of the target virtual machine.
      * 
-     */
+    */
     public Optional<Integer> getBackendPort() {
         return Optional.ofNullable(this.backendPort);
     }
     /**
      * Protocol type of the port.
      * 
-     */
+    */
     public Optional<String> getTransportProtocol() {
         return Optional.ofNullable(this.transportProtocol);
     }
@@ -77,7 +77,6 @@ public final class PortResponse {
             this.transportProtocol = transportProtocol;
             return this;
         }
-
         public PortResponse build() {
             return new PortResponse(backendPort, transportProtocol);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.StretchMode;
 import io.pulumi.azurenative.media.enums.VideoSyncMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyFrameInterval")
-    private final @Nullable Input<String> keyFrameInterval;
+      private final @Nullable Input<String> keyFrameInterval;
 
     public Input<String> getKeyFrameInterval() {
         return this.keyFrameInterval == null ? Input.empty() : this.keyFrameInterval;
@@ -37,7 +37,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -49,7 +49,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -60,7 +60,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stretchMode")
-    private final @Nullable Input<Either<String,StretchMode>> stretchMode;
+      private final @Nullable Input<Either<String,StretchMode>> stretchMode;
 
     public Input<Either<String,StretchMode>> getStretchMode() {
         return this.stretchMode == null ? Input.empty() : this.stretchMode;
@@ -71,7 +71,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncMode")
-    private final @Nullable Input<Either<String,VideoSyncMode>> syncMode;
+      private final @Nullable Input<Either<String,VideoSyncMode>> syncMode;
 
     public Input<Either<String,VideoSyncMode>> getSyncMode() {
         return this.syncMode == null ? Input.empty() : this.syncMode;
@@ -175,7 +175,6 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
             this.syncMode = Input.ofNullable(syncMode);
             return this;
         }
-
         public VideoArgs build() {
             return new VideoArgs(keyFrameInterval, label, odataType, stretchMode, syncMode);
         }

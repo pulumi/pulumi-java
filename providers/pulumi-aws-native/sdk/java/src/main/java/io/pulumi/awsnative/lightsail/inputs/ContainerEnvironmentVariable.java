@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class ContainerEnvironmentVariable extends io.pulumi.resources.Invo
     public static final ContainerEnvironmentVariable Empty = new ContainerEnvironmentVariable();
 
     @InputImport(name="value")
-    private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 
     @InputImport(name="variable")
-    private final @Nullable String variable;
+      private final @Nullable String variable;
 
     public Optional<String> getVariable() {
         return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
@@ -71,7 +71,6 @@ public final class ContainerEnvironmentVariable extends io.pulumi.resources.Invo
             this.variable = variable;
             return this;
         }
-
         public ContainerEnvironmentVariable build() {
             return new ContainerEnvironmentVariable(value, variable);
         }

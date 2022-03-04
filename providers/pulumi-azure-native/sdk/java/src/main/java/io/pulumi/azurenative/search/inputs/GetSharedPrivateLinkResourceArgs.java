@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.search.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="searchServiceName", required=true)
-    private final String searchServiceName;
+      private final String searchServiceName;
 
     public String getSearchServiceName() {
         return this.searchServiceName;
@@ -39,7 +39,7 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sharedPrivateLinkResourceName", required=true)
-    private final String sharedPrivateLinkResourceName;
+      private final String sharedPrivateLinkResourceName;
 
     public String getSharedPrivateLinkResourceName() {
         return this.sharedPrivateLinkResourceName;
@@ -98,7 +98,6 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
             this.sharedPrivateLinkResourceName = Objects.requireNonNull(sharedPrivateLinkResourceName);
             return this;
         }
-
         public GetSharedPrivateLinkResourceArgs build() {
             return new GetSharedPrivateLinkResourceArgs(resourceGroupName, searchServiceName, sharedPrivateLinkResourceName);
         }

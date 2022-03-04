@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.OpenIdConnectClientCredentialResponse;
 import io.pulumi.azurenative.web.outputs.OpenIdConnectConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class OpenIdConnectRegistrationResponse {
     /**
      * The authentication credentials of the custom Open ID Connect provider.
      * 
-     */
+    */
     public Optional<OpenIdConnectClientCredentialResponse> getClientCredential() {
         return Optional.ofNullable(this.clientCredential);
     }
     /**
      * The client id of the custom Open ID Connect provider.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The configuration settings of the endpoints used for the custom Open ID Connect provider.
      * 
-     */
+    */
     public Optional<OpenIdConnectConfigResponse> getOpenIdConnectConfiguration() {
         return Optional.ofNullable(this.openIdConnectConfiguration);
     }
@@ -99,7 +99,6 @@ public final class OpenIdConnectRegistrationResponse {
             this.openIdConnectConfiguration = openIdConnectConfiguration;
             return this;
         }
-
         public OpenIdConnectRegistrationResponse build() {
             return new OpenIdConnectRegistrationResponse(clientCredential, clientId, openIdConnectConfiguration);
         }

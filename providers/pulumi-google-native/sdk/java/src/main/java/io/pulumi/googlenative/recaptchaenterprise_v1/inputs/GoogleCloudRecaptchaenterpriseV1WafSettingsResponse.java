@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends i
      * 
      */
     @InputImport(name="wafFeature", required=true)
-    private final String wafFeature;
+      private final String wafFeature;
 
     public String getWafFeature() {
         return this.wafFeature;
@@ -32,7 +32,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends i
      * 
      */
     @InputImport(name="wafService", required=true)
-    private final String wafService;
+      private final String wafService;
 
     public String getWafService() {
         return this.wafService;
@@ -81,7 +81,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends i
             this.wafService = Objects.requireNonNull(wafService);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(wafFeature, wafService);
         }

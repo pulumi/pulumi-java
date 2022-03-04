@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.H264CodecSettingsArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.H265CodecSettingsArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.Vp9CodecSettingsArgs;
@@ -25,7 +25,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="h264")
-    private final @Nullable Input<H264CodecSettingsArgs> h264;
+      private final @Nullable Input<H264CodecSettingsArgs> h264;
 
     public Input<H264CodecSettingsArgs> getH264() {
         return this.h264 == null ? Input.empty() : this.h264;
@@ -36,7 +36,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="h265")
-    private final @Nullable Input<H265CodecSettingsArgs> h265;
+      private final @Nullable Input<H265CodecSettingsArgs> h265;
 
     public Input<H265CodecSettingsArgs> getH265() {
         return this.h265 == null ? Input.empty() : this.h265;
@@ -47,7 +47,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vp9")
-    private final @Nullable Input<Vp9CodecSettingsArgs> vp9;
+      private final @Nullable Input<Vp9CodecSettingsArgs> vp9;
 
     public Input<Vp9CodecSettingsArgs> getVp9() {
         return this.vp9 == null ? Input.empty() : this.vp9;
@@ -121,7 +121,6 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
             this.vp9 = Input.ofNullable(vp9);
             return this;
         }
-
         public VideoStreamArgs build() {
             return new VideoStreamArgs(h264, h265, vp9);
         }

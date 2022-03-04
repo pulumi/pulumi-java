@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreNotificationConfigGetArgs;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigGetArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable Input<String> dataset;
+      private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -42,7 +42,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -54,7 +54,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-    private final @Nullable Input<DicomStoreNotificationConfigGetArgs> notificationConfig;
+      private final @Nullable Input<DicomStoreNotificationConfigGetArgs> notificationConfig;
 
     public Input<DicomStoreNotificationConfigGetArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
@@ -77,7 +77,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -90,7 +90,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamConfigs")
-    private final @Nullable Input<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
+      private final @Nullable Input<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
 
     public Input<List<DicomStoreStreamConfigGetArgs>> getStreamConfigs() {
         return this.streamConfigs == null ? Input.empty() : this.streamConfigs;
@@ -209,7 +209,6 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
             this.streamConfigs = Input.ofNullable(streamConfigs);
             return this;
         }
-
         public DicomStoreState build() {
             return new DicomStoreState(dataset, labels, name, notificationConfig, selfLink, streamConfigs);
         }

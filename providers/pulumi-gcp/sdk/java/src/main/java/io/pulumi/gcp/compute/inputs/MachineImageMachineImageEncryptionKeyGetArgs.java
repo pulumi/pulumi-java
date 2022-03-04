@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MachineImageMachineImageEncryptionKeyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -31,7 +31,7 @@ public final class MachineImageMachineImageEncryptionKeyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="kmsKeyServiceAccount")
-    private final @Nullable Input<String> kmsKeyServiceAccount;
+      private final @Nullable Input<String> kmsKeyServiceAccount;
 
     public Input<String> getKmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount == null ? Input.empty() : this.kmsKeyServiceAccount;
@@ -43,7 +43,7 @@ public final class MachineImageMachineImageEncryptionKeyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="rawKey")
-    private final @Nullable Input<String> rawKey;
+      private final @Nullable Input<String> rawKey;
 
     public Input<String> getRawKey() {
         return this.rawKey == null ? Input.empty() : this.rawKey;
@@ -56,7 +56,7 @@ public final class MachineImageMachineImageEncryptionKeyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="sha256")
-    private final @Nullable Input<String> sha256;
+      private final @Nullable Input<String> sha256;
 
     public Input<String> getSha256() {
         return this.sha256 == null ? Input.empty() : this.sha256;
@@ -145,7 +145,6 @@ public final class MachineImageMachineImageEncryptionKeyGetArgs extends io.pulum
             this.sha256 = Input.ofNullable(sha256);
             return this;
         }
-
         public MachineImageMachineImageEncryptionKeyGetArgs build() {
             return new MachineImageMachineImageEncryptionKeyGetArgs(kmsKeyName, kmsKeyServiceAccount, rawKey, sha256);
         }

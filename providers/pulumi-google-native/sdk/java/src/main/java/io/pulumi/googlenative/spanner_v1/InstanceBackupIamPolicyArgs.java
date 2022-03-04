@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.spanner_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
     public static final InstanceBackupIamPolicyArgs Empty = new InstanceBackupIamPolicyArgs();
 
     @InputImport(name="backupId", required=true)
-    private final Input<String> backupId;
+      private final Input<String> backupId;
 
     public Input<String> getBackupId() {
         return this.backupId;
@@ -29,7 +29,7 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -40,21 +40,21 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,7 +65,7 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -184,7 +184,6 @@ public final class InstanceBackupIamPolicyArgs extends io.pulumi.resources.Resou
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public InstanceBackupIamPolicyArgs build() {
             return new InstanceBackupIamPolicyArgs(backupId, bindings, etag, instanceId, project, version);
         }

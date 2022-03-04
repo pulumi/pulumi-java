@@ -6,21 +6,41 @@ package io.pulumi.azurenative.portal;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.portal.inputs.ListListTenantConfigurationViolationArgs;
 import io.pulumi.azurenative.portal.outputs.ListListTenantConfigurationViolationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListListTenantConfigurationViolation {
-/**
- * List of list of items that violate tenant's configuration.
+    private ListListTenantConfigurationViolation() {}
+    public interface BuilderApplicator {
+        public void apply(ListListTenantConfigurationViolationArgs.Builder a);
+    }
+    private static ListListTenantConfigurationViolationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListListTenantConfigurationViolationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List of list of items that violate tenant's configuration.
  * API Version: 2020-09-01-preview.
  * 
- *
- * List of list of items that violate tenant's configuration.
+     *
+     * List of list of items that violate tenant's configuration.
  * 
- */
+     */
+    public static CompletableFuture<ListListTenantConfigurationViolationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List of list of items that violate tenant's configuration.
+     * API Version: 2020-09-01-preview.
+     * 
+     *
+         * List of list of items that violate tenant's configuration.
+     * 
+     */
     public static CompletableFuture<ListListTenantConfigurationViolationResult> invokeAsync(@Nullable ListListTenantConfigurationViolationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:listListTenantConfigurationViolation", TypeShape.of(ListListTenantConfigurationViolationResult.class), args == null ? ListListTenantConfigurationViolationArgs.Empty : args, Utilities.withVersion(options));
     }

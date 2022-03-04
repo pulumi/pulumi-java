@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.CacheConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,35 +56,35 @@ public final class ForwardingConfigurationResponse {
     /**
      * A reference to the BackendPool which this rule routes to.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getBackendPool() {
         return Optional.ofNullable(this.backendPool);
     }
     /**
      * The caching configuration associated with this rule.
      * 
-     */
+    */
     public Optional<CacheConfigurationResponse> getCacheConfiguration() {
         return Optional.ofNullable(this.cacheConfiguration);
     }
     /**
      * A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
      * 
-     */
+    */
     public Optional<String> getCustomForwardingPath() {
         return Optional.ofNullable(this.customForwardingPath);
     }
     /**
      * Protocol this rule will use when forwarding traffic to backends.
      * 
-     */
+    */
     public Optional<String> getForwardingProtocol() {
         return Optional.ofNullable(this.forwardingProtocol);
     }
     /**
      * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
@@ -141,7 +141,6 @@ public final class ForwardingConfigurationResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ForwardingConfigurationResponse build() {
             return new ForwardingConfigurationResponse(backendPool, cacheConfiguration, customForwardingPath, forwardingProtocol, odataType);
         }

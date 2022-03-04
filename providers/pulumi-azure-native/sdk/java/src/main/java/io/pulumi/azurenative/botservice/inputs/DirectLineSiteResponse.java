@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="isBlockUserUploadEnabled")
-    private final @Nullable Boolean isBlockUserUploadEnabled;
+      private final @Nullable Boolean isBlockUserUploadEnabled;
 
     public Optional<Boolean> getIsBlockUserUploadEnabled() {
         return this.isBlockUserUploadEnabled == null ? Optional.empty() : Optional.ofNullable(this.isBlockUserUploadEnabled);
@@ -36,7 +36,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Boolean isEnabled;
+      private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -47,7 +47,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="isSecureSiteEnabled")
-    private final @Nullable Boolean isSecureSiteEnabled;
+      private final @Nullable Boolean isSecureSiteEnabled;
 
     public Optional<Boolean> getIsSecureSiteEnabled() {
         return this.isSecureSiteEnabled == null ? Optional.empty() : Optional.ofNullable(this.isSecureSiteEnabled);
@@ -58,7 +58,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="isV1Enabled", required=true)
-    private final Boolean isV1Enabled;
+      private final Boolean isV1Enabled;
 
     public Boolean getIsV1Enabled() {
         return this.isV1Enabled;
@@ -69,7 +69,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="isV3Enabled", required=true)
-    private final Boolean isV3Enabled;
+      private final Boolean isV3Enabled;
 
     public Boolean getIsV3Enabled() {
         return this.isV3Enabled;
@@ -80,7 +80,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -91,7 +91,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="key2", required=true)
-    private final String key2;
+      private final String key2;
 
     public String getKey2() {
         return this.key2;
@@ -102,7 +102,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="siteId", required=true)
-    private final String siteId;
+      private final String siteId;
 
     public String getSiteId() {
         return this.siteId;
@@ -113,7 +113,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="siteName", required=true)
-    private final String siteName;
+      private final String siteName;
 
     public String getSiteName() {
         return this.siteName;
@@ -124,7 +124,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="trustedOrigins")
-    private final @Nullable List<String> trustedOrigins;
+      private final @Nullable List<String> trustedOrigins;
 
     public List<String> getTrustedOrigins() {
         return this.trustedOrigins == null ? List.of() : this.trustedOrigins;
@@ -253,7 +253,6 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
             this.trustedOrigins = trustedOrigins;
             return this;
         }
-
         public DirectLineSiteResponse build() {
             return new DirectLineSiteResponse(isBlockUserUploadEnabled, isEnabled, isSecureSiteEnabled, isV1Enabled, isV3Enabled, key, key2, siteId, siteName, trustedOrigins);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentModelResponse;
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentScaleSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="model")
-    private final @Nullable DeploymentModelResponse model;
+      private final @Nullable DeploymentModelResponse model;
 
     public Optional<DeploymentModelResponse> getModel() {
         return this.model == null ? Optional.empty() : Optional.ofNullable(this.model);
@@ -36,7 +36,7 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -47,7 +47,7 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="scaleSettings")
-    private final @Nullable DeploymentScaleSettingsResponse scaleSettings;
+      private final @Nullable DeploymentScaleSettingsResponse scaleSettings;
 
     public Optional<DeploymentScaleSettingsResponse> getScaleSettings() {
         return this.scaleSettings == null ? Optional.empty() : Optional.ofNullable(this.scaleSettings);
@@ -106,7 +106,6 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public DeploymentPropertiesResponse build() {
             return new DeploymentPropertiesResponse(model, provisioningState, scaleSettings);
         }

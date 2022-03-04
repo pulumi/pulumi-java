@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     public static final PolicyTagIamMemberArgs Empty = new PolicyTagIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<PolicyTagIamMemberConditionArgs> condition;
+      private final @Nullable Input<PolicyTagIamMemberConditionArgs> condition;
 
     public Input<PolicyTagIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -34,7 +34,7 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyTag", required=true)
-    private final Input<String> policyTag;
+      private final Input<String> policyTag;
 
     public Input<String> getPolicyTag() {
         return this.policyTag;
@@ -47,7 +47,7 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -136,7 +136,6 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public PolicyTagIamMemberArgs build() {
             return new PolicyTagIamMemberArgs(condition, member, policyTag, role);
         }

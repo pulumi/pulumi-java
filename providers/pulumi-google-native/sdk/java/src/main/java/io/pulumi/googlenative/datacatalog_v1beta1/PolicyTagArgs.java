@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,14 +30,14 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -48,21 +48,21 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentPolicyTag")
-    private final @Nullable Input<String> parentPolicyTag;
+      private final @Nullable Input<String> parentPolicyTag;
 
     public Input<String> getParentPolicyTag() {
         return this.parentPolicyTag == null ? Input.empty() : this.parentPolicyTag;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="taxonomyId", required=true)
-    private final Input<String> taxonomyId;
+      private final Input<String> taxonomyId;
 
     public Input<String> getTaxonomyId() {
         return this.taxonomyId;
@@ -181,7 +181,6 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
             this.taxonomyId = Input.of(Objects.requireNonNull(taxonomyId));
             return this;
         }
-
         public PolicyTagArgs build() {
             return new PolicyTagArgs(description, displayName, location, parentPolicyTag, project, taxonomyId);
         }

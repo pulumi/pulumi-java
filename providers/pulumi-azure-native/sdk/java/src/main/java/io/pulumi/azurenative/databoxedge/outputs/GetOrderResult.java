@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databoxedge.outputs.AddressResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ContactDetailsResponse;
 import io.pulumi.azurenative.databoxedge.outputs.OrderStatusResponse;
 import io.pulumi.azurenative.databoxedge.outputs.TrackingInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -101,77 +101,77 @@ public final class GetOrderResult {
     /**
      * The contact details.
      * 
-     */
+    */
     public ContactDetailsResponse getContactInformation() {
         return this.contactInformation;
     }
     /**
      * Current status of the order.
      * 
-     */
+    */
     public OrderStatusResponse getCurrentStatus() {
         return this.currentStatus;
     }
     /**
      * Tracking information for the package delivered to the customer whether it has an original or a replacement device.
      * 
-     */
+    */
     public List<TrackingInfoResponse> getDeliveryTrackingInfo() {
         return this.deliveryTrackingInfo;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of status changes in the order.
      * 
-     */
+    */
     public List<OrderStatusResponse> getOrderHistory() {
         return this.orderHistory;
     }
     /**
      * Tracking information for the package returned from the customer whether it has an original or a replacement device.
      * 
-     */
+    */
     public List<TrackingInfoResponse> getReturnTrackingInfo() {
         return this.returnTrackingInfo;
     }
     /**
      * Serial number of the device.
      * 
-     */
+    */
     public String getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * ShipmentType of the order
      * 
-     */
+    */
     public Optional<String> getShipmentType() {
         return Optional.ofNullable(this.shipmentType);
     }
     /**
      * The shipping address.
      * 
-     */
+    */
     public Optional<AddressResponse> getShippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -270,7 +270,6 @@ public final class GetOrderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOrderResult build() {
             return new GetOrderResult(contactInformation, currentStatus, deliveryTrackingInfo, id, name, orderHistory, returnTrackingInfo, serialNumber, shipmentType, shippingAddress, type);
         }

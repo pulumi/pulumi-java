@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProject {
-/**
- * Retrieve information about a set of projects based on a filter. See the
+    private GetProject() {}
+    public interface BuilderApplicator {
+        public void apply(GetProjectArgs.Builder a);
+    }
+    private static GetProjectArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProjectArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve information about a set of projects based on a filter. See the
  * [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list)
  * for more details.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getProject.
+     *
+     * A collection of arguments for invoking getProject.
  * 
- *
- * A collection of values returned by getProject.
+     *
+     * A collection of values returned by getProject.
  * 
- */
+     */
+    public static CompletableFuture<GetProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve information about a set of projects based on a filter. See the
+     * [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list)
+     * for more details.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getProject.
+     * 
+     *
+         * A collection of values returned by getProject.
+     * 
+     */
     public static CompletableFuture<GetProjectResult> invokeAsync(GetProjectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:projects/getProject:getProject", TypeShape.of(GetProjectResult.class), args == null ? GetProjectArgs.Empty : args, Utilities.withVersion(options));
     }

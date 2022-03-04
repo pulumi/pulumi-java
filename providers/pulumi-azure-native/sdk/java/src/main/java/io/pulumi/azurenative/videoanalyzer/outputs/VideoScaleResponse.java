@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class VideoScaleResponse {
     /**
      * The desired output video height.
      * 
-     */
+    */
     public Optional<String> getHeight() {
         return Optional.ofNullable(this.height);
     }
     /**
      * Describes the video scaling mode to be applied. Default mode is 'Pad'. If the mode is 'Pad' or 'Stretch' then both width and height must be specified. Else if the mode is 'PreserveAspectRatio' then only one of width or height need be provided.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The desired output video width.
      * 
-     */
+    */
     public Optional<String> getWidth() {
         return Optional.ofNullable(this.width);
     }
@@ -97,7 +97,6 @@ public final class VideoScaleResponse {
             this.width = width;
             return this;
         }
-
         public VideoScaleResponse build() {
             return new VideoScaleResponse(height, mode, width);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectionMode;
 import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectorType;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectionMode", required=true)
-    private final Input<ConnectorProfileConnectionMode> connectionMode;
+      private final Input<ConnectorProfileConnectionMode> connectionMode;
 
     public Input<ConnectorProfileConnectionMode> getConnectionMode() {
         return this.connectionMode;
@@ -33,7 +33,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectorProfileConfig")
-    private final @Nullable Input<ConnectorProfileConfigArgs> connectorProfileConfig;
+      private final @Nullable Input<ConnectorProfileConfigArgs> connectorProfileConfig;
 
     public Input<ConnectorProfileConfigArgs> getConnectorProfileConfig() {
         return this.connectorProfileConfig == null ? Input.empty() : this.connectorProfileConfig;
@@ -44,7 +44,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectorProfileName")
-    private final @Nullable Input<String> connectorProfileName;
+      private final @Nullable Input<String> connectorProfileName;
 
     public Input<String> getConnectorProfileName() {
         return this.connectorProfileName == null ? Input.empty() : this.connectorProfileName;
@@ -55,7 +55,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectorType", required=true)
-    private final Input<ConnectorProfileConnectorType> connectorType;
+      private final Input<ConnectorProfileConnectorType> connectorType;
 
     public Input<ConnectorProfileConnectorType> getConnectorType() {
         return this.connectorType;
@@ -66,7 +66,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kMSArn")
-    private final @Nullable Input<String> kMSArn;
+      private final @Nullable Input<String> kMSArn;
 
     public Input<String> getKMSArn() {
         return this.kMSArn == null ? Input.empty() : this.kMSArn;
@@ -170,7 +170,6 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
             this.kMSArn = Input.ofNullable(kMSArn);
             return this;
         }
-
         public ConnectorProfileArgs build() {
             return new ConnectorProfileArgs(connectionMode, connectorProfileConfig, connectorProfileName, connectorType, kMSArn);
         }

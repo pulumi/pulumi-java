@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class GlobalTablePointInTimeRecoverySpecification {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
-
         public GlobalTablePointInTimeRecoverySpecification build() {
             return new GlobalTablePointInTimeRecoverySpecification(pointInTimeRecoveryEnabled);
         }

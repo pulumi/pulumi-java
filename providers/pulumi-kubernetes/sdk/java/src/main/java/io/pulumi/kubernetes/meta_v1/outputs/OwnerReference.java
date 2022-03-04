@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class OwnerReference {
     /**
      * API version of the referent.
      * 
-     */
+    */
     public String getApiVersion() {
         return this.apiVersion;
     }
     /**
      * If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.
      * 
-     */
+    */
     public Optional<Boolean> getBlockOwnerDeletion() {
         return Optional.ofNullable(this.blockOwnerDeletion);
     }
     /**
      * If true, this reference points to the managing controller.
      * 
-     */
+    */
     public Optional<Boolean> getController() {
         return Optional.ofNullable(this.controller);
     }
     /**
      * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
-     */
+    */
     public String getUid() {
         return this.uid;
     }
@@ -161,7 +161,6 @@ public final class OwnerReference {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public OwnerReference build() {
             return new OwnerReference(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }

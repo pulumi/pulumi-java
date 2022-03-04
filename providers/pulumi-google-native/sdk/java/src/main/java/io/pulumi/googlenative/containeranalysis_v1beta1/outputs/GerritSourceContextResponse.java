@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.AliasContextResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GerritSourceContextResponse {
     /**
      * An alias, which may be a branch or tag.
      * 
-     */
+    */
     public AliasContextResponse getAliasContext() {
         return this.aliasContext;
     }
     /**
      * The full project name within the host. Projects may be nested, so "project/subproject" is a valid project name. The "repo name" is the hostURI/project.
      * 
-     */
+    */
     public String getGerritProject() {
         return this.gerritProject;
     }
     /**
      * The URI of a running Gerrit instance.
      * 
-     */
+    */
     public String getHostUri() {
         return this.hostUri;
     }
     /**
      * A revision (commit) ID.
      * 
-     */
+    */
     public String getRevisionId() {
         return this.revisionId;
     }
@@ -117,7 +117,6 @@ public final class GerritSourceContextResponse {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public GerritSourceContextResponse build() {
             return new GerritSourceContextResponse(aliasContext, gerritProject, hostUri, revisionId);
         }

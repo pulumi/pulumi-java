@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ParameterDeclarationResponse {
     /**
      * The default value for the parameter to be used if the pipeline does not specify a value.
      * 
-     */
+    */
     public Optional<String> get$default() {
         return Optional.ofNullable(this.$default);
     }
     /**
      * Description of the parameter.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Name of the parameter.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Type of the parameter.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -118,7 +118,6 @@ public final class ParameterDeclarationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParameterDeclarationResponse build() {
             return new ParameterDeclarationResponse($default, description, name, type);
         }

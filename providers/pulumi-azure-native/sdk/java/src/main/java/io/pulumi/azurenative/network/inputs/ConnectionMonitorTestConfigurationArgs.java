@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.ConnectionMonitorSuccessThresholdArg
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorTcpConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpConfiguration")
-    private final @Nullable Input<ConnectionMonitorHttpConfigurationArgs> httpConfiguration;
+      private final @Nullable Input<ConnectionMonitorHttpConfigurationArgs> httpConfiguration;
 
     public Input<ConnectionMonitorHttpConfigurationArgs> getHttpConfiguration() {
         return this.httpConfiguration == null ? Input.empty() : this.httpConfiguration;
@@ -42,7 +42,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="icmpConfiguration")
-    private final @Nullable Input<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration;
+      private final @Nullable Input<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration;
 
     public Input<ConnectionMonitorIcmpConfigurationArgs> getIcmpConfiguration() {
         return this.icmpConfiguration == null ? Input.empty() : this.icmpConfiguration;
@@ -53,7 +53,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -64,7 +64,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="preferredIPVersion")
-    private final @Nullable Input<Either<String,PreferredIPVersion>> preferredIPVersion;
+      private final @Nullable Input<Either<String,PreferredIPVersion>> preferredIPVersion;
 
     public Input<Either<String,PreferredIPVersion>> getPreferredIPVersion() {
         return this.preferredIPVersion == null ? Input.empty() : this.preferredIPVersion;
@@ -75,7 +75,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol;
+      private final Input<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol;
 
     public Input<Either<String,ConnectionMonitorTestConfigurationProtocol>> getProtocol() {
         return this.protocol;
@@ -86,7 +86,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="successThreshold")
-    private final @Nullable Input<ConnectionMonitorSuccessThresholdArgs> successThreshold;
+      private final @Nullable Input<ConnectionMonitorSuccessThresholdArgs> successThreshold;
 
     public Input<ConnectionMonitorSuccessThresholdArgs> getSuccessThreshold() {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
@@ -97,7 +97,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tcpConfiguration")
-    private final @Nullable Input<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration;
+      private final @Nullable Input<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration;
 
     public Input<ConnectionMonitorTcpConfigurationArgs> getTcpConfiguration() {
         return this.tcpConfiguration == null ? Input.empty() : this.tcpConfiguration;
@@ -108,7 +108,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="testFrequencySec")
-    private final @Nullable Input<Integer> testFrequencySec;
+      private final @Nullable Input<Integer> testFrequencySec;
 
     public Input<Integer> getTestFrequencySec() {
         return this.testFrequencySec == null ? Input.empty() : this.testFrequencySec;
@@ -257,7 +257,6 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
             this.testFrequencySec = Input.ofNullable(testFrequencySec);
             return this;
         }
-
         public ConnectionMonitorTestConfigurationArgs build() {
             return new ConnectionMonitorTestConfigurationArgs(httpConfiguration, icmpConfiguration, name, preferredIPVersion, protocol, successThreshold, tcpConfiguration, testFrequencySec);
         }

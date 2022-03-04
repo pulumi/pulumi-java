@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class HardwareProfileResponse {
     /**
      * Specifies the HANA instance SKU.
      * 
-     */
+    */
     public String getHanaInstanceSize() {
         return this.hanaInstanceSize;
     }
     /**
      * Name of the hardware type (vendor and/or their product name)
      * 
-     */
+    */
     public String getHardwareType() {
         return this.hardwareType;
     }
@@ -74,7 +74,6 @@ public final class HardwareProfileResponse {
             this.hardwareType = Objects.requireNonNull(hardwareType);
             return this;
         }
-
         public HardwareProfileResponse build() {
             return new HardwareProfileResponse(hanaInstanceSize, hardwareType);
         }

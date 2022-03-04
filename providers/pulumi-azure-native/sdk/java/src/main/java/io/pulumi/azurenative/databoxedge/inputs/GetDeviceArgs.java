@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -28,7 +28,7 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDeviceArgs build() {
             return new GetDeviceArgs(deviceName, resourceGroupName);
         }

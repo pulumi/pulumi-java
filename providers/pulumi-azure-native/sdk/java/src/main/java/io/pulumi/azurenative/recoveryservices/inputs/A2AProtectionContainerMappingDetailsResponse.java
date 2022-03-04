@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="agentAutoUpdateStatus")
-    private final @Nullable String agentAutoUpdateStatus;
+      private final @Nullable String agentAutoUpdateStatus;
 
     public Optional<String> getAgentAutoUpdateStatus() {
         return this.agentAutoUpdateStatus == null ? Optional.empty() : Optional.ofNullable(this.agentAutoUpdateStatus);
@@ -34,7 +34,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="automationAccountArmId")
-    private final @Nullable String automationAccountArmId;
+      private final @Nullable String automationAccountArmId;
 
     public Optional<String> getAutomationAccountArmId() {
         return this.automationAccountArmId == null ? Optional.empty() : Optional.ofNullable(this.automationAccountArmId);
@@ -46,7 +46,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -57,7 +57,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="jobScheduleName")
-    private final @Nullable String jobScheduleName;
+      private final @Nullable String jobScheduleName;
 
     public Optional<String> getJobScheduleName() {
         return this.jobScheduleName == null ? Optional.empty() : Optional.ofNullable(this.jobScheduleName);
@@ -68,7 +68,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="scheduleName")
-    private final @Nullable String scheduleName;
+      private final @Nullable String scheduleName;
 
     public Optional<String> getScheduleName() {
         return this.scheduleName == null ? Optional.empty() : Optional.ofNullable(this.scheduleName);
@@ -147,7 +147,6 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
             this.scheduleName = scheduleName;
             return this;
         }
-
         public A2AProtectionContainerMappingDetailsResponse build() {
             return new A2AProtectionContainerMappingDetailsResponse(agentAutoUpdateStatus, automationAccountArmId, instanceType, jobScheduleName, scheduleName);
         }

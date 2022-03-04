@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class ConfigUplinkEchoConfig {
             this.enabled = enabled;
             return this;
         }
-
         public ConfigUplinkEchoConfig build() {
             return new ConfigUplinkEchoConfig(antennaUplinkConfigArn, enabled);
         }

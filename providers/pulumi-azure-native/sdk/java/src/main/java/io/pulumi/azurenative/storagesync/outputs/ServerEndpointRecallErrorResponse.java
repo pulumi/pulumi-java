@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ServerEndpointRecallErrorResponse {
     /**
      * Count of occurences of the error
      * 
-     */
+    */
     public Double getCount() {
         return this.count;
     }
     /**
      * Error code (HResult)
      * 
-     */
+    */
     public Integer getErrorCode() {
         return this.errorCode;
     }
@@ -75,7 +75,6 @@ public final class ServerEndpointRecallErrorResponse {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public ServerEndpointRecallErrorResponse build() {
             return new ServerEndpointRecallErrorResponse(count, errorCode);
         }

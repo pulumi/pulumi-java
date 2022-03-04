@@ -12,7 +12,7 @@ import io.pulumi.azurenative.aad.enums.SyncOnPremPasswords;
 import io.pulumi.azurenative.aad.enums.TlsV1;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -31,7 +31,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kerberosArmoring")
-    private final @Nullable Input<Either<String,KerberosArmoring>> kerberosArmoring;
+      private final @Nullable Input<Either<String,KerberosArmoring>> kerberosArmoring;
 
     public Input<Either<String,KerberosArmoring>> getKerberosArmoring() {
         return this.kerberosArmoring == null ? Input.empty() : this.kerberosArmoring;
@@ -42,7 +42,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kerberosRc4Encryption")
-    private final @Nullable Input<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
+      private final @Nullable Input<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
 
     public Input<Either<String,KerberosRc4Encryption>> getKerberosRc4Encryption() {
         return this.kerberosRc4Encryption == null ? Input.empty() : this.kerberosRc4Encryption;
@@ -53,7 +53,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ntlmV1")
-    private final @Nullable Input<Either<String,NtlmV1>> ntlmV1;
+      private final @Nullable Input<Either<String,NtlmV1>> ntlmV1;
 
     public Input<Either<String,NtlmV1>> getNtlmV1() {
         return this.ntlmV1 == null ? Input.empty() : this.ntlmV1;
@@ -64,7 +64,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="syncKerberosPasswords")
-    private final @Nullable Input<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
+      private final @Nullable Input<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
 
     public Input<Either<String,SyncKerberosPasswords>> getSyncKerberosPasswords() {
         return this.syncKerberosPasswords == null ? Input.empty() : this.syncKerberosPasswords;
@@ -75,7 +75,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="syncNtlmPasswords")
-    private final @Nullable Input<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
+      private final @Nullable Input<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
 
     public Input<Either<String,SyncNtlmPasswords>> getSyncNtlmPasswords() {
         return this.syncNtlmPasswords == null ? Input.empty() : this.syncNtlmPasswords;
@@ -86,7 +86,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="syncOnPremPasswords")
-    private final @Nullable Input<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
+      private final @Nullable Input<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
 
     public Input<Either<String,SyncOnPremPasswords>> getSyncOnPremPasswords() {
         return this.syncOnPremPasswords == null ? Input.empty() : this.syncOnPremPasswords;
@@ -97,7 +97,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tlsV1")
-    private final @Nullable Input<Either<String,TlsV1>> tlsV1;
+      private final @Nullable Input<Either<String,TlsV1>> tlsV1;
 
     public Input<Either<String,TlsV1>> getTlsV1() {
         return this.tlsV1 == null ? Input.empty() : this.tlsV1;
@@ -231,7 +231,6 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
             this.tlsV1 = Input.ofNullable(tlsV1);
             return this;
         }
-
         public DomainSecuritySettingsArgs build() {
             return new DomainSecuritySettingsArgs(kerberosArmoring, kerberosRc4Encryption, ntlmV1, syncKerberosPasswords, syncNtlmPasswords, syncOnPremPasswords, tlsV1);
         }

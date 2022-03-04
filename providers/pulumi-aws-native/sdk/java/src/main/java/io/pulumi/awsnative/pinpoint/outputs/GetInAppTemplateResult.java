@@ -5,7 +5,7 @@ package io.pulumi.awsnative.pinpoint.outputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateLayout;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateInAppMessageContent;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -116,7 +116,6 @@ public final class GetInAppTemplateResult {
             this.templateDescription = templateDescription;
             return this;
         }
-
         public GetInAppTemplateResult build() {
             return new GetInAppTemplateResult(arn, content, customConfig, layout, tags, templateDescription);
         }

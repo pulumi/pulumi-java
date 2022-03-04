@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayRewriteRuleActionSetResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayRewriteRuleConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -51,28 +51,28 @@ public final class ApplicationGatewayRewriteRuleResponse {
     /**
      * Set of actions to be done as part of the rewrite Rule.
      * 
-     */
+    */
     public Optional<ApplicationGatewayRewriteRuleActionSetResponse> getActionSet() {
         return Optional.ofNullable(this.actionSet);
     }
     /**
      * Conditions based on which the action set execution will be evaluated.
      * 
-     */
+    */
     public List<ApplicationGatewayRewriteRuleConditionResponse> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * Name of the rewrite rule that is unique within an Application Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
      * 
-     */
+    */
     public Optional<Integer> getRuleSequence() {
         return Optional.ofNullable(this.ruleSequence);
     }
@@ -122,7 +122,6 @@ public final class ApplicationGatewayRewriteRuleResponse {
             this.ruleSequence = ruleSequence;
             return this;
         }
-
         public ApplicationGatewayRewriteRuleResponse build() {
             return new ApplicationGatewayRewriteRuleResponse(actionSet, conditions, name, ruleSequence);
         }

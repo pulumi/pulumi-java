@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
     /**
      * Maximum age of the snapshot that is allowed to be kept.
      * 
-     */
+    */
     public Integer getMaxRetentionDays() {
         return this.maxRetentionDays;
     }
@@ -47,7 +47,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
      * Default value is `KEEP_AUTO_SNAPSHOTS`.
      * Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
      * 
-     */
+    */
     public Optional<String> getOnSourceDiskDelete() {
         return Optional.ofNullable(this.onSourceDiskDelete);
     }
@@ -83,7 +83,6 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
             this.onSourceDiskDelete = onSourceDiskDelete;
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyRetentionPolicy build() {
             return new ResourcePolicySnapshotSchedulePolicyRetentionPolicy(maxRetentionDays, onSourceDiskDelete);
         }

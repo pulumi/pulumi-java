@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -68,49 +68,49 @@ public final class X12FramingSettingsResponse {
     /**
      * The X12 character set.
      * 
-     */
+    */
     public String getCharacterSet() {
         return this.characterSet;
     }
     /**
      * The component separator.
      * 
-     */
+    */
     public Integer getComponentSeparator() {
         return this.componentSeparator;
     }
     /**
      * The data element separator.
      * 
-     */
+    */
     public Integer getDataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
      * The replacement character.
      * 
-     */
+    */
     public Integer getReplaceCharacter() {
         return this.replaceCharacter;
     }
     /**
      * The value indicating whether to replace separators in payload.
      * 
-     */
+    */
     public Boolean getReplaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
     /**
      * The segment terminator.
      * 
-     */
+    */
     public Integer getSegmentTerminator() {
         return this.segmentTerminator;
     }
     /**
      * The segment terminator suffix.
      * 
-     */
+    */
     public String getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
@@ -181,7 +181,6 @@ public final class X12FramingSettingsResponse {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
-
         public X12FramingSettingsResponse build() {
             return new X12FramingSettingsResponse(characterSet, componentSeparator, dataElementSeparator, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix);
         }

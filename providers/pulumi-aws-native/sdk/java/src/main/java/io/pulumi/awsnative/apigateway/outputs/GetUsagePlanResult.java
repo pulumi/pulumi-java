@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.outputs.UsagePlanApiStage;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanQuotaSettings;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanTag;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanThrottleSettings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -73,49 +73,49 @@ public final class GetUsagePlanResult {
     /**
      * The API stages to associate with this usage plan.
      * 
-     */
+    */
     public List<UsagePlanApiStage> getApiStages() {
         return this.apiStages == null ? List.of() : this.apiStages;
     }
     /**
      * A description of the usage plan.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Configures the number of requests that users can make within a given interval.
      * 
-     */
+    */
     public Optional<UsagePlanQuotaSettings> getQuota() {
         return Optional.ofNullable(this.quota);
     }
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the usage plan.
      * 
-     */
+    */
     public List<UsagePlanTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Configures the overall request rate (average requests per second) and burst capacity.
      * 
-     */
+    */
     public Optional<UsagePlanThrottleSettings> getThrottle() {
         return Optional.ofNullable(this.throttle);
     }
     /**
      * A name for the usage plan.
      * 
-     */
+    */
     public Optional<String> getUsagePlanName() {
         return Optional.ofNullable(this.usagePlanName);
     }
@@ -186,7 +186,6 @@ public final class GetUsagePlanResult {
             this.usagePlanName = usagePlanName;
             return this;
         }
-
         public GetUsagePlanResult build() {
             return new GetUsagePlanResult(apiStages, description, id, quota, tags, throttle, usagePlanName);
         }

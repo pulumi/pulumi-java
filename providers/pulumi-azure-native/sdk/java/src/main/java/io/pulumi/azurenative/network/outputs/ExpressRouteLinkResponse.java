@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteLinkMacSecConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,77 +97,77 @@ public final class ExpressRouteLinkResponse {
     /**
      * Administrative state of the physical port.
      * 
-     */
+    */
     public Optional<String> getAdminState() {
         return Optional.ofNullable(this.adminState);
     }
     /**
      * Physical fiber port type.
      * 
-     */
+    */
     public String getConnectorType() {
         return this.connectorType;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of Azure router interface.
      * 
-     */
+    */
     public String getInterfaceName() {
         return this.interfaceName;
     }
     /**
      * MacSec configuration.
      * 
-     */
+    */
     public Optional<ExpressRouteLinkMacSecConfigResponse> getMacSecConfig() {
         return Optional.ofNullable(this.macSecConfig);
     }
     /**
      * Name of child port resource that is unique among child port resources of the parent.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Mapping between physical port to patch panel port.
      * 
-     */
+    */
     public String getPatchPanelId() {
         return this.patchPanelId;
     }
     /**
      * The provisioning state of the express route link resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Mapping of physical patch panel to rack.
      * 
-     */
+    */
     public String getRackId() {
         return this.rackId;
     }
     /**
      * Name of Azure router associated with physical port.
      * 
-     */
+    */
     public String getRouterName() {
         return this.routerName;
     }
@@ -266,7 +266,6 @@ public final class ExpressRouteLinkResponse {
             this.routerName = Objects.requireNonNull(routerName);
             return this;
         }
-
         public ExpressRouteLinkResponse build() {
             return new ExpressRouteLinkResponse(adminState, connectorType, etag, id, interfaceName, macSecConfig, name, patchPanelId, provisioningState, rackId, routerName);
         }

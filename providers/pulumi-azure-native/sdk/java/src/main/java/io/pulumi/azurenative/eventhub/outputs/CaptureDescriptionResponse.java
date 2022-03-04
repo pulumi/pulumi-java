@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.DestinationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -64,42 +64,42 @@ public final class CaptureDescriptionResponse {
     /**
      * Properties of Destination where capture will be stored. (Storage Account, Blob Names)
      * 
-     */
+    */
     public Optional<DestinationResponse> getDestination() {
         return Optional.ofNullable(this.destination);
     }
     /**
      * A value that indicates whether capture description is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
      * 
-     */
+    */
     public Optional<String> getEncoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
      * The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
      * 
-     */
+    */
     public Optional<Integer> getIntervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
     /**
      * The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
      * 
-     */
+    */
     public Optional<Integer> getSizeLimitInBytes() {
         return Optional.ofNullable(this.sizeLimitInBytes);
     }
     /**
      * A value that indicates whether to Skip Empty Archives
      * 
-     */
+    */
     public Optional<Boolean> getSkipEmptyArchives() {
         return Optional.ofNullable(this.skipEmptyArchives);
     }
@@ -163,7 +163,6 @@ public final class CaptureDescriptionResponse {
             this.skipEmptyArchives = skipEmptyArchives;
             return this;
         }
-
         public CaptureDescriptionResponse build() {
             return new CaptureDescriptionResponse(destination, enabled, encoding, intervalInSeconds, sizeLimitInBytes, skipEmptyArchives);
         }

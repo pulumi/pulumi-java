@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.RoleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ComputeProfileResponse {
     /**
      * The list of roles in the cluster.
      * 
-     */
+    */
     public List<RoleResponse> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
@@ -54,7 +54,6 @@ public final class ComputeProfileResponse {
             this.roles = roles;
             return this;
         }
-
         public ComputeProfileResponse build() {
             return new ComputeProfileResponse(roles);
         }

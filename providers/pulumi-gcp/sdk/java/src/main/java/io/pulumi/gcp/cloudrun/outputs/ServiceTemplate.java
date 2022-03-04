@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateMetadata;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpec;
 import java.util.Objects;
@@ -39,7 +39,7 @@ public final class ServiceTemplate {
      * and annotations.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateMetadata> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -47,7 +47,7 @@ public final class ServiceTemplate {
      * RevisionSpec holds the desired state of the Revision (from the client).
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }
@@ -83,7 +83,6 @@ public final class ServiceTemplate {
             this.spec = spec;
             return this;
         }
-
         public ServiceTemplate build() {
             return new ServiceTemplate(metadata, spec);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.OccurrenceArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.AttestationResponse;
@@ -358,6 +358,37 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
         return this.vulnerabilityDetails;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable OccurrenceArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.containeranalysis_v1alpha1.OccurrenceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.containeranalysis_v1alpha1.OccurrenceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Occurrence(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Occurrence(String name) {
+        this(name, OccurrenceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Occurrence(String name, @Nullable OccurrenceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

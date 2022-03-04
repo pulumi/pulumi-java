@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.EnvironmentDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -23,7 +23,7 @@ public final class GetGlobalUserEnvironmentResult {
     /**
      * Details of the environment
      * 
-     */
+    */
     public EnvironmentDetailsResponse getEnvironment() {
         return this.environment;
     }
@@ -52,7 +52,6 @@ public final class GetGlobalUserEnvironmentResult {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public GetGlobalUserEnvironmentResult build() {
             return new GetGlobalUserEnvironmentResult(environment);
         }

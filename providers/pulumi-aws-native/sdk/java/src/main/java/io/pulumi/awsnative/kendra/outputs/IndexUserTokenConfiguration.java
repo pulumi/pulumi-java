@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.IndexJsonTokenTypeConfiguration;
 import io.pulumi.awsnative.kendra.outputs.IndexJwtTokenTypeConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class IndexUserTokenConfiguration {
             this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
             return this;
         }
-
         public IndexUserTokenConfiguration build() {
             return new IndexUserTokenConfiguration(jsonTokenTypeConfiguration, jwtTokenTypeConfiguration);
         }

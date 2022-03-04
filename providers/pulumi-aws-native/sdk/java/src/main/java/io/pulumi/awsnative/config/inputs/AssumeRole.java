@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.config.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="durationSeconds")
-    private final @Nullable Integer durationSeconds;
+      private final @Nullable Integer durationSeconds;
 
     public Optional<Integer> getDurationSeconds() {
         return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
@@ -37,7 +37,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="externalId")
-    private final @Nullable String externalId;
+      private final @Nullable String externalId;
 
     public Optional<String> getExternalId() {
         return this.externalId == null ? Optional.empty() : Optional.ofNullable(this.externalId);
@@ -48,7 +48,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable String policy;
+      private final @Nullable String policy;
 
     public Optional<String> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -59,7 +59,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyArns")
-    private final @Nullable List<String> policyArns;
+      private final @Nullable List<String> policyArns;
 
     public List<String> getPolicyArns() {
         return this.policyArns == null ? List.of() : this.policyArns;
@@ -70,7 +70,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable String roleArn;
+      private final @Nullable String roleArn;
 
     public Optional<String> getRoleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
@@ -81,7 +81,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sessionName")
-    private final @Nullable String sessionName;
+      private final @Nullable String sessionName;
 
     public Optional<String> getSessionName() {
         return this.sessionName == null ? Optional.empty() : Optional.ofNullable(this.sessionName);
@@ -92,7 +92,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -103,7 +103,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transitiveTagKeys")
-    private final @Nullable List<String> transitiveTagKeys;
+      private final @Nullable List<String> transitiveTagKeys;
 
     public List<String> getTransitiveTagKeys() {
         return this.transitiveTagKeys == null ? List.of() : this.transitiveTagKeys;
@@ -212,7 +212,6 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
             this.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
-
         public AssumeRole build() {
             return new AssumeRole(durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
         }

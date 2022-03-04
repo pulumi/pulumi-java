@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ToolResultsStepResponse {
     /**
      * A tool results execution ID.
      * 
-     */
+    */
     public String getExecutionId() {
         return this.executionId;
     }
     /**
      * A tool results history ID.
      * 
-     */
+    */
     public String getHistoryId() {
         return this.historyId;
     }
     /**
      * The cloud project that owns the tool results step.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * A tool results step ID.
      * 
-     */
+    */
     public String getStepId() {
         return this.stepId;
     }
@@ -116,7 +116,6 @@ public final class ToolResultsStepResponse {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public ToolResultsStepResponse build() {
             return new ToolResultsStepResponse(executionId, historyId, project, stepId);
         }

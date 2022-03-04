@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerStatusAllInstancesConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerStatusStatefulResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerStatusVersionTargetResponse;
@@ -56,35 +56,35 @@ public final class InstanceGroupManagerStatusResponse {
     /**
      * A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.
      * 
-     */
+    */
     public InstanceGroupManagerStatusAllInstancesConfigResponse getAllInstancesConfig() {
         return this.allInstancesConfig;
     }
     /**
      * The URL of the Autoscaler that targets this instance group manager.
      * 
-     */
+    */
     public String getAutoscaler() {
         return this.autoscaler;
     }
     /**
      * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
      * 
-     */
+    */
     public Boolean getIsStable() {
         return this.isStable;
     }
     /**
      * Stateful status of the given Instance Group Manager.
      * 
-     */
+    */
     public InstanceGroupManagerStatusStatefulResponse getStateful() {
         return this.stateful;
     }
     /**
      * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
      * 
-     */
+    */
     public InstanceGroupManagerStatusVersionTargetResponse getVersionTarget() {
         return this.versionTarget;
     }
@@ -141,7 +141,6 @@ public final class InstanceGroupManagerStatusResponse {
             this.versionTarget = Objects.requireNonNull(versionTarget);
             return this;
         }
-
         public InstanceGroupManagerStatusResponse build() {
             return new InstanceGroupManagerStatusResponse(allInstancesConfig, autoscaler, isStable, stateful, versionTarget);
         }

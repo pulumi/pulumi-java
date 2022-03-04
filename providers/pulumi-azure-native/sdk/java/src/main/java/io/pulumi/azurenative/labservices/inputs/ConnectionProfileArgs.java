@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.enums.ConnectionType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientRdpAccess")
-    private final @Nullable Input<ConnectionType> clientRdpAccess;
+      private final @Nullable Input<ConnectionType> clientRdpAccess;
 
     public Input<ConnectionType> getClientRdpAccess() {
         return this.clientRdpAccess == null ? Input.empty() : this.clientRdpAccess;
@@ -34,7 +34,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientSshAccess")
-    private final @Nullable Input<ConnectionType> clientSshAccess;
+      private final @Nullable Input<ConnectionType> clientSshAccess;
 
     public Input<ConnectionType> getClientSshAccess() {
         return this.clientSshAccess == null ? Input.empty() : this.clientSshAccess;
@@ -45,7 +45,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="webRdpAccess")
-    private final @Nullable Input<ConnectionType> webRdpAccess;
+      private final @Nullable Input<ConnectionType> webRdpAccess;
 
     public Input<ConnectionType> getWebRdpAccess() {
         return this.webRdpAccess == null ? Input.empty() : this.webRdpAccess;
@@ -56,7 +56,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="webSshAccess")
-    private final @Nullable Input<ConnectionType> webSshAccess;
+      private final @Nullable Input<ConnectionType> webSshAccess;
 
     public Input<ConnectionType> getWebSshAccess() {
         return this.webSshAccess == null ? Input.empty() : this.webSshAccess;
@@ -145,7 +145,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             this.webSshAccess = Input.ofNullable(webSshAccess);
             return this;
         }
-
         public ConnectionProfileArgs build() {
             return new ConnectionProfileArgs(clientRdpAccess, clientSshAccess, webRdpAccess, webSshAccess);
         }

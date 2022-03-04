@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class SystemServiceResponse {
     /**
      * The public IP address of the system service
      * 
-     */
+    */
     public String getPublicIpAddress() {
         return this.publicIpAddress;
     }
     /**
      * The system service type
      * 
-     */
+    */
     public String getSystemServiceType() {
         return this.systemServiceType;
     }
     /**
      * The state of the system service
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -95,7 +95,6 @@ public final class SystemServiceResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SystemServiceResponse build() {
             return new SystemServiceResponse(publicIpAddress, systemServiceType, version);
         }

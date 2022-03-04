@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -40,7 +40,7 @@ public final class AutoscalerAutoscalingPolicyCpuUtilization {
      * - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
      * - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
      * 
-     */
+    */
     public Optional<String> getPredictiveMethod() {
         return Optional.ofNullable(this.predictiveMethod);
     }
@@ -49,7 +49,7 @@ public final class AutoscalerAutoscalingPolicyCpuUtilization {
      * balancing configuration) that autoscaler should maintain. Must
      * be a positive float value. If not defined, the default is 0.8.
      * 
-     */
+    */
     public Double getTarget() {
         return this.target;
     }
@@ -85,7 +85,6 @@ public final class AutoscalerAutoscalingPolicyCpuUtilization {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public AutoscalerAutoscalingPolicyCpuUtilization build() {
             return new AutoscalerAutoscalingPolicyCpuUtilization(predictiveMethod, target);
         }

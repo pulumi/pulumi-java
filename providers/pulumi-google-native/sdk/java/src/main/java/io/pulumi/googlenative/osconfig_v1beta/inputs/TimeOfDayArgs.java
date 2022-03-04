@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hours")
-    private final @Nullable Input<Integer> hours;
+      private final @Nullable Input<Integer> hours;
 
     public Input<Integer> getHours() {
         return this.hours == null ? Input.empty() : this.hours;
@@ -34,7 +34,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minutes")
-    private final @Nullable Input<Integer> minutes;
+      private final @Nullable Input<Integer> minutes;
 
     public Input<Integer> getMinutes() {
         return this.minutes == null ? Input.empty() : this.minutes;
@@ -45,7 +45,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+      private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -56,7 +56,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="seconds")
-    private final @Nullable Input<Integer> seconds;
+      private final @Nullable Input<Integer> seconds;
 
     public Input<Integer> getSeconds() {
         return this.seconds == null ? Input.empty() : this.seconds;
@@ -145,7 +145,6 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
             this.seconds = Input.ofNullable(seconds);
             return this;
         }
-
         public TimeOfDayArgs build() {
             return new TimeOfDayArgs(hours, minutes, nanos, seconds);
         }

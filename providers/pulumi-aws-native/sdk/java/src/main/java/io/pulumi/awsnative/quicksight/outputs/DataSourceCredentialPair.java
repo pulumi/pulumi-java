@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.DataSourceParameters;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,21 +57,21 @@ public final class DataSourceCredentialPair {
      *             null, the <code>DataSourceParameters</code> originally used with these
      *                 <code>Credentials</code> is automatically allowed.</p>
      * 
-     */
+    */
     public List<DataSourceParameters> getAlternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? List.of() : this.alternateDataSourceParameters;
     }
     /**
      * <p>Password.</p>
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * <p>User name.</p>
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -114,7 +114,6 @@ public final class DataSourceCredentialPair {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public DataSourceCredentialPair build() {
             return new DataSourceCredentialPair(alternateDataSourceParameters, password, username);
         }

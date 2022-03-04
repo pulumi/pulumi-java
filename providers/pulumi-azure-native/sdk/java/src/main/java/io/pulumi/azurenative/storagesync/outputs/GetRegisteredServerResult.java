@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -195,175 +195,175 @@ public final class GetRegisteredServerResult {
     /**
      * Registered Server Agent Version
      * 
-     */
+    */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * Registered Server Agent Version Expiration Date
      * 
-     */
+    */
     public String getAgentVersionExpirationDate() {
         return this.agentVersionExpirationDate;
     }
     /**
      * Registered Server Agent Version Status
      * 
-     */
+    */
     public String getAgentVersionStatus() {
         return this.agentVersionStatus;
     }
     /**
      * Registered Server clusterId
      * 
-     */
+    */
     public Optional<String> getClusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
      * Registered Server clusterName
      * 
-     */
+    */
     public Optional<String> getClusterName() {
         return Optional.ofNullable(this.clusterName);
     }
     /**
      * Resource discoveryEndpointUri
      * 
-     */
+    */
     public Optional<String> getDiscoveryEndpointUri() {
         return Optional.ofNullable(this.discoveryEndpointUri);
     }
     /**
      * Friendly Name
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Registered Server last heart beat
      * 
-     */
+    */
     public Optional<String> getLastHeartBeat() {
         return Optional.ofNullable(this.lastHeartBeat);
     }
     /**
      * Resource Last Operation Name
      * 
-     */
+    */
     public Optional<String> getLastOperationName() {
         return Optional.ofNullable(this.lastOperationName);
     }
     /**
      * Registered Server lastWorkflowId
      * 
-     */
+    */
     public Optional<String> getLastWorkflowId() {
         return Optional.ofNullable(this.lastWorkflowId);
     }
     /**
      * Management Endpoint Uri
      * 
-     */
+    */
     public Optional<String> getManagementEndpointUri() {
         return Optional.ofNullable(this.managementEndpointUri);
     }
     /**
      * Monitoring Configuration
      * 
-     */
+    */
     public Optional<String> getMonitoringConfiguration() {
         return Optional.ofNullable(this.monitoringConfiguration);
     }
     /**
      * Telemetry Endpoint Uri
      * 
-     */
+    */
     public Optional<String> getMonitoringEndpointUri() {
         return Optional.ofNullable(this.monitoringEndpointUri);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Registered Server Provisioning State
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Resource Location
      * 
-     */
+    */
     public Optional<String> getResourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
     /**
      * Registered Server Certificate
      * 
-     */
+    */
     public Optional<String> getServerCertificate() {
         return Optional.ofNullable(this.serverCertificate);
     }
     /**
      * Registered Server serverId
      * 
-     */
+    */
     public Optional<String> getServerId() {
         return Optional.ofNullable(this.serverId);
     }
     /**
      * Registered Server Management Error Code
      * 
-     */
+    */
     public Optional<Integer> getServerManagementErrorCode() {
         return Optional.ofNullable(this.serverManagementErrorCode);
     }
     /**
      * Registered Server OS Version
      * 
-     */
+    */
     public Optional<String> getServerOSVersion() {
         return Optional.ofNullable(this.serverOSVersion);
     }
     /**
      * Registered Server serverRole
      * 
-     */
+    */
     public Optional<String> getServerRole() {
         return Optional.ofNullable(this.serverRole);
     }
     /**
      * Service Location
      * 
-     */
+    */
     public Optional<String> getServiceLocation() {
         return Optional.ofNullable(this.serviceLocation);
     }
     /**
      * Registered Server storageSyncServiceUid
      * 
-     */
+    */
     public Optional<String> getStorageSyncServiceUid() {
         return Optional.ofNullable(this.storageSyncServiceUid);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -560,7 +560,6 @@ public final class GetRegisteredServerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegisteredServerResult build() {
             return new GetRegisteredServerResult(agentVersion, agentVersionExpirationDate, agentVersionStatus, clusterId, clusterName, discoveryEndpointUri, friendlyName, id, lastHeartBeat, lastOperationName, lastWorkflowId, managementEndpointUri, monitoringConfiguration, monitoringEndpointUri, name, provisioningState, resourceLocation, serverCertificate, serverId, serverManagementErrorCode, serverOSVersion, serverRole, serviceLocation, storageSyncServiceUid, type);
         }

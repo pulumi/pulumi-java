@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -73,56 +73,56 @@ public final class GetFolderResult {
     /**
      * Timestamp when the folder was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Timestamp when the folder was requested to be deleted.
      * 
-     */
+    */
     public String getDeleteTime() {
         return this.deleteTime;
     }
     /**
      * The folder's display name. A folder's display name must be unique amongst its siblings. For example, no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * A checksum computed by the server based on the current value of the folder resource. This may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource name of the folder. Its format is `folders/{folder_id}`, for example: "folders/1234".
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The folder's parent's resource name. Updates to the folder's parent must be performed using MoveFolder.
      * 
-     */
+    */
     public String getParent() {
         return this.parent;
     }
     /**
      * The lifecycle state of the folder. Updates to the state must be performed using DeleteFolder and UndeleteFolder.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Timestamp when the folder was last modified.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -200,7 +200,6 @@ public final class GetFolderResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetFolderResult build() {
             return new GetFolderResult(createTime, deleteTime, displayName, etag, name, parent, state, updateTime);
         }

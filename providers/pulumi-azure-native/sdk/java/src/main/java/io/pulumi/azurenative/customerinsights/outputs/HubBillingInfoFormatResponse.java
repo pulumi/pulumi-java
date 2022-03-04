@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class HubBillingInfoFormatResponse {
     /**
      * The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
      * 
-     */
+    */
     public Optional<Integer> getMaxUnits() {
         return Optional.ofNullable(this.maxUnits);
     }
     /**
      * The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
      * 
-     */
+    */
     public Optional<Integer> getMinUnits() {
         return Optional.ofNullable(this.minUnits);
     }
     /**
      * The sku name.
      * 
-     */
+    */
     public Optional<String> getSkuName() {
         return Optional.ofNullable(this.skuName);
     }
@@ -98,7 +98,6 @@ public final class HubBillingInfoFormatResponse {
             this.skuName = skuName;
             return this;
         }
-
         public HubBillingInfoFormatResponse build() {
             return new HubBillingInfoFormatResponse(maxUnits, minUnits, skuName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.GcfsConfigResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NodeConfigDefaultsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="gcfsConfig", required=true)
-    private final GcfsConfigResponse gcfsConfig;
+      private final GcfsConfigResponse gcfsConfig;
 
     public GcfsConfigResponse getGcfsConfig() {
         return this.gcfsConfig;
@@ -59,7 +59,6 @@ public final class NodeConfigDefaultsResponse extends io.pulumi.resources.Invoke
             this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
             return this;
         }
-
         public NodeConfigDefaultsResponse build() {
             return new NodeConfigDefaultsResponse(gcfsConfig);
         }

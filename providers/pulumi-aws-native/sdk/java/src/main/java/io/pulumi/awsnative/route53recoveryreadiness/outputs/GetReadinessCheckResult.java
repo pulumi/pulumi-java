@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ReadinessCheckTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetReadinessCheckResult {
     /**
      * The Amazon Resource Name (ARN) of the readiness check.
      * 
-     */
+    */
     public Optional<String> getReadinessCheckArn() {
         return Optional.ofNullable(this.readinessCheckArn);
     }
     /**
      * The name of the resource set to check.
      * 
-     */
+    */
     public Optional<String> getResourceSetName() {
         return Optional.ofNullable(this.resourceSetName);
     }
     /**
      * A collection of tags associated with a resource.
      * 
-     */
+    */
     public List<ReadinessCheckTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -99,7 +99,6 @@ public final class GetReadinessCheckResult {
             this.tags = tags;
             return this;
         }
-
         public GetReadinessCheckResult build() {
             return new GetReadinessCheckResult(readinessCheckArn, resourceSetName, tags);
         }

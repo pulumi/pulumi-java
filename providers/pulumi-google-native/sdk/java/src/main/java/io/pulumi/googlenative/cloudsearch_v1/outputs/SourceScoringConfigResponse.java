@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class SourceScoringConfigResponse {
     /**
      * Importance of the source.
      * 
-     */
+    */
     public String getSourceImportance() {
         return this.sourceImportance;
     }
@@ -52,7 +52,6 @@ public final class SourceScoringConfigResponse {
             this.sourceImportance = Objects.requireNonNull(sourceImportance);
             return this;
         }
-
         public SourceScoringConfigResponse build() {
             return new SourceScoringConfigResponse(sourceImportance);
         }

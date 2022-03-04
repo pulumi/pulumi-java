@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class DataSourceDocumentsMetadataConfiguration {
             this.s3Prefix = s3Prefix;
             return this;
         }
-
         public DataSourceDocumentsMetadataConfiguration build() {
             return new DataSourceDocumentsMetadataConfiguration(s3Prefix);
         }

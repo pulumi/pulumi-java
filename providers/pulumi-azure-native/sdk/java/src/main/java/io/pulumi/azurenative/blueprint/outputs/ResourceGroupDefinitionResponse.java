@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -70,49 +70,49 @@ public final class ResourceGroupDefinitionResponse {
     /**
      * Artifacts which need to be deployed before this resource group.
      * 
-     */
+    */
     public List<String> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Description of this parameter/resourceGroup.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * DisplayName of this parameter/resourceGroup.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
      * 
-     */
+    */
     public Optional<String> getStrongType() {
         return Optional.ofNullable(this.strongType);
     }
     /**
      * Tags to be assigned to this resource group.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
@@ -183,7 +183,6 @@ public final class ResourceGroupDefinitionResponse {
             this.tags = tags;
             return this;
         }
-
         public ResourceGroupDefinitionResponse build() {
             return new ResourceGroupDefinitionResponse(dependsOn, description, displayName, location, name, strongType, tags);
         }

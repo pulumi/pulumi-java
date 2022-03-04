@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,21 +61,21 @@ public final class GetNetworkResult {
     /**
      * Description of this network.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The IP address of the gateway.
      * 
-     */
+    */
     public String getGatewayIpv4() {
         return this.gatewayIpv4;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -88,14 +88,14 @@ public final class GetNetworkResult {
     /**
      * The URI of the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * the list of subnetworks which belong to the network
      * 
-     */
+    */
     public List<String> getSubnetworksSelfLinks() {
         return this.subnetworksSelfLinks;
     }
@@ -166,7 +166,6 @@ public final class GetNetworkResult {
             this.subnetworksSelfLinks = Objects.requireNonNull(subnetworksSelfLinks);
             return this;
         }
-
         public GetNetworkResult build() {
             return new GetNetworkResult(description, gatewayIpv4, id, name, project, selfLink, subnetworksSelfLinks);
         }

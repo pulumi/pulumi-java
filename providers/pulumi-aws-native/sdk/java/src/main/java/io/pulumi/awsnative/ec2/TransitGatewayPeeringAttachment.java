@@ -10,8 +10,8 @@ import io.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentPeeringAtt
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -163,6 +163,37 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
         return this.transitGatewayId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TransitGatewayPeeringAttachmentArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ec2.TransitGatewayPeeringAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ec2.TransitGatewayPeeringAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TransitGatewayPeeringAttachment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TransitGatewayPeeringAttachment(String name) {
+        this(name, TransitGatewayPeeringAttachmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TransitGatewayPeeringAttachment(String name, TransitGatewayPeeringAttachmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

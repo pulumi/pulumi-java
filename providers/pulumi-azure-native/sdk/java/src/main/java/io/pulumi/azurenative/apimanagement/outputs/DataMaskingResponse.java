@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.DataMaskingEntityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,14 +33,14 @@ public final class DataMaskingResponse {
     /**
      * Masking settings for headers
      * 
-     */
+    */
     public List<DataMaskingEntityResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * Masking settings for Url query parameters
      * 
-     */
+    */
     public List<DataMaskingEntityResponse> getQueryParams() {
         return this.queryParams == null ? List.of() : this.queryParams;
     }
@@ -76,7 +76,6 @@ public final class DataMaskingResponse {
             this.queryParams = queryParams;
             return this;
         }
-
         public DataMaskingResponse build() {
             return new DataMaskingResponse(headers, queryParams);
         }

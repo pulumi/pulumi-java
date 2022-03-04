@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateId")
-    private final @Nullable Input<String> certificateId;
+      private final @Nullable Input<String> certificateId;
 
     public Input<String> getCertificateId() {
         return this.certificateId == null ? Input.empty() : this.certificateId;
@@ -31,7 +31,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="gatewayId", required=true)
-    private final Input<String> gatewayId;
+      private final Input<String> gatewayId;
 
     public Input<String> getGatewayId() {
         return this.gatewayId;
@@ -42,7 +42,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="isTrusted")
-    private final @Nullable Input<Boolean> isTrusted;
+      private final @Nullable Input<Boolean> isTrusted;
 
     public Input<Boolean> getIsTrusted() {
         return this.isTrusted == null ? Input.empty() : this.isTrusted;
@@ -53,7 +53,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -168,7 +168,6 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public GatewayCertificateAuthorityArgs build() {
             return new GatewayCertificateAuthorityArgs(certificateId, gatewayId, isTrusted, resourceGroupName, serviceName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="rmplName", required=true)
-    private final String rmplName;
+      private final String rmplName;
 
     public String getRmplName() {
         return this.rmplName;
@@ -77,7 +77,6 @@ public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resour
             this.rmplName = Objects.requireNonNull(rmplName);
             return this;
         }
-
         public GetResourceManagementPrivateLinkArgs build() {
             return new GetResourceManagementPrivateLinkArgs(resourceGroupName, rmplName);
         }

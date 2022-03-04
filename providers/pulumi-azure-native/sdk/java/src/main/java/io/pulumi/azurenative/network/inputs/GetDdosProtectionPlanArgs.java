@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDdosProtectionPlanArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ddosProtectionPlanName", required=true)
-    private final String ddosProtectionPlanName;
+      private final String ddosProtectionPlanName;
 
     public String getDdosProtectionPlanName() {
         return this.ddosProtectionPlanName;
@@ -28,7 +28,7 @@ public final class GetDdosProtectionPlanArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetDdosProtectionPlanArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDdosProtectionPlanArgs build() {
             return new GetDdosProtectionPlanArgs(ddosProtectionPlanName, resourceGroupName);
         }

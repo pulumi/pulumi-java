@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +72,6 @@ public final class TaskDefinitionUlimit {
             this.softLimit = Objects.requireNonNull(softLimit);
             return this;
         }
-
         public TaskDefinitionUlimit build() {
             return new TaskDefinitionUlimit(hardLimit, name, softLimit);
         }

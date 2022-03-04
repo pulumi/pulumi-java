@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="fabricName", required=true)
-    private final String fabricName;
+      private final String fabricName;
 
     public String getFabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="intentObjectName", required=true)
-    private final String intentObjectName;
+      private final String intentObjectName;
 
     public String getIntentObjectName() {
         return this.intentObjectName;
@@ -39,7 +39,7 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final String vaultName;
+      private final String vaultName;
 
     public String getVaultName() {
         return this.vaultName;
@@ -119,7 +119,6 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public GetProtectionIntentArgs build() {
             return new GetProtectionIntentArgs(fabricName, intentObjectName, resourceGroupName, vaultName);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.managedidentity;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.managedidentity.inputs.GetUserAssignedIdentityArgs;
 import io.pulumi.azurenative.managedidentity.outputs.GetUserAssignedIdentityResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserAssignedIdentity {
-/**
- * Describes an identity resource.
+    private GetUserAssignedIdentity() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserAssignedIdentityArgs.Builder a);
+    }
+    private static GetUserAssignedIdentityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserAssignedIdentityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes an identity resource.
  * API Version: 2018-11-30.
  * 
- *
- * Describes an identity resource.
+     *
+     * Describes an identity resource.
  * 
- */
+     */
+    public static CompletableFuture<GetUserAssignedIdentityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes an identity resource.
+     * API Version: 2018-11-30.
+     * 
+     *
+         * Describes an identity resource.
+     * 
+     */
     public static CompletableFuture<GetUserAssignedIdentityResult> invokeAsync(GetUserAssignedIdentityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managedidentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args == null ? GetUserAssignedIdentityArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iam;
 
 import io.pulumi.awsnative.iam.inputs.ServerCertificateTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,42 +17,42 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     public static final ServerCertificateArgs Empty = new ServerCertificateArgs();
 
     @InputImport(name="certificateBody")
-    private final @Nullable Input<String> certificateBody;
+      private final @Nullable Input<String> certificateBody;
 
     public Input<String> getCertificateBody() {
         return this.certificateBody == null ? Input.empty() : this.certificateBody;
     }
 
     @InputImport(name="certificateChain")
-    private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
     }
 
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
     }
 
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
     }
 
     @InputImport(name="serverCertificateName")
-    private final @Nullable Input<String> serverCertificateName;
+      private final @Nullable Input<String> serverCertificateName;
 
     public Input<String> getServerCertificateName() {
         return this.serverCertificateName == null ? Input.empty() : this.serverCertificateName;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<ServerCertificateTagArgs>> tags;
+      private final @Nullable Input<List<ServerCertificateTagArgs>> tags;
 
     public Input<List<ServerCertificateTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -171,7 +171,6 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ServerCertificateArgs build() {
             return new ServerCertificateArgs(certificateBody, certificateChain, path, privateKey, serverCertificateName, tags);
         }

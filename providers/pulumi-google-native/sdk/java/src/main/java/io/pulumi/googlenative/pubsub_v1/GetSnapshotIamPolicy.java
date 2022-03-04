@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSnapshotIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetSnapshotIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetSnapshotIamPolicyArgs.Builder a);
+    }
+    private static GetSnapshotIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSnapshotIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetSnapshotIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetSnapshotIamPolicyResult> invokeAsync(GetSnapshotIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsub/v1:getSnapshotIamPolicy", TypeShape.of(GetSnapshotIamPolicyResult.class), args == null ? GetSnapshotIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

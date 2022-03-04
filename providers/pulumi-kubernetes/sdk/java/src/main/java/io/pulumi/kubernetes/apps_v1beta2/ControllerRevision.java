@@ -7,8 +7,8 @@ import com.google.gson.JsonElement;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1beta2.ControllerRevisionArgs;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 /**
  * ControllerRevision implements an immutable snapshot of state data. Clients are responsible for serializing and deserializing the objects that contain their internal state. Once a ControllerRevision has been successfully created, it can not be updated. The API Server will fail validation of all requests that attempt to mutate the Data field. ControllerRevisions may, however, be deleted. Note that, due to its use by both the DaemonSet and StatefulSet controllers for update and rollback, this object is beta. However, it may be subject to name and representation changes in future releases, and clients should not depend on its stability. It is primarily for internal use by controllers.
  * 
- * @deprecated
+ * @Deprecated
  * apps/v1beta2/ControllerRevision is deprecated by apps/v1/ControllerRevision and not supported by Kubernetes v1.16+ clusters.
  * 
  */
@@ -98,6 +98,37 @@ public class ControllerRevision extends io.pulumi.resources.CustomResource {
         return this.revision;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ControllerRevisionArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.apps_v1beta2.ControllerRevisionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.apps_v1beta2.ControllerRevisionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ControllerRevision(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ControllerRevision(String name) {
+        this(name, ControllerRevisionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ControllerRevision(String name, ControllerRevisionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

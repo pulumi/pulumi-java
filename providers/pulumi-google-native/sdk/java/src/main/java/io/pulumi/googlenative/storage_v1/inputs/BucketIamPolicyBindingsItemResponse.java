@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.ExprResponse;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class BucketIamPolicyBindingsItemResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="condition", required=true)
-    private final ExprResponse condition;
+      private final ExprResponse condition;
 
     public ExprResponse getCondition() {
         return this.condition;
@@ -39,7 +39,7 @@ public final class BucketIamPolicyBindingsItemResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="members", required=true)
-    private final List<String> members;
+      private final List<String> members;
 
     public List<String> getMembers() {
         return this.members;
@@ -60,7 +60,7 @@ public final class BucketIamPolicyBindingsItemResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+      private final String role;
 
     public String getRole() {
         return this.role;
@@ -119,7 +119,6 @@ public final class BucketIamPolicyBindingsItemResponse extends io.pulumi.resourc
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public BucketIamPolicyBindingsItemResponse build() {
             return new BucketIamPolicyBindingsItemResponse(condition, members, role);
         }

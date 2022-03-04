@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.ScheduleState;
 import io.pulumi.googlenative.notebooks_v1.inputs.ExecutionTemplateArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cronSchedule")
-    private final @Nullable Input<String> cronSchedule;
+      private final @Nullable Input<String> cronSchedule;
 
     public Input<String> getCronSchedule() {
         return this.cronSchedule == null ? Input.empty() : this.cronSchedule;
@@ -32,7 +32,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,35 +43,35 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionTemplate")
-    private final @Nullable Input<ExecutionTemplateArgs> executionTemplate;
+      private final @Nullable Input<ExecutionTemplateArgs> executionTemplate;
 
     public Input<ExecutionTemplateArgs> getExecutionTemplate() {
         return this.executionTemplate == null ? Input.empty() : this.executionTemplate;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="scheduleId", required=true)
-    private final Input<String> scheduleId;
+      private final Input<String> scheduleId;
 
     public Input<String> getScheduleId() {
         return this.scheduleId;
     }
 
     @InputImport(name="state")
-    private final @Nullable Input<ScheduleState> state;
+      private final @Nullable Input<ScheduleState> state;
 
     public Input<ScheduleState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -82,7 +82,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -231,7 +231,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public ScheduleArgs build() {
             return new ScheduleArgs(cronSchedule, description, executionTemplate, location, project, scheduleId, state, timeZone);
         }

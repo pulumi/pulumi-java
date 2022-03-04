@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagTemplate {
-/**
- * Gets a tag template.
+    private GetTagTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetTagTemplateArgs.Builder a);
+    }
+    private static GetTagTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTagTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a tag template.
  * 
- */
+     */
+    public static CompletableFuture<GetTagTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a tag template.
+     * 
+     */
     public static CompletableFuture<GetTagTemplateResult> invokeAsync(GetTagTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getTagTemplate", TypeShape.of(GetTagTemplateResult.class), args == null ? GetTagTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

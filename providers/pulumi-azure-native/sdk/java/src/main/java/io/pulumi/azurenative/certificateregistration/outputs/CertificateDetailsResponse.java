@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.certificateregistration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -81,63 +81,63 @@ public final class CertificateDetailsResponse {
     /**
      * Certificate Issuer.
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }
     /**
      * Date Certificate is valid to.
      * 
-     */
+    */
     public String getNotAfter() {
         return this.notAfter;
     }
     /**
      * Date Certificate is valid from.
      * 
-     */
+    */
     public String getNotBefore() {
         return this.notBefore;
     }
     /**
      * Raw certificate data.
      * 
-     */
+    */
     public String getRawData() {
         return this.rawData;
     }
     /**
      * Certificate Serial Number.
      * 
-     */
+    */
     public String getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * Certificate Signature algorithm.
      * 
-     */
+    */
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
     }
     /**
      * Certificate Subject.
      * 
-     */
+    */
     public String getSubject() {
         return this.subject;
     }
     /**
      * Certificate Thumbprint.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Certificate Version.
      * 
-     */
+    */
     public Integer getVersion() {
         return this.version;
     }
@@ -222,7 +222,6 @@ public final class CertificateDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public CertificateDetailsResponse build() {
             return new CertificateDetailsResponse(issuer, notAfter, notBefore, rawData, serialNumber, signatureAlgorithm, subject, thumbprint, version);
         }

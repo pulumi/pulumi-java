@@ -6,21 +6,41 @@ package io.pulumi.azurenative.deploymentmanager;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.deploymentmanager.inputs.GetServiceTopologyArgs;
 import io.pulumi.azurenative.deploymentmanager.outputs.GetServiceTopologyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceTopology {
-/**
- * The resource representation of a service topology.
+    private GetServiceTopology() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceTopologyArgs.Builder a);
+    }
+    private static GetServiceTopologyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceTopologyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The resource representation of a service topology.
  * API Version: 2019-11-01-preview.
  * 
- *
- * The resource representation of a service topology.
+     *
+     * The resource representation of a service topology.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceTopologyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The resource representation of a service topology.
+     * API Version: 2019-11-01-preview.
+     * 
+     *
+         * The resource representation of a service topology.
+     * 
+     */
     public static CompletableFuture<GetServiceTopologyResult> invokeAsync(GetServiceTopologyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getServiceTopology", TypeShape.of(GetServiceTopologyResult.class), args == null ? GetServiceTopologyArgs.Empty : args, Utilities.withVersion(options));
     }

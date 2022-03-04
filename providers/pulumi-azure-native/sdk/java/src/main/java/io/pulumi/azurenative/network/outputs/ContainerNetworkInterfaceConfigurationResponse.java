@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.IPConfigurationProfileResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class ContainerNetworkInterfaceConfigurationResponse {
     /**
      * A list of container network interfaces created from this container network interface configuration.
      * 
-     */
+    */
     public List<SubResourceResponse> getContainerNetworkInterfaces() {
         return this.containerNetworkInterfaces == null ? List.of() : this.containerNetworkInterfaces;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * A list of ip configurations of the container network interface configuration.
      * 
-     */
+    */
     public List<IPConfigurationProfileResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * The name of the resource. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the container network interface configuration resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Sub Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class ContainerNetworkInterfaceConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContainerNetworkInterfaceConfigurationResponse build() {
             return new ContainerNetworkInterfaceConfigurationResponse(containerNetworkInterfaces, etag, id, ipConfigurations, name, provisioningState, type);
         }

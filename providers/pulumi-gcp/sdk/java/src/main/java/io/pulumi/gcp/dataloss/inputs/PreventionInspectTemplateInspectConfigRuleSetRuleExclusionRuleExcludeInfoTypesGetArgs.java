@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="infoTypes", required=true)
-    private final Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes;
+      private final Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes;
 
     public Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> getInfoTypes() {
         return this.infoTypes;
@@ -63,7 +63,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.infoTypes = Input.of(Objects.requireNonNull(infoTypes));
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs(infoTypes);
         }

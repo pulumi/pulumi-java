@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketOwnershipControlsRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
     public static final BucketOwnershipControlsArgs Empty = new BucketOwnershipControlsArgs();
 
     @InputImport(name="rules", required=true)
-    private final Input<List<BucketOwnershipControlsRuleArgs>> rules;
+      private final Input<List<BucketOwnershipControlsRuleArgs>> rules;
 
     public Input<List<BucketOwnershipControlsRuleArgs>> getRules() {
         return this.rules;
@@ -58,7 +58,6 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
-
         public BucketOwnershipControlsArgs build() {
             return new BucketOwnershipControlsArgs(rules);
         }

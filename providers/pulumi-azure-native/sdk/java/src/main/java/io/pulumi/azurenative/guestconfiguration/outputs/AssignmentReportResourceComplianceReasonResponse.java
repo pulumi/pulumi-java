@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AssignmentReportResourceComplianceReasonResponse {
     /**
      * Code for the compliance of the guest configuration assignment resource.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Reason for the compliance of the guest configuration assignment resource.
      * 
-     */
+    */
     public String getPhrase() {
         return this.phrase;
     }
@@ -74,7 +74,6 @@ public final class AssignmentReportResourceComplianceReasonResponse {
             this.phrase = Objects.requireNonNull(phrase);
             return this;
         }
-
         public AssignmentReportResourceComplianceReasonResponse build() {
             return new AssignmentReportResourceComplianceReasonResponse(code, phrase);
         }

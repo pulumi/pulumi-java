@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.DeploymentSettingsArgs;
 import io.pulumi.azurenative.appplatform.inputs.UserSourceInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deploymentSettings")
-    private final @Nullable Input<DeploymentSettingsArgs> deploymentSettings;
+      private final @Nullable Input<DeploymentSettingsArgs> deploymentSettings;
 
     public Input<DeploymentSettingsArgs> getDeploymentSettings() {
         return this.deploymentSettings == null ? Input.empty() : this.deploymentSettings;
@@ -35,7 +35,7 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<UserSourceInfoArgs> source;
+      private final @Nullable Input<UserSourceInfoArgs> source;
 
     public Input<UserSourceInfoArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -94,7 +94,6 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public DeploymentResourcePropertiesArgs build() {
             return new DeploymentResourcePropertiesArgs(deploymentSettings, source);
         }

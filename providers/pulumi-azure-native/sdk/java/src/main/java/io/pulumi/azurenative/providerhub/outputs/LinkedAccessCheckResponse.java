@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class LinkedAccessCheckResponse {
             this.linkedType = linkedType;
             return this;
         }
-
         public LinkedAccessCheckResponse build() {
             return new LinkedAccessCheckResponse(actionName, linkedAction, linkedActionVerb, linkedProperty, linkedType);
         }

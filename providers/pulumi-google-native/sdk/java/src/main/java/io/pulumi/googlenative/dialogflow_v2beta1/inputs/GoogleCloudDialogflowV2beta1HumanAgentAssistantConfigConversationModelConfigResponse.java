@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
      * 
      */
     @InputImport(name="model", required=true)
-    private final String model;
+      private final String model;
 
     public String getModel() {
         return this.model;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
             this.model = Objects.requireNonNull(model);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse(model);
         }

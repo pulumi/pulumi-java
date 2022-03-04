@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TriggerBuildStepVolumeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class TriggerBuildStepVolumeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -92,7 +92,6 @@ public final class TriggerBuildStepVolumeArgs extends io.pulumi.resources.Resour
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
-
         public TriggerBuildStepVolumeArgs build() {
             return new TriggerBuildStepVolumeArgs(name, path);
         }

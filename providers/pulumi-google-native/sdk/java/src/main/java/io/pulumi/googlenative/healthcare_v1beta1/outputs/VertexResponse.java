@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class VertexResponse {
     /**
      * X coordinate.
      * 
-     */
+    */
     public Double getX() {
         return this.x;
     }
     /**
      * Y coordinate.
      * 
-     */
+    */
     public Double getY() {
         return this.y;
     }
@@ -74,7 +74,6 @@ public final class VertexResponse {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public VertexResponse build() {
             return new VertexResponse(x, y);
         }

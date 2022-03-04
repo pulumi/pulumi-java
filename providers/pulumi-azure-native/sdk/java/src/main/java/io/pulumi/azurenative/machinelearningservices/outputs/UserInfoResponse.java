@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class UserInfoResponse {
     /**
      * A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
      * 
-     */
+    */
     public Optional<String> getUserAltSecId() {
         return Optional.ofNullable(this.userAltSecId);
     }
     /**
      * A user identity provider. Eg live.com
      * 
-     */
+    */
     public Optional<String> getUserIdp() {
         return Optional.ofNullable(this.userIdp);
     }
     /**
      * The issuer which issued the token for this user.
      * 
-     */
+    */
     public Optional<String> getUserIss() {
         return Optional.ofNullable(this.userIss);
     }
     /**
      *  A user's full name or a service principal's app ID.
      * 
-     */
+    */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }
     /**
      * A user or service principal's object ID..
      * 
-     */
+    */
     public Optional<String> getUserObjectId() {
         return Optional.ofNullable(this.userObjectId);
     }
     /**
      * A user or service principal's PuID.
      * 
-     */
+    */
     public Optional<String> getUserPuId() {
         return Optional.ofNullable(this.userPuId);
     }
     /**
      * A user or service principal's tenant ID.
      * 
-     */
+    */
     public Optional<String> getUserTenantId() {
         return Optional.ofNullable(this.userTenantId);
     }
@@ -181,7 +181,6 @@ public final class UserInfoResponse {
             this.userTenantId = userTenantId;
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(userAltSecId, userIdp, userIss, userName, userObjectId, userPuId, userTenantId);
         }

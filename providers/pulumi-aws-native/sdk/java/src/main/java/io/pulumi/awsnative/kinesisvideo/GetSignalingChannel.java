@@ -6,17 +6,33 @@ package io.pulumi.awsnative.kinesisvideo;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.kinesisvideo.inputs.GetSignalingChannelArgs;
 import io.pulumi.awsnative.kinesisvideo.outputs.GetSignalingChannelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSignalingChannel {
-/**
- * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
+    private GetSignalingChannel() {}
+    public interface BuilderApplicator {
+        public void apply(GetSignalingChannelArgs.Builder a);
+    }
+    private static GetSignalingChannelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSignalingChannelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
  * 
- */
+     */
+    public static CompletableFuture<GetSignalingChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
+     * 
+     */
     public static CompletableFuture<GetSignalingChannelResult> invokeAsync(GetSignalingChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesisvideo:getSignalingChannel", TypeShape.of(GetSignalingChannelResult.class), args == null ? GetSignalingChannelArgs.Empty : args, Utilities.withVersion(options));
     }

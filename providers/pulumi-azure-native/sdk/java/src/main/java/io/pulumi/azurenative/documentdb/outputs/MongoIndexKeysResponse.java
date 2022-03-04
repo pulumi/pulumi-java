@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MongoIndexKeysResponse {
     /**
      * List of keys for each MongoDB collection in the Azure Cosmos DB service
      * 
-     */
+    */
     public List<String> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }
@@ -54,7 +54,6 @@ public final class MongoIndexKeysResponse {
             this.keys = keys;
             return this;
         }
-
         public MongoIndexKeysResponse build() {
             return new MongoIndexKeysResponse(keys);
         }

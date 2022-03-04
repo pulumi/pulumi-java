@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.ScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -70,49 +70,49 @@ public final class ListServiceFabricApplicableSchedulesResult {
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The auto-shutdown schedule, if one has been set at the lab or lab resource level.
      * 
-     */
+    */
     public Optional<ScheduleResponse> getLabVmsShutdown() {
         return Optional.ofNullable(this.labVmsShutdown);
     }
     /**
      * The auto-startup schedule, if one has been set at the lab or lab resource level.
      * 
-     */
+    */
     public Optional<ScheduleResponse> getLabVmsStartup() {
         return Optional.ofNullable(this.labVmsStartup);
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -183,7 +183,6 @@ public final class ListServiceFabricApplicableSchedulesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListServiceFabricApplicableSchedulesResult build() {
             return new ListServiceFabricApplicableSchedulesResult(id, labVmsShutdown, labVmsStartup, location, name, tags, type);
         }

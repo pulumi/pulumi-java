@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
     /**
      * Name of the category.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Name of the portal.
      * 
-     */
+    */
     public String getSiteId() {
         return this.siteId;
     }
     /**
      * Time the category was last modified in milliseconds since epoch.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -95,7 +95,6 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GoogleCloudApigeeV1ApiCategoryDataResponse build() {
             return new GoogleCloudApigeeV1ApiCategoryDataResponse(name, siteId, updateTime);
         }

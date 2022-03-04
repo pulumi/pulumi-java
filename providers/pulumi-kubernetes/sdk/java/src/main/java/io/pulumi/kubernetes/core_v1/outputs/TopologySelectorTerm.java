@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.TopologySelectorLabelRequirement;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TopologySelectorTerm {
     /**
      * A list of topology selector requirements by labels.
      * 
-     */
+    */
     public List<TopologySelectorLabelRequirement> getMatchLabelExpressions() {
         return this.matchLabelExpressions == null ? List.of() : this.matchLabelExpressions;
     }
@@ -54,7 +54,6 @@ public final class TopologySelectorTerm {
             this.matchLabelExpressions = matchLabelExpressions;
             return this;
         }
-
         public TopologySelectorTerm build() {
             return new TopologySelectorTerm(matchLabelExpressions);
         }

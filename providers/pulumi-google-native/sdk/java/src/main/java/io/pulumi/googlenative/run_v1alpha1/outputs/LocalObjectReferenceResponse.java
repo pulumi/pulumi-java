@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class LocalObjectReferenceResponse {
     /**
      * (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -52,7 +52,6 @@ public final class LocalObjectReferenceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public LocalObjectReferenceResponse build() {
             return new LocalObjectReferenceResponse(name);
         }

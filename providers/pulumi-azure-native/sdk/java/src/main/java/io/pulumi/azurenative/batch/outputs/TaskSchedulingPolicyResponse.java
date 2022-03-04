@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class TaskSchedulingPolicyResponse {
             this.nodeFillType = Objects.requireNonNull(nodeFillType);
             return this;
         }
-
         public TaskSchedulingPolicyResponse build() {
             return new TaskSchedulingPolicyResponse(nodeFillType);
         }

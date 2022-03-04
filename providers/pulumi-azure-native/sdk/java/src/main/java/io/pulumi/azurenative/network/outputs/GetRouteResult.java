@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -83,63 +83,63 @@ public final class GetRouteResult {
     /**
      * The destination CIDR to which the route applies.
      * 
-     */
+    */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
      * 
-     */
+    */
     public Optional<Boolean> getHasBgpOverride() {
         return Optional.ofNullable(this.hasBgpOverride);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
      * 
-     */
+    */
     public Optional<String> getNextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
     /**
      * The type of Azure hop the packet should be sent to.
      * 
-     */
+    */
     public String getNextHopType() {
         return this.nextHopType;
     }
     /**
      * The provisioning state of the route resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -224,7 +224,6 @@ public final class GetRouteResult {
             this.type = type;
             return this;
         }
-
         public GetRouteResult build() {
             return new GetRouteResult(addressPrefix, etag, hasBgpOverride, id, name, nextHopIpAddress, nextHopType, provisioningState, type);
         }

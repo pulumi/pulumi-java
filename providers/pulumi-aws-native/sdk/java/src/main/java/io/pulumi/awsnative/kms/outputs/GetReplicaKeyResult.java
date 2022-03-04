@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kms.outputs;
 
 import io.pulumi.awsnative.kms.outputs.ReplicaKeyTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -60,14 +60,14 @@ public final class GetReplicaKeyResult {
     /**
      * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -77,14 +77,14 @@ public final class GetReplicaKeyResult {
     /**
      * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
      * 
-     */
+    */
     public Optional<Object> getKeyPolicy() {
         return Optional.ofNullable(this.keyPolicy);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<ReplicaKeyTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -148,7 +148,6 @@ public final class GetReplicaKeyResult {
             this.tags = tags;
             return this;
         }
-
         public GetReplicaKeyResult build() {
             return new GetReplicaKeyResult(arn, description, enabled, keyId, keyPolicy, tags);
         }

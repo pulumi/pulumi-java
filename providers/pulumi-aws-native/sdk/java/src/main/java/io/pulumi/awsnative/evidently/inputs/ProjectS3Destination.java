@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class ProjectS3Destination extends io.pulumi.resources.InvokeArgs {
     public static final ProjectS3Destination Empty = new ProjectS3Destination();
 
     @InputImport(name="bucketName", required=true)
-    private final String bucketName;
+      private final String bucketName;
 
     public String getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="prefix")
-    private final @Nullable String prefix;
+      private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
@@ -71,7 +71,6 @@ public final class ProjectS3Destination extends io.pulumi.resources.InvokeArgs {
             this.prefix = prefix;
             return this;
         }
-
         public ProjectS3Destination build() {
             return new ProjectS3Destination(bucketName, prefix);
         }

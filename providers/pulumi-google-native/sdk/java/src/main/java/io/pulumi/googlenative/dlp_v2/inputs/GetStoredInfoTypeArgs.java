@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetStoredInfoTypeArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetStoredInfoTypeArgs Empty = new GetStoredInfoTypeArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="storedInfoTypeId", required=true)
-    private final String storedInfoTypeId;
+      private final String storedInfoTypeId;
 
     public String getStoredInfoTypeId() {
         return this.storedInfoTypeId;
@@ -88,7 +88,6 @@ public final class GetStoredInfoTypeArgs extends io.pulumi.resources.InvokeArgs 
             this.storedInfoTypeId = Objects.requireNonNull(storedInfoTypeId);
             return this;
         }
-
         public GetStoredInfoTypeArgs build() {
             return new GetStoredInfoTypeArgs(location, project, storedInfoTypeId);
         }

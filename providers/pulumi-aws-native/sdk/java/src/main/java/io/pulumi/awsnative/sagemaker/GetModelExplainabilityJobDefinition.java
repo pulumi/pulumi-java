@@ -6,17 +6,33 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.sagemaker.inputs.GetModelExplainabilityJobDefinitionArgs;
 import io.pulumi.awsnative.sagemaker.outputs.GetModelExplainabilityJobDefinitionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModelExplainabilityJobDefinition {
-/**
- * Resource Type definition for AWS::SageMaker::ModelExplainabilityJobDefinition
+    private GetModelExplainabilityJobDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetModelExplainabilityJobDefinitionArgs.Builder a);
+    }
+    private static GetModelExplainabilityJobDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetModelExplainabilityJobDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ModelExplainabilityJobDefinition
  * 
- */
+     */
+    public static CompletableFuture<GetModelExplainabilityJobDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::SageMaker::ModelExplainabilityJobDefinition
+     * 
+     */
     public static CompletableFuture<GetModelExplainabilityJobDefinitionResult> invokeAsync(GetModelExplainabilityJobDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelExplainabilityJobDefinition", TypeShape.of(GetModelExplainabilityJobDefinitionResult.class), args == null ? GetModelExplainabilityJobDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

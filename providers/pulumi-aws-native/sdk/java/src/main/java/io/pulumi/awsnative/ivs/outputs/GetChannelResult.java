@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ivs.outputs;
 import io.pulumi.awsnative.ivs.enums.ChannelLatencyMode;
 import io.pulumi.awsnative.ivs.enums.ChannelType;
 import io.pulumi.awsnative.ivs.outputs.ChannelTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -87,63 +87,63 @@ public final class GetChannelResult {
     /**
      * Channel ARN is automatically generated on creation and assigned as the unique identifier.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Whether the channel is authorized.
      * 
-     */
+    */
     public Optional<Boolean> getAuthorized() {
         return Optional.ofNullable(this.authorized);
     }
     /**
      * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
      * 
-     */
+    */
     public Optional<String> getIngestEndpoint() {
         return Optional.ofNullable(this.ingestEndpoint);
     }
     /**
      * Channel latency mode.
      * 
-     */
+    */
     public Optional<ChannelLatencyMode> getLatencyMode() {
         return Optional.ofNullable(this.latencyMode);
     }
     /**
      * Channel
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Channel Playback URL.
      * 
-     */
+    */
     public Optional<String> getPlaybackUrl() {
         return Optional.ofNullable(this.playbackUrl);
     }
     /**
      * Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
      * 
-     */
+    */
     public Optional<String> getRecordingConfigurationArn() {
         return Optional.ofNullable(this.recordingConfigurationArn);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
      * 
-     */
+    */
     public List<ChannelTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
      * 
-     */
+    */
     public Optional<ChannelType> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -228,7 +228,6 @@ public final class GetChannelResult {
             this.type = type;
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(arn, authorized, ingestEndpoint, latencyMode, name, playbackUrl, recordingConfigurationArn, tags, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      * 
      */
     @InputImport(name="namespaceId")
-    private final @Nullable Input<String> namespaceId;
+      private final @Nullable Input<String> namespaceId;
 
     public Input<String> getNamespaceId() {
         return this.namespaceId == null ? Input.empty() : this.namespaceId;
@@ -30,7 +30,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      * 
      */
     @InputImport(name="projectId", required=true)
-    private final Input<String> projectId;
+      private final Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId;
@@ -89,7 +89,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs(namespaceId, projectId);
         }

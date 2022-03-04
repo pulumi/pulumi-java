@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AutoHealCustomActionResponse {
     /**
      * Executable to be run.
      * 
-     */
+    */
     public Optional<String> getExe() {
         return Optional.ofNullable(this.exe);
     }
     /**
      * Parameters for the executable.
      * 
-     */
+    */
     public Optional<String> getParameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -76,7 +76,6 @@ public final class AutoHealCustomActionResponse {
             this.parameters = parameters;
             return this;
         }
-
         public AutoHealCustomActionResponse build() {
             return new AutoHealCustomActionResponse(exe, parameters);
         }

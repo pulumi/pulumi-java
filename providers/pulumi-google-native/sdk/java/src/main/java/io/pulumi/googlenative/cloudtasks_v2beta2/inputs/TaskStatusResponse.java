@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.AttemptStatusResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attemptDispatchCount", required=true)
-    private final Integer attemptDispatchCount;
+      private final Integer attemptDispatchCount;
 
     public Integer getAttemptDispatchCount() {
         return this.attemptDispatchCount;
@@ -33,7 +33,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attemptResponseCount", required=true)
-    private final Integer attemptResponseCount;
+      private final Integer attemptResponseCount;
 
     public Integer getAttemptResponseCount() {
         return this.attemptResponseCount;
@@ -44,7 +44,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="firstAttemptStatus", required=true)
-    private final AttemptStatusResponse firstAttemptStatus;
+      private final AttemptStatusResponse firstAttemptStatus;
 
     public AttemptStatusResponse getFirstAttemptStatus() {
         return this.firstAttemptStatus;
@@ -55,7 +55,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastAttemptStatus", required=true)
-    private final AttemptStatusResponse lastAttemptStatus;
+      private final AttemptStatusResponse lastAttemptStatus;
 
     public AttemptStatusResponse getLastAttemptStatus() {
         return this.lastAttemptStatus;
@@ -124,7 +124,6 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
             this.lastAttemptStatus = Objects.requireNonNull(lastAttemptStatus);
             return this;
         }
-
         public TaskStatusResponse build() {
             return new TaskStatusResponse(attemptDispatchCount, attemptResponseCount, firstAttemptStatus, lastAttemptStatus);
         }

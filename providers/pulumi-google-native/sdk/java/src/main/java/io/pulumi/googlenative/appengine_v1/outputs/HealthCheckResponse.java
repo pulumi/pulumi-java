@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -68,49 +68,49 @@ public final class HealthCheckResponse {
     /**
      * Interval between health checks.
      * 
-     */
+    */
     public String getCheckInterval() {
         return this.checkInterval;
     }
     /**
      * Whether to explicitly disable health checks for this instance.
      * 
-     */
+    */
     public Boolean getDisableHealthCheck() {
         return this.disableHealthCheck;
     }
     /**
      * Number of consecutive successful health checks required before receiving traffic.
      * 
-     */
+    */
     public Integer getHealthyThreshold() {
         return this.healthyThreshold;
     }
     /**
      * Host header to send when performing an HTTP health check. Example: "myapp.appspot.com"
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * Number of consecutive failed health checks required before an instance is restarted.
      * 
-     */
+    */
     public Integer getRestartThreshold() {
         return this.restartThreshold;
     }
     /**
      * Time before the health check is considered failed.
      * 
-     */
+    */
     public String getTimeout() {
         return this.timeout;
     }
     /**
      * Number of consecutive failed health checks required before removing traffic.
      * 
-     */
+    */
     public Integer getUnhealthyThreshold() {
         return this.unhealthyThreshold;
     }
@@ -181,7 +181,6 @@ public final class HealthCheckResponse {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
-
         public HealthCheckResponse build() {
             return new HealthCheckResponse(checkInterval, disableHealthCheck, healthyThreshold, host, restartThreshold, timeout, unhealthyThreshold);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterStatusEgressPolicy;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterStatusIngressPolicy;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterStatusVpcAccessibleServices;
@@ -99,7 +99,7 @@ public final class ServicePerimeterStatus {
      * be empty.
      * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
      * 
-     */
+    */
     public List<String> getAccessLevels() {
         return this.accessLevels == null ? List.of() : this.accessLevels;
     }
@@ -110,7 +110,7 @@ public final class ServicePerimeterStatus {
      * a perimeter bridge.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimeterStatusEgressPolicy> getEgressPolicies() {
         return this.egressPolicies == null ? List.of() : this.egressPolicies;
     }
@@ -121,7 +121,7 @@ public final class ServicePerimeterStatus {
      * Must be empty for a perimeter bridge.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimeterStatusIngressPolicy> getIngressPolicies() {
         return this.ingressPolicies == null ? List.of() : this.ingressPolicies;
     }
@@ -132,7 +132,7 @@ public final class ServicePerimeterStatus {
      * then this `EgressTo` rule will authorize access to all resources outside
      * the perimeter.
      * 
-     */
+    */
     public List<String> getResources() {
         return this.resources == null ? List.of() : this.resources;
     }
@@ -143,7 +143,7 @@ public final class ServicePerimeterStatus {
      * buckets inside the perimeter must meet the perimeter's access
      * restrictions.
      * 
-     */
+    */
     public List<String> getRestrictedServices() {
         return this.restrictedServices == null ? List.of() : this.restrictedServices;
     }
@@ -152,7 +152,7 @@ public final class ServicePerimeterStatus {
      * Perimeter.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimeterStatusVpcAccessibleServices> getVpcAccessibleServices() {
         return Optional.ofNullable(this.vpcAccessibleServices);
     }
@@ -216,7 +216,6 @@ public final class ServicePerimeterStatus {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
         }
-
         public ServicePerimeterStatus build() {
             return new ServicePerimeterStatus(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }

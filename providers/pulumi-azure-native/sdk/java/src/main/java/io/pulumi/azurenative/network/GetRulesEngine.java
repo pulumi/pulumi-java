@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetRulesEngineArgs;
 import io.pulumi.azurenative.network.outputs.GetRulesEngineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRulesEngine {
-/**
- * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
+    private GetRulesEngine() {}
+    public interface BuilderApplicator {
+        public void apply(GetRulesEngineArgs.Builder a);
+    }
+    private static GetRulesEngineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRulesEngineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
  * API Version: 2020-05-01.
  * 
- *
- * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
+     *
+     * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
  * 
- */
+     */
+    public static CompletableFuture<GetRulesEngineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
+     * 
+     */
     public static CompletableFuture<GetRulesEngineResult> invokeAsync(GetRulesEngineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRulesEngine", TypeShape.of(GetRulesEngineResult.class), args == null ? GetRulesEngineArgs.Empty : args, Utilities.withVersion(options));
     }

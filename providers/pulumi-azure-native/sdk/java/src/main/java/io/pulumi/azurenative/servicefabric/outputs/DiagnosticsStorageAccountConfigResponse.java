@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class DiagnosticsStorageAccountConfigResponse {
     /**
      * The blob endpoint of the azure storage account.
      * 
-     */
+    */
     public String getBlobEndpoint() {
         return this.blobEndpoint;
     }
     /**
      * The protected diagnostics storage key name.
      * 
-     */
+    */
     public String getProtectedAccountKeyName() {
         return this.protectedAccountKeyName;
     }
     /**
      * The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
      * 
-     */
+    */
     public Optional<String> getProtectedAccountKeyName2() {
         return Optional.ofNullable(this.protectedAccountKeyName2);
     }
     /**
      * The queue endpoint of the azure storage account.
      * 
-     */
+    */
     public String getQueueEndpoint() {
         return this.queueEndpoint;
     }
     /**
      * The Azure storage account name.
      * 
-     */
+    */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
     /**
      * The table endpoint of the azure storage account.
      * 
-     */
+    */
     public String getTableEndpoint() {
         return this.tableEndpoint;
     }
@@ -160,7 +160,6 @@ public final class DiagnosticsStorageAccountConfigResponse {
             this.tableEndpoint = Objects.requireNonNull(tableEndpoint);
             return this;
         }
-
         public DiagnosticsStorageAccountConfigResponse build() {
             return new DiagnosticsStorageAccountConfigResponse(blobEndpoint, protectedAccountKeyName, protectedAccountKeyName2, queueEndpoint, storageAccountName, tableEndpoint);
         }

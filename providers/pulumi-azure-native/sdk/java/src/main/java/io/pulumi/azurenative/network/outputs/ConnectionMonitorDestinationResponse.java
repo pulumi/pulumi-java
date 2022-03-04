@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ConnectionMonitorDestinationResponse {
     /**
      * Address of the connection monitor destination (IP or domain name).
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The destination port used by connection monitor.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The ID of the resource used as the destination by connection monitor.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -98,7 +98,6 @@ public final class ConnectionMonitorDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public ConnectionMonitorDestinationResponse build() {
             return new ConnectionMonitorDestinationResponse(address, port, resourceId);
         }

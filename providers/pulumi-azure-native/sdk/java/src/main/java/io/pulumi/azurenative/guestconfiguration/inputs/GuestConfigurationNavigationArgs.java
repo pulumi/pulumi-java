@@ -9,7 +9,7 @@ import io.pulumi.azurenative.guestconfiguration.inputs.ConfigurationParameterArg
 import io.pulumi.azurenative.guestconfiguration.inputs.ConfigurationSettingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="assignmentType")
-    private final @Nullable Input<Either<String,AssignmentType>> assignmentType;
+      private final @Nullable Input<Either<String,AssignmentType>> assignmentType;
 
     public Input<Either<String,AssignmentType>> getAssignmentType() {
         return this.assignmentType == null ? Input.empty() : this.assignmentType;
@@ -40,7 +40,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="configurationParameter")
-    private final @Nullable Input<List<ConfigurationParameterArgs>> configurationParameter;
+      private final @Nullable Input<List<ConfigurationParameterArgs>> configurationParameter;
 
     public Input<List<ConfigurationParameterArgs>> getConfigurationParameter() {
         return this.configurationParameter == null ? Input.empty() : this.configurationParameter;
@@ -51,7 +51,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="configurationProtectedParameter")
-    private final @Nullable Input<List<ConfigurationParameterArgs>> configurationProtectedParameter;
+      private final @Nullable Input<List<ConfigurationParameterArgs>> configurationProtectedParameter;
 
     public Input<List<ConfigurationParameterArgs>> getConfigurationProtectedParameter() {
         return this.configurationProtectedParameter == null ? Input.empty() : this.configurationProtectedParameter;
@@ -62,7 +62,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="configurationSetting")
-    private final @Nullable Input<ConfigurationSettingArgs> configurationSetting;
+      private final @Nullable Input<ConfigurationSettingArgs> configurationSetting;
 
     public Input<ConfigurationSettingArgs> getConfigurationSetting() {
         return this.configurationSetting == null ? Input.empty() : this.configurationSetting;
@@ -73,7 +73,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="contentHash")
-    private final @Nullable Input<String> contentHash;
+      private final @Nullable Input<String> contentHash;
 
     public Input<String> getContentHash() {
         return this.contentHash == null ? Input.empty() : this.contentHash;
@@ -84,7 +84,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="contentUri")
-    private final @Nullable Input<String> contentUri;
+      private final @Nullable Input<String> contentUri;
 
     public Input<String> getContentUri() {
         return this.contentUri == null ? Input.empty() : this.contentUri;
@@ -95,7 +95,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Either<String,Kind>> kind;
+      private final @Nullable Input<Either<String,Kind>> kind;
 
     public Input<Either<String,Kind>> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -106,7 +106,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -117,7 +117,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -281,7 +281,6 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public GuestConfigurationNavigationArgs build() {
             return new GuestConfigurationNavigationArgs(assignmentType, configurationParameter, configurationProtectedParameter, configurationSetting, contentHash, contentUri, kind, name, version);
         }

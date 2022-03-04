@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.TarGZipReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.TarReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZipDeflateReadSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +38,7 @@ public final class BinaryReadSettingsResponse {
     /**
      * Compression settings.
      * 
-     */
+    */
     public Optional<Object> getCompressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
@@ -46,7 +46,7 @@ public final class BinaryReadSettingsResponse {
      * The read setting type.
      * Expected value is 'BinaryReadSettings'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -82,7 +82,6 @@ public final class BinaryReadSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BinaryReadSettingsResponse build() {
             return new BinaryReadSettingsResponse(compressionProperties, type);
         }

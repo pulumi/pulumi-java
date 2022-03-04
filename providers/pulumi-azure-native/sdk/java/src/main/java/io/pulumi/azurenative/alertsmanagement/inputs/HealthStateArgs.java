@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 import io.pulumi.azurenative.alertsmanagement.enums.HealthStateName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthStateName", required=true)
-    private final Input<Either<String,HealthStateName>> healthStateName;
+      private final Input<Either<String,HealthStateName>> healthStateName;
 
     public Input<Either<String,HealthStateName>> getHealthStateName() {
         return this.healthStateName;
@@ -36,7 +36,7 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-    private final Input<Double> severity;
+      private final Input<Double> severity;
 
     public Input<Double> getSeverity() {
         return this.severity;
@@ -95,7 +95,6 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
             this.severity = Input.of(Objects.requireNonNull(severity));
             return this;
         }
-
         public HealthStateArgs build() {
             return new HealthStateArgs(healthStateName, severity);
         }

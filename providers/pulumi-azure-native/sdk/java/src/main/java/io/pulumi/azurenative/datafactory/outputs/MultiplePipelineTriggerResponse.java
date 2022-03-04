@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -58,28 +58,28 @@ public final class MultiplePipelineTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Trigger description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Pipelines that need to be started.
      * 
-     */
+    */
     public List<TriggerPipelineReferenceResponse> getPipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-     */
+    */
     public String getRuntimeState() {
         return this.runtimeState;
     }
@@ -87,7 +87,7 @@ public final class MultiplePipelineTriggerResponse {
      * Trigger type.
      * Expected value is 'MultiplePipelineTrigger'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -144,7 +144,6 @@ public final class MultiplePipelineTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MultiplePipelineTriggerResponse build() {
             return new MultiplePipelineTriggerResponse(annotations, description, pipelines, runtimeState, type);
         }

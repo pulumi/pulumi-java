@@ -5,7 +5,7 @@ package io.pulumi.awsnative.panorama.outputs;
 
 import io.pulumi.awsnative.panorama.outputs.PackageStorageLocation;
 import io.pulumi.awsnative.panorama.outputs.PackageTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -103,7 +103,6 @@ public final class GetPackageResult {
             this.tags = tags;
             return this;
         }
-
         public GetPackageResult build() {
             return new GetPackageResult(arn, createdTime, packageId, storageLocation, tags);
         }

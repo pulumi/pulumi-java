@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class KeyPolicyResponse {
     /**
      * The key expiration period in days.
      * 
-     */
+    */
     public Integer getKeyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
     }
@@ -52,7 +52,6 @@ public final class KeyPolicyResponse {
             this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays);
             return this;
         }
-
         public KeyPolicyResponse build() {
             return new KeyPolicyResponse(keyExpirationPeriodInDays);
         }

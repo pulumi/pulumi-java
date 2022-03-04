@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="drainingTimeoutSec")
-    private final @Nullable Input<Integer> drainingTimeoutSec;
+      private final @Nullable Input<Integer> drainingTimeoutSec;
 
     public Input<Integer> getDrainingTimeoutSec() {
         return this.drainingTimeoutSec == null ? Input.empty() : this.drainingTimeoutSec;
@@ -66,7 +66,6 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
             this.drainingTimeoutSec = Input.ofNullable(drainingTimeoutSec);
             return this;
         }
-
         public ConnectionDrainingArgs build() {
             return new ConnectionDrainingArgs(drainingTimeoutSec);
         }

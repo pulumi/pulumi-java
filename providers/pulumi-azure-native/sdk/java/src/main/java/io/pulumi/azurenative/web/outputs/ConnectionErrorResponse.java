@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class ConnectionErrorResponse {
     /**
      * Code of the status
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Resource ETag
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Description of the status
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -203,7 +203,6 @@ public final class ConnectionErrorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ConnectionErrorResponse build() {
             return new ConnectionErrorResponse(code, etag, id, location, message, name, tags, type);
         }

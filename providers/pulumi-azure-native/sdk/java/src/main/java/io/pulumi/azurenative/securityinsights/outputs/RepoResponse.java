@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class RepoResponse {
     /**
      * Array of branches.
      * 
-     */
+    */
     public List<String> getBranches() {
         return this.branches == null ? List.of() : this.branches;
     }
     /**
      * The name of the repository.
      * 
-     */
+    */
     public Optional<String> getFullName() {
         return Optional.ofNullable(this.fullName);
     }
     /**
      * The url to access the repository.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
@@ -98,7 +98,6 @@ public final class RepoResponse {
             this.url = url;
             return this;
         }
-
         public RepoResponse build() {
             return new RepoResponse(branches, fullName, url);
         }

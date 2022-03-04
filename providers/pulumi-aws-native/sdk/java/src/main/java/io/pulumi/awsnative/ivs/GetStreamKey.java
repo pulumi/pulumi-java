@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ivs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ivs.inputs.GetStreamKeyArgs;
 import io.pulumi.awsnative.ivs.outputs.GetStreamKeyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStreamKey {
-/**
- * Resource Type definition for AWS::IVS::StreamKey
+    private GetStreamKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetStreamKeyArgs.Builder a);
+    }
+    private static GetStreamKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStreamKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::IVS::StreamKey
  * 
- */
+     */
+    public static CompletableFuture<GetStreamKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::IVS::StreamKey
+     * 
+     */
     public static CompletableFuture<GetStreamKeyResult> invokeAsync(GetStreamKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getStreamKey", TypeShape.of(GetStreamKeyResult.class), args == null ? GetStreamKeyArgs.Empty : args, Utilities.withVersion(options));
     }

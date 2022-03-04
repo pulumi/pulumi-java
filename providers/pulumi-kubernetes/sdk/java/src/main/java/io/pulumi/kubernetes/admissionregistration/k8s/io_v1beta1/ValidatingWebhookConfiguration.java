@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.ValidatingWebhookConfigurationArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs.ValidatingWebhook;
@@ -79,6 +79,37 @@ public class ValidatingWebhookConfiguration extends io.pulumi.resources.CustomRe
         return this.webhooks;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ValidatingWebhookConfigurationArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.ValidatingWebhookConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.ValidatingWebhookConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ValidatingWebhookConfiguration(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ValidatingWebhookConfiguration(String name) {
+        this(name, ValidatingWebhookConfigurationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ValidatingWebhookConfiguration(String name, @Nullable ValidatingWebhookConfigurationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

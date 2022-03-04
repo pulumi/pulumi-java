@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.MaintenanceExclusionOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class TimeWindowResponse {
     /**
      * The time that the window ends. The end time should take place after the start time.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * MaintenanceExclusionOptions provides maintenance exclusion related options.
      * 
-     */
+    */
     public MaintenanceExclusionOptionsResponse getMaintenanceExclusionOptions() {
         return this.maintenanceExclusionOptions;
     }
     /**
      * The time that the window first starts.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -96,7 +96,6 @@ public final class TimeWindowResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public TimeWindowResponse build() {
             return new TimeWindowResponse(endTime, maintenanceExclusionOptions, startTime);
         }

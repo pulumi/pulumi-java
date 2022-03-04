@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CloudServiceRoleProfilePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CloudServiceRoleProfileResponse {
     /**
      * List of roles for the cloud service.
      * 
-     */
+    */
     public List<CloudServiceRoleProfilePropertiesResponse> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
@@ -54,7 +54,6 @@ public final class CloudServiceRoleProfileResponse {
             this.roles = roles;
             return this;
         }
-
         public CloudServiceRoleProfileResponse build() {
             return new CloudServiceRoleProfileResponse(roles);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="privateIpAddress", required=true)
-    private final String privateIpAddress;
+      private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
@@ -32,7 +32,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rdpAuthority", required=true)
-    private final String rdpAuthority;
+      private final String rdpAuthority;
 
     public String getRdpAuthority() {
         return this.rdpAuthority;
@@ -43,7 +43,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sshAuthority", required=true)
-    private final String sshAuthority;
+      private final String sshAuthority;
 
     public String getSshAuthority() {
         return this.sshAuthority;
@@ -54,7 +54,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -123,7 +123,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(privateIpAddress, rdpAuthority, sshAuthority, username);
         }

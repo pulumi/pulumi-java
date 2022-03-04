@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotevents.enums.DetectorModelEvaluationMethod;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelDefinitionArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
     public static final DetectorModelArgs Empty = new DetectorModelArgs();
 
     @InputImport(name="detectorModelDefinition", required=true)
-    private final Input<DetectorModelDefinitionArgs> detectorModelDefinition;
+      private final Input<DetectorModelDefinitionArgs> detectorModelDefinition;
 
     public Input<DetectorModelDefinitionArgs> getDetectorModelDefinition() {
         return this.detectorModelDefinition;
@@ -30,7 +30,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectorModelDescription")
-    private final @Nullable Input<String> detectorModelDescription;
+      private final @Nullable Input<String> detectorModelDescription;
 
     public Input<String> getDetectorModelDescription() {
         return this.detectorModelDescription == null ? Input.empty() : this.detectorModelDescription;
@@ -41,7 +41,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectorModelName")
-    private final @Nullable Input<String> detectorModelName;
+      private final @Nullable Input<String> detectorModelName;
 
     public Input<String> getDetectorModelName() {
         return this.detectorModelName == null ? Input.empty() : this.detectorModelName;
@@ -52,7 +52,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluationMethod")
-    private final @Nullable Input<DetectorModelEvaluationMethod> evaluationMethod;
+      private final @Nullable Input<DetectorModelEvaluationMethod> evaluationMethod;
 
     public Input<DetectorModelEvaluationMethod> getEvaluationMethod() {
         return this.evaluationMethod == null ? Input.empty() : this.evaluationMethod;
@@ -65,7 +65,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -76,7 +76,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -89,7 +89,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DetectorModelTagArgs>> tags;
+      private final @Nullable Input<List<DetectorModelTagArgs>> tags;
 
     public Input<List<DetectorModelTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -223,7 +223,6 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DetectorModelArgs build() {
             return new DetectorModelArgs(detectorModelDefinition, detectorModelDescription, detectorModelName, evaluationMethod, key, roleArn, tags);
         }

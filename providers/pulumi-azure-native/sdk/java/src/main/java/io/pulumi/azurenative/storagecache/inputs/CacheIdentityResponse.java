@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CacheIdentityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -34,7 +34,7 @@ public final class CacheIdentityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -45,7 +45,7 @@ public final class CacheIdentityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -104,7 +104,6 @@ public final class CacheIdentityResponse extends io.pulumi.resources.InvokeArgs 
             this.type = type;
             return this;
         }
-
         public CacheIdentityResponse build() {
             return new CacheIdentityResponse(principalId, tenantId, type);
         }

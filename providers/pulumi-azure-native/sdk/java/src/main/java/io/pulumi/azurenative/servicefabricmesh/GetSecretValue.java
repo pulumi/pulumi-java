@@ -6,21 +6,41 @@ package io.pulumi.azurenative.servicefabricmesh;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicefabricmesh.inputs.GetSecretValueArgs;
 import io.pulumi.azurenative.servicefabricmesh.outputs.GetSecretValueResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecretValue {
-/**
- * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
+    private GetSecretValue() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecretValueArgs.Builder a);
+    }
+    private static GetSecretValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecretValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
  * API Version: 2018-09-01-preview.
  * 
- *
- * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
+     *
+     * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
  * 
- */
+     */
+    public static CompletableFuture<GetSecretValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
+     * API Version: 2018-09-01-preview.
+     * 
+     *
+         * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
+     * 
+     */
     public static CompletableFuture<GetSecretValueResult> invokeAsync(GetSecretValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getSecretValue", TypeShape.of(GetSecretValueResult.class), args == null ? GetSecretValueArgs.Empty : args, Utilities.withVersion(options));
     }

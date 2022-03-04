@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.search.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
     /**
      * A description of any extra actions that may be required.
      * 
-     */
+    */
     public Optional<String> getActionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
      * The description for the private link service connection state.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -97,7 +97,6 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
             this.status = status;
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState build() {
             return new PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState(actionsRequired, description, status);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SourcePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class SourceTriggerResponse {
     /**
      * The name of the trigger.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The properties that describes the source(code) for the task.
      * 
-     */
+    */
     public SourcePropertiesResponse getSourceRepository() {
         return this.sourceRepository;
     }
     /**
      * The source event corresponding to the trigger.
      * 
-     */
+    */
     public List<String> getSourceTriggerEvents() {
         return this.sourceTriggerEvents;
     }
     /**
      * The current status of trigger.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -120,7 +120,6 @@ public final class SourceTriggerResponse {
             this.status = status;
             return this;
         }
-
         public SourceTriggerResponse build() {
             return new SourceTriggerResponse(name, sourceRepository, sourceTriggerEvents, status);
         }

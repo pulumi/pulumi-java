@@ -20,7 +20,7 @@ import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageLocationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpLocationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -110,63 +110,63 @@ public final class BinaryDatasetResponse {
     /**
      * List of tags that can be used for describing the Dataset.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The data compression method used for the binary dataset.
      * 
-     */
+    */
     public Optional<DatasetCompressionResponse> getCompression() {
         return Optional.ofNullable(this.compression);
     }
     /**
      * Dataset description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-     */
+    */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The location of the Binary storage.
      * 
-     */
+    */
     public Object getLocation() {
         return this.location;
     }
     /**
      * Parameters for dataset.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-     */
+    */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-     */
+    */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
     }
@@ -174,7 +174,7 @@ public final class BinaryDatasetResponse {
      * Type of dataset.
      * Expected value is 'Binary'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -266,7 +266,6 @@ public final class BinaryDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BinaryDatasetResponse build() {
             return new BinaryDatasetResponse(annotations, compression, description, folder, linkedServiceName, location, parameters, schema, structure, type);
         }

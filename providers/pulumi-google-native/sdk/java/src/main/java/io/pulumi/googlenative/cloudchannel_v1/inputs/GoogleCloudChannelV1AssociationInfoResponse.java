@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="baseEntitlement", required=true)
-    private final String baseEntitlement;
+      private final String baseEntitlement;
 
     public String getBaseEntitlement() {
         return this.baseEntitlement;
@@ -59,7 +59,6 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends io.pulumi
             this.baseEntitlement = Objects.requireNonNull(baseEntitlement);
             return this;
         }
-
         public GoogleCloudChannelV1AssociationInfoResponse build() {
             return new GoogleCloudChannelV1AssociationInfoResponse(baseEntitlement);
         }

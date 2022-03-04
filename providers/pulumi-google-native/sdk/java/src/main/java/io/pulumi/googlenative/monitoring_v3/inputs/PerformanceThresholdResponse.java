@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.BasicSliResponse;
 import io.pulumi.googlenative.monitoring_v3.inputs.RequestBasedSliResponse;
 import java.lang.Double;
@@ -23,7 +23,7 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="basicSliPerformance", required=true)
-    private final BasicSliResponse basicSliPerformance;
+      private final BasicSliResponse basicSliPerformance;
 
     public BasicSliResponse getBasicSliPerformance() {
         return this.basicSliPerformance;
@@ -34,7 +34,7 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="performance", required=true)
-    private final RequestBasedSliResponse performance;
+      private final RequestBasedSliResponse performance;
 
     public RequestBasedSliResponse getPerformance() {
         return this.performance;
@@ -45,7 +45,7 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Double threshold;
+      private final Double threshold;
 
     public Double getThreshold() {
         return this.threshold;
@@ -104,7 +104,6 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public PerformanceThresholdResponse build() {
             return new PerformanceThresholdResponse(basicSliPerformance, performance, threshold);
         }

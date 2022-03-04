@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpeUri", required=true)
-    private final Input<String> cpeUri;
+      private final Input<String> cpeUri;
 
     public Input<String> getCpeUri() {
         return this.cpeUri;
@@ -35,7 +35,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -46,7 +46,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<VersionArgs> version;
+      private final @Nullable Input<VersionArgs> version;
 
     public Input<VersionArgs> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -120,7 +120,6 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public LocationArgs build() {
             return new LocationArgs(cpeUri, path, version);
         }

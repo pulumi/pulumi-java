@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAgeSeconds")
-    private final @Nullable Input<Integer> maxAgeSeconds;
+      private final @Nullable Input<Integer> maxAgeSeconds;
 
     public Input<Integer> getMaxAgeSeconds() {
         return this.maxAgeSeconds == null ? Input.empty() : this.maxAgeSeconds;
@@ -32,7 +32,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<List<String>> method;
+      private final @Nullable Input<List<String>> method;
 
     public Input<List<String>> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -43,7 +43,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origin")
-    private final @Nullable Input<List<String>> origin;
+      private final @Nullable Input<List<String>> origin;
 
     public Input<List<String>> getOrigin() {
         return this.origin == null ? Input.empty() : this.origin;
@@ -54,7 +54,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseHeader")
-    private final @Nullable Input<List<String>> responseHeader;
+      private final @Nullable Input<List<String>> responseHeader;
 
     public Input<List<String>> getResponseHeader() {
         return this.responseHeader == null ? Input.empty() : this.responseHeader;
@@ -143,7 +143,6 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
             this.responseHeader = Input.ofNullable(responseHeader);
             return this;
         }
-
         public BucketCorsItemArgs build() {
             return new BucketCorsItemArgs(maxAgeSeconds, method, origin, responseHeader);
         }

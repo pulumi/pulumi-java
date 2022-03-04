@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class IPRuleResponse {
     /**
      * The action of IP ACL rule.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
      * 
-     */
+    */
     public String getIPAddressOrRange() {
         return this.iPAddressOrRange;
     }
@@ -76,7 +76,6 @@ public final class IPRuleResponse {
             this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange);
             return this;
         }
-
         public IPRuleResponse build() {
             return new IPRuleResponse(action, iPAddressOrRange);
         }

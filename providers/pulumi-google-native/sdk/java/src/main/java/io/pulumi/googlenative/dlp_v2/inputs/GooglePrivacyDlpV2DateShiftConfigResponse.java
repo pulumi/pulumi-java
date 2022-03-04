@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="context", required=true)
-    private final GooglePrivacyDlpV2FieldIdResponse context;
+      private final GooglePrivacyDlpV2FieldIdResponse context;
 
     public GooglePrivacyDlpV2FieldIdResponse getContext() {
         return this.context;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="cryptoKey", required=true)
-    private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
+      private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
     public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
         return this.cryptoKey;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="lowerBoundDays", required=true)
-    private final Integer lowerBoundDays;
+      private final Integer lowerBoundDays;
 
     public Integer getLowerBoundDays() {
         return this.lowerBoundDays;
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="upperBoundDays", required=true)
-    private final Integer upperBoundDays;
+      private final Integer upperBoundDays;
 
     public Integer getUpperBoundDays() {
         return this.upperBoundDays;
@@ -125,7 +125,6 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends io.pulumi.r
             this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
             return this;
         }
-
         public GooglePrivacyDlpV2DateShiftConfigResponse build() {
             return new GooglePrivacyDlpV2DateShiftConfigResponse(context, cryptoKey, lowerBoundDays, upperBoundDays);
         }

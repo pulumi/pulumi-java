@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.healthcare.outputs.FhirStoreStreamConfigBigqueryDestination;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +46,7 @@ public final class FhirStoreStreamConfig {
      * See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
      * Structure is documented below.
      * 
-     */
+    */
     public FhirStoreStreamConfigBigqueryDestination getBigqueryDestination() {
         return this.bigqueryDestination;
     }
@@ -55,7 +55,7 @@ public final class FhirStoreStreamConfig {
      * https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
      * an empty list as an intent to stream all the supported resource types in this FHIR store.
      * 
-     */
+    */
     public List<String> getResourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
@@ -91,7 +91,6 @@ public final class FhirStoreStreamConfig {
             this.resourceTypes = resourceTypes;
             return this;
         }
-
         public FhirStoreStreamConfig build() {
             return new FhirStoreStreamConfig(bigqueryDestination, resourceTypes);
         }

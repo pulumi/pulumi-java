@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GatewayCustomDomainPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable Input<String> thumbprint;
+      private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
@@ -66,7 +66,6 @@ public final class GatewayCustomDomainPropertiesArgs extends io.pulumi.resources
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }
-
         public GatewayCustomDomainPropertiesArgs build() {
             return new GatewayCustomDomainPropertiesArgs(thumbprint);
         }

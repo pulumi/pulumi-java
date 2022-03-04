@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ManagedRuleOverrideResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ManagedRuleGroupOverrideResponse {
     /**
      * Describes the managed rule group within the rule set to override
      * 
-     */
+    */
     public String getRuleGroupName() {
         return this.ruleGroupName;
     }
     /**
      * List of rules that will be disabled. If none specified, all rules in the group will be disabled.
      * 
-     */
+    */
     public List<ManagedRuleOverrideResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
@@ -77,7 +77,6 @@ public final class ManagedRuleGroupOverrideResponse {
             this.rules = rules;
             return this;
         }
-
         public ManagedRuleGroupOverrideResponse build() {
             return new ManagedRuleGroupOverrideResponse(ruleGroupName, rules);
         }

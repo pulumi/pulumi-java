@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight;
 
 import io.pulumi.azurenative.hdinsight.inputs.ApplicationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-    private final @Nullable Input<String> applicationName;
+      private final @Nullable Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName == null ? Input.empty() : this.applicationName;
@@ -32,7 +32,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -43,7 +43,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ApplicationPropertiesArgs> properties;
+      private final @Nullable Input<ApplicationPropertiesArgs> properties;
 
     public Input<ApplicationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -54,7 +54,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ApplicationArgs build() {
             return new ApplicationArgs(applicationName, clusterName, properties, resourceGroupName, tags);
         }

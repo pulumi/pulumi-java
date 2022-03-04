@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class DashboardDecimalParameter {
     /**
      * <p>A display name for the decimal parameter.</p>
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * <p>The values for the decimal parameter.</p>
      * 
-     */
+    */
     public List<Double> getValues() {
         return this.values;
     }
@@ -76,7 +76,6 @@ public final class DashboardDecimalParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public DashboardDecimalParameter build() {
             return new DashboardDecimalParameter(name, values);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cassandra.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetKeyspaceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyspaceName", required=true)
-    private final String keyspaceName;
+      private final String keyspaceName;
 
     public String getKeyspaceName() {
         return this.keyspaceName;
@@ -55,7 +55,6 @@ public final class GetKeyspaceArgs extends io.pulumi.resources.InvokeArgs {
             this.keyspaceName = Objects.requireNonNull(keyspaceName);
             return this;
         }
-
         public GetKeyspaceArgs build() {
             return new GetKeyspaceArgs(keyspaceName);
         }

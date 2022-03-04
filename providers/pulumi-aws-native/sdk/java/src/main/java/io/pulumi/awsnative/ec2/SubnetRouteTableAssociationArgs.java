@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class SubnetRouteTableAssociationArgs extends io.pulumi.resources.R
     public static final SubnetRouteTableAssociationArgs Empty = new SubnetRouteTableAssociationArgs();
 
     @InputImport(name="routeTableId", required=true)
-    private final Input<String> routeTableId;
+      private final Input<String> routeTableId;
 
     public Input<String> getRouteTableId() {
         return this.routeTableId;
     }
 
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -80,7 +80,6 @@ public final class SubnetRouteTableAssociationArgs extends io.pulumi.resources.R
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public SubnetRouteTableAssociationArgs build() {
             return new SubnetRouteTableAssociationArgs(routeTableId, subnetId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AutomationActionLogicAppResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="actionType", required=true)
-    private final String actionType;
+      private final String actionType;
 
     public String getActionType() {
         return this.actionType;
@@ -35,7 +35,7 @@ public final class AutomationActionLogicAppResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logicAppResourceId")
-    private final @Nullable String logicAppResourceId;
+      private final @Nullable String logicAppResourceId;
 
     public Optional<String> getLogicAppResourceId() {
         return this.logicAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.logicAppResourceId);
@@ -46,7 +46,7 @@ public final class AutomationActionLogicAppResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable String uri;
+      private final @Nullable String uri;
 
     public Optional<String> getUri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
@@ -105,7 +105,6 @@ public final class AutomationActionLogicAppResponse extends io.pulumi.resources.
             this.uri = uri;
             return this;
         }
-
         public AutomationActionLogicAppResponse build() {
             return new AutomationActionLogicAppResponse(actionType, logicAppResourceId, uri);
         }

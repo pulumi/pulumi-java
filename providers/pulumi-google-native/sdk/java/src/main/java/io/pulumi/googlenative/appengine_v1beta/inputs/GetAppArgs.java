@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAppArgs Empty = new GetAppArgs();
 
     @InputImport(name="appId", required=true)
-    private final String appId;
+      private final String appId;
 
     public String getAppId() {
         return this.appId;
@@ -51,7 +51,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public GetAppArgs build() {
             return new GetAppArgs(appId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class GetNamespaceVirtualNetworkRuleResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Resource ID of Virtual Network Subnet
      * 
-     */
+    */
     public Optional<String> getVirtualNetworkSubnetId() {
         return Optional.ofNullable(this.virtualNetworkSubnetId);
     }
@@ -118,7 +118,6 @@ public final class GetNamespaceVirtualNetworkRuleResult {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
-
         public GetNamespaceVirtualNetworkRuleResult build() {
             return new GetNamespaceVirtualNetworkRuleResult(id, name, type, virtualNetworkSubnetId);
         }

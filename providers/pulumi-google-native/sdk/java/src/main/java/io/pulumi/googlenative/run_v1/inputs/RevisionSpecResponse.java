@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.ContainerResponse;
 import io.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceResponse;
 import io.pulumi.googlenative.run_v1.inputs.VolumeResponse;
@@ -27,7 +27,7 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="containerConcurrency", required=true)
-    private final Integer containerConcurrency;
+      private final Integer containerConcurrency;
 
     public Integer getContainerConcurrency() {
         return this.containerConcurrency;
@@ -38,7 +38,7 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="containers", required=true)
-    private final List<ContainerResponse> containers;
+      private final List<ContainerResponse> containers;
 
     public List<ContainerResponse> getContainers() {
         return this.containers;
@@ -49,7 +49,7 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableServiceLinks", required=true)
-    private final Boolean enableServiceLinks;
+      private final Boolean enableServiceLinks;
 
     public Boolean getEnableServiceLinks() {
         return this.enableServiceLinks;
@@ -60,7 +60,7 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imagePullSecrets", required=true)
-    private final List<LocalObjectReferenceResponse> imagePullSecrets;
+      private final List<LocalObjectReferenceResponse> imagePullSecrets;
 
     public List<LocalObjectReferenceResponse> getImagePullSecrets() {
         return this.imagePullSecrets;
@@ -71,7 +71,7 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceAccountName", required=true)
-    private final String serviceAccountName;
+      private final String serviceAccountName;
 
     public String getServiceAccountName() {
         return this.serviceAccountName;
@@ -82,14 +82,14 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeoutSeconds", required=true)
-    private final Integer timeoutSeconds;
+      private final Integer timeoutSeconds;
 
     public Integer getTimeoutSeconds() {
         return this.timeoutSeconds;
     }
 
     @InputImport(name="volumes", required=true)
-    private final List<VolumeResponse> volumes;
+      private final List<VolumeResponse> volumes;
 
     public List<VolumeResponse> getVolumes() {
         return this.volumes;
@@ -188,7 +188,6 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public RevisionSpecResponse build() {
             return new RevisionSpecResponse(containerConcurrency, containers, enableServiceLinks, imagePullSecrets, serviceAccountName, timeoutSeconds, volumes);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.BackupSchedule;
 import io.pulumi.azurenative.web.inputs.DatabaseBackupSetting;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="backupId", required=true)
-    private final String backupId;
+      private final String backupId;
 
     public String getBackupId() {
         return this.backupId;
@@ -34,7 +34,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="backupName")
-    private final @Nullable String backupName;
+      private final @Nullable String backupName;
 
     public Optional<String> getBackupName() {
         return this.backupName == null ? Optional.empty() : Optional.ofNullable(this.backupName);
@@ -45,7 +45,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="backupSchedule")
-    private final @Nullable BackupSchedule backupSchedule;
+      private final @Nullable BackupSchedule backupSchedule;
 
     public Optional<BackupSchedule> getBackupSchedule() {
         return this.backupSchedule == null ? Optional.empty() : Optional.ofNullable(this.backupSchedule);
@@ -56,7 +56,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="databases")
-    private final @Nullable List<DatabaseBackupSetting> databases;
+      private final @Nullable List<DatabaseBackupSetting> databases;
 
     public List<DatabaseBackupSetting> getDatabases() {
         return this.databases == null ? List.of() : this.databases;
@@ -67,7 +67,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -78,7 +78,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+      private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -89,7 +89,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -100,7 +100,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="slot", required=true)
-    private final String slot;
+      private final String slot;
 
     public String getSlot() {
         return this.slot;
@@ -122,7 +122,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="storageAccountUrl", required=true)
-    private final String storageAccountUrl;
+      private final String storageAccountUrl;
 
     public String getStorageAccountUrl() {
         return this.storageAccountUrl;
@@ -251,7 +251,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
             this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
             return this;
         }
-
         public ListWebAppBackupStatusSecretsSlotArgs build() {
             return new ListWebAppBackupStatusSecretsSlotArgs(backupId, backupName, backupSchedule, databases, enabled, kind, name, resourceGroupName, slot, storageAccountUrl);
         }

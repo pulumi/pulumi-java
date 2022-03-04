@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class VpnGatewayIpConfigurationResponse {
     /**
      * The identifier of the IP configuration for a VPN Gateway.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The private IP address of this IP configuration.
      * 
-     */
+    */
     public Optional<String> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * The public IP address of this IP configuration.
      * 
-     */
+    */
     public Optional<String> getPublicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
@@ -97,7 +97,6 @@ public final class VpnGatewayIpConfigurationResponse {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public VpnGatewayIpConfigurationResponse build() {
             return new VpnGatewayIpConfigurationResponse(id, privateIpAddress, publicIpAddress);
         }

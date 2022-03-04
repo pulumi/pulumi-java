@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ClusterProfileResponse {
     /**
      * The domain for the cluster (immutable).
      * 
-     */
+    */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * The pull secret for the cluster (immutable).
      * 
-     */
+    */
     public Optional<String> getPullSecret() {
         return Optional.ofNullable(this.pullSecret);
     }
     /**
      * The ID of the cluster resource group (immutable).
      * 
-     */
+    */
     public Optional<String> getResourceGroupId() {
         return Optional.ofNullable(this.resourceGroupId);
     }
     /**
      * The version of the cluster (immutable).
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -118,7 +118,6 @@ public final class ClusterProfileResponse {
             this.version = version;
             return this;
         }
-
         public ClusterProfileResponse build() {
             return new ClusterProfileResponse(domain, pullSecret, resourceGroupId, version);
         }

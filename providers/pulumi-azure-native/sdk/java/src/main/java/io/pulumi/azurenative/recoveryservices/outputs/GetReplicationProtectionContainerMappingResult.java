@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ProtectionContainerMappingPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class GetReplicationProtectionContainerMappingResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource Location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource Name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The custom data.
      * 
-     */
+    */
     public ProtectionContainerMappingPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetReplicationProtectionContainerMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationProtectionContainerMappingResult build() {
             return new GetReplicationProtectionContainerMappingResult(id, location, name, properties, type);
         }

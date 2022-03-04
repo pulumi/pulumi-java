@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="purviewResourceId")
-    private final @Nullable Input<String> purviewResourceId;
+      private final @Nullable Input<String> purviewResourceId;
 
     public Input<String> getPurviewResourceId() {
         return this.purviewResourceId == null ? Input.empty() : this.purviewResourceId;
@@ -66,7 +66,6 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
             this.purviewResourceId = Input.ofNullable(purviewResourceId);
             return this;
         }
-
         public PurviewConfigurationArgs build() {
             return new PurviewConfigurationArgs(purviewResourceId);
         }

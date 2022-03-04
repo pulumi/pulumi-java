@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class VpnLinkProviderPropertiesResponse {
     /**
      * Name of the link provider.
      * 
-     */
+    */
     public Optional<String> getLinkProviderName() {
         return Optional.ofNullable(this.linkProviderName);
     }
     /**
      * Link speed.
      * 
-     */
+    */
     public Optional<Integer> getLinkSpeedInMbps() {
         return Optional.ofNullable(this.linkSpeedInMbps);
     }
@@ -77,7 +77,6 @@ public final class VpnLinkProviderPropertiesResponse {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
-
         public VpnLinkProviderPropertiesResponse build() {
             return new VpnLinkProviderPropertiesResponse(linkProviderName, linkSpeedInMbps);
         }

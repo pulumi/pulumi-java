@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class BackendProxyContractResponse {
     /**
      * Password to connect to the WebProxy Server
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
     /**
      * Username to connect to the WebProxy server
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -97,7 +97,6 @@ public final class BackendProxyContractResponse {
             this.username = username;
             return this;
         }
-
         public BackendProxyContractResponse build() {
             return new BackendProxyContractResponse(password, url, username);
         }

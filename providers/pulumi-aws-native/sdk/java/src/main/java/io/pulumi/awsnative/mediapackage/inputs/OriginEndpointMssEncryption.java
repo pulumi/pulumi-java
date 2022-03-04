@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProvider;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class OriginEndpointMssEncryption extends io.pulumi.resources.Invok
     public static final OriginEndpointMssEncryption Empty = new OriginEndpointMssEncryption();
 
     @InputImport(name="spekeKeyProvider", required=true)
-    private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
+      private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
     public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {
         return this.spekeKeyProvider;
@@ -55,7 +55,6 @@ public final class OriginEndpointMssEncryption extends io.pulumi.resources.Invok
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public OriginEndpointMssEncryption build() {
             return new OriginEndpointMssEncryption(spekeKeyProvider);
         }

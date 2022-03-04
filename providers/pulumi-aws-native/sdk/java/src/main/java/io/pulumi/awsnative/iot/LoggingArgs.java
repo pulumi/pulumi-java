@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot;
 
 import io.pulumi.awsnative.iot.enums.LoggingDefaultLogLevel;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -30,7 +30,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultLogLevel", required=true)
-    private final Input<LoggingDefaultLogLevel> defaultLogLevel;
+      private final Input<LoggingDefaultLogLevel> defaultLogLevel;
 
     public Input<LoggingDefaultLogLevel> getDefaultLogLevel() {
         return this.defaultLogLevel;
@@ -41,7 +41,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -115,7 +115,6 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public LoggingArgs build() {
             return new LoggingArgs(accountId, defaultLogLevel, roleArn);
         }

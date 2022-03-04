@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gkehub.outputs.FeatureSpecMulticlusteringress;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class FeatureSpec {
      * Multicluster Ingress-specific spec.
      * The `multiclusteringress` block supports:
      * 
-     */
+    */
     public Optional<FeatureSpecMulticlusteringress> getMulticlusteringress() {
         return Optional.ofNullable(this.multiclusteringress);
     }
@@ -56,7 +56,6 @@ public final class FeatureSpec {
             this.multiclusteringress = multiclusteringress;
             return this;
         }
-
         public FeatureSpec build() {
             return new FeatureSpec(multiclusteringress);
         }

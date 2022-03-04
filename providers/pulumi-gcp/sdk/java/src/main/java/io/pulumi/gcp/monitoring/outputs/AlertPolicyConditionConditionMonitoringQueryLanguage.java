@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionMonitoringQueryLanguageTrigger;
 import java.lang.String;
 import java.util.Objects;
@@ -77,14 +77,14 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      * that unhealthy states are detected and
      * alerted on quickly.
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }
     /**
      * Monitoring Query Language query that outputs a boolean stream.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
@@ -99,7 +99,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      * denominator_aggregations are specified.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AlertPolicyConditionConditionMonitoringQueryLanguageTrigger> getTrigger() {
         return Optional.ofNullable(this.trigger);
     }
@@ -142,7 +142,6 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
             this.trigger = trigger;
             return this;
         }
-
         public AlertPolicyConditionConditionMonitoringQueryLanguage build() {
             return new AlertPolicyConditionConditionMonitoringQueryLanguage(duration, query, trigger);
         }

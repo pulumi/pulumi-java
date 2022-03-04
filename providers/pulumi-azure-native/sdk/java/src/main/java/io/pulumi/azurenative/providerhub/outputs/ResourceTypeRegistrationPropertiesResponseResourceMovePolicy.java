@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
             this.validationRequired = validationRequired;
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseResourceMovePolicy build() {
             return new ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(crossResourceGroupMoveEnabled, crossSubscriptionMoveEnabled, validationRequired);
         }

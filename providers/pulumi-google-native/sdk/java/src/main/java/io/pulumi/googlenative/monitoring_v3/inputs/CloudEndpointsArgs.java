@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CloudEndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -66,7 +66,6 @@ public final class CloudEndpointsArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public CloudEndpointsArgs build() {
             return new CloudEndpointsArgs(service);
         }

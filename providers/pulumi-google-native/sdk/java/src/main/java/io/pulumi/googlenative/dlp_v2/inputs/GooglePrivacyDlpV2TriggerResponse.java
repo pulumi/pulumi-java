@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ManualResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ScheduleResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="manual", required=true)
-    private final GooglePrivacyDlpV2ManualResponse manual;
+      private final GooglePrivacyDlpV2ManualResponse manual;
 
     public GooglePrivacyDlpV2ManualResponse getManual() {
         return this.manual;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final GooglePrivacyDlpV2ScheduleResponse schedule;
+      private final GooglePrivacyDlpV2ScheduleResponse schedule;
 
     public GooglePrivacyDlpV2ScheduleResponse getSchedule() {
         return this.schedule;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public GooglePrivacyDlpV2TriggerResponse build() {
             return new GooglePrivacyDlpV2TriggerResponse(manual, schedule);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class TlsCertificatePathsResponse {
     /**
      * The path to the file holding the client or server TLS certificate to use.
      * 
-     */
+    */
     public String getCertificatePath() {
         return this.certificatePath;
     }
     /**
      * The path to the file holding the client or server private key.
      * 
-     */
+    */
     public String getPrivateKeyPath() {
         return this.privateKeyPath;
     }
@@ -74,7 +74,6 @@ public final class TlsCertificatePathsResponse {
             this.privateKeyPath = Objects.requireNonNull(privateKeyPath);
             return this;
         }
-
         public TlsCertificatePathsResponse build() {
             return new TlsCertificatePathsResponse(certificatePath, privateKeyPath);
         }

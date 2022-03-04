@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.certificates.k8s.io_v1beta1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.CertificateSigningRequestArgs;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs.CertificateSigningRequestSpec;
@@ -86,6 +86,37 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable CertificateSigningRequestArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.certificates.k8s.io_v1beta1.CertificateSigningRequestArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.certificates.k8s.io_v1beta1.CertificateSigningRequestArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CertificateSigningRequest(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CertificateSigningRequest(String name) {
+        this(name, CertificateSigningRequestArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CertificateSigningRequest(String name, @Nullable CertificateSigningRequestArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

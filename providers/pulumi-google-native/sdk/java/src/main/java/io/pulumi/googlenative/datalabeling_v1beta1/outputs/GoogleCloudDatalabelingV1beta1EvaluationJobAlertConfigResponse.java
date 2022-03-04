@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
     /**
      * An email address to send alerts to.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version's predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.
      * 
-     */
+    */
     public Double getMinAcceptableMeanAveragePrecision() {
         return this.minAcceptableMeanAveragePrecision;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
             this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(email, minAcceptableMeanAveragePrecision);
         }

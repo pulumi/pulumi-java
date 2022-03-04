@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,63 +15,63 @@ public final class TopicRuleDynamoDBAction extends io.pulumi.resources.InvokeArg
     public static final TopicRuleDynamoDBAction Empty = new TopicRuleDynamoDBAction();
 
     @InputImport(name="hashKeyField", required=true)
-    private final String hashKeyField;
+      private final String hashKeyField;
 
     public String getHashKeyField() {
         return this.hashKeyField;
     }
 
     @InputImport(name="hashKeyType")
-    private final @Nullable String hashKeyType;
+      private final @Nullable String hashKeyType;
 
     public Optional<String> getHashKeyType() {
         return this.hashKeyType == null ? Optional.empty() : Optional.ofNullable(this.hashKeyType);
     }
 
     @InputImport(name="hashKeyValue", required=true)
-    private final String hashKeyValue;
+      private final String hashKeyValue;
 
     public String getHashKeyValue() {
         return this.hashKeyValue;
     }
 
     @InputImport(name="payloadField")
-    private final @Nullable String payloadField;
+      private final @Nullable String payloadField;
 
     public Optional<String> getPayloadField() {
         return this.payloadField == null ? Optional.empty() : Optional.ofNullable(this.payloadField);
     }
 
     @InputImport(name="rangeKeyField")
-    private final @Nullable String rangeKeyField;
+      private final @Nullable String rangeKeyField;
 
     public Optional<String> getRangeKeyField() {
         return this.rangeKeyField == null ? Optional.empty() : Optional.ofNullable(this.rangeKeyField);
     }
 
     @InputImport(name="rangeKeyType")
-    private final @Nullable String rangeKeyType;
+      private final @Nullable String rangeKeyType;
 
     public Optional<String> getRangeKeyType() {
         return this.rangeKeyType == null ? Optional.empty() : Optional.ofNullable(this.rangeKeyType);
     }
 
     @InputImport(name="rangeKeyValue")
-    private final @Nullable String rangeKeyValue;
+      private final @Nullable String rangeKeyValue;
 
     public Optional<String> getRangeKeyValue() {
         return this.rangeKeyValue == null ? Optional.empty() : Optional.ofNullable(this.rangeKeyValue);
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -190,7 +190,6 @@ public final class TopicRuleDynamoDBAction extends io.pulumi.resources.InvokeArg
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public TopicRuleDynamoDBAction build() {
             return new TopicRuleDynamoDBAction(hashKeyField, hashKeyType, hashKeyValue, payloadField, rangeKeyField, rangeKeyType, rangeKeyValue, roleArn, tableName);
         }

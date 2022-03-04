@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable Input<List<Object>> inputs;
+      private final @Nullable Input<List<Object>> inputs;
 
     public Input<List<Object>> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -37,7 +37,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<MarkdownPartMetadataSettingsArgs> settings;
+      private final @Nullable Input<MarkdownPartMetadataSettingsArgs> settings;
 
     public Input<MarkdownPartMetadataSettingsArgs> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -49,7 +49,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -123,7 +123,6 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public MarkdownPartMetadataArgs build() {
             return new MarkdownPartMetadataArgs(inputs, settings, type);
         }

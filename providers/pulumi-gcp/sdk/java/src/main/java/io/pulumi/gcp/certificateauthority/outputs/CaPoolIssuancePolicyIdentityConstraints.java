@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyIdentityConstraintsCelExpression;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -47,7 +47,7 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
      * If this is set, the SubjectAltNames extension may be copied from a certificate request into the signed certificate.
      * Otherwise, the requested SubjectAltNames will be discarded.
      * 
-     */
+    */
     public Boolean getAllowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
     }
@@ -55,7 +55,7 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
      * If this is set, the Subject field may be copied from a certificate request into the signed certificate.
      * Otherwise, the requested Subject will be discarded.
      * 
-     */
+    */
     public Boolean getAllowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
     }
@@ -65,7 +65,7 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
      * see https://cloud.google.com/certificate-authority-service/docs/cel-guide
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<CaPoolIssuancePolicyIdentityConstraintsCelExpression> getCelExpression() {
         return Optional.ofNullable(this.celExpression);
     }
@@ -108,7 +108,6 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
             this.celExpression = celExpression;
             return this;
         }
-
         public CaPoolIssuancePolicyIdentityConstraints build() {
             return new CaPoolIssuancePolicyIdentityConstraints(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }

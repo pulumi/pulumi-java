@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ScopeNamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetNamespace")
-    private final @Nullable Input<String> targetNamespace;
+      private final @Nullable Input<String> targetNamespace;
 
     public Input<String> getTargetNamespace() {
         return this.targetNamespace == null ? Input.empty() : this.targetNamespace;
@@ -66,7 +66,6 @@ public final class ScopeNamespaceArgs extends io.pulumi.resources.ResourceArgs {
             this.targetNamespace = Input.ofNullable(targetNamespace);
             return this;
         }
-
         public ScopeNamespaceArgs build() {
             return new ScopeNamespaceArgs(targetNamespace);
         }

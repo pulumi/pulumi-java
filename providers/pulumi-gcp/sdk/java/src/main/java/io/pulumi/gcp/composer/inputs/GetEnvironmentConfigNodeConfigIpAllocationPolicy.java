@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,35 +14,35 @@ public final class GetEnvironmentConfigNodeConfigIpAllocationPolicy extends io.p
     public static final GetEnvironmentConfigNodeConfigIpAllocationPolicy Empty = new GetEnvironmentConfigNodeConfigIpAllocationPolicy();
 
     @InputImport(name="clusterIpv4CidrBlock", required=true)
-    private final String clusterIpv4CidrBlock;
+      private final String clusterIpv4CidrBlock;
 
     public String getClusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock;
     }
 
     @InputImport(name="clusterSecondaryRangeName", required=true)
-    private final String clusterSecondaryRangeName;
+      private final String clusterSecondaryRangeName;
 
     public String getClusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName;
     }
 
     @InputImport(name="servicesIpv4CidrBlock", required=true)
-    private final String servicesIpv4CidrBlock;
+      private final String servicesIpv4CidrBlock;
 
     public String getServicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock;
     }
 
     @InputImport(name="servicesSecondaryRangeName", required=true)
-    private final String servicesSecondaryRangeName;
+      private final String servicesSecondaryRangeName;
 
     public String getServicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName;
     }
 
     @InputImport(name="useIpAliases", required=true)
-    private final Boolean useIpAliases;
+      private final Boolean useIpAliases;
 
     public Boolean getUseIpAliases() {
         return this.useIpAliases;
@@ -121,7 +121,6 @@ public final class GetEnvironmentConfigNodeConfigIpAllocationPolicy extends io.p
             this.useIpAliases = Objects.requireNonNull(useIpAliases);
             return this;
         }
-
         public GetEnvironmentConfigNodeConfigIpAllocationPolicy build() {
             return new GetEnvironmentConfigNodeConfigIpAllocationPolicy(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);
         }

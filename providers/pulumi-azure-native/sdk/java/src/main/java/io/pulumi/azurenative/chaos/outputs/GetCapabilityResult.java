@@ -5,7 +5,7 @@ package io.pulumi.azurenative.chaos.outputs;
 
 import io.pulumi.azurenative.chaos.outputs.CapabilityPropertiesResponse;
 import io.pulumi.azurenative.chaos.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,35 +54,35 @@ public final class GetCapabilityResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of a capability resource.
      * 
-     */
+    */
     public CapabilityPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The standard system metadata of a resource type.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetCapabilityResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCapabilityResult build() {
             return new GetCapabilityResult(id, name, properties, systemData, type);
         }

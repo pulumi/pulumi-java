@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.ClusterMaintenancePolicyDailyMaintenanceWindow;
 import io.pulumi.gcp.container.outputs.ClusterMaintenancePolicyMaintenanceExclusion;
 import io.pulumi.gcp.container.outputs.ClusterMaintenancePolicyRecurringWindow;
@@ -47,21 +47,21 @@ public final class ClusterMaintenancePolicy {
      * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”,
      * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
      * 
-     */
+    */
     public Optional<ClusterMaintenancePolicyDailyMaintenanceWindow> getDailyMaintenanceWindow() {
         return Optional.ofNullable(this.dailyMaintenanceWindow);
     }
     /**
      * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
      * 
-     */
+    */
     public List<ClusterMaintenancePolicyMaintenanceExclusion> getMaintenanceExclusions() {
         return this.maintenanceExclusions == null ? List.of() : this.maintenanceExclusions;
     }
     /**
      * Time window for recurring maintenance operations.
      * 
-     */
+    */
     public Optional<ClusterMaintenancePolicyRecurringWindow> getRecurringWindow() {
         return Optional.ofNullable(this.recurringWindow);
     }
@@ -104,7 +104,6 @@ public final class ClusterMaintenancePolicy {
             this.recurringWindow = recurringWindow;
             return this;
         }
-
         public ClusterMaintenancePolicy build() {
             return new ClusterMaintenancePolicy(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.HttpRedirectActionResponse;
 import io.pulumi.googlenative.compute_beta.inputs.HttpRouteActionResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class PathRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="paths", required=true)
-    private final List<String> paths;
+      private final List<String> paths;
 
     public List<String> getPaths() {
         return this.paths;
@@ -35,7 +35,7 @@ public final class PathRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeAction", required=true)
-    private final HttpRouteActionResponse routeAction;
+      private final HttpRouteActionResponse routeAction;
 
     public HttpRouteActionResponse getRouteAction() {
         return this.routeAction;
@@ -46,7 +46,7 @@ public final class PathRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -57,7 +57,7 @@ public final class PathRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="urlRedirect", required=true)
-    private final HttpRedirectActionResponse urlRedirect;
+      private final HttpRedirectActionResponse urlRedirect;
 
     public HttpRedirectActionResponse getUrlRedirect() {
         return this.urlRedirect;
@@ -126,7 +126,6 @@ public final class PathRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.urlRedirect = Objects.requireNonNull(urlRedirect);
             return this;
         }
-
         public PathRuleResponse build() {
             return new PathRuleResponse(paths, routeAction, service, urlRedirect);
         }

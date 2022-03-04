@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class MoveResourceErrorBodyResponse {
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * A list of additional details about the error.
      * 
-     */
+    */
     public List<MoveResourceErrorBodyResponse> getDetails() {
         return this.details;
     }
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * The target of the particular error. For example, the name of the property in error.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }
@@ -117,7 +117,6 @@ public final class MoveResourceErrorBodyResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public MoveResourceErrorBodyResponse build() {
             return new MoveResourceErrorBodyResponse(code, details, message, target);
         }

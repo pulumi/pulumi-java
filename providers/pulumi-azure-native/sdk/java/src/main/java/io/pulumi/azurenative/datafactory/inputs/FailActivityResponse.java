@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+      private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -38,7 +38,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -49,7 +49,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorCode", required=true)
-    private final Object errorCode;
+      private final Object errorCode;
 
     public Object getErrorCode() {
         return this.errorCode;
@@ -60,7 +60,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-    private final Object message;
+      private final Object message;
 
     public Object getMessage() {
         return this.message;
@@ -71,7 +71,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -83,7 +83,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -94,7 +94,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+      private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -193,7 +193,6 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
             this.userProperties = userProperties;
             return this;
         }
-
         public FailActivityResponse build() {
             return new FailActivityResponse(dependsOn, description, errorCode, message, name, type, userProperties);
         }

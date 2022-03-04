@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ShieldedInstanceConfigResponse {
     /**
      * Optional. Defines whether instances have integrity monitoring enabled.
      * 
-     */
+    */
     public Boolean getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
     /**
      * Optional. Defines whether instances have Secure Boot enabled.
      * 
-     */
+    */
     public Boolean getEnableSecureBoot() {
         return this.enableSecureBoot;
     }
     /**
      * Optional. Defines whether instances have the vTPM enabled.
      * 
-     */
+    */
     public Boolean getEnableVtpm() {
         return this.enableVtpm;
     }
@@ -95,7 +95,6 @@ public final class ShieldedInstanceConfigResponse {
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
         }
-
         public ShieldedInstanceConfigResponse build() {
             return new ShieldedInstanceConfigResponse(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

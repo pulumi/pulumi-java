@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.maps.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MapsAccountPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="xMsClientId")
-    private final @Nullable String xMsClientId;
+      private final @Nullable String xMsClientId;
 
     public Optional<String> getXMsClientId() {
         return this.xMsClientId == null ? Optional.empty() : Optional.ofNullable(this.xMsClientId);
@@ -61,7 +61,6 @@ public final class MapsAccountPropertiesResponse extends io.pulumi.resources.Inv
             this.xMsClientId = xMsClientId;
             return this;
         }
-
         public MapsAccountPropertiesResponse build() {
             return new MapsAccountPropertiesResponse(xMsClientId);
         }

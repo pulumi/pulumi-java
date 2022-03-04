@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.configuration.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,21 +17,21 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     public static final ConfigurationAggregatorAccountAggregationSourceArgs Empty = new ConfigurationAggregatorAccountAggregationSourceArgs();
 
     @InputImport(name="accountIds", required=true)
-    private final Input<List<String>> accountIds;
+      private final Input<List<String>> accountIds;
 
     public Input<List<String>> getAccountIds() {
         return this.accountIds;
     }
 
     @InputImport(name="allAwsRegions")
-    private final @Nullable Input<Boolean> allAwsRegions;
+      private final @Nullable Input<Boolean> allAwsRegions;
 
     public Input<Boolean> getAllAwsRegions() {
         return this.allAwsRegions == null ? Input.empty() : this.allAwsRegions;
     }
 
     @InputImport(name="awsRegions")
-    private final @Nullable Input<List<String>> awsRegions;
+      private final @Nullable Input<List<String>> awsRegions;
 
     public Input<List<String>> getAwsRegions() {
         return this.awsRegions == null ? Input.empty() : this.awsRegions;
@@ -105,7 +105,6 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
             this.awsRegions = Input.ofNullable(awsRegions);
             return this;
         }
-
         public ConfigurationAggregatorAccountAggregationSourceArgs build() {
             return new ConfigurationAggregatorAccountAggregationSourceArgs(accountIds, allAwsRegions, awsRegions);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vision_v1.outputs.NormalizedVertexResponse;
 import io.pulumi.googlenative.vision_v1.outputs.VertexResponse;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class BoundingPolyResponse {
     /**
      * The bounding polygon normalized vertices.
      * 
-     */
+    */
     public List<NormalizedVertexResponse> getNormalizedVertices() {
         return this.normalizedVertices;
     }
     /**
      * The bounding polygon vertices.
      * 
-     */
+    */
     public List<VertexResponse> getVertices() {
         return this.vertices;
     }
@@ -76,7 +76,6 @@ public final class BoundingPolyResponse {
             this.vertices = Objects.requireNonNull(vertices);
             return this;
         }
-
         public BoundingPolyResponse build() {
             return new BoundingPolyResponse(normalizedVertices, vertices);
         }

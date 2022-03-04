@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="assetName", required=true)
-    private final String assetName;
+      private final String assetName;
 
     public String getAssetName() {
         return this.assetName;
@@ -32,7 +32,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="created", required=true)
-    private final String created;
+      private final String created;
 
     public String getCreated() {
         return this.created;
@@ -43,7 +43,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="defaultContentKeyPolicyName", required=true)
-    private final String defaultContentKeyPolicyName;
+      private final String defaultContentKeyPolicyName;
 
     public String getDefaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
@@ -54,7 +54,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -65,7 +65,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -76,7 +76,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -87,7 +87,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="streamingLocatorId", required=true)
-    private final String streamingLocatorId;
+      private final String streamingLocatorId;
 
     public String getStreamingLocatorId() {
         return this.streamingLocatorId;
@@ -98,7 +98,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="streamingPolicyName", required=true)
-    private final String streamingPolicyName;
+      private final String streamingPolicyName;
 
     public String getStreamingPolicyName() {
         return this.streamingPolicyName;
@@ -207,7 +207,6 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
         }
-
         public AssetStreamingLocatorResponse build() {
             return new AssetStreamingLocatorResponse(assetName, created, defaultContentKeyPolicyName, endTime, name, startTime, streamingLocatorId, streamingPolicyName);
         }

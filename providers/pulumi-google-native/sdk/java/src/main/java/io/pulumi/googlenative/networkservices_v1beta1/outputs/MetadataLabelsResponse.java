@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class MetadataLabelsResponse {
     /**
      * Label name presented as key in xDS Node Metadata.
      * 
-     */
+    */
     public String getLabelName() {
         return this.labelName;
     }
     /**
      * Label value presented as value corresponding to the above key, in xDS Node Metadata.
      * 
-     */
+    */
     public String getLabelValue() {
         return this.labelValue;
     }
@@ -74,7 +74,6 @@ public final class MetadataLabelsResponse {
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
         }
-
         public MetadataLabelsResponse build() {
             return new MetadataLabelsResponse(labelName, labelValue);
         }

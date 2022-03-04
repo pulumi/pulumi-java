@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1alpha.enums.ServiceDatabaseType;
 import io.pulumi.googlenative.metastore_v1alpha.enums.ServiceReleaseChannel;
 import io.pulumi.googlenative.metastore_v1alpha.enums.ServiceTier;
@@ -29,7 +29,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseType")
-    private final @Nullable Input<ServiceDatabaseType> databaseType;
+      private final @Nullable Input<ServiceDatabaseType> databaseType;
 
     public Input<ServiceDatabaseType> getDatabaseType() {
         return this.databaseType == null ? Input.empty() : this.databaseType;
@@ -40,7 +40,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
     public Input<EncryptionConfigArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -51,7 +51,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hiveMetastoreConfig")
-    private final @Nullable Input<HiveMetastoreConfigArgs> hiveMetastoreConfig;
+      private final @Nullable Input<HiveMetastoreConfigArgs> hiveMetastoreConfig;
 
     public Input<HiveMetastoreConfigArgs> getHiveMetastoreConfig() {
         return this.hiveMetastoreConfig == null ? Input.empty() : this.hiveMetastoreConfig;
@@ -62,14 +62,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -80,7 +80,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
 
     public Input<MaintenanceWindowArgs> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -91,7 +91,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataIntegration")
-    private final @Nullable Input<MetadataIntegrationArgs> metadataIntegration;
+      private final @Nullable Input<MetadataIntegrationArgs> metadataIntegration;
 
     public Input<MetadataIntegrationArgs> getMetadataIntegration() {
         return this.metadataIntegration == null ? Input.empty() : this.metadataIntegration;
@@ -102,7 +102,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -113,7 +113,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -124,7 +124,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-    private final @Nullable Input<NetworkConfigArgs> networkConfig;
+      private final @Nullable Input<NetworkConfigArgs> networkConfig;
 
     public Input<NetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -135,14 +135,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -153,21 +153,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseChannel")
-    private final @Nullable Input<ServiceReleaseChannel> releaseChannel;
+      private final @Nullable Input<ServiceReleaseChannel> releaseChannel;
 
     public Input<ServiceReleaseChannel> getReleaseChannel() {
         return this.releaseChannel == null ? Input.empty() : this.releaseChannel;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="serviceId", required=true)
-    private final Input<String> serviceId;
+      private final Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId;
@@ -178,7 +178,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<ServiceTier> tier;
+      private final @Nullable Input<ServiceTier> tier;
 
     public Input<ServiceTier> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -447,7 +447,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(databaseType, encryptionConfig, hiveMetastoreConfig, labels, location, maintenanceWindow, metadataIntegration, name, network, networkConfig, port, project, releaseChannel, requestId, serviceId, tier);
         }

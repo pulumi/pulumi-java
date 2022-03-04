@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.BuildpacksGroupPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.StackPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class BuilderPropertiesResponse {
     /**
      * Builder buildpack groups.
      * 
-     */
+    */
     public List<BuildpacksGroupPropertiesResponse> getBuildpackGroups() {
         return this.buildpackGroups == null ? List.of() : this.buildpackGroups;
     }
     /**
      * Builder provision status.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Builder cluster stack property.
      * 
-     */
+    */
     public Optional<StackPropertiesResponse> getStack() {
         return Optional.ofNullable(this.stack);
     }
@@ -100,7 +100,6 @@ public final class BuilderPropertiesResponse {
             this.stack = stack;
             return this;
         }
-
         public BuilderPropertiesResponse build() {
             return new BuilderPropertiesResponse(buildpackGroups, provisioningState, stack);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.enums.ResourceIdentityType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class EnterprisePolicyIdentityArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ResourceIdentityType> type;
+      private final @Nullable Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class EnterprisePolicyIdentityArgs extends io.pulumi.resources.Reso
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public EnterprisePolicyIdentityArgs build() {
             return new EnterprisePolicyIdentityArgs(type);
         }

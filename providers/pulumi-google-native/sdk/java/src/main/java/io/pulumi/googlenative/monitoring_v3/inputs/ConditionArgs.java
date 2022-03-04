@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.LogMatchArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.MetricAbsenceArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.MetricThresholdArgs;
@@ -27,7 +27,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionAbsent")
-    private final @Nullable Input<MetricAbsenceArgs> conditionAbsent;
+      private final @Nullable Input<MetricAbsenceArgs> conditionAbsent;
 
     public Input<MetricAbsenceArgs> getConditionAbsent() {
         return this.conditionAbsent == null ? Input.empty() : this.conditionAbsent;
@@ -38,7 +38,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionMatchedLog")
-    private final @Nullable Input<LogMatchArgs> conditionMatchedLog;
+      private final @Nullable Input<LogMatchArgs> conditionMatchedLog;
 
     public Input<LogMatchArgs> getConditionMatchedLog() {
         return this.conditionMatchedLog == null ? Input.empty() : this.conditionMatchedLog;
@@ -49,7 +49,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionMonitoringQueryLanguage")
-    private final @Nullable Input<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage;
+      private final @Nullable Input<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage;
 
     public Input<MonitoringQueryLanguageConditionArgs> getConditionMonitoringQueryLanguage() {
         return this.conditionMonitoringQueryLanguage == null ? Input.empty() : this.conditionMonitoringQueryLanguage;
@@ -60,7 +60,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionThreshold")
-    private final @Nullable Input<MetricThresholdArgs> conditionThreshold;
+      private final @Nullable Input<MetricThresholdArgs> conditionThreshold;
 
     public Input<MetricThresholdArgs> getConditionThreshold() {
         return this.conditionThreshold == null ? Input.empty() : this.conditionThreshold;
@@ -71,7 +71,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -82,7 +82,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -201,7 +201,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ConditionArgs build() {
             return new ConditionArgs(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
         }

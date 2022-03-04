@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.CustomApiPropertiesDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiName")
-    private final @Nullable Input<String> apiName;
+      private final @Nullable Input<String> apiName;
 
     public Input<String> getApiName() {
         return this.apiName == null ? Input.empty() : this.apiName;
@@ -32,7 +32,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -43,7 +43,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<CustomApiPropertiesDefinitionArgs> properties;
+      private final @Nullable Input<CustomApiPropertiesDefinitionArgs> properties;
 
     public Input<CustomApiPropertiesDefinitionArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -54,7 +54,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -76,7 +76,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -195,7 +195,6 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public CustomApiArgs build() {
             return new CustomApiArgs(apiName, location, properties, resourceGroupName, subscriptionId, tags);
         }

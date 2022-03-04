@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class HttpErrorRangeParametersResponse {
     /**
      * The inclusive start of the http status code range.
      * 
-     */
+    */
     public Optional<Integer> getBegin() {
         return Optional.ofNullable(this.begin);
     }
     /**
      * The inclusive end of the http status code range.
      * 
-     */
+    */
     public Optional<Integer> getEnd() {
         return Optional.ofNullable(this.end);
     }
@@ -76,7 +76,6 @@ public final class HttpErrorRangeParametersResponse {
             this.end = end;
             return this;
         }
-
         public HttpErrorRangeParametersResponse build() {
             return new HttpErrorRangeParametersResponse(begin, end);
         }

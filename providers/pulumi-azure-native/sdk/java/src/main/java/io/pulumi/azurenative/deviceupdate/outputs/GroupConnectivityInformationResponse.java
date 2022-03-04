@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class GroupConnectivityInformationResponse {
     /**
      * List of customer visible FQDNs.
      * 
-     */
+    */
     public List<String> getCustomerVisibleFqdns() {
         return this.customerVisibleFqdns == null ? List.of() : this.customerVisibleFqdns;
     }
     /**
      * Group ID.
      * 
-     */
+    */
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * Internal FQDN.
      * 
-     */
+    */
     public String getInternalFqdn() {
         return this.internalFqdn;
     }
     /**
      * Member name.
      * 
-     */
+    */
     public String getMemberName() {
         return this.memberName;
     }
     /**
      * PrivateLinkService ARM region.
      * 
-     */
+    */
     public Optional<String> getPrivateLinkServiceArmRegion() {
         return Optional.ofNullable(this.privateLinkServiceArmRegion);
     }
     /**
      * Redirect map ID.
      * 
-     */
+    */
     public Optional<String> getRedirectMapId() {
         return Optional.ofNullable(this.redirectMapId);
     }
@@ -161,7 +161,6 @@ public final class GroupConnectivityInformationResponse {
             this.redirectMapId = redirectMapId;
             return this;
         }
-
         public GroupConnectivityInformationResponse build() {
             return new GroupConnectivityInformationResponse(customerVisibleFqdns, groupId, internalFqdn, memberName, privateLinkServiceArmRegion, redirectMapId);
         }

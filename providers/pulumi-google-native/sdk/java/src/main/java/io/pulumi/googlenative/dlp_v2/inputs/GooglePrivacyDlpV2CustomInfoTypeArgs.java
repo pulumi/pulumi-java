@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CustomInfoTypeExclusionType;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CustomInfoTypeLikelihood;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DetectionRuleArgs;
@@ -31,7 +31,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="detectionRules")
-    private final @Nullable Input<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules;
+      private final @Nullable Input<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules;
 
     public Input<List<GooglePrivacyDlpV2DetectionRuleArgs>> getDetectionRules() {
         return this.detectionRules == null ? Input.empty() : this.detectionRules;
@@ -42,7 +42,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dictionary")
-    private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
+      private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
     public Input<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
         return this.dictionary == null ? Input.empty() : this.dictionary;
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="exclusionType")
-    private final @Nullable Input<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType;
+      private final @Nullable Input<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType;
 
     public Input<GooglePrivacyDlpV2CustomInfoTypeExclusionType> getExclusionType() {
         return this.exclusionType == null ? Input.empty() : this.exclusionType;
@@ -64,7 +64,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="infoType")
-    private final @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType;
+      private final @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
     public Input<GooglePrivacyDlpV2InfoTypeArgs> getInfoType() {
         return this.infoType == null ? Input.empty() : this.infoType;
@@ -75,7 +75,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="likelihood")
-    private final @Nullable Input<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood;
+      private final @Nullable Input<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood;
 
     public Input<GooglePrivacyDlpV2CustomInfoTypeLikelihood> getLikelihood() {
         return this.likelihood == null ? Input.empty() : this.likelihood;
@@ -86,7 +86,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
+      private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
 
     public Input<GooglePrivacyDlpV2RegexArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -97,7 +97,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storedType")
-    private final @Nullable Input<GooglePrivacyDlpV2StoredTypeArgs> storedType;
+      private final @Nullable Input<GooglePrivacyDlpV2StoredTypeArgs> storedType;
 
     public Input<GooglePrivacyDlpV2StoredTypeArgs> getStoredType() {
         return this.storedType == null ? Input.empty() : this.storedType;
@@ -108,7 +108,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="surrogateType")
-    private final @Nullable Input<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType;
+      private final @Nullable Input<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType;
 
     public Input<GooglePrivacyDlpV2SurrogateTypeArgs> getSurrogateType() {
         return this.surrogateType == null ? Input.empty() : this.surrogateType;
@@ -257,7 +257,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
             this.surrogateType = Input.ofNullable(surrogateType);
             return this;
         }
-
         public GooglePrivacyDlpV2CustomInfoTypeArgs build() {
             return new GooglePrivacyDlpV2CustomInfoTypeArgs(detectionRules, dictionary, exclusionType, infoType, likelihood, regex, storedType, surrogateType);
         }

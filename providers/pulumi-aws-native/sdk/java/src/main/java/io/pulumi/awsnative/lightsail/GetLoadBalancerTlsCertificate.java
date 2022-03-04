@@ -6,17 +6,33 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lightsail.inputs.GetLoadBalancerTlsCertificateArgs;
 import io.pulumi.awsnative.lightsail.outputs.GetLoadBalancerTlsCertificateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoadBalancerTlsCertificate {
-/**
- * Resource Type definition for AWS::Lightsail::LoadBalancerTlsCertificate
+    private GetLoadBalancerTlsCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetLoadBalancerTlsCertificateArgs.Builder a);
+    }
+    private static GetLoadBalancerTlsCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLoadBalancerTlsCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::LoadBalancerTlsCertificate
  * 
- */
+     */
+    public static CompletableFuture<GetLoadBalancerTlsCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Lightsail::LoadBalancerTlsCertificate
+     * 
+     */
     public static CompletableFuture<GetLoadBalancerTlsCertificateResult> invokeAsync(GetLoadBalancerTlsCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getLoadBalancerTlsCertificate", TypeShape.of(GetLoadBalancerTlsCertificateResult.class), args == null ? GetLoadBalancerTlsCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

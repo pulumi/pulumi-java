@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.inputs.DataSourcePrecedenceResponse;
 import io.pulumi.azurenative.customerinsights.inputs.ProfileEnumValidValuesFormatResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="arrayValueSeparator")
-    private final @Nullable String arrayValueSeparator;
+      private final @Nullable String arrayValueSeparator;
 
     public Optional<String> getArrayValueSeparator() {
         return this.arrayValueSeparator == null ? Optional.empty() : Optional.ofNullable(this.arrayValueSeparator);
@@ -39,7 +39,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dataSourcePrecedenceRules", required=true)
-    private final List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules;
+      private final List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules;
 
     public List<DataSourcePrecedenceResponse> getDataSourcePrecedenceRules() {
         return this.dataSourcePrecedenceRules;
@@ -50,7 +50,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enumValidValues")
-    private final @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues;
+      private final @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues;
 
     public List<ProfileEnumValidValuesFormatResponse> getEnumValidValues() {
         return this.enumValidValues == null ? List.of() : this.enumValidValues;
@@ -61,7 +61,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fieldName", required=true)
-    private final String fieldName;
+      private final String fieldName;
 
     public String getFieldName() {
         return this.fieldName;
@@ -72,7 +72,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fieldType", required=true)
-    private final String fieldType;
+      private final String fieldType;
 
     public String getFieldType() {
         return this.fieldType;
@@ -83,7 +83,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isArray")
-    private final @Nullable Boolean isArray;
+      private final @Nullable Boolean isArray;
 
     public Optional<Boolean> getIsArray() {
         return this.isArray == null ? Optional.empty() : Optional.ofNullable(this.isArray);
@@ -94,7 +94,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isAvailableInGraph")
-    private final @Nullable Boolean isAvailableInGraph;
+      private final @Nullable Boolean isAvailableInGraph;
 
     public Optional<Boolean> getIsAvailableInGraph() {
         return this.isAvailableInGraph == null ? Optional.empty() : Optional.ofNullable(this.isAvailableInGraph);
@@ -105,7 +105,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isEnum")
-    private final @Nullable Boolean isEnum;
+      private final @Nullable Boolean isEnum;
 
     public Optional<Boolean> getIsEnum() {
         return this.isEnum == null ? Optional.empty() : Optional.ofNullable(this.isEnum);
@@ -116,7 +116,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isFlagEnum")
-    private final @Nullable Boolean isFlagEnum;
+      private final @Nullable Boolean isFlagEnum;
 
     public Optional<Boolean> getIsFlagEnum() {
         return this.isFlagEnum == null ? Optional.empty() : Optional.ofNullable(this.isFlagEnum);
@@ -127,7 +127,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isImage")
-    private final @Nullable Boolean isImage;
+      private final @Nullable Boolean isImage;
 
     public Optional<Boolean> getIsImage() {
         return this.isImage == null ? Optional.empty() : Optional.ofNullable(this.isImage);
@@ -138,7 +138,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isLocalizedString")
-    private final @Nullable Boolean isLocalizedString;
+      private final @Nullable Boolean isLocalizedString;
 
     public Optional<Boolean> getIsLocalizedString() {
         return this.isLocalizedString == null ? Optional.empty() : Optional.ofNullable(this.isLocalizedString);
@@ -149,7 +149,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isName")
-    private final @Nullable Boolean isName;
+      private final @Nullable Boolean isName;
 
     public Optional<Boolean> getIsName() {
         return this.isName == null ? Optional.empty() : Optional.ofNullable(this.isName);
@@ -160,7 +160,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isRequired")
-    private final @Nullable Boolean isRequired;
+      private final @Nullable Boolean isRequired;
 
     public Optional<Boolean> getIsRequired() {
         return this.isRequired == null ? Optional.empty() : Optional.ofNullable(this.isRequired);
@@ -171,7 +171,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="maxLength")
-    private final @Nullable Integer maxLength;
+      private final @Nullable Integer maxLength;
 
     public Optional<Integer> getMaxLength() {
         return this.maxLength == null ? Optional.empty() : Optional.ofNullable(this.maxLength);
@@ -182,7 +182,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="propertyId")
-    private final @Nullable String propertyId;
+      private final @Nullable String propertyId;
 
     public Optional<String> getPropertyId() {
         return this.propertyId == null ? Optional.empty() : Optional.ofNullable(this.propertyId);
@@ -193,7 +193,7 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="schemaItemPropLink")
-    private final @Nullable String schemaItemPropLink;
+      private final @Nullable String schemaItemPropLink;
 
     public Optional<String> getSchemaItemPropLink() {
         return this.schemaItemPropLink == null ? Optional.empty() : Optional.ofNullable(this.schemaItemPropLink);
@@ -382,7 +382,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
             this.schemaItemPropLink = schemaItemPropLink;
             return this;
         }
-
         public PropertyDefinitionResponse build() {
             return new PropertyDefinitionResponse(arrayValueSeparator, dataSourcePrecedenceRules, enumValidValues, fieldName, fieldType, isArray, isAvailableInGraph, isEnum, isFlagEnum, isImage, isLocalizedString, isName, isRequired, maxLength, propertyId, schemaItemPropLink);
         }

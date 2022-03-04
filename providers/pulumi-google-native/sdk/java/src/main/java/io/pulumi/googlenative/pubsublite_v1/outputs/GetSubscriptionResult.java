@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.pubsublite_v1.outputs.DeliveryConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GetSubscriptionResult {
     /**
      * The settings for this subscription's message delivery.
      * 
-     */
+    */
     public DeliveryConfigResponse getDeliveryConfig() {
         return this.deliveryConfig;
     }
     /**
      * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
@@ -96,7 +96,6 @@ public final class GetSubscriptionResult {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GetSubscriptionResult build() {
             return new GetSubscriptionResult(deliveryConfig, name, topic);
         }

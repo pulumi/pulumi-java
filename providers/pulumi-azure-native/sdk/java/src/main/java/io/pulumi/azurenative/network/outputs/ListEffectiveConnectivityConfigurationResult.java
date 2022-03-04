@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.EffectiveConnectivityConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ListEffectiveConnectivityConfigurationResult {
     /**
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
-     */
+    */
     public Optional<String> getSkipToken() {
         return Optional.ofNullable(this.skipToken);
     }
     /**
      * Gets a page of NetworkManagerEffectiveConnectivityConfiguration
      * 
-     */
+    */
     public List<EffectiveConnectivityConfigurationResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -78,7 +78,6 @@ public final class ListEffectiveConnectivityConfigurationResult {
             this.value = value;
             return this;
         }
-
         public ListEffectiveConnectivityConfigurationResult build() {
             return new ListEffectiveConnectivityConfigurationResult(skipToken, value);
         }

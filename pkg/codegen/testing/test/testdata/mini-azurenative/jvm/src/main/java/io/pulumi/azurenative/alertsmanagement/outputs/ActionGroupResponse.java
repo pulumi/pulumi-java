@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,49 +76,49 @@ public final class ActionGroupResponse {
     /**
      * Action group to trigger if action rule matches
      * 
-     */
+    */
     public String getActionGroupId() {
         return this.actionGroupId;
     }
     /**
      * Creation time of action rule. Date-Time in ISO-8601 format.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Created by user name.
      * 
-     */
+    */
     public String getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Description of action rule
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Last updated time of action rule. Date-Time in ISO-8601 format.
      * 
-     */
+    */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Last modified by user name.
      * 
-     */
+    */
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Indicates if the given action rule is enabled or disabled
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -126,7 +126,7 @@ public final class ActionGroupResponse {
      * Indicates type of action rule
      * Expected value is 'ActionGroup'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -204,7 +204,6 @@ public final class ActionGroupResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ActionGroupResponse build() {
             return new ActionGroupResponse(actionGroupId, createdAt, createdBy, description, lastModifiedAt, lastModifiedBy, status, type);
         }

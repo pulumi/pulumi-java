@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="function", required=true)
-    private final String function;
+      private final String function;
 
     public String getFunction() {
         return this.function;
@@ -32,7 +32,7 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="urlMask", required=true)
-    private final String urlMask;
+      private final String urlMask;
 
     public String getUrlMask() {
         return this.urlMask;
@@ -81,7 +81,6 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends io.pulumi.r
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
         }
-
         public NetworkEndpointGroupCloudFunctionResponse build() {
             return new NetworkEndpointGroupCloudFunctionResponse(function, urlMask);
         }

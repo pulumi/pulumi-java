@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -44,7 +44,7 @@ public final class UrlRewriteActionParametersResponse {
     /**
      * Define the relative URL to which the above requests will be rewritten by.
      * 
-     */
+    */
     public String getDestination() {
         return this.destination;
     }
@@ -54,14 +54,14 @@ public final class UrlRewriteActionParametersResponse {
     /**
      * Whether to preserve unmatched path. Default value is true.
      * 
-     */
+    */
     public Optional<Boolean> getPreserveUnmatchedPath() {
         return Optional.ofNullable(this.preserveUnmatchedPath);
     }
     /**
      * define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
      * 
-     */
+    */
     public String getSourcePattern() {
         return this.sourcePattern;
     }
@@ -111,7 +111,6 @@ public final class UrlRewriteActionParametersResponse {
             this.sourcePattern = Objects.requireNonNull(sourcePattern);
             return this;
         }
-
         public UrlRewriteActionParametersResponse build() {
             return new UrlRewriteActionParametersResponse(destination, odataType, preserveUnmatchedPath, sourcePattern);
         }

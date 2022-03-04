@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EnvironmentContainerResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class EnvironmentContainerResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -46,7 +46,7 @@ public final class EnvironmentContainerResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -105,7 +105,6 @@ public final class EnvironmentContainerResponse extends io.pulumi.resources.Invo
             this.tags = tags;
             return this;
         }
-
         public EnvironmentContainerResponse build() {
             return new EnvironmentContainerResponse(description, properties, tags);
         }

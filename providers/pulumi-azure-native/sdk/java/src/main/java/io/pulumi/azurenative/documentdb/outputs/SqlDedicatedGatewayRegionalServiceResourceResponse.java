@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
     /**
      * The location name.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The regional service name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The regional endpoint for SqlDedicatedGateway.
      * 
-     */
+    */
     public String getSqlDedicatedGatewayEndpoint() {
         return this.sqlDedicatedGatewayEndpoint;
     }
     /**
      * Describes the status of a service.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -116,7 +116,6 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public SqlDedicatedGatewayRegionalServiceResourceResponse build() {
             return new SqlDedicatedGatewayRegionalServiceResourceResponse(location, name, sqlDedicatedGatewayEndpoint, status);
         }

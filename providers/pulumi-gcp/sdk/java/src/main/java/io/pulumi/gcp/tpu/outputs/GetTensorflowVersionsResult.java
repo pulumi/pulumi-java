@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tpu.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +38,7 @@ public final class GetTensorflowVersionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -48,7 +48,7 @@ public final class GetTensorflowVersionsResult {
     /**
      * The list of TensorFlow versions available for the given project and zone.
      * 
-     */
+    */
     public List<String> getVersions() {
         return this.versions;
     }
@@ -101,7 +101,6 @@ public final class GetTensorflowVersionsResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetTensorflowVersionsResult build() {
             return new GetTensorflowVersionsResult(id, project, versions, zone);
         }

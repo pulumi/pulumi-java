@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @InputImport(name="cloudStoragePath")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> getCloudStoragePath() {
         return this.cloudStoragePath == null ? Input.empty() : this.cloudStoragePath;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @InputImport(name="wordList")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> getWordList() {
         return this.wordList == null ? Input.empty() : this.wordList;
@@ -92,7 +92,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.wordList = Input.ofNullable(wordList);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs(cloudStoragePath, wordList);
         }

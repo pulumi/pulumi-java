@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -37,7 +37,7 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="number")
-    private final @Nullable Input<Integer> number;
+      private final @Nullable Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number == null ? Input.empty() : this.number;
@@ -48,7 +48,7 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Input<List<OptionArgs>> options;
 
     public Input<List<OptionArgs>> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -122,7 +122,6 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
             this.options = Input.ofNullable(options);
             return this;
         }
-
         public EnumValueArgs build() {
             return new EnumValueArgs(name, number, options);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.RoutingSource;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<String> condition;
+      private final @Nullable Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -38,7 +38,7 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="endpointNames", required=true)
-    private final Input<List<String>> endpointNames;
+      private final Input<List<String>> endpointNames;
 
     public Input<List<String>> getEndpointNames() {
         return this.endpointNames;
@@ -49,7 +49,7 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Input<Boolean> isEnabled;
+      private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -60,7 +60,7 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -71,7 +71,7 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<Either<String,RoutingSource>> source;
+      private final Input<Either<String,RoutingSource>> source;
 
     public Input<Either<String,RoutingSource>> getSource() {
         return this.source;
@@ -175,7 +175,6 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public FallbackRoutePropertiesArgs build() {
             return new FallbackRoutePropertiesArgs(condition, endpointNames, isEnabled, name, source);
         }

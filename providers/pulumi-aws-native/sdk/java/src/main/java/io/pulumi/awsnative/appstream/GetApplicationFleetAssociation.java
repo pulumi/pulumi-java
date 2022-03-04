@@ -6,17 +6,33 @@ package io.pulumi.awsnative.appstream;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appstream.inputs.GetApplicationFleetAssociationArgs;
 import io.pulumi.awsnative.appstream.outputs.GetApplicationFleetAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationFleetAssociation {
-/**
- * Resource Type definition for AWS::AppStream::ApplicationFleetAssociation
+    private GetApplicationFleetAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetApplicationFleetAssociationArgs.Builder a);
+    }
+    private static GetApplicationFleetAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApplicationFleetAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::AppStream::ApplicationFleetAssociation
  * 
- */
+     */
+    public static CompletableFuture<GetApplicationFleetAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::AppStream::ApplicationFleetAssociation
+     * 
+     */
     public static CompletableFuture<GetApplicationFleetAssociationResult> invokeAsync(GetApplicationFleetAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getApplicationFleetAssociation", TypeShape.of(GetApplicationFleetAssociationResult.class), args == null ? GetApplicationFleetAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

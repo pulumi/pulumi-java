@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="widevineTemplate", required=true)
-    private final String widevineTemplate;
+      private final String widevineTemplate;
 
     public String getWidevineTemplate() {
         return this.widevineTemplate;
@@ -82,7 +82,6 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends io.pulu
             this.widevineTemplate = Objects.requireNonNull(widevineTemplate);
             return this;
         }
-
         public ContentKeyPolicyWidevineConfigurationResponse build() {
             return new ContentKeyPolicyWidevineConfigurationResponse(odataType, widevineTemplate);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm {
     /**
      * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
      * 
-     */
+    */
     public Optional<Boolean> getPullDeps() {
         return Optional.ofNullable(this.pullDeps);
     }
     /**
      * Required. An rpm package.
      * 
-     */
+    */
     public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource getSource() {
         return this.source;
     }
@@ -77,7 +77,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm(pullDeps, source);
         }

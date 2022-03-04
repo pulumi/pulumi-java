@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,35 +58,35 @@ public final class KeyVaultSigningKeyParametersResponse {
     /**
      * Resource group of the user's Key Vault containing the secret
      * 
-     */
+    */
     public String getResourceGroupName() {
         return this.resourceGroupName;
     }
     /**
      * The name of secret in Key Vault.
      * 
-     */
+    */
     public String getSecretName() {
         return this.secretName;
     }
     /**
      * The version(GUID) of secret in Key Vault.
      * 
-     */
+    */
     public String getSecretVersion() {
         return this.secretVersion;
     }
     /**
      * Subscription Id of the user's Key Vault containing the secret
      * 
-     */
+    */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * The name of the user's Key Vault containing the secret
      * 
-     */
+    */
     public String getVaultName() {
         return this.vaultName;
     }
@@ -150,7 +150,6 @@ public final class KeyVaultSigningKeyParametersResponse {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public KeyVaultSigningKeyParametersResponse build() {
             return new KeyVaultSigningKeyParametersResponse(odataType, resourceGroupName, secretName, secretVersion, subscriptionId, vaultName);
         }

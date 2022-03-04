@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class GlobalTableStreamSpecification {
             this.streamViewType = Objects.requireNonNull(streamViewType);
             return this;
         }
-
         public GlobalTableStreamSpecification build() {
             return new GlobalTableStreamSpecification(streamViewType);
         }

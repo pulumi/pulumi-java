@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.IndexingPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SqlContainerGetPropertiesResponseResource {
     /**
      * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
      * 
-     */
+    */
     public Optional<IndexingPolicyResponse> getIndexingPolicy() {
         return Optional.ofNullable(this.indexingPolicy);
     }
@@ -54,7 +54,6 @@ public final class SqlContainerGetPropertiesResponseResource {
             this.indexingPolicy = indexingPolicy;
             return this;
         }
-
         public SqlContainerGetPropertiesResponseResource build() {
             return new SqlContainerGetPropertiesResponseResource(indexingPolicy);
         }

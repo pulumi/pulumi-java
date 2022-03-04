@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -15,49 +15,49 @@ public final class GetServiceMetadata extends io.pulumi.resources.InvokeArgs {
     public static final GetServiceMetadata Empty = new GetServiceMetadata();
 
     @InputImport(name="annotations", required=true)
-    private final Map<String,String> annotations;
+      private final Map<String,String> annotations;
 
     public Map<String,String> getAnnotations() {
         return this.annotations;
     }
 
     @InputImport(name="generation", required=true)
-    private final Integer generation;
+      private final Integer generation;
 
     public Integer getGeneration() {
         return this.generation;
     }
 
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
     }
 
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+      private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
     }
 
     @InputImport(name="resourceVersion", required=true)
-    private final String resourceVersion;
+      private final String resourceVersion;
 
     public String getResourceVersion() {
         return this.resourceVersion;
     }
 
     @InputImport(name="selfLink", required=true)
-    private final String selfLink;
+      private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
     }
 
     @InputImport(name="uid", required=true)
-    private final String uid;
+      private final String uid;
 
     public String getUid() {
         return this.uid;
@@ -156,7 +156,6 @@ public final class GetServiceMetadata extends io.pulumi.resources.InvokeArgs {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GetServiceMetadata build() {
             return new GetServiceMetadata(annotations, generation, labels, namespace, resourceVersion, selfLink, uid);
         }

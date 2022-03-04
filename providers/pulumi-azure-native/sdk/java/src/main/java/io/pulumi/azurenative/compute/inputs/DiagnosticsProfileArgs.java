@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.BootDiagnosticsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class DiagnosticsProfileArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bootDiagnostics")
-    private final @Nullable Input<BootDiagnosticsArgs> bootDiagnostics;
+      private final @Nullable Input<BootDiagnosticsArgs> bootDiagnostics;
 
     public Input<BootDiagnosticsArgs> getBootDiagnostics() {
         return this.bootDiagnostics == null ? Input.empty() : this.bootDiagnostics;
@@ -66,7 +66,6 @@ public final class DiagnosticsProfileArgs extends io.pulumi.resources.ResourceAr
             this.bootDiagnostics = Input.ofNullable(bootDiagnostics);
             return this;
         }
-
         public DiagnosticsProfileArgs build() {
             return new DiagnosticsProfileArgs(bootDiagnostics);
         }

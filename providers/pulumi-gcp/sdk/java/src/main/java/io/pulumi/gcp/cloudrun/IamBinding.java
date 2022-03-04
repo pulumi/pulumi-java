@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudrun.IamBindingArgs;
 import io.pulumi.gcp.cloudrun.inputs.IamBindingState;
@@ -148,6 +148,37 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
         return this.service;
     }
 
+    public interface BuilderApplicator {
+        public void apply(IamBindingArgs.Builder a);
+    }
+    private static io.pulumi.gcp.cloudrun.IamBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.cloudrun.IamBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public IamBinding(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public IamBinding(String name) {
+        this(name, IamBindingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public IamBinding(String name, IamBindingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

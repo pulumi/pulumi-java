@@ -6,21 +6,41 @@ package io.pulumi.azurenative.signalrservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.signalrservice.inputs.GetSignalRArgs;
 import io.pulumi.azurenative.signalrservice.outputs.GetSignalRResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSignalR {
-/**
- * A class represent a SignalR service resource.
+    private GetSignalR() {}
+    public interface BuilderApplicator {
+        public void apply(GetSignalRArgs.Builder a);
+    }
+    private static GetSignalRArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSignalRArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A class represent a SignalR service resource.
  * API Version: 2020-05-01.
  * 
- *
- * A class represent a SignalR service resource.
+     *
+     * A class represent a SignalR service resource.
  * 
- */
+     */
+    public static CompletableFuture<GetSignalRResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A class represent a SignalR service resource.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * A class represent a SignalR service resource.
+     * 
+     */
     public static CompletableFuture<GetSignalRResult> invokeAsync(GetSignalRArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalR", TypeShape.of(GetSignalRResult.class), args == null ? GetSignalRArgs.Empty : args, Utilities.withVersion(options));
     }

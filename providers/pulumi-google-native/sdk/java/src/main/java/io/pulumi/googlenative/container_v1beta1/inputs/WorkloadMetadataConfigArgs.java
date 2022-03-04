@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.WorkloadMetadataConfigMode;
 import io.pulumi.googlenative.container_v1beta1.enums.WorkloadMetadataConfigNodeMetadata;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<WorkloadMetadataConfigMode> mode;
+      private final @Nullable Input<WorkloadMetadataConfigMode> mode;
 
     public Input<WorkloadMetadataConfigMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -35,7 +35,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="nodeMetadata")
-    private final @Nullable Input<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
+      private final @Nullable Input<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
 
     public Input<WorkloadMetadataConfigNodeMetadata> getNodeMetadata() {
         return this.nodeMetadata == null ? Input.empty() : this.nodeMetadata;
@@ -94,7 +94,6 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
             this.nodeMetadata = Input.ofNullable(nodeMetadata);
             return this;
         }
-
         public WorkloadMetadataConfigArgs build() {
             return new WorkloadMetadataConfigArgs(mode, nodeMetadata);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class KpiExtractResponse {
     /**
      * The expression.
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }
     /**
      * KPI extract name.
      * 
-     */
+    */
     public String getExtractName() {
         return this.extractName;
     }
@@ -74,7 +74,6 @@ public final class KpiExtractResponse {
             this.extractName = Objects.requireNonNull(extractName);
             return this;
         }
-
         public KpiExtractResponse build() {
             return new KpiExtractResponse(expression, extractName);
         }

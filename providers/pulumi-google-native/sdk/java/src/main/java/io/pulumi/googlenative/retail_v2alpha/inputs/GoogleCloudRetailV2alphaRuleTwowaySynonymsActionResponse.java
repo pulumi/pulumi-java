@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse exte
      * 
      */
     @InputImport(name="synonyms", required=true)
-    private final List<String> synonyms;
+      private final List<String> synonyms;
 
     public List<String> getSynonyms() {
         return this.synonyms;
@@ -60,7 +60,6 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse exte
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse(synonyms);
         }

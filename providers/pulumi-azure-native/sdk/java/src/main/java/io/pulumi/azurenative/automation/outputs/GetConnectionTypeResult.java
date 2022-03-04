@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.FieldDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -78,56 +78,56 @@ public final class GetConnectionTypeResult {
     /**
      * Gets the creation time.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets the field definitions of the connection type.
      * 
-     */
+    */
     public Map<String,FieldDefinitionResponse> getFieldDefinitions() {
         return this.fieldDefinitions;
     }
     /**
      * Gets the id of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets a Boolean value to indicate if the connection type is global.
      * 
-     */
+    */
     public Optional<Boolean> getIsGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
      * Gets or sets the last modified time.
      * 
-     */
+    */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * Gets the name of the connection type.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -205,7 +205,6 @@ public final class GetConnectionTypeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionTypeResult build() {
             return new GetConnectionTypeResult(creationTime, description, fieldDefinitions, id, isGlobal, lastModifiedTime, name, type);
         }

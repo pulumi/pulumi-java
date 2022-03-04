@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class FeatureMembershipConfigmanagementHierarchyController {
     /**
      * Whether hierarchical resource quota is enabled in this cluster.
      * 
-     */
+    */
     public Optional<Boolean> getEnableHierarchicalResourceQuota() {
         return Optional.ofNullable(this.enableHierarchicalResourceQuota);
     }
     /**
      * Whether pod tree labels are enabled in this cluster.
      * 
-     */
+    */
     public Optional<Boolean> getEnablePodTreeLabels() {
         return Optional.ofNullable(this.enablePodTreeLabels);
     }
     /**
      * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -97,7 +97,6 @@ public final class FeatureMembershipConfigmanagementHierarchyController {
             this.enabled = enabled;
             return this;
         }
-
         public FeatureMembershipConfigmanagementHierarchyController build() {
             return new FeatureMembershipConfigmanagementHierarchyController(enableHierarchicalResourceQuota, enablePodTreeLabels, enabled);
         }

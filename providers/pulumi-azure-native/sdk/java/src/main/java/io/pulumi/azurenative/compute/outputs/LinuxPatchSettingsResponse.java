@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class LinuxPatchSettingsResponse {
     /**
      * Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine. <br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
      * 
-     */
+    */
     public Optional<String> getAssessmentMode() {
         return Optional.ofNullable(this.assessmentMode);
     }
     /**
      * Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
      * 
-     */
+    */
     public Optional<String> getPatchMode() {
         return Optional.ofNullable(this.patchMode);
     }
@@ -76,7 +76,6 @@ public final class LinuxPatchSettingsResponse {
             this.patchMode = patchMode;
             return this;
         }
-
         public LinuxPatchSettingsResponse build() {
             return new LinuxPatchSettingsResponse(assessmentMode, patchMode);
         }

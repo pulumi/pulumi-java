@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.billing.inputs.BudgetAllUpdatesRuleArgs;
 import io.pulumi.gcp.billing.inputs.BudgetAmountArgs;
 import io.pulumi.gcp.billing.inputs.BudgetBudgetFilterArgs;
@@ -27,7 +27,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allUpdatesRule")
-    private final @Nullable Input<BudgetAllUpdatesRuleArgs> allUpdatesRule;
+      private final @Nullable Input<BudgetAllUpdatesRuleArgs> allUpdatesRule;
 
     public Input<BudgetAllUpdatesRuleArgs> getAllUpdatesRule() {
         return this.allUpdatesRule == null ? Input.empty() : this.allUpdatesRule;
@@ -39,7 +39,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amount", required=true)
-    private final Input<BudgetAmountArgs> amount;
+      private final Input<BudgetAmountArgs> amount;
 
     public Input<BudgetAmountArgs> getAmount() {
         return this.amount;
@@ -50,7 +50,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccount", required=true)
-    private final Input<String> billingAccount;
+      private final Input<String> billingAccount;
 
     public Input<String> getBillingAccount() {
         return this.billingAccount;
@@ -63,7 +63,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="budgetFilter")
-    private final @Nullable Input<BudgetBudgetFilterArgs> budgetFilter;
+      private final @Nullable Input<BudgetBudgetFilterArgs> budgetFilter;
 
     public Input<BudgetBudgetFilterArgs> getBudgetFilter() {
         return this.budgetFilter == null ? Input.empty() : this.budgetFilter;
@@ -74,7 +74,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -88,7 +88,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholdRules", required=true)
-    private final Input<List<BudgetThresholdRuleArgs>> thresholdRules;
+      private final Input<List<BudgetThresholdRuleArgs>> thresholdRules;
 
     public Input<List<BudgetThresholdRuleArgs>> getThresholdRules() {
         return this.thresholdRules;
@@ -207,7 +207,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             this.thresholdRules = Input.of(Objects.requireNonNull(thresholdRules));
             return this;
         }
-
         public BudgetArgs build() {
             return new BudgetArgs(allUpdatesRule, amount, billingAccount, budgetFilter, displayName, thresholdRules);
         }

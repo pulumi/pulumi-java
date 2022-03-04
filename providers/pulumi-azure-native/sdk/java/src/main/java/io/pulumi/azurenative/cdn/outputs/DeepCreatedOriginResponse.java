@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -105,84 +105,84 @@ public final class DeepCreatedOriginResponse {
     /**
      * Origin is enabled for load balancing or not. By default, origin is always enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
      * 
-     */
+    */
     public String getHostName() {
         return this.hostName;
     }
     /**
      * The value of the HTTP port. Must be between 1 and 65535.
      * 
-     */
+    */
     public Optional<Integer> getHttpPort() {
         return Optional.ofNullable(this.httpPort);
     }
     /**
      * The value of the HTTPS port. Must be between 1 and 65535.
      * 
-     */
+    */
     public Optional<Integer> getHttpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
     /**
      * Origin name which must be unique within the endpoint.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
      * 
-     */
+    */
     public Optional<String> getOriginHostHeader() {
         return Optional.ofNullable(this.originHostHeader);
     }
     /**
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
      * 
-     */
+    */
     public Optional<String> getPrivateLinkAlias() {
         return Optional.ofNullable(this.privateLinkAlias);
     }
     /**
      * A custom message to be included in the approval request to connect to the Private Link.
      * 
-     */
+    */
     public Optional<String> getPrivateLinkApprovalMessage() {
         return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
     /**
      * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
      * 
-     */
+    */
     public Optional<String> getPrivateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
     /**
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
      * 
-     */
+    */
     public Optional<String> getPrivateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
      * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
-     */
+    */
     public Optional<Integer> getWeight() {
         return Optional.ofNullable(this.weight);
     }
@@ -288,7 +288,6 @@ public final class DeepCreatedOriginResponse {
             this.weight = weight;
             return this;
         }
-
         public DeepCreatedOriginResponse build() {
             return new DeepCreatedOriginResponse(enabled, hostName, httpPort, httpsPort, name, originHostHeader, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
         }

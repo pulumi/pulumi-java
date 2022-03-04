@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="legacyResourceId")
-    private final @Nullable Input<String> legacyResourceId;
+      private final @Nullable Input<String> legacyResourceId;
 
     public Input<String> getLegacyResourceId() {
         return this.legacyResourceId == null ? Input.empty() : this.legacyResourceId;
@@ -34,7 +34,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricName")
-    private final @Nullable Input<String> metricName;
+      private final @Nullable Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName == null ? Input.empty() : this.metricName;
@@ -45,7 +45,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricNamespace")
-    private final @Nullable Input<String> metricNamespace;
+      private final @Nullable Input<String> metricNamespace;
 
     public Input<String> getMetricNamespace() {
         return this.metricNamespace == null ? Input.empty() : this.metricNamespace;
@@ -57,7 +57,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -68,7 +68,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceLocation")
-    private final @Nullable Input<String> resourceLocation;
+      private final @Nullable Input<String> resourceLocation;
 
     public Input<String> getResourceLocation() {
         return this.resourceLocation == null ? Input.empty() : this.resourceLocation;
@@ -79,7 +79,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable Input<String> resourceUri;
+      private final @Nullable Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;
@@ -198,7 +198,6 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }
-
         public RuleMetricDataSourceArgs build() {
             return new RuleMetricDataSourceArgs(legacyResourceId, metricName, metricNamespace, odataType, resourceLocation, resourceUri);
         }

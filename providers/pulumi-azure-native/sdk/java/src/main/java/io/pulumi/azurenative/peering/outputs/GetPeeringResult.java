@@ -6,7 +6,7 @@ package io.pulumi.azurenative.peering.outputs;
 import io.pulumi.azurenative.peering.outputs.PeeringPropertiesDirectResponse;
 import io.pulumi.azurenative.peering.outputs.PeeringPropertiesExchangeResponse;
 import io.pulumi.azurenative.peering.outputs.PeeringSkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -100,77 +100,77 @@ public final class GetPeeringResult {
     /**
      * The properties that define a direct peering.
      * 
-     */
+    */
     public Optional<PeeringPropertiesDirectResponse> getDirect() {
         return Optional.ofNullable(this.direct);
     }
     /**
      * The properties that define an exchange peering.
      * 
-     */
+    */
     public Optional<PeeringPropertiesExchangeResponse> getExchange() {
         return Optional.ofNullable(this.exchange);
     }
     /**
      * The ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The kind of the peering.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The location of the peering.
      * 
-     */
+    */
     public Optional<String> getPeeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU that defines the tier and kind of the peering.
      * 
-     */
+    */
     public PeeringSkuResponse getSku() {
         return this.sku;
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -269,7 +269,6 @@ public final class GetPeeringResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPeeringResult build() {
             return new GetPeeringResult(direct, exchange, id, kind, location, name, peeringLocation, provisioningState, sku, tags, type);
         }

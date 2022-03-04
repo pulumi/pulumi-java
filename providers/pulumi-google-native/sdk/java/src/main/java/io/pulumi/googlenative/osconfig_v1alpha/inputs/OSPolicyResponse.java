@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceGroupResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowNoResourceGroupMatch", required=true)
-    private final Boolean allowNoResourceGroupMatch;
+      private final Boolean allowNoResourceGroupMatch;
 
     public Boolean getAllowNoResourceGroupMatch() {
         return this.allowNoResourceGroupMatch;
@@ -35,7 +35,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -46,7 +46,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -57,7 +57,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroups", required=true)
-    private final List<OSPolicyResourceGroupResponse> resourceGroups;
+      private final List<OSPolicyResourceGroupResponse> resourceGroups;
 
     public List<OSPolicyResourceGroupResponse> getResourceGroups() {
         return this.resourceGroups;
@@ -126,7 +126,6 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
-
         public OSPolicyResponse build() {
             return new OSPolicyResponse(allowNoResourceGroupMatch, description, mode, resourceGroups);
         }

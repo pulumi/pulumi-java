@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class StorageAccountCredentialsResponse {
     /**
      * The primary key of the storage account.
      * 
-     */
+    */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * The ARM resource ID of the storage account.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * The secondary key of the storage account.
      * 
-     */
+    */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }
@@ -95,7 +95,6 @@ public final class StorageAccountCredentialsResponse {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public StorageAccountCredentialsResponse build() {
             return new StorageAccountCredentialsResponse(primaryKey, resourceId, secondaryKey);
         }

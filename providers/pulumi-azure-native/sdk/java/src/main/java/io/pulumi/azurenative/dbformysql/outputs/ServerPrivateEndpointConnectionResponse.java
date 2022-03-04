@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dbformysql.outputs;
 
 import io.pulumi.azurenative.dbformysql.outputs.ServerPrivateEndpointConnectionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,14 +32,14 @@ public final class ServerPrivateEndpointConnectionResponse {
     /**
      * Resource Id of the private endpoint connection.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Private endpoint connection properties
      * 
-     */
+    */
     public ServerPrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
@@ -75,7 +75,6 @@ public final class ServerPrivateEndpointConnectionResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public ServerPrivateEndpointConnectionResponse build() {
             return new ServerPrivateEndpointConnectionResponse(id, properties);
         }

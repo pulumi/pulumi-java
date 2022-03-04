@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ivs;
 
 import io.pulumi.awsnative.ivs.inputs.PlaybackKeyPairTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicKeyMaterial", required=true)
-    private final Input<String> publicKeyMaterial;
+      private final Input<String> publicKeyMaterial;
 
     public Input<String> getPublicKeyMaterial() {
         return this.publicKeyMaterial;
@@ -43,7 +43,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<PlaybackKeyPairTagArgs>> tags;
+      private final @Nullable Input<List<PlaybackKeyPairTagArgs>> tags;
 
     public Input<List<PlaybackKeyPairTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -117,7 +117,6 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PlaybackKeyPairArgs build() {
             return new PlaybackKeyPairArgs(name, publicKeyMaterial, tags);
         }

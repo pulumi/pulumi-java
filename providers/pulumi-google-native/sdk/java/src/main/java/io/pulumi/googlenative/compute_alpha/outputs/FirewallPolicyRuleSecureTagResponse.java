@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class FirewallPolicyRuleSecureTagResponse {
     /**
      * Name of the secure tag, created with TagManager's TagValue API.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -74,7 +74,6 @@ public final class FirewallPolicyRuleSecureTagResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public FirewallPolicyRuleSecureTagResponse build() {
             return new FirewallPolicyRuleSecureTagResponse(name, state);
         }

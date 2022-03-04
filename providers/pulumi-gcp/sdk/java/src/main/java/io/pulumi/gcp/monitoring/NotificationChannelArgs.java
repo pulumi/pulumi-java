@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.NotificationChannelSensitiveLabelsArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -44,7 +44,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -60,7 +60,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -72,7 +72,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -89,7 +89,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sensitiveLabels")
-    private final @Nullable Input<NotificationChannelSensitiveLabelsArgs> sensitiveLabels;
+      private final @Nullable Input<NotificationChannelSensitiveLabelsArgs> sensitiveLabels;
 
     public Input<NotificationChannelSensitiveLabelsArgs> getSensitiveLabels() {
         return this.sensitiveLabels == null ? Input.empty() : this.sensitiveLabels;
@@ -100,7 +100,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -111,7 +111,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userLabels")
-    private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Input<Map<String,String>> userLabels;
 
     public Input<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Input.empty() : this.userLabels;
@@ -260,7 +260,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }
-
         public NotificationChannelArgs build() {
             return new NotificationChannelArgs(description, displayName, enabled, labels, project, sensitiveLabels, type, userLabels);
         }

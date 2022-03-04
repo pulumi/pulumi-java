@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class SchedulingNodeAffinityResponse {
     /**
      * Corresponds to the label key of Node resource.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Corresponds to the label values of Node resource.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -96,7 +96,6 @@ public final class SchedulingNodeAffinityResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public SchedulingNodeAffinityResponse build() {
             return new SchedulingNodeAffinityResponse(key, operator, values);
         }

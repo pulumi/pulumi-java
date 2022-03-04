@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -31,7 +31,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+      private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -42,7 +42,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -63,7 +63,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="idpId")
-    private final @Nullable Input<String> idpId;
+      private final @Nullable Input<String> idpId;
 
     public Input<String> getIdpId() {
         return this.idpId == null ? Input.empty() : this.idpId;
@@ -74,7 +74,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -205,7 +205,6 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DefaultSupportedIdpConfigState build() {
             return new DefaultSupportedIdpConfigState(clientId, clientSecret, enabled, idpId, name, project);
         }

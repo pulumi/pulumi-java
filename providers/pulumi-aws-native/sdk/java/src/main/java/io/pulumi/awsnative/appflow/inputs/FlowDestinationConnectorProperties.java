@@ -11,7 +11,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowSalesforceDestinationProperties;
 import io.pulumi.awsnative.appflow.inputs.FlowSnowflakeDestinationProperties;
 import io.pulumi.awsnative.appflow.inputs.FlowUpsolverDestinationProperties;
 import io.pulumi.awsnative.appflow.inputs.FlowZendeskDestinationProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -26,56 +26,56 @@ public final class FlowDestinationConnectorProperties extends io.pulumi.resource
     public static final FlowDestinationConnectorProperties Empty = new FlowDestinationConnectorProperties();
 
     @InputImport(name="eventBridge")
-    private final @Nullable FlowEventBridgeDestinationProperties eventBridge;
+      private final @Nullable FlowEventBridgeDestinationProperties eventBridge;
 
     public Optional<FlowEventBridgeDestinationProperties> getEventBridge() {
         return this.eventBridge == null ? Optional.empty() : Optional.ofNullable(this.eventBridge);
     }
 
     @InputImport(name="lookoutMetrics")
-    private final @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics;
+      private final @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics;
 
     public Optional<FlowLookoutMetricsDestinationProperties> getLookoutMetrics() {
         return this.lookoutMetrics == null ? Optional.empty() : Optional.ofNullable(this.lookoutMetrics);
     }
 
     @InputImport(name="redshift")
-    private final @Nullable FlowRedshiftDestinationProperties redshift;
+      private final @Nullable FlowRedshiftDestinationProperties redshift;
 
     public Optional<FlowRedshiftDestinationProperties> getRedshift() {
         return this.redshift == null ? Optional.empty() : Optional.ofNullable(this.redshift);
     }
 
     @InputImport(name="s3")
-    private final @Nullable FlowS3DestinationProperties s3;
+      private final @Nullable FlowS3DestinationProperties s3;
 
     public Optional<FlowS3DestinationProperties> getS3() {
         return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
     }
 
     @InputImport(name="salesforce")
-    private final @Nullable FlowSalesforceDestinationProperties salesforce;
+      private final @Nullable FlowSalesforceDestinationProperties salesforce;
 
     public Optional<FlowSalesforceDestinationProperties> getSalesforce() {
         return this.salesforce == null ? Optional.empty() : Optional.ofNullable(this.salesforce);
     }
 
     @InputImport(name="snowflake")
-    private final @Nullable FlowSnowflakeDestinationProperties snowflake;
+      private final @Nullable FlowSnowflakeDestinationProperties snowflake;
 
     public Optional<FlowSnowflakeDestinationProperties> getSnowflake() {
         return this.snowflake == null ? Optional.empty() : Optional.ofNullable(this.snowflake);
     }
 
     @InputImport(name="upsolver")
-    private final @Nullable FlowUpsolverDestinationProperties upsolver;
+      private final @Nullable FlowUpsolverDestinationProperties upsolver;
 
     public Optional<FlowUpsolverDestinationProperties> getUpsolver() {
         return this.upsolver == null ? Optional.empty() : Optional.ofNullable(this.upsolver);
     }
 
     @InputImport(name="zendesk")
-    private final @Nullable FlowZendeskDestinationProperties zendesk;
+      private final @Nullable FlowZendeskDestinationProperties zendesk;
 
     public Optional<FlowZendeskDestinationProperties> getZendesk() {
         return this.zendesk == null ? Optional.empty() : Optional.ofNullable(this.zendesk);
@@ -184,7 +184,6 @@ public final class FlowDestinationConnectorProperties extends io.pulumi.resource
             this.zendesk = zendesk;
             return this;
         }
-
         public FlowDestinationConnectorProperties build() {
             return new FlowDestinationConnectorProperties(eventBridge, lookoutMetrics, redshift, s3, salesforce, snowflake, upsolver, zendesk);
         }

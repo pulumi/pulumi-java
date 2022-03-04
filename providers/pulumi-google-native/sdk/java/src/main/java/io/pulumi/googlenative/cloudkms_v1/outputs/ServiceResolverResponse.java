@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CertificateResponse;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class ServiceResolverResponse {
     /**
      * Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
      * 
-     */
+    */
     public String getEndpointFilter() {
         return this.endpointFilter;
     }
     /**
      * The hostname of the EKM replica used at TLS and HTTP layers.
      * 
-     */
+    */
     public String getHostname() {
         return this.hostname;
     }
     /**
      * A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
      * 
-     */
+    */
     public List<CertificateResponse> getServerCertificates() {
         return this.serverCertificates;
     }
     /**
      * The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
      * 
-     */
+    */
     public String getServiceDirectoryService() {
         return this.serviceDirectoryService;
     }
@@ -118,7 +118,6 @@ public final class ServiceResolverResponse {
             this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
             return this;
         }
-
         public ServiceResolverResponse build() {
             return new ServiceResolverResponse(endpointFilter, hostname, serverCertificates, serviceDirectoryService);
         }

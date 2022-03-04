@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lastKnownPowerState", required=true)
-    private final String lastKnownPowerState;
+      private final String lastKnownPowerState;
 
     public String getLastKnownPowerState() {
         return this.lastKnownPowerState;
@@ -32,7 +32,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="powerState", required=true)
-    private final String powerState;
+      private final String powerState;
 
     public String getPowerState() {
         return this.powerState;
@@ -43,7 +43,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="rdpAuthority", required=true)
-    private final String rdpAuthority;
+      private final String rdpAuthority;
 
     public String getRdpAuthority() {
         return this.rdpAuthority;
@@ -54,7 +54,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="sshAuthority", required=true)
-    private final String sshAuthority;
+      private final String sshAuthority;
 
     public String getSshAuthority() {
         return this.sshAuthority;
@@ -123,7 +123,6 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
             this.sshAuthority = Objects.requireNonNull(sshAuthority);
             return this;
         }
-
         public VmStateDetailsResponse build() {
             return new VmStateDetailsResponse(lastKnownPowerState, powerState, rdpAuthority, sshAuthority);
         }

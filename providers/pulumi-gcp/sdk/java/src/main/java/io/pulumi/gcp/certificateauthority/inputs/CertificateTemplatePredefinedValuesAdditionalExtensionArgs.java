@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
      * 
      */
     @InputImport(name="critical")
-    private final @Nullable Input<Boolean> critical;
+      private final @Nullable Input<Boolean> critical;
 
     public Input<Boolean> getCritical() {
         return this.critical == null ? Input.empty() : this.critical;
@@ -32,7 +32,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> objectId;
+      private final Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> objectId;
 
     public Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> getObjectId() {
         return this.objectId;
@@ -43,7 +43,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -117,7 +117,6 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public CertificateTemplatePredefinedValuesAdditionalExtensionArgs build() {
             return new CertificateTemplatePredefinedValuesAdditionalExtensionArgs(critical, objectId, value);
         }

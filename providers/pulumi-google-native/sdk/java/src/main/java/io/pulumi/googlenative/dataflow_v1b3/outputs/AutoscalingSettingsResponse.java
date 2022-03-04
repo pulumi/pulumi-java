@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class AutoscalingSettingsResponse {
     /**
      * The algorithm to use for autoscaling.
      * 
-     */
+    */
     public String getAlgorithm() {
         return this.algorithm;
     }
     /**
      * The maximum number of workers to cap scaling at.
      * 
-     */
+    */
     public Integer getMaxNumWorkers() {
         return this.maxNumWorkers;
     }
@@ -75,7 +75,6 @@ public final class AutoscalingSettingsResponse {
             this.maxNumWorkers = Objects.requireNonNull(maxNumWorkers);
             return this;
         }
-
         public AutoscalingSettingsResponse build() {
             return new AutoscalingSettingsResponse(algorithm, maxNumWorkers);
         }

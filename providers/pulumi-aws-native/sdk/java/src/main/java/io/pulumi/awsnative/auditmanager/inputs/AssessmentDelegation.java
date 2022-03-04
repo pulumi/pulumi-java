@@ -5,7 +5,7 @@ package io.pulumi.awsnative.auditmanager.inputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentDelegationStatus;
 import io.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,77 +22,77 @@ public final class AssessmentDelegation extends io.pulumi.resources.InvokeArgs {
     public static final AssessmentDelegation Empty = new AssessmentDelegation();
 
     @InputImport(name="assessmentId")
-    private final @Nullable String assessmentId;
+      private final @Nullable String assessmentId;
 
     public Optional<String> getAssessmentId() {
         return this.assessmentId == null ? Optional.empty() : Optional.ofNullable(this.assessmentId);
     }
 
     @InputImport(name="assessmentName")
-    private final @Nullable String assessmentName;
+      private final @Nullable String assessmentName;
 
     public Optional<String> getAssessmentName() {
         return this.assessmentName == null ? Optional.empty() : Optional.ofNullable(this.assessmentName);
     }
 
     @InputImport(name="comment")
-    private final @Nullable String comment;
+      private final @Nullable String comment;
 
     public Optional<String> getComment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
     @InputImport(name="controlSetId")
-    private final @Nullable String controlSetId;
+      private final @Nullable String controlSetId;
 
     public Optional<String> getControlSetId() {
         return this.controlSetId == null ? Optional.empty() : Optional.ofNullable(this.controlSetId);
     }
 
     @InputImport(name="createdBy")
-    private final @Nullable String createdBy;
+      private final @Nullable String createdBy;
 
     public Optional<String> getCreatedBy() {
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
     @InputImport(name="creationTime")
-    private final @Nullable Double creationTime;
+      private final @Nullable Double creationTime;
 
     public Optional<Double> getCreationTime() {
         return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
     }
 
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @InputImport(name="lastUpdated")
-    private final @Nullable Double lastUpdated;
+      private final @Nullable Double lastUpdated;
 
     public Optional<Double> getLastUpdated() {
         return this.lastUpdated == null ? Optional.empty() : Optional.ofNullable(this.lastUpdated);
     }
 
     @InputImport(name="roleArn")
-    private final @Nullable String roleArn;
+      private final @Nullable String roleArn;
 
     public Optional<String> getRoleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 
     @InputImport(name="roleType")
-    private final @Nullable AssessmentRoleType roleType;
+      private final @Nullable AssessmentRoleType roleType;
 
     public Optional<AssessmentRoleType> getRoleType() {
         return this.roleType == null ? Optional.empty() : Optional.ofNullable(this.roleType);
     }
 
     @InputImport(name="status")
-    private final @Nullable AssessmentDelegationStatus status;
+      private final @Nullable AssessmentDelegationStatus status;
 
     public Optional<AssessmentDelegationStatus> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -231,7 +231,6 @@ public final class AssessmentDelegation extends io.pulumi.resources.InvokeArgs {
             this.status = status;
             return this;
         }
-
         public AssessmentDelegation build() {
             return new AssessmentDelegation(assessmentId, assessmentName, comment, controlSetId, createdBy, creationTime, id, lastUpdated, roleArn, roleType, status);
         }

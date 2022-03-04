@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.elastic.outputs;
 
 import io.pulumi.azurenative.elastic.outputs.MonitoredResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ListMonitoredResourceResult {
     /**
      * Link to the next set of results, if any.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Results of a list operation.
      * 
-     */
+    */
     public List<MonitoredResourceResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -78,7 +78,6 @@ public final class ListMonitoredResourceResult {
             this.value = value;
             return this;
         }
-
         public ListMonitoredResourceResult build() {
             return new ListMonitoredResourceResult(nextLink, value);
         }

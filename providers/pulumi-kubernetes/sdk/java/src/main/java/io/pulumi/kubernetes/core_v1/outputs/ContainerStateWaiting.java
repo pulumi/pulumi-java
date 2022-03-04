@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ContainerStateWaiting {
     /**
      * Message regarding why the container is not yet running.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * (brief) reason the container is not yet running.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
@@ -76,7 +76,6 @@ public final class ContainerStateWaiting {
             this.reason = reason;
             return this;
         }
-
         public ContainerStateWaiting build() {
             return new ContainerStateWaiting(message, reason);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricIdentifier;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricValueStatus;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class PodsMetricStatus {
     /**
      * current contains the current value for the given metric
      * 
-     */
+    */
     public MetricValueStatus getCurrent() {
         return this.current;
     }
     /**
      * metric identifies the target metric by name and selector
      * 
-     */
+    */
     public MetricIdentifier getMetric() {
         return this.metric;
     }
@@ -75,7 +75,6 @@ public final class PodsMetricStatus {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public PodsMetricStatus build() {
             return new PodsMetricStatus(current, metric);
         }

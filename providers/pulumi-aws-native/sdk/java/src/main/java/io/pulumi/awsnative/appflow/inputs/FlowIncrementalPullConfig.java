@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class FlowIncrementalPullConfig extends io.pulumi.resources.InvokeA
     public static final FlowIncrementalPullConfig Empty = new FlowIncrementalPullConfig();
 
     @InputImport(name="datetimeTypeFieldName")
-    private final @Nullable String datetimeTypeFieldName;
+      private final @Nullable String datetimeTypeFieldName;
 
     public Optional<String> getDatetimeTypeFieldName() {
         return this.datetimeTypeFieldName == null ? Optional.empty() : Optional.ofNullable(this.datetimeTypeFieldName);
@@ -57,7 +57,6 @@ public final class FlowIncrementalPullConfig extends io.pulumi.resources.InvokeA
             this.datetimeTypeFieldName = datetimeTypeFieldName;
             return this;
         }
-
         public FlowIncrementalPullConfig build() {
             return new FlowIncrementalPullConfig(datetimeTypeFieldName);
         }

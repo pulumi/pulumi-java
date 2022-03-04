@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipBusinessDocumentResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,49 +69,49 @@ public final class RosettaNetPipRoleSettingsResponse {
     /**
      * The action name.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * The RosettaNet ProcessConfiguration business document.
      * 
-     */
+    */
     public RosettaNetPipBusinessDocumentResponse getBusinessDocument() {
         return this.businessDocument;
     }
     /**
      * The description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The role name.
      * 
-     */
+    */
     public String getRole() {
         return this.role;
     }
     /**
      * The RosettaNet ProcessConfiguration role type.
      * 
-     */
+    */
     public String getRoleType() {
         return this.roleType;
     }
     /**
      * The service name.
      * 
-     */
+    */
     public String getService() {
         return this.service;
     }
     /**
      * The service classification name.
      * 
-     */
+    */
     public String getServiceClassification() {
         return this.serviceClassification;
     }
@@ -182,7 +182,6 @@ public final class RosettaNetPipRoleSettingsResponse {
             this.serviceClassification = Objects.requireNonNull(serviceClassification);
             return this;
         }
-
         public RosettaNetPipRoleSettingsResponse build() {
             return new RosettaNetPipRoleSettingsResponse(action, businessDocument, description, role, roleType, service, serviceClassification);
         }

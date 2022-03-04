@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.inputs.GetAccessControlRecordArgs;
 import io.pulumi.azurenative.storsimple.outputs.GetAccessControlRecordResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessControlRecord {
-/**
- * The access control record.
+    private GetAccessControlRecord() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccessControlRecordArgs.Builder a);
+    }
+    private static GetAccessControlRecordArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccessControlRecordArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The access control record.
  * API Version: 2017-06-01.
  * 
- *
- * The access control record.
+     *
+     * The access control record.
  * 
- */
+     */
+    public static CompletableFuture<GetAccessControlRecordResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The access control record.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * The access control record.
+     * 
+     */
     public static CompletableFuture<GetAccessControlRecordResult> invokeAsync(GetAccessControlRecordArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getAccessControlRecord", TypeShape.of(GetAccessControlRecordResult.class), args == null ? GetAccessControlRecordArgs.Empty : args, Utilities.withVersion(options));
     }

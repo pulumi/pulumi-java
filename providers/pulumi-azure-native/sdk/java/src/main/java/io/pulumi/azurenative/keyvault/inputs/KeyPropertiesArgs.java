@@ -9,7 +9,7 @@ import io.pulumi.azurenative.keyvault.enums.JsonWebKeyType;
 import io.pulumi.azurenative.keyvault.inputs.KeyAttributesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<KeyAttributesArgs> attributes;
+      private final @Nullable Input<KeyAttributesArgs> attributes;
 
     public Input<KeyAttributesArgs> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -41,14 +41,14 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="curveName")
-    private final @Nullable Input<Either<String,JsonWebKeyCurveName>> curveName;
+      private final @Nullable Input<Either<String,JsonWebKeyCurveName>> curveName;
 
     public Input<Either<String,JsonWebKeyCurveName>> getCurveName() {
         return this.curveName == null ? Input.empty() : this.curveName;
     }
 
     @InputImport(name="keyOps")
-    private final @Nullable Input<List<Either<String,JsonWebKeyOperation>>> keyOps;
+      private final @Nullable Input<List<Either<String,JsonWebKeyOperation>>> keyOps;
 
     public Input<List<Either<String,JsonWebKeyOperation>>> getKeyOps() {
         return this.keyOps == null ? Input.empty() : this.keyOps;
@@ -59,7 +59,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySize")
-    private final @Nullable Input<Integer> keySize;
+      private final @Nullable Input<Integer> keySize;
 
     public Input<Integer> getKeySize() {
         return this.keySize == null ? Input.empty() : this.keySize;
@@ -70,7 +70,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kty")
-    private final @Nullable Input<Either<String,JsonWebKeyType>> kty;
+      private final @Nullable Input<Either<String,JsonWebKeyType>> kty;
 
     public Input<Either<String,JsonWebKeyType>> getKty() {
         return this.kty == null ? Input.empty() : this.kty;
@@ -174,7 +174,6 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.kty = Input.ofNullable(kty);
             return this;
         }
-
         public KeyPropertiesArgs build() {
             return new KeyPropertiesArgs(attributes, curveName, keyOps, keySize, kty);
         }

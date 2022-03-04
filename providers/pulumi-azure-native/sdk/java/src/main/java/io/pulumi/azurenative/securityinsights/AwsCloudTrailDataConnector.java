@@ -9,8 +9,8 @@ import io.pulumi.azurenative.securityinsights.outputs.AwsCloudTrailDataConnector
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -119,6 +119,37 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AwsCloudTrailDataConnectorArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.securityinsights.AwsCloudTrailDataConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.securityinsights.AwsCloudTrailDataConnectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AwsCloudTrailDataConnector(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AwsCloudTrailDataConnector(String name) {
+        this(name, AwsCloudTrailDataConnectorArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AwsCloudTrailDataConnector(String name, AwsCloudTrailDataConnectorArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.SetMultiVmSyncStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="appConsistentFrequencyInMinutes")
-    private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
+      private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
 
     public Input<Integer> getAppConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
@@ -37,7 +37,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="crashConsistentFrequencyInMinutes")
-    private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
+      private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
 
     public Input<Integer> getCrashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes == null ? Input.empty() : this.crashConsistentFrequencyInMinutes;
@@ -49,7 +49,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -60,7 +60,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="multiVmSyncStatus", required=true)
-    private final Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
+      private final Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
     public Input<Either<String,SetMultiVmSyncStatus>> getMultiVmSyncStatus() {
         return this.multiVmSyncStatus;
@@ -71,7 +71,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="recoveryPointHistory")
-    private final @Nullable Input<Integer> recoveryPointHistory;
+      private final @Nullable Input<Integer> recoveryPointHistory;
 
     public Input<Integer> getRecoveryPointHistory() {
         return this.recoveryPointHistory == null ? Input.empty() : this.recoveryPointHistory;
@@ -175,7 +175,6 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
             this.recoveryPointHistory = Input.ofNullable(recoveryPointHistory);
             return this;
         }
-
         public A2APolicyCreationInputArgs build() {
             return new A2APolicyCreationInputArgs(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory);
         }

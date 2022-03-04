@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.inputs.GetManagedDatabaseSensitivityLabelArgs;
 import io.pulumi.azurenative.sql.outputs.GetManagedDatabaseSensitivityLabelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedDatabaseSensitivityLabel {
-/**
- * A sensitivity label.
+    private GetManagedDatabaseSensitivityLabel() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedDatabaseSensitivityLabelArgs.Builder a);
+    }
+    private static GetManagedDatabaseSensitivityLabelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedDatabaseSensitivityLabelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A sensitivity label.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A sensitivity label.
+     *
+     * A sensitivity label.
  * 
- */
+     */
+    public static CompletableFuture<GetManagedDatabaseSensitivityLabelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A sensitivity label.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A sensitivity label.
+     * 
+     */
     public static CompletableFuture<GetManagedDatabaseSensitivityLabelResult> invokeAsync(GetManagedDatabaseSensitivityLabelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabaseSensitivityLabel", TypeShape.of(GetManagedDatabaseSensitivityLabelResult.class), args == null ? GetManagedDatabaseSensitivityLabelArgs.Empty : args, Utilities.withVersion(options));
     }

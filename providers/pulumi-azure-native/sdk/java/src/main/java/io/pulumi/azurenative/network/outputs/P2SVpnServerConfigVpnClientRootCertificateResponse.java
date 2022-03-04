@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the VPN client root certificate resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The certificate public data.
      * 
-     */
+    */
     public String getPublicCertData() {
         return this.publicCertData;
     }
@@ -139,7 +139,6 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
-
         public P2SVpnServerConfigVpnClientRootCertificateResponse build() {
             return new P2SVpnServerConfigVpnClientRootCertificateResponse(etag, id, name, provisioningState, publicCertData);
         }

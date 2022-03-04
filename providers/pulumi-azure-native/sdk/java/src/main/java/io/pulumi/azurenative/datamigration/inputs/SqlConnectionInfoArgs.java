@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.enums.AuthenticationType;
 import io.pulumi.azurenative.datamigration.enums.SqlSourcePlatform;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="additionalSettings")
-    private final @Nullable Input<String> additionalSettings;
+      private final @Nullable Input<String> additionalSettings;
 
     public Input<String> getAdditionalSettings() {
         return this.additionalSettings == null ? Input.empty() : this.additionalSettings;
@@ -38,7 +38,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<Either<String,AuthenticationType>> authentication;
+      private final @Nullable Input<Either<String,AuthenticationType>> authentication;
 
     public Input<Either<String,AuthenticationType>> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -49,7 +49,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataSource", required=true)
-    private final Input<String> dataSource;
+      private final Input<String> dataSource;
 
     public Input<String> getDataSource() {
         return this.dataSource;
@@ -60,7 +60,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptConnection")
-    private final @Nullable Input<Boolean> encryptConnection;
+      private final @Nullable Input<Boolean> encryptConnection;
 
     public Input<Boolean> getEncryptConnection() {
         return this.encryptConnection == null ? Input.empty() : this.encryptConnection;
@@ -71,7 +71,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -82,7 +82,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<Either<String,SqlSourcePlatform>> platform;
+      private final @Nullable Input<Either<String,SqlSourcePlatform>> platform;
 
     public Input<Either<String,SqlSourcePlatform>> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -93,7 +93,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="trustServerCertificate")
-    private final @Nullable Input<Boolean> trustServerCertificate;
+      private final @Nullable Input<Boolean> trustServerCertificate;
 
     public Input<Boolean> getTrustServerCertificate() {
         return this.trustServerCertificate == null ? Input.empty() : this.trustServerCertificate;
@@ -105,7 +105,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -116,7 +116,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -280,7 +280,6 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public SqlConnectionInfoArgs build() {
             return new SqlConnectionInfoArgs(additionalSettings, authentication, dataSource, encryptConnection, password, platform, trustServerCertificate, type, userName);
         }

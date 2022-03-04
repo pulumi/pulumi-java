@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetCapacityRebalanceReplacementStrategy;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class EC2FleetCapacityRebalanceArgs extends io.pulumi.resources.Res
     public static final EC2FleetCapacityRebalanceArgs Empty = new EC2FleetCapacityRebalanceArgs();
 
     @InputImport(name="replacementStrategy")
-    private final @Nullable Input<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy;
+      private final @Nullable Input<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy;
 
     public Input<EC2FleetCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
         return this.replacementStrategy == null ? Input.empty() : this.replacementStrategy;
     }
 
     @InputImport(name="terminationDelay")
-    private final @Nullable Input<Integer> terminationDelay;
+      private final @Nullable Input<Integer> terminationDelay;
 
     public Input<Integer> getTerminationDelay() {
         return this.terminationDelay == null ? Input.empty() : this.terminationDelay;
@@ -82,7 +82,6 @@ public final class EC2FleetCapacityRebalanceArgs extends io.pulumi.resources.Res
             this.terminationDelay = Input.ofNullable(terminationDelay);
             return this;
         }
-
         public EC2FleetCapacityRebalanceArgs build() {
             return new EC2FleetCapacityRebalanceArgs(replacementStrategy, terminationDelay);
         }

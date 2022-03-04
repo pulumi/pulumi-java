@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ManagedGroupConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="instanceGroupManagerName", required=true)
-    private final String instanceGroupManagerName;
+      private final String instanceGroupManagerName;
 
     public String getInstanceGroupManagerName() {
         return this.instanceGroupManagerName;
@@ -32,7 +32,7 @@ public final class ManagedGroupConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="instanceTemplateName", required=true)
-    private final String instanceTemplateName;
+      private final String instanceTemplateName;
 
     public String getInstanceTemplateName() {
         return this.instanceTemplateName;
@@ -81,7 +81,6 @@ public final class ManagedGroupConfigResponse extends io.pulumi.resources.Invoke
             this.instanceTemplateName = Objects.requireNonNull(instanceTemplateName);
             return this;
         }
-
         public ManagedGroupConfigResponse build() {
             return new ManagedGroupConfigResponse(instanceGroupManagerName, instanceTemplateName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DiffDiskSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="option")
-    private final @Nullable String option;
+      private final @Nullable String option;
 
     public Optional<String> getOption() {
         return this.option == null ? Optional.empty() : Optional.ofNullable(this.option);
@@ -34,7 +34,7 @@ public final class DiffDiskSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="placement")
-    private final @Nullable String placement;
+      private final @Nullable String placement;
 
     public Optional<String> getPlacement() {
         return this.placement == null ? Optional.empty() : Optional.ofNullable(this.placement);
@@ -83,7 +83,6 @@ public final class DiffDiskSettingsResponse extends io.pulumi.resources.InvokeAr
             this.placement = placement;
             return this;
         }
-
         public DiffDiskSettingsResponse build() {
             return new DiffDiskSettingsResponse(option, placement);
         }

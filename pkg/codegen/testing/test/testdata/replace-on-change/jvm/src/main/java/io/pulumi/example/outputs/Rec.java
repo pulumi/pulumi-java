@@ -3,7 +3,7 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -45,7 +45,6 @@ public final class Rec {
             this.rec1 = rec1;
             return this;
         }
-
         public Rec build() {
             return new Rec(rec1);
         }

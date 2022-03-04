@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerplatform.outputs;
 
 import io.pulumi.azurenative.powerplatform.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class PropertiesResponseEncryption {
     /**
      * Key vault properties.
      * 
-     */
+    */
     public Optional<KeyVaultPropertiesResponse> getKeyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
      * The state of onboarding, which only appears in the response.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -77,7 +77,6 @@ public final class PropertiesResponseEncryption {
             this.state = state;
             return this;
         }
-
         public PropertiesResponseEncryption build() {
             return new PropertiesResponseEncryption(keyVault, state);
         }

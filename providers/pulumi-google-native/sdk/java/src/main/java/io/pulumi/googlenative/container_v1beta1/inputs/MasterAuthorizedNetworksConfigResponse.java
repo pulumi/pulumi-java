@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.CidrBlockResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MasterAuthorizedNetworksConfigResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="cidrBlocks", required=true)
-    private final List<CidrBlockResponse> cidrBlocks;
+      private final List<CidrBlockResponse> cidrBlocks;
 
     public List<CidrBlockResponse> getCidrBlocks() {
         return this.cidrBlocks;
@@ -34,7 +34,7 @@ public final class MasterAuthorizedNetworksConfigResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -83,7 +83,6 @@ public final class MasterAuthorizedNetworksConfigResponse extends io.pulumi.reso
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public MasterAuthorizedNetworksConfigResponse build() {
             return new MasterAuthorizedNetworksConfigResponse(cidrBlocks, enabled);
         }

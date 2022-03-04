@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.enums.SkuType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApiManagementServiceSkuPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="capacity", required=true)
-    private final Input<Integer> capacity;
+      private final Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity;
@@ -36,7 +36,7 @@ public final class ApiManagementServiceSkuPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,SkuType>> name;
+      private final Input<Either<String,SkuType>> name;
 
     public Input<Either<String,SkuType>> getName() {
         return this.name;
@@ -95,7 +95,6 @@ public final class ApiManagementServiceSkuPropertiesArgs extends io.pulumi.resou
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ApiManagementServiceSkuPropertiesArgs build() {
             return new ApiManagementServiceSkuPropertiesArgs(capacity, name);
         }

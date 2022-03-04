@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ConfigDataflowEndpointConfigArgs extends io.pulumi.resources.
     public static final ConfigDataflowEndpointConfigArgs Empty = new ConfigDataflowEndpointConfigArgs();
 
     @InputImport(name="dataflowEndpointName")
-    private final @Nullable Input<String> dataflowEndpointName;
+      private final @Nullable Input<String> dataflowEndpointName;
 
     public Input<String> getDataflowEndpointName() {
         return this.dataflowEndpointName == null ? Input.empty() : this.dataflowEndpointName;
     }
 
     @InputImport(name="dataflowEndpointRegion")
-    private final @Nullable Input<String> dataflowEndpointRegion;
+      private final @Nullable Input<String> dataflowEndpointRegion;
 
     public Input<String> getDataflowEndpointRegion() {
         return this.dataflowEndpointRegion == null ? Input.empty() : this.dataflowEndpointRegion;
@@ -81,7 +81,6 @@ public final class ConfigDataflowEndpointConfigArgs extends io.pulumi.resources.
             this.dataflowEndpointRegion = Input.ofNullable(dataflowEndpointRegion);
             return this;
         }
-
         public ConfigDataflowEndpointConfigArgs build() {
             return new ConfigDataflowEndpointConfigArgs(dataflowEndpointName, dataflowEndpointRegion);
         }

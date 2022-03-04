@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="fileNamePrefix")
-    private final @Nullable Object fileNamePrefix;
+      private final @Nullable Object fileNamePrefix;
 
     public Optional<Object> getFileNamePrefix() {
         return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
@@ -35,7 +35,7 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="maxRowsPerFile")
-    private final @Nullable Object maxRowsPerFile;
+      private final @Nullable Object maxRowsPerFile;
 
     public Optional<Object> getMaxRowsPerFile() {
         return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
@@ -46,7 +46,7 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="recordName")
-    private final @Nullable String recordName;
+      private final @Nullable String recordName;
 
     public Optional<String> getRecordName() {
         return this.recordName == null ? Optional.empty() : Optional.ofNullable(this.recordName);
@@ -57,7 +57,7 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="recordNamespace")
-    private final @Nullable String recordNamespace;
+      private final @Nullable String recordNamespace;
 
     public Optional<String> getRecordNamespace() {
         return this.recordNamespace == null ? Optional.empty() : Optional.ofNullable(this.recordNamespace);
@@ -69,7 +69,7 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -148,7 +148,6 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AvroWriteSettingsResponse build() {
             return new AvroWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, recordName, recordNamespace, type);
         }

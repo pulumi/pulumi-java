@@ -6,21 +6,41 @@ package io.pulumi.azurenative.labservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.labservices.inputs.GetEnvironmentSettingArgs;
 import io.pulumi.azurenative.labservices.outputs.GetEnvironmentSettingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnvironmentSetting {
-/**
- * Represents settings of an environment, from which environment instances would be created
+    private GetEnvironmentSetting() {}
+    public interface BuilderApplicator {
+        public void apply(GetEnvironmentSettingArgs.Builder a);
+    }
+    private static GetEnvironmentSettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEnvironmentSettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents settings of an environment, from which environment instances would be created
  * API Version: 2018-10-15.
  * 
- *
- * Represents settings of an environment, from which environment instances would be created
+     *
+     * Represents settings of an environment, from which environment instances would be created
  * 
- */
+     */
+    public static CompletableFuture<GetEnvironmentSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents settings of an environment, from which environment instances would be created
+     * API Version: 2018-10-15.
+     * 
+     *
+         * Represents settings of an environment, from which environment instances would be created
+     * 
+     */
     public static CompletableFuture<GetEnvironmentSettingResult> invokeAsync(GetEnvironmentSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getEnvironmentSetting", TypeShape.of(GetEnvironmentSettingResult.class), args == null ? GetEnvironmentSettingArgs.Empty : args, Utilities.withVersion(options));
     }

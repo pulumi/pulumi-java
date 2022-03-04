@@ -5,8 +5,8 @@ package io.pulumi.gcp.containeranalysis;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.containeranalysis.OccurenceArgs;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceState;
@@ -200,6 +200,37 @@ public class Occurence extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OccurenceArgs.Builder a);
+    }
+    private static io.pulumi.gcp.containeranalysis.OccurenceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.containeranalysis.OccurenceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Occurence(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Occurence(String name) {
+        this(name, OccurenceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Occurence(String name, OccurenceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

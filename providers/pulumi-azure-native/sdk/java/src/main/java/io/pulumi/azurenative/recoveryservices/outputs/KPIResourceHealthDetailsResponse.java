@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ResourceHealthDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class KPIResourceHealthDetailsResponse {
     /**
      * Resource Health Status
      * 
-     */
+    */
     public List<ResourceHealthDetailsResponse> getResourceHealthDetails() {
         return this.resourceHealthDetails == null ? List.of() : this.resourceHealthDetails;
     }
     /**
      * Resource Health Status
      * 
-     */
+    */
     public Optional<String> getResourceHealthStatus() {
         return Optional.ofNullable(this.resourceHealthStatus);
     }
@@ -78,7 +78,6 @@ public final class KPIResourceHealthDetailsResponse {
             this.resourceHealthStatus = resourceHealthStatus;
             return this;
         }
-
         public KPIResourceHealthDetailsResponse build() {
             return new KPIResourceHealthDetailsResponse(resourceHealthDetails, resourceHealthStatus);
         }

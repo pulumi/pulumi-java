@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.LabelSelectorResponse;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.ScheduleResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="fleetAutoscalerSpec", required=true)
-    private final String fleetAutoscalerSpec;
+      private final String fleetAutoscalerSpec;
 
     public String getFleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
@@ -35,7 +35,7 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="schedules", required=true)
-    private final List<ScheduleResponse> schedules;
+      private final List<ScheduleResponse> schedules;
 
     public List<ScheduleResponse> getSchedules() {
         return this.schedules;
@@ -57,7 +57,7 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="selectors", required=true)
-    private final List<LabelSelectorResponse> selectors;
+      private final List<LabelSelectorResponse> selectors;
 
     public List<LabelSelectorResponse> getSelectors() {
         return this.selectors;
@@ -126,7 +126,6 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }
-
         public ScalingConfigResponse build() {
             return new ScalingConfigResponse(fleetAutoscalerSpec, name, schedules, selectors);
         }

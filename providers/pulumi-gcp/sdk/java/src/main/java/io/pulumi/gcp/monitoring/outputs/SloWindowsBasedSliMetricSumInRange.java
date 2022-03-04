@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliMetricSumInRangeRange;
 import java.lang.String;
 import java.util.Objects;
@@ -50,7 +50,7 @@ public final class SloWindowsBasedSliMetricSumInRange {
      * `range.min <= X <= range.max` for a good window.
      * Structure is documented below.
      * 
-     */
+    */
     public SloWindowsBasedSliMetricSumInRangeRange getRange() {
         return this.range;
     }
@@ -63,7 +63,7 @@ public final class SloWindowsBasedSliMetricSumInRange {
      * Summed value `X` should satisfy
      * `range.min <= X <= range.max` for a good window.
      * 
-     */
+    */
     public String getTimeSeries() {
         return this.timeSeries;
     }
@@ -99,7 +99,6 @@ public final class SloWindowsBasedSliMetricSumInRange {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
-
         public SloWindowsBasedSliMetricSumInRange build() {
             return new SloWindowsBasedSliMetricSumInRange(range, timeSeries);
         }

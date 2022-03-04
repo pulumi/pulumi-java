@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayVpnclientIpsecParametersArgs;
 import io.pulumi.azurenative.network.outputs.GetVirtualNetworkGatewayVpnclientIpsecParametersResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayVpnclientIpsecParameters {
-/**
- * An IPSec parameters for a virtual network gateway P2S connection.
+    private GetVirtualNetworkGatewayVpnclientIpsecParameters() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkGatewayVpnclientIpsecParametersArgs.Builder a);
+    }
+    private static GetVirtualNetworkGatewayVpnclientIpsecParametersArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkGatewayVpnclientIpsecParametersArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An IPSec parameters for a virtual network gateway P2S connection.
  * API Version: 2020-11-01.
  * 
- *
- * An IPSec parameters for a virtual network gateway P2S connection.
+     *
+     * An IPSec parameters for a virtual network gateway P2S connection.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientIpsecParametersResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An IPSec parameters for a virtual network gateway P2S connection.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * An IPSec parameters for a virtual network gateway P2S connection.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkGatewayVpnclientIpsecParametersResult> invokeAsync(GetVirtualNetworkGatewayVpnclientIpsecParametersArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayVpnclientIpsecParameters", TypeShape.of(GetVirtualNetworkGatewayVpnclientIpsecParametersResult.class), args == null ? GetVirtualNetworkGatewayVpnclientIpsecParametersArgs.Empty : args, Utilities.withVersion(options));
     }

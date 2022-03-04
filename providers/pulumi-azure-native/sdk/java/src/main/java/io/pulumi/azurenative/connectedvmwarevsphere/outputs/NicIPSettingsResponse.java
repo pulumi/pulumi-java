@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.NicIPAddressSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -77,56 +77,56 @@ public final class NicIPSettingsResponse {
     /**
      * Gets or sets the nic allocation method.
      * 
-     */
+    */
     public Optional<String> getAllocationMethod() {
         return Optional.ofNullable(this.allocationMethod);
     }
     /**
      * Gets or sets the dns servers.
      * 
-     */
+    */
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
      * Gets or sets the gateway.
      * 
-     */
+    */
     public List<String> getGateway() {
         return this.gateway == null ? List.of() : this.gateway;
     }
     /**
      * Gets or sets the ip address for the nic.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
      * 
-     */
+    */
     public List<NicIPAddressSettingsResponse> getIpAddressInfo() {
         return this.ipAddressInfo;
     }
     /**
      * Gets or sets the primary server.
      * 
-     */
+    */
     public String getPrimaryWinsServer() {
         return this.primaryWinsServer;
     }
     /**
      * Gets or sets the secondary server.
      * 
-     */
+    */
     public String getSecondaryWinsServer() {
         return this.secondaryWinsServer;
     }
     /**
      * Gets or sets the mask.
      * 
-     */
+    */
     public Optional<String> getSubnetMask() {
         return Optional.ofNullable(this.subnetMask);
     }
@@ -204,7 +204,6 @@ public final class NicIPSettingsResponse {
             this.subnetMask = subnetMask;
             return this;
         }
-
         public NicIPSettingsResponse build() {
             return new NicIPSettingsResponse(allocationMethod, dnsServers, gateway, ipAddress, ipAddressInfo, primaryWinsServer, secondaryWinsServer, subnetMask);
         }

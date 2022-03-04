@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.BusinessIdentityResponse;
 import io.pulumi.azurenative.logic.outputs.X12ProtocolSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -39,21 +39,21 @@ public final class X12OneWayAgreementResponse {
     /**
      * The X12 protocol settings.
      * 
-     */
+    */
     public X12ProtocolSettingsResponse getProtocolSettings() {
         return this.protocolSettings;
     }
     /**
      * The receiver business identity
      * 
-     */
+    */
     public BusinessIdentityResponse getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
     /**
      * The sender business identity
      * 
-     */
+    */
     public BusinessIdentityResponse getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
@@ -96,7 +96,6 @@ public final class X12OneWayAgreementResponse {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }
-
         public X12OneWayAgreementResponse build() {
             return new X12OneWayAgreementResponse(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }

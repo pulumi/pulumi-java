@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -121,98 +121,98 @@ public final class GetConnectorResult {
     /**
      * ID of the connector.
      * 
-     */
+    */
     public Integer getConnectorId() {
         return this.connectorId;
     }
     /**
      * Name of the connector.
      * 
-     */
+    */
     public Optional<String> getConnectorName() {
         return Optional.ofNullable(this.connectorName);
     }
     /**
      * The connector properties.
      * 
-     */
+    */
     public Map<String,Object> getConnectorProperties() {
         return this.connectorProperties;
     }
     /**
      * Type of connector.
      * 
-     */
+    */
     public String getConnectorType() {
         return this.connectorType;
     }
     /**
      * The created time.
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * Description of the connector.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Display name of the connector.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * If this is an internal connector.
      * 
-     */
+    */
     public Optional<Boolean> getIsInternal() {
         return Optional.ofNullable(this.isInternal);
     }
     /**
      * The last modified time.
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of connector.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The hub name.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -332,7 +332,6 @@ public final class GetConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectorResult build() {
             return new GetConnectorResult(connectorId, connectorName, connectorProperties, connectorType, created, description, displayName, id, isInternal, lastModified, name, state, tenantId, type);
         }

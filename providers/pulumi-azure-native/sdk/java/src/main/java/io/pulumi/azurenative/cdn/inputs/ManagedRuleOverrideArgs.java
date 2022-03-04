@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.ActionType;
 import io.pulumi.azurenative.cdn.enums.ManagedRuleEnabledState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<Either<String,ActionType>> action;
+      private final @Nullable Input<Either<String,ActionType>> action;
 
     public Input<Either<String,ActionType>> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -37,7 +37,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable Input<Either<String,ManagedRuleEnabledState>> enabledState;
+      private final @Nullable Input<Either<String,ManagedRuleEnabledState>> enabledState;
 
     public Input<Either<String,ManagedRuleEnabledState>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -48,7 +48,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ruleId", required=true)
-    private final Input<String> ruleId;
+      private final Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId;
@@ -122,7 +122,6 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
             this.ruleId = Input.of(Objects.requireNonNull(ruleId));
             return this;
         }
-
         public ManagedRuleOverrideArgs build() {
             return new ManagedRuleOverrideArgs(action, enabledState, ruleId);
         }

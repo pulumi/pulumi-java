@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="continueOnStepFailure")
-    private final @Nullable Input<Object> continueOnStepFailure;
+      private final @Nullable Input<Object> continueOnStepFailure;
 
     public Input<Object> getContinueOnStepFailure() {
         return this.continueOnStepFailure == null ? Input.empty() : this.continueOnStepFailure;
@@ -40,7 +40,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dataPathAssignments")
-    private final @Nullable Input<Object> dataPathAssignments;
+      private final @Nullable Input<Object> dataPathAssignments;
 
     public Input<Object> getDataPathAssignments() {
         return this.dataPathAssignments == null ? Input.empty() : this.dataPathAssignments;
@@ -51,7 +51,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -62,7 +62,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -73,7 +73,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="experimentName")
-    private final @Nullable Input<Object> experimentName;
+      private final @Nullable Input<Object> experimentName;
 
     public Input<Object> getExperimentName() {
         return this.experimentName == null ? Input.empty() : this.experimentName;
@@ -84,7 +84,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -95,7 +95,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mlParentRunId")
-    private final @Nullable Input<Object> mlParentRunId;
+      private final @Nullable Input<Object> mlParentRunId;
 
     public Input<Object> getMlParentRunId() {
         return this.mlParentRunId == null ? Input.empty() : this.mlParentRunId;
@@ -106,7 +106,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mlPipelineEndpointId")
-    private final @Nullable Input<Object> mlPipelineEndpointId;
+      private final @Nullable Input<Object> mlPipelineEndpointId;
 
     public Input<Object> getMlPipelineEndpointId() {
         return this.mlPipelineEndpointId == null ? Input.empty() : this.mlPipelineEndpointId;
@@ -117,7 +117,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mlPipelineId")
-    private final @Nullable Input<Object> mlPipelineId;
+      private final @Nullable Input<Object> mlPipelineId;
 
     public Input<Object> getMlPipelineId() {
         return this.mlPipelineId == null ? Input.empty() : this.mlPipelineId;
@@ -128,7 +128,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mlPipelineParameters")
-    private final @Nullable Input<Object> mlPipelineParameters;
+      private final @Nullable Input<Object> mlPipelineParameters;
 
     public Input<Object> getMlPipelineParameters() {
         return this.mlPipelineParameters == null ? Input.empty() : this.mlPipelineParameters;
@@ -139,7 +139,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -150,7 +150,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -162,7 +162,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -173,7 +173,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -184,7 +184,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Object> version;
+      private final @Nullable Input<Object> version;
 
     public Input<Object> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -438,7 +438,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public AzureMLExecutePipelineActivityArgs build() {
             return new AzureMLExecutePipelineActivityArgs(continueOnStepFailure, dataPathAssignments, dependsOn, description, experimentName, linkedServiceName, mlParentRunId, mlPipelineEndpointId, mlPipelineId, mlPipelineParameters, name, policy, type, userProperties, version);
         }

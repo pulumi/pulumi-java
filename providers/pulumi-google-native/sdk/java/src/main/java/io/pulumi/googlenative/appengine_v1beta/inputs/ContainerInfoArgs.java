@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -66,7 +66,6 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.image = Input.ofNullable(image);
             return this;
         }
-
         public ContainerInfoArgs build() {
             return new ContainerInfoArgs(image);
         }

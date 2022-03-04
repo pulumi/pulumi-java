@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ignoreHostname")
-    private final @Nullable Input<String> ignoreHostname;
+      private final @Nullable Input<String> ignoreHostname;
 
     public Input<String> getIgnoreHostname() {
         return this.ignoreHostname == null ? Input.empty() : this.ignoreHostname;
@@ -34,7 +34,7 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ignoreSignature")
-    private final @Nullable Input<String> ignoreSignature;
+      private final @Nullable Input<String> ignoreSignature;
 
     public Input<String> getIgnoreSignature() {
         return this.ignoreSignature == null ? Input.empty() : this.ignoreSignature;
@@ -93,7 +93,6 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
             this.ignoreSignature = Input.ofNullable(ignoreSignature);
             return this;
         }
-
         public TlsValidationOptionsArgs build() {
             return new TlsValidationOptionsArgs(ignoreHostname, ignoreSignature);
         }

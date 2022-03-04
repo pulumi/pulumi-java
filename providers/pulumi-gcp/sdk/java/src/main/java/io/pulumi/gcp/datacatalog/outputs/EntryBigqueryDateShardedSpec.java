@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class EntryBigqueryDateShardedSpec {
             this.tablePrefix = tablePrefix;
             return this;
         }
-
         public EntryBigqueryDateShardedSpec build() {
             return new EntryBigqueryDateShardedSpec(dataset, shardCount, tablePrefix);
         }

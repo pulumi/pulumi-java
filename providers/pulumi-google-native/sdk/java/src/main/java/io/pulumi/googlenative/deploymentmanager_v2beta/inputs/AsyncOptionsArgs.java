@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.PollingOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methodMatch")
-    private final @Nullable Input<String> methodMatch;
+      private final @Nullable Input<String> methodMatch;
 
     public Input<String> getMethodMatch() {
         return this.methodMatch == null ? Input.empty() : this.methodMatch;
@@ -35,7 +35,7 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pollingOptions")
-    private final @Nullable Input<PollingOptionsArgs> pollingOptions;
+      private final @Nullable Input<PollingOptionsArgs> pollingOptions;
 
     public Input<PollingOptionsArgs> getPollingOptions() {
         return this.pollingOptions == null ? Input.empty() : this.pollingOptions;
@@ -94,7 +94,6 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.pollingOptions = Input.ofNullable(pollingOptions);
             return this;
         }
-
         public AsyncOptionsArgs build() {
             return new AsyncOptionsArgs(methodMatch, pollingOptions);
         }

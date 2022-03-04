@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -32,7 +32,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-    private final @Nullable Input<String> createdDate;
+      private final @Nullable Input<String> createdDate;
 
     public Input<String> getCreatedDate() {
         return this.createdDate == null ? Input.empty() : this.createdDate;
@@ -43,7 +43,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+      private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -54,7 +54,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issueId")
-    private final @Nullable Input<String> issueId;
+      private final @Nullable Input<String> issueId;
 
     public Input<String> getIssueId() {
         return this.issueId == null ? Input.empty() : this.issueId;
@@ -65,7 +65,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -87,7 +87,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,State>> state;
+      private final @Nullable Input<Either<String,State>> state;
 
     public Input<Either<String,State>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -98,7 +98,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -109,7 +109,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId", required=true)
-    private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;
@@ -273,7 +273,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }
-
         public ApiIssueArgs build() {
             return new ApiIssueArgs(apiId, createdDate, description, issueId, resourceGroupName, serviceName, state, title, userId);
         }

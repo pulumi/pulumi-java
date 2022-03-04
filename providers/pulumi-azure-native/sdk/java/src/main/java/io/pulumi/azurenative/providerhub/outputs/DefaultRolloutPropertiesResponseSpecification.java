@@ -11,7 +11,7 @@ import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutSpecificationResp
 import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne;
 import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo;
 import io.pulumi.azurenative.providerhub.outputs.ResourceTypeRegistrationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -146,7 +146,6 @@ public final class DefaultRolloutPropertiesResponseSpecification {
             this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
             return this;
         }
-
         public DefaultRolloutPropertiesResponseSpecification build() {
             return new DefaultRolloutPropertiesResponseSpecification(canary, highTraffic, lowTraffic, mediumTraffic, providerRegistration, resourceTypeRegistrations, restOfTheWorldGroupOne, restOfTheWorldGroupTwo);
         }

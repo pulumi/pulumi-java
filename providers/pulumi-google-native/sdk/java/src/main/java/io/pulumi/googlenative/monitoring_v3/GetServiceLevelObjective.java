@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceLevelObjective {
-/**
- * Get a ServiceLevelObjective by name.
+    private GetServiceLevelObjective() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceLevelObjectiveArgs.Builder a);
+    }
+    private static GetServiceLevelObjectiveArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceLevelObjectiveArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a ServiceLevelObjective by name.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceLevelObjectiveResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a ServiceLevelObjective by name.
+     * 
+     */
     public static CompletableFuture<GetServiceLevelObjectiveResult> invokeAsync(GetServiceLevelObjectiveArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getServiceLevelObjective", TypeShape.of(GetServiceLevelObjectiveResult.class), args == null ? GetServiceLevelObjectiveArgs.Empty : args, Utilities.withVersion(options));
     }

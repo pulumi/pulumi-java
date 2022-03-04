@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -43,7 +43,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="networkUri", required=true)
-    private final String networkUri;
+      private final String networkUri;
 
     public String getNetworkUri() {
         return this.networkUri;
@@ -54,7 +54,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -65,7 +65,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -76,7 +76,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="vpnTunnelUri", required=true)
-    private final String vpnTunnelUri;
+      private final String vpnTunnelUri;
 
     public String getVpnTunnelUri() {
         return this.vpnTunnelUri;
@@ -165,7 +165,6 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
             this.vpnTunnelUri = Objects.requireNonNull(vpnTunnelUri);
             return this;
         }
-
         public VpnGatewayInfoResponse build() {
             return new VpnGatewayInfoResponse(displayName, ipAddress, networkUri, region, uri, vpnTunnelUri);
         }

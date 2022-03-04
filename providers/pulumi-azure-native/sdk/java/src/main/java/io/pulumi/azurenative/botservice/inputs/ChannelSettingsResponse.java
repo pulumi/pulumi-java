@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.SiteResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="botIconUrl")
-    private final @Nullable String botIconUrl;
+      private final @Nullable String botIconUrl;
 
     public Optional<String> getBotIconUrl() {
         return this.botIconUrl == null ? Optional.empty() : Optional.ofNullable(this.botIconUrl);
@@ -37,7 +37,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="botId")
-    private final @Nullable String botId;
+      private final @Nullable String botId;
 
     public Optional<String> getBotId() {
         return this.botId == null ? Optional.empty() : Optional.ofNullable(this.botId);
@@ -48,7 +48,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="channelDisplayName")
-    private final @Nullable String channelDisplayName;
+      private final @Nullable String channelDisplayName;
 
     public Optional<String> getChannelDisplayName() {
         return this.channelDisplayName == null ? Optional.empty() : Optional.ofNullable(this.channelDisplayName);
@@ -59,7 +59,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="channelId")
-    private final @Nullable String channelId;
+      private final @Nullable String channelId;
 
     public Optional<String> getChannelId() {
         return this.channelId == null ? Optional.empty() : Optional.ofNullable(this.channelId);
@@ -70,7 +70,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="disableLocalAuth")
-    private final @Nullable Boolean disableLocalAuth;
+      private final @Nullable Boolean disableLocalAuth;
 
     public Optional<Boolean> getDisableLocalAuth() {
         return this.disableLocalAuth == null ? Optional.empty() : Optional.ofNullable(this.disableLocalAuth);
@@ -81,7 +81,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="extensionKey1")
-    private final @Nullable String extensionKey1;
+      private final @Nullable String extensionKey1;
 
     public Optional<String> getExtensionKey1() {
         return this.extensionKey1 == null ? Optional.empty() : Optional.ofNullable(this.extensionKey1);
@@ -92,7 +92,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="extensionKey2")
-    private final @Nullable String extensionKey2;
+      private final @Nullable String extensionKey2;
 
     public Optional<String> getExtensionKey2() {
         return this.extensionKey2 == null ? Optional.empty() : Optional.ofNullable(this.extensionKey2);
@@ -103,7 +103,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Boolean isEnabled;
+      private final @Nullable Boolean isEnabled;
 
     public Optional<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEnabled);
@@ -114,7 +114,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sites")
-    private final @Nullable List<SiteResponse> sites;
+      private final @Nullable List<SiteResponse> sites;
 
     public List<SiteResponse> getSites() {
         return this.sites == null ? List.of() : this.sites;
@@ -233,7 +233,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
             this.sites = sites;
             return this;
         }
-
         public ChannelSettingsResponse build() {
             return new ChannelSettingsResponse(botIconUrl, botId, channelDisplayName, channelId, disableLocalAuth, extensionKey1, extensionKey2, isEnabled, sites);
         }

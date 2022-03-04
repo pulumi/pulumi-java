@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse {
     /**
      * Body that must be contained in the health response. Default value is empty.
      * 
-     */
+    */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
     /**
      * Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
      * 
-     */
+    */
     public List<String> getStatusCodes() {
         return this.statusCodes == null ? List.of() : this.statusCodes;
     }
@@ -77,7 +77,6 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse {
             this.statusCodes = statusCodes;
             return this;
         }
-
         public ApplicationGatewayProbeHealthResponseMatchResponse build() {
             return new ApplicationGatewayProbeHealthResponseMatchResponse(body, statusCodes);
         }

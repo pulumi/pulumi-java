@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCompany {
-/**
- * Retrieves specified company.
+    private GetCompany() {}
+    public interface BuilderApplicator {
+        public void apply(GetCompanyArgs.Builder a);
+    }
+    private static GetCompanyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCompanyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves specified company.
  * 
- */
+     */
+    public static CompletableFuture<GetCompanyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves specified company.
+     * 
+     */
     public static CompletableFuture<GetCompanyResult> invokeAsync(GetCompanyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v3:getCompany", TypeShape.of(GetCompanyResult.class), args == null ? GetCompanyArgs.Empty : args, Utilities.withVersion(options));
     }

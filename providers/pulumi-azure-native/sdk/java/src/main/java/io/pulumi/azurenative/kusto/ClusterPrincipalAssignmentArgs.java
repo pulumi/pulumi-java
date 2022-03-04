@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kusto.enums.ClusterPrincipalRole;
 import io.pulumi.azurenative.kusto.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -33,7 +33,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="principalAssignmentName")
-    private final @Nullable Input<String> principalAssignmentName;
+      private final @Nullable Input<String> principalAssignmentName;
 
     public Input<String> getPrincipalAssignmentName() {
         return this.principalAssignmentName == null ? Input.empty() : this.principalAssignmentName;
@@ -44,7 +44,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+      private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -55,7 +55,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="principalType", required=true)
-    private final Input<Either<String,PrincipalType>> principalType;
+      private final Input<Either<String,PrincipalType>> principalType;
 
     public Input<Either<String,PrincipalType>> getPrincipalType() {
         return this.principalType;
@@ -66,7 +66,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<Either<String,ClusterPrincipalRole>> role;
+      private final Input<Either<String,ClusterPrincipalRole>> role;
 
     public Input<Either<String,ClusterPrincipalRole>> getRole() {
         return this.role;
@@ -88,7 +88,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -222,7 +222,6 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public ClusterPrincipalAssignmentArgs build() {
             return new ClusterPrincipalAssignmentArgs(clusterName, principalAssignmentName, principalId, principalType, resourceGroupName, role, tenantId);
         }

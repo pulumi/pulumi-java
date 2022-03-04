@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotcoredeviceadvisor.outputs;
 
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionConfigurationProperties;
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,7 @@ public final class GetSuiteDefinitionResult {
     /**
      * The Amazon Resource name for the suite definition.
      * 
-     */
+    */
     public Optional<String> getSuiteDefinitionArn() {
         return Optional.ofNullable(this.suiteDefinitionArn);
     }
@@ -63,21 +63,21 @@ public final class GetSuiteDefinitionResult {
     /**
      * The unique identifier for the suite definition.
      * 
-     */
+    */
     public Optional<String> getSuiteDefinitionId() {
         return Optional.ofNullable(this.suiteDefinitionId);
     }
     /**
      * The suite definition version of a test suite.
      * 
-     */
+    */
     public Optional<String> getSuiteDefinitionVersion() {
         return Optional.ofNullable(this.suiteDefinitionVersion);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<SuiteDefinitionTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -134,7 +134,6 @@ public final class GetSuiteDefinitionResult {
             this.tags = tags;
             return this;
         }
-
         public GetSuiteDefinitionResult build() {
             return new GetSuiteDefinitionResult(suiteDefinitionArn, suiteDefinitionConfiguration, suiteDefinitionId, suiteDefinitionVersion, tags);
         }

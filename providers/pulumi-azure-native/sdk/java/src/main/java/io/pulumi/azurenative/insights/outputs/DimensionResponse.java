@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class DimensionResponse {
     /**
      * Name of the dimension
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Operator for dimension values
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * List of dimension values
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -96,7 +96,6 @@ public final class DimensionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public DimensionResponse build() {
             return new DimensionResponse(name, operator, values);
         }

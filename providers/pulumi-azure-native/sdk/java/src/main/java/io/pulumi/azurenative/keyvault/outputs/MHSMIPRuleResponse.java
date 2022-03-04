@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class MHSMIPRuleResponse {
     /**
      * An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -52,7 +52,6 @@ public final class MHSMIPRuleResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public MHSMIPRuleResponse build() {
             return new MHSMIPRuleResponse(value);
         }

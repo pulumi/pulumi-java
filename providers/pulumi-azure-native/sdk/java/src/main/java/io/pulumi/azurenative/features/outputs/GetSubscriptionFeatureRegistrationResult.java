@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.features.outputs;
 
 import io.pulumi.azurenative.features.outputs.SubscriptionFeatureRegistrationResponseProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -42,14 +42,14 @@ public final class GetSubscriptionFeatureRegistrationResult {
     /**
      * Azure resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -59,7 +59,7 @@ public final class GetSubscriptionFeatureRegistrationResult {
     /**
      * Azure resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -109,7 +109,6 @@ public final class GetSubscriptionFeatureRegistrationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSubscriptionFeatureRegistrationResult build() {
             return new GetSubscriptionFeatureRegistrationResult(id, name, properties, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="apiBuildCommand")
-    private final @Nullable Input<String> apiBuildCommand;
+      private final @Nullable Input<String> apiBuildCommand;
 
     public Input<String> getApiBuildCommand() {
         return this.apiBuildCommand == null ? Input.empty() : this.apiBuildCommand;
@@ -35,7 +35,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="apiLocation")
-    private final @Nullable Input<String> apiLocation;
+      private final @Nullable Input<String> apiLocation;
 
     public Input<String> getApiLocation() {
         return this.apiLocation == null ? Input.empty() : this.apiLocation;
@@ -46,7 +46,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appArtifactLocation")
-    private final @Nullable Input<String> appArtifactLocation;
+      private final @Nullable Input<String> appArtifactLocation;
 
     public Input<String> getAppArtifactLocation() {
         return this.appArtifactLocation == null ? Input.empty() : this.appArtifactLocation;
@@ -57,7 +57,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appBuildCommand")
-    private final @Nullable Input<String> appBuildCommand;
+      private final @Nullable Input<String> appBuildCommand;
 
     public Input<String> getAppBuildCommand() {
         return this.appBuildCommand == null ? Input.empty() : this.appBuildCommand;
@@ -68,7 +68,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appLocation")
-    private final @Nullable Input<String> appLocation;
+      private final @Nullable Input<String> appLocation;
 
     public Input<String> getAppLocation() {
         return this.appLocation == null ? Input.empty() : this.appLocation;
@@ -79,7 +79,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="githubActionSecretNameOverride")
-    private final @Nullable Input<String> githubActionSecretNameOverride;
+      private final @Nullable Input<String> githubActionSecretNameOverride;
 
     public Input<String> getGithubActionSecretNameOverride() {
         return this.githubActionSecretNameOverride == null ? Input.empty() : this.githubActionSecretNameOverride;
@@ -90,7 +90,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="outputLocation")
-    private final @Nullable Input<String> outputLocation;
+      private final @Nullable Input<String> outputLocation;
 
     public Input<String> getOutputLocation() {
         return this.outputLocation == null ? Input.empty() : this.outputLocation;
@@ -101,7 +101,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="skipGithubActionWorkflowGeneration")
-    private final @Nullable Input<Boolean> skipGithubActionWorkflowGeneration;
+      private final @Nullable Input<Boolean> skipGithubActionWorkflowGeneration;
 
     public Input<Boolean> getSkipGithubActionWorkflowGeneration() {
         return this.skipGithubActionWorkflowGeneration == null ? Input.empty() : this.skipGithubActionWorkflowGeneration;
@@ -250,7 +250,6 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
             this.skipGithubActionWorkflowGeneration = Input.ofNullable(skipGithubActionWorkflowGeneration);
             return this;
         }
-
         public StaticSiteBuildPropertiesArgs build() {
             return new StaticSiteBuildPropertiesArgs(apiBuildCommand, apiLocation, appArtifactLocation, appBuildCommand, appLocation, githubActionSecretNameOverride, outputLocation, skipGithubActionWorkflowGeneration);
         }

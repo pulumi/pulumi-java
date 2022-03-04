@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PublicIPPrefixSkuResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class PublicIPPrefixSkuResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable String tier;
+      private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
@@ -83,7 +83,6 @@ public final class PublicIPPrefixSkuResponse extends io.pulumi.resources.InvokeA
             this.tier = tier;
             return this;
         }
-
         public PublicIPPrefixSkuResponse build() {
             return new PublicIPPrefixSkuResponse(name, tier);
         }

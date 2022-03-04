@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,14 +41,14 @@ public final class InstanceVmImage {
     /**
      * Use this VM image family to find the image; the newest image in this family will be used.
      * 
-     */
+    */
     public Optional<String> getImageFamily() {
         return Optional.ofNullable(this.imageFamily);
     }
     /**
      * Use VM image name to find the image.
      * 
-     */
+    */
     public Optional<String> getImageName() {
         return Optional.ofNullable(this.imageName);
     }
@@ -56,7 +56,7 @@ public final class InstanceVmImage {
      * The name of the Google Cloud project that this VM image belongs to.
      * Format: projects/{project_id}
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
@@ -99,7 +99,6 @@ public final class InstanceVmImage {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public InstanceVmImage build() {
             return new InstanceVmImage(imageFamily, imageName, project);
         }

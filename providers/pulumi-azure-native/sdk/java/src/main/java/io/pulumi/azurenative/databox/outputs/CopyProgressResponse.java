@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -125,63 +125,63 @@ public final class CopyProgressResponse {
     /**
      * Id of the account where the data needs to be uploaded.
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }
     /**
      * To indicate bytes transferred.
      * 
-     */
+    */
     public Double getBytesProcessed() {
         return this.bytesProcessed;
     }
     /**
      * Data Account Type.
      * 
-     */
+    */
     public String getDataAccountType() {
         return this.dataAccountType;
     }
     /**
      * To indicate directories errored out in the job.
      * 
-     */
+    */
     public Double getDirectoriesErroredOut() {
         return this.directoriesErroredOut;
     }
     /**
      * Number of files which could not be copied
      * 
-     */
+    */
     public Double getFilesErroredOut() {
         return this.filesErroredOut;
     }
     /**
      * Number of files processed
      * 
-     */
+    */
     public Double getFilesProcessed() {
         return this.filesProcessed;
     }
     /**
      * To indicate directories renamed
      * 
-     */
+    */
     public Double getInvalidDirectoriesProcessed() {
         return this.invalidDirectoriesProcessed;
     }
     /**
      * Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
      * 
-     */
+    */
     public Double getInvalidFileBytesUploaded() {
         return this.invalidFileBytesUploaded;
     }
     /**
      * Number of files not adhering to azure naming conventions which were processed by automatic renaming
      * 
-     */
+    */
     public Double getInvalidFilesProcessed() {
         return this.invalidFilesProcessed;
     }
@@ -189,42 +189,42 @@ public final class CopyProgressResponse {
      * To indicate if enumeration of data is in progress.
      * Until this is true, the TotalBytesToProcess may not be valid.
      * 
-     */
+    */
     public Boolean getIsEnumerationInProgress() {
         return this.isEnumerationInProgress;
     }
     /**
      * Number of folders not adhering to azure naming conventions which were processed by automatic renaming
      * 
-     */
+    */
     public Double getRenamedContainerCount() {
         return this.renamedContainerCount;
     }
     /**
      * Name of the storage account. This will be empty for data account types other than storage account.
      * 
-     */
+    */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
     /**
      * Total amount of data to be processed by the job.
      * 
-     */
+    */
     public Double getTotalBytesToProcess() {
         return this.totalBytesToProcess;
     }
     /**
      * Total files to process
      * 
-     */
+    */
     public Double getTotalFilesToProcess() {
         return this.totalFilesToProcess;
     }
     /**
      * Transfer type of data
      * 
-     */
+    */
     public String getTransferType() {
         return this.transferType;
     }
@@ -351,7 +351,6 @@ public final class CopyProgressResponse {
             this.transferType = Objects.requireNonNull(transferType);
             return this;
         }
-
         public CopyProgressResponse build() {
             return new CopyProgressResponse(accountId, bytesProcessed, dataAccountType, directoriesErroredOut, filesErroredOut, filesProcessed, invalidDirectoriesProcessed, invalidFileBytesUploaded, invalidFilesProcessed, isEnumerationInProgress, renamedContainerCount, storageAccountName, totalBytesToProcess, totalFilesToProcess, transferType);
         }

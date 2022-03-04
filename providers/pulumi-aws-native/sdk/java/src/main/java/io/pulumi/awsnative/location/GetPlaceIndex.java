@@ -6,17 +6,33 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.location.inputs.GetPlaceIndexArgs;
 import io.pulumi.awsnative.location.outputs.GetPlaceIndexResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPlaceIndex {
-/**
- * Definition of AWS::Location::PlaceIndex Resource Type
+    private GetPlaceIndex() {}
+    public interface BuilderApplicator {
+        public void apply(GetPlaceIndexArgs.Builder a);
+    }
+    private static GetPlaceIndexArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPlaceIndexArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of AWS::Location::PlaceIndex Resource Type
  * 
- */
+     */
+    public static CompletableFuture<GetPlaceIndexResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of AWS::Location::PlaceIndex Resource Type
+     * 
+     */
     public static CompletableFuture<GetPlaceIndexResult> invokeAsync(GetPlaceIndexArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getPlaceIndex", TypeShape.of(GetPlaceIndexResult.class), args == null ? GetPlaceIndexArgs.Empty : args, Utilities.withVersion(options));
     }

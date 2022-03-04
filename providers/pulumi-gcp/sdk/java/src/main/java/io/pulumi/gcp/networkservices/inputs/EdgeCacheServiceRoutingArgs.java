@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingHostRuleArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherArgs;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="hostRules", required=true)
-    private final Input<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules;
+      private final Input<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules;
 
     public Input<List<EdgeCacheServiceRoutingHostRuleArgs>> getHostRules() {
         return this.hostRules;
@@ -32,7 +32,7 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pathMatchers", required=true)
-    private final Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers;
+      private final Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers;
 
     public Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> getPathMatchers() {
         return this.pathMatchers;
@@ -91,7 +91,6 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
             this.pathMatchers = Input.of(Objects.requireNonNull(pathMatchers));
             return this;
         }
-
         public EdgeCacheServiceRoutingArgs build() {
             return new EdgeCacheServiceRoutingArgs(hostRules, pathMatchers);
         }

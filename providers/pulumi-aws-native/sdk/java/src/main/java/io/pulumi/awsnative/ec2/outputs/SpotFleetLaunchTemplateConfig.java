@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetFleetLaunchTemplateSpecification;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetLaunchTemplateOverrides;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,7 +62,6 @@ public final class SpotFleetLaunchTemplateConfig {
             this.overrides = overrides;
             return this;
         }
-
         public SpotFleetLaunchTemplateConfig build() {
             return new SpotFleetLaunchTemplateConfig(launchTemplateSpecification, overrides);
         }

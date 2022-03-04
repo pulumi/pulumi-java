@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.LoggingRuleResponseHiddenPropertyPaths;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,28 +16,28 @@ public final class LoggingRuleResponse extends io.pulumi.resources.InvokeArgs {
     public static final LoggingRuleResponse Empty = new LoggingRuleResponse();
 
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
     }
 
     @InputImport(name="detailLevel", required=true)
-    private final String detailLevel;
+      private final String detailLevel;
 
     public String getDetailLevel() {
         return this.detailLevel;
     }
 
     @InputImport(name="direction", required=true)
-    private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
     }
 
     @InputImport(name="hiddenPropertyPaths")
-    private final @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths;
+      private final @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths;
 
     public Optional<LoggingRuleResponseHiddenPropertyPaths> getHiddenPropertyPaths() {
         return this.hiddenPropertyPaths == null ? Optional.empty() : Optional.ofNullable(this.hiddenPropertyPaths);
@@ -106,7 +106,6 @@ public final class LoggingRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.hiddenPropertyPaths = hiddenPropertyPaths;
             return this;
         }
-
         public LoggingRuleResponse build() {
             return new LoggingRuleResponse(action, detailLevel, direction, hiddenPropertyPaths);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ReportDatasetConfigurationResponse {
     /**
      * Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
      * 
-     */
+    */
     public List<String> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }
@@ -54,7 +54,6 @@ public final class ReportDatasetConfigurationResponse {
             this.columns = columns;
             return this;
         }
-
         public ReportDatasetConfigurationResponse build() {
             return new ReportDatasetConfigurationResponse(columns);
         }

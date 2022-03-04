@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -47,28 +47,28 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse {
     /**
      * Parameter to launch a job from a Flex Template.
      * 
-     */
+    */
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse getLaunchParameter() {
         return this.launchParameter;
     }
     /**
      * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request. For example, `us-central1`, `us-west1`.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The ID of the Cloud Platform project that the job belongs to.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * If true, the request is validated but not actually executed. Defaults to false.
      * 
-     */
+    */
     public Boolean getValidateOnly() {
         return this.validateOnly;
     }
@@ -118,7 +118,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(launchParameter, location, project, validateOnly);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.PrincipalResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
     /**
      * Id of the policy
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the entity last modified it
      * 
-     */
+    */
     public PrincipalResponse getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The last modified date time.
      * 
-     */
+    */
     public Optional<String> getLastModifiedDateTime() {
         return Optional.ofNullable(this.lastModifiedDateTime);
     }
@@ -98,7 +98,6 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
             this.lastModifiedDateTime = lastModifiedDateTime;
             return this;
         }
-
         public PolicyAssignmentPropertiesResponsePolicy build() {
             return new PolicyAssignmentPropertiesResponsePolicy(id, lastModifiedBy, lastModifiedDateTime);
         }

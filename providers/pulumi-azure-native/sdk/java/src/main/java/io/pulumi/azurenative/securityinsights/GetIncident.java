@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.inputs.GetIncidentArgs;
 import io.pulumi.azurenative.securityinsights.outputs.GetIncidentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIncident {
-/**
- * Represents an incident in Azure Security Insights.
+    private GetIncident() {}
+    public interface BuilderApplicator {
+        public void apply(GetIncidentArgs.Builder a);
+    }
+    private static GetIncidentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIncidentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents an incident in Azure Security Insights.
  * API Version: 2020-01-01.
  * 
- *
- * Represents an incident in Azure Security Insights.
+     *
+     * Represents an incident in Azure Security Insights.
  * 
- */
+     */
+    public static CompletableFuture<GetIncidentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents an incident in Azure Security Insights.
+     * API Version: 2020-01-01.
+     * 
+     *
+         * Represents an incident in Azure Security Insights.
+     * 
+     */
     public static CompletableFuture<GetIncidentResult> invokeAsync(GetIncidentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncident", TypeShape.of(GetIncidentResult.class), args == null ? GetIncidentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+      private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
@@ -66,7 +66,6 @@ public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
-
         public ExpiryDetailArgs build() {
             return new ExpiryDetailArgs(expireTime);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.changeanalysis.enums.NotificationsState;
 import io.pulumi.azurenative.changeanalysis.inputs.AzureMonitorWorkspacePropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="activationState")
-    private final @Nullable Input<Either<String,NotificationsState>> activationState;
+      private final @Nullable Input<Either<String,NotificationsState>> activationState;
 
     public Input<Either<String,NotificationsState>> getActivationState() {
         return this.activationState == null ? Input.empty() : this.activationState;
@@ -37,7 +37,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureMonitorWorkspaceProperties")
-    private final @Nullable Input<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
+      private final @Nullable Input<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
 
     public Input<AzureMonitorWorkspacePropertiesArgs> getAzureMonitorWorkspaceProperties() {
         return this.azureMonitorWorkspaceProperties == null ? Input.empty() : this.azureMonitorWorkspaceProperties;
@@ -96,7 +96,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             this.azureMonitorWorkspaceProperties = Input.ofNullable(azureMonitorWorkspaceProperties);
             return this;
         }
-
         public NotificationSettingsArgs build() {
             return new NotificationSettingsArgs(activationState, azureMonitorWorkspaceProperties);
         }

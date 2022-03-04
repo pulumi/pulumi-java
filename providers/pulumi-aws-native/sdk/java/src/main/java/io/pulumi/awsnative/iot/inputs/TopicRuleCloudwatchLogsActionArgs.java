@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class TopicRuleCloudwatchLogsActionArgs extends io.pulumi.resources
     public static final TopicRuleCloudwatchLogsActionArgs Empty = new TopicRuleCloudwatchLogsActionArgs();
 
     @InputImport(name="logGroupName", required=true)
-    private final Input<String> logGroupName;
+      private final Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -80,7 +80,6 @@ public final class TopicRuleCloudwatchLogsActionArgs extends io.pulumi.resources
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public TopicRuleCloudwatchLogsActionArgs build() {
             return new TopicRuleCloudwatchLogsActionArgs(logGroupName, roleArn);
         }

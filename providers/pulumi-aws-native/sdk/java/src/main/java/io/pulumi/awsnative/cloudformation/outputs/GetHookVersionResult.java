@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.HookVersionVisibility;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -62,28 +62,28 @@ public final class GetHookVersionResult {
     /**
      * The Amazon Resource Name (ARN) of the type, here the HookVersion. This is used to uniquely identify a HookVersion resource
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates if this type version is the current default version
      * 
-     */
+    */
     public Optional<Boolean> getIsDefaultVersion() {
         return Optional.ofNullable(this.isDefaultVersion);
     }
     /**
      * The Amazon Resource Name (ARN) of the type without the versionID.
      * 
-     */
+    */
     public Optional<String> getTypeArn() {
         return Optional.ofNullable(this.typeArn);
     }
     /**
      * The ID of the version of the type represented by this hook instance.
      * 
-     */
+    */
     public Optional<String> getVersionId() {
         return Optional.ofNullable(this.versionId);
     }
@@ -96,7 +96,7 @@ public final class GetHookVersionResult {
      * 
      * PUBLIC: The type is publically visible and usable within any Amazon account.
      * 
-     */
+    */
     public Optional<HookVersionVisibility> getVisibility() {
         return Optional.ofNullable(this.visibility);
     }
@@ -153,7 +153,6 @@ public final class GetHookVersionResult {
             this.visibility = visibility;
             return this;
         }
-
         public GetHookVersionResult build() {
             return new GetHookVersionResult(arn, isDefaultVersion, typeArn, versionId, visibility);
         }

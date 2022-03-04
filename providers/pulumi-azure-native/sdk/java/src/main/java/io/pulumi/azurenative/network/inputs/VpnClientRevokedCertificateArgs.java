@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable Input<String> thumbprint;
+      private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
@@ -119,7 +119,6 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }
-
         public VpnClientRevokedCertificateArgs build() {
             return new VpnClientRevokedCertificateArgs(id, name, thumbprint);
         }

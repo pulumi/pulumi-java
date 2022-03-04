@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
      * 
      */
     @InputImport(name="platform", required=true)
-    private final String platform;
+      private final String platform;
 
     public String getPlatform() {
         return this.platform;
@@ -32,7 +32,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
      * 
      */
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -43,7 +43,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
      * 
      */
     @InputImport(name="urlMask", required=true)
-    private final String urlMask;
+      private final String urlMask;
 
     public String getUrlMask() {
         return this.urlMask;
@@ -54,7 +54,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -123,7 +123,6 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public NetworkEndpointGroupServerlessDeploymentResponse build() {
             return new NetworkEndpointGroupServerlessDeploymentResponse(platform, resource, urlMask, version);
         }

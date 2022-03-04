@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class NWRuleSetIpRulesResponse {
     /**
      * The IP Filter Action
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP Mask
      * 
-     */
+    */
     public Optional<String> getIpMask() {
         return Optional.ofNullable(this.ipMask);
     }
@@ -76,7 +76,6 @@ public final class NWRuleSetIpRulesResponse {
             this.ipMask = ipMask;
             return this;
         }
-
         public NWRuleSetIpRulesResponse build() {
             return new NWRuleSetIpRulesResponse(action, ipMask);
         }

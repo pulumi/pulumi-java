@@ -6,17 +6,33 @@ package io.pulumi.awsnative.nimblestudio;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.nimblestudio.inputs.GetStreamingImageArgs;
 import io.pulumi.awsnative.nimblestudio.outputs.GetStreamingImageResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStreamingImage {
-/**
- * Represents a streaming session machine image that can be used to launch a streaming session
+    private GetStreamingImage() {}
+    public interface BuilderApplicator {
+        public void apply(GetStreamingImageArgs.Builder a);
+    }
+    private static GetStreamingImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStreamingImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a streaming session machine image that can be used to launch a streaming session
  * 
- */
+     */
+    public static CompletableFuture<GetStreamingImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a streaming session machine image that can be used to launch a streaming session
+     * 
+     */
     public static CompletableFuture<GetStreamingImageResult> invokeAsync(GetStreamingImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getStreamingImage", TypeShape.of(GetStreamingImageResult.class), args == null ? GetStreamingImageArgs.Empty : args, Utilities.withVersion(options));
     }

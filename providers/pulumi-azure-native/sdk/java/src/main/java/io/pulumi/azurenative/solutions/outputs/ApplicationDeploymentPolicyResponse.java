@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ApplicationDeploymentPolicyResponse {
     /**
      * The managed application deployment mode.
      * 
-     */
+    */
     public String getDeploymentMode() {
         return this.deploymentMode;
     }
@@ -52,7 +52,6 @@ public final class ApplicationDeploymentPolicyResponse {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
-
         public ApplicationDeploymentPolicyResponse build() {
             return new ApplicationDeploymentPolicyResponse(deploymentMode);
         }

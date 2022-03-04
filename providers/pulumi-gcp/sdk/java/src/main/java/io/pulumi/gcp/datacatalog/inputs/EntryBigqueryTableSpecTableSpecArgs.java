@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends io.pulumi.resourc
     public static final EntryBigqueryTableSpecTableSpecArgs Empty = new EntryBigqueryTableSpecTableSpecArgs();
 
     @InputImport(name="groupedEntry")
-    private final @Nullable Input<String> groupedEntry;
+      private final @Nullable Input<String> groupedEntry;
 
     public Input<String> getGroupedEntry() {
         return this.groupedEntry == null ? Input.empty() : this.groupedEntry;
@@ -58,7 +58,6 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends io.pulumi.resourc
             this.groupedEntry = Input.ofNullable(groupedEntry);
             return this;
         }
-
         public EntryBigqueryTableSpecTableSpecArgs build() {
             return new EntryBigqueryTableSpecTableSpecArgs(groupedEntry);
         }

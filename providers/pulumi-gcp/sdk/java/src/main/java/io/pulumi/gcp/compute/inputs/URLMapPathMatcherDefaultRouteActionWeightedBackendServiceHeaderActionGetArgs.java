@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * 
      */
     @InputImport(name="requestHeadersToAdds")
-    private final @Nullable Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
+      private final @Nullable Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
 
     public Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs>> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? Input.empty() : this.requestHeadersToAdds;
@@ -35,7 +35,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * 
      */
     @InputImport(name="requestHeadersToRemoves")
-    private final @Nullable Input<List<String>> requestHeadersToRemoves;
+      private final @Nullable Input<List<String>> requestHeadersToRemoves;
 
     public Input<List<String>> getRequestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? Input.empty() : this.requestHeadersToRemoves;
@@ -47,7 +47,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * 
      */
     @InputImport(name="responseHeadersToAdds")
-    private final @Nullable Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
+      private final @Nullable Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
 
     public Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs>> getResponseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? Input.empty() : this.responseHeadersToAdds;
@@ -59,7 +59,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * 
      */
     @InputImport(name="responseHeadersToRemoves")
-    private final @Nullable Input<List<String>> responseHeadersToRemoves;
+      private final @Nullable Input<List<String>> responseHeadersToRemoves;
 
     public Input<List<String>> getResponseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? Input.empty() : this.responseHeadersToRemoves;
@@ -148,7 +148,6 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
             this.responseHeadersToRemoves = Input.ofNullable(responseHeadersToRemoves);
             return this;
         }
-
         public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs build() {
             return new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.CustomErrorRuleResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class CustomErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<CustomErrorRuleResponse> rules;
+      private final List<CustomErrorRuleResponse> rules;
 
     public List<CustomErrorRuleResponse> getRules() {
         return this.rules;
@@ -34,7 +34,7 @@ public final class CustomErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="types", required=true)
-    private final List<String> types;
+      private final List<String> types;
 
     public List<String> getTypes() {
         return this.types;
@@ -83,7 +83,6 @@ public final class CustomErrorResponse extends io.pulumi.resources.InvokeArgs {
             this.types = Objects.requireNonNull(types);
             return this;
         }
-
         public CustomErrorResponse build() {
             return new CustomErrorResponse(rules, types);
         }

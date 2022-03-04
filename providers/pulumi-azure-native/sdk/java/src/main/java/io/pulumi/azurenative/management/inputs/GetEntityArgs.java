@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.management.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetEntityArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable String filter;
+      private final @Nullable String filter;
 
     public Optional<String> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
@@ -31,7 +31,7 @@ public final class GetEntityArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable String groupName;
+      private final @Nullable String groupName;
 
     public Optional<String> getGroupName() {
         return this.groupName == null ? Optional.empty() : Optional.ofNullable(this.groupName);
@@ -47,7 +47,7 @@ public final class GetEntityArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="search")
-    private final @Nullable String search;
+      private final @Nullable String search;
 
     public Optional<String> getSearch() {
         return this.search == null ? Optional.empty() : Optional.ofNullable(this.search);
@@ -58,7 +58,7 @@ public final class GetEntityArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="select")
-    private final @Nullable String select;
+      private final @Nullable String select;
 
     public Optional<String> getSelect() {
         return this.select == null ? Optional.empty() : Optional.ofNullable(this.select);
@@ -69,7 +69,7 @@ public final class GetEntityArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="skip")
-    private final @Nullable Integer skip;
+      private final @Nullable Integer skip;
 
     public Optional<Integer> getSkip() {
         return this.skip == null ? Optional.empty() : Optional.ofNullable(this.skip);
@@ -81,7 +81,7 @@ public final class GetEntityArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="skiptoken")
-    private final @Nullable String skiptoken;
+      private final @Nullable String skiptoken;
 
     public Optional<String> getSkiptoken() {
         return this.skiptoken == null ? Optional.empty() : Optional.ofNullable(this.skiptoken);
@@ -92,7 +92,7 @@ public final class GetEntityArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="top")
-    private final @Nullable Integer top;
+      private final @Nullable Integer top;
 
     public Optional<Integer> getTop() {
         return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
@@ -103,7 +103,7 @@ public final class GetEntityArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="view")
-    private final @Nullable String view;
+      private final @Nullable String view;
 
     public Optional<String> getView() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
@@ -212,7 +212,6 @@ public final class GetEntityArgs extends io.pulumi.resources.InvokeArgs {
             this.view = view;
             return this;
         }
-
         public GetEntityArgs build() {
             return new GetEntityArgs(filter, groupName, search, select, skip, skiptoken, top, view);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
      * 
      */
     @InputImport(name="ref")
-    private final @Nullable Input<String> ref;
+      private final @Nullable Input<String> ref;
 
     public Input<String> getRef() {
         return this.ref == null ? Input.empty() : this.ref;
@@ -66,7 +66,6 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
             this.ref = Input.ofNullable(ref);
             return this;
         }
-
         public IntegrationAccountMapPropertiesParametersSchemaArgs build() {
             return new IntegrationAccountMapPropertiesParametersSchemaArgs(ref);
         }

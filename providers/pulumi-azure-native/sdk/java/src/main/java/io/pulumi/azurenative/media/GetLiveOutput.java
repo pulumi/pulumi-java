@@ -6,21 +6,41 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.media.inputs.GetLiveOutputArgs;
 import io.pulumi.azurenative.media.outputs.GetLiveOutputResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLiveOutput {
-/**
- * The Live Output.
+    private GetLiveOutput() {}
+    public interface BuilderApplicator {
+        public void apply(GetLiveOutputArgs.Builder a);
+    }
+    private static GetLiveOutputArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLiveOutputArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Live Output.
  * API Version: 2020-05-01.
  * 
- *
- * The Live Output.
+     *
+     * The Live Output.
  * 
- */
+     */
+    public static CompletableFuture<GetLiveOutputResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Live Output.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * The Live Output.
+     * 
+     */
     public static CompletableFuture<GetLiveOutputResult> invokeAsync(GetLiveOutputArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getLiveOutput", TypeShape.of(GetLiveOutputResult.class), args == null ? GetLiveOutputArgs.Empty : args, Utilities.withVersion(options));
     }

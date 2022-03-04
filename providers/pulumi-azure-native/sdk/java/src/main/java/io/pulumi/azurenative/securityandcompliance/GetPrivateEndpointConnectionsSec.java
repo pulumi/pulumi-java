@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityandcompliance;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityandcompliance.inputs.GetPrivateEndpointConnectionsSecArgs;
 import io.pulumi.azurenative.securityandcompliance.outputs.GetPrivateEndpointConnectionsSecResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionsSec {
-/**
- * The Private Endpoint Connection resource.
+    private GetPrivateEndpointConnectionsSec() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionsSecArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionsSecArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionsSecArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Private Endpoint Connection resource.
  * API Version: 2021-03-08.
  * 
- *
- * The Private Endpoint Connection resource.
+     *
+     * The Private Endpoint Connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionsSecResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Private Endpoint Connection resource.
+     * API Version: 2021-03-08.
+     * 
+     *
+         * The Private Endpoint Connection resource.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionsSecResult> invokeAsync(GetPrivateEndpointConnectionsSecArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getPrivateEndpointConnectionsSec", TypeShape.of(GetPrivateEndpointConnectionsSecResult.class), args == null ? GetPrivateEndpointConnectionsSecArgs.Empty : args, Utilities.withVersion(options));
     }

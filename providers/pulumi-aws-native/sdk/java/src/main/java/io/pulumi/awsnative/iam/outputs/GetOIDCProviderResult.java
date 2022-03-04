@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iam.outputs;
 
 import io.pulumi.awsnative.iam.outputs.OIDCProviderTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class GetOIDCProviderResult {
     /**
      * Amazon Resource Name (ARN) of the OIDC provider
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -96,7 +96,6 @@ public final class GetOIDCProviderResult {
             this.thumbprintList = thumbprintList;
             return this;
         }
-
         public GetOIDCProviderResult build() {
             return new GetOIDCProviderResult(arn, clientIdList, tags, thumbprintList);
         }

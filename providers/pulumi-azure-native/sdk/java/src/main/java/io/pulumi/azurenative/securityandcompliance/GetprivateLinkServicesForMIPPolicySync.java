@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityandcompliance;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityandcompliance.inputs.GetprivateLinkServicesForMIPPolicySyncArgs;
 import io.pulumi.azurenative.securityandcompliance.outputs.GetprivateLinkServicesForMIPPolicySyncResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetprivateLinkServicesForMIPPolicySync {
-/**
- * The description of the service.
+    private GetprivateLinkServicesForMIPPolicySync() {}
+    public interface BuilderApplicator {
+        public void apply(GetprivateLinkServicesForMIPPolicySyncArgs.Builder a);
+    }
+    private static GetprivateLinkServicesForMIPPolicySyncArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetprivateLinkServicesForMIPPolicySyncArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The description of the service.
  * API Version: 2021-03-08.
  * 
- *
- * The description of the service.
+     *
+     * The description of the service.
  * 
- */
+     */
+    public static CompletableFuture<GetprivateLinkServicesForMIPPolicySyncResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The description of the service.
+     * API Version: 2021-03-08.
+     * 
+     *
+         * The description of the service.
+     * 
+     */
     public static CompletableFuture<GetprivateLinkServicesForMIPPolicySyncResult> invokeAsync(GetprivateLinkServicesForMIPPolicySyncArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForMIPPolicySync", TypeShape.of(GetprivateLinkServicesForMIPPolicySyncResult.class), args == null ? GetprivateLinkServicesForMIPPolicySyncArgs.Empty : args, Utilities.withVersion(options));
     }

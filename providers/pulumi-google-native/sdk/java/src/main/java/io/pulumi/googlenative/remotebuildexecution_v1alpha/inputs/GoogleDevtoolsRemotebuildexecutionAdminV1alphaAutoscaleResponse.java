@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
      * 
      */
     @InputImport(name="maxSize", required=true)
-    private final String maxSize;
+      private final String maxSize;
 
     public String getMaxSize() {
         return this.maxSize;
@@ -32,7 +32,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
      * 
      */
     @InputImport(name="minSize", required=true)
-    private final String minSize;
+      private final String minSize;
 
     public String getMinSize() {
         return this.minSize;
@@ -81,7 +81,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse(maxSize, minSize);
         }

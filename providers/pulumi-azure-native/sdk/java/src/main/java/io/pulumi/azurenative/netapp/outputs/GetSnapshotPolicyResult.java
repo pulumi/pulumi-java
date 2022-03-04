@@ -7,7 +7,7 @@ import io.pulumi.azurenative.netapp.outputs.DailyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.HourlyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.MonthlyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.WeeklyScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -102,77 +102,77 @@ public final class GetSnapshotPolicyResult {
     /**
      * Schedule for daily snapshots
      * 
-     */
+    */
     public Optional<DailyScheduleResponse> getDailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
     /**
      * The property to decide policy is enabled or not
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Schedule for hourly snapshots
      * 
-     */
+    */
     public Optional<HourlyScheduleResponse> getHourlySchedule() {
         return Optional.ofNullable(this.hourlySchedule);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Schedule for monthly snapshots
      * 
-     */
+    */
     public Optional<MonthlyScheduleResponse> getMonthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Schedule for weekly snapshots
      * 
-     */
+    */
     public Optional<WeeklyScheduleResponse> getWeeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
@@ -271,7 +271,6 @@ public final class GetSnapshotPolicyResult {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
-
         public GetSnapshotPolicyResult build() {
             return new GetSnapshotPolicyResult(dailySchedule, enabled, hourlySchedule, id, location, monthlySchedule, name, provisioningState, tags, type, weeklySchedule);
         }

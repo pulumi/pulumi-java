@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.configuration.outputs;
 
 import io.pulumi.awsnative.configuration.outputs.StoredQueryTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -52,7 +52,7 @@ public final class GetStoredQueryResult {
     /**
      * The tags for the stored query.
      * 
-     */
+    */
     public List<StoredQueryTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -109,7 +109,6 @@ public final class GetStoredQueryResult {
             this.tags = tags;
             return this;
         }
-
         public GetStoredQueryResult build() {
             return new GetStoredQueryResult(queryArn, queryDescription, queryExpression, queryId, tags);
         }

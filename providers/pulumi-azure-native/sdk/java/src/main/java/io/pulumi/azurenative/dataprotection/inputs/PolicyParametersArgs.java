@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.AzureOperationalStoreParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataStoreParametersList")
-    private final @Nullable Input<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
+      private final @Nullable Input<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
 
     public Input<List<AzureOperationalStoreParametersArgs>> getDataStoreParametersList() {
         return this.dataStoreParametersList == null ? Input.empty() : this.dataStoreParametersList;
@@ -67,7 +67,6 @@ public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs
             this.dataStoreParametersList = Input.ofNullable(dataStoreParametersList);
             return this;
         }
-
         public PolicyParametersArgs build() {
             return new PolicyParametersArgs(dataStoreParametersList);
         }

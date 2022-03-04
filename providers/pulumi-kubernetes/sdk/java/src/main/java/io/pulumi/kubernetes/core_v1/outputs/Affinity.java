@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeAffinity;
 import io.pulumi.kubernetes.core_v1.outputs.PodAffinity;
 import io.pulumi.kubernetes.core_v1.outputs.PodAntiAffinity;
@@ -42,21 +42,21 @@ public final class Affinity {
     /**
      * Describes node affinity scheduling rules for the pod.
      * 
-     */
+    */
     public Optional<NodeAffinity> getNodeAffinity() {
         return Optional.ofNullable(this.nodeAffinity);
     }
     /**
      * Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
      * 
-     */
+    */
     public Optional<PodAffinity> getPodAffinity() {
         return Optional.ofNullable(this.podAffinity);
     }
     /**
      * Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
      * 
-     */
+    */
     public Optional<PodAntiAffinity> getPodAntiAffinity() {
         return Optional.ofNullable(this.podAntiAffinity);
     }
@@ -99,7 +99,6 @@ public final class Affinity {
             this.podAntiAffinity = podAntiAffinity;
             return this;
         }
-
         public Affinity build() {
             return new Affinity(nodeAffinity, podAffinity, podAntiAffinity);
         }

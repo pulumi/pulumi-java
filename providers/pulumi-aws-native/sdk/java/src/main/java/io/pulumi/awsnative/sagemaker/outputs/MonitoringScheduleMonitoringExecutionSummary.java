@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,7 +68,7 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
     /**
      * The time at which the monitoring job was created.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
@@ -78,21 +78,21 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
     /**
      * Contains the reason a monitoring job failed, if it failed.
      * 
-     */
+    */
     public Optional<String> getFailureReason() {
         return Optional.ofNullable(this.failureReason);
     }
     /**
      * A timestamp that indicates the last time the monitoring job was modified.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The status of the monitoring job.
      * 
-     */
+    */
     public MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus getMonitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
@@ -102,14 +102,14 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
     /**
      * The Amazon Resource Name (ARN) of the monitoring job.
      * 
-     */
+    */
     public Optional<String> getProcessingJobArn() {
         return Optional.ofNullable(this.processingJobArn);
     }
     /**
      * The time the monitoring job was scheduled.
      * 
-     */
+    */
     public String getScheduledTime() {
         return this.scheduledTime;
     }
@@ -187,7 +187,6 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
             this.scheduledTime = Objects.requireNonNull(scheduledTime);
             return this;
         }
-
         public MonitoringScheduleMonitoringExecutionSummary build() {
             return new MonitoringScheduleMonitoringExecutionSummary(creationTime, endpointName, failureReason, lastModifiedTime, monitoringExecutionStatus, monitoringScheduleName, processingJobArn, scheduledTime);
         }

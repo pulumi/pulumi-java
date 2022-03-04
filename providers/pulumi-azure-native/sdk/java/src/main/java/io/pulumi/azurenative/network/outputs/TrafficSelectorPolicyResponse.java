@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class TrafficSelectorPolicyResponse {
     /**
      * A collection of local address spaces in CIDR format.
      * 
-     */
+    */
     public List<String> getLocalAddressRanges() {
         return this.localAddressRanges;
     }
     /**
      * A collection of remote address spaces in CIDR format.
      * 
-     */
+    */
     public List<String> getRemoteAddressRanges() {
         return this.remoteAddressRanges;
     }
@@ -75,7 +75,6 @@ public final class TrafficSelectorPolicyResponse {
             this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges);
             return this;
         }
-
         public TrafficSelectorPolicyResponse build() {
             return new TrafficSelectorPolicyResponse(localAddressRanges, remoteAddressRanges);
         }

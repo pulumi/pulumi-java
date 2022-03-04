@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iot.inputs.MitigationActionPublishFindingToSnsParams;
 import io.pulumi.awsnative.iot.inputs.MitigationActionReplaceDefaultPolicyVersionParams;
 import io.pulumi.awsnative.iot.inputs.MitigationActionUpdateCACertificateParams;
 import io.pulumi.awsnative.iot.inputs.MitigationActionUpdateDeviceCertificateParams;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,42 +24,42 @@ public final class MitigationActionActionParams extends io.pulumi.resources.Invo
     public static final MitigationActionActionParams Empty = new MitigationActionActionParams();
 
     @InputImport(name="addThingsToThingGroupParams")
-    private final @Nullable MitigationActionAddThingsToThingGroupParams addThingsToThingGroupParams;
+      private final @Nullable MitigationActionAddThingsToThingGroupParams addThingsToThingGroupParams;
 
     public Optional<MitigationActionAddThingsToThingGroupParams> getAddThingsToThingGroupParams() {
         return this.addThingsToThingGroupParams == null ? Optional.empty() : Optional.ofNullable(this.addThingsToThingGroupParams);
     }
 
     @InputImport(name="enableIoTLoggingParams")
-    private final @Nullable MitigationActionEnableIoTLoggingParams enableIoTLoggingParams;
+      private final @Nullable MitigationActionEnableIoTLoggingParams enableIoTLoggingParams;
 
     public Optional<MitigationActionEnableIoTLoggingParams> getEnableIoTLoggingParams() {
         return this.enableIoTLoggingParams == null ? Optional.empty() : Optional.ofNullable(this.enableIoTLoggingParams);
     }
 
     @InputImport(name="publishFindingToSnsParams")
-    private final @Nullable MitigationActionPublishFindingToSnsParams publishFindingToSnsParams;
+      private final @Nullable MitigationActionPublishFindingToSnsParams publishFindingToSnsParams;
 
     public Optional<MitigationActionPublishFindingToSnsParams> getPublishFindingToSnsParams() {
         return this.publishFindingToSnsParams == null ? Optional.empty() : Optional.ofNullable(this.publishFindingToSnsParams);
     }
 
     @InputImport(name="replaceDefaultPolicyVersionParams")
-    private final @Nullable MitigationActionReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams;
+      private final @Nullable MitigationActionReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams;
 
     public Optional<MitigationActionReplaceDefaultPolicyVersionParams> getReplaceDefaultPolicyVersionParams() {
         return this.replaceDefaultPolicyVersionParams == null ? Optional.empty() : Optional.ofNullable(this.replaceDefaultPolicyVersionParams);
     }
 
     @InputImport(name="updateCACertificateParams")
-    private final @Nullable MitigationActionUpdateCACertificateParams updateCACertificateParams;
+      private final @Nullable MitigationActionUpdateCACertificateParams updateCACertificateParams;
 
     public Optional<MitigationActionUpdateCACertificateParams> getUpdateCACertificateParams() {
         return this.updateCACertificateParams == null ? Optional.empty() : Optional.ofNullable(this.updateCACertificateParams);
     }
 
     @InputImport(name="updateDeviceCertificateParams")
-    private final @Nullable MitigationActionUpdateDeviceCertificateParams updateDeviceCertificateParams;
+      private final @Nullable MitigationActionUpdateDeviceCertificateParams updateDeviceCertificateParams;
 
     public Optional<MitigationActionUpdateDeviceCertificateParams> getUpdateDeviceCertificateParams() {
         return this.updateDeviceCertificateParams == null ? Optional.empty() : Optional.ofNullable(this.updateDeviceCertificateParams);
@@ -148,7 +148,6 @@ public final class MitigationActionActionParams extends io.pulumi.resources.Invo
             this.updateDeviceCertificateParams = updateDeviceCertificateParams;
             return this;
         }
-
         public MitigationActionActionParams build() {
             return new MitigationActionActionParams(addThingsToThingGroupParams, enableIoTLoggingParams, publishFindingToSnsParams, replaceDefaultPolicyVersionParams, updateCACertificateParams, updateDeviceCertificateParams);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult {
     /**
      * Returned sas url of the blob to which the p2s vpn connection detailed health will be written.
      * 
-     */
+    */
     public Optional<String> getSasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }
@@ -54,7 +54,6 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult {
             this.sasUrl = sasUrl;
             return this;
         }
-
         public GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult build() {
             return new GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult(sasUrl);
         }

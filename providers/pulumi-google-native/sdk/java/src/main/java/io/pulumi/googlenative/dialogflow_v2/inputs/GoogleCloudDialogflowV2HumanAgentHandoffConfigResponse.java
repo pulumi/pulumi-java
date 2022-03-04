@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
      * 
      */
     @InputImport(name="livePersonConfig", required=true)
-    private final GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
+      private final GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
 
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse getLivePersonConfig() {
         return this.livePersonConfig;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
      * 
      */
     @InputImport(name="salesforceLiveAgentConfig", required=true)
-    private final GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
+      private final GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse getSalesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
             this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse(livePersonConfig, salesforceLiveAgentConfig);
         }

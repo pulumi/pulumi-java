@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public final class JobQueryDestinationEncryptionConfiguration {
      * Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
      * The BigQuery Service Account associated with your project requires access to this encryption key.
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
@@ -44,7 +44,7 @@ public final class JobQueryDestinationEncryptionConfiguration {
      * - 
      * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
      * 
-     */
+    */
     public Optional<String> getKmsKeyVersion() {
         return Optional.ofNullable(this.kmsKeyVersion);
     }
@@ -80,7 +80,6 @@ public final class JobQueryDestinationEncryptionConfiguration {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
-
         public JobQueryDestinationEncryptionConfiguration build() {
             return new JobQueryDestinationEncryptionConfiguration(kmsKeyName, kmsKeyVersion);
         }

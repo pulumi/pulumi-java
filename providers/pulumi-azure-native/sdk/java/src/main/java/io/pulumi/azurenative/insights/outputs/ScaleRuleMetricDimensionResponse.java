@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ScaleRuleMetricDimensionResponse {
     /**
      * Name of the dimension.
      * 
-     */
+    */
     public String getDimensionName() {
         return this.dimensionName;
     }
     /**
      * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * list of dimension values. For example: ["App1","App2"].
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -96,7 +96,6 @@ public final class ScaleRuleMetricDimensionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ScaleRuleMetricDimensionResponse build() {
             return new ScaleRuleMetricDimensionResponse(dimensionName, operator, values);
         }

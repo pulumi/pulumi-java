@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PipelineElapsedTimeMetricPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Object duration;
+      private final @Nullable Object duration;
 
     public Optional<Object> getDuration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
@@ -61,7 +61,6 @@ public final class PipelineElapsedTimeMetricPolicyResponse extends io.pulumi.res
             this.duration = duration;
             return this;
         }
-
         public PipelineElapsedTimeMetricPolicyResponse build() {
             return new PipelineElapsedTimeMetricPolicyResponse(duration);
         }

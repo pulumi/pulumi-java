@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class PipelineChannelArgs extends io.pulumi.resources.ResourceArgs 
     public static final PipelineChannelArgs Empty = new PipelineChannelArgs();
 
     @InputImport(name="channelName", required=true)
-    private final Input<String> channelName;
+      private final Input<String> channelName;
 
     public Input<String> getChannelName() {
         return this.channelName;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-    private final @Nullable Input<String> next;
+      private final @Nullable Input<String> next;
 
     public Input<String> getNext() {
         return this.next == null ? Input.empty() : this.next;
@@ -103,7 +103,6 @@ public final class PipelineChannelArgs extends io.pulumi.resources.ResourceArgs 
             this.next = Input.ofNullable(next);
             return this;
         }
-
         public PipelineChannelArgs build() {
             return new PipelineChannelArgs(channelName, name, next);
         }

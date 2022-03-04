@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,14 +36,14 @@ public final class PyTorchResponse {
      * Enum to determine the job distribution type.
      * Expected value is 'PyTorch'.
      * 
-     */
+    */
     public String getDistributionType() {
         return this.distributionType;
     }
     /**
      * Total process count for the distributed job.
      * 
-     */
+    */
     public Optional<Integer> getProcessCount() {
         return Optional.ofNullable(this.processCount);
     }
@@ -79,7 +79,6 @@ public final class PyTorchResponse {
             this.processCount = processCount;
             return this;
         }
-
         public PyTorchResponse build() {
             return new PyTorchResponse(distributionType, processCount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
      * 
      */
     @InputImport(name="image", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
+      private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
         return this.image;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
      * 
      */
     @InputImport(name="info", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
+      private final GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
 
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse getInfo() {
         return this.info;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -125,7 +125,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageListSelectItemResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageListSelectItemResponse(description, image, info, title);
         }

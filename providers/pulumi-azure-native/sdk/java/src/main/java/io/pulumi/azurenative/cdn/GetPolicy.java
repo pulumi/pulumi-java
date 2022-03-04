@@ -6,21 +6,41 @@ package io.pulumi.azurenative.cdn;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cdn.inputs.GetPolicyArgs;
 import io.pulumi.azurenative.cdn.outputs.GetPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicy {
-/**
- * Defines web application firewall policy for Azure CDN.
+    private GetPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetPolicyArgs.Builder a);
+    }
+    private static GetPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Defines web application firewall policy for Azure CDN.
  * API Version: 2020-09-01.
  * 
- *
- * Defines web application firewall policy for Azure CDN.
+     *
+     * Defines web application firewall policy for Azure CDN.
  * 
- */
+     */
+    public static CompletableFuture<GetPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Defines web application firewall policy for Azure CDN.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * Defines web application firewall policy for Azure CDN.
+     * 
+     */
     public static CompletableFuture<GetPolicyResult> invokeAsync(GetPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getPolicy", TypeShape.of(GetPolicyResult.class), args == null ? GetPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class StandardSqlFieldResponse {
     /**
      * Optional. The name of this field. Can be absent for struct fields.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).
      * 
-     */
+    */
     public StandardSqlDataTypeResponse getType() {
         return this.type;
     }
@@ -75,7 +75,6 @@ public final class StandardSqlFieldResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StandardSqlFieldResponse build() {
             return new StandardSqlFieldResponse(name, type);
         }

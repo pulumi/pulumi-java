@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRuleset {
-/**
- * Get a `Ruleset` by name including the full `Source` contents.
+    private GetRuleset() {}
+    public interface BuilderApplicator {
+        public void apply(GetRulesetArgs.Builder a);
+    }
+    private static GetRulesetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRulesetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a `Ruleset` by name including the full `Source` contents.
  * 
- */
+     */
+    public static CompletableFuture<GetRulesetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a `Ruleset` by name including the full `Source` contents.
+     * 
+     */
     public static CompletableFuture<GetRulesetResult> invokeAsync(GetRulesetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebaserules/v1:getRuleset", TypeShape.of(GetRulesetResult.class), args == null ? GetRulesetArgs.Empty : args, Utilities.withVersion(options));
     }

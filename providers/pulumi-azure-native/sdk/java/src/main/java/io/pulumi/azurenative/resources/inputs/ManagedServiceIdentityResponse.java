@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.inputs.UserAssignedIdentityResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -36,7 +36,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -47,7 +47,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
+      private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
@@ -106,7 +106,6 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ManagedServiceIdentityResponse build() {
             return new ManagedServiceIdentityResponse(tenantId, type, userAssignedIdentities);
         }

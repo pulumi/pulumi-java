@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class WebhookConfigResponse {
     /**
      * Resource name for the secret required as a URL parameter.
      * 
-     */
+    */
     public String getSecret() {
         return this.secret;
     }
     /**
      * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -74,7 +74,6 @@ public final class WebhookConfigResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public WebhookConfigResponse build() {
             return new WebhookConfigResponse(secret, state);
         }

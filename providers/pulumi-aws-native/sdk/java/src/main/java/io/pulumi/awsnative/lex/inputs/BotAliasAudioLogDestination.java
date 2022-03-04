@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasS3BucketLogDestination;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BotAliasAudioLogDestination extends io.pulumi.resources.Invok
     public static final BotAliasAudioLogDestination Empty = new BotAliasAudioLogDestination();
 
     @InputImport(name="s3Bucket")
-    private final @Nullable BotAliasS3BucketLogDestination s3Bucket;
+      private final @Nullable BotAliasS3BucketLogDestination s3Bucket;
 
     public Optional<BotAliasS3BucketLogDestination> getS3Bucket() {
         return this.s3Bucket == null ? Optional.empty() : Optional.ofNullable(this.s3Bucket);
@@ -57,7 +57,6 @@ public final class BotAliasAudioLogDestination extends io.pulumi.resources.Invok
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public BotAliasAudioLogDestination build() {
             return new BotAliasAudioLogDestination(s3Bucket);
         }

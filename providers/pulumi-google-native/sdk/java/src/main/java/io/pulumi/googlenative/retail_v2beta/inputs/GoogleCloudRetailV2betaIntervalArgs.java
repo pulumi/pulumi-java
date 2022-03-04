@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="exclusiveMaximum")
-    private final @Nullable Input<Double> exclusiveMaximum;
+      private final @Nullable Input<Double> exclusiveMaximum;
 
     public Input<Double> getExclusiveMaximum() {
         return this.exclusiveMaximum == null ? Input.empty() : this.exclusiveMaximum;
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="exclusiveMinimum")
-    private final @Nullable Input<Double> exclusiveMinimum;
+      private final @Nullable Input<Double> exclusiveMinimum;
 
     public Input<Double> getExclusiveMinimum() {
         return this.exclusiveMinimum == null ? Input.empty() : this.exclusiveMinimum;
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maximum")
-    private final @Nullable Input<Double> maximum;
+      private final @Nullable Input<Double> maximum;
 
     public Input<Double> getMaximum() {
         return this.maximum == null ? Input.empty() : this.maximum;
@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="minimum")
-    private final @Nullable Input<Double> minimum;
+      private final @Nullable Input<Double> minimum;
 
     public Input<Double> getMinimum() {
         return this.minimum == null ? Input.empty() : this.minimum;
@@ -145,7 +145,6 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
             this.minimum = Input.ofNullable(minimum);
             return this;
         }
-
         public GoogleCloudRetailV2betaIntervalArgs build() {
             return new GoogleCloudRetailV2betaIntervalArgs(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
         }

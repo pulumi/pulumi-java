@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.Hl7SchemaConfigResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.Hl7TypesConfigResponse;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ignoreMinOccurs", required=true)
-    private final Boolean ignoreMinOccurs;
+      private final Boolean ignoreMinOccurs;
 
     public Boolean getIgnoreMinOccurs() {
         return this.ignoreMinOccurs;
@@ -36,7 +36,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="schemas", required=true)
-    private final List<Hl7SchemaConfigResponse> schemas;
+      private final List<Hl7SchemaConfigResponse> schemas;
 
     public List<Hl7SchemaConfigResponse> getSchemas() {
         return this.schemas;
@@ -47,7 +47,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="schematizedParsingType", required=true)
-    private final String schematizedParsingType;
+      private final String schematizedParsingType;
 
     public String getSchematizedParsingType() {
         return this.schematizedParsingType;
@@ -58,7 +58,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="types", required=true)
-    private final List<Hl7TypesConfigResponse> types;
+      private final List<Hl7TypesConfigResponse> types;
 
     public List<Hl7TypesConfigResponse> getTypes() {
         return this.types;
@@ -69,7 +69,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="unexpectedSegmentHandling", required=true)
-    private final String unexpectedSegmentHandling;
+      private final String unexpectedSegmentHandling;
 
     public String getUnexpectedSegmentHandling() {
         return this.unexpectedSegmentHandling;
@@ -148,7 +148,6 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
             this.unexpectedSegmentHandling = Objects.requireNonNull(unexpectedSegmentHandling);
             return this;
         }
-
         public SchemaPackageResponse build() {
             return new SchemaPackageResponse(ignoreMinOccurs, schemas, schematizedParsingType, types, unexpectedSegmentHandling);
         }

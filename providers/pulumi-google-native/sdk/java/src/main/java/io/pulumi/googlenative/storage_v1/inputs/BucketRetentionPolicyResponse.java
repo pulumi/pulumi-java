@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="effectiveTime", required=true)
-    private final String effectiveTime;
+      private final String effectiveTime;
 
     public String getEffectiveTime() {
         return this.effectiveTime;
@@ -33,7 +33,7 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="isLocked", required=true)
-    private final Boolean isLocked;
+      private final Boolean isLocked;
 
     public Boolean getIsLocked() {
         return this.isLocked;
@@ -44,7 +44,7 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="retentionPeriod", required=true)
-    private final String retentionPeriod;
+      private final String retentionPeriod;
 
     public String getRetentionPeriod() {
         return this.retentionPeriod;
@@ -103,7 +103,6 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }
-
         public BucketRetentionPolicyResponse build() {
             return new BucketRetentionPolicyResponse(effectiveTime, isLocked, retentionPeriod);
         }

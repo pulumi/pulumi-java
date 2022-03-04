@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.accessanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -101,7 +101,6 @@ public final class AnalyzerFilter {
             this.property = Objects.requireNonNull(property);
             return this;
         }
-
         public AnalyzerFilter build() {
             return new AnalyzerFilter(contains, eq, exists, neq, property);
         }

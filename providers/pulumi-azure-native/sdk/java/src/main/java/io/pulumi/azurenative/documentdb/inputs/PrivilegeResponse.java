@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.PrivilegeResponseResource;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PrivilegeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable List<String> actions;
+      private final @Nullable List<String> actions;
 
     public List<String> getActions() {
         return this.actions == null ? List.of() : this.actions;
@@ -36,7 +36,7 @@ public final class PrivilegeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable PrivilegeResponseResource resource;
+      private final @Nullable PrivilegeResponseResource resource;
 
     public Optional<PrivilegeResponseResource> getResource() {
         return this.resource == null ? Optional.empty() : Optional.ofNullable(this.resource);
@@ -85,7 +85,6 @@ public final class PrivilegeResponse extends io.pulumi.resources.InvokeArgs {
             this.resource = resource;
             return this;
         }
-
         public PrivilegeResponse build() {
             return new PrivilegeResponse(actions, resource);
         }

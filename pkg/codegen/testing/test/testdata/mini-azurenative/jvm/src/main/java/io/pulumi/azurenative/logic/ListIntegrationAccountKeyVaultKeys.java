@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.inputs.ListIntegrationAccountKeyVaultKeysArgs;
 import io.pulumi.azurenative.logic.outputs.ListIntegrationAccountKeyVaultKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIntegrationAccountKeyVaultKeys {
-/**
- * Collection of key vault keys.
+    private ListIntegrationAccountKeyVaultKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListIntegrationAccountKeyVaultKeysArgs.Builder a);
+    }
+    private static ListIntegrationAccountKeyVaultKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListIntegrationAccountKeyVaultKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Collection of key vault keys.
  * API Version: 2019-05-01.
  * 
- *
- * Collection of key vault keys.
+     *
+     * Collection of key vault keys.
  * 
- */
+     */
+    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Collection of key vault keys.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * Collection of key vault keys.
+     * 
+     */
     public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> invokeAsync(ListIntegrationAccountKeyVaultKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args == null ? ListIntegrationAccountKeyVaultKeysArgs.Empty : args, Utilities.withVersion(options));
     }

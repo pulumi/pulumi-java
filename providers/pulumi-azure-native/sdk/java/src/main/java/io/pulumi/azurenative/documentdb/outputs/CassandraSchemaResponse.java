@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.outputs;
 import io.pulumi.azurenative.documentdb.outputs.CassandraPartitionKeyResponse;
 import io.pulumi.azurenative.documentdb.outputs.ClusterKeyResponse;
 import io.pulumi.azurenative.documentdb.outputs.ColumnResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -42,21 +42,21 @@ public final class CassandraSchemaResponse {
     /**
      * List of cluster key.
      * 
-     */
+    */
     public List<ClusterKeyResponse> getClusterKeys() {
         return this.clusterKeys == null ? List.of() : this.clusterKeys;
     }
     /**
      * List of Cassandra table columns.
      * 
-     */
+    */
     public List<ColumnResponse> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
      * List of partition key.
      * 
-     */
+    */
     public List<CassandraPartitionKeyResponse> getPartitionKeys() {
         return this.partitionKeys == null ? List.of() : this.partitionKeys;
     }
@@ -99,7 +99,6 @@ public final class CassandraSchemaResponse {
             this.partitionKeys = partitionKeys;
             return this;
         }
-
         public CassandraSchemaResponse build() {
             return new CassandraSchemaResponse(clusterKeys, columns, partitionKeys);
         }

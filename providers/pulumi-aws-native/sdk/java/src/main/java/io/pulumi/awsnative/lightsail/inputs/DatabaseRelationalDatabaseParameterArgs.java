@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="allowedValues")
-    private final @Nullable Input<String> allowedValues;
+      private final @Nullable Input<String> allowedValues;
 
     public Input<String> getAllowedValues() {
         return this.allowedValues == null ? Input.empty() : this.allowedValues;
@@ -35,7 +35,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="applyMethod")
-    private final @Nullable Input<String> applyMethod;
+      private final @Nullable Input<String> applyMethod;
 
     public Input<String> getApplyMethod() {
         return this.applyMethod == null ? Input.empty() : this.applyMethod;
@@ -46,7 +46,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="applyType")
-    private final @Nullable Input<String> applyType;
+      private final @Nullable Input<String> applyType;
 
     public Input<String> getApplyType() {
         return this.applyType == null ? Input.empty() : this.applyType;
@@ -57,7 +57,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="dataType")
-    private final @Nullable Input<String> dataType;
+      private final @Nullable Input<String> dataType;
 
     public Input<String> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
@@ -68,7 +68,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -79,7 +79,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="isModifiable")
-    private final @Nullable Input<Boolean> isModifiable;
+      private final @Nullable Input<Boolean> isModifiable;
 
     public Input<Boolean> getIsModifiable() {
         return this.isModifiable == null ? Input.empty() : this.isModifiable;
@@ -90,7 +90,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="parameterName")
-    private final @Nullable Input<String> parameterName;
+      private final @Nullable Input<String> parameterName;
 
     public Input<String> getParameterName() {
         return this.parameterName == null ? Input.empty() : this.parameterName;
@@ -101,7 +101,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="parameterValue")
-    private final @Nullable Input<String> parameterValue;
+      private final @Nullable Input<String> parameterValue;
 
     public Input<String> getParameterValue() {
         return this.parameterValue == null ? Input.empty() : this.parameterValue;
@@ -250,7 +250,6 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
             this.parameterValue = Input.ofNullable(parameterValue);
             return this;
         }
-
         public DatabaseRelationalDatabaseParameterArgs build() {
             return new DatabaseRelationalDatabaseParameterArgs(allowedValues, applyMethod, applyType, dataType, description, isModifiable, parameterName, parameterValue);
         }

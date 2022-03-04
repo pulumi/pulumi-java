@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutArgs;
@@ -23,7 +23,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceFilter", required=true)
-    private final Input<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
+      private final Input<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
     public Input<OsPolicyAssignmentInstanceFilterArgs> getInstanceFilter() {
         return this.instanceFilter;
@@ -45,7 +45,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -56,7 +56,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="osPolicies", required=true)
-    private final Input<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
+      private final Input<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
 
     public Input<List<OsPolicyAssignmentOsPolicyArgs>> getOsPolicies() {
         return this.osPolicies;
@@ -78,7 +78,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -89,7 +89,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rollout", required=true)
-    private final Input<OsPolicyAssignmentRolloutArgs> rollout;
+      private final Input<OsPolicyAssignmentRolloutArgs> rollout;
 
     public Input<OsPolicyAssignmentRolloutArgs> getRollout() {
         return this.rollout;
@@ -223,7 +223,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
             this.rollout = Input.of(Objects.requireNonNull(rollout));
             return this;
         }
-
         public OsPolicyAssignmentArgs build() {
             return new OsPolicyAssignmentArgs(description, instanceFilter, location, name, osPolicies, project, rollout);
         }

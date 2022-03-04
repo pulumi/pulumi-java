@@ -6,7 +6,7 @@ package io.pulumi.azurenative.changeanalysis.outputs;
 import io.pulumi.azurenative.changeanalysis.outputs.ConfigurationProfileResourcePropertiesResponse;
 import io.pulumi.azurenative.changeanalysis.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.changeanalysis.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -71,49 +71,49 @@ public final class GetConfigurationProfileResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity block returned by ARM resource that supports managed identity.
      * 
-     */
+    */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location where the resource is to be deployed.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of a configuration profile.
      * 
-     */
+    */
     public ConfigurationProfileResourcePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
-     */
+    */
     public Optional<SystemDataResponse> getSystemData() {
         return Optional.ofNullable(this.systemData);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class GetConfigurationProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationProfileResult build() {
             return new GetConfigurationProfileResult(id, identity, location, name, properties, systemData, type);
         }

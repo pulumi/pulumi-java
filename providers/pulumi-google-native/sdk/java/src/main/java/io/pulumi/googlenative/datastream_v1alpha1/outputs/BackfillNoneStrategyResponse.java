@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class BackfillNoneStrategyResponse {
         public Builder(BackfillNoneStrategyResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public BackfillNoneStrategyResponse build() {
             return new BackfillNoneStrategyResponse();
         }

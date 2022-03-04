@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class CloudErrorBodyResponse {
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * A list of additional details about the error.
      * 
-     */
+    */
     public List<CloudErrorBodyResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The target of the particular error. For example, the name of the property in error.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -119,7 +119,6 @@ public final class CloudErrorBodyResponse {
             this.target = target;
             return this;
         }
-
         public CloudErrorBodyResponse build() {
             return new CloudErrorBodyResponse(code, details, message, target);
         }

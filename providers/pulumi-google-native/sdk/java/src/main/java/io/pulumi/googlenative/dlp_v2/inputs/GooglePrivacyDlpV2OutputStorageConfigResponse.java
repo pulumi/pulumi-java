@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="outputSchema", required=true)
-    private final String outputSchema;
+      private final String outputSchema;
 
     public String getOutputSchema() {
         return this.outputSchema;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="table", required=true)
-    private final GooglePrivacyDlpV2BigQueryTableResponse table;
+      private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
     public GooglePrivacyDlpV2BigQueryTableResponse getTable() {
         return this.table;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends io.pulu
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public GooglePrivacyDlpV2OutputStorageConfigResponse build() {
             return new GooglePrivacyDlpV2OutputStorageConfigResponse(outputSchema, table);
         }

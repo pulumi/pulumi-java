@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BqmlIterationResultResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.BqmlTrainingRunTrainingOptionsResponse;
 import java.lang.String;
@@ -48,28 +48,28 @@ public final class BqmlTrainingRunResponse {
     /**
      * [Output-only, Beta] List of each iteration results.
      * 
-     */
+    */
     public List<BqmlIterationResultResponse> getIterationResults() {
         return this.iterationResults;
     }
     /**
      * [Output-only, Beta] Training run start time in milliseconds since the epoch.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run successfully completed. CANCELLED: Training run cancelled by the user.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * [Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.
      * 
-     */
+    */
     public BqmlTrainingRunTrainingOptionsResponse getTrainingOptions() {
         return this.trainingOptions;
     }
@@ -119,7 +119,6 @@ public final class BqmlTrainingRunResponse {
             this.trainingOptions = Objects.requireNonNull(trainingOptions);
             return this;
         }
-
         public BqmlTrainingRunResponse build() {
             return new BqmlTrainingRunResponse(iterationResults, startTime, state, trainingOptions);
         }

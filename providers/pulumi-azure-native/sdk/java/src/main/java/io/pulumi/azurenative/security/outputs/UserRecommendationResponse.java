@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class UserRecommendationResponse {
     /**
      * The recommendation action of the machine or rule
      * 
-     */
+    */
     public Optional<String> getRecommendationAction() {
         return Optional.ofNullable(this.recommendationAction);
     }
     /**
      * Represents a user that is recommended to be allowed for a certain rule
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -76,7 +76,6 @@ public final class UserRecommendationResponse {
             this.username = username;
             return this;
         }
-
         public UserRecommendationResponse build() {
             return new UserRecommendationResponse(recommendationAction, username);
         }

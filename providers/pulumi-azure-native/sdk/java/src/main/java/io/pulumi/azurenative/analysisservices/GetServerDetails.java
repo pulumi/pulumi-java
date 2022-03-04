@@ -6,21 +6,41 @@ package io.pulumi.azurenative.analysisservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.analysisservices.inputs.GetServerDetailsArgs;
 import io.pulumi.azurenative.analysisservices.outputs.GetServerDetailsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerDetails {
-/**
- * Represents an instance of an Analysis Services resource.
+    private GetServerDetails() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerDetailsArgs.Builder a);
+    }
+    private static GetServerDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerDetailsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents an instance of an Analysis Services resource.
  * API Version: 2017-08-01.
  * 
- *
- * Represents an instance of an Analysis Services resource.
+     *
+     * Represents an instance of an Analysis Services resource.
  * 
- */
+     */
+    public static CompletableFuture<GetServerDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents an instance of an Analysis Services resource.
+     * API Version: 2017-08-01.
+     * 
+     *
+         * Represents an instance of an Analysis Services resource.
+     * 
+     */
     public static CompletableFuture<GetServerDetailsResult> invokeAsync(GetServerDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:analysisservices:getServerDetails", TypeShape.of(GetServerDetailsResult.class), args == null ? GetServerDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

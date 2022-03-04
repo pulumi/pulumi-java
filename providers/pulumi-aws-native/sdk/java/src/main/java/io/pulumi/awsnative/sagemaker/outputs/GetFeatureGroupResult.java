@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetFeatureGroupResult {
         public Builder(GetFeatureGroupResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetFeatureGroupResult build() {
             return new GetFeatureGroupResult();
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProduct {
-/**
- * Gets information associated with a Product. Possible errors: * Returns NOT_FOUND if the Product does not exist.
+    private GetProduct() {}
+    public interface BuilderApplicator {
+        public void apply(GetProductArgs.Builder a);
+    }
+    private static GetProductArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProductArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets information associated with a Product. Possible errors: * Returns NOT_FOUND if the Product does not exist.
  * 
- */
+     */
+    public static CompletableFuture<GetProductResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets information associated with a Product. Possible errors: * Returns NOT_FOUND if the Product does not exist.
+     * 
+     */
     public static CompletableFuture<GetProductResult> invokeAsync(GetProductArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vision/v1:getProduct", TypeShape.of(GetProductResult.class), args == null ? GetProductArgs.Empty : args, Utilities.withVersion(options));
     }

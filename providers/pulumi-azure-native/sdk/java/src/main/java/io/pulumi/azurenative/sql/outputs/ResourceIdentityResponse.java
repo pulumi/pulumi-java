@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.UserIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class ResourceIdentityResponse {
     /**
      * The Azure Active Directory principal id.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The Azure Active Directory tenant id.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The resource ids of the user assigned identities to use
      * 
-     */
+    */
     public Map<String,UserIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
@@ -120,7 +120,6 @@ public final class ResourceIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ResourceIdentityResponse build() {
             return new ResourceIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

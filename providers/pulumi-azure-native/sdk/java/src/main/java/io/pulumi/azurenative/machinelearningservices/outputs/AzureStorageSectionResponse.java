@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ClientCredentialsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -123,28 +123,28 @@ public final class AzureStorageSectionResponse {
     /**
      *  Storage Account Key (Deprecated).
      * 
-     */
+    */
     public Optional<String> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * Storage Account Name.
      * 
-     */
+    */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
      * 
-     */
+    */
     public Optional<Boolean> getAreWorkspaceManagedIdentitiesAllowed() {
         return Optional.ofNullable(this.areWorkspaceManagedIdentitiesAllowed);
     }
     /**
      *  If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).
      * 
-     */
+    */
     public Optional<Integer> getBlobCacheTimeout() {
         return Optional.ofNullable(this.blobCacheTimeout);
     }
@@ -154,70 +154,70 @@ public final class AzureStorageSectionResponse {
     /**
      * The storage container name.
      * 
-     */
+    */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * The credential.
      * 
-     */
+    */
     public Optional<String> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      *  The credential type.
      * 
-     */
+    */
     public Optional<String> getCredentialType() {
         return Optional.ofNullable(this.credentialType);
     }
     /**
      * The host of the container.
      * 
-     */
+    */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * Indicate if we are using SAS token or Account Key (Deprecated).
      * 
-     */
+    */
     public Optional<Boolean> getIsSas() {
         return Optional.ofNullable(this.isSas);
     }
     /**
      * The protocol to use. Defaults to https.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * Resource Group.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      *  SAS Token for the container (Deprecated).
      * 
-     */
+    */
     public Optional<String> getSasToken() {
         return Optional.ofNullable(this.sasToken);
     }
     /**
      * Indicates which identity to use to authenticate service data access to customer's storage.
      * 
-     */
+    */
     public Optional<String> getServiceDataAccessAuthIdentity() {
         return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
     /**
      * Subscription ID.
      * 
-     */
+    */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -344,7 +344,6 @@ public final class AzureStorageSectionResponse {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public AzureStorageSectionResponse build() {
             return new AzureStorageSectionResponse(accountKey, accountName, areWorkspaceManagedIdentitiesAllowed, blobCacheTimeout, clientCredentials, containerName, credential, credentialType, endpoint, isSas, protocol, resourceGroup, sasToken, serviceDataAccessAuthIdentity, subscriptionId);
         }

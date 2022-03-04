@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class ForwardSshTunnelConnectivityResponse {
     /**
      * Hostname for the SSH tunnel.
      * 
-     */
+    */
     public String getHostname() {
         return this.hostname;
     }
     /**
      * Input only. SSH password.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * Port for the SSH tunnel, default value is 22.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * Input only. SSH private key.
      * 
-     */
+    */
     public String getPrivateKey() {
         return this.privateKey;
     }
     /**
      * Username for the SSH tunnel.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -138,7 +138,6 @@ public final class ForwardSshTunnelConnectivityResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ForwardSshTunnelConnectivityResponse build() {
             return new ForwardSshTunnelConnectivityResponse(hostname, password, port, privateKey, username);
         }

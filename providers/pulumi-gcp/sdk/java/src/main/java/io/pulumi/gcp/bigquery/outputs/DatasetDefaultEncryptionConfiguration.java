@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +27,7 @@ public final class DatasetDefaultEncryptionConfiguration {
      * BigQuery table. The BigQuery Service Account associated with your project requires
      * access to this encryption key.
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
@@ -56,7 +56,6 @@ public final class DatasetDefaultEncryptionConfiguration {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public DatasetDefaultEncryptionConfiguration build() {
             return new DatasetDefaultEncryptionConfiguration(kmsKeyName);
         }

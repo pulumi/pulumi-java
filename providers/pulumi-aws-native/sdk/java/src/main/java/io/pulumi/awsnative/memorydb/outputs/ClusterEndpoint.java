@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.memorydb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ClusterEndpoint {
     /**
      * The DNS address of the primary read-write node.
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The port number that the engine is listening on.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -77,7 +77,6 @@ public final class ClusterEndpoint {
             this.port = port;
             return this;
         }
-
         public ClusterEndpoint build() {
             return new ClusterEndpoint(address, port);
         }

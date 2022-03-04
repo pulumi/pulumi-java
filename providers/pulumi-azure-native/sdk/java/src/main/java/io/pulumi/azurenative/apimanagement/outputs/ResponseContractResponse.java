@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.ParameterContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.RepresentationContractResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -51,28 +51,28 @@ public final class ResponseContractResponse {
     /**
      * Operation response description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Collection of operation response headers.
      * 
-     */
+    */
     public List<ParameterContractResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * Collection of operation response representations.
      * 
-     */
+    */
     public List<RepresentationContractResponse> getRepresentations() {
         return this.representations == null ? List.of() : this.representations;
     }
     /**
      * Operation response HTTP status code.
      * 
-     */
+    */
     public Integer getStatusCode() {
         return this.statusCode;
     }
@@ -122,7 +122,6 @@ public final class ResponseContractResponse {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public ResponseContractResponse build() {
             return new ResponseContractResponse(description, headers, representations, statusCode);
         }

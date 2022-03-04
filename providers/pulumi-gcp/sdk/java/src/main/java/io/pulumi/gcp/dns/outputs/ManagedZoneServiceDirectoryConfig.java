@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dns.outputs.ManagedZoneServiceDirectoryConfigNamespace;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ManagedZoneServiceDirectoryConfig {
      * The namespace associated with the zone.
      * Structure is documented below.
      * 
-     */
+    */
     public ManagedZoneServiceDirectoryConfigNamespace getNamespace() {
         return this.namespace;
     }
@@ -54,7 +54,6 @@ public final class ManagedZoneServiceDirectoryConfig {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfig build() {
             return new ManagedZoneServiceDirectoryConfig(namespace);
         }

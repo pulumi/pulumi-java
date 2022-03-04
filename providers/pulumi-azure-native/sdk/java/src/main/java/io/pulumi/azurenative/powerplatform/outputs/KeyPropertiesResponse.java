@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class KeyPropertiesResponse {
     /**
      * The identifier of the key vault key used to encrypt data.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The version of the identity which will be used to access key vault.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -76,7 +76,6 @@ public final class KeyPropertiesResponse {
             this.version = version;
             return this;
         }
-
         public KeyPropertiesResponse build() {
             return new KeyPropertiesResponse(name, version);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -56,7 +56,7 @@ public final class GetSqlMigrationServiceResult {
     /**
      * Current state of the Integration runtime.
      * 
-     */
+    */
     public String getIntegrationRuntimeState() {
         return this.integrationRuntimeState;
     }
@@ -69,7 +69,7 @@ public final class GetSqlMigrationServiceResult {
     /**
      * Provisioning state to track the async operation status.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -156,7 +156,6 @@ public final class GetSqlMigrationServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlMigrationServiceResult build() {
             return new GetSqlMigrationServiceResult(id, integrationRuntimeState, location, name, provisioningState, systemData, tags, type);
         }

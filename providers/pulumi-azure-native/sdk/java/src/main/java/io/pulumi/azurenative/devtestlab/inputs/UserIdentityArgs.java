@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -34,7 +34,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable Input<String> objectId;
+      private final @Nullable Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId == null ? Input.empty() : this.objectId;
@@ -45,7 +45,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable Input<String> principalId;
+      private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -56,7 +56,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalName")
-    private final @Nullable Input<String> principalName;
+      private final @Nullable Input<String> principalName;
 
     public Input<String> getPrincipalName() {
         return this.principalName == null ? Input.empty() : this.principalName;
@@ -67,7 +67,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -171,7 +171,6 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public UserIdentityArgs build() {
             return new UserIdentityArgs(appId, objectId, principalId, principalName, tenantId);
         }

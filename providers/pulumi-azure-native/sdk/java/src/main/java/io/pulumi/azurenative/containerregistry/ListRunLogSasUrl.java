@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerregistry.inputs.ListRunLogSasUrlArgs;
 import io.pulumi.azurenative.containerregistry.outputs.ListRunLogSasUrlResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListRunLogSasUrl {
-/**
- * The result of get log link operation.
+    private ListRunLogSasUrl() {}
+    public interface BuilderApplicator {
+        public void apply(ListRunLogSasUrlArgs.Builder a);
+    }
+    private static ListRunLogSasUrlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListRunLogSasUrlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The result of get log link operation.
  * API Version: 2019-06-01-preview.
  * 
- *
- * The result of get log link operation.
+     *
+     * The result of get log link operation.
  * 
- */
+     */
+    public static CompletableFuture<ListRunLogSasUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The result of get log link operation.
+     * API Version: 2019-06-01-preview.
+     * 
+     *
+         * The result of get log link operation.
+     * 
+     */
     public static CompletableFuture<ListRunLogSasUrlResult> invokeAsync(ListRunLogSasUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listRunLogSasUrl", TypeShape.of(ListRunLogSasUrlResult.class), args == null ? ListRunLogSasUrlArgs.Empty : args, Utilities.withVersion(options));
     }

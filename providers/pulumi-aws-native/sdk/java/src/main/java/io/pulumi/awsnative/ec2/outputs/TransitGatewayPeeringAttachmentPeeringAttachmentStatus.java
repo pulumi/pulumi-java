@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus {
     /**
      * The status code.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * The status message, if applicable.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
@@ -76,7 +76,6 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus {
             this.message = message;
             return this;
         }
-
         public TransitGatewayPeeringAttachmentPeeringAttachmentStatus build() {
             return new TransitGatewayPeeringAttachmentPeeringAttachmentStatus(code, message);
         }

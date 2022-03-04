@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ParameterMetadataResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.SDKInfoResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final List<ParameterMetadataResponse> parameters;
+      private final List<ParameterMetadataResponse> parameters;
 
     public List<ParameterMetadataResponse> getParameters() {
         return this.parameters;
@@ -34,7 +34,7 @@ public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sdkInfo", required=true)
-    private final SDKInfoResponse sdkInfo;
+      private final SDKInfoResponse sdkInfo;
 
     public SDKInfoResponse getSdkInfo() {
         return this.sdkInfo;
@@ -83,7 +83,6 @@ public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArg
             this.sdkInfo = Objects.requireNonNull(sdkInfo);
             return this;
         }
-
         public RuntimeMetadataResponse build() {
             return new RuntimeMetadataResponse(parameters, sdkInfo);
         }

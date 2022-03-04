@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus.outputs;
 
 import io.pulumi.azurenative.servicebus.outputs.MessageCountDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -191,168 +191,168 @@ public final class GetQueueResult {
     /**
      * Last time a message was sent, or the last time there was a receive request to this queue.
      * 
-     */
+    */
     public String getAccessedAt() {
         return this.accessedAt;
     }
     /**
      * ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.
      * 
-     */
+    */
     public Optional<String> getAutoDeleteOnIdle() {
         return Optional.ofNullable(this.autoDeleteOnIdle);
     }
     /**
      * Message Count Details.
      * 
-     */
+    */
     public MessageCountDetailsResponse getCountDetails() {
         return this.countDetails;
     }
     /**
      * The exact time the message was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * A value that indicates whether this queue has dead letter support when a message expires.
      * 
-     */
+    */
     public Optional<Boolean> getDeadLetteringOnMessageExpiration() {
         return Optional.ofNullable(this.deadLetteringOnMessageExpiration);
     }
     /**
      * ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
-     */
+    */
     public Optional<String> getDefaultMessageTimeToLive() {
         return Optional.ofNullable(this.defaultMessageTimeToLive);
     }
     /**
      * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
-     */
+    */
     public Optional<String> getDuplicateDetectionHistoryTimeWindow() {
         return Optional.ofNullable(this.duplicateDetectionHistoryTimeWindow);
     }
     /**
      * Value that indicates whether server-side batched operations are enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableBatchedOperations() {
         return Optional.ofNullable(this.enableBatchedOperations);
     }
     /**
      * A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
      * 
-     */
+    */
     public Optional<Boolean> getEnableExpress() {
         return Optional.ofNullable(this.enableExpress);
     }
     /**
      * A value that indicates whether the queue is to be partitioned across multiple message brokers.
      * 
-     */
+    */
     public Optional<Boolean> getEnablePartitioning() {
         return Optional.ofNullable(this.enablePartitioning);
     }
     /**
      * Queue/Topic name to forward the Dead Letter message
      * 
-     */
+    */
     public Optional<String> getForwardDeadLetteredMessagesTo() {
         return Optional.ofNullable(this.forwardDeadLetteredMessagesTo);
     }
     /**
      * Queue/Topic name to forward the messages
      * 
-     */
+    */
     public Optional<String> getForwardTo() {
         return Optional.ofNullable(this.forwardTo);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
      * 
-     */
+    */
     public Optional<String> getLockDuration() {
         return Optional.ofNullable(this.lockDuration);
     }
     /**
      * The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
      * 
-     */
+    */
     public Optional<Integer> getMaxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
     /**
      * The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
      * 
-     */
+    */
     public Optional<Integer> getMaxSizeInMegabytes() {
         return Optional.ofNullable(this.maxSizeInMegabytes);
     }
     /**
      * The number of messages in the queue.
      * 
-     */
+    */
     public Double getMessageCount() {
         return this.messageCount;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A value indicating if this queue requires duplicate detection.
      * 
-     */
+    */
     public Optional<Boolean> getRequiresDuplicateDetection() {
         return Optional.ofNullable(this.requiresDuplicateDetection);
     }
     /**
      * A value that indicates whether the queue supports the concept of sessions.
      * 
-     */
+    */
     public Optional<Boolean> getRequiresSession() {
         return Optional.ofNullable(this.requiresSession);
     }
     /**
      * The size of the queue, in bytes.
      * 
-     */
+    */
     public Double getSizeInBytes() {
         return this.sizeInBytes;
     }
     /**
      * Enumerates the possible values for the status of a messaging entity.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The exact time the message was updated.
      * 
-     */
+    */
     public String getUpdatedAt() {
         return this.updatedAt;
     }
@@ -542,7 +542,6 @@ public final class GetQueueResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(accessedAt, autoDeleteOnIdle, countDetails, createdAt, deadLetteringOnMessageExpiration, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, enableExpress, enablePartitioning, forwardDeadLetteredMessagesTo, forwardTo, id, lockDuration, maxDeliveryCount, maxSizeInMegabytes, messageCount, name, requiresDuplicateDetection, requiresSession, sizeInBytes, status, type, updatedAt);
         }

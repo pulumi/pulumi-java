@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TrafficPortSelectorResponse {
     /**
      * Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
      * 
-     */
+    */
     public List<String> getPorts() {
         return this.ports;
     }
@@ -53,7 +53,6 @@ public final class TrafficPortSelectorResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public TrafficPortSelectorResponse build() {
             return new TrafficPortSelectorResponse(ports);
         }

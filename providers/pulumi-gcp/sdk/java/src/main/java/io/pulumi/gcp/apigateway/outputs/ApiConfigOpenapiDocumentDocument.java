@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ApiConfigOpenapiDocumentDocument {
     /**
      * Base64 encoded content of the file.
      * 
-     */
+    */
     public String getContents() {
         return this.contents;
     }
     /**
      * The file path (full or relative path). This is typically the path of the file when it is uploaded.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
@@ -74,7 +74,6 @@ public final class ApiConfigOpenapiDocumentDocument {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public ApiConfigOpenapiDocumentDocument build() {
             return new ApiConfigOpenapiDocumentDocument(contents, path);
         }

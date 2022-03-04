@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ApplicationRuleConditionResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyFilterRuleActionResponse;
 import io.pulumi.azurenative.network.outputs.NatRuleConditionResponse;
 import io.pulumi.azurenative.network.outputs.NetworkRuleConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -62,28 +62,28 @@ public final class FirewallPolicyFilterRuleResponse {
     /**
      * The action type of a Filter rule.
      * 
-     */
+    */
     public Optional<FirewallPolicyFilterRuleActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The name of the rule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule resource.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Collection of rule conditions used by a rule.
      * 
-     */
+    */
     public List<Object> getRuleConditions() {
         return this.ruleConditions == null ? List.of() : this.ruleConditions;
     }
@@ -91,7 +91,7 @@ public final class FirewallPolicyFilterRuleResponse {
      * The type of the rule.
      * Expected value is 'FirewallPolicyFilterRule'.
      * 
-     */
+    */
     public String getRuleType() {
         return this.ruleType;
     }
@@ -148,7 +148,6 @@ public final class FirewallPolicyFilterRuleResponse {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public FirewallPolicyFilterRuleResponse build() {
             return new FirewallPolicyFilterRuleResponse(action, name, priority, ruleConditions, ruleType);
         }

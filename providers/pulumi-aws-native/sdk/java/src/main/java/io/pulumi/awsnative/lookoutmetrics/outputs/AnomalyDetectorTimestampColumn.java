@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +29,7 @@ public final class AnomalyDetectorTimestampColumn {
     /**
      * A timestamp format for the timestamps in the dataset
      * 
-     */
+    */
     public Optional<String> getColumnFormat() {
         return Optional.ofNullable(this.columnFormat);
     }
@@ -68,7 +68,6 @@ public final class AnomalyDetectorTimestampColumn {
             this.columnName = columnName;
             return this;
         }
-
         public AnomalyDetectorTimestampColumn build() {
             return new AnomalyDetectorTimestampColumn(columnFormat, columnName);
         }

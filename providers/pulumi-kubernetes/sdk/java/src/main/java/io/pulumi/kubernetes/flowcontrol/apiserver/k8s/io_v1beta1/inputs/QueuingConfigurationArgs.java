@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="handSize")
-    private final @Nullable Input<Integer> handSize;
+      private final @Nullable Input<Integer> handSize;
 
     public Input<Integer> getHandSize() {
         return this.handSize == null ? Input.empty() : this.handSize;
@@ -34,7 +34,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queueLengthLimit")
-    private final @Nullable Input<Integer> queueLengthLimit;
+      private final @Nullable Input<Integer> queueLengthLimit;
 
     public Input<Integer> getQueueLengthLimit() {
         return this.queueLengthLimit == null ? Input.empty() : this.queueLengthLimit;
@@ -45,7 +45,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queues")
-    private final @Nullable Input<Integer> queues;
+      private final @Nullable Input<Integer> queues;
 
     public Input<Integer> getQueues() {
         return this.queues == null ? Input.empty() : this.queues;
@@ -119,7 +119,6 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
             this.queues = Input.ofNullable(queues);
             return this;
         }
-
         public QueuingConfigurationArgs build() {
             return new QueuingConfigurationArgs(handSize, queueLengthLimit, queues);
         }

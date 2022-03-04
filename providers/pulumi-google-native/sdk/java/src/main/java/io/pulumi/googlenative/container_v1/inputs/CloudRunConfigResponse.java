@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -33,7 +33,7 @@ public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="loadBalancerType", required=true)
-    private final String loadBalancerType;
+      private final String loadBalancerType;
 
     public String getLoadBalancerType() {
         return this.loadBalancerType;
@@ -82,7 +82,6 @@ public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
-
         public CloudRunConfigResponse build() {
             return new CloudRunConfigResponse(disabled, loadBalancerType);
         }

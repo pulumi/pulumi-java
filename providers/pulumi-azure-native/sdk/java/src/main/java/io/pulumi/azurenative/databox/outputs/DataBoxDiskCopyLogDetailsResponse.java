@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,28 +47,28 @@ public final class DataBoxDiskCopyLogDetailsResponse {
      * Indicates the type of job details.
      * Expected value is 'DataBoxDisk'.
      * 
-     */
+    */
     public String getCopyLogDetailsType() {
         return this.copyLogDetailsType;
     }
     /**
      * Disk Serial Number.
      * 
-     */
+    */
     public String getDiskSerialNumber() {
         return this.diskSerialNumber;
     }
     /**
      * Link for copy error logs.
      * 
-     */
+    */
     public String getErrorLogLink() {
         return this.errorLogLink;
     }
     /**
      * Link for copy verbose logs.
      * 
-     */
+    */
     public String getVerboseLogLink() {
         return this.verboseLogLink;
     }
@@ -118,7 +118,6 @@ public final class DataBoxDiskCopyLogDetailsResponse {
             this.verboseLogLink = Objects.requireNonNull(verboseLogLink);
             return this;
         }
-
         public DataBoxDiskCopyLogDetailsResponse build() {
             return new DataBoxDiskCopyLogDetailsResponse(copyLogDetailsType, diskSerialNumber, errorLogLink, verboseLogLink);
         }

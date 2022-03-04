@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.VmUtilizationMetricsResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.VmwareVmDetailsResponse;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class VmUtilizationInfoResponse {
     /**
      * Utilization metrics for this VM.
      * 
-     */
+    */
     public VmUtilizationMetricsResponse getUtilization() {
         return this.utilization;
     }
     /**
      * The VM's ID in the source.
      * 
-     */
+    */
     public String getVmId() {
         return this.vmId;
     }
     /**
      * The description of the VM in a Source of type Vmware.
      * 
-     */
+    */
     public VmwareVmDetailsResponse getVmwareVmDetails() {
         return this.vmwareVmDetails;
     }
@@ -97,7 +97,6 @@ public final class VmUtilizationInfoResponse {
             this.vmwareVmDetails = Objects.requireNonNull(vmwareVmDetails);
             return this;
         }
-
         public VmUtilizationInfoResponse build() {
             return new VmUtilizationInfoResponse(utilization, vmId, vmwareVmDetails);
         }

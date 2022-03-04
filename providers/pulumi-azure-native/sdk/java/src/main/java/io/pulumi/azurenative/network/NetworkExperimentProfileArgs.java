@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable Input<Either<String,State>> enabledState;
+      private final @Nullable Input<Either<String,State>> enabledState;
 
     public Input<Either<String,State>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -33,7 +33,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -44,7 +44,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="profileName")
-    private final @Nullable Input<String> profileName;
+      private final @Nullable Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName == null ? Input.empty() : this.profileName;
@@ -66,7 +66,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,6 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public NetworkExperimentProfileArgs build() {
             return new NetworkExperimentProfileArgs(enabledState, location, name, profileName, resourceGroupName, tags);
         }

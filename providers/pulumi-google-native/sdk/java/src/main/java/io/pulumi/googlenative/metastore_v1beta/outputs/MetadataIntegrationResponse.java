@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1beta.outputs.DataCatalogConfigResponse;
 import io.pulumi.googlenative.metastore_v1beta.outputs.DataplexConfigResponse;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class MetadataIntegrationResponse {
     /**
      * The integration config for the Data Catalog service.
      * 
-     */
+    */
     public DataCatalogConfigResponse getDataCatalogConfig() {
         return this.dataCatalogConfig;
     }
     /**
      * The integration config for the Dataplex service.
      * 
-     */
+    */
     public DataplexConfigResponse getDataplexConfig() {
         return this.dataplexConfig;
     }
@@ -75,7 +75,6 @@ public final class MetadataIntegrationResponse {
             this.dataplexConfig = Objects.requireNonNull(dataplexConfig);
             return this;
         }
-
         public MetadataIntegrationResponse build() {
             return new MetadataIntegrationResponse(dataCatalogConfig, dataplexConfig);
         }

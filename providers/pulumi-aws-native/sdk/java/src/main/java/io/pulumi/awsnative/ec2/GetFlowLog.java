@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetFlowLogArgs;
 import io.pulumi.awsnative.ec2.outputs.GetFlowLogResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFlowLog {
-/**
- * Specifies a VPC flow log, which enables you to capture IP traffic for a specific network interface, subnet, or VPC.
+    private GetFlowLog() {}
+    public interface BuilderApplicator {
+        public void apply(GetFlowLogArgs.Builder a);
+    }
+    private static GetFlowLogArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFlowLogArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Specifies a VPC flow log, which enables you to capture IP traffic for a specific network interface, subnet, or VPC.
  * 
- */
+     */
+    public static CompletableFuture<GetFlowLogResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Specifies a VPC flow log, which enables you to capture IP traffic for a specific network interface, subnet, or VPC.
+     * 
+     */
     public static CompletableFuture<GetFlowLogResult> invokeAsync(GetFlowLogArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getFlowLog", TypeShape.of(GetFlowLogResult.class), args == null ? GetFlowLogArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.notificationhubs;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.notificationhubs.inputs.GetNotificationHubAuthorizationRuleArgs;
 import io.pulumi.azurenative.notificationhubs.outputs.GetNotificationHubAuthorizationRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationHubAuthorizationRule {
-/**
- * Description of a Namespace AuthorizationRules.
+    private GetNotificationHubAuthorizationRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetNotificationHubAuthorizationRuleArgs.Builder a);
+    }
+    private static GetNotificationHubAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNotificationHubAuthorizationRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of a Namespace AuthorizationRules.
  * API Version: 2017-04-01.
  * 
- *
- * Description of a Namespace AuthorizationRules.
+     *
+     * Description of a Namespace AuthorizationRules.
  * 
- */
+     */
+    public static CompletableFuture<GetNotificationHubAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of a Namespace AuthorizationRules.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of a Namespace AuthorizationRules.
+     * 
+     */
     public static CompletableFuture<GetNotificationHubAuthorizationRuleResult> invokeAsync(GetNotificationHubAuthorizationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHubAuthorizationRule", TypeShape.of(GetNotificationHubAuthorizationRuleResult.class), args == null ? GetNotificationHubAuthorizationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

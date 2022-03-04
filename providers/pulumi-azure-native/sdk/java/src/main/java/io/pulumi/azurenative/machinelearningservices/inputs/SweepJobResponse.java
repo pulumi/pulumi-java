@@ -14,7 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ObjectiveResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.TrialComponentResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.TruncationSelectionPolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -37,7 +37,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -48,7 +48,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="compute", required=true)
-    private final ComputeConfigurationResponse compute;
+      private final ComputeConfigurationResponse compute;
 
     public ComputeConfigurationResponse getCompute() {
         return this.compute;
@@ -59,7 +59,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -70,7 +70,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="earlyTermination")
-    private final @Nullable Object earlyTermination;
+      private final @Nullable Object earlyTermination;
 
     public Object getEarlyTermination() {
         return this.earlyTermination == null ? null : this.earlyTermination;
@@ -81,7 +81,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="experimentName")
-    private final @Nullable String experimentName;
+      private final @Nullable String experimentName;
 
     public Optional<String> getExperimentName() {
         return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
@@ -93,7 +93,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
+      private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
     public Either<AmlTokenResponse,ManagedIdentityResponse> getIdentity() {
         return this.identity == null ? null : this.identity;
@@ -105,7 +105,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="interactionEndpoints", required=true)
-    private final Map<String,JobEndpointResponse> interactionEndpoints;
+      private final Map<String,JobEndpointResponse> interactionEndpoints;
 
     public Map<String,JobEndpointResponse> getInteractionEndpoints() {
         return this.interactionEndpoints;
@@ -117,7 +117,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobType", required=true)
-    private final String jobType;
+      private final String jobType;
 
     public String getJobType() {
         return this.jobType;
@@ -128,7 +128,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxConcurrentTrials")
-    private final @Nullable Integer maxConcurrentTrials;
+      private final @Nullable Integer maxConcurrentTrials;
 
     public Optional<Integer> getMaxConcurrentTrials() {
         return this.maxConcurrentTrials == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentTrials);
@@ -139,7 +139,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxTotalTrials")
-    private final @Nullable Integer maxTotalTrials;
+      private final @Nullable Integer maxTotalTrials;
 
     public Optional<Integer> getMaxTotalTrials() {
         return this.maxTotalTrials == null ? Optional.empty() : Optional.ofNullable(this.maxTotalTrials);
@@ -150,7 +150,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="objective", required=true)
-    private final ObjectiveResponse objective;
+      private final ObjectiveResponse objective;
 
     public ObjectiveResponse getObjective() {
         return this.objective;
@@ -161,7 +161,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="output", required=true)
-    private final JobOutputResponse output;
+      private final JobOutputResponse output;
 
     public JobOutputResponse getOutput() {
         return this.output;
@@ -173,7 +173,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Integer priority;
+      private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -184,7 +184,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -195,7 +195,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -206,7 +206,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="searchSpace", required=true)
-    private final Map<String,Object> searchSpace;
+      private final Map<String,Object> searchSpace;
 
     public Map<String,Object> getSearchSpace() {
         return this.searchSpace;
@@ -217,7 +217,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -228,7 +228,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -239,7 +239,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable String timeout;
+      private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -250,7 +250,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="trial")
-    private final @Nullable TrialComponentResponse trial;
+      private final @Nullable TrialComponentResponse trial;
 
     public Optional<TrialComponentResponse> getTrial() {
         return this.trial == null ? Optional.empty() : Optional.ofNullable(this.trial);
@@ -479,7 +479,6 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
             this.trial = trial;
             return this;
         }
-
         public SweepJobResponse build() {
             return new SweepJobResponse(algorithm, compute, description, earlyTermination, experimentName, identity, interactionEndpoints, jobType, maxConcurrentTrials, maxTotalTrials, objective, output, priority, properties, provisioningState, searchSpace, status, tags, timeout, trial);
         }

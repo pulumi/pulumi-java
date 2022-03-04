@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
      * 
      */
     @InputImport(name="profileName")
-    private final @Nullable String profileName;
+      private final @Nullable String profileName;
 
     public Optional<String> getProfileName() {
         return this.profileName == null ? Optional.empty() : Optional.ofNullable(this.profileName);
@@ -35,7 +35,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
      * 
      */
     @InputImport(name="profilePropertyName")
-    private final @Nullable String profilePropertyName;
+      private final @Nullable String profilePropertyName;
 
     public Optional<String> getProfilePropertyName() {
         return this.profilePropertyName == null ? Optional.empty() : Optional.ofNullable(this.profilePropertyName);
@@ -46,7 +46,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
      * 
      */
     @InputImport(name="rank")
-    private final @Nullable Integer rank;
+      private final @Nullable Integer rank;
 
     public Optional<Integer> getRank() {
         return this.rank == null ? Optional.empty() : Optional.ofNullable(this.rank);
@@ -57,7 +57,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -68,7 +68,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -147,7 +147,6 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
             this.value = value;
             return this;
         }
-
         public CanonicalProfileDefinitionResponseProperties build() {
             return new CanonicalProfileDefinitionResponseProperties(profileName, profilePropertyName, rank, type, value);
         }

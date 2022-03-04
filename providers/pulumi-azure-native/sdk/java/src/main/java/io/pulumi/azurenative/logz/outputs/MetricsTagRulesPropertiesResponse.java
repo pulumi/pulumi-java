@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.MetricRulesResponse;
 import io.pulumi.azurenative.logz.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,21 +50,21 @@ public final class MetricsTagRulesPropertiesResponse {
     /**
      * Flag specifying if the resource provisioning state as tracked by ARM.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
      * 
-     */
+    */
     public Optional<Boolean> getSendMetrics() {
         return Optional.ofNullable(this.sendMetrics);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
@@ -114,7 +114,6 @@ public final class MetricsTagRulesPropertiesResponse {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public MetricsTagRulesPropertiesResponse build() {
             return new MetricsTagRulesPropertiesResponse(metricRules, provisioningState, sendMetrics, systemData);
         }

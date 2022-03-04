@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssm.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class ResourceDataSyncS3Destination {
             this.syncFormat = Objects.requireNonNull(syncFormat);
             return this;
         }
-
         public ResourceDataSyncS3Destination build() {
             return new ResourceDataSyncS3Destination(bucketName, bucketPrefix, bucketRegion, kMSKeyArn, syncFormat);
         }

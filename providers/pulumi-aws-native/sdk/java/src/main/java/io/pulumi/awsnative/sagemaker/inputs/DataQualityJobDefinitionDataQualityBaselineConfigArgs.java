@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionConstraintsResourceArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionStatisticsResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,21 +21,21 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfigArgs extends
     public static final DataQualityJobDefinitionDataQualityBaselineConfigArgs Empty = new DataQualityJobDefinitionDataQualityBaselineConfigArgs();
 
     @InputImport(name="baseliningJobName")
-    private final @Nullable Input<String> baseliningJobName;
+      private final @Nullable Input<String> baseliningJobName;
 
     public Input<String> getBaseliningJobName() {
         return this.baseliningJobName == null ? Input.empty() : this.baseliningJobName;
     }
 
     @InputImport(name="constraintsResource")
-    private final @Nullable Input<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
+      private final @Nullable Input<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
 
     public Input<DataQualityJobDefinitionConstraintsResourceArgs> getConstraintsResource() {
         return this.constraintsResource == null ? Input.empty() : this.constraintsResource;
     }
 
     @InputImport(name="statisticsResource")
-    private final @Nullable Input<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource;
+      private final @Nullable Input<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource;
 
     public Input<DataQualityJobDefinitionStatisticsResourceArgs> getStatisticsResource() {
         return this.statisticsResource == null ? Input.empty() : this.statisticsResource;
@@ -109,7 +109,6 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfigArgs extends
             this.statisticsResource = Input.ofNullable(statisticsResource);
             return this;
         }
-
         public DataQualityJobDefinitionDataQualityBaselineConfigArgs build() {
             return new DataQualityJobDefinitionDataQualityBaselineConfigArgs(baseliningJobName, constraintsResource, statisticsResource);
         }

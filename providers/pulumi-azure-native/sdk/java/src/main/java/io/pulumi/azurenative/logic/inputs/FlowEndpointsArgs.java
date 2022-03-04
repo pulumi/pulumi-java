@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IpAddressArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessEndpointIpAddresses")
-    private final @Nullable Input<List<IpAddressArgs>> accessEndpointIpAddresses;
+      private final @Nullable Input<List<IpAddressArgs>> accessEndpointIpAddresses;
 
     public Input<List<IpAddressArgs>> getAccessEndpointIpAddresses() {
         return this.accessEndpointIpAddresses == null ? Input.empty() : this.accessEndpointIpAddresses;
@@ -35,7 +35,7 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outgoingIpAddresses")
-    private final @Nullable Input<List<IpAddressArgs>> outgoingIpAddresses;
+      private final @Nullable Input<List<IpAddressArgs>> outgoingIpAddresses;
 
     public Input<List<IpAddressArgs>> getOutgoingIpAddresses() {
         return this.outgoingIpAddresses == null ? Input.empty() : this.outgoingIpAddresses;
@@ -94,7 +94,6 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
             this.outgoingIpAddresses = Input.ofNullable(outgoingIpAddresses);
             return this;
         }
-
         public FlowEndpointsArgs build() {
             return new FlowEndpointsArgs(accessEndpointIpAddresses, outgoingIpAddresses);
         }

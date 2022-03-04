@@ -6,17 +6,33 @@ package io.pulumi.awsnative.kms;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.kms.inputs.GetAliasArgs;
 import io.pulumi.awsnative.kms.outputs.GetAliasResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAlias {
-/**
- * The AWS::KMS::Alias resource specifies a display name for a customer master key (CMK) in AWS Key Management Service (AWS KMS). You can use an alias to identify a CMK in cryptographic operations.
+    private GetAlias() {}
+    public interface BuilderApplicator {
+        public void apply(GetAliasArgs.Builder a);
+    }
+    private static GetAliasArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAliasArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::KMS::Alias resource specifies a display name for a customer master key (CMK) in AWS Key Management Service (AWS KMS). You can use an alias to identify a CMK in cryptographic operations.
  * 
- */
+     */
+    public static CompletableFuture<GetAliasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::KMS::Alias resource specifies a display name for a customer master key (CMK) in AWS Key Management Service (AWS KMS). You can use an alias to identify a CMK in cryptographic operations.
+     * 
+     */
     public static CompletableFuture<GetAliasResult> invokeAsync(GetAliasArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kms:getAlias", TypeShape.of(GetAliasResult.class), args == null ? GetAliasArgs.Empty : args, Utilities.withVersion(options));
     }

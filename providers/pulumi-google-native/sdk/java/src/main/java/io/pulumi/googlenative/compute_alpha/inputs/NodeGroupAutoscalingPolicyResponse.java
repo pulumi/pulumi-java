@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxNodes", required=true)
-    private final Integer maxNodes;
+      private final Integer maxNodes;
 
     public Integer getMaxNodes() {
         return this.maxNodes;
@@ -29,7 +29,7 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="minNodes", required=true)
-    private final Integer minNodes;
+      private final Integer minNodes;
 
     public Integer getMinNodes() {
         return this.minNodes;
@@ -40,7 +40,7 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -99,7 +99,6 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public NodeGroupAutoscalingPolicyResponse build() {
             return new NodeGroupAutoscalingPolicyResponse(maxNodes, minNodes, mode);
         }

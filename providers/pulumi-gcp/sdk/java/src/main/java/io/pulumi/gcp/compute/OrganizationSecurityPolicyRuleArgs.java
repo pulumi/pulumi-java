@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -35,7 +35,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable Input<String> direction;
+      private final @Nullable Input<String> direction;
 
     public Input<String> getDirection() {
         return this.direction == null ? Input.empty() : this.direction;
@@ -60,7 +60,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableLogging")
-    private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Input<Boolean> enableLogging;
 
     public Input<Boolean> getEnableLogging() {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
@@ -72,7 +72,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="match", required=true)
-    private final Input<OrganizationSecurityPolicyRuleMatchArgs> match;
+      private final Input<OrganizationSecurityPolicyRuleMatchArgs> match;
 
     public Input<OrganizationSecurityPolicyRuleMatchArgs> getMatch() {
         return this.match;
@@ -83,7 +83,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policyId", required=true)
-    private final Input<String> policyId;
+      private final Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId;
@@ -94,7 +94,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="preview")
-    private final @Nullable Input<Boolean> preview;
+      private final @Nullable Input<Boolean> preview;
 
     public Input<Boolean> getPreview() {
         return this.preview == null ? Input.empty() : this.preview;
@@ -107,7 +107,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -121,7 +121,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetResources")
-    private final @Nullable Input<List<String>> targetResources;
+      private final @Nullable Input<List<String>> targetResources;
 
     public Input<List<String>> getTargetResources() {
         return this.targetResources == null ? Input.empty() : this.targetResources;
@@ -133,7 +133,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetServiceAccounts")
-    private final @Nullable Input<List<String>> targetServiceAccounts;
+      private final @Nullable Input<List<String>> targetServiceAccounts;
 
     public Input<List<String>> getTargetServiceAccounts() {
         return this.targetServiceAccounts == null ? Input.empty() : this.targetServiceAccounts;
@@ -312,7 +312,6 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
             this.targetServiceAccounts = Input.ofNullable(targetServiceAccounts);
             return this;
         }
-
         public OrganizationSecurityPolicyRuleArgs build() {
             return new OrganizationSecurityPolicyRuleArgs(action, description, direction, enableLogging, match, policyId, preview, priority, targetResources, targetServiceAccounts);
         }

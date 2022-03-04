@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobHiveJobQueryListGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="continueOnFailure")
-    private final @Nullable Input<Boolean> continueOnFailure;
+      private final @Nullable Input<Boolean> continueOnFailure;
 
     public Input<Boolean> getContinueOnFailure() {
         return this.continueOnFailure == null ? Input.empty() : this.continueOnFailure;
@@ -34,7 +34,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="jarFileUris")
-    private final @Nullable Input<List<String>> jarFileUris;
+      private final @Nullable Input<List<String>> jarFileUris;
 
     public Input<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
@@ -45,7 +45,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -56,7 +56,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="queryFileUri")
-    private final @Nullable Input<String> queryFileUri;
+      private final @Nullable Input<String> queryFileUri;
 
     public Input<String> getQueryFileUri() {
         return this.queryFileUri == null ? Input.empty() : this.queryFileUri;
@@ -67,7 +67,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="queryList")
-    private final @Nullable Input<WorkflowTemplateJobHiveJobQueryListGetArgs> queryList;
+      private final @Nullable Input<WorkflowTemplateJobHiveJobQueryListGetArgs> queryList;
 
     public Input<WorkflowTemplateJobHiveJobQueryListGetArgs> getQueryList() {
         return this.queryList == null ? Input.empty() : this.queryList;
@@ -78,7 +78,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scriptVariables")
-    private final @Nullable Input<Map<String,String>> scriptVariables;
+      private final @Nullable Input<Map<String,String>> scriptVariables;
 
     public Input<Map<String,String>> getScriptVariables() {
         return this.scriptVariables == null ? Input.empty() : this.scriptVariables;
@@ -197,7 +197,6 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
             this.scriptVariables = Input.ofNullable(scriptVariables);
             return this;
         }
-
         public WorkflowTemplateJobHiveJobGetArgs build() {
             return new WorkflowTemplateJobHiveJobGetArgs(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }

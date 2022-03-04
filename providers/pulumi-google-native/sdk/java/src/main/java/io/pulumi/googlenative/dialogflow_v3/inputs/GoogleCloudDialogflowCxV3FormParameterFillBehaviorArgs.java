@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EventHandlerArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs extend
      * 
      */
     @InputImport(name="initialPromptFulfillment", required=true)
-    private final Input<GoogleCloudDialogflowCxV3FulfillmentArgs> initialPromptFulfillment;
+      private final Input<GoogleCloudDialogflowCxV3FulfillmentArgs> initialPromptFulfillment;
 
     public Input<GoogleCloudDialogflowCxV3FulfillmentArgs> getInitialPromptFulfillment() {
         return this.initialPromptFulfillment;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs extend
      * 
      */
     @InputImport(name="repromptEventHandlers")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> repromptEventHandlers;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> repromptEventHandlers;
 
     public Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> getRepromptEventHandlers() {
         return this.repromptEventHandlers == null ? Input.empty() : this.repromptEventHandlers;
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs extend
             this.repromptEventHandlers = Input.ofNullable(repromptEventHandlers);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs build() {
             return new GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs(initialPromptFulfillment, repromptEventHandlers);
         }

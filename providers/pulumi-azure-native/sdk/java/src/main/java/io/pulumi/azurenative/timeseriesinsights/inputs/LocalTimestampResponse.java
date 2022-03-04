@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
 import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampResponseTimeZoneOffset;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="format")
-    private final @Nullable String format;
+      private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -35,7 +35,7 @@ public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="timeZoneOffset")
-    private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
+      private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
 
     public Optional<LocalTimestampResponseTimeZoneOffset> getTimeZoneOffset() {
         return this.timeZoneOffset == null ? Optional.empty() : Optional.ofNullable(this.timeZoneOffset);
@@ -84,7 +84,6 @@ public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs
             this.timeZoneOffset = timeZoneOffset;
             return this;
         }
-
         public LocalTimestampResponse build() {
             return new LocalTimestampResponse(format, timeZoneOffset);
         }

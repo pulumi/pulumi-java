@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineExtensionHandlerInstanceViewResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="extensionHandlers")
-    private final @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
+      private final @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
 
     public List<VirtualMachineExtensionHandlerInstanceViewResponse> getExtensionHandlers() {
         return this.extensionHandlers == null ? List.of() : this.extensionHandlers;
@@ -37,7 +37,7 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable List<InstanceViewStatusResponse> statuses;
+      private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -48,7 +48,7 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmAgentVersion")
-    private final @Nullable String vmAgentVersion;
+      private final @Nullable String vmAgentVersion;
 
     public Optional<String> getVmAgentVersion() {
         return this.vmAgentVersion == null ? Optional.empty() : Optional.ofNullable(this.vmAgentVersion);
@@ -107,7 +107,6 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
             this.vmAgentVersion = vmAgentVersion;
             return this;
         }
-
         public VirtualMachineAgentInstanceViewResponse build() {
             return new VirtualMachineAgentInstanceViewResponse(extensionHandlers, statuses, vmAgentVersion);
         }

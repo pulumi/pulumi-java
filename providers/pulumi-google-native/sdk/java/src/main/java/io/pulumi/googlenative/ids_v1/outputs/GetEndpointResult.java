@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ids_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -96,77 +96,77 @@ public final class GetEndpointResult {
     /**
      * The create time timestamp.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * User-provided description of the endpoint
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The fully qualified URL of the endpoint's ILB Forwarding Rule.
      * 
-     */
+    */
     public String getEndpointForwardingRule() {
         return this.endpointForwardingRule;
     }
     /**
      * The IP address of the IDS Endpoint's ILB.
      * 
-     */
+    */
     public String getEndpointIp() {
         return this.endpointIp;
     }
     /**
      * The labels of the endpoint.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The name of the endpoint.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The fully qualified URL of the network to which the IDS Endpoint is attached.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
     /**
      * Lowest threat severity that this endpoint will alert on.
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * Current state of the endpoint.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Whether the endpoint should report traffic logs in addition to threat logs.
      * 
-     */
+    */
     public Boolean getTrafficLogs() {
         return this.trafficLogs;
     }
     /**
      * The update time timestamp.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -265,7 +265,6 @@ public final class GetEndpointResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(createTime, description, endpointForwardingRule, endpointIp, labels, name, network, severity, state, trafficLogs, updateTime);
         }

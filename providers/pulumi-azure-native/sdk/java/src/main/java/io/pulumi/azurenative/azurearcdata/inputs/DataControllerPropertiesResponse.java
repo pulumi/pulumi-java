@@ -8,7 +8,7 @@ import io.pulumi.azurenative.azurearcdata.inputs.LogAnalyticsWorkspaceConfigResp
 import io.pulumi.azurenative.azurearcdata.inputs.OnPremisePropertyResponse;
 import io.pulumi.azurenative.azurearcdata.inputs.UploadServicePrincipalResponse;
 import io.pulumi.azurenative.azurearcdata.inputs.UploadWatermarkResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="basicLoginInformation")
-    private final @Nullable BasicLoginInformationResponse basicLoginInformation;
+      private final @Nullable BasicLoginInformationResponse basicLoginInformation;
 
     public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
         return this.basicLoginInformation == null ? Optional.empty() : Optional.ofNullable(this.basicLoginInformation);
@@ -40,7 +40,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="k8sRaw")
-    private final @Nullable Object k8sRaw;
+      private final @Nullable Object k8sRaw;
 
     public Optional<Object> getK8sRaw() {
         return this.k8sRaw == null ? Optional.empty() : Optional.ofNullable(this.k8sRaw);
@@ -51,7 +51,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastUploadedDate")
-    private final @Nullable String lastUploadedDate;
+      private final @Nullable String lastUploadedDate;
 
     public Optional<String> getLastUploadedDate() {
         return this.lastUploadedDate == null ? Optional.empty() : Optional.ofNullable(this.lastUploadedDate);
@@ -62,7 +62,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logAnalyticsWorkspaceConfig")
-    private final @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
+      private final @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
 
     public Optional<LogAnalyticsWorkspaceConfigResponse> getLogAnalyticsWorkspaceConfig() {
         return this.logAnalyticsWorkspaceConfig == null ? Optional.empty() : Optional.ofNullable(this.logAnalyticsWorkspaceConfig);
@@ -73,14 +73,14 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onPremiseProperty")
-    private final @Nullable OnPremisePropertyResponse onPremiseProperty;
+      private final @Nullable OnPremisePropertyResponse onPremiseProperty;
 
     public Optional<OnPremisePropertyResponse> getOnPremiseProperty() {
         return this.onPremiseProperty == null ? Optional.empty() : Optional.ofNullable(this.onPremiseProperty);
     }
 
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -91,7 +91,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="uploadServicePrincipal")
-    private final @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
+      private final @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
 
     public Optional<UploadServicePrincipalResponse> getUploadServicePrincipal() {
         return this.uploadServicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.uploadServicePrincipal);
@@ -102,7 +102,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="uploadWatermark")
-    private final @Nullable UploadWatermarkResponse uploadWatermark;
+      private final @Nullable UploadWatermarkResponse uploadWatermark;
 
     public Optional<UploadWatermarkResponse> getUploadWatermark() {
         return this.uploadWatermark == null ? Optional.empty() : Optional.ofNullable(this.uploadWatermark);
@@ -211,7 +211,6 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
             this.uploadWatermark = uploadWatermark;
             return this;
         }
-
         public DataControllerPropertiesResponse build() {
             return new DataControllerPropertiesResponse(basicLoginInformation, k8sRaw, lastUploadedDate, logAnalyticsWorkspaceConfig, onPremiseProperty, provisioningState, uploadServicePrincipal, uploadWatermark);
         }

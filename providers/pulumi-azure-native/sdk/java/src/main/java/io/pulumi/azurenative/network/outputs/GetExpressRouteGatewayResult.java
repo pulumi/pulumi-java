@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ExpressRouteConnectionResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration;
 import io.pulumi.azurenative.network.outputs.VirtualHubIdResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -94,70 +94,70 @@ public final class GetExpressRouteGatewayResult {
     /**
      * Configuration for auto scaling.
      * 
-     */
+    */
     public Optional<ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> getAutoScaleConfiguration() {
         return Optional.ofNullable(this.autoScaleConfiguration);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * List of ExpressRoute connections to the ExpressRoute gateway.
      * 
-     */
+    */
     public List<ExpressRouteConnectionResponse> getExpressRouteConnections() {
         return this.expressRouteConnections;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the express route gateway resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
      * 
-     */
+    */
     public VirtualHubIdResponse getVirtualHub() {
         return this.virtualHub;
     }
@@ -249,7 +249,6 @@ public final class GetExpressRouteGatewayResult {
             this.virtualHub = Objects.requireNonNull(virtualHub);
             return this;
         }
-
         public GetExpressRouteGatewayResult build() {
             return new GetExpressRouteGatewayResult(autoScaleConfiguration, etag, expressRouteConnections, id, location, name, provisioningState, tags, type, virtualHub);
         }

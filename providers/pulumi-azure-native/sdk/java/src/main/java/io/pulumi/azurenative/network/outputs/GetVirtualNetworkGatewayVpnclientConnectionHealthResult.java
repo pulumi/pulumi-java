@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VpnClientConnectionHealthDetailResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthResult {
     /**
      * List of vpn client connection health.
      * 
-     */
+    */
     public List<VpnClientConnectionHealthDetailResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -54,7 +54,6 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthResult {
             this.value = value;
             return this;
         }
-
         public GetVirtualNetworkGatewayVpnclientConnectionHealthResult build() {
             return new GetVirtualNetworkGatewayVpnclientConnectionHealthResult(value);
         }

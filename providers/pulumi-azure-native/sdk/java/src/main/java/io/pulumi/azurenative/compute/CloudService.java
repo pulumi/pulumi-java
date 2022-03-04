@@ -9,8 +9,8 @@ import io.pulumi.azurenative.compute.outputs.CloudServicePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -104,6 +104,37 @@ public class CloudService extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CloudServiceArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.compute.CloudServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.compute.CloudServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CloudService(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CloudService(String name) {
+        this(name, CloudServiceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CloudService(String name, CloudServiceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

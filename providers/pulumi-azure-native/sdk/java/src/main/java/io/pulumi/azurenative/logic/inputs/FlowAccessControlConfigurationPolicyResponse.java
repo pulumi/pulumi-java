@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IpAddressRangeResponse;
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPoliciesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class FlowAccessControlConfigurationPolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="allowedCallerIpAddresses")
-    private final @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses;
+      private final @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses;
 
     public List<IpAddressRangeResponse> getAllowedCallerIpAddresses() {
         return this.allowedCallerIpAddresses == null ? List.of() : this.allowedCallerIpAddresses;
@@ -36,7 +36,7 @@ public final class FlowAccessControlConfigurationPolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="openAuthenticationPolicies")
-    private final @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
+      private final @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
 
     public Optional<OpenAuthenticationAccessPoliciesResponse> getOpenAuthenticationPolicies() {
         return this.openAuthenticationPolicies == null ? Optional.empty() : Optional.ofNullable(this.openAuthenticationPolicies);
@@ -85,7 +85,6 @@ public final class FlowAccessControlConfigurationPolicyResponse extends io.pulum
             this.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
         }
-
         public FlowAccessControlConfigurationPolicyResponse build() {
             return new FlowAccessControlConfigurationPolicyResponse(allowedCallerIpAddresses, openAuthenticationPolicies);
         }

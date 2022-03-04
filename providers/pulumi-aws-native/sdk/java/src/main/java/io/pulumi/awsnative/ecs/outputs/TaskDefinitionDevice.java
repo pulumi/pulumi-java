@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class TaskDefinitionDevice {
             this.permissions = permissions;
             return this;
         }
-
         public TaskDefinitionDevice build() {
             return new TaskDefinitionDevice(containerPath, hostPath, permissions);
         }

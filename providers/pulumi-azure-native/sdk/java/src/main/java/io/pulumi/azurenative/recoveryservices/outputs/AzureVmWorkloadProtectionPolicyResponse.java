@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.SettingsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SubProtectionPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -68,42 +68,42 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'AzureWorkload'.
      * 
-     */
+    */
     public String getBackupManagementType() {
         return this.backupManagementType;
     }
     /**
      * Fix the policy inconsistency
      * 
-     */
+    */
     public Optional<Boolean> getMakePolicyConsistent() {
         return Optional.ofNullable(this.makePolicyConsistent);
     }
     /**
      * Number of items associated with this policy.
      * 
-     */
+    */
     public Optional<Integer> getProtectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
      * Common settings for the backup management
      * 
-     */
+    */
     public Optional<SettingsResponse> getSettings() {
         return Optional.ofNullable(this.settings);
     }
     /**
      * List of sub-protection policies which includes schedule and retention
      * 
-     */
+    */
     public List<SubProtectionPolicyResponse> getSubProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
     /**
      * Type of workload for the backup management
      * 
-     */
+    */
     public Optional<String> getWorkLoadType() {
         return Optional.ofNullable(this.workLoadType);
     }
@@ -167,7 +167,6 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
             this.workLoadType = workLoadType;
             return this;
         }
-
         public AzureVmWorkloadProtectionPolicyResponse build() {
             return new AzureVmWorkloadProtectionPolicyResponse(backupManagementType, makePolicyConsistent, protectedItemsCount, settings, subProtectionPolicy, workLoadType);
         }

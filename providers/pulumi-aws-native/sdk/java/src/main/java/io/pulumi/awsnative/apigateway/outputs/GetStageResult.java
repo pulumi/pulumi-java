@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.outputs.StageAccessLogSetting;
 import io.pulumi.awsnative.apigateway.outputs.StageCanarySetting;
 import io.pulumi.awsnative.apigateway.outputs.StageMethodSetting;
 import io.pulumi.awsnative.apigateway.outputs.StageTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -110,84 +110,84 @@ public final class GetStageResult {
     /**
      * Specifies settings for logging access in this stage.
      * 
-     */
+    */
     public Optional<StageAccessLogSetting> getAccessLogSetting() {
         return Optional.ofNullable(this.accessLogSetting);
     }
     /**
      * Indicates whether cache clustering is enabled for the stage.
      * 
-     */
+    */
     public Optional<Boolean> getCacheClusterEnabled() {
         return Optional.ofNullable(this.cacheClusterEnabled);
     }
     /**
      * The stage's cache cluster size.
      * 
-     */
+    */
     public Optional<String> getCacheClusterSize() {
         return Optional.ofNullable(this.cacheClusterSize);
     }
     /**
      * Specifies settings for the canary deployment in this stage.
      * 
-     */
+    */
     public Optional<StageCanarySetting> getCanarySetting() {
         return Optional.ofNullable(this.canarySetting);
     }
     /**
      * The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
      * 
-     */
+    */
     public Optional<String> getClientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
     /**
      * The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
      * 
-     */
+    */
     public Optional<String> getDeploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
     /**
      * A description of the stage.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The version ID of the API documentation snapshot.
      * 
-     */
+    */
     public Optional<String> getDocumentationVersion() {
         return Optional.ofNullable(this.documentationVersion);
     }
     /**
      * Settings for all methods in the stage.
      * 
-     */
+    */
     public List<StageMethodSetting> getMethodSettings() {
         return this.methodSettings == null ? List.of() : this.methodSettings;
     }
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the stage.
      * 
-     */
+    */
     public List<StageTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Specifies whether active X-Ray tracing is enabled for this stage.
      * 
-     */
+    */
     public Optional<Boolean> getTracingEnabled() {
         return Optional.ofNullable(this.tracingEnabled);
     }
     /**
      * A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
      * 
-     */
+    */
     public Optional<Object> getVariables() {
         return Optional.ofNullable(this.variables);
     }
@@ -293,7 +293,6 @@ public final class GetStageResult {
             this.variables = variables;
             return this;
         }
-
         public GetStageResult build() {
             return new GetStageResult(accessLogSetting, cacheClusterEnabled, cacheClusterSize, canarySetting, clientCertificateId, deploymentId, description, documentationVersion, methodSettings, tags, tracingEnabled, variables);
         }

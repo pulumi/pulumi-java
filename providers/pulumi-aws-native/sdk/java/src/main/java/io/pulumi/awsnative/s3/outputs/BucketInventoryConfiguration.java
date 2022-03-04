@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationIncludedObjectVe
 import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationOptionalFieldsItem;
 import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationScheduleFrequency;
 import io.pulumi.awsnative.s3.outputs.BucketDestination;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -73,42 +73,42 @@ public final class BucketInventoryConfiguration {
     /**
      * Specifies whether the inventory is enabled or disabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The ID used to identify the inventory configuration.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Object versions to include in the inventory list.
      * 
-     */
+    */
     public BucketInventoryConfigurationIncludedObjectVersions getIncludedObjectVersions() {
         return this.includedObjectVersions;
     }
     /**
      * Contains the optional fields that are included in the inventory results.
      * 
-     */
+    */
     public List<BucketInventoryConfigurationOptionalFieldsItem> getOptionalFields() {
         return this.optionalFields == null ? List.of() : this.optionalFields;
     }
     /**
      * The prefix that is prepended to all inventory results.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * Specifies the schedule for generating inventory results.
      * 
-     */
+    */
     public BucketInventoryConfigurationScheduleFrequency getScheduleFrequency() {
         return this.scheduleFrequency;
     }
@@ -179,7 +179,6 @@ public final class BucketInventoryConfiguration {
             this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency);
             return this;
         }
-
         public BucketInventoryConfiguration build() {
             return new BucketInventoryConfiguration(destination, enabled, id, includedObjectVersions, optionalFields, prefix, scheduleFrequency);
         }

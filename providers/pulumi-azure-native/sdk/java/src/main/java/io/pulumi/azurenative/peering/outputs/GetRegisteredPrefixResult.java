@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,56 +75,56 @@ public final class GetRegisteredPrefixResult {
     /**
      * The error message associated with the validation state, if any.
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * The ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The peering service prefix key that is to be shared with the customer.
      * 
-     */
+    */
     public String getPeeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
     /**
      * The customer's prefix from which traffic originates.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The prefix validation state.
      * 
-     */
+    */
     public String getPrefixValidationState() {
         return this.prefixValidationState;
     }
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -202,7 +202,6 @@ public final class GetRegisteredPrefixResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegisteredPrefixResult build() {
             return new GetRegisteredPrefixResult(errorMessage, id, name, peeringServicePrefixKey, prefix, prefixValidationState, provisioningState, type);
         }

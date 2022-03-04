@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultConfigurationLink")
-    private final @Nullable Input<String> defaultConfigurationLink;
+      private final @Nullable Input<String> defaultConfigurationLink;
 
     public Input<String> getDefaultConfigurationLink() {
         return this.defaultConfigurationLink == null ? Input.empty() : this.defaultConfigurationLink;
@@ -34,7 +34,7 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="mediaLink", required=true)
-    private final Input<String> mediaLink;
+      private final Input<String> mediaLink;
 
     public Input<String> getMediaLink() {
         return this.mediaLink;
@@ -93,7 +93,6 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
             this.mediaLink = Input.of(Objects.requireNonNull(mediaLink));
             return this;
         }
-
         public UserArtifactSourceArgs build() {
             return new UserArtifactSourceArgs(defaultConfigurationLink, mediaLink);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.myedgeorder.outputs.AvailabilityInformationResponse;
 import io.pulumi.myedgeorder.outputs.CostInformationResponse;
 import io.pulumi.myedgeorder.outputs.DescriptionResponse;
@@ -81,56 +81,56 @@ public final class ProductFamilyResponse {
     /**
      * Availability information of the product system.
      * 
-     */
+    */
     public AvailabilityInformationResponse getAvailabilityInformation() {
         return this.availabilityInformation;
     }
     /**
      * Cost information for the product system.
      * 
-     */
+    */
     public CostInformationResponse getCostInformation() {
         return this.costInformation;
     }
     /**
      * Description related to the product system.
      * 
-     */
+    */
     public DescriptionResponse getDescription() {
         return this.description;
     }
     /**
      * Display Name for the product system.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * list of filters supported for a product
      * 
-     */
+    */
     public List<FilterablePropertyResponse> getFilterableProperties() {
         return this.filterableProperties;
     }
     /**
      * Hierarchy information of a product.
      * 
-     */
+    */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Image information for the product system.
      * 
-     */
+    */
     public List<ImageInformationResponse> getImageInformation() {
         return this.imageInformation;
     }
     /**
      * List of product lines supported in the product family
      * 
-     */
+    */
     public List<ProductLineResponse> getProductLines() {
         return this.productLines;
     }
@@ -208,7 +208,6 @@ public final class ProductFamilyResponse {
             this.productLines = Objects.requireNonNull(productLines);
             return this;
         }
-
         public ProductFamilyResponse build() {
             return new ProductFamilyResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, productLines);
         }

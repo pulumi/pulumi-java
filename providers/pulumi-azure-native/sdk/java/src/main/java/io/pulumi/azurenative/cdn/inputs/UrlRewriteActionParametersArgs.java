@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,14 +24,14 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<String> destination;
+      private final Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination;
     }
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -42,7 +42,7 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="preserveUnmatchedPath")
-    private final @Nullable Input<Boolean> preserveUnmatchedPath;
+      private final @Nullable Input<Boolean> preserveUnmatchedPath;
 
     public Input<Boolean> getPreserveUnmatchedPath() {
         return this.preserveUnmatchedPath == null ? Input.empty() : this.preserveUnmatchedPath;
@@ -53,7 +53,7 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sourcePattern", required=true)
-    private final Input<String> sourcePattern;
+      private final Input<String> sourcePattern;
 
     public Input<String> getSourcePattern() {
         return this.sourcePattern;
@@ -142,7 +142,6 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
             this.sourcePattern = Input.of(Objects.requireNonNull(sourcePattern));
             return this;
         }
-
         public UrlRewriteActionParametersArgs build() {
             return new UrlRewriteActionParametersArgs(destination, odataType, preserveUnmatchedPath, sourcePattern);
         }

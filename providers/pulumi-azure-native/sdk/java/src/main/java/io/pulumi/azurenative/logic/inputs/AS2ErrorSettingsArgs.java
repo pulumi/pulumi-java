@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resendIfMDNNotReceived", required=true)
-    private final Input<Boolean> resendIfMDNNotReceived;
+      private final Input<Boolean> resendIfMDNNotReceived;
 
     public Input<Boolean> getResendIfMDNNotReceived() {
         return this.resendIfMDNNotReceived;
@@ -33,7 +33,7 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="suspendDuplicateMessage", required=true)
-    private final Input<Boolean> suspendDuplicateMessage;
+      private final Input<Boolean> suspendDuplicateMessage;
 
     public Input<Boolean> getSuspendDuplicateMessage() {
         return this.suspendDuplicateMessage;
@@ -92,7 +92,6 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.suspendDuplicateMessage = Input.of(Objects.requireNonNull(suspendDuplicateMessage));
             return this;
         }
-
         public AS2ErrorSettingsArgs build() {
             return new AS2ErrorSettingsArgs(resendIfMDNNotReceived, suspendDuplicateMessage);
         }

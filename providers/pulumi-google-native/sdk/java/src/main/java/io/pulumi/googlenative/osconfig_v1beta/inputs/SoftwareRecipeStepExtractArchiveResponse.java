@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final String artifactId;
+      private final String artifactId;
 
     public String getArtifactId() {
         return this.artifactId;
@@ -32,7 +32,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="destination", required=true)
-    private final String destination;
+      private final String destination;
 
     public String getDestination() {
         return this.destination;
@@ -43,7 +43,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,6 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SoftwareRecipeStepExtractArchiveResponse build() {
             return new SoftwareRecipeStepExtractArchiveResponse(artifactId, destination, type);
         }

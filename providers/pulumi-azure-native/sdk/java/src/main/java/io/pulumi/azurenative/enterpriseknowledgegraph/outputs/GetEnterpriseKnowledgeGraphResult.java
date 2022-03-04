@@ -5,7 +5,7 @@ package io.pulumi.azurenative.enterpriseknowledgegraph.outputs;
 
 import io.pulumi.azurenative.enterpriseknowledgegraph.outputs.EnterpriseKnowledgeGraphPropertiesResponse;
 import io.pulumi.azurenative.enterpriseknowledgegraph.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class GetEnterpriseKnowledgeGraphResult {
     /**
      * Specifies the resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The set of properties specific to EnterpriseKnowledgeGraph resource
      * 
-     */
+    */
     public EnterpriseKnowledgeGraphPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Gets or sets the SKU of the resource.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class GetEnterpriseKnowledgeGraphResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEnterpriseKnowledgeGraphResult build() {
             return new GetEnterpriseKnowledgeGraphResult(id, location, name, properties, sku, tags, type);
         }

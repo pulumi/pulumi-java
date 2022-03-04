@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.AzureQueryPropertiesResponse;
 import io.pulumi.azurenative.automation.outputs.NonAzureQueryPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class TargetPropertiesResponse {
     /**
      * List of Azure queries in the software update configuration.
      * 
-     */
+    */
     public List<AzureQueryPropertiesResponse> getAzureQueries() {
         return this.azureQueries == null ? List.of() : this.azureQueries;
     }
     /**
      * List of non Azure queries in the software update configuration.
      * 
-     */
+    */
     public List<NonAzureQueryPropertiesResponse> getNonAzureQueries() {
         return this.nonAzureQueries == null ? List.of() : this.nonAzureQueries;
     }
@@ -77,7 +77,6 @@ public final class TargetPropertiesResponse {
             this.nonAzureQueries = nonAzureQueries;
             return this;
         }
-
         public TargetPropertiesResponse build() {
             return new TargetPropertiesResponse(azureQueries, nonAzureQueries);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GitFileSourceResponse {
     /**
      * The path of the file, with the repo root as the root of the path.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * See RepoType above.
      * 
-     */
+    */
     public String getRepoType() {
         return this.repoType;
     }
     /**
      * The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
      * 
-     */
+    */
     public String getRevision() {
         return this.revision;
     }
     /**
      * The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -116,7 +116,6 @@ public final class GitFileSourceResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GitFileSourceResponse build() {
             return new GitFileSourceResponse(path, repoType, revision, uri);
         }

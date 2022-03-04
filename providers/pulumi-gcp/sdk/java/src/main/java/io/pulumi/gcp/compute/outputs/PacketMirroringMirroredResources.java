@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.PacketMirroringMirroredResourcesInstance;
 import io.pulumi.gcp.compute.outputs.PacketMirroringMirroredResourcesSubnetwork;
 import java.lang.String;
@@ -45,7 +45,7 @@ public final class PacketMirroringMirroredResources {
      * All the listed instances will be mirrored.  Specify at most 50.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PacketMirroringMirroredResourcesInstance> getInstances() {
         return this.instances == null ? List.of() : this.instances;
     }
@@ -53,14 +53,14 @@ public final class PacketMirroringMirroredResources {
      * All instances in one of these subnetworks will be mirrored.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PacketMirroringMirroredResourcesSubnetwork> getSubnetworks() {
         return this.subnetworks == null ? List.of() : this.subnetworks;
     }
     /**
      * All instances with these tags will be mirrored.
      * 
-     */
+    */
     public List<String> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -103,7 +103,6 @@ public final class PacketMirroringMirroredResources {
             this.tags = tags;
             return this;
         }
-
         public PacketMirroringMirroredResources build() {
             return new PacketMirroringMirroredResources(instances, subnetworks, tags);
         }

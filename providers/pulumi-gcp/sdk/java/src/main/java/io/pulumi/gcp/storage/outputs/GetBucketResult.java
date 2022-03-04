@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.GetBucketCor;
 import io.pulumi.gcp.storage.outputs.GetBucketEncryption;
 import io.pulumi.gcp.storage.outputs.GetBucketLifecycleRule;
@@ -103,7 +103,7 @@ public final class GetBucketResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -310,7 +310,6 @@ public final class GetBucketResult {
             this.websites = Objects.requireNonNull(websites);
             return this;
         }
-
         public GetBucketResult build() {
             return new GetBucketResult(cors, defaultEventBasedHold, encryptions, forceDestroy, id, labels, lifecycleRules, location, loggings, name, project, publicAccessPrevention, requesterPays, retentionPolicies, selfLink, storageClass, uniformBucketLevelAccess, url, versionings, websites);
         }

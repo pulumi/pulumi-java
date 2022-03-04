@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
     /**
      * Last status code for sync and refresh of secret from key vault.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Details of the error else empty.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-     */
+    */
     public Optional<String> getTimeStampUtc() {
         return Optional.ofNullable(this.timeStampUtc);
     }
@@ -97,7 +97,6 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
             this.timeStampUtc = timeStampUtc;
             return this;
         }
-
         public KeyVaultLastAccessStatusContractPropertiesResponse build() {
             return new KeyVaultLastAccessStatusContractPropertiesResponse(code, message, timeStampUtc);
         }

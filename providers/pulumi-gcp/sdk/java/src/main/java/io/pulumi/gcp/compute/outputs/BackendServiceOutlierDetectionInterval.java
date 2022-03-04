@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,7 +38,7 @@ public final class BackendServiceOutlierDetectionInterval {
      * less than one second are represented with a 0 `seconds` field and a positive
      * `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 
-     */
+    */
     public Optional<Integer> getNanos() {
         return Optional.ofNullable(this.nanos);
     }
@@ -46,7 +46,7 @@ public final class BackendServiceOutlierDetectionInterval {
      * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
      * inclusive.
      * 
-     */
+    */
     public Integer getSeconds() {
         return this.seconds;
     }
@@ -82,7 +82,6 @@ public final class BackendServiceOutlierDetectionInterval {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public BackendServiceOutlierDetectionInterval build() {
             return new BackendServiceOutlierDetectionInterval(nanos, seconds);
         }

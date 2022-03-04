@@ -11,8 +11,8 @@ import io.pulumi.azurenative.digitaltwins.outputs.ServiceBusResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -78,6 +78,37 @@ public class DigitalTwinsEndpoint extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DigitalTwinsEndpointArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.digitaltwins.DigitalTwinsEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.digitaltwins.DigitalTwinsEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DigitalTwinsEndpoint(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DigitalTwinsEndpoint(String name) {
+        this(name, DigitalTwinsEndpointArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DigitalTwinsEndpoint(String name, DigitalTwinsEndpointArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

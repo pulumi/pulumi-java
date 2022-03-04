@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
      * 
      */
     @InputImport(name="servicePrincipalSecretMetadata")
-    private final @Nullable Input<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;
+      private final @Nullable Input<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;
 
     public Input<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> getServicePrincipalSecretMetadata() {
         return this.servicePrincipalSecretMetadata == null ? Input.empty() : this.servicePrincipalSecretMetadata;
@@ -94,7 +94,6 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
             this.servicePrincipalSecretMetadata = Input.ofNullable(servicePrincipalSecretMetadata);
             return this;
         }
-
         public DefenderForServersAwsOfferingArcAutoProvisioningArgs build() {
             return new DefenderForServersAwsOfferingArcAutoProvisioningArgs(enabled, servicePrincipalSecretMetadata);
         }

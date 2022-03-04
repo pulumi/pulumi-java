@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.InlineSecretResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.SecretManagerSecretResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inline", required=true)
-    private final List<InlineSecretResponse> inline;
+      private final List<InlineSecretResponse> inline;
 
     public List<InlineSecretResponse> getInline() {
         return this.inline;
@@ -34,7 +34,7 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretManager", required=true)
-    private final List<SecretManagerSecretResponse> secretManager;
+      private final List<SecretManagerSecretResponse> secretManager;
 
     public List<SecretManagerSecretResponse> getSecretManager() {
         return this.secretManager;
@@ -83,7 +83,6 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
             this.secretManager = Objects.requireNonNull(secretManager);
             return this;
         }
-
         public SecretsResponse build() {
             return new SecretsResponse(inline, secretManager);
         }

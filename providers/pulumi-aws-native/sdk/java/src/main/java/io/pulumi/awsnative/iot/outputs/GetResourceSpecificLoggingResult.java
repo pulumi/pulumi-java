@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingLogLevel;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class GetResourceSpecificLoggingResult {
     /**
      * The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
-     */
+    */
     public Optional<ResourceSpecificLoggingLogLevel> getLogLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
      * Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
      * 
-     */
+    */
     public Optional<String> getTargetId() {
         return Optional.ofNullable(this.targetId);
     }
@@ -77,7 +77,6 @@ public final class GetResourceSpecificLoggingResult {
             this.targetId = targetId;
             return this;
         }
-
         public GetResourceSpecificLoggingResult build() {
             return new GetResourceSpecificLoggingResult(logLevel, targetId);
         }

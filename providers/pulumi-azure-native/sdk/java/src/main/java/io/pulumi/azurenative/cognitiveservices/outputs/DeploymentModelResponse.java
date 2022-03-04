@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class DeploymentModelResponse {
     /**
      * Deployment model format.
      * 
-     */
+    */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Deployment model name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Deployment model version.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -97,7 +97,6 @@ public final class DeploymentModelResponse {
             this.version = version;
             return this;
         }
-
         public DeploymentModelResponse build() {
             return new DeploymentModelResponse(format, name, version);
         }

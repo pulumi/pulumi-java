@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LabelClassResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -35,7 +35,7 @@ public final class LabelClassResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subclasses")
-    private final @Nullable Map<String,LabelClassResponse> subclasses;
+      private final @Nullable Map<String,LabelClassResponse> subclasses;
 
     public Map<String,LabelClassResponse> getSubclasses() {
         return this.subclasses == null ? Map.of() : this.subclasses;
@@ -84,7 +84,6 @@ public final class LabelClassResponse extends io.pulumi.resources.InvokeArgs {
             this.subclasses = subclasses;
             return this;
         }
-
         public LabelClassResponse build() {
             return new LabelClassResponse(displayName, subclasses);
         }

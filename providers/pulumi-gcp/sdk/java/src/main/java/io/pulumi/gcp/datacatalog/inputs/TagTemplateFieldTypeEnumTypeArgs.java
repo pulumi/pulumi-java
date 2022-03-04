@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TagTemplateFieldTypeEnumTypeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowedValues", required=true)
-    private final Input<List<TagTemplateFieldTypeEnumTypeAllowedValueArgs>> allowedValues;
+      private final Input<List<TagTemplateFieldTypeEnumTypeAllowedValueArgs>> allowedValues;
 
     public Input<List<TagTemplateFieldTypeEnumTypeAllowedValueArgs>> getAllowedValues() {
         return this.allowedValues;
@@ -67,7 +67,6 @@ public final class TagTemplateFieldTypeEnumTypeArgs extends io.pulumi.resources.
             this.allowedValues = Input.of(Objects.requireNonNull(allowedValues));
             return this;
         }
-
         public TagTemplateFieldTypeEnumTypeArgs build() {
             return new TagTemplateFieldTypeEnumTypeArgs(allowedValues);
         }

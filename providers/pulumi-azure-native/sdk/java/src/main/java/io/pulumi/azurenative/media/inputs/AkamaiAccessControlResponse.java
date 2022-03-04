@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.AkamaiSignatureHeaderAuthenticationKeyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AkamaiAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="akamaiSignatureHeaderAuthenticationKeyList")
-    private final @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList;
+      private final @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList;
 
     public List<AkamaiSignatureHeaderAuthenticationKeyResponse> getAkamaiSignatureHeaderAuthenticationKeyList() {
         return this.akamaiSignatureHeaderAuthenticationKeyList == null ? List.of() : this.akamaiSignatureHeaderAuthenticationKeyList;
@@ -62,7 +62,6 @@ public final class AkamaiAccessControlResponse extends io.pulumi.resources.Invok
             this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
             return this;
         }
-
         public AkamaiAccessControlResponse build() {
             return new AkamaiAccessControlResponse(akamaiSignatureHeaderAuthenticationKeyList);
         }

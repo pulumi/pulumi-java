@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class NsRecordResponse {
     /**
      * The name server name for this NS record.
      * 
-     */
+    */
     public Optional<String> getNsdname() {
         return Optional.ofNullable(this.nsdname);
     }
@@ -54,7 +54,6 @@ public final class NsRecordResponse {
             this.nsdname = nsdname;
             return this;
         }
-
         public NsRecordResponse build() {
             return new NsRecordResponse(nsdname);
         }

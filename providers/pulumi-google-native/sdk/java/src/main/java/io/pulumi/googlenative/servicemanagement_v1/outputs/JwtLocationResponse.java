@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class JwtLocationResponse {
     /**
      * Specifies HTTP header name to extract JWT token.
      * 
-     */
+    */
     public String getHeader() {
         return this.header;
     }
     /**
      * Specifies URL query parameter name to extract JWT token.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
     /**
      * The value prefix. The value format is "value_prefix{token}" Only applies to "in" header type. Must be empty for "in" query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer " with a space at the end.
      * 
-     */
+    */
     public String getValuePrefix() {
         return this.valuePrefix;
     }
@@ -95,7 +95,6 @@ public final class JwtLocationResponse {
             this.valuePrefix = Objects.requireNonNull(valuePrefix);
             return this;
         }
-
         public JwtLocationResponse build() {
             return new JwtLocationResponse(header, query, valuePrefix);
         }

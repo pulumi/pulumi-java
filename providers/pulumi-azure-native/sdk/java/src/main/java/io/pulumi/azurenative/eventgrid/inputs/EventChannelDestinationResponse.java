@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="azureSubscriptionId")
-    private final @Nullable String azureSubscriptionId;
+      private final @Nullable String azureSubscriptionId;
 
     public Optional<String> getAzureSubscriptionId() {
         return this.azureSubscriptionId == null ? Optional.empty() : Optional.ofNullable(this.azureSubscriptionId);
@@ -35,7 +35,7 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="partnerTopicName")
-    private final @Nullable String partnerTopicName;
+      private final @Nullable String partnerTopicName;
 
     public Optional<String> getPartnerTopicName() {
         return this.partnerTopicName == null ? Optional.empty() : Optional.ofNullable(this.partnerTopicName);
@@ -47,7 +47,7 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable String resourceGroup;
+      private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
@@ -106,7 +106,6 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public EventChannelDestinationResponse build() {
             return new EventChannelDestinationResponse(azureSubscriptionId, partnerTopicName, resourceGroup);
         }

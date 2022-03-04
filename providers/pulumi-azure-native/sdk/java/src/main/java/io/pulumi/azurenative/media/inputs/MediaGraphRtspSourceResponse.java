@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.MediaGraphClearEndpointResponse;
 import io.pulumi.azurenative.media.inputs.MediaGraphTlsEndpointResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
+      private final Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
 
     public Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> getEndpoint() {
         return this.endpoint;
@@ -35,7 +35,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -58,7 +58,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="transport", required=true)
-    private final String transport;
+      private final String transport;
 
     public String getTransport() {
         return this.transport;
@@ -127,7 +127,6 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
             this.transport = Objects.requireNonNull(transport);
             return this;
         }
-
         public MediaGraphRtspSourceResponse build() {
             return new MediaGraphRtspSourceResponse(endpoint, name, odataType, transport);
         }

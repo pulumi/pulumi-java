@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleRunPlaybookAc
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleTriggeringLogicArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions;
+      private final Input<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions;
 
     public Input<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> getActions() {
         return this.actions;
@@ -36,7 +36,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationRuleId")
-    private final @Nullable Input<String> automationRuleId;
+      private final @Nullable Input<String> automationRuleId;
 
     public Input<String> getAutomationRuleId() {
         return this.automationRuleId == null ? Input.empty() : this.automationRuleId;
@@ -47,7 +47,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -58,7 +58,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+      private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -69,7 +69,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="order", required=true)
-    private final Input<Integer> order;
+      private final Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order;
@@ -80,7 +80,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggeringLogic", required=true)
-    private final Input<AutomationRuleTriggeringLogicArgs> triggeringLogic;
+      private final Input<AutomationRuleTriggeringLogicArgs> triggeringLogic;
 
     public Input<AutomationRuleTriggeringLogicArgs> getTriggeringLogic() {
         return this.triggeringLogic;
@@ -102,7 +102,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -251,7 +251,6 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public AutomationRuleArgs build() {
             return new AutomationRuleArgs(actions, automationRuleId, displayName, operationalInsightsResourceProvider, order, resourceGroupName, triggeringLogic, workspaceName);
         }

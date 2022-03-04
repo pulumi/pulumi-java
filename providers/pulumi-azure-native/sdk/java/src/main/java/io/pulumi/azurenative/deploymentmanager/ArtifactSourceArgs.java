@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.SasAuthenticationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactRoot")
-    private final @Nullable Input<String> artifactRoot;
+      private final @Nullable Input<String> artifactRoot;
 
     public Input<String> getArtifactRoot() {
         return this.artifactRoot == null ? Input.empty() : this.artifactRoot;
@@ -32,7 +32,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactSourceName")
-    private final @Nullable Input<String> artifactSourceName;
+      private final @Nullable Input<String> artifactSourceName;
 
     public Input<String> getArtifactSourceName() {
         return this.artifactSourceName == null ? Input.empty() : this.artifactSourceName;
@@ -43,7 +43,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-    private final Input<SasAuthenticationArgs> authentication;
+      private final Input<SasAuthenticationArgs> authentication;
 
     public Input<SasAuthenticationArgs> getAuthentication() {
         return this.authentication;
@@ -54,7 +54,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -65,7 +65,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceType", required=true)
-    private final Input<String> sourceType;
+      private final Input<String> sourceType;
 
     public Input<String> getSourceType() {
         return this.sourceType;
@@ -87,7 +87,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -221,7 +221,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ArtifactSourceArgs build() {
             return new ArtifactSourceArgs(artifactRoot, artifactSourceName, authentication, location, resourceGroupName, sourceType, tags);
         }

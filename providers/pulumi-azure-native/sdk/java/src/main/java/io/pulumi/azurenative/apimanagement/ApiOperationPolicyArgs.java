@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.PolicyContentFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -32,7 +32,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<Either<String,PolicyContentFormat>> format;
+      private final @Nullable Input<Either<String,PolicyContentFormat>> format;
 
     public Input<Either<String,PolicyContentFormat>> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -43,7 +43,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="operationId", required=true)
-    private final Input<String> operationId;
+      private final Input<String> operationId;
 
     public Input<String> getOperationId() {
         return this.operationId;
@@ -54,7 +54,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable Input<String> policyId;
+      private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -65,7 +65,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -87,7 +87,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -221,7 +221,6 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public ApiOperationPolicyArgs build() {
             return new ApiOperationPolicyArgs(apiId, format, operationId, policyId, resourceGroupName, serviceName, value);
         }

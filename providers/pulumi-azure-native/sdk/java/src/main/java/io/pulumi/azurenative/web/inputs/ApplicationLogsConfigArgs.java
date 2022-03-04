@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.AzureBlobStorageApplicationLogsConfigArg
 import io.pulumi.azurenative.web.inputs.AzureTableStorageApplicationLogsConfigArgs;
 import io.pulumi.azurenative.web.inputs.FileSystemApplicationLogsConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="azureBlobStorage")
-    private final @Nullable Input<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage;
+      private final @Nullable Input<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage;
 
     public Input<AzureBlobStorageApplicationLogsConfigArgs> getAzureBlobStorage() {
         return this.azureBlobStorage == null ? Input.empty() : this.azureBlobStorage;
@@ -36,7 +36,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="azureTableStorage")
-    private final @Nullable Input<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage;
+      private final @Nullable Input<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage;
 
     public Input<AzureTableStorageApplicationLogsConfigArgs> getAzureTableStorage() {
         return this.azureTableStorage == null ? Input.empty() : this.azureTableStorage;
@@ -47,7 +47,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fileSystem")
-    private final @Nullable Input<FileSystemApplicationLogsConfigArgs> fileSystem;
+      private final @Nullable Input<FileSystemApplicationLogsConfigArgs> fileSystem;
 
     public Input<FileSystemApplicationLogsConfigArgs> getFileSystem() {
         return this.fileSystem == null ? Input.empty() : this.fileSystem;
@@ -121,7 +121,6 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
             this.fileSystem = Input.ofNullable(fileSystem);
             return this;
         }
-
         public ApplicationLogsConfigArgs build() {
             return new ApplicationLogsConfigArgs(azureBlobStorage, azureTableStorage, fileSystem);
         }

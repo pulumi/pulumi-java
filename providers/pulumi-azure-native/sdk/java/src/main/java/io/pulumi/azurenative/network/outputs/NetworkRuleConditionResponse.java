@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -84,42 +84,42 @@ public final class NetworkRuleConditionResponse {
     /**
      * Description of the rule condition.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or Service Tags.
      * 
-     */
+    */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of destination IpGroups for this rule.
      * 
-     */
+    */
     public List<String> getDestinationIpGroups() {
         return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
     }
     /**
      * List of destination ports.
      * 
-     */
+    */
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Array of FirewallPolicyRuleConditionNetworkProtocols.
      * 
-     */
+    */
     public List<String> getIpProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }
     /**
      * Name of the rule condition.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -127,21 +127,21 @@ public final class NetworkRuleConditionResponse {
      * Rule Condition Type.
      * Expected value is 'NetworkRuleCondition'.
      * 
-     */
+    */
     public String getRuleConditionType() {
         return this.ruleConditionType;
     }
     /**
      * List of source IP addresses for this rule.
      * 
-     */
+    */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
      * 
-     */
+    */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
@@ -226,7 +226,6 @@ public final class NetworkRuleConditionResponse {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public NetworkRuleConditionResponse build() {
             return new NetworkRuleConditionResponse(description, destinationAddresses, destinationIpGroups, destinationPorts, ipProtocols, name, ruleConditionType, sourceAddresses, sourceIpGroups);
         }

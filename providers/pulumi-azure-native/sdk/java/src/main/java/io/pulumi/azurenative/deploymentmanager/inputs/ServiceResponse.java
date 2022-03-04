@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.ServiceUnitResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -36,7 +36,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceUnits")
-    private final @Nullable List<ServiceUnitResponse> serviceUnits;
+      private final @Nullable List<ServiceUnitResponse> serviceUnits;
 
     public List<ServiceUnitResponse> getServiceUnits() {
         return this.serviceUnits == null ? List.of() : this.serviceUnits;
@@ -47,7 +47,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetLocation", required=true)
-    private final String targetLocation;
+      private final String targetLocation;
 
     public String getTargetLocation() {
         return this.targetLocation;
@@ -58,7 +58,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetSubscriptionId", required=true)
-    private final String targetSubscriptionId;
+      private final String targetSubscriptionId;
 
     public String getTargetSubscriptionId() {
         return this.targetSubscriptionId;
@@ -127,7 +127,6 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
             this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
             return this;
         }
-
         public ServiceResponse build() {
             return new ServiceResponse(name, serviceUnits, targetLocation, targetSubscriptionId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class PrivateLinkServiceConnectionStateResponse {
     /**
      * A message indicating if changes on the service provider require any updates on the consumer.
      * 
-     */
+    */
     public Optional<String> getActionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
      * The reason for approval/rejection of the connection.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -97,7 +97,6 @@ public final class PrivateLinkServiceConnectionStateResponse {
             this.status = status;
             return this;
         }
-
         public PrivateLinkServiceConnectionStateResponse build() {
             return new PrivateLinkServiceConnectionStateResponse(actionsRequired, description, status);
         }

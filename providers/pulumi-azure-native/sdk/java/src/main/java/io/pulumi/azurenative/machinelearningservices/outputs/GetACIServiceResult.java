@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.AKSVariantResponseR
 import io.pulumi.azurenative.machinelearningservices.outputs.IdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SkuResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -90,63 +90,63 @@ public final class GetACIServiceResult {
     /**
      * Specifies the resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the resource.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Service properties
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * The sku of the workspace.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -231,7 +231,6 @@ public final class GetACIServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetACIServiceResult build() {
             return new GetACIServiceResult(id, identity, location, name, properties, sku, systemData, tags, type);
         }

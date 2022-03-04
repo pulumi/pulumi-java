@@ -6,21 +6,41 @@ package io.pulumi.azurenative.hybridnetwork;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hybridnetwork.inputs.GetNetworkFunctionArgs;
 import io.pulumi.azurenative.hybridnetwork.outputs.GetNetworkFunctionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkFunction {
-/**
- * Network function resource response.
+    private GetNetworkFunction() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkFunctionArgs.Builder a);
+    }
+    private static GetNetworkFunctionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkFunctionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Network function resource response.
  * API Version: 2020-01-01-preview.
  * 
- *
- * Network function resource response.
+     *
+     * Network function resource response.
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkFunctionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Network function resource response.
+     * API Version: 2020-01-01-preview.
+     * 
+     *
+         * Network function resource response.
+     * 
+     */
     public static CompletableFuture<GetNetworkFunctionResult> invokeAsync(GetNetworkFunctionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getNetworkFunction", TypeShape.of(GetNetworkFunctionResult.class), args == null ? GetNetworkFunctionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.scheduler.enums.JobState;
 import io.pulumi.azurenative.scheduler.inputs.JobActionArgs;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<JobActionArgs> action;
+      private final @Nullable Input<JobActionArgs> action;
 
     public Input<JobActionArgs> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -33,7 +33,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrence")
-    private final @Nullable Input<JobRecurrenceArgs> recurrence;
+      private final @Nullable Input<JobRecurrenceArgs> recurrence;
 
     public Input<JobRecurrenceArgs> getRecurrence() {
         return this.recurrence == null ? Input.empty() : this.recurrence;
@@ -44,7 +44,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -55,7 +55,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<JobState> state;
+      private final @Nullable Input<JobState> state;
 
     public Input<JobState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -144,7 +144,6 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public JobPropertiesArgs build() {
             return new JobPropertiesArgs(action, recurrence, startTime, state);
         }

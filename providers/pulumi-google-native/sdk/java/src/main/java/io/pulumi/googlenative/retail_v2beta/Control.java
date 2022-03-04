@@ -5,8 +5,8 @@ package io.pulumi.googlenative.retail_v2beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.retail_v2beta.ControlArgs;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaRuleResponse;
@@ -107,6 +107,37 @@ public class Control extends io.pulumi.resources.CustomResource {
         return this.solutionTypes;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ControlArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.retail_v2beta.ControlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.retail_v2beta.ControlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Control(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Control(String name) {
+        this(name, ControlArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Control(String name, ControlArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetSnapshotArgs;
 import io.pulumi.azurenative.compute.outputs.GetSnapshotResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSnapshot {
-/**
- * Snapshot resource.
+    private GetSnapshot() {}
+    public interface BuilderApplicator {
+        public void apply(GetSnapshotArgs.Builder a);
+    }
+    private static GetSnapshotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSnapshotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Snapshot resource.
  * API Version: 2020-12-01.
  * 
- *
- * Snapshot resource.
+     *
+     * Snapshot resource.
  * 
- */
+     */
+    public static CompletableFuture<GetSnapshotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Snapshot resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Snapshot resource.
+     * 
+     */
     public static CompletableFuture<GetSnapshotResult> invokeAsync(GetSnapshotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getSnapshot", TypeShape.of(GetSnapshotResult.class), args == null ? GetSnapshotArgs.Empty : args, Utilities.withVersion(options));
     }

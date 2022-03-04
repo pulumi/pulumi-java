@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="authority")
-    private final @Nullable Input<String> authority;
+      private final @Nullable Input<String> authority;
 
     public Input<String> getAuthority() {
         return this.authority == null ? Input.empty() : this.authority;
@@ -34,7 +34,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -45,7 +45,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+      private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -56,7 +56,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -145,7 +145,6 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public UploadServicePrincipalArgs build() {
             return new UploadServicePrincipalArgs(authority, clientId, clientSecret, tenantId);
         }

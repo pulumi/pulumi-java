@@ -8,8 +8,8 @@ import io.pulumi.awsnative.events.ApiDestinationArgs;
 import io.pulumi.awsnative.events.enums.ApiDestinationHttpMethod;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -95,6 +95,37 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ApiDestinationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.events.ApiDestinationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.events.ApiDestinationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ApiDestination(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ApiDestination(String name) {
+        this(name, ApiDestinationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApiDestination(String name, ApiDestinationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

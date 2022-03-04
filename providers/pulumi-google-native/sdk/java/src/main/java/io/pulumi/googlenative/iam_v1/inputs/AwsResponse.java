@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AwsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final String accountId;
+      private final String accountId;
 
     public String getAccountId() {
         return this.accountId;
@@ -59,7 +59,6 @@ public final class AwsResponse extends io.pulumi.resources.InvokeArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public AwsResponse build() {
             return new AwsResponse(accountId);
         }

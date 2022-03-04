@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AzureTableStorageApplicationLogsConfigResponse {
     /**
      * Log level.
      * 
-     */
+    */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
     /**
      * SAS URL to an Azure table with add/query/delete permissions.
      * 
-     */
+    */
     public String getSasUrl() {
         return this.sasUrl;
     }
@@ -76,7 +76,6 @@ public final class AzureTableStorageApplicationLogsConfigResponse {
             this.sasUrl = Objects.requireNonNull(sasUrl);
             return this;
         }
-
         public AzureTableStorageApplicationLogsConfigResponse build() {
             return new AzureTableStorageApplicationLogsConfigResponse(level, sasUrl);
         }

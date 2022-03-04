@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class LiveEventOutputTranscriptionTrackResponse {
     /**
      * The output track name. This property is reserved for future use, any value set on this property will be ignored.
      * 
-     */
+    */
     public String getTrackName() {
         return this.trackName;
     }
@@ -52,7 +52,6 @@ public final class LiveEventOutputTranscriptionTrackResponse {
             this.trackName = Objects.requireNonNull(trackName);
             return this;
         }
-
         public LiveEventOutputTranscriptionTrackResponse build() {
             return new LiveEventOutputTranscriptionTrackResponse(trackName);
         }

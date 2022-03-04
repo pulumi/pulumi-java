@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ComputeDataDiskResponse {
     /**
      * Gets data disk size in GiB.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
     /**
      * When backed by a blob, the URI of underlying blob.
      * 
-     */
+    */
     public Optional<String> getDiskUri() {
         return Optional.ofNullable(this.diskUri);
     }
     /**
      * When backed by managed disk, this is the ID of the compute disk resource.
      * 
-     */
+    */
     public Optional<String> getManagedDiskId() {
         return Optional.ofNullable(this.managedDiskId);
     }
     /**
      * Gets data disk name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -119,7 +119,6 @@ public final class ComputeDataDiskResponse {
             this.name = name;
             return this;
         }
-
         public ComputeDataDiskResponse build() {
             return new ComputeDataDiskResponse(diskSizeGiB, diskUri, managedDiskId, name);
         }

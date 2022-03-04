@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endIP")
-    private final @Nullable Input<String> endIP;
+      private final @Nullable Input<String> endIP;
 
     public Input<String> getEndIP() {
         return this.endIP == null ? Input.empty() : this.endIP;
@@ -34,7 +34,7 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startIP")
-    private final @Nullable Input<String> startIP;
+      private final @Nullable Input<String> startIP;
 
     public Input<String> getStartIP() {
         return this.startIP == null ? Input.empty() : this.startIP;
@@ -93,7 +93,6 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.startIP = Input.ofNullable(startIP);
             return this;
         }
-
         public QosIpRangeArgs build() {
             return new QosIpRangeArgs(endIP, startIP);
         }

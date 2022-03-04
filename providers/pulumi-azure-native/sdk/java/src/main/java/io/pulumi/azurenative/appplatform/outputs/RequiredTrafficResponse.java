@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -54,35 +54,35 @@ public final class RequiredTrafficResponse {
     /**
      * The direction of required traffic
      * 
-     */
+    */
     public String getDirection() {
         return this.direction;
     }
     /**
      * The FQDN list of required traffic
      * 
-     */
+    */
     public List<String> getFqdns() {
         return this.fqdns;
     }
     /**
      * The ip list of required traffic
      * 
-     */
+    */
     public List<String> getIps() {
         return this.ips;
     }
     /**
      * The port of required traffic
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * The protocol of required traffic
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
@@ -139,7 +139,6 @@ public final class RequiredTrafficResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public RequiredTrafficResponse build() {
             return new RequiredTrafficResponse(direction, fqdns, ips, port, protocol);
         }

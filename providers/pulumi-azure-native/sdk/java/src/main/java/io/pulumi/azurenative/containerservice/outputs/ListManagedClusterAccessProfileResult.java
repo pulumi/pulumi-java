@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class ListManagedClusterAccessProfileResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Base64-encoded Kubernetes configuration file.
      * 
-     */
+    */
     public Optional<String> getKubeConfig() {
         return Optional.ofNullable(this.kubeConfig);
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class ListManagedClusterAccessProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListManagedClusterAccessProfileResult build() {
             return new ListManagedClusterAccessProfileResult(id, kubeConfig, location, name, tags, type);
         }

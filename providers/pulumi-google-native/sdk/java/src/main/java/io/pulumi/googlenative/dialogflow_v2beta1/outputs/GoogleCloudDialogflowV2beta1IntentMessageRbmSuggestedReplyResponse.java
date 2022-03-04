@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
     /**
      * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
      * 
-     */
+    */
     public String getPostbackData() {
         return this.postbackData;
     }
     /**
      * Suggested reply text.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse(postbackData, text);
         }

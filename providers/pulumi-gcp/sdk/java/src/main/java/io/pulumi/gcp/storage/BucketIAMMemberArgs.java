@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.BucketIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BucketIAMMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -32,14 +32,14 @@ public final class BucketIAMMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<BucketIAMMemberConditionArgs> condition;
+      private final @Nullable Input<BucketIAMMemberConditionArgs> condition;
 
     public Input<BucketIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -52,7 +52,7 @@ public final class BucketIAMMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -141,7 +141,6 @@ public final class BucketIAMMemberArgs extends io.pulumi.resources.ResourceArgs 
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public BucketIAMMemberArgs build() {
             return new BucketIAMMemberArgs(bucket, condition, member, role);
         }

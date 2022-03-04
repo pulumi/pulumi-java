@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * 
      */
     @InputImport(name="dial", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial;
+      private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse getDial() {
         return this.dial;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * 
      */
     @InputImport(name="openUrl", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl;
+      private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse getOpenUrl() {
         return this.openUrl;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * 
      */
     @InputImport(name="postbackData", required=true)
-    private final String postbackData;
+      private final String postbackData;
 
     public String getPostbackData() {
         return this.postbackData;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * 
      */
     @InputImport(name="shareLocation", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation;
+      private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse getShareLocation() {
         return this.shareLocation;
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -147,7 +147,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse(dial, openUrl, postbackData, shareLocation, text);
         }

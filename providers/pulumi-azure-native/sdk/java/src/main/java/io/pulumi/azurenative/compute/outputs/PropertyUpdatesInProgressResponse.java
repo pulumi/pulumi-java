@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class PropertyUpdatesInProgressResponse {
     /**
      * The target performance tier of the disk if a tier change operation is in progress.
      * 
-     */
+    */
     public Optional<String> getTargetTier() {
         return Optional.ofNullable(this.targetTier);
     }
@@ -54,7 +54,6 @@ public final class PropertyUpdatesInProgressResponse {
             this.targetTier = targetTier;
             return this;
         }
-
         public PropertyUpdatesInProgressResponse build() {
             return new PropertyUpdatesInProgressResponse(targetTier);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -30,7 +30,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="queueName")
-    private final @Nullable Input<String> queueName;
+      private final @Nullable Input<String> queueName;
 
     public Input<String> getQueueName() {
         return this.queueName == null ? Input.empty() : this.queueName;
@@ -41,7 +41,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sasToken")
-    private final @Nullable Input<String> sasToken;
+      private final @Nullable Input<String> sasToken;
 
     public Input<String> getSasToken() {
         return this.sasToken == null ? Input.empty() : this.sasToken;
@@ -52,7 +52,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="storageAccount")
-    private final @Nullable Input<String> storageAccount;
+      private final @Nullable Input<String> storageAccount;
 
     public Input<String> getStorageAccount() {
         return this.storageAccount == null ? Input.empty() : this.storageAccount;
@@ -141,7 +141,6 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
             this.storageAccount = Input.ofNullable(storageAccount);
             return this;
         }
-
         public StorageQueueMessageArgs build() {
             return new StorageQueueMessageArgs(message, queueName, sasToken, storageAccount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildArtifactsObjectsTiming;
 import java.lang.String;
 import java.util.List;
@@ -48,14 +48,14 @@ public final class TriggerBuildArtifactsObjects {
      * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
      * this location as a prefix.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Path globs used to match files in the build's workspace.
      * 
-     */
+    */
     public List<String> getPaths() {
         return this.paths == null ? List.of() : this.paths;
     }
@@ -64,7 +64,7 @@ public final class TriggerBuildArtifactsObjects {
      * Output only. Stores timing information for pushing all artifact objects.
      * Structure is documented below.
      * 
-     */
+    */
     public List<TriggerBuildArtifactsObjectsTiming> getTimings() {
         return this.timings == null ? List.of() : this.timings;
     }
@@ -107,7 +107,6 @@ public final class TriggerBuildArtifactsObjects {
             this.timings = timings;
             return this;
         }
-
         public TriggerBuildArtifactsObjects build() {
             return new TriggerBuildArtifactsObjects(location, paths, timings);
         }

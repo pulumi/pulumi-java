@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -34,7 +34,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="fqdns", required=true)
-    private final List<String> fqdns;
+      private final List<String> fqdns;
 
     public List<String> getFqdns() {
         return this.fqdns;
@@ -45,7 +45,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ips", required=true)
-    private final List<String> ips;
+      private final List<String> ips;
 
     public List<String> getIps() {
         return this.ips;
@@ -56,7 +56,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -67,7 +67,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+      private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -146,7 +146,6 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public RequiredTrafficResponse build() {
             return new RequiredTrafficResponse(direction, fqdns, ips, port, protocol);
         }

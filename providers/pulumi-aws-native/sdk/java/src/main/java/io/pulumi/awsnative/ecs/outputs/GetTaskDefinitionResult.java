@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +34,7 @@ public final class GetTaskDefinitionResult {
     /**
      * The Amazon Resource Name (ARN) of the Amazon ECS task definition
      * 
-     */
+    */
     public Optional<String> getTaskDefinitionArn() {
         return Optional.ofNullable(this.taskDefinitionArn);
     }
@@ -70,7 +70,6 @@ public final class GetTaskDefinitionResult {
             this.taskDefinitionArn = taskDefinitionArn;
             return this;
         }
-
         public GetTaskDefinitionResult build() {
             return new GetTaskDefinitionResult(tags, taskDefinitionArn);
         }

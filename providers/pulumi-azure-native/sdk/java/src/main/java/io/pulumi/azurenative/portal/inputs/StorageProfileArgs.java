@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeInGB")
-    private final @Nullable Input<Integer> diskSizeInGB;
+      private final @Nullable Input<Integer> diskSizeInGB;
 
     public Input<Integer> getDiskSizeInGB() {
         return this.diskSizeInGB == null ? Input.empty() : this.diskSizeInGB;
@@ -35,7 +35,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileShareName")
-    private final @Nullable Input<String> fileShareName;
+      private final @Nullable Input<String> fileShareName;
 
     public Input<String> getFileShareName() {
         return this.fileShareName == null ? Input.empty() : this.fileShareName;
@@ -46,7 +46,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountResourceId")
-    private final @Nullable Input<String> storageAccountResourceId;
+      private final @Nullable Input<String> storageAccountResourceId;
 
     public Input<String> getStorageAccountResourceId() {
         return this.storageAccountResourceId == null ? Input.empty() : this.storageAccountResourceId;
@@ -120,7 +120,6 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.storageAccountResourceId = Input.ofNullable(storageAccountResourceId);
             return this;
         }
-
         public StorageProfileArgs build() {
             return new StorageProfileArgs(diskSizeInGB, fileShareName, storageAccountResourceId);
         }

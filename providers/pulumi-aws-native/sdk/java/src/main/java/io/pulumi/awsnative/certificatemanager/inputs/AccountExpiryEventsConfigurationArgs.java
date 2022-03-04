@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.certificatemanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class AccountExpiryEventsConfigurationArgs extends io.pulumi.resour
     public static final AccountExpiryEventsConfigurationArgs Empty = new AccountExpiryEventsConfigurationArgs();
 
     @InputImport(name="daysBeforeExpiry")
-    private final @Nullable Input<Integer> daysBeforeExpiry;
+      private final @Nullable Input<Integer> daysBeforeExpiry;
 
     public Input<Integer> getDaysBeforeExpiry() {
         return this.daysBeforeExpiry == null ? Input.empty() : this.daysBeforeExpiry;
@@ -58,7 +58,6 @@ public final class AccountExpiryEventsConfigurationArgs extends io.pulumi.resour
             this.daysBeforeExpiry = Input.ofNullable(daysBeforeExpiry);
             return this;
         }
-
         public AccountExpiryEventsConfigurationArgs build() {
             return new AccountExpiryEventsConfigurationArgs(daysBeforeExpiry);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kms.outputs;
 import io.pulumi.awsnative.kms.enums.KeySpec;
 import io.pulumi.awsnative.kms.enums.KeyUsage;
 import io.pulumi.awsnative.kms.outputs.KeyTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -90,21 +90,21 @@ public final class GetKeyResult {
     /**
      * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableKeyRotation() {
         return Optional.ofNullable(this.enableKeyRotation);
     }
     /**
      * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -114,35 +114,35 @@ public final class GetKeyResult {
     /**
      * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
      * 
-     */
+    */
     public Optional<Object> getKeyPolicy() {
         return Optional.ofNullable(this.keyPolicy);
     }
     /**
      * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
      * 
-     */
+    */
     public Optional<KeySpec> getKeySpec() {
         return Optional.ofNullable(this.keySpec);
     }
     /**
      * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
      * 
-     */
+    */
     public Optional<KeyUsage> getKeyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
     /**
      * Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
      * 
-     */
+    */
     public Optional<Boolean> getMultiRegion() {
         return Optional.ofNullable(this.multiRegion);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<KeyTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -234,7 +234,6 @@ public final class GetKeyResult {
             this.tags = tags;
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(arn, description, enableKeyRotation, enabled, keyId, keyPolicy, keySpec, keyUsage, multiRegion, tags);
         }

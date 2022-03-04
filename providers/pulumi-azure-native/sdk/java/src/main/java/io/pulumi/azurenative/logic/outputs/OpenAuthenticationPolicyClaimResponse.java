@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class OpenAuthenticationPolicyClaimResponse {
     /**
      * The name of the claim.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of the claim.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class OpenAuthenticationPolicyClaimResponse {
             this.value = value;
             return this;
         }
-
         public OpenAuthenticationPolicyClaimResponse build() {
             return new OpenAuthenticationPolicyClaimResponse(name, value);
         }

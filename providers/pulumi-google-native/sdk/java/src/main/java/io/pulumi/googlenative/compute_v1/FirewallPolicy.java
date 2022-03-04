@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.FirewallPolicyArgs;
 import io.pulumi.googlenative.compute_v1.outputs.FirewallPolicyAssociationResponse;
@@ -192,6 +192,37 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
         return this.shortName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable FirewallPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.compute_v1.FirewallPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.compute_v1.FirewallPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FirewallPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FirewallPolicy(String name) {
+        this(name, FirewallPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FirewallPolicy(String name, @Nullable FirewallPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.VmUptimeResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="azureDiskType", required=true)
-    private final String azureDiskType;
+      private final String azureDiskType;
 
     public String getAzureDiskType() {
         return this.azureDiskType;
@@ -36,7 +36,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="azureHybridUseBenefit", required=true)
-    private final String azureHybridUseBenefit;
+      private final String azureHybridUseBenefit;
 
     public String getAzureHybridUseBenefit() {
         return this.azureHybridUseBenefit;
@@ -47,7 +47,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="azureLocation", required=true)
-    private final String azureLocation;
+      private final String azureLocation;
 
     public String getAzureLocation() {
         return this.azureLocation;
@@ -58,7 +58,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="azureOfferCode", required=true)
-    private final String azureOfferCode;
+      private final String azureOfferCode;
 
     public String getAzureOfferCode() {
         return this.azureOfferCode;
@@ -69,7 +69,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="azurePricingTier", required=true)
-    private final String azurePricingTier;
+      private final String azurePricingTier;
 
     public String getAzurePricingTier() {
         return this.azurePricingTier;
@@ -80,7 +80,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="azureStorageRedundancy", required=true)
-    private final String azureStorageRedundancy;
+      private final String azureStorageRedundancy;
 
     public String getAzureStorageRedundancy() {
         return this.azureStorageRedundancy;
@@ -91,7 +91,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="azureVmFamilies", required=true)
-    private final List<String> azureVmFamilies;
+      private final List<String> azureVmFamilies;
 
     public List<String> getAzureVmFamilies() {
         return this.azureVmFamilies;
@@ -102,7 +102,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="confidenceRatingInPercentage", required=true)
-    private final Double confidenceRatingInPercentage;
+      private final Double confidenceRatingInPercentage;
 
     public Double getConfidenceRatingInPercentage() {
         return this.confidenceRatingInPercentage;
@@ -113,7 +113,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="createdTimestamp", required=true)
-    private final String createdTimestamp;
+      private final String createdTimestamp;
 
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
@@ -124,7 +124,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="currency", required=true)
-    private final String currency;
+      private final String currency;
 
     public String getCurrency() {
         return this.currency;
@@ -135,7 +135,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="discountPercentage", required=true)
-    private final Double discountPercentage;
+      private final Double discountPercentage;
 
     public Double getDiscountPercentage() {
         return this.discountPercentage;
@@ -146,7 +146,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="eaSubscriptionId", required=true)
-    private final String eaSubscriptionId;
+      private final String eaSubscriptionId;
 
     public String getEaSubscriptionId() {
         return this.eaSubscriptionId;
@@ -157,7 +157,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="monthlyBandwidthCost", required=true)
-    private final Double monthlyBandwidthCost;
+      private final Double monthlyBandwidthCost;
 
     public Double getMonthlyBandwidthCost() {
         return this.monthlyBandwidthCost;
@@ -168,7 +168,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="monthlyComputeCost", required=true)
-    private final Double monthlyComputeCost;
+      private final Double monthlyComputeCost;
 
     public Double getMonthlyComputeCost() {
         return this.monthlyComputeCost;
@@ -179,7 +179,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="monthlyPremiumStorageCost", required=true)
-    private final Double monthlyPremiumStorageCost;
+      private final Double monthlyPremiumStorageCost;
 
     public Double getMonthlyPremiumStorageCost() {
         return this.monthlyPremiumStorageCost;
@@ -190,7 +190,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="monthlyStandardSSDStorageCost", required=true)
-    private final Double monthlyStandardSSDStorageCost;
+      private final Double monthlyStandardSSDStorageCost;
 
     public Double getMonthlyStandardSSDStorageCost() {
         return this.monthlyStandardSSDStorageCost;
@@ -201,7 +201,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="monthlyStorageCost", required=true)
-    private final Double monthlyStorageCost;
+      private final Double monthlyStorageCost;
 
     public Double getMonthlyStorageCost() {
         return this.monthlyStorageCost;
@@ -212,7 +212,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="numberOfMachines", required=true)
-    private final Integer numberOfMachines;
+      private final Integer numberOfMachines;
 
     public Integer getNumberOfMachines() {
         return this.numberOfMachines;
@@ -223,7 +223,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="percentile", required=true)
-    private final String percentile;
+      private final String percentile;
 
     public String getPercentile() {
         return this.percentile;
@@ -234,7 +234,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="perfDataEndTime", required=true)
-    private final String perfDataEndTime;
+      private final String perfDataEndTime;
 
     public String getPerfDataEndTime() {
         return this.perfDataEndTime;
@@ -245,7 +245,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="perfDataStartTime", required=true)
-    private final String perfDataStartTime;
+      private final String perfDataStartTime;
 
     public String getPerfDataStartTime() {
         return this.perfDataStartTime;
@@ -256,7 +256,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="pricesTimestamp", required=true)
-    private final String pricesTimestamp;
+      private final String pricesTimestamp;
 
     public String getPricesTimestamp() {
         return this.pricesTimestamp;
@@ -267,7 +267,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="reservedInstance", required=true)
-    private final String reservedInstance;
+      private final String reservedInstance;
 
     public String getReservedInstance() {
         return this.reservedInstance;
@@ -278,7 +278,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="scalingFactor", required=true)
-    private final Double scalingFactor;
+      private final Double scalingFactor;
 
     public Double getScalingFactor() {
         return this.scalingFactor;
@@ -289,7 +289,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sizingCriterion", required=true)
-    private final String sizingCriterion;
+      private final String sizingCriterion;
 
     public String getSizingCriterion() {
         return this.sizingCriterion;
@@ -300,7 +300,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="stage", required=true)
-    private final String stage;
+      private final String stage;
 
     public String getStage() {
         return this.stage;
@@ -311,7 +311,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -322,7 +322,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="timeRange", required=true)
-    private final String timeRange;
+      private final String timeRange;
 
     public String getTimeRange() {
         return this.timeRange;
@@ -333,7 +333,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="updatedTimestamp", required=true)
-    private final String updatedTimestamp;
+      private final String updatedTimestamp;
 
     public String getUpdatedTimestamp() {
         return this.updatedTimestamp;
@@ -344,7 +344,7 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="vmUptime", required=true)
-    private final VmUptimeResponse vmUptime;
+      private final VmUptimeResponse vmUptime;
 
     public VmUptimeResponse getVmUptime() {
         return this.vmUptime;
@@ -673,7 +673,6 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
             this.vmUptime = Objects.requireNonNull(vmUptime);
             return this;
         }
-
         public AssessmentPropertiesResponse build() {
             return new AssessmentPropertiesResponse(azureDiskType, azureHybridUseBenefit, azureLocation, azureOfferCode, azurePricingTier, azureStorageRedundancy, azureVmFamilies, confidenceRatingInPercentage, createdTimestamp, currency, discountPercentage, eaSubscriptionId, monthlyBandwidthCost, monthlyComputeCost, monthlyPremiumStorageCost, monthlyStandardSSDStorageCost, monthlyStorageCost, numberOfMachines, percentile, perfDataEndTime, perfDataStartTime, pricesTimestamp, reservedInstance, scalingFactor, sizingCriterion, stage, status, timeRange, updatedTimestamp, vmUptime);
         }

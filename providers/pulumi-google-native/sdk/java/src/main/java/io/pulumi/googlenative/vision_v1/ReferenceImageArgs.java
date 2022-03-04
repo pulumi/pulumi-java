@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vision_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vision_v1.inputs.BoundingPolyArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,14 +21,14 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boundingPolys")
-    private final @Nullable Input<List<BoundingPolyArgs>> boundingPolys;
+      private final @Nullable Input<List<BoundingPolyArgs>> boundingPolys;
 
     public Input<List<BoundingPolyArgs>> getBoundingPolys() {
         return this.boundingPolys == null ? Input.empty() : this.boundingPolys;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -39,28 +39,28 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="productId", required=true)
-    private final Input<String> productId;
+      private final Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="referenceImageId")
-    private final @Nullable Input<String> referenceImageId;
+      private final @Nullable Input<String> referenceImageId;
 
     public Input<String> getReferenceImageId() {
         return this.referenceImageId == null ? Input.empty() : this.referenceImageId;
@@ -71,7 +71,7 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -205,7 +205,6 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public ReferenceImageArgs build() {
             return new ReferenceImageArgs(boundingPolys, location, name, productId, project, referenceImageId, uri);
         }

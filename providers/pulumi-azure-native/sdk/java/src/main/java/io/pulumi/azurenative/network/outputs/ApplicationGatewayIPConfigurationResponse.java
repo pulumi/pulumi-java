@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,42 +62,42 @@ public final class ApplicationGatewayIPConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the IP configuration that is unique within an Application Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the application gateway IP configuration resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Reference to the subnet resource. A subnet from where application gateway gets its private address.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class ApplicationGatewayIPConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayIPConfigurationResponse build() {
             return new ApplicationGatewayIPConfigurationResponse(etag, id, name, provisioningState, subnet, type);
         }

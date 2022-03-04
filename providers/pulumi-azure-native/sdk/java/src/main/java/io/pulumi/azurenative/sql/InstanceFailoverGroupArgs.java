@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.inputs.InstanceFailoverGroupReadWriteEndpointAr
 import io.pulumi.azurenative.sql.inputs.ManagedInstancePairInfoArgs;
 import io.pulumi.azurenative.sql.inputs.PartnerRegionInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="failoverGroupName")
-    private final @Nullable Input<String> failoverGroupName;
+      private final @Nullable Input<String> failoverGroupName;
 
     public Input<String> getFailoverGroupName() {
         return this.failoverGroupName == null ? Input.empty() : this.failoverGroupName;
@@ -35,7 +35,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="locationName", required=true)
-    private final Input<String> locationName;
+      private final Input<String> locationName;
 
     public Input<String> getLocationName() {
         return this.locationName;
@@ -46,7 +46,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="managedInstancePairs", required=true)
-    private final Input<List<ManagedInstancePairInfoArgs>> managedInstancePairs;
+      private final Input<List<ManagedInstancePairInfoArgs>> managedInstancePairs;
 
     public Input<List<ManagedInstancePairInfoArgs>> getManagedInstancePairs() {
         return this.managedInstancePairs;
@@ -57,7 +57,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="partnerRegions", required=true)
-    private final Input<List<PartnerRegionInfoArgs>> partnerRegions;
+      private final Input<List<PartnerRegionInfoArgs>> partnerRegions;
 
     public Input<List<PartnerRegionInfoArgs>> getPartnerRegions() {
         return this.partnerRegions;
@@ -68,7 +68,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readOnlyEndpoint")
-    private final @Nullable Input<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
+      private final @Nullable Input<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
     public Input<InstanceFailoverGroupReadOnlyEndpointArgs> getReadOnlyEndpoint() {
         return this.readOnlyEndpoint == null ? Input.empty() : this.readOnlyEndpoint;
@@ -79,7 +79,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readWriteEndpoint", required=true)
-    private final Input<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
+      private final Input<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
 
     public Input<InstanceFailoverGroupReadWriteEndpointArgs> getReadWriteEndpoint() {
         return this.readWriteEndpoint;
@@ -90,7 +90,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -224,7 +224,6 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public InstanceFailoverGroupArgs build() {
             return new InstanceFailoverGroupArgs(failoverGroupName, locationName, managedInstancePairs, partnerRegions, readOnlyEndpoint, readWriteEndpoint, resourceGroupName);
         }

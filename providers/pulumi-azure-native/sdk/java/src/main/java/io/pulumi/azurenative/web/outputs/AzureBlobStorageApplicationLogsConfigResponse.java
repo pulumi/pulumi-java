@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -43,7 +43,7 @@ public final class AzureBlobStorageApplicationLogsConfigResponse {
     /**
      * Log level.
      * 
-     */
+    */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
@@ -52,14 +52,14 @@ public final class AzureBlobStorageApplicationLogsConfigResponse {
      * Remove blobs older than X days.
      * 0 or lower means no retention.
      * 
-     */
+    */
     public Optional<Integer> getRetentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
      * SAS url to a azure blob container with read/write/list/delete permissions.
      * 
-     */
+    */
     public Optional<String> getSasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }
@@ -102,7 +102,6 @@ public final class AzureBlobStorageApplicationLogsConfigResponse {
             this.sasUrl = sasUrl;
             return this;
         }
-
         public AzureBlobStorageApplicationLogsConfigResponse build() {
             return new AzureBlobStorageApplicationLogsConfigResponse(level, retentionInDays, sasUrl);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.AutomationRuleSetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class AutomationSourceResponse {
     /**
      * A valid event source type.
      * 
-     */
+    */
     public Optional<String> getEventSource() {
         return Optional.ofNullable(this.eventSource);
     }
     /**
      * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
      * 
-     */
+    */
     public List<AutomationRuleSetResponse> getRuleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
     }
@@ -78,7 +78,6 @@ public final class AutomationSourceResponse {
             this.ruleSets = ruleSets;
             return this;
         }
-
         public AutomationSourceResponse build() {
             return new AutomationSourceResponse(eventSource, ruleSets);
         }

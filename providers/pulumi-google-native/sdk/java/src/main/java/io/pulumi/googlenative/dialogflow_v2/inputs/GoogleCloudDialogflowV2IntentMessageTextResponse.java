@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse extends io.p
      * 
      */
     @InputImport(name="text", required=true)
-    private final List<String> text;
+      private final List<String> text;
 
     public List<String> getText() {
         return this.text;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse extends io.p
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageTextResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageTextResponse(text);
         }

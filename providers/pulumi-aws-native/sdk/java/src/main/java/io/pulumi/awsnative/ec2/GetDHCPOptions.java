@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetDHCPOptionsArgs;
 import io.pulumi.awsnative.ec2.outputs.GetDHCPOptionsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDHCPOptions {
-/**
- * Resource Type definition for AWS::EC2::DHCPOptions
+    private GetDHCPOptions() {}
+    public interface BuilderApplicator {
+        public void apply(GetDHCPOptionsArgs.Builder a);
+    }
+    private static GetDHCPOptionsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDHCPOptionsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::EC2::DHCPOptions
  * 
- */
+     */
+    public static CompletableFuture<GetDHCPOptionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::EC2::DHCPOptions
+     * 
+     */
     public static CompletableFuture<GetDHCPOptionsResult> invokeAsync(GetDHCPOptionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getDHCPOptions", TypeShape.of(GetDHCPOptionsResult.class), args == null ? GetDHCPOptionsArgs.Empty : args, Utilities.withVersion(options));
     }

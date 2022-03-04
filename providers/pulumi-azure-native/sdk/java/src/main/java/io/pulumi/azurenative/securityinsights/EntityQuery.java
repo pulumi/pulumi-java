@@ -9,8 +9,8 @@ import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:securityinsights:EntityQuery 07da3cc8-c8ad-4710-a44e-334cdcb7882b /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/entityQueries/07da3cc8-c8ad-4710-a44e-334cdcb7882b 
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * Please use one of the variants: ActivityCustomEntityQuery.
  * 
  */
@@ -107,6 +107,37 @@ public class EntityQuery extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EntityQueryArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.securityinsights.EntityQueryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.securityinsights.EntityQueryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public EntityQuery(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EntityQuery(String name) {
+        this(name, EntityQueryArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EntityQuery(String name, EntityQueryArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

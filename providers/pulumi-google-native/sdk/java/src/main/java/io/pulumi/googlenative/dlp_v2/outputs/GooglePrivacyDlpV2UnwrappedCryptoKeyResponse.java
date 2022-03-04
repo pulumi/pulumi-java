@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse {
     /**
      * A 128/192/256 bit key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse build() {
             return new GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(key);
         }

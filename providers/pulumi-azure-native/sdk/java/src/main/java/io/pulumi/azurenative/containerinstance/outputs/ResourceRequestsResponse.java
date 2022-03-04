@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.GpuResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class ResourceRequestsResponse {
     /**
      * The CPU request of this container instance.
      * 
-     */
+    */
     public Double getCpu() {
         return this.cpu;
     }
     /**
      * The GPU request of this container instance.
      * 
-     */
+    */
     public Optional<GpuResourceResponse> getGpu() {
         return Optional.ofNullable(this.gpu);
     }
     /**
      * The memory request in GB of this container instance.
      * 
-     */
+    */
     public Double getMemoryInGB() {
         return this.memoryInGB;
     }
@@ -98,7 +98,6 @@ public final class ResourceRequestsResponse {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
-
         public ResourceRequestsResponse build() {
             return new ResourceRequestsResponse(cpu, gpu, memoryInGB);
         }

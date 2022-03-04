@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.LicenseResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -81,63 +81,63 @@ public final class PackageInfoOccurrenceResponse {
     /**
      * A place for the SPDX file creator to record any general comments about the package being described
      * 
-     */
+    */
     public String getComment() {
         return this.comment;
     }
     /**
      * Provide the actual file name of the package, or path of the directory being treated as a package
      * 
-     */
+    */
     public String getFilename() {
         return this.filename;
     }
     /**
      * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
      * 
-     */
+    */
     public String getHomePage() {
         return this.homePage;
     }
     /**
      * package or alternative values, if the governing license cannot be determined
      * 
-     */
+    */
     public LicenseResponse getLicenseConcluded() {
         return this.licenseConcluded;
     }
     /**
      * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
      * 
-     */
+    */
     public String getPackageType() {
         return this.packageType;
     }
     /**
      * Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
      * 
-     */
+    */
     public String getSourceInfo() {
         return this.sourceInfo;
     }
     /**
      * A short description of the package
      * 
-     */
+    */
     public String getSummaryDescription() {
         return this.summaryDescription;
     }
     /**
      * Identify the full name of the package as given by the Package Originator
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
     /**
      * Identify the version of the package
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -222,7 +222,6 @@ public final class PackageInfoOccurrenceResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public PackageInfoOccurrenceResponse build() {
             return new PackageInfoOccurrenceResponse(comment, filename, homePage, licenseConcluded, packageType, sourceInfo, summaryDescription, title, version);
         }

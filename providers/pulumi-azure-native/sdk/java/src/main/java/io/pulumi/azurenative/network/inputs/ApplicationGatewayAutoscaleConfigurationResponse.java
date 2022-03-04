@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
      * 
      */
     @InputImport(name="maxCapacity")
-    private final @Nullable Integer maxCapacity;
+      private final @Nullable Integer maxCapacity;
 
     public Optional<Integer> getMaxCapacity() {
         return this.maxCapacity == null ? Optional.empty() : Optional.ofNullable(this.maxCapacity);
@@ -34,7 +34,7 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
      * 
      */
     @InputImport(name="minCapacity", required=true)
-    private final Integer minCapacity;
+      private final Integer minCapacity;
 
     public Integer getMinCapacity() {
         return this.minCapacity;
@@ -83,7 +83,6 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
-
         public ApplicationGatewayAutoscaleConfigurationResponse build() {
             return new ApplicationGatewayAutoscaleConfigurationResponse(maxCapacity, minCapacity);
         }

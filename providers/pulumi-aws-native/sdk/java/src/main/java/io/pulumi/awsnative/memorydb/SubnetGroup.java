@@ -8,8 +8,8 @@ import io.pulumi.awsnative.memorydb.SubnetGroupArgs;
 import io.pulumi.awsnative.memorydb.outputs.SubnetGroupTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -91,6 +91,37 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SubnetGroupArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.memorydb.SubnetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.memorydb.SubnetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SubnetGroup(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SubnetGroup(String name) {
+        this(name, SubnetGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SubnetGroup(String name, SubnetGroupArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

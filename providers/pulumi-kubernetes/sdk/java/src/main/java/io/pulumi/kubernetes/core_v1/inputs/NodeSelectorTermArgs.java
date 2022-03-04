@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorRequirementArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="matchExpressions")
-    private final @Nullable Input<List<NodeSelectorRequirementArgs>> matchExpressions;
+      private final @Nullable Input<List<NodeSelectorRequirementArgs>> matchExpressions;
 
     public Input<List<NodeSelectorRequirementArgs>> getMatchExpressions() {
         return this.matchExpressions == null ? Input.empty() : this.matchExpressions;
@@ -35,7 +35,7 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="matchFields")
-    private final @Nullable Input<List<NodeSelectorRequirementArgs>> matchFields;
+      private final @Nullable Input<List<NodeSelectorRequirementArgs>> matchFields;
 
     public Input<List<NodeSelectorRequirementArgs>> getMatchFields() {
         return this.matchFields == null ? Input.empty() : this.matchFields;
@@ -94,7 +94,6 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
             this.matchFields = Input.ofNullable(matchFields);
             return this;
         }
-
         public NodeSelectorTermArgs build() {
             return new NodeSelectorTermArgs(matchExpressions, matchFields);
         }

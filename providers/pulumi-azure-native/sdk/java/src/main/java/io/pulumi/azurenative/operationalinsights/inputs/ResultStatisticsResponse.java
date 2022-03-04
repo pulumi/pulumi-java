@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ingestedRecords", required=true)
-    private final Integer ingestedRecords;
+      private final Integer ingestedRecords;
 
     public Integer getIngestedRecords() {
         return this.ingestedRecords;
@@ -33,7 +33,7 @@ public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="progress", required=true)
-    private final Double progress;
+      private final Double progress;
 
     public Double getProgress() {
         return this.progress;
@@ -82,7 +82,6 @@ public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeAr
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
-
         public ResultStatisticsResponse build() {
             return new ResultStatisticsResponse(ingestedRecords, progress);
         }

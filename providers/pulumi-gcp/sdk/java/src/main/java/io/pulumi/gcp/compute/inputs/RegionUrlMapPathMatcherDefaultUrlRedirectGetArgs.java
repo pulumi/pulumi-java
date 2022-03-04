@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs extends io.p
      * 
      */
     @InputImport(name="hostRedirect")
-    private final @Nullable Input<String> hostRedirect;
+      private final @Nullable Input<String> hostRedirect;
 
     public Input<String> getHostRedirect() {
         return this.hostRedirect == null ? Input.empty() : this.hostRedirect;
@@ -35,7 +35,7 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs extends io.p
      * 
      */
     @InputImport(name="httpsRedirect")
-    private final @Nullable Input<Boolean> httpsRedirect;
+      private final @Nullable Input<Boolean> httpsRedirect;
 
     public Input<Boolean> getHttpsRedirect() {
         return this.httpsRedirect == null ? Input.empty() : this.httpsRedirect;
@@ -50,7 +50,7 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs extends io.p
      * 
      */
     @InputImport(name="pathRedirect")
-    private final @Nullable Input<String> pathRedirect;
+      private final @Nullable Input<String> pathRedirect;
 
     public Input<String> getPathRedirect() {
         return this.pathRedirect == null ? Input.empty() : this.pathRedirect;
@@ -65,7 +65,7 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs extends io.p
      * 
      */
     @InputImport(name="prefixRedirect")
-    private final @Nullable Input<String> prefixRedirect;
+      private final @Nullable Input<String> prefixRedirect;
 
     public Input<String> getPrefixRedirect() {
         return this.prefixRedirect == null ? Input.empty() : this.prefixRedirect;
@@ -83,7 +83,7 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs extends io.p
      * 
      */
     @InputImport(name="redirectResponseCode")
-    private final @Nullable Input<String> redirectResponseCode;
+      private final @Nullable Input<String> redirectResponseCode;
 
     public Input<String> getRedirectResponseCode() {
         return this.redirectResponseCode == null ? Input.empty() : this.redirectResponseCode;
@@ -97,7 +97,7 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs extends io.p
      * 
      */
     @InputImport(name="stripQuery", required=true)
-    private final Input<Boolean> stripQuery;
+      private final Input<Boolean> stripQuery;
 
     public Input<Boolean> getStripQuery() {
         return this.stripQuery;
@@ -216,7 +216,6 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs extends io.p
             this.stripQuery = Input.of(Objects.requireNonNull(stripQuery));
             return this;
         }
-
         public RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs build() {
             return new RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

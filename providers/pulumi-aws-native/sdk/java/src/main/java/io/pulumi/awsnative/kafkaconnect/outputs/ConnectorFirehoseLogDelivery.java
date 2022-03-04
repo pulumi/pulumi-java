@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ConnectorFirehoseLogDelivery {
     /**
      * The Kinesis Data Firehose delivery stream that is the destination for log delivery.
      * 
-     */
+    */
     public Optional<String> getDeliveryStream() {
         return Optional.ofNullable(this.deliveryStream);
     }
     /**
      * Specifies whether the logs get sent to the specified Kinesis Data Firehose delivery stream.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -77,7 +77,6 @@ public final class ConnectorFirehoseLogDelivery {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ConnectorFirehoseLogDelivery build() {
             return new ConnectorFirehoseLogDelivery(deliveryStream, enabled);
         }

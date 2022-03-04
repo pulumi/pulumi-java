@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -23,7 +23,7 @@ public final class PolicyStatusProperties {
     /**
      * Specifies whether the policy is public or not.
      * 
-     */
+    */
     public MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic getIsPublic() {
         return this.isPublic;
     }
@@ -52,7 +52,6 @@ public final class PolicyStatusProperties {
             this.isPublic = Objects.requireNonNull(isPublic);
             return this;
         }
-
         public PolicyStatusProperties build() {
             return new PolicyStatusProperties(isPublic);
         }

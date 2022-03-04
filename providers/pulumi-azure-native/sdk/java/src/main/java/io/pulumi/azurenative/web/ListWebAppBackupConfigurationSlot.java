@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListWebAppBackupConfigurationSlotArgs;
 import io.pulumi.azurenative.web.outputs.ListWebAppBackupConfigurationSlotResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppBackupConfigurationSlot {
-/**
- * Description of a backup which will be performed.
+    private ListWebAppBackupConfigurationSlot() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppBackupConfigurationSlotArgs.Builder a);
+    }
+    private static ListWebAppBackupConfigurationSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppBackupConfigurationSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of a backup which will be performed.
  * API Version: 2020-12-01.
  * 
- *
- * Description of a backup which will be performed.
+     *
+     * Description of a backup which will be performed.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppBackupConfigurationSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of a backup which will be performed.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Description of a backup which will be performed.
+     * 
+     */
     public static CompletableFuture<ListWebAppBackupConfigurationSlotResult> invokeAsync(ListWebAppBackupConfigurationSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupConfigurationSlot", TypeShape.of(ListWebAppBackupConfigurationSlotResult.class), args == null ? ListWebAppBackupConfigurationSlotArgs.Empty : args, Utilities.withVersion(options));
     }

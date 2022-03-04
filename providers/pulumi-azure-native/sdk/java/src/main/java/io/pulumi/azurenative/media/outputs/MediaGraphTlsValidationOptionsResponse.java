@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class MediaGraphTlsValidationOptionsResponse {
     /**
      * Ignore the host name (common name) during validation.
      * 
-     */
+    */
     public Boolean getIgnoreHostname() {
         return this.ignoreHostname;
     }
     /**
      * Ignore the integrity of the certificate chain at the current time.
      * 
-     */
+    */
     public Boolean getIgnoreSignature() {
         return this.ignoreSignature;
     }
@@ -74,7 +74,6 @@ public final class MediaGraphTlsValidationOptionsResponse {
             this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
             return this;
         }
-
         public MediaGraphTlsValidationOptionsResponse build() {
             return new MediaGraphTlsValidationOptionsResponse(ignoreHostname, ignoreSignature);
         }

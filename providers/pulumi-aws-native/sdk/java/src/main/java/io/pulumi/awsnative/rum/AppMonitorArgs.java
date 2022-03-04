@@ -6,7 +6,7 @@ package io.pulumi.awsnative.rum;
 import io.pulumi.awsnative.rum.inputs.AppMonitorConfigurationArgs;
 import io.pulumi.awsnative.rum.inputs.AppMonitorTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
     public static final AppMonitorArgs Empty = new AppMonitorArgs();
 
     @InputImport(name="appMonitorConfiguration")
-    private final @Nullable Input<AppMonitorConfigurationArgs> appMonitorConfiguration;
+      private final @Nullable Input<AppMonitorConfigurationArgs> appMonitorConfiguration;
 
     public Input<AppMonitorConfigurationArgs> getAppMonitorConfiguration() {
         return this.appMonitorConfiguration == null ? Input.empty() : this.appMonitorConfiguration;
@@ -30,7 +30,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cwLogEnabled")
-    private final @Nullable Input<Boolean> cwLogEnabled;
+      private final @Nullable Input<Boolean> cwLogEnabled;
 
     public Input<Boolean> getCwLogEnabled() {
         return this.cwLogEnabled == null ? Input.empty() : this.cwLogEnabled;
@@ -41,7 +41,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<String> domain;
+      private final Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain;
@@ -52,14 +52,14 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<AppMonitorTagArgs>> tags;
+      private final @Nullable Input<List<AppMonitorTagArgs>> tags;
 
     public Input<List<AppMonitorTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -163,7 +163,6 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AppMonitorArgs build() {
             return new AppMonitorArgs(appMonitorConfiguration, cwLogEnabled, domain, name, tags);
         }

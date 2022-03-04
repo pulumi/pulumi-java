@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ResourceIdResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Gets or sets the hub virtual network ID
      * 
-     */
+    */
     public Optional<ResourceIdResponse> getHub() {
         return Optional.ofNullable(this.hub);
     }
     /**
      * Gets or sets the mesh group IDs
      * 
-     */
+    */
     public List<ResourceIdResponse> getMesh() {
         return this.mesh == null ? List.of() : this.mesh;
     }
     /**
      * Provisioning state of the ManagedNetwork resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the spokes group IDs
      * 
-     */
+    */
     public List<ResourceIdResponse> getSpokes() {
         return this.spokes == null ? List.of() : this.spokes;
     }
     /**
      * Gets or sets the connectivity type of a network structure policy
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedNetworkPeeringPolicyPropertiesResponse build() {
             return new ManagedNetworkPeeringPolicyPropertiesResponse(etag, hub, mesh, provisioningState, spokes, type);
         }

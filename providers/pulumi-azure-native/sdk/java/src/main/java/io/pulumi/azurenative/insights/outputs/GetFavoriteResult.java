@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -98,77 +98,77 @@ public final class GetFavoriteResult {
     /**
      * Favorite category, as defined by the user at creation time.
      * 
-     */
+    */
     public Optional<String> getCategory() {
         return Optional.ofNullable(this.category);
     }
     /**
      * Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
      * 
-     */
+    */
     public Optional<String> getConfig() {
         return Optional.ofNullable(this.config);
     }
     /**
      * Internally assigned unique id of the favorite definition.
      * 
-     */
+    */
     public String getFavoriteId() {
         return this.favoriteId;
     }
     /**
      * Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
-     */
+    */
     public Optional<String> getFavoriteType() {
         return Optional.ofNullable(this.favoriteType);
     }
     /**
      * Flag denoting wether or not this favorite was generated from a template.
      * 
-     */
+    */
     public Optional<Boolean> getIsGeneratedFromTemplate() {
         return Optional.ofNullable(this.isGeneratedFromTemplate);
     }
     /**
      * The user-defined name of the favorite.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The source of the favorite definition.
      * 
-     */
+    */
     public Optional<String> getSourceType() {
         return Optional.ofNullable(this.sourceType);
     }
     /**
      * A list of 0 or more tags that are associated with this favorite definition
      * 
-     */
+    */
     public List<String> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Date and time in UTC of the last modification that was made to this favorite definition.
      * 
-     */
+    */
     public String getTimeModified() {
         return this.timeModified;
     }
     /**
      * Unique user id of the specific user that owns this favorite.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
     /**
      * This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -267,7 +267,6 @@ public final class GetFavoriteResult {
             this.version = version;
             return this;
         }
-
         public GetFavoriteResult build() {
             return new GetFavoriteResult(category, config, favoriteId, favoriteType, isGeneratedFromTemplate, name, sourceType, tags, timeModified, userId, version);
         }

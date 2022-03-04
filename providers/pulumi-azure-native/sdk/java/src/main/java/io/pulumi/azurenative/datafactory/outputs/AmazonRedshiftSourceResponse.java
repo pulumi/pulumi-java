@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.RedshiftUnloadSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -85,56 +85,56 @@ public final class AmazonRedshiftSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
-     */
+    */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Database query. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getQuery() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.
      * 
-     */
+    */
     public Optional<RedshiftUnloadSettingsResponse> getRedshiftUnloadSettings() {
         return Optional.ofNullable(this.redshiftUnloadSettings);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -142,7 +142,7 @@ public final class AmazonRedshiftSourceResponse {
      * Copy source type.
      * Expected value is 'AmazonRedshiftSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -227,7 +227,6 @@ public final class AmazonRedshiftSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonRedshiftSourceResponse build() {
             return new AmazonRedshiftSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, redshiftUnloadSettings, sourceRetryCount, sourceRetryWait, type);
         }

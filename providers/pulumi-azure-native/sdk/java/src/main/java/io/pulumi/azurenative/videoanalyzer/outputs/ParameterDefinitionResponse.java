@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ParameterDefinitionResponse {
     /**
      * Name of the parameter declared in the pipeline topology.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Parameter value to be applied on this specific pipeline.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class ParameterDefinitionResponse {
             this.value = value;
             return this;
         }
-
         public ParameterDefinitionResponse build() {
             return new ParameterDefinitionResponse(name, value);
         }

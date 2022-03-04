@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.projects.inputs.IAMAuditConfigAuditLogConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="auditLogConfigs")
-    private final @Nullable Input<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+      private final @Nullable Input<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
     public Input<List<IAMAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
@@ -32,7 +32,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -44,7 +44,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -55,7 +55,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -144,7 +144,6 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public IAMAuditConfigState build() {
             return new IAMAuditConfigState(auditLogConfigs, etag, project, service);
         }

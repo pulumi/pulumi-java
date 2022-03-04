@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ScriptSecureStringExecutionParameterResponse extends io.pulum
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class ScriptSecureStringExecutionParameterResponse extends io.pulum
      * 
      */
     @InputImport(name="secureValue")
-    private final @Nullable String secureValue;
+      private final @Nullable String secureValue;
 
     public Optional<String> getSecureValue() {
         return this.secureValue == null ? Optional.empty() : Optional.ofNullable(this.secureValue);
@@ -46,7 +46,7 @@ public final class ScriptSecureStringExecutionParameterResponse extends io.pulum
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -105,7 +105,6 @@ public final class ScriptSecureStringExecutionParameterResponse extends io.pulum
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ScriptSecureStringExecutionParameterResponse build() {
             return new ScriptSecureStringExecutionParameterResponse(name, secureValue, type);
         }

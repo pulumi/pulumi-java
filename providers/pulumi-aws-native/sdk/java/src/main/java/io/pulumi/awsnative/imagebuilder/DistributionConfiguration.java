@@ -8,8 +8,8 @@ import io.pulumi.awsnative.imagebuilder.DistributionConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistribution;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -92,6 +92,37 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
         return this.tags;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DistributionConfigurationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.imagebuilder.DistributionConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.imagebuilder.DistributionConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DistributionConfiguration(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DistributionConfiguration(String name) {
+        this(name, DistributionConfigurationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DistributionConfiguration(String name, DistributionConfigurationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

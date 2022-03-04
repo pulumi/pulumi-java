@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnv;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvFrom;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerPort;
@@ -155,7 +155,6 @@ public final class GetServiceTemplateSpecContainer {
             this.workingDir = Objects.requireNonNull(workingDir);
             return this;
         }
-
         public GetServiceTemplateSpecContainer build() {
             return new GetServiceTemplateSpecContainer(args, commands, envFroms, envs, image, ports, resources, volumeMounts, workingDir);
         }

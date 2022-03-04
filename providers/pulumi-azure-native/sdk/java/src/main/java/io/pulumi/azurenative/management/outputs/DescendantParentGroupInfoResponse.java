@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.management.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DescendantParentGroupInfoResponse {
     /**
      * The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -54,7 +54,6 @@ public final class DescendantParentGroupInfoResponse {
             this.id = id;
             return this;
         }
-
         public DescendantParentGroupInfoResponse build() {
             return new DescendantParentGroupInfoResponse(id);
         }

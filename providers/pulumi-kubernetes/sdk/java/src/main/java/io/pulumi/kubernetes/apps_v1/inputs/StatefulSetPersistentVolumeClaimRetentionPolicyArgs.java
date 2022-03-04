@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
      * 
      */
     @InputImport(name="whenDeleted")
-    private final @Nullable Input<String> whenDeleted;
+      private final @Nullable Input<String> whenDeleted;
 
     public Input<String> getWhenDeleted() {
         return this.whenDeleted == null ? Input.empty() : this.whenDeleted;
@@ -34,7 +34,7 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
      * 
      */
     @InputImport(name="whenScaled")
-    private final @Nullable Input<String> whenScaled;
+      private final @Nullable Input<String> whenScaled;
 
     public Input<String> getWhenScaled() {
         return this.whenScaled == null ? Input.empty() : this.whenScaled;
@@ -93,7 +93,6 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
             this.whenScaled = Input.ofNullable(whenScaled);
             return this;
         }
-
         public StatefulSetPersistentVolumeClaimRetentionPolicyArgs build() {
             return new StatefulSetPersistentVolumeClaimRetentionPolicyArgs(whenDeleted, whenScaled);
         }

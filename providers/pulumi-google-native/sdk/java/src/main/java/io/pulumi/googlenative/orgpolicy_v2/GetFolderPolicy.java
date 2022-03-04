@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFolderPolicy {
-/**
- * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
+    private GetFolderPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetFolderPolicyArgs.Builder a);
+    }
+    private static GetFolderPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFolderPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
  * 
- */
+     */
+    public static CompletableFuture<GetFolderPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
+     * 
+     */
     public static CompletableFuture<GetFolderPolicyResult> invokeAsync(GetFolderPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:orgpolicy/v2:getFolderPolicy", TypeShape.of(GetFolderPolicyResult.class), args == null ? GetFolderPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +46,6 @@ public final class DeliveryStreamHiveJsonSerDe {
             this.timestampFormats = timestampFormats;
             return this;
         }
-
         public DeliveryStreamHiveJsonSerDe build() {
             return new DeliveryStreamHiveJsonSerDe(timestampFormats);
         }

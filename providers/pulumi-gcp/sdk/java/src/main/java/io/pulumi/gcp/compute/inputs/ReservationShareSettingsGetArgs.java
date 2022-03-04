@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ReservationShareSettingsProjectMapGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="projectMaps")
-    private final @Nullable Input<List<ReservationShareSettingsProjectMapGetArgs>> projectMaps;
+      private final @Nullable Input<List<ReservationShareSettingsProjectMapGetArgs>> projectMaps;
 
     public Input<List<ReservationShareSettingsProjectMapGetArgs>> getProjectMaps() {
         return this.projectMaps == null ? Input.empty() : this.projectMaps;
@@ -34,7 +34,7 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="shareType")
-    private final @Nullable Input<String> shareType;
+      private final @Nullable Input<String> shareType;
 
     public Input<String> getShareType() {
         return this.shareType == null ? Input.empty() : this.shareType;
@@ -93,7 +93,6 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
             this.shareType = Input.ofNullable(shareType);
             return this;
         }
-
         public ReservationShareSettingsGetArgs build() {
             return new ReservationShareSettingsGetArgs(projectMaps, shareType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.HeaderResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.I18nConfigResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.RedirectResponse;
@@ -72,49 +72,49 @@ public final class ServingConfigResponse {
     /**
      * How to handle well known App Association files.
      * 
-     */
+    */
     public String getAppAssociation() {
         return this.appAssociation;
     }
     /**
      * Defines whether to drop the file extension from uploaded files.
      * 
-     */
+    */
     public Boolean getCleanUrls() {
         return this.cleanUrls;
     }
     /**
      * An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
      * 
-     */
+    */
     public List<HeaderResponse> getHeaders() {
         return this.headers;
     }
     /**
      * Optional. Defines i18n rewrite behavior.
      * 
-     */
+    */
     public I18nConfigResponse getI18n() {
         return this.i18n;
     }
     /**
      * An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.
      * 
-     */
+    */
     public List<RedirectResponse> getRedirects() {
         return this.redirects;
     }
     /**
      * An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
      * 
-     */
+    */
     public List<RewriteResponse> getRewrites() {
         return this.rewrites;
     }
     /**
      * Defines how to handle a trailing slash in the URL path.
      * 
-     */
+    */
     public String getTrailingSlashBehavior() {
         return this.trailingSlashBehavior;
     }
@@ -185,7 +185,6 @@ public final class ServingConfigResponse {
             this.trailingSlashBehavior = Objects.requireNonNull(trailingSlashBehavior);
             return this;
         }
-
         public ServingConfigResponse build() {
             return new ServingConfigResponse(appAssociation, cleanUrls, headers, i18n, redirects, rewrites, trailingSlashBehavior);
         }

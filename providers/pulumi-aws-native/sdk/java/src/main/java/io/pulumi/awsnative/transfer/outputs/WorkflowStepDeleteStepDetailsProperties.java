@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.transfer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class WorkflowStepDeleteStepDetailsProperties {
     /**
      * The name of the step, used as an identifier.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -54,7 +54,6 @@ public final class WorkflowStepDeleteStepDetailsProperties {
             this.name = name;
             return this;
         }
-
         public WorkflowStepDeleteStepDetailsProperties build() {
             return new WorkflowStepDeleteStepDetailsProperties(name);
         }

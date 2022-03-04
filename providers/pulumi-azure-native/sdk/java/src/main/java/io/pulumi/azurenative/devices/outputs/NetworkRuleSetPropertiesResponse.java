@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.NetworkRuleSetIpRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,21 +43,21 @@ public final class NetworkRuleSetPropertiesResponse {
     /**
      * If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
      * 
-     */
+    */
     public Boolean getApplyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
     }
     /**
      * Default Action for Network Rule Set
      * 
-     */
+    */
     public Optional<String> getDefaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
      * List of IP Rules
      * 
-     */
+    */
     public List<NetworkRuleSetIpRuleResponse> getIpRules() {
         return this.ipRules;
     }
@@ -100,7 +100,6 @@ public final class NetworkRuleSetPropertiesResponse {
             this.ipRules = Objects.requireNonNull(ipRules);
             return this;
         }
-
         public NetworkRuleSetPropertiesResponse build() {
             return new NetworkRuleSetPropertiesResponse(applyToBuiltInEventHubEndpoint, defaultAction, ipRules);
         }

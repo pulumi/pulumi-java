@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
     /**
      * Signature id.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The signature state.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
@@ -76,7 +76,6 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
             this.mode = mode;
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionSignatureSpecificationResponse build() {
             return new FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(id, mode);
         }

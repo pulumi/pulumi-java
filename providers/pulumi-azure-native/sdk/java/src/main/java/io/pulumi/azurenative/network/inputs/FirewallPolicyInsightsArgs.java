@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyLogAnalyticsResourcesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -36,7 +36,7 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="logAnalyticsResources")
-    private final @Nullable Input<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources;
+      private final @Nullable Input<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources;
 
     public Input<FirewallPolicyLogAnalyticsResourcesArgs> getLogAnalyticsResources() {
         return this.logAnalyticsResources == null ? Input.empty() : this.logAnalyticsResources;
@@ -47,7 +47,7 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="retentionDays")
-    private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -121,7 +121,6 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }
-
         public FirewallPolicyInsightsArgs build() {
             return new FirewallPolicyInsightsArgs(isEnabled, logAnalyticsResources, retentionDays);
         }

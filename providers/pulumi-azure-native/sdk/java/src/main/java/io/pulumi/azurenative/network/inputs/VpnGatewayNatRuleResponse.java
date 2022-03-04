@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
 import io.pulumi.azurenative.network.inputs.VpnNatRuleMappingResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="egressVpnSiteLinkConnections", required=true)
-    private final List<SubResourceResponse> egressVpnSiteLinkConnections;
+      private final List<SubResourceResponse> egressVpnSiteLinkConnections;
 
     public List<SubResourceResponse> getEgressVpnSiteLinkConnections() {
         return this.egressVpnSiteLinkConnections;
@@ -37,7 +37,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -48,7 +48,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="externalMappings")
-    private final @Nullable List<VpnNatRuleMappingResponse> externalMappings;
+      private final @Nullable List<VpnNatRuleMappingResponse> externalMappings;
 
     public List<VpnNatRuleMappingResponse> getExternalMappings() {
         return this.externalMappings == null ? List.of() : this.externalMappings;
@@ -59,7 +59,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -70,7 +70,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ingressVpnSiteLinkConnections", required=true)
-    private final List<SubResourceResponse> ingressVpnSiteLinkConnections;
+      private final List<SubResourceResponse> ingressVpnSiteLinkConnections;
 
     public List<SubResourceResponse> getIngressVpnSiteLinkConnections() {
         return this.ingressVpnSiteLinkConnections;
@@ -81,7 +81,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="internalMappings")
-    private final @Nullable List<VpnNatRuleMappingResponse> internalMappings;
+      private final @Nullable List<VpnNatRuleMappingResponse> internalMappings;
 
     public List<VpnNatRuleMappingResponse> getInternalMappings() {
         return this.internalMappings == null ? List.of() : this.internalMappings;
@@ -92,7 +92,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ipConfigurationId")
-    private final @Nullable String ipConfigurationId;
+      private final @Nullable String ipConfigurationId;
 
     public Optional<String> getIpConfigurationId() {
         return this.ipConfigurationId == null ? Optional.empty() : Optional.ofNullable(this.ipConfigurationId);
@@ -103,7 +103,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+      private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -114,7 +114,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -125,7 +125,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -136,7 +136,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -275,7 +275,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VpnGatewayNatRuleResponse build() {
             return new VpnGatewayNatRuleResponse(egressVpnSiteLinkConnections, etag, externalMappings, id, ingressVpnSiteLinkConnections, internalMappings, ipConfigurationId, mode, name, provisioningState, type);
         }

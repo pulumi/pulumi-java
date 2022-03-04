@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class AzNsActionGroupResponse {
     /**
      * Azure Action Group reference.
      * 
-     */
+    */
     public List<String> getActionGroup() {
         return this.actionGroup == null ? List.of() : this.actionGroup;
     }
     /**
      * Custom payload to be sent for all webhook URI in Azure action group
      * 
-     */
+    */
     public Optional<String> getCustomWebhookPayload() {
         return Optional.ofNullable(this.customWebhookPayload);
     }
     /**
      * Custom subject override for all email ids in Azure action group
      * 
-     */
+    */
     public Optional<String> getEmailSubject() {
         return Optional.ofNullable(this.emailSubject);
     }
@@ -98,7 +98,6 @@ public final class AzNsActionGroupResponse {
             this.emailSubject = emailSubject;
             return this;
         }
-
         public AzNsActionGroupResponse build() {
             return new AzNsActionGroupResponse(actionGroup, customWebhookPayload, emailSubject);
         }

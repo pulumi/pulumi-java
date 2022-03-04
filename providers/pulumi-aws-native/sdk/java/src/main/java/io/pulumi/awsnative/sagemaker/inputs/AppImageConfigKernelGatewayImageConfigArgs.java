@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.AppImageConfigFileSystemConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.AppImageConfigKernelSpecArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fileSystemConfig")
-    private final @Nullable Input<AppImageConfigFileSystemConfigArgs> fileSystemConfig;
+      private final @Nullable Input<AppImageConfigFileSystemConfigArgs> fileSystemConfig;
 
     public Input<AppImageConfigFileSystemConfigArgs> getFileSystemConfig() {
         return this.fileSystemConfig == null ? Input.empty() : this.fileSystemConfig;
@@ -36,7 +36,7 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="kernelSpecs", required=true)
-    private final Input<List<AppImageConfigKernelSpecArgs>> kernelSpecs;
+      private final Input<List<AppImageConfigKernelSpecArgs>> kernelSpecs;
 
     public Input<List<AppImageConfigKernelSpecArgs>> getKernelSpecs() {
         return this.kernelSpecs;
@@ -95,7 +95,6 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
             this.kernelSpecs = Input.of(Objects.requireNonNull(kernelSpecs));
             return this;
         }
-
         public AppImageConfigKernelGatewayImageConfigArgs build() {
             return new AppImageConfigKernelGatewayImageConfigArgs(fileSystemConfig, kernelSpecs);
         }

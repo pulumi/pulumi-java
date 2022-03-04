@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="consoleScreenshotBlobUri", required=true)
-    private final String consoleScreenshotBlobUri;
+      private final String consoleScreenshotBlobUri;
 
     public String getConsoleScreenshotBlobUri() {
         return this.consoleScreenshotBlobUri;
@@ -33,7 +33,7 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serialConsoleLogBlobUri", required=true)
-    private final String serialConsoleLogBlobUri;
+      private final String serialConsoleLogBlobUri;
 
     public String getSerialConsoleLogBlobUri() {
         return this.serialConsoleLogBlobUri;
@@ -44,7 +44,7 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="status", required=true)
-    private final InstanceViewStatusResponse status;
+      private final InstanceViewStatusResponse status;
 
     public InstanceViewStatusResponse getStatus() {
         return this.status;
@@ -103,7 +103,6 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BootDiagnosticsInstanceViewResponse build() {
             return new BootDiagnosticsInstanceViewResponse(consoleScreenshotBlobUri, serialConsoleLogBlobUri, status);
         }

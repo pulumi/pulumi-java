@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class ExperimentTreatmentObject extends io.pulumi.resources.InvokeA
     public static final ExperimentTreatmentObject Empty = new ExperimentTreatmentObject();
 
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @InputImport(name="feature", required=true)
-    private final String feature;
+      private final String feature;
 
     public String getFeature() {
         return this.feature;
     }
 
     @InputImport(name="treatmentName", required=true)
-    private final String treatmentName;
+      private final String treatmentName;
 
     public String getTreatmentName() {
         return this.treatmentName;
     }
 
     @InputImport(name="variation", required=true)
-    private final String variation;
+      private final String variation;
 
     public String getVariation() {
         return this.variation;
@@ -105,7 +105,6 @@ public final class ExperimentTreatmentObject extends io.pulumi.resources.InvokeA
             this.variation = Objects.requireNonNull(variation);
             return this;
         }
-
         public ExperimentTreatmentObject build() {
             return new ExperimentTreatmentObject(description, feature, treatmentName, variation);
         }

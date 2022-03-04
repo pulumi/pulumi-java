@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ScriptActionResponse {
     /**
      * The name of the script action.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The parameters for the script provided.
      * 
-     */
+    */
     public String getParameters() {
         return this.parameters;
     }
     /**
      * The URI to the script.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -95,7 +95,6 @@ public final class ScriptActionResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ScriptActionResponse build() {
             return new ScriptActionResponse(name, parameters, uri);
         }

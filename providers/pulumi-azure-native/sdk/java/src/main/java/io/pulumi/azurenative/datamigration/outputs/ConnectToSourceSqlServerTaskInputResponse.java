@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
     /**
      * Permission group for validations
      * 
-     */
+    */
     public Optional<String> getCheckPermissionsGroup() {
         return Optional.ofNullable(this.checkPermissionsGroup);
     }
     /**
      * Flag for whether to collect agent jobs from source server.
      * 
-     */
+    */
     public Optional<Boolean> getCollectAgentJobs() {
         return Optional.ofNullable(this.collectAgentJobs);
     }
     /**
      * Flag for whether to collect logins from source server.
      * 
-     */
+    */
     public Optional<Boolean> getCollectLogins() {
         return Optional.ofNullable(this.collectLogins);
     }
     /**
      * Connection information for Source SQL Server
      * 
-     */
+    */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -120,7 +120,6 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskInputResponse build() {
             return new ConnectToSourceSqlServerTaskInputResponse(checkPermissionsGroup, collectAgentJobs, collectLogins, sourceConnectionInfo);
         }

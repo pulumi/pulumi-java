@@ -11,8 +11,8 @@ import io.pulumi.azurenative.securityandcompliance.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -162,6 +162,37 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PrivateLinkServicesForEDMUploadArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.securityandcompliance.PrivateLinkServicesForEDMUploadArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.securityandcompliance.PrivateLinkServicesForEDMUploadArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PrivateLinkServicesForEDMUpload(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PrivateLinkServicesForEDMUpload(String name) {
+        this(name, PrivateLinkServicesForEDMUploadArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrivateLinkServicesForEDMUpload(String name, PrivateLinkServicesForEDMUploadArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

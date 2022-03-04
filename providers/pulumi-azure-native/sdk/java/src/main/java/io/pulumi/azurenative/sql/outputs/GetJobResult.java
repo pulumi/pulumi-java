@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.JobScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class GetJobResult {
     /**
      * User-defined description of the job.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Schedule properties of the job.
      * 
-     */
+    */
     public Optional<JobScheduleResponse> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The job version number.
      * 
-     */
+    */
     public Integer getVersion() {
         return this.version;
     }
@@ -162,7 +162,6 @@ public final class GetJobResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(description, id, name, schedule, type, version);
         }

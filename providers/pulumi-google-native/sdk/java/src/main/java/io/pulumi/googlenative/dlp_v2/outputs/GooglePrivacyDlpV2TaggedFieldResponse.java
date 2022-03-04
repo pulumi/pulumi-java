@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GoogleProtobufEmptyResponse;
@@ -48,28 +48,28 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse {
     /**
      * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
      * 
-     */
+    */
     public String getCustomTag() {
         return this.customTag;
     }
     /**
      * Identifies the column.
      * 
-     */
+    */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }
     /**
      * If no semantic tag is indicated, we infer the statistical model from the distribution of values in the input data
      * 
-     */
+    */
     public GoogleProtobufEmptyResponse getInferred() {
         return this.inferred;
     }
     /**
      * A column can be tagged with a InfoType to use the relevant public dataset as a statistical model of population, if available. We currently support US ZIP codes, region codes, ages and genders. To programmatically obtain the list of supported InfoTypes, use ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
      * 
-     */
+    */
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
         return this.infoType;
     }
@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public GooglePrivacyDlpV2TaggedFieldResponse build() {
             return new GooglePrivacyDlpV2TaggedFieldResponse(customTag, field, inferred, infoType);
         }

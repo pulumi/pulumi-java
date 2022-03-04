@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SourceResponse {
     /**
      * Source name for content indexed by the Indexing API.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Predefined content source for Google Apps.
      * 
-     */
+    */
     public String getPredefinedSource() {
         return this.predefinedSource;
     }
@@ -74,7 +74,6 @@ public final class SourceResponse {
             this.predefinedSource = Objects.requireNonNull(predefinedSource);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(name, predefinedSource);
         }

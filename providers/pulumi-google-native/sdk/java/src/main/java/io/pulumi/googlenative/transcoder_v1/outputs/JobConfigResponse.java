@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AdBreakResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.EditAtomResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.ElementaryStreamResponse;
@@ -97,70 +97,70 @@ public final class JobConfigResponse {
     /**
      * List of ad breaks. Specifies where to insert ad break tags in the output manifests.
      * 
-     */
+    */
     public List<AdBreakResponse> getAdBreaks() {
         return this.adBreaks;
     }
     /**
      * List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
      * 
-     */
+    */
     public List<EditAtomResponse> getEditList() {
         return this.editList;
     }
     /**
      * List of elementary streams.
      * 
-     */
+    */
     public List<ElementaryStreamResponse> getElementaryStreams() {
         return this.elementaryStreams;
     }
     /**
      * List of input assets stored in Cloud Storage.
      * 
-     */
+    */
     public List<InputResponse> getInputs() {
         return this.inputs;
     }
     /**
      * List of output manifests.
      * 
-     */
+    */
     public List<ManifestResponse> getManifests() {
         return this.manifests;
     }
     /**
      * List of multiplexing settings for output streams.
      * 
-     */
+    */
     public List<MuxStreamResponse> getMuxStreams() {
         return this.muxStreams;
     }
     /**
      * Output configuration.
      * 
-     */
+    */
     public OutputResponse getOutput() {
         return this.output;
     }
     /**
      * List of overlays on the output video, in descending Z-order.
      * 
-     */
+    */
     public List<OverlayResponse> getOverlays() {
         return this.overlays;
     }
     /**
      * Destination on Pub/Sub.
      * 
-     */
+    */
     public PubsubDestinationResponse getPubsubDestination() {
         return this.pubsubDestination;
     }
     /**
      * List of output sprite sheets.
      * 
-     */
+    */
     public List<SpriteSheetResponse> getSpriteSheets() {
         return this.spriteSheets;
     }
@@ -252,7 +252,6 @@ public final class JobConfigResponse {
             this.spriteSheets = Objects.requireNonNull(spriteSheets);
             return this;
         }
-
         public JobConfigResponse build() {
             return new JobConfigResponse(adBreaks, editList, elementaryStreams, inputs, manifests, muxStreams, output, overlays, pubsubDestination, spriteSheets);
         }

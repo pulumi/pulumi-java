@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -35,7 +35,7 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="optional")
-    private final @Nullable Input<Boolean> optional;
+      private final @Nullable Input<Boolean> optional;
 
     public Input<Boolean> getOptional() {
         return this.optional == null ? Input.empty() : this.optional;
@@ -120,7 +120,6 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
             this.optional = Input.ofNullable(optional);
             return this;
         }
-
         public ConfigMapKeySelectorArgs build() {
             return new ConfigMapKeySelectorArgs(key, name, optional);
         }

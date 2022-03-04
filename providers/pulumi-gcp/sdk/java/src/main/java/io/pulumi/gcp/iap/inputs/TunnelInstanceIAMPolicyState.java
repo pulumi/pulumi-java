@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TunnelInstanceIAMPolicyState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -30,7 +30,7 @@ public final class TunnelInstanceIAMPolicyState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -42,7 +42,7 @@ public final class TunnelInstanceIAMPolicyState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -54,14 +54,14 @@ public final class TunnelInstanceIAMPolicyState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -165,7 +165,6 @@ public final class TunnelInstanceIAMPolicyState extends io.pulumi.resources.Reso
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public TunnelInstanceIAMPolicyState build() {
             return new TunnelInstanceIAMPolicyState(etag, instance, policyData, project, zone);
         }

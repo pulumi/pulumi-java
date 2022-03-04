@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+      private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -35,7 +35,7 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -46,7 +46,7 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -58,7 +58,7 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -69,7 +69,7 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable String userName;
+      private final @Nullable String userName;
 
     public Optional<String> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
@@ -148,7 +148,6 @@ public final class MySqlConnectionInfoResponse extends io.pulumi.resources.Invok
             this.userName = userName;
             return this;
         }
-
         public MySqlConnectionInfoResponse build() {
             return new MySqlConnectionInfoResponse(password, port, serverName, type, userName);
         }

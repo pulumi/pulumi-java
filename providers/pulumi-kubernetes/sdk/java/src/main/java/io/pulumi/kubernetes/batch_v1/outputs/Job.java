@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.batch_v1.outputs.JobSpec;
 import io.pulumi.kubernetes.batch_v1.outputs.JobStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -57,35 +57,35 @@ public final class Job {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
-     */
+    */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
-     */
+    */
     public Optional<JobSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }
     /**
      * Current status of a job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
-     */
+    */
     public Optional<JobStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -142,7 +142,6 @@ public final class Job {
             this.status = status;
             return this;
         }
-
         public Job build() {
             return new Job(apiVersion, kind, metadata, spec, status);
         }

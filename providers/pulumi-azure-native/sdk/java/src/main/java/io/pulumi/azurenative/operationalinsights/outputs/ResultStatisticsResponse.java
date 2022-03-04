@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ResultStatisticsResponse {
     /**
      * The number of rows that were returned by the search job.
      * 
-     */
+    */
     public Integer getIngestedRecords() {
         return this.ingestedRecords;
     }
     /**
      * Search job completion percentage.
      * 
-     */
+    */
     public Double getProgress() {
         return this.progress;
     }
@@ -75,7 +75,6 @@ public final class ResultStatisticsResponse {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
-
         public ResultStatisticsResponse build() {
             return new ResultStatisticsResponse(ingestedRecords, progress);
         }

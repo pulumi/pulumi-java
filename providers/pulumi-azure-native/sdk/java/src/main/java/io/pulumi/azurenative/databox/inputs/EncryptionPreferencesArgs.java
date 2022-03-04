@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.enums.DoubleEncryption;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="doubleEncryption")
-    private final @Nullable Input<Either<String,DoubleEncryption>> doubleEncryption;
+      private final @Nullable Input<Either<String,DoubleEncryption>> doubleEncryption;
 
     public Input<Either<String,DoubleEncryption>> getDoubleEncryption() {
         return this.doubleEncryption == null ? Input.empty() : this.doubleEncryption;
@@ -68,7 +68,6 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
             this.doubleEncryption = Input.ofNullable(doubleEncryption);
             return this;
         }
-
         public EncryptionPreferencesArgs build() {
             return new EncryptionPreferencesArgs(doubleEncryption);
         }

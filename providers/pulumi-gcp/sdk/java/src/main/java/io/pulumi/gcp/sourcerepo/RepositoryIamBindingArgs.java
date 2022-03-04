@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sourcerepo;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sourcerepo.inputs.RepositoryIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,14 +17,14 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
     public static final RepositoryIamBindingArgs Empty = new RepositoryIamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<RepositoryIamBindingConditionArgs> condition;
+      private final @Nullable Input<RepositoryIamBindingConditionArgs> condition;
 
     public Input<RepositoryIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -36,14 +36,14 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="repository", required=true)
-    private final Input<String> repository;
+      private final Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository;
@@ -56,7 +56,7 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -160,7 +160,6 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public RepositoryIamBindingArgs build() {
             return new RepositoryIamBindingArgs(condition, members, project, repository, role);
         }

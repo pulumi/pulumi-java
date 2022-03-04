@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.inputs.AzureQueryPropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.NonAzureQueryPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="azureQueries")
-    private final @Nullable Input<List<AzureQueryPropertiesArgs>> azureQueries;
+      private final @Nullable Input<List<AzureQueryPropertiesArgs>> azureQueries;
 
     public Input<List<AzureQueryPropertiesArgs>> getAzureQueries() {
         return this.azureQueries == null ? Input.empty() : this.azureQueries;
@@ -36,7 +36,7 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nonAzureQueries")
-    private final @Nullable Input<List<NonAzureQueryPropertiesArgs>> nonAzureQueries;
+      private final @Nullable Input<List<NonAzureQueryPropertiesArgs>> nonAzureQueries;
 
     public Input<List<NonAzureQueryPropertiesArgs>> getNonAzureQueries() {
         return this.nonAzureQueries == null ? Input.empty() : this.nonAzureQueries;
@@ -95,7 +95,6 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.nonAzureQueries = Input.ofNullable(nonAzureQueries);
             return this;
         }
-
         public TargetPropertiesArgs build() {
             return new TargetPropertiesArgs(azureQueries, nonAzureQueries);
         }

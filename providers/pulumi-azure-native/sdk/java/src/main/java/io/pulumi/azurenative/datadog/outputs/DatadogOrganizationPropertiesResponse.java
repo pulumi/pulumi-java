@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DatadogOrganizationPropertiesResponse {
     /**
      * Id of the Datadog organization.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the Datadog organization.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class DatadogOrganizationPropertiesResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DatadogOrganizationPropertiesResponse build() {
             return new DatadogOrganizationPropertiesResponse(id, name);
         }

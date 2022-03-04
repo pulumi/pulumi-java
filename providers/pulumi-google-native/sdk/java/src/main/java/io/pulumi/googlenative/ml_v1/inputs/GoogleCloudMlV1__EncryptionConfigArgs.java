@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__EncryptionConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -66,7 +66,6 @@ public final class GoogleCloudMlV1__EncryptionConfigArgs extends io.pulumi.resou
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
-
         public GoogleCloudMlV1__EncryptionConfigArgs build() {
             return new GoogleCloudMlV1__EncryptionConfigArgs(kmsKeyName);
         }

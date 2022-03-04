@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.billing.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
      * 
      */
     @InputImport(name="billingAccountName", required=true)
-    private final String billingAccountName;
+      private final String billingAccountName;
 
     public String getBillingAccountName() {
         return this.billingAccountName;
@@ -55,7 +55,6 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
             this.billingAccountName = Objects.requireNonNull(billingAccountName);
             return this;
         }
-
         public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs build() {
             return new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs(billingAccountName);
         }

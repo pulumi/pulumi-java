@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.BlobRestoreParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,28 +46,28 @@ public final class BlobRestoreStatusResponse {
     /**
      * Failure reason when blob restore is failed.
      * 
-     */
+    */
     public String getFailureReason() {
         return this.failureReason;
     }
     /**
      * Blob restore request parameters.
      * 
-     */
+    */
     public BlobRestoreParametersResponse getParameters() {
         return this.parameters;
     }
     /**
      * Id for tracking blob restore request.
      * 
-     */
+    */
     public String getRestoreId() {
         return this.restoreId;
     }
     /**
      * The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -117,7 +117,6 @@ public final class BlobRestoreStatusResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BlobRestoreStatusResponse build() {
             return new BlobRestoreStatusResponse(failureReason, parameters, restoreId, status);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.orgpolicy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.orgpolicy.inputs.PolicySpecRuleGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -34,7 +34,7 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inheritFromParent")
-    private final @Nullable Input<Boolean> inheritFromParent;
+      private final @Nullable Input<Boolean> inheritFromParent;
 
     public Input<Boolean> getInheritFromParent() {
         return this.inheritFromParent == null ? Input.empty() : this.inheritFromParent;
@@ -45,7 +45,7 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reset")
-    private final @Nullable Input<Boolean> reset;
+      private final @Nullable Input<Boolean> reset;
 
     public Input<Boolean> getReset() {
         return this.reset == null ? Input.empty() : this.reset;
@@ -56,7 +56,7 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<PolicySpecRuleGetArgs>> rules;
+      private final @Nullable Input<List<PolicySpecRuleGetArgs>> rules;
 
     public Input<List<PolicySpecRuleGetArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -68,7 +68,7 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -172,7 +172,6 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public PolicySpecGetArgs build() {
             return new PolicySpecGetArgs(etag, inheritFromParent, reset, rules, updateTime);
         }

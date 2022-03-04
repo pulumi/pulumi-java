@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.RemotePrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,35 +53,35 @@ public final class GetPrivateEndpointConnectionResult {
     /**
      * Etag identifies change in the resource.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Core resource properties
      * 
-     */
+    */
     public RemotePrivateEndpointConnectionResponse getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -138,7 +138,6 @@ public final class GetPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionResult build() {
             return new GetPrivateEndpointConnectionResult(etag, id, name, properties, type);
         }

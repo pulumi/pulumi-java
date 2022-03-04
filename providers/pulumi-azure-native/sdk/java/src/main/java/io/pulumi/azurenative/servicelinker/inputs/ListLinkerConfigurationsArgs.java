@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListLinkerConfigurationsArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="linkerName", required=true)
-    private final String linkerName;
+      private final String linkerName;
 
     public String getLinkerName() {
         return this.linkerName;
@@ -28,7 +28,7 @@ public final class ListLinkerConfigurationsArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -77,7 +77,6 @@ public final class ListLinkerConfigurationsArgs extends io.pulumi.resources.Invo
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public ListLinkerConfigurationsArgs build() {
             return new ListLinkerConfigurationsArgs(linkerName, resourceUri);
         }

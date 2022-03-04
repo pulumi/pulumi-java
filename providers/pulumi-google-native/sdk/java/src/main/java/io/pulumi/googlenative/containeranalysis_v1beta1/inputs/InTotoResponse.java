@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactRuleResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SigningKeyResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expectedCommand", required=true)
-    private final List<String> expectedCommand;
+      private final List<String> expectedCommand;
 
     public List<String> getExpectedCommand() {
         return this.expectedCommand;
@@ -35,14 +35,14 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expectedMaterials", required=true)
-    private final List<ArtifactRuleResponse> expectedMaterials;
+      private final List<ArtifactRuleResponse> expectedMaterials;
 
     public List<ArtifactRuleResponse> getExpectedMaterials() {
         return this.expectedMaterials;
     }
 
     @InputImport(name="expectedProducts", required=true)
-    private final List<ArtifactRuleResponse> expectedProducts;
+      private final List<ArtifactRuleResponse> expectedProducts;
 
     public List<ArtifactRuleResponse> getExpectedProducts() {
         return this.expectedProducts;
@@ -53,7 +53,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="signingKeys", required=true)
-    private final List<SigningKeyResponse> signingKeys;
+      private final List<SigningKeyResponse> signingKeys;
 
     public List<SigningKeyResponse> getSigningKeys() {
         return this.signingKeys;
@@ -64,7 +64,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stepName", required=true)
-    private final String stepName;
+      private final String stepName;
 
     public String getStepName() {
         return this.stepName;
@@ -75,7 +75,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final String threshold;
+      private final String threshold;
 
     public String getThreshold() {
         return this.threshold;
@@ -164,7 +164,6 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public InTotoResponse build() {
             return new InTotoResponse(expectedCommand, expectedMaterials, expectedProducts, signingKeys, stepName, threshold);
         }

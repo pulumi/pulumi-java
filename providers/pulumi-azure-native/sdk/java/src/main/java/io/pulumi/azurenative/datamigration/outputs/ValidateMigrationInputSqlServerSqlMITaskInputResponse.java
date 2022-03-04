@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.outputs.BlobShareResponse;
 import io.pulumi.azurenative.datamigration.outputs.FileShareResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlMIDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -73,49 +73,49 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
     /**
      * SAS URI of Azure Storage Account Container to be used for storing backup files.
      * 
-     */
+    */
     public BlobShareResponse getBackupBlobShare() {
         return this.backupBlobShare;
     }
     /**
      * Backup file share information for all selected databases.
      * 
-     */
+    */
     public Optional<FileShareResponse> getBackupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
     /**
      * Backup Mode to specify whether to use existing backup or create new backup.
      * 
-     */
+    */
     public Optional<String> getBackupMode() {
         return Optional.ofNullable(this.backupMode);
     }
     /**
      * Databases to migrate
      * 
-     */
+    */
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Logins to migrate
      * 
-     */
+    */
     public List<String> getSelectedLogins() {
         return this.selectedLogins == null ? List.of() : this.selectedLogins;
     }
     /**
      * Information for connecting to source
      * 
-     */
+    */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Information for connecting to target
      * 
-     */
+    */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -186,7 +186,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMITaskInputResponse build() {
             return new ValidateMigrationInputSqlServerSqlMITaskInputResponse(backupBlobShare, backupFileShare, backupMode, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.servicecatalogappregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetAttributeGroupAssociationArgs extends io.pulumi.resources.
     public static final GetAttributeGroupAssociationArgs Empty = new GetAttributeGroupAssociationArgs();
 
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -51,7 +51,6 @@ public final class GetAttributeGroupAssociationArgs extends io.pulumi.resources.
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetAttributeGroupAssociationArgs build() {
             return new GetAttributeGroupAssociationArgs(id);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class CorsPolicyResponse {
     /**
      * The request headers that the origin domain may specify on the CORS request.
      * 
-     */
+    */
     public Optional<String> getAllowedHeaders() {
         return Optional.ofNullable(this.allowedHeaders);
     }
     /**
      * The methods (HTTP request verbs) that the origin domain may use for a CORS request.
      * 
-     */
+    */
     public Optional<String> getAllowedMethods() {
         return Optional.ofNullable(this.allowedMethods);
     }
     /**
      * The origin domains that are permitted to make a request against the service via CORS.
      * 
-     */
+    */
     public String getAllowedOrigins() {
         return this.allowedOrigins;
     }
     /**
      * The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
      * 
-     */
+    */
     public Optional<String> getExposedHeaders() {
         return Optional.ofNullable(this.exposedHeaders);
     }
     /**
      * The maximum amount time that a browser should cache the preflight OPTIONS request.
      * 
-     */
+    */
     public Optional<Double> getMaxAgeInSeconds() {
         return Optional.ofNullable(this.maxAgeInSeconds);
     }
@@ -140,7 +140,6 @@ public final class CorsPolicyResponse {
             this.maxAgeInSeconds = maxAgeInSeconds;
             return this;
         }
-
         public CorsPolicyResponse build() {
             return new CorsPolicyResponse(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class OriginEndpointAuthorization {
     /**
      * The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
      * 
-     */
+    */
     public String getCdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
     /**
      * The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
      * 
-     */
+    */
     public String getSecretsRoleArn() {
         return this.secretsRoleArn;
     }
@@ -74,7 +74,6 @@ public final class OriginEndpointAuthorization {
             this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
             return this;
         }
-
         public OriginEndpointAuthorization build() {
             return new OriginEndpointAuthorization(cdnIdentifierSecret, secretsRoleArn);
         }

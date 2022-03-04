@@ -6,21 +6,41 @@ package io.pulumi.azurenative.dataprotection;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dataprotection.inputs.GetBackupVaultArgs;
 import io.pulumi.azurenative.dataprotection.outputs.GetBackupVaultResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupVault {
-/**
- * Backup Vault Resource
+    private GetBackupVault() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupVaultArgs.Builder a);
+    }
+    private static GetBackupVaultArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupVaultArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Backup Vault Resource
  * API Version: 2021-01-01.
  * 
- *
- * Backup Vault Resource
+     *
+     * Backup Vault Resource
  * 
- */
+     */
+    public static CompletableFuture<GetBackupVaultResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Backup Vault Resource
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Backup Vault Resource
+     * 
+     */
     public static CompletableFuture<GetBackupVaultResult> invokeAsync(GetBackupVaultArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dataprotection:getBackupVault", TypeShape.of(GetBackupVaultResult.class), args == null ? GetBackupVaultArgs.Empty : args, Utilities.withVersion(options));
     }

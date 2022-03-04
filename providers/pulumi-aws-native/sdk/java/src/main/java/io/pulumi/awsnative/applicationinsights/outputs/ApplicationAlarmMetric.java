@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ApplicationAlarmMetric {
     /**
      * The name of the metric to be monitored for the component.
      * 
-     */
+    */
     public String getAlarmMetricName() {
         return this.alarmMetricName;
     }
@@ -52,7 +52,6 @@ public final class ApplicationAlarmMetric {
             this.alarmMetricName = Objects.requireNonNull(alarmMetricName);
             return this;
         }
-
         public ApplicationAlarmMetric build() {
             return new ApplicationAlarmMetric(alarmMetricName);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ExpressionResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -73,35 +73,35 @@ public final class FilterActivityResponse {
     /**
      * Condition to be used for filtering the input.
      * 
-     */
+    */
     public ExpressionResponse getCondition() {
         return this.condition;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Input array on which filter should be applied.
      * 
-     */
+    */
     public ExpressionResponse getItems() {
         return this.items;
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -109,14 +109,14 @@ public final class FilterActivityResponse {
      * Type of activity.
      * Expected value is 'Filter'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -187,7 +187,6 @@ public final class FilterActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public FilterActivityResponse build() {
             return new FilterActivityResponse(condition, dependsOn, description, items, name, type, userProperties);
         }

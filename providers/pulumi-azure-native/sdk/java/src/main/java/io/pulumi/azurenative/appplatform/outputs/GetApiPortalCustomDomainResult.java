@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.ApiPortalCustomDomainPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,35 +54,35 @@ public final class GetApiPortalCustomDomainResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of custom domain for API portal
      * 
-     */
+    */
     public ApiPortalCustomDomainPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetApiPortalCustomDomainResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApiPortalCustomDomainResult build() {
             return new GetApiPortalCustomDomainResult(id, name, properties, systemData, type);
         }

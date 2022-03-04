@@ -6,21 +6,41 @@ package io.pulumi.azurenative.netapp;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.netapp.inputs.GetBackupArgs;
 import io.pulumi.azurenative.netapp.outputs.GetBackupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackup {
-/**
- * Backup of a Volume
+    private GetBackup() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupArgs.Builder a);
+    }
+    private static GetBackupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Backup of a Volume
  * API Version: 2020-12-01.
  * 
- *
- * Backup of a Volume
+     *
+     * Backup of a Volume
  * 
- */
+     */
+    public static CompletableFuture<GetBackupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Backup of a Volume
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Backup of a Volume
+     * 
+     */
     public static CompletableFuture<GetBackupResult> invokeAsync(GetBackupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getBackup", TypeShape.of(GetBackupResult.class), args == null ? GetBackupArgs.Empty : args, Utilities.withVersion(options));
     }

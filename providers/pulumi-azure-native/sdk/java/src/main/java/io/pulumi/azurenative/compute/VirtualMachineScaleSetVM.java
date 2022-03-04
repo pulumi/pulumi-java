@@ -22,8 +22,8 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMProtectionP
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -409,6 +409,37 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
         return this.zones;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VirtualMachineScaleSetVMArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.compute.VirtualMachineScaleSetVMArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.compute.VirtualMachineScaleSetVMArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VirtualMachineScaleSetVM(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VirtualMachineScaleSetVM(String name) {
+        this(name, VirtualMachineScaleSetVMArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VirtualMachineScaleSetVM(String name, VirtualMachineScaleSetVMArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AaaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6Address")
-    private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Input<String> ipv6Address;
 
     public Input<String> getIpv6Address() {
         return this.ipv6Address == null ? Input.empty() : this.ipv6Address;
@@ -66,7 +66,6 @@ public final class AaaaRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.ipv6Address = Input.ofNullable(ipv6Address);
             return this;
         }
-
         public AaaaRecordArgs build() {
             return new AaaaRecordArgs(ipv6Address);
         }

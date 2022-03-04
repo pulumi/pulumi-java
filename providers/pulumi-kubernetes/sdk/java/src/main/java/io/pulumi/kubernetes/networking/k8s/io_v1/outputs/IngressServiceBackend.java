@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.ServiceBackendPort;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class IngressServiceBackend {
     /**
      * Name is the referenced service. The service must exist in the same namespace as the Ingress object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
      * 
-     */
+    */
     public Optional<ServiceBackendPort> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -77,7 +77,6 @@ public final class IngressServiceBackend {
             this.port = port;
             return this;
         }
-
         public IngressServiceBackend build() {
             return new IngressServiceBackend(name, port);
         }

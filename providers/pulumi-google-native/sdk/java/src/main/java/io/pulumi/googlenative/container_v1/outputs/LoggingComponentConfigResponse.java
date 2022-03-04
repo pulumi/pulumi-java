@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LoggingComponentConfigResponse {
     /**
      * Select components to collect logs. An empty set would disable all logging.
      * 
-     */
+    */
     public List<String> getEnableComponents() {
         return this.enableComponents;
     }
@@ -53,7 +53,6 @@ public final class LoggingComponentConfigResponse {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public LoggingComponentConfigResponse build() {
             return new LoggingComponentConfigResponse(enableComponents);
         }

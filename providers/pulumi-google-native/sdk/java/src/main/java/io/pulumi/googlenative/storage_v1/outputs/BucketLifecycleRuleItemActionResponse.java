@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BucketLifecycleRuleItemActionResponse {
     /**
      * Target storage class. Required iff the type of the action is SetStorageClass.
      * 
-     */
+    */
     public String getStorageClass() {
         return this.storageClass;
     }
     /**
      * Type of the action. Currently, only Delete and SetStorageClass are supported.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class BucketLifecycleRuleItemActionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BucketLifecycleRuleItemActionResponse build() {
             return new BucketLifecycleRuleItemActionResponse(storageClass, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetRequestConfigData;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class GetSpotFleetResult {
             this.spotFleetRequestConfigData = spotFleetRequestConfigData;
             return this;
         }
-
         public GetSpotFleetResult build() {
             return new GetSpotFleetResult(id, spotFleetRequestConfigData);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.AttributeGroupTags;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -53,7 +53,7 @@ public final class GetAttributeGroupResult {
     /**
      * The description of the attribute group.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -63,7 +63,7 @@ public final class GetAttributeGroupResult {
     /**
      * The name of the attribute group.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -130,7 +130,6 @@ public final class GetAttributeGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetAttributeGroupResult build() {
             return new GetAttributeGroupResult(arn, attributes, description, id, name, tags);
         }

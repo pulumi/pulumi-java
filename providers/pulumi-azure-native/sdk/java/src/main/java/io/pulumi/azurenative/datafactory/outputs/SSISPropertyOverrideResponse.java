@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class SSISPropertyOverrideResponse {
     /**
      * Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
      * 
-     */
+    */
     public Optional<Boolean> getIsSensitive() {
         return Optional.ofNullable(this.isSensitive);
     }
     /**
      * SSIS package property override value. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getValue() {
         return this.value;
     }
@@ -77,7 +77,6 @@ public final class SSISPropertyOverrideResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SSISPropertyOverrideResponse build() {
             return new SSISPropertyOverrideResponse(isSensitive, value);
         }

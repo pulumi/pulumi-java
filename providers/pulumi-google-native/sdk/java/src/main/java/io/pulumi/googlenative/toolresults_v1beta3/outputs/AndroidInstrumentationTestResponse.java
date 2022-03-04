@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class AndroidInstrumentationTestResponse {
     /**
      * The java package for the test to be executed. Required
      * 
-     */
+    */
     public String getTestPackageId() {
         return this.testPackageId;
     }
     /**
      * The InstrumentationTestRunner class. Required
      * 
-     */
+    */
     public String getTestRunnerClass() {
         return this.testRunnerClass;
     }
     /**
      * Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.
      * 
-     */
+    */
     public List<String> getTestTargets() {
         return this.testTargets;
     }
     /**
      * The flag indicates whether Android Test Orchestrator will be used to run test or not.
      * 
-     */
+    */
     public Boolean getUseOrchestrator() {
         return this.useOrchestrator;
     }
@@ -118,7 +118,6 @@ public final class AndroidInstrumentationTestResponse {
             this.useOrchestrator = Objects.requireNonNull(useOrchestrator);
             return this;
         }
-
         public AndroidInstrumentationTestResponse build() {
             return new AndroidInstrumentationTestResponse(testPackageId, testRunnerClass, testTargets, useOrchestrator);
         }

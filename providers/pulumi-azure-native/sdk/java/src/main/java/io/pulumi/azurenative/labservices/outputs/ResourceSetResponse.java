@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ResourceSetResponse {
     /**
      * resourceSettingId for the environment
      * 
-     */
+    */
     public Optional<String> getResourceSettingId() {
         return Optional.ofNullable(this.resourceSettingId);
     }
     /**
      * VM resource Id for the environment
      * 
-     */
+    */
     public Optional<String> getVmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }
@@ -76,7 +76,6 @@ public final class ResourceSetResponse {
             this.vmResourceId = vmResourceId;
             return this;
         }
-
         public ResourceSetResponse build() {
             return new ResourceSetResponse(resourceSettingId, vmResourceId);
         }

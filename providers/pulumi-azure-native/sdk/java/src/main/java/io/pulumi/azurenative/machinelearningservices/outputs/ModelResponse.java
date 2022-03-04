@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ContainerResourceRequirementsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -172,147 +172,147 @@ public final class ModelResponse {
     /**
      * The Model creation time (UTC).
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The list of datasets associated with the model.
      * 
-     */
+    */
     public List<DatasetReferenceResponse> getDatasets() {
         return this.datasets == null ? List.of() : this.datasets;
     }
     /**
      * Models derived from this model
      * 
-     */
+    */
     public List<String> getDerivedModelIds() {
         return this.derivedModelIds == null ? List.of() : this.derivedModelIds;
     }
     /**
      * The Model description text.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The name of the experiment where this model was created.
      * 
-     */
+    */
     public Optional<String> getExperimentName() {
         return Optional.ofNullable(this.experimentName);
     }
     /**
      * The Model framework.
      * 
-     */
+    */
     public Optional<String> getFramework() {
         return Optional.ofNullable(this.framework);
     }
     /**
      * The Model framework version.
      * 
-     */
+    */
     public Optional<String> getFrameworkVersion() {
         return Optional.ofNullable(this.frameworkVersion);
     }
     /**
      * The Model Id.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The Model tag dictionary. Items are mutable.
      * 
-     */
+    */
     public Map<String,String> getKvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
     /**
      * The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
      * 
-     */
+    */
     public String getMimeType() {
         return this.mimeType;
     }
     /**
      * The Model last modified time (UTC).
      * 
-     */
+    */
     public Optional<String> getModifiedTime() {
         return Optional.ofNullable(this.modifiedTime);
     }
     /**
      * The Model name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Parent Model Id.
      * 
-     */
+    */
     public Optional<String> getParentModelId() {
         return Optional.ofNullable(this.parentModelId);
     }
     /**
      * The Model property dictionary. Properties are immutable.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Resource requirements for the model
      * 
-     */
+    */
     public Optional<ContainerResourceRequirementsResponse> getResourceRequirements() {
         return Optional.ofNullable(this.resourceRequirements);
     }
     /**
      * The RunId that created this model.
      * 
-     */
+    */
     public Optional<String> getRunId() {
         return Optional.ofNullable(this.runId);
     }
     /**
      * Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
      * 
-     */
+    */
     public Optional<String> getSampleInputData() {
         return Optional.ofNullable(this.sampleInputData);
     }
     /**
      * Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
      * 
-     */
+    */
     public Optional<String> getSampleOutputData() {
         return Optional.ofNullable(this.sampleOutputData);
     }
     /**
      * Indicates whether we need to unpack the Model during docker Image creation.
      * 
-     */
+    */
     public Optional<Boolean> getUnpack() {
         return Optional.ofNullable(this.unpack);
     }
     /**
      * The URL of the Model. Usually a SAS URL.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
     /**
      * The Model version assigned by Model Management Service.
      * 
-     */
+    */
     public Optional<Double> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -481,7 +481,6 @@ public final class ModelResponse {
             this.version = version;
             return this;
         }
-
         public ModelResponse build() {
             return new ModelResponse(createdTime, datasets, derivedModelIds, description, experimentName, framework, frameworkVersion, id, kvTags, mimeType, modifiedTime, name, parentModelId, properties, resourceRequirements, runId, sampleInputData, sampleOutputData, unpack, url, version);
         }

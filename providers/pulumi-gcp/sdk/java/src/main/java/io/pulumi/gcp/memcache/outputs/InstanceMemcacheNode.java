@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.memcache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class InstanceMemcacheNode {
             this.zone = zone;
             return this;
         }
-
         public InstanceMemcacheNode build() {
             return new InstanceMemcacheNode(host, nodeId, port, state, zone);
         }

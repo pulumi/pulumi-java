@@ -5,7 +5,7 @@ package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.azurenative.notificationhubs.enums.AccessRights;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="rights")
-    private final @Nullable Input<List<AccessRights>> rights;
+      private final @Nullable Input<List<AccessRights>> rights;
 
     public Input<List<AccessRights>> getRights() {
         return this.rights == null ? Input.empty() : this.rights;
@@ -67,7 +67,6 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
             this.rights = Input.ofNullable(rights);
             return this;
         }
-
         public SharedAccessAuthorizationRulePropertiesArgs build() {
             return new SharedAccessAuthorizationRulePropertiesArgs(rights);
         }

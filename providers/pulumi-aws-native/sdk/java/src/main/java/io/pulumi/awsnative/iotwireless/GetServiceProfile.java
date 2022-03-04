@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotwireless.inputs.GetServiceProfileArgs;
 import io.pulumi.awsnative.iotwireless.outputs.GetServiceProfileResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceProfile {
-/**
- * An example resource schema demonstrating some basic constructs and validation rules.
+    private GetServiceProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceProfileArgs.Builder a);
+    }
+    private static GetServiceProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetServiceProfileResult> invokeAsync(GetServiceProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getServiceProfile", TypeShape.of(GetServiceProfileResult.class), args == null ? GetServiceProfileArgs.Empty : args, Utilities.withVersion(options));
     }

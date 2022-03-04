@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerservice.inputs.ListManagedClusterUserCredentialsArgs;
 import io.pulumi.azurenative.containerservice.outputs.ListManagedClusterUserCredentialsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListManagedClusterUserCredentials {
-/**
- * The list of credential result response.
+    private ListManagedClusterUserCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(ListManagedClusterUserCredentialsArgs.Builder a);
+    }
+    private static ListManagedClusterUserCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListManagedClusterUserCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of credential result response.
  * API Version: 2021-03-01.
  * 
- *
- * The list of credential result response.
+     *
+     * The list of credential result response.
  * 
- */
+     */
+    public static CompletableFuture<ListManagedClusterUserCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of credential result response.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * The list of credential result response.
+     * 
+     */
     public static CompletableFuture<ListManagedClusterUserCredentialsResult> invokeAsync(ListManagedClusterUserCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerservice:listManagedClusterUserCredentials", TypeShape.of(ListManagedClusterUserCredentialsResult.class), args == null ? ListManagedClusterUserCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

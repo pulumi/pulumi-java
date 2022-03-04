@@ -6,21 +6,41 @@ package io.pulumi.azurenative.devices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devices.inputs.ListIotDpsResourceKeysArgs;
 import io.pulumi.azurenative.devices.outputs.ListIotDpsResourceKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIotDpsResourceKeys {
-/**
- * List of shared access keys.
+    private ListIotDpsResourceKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListIotDpsResourceKeysArgs.Builder a);
+    }
+    private static ListIotDpsResourceKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListIotDpsResourceKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List of shared access keys.
  * API Version: 2020-03-01.
  * 
- *
- * List of shared access keys.
+     *
+     * List of shared access keys.
  * 
- */
+     */
+    public static CompletableFuture<ListIotDpsResourceKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List of shared access keys.
+     * API Version: 2020-03-01.
+     * 
+     *
+         * List of shared access keys.
+     * 
+     */
     public static CompletableFuture<ListIotDpsResourceKeysResult> invokeAsync(ListIotDpsResourceKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:listIotDpsResourceKeys", TypeShape.of(ListIotDpsResourceKeysResult.class), args == null ? ListIotDpsResourceKeysArgs.Empty : args, Utilities.withVersion(options));
     }

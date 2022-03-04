@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationSecurityPolicy {
-/**
- * List all of the ordered rules present in a single specified policy.
+    private GetOrganizationSecurityPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrganizationSecurityPolicyArgs.Builder a);
+    }
+    private static GetOrganizationSecurityPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrganizationSecurityPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List all of the ordered rules present in a single specified policy.
  * 
- */
+     */
+    public static CompletableFuture<GetOrganizationSecurityPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List all of the ordered rules present in a single specified policy.
+     * 
+     */
     public static CompletableFuture<GetOrganizationSecurityPolicyResult> invokeAsync(GetOrganizationSecurityPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getOrganizationSecurityPolicy", TypeShape.of(GetOrganizationSecurityPolicyResult.class), args == null ? GetOrganizationSecurityPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

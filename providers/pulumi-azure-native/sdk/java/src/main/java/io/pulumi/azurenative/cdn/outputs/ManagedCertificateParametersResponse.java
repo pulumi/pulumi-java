@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ManagedCertificateParametersResponse {
      * The type of the Secret to create.
      * Expected value is 'ManagedCertificate'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -54,7 +54,6 @@ public final class ManagedCertificateParametersResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedCertificateParametersResponse build() {
             return new ManagedCertificateParametersResponse(type);
         }

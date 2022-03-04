@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AwsClusterControlPlaneProxyConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="secretArn", required=true)
-    private final Input<String> secretArn;
+      private final Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn;
@@ -29,7 +29,7 @@ public final class AwsClusterControlPlaneProxyConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="secretVersion", required=true)
-    private final Input<String> secretVersion;
+      private final Input<String> secretVersion;
 
     public Input<String> getSecretVersion() {
         return this.secretVersion;
@@ -88,7 +88,6 @@ public final class AwsClusterControlPlaneProxyConfigArgs extends io.pulumi.resou
             this.secretVersion = Input.of(Objects.requireNonNull(secretVersion));
             return this;
         }
-
         public AwsClusterControlPlaneProxyConfigArgs build() {
             return new AwsClusterControlPlaneProxyConfigArgs(secretArn, secretVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1.inputs.ApiEndpointHandlerResponse;
 import io.pulumi.googlenative.appengine_v1.inputs.ScriptHandlerResponse;
 import io.pulumi.googlenative.appengine_v1.inputs.StaticFilesHandlerResponse;
@@ -24,7 +24,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apiEndpoint", required=true)
-    private final ApiEndpointHandlerResponse apiEndpoint;
+      private final ApiEndpointHandlerResponse apiEndpoint;
 
     public ApiEndpointHandlerResponse getApiEndpoint() {
         return this.apiEndpoint;
@@ -35,7 +35,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authFailAction", required=true)
-    private final String authFailAction;
+      private final String authFailAction;
 
     public String getAuthFailAction() {
         return this.authFailAction;
@@ -46,7 +46,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="login", required=true)
-    private final String login;
+      private final String login;
 
     public String getLogin() {
         return this.login;
@@ -57,7 +57,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="redirectHttpResponseCode", required=true)
-    private final String redirectHttpResponseCode;
+      private final String redirectHttpResponseCode;
 
     public String getRedirectHttpResponseCode() {
         return this.redirectHttpResponseCode;
@@ -68,7 +68,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="script", required=true)
-    private final ScriptHandlerResponse script;
+      private final ScriptHandlerResponse script;
 
     public ScriptHandlerResponse getScript() {
         return this.script;
@@ -79,7 +79,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="securityLevel", required=true)
-    private final String securityLevel;
+      private final String securityLevel;
 
     public String getSecurityLevel() {
         return this.securityLevel;
@@ -90,7 +90,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="staticFiles", required=true)
-    private final StaticFilesHandlerResponse staticFiles;
+      private final StaticFilesHandlerResponse staticFiles;
 
     public StaticFilesHandlerResponse getStaticFiles() {
         return this.staticFiles;
@@ -101,7 +101,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="urlRegex", required=true)
-    private final String urlRegex;
+      private final String urlRegex;
 
     public String getUrlRegex() {
         return this.urlRegex;
@@ -210,7 +210,6 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
             this.urlRegex = Objects.requireNonNull(urlRegex);
             return this;
         }
-
         public UrlMapResponse build() {
             return new UrlMapResponse(apiEndpoint, authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

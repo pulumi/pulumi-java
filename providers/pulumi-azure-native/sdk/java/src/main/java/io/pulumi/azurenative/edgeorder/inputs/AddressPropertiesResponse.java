@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.ContactDetailsResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ShippingAddressResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="addressValidationStatus", required=true)
-    private final String addressValidationStatus;
+      private final String addressValidationStatus;
 
     public String getAddressValidationStatus() {
         return this.addressValidationStatus;
@@ -36,7 +36,7 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="contactDetails", required=true)
-    private final ContactDetailsResponse contactDetails;
+      private final ContactDetailsResponse contactDetails;
 
     public ContactDetailsResponse getContactDetails() {
         return this.contactDetails;
@@ -47,7 +47,7 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="shippingAddress")
-    private final @Nullable ShippingAddressResponse shippingAddress;
+      private final @Nullable ShippingAddressResponse shippingAddress;
 
     public Optional<ShippingAddressResponse> getShippingAddress() {
         return this.shippingAddress == null ? Optional.empty() : Optional.ofNullable(this.shippingAddress);
@@ -106,7 +106,6 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public AddressPropertiesResponse build() {
             return new AddressPropertiesResponse(addressValidationStatus, contactDetails, shippingAddress);
         }

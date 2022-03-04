@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ConnectorProfileDatadogConnectorProfileCredentials {
     /**
      * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
      * 
-     */
+    */
     public String getApiKey() {
         return this.apiKey;
     }
     /**
      * Application keys, in conjunction with your API key, give you full access to Datadog’s programmatic API. Application keys are associated with the user account that created them. The application key is used to log all requests made to the API.
      * 
-     */
+    */
     public String getApplicationKey() {
         return this.applicationKey;
     }
@@ -74,7 +74,6 @@ public final class ConnectorProfileDatadogConnectorProfileCredentials {
             this.applicationKey = Objects.requireNonNull(applicationKey);
             return this;
         }
-
         public ConnectorProfileDatadogConnectorProfileCredentials build() {
             return new ConnectorProfileDatadogConnectorProfileCredentials(apiKey, applicationKey);
         }

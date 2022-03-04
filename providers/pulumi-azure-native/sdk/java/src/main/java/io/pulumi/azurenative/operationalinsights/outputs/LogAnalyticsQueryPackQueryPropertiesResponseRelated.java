@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,21 +40,21 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
     /**
      * The related categories for the function.
      * 
-     */
+    */
     public List<String> getCategories() {
         return this.categories == null ? List.of() : this.categories;
     }
     /**
      * The related resource types for the function.
      * 
-     */
+    */
     public List<String> getResourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
     /**
      * The related Log Analytics solutions for the function.
      * 
-     */
+    */
     public List<String> getSolutions() {
         return this.solutions == null ? List.of() : this.solutions;
     }
@@ -97,7 +97,6 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
             this.solutions = solutions;
             return this;
         }
-
         public LogAnalyticsQueryPackQueryPropertiesResponseRelated build() {
             return new LogAnalyticsQueryPackQueryPropertiesResponseRelated(categories, resourceTypes, solutions);
         }

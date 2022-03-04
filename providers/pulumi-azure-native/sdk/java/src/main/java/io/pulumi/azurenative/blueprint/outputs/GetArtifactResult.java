@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GetArtifactResult {
     /**
      * String Id used to locate any resource on Azure.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Specifies the kind of blueprint artifact.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of this resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Type of this resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -116,7 +116,6 @@ public final class GetArtifactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetArtifactResult build() {
             return new GetArtifactResult(id, kind, name, type);
         }

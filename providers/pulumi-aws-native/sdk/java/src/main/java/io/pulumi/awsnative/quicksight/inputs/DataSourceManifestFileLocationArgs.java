@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DataSourceManifestFileLocationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -33,7 +33,7 @@ public final class DataSourceManifestFileLocationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -92,7 +92,6 @@ public final class DataSourceManifestFileLocationArgs extends io.pulumi.resource
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
-
         public DataSourceManifestFileLocationArgs build() {
             return new DataSourceManifestFileLocationArgs(bucket, key);
         }

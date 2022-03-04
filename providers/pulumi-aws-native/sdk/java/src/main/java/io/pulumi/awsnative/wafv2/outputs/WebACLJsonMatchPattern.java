@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class WebACLJsonMatchPattern {
     /**
      * Inspect all parts of the web request's JSON body.
      * 
-     */
+    */
     public Optional<Object> getAll() {
         return Optional.ofNullable(this.all);
     }
@@ -70,7 +70,6 @@ public final class WebACLJsonMatchPattern {
             this.includedPaths = includedPaths;
             return this;
         }
-
         public WebACLJsonMatchPattern build() {
             return new WebACLJsonMatchPattern(all, includedPaths);
         }

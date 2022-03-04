@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ContainerRegistryPropertiesResponse {
     /**
      * ARM resource ID of the Azure Container Registry used to store Docker images for web services in the cluster. If not provided one will be created. This cannot be changed once the cluster is created.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -54,7 +54,6 @@ public final class ContainerRegistryPropertiesResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public ContainerRegistryPropertiesResponse build() {
             return new ContainerRegistryPropertiesResponse(resourceId);
         }

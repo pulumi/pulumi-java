@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.AutoscalingSettingsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DiskResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.PackageResponse;
@@ -29,7 +29,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="autoscalingSettings", required=true)
-    private final AutoscalingSettingsResponse autoscalingSettings;
+      private final AutoscalingSettingsResponse autoscalingSettings;
 
     public AutoscalingSettingsResponse getAutoscalingSettings() {
         return this.autoscalingSettings;
@@ -40,7 +40,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataDisks", required=true)
-    private final List<DiskResponse> dataDisks;
+      private final List<DiskResponse> dataDisks;
 
     public List<DiskResponse> getDataDisks() {
         return this.dataDisks;
@@ -51,7 +51,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultPackageSet", required=true)
-    private final String defaultPackageSet;
+      private final String defaultPackageSet;
 
     public String getDefaultPackageSet() {
         return this.defaultPackageSet;
@@ -62,7 +62,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final Integer diskSizeGb;
+      private final Integer diskSizeGb;
 
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
@@ -73,7 +73,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskSourceImage", required=true)
-    private final String diskSourceImage;
+      private final String diskSourceImage;
 
     public String getDiskSourceImage() {
         return this.diskSourceImage;
@@ -84,7 +84,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -95,7 +95,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipConfiguration", required=true)
-    private final String ipConfiguration;
+      private final String ipConfiguration;
 
     public String getIpConfiguration() {
         return this.ipConfiguration;
@@ -106,7 +106,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -117,7 +117,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -128,7 +128,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+      private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
@@ -139,7 +139,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -150,7 +150,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="numThreadsPerWorker", required=true)
-    private final Integer numThreadsPerWorker;
+      private final Integer numThreadsPerWorker;
 
     public Integer getNumThreadsPerWorker() {
         return this.numThreadsPerWorker;
@@ -161,7 +161,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="numWorkers", required=true)
-    private final Integer numWorkers;
+      private final Integer numWorkers;
 
     public Integer getNumWorkers() {
         return this.numWorkers;
@@ -172,7 +172,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="onHostMaintenance", required=true)
-    private final String onHostMaintenance;
+      private final String onHostMaintenance;
 
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
@@ -183,7 +183,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="packages", required=true)
-    private final List<PackageResponse> packages;
+      private final List<PackageResponse> packages;
 
     public List<PackageResponse> getPackages() {
         return this.packages;
@@ -194,7 +194,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="poolArgs", required=true)
-    private final Map<String,String> poolArgs;
+      private final Map<String,String> poolArgs;
 
     public Map<String,String> getPoolArgs() {
         return this.poolArgs;
@@ -205,7 +205,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sdkHarnessContainerImages", required=true)
-    private final List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages;
+      private final List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages;
 
     public List<SdkHarnessContainerImageResponse> getSdkHarnessContainerImages() {
         return this.sdkHarnessContainerImages;
@@ -216,7 +216,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -227,7 +227,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="taskrunnerSettings", required=true)
-    private final TaskRunnerSettingsResponse taskrunnerSettings;
+      private final TaskRunnerSettingsResponse taskrunnerSettings;
 
     public TaskRunnerSettingsResponse getTaskrunnerSettings() {
         return this.taskrunnerSettings;
@@ -238,7 +238,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="teardownPolicy", required=true)
-    private final String teardownPolicy;
+      private final String teardownPolicy;
 
     public String getTeardownPolicy() {
         return this.teardownPolicy;
@@ -249,7 +249,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -488,7 +488,6 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public WorkerPoolResponse build() {
             return new WorkerPoolResponse(autoscalingSettings, dataDisks, defaultPackageSet, diskSizeGb, diskSourceImage, diskType, ipConfiguration, kind, machineType, metadata, network, numThreadsPerWorker, numWorkers, onHostMaintenance, packages, poolArgs, sdkHarnessContainerImages, subnetwork, taskrunnerSettings, teardownPolicy, zone);
         }

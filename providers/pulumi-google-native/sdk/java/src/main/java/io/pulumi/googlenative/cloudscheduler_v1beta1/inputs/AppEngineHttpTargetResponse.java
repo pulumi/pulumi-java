@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.AppEngineRoutingResponse;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class AppEngineHttpTargetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="appEngineRouting", required=true)
-    private final AppEngineRoutingResponse appEngineRouting;
+      private final AppEngineRoutingResponse appEngineRouting;
 
     public AppEngineRoutingResponse getAppEngineRouting() {
         return this.appEngineRouting;
@@ -34,7 +34,7 @@ public final class AppEngineHttpTargetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="body", required=true)
-    private final String body;
+      private final String body;
 
     public String getBody() {
         return this.body;
@@ -45,7 +45,7 @@ public final class AppEngineHttpTargetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="headers", required=true)
-    private final Map<String,String> headers;
+      private final Map<String,String> headers;
 
     public Map<String,String> getHeaders() {
         return this.headers;
@@ -56,7 +56,7 @@ public final class AppEngineHttpTargetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="httpMethod", required=true)
-    private final String httpMethod;
+      private final String httpMethod;
 
     public String getHttpMethod() {
         return this.httpMethod;
@@ -67,7 +67,7 @@ public final class AppEngineHttpTargetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="relativeUri", required=true)
-    private final String relativeUri;
+      private final String relativeUri;
 
     public String getRelativeUri() {
         return this.relativeUri;
@@ -146,7 +146,6 @@ public final class AppEngineHttpTargetResponse extends io.pulumi.resources.Invok
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
         }
-
         public AppEngineHttpTargetResponse build() {
             return new AppEngineHttpTargetResponse(appEngineRouting, body, headers, httpMethod, relativeUri);
         }

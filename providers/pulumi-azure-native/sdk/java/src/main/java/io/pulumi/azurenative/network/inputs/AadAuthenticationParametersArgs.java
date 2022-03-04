@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="aadAudience")
-    private final @Nullable Input<String> aadAudience;
+      private final @Nullable Input<String> aadAudience;
 
     public Input<String> getAadAudience() {
         return this.aadAudience == null ? Input.empty() : this.aadAudience;
@@ -34,7 +34,7 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="aadIssuer")
-    private final @Nullable Input<String> aadIssuer;
+      private final @Nullable Input<String> aadIssuer;
 
     public Input<String> getAadIssuer() {
         return this.aadIssuer == null ? Input.empty() : this.aadIssuer;
@@ -45,7 +45,7 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="aadTenant")
-    private final @Nullable Input<String> aadTenant;
+      private final @Nullable Input<String> aadTenant;
 
     public Input<String> getAadTenant() {
         return this.aadTenant == null ? Input.empty() : this.aadTenant;
@@ -119,7 +119,6 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
             this.aadTenant = Input.ofNullable(aadTenant);
             return this;
         }
-
         public AadAuthenticationParametersArgs build() {
             return new AadAuthenticationParametersArgs(aadAudience, aadIssuer, aadTenant);
         }

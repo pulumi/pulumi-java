@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IPRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -59,7 +59,6 @@ public final class IPRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IPRuleResponse build() {
             return new IPRuleResponse(value);
         }

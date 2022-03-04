@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ResourcePolicyResourceStatusResponse {
     /**
      * Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.
      * 
-     */
+    */
     public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse getInstanceSchedulePolicy() {
         return this.instanceSchedulePolicy;
     }
@@ -52,7 +52,6 @@ public final class ResourcePolicyResourceStatusResponse {
             this.instanceSchedulePolicy = Objects.requireNonNull(instanceSchedulePolicy);
             return this;
         }
-
         public ResourcePolicyResourceStatusResponse build() {
             return new ResourcePolicyResourceStatusResponse(instanceSchedulePolicy);
         }

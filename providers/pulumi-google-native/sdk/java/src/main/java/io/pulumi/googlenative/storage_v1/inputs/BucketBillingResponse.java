@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BucketBillingResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="requesterPays", required=true)
-    private final Boolean requesterPays;
+      private final Boolean requesterPays;
 
     public Boolean getRequesterPays() {
         return this.requesterPays;
@@ -59,7 +59,6 @@ public final class BucketBillingResponse extends io.pulumi.resources.InvokeArgs 
             this.requesterPays = Objects.requireNonNull(requesterPays);
             return this;
         }
-
         public BucketBillingResponse build() {
             return new BucketBillingResponse(requesterPays);
         }

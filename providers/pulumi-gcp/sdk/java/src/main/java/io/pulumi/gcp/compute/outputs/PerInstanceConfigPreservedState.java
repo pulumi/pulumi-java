@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.PerInstanceConfigPreservedStateDisk;
 import java.lang.String;
 import java.util.List;
@@ -37,14 +37,14 @@ public final class PerInstanceConfigPreservedState {
      * Stateful disks for the instance.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PerInstanceConfigPreservedStateDisk> getDisks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
      * Preserved metadata defined for this instance. This is a list of key->value pairs.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
@@ -80,7 +80,6 @@ public final class PerInstanceConfigPreservedState {
             this.metadata = metadata;
             return this;
         }
-
         public PerInstanceConfigPreservedState build() {
             return new PerInstanceConfigPreservedState(disks, metadata);
         }

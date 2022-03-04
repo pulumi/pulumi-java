@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildSourceRepoSource;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildSourceStorageSource;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class TriggerBuildSource {
      * Location of the source in a Google Cloud Source Repository.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TriggerBuildSourceRepoSource> getRepoSource() {
         return Optional.ofNullable(this.repoSource);
     }
@@ -45,7 +45,7 @@ public final class TriggerBuildSource {
      * Location of the source in an archive file in Google Cloud Storage.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TriggerBuildSourceStorageSource> getStorageSource() {
         return Optional.ofNullable(this.storageSource);
     }
@@ -81,7 +81,6 @@ public final class TriggerBuildSource {
             this.storageSource = storageSource;
             return this;
         }
-
         public TriggerBuildSource build() {
             return new TriggerBuildSource(repoSource, storageSource);
         }

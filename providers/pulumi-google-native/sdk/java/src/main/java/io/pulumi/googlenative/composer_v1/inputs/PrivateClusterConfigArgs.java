@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enablePrivateEndpoint")
-    private final @Nullable Input<Boolean> enablePrivateEndpoint;
+      private final @Nullable Input<Boolean> enablePrivateEndpoint;
 
     public Input<Boolean> getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint == null ? Input.empty() : this.enablePrivateEndpoint;
@@ -35,7 +35,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="masterIpv4CidrBlock")
-    private final @Nullable Input<String> masterIpv4CidrBlock;
+      private final @Nullable Input<String> masterIpv4CidrBlock;
 
     public Input<String> getMasterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock == null ? Input.empty() : this.masterIpv4CidrBlock;
@@ -94,7 +94,6 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
             this.masterIpv4CidrBlock = Input.ofNullable(masterIpv4CidrBlock);
             return this;
         }
-
         public PrivateClusterConfigArgs build() {
             return new PrivateClusterConfigArgs(enablePrivateEndpoint, masterIpv4CidrBlock);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagepool.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class SystemMetadataResponse {
     /**
      * The timestamp of resource creation (UTC).
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * A string identifier for the identity that created the resource.
      * 
-     */
+    */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The type of identity that created the resource: user, application, managedIdentity.
      * 
-     */
+    */
     public Optional<String> getCreatedByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
      * The timestamp of resource last modification (UTC).
      * 
-     */
+    */
     public Optional<String> getLastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
      * A string identifier for the identity that last modified the resource.
      * 
-     */
+    */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource: user, application, managedIdentity.
      * 
-     */
+    */
     public Optional<String> getLastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
@@ -160,7 +160,6 @@ public final class SystemMetadataResponse {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public SystemMetadataResponse build() {
             return new SystemMetadataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

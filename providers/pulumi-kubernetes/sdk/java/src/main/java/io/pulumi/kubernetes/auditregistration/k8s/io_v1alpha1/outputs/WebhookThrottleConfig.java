@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class WebhookThrottleConfig {
     /**
      * ThrottleBurst is the maximum number of events sent at the same moment default 15 QPS
      * 
-     */
+    */
     public Optional<Integer> getBurst() {
         return Optional.ofNullable(this.burst);
     }
     /**
      * ThrottleQPS maximum number of batches per second default 10 QPS
      * 
-     */
+    */
     public Optional<Integer> getQps() {
         return Optional.ofNullable(this.qps);
     }
@@ -76,7 +76,6 @@ public final class WebhookThrottleConfig {
             this.qps = qps;
             return this;
         }
-
         public WebhookThrottleConfig build() {
             return new WebhookThrottleConfig(burst, qps);
         }

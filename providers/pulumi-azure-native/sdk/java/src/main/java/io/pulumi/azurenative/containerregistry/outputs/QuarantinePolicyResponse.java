@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class QuarantinePolicyResponse {
     /**
      * The value that indicates whether the policy is enabled or not.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -54,7 +54,6 @@ public final class QuarantinePolicyResponse {
             this.status = status;
             return this;
         }
-
         public QuarantinePolicyResponse build() {
             return new QuarantinePolicyResponse(status);
         }

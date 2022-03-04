@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.datacatalog.outputs.TagTemplateFieldTypeEnumType;
 import java.lang.String;
 import java.util.Objects;
@@ -40,7 +40,7 @@ public final class TagTemplateFieldType {
      * Exactly one of `primitive_type` or `enum_type` must be set
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TagTemplateFieldTypeEnumType> getEnumType() {
         return Optional.ofNullable(this.enumType);
     }
@@ -49,7 +49,7 @@ public final class TagTemplateFieldType {
      * Exactly one of `primitive_type` or `enum_type` must be set
      * Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
      * 
-     */
+    */
     public Optional<String> getPrimitiveType() {
         return Optional.ofNullable(this.primitiveType);
     }
@@ -85,7 +85,6 @@ public final class TagTemplateFieldType {
             this.primitiveType = primitiveType;
             return this;
         }
-
         public TagTemplateFieldType build() {
             return new TagTemplateFieldType(enumType, primitiveType);
         }

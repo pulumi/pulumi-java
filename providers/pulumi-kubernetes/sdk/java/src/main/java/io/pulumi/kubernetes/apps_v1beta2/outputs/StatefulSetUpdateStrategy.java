@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.RollingUpdateStatefulSetStrategy;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class StatefulSetUpdateStrategy {
     /**
      * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
      * 
-     */
+    */
     public Optional<RollingUpdateStatefulSetStrategy> getRollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
     /**
      * Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpdate.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -77,7 +77,6 @@ public final class StatefulSetUpdateStrategy {
             this.type = type;
             return this;
         }
-
         public StatefulSetUpdateStrategy build() {
             return new StatefulSetUpdateStrategy(rollingUpdate, type);
         }

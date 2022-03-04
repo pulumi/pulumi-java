@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
      * 
      */
     @InputImport(name="configUri", required=true)
-    private final Input<String> configUri;
+      private final Input<String> configUri;
 
     public Input<String> getConfigUri() {
         return this.configUri;
@@ -35,7 +35,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<Object> environment;
+      private final @Nullable Input<Object> environment;
 
     public Input<Object> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -46,7 +46,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
      * 
      */
     @InputImport(name="imageUri", required=true)
-    private final Input<String> imageUri;
+      private final Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri;
@@ -120,7 +120,6 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
             this.imageUri = Input.of(Objects.requireNonNull(imageUri));
             return this;
         }
-
         public ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs build() {
             return new ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs(configUri, environment, imageUri);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxFlowEventHandlerTriggerFulfillmentMessage;
 import java.lang.Boolean;
 import java.lang.String;
@@ -52,28 +52,28 @@ public final class CxFlowEventHandlerTriggerFulfillment {
      * The list of rich message responses to present to the user.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CxFlowEventHandlerTriggerFulfillmentMessage> getMessages() {
         return this.messages == null ? List.of() : this.messages;
     }
     /**
      * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
      * 
-     */
+    */
     public Optional<Boolean> getReturnPartialResponses() {
         return Optional.ofNullable(this.returnPartialResponses);
     }
     /**
      * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
     /**
      * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
      * 
-     */
+    */
     public Optional<String> getWebhook() {
         return Optional.ofNullable(this.webhook);
     }
@@ -123,7 +123,6 @@ public final class CxFlowEventHandlerTriggerFulfillment {
             this.webhook = webhook;
             return this;
         }
-
         public CxFlowEventHandlerTriggerFulfillment build() {
             return new CxFlowEventHandlerTriggerFulfillment(messages, returnPartialResponses, tag, webhook);
         }

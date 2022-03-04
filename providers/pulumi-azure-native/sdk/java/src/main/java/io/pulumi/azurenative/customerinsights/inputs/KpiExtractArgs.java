@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+      private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
@@ -33,7 +33,7 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extractName", required=true)
-    private final Input<String> extractName;
+      private final Input<String> extractName;
 
     public Input<String> getExtractName() {
         return this.extractName;
@@ -92,7 +92,6 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
             this.extractName = Input.of(Objects.requireNonNull(extractName));
             return this;
         }
-
         public KpiExtractArgs build() {
             return new KpiExtractArgs(expression, extractName);
         }

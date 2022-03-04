@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__XraiAttributionResponse {
     /**
      * Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
      * 
-     */
+    */
     public Integer getNumIntegralSteps() {
         return this.numIntegralSteps;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudMlV1__XraiAttributionResponse {
             this.numIntegralSteps = Objects.requireNonNull(numIntegralSteps);
             return this;
         }
-
         public GoogleCloudMlV1__XraiAttributionResponse build() {
             return new GoogleCloudMlV1__XraiAttributionResponse(numIntegralSteps);
         }

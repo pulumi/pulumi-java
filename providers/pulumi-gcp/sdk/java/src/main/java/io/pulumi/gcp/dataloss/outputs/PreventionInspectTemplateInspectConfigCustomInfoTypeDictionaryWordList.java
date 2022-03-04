@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * Words or phrases defining the dictionary. The dictionary must contain at least one
      * phrase and every phrase must contain at least 2 characters that are letters or digits.
      * 
-     */
+    */
     public List<String> getWords() {
         return this.words;
     }
@@ -55,7 +55,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.words = Objects.requireNonNull(words);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList(words);
         }

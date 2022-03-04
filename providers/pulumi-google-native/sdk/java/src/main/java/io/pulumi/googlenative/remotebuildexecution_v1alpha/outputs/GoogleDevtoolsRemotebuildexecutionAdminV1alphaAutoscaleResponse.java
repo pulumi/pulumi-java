@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
     /**
      * The maximal number of workers. Must be equal to or greater than min_size.
      * 
-     */
+    */
     public String getMaxSize() {
         return this.maxSize;
     }
     /**
      * The minimal number of workers. Must be greater than 0.
      * 
-     */
+    */
     public String getMinSize() {
         return this.minSize;
     }
@@ -74,7 +74,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse(maxSize, minSize);
         }

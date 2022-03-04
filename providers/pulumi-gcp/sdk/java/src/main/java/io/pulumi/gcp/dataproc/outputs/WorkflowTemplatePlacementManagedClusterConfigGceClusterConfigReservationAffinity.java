@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     /**
      * Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
      * 
-     */
+    */
     public Optional<String> getConsumeReservationType() {
         return Optional.ofNullable(this.consumeReservationType);
     }
     /**
      * Optional. Corresponds to the label key of reservation resource.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Optional. Corresponds to the label values of reservation resource.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }
@@ -98,7 +98,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             this.values = values;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity(consumeReservationType, key, values);
         }

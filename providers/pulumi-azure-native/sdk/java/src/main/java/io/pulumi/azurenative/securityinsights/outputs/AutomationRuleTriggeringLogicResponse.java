@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.AutomationRulePropertyValuesConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -57,35 +57,35 @@ public final class AutomationRuleTriggeringLogicResponse {
     /**
      * The conditions to evaluate to determine if the automation rule should be triggered on a given object
      * 
-     */
+    */
     public List<AutomationRulePropertyValuesConditionResponse> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * Determines when the automation rule should automatically expire and be disabled.
      * 
-     */
+    */
     public Optional<String> getExpirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
     /**
      * Determines whether the automation rule is enabled or disabled.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The type of object the automation rule triggers on
      * 
-     */
+    */
     public String getTriggersOn() {
         return this.triggersOn;
     }
     /**
      * The type of event the automation rule triggers on
      * 
-     */
+    */
     public String getTriggersWhen() {
         return this.triggersWhen;
     }
@@ -142,7 +142,6 @@ public final class AutomationRuleTriggeringLogicResponse {
             this.triggersWhen = Objects.requireNonNull(triggersWhen);
             return this;
         }
-
         public AutomationRuleTriggeringLogicResponse build() {
             return new AutomationRuleTriggeringLogicResponse(conditions, expirationTimeUtc, isEnabled, triggersOn, triggersWhen);
         }

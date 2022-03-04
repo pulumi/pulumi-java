@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.enums.DnsKeySpecAlgorithm;
 import io.pulumi.googlenative.dns_v1beta2.enums.DnsKeySpecKeyType;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm")
-    private final @Nullable Input<DnsKeySpecAlgorithm> algorithm;
+      private final @Nullable Input<DnsKeySpecAlgorithm> algorithm;
 
     public Input<DnsKeySpecAlgorithm> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
@@ -37,7 +37,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyLength")
-    private final @Nullable Input<Integer> keyLength;
+      private final @Nullable Input<Integer> keyLength;
 
     public Input<Integer> getKeyLength() {
         return this.keyLength == null ? Input.empty() : this.keyLength;
@@ -48,14 +48,14 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyType")
-    private final @Nullable Input<DnsKeySpecKeyType> keyType;
+      private final @Nullable Input<DnsKeySpecKeyType> keyType;
 
     public Input<DnsKeySpecKeyType> getKeyType() {
         return this.keyType == null ? Input.empty() : this.keyType;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -144,7 +144,6 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public DnsKeySpecArgs build() {
             return new DnsKeySpecArgs(algorithm, keyLength, keyType, kind);
         }

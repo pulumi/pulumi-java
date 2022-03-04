@@ -10,7 +10,7 @@ import io.pulumi.azurenative.cdn.outputs.PolicySettingsResponse;
 import io.pulumi.azurenative.cdn.outputs.RateLimitRuleListResponse;
 import io.pulumi.azurenative.cdn.outputs.SkuResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -129,70 +129,70 @@ public final class GetPolicyResult {
     /**
      * Describes custom rules inside the policy.
      * 
-     */
+    */
     public Optional<CustomRuleListResponse> getCustomRules() {
         return Optional.ofNullable(this.customRules);
     }
     /**
      * Describes Azure CDN endpoints associated with this Web Application Firewall policy.
      * 
-     */
+    */
     public List<CdnEndpointResponse> getEndpointLinks() {
         return this.endpointLinks;
     }
     /**
      * Gets a unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Describes managed rules inside the policy.
      * 
-     */
+    */
     public Optional<ManagedRuleSetListResponse> getManagedRules() {
         return Optional.ofNullable(this.managedRules);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Describes  policySettings for policy
      * 
-     */
+    */
     public Optional<PolicySettingsResponse> getPolicySettings() {
         return Optional.ofNullable(this.policySettings);
     }
     /**
      * Provisioning state of the WebApplicationFirewallPolicy.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes rate limit rules inside the policy.
      * 
-     */
+    */
     public Optional<RateLimitRuleListResponse> getRateLimitRules() {
         return Optional.ofNullable(this.rateLimitRules);
     }
@@ -202,28 +202,28 @@ public final class GetPolicyResult {
     /**
      * The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -350,7 +350,6 @@ public final class GetPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(customRules, endpointLinks, etag, id, location, managedRules, name, policySettings, provisioningState, rateLimitRules, resourceState, sku, systemData, tags, type);
         }

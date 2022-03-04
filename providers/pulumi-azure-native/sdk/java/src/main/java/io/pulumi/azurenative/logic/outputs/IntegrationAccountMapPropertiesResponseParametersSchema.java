@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema {
     /**
      * The reference name.
      * 
-     */
+    */
     public Optional<String> getRef() {
         return Optional.ofNullable(this.ref);
     }
@@ -54,7 +54,6 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema {
             this.ref = ref;
             return this;
         }
-
         public IntegrationAccountMapPropertiesResponseParametersSchema build() {
             return new IntegrationAccountMapPropertiesResponseParametersSchema(ref);
         }

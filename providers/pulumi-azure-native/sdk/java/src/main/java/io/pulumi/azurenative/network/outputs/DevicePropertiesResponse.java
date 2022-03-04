@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class DevicePropertiesResponse {
     /**
      * Model of the device.
      * 
-     */
+    */
     public Optional<String> getDeviceModel() {
         return Optional.ofNullable(this.deviceModel);
     }
     /**
      * Name of the device Vendor.
      * 
-     */
+    */
     public Optional<String> getDeviceVendor() {
         return Optional.ofNullable(this.deviceVendor);
     }
     /**
      * Link speed.
      * 
-     */
+    */
     public Optional<Integer> getLinkSpeedInMbps() {
         return Optional.ofNullable(this.linkSpeedInMbps);
     }
@@ -98,7 +98,6 @@ public final class DevicePropertiesResponse {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
-
         public DevicePropertiesResponse build() {
             return new DevicePropertiesResponse(deviceModel, deviceVendor, linkSpeedInMbps);
         }

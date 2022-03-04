@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagepool.inputs;
 import io.pulumi.azurenative.storagepool.inputs.AclResponse;
 import io.pulumi.azurenative.storagepool.inputs.AttributesResponse;
 import io.pulumi.azurenative.storagepool.inputs.IscsiLunResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="acls", required=true)
-    private final List<AclResponse> acls;
+      private final List<AclResponse> acls;
 
     public List<AclResponse> getAcls() {
         return this.acls;
@@ -37,7 +37,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="attributes", required=true)
-    private final AttributesResponse attributes;
+      private final AttributesResponse attributes;
 
     public AttributesResponse getAttributes() {
         return this.attributes;
@@ -48,7 +48,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="endpoints", required=true)
-    private final List<String> endpoints;
+      private final List<String> endpoints;
 
     public List<String> getEndpoints() {
         return this.endpoints;
@@ -59,7 +59,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="luns", required=true)
-    private final List<IscsiLunResponse> luns;
+      private final List<IscsiLunResponse> luns;
 
     public List<IscsiLunResponse> getLuns() {
         return this.luns;
@@ -70,7 +70,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -81,7 +81,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tag", required=true)
-    private final Integer tag;
+      private final Integer tag;
 
     public Integer getTag() {
         return this.tag;
@@ -170,7 +170,6 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public TargetPortalGroupResponse build() {
             return new TargetPortalGroupResponse(acls, attributes, endpoints, luns, port, tag);
         }

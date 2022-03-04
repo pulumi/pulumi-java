@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
 import io.pulumi.azurenative.datalakeanalytics.outputs.SasTokenInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ListStorageAccountSasTokensResult {
     /**
      * The link (url) to the next page of results.
      * 
-     */
+    */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * The results of the list operation.
      * 
-     */
+    */
     public List<SasTokenInformationResponse> getValue() {
         return this.value;
     }
@@ -76,7 +76,6 @@ public final class ListStorageAccountSasTokensResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListStorageAccountSasTokensResult build() {
             return new ListStorageAccountSasTokensResult(nextLink, value);
         }

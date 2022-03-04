@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.mixedreality.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSpatialAnchorsAccountArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSpatialAnchorsAccountArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetSpatialAnchorsAccountArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetSpatialAnchorsAccountArgs build() {
             return new GetSpatialAnchorsAccountArgs(accountName, resourceGroupName);
         }

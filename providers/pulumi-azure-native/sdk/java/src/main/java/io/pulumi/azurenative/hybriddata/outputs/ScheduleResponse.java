@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybriddata.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ScheduleResponse {
     /**
      * Name of the schedule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of repetition intervals in ISO 8601 format.
      * 
-     */
+    */
     public List<String> getPolicyList() {
         return this.policyList == null ? List.of() : this.policyList;
     }
@@ -77,7 +77,6 @@ public final class ScheduleResponse {
             this.policyList = policyList;
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(name, policyList);
         }

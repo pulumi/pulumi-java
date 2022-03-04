@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ListWebAppHostKeysSlotResult {
     /**
      * Host level function keys.
      * 
-     */
+    */
     public Map<String,String> getFunctionKeys() {
         return this.functionKeys == null ? Map.of() : this.functionKeys;
     }
     /**
      * Secret key.
      * 
-     */
+    */
     public Optional<String> getMasterKey() {
         return Optional.ofNullable(this.masterKey);
     }
     /**
      * System keys.
      * 
-     */
+    */
     public Map<String,String> getSystemKeys() {
         return this.systemKeys == null ? Map.of() : this.systemKeys;
     }
@@ -98,7 +98,6 @@ public final class ListWebAppHostKeysSlotResult {
             this.systemKeys = systemKeys;
             return this;
         }
-
         public ListWebAppHostKeysSlotResult build() {
             return new ListWebAppHostKeysSlotResult(functionKeys, masterKey, systemKeys);
         }

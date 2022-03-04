@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -97,56 +97,56 @@ public final class DatabricksSparkPythonActivityResponse {
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of libraries to be installed on the cluster that will execute the job.
      * 
-     */
+    */
     public List<Map<String,Object>> getLibraries() {
         return this.libraries == null ? List.of() : this.libraries;
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Command line parameters that will be passed to the Python file.
      * 
-     */
+    */
     public List<Object> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getPythonFile() {
         return this.pythonFile;
     }
@@ -154,14 +154,14 @@ public final class DatabricksSparkPythonActivityResponse {
      * Type of activity.
      * Expected value is 'DatabricksSparkPython'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -253,7 +253,6 @@ public final class DatabricksSparkPythonActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public DatabricksSparkPythonActivityResponse build() {
             return new DatabricksSparkPythonActivityResponse(dependsOn, description, libraries, linkedServiceName, name, parameters, policy, pythonFile, type, userProperties);
         }

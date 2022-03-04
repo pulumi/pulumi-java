@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class KikChannelPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="apiKey")
-    private final @Nullable String apiKey;
+      private final @Nullable String apiKey;
 
     public Optional<String> getApiKey() {
         return this.apiKey == null ? Optional.empty() : Optional.ofNullable(this.apiKey);
@@ -35,7 +35,7 @@ public final class KikChannelPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Boolean isEnabled;
+      private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -46,7 +46,7 @@ public final class KikChannelPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="isValidated")
-    private final @Nullable Boolean isValidated;
+      private final @Nullable Boolean isValidated;
 
     public Optional<Boolean> getIsValidated() {
         return this.isValidated == null ? Optional.empty() : Optional.ofNullable(this.isValidated);
@@ -57,7 +57,7 @@ public final class KikChannelPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+      private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -126,7 +126,6 @@ public final class KikChannelPropertiesResponse extends io.pulumi.resources.Invo
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public KikChannelPropertiesResponse build() {
             return new KikChannelPropertiesResponse(apiKey, isEnabled, isValidated, userName);
         }

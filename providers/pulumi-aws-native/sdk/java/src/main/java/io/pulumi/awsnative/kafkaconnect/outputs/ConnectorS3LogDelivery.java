@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ConnectorS3LogDelivery {
     /**
      * The name of the S3 bucket that is the destination for log delivery.
      * 
-     */
+    */
     public Optional<String> getBucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
      * Specifies whether the logs get sent to the specified Amazon S3 destination.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The S3 prefix that is the destination for log delivery.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -98,7 +98,6 @@ public final class ConnectorS3LogDelivery {
             this.prefix = prefix;
             return this;
         }
-
         public ConnectorS3LogDelivery build() {
             return new ConnectorS3LogDelivery(bucket, enabled, prefix);
         }

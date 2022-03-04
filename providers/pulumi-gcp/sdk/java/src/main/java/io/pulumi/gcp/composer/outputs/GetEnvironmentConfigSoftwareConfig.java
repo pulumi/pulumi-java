@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -112,7 +112,6 @@ public final class GetEnvironmentConfigSoftwareConfig {
             this.schedulerCount = Objects.requireNonNull(schedulerCount);
             return this;
         }
-
         public GetEnvironmentConfigSoftwareConfig build() {
             return new GetEnvironmentConfigSoftwareConfig(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.AuthConfigResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.ConfigVariableResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.ConnectionStatusResponse;
@@ -136,112 +136,112 @@ public final class GetConnectionResult {
     /**
      * Optional. Configuration for establishing the connection's authentication with an external system.
      * 
-     */
+    */
     public AuthConfigResponse getAuthConfig() {
         return this.authConfig;
     }
     /**
      * Optional. Configuration for configuring the connection with an external system.
      * 
-     */
+    */
     public List<ConfigVariableResponse> getConfigVariables() {
         return this.configVariables;
     }
     /**
      * Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
      * 
-     */
+    */
     public String getConnectorVersion() {
         return this.connectorVersion;
     }
     /**
      * Created time.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Description of the resource.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Outbound domains/hosts needs to be allowlisted.
      * 
-     */
+    */
     public List<String> getEgressBackends() {
         return this.egressBackends;
     }
     /**
      * GCR location where the envoy image is stored. formatted like: gcr.io/{bucketName}/{imageName}
      * 
-     */
+    */
     public String getEnvoyImageLocation() {
         return this.envoyImageLocation;
     }
     /**
      * GCR location where the runtime image is stored. formatted like: gcr.io/{bucketName}/{imageName}
      * 
-     */
+    */
     public String getImageLocation() {
         return this.imageLocation;
     }
     /**
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Optional. Configuration that indicates whether or not the Connection can be edited.
      * 
-     */
+    */
     public LockConfigResponse getLockConfig() {
         return this.lockConfig;
     }
     /**
      * Resource name of the Connection. Format: projects/{project}/locations/{location}/connections/{connection}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. Service account needed for runtime plane to access GCP resources.
      * 
-     */
+    */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. "projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors"
      * 
-     */
+    */
     public String getServiceDirectory() {
         return this.serviceDirectory;
     }
     /**
      * Current status of the connection.
      * 
-     */
+    */
     public ConnectionStatusResponse getStatus() {
         return this.status;
     }
     /**
      * Optional. Suspended indicates if a user has suspended a connection or not.
      * 
-     */
+    */
     public Boolean getSuspended() {
         return this.suspended;
     }
     /**
      * Updated time.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -375,7 +375,6 @@ public final class GetConnectionResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(authConfig, configVariables, connectorVersion, createTime, description, egressBackends, envoyImageLocation, imageLocation, labels, lockConfig, name, serviceAccount, serviceDirectory, status, suspended, updateTime);
         }

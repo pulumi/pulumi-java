@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class StorageSettingResponse {
     /**
      * Gets or sets the type of the datastore.
      * 
-     */
+    */
     public Optional<String> getDatastoreType() {
         return Optional.ofNullable(this.datastoreType);
     }
     /**
      * Gets or sets the type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -76,7 +76,6 @@ public final class StorageSettingResponse {
             this.type = type;
             return this;
         }
-
         public StorageSettingResponse build() {
             return new StorageSettingResponse(datastoreType, type);
         }

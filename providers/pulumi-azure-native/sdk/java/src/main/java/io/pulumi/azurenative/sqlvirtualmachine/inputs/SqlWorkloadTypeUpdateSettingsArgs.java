@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 import io.pulumi.azurenative.sqlvirtualmachine.enums.SqlWorkloadType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sqlWorkloadType")
-    private final @Nullable Input<Either<String,SqlWorkloadType>> sqlWorkloadType;
+      private final @Nullable Input<Either<String,SqlWorkloadType>> sqlWorkloadType;
 
     public Input<Either<String,SqlWorkloadType>> getSqlWorkloadType() {
         return this.sqlWorkloadType == null ? Input.empty() : this.sqlWorkloadType;
@@ -68,7 +68,6 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
             this.sqlWorkloadType = Input.ofNullable(sqlWorkloadType);
             return this;
         }
-
         public SqlWorkloadTypeUpdateSettingsArgs build() {
             return new SqlWorkloadTypeUpdateSettingsArgs(sqlWorkloadType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.SecretResourcePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class GetSecretResult {
     /**
      * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Describes the properties of a secret resource.
      * 
-     */
+    */
     public SecretResourcePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class GetSecretResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(id, location, name, properties, tags, type);
         }

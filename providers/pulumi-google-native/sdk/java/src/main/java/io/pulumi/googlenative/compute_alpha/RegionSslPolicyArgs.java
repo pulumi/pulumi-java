@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.RegionSslPolicyMinTlsVersion;
 import io.pulumi.googlenative.compute_alpha.enums.RegionSslPolicyProfile;
 import io.pulumi.googlenative.compute_alpha.inputs.ServerTlsSettingsArgs;
@@ -23,7 +23,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customFeatures")
-    private final @Nullable Input<List<String>> customFeatures;
+      private final @Nullable Input<List<String>> customFeatures;
 
     public Input<List<String>> getCustomFeatures() {
         return this.customFeatures == null ? Input.empty() : this.customFeatures;
@@ -34,7 +34,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minTlsVersion")
-    private final @Nullable Input<RegionSslPolicyMinTlsVersion> minTlsVersion;
+      private final @Nullable Input<RegionSslPolicyMinTlsVersion> minTlsVersion;
 
     public Input<RegionSslPolicyMinTlsVersion> getMinTlsVersion() {
         return this.minTlsVersion == null ? Input.empty() : this.minTlsVersion;
@@ -56,7 +56,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,28 +67,28 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable Input<RegionSslPolicyProfile> profile;
+      private final @Nullable Input<RegionSslPolicyProfile> profile;
 
     public Input<RegionSslPolicyProfile> getProfile() {
         return this.profile == null ? Input.empty() : this.profile;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -99,7 +99,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tlsSettings")
-    private final @Nullable Input<ServerTlsSettingsArgs> tlsSettings;
+      private final @Nullable Input<ServerTlsSettingsArgs> tlsSettings;
 
     public Input<ServerTlsSettingsArgs> getTlsSettings() {
         return this.tlsSettings == null ? Input.empty() : this.tlsSettings;
@@ -263,7 +263,6 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.tlsSettings = Input.ofNullable(tlsSettings);
             return this;
         }
-
         public RegionSslPolicyArgs build() {
             return new RegionSslPolicyArgs(customFeatures, description, minTlsVersion, name, profile, project, region, requestId, tlsSettings);
         }

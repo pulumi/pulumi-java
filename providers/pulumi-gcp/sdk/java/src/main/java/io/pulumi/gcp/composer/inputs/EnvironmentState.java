@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<EnvironmentConfigGetArgs> config;
+      private final @Nullable Input<EnvironmentConfigGetArgs> config;
 
     public Input<EnvironmentConfigGetArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -36,7 +36,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -47,7 +47,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -69,7 +69,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -173,7 +173,6 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public EnvironmentState build() {
             return new EnvironmentState(config, labels, name, project, region);
         }

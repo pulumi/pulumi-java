@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="kmsKey", required=true)
-    private final String kmsKey;
+      private final String kmsKey;
 
     public String getKmsKey() {
         return this.kmsKey;
@@ -33,7 +33,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="networkTags", required=true)
-    private final List<String> networkTags;
+      private final List<String> networkTags;
 
     public List<String> getNetworkTags() {
         return this.networkTags;
@@ -44,7 +44,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="networkUri", required=true)
-    private final String networkUri;
+      private final String networkUri;
 
     public String getNetworkUri() {
         return this.networkUri;
@@ -55,7 +55,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -66,7 +66,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="subnetworkUri", required=true)
-    private final String subnetworkUri;
+      private final String subnetworkUri;
 
     public String getSubnetworkUri() {
         return this.subnetworkUri;
@@ -145,7 +145,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
             this.subnetworkUri = Objects.requireNonNull(subnetworkUri);
             return this;
         }
-
         public ExecutionConfigResponse build() {
             return new ExecutionConfigResponse(kmsKey, networkTags, networkUri, serviceAccount, subnetworkUri);
         }

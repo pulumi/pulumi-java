@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2ImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="height")
-    private final @Nullable Input<Integer> height;
+      private final @Nullable Input<Integer> height;
 
     public Input<Integer> getHeight() {
         return this.height == null ? Input.empty() : this.height;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2ImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2ImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="width")
-    private final @Nullable Input<Integer> width;
+      private final @Nullable Input<Integer> width;
 
     public Input<Integer> getWidth() {
         return this.width == null ? Input.empty() : this.width;
@@ -120,7 +120,6 @@ public final class GoogleCloudRetailV2ImageArgs extends io.pulumi.resources.Reso
             this.width = Input.ofNullable(width);
             return this;
         }
-
         public GoogleCloudRetailV2ImageArgs build() {
             return new GoogleCloudRetailV2ImageArgs(height, uri, width);
         }

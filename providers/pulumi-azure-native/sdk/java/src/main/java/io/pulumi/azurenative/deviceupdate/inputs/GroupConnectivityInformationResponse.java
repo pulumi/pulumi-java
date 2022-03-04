@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="customerVisibleFqdns")
-    private final @Nullable List<String> customerVisibleFqdns;
+      private final @Nullable List<String> customerVisibleFqdns;
 
     public List<String> getCustomerVisibleFqdns() {
         return this.customerVisibleFqdns == null ? List.of() : this.customerVisibleFqdns;
@@ -35,7 +35,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final String groupId;
+      private final String groupId;
 
     public String getGroupId() {
         return this.groupId;
@@ -46,7 +46,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="internalFqdn", required=true)
-    private final String internalFqdn;
+      private final String internalFqdn;
 
     public String getInternalFqdn() {
         return this.internalFqdn;
@@ -57,7 +57,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="memberName", required=true)
-    private final String memberName;
+      private final String memberName;
 
     public String getMemberName() {
         return this.memberName;
@@ -68,7 +68,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="privateLinkServiceArmRegion")
-    private final @Nullable String privateLinkServiceArmRegion;
+      private final @Nullable String privateLinkServiceArmRegion;
 
     public Optional<String> getPrivateLinkServiceArmRegion() {
         return this.privateLinkServiceArmRegion == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceArmRegion);
@@ -79,7 +79,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="redirectMapId")
-    private final @Nullable String redirectMapId;
+      private final @Nullable String redirectMapId;
 
     public Optional<String> getRedirectMapId() {
         return this.redirectMapId == null ? Optional.empty() : Optional.ofNullable(this.redirectMapId);
@@ -168,7 +168,6 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
             this.redirectMapId = redirectMapId;
             return this;
         }
-
         public GroupConnectivityInformationResponse build() {
             return new GroupConnectivityInformationResponse(customerVisibleFqdns, groupId, internalFqdn, memberName, privateLinkServiceArmRegion, redirectMapId);
         }

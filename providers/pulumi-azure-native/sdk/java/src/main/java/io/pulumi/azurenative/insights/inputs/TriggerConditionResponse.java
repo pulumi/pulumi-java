@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.LogMetricTriggerResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TriggerConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metricTrigger")
-    private final @Nullable LogMetricTriggerResponse metricTrigger;
+      private final @Nullable LogMetricTriggerResponse metricTrigger;
 
     public Optional<LogMetricTriggerResponse> getMetricTrigger() {
         return this.metricTrigger == null ? Optional.empty() : Optional.ofNullable(this.metricTrigger);
@@ -36,7 +36,7 @@ public final class TriggerConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Double threshold;
+      private final Double threshold;
 
     public Double getThreshold() {
         return this.threshold;
@@ -47,7 +47,7 @@ public final class TriggerConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="thresholdOperator", required=true)
-    private final String thresholdOperator;
+      private final String thresholdOperator;
 
     public String getThresholdOperator() {
         return this.thresholdOperator;
@@ -106,7 +106,6 @@ public final class TriggerConditionResponse extends io.pulumi.resources.InvokeAr
             this.thresholdOperator = Objects.requireNonNull(thresholdOperator);
             return this;
         }
-
         public TriggerConditionResponse build() {
             return new TriggerConditionResponse(metricTrigger, threshold, thresholdOperator);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebaseml_v1beta2.inputs.StatusResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ModelStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="published", required=true)
-    private final Boolean published;
+      private final Boolean published;
 
     public Boolean getPublished() {
         return this.published;
@@ -33,7 +33,7 @@ public final class ModelStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="validationError", required=true)
-    private final StatusResponse validationError;
+      private final StatusResponse validationError;
 
     public StatusResponse getValidationError() {
         return this.validationError;
@@ -82,7 +82,6 @@ public final class ModelStateResponse extends io.pulumi.resources.InvokeArgs {
             this.validationError = Objects.requireNonNull(validationError);
             return this;
         }
-
         public ModelStateResponse build() {
             return new ModelStateResponse(published, validationError);
         }

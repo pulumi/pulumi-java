@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,7 +34,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     /**
      * Characters to not transform when masking.
      * 
-     */
+    */
     public Optional<String> getCharactersToSkip() {
         return Optional.ofNullable(this.charactersToSkip);
     }
@@ -42,7 +42,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Common characters to not transform when masking. Useful to avoid removing punctuation.
      * Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
      * 
-     */
+    */
     public Optional<String> getCommonCharactersToIgnore() {
         return Optional.ofNullable(this.commonCharactersToIgnore);
     }
@@ -78,7 +78,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore(charactersToSkip, commonCharactersToIgnore);
         }

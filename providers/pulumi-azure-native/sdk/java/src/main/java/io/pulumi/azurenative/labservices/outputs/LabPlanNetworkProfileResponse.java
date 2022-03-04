@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class LabPlanNetworkProfileResponse {
     /**
      * The external subnet resource id
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -54,7 +54,6 @@ public final class LabPlanNetworkProfileResponse {
             this.subnetId = subnetId;
             return this;
         }
-
         public LabPlanNetworkProfileResponse build() {
             return new LabPlanNetworkProfileResponse(subnetId);
         }

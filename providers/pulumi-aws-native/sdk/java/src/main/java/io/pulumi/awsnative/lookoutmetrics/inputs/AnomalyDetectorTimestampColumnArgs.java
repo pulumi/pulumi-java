@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class AnomalyDetectorTimestampColumnArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="columnFormat")
-    private final @Nullable Input<String> columnFormat;
+      private final @Nullable Input<String> columnFormat;
 
     public Input<String> getColumnFormat() {
         return this.columnFormat == null ? Input.empty() : this.columnFormat;
     }
 
     @InputImport(name="columnName")
-    private final @Nullable Input<String> columnName;
+      private final @Nullable Input<String> columnName;
 
     public Input<String> getColumnName() {
         return this.columnName == null ? Input.empty() : this.columnName;
@@ -85,7 +85,6 @@ public final class AnomalyDetectorTimestampColumnArgs extends io.pulumi.resource
             this.columnName = Input.ofNullable(columnName);
             return this;
         }
-
         public AnomalyDetectorTimestampColumnArgs build() {
             return new AnomalyDetectorTimestampColumnArgs(columnFormat, columnName);
         }

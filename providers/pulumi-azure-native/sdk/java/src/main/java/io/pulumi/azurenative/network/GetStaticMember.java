@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetStaticMemberArgs;
 import io.pulumi.azurenative.network.outputs.GetStaticMemberResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStaticMember {
-/**
- * StaticMember Item.
+    private GetStaticMember() {}
+    public interface BuilderApplicator {
+        public void apply(GetStaticMemberArgs.Builder a);
+    }
+    private static GetStaticMemberArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStaticMemberArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * StaticMember Item.
  * API Version: 2021-05-01-preview.
  * 
- *
- * StaticMember Item.
+     *
+     * StaticMember Item.
  * 
- */
+     */
+    public static CompletableFuture<GetStaticMemberResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * StaticMember Item.
+     * API Version: 2021-05-01-preview.
+     * 
+     *
+         * StaticMember Item.
+     * 
+     */
     public static CompletableFuture<GetStaticMemberResult> invokeAsync(GetStaticMemberArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getStaticMember", TypeShape.of(GetStaticMemberResult.class), args == null ? GetStaticMemberArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.inputs.CustomAccountArgs;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.inputs.GoogleAccountArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAccount")
-    private final @Nullable Input<CustomAccountArgs> customAccount;
+      private final @Nullable Input<CustomAccountArgs> customAccount;
 
     public Input<CustomAccountArgs> getCustomAccount() {
         return this.customAccount == null ? Input.empty() : this.customAccount;
@@ -35,7 +35,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleAccount")
-    private final @Nullable Input<GoogleAccountArgs> googleAccount;
+      private final @Nullable Input<GoogleAccountArgs> googleAccount;
 
     public Input<GoogleAccountArgs> getGoogleAccount() {
         return this.googleAccount == null ? Input.empty() : this.googleAccount;
@@ -94,7 +94,6 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
             this.googleAccount = Input.ofNullable(googleAccount);
             return this;
         }
-
         public AuthenticationArgs build() {
             return new AuthenticationArgs(customAccount, googleAccount);
         }

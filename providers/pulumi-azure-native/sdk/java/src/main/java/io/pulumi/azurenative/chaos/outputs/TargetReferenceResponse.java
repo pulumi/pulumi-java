@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.chaos.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class TargetReferenceResponse {
     /**
      * String of the resource ID of a Target resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Enum of the Target reference type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class TargetReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TargetReferenceResponse build() {
             return new TargetReferenceResponse(id, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApiKeyAuthenticationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="in", required=true)
-    private final String in;
+      private final String in;
 
     public String getIn() {
         return this.in;
@@ -32,7 +32,7 @@ public final class ApiKeyAuthenticationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class ApiKeyAuthenticationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -55,7 +55,7 @@ public final class ApiKeyAuthenticationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -124,7 +124,6 @@ public final class ApiKeyAuthenticationResponse extends io.pulumi.resources.Invo
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ApiKeyAuthenticationResponse build() {
             return new ApiKeyAuthenticationResponse(in, name, type, value);
         }

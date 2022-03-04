@@ -6,21 +6,41 @@ package io.pulumi.azurenative.servicefabricmesh;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicefabricmesh.inputs.GetSecretArgs;
 import io.pulumi.azurenative.servicefabricmesh.outputs.GetSecretResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecret {
-/**
- * This type describes a secret resource.
+    private GetSecret() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecretArgs.Builder a);
+    }
+    private static GetSecretArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecretArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This type describes a secret resource.
  * API Version: 2018-09-01-preview.
  * 
- *
- * This type describes a secret resource.
+     *
+     * This type describes a secret resource.
  * 
- */
+     */
+    public static CompletableFuture<GetSecretResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This type describes a secret resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     *
+         * This type describes a secret resource.
+     * 
+     */
     public static CompletableFuture<GetSecretResult> invokeAsync(GetSecretArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getSecret", TypeShape.of(GetSecretResult.class), args == null ? GetSecretArgs.Empty : args, Utilities.withVersion(options));
     }

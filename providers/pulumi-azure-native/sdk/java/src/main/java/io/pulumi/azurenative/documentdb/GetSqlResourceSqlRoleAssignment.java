@@ -6,21 +6,41 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlRoleAssignmentArgs;
 import io.pulumi.azurenative.documentdb.outputs.GetSqlResourceSqlRoleAssignmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlRoleAssignment {
-/**
- * An Azure Cosmos DB Role Assignment
+    private GetSqlResourceSqlRoleAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlResourceSqlRoleAssignmentArgs.Builder a);
+    }
+    private static GetSqlResourceSqlRoleAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlResourceSqlRoleAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Cosmos DB Role Assignment
  * API Version: 2021-03-01-preview.
  * 
- *
- * An Azure Cosmos DB Role Assignment
+     *
+     * An Azure Cosmos DB Role Assignment
  * 
- */
+     */
+    public static CompletableFuture<GetSqlResourceSqlRoleAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Cosmos DB Role Assignment
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * An Azure Cosmos DB Role Assignment
+     * 
+     */
     public static CompletableFuture<GetSqlResourceSqlRoleAssignmentResult> invokeAsync(GetSqlResourceSqlRoleAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlRoleAssignment", TypeShape.of(GetSqlResourceSqlRoleAssignmentResult.class), args == null ? GetSqlResourceSqlRoleAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

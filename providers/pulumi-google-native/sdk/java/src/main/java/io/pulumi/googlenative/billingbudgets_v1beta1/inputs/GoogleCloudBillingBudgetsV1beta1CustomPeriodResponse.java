@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleTypeDateResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse extends 
      * 
      */
     @InputImport(name="endDate", required=true)
-    private final GoogleTypeDateResponse endDate;
+      private final GoogleTypeDateResponse endDate;
 
     public GoogleTypeDateResponse getEndDate() {
         return this.endDate;
@@ -32,7 +32,7 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse extends 
      * 
      */
     @InputImport(name="startDate", required=true)
-    private final GoogleTypeDateResponse startDate;
+      private final GoogleTypeDateResponse startDate;
 
     public GoogleTypeDateResponse getStartDate() {
         return this.startDate;
@@ -81,7 +81,6 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse extends 
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse build() {
             return new GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse(endDate, startDate);
         }

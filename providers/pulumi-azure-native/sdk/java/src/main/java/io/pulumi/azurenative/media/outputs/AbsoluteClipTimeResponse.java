@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class AbsoluteClipTimeResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.AbsoluteClipTime'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
      * 
-     */
+    */
     public String getTime() {
         return this.time;
     }
@@ -76,7 +76,6 @@ public final class AbsoluteClipTimeResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public AbsoluteClipTimeResponse build() {
             return new AbsoluteClipTimeResponse(odataType, time);
         }

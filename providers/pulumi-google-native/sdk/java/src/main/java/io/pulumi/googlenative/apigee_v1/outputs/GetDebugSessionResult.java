@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class GetDebugSessionResult {
     /**
      * Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
      * 
-     */
+    */
     public String getFilter() {
         return this.filter;
     }
     /**
      * A unique ID for this DebugSession.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
      * 
-     */
+    */
     public String getTimeout() {
         return this.timeout;
     }
     /**
      * Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
      * 
-     */
+    */
     public Integer getTracesize() {
         return this.tracesize;
     }
     /**
      * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
      * 
-     */
+    */
     public Integer getValidity() {
         return this.validity;
     }
@@ -159,7 +159,6 @@ public final class GetDebugSessionResult {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }
-
         public GetDebugSessionResult build() {
             return new GetDebugSessionResult(count, filter, name, timeout, tracesize, validity);
         }

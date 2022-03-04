@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayload;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class DetectorModelSqs extends io.pulumi.resources.InvokeArgs {
     public static final DetectorModelSqs Empty = new DetectorModelSqs();
 
     @InputImport(name="payload")
-    private final @Nullable DetectorModelPayload payload;
+      private final @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> getPayload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
@@ -28,7 +28,7 @@ public final class DetectorModelSqs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queueUrl", required=true)
-    private final String queueUrl;
+      private final String queueUrl;
 
     public String getQueueUrl() {
         return this.queueUrl;
@@ -39,7 +39,7 @@ public final class DetectorModelSqs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="useBase64")
-    private final @Nullable Boolean useBase64;
+      private final @Nullable Boolean useBase64;
 
     public Optional<Boolean> getUseBase64() {
         return this.useBase64 == null ? Optional.empty() : Optional.ofNullable(this.useBase64);
@@ -98,7 +98,6 @@ public final class DetectorModelSqs extends io.pulumi.resources.InvokeArgs {
             this.useBase64 = useBase64;
             return this;
         }
-
         public DetectorModelSqs build() {
             return new DetectorModelSqs(payload, queueUrl, useBase64);
         }

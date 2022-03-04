@@ -24,7 +24,7 @@ import io.pulumi.awsnative.iot.inputs.TopicRuleSnsAction;
 import io.pulumi.awsnative.iot.inputs.TopicRuleSqsAction;
 import io.pulumi.awsnative.iot.inputs.TopicRuleStepFunctionsAction;
 import io.pulumi.awsnative.iot.inputs.TopicRuleTimestreamAction;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -35,147 +35,147 @@ public final class TopicRuleAction extends io.pulumi.resources.InvokeArgs {
     public static final TopicRuleAction Empty = new TopicRuleAction();
 
     @InputImport(name="cloudwatchAlarm")
-    private final @Nullable TopicRuleCloudwatchAlarmAction cloudwatchAlarm;
+      private final @Nullable TopicRuleCloudwatchAlarmAction cloudwatchAlarm;
 
     public Optional<TopicRuleCloudwatchAlarmAction> getCloudwatchAlarm() {
         return this.cloudwatchAlarm == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchAlarm);
     }
 
     @InputImport(name="cloudwatchLogs")
-    private final @Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs;
+      private final @Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs;
 
     public Optional<TopicRuleCloudwatchLogsAction> getCloudwatchLogs() {
         return this.cloudwatchLogs == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchLogs);
     }
 
     @InputImport(name="cloudwatchMetric")
-    private final @Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric;
+      private final @Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric;
 
     public Optional<TopicRuleCloudwatchMetricAction> getCloudwatchMetric() {
         return this.cloudwatchMetric == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchMetric);
     }
 
     @InputImport(name="dynamoDB")
-    private final @Nullable TopicRuleDynamoDBAction dynamoDB;
+      private final @Nullable TopicRuleDynamoDBAction dynamoDB;
 
     public Optional<TopicRuleDynamoDBAction> getDynamoDB() {
         return this.dynamoDB == null ? Optional.empty() : Optional.ofNullable(this.dynamoDB);
     }
 
     @InputImport(name="dynamoDBv2")
-    private final @Nullable TopicRuleDynamoDBv2Action dynamoDBv2;
+      private final @Nullable TopicRuleDynamoDBv2Action dynamoDBv2;
 
     public Optional<TopicRuleDynamoDBv2Action> getDynamoDBv2() {
         return this.dynamoDBv2 == null ? Optional.empty() : Optional.ofNullable(this.dynamoDBv2);
     }
 
     @InputImport(name="elasticsearch")
-    private final @Nullable TopicRuleElasticsearchAction elasticsearch;
+      private final @Nullable TopicRuleElasticsearchAction elasticsearch;
 
     public Optional<TopicRuleElasticsearchAction> getElasticsearch() {
         return this.elasticsearch == null ? Optional.empty() : Optional.ofNullable(this.elasticsearch);
     }
 
     @InputImport(name="firehose")
-    private final @Nullable TopicRuleFirehoseAction firehose;
+      private final @Nullable TopicRuleFirehoseAction firehose;
 
     public Optional<TopicRuleFirehoseAction> getFirehose() {
         return this.firehose == null ? Optional.empty() : Optional.ofNullable(this.firehose);
     }
 
     @InputImport(name="http")
-    private final @Nullable TopicRuleHttpAction http;
+      private final @Nullable TopicRuleHttpAction http;
 
     public Optional<TopicRuleHttpAction> getHttp() {
         return this.http == null ? Optional.empty() : Optional.ofNullable(this.http);
     }
 
     @InputImport(name="iotAnalytics")
-    private final @Nullable TopicRuleIotAnalyticsAction iotAnalytics;
+      private final @Nullable TopicRuleIotAnalyticsAction iotAnalytics;
 
     public Optional<TopicRuleIotAnalyticsAction> getIotAnalytics() {
         return this.iotAnalytics == null ? Optional.empty() : Optional.ofNullable(this.iotAnalytics);
     }
 
     @InputImport(name="iotEvents")
-    private final @Nullable TopicRuleIotEventsAction iotEvents;
+      private final @Nullable TopicRuleIotEventsAction iotEvents;
 
     public Optional<TopicRuleIotEventsAction> getIotEvents() {
         return this.iotEvents == null ? Optional.empty() : Optional.ofNullable(this.iotEvents);
     }
 
     @InputImport(name="iotSiteWise")
-    private final @Nullable TopicRuleIotSiteWiseAction iotSiteWise;
+      private final @Nullable TopicRuleIotSiteWiseAction iotSiteWise;
 
     public Optional<TopicRuleIotSiteWiseAction> getIotSiteWise() {
         return this.iotSiteWise == null ? Optional.empty() : Optional.ofNullable(this.iotSiteWise);
     }
 
     @InputImport(name="kafka")
-    private final @Nullable TopicRuleKafkaAction kafka;
+      private final @Nullable TopicRuleKafkaAction kafka;
 
     public Optional<TopicRuleKafkaAction> getKafka() {
         return this.kafka == null ? Optional.empty() : Optional.ofNullable(this.kafka);
     }
 
     @InputImport(name="kinesis")
-    private final @Nullable TopicRuleKinesisAction kinesis;
+      private final @Nullable TopicRuleKinesisAction kinesis;
 
     public Optional<TopicRuleKinesisAction> getKinesis() {
         return this.kinesis == null ? Optional.empty() : Optional.ofNullable(this.kinesis);
     }
 
     @InputImport(name="lambda")
-    private final @Nullable TopicRuleLambdaAction lambda;
+      private final @Nullable TopicRuleLambdaAction lambda;
 
     public Optional<TopicRuleLambdaAction> getLambda() {
         return this.lambda == null ? Optional.empty() : Optional.ofNullable(this.lambda);
     }
 
     @InputImport(name="openSearch")
-    private final @Nullable TopicRuleOpenSearchAction openSearch;
+      private final @Nullable TopicRuleOpenSearchAction openSearch;
 
     public Optional<TopicRuleOpenSearchAction> getOpenSearch() {
         return this.openSearch == null ? Optional.empty() : Optional.ofNullable(this.openSearch);
     }
 
     @InputImport(name="republish")
-    private final @Nullable TopicRuleRepublishAction republish;
+      private final @Nullable TopicRuleRepublishAction republish;
 
     public Optional<TopicRuleRepublishAction> getRepublish() {
         return this.republish == null ? Optional.empty() : Optional.ofNullable(this.republish);
     }
 
     @InputImport(name="s3")
-    private final @Nullable TopicRuleS3Action s3;
+      private final @Nullable TopicRuleS3Action s3;
 
     public Optional<TopicRuleS3Action> getS3() {
         return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
     }
 
     @InputImport(name="sns")
-    private final @Nullable TopicRuleSnsAction sns;
+      private final @Nullable TopicRuleSnsAction sns;
 
     public Optional<TopicRuleSnsAction> getSns() {
         return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
     }
 
     @InputImport(name="sqs")
-    private final @Nullable TopicRuleSqsAction sqs;
+      private final @Nullable TopicRuleSqsAction sqs;
 
     public Optional<TopicRuleSqsAction> getSqs() {
         return this.sqs == null ? Optional.empty() : Optional.ofNullable(this.sqs);
     }
 
     @InputImport(name="stepFunctions")
-    private final @Nullable TopicRuleStepFunctionsAction stepFunctions;
+      private final @Nullable TopicRuleStepFunctionsAction stepFunctions;
 
     public Optional<TopicRuleStepFunctionsAction> getStepFunctions() {
         return this.stepFunctions == null ? Optional.empty() : Optional.ofNullable(this.stepFunctions);
     }
 
     @InputImport(name="timestream")
-    private final @Nullable TopicRuleTimestreamAction timestream;
+      private final @Nullable TopicRuleTimestreamAction timestream;
 
     public Optional<TopicRuleTimestreamAction> getTimestream() {
         return this.timestream == null ? Optional.empty() : Optional.ofNullable(this.timestream);
@@ -414,7 +414,6 @@ public final class TopicRuleAction extends io.pulumi.resources.InvokeArgs {
             this.timestream = timestream;
             return this;
         }
-
         public TopicRuleAction build() {
             return new TopicRuleAction(cloudwatchAlarm, cloudwatchLogs, cloudwatchMetric, dynamoDB, dynamoDBv2, elasticsearch, firehose, http, iotAnalytics, iotEvents, iotSiteWise, kafka, kinesis, lambda, openSearch, republish, s3, sns, sqs, stepFunctions, timestream);
         }

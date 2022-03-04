@@ -19,7 +19,7 @@ import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageLocationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpLocationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -109,63 +109,63 @@ public final class OrcDatasetResponse {
     /**
      * List of tags that can be used for describing the Dataset.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Dataset description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-     */
+    */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The location of the ORC data storage.
      * 
-     */
+    */
     public Object getLocation() {
         return this.location;
     }
     /**
      * The data orcCompressionCodec. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getOrcCompressionCodec() {
         return Optional.ofNullable(this.orcCompressionCodec);
     }
     /**
      * Parameters for dataset.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-     */
+    */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-     */
+    */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
     }
@@ -173,7 +173,7 @@ public final class OrcDatasetResponse {
      * Type of dataset.
      * Expected value is 'Orc'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -265,7 +265,6 @@ public final class OrcDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OrcDatasetResponse build() {
             return new OrcDatasetResponse(annotations, description, folder, linkedServiceName, location, orcCompressionCodec, parameters, schema, structure, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.enums.PolicyAlternativeNameServerConfigTargetNameServerForwardingPath;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="forwardingPath")
-    private final @Nullable Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
+      private final @Nullable Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
 
     public Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> getForwardingPath() {
         return this.forwardingPath == null ? Input.empty() : this.forwardingPath;
@@ -31,7 +31,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="ipv4Address")
-    private final @Nullable Input<String> ipv4Address;
+      private final @Nullable Input<String> ipv4Address;
 
     public Input<String> getIpv4Address() {
         return this.ipv4Address == null ? Input.empty() : this.ipv4Address;
@@ -42,14 +42,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="ipv6Address")
-    private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Input<String> ipv6Address;
 
     public Input<String> getIpv6Address() {
         return this.ipv6Address == null ? Input.empty() : this.ipv6Address;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -138,7 +138,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {
             return new PolicyAlternativeNameServerConfigTargetNameServerArgs(forwardingPath, ipv4Address, ipv6Address, kind);
         }

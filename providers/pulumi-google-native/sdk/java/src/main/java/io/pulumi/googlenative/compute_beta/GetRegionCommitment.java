@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionCommitment {
-/**
- * Returns the specified commitment resource. Gets a list of available commitments by making a list() request.
+    private GetRegionCommitment() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionCommitmentArgs.Builder a);
+    }
+    private static GetRegionCommitmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionCommitmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified commitment resource. Gets a list of available commitments by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionCommitmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified commitment resource. Gets a list of available commitments by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetRegionCommitmentResult> invokeAsync(GetRegionCommitmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRegionCommitment", TypeShape.of(GetRegionCommitmentResult.class), args == null ? GetRegionCommitmentArgs.Empty : args, Utilities.withVersion(options));
     }

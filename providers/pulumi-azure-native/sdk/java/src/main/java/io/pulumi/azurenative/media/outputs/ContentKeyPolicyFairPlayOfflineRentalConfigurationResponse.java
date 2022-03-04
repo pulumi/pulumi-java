@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
     /**
      * Playback duration
      * 
-     */
+    */
     public Double getPlaybackDurationSeconds() {
         return this.playbackDurationSeconds;
     }
     /**
      * Storage duration
      * 
-     */
+    */
     public Double getStorageDurationSeconds() {
         return this.storageDurationSeconds;
     }
@@ -74,7 +74,6 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
             this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
             return this;
         }
-
         public ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse build() {
             return new ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(playbackDurationSeconds, storageDurationSeconds);
         }

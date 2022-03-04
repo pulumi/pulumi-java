@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs ex
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -65,7 +65,6 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs ex
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs build() {
             return new LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs(name);
         }

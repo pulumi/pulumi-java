@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,7 +44,7 @@ public final class EdgeCacheOriginTimeout {
      * The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
      * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
      * 
-     */
+    */
     public Optional<String> getConnectTimeout() {
         return Optional.ofNullable(this.connectTimeout);
     }
@@ -52,7 +52,7 @@ public final class EdgeCacheOriginTimeout {
      * The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 503 will be returned if the timeout is reached before a response is returned.
      * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
      * 
-     */
+    */
     public Optional<String> getMaxAttemptsTimeout() {
         return Optional.ofNullable(this.maxAttemptsTimeout);
     }
@@ -60,7 +60,7 @@ public final class EdgeCacheOriginTimeout {
      * The maximum duration to wait for data to arrive when reading from the HTTP connection/stream.
      * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
      * 
-     */
+    */
     public Optional<String> getResponseTimeout() {
         return Optional.ofNullable(this.responseTimeout);
     }
@@ -103,7 +103,6 @@ public final class EdgeCacheOriginTimeout {
             this.responseTimeout = responseTimeout;
             return this;
         }
-
         public EdgeCacheOriginTimeout build() {
             return new EdgeCacheOriginTimeout(connectTimeout, maxAttemptsTimeout, responseTimeout);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs.VolumeAttachmentSourceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="attacher", required=true)
-    private final Input<String> attacher;
+      private final Input<String> attacher;
 
     public Input<String> getAttacher() {
         return this.attacher;
@@ -34,7 +34,7 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="nodeName", required=true)
-    private final Input<String> nodeName;
+      private final Input<String> nodeName;
 
     public Input<String> getNodeName() {
         return this.nodeName;
@@ -45,7 +45,7 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<VolumeAttachmentSourceArgs> source;
+      private final Input<VolumeAttachmentSourceArgs> source;
 
     public Input<VolumeAttachmentSourceArgs> getSource() {
         return this.source;
@@ -119,7 +119,6 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public VolumeAttachmentSpecArgs build() {
             return new VolumeAttachmentSpecArgs(attacher, nodeName, source);
         }

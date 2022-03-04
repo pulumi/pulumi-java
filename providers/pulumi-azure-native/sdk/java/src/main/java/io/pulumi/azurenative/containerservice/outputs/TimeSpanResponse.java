@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class TimeSpanResponse {
     /**
      * The end of a time span
      * 
-     */
+    */
     public Optional<String> getEnd() {
         return Optional.ofNullable(this.end);
     }
     /**
      * The start of a time span
      * 
-     */
+    */
     public Optional<String> getStart() {
         return Optional.ofNullable(this.start);
     }
@@ -76,7 +76,6 @@ public final class TimeSpanResponse {
             this.start = start;
             return this;
         }
-
         public TimeSpanResponse build() {
             return new TimeSpanResponse(end, start);
         }

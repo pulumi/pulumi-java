@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Object accountName;
+      private final @Nullable Object accountName;
 
     public Optional<Object> getAccountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
@@ -43,7 +43,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -54,7 +54,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="azureCloudType")
-    private final @Nullable Object azureCloudType;
+      private final @Nullable Object azureCloudType;
 
     public Optional<Object> getAzureCloudType() {
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
@@ -65,7 +65,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -76,7 +76,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable CredentialReferenceResponse credential;
+      private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
@@ -87,7 +87,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="dataLakeStoreUri", required=true)
-    private final Object dataLakeStoreUri;
+      private final Object dataLakeStoreUri;
 
     public Object getDataLakeStoreUri() {
         return this.dataLakeStoreUri;
@@ -98,7 +98,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -109,7 +109,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -120,7 +120,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -131,7 +131,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName")
-    private final @Nullable Object resourceGroupName;
+      private final @Nullable Object resourceGroupName;
 
     public Optional<Object> getResourceGroupName() {
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
@@ -142,7 +142,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="servicePrincipalId")
-    private final @Nullable Object servicePrincipalId;
+      private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
@@ -153,7 +153,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="servicePrincipalKey")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
@@ -164,7 +164,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Object subscriptionId;
+      private final @Nullable Object subscriptionId;
 
     public Optional<Object> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -175,7 +175,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="tenant")
-    private final @Nullable Object tenant;
+      private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
@@ -187,7 +187,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -366,7 +366,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataLakeStoreLinkedServiceResponse build() {
             return new AzureDataLakeStoreLinkedServiceResponse(accountName, annotations, azureCloudType, connectVia, credential, dataLakeStoreUri, description, encryptedCredential, parameters, resourceGroupName, servicePrincipalId, servicePrincipalKey, subscriptionId, tenant, type);
         }

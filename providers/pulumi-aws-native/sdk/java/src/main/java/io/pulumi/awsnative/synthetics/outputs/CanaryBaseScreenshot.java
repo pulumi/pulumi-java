@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class CanaryBaseScreenshot {
     /**
      * List of coordinates of rectangles to be ignored during visual testing
      * 
-     */
+    */
     public List<String> getIgnoreCoordinates() {
         return this.ignoreCoordinates == null ? List.of() : this.ignoreCoordinates;
     }
     /**
      * Name of the screenshot to be used as base reference for visual testing
      * 
-     */
+    */
     public String getScreenshotName() {
         return this.screenshotName;
     }
@@ -76,7 +76,6 @@ public final class CanaryBaseScreenshot {
             this.screenshotName = Objects.requireNonNull(screenshotName);
             return this;
         }
-
         public CanaryBaseScreenshot build() {
             return new CanaryBaseScreenshot(ignoreCoordinates, screenshotName);
         }

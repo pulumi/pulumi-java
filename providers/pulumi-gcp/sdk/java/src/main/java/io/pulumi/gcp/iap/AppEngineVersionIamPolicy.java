@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineVersionIamPolicyArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineVersionIamPolicyState;
@@ -150,6 +150,37 @@ public class AppEngineVersionIamPolicy extends io.pulumi.resources.CustomResourc
         return this.versionId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AppEngineVersionIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.iap.AppEngineVersionIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.iap.AppEngineVersionIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AppEngineVersionIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AppEngineVersionIamPolicy(String name) {
+        this(name, AppEngineVersionIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AppEngineVersionIamPolicy(String name, AppEngineVersionIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

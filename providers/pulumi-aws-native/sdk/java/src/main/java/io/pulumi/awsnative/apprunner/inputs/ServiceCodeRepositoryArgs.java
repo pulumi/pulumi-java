@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceCodeConfigurationArgs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceSourceCodeVersionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.Resourc
     public static final ServiceCodeRepositoryArgs Empty = new ServiceCodeRepositoryArgs();
 
     @InputImport(name="codeConfiguration")
-    private final @Nullable Input<ServiceCodeConfigurationArgs> codeConfiguration;
+      private final @Nullable Input<ServiceCodeConfigurationArgs> codeConfiguration;
 
     public Input<ServiceCodeConfigurationArgs> getCodeConfiguration() {
         return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
@@ -32,14 +32,14 @@ public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="repositoryUrl", required=true)
-    private final Input<String> repositoryUrl;
+      private final Input<String> repositoryUrl;
 
     public Input<String> getRepositoryUrl() {
         return this.repositoryUrl;
     }
 
     @InputImport(name="sourceCodeVersion", required=true)
-    private final Input<ServiceSourceCodeVersionArgs> sourceCodeVersion;
+      private final Input<ServiceSourceCodeVersionArgs> sourceCodeVersion;
 
     public Input<ServiceSourceCodeVersionArgs> getSourceCodeVersion() {
         return this.sourceCodeVersion;
@@ -113,7 +113,6 @@ public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.Resourc
             this.sourceCodeVersion = Input.of(Objects.requireNonNull(sourceCodeVersion));
             return this;
         }
-
         public ServiceCodeRepositoryArgs build() {
             return new ServiceCodeRepositoryArgs(codeConfiguration, repositoryUrl, sourceCodeVersion);
         }

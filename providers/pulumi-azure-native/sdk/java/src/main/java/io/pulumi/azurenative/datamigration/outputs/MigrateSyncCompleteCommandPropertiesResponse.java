@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.MigrateSyncCompleteCommandInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrateSyncCompleteCommandOutputResponse;
 import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,35 +60,35 @@ public final class MigrateSyncCompleteCommandPropertiesResponse {
      * Command type.
      * Expected value is 'Migrate.Sync.Complete.Database'.
      * 
-     */
+    */
     public String getCommandType() {
         return this.commandType;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
-     */
+    */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Command input
      * 
-     */
+    */
     public Optional<MigrateSyncCompleteCommandInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Command output. This is ignored if submitted.
      * 
-     */
+    */
     public MigrateSyncCompleteCommandOutputResponse getOutput() {
         return this.output;
     }
     /**
      * The state of the command. This is ignored if submitted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -145,7 +145,6 @@ public final class MigrateSyncCompleteCommandPropertiesResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MigrateSyncCompleteCommandPropertiesResponse build() {
             return new MigrateSyncCompleteCommandPropertiesResponse(commandType, errors, input, output, state);
         }

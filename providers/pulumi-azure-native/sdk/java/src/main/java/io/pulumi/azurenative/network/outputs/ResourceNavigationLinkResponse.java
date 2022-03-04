@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class ResourceNavigationLinkResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Link to the external resource.
      * 
-     */
+    */
     public Optional<String> getLink() {
         return Optional.ofNullable(this.link);
     }
     /**
      * Resource type of the linked resource.
      * 
-     */
+    */
     public Optional<String> getLinkedResourceType() {
         return Optional.ofNullable(this.linkedResourceType);
     }
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the resource navigation link resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -181,7 +181,6 @@ public final class ResourceNavigationLinkResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceNavigationLinkResponse build() {
             return new ResourceNavigationLinkResponse(etag, id, link, linkedResourceType, name, provisioningState, type);
         }

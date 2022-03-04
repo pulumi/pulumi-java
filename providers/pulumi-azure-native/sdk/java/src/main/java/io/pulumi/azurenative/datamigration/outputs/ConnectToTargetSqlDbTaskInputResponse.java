@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -23,7 +23,7 @@ public final class ConnectToTargetSqlDbTaskInputResponse {
     /**
      * Connection information for target SQL DB
      * 
-     */
+    */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -52,7 +52,6 @@ public final class ConnectToTargetSqlDbTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ConnectToTargetSqlDbTaskInputResponse build() {
             return new ConnectToTargetSqlDbTaskInputResponse(targetConnectionInfo);
         }

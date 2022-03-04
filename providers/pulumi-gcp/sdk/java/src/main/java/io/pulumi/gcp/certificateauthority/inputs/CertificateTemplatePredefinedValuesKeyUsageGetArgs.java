@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageGetArgs;
@@ -22,7 +22,7 @@ public final class CertificateTemplatePredefinedValuesKeyUsageGetArgs extends io
      * 
      */
     @InputImport(name="baseKeyUsage")
-    private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
+      private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
     public Input<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
         return this.baseKeyUsage == null ? Input.empty() : this.baseKeyUsage;
@@ -33,7 +33,7 @@ public final class CertificateTemplatePredefinedValuesKeyUsageGetArgs extends io
      * 
      */
     @InputImport(name="extendedKeyUsage")
-    private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
+      private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
     public Input<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
         return this.extendedKeyUsage == null ? Input.empty() : this.extendedKeyUsage;
@@ -44,7 +44,7 @@ public final class CertificateTemplatePredefinedValuesKeyUsageGetArgs extends io
      * 
      */
     @InputImport(name="unknownExtendedKeyUsages")
-    private final @Nullable Input<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
+      private final @Nullable Input<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
     public Input<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? Input.empty() : this.unknownExtendedKeyUsages;
@@ -118,7 +118,6 @@ public final class CertificateTemplatePredefinedValuesKeyUsageGetArgs extends io
             this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-
         public CertificateTemplatePredefinedValuesKeyUsageGetArgs build() {
             return new CertificateTemplatePredefinedValuesKeyUsageGetArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.AppResourceSpecInstanceType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<AppResourceSpecInstanceType> instanceType;
+      private final @Nullable Input<AppResourceSpecInstanceType> instanceType;
 
     public Input<AppResourceSpecInstanceType> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -31,7 +31,7 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sageMakerImageArn")
-    private final @Nullable Input<String> sageMakerImageArn;
+      private final @Nullable Input<String> sageMakerImageArn;
 
     public Input<String> getSageMakerImageArn() {
         return this.sageMakerImageArn == null ? Input.empty() : this.sageMakerImageArn;
@@ -42,7 +42,7 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sageMakerImageVersionArn")
-    private final @Nullable Input<String> sageMakerImageVersionArn;
+      private final @Nullable Input<String> sageMakerImageVersionArn;
 
     public Input<String> getSageMakerImageVersionArn() {
         return this.sageMakerImageVersionArn == null ? Input.empty() : this.sageMakerImageVersionArn;
@@ -116,7 +116,6 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
             this.sageMakerImageVersionArn = Input.ofNullable(sageMakerImageVersionArn);
             return this;
         }
-
         public AppResourceSpecArgs build() {
             return new AppResourceSpecArgs(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLCustomHTTPHeader;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public final class WebACLCustomResponse {
     /**
      * Custom response body key.
      * 
-     */
+    */
     public Optional<String> getCustomResponseBodyKey() {
         return Optional.ofNullable(this.customResponseBodyKey);
     }
@@ -49,7 +49,7 @@ public final class WebACLCustomResponse {
     /**
      * Collection of HTTP headers.
      * 
-     */
+    */
     public List<WebACLCustomHTTPHeader> getResponseHeaders() {
         return this.responseHeaders == null ? List.of() : this.responseHeaders;
     }
@@ -92,7 +92,6 @@ public final class WebACLCustomResponse {
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public WebACLCustomResponse build() {
             return new WebACLCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
         }

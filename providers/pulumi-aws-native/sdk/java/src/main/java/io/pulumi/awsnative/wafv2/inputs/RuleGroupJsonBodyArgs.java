@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupBodyParsingFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupJsonMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupJsonMatchPatternArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,21 +21,21 @@ public final class RuleGroupJsonBodyArgs extends io.pulumi.resources.ResourceArg
     public static final RuleGroupJsonBodyArgs Empty = new RuleGroupJsonBodyArgs();
 
     @InputImport(name="invalidFallbackBehavior")
-    private final @Nullable Input<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior;
+      private final @Nullable Input<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior;
 
     public Input<RuleGroupBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
         return this.invalidFallbackBehavior == null ? Input.empty() : this.invalidFallbackBehavior;
     }
 
     @InputImport(name="matchPattern", required=true)
-    private final Input<RuleGroupJsonMatchPatternArgs> matchPattern;
+      private final Input<RuleGroupJsonMatchPatternArgs> matchPattern;
 
     public Input<RuleGroupJsonMatchPatternArgs> getMatchPattern() {
         return this.matchPattern;
     }
 
     @InputImport(name="matchScope", required=true)
-    private final Input<RuleGroupJsonMatchScope> matchScope;
+      private final Input<RuleGroupJsonMatchScope> matchScope;
 
     public Input<RuleGroupJsonMatchScope> getMatchScope() {
         return this.matchScope;
@@ -109,7 +109,6 @@ public final class RuleGroupJsonBodyArgs extends io.pulumi.resources.ResourceArg
             this.matchScope = Input.of(Objects.requireNonNull(matchScope));
             return this;
         }
-
         public RuleGroupJsonBodyArgs build() {
             return new RuleGroupJsonBodyArgs(invalidFallbackBehavior, matchPattern, matchScope);
         }

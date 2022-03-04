@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class WorkerResourceResponse {
     /**
      * Optional. CPU request and limit for a single Airflow worker replica.
      * 
-     */
+    */
     public Double getCpu() {
         return this.cpu;
     }
     /**
      * Optional. Maximum number of workers for autoscaling.
      * 
-     */
+    */
     public Integer getMaxCount() {
         return this.maxCount;
     }
     /**
      * Optional. Memory (GB) request and limit for a single Airflow worker replica.
      * 
-     */
+    */
     public Double getMemoryGb() {
         return this.memoryGb;
     }
     /**
      * Optional. Minimum number of workers for autoscaling.
      * 
-     */
+    */
     public Integer getMinCount() {
         return this.minCount;
     }
     /**
      * Optional. Storage (GB) request and limit for a single Airflow worker replica.
      * 
-     */
+    */
     public Double getStorageGb() {
         return this.storageGb;
     }
@@ -138,7 +138,6 @@ public final class WorkerResourceResponse {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }
-
         public WorkerResourceResponse build() {
             return new WorkerResourceResponse(cpu, maxCount, memoryGb, minCount, storageGb);
         }

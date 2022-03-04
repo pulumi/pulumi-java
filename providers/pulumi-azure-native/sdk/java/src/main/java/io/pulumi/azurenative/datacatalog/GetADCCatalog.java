@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datacatalog;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datacatalog.inputs.GetADCCatalogArgs;
 import io.pulumi.azurenative.datacatalog.outputs.GetADCCatalogResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetADCCatalog {
-/**
- * Azure Data Catalog.
+    private GetADCCatalog() {}
+    public interface BuilderApplicator {
+        public void apply(GetADCCatalogArgs.Builder a);
+    }
+    private static GetADCCatalogArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetADCCatalogArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Azure Data Catalog.
  * API Version: 2016-03-30.
  * 
- *
- * Azure Data Catalog.
+     *
+     * Azure Data Catalog.
  * 
- */
+     */
+    public static CompletableFuture<GetADCCatalogResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Azure Data Catalog.
+     * API Version: 2016-03-30.
+     * 
+     *
+         * Azure Data Catalog.
+     * 
+     */
     public static CompletableFuture<GetADCCatalogResult> invokeAsync(GetADCCatalogArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datacatalog:getADCCatalog", TypeShape.of(GetADCCatalogResult.class), args == null ? GetADCCatalogArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class ReportableExceptionResponse {
     /**
      * Actionable steps for this exception
      * 
-     */
+    */
     public Optional<String> getActionableMessage() {
         return Optional.ofNullable(this.actionableMessage);
     }
     /**
      * The path to the file where exception occurred
      * 
-     */
+    */
     public String getFilePath() {
         return this.filePath;
     }
     /**
      * Coded numerical value that is assigned to a specific exception
      * 
-     */
+    */
     public Integer getHResult() {
         return this.hResult;
     }
     /**
      * The line number where exception occurred
      * 
-     */
+    */
     public String getLineNumber() {
         return this.lineNumber;
     }
     /**
      * Error message
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Stack trace
      * 
-     */
+    */
     public String getStackTrace() {
         return this.stackTrace;
     }
@@ -161,7 +161,6 @@ public final class ReportableExceptionResponse {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }
-
         public ReportableExceptionResponse build() {
             return new ReportableExceptionResponse(actionableMessage, filePath, hResult, lineNumber, message, stackTrace);
         }

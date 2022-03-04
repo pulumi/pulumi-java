@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="aadAuthority")
-    private final @Nullable String aadAuthority;
+      private final @Nullable String aadAuthority;
 
     public Optional<String> getAadAuthority() {
         return this.aadAuthority == null ? Optional.empty() : Optional.ofNullable(this.aadAuthority);
@@ -34,7 +34,7 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable String applicationId;
+      private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
@@ -45,7 +45,7 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="audience")
-    private final @Nullable String audience;
+      private final @Nullable String audience;
 
     public Optional<String> getAudience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
@@ -56,7 +56,7 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable String objectId;
+      private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
@@ -67,7 +67,7 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+      private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -146,7 +146,6 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
             this.tenantId = tenantId;
             return this;
         }
-
         public IdentityProviderDetailsResponse build() {
             return new IdentityProviderDetailsResponse(aadAuthority, applicationId, audience, objectId, tenantId);
         }

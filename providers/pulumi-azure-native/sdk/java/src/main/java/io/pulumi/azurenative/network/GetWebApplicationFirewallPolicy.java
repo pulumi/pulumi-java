@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetWebApplicationFirewallPolicyArgs;
 import io.pulumi.azurenative.network.outputs.GetWebApplicationFirewallPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebApplicationFirewallPolicy {
-/**
- * Defines web application firewall policy.
+    private GetWebApplicationFirewallPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebApplicationFirewallPolicyArgs.Builder a);
+    }
+    private static GetWebApplicationFirewallPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebApplicationFirewallPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Defines web application firewall policy.
  * API Version: 2020-11-01.
  * 
- *
- * Defines web application firewall policy.
+     *
+     * Defines web application firewall policy.
  * 
- */
+     */
+    public static CompletableFuture<GetWebApplicationFirewallPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Defines web application firewall policy.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Defines web application firewall policy.
+     * 
+     */
     public static CompletableFuture<GetWebApplicationFirewallPolicyResult> invokeAsync(GetWebApplicationFirewallPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getWebApplicationFirewallPolicy", TypeShape.of(GetWebApplicationFirewallPolicyResult.class), args == null ? GetWebApplicationFirewallPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.RecommendedActionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -96,77 +96,77 @@ public final class GetServerAdvisorResult {
     /**
      * Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
      * 
-     */
+    */
     public String getAdvisorStatus() {
         return this.advisorStatus;
     }
     /**
      * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
      * 
-     */
+    */
     public String getAutoExecuteStatus() {
         return this.autoExecuteStatus;
     }
     /**
      * Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level).
      * 
-     */
+    */
     public String getAutoExecuteStatusInheritedFrom() {
         return this.autoExecuteStatusInheritedFrom;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource kind.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Gets the time when the current resource was analyzed for recommendations by this advisor.
      * 
-     */
+    */
     public String getLastChecked() {
         return this.lastChecked;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available),LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
      * 
-     */
+    */
     public String getRecommendationsStatus() {
         return this.recommendationsStatus;
     }
     /**
      * Gets the recommended actions for this advisor.
      * 
-     */
+    */
     public List<RecommendedActionResponse> getRecommendedActions() {
         return this.recommendedActions;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -265,7 +265,6 @@ public final class GetServerAdvisorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerAdvisorResult build() {
             return new GetServerAdvisorResult(advisorStatus, autoExecuteStatus, autoExecuteStatusInheritedFrom, id, kind, lastChecked, location, name, recommendationsStatus, recommendedActions, type);
         }

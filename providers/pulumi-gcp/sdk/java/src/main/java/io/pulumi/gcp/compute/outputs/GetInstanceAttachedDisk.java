@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,7 +49,7 @@ public final class GetInstanceAttachedDisk {
      * Name with which the attached disk is accessible
      * under `/dev/disk/by-id/`
      * 
-     */
+    */
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -65,14 +65,14 @@ public final class GetInstanceAttachedDisk {
     /**
      * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * The name or self_link of the disk attached to this instance.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
@@ -136,7 +136,6 @@ public final class GetInstanceAttachedDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public GetInstanceAttachedDisk build() {
             return new GetInstanceAttachedDisk(deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, kmsKeySelfLink, mode, source);
         }

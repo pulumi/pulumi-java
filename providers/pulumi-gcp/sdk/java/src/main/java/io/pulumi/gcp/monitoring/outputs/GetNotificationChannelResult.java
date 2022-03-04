@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.GetNotificationChannelSensitiveLabel;
 import java.lang.Boolean;
 import java.lang.String;
@@ -69,7 +69,7 @@ public final class GetNotificationChannelResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -189,7 +189,6 @@ public final class GetNotificationChannelResult {
             this.verificationStatus = Objects.requireNonNull(verificationStatus);
             return this;
         }
-
         public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(description, displayName, enabled, id, labels, name, project, sensitiveLabels, type, userLabels, verificationStatus);
         }

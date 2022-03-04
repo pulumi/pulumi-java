@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class IndexServerSideEncryptionConfigurationArgs extends io.pulumi.
     public static final IndexServerSideEncryptionConfigurationArgs Empty = new IndexServerSideEncryptionConfigurationArgs();
 
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -58,7 +58,6 @@ public final class IndexServerSideEncryptionConfigurationArgs extends io.pulumi.
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
-
         public IndexServerSideEncryptionConfigurationArgs build() {
             return new IndexServerSideEncryptionConfigurationArgs(kmsKeyId);
         }

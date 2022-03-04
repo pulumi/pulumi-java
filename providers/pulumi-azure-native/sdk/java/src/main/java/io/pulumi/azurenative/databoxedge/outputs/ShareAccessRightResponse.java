@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ShareAccessRightResponse {
     /**
      * Type of access to be allowed on the share for this user.
      * 
-     */
+    */
     public String getAccessType() {
         return this.accessType;
     }
     /**
      * The share ID.
      * 
-     */
+    */
     public String getShareId() {
         return this.shareId;
     }
@@ -74,7 +74,6 @@ public final class ShareAccessRightResponse {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
-
         public ShareAccessRightResponse build() {
             return new ShareAccessRightResponse(accessType, shareId);
         }

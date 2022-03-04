@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue;
 import java.lang.Boolean;
@@ -84,7 +84,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     /**
      * A boolean value.
      * 
-     */
+    */
     public Optional<Boolean> getBooleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
@@ -92,7 +92,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Represents a whole or partial calendar date.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue> getDateValue() {
         return Optional.ofNullable(this.dateValue);
     }
@@ -100,28 +100,28 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Represents a day of the week.
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-     */
+    */
     public Optional<String> getDayOfWeekValue() {
         return Optional.ofNullable(this.dayOfWeekValue);
     }
     /**
      * A float value.
      * 
-     */
+    */
     public Optional<Double> getFloatValue() {
         return Optional.ofNullable(this.floatValue);
     }
     /**
      * An integer value.
      * 
-     */
+    */
     public Optional<Integer> getIntegerValue() {
         return Optional.ofNullable(this.integerValue);
     }
     /**
      * A string value.
      * 
-     */
+    */
     public Optional<String> getStringValue() {
         return Optional.ofNullable(this.stringValue);
     }
@@ -129,7 +129,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Represents a time of day.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue> getTimeValue() {
         return Optional.ofNullable(this.timeValue);
     }
@@ -137,7 +137,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
      * Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getTimestampValue() {
         return Optional.ofNullable(this.timestampValue);
     }
@@ -215,7 +215,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.timestampValue = timestampValue;
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
         }

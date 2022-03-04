@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCutoverJob {
-/**
- * Gets details of a single CutoverJob.
+    private GetCutoverJob() {}
+    public interface BuilderApplicator {
+        public void apply(GetCutoverJobArgs.Builder a);
+    }
+    private static GetCutoverJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCutoverJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single CutoverJob.
  * 
- */
+     */
+    public static CompletableFuture<GetCutoverJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single CutoverJob.
+     * 
+     */
     public static CompletableFuture<GetCutoverJobResult> invokeAsync(GetCutoverJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vmmigration/v1:getCutoverJob", TypeShape.of(GetCutoverJobResult.class), args == null ? GetCutoverJobArgs.Empty : args, Utilities.withVersion(options));
     }

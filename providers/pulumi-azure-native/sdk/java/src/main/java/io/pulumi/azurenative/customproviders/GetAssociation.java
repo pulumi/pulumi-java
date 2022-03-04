@@ -6,21 +6,41 @@ package io.pulumi.azurenative.customproviders;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.customproviders.inputs.GetAssociationArgs;
 import io.pulumi.azurenative.customproviders.outputs.GetAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssociation {
-/**
- * The resource definition of this association.
+    private GetAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssociationArgs.Builder a);
+    }
+    private static GetAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The resource definition of this association.
  * API Version: 2018-09-01-preview.
  * 
- *
- * The resource definition of this association.
+     *
+     * The resource definition of this association.
  * 
- */
+     */
+    public static CompletableFuture<GetAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The resource definition of this association.
+     * API Version: 2018-09-01-preview.
+     * 
+     *
+         * The resource definition of this association.
+     * 
+     */
     public static CompletableFuture<GetAssociationResult> invokeAsync(GetAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customproviders:getAssociation", TypeShape.of(GetAssociationResult.class), args == null ? GetAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

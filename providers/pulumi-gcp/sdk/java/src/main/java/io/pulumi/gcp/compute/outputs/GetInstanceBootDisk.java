@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceBootDiskInitializeParam;
 import java.lang.Boolean;
 import java.lang.String;
@@ -66,7 +66,7 @@ public final class GetInstanceBootDisk {
     /**
      * Whether the disk will be auto-deleted when the instance is deleted.
      * 
-     */
+    */
     public Boolean getAutoDelete() {
         return this.autoDelete;
     }
@@ -74,7 +74,7 @@ public final class GetInstanceBootDisk {
      * Name with which the attached disk is accessible
      * under `/dev/disk/by-id/`
      * 
-     */
+    */
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -88,7 +88,7 @@ public final class GetInstanceBootDisk {
      * Parameters with which a disk was created alongside the instance.
      * Structure is documented below.
      * 
-     */
+    */
     public List<GetInstanceBootDiskInitializeParam> getInitializeParams() {
         return this.initializeParams;
     }
@@ -98,14 +98,14 @@ public final class GetInstanceBootDisk {
     /**
      * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * The name or self_link of the disk attached to this instance.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
@@ -183,7 +183,6 @@ public final class GetInstanceBootDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public GetInstanceBootDisk build() {
             return new GetInstanceBootDisk(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }

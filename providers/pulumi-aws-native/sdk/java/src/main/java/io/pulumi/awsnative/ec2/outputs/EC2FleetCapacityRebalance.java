@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetCapacityRebalanceReplacementStrategy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class EC2FleetCapacityRebalance {
             this.terminationDelay = terminationDelay;
             return this;
         }
-
         public EC2FleetCapacityRebalance build() {
             return new EC2FleetCapacityRebalance(replacementStrategy, terminationDelay);
         }

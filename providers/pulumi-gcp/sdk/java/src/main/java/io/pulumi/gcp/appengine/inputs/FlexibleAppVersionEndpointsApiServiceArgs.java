@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="configId")
-    private final @Nullable Input<String> configId;
+      private final @Nullable Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId == null ? Input.empty() : this.configId;
@@ -36,7 +36,7 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="disableTraceSampling")
-    private final @Nullable Input<Boolean> disableTraceSampling;
+      private final @Nullable Input<Boolean> disableTraceSampling;
 
     public Input<Boolean> getDisableTraceSampling() {
         return this.disableTraceSampling == null ? Input.empty() : this.disableTraceSampling;
@@ -47,7 +47,7 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -60,7 +60,7 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="rolloutStrategy")
-    private final @Nullable Input<String> rolloutStrategy;
+      private final @Nullable Input<String> rolloutStrategy;
 
     public Input<String> getRolloutStrategy() {
         return this.rolloutStrategy == null ? Input.empty() : this.rolloutStrategy;
@@ -149,7 +149,6 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
             this.rolloutStrategy = Input.ofNullable(rolloutStrategy);
             return this;
         }
-
         public FlexibleAppVersionEndpointsApiServiceArgs build() {
             return new FlexibleAppVersionEndpointsApiServiceArgs(configId, disableTraceSampling, name, rolloutStrategy);
         }

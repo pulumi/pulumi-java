@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ExportRecurrencePeriodResponse {
     /**
      * The start date of recurrence.
      * 
-     */
+    */
     public String getFrom() {
         return this.from;
     }
     /**
      * The end date of recurrence.
      * 
-     */
+    */
     public Optional<String> getTo() {
         return Optional.ofNullable(this.to);
     }
@@ -76,7 +76,6 @@ public final class ExportRecurrencePeriodResponse {
             this.to = to;
             return this;
         }
-
         public ExportRecurrencePeriodResponse build() {
             return new ExportRecurrencePeriodResponse(from, to);
         }

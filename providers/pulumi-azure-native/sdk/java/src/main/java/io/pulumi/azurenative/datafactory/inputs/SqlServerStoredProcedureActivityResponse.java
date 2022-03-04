@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.StoredProcedureParameterResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+      private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -42,7 +42,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -53,7 +53,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final LinkedServiceReferenceResponse linkedServiceName;
+      private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -64,7 +64,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -75,7 +75,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable ActivityPolicyResponse policy;
+      private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -86,7 +86,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="storedProcedureName", required=true)
-    private final Object storedProcedureName;
+      private final Object storedProcedureName;
 
     public Object getStoredProcedureName() {
         return this.storedProcedureName;
@@ -97,7 +97,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="storedProcedureParameters")
-    private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
+      private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
     public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
@@ -109,7 +109,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -120,7 +120,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+      private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -239,7 +239,6 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
             this.userProperties = userProperties;
             return this;
         }
-
         public SqlServerStoredProcedureActivityResponse build() {
             return new SqlServerStoredProcedureActivityResponse(dependsOn, description, linkedServiceName, name, policy, storedProcedureName, storedProcedureParameters, type, userProperties);
         }

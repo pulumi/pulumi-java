@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.BackendRuleResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BackendResponse {
     /**
      * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
-     */
+    */
     public List<BackendRuleResponse> getRules() {
         return this.rules;
     }
@@ -53,7 +53,6 @@ public final class BackendResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BackendResponse build() {
             return new BackendResponse(rules);
         }

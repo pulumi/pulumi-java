@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.azurenative.operationalinsights.enums.IdentityType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<IdentityType> type;
+      private final Input<IdentityType> type;
 
     public Input<IdentityType> getType() {
         return this.type;
@@ -37,7 +37,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+      private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 
     public Input<Map<String,Object>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -96,7 +96,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public IdentityArgs build() {
             return new IdentityArgs(type, userAssignedIdentities);
         }

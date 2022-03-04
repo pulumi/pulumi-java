@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 import io.pulumi.azurenative.databoxedge.outputs.PeriodicTimerSourceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.RoleSinkInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -79,14 +79,14 @@ public final class GetPeriodicTimerEventTriggerResult {
     /**
      * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
      * 
-     */
+    */
     public Optional<String> getCustomContextTag() {
         return Optional.ofNullable(this.customContextTag);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -94,42 +94,42 @@ public final class GetPeriodicTimerEventTriggerResult {
      * Trigger Kind.
      * Expected value is 'PeriodicTimerEvent'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Role Sink information.
      * 
-     */
+    */
     public RoleSinkInfoResponse getSinkInfo() {
         return this.sinkInfo;
     }
     /**
      * Periodic timer details.
      * 
-     */
+    */
     public PeriodicTimerSourceInfoResponse getSourceInfo() {
         return this.sourceInfo;
     }
     /**
      * Trigger in DataBoxEdge Resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -207,7 +207,6 @@ public final class GetPeriodicTimerEventTriggerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPeriodicTimerEventTriggerResult build() {
             return new GetPeriodicTimerEventTriggerResult(customContextTag, id, kind, name, sinkInfo, sourceInfo, systemData, type);
         }

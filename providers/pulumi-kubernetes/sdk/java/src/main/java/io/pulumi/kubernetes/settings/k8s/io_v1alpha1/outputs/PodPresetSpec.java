@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.settings.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EnvFromSource;
 import io.pulumi.kubernetes.core_v1.outputs.EnvVar;
 import io.pulumi.kubernetes.core_v1.outputs.Volume;
@@ -59,35 +59,35 @@ public final class PodPresetSpec {
     /**
      * Env defines the collection of EnvVar to inject into containers.
      * 
-     */
+    */
     public List<EnvVar> getEnv() {
         return this.env == null ? List.of() : this.env;
     }
     /**
      * EnvFrom defines the collection of EnvFromSource to inject into containers.
      * 
-     */
+    */
     public List<EnvFromSource> getEnvFrom() {
         return this.envFrom == null ? List.of() : this.envFrom;
     }
     /**
      * Selector is a label query over a set of resources, in this case pods. Required.
      * 
-     */
+    */
     public Optional<LabelSelector> getSelector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * VolumeMounts defines the collection of VolumeMount to inject into containers.
      * 
-     */
+    */
     public List<VolumeMount> getVolumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
     /**
      * Volumes defines the collection of Volume to inject into the pod.
      * 
-     */
+    */
     public List<Volume> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
@@ -144,7 +144,6 @@ public final class PodPresetSpec {
             this.volumes = volumes;
             return this;
         }
-
         public PodPresetSpec build() {
             return new PodPresetSpec(env, envFrom, selector, volumeMounts, volumes);
         }

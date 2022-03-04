@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.ScheduleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -36,7 +36,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="labVmsShutdown")
-    private final @Nullable ScheduleResponse labVmsShutdown;
+      private final @Nullable ScheduleResponse labVmsShutdown;
 
     public Optional<ScheduleResponse> getLabVmsShutdown() {
         return this.labVmsShutdown == null ? Optional.empty() : Optional.ofNullable(this.labVmsShutdown);
@@ -47,7 +47,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="labVmsStartup")
-    private final @Nullable ScheduleResponse labVmsStartup;
+      private final @Nullable ScheduleResponse labVmsStartup;
 
     public Optional<ScheduleResponse> getLabVmsStartup() {
         return this.labVmsStartup == null ? Optional.empty() : Optional.ofNullable(this.labVmsStartup);
@@ -58,7 +58,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -69,7 +69,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -80,7 +80,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -91,7 +91,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -190,7 +190,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicableScheduleResponse build() {
             return new ApplicableScheduleResponse(id, labVmsShutdown, labVmsStartup, location, name, tags, type);
         }

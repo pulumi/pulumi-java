@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<String> weight;
+      private final @Nullable Input<String> weight;
 
     public Input<String> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -36,7 +36,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="widgets")
-    private final @Nullable Input<List<WidgetArgs>> widgets;
+      private final @Nullable Input<List<WidgetArgs>> widgets;
 
     public Input<List<WidgetArgs>> getWidgets() {
         return this.widgets == null ? Input.empty() : this.widgets;
@@ -95,7 +95,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
             this.widgets = Input.ofNullable(widgets);
             return this;
         }
-
         public ColumnArgs build() {
             return new ColumnArgs(weight, widgets);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -46,7 +46,7 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
@@ -120,7 +120,6 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }
-
         public WorkflowStepCustomStepDetailsPropertiesArgs build() {
             return new WorkflowStepCustomStepDetailsPropertiesArgs(name, target, timeoutSeconds);
         }

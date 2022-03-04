@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -73,56 +73,56 @@ public final class GetFoldersFolder {
     /**
      * The timestamp of when the folder was created
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The timestamp of when the folder was requested to be deleted (if applicable)
      * 
-     */
+    */
     public String getDeleteTime() {
         return this.deleteTime;
     }
     /**
      * The display name of the folder
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Entity tag identifier of the folder
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The id of the folder
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The parent id of the folder
      * 
-     */
+    */
     public String getParent() {
         return this.parent;
     }
     /**
      * The lifecycle state of the folder
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The timestamp of when the folder was last modified
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -200,7 +200,6 @@ public final class GetFoldersFolder {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetFoldersFolder build() {
             return new GetFoldersFolder(createTime, deleteTime, displayName, etag, name, parent, state, updateTime);
         }

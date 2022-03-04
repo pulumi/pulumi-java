@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.MatchConditionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -37,7 +37,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -48,7 +48,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="matchConditions", required=true)
-    private final List<MatchConditionResponse> matchConditions;
+      private final List<MatchConditionResponse> matchConditions;
 
     public List<MatchConditionResponse> getMatchConditions() {
         return this.matchConditions;
@@ -59,7 +59,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -70,7 +70,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -81,7 +81,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final String ruleType;
+      private final String ruleType;
 
     public String getRuleType() {
         return this.ruleType;
@@ -170,7 +170,6 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public WebApplicationFirewallCustomRuleResponse build() {
             return new WebApplicationFirewallCustomRuleResponse(action, etag, matchConditions, name, priority, ruleType);
         }

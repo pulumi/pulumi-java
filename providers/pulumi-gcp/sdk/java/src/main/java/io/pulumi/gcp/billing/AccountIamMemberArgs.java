@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.billing.inputs.AccountIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
     public static final AccountIamMemberArgs Empty = new AccountIamMemberArgs();
 
     @InputImport(name="billingAccountId", required=true)
-    private final Input<String> billingAccountId;
+      private final Input<String> billingAccountId;
 
     public Input<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<AccountIamMemberConditionArgs> condition;
+      private final @Nullable Input<AccountIamMemberConditionArgs> condition;
 
     public Input<AccountIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
     }
 
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -126,7 +126,6 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public AccountIamMemberArgs build() {
             return new AccountIamMemberArgs(billingAccountId, condition, member, role);
         }

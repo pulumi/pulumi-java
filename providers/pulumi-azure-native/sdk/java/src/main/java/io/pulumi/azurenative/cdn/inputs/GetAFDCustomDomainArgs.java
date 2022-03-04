@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="customDomainName", required=true)
-    private final String customDomainName;
+      private final String customDomainName;
 
     public String getCustomDomainName() {
         return this.customDomainName;
@@ -28,7 +28,7 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final String profileName;
+      private final String profileName;
 
     public String getProfileName() {
         return this.profileName;
@@ -39,7 +39,7 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetAFDCustomDomainArgs build() {
             return new GetAFDCustomDomainArgs(customDomainName, profileName, resourceGroupName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class PkixPublicKeyResponse {
     /**
      * A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
      * 
-     */
+    */
     public String getPublicKeyPem() {
         return this.publicKeyPem;
     }
     /**
      * The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
      * 
-     */
+    */
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
     }
@@ -74,7 +74,6 @@ public final class PkixPublicKeyResponse {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public PkixPublicKeyResponse build() {
             return new PkixPublicKeyResponse(publicKeyPem, signatureAlgorithm);
         }

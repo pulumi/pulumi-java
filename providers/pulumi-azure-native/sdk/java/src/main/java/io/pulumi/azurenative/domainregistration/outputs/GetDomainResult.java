@@ -5,7 +5,7 @@ package io.pulumi.azurenative.domainregistration.outputs;
 
 import io.pulumi.azurenative.domainregistration.outputs.HostNameResponse;
 import io.pulumi.azurenative.domainregistration.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -178,105 +178,105 @@ public final class GetDomainResult {
     /**
      * <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getAutoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
     /**
      * Domain creation timestamp.
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Current DNS type
      * 
-     */
+    */
     public Optional<String> getDnsType() {
         return Optional.ofNullable(this.dnsType);
     }
     /**
      * Azure DNS Zone to use
      * 
-     */
+    */
     public Optional<String> getDnsZoneId() {
         return Optional.ofNullable(this.dnsZoneId);
     }
     /**
      * Reasons why domain is not renewable.
      * 
-     */
+    */
     public List<String> getDomainNotRenewableReasons() {
         return this.domainNotRenewableReasons;
     }
     /**
      * Domain expiration timestamp.
      * 
-     */
+    */
     public String getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Timestamp when the domain was renewed last time.
      * 
-     */
+    */
     public String getLastRenewedTime() {
         return this.lastRenewedTime;
     }
     /**
      * Resource Location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * All hostnames derived from the domain and assigned to Azure resources.
      * 
-     */
+    */
     public List<HostNameResponse> getManagedHostNames() {
         return this.managedHostNames;
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Name servers.
      * 
-     */
+    */
     public List<String> getNameServers() {
         return this.nameServers;
     }
     /**
      * <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getPrivacy() {
         return Optional.ofNullable(this.privacy);
     }
     /**
      * Domain provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -284,42 +284,42 @@ public final class GetDomainResult {
      * <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and
      *  it is hosted on name servers Azure has programmatic access to.
      * 
-     */
+    */
     public Boolean getReadyForDnsRecordManagement() {
         return this.readyForDnsRecordManagement;
     }
     /**
      * Domain registration status.
      * 
-     */
+    */
     public String getRegistrationStatus() {
         return this.registrationStatus;
     }
     /**
      * The system metadata relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Target DNS type (would be used for migration)
      * 
-     */
+    */
     public Optional<String> getTargetDnsType() {
         return Optional.ofNullable(this.targetDnsType);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -495,7 +495,6 @@ public final class GetDomainResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(authCode, autoRenew, createdTime, dnsType, dnsZoneId, domainNotRenewableReasons, expirationTime, id, kind, lastRenewedTime, location, managedHostNames, name, nameServers, privacy, provisioningState, readyForDnsRecordManagement, registrationStatus, systemData, tags, targetDnsType, type);
         }

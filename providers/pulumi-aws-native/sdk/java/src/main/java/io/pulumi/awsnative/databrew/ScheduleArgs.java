@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew;
 
 import io.pulumi.awsnative.databrew.inputs.ScheduleTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cronExpression", required=true)
-    private final Input<String> cronExpression;
+      private final Input<String> cronExpression;
 
     public Input<String> getCronExpression() {
         return this.cronExpression;
     }
 
     @InputImport(name="jobNames")
-    private final @Nullable Input<List<String>> jobNames;
+      private final @Nullable Input<List<String>> jobNames;
 
     public Input<List<String>> getJobNames() {
         return this.jobNames == null ? Input.empty() : this.jobNames;
@@ -39,14 +39,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<ScheduleTagArgs>> tags;
+      private final @Nullable Input<List<ScheduleTagArgs>> tags;
 
     public Input<List<ScheduleTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -135,7 +135,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ScheduleArgs build() {
             return new ScheduleArgs(cronExpression, jobNames, name, tags);
         }

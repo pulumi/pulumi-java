@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.InputEndpointResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -35,14 +35,14 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse {
     /**
      * The Azure VM input endpoints.
      * 
-     */
+    */
     public List<InputEndpointResponse> getInputEndpoints() {
         return this.inputEndpoints == null ? List.of() : this.inputEndpoints;
     }
     /**
      * The Azure VM tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
@@ -78,7 +78,6 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse {
             this.tags = tags;
             return this;
         }
-
         public AzureToAzureVmSyncedConfigDetailsResponse build() {
             return new AzureToAzureVmSyncedConfigDetailsResponse(inputEndpoints, tags);
         }

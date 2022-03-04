@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class TemplateColumnSchema {
     /**
      * <p>The data type of the column schema.</p>
      * 
-     */
+    */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * <p>The geographic role of the column schema.</p>
      * 
-     */
+    */
     public Optional<String> getGeographicRole() {
         return Optional.ofNullable(this.geographicRole);
     }
     /**
      * <p>The name of the column schema.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -97,7 +97,6 @@ public final class TemplateColumnSchema {
             this.name = name;
             return this;
         }
-
         public TemplateColumnSchema build() {
             return new TemplateColumnSchema(dataType, geographicRole, name);
         }

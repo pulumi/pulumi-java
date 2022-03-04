@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -179,7 +179,6 @@ public final class GetTransitGatewayResult {
             this.vpnEcmpSupport = vpnEcmpSupport;
             return this;
         }
-
         public GetTransitGatewayResult build() {
             return new GetTransitGatewayResult(associationDefaultRouteTableId, autoAcceptSharedAttachments, defaultRouteTableAssociation, defaultRouteTablePropagation, description, dnsSupport, id, propagationDefaultRouteTableId, tags, transitGatewayCidrBlocks, vpnEcmpSupport);
         }

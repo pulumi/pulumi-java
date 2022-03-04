@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdAggregation;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdDenominatorAggregation;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdTrigger;
@@ -167,7 +167,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * field.
      * Structure is documented below.
      * 
-     */
+    */
     public List<AlertPolicyConditionConditionThresholdAggregation> getAggregations() {
         return this.aggregations == null ? List.of() : this.aggregations;
     }
@@ -182,7 +182,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * COMPARISON_GT are supported currently.
      * Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
      * 
-     */
+    */
     public String getComparison() {
         return this.comparison;
     }
@@ -205,7 +205,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * method when debugging this field.
      * Structure is documented below.
      * 
-     */
+    */
     public List<AlertPolicyConditionConditionThresholdDenominatorAggregation> getDenominatorAggregations() {
         return this.denominatorAggregations == null ? List.of() : this.denominatorAggregations;
     }
@@ -226,7 +226,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * field may not exceed 2048 Unicode characters
      * in length.
      * 
-     */
+    */
     public Optional<String> getDenominatorFilter() {
         return Optional.ofNullable(this.denominatorFilter);
     }
@@ -247,14 +247,14 @@ public final class AlertPolicyConditionConditionThreshold {
      * that unhealthy states are detected and
      * alerted on quickly.
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }
     /**
      * A logs-based filter.
      * 
-     */
+    */
     public Optional<String> getFilter() {
         return Optional.ofNullable(this.filter);
     }
@@ -262,7 +262,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * A value against which to compare the time
      * series.
      * 
-     */
+    */
     public Optional<Double> getThresholdValue() {
         return Optional.ofNullable(this.thresholdValue);
     }
@@ -277,7 +277,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * denominator_aggregations are specified.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AlertPolicyConditionConditionThresholdTrigger> getTrigger() {
         return Optional.ofNullable(this.trigger);
     }
@@ -355,7 +355,6 @@ public final class AlertPolicyConditionConditionThreshold {
             this.trigger = trigger;
             return this;
         }
-
         public AlertPolicyConditionConditionThreshold build() {
             return new AlertPolicyConditionConditionThreshold(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }

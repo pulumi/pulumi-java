@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.ImportJobArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.KeyOperationAttestationResponse;
@@ -164,6 +164,37 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ImportJobArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.cloudkms_v1.ImportJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.cloudkms_v1.ImportJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ImportJob(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ImportJob(String name) {
+        this(name, ImportJobArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ImportJob(String name, ImportJobArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

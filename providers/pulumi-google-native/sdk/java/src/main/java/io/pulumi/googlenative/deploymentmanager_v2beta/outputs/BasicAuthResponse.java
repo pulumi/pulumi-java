@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class BasicAuthResponse {
             this.user = Objects.requireNonNull(user);
             return this;
         }
-
         public BasicAuthResponse build() {
             return new BasicAuthResponse(password, user);
         }

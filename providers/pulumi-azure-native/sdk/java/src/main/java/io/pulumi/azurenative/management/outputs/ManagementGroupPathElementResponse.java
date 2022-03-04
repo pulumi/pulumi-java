@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.management.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ManagementGroupPathElementResponse {
     /**
      * The friendly name of the group.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The name of the group.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -76,7 +76,6 @@ public final class ManagementGroupPathElementResponse {
             this.name = name;
             return this;
         }
-
         public ManagementGroupPathElementResponse build() {
             return new ManagementGroupPathElementResponse(displayName, name);
         }

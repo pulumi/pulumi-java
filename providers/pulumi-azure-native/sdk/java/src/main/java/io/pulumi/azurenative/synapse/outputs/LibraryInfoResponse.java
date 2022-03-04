@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class LibraryInfoResponse {
     /**
      * Storage blob container name.
      * 
-     */
+    */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * Creator Id of the library/package.
      * 
-     */
+    */
     public String getCreatorId() {
         return this.creatorId;
     }
     /**
      * Name of the library.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Storage blob path of library.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Provisioning status of the library/package.
      * 
-     */
+    */
     public String getProvisioningStatus() {
         return this.provisioningStatus;
     }
     /**
      * Type of the library.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The last update time of the library.
      * 
-     */
+    */
     public String getUploadedTimestamp() {
         return this.uploadedTimestamp;
     }
@@ -181,7 +181,6 @@ public final class LibraryInfoResponse {
             this.uploadedTimestamp = Objects.requireNonNull(uploadedTimestamp);
             return this;
         }
-
         public LibraryInfoResponse build() {
             return new LibraryInfoResponse(containerName, creatorId, name, path, provisioningStatus, type, uploadedTimestamp);
         }

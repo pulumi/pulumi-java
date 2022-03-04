@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iam.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RolePolicy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyDocument", required=true)
-    private final String policyDocument;
+      private final String policyDocument;
 
     public String getPolicyDocument() {
         return this.policyDocument;
@@ -32,7 +32,7 @@ public final class RolePolicy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyName", required=true)
-    private final String policyName;
+      private final String policyName;
 
     public String getPolicyName() {
         return this.policyName;
@@ -81,7 +81,6 @@ public final class RolePolicy extends io.pulumi.resources.InvokeArgs {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public RolePolicy build() {
             return new RolePolicy(policyDocument, policyName);
         }

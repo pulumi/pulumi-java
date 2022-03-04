@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AzureFirewallSkuResponse {
     /**
      * Name of an Azure Firewall SKU.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tier of an Azure Firewall.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -76,7 +76,6 @@ public final class AzureFirewallSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public AzureFirewallSkuResponse build() {
             return new AzureFirewallSkuResponse(name, tier);
         }

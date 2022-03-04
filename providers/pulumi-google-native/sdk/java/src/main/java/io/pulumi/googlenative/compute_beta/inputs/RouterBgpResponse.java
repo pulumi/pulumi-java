@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.RouterAdvertisedIpRangeResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="advertiseMode", required=true)
-    private final String advertiseMode;
+      private final String advertiseMode;
 
     public String getAdvertiseMode() {
         return this.advertiseMode;
@@ -31,7 +31,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="advertisedGroups", required=true)
-    private final List<String> advertisedGroups;
+      private final List<String> advertisedGroups;
 
     public List<String> getAdvertisedGroups() {
         return this.advertisedGroups;
@@ -42,7 +42,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="advertisedIpRanges", required=true)
-    private final List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
+      private final List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
 
     public List<RouterAdvertisedIpRangeResponse> getAdvertisedIpRanges() {
         return this.advertisedIpRanges;
@@ -53,7 +53,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="asn", required=true)
-    private final Integer asn;
+      private final Integer asn;
 
     public Integer getAsn() {
         return this.asn;
@@ -64,7 +64,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keepaliveInterval", required=true)
-    private final Integer keepaliveInterval;
+      private final Integer keepaliveInterval;
 
     public Integer getKeepaliveInterval() {
         return this.keepaliveInterval;
@@ -143,7 +143,6 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
             this.keepaliveInterval = Objects.requireNonNull(keepaliveInterval);
             return this;
         }
-
         public RouterBgpResponse build() {
             return new RouterBgpResponse(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);
         }

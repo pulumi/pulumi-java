@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigApt;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigGoo;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPostStep;
@@ -91,7 +91,7 @@ public final class PatchDeploymentPatchConfig {
      * Apt update settings. Use this setting to override the default apt patch rules.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigApt> getApt() {
         return Optional.ofNullable(this.apt);
     }
@@ -99,7 +99,7 @@ public final class PatchDeploymentPatchConfig {
      * goo update settings. Use this setting to override the default goo patch rules.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigGoo> getGoo() {
         return Optional.ofNullable(this.goo);
     }
@@ -107,7 +107,7 @@ public final class PatchDeploymentPatchConfig {
      * The ExecStep to run after the patch update.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigPostStep> getPostStep() {
         return Optional.ofNullable(this.postStep);
     }
@@ -115,7 +115,7 @@ public final class PatchDeploymentPatchConfig {
      * The ExecStep to run before the patch update.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigPreStep> getPreStep() {
         return Optional.ofNullable(this.preStep);
     }
@@ -123,7 +123,7 @@ public final class PatchDeploymentPatchConfig {
      * Post-patch reboot settings.
      * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
      * 
-     */
+    */
     public Optional<String> getRebootConfig() {
         return Optional.ofNullable(this.rebootConfig);
     }
@@ -131,7 +131,7 @@ public final class PatchDeploymentPatchConfig {
      * Windows update settings. Use this setting to override the default Windows patch rules.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigWindowsUpdate> getWindowsUpdate() {
         return Optional.ofNullable(this.windowsUpdate);
     }
@@ -139,7 +139,7 @@ public final class PatchDeploymentPatchConfig {
      * Yum update settings. Use this setting to override the default yum patch rules.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigYum> getYum() {
         return Optional.ofNullable(this.yum);
     }
@@ -147,7 +147,7 @@ public final class PatchDeploymentPatchConfig {
      * zypper update settings. Use this setting to override the default zypper patch rules.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigZypper> getZypper() {
         return Optional.ofNullable(this.zypper);
     }
@@ -225,7 +225,6 @@ public final class PatchDeploymentPatchConfig {
             this.zypper = zypper;
             return this;
         }
-
         public PatchDeploymentPatchConfig build() {
             return new PatchDeploymentPatchConfig(apt, goo, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }

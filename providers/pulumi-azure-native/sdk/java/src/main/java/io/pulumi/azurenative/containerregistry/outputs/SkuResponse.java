@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SkuResponse {
     /**
      * The SKU name of the container registry. Required for registry creation.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The SKU tier based on the SKU name.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
@@ -74,7 +74,6 @@ public final class SkuResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(name, tier);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeResourceStatementRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequest {
             this.resourceStatement = resourceStatement;
             return this;
         }
-
         public NetworkInsightsAccessScopeThroughResourcesStatementRequest build() {
             return new NetworkInsightsAccessScopeThroughResourcesStatementRequest(resourceStatement);
         }

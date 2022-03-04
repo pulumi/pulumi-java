@@ -6,21 +6,41 @@ package io.pulumi.azurenative.signalrservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.signalrservice.inputs.ListSignalRKeysArgs;
 import io.pulumi.azurenative.signalrservice.outputs.ListSignalRKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSignalRKeys {
-/**
- * A class represents the access keys of SignalR service.
+    private ListSignalRKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListSignalRKeysArgs.Builder a);
+    }
+    private static ListSignalRKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListSignalRKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A class represents the access keys of SignalR service.
  * API Version: 2020-05-01.
  * 
- *
- * A class represents the access keys of SignalR service.
+     *
+     * A class represents the access keys of SignalR service.
  * 
- */
+     */
+    public static CompletableFuture<ListSignalRKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A class represents the access keys of SignalR service.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * A class represents the access keys of SignalR service.
+     * 
+     */
     public static CompletableFuture<ListSignalRKeysResult> invokeAsync(ListSignalRKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:signalrservice:listSignalRKeys", TypeShape.of(ListSignalRKeysResult.class), args == null ? ListSignalRKeysArgs.Empty : args, Utilities.withVersion(options));
     }

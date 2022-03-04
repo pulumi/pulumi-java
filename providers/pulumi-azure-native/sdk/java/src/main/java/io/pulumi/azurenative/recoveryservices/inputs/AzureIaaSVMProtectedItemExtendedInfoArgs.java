@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-    private final @Nullable Input<String> oldestRecoveryPoint;
+      private final @Nullable Input<String> oldestRecoveryPoint;
 
     public Input<String> getOldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
@@ -36,7 +36,7 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="policyInconsistent")
-    private final @Nullable Input<Boolean> policyInconsistent;
+      private final @Nullable Input<Boolean> policyInconsistent;
 
     public Input<Boolean> getPolicyInconsistent() {
         return this.policyInconsistent == null ? Input.empty() : this.policyInconsistent;
@@ -47,7 +47,7 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="recoveryPointCount")
-    private final @Nullable Input<Integer> recoveryPointCount;
+      private final @Nullable Input<Integer> recoveryPointCount;
 
     public Input<Integer> getRecoveryPointCount() {
         return this.recoveryPointCount == null ? Input.empty() : this.recoveryPointCount;
@@ -121,7 +121,6 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends io.pulumi.re
             this.recoveryPointCount = Input.ofNullable(recoveryPointCount);
             return this;
         }
-
         public AzureIaaSVMProtectedItemExtendedInfoArgs build() {
             return new AzureIaaSVMProtectedItemExtendedInfoArgs(oldestRecoveryPoint, policyInconsistent, recoveryPointCount);
         }

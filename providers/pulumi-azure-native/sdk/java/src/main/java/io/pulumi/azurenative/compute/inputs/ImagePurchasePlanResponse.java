@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ImagePurchasePlanResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class ImagePurchasePlanResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="product")
-    private final @Nullable String product;
+      private final @Nullable String product;
 
     public Optional<String> getProduct() {
         return this.product == null ? Optional.empty() : Optional.ofNullable(this.product);
@@ -45,7 +45,7 @@ public final class ImagePurchasePlanResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable String publisher;
+      private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
@@ -104,7 +104,6 @@ public final class ImagePurchasePlanResponse extends io.pulumi.resources.InvokeA
             this.publisher = publisher;
             return this;
         }
-
         public ImagePurchasePlanResponse build() {
             return new ImagePurchasePlanResponse(name, product, publisher);
         }

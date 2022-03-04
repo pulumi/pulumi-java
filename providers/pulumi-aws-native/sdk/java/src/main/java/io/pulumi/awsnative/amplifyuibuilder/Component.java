@@ -14,8 +14,8 @@ import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentTags;
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentVariant;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -111,6 +111,37 @@ public class Component extends io.pulumi.resources.CustomResource {
         return this.variants;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ComponentArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.amplifyuibuilder.ComponentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.amplifyuibuilder.ComponentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Component(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Component(String name) {
+        this(name, ComponentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Component(String name, @Nullable ComponentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

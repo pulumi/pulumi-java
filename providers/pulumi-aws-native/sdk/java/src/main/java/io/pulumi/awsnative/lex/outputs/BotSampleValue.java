@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BotSampleValue {
     /**
      * The value that can be used for a slot type.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -52,7 +52,6 @@ public final class BotSampleValue {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BotSampleValue build() {
             return new BotSampleValue(value);
         }

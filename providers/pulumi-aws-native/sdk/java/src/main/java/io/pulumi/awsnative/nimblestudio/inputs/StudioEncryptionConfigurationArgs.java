@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StudioEncryptionConfigurationKeyType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,14 +24,14 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="keyArn")
-    private final @Nullable Input<String> keyArn;
+      private final @Nullable Input<String> keyArn;
 
     public Input<String> getKeyArn() {
         return this.keyArn == null ? Input.empty() : this.keyArn;
     }
 
     @InputImport(name="keyType", required=true)
-    private final Input<StudioEncryptionConfigurationKeyType> keyType;
+      private final Input<StudioEncryptionConfigurationKeyType> keyType;
 
     public Input<StudioEncryptionConfigurationKeyType> getKeyType() {
         return this.keyType;
@@ -90,7 +90,6 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
             this.keyType = Input.of(Objects.requireNonNull(keyType));
             return this;
         }
-
         public StudioEncryptionConfigurationArgs build() {
             return new StudioEncryptionConfigurationArgs(keyArn, keyType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.ClusterClusterAutoscalingAutoProvisioningDefaults;
 import io.pulumi.gcp.container.outputs.ClusterClusterAutoscalingResourceLimit;
 import java.lang.Boolean;
@@ -60,7 +60,7 @@ public final class ClusterClusterAutoscaling {
      * Contains defaults for a node pool created by NAP.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterClusterAutoscalingAutoProvisioningDefaults> getAutoProvisioningDefaults() {
         return Optional.ofNullable(this.autoProvisioningDefaults);
     }
@@ -70,7 +70,7 @@ public final class ClusterClusterAutoscaling {
      * feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
      * when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTILIZATION`. Defaults to `BALANCED`.
      * 
-     */
+    */
     public Optional<String> getAutoscalingProfile() {
         return Optional.ofNullable(this.autoscalingProfile);
     }
@@ -78,7 +78,7 @@ public final class ClusterClusterAutoscaling {
      * Enable the PodSecurityPolicy controller for this cluster.
      * If enabled, pods must be valid under a PodSecurityPolicy to be created.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -88,7 +88,7 @@ public final class ClusterClusterAutoscaling {
      * auto-provisioning is enabled. These limits will apply to node pool autoscaling
      * in addition to node auto-provisioning. Structure is documented below.
      * 
-     */
+    */
     public List<ClusterClusterAutoscalingResourceLimit> getResourceLimits() {
         return this.resourceLimits == null ? List.of() : this.resourceLimits;
     }
@@ -138,7 +138,6 @@ public final class ClusterClusterAutoscaling {
             this.resourceLimits = resourceLimits;
             return this;
         }
-
         public ClusterClusterAutoscaling build() {
             return new ClusterClusterAutoscaling(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
         }

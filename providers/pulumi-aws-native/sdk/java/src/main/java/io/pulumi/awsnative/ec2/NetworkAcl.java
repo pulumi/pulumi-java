@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ec2.NetworkAclArgs;
 import io.pulumi.awsnative.ec2.outputs.NetworkAclTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -49,6 +49,37 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
         return this.vpcId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NetworkAclArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ec2.NetworkAclArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ec2.NetworkAclArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NetworkAcl(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public NetworkAcl(String name) {
+        this(name, NetworkAclArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NetworkAcl(String name, NetworkAclArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class DeliveryStreamHttpEndpointCommonAttribute extends io.pulumi.r
     public static final DeliveryStreamHttpEndpointCommonAttribute Empty = new DeliveryStreamHttpEndpointCommonAttribute();
 
     @InputImport(name="attributeName", required=true)
-    private final String attributeName;
+      private final String attributeName;
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="attributeValue", required=true)
-    private final String attributeValue;
+      private final String attributeValue;
 
     public String getAttributeValue() {
         return this.attributeValue;
@@ -69,7 +69,6 @@ public final class DeliveryStreamHttpEndpointCommonAttribute extends io.pulumi.r
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
         }
-
         public DeliveryStreamHttpEndpointCommonAttribute build() {
             return new DeliveryStreamHttpEndpointCommonAttribute(attributeName, attributeValue);
         }

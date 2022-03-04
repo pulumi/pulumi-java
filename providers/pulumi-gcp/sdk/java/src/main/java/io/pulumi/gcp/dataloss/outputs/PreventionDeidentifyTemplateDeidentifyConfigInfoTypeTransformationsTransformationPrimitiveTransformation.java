@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfig;
@@ -66,7 +66,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Masking can start from the beginning or end of the string.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig> getCharacterMaskConfig() {
         return Optional.ofNullable(this.characterMaskConfig);
     }
@@ -74,7 +74,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC [https://tools.ietf.org/html/rfc5297](https://tools.ietf.org/html/rfc5297).
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig> getCryptoDeterministicConfig() {
         return Optional.ofNullable(this.cryptoDeterministicConfig);
     }
@@ -83,7 +83,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfig> getCryptoReplaceFfxFpeConfig() {
         return Optional.ofNullable(this.cryptoReplaceFfxFpeConfig);
     }
@@ -91,14 +91,14 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Replace each input value with a given value.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfig> getReplaceConfig() {
         return Optional.ofNullable(this.replaceConfig);
     }
     /**
      * Replace each matching finding with the name of the info type.
      * 
-     */
+    */
     public Optional<Boolean> getReplaceWithInfoTypeConfig() {
         return Optional.ofNullable(this.replaceWithInfoTypeConfig);
     }
@@ -155,7 +155,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation(characterMaskConfig, cryptoDeterministicConfig, cryptoReplaceFfxFpeConfig, replaceConfig, replaceWithInfoTypeConfig);
         }

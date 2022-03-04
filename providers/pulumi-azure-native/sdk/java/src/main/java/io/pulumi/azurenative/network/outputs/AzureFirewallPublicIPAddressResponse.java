@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AzureFirewallPublicIPAddressResponse {
     /**
      * Public IP Address value.
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
@@ -54,7 +54,6 @@ public final class AzureFirewallPublicIPAddressResponse {
             this.address = address;
             return this;
         }
-
         public AzureFirewallPublicIPAddressResponse build() {
             return new AzureFirewallPublicIPAddressResponse(address);
         }

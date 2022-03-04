@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetSubnetNetworkAclAssociationArgs extends io.pulumi.resource
     public static final GetSubnetNetworkAclAssociationArgs Empty = new GetSubnetNetworkAclAssociationArgs();
 
     @InputImport(name="associationId", required=true)
-    private final String associationId;
+      private final String associationId;
 
     public String getAssociationId() {
         return this.associationId;
@@ -51,7 +51,6 @@ public final class GetSubnetNetworkAclAssociationArgs extends io.pulumi.resource
             this.associationId = Objects.requireNonNull(associationId);
             return this;
         }
-
         public GetSubnetNetworkAclAssociationArgs build() {
             return new GetSubnetNetworkAclAssociationArgs(associationId);
         }

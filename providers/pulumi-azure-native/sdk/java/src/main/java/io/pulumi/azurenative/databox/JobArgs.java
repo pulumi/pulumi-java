@@ -13,7 +13,7 @@ import io.pulumi.azurenative.databox.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.databox.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryInfo")
-    private final @Nullable Input<JobDeliveryInfoArgs> deliveryInfo;
+      private final @Nullable Input<JobDeliveryInfoArgs> deliveryInfo;
 
     public Input<JobDeliveryInfoArgs> getDeliveryInfo() {
         return this.deliveryInfo == null ? Input.empty() : this.deliveryInfo;
@@ -41,7 +41,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryType")
-    private final @Nullable Input<Either<String,JobDeliveryType>> deliveryType;
+      private final @Nullable Input<Either<String,JobDeliveryType>> deliveryType;
 
     public Input<Either<String,JobDeliveryType>> getDeliveryType() {
         return this.deliveryType == null ? Input.empty() : this.deliveryType;
@@ -52,7 +52,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="details")
-    private final @Nullable Input<Object> details;
+      private final @Nullable Input<Object> details;
 
     public Input<Object> getDetails() {
         return this.details == null ? Input.empty() : this.details;
@@ -63,7 +63,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceIdentityArgs> identity;
+      private final @Nullable Input<ResourceIdentityArgs> identity;
 
     public Input<ResourceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -74,7 +74,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName")
-    private final @Nullable Input<String> jobName;
+      private final @Nullable Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName == null ? Input.empty() : this.jobName;
@@ -85,7 +85,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -96,7 +96,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -107,7 +107,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+      private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -118,7 +118,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -129,7 +129,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferType", required=true)
-    private final Input<Either<String,TransferType>> transferType;
+      private final Input<Either<String,TransferType>> transferType;
 
     public Input<Either<String,TransferType>> getTransferType() {
         return this.transferType;
@@ -308,7 +308,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.transferType = Input.of(Objects.requireNonNull(transferType));
             return this;
         }
-
         public JobArgs build() {
             return new JobArgs(deliveryInfo, deliveryType, details, identity, jobName, location, resourceGroupName, sku, tags, transferType);
         }

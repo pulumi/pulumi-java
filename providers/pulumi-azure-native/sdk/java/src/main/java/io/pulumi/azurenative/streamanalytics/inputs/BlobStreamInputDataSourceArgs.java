@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.StorageAccountArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="container")
-    private final @Nullable Input<String> container;
+      private final @Nullable Input<String> container;
 
     public Input<String> getContainer() {
         return this.container == null ? Input.empty() : this.container;
@@ -37,7 +37,7 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dateFormat")
-    private final @Nullable Input<String> dateFormat;
+      private final @Nullable Input<String> dateFormat;
 
     public Input<String> getDateFormat() {
         return this.dateFormat == null ? Input.empty() : this.dateFormat;
@@ -48,7 +48,7 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="pathPattern")
-    private final @Nullable Input<String> pathPattern;
+      private final @Nullable Input<String> pathPattern;
 
     public Input<String> getPathPattern() {
         return this.pathPattern == null ? Input.empty() : this.pathPattern;
@@ -59,7 +59,7 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourcePartitionCount")
-    private final @Nullable Input<Integer> sourcePartitionCount;
+      private final @Nullable Input<Integer> sourcePartitionCount;
 
     public Input<Integer> getSourcePartitionCount() {
         return this.sourcePartitionCount == null ? Input.empty() : this.sourcePartitionCount;
@@ -70,7 +70,7 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccounts")
-    private final @Nullable Input<List<StorageAccountArgs>> storageAccounts;
+      private final @Nullable Input<List<StorageAccountArgs>> storageAccounts;
 
     public Input<List<StorageAccountArgs>> getStorageAccounts() {
         return this.storageAccounts == null ? Input.empty() : this.storageAccounts;
@@ -81,7 +81,7 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="timeFormat")
-    private final @Nullable Input<String> timeFormat;
+      private final @Nullable Input<String> timeFormat;
 
     public Input<String> getTimeFormat() {
         return this.timeFormat == null ? Input.empty() : this.timeFormat;
@@ -93,7 +93,7 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -227,7 +227,6 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public BlobStreamInputDataSourceArgs build() {
             return new BlobStreamInputDataSourceArgs(container, dateFormat, pathPattern, sourcePartitionCount, storageAccounts, timeFormat, type);
         }

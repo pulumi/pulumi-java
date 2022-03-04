@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.AzureFirewallNatRCActionResponse;
 import io.pulumi.azurenative.network.outputs.AzureFirewallNatRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -72,49 +72,49 @@ public final class AzureFirewallNatRuleCollectionResponse {
     /**
      * The action type of a NAT rule collection.
      * 
-     */
+    */
     public Optional<AzureFirewallNatRCActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the NAT rule collection resource.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The provisioning state of the NAT rule collection resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Collection of rules used by a NAT rule collection.
      * 
-     */
+    */
     public List<AzureFirewallNatRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
@@ -185,7 +185,6 @@ public final class AzureFirewallNatRuleCollectionResponse {
             this.rules = rules;
             return this;
         }
-
         public AzureFirewallNatRuleCollectionResponse build() {
             return new AzureFirewallNatRuleCollectionResponse(action, etag, id, name, priority, provisioningState, rules);
         }

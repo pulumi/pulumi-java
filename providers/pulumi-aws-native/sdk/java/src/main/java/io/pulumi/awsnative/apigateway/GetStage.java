@@ -6,17 +6,33 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.inputs.GetStageArgs;
 import io.pulumi.awsnative.apigateway.outputs.GetStageResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStage {
-/**
- * Resource Type definition for AWS::ApiGateway::Stage
+    private GetStage() {}
+    public interface BuilderApplicator {
+        public void apply(GetStageArgs.Builder a);
+    }
+    private static GetStageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::ApiGateway::Stage
  * 
- */
+     */
+    public static CompletableFuture<GetStageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::ApiGateway::Stage
+     * 
+     */
     public static CompletableFuture<GetStageResult> invokeAsync(GetStageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getStage", TypeShape.of(GetStageResult.class), args == null ? GetStageArgs.Empty : args, Utilities.withVersion(options));
     }

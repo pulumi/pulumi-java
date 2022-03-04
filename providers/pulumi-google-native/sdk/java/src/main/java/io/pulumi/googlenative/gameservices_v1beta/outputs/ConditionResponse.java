@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class ConditionResponse {
     /**
      * Trusted attributes supplied by the IAM system.
      * 
-     */
+    */
     public String getIam() {
         return this.iam;
     }
     /**
      * An operator to apply the subject with.
      * 
-     */
+    */
     public String getOp() {
         return this.op;
     }
     /**
      * Trusted attributes discharged by the service.
      * 
-     */
+    */
     public String getSvc() {
         return this.svc;
     }
     /**
      * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
      * 
-     */
+    */
     public String getSys() {
         return this.sys;
     }
     /**
      * The objects of the condition.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -138,7 +138,6 @@ public final class ConditionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(iam, op, svc, sys, values);
         }

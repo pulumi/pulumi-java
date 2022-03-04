@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetNetworkProfileArgs;
 import io.pulumi.azurenative.network.outputs.GetNetworkProfileResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkProfile {
-/**
- * Network profile resource.
+    private GetNetworkProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkProfileArgs.Builder a);
+    }
+    private static GetNetworkProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Network profile resource.
  * API Version: 2020-11-01.
  * 
- *
- * Network profile resource.
+     *
+     * Network profile resource.
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Network profile resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Network profile resource.
+     * 
+     */
     public static CompletableFuture<GetNetworkProfileResult> invokeAsync(GetNetworkProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkProfile", TypeShape.of(GetNetworkProfileResult.class), args == null ? GetNetworkProfileArgs.Empty : args, Utilities.withVersion(options));
     }

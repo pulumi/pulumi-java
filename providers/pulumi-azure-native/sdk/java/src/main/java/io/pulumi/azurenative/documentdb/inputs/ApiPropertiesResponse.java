@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ApiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="serverVersion")
-    private final @Nullable String serverVersion;
+      private final @Nullable String serverVersion;
 
     public Optional<String> getServerVersion() {
         return this.serverVersion == null ? Optional.empty() : Optional.ofNullable(this.serverVersion);
@@ -57,7 +57,6 @@ public final class ApiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
             this.serverVersion = serverVersion;
             return this;
         }
-
         public ApiPropertiesResponse build() {
             return new ApiPropertiesResponse(serverVersion);
         }

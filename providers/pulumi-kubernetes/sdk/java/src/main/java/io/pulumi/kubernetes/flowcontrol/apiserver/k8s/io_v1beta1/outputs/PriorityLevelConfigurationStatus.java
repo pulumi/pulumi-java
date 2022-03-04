@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.PriorityLevelConfigurationCondition;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PriorityLevelConfigurationStatus {
     /**
      * `conditions` is the current state of "request-priority".
      * 
-     */
+    */
     public List<PriorityLevelConfigurationCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
@@ -54,7 +54,6 @@ public final class PriorityLevelConfigurationStatus {
             this.conditions = conditions;
             return this;
         }
-
         public PriorityLevelConfigurationStatus build() {
             return new PriorityLevelConfigurationStatus(conditions);
         }

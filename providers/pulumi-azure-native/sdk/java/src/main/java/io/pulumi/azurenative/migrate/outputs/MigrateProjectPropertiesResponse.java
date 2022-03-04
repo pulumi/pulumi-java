@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.outputs;
 import io.pulumi.azurenative.migrate.outputs.DatabaseProjectSummaryResponse;
 import io.pulumi.azurenative.migrate.outputs.ServersProjectSummaryResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -59,35 +59,35 @@ public final class MigrateProjectPropertiesResponse {
     /**
      * Gets the last time the project summary was refreshed.
      * 
-     */
+    */
     public String getLastSummaryRefreshedTime() {
         return this.lastSummaryRefreshedTime;
     }
     /**
      * Provisioning state of the migrate project.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Gets the refresh summary state.
      * 
-     */
+    */
     public String getRefreshSummaryState() {
         return this.refreshSummaryState;
     }
     /**
      * Gets or sets the list of tools registered with the migrate project.
      * 
-     */
+    */
     public List<String> getRegisteredTools() {
         return this.registeredTools == null ? List.of() : this.registeredTools;
     }
     /**
      * Gets the summary of the migrate project.
      * 
-     */
+    */
     public Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> getSummary() {
         return this.summary;
     }
@@ -144,7 +144,6 @@ public final class MigrateProjectPropertiesResponse {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public MigrateProjectPropertiesResponse build() {
             return new MigrateProjectPropertiesResponse(lastSummaryRefreshedTime, provisioningState, refreshSummaryState, registeredTools, summary);
         }

@@ -11,8 +11,8 @@ import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -119,6 +119,37 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WebPubSubPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.webpubsub.WebPubSubPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.webpubsub.WebPubSubPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WebPubSubPrivateEndpointConnection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WebPubSubPrivateEndpointConnection(String name) {
+        this(name, WebPubSubPrivateEndpointConnectionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WebPubSubPrivateEndpointConnection(String name, WebPubSubPrivateEndpointConnectionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

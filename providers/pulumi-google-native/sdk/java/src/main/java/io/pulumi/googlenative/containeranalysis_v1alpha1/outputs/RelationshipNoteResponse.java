@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class RelationshipNoteResponse {
     /**
      * The type of relationship between the source and target SPDX elements
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -52,7 +52,6 @@ public final class RelationshipNoteResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RelationshipNoteResponse build() {
             return new RelationshipNoteResponse(type);
         }

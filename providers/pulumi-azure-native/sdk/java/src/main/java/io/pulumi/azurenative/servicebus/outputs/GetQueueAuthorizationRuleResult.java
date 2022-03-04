@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GetQueueAuthorizationRuleResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
      * 
-     */
+    */
     public List<String> getRights() {
         return this.rights;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GetQueueAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueueAuthorizationRuleResult build() {
             return new GetQueueAuthorizationRuleResult(id, name, rights, type);
         }

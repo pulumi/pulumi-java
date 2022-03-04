@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,7 +39,7 @@ public final class SloWindowsBasedSliMetricSumInRangeRange {
      * will be set to "infinity", defining an open range
      * ">= range.min"
      * 
-     */
+    */
     public Optional<Double> getMax() {
         return Optional.ofNullable(this.max);
     }
@@ -48,7 +48,7 @@ public final class SloWindowsBasedSliMetricSumInRangeRange {
      * will be set to "-infinity", defining an open range
      * "< range.max"
      * 
-     */
+    */
     public Optional<Double> getMin() {
         return Optional.ofNullable(this.min);
     }
@@ -84,7 +84,6 @@ public final class SloWindowsBasedSliMetricSumInRangeRange {
             this.min = min;
             return this;
         }
-
         public SloWindowsBasedSliMetricSumInRangeRange build() {
             return new SloWindowsBasedSliMetricSumInRangeRange(max, min);
         }

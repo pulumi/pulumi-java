@@ -5,7 +5,7 @@ package io.pulumi.awsnative.configuration;
 
 import io.pulumi.awsnative.configuration.inputs.AggregationAuthorizationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="authorizedAccountId", required=true)
-    private final Input<String> authorizedAccountId;
+      private final Input<String> authorizedAccountId;
 
     public Input<String> getAuthorizedAccountId() {
         return this.authorizedAccountId;
@@ -32,7 +32,7 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="authorizedAwsRegion", required=true)
-    private final Input<String> authorizedAwsRegion;
+      private final Input<String> authorizedAwsRegion;
 
     public Input<String> getAuthorizedAwsRegion() {
         return this.authorizedAwsRegion;
@@ -43,7 +43,7 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<AggregationAuthorizationTagArgs>> tags;
+      private final @Nullable Input<List<AggregationAuthorizationTagArgs>> tags;
 
     public Input<List<AggregationAuthorizationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -117,7 +117,6 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AggregationAuthorizationArgs build() {
             return new AggregationAuthorizationArgs(authorizedAccountId, authorizedAwsRegion, tags);
         }

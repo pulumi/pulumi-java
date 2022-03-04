@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetExpressRouteGatewayArgs;
 import io.pulumi.azurenative.network.outputs.GetExpressRouteGatewayResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExpressRouteGateway {
-/**
- * ExpressRoute gateway resource.
+    private GetExpressRouteGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetExpressRouteGatewayArgs.Builder a);
+    }
+    private static GetExpressRouteGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExpressRouteGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * ExpressRoute gateway resource.
  * API Version: 2020-11-01.
  * 
- *
- * ExpressRoute gateway resource.
+     *
+     * ExpressRoute gateway resource.
  * 
- */
+     */
+    public static CompletableFuture<GetExpressRouteGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * ExpressRoute gateway resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * ExpressRoute gateway resource.
+     * 
+     */
     public static CompletableFuture<GetExpressRouteGatewayResult> invokeAsync(GetExpressRouteGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteGateway", TypeShape.of(GetExpressRouteGatewayResult.class), args == null ? GetExpressRouteGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

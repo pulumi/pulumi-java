@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.VmStateDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+      private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -35,7 +35,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+      private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -46,7 +46,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vmResourceId", required=true)
-    private final String vmResourceId;
+      private final String vmResourceId;
 
     public String getVmResourceId() {
         return this.vmResourceId;
@@ -57,7 +57,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vmStateDetails", required=true)
-    private final VmStateDetailsResponse vmStateDetails;
+      private final VmStateDetailsResponse vmStateDetails;
 
     public VmStateDetailsResponse getVmStateDetails() {
         return this.vmStateDetails;
@@ -126,7 +126,6 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
             this.vmStateDetails = Objects.requireNonNull(vmStateDetails);
             return this;
         }
-
         public ReferenceVmResponse build() {
             return new ReferenceVmResponse(password, userName, vmResourceId, vmStateDetails);
         }

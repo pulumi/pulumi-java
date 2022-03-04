@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.ServiceProfileLoRaWANServiceProfile;
 import io.pulumi.awsnative.iotwireless.outputs.ServiceProfileTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,35 +57,35 @@ public final class GetServiceProfileResult {
     /**
      * Service profile Arn. Returned after successful create.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Service profile Id. Returned after successful create.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
      * 
-     */
+    */
     public Optional<ServiceProfileLoRaWANServiceProfile> getLoRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
      * Name of service profile
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the service profile.
      * 
-     */
+    */
     public List<ServiceProfileTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -142,7 +142,6 @@ public final class GetServiceProfileResult {
             this.tags = tags;
             return this;
         }
-
         public GetServiceProfileResult build() {
             return new GetServiceProfileResult(arn, id, loRaWAN, name, tags);
         }

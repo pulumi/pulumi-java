@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ExportDatasetConfigurationResponse {
     /**
      * Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).
      * 
-     */
+    */
     public List<String> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }
@@ -54,7 +54,6 @@ public final class ExportDatasetConfigurationResponse {
             this.columns = columns;
             return this;
         }
-
         public ExportDatasetConfigurationResponse build() {
             return new ExportDatasetConfigurationResponse(columns);
         }

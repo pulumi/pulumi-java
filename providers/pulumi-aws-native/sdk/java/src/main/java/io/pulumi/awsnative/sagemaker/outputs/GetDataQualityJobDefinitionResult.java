@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetDataQualityJobDefinitionResult {
     /**
      * The time at which the job definition was created.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The Amazon Resource Name (ARN) of job definition.
      * 
-     */
+    */
     public Optional<String> getJobDefinitionArn() {
         return Optional.ofNullable(this.jobDefinitionArn);
     }
@@ -76,7 +76,6 @@ public final class GetDataQualityJobDefinitionResult {
             this.jobDefinitionArn = jobDefinitionArn;
             return this;
         }
-
         public GetDataQualityJobDefinitionResult build() {
             return new GetDataQualityJobDefinitionResult(creationTime, jobDefinitionArn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+      private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -83,7 +83,6 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
             this.mode = mode;
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionSignatureSpecificationResponse build() {
             return new FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(id, mode);
         }

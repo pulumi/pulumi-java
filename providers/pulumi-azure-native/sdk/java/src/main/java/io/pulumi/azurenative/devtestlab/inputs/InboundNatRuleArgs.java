@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.TransportProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPort")
-    private final @Nullable Input<Integer> backendPort;
+      private final @Nullable Input<Integer> backendPort;
 
     public Input<Integer> getBackendPort() {
         return this.backendPort == null ? Input.empty() : this.backendPort;
@@ -37,7 +37,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPort")
-    private final @Nullable Input<Integer> frontendPort;
+      private final @Nullable Input<Integer> frontendPort;
 
     public Input<Integer> getFrontendPort() {
         return this.frontendPort == null ? Input.empty() : this.frontendPort;
@@ -48,7 +48,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportProtocol")
-    private final @Nullable Input<Either<String,TransportProtocol>> transportProtocol;
+      private final @Nullable Input<Either<String,TransportProtocol>> transportProtocol;
 
     public Input<Either<String,TransportProtocol>> getTransportProtocol() {
         return this.transportProtocol == null ? Input.empty() : this.transportProtocol;
@@ -122,7 +122,6 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.transportProtocol = Input.ofNullable(transportProtocol);
             return this;
         }
-
         public InboundNatRuleArgs build() {
             return new InboundNatRuleArgs(backendPort, frontendPort, transportProtocol);
         }

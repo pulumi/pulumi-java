@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.BackendBucketCdnPolicyResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -97,77 +97,77 @@ public final class GetBackendBucketResult {
     /**
      * Cloud Storage bucket name.
      * 
-     */
+    */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * Cloud CDN configuration for this BackendBucket.
      * 
-     */
+    */
     public BackendBucketCdnPolicyResponse getCdnPolicy() {
         return this.cdnPolicy;
     }
     /**
      * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
      * 
-     */
+    */
     public String getCompressionMode() {
         return this.compressionMode;
     }
     /**
      * Creation timestamp in RFC3339 text format.
      * 
-     */
+    */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * Headers that the HTTP/S load balancer should add to proxied responses.
      * 
-     */
+    */
     public List<String> getCustomResponseHeaders() {
         return this.customResponseHeaders;
     }
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The resource URL for the edge security policy associated with this backend bucket.
      * 
-     */
+    */
     public String getEdgeSecurityPolicy() {
         return this.edgeSecurityPolicy;
     }
     /**
      * If true, enable Cloud CDN for this BackendBucket.
      * 
-     */
+    */
     public Boolean getEnableCdn() {
         return this.enableCdn;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Server-defined URL for the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
@@ -266,7 +266,6 @@ public final class GetBackendBucketResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetBackendBucketResult build() {
             return new GetBackendBucketResult(bucketName, cdnPolicy, compressionMode, creationTimestamp, customResponseHeaders, description, edgeSecurityPolicy, enableCdn, kind, name, selfLink);
         }

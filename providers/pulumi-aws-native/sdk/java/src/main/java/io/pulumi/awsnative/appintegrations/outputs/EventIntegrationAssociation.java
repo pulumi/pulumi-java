@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appintegrations.outputs;
 
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationMetadata;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class EventIntegrationAssociation {
     /**
      * The metadata associated with the client.
      * 
-     */
+    */
     public List<EventIntegrationMetadata> getClientAssociationMetadata() {
         return this.clientAssociationMetadata == null ? List.of() : this.clientAssociationMetadata;
     }
     /**
      * The identifier for the client that is associated with the event integration.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The name of the Eventbridge rule.
      * 
-     */
+    */
     public Optional<String> getEventBridgeRuleName() {
         return Optional.ofNullable(this.eventBridgeRuleName);
     }
     /**
      * The Amazon Resource Name (ARN) for the event integration association.
      * 
-     */
+    */
     public Optional<String> getEventIntegrationAssociationArn() {
         return Optional.ofNullable(this.eventIntegrationAssociationArn);
     }
     /**
      * The identifier for the event integration association.
      * 
-     */
+    */
     public Optional<String> getEventIntegrationAssociationId() {
         return Optional.ofNullable(this.eventIntegrationAssociationId);
     }
@@ -141,7 +141,6 @@ public final class EventIntegrationAssociation {
             this.eventIntegrationAssociationId = eventIntegrationAssociationId;
             return this;
         }
-
         public EventIntegrationAssociation build() {
             return new EventIntegrationAssociation(clientAssociationMetadata, clientId, eventBridgeRuleName, eventIntegrationAssociationArn, eventIntegrationAssociationId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.AuthorizationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class RegistrationDefinitionPropertiesResponse {
     /**
      * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
      * 
-     */
+    */
     public List<AuthorizationResponse> getAuthorizations() {
         return this.authorizations;
     }
     /**
      * Description of the registration definition.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Id of the managedBy tenant.
      * 
-     */
+    */
     public String getManagedByTenantId() {
         return this.managedByTenantId;
     }
     /**
      * Name of the managedBy tenant.
      * 
-     */
+    */
     public String getManagedByTenantName() {
         return this.managedByTenantName;
     }
     /**
      * Current state of the registration definition.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Name of the registration definition.
      * 
-     */
+    */
     public Optional<String> getRegistrationDefinitionName() {
         return Optional.ofNullable(this.registrationDefinitionName);
     }
@@ -162,7 +162,6 @@ public final class RegistrationDefinitionPropertiesResponse {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
-
         public RegistrationDefinitionPropertiesResponse build() {
             return new RegistrationDefinitionPropertiesResponse(authorizations, description, managedByTenantId, managedByTenantName, provisioningState, registrationDefinitionName);
         }

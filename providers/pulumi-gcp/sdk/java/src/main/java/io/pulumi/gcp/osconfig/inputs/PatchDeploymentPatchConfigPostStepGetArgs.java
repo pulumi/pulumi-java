@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PatchDeploymentPatchConfigPostStepGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="linuxExecStepConfig")
-    private final @Nullable Input<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs> linuxExecStepConfig;
+      private final @Nullable Input<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs> linuxExecStepConfig;
 
     public Input<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs> getLinuxExecStepConfig() {
         return this.linuxExecStepConfig == null ? Input.empty() : this.linuxExecStepConfig;
@@ -33,7 +33,7 @@ public final class PatchDeploymentPatchConfigPostStepGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="windowsExecStepConfig")
-    private final @Nullable Input<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArgs> windowsExecStepConfig;
+      private final @Nullable Input<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArgs> windowsExecStepConfig;
 
     public Input<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArgs> getWindowsExecStepConfig() {
         return this.windowsExecStepConfig == null ? Input.empty() : this.windowsExecStepConfig;
@@ -92,7 +92,6 @@ public final class PatchDeploymentPatchConfigPostStepGetArgs extends io.pulumi.r
             this.windowsExecStepConfig = Input.ofNullable(windowsExecStepConfig);
             return this;
         }
-
         public PatchDeploymentPatchConfigPostStepGetArgs build() {
             return new PatchDeploymentPatchConfigPostStepGetArgs(linuxExecStepConfig, windowsExecStepConfig);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FrontDoorManagedRuleOverrideResponse;
 import io.pulumi.azurenative.network.outputs.ManagedRuleExclusionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
     /**
      * Describes the exclusions that are applied to all rules in the group.
      * 
-     */
+    */
     public List<ManagedRuleExclusionResponse> getExclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
      * Describes the managed rule group to override.
      * 
-     */
+    */
     public String getRuleGroupName() {
         return this.ruleGroupName;
     }
     /**
      * List of rules that will be disabled. If none specified, all rules in the group will be disabled.
      * 
-     */
+    */
     public List<FrontDoorManagedRuleOverrideResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
@@ -99,7 +99,6 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
             this.rules = rules;
             return this;
         }
-
         public FrontDoorManagedRuleGroupOverrideResponse build() {
             return new FrontDoorManagedRuleGroupOverrideResponse(exclusions, ruleGroupName, rules);
         }

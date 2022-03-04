@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class DataSourceSnowflakeParameters {
     /**
      * <p>Database.</p>
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * <p>Host.</p>
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * <p>Warehouse.</p>
      * 
-     */
+    */
     public String getWarehouse() {
         return this.warehouse;
     }
@@ -95,7 +95,6 @@ public final class DataSourceSnowflakeParameters {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
         }
-
         public DataSourceSnowflakeParameters build() {
             return new DataSourceSnowflakeParameters(database, host, warehouse);
         }

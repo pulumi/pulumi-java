@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class EntryBigqueryTableSpecViewSpecGetArgs extends io.pulumi.resou
     public static final EntryBigqueryTableSpecViewSpecGetArgs Empty = new EntryBigqueryTableSpecViewSpecGetArgs();
 
     @InputImport(name="viewQuery")
-    private final @Nullable Input<String> viewQuery;
+      private final @Nullable Input<String> viewQuery;
 
     public Input<String> getViewQuery() {
         return this.viewQuery == null ? Input.empty() : this.viewQuery;
@@ -58,7 +58,6 @@ public final class EntryBigqueryTableSpecViewSpecGetArgs extends io.pulumi.resou
             this.viewQuery = Input.ofNullable(viewQuery);
             return this;
         }
-
         public EntryBigqueryTableSpecViewSpecGetArgs build() {
             return new EntryBigqueryTableSpecViewSpecGetArgs(viewQuery);
         }

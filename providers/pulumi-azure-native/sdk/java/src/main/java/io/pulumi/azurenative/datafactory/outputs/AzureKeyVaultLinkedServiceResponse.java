@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -75,42 +75,42 @@ public final class AzureKeyVaultLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The base URL of the Azure Key Vault. e.g. https://myakv.vault.azure.net Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getBaseUrl() {
         return this.baseUrl;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The credential reference containing authentication information.
      * 
-     */
+    */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
@@ -118,7 +118,7 @@ public final class AzureKeyVaultLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'AzureKeyVault'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -189,7 +189,6 @@ public final class AzureKeyVaultLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureKeyVaultLinkedServiceResponse build() {
             return new AzureKeyVaultLinkedServiceResponse(annotations, baseUrl, connectVia, credential, description, parameters, type);
         }

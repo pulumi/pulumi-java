@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.recaptcha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class EnterpriseKeyIosSettings {
     /**
      * If set to true, it means allowed_bundle_ids will not be enforced.
      * 
-     */
+    */
     public Optional<Boolean> getAllowAllBundleIds() {
         return Optional.ofNullable(this.allowAllBundleIds);
     }
     /**
      * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
      * 
-     */
+    */
     public List<String> getAllowedBundleIds() {
         return this.allowedBundleIds == null ? List.of() : this.allowedBundleIds;
     }
@@ -78,7 +78,6 @@ public final class EnterpriseKeyIosSettings {
             this.allowedBundleIds = allowedBundleIds;
             return this;
         }
-
         public EnterpriseKeyIosSettings build() {
             return new EnterpriseKeyIosSettings(allowAllBundleIds, allowedBundleIds);
         }

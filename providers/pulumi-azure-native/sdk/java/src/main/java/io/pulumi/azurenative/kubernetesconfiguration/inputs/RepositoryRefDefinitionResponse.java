@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RepositoryRefDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable String branch;
+      private final @Nullable String branch;
 
     public Optional<String> getBranch() {
         return this.branch == null ? Optional.empty() : Optional.ofNullable(this.branch);
@@ -34,7 +34,7 @@ public final class RepositoryRefDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="commit")
-    private final @Nullable String commit;
+      private final @Nullable String commit;
 
     public Optional<String> getCommit() {
         return this.commit == null ? Optional.empty() : Optional.ofNullable(this.commit);
@@ -45,7 +45,7 @@ public final class RepositoryRefDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="semver")
-    private final @Nullable String semver;
+      private final @Nullable String semver;
 
     public Optional<String> getSemver() {
         return this.semver == null ? Optional.empty() : Optional.ofNullable(this.semver);
@@ -56,7 +56,7 @@ public final class RepositoryRefDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable String tag;
+      private final @Nullable String tag;
 
     public Optional<String> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -125,7 +125,6 @@ public final class RepositoryRefDefinitionResponse extends io.pulumi.resources.I
             this.tag = tag;
             return this;
         }
-
         public RepositoryRefDefinitionResponse build() {
             return new RepositoryRefDefinitionResponse(branch, commit, semver, tag);
         }

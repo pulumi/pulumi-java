@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetSpotFleetArgs;
 import io.pulumi.awsnative.ec2.outputs.GetSpotFleetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSpotFleet {
-/**
- * Resource Type definition for AWS::EC2::SpotFleet
+    private GetSpotFleet() {}
+    public interface BuilderApplicator {
+        public void apply(GetSpotFleetArgs.Builder a);
+    }
+    private static GetSpotFleetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSpotFleetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::EC2::SpotFleet
  * 
- */
+     */
+    public static CompletableFuture<GetSpotFleetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::EC2::SpotFleet
+     * 
+     */
     public static CompletableFuture<GetSpotFleetResult> invokeAsync(GetSpotFleetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getSpotFleet", TypeShape.of(GetSpotFleetResult.class), args == null ? GetSpotFleetArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2.outputs;
 
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionComponentPlatform;
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaExecutionParameters;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -116,7 +116,6 @@ public final class ComponentVersionLambdaFunctionRecipeSource {
             this.lambdaArn = lambdaArn;
             return this;
         }
-
         public ComponentVersionLambdaFunctionRecipeSource build() {
             return new ComponentVersionLambdaFunctionRecipeSource(componentDependencies, componentLambdaParameters, componentName, componentPlatforms, componentVersion, lambdaArn);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ImageTemplateIdentityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -36,7 +36,7 @@ public final class ImageTemplateIdentityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities;
+      private final @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     public Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
@@ -85,7 +85,6 @@ public final class ImageTemplateIdentityResponse extends io.pulumi.resources.Inv
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ImageTemplateIdentityResponse build() {
             return new ImageTemplateIdentityResponse(type, userAssignedIdentities);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -70,21 +70,21 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
     /**
      * The active storage account Id.
      * 
-     */
+    */
     public Optional<String> getActiveStorageAccountId() {
         return Optional.ofNullable(this.activeStorageAccountId);
     }
     /**
      * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
      * 
-     */
+    */
     public Optional<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
         return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
     /**
      * A value indicating whether encryption is enabled for virtual machines in this cloud.
      * 
-     */
+    */
     public Optional<String> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -92,28 +92,28 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'HyperVReplicaAzure'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
      * 
-     */
+    */
     public Optional<String> getOnlineReplicationStartTime() {
         return Optional.ofNullable(this.onlineReplicationStartTime);
     }
     /**
      * The duration (in hours) to which point the recovery history needs to be maintained.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointHistoryDurationInHours() {
         return Optional.ofNullable(this.recoveryPointHistoryDurationInHours);
     }
     /**
      * The replication interval.
      * 
-     */
+    */
     public Optional<Integer> getReplicationInterval() {
         return Optional.ofNullable(this.replicationInterval);
     }
@@ -184,7 +184,6 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
             this.replicationInterval = replicationInterval;
             return this;
         }
-
         public HyperVReplicaAzurePolicyDetailsResponse build() {
             return new HyperVReplicaAzurePolicyDetailsResponse(activeStorageAccountId, applicationConsistentSnapshotFrequencyInHours, encryption, instanceType, onlineReplicationStartTime, recoveryPointHistoryDurationInHours, replicationInterval);
         }

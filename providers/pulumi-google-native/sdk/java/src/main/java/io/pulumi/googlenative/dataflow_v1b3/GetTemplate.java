@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTemplate {
-/**
- * Get the template associated with a template.
+    private GetTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetTemplateArgs.Builder a);
+    }
+    private static GetTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get the template associated with a template.
  * 
- */
+     */
+    public static CompletableFuture<GetTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get the template associated with a template.
+     * 
+     */
     public static CompletableFuture<GetTemplateResult> invokeAsync(GetTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataflow/v1b3:getTemplate", TypeShape.of(GetTemplateResult.class), args == null ? GetTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

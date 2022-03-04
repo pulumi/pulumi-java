@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -84,63 +84,63 @@ public final class GetDeviceResult {
     /**
      * The type of the device.
      * 
-     */
+    */
     public String getDeviceType() {
         return this.deviceType;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of network functions deployed on the device.
      * 
-     */
+    */
     public List<SubResourceResponse> getNetworkFunctions() {
         return this.networkFunctions;
     }
     /**
      * The provisioning state of the device resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The current device status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -225,7 +225,6 @@ public final class GetDeviceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(deviceType, id, location, name, networkFunctions, provisioningState, status, tags, type);
         }

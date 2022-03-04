@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -43,14 +43,14 @@ public final class ClusterClusterAutoscalingResourceLimit {
     /**
      * Maximum amount of the resource in the cluster.
      * 
-     */
+    */
     public Optional<Integer> getMaximum() {
         return Optional.ofNullable(this.maximum);
     }
     /**
      * Minimum amount of the resource in the cluster.
      * 
-     */
+    */
     public Optional<Integer> getMinimum() {
         return Optional.ofNullable(this.minimum);
     }
@@ -59,7 +59,7 @@ public final class ClusterClusterAutoscalingResourceLimit {
      * `memory`.  See the [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
      * for a list of types.
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
@@ -102,7 +102,6 @@ public final class ClusterClusterAutoscalingResourceLimit {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public ClusterClusterAutoscalingResourceLimit build() {
             return new ClusterClusterAutoscalingResourceLimit(maximum, minimum, resourceType);
         }

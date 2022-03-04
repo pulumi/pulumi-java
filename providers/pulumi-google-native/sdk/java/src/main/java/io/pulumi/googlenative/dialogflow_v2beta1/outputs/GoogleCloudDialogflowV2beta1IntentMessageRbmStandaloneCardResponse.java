@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
     /**
      * Card content.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse getCardContent() {
         return this.cardContent;
     }
     /**
      * Orientation of the card.
      * 
-     */
+    */
     public String getCardOrientation() {
         return this.cardOrientation;
     }
     /**
      * Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
      * 
-     */
+    */
     public String getThumbnailImageAlignment() {
         return this.thumbnailImageAlignment;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
             this.thumbnailImageAlignment = Objects.requireNonNull(thumbnailImageAlignment);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(cardContent, cardOrientation, thumbnailImageAlignment);
         }

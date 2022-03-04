@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetHl7V2StoreArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetHl7V2StoreArgs Empty = new GetHl7V2StoreArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="hl7V2StoreId", required=true)
-    private final String hl7V2StoreId;
+      private final String hl7V2StoreId;
 
     public String getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetHl7V2StoreArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetHl7V2StoreArgs build() {
             return new GetHl7V2StoreArgs(datasetId, hl7V2StoreId, location, project);
         }

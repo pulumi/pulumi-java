@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -75,7 +75,6 @@ public final class ConfigurationAggregatorAccountAggregationSource {
             this.awsRegions = awsRegions;
             return this;
         }
-
         public ConfigurationAggregatorAccountAggregationSource build() {
             return new ConfigurationAggregatorAccountAggregationSource(accountIds, allAwsRegions, awsRegions);
         }

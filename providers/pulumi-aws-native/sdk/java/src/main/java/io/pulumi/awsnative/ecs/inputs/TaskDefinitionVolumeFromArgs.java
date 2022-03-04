@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
     public static final TaskDefinitionVolumeFromArgs Empty = new TaskDefinitionVolumeFromArgs();
 
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
     @InputImport(name="sourceContainer")
-    private final @Nullable Input<String> sourceContainer;
+      private final @Nullable Input<String> sourceContainer;
 
     public Input<String> getSourceContainer() {
         return this.sourceContainer == null ? Input.empty() : this.sourceContainer;
@@ -82,7 +82,6 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
             this.sourceContainer = Input.ofNullable(sourceContainer);
             return this;
         }
-
         public TaskDefinitionVolumeFromArgs build() {
             return new TaskDefinitionVolumeFromArgs(readOnly, sourceContainer);
         }

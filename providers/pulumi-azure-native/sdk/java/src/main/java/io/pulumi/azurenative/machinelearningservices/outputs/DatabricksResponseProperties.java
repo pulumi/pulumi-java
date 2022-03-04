@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DatabricksResponseProperties {
     /**
      * Databricks access token
      * 
-     */
+    */
     public Optional<String> getDatabricksAccessToken() {
         return Optional.ofNullable(this.databricksAccessToken);
     }
     /**
      * Workspace Url
      * 
-     */
+    */
     public Optional<String> getWorkspaceUrl() {
         return Optional.ofNullable(this.workspaceUrl);
     }
@@ -76,7 +76,6 @@ public final class DatabricksResponseProperties {
             this.workspaceUrl = workspaceUrl;
             return this;
         }
-
         public DatabricksResponseProperties build() {
             return new DatabricksResponseProperties(databricksAccessToken, workspaceUrl);
         }

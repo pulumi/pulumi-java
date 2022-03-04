@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ServerEndpointFilesNotSyncingErrorResponse {
     /**
      * Error code (HResult)
      * 
-     */
+    */
     public Integer getErrorCode() {
         return this.errorCode;
     }
     /**
      * Count of persistent files not syncing with the specified error code
      * 
-     */
+    */
     public Double getPersistentCount() {
         return this.persistentCount;
     }
     /**
      * Count of transient files not syncing with the specified error code
      * 
-     */
+    */
     public Double getTransientCount() {
         return this.transientCount;
     }
@@ -96,7 +96,6 @@ public final class ServerEndpointFilesNotSyncingErrorResponse {
             this.transientCount = Objects.requireNonNull(transientCount);
             return this;
         }
-
         public ServerEndpointFilesNotSyncingErrorResponse build() {
             return new ServerEndpointFilesNotSyncingErrorResponse(errorCode, persistentCount, transientCount);
         }

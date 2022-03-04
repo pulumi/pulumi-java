@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,42 +59,42 @@ public final class LatestOperationResultResponse {
     /**
      * Error code on failure.
      * 
-     */
+    */
     public String getErrorCode() {
         return this.errorCode;
     }
     /**
      * The error message.
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * The HttpMethod - PUT/POST/DELETE for the operation.
      * 
-     */
+    */
     public String getHttpMethod() {
         return this.httpMethod;
     }
     /**
      * The URL to use to check long-running operation status
      * 
-     */
+    */
     public String getOperationUrl() {
         return this.operationUrl;
     }
     /**
      * Request URI of the operation.
      * 
-     */
+    */
     public String getRequestUri() {
         return this.requestUri;
     }
     /**
      * The current status of the operation.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -158,7 +158,6 @@ public final class LatestOperationResultResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public LatestOperationResultResponse build() {
             return new LatestOperationResultResponse(errorCode, errorMessage, httpMethod, operationUrl, requestUri, status);
         }

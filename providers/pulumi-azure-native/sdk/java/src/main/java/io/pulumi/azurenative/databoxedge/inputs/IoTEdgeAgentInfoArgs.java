@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.ImageRepositoryCredentialArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="imageName", required=true)
-    private final Input<String> imageName;
+      private final Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName;
@@ -35,7 +35,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="imageRepository")
-    private final @Nullable Input<ImageRepositoryCredentialArgs> imageRepository;
+      private final @Nullable Input<ImageRepositoryCredentialArgs> imageRepository;
 
     public Input<ImageRepositoryCredentialArgs> getImageRepository() {
         return this.imageRepository == null ? Input.empty() : this.imageRepository;
@@ -46,7 +46,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tag", required=true)
-    private final Input<String> tag;
+      private final Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag;
@@ -120,7 +120,6 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
             this.tag = Input.of(Objects.requireNonNull(tag));
             return this;
         }
-
         public IoTEdgeAgentInfoArgs build() {
             return new IoTEdgeAgentInfoArgs(imageName, imageRepository, tag);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelingJobPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelingJobId")
-    private final @Nullable Input<String> labelingJobId;
+      private final @Nullable Input<String> labelingJobId;
 
     public Input<String> getLabelingJobId() {
         return this.labelingJobId == null ? Input.empty() : this.labelingJobId;
@@ -31,7 +31,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<LabelingJobPropertiesArgs> properties;
+      private final @Nullable Input<LabelingJobPropertiesArgs> properties;
 
     public Input<LabelingJobPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -142,7 +142,6 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public LabelingJobArgs build() {
             return new LabelingJobArgs(labelingJobId, properties, resourceGroupName, workspaceName);
         }

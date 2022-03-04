@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class SshPublicKeyResponse {
     /**
      * Optional. It is used to store the function/usage of the key
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Ssh public key base64 encoded. The format should be: '<keyType> <keyData>', e.g. ssh-rsa AAAABBBB
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
@@ -76,7 +76,6 @@ public final class SshPublicKeyResponse {
             this.key = key;
             return this;
         }
-
         public SshPublicKeyResponse build() {
             return new SshPublicKeyResponse(description, key);
         }

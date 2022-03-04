@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.policysimulator_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.policysimulator_v1.inputs.GoogleCloudPolicysimulatorV1ReplayConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
+      private final Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
 
     public Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> getConfig() {
         return this.config;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -108,7 +108,6 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public OrganizationReplayArgs build() {
             return new OrganizationReplayArgs(config, location, organizationId);
         }

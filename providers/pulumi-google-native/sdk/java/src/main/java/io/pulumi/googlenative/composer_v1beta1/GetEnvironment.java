@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnvironment {
-/**
- * Get an existing environment.
+    private GetEnvironment() {}
+    public interface BuilderApplicator {
+        public void apply(GetEnvironmentArgs.Builder a);
+    }
+    private static GetEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get an existing environment.
  * 
- */
+     */
+    public static CompletableFuture<GetEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get an existing environment.
+     * 
+     */
     public static CompletableFuture<GetEnvironmentResult> invokeAsync(GetEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:composer/v1beta1:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args == null ? GetEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

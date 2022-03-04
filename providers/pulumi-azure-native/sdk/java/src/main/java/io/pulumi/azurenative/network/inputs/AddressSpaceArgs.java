@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressPrefixes")
-    private final @Nullable Input<List<String>> addressPrefixes;
+      private final @Nullable Input<List<String>> addressPrefixes;
 
     public Input<List<String>> getAddressPrefixes() {
         return this.addressPrefixes == null ? Input.empty() : this.addressPrefixes;
@@ -67,7 +67,6 @@ public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
             this.addressPrefixes = Input.ofNullable(addressPrefixes);
             return this;
         }
-
         public AddressSpaceArgs build() {
             return new AddressSpaceArgs(addressPrefixes);
         }

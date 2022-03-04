@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final String registryName;
+      private final String registryName;
 
     public String getRegistryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="runId", required=true)
-    private final String runId;
+      private final String runId;
 
     public String getRunId() {
         return this.runId;
@@ -98,7 +98,6 @@ public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
             this.runId = Objects.requireNonNull(runId);
             return this;
         }
-
         public ListRunLogSasUrlArgs build() {
             return new ListRunLogSasUrlArgs(registryName, resourceGroupName, runId);
         }

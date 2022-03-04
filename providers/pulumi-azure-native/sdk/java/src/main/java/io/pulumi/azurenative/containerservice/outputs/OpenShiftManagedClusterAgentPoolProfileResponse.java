@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse {
     /**
      * Number of agents (VMs) to host docker containers.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * Unique name of the pool profile in the context of the subscription and resource group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Define the role of the AgentPoolProfile.
      * 
-     */
+    */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }
     /**
      * Subnet CIDR for the peering.
      * 
-     */
+    */
     public Optional<String> getSubnetCidr() {
         return Optional.ofNullable(this.subnetCidr);
     }
     /**
      * Size of agent VMs.
      * 
-     */
+    */
     public String getVmSize() {
         return this.vmSize;
     }
@@ -161,7 +161,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
         }
-
         public OpenShiftManagedClusterAgentPoolProfileResponse build() {
             return new OpenShiftManagedClusterAgentPoolProfileResponse(count, name, osType, role, subnetCidr, vmSize);
         }

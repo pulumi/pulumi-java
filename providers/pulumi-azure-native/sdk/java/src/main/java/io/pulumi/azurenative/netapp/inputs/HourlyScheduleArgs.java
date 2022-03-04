@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minute")
-    private final @Nullable Input<Integer> minute;
+      private final @Nullable Input<Integer> minute;
 
     public Input<Integer> getMinute() {
         return this.minute == null ? Input.empty() : this.minute;
@@ -35,7 +35,7 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotsToKeep")
-    private final @Nullable Input<Integer> snapshotsToKeep;
+      private final @Nullable Input<Integer> snapshotsToKeep;
 
     public Input<Integer> getSnapshotsToKeep() {
         return this.snapshotsToKeep == null ? Input.empty() : this.snapshotsToKeep;
@@ -46,7 +46,7 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usedBytes")
-    private final @Nullable Input<Double> usedBytes;
+      private final @Nullable Input<Double> usedBytes;
 
     public Input<Double> getUsedBytes() {
         return this.usedBytes == null ? Input.empty() : this.usedBytes;
@@ -120,7 +120,6 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.usedBytes = Input.ofNullable(usedBytes);
             return this;
         }
-
         public HourlyScheduleArgs build() {
             return new HourlyScheduleArgs(minute, snapshotsToKeep, usedBytes);
         }

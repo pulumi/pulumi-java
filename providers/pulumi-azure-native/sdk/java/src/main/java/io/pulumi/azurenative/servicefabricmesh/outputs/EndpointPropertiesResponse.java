@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class EndpointPropertiesResponse {
     /**
      * The name of the endpoint.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Port used by the container.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -77,7 +77,6 @@ public final class EndpointPropertiesResponse {
             this.port = port;
             return this;
         }
-
         public EndpointPropertiesResponse build() {
             return new EndpointPropertiesResponse(name, port);
         }

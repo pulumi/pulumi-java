@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class ResourceProviderManifestPropertiesResponseRequestHeaderOption
     public static final ResourceProviderManifestPropertiesResponseRequestHeaderOptions Empty = new ResourceProviderManifestPropertiesResponseRequestHeaderOptions();
 
     @InputImport(name="optInHeaders")
-    private final @Nullable String optInHeaders;
+      private final @Nullable String optInHeaders;
 
     public Optional<String> getOptInHeaders() {
         return this.optInHeaders == null ? Optional.empty() : Optional.ofNullable(this.optInHeaders);
@@ -53,7 +53,6 @@ public final class ResourceProviderManifestPropertiesResponseRequestHeaderOption
             this.optInHeaders = optInHeaders;
             return this;
         }
-
         public ResourceProviderManifestPropertiesResponseRequestHeaderOptions build() {
             return new ResourceProviderManifestPropertiesResponseRequestHeaderOptions(optInHeaders);
         }

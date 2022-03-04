@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -63,42 +63,42 @@ public final class CodeVersionResponse {
     /**
      * ARM resource ID of the datastore where the asset is located.
      * 
-     */
+    */
     public Optional<String> getDatastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
      * The asset description text.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * If the name version are system generated (anonymous registration).
      * 
-     */
+    */
     public Optional<Boolean> getIsAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
     /**
      * The path of the file/directory in the datastore.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The asset property dictionary.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
@@ -162,7 +162,6 @@ public final class CodeVersionResponse {
             this.tags = tags;
             return this;
         }
-
         public CodeVersionResponse build() {
             return new CodeVersionResponse(datastoreId, description, isAnonymous, path, properties, tags);
         }

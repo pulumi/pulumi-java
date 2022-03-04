@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class LoadBalancerNatRuleReferenceResponse {
     /**
      * Gets the name of the proxy resource on the target side.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets the ARM resource ID of the tracked resource being referenced.
      * 
-     */
+    */
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;
     }
@@ -76,7 +76,6 @@ public final class LoadBalancerNatRuleReferenceResponse {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public LoadBalancerNatRuleReferenceResponse build() {
             return new LoadBalancerNatRuleReferenceResponse(name, sourceArmResourceId);
         }

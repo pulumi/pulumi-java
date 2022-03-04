@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.RevisionTemplateResponse;
 import io.pulumi.googlenative.run_v1.outputs.TrafficTargetResponse;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class ServiceSpecResponse {
     /**
      * Template holds the latest specification for the Revision to be stamped out.
      * 
-     */
+    */
     public RevisionTemplateResponse getTemplate() {
         return this.template;
     }
     /**
      * Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
      * 
-     */
+    */
     public List<TrafficTargetResponse> getTraffic() {
         return this.traffic;
     }
@@ -76,7 +76,6 @@ public final class ServiceSpecResponse {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }
-
         public ServiceSpecResponse build() {
             return new ServiceSpecResponse(template, traffic);
         }

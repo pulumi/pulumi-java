@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,7 +38,7 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey {
      * group or user. For external-identity-mapped entities, the id is a string conforming
      * to the Identity Source's requirements.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -48,7 +48,7 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey {
      * such as a Google user or a Google Group.
      * If populated, the EntityKey represents an external-identity-mapped group.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
@@ -84,7 +84,6 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public GetGroupMembershipsMembershipPreferredMemberKey build() {
             return new GetGroupMembershipsMembershipPreferredMemberKey(id, namespace);
         }

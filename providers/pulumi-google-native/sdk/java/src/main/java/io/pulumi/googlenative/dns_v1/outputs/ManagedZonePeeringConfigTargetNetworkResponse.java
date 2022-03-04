@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,7 +34,7 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse {
     /**
      * The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.
      * 
-     */
+    */
     public String getDeactivateTime() {
         return this.deactivateTime;
     }
@@ -44,7 +44,7 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse {
     /**
      * The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
      * 
-     */
+    */
     public String getNetworkUrl() {
         return this.networkUrl;
     }
@@ -87,7 +87,6 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public ManagedZonePeeringConfigTargetNetworkResponse build() {
             return new ManagedZonePeeringConfigTargetNetworkResponse(deactivateTime, kind, networkUrl);
         }

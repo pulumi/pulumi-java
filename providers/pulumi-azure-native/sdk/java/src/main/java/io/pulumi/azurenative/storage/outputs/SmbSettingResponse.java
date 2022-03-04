@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.MultichannelResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class SmbSettingResponse {
     /**
      * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
      * 
-     */
+    */
     public Optional<String> getAuthenticationMethods() {
         return Optional.ofNullable(this.authenticationMethods);
     }
     /**
      * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.
      * 
-     */
+    */
     public Optional<String> getChannelEncryption() {
         return Optional.ofNullable(this.channelEncryption);
     }
     /**
      * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'
      * 
-     */
+    */
     public Optional<String> getKerberosTicketEncryption() {
         return Optional.ofNullable(this.kerberosTicketEncryption);
     }
     /**
      * Multichannel setting. Applies to Premium FileStorage only.
      * 
-     */
+    */
     public Optional<MultichannelResponse> getMultichannel() {
         return Optional.ofNullable(this.multichannel);
     }
     /**
      * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.
      * 
-     */
+    */
     public Optional<String> getVersions() {
         return Optional.ofNullable(this.versions);
     }
@@ -140,7 +140,6 @@ public final class SmbSettingResponse {
             this.versions = versions;
             return this;
         }
-
         public SmbSettingResponse build() {
             return new SmbSettingResponse(authenticationMethods, channelEncryption, kerberosTicketEncryption, multichannel, versions);
         }

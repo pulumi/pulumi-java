@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -49,28 +49,28 @@ public final class UserInfo {
     /**
      * Any additional information provided by the authenticator.
      * 
-     */
+    */
     public Map<String,List<String>> getExtra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
      * The names of groups this user is a part of.
      * 
-     */
+    */
     public List<String> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * A unique value that identifies this user across time. If this user is deleted and another user by the same name is added, they will have different UIDs.
      * 
-     */
+    */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }
     /**
      * The name that uniquely identifies this user among all active users.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -120,7 +120,6 @@ public final class UserInfo {
             this.username = username;
             return this;
         }
-
         public UserInfo build() {
             return new UserInfo(extra, groups, uid, username);
         }

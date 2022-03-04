@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VirtualMachineScaleSetIpTagResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ipTagType")
-    private final @Nullable String ipTagType;
+      private final @Nullable String ipTagType;
 
     public Optional<String> getIpTagType() {
         return this.ipTagType == null ? Optional.empty() : Optional.ofNullable(this.ipTagType);
@@ -34,7 +34,7 @@ public final class VirtualMachineScaleSetIpTagResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable String tag;
+      private final @Nullable String tag;
 
     public Optional<String> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -83,7 +83,6 @@ public final class VirtualMachineScaleSetIpTagResponse extends io.pulumi.resourc
             this.tag = tag;
             return this;
         }
-
         public VirtualMachineScaleSetIpTagResponse build() {
             return new VirtualMachineScaleSetIpTagResponse(ipTagType, tag);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.BackupScheduleArgs;
 import io.pulumi.azurenative.web.inputs.DatabaseBackupSettingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="backupName")
-    private final @Nullable Input<String> backupName;
+      private final @Nullable Input<String> backupName;
 
     public Input<String> getBackupName() {
         return this.backupName == null ? Input.empty() : this.backupName;
@@ -34,7 +34,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="backupSchedule")
-    private final @Nullable Input<BackupScheduleArgs> backupSchedule;
+      private final @Nullable Input<BackupScheduleArgs> backupSchedule;
 
     public Input<BackupScheduleArgs> getBackupSchedule() {
         return this.backupSchedule == null ? Input.empty() : this.backupSchedule;
@@ -45,7 +45,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="databases")
-    private final @Nullable Input<List<DatabaseBackupSettingArgs>> databases;
+      private final @Nullable Input<List<DatabaseBackupSettingArgs>> databases;
 
     public Input<List<DatabaseBackupSettingArgs>> getDatabases() {
         return this.databases == null ? Input.empty() : this.databases;
@@ -56,7 +56,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -67,7 +67,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -78,7 +78,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -89,7 +89,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+      private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -111,7 +111,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="storageAccountUrl", required=true)
-    private final Input<String> storageAccountUrl;
+      private final Input<String> storageAccountUrl;
 
     public Input<String> getStorageAccountUrl() {
         return this.storageAccountUrl;
@@ -275,7 +275,6 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
             this.storageAccountUrl = Input.of(Objects.requireNonNull(storageAccountUrl));
             return this;
         }
-
         public WebAppBackupConfigurationSlotArgs build() {
             return new WebAppBackupConfigurationSlotArgs(backupName, backupSchedule, databases, enabled, kind, name, resourceGroupName, slot, storageAccountUrl);
         }

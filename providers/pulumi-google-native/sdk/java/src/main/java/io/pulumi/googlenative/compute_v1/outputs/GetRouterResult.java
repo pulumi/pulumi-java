@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.RouterBgpPeerResponse;
 import io.pulumi.googlenative.compute_v1.outputs.RouterBgpResponse;
 import io.pulumi.googlenative.compute_v1.outputs.RouterInterfaceResponse;
@@ -107,84 +107,84 @@ public final class GetRouterResult {
     /**
      * BGP information specific to this router.
      * 
-     */
+    */
     public RouterBgpResponse getBgp() {
         return this.bgp;
     }
     /**
      * BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
      * 
-     */
+    */
     public List<RouterBgpPeerResponse> getBgpPeers() {
         return this.bgpPeers;
     }
     /**
      * Creation timestamp in RFC3339 text format.
      * 
-     */
+    */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
      * 
-     */
+    */
     public Boolean getEncryptedInterconnectRouter() {
         return this.encryptedInterconnectRouter;
     }
     /**
      * Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
      * 
-     */
+    */
     public List<RouterInterfaceResponse> getInterfaces() {
         return this.interfaces;
     }
     /**
      * Type of resource. Always compute#router for routers.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A list of NAT services created in this router.
      * 
-     */
+    */
     public List<RouterNatResponse> getNats() {
         return this.nats;
     }
     /**
      * URI of the network to which this router belongs.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
     /**
      * URI of the region where the router resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * Server-defined URL for the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
@@ -290,7 +290,6 @@ public final class GetRouterResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetRouterResult build() {
             return new GetRouterResult(bgp, bgpPeers, creationTimestamp, description, encryptedInterconnectRouter, interfaces, kind, name, nats, network, region, selfLink);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.OptionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class CollectionOverrideResponse {
     /**
      * The collection that identifies this resource within its service.
      * 
-     */
+    */
     public String getCollection() {
         return this.collection;
     }
     /**
      * The options to apply to this resource-level override
      * 
-     */
+    */
     public OptionsResponse getOptions() {
         return this.options;
     }
@@ -75,7 +75,6 @@ public final class CollectionOverrideResponse {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public CollectionOverrideResponse build() {
             return new CollectionOverrideResponse(collection, options);
         }

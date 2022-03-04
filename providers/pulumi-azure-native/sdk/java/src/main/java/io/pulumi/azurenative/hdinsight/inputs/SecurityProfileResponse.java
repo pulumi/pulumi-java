@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="aaddsResourceId")
-    private final @Nullable String aaddsResourceId;
+      private final @Nullable String aaddsResourceId;
 
     public Optional<String> getAaddsResourceId() {
         return this.aaddsResourceId == null ? Optional.empty() : Optional.ofNullable(this.aaddsResourceId);
@@ -35,7 +35,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="clusterUsersGroupDNs")
-    private final @Nullable List<String> clusterUsersGroupDNs;
+      private final @Nullable List<String> clusterUsersGroupDNs;
 
     public List<String> getClusterUsersGroupDNs() {
         return this.clusterUsersGroupDNs == null ? List.of() : this.clusterUsersGroupDNs;
@@ -46,7 +46,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="directoryType")
-    private final @Nullable String directoryType;
+      private final @Nullable String directoryType;
 
     public Optional<String> getDirectoryType() {
         return this.directoryType == null ? Optional.empty() : Optional.ofNullable(this.directoryType);
@@ -57,7 +57,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable String domain;
+      private final @Nullable String domain;
 
     public Optional<String> getDomain() {
         return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
@@ -68,7 +68,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="domainUserPassword")
-    private final @Nullable String domainUserPassword;
+      private final @Nullable String domainUserPassword;
 
     public Optional<String> getDomainUserPassword() {
         return this.domainUserPassword == null ? Optional.empty() : Optional.ofNullable(this.domainUserPassword);
@@ -79,7 +79,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="domainUsername")
-    private final @Nullable String domainUsername;
+      private final @Nullable String domainUsername;
 
     public Optional<String> getDomainUsername() {
         return this.domainUsername == null ? Optional.empty() : Optional.ofNullable(this.domainUsername);
@@ -90,7 +90,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ldapsUrls")
-    private final @Nullable List<String> ldapsUrls;
+      private final @Nullable List<String> ldapsUrls;
 
     public List<String> getLdapsUrls() {
         return this.ldapsUrls == null ? List.of() : this.ldapsUrls;
@@ -101,7 +101,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="msiResourceId")
-    private final @Nullable String msiResourceId;
+      private final @Nullable String msiResourceId;
 
     public Optional<String> getMsiResourceId() {
         return this.msiResourceId == null ? Optional.empty() : Optional.ofNullable(this.msiResourceId);
@@ -112,7 +112,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="organizationalUnitDN")
-    private final @Nullable String organizationalUnitDN;
+      private final @Nullable String organizationalUnitDN;
 
     public Optional<String> getOrganizationalUnitDN() {
         return this.organizationalUnitDN == null ? Optional.empty() : Optional.ofNullable(this.organizationalUnitDN);
@@ -231,7 +231,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
             this.organizationalUnitDN = organizationalUnitDN;
             return this;
         }
-
         public SecurityProfileResponse build() {
             return new SecurityProfileResponse(aaddsResourceId, clusterUsersGroupDNs, directoryType, domain, domainUserPassword, domainUsername, ldapsUrls, msiResourceId, organizationalUnitDN);
         }

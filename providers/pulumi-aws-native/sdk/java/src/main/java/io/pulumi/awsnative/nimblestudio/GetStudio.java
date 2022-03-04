@@ -6,17 +6,33 @@ package io.pulumi.awsnative.nimblestudio;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.nimblestudio.inputs.GetStudioArgs;
 import io.pulumi.awsnative.nimblestudio.outputs.GetStudioResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStudio {
-/**
- * Represents a studio that contains other Nimble Studio resources
+    private GetStudio() {}
+    public interface BuilderApplicator {
+        public void apply(GetStudioArgs.Builder a);
+    }
+    private static GetStudioArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStudioArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a studio that contains other Nimble Studio resources
  * 
- */
+     */
+    public static CompletableFuture<GetStudioResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a studio that contains other Nimble Studio resources
+     * 
+     */
     public static CompletableFuture<GetStudioResult> invokeAsync(GetStudioArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getStudio", TypeShape.of(GetStudioResult.class), args == null ? GetStudioArgs.Empty : args, Utilities.withVersion(options));
     }

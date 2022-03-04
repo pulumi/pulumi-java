@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.azurenative.recoveryservices.inputs.DPMContainerExtendedInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -40,7 +40,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="canReRegister")
-    private final @Nullable Input<Boolean> canReRegister;
+      private final @Nullable Input<Boolean> canReRegister;
 
     public Input<Boolean> getCanReRegister() {
         return this.canReRegister == null ? Input.empty() : this.canReRegister;
@@ -51,7 +51,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerId")
-    private final @Nullable Input<String> containerId;
+      private final @Nullable Input<String> containerId;
 
     public Input<String> getContainerId() {
         return this.containerId == null ? Input.empty() : this.containerId;
@@ -66,7 +66,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerType", required=true)
-    private final Input<String> containerType;
+      private final Input<String> containerType;
 
     public Input<String> getContainerType() {
         return this.containerType;
@@ -77,7 +77,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dpmAgentVersion")
-    private final @Nullable Input<String> dpmAgentVersion;
+      private final @Nullable Input<String> dpmAgentVersion;
 
     public Input<String> getDpmAgentVersion() {
         return this.dpmAgentVersion == null ? Input.empty() : this.dpmAgentVersion;
@@ -88,7 +88,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dpmServers")
-    private final @Nullable Input<List<String>> dpmServers;
+      private final @Nullable Input<List<String>> dpmServers;
 
     public Input<List<String>> getDpmServers() {
         return this.dpmServers == null ? Input.empty() : this.dpmServers;
@@ -99,7 +99,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedInfo")
-    private final @Nullable Input<DPMContainerExtendedInfoArgs> extendedInfo;
+      private final @Nullable Input<DPMContainerExtendedInfoArgs> extendedInfo;
 
     public Input<DPMContainerExtendedInfoArgs> getExtendedInfo() {
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
@@ -110,7 +110,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -121,7 +121,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthStatus")
-    private final @Nullable Input<String> healthStatus;
+      private final @Nullable Input<String> healthStatus;
 
     public Input<String> getHealthStatus() {
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
@@ -132,7 +132,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectedItemCount")
-    private final @Nullable Input<Double> protectedItemCount;
+      private final @Nullable Input<Double> protectedItemCount;
 
     public Input<Double> getProtectedItemCount() {
         return this.protectedItemCount == null ? Input.empty() : this.protectedItemCount;
@@ -143,7 +143,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectionStatus")
-    private final @Nullable Input<String> protectionStatus;
+      private final @Nullable Input<String> protectionStatus;
 
     public Input<String> getProtectionStatus() {
         return this.protectionStatus == null ? Input.empty() : this.protectionStatus;
@@ -154,7 +154,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationStatus")
-    private final @Nullable Input<String> registrationStatus;
+      private final @Nullable Input<String> registrationStatus;
 
     public Input<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
@@ -165,7 +165,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradeAvailable")
-    private final @Nullable Input<Boolean> upgradeAvailable;
+      private final @Nullable Input<Boolean> upgradeAvailable;
 
     public Input<Boolean> getUpgradeAvailable() {
         return this.upgradeAvailable == null ? Input.empty() : this.upgradeAvailable;
@@ -389,7 +389,6 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.upgradeAvailable = Input.ofNullable(upgradeAvailable);
             return this;
         }
-
         public DpmContainerArgs build() {
             return new DpmContainerArgs(backupManagementType, canReRegister, containerId, containerType, dpmAgentVersion, dpmServers, extendedInfo, friendlyName, healthStatus, protectedItemCount, protectionStatus, registrationStatus, upgradeAvailable);
         }

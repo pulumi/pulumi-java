@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AppEngineResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="moduleId", required=true)
-    private final String moduleId;
+      private final String moduleId;
 
     public String getModuleId() {
         return this.moduleId;
@@ -59,7 +59,6 @@ public final class AppEngineResponse extends io.pulumi.resources.InvokeArgs {
             this.moduleId = Objects.requireNonNull(moduleId);
             return this;
         }
-
         public AppEngineResponse build() {
             return new AppEngineResponse(moduleId);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dataSource")
-    private final @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+      private final @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
     public Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
         return this.dataSource == null ? Input.empty() : this.dataSource;
@@ -38,7 +38,7 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="failedLocationCount", required=true)
-    private final Input<Integer> failedLocationCount;
+      private final Input<Integer> failedLocationCount;
 
     public Input<Integer> getFailedLocationCount() {
         return this.failedLocationCount;
@@ -50,7 +50,7 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -61,7 +61,7 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="windowSize")
-    private final @Nullable Input<String> windowSize;
+      private final @Nullable Input<String> windowSize;
 
     public Input<String> getWindowSize() {
         return this.windowSize == null ? Input.empty() : this.windowSize;
@@ -150,7 +150,6 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
             this.windowSize = Input.ofNullable(windowSize);
             return this;
         }
-
         public LocationThresholdRuleConditionArgs build() {
             return new LocationThresholdRuleConditionArgs(dataSource, failedLocationCount, odataType, windowSize);
         }

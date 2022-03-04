@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.OverrideTaskStepPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="agentPoolName")
-    private final @Nullable String agentPoolName;
+      private final @Nullable String agentPoolName;
 
     public Optional<String> getAgentPoolName() {
         return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
@@ -36,7 +36,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="isArchiveEnabled")
-    private final @Nullable Boolean isArchiveEnabled;
+      private final @Nullable Boolean isArchiveEnabled;
 
     public Optional<Boolean> getIsArchiveEnabled() {
         return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
@@ -47,7 +47,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="logTemplate")
-    private final @Nullable String logTemplate;
+      private final @Nullable String logTemplate;
 
     public Optional<String> getLogTemplate() {
         return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
@@ -58,7 +58,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="overrideTaskStepProperties")
-    private final @Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties;
+      private final @Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties;
 
     public Optional<OverrideTaskStepPropertiesResponse> getOverrideTaskStepProperties() {
         return this.overrideTaskStepProperties == null ? Optional.empty() : Optional.ofNullable(this.overrideTaskStepProperties);
@@ -69,7 +69,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="taskId", required=true)
-    private final String taskId;
+      private final String taskId;
 
     public String getTaskId() {
         return this.taskId;
@@ -81,7 +81,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -170,7 +170,6 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TaskRunRequestResponse build() {
             return new TaskRunRequestResponse(agentPoolName, isArchiveEnabled, logTemplate, overrideTaskStepProperties, taskId, type);
         }

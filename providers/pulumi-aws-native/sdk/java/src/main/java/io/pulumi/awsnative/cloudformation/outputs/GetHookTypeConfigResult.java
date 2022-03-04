@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,14 +42,14 @@ public final class GetHookTypeConfigResult {
     /**
      * The configuration data for the extension, in this account and region.
      * 
-     */
+    */
     public Optional<String> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * The Amazon Resource Name (ARN) for the configuration data, in this account and region.
      * 
-     */
+    */
     public Optional<String> getConfigurationArn() {
         return Optional.ofNullable(this.configurationArn);
     }
@@ -58,7 +58,7 @@ public final class GetHookTypeConfigResult {
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
-     */
+    */
     public Optional<String> getTypeName() {
         return Optional.ofNullable(this.typeName);
     }
@@ -101,7 +101,6 @@ public final class GetHookTypeConfigResult {
             this.typeName = typeName;
             return this;
         }
-
         public GetHookTypeConfigResult build() {
             return new GetHookTypeConfigResult(configuration, configurationArn, typeName);
         }

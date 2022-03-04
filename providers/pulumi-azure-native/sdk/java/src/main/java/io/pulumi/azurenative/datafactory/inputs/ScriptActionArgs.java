@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<String> parameters;
+      private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -46,7 +46,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles", required=true)
-    private final Input<Object> roles;
+      private final Input<Object> roles;
 
     public Input<Object> getRoles() {
         return this.roles;
@@ -57,7 +57,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -146,7 +146,6 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public ScriptActionArgs build() {
             return new ScriptActionArgs(name, parameters, roles, uri);
         }

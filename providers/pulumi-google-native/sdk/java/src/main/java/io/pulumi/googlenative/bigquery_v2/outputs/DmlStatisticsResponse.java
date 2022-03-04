@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class DmlStatisticsResponse {
     /**
      * Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
      * 
-     */
+    */
     public String getDeletedRowCount() {
         return this.deletedRowCount;
     }
     /**
      * Number of inserted Rows. Populated by DML INSERT and MERGE statements.
      * 
-     */
+    */
     public String getInsertedRowCount() {
         return this.insertedRowCount;
     }
     /**
      * Number of updated Rows. Populated by DML UPDATE and MERGE statements.
      * 
-     */
+    */
     public String getUpdatedRowCount() {
         return this.updatedRowCount;
     }
@@ -95,7 +95,6 @@ public final class DmlStatisticsResponse {
             this.updatedRowCount = Objects.requireNonNull(updatedRowCount);
             return this;
         }
-
         public DmlStatisticsResponse build() {
             return new DmlStatisticsResponse(deletedRowCount, insertedRowCount, updatedRowCount);
         }

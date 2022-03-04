@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmcontacts.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="contactId", required=true)
-    private final Input<String> contactId;
+      private final Input<String> contactId;
 
     public Input<String> getContactId() {
         return this.contactId;
@@ -34,7 +34,7 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="isEssential", required=true)
-    private final Input<Boolean> isEssential;
+      private final Input<Boolean> isEssential;
 
     public Input<Boolean> getIsEssential() {
         return this.isEssential;
@@ -93,7 +93,6 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
             this.isEssential = Input.of(Objects.requireNonNull(isEssential));
             return this;
         }
-
         public ContactTargetInfoArgs build() {
             return new ContactTargetInfoArgs(contactId, isEssential);
         }

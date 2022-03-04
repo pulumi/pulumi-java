@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
     public static final ContainerPublicDomainNameArgs Empty = new ContainerPublicDomainNameArgs();
 
     @InputImport(name="certificateName")
-    private final @Nullable Input<String> certificateName;
+      private final @Nullable Input<String> certificateName;
 
     public Input<String> getCertificateName() {
         return this.certificateName == null ? Input.empty() : this.certificateName;
@@ -31,7 +31,7 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainNames")
-    private final @Nullable Input<List<String>> domainNames;
+      private final @Nullable Input<List<String>> domainNames;
 
     public Input<List<String>> getDomainNames() {
         return this.domainNames == null ? Input.empty() : this.domainNames;
@@ -90,7 +90,6 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
             this.domainNames = Input.ofNullable(domainNames);
             return this;
         }
-
         public ContainerPublicDomainNameArgs build() {
             return new ContainerPublicDomainNameArgs(certificateName, domainNames);
         }

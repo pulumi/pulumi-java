@@ -6,17 +6,33 @@ package io.pulumi.awsnative.kinesisfirehose;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.kinesisfirehose.inputs.GetDeliveryStreamArgs;
 import io.pulumi.awsnative.kinesisfirehose.outputs.GetDeliveryStreamResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeliveryStream {
-/**
- * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
+    private GetDeliveryStream() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeliveryStreamArgs.Builder a);
+    }
+    private static GetDeliveryStreamArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeliveryStreamArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
  * 
- */
+     */
+    public static CompletableFuture<GetDeliveryStreamResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
+     * 
+     */
     public static CompletableFuture<GetDeliveryStreamResult> invokeAsync(GetDeliveryStreamArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesisfirehose:getDeliveryStream", TypeShape.of(GetDeliveryStreamResult.class), args == null ? GetDeliveryStreamArgs.Empty : args, Utilities.withVersion(options));
     }

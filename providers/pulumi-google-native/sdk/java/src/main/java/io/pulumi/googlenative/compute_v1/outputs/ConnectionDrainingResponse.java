@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ConnectionDrainingResponse {
     /**
      * Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
      * 
-     */
+    */
     public Integer getDrainingTimeoutSec() {
         return this.drainingTimeoutSec;
     }
@@ -52,7 +52,6 @@ public final class ConnectionDrainingResponse {
             this.drainingTimeoutSec = Objects.requireNonNull(drainingTimeoutSec);
             return this;
         }
-
         public ConnectionDrainingResponse build() {
             return new ConnectionDrainingResponse(drainingTimeoutSec);
         }

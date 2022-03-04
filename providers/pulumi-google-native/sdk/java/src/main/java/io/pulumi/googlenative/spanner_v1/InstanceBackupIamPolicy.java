@@ -5,8 +5,8 @@ package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.spanner_v1.InstanceBackupIamPolicyArgs;
 import io.pulumi.googlenative.spanner_v1.outputs.BindingResponse;
@@ -66,6 +66,37 @@ public class InstanceBackupIamPolicy extends io.pulumi.resources.CustomResource 
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(InstanceBackupIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.spanner_v1.InstanceBackupIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.spanner_v1.InstanceBackupIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public InstanceBackupIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public InstanceBackupIamPolicy(String name) {
+        this(name, InstanceBackupIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public InstanceBackupIamPolicy(String name, InstanceBackupIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

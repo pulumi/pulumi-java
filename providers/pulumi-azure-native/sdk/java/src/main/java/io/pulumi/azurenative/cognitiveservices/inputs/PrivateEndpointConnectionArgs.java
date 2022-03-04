@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.PrivateEndpointConnectionPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties;
+      private final @Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties;
 
     public Input<PrivateEndpointConnectionPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -94,7 +94,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(location, properties);
         }

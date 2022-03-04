@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.ResourcePolicyWeeklyCycleDayOfWeekResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ResourcePolicyWeeklyCycleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="dayOfWeeks", required=true)
-    private final List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
+      private final List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
 
     public List<ResourcePolicyWeeklyCycleDayOfWeekResponse> getDayOfWeeks() {
         return this.dayOfWeeks;
@@ -60,7 +60,6 @@ public final class ResourcePolicyWeeklyCycleResponse extends io.pulumi.resources
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }
-
         public ResourcePolicyWeeklyCycleResponse build() {
             return new ResourcePolicyWeeklyCycleResponse(dayOfWeeks);
         }

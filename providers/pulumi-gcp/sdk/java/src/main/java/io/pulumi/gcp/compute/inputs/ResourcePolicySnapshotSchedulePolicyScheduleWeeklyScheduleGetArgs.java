@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGet
      * 
      */
     @InputImport(name="dayOfWeeks", required=true)
-    private final Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
+      private final Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
 
     public Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> getDayOfWeeks() {
         return this.dayOfWeeks;
@@ -63,7 +63,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGet
             this.dayOfWeeks = Input.of(Objects.requireNonNull(dayOfWeeks));
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs(dayOfWeeks);
         }

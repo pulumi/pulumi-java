@@ -9,8 +9,8 @@ import io.pulumi.awsnative.inspectorv2.enums.FilterAction;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterCriteria;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -91,6 +91,37 @@ public class Filter extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FilterArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.inspectorv2.FilterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.inspectorv2.FilterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Filter(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Filter(String name) {
+        this(name, FilterArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Filter(String name, FilterArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

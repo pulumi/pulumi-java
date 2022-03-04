@@ -5,7 +5,7 @@ package io.pulumi.azurenative.consumption.outputs;
 
 import io.pulumi.azurenative.consumption.outputs.BudgetComparisonExpressionResponse;
 import io.pulumi.azurenative.consumption.outputs.BudgetFilterPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,28 +49,28 @@ public final class BudgetFilterResponse {
     /**
      * The logical "AND" expression. Must have at least 2 items.
      * 
-     */
+    */
     public List<BudgetFilterPropertiesResponse> getAnd() {
         return this.and == null ? List.of() : this.and;
     }
     /**
      * Has comparison expression for a dimension
      * 
-     */
+    */
     public Optional<BudgetComparisonExpressionResponse> getDimensions() {
         return Optional.ofNullable(this.dimensions);
     }
     /**
      * The logical "NOT" expression.
      * 
-     */
+    */
     public Optional<BudgetFilterPropertiesResponse> getNot() {
         return Optional.ofNullable(this.not);
     }
     /**
      * Has comparison expression for a tag
      * 
-     */
+    */
     public Optional<BudgetComparisonExpressionResponse> getTags() {
         return Optional.ofNullable(this.tags);
     }
@@ -120,7 +120,6 @@ public final class BudgetFilterResponse {
             this.tags = tags;
             return this;
         }
-
         public BudgetFilterResponse build() {
             return new BudgetFilterResponse(and, dimensions, not, tags);
         }

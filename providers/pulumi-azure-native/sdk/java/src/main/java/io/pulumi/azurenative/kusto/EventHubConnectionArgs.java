@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.kusto.enums.DataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -32,7 +32,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="consumerGroup", required=true)
-    private final Input<String> consumerGroup;
+      private final Input<String> consumerGroup;
 
     public Input<String> getConsumerGroup() {
         return this.consumerGroup;
@@ -43,7 +43,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataFormat")
-    private final @Nullable Input<Either<String,DataFormat>> dataFormat;
+      private final @Nullable Input<Either<String,DataFormat>> dataFormat;
 
     public Input<Either<String,DataFormat>> getDataFormat() {
         return this.dataFormat == null ? Input.empty() : this.dataFormat;
@@ -54,7 +54,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -65,7 +65,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventHubConnectionName")
-    private final @Nullable Input<String> eventHubConnectionName;
+      private final @Nullable Input<String> eventHubConnectionName;
 
     public Input<String> getEventHubConnectionName() {
         return this.eventHubConnectionName == null ? Input.empty() : this.eventHubConnectionName;
@@ -76,7 +76,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventHubResourceId", required=true)
-    private final Input<String> eventHubResourceId;
+      private final Input<String> eventHubResourceId;
 
     public Input<String> getEventHubResourceId() {
         return this.eventHubResourceId;
@@ -87,7 +87,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -98,7 +98,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="mappingRuleName")
-    private final @Nullable Input<String> mappingRuleName;
+      private final @Nullable Input<String> mappingRuleName;
 
     public Input<String> getMappingRuleName() {
         return this.mappingRuleName == null ? Input.empty() : this.mappingRuleName;
@@ -109,7 +109,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -120,7 +120,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
@@ -299,7 +299,6 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
             this.tableName = Input.ofNullable(tableName);
             return this;
         }
-
         public EventHubConnectionArgs build() {
             return new EventHubConnectionArgs(clusterName, consumerGroup, dataFormat, databaseName, eventHubConnectionName, eventHubResourceId, location, mappingRuleName, resourceGroupName, tableName);
         }

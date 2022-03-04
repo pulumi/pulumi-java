@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.outputs;
 
 import io.pulumi.azurenative.blueprint.outputs.UserAssignedIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class ManagedServiceIdentityResponse {
     /**
      * Azure Active Directory principal ID associated with this Identity.
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * ID of the Azure Active Directory.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Type of the managed identity.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
      * 
-     */
+    */
     public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
@@ -120,7 +120,6 @@ public final class ManagedServiceIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ManagedServiceIdentityResponse build() {
             return new ManagedServiceIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

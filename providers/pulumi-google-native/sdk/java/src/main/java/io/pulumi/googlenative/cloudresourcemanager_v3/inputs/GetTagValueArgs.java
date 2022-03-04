@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetTagValueArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTagValueArgs Empty = new GetTagValueArgs();
 
     @InputImport(name="tagValueId", required=true)
-    private final String tagValueId;
+      private final String tagValueId;
 
     public String getTagValueId() {
         return this.tagValueId;
@@ -51,7 +51,6 @@ public final class GetTagValueArgs extends io.pulumi.resources.InvokeArgs {
             this.tagValueId = Objects.requireNonNull(tagValueId);
             return this;
         }
-
         public GetTagValueArgs build() {
             return new GetTagValueArgs(tagValueId);
         }

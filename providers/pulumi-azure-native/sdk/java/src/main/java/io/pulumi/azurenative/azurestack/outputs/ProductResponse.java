@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurestack.outputs.CompatibilityResponse;
 import io.pulumi.azurenative.azurestack.outputs.IconUrisResponse;
 import io.pulumi.azurenative.azurestack.outputs.ProductLinkResponse;
 import io.pulumi.azurenative.azurestack.outputs.ProductPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -179,154 +179,154 @@ public final class ProductResponse {
     /**
      * The part number used for billing purposes.
      * 
-     */
+    */
     public Optional<String> getBillingPartNumber() {
         return Optional.ofNullable(this.billingPartNumber);
     }
     /**
      * Product compatibility with current device.
      * 
-     */
+    */
     public Optional<CompatibilityResponse> getCompatibility() {
         return Optional.ofNullable(this.compatibility);
     }
     /**
      * The description of the product.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the product.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The entity tag used for optimistic concurrency when modifying the resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The identifier of the gallery item corresponding to the product.
      * 
-     */
+    */
     public Optional<String> getGalleryItemIdentity() {
         return Optional.ofNullable(this.galleryItemIdentity);
     }
     /**
      * Additional links available for this product.
      * 
-     */
+    */
     public Optional<IconUrisResponse> getIconUris() {
         return Optional.ofNullable(this.iconUris);
     }
     /**
      * ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The legal terms.
      * 
-     */
+    */
     public Optional<String> getLegalTerms() {
         return Optional.ofNullable(this.legalTerms);
     }
     /**
      * Additional links available for this product.
      * 
-     */
+    */
     public List<ProductLinkResponse> getLinks() {
         return this.links == null ? List.of() : this.links;
     }
     /**
      * Name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The offer representing the product.
      * 
-     */
+    */
     public Optional<String> getOffer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * The version of the product offer.
      * 
-     */
+    */
     public Optional<String> getOfferVersion() {
         return Optional.ofNullable(this.offerVersion);
     }
     /**
      * The length of product content.
      * 
-     */
+    */
     public Optional<Double> getPayloadLength() {
         return Optional.ofNullable(this.payloadLength);
     }
     /**
      * The privacy policy.
      * 
-     */
+    */
     public Optional<String> getPrivacyPolicy() {
         return Optional.ofNullable(this.privacyPolicy);
     }
     /**
      * The kind of the product (virtualMachine or virtualMachineExtension)
      * 
-     */
+    */
     public Optional<String> getProductKind() {
         return Optional.ofNullable(this.productKind);
     }
     /**
      * Additional properties for the product.
      * 
-     */
+    */
     public Optional<ProductPropertiesResponse> getProductProperties() {
         return Optional.ofNullable(this.productProperties);
     }
     /**
      * The user-friendly name of the product publisher.
      * 
-     */
+    */
     public Optional<String> getPublisherDisplayName() {
         return Optional.ofNullable(this.publisherDisplayName);
     }
     /**
      * Publisher identifier.
      * 
-     */
+    */
     public Optional<String> getPublisherIdentifier() {
         return Optional.ofNullable(this.publisherIdentifier);
     }
     /**
      * The product SKU.
      * 
-     */
+    */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Type of Resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The type of the Virtual Machine Extension.
      * 
-     */
+    */
     public Optional<String> getVmExtensionType() {
         return Optional.ofNullable(this.vmExtensionType);
     }
@@ -502,7 +502,6 @@ public final class ProductResponse {
             this.vmExtensionType = vmExtensionType;
             return this;
         }
-
         public ProductResponse build() {
             return new ProductResponse(billingPartNumber, compatibility, description, displayName, etag, galleryItemIdentity, iconUris, id, legalTerms, links, name, offer, offerVersion, payloadLength, privacyPolicy, productKind, productProperties, publisherDisplayName, publisherIdentifier, sku, type, vmExtensionType);
         }

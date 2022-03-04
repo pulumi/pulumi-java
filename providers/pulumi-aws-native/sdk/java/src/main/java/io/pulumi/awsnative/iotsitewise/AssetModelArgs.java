@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AssetModelHierarchyArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetModelCompositeModels")
-    private final @Nullable Input<List<AssetModelCompositeModelArgs>> assetModelCompositeModels;
+      private final @Nullable Input<List<AssetModelCompositeModelArgs>> assetModelCompositeModels;
 
     public Input<List<AssetModelCompositeModelArgs>> getAssetModelCompositeModels() {
         return this.assetModelCompositeModels == null ? Input.empty() : this.assetModelCompositeModels;
@@ -35,7 +35,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetModelDescription")
-    private final @Nullable Input<String> assetModelDescription;
+      private final @Nullable Input<String> assetModelDescription;
 
     public Input<String> getAssetModelDescription() {
         return this.assetModelDescription == null ? Input.empty() : this.assetModelDescription;
@@ -46,7 +46,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetModelHierarchies")
-    private final @Nullable Input<List<AssetModelHierarchyArgs>> assetModelHierarchies;
+      private final @Nullable Input<List<AssetModelHierarchyArgs>> assetModelHierarchies;
 
     public Input<List<AssetModelHierarchyArgs>> getAssetModelHierarchies() {
         return this.assetModelHierarchies == null ? Input.empty() : this.assetModelHierarchies;
@@ -57,7 +57,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetModelName")
-    private final @Nullable Input<String> assetModelName;
+      private final @Nullable Input<String> assetModelName;
 
     public Input<String> getAssetModelName() {
         return this.assetModelName == null ? Input.empty() : this.assetModelName;
@@ -68,7 +68,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetModelProperties")
-    private final @Nullable Input<List<AssetModelPropertyArgs>> assetModelProperties;
+      private final @Nullable Input<List<AssetModelPropertyArgs>> assetModelProperties;
 
     public Input<List<AssetModelPropertyArgs>> getAssetModelProperties() {
         return this.assetModelProperties == null ? Input.empty() : this.assetModelProperties;
@@ -79,7 +79,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<AssetModelTagArgs>> tags;
+      private final @Nullable Input<List<AssetModelTagArgs>> tags;
 
     public Input<List<AssetModelTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -198,7 +198,6 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AssetModelArgs build() {
             return new AssetModelArgs(assetModelCompositeModels, assetModelDescription, assetModelHierarchies, assetModelName, assetModelProperties, tags);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.labservices.enums.ConfigurationState;
 import io.pulumi.azurenative.labservices.inputs.ResourceSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configurationState")
-    private final @Nullable Input<Either<String,ConfigurationState>> configurationState;
+      private final @Nullable Input<Either<String,ConfigurationState>> configurationState;
 
     public Input<Either<String,ConfigurationState>> getConfigurationState() {
         return this.configurationState == null ? Input.empty() : this.configurationState;
@@ -34,7 +34,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environmentSettingName")
-    private final @Nullable Input<String> environmentSettingName;
+      private final @Nullable Input<String> environmentSettingName;
 
     public Input<String> getEnvironmentSettingName() {
         return this.environmentSettingName == null ? Input.empty() : this.environmentSettingName;
@@ -56,7 +56,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="labAccountName", required=true)
-    private final Input<String> labAccountName;
+      private final Input<String> labAccountName;
 
     public Input<String> getLabAccountName() {
         return this.labAccountName;
@@ -67,7 +67,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="labName", required=true)
-    private final Input<String> labName;
+      private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -78,7 +78,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -89,7 +89,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<String> provisioningState;
+      private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -100,7 +100,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceSettings", required=true)
-    private final Input<ResourceSettingsArgs> resourceSettings;
+      private final Input<ResourceSettingsArgs> resourceSettings;
 
     public Input<ResourceSettingsArgs> getResourceSettings() {
         return this.resourceSettings;
@@ -122,7 +122,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -133,7 +133,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -144,7 +144,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uniqueIdentifier")
-    private final @Nullable Input<String> uniqueIdentifier;
+      private final @Nullable Input<String> uniqueIdentifier;
 
     public Input<String> getUniqueIdentifier() {
         return this.uniqueIdentifier == null ? Input.empty() : this.uniqueIdentifier;
@@ -353,7 +353,6 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
             this.uniqueIdentifier = Input.ofNullable(uniqueIdentifier);
             return this;
         }
-
         public EnvironmentSettingArgs build() {
             return new EnvironmentSettingArgs(configurationState, description, environmentSettingName, labAccountName, labName, location, provisioningState, resourceGroupName, resourceSettings, tags, title, uniqueIdentifier);
         }

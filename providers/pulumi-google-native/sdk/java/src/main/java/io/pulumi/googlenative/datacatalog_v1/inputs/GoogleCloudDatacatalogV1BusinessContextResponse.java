@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsResponse;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1EntryOverviewResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
      * 
      */
     @InputImport(name="contacts", required=true)
-    private final GoogleCloudDatacatalogV1ContactsResponse contacts;
+      private final GoogleCloudDatacatalogV1ContactsResponse contacts;
 
     public GoogleCloudDatacatalogV1ContactsResponse getContacts() {
         return this.contacts;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
      * 
      */
     @InputImport(name="entryOverview", required=true)
-    private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
+      private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 
     public GoogleCloudDatacatalogV1EntryOverviewResponse getEntryOverview() {
         return this.entryOverview;
@@ -82,7 +82,6 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
             this.entryOverview = Objects.requireNonNull(entryOverview);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BusinessContextResponse build() {
             return new GoogleCloudDatacatalogV1BusinessContextResponse(contacts, entryOverview);
         }

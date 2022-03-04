@@ -6,21 +6,41 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.media.inputs.GetStreamingPolicyArgs;
 import io.pulumi.azurenative.media.outputs.GetStreamingPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStreamingPolicy {
-/**
- * A Streaming Policy resource
+    private GetStreamingPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetStreamingPolicyArgs.Builder a);
+    }
+    private static GetStreamingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStreamingPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Streaming Policy resource
  * API Version: 2020-05-01.
  * 
- *
- * A Streaming Policy resource
+     *
+     * A Streaming Policy resource
  * 
- */
+     */
+    public static CompletableFuture<GetStreamingPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Streaming Policy resource
+     * API Version: 2020-05-01.
+     * 
+     *
+         * A Streaming Policy resource
+     * 
+     */
     public static CompletableFuture<GetStreamingPolicyResult> invokeAsync(GetStreamingPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getStreamingPolicy", TypeShape.of(GetStreamingPolicyResult.class), args == null ? GetStreamingPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

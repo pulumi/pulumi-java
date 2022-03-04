@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.logging_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LogExclusionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class LogExclusionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -46,7 +46,7 @@ public final class LogExclusionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -57,7 +57,7 @@ public final class LogExclusionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -146,7 +146,6 @@ public final class LogExclusionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public LogExclusionArgs build() {
             return new LogExclusionArgs(description, disabled, filter, name);
         }

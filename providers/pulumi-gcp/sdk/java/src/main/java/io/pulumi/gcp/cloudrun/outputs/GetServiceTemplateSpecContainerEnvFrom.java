@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvFromConfigMapRef;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvFromSecretRef;
 import java.lang.String;
@@ -74,7 +74,6 @@ public final class GetServiceTemplateSpecContainerEnvFrom {
             this.secretReves = Objects.requireNonNull(secretReves);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvFrom build() {
             return new GetServiceTemplateSpecContainerEnvFrom(configMapReves, prefix, secretReves);
         }

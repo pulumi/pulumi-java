@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.GatewayApiRouteArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="appResourceId")
-    private final @Nullable Input<String> appResourceId;
+      private final @Nullable Input<String> appResourceId;
 
     public Input<String> getAppResourceId() {
         return this.appResourceId == null ? Input.empty() : this.appResourceId;
@@ -36,7 +36,7 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable Input<List<GatewayApiRouteArgs>> routes;
+      private final @Nullable Input<List<GatewayApiRouteArgs>> routes;
 
     public Input<List<GatewayApiRouteArgs>> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;
@@ -95,7 +95,6 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
             this.routes = Input.ofNullable(routes);
             return this;
         }
-
         public GatewayRouteConfigPropertiesArgs build() {
             return new GatewayRouteConfigPropertiesArgs(appResourceId, routes);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunRequestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdateTag")
-    private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Input<String> forceUpdateTag;
 
     public Input<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
@@ -31,7 +31,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineRunName")
-    private final @Nullable Input<String> pipelineRunName;
+      private final @Nullable Input<String> pipelineRunName;
 
     public Input<String> getPipelineRunName() {
         return this.pipelineRunName == null ? Input.empty() : this.pipelineRunName;
@@ -42,7 +42,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final Input<String> registryName;
+      private final Input<String> registryName;
 
     public Input<String> getRegistryName() {
         return this.registryName;
@@ -53,7 +53,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="request")
-    private final @Nullable Input<PipelineRunRequestArgs> request;
+      private final @Nullable Input<PipelineRunRequestArgs> request;
 
     public Input<PipelineRunRequestArgs> getRequest() {
         return this.request == null ? Input.empty() : this.request;
@@ -64,7 +64,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -168,7 +168,6 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public PipelineRunArgs build() {
             return new PipelineRunArgs(forceUpdateTag, pipelineRunName, registryName, request, resourceGroupName);
         }

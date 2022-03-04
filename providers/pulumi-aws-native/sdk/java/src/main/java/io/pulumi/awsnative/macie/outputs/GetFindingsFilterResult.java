@@ -6,7 +6,7 @@ package io.pulumi.awsnative.macie.outputs;
 import io.pulumi.awsnative.macie.enums.FindingsFilterFindingFilterAction;
 import io.pulumi.awsnative.macie.outputs.FindingsFilterFindingCriteria;
 import io.pulumi.awsnative.macie.outputs.FindingsFilterListItem;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -80,56 +80,56 @@ public final class GetFindingsFilterResult {
     /**
      * Findings filter action.
      * 
-     */
+    */
     public Optional<FindingsFilterFindingFilterAction> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Findings filter ARN.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Findings filter description
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Findings filter criteria.
      * 
-     */
+    */
     public Optional<FindingsFilterFindingCriteria> getFindingCriteria() {
         return Optional.ofNullable(this.findingCriteria);
     }
     /**
      * Findings filters list.
      * 
-     */
+    */
     public List<FindingsFilterListItem> getFindingsFilterListItems() {
         return this.findingsFilterListItems == null ? List.of() : this.findingsFilterListItems;
     }
     /**
      * Findings filter ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Findings filter name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Findings filter position.
      * 
-     */
+    */
     public Optional<Integer> getPosition() {
         return Optional.ofNullable(this.position);
     }
@@ -207,7 +207,6 @@ public final class GetFindingsFilterResult {
             this.position = position;
             return this;
         }
-
         public GetFindingsFilterResult build() {
             return new GetFindingsFilterResult(action, arn, description, findingCriteria, findingsFilterListItems, id, name, position);
         }

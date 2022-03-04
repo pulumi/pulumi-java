@@ -6,17 +6,33 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.location.inputs.GetMapArgs;
 import io.pulumi.awsnative.location.outputs.GetMapResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMap {
-/**
- * Definition of AWS::Location::Map Resource Type
+    private GetMap() {}
+    public interface BuilderApplicator {
+        public void apply(GetMapArgs.Builder a);
+    }
+    private static GetMapArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMapArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of AWS::Location::Map Resource Type
  * 
- */
+     */
+    public static CompletableFuture<GetMapResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of AWS::Location::Map Resource Type
+     * 
+     */
     public static CompletableFuture<GetMapResult> invokeAsync(GetMapArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getMap", TypeShape.of(GetMapResult.class), args == null ? GetMapArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -15,42 +15,42 @@ public final class GetEnvironmentConfigSoftwareConfig extends io.pulumi.resource
     public static final GetEnvironmentConfigSoftwareConfig Empty = new GetEnvironmentConfigSoftwareConfig();
 
     @InputImport(name="airflowConfigOverrides", required=true)
-    private final Map<String,String> airflowConfigOverrides;
+      private final Map<String,String> airflowConfigOverrides;
 
     public Map<String,String> getAirflowConfigOverrides() {
         return this.airflowConfigOverrides;
     }
 
     @InputImport(name="envVariables", required=true)
-    private final Map<String,String> envVariables;
+      private final Map<String,String> envVariables;
 
     public Map<String,String> getEnvVariables() {
         return this.envVariables;
     }
 
     @InputImport(name="imageVersion", required=true)
-    private final String imageVersion;
+      private final String imageVersion;
 
     public String getImageVersion() {
         return this.imageVersion;
     }
 
     @InputImport(name="pypiPackages", required=true)
-    private final Map<String,String> pypiPackages;
+      private final Map<String,String> pypiPackages;
 
     public Map<String,String> getPypiPackages() {
         return this.pypiPackages;
     }
 
     @InputImport(name="pythonVersion", required=true)
-    private final String pythonVersion;
+      private final String pythonVersion;
 
     public String getPythonVersion() {
         return this.pythonVersion;
     }
 
     @InputImport(name="schedulerCount", required=true)
-    private final Integer schedulerCount;
+      private final Integer schedulerCount;
 
     public Integer getSchedulerCount() {
         return this.schedulerCount;
@@ -139,7 +139,6 @@ public final class GetEnvironmentConfigSoftwareConfig extends io.pulumi.resource
             this.schedulerCount = Objects.requireNonNull(schedulerCount);
             return this;
         }
-
         public GetEnvironmentConfigSoftwareConfig build() {
             return new GetEnvironmentConfigSoftwareConfig(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
         }

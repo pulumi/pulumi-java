@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.OptionsProperties;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayVpcAttachmentTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,7 +47,7 @@ public final class GetTransitGatewayVpcAttachmentResult {
     /**
      * The options for the transit gateway vpc attachment.
      * 
-     */
+    */
     public Optional<OptionsProperties> getOptions() {
         return Optional.ofNullable(this.options);
     }
@@ -110,7 +110,6 @@ public final class GetTransitGatewayVpcAttachmentResult {
             this.tags = tags;
             return this;
         }
-
         public GetTransitGatewayVpcAttachmentResult build() {
             return new GetTransitGatewayVpcAttachmentResult(addSubnetIds, id, options, removeSubnetIds, tags);
         }

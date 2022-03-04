@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRe
     /**
      * SHA256 checksum of the remote file.
      * 
-     */
+    */
     public Optional<String> getSha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
     /**
      * Required. URI for this repository.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -76,7 +76,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRe
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote(sha256Checksum, uri);
         }

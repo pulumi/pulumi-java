@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="evaluationInterval")
-    private final @Nullable Input<String> evaluationInterval;
+      private final @Nullable Input<String> evaluationInterval;
 
     public Input<String> getEvaluationInterval() {
         return this.evaluationInterval == null ? Input.empty() : this.evaluationInterval;
     }
 
     @InputImport(name="formula", required=true)
-    private final Input<String> formula;
+      private final Input<String> formula;
 
     public Input<String> getFormula() {
         return this.formula;
@@ -85,7 +85,6 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
             this.formula = Input.of(Objects.requireNonNull(formula));
             return this;
         }
-
         public AutoScaleSettingsArgs build() {
             return new AutoScaleSettingsArgs(evaluationInterval, formula);
         }

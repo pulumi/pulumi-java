@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flags")
-    private final @Nullable Input<Integer> flags;
+      private final @Nullable Input<Integer> flags;
 
     public Input<Integer> getFlags() {
         return this.flags == null ? Input.empty() : this.flags;
@@ -35,7 +35,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -46,7 +46,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -120,7 +120,6 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public CaaRecordArgs build() {
             return new CaaRecordArgs(flags, tag, value);
         }

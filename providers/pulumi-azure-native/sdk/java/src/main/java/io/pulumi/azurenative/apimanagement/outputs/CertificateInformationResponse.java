@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class CertificateInformationResponse {
     /**
      * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-     */
+    */
     public String getExpiry() {
         return this.expiry;
     }
     /**
      * Subject of the certificate.
      * 
-     */
+    */
     public String getSubject() {
         return this.subject;
     }
     /**
      * Thumbprint of the certificate.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
@@ -95,7 +95,6 @@ public final class CertificateInformationResponse {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public CertificateInformationResponse build() {
             return new CertificateInformationResponse(expiry, subject, thumbprint);
         }

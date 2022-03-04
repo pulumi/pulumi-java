@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetGlueConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,28 +16,28 @@ public final class DatasetS3DestinationConfiguration extends io.pulumi.resources
     public static final DatasetS3DestinationConfiguration Empty = new DatasetS3DestinationConfiguration();
 
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="glueConfiguration")
-    private final @Nullable DatasetGlueConfiguration glueConfiguration;
+      private final @Nullable DatasetGlueConfiguration glueConfiguration;
 
     public Optional<DatasetGlueConfiguration> getGlueConfiguration() {
         return this.glueConfiguration == null ? Optional.empty() : Optional.ofNullable(this.glueConfiguration);
     }
 
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -106,7 +106,6 @@ public final class DatasetS3DestinationConfiguration extends io.pulumi.resources
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public DatasetS3DestinationConfiguration build() {
             return new DatasetS3DestinationConfiguration(bucket, glueConfiguration, key, roleArn);
         }

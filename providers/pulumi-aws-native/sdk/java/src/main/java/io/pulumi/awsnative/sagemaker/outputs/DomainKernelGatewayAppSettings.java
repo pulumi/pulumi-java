@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.DomainCustomImage;
 import io.pulumi.awsnative.sagemaker.outputs.DomainResourceSpec;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class DomainKernelGatewayAppSettings {
     /**
      * A list of custom SageMaker images that are configured to run as a KernelGateway app.
      * 
-     */
+    */
     public List<DomainCustomImage> getCustomImages() {
         return this.customImages == null ? List.of() : this.customImages;
     }
     /**
      * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
      * 
-     */
+    */
     public Optional<DomainResourceSpec> getDefaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }
@@ -78,7 +78,6 @@ public final class DomainKernelGatewayAppSettings {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public DomainKernelGatewayAppSettings build() {
             return new DomainKernelGatewayAppSettings(customImages, defaultResourceSpec);
         }

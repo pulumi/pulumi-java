@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class HttpRouteMatchPathResponse {
     /**
      * replacement string for matched part of the Uri.
      * 
-     */
+    */
     public Optional<String> getRewrite() {
         return Optional.ofNullable(this.rewrite);
     }
     /**
      * how to match value in the Uri
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Uri path to match for request.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -97,7 +97,6 @@ public final class HttpRouteMatchPathResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HttpRouteMatchPathResponse build() {
             return new HttpRouteMatchPathResponse(rewrite, type, value);
         }

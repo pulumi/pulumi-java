@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -38,7 +38,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -61,7 +61,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -72,7 +72,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -83,7 +83,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Object> value;
+      private final @Nullable Input<Object> value;
 
     public Input<Object> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -94,7 +94,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="variableName")
-    private final @Nullable Input<String> variableName;
+      private final @Nullable Input<String> variableName;
 
     public Input<String> getVariableName() {
         return this.variableName == null ? Input.empty() : this.variableName;
@@ -228,7 +228,6 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
             this.variableName = Input.ofNullable(variableName);
             return this;
         }
-
         public AppendVariableActivityArgs build() {
             return new AppendVariableActivityArgs(dependsOn, description, name, type, userProperties, value, variableName);
         }

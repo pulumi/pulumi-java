@@ -6,7 +6,7 @@ package io.pulumi.azurenative.quantum.outputs;
 import io.pulumi.azurenative.quantum.outputs.ProviderResponse;
 import io.pulumi.azurenative.quantum.outputs.QuantumWorkspaceResponseIdentity;
 import io.pulumi.azurenative.quantum.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -108,84 +108,84 @@ public final class GetWorkspaceResult {
     /**
      * The URI of the workspace endpoint.
      * 
-     */
+    */
     public String getEndpointUri() {
         return this.endpointUri;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Managed Identity information.
      * 
-     */
+    */
     public Optional<QuantumWorkspaceResponseIdentity> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of Providers selected for this Workspace
      * 
-     */
+    */
     public List<ProviderResponse> getProviders() {
         return this.providers == null ? List.of() : this.providers;
     }
     /**
      * Provisioning status field
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * ARM Resource Id of the storage account associated with this workspace.
      * 
-     */
+    */
     public Optional<String> getStorageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
      * System metadata
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Whether the current workspace is ready to accept Jobs.
      * 
-     */
+    */
     public String getUsable() {
         return this.usable;
     }
@@ -291,7 +291,6 @@ public final class GetWorkspaceResult {
             this.usable = Objects.requireNonNull(usable);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(endpointUri, id, identity, location, name, providers, provisioningState, storageAccount, systemData, tags, type, usable);
         }

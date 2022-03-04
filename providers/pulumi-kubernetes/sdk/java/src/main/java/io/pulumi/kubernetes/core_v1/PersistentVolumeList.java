@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.core_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.PersistentVolumeListArgs;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolume;
@@ -78,6 +78,37 @@ public class PersistentVolumeList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PersistentVolumeListArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.core_v1.PersistentVolumeListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.core_v1.PersistentVolumeListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PersistentVolumeList(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PersistentVolumeList(String name) {
+        this(name, PersistentVolumeListArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PersistentVolumeList(String name, PersistentVolumeListArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

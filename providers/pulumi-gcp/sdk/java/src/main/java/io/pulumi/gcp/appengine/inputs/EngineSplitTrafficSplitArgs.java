@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="allocations", required=true)
-    private final Input<Map<String,String>> allocations;
+      private final Input<Map<String,String>> allocations;
 
     public Input<Map<String,String>> getAllocations() {
         return this.allocations;
@@ -32,7 +32,7 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="shardBy")
-    private final @Nullable Input<String> shardBy;
+      private final @Nullable Input<String> shardBy;
 
     public Input<String> getShardBy() {
         return this.shardBy == null ? Input.empty() : this.shardBy;
@@ -91,7 +91,6 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
             this.shardBy = Input.ofNullable(shardBy);
             return this;
         }
-
         public EngineSplitTrafficSplitArgs build() {
             return new EngineSplitTrafficSplitArgs(allocations, shardBy);
         }

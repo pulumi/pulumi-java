@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancer
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes;
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponseOutboundIPs;
 import io.pulumi.azurenative.containerservice.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -66,42 +66,42 @@ public final class ManagedClusterLoadBalancerProfileResponse {
     /**
      * Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
      * 
-     */
+    */
     public Optional<Integer> getAllocatedOutboundPorts() {
         return Optional.ofNullable(this.allocatedOutboundPorts);
     }
     /**
      * The effective outbound IP resources of the cluster load balancer.
      * 
-     */
+    */
     public List<ResourceReferenceResponse> getEffectiveOutboundIPs() {
         return this.effectiveOutboundIPs == null ? List.of() : this.effectiveOutboundIPs;
     }
     /**
      * Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
      * 
-     */
+    */
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
      * Desired managed outbound IPs for the cluster load balancer.
      * 
-     */
+    */
     public Optional<ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs> getManagedOutboundIPs() {
         return Optional.ofNullable(this.managedOutboundIPs);
     }
     /**
      * Desired outbound IP Prefix resources for the cluster load balancer.
      * 
-     */
+    */
     public Optional<ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes> getOutboundIPPrefixes() {
         return Optional.ofNullable(this.outboundIPPrefixes);
     }
     /**
      * Desired outbound IP resources for the cluster load balancer.
      * 
-     */
+    */
     public Optional<ManagedClusterLoadBalancerProfileResponseOutboundIPs> getOutboundIPs() {
         return Optional.ofNullable(this.outboundIPs);
     }
@@ -165,7 +165,6 @@ public final class ManagedClusterLoadBalancerProfileResponse {
             this.outboundIPs = outboundIPs;
             return this;
         }
-
         public ManagedClusterLoadBalancerProfileResponse build() {
             return new ManagedClusterLoadBalancerProfileResponse(allocatedOutboundPorts, effectiveOutboundIPs, idleTimeoutInMinutes, managedOutboundIPs, outboundIPPrefixes, outboundIPs);
         }

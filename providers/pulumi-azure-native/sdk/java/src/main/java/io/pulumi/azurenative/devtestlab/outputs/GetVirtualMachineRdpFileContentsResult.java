@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetVirtualMachineRdpFileContentsResult {
     /**
      * The contents of the .rdp file
      * 
-     */
+    */
     public Optional<String> getContents() {
         return Optional.ofNullable(this.contents);
     }
@@ -54,7 +54,6 @@ public final class GetVirtualMachineRdpFileContentsResult {
             this.contents = contents;
             return this;
         }
-
         public GetVirtualMachineRdpFileContentsResult build() {
             return new GetVirtualMachineRdpFileContentsResult(contents);
         }

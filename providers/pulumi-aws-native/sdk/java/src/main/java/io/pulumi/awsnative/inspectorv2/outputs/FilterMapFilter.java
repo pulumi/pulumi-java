@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.inspectorv2.outputs;
 
 import io.pulumi.awsnative.inspectorv2.enums.FilterMapComparison;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class FilterMapFilter {
             this.value = value;
             return this;
         }
-
         public FilterMapFilter build() {
             return new FilterMapFilter(comparison, key, value);
         }

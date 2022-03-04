@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.outputs.FlowFailoverConfig;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowSource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,28 +49,28 @@ public final class GetFlowResult {
     /**
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
-     */
+    */
     public Optional<String> getFlowArn() {
         return Optional.ofNullable(this.flowArn);
     }
     /**
      * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
      * 
-     */
+    */
     public Optional<String> getFlowAvailabilityZone() {
         return Optional.ofNullable(this.flowAvailabilityZone);
     }
     /**
      * The source of the flow.
      * 
-     */
+    */
     public Optional<FlowSource> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The source failover config of the flow.
      * 
-     */
+    */
     public Optional<FlowFailoverConfig> getSourceFailoverConfig() {
         return Optional.ofNullable(this.sourceFailoverConfig);
     }
@@ -120,7 +120,6 @@ public final class GetFlowResult {
             this.sourceFailoverConfig = sourceFailoverConfig;
             return this;
         }
-
         public GetFlowResult build() {
             return new GetFlowResult(flowArn, flowAvailabilityZone, source, sourceFailoverConfig);
         }

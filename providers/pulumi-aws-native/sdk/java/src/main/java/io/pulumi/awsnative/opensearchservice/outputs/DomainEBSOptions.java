@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -88,7 +88,6 @@ public final class DomainEBSOptions {
             this.volumeType = volumeType;
             return this;
         }
-
         public DomainEBSOptions build() {
             return new DomainEBSOptions(eBSEnabled, iops, volumeSize, volumeType);
         }

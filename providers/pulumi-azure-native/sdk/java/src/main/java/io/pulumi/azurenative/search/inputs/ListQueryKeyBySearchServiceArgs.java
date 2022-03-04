@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.search.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListQueryKeyBySearchServiceArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListQueryKeyBySearchServiceArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="searchServiceName", required=true)
-    private final String searchServiceName;
+      private final String searchServiceName;
 
     public String getSearchServiceName() {
         return this.searchServiceName;
@@ -77,7 +77,6 @@ public final class ListQueryKeyBySearchServiceArgs extends io.pulumi.resources.I
             this.searchServiceName = Objects.requireNonNull(searchServiceName);
             return this;
         }
-
         public ListQueryKeyBySearchServiceArgs build() {
             return new ListQueryKeyBySearchServiceArgs(resourceGroupName, searchServiceName);
         }

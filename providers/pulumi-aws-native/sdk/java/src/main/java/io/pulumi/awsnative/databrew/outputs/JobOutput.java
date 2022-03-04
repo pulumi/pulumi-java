@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.enums.JobOutputCompressionFormat;
 import io.pulumi.awsnative.databrew.enums.JobOutputFormat;
 import io.pulumi.awsnative.databrew.outputs.JobOutputFormatOptions;
 import io.pulumi.awsnative.databrew.outputs.JobS3Location;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class JobOutput {
             this.partitionColumns = partitionColumns;
             return this;
         }
-
         public JobOutput build() {
             return new JobOutput(compressionFormat, format, formatOptions, location, overwrite, partitionColumns);
         }

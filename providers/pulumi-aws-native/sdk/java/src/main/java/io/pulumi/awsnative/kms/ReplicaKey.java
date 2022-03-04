@@ -8,8 +8,8 @@ import io.pulumi.awsnative.kms.ReplicaKeyArgs;
 import io.pulumi.awsnative.kms.outputs.ReplicaKeyTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -120,6 +120,37 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ReplicaKeyArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.kms.ReplicaKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.kms.ReplicaKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ReplicaKey(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ReplicaKey(String name) {
+        this(name, ReplicaKeyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ReplicaKey(String name, ReplicaKeyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

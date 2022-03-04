@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.AliasContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.RepoIdResponse;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class CloudRepoSourceContextResponse {
     /**
      * An alias, which may be a branch or tag.
      * 
-     */
+    */
     public AliasContextResponse getAliasContext() {
         return this.aliasContext;
     }
     /**
      * The ID of the repo.
      * 
-     */
+    */
     public RepoIdResponse getRepoId() {
         return this.repoId;
     }
     /**
      * A revision ID.
      * 
-     */
+    */
     public String getRevisionId() {
         return this.revisionId;
     }
@@ -97,7 +97,6 @@ public final class CloudRepoSourceContextResponse {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public CloudRepoSourceContextResponse build() {
             return new CloudRepoSourceContextResponse(aliasContext, repoId, revisionId);
         }

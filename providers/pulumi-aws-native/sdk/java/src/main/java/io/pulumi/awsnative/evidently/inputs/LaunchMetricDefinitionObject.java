@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class LaunchMetricDefinitionObject extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="entityIdKey", required=true)
-    private final String entityIdKey;
+      private final String entityIdKey;
 
     public String getEntityIdKey() {
         return this.entityIdKey;
@@ -30,21 +30,21 @@ public final class LaunchMetricDefinitionObject extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="eventPattern", required=true)
-    private final String eventPattern;
+      private final String eventPattern;
 
     public String getEventPattern() {
         return this.eventPattern;
     }
 
     @InputImport(name="metricName", required=true)
-    private final String metricName;
+      private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
     }
 
     @InputImport(name="unitLabel")
-    private final @Nullable String unitLabel;
+      private final @Nullable String unitLabel;
 
     public Optional<String> getUnitLabel() {
         return this.unitLabel == null ? Optional.empty() : Optional.ofNullable(this.unitLabel);
@@ -55,7 +55,7 @@ public final class LaunchMetricDefinitionObject extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="valueKey", required=true)
-    private final String valueKey;
+      private final String valueKey;
 
     public String getValueKey() {
         return this.valueKey;
@@ -134,7 +134,6 @@ public final class LaunchMetricDefinitionObject extends io.pulumi.resources.Invo
             this.valueKey = Objects.requireNonNull(valueKey);
             return this;
         }
-
         public LaunchMetricDefinitionObject build() {
             return new LaunchMetricDefinitionObject(entityIdKey, eventPattern, metricName, unitLabel, valueKey);
         }

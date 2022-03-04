@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetConcurrentRequests")
-    private final @Nullable Input<Integer> targetConcurrentRequests;
+      private final @Nullable Input<Integer> targetConcurrentRequests;
 
     public Input<Integer> getTargetConcurrentRequests() {
         return this.targetConcurrentRequests == null ? Input.empty() : this.targetConcurrentRequests;
@@ -34,7 +34,7 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetRequestCountPerSecond")
-    private final @Nullable Input<Integer> targetRequestCountPerSecond;
+      private final @Nullable Input<Integer> targetRequestCountPerSecond;
 
     public Input<Integer> getTargetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond == null ? Input.empty() : this.targetRequestCountPerSecond;
@@ -93,7 +93,6 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
             this.targetRequestCountPerSecond = Input.ofNullable(targetRequestCountPerSecond);
             return this;
         }
-
         public RequestUtilizationArgs build() {
             return new RequestUtilizationArgs(targetConcurrentRequests, targetRequestCountPerSecond);
         }

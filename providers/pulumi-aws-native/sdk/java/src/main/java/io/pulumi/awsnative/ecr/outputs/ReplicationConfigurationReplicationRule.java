@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecr.outputs;
 
 import io.pulumi.awsnative.ecr.outputs.ReplicationConfigurationReplicationDestination;
 import io.pulumi.awsnative.ecr.outputs.ReplicationConfigurationRepositoryFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class ReplicationConfigurationReplicationRule {
     /**
      * An array of objects representing the details of a replication destination.
      * 
-     */
+    */
     public List<ReplicationConfigurationReplicationDestination> getDestinations() {
         return this.destinations;
     }
     /**
      * An array of objects representing the details of a repository filter.
      * 
-     */
+    */
     public List<ReplicationConfigurationRepositoryFilter> getRepositoryFilters() {
         return this.repositoryFilters == null ? List.of() : this.repositoryFilters;
     }
@@ -77,7 +77,6 @@ public final class ReplicationConfigurationReplicationRule {
             this.repositoryFilters = repositoryFilters;
             return this;
         }
-
         public ReplicationConfigurationReplicationRule build() {
             return new ReplicationConfigurationReplicationRule(destinations, repositoryFilters);
         }

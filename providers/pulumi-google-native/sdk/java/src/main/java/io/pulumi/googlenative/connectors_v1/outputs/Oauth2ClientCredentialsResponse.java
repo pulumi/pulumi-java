@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.SecretResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class Oauth2ClientCredentialsResponse {
     /**
      * The client identifier.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Secret version reference containing the client secret.
      * 
-     */
+    */
     public SecretResponse getClientSecret() {
         return this.clientSecret;
     }
@@ -75,7 +75,6 @@ public final class Oauth2ClientCredentialsResponse {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Oauth2ClientCredentialsResponse build() {
             return new Oauth2ClientCredentialsResponse(clientId, clientSecret);
         }

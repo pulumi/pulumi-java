@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vmSize")
-    private final @Nullable Input<String> vmSize;
+      private final @Nullable Input<String> vmSize;
 
     public Input<String> getVmSize() {
         return this.vmSize == null ? Input.empty() : this.vmSize;
@@ -66,7 +66,6 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }
-
         public HardwareProfileArgs build() {
             return new HardwareProfileArgs(vmSize);
         }

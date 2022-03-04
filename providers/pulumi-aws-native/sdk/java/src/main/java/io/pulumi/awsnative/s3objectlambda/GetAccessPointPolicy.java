@@ -6,17 +6,33 @@ package io.pulumi.awsnative.s3objectlambda;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.s3objectlambda.inputs.GetAccessPointPolicyArgs;
 import io.pulumi.awsnative.s3objectlambda.outputs.GetAccessPointPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessPointPolicy {
-/**
- * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
+    private GetAccessPointPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccessPointPolicyArgs.Builder a);
+    }
+    private static GetAccessPointPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccessPointPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
  * 
- */
+     */
+    public static CompletableFuture<GetAccessPointPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
+     * 
+     */
     public static CompletableFuture<GetAccessPointPolicyResult> invokeAsync(GetAccessPointPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3objectlambda:getAccessPointPolicy", TypeShape.of(GetAccessPointPolicyResult.class), args == null ? GetAccessPointPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

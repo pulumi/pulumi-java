@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class SyncMigrationDatabaseErrorEventResponse {
     /**
      * Event text.
      * 
-     */
+    */
     public String getEventText() {
         return this.eventText;
     }
     /**
      * Event type.
      * 
-     */
+    */
     public String getEventTypeString() {
         return this.eventTypeString;
     }
     /**
      * String value of timestamp.
      * 
-     */
+    */
     public String getTimestampString() {
         return this.timestampString;
     }
@@ -95,7 +95,6 @@ public final class SyncMigrationDatabaseErrorEventResponse {
             this.timestampString = Objects.requireNonNull(timestampString);
             return this;
         }
-
         public SyncMigrationDatabaseErrorEventResponse build() {
             return new SyncMigrationDatabaseErrorEventResponse(eventText, eventTypeString, timestampString);
         }

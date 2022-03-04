@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class GooglePrivacyDlpV2ConditionResponse {
     /**
      * Field within the record this condition is evaluated against.
      * 
-     */
+    */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }
     /**
      * Operator used to compare the field or infoType to the value.
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Value to compare against. [Mandatory, except for `EXISTS` tests.]
      * 
-     */
+    */
     public GooglePrivacyDlpV2ValueResponse getValue() {
         return this.value;
     }
@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2ConditionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GooglePrivacyDlpV2ConditionResponse build() {
             return new GooglePrivacyDlpV2ConditionResponse(field, operator, value);
         }

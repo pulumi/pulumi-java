@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="abortedByUser")
-    private final @Nullable Input<Boolean> abortedByUser;
+      private final @Nullable Input<Boolean> abortedByUser;
 
     public Input<Boolean> getAbortedByUser() {
         return this.abortedByUser == null ? Input.empty() : this.abortedByUser;
@@ -34,7 +34,7 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hasErrorLogs")
-    private final @Nullable Input<Boolean> hasErrorLogs;
+      private final @Nullable Input<Boolean> hasErrorLogs;
 
     public Input<Boolean> getHasErrorLogs() {
         return this.hasErrorLogs == null ? Input.empty() : this.hasErrorLogs;
@@ -45,7 +45,7 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="infrastructureFailure")
-    private final @Nullable Input<Boolean> infrastructureFailure;
+      private final @Nullable Input<Boolean> infrastructureFailure;
 
     public Input<Boolean> getInfrastructureFailure() {
         return this.infrastructureFailure == null ? Input.empty() : this.infrastructureFailure;
@@ -119,7 +119,6 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
             this.infrastructureFailure = Input.ofNullable(infrastructureFailure);
             return this;
         }
-
         public InconclusiveDetailArgs build() {
             return new InconclusiveDetailArgs(abortedByUser, hasErrorLogs, infrastructureFailure);
         }

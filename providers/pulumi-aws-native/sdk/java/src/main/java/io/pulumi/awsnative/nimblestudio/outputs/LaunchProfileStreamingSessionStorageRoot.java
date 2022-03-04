@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class LaunchProfileStreamingSessionStorageRoot {
     /**
      * <p>The folder path in Linux workstations where files are uploaded.</p>
      * 
-     */
+    */
     public Optional<String> getLinux() {
         return Optional.ofNullable(this.linux);
     }
     /**
      * <p>The folder path in Windows workstations where files are uploaded.</p>
      * 
-     */
+    */
     public Optional<String> getWindows() {
         return Optional.ofNullable(this.windows);
     }
@@ -76,7 +76,6 @@ public final class LaunchProfileStreamingSessionStorageRoot {
             this.windows = windows;
             return this;
         }
-
         public LaunchProfileStreamingSessionStorageRoot build() {
             return new LaunchProfileStreamingSessionStorageRoot(linux, windows);
         }

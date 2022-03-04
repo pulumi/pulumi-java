@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,49 +76,49 @@ public final class FactoryVSTSConfigurationResponse {
     /**
      * Account name.
      * 
-     */
+    */
     public String getAccountName() {
         return this.accountName;
     }
     /**
      * Collaboration branch.
      * 
-     */
+    */
     public String getCollaborationBranch() {
         return this.collaborationBranch;
     }
     /**
      * Last commit id.
      * 
-     */
+    */
     public Optional<String> getLastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
     /**
      * VSTS project name.
      * 
-     */
+    */
     public String getProjectName() {
         return this.projectName;
     }
     /**
      * Repository name.
      * 
-     */
+    */
     public String getRepositoryName() {
         return this.repositoryName;
     }
     /**
      * Root folder.
      * 
-     */
+    */
     public String getRootFolder() {
         return this.rootFolder;
     }
     /**
      * VSTS tenant id.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -126,7 +126,7 @@ public final class FactoryVSTSConfigurationResponse {
      * Type of repo configuration.
      * Expected value is 'FactoryVSTSConfiguration'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -204,7 +204,6 @@ public final class FactoryVSTSConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FactoryVSTSConfigurationResponse build() {
             return new FactoryVSTSConfigurationResponse(accountName, collaborationBranch, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
         }

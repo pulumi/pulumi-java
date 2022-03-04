@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.ErrorDetailResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="agentVersion", required=true)
-    private final String agentVersion;
+      private final String agentVersion;
 
     public String getAgentVersion() {
         return this.agentVersion;
@@ -34,7 +34,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="errorDetails", required=true)
-    private final List<ErrorDetailResponse> errorDetails;
+      private final List<ErrorDetailResponse> errorDetails;
 
     public List<ErrorDetailResponse> getErrorDetails() {
         return this.errorDetails;
@@ -45,7 +45,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="lastStatusChange", required=true)
-    private final String lastStatusChange;
+      private final String lastStatusChange;
 
     public String getLastStatusChange() {
         return this.lastStatusChange;
@@ -56,7 +56,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -67,7 +67,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="vmUuid", required=true)
-    private final String vmUuid;
+      private final String vmUuid;
 
     public String getVmUuid() {
         return this.vmUuid;
@@ -146,7 +146,6 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
             this.vmUuid = Objects.requireNonNull(vmUuid);
             return this;
         }
-
         public GuestAgentProfileResponse build() {
             return new GuestAgentProfileResponse(agentVersion, errorDetails, lastStatusChange, status, vmUuid);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.ServiceAttachmentConnectionPreference;
 import io.pulumi.googlenative.compute_v1.inputs.ServiceAttachmentConsumerProjectLimitArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionPreference")
-    private final @Nullable Input<ServiceAttachmentConnectionPreference> connectionPreference;
+      private final @Nullable Input<ServiceAttachmentConnectionPreference> connectionPreference;
 
     public Input<ServiceAttachmentConnectionPreference> getConnectionPreference() {
         return this.connectionPreference == null ? Input.empty() : this.connectionPreference;
@@ -34,7 +34,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="consumerAcceptLists")
-    private final @Nullable Input<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
+      private final @Nullable Input<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
 
     public Input<List<ServiceAttachmentConsumerProjectLimitArgs>> getConsumerAcceptLists() {
         return this.consumerAcceptLists == null ? Input.empty() : this.consumerAcceptLists;
@@ -45,7 +45,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="consumerRejectLists")
-    private final @Nullable Input<List<String>> consumerRejectLists;
+      private final @Nullable Input<List<String>> consumerRejectLists;
 
     public Input<List<String>> getConsumerRejectLists() {
         return this.consumerRejectLists == null ? Input.empty() : this.consumerRejectLists;
@@ -56,7 +56,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -67,7 +67,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="domainNames")
-    private final @Nullable Input<List<String>> domainNames;
+      private final @Nullable Input<List<String>> domainNames;
 
     public Input<List<String>> getDomainNames() {
         return this.domainNames == null ? Input.empty() : this.domainNames;
@@ -78,7 +78,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableProxyProtocol")
-    private final @Nullable Input<Boolean> enableProxyProtocol;
+      private final @Nullable Input<Boolean> enableProxyProtocol;
 
     public Input<Boolean> getEnableProxyProtocol() {
         return this.enableProxyProtocol == null ? Input.empty() : this.enableProxyProtocol;
@@ -89,7 +89,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -100,7 +100,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="natSubnets")
-    private final @Nullable Input<List<String>> natSubnets;
+      private final @Nullable Input<List<String>> natSubnets;
 
     public Input<List<String>> getNatSubnets() {
         return this.natSubnets == null ? Input.empty() : this.natSubnets;
@@ -111,28 +111,28 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="producerForwardingRule")
-    private final @Nullable Input<String> producerForwardingRule;
+      private final @Nullable Input<String> producerForwardingRule;
 
     public Input<String> getProducerForwardingRule() {
         return this.producerForwardingRule == null ? Input.empty() : this.producerForwardingRule;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -143,7 +143,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetService")
-    private final @Nullable Input<String> targetService;
+      private final @Nullable Input<String> targetService;
 
     public Input<String> getTargetService() {
         return this.targetService == null ? Input.empty() : this.targetService;
@@ -367,7 +367,6 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             this.targetService = Input.ofNullable(targetService);
             return this;
         }
-
         public ServiceAttachmentArgs build() {
             return new ServiceAttachmentArgs(connectionPreference, consumerAcceptLists, consumerRejectLists, description, domainNames, enableProxyProtocol, name, natSubnets, producerForwardingRule, project, region, requestId, targetService);
         }

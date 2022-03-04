@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,7 +43,7 @@ public final class RegionBackendServiceIap {
     /**
      * OAuth2 Client ID for IAP
      * 
-     */
+    */
     public String getOauth2ClientId() {
         return this.oauth2ClientId;
     }
@@ -51,7 +51,7 @@ public final class RegionBackendServiceIap {
      * OAuth2 Client Secret for IAP
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public String getOauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
@@ -60,7 +60,7 @@ public final class RegionBackendServiceIap {
      * OAuth2 Client Secret SHA-256 for IAP
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public Optional<String> getOauth2ClientSecretSha256() {
         return Optional.ofNullable(this.oauth2ClientSecretSha256);
     }
@@ -103,7 +103,6 @@ public final class RegionBackendServiceIap {
             this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
         }
-
         public RegionBackendServiceIap build() {
             return new RegionBackendServiceIap(oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

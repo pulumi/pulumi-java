@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceGetArgs extends
      * 
      */
     @InputImport(name="backendService")
-    private final @Nullable Input<String> backendService;
+      private final @Nullable Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -36,7 +36,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceGetArgs extends
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
+      private final @Nullable Input<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
 
     public Input<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -52,7 +52,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceGetArgs extends
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+      private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -126,7 +126,6 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceGetArgs extends
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public URLMapDefaultRouteActionWeightedBackendServiceGetArgs build() {
             return new URLMapDefaultRouteActionWeightedBackendServiceGetArgs(backendService, headerAction, weight);
         }

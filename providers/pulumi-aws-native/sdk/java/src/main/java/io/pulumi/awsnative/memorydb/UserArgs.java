@@ -6,7 +6,7 @@ package io.pulumi.awsnative.memorydb;
 import io.pulumi.awsnative.memorydb.inputs.AuthenticationModePropertiesArgs;
 import io.pulumi.awsnative.memorydb.inputs.UserTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,14 +22,14 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessString", required=true)
-    private final Input<String> accessString;
+      private final Input<String> accessString;
 
     public Input<String> getAccessString() {
         return this.accessString;
     }
 
     @InputImport(name="authenticationMode", required=true)
-    private final Input<AuthenticationModePropertiesArgs> authenticationMode;
+      private final Input<AuthenticationModePropertiesArgs> authenticationMode;
 
     public Input<AuthenticationModePropertiesArgs> getAuthenticationMode() {
         return this.authenticationMode;
@@ -40,7 +40,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<UserTagArgs>> tags;
+      private final @Nullable Input<List<UserTagArgs>> tags;
 
     public Input<List<UserTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -51,7 +51,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -140,7 +140,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public UserArgs build() {
             return new UserArgs(accessString, authenticationMode, tags, userName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryFieldResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CloudStorageFileSetResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CloudStoragePathResponse;
@@ -40,21 +40,21 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
     /**
      * Field in a BigQuery table where each cell represents a dictionary phrase.
      * 
-     */
+    */
     public GooglePrivacyDlpV2BigQueryFieldResponse getBigQueryField() {
         return this.bigQueryField;
     }
     /**
      * Set of files containing newline-delimited lists of dictionary phrases.
      * 
-     */
+    */
     public GooglePrivacyDlpV2CloudStorageFileSetResponse getCloudStorageFileSet() {
         return this.cloudStorageFileSet;
     }
     /**
      * Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
      * 
-     */
+    */
     public GooglePrivacyDlpV2CloudStoragePathResponse getOutputPath() {
         return this.outputPath;
     }
@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
-
         public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse build() {
             return new GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(bigQueryField, cloudStorageFileSet, outputPath);
         }

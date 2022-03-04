@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.JobCurrentState;
 import io.pulumi.googlenative.dataflow_v1b3.enums.JobRequestedState;
 import io.pulumi.googlenative.dataflow_v1b3.enums.JobType;
@@ -30,7 +30,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientRequestId")
-    private final @Nullable Input<String> clientRequestId;
+      private final @Nullable Input<String> clientRequestId;
 
     public Input<String> getClientRequestId() {
         return this.clientRequestId == null ? Input.empty() : this.clientRequestId;
@@ -41,7 +41,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -52,7 +52,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdFromSnapshotId")
-    private final @Nullable Input<String> createdFromSnapshotId;
+      private final @Nullable Input<String> createdFromSnapshotId;
 
     public Input<String> getCreatedFromSnapshotId() {
         return this.createdFromSnapshotId == null ? Input.empty() : this.createdFromSnapshotId;
@@ -63,7 +63,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currentState")
-    private final @Nullable Input<JobCurrentState> currentState;
+      private final @Nullable Input<JobCurrentState> currentState;
 
     public Input<JobCurrentState> getCurrentState() {
         return this.currentState == null ? Input.empty() : this.currentState;
@@ -74,7 +74,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currentStateTime")
-    private final @Nullable Input<String> currentStateTime;
+      private final @Nullable Input<String> currentStateTime;
 
     public Input<String> getCurrentStateTime() {
         return this.currentStateTime == null ? Input.empty() : this.currentStateTime;
@@ -85,7 +85,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<EnvironmentArgs> environment;
+      private final @Nullable Input<EnvironmentArgs> environment;
 
     public Input<EnvironmentArgs> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -96,7 +96,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -107,7 +107,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobMetadata")
-    private final @Nullable Input<JobMetadataArgs> jobMetadata;
+      private final @Nullable Input<JobMetadataArgs> jobMetadata;
 
     public Input<JobMetadataArgs> getJobMetadata() {
         return this.jobMetadata == null ? Input.empty() : this.jobMetadata;
@@ -118,7 +118,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -129,7 +129,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -140,7 +140,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -151,7 +151,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineDescription")
-    private final @Nullable Input<PipelineDescriptionArgs> pipelineDescription;
+      private final @Nullable Input<PipelineDescriptionArgs> pipelineDescription;
 
     public Input<PipelineDescriptionArgs> getPipelineDescription() {
         return this.pipelineDescription == null ? Input.empty() : this.pipelineDescription;
@@ -162,7 +162,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -173,7 +173,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replaceJobId")
-    private final @Nullable Input<String> replaceJobId;
+      private final @Nullable Input<String> replaceJobId;
 
     public Input<String> getReplaceJobId() {
         return this.replaceJobId == null ? Input.empty() : this.replaceJobId;
@@ -184,7 +184,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replacedByJobId")
-    private final @Nullable Input<String> replacedByJobId;
+      private final @Nullable Input<String> replacedByJobId;
 
     public Input<String> getReplacedByJobId() {
         return this.replacedByJobId == null ? Input.empty() : this.replacedByJobId;
@@ -195,7 +195,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestedState")
-    private final @Nullable Input<JobRequestedState> requestedState;
+      private final @Nullable Input<JobRequestedState> requestedState;
 
     public Input<JobRequestedState> getRequestedState() {
         return this.requestedState == null ? Input.empty() : this.requestedState;
@@ -206,7 +206,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="satisfiesPzs")
-    private final @Nullable Input<Boolean> satisfiesPzs;
+      private final @Nullable Input<Boolean> satisfiesPzs;
 
     public Input<Boolean> getSatisfiesPzs() {
         return this.satisfiesPzs == null ? Input.empty() : this.satisfiesPzs;
@@ -217,7 +217,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageStates")
-    private final @Nullable Input<List<ExecutionStageStateArgs>> stageStates;
+      private final @Nullable Input<List<ExecutionStageStateArgs>> stageStates;
 
     public Input<List<ExecutionStageStateArgs>> getStageStates() {
         return this.stageStates == null ? Input.empty() : this.stageStates;
@@ -228,7 +228,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -239,7 +239,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="steps")
-    private final @Nullable Input<List<StepArgs>> steps;
+      private final @Nullable Input<List<StepArgs>> steps;
 
     public Input<List<StepArgs>> getSteps() {
         return this.steps == null ? Input.empty() : this.steps;
@@ -250,7 +250,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepsLocation")
-    private final @Nullable Input<String> stepsLocation;
+      private final @Nullable Input<String> stepsLocation;
 
     public Input<String> getStepsLocation() {
         return this.stepsLocation == null ? Input.empty() : this.stepsLocation;
@@ -261,7 +261,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempFiles")
-    private final @Nullable Input<List<String>> tempFiles;
+      private final @Nullable Input<List<String>> tempFiles;
 
     public Input<List<String>> getTempFiles() {
         return this.tempFiles == null ? Input.empty() : this.tempFiles;
@@ -272,7 +272,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transformNameMapping")
-    private final @Nullable Input<Map<String,String>> transformNameMapping;
+      private final @Nullable Input<Map<String,String>> transformNameMapping;
 
     public Input<Map<String,String>> getTransformNameMapping() {
         return this.transformNameMapping == null ? Input.empty() : this.transformNameMapping;
@@ -283,14 +283,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<JobType> type;
+      private final @Nullable Input<JobType> type;
 
     public Input<JobType> getType() {
         return this.type == null ? Input.empty() : this.type;
     }
 
     @InputImport(name="view")
-    private final @Nullable Input<String> view;
+      private final @Nullable Input<String> view;
 
     public Input<String> getView() {
         return this.view == null ? Input.empty() : this.view;
@@ -694,7 +694,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.view = Input.ofNullable(view);
             return this;
         }
-
         public JobArgs build() {
             return new JobArgs(clientRequestId, createTime, createdFromSnapshotId, currentState, currentStateTime, environment, id, jobMetadata, labels, location, name, pipelineDescription, project, replaceJobId, replacedByJobId, requestedState, satisfiesPzs, stageStates, startTime, steps, stepsLocation, tempFiles, transformNameMapping, type, view);
         }

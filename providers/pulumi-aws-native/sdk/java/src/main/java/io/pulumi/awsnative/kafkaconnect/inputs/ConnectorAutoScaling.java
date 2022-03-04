@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleInPolicy;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleOutPolicy;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxWorkerCount", required=true)
-    private final Integer maxWorkerCount;
+      private final Integer maxWorkerCount;
 
     public Integer getMaxWorkerCount() {
         return this.maxWorkerCount;
@@ -34,7 +34,7 @@ public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mcuCount", required=true)
-    private final Integer mcuCount;
+      private final Integer mcuCount;
 
     public Integer getMcuCount() {
         return this.mcuCount;
@@ -45,21 +45,21 @@ public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minWorkerCount", required=true)
-    private final Integer minWorkerCount;
+      private final Integer minWorkerCount;
 
     public Integer getMinWorkerCount() {
         return this.minWorkerCount;
     }
 
     @InputImport(name="scaleInPolicy", required=true)
-    private final ConnectorScaleInPolicy scaleInPolicy;
+      private final ConnectorScaleInPolicy scaleInPolicy;
 
     public ConnectorScaleInPolicy getScaleInPolicy() {
         return this.scaleInPolicy;
     }
 
     @InputImport(name="scaleOutPolicy", required=true)
-    private final ConnectorScaleOutPolicy scaleOutPolicy;
+      private final ConnectorScaleOutPolicy scaleOutPolicy;
 
     public ConnectorScaleOutPolicy getScaleOutPolicy() {
         return this.scaleOutPolicy;
@@ -138,7 +138,6 @@ public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
             this.scaleOutPolicy = Objects.requireNonNull(scaleOutPolicy);
             return this;
         }
-
         public ConnectorAutoScaling build() {
             return new ConnectorAutoScaling(maxWorkerCount, mcuCount, minWorkerCount, scaleInPolicy, scaleOutPolicy);
         }

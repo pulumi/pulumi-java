@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class AiDatasetEncryptionSpec {
      * Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource.
      * Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.
      * 
-     */
+    */
     public Optional<String> getKmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -56,7 +56,6 @@ public final class AiDatasetEncryptionSpec {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public AiDatasetEncryptionSpec build() {
             return new AiDatasetEncryptionSpec(kmsKeyName);
         }

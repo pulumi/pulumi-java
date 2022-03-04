@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaimCondition;
 import java.lang.String;
 import java.util.List;
@@ -69,28 +69,28 @@ public final class PersistentVolumeClaimStatus {
     /**
      * AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
      * 
-     */
+    */
     public List<String> getAccessModes() {
         return this.accessModes == null ? List.of() : this.accessModes;
     }
     /**
      * The storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may be larger than the actual capacity when a volume expansion operation is requested. For storage quota, the larger value from allocatedResources and PVC.spec.resources is used. If allocatedResources is not set, PVC.spec.resources alone is used for quota calculation. If a volume expansion capacity request is lowered, allocatedResources is only lowered if there are no expansion operations in progress and if the actual volume capacity is equal or lower than the requested capacity. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
      * 
-     */
+    */
     public Map<String,String> getAllocatedResources() {
         return this.allocatedResources == null ? Map.of() : this.allocatedResources;
     }
     /**
      * Represents the actual resources of the underlying volume.
      * 
-     */
+    */
     public Map<String,String> getCapacity() {
         return this.capacity == null ? Map.of() : this.capacity;
     }
     /**
      * Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
      * 
-     */
+    */
     public List<PersistentVolumeClaimCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
@@ -102,14 +102,14 @@ public final class PersistentVolumeClaimStatus {
      *  - `"Lost"` used for PersistentVolumeClaims that lost their underlying PersistentVolume. The claim was bound to a PersistentVolume and this volume does not exist any longer and all data on it was lost.
      *  - `"Pending"` used for PersistentVolumeClaims that are not yet bound
      * 
-     */
+    */
     public Optional<String> getPhase() {
         return Optional.ofNullable(this.phase);
     }
     /**
      * ResizeStatus stores status of resize operation. ResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty string by resize controller or kubelet. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
      * 
-     */
+    */
     public Optional<String> getResizeStatus() {
         return Optional.ofNullable(this.resizeStatus);
     }
@@ -173,7 +173,6 @@ public final class PersistentVolumeClaimStatus {
             this.resizeStatus = resizeStatus;
             return this;
         }
-
         public PersistentVolumeClaimStatus build() {
             return new PersistentVolumeClaimStatus(accessModes, allocatedResources, capacity, conditions, phase, resizeStatus);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityandcompliance;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityandcompliance.inputs.GetprivateLinkServicesForO365ManagementActivityAPIArgs;
 import io.pulumi.azurenative.securityandcompliance.outputs.GetprivateLinkServicesForO365ManagementActivityAPIResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetprivateLinkServicesForO365ManagementActivityAPI {
-/**
- * The description of the service.
+    private GetprivateLinkServicesForO365ManagementActivityAPI() {}
+    public interface BuilderApplicator {
+        public void apply(GetprivateLinkServicesForO365ManagementActivityAPIArgs.Builder a);
+    }
+    private static GetprivateLinkServicesForO365ManagementActivityAPIArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetprivateLinkServicesForO365ManagementActivityAPIArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The description of the service.
  * API Version: 2021-03-08.
  * 
- *
- * The description of the service.
+     *
+     * The description of the service.
  * 
- */
+     */
+    public static CompletableFuture<GetprivateLinkServicesForO365ManagementActivityAPIResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The description of the service.
+     * API Version: 2021-03-08.
+     * 
+     *
+         * The description of the service.
+     * 
+     */
     public static CompletableFuture<GetprivateLinkServicesForO365ManagementActivityAPIResult> invokeAsync(GetprivateLinkServicesForO365ManagementActivityAPIArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForO365ManagementActivityAPI", TypeShape.of(GetprivateLinkServicesForO365ManagementActivityAPIResult.class), args == null ? GetprivateLinkServicesForO365ManagementActivityAPIArgs.Empty : args, Utilities.withVersion(options));
     }

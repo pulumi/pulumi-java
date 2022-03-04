@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.redis.outputs.GetInstanceMaintenancePolicy;
 import io.pulumi.gcp.redis.outputs.GetInstanceMaintenanceSchedule;
 import io.pulumi.gcp.redis.outputs.GetInstanceNode;
@@ -151,7 +151,7 @@ public final class GetInstanceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -453,7 +453,6 @@ public final class GetInstanceResult {
             this.transitEncryptionMode = Objects.requireNonNull(transitEncryptionMode);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(alternativeLocationId, authEnabled, authString, authorizedNetwork, connectMode, createTime, currentLocationId, displayName, host, id, labels, locationId, maintenancePolicies, maintenanceSchedules, memorySizeGb, name, nodes, persistenceIamIdentity, port, project, readEndpoint, readEndpointPort, readReplicasMode, redisConfigs, redisVersion, region, replicaCount, reservedIpRange, serverCaCerts, tier, transitEncryptionMode);
         }

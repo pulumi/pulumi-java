@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -56,35 +56,35 @@ public final class TaskDefinitionHealthCheck {
     /**
      * A string array representing the command that the container runs to determine if it is healthy.
      * 
-     */
+    */
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * The time period in seconds between each health check execution. You may specify between 5 and 300 seconds. The default value is 30 seconds.
      * 
-     */
+    */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * The number of times to retry a failed health check before the container is considered unhealthy. You may specify between 1 and 10 retries. The default value is three retries.
      * 
-     */
+    */
     public Optional<Integer> getRetries() {
         return Optional.ofNullable(this.retries);
     }
     /**
      * The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries. You may specify between 0 and 300 seconds. The startPeriod is disabled by default.
      * 
-     */
+    */
     public Optional<Integer> getStartPeriod() {
         return Optional.ofNullable(this.startPeriod);
     }
     /**
      * The time period in seconds to wait for a health check to succeed before it is considered a failure. You may specify between 2 and 60 seconds. The default value is 5 seconds.
      * 
-     */
+    */
     public Optional<Integer> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -141,7 +141,6 @@ public final class TaskDefinitionHealthCheck {
             this.timeout = timeout;
             return this;
         }
-
         public TaskDefinitionHealthCheck build() {
             return new TaskDefinitionHealthCheck(command, interval, retries, startPeriod, timeout);
         }

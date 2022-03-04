@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nodes")
-    private final @Nullable Input<Integer> nodes;
+      private final @Nullable Input<Integer> nodes;
 
     public Input<Integer> getNodes() {
         return this.nodes == null ? Input.empty() : this.nodes;
@@ -66,7 +66,6 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends io.pulumi.resource
             this.nodes = Input.ofNullable(nodes);
             return this;
         }
-
         public GoogleCloudMlV1__ManualScalingArgs build() {
             return new GoogleCloudMlV1__ManualScalingArgs(nodes);
         }

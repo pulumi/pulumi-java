@@ -5,8 +5,8 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.FolderSinkArgs;
 import io.pulumi.gcp.logging.inputs.FolderSinkState;
@@ -191,6 +191,37 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
         return this.writerIdentity;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FolderSinkArgs.Builder a);
+    }
+    private static io.pulumi.gcp.logging.FolderSinkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.logging.FolderSinkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FolderSink(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FolderSink(String name) {
+        this(name, FolderSinkArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FolderSink(String name, FolderSinkArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class PackageResponse {
     /**
      * The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the package.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class PackageResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PackageResponse build() {
             return new PackageResponse(location, name);
         }

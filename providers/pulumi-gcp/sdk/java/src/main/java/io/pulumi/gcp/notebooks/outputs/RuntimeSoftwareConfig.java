@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -77,14 +77,14 @@ public final class RuntimeSoftwareConfig {
      * Specify a custom Cloud Storage path where the GPU driver is stored.
      * If not specified, we'll automatically choose from official GPU drivers.
      * 
-     */
+    */
     public Optional<String> getCustomGpuDriverPath() {
         return Optional.ofNullable(this.customGpuDriverPath);
     }
     /**
      * Verifies core internal services are running. Default: True.
      * 
-     */
+    */
     public Optional<Boolean> getEnableHealthMonitoring() {
         return Optional.ofNullable(this.enableHealthMonitoring);
     }
@@ -92,7 +92,7 @@ public final class RuntimeSoftwareConfig {
      * Runtime will automatically shutdown after idle_shutdown_time.
      * Default: True
      * 
-     */
+    */
     public Optional<Boolean> getIdleShutdown() {
         return Optional.ofNullable(this.idleShutdown);
     }
@@ -100,14 +100,14 @@ public final class RuntimeSoftwareConfig {
      * Time in minutes to wait before shuting down runtime.
      * Default: 180 minutes
      * 
-     */
+    */
     public Optional<Integer> getIdleShutdownTimeout() {
         return Optional.ofNullable(this.idleShutdownTimeout);
     }
     /**
      * Install Nvidia Driver automatically.
      * 
-     */
+    */
     public Optional<Boolean> getInstallGpuDriver() {
         return Optional.ofNullable(this.installGpuDriver);
     }
@@ -115,7 +115,7 @@ public final class RuntimeSoftwareConfig {
      * Cron expression in UTC timezone for schedule instance auto upgrade.
      * Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
      * 
-     */
+    */
     public Optional<String> getNotebookUpgradeSchedule() {
         return Optional.ofNullable(this.notebookUpgradeSchedule);
     }
@@ -124,7 +124,7 @@ public final class RuntimeSoftwareConfig {
      * fully boots up. The path must be a URL or
      * Cloud Storage path (gs://path-to-file/file-name).
      * 
-     */
+    */
     public Optional<String> getPostStartupScript() {
         return Optional.ofNullable(this.postStartupScript);
     }
@@ -195,7 +195,6 @@ public final class RuntimeSoftwareConfig {
             this.postStartupScript = postStartupScript;
             return this;
         }
-
         public RuntimeSoftwareConfig build() {
             return new RuntimeSoftwareConfig(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, notebookUpgradeSchedule, postStartupScript);
         }

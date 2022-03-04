@@ -5,8 +5,8 @@ package io.pulumi.googlenative.logging_v2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.logging_v2.BillingAccountExclusionArgs;
 import java.lang.Boolean;
@@ -104,6 +104,37 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
         return this.updateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BillingAccountExclusionArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.logging_v2.BillingAccountExclusionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.logging_v2.BillingAccountExclusionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public BillingAccountExclusion(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BillingAccountExclusion(String name) {
+        this(name, BillingAccountExclusionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BillingAccountExclusion(String name, BillingAccountExclusionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="lastTransitionTime")
-    private final @Nullable Input<String> lastTransitionTime;
+      private final @Nullable Input<String> lastTransitionTime;
 
     public Input<String> getLastTransitionTime() {
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
@@ -34,7 +34,7 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -45,7 +45,7 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+      private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -56,7 +56,7 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -67,7 +67,7 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -171,7 +171,6 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public FlowSchemaConditionArgs build() {
             return new FlowSchemaConditionArgs(lastTransitionTime, message, reason, status, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class StorageAccountResponse {
     /**
      * The Azure Resource Manager ID of the storage account resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The storage account key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
@@ -74,7 +74,6 @@ public final class StorageAccountResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(id, key);
         }

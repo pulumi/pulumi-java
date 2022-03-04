@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ClusterSkuResponse {
     /**
      * The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Name of this SKU.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -77,7 +77,6 @@ public final class ClusterSkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ClusterSkuResponse build() {
             return new ClusterSkuResponse(capacity, name);
         }

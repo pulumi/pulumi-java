@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cassandra;
 
 import io.pulumi.awsnative.cassandra.inputs.KeyspaceTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyspaceName")
-    private final @Nullable Input<String> keyspaceName;
+      private final @Nullable Input<String> keyspaceName;
 
     public Input<String> getKeyspaceName() {
         return this.keyspaceName == null ? Input.empty() : this.keyspaceName;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<KeyspaceTagArgs>> tags;
+      private final @Nullable Input<List<KeyspaceTagArgs>> tags;
 
     public Input<List<KeyspaceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,6 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public KeyspaceArgs build() {
             return new KeyspaceArgs(keyspaceName, tags);
         }

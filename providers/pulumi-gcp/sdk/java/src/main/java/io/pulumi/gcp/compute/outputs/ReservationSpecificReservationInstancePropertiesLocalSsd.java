@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
     /**
      * The size of the disk in base-2 GB.
      * 
-     */
+    */
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
     }
@@ -45,7 +45,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
      * Default value is `SCSI`.
      * Possible values are `SCSI` and `NVME`.
      * 
-     */
+    */
     public Optional<String> get$interface() {
         return Optional.ofNullable(this.$interface);
     }
@@ -81,7 +81,6 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
             this.$interface = $interface;
             return this;
         }
-
         public ReservationSpecificReservationInstancePropertiesLocalSsd build() {
             return new ReservationSpecificReservationInstancePropertiesLocalSsd(diskSizeGb, $interface);
         }

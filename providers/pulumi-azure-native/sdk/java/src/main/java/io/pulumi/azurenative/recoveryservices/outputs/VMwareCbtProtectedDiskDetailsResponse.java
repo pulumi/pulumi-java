@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -90,70 +90,70 @@ public final class VMwareCbtProtectedDiskDetailsResponse {
     /**
      * The disk capacity in bytes.
      * 
-     */
+    */
     public Double getCapacityInBytes() {
         return this.capacityInBytes;
     }
     /**
      * The disk id.
      * 
-     */
+    */
     public String getDiskId() {
         return this.diskId;
     }
     /**
      * The disk name.
      * 
-     */
+    */
     public String getDiskName() {
         return this.diskName;
     }
     /**
      * The disk path.
      * 
-     */
+    */
     public String getDiskPath() {
         return this.diskPath;
     }
     /**
      * The disk type.
      * 
-     */
+    */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * A value indicating whether the disk is the OS disk.
      * 
-     */
+    */
     public String getIsOSDisk() {
         return this.isOSDisk;
     }
     /**
      * The log storage account ARM Id.
      * 
-     */
+    */
     public String getLogStorageAccountId() {
         return this.logStorageAccountId;
     }
     /**
      * The key vault secret name of the log storage account.
      * 
-     */
+    */
     public String getLogStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
     }
     /**
      * The ARM Id of the seed managed disk.
      * 
-     */
+    */
     public String getSeedManagedDiskId() {
         return this.seedManagedDiskId;
     }
     /**
      * The ARM Id of the target managed disk.
      * 
-     */
+    */
     public String getTargetManagedDiskId() {
         return this.targetManagedDiskId;
     }
@@ -245,7 +245,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse {
             this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
             return this;
         }
-
         public VMwareCbtProtectedDiskDetailsResponse build() {
             return new VMwareCbtProtectedDiskDetailsResponse(capacityInBytes, diskId, diskName, diskPath, diskType, isOSDisk, logStorageAccountId, logStorageAccountSasSecretName, seedManagedDiskId, targetManagedDiskId);
         }

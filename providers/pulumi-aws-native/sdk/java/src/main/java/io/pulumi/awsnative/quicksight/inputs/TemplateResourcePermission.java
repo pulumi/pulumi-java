@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TemplateResourcePermission extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="actions", required=true)
-    private final List<String> actions;
+      private final List<String> actions;
 
     public List<String> getActions() {
         return this.actions;
@@ -47,7 +47,7 @@ public final class TemplateResourcePermission extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="principal", required=true)
-    private final String principal;
+      private final String principal;
 
     public String getPrincipal() {
         return this.principal;
@@ -96,7 +96,6 @@ public final class TemplateResourcePermission extends io.pulumi.resources.Invoke
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public TemplateResourcePermission build() {
             return new TemplateResourcePermission(actions, principal);
         }

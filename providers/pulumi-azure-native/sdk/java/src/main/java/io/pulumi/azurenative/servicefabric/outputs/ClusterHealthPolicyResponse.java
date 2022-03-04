@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationHealthPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -55,7 +55,7 @@ public final class ClusterHealthPolicyResponse {
     /**
      * Defines the application health policy map used to evaluate the health of an application or one of its children entities.
      * 
-     */
+    */
     public Map<String,ApplicationHealthPolicyResponse> getApplicationHealthPolicies() {
         return this.applicationHealthPolicies == null ? Map.of() : this.applicationHealthPolicies;
     }
@@ -67,7 +67,7 @@ public final class ClusterHealthPolicyResponse {
      * This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
      * The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
      * 
-     */
+    */
     public Optional<Integer> getMaxPercentUnhealthyApplications() {
         return Optional.ofNullable(this.maxPercentUnhealthyApplications);
     }
@@ -81,7 +81,7 @@ public final class ClusterHealthPolicyResponse {
      * 
      * In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
      * 
-     */
+    */
     public Optional<Integer> getMaxPercentUnhealthyNodes() {
         return Optional.ofNullable(this.maxPercentUnhealthyNodes);
     }
@@ -124,7 +124,6 @@ public final class ClusterHealthPolicyResponse {
             this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
             return this;
         }
-
         public ClusterHealthPolicyResponse build() {
             return new ClusterHealthPolicyResponse(applicationHealthPolicies, maxPercentUnhealthyApplications, maxPercentUnhealthyNodes);
         }

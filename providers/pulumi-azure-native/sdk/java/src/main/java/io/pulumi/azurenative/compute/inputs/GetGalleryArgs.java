@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="galleryName", required=true)
-    private final String galleryName;
+      private final String galleryName;
 
     public String getGalleryName() {
         return this.galleryName;
@@ -30,7 +30,7 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="select")
-    private final @Nullable String select;
+      private final @Nullable String select;
 
     public Optional<String> getSelect() {
         return this.select == null ? Optional.empty() : Optional.ofNullable(this.select);
@@ -100,7 +100,6 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
             this.select = select;
             return this;
         }
-
         public GetGalleryArgs build() {
             return new GetGalleryArgs(galleryName, resourceGroupName, select);
         }

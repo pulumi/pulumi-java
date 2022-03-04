@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseGrades;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseMappings;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseSystemGeneratedEntities;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -165,140 +165,140 @@ public final class GetPredictionResult {
     /**
      * Whether do auto analyze.
      * 
-     */
+    */
     public Boolean getAutoAnalyze() {
         return this.autoAnalyze;
     }
     /**
      * Description of the prediction.
      * 
-     */
+    */
     public Map<String,String> getDescription() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Display name of the prediction.
      * 
-     */
+    */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * The prediction grades.
      * 
-     */
+    */
     public List<PredictionResponseGrades> getGrades() {
         return this.grades == null ? List.of() : this.grades;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Interaction types involved in the prediction.
      * 
-     */
+    */
     public List<String> getInvolvedInteractionTypes() {
         return this.involvedInteractionTypes == null ? List.of() : this.involvedInteractionTypes;
     }
     /**
      * KPI types involved in the prediction.
      * 
-     */
+    */
     public List<String> getInvolvedKpiTypes() {
         return this.involvedKpiTypes == null ? List.of() : this.involvedKpiTypes;
     }
     /**
      * Relationships involved in the prediction.
      * 
-     */
+    */
     public List<String> getInvolvedRelationships() {
         return this.involvedRelationships == null ? List.of() : this.involvedRelationships;
     }
     /**
      * Definition of the link mapping of prediction.
      * 
-     */
+    */
     public PredictionResponseMappings getMappings() {
         return this.mappings;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Negative outcome expression.
      * 
-     */
+    */
     public String getNegativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
     }
     /**
      * Positive outcome expression.
      * 
-     */
+    */
     public String getPositiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
     }
     /**
      * Name of the prediction.
      * 
-     */
+    */
     public Optional<String> getPredictionName() {
         return Optional.ofNullable(this.predictionName);
     }
     /**
      * Primary profile type.
      * 
-     */
+    */
     public String getPrimaryProfileType() {
         return this.primaryProfileType;
     }
     /**
      * Provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Scope expression.
      * 
-     */
+    */
     public String getScopeExpression() {
         return this.scopeExpression;
     }
     /**
      * Score label.
      * 
-     */
+    */
     public String getScoreLabel() {
         return this.scoreLabel;
     }
     /**
      * System generated entities.
      * 
-     */
+    */
     public PredictionResponseSystemGeneratedEntities getSystemGeneratedEntities() {
         return this.systemGeneratedEntities;
     }
     /**
      * The hub name.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -460,7 +460,6 @@ public final class GetPredictionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPredictionResult build() {
             return new GetPredictionResult(autoAnalyze, description, displayName, grades, id, involvedInteractionTypes, involvedKpiTypes, involvedRelationships, mappings, name, negativeOutcomeExpression, positiveOutcomeExpression, predictionName, primaryProfileType, provisioningState, scopeExpression, scoreLabel, systemGeneratedEntities, tenantId, type);
         }

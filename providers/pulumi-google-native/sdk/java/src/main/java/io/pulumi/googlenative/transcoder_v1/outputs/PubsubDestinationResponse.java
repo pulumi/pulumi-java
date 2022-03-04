@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class PubsubDestinationResponse {
     /**
      * The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
@@ -52,7 +52,6 @@ public final class PubsubDestinationResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubsubDestinationResponse build() {
             return new PubsubDestinationResponse(topic);
         }

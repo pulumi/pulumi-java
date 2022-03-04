@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStoredInfoType {
-/**
- * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+    private GetStoredInfoType() {}
+    public interface BuilderApplicator {
+        public void apply(GetStoredInfoTypeArgs.Builder a);
+    }
+    private static GetStoredInfoTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStoredInfoTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
  * 
- */
+     */
+    public static CompletableFuture<GetStoredInfoTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+     * 
+     */
     public static CompletableFuture<GetStoredInfoTypeResult> invokeAsync(GetStoredInfoTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getStoredInfoType", TypeShape.of(GetStoredInfoTypeResult.class), args == null ? GetStoredInfoTypeArgs.Empty : args, Utilities.withVersion(options));
     }

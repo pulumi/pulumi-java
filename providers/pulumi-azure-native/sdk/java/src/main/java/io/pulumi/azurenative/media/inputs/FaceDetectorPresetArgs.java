@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.enums.BlurType;
 import io.pulumi.azurenative.media.enums.FaceRedactorMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="blurType")
-    private final @Nullable Input<Either<String,BlurType>> blurType;
+      private final @Nullable Input<Either<String,BlurType>> blurType;
 
     public Input<Either<String,BlurType>> getBlurType() {
         return this.blurType == null ? Input.empty() : this.blurType;
@@ -39,7 +39,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="experimentalOptions")
-    private final @Nullable Input<Map<String,String>> experimentalOptions;
+      private final @Nullable Input<Map<String,String>> experimentalOptions;
 
     public Input<Map<String,String>> getExperimentalOptions() {
         return this.experimentalOptions == null ? Input.empty() : this.experimentalOptions;
@@ -50,7 +50,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,FaceRedactorMode>> mode;
+      private final @Nullable Input<Either<String,FaceRedactorMode>> mode;
 
     public Input<Either<String,FaceRedactorMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -62,7 +62,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -73,7 +73,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resolution")
-    private final @Nullable Input<Either<String,AnalysisResolution>> resolution;
+      private final @Nullable Input<Either<String,AnalysisResolution>> resolution;
 
     public Input<Either<String,AnalysisResolution>> getResolution() {
         return this.resolution == null ? Input.empty() : this.resolution;
@@ -177,7 +177,6 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
             this.resolution = Input.ofNullable(resolution);
             return this;
         }
-
         public FaceDetectorPresetArgs build() {
             return new FaceDetectorPresetArgs(blurType, experimentalOptions, mode, odataType, resolution);
         }

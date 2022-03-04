@@ -5,7 +5,7 @@ package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.enums.TargetReferenceType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<TargetReferenceType> type;
+      private final Input<TargetReferenceType> type;
 
     public Input<TargetReferenceType> getType() {
         return this.type;
@@ -93,7 +93,6 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public TargetReferenceArgs build() {
             return new TargetReferenceArgs(id, type);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.DefaultObjectAccessControlArgs;
 import io.pulumi.googlenative.storage_v1.outputs.DefaultObjectAccessControlProjectTeamResponse;
@@ -211,6 +211,37 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
         return this.selfLink;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DefaultObjectAccessControlArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.storage_v1.DefaultObjectAccessControlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.storage_v1.DefaultObjectAccessControlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DefaultObjectAccessControl(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DefaultObjectAccessControl(String name) {
+        this(name, DefaultObjectAccessControlArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DefaultObjectAccessControl(String name, DefaultObjectAccessControlArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

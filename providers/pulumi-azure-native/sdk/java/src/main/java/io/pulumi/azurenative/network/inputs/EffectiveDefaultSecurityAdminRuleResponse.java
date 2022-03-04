@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.AddressPrefixItemResponse;
 import io.pulumi.azurenative.network.inputs.ConfigurationGroupResponse;
 import io.pulumi.azurenative.network.inputs.NetworkManagerSecurityGroupItemResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="access", required=true)
-    private final String access;
+      private final String access;
 
     public String getAccess() {
         return this.access;
@@ -39,7 +39,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="configurationDescription")
-    private final @Nullable String configurationDescription;
+      private final @Nullable String configurationDescription;
 
     public Optional<String> getConfigurationDescription() {
         return this.configurationDescription == null ? Optional.empty() : Optional.ofNullable(this.configurationDescription);
@@ -50,7 +50,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="configurationDisplayName")
-    private final @Nullable String configurationDisplayName;
+      private final @Nullable String configurationDisplayName;
 
     public Optional<String> getConfigurationDisplayName() {
         return this.configurationDisplayName == null ? Optional.empty() : Optional.ofNullable(this.configurationDisplayName);
@@ -61,7 +61,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -72,7 +72,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="destinationPortRanges", required=true)
-    private final List<String> destinationPortRanges;
+      private final List<String> destinationPortRanges;
 
     public List<String> getDestinationPortRanges() {
         return this.destinationPortRanges;
@@ -83,7 +83,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="destinations", required=true)
-    private final List<AddressPrefixItemResponse> destinations;
+      private final List<AddressPrefixItemResponse> destinations;
 
     public List<AddressPrefixItemResponse> getDestinations() {
         return this.destinations;
@@ -94,7 +94,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -105,7 +105,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -116,7 +116,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="flag")
-    private final @Nullable String flag;
+      private final @Nullable String flag;
 
     public Optional<String> getFlag() {
         return this.flag == null ? Optional.empty() : Optional.ofNullable(this.flag);
@@ -127,7 +127,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -139,7 +139,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -150,7 +150,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -161,7 +161,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+      private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -172,7 +172,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -183,7 +183,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="ruleCollectionAppliesToGroups")
-    private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
+      private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
 
     public List<NetworkManagerSecurityGroupItemResponse> getRuleCollectionAppliesToGroups() {
         return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
@@ -194,7 +194,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="ruleCollectionDescription")
-    private final @Nullable String ruleCollectionDescription;
+      private final @Nullable String ruleCollectionDescription;
 
     public Optional<String> getRuleCollectionDescription() {
         return this.ruleCollectionDescription == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDescription);
@@ -205,7 +205,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="ruleCollectionDisplayName")
-    private final @Nullable String ruleCollectionDisplayName;
+      private final @Nullable String ruleCollectionDisplayName;
 
     public Optional<String> getRuleCollectionDisplayName() {
         return this.ruleCollectionDisplayName == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDisplayName);
@@ -216,7 +216,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="ruleGroups")
-    private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
+      private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
 
     public List<ConfigurationGroupResponse> getRuleGroups() {
         return this.ruleGroups == null ? List.of() : this.ruleGroups;
@@ -227,7 +227,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="sourcePortRanges", required=true)
-    private final List<String> sourcePortRanges;
+      private final List<String> sourcePortRanges;
 
     public List<String> getSourcePortRanges() {
         return this.sourcePortRanges;
@@ -238,7 +238,7 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="sources", required=true)
-    private final List<AddressPrefixItemResponse> sources;
+      private final List<AddressPrefixItemResponse> sources;
 
     public List<AddressPrefixItemResponse> getSources() {
         return this.sources;
@@ -467,7 +467,6 @@ public final class EffectiveDefaultSecurityAdminRuleResponse extends io.pulumi.r
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public EffectiveDefaultSecurityAdminRuleResponse build() {
             return new EffectiveDefaultSecurityAdminRuleResponse(access, configurationDescription, configurationDisplayName, description, destinationPortRanges, destinations, direction, displayName, flag, id, kind, priority, protocol, provisioningState, ruleCollectionAppliesToGroups, ruleCollectionDescription, ruleCollectionDisplayName, ruleGroups, sourcePortRanges, sources);
         }

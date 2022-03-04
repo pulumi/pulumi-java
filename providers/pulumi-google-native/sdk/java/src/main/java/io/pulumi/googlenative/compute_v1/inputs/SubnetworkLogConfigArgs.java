@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.SubnetworkLogConfigAggregationInterval;
 import io.pulumi.googlenative.compute_v1.enums.SubnetworkLogConfigMetadata;
 import java.lang.Boolean;
@@ -28,7 +28,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="aggregationInterval")
-    private final @Nullable Input<SubnetworkLogConfigAggregationInterval> aggregationInterval;
+      private final @Nullable Input<SubnetworkLogConfigAggregationInterval> aggregationInterval;
 
     public Input<SubnetworkLogConfigAggregationInterval> getAggregationInterval() {
         return this.aggregationInterval == null ? Input.empty() : this.aggregationInterval;
@@ -39,7 +39,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -50,7 +50,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="filterExpr")
-    private final @Nullable Input<String> filterExpr;
+      private final @Nullable Input<String> filterExpr;
 
     public Input<String> getFilterExpr() {
         return this.filterExpr == null ? Input.empty() : this.filterExpr;
@@ -61,7 +61,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="flowSampling")
-    private final @Nullable Input<Double> flowSampling;
+      private final @Nullable Input<Double> flowSampling;
 
     public Input<Double> getFlowSampling() {
         return this.flowSampling == null ? Input.empty() : this.flowSampling;
@@ -72,7 +72,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<SubnetworkLogConfigMetadata> metadata;
+      private final @Nullable Input<SubnetworkLogConfigMetadata> metadata;
 
     public Input<SubnetworkLogConfigMetadata> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -83,7 +83,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metadataFields")
-    private final @Nullable Input<List<String>> metadataFields;
+      private final @Nullable Input<List<String>> metadataFields;
 
     public Input<List<String>> getMetadataFields() {
         return this.metadataFields == null ? Input.empty() : this.metadataFields;
@@ -202,7 +202,6 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
             this.metadataFields = Input.ofNullable(metadataFields);
             return this;
         }
-
         public SubnetworkLogConfigArgs build() {
             return new SubnetworkLogConfigArgs(aggregationInterval, enable, filterExpr, flowSampling, metadata, metadataFields);
         }

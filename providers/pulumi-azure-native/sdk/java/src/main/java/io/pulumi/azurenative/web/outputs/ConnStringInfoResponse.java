@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ConnStringInfoResponse {
     /**
      * Connection string value.
      * 
-     */
+    */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * Name of connection string.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Type of database.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class ConnStringInfoResponse {
             this.type = type;
             return this;
         }
-
         public ConnStringInfoResponse build() {
             return new ConnStringInfoResponse(connectionString, name, type);
         }

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -43,7 +43,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<Either<String,SybaseAuthenticationType>> authenticationType;
+      private final @Nullable Input<Either<String,SybaseAuthenticationType>> authenticationType;
 
     public Input<Either<String,SybaseAuthenticationType>> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -54,7 +54,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -65,7 +65,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="database", required=true)
-    private final Input<Object> database;
+      private final Input<Object> database;
 
     public Input<Object> getDatabase() {
         return this.database;
@@ -76,7 +76,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -87,7 +87,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -98,7 +98,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -109,7 +109,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -120,7 +120,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<Object> schema;
+      private final @Nullable Input<Object> schema;
 
     public Input<Object> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -131,7 +131,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="server", required=true)
-    private final Input<Object> server;
+      private final Input<Object> server;
 
     public Input<Object> getServer() {
         return this.server;
@@ -143,7 +143,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -154,7 +154,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<Object> username;
+      private final @Nullable Input<Object> username;
 
     public Input<Object> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -363,7 +363,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public SybaseLinkedServiceArgs build() {
             return new SybaseLinkedServiceArgs(annotations, authenticationType, connectVia, database, description, encryptedCredential, parameters, password, schema, server, type, username);
         }

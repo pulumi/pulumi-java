@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixed")
-    private final @Nullable Input<Integer> fixed;
+      private final @Nullable Input<Integer> fixed;
 
     public Input<Integer> getFixed() {
         return this.fixed == null ? Input.empty() : this.fixed;
@@ -34,7 +34,7 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="percent")
-    private final @Nullable Input<Integer> percent;
+      private final @Nullable Input<Integer> percent;
 
     public Input<Integer> getPercent() {
         return this.percent == null ? Input.empty() : this.percent;
@@ -93,7 +93,6 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
             this.percent = Input.ofNullable(percent);
             return this;
         }
-
         public FixedOrPercentArgs build() {
             return new FixedOrPercentArgs(fixed, percent);
         }

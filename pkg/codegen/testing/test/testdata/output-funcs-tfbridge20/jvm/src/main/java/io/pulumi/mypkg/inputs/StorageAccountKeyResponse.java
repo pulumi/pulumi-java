@@ -3,7 +3,7 @@
 
 package io.pulumi.mypkg.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="creationTime", required=true)
-    private final String creationTime;
+      private final String creationTime;
 
     public String getCreationTime() {
         return this.creationTime;
@@ -32,7 +32,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final String keyName;
+      private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -43,7 +43,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final String permissions;
+      private final String permissions;
 
     public String getPermissions() {
         return this.permissions;
@@ -54,7 +54,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -123,7 +123,6 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StorageAccountKeyResponse build() {
             return new StorageAccountKeyResponse(creationTime, keyName, permissions, value);
         }

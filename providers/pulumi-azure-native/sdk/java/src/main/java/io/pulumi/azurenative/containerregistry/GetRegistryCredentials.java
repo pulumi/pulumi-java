@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerregistry.inputs.GetRegistryCredentialsArgs;
 import io.pulumi.azurenative.containerregistry.outputs.GetRegistryCredentialsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistryCredentials {
-/**
- * The result of a request to get the administrator login credentials for a container registry.
+    private GetRegistryCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegistryCredentialsArgs.Builder a);
+    }
+    private static GetRegistryCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegistryCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The result of a request to get the administrator login credentials for a container registry.
  * API Version: 2016-06-27-preview.
  * 
- *
- * The result of a request to get the administrator login credentials for a container registry.
+     *
+     * The result of a request to get the administrator login credentials for a container registry.
  * 
- */
+     */
+    public static CompletableFuture<GetRegistryCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The result of a request to get the administrator login credentials for a container registry.
+     * API Version: 2016-06-27-preview.
+     * 
+     *
+         * The result of a request to get the administrator login credentials for a container registry.
+     * 
+     */
     public static CompletableFuture<GetRegistryCredentialsResult> invokeAsync(GetRegistryCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getRegistryCredentials", TypeShape.of(GetRegistryCredentialsResult.class), args == null ? GetRegistryCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

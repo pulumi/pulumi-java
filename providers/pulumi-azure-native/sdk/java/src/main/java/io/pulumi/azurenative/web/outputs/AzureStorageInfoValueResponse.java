@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class AzureStorageInfoValueResponse {
     /**
      * Access key for the storage account.
      * 
-     */
+    */
     public Optional<String> getAccessKey() {
         return Optional.ofNullable(this.accessKey);
     }
     /**
      * Name of the storage account.
      * 
-     */
+    */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * Path to mount the storage within the site's runtime environment.
      * 
-     */
+    */
     public Optional<String> getMountPath() {
         return Optional.ofNullable(this.mountPath);
     }
     /**
      * Name of the file share (container name, for Blob storage).
      * 
-     */
+    */
     public Optional<String> getShareName() {
         return Optional.ofNullable(this.shareName);
     }
     /**
      * State of the storage account.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Type of storage.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -160,7 +160,6 @@ public final class AzureStorageInfoValueResponse {
             this.type = type;
             return this;
         }
-
         public AzureStorageInfoValueResponse build() {
             return new AzureStorageInfoValueResponse(accessKey, accountName, mountPath, shareName, state, type);
         }

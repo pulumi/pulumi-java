@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PortStatus;
 import java.lang.String;
 import java.util.List;
@@ -42,21 +42,21 @@ public final class LoadBalancerIngress {
     /**
      * Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
      * 
-     */
+    */
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
      * 
-     */
+    */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
      * 
-     */
+    */
     public List<PortStatus> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }
@@ -99,7 +99,6 @@ public final class LoadBalancerIngress {
             this.ports = ports;
             return this;
         }
-
         public LoadBalancerIngress build() {
             return new LoadBalancerIngress(hostname, ip, ports);
         }

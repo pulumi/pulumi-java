@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.enums.DatasetResourceConfigurationComputeType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class DatasetResourceConfiguration {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public DatasetResourceConfiguration build() {
             return new DatasetResourceConfiguration(computeType, volumeSizeInGB);
         }

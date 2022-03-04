@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -85,63 +85,63 @@ public final class GetInstancePoolResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
      * 
-     */
+    */
     public String getLicenseType() {
         return this.licenseType;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name and tier of the SKU.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource ID of the subnet to place this instance pool in.
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Count of vCores belonging to this instance pool.
      * 
-     */
+    */
     public Integer getVCores() {
         return this.vCores;
     }
@@ -226,7 +226,6 @@ public final class GetInstancePoolResult {
             this.vCores = Objects.requireNonNull(vCores);
             return this;
         }
-
         public GetInstancePoolResult build() {
             return new GetInstancePoolResult(id, licenseType, location, name, sku, subnetId, tags, type, vCores);
         }

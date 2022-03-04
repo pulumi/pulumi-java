@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ACIServiceResponseResponseDataCollection {
     /**
      * Option for enabling/disabling Event Hub.
      * 
-     */
+    */
     public Optional<Boolean> getEventHubEnabled() {
         return Optional.ofNullable(this.eventHubEnabled);
     }
     /**
      * Option for enabling/disabling storage.
      * 
-     */
+    */
     public Optional<Boolean> getStorageEnabled() {
         return Optional.ofNullable(this.storageEnabled);
     }
@@ -76,7 +76,6 @@ public final class ACIServiceResponseResponseDataCollection {
             this.storageEnabled = storageEnabled;
             return this;
         }
-
         public ACIServiceResponseResponseDataCollection build() {
             return new ACIServiceResponseResponseDataCollection(eventHubEnabled, storageEnabled);
         }

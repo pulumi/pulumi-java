@@ -6,21 +6,41 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.inputs.GetStorageAccountCredentialArgs;
 import io.pulumi.azurenative.databoxedge.outputs.GetStorageAccountCredentialResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStorageAccountCredential {
-/**
- * The storage account credential.
+    private GetStorageAccountCredential() {}
+    public interface BuilderApplicator {
+        public void apply(GetStorageAccountCredentialArgs.Builder a);
+    }
+    private static GetStorageAccountCredentialArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStorageAccountCredentialArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The storage account credential.
  * API Version: 2020-12-01.
  * 
- *
- * The storage account credential.
+     *
+     * The storage account credential.
  * 
- */
+     */
+    public static CompletableFuture<GetStorageAccountCredentialResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The storage account credential.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * The storage account credential.
+     * 
+     */
     public static CompletableFuture<GetStorageAccountCredentialResult> invokeAsync(GetStorageAccountCredentialArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getStorageAccountCredential", TypeShape.of(GetStorageAccountCredentialResult.class), args == null ? GetStorageAccountCredentialArgs.Empty : args, Utilities.withVersion(options));
     }

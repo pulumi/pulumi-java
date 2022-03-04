@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class TestTimingResponse {
     /**
      * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
      * 
-     */
+    */
     public DurationResponse getTestProcessDuration() {
         return this.testProcessDuration;
     }
@@ -52,7 +52,6 @@ public final class TestTimingResponse {
             this.testProcessDuration = Objects.requireNonNull(testProcessDuration);
             return this;
         }
-
         public TestTimingResponse build() {
             return new TestTimingResponse(testProcessDuration);
         }

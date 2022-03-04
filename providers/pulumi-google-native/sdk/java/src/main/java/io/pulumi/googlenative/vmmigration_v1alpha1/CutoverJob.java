@@ -5,8 +5,8 @@ package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1alpha1.CutoverJobArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDetailsResponse;
@@ -151,6 +151,37 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
         return this.stateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CutoverJobArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.vmmigration_v1alpha1.CutoverJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.vmmigration_v1alpha1.CutoverJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CutoverJob(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CutoverJob(String name) {
+        this(name, CutoverJobArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CutoverJob(String name, CutoverJobArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

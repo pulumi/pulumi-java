@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class QuickConnectQueueQuickConnectConfig {
             this.queueArn = Objects.requireNonNull(queueArn);
             return this;
         }
-
         public QuickConnectQueueQuickConnectConfig build() {
             return new QuickConnectQueueQuickConnectConfig(contactFlowArn, queueArn);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.datashare.enums.SynchronizationSettingKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,SynchronizationSettingKind>> kind;
+      private final Input<Either<String,SynchronizationSettingKind>> kind;
 
     public Input<Either<String,SynchronizationSettingKind>> getKind() {
         return this.kind;
@@ -43,7 +43,7 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final Input<String> shareName;
+      private final Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName;
@@ -65,7 +65,7 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="synchronizationSettingName")
-    private final @Nullable Input<String> synchronizationSettingName;
+      private final @Nullable Input<String> synchronizationSettingName;
 
     public Input<String> getSynchronizationSettingName() {
         return this.synchronizationSettingName == null ? Input.empty() : this.synchronizationSettingName;
@@ -169,7 +169,6 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
             this.synchronizationSettingName = Input.ofNullable(synchronizationSettingName);
             return this;
         }
-
         public SynchronizationSettingArgs build() {
             return new SynchronizationSettingArgs(accountName, kind, resourceGroupName, shareName, synchronizationSettingName);
         }

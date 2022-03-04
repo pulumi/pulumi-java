@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * 
      */
     @InputImport(name="bucketSize", required=true)
-    private final String bucketSize;
+      private final String bucketSize;
 
     public String getBucketSize() {
         return this.bucketSize;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * 
      */
     @InputImport(name="bucketValueCount", required=true)
-    private final String bucketValueCount;
+      private final String bucketValueCount;
 
     public String getBucketValueCount() {
         return this.bucketValueCount;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * 
      */
     @InputImport(name="bucketValues", required=true)
-    private final List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
+      private final List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> getBucketValues() {
         return this.bucketValues;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * 
      */
     @InputImport(name="maxProbability", required=true)
-    private final Double maxProbability;
+      private final Double maxProbability;
 
     public Double getMaxProbability() {
         return this.maxProbability;
@@ -68,7 +68,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * 
      */
     @InputImport(name="minProbability", required=true)
-    private final Double minProbability;
+      private final Double minProbability;
 
     public Double getMinProbability() {
         return this.minProbability;
@@ -147,7 +147,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
             this.minProbability = Objects.requireNonNull(minProbability);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxProbability, minProbability);
         }

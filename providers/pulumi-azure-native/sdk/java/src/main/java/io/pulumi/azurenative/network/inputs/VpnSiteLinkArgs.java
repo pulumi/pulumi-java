@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.VpnLinkBgpSettingsArgs;
 import io.pulumi.azurenative.network.inputs.VpnLinkProviderPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpProperties")
-    private final @Nullable Input<VpnLinkBgpSettingsArgs> bgpProperties;
+      private final @Nullable Input<VpnLinkBgpSettingsArgs> bgpProperties;
 
     public Input<VpnLinkBgpSettingsArgs> getBgpProperties() {
         return this.bgpProperties == null ? Input.empty() : this.bgpProperties;
@@ -36,7 +36,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable Input<String> fqdn;
+      private final @Nullable Input<String> fqdn;
 
     public Input<String> getFqdn() {
         return this.fqdn == null ? Input.empty() : this.fqdn;
@@ -47,7 +47,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -58,7 +58,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -69,7 +69,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkProperties")
-    private final @Nullable Input<VpnLinkProviderPropertiesArgs> linkProperties;
+      private final @Nullable Input<VpnLinkProviderPropertiesArgs> linkProperties;
 
     public Input<VpnLinkProviderPropertiesArgs> getLinkProperties() {
         return this.linkProperties == null ? Input.empty() : this.linkProperties;
@@ -80,7 +80,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -199,7 +199,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public VpnSiteLinkArgs build() {
             return new VpnSiteLinkArgs(bgpProperties, fqdn, id, ipAddress, linkProperties, name);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotFulfillmentStartResponseSpecification;
 import io.pulumi.awsnative.lex.outputs.BotFulfillmentUpdateResponseSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -42,7 +42,7 @@ public final class BotFulfillmentUpdatesSpecification {
     /**
      * Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
      * 
-     */
+    */
     public Boolean getActive() {
         return this.active;
     }
@@ -52,7 +52,7 @@ public final class BotFulfillmentUpdatesSpecification {
     /**
      * The length of time that the fulfillment Lambda function should run before it times out.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
@@ -105,7 +105,6 @@ public final class BotFulfillmentUpdatesSpecification {
             this.updateResponse = updateResponse;
             return this;
         }
-
         public BotFulfillmentUpdatesSpecification build() {
             return new BotFulfillmentUpdatesSpecification(active, startResponse, timeoutInSeconds, updateResponse);
         }

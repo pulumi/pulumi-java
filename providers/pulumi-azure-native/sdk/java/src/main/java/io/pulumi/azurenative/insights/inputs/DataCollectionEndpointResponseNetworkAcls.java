@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DataCollectionEndpointResponseNetworkAcls extends io.pulumi.r
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable String publicNetworkAccess;
+      private final @Nullable String publicNetworkAccess;
 
     public Optional<String> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
@@ -61,7 +61,6 @@ public final class DataCollectionEndpointResponseNetworkAcls extends io.pulumi.r
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public DataCollectionEndpointResponseNetworkAcls build() {
             return new DataCollectionEndpointResponseNetworkAcls(publicNetworkAccess);
         }

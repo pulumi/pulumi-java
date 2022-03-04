@@ -9,8 +9,8 @@ import io.pulumi.awsnative.connect.outputs.HoursOfOperationConfig;
 import io.pulumi.awsnative.connect.outputs.HoursOfOperationTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -122,6 +122,37 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
         return this.timeZone;
     }
 
+    public interface BuilderApplicator {
+        public void apply(HoursOfOperationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.connect.HoursOfOperationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.connect.HoursOfOperationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public HoursOfOperation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public HoursOfOperation(String name) {
+        this(name, HoursOfOperationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public HoursOfOperation(String name, HoursOfOperationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.AppEngineArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.CloudEndpointsArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.ClusterIstioArgs;
@@ -27,7 +27,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngine")
-    private final @Nullable Input<AppEngineArgs> appEngine;
+      private final @Nullable Input<AppEngineArgs> appEngine;
 
     public Input<AppEngineArgs> getAppEngine() {
         return this.appEngine == null ? Input.empty() : this.appEngine;
@@ -38,7 +38,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudEndpoints")
-    private final @Nullable Input<CloudEndpointsArgs> cloudEndpoints;
+      private final @Nullable Input<CloudEndpointsArgs> cloudEndpoints;
 
     public Input<CloudEndpointsArgs> getCloudEndpoints() {
         return this.cloudEndpoints == null ? Input.empty() : this.cloudEndpoints;
@@ -49,7 +49,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIstio")
-    private final @Nullable Input<ClusterIstioArgs> clusterIstio;
+      private final @Nullable Input<ClusterIstioArgs> clusterIstio;
 
     public Input<ClusterIstioArgs> getClusterIstio() {
         return this.clusterIstio == null ? Input.empty() : this.clusterIstio;
@@ -60,7 +60,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="custom")
-    private final @Nullable Input<CustomArgs> custom;
+      private final @Nullable Input<CustomArgs> custom;
 
     public Input<CustomArgs> getCustom() {
         return this.custom == null ? Input.empty() : this.custom;
@@ -71,7 +71,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -82,7 +82,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="istioCanonicalService")
-    private final @Nullable Input<IstioCanonicalServiceArgs> istioCanonicalService;
+      private final @Nullable Input<IstioCanonicalServiceArgs> istioCanonicalService;
 
     public Input<IstioCanonicalServiceArgs> getIstioCanonicalService() {
         return this.istioCanonicalService == null ? Input.empty() : this.istioCanonicalService;
@@ -93,7 +93,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="meshIstio")
-    private final @Nullable Input<MeshIstioArgs> meshIstio;
+      private final @Nullable Input<MeshIstioArgs> meshIstio;
 
     public Input<MeshIstioArgs> getMeshIstio() {
         return this.meshIstio == null ? Input.empty() : this.meshIstio;
@@ -104,14 +104,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="serviceId")
-    private final @Nullable Input<String> serviceId;
+      private final @Nullable Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId == null ? Input.empty() : this.serviceId;
@@ -122,7 +122,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="telemetry")
-    private final @Nullable Input<TelemetryArgs> telemetry;
+      private final @Nullable Input<TelemetryArgs> telemetry;
 
     public Input<TelemetryArgs> getTelemetry() {
         return this.telemetry == null ? Input.empty() : this.telemetry;
@@ -133,21 +133,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userLabels")
-    private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Input<Map<String,String>> userLabels;
 
     public Input<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Input.empty() : this.userLabels;
     }
 
     @InputImport(name="v3Id", required=true)
-    private final Input<String> v3Id;
+      private final Input<String> v3Id;
 
     public Input<String> getV3Id() {
         return this.v3Id;
     }
 
     @InputImport(name="v3Id1", required=true)
-    private final Input<String> v3Id1;
+      private final Input<String> v3Id1;
 
     public Input<String> getV3Id1() {
         return this.v3Id1;
@@ -371,7 +371,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.v3Id1 = Input.of(Objects.requireNonNull(v3Id1));
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(appEngine, cloudEndpoints, clusterIstio, custom, displayName, istioCanonicalService, meshIstio, name, serviceId, telemetry, userLabels, v3Id, v3Id1);
         }

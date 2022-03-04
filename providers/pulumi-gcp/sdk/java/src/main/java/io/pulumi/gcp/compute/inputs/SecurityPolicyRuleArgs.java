@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleMatchArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleRateLimitOptionsArgs;
 import java.lang.Boolean;
@@ -27,7 +27,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -38,7 +38,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="match", required=true)
-    private final Input<SecurityPolicyRuleMatchArgs> match;
+      private final Input<SecurityPolicyRuleMatchArgs> match;
 
     public Input<SecurityPolicyRuleMatchArgs> getMatch() {
         return this.match;
@@ -62,7 +62,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="preview")
-    private final @Nullable Input<Boolean> preview;
+      private final @Nullable Input<Boolean> preview;
 
     public Input<Boolean> getPreview() {
         return this.preview == null ? Input.empty() : this.preview;
@@ -74,7 +74,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -86,7 +86,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rateLimitOptions")
-    private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
+      private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
     public Input<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
         return this.rateLimitOptions == null ? Input.empty() : this.rateLimitOptions;
@@ -205,7 +205,6 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.rateLimitOptions = Input.ofNullable(rateLimitOptions);
             return this;
         }
-
         public SecurityPolicyRuleArgs build() {
             return new SecurityPolicyRuleArgs(action, description, match, preview, priority, rateLimitOptions);
         }

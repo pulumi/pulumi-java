@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-    private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Input<Map<String,Object>> keepers;
 
     public Input<Map<String,Object>> getKeepers() {
         return this.keepers == null ? Input.empty() : this.keepers;
@@ -35,7 +35,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyAlgorithm")
-    private final @Nullable Input<String> keyAlgorithm;
+      private final @Nullable Input<String> keyAlgorithm;
 
     public Input<String> getKeyAlgorithm() {
         return this.keyAlgorithm == null ? Input.empty() : this.keyAlgorithm;
@@ -46,7 +46,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKeyType")
-    private final @Nullable Input<String> privateKeyType;
+      private final @Nullable Input<String> privateKeyType;
 
     public Input<String> getPrivateKeyType() {
         return this.privateKeyType == null ? Input.empty() : this.privateKeyType;
@@ -57,7 +57,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyData")
-    private final @Nullable Input<String> publicKeyData;
+      private final @Nullable Input<String> publicKeyData;
 
     public Input<String> getPublicKeyData() {
         return this.publicKeyData == null ? Input.empty() : this.publicKeyData;
@@ -68,7 +68,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyType")
-    private final @Nullable Input<String> publicKeyType;
+      private final @Nullable Input<String> publicKeyType;
 
     public Input<String> getPublicKeyType() {
         return this.publicKeyType == null ? Input.empty() : this.publicKeyType;
@@ -81,7 +81,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountId", required=true)
-    private final Input<String> serviceAccountId;
+      private final Input<String> serviceAccountId;
 
     public Input<String> getServiceAccountId() {
         return this.serviceAccountId;
@@ -200,7 +200,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceAccountId = Input.of(Objects.requireNonNull(serviceAccountId));
             return this;
         }
-
         public KeyArgs build() {
             return new KeyArgs(keepers, keyAlgorithm, privateKeyType, publicKeyData, publicKeyType, serviceAccountId);
         }

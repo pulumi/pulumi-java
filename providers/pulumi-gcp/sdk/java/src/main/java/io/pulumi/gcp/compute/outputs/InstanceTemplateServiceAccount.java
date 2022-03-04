@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +38,7 @@ public final class InstanceTemplateServiceAccount {
      * The service account e-mail address. If not given, the
      * default Google Compute Engine service account is used.
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
@@ -47,7 +47,7 @@ public final class InstanceTemplateServiceAccount {
      * short names are supported. To allow full access to all Cloud APIs, use the
      * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes;
     }
@@ -83,7 +83,6 @@ public final class InstanceTemplateServiceAccount {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public InstanceTemplateServiceAccount build() {
             return new InstanceTemplateServiceAccount(email, scopes);
         }

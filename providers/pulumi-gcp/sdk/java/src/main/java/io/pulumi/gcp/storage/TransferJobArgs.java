@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+      private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -33,7 +33,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -44,7 +44,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<TransferJobScheduleArgs> schedule;
+      private final @Nullable Input<TransferJobScheduleArgs> schedule;
 
     public Input<TransferJobScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -55,7 +55,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -66,7 +66,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferSpec", required=true)
-    private final Input<TransferJobTransferSpecArgs> transferSpec;
+      private final Input<TransferJobTransferSpecArgs> transferSpec;
 
     public Input<TransferJobTransferSpecArgs> getTransferSpec() {
         return this.transferSpec;
@@ -170,7 +170,6 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             this.transferSpec = Input.of(Objects.requireNonNull(transferSpec));
             return this;
         }
-
         public TransferJobArgs build() {
             return new TransferJobArgs(description, project, schedule, status, transferSpec);
         }

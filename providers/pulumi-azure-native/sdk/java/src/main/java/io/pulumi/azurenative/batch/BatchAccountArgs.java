@@ -10,7 +10,7 @@ import io.pulumi.azurenative.batch.inputs.BatchAccountIdentityArgs;
 import io.pulumi.azurenative.batch.inputs.EncryptionPropertiesArgs;
 import io.pulumi.azurenative.batch.inputs.KeyVaultReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+      private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -37,7 +37,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoStorage")
-    private final @Nullable Input<AutoStorageBasePropertiesArgs> autoStorage;
+      private final @Nullable Input<AutoStorageBasePropertiesArgs> autoStorage;
 
     public Input<AutoStorageBasePropertiesArgs> getAutoStorage() {
         return this.autoStorage == null ? Input.empty() : this.autoStorage;
@@ -48,7 +48,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<EncryptionPropertiesArgs> encryption;
+      private final @Nullable Input<EncryptionPropertiesArgs> encryption;
 
     public Input<EncryptionPropertiesArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -59,7 +59,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<BatchAccountIdentityArgs> identity;
+      private final @Nullable Input<BatchAccountIdentityArgs> identity;
 
     public Input<BatchAccountIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -70,7 +70,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultReference")
-    private final @Nullable Input<KeyVaultReferenceArgs> keyVaultReference;
+      private final @Nullable Input<KeyVaultReferenceArgs> keyVaultReference;
 
     public Input<KeyVaultReferenceArgs> getKeyVaultReference() {
         return this.keyVaultReference == null ? Input.empty() : this.keyVaultReference;
@@ -81,7 +81,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -92,7 +92,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolAllocationMode")
-    private final @Nullable Input<PoolAllocationMode> poolAllocationMode;
+      private final @Nullable Input<PoolAllocationMode> poolAllocationMode;
 
     public Input<PoolAllocationMode> getPoolAllocationMode() {
         return this.poolAllocationMode == null ? Input.empty() : this.poolAllocationMode;
@@ -103,7 +103,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<PublicNetworkAccessType> publicNetworkAccess;
+      private final @Nullable Input<PublicNetworkAccessType> publicNetworkAccess;
 
     public Input<PublicNetworkAccessType> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -114,7 +114,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -125,7 +125,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -304,7 +304,6 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public BatchAccountArgs build() {
             return new BatchAccountArgs(accountName, autoStorage, encryption, identity, keyVaultReference, location, poolAllocationMode, publicNetworkAccess, resourceGroupName, tags);
         }

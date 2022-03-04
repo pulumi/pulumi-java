@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class ConnectionDetailsResponse {
     /**
      * Group ID.
      * 
-     */
+    */
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * Connection details ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Link ID.
      * 
-     */
+    */
     public String getLinkIdentifier() {
         return this.linkIdentifier;
     }
     /**
      * Member name.
      * 
-     */
+    */
     public String getMemberName() {
         return this.memberName;
     }
     /**
      * Private IP address.
      * 
-     */
+    */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
@@ -137,7 +137,6 @@ public final class ConnectionDetailsResponse {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public ConnectionDetailsResponse build() {
             return new ConnectionDetailsResponse(groupId, id, linkIdentifier, memberName, privateIpAddress);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -49,28 +49,28 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse {
     /**
      * Whether to set database read only before migration
      * 
-     */
+    */
     public Optional<Boolean> getMakeSourceDbReadOnly() {
         return Optional.ofNullable(this.makeSourceDbReadOnly);
     }
     /**
      * Name of the database
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Mapping of source to target tables
      * 
-     */
+    */
     public Map<String,String> getTableMap() {
         return this.tableMap == null ? Map.of() : this.tableMap;
     }
     /**
      * Name of target database. Note: Target database will be truncated before starting migration.
      * 
-     */
+    */
     public Optional<String> getTargetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
@@ -120,7 +120,6 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
-
         public MigrateSqlServerSqlDbDatabaseInputResponse build() {
             return new MigrateSqlServerSqlDbDatabaseInputResponse(makeSourceDbReadOnly, name, tableMap, targetDatabaseName);
         }

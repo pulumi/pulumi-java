@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.AddRemoveReplicaScalingMechanismResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.AverageLoadScalingTriggerResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="mechanism", required=true)
-    private final AddRemoveReplicaScalingMechanismResponse mechanism;
+      private final AddRemoveReplicaScalingMechanismResponse mechanism;
 
     public AddRemoveReplicaScalingMechanismResponse getMechanism() {
         return this.mechanism;
@@ -34,7 +34,7 @@ public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="trigger", required=true)
-    private final AverageLoadScalingTriggerResponse trigger;
+      private final AverageLoadScalingTriggerResponse trigger;
 
     public AverageLoadScalingTriggerResponse getTrigger() {
         return this.trigger;
@@ -104,7 +104,6 @@ public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeA
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public AutoScalingPolicyResponse build() {
             return new AutoScalingPolicyResponse(mechanism, name, trigger);
         }

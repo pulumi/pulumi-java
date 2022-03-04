@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceGroupManagerStatusStatefulPerInstanceConfig;
 import java.lang.Boolean;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class InstanceGroupManagerStatusStateful {
     /**
      * A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
      * 
-     */
+    */
     public Optional<Boolean> getHasStatefulConfig() {
         return Optional.ofNullable(this.hasStatefulConfig);
     }
     /**
      * Status of per-instance configs on the instance.
      * 
-     */
+    */
     public List<InstanceGroupManagerStatusStatefulPerInstanceConfig> getPerInstanceConfigs() {
         return this.perInstanceConfigs == null ? List.of() : this.perInstanceConfigs;
     }
@@ -78,7 +78,6 @@ public final class InstanceGroupManagerStatusStateful {
             this.perInstanceConfigs = perInstanceConfigs;
             return this;
         }
-
         public InstanceGroupManagerStatusStateful build() {
             return new InstanceGroupManagerStatusStateful(hasStatefulConfig, perInstanceConfigs);
         }

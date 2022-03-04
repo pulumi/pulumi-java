@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.FlowEndpointsConfigurationResponse;
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmenEncryptionConfigurationResponse;
 import io.pulumi.azurenative.logic.inputs.NetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
+      private final @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
 
     public Optional<IntegrationServiceEnvironmenEncryptionConfigurationResponse> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
@@ -37,7 +37,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="endpointsConfiguration")
-    private final @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
+      private final @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
 
     public Optional<FlowEndpointsConfigurationResponse> getEndpointsConfiguration() {
         return this.endpointsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.endpointsConfiguration);
@@ -48,7 +48,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="integrationServiceEnvironmentId")
-    private final @Nullable String integrationServiceEnvironmentId;
+      private final @Nullable String integrationServiceEnvironmentId;
 
     public Optional<String> getIntegrationServiceEnvironmentId() {
         return this.integrationServiceEnvironmentId == null ? Optional.empty() : Optional.ofNullable(this.integrationServiceEnvironmentId);
@@ -59,7 +59,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="networkConfiguration")
-    private final @Nullable NetworkConfigurationResponse networkConfiguration;
+      private final @Nullable NetworkConfigurationResponse networkConfiguration;
 
     public Optional<NetworkConfigurationResponse> getNetworkConfiguration() {
         return this.networkConfiguration == null ? Optional.empty() : Optional.ofNullable(this.networkConfiguration);
@@ -70,7 +70,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+      private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -81,7 +81,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -170,7 +170,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
             this.state = state;
             return this;
         }
-
         public IntegrationServiceEnvironmentPropertiesResponse build() {
             return new IntegrationServiceEnvironmentPropertiesResponse(encryptionConfiguration, endpointsConfiguration, integrationServiceEnvironmentId, networkConfiguration, provisioningState, state);
         }

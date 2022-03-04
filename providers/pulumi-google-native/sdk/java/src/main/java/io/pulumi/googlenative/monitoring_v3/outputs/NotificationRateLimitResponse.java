@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class NotificationRateLimitResponse {
     /**
      * Not more than one notification per period.
      * 
-     */
+    */
     public String getPeriod() {
         return this.period;
     }
@@ -52,7 +52,6 @@ public final class NotificationRateLimitResponse {
             this.period = Objects.requireNonNull(period);
             return this;
         }
-
         public NotificationRateLimitResponse build() {
             return new NotificationRateLimitResponse(period);
         }

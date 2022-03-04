@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -104,84 +104,84 @@ public final class BackendResponse {
     /**
      * Location of the backend (IP address or FQDN)
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
      * 
-     */
+    */
     public Optional<String> getBackendHostHeader() {
         return Optional.ofNullable(this.backendHostHeader);
     }
     /**
      * Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
      * 
-     */
+    */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * The HTTP TCP port number. Must be between 1 and 65535.
      * 
-     */
+    */
     public Optional<Integer> getHttpPort() {
         return Optional.ofNullable(this.httpPort);
     }
     /**
      * The HTTPS TCP port number. Must be between 1 and 65535.
      * 
-     */
+    */
     public Optional<Integer> getHttpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
     /**
      * Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The Approval status for the connection to the Private Link
      * 
-     */
+    */
     public String getPrivateEndpointStatus() {
         return this.privateEndpointStatus;
     }
     /**
      * The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
      * 
-     */
+    */
     public Optional<String> getPrivateLinkAlias() {
         return Optional.ofNullable(this.privateLinkAlias);
     }
     /**
      * A custom message to be included in the approval request to connect to the Private Link
      * 
-     */
+    */
     public Optional<String> getPrivateLinkApprovalMessage() {
         return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
     /**
      * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
      * 
-     */
+    */
     public Optional<String> getPrivateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
     /**
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
      * 
-     */
+    */
     public Optional<String> getPrivateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
      * Weight of this endpoint for load balancing purposes.
      * 
-     */
+    */
     public Optional<Integer> getWeight() {
         return Optional.ofNullable(this.weight);
     }
@@ -287,7 +287,6 @@ public final class BackendResponse {
             this.weight = weight;
             return this;
         }
-
         public BackendResponse build() {
             return new BackendResponse(address, backendHostHeader, enabledState, httpPort, httpsPort, priority, privateEndpointStatus, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
         }

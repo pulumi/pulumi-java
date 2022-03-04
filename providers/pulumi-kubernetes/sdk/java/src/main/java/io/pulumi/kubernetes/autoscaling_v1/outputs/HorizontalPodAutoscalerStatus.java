@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class HorizontalPodAutoscalerStatus {
     /**
      * current average CPU utilization over all pods, represented as a percentage of requested CPU, e.g. 70 means that an average pod is using now 70% of its requested CPU.
      * 
-     */
+    */
     public Optional<Integer> getCurrentCPUUtilizationPercentage() {
         return Optional.ofNullable(this.currentCPUUtilizationPercentage);
     }
     /**
      * current number of replicas of pods managed by this autoscaler.
      * 
-     */
+    */
     public Integer getCurrentReplicas() {
         return this.currentReplicas;
     }
     /**
      * desired number of replicas of pods managed by this autoscaler.
      * 
-     */
+    */
     public Integer getDesiredReplicas() {
         return this.desiredReplicas;
     }
     /**
      * last time the HorizontalPodAutoscaler scaled the number of pods; used by the autoscaler to control how often the number of pods is changed.
      * 
-     */
+    */
     public Optional<String> getLastScaleTime() {
         return Optional.ofNullable(this.lastScaleTime);
     }
     /**
      * most recent generation observed by this autoscaler.
      * 
-     */
+    */
     public Optional<Integer> getObservedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
@@ -140,7 +140,6 @@ public final class HorizontalPodAutoscalerStatus {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public HorizontalPodAutoscalerStatus build() {
             return new HorizontalPodAutoscalerStatus(currentCPUUtilizationPercentage, currentReplicas, desiredReplicas, lastScaleTime, observedGeneration);
         }

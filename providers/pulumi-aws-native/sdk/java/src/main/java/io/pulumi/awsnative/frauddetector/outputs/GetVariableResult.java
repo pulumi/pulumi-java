@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.enums.VariableDataSource;
 import io.pulumi.awsnative.frauddetector.enums.VariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.VariableType;
 import io.pulumi.awsnative.frauddetector.outputs.VariableTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -87,63 +87,63 @@ public final class GetVariableResult {
     /**
      * The ARN of the variable.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the variable was created.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The source of the data.
      * 
-     */
+    */
     public Optional<VariableDataSource> getDataSource() {
         return Optional.ofNullable(this.dataSource);
     }
     /**
      * The data type.
      * 
-     */
+    */
     public Optional<VariableDataType> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * The default value for the variable when no value is received.
      * 
-     */
+    */
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * The description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The time when the variable was last updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Tags associated with this variable.
      * 
-     */
+    */
     public List<VariableTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
      * 
-     */
+    */
     public Optional<VariableType> getVariableType() {
         return Optional.ofNullable(this.variableType);
     }
@@ -228,7 +228,6 @@ public final class GetVariableResult {
             this.variableType = variableType;
             return this;
         }
-
         public GetVariableResult build() {
             return new GetVariableResult(arn, createdTime, dataSource, dataType, defaultValue, description, lastUpdatedTime, tags, variableType);
         }

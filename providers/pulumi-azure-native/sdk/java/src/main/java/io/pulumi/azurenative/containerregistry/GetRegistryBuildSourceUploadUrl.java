@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerregistry.inputs.GetRegistryBuildSourceUploadUrlArgs;
 import io.pulumi.azurenative.containerregistry.outputs.GetRegistryBuildSourceUploadUrlResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistryBuildSourceUploadUrl {
-/**
- * The properties of a response to source upload request.
+    private GetRegistryBuildSourceUploadUrl() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegistryBuildSourceUploadUrlArgs.Builder a);
+    }
+    private static GetRegistryBuildSourceUploadUrlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegistryBuildSourceUploadUrlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The properties of a response to source upload request.
  * API Version: 2018-02-01-preview.
  * 
- *
- * The properties of a response to source upload request.
+     *
+     * The properties of a response to source upload request.
  * 
- */
+     */
+    public static CompletableFuture<GetRegistryBuildSourceUploadUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The properties of a response to source upload request.
+     * API Version: 2018-02-01-preview.
+     * 
+     *
+         * The properties of a response to source upload request.
+     * 
+     */
     public static CompletableFuture<GetRegistryBuildSourceUploadUrlResult> invokeAsync(GetRegistryBuildSourceUploadUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getRegistryBuildSourceUploadUrl", TypeShape.of(GetRegistryBuildSourceUploadUrlResult.class), args == null ? GetRegistryBuildSourceUploadUrlArgs.Empty : args, Utilities.withVersion(options));
     }

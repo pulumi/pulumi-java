@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.EncryptionConfigurationArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;
 import java.lang.Object;
@@ -23,7 +23,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="createDisposition")
-    private final @Nullable Input<String> createDisposition;
+      private final @Nullable Input<String> createDisposition;
 
     public Input<String> getCreateDisposition() {
         return this.createDisposition == null ? Input.empty() : this.createDisposition;
@@ -34,7 +34,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destinationEncryptionConfiguration")
-    private final @Nullable Input<EncryptionConfigurationArgs> destinationEncryptionConfiguration;
+      private final @Nullable Input<EncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
     public Input<EncryptionConfigurationArgs> getDestinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration == null ? Input.empty() : this.destinationEncryptionConfiguration;
@@ -45,7 +45,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destinationExpirationTime")
-    private final @Nullable Input<Object> destinationExpirationTime;
+      private final @Nullable Input<Object> destinationExpirationTime;
 
     public Input<Object> getDestinationExpirationTime() {
         return this.destinationExpirationTime == null ? Input.empty() : this.destinationExpirationTime;
@@ -56,7 +56,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destinationTable")
-    private final @Nullable Input<TableReferenceArgs> destinationTable;
+      private final @Nullable Input<TableReferenceArgs> destinationTable;
 
     public Input<TableReferenceArgs> getDestinationTable() {
         return this.destinationTable == null ? Input.empty() : this.destinationTable;
@@ -67,7 +67,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="operationType")
-    private final @Nullable Input<String> operationType;
+      private final @Nullable Input<String> operationType;
 
     public Input<String> getOperationType() {
         return this.operationType == null ? Input.empty() : this.operationType;
@@ -78,7 +78,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourceTable")
-    private final @Nullable Input<TableReferenceArgs> sourceTable;
+      private final @Nullable Input<TableReferenceArgs> sourceTable;
 
     public Input<TableReferenceArgs> getSourceTable() {
         return this.sourceTable == null ? Input.empty() : this.sourceTable;
@@ -89,7 +89,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourceTables")
-    private final @Nullable Input<List<TableReferenceArgs>> sourceTables;
+      private final @Nullable Input<List<TableReferenceArgs>> sourceTables;
 
     public Input<List<TableReferenceArgs>> getSourceTables() {
         return this.sourceTables == null ? Input.empty() : this.sourceTables;
@@ -100,7 +100,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="writeDisposition")
-    private final @Nullable Input<String> writeDisposition;
+      private final @Nullable Input<String> writeDisposition;
 
     public Input<String> getWriteDisposition() {
         return this.writeDisposition == null ? Input.empty() : this.writeDisposition;
@@ -249,7 +249,6 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }
-
         public JobConfigurationTableCopyArgs build() {
             return new JobConfigurationTableCopyArgs(createDisposition, destinationEncryptionConfiguration, destinationExpirationTime, destinationTable, operationType, sourceTable, sourceTables, writeDisposition);
         }

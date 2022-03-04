@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,21 +19,21 @@ public final class BotPostFulfillmentStatusSpecificationArgs extends io.pulumi.r
     public static final BotPostFulfillmentStatusSpecificationArgs Empty = new BotPostFulfillmentStatusSpecificationArgs();
 
     @InputImport(name="failureResponse")
-    private final @Nullable Input<BotResponseSpecificationArgs> failureResponse;
+      private final @Nullable Input<BotResponseSpecificationArgs> failureResponse;
 
     public Input<BotResponseSpecificationArgs> getFailureResponse() {
         return this.failureResponse == null ? Input.empty() : this.failureResponse;
     }
 
     @InputImport(name="successResponse")
-    private final @Nullable Input<BotResponseSpecificationArgs> successResponse;
+      private final @Nullable Input<BotResponseSpecificationArgs> successResponse;
 
     public Input<BotResponseSpecificationArgs> getSuccessResponse() {
         return this.successResponse == null ? Input.empty() : this.successResponse;
     }
 
     @InputImport(name="timeoutResponse")
-    private final @Nullable Input<BotResponseSpecificationArgs> timeoutResponse;
+      private final @Nullable Input<BotResponseSpecificationArgs> timeoutResponse;
 
     public Input<BotResponseSpecificationArgs> getTimeoutResponse() {
         return this.timeoutResponse == null ? Input.empty() : this.timeoutResponse;
@@ -107,7 +107,6 @@ public final class BotPostFulfillmentStatusSpecificationArgs extends io.pulumi.r
             this.timeoutResponse = Input.ofNullable(timeoutResponse);
             return this;
         }
-
         public BotPostFulfillmentStatusSpecificationArgs build() {
             return new BotPostFulfillmentStatusSpecificationArgs(failureResponse, successResponse, timeoutResponse);
         }

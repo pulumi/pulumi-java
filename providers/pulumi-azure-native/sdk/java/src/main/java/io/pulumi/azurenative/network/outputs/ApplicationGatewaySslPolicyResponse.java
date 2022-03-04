@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class ApplicationGatewaySslPolicyResponse {
     /**
      * Ssl cipher suites to be enabled in the specified order to application gateway.
      * 
-     */
+    */
     public List<String> getCipherSuites() {
         return this.cipherSuites == null ? List.of() : this.cipherSuites;
     }
     /**
      * Ssl protocols to be disabled on application gateway.
      * 
-     */
+    */
     public List<String> getDisabledSslProtocols() {
         return this.disabledSslProtocols == null ? List.of() : this.disabledSslProtocols;
     }
     /**
      * Minimum version of Ssl protocol to be supported on application gateway.
      * 
-     */
+    */
     public Optional<String> getMinProtocolVersion() {
         return Optional.ofNullable(this.minProtocolVersion);
     }
     /**
      * Name of Ssl predefined policy.
      * 
-     */
+    */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);
     }
     /**
      * Type of Ssl Policy.
      * 
-     */
+    */
     public Optional<String> getPolicyType() {
         return Optional.ofNullable(this.policyType);
     }
@@ -140,7 +140,6 @@ public final class ApplicationGatewaySslPolicyResponse {
             this.policyType = policyType;
             return this;
         }
-
         public ApplicationGatewaySslPolicyResponse build() {
             return new ApplicationGatewaySslPolicyResponse(cipherSuites, disabledSslProtocols, minProtocolVersion, policyName, policyType);
         }

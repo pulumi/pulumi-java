@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.DaprMetadataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class DaprComponentResponse {
     /**
      * Component metadata
      * 
-     */
+    */
     public List<DaprMetadataResponse> getMetadata() {
         return this.metadata == null ? List.of() : this.metadata;
     }
     /**
      * Component name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Component type
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Component version
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -120,7 +120,6 @@ public final class DaprComponentResponse {
             this.version = version;
             return this;
         }
-
         public DaprComponentResponse build() {
             return new DaprComponentResponse(metadata, name, type, version);
         }

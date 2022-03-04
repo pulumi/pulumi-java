@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ContainerResourceMetricSource {
     /**
      * container is the name of the container in the pods of the scaling target
      * 
-     */
+    */
     public String getContainer() {
         return this.container;
     }
     /**
      * name is the name of the resource in question.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
      * 
-     */
+    */
     public Optional<Integer> getTargetAverageUtilization() {
         return Optional.ofNullable(this.targetAverageUtilization);
     }
     /**
      * targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.
      * 
-     */
+    */
     public Optional<String> getTargetAverageValue() {
         return Optional.ofNullable(this.targetAverageValue);
     }
@@ -119,7 +119,6 @@ public final class ContainerResourceMetricSource {
             this.targetAverageValue = targetAverageValue;
             return this;
         }
-
         public ContainerResourceMetricSource build() {
             return new ContainerResourceMetricSource(container, name, targetAverageUtilization, targetAverageValue);
         }

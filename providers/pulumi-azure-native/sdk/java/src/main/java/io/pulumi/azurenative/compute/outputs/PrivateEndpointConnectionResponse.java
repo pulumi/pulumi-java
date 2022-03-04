@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.compute.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,42 +61,42 @@ public final class PrivateEndpointConnectionResponse {
     /**
      * private endpoint connection Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * private endpoint connection name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
      * 
-     */
+    */
     public PrivateEndpointResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between DiskAccess and Virtual Network.
      * 
-     */
+    */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the private endpoint connection resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * private endpoint connection type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -160,7 +160,6 @@ public final class PrivateEndpointConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetHealthCheckArgs Empty = new GetHealthCheckArgs();
 
     @InputImport(name="healthCheckId", required=true)
-    private final String healthCheckId;
+      private final String healthCheckId;
 
     public String getHealthCheckId() {
         return this.healthCheckId;
@@ -51,7 +51,6 @@ public final class GetHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
             this.healthCheckId = Objects.requireNonNull(healthCheckId);
             return this;
         }
-
         public GetHealthCheckArgs build() {
             return new GetHealthCheckArgs(healthCheckId);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.scheduler.enums.JobCollectionState;
 import io.pulumi.azurenative.scheduler.inputs.JobCollectionQuotaArgs;
 import io.pulumi.azurenative.scheduler.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="quota")
-    private final @Nullable Input<JobCollectionQuotaArgs> quota;
+      private final @Nullable Input<JobCollectionQuotaArgs> quota;
 
     public Input<JobCollectionQuotaArgs> getQuota() {
         return this.quota == null ? Input.empty() : this.quota;
@@ -32,7 +32,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -43,7 +43,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<JobCollectionState> state;
+      private final @Nullable Input<JobCollectionState> state;
 
     public Input<JobCollectionState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -117,7 +117,6 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public JobCollectionPropertiesArgs build() {
             return new JobCollectionPropertiesArgs(quota, sku, state);
         }

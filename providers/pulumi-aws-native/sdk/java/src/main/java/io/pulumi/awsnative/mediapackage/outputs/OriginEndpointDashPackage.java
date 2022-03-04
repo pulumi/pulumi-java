@@ -12,7 +12,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointDashPackageSegmentTe
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointDashPackageUtcTiming;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointDashEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointStreamSelection;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -123,7 +123,7 @@ public final class OriginEndpointDashPackage {
     /**
      * A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
      * 
-     */
+    */
     public List<OriginEndpointDashPackageAdTriggersItem> getAdTriggers() {
         return this.adTriggers == null ? List.of() : this.adTriggers;
     }
@@ -136,56 +136,56 @@ public final class OriginEndpointDashPackage {
     /**
      * Determines the position of some tags in the Media Presentation Description (MPD).  When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation.  When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
      * 
-     */
+    */
     public Optional<OriginEndpointDashPackageManifestLayout> getManifestLayout() {
         return Optional.ofNullable(this.manifestLayout);
     }
     /**
      * Time window (in seconds) contained in each manifest.
      * 
-     */
+    */
     public Optional<Integer> getManifestWindowSeconds() {
         return Optional.ofNullable(this.manifestWindowSeconds);
     }
     /**
      * Minimum duration (in seconds) that a player will buffer media before starting the presentation.
      * 
-     */
+    */
     public Optional<Integer> getMinBufferTimeSeconds() {
         return Optional.ofNullable(this.minBufferTimeSeconds);
     }
     /**
      * Minimum duration (in seconds) between potential changes to the Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD).
      * 
-     */
+    */
     public Optional<Integer> getMinUpdatePeriodSeconds() {
         return Optional.ofNullable(this.minUpdatePeriodSeconds);
     }
     /**
      * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Channel source contains SCTE-35 ad markers.
      * 
-     */
+    */
     public List<OriginEndpointDashPackagePeriodTriggersItem> getPeriodTriggers() {
         return this.periodTriggers == null ? List.of() : this.periodTriggers;
     }
     /**
      * The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
      * 
-     */
+    */
     public Optional<OriginEndpointDashPackageProfile> getProfile() {
         return Optional.ofNullable(this.profile);
     }
     /**
      * Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
      * 
-     */
+    */
     public Optional<Integer> getSegmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
     /**
      * Determines the type of SegmentTemplate included in the Media Presentation Description (MPD).  When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs.  When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
      * 
-     */
+    */
     public Optional<OriginEndpointDashPackageSegmentTemplateFormat> getSegmentTemplateFormat() {
         return Optional.ofNullable(this.segmentTemplateFormat);
     }
@@ -195,21 +195,21 @@ public final class OriginEndpointDashPackage {
     /**
      * Duration (in seconds) to delay live content before presentation.
      * 
-     */
+    */
     public Optional<Integer> getSuggestedPresentationDelaySeconds() {
         return Optional.ofNullable(this.suggestedPresentationDelaySeconds);
     }
     /**
      * Determines the type of UTCTiming included in the Media Presentation Description (MPD)
      * 
-     */
+    */
     public Optional<OriginEndpointDashPackageUtcTiming> getUtcTiming() {
         return Optional.ofNullable(this.utcTiming);
     }
     /**
      * Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
      * 
-     */
+    */
     public Optional<String> getUtcTimingUri() {
         return Optional.ofNullable(this.utcTimingUri);
     }
@@ -336,7 +336,6 @@ public final class OriginEndpointDashPackage {
             this.utcTimingUri = utcTimingUri;
             return this;
         }
-
         public OriginEndpointDashPackage build() {
             return new OriginEndpointDashPackage(adTriggers, adsOnDeliveryRestrictions, encryption, manifestLayout, manifestWindowSeconds, minBufferTimeSeconds, minUpdatePeriodSeconds, periodTriggers, profile, segmentDurationSeconds, segmentTemplateFormat, streamSelection, suggestedPresentationDelaySeconds, utcTiming, utcTimingUri);
         }

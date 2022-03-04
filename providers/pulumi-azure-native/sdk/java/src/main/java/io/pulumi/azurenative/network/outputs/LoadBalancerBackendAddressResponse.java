@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,42 +62,42 @@ public final class LoadBalancerBackendAddressResponse {
     /**
      * IP Address belonging to the referenced virtual network.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * Reference to the frontend ip address configuration defined in regional loadbalancer.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getLoadBalancerFrontendIPConfiguration() {
         return Optional.ofNullable(this.loadBalancerFrontendIPConfiguration);
     }
     /**
      * Name of the backend address.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Reference to IP address defined in network interfaces.
      * 
-     */
+    */
     public SubResourceResponse getNetworkInterfaceIPConfiguration() {
         return this.networkInterfaceIPConfiguration;
     }
     /**
      * Reference to an existing subnet.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Reference to an existing virtual network.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getVirtualNetwork() {
         return Optional.ofNullable(this.virtualNetwork);
     }
@@ -161,7 +161,6 @@ public final class LoadBalancerBackendAddressResponse {
             this.virtualNetwork = virtualNetwork;
             return this;
         }
-
         public LoadBalancerBackendAddressResponse build() {
             return new LoadBalancerBackendAddressResponse(ipAddress, loadBalancerFrontendIPConfiguration, name, networkInterfaceIPConfiguration, subnet, virtualNetwork);
         }

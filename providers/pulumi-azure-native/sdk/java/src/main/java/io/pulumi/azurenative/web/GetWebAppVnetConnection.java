@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetWebAppVnetConnectionArgs;
 import io.pulumi.azurenative.web.outputs.GetWebAppVnetConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppVnetConnection {
-/**
- * Virtual Network information contract.
+    private GetWebAppVnetConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppVnetConnectionArgs.Builder a);
+    }
+    private static GetWebAppVnetConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppVnetConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Virtual Network information contract.
  * API Version: 2020-12-01.
  * 
- *
- * Virtual Network information contract.
+     *
+     * Virtual Network information contract.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppVnetConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Virtual Network information contract.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Virtual Network information contract.
+     * 
+     */
     public static CompletableFuture<GetWebAppVnetConnectionResult> invokeAsync(GetWebAppVnetConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppVnetConnection", TypeShape.of(GetWebAppVnetConnectionResult.class), args == null ? GetWebAppVnetConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

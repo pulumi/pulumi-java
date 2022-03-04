@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -44,21 +44,21 @@ public final class GetStaticIpResult {
     /**
      * The instance where the static IP is attached.
      * 
-     */
+    */
     public Optional<String> getAttachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
     /**
      * The static IP address.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * A Boolean value indicating whether the static IP is attached.
      * 
-     */
+    */
     public Optional<Boolean> getIsAttached() {
         return Optional.ofNullable(this.isAttached);
     }
@@ -111,7 +111,6 @@ public final class GetStaticIpResult {
             this.staticIpArn = staticIpArn;
             return this;
         }
-
         public GetStaticIpResult build() {
             return new GetStaticIpResult(attachedTo, ipAddress, isAttached, staticIpArn);
         }

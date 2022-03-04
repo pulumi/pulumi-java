@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
     /**
      * The name of the Amazon S3 bucket associated with Redshift.
      * 
-     */
+    */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
      * 
-     */
+    */
     public Optional<String> getBucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
     /**
      * The JDBC URL of the Amazon Redshift cluster.
      * 
-     */
+    */
     public String getDatabaseUrl() {
         return this.databaseUrl;
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM role.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
@@ -118,7 +118,6 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public ConnectorProfileRedshiftConnectorProfileProperties build() {
             return new ConnectorProfileRedshiftConnectorProfileProperties(bucketName, bucketPrefix, databaseUrl, roleArn);
         }

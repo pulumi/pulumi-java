@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class NetworkEndpointResponse {
     /**
      * The IP address of this network endpoint.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * The port of this network endpoint.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -75,7 +75,6 @@ public final class NetworkEndpointResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public NetworkEndpointResponse build() {
             return new NetworkEndpointResponse(ipAddress, port);
         }

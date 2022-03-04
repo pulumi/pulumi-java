@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration;
 
 import io.pulumi.azurenative.datamigration.inputs.ProjectFilePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable Input<String> fileName;
+      private final @Nullable Input<String> fileName;
 
     public Input<String> getFileName() {
         return this.fileName == null ? Input.empty() : this.fileName;
@@ -31,7 +31,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-    private final Input<String> groupName;
+      private final Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName;
@@ -42,7 +42,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final Input<String> projectName;
+      private final Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName;
@@ -53,7 +53,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ProjectFilePropertiesArgs> properties;
+      private final @Nullable Input<ProjectFilePropertiesArgs> properties;
 
     public Input<ProjectFilePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -64,7 +64,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -168,7 +168,6 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public FileArgs build() {
             return new FileArgs(fileName, groupName, projectName, properties, serviceName);
         }

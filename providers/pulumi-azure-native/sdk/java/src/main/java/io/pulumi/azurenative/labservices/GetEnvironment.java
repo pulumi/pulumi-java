@@ -6,21 +6,41 @@ package io.pulumi.azurenative.labservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.labservices.inputs.GetEnvironmentArgs;
 import io.pulumi.azurenative.labservices.outputs.GetEnvironmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnvironment {
-/**
- * Represents an environment instance
+    private GetEnvironment() {}
+    public interface BuilderApplicator {
+        public void apply(GetEnvironmentArgs.Builder a);
+    }
+    private static GetEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents an environment instance
  * API Version: 2018-10-15.
  * 
- *
- * Represents an environment instance
+     *
+     * Represents an environment instance
  * 
- */
+     */
+    public static CompletableFuture<GetEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents an environment instance
+     * API Version: 2018-10-15.
+     * 
+     *
+         * Represents an environment instance
+     * 
+     */
     public static CompletableFuture<GetEnvironmentResult> invokeAsync(GetEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args == null ? GetEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

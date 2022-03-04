@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -112,70 +112,70 @@ public final class SybaseLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * AuthenticationType to be used for connection.
      * 
-     */
+    */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Database name for connection. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getDatabase() {
         return this.database;
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password for authentication.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Schema name for connection. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Server name for connection. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getServer() {
         return this.server;
     }
@@ -183,14 +183,14 @@ public final class SybaseLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'Sybase'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Username for authentication. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -296,7 +296,6 @@ public final class SybaseLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public SybaseLinkedServiceResponse build() {
             return new SybaseLinkedServiceResponse(annotations, authenticationType, connectVia, database, description, encryptedCredential, parameters, password, schema, server, type, username);
         }

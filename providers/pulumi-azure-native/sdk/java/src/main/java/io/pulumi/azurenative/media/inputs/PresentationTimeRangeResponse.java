@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="endTimestamp")
-    private final @Nullable Double endTimestamp;
+      private final @Nullable Double endTimestamp;
 
     public Optional<Double> getEndTimestamp() {
         return this.endTimestamp == null ? Optional.empty() : Optional.ofNullable(this.endTimestamp);
@@ -35,7 +35,7 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="forceEndTimestamp")
-    private final @Nullable Boolean forceEndTimestamp;
+      private final @Nullable Boolean forceEndTimestamp;
 
     public Optional<Boolean> getForceEndTimestamp() {
         return this.forceEndTimestamp == null ? Optional.empty() : Optional.ofNullable(this.forceEndTimestamp);
@@ -46,7 +46,7 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="liveBackoffDuration")
-    private final @Nullable Double liveBackoffDuration;
+      private final @Nullable Double liveBackoffDuration;
 
     public Optional<Double> getLiveBackoffDuration() {
         return this.liveBackoffDuration == null ? Optional.empty() : Optional.ofNullable(this.liveBackoffDuration);
@@ -57,7 +57,7 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="presentationWindowDuration")
-    private final @Nullable Double presentationWindowDuration;
+      private final @Nullable Double presentationWindowDuration;
 
     public Optional<Double> getPresentationWindowDuration() {
         return this.presentationWindowDuration == null ? Optional.empty() : Optional.ofNullable(this.presentationWindowDuration);
@@ -68,7 +68,7 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="startTimestamp")
-    private final @Nullable Double startTimestamp;
+      private final @Nullable Double startTimestamp;
 
     public Optional<Double> getStartTimestamp() {
         return this.startTimestamp == null ? Optional.empty() : Optional.ofNullable(this.startTimestamp);
@@ -79,7 +79,7 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="timescale")
-    private final @Nullable Double timescale;
+      private final @Nullable Double timescale;
 
     public Optional<Double> getTimescale() {
         return this.timescale == null ? Optional.empty() : Optional.ofNullable(this.timescale);
@@ -168,7 +168,6 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
             this.timescale = timescale;
             return this;
         }
-
         public PresentationTimeRangeResponse build() {
             return new PresentationTimeRangeResponse(endTimestamp, forceEndTimestamp, liveBackoffDuration, presentationWindowDuration, startTimestamp, timescale);
         }

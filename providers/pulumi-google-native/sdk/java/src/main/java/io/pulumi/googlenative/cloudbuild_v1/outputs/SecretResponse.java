@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class SecretResponse {
     /**
      * Cloud KMS key name to use to decrypt these envs.
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.
      * 
-     */
+    */
     public Map<String,String> getSecretEnv() {
         return this.secretEnv;
     }
@@ -75,7 +75,6 @@ public final class SecretResponse {
             this.secretEnv = Objects.requireNonNull(secretEnv);
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(kmsKeyName, secretEnv);
         }

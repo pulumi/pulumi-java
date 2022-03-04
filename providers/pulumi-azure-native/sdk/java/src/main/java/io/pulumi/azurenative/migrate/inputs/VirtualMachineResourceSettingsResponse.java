@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -35,7 +35,7 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetAvailabilitySetId")
-    private final @Nullable String targetAvailabilitySetId;
+      private final @Nullable String targetAvailabilitySetId;
 
     public Optional<String> getTargetAvailabilitySetId() {
         return this.targetAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilitySetId);
@@ -46,7 +46,7 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetAvailabilityZone")
-    private final @Nullable String targetAvailabilityZone;
+      private final @Nullable String targetAvailabilityZone;
 
     public Optional<String> getTargetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilityZone);
@@ -57,7 +57,7 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-    private final String targetResourceName;
+      private final String targetResourceName;
 
     public String getTargetResourceName() {
         return this.targetResourceName;
@@ -68,7 +68,7 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetVmSize")
-    private final @Nullable String targetVmSize;
+      private final @Nullable String targetVmSize;
 
     public Optional<String> getTargetVmSize() {
         return this.targetVmSize == null ? Optional.empty() : Optional.ofNullable(this.targetVmSize);
@@ -147,7 +147,6 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
             this.targetVmSize = targetVmSize;
             return this;
         }
-
         public VirtualMachineResourceSettingsResponse build() {
             return new VirtualMachineResourceSettingsResponse(resourceType, targetAvailabilitySetId, targetAvailabilityZone, targetResourceName, targetVmSize);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.inputs.ProfileEnumValidValuesFormatArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arrayValueSeparator")
-    private final @Nullable Input<String> arrayValueSeparator;
+      private final @Nullable Input<String> arrayValueSeparator;
 
     public Input<String> getArrayValueSeparator() {
         return this.arrayValueSeparator == null ? Input.empty() : this.arrayValueSeparator;
@@ -38,7 +38,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enumValidValues")
-    private final @Nullable Input<List<ProfileEnumValidValuesFormatArgs>> enumValidValues;
+      private final @Nullable Input<List<ProfileEnumValidValuesFormatArgs>> enumValidValues;
 
     public Input<List<ProfileEnumValidValuesFormatArgs>> getEnumValidValues() {
         return this.enumValidValues == null ? Input.empty() : this.enumValidValues;
@@ -49,7 +49,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fieldName", required=true)
-    private final Input<String> fieldName;
+      private final Input<String> fieldName;
 
     public Input<String> getFieldName() {
         return this.fieldName;
@@ -60,7 +60,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fieldType", required=true)
-    private final Input<String> fieldType;
+      private final Input<String> fieldType;
 
     public Input<String> getFieldType() {
         return this.fieldType;
@@ -71,7 +71,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isArray")
-    private final @Nullable Input<Boolean> isArray;
+      private final @Nullable Input<Boolean> isArray;
 
     public Input<Boolean> getIsArray() {
         return this.isArray == null ? Input.empty() : this.isArray;
@@ -82,7 +82,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isAvailableInGraph")
-    private final @Nullable Input<Boolean> isAvailableInGraph;
+      private final @Nullable Input<Boolean> isAvailableInGraph;
 
     public Input<Boolean> getIsAvailableInGraph() {
         return this.isAvailableInGraph == null ? Input.empty() : this.isAvailableInGraph;
@@ -93,7 +93,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isEnum")
-    private final @Nullable Input<Boolean> isEnum;
+      private final @Nullable Input<Boolean> isEnum;
 
     public Input<Boolean> getIsEnum() {
         return this.isEnum == null ? Input.empty() : this.isEnum;
@@ -104,7 +104,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isFlagEnum")
-    private final @Nullable Input<Boolean> isFlagEnum;
+      private final @Nullable Input<Boolean> isFlagEnum;
 
     public Input<Boolean> getIsFlagEnum() {
         return this.isFlagEnum == null ? Input.empty() : this.isFlagEnum;
@@ -115,7 +115,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isImage")
-    private final @Nullable Input<Boolean> isImage;
+      private final @Nullable Input<Boolean> isImage;
 
     public Input<Boolean> getIsImage() {
         return this.isImage == null ? Input.empty() : this.isImage;
@@ -126,7 +126,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isLocalizedString")
-    private final @Nullable Input<Boolean> isLocalizedString;
+      private final @Nullable Input<Boolean> isLocalizedString;
 
     public Input<Boolean> getIsLocalizedString() {
         return this.isLocalizedString == null ? Input.empty() : this.isLocalizedString;
@@ -137,7 +137,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isName")
-    private final @Nullable Input<Boolean> isName;
+      private final @Nullable Input<Boolean> isName;
 
     public Input<Boolean> getIsName() {
         return this.isName == null ? Input.empty() : this.isName;
@@ -148,7 +148,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isRequired")
-    private final @Nullable Input<Boolean> isRequired;
+      private final @Nullable Input<Boolean> isRequired;
 
     public Input<Boolean> getIsRequired() {
         return this.isRequired == null ? Input.empty() : this.isRequired;
@@ -159,7 +159,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxLength")
-    private final @Nullable Input<Integer> maxLength;
+      private final @Nullable Input<Integer> maxLength;
 
     public Input<Integer> getMaxLength() {
         return this.maxLength == null ? Input.empty() : this.maxLength;
@@ -170,7 +170,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="propertyId")
-    private final @Nullable Input<String> propertyId;
+      private final @Nullable Input<String> propertyId;
 
     public Input<String> getPropertyId() {
         return this.propertyId == null ? Input.empty() : this.propertyId;
@@ -181,7 +181,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schemaItemPropLink")
-    private final @Nullable Input<String> schemaItemPropLink;
+      private final @Nullable Input<String> schemaItemPropLink;
 
     public Input<String> getSchemaItemPropLink() {
         return this.schemaItemPropLink == null ? Input.empty() : this.schemaItemPropLink;
@@ -435,7 +435,6 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
             this.schemaItemPropLink = Input.ofNullable(schemaItemPropLink);
             return this;
         }
-
         public PropertyDefinitionArgs build() {
             return new PropertyDefinitionArgs(arrayValueSeparator, enumValidValues, fieldName, fieldType, isArray, isAvailableInGraph, isEnum, isFlagEnum, isImage, isLocalizedString, isName, isRequired, maxLength, propertyId, schemaItemPropLink);
         }

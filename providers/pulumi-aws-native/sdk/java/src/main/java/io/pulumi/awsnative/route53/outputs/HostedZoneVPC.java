@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class HostedZoneVPC {
     /**
      * The ID of an Amazon VPC.
      * 
-     */
+    */
     public String getVPCId() {
         return this.vPCId;
     }
     /**
      * The region that an Amazon VPC was created in. See https://docs.aws.amazon.com/general/latest/gr/rande.html for a list of up to date regions.
      * 
-     */
+    */
     public String getVPCRegion() {
         return this.vPCRegion;
     }
@@ -74,7 +74,6 @@ public final class HostedZoneVPC {
             this.vPCRegion = Objects.requireNonNull(vPCRegion);
             return this;
         }
-
         public HostedZoneVPC build() {
             return new HostedZoneVPC(vPCId, vPCRegion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.essentialcontacts_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationContact {
-/**
- * Gets a single contact.
+    private GetOrganizationContact() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrganizationContactArgs.Builder a);
+    }
+    private static GetOrganizationContactArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrganizationContactArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a single contact.
  * 
- */
+     */
+    public static CompletableFuture<GetOrganizationContactResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a single contact.
+     * 
+     */
     public static CompletableFuture<GetOrganizationContactResult> invokeAsync(GetOrganizationContactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:essentialcontacts/v1:getOrganizationContact", TypeShape.of(GetOrganizationContactResult.class), args == null ? GetOrganizationContactArgs.Empty : args, Utilities.withVersion(options));
     }

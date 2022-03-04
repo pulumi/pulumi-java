@@ -13,7 +13,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.OnlineRequestSettin
 import io.pulumi.azurenative.machinelearningservices.outputs.OutputPathAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ProbeSettingsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -124,28 +124,28 @@ public final class K8sOnlineDeploymentResponse {
     /**
      * If true, enables Application Insights logging.
      * 
-     */
+    */
     public Optional<Boolean> getAppInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
     /**
      * Code configuration for the endpoint deployment.
      * 
-     */
+    */
     public Optional<CodeConfigurationResponse> getCodeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
     /**
      * Resource requirements for each container instance within an online deployment.
      * 
-     */
+    */
     public Optional<ContainerResourceRequirementsResponse> getContainerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
     /**
      * Description of the endpoint deployment.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -153,63 +153,63 @@ public final class K8sOnlineDeploymentResponse {
      * Enum to determine endpoint compute type.
      * Expected value is 'K8S'.
      * 
-     */
+    */
     public String getEndpointComputeType() {
         return this.endpointComputeType;
     }
     /**
      * ARM resource ID of the environment specification for the endpoint deployment.
      * 
-     */
+    */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
      * Environment variables configuration for the deployment.
      * 
-     */
+    */
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * Deployment container liveness/readiness probe configuration.
      * 
-     */
+    */
     public Optional<ProbeSettingsResponse> getLivenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
     /**
      * Reference to the model asset for the endpoint deployment.
      * 
-     */
+    */
     public Optional<Object> getModel() {
         return Optional.ofNullable(this.model);
     }
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Provisioning state for the endpoint deployment.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Online deployment scoring requests configuration.
      * 
-     */
+    */
     public Optional<OnlineRequestSettingsResponse> getRequestSettings() {
         return Optional.ofNullable(this.requestSettings);
     }
     /**
      * Online deployment scaling configuration.
      * 
-     */
+    */
     public Optional<Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse>> getScaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }
@@ -322,7 +322,6 @@ public final class K8sOnlineDeploymentResponse {
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public K8sOnlineDeploymentResponse build() {
             return new K8sOnlineDeploymentResponse(appInsightsEnabled, codeConfiguration, containerResourceRequirements, description, endpointComputeType, environmentId, environmentVariables, livenessProbe, model, properties, provisioningState, requestSettings, scaleSettings);
         }

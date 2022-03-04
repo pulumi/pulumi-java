@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class StudioComponentActiveDirectoryComputerAttribute {
     /**
      * <p>The name for the LDAP attribute.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>The value for the LDAP attribute.</p>
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class StudioComponentActiveDirectoryComputerAttribute {
             this.value = value;
             return this;
         }
-
         public StudioComponentActiveDirectoryComputerAttribute build() {
             return new StudioComponentActiveDirectoryComputerAttribute(name, value);
         }

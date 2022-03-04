@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="componentArn")
-    private final @Nullable Input<String> componentArn;
+      private final @Nullable Input<String> componentArn;
 
     public Input<String> getComponentArn() {
         return this.componentArn == null ? Input.empty() : this.componentArn;
@@ -66,7 +66,6 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
             this.componentArn = Input.ofNullable(componentArn);
             return this;
         }
-
         public ContainerRecipeComponentConfigurationArgs build() {
             return new ContainerRecipeComponentConfigurationArgs(componentArn);
         }

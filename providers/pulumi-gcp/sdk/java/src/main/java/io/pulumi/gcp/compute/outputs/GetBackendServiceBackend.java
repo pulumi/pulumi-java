@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -62,7 +62,7 @@ public final class GetBackendServiceBackend {
     /**
      * Textual description for the Backend Service.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -185,7 +185,6 @@ public final class GetBackendServiceBackend {
             this.maxUtilization = Objects.requireNonNull(maxUtilization);
             return this;
         }
-
         public GetBackendServiceBackend build() {
             return new GetBackendServiceBackend(balancingMode, capacityScaler, description, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }

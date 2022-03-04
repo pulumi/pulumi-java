@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ModelBiasJobDefinitionClusterConfig {
     /**
      * The number of ML compute instances to use in the model monitoring job. For distributed processing jobs, specify a value greater than 1. The default value is 1.
      * 
-     */
+    */
     public Integer getInstanceCount() {
         return this.instanceCount;
     }
     /**
      * The ML compute instance type for the processing job.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the model monitoring job.
      * 
-     */
+    */
     public Optional<String> getVolumeKmsKeyId() {
         return Optional.ofNullable(this.volumeKmsKeyId);
     }
     /**
      * The size of the ML storage volume, in gigabytes, that you want to provision. You must specify sufficient ML storage for your scenario.
      * 
-     */
+    */
     public Integer getVolumeSizeInGB() {
         return this.volumeSizeInGB;
     }
@@ -119,7 +119,6 @@ public final class ModelBiasJobDefinitionClusterConfig {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public ModelBiasJobDefinitionClusterConfig build() {
             return new ModelBiasJobDefinitionClusterConfig(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
         }

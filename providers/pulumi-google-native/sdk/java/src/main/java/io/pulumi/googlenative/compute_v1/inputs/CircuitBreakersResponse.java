@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxConnections", required=true)
-    private final Integer maxConnections;
+      private final Integer maxConnections;
 
     public Integer getMaxConnections() {
         return this.maxConnections;
@@ -32,7 +32,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxPendingRequests", required=true)
-    private final Integer maxPendingRequests;
+      private final Integer maxPendingRequests;
 
     public Integer getMaxPendingRequests() {
         return this.maxPendingRequests;
@@ -43,7 +43,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxRequests", required=true)
-    private final Integer maxRequests;
+      private final Integer maxRequests;
 
     public Integer getMaxRequests() {
         return this.maxRequests;
@@ -54,7 +54,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxRequestsPerConnection", required=true)
-    private final Integer maxRequestsPerConnection;
+      private final Integer maxRequestsPerConnection;
 
     public Integer getMaxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
@@ -65,7 +65,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxRetries", required=true)
-    private final Integer maxRetries;
+      private final Integer maxRetries;
 
     public Integer getMaxRetries() {
         return this.maxRetries;
@@ -144,7 +144,6 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public CircuitBreakersResponse build() {
             return new CircuitBreakersResponse(maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }

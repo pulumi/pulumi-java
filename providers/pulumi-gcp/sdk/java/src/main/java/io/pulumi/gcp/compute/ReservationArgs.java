@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ReservationShareSettingsArgs;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -39,7 +39,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -51,7 +51,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -63,7 +63,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareSettings")
-    private final @Nullable Input<ReservationShareSettingsArgs> shareSettings;
+      private final @Nullable Input<ReservationShareSettingsArgs> shareSettings;
 
     public Input<ReservationShareSettingsArgs> getShareSettings() {
         return this.shareSettings == null ? Input.empty() : this.shareSettings;
@@ -75,7 +75,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specificReservation", required=true)
-    private final Input<ReservationSpecificReservationArgs> specificReservation;
+      private final Input<ReservationSpecificReservationArgs> specificReservation;
 
     public Input<ReservationSpecificReservationArgs> getSpecificReservation() {
         return this.specificReservation;
@@ -88,7 +88,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specificReservationRequired")
-    private final @Nullable Input<Boolean> specificReservationRequired;
+      private final @Nullable Input<Boolean> specificReservationRequired;
 
     public Input<Boolean> getSpecificReservationRequired() {
         return this.specificReservationRequired == null ? Input.empty() : this.specificReservationRequired;
@@ -99,7 +99,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone", required=true)
-    private final Input<String> zone;
+      private final Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone;
@@ -233,7 +233,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.of(Objects.requireNonNull(zone));
             return this;
         }
-
         public ReservationArgs build() {
             return new ReservationArgs(description, name, project, shareSettings, specificReservation, specificReservationRequired, zone);
         }

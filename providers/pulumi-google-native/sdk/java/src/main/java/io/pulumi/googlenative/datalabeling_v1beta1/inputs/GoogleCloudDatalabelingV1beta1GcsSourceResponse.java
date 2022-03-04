@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends io.pu
      * 
      */
     @InputImport(name="inputUri", required=true)
-    private final String inputUri;
+      private final String inputUri;
 
     public String getInputUri() {
         return this.inputUri;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends io.pu
      * 
      */
     @InputImport(name="mimeType", required=true)
-    private final String mimeType;
+      private final String mimeType;
 
     public String getMimeType() {
         return this.mimeType;
@@ -81,7 +81,6 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends io.pu
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1GcsSourceResponse build() {
             return new GoogleCloudDatalabelingV1beta1GcsSourceResponse(inputUri, mimeType);
         }

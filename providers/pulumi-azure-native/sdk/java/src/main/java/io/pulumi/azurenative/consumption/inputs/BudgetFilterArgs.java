@@ -6,7 +6,7 @@ package io.pulumi.azurenative.consumption.inputs;
 import io.pulumi.azurenative.consumption.inputs.BudgetComparisonExpressionArgs;
 import io.pulumi.azurenative.consumption.inputs.BudgetFilterPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="and")
-    private final @Nullable Input<List<BudgetFilterPropertiesArgs>> and;
+      private final @Nullable Input<List<BudgetFilterPropertiesArgs>> and;
 
     public Input<List<BudgetFilterPropertiesArgs>> getAnd() {
         return this.and == null ? Input.empty() : this.and;
@@ -36,7 +36,7 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<BudgetComparisonExpressionArgs> dimensions;
+      private final @Nullable Input<BudgetComparisonExpressionArgs> dimensions;
 
     public Input<BudgetComparisonExpressionArgs> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -47,7 +47,7 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="not")
-    private final @Nullable Input<BudgetFilterPropertiesArgs> not;
+      private final @Nullable Input<BudgetFilterPropertiesArgs> not;
 
     public Input<BudgetFilterPropertiesArgs> getNot() {
         return this.not == null ? Input.empty() : this.not;
@@ -58,7 +58,7 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<BudgetComparisonExpressionArgs> tags;
+      private final @Nullable Input<BudgetComparisonExpressionArgs> tags;
 
     public Input<BudgetComparisonExpressionArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -147,7 +147,6 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public BudgetFilterArgs build() {
             return new BudgetFilterArgs(and, dimensions, not, tags);
         }

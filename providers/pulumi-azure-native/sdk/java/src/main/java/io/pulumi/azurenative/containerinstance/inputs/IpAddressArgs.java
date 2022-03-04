@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerinstance.enums.ContainerGroupIpAddressType
 import io.pulumi.azurenative.containerinstance.inputs.PortArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsNameLabel")
-    private final @Nullable Input<String> dnsNameLabel;
+      private final @Nullable Input<String> dnsNameLabel;
 
     public Input<String> getDnsNameLabel() {
         return this.dnsNameLabel == null ? Input.empty() : this.dnsNameLabel;
@@ -38,7 +38,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable Input<String> ip;
+      private final @Nullable Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip == null ? Input.empty() : this.ip;
@@ -49,7 +49,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports", required=true)
-    private final Input<List<PortArgs>> ports;
+      private final Input<List<PortArgs>> ports;
 
     public Input<List<PortArgs>> getPorts() {
         return this.ports;
@@ -60,7 +60,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ContainerGroupIpAddressType>> type;
+      private final Input<Either<String,ContainerGroupIpAddressType>> type;
 
     public Input<Either<String,ContainerGroupIpAddressType>> getType() {
         return this.type;
@@ -149,7 +149,6 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public IpAddressArgs build() {
             return new IpAddressArgs(dnsNameLabel, ip, ports, type);
         }

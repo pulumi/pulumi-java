@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackendServiceIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+    private GetBackendServiceIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackendServiceIamPolicyArgs.Builder a);
+    }
+    private static GetBackendServiceIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackendServiceIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
  * 
- */
+     */
+    public static CompletableFuture<GetBackendServiceIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static CompletableFuture<GetBackendServiceIamPolicyResult> invokeAsync(GetBackendServiceIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getBackendServiceIamPolicy", TypeShape.of(GetBackendServiceIamPolicyResult.class), args == null ? GetBackendServiceIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

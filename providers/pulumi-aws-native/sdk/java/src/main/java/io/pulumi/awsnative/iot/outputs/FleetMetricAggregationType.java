@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class FleetMetricAggregationType {
     /**
      * Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Fleet Indexing aggregation type values
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -75,7 +75,6 @@ public final class FleetMetricAggregationType {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public FleetMetricAggregationType build() {
             return new FleetMetricAggregationType(name, values);
         }

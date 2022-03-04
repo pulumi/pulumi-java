@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DisplayInfoResponse {
     /**
      * Configuration display name
      * 
-     */
+    */
     public String getConfigurationDisplayName() {
         return this.configurationDisplayName;
     }
     /**
      * Product family display name
      * 
-     */
+    */
     public String getProductFamilyDisplayName() {
         return this.productFamilyDisplayName;
     }
@@ -74,7 +74,6 @@ public final class DisplayInfoResponse {
             this.productFamilyDisplayName = Objects.requireNonNull(productFamilyDisplayName);
             return this;
         }
-
         public DisplayInfoResponse build() {
             return new DisplayInfoResponse(configurationDisplayName, productFamilyDisplayName);
         }

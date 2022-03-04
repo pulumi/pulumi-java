@@ -6,21 +6,41 @@ package io.pulumi.azurenative.azurearcdata;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.azurearcdata.inputs.GetSqlManagedInstanceArgs;
 import io.pulumi.azurenative.azurearcdata.outputs.GetSqlManagedInstanceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlManagedInstance {
-/**
- * A SqlManagedInstance.
+    private GetSqlManagedInstance() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlManagedInstanceArgs.Builder a);
+    }
+    private static GetSqlManagedInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlManagedInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A SqlManagedInstance.
  * API Version: 2021-06-01-preview.
  * 
- *
- * A SqlManagedInstance.
+     *
+     * A SqlManagedInstance.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlManagedInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A SqlManagedInstance.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * A SqlManagedInstance.
+     * 
+     */
     public static CompletableFuture<GetSqlManagedInstanceResult> invokeAsync(GetSqlManagedInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurearcdata:getSqlManagedInstance", TypeShape.of(GetSqlManagedInstanceResult.class), args == null ? GetSqlManagedInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

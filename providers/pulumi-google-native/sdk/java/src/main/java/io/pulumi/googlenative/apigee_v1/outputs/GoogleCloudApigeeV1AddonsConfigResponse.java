@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AdvancedApiOpsConfigResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1ConnectorsPlatformConfigResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1IntegrationConfigResponse;
@@ -48,28 +48,28 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
     /**
      * Configuration for the Advanced API Ops add-on.
      * 
-     */
+    */
     public GoogleCloudApigeeV1AdvancedApiOpsConfigResponse getAdvancedApiOpsConfig() {
         return this.advancedApiOpsConfig;
     }
     /**
      * Configuration for the Connectors Platform add-on.
      * 
-     */
+    */
     public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse getConnectorsPlatformConfig() {
         return this.connectorsPlatformConfig;
     }
     /**
      * Configuration for the Integration add-on.
      * 
-     */
+    */
     public GoogleCloudApigeeV1IntegrationConfigResponse getIntegrationConfig() {
         return this.integrationConfig;
     }
     /**
      * Configuration for the Monetization add-on.
      * 
-     */
+    */
     public GoogleCloudApigeeV1MonetizationConfigResponse getMonetizationConfig() {
         return this.monetizationConfig;
     }
@@ -119,7 +119,6 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
             this.monetizationConfig = Objects.requireNonNull(monetizationConfig);
             return this;
         }
-
         public GoogleCloudApigeeV1AddonsConfigResponse build() {
             return new GoogleCloudApigeeV1AddonsConfigResponse(advancedApiOpsConfig, connectorsPlatformConfig, integrationConfig, monetizationConfig);
         }

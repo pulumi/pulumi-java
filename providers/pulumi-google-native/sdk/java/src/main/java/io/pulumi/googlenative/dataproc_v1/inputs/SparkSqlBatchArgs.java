@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jarFileUris")
-    private final @Nullable Input<List<String>> jarFileUris;
+      private final @Nullable Input<List<String>> jarFileUris;
 
     public Input<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
@@ -36,7 +36,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryFileUri", required=true)
-    private final Input<String> queryFileUri;
+      private final Input<String> queryFileUri;
 
     public Input<String> getQueryFileUri() {
         return this.queryFileUri;
@@ -47,7 +47,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryVariables")
-    private final @Nullable Input<Map<String,String>> queryVariables;
+      private final @Nullable Input<Map<String,String>> queryVariables;
 
     public Input<Map<String,String>> getQueryVariables() {
         return this.queryVariables == null ? Input.empty() : this.queryVariables;
@@ -121,7 +121,6 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
             this.queryVariables = Input.ofNullable(queryVariables);
             return this;
         }
-
         public SparkSqlBatchArgs build() {
             return new SparkSqlBatchArgs(jarFileUris, queryFileUri, queryVariables);
         }

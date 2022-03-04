@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.frauddetector.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
     public static final DetectorModelArgs Empty = new DetectorModelArgs();
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -62,7 +62,6 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
             this.arn = Input.ofNullable(arn);
             return this;
         }
-
         public DetectorModelArgs build() {
             return new DetectorModelArgs(arn);
         }

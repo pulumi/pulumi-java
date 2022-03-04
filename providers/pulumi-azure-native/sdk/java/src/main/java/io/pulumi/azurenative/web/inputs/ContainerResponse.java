@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ContainerResourcesResponse;
 import io.pulumi.azurenative.web.inputs.EnvironmentVarResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="args")
-    private final @Nullable List<String> args;
+      private final @Nullable List<String> args;
 
     public List<String> getArgs() {
         return this.args == null ? List.of() : this.args;
@@ -37,7 +37,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="command")
-    private final @Nullable List<String> command;
+      private final @Nullable List<String> command;
 
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
@@ -48,7 +48,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="env")
-    private final @Nullable List<EnvironmentVarResponse> env;
+      private final @Nullable List<EnvironmentVarResponse> env;
 
     public List<EnvironmentVarResponse> getEnv() {
         return this.env == null ? List.of() : this.env;
@@ -59,7 +59,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable String image;
+      private final @Nullable String image;
 
     public Optional<String> getImage() {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
@@ -70,7 +70,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -81,7 +81,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable ContainerResourcesResponse resources;
+      private final @Nullable ContainerResourcesResponse resources;
 
     public Optional<ContainerResourcesResponse> getResources() {
         return this.resources == null ? Optional.empty() : Optional.ofNullable(this.resources);
@@ -170,7 +170,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
             this.resources = resources;
             return this;
         }
-
         public ContainerResponse build() {
             return new ContainerResponse(args, command, env, image, name, resources);
         }

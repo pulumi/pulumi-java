@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.BillingDestinationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumerDestinations")
-    private final @Nullable Input<List<BillingDestinationArgs>> consumerDestinations;
+      private final @Nullable Input<List<BillingDestinationArgs>> consumerDestinations;
 
     public Input<List<BillingDestinationArgs>> getConsumerDestinations() {
         return this.consumerDestinations == null ? Input.empty() : this.consumerDestinations;
@@ -67,7 +67,6 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
             this.consumerDestinations = Input.ofNullable(consumerDestinations);
             return this;
         }
-
         public BillingArgs build() {
             return new BillingArgs(consumerDestinations);
         }

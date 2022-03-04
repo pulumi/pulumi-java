@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class RequestUtilizationResponse {
     /**
      * Target number of concurrent requests.
      * 
-     */
+    */
     public Integer getTargetConcurrentRequests() {
         return this.targetConcurrentRequests;
     }
     /**
      * Target requests per second.
      * 
-     */
+    */
     public Integer getTargetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond;
     }
@@ -74,7 +74,6 @@ public final class RequestUtilizationResponse {
             this.targetRequestCountPerSecond = Objects.requireNonNull(targetRequestCountPerSecond);
             return this;
         }
-
         public RequestUtilizationResponse build() {
             return new RequestUtilizationResponse(targetConcurrentRequests, targetRequestCountPerSecond);
         }

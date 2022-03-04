@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class ContactDetailsResponse {
     /**
      * The name of the company.
      * 
-     */
+    */
     public String getCompanyName() {
         return this.companyName;
     }
     /**
      * The contact person name.
      * 
-     */
+    */
     public String getContactPerson() {
         return this.contactPerson;
     }
     /**
      * The email list.
      * 
-     */
+    */
     public List<String> getEmailList() {
         return this.emailList;
     }
     /**
      * The phone number.
      * 
-     */
+    */
     public String getPhone() {
         return this.phone;
     }
@@ -117,7 +117,6 @@ public final class ContactDetailsResponse {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public ContactDetailsResponse build() {
             return new ContactDetailsResponse(companyName, contactPerson, emailList, phone);
         }

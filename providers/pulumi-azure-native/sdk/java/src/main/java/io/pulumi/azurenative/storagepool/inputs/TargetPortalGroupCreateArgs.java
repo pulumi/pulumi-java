@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storagepool.inputs.AclArgs;
 import io.pulumi.azurenative.storagepool.inputs.AttributesArgs;
 import io.pulumi.azurenative.storagepool.inputs.IscsiLunArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="acls", required=true)
-    private final Input<List<AclArgs>> acls;
+      private final Input<List<AclArgs>> acls;
 
     public Input<List<AclArgs>> getAcls() {
         return this.acls;
@@ -36,7 +36,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="attributes", required=true)
-    private final Input<AttributesArgs> attributes;
+      private final Input<AttributesArgs> attributes;
 
     public Input<AttributesArgs> getAttributes() {
         return this.attributes;
@@ -47,7 +47,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="luns", required=true)
-    private final Input<List<IscsiLunArgs>> luns;
+      private final Input<List<IscsiLunArgs>> luns;
 
     public Input<List<IscsiLunArgs>> getLuns() {
         return this.luns;
@@ -121,7 +121,6 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
             this.luns = Input.of(Objects.requireNonNull(luns));
             return this;
         }
-
         public TargetPortalGroupCreateArgs build() {
             return new TargetPortalGroupCreateArgs(acls, attributes, luns);
         }

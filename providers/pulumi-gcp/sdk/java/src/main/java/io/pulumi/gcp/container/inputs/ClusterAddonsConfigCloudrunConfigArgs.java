@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterAddonsConfigCloudrunConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Input<Boolean> disabled;
+      private final Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled;
@@ -33,7 +33,7 @@ public final class ClusterAddonsConfigCloudrunConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="loadBalancerType")
-    private final @Nullable Input<String> loadBalancerType;
+      private final @Nullable Input<String> loadBalancerType;
 
     public Input<String> getLoadBalancerType() {
         return this.loadBalancerType == null ? Input.empty() : this.loadBalancerType;
@@ -92,7 +92,6 @@ public final class ClusterAddonsConfigCloudrunConfigArgs extends io.pulumi.resou
             this.loadBalancerType = Input.ofNullable(loadBalancerType);
             return this;
         }
-
         public ClusterAddonsConfigCloudrunConfigArgs build() {
             return new ClusterAddonsConfigCloudrunConfigArgs(disabled, loadBalancerType);
         }

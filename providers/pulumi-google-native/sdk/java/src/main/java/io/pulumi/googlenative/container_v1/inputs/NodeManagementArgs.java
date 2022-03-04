@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.AutoUpgradeOptionsArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoRepair")
-    private final @Nullable Input<Boolean> autoRepair;
+      private final @Nullable Input<Boolean> autoRepair;
 
     public Input<Boolean> getAutoRepair() {
         return this.autoRepair == null ? Input.empty() : this.autoRepair;
@@ -35,7 +35,7 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpgrade")
-    private final @Nullable Input<Boolean> autoUpgrade;
+      private final @Nullable Input<Boolean> autoUpgrade;
 
     public Input<Boolean> getAutoUpgrade() {
         return this.autoUpgrade == null ? Input.empty() : this.autoUpgrade;
@@ -46,7 +46,7 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradeOptions")
-    private final @Nullable Input<AutoUpgradeOptionsArgs> upgradeOptions;
+      private final @Nullable Input<AutoUpgradeOptionsArgs> upgradeOptions;
 
     public Input<AutoUpgradeOptionsArgs> getUpgradeOptions() {
         return this.upgradeOptions == null ? Input.empty() : this.upgradeOptions;
@@ -120,7 +120,6 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
             this.upgradeOptions = Input.ofNullable(upgradeOptions);
             return this;
         }
-
         public NodeManagementArgs build() {
             return new NodeManagementArgs(autoRepair, autoUpgrade, upgradeOptions);
         }

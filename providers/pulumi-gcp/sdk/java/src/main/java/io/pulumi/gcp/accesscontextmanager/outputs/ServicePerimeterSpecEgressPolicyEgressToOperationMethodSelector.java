@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,7 +38,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelect
      * `serviceName` in `ApiOperation`. If `*` used as value for method,
      * then ALL methods and permissions are allowed.
      * 
-     */
+    */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
@@ -46,7 +46,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelect
      * Value for permission should be a valid Cloud IAM permission for the
      * corresponding `serviceName` in `ApiOperation`.
      * 
-     */
+    */
     public Optional<String> getPermission() {
         return Optional.ofNullable(this.permission);
     }
@@ -82,7 +82,6 @@ public final class ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelect
             this.permission = permission;
             return this;
         }
-
         public ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector build() {
             return new ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector(method, permission);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.m365securityandcompliance;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.GetPrivateEndpointConnectionsForSCCPowershellArgs;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.GetPrivateEndpointConnectionsForSCCPowershellResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionsForSCCPowershell {
-/**
- * The Private Endpoint Connection resource.
+    private GetPrivateEndpointConnectionsForSCCPowershell() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionsForSCCPowershellArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionsForSCCPowershellArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionsForSCCPowershellArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Private Endpoint Connection resource.
  * API Version: 2021-03-25-preview.
  * 
- *
- * The Private Endpoint Connection resource.
+     *
+     * The Private Endpoint Connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionsForSCCPowershellResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Private Endpoint Connection resource.
+     * API Version: 2021-03-25-preview.
+     * 
+     *
+         * The Private Endpoint Connection resource.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionsForSCCPowershellResult> invokeAsync(GetPrivateEndpointConnectionsForSCCPowershellArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:m365securityandcompliance:getPrivateEndpointConnectionsForSCCPowershell", TypeShape.of(GetPrivateEndpointConnectionsForSCCPowershellResult.class), args == null ? GetPrivateEndpointConnectionsForSCCPowershellArgs.Empty : args, Utilities.withVersion(options));
     }

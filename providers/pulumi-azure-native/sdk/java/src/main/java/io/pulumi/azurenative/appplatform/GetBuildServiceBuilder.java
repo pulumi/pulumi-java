@@ -6,21 +6,41 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appplatform.inputs.GetBuildServiceBuilderArgs;
 import io.pulumi.azurenative.appplatform.outputs.GetBuildServiceBuilderResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBuildServiceBuilder {
-/**
- * KPack Builder resource
+    private GetBuildServiceBuilder() {}
+    public interface BuilderApplicator {
+        public void apply(GetBuildServiceBuilderArgs.Builder a);
+    }
+    private static GetBuildServiceBuilderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBuildServiceBuilderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * KPack Builder resource
  * API Version: 2022-01-01-preview.
  * 
- *
- * KPack Builder resource
+     *
+     * KPack Builder resource
  * 
- */
+     */
+    public static CompletableFuture<GetBuildServiceBuilderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * KPack Builder resource
+     * API Version: 2022-01-01-preview.
+     * 
+     *
+         * KPack Builder resource
+     * 
+     */
     public static CompletableFuture<GetBuildServiceBuilderResult> invokeAsync(GetBuildServiceBuilderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceBuilder", TypeShape.of(GetBuildServiceBuilderResult.class), args == null ? GetBuildServiceBuilderArgs.Empty : args, Utilities.withVersion(options));
     }

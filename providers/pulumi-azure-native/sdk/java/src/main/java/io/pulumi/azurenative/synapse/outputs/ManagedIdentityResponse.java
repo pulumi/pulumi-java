@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ManagedIdentityResponse {
     /**
      * The principal ID of the workspace managed identity
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of the workspace managed identity
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of managed identity for the workspace
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class ManagedIdentityResponse {
             this.type = type;
             return this;
         }
-
         public ManagedIdentityResponse build() {
             return new ManagedIdentityResponse(principalId, tenantId, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetOrganizationIamPolicyArgs extends io.pulumi.resources.Invo
     public static final GetOrganizationIamPolicyArgs Empty = new GetOrganizationIamPolicyArgs();
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -51,7 +51,6 @@ public final class GetOrganizationIamPolicyArgs extends io.pulumi.resources.Invo
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetOrganizationIamPolicyArgs build() {
             return new GetOrganizationIamPolicyArgs(organizationId);
         }

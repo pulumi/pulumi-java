@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class MaintenanceWindowResponse {
     /**
      * The day of week, when the window starts.
      * 
-     */
+    */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }
     /**
      * The hour of day (0-23) when the window starts.
      * 
-     */
+    */
     public Integer getHourOfDay() {
         return this.hourOfDay;
     }
@@ -75,7 +75,6 @@ public final class MaintenanceWindowResponse {
             this.hourOfDay = Objects.requireNonNull(hourOfDay);
             return this;
         }
-
         public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(dayOfWeek, hourOfDay);
         }

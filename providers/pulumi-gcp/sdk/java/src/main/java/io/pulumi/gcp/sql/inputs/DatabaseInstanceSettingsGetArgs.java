@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsBackupConfigurationGetArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsDatabaseFlagGetArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsInsightsConfigGetArgs;
@@ -30,7 +30,7 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="activationPolicy")
-    private final @Nullable Input<String> activationPolicy;
+      private final @Nullable Input<String> activationPolicy;
 
     public Input<String> getActivationPolicy() {
         return this.activationPolicy == null ? Input.empty() : this.activationPolicy;
@@ -44,14 +44,14 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="availabilityType")
-    private final @Nullable Input<String> availabilityType;
+      private final @Nullable Input<String> availabilityType;
 
     public Input<String> getAvailabilityType() {
         return this.availabilityType == null ? Input.empty() : this.availabilityType;
     }
 
     @InputImport(name="backupConfiguration")
-    private final @Nullable Input<DatabaseInstanceSettingsBackupConfigurationGetArgs> backupConfiguration;
+      private final @Nullable Input<DatabaseInstanceSettingsBackupConfigurationGetArgs> backupConfiguration;
 
     public Input<DatabaseInstanceSettingsBackupConfigurationGetArgs> getBackupConfiguration() {
         return this.backupConfiguration == null ? Input.empty() : this.backupConfiguration;
@@ -62,14 +62,14 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="collation")
-    private final @Nullable Input<String> collation;
+      private final @Nullable Input<String> collation;
 
     public Input<String> getCollation() {
         return this.collation == null ? Input.empty() : this.collation;
     }
 
     @InputImport(name="databaseFlags")
-    private final @Nullable Input<List<DatabaseInstanceSettingsDatabaseFlagGetArgs>> databaseFlags;
+      private final @Nullable Input<List<DatabaseInstanceSettingsDatabaseFlagGetArgs>> databaseFlags;
 
     public Input<List<DatabaseInstanceSettingsDatabaseFlagGetArgs>> getDatabaseFlags() {
         return this.databaseFlags == null ? Input.empty() : this.databaseFlags;
@@ -80,14 +80,14 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="diskAutoresize")
-    private final @Nullable Input<Boolean> diskAutoresize;
+      private final @Nullable Input<Boolean> diskAutoresize;
 
     public Input<Boolean> getDiskAutoresize() {
         return this.diskAutoresize == null ? Input.empty() : this.diskAutoresize;
     }
 
     @InputImport(name="diskAutoresizeLimit")
-    private final @Nullable Input<Integer> diskAutoresizeLimit;
+      private final @Nullable Input<Integer> diskAutoresizeLimit;
 
     public Input<Integer> getDiskAutoresizeLimit() {
         return this.diskAutoresizeLimit == null ? Input.empty() : this.diskAutoresizeLimit;
@@ -98,7 +98,7 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="diskSize")
-    private final @Nullable Input<Integer> diskSize;
+      private final @Nullable Input<Integer> diskSize;
 
     public Input<Integer> getDiskSize() {
         return this.diskSize == null ? Input.empty() : this.diskSize;
@@ -109,35 +109,35 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<String> diskType;
+      private final @Nullable Input<String> diskType;
 
     public Input<String> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
     @InputImport(name="insightsConfig")
-    private final @Nullable Input<DatabaseInstanceSettingsInsightsConfigGetArgs> insightsConfig;
+      private final @Nullable Input<DatabaseInstanceSettingsInsightsConfigGetArgs> insightsConfig;
 
     public Input<DatabaseInstanceSettingsInsightsConfigGetArgs> getInsightsConfig() {
         return this.insightsConfig == null ? Input.empty() : this.insightsConfig;
     }
 
     @InputImport(name="ipConfiguration")
-    private final @Nullable Input<DatabaseInstanceSettingsIpConfigurationGetArgs> ipConfiguration;
+      private final @Nullable Input<DatabaseInstanceSettingsIpConfigurationGetArgs> ipConfiguration;
 
     public Input<DatabaseInstanceSettingsIpConfigurationGetArgs> getIpConfiguration() {
         return this.ipConfiguration == null ? Input.empty() : this.ipConfiguration;
     }
 
     @InputImport(name="locationPreference")
-    private final @Nullable Input<DatabaseInstanceSettingsLocationPreferenceGetArgs> locationPreference;
+      private final @Nullable Input<DatabaseInstanceSettingsLocationPreferenceGetArgs> locationPreference;
 
     public Input<DatabaseInstanceSettingsLocationPreferenceGetArgs> getLocationPreference() {
         return this.locationPreference == null ? Input.empty() : this.locationPreference;
     }
 
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<DatabaseInstanceSettingsMaintenanceWindowGetArgs> maintenanceWindow;
+      private final @Nullable Input<DatabaseInstanceSettingsMaintenanceWindowGetArgs> maintenanceWindow;
 
     public Input<DatabaseInstanceSettingsMaintenanceWindowGetArgs> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -148,7 +148,7 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="pricingPlan")
-    private final @Nullable Input<String> pricingPlan;
+      private final @Nullable Input<String> pricingPlan;
 
     public Input<String> getPricingPlan() {
         return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
@@ -161,7 +161,7 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tier", required=true)
-    private final Input<String> tier;
+      private final Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier;
@@ -172,14 +172,14 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="userLabels")
-    private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Input<Map<String,String>> userLabels;
 
     public Input<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Input.empty() : this.userLabels;
     }
 
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -463,7 +463,6 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public DatabaseInstanceSettingsGetArgs build() {
             return new DatabaseInstanceSettingsGetArgs(activationPolicy, availabilityType, backupConfiguration, collation, databaseFlags, diskAutoresize, diskAutoresizeLimit, diskSize, diskType, insightsConfig, ipConfiguration, locationPreference, maintenanceWindow, pricingPlan, tier, userLabels, version);
         }

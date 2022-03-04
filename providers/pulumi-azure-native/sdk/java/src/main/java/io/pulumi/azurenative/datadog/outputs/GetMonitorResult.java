@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datadog.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.datadog.outputs.MonitorPropertiesResponse;
 import io.pulumi.azurenative.datadog.outputs.ResourceSkuResponse;
 import io.pulumi.azurenative.datadog.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -71,7 +71,7 @@ public final class GetMonitorResult {
     /**
      * ARM id of the monitor resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -84,14 +84,14 @@ public final class GetMonitorResult {
     /**
      * Name of the monitor resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties specific to the monitor resource.
      * 
-     */
+    */
     public MonitorPropertiesResponse getProperties() {
         return this.properties;
     }
@@ -101,7 +101,7 @@ public final class GetMonitorResult {
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
@@ -111,7 +111,7 @@ public final class GetMonitorResult {
     /**
      * The type of the monitor resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -196,7 +196,6 @@ public final class GetMonitorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMonitorResult build() {
             return new GetMonitorResult(id, identity, location, name, properties, sku, systemData, tags, type);
         }

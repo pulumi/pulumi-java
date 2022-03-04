@@ -11,7 +11,7 @@ import io.pulumi.azurenative.apimanagement.inputs.PipelineDiagnosticSettingsArgs
 import io.pulumi.azurenative.apimanagement.inputs.SamplingSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alwaysLog")
-    private final @Nullable Input<Either<String,AlwaysLog>> alwaysLog;
+      private final @Nullable Input<Either<String,AlwaysLog>> alwaysLog;
 
     public Input<Either<String,AlwaysLog>> getAlwaysLog() {
         return this.alwaysLog == null ? Input.empty() : this.alwaysLog;
@@ -38,7 +38,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -49,7 +49,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backend")
-    private final @Nullable Input<PipelineDiagnosticSettingsArgs> backend;
+      private final @Nullable Input<PipelineDiagnosticSettingsArgs> backend;
 
     public Input<PipelineDiagnosticSettingsArgs> getBackend() {
         return this.backend == null ? Input.empty() : this.backend;
@@ -60,7 +60,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diagnosticId")
-    private final @Nullable Input<String> diagnosticId;
+      private final @Nullable Input<String> diagnosticId;
 
     public Input<String> getDiagnosticId() {
         return this.diagnosticId == null ? Input.empty() : this.diagnosticId;
@@ -71,7 +71,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontend")
-    private final @Nullable Input<PipelineDiagnosticSettingsArgs> frontend;
+      private final @Nullable Input<PipelineDiagnosticSettingsArgs> frontend;
 
     public Input<PipelineDiagnosticSettingsArgs> getFrontend() {
         return this.frontend == null ? Input.empty() : this.frontend;
@@ -82,7 +82,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpCorrelationProtocol")
-    private final @Nullable Input<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol;
+      private final @Nullable Input<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol;
 
     public Input<Either<String,HttpCorrelationProtocol>> getHttpCorrelationProtocol() {
         return this.httpCorrelationProtocol == null ? Input.empty() : this.httpCorrelationProtocol;
@@ -93,7 +93,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logClientIp")
-    private final @Nullable Input<Boolean> logClientIp;
+      private final @Nullable Input<Boolean> logClientIp;
 
     public Input<Boolean> getLogClientIp() {
         return this.logClientIp == null ? Input.empty() : this.logClientIp;
@@ -104,7 +104,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggerId", required=true)
-    private final Input<String> loggerId;
+      private final Input<String> loggerId;
 
     public Input<String> getLoggerId() {
         return this.loggerId;
@@ -115,7 +115,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationNameFormat")
-    private final @Nullable Input<Either<String,OperationNameFormat>> operationNameFormat;
+      private final @Nullable Input<Either<String,OperationNameFormat>> operationNameFormat;
 
     public Input<Either<String,OperationNameFormat>> getOperationNameFormat() {
         return this.operationNameFormat == null ? Input.empty() : this.operationNameFormat;
@@ -126,7 +126,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -137,7 +137,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampling")
-    private final @Nullable Input<SamplingSettingsArgs> sampling;
+      private final @Nullable Input<SamplingSettingsArgs> sampling;
 
     public Input<SamplingSettingsArgs> getSampling() {
         return this.sampling == null ? Input.empty() : this.sampling;
@@ -148,7 +148,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -159,7 +159,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verbosity")
-    private final @Nullable Input<Either<String,Verbosity>> verbosity;
+      private final @Nullable Input<Either<String,Verbosity>> verbosity;
 
     public Input<Either<String,Verbosity>> getVerbosity() {
         return this.verbosity == null ? Input.empty() : this.verbosity;
@@ -383,7 +383,6 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             this.verbosity = Input.ofNullable(verbosity);
             return this;
         }
-
         public ApiDiagnosticArgs build() {
             return new ApiDiagnosticArgs(alwaysLog, apiId, backend, diagnosticId, frontend, httpCorrelationProtocol, logClientIp, loggerId, operationNameFormat, resourceGroupName, sampling, serviceName, verbosity);
         }

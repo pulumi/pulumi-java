@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class FunctionEnvironment extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="variables")
-    private final @Nullable Object variables;
+      private final @Nullable Object variables;
 
     public Optional<Object> getVariables() {
         return this.variables == null ? Optional.empty() : Optional.ofNullable(this.variables);
@@ -61,7 +61,6 @@ public final class FunctionEnvironment extends io.pulumi.resources.InvokeArgs {
             this.variables = variables;
             return this;
         }
-
         public FunctionEnvironment build() {
             return new FunctionEnvironment(variables);
         }

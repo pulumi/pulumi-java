@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.enums.NotificationConfigEventTypesItem;
 import io.pulumi.googlenative.storagetransfer_v1.enums.NotificationConfigPayloadFormat;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventTypes")
-    private final @Nullable Input<List<NotificationConfigEventTypesItem>> eventTypes;
+      private final @Nullable Input<List<NotificationConfigEventTypesItem>> eventTypes;
 
     public Input<List<NotificationConfigEventTypesItem>> getEventTypes() {
         return this.eventTypes == null ? Input.empty() : this.eventTypes;
@@ -37,7 +37,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="payloadFormat", required=true)
-    private final Input<NotificationConfigPayloadFormat> payloadFormat;
+      private final Input<NotificationConfigPayloadFormat> payloadFormat;
 
     public Input<NotificationConfigPayloadFormat> getPayloadFormat() {
         return this.payloadFormat;
@@ -48,7 +48,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-    private final Input<String> pubsubTopic;
+      private final Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic;
@@ -122,7 +122,6 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             this.pubsubTopic = Input.of(Objects.requireNonNull(pubsubTopic));
             return this;
         }
-
         public NotificationConfigArgs build() {
             return new NotificationConfigArgs(eventTypes, payloadFormat, pubsubTopic);
         }

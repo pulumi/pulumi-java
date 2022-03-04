@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AccountResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ApkResponse;
 import io.pulumi.googlenative.testing_v1.outputs.DeviceFileResponse;
@@ -72,49 +72,49 @@ public final class TestSetupResponse {
     /**
      * The device will be logged in on this account for the duration of the test.
      * 
-     */
+    */
     public AccountResponse getAccount() {
         return this.account;
     }
     /**
      * APKs to install in addition to those being directly tested. Currently capped at 100.
      * 
-     */
+    */
     public List<ApkResponse> getAdditionalApks() {
         return this.additionalApks;
     }
     /**
      * List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
      * 
-     */
+    */
     public List<String> getDirectoriesToPull() {
         return this.directoriesToPull;
     }
     /**
      * Whether to prevent all runtime permissions to be granted at app install
      * 
-     */
+    */
     public Boolean getDontAutograntPermissions() {
         return this.dontAutograntPermissions;
     }
     /**
      * Environment variables to set for the test (only applicable for instrumentation tests).
      * 
-     */
+    */
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
         return this.environmentVariables;
     }
     /**
      * List of files to push to the device before starting the test.
      * 
-     */
+    */
     public List<DeviceFileResponse> getFilesToPush() {
         return this.filesToPush;
     }
     /**
      * The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
      * 
-     */
+    */
     public String getNetworkProfile() {
         return this.networkProfile;
     }
@@ -185,7 +185,6 @@ public final class TestSetupResponse {
             this.networkProfile = Objects.requireNonNull(networkProfile);
             return this;
         }
-
         public TestSetupResponse build() {
             return new TestSetupResponse(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile);
         }

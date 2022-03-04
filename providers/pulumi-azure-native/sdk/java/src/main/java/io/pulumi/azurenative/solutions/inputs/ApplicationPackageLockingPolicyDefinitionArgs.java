@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
      * 
      */
     @InputImport(name="allowedActions")
-    private final @Nullable Input<List<String>> allowedActions;
+      private final @Nullable Input<List<String>> allowedActions;
 
     public Input<List<String>> getAllowedActions() {
         return this.allowedActions == null ? Input.empty() : this.allowedActions;
@@ -35,7 +35,7 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
      * 
      */
     @InputImport(name="allowedDataActions")
-    private final @Nullable Input<List<String>> allowedDataActions;
+      private final @Nullable Input<List<String>> allowedDataActions;
 
     public Input<List<String>> getAllowedDataActions() {
         return this.allowedDataActions == null ? Input.empty() : this.allowedDataActions;
@@ -94,7 +94,6 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
             this.allowedDataActions = Input.ofNullable(allowedDataActions);
             return this;
         }
-
         public ApplicationPackageLockingPolicyDefinitionArgs build() {
             return new ApplicationPackageLockingPolicyDefinitionArgs(allowedActions, allowedDataActions);
         }

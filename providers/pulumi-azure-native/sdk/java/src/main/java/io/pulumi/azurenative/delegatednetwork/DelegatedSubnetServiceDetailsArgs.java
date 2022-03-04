@@ -6,7 +6,7 @@ package io.pulumi.azurenative.delegatednetwork;
 import io.pulumi.azurenative.delegatednetwork.inputs.ControllerDetailsArgs;
 import io.pulumi.azurenative.delegatednetwork.inputs.SubnetDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="controllerDetails")
-    private final @Nullable Input<ControllerDetailsArgs> controllerDetails;
+      private final @Nullable Input<ControllerDetailsArgs> controllerDetails;
 
     public Input<ControllerDetailsArgs> getControllerDetails() {
         return this.controllerDetails == null ? Input.empty() : this.controllerDetails;
@@ -33,7 +33,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -44,7 +44,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -66,7 +66,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="subnetDetails")
-    private final @Nullable Input<SubnetDetailsArgs> subnetDetails;
+      private final @Nullable Input<SubnetDetailsArgs> subnetDetails;
 
     public Input<SubnetDetailsArgs> getSubnetDetails() {
         return this.subnetDetails == null ? Input.empty() : this.subnetDetails;
@@ -77,7 +77,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,6 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DelegatedSubnetServiceDetailsArgs build() {
             return new DelegatedSubnetServiceDetailsArgs(controllerDetails, location, resourceGroupName, resourceName, subnetDetails, tags);
         }

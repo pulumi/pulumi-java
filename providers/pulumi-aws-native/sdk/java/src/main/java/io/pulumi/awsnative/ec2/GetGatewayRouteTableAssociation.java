@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetGatewayRouteTableAssociationArgs;
 import io.pulumi.awsnative.ec2.outputs.GetGatewayRouteTableAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGatewayRouteTableAssociation {
-/**
- * Associates a gateway with a route table. The gateway and route table must be in the same VPC. This association causes the incoming traffic to the gateway to be routed according to the routes in the route table.
+    private GetGatewayRouteTableAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetGatewayRouteTableAssociationArgs.Builder a);
+    }
+    private static GetGatewayRouteTableAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGatewayRouteTableAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Associates a gateway with a route table. The gateway and route table must be in the same VPC. This association causes the incoming traffic to the gateway to be routed according to the routes in the route table.
  * 
- */
+     */
+    public static CompletableFuture<GetGatewayRouteTableAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Associates a gateway with a route table. The gateway and route table must be in the same VPC. This association causes the incoming traffic to the gateway to be routed according to the routes in the route table.
+     * 
+     */
     public static CompletableFuture<GetGatewayRouteTableAssociationResult> invokeAsync(GetGatewayRouteTableAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getGatewayRouteTableAssociation", TypeShape.of(GetGatewayRouteTableAssociationResult.class), args == null ? GetGatewayRouteTableAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

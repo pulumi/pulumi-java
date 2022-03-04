@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class LiteTopicPartitionConfigCapacity {
     /**
      * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
      * 
-     */
+    */
     public Integer getPublishMibPerSec() {
         return this.publishMibPerSec;
     }
     /**
      * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
      * 
-     */
+    */
     public Integer getSubscribeMibPerSec() {
         return this.subscribeMibPerSec;
     }
@@ -74,7 +74,6 @@ public final class LiteTopicPartitionConfigCapacity {
             this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec);
             return this;
         }
-
         public LiteTopicPartitionConfigCapacity build() {
             return new LiteTopicPartitionConfigCapacity(publishMibPerSec, subscribeMibPerSec);
         }

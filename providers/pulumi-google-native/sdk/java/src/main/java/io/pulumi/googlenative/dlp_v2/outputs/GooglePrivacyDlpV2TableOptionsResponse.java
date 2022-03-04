@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TableOptionsResponse {
     /**
      * The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2FieldIdResponse> getIdentifyingFields() {
         return this.identifyingFields;
     }
@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2TableOptionsResponse {
             this.identifyingFields = Objects.requireNonNull(identifyingFields);
             return this;
         }
-
         public GooglePrivacyDlpV2TableOptionsResponse build() {
             return new GooglePrivacyDlpV2TableOptionsResponse(identifyingFields);
         }

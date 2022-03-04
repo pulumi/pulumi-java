@@ -5,8 +5,8 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.PolicyTagArgs;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagState;
@@ -137,6 +137,37 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
         return this.taxonomy;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PolicyTagArgs.Builder a);
+    }
+    private static io.pulumi.gcp.datacatalog.PolicyTagArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.datacatalog.PolicyTagArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PolicyTag(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PolicyTag(String name) {
+        this(name, PolicyTagArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PolicyTag(String name, PolicyTagArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

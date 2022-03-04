@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricDimension;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public final class SecurityProfileMetricToRetain {
     /**
      * What is measured by the behavior.
      * 
-     */
+    */
     public String getMetric() {
         return this.metric;
     }
@@ -69,7 +69,6 @@ public final class SecurityProfileMetricToRetain {
             this.metricDimension = metricDimension;
             return this;
         }
-
         public SecurityProfileMetricToRetain build() {
             return new SecurityProfileMetricToRetain(metric, metricDimension);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.inputs.GetRoleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.GetRoleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole. */
 public class GetRole {
-/**
- * Compute role.
+    private GetRole() {}
+    public interface BuilderApplicator {
+        public void apply(GetRoleArgs.Builder a);
+    }
+    private static GetRoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Compute role.
  * API Version: 2020-12-01.
  * 
- *
- * Compute role.
+     *
+     * Compute role.
  * 
- * @deprecated
- * Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole.
+     * @Deprecated
+     * Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole.
  * 
- */
+     */
+    public static CompletableFuture<GetRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Compute role.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Compute role.
+     * 
+     * @Deprecated
+         * Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole.
+     * 
+     */
     @Deprecated /* Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole. */
     public static CompletableFuture<GetRoleResult> invokeAsync(GetRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getRole", TypeShape.of(GetRoleResult.class), args == null ? GetRoleArgs.Empty : args, Utilities.withVersion(options));

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GooglePrivacyDlpV2SurrogateTypeResponse {
         public Builder(GooglePrivacyDlpV2SurrogateTypeResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2SurrogateTypeResponse build() {
             return new GooglePrivacyDlpV2SurrogateTypeResponse();
         }

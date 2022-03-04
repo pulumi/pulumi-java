@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.SelectAudioTrackByIdResponse;
 import io.pulumi.azurenative.media.outputs.SelectVideoTrackByAttributeResponse;
 import io.pulumi.azurenative.media.outputs.SelectVideoTrackByIdResponse;
 import io.pulumi.azurenative.media.outputs.VideoTrackDescriptorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -49,14 +49,14 @@ public final class InputFileResponse {
     /**
      * Name of the file that this input definition applies to.
      * 
-     */
+    */
     public Optional<String> getFilename() {
         return Optional.ofNullable(this.filename);
     }
     /**
      * The list of TrackDescriptors which define the metadata and selection of tracks in the input.
      * 
-     */
+    */
     public List<Object> getIncludedTracks() {
         return this.includedTracks == null ? List.of() : this.includedTracks;
     }
@@ -64,7 +64,7 @@ public final class InputFileResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.InputFile'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
@@ -107,7 +107,6 @@ public final class InputFileResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public InputFileResponse build() {
             return new InputFileResponse(filename, includedTracks, odataType);
         }

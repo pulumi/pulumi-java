@@ -5,7 +5,7 @@ package io.pulumi.azurenative.relay.outputs;
 
 import io.pulumi.azurenative.relay.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.relay.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -78,56 +78,56 @@ public final class GetPrivateEndpointConnectionResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the private endpoint object.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Approval state of the private link connection.
      * 
-     */
+    */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -205,7 +205,6 @@ public final class GetPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionResult build() {
             return new GetPrivateEndpointConnectionResult(id, location, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, tags, type);
         }

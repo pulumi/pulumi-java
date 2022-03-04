@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ServiceReference {
     /**
      * `name` is the name of the service. Required
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * `namespace` is the namespace of the service. Required
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
     /**
      * `path` is an optional URL path which will be sent in any request to this service.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * If specified, the port on the service that hosting webhook. Default to 443 for backward compatibility. `port` should be a valid port number (1-65535, inclusive).
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -119,7 +119,6 @@ public final class ServiceReference {
             this.port = port;
             return this;
         }
-
         public ServiceReference build() {
             return new ServiceReference(name, namespace, path, port);
         }

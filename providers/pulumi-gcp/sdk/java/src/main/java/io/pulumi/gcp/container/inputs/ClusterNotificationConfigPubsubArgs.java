@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -32,7 +32,7 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -91,7 +91,6 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public ClusterNotificationConfigPubsubArgs build() {
             return new ClusterNotificationConfigPubsubArgs(enabled, topic);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class EmailChannelPropertiesResponse {
     /**
      * The email address
      * 
-     */
+    */
     public String getEmailAddress() {
         return this.emailAddress;
     }
     /**
      * Whether this channel is enabled for the bot
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
@@ -98,7 +98,6 @@ public final class EmailChannelPropertiesResponse {
             this.password = password;
             return this;
         }
-
         public EmailChannelPropertiesResponse build() {
             return new EmailChannelPropertiesResponse(emailAddress, isEnabled, password);
         }

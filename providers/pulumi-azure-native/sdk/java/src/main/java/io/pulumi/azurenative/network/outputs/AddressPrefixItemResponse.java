@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AddressPrefixItemResponse {
     /**
      * Address prefix.
      * 
-     */
+    */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * Address prefix type.
      * 
-     */
+    */
     public Optional<String> getAddressPrefixType() {
         return Optional.ofNullable(this.addressPrefixType);
     }
@@ -76,7 +76,6 @@ public final class AddressPrefixItemResponse {
             this.addressPrefixType = addressPrefixType;
             return this;
         }
-
         public AddressPrefixItemResponse build() {
             return new AddressPrefixItemResponse(addressPrefix, addressPrefixType);
         }

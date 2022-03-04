@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
     /**
      * Target bytes received per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetReceivedBytesPerSecond() {
         return Optional.ofNullable(this.targetReceivedBytesPerSecond);
     }
     /**
      * Target packets received per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetReceivedPacketsPerSecond() {
         return Optional.ofNullable(this.targetReceivedPacketsPerSecond);
     }
     /**
      * Target bytes sent per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetSentBytesPerSecond() {
         return Optional.ofNullable(this.targetSentBytesPerSecond);
     }
     /**
      * Target packets sent per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetSentPacketsPerSecond() {
         return Optional.ofNullable(this.targetSentPacketsPerSecond);
     }
@@ -118,7 +118,6 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
             this.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingNetworkUtilization build() {
             return new FlexibleAppVersionAutomaticScalingNetworkUtilization(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }

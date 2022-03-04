@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.HttpRedirectActionRedirectResponseCode;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hostRedirect")
-    private final @Nullable Input<String> hostRedirect;
+      private final @Nullable Input<String> hostRedirect;
 
     public Input<String> getHostRedirect() {
         return this.hostRedirect == null ? Input.empty() : this.hostRedirect;
@@ -36,7 +36,7 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="httpsRedirect")
-    private final @Nullable Input<Boolean> httpsRedirect;
+      private final @Nullable Input<Boolean> httpsRedirect;
 
     public Input<Boolean> getHttpsRedirect() {
         return this.httpsRedirect == null ? Input.empty() : this.httpsRedirect;
@@ -47,7 +47,7 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pathRedirect")
-    private final @Nullable Input<String> pathRedirect;
+      private final @Nullable Input<String> pathRedirect;
 
     public Input<String> getPathRedirect() {
         return this.pathRedirect == null ? Input.empty() : this.pathRedirect;
@@ -58,7 +58,7 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="prefixRedirect")
-    private final @Nullable Input<String> prefixRedirect;
+      private final @Nullable Input<String> prefixRedirect;
 
     public Input<String> getPrefixRedirect() {
         return this.prefixRedirect == null ? Input.empty() : this.prefixRedirect;
@@ -69,7 +69,7 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redirectResponseCode")
-    private final @Nullable Input<HttpRedirectActionRedirectResponseCode> redirectResponseCode;
+      private final @Nullable Input<HttpRedirectActionRedirectResponseCode> redirectResponseCode;
 
     public Input<HttpRedirectActionRedirectResponseCode> getRedirectResponseCode() {
         return this.redirectResponseCode == null ? Input.empty() : this.redirectResponseCode;
@@ -80,7 +80,7 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stripQuery")
-    private final @Nullable Input<Boolean> stripQuery;
+      private final @Nullable Input<Boolean> stripQuery;
 
     public Input<Boolean> getStripQuery() {
         return this.stripQuery == null ? Input.empty() : this.stripQuery;
@@ -199,7 +199,6 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
             this.stripQuery = Input.ofNullable(stripQuery);
             return this;
         }
-
         public HttpRedirectActionArgs build() {
             return new HttpRedirectActionArgs(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ARecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipv4Address")
-    private final @Nullable String ipv4Address;
+      private final @Nullable String ipv4Address;
 
     public Optional<String> getIpv4Address() {
         return this.ipv4Address == null ? Optional.empty() : Optional.ofNullable(this.ipv4Address);
@@ -61,7 +61,6 @@ public final class ARecordResponse extends io.pulumi.resources.InvokeArgs {
             this.ipv4Address = ipv4Address;
             return this;
         }
-
         public ARecordResponse build() {
             return new ARecordResponse(ipv4Address);
         }

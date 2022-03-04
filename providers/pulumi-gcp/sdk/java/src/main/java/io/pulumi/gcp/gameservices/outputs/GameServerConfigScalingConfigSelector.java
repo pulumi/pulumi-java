@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GameServerConfigScalingConfigSelector {
     /**
      * Set of labels to group by.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
@@ -54,7 +54,6 @@ public final class GameServerConfigScalingConfigSelector {
             this.labels = labels;
             return this;
         }
-
         public GameServerConfigScalingConfigSelector build() {
             return new GameServerConfigScalingConfigSelector(labels);
         }

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLOverrideAction;
 import io.pulumi.awsnative.wafv2.inputs.WebACLRuleAction;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatement;
 import io.pulumi.awsnative.wafv2.inputs.WebACLVisibilityConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,35 +27,35 @@ public final class WebACLRule extends io.pulumi.resources.InvokeArgs {
     public static final WebACLRule Empty = new WebACLRule();
 
     @InputImport(name="action")
-    private final @Nullable WebACLRuleAction action;
+      private final @Nullable WebACLRuleAction action;
 
     public Optional<WebACLRuleAction> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
     @InputImport(name="captchaConfig")
-    private final @Nullable WebACLCaptchaConfig captchaConfig;
+      private final @Nullable WebACLCaptchaConfig captchaConfig;
 
     public Optional<WebACLCaptchaConfig> getCaptchaConfig() {
         return this.captchaConfig == null ? Optional.empty() : Optional.ofNullable(this.captchaConfig);
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="overrideAction")
-    private final @Nullable WebACLOverrideAction overrideAction;
+      private final @Nullable WebACLOverrideAction overrideAction;
 
     public Optional<WebACLOverrideAction> getOverrideAction() {
         return this.overrideAction == null ? Optional.empty() : Optional.ofNullable(this.overrideAction);
     }
 
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -66,21 +66,21 @@ public final class WebACLRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleLabels")
-    private final @Nullable List<WebACLLabel> ruleLabels;
+      private final @Nullable List<WebACLLabel> ruleLabels;
 
     public List<WebACLLabel> getRuleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }
 
     @InputImport(name="statement", required=true)
-    private final WebACLStatement statement;
+      private final WebACLStatement statement;
 
     public WebACLStatement getStatement() {
         return this.statement;
     }
 
     @InputImport(name="visibilityConfig", required=true)
-    private final WebACLVisibilityConfig visibilityConfig;
+      private final WebACLVisibilityConfig visibilityConfig;
 
     public WebACLVisibilityConfig getVisibilityConfig() {
         return this.visibilityConfig;
@@ -189,7 +189,6 @@ public final class WebACLRule extends io.pulumi.resources.InvokeArgs {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public WebACLRule build() {
             return new WebACLRule(action, captchaConfig, name, overrideAction, priority, ruleLabels, statement, visibilityConfig);
         }

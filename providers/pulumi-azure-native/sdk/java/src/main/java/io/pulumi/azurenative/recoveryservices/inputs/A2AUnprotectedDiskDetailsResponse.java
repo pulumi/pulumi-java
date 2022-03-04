@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class A2AUnprotectedDiskDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="diskLunId")
-    private final @Nullable Integer diskLunId;
+      private final @Nullable Integer diskLunId;
 
     public Optional<Integer> getDiskLunId() {
         return this.diskLunId == null ? Optional.empty() : Optional.ofNullable(this.diskLunId);
@@ -61,7 +61,6 @@ public final class A2AUnprotectedDiskDetailsResponse extends io.pulumi.resources
             this.diskLunId = diskLunId;
             return this;
         }
-
         public A2AUnprotectedDiskDetailsResponse build() {
             return new A2AUnprotectedDiskDetailsResponse(diskLunId);
         }

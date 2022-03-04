@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -146,126 +146,126 @@ public final class GetConnectorMappingResult {
     /**
      * The connector mapping name
      * 
-     */
+    */
     public String getConnectorMappingName() {
         return this.connectorMappingName;
     }
     /**
      * The connector name.
      * 
-     */
+    */
     public String getConnectorName() {
         return this.connectorName;
     }
     /**
      * Type of connector.
      * 
-     */
+    */
     public Optional<String> getConnectorType() {
         return Optional.ofNullable(this.connectorType);
     }
     /**
      * The created time.
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * The DataFormat ID.
      * 
-     */
+    */
     public String getDataFormatId() {
         return this.dataFormatId;
     }
     /**
      * The description of the connector mapping.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Display name for the connector mapping.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Defines which entity type the file should map to.
      * 
-     */
+    */
     public String getEntityType() {
         return this.entityType;
     }
     /**
      * The mapping entity name.
      * 
-     */
+    */
     public String getEntityTypeName() {
         return this.entityTypeName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The last modified time.
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * The properties of the mapping.
      * 
-     */
+    */
     public ConnectorMappingPropertiesResponse getMappingProperties() {
         return this.mappingProperties;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The next run time based on customer's settings.
      * 
-     */
+    */
     public String getNextRunTime() {
         return this.nextRunTime;
     }
     /**
      * The RunId.
      * 
-     */
+    */
     public String getRunId() {
         return this.runId;
     }
     /**
      * State of connector mapping.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The hub name.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -413,7 +413,6 @@ public final class GetConnectorMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectorMappingResult build() {
             return new GetConnectorMappingResult(connectorMappingName, connectorName, connectorType, created, dataFormatId, description, displayName, entityType, entityTypeName, id, lastModified, mappingProperties, name, nextRunTime, runId, state, tenantId, type);
         }

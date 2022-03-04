@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class HealthCheckAlarmIdentifier {
     /**
      * The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
@@ -74,7 +74,6 @@ public final class HealthCheckAlarmIdentifier {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public HealthCheckAlarmIdentifier build() {
             return new HealthCheckAlarmIdentifier(name, region);
         }

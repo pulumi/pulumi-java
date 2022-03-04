@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class GetTargetProjectResult {
     /**
      * The time this target project resource was created (not related to when the Compute Engine project it points to was created).
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The target project's description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The name of the target project.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The target project ID (number) or project name.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * The last time the target project resource was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -137,7 +137,6 @@ public final class GetTargetProjectResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetTargetProjectResult build() {
             return new GetTargetProjectResult(createTime, description, name, project, updateTime);
         }

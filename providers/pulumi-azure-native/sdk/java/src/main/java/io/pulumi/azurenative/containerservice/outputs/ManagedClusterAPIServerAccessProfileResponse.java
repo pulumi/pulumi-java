@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,21 +42,21 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
     /**
      * Authorized IP Ranges to kubernetes API server.
      * 
-     */
+    */
     public List<String> getAuthorizedIPRanges() {
         return this.authorizedIPRanges == null ? List.of() : this.authorizedIPRanges;
     }
     /**
      * Whether to create the cluster as a private cluster or not.
      * 
-     */
+    */
     public Optional<Boolean> getEnablePrivateCluster() {
         return Optional.ofNullable(this.enablePrivateCluster);
     }
     /**
      * Private dns zone mode for private cluster.
      * 
-     */
+    */
     public Optional<String> getPrivateDNSZone() {
         return Optional.ofNullable(this.privateDNSZone);
     }
@@ -99,7 +99,6 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
             this.privateDNSZone = privateDNSZone;
             return this;
         }
-
         public ManagedClusterAPIServerAccessProfileResponse build() {
             return new ManagedClusterAPIServerAccessProfileResponse(authorizedIPRanges, enablePrivateCluster, privateDNSZone);
         }

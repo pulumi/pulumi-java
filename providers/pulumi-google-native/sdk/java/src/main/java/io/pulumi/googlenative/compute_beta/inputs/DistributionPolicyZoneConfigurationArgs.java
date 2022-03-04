@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -62,7 +62,6 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public DistributionPolicyZoneConfigurationArgs build() {
             return new DistributionPolicyZoneConfigurationArgs(zone);
         }

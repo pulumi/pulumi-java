@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.admissionregistration.k8s.io_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.ValidatingWebhookConfigurationListArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs.ValidatingWebhookConfiguration;
@@ -78,6 +78,37 @@ public class ValidatingWebhookConfigurationList extends io.pulumi.resources.Cust
         return this.metadata;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ValidatingWebhookConfigurationListArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.admissionregistration.k8s.io_v1.ValidatingWebhookConfigurationListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.admissionregistration.k8s.io_v1.ValidatingWebhookConfigurationListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ValidatingWebhookConfigurationList(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ValidatingWebhookConfigurationList(String name) {
+        this(name, ValidatingWebhookConfigurationListArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ValidatingWebhookConfigurationList(String name, ValidatingWebhookConfigurationListArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

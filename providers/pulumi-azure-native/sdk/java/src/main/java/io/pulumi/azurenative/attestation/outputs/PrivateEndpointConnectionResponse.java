@@ -5,7 +5,7 @@ package io.pulumi.azurenative.attestation.outputs;
 
 import io.pulumi.azurenative.attestation.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.attestation.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -63,42 +63,42 @@ public final class PrivateEndpointConnectionResponse {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
      * 
-     */
+    */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the private endpoint connection resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class PrivateEndpointConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

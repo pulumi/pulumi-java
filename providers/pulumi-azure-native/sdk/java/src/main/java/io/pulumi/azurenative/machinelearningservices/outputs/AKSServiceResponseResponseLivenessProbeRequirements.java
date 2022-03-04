@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements {
     /**
      * The number of failures to allow before returning an unhealthy status.
      * 
-     */
+    */
     public Optional<Integer> getFailureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
      * The delay before the first probe in seconds.
      * 
-     */
+    */
     public Optional<Integer> getInitialDelaySeconds() {
         return Optional.ofNullable(this.initialDelaySeconds);
     }
     /**
      * The length of time between probes in seconds.
      * 
-     */
+    */
     public Optional<Integer> getPeriodSeconds() {
         return Optional.ofNullable(this.periodSeconds);
     }
     /**
      * The number of successful probes before returning a healthy status.
      * 
-     */
+    */
     public Optional<Integer> getSuccessThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * The probe timeout in seconds.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -139,7 +139,6 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public AKSServiceResponseResponseLivenessProbeRequirements build() {
             return new AKSServiceResponseResponseLivenessProbeRequirements(failureThreshold, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
         }

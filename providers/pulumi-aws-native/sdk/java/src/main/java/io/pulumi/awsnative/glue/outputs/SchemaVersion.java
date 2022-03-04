@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.glue.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class SchemaVersion {
     /**
      * Indicates if the latest version needs to be updated.
      * 
-     */
+    */
     public Optional<Boolean> getIsLatest() {
         return Optional.ofNullable(this.isLatest);
     }
     /**
      * Indicates the version number in the schema to update.
      * 
-     */
+    */
     public Optional<Integer> getVersionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
@@ -77,7 +77,6 @@ public final class SchemaVersion {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public SchemaVersion build() {
             return new SchemaVersion(isLatest, versionNumber);
         }

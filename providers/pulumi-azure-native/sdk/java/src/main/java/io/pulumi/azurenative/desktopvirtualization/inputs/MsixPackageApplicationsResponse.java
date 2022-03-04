@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable String appId;
+      private final @Nullable String appId;
 
     public Optional<String> getAppId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
@@ -34,7 +34,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="appUserModelID")
-    private final @Nullable String appUserModelID;
+      private final @Nullable String appUserModelID;
 
     public Optional<String> getAppUserModelID() {
         return this.appUserModelID == null ? Optional.empty() : Optional.ofNullable(this.appUserModelID);
@@ -45,7 +45,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -56,7 +56,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable String friendlyName;
+      private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -67,7 +67,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="iconImageName")
-    private final @Nullable String iconImageName;
+      private final @Nullable String iconImageName;
 
     public Optional<String> getIconImageName() {
         return this.iconImageName == null ? Optional.empty() : Optional.ofNullable(this.iconImageName);
@@ -78,7 +78,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="rawIcon")
-    private final @Nullable String rawIcon;
+      private final @Nullable String rawIcon;
 
     public Optional<String> getRawIcon() {
         return this.rawIcon == null ? Optional.empty() : Optional.ofNullable(this.rawIcon);
@@ -89,7 +89,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="rawPng")
-    private final @Nullable String rawPng;
+      private final @Nullable String rawPng;
 
     public Optional<String> getRawPng() {
         return this.rawPng == null ? Optional.empty() : Optional.ofNullable(this.rawPng);
@@ -188,7 +188,6 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
             this.rawPng = rawPng;
             return this;
         }
-
         public MsixPackageApplicationsResponse build() {
             return new MsixPackageApplicationsResponse(appId, appUserModelID, description, friendlyName, iconImageName, rawIcon, rawPng);
         }

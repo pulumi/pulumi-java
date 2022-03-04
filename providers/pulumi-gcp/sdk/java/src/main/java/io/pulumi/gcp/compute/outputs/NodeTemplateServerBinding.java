@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,7 +45,7 @@ public final class NodeTemplateServerBinding {
      * nodes will experience outages while maintenance is applied.
      * Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class NodeTemplateServerBinding {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NodeTemplateServerBinding build() {
             return new NodeTemplateServerBinding(type);
         }

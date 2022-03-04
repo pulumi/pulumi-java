@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageTableCardCellResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse {
     /**
      * Optional. List of cells that make up this row.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> getCells() {
         return this.cells;
     }
     /**
      * Optional. Whether to add a visual divider after this row.
      * 
-     */
+    */
     public Boolean getDividerAfter() {
         return this.dividerAfter;
     }
@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse {
             this.dividerAfter = Objects.requireNonNull(dividerAfter);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageTableCardRowResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageTableCardRowResponse(cells, dividerAfter);
         }

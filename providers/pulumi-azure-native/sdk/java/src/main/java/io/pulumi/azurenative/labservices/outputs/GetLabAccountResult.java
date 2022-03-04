@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.SizeConfigurationPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -93,70 +93,70 @@ public final class GetLabAccountResult {
     /**
      * Represents if region selection is enabled
      * 
-     */
+    */
     public Optional<Boolean> getEnabledRegionSelection() {
         return Optional.ofNullable(this.enabledRegionSelection);
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
-     */
+    */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Represents the size configuration under the lab account
      * 
-     */
+    */
     public SizeConfigurationPropertiesResponse getSizeConfiguration() {
         return this.sizeConfiguration;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public Optional<String> getUniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }
@@ -248,7 +248,6 @@ public final class GetLabAccountResult {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public GetLabAccountResult build() {
             return new GetLabAccountResult(enabledRegionSelection, id, latestOperationResult, location, name, provisioningState, sizeConfiguration, tags, type, uniqueIdentifier);
         }

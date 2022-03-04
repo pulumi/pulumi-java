@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeadLetterPolicyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="deadLetterTopic", required=true)
-    private final String deadLetterTopic;
+      private final String deadLetterTopic;
 
     public String getDeadLetterTopic() {
         return this.deadLetterTopic;
@@ -33,7 +33,7 @@ public final class DeadLetterPolicyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="maxDeliveryAttempts", required=true)
-    private final Integer maxDeliveryAttempts;
+      private final Integer maxDeliveryAttempts;
 
     public Integer getMaxDeliveryAttempts() {
         return this.maxDeliveryAttempts;
@@ -82,7 +82,6 @@ public final class DeadLetterPolicyResponse extends io.pulumi.resources.InvokeAr
             this.maxDeliveryAttempts = Objects.requireNonNull(maxDeliveryAttempts);
             return this;
         }
-
         public DeadLetterPolicyResponse build() {
             return new DeadLetterPolicyResponse(deadLetterTopic, maxDeliveryAttempts);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.offazure.outputs;
 
 import io.pulumi.azurenative.offazure.outputs.SiteAgentPropertiesResponse;
 import io.pulumi.azurenative.offazure.outputs.SiteSpnPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,35 +56,35 @@ public final class SitePropertiesResponse {
     /**
      * On-premises agent details.
      * 
-     */
+    */
     public Optional<SiteAgentPropertiesResponse> getAgentDetails() {
         return Optional.ofNullable(this.agentDetails);
     }
     /**
      * Appliance Name.
      * 
-     */
+    */
     public Optional<String> getApplianceName() {
         return Optional.ofNullable(this.applianceName);
     }
     /**
      * ARM ID of migration hub solution for SDS.
      * 
-     */
+    */
     public Optional<String> getDiscoverySolutionId() {
         return Optional.ofNullable(this.discoverySolutionId);
     }
     /**
      * Service endpoint.
      * 
-     */
+    */
     public String getServiceEndpoint() {
         return this.serviceEndpoint;
     }
     /**
      * Service principal identity details used by agent for communication to the service.
      * 
-     */
+    */
     public Optional<SiteSpnPropertiesResponse> getServicePrincipalIdentityDetails() {
         return Optional.ofNullable(this.servicePrincipalIdentityDetails);
     }
@@ -141,7 +141,6 @@ public final class SitePropertiesResponse {
             this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
         }
-
         public SitePropertiesResponse build() {
             return new SitePropertiesResponse(agentDetails, applianceName, discoverySolutionId, serviceEndpoint, servicePrincipalIdentityDetails);
         }

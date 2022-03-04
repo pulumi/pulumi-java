@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="assetId")
-    private final @Nullable Input<String> assetId;
+      private final @Nullable Input<String> assetId;
 
     public Input<String> getAssetId() {
         return this.assetId == null ? Input.empty() : this.assetId;
@@ -35,7 +35,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="entryId")
-    private final @Nullable Input<String> entryId;
+      private final @Nullable Input<String> entryId;
 
     public Input<String> getEntryId() {
         return this.entryId == null ? Input.empty() : this.entryId;
@@ -46,7 +46,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="propertyAlias")
-    private final @Nullable Input<String> propertyAlias;
+      private final @Nullable Input<String> propertyAlias;
 
     public Input<String> getPropertyAlias() {
         return this.propertyAlias == null ? Input.empty() : this.propertyAlias;
@@ -57,14 +57,14 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="propertyId")
-    private final @Nullable Input<String> propertyId;
+      private final @Nullable Input<String> propertyId;
 
     public Input<String> getPropertyId() {
         return this.propertyId == null ? Input.empty() : this.propertyId;
     }
 
     @InputImport(name="propertyValue", required=true)
-    private final Input<DetectorModelAssetPropertyValueArgs> propertyValue;
+      private final Input<DetectorModelAssetPropertyValueArgs> propertyValue;
 
     public Input<DetectorModelAssetPropertyValueArgs> getPropertyValue() {
         return this.propertyValue;
@@ -168,7 +168,6 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
             this.propertyValue = Input.of(Objects.requireNonNull(propertyValue));
             return this;
         }
-
         public DetectorModelIotSiteWiseArgs build() {
             return new DetectorModelIotSiteWiseArgs(assetId, entryId, propertyAlias, propertyId, propertyValue);
         }

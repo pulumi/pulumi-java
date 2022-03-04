@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -56,35 +56,35 @@ public final class CacheNetworkSettingsResponse {
     /**
      * DNS search domain
      * 
-     */
+    */
     public Optional<String> getDnsSearchDomain() {
         return Optional.ofNullable(this.dnsSearchDomain);
     }
     /**
      * DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
      * 
-     */
+    */
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
      * The IPv4 maximum transmission unit configured for the subnet.
      * 
-     */
+    */
     public Optional<Integer> getMtu() {
         return Optional.ofNullable(this.mtu);
     }
     /**
      * NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
      * 
-     */
+    */
     public Optional<String> getNtpServer() {
         return Optional.ofNullable(this.ntpServer);
     }
     /**
      * Array of additional IP addresses used by this Cache.
      * 
-     */
+    */
     public List<String> getUtilityAddresses() {
         return this.utilityAddresses;
     }
@@ -141,7 +141,6 @@ public final class CacheNetworkSettingsResponse {
             this.utilityAddresses = Objects.requireNonNull(utilityAddresses);
             return this;
         }
-
         public CacheNetworkSettingsResponse build() {
             return new CacheNetworkSettingsResponse(dnsSearchDomain, dnsServers, mtu, ntpServer, utilityAddresses);
         }

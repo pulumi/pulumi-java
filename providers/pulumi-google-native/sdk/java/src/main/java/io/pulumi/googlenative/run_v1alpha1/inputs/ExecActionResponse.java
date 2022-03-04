@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ExecActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="command", required=true)
-    private final List<String> command;
+      private final List<String> command;
 
     public List<String> getCommand() {
         return this.command;
@@ -60,7 +60,6 @@ public final class ExecActionResponse extends io.pulumi.resources.InvokeArgs {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
         public ExecActionResponse build() {
             return new ExecActionResponse(command);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SubResourceReadOnlyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class CapacityReservationUtilizationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="virtualMachinesAllocated", required=true)
-    private final List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
+      private final List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
 
     public List<SubResourceReadOnlyResponse> getVirtualMachinesAllocated() {
         return this.virtualMachinesAllocated;
@@ -60,7 +60,6 @@ public final class CapacityReservationUtilizationResponse extends io.pulumi.reso
             this.virtualMachinesAllocated = Objects.requireNonNull(virtualMachinesAllocated);
             return this;
         }
-
         public CapacityReservationUtilizationResponse build() {
             return new CapacityReservationUtilizationResponse(virtualMachinesAllocated);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebTypeAppEngingIamPolicyArgs;
 import io.pulumi.gcp.iap.inputs.WebTypeAppEngingIamPolicyState;
@@ -122,6 +122,37 @@ public class WebTypeAppEngingIamPolicy extends io.pulumi.resources.CustomResourc
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WebTypeAppEngingIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.iap.WebTypeAppEngingIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.iap.WebTypeAppEngingIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WebTypeAppEngingIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WebTypeAppEngingIamPolicy(String name) {
+        this(name, WebTypeAppEngingIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WebTypeAppEngingIamPolicy(String name, WebTypeAppEngingIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

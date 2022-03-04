@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.RetryResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class FailurePolicyResponse {
     /**
      * If specified, then the function will be retried in case of a failure.
      * 
-     */
+    */
     public RetryResponse getRetry() {
         return this.retry;
     }
@@ -52,7 +52,6 @@ public final class FailurePolicyResponse {
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
-
         public FailurePolicyResponse build() {
             return new FailurePolicyResponse(retry);
         }

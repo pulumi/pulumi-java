@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.SystemParameterResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class SystemParameterRuleResponse {
     /**
      * Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
      * 
-     */
+    */
     public List<SystemParameterResponse> getParameters() {
         return this.parameters;
     }
     /**
      * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
-     */
+    */
     public String getSelector() {
         return this.selector;
     }
@@ -76,7 +76,6 @@ public final class SystemParameterRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public SystemParameterRuleResponse build() {
             return new SystemParameterRuleResponse(parameters, selector);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointStreamSelectionStreamOrder;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class OriginEndpointStreamSelection extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="maxVideoBitsPerSecond")
-    private final @Nullable Integer maxVideoBitsPerSecond;
+      private final @Nullable Integer maxVideoBitsPerSecond;
 
     public Optional<Integer> getMaxVideoBitsPerSecond() {
         return this.maxVideoBitsPerSecond == null ? Optional.empty() : Optional.ofNullable(this.maxVideoBitsPerSecond);
@@ -35,7 +35,7 @@ public final class OriginEndpointStreamSelection extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="minVideoBitsPerSecond")
-    private final @Nullable Integer minVideoBitsPerSecond;
+      private final @Nullable Integer minVideoBitsPerSecond;
 
     public Optional<Integer> getMinVideoBitsPerSecond() {
         return this.minVideoBitsPerSecond == null ? Optional.empty() : Optional.ofNullable(this.minVideoBitsPerSecond);
@@ -46,7 +46,7 @@ public final class OriginEndpointStreamSelection extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="streamOrder")
-    private final @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder;
+      private final @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder;
 
     public Optional<OriginEndpointStreamSelectionStreamOrder> getStreamOrder() {
         return this.streamOrder == null ? Optional.empty() : Optional.ofNullable(this.streamOrder);
@@ -105,7 +105,6 @@ public final class OriginEndpointStreamSelection extends io.pulumi.resources.Inv
             this.streamOrder = streamOrder;
             return this;
         }
-
         public OriginEndpointStreamSelection build() {
             return new OriginEndpointStreamSelection(maxVideoBitsPerSecond, minVideoBitsPerSecond, streamOrder);
         }

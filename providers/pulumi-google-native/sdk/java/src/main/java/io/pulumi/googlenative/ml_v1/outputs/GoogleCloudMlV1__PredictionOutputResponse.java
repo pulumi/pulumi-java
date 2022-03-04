@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GoogleCloudMlV1__PredictionOutputResponse {
     /**
      * The number of data instances which resulted in errors.
      * 
-     */
+    */
     public String getErrorCount() {
         return this.errorCount;
     }
     /**
      * Node hours used by the batch prediction job.
      * 
-     */
+    */
     public Double getNodeHours() {
         return this.nodeHours;
     }
     /**
      * The output Google Cloud Storage location provided at the job creation time.
      * 
-     */
+    */
     public String getOutputPath() {
         return this.outputPath;
     }
     /**
      * The number of generated predictions.
      * 
-     */
+    */
     public String getPredictionCount() {
         return this.predictionCount;
     }
@@ -117,7 +117,6 @@ public final class GoogleCloudMlV1__PredictionOutputResponse {
             this.predictionCount = Objects.requireNonNull(predictionCount);
             return this;
         }
-
         public GoogleCloudMlV1__PredictionOutputResponse build() {
             return new GoogleCloudMlV1__PredictionOutputResponse(errorCount, nodeHours, outputPath, predictionCount);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakestore;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endIpAddress", required=true)
-    private final Input<String> endIpAddress;
+      private final Input<String> endIpAddress;
 
     public Input<String> getEndIpAddress() {
         return this.endIpAddress;
@@ -41,7 +41,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallRuleName")
-    private final @Nullable Input<String> firewallRuleName;
+      private final @Nullable Input<String> firewallRuleName;
 
     public Input<String> getFirewallRuleName() {
         return this.firewallRuleName == null ? Input.empty() : this.firewallRuleName;
@@ -52,7 +52,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startIpAddress", required=true)
-    private final Input<String> startIpAddress;
+      private final Input<String> startIpAddress;
 
     public Input<String> getStartIpAddress() {
         return this.startIpAddress;
@@ -167,7 +167,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.startIpAddress = Input.of(Objects.requireNonNull(startIpAddress));
             return this;
         }
-
         public FirewallRuleArgs build() {
             return new FirewallRuleArgs(accountName, endIpAddress, firewallRuleName, resourceGroupName, startIpAddress);
         }

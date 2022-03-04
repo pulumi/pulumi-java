@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class DomainSnapshotOptions extends io.pulumi.resources.InvokeArgs 
     public static final DomainSnapshotOptions Empty = new DomainSnapshotOptions();
 
     @InputImport(name="automatedSnapshotStartHour")
-    private final @Nullable Integer automatedSnapshotStartHour;
+      private final @Nullable Integer automatedSnapshotStartHour;
 
     public Optional<Integer> getAutomatedSnapshotStartHour() {
         return this.automatedSnapshotStartHour == null ? Optional.empty() : Optional.ofNullable(this.automatedSnapshotStartHour);
@@ -53,7 +53,6 @@ public final class DomainSnapshotOptions extends io.pulumi.resources.InvokeArgs 
             this.automatedSnapshotStartHour = automatedSnapshotStartHour;
             return this;
         }
-
         public DomainSnapshotOptions build() {
             return new DomainSnapshotOptions(automatedSnapshotStartHour);
         }

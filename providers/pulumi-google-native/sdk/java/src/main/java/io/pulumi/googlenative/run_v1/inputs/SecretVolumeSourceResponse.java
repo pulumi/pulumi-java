@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.KeyToPathResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class SecretVolumeSourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="defaultMode", required=true)
-    private final Integer defaultMode;
+      private final Integer defaultMode;
 
     public Integer getDefaultMode() {
         return this.defaultMode;
@@ -36,7 +36,7 @@ public final class SecretVolumeSourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="items", required=true)
-    private final List<KeyToPathResponse> items;
+      private final List<KeyToPathResponse> items;
 
     public List<KeyToPathResponse> getItems() {
         return this.items;
@@ -47,7 +47,7 @@ public final class SecretVolumeSourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="optional", required=true)
-    private final Boolean optional;
+      private final Boolean optional;
 
     public Boolean getOptional() {
         return this.optional;
@@ -58,7 +58,7 @@ public final class SecretVolumeSourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="secretName", required=true)
-    private final String secretName;
+      private final String secretName;
 
     public String getSecretName() {
         return this.secretName;
@@ -127,7 +127,6 @@ public final class SecretVolumeSourceResponse extends io.pulumi.resources.Invoke
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public SecretVolumeSourceResponse build() {
             return new SecretVolumeSourceResponse(defaultMode, items, optional, secretName);
         }

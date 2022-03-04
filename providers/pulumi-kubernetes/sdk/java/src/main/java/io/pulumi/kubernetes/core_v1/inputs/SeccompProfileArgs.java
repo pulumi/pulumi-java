@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localhostProfile")
-    private final @Nullable Input<String> localhostProfile;
+      private final @Nullable Input<String> localhostProfile;
 
     public Input<String> getLocalhostProfile() {
         return this.localhostProfile == null ? Input.empty() : this.localhostProfile;
@@ -41,7 +41,7 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -100,7 +100,6 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SeccompProfileArgs build() {
             return new SeccompProfileArgs(localhostProfile, type);
         }

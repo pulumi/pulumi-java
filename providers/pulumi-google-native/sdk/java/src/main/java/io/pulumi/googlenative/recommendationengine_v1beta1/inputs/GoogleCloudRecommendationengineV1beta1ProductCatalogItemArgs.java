@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.recommendationengine_v1beta1.enums.GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ImageArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs;
@@ -29,7 +29,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * 
      */
     @InputImport(name="availableQuantity")
-    private final @Nullable Input<String> availableQuantity;
+      private final @Nullable Input<String> availableQuantity;
 
     public Input<String> getAvailableQuantity() {
         return this.availableQuantity == null ? Input.empty() : this.availableQuantity;
@@ -40,7 +40,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * 
      */
     @InputImport(name="canonicalProductUri")
-    private final @Nullable Input<String> canonicalProductUri;
+      private final @Nullable Input<String> canonicalProductUri;
 
     public Input<String> getCanonicalProductUri() {
         return this.canonicalProductUri == null ? Input.empty() : this.canonicalProductUri;
@@ -51,7 +51,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * 
      */
     @InputImport(name="costs")
-    private final @Nullable Input<Map<String,String>> costs;
+      private final @Nullable Input<Map<String,String>> costs;
 
     public Input<Map<String,String>> getCosts() {
         return this.costs == null ? Input.empty() : this.costs;
@@ -62,7 +62,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * 
      */
     @InputImport(name="currencyCode")
-    private final @Nullable Input<String> currencyCode;
+      private final @Nullable Input<String> currencyCode;
 
     public Input<String> getCurrencyCode() {
         return this.currencyCode == null ? Input.empty() : this.currencyCode;
@@ -73,7 +73,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * 
      */
     @InputImport(name="exactPrice")
-    private final @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> exactPrice;
+      private final @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> exactPrice;
 
     public Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> getExactPrice() {
         return this.exactPrice == null ? Input.empty() : this.exactPrice;
@@ -84,7 +84,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * 
      */
     @InputImport(name="images")
-    private final @Nullable Input<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> images;
+      private final @Nullable Input<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> images;
 
     public Input<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> getImages() {
         return this.images == null ? Input.empty() : this.images;
@@ -95,7 +95,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * 
      */
     @InputImport(name="priceRange")
-    private final @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> priceRange;
+      private final @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> priceRange;
 
     public Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> getPriceRange() {
         return this.priceRange == null ? Input.empty() : this.priceRange;
@@ -106,7 +106,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * 
      */
     @InputImport(name="stockState")
-    private final @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> stockState;
+      private final @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> stockState;
 
     public Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> getStockState() {
         return this.stockState == null ? Input.empty() : this.stockState;
@@ -255,7 +255,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
             this.stockState = Input.ofNullable(stockState);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs(availableQuantity, canonicalProductUri, costs, currencyCode, exactPrice, images, priceRange, stockState);
         }

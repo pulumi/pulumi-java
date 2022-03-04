@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class OsDiskImageResponse {
     /**
      * OS operating system type.
      * 
-     */
+    */
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
     /**
      * SAS key for source blob.
      * 
-     */
+    */
     public String getSourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }
@@ -74,7 +74,6 @@ public final class OsDiskImageResponse {
             this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
             return this;
         }
-
         public OsDiskImageResponse build() {
             return new OsDiskImageResponse(operatingSystem, sourceBlobSasUri);
         }

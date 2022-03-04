@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.inputs.GetBookmarkRelationArgs;
 import io.pulumi.azurenative.securityinsights.outputs.GetBookmarkRelationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBookmarkRelation {
-/**
- * Represents a relation between two resources
+    private GetBookmarkRelation() {}
+    public interface BuilderApplicator {
+        public void apply(GetBookmarkRelationArgs.Builder a);
+    }
+    private static GetBookmarkRelationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBookmarkRelationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a relation between two resources
  * API Version: 2019-01-01-preview.
  * 
- *
- * Represents a relation between two resources
+     *
+     * Represents a relation between two resources
  * 
- */
+     */
+    public static CompletableFuture<GetBookmarkRelationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a relation between two resources
+     * API Version: 2019-01-01-preview.
+     * 
+     *
+         * Represents a relation between two resources
+     * 
+     */
     public static CompletableFuture<GetBookmarkRelationResult> invokeAsync(GetBookmarkRelationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getBookmarkRelation", TypeShape.of(GetBookmarkRelationResult.class), args == null ? GetBookmarkRelationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,8 +9,8 @@ import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -173,6 +173,37 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DatabasePrincipalAssignmentArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.synapse.DatabasePrincipalAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.synapse.DatabasePrincipalAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DatabasePrincipalAssignment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DatabasePrincipalAssignment(String name) {
+        this(name, DatabasePrincipalAssignmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DatabasePrincipalAssignment(String name, DatabasePrincipalAssignmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

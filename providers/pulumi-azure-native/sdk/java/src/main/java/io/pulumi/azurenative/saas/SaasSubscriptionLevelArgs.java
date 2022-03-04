@@ -5,7 +5,7 @@ package io.pulumi.azurenative.saas;
 
 import io.pulumi.azurenative.saas.inputs.SaasCreationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -32,7 +32,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<SaasCreationPropertiesArgs> properties;
+      private final @Nullable Input<SaasCreationPropertiesArgs> properties;
 
     public Input<SaasCreationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -54,7 +54,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -76,7 +76,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -195,7 +195,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SaasSubscriptionLevelArgs build() {
             return new SaasSubscriptionLevelArgs(location, name, properties, resourceGroupName, resourceName, tags);
         }

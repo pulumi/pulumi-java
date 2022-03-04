@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.projects.inputs.IAMAuditConfigAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-    private final Input<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs;
+      private final Input<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
     public Input<List<IAMAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs;
@@ -32,7 +32,7 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+      private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -43,7 +43,7 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -117,7 +117,6 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public IAMAuditConfigArgs build() {
             return new IAMAuditConfigArgs(auditLogConfigs, project, service);
         }

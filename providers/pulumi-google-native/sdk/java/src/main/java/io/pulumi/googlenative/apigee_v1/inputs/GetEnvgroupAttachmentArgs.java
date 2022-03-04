@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetEnvgroupAttachmentArgs extends io.pulumi.resources.InvokeA
     public static final GetEnvgroupAttachmentArgs Empty = new GetEnvgroupAttachmentArgs();
 
     @InputImport(name="attachmentId", required=true)
-    private final String attachmentId;
+      private final String attachmentId;
 
     public String getAttachmentId() {
         return this.attachmentId;
     }
 
     @InputImport(name="envgroupId", required=true)
-    private final String envgroupId;
+      private final String envgroupId;
 
     public String getEnvgroupId() {
         return this.envgroupId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -86,7 +86,6 @@ public final class GetEnvgroupAttachmentArgs extends io.pulumi.resources.InvokeA
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetEnvgroupAttachmentArgs build() {
             return new GetEnvgroupAttachmentArgs(attachmentId, envgroupId, organizationId);
         }

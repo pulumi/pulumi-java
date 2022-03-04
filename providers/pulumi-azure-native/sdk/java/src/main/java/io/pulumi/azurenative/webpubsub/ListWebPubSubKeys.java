@@ -6,21 +6,41 @@ package io.pulumi.azurenative.webpubsub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.webpubsub.inputs.ListWebPubSubKeysArgs;
 import io.pulumi.azurenative.webpubsub.outputs.ListWebPubSubKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebPubSubKeys {
-/**
- * A class represents the access keys of the resource.
+    private ListWebPubSubKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebPubSubKeysArgs.Builder a);
+    }
+    private static ListWebPubSubKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebPubSubKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A class represents the access keys of the resource.
  * API Version: 2021-04-01-preview.
  * 
- *
- * A class represents the access keys of the resource.
+     *
+     * A class represents the access keys of the resource.
  * 
- */
+     */
+    public static CompletableFuture<ListWebPubSubKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A class represents the access keys of the resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * A class represents the access keys of the resource.
+     * 
+     */
     public static CompletableFuture<ListWebPubSubKeysResult> invokeAsync(ListWebPubSubKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:listWebPubSubKeys", TypeShape.of(ListWebPubSubKeysResult.class), args == null ? ListWebPubSubKeysArgs.Empty : args, Utilities.withVersion(options));
     }

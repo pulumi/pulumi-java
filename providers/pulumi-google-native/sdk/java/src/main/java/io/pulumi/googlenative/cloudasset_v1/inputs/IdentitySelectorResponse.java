@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IdentitySelectorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="identity", required=true)
-    private final String identity;
+      private final String identity;
 
     public String getIdentity() {
         return this.identity;
@@ -59,7 +59,6 @@ public final class IdentitySelectorResponse extends io.pulumi.resources.InvokeAr
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public IdentitySelectorResponse build() {
             return new IdentitySelectorResponse(identity);
         }

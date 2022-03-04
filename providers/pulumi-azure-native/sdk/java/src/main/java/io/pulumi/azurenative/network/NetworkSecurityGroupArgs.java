@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.SecurityRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -33,7 +33,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -44,7 +44,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkSecurityGroupName")
-    private final @Nullable Input<String> networkSecurityGroupName;
+      private final @Nullable Input<String> networkSecurityGroupName;
 
     public Input<String> getNetworkSecurityGroupName() {
         return this.networkSecurityGroupName == null ? Input.empty() : this.networkSecurityGroupName;
@@ -55,7 +55,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="securityRules")
-    private final @Nullable Input<List<SecurityRuleArgs>> securityRules;
+      private final @Nullable Input<List<SecurityRuleArgs>> securityRules;
 
     public Input<List<SecurityRuleArgs>> getSecurityRules() {
         return this.securityRules == null ? Input.empty() : this.securityRules;
@@ -77,7 +77,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,6 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public NetworkSecurityGroupArgs build() {
             return new NetworkSecurityGroupArgs(id, location, networkSecurityGroupName, resourceGroupName, securityRules, tags);
         }

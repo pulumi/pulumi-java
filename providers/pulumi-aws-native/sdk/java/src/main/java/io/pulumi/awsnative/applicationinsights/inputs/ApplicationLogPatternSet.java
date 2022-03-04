@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLogPattern;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationLogPatternSet extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="logPatterns", required=true)
-    private final List<ApplicationLogPattern> logPatterns;
+      private final List<ApplicationLogPattern> logPatterns;
 
     public List<ApplicationLogPattern> getLogPatterns() {
         return this.logPatterns;
@@ -34,7 +34,7 @@ public final class ApplicationLogPatternSet extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="patternSetName", required=true)
-    private final String patternSetName;
+      private final String patternSetName;
 
     public String getPatternSetName() {
         return this.patternSetName;
@@ -83,7 +83,6 @@ public final class ApplicationLogPatternSet extends io.pulumi.resources.InvokeAr
             this.patternSetName = Objects.requireNonNull(patternSetName);
             return this;
         }
-
         public ApplicationLogPatternSet build() {
             return new ApplicationLogPatternSet(logPatterns, patternSetName);
         }

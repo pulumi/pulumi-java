@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TlsCertificatePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -32,7 +32,7 @@ public final class TlsCertificatePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class TlsCertificatePropertiesResponse extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TlsCertificatePropertiesResponse build() {
             return new TlsCertificatePropertiesResponse(location, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-    private final String phoneNumber;
+      private final String phoneNumber;
 
     public String getPhoneNumber() {
         return this.phoneNumber;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse(phoneNumber);
         }

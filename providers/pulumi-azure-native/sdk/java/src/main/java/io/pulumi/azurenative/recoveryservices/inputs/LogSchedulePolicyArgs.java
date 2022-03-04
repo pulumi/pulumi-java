@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scheduleFrequencyInMins")
-    private final @Nullable Input<Integer> scheduleFrequencyInMins;
+      private final @Nullable Input<Integer> scheduleFrequencyInMins;
 
     public Input<Integer> getScheduleFrequencyInMins() {
         return this.scheduleFrequencyInMins == null ? Input.empty() : this.scheduleFrequencyInMins;
@@ -36,7 +36,7 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="schedulePolicyType", required=true)
-    private final Input<String> schedulePolicyType;
+      private final Input<String> schedulePolicyType;
 
     public Input<String> getSchedulePolicyType() {
         return this.schedulePolicyType;
@@ -95,7 +95,6 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
             this.schedulePolicyType = Input.of(Objects.requireNonNull(schedulePolicyType));
             return this;
         }
-
         public LogSchedulePolicyArgs build() {
             return new LogSchedulePolicyArgs(scheduleFrequencyInMins, schedulePolicyType);
         }

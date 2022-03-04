@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.billing.inputs.BudgetAmountSpecifiedAmountGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BudgetAmountGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="lastPeriodAmount")
-    private final @Nullable Input<Boolean> lastPeriodAmount;
+      private final @Nullable Input<Boolean> lastPeriodAmount;
 
     public Input<Boolean> getLastPeriodAmount() {
         return this.lastPeriodAmount == null ? Input.empty() : this.lastPeriodAmount;
@@ -37,7 +37,7 @@ public final class BudgetAmountGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="specifiedAmount")
-    private final @Nullable Input<BudgetAmountSpecifiedAmountGetArgs> specifiedAmount;
+      private final @Nullable Input<BudgetAmountSpecifiedAmountGetArgs> specifiedAmount;
 
     public Input<BudgetAmountSpecifiedAmountGetArgs> getSpecifiedAmount() {
         return this.specifiedAmount == null ? Input.empty() : this.specifiedAmount;
@@ -96,7 +96,6 @@ public final class BudgetAmountGetArgs extends io.pulumi.resources.ResourceArgs 
             this.specifiedAmount = Input.ofNullable(specifiedAmount);
             return this;
         }
-
         public BudgetAmountGetArgs build() {
             return new BudgetAmountGetArgs(lastPeriodAmount, specifiedAmount);
         }

@@ -9,8 +9,8 @@ import io.pulumi.azurenative.customerinsights.outputs.HubBillingInfoFormatRespon
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -161,6 +161,37 @@ public class Hub extends io.pulumi.resources.CustomResource {
         return this.webEndpoint;
     }
 
+    public interface BuilderApplicator {
+        public void apply(HubArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.customerinsights.HubArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.customerinsights.HubArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Hub(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Hub(String name) {
+        this(name, HubArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Hub(String name, HubArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

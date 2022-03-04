@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="acknowledgementControlNumberLowerBound", required=true)
-    private final Integer acknowledgementControlNumberLowerBound;
+      private final Integer acknowledgementControlNumberLowerBound;
 
     public Integer getAcknowledgementControlNumberLowerBound() {
         return this.acknowledgementControlNumberLowerBound;
@@ -36,7 +36,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="acknowledgementControlNumberPrefix")
-    private final @Nullable String acknowledgementControlNumberPrefix;
+      private final @Nullable String acknowledgementControlNumberPrefix;
 
     public Optional<String> getAcknowledgementControlNumberPrefix() {
         return this.acknowledgementControlNumberPrefix == null ? Optional.empty() : Optional.ofNullable(this.acknowledgementControlNumberPrefix);
@@ -47,7 +47,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="acknowledgementControlNumberSuffix")
-    private final @Nullable String acknowledgementControlNumberSuffix;
+      private final @Nullable String acknowledgementControlNumberSuffix;
 
     public Optional<String> getAcknowledgementControlNumberSuffix() {
         return this.acknowledgementControlNumberSuffix == null ? Optional.empty() : Optional.ofNullable(this.acknowledgementControlNumberSuffix);
@@ -58,7 +58,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="acknowledgementControlNumberUpperBound", required=true)
-    private final Integer acknowledgementControlNumberUpperBound;
+      private final Integer acknowledgementControlNumberUpperBound;
 
     public Integer getAcknowledgementControlNumberUpperBound() {
         return this.acknowledgementControlNumberUpperBound;
@@ -69,7 +69,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="batchFunctionalAcknowledgements", required=true)
-    private final Boolean batchFunctionalAcknowledgements;
+      private final Boolean batchFunctionalAcknowledgements;
 
     public Boolean getBatchFunctionalAcknowledgements() {
         return this.batchFunctionalAcknowledgements;
@@ -80,7 +80,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="batchImplementationAcknowledgements", required=true)
-    private final Boolean batchImplementationAcknowledgements;
+      private final Boolean batchImplementationAcknowledgements;
 
     public Boolean getBatchImplementationAcknowledgements() {
         return this.batchImplementationAcknowledgements;
@@ -91,7 +91,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="batchTechnicalAcknowledgements", required=true)
-    private final Boolean batchTechnicalAcknowledgements;
+      private final Boolean batchTechnicalAcknowledgements;
 
     public Boolean getBatchTechnicalAcknowledgements() {
         return this.batchTechnicalAcknowledgements;
@@ -102,7 +102,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="functionalAcknowledgementVersion")
-    private final @Nullable String functionalAcknowledgementVersion;
+      private final @Nullable String functionalAcknowledgementVersion;
 
     public Optional<String> getFunctionalAcknowledgementVersion() {
         return this.functionalAcknowledgementVersion == null ? Optional.empty() : Optional.ofNullable(this.functionalAcknowledgementVersion);
@@ -113,7 +113,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="implementationAcknowledgementVersion")
-    private final @Nullable String implementationAcknowledgementVersion;
+      private final @Nullable String implementationAcknowledgementVersion;
 
     public Optional<String> getImplementationAcknowledgementVersion() {
         return this.implementationAcknowledgementVersion == null ? Optional.empty() : Optional.ofNullable(this.implementationAcknowledgementVersion);
@@ -124,7 +124,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="needFunctionalAcknowledgement", required=true)
-    private final Boolean needFunctionalAcknowledgement;
+      private final Boolean needFunctionalAcknowledgement;
 
     public Boolean getNeedFunctionalAcknowledgement() {
         return this.needFunctionalAcknowledgement;
@@ -135,7 +135,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="needImplementationAcknowledgement", required=true)
-    private final Boolean needImplementationAcknowledgement;
+      private final Boolean needImplementationAcknowledgement;
 
     public Boolean getNeedImplementationAcknowledgement() {
         return this.needImplementationAcknowledgement;
@@ -146,7 +146,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="needLoopForValidMessages", required=true)
-    private final Boolean needLoopForValidMessages;
+      private final Boolean needLoopForValidMessages;
 
     public Boolean getNeedLoopForValidMessages() {
         return this.needLoopForValidMessages;
@@ -157,7 +157,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="needTechnicalAcknowledgement", required=true)
-    private final Boolean needTechnicalAcknowledgement;
+      private final Boolean needTechnicalAcknowledgement;
 
     public Boolean getNeedTechnicalAcknowledgement() {
         return this.needTechnicalAcknowledgement;
@@ -168,7 +168,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="rolloverAcknowledgementControlNumber", required=true)
-    private final Boolean rolloverAcknowledgementControlNumber;
+      private final Boolean rolloverAcknowledgementControlNumber;
 
     public Boolean getRolloverAcknowledgementControlNumber() {
         return this.rolloverAcknowledgementControlNumber;
@@ -179,7 +179,7 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sendSynchronousAcknowledgement", required=true)
-    private final Boolean sendSynchronousAcknowledgement;
+      private final Boolean sendSynchronousAcknowledgement;
 
     public Boolean getSendSynchronousAcknowledgement() {
         return this.sendSynchronousAcknowledgement;
@@ -358,7 +358,6 @@ public final class X12AcknowledgementSettingsResponse extends io.pulumi.resource
             this.sendSynchronousAcknowledgement = Objects.requireNonNull(sendSynchronousAcknowledgement);
             return this;
         }
-
         public X12AcknowledgementSettingsResponse build() {
             return new X12AcknowledgementSettingsResponse(acknowledgementControlNumberLowerBound, acknowledgementControlNumberPrefix, acknowledgementControlNumberSuffix, acknowledgementControlNumberUpperBound, batchFunctionalAcknowledgements, batchImplementationAcknowledgements, batchTechnicalAcknowledgements, functionalAcknowledgementVersion, implementationAcknowledgementVersion, needFunctionalAcknowledgement, needImplementationAcknowledgement, needLoopForValidMessages, needTechnicalAcknowledgement, rolloverAcknowledgementControlNumber, sendSynchronousAcknowledgement);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListContainerAppSecretsArgs;
 import io.pulumi.azurenative.web.outputs.ListContainerAppSecretsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListContainerAppSecrets {
-/**
- * Container App Secrets Collection ARM resource.
+    private ListContainerAppSecrets() {}
+    public interface BuilderApplicator {
+        public void apply(ListContainerAppSecretsArgs.Builder a);
+    }
+    private static ListContainerAppSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListContainerAppSecretsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Container App Secrets Collection ARM resource.
  * API Version: 2021-03-01.
  * 
- *
- * Container App Secrets Collection ARM resource.
+     *
+     * Container App Secrets Collection ARM resource.
  * 
- */
+     */
+    public static CompletableFuture<ListContainerAppSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Container App Secrets Collection ARM resource.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Container App Secrets Collection ARM resource.
+     * 
+     */
     public static CompletableFuture<ListContainerAppSecretsResult> invokeAsync(ListContainerAppSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listContainerAppSecrets", TypeShape.of(ListContainerAppSecretsResult.class), args == null ? ListContainerAppSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

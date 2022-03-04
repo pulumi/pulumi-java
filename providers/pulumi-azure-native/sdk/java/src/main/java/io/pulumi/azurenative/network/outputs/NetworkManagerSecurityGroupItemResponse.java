@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class NetworkManagerSecurityGroupItemResponse {
     /**
      * Network manager group Id.
      * 
-     */
+    */
     public Optional<String> getNetworkGroupId() {
         return Optional.ofNullable(this.networkGroupId);
     }
@@ -54,7 +54,6 @@ public final class NetworkManagerSecurityGroupItemResponse {
             this.networkGroupId = networkGroupId;
             return this;
         }
-
         public NetworkManagerSecurityGroupItemResponse build() {
             return new NetworkManagerSecurityGroupItemResponse(networkGroupId);
         }

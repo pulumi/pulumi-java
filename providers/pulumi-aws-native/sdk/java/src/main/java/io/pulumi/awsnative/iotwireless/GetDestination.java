@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotwireless.inputs.GetDestinationArgs;
 import io.pulumi.awsnative.iotwireless.outputs.GetDestinationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDestination {
-/**
- * Destination's resource schema demonstrating some basic constructs and validation rules.
+    private GetDestination() {}
+    public interface BuilderApplicator {
+        public void apply(GetDestinationArgs.Builder a);
+    }
+    private static GetDestinationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDestinationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Destination's resource schema demonstrating some basic constructs and validation rules.
  * 
- */
+     */
+    public static CompletableFuture<GetDestinationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Destination's resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetDestinationResult> invokeAsync(GetDestinationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getDestination", TypeShape.of(GetDestinationResult.class), args == null ? GetDestinationArgs.Empty : args, Utilities.withVersion(options));
     }

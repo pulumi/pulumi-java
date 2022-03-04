@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ReleaseChannelResponse {
     /**
      * channel specifies which release channel the cluster is subscribed to.
      * 
-     */
+    */
     public String getChannel() {
         return this.channel;
     }
@@ -52,7 +52,6 @@ public final class ReleaseChannelResponse {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
-
         public ReleaseChannelResponse build() {
             return new ReleaseChannelResponse(channel);
         }

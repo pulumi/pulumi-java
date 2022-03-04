@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.GroupPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-    private final @Nullable Input<String> eTag;
+      private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -31,7 +31,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable Input<String> groupName;
+      private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;
@@ -42,7 +42,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final Input<String> projectName;
+      private final Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName;
@@ -53,7 +53,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<GroupPropertiesArgs> properties;
+      private final Input<GroupPropertiesArgs> properties;
 
     public Input<GroupPropertiesArgs> getProperties() {
         return this.properties;
@@ -64,7 +64,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -168,7 +168,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public GroupArgs build() {
             return new GroupArgs(eTag, groupName, projectName, properties, resourceGroupName);
         }

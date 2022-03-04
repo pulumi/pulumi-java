@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ExternalVpnGatewayInterfaceGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="interfaces")
-    private final @Nullable Input<List<ExternalVpnGatewayInterfaceGetArgs>> interfaces;
+      private final @Nullable Input<List<ExternalVpnGatewayInterfaceGetArgs>> interfaces;
 
     public Input<List<ExternalVpnGatewayInterfaceGetArgs>> getInterfaces() {
         return this.interfaces == null ? Input.empty() : this.interfaces;
@@ -50,7 +50,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -74,7 +74,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="redundancyType")
-    private final @Nullable Input<String> redundancyType;
+      private final @Nullable Input<String> redundancyType;
 
     public Input<String> getRedundancyType() {
         return this.redundancyType == null ? Input.empty() : this.redundancyType;
@@ -85,7 +85,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -204,7 +204,6 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
-
         public ExternalVpnGatewayState build() {
             return new ExternalVpnGatewayState(description, interfaces, name, project, redundancyType, selfLink);
         }

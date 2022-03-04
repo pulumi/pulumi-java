@@ -9,8 +9,8 @@ import io.pulumi.awsnative.sagemaker.enums.ModelPackageGroupStatus;
 import io.pulumi.awsnative.sagemaker.outputs.ModelPackageGroupTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -89,6 +89,37 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ModelPackageGroupArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.sagemaker.ModelPackageGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.sagemaker.ModelPackageGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ModelPackageGroup(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ModelPackageGroup(String name) {
+        this(name, ModelPackageGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ModelPackageGroup(String name, @Nullable ModelPackageGroupArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

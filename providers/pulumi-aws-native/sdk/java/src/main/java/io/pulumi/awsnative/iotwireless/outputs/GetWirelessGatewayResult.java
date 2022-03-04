@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.WirelessGatewayLoRaWANGateway;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessGatewayTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -85,63 +85,63 @@ public final class GetWirelessGatewayResult {
     /**
      * Arn for Wireless Gateway. Returned upon successful create.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Description of Wireless Gateway.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Id for Wireless Gateway. Returned upon successful create.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The date and time when the most recent uplink was received.
      * 
-     */
+    */
     public Optional<String> getLastUplinkReceivedAt() {
         return Optional.ofNullable(this.lastUplinkReceivedAt);
     }
     /**
      * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
      * 
-     */
+    */
     public Optional<WirelessGatewayLoRaWANGateway> getLoRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
      * Name of Wireless Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the gateway.
      * 
-     */
+    */
     public List<WirelessGatewayTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
      * 
-     */
+    */
     public Optional<String> getThingArn() {
         return Optional.ofNullable(this.thingArn);
     }
     /**
      * Thing Arn. If there is a Thing created, this can be returned with a Get call.
      * 
-     */
+    */
     public Optional<String> getThingName() {
         return Optional.ofNullable(this.thingName);
     }
@@ -226,7 +226,6 @@ public final class GetWirelessGatewayResult {
             this.thingName = thingName;
             return this;
         }
-
         public GetWirelessGatewayResult build() {
             return new GetWirelessGatewayResult(arn, description, id, lastUplinkReceivedAt, loRaWAN, name, tags, thingArn, thingName);
         }

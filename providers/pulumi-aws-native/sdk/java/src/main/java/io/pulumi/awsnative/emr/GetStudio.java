@@ -6,17 +6,33 @@ package io.pulumi.awsnative.emr;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.emr.inputs.GetStudioArgs;
 import io.pulumi.awsnative.emr.outputs.GetStudioResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStudio {
-/**
- * Resource schema for AWS::EMR::Studio
+    private GetStudio() {}
+    public interface BuilderApplicator {
+        public void apply(GetStudioArgs.Builder a);
+    }
+    private static GetStudioArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStudioArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::EMR::Studio
  * 
- */
+     */
+    public static CompletableFuture<GetStudioResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::EMR::Studio
+     * 
+     */
     public static CompletableFuture<GetStudioResult> invokeAsync(GetStudioArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:emr:getStudio", TypeShape.of(GetStudioResult.class), args == null ? GetStudioArgs.Empty : args, Utilities.withVersion(options));
     }

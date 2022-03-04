@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BiEngineStatisticsResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.BigQueryModelTrainingResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetReferenceResponse;
@@ -229,196 +229,196 @@ public final class JobStatistics2Response {
     /**
      * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
      * 
-     */
+    */
     public BiEngineStatisticsResponse getBiEngineStatistics() {
         return this.biEngineStatistics;
     }
     /**
      * Billing tier for the job.
      * 
-     */
+    */
     public Integer getBillingTier() {
         return this.billingTier;
     }
     /**
      * Whether the query result was fetched from the query cache.
      * 
-     */
+    */
     public Boolean getCacheHit() {
         return this.cacheHit;
     }
     /**
      * [Preview] The number of row access policies affected by a DDL statement. Present only for DROP ALL ROW ACCESS POLICIES queries.
      * 
-     */
+    */
     public String getDdlAffectedRowAccessPolicyCount() {
         return this.ddlAffectedRowAccessPolicyCount;
     }
     /**
      * The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note that ddl_target_table is used just for its type information.
      * 
-     */
+    */
     public TableReferenceResponse getDdlDestinationTable() {
         return this.ddlDestinationTable;
     }
     /**
      * The DDL operation performed, possibly dependent on the pre-existence of the DDL target. Possible values (new values might be added in the future): "CREATE": The query created the DDL target. "SKIP": No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. "REPLACE": The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the table already exists. "DROP": The query deleted the DDL target.
      * 
-     */
+    */
     public String getDdlOperationPerformed() {
         return this.ddlOperationPerformed;
     }
     /**
      * The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
      * 
-     */
+    */
     public DatasetReferenceResponse getDdlTargetDataset() {
         return this.ddlTargetDataset;
     }
     /**
      * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
      * 
-     */
+    */
     public RoutineReferenceResponse getDdlTargetRoutine() {
         return this.ddlTargetRoutine;
     }
     /**
      * [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY queries.
      * 
-     */
+    */
     public RowAccessPolicyReferenceResponse getDdlTargetRowAccessPolicy() {
         return this.ddlTargetRowAccessPolicy;
     }
     /**
      * The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW ACCESS POLICIES queries.
      * 
-     */
+    */
     public TableReferenceResponse getDdlTargetTable() {
         return this.ddlTargetTable;
     }
     /**
      * Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.
      * 
-     */
+    */
     public DmlStatisticsResponse getDmlStats() {
         return this.dmlStats;
     }
     /**
      * The original estimate of bytes processed for the job.
      * 
-     */
+    */
     public String getEstimatedBytesProcessed() {
         return this.estimatedBytesProcessed;
     }
     /**
      * Statistics of a BigQuery ML training job.
      * 
-     */
+    */
     public MlStatisticsResponse getMlStatistics() {
         return this.mlStatistics;
     }
     /**
      * [Output-only, Beta] Information about create model query job progress.
      * 
-     */
+    */
     public BigQueryModelTrainingResponse getModelTraining() {
         return this.modelTraining;
     }
     /**
      * The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
      * 
-     */
+    */
     public String getNumDmlAffectedRows() {
         return this.numDmlAffectedRows;
     }
     /**
      * Describes execution plan for the query.
      * 
-     */
+    */
     public List<ExplainQueryStageResponse> getQueryPlan() {
         return this.queryPlan;
     }
     /**
      * Referenced routines (persistent user-defined functions and stored procedures) for the job.
      * 
-     */
+    */
     public List<RoutineReferenceResponse> getReferencedRoutines() {
         return this.referencedRoutines;
     }
     /**
      * Referenced tables for the job. Queries that reference more than 50 tables will not have a complete list.
      * 
-     */
+    */
     public List<TableReferenceResponse> getReferencedTables() {
         return this.referencedTables;
     }
     /**
      * Job resource usage breakdown by reservation.
      * 
-     */
+    */
     public List<JobStatistics2ReservationUsageItemResponse> getReservationUsage() {
         return this.reservationUsage;
     }
     /**
      * The schema of the results. Present only for successful dry run of non-legacy SQL queries.
      * 
-     */
+    */
     public TableSchemaResponse getSchema() {
         return this.schema;
     }
     /**
      * The type of query statement, if valid. Possible values (new values might be added in the future): "SELECT": SELECT query. "INSERT": INSERT query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "UPDATE": UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "DELETE": DELETE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query. "ASSERT": ASSERT condition AS 'description'. "CREATE_FUNCTION": CREATE FUNCTION query. "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS SELECT ... . "CREATE_PROCEDURE": CREATE PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT. "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION query. "DROP_PROCEDURE": DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW": DROP VIEW query.
      * 
-     */
+    */
     public String getStatementType() {
         return this.statementType;
     }
     /**
      * [Beta] Describes a timeline of job execution.
      * 
-     */
+    */
     public List<QueryTimelineSampleResponse> getTimeline() {
         return this.timeline;
     }
     /**
      * Total bytes billed for the job.
      * 
-     */
+    */
     public String getTotalBytesBilled() {
         return this.totalBytesBilled;
     }
     /**
      * Total bytes processed for the job.
      * 
-     */
+    */
     public String getTotalBytesProcessed() {
         return this.totalBytesProcessed;
     }
     /**
      * For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown. PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
      * 
-     */
+    */
     public String getTotalBytesProcessedAccuracy() {
         return this.totalBytesProcessedAccuracy;
     }
     /**
      * Total number of partitions processed from all partitioned tables referenced in the job.
      * 
-     */
+    */
     public String getTotalPartitionsProcessed() {
         return this.totalPartitionsProcessed;
     }
     /**
      * Slot-milliseconds for the job.
      * 
-     */
+    */
     public String getTotalSlotMs() {
         return this.totalSlotMs;
     }
     /**
      * Standard SQL only: list of undeclared query parameters detected during a dry run validation.
      * 
-     */
+    */
     public List<QueryParameterResponse> getUndeclaredQueryParameters() {
         return this.undeclaredQueryParameters;
     }
@@ -636,7 +636,6 @@ public final class JobStatistics2Response {
             this.undeclaredQueryParameters = Objects.requireNonNull(undeclaredQueryParameters);
             return this;
         }
-
         public JobStatistics2Response build() {
             return new JobStatistics2Response(biEngineStatistics, billingTier, cacheHit, ddlAffectedRowAccessPolicyCount, ddlDestinationTable, ddlOperationPerformed, ddlTargetDataset, ddlTargetRoutine, ddlTargetRowAccessPolicy, ddlTargetTable, dmlStats, estimatedBytesProcessed, mlStatistics, modelTraining, numDmlAffectedRows, queryPlan, referencedRoutines, referencedTables, reservationUsage, schema, statementType, timeline, totalBytesBilled, totalBytesProcessed, totalBytesProcessedAccuracy, totalPartitionsProcessed, totalSlotMs, undeclaredQueryParameters);
         }

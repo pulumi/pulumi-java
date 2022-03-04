@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.RuleResponse;
 import java.lang.String;
 import java.util.List;
@@ -69,49 +69,49 @@ public final class GetAuthorizationPolicyResult {
     /**
      * The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * The timestamp when the resource was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Free-text description of the resource.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. Set of label tags associated with the AuthorizationPolicy resource.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
      * 
-     */
+    */
     public List<RuleResponse> getRules() {
         return this.rules;
     }
     /**
      * The timestamp when the resource was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -182,7 +182,6 @@ public final class GetAuthorizationPolicyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetAuthorizationPolicyResult build() {
             return new GetAuthorizationPolicyResult(action, createTime, description, labels, name, rules, updateTime);
         }

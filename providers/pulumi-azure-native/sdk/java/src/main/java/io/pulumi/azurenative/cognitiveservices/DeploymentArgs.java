@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentName")
-    private final @Nullable Input<String> deploymentName;
+      private final @Nullable Input<String> deploymentName;
 
     public Input<String> getDeploymentName() {
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
@@ -42,7 +42,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<DeploymentPropertiesArgs> properties;
+      private final @Nullable Input<DeploymentPropertiesArgs> properties;
 
     public Input<DeploymentPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public DeploymentArgs build() {
             return new DeploymentArgs(accountName, deploymentName, properties, resourceGroupName);
         }

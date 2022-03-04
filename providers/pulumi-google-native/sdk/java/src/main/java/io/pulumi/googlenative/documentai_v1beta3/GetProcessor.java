@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.documentai_v1beta3;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProcessor {
-/**
- * Gets a processor detail.
+    private GetProcessor() {}
+    public interface BuilderApplicator {
+        public void apply(GetProcessorArgs.Builder a);
+    }
+    private static GetProcessorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProcessorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a processor detail.
  * 
- */
+     */
+    public static CompletableFuture<GetProcessorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a processor detail.
+     * 
+     */
     public static CompletableFuture<GetProcessorResult> invokeAsync(GetProcessorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:documentai/v1beta3:getProcessor", TypeShape.of(GetProcessorResult.class), args == null ? GetProcessorArgs.Empty : args, Utilities.withVersion(options));
     }

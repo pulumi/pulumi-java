@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class DistributionViewerCertificateArgs extends io.pulumi.resources
     public static final DistributionViewerCertificateArgs Empty = new DistributionViewerCertificateArgs();
 
     @InputImport(name="acmCertificateArn")
-    private final @Nullable Input<String> acmCertificateArn;
+      private final @Nullable Input<String> acmCertificateArn;
 
     public Input<String> getAcmCertificateArn() {
         return this.acmCertificateArn == null ? Input.empty() : this.acmCertificateArn;
     }
 
     @InputImport(name="cloudFrontDefaultCertificate")
-    private final @Nullable Input<Boolean> cloudFrontDefaultCertificate;
+      private final @Nullable Input<Boolean> cloudFrontDefaultCertificate;
 
     public Input<Boolean> getCloudFrontDefaultCertificate() {
         return this.cloudFrontDefaultCertificate == null ? Input.empty() : this.cloudFrontDefaultCertificate;
     }
 
     @InputImport(name="iamCertificateId")
-    private final @Nullable Input<String> iamCertificateId;
+      private final @Nullable Input<String> iamCertificateId;
 
     public Input<String> getIamCertificateId() {
         return this.iamCertificateId == null ? Input.empty() : this.iamCertificateId;
     }
 
     @InputImport(name="minimumProtocolVersion")
-    private final @Nullable Input<String> minimumProtocolVersion;
+      private final @Nullable Input<String> minimumProtocolVersion;
 
     public Input<String> getMinimumProtocolVersion() {
         return this.minimumProtocolVersion == null ? Input.empty() : this.minimumProtocolVersion;
     }
 
     @InputImport(name="sslSupportMethod")
-    private final @Nullable Input<String> sslSupportMethod;
+      private final @Nullable Input<String> sslSupportMethod;
 
     public Input<String> getSslSupportMethod() {
         return this.sslSupportMethod == null ? Input.empty() : this.sslSupportMethod;
@@ -148,7 +148,6 @@ public final class DistributionViewerCertificateArgs extends io.pulumi.resources
             this.sslSupportMethod = Input.ofNullable(sslSupportMethod);
             return this;
         }
-
         public DistributionViewerCertificateArgs build() {
             return new DistributionViewerCertificateArgs(acmCertificateArn, cloudFrontDefaultCertificate, iamCertificateId, minimumProtocolVersion, sslSupportMethod);
         }

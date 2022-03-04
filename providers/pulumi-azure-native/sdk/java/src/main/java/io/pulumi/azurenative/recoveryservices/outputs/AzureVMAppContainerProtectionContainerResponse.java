@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.AzureWorkloadContainerExtendedInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -94,7 +94,7 @@ public final class AzureVMAppContainerProtectionContainerResponse {
     /**
      * Type of backup management for the container.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -105,63 +105,63 @@ public final class AzureVMAppContainerProtectionContainerResponse {
      * Backup is VMAppContainer
      * Expected value is 'VMAppContainer'.
      * 
-     */
+    */
     public String getContainerType() {
         return this.containerType;
     }
     /**
      * Additional details of a workload container.
      * 
-     */
+    */
     public Optional<AzureWorkloadContainerExtendedInfoResponse> getExtendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Friendly name of the container.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
-     */
+    */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Time stamp when this container was updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Re-Do Operation
      * 
-     */
+    */
     public Optional<String> getOperationType() {
         return Optional.ofNullable(this.operationType);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
-     */
+    */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
      * ARM ID of the virtual machine represented by this Azure Workload Container
      * 
-     */
+    */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Workload type for which registration was sent.
      * 
-     */
+    */
     public Optional<String> getWorkloadType() {
         return Optional.ofNullable(this.workloadType);
     }
@@ -253,7 +253,6 @@ public final class AzureVMAppContainerProtectionContainerResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureVMAppContainerProtectionContainerResponse build() {
             return new AzureVMAppContainerProtectionContainerResponse(backupManagementType, containerType, extendedInfo, friendlyName, healthStatus, lastUpdatedTime, operationType, registrationStatus, sourceResourceId, workloadType);
         }

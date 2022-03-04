@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineSshCredentialsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="address")
-    private final @Nullable String address;
+      private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
@@ -32,7 +32,7 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="administratorAccount")
-    private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
+      private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
 
     public Optional<VirtualMachineSshCredentialsResponse> getAdministratorAccount() {
         return this.administratorAccount == null ? Optional.empty() : Optional.ofNullable(this.administratorAccount);
@@ -43,7 +43,7 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sshPort")
-    private final @Nullable Integer sshPort;
+      private final @Nullable Integer sshPort;
 
     public Optional<Integer> getSshPort() {
         return this.sshPort == null ? Optional.empty() : Optional.ofNullable(this.sshPort);
@@ -102,7 +102,6 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
             this.sshPort = sshPort;
             return this;
         }
-
         public HDInsightResponseProperties build() {
             return new HDInsightResponseProperties(address, administratorAccount, sshPort);
         }

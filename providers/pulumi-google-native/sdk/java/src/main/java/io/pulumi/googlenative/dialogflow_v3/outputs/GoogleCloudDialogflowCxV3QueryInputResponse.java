@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3AudioInputResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3DtmfInputResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EventInputResponse;
@@ -64,42 +64,42 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse {
     /**
      * The natural language speech audio to be processed.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3AudioInputResponse getAudio() {
         return this.audio;
     }
     /**
      * The DTMF event to be handled.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3DtmfInputResponse getDtmf() {
         return this.dtmf;
     }
     /**
      * The event to be triggered.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3EventInputResponse getEvent() {
         return this.event;
     }
     /**
      * The intent to be triggered.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3IntentInputResponse getIntent() {
         return this.intent;
     }
     /**
      * The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
      * 
-     */
+    */
     public String getLanguageCode() {
         return this.languageCode;
     }
     /**
      * The natural language text to be processed.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3TextInputResponse getText() {
         return this.text;
     }
@@ -163,7 +163,6 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3QueryInputResponse build() {
             return new GoogleCloudDialogflowCxV3QueryInputResponse(audio, dtmf, event, intent, languageCode, text);
         }

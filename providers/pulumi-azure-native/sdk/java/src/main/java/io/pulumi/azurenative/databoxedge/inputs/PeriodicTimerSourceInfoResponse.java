@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final String schedule;
+      private final String schedule;
 
     public String getSchedule() {
         return this.schedule;
@@ -34,7 +34,7 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -45,7 +45,7 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable String topic;
+      private final @Nullable String topic;
 
     public Optional<String> getTopic() {
         return this.topic == null ? Optional.empty() : Optional.ofNullable(this.topic);
@@ -104,7 +104,6 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
             this.topic = topic;
             return this;
         }
-
         public PeriodicTimerSourceInfoResponse build() {
             return new PeriodicTimerSourceInfoResponse(schedule, startTime, topic);
         }

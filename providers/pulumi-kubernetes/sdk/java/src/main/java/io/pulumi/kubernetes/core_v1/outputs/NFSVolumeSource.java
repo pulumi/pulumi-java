@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class NFSVolumeSource {
     /**
      * Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
-     */
+    */
     public String getServer() {
         return this.server;
     }
@@ -98,7 +98,6 @@ public final class NFSVolumeSource {
             this.server = Objects.requireNonNull(server);
             return this;
         }
-
         public NFSVolumeSource build() {
             return new NFSVolumeSource(path, readOnly, server);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,28 +73,28 @@ public final class VnetRouteResponse {
     /**
      * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
      * 
-     */
+    */
     public Optional<String> getEndAddress() {
         return Optional.ofNullable(this.endAddress);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -106,21 +106,21 @@ public final class VnetRouteResponse {
      * 
      * These values will be used for syncing an app's routes with those from a Virtual Network.
      * 
-     */
+    */
     public Optional<String> getRouteType() {
         return Optional.ofNullable(this.routeType);
     }
     /**
      * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
      * 
-     */
+    */
     public Optional<String> getStartAddress() {
         return Optional.ofNullable(this.startAddress);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -191,7 +191,6 @@ public final class VnetRouteResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VnetRouteResponse build() {
             return new VnetRouteResponse(endAddress, id, kind, name, routeType, startAddress, type);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.CopyActivityLogSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.LogLocationSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyActivityLogSettings")
-    private final @Nullable Input<CopyActivityLogSettingsArgs> copyActivityLogSettings;
+      private final @Nullable Input<CopyActivityLogSettingsArgs> copyActivityLogSettings;
 
     public Input<CopyActivityLogSettingsArgs> getCopyActivityLogSettings() {
         return this.copyActivityLogSettings == null ? Input.empty() : this.copyActivityLogSettings;
@@ -36,7 +36,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableCopyActivityLog")
-    private final @Nullable Input<Object> enableCopyActivityLog;
+      private final @Nullable Input<Object> enableCopyActivityLog;
 
     public Input<Object> getEnableCopyActivityLog() {
         return this.enableCopyActivityLog == null ? Input.empty() : this.enableCopyActivityLog;
@@ -47,7 +47,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLocationSettings", required=true)
-    private final Input<LogLocationSettingsArgs> logLocationSettings;
+      private final Input<LogLocationSettingsArgs> logLocationSettings;
 
     public Input<LogLocationSettingsArgs> getLogLocationSettings() {
         return this.logLocationSettings;
@@ -121,7 +121,6 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.logLocationSettings = Input.of(Objects.requireNonNull(logLocationSettings));
             return this;
         }
-
         public LogSettingsArgs build() {
             return new LogSettingsArgs(copyActivityLogSettings, enableCopyActivityLog, logLocationSettings);
         }

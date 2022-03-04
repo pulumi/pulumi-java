@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
      * 
      */
     @InputImport(name="bigqueryConnectionSpec")
-    private final @Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
+      private final @Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
 
     public Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> getBigqueryConnectionSpec() {
         return this.bigqueryConnectionSpec == null ? Input.empty() : this.bigqueryConnectionSpec;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
             this.bigqueryConnectionSpec = Input.ofNullable(bigqueryConnectionSpec);
             return this;
         }
-
         public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs build() {
             return new GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(bigqueryConnectionSpec);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -46,7 +46,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamingUnits")
-    private final @Nullable Input<Integer> streamingUnits;
+      private final @Nullable Input<Integer> streamingUnits;
 
     public Input<Integer> getStreamingUnits() {
         return this.streamingUnits == null ? Input.empty() : this.streamingUnits;
@@ -120,7 +120,6 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
             this.streamingUnits = Input.ofNullable(streamingUnits);
             return this;
         }
-
         public TransformationArgs build() {
             return new TransformationArgs(name, query, streamingUnits);
         }

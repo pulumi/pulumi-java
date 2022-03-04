@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaAudienceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ageGroups")
-    private final @Nullable Input<List<String>> ageGroups;
+      private final @Nullable Input<List<String>> ageGroups;
 
     public Input<List<String>> getAgeGroups() {
         return this.ageGroups == null ? Input.empty() : this.ageGroups;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaAudienceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="genders")
-    private final @Nullable Input<List<String>> genders;
+      private final @Nullable Input<List<String>> genders;
 
     public Input<List<String>> getGenders() {
         return this.genders == null ? Input.empty() : this.genders;
@@ -94,7 +94,6 @@ public final class GoogleCloudRetailV2alphaAudienceArgs extends io.pulumi.resour
             this.genders = Input.ofNullable(genders);
             return this;
         }
-
         public GoogleCloudRetailV2alphaAudienceArgs build() {
             return new GoogleCloudRetailV2alphaAudienceArgs(ageGroups, genders);
         }

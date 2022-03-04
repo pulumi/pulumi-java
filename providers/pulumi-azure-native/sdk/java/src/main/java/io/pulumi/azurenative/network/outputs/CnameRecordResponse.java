@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CnameRecordResponse {
     /**
      * The canonical name for this CNAME record.
      * 
-     */
+    */
     public Optional<String> getCname() {
         return Optional.ofNullable(this.cname);
     }
@@ -54,7 +54,6 @@ public final class CnameRecordResponse {
             this.cname = cname;
             return this;
         }
-
         public CnameRecordResponse build() {
             return new CnameRecordResponse(cname);
         }

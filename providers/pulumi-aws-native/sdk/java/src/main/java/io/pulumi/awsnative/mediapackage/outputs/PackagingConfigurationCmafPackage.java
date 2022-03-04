@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationCmafEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationHlsManifest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -46,14 +46,14 @@ public final class PackagingConfigurationCmafPackage {
     /**
      * A list of HLS manifest configurations.
      * 
-     */
+    */
     public List<PackagingConfigurationHlsManifest> getHlsManifests() {
         return this.hlsManifests;
     }
     /**
      * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeEncoderConfigurationInSegments() {
         return Optional.ofNullable(this.includeEncoderConfigurationInSegments);
     }
@@ -106,7 +106,6 @@ public final class PackagingConfigurationCmafPackage {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public PackagingConfigurationCmafPackage build() {
             return new PackagingConfigurationCmafPackage(encryption, hlsManifests, includeEncoderConfigurationInSegments, segmentDurationSeconds);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas;
 import java.lang.Integer;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControl {
      * A nested object resource
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas> getMaxScaledDownReplicas() {
         return Optional.ofNullable(this.maxScaledDownReplicas);
     }
@@ -45,7 +45,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControl {
      * How long back autoscaling should look when computing recommendations
      * to include directives regarding slower scale down, as described above.
      * 
-     */
+    */
     public Optional<Integer> getTimeWindowSec() {
         return Optional.ofNullable(this.timeWindowSec);
     }
@@ -81,7 +81,6 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControl {
             this.timeWindowSec = timeWindowSec;
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyScaleDownControl build() {
             return new RegionAutoscalerAutoscalingPolicyScaleDownControl(maxScaledDownReplicas, timeWindowSec);
         }

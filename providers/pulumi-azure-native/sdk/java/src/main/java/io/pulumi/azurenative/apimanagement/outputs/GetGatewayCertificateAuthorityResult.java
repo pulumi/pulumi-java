@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class GetGatewayCertificateAuthorityResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Determines whether certificate authority is trusted.
      * 
-     */
+    */
     public Optional<Boolean> getIsTrusted() {
         return Optional.ofNullable(this.isTrusted);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -119,7 +119,6 @@ public final class GetGatewayCertificateAuthorityResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayCertificateAuthorityResult build() {
             return new GetGatewayCertificateAuthorityResult(id, isTrusted, name, type);
         }

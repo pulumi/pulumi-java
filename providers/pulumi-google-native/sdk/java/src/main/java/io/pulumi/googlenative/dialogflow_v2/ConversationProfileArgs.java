@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2AutomatedAgentConfigArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs;
@@ -25,7 +25,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="automatedAgentConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2AutomatedAgentConfigArgs> automatedAgentConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2AutomatedAgentConfigArgs> automatedAgentConfig;
 
     public Input<GoogleCloudDialogflowV2AutomatedAgentConfigArgs> getAutomatedAgentConfig() {
         return this.automatedAgentConfig == null ? Input.empty() : this.automatedAgentConfig;
@@ -36,7 +36,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -47,7 +47,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="humanAgentAssistantConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs> humanAgentAssistantConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs> humanAgentAssistantConfig;
 
     public Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs> getHumanAgentAssistantConfig() {
         return this.humanAgentAssistantConfig == null ? Input.empty() : this.humanAgentAssistantConfig;
@@ -58,7 +58,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="humanAgentHandoffConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs> humanAgentHandoffConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs> humanAgentHandoffConfig;
 
     public Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs> getHumanAgentHandoffConfig() {
         return this.humanAgentHandoffConfig == null ? Input.empty() : this.humanAgentHandoffConfig;
@@ -69,14 +69,14 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -87,7 +87,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2LoggingConfigArgs> loggingConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2LoggingConfigArgs> loggingConfig;
 
     public Input<GoogleCloudDialogflowV2LoggingConfigArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -98,7 +98,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -109,7 +109,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="newMessageEventNotificationConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2NotificationConfigArgs> newMessageEventNotificationConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2NotificationConfigArgs> newMessageEventNotificationConfig;
 
     public Input<GoogleCloudDialogflowV2NotificationConfigArgs> getNewMessageEventNotificationConfig() {
         return this.newMessageEventNotificationConfig == null ? Input.empty() : this.newMessageEventNotificationConfig;
@@ -120,14 +120,14 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="notificationConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2NotificationConfigArgs> notificationConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2NotificationConfigArgs> notificationConfig;
 
     public Input<GoogleCloudDialogflowV2NotificationConfigArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -138,7 +138,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securitySettings")
-    private final @Nullable Input<String> securitySettings;
+      private final @Nullable Input<String> securitySettings;
 
     public Input<String> getSecuritySettings() {
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
@@ -149,7 +149,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sttConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2SpeechToTextConfigArgs> sttConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2SpeechToTextConfigArgs> sttConfig;
 
     public Input<GoogleCloudDialogflowV2SpeechToTextConfigArgs> getSttConfig() {
         return this.sttConfig == null ? Input.empty() : this.sttConfig;
@@ -160,7 +160,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -399,7 +399,6 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public ConversationProfileArgs build() {
             return new ConversationProfileArgs(automatedAgentConfig, displayName, humanAgentAssistantConfig, humanAgentHandoffConfig, languageCode, location, loggingConfig, name, newMessageEventNotificationConfig, notificationConfig, project, securitySettings, sttConfig, timeZone);
         }

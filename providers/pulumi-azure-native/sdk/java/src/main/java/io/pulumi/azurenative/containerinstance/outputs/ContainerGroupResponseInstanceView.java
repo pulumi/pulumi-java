@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.EventResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ContainerGroupResponseInstanceView {
     /**
      * The events of this container group.
      * 
-     */
+    */
     public List<EventResponse> getEvents() {
         return this.events;
     }
     /**
      * The state of the container group. Only valid in response.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -76,7 +76,6 @@ public final class ContainerGroupResponseInstanceView {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public ContainerGroupResponseInstanceView build() {
             return new ContainerGroupResponseInstanceView(events, state);
         }

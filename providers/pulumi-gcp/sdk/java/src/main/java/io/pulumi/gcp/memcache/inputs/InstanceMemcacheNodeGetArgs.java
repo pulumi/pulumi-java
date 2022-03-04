@@ -4,7 +4,7 @@
 package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class InstanceMemcacheNodeGetArgs extends io.pulumi.resources.Resou
     public static final InstanceMemcacheNodeGetArgs Empty = new InstanceMemcacheNodeGetArgs();
 
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
     }
 
     @InputImport(name="nodeId")
-    private final @Nullable Input<String> nodeId;
+      private final @Nullable Input<String> nodeId;
 
     public Input<String> getNodeId() {
         return this.nodeId == null ? Input.empty() : this.nodeId;
     }
 
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -148,7 +148,6 @@ public final class InstanceMemcacheNodeGetArgs extends io.pulumi.resources.Resou
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceMemcacheNodeGetArgs build() {
             return new InstanceMemcacheNodeGetArgs(host, nodeId, port, state, zone);
         }

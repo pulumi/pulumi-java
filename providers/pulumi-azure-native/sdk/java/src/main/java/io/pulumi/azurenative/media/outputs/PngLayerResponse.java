@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,14 +48,14 @@ public final class PngLayerResponse {
     /**
      * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
      * 
-     */
+    */
     public Optional<String> getHeight() {
         return Optional.ofNullable(this.height);
     }
     /**
      * The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
@@ -63,14 +63,14 @@ public final class PngLayerResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.PngLayer'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
      * 
-     */
+    */
     public Optional<String> getWidth() {
         return Optional.ofNullable(this.width);
     }
@@ -120,7 +120,6 @@ public final class PngLayerResponse {
             this.width = width;
             return this;
         }
-
         public PngLayerResponse build() {
             return new PngLayerResponse(height, label, odataType, width);
         }

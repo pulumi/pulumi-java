@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="canonicalService")
-    private final @Nullable Input<String> canonicalService;
+      private final @Nullable Input<String> canonicalService;
 
     public Input<String> getCanonicalService() {
         return this.canonicalService == null ? Input.empty() : this.canonicalService;
@@ -34,7 +34,7 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="canonicalServiceNamespace")
-    private final @Nullable Input<String> canonicalServiceNamespace;
+      private final @Nullable Input<String> canonicalServiceNamespace;
 
     public Input<String> getCanonicalServiceNamespace() {
         return this.canonicalServiceNamespace == null ? Input.empty() : this.canonicalServiceNamespace;
@@ -45,7 +45,7 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="meshUid")
-    private final @Nullable Input<String> meshUid;
+      private final @Nullable Input<String> meshUid;
 
     public Input<String> getMeshUid() {
         return this.meshUid == null ? Input.empty() : this.meshUid;
@@ -119,7 +119,6 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
             this.meshUid = Input.ofNullable(meshUid);
             return this;
         }
-
         public IstioCanonicalServiceArgs build() {
             return new IstioCanonicalServiceArgs(canonicalService, canonicalServiceNamespace, meshUid);
         }

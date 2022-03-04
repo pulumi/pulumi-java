@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketAccessControlProjectTeamArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -35,7 +35,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -46,7 +46,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -68,7 +68,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entity")
-    private final @Nullable Input<String> entity;
+      private final @Nullable Input<String> entity;
 
     public Input<String> getEntity() {
         return this.entity == null ? Input.empty() : this.entity;
@@ -79,7 +79,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entityId")
-    private final @Nullable Input<String> entityId;
+      private final @Nullable Input<String> entityId;
 
     public Input<String> getEntityId() {
         return this.entityId == null ? Input.empty() : this.entityId;
@@ -90,7 +90,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -101,7 +101,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -112,7 +112,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -123,7 +123,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="projectTeam")
-    private final @Nullable Input<BucketAccessControlProjectTeamArgs> projectTeam;
+      private final @Nullable Input<BucketAccessControlProjectTeamArgs> projectTeam;
 
     public Input<BucketAccessControlProjectTeamArgs> getProjectTeam() {
         return this.projectTeam == null ? Input.empty() : this.projectTeam;
@@ -134,7 +134,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -145,7 +145,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -339,7 +339,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
-
         public BucketAccessControlArgs build() {
             return new BucketAccessControlArgs(bucket, domain, email, entity, entityId, etag, id, kind, projectTeam, role, selfLink);
         }

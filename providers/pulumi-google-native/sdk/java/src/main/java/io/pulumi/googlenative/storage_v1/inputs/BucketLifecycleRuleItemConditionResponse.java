@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="age", required=true)
-    private final Integer age;
+      private final Integer age;
 
     public Integer getAge() {
         return this.age;
@@ -35,7 +35,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="createdBefore", required=true)
-    private final String createdBefore;
+      private final String createdBefore;
 
     public String getCreatedBefore() {
         return this.createdBefore;
@@ -46,7 +46,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="customTimeBefore", required=true)
-    private final String customTimeBefore;
+      private final String customTimeBefore;
 
     public String getCustomTimeBefore() {
         return this.customTimeBefore;
@@ -57,7 +57,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="daysSinceCustomTime", required=true)
-    private final Integer daysSinceCustomTime;
+      private final Integer daysSinceCustomTime;
 
     public Integer getDaysSinceCustomTime() {
         return this.daysSinceCustomTime;
@@ -68,7 +68,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="daysSinceNoncurrentTime", required=true)
-    private final Integer daysSinceNoncurrentTime;
+      private final Integer daysSinceNoncurrentTime;
 
     public Integer getDaysSinceNoncurrentTime() {
         return this.daysSinceNoncurrentTime;
@@ -79,7 +79,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="isLive", required=true)
-    private final Boolean isLive;
+      private final Boolean isLive;
 
     public Boolean getIsLive() {
         return this.isLive;
@@ -90,7 +90,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="matchesPattern", required=true)
-    private final String matchesPattern;
+      private final String matchesPattern;
 
     public String getMatchesPattern() {
         return this.matchesPattern;
@@ -101,7 +101,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="matchesStorageClass", required=true)
-    private final List<String> matchesStorageClass;
+      private final List<String> matchesStorageClass;
 
     public List<String> getMatchesStorageClass() {
         return this.matchesStorageClass;
@@ -112,7 +112,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="noncurrentTimeBefore", required=true)
-    private final String noncurrentTimeBefore;
+      private final String noncurrentTimeBefore;
 
     public String getNoncurrentTimeBefore() {
         return this.noncurrentTimeBefore;
@@ -123,7 +123,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="numNewerVersions", required=true)
-    private final Integer numNewerVersions;
+      private final Integer numNewerVersions;
 
     public Integer getNumNewerVersions() {
         return this.numNewerVersions;
@@ -252,7 +252,6 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
             this.numNewerVersions = Objects.requireNonNull(numNewerVersions);
             return this;
         }
-
         public BucketLifecycleRuleItemConditionResponse build() {
             return new BucketLifecycleRuleItemConditionResponse(age, createdBefore, customTimeBefore, daysSinceCustomTime, daysSinceNoncurrentTime, isLive, matchesPattern, matchesStorageClass, noncurrentTimeBefore, numNewerVersions);
         }

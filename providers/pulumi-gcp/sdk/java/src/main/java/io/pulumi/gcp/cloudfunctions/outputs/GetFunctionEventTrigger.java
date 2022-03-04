@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudfunctions.outputs.GetFunctionEventTriggerFailurePolicy;
 import java.lang.String;
 import java.util.List;
@@ -44,21 +44,21 @@ public final class GetFunctionEventTrigger {
      * See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
      * for a full reference of accepted triggers.
      * 
-     */
+    */
     public String getEventType() {
         return this.eventType;
     }
     /**
      * Policy for failed executions. Structure is documented below.
      * 
-     */
+    */
     public List<GetFunctionEventTriggerFailurePolicy> getFailurePolicies() {
         return this.failurePolicies;
     }
     /**
      * The name of the resource whose events are being observed, for example, `"myBucket"`
      * 
-     */
+    */
     public String getResource() {
         return this.resource;
     }
@@ -101,7 +101,6 @@ public final class GetFunctionEventTrigger {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public GetFunctionEventTrigger build() {
             return new GetFunctionEventTrigger(eventType, failurePolicies, resource);
         }

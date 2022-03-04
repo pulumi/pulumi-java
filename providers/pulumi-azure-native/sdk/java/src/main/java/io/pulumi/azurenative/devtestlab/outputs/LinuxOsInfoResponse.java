@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class LinuxOsInfoResponse {
     /**
      * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
      * 
-     */
+    */
     public Optional<String> getLinuxOsState() {
         return Optional.ofNullable(this.linuxOsState);
     }
@@ -54,7 +54,6 @@ public final class LinuxOsInfoResponse {
             this.linuxOsState = linuxOsState;
             return this;
         }
-
         public LinuxOsInfoResponse build() {
             return new LinuxOsInfoResponse(linuxOsState);
         }

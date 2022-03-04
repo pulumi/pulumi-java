@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AppliedLicenseResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="osLicense", required=true)
-    private final String osLicense;
+      private final String osLicense;
 
     public String getOsLicense() {
         return this.osLicense;
@@ -32,7 +32,7 @@ public final class AppliedLicenseResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class AppliedLicenseResponse extends io.pulumi.resources.InvokeArgs
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AppliedLicenseResponse build() {
             return new AppliedLicenseResponse(osLicense, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApiPortalInstanceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ApiPortalInstanceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -81,7 +81,6 @@ public final class ApiPortalInstanceResponse extends io.pulumi.resources.InvokeA
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ApiPortalInstanceResponse build() {
             return new ApiPortalInstanceResponse(name, status);
         }

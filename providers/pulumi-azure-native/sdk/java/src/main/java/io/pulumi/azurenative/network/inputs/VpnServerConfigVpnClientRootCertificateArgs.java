@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
      * 
      */
     @InputImport(name="publicCertData")
-    private final @Nullable Input<String> publicCertData;
+      private final @Nullable Input<String> publicCertData;
 
     public Input<String> getPublicCertData() {
         return this.publicCertData == null ? Input.empty() : this.publicCertData;
@@ -93,7 +93,6 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
             this.publicCertData = Input.ofNullable(publicCertData);
             return this;
         }
-
         public VpnServerConfigVpnClientRootCertificateArgs build() {
             return new VpnServerConfigVpnClientRootCertificateArgs(name, publicCertData);
         }

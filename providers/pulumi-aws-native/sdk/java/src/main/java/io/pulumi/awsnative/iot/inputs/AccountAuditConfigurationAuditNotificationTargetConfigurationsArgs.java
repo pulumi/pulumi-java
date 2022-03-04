@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditNotificationTargetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     public static final AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs Empty = new AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs();
 
     @InputImport(name="sns")
-    private final @Nullable Input<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
+      private final @Nullable Input<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
 
     public Input<AccountAuditConfigurationAuditNotificationTargetArgs> getSns() {
         return this.sns == null ? Input.empty() : this.sns;
@@ -62,7 +62,6 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
             this.sns = Input.ofNullable(sns);
             return this;
         }
-
         public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs build() {
             return new AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs(sns);
         }

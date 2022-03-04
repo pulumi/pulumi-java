@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2DocumentReloadStatusResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -84,63 +84,63 @@ public final class GetDocumentResult {
     /**
      * The URI where the file content is located. For documents stored in Google Cloud Storage, these URIs must have the form `gs:///`. NOTE: External URLs must correspond to public webpages, i.e., they must be indexed by Google Search. In particular, URLs for showing documents in Google Cloud Storage (i.e. the URL in your browser) are not supported. Instead use the `gs://` format URI described above.
      * 
-     */
+    */
     public String getContentUri() {
         return this.contentUri;
     }
     /**
      * The display name of the document. The name must be 1024 bytes or less; otherwise, the creation request fails.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don't try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
      * 
-     */
+    */
     public Boolean getEnableAutoReload() {
         return this.enableAutoReload;
     }
     /**
      * The knowledge type of document content.
      * 
-     */
+    */
     public List<String> getKnowledgeTypes() {
         return this.knowledgeTypes;
     }
     /**
      * The time and status of the latest reload. This reload may have been triggered automatically or manually and may not have succeeded.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2DocumentReloadStatusResponse getLatestReloadStatus() {
         return this.latestReloadStatus;
     }
     /**
      * Optional. Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested use cases include storing a document's title, an external URL distinct from the document's content_uri, etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
     /**
      * The MIME type of this document.
      * 
-     */
+    */
     public String getMimeType() {
         return this.mimeType;
     }
     /**
      * Optional. The document resource name. The name must be empty when creating a document. Format: `projects//locations//knowledgeBases//documents/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types.
      * 
-     */
+    */
     public String getRawContent() {
         return this.rawContent;
     }
@@ -225,7 +225,6 @@ public final class GetDocumentResult {
             this.rawContent = Objects.requireNonNull(rawContent);
             return this;
         }
-
         public GetDocumentResult build() {
             return new GetDocumentResult(contentUri, displayName, enableAutoReload, knowledgeTypes, latestReloadStatus, metadata, mimeType, name, rawContent);
         }

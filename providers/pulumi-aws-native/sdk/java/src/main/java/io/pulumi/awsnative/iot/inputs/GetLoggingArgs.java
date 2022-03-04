@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLoggingArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final String accountId;
+      private final String accountId;
 
     public String getAccountId() {
         return this.accountId;
@@ -55,7 +55,6 @@ public final class GetLoggingArgs extends io.pulumi.resources.InvokeArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public GetLoggingArgs build() {
             return new GetLoggingArgs(accountId);
         }

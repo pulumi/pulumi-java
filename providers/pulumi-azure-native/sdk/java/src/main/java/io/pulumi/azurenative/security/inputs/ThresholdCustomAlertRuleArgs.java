@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Input<Boolean> isEnabled;
+      private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -35,7 +35,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maxThreshold", required=true)
-    private final Input<Integer> maxThreshold;
+      private final Input<Integer> maxThreshold;
 
     public Input<Integer> getMaxThreshold() {
         return this.maxThreshold;
@@ -46,7 +46,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="minThreshold", required=true)
-    private final Input<Integer> minThreshold;
+      private final Input<Integer> minThreshold;
 
     public Input<Integer> getMinThreshold() {
         return this.minThreshold;
@@ -58,7 +58,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final Input<String> ruleType;
+      private final Input<String> ruleType;
 
     public Input<String> getRuleType() {
         return this.ruleType;
@@ -147,7 +147,6 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }
-
         public ThresholdCustomAlertRuleArgs build() {
             return new ThresholdCustomAlertRuleArgs(isEnabled, maxThreshold, minThreshold, ruleType);
         }

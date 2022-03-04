@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SyncMigrationDatabaseErrorEventResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,21 +50,21 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
     /**
      * Error message
      * 
-     */
+    */
     public Optional<String> getErrorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * List of error events.
      * 
-     */
+    */
     public List<SyncMigrationDatabaseErrorEventResponse> getEvents() {
         return this.events == null ? List.of() : this.events;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -72,7 +72,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
      * Result type
      * Expected value is 'DatabaseLevelErrorOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
@@ -122,7 +122,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorResponse(errorMessage, events, id, resultType);
         }

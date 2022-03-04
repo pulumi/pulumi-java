@@ -6,17 +6,33 @@ package io.pulumi.awsnative.customerprofiles;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.customerprofiles.inputs.GetObjectTypeArgs;
 import io.pulumi.awsnative.customerprofiles.outputs.GetObjectTypeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetObjectType {
-/**
- * An ObjectType resource of Amazon Connect Customer Profiles
+    private GetObjectType() {}
+    public interface BuilderApplicator {
+        public void apply(GetObjectTypeArgs.Builder a);
+    }
+    private static GetObjectTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetObjectTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An ObjectType resource of Amazon Connect Customer Profiles
  * 
- */
+     */
+    public static CompletableFuture<GetObjectTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An ObjectType resource of Amazon Connect Customer Profiles
+     * 
+     */
     public static CompletableFuture<GetObjectTypeResult> invokeAsync(GetObjectTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:customerprofiles:getObjectType", TypeShape.of(GetObjectTypeResult.class), args == null ? GetObjectTypeArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.ResourceGroupResourceType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable Input<String> groupId;
+      private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -35,7 +35,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<ResourceGroupResourceType> resourceType;
+      private final @Nullable Input<ResourceGroupResourceType> resourceType;
 
     public Input<ResourceGroupResourceType> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -94,7 +94,6 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
-
         public ResourceGroupArgs build() {
             return new ResourceGroupArgs(groupId, resourceType);
         }

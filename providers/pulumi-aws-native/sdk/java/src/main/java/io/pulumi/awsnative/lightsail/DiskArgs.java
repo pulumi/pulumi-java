@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.lightsail.inputs.DiskAddOnArgs;
 import io.pulumi.awsnative.lightsail.inputs.DiskTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addOns")
-    private final @Nullable Input<List<DiskAddOnArgs>> addOns;
+      private final @Nullable Input<List<DiskAddOnArgs>> addOns;
 
     public Input<List<DiskAddOnArgs>> getAddOns() {
         return this.addOns == null ? Input.empty() : this.addOns;
@@ -34,7 +34,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -45,7 +45,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskName")
-    private final @Nullable Input<String> diskName;
+      private final @Nullable Input<String> diskName;
 
     public Input<String> getDiskName() {
         return this.diskName == null ? Input.empty() : this.diskName;
@@ -56,7 +56,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeInGb", required=true)
-    private final Input<Integer> sizeInGb;
+      private final Input<Integer> sizeInGb;
 
     public Input<Integer> getSizeInGb() {
         return this.sizeInGb;
@@ -67,7 +67,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DiskTagArgs>> tags;
+      private final @Nullable Input<List<DiskTagArgs>> tags;
 
     public Input<List<DiskTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -171,7 +171,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DiskArgs build() {
             return new DiskArgs(addOns, availabilityZone, diskName, sizeInGb, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class VirtualMachineExtensionInstanceViewResponse {
     /**
      * The virtual machine extension name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<InstanceViewStatusResponse> getSubstatuses() {
         return this.substatuses == null ? List.of() : this.substatuses;
     }
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Specifies the version of the script handler.
      * 
-     */
+    */
     public Optional<String> getTypeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
@@ -141,7 +141,6 @@ public final class VirtualMachineExtensionInstanceViewResponse {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public VirtualMachineExtensionInstanceViewResponse build() {
             return new VirtualMachineExtensionInstanceViewResponse(name, statuses, substatuses, type, typeHandlerVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDiskEncryptionSetArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="diskEncryptionSetName", required=true)
-    private final String diskEncryptionSetName;
+      private final String diskEncryptionSetName;
 
     public String getDiskEncryptionSetName() {
         return this.diskEncryptionSetName;
@@ -28,7 +28,7 @@ public final class GetDiskEncryptionSetArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetDiskEncryptionSetArgs extends io.pulumi.resources.InvokeAr
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDiskEncryptionSetArgs build() {
             return new GetDiskEncryptionSetArgs(diskEncryptionSetName, resourceGroupName);
         }

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.quicksight.inputs.AnalysisDecimalParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisIntegerParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisStringParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dateTimeParameters")
-    private final @Nullable Input<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
+      private final @Nullable Input<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
 
     public Input<List<AnalysisDateTimeParameterArgs>> getDateTimeParameters() {
         return this.dateTimeParameters == null ? Input.empty() : this.dateTimeParameters;
@@ -38,7 +38,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="decimalParameters")
-    private final @Nullable Input<List<AnalysisDecimalParameterArgs>> decimalParameters;
+      private final @Nullable Input<List<AnalysisDecimalParameterArgs>> decimalParameters;
 
     public Input<List<AnalysisDecimalParameterArgs>> getDecimalParameters() {
         return this.decimalParameters == null ? Input.empty() : this.decimalParameters;
@@ -49,7 +49,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="integerParameters")
-    private final @Nullable Input<List<AnalysisIntegerParameterArgs>> integerParameters;
+      private final @Nullable Input<List<AnalysisIntegerParameterArgs>> integerParameters;
 
     public Input<List<AnalysisIntegerParameterArgs>> getIntegerParameters() {
         return this.integerParameters == null ? Input.empty() : this.integerParameters;
@@ -60,7 +60,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stringParameters")
-    private final @Nullable Input<List<AnalysisStringParameterArgs>> stringParameters;
+      private final @Nullable Input<List<AnalysisStringParameterArgs>> stringParameters;
 
     public Input<List<AnalysisStringParameterArgs>> getStringParameters() {
         return this.stringParameters == null ? Input.empty() : this.stringParameters;
@@ -149,7 +149,6 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
             this.stringParameters = Input.ofNullable(stringParameters);
             return this;
         }
-
         public AnalysisParametersArgs build() {
             return new AnalysisParametersArgs(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
         }

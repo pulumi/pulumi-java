@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class TableReferenceResponse {
     /**
      * [Required] The ID of the dataset containing this table.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * [Required] The ID of the project containing this table.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
      * 
-     */
+    */
     public String getTableId() {
         return this.tableId;
     }
@@ -95,7 +95,6 @@ public final class TableReferenceResponse {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public TableReferenceResponse build() {
             return new TableReferenceResponse(datasetId, project, tableId);
         }

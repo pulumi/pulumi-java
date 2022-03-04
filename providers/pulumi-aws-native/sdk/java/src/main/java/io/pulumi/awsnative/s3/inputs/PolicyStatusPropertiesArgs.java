@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class PolicyStatusPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isPublic", required=true)
-    private final Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;
+      private final Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;
 
     public Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> getIsPublic() {
         return this.isPublic;
@@ -65,7 +65,6 @@ public final class PolicyStatusPropertiesArgs extends io.pulumi.resources.Resour
             this.isPublic = Input.of(Objects.requireNonNull(isPublic));
             return this;
         }
-
         public PolicyStatusPropertiesArgs build() {
             return new PolicyStatusPropertiesArgs(isPublic);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.SolutionPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="migrateProjectName", required=true)
-    private final Input<String> migrateProjectName;
+      private final Input<String> migrateProjectName;
 
     public Input<String> getMigrateProjectName() {
         return this.migrateProjectName;
@@ -31,7 +31,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<SolutionPropertiesArgs> properties;
+      private final @Nullable Input<SolutionPropertiesArgs> properties;
 
     public Input<SolutionPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="solutionName")
-    private final @Nullable Input<String> solutionName;
+      private final @Nullable Input<String> solutionName;
 
     public Input<String> getSolutionName() {
         return this.solutionName == null ? Input.empty() : this.solutionName;
@@ -142,7 +142,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
             this.solutionName = Input.ofNullable(solutionName);
             return this;
         }
-
         public SolutionArgs build() {
             return new SolutionArgs(migrateProjectName, properties, resourceGroupName, solutionName);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRuleActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,42 +18,42 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
     public static final TopicRulePayloadArgs Empty = new TopicRulePayloadArgs();
 
     @InputImport(name="actions", required=true)
-    private final Input<List<TopicRuleActionArgs>> actions;
+      private final Input<List<TopicRuleActionArgs>> actions;
 
     public Input<List<TopicRuleActionArgs>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="awsIotSqlVersion")
-    private final @Nullable Input<String> awsIotSqlVersion;
+      private final @Nullable Input<String> awsIotSqlVersion;
 
     public Input<String> getAwsIotSqlVersion() {
         return this.awsIotSqlVersion == null ? Input.empty() : this.awsIotSqlVersion;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="errorAction")
-    private final @Nullable Input<TopicRuleActionArgs> errorAction;
+      private final @Nullable Input<TopicRuleActionArgs> errorAction;
 
     public Input<TopicRuleActionArgs> getErrorAction() {
         return this.errorAction == null ? Input.empty() : this.errorAction;
     }
 
     @InputImport(name="ruleDisabled")
-    private final @Nullable Input<Boolean> ruleDisabled;
+      private final @Nullable Input<Boolean> ruleDisabled;
 
     public Input<Boolean> getRuleDisabled() {
         return this.ruleDisabled == null ? Input.empty() : this.ruleDisabled;
     }
 
     @InputImport(name="sql", required=true)
-    private final Input<String> sql;
+      private final Input<String> sql;
 
     public Input<String> getSql() {
         return this.sql;
@@ -172,7 +172,6 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
             this.sql = Input.of(Objects.requireNonNull(sql));
             return this;
         }
-
         public TopicRulePayloadArgs build() {
             return new TopicRulePayloadArgs(actions, awsIotSqlVersion, description, errorAction, ruleDisabled, sql);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.AutomaticOSUpgradePolicyResponse;
 import io.pulumi.azurenative.compute.outputs.RollingUpgradePolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class UpgradePolicyResponse {
     /**
      * Configuration parameters used for performing automatic OS Upgrade.
      * 
-     */
+    */
     public Optional<AutomaticOSUpgradePolicyResponse> getAutomaticOSUpgradePolicy() {
         return Optional.ofNullable(this.automaticOSUpgradePolicy);
     }
     /**
      * Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The configuration parameters used while performing a rolling upgrade.
      * 
-     */
+    */
     public Optional<RollingUpgradePolicyResponse> getRollingUpgradePolicy() {
         return Optional.ofNullable(this.rollingUpgradePolicy);
     }
@@ -99,7 +99,6 @@ public final class UpgradePolicyResponse {
             this.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;
         }
-
         public UpgradePolicyResponse build() {
             return new UpgradePolicyResponse(automaticOSUpgradePolicy, mode, rollingUpgradePolicy);
         }

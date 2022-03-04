@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.TableDataSetResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TimeSeriesTableResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="dataSets", required=true)
-    private final List<TableDataSetResponse> dataSets;
+      private final List<TableDataSetResponse> dataSets;
 
     public List<TableDataSetResponse> getDataSets() {
         return this.dataSets;
@@ -60,7 +60,6 @@ public final class TimeSeriesTableResponse extends io.pulumi.resources.InvokeArg
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }
-
         public TimeSeriesTableResponse build() {
             return new TimeSeriesTableResponse(dataSets);
         }

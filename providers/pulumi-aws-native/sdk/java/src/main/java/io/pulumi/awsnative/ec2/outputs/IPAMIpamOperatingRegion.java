@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class IPAMIpamOperatingRegion {
     /**
      * The name of the region.
      * 
-     */
+    */
     public String getRegionName() {
         return this.regionName;
     }
@@ -52,7 +52,6 @@ public final class IPAMIpamOperatingRegion {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
-
         public IPAMIpamOperatingRegion build() {
             return new IPAMIpamOperatingRegion(regionName);
         }

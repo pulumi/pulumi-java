@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetThemeArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetThemeArgs Empty = new GetThemeArgs();
 
     @InputImport(name="awsAccountId", required=true)
-    private final String awsAccountId;
+      private final String awsAccountId;
 
     public String getAwsAccountId() {
         return this.awsAccountId;
     }
 
     @InputImport(name="themeId", required=true)
-    private final String themeId;
+      private final String themeId;
 
     public String getThemeId() {
         return this.themeId;
@@ -69,7 +69,6 @@ public final class GetThemeArgs extends io.pulumi.resources.InvokeArgs {
             this.themeId = Objects.requireNonNull(themeId);
             return this;
         }
-
         public GetThemeArgs build() {
             return new GetThemeArgs(awsAccountId, themeId);
         }

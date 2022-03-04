@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -43,7 +43,7 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -54,7 +54,7 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -143,7 +143,6 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public IamPolicyArgs build() {
             return new IamPolicyArgs(location, policyData, project, service);
         }

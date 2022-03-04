@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<Object> defaultValue;
+      private final @Nullable Input<Object> defaultValue;
 
     public Input<Object> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -37,7 +37,7 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ParameterType>> type;
+      private final Input<Either<String,ParameterType>> type;
 
     public Input<Either<String,ParameterType>> getType() {
         return this.type;
@@ -96,7 +96,6 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ParameterSpecificationArgs build() {
             return new ParameterSpecificationArgs(defaultValue, type);
         }

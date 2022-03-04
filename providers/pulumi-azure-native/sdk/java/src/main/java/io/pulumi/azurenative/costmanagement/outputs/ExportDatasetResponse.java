@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ExportDatasetConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class ExportDatasetResponse {
     /**
      * The export dataset configuration.
      * 
-     */
+    */
     public Optional<ExportDatasetConfigurationResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * The granularity of rows in the export. Currently only 'Daily' is supported.
      * 
-     */
+    */
     public Optional<String> getGranularity() {
         return Optional.ofNullable(this.granularity);
     }
@@ -77,7 +77,6 @@ public final class ExportDatasetResponse {
             this.granularity = granularity;
             return this;
         }
-
         public ExportDatasetResponse build() {
             return new ExportDatasetResponse(configuration, granularity);
         }

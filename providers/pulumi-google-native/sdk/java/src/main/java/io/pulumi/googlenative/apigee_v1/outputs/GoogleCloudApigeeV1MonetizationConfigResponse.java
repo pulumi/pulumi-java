@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse {
     /**
      * Flag that specifies whether the Monetization add-on is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GoogleCloudApigeeV1MonetizationConfigResponse build() {
             return new GoogleCloudApigeeV1MonetizationConfigResponse(enabled);
         }

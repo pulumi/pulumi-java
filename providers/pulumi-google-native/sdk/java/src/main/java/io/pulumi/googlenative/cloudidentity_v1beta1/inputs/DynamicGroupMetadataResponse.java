@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupQueryResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupStatusResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DynamicGroupMetadataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="queries", required=true)
-    private final List<DynamicGroupQueryResponse> queries;
+      private final List<DynamicGroupQueryResponse> queries;
 
     public List<DynamicGroupQueryResponse> getQueries() {
         return this.queries;
@@ -34,7 +34,7 @@ public final class DynamicGroupMetadataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="status", required=true)
-    private final DynamicGroupStatusResponse status;
+      private final DynamicGroupStatusResponse status;
 
     public DynamicGroupStatusResponse getStatus() {
         return this.status;
@@ -83,7 +83,6 @@ public final class DynamicGroupMetadataResponse extends io.pulumi.resources.Invo
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DynamicGroupMetadataResponse build() {
             return new DynamicGroupMetadataResponse(queries, status);
         }

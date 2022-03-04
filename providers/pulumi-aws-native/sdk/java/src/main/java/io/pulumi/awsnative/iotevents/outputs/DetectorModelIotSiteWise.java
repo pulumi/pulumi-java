@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelAssetPropertyValue;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -51,28 +51,28 @@ public final class DetectorModelIotSiteWise {
     /**
      * The ID of the asset that has the specified property. You can specify an expression.
      * 
-     */
+    */
     public Optional<String> getAssetId() {
         return Optional.ofNullable(this.assetId);
     }
     /**
      * A unique identifier for this entry. You can use the entry ID to track which data entry causes an error in case of failure. The default is a new unique identifier. You can also specify an expression.
      * 
-     */
+    */
     public Optional<String> getEntryId() {
         return Optional.ofNullable(this.entryId);
     }
     /**
      * The alias of the asset property. You can also specify an expression.
      * 
-     */
+    */
     public Optional<String> getPropertyAlias() {
         return Optional.ofNullable(this.propertyAlias);
     }
     /**
      * The ID of the asset property. You can specify an expression.
      * 
-     */
+    */
     public Optional<String> getPropertyId() {
         return Optional.ofNullable(this.propertyId);
     }
@@ -132,7 +132,6 @@ public final class DetectorModelIotSiteWise {
             this.propertyValue = Objects.requireNonNull(propertyValue);
             return this;
         }
-
         public DetectorModelIotSiteWise build() {
             return new DetectorModelIotSiteWise(assetId, entryId, propertyAlias, propertyId, propertyValue);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.CorsRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class CorsRulesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="corsRules")
-    private final @Nullable List<CorsRuleResponse> corsRules;
+      private final @Nullable List<CorsRuleResponse> corsRules;
 
     public List<CorsRuleResponse> getCorsRules() {
         return this.corsRules == null ? List.of() : this.corsRules;
@@ -62,7 +62,6 @@ public final class CorsRulesResponse extends io.pulumi.resources.InvokeArgs {
             this.corsRules = corsRules;
             return this;
         }
-
         public CorsRulesResponse build() {
             return new CorsRulesResponse(corsRules);
         }

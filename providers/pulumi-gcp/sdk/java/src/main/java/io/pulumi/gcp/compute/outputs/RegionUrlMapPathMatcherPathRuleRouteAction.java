@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy;
@@ -105,7 +105,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteAction {
      * Recommendation for Cross Origin Resource Sharing
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy> getCorsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
@@ -119,7 +119,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteAction {
      * ignored by clients that are configured with a fault_injection_policy.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy> getFaultInjectionPolicy() {
         return Optional.ofNullable(this.faultInjectionPolicy);
     }
@@ -130,7 +130,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteAction {
      * service, the host / authority header is suffixed with -shadow.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy> getRequestMirrorPolicy() {
         return Optional.ofNullable(this.requestMirrorPolicy);
     }
@@ -138,7 +138,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteAction {
      * Specifies the retry policy associated with this route.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy> getRetryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -149,7 +149,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteAction {
      * specified, the default value is 15 seconds.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteActionTimeout> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -158,7 +158,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteAction {
      * the matched service
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite> getUrlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
@@ -173,7 +173,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteAction {
      * HttpRouteAction.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendService> getWeightedBackendServices() {
         return this.weightedBackendServices == null ? List.of() : this.weightedBackendServices;
     }
@@ -244,7 +244,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteAction {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteAction build() {
             return new RegionUrlMapPathMatcherPathRuleRouteAction(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

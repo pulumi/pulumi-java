@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class AadAuthenticationParametersResponse {
     /**
      * AAD Vpn authentication parameter AAD audience.
      * 
-     */
+    */
     public Optional<String> getAadAudience() {
         return Optional.ofNullable(this.aadAudience);
     }
     /**
      * AAD Vpn authentication parameter AAD issuer.
      * 
-     */
+    */
     public Optional<String> getAadIssuer() {
         return Optional.ofNullable(this.aadIssuer);
     }
     /**
      * AAD Vpn authentication parameter AAD tenant.
      * 
-     */
+    */
     public Optional<String> getAadTenant() {
         return Optional.ofNullable(this.aadTenant);
     }
@@ -97,7 +97,6 @@ public final class AadAuthenticationParametersResponse {
             this.aadTenant = aadTenant;
             return this;
         }
-
         public AadAuthenticationParametersResponse build() {
             return new AadAuthenticationParametersResponse(aadAudience, aadIssuer, aadTenant);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.AnalysisDataSetReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AnalysisSourceTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -35,7 +35,7 @@ public final class AnalysisSourceTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataSetReferences", required=true)
-    private final Input<List<AnalysisDataSetReferenceArgs>> dataSetReferences;
+      private final Input<List<AnalysisDataSetReferenceArgs>> dataSetReferences;
 
     public Input<List<AnalysisDataSetReferenceArgs>> getDataSetReferences() {
         return this.dataSetReferences;
@@ -94,7 +94,6 @@ public final class AnalysisSourceTemplateArgs extends io.pulumi.resources.Resour
             this.dataSetReferences = Input.of(Objects.requireNonNull(dataSetReferences));
             return this;
         }
-
         public AnalysisSourceTemplateArgs build() {
             return new AnalysisSourceTemplateArgs(arn, dataSetReferences);
         }

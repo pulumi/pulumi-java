@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3outposts.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class GetAccessPointResult {
     /**
      * The Amazon Resource Name (ARN) of the specified AccessPoint.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The access point policy associated with this access point.
      * 
-     */
+    */
     public Optional<Object> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
@@ -77,7 +77,6 @@ public final class GetAccessPointResult {
             this.policy = policy;
             return this;
         }
-
         public GetAccessPointResult build() {
             return new GetAccessPointResult(arn, policy);
         }

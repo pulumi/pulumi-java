@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.UniqueKeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class UniqueKeyPolicyResponse {
     /**
      * List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
      * 
-     */
+    */
     public List<UniqueKeyResponse> getUniqueKeys() {
         return this.uniqueKeys == null ? List.of() : this.uniqueKeys;
     }
@@ -54,7 +54,6 @@ public final class UniqueKeyPolicyResponse {
             this.uniqueKeys = uniqueKeys;
             return this;
         }
-
         public UniqueKeyPolicyResponse build() {
             return new UniqueKeyPolicyResponse(uniqueKeys);
         }

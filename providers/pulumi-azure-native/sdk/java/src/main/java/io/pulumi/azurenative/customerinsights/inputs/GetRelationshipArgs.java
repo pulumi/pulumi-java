@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRelationshipArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final String hubName;
+      private final String hubName;
 
     public String getHubName() {
         return this.hubName;
@@ -28,7 +28,7 @@ public final class GetRelationshipArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="relationshipName", required=true)
-    private final String relationshipName;
+      private final String relationshipName;
 
     public String getRelationshipName() {
         return this.relationshipName;
@@ -39,7 +39,7 @@ public final class GetRelationshipArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetRelationshipArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetRelationshipArgs build() {
             return new GetRelationshipArgs(hubName, relationshipName, resourceGroupName);
         }

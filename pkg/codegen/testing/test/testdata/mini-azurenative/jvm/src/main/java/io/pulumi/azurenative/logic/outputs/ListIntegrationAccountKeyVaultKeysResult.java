@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
     /**
      * The skip token.
      * 
-     */
+    */
     public Optional<String> getSkipToken() {
         return Optional.ofNullable(this.skipToken);
     }
@@ -54,7 +54,6 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
             this.skipToken = skipToken;
             return this;
         }
-
         public ListIntegrationAccountKeyVaultKeysResult build() {
             return new ListIntegrationAccountKeyVaultKeysResult(skipToken);
         }

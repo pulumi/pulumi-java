@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToA
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final Input<String> headerName;
+      private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
@@ -30,7 +30,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToA
      * 
      */
     @InputImport(name="headerValue", required=true)
-    private final Input<String> headerValue;
+      private final Input<String> headerValue;
 
     public Input<String> getHeaderValue() {
         return this.headerValue;
@@ -43,7 +43,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToA
      * 
      */
     @InputImport(name="replace", required=true)
-    private final Input<Boolean> replace;
+      private final Input<Boolean> replace;
 
     public Input<Boolean> getReplace() {
         return this.replace;
@@ -117,7 +117,6 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToA
             this.replace = Input.of(Objects.requireNonNull(replace));
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddGetArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddGetArgs(headerName, headerValue, replace);
         }

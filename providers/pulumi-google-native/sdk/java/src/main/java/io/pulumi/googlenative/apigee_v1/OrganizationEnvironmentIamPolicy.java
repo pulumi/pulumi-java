@@ -5,8 +5,8 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.OrganizationEnvironmentIamPolicyArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleIamV1AuditConfigResponse;
@@ -81,6 +81,37 @@ public class OrganizationEnvironmentIamPolicy extends io.pulumi.resources.Custom
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OrganizationEnvironmentIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.apigee_v1.OrganizationEnvironmentIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.apigee_v1.OrganizationEnvironmentIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public OrganizationEnvironmentIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public OrganizationEnvironmentIamPolicy(String name) {
+        this(name, OrganizationEnvironmentIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OrganizationEnvironmentIamPolicy(String name, OrganizationEnvironmentIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

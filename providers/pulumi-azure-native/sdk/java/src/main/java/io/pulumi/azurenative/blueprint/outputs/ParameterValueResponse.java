@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.outputs;
 
 import io.pulumi.azurenative.blueprint.outputs.SecretValueReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class ParameterValueResponse {
     /**
      * Parameter value as reference type.
      * 
-     */
+    */
     public Optional<SecretValueReferenceResponse> getReference() {
         return Optional.ofNullable(this.reference);
     }
     /**
      * Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
      * 
-     */
+    */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -77,7 +77,6 @@ public final class ParameterValueResponse {
             this.value = value;
             return this;
         }
-
         public ParameterValueResponse build() {
             return new ParameterValueResponse(reference, value);
         }

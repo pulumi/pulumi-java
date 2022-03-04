@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnalysis {
-/**
- * Gets an analysis.
+    private GetAnalysis() {}
+    public interface BuilderApplicator {
+        public void apply(GetAnalysisArgs.Builder a);
+    }
+    private static GetAnalysisArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAnalysisArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an analysis.
  * 
- */
+     */
+    public static CompletableFuture<GetAnalysisResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an analysis.
+     * 
+     */
     public static CompletableFuture<GetAnalysisResult> invokeAsync(GetAnalysisArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getAnalysis", TypeShape.of(GetAnalysisResult.class), args == null ? GetAnalysisArgs.Empty : args, Utilities.withVersion(options));
     }

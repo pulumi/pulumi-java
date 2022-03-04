@@ -6,17 +6,33 @@ package io.pulumi.awsnative.servicecatalogappregistry;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalogappregistry.inputs.GetAttributeGroupArgs;
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.GetAttributeGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAttributeGroup {
-/**
- * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroup.
+    private GetAttributeGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetAttributeGroupArgs.Builder a);
+    }
+    private static GetAttributeGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAttributeGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroup.
  * 
- */
+     */
+    public static CompletableFuture<GetAttributeGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroup.
+     * 
+     */
     public static CompletableFuture<GetAttributeGroupResult> invokeAsync(GetAttributeGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getAttributeGroup", TypeShape.of(GetAttributeGroupResult.class), args == null ? GetAttributeGroupArgs.Empty : args, Utilities.withVersion(options));
     }

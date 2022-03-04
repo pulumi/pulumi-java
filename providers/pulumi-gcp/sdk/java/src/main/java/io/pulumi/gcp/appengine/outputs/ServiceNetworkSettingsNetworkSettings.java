@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +29,7 @@ public final class ServiceNetworkSettingsNetworkSettings {
      * Default value is `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`.
      * Possible values are `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`, `INGRESS_TRAFFIC_ALLOWED_ALL`, `INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY`, and `INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB`.
      * 
-     */
+    */
     public Optional<String> getIngressTrafficAllowed() {
         return Optional.ofNullable(this.ingressTrafficAllowed);
     }
@@ -58,7 +58,6 @@ public final class ServiceNetworkSettingsNetworkSettings {
             this.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }
-
         public ServiceNetworkSettingsNetworkSettings build() {
             return new ServiceNetworkSettingsNetworkSettings(ingressTrafficAllowed);
         }

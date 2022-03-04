@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class NoteAttestationAuthorityHint {
      * The human readable name of this Attestation Authority, for
      * example "qa".
      * 
-     */
+    */
     public String getHumanReadableName() {
         return this.humanReadableName;
     }
@@ -54,7 +54,6 @@ public final class NoteAttestationAuthorityHint {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
-
         public NoteAttestationAuthorityHint build() {
             return new NoteAttestationAuthorityHint(humanReadableName);
         }

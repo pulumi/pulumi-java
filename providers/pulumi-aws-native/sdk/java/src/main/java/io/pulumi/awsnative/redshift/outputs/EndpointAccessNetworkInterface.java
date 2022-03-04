@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class EndpointAccessNetworkInterface {
     /**
      * The Availability Zone.
      * 
-     */
+    */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * The network interface identifier.
      * 
-     */
+    */
     public Optional<String> getNetworkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
     /**
      * The IPv4 address of the network interface within the subnet.
      * 
-     */
+    */
     public Optional<String> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * The subnet identifier.
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -118,7 +118,6 @@ public final class EndpointAccessNetworkInterface {
             this.subnetId = subnetId;
             return this;
         }
-
         public EndpointAccessNetworkInterface build() {
             return new EndpointAccessNetworkInterface(availabilityZone, networkInterfaceId, privateIpAddress, subnetId);
         }

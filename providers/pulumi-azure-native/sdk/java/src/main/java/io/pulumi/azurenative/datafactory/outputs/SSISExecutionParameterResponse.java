@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class SSISExecutionParameterResponse {
     /**
      * SSIS package execution parameter value. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getValue() {
         return this.value;
     }
@@ -52,7 +52,6 @@ public final class SSISExecutionParameterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SSISExecutionParameterResponse build() {
             return new SSISExecutionParameterResponse(value);
         }

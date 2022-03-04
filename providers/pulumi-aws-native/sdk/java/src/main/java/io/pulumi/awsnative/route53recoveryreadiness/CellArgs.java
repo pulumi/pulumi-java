@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.CellTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cellName")
-    private final @Nullable Input<String> cellName;
+      private final @Nullable Input<String> cellName;
 
     public Input<String> getCellName() {
         return this.cellName == null ? Input.empty() : this.cellName;
@@ -32,7 +32,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cells")
-    private final @Nullable Input<List<String>> cells;
+      private final @Nullable Input<List<String>> cells;
 
     public Input<List<String>> getCells() {
         return this.cells == null ? Input.empty() : this.cells;
@@ -43,7 +43,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<CellTagArgs>> tags;
+      private final @Nullable Input<List<CellTagArgs>> tags;
 
     public Input<List<CellTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -117,7 +117,6 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public CellArgs build() {
             return new CellArgs(cellName, cells, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devspaces.outputs;
 
 import io.pulumi.azurenative.devspaces.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -97,77 +97,77 @@ public final class GetControllerResult {
     /**
      * DNS name for accessing DataPlane services
      * 
-     */
+    */
     public String getDataPlaneFqdn() {
         return this.dataPlaneFqdn;
     }
     /**
      * DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
      * 
-     */
+    */
     public String getHostSuffix() {
         return this.hostSuffix;
     }
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Region where the Azure resource is located.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the Azure Dev Spaces Controller.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Model representing SKU for Azure Dev Spaces Controller.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * Tags for the Azure resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * DNS of the target container host's API server
      * 
-     */
+    */
     public String getTargetContainerHostApiServerFqdn() {
         return this.targetContainerHostApiServerFqdn;
     }
     /**
      * Resource ID of the target container host
      * 
-     */
+    */
     public String getTargetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -266,7 +266,6 @@ public final class GetControllerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetControllerResult build() {
             return new GetControllerResult(dataPlaneFqdn, hostSuffix, id, location, name, provisioningState, sku, tags, targetContainerHostApiServerFqdn, targetContainerHostResourceId, type);
         }

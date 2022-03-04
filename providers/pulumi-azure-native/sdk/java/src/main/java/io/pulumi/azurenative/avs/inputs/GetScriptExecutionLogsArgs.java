@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetScriptExecutionLogsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final String privateCloudName;
+      private final String privateCloudName;
 
     public String getPrivateCloudName() {
         return this.privateCloudName;
@@ -28,7 +28,7 @@ public final class GetScriptExecutionLogsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetScriptExecutionLogsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="scriptExecutionName", required=true)
-    private final String scriptExecutionName;
+      private final String scriptExecutionName;
 
     public String getScriptExecutionName() {
         return this.scriptExecutionName;
@@ -98,7 +98,6 @@ public final class GetScriptExecutionLogsArgs extends io.pulumi.resources.Invoke
             this.scriptExecutionName = Objects.requireNonNull(scriptExecutionName);
             return this;
         }
-
         public GetScriptExecutionLogsArgs build() {
             return new GetScriptExecutionLogsArgs(privateCloudName, resourceGroupName, scriptExecutionName);
         }

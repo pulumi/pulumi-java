@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.outputs;
 import io.pulumi.azurenative.databox.outputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.outputs.DataBoxHeavySecretResponse;
 import io.pulumi.azurenative.databox.outputs.DcAccessSecurityCodeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,21 +50,21 @@ public final class DataBoxHeavyJobSecretsResponse {
     /**
      * Contains the list of secret objects for a databox heavy job.
      * 
-     */
+    */
     public List<DataBoxHeavySecretResponse> getCabinetPodSecrets() {
         return this.cabinetPodSecrets;
     }
     /**
      * Dc Access Security Code for Customer Managed Shipping
      * 
-     */
+    */
     public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
     /**
      * Error while fetching the secrets.
      * 
-     */
+    */
     public CloudErrorResponse getError() {
         return this.error;
     }
@@ -72,7 +72,7 @@ public final class DataBoxHeavyJobSecretsResponse {
      * Used to indicate what type of job secrets object.
      * Expected value is 'DataBoxHeavy'.
      * 
-     */
+    */
     public String getJobSecretsType() {
         return this.jobSecretsType;
     }
@@ -122,7 +122,6 @@ public final class DataBoxHeavyJobSecretsResponse {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }
-
         public DataBoxHeavyJobSecretsResponse build() {
             return new DataBoxHeavyJobSecretsResponse(cabinetPodSecrets, dcAccessSecurityCode, error, jobSecretsType);
         }

@@ -1,9 +1,9 @@
 package io.pulumi;
 
 import io.pulumi.core.Output;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
@@ -120,7 +120,7 @@ public class Stack extends ComponentResource {
          */
         @InternalUse
         public void registerPropertyOutputs() {
-            var infos = OutputMetadata.of(Stack.this.getClass());
+            var infos = OutputMetadata.of(Stack.this.getClass()); // we need the subclass
 
             var outputs = infos.entrySet().stream()
                     .collect(Collectors.toMap(
@@ -156,12 +156,10 @@ public class Stack extends ComponentResource {
             }
 
 
-            Stack.this.outputs = Output.of(outputs.entrySet().stream().collect(
-                    toImmutableMap(Map.Entry::getKey, Map.Entry::getValue,
-                            (o1, o2) -> {
-                                throw new IllegalStateException("Duplicate key");
-                            })
-            ));
+            Stack.this.outputs = Output.of(
+                    outputs.entrySet().stream()
+                            .collect(toImmutableMap(Map.Entry::getKey, e -> e.getValue().map(o -> o)))
+            );
             Stack.this.registerOutputs(Stack.this.outputs);
         }
     }

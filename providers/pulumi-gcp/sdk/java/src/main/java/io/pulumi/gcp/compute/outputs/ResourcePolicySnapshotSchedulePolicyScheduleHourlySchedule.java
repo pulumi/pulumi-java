@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule {
     /**
      * The number of hours between snapshots.
      * 
-     */
+    */
     public Integer getHoursInCycle() {
         return this.hoursInCycle;
     }
     /**
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -75,7 +75,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule(hoursInCycle, startTime);
         }

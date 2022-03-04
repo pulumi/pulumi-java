@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.outputs.AzureFileStorageWriteSettingsRe
 import io.pulumi.azurenative.datafactory.outputs.DelimitedTextWriteSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.FileServerWriteSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpWriteSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -91,42 +91,42 @@ public final class DelimitedTextSinkResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * DelimitedText format settings.
      * 
-     */
+    */
     public Optional<DelimitedTextWriteSettingsResponse> getFormatSettings() {
         return Optional.ofNullable(this.formatSettings);
     }
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
     /**
      * DelimitedText store settings.
      * 
-     */
+    */
     public Optional<Object> getStoreSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
@@ -134,21 +134,21 @@ public final class DelimitedTextSinkResponse {
      * Copy sink type.
      * Expected value is 'DelimitedTextSink'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getWriteBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getWriteBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
@@ -233,7 +233,6 @@ public final class DelimitedTextSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public DelimitedTextSinkResponse build() {
             return new DelimitedTextSinkResponse(disableMetricsCollection, formatSettings, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);
         }

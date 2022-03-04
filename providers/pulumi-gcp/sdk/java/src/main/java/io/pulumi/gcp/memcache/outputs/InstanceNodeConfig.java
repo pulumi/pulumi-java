@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.memcache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class InstanceNodeConfig {
     /**
      * Number of CPUs per node.
      * 
-     */
+    */
     public Integer getCpuCount() {
         return this.cpuCount;
     }
     /**
      * Memory size in Mebibytes for each memcache node.
      * 
-     */
+    */
     public Integer getMemorySizeMb() {
         return this.memorySizeMb;
     }
@@ -74,7 +74,6 @@ public final class InstanceNodeConfig {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }
-
         public InstanceNodeConfig build() {
             return new InstanceNodeConfig(cpuCount, memorySizeMb);
         }

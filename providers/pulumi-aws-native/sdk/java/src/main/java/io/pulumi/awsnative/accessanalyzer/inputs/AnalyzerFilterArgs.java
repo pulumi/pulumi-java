@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.accessanalyzer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,35 +17,35 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
     public static final AnalyzerFilterArgs Empty = new AnalyzerFilterArgs();
 
     @InputImport(name="contains")
-    private final @Nullable Input<List<String>> contains;
+      private final @Nullable Input<List<String>> contains;
 
     public Input<List<String>> getContains() {
         return this.contains == null ? Input.empty() : this.contains;
     }
 
     @InputImport(name="eq")
-    private final @Nullable Input<List<String>> eq;
+      private final @Nullable Input<List<String>> eq;
 
     public Input<List<String>> getEq() {
         return this.eq == null ? Input.empty() : this.eq;
     }
 
     @InputImport(name="exists")
-    private final @Nullable Input<Boolean> exists;
+      private final @Nullable Input<Boolean> exists;
 
     public Input<Boolean> getExists() {
         return this.exists == null ? Input.empty() : this.exists;
     }
 
     @InputImport(name="neq")
-    private final @Nullable Input<List<String>> neq;
+      private final @Nullable Input<List<String>> neq;
 
     public Input<List<String>> getNeq() {
         return this.neq == null ? Input.empty() : this.neq;
     }
 
     @InputImport(name="property", required=true)
-    private final Input<String> property;
+      private final Input<String> property;
 
     public Input<String> getProperty() {
         return this.property;
@@ -149,7 +149,6 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.property = Input.of(Objects.requireNonNull(property));
             return this;
         }
-
         public AnalyzerFilterArgs build() {
             return new AnalyzerFilterArgs(contains, eq, exists, neq, property);
         }

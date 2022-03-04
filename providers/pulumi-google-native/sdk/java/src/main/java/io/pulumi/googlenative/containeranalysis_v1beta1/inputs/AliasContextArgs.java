@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.AliasContextKind;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<AliasContextKind> kind;
+      private final @Nullable Input<AliasContextKind> kind;
 
     public Input<AliasContextKind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -35,7 +35,7 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -94,7 +94,6 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public AliasContextArgs build() {
             return new AliasContextArgs(kind, name);
         }

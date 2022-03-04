@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse {
     /**
      * A combination of a project ID and a repo name.
      * 
-     */
+    */
     public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse getProjectRepoId() {
         return this.projectRepoId;
     }
     /**
      * A server-assigned, globally unique identifier.
      * 
-     */
+    */
     public String getUid() {
         return this.uid;
     }
@@ -75,7 +75,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse(projectRepoId, uid);
         }

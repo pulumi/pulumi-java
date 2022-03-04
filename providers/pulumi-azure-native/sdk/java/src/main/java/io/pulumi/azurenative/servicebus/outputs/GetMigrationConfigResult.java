@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -74,56 +74,56 @@ public final class GetMigrationConfigResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * State in which Standard to Premium Migration is, possible values : Unknown, Reverting, Completing, Initiating, Syncing, Active
      * 
-     */
+    */
     public String getMigrationState() {
         return this.migrationState;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Number of entities pending to be replicated.
      * 
-     */
+    */
     public Double getPendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
     /**
      * Name to access Standard Namespace after migration
      * 
-     */
+    */
     public String getPostMigrationName() {
         return this.postMigrationName;
     }
     /**
      * Provisioning state of Migration Configuration
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Existing premium Namespace ARM Id name which has no entities, will be used for migration
      * 
-     */
+    */
     public String getTargetNamespace() {
         return this.targetNamespace;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -201,7 +201,6 @@ public final class GetMigrationConfigResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMigrationConfigResult build() {
             return new GetMigrationConfigResult(id, migrationState, name, pendingReplicationOperationsCount, postMigrationName, provisioningState, targetNamespace, type);
         }

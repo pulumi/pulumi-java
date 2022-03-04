@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.EventSeriesArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EventSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
@@ -24,7 +24,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -35,7 +35,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -46,7 +46,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -57,7 +57,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTime")
-    private final @Nullable Input<String> eventTime;
+      private final @Nullable Input<String> eventTime;
 
     public Input<String> getEventTime() {
         return this.eventTime == null ? Input.empty() : this.eventTime;
@@ -68,7 +68,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstTimestamp")
-    private final @Nullable Input<String> firstTimestamp;
+      private final @Nullable Input<String> firstTimestamp;
 
     public Input<String> getFirstTimestamp() {
         return this.firstTimestamp == null ? Input.empty() : this.firstTimestamp;
@@ -79,7 +79,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="involvedObject", required=true)
-    private final Input<ObjectReferenceArgs> involvedObject;
+      private final Input<ObjectReferenceArgs> involvedObject;
 
     public Input<ObjectReferenceArgs> getInvolvedObject() {
         return this.involvedObject;
@@ -90,7 +90,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -101,7 +101,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastTimestamp")
-    private final @Nullable Input<String> lastTimestamp;
+      private final @Nullable Input<String> lastTimestamp;
 
     public Input<String> getLastTimestamp() {
         return this.lastTimestamp == null ? Input.empty() : this.lastTimestamp;
@@ -112,7 +112,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -123,7 +123,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Input<ObjectMetaArgs> metadata;
+      private final Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata;
@@ -134,7 +134,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+      private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -145,7 +145,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="related")
-    private final @Nullable Input<ObjectReferenceArgs> related;
+      private final @Nullable Input<ObjectReferenceArgs> related;
 
     public Input<ObjectReferenceArgs> getRelated() {
         return this.related == null ? Input.empty() : this.related;
@@ -156,7 +156,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportingComponent")
-    private final @Nullable Input<String> reportingComponent;
+      private final @Nullable Input<String> reportingComponent;
 
     public Input<String> getReportingComponent() {
         return this.reportingComponent == null ? Input.empty() : this.reportingComponent;
@@ -167,7 +167,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportingInstance")
-    private final @Nullable Input<String> reportingInstance;
+      private final @Nullable Input<String> reportingInstance;
 
     public Input<String> getReportingInstance() {
         return this.reportingInstance == null ? Input.empty() : this.reportingInstance;
@@ -178,7 +178,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="series")
-    private final @Nullable Input<EventSeriesArgs> series;
+      private final @Nullable Input<EventSeriesArgs> series;
 
     public Input<EventSeriesArgs> getSeries() {
         return this.series == null ? Input.empty() : this.series;
@@ -189,7 +189,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<EventSourceArgs> source;
+      private final @Nullable Input<EventSourceArgs> source;
 
     public Input<EventSourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -200,7 +200,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -484,7 +484,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public EventArgs build() {
             return new EventArgs(action, apiVersion, count, eventTime, firstTimestamp, involvedObject, kind, lastTimestamp, message, metadata, reason, related, reportingComponent, reportingInstance, series, source, type);
         }

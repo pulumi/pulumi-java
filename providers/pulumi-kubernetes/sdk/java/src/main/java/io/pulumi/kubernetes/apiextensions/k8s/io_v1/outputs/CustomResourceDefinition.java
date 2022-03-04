@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceDefinitionSpec;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceDefinitionStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -57,35 +57,35 @@ public final class CustomResourceDefinition {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Standard object's metadata More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
-     */
+    */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * spec describes how the user wants the resources to appear
      * 
-     */
+    */
     public CustomResourceDefinitionSpec getSpec() {
         return this.spec;
     }
     /**
      * status indicates the actual state of the CustomResourceDefinition
      * 
-     */
+    */
     public Optional<CustomResourceDefinitionStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -142,7 +142,6 @@ public final class CustomResourceDefinition {
             this.status = status;
             return this;
         }
-
         public CustomResourceDefinition build() {
             return new CustomResourceDefinition(apiVersion, kind, metadata, spec, status);
         }

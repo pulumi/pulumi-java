@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -27,7 +27,7 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilization {
      * balancing configuration) that autoscaler should maintain. Must
      * be a positive float value. If not defined, the default is 0.8.
      * 
-     */
+    */
     public Double getTarget() {
         return this.target;
     }
@@ -56,7 +56,6 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilization {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public AutoscalarAutoscalingPolicyLoadBalancingUtilization build() {
             return new AutoscalarAutoscalingPolicyLoadBalancingUtilization(target);
         }

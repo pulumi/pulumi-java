@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class AutomaticResponse {
         public Builder(AutomaticResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AutomaticResponse build() {
             return new AutomaticResponse();
         }

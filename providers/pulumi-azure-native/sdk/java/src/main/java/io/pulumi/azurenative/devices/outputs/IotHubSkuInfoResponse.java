@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class IotHubSkuInfoResponse {
     /**
      * The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
      * 
-     */
+    */
     public Optional<Double> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The name of the SKU.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The billing tier for the IoT hub.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
@@ -98,7 +98,6 @@ public final class IotHubSkuInfoResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public IotHubSkuInfoResponse build() {
             return new IotHubSkuInfoResponse(capacity, name, tier);
         }

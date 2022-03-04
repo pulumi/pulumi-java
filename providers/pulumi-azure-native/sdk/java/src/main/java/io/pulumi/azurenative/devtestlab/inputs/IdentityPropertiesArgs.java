@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.ManagedIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clientSecretUrl")
-    private final @Nullable Input<String> clientSecretUrl;
+      private final @Nullable Input<String> clientSecretUrl;
 
     public Input<String> getClientSecretUrl() {
         return this.clientSecretUrl == null ? Input.empty() : this.clientSecretUrl;
@@ -36,7 +36,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable Input<String> principalId;
+      private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -47,7 +47,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -58,7 +58,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ManagedIdentityType>> type;
+      private final @Nullable Input<Either<String,ManagedIdentityType>> type;
 
     public Input<Either<String,ManagedIdentityType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -147,7 +147,6 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public IdentityPropertiesArgs build() {
             return new IdentityPropertiesArgs(clientSecretUrl, principalId, tenantId, type);
         }

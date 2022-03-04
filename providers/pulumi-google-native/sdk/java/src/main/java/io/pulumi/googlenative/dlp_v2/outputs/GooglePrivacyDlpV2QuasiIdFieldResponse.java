@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse {
     /**
      * A auxiliary field.
      * 
-     */
+    */
     public String getCustomTag() {
         return this.customTag;
     }
     /**
      * Identifies the column.
      * 
-     */
+    */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }
@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public GooglePrivacyDlpV2QuasiIdFieldResponse build() {
             return new GooglePrivacyDlpV2QuasiIdFieldResponse(customTag, field);
         }

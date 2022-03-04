@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetArgs;
 import io.pulumi.azurenative.compute.outputs.GetVirtualMachineScaleSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSet {
-/**
- * Describes a Virtual Machine Scale Set.
+    private GetVirtualMachineScaleSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineScaleSetArgs.Builder a);
+    }
+    private static GetVirtualMachineScaleSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineScaleSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a Virtual Machine Scale Set.
  * API Version: 2021-03-01.
  * 
- *
- * Describes a Virtual Machine Scale Set.
+     *
+     * Describes a Virtual Machine Scale Set.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineScaleSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a Virtual Machine Scale Set.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Describes a Virtual Machine Scale Set.
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineScaleSetResult> invokeAsync(GetVirtualMachineScaleSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSet", TypeShape.of(GetVirtualMachineScaleSetResult.class), args == null ? GetVirtualMachineScaleSetArgs.Empty : args, Utilities.withVersion(options));
     }

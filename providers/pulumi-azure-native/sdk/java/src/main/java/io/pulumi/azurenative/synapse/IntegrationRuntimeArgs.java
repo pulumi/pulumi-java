@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.inputs.ManagedIntegrationRuntimeArgs;
 import io.pulumi.azurenative.synapse.inputs.SelfHostedIntegrationRuntimeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="integrationRuntimeName")
-    private final @Nullable Input<String> integrationRuntimeName;
+      private final @Nullable Input<String> integrationRuntimeName;
 
     public Input<String> getIntegrationRuntimeName() {
         return this.integrationRuntimeName == null ? Input.empty() : this.integrationRuntimeName;
@@ -33,7 +33,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
+      private final Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
     public Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> getProperties() {
         return this.properties;
@@ -44,7 +44,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -144,7 +144,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public IntegrationRuntimeArgs build() {
             return new IntegrationRuntimeArgs(integrationRuntimeName, properties, resourceGroupName, workspaceName);
         }

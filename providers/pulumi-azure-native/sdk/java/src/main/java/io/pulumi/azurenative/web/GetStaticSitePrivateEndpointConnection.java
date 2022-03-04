@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetStaticSitePrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.web.outputs.GetStaticSitePrivateEndpointConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStaticSitePrivateEndpointConnection {
-/**
- * Remote Private Endpoint Connection ARM resource.
+    private GetStaticSitePrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetStaticSitePrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetStaticSitePrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStaticSitePrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Remote Private Endpoint Connection ARM resource.
  * API Version: 2020-12-01.
  * 
- *
- * Remote Private Endpoint Connection ARM resource.
+     *
+     * Remote Private Endpoint Connection ARM resource.
  * 
- */
+     */
+    public static CompletableFuture<GetStaticSitePrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Remote Private Endpoint Connection ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Remote Private Endpoint Connection ARM resource.
+     * 
+     */
     public static CompletableFuture<GetStaticSitePrivateEndpointConnectionResult> invokeAsync(GetStaticSitePrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSitePrivateEndpointConnection", TypeShape.of(GetStaticSitePrivateEndpointConnectionResult.class), args == null ? GetStaticSitePrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

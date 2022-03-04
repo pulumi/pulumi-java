@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApi {
-/**
- * Gets details of a single Api.
+    private GetApi() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiArgs.Builder a);
+    }
+    private static GetApiArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single Api.
  * 
- */
+     */
+    public static CompletableFuture<GetApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single Api.
+     * 
+     */
     public static CompletableFuture<GetApiResult> invokeAsync(GetApiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigateway/v1beta:getApi", TypeShape.of(GetApiResult.class), args == null ? GetApiArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class SkuResponse {
     /**
      * The name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The reference to plan.
      * 
-     */
+    */
     public Optional<ResourceReferenceResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
@@ -77,7 +77,6 @@ public final class SkuResponse {
             this.plan = plan;
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(name, plan);
         }

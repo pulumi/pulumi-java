@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotcoredeviceadvisor.outputs;
 
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionDeviceUnderTest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -102,7 +102,6 @@ public final class SuiteDefinitionConfigurationProperties {
             this.suiteDefinitionName = suiteDefinitionName;
             return this;
         }
-
         public SuiteDefinitionConfigurationProperties build() {
             return new SuiteDefinitionConfigurationProperties(devicePermissionRoleArn, devices, intendedForQualification, rootGroup, suiteDefinitionName);
         }

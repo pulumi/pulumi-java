@@ -7,7 +7,7 @@ import io.pulumi.azurenative.iotsecurity.enums.OnboardingKind;
 import io.pulumi.azurenative.iotsecurity.inputs.DefenderSettingsPropertiesMdeIntegrationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deviceQuota", required=true)
-    private final Input<Integer> deviceQuota;
+      private final Input<Integer> deviceQuota;
 
     public Input<Integer> getDeviceQuota() {
         return this.deviceQuota;
@@ -34,7 +34,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mdeIntegration", required=true)
-    private final Input<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
+      private final Input<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
 
     public Input<DefenderSettingsPropertiesMdeIntegrationArgs> getMdeIntegration() {
         return this.mdeIntegration;
@@ -45,7 +45,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="onboardingKind", required=true)
-    private final Input<Either<String,OnboardingKind>> onboardingKind;
+      private final Input<Either<String,OnboardingKind>> onboardingKind;
 
     public Input<Either<String,OnboardingKind>> getOnboardingKind() {
         return this.onboardingKind;
@@ -56,7 +56,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sentinelWorkspaceResourceIds", required=true)
-    private final Input<List<String>> sentinelWorkspaceResourceIds;
+      private final Input<List<String>> sentinelWorkspaceResourceIds;
 
     public Input<List<String>> getSentinelWorkspaceResourceIds() {
         return this.sentinelWorkspaceResourceIds;
@@ -145,7 +145,6 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
             this.sentinelWorkspaceResourceIds = Input.of(Objects.requireNonNull(sentinelWorkspaceResourceIds));
             return this;
         }
-
         public DefenderSettingArgs build() {
             return new DefenderSettingArgs(deviceQuota, mdeIntegration, onboardingKind, sentinelWorkspaceResourceIds);
         }

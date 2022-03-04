@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rds.outputs;
 
 import io.pulumi.awsnative.rds.outputs.DBProxyAuthFormat;
 import io.pulumi.awsnative.rds.outputs.DBProxyTagFormat;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -87,63 +87,63 @@ public final class GetDBProxyResult {
     /**
      * The authorization mechanism that the proxy uses.
      * 
-     */
+    */
     public List<DBProxyAuthFormat> getAuth() {
         return this.auth == null ? List.of() : this.auth;
     }
     /**
      * The Amazon Resource Name (ARN) for the proxy.
      * 
-     */
+    */
     public Optional<String> getDBProxyArn() {
         return Optional.ofNullable(this.dBProxyArn);
     }
     /**
      * Whether the proxy includes detailed information about SQL statements in its logs.
      * 
-     */
+    */
     public Optional<Boolean> getDebugLogging() {
         return Optional.ofNullable(this.debugLogging);
     }
     /**
      * The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
      * 
-     */
+    */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
      * 
-     */
+    */
     public Optional<Integer> getIdleClientTimeout() {
         return Optional.ofNullable(this.idleClientTimeout);
     }
     /**
      * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
      * 
-     */
+    */
     public Optional<Boolean> getRequireTLS() {
         return Optional.ofNullable(this.requireTLS);
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
      * 
-     */
+    */
     public List<DBProxyTagFormat> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * VPC security group IDs to associate with the new proxy.
      * 
-     */
+    */
     public List<String> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? List.of() : this.vpcSecurityGroupIds;
     }
@@ -228,7 +228,6 @@ public final class GetDBProxyResult {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public GetDBProxyResult build() {
             return new GetDBProxyResult(auth, dBProxyArn, debugLogging, endpoint, idleClientTimeout, requireTLS, roleArn, tags, vpcSecurityGroupIds);
         }

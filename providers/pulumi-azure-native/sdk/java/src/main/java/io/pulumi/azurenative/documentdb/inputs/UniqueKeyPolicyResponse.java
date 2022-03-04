@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.UniqueKeyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class UniqueKeyPolicyResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="uniqueKeys")
-    private final @Nullable List<UniqueKeyResponse> uniqueKeys;
+      private final @Nullable List<UniqueKeyResponse> uniqueKeys;
 
     public List<UniqueKeyResponse> getUniqueKeys() {
         return this.uniqueKeys == null ? List.of() : this.uniqueKeys;
@@ -62,7 +62,6 @@ public final class UniqueKeyPolicyResponse extends io.pulumi.resources.InvokeArg
             this.uniqueKeys = uniqueKeys;
             return this;
         }
-
         public UniqueKeyPolicyResponse build() {
             return new UniqueKeyPolicyResponse(uniqueKeys);
         }

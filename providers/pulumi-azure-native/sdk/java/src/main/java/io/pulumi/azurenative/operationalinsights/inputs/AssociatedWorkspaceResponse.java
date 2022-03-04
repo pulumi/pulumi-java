@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="associateDate", required=true)
-    private final String associateDate;
+      private final String associateDate;
 
     public String getAssociateDate() {
         return this.associateDate;
@@ -32,7 +32,7 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -43,7 +43,7 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="workspaceId", required=true)
-    private final String workspaceId;
+      private final String workspaceId;
 
     public String getWorkspaceId() {
         return this.workspaceId;
@@ -54,7 +54,7 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -123,7 +123,6 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public AssociatedWorkspaceResponse build() {
             return new AssociatedWorkspaceResponse(associateDate, resourceId, workspaceId, workspaceName);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.ProtocolCustomSettingsFormatArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ddosCustomPolicyName")
-    private final @Nullable Input<String> ddosCustomPolicyName;
+      private final @Nullable Input<String> ddosCustomPolicyName;
 
     public Input<String> getDdosCustomPolicyName() {
         return this.ddosCustomPolicyName == null ? Input.empty() : this.ddosCustomPolicyName;
@@ -33,7 +33,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -44,7 +44,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protocolCustomSettings")
-    private final @Nullable Input<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings;
+      private final @Nullable Input<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings;
 
     public Input<List<ProtocolCustomSettingsFormatArgs>> getProtocolCustomSettings() {
         return this.protocolCustomSettings == null ? Input.empty() : this.protocolCustomSettings;
@@ -66,7 +66,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,6 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DdosCustomPolicyArgs build() {
             return new DdosCustomPolicyArgs(ddosCustomPolicyName, id, location, protocolCustomSettings, resourceGroupName, tags);
         }

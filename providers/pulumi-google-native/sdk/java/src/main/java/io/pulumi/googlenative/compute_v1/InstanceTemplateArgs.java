@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.InstancePropertiesArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SourceInstanceParamsArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,14 +32,14 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -50,14 +50,14 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<InstancePropertiesArgs> properties;
+      private final @Nullable Input<InstancePropertiesArgs> properties;
 
     public Input<InstancePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -68,7 +68,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceInstance")
-    private final @Nullable Input<String> sourceInstance;
+      private final @Nullable Input<String> sourceInstance;
 
     public Input<String> getSourceInstance() {
         return this.sourceInstance == null ? Input.empty() : this.sourceInstance;
@@ -79,7 +79,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceInstanceParams")
-    private final @Nullable Input<SourceInstanceParamsArgs> sourceInstanceParams;
+      private final @Nullable Input<SourceInstanceParamsArgs> sourceInstanceParams;
 
     public Input<SourceInstanceParamsArgs> getSourceInstanceParams() {
         return this.sourceInstanceParams == null ? Input.empty() : this.sourceInstanceParams;
@@ -213,7 +213,6 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
             this.sourceInstanceParams = Input.ofNullable(sourceInstanceParams);
             return this;
         }
-
         public InstanceTemplateArgs build() {
             return new InstanceTemplateArgs(description, name, project, properties, requestId, sourceInstance, sourceInstanceParams);
         }

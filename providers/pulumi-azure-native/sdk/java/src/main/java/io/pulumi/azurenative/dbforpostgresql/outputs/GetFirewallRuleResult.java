@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class GetFirewallRuleResult {
     /**
      * The end IP address of the server firewall rule. Must be IPv4 format.
      * 
-     */
+    */
     public String getEndIpAddress() {
         return this.endIpAddress;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The start IP address of the server firewall rule. Must be IPv4 format.
      * 
-     */
+    */
     public String getStartIpAddress() {
         return this.startIpAddress;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -137,7 +137,6 @@ public final class GetFirewallRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFirewallRuleResult build() {
             return new GetFirewallRuleResult(endIpAddress, id, name, startIpAddress, type);
         }

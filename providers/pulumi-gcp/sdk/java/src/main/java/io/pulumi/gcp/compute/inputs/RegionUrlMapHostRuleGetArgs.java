@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegionUrlMapHostRuleGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class RegionUrlMapHostRuleGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="hosts", required=true)
-    private final Input<List<String>> hosts;
+      private final Input<List<String>> hosts;
 
     public Input<List<String>> getHosts() {
         return this.hosts;
@@ -46,7 +46,7 @@ public final class RegionUrlMapHostRuleGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pathMatcher", required=true)
-    private final Input<String> pathMatcher;
+      private final Input<String> pathMatcher;
 
     public Input<String> getPathMatcher() {
         return this.pathMatcher;
@@ -120,7 +120,6 @@ public final class RegionUrlMapHostRuleGetArgs extends io.pulumi.resources.Resou
             this.pathMatcher = Input.of(Objects.requireNonNull(pathMatcher));
             return this;
         }
-
         public RegionUrlMapHostRuleGetArgs build() {
             return new RegionUrlMapHostRuleGetArgs(description, hosts, pathMatcher);
         }

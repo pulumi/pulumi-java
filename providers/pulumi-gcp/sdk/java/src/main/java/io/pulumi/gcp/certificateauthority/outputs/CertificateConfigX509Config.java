@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509ConfigAdditionalExtension;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509ConfigCaOptions;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509ConfigKeyUsage;
@@ -65,7 +65,7 @@ public final class CertificateConfigX509Config {
      * Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateConfigX509ConfigAdditionalExtension> getAdditionalExtensions() {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
@@ -73,7 +73,7 @@ public final class CertificateConfigX509Config {
      * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
      * "Authority Information Access" extension in the certificate.
      * 
-     */
+    */
     public List<String> getAiaOcspServers() {
         return this.aiaOcspServers == null ? List.of() : this.aiaOcspServers;
     }
@@ -81,7 +81,7 @@ public final class CertificateConfigX509Config {
      * Describes values that are relevant in a CA certificate.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<CertificateConfigX509ConfigCaOptions> getCaOptions() {
         return Optional.ofNullable(this.caOptions);
     }
@@ -89,7 +89,7 @@ public final class CertificateConfigX509Config {
      * Indicates the intended use for keys that correspond to a certificate.
      * Structure is documented below.
      * 
-     */
+    */
     public CertificateConfigX509ConfigKeyUsage getKeyUsage() {
         return this.keyUsage;
     }
@@ -97,7 +97,7 @@ public final class CertificateConfigX509Config {
      * Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateConfigX509ConfigPolicyId> getPolicyIds() {
         return this.policyIds == null ? List.of() : this.policyIds;
     }
@@ -154,7 +154,6 @@ public final class CertificateConfigX509Config {
             this.policyIds = policyIds;
             return this;
         }
-
         public CertificateConfigX509Config build() {
             return new CertificateConfigX509Config(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

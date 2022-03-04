@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SourceCrowdingConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="numResults", required=true)
-    private final Integer numResults;
+      private final Integer numResults;
 
     public Integer getNumResults() {
         return this.numResults;
@@ -32,7 +32,7 @@ public final class SourceCrowdingConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="numSuggestions", required=true)
-    private final Integer numSuggestions;
+      private final Integer numSuggestions;
 
     public Integer getNumSuggestions() {
         return this.numSuggestions;
@@ -81,7 +81,6 @@ public final class SourceCrowdingConfigResponse extends io.pulumi.resources.Invo
             this.numSuggestions = Objects.requireNonNull(numSuggestions);
             return this;
         }
-
         public SourceCrowdingConfigResponse build() {
             return new SourceCrowdingConfigResponse(numResults, numSuggestions);
         }

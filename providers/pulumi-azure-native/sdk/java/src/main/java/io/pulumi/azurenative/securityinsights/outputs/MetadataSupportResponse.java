@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class MetadataSupportResponse {
     /**
      * Email of support contact
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * Link for support help, like to support page to open a ticket etc.
      * 
-     */
+    */
     public Optional<String> getLink() {
         return Optional.ofNullable(this.link);
     }
     /**
      * Name of the support contact. Company or person.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Type of support for content item
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
@@ -118,7 +118,6 @@ public final class MetadataSupportResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public MetadataSupportResponse build() {
             return new MetadataSupportResponse(email, link, name, tier);
         }

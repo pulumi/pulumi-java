@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement.outputs;
 
 import io.pulumi.azurenative.operationsmanagement.outputs.ArmTemplateParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -57,35 +57,35 @@ public final class ManagementConfigurationPropertiesResponse {
     /**
      * The applicationId of the appliance for this Management.
      * 
-     */
+    */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * Parameters to run the ARM template
      * 
-     */
+    */
     public List<ArmTemplateParameterResponse> getParameters() {
         return this.parameters;
     }
     /**
      * The type of the parent resource.
      * 
-     */
+    */
     public String getParentResourceType() {
         return this.parentResourceType;
     }
     /**
      * The provisioning state for the ManagementConfiguration.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The Json object containing the ARM template to deploy
      * 
-     */
+    */
     public Object getTemplate() {
         return this.template;
     }
@@ -142,7 +142,6 @@ public final class ManagementConfigurationPropertiesResponse {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public ManagementConfigurationPropertiesResponse build() {
             return new ManagementConfigurationPropertiesResponse(applicationId, parameters, parentResourceType, provisioningState, template);
         }

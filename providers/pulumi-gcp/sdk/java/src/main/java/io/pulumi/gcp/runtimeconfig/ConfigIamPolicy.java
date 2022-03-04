@@ -5,8 +5,8 @@ package io.pulumi.gcp.runtimeconfig;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.runtimeconfig.ConfigIamPolicyArgs;
 import io.pulumi.gcp.runtimeconfig.inputs.ConfigIamPolicyState;
@@ -102,6 +102,37 @@ public class ConfigIamPolicy extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ConfigIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.runtimeconfig.ConfigIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.runtimeconfig.ConfigIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ConfigIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ConfigIamPolicy(String name) {
+        this(name, ConfigIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ConfigIamPolicy(String name, ConfigIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

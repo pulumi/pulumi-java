@@ -6,7 +6,7 @@ package io.pulumi.azurenative.labservices.inputs;
 import io.pulumi.azurenative.labservices.enums.RecurrenceFrequency;
 import io.pulumi.azurenative.labservices.enums.WeekDay;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expirationDate", required=true)
-    private final Input<String> expirationDate;
+      private final Input<String> expirationDate;
 
     public Input<String> getExpirationDate() {
         return this.expirationDate;
@@ -38,7 +38,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="frequency", required=true)
-    private final Input<RecurrenceFrequency> frequency;
+      private final Input<RecurrenceFrequency> frequency;
 
     public Input<RecurrenceFrequency> getFrequency() {
         return this.frequency;
@@ -49,7 +49,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -60,7 +60,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="weekDays")
-    private final @Nullable Input<List<WeekDay>> weekDays;
+      private final @Nullable Input<List<WeekDay>> weekDays;
 
     public Input<List<WeekDay>> getWeekDays() {
         return this.weekDays == null ? Input.empty() : this.weekDays;
@@ -149,7 +149,6 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
             this.weekDays = Input.ofNullable(weekDays);
             return this;
         }
-
         public RecurrencePatternArgs build() {
             return new RecurrencePatternArgs(expirationDate, frequency, interval, weekDays);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.engagementfabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class KeyDescriptionResponse {
     /**
      * The name of the key
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The rank of the key
      * 
-     */
+    */
     public String getRank() {
         return this.rank;
     }
     /**
      * The value of the key
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -95,7 +95,6 @@ public final class KeyDescriptionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public KeyDescriptionResponse build() {
             return new KeyDescriptionResponse(name, rank, value);
         }

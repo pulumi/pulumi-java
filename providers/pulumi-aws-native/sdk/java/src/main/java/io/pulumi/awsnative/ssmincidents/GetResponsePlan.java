@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ssmincidents;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ssmincidents.inputs.GetResponsePlanArgs;
 import io.pulumi.awsnative.ssmincidents.outputs.GetResponsePlanResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResponsePlan {
-/**
- * Resource type definition for AWS::SSMIncidents::ResponsePlan
+    private GetResponsePlan() {}
+    public interface BuilderApplicator {
+        public void apply(GetResponsePlanArgs.Builder a);
+    }
+    private static GetResponsePlanArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResponsePlanArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource type definition for AWS::SSMIncidents::ResponsePlan
  * 
- */
+     */
+    public static CompletableFuture<GetResponsePlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource type definition for AWS::SSMIncidents::ResponsePlan
+     * 
+     */
     public static CompletableFuture<GetResponsePlanResult> invokeAsync(GetResponsePlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmincidents:getResponsePlan", TypeShape.of(GetResponsePlanResult.class), args == null ? GetResponsePlanArgs.Empty : args, Utilities.withVersion(options));
     }

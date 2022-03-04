@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="city", required=true)
-    private final String city;
+      private final String city;
 
     public String getCity() {
         return this.city;
@@ -34,7 +34,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="countryOrRegion", required=true)
-    private final String countryOrRegion;
+      private final String countryOrRegion;
 
     public String getCountryOrRegion() {
         return this.countryOrRegion;
@@ -45,7 +45,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -56,7 +56,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="phone", required=true)
-    private final String phone;
+      private final String phone;
 
     public String getPhone() {
         return this.phone;
@@ -67,7 +67,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="postalCode", required=true)
-    private final String postalCode;
+      private final String postalCode;
 
     public String getPostalCode() {
         return this.postalCode;
@@ -78,7 +78,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="recipientName", required=true)
-    private final String recipientName;
+      private final String recipientName;
 
     public String getRecipientName() {
         return this.recipientName;
@@ -89,7 +89,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="stateOrProvince")
-    private final @Nullable String stateOrProvince;
+      private final @Nullable String stateOrProvince;
 
     public Optional<String> getStateOrProvince() {
         return this.stateOrProvince == null ? Optional.empty() : Optional.ofNullable(this.stateOrProvince);
@@ -100,7 +100,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="streetAddress1", required=true)
-    private final String streetAddress1;
+      private final String streetAddress1;
 
     public String getStreetAddress1() {
         return this.streetAddress1;
@@ -111,7 +111,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="streetAddress2")
-    private final @Nullable String streetAddress2;
+      private final @Nullable String streetAddress2;
 
     public Optional<String> getStreetAddress2() {
         return this.streetAddress2 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress2);
@@ -230,7 +230,6 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
             this.streetAddress2 = streetAddress2;
             return this;
         }
-
         public ReturnAddressResponse build() {
             return new ReturnAddressResponse(city, countryOrRegion, email, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
         }

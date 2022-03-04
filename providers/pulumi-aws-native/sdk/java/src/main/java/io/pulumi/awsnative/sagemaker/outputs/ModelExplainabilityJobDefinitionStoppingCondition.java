@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ModelExplainabilityJobDefinitionStoppingCondition {
     /**
      * The maximum runtime allowed in seconds.
      * 
-     */
+    */
     public Integer getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }
@@ -52,7 +52,6 @@ public final class ModelExplainabilityJobDefinitionStoppingCondition {
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionStoppingCondition build() {
             return new ModelExplainabilityJobDefinitionStoppingCondition(maxRuntimeInSeconds);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeGetArgs;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class ServiceTemplateSpecGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerConcurrency")
-    private final @Nullable Input<Integer> containerConcurrency;
+      private final @Nullable Input<Integer> containerConcurrency;
 
     public Input<Integer> getContainerConcurrency() {
         return this.containerConcurrency == null ? Input.empty() : this.containerConcurrency;
@@ -40,7 +40,7 @@ public final class ServiceTemplateSpecGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containers")
-    private final @Nullable Input<List<ServiceTemplateSpecContainerGetArgs>> containers;
+      private final @Nullable Input<List<ServiceTemplateSpecContainerGetArgs>> containers;
 
     public Input<List<ServiceTemplateSpecContainerGetArgs>> getContainers() {
         return this.containers == null ? Input.empty() : this.containers;
@@ -54,7 +54,7 @@ public final class ServiceTemplateSpecGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="serviceAccountName")
-    private final @Nullable Input<String> serviceAccountName;
+      private final @Nullable Input<String> serviceAccountName;
 
     public Input<String> getServiceAccountName() {
         return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
@@ -67,13 +67,13 @@ public final class ServiceTemplateSpecGetArgs extends io.pulumi.resources.Resour
      * It is expected
      * that the system will manipulate this based on routability and load.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by Cloud Run fully managed
      * 
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="servingState")
-    private final @Nullable Input<String> servingState;
+      private final @Nullable Input<String> servingState;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Input<String> getServingState() {
@@ -85,7 +85,7 @@ public final class ServiceTemplateSpecGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
@@ -97,7 +97,7 @@ public final class ServiceTemplateSpecGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<ServiceTemplateSpecVolumeGetArgs>> volumes;
+      private final @Nullable Input<List<ServiceTemplateSpecVolumeGetArgs>> volumes;
 
     public Input<List<ServiceTemplateSpecVolumeGetArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -216,7 +216,6 @@ public final class ServiceTemplateSpecGetArgs extends io.pulumi.resources.Resour
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
-
         public ServiceTemplateSpecGetArgs build() {
             return new ServiceTemplateSpecGetArgs(containerConcurrency, containers, serviceAccountName, servingState, timeoutSeconds, volumes);
         }

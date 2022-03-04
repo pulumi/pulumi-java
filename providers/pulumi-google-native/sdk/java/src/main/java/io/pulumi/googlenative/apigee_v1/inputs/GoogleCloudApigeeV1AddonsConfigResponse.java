@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AdvancedApiOpsConfigResponse;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1ConnectorsPlatformConfigResponse;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1IntegrationConfigResponse;
@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="advancedApiOpsConfig", required=true)
-    private final GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig;
+      private final GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig;
 
     public GoogleCloudApigeeV1AdvancedApiOpsConfigResponse getAdvancedApiOpsConfig() {
         return this.advancedApiOpsConfig;
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="connectorsPlatformConfig", required=true)
-    private final GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig;
+      private final GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig;
 
     public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse getConnectorsPlatformConfig() {
         return this.connectorsPlatformConfig;
@@ -46,7 +46,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="integrationConfig", required=true)
-    private final GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig;
+      private final GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig;
 
     public GoogleCloudApigeeV1IntegrationConfigResponse getIntegrationConfig() {
         return this.integrationConfig;
@@ -57,7 +57,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="monetizationConfig", required=true)
-    private final GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
+      private final GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
 
     public GoogleCloudApigeeV1MonetizationConfigResponse getMonetizationConfig() {
         return this.monetizationConfig;
@@ -126,7 +126,6 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
             this.monetizationConfig = Objects.requireNonNull(monetizationConfig);
             return this;
         }
-
         public GoogleCloudApigeeV1AddonsConfigResponse build() {
             return new GoogleCloudApigeeV1AddonsConfigResponse(advancedApiOpsConfig, connectorsPlatformConfig, integrationConfig, monetizationConfig);
         }

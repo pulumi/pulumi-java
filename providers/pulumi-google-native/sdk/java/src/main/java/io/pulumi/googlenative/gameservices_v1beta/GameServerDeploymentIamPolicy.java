@@ -5,8 +5,8 @@ package io.pulumi.googlenative.gameservices_v1beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1beta.GameServerDeploymentIamPolicyArgs;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.AuditConfigResponse;
@@ -96,6 +96,37 @@ public class GameServerDeploymentIamPolicy extends io.pulumi.resources.CustomRes
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(GameServerDeploymentIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.gameservices_v1beta.GameServerDeploymentIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.gameservices_v1beta.GameServerDeploymentIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public GameServerDeploymentIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public GameServerDeploymentIamPolicy(String name) {
+        this(name, GameServerDeploymentIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public GameServerDeploymentIamPolicy(String name, GameServerDeploymentIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

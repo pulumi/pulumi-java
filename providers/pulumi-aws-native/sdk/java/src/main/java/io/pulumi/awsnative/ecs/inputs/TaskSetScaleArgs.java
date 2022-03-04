@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.TaskSetScaleUnit;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<TaskSetScaleUnit> unit;
+      private final @Nullable Input<TaskSetScaleUnit> unit;
 
     public Input<TaskSetScaleUnit> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -31,7 +31,7 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Double> value;
+      private final @Nullable Input<Double> value;
 
     public Input<Double> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -90,7 +90,6 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public TaskSetScaleArgs build() {
             return new TaskSetScaleArgs(unit, value);
         }

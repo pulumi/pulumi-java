@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.AppDevExperienceFeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.FeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.ServiceMeshFeatureStateResponse;
@@ -40,21 +40,21 @@ public final class CommonFeatureStateResponse {
     /**
      * Appdevexperience specific state.
      * 
-     */
+    */
     public AppDevExperienceFeatureStateResponse getAppdevexperience() {
         return this.appdevexperience;
     }
     /**
      * Service Mesh-specific state.
      * 
-     */
+    */
     public ServiceMeshFeatureStateResponse getServicemesh() {
         return this.servicemesh;
     }
     /**
      * The "running state" of the Feature in this Hub.
      * 
-     */
+    */
     public FeatureStateResponse getState() {
         return this.state;
     }
@@ -97,7 +97,6 @@ public final class CommonFeatureStateResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public CommonFeatureStateResponse build() {
             return new CommonFeatureStateResponse(appdevexperience, servicemesh, state);
         }

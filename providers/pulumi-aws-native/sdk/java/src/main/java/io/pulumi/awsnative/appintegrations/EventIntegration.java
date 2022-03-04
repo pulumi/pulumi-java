@@ -10,8 +10,8 @@ import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationEventFilter;
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -121,6 +121,37 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EventIntegrationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.appintegrations.EventIntegrationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.appintegrations.EventIntegrationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public EventIntegration(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EventIntegration(String name) {
+        this(name, EventIntegrationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EventIntegration(String name, EventIntegrationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

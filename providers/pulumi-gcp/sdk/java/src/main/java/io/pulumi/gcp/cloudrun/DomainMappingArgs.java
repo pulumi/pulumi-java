@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingMetadataArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingSpecArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -33,7 +33,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Input<DomainMappingMetadataArgs> metadata;
+      private final Input<DomainMappingMetadataArgs> metadata;
 
     public Input<DomainMappingMetadataArgs> getMetadata() {
         return this.metadata;
@@ -44,7 +44,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -68,7 +68,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec", required=true)
-    private final Input<DomainMappingSpecArgs> spec;
+      private final Input<DomainMappingSpecArgs> spec;
 
     public Input<DomainMappingSpecArgs> getSpec() {
         return this.spec;
@@ -172,7 +172,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.spec = Input.of(Objects.requireNonNull(spec));
             return this;
         }
-
         public DomainMappingArgs build() {
             return new DomainMappingArgs(location, metadata, name, project, spec);
         }

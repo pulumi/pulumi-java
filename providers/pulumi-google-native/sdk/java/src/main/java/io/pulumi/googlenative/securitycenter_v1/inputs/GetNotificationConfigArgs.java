@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.securitycenter_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetNotificationConfigArgs extends io.pulumi.resources.InvokeA
     public static final GetNotificationConfigArgs Empty = new GetNotificationConfigArgs();
 
     @InputImport(name="notificationConfigId", required=true)
-    private final String notificationConfigId;
+      private final String notificationConfigId;
 
     public String getNotificationConfigId() {
         return this.notificationConfigId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -69,7 +69,6 @@ public final class GetNotificationConfigArgs extends io.pulumi.resources.InvokeA
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetNotificationConfigArgs build() {
             return new GetNotificationConfigArgs(notificationConfigId, organizationId);
         }

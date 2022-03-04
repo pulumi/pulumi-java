@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicyInstanceSchedulePolicyScheduleResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse {
     /**
      * The expiration time of the schedule. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public String getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
-     */
+    */
     public String getTimeZone() {
         return this.timeZone;
     }
     /**
      * Specifies the schedule for starting instances.
      * 
-     */
+    */
     public ResourcePolicyInstanceSchedulePolicyScheduleResponse getVmStartSchedule() {
         return this.vmStartSchedule;
     }
     /**
      * Specifies the schedule for stopping instances.
      * 
-     */
+    */
     public ResourcePolicyInstanceSchedulePolicyScheduleResponse getVmStopSchedule() {
         return this.vmStopSchedule;
     }
@@ -138,7 +138,6 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse {
             this.vmStopSchedule = Objects.requireNonNull(vmStopSchedule);
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyResponse build() {
             return new ResourcePolicyInstanceSchedulePolicyResponse(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);
         }

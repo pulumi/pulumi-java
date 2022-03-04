@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetWebAppVnetConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppVnetConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWebAppVnetConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="vnetName", required=true)
-    private final String vnetName;
+      private final String vnetName;
 
     public String getVnetName() {
         return this.vnetName;
@@ -98,7 +98,6 @@ public final class GetWebAppVnetConnectionArgs extends io.pulumi.resources.Invok
             this.vnetName = Objects.requireNonNull(vnetName);
             return this;
         }
-
         public GetWebAppVnetConnectionArgs build() {
             return new GetWebAppVnetConnectionArgs(name, resourceGroupName, vnetName);
         }

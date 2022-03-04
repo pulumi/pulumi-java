@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class UncountedTerminatedPods {
     /**
      * Failed holds UIDs of failed Pods.
      * 
-     */
+    */
     public List<String> getFailed() {
         return this.failed == null ? List.of() : this.failed;
     }
     /**
      * Succeeded holds UIDs of succeeded Pods.
      * 
-     */
+    */
     public List<String> getSucceeded() {
         return this.succeeded == null ? List.of() : this.succeeded;
     }
@@ -76,7 +76,6 @@ public final class UncountedTerminatedPods {
             this.succeeded = succeeded;
             return this;
         }
-
         public UncountedTerminatedPods build() {
             return new UncountedTerminatedPods(failed, succeeded);
         }

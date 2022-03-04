@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
     /**
      * Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
      * 
-     */
+    */
     public Optional<Object> getAll() {
         return Optional.ofNullable(this.all);
     }
     /**
      * Match only the specified include paths. See also MatchScope in JsonBody.
      * 
-     */
+    */
     public List<String> getIncludedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
     }
@@ -78,7 +78,6 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
             this.includedPaths = includedPaths;
             return this;
         }
-
         public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties build() {
             return new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties(all, includedPaths);
         }

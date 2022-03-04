@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.inputs.JobMaxRecurrenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class JobCollectionQuotaResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="maxJobCount")
-    private final @Nullable Integer maxJobCount;
+      private final @Nullable Integer maxJobCount;
 
     public Optional<Integer> getMaxJobCount() {
         return this.maxJobCount == null ? Optional.empty() : Optional.ofNullable(this.maxJobCount);
@@ -31,7 +31,7 @@ public final class JobCollectionQuotaResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="maxJobOccurrence")
-    private final @Nullable Integer maxJobOccurrence;
+      private final @Nullable Integer maxJobOccurrence;
 
     public Optional<Integer> getMaxJobOccurrence() {
         return this.maxJobOccurrence == null ? Optional.empty() : Optional.ofNullable(this.maxJobOccurrence);
@@ -42,7 +42,7 @@ public final class JobCollectionQuotaResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="maxRecurrence")
-    private final @Nullable JobMaxRecurrenceResponse maxRecurrence;
+      private final @Nullable JobMaxRecurrenceResponse maxRecurrence;
 
     public Optional<JobMaxRecurrenceResponse> getMaxRecurrence() {
         return this.maxRecurrence == null ? Optional.empty() : Optional.ofNullable(this.maxRecurrence);
@@ -101,7 +101,6 @@ public final class JobCollectionQuotaResponse extends io.pulumi.resources.Invoke
             this.maxRecurrence = maxRecurrence;
             return this;
         }
-
         public JobCollectionQuotaResponse build() {
             return new JobCollectionQuotaResponse(maxJobCount, maxJobOccurrence, maxRecurrence);
         }

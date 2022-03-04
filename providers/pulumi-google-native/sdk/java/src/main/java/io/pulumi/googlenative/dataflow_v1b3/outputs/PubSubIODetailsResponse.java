@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class PubSubIODetailsResponse {
     /**
      * Subscription used in the connection.
      * 
-     */
+    */
     public String getSubscription() {
         return this.subscription;
     }
     /**
      * Topic accessed in the connection.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
@@ -74,7 +74,6 @@ public final class PubSubIODetailsResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubSubIODetailsResponse build() {
             return new PubSubIODetailsResponse(subscription, topic);
         }

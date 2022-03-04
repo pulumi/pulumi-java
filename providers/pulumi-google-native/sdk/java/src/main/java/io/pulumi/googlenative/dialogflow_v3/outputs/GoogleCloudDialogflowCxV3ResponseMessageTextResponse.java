@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse {
     /**
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
      * 
-     */
+    */
     public Boolean getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
     /**
      * A collection of text responses.
      * 
-     */
+    */
     public List<String> getText() {
         return this.text;
     }
@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageTextResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageTextResponse(allowPlaybackInterruption, text);
         }

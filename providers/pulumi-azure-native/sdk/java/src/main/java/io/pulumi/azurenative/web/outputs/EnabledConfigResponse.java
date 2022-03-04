@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class EnabledConfigResponse {
     /**
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,7 +54,6 @@ public final class EnabledConfigResponse {
             this.enabled = enabled;
             return this;
         }
-
         public EnabledConfigResponse build() {
             return new EnabledConfigResponse(enabled);
         }

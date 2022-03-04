@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.certificateregistration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="keyVaultId")
-    private final @Nullable String keyVaultId;
+      private final @Nullable String keyVaultId;
 
     public Optional<String> getKeyVaultId() {
         return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
@@ -34,7 +34,7 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="keyVaultSecretName")
-    private final @Nullable String keyVaultSecretName;
+      private final @Nullable String keyVaultSecretName;
 
     public Optional<String> getKeyVaultSecretName() {
         return this.keyVaultSecretName == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretName);
@@ -45,7 +45,7 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -104,7 +104,6 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public AppServiceCertificateResponse build() {
             return new AppServiceCertificateResponse(keyVaultId, keyVaultSecretName, provisioningState);
         }

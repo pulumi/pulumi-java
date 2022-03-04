@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="allocation")
-    private final @Nullable Input<String> allocation;
+      private final @Nullable Input<String> allocation;
 
     public Input<String> getAllocation() {
         return this.allocation == null ? Input.empty() : this.allocation;
@@ -35,7 +35,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -46,7 +46,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="gateway")
-    private final @Nullable Input<List<String>> gateway;
+      private final @Nullable Input<List<String>> gateway;
 
     public Input<List<String>> getGateway() {
         return this.gateway == null ? Input.empty() : this.gateway;
@@ -57,7 +57,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -68,7 +68,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="mask")
-    private final @Nullable Input<String> mask;
+      private final @Nullable Input<String> mask;
 
     public Input<String> getMask() {
         return this.mask == null ? Input.empty() : this.mask;
@@ -79,7 +79,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="primaryWinsServer")
-    private final @Nullable Input<String> primaryWinsServer;
+      private final @Nullable Input<String> primaryWinsServer;
 
     public Input<String> getPrimaryWinsServer() {
         return this.primaryWinsServer == null ? Input.empty() : this.primaryWinsServer;
@@ -90,7 +90,7 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="secondaryWinsServer")
-    private final @Nullable Input<String> secondaryWinsServer;
+      private final @Nullable Input<String> secondaryWinsServer;
 
     public Input<String> getSecondaryWinsServer() {
         return this.secondaryWinsServer == null ? Input.empty() : this.secondaryWinsServer;
@@ -224,7 +224,6 @@ public final class GuestOSNICCustomizationArgs extends io.pulumi.resources.Resou
             this.secondaryWinsServer = Input.ofNullable(secondaryWinsServer);
             return this;
         }
-
         public GuestOSNICCustomizationArgs build() {
             return new GuestOSNICCustomizationArgs(allocation, dnsServers, gateway, ipAddress, mask, primaryWinsServer, secondaryWinsServer);
         }

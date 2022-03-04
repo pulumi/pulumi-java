@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetClusterNodePoolNodeConfigWorkloadMetadataConfig extends io
     public static final GetClusterNodePoolNodeConfigWorkloadMetadataConfig Empty = new GetClusterNodePoolNodeConfigWorkloadMetadataConfig();
 
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -51,7 +51,6 @@ public final class GetClusterNodePoolNodeConfigWorkloadMetadataConfig extends io
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public GetClusterNodePoolNodeConfigWorkloadMetadataConfig build() {
             return new GetClusterNodePoolNodeConfigWorkloadMetadataConfig(mode);
         }

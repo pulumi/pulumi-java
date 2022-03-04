@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelectorRequirement;
 import java.lang.String;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class LabelSelector {
     /**
      * matchExpressions is a list of label selector requirements. The requirements are ANDed.
      * 
-     */
+    */
     public List<LabelSelectorRequirement> getMatchExpressions() {
         return this.matchExpressions == null ? List.of() : this.matchExpressions;
     }
     /**
      * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
      * 
-     */
+    */
     public Map<String,String> getMatchLabels() {
         return this.matchLabels == null ? Map.of() : this.matchLabels;
     }
@@ -78,7 +78,6 @@ public final class LabelSelector {
             this.matchLabels = matchLabels;
             return this;
         }
-
         public LabelSelector build() {
             return new LabelSelector(matchExpressions, matchLabels);
         }

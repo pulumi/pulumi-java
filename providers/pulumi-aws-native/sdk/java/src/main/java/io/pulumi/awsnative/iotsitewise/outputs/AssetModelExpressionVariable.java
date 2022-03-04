@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelVariableValue;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,14 +32,14 @@ public final class AssetModelExpressionVariable {
     /**
      * The friendly name of the variable to be used in the expression.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The variable that identifies an asset property from which to use values.
      * 
-     */
+    */
     public AssetModelVariableValue getValue() {
         return this.value;
     }
@@ -75,7 +75,6 @@ public final class AssetModelExpressionVariable {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AssetModelExpressionVariable build() {
             return new AssetModelExpressionVariable(name, value);
         }

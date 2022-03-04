@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class PrivateLinkServiceConnectionStateResponse {
     /**
      * Whether there is further actions.
      * 
-     */
+    */
     public Optional<String> getActionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
      * The optional description of the status.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The concrete private link service connection.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -97,7 +97,6 @@ public final class PrivateLinkServiceConnectionStateResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public PrivateLinkServiceConnectionStateResponse build() {
             return new PrivateLinkServiceConnectionStateResponse(actionsRequired, description, status);
         }

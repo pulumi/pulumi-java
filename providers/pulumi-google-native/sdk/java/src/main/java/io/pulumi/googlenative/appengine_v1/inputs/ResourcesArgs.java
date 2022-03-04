@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1.inputs.VolumeArgs;
 import java.lang.Double;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<Double> cpu;
+      private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -37,7 +37,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskGb")
-    private final @Nullable Input<Double> diskGb;
+      private final @Nullable Input<Double> diskGb;
 
     public Input<Double> getDiskGb() {
         return this.diskGb == null ? Input.empty() : this.diskGb;
@@ -48,7 +48,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyReference")
-    private final @Nullable Input<String> kmsKeyReference;
+      private final @Nullable Input<String> kmsKeyReference;
 
     public Input<String> getKmsKeyReference() {
         return this.kmsKeyReference == null ? Input.empty() : this.kmsKeyReference;
@@ -59,7 +59,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memoryGb")
-    private final @Nullable Input<Double> memoryGb;
+      private final @Nullable Input<Double> memoryGb;
 
     public Input<Double> getMemoryGb() {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
@@ -70,7 +70,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Input<List<VolumeArgs>> volumes;
 
     public Input<List<VolumeArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -174,7 +174,6 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
-
         public ResourcesArgs build() {
             return new ResourcesArgs(cpu, diskGb, kmsKeyReference, memoryGb, volumes);
         }

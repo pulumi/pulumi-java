@@ -7,8 +7,8 @@ import io.pulumi.awsnative.ExtensionResourceArgs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -35,6 +35,37 @@ public class ExtensionResource extends io.pulumi.resources.CustomResource {
         return this.outputs;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ExtensionResourceArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ExtensionResourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ExtensionResourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ExtensionResource(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ExtensionResource(String name) {
+        this(name, ExtensionResourceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ExtensionResource(String name, ExtensionResourceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

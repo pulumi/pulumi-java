@@ -5,7 +5,7 @@ package io.pulumi.awsnative.gamelift;
 
 import io.pulumi.awsnative.gamelift.inputs.AliasRoutingStrategyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingStrategy", required=true)
-    private final Input<AliasRoutingStrategyArgs> routingStrategy;
+      private final Input<AliasRoutingStrategyArgs> routingStrategy;
 
     public Input<AliasRoutingStrategyArgs> getRoutingStrategy() {
         return this.routingStrategy;
@@ -116,7 +116,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             this.routingStrategy = Input.of(Objects.requireNonNull(routingStrategy));
             return this;
         }
-
         public AliasArgs build() {
             return new AliasArgs(description, name, routingStrategy);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class PlatformImagePurchasePlanResponse {
     /**
      * Name of the purchase plan.
      * 
-     */
+    */
     public String getPlanName() {
         return this.planName;
     }
     /**
      * Product of the purchase plan.
      * 
-     */
+    */
     public String getPlanProduct() {
         return this.planProduct;
     }
     /**
      * Publisher of the purchase plan.
      * 
-     */
+    */
     public String getPlanPublisher() {
         return this.planPublisher;
     }
@@ -95,7 +95,6 @@ public final class PlatformImagePurchasePlanResponse {
             this.planPublisher = Objects.requireNonNull(planPublisher);
             return this;
         }
-
         public PlatformImagePurchasePlanResponse build() {
             return new PlatformImagePurchasePlanResponse(planName, planProduct, planPublisher);
         }

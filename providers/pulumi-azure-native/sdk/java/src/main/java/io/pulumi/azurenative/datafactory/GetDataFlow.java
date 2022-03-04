@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datafactory;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datafactory.inputs.GetDataFlowArgs;
 import io.pulumi.azurenative.datafactory.outputs.GetDataFlowResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataFlow {
-/**
- * Data flow resource type.
+    private GetDataFlow() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataFlowArgs.Builder a);
+    }
+    private static GetDataFlowArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataFlowArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Data flow resource type.
  * API Version: 2018-06-01.
  * 
- *
- * Data flow resource type.
+     *
+     * Data flow resource type.
  * 
- */
+     */
+    public static CompletableFuture<GetDataFlowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Data flow resource type.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * Data flow resource type.
+     * 
+     */
     public static CompletableFuture<GetDataFlowResult> invokeAsync(GetDataFlowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getDataFlow", TypeShape.of(GetDataFlowResult.class), args == null ? GetDataFlowArgs.Empty : args, Utilities.withVersion(options));
     }

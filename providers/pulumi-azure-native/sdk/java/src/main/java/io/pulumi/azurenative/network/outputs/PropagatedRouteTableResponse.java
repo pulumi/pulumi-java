@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class PropagatedRouteTableResponse {
     /**
      * The list of resource ids of all the RouteTables.
      * 
-     */
+    */
     public List<SubResourceResponse> getIds() {
         return this.ids == null ? List.of() : this.ids;
     }
     /**
      * The list of labels.
      * 
-     */
+    */
     public List<String> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
@@ -77,7 +77,6 @@ public final class PropagatedRouteTableResponse {
             this.labels = labels;
             return this;
         }
-
         public PropagatedRouteTableResponse build() {
             return new PropagatedRouteTableResponse(ids, labels);
         }

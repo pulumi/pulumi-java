@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PullRequestFilterResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PushFilterResponse;
 import java.lang.String;
@@ -61,42 +61,42 @@ public final class GitHubEventsConfigResponse {
     /**
      * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
      * 
-     */
+    */
     public String getEnterpriseConfigResourceName() {
         return this.enterpriseConfigResourceName;
     }
     /**
      * The installationID that emits the GitHub event.
      * 
-     */
+    */
     public String getInstallationId() {
         return this.installationId;
     }
     /**
      * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
      * 
-     */
+    */
     public String getOwner() {
         return this.owner;
     }
     /**
      * filter to match changes in pull requests.
      * 
-     */
+    */
     public PullRequestFilterResponse getPullRequest() {
         return this.pullRequest;
     }
     /**
      * filter to match changes in refs like branches, tags.
      * 
-     */
+    */
     public PushFilterResponse getPush() {
         return this.push;
     }
@@ -160,7 +160,6 @@ public final class GitHubEventsConfigResponse {
             this.push = Objects.requireNonNull(push);
             return this;
         }
-
         public GitHubEventsConfigResponse build() {
             return new GitHubEventsConfigResponse(enterpriseConfigResourceName, installationId, name, owner, pullRequest, push);
         }

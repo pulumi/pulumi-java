@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidDeviceListResponse;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidMatrixResponse;
 import io.pulumi.googlenative.testing_v1.outputs.IosDeviceListResponse;
@@ -40,21 +40,21 @@ public final class EnvironmentMatrixResponse {
     /**
      * A list of Android devices; the test will be run only on the specified devices.
      * 
-     */
+    */
     public AndroidDeviceListResponse getAndroidDeviceList() {
         return this.androidDeviceList;
     }
     /**
      * A matrix of Android devices.
      * 
-     */
+    */
     public AndroidMatrixResponse getAndroidMatrix() {
         return this.androidMatrix;
     }
     /**
      * A list of iOS devices.
      * 
-     */
+    */
     public IosDeviceListResponse getIosDeviceList() {
         return this.iosDeviceList;
     }
@@ -97,7 +97,6 @@ public final class EnvironmentMatrixResponse {
             this.iosDeviceList = Objects.requireNonNull(iosDeviceList);
             return this;
         }
-
         public EnvironmentMatrixResponse build() {
             return new EnvironmentMatrixResponse(androidDeviceList, androidMatrix, iosDeviceList);
         }

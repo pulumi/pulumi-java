@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.enums.DhcpTypeEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dhcpId")
-    private final @Nullable Input<String> dhcpId;
+      private final @Nullable Input<String> dhcpId;
 
     public Input<String> getDhcpId() {
         return this.dhcpId == null ? Input.empty() : this.dhcpId;
@@ -33,7 +33,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dhcpType", required=true)
-    private final Input<Either<String,DhcpTypeEnum>> dhcpType;
+      private final Input<Either<String,DhcpTypeEnum>> dhcpType;
 
     public Input<Either<String,DhcpTypeEnum>> getDhcpType() {
         return this.dhcpType;
@@ -44,7 +44,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -55,7 +55,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+      private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -66,7 +66,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<Double> revision;
+      private final @Nullable Input<Double> revision;
 
     public Input<Double> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -196,7 +196,6 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
             this.revision = Input.ofNullable(revision);
             return this;
         }
-
         public WorkloadNetworkDhcpArgs build() {
             return new WorkloadNetworkDhcpArgs(dhcpId, dhcpType, displayName, privateCloudName, resourceGroupName, revision);
         }

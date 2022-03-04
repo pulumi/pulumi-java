@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.ACLTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class GetACLResult {
     /**
      * The Amazon Resource Name (ARN) of the acl.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates acl status. Can be "creating", "active", "modifying", "deleting".
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * An array of key-value pairs to apply to this cluster.
      * 
-     */
+    */
     public List<ACLTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * List of users associated to this acl.
      * 
-     */
+    */
     public List<String> getUserNames() {
         return this.userNames == null ? List.of() : this.userNames;
     }
@@ -120,7 +120,6 @@ public final class GetACLResult {
             this.userNames = userNames;
             return this;
         }
-
         public GetACLResult build() {
             return new GetACLResult(arn, status, tags, userNames);
         }

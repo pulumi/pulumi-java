@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
     /**
      * A list of case content.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse> getCaseContent() {
         return this.caseContent;
     }
     /**
      * The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
-     */
+    */
     public String getCondition() {
         return this.condition;
     }
@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse(caseContent, condition);
         }

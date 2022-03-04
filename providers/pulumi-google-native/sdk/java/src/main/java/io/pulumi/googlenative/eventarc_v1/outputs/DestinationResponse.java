@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.eventarc_v1.outputs.CloudRunResponse;
 import io.pulumi.googlenative.eventarc_v1.outputs.GKEResponse;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class DestinationResponse {
     /**
      * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
      * 
-     */
+    */
     public String getCloudFunction() {
         return this.cloudFunction;
     }
     /**
      * Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
      * 
-     */
+    */
     public CloudRunResponse getCloudRun() {
         return this.cloudRun;
     }
     /**
      * A GKE service capable of receiving events. The service should be running in the same project as the trigger.
      * 
-     */
+    */
     public GKEResponse getGke() {
         return this.gke;
     }
@@ -97,7 +97,6 @@ public final class DestinationResponse {
             this.gke = Objects.requireNonNull(gke);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(cloudFunction, cloudRun, gke);
         }

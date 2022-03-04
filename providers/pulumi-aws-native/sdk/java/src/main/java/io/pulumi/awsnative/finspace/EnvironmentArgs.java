@@ -7,7 +7,7 @@ import io.pulumi.awsnative.finspace.enums.EnvironmentFederationMode;
 import io.pulumi.awsnative.finspace.inputs.EnvironmentFederationParametersArgs;
 import io.pulumi.awsnative.finspace.inputs.EnvironmentSuperuserParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataBundles")
-    private final @Nullable Input<List<String>> dataBundles;
+      private final @Nullable Input<List<String>> dataBundles;
 
     public Input<List<String>> getDataBundles() {
         return this.dataBundles == null ? Input.empty() : this.dataBundles;
@@ -34,7 +34,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,14 +45,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="federationMode")
-    private final @Nullable Input<EnvironmentFederationMode> federationMode;
+      private final @Nullable Input<EnvironmentFederationMode> federationMode;
 
     public Input<EnvironmentFederationMode> getFederationMode() {
         return this.federationMode == null ? Input.empty() : this.federationMode;
     }
 
     @InputImport(name="federationParameters")
-    private final @Nullable Input<EnvironmentFederationParametersArgs> federationParameters;
+      private final @Nullable Input<EnvironmentFederationParametersArgs> federationParameters;
 
     public Input<EnvironmentFederationParametersArgs> getFederationParameters() {
         return this.federationParameters == null ? Input.empty() : this.federationParameters;
@@ -63,7 +63,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -74,14 +74,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="superuserParameters")
-    private final @Nullable Input<EnvironmentSuperuserParametersArgs> superuserParameters;
+      private final @Nullable Input<EnvironmentSuperuserParametersArgs> superuserParameters;
 
     public Input<EnvironmentSuperuserParametersArgs> getSuperuserParameters() {
         return this.superuserParameters == null ? Input.empty() : this.superuserParameters;
@@ -215,7 +215,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.superuserParameters = Input.ofNullable(superuserParameters);
             return this;
         }
-
         public EnvironmentArgs build() {
             return new EnvironmentArgs(dataBundles, description, federationMode, federationParameters, kmsKeyId, name, superuserParameters);
         }

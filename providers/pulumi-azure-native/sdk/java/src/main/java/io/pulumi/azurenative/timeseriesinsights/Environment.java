@@ -9,8 +9,8 @@ import io.pulumi.azurenative.timeseriesinsights.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:timeseriesinsights:Environment env1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1 
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * Please use one of the variants: Gen1Environment, Gen2Environment.
  * 
  */
@@ -122,6 +122,37 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EnvironmentArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.timeseriesinsights.EnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.timeseriesinsights.EnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Environment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Environment(String name) {
+        this(name, EnvironmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Environment(String name, EnvironmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

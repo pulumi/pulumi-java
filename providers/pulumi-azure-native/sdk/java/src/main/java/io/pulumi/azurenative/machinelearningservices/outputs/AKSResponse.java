@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.AKSResponseProperties;
 import io.pulumi.azurenative.machinelearningservices.outputs.MachineLearningServiceErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -80,7 +80,7 @@ public final class AKSResponse {
     /**
      * Location for the underlying compute
      * 
-     */
+    */
     public Optional<String> getComputeLocation() {
         return Optional.ofNullable(this.computeLocation);
     }
@@ -88,49 +88,49 @@ public final class AKSResponse {
      * The type of compute
      * Expected value is 'AKS'.
      * 
-     */
+    */
     public String getComputeType() {
         return this.computeType;
     }
     /**
      * The description of the Machine Learning compute.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
      * 
-     */
+    */
     public Boolean getIsAttachedCompute() {
         return this.isAttachedCompute;
     }
     /**
      * AKS properties
      * 
-     */
+    */
     public Optional<AKSResponseProperties> getProperties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Errors during provisioning
      * 
-     */
+    */
     public List<MachineLearningServiceErrorResponse> getProvisioningErrors() {
         return this.provisioningErrors;
     }
     /**
      * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * ARM resource id of the underlying compute
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -208,7 +208,6 @@ public final class AKSResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public AKSResponse build() {
             return new AKSResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }

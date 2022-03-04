@@ -12,8 +12,8 @@ import io.pulumi.awsnative.imagebuilder.outputs.ContainerRecipeInstanceConfigura
 import io.pulumi.awsnative.imagebuilder.outputs.ContainerRecipeTargetContainerRepository;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -250,6 +250,37 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
         return this.workingDirectory;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ContainerRecipeArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.imagebuilder.ContainerRecipeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.imagebuilder.ContainerRecipeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ContainerRecipe(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ContainerRecipe(String name) {
+        this(name, ContainerRecipeArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ContainerRecipe(String name, @Nullable ContainerRecipeArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

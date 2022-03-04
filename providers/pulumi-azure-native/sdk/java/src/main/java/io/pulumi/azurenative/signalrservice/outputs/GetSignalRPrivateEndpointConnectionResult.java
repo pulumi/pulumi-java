@@ -5,7 +5,7 @@ package io.pulumi.azurenative.signalrservice.outputs;
 
 import io.pulumi.azurenative.signalrservice.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.signalrservice.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -63,42 +63,42 @@ public final class GetSignalRPrivateEndpointConnectionResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Private endpoint associated with the private endpoint connection
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Connection state
      * 
-     */
+    */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the private endpoint connection
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class GetSignalRPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSignalRPrivateEndpointConnectionResult build() {
             return new GetSignalRPrivateEndpointConnectionResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

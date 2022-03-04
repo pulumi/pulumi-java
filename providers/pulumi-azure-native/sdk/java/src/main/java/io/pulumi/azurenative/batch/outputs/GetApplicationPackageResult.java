@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -80,63 +80,63 @@ public final class GetApplicationPackageResult {
     /**
      * The ETag of the resource, used for concurrency statements.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The format of the application package, if the package is active.
      * 
-     */
+    */
     public String getFormat() {
         return this.format;
     }
     /**
      * The ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The time at which the package was last activated, if the package is active.
      * 
-     */
+    */
     public String getLastActivationTime() {
         return this.lastActivationTime;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current state of the application package.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The URL for the application package in Azure Storage.
      * 
-     */
+    */
     public String getStorageUrl() {
         return this.storageUrl;
     }
     /**
      * The UTC time at which the Azure Storage URL will expire.
      * 
-     */
+    */
     public String getStorageUrlExpiry() {
         return this.storageUrlExpiry;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -221,7 +221,6 @@ public final class GetApplicationPackageResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationPackageResult build() {
             return new GetApplicationPackageResult(etag, format, id, lastActivationTime, name, state, storageUrl, storageUrlExpiry, type);
         }

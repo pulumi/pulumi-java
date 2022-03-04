@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v4.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v4.inputs.MoneyArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxCompensation")
-    private final @Nullable Input<MoneyArgs> maxCompensation;
+      private final @Nullable Input<MoneyArgs> maxCompensation;
 
     public Input<MoneyArgs> getMaxCompensation() {
         return this.maxCompensation == null ? Input.empty() : this.maxCompensation;
@@ -34,7 +34,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minCompensation")
-    private final @Nullable Input<MoneyArgs> minCompensation;
+      private final @Nullable Input<MoneyArgs> minCompensation;
 
     public Input<MoneyArgs> getMinCompensation() {
         return this.minCompensation == null ? Input.empty() : this.minCompensation;
@@ -93,7 +93,6 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
             this.minCompensation = Input.ofNullable(minCompensation);
             return this;
         }
-
         public CompensationRangeArgs build() {
             return new CompensationRangeArgs(maxCompensation, minCompensation);
         }

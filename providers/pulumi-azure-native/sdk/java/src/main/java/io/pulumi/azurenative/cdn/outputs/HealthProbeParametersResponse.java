@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class HealthProbeParametersResponse {
     /**
      * The number of seconds between health probes.Default is 240sec.
      * 
-     */
+    */
     public Optional<Integer> getProbeIntervalInSeconds() {
         return Optional.ofNullable(this.probeIntervalInSeconds);
     }
     /**
      * The path relative to the origin that is used to determine the health of the origin.
      * 
-     */
+    */
     public Optional<String> getProbePath() {
         return Optional.ofNullable(this.probePath);
     }
     /**
      * Protocol to use for health probe.
      * 
-     */
+    */
     public Optional<String> getProbeProtocol() {
         return Optional.ofNullable(this.probeProtocol);
     }
     /**
      * The type of health probe request that is made.
      * 
-     */
+    */
     public Optional<String> getProbeRequestType() {
         return Optional.ofNullable(this.probeRequestType);
     }
@@ -119,7 +119,6 @@ public final class HealthProbeParametersResponse {
             this.probeRequestType = probeRequestType;
             return this;
         }
-
         public HealthProbeParametersResponse build() {
             return new HealthProbeParametersResponse(probeIntervalInSeconds, probePath, probeProtocol, probeRequestType);
         }

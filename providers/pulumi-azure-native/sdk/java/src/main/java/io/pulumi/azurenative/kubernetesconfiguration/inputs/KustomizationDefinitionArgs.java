@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.enums.KustomizationValidati
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.DependsOnDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<DependsOnDefinitionArgs>> dependsOn;
+      private final @Nullable Input<List<DependsOnDefinitionArgs>> dependsOn;
 
     public Input<List<DependsOnDefinitionArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -40,7 +40,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="force")
-    private final @Nullable Input<Boolean> force;
+      private final @Nullable Input<Boolean> force;
 
     public Input<Boolean> getForce() {
         return this.force == null ? Input.empty() : this.force;
@@ -51,7 +51,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -62,7 +62,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="prune")
-    private final @Nullable Input<Boolean> prune;
+      private final @Nullable Input<Boolean> prune;
 
     public Input<Boolean> getPrune() {
         return this.prune == null ? Input.empty() : this.prune;
@@ -73,7 +73,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="retryIntervalInSeconds")
-    private final @Nullable Input<Double> retryIntervalInSeconds;
+      private final @Nullable Input<Double> retryIntervalInSeconds;
 
     public Input<Double> getRetryIntervalInSeconds() {
         return this.retryIntervalInSeconds == null ? Input.empty() : this.retryIntervalInSeconds;
@@ -84,7 +84,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="syncIntervalInSeconds")
-    private final @Nullable Input<Double> syncIntervalInSeconds;
+      private final @Nullable Input<Double> syncIntervalInSeconds;
 
     public Input<Double> getSyncIntervalInSeconds() {
         return this.syncIntervalInSeconds == null ? Input.empty() : this.syncIntervalInSeconds;
@@ -95,7 +95,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Input<Double> timeoutInSeconds;
+      private final @Nullable Input<Double> timeoutInSeconds;
 
     public Input<Double> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
@@ -106,7 +106,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="validation")
-    private final @Nullable Input<Either<String,KustomizationValidationType>> validation;
+      private final @Nullable Input<Either<String,KustomizationValidationType>> validation;
 
     public Input<Either<String,KustomizationValidationType>> getValidation() {
         return this.validation == null ? Input.empty() : this.validation;
@@ -255,7 +255,6 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
             this.validation = Input.ofNullable(validation);
             return this;
         }
-
         public KustomizationDefinitionArgs build() {
             return new KustomizationDefinitionArgs(dependsOn, force, path, prune, retryIntervalInSeconds, syncIntervalInSeconds, timeoutInSeconds, validation);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -57,35 +57,35 @@ public final class FCVolumeSource {
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      * 
-     */
+    */
     public Optional<String> getFsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * Optional: FC target lun number
      * 
-     */
+    */
     public Optional<Integer> getLun() {
         return Optional.ofNullable(this.lun);
     }
     /**
      * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * Optional: FC target worldwide names (WWNs)
      * 
-     */
+    */
     public List<String> getTargetWWNs() {
         return this.targetWWNs == null ? List.of() : this.targetWWNs;
     }
     /**
      * Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
      * 
-     */
+    */
     public List<String> getWwids() {
         return this.wwids == null ? List.of() : this.wwids;
     }
@@ -142,7 +142,6 @@ public final class FCVolumeSource {
             this.wwids = wwids;
             return this;
         }
-
         public FCVolumeSource build() {
             return new FCVolumeSource(fsType, lun, readOnly, targetWWNs, wwids);
         }

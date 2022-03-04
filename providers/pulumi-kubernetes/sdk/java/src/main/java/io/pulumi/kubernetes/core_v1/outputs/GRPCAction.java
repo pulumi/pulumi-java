@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class GRPCAction {
     /**
      * Port number of the gRPC service. Number must be in the range 1 to 65535.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -45,7 +45,7 @@ public final class GRPCAction {
      * 
      * If this is not specified, the default behavior is defined by gRPC.
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
@@ -81,7 +81,6 @@ public final class GRPCAction {
             this.service = service;
             return this;
         }
-
         public GRPCAction build() {
             return new GRPCAction(port, service);
         }

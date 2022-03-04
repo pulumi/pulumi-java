@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="certificateName")
-    private final @Nullable Input<String> certificateName;
+      private final @Nullable Input<String> certificateName;
 
     public Input<String> getCertificateName() {
         return this.certificateName == null ? Input.empty() : this.certificateName;
@@ -30,7 +30,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-    private final Input<String> managedInstanceName;
+      private final Input<String> managedInstanceName;
 
     public Input<String> getManagedInstanceName() {
         return this.managedInstanceName;
@@ -41,7 +41,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publicBlob")
-    private final @Nullable Input<String> publicBlob;
+      private final @Nullable Input<String> publicBlob;
 
     public Input<String> getPublicBlob() {
         return this.publicBlob == null ? Input.empty() : this.publicBlob;
@@ -52,7 +52,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -141,7 +141,6 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ServerTrustCertificateArgs build() {
             return new ServerTrustCertificateArgs(certificateName, managedInstanceName, publicBlob, resourceGroupName);
         }

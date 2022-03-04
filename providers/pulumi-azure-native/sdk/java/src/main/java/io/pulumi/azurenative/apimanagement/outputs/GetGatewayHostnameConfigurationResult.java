@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -83,63 +83,63 @@ public final class GetGatewayHostnameConfigurationResult {
     /**
      * Identifier of Certificate entity that will be used for TLS connection establishment
      * 
-     */
+    */
     public Optional<String> getCertificateId() {
         return Optional.ofNullable(this.certificateId);
     }
     /**
      * Hostname value. Supports valid domain name, partial or full wildcard
      * 
-     */
+    */
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * Specifies if HTTP/2.0 is supported
      * 
-     */
+    */
     public Optional<Boolean> getHttp2Enabled() {
         return Optional.ofNullable(this.http2Enabled);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Determines whether gateway requests client certificate
      * 
-     */
+    */
     public Optional<Boolean> getNegotiateClientCertificate() {
         return Optional.ofNullable(this.negotiateClientCertificate);
     }
     /**
      * Specifies if TLS 1.0 is supported
      * 
-     */
+    */
     public Optional<Boolean> getTls10Enabled() {
         return Optional.ofNullable(this.tls10Enabled);
     }
     /**
      * Specifies if TLS 1.1 is supported
      * 
-     */
+    */
     public Optional<Boolean> getTls11Enabled() {
         return Optional.ofNullable(this.tls11Enabled);
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -224,7 +224,6 @@ public final class GetGatewayHostnameConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayHostnameConfigurationResult build() {
             return new GetGatewayHostnameConfigurationResult(certificateId, hostname, http2Enabled, id, name, negotiateClientCertificate, tls10Enabled, tls11Enabled, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class IDRange {
     /**
      * max is the end of the range, inclusive.
      * 
-     */
+    */
     public Integer getMax() {
         return this.max;
     }
     /**
      * min is the start of the range, inclusive.
      * 
-     */
+    */
     public Integer getMin() {
         return this.min;
     }
@@ -74,7 +74,6 @@ public final class IDRange {
             this.min = Objects.requireNonNull(min);
             return this;
         }
-
         public IDRange build() {
             return new IDRange(max, min);
         }

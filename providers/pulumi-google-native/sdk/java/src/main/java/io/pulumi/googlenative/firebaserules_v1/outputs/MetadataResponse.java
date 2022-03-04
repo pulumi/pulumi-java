@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetadataResponse {
     /**
      * Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.
      * 
-     */
+    */
     public List<String> getServices() {
         return this.services;
     }
@@ -53,7 +53,6 @@ public final class MetadataResponse {
             this.services = Objects.requireNonNull(services);
             return this;
         }
-
         public MetadataResponse build() {
             return new MetadataResponse(services);
         }

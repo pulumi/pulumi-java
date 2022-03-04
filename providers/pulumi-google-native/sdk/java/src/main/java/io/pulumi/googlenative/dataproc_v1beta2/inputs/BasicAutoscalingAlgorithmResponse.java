@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.BasicYarnAutoscalingConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BasicAutoscalingAlgorithmResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="cooldownPeriod", required=true)
-    private final String cooldownPeriod;
+      private final String cooldownPeriod;
 
     public String getCooldownPeriod() {
         return this.cooldownPeriod;
@@ -33,7 +33,7 @@ public final class BasicAutoscalingAlgorithmResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="yarnConfig", required=true)
-    private final BasicYarnAutoscalingConfigResponse yarnConfig;
+      private final BasicYarnAutoscalingConfigResponse yarnConfig;
 
     public BasicYarnAutoscalingConfigResponse getYarnConfig() {
         return this.yarnConfig;
@@ -82,7 +82,6 @@ public final class BasicAutoscalingAlgorithmResponse extends io.pulumi.resources
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
         }
-
         public BasicAutoscalingAlgorithmResponse build() {
             return new BasicAutoscalingAlgorithmResponse(cooldownPeriod, yarnConfig);
         }

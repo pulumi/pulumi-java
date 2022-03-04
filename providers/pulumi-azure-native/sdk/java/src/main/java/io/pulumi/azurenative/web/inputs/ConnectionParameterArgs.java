@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.ConnectionParameterType;
 import io.pulumi.azurenative.web.inputs.ApiOAuthSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="oAuthSettings")
-    private final @Nullable Input<ApiOAuthSettingsArgs> oAuthSettings;
+      private final @Nullable Input<ApiOAuthSettingsArgs> oAuthSettings;
 
     public Input<ApiOAuthSettingsArgs> getOAuthSettings() {
         return this.oAuthSettings == null ? Input.empty() : this.oAuthSettings;
@@ -35,7 +35,7 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ConnectionParameterType> type;
+      private final @Nullable Input<ConnectionParameterType> type;
 
     public Input<ConnectionParameterType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ConnectionParameterArgs build() {
             return new ConnectionParameterArgs(oAuthSettings, type);
         }

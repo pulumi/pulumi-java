@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class TelegramChannelPropertiesResponse {
     /**
      * The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Whether this channel is validated for the bot
      * 
-     */
+    */
     public Optional<Boolean> getIsValidated() {
         return Optional.ofNullable(this.isValidated);
     }
@@ -98,7 +98,6 @@ public final class TelegramChannelPropertiesResponse {
             this.isValidated = isValidated;
             return this;
         }
-
         public TelegramChannelPropertiesResponse build() {
             return new TelegramChannelPropertiesResponse(accessToken, isEnabled, isValidated);
         }

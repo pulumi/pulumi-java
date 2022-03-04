@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="queryInsightsEnabled", required=true)
-    private final Boolean queryInsightsEnabled;
+      private final Boolean queryInsightsEnabled;
 
     public Boolean getQueryInsightsEnabled() {
         return this.queryInsightsEnabled;
@@ -33,7 +33,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="queryPlansPerMinute", required=true)
-    private final Integer queryPlansPerMinute;
+      private final Integer queryPlansPerMinute;
 
     public Integer getQueryPlansPerMinute() {
         return this.queryPlansPerMinute;
@@ -44,7 +44,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="queryStringLength", required=true)
-    private final Integer queryStringLength;
+      private final Integer queryStringLength;
 
     public Integer getQueryStringLength() {
         return this.queryStringLength;
@@ -55,7 +55,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="recordApplicationTags", required=true)
-    private final Boolean recordApplicationTags;
+      private final Boolean recordApplicationTags;
 
     public Boolean getRecordApplicationTags() {
         return this.recordApplicationTags;
@@ -66,7 +66,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="recordClientAddress", required=true)
-    private final Boolean recordClientAddress;
+      private final Boolean recordClientAddress;
 
     public Boolean getRecordClientAddress() {
         return this.recordClientAddress;
@@ -145,7 +145,6 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
             this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
             return this;
         }
-
         public InsightsConfigResponse build() {
             return new InsightsConfigResponse(queryInsightsEnabled, queryPlansPerMinute, queryStringLength, recordApplicationTags, recordClientAddress);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class WebServiceKeysResponse {
     /**
      * The primary access key.
      * 
-     */
+    */
     public Optional<String> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
     /**
      * The secondary access key.
      * 
-     */
+    */
     public Optional<String> getSecondary() {
         return Optional.ofNullable(this.secondary);
     }
@@ -76,7 +76,6 @@ public final class WebServiceKeysResponse {
             this.secondary = secondary;
             return this;
         }
-
         public WebServiceKeysResponse build() {
             return new WebServiceKeysResponse(primary, secondary);
         }

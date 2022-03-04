@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class HostedZoneConfig {
     /**
      * Any comments that you want to include about the hosted zone.
      * 
-     */
+    */
     public Optional<String> getComment() {
         return Optional.ofNullable(this.comment);
     }
@@ -54,7 +54,6 @@ public final class HostedZoneConfig {
             this.comment = comment;
             return this;
         }
-
         public HostedZoneConfig build() {
             return new HostedZoneConfig(comment);
         }

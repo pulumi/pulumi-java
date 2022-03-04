@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ce.outputs;
 
 import io.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,14 +54,14 @@ public final class GetCostCategoryResult {
     /**
      * Cost category ARN
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The default value for the cost category
      * 
-     */
+    */
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -74,14 +74,14 @@ public final class GetCostCategoryResult {
     /**
      * JSON array format of Expression in Billing and Cost Management API
      * 
-     */
+    */
     public Optional<String> getRules() {
         return Optional.ofNullable(this.rules);
     }
     /**
      * Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
      * 
-     */
+    */
     public Optional<String> getSplitChargeRules() {
         return Optional.ofNullable(this.splitChargeRules);
     }
@@ -145,7 +145,6 @@ public final class GetCostCategoryResult {
             this.splitChargeRules = splitChargeRules;
             return this;
         }
-
         public GetCostCategoryResult build() {
             return new GetCostCategoryResult(arn, defaultValue, effectiveStart, ruleVersion, rules, splitChargeRules);
         }

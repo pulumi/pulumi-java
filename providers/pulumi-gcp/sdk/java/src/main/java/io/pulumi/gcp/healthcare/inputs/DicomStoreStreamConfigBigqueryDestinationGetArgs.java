@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DicomStoreStreamConfigBigqueryDestinationGetArgs extends io.p
      * 
      */
     @InputImport(name="tableUri", required=true)
-    private final Input<String> tableUri;
+      private final Input<String> tableUri;
 
     public Input<String> getTableUri() {
         return this.tableUri;
@@ -61,7 +61,6 @@ public final class DicomStoreStreamConfigBigqueryDestinationGetArgs extends io.p
             this.tableUri = Input.of(Objects.requireNonNull(tableUri));
             return this;
         }
-
         public DicomStoreStreamConfigBigqueryDestinationGetArgs build() {
             return new DicomStoreStreamConfigBigqueryDestinationGetArgs(tableUri);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="datasetName")
-    private final @Nullable Input<String> datasetName;
+      private final @Nullable Input<String> datasetName;
 
     public Input<String> getDatasetName() {
         return this.datasetName == null ? Input.empty() : this.datasetName;
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -56,7 +56,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+      private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -67,7 +67,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tablePrefix")
-    private final @Nullable Input<String> tablePrefix;
+      private final @Nullable Input<String> tablePrefix;
 
     public Input<String> getTablePrefix() {
         return this.tablePrefix == null ? Input.empty() : this.tablePrefix;
@@ -171,7 +171,6 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
             this.tablePrefix = Input.ofNullable(tablePrefix);
             return this;
         }
-
         public GoogleCloudApigeeV1DatastoreConfigArgs build() {
             return new GoogleCloudApigeeV1DatastoreConfigArgs(bucketName, datasetName, path, project, tablePrefix);
         }

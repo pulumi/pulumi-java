@@ -6,21 +6,41 @@ package io.pulumi.azurenative.iotsecurity;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.iotsecurity.inputs.GetDefenderSettingArgs;
 import io.pulumi.azurenative.iotsecurity.outputs.GetDefenderSettingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefenderSetting {
-/**
- * IoT Defender settings
+    private GetDefenderSetting() {}
+    public interface BuilderApplicator {
+        public void apply(GetDefenderSettingArgs.Builder a);
+    }
+    private static GetDefenderSettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDefenderSettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * IoT Defender settings
  * API Version: 2021-02-01-preview.
  * 
- *
- * IoT Defender settings
+     *
+     * IoT Defender settings
  * 
- */
+     */
+    public static CompletableFuture<GetDefenderSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * IoT Defender settings
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * IoT Defender settings
+     * 
+     */
     public static CompletableFuture<GetDefenderSettingResult> invokeAsync(@Nullable GetDefenderSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getDefenderSetting", TypeShape.of(GetDefenderSettingResult.class), args == null ? GetDefenderSettingArgs.Empty : args, Utilities.withVersion(options));
     }

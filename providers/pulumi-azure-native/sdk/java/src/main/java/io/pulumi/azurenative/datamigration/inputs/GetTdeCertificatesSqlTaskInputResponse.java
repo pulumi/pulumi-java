@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.FileShareResponse;
 import io.pulumi.azurenative.datamigration.inputs.SelectedCertificateInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupFileShare", required=true)
-    private final FileShareResponse backupFileShare;
+      private final FileShareResponse backupFileShare;
 
     public FileShareResponse getBackupFileShare() {
         return this.backupFileShare;
@@ -35,7 +35,7 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="connectionInfo", required=true)
-    private final SqlConnectionInfoResponse connectionInfo;
+      private final SqlConnectionInfoResponse connectionInfo;
 
     public SqlConnectionInfoResponse getConnectionInfo() {
         return this.connectionInfo;
@@ -46,7 +46,7 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="selectedCertificates", required=true)
-    private final List<SelectedCertificateInputResponse> selectedCertificates;
+      private final List<SelectedCertificateInputResponse> selectedCertificates;
 
     public List<SelectedCertificateInputResponse> getSelectedCertificates() {
         return this.selectedCertificates;
@@ -105,7 +105,6 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends io.pulumi.reso
             this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
             return this;
         }
-
         public GetTdeCertificatesSqlTaskInputResponse build() {
             return new GetTdeCertificatesSqlTaskInputResponse(backupFileShare, connectionInfo, selectedCertificates);
         }

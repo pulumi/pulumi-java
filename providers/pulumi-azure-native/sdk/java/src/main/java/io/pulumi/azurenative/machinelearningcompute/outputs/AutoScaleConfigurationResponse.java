@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -56,35 +56,35 @@ public final class AutoScaleConfigurationResponse {
     /**
      * The maximum number of replicas for each service.
      * 
-     */
+    */
     public Optional<Integer> getMaxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
     /**
      * The minimum number of replicas for each service.
      * 
-     */
+    */
     public Optional<Integer> getMinReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
     /**
      * Refresh period in seconds.
      * 
-     */
+    */
     public Optional<Integer> getRefreshPeriodInSeconds() {
         return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
     /**
      * If auto-scale is enabled for all services. Each service can turn it off individually.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The target utilization.
      * 
-     */
+    */
     public Optional<Double> getTargetUtilization() {
         return Optional.ofNullable(this.targetUtilization);
     }
@@ -141,7 +141,6 @@ public final class AutoScaleConfigurationResponse {
             this.targetUtilization = targetUtilization;
             return this;
         }
-
         public AutoScaleConfigurationResponse build() {
             return new AutoScaleConfigurationResponse(maxReplicas, minReplicas, refreshPeriodInSeconds, status, targetUtilization);
         }

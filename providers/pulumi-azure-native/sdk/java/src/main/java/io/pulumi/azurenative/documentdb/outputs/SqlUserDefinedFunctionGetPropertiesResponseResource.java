@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource {
     /**
      * Body of the User Defined Function
      * 
-     */
+    */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB SQL userDefinedFunction
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A system generated property. A unique identifier.
      * 
-     */
+    */
     public String getRid() {
         return this.rid;
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
-     */
+    */
     public Double getTs() {
         return this.ts;
     }
@@ -140,7 +140,6 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public SqlUserDefinedFunctionGetPropertiesResponseResource build() {
             return new SqlUserDefinedFunctionGetPropertiesResponseResource(body, etag, id, rid, ts);
         }

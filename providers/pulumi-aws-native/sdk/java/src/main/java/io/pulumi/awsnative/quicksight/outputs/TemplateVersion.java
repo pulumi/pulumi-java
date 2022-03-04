@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.enums.TemplateResourceStatus;
 import io.pulumi.awsnative.quicksight.outputs.TemplateDataSetConfiguration;
 import io.pulumi.awsnative.quicksight.outputs.TemplateError;
 import io.pulumi.awsnative.quicksight.outputs.TemplateSheet;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -87,7 +87,7 @@ public final class TemplateVersion {
     /**
      * <p>The time that this template version was created.</p>
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -96,28 +96,28 @@ public final class TemplateVersion {
      *             template should be bound to new datasets matching the same schema described through this
      *             API operation.</p>
      * 
-     */
+    */
     public List<TemplateDataSetConfiguration> getDataSetConfigurations() {
         return this.dataSetConfigurations == null ? List.of() : this.dataSetConfigurations;
     }
     /**
      * <p>The description of the template.</p>
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <p>Errors associated with this template version.</p>
      * 
-     */
+    */
     public List<TemplateError> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
      * 
-     */
+    */
     public List<TemplateSheet> getSheets() {
         return this.sheets == null ? List.of() : this.sheets;
     }
@@ -125,7 +125,7 @@ public final class TemplateVersion {
      * <p>The Amazon Resource Name (ARN) of an analysis or template that was used to create this
      *             template.</p>
      * 
-     */
+    */
     public Optional<String> getSourceEntityArn() {
         return Optional.ofNullable(this.sourceEntityArn);
     }
@@ -135,14 +135,14 @@ public final class TemplateVersion {
     /**
      * <p>The ARN of the theme associated with this version of the template.</p>
      * 
-     */
+    */
     public Optional<String> getThemeArn() {
         return Optional.ofNullable(this.themeArn);
     }
     /**
      * <p>The version number of the template version.</p>
      * 
-     */
+    */
     public Optional<Double> getVersionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
@@ -227,7 +227,6 @@ public final class TemplateVersion {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public TemplateVersion build() {
             return new TemplateVersion(createdTime, dataSetConfigurations, description, errors, sheets, sourceEntityArn, status, themeArn, versionNumber);
         }

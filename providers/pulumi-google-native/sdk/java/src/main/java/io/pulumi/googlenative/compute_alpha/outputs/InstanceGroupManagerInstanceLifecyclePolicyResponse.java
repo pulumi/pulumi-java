@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyResponse {
     /**
      * The configuration for metadata based readiness signal sent by the instance during initialization when stopping / suspending an instance. The Instance Group Manager will wait for a signal that indicates successful initialization before stopping / suspending an instance. If a successful readiness signal is not sent before timeout, the corresponding instance will not be stopped / suspended. Instead, an error will be visible in the lastAttempt.errors field of the managed instance in the listmanagedinstances method. If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager will directly proceed to suspend / stop instances, skipping initialization on them.
      * 
-     */
+    */
     public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse getMetadataBasedReadinessSignal() {
         return this.metadataBasedReadinessSignal;
     }
@@ -52,7 +52,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyResponse {
             this.metadataBasedReadinessSignal = Objects.requireNonNull(metadataBasedReadinessSignal);
             return this;
         }
-
         public InstanceGroupManagerInstanceLifecyclePolicyResponse build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyResponse(metadataBasedReadinessSignal);
         }

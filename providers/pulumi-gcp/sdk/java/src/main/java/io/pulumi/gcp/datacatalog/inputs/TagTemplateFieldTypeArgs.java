@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeEnumTypeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enumType")
-    private final @Nullable Input<TagTemplateFieldTypeEnumTypeArgs> enumType;
+      private final @Nullable Input<TagTemplateFieldTypeEnumTypeArgs> enumType;
 
     public Input<TagTemplateFieldTypeEnumTypeArgs> getEnumType() {
         return this.enumType == null ? Input.empty() : this.enumType;
@@ -35,7 +35,7 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="primitiveType")
-    private final @Nullable Input<String> primitiveType;
+      private final @Nullable Input<String> primitiveType;
 
     public Input<String> getPrimitiveType() {
         return this.primitiveType == null ? Input.empty() : this.primitiveType;
@@ -94,7 +94,6 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
             this.primitiveType = Input.ofNullable(primitiveType);
             return this;
         }
-
         public TagTemplateFieldTypeArgs build() {
             return new TagTemplateFieldTypeArgs(enumType, primitiveType);
         }

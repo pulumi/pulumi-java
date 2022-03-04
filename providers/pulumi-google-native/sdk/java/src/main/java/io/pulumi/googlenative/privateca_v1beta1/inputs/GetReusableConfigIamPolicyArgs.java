@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetReusableConfigIamPolicyArgs extends io.pulumi.resources.In
     public static final GetReusableConfigIamPolicyArgs Empty = new GetReusableConfigIamPolicyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="reusableConfigId", required=true)
-    private final String reusableConfigId;
+      private final String reusableConfigId;
 
     public String getReusableConfigId() {
         return this.reusableConfigId;
@@ -105,7 +105,6 @@ public final class GetReusableConfigIamPolicyArgs extends io.pulumi.resources.In
             this.reusableConfigId = Objects.requireNonNull(reusableConfigId);
             return this;
         }
-
         public GetReusableConfigIamPolicyArgs build() {
             return new GetReusableConfigIamPolicyArgs(location, optionsRequestedPolicyVersion, project, reusableConfigId);
         }

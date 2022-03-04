@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class IotDpsSkuInfoResponse {
     /**
      * The number of units to provision
      * 
-     */
+    */
     public Optional<Double> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Sku name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Pricing tier name of the provisioning service.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
@@ -98,7 +98,6 @@ public final class IotDpsSkuInfoResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public IotDpsSkuInfoResponse build() {
             return new IotDpsSkuInfoResponse(capacity, name, tier);
         }

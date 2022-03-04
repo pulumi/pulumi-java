@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
     public static final PackagingConfigurationHlsPackageArgs Empty = new PackagingConfigurationHlsPackageArgs();
 
     @InputImport(name="encryption")
-    private final @Nullable Input<PackagingConfigurationHlsEncryptionArgs> encryption;
+      private final @Nullable Input<PackagingConfigurationHlsEncryptionArgs> encryption;
 
     public Input<PackagingConfigurationHlsEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -34,14 +34,14 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="hlsManifests", required=true)
-    private final Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
+      private final Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
     public Input<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
         return this.hlsManifests;
     }
 
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Input<Integer> segmentDurationSeconds;
+      private final @Nullable Input<Integer> segmentDurationSeconds;
 
     public Input<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
@@ -52,7 +52,7 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="useAudioRenditionGroup")
-    private final @Nullable Input<Boolean> useAudioRenditionGroup;
+      private final @Nullable Input<Boolean> useAudioRenditionGroup;
 
     public Input<Boolean> getUseAudioRenditionGroup() {
         return this.useAudioRenditionGroup == null ? Input.empty() : this.useAudioRenditionGroup;
@@ -141,7 +141,6 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
             this.useAudioRenditionGroup = Input.ofNullable(useAudioRenditionGroup);
             return this;
         }
-
         public PackagingConfigurationHlsPackageArgs build() {
             return new PackagingConfigurationHlsPackageArgs(encryption, hlsManifests, segmentDurationSeconds, useAudioRenditionGroup);
         }

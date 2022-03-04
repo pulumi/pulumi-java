@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.PermissionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -77,56 +77,56 @@ public final class GetRoleDefinitionResult {
     /**
      * Role definition assignable scopes.
      * 
-     */
+    */
     public List<String> getAssignableScopes() {
         return this.assignableScopes == null ? List.of() : this.assignableScopes;
     }
     /**
      * The role definition description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The role definition ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The role definition name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Role definition permissions.
      * 
-     */
+    */
     public List<PermissionResponse> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
      * The role name.
      * 
-     */
+    */
     public Optional<String> getRoleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
      * The role type.
      * 
-     */
+    */
     public Optional<String> getRoleType() {
         return Optional.ofNullable(this.roleType);
     }
     /**
      * The role definition type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -204,7 +204,6 @@ public final class GetRoleDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRoleDefinitionResult build() {
             return new GetRoleDefinitionResult(assignableScopes, description, id, name, permissions, roleName, roleType, type);
         }

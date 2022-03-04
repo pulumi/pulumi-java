@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1alpha2.inputs.DsRecordArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dsRecords")
-    private final @Nullable Input<List<DsRecordArgs>> dsRecords;
+      private final @Nullable Input<List<DsRecordArgs>> dsRecords;
 
     public Input<List<DsRecordArgs>> getDsRecords() {
         return this.dsRecords == null ? Input.empty() : this.dsRecords;
@@ -36,7 +36,7 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameServers", required=true)
-    private final Input<List<String>> nameServers;
+      private final Input<List<String>> nameServers;
 
     public Input<List<String>> getNameServers() {
         return this.nameServers;
@@ -95,7 +95,6 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
             this.nameServers = Input.of(Objects.requireNonNull(nameServers));
             return this;
         }
-
         public CustomDnsArgs build() {
             return new CustomDnsArgs(dsRecords, nameServers);
         }

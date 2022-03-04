@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -56,35 +56,35 @@ public final class ActivityPolicyResponse {
     /**
      * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getRetry() {
         return Optional.ofNullable(this.retry);
     }
     /**
      * Interval between each retry attempt (in seconds). The default is 30 sec.
      * 
-     */
+    */
     public Optional<Integer> getRetryIntervalInSeconds() {
         return Optional.ofNullable(this.retryIntervalInSeconds);
     }
     /**
      * When set to true, Input from activity is considered as secure and will not be logged to monitoring.
      * 
-     */
+    */
     public Optional<Boolean> getSecureInput() {
         return Optional.ofNullable(this.secureInput);
     }
     /**
      * When set to true, Output from activity is considered as secure and will not be logged to monitoring.
      * 
-     */
+    */
     public Optional<Boolean> getSecureOutput() {
         return Optional.ofNullable(this.secureOutput);
     }
     /**
      * Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -141,7 +141,6 @@ public final class ActivityPolicyResponse {
             this.timeout = timeout;
             return this;
         }
-
         public ActivityPolicyResponse build() {
             return new ActivityPolicyResponse(retry, retryIntervalInSeconds, secureInput, secureOutput, timeout);
         }

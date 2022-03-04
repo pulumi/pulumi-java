@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.GetIAMPolicyAuditConfigAuditLogConfig;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class GetIAMPolicyAuditConfig extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-    private final List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
+      private final List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
 
     public List<GetIAMPolicyAuditConfigAuditLogConfig> getAuditLogConfigs() {
         return this.auditLogConfigs;
@@ -30,7 +30,7 @@ public final class GetIAMPolicyAuditConfig extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -79,7 +79,6 @@ public final class GetIAMPolicyAuditConfig extends io.pulumi.resources.InvokeArg
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GetIAMPolicyAuditConfig build() {
             return new GetIAMPolicyAuditConfig(auditLogConfigs, service);
         }

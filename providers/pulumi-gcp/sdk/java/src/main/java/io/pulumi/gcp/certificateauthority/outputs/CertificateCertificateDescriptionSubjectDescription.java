@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectDescriptionSubject;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltName;
 import java.lang.String;
@@ -61,7 +61,7 @@ public final class CertificateCertificateDescriptionSubjectDescription {
      * "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getLifetime() {
         return Optional.ofNullable(this.lifetime);
     }
@@ -75,7 +75,7 @@ public final class CertificateCertificateDescriptionSubjectDescription {
      * The subject alternative name fields.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> getSubjectAltNames() {
         return this.subjectAltNames == null ? List.of() : this.subjectAltNames;
     }
@@ -83,7 +83,7 @@ public final class CertificateCertificateDescriptionSubjectDescription {
      * Contains distinguished name fields such as the location and organization.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateCertificateDescriptionSubjectDescriptionSubject> getSubjects() {
         return this.subjects == null ? List.of() : this.subjects;
     }
@@ -147,7 +147,6 @@ public final class CertificateCertificateDescriptionSubjectDescription {
             this.subjects = subjects;
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescription build() {
             return new CertificateCertificateDescriptionSubjectDescription(hexSerialNumber, lifetime, notAfterTime, notBeforeTime, subjectAltNames, subjects);
         }

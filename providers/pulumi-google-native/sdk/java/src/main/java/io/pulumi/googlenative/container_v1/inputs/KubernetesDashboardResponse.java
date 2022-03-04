@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KubernetesDashboardResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -59,7 +59,6 @@ public final class KubernetesDashboardResponse extends io.pulumi.resources.Invok
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public KubernetesDashboardResponse build() {
             return new KubernetesDashboardResponse(disabled);
         }

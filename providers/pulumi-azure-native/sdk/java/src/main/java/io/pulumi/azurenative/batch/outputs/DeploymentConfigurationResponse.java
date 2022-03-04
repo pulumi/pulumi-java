@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.CloudServiceConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.VirtualMachineConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class DeploymentConfigurationResponse {
     /**
      * This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.
      * 
-     */
+    */
     public Optional<CloudServiceConfigurationResponse> getCloudServiceConfiguration() {
         return Optional.ofNullable(this.cloudServiceConfiguration);
     }
     /**
      * This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
      * 
-     */
+    */
     public Optional<VirtualMachineConfigurationResponse> getVirtualMachineConfiguration() {
         return Optional.ofNullable(this.virtualMachineConfiguration);
     }
@@ -77,7 +77,6 @@ public final class DeploymentConfigurationResponse {
             this.virtualMachineConfiguration = virtualMachineConfiguration;
             return this;
         }
-
         public DeploymentConfigurationResponse build() {
             return new DeploymentConfigurationResponse(cloudServiceConfiguration, virtualMachineConfiguration);
         }

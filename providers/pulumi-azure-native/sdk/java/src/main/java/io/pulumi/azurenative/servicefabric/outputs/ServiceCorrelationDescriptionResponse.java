@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ServiceCorrelationDescriptionResponse {
     /**
      * The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
      * 
-     */
+    */
     public String getScheme() {
         return this.scheme;
     }
     /**
      * The name of the service that the correlation relationship is established with.
      * 
-     */
+    */
     public String getServiceName() {
         return this.serviceName;
     }
@@ -74,7 +74,6 @@ public final class ServiceCorrelationDescriptionResponse {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public ServiceCorrelationDescriptionResponse build() {
             return new ServiceCorrelationDescriptionResponse(scheme, serviceName);
         }

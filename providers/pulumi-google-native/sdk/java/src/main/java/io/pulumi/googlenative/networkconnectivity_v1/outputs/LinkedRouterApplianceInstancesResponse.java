@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.RouterApplianceInstanceResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class LinkedRouterApplianceInstancesResponse {
     /**
      * The list of router appliance instances.
      * 
-     */
+    */
     public List<RouterApplianceInstanceResponse> getInstances() {
         return this.instances;
     }
     /**
      * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
      * 
-     */
+    */
     public Boolean getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
@@ -76,7 +76,6 @@ public final class LinkedRouterApplianceInstancesResponse {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public LinkedRouterApplianceInstancesResponse build() {
             return new LinkedRouterApplianceInstancesResponse(instances, siteToSiteDataTransfer);
         }

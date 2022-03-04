@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class DirectLineSpeechChannelPropertiesResponse {
     /**
      * The cognitive service region with this channel registration.
      * 
-     */
+    */
     public String getCognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
     }
     /**
      * The cognitive service subscription key to use with this channel registration.
      * 
-     */
+    */
     public String getCognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
     }
     /**
      * Custom voice deployment id (optional).
      * 
-     */
+    */
     public Optional<String> getCustomSpeechModelId() {
         return Optional.ofNullable(this.customSpeechModelId);
     }
     /**
      * Custom speech model id (optional).
      * 
-     */
+    */
     public Optional<String> getCustomVoiceDeploymentId() {
         return Optional.ofNullable(this.customVoiceDeploymentId);
     }
     /**
      * Make this a default bot for chosen cognitive service account.
      * 
-     */
+    */
     public Optional<Boolean> getIsDefaultBotForCogSvcAccount() {
         return Optional.ofNullable(this.isDefaultBotForCogSvcAccount);
     }
     /**
      * Whether this channel is enabled or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -161,7 +161,6 @@ public final class DirectLineSpeechChannelPropertiesResponse {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public DirectLineSpeechChannelPropertiesResponse build() {
             return new DirectLineSpeechChannelPropertiesResponse(cognitiveServiceRegion, cognitiveServiceSubscriptionKey, customSpeechModelId, customVoiceDeploymentId, isDefaultBotForCogSvcAccount, isEnabled);
         }

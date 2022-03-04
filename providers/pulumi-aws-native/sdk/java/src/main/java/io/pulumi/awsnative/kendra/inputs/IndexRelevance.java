@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.IndexOrder;
 import io.pulumi.awsnative.kendra.inputs.IndexValueImportanceItem;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,35 +20,35 @@ public final class IndexRelevance extends io.pulumi.resources.InvokeArgs {
     public static final IndexRelevance Empty = new IndexRelevance();
 
     @InputImport(name="duration")
-    private final @Nullable String duration;
+      private final @Nullable String duration;
 
     public Optional<String> getDuration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
     }
 
     @InputImport(name="freshness")
-    private final @Nullable Boolean freshness;
+      private final @Nullable Boolean freshness;
 
     public Optional<Boolean> getFreshness() {
         return this.freshness == null ? Optional.empty() : Optional.ofNullable(this.freshness);
     }
 
     @InputImport(name="importance")
-    private final @Nullable Integer importance;
+      private final @Nullable Integer importance;
 
     public Optional<Integer> getImportance() {
         return this.importance == null ? Optional.empty() : Optional.ofNullable(this.importance);
     }
 
     @InputImport(name="rankOrder")
-    private final @Nullable IndexOrder rankOrder;
+      private final @Nullable IndexOrder rankOrder;
 
     public Optional<IndexOrder> getRankOrder() {
         return this.rankOrder == null ? Optional.empty() : Optional.ofNullable(this.rankOrder);
     }
 
     @InputImport(name="valueImportanceItems")
-    private final @Nullable List<IndexValueImportanceItem> valueImportanceItems;
+      private final @Nullable List<IndexValueImportanceItem> valueImportanceItems;
 
     public List<IndexValueImportanceItem> getValueImportanceItems() {
         return this.valueImportanceItems == null ? List.of() : this.valueImportanceItems;
@@ -127,7 +127,6 @@ public final class IndexRelevance extends io.pulumi.resources.InvokeArgs {
             this.valueImportanceItems = valueImportanceItems;
             return this;
         }
-
         public IndexRelevance build() {
             return new IndexRelevance(duration, freshness, importance, rankOrder, valueImportanceItems);
         }

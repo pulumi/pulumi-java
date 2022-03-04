@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkflowTemplateJobPigJobLoggingConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="driverLogLevels")
-    private final @Nullable Input<Map<String,String>> driverLogLevels;
+      private final @Nullable Input<Map<String,String>> driverLogLevels;
 
     public Input<Map<String,String>> getDriverLogLevels() {
         return this.driverLogLevels == null ? Input.empty() : this.driverLogLevels;
@@ -63,7 +63,6 @@ public final class WorkflowTemplateJobPigJobLoggingConfigArgs extends io.pulumi.
             this.driverLogLevels = Input.ofNullable(driverLogLevels);
             return this;
         }
-
         public WorkflowTemplateJobPigJobLoggingConfigArgs build() {
             return new WorkflowTemplateJobPigJobLoggingConfigArgs(driverLogLevels);
         }

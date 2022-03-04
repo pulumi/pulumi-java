@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.SessionEntityTypeEntityOverrideMode;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1EntityTypeEntityArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="entities", required=true)
-    private final Input<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities;
+      private final Input<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities;
 
     public Input<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> getEntities() {
         return this.entities;
@@ -33,21 +33,21 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="entityOverrideMode", required=true)
-    private final Input<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
+      private final Input<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
 
     public Input<SessionEntityTypeEntityOverrideMode> getEntityOverrideMode() {
         return this.entityOverrideMode;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -58,28 +58,28 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="sessionId", required=true)
-    private final Input<String> sessionId;
+      private final Input<String> sessionId;
 
     public Input<String> getSessionId() {
         return this.sessionId;
     }
 
     @InputImport(name="userId", required=true)
-    private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;
@@ -228,7 +228,6 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }
-
         public SessionEntityTypeArgs build() {
             return new SessionEntityTypeArgs(entities, entityOverrideMode, environmentId, location, name, project, sessionId, userId);
         }

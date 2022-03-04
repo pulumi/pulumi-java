@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.SecureIotDeviceRemoteTunnelResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="credentials", required=true)
-    private final UsernamePasswordCredentialsResponse credentials;
+      private final UsernamePasswordCredentialsResponse credentials;
 
     public UsernamePasswordCredentialsResponse getCredentials() {
         return this.credentials;
@@ -36,7 +36,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tunnel")
-    private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
+      private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
 
     public Optional<SecureIotDeviceRemoteTunnelResponse> getTunnel() {
         return this.tunnel == null ? Optional.empty() : Optional.ofNullable(this.tunnel);
@@ -48,7 +48,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -59,7 +59,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -128,7 +128,6 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public UnsecuredEndpointResponse build() {
             return new UnsecuredEndpointResponse(credentials, tunnel, type, url);
         }

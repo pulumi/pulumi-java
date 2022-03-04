@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class NodeTaintResponse {
     /**
      * Effect for taint.
      * 
-     */
+    */
     public String getEffect() {
         return this.effect;
     }
     /**
      * Key for taint.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value for taint.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -95,7 +95,6 @@ public final class NodeTaintResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public NodeTaintResponse build() {
             return new NodeTaintResponse(effect, key, value);
         }

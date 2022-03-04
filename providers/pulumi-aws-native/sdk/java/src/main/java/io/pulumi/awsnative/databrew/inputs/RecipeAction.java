@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.RecipeParameterMap;
 import io.pulumi.awsnative.databrew.inputs.RecipeParameters;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,14 +22,14 @@ public final class RecipeAction extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operation", required=true)
-    private final String operation;
+      private final String operation;
 
     public String getOperation() {
         return this.operation;
     }
 
     @InputImport(name="parameters")
-    private final @Nullable Either<RecipeParameters,RecipeParameterMap> parameters;
+      private final @Nullable Either<RecipeParameters,RecipeParameterMap> parameters;
 
     public Either<RecipeParameters,RecipeParameterMap> getParameters() {
         return this.parameters == null ? null : this.parameters;
@@ -78,7 +78,6 @@ public final class RecipeAction extends io.pulumi.resources.InvokeArgs {
             this.parameters = parameters;
             return this;
         }
-
         public RecipeAction build() {
             return new RecipeAction(operation, parameters);
         }

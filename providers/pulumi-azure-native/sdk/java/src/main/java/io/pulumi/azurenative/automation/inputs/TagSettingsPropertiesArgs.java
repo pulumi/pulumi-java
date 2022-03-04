@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.enums.TagOperators;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filterOperator")
-    private final @Nullable Input<TagOperators> filterOperator;
+      private final @Nullable Input<TagOperators> filterOperator;
 
     public Input<TagOperators> getFilterOperator() {
         return this.filterOperator == null ? Input.empty() : this.filterOperator;
@@ -37,7 +37,7 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,List<String>>> tags;
+      private final @Nullable Input<Map<String,List<String>>> tags;
 
     public Input<Map<String,List<String>>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -96,7 +96,6 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public TagSettingsPropertiesArgs build() {
             return new TagSettingsPropertiesArgs(filterOperator, tags);
         }

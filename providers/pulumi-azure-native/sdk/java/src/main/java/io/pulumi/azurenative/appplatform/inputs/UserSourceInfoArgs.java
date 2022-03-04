@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.enums.UserSourceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactSelector")
-    private final @Nullable Input<String> artifactSelector;
+      private final @Nullable Input<String> artifactSelector;
 
     public Input<String> getArtifactSelector() {
         return this.artifactSelector == null ? Input.empty() : this.artifactSelector;
@@ -37,7 +37,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativePath")
-    private final @Nullable Input<String> relativePath;
+      private final @Nullable Input<String> relativePath;
 
     public Input<String> getRelativePath() {
         return this.relativePath == null ? Input.empty() : this.relativePath;
@@ -48,7 +48,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,UserSourceType>> type;
+      private final @Nullable Input<Either<String,UserSourceType>> type;
 
     public Input<Either<String,UserSourceType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -59,7 +59,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -148,7 +148,6 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public UserSourceInfoArgs build() {
             return new UserSourceInfoArgs(artifactSelector, relativePath, type, version);
         }

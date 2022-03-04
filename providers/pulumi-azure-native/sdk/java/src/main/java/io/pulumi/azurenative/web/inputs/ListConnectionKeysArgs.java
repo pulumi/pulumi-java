@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="connectionName", required=true)
-    private final String connectionName;
+      private final String connectionName;
 
     public String getConnectionName() {
         return this.connectionName;
@@ -31,7 +31,7 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -42,7 +42,7 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+      private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -53,7 +53,7 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -64,7 +64,7 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -75,7 +75,7 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -97,7 +97,7 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -108,7 +108,7 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="validityTimeSpan")
-    private final @Nullable String validityTimeSpan;
+      private final @Nullable String validityTimeSpan;
 
     public Optional<String> getValidityTimeSpan() {
         return this.validityTimeSpan == null ? Optional.empty() : Optional.ofNullable(this.validityTimeSpan);
@@ -227,7 +227,6 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
             this.validityTimeSpan = validityTimeSpan;
             return this;
         }
-
         public ListConnectionKeysArgs build() {
             return new ListConnectionKeysArgs(connectionName, id, kind, location, name, resourceGroupName, tags, type, validityTimeSpan);
         }

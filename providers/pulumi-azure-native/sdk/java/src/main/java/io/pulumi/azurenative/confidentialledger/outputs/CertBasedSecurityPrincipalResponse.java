@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confidentialledger.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class CertBasedSecurityPrincipalResponse {
     /**
      * Base64 encoded public key of the user cert (.pem or .cer)
      * 
-     */
+    */
     public Optional<String> getCert() {
         return Optional.ofNullable(this.cert);
     }
     /**
      * LedgerRole associated with the Security Principal of Ledger
      * 
-     */
+    */
     public Optional<String> getLedgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }
@@ -76,7 +76,6 @@ public final class CertBasedSecurityPrincipalResponse {
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }
-
         public CertBasedSecurityPrincipalResponse build() {
             return new CertBasedSecurityPrincipalResponse(cert, ledgerRoleName);
         }

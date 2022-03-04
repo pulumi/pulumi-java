@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ManualScalingResponse {
     /**
      * Number of instances to assign to the service at the start. This number can later be altered by using the Modules API (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
      * 
-     */
+    */
     public Integer getInstances() {
         return this.instances;
     }
@@ -52,7 +52,6 @@ public final class ManualScalingResponse {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
         public ManualScalingResponse build() {
             return new ManualScalingResponse(instances);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryNoteAnalysisKind;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DiscoveryNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisKind", required=true)
-    private final Input<DiscoveryNoteAnalysisKind> analysisKind;
+      private final Input<DiscoveryNoteAnalysisKind> analysisKind;
 
     public Input<DiscoveryNoteAnalysisKind> getAnalysisKind() {
         return this.analysisKind;
@@ -65,7 +65,6 @@ public final class DiscoveryNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.analysisKind = Input.of(Objects.requireNonNull(analysisKind));
             return this;
         }
-
         public DiscoveryNoteArgs build() {
             return new DiscoveryNoteArgs(analysisKind);
         }

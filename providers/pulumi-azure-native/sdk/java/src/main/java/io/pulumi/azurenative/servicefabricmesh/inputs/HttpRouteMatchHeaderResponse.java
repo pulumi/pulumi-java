@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -45,7 +45,7 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -104,7 +104,6 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
             this.value = value;
             return this;
         }
-
         public HttpRouteMatchHeaderResponse build() {
             return new HttpRouteMatchHeaderResponse(name, type, value);
         }

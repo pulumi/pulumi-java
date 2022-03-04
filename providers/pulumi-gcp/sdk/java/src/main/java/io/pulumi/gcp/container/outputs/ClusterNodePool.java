@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.ClusterNodePoolAutoscaling;
 import io.pulumi.gcp.container.outputs.ClusterNodePoolManagement;
 import io.pulumi.gcp.container.outputs.ClusterNodePoolNetworkConfig;
@@ -110,7 +110,7 @@ public final class ClusterNodePool {
      * set this to a value of at least `1`, alongside setting
      * `remove_default_node_pool` to `true`.
      * 
-     */
+    */
     public Optional<Integer> getInitialNodeCount() {
         return Optional.ofNullable(this.initialNodeCount);
     }
@@ -130,7 +130,7 @@ public final class ClusterNodePool {
      * The name of the cluster, unique within the project and
      * location.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -141,7 +141,7 @@ public final class ClusterNodePool {
      * Configuration for
      * [Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
      * 
-     */
+    */
     public Optional<ClusterNodePoolNetworkConfig> getNetworkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
@@ -152,7 +152,7 @@ public final class ClusterNodePool {
      * manages the default node pool, which isn't recommended to be used.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterNodePoolNodeConfig> getNodeConfig() {
         return Optional.ofNullable(this.nodeConfig);
     }
@@ -165,7 +165,7 @@ public final class ClusterNodePool {
      * same region as their cluster's zone for zonal clusters. If this is specified for
      * a zonal cluster, omit the cluster's zone.
      * 
-     */
+    */
     public List<String> getNodeLocations() {
         return this.nodeLocations == null ? List.of() : this.nodeLocations;
     }
@@ -291,7 +291,6 @@ public final class ClusterNodePool {
             this.version = version;
             return this;
         }
-
         public ClusterNodePool build() {
             return new ClusterNodePool(autoscaling, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, management, maxPodsPerNode, name, namePrefix, networkConfig, nodeConfig, nodeCount, nodeLocations, upgradeSettings, version);
         }

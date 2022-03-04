@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.AzureStorageSection
 import io.pulumi.azurenative.machinelearningservices.outputs.GlusterFsSectionResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.LinkedInfoResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -136,77 +136,77 @@ public final class DatastoreResponse {
     /**
      * The User who created the datastore.
      * 
-     */
+    */
     public UserInfoResponse getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The date and time when the datastore was created.
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The datastore type.
      * 
-     */
+    */
     public Optional<String> getDataStoreType() {
         return Optional.ofNullable(this.dataStoreType);
     }
     /**
      * Description of the datastore.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Data specific to GlusterFS.
      * 
-     */
+    */
     public Optional<GlusterFsSectionResponse> getGlusterFsSection() {
         return Optional.ofNullable(this.glusterFsSection);
     }
     /**
      * A read only property that denotes whether the service datastore has been validated with credentials.
      * 
-     */
+    */
     public Optional<Boolean> getHasBeenValidated() {
         return Optional.ofNullable(this.hasBeenValidated);
     }
     /**
      * Info about origin if it is linked.
      * 
-     */
+    */
     public Optional<LinkedInfoResponse> getLinkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
     /**
      * The User who modified the datastore.
      * 
-     */
+    */
     public UserInfoResponse getModifiedBy() {
         return this.modifiedBy;
     }
     /**
      * The date and time when the datastore was last modified.
      * 
-     */
+    */
     public String getModifiedTime() {
         return this.modifiedTime;
     }
     /**
      * Name of the datastore.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tags for this datastore.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
@@ -340,7 +340,6 @@ public final class DatastoreResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public DatastoreResponse build() {
             return new DatastoreResponse(azureDataLakeSection, azureMySqlSection, azurePostgreSqlSection, azureSqlDatabaseSection, azureStorageSection, createdBy, createdTime, dataStoreType, description, glusterFsSection, hasBeenValidated, linkedInfo, modifiedBy, modifiedTime, name, tags);
         }

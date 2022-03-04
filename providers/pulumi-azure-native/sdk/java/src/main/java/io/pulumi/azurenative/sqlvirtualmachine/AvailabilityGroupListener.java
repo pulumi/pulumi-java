@@ -9,8 +9,8 @@ import io.pulumi.azurenative.sqlvirtualmachine.outputs.LoadBalancerConfiguration
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -133,6 +133,37 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AvailabilityGroupListenerArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.sqlvirtualmachine.AvailabilityGroupListenerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.sqlvirtualmachine.AvailabilityGroupListenerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AvailabilityGroupListener(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AvailabilityGroupListener(String name) {
+        this(name, AvailabilityGroupListenerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AvailabilityGroupListener(String name, AvailabilityGroupListenerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

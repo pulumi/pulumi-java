@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceExecResourceExecArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enforce")
-    private final @Nullable Input<OSPolicyResourceExecResourceExecArgs> enforce;
+      private final @Nullable Input<OSPolicyResourceExecResourceExecArgs> enforce;
 
     public Input<OSPolicyResourceExecResourceExecArgs> getEnforce() {
         return this.enforce == null ? Input.empty() : this.enforce;
@@ -34,7 +34,7 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="validate", required=true)
-    private final Input<OSPolicyResourceExecResourceExecArgs> validate;
+      private final Input<OSPolicyResourceExecResourceExecArgs> validate;
 
     public Input<OSPolicyResourceExecResourceExecArgs> getValidate() {
         return this.validate;
@@ -93,7 +93,6 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
             this.validate = Input.of(Objects.requireNonNull(validate));
             return this;
         }
-
         public OSPolicyResourceExecResourceArgs build() {
             return new OSPolicyResourceExecResourceArgs(enforce, validate);
         }

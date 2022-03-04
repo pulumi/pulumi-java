@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class CertificateProviderInstanceResponse {
     /**
      * Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to "google_cloud_private_spiffe" to use Certificate Authority Service certificate provider instance.
      * 
-     */
+    */
     public String getPluginInstance() {
         return this.pluginInstance;
     }
@@ -52,7 +52,6 @@ public final class CertificateProviderInstanceResponse {
             this.pluginInstance = Objects.requireNonNull(pluginInstance);
             return this;
         }
-
         public CertificateProviderInstanceResponse build() {
             return new CertificateProviderInstanceResponse(pluginInstance);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorCriteria;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimension;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
     public static final SecurityProfileBehavior Empty = new SecurityProfileBehavior();
 
     @InputImport(name="criteria")
-    private final @Nullable SecurityProfileBehaviorCriteria criteria;
+      private final @Nullable SecurityProfileBehaviorCriteria criteria;
 
     public Optional<SecurityProfileBehaviorCriteria> getCriteria() {
         return this.criteria == null ? Optional.empty() : Optional.ofNullable(this.criteria);
@@ -33,14 +33,14 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="metric")
-    private final @Nullable String metric;
+      private final @Nullable String metric;
 
     public Optional<String> getMetric() {
         return this.metric == null ? Optional.empty() : Optional.ofNullable(this.metric);
     }
 
     @InputImport(name="metricDimension")
-    private final @Nullable SecurityProfileMetricDimension metricDimension;
+      private final @Nullable SecurityProfileMetricDimension metricDimension;
 
     public Optional<SecurityProfileMetricDimension> getMetricDimension() {
         return this.metricDimension == null ? Optional.empty() : Optional.ofNullable(this.metricDimension);
@@ -51,7 +51,7 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -62,7 +62,7 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="suppressAlerts")
-    private final @Nullable Boolean suppressAlerts;
+      private final @Nullable Boolean suppressAlerts;
 
     public Optional<Boolean> getSuppressAlerts() {
         return this.suppressAlerts == null ? Optional.empty() : Optional.ofNullable(this.suppressAlerts);
@@ -141,7 +141,6 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
             this.suppressAlerts = suppressAlerts;
             return this;
         }
-
         public SecurityProfileBehavior build() {
             return new SecurityProfileBehavior(criteria, metric, metricDimension, name, suppressAlerts);
         }

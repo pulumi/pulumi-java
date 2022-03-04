@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class SymptomResponse {
     /**
      * Timestamp when the Symptom is created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Detailed information of the current Symptom.
      * 
-     */
+    */
     public String getDetails() {
         return this.details;
     }
     /**
      * Type of the Symptom.
      * 
-     */
+    */
     public String getSymptomType() {
         return this.symptomType;
     }
     /**
      * A string used to uniquely distinguish a worker within a TPU node.
      * 
-     */
+    */
     public String getWorkerId() {
         return this.workerId;
     }
@@ -116,7 +116,6 @@ public final class SymptomResponse {
             this.workerId = Objects.requireNonNull(workerId);
             return this;
         }
-
         public SymptomResponse build() {
             return new SymptomResponse(createTime, details, symptomType, workerId);
         }

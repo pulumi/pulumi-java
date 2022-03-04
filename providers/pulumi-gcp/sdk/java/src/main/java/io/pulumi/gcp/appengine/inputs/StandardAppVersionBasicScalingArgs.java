@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StandardAppVersionBasicScalingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="idleTimeout")
-    private final @Nullable Input<String> idleTimeout;
+      private final @Nullable Input<String> idleTimeout;
 
     public Input<String> getIdleTimeout() {
         return this.idleTimeout == null ? Input.empty() : this.idleTimeout;
@@ -32,7 +32,7 @@ public final class StandardAppVersionBasicScalingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxInstances", required=true)
-    private final Input<Integer> maxInstances;
+      private final Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances;
@@ -91,7 +91,6 @@ public final class StandardAppVersionBasicScalingArgs extends io.pulumi.resource
             this.maxInstances = Input.of(Objects.requireNonNull(maxInstances));
             return this;
         }
-
         public StandardAppVersionBasicScalingArgs build() {
             return new StandardAppVersionBasicScalingArgs(idleTimeout, maxInstances);
         }

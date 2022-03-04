@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class CloudConnectorsResponse {
      * AWS external identifier.
      * Configured in AWS to allow use of the role arn used for scanning
      * 
-     */
+    */
     public String getAwsExternalId() {
         return this.awsExternalId;
     }
@@ -54,7 +54,6 @@ public final class CloudConnectorsResponse {
             this.awsExternalId = Objects.requireNonNull(awsExternalId);
             return this;
         }
-
         public CloudConnectorsResponse build() {
             return new CloudConnectorsResponse(awsExternalId);
         }

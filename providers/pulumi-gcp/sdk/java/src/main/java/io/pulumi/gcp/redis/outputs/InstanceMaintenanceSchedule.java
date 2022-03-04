@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -53,7 +53,7 @@ public final class InstanceMaintenanceSchedule {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -64,7 +64,7 @@ public final class InstanceMaintenanceSchedule {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-     */
+    */
     public Optional<String> getScheduleDeadlineTime() {
         return Optional.ofNullable(this.scheduleDeadlineTime);
     }
@@ -74,7 +74,7 @@ public final class InstanceMaintenanceSchedule {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -117,7 +117,6 @@ public final class InstanceMaintenanceSchedule {
             this.startTime = startTime;
             return this;
         }
-
         public InstanceMaintenanceSchedule build() {
             return new InstanceMaintenanceSchedule(endTime, scheduleDeadlineTime, startTime);
         }

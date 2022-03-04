@@ -16,7 +16,7 @@ import io.pulumi.awsnative.datasync.enums.TaskOptionsTaskQueueing;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsTransferMode;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsUid;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsVerifyMode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -130,98 +130,98 @@ public final class TaskOptions {
     /**
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written to).
      * 
-     */
+    */
     public Optional<TaskOptionsAtime> getAtime() {
         return Optional.ofNullable(this.atime);
     }
     /**
      * A value that limits the bandwidth used by AWS DataSync.
      * 
-     */
+    */
     public Optional<Integer> getBytesPerSecond() {
         return Optional.ofNullable(this.bytesPerSecond);
     }
     /**
      * The group ID (GID) of the file's owners.
      * 
-     */
+    */
     public Optional<TaskOptionsGid> getGid() {
         return Optional.ofNullable(this.gid);
     }
     /**
      * A value that determines the types of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide.
      * 
-     */
+    */
     public Optional<TaskOptionsLogLevel> getLogLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
      * A value that indicates the last time that a file was modified (that is, a file was written to) before the PREPARING phase.
      * 
-     */
+    */
     public Optional<TaskOptionsMtime> getMtime() {
         return Optional.ofNullable(this.mtime);
     }
     /**
      * A value that determines whether files at the destination should be overwritten or preserved when copying files.
      * 
-     */
+    */
     public Optional<TaskOptionsOverwriteMode> getOverwriteMode() {
         return Optional.ofNullable(this.overwriteMode);
     }
     /**
      * A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file.
      * 
-     */
+    */
     public Optional<TaskOptionsPosixPermissions> getPosixPermissions() {
         return Optional.ofNullable(this.posixPermissions);
     }
     /**
      * A value that specifies whether files in the destination that don't exist in the source file system should be preserved.
      * 
-     */
+    */
     public Optional<TaskOptionsPreserveDeletedFiles> getPreserveDeletedFiles() {
         return Optional.ofNullable(this.preserveDeletedFiles);
     }
     /**
      * A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and recreate the files with that device name and metadata on the destination.
      * 
-     */
+    */
     public Optional<TaskOptionsPreserveDevices> getPreserveDevices() {
         return Optional.ofNullable(this.preserveDevices);
     }
     /**
      * A value that determines which components of the SMB security descriptor are copied during transfer.
      * 
-     */
+    */
     public Optional<TaskOptionsSecurityDescriptorCopyFlags> getSecurityDescriptorCopyFlags() {
         return Optional.ofNullable(this.securityDescriptorCopyFlags);
     }
     /**
      * A value that determines whether tasks should be queued before executing the tasks.
      * 
-     */
+    */
     public Optional<TaskOptionsTaskQueueing> getTaskQueueing() {
         return Optional.ofNullable(this.taskQueueing);
     }
     /**
      * A value that determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location.
      * 
-     */
+    */
     public Optional<TaskOptionsTransferMode> getTransferMode() {
         return Optional.ofNullable(this.transferMode);
     }
     /**
      * The user ID (UID) of the file's owner.
      * 
-     */
+    */
     public Optional<TaskOptionsUid> getUid() {
         return Optional.ofNullable(this.uid);
     }
     /**
      * A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred.
      * 
-     */
+    */
     public Optional<TaskOptionsVerifyMode> getVerifyMode() {
         return Optional.ofNullable(this.verifyMode);
     }
@@ -341,7 +341,6 @@ public final class TaskOptions {
             this.verifyMode = verifyMode;
             return this;
         }
-
         public TaskOptions build() {
             return new TaskOptions(atime, bytesPerSecond, gid, logLevel, mtime, overwriteMode, posixPermissions, preserveDeletedFiles, preserveDevices, securityDescriptorCopyFlags, taskQueueing, transferMode, uid, verifyMode);
         }

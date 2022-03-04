@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RecordConditionResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse {
     /**
      * A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
      * 
-     */
+    */
     public GooglePrivacyDlpV2RecordConditionResponse getCondition() {
         return this.condition;
     }
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public GooglePrivacyDlpV2RecordSuppressionResponse build() {
             return new GooglePrivacyDlpV2RecordSuppressionResponse(condition);
         }

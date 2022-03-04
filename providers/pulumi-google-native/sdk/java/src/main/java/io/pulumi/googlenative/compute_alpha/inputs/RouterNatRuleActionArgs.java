@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceNatActiveIps")
-    private final @Nullable Input<List<String>> sourceNatActiveIps;
+      private final @Nullable Input<List<String>> sourceNatActiveIps;
 
     public Input<List<String>> getSourceNatActiveIps() {
         return this.sourceNatActiveIps == null ? Input.empty() : this.sourceNatActiveIps;
@@ -31,7 +31,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceNatActiveRanges")
-    private final @Nullable Input<List<String>> sourceNatActiveRanges;
+      private final @Nullable Input<List<String>> sourceNatActiveRanges;
 
     public Input<List<String>> getSourceNatActiveRanges() {
         return this.sourceNatActiveRanges == null ? Input.empty() : this.sourceNatActiveRanges;
@@ -42,7 +42,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceNatDrainIps")
-    private final @Nullable Input<List<String>> sourceNatDrainIps;
+      private final @Nullable Input<List<String>> sourceNatDrainIps;
 
     public Input<List<String>> getSourceNatDrainIps() {
         return this.sourceNatDrainIps == null ? Input.empty() : this.sourceNatDrainIps;
@@ -53,7 +53,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceNatDrainRanges")
-    private final @Nullable Input<List<String>> sourceNatDrainRanges;
+      private final @Nullable Input<List<String>> sourceNatDrainRanges;
 
     public Input<List<String>> getSourceNatDrainRanges() {
         return this.sourceNatDrainRanges == null ? Input.empty() : this.sourceNatDrainRanges;
@@ -142,7 +142,6 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
             this.sourceNatDrainRanges = Input.ofNullable(sourceNatDrainRanges);
             return this;
         }
-
         public RouterNatRuleActionArgs build() {
             return new RouterNatRuleActionArgs(sourceNatActiveIps, sourceNatActiveRanges, sourceNatDrainIps, sourceNatDrainRanges);
         }

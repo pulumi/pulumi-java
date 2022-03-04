@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="duration", required=true)
-    private final Input<String> duration;
+      private final Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration;
@@ -65,7 +65,6 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
             this.duration = Input.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public WaitStepAttributesArgs build() {
             return new WaitStepAttributesArgs(duration);
         }

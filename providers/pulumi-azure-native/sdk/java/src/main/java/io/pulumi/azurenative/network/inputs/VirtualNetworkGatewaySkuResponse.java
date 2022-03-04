@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="capacity", required=true)
-    private final Integer capacity;
+      private final Integer capacity;
 
     public Integer getCapacity() {
         return this.capacity;
@@ -35,7 +35,7 @@ public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -46,7 +46,7 @@ public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable String tier;
+      private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
@@ -105,7 +105,6 @@ public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.
             this.tier = tier;
             return this;
         }
-
         public VirtualNetworkGatewaySkuResponse build() {
             return new VirtualNetworkGatewaySkuResponse(capacity, name, tier);
         }

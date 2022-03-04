@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class PipelineDeviceRegistryEnrich extends io.pulumi.resources.Invo
     public static final PipelineDeviceRegistryEnrich Empty = new PipelineDeviceRegistryEnrich();
 
     @InputImport(name="attribute", required=true)
-    private final String attribute;
+      private final String attribute;
 
     public String getAttribute() {
         return this.attribute;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-    private final @Nullable String next;
+      private final @Nullable String next;
 
     public Optional<String> getNext() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="thingName", required=true)
-    private final String thingName;
+      private final String thingName;
 
     public String getThingName() {
         return this.thingName;
@@ -122,7 +122,6 @@ public final class PipelineDeviceRegistryEnrich extends io.pulumi.resources.Invo
             this.thingName = Objects.requireNonNull(thingName);
             return this;
         }
-
         public PipelineDeviceRegistryEnrich build() {
             return new PipelineDeviceRegistryEnrich(attribute, name, next, roleArn, thingName);
         }

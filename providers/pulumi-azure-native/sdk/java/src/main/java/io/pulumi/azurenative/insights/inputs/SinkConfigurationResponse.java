@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class SinkConfigurationResponse extends io.pulumi.resources.InvokeA
     public static final SinkConfigurationResponse Empty = new SinkConfigurationResponse();
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -51,7 +51,6 @@ public final class SinkConfigurationResponse extends io.pulumi.resources.InvokeA
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public SinkConfigurationResponse build() {
             return new SinkConfigurationResponse(kind);
         }

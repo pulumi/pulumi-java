@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowedExitCodes")
-    private final @Nullable Input<List<Integer>> allowedExitCodes;
+      private final @Nullable Input<List<Integer>> allowedExitCodes;
 
     public Input<List<Integer>> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
@@ -36,7 +36,7 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final Input<String> artifactId;
+      private final Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId;
@@ -47,7 +47,7 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="flags")
-    private final @Nullable Input<List<String>> flags;
+      private final @Nullable Input<List<String>> flags;
 
     public Input<List<String>> getFlags() {
         return this.flags == null ? Input.empty() : this.flags;
@@ -121,7 +121,6 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
             this.flags = Input.ofNullable(flags);
             return this;
         }
-
         public SoftwareRecipeStepInstallMsiArgs build() {
             return new SoftwareRecipeStepInstallMsiArgs(allowedExitCodes, artifactId, flags);
         }

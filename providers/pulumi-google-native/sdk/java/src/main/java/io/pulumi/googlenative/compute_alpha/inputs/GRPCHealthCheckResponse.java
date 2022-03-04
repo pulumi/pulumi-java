@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GRPCHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="grpcServiceName", required=true)
-    private final String grpcServiceName;
+      private final String grpcServiceName;
 
     public String getGrpcServiceName() {
         return this.grpcServiceName;
@@ -29,7 +29,7 @@ public final class GRPCHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -40,7 +40,7 @@ public final class GRPCHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="portName", required=true)
-    private final String portName;
+      private final String portName;
 
     public String getPortName() {
         return this.portName;
@@ -51,7 +51,7 @@ public final class GRPCHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="portSpecification", required=true)
-    private final String portSpecification;
+      private final String portSpecification;
 
     public String getPortSpecification() {
         return this.portSpecification;
@@ -120,7 +120,6 @@ public final class GRPCHealthCheckResponse extends io.pulumi.resources.InvokeArg
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }
-
         public GRPCHealthCheckResponse build() {
             return new GRPCHealthCheckResponse(grpcServiceName, port, portName, portSpecification);
         }

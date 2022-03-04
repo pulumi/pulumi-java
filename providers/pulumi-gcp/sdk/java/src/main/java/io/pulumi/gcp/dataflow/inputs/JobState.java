@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -24,7 +24,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalExperiments")
-    private final @Nullable Input<List<String>> additionalExperiments;
+      private final @Nullable Input<List<String>> additionalExperiments;
 
     public Input<List<String>> getAdditionalExperiments() {
         return this.additionalExperiments == null ? Input.empty() : this.additionalExperiments;
@@ -35,7 +35,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStreamingEngine")
-    private final @Nullable Input<Boolean> enableStreamingEngine;
+      private final @Nullable Input<Boolean> enableStreamingEngine;
 
     public Input<Boolean> getEnableStreamingEngine() {
         return this.enableStreamingEngine == null ? Input.empty() : this.enableStreamingEngine;
@@ -46,7 +46,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipConfiguration")
-    private final @Nullable Input<String> ipConfiguration;
+      private final @Nullable Input<String> ipConfiguration;
 
     public Input<String> getIpConfiguration() {
         return this.ipConfiguration == null ? Input.empty() : this.ipConfiguration;
@@ -57,7 +57,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobId")
-    private final @Nullable Input<String> jobId;
+      private final @Nullable Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId == null ? Input.empty() : this.jobId;
@@ -68,7 +68,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -83,7 +83,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,Object>> labels;
+      private final @Nullable Input<Map<String,Object>> labels;
 
     public Input<Map<String,Object>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -94,7 +94,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -105,7 +105,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxWorkers")
-    private final @Nullable Input<Integer> maxWorkers;
+      private final @Nullable Input<Integer> maxWorkers;
 
     public Input<Integer> getMaxWorkers() {
         return this.maxWorkers == null ? Input.empty() : this.maxWorkers;
@@ -116,7 +116,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -127,7 +127,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -138,7 +138,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onDelete")
-    private final @Nullable Input<String> onDelete;
+      private final @Nullable Input<String> onDelete;
 
     public Input<String> getOnDelete() {
         return this.onDelete == null ? Input.empty() : this.onDelete;
@@ -149,7 +149,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,Object>> parameters;
+      private final @Nullable Input<Map<String,Object>> parameters;
 
     public Input<Map<String,Object>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -160,7 +160,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -171,7 +171,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -182,7 +182,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-    private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -193,7 +193,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -204,7 +204,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -215,7 +215,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempGcsLocation")
-    private final @Nullable Input<String> tempGcsLocation;
+      private final @Nullable Input<String> tempGcsLocation;
 
     public Input<String> getTempGcsLocation() {
         return this.tempGcsLocation == null ? Input.empty() : this.tempGcsLocation;
@@ -226,7 +226,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateGcsPath")
-    private final @Nullable Input<String> templateGcsPath;
+      private final @Nullable Input<String> templateGcsPath;
 
     public Input<String> getTemplateGcsPath() {
         return this.templateGcsPath == null ? Input.empty() : this.templateGcsPath;
@@ -238,7 +238,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transformNameMapping")
-    private final @Nullable Input<Map<String,Object>> transformNameMapping;
+      private final @Nullable Input<Map<String,Object>> transformNameMapping;
 
     public Input<Map<String,Object>> getTransformNameMapping() {
         return this.transformNameMapping == null ? Input.empty() : this.transformNameMapping;
@@ -249,7 +249,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -260,7 +260,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -619,7 +619,6 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public JobState build() {
             return new JobState(additionalExperiments, enableStreamingEngine, ipConfiguration, jobId, kmsKeyName, labels, machineType, maxWorkers, name, network, onDelete, parameters, project, region, serviceAccountEmail, state, subnetwork, tempGcsLocation, templateGcsPath, transformNameMapping, type, zone);
         }

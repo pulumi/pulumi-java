@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.inputs.AS2AgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactAgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.X12AgreementContentArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="aS2")
-    private final @Nullable Input<AS2AgreementContentArgs> aS2;
+      private final @Nullable Input<AS2AgreementContentArgs> aS2;
 
     public Input<AS2AgreementContentArgs> getAS2() {
         return this.aS2 == null ? Input.empty() : this.aS2;
@@ -36,7 +36,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="edifact")
-    private final @Nullable Input<EdifactAgreementContentArgs> edifact;
+      private final @Nullable Input<EdifactAgreementContentArgs> edifact;
 
     public Input<EdifactAgreementContentArgs> getEdifact() {
         return this.edifact == null ? Input.empty() : this.edifact;
@@ -47,7 +47,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="x12")
-    private final @Nullable Input<X12AgreementContentArgs> x12;
+      private final @Nullable Input<X12AgreementContentArgs> x12;
 
     public Input<X12AgreementContentArgs> getX12() {
         return this.x12 == null ? Input.empty() : this.x12;
@@ -121,7 +121,6 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
             this.x12 = Input.ofNullable(x12);
             return this;
         }
-
         public AgreementContentArgs build() {
             return new AgreementContentArgs(aS2, edifact, x12);
         }

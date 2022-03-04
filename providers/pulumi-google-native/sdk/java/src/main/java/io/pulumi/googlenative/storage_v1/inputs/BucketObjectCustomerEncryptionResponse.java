@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BucketObjectCustomerEncryptionResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="encryptionAlgorithm", required=true)
-    private final String encryptionAlgorithm;
+      private final String encryptionAlgorithm;
 
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
@@ -32,7 +32,7 @@ public final class BucketObjectCustomerEncryptionResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="keySha256", required=true)
-    private final String keySha256;
+      private final String keySha256;
 
     public String getKeySha256() {
         return this.keySha256;
@@ -81,7 +81,6 @@ public final class BucketObjectCustomerEncryptionResponse extends io.pulumi.reso
             this.keySha256 = Objects.requireNonNull(keySha256);
             return this;
         }
-
         public BucketObjectCustomerEncryptionResponse build() {
             return new BucketObjectCustomerEncryptionResponse(encryptionAlgorithm, keySha256);
         }

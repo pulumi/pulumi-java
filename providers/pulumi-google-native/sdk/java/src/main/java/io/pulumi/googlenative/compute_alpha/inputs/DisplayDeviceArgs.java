@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDisplay")
-    private final @Nullable Input<Boolean> enableDisplay;
+      private final @Nullable Input<Boolean> enableDisplay;
 
     public Input<Boolean> getEnableDisplay() {
         return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
@@ -66,7 +66,6 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.enableDisplay = Input.ofNullable(enableDisplay);
             return this;
         }
-
         public DisplayDeviceArgs build() {
             return new DisplayDeviceArgs(enableDisplay);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetTagSpecificationResourceType;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,7 +62,6 @@ public final class EC2FleetTagSpecification {
             this.tags = tags;
             return this;
         }
-
         public EC2FleetTagSpecification build() {
             return new EC2FleetTagSpecification(resourceType, tags);
         }

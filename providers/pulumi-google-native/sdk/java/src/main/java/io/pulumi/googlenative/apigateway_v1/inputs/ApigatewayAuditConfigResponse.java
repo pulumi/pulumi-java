@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayAuditLogConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ApigatewayAuditConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-    private final List<ApigatewayAuditLogConfigResponse> auditLogConfigs;
+      private final List<ApigatewayAuditLogConfigResponse> auditLogConfigs;
 
     public List<ApigatewayAuditLogConfigResponse> getAuditLogConfigs() {
         return this.auditLogConfigs;
@@ -34,7 +34,7 @@ public final class ApigatewayAuditConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -83,7 +83,6 @@ public final class ApigatewayAuditConfigResponse extends io.pulumi.resources.Inv
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public ApigatewayAuditConfigResponse build() {
             return new ApigatewayAuditConfigResponse(auditLogConfigs, service);
         }

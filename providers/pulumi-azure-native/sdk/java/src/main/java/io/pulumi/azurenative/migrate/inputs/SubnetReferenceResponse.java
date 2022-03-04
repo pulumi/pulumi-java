@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-    private final String sourceArmResourceId;
+      private final String sourceArmResourceId;
 
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;
@@ -83,7 +83,6 @@ public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArg
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public SubnetReferenceResponse build() {
             return new SubnetReferenceResponse(name, sourceArmResourceId);
         }

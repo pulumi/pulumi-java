@@ -5,13 +5,14 @@ package io.pulumi.awsnative;
 
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.outputs.GetUrlSuffixResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUrlSuffix {
+    private GetUrlSuffix() {}
     public static CompletableFuture<GetUrlSuffixResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getUrlSuffix", TypeShape.of(GetUrlSuffixResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

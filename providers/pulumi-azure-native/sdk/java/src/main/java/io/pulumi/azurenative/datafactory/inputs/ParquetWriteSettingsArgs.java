@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fileNamePrefix")
-    private final @Nullable Input<Object> fileNamePrefix;
+      private final @Nullable Input<Object> fileNamePrefix;
 
     public Input<Object> getFileNamePrefix() {
         return this.fileNamePrefix == null ? Input.empty() : this.fileNamePrefix;
@@ -35,7 +35,7 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxRowsPerFile")
-    private final @Nullable Input<Object> maxRowsPerFile;
+      private final @Nullable Input<Object> maxRowsPerFile;
 
     public Input<Object> getMaxRowsPerFile() {
         return this.maxRowsPerFile == null ? Input.empty() : this.maxRowsPerFile;
@@ -47,7 +47,7 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -121,7 +121,6 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ParquetWriteSettingsArgs build() {
             return new ParquetWriteSettingsArgs(fileNamePrefix, maxRowsPerFile, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.enums.InstanceBackendType;
 import io.pulumi.googlenative.sqladmin_v1.enums.InstanceDatabaseVersion;
 import io.pulumi.googlenative.sqladmin_v1.enums.InstanceInstanceType;
@@ -36,7 +36,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendType")
-    private final @Nullable Input<InstanceBackendType> backendType;
+      private final @Nullable Input<InstanceBackendType> backendType;
 
     public Input<InstanceBackendType> getBackendType() {
         return this.backendType == null ? Input.empty() : this.backendType;
@@ -47,7 +47,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionName")
-    private final @Nullable Input<String> connectionName;
+      private final @Nullable Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName == null ? Input.empty() : this.connectionName;
@@ -58,7 +58,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currentDiskSize")
-    private final @Nullable Input<String> currentDiskSize;
+      private final @Nullable Input<String> currentDiskSize;
 
     public Input<String> getCurrentDiskSize() {
         return this.currentDiskSize == null ? Input.empty() : this.currentDiskSize;
@@ -69,7 +69,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseVersion")
-    private final @Nullable Input<InstanceDatabaseVersion> databaseVersion;
+      private final @Nullable Input<InstanceDatabaseVersion> databaseVersion;
 
     public Input<InstanceDatabaseVersion> getDatabaseVersion() {
         return this.databaseVersion == null ? Input.empty() : this.databaseVersion;
@@ -80,7 +80,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionConfiguration")
-    private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+      private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
     public Input<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration == null ? Input.empty() : this.diskEncryptionConfiguration;
@@ -91,7 +91,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionStatus")
-    private final @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus;
+      private final @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
     public Input<DiskEncryptionStatusArgs> getDiskEncryptionStatus() {
         return this.diskEncryptionStatus == null ? Input.empty() : this.diskEncryptionStatus;
@@ -102,7 +102,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failoverReplica")
-    private final @Nullable Input<InstanceFailoverReplicaArgs> failoverReplica;
+      private final @Nullable Input<InstanceFailoverReplicaArgs> failoverReplica;
 
     public Input<InstanceFailoverReplicaArgs> getFailoverReplica() {
         return this.failoverReplica == null ? Input.empty() : this.failoverReplica;
@@ -113,7 +113,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gceZone")
-    private final @Nullable Input<String> gceZone;
+      private final @Nullable Input<String> gceZone;
 
     public Input<String> getGceZone() {
         return this.gceZone == null ? Input.empty() : this.gceZone;
@@ -124,7 +124,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<InstanceInstanceType> instanceType;
+      private final @Nullable Input<InstanceInstanceType> instanceType;
 
     public Input<InstanceInstanceType> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -135,7 +135,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddresses")
-    private final @Nullable Input<List<IpMappingArgs>> ipAddresses;
+      private final @Nullable Input<List<IpMappingArgs>> ipAddresses;
 
     public Input<List<IpMappingArgs>> getIpAddresses() {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
@@ -146,7 +146,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -157,7 +157,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterInstanceName")
-    private final @Nullable Input<String> masterInstanceName;
+      private final @Nullable Input<String> masterInstanceName;
 
     public Input<String> getMasterInstanceName() {
         return this.masterInstanceName == null ? Input.empty() : this.masterInstanceName;
@@ -168,7 +168,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDiskSize")
-    private final @Nullable Input<String> maxDiskSize;
+      private final @Nullable Input<String> maxDiskSize;
 
     public Input<String> getMaxDiskSize() {
         return this.maxDiskSize == null ? Input.empty() : this.maxDiskSize;
@@ -179,7 +179,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -190,7 +190,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onPremisesConfiguration")
-    private final @Nullable Input<OnPremisesConfigurationArgs> onPremisesConfiguration;
+      private final @Nullable Input<OnPremisesConfigurationArgs> onPremisesConfiguration;
 
     public Input<OnPremisesConfigurationArgs> getOnPremisesConfiguration() {
         return this.onPremisesConfiguration == null ? Input.empty() : this.onPremisesConfiguration;
@@ -201,7 +201,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outOfDiskReport")
-    private final @Nullable Input<SqlOutOfDiskReportArgs> outOfDiskReport;
+      private final @Nullable Input<SqlOutOfDiskReportArgs> outOfDiskReport;
 
     public Input<SqlOutOfDiskReportArgs> getOutOfDiskReport() {
         return this.outOfDiskReport == null ? Input.empty() : this.outOfDiskReport;
@@ -212,7 +212,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -223,7 +223,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -234,7 +234,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaConfiguration")
-    private final @Nullable Input<ReplicaConfigurationArgs> replicaConfiguration;
+      private final @Nullable Input<ReplicaConfigurationArgs> replicaConfiguration;
 
     public Input<ReplicaConfigurationArgs> getReplicaConfiguration() {
         return this.replicaConfiguration == null ? Input.empty() : this.replicaConfiguration;
@@ -245,7 +245,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaNames")
-    private final @Nullable Input<List<String>> replicaNames;
+      private final @Nullable Input<List<String>> replicaNames;
 
     public Input<List<String>> getReplicaNames() {
         return this.replicaNames == null ? Input.empty() : this.replicaNames;
@@ -256,7 +256,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootPassword")
-    private final @Nullable Input<String> rootPassword;
+      private final @Nullable Input<String> rootPassword;
 
     public Input<String> getRootPassword() {
         return this.rootPassword == null ? Input.empty() : this.rootPassword;
@@ -267,7 +267,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="satisfiesPzs")
-    private final @Nullable Input<Boolean> satisfiesPzs;
+      private final @Nullable Input<Boolean> satisfiesPzs;
 
     public Input<Boolean> getSatisfiesPzs() {
         return this.satisfiesPzs == null ? Input.empty() : this.satisfiesPzs;
@@ -278,7 +278,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduledMaintenance")
-    private final @Nullable Input<SqlScheduledMaintenanceArgs> scheduledMaintenance;
+      private final @Nullable Input<SqlScheduledMaintenanceArgs> scheduledMaintenance;
 
     public Input<SqlScheduledMaintenanceArgs> getScheduledMaintenance() {
         return this.scheduledMaintenance == null ? Input.empty() : this.scheduledMaintenance;
@@ -289,7 +289,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryGceZone")
-    private final @Nullable Input<String> secondaryGceZone;
+      private final @Nullable Input<String> secondaryGceZone;
 
     public Input<String> getSecondaryGceZone() {
         return this.secondaryGceZone == null ? Input.empty() : this.secondaryGceZone;
@@ -300,7 +300,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -311,7 +311,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverCaCert")
-    private final @Nullable Input<SslCertArgs> serverCaCert;
+      private final @Nullable Input<SslCertArgs> serverCaCert;
 
     public Input<SslCertArgs> getServerCaCert() {
         return this.serverCaCert == null ? Input.empty() : this.serverCaCert;
@@ -322,7 +322,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmailAddress")
-    private final @Nullable Input<String> serviceAccountEmailAddress;
+      private final @Nullable Input<String> serviceAccountEmailAddress;
 
     public Input<String> getServiceAccountEmailAddress() {
         return this.serviceAccountEmailAddress == null ? Input.empty() : this.serviceAccountEmailAddress;
@@ -333,7 +333,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<SettingsArgs> settings;
+      private final @Nullable Input<SettingsArgs> settings;
 
     public Input<SettingsArgs> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -344,7 +344,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<InstanceState> state;
+      private final @Nullable Input<InstanceState> state;
 
     public Input<InstanceState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -355,7 +355,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suspensionReason")
-    private final @Nullable Input<List<InstanceSuspensionReasonItem>> suspensionReason;
+      private final @Nullable Input<List<InstanceSuspensionReasonItem>> suspensionReason;
 
     public Input<List<InstanceSuspensionReasonItem>> getSuspensionReason() {
         return this.suspensionReason == null ? Input.empty() : this.suspensionReason;
@@ -834,7 +834,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.suspensionReason = Input.ofNullable(suspensionReason);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(backendType, connectionName, currentDiskSize, databaseVersion, diskEncryptionConfiguration, diskEncryptionStatus, failoverReplica, gceZone, instanceType, ipAddresses, kind, masterInstanceName, maxDiskSize, name, onPremisesConfiguration, outOfDiskReport, project, region, replicaConfiguration, replicaNames, rootPassword, satisfiesPzs, scheduledMaintenance, secondaryGceZone, selfLink, serverCaCert, serviceAccountEmailAddress, settings, state, suspensionReason);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,14 +55,14 @@ public final class A2AProtectionContainerMappingDetailsResponse {
     /**
      * A value indicating whether the auto update is enabled.
      * 
-     */
+    */
     public Optional<String> getAgentAutoUpdateStatus() {
         return Optional.ofNullable(this.agentAutoUpdateStatus);
     }
     /**
      * The automation account arm id.
      * 
-     */
+    */
     public Optional<String> getAutomationAccountArmId() {
         return Optional.ofNullable(this.automationAccountArmId);
     }
@@ -70,21 +70,21 @@ public final class A2AProtectionContainerMappingDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'A2A'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The job schedule arm name.
      * 
-     */
+    */
     public Optional<String> getJobScheduleName() {
         return Optional.ofNullable(this.jobScheduleName);
     }
     /**
      * The schedule arm name.
      * 
-     */
+    */
     public Optional<String> getScheduleName() {
         return Optional.ofNullable(this.scheduleName);
     }
@@ -141,7 +141,6 @@ public final class A2AProtectionContainerMappingDetailsResponse {
             this.scheduleName = scheduleName;
             return this;
         }
-
         public A2AProtectionContainerMappingDetailsResponse build() {
             return new A2AProtectionContainerMappingDetailsResponse(agentAutoUpdateStatus, automationAccountArmId, instanceType, jobScheduleName, scheduleName);
         }

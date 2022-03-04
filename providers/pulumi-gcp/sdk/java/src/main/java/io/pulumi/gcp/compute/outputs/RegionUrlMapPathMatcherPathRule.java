@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRuleRouteAction;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRuleUrlRedirect;
 import java.lang.String;
@@ -65,7 +65,7 @@ public final class RegionUrlMapPathMatcherPathRule {
      * does not include any text after the first ? or #, and those chars are not
      * allowed here.
      * 
-     */
+    */
     public List<String> getPaths() {
         return this.paths;
     }
@@ -78,14 +78,14 @@ public final class RegionUrlMapPathMatcherPathRule {
      * or urlRedirect must be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteAction> getRouteAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
      * A reference to expected RegionBackendService resource the given URL should be mapped to.
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
@@ -95,7 +95,7 @@ public final class RegionUrlMapPathMatcherPathRule {
      * be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherPathRuleUrlRedirect> getUrlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
@@ -145,7 +145,6 @@ public final class RegionUrlMapPathMatcherPathRule {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRule build() {
             return new RegionUrlMapPathMatcherPathRule(paths, routeAction, service, urlRedirect);
         }

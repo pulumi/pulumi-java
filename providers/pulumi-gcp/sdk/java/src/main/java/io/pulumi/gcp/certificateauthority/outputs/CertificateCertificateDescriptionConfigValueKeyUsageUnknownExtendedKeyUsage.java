@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +46,6 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
             this.obectIds = obectIds;
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage(obectIds);
         }

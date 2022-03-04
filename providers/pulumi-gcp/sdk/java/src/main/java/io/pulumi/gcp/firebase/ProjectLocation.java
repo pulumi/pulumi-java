@@ -5,8 +5,8 @@ package io.pulumi.gcp.firebase;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firebase.ProjectLocationArgs;
 import io.pulumi.gcp.firebase.inputs.ProjectLocationState;
@@ -81,6 +81,37 @@ public class ProjectLocation extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ProjectLocationArgs.Builder a);
+    }
+    private static io.pulumi.gcp.firebase.ProjectLocationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.firebase.ProjectLocationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ProjectLocation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ProjectLocation(String name) {
+        this(name, ProjectLocationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ProjectLocation(String name, ProjectLocationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

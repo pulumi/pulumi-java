@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.chaos.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class CapabilityPropertiesResponse {
     /**
      * Localized string of the description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * URL to retrieve JSON schema of the Capability parameters.
      * 
-     */
+    */
     public String getParametersSchema() {
         return this.parametersSchema;
     }
     /**
      * String of the Publisher that this Capability extends.
      * 
-     */
+    */
     public String getPublisher() {
         return this.publisher;
     }
     /**
      * String of the Target Type that this Capability extends.
      * 
-     */
+    */
     public String getTargetType() {
         return this.targetType;
     }
     /**
      * String of the URN for this Capability Type.
      * 
-     */
+    */
     public String getUrn() {
         return this.urn;
     }
@@ -137,7 +137,6 @@ public final class CapabilityPropertiesResponse {
             this.urn = Objects.requireNonNull(urn);
             return this;
         }
-
         public CapabilityPropertiesResponse build() {
             return new CapabilityPropertiesResponse(description, parametersSchema, publisher, targetType, urn);
         }

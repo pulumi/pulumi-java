@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorWorkspaceSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class ConnectionMonitorOutputResponse {
     /**
      * Connection monitor output destination type. Currently, only "Workspace" is supported.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Describes the settings for producing output into a log analytics workspace.
      * 
-     */
+    */
     public Optional<ConnectionMonitorWorkspaceSettingsResponse> getWorkspaceSettings() {
         return Optional.ofNullable(this.workspaceSettings);
     }
@@ -77,7 +77,6 @@ public final class ConnectionMonitorOutputResponse {
             this.workspaceSettings = workspaceSettings;
             return this;
         }
-
         public ConnectionMonitorOutputResponse build() {
             return new ConnectionMonitorOutputResponse(type, workspaceSettings);
         }

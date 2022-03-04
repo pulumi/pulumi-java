@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkmanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestDestinationGetArgs;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestSourceGetArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<ConnectivityTestDestinationGetArgs> destination;
+      private final @Nullable Input<ConnectivityTestDestinationGetArgs> destination;
 
     public Input<ConnectivityTestDestinationGetArgs> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -60,7 +60,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -71,7 +71,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -83,7 +83,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -94,7 +94,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -107,7 +107,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="relatedProjects")
-    private final @Nullable Input<List<String>> relatedProjects;
+      private final @Nullable Input<List<String>> relatedProjects;
 
     public Input<List<String>> getRelatedProjects() {
         return this.relatedProjects == null ? Input.empty() : this.relatedProjects;
@@ -136,7 +136,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<ConnectivityTestSourceGetArgs> source;
+      private final @Nullable Input<ConnectivityTestSourceGetArgs> source;
 
     public Input<ConnectivityTestSourceGetArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -285,7 +285,6 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public ConnectivityTestState build() {
             return new ConnectivityTestState(description, destination, labels, name, project, protocol, relatedProjects, source);
         }

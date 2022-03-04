@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetVMArgs;
 import io.pulumi.azurenative.compute.outputs.GetVirtualMachineScaleSetVMResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSetVM {
-/**
- * Describes a virtual machine scale set virtual machine.
+    private GetVirtualMachineScaleSetVM() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineScaleSetVMArgs.Builder a);
+    }
+    private static GetVirtualMachineScaleSetVMArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineScaleSetVMArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a virtual machine scale set virtual machine.
  * API Version: 2021-03-01.
  * 
- *
- * Describes a virtual machine scale set virtual machine.
+     *
+     * Describes a virtual machine scale set virtual machine.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineScaleSetVMResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a virtual machine scale set virtual machine.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Describes a virtual machine scale set virtual machine.
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineScaleSetVMResult> invokeAsync(GetVirtualMachineScaleSetVMArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetVM", TypeShape.of(GetVirtualMachineScaleSetVMResult.class), args == null ? GetVirtualMachineScaleSetVMArgs.Empty : args, Utilities.withVersion(options));
     }

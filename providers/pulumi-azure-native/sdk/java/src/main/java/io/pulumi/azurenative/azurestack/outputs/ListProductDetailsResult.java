@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurestack.outputs;
 
 import io.pulumi.azurenative.azurestack.outputs.DataDiskImageResponse;
 import io.pulumi.azurenative.azurestack.outputs.OsDiskImageResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -98,77 +98,77 @@ public final class ListProductDetailsResult {
     /**
      * Specifies kind of compute role included in the package.
      * 
-     */
+    */
     public String getComputeRole() {
         return this.computeRole;
     }
     /**
      * List of attached data disks.
      * 
-     */
+    */
     public List<DataDiskImageResponse> getDataDiskImages() {
         return this.dataDiskImages;
     }
     /**
      * The URI to the .azpkg file that provides information required for showing product in the gallery.
      * 
-     */
+    */
     public String getGalleryPackageBlobSasUri() {
         return this.galleryPackageBlobSasUri;
     }
     /**
      * Specifies if product is a Virtual Machine Extension.
      * 
-     */
+    */
     public Boolean getIsSystemExtension() {
         return this.isSystemExtension;
     }
     /**
      * OS disk image used by product.
      * 
-     */
+    */
     public OsDiskImageResponse getOsDiskImage() {
         return this.osDiskImage;
     }
     /**
      * Specifies the kind of the product (virtualMachine or virtualMachineExtension).
      * 
-     */
+    */
     public String getProductKind() {
         return this.productKind;
     }
     /**
      * Indicates if specified product supports multiple extensions.
      * 
-     */
+    */
     public Boolean getSupportMultipleExtensions() {
         return this.supportMultipleExtensions;
     }
     /**
      * The URI.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * Specifies product version.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
     /**
      * Specifies operating system used by the product.
      * 
-     */
+    */
     public String getVmOsType() {
         return this.vmOsType;
     }
     /**
      * Indicates if virtual machine Scale Set is enabled in the specified product.
      * 
-     */
+    */
     public Boolean getVmScaleSetEnabled() {
         return this.vmScaleSetEnabled;
     }
@@ -267,7 +267,6 @@ public final class ListProductDetailsResult {
             this.vmScaleSetEnabled = Objects.requireNonNull(vmScaleSetEnabled);
             return this;
         }
-
         public ListProductDetailsResult build() {
             return new ListProductDetailsResult(computeRole, dataDiskImages, galleryPackageBlobSasUri, isSystemExtension, osDiskImage, productKind, supportMultipleExtensions, uri, version, vmOsType, vmScaleSetEnabled);
         }

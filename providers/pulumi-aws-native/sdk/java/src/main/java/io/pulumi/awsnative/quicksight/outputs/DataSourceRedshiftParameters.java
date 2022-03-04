@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class DataSourceRedshiftParameters {
      * <p>Cluster ID. This field can be blank if the <code>Host</code> and <code>Port</code> are
      *             provided.</p>
      * 
-     */
+    */
     public Optional<String> getClusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
      * <p>Database.</p>
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * <p>Host. This field can be blank if <code>ClusterId</code> is provided.</p>
      * 
-     */
+    */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
     /**
      * <p>Port. This field can be blank if the <code>ClusterId</code> is provided.</p>
      * 
-     */
+    */
     public Optional<Double> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -121,7 +121,6 @@ public final class DataSourceRedshiftParameters {
             this.port = port;
             return this;
         }
-
         public DataSourceRedshiftParameters build() {
             return new DataSourceRedshiftParameters(clusterId, database, host, port);
         }

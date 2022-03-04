@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ssm;
 import io.pulumi.awsnative.ssm.inputs.ResourceDataSyncS3DestinationArgs;
 import io.pulumi.awsnative.ssm.inputs.ResourceDataSyncSyncSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,56 +17,56 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
     public static final ResourceDataSyncArgs Empty = new ResourceDataSyncArgs();
 
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
     }
 
     @InputImport(name="bucketPrefix")
-    private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
     }
 
     @InputImport(name="bucketRegion")
-    private final @Nullable Input<String> bucketRegion;
+      private final @Nullable Input<String> bucketRegion;
 
     public Input<String> getBucketRegion() {
         return this.bucketRegion == null ? Input.empty() : this.bucketRegion;
     }
 
     @InputImport(name="kMSKeyArn")
-    private final @Nullable Input<String> kMSKeyArn;
+      private final @Nullable Input<String> kMSKeyArn;
 
     public Input<String> getKMSKeyArn() {
         return this.kMSKeyArn == null ? Input.empty() : this.kMSKeyArn;
     }
 
     @InputImport(name="s3Destination")
-    private final @Nullable Input<ResourceDataSyncS3DestinationArgs> s3Destination;
+      private final @Nullable Input<ResourceDataSyncS3DestinationArgs> s3Destination;
 
     public Input<ResourceDataSyncS3DestinationArgs> getS3Destination() {
         return this.s3Destination == null ? Input.empty() : this.s3Destination;
     }
 
     @InputImport(name="syncFormat")
-    private final @Nullable Input<String> syncFormat;
+      private final @Nullable Input<String> syncFormat;
 
     public Input<String> getSyncFormat() {
         return this.syncFormat == null ? Input.empty() : this.syncFormat;
     }
 
     @InputImport(name="syncSource")
-    private final @Nullable Input<ResourceDataSyncSyncSourceArgs> syncSource;
+      private final @Nullable Input<ResourceDataSyncSyncSourceArgs> syncSource;
 
     public Input<ResourceDataSyncSyncSourceArgs> getSyncSource() {
         return this.syncSource == null ? Input.empty() : this.syncSource;
     }
 
     @InputImport(name="syncType")
-    private final @Nullable Input<String> syncType;
+      private final @Nullable Input<String> syncType;
 
     public Input<String> getSyncType() {
         return this.syncType == null ? Input.empty() : this.syncType;
@@ -215,7 +215,6 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             this.syncType = Input.ofNullable(syncType);
             return this;
         }
-
         public ResourceDataSyncArgs build() {
             return new ResourceDataSyncArgs(bucketName, bucketPrefix, bucketRegion, kMSKeyArn, s3Destination, syncFormat, syncSource, syncType);
         }

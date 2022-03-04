@@ -6,17 +6,33 @@ package io.pulumi.awsnative.timestream;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.timestream.inputs.GetScheduledQueryArgs;
 import io.pulumi.awsnative.timestream.outputs.GetScheduledQueryResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScheduledQuery {
-/**
- * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
+    private GetScheduledQuery() {}
+    public interface BuilderApplicator {
+        public void apply(GetScheduledQueryArgs.Builder a);
+    }
+    private static GetScheduledQueryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScheduledQueryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
  * 
- */
+     */
+    public static CompletableFuture<GetScheduledQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
+     * 
+     */
     public static CompletableFuture<GetScheduledQueryResult> invokeAsync(GetScheduledQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getScheduledQuery", TypeShape.of(GetScheduledQueryResult.class), args == null ? GetScheduledQueryArgs.Empty : args, Utilities.withVersion(options));
     }

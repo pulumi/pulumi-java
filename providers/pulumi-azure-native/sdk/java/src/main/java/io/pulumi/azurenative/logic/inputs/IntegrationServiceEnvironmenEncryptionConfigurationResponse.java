@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmenEncryptionKeyReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse e
      * 
      */
     @InputImport(name="encryptionKeyReference")
-    private final @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
+      private final @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
 
     public Optional<IntegrationServiceEnvironmenEncryptionKeyReferenceResponse> getEncryptionKeyReference() {
         return this.encryptionKeyReference == null ? Optional.empty() : Optional.ofNullable(this.encryptionKeyReference);
@@ -61,7 +61,6 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse e
             this.encryptionKeyReference = encryptionKeyReference;
             return this;
         }
-
         public IntegrationServiceEnvironmenEncryptionConfigurationResponse build() {
             return new IntegrationServiceEnvironmenEncryptionConfigurationResponse(encryptionKeyReference);
         }

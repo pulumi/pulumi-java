@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse {
     /**
      * The oldest backup copy available for this backup item.
      * 
-     */
+    */
     public Optional<String> getOldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
      * Indicates consistency of policy object and policy applied to this backup item.
      * 
-     */
+    */
     public Optional<String> getPolicyState() {
         return Optional.ofNullable(this.policyState);
     }
     /**
      * Number of backup copies available for this backup item.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
@@ -98,7 +98,6 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public AzureVmWorkloadProtectedItemExtendedInfoResponse build() {
             return new AzureVmWorkloadProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
      * 
      */
     @InputImport(name="methodSelectors")
-    private final @Nullable Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs>> methodSelectors;
+      private final @Nullable Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs>> methodSelectors;
 
     public Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs>> getMethodSelectors() {
         return this.methodSelectors == null ? Input.empty() : this.methodSelectors;
@@ -38,7 +38,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -97,7 +97,6 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs build() {
             return new ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs(methodSelectors, serviceName);
         }

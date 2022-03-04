@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="includeHost", required=true)
-    private final Boolean includeHost;
+      private final Boolean includeHost;
 
     public Boolean getIncludeHost() {
         return this.includeHost;
@@ -34,7 +34,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="includeHttpHeaders", required=true)
-    private final List<String> includeHttpHeaders;
+      private final List<String> includeHttpHeaders;
 
     public List<String> getIncludeHttpHeaders() {
         return this.includeHttpHeaders;
@@ -45,7 +45,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="includeNamedCookies", required=true)
-    private final List<String> includeNamedCookies;
+      private final List<String> includeNamedCookies;
 
     public List<String> getIncludeNamedCookies() {
         return this.includeNamedCookies;
@@ -56,7 +56,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="includeProtocol", required=true)
-    private final Boolean includeProtocol;
+      private final Boolean includeProtocol;
 
     public Boolean getIncludeProtocol() {
         return this.includeProtocol;
@@ -67,7 +67,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="includeQueryString", required=true)
-    private final Boolean includeQueryString;
+      private final Boolean includeQueryString;
 
     public Boolean getIncludeQueryString() {
         return this.includeQueryString;
@@ -78,7 +78,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="queryStringBlacklist", required=true)
-    private final List<String> queryStringBlacklist;
+      private final List<String> queryStringBlacklist;
 
     public List<String> getQueryStringBlacklist() {
         return this.queryStringBlacklist;
@@ -89,7 +89,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="queryStringWhitelist", required=true)
-    private final List<String> queryStringWhitelist;
+      private final List<String> queryStringWhitelist;
 
     public List<String> getQueryStringWhitelist() {
         return this.queryStringWhitelist;
@@ -188,7 +188,6 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
             this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
             return this;
         }
-
         public CacheKeyPolicyResponse build() {
             return new CacheKeyPolicyResponse(includeHost, includeHttpHeaders, includeNamedCookies, includeProtocol, includeQueryString, queryStringBlacklist, queryStringWhitelist);
         }

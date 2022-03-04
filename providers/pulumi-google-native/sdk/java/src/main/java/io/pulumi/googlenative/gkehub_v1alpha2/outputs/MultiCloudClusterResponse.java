@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class MultiCloudClusterResponse {
     /**
      * If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.
      * 
-     */
+    */
     public Boolean getClusterMissing() {
         return this.clusterMissing;
     }
     /**
      * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
      * 
-     */
+    */
     public String getResourceLink() {
         return this.resourceLink;
     }
@@ -75,7 +75,6 @@ public final class MultiCloudClusterResponse {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public MultiCloudClusterResponse build() {
             return new MultiCloudClusterResponse(clusterMissing, resourceLink);
         }

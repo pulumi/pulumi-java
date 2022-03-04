@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs.CloudSqlCredentialResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class CloudSqlPropertiesResponse {
     /**
      * Input only. Cloud SQL credential.
      * 
-     */
+    */
     public CloudSqlCredentialResponse getCredential() {
         return this.credential;
     }
     /**
      * Database name.
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * Cloud SQL instance ID in the form `project:location:instance`.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * Type of the Cloud SQL database.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class CloudSqlPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CloudSqlPropertiesResponse build() {
             return new CloudSqlPropertiesResponse(credential, database, instanceId, type);
         }

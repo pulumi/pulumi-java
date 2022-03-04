@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -126,105 +126,105 @@ public final class GetWatcherResult {
     /**
      * Gets or sets the creation time.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the etag of the resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Gets or sets the frequency at which the watcher is invoked.
      * 
-     */
+    */
     public Optional<Double> getExecutionFrequencyInSeconds() {
         return Optional.ofNullable(this.executionFrequencyInSeconds);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Details of the user who last modified the watcher.
      * 
-     */
+    */
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Gets or sets the last modified time.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
      * 
-     */
+    */
     public Optional<String> getScriptName() {
         return Optional.ofNullable(this.scriptName);
     }
     /**
      * Gets or sets the parameters of the script.
      * 
-     */
+    */
     public Map<String,String> getScriptParameters() {
         return this.scriptParameters == null ? Map.of() : this.scriptParameters;
     }
     /**
      * Gets or sets the name of the hybrid worker group the watcher will run on.
      * 
-     */
+    */
     public Optional<String> getScriptRunOn() {
         return Optional.ofNullable(this.scriptRunOn);
     }
     /**
      * Gets the current status of the watcher.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -351,7 +351,6 @@ public final class GetWatcherResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWatcherResult build() {
             return new GetWatcherResult(creationTime, description, etag, executionFrequencyInSeconds, id, lastModifiedBy, lastModifiedTime, location, name, scriptName, scriptParameters, scriptRunOn, status, tags, type);
         }

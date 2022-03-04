@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs ex
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -67,7 +67,6 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs ex
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
-
         public VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs build() {
             return new VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs(dnsServers);
         }

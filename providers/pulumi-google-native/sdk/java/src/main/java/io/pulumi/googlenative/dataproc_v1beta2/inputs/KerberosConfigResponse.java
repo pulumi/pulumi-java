@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="crossRealmTrustAdminServer", required=true)
-    private final String crossRealmTrustAdminServer;
+      private final String crossRealmTrustAdminServer;
 
     public String getCrossRealmTrustAdminServer() {
         return this.crossRealmTrustAdminServer;
@@ -34,7 +34,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="crossRealmTrustKdc", required=true)
-    private final String crossRealmTrustKdc;
+      private final String crossRealmTrustKdc;
 
     public String getCrossRealmTrustKdc() {
         return this.crossRealmTrustKdc;
@@ -45,7 +45,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="crossRealmTrustRealm", required=true)
-    private final String crossRealmTrustRealm;
+      private final String crossRealmTrustRealm;
 
     public String getCrossRealmTrustRealm() {
         return this.crossRealmTrustRealm;
@@ -56,7 +56,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="crossRealmTrustSharedPasswordUri", required=true)
-    private final String crossRealmTrustSharedPasswordUri;
+      private final String crossRealmTrustSharedPasswordUri;
 
     public String getCrossRealmTrustSharedPasswordUri() {
         return this.crossRealmTrustSharedPasswordUri;
@@ -67,7 +67,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="enableKerberos", required=true)
-    private final Boolean enableKerberos;
+      private final Boolean enableKerberos;
 
     public Boolean getEnableKerberos() {
         return this.enableKerberos;
@@ -78,7 +78,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="kdcDbKeyUri", required=true)
-    private final String kdcDbKeyUri;
+      private final String kdcDbKeyUri;
 
     public String getKdcDbKeyUri() {
         return this.kdcDbKeyUri;
@@ -89,7 +89,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keyPasswordUri", required=true)
-    private final String keyPasswordUri;
+      private final String keyPasswordUri;
 
     public String getKeyPasswordUri() {
         return this.keyPasswordUri;
@@ -100,7 +100,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keystorePasswordUri", required=true)
-    private final String keystorePasswordUri;
+      private final String keystorePasswordUri;
 
     public String getKeystorePasswordUri() {
         return this.keystorePasswordUri;
@@ -111,7 +111,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keystoreUri", required=true)
-    private final String keystoreUri;
+      private final String keystoreUri;
 
     public String getKeystoreUri() {
         return this.keystoreUri;
@@ -122,7 +122,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="kmsKeyUri", required=true)
-    private final String kmsKeyUri;
+      private final String kmsKeyUri;
 
     public String getKmsKeyUri() {
         return this.kmsKeyUri;
@@ -133,7 +133,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="realm", required=true)
-    private final String realm;
+      private final String realm;
 
     public String getRealm() {
         return this.realm;
@@ -144,7 +144,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="rootPrincipalPasswordUri", required=true)
-    private final String rootPrincipalPasswordUri;
+      private final String rootPrincipalPasswordUri;
 
     public String getRootPrincipalPasswordUri() {
         return this.rootPrincipalPasswordUri;
@@ -155,7 +155,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="tgtLifetimeHours", required=true)
-    private final Integer tgtLifetimeHours;
+      private final Integer tgtLifetimeHours;
 
     public Integer getTgtLifetimeHours() {
         return this.tgtLifetimeHours;
@@ -166,7 +166,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="truststorePasswordUri", required=true)
-    private final String truststorePasswordUri;
+      private final String truststorePasswordUri;
 
     public String getTruststorePasswordUri() {
         return this.truststorePasswordUri;
@@ -177,7 +177,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="truststoreUri", required=true)
-    private final String truststoreUri;
+      private final String truststoreUri;
 
     public String getTruststoreUri() {
         return this.truststoreUri;
@@ -356,7 +356,6 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
             this.truststoreUri = Objects.requireNonNull(truststoreUri);
             return this;
         }
-
         public KerberosConfigResponse build() {
             return new KerberosConfigResponse(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPasswordUri, enableKerberos, kdcDbKeyUri, keyPasswordUri, keystorePasswordUri, keystoreUri, kmsKeyUri, realm, rootPrincipalPasswordUri, tgtLifetimeHours, truststorePasswordUri, truststoreUri);
         }

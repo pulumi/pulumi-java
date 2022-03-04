@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.RedirectConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -102,77 +102,77 @@ public final class RoutingRuleResponse {
     /**
      * Protocol schemes to match for this rule
      * 
-     */
+    */
     public List<String> getAcceptedProtocols() {
         return this.acceptedProtocols == null ? List.of() : this.acceptedProtocols;
     }
     /**
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
-     */
+    */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Frontend endpoints associated with this rule
      * 
-     */
+    */
     public List<SubResourceResponse> getFrontendEndpoints() {
         return this.frontendEndpoints == null ? List.of() : this.frontendEndpoints;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The route patterns of the rule.
      * 
-     */
+    */
     public List<String> getPatternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
     }
     /**
      * Resource status.
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * A reference to the routing configuration.
      * 
-     */
+    */
     public Optional<Either<ForwardingConfigurationResponse,RedirectConfigurationResponse>> getRouteConfiguration() {
         return Optional.ofNullable(this.routeConfiguration);
     }
     /**
      * A reference to a specific Rules Engine Configuration to apply to this route.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getRulesEngine() {
         return Optional.ofNullable(this.rulesEngine);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Defines the Web Application Firewall policy for each routing rule (if applicable)
      * 
-     */
+    */
     public Optional<RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {
         return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
@@ -271,7 +271,6 @@ public final class RoutingRuleResponse {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-
         public RoutingRuleResponse build() {
             return new RoutingRuleResponse(acceptedProtocols, enabledState, frontendEndpoints, id, name, patternsToMatch, resourceState, routeConfiguration, rulesEngine, type, webApplicationFirewallPolicyLink);
         }

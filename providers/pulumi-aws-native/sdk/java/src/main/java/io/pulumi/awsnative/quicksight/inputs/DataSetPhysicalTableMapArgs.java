@@ -30,7 +30,6 @@ public final class DataSetPhysicalTableMapArgs extends io.pulumi.resources.Resou
         public Builder(DataSetPhysicalTableMapArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DataSetPhysicalTableMapArgs build() {
             return new DataSetPhysicalTableMapArgs();
         }

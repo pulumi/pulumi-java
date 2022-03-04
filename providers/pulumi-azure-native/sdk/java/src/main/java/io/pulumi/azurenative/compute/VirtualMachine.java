@@ -23,8 +23,8 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineInstanceViewResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -497,6 +497,37 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
         return this.zones;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VirtualMachineArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.compute.VirtualMachineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.compute.VirtualMachineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VirtualMachine(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VirtualMachine(String name) {
+        this(name, VirtualMachineArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VirtualMachine(String name, VirtualMachineArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

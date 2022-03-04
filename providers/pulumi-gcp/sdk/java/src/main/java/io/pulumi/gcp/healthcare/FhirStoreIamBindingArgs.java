@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
     public static final FhirStoreIamBindingArgs Empty = new FhirStoreIamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<FhirStoreIamBindingConditionArgs> condition;
+      private final @Nullable Input<FhirStoreIamBindingConditionArgs> condition;
 
     public Input<FhirStoreIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -31,14 +31,14 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fhirStoreId", required=true)
-    private final Input<String> fhirStoreId;
+      private final Input<String> fhirStoreId;
 
     public Input<String> getFhirStoreId() {
         return this.fhirStoreId;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -51,7 +51,7 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -140,7 +140,6 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public FhirStoreIamBindingArgs build() {
             return new FhirStoreIamBindingArgs(condition, fhirStoreId, members, role);
         }

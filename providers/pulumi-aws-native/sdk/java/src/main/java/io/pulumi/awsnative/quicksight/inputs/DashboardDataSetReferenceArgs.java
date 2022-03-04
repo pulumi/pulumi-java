@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DashboardDataSetReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dataSetArn", required=true)
-    private final Input<String> dataSetArn;
+      private final Input<String> dataSetArn;
 
     public Input<String> getDataSetArn() {
         return this.dataSetArn;
@@ -33,7 +33,7 @@ public final class DashboardDataSetReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dataSetPlaceholder", required=true)
-    private final Input<String> dataSetPlaceholder;
+      private final Input<String> dataSetPlaceholder;
 
     public Input<String> getDataSetPlaceholder() {
         return this.dataSetPlaceholder;
@@ -92,7 +92,6 @@ public final class DashboardDataSetReferenceArgs extends io.pulumi.resources.Res
             this.dataSetPlaceholder = Input.of(Objects.requireNonNull(dataSetPlaceholder));
             return this;
         }
-
         public DashboardDataSetReferenceArgs build() {
             return new DashboardDataSetReferenceArgs(dataSetArn, dataSetPlaceholder);
         }

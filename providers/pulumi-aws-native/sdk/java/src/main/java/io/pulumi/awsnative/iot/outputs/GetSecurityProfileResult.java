@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.outputs;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileBehavior;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricToRetain;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -73,49 +73,49 @@ public final class GetSecurityProfileResult {
     /**
      * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
      * 
-     */
+    */
     public List<SecurityProfileMetricToRetain> getAdditionalMetricsToRetainV2() {
         return this.additionalMetricsToRetainV2 == null ? List.of() : this.additionalMetricsToRetainV2;
     }
     /**
      * Specifies the destinations to which alerts are sent.
      * 
-     */
+    */
     public Optional<Object> getAlertTargets() {
         return Optional.ofNullable(this.alertTargets);
     }
     /**
      * Specifies the behaviors that, when violated by a device (thing), cause an alert.
      * 
-     */
+    */
     public List<SecurityProfileBehavior> getBehaviors() {
         return this.behaviors == null ? List.of() : this.behaviors;
     }
     /**
      * The ARN (Amazon resource name) of the created security profile.
      * 
-     */
+    */
     public Optional<String> getSecurityProfileArn() {
         return Optional.ofNullable(this.securityProfileArn);
     }
     /**
      * A description of the security profile.
      * 
-     */
+    */
     public Optional<String> getSecurityProfileDescription() {
         return Optional.ofNullable(this.securityProfileDescription);
     }
     /**
      * Metadata that can be used to manage the security profile.
      * 
-     */
+    */
     public List<SecurityProfileTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A set of target ARNs that the security profile is attached to.
      * 
-     */
+    */
     public List<String> getTargetArns() {
         return this.targetArns == null ? List.of() : this.targetArns;
     }
@@ -186,7 +186,6 @@ public final class GetSecurityProfileResult {
             this.targetArns = targetArns;
             return this;
         }
-
         public GetSecurityProfileResult build() {
             return new GetSecurityProfileResult(additionalMetricsToRetainV2, alertTargets, behaviors, securityProfileArn, securityProfileDescription, tags, targetArns);
         }

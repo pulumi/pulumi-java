@@ -16,7 +16,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.PowerBIOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusQueueOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusTopicOutputDataSourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datasource")
-    private final @Nullable Object datasource;
+      private final @Nullable Object datasource;
 
     public Object getDatasource() {
         return this.datasource == null ? null : this.datasource;
@@ -48,7 +48,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diagnostics", required=true)
-    private final DiagnosticsResponse diagnostics;
+      private final DiagnosticsResponse diagnostics;
 
     public DiagnosticsResponse getDiagnostics() {
         return this.diagnostics;
@@ -59,7 +59,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -70,7 +70,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -81,7 +81,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -92,7 +92,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serialization")
-    private final @Nullable Object serialization;
+      private final @Nullable Object serialization;
 
     public Object getSerialization() {
         return this.serialization == null ? null : this.serialization;
@@ -103,7 +103,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -202,7 +202,6 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OutputResponse build() {
             return new OutputResponse(datasource, diagnostics, etag, id, name, serialization, type);
         }

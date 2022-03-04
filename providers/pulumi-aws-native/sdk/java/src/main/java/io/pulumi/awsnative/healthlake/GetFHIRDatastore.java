@@ -6,17 +6,33 @@ package io.pulumi.awsnative.healthlake;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.healthlake.inputs.GetFHIRDatastoreArgs;
 import io.pulumi.awsnative.healthlake.outputs.GetFHIRDatastoreResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFHIRDatastore {
-/**
- * HealthLake FHIR Datastore
+    private GetFHIRDatastore() {}
+    public interface BuilderApplicator {
+        public void apply(GetFHIRDatastoreArgs.Builder a);
+    }
+    private static GetFHIRDatastoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFHIRDatastoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * HealthLake FHIR Datastore
  * 
- */
+     */
+    public static CompletableFuture<GetFHIRDatastoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * HealthLake FHIR Datastore
+     * 
+     */
     public static CompletableFuture<GetFHIRDatastoreResult> invokeAsync(GetFHIRDatastoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:healthlake:getFHIRDatastore", TypeShape.of(GetFHIRDatastoreResult.class), args == null ? GetFHIRDatastoreArgs.Empty : args, Utilities.withVersion(options));
     }

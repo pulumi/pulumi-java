@@ -6,17 +6,33 @@ package io.pulumi.awsnative.cloudformation;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudformation.inputs.GetPublicTypeVersionArgs;
 import io.pulumi.awsnative.cloudformation.outputs.GetPublicTypeVersionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublicTypeVersion {
-/**
- * Test and Publish a resource that has been registered in the CloudFormation Registry.
+    private GetPublicTypeVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetPublicTypeVersionArgs.Builder a);
+    }
+    private static GetPublicTypeVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPublicTypeVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Test and Publish a resource that has been registered in the CloudFormation Registry.
  * 
- */
+     */
+    public static CompletableFuture<GetPublicTypeVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Test and Publish a resource that has been registered in the CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetPublicTypeVersionResult> invokeAsync(GetPublicTypeVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getPublicTypeVersion", TypeShape.of(GetPublicTypeVersionResult.class), args == null ? GetPublicTypeVersionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetWebAppPublicCertificateArgs;
 import io.pulumi.azurenative.web.outputs.GetWebAppPublicCertificateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppPublicCertificate {
-/**
- * Public certificate object
+    private GetWebAppPublicCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppPublicCertificateArgs.Builder a);
+    }
+    private static GetWebAppPublicCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppPublicCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Public certificate object
  * API Version: 2020-12-01.
  * 
- *
- * Public certificate object
+     *
+     * Public certificate object
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppPublicCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Public certificate object
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Public certificate object
+     * 
+     */
     public static CompletableFuture<GetWebAppPublicCertificateResult> invokeAsync(GetWebAppPublicCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPublicCertificate", TypeShape.of(GetWebAppPublicCertificateResult.class), args == null ? GetWebAppPublicCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

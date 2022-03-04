@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.AppResourceSpecInstanceType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class AppResourceSpec {
     /**
      * The instance type that the image version runs on.
      * 
-     */
+    */
     public Optional<AppResourceSpecInstanceType> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * The ARN of the SageMaker image that the image version belongs to.
      * 
-     */
+    */
     public Optional<String> getSageMakerImageArn() {
         return Optional.ofNullable(this.sageMakerImageArn);
     }
     /**
      * The ARN of the image version created on the instance.
      * 
-     */
+    */
     public Optional<String> getSageMakerImageVersionArn() {
         return Optional.ofNullable(this.sageMakerImageVersionArn);
     }
@@ -98,7 +98,6 @@ public final class AppResourceSpec {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
-
         public AppResourceSpec build() {
             return new AppResourceSpec(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
         }

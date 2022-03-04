@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationTargetContainerRepository;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     /**
      * Tags that are attached to the container distribution configuration.
      * 
-     */
+    */
     public List<String> getContainerTags() {
         return this.containerTags == null ? List.of() : this.containerTags;
     }
     /**
      * The description of the container distribution configuration.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The destination repository for the container distribution configuration.
      * 
-     */
+    */
     public Optional<DistributionConfigurationTargetContainerRepository> getTargetRepository() {
         return Optional.ofNullable(this.targetRepository);
     }
@@ -99,7 +99,6 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             this.targetRepository = targetRepository;
             return this;
         }
-
         public DistributionConfigurationDistributionContainerDistributionConfigurationProperties build() {
             return new DistributionConfigurationDistributionContainerDistributionConfigurationProperties(containerTags, description, targetRepository);
         }

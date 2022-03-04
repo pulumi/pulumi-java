@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet;
 import java.lang.String;
 import java.util.Objects;
@@ -40,7 +40,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * The regex-filtered set of files to scan.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet> getRegexFileSet() {
         return Optional.ofNullable(this.regexFileSet);
     }
@@ -51,7 +51,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is
      * equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
@@ -87,7 +87,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.url = url;
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet(regexFileSet, url);
         }

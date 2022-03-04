@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logoutEndpoint")
-    private final @Nullable Input<String> logoutEndpoint;
+      private final @Nullable Input<String> logoutEndpoint;
 
     public Input<String> getLogoutEndpoint() {
         return this.logoutEndpoint == null ? Input.empty() : this.logoutEndpoint;
@@ -66,7 +66,6 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
             this.logoutEndpoint = Input.ofNullable(logoutEndpoint);
             return this;
         }
-
         public LoginRoutesArgs build() {
             return new LoginRoutesArgs(logoutEndpoint);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logz;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logz.inputs.ListMonitorUserRolesArgs;
 import io.pulumi.azurenative.logz.outputs.ListMonitorUserRolesResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMonitorUserRoles {
-/**
- * Response for list of user's role for Logz.io account.
+    private ListMonitorUserRoles() {}
+    public interface BuilderApplicator {
+        public void apply(ListMonitorUserRolesArgs.Builder a);
+    }
+    private static ListMonitorUserRolesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListMonitorUserRolesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response for list of user's role for Logz.io account.
  * API Version: 2020-10-01.
  * 
- *
- * Response for list of user's role for Logz.io account.
+     *
+     * Response for list of user's role for Logz.io account.
  * 
- */
+     */
+    public static CompletableFuture<ListMonitorUserRolesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response for list of user's role for Logz.io account.
+     * API Version: 2020-10-01.
+     * 
+     *
+         * Response for list of user's role for Logz.io account.
+     * 
+     */
     public static CompletableFuture<ListMonitorUserRolesResult> invokeAsync(ListMonitorUserRolesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listMonitorUserRoles", TypeShape.of(ListMonitorUserRolesResult.class), args == null ? ListMonitorUserRolesArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class AssociatedWorkspaceResponse {
     /**
      * The time of workspace association.
      * 
-     */
+    */
     public String getAssociateDate() {
         return this.associateDate;
     }
     /**
      * The ResourceId id the assigned workspace.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * The id of the assigned workspace.
      * 
-     */
+    */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * The name id the assigned workspace.
      * 
-     */
+    */
     public String getWorkspaceName() {
         return this.workspaceName;
     }
@@ -116,7 +116,6 @@ public final class AssociatedWorkspaceResponse {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public AssociatedWorkspaceResponse build() {
             return new AssociatedWorkspaceResponse(associateDate, resourceId, workspaceId, workspaceName);
         }

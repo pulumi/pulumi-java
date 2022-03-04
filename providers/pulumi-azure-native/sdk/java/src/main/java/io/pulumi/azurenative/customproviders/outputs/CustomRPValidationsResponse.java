@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customproviders.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class CustomRPValidationsResponse {
     /**
      * A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
      * 
-     */
+    */
     public String getSpecification() {
         return this.specification;
     }
     /**
      * The type of validation to run against a matching request.
      * 
-     */
+    */
     public Optional<String> getValidationType() {
         return Optional.ofNullable(this.validationType);
     }
@@ -76,7 +76,6 @@ public final class CustomRPValidationsResponse {
             this.validationType = validationType;
             return this;
         }
-
         public CustomRPValidationsResponse build() {
             return new CustomRPValidationsResponse(specification, validationType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepCopyFileResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepExecFileResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepExtractArchiveResponse;
@@ -27,7 +27,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="archiveExtraction", required=true)
-    private final SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
+      private final SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
 
     public SoftwareRecipeStepExtractArchiveResponse getArchiveExtraction() {
         return this.archiveExtraction;
@@ -38,7 +38,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dpkgInstallation", required=true)
-    private final SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
+      private final SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
 
     public SoftwareRecipeStepInstallDpkgResponse getDpkgInstallation() {
         return this.dpkgInstallation;
@@ -49,7 +49,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fileCopy", required=true)
-    private final SoftwareRecipeStepCopyFileResponse fileCopy;
+      private final SoftwareRecipeStepCopyFileResponse fileCopy;
 
     public SoftwareRecipeStepCopyFileResponse getFileCopy() {
         return this.fileCopy;
@@ -60,7 +60,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fileExec", required=true)
-    private final SoftwareRecipeStepExecFileResponse fileExec;
+      private final SoftwareRecipeStepExecFileResponse fileExec;
 
     public SoftwareRecipeStepExecFileResponse getFileExec() {
         return this.fileExec;
@@ -71,7 +71,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="msiInstallation", required=true)
-    private final SoftwareRecipeStepInstallMsiResponse msiInstallation;
+      private final SoftwareRecipeStepInstallMsiResponse msiInstallation;
 
     public SoftwareRecipeStepInstallMsiResponse getMsiInstallation() {
         return this.msiInstallation;
@@ -82,7 +82,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="rpmInstallation", required=true)
-    private final SoftwareRecipeStepInstallRpmResponse rpmInstallation;
+      private final SoftwareRecipeStepInstallRpmResponse rpmInstallation;
 
     public SoftwareRecipeStepInstallRpmResponse getRpmInstallation() {
         return this.rpmInstallation;
@@ -93,7 +93,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="scriptRun", required=true)
-    private final SoftwareRecipeStepRunScriptResponse scriptRun;
+      private final SoftwareRecipeStepRunScriptResponse scriptRun;
 
     public SoftwareRecipeStepRunScriptResponse getScriptRun() {
         return this.scriptRun;
@@ -192,7 +192,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
             this.scriptRun = Objects.requireNonNull(scriptRun);
             return this;
         }
-
         public SoftwareRecipeStepResponse build() {
             return new SoftwareRecipeStepResponse(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }

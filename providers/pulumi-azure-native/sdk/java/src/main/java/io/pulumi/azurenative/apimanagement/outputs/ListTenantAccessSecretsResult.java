@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class ListTenantAccessSecretsResult {
     /**
      * Determines whether direct access is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Access Information type ('access' or 'gitAccess')
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
-     */
+    */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Principal (User) Identifier.
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
-     */
+    */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -140,7 +140,6 @@ public final class ListTenantAccessSecretsResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListTenantAccessSecretsResult build() {
             return new ListTenantAccessSecretsResult(enabled, id, primaryKey, principalId, secondaryKey);
         }

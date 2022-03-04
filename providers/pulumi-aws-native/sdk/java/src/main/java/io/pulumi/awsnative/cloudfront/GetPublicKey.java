@@ -6,17 +6,33 @@ package io.pulumi.awsnative.cloudfront;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudfront.inputs.GetPublicKeyArgs;
 import io.pulumi.awsnative.cloudfront.outputs.GetPublicKeyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublicKey {
-/**
- * Resource Type definition for AWS::CloudFront::PublicKey
+    private GetPublicKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetPublicKeyArgs.Builder a);
+    }
+    private static GetPublicKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPublicKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::PublicKey
  * 
- */
+     */
+    public static CompletableFuture<GetPublicKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::CloudFront::PublicKey
+     * 
+     */
     public static CompletableFuture<GetPublicKeyResult> invokeAsync(GetPublicKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getPublicKey", TypeShape.of(GetPublicKeyResult.class), args == null ? GetPublicKeyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceManagerTags")
-    private final @Nullable Input<Map<String,String>> resourceManagerTags;
+      private final @Nullable Input<Map<String,String>> resourceManagerTags;
 
     public Input<Map<String,String>> getResourceManagerTags() {
         return this.resourceManagerTags == null ? Input.empty() : this.resourceManagerTags;
@@ -67,7 +67,6 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceManagerTags = Input.ofNullable(resourceManagerTags);
             return this;
         }
-
         public InstanceParamsArgs build() {
             return new InstanceParamsArgs(resourceManagerTags);
         }

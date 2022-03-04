@@ -6,7 +6,7 @@ package io.pulumi.azurenative.chaos.outputs;
 import io.pulumi.azurenative.chaos.outputs.ExperimentPropertiesResponse;
 import io.pulumi.azurenative.chaos.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.chaos.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -79,56 +79,56 @@ public final class GetExperimentResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the experiment resource.
      * 
-     */
+    */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of the experiment resource.
      * 
-     */
+    */
     public ExperimentPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The system metadata of the experiment resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -206,7 +206,6 @@ public final class GetExperimentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExperimentResult build() {
             return new GetExperimentResult(id, identity, location, name, properties, systemData, tags, type);
         }

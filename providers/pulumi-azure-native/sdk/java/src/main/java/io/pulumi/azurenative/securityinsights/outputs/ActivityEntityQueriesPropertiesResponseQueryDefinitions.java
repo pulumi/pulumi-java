@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
     /**
      * The Activity query to run on a given entity
      * 
-     */
+    */
     public Optional<String> getQuery() {
         return Optional.ofNullable(this.query);
     }
@@ -54,7 +54,6 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
             this.query = query;
             return this;
         }
-
         public ActivityEntityQueriesPropertiesResponseQueryDefinitions build() {
             return new ActivityEntityQueriesPropertiesResponseQueryDefinitions(query);
         }

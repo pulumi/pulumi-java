@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class GetModelResult {
     /**
      * A description that identifies this model.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
      * 
-     */
+    */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
@@ -77,7 +77,6 @@ public final class GetModelResult {
             this.schema = schema;
             return this;
         }
-
         public GetModelResult build() {
             return new GetModelResult(description, schema);
         }

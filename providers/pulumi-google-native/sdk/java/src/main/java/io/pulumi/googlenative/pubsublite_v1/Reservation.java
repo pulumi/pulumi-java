@@ -5,8 +5,8 @@ package io.pulumi.googlenative.pubsublite_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsublite_v1.ReservationArgs;
 import java.lang.String;
@@ -47,6 +47,37 @@ public class Reservation extends io.pulumi.resources.CustomResource {
         return this.throughputCapacity;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ReservationArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.pubsublite_v1.ReservationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.pubsublite_v1.ReservationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Reservation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Reservation(String name) {
+        this(name, ReservationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Reservation(String name, ReservationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.SelectAudioTrackByIdResponse;
 import io.pulumi.azurenative.media.inputs.SelectVideoTrackByAttributeResponse;
 import io.pulumi.azurenative.media.inputs.SelectVideoTrackByIdResponse;
 import io.pulumi.azurenative.media.inputs.VideoTrackDescriptorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class FromAllInputFileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="includedTracks")
-    private final @Nullable List<Object> includedTracks;
+      private final @Nullable List<Object> includedTracks;
 
     public List<Object> getIncludedTracks() {
         return this.includedTracks == null ? List.of() : this.includedTracks;
@@ -43,7 +43,7 @@ public final class FromAllInputFileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -92,7 +92,6 @@ public final class FromAllInputFileResponse extends io.pulumi.resources.InvokeAr
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public FromAllInputFileResponse build() {
             return new FromAllInputFileResponse(includedTracks, odataType);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowFileType;
 import io.pulumi.awsnative.appflow.inputs.FlowAggregationConfigArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowPrefixConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,21 +17,21 @@ public final class FlowS3OutputFormatConfigArgs extends io.pulumi.resources.Reso
     public static final FlowS3OutputFormatConfigArgs Empty = new FlowS3OutputFormatConfigArgs();
 
     @InputImport(name="aggregationConfig")
-    private final @Nullable Input<FlowAggregationConfigArgs> aggregationConfig;
+      private final @Nullable Input<FlowAggregationConfigArgs> aggregationConfig;
 
     public Input<FlowAggregationConfigArgs> getAggregationConfig() {
         return this.aggregationConfig == null ? Input.empty() : this.aggregationConfig;
     }
 
     @InputImport(name="fileType")
-    private final @Nullable Input<FlowFileType> fileType;
+      private final @Nullable Input<FlowFileType> fileType;
 
     public Input<FlowFileType> getFileType() {
         return this.fileType == null ? Input.empty() : this.fileType;
     }
 
     @InputImport(name="prefixConfig")
-    private final @Nullable Input<FlowPrefixConfigArgs> prefixConfig;
+      private final @Nullable Input<FlowPrefixConfigArgs> prefixConfig;
 
     public Input<FlowPrefixConfigArgs> getPrefixConfig() {
         return this.prefixConfig == null ? Input.empty() : this.prefixConfig;
@@ -105,7 +105,6 @@ public final class FlowS3OutputFormatConfigArgs extends io.pulumi.resources.Reso
             this.prefixConfig = Input.ofNullable(prefixConfig);
             return this;
         }
-
         public FlowS3OutputFormatConfigArgs build() {
             return new FlowS3OutputFormatConfigArgs(aggregationConfig, fileType, prefixConfig);
         }

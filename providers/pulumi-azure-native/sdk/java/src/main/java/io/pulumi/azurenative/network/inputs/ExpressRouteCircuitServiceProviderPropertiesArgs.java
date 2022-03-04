@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
      * 
      */
     @InputImport(name="bandwidthInMbps")
-    private final @Nullable Input<Integer> bandwidthInMbps;
+      private final @Nullable Input<Integer> bandwidthInMbps;
 
     public Input<Integer> getBandwidthInMbps() {
         return this.bandwidthInMbps == null ? Input.empty() : this.bandwidthInMbps;
@@ -35,7 +35,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
      * 
      */
     @InputImport(name="peeringLocation")
-    private final @Nullable Input<String> peeringLocation;
+      private final @Nullable Input<String> peeringLocation;
 
     public Input<String> getPeeringLocation() {
         return this.peeringLocation == null ? Input.empty() : this.peeringLocation;
@@ -46,7 +46,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
      * 
      */
     @InputImport(name="serviceProviderName")
-    private final @Nullable Input<String> serviceProviderName;
+      private final @Nullable Input<String> serviceProviderName;
 
     public Input<String> getServiceProviderName() {
         return this.serviceProviderName == null ? Input.empty() : this.serviceProviderName;
@@ -120,7 +120,6 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
             this.serviceProviderName = Input.ofNullable(serviceProviderName);
             return this;
         }
-
         public ExpressRouteCircuitServiceProviderPropertiesArgs build() {
             return new ExpressRouteCircuitServiceProviderPropertiesArgs(bandwidthInMbps, peeringLocation, serviceProviderName);
         }

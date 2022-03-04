@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.TokenType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiresIn")
-    private final @Nullable Input<Integer> expiresIn;
+      private final @Nullable Input<Integer> expiresIn;
 
     public Input<Integer> getExpiresIn() {
         return this.expiresIn == null ? Input.empty() : this.expiresIn;
@@ -37,7 +37,7 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refreshToken")
-    private final @Nullable Input<String> refreshToken;
+      private final @Nullable Input<String> refreshToken;
 
     public Input<String> getRefreshToken() {
         return this.refreshToken == null ? Input.empty() : this.refreshToken;
@@ -48,7 +48,7 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -59,7 +59,7 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="token", required=true)
-    private final Input<String> token;
+      private final Input<String> token;
 
     public Input<String> getToken() {
         return this.token;
@@ -70,7 +70,7 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenType", required=true)
-    private final Input<Either<String,TokenType>> tokenType;
+      private final Input<Either<String,TokenType>> tokenType;
 
     public Input<Either<String,TokenType>> getTokenType() {
         return this.tokenType;
@@ -174,7 +174,6 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.tokenType = Input.of(Objects.requireNonNull(tokenType));
             return this;
         }
-
         public AuthInfoArgs build() {
             return new AuthInfoArgs(expiresIn, refreshToken, scope, token, tokenType);
         }

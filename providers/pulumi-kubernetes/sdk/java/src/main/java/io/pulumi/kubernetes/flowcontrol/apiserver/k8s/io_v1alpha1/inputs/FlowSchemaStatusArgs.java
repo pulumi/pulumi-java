@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.FlowSchemaConditionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<FlowSchemaConditionArgs>> conditions;
+      private final @Nullable Input<List<FlowSchemaConditionArgs>> conditions;
 
     public Input<List<FlowSchemaConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -67,7 +67,6 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
-
         public FlowSchemaStatusArgs build() {
             return new FlowSchemaStatusArgs(conditions);
         }

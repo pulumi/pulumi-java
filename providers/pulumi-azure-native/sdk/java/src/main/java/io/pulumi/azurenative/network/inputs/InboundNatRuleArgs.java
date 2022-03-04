@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.TransportProtocol;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPort")
-    private final @Nullable Input<Integer> backendPort;
+      private final @Nullable Input<Integer> backendPort;
 
     public Input<Integer> getBackendPort() {
         return this.backendPort == null ? Input.empty() : this.backendPort;
@@ -39,7 +39,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFloatingIP")
-    private final @Nullable Input<Boolean> enableFloatingIP;
+      private final @Nullable Input<Boolean> enableFloatingIP;
 
     public Input<Boolean> getEnableFloatingIP() {
         return this.enableFloatingIP == null ? Input.empty() : this.enableFloatingIP;
@@ -50,7 +50,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableTcpReset")
-    private final @Nullable Input<Boolean> enableTcpReset;
+      private final @Nullable Input<Boolean> enableTcpReset;
 
     public Input<Boolean> getEnableTcpReset() {
         return this.enableTcpReset == null ? Input.empty() : this.enableTcpReset;
@@ -61,7 +61,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendIPConfiguration")
-    private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
+      private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
 
     public Input<SubResourceArgs> getFrontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Input.empty() : this.frontendIPConfiguration;
@@ -72,7 +72,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPort")
-    private final @Nullable Input<Integer> frontendPort;
+      private final @Nullable Input<Integer> frontendPort;
 
     public Input<Integer> getFrontendPort() {
         return this.frontendPort == null ? Input.empty() : this.frontendPort;
@@ -83,7 +83,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -94,7 +94,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-    private final @Nullable Input<Integer> idleTimeoutInMinutes;
+      private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
     public Input<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
@@ -105,7 +105,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -116,7 +116,7 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<Either<String,TransportProtocol>> protocol;
+      private final @Nullable Input<Either<String,TransportProtocol>> protocol;
 
     public Input<Either<String,TransportProtocol>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -280,7 +280,6 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
-
         public InboundNatRuleArgs build() {
             return new InboundNatRuleArgs(backendPort, enableFloatingIP, enableTcpReset, frontendIPConfiguration, frontendPort, id, idleTimeoutInMinutes, name, protocol);
         }

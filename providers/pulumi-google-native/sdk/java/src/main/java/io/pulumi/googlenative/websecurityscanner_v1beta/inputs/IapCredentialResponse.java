@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.IapTestServiceAccountInfoResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IapCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="iapTestServiceAccountInfo", required=true)
-    private final IapTestServiceAccountInfoResponse iapTestServiceAccountInfo;
+      private final IapTestServiceAccountInfoResponse iapTestServiceAccountInfo;
 
     public IapTestServiceAccountInfoResponse getIapTestServiceAccountInfo() {
         return this.iapTestServiceAccountInfo;
@@ -59,7 +59,6 @@ public final class IapCredentialResponse extends io.pulumi.resources.InvokeArgs 
             this.iapTestServiceAccountInfo = Objects.requireNonNull(iapTestServiceAccountInfo);
             return this;
         }
-
         public IapCredentialResponse build() {
             return new IapCredentialResponse(iapTestServiceAccountInfo);
         }

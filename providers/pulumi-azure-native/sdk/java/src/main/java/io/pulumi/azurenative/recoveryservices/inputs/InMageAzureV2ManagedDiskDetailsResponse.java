@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="diskId")
-    private final @Nullable String diskId;
+      private final @Nullable String diskId;
 
     public Optional<String> getDiskId() {
         return this.diskId == null ? Optional.empty() : Optional.ofNullable(this.diskId);
@@ -34,7 +34,7 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="replicaDiskType")
-    private final @Nullable String replicaDiskType;
+      private final @Nullable String replicaDiskType;
 
     public Optional<String> getReplicaDiskType() {
         return this.replicaDiskType == null ? Optional.empty() : Optional.ofNullable(this.replicaDiskType);
@@ -45,7 +45,7 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="seedManagedDiskId")
-    private final @Nullable String seedManagedDiskId;
+      private final @Nullable String seedManagedDiskId;
 
     public Optional<String> getSeedManagedDiskId() {
         return this.seedManagedDiskId == null ? Optional.empty() : Optional.ofNullable(this.seedManagedDiskId);
@@ -104,7 +104,6 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
             this.seedManagedDiskId = seedManagedDiskId;
             return this;
         }
-
         public InMageAzureV2ManagedDiskDetailsResponse build() {
             return new InMageAzureV2ManagedDiskDetailsResponse(diskId, replicaDiskType, seedManagedDiskId);
         }

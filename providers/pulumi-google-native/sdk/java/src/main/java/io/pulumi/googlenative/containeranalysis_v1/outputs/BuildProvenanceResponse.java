@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.ArtifactResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.CommandResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SourceResponse;
@@ -106,84 +106,84 @@ public final class BuildProvenanceResponse {
     /**
      * Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
      * 
-     */
+    */
     public Map<String,String> getBuildOptions() {
         return this.buildOptions;
     }
     /**
      * Version string of the builder at the time this build was executed.
      * 
-     */
+    */
     public String getBuilderVersion() {
         return this.builderVersion;
     }
     /**
      * Output of the build.
      * 
-     */
+    */
     public List<ArtifactResponse> getBuiltArtifacts() {
         return this.builtArtifacts;
     }
     /**
      * Commands requested by the build.
      * 
-     */
+    */
     public List<CommandResponse> getCommands() {
         return this.commands;
     }
     /**
      * Time at which the build was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * E-mail address of the user who initiated this build. Note that this was the user's e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
      * 
-     */
+    */
     public String getCreator() {
         return this.creator;
     }
     /**
      * Time at which execution of the build was finished.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * URI where any logs for this provenance were written.
      * 
-     */
+    */
     public String getLogsUri() {
         return this.logsUri;
     }
     /**
      * ID of the project.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * Details of the Source input to the build.
      * 
-     */
+    */
     public SourceResponse getSourceProvenance() {
         return this.sourceProvenance;
     }
     /**
      * Time at which execution of the build was started.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Trigger identifier if the build was triggered automatically; empty if not.
      * 
-     */
+    */
     public String getTriggerId() {
         return this.triggerId;
     }
@@ -289,7 +289,6 @@ public final class BuildProvenanceResponse {
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
         }
-
         public BuildProvenanceResponse build() {
             return new BuildProvenanceResponse(buildOptions, builderVersion, builtArtifacts, commands, createTime, creator, endTime, logsUri, project, sourceProvenance, startTime, triggerId);
         }

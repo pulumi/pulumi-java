@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.EnvironmentDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ListGlobalUserEnvironmentsResult {
     /**
      * List of all the environments
      * 
-     */
+    */
     public List<EnvironmentDetailsResponse> getEnvironments() {
         return this.environments == null ? List.of() : this.environments;
     }
@@ -54,7 +54,6 @@ public final class ListGlobalUserEnvironmentsResult {
             this.environments = environments;
             return this;
         }
-
         public ListGlobalUserEnvironmentsResult build() {
             return new ListGlobalUserEnvironmentsResult(environments);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.enums.SqlVmGroupImageSku;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.WsfcDomainProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -34,7 +34,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -45,7 +45,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sqlImageOffer")
-    private final @Nullable Input<String> sqlImageOffer;
+      private final @Nullable Input<String> sqlImageOffer;
 
     public Input<String> getSqlImageOffer() {
         return this.sqlImageOffer == null ? Input.empty() : this.sqlImageOffer;
@@ -56,7 +56,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sqlImageSku")
-    private final @Nullable Input<Either<String,SqlVmGroupImageSku>> sqlImageSku;
+      private final @Nullable Input<Either<String,SqlVmGroupImageSku>> sqlImageSku;
 
     public Input<Either<String,SqlVmGroupImageSku>> getSqlImageSku() {
         return this.sqlImageSku == null ? Input.empty() : this.sqlImageSku;
@@ -67,7 +67,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sqlVirtualMachineGroupName")
-    private final @Nullable Input<String> sqlVirtualMachineGroupName;
+      private final @Nullable Input<String> sqlVirtualMachineGroupName;
 
     public Input<String> getSqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName == null ? Input.empty() : this.sqlVirtualMachineGroupName;
@@ -78,7 +78,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="wsfcDomainProfile")
-    private final @Nullable Input<WsfcDomainProfileArgs> wsfcDomainProfile;
+      private final @Nullable Input<WsfcDomainProfileArgs> wsfcDomainProfile;
 
     public Input<WsfcDomainProfileArgs> getWsfcDomainProfile() {
         return this.wsfcDomainProfile == null ? Input.empty() : this.wsfcDomainProfile;
@@ -223,7 +223,6 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
             this.wsfcDomainProfile = Input.ofNullable(wsfcDomainProfile);
             return this;
         }
-
         public SqlVirtualMachineGroupArgs build() {
             return new SqlVirtualMachineGroupArgs(location, resourceGroupName, sqlImageOffer, sqlImageSku, sqlVirtualMachineGroupName, tags, wsfcDomainProfile);
         }

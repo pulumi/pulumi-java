@@ -6,17 +6,33 @@ package io.pulumi.awsnative.panorama;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.panorama.inputs.GetPackageVersionArgs;
 import io.pulumi.awsnative.panorama.outputs.GetPackageVersionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPackageVersion {
-/**
- * Schema for PackageVersion Resource Type
+    private GetPackageVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetPackageVersionArgs.Builder a);
+    }
+    private static GetPackageVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPackageVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Schema for PackageVersion Resource Type
  * 
- */
+     */
+    public static CompletableFuture<GetPackageVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Schema for PackageVersion Resource Type
+     * 
+     */
     public static CompletableFuture<GetPackageVersionResult> invokeAsync(GetPackageVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getPackageVersion", TypeShape.of(GetPackageVersionResult.class), args == null ? GetPackageVersionArgs.Empty : args, Utilities.withVersion(options));
     }

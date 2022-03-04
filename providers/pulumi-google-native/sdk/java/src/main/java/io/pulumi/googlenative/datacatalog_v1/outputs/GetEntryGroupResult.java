@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1SystemTimestampsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GetEntryGroupResult {
     /**
      * Timestamps of the entry group. Default value is empty.
      * 
-     */
+    */
     public GoogleCloudDatacatalogV1SystemTimestampsResponse getDataCatalogTimestamps() {
         return this.dataCatalogTimestamps;
     }
     /**
      * Entry group description. Can consist of several sentences or paragraphs that describe the entry group contents. Default value is an empty string.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * A short name to identify the entry group, for example, "analytics data - jan 2011". Default value is an empty string.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -117,7 +117,6 @@ public final class GetEntryGroupResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetEntryGroupResult build() {
             return new GetEntryGroupResult(dataCatalogTimestamps, description, displayName, name);
         }

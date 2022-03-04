@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class GetNamespaceIpFilterRuleResult {
     /**
      * The IP Filter Action
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP Filter name
      * 
-     */
+    */
     public Optional<String> getFilterName() {
         return Optional.ofNullable(this.filterName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * IP Mask
      * 
-     */
+    */
     public Optional<String> getIpMask() {
         return Optional.ofNullable(this.ipMask);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -160,7 +160,6 @@ public final class GetNamespaceIpFilterRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNamespaceIpFilterRuleResult build() {
             return new GetNamespaceIpFilterRuleResult(action, filterName, id, ipMask, name, type);
         }

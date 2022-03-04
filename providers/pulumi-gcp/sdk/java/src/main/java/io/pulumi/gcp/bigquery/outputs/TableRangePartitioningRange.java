@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class TableRangePartitioningRange {
     /**
      * End of the range partitioning, exclusive.
      * 
-     */
+    */
     public Integer getEnd() {
         return this.end;
     }
     /**
      * The width of each range within the partition.
      * 
-     */
+    */
     public Integer getInterval() {
         return this.interval;
     }
     /**
      * Start of the range partitioning, inclusive.
      * 
-     */
+    */
     public Integer getStart() {
         return this.start;
     }
@@ -95,7 +95,6 @@ public final class TableRangePartitioningRange {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public TableRangePartitioningRange build() {
             return new TableRangePartitioningRange(end, interval, start);
         }

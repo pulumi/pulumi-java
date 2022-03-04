@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs extends io.pulum
      * 
      */
     @InputImport(name="maxModulusSize")
-    private final @Nullable Input<String> maxModulusSize;
+      private final @Nullable Input<String> maxModulusSize;
 
     public Input<String> getMaxModulusSize() {
         return this.maxModulusSize == null ? Input.empty() : this.maxModulusSize;
@@ -32,7 +32,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs extends io.pulum
      * 
      */
     @InputImport(name="minModulusSize")
-    private final @Nullable Input<String> minModulusSize;
+      private final @Nullable Input<String> minModulusSize;
 
     public Input<String> getMinModulusSize() {
         return this.minModulusSize == null ? Input.empty() : this.minModulusSize;
@@ -91,7 +91,6 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs extends io.pulum
             this.minModulusSize = Input.ofNullable(minModulusSize);
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs(maxModulusSize, minModulusSize);
         }

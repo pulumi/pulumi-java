@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class LinkedAccessCheckResponse extends io.pulumi.resources.InvokeA
     public static final LinkedAccessCheckResponse Empty = new LinkedAccessCheckResponse();
 
     @InputImport(name="actionName")
-    private final @Nullable String actionName;
+      private final @Nullable String actionName;
 
     public Optional<String> getActionName() {
         return this.actionName == null ? Optional.empty() : Optional.ofNullable(this.actionName);
     }
 
     @InputImport(name="linkedAction")
-    private final @Nullable String linkedAction;
+      private final @Nullable String linkedAction;
 
     public Optional<String> getLinkedAction() {
         return this.linkedAction == null ? Optional.empty() : Optional.ofNullable(this.linkedAction);
     }
 
     @InputImport(name="linkedActionVerb")
-    private final @Nullable String linkedActionVerb;
+      private final @Nullable String linkedActionVerb;
 
     public Optional<String> getLinkedActionVerb() {
         return this.linkedActionVerb == null ? Optional.empty() : Optional.ofNullable(this.linkedActionVerb);
     }
 
     @InputImport(name="linkedProperty")
-    private final @Nullable String linkedProperty;
+      private final @Nullable String linkedProperty;
 
     public Optional<String> getLinkedProperty() {
         return this.linkedProperty == null ? Optional.empty() : Optional.ofNullable(this.linkedProperty);
     }
 
     @InputImport(name="linkedType")
-    private final @Nullable String linkedType;
+      private final @Nullable String linkedType;
 
     public Optional<String> getLinkedType() {
         return this.linkedType == null ? Optional.empty() : Optional.ofNullable(this.linkedType);
@@ -122,7 +122,6 @@ public final class LinkedAccessCheckResponse extends io.pulumi.resources.InvokeA
             this.linkedType = linkedType;
             return this;
         }
-
         public LinkedAccessCheckResponse build() {
             return new LinkedAccessCheckResponse(actionName, linkedAction, linkedActionVerb, linkedProperty, linkedType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.ServiceAwsVpcConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ServiceNetworkConfiguration extends io.pulumi.resources.Invok
     public static final ServiceNetworkConfiguration Empty = new ServiceNetworkConfiguration();
 
     @InputImport(name="awsvpcConfiguration")
-    private final @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration;
+      private final @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration;
 
     public Optional<ServiceAwsVpcConfiguration> getAwsvpcConfiguration() {
         return this.awsvpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.awsvpcConfiguration);
@@ -53,7 +53,6 @@ public final class ServiceNetworkConfiguration extends io.pulumi.resources.Invok
             this.awsvpcConfiguration = awsvpcConfiguration;
             return this;
         }
-
         public ServiceNetworkConfiguration build() {
             return new ServiceNetworkConfiguration(awsvpcConfiguration);
         }

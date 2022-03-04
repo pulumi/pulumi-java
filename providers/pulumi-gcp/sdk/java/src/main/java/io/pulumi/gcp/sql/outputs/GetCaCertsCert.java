@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class GetCaCertsCert {
     /**
      * The CA certificate used to connect to the SQL instance via SSL.
      * 
-     */
+    */
     public String getCert() {
         return this.cert;
     }
     /**
      * The CN valid for the CA cert.
      * 
-     */
+    */
     public String getCommonName() {
         return this.commonName;
     }
     /**
      * Creation time of the CA cert.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Expiration time of the CA cert.
      * 
-     */
+    */
     public String getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * SHA1 fingerprint of the CA cert.
      * 
-     */
+    */
     public String getSha1Fingerprint() {
         return this.sha1Fingerprint;
     }
@@ -137,7 +137,6 @@ public final class GetCaCertsCert {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public GetCaCertsCert build() {
             return new GetCaCertsCert(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }

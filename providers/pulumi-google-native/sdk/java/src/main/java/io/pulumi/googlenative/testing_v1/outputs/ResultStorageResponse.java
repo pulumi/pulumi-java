@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.GoogleCloudStorageResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ToolResultsExecutionResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ToolResultsHistoryResponse;
@@ -48,28 +48,28 @@ public final class ResultStorageResponse {
     /**
      * Required.
      * 
-     */
+    */
     public GoogleCloudStorageResponse getGoogleCloudStorage() {
         return this.googleCloudStorage;
     }
     /**
      * URL to the results in the Firebase Web Console.
      * 
-     */
+    */
     public String getResultsUrl() {
         return this.resultsUrl;
     }
     /**
      * The tool results execution that results are written to.
      * 
-     */
+    */
     public ToolResultsExecutionResponse getToolResultsExecution() {
         return this.toolResultsExecution;
     }
     /**
      * The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
      * 
-     */
+    */
     public ToolResultsHistoryResponse getToolResultsHistory() {
         return this.toolResultsHistory;
     }
@@ -119,7 +119,6 @@ public final class ResultStorageResponse {
             this.toolResultsHistory = Objects.requireNonNull(toolResultsHistory);
             return this;
         }
-
         public ResultStorageResponse build() {
             return new ResultStorageResponse(googleCloudStorage, resultsUrl, toolResultsExecution, toolResultsHistory);
         }

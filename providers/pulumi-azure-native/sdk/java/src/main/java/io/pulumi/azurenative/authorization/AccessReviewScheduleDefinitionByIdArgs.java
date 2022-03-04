@@ -9,7 +9,7 @@ import io.pulumi.azurenative.authorization.inputs.AccessReviewInstanceArgs;
 import io.pulumi.azurenative.authorization.inputs.AccessReviewReviewerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="autoApplyDecisionsEnabled")
-    private final @Nullable Input<Boolean> autoApplyDecisionsEnabled;
+      private final @Nullable Input<Boolean> autoApplyDecisionsEnabled;
 
     public Input<Boolean> getAutoApplyDecisionsEnabled() {
         return this.autoApplyDecisionsEnabled == null ? Input.empty() : this.autoApplyDecisionsEnabled;
@@ -38,7 +38,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupReviewers")
-    private final @Nullable Input<List<AccessReviewReviewerArgs>> backupReviewers;
+      private final @Nullable Input<List<AccessReviewReviewerArgs>> backupReviewers;
 
     public Input<List<AccessReviewReviewerArgs>> getBackupReviewers() {
         return this.backupReviewers == null ? Input.empty() : this.backupReviewers;
@@ -49,7 +49,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="defaultDecision")
-    private final @Nullable Input<Either<String,DefaultDecisionType>> defaultDecision;
+      private final @Nullable Input<Either<String,DefaultDecisionType>> defaultDecision;
 
     public Input<Either<String,DefaultDecisionType>> getDefaultDecision() {
         return this.defaultDecision == null ? Input.empty() : this.defaultDecision;
@@ -60,7 +60,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="defaultDecisionEnabled")
-    private final @Nullable Input<Boolean> defaultDecisionEnabled;
+      private final @Nullable Input<Boolean> defaultDecisionEnabled;
 
     public Input<Boolean> getDefaultDecisionEnabled() {
         return this.defaultDecisionEnabled == null ? Input.empty() : this.defaultDecisionEnabled;
@@ -71,7 +71,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="descriptionForAdmins")
-    private final @Nullable Input<String> descriptionForAdmins;
+      private final @Nullable Input<String> descriptionForAdmins;
 
     public Input<String> getDescriptionForAdmins() {
         return this.descriptionForAdmins == null ? Input.empty() : this.descriptionForAdmins;
@@ -82,7 +82,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="descriptionForReviewers")
-    private final @Nullable Input<String> descriptionForReviewers;
+      private final @Nullable Input<String> descriptionForReviewers;
 
     public Input<String> getDescriptionForReviewers() {
         return this.descriptionForReviewers == null ? Input.empty() : this.descriptionForReviewers;
@@ -93,7 +93,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -104,7 +104,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="endDate")
-    private final @Nullable Input<String> endDate;
+      private final @Nullable Input<String> endDate;
 
     public Input<String> getEndDate() {
         return this.endDate == null ? Input.empty() : this.endDate;
@@ -115,7 +115,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="inactiveDuration")
-    private final @Nullable Input<String> inactiveDuration;
+      private final @Nullable Input<String> inactiveDuration;
 
     public Input<String> getInactiveDuration() {
         return this.inactiveDuration == null ? Input.empty() : this.inactiveDuration;
@@ -126,7 +126,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instanceDurationInDays")
-    private final @Nullable Input<Integer> instanceDurationInDays;
+      private final @Nullable Input<Integer> instanceDurationInDays;
 
     public Input<Integer> getInstanceDurationInDays() {
         return this.instanceDurationInDays == null ? Input.empty() : this.instanceDurationInDays;
@@ -137,7 +137,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<AccessReviewInstanceArgs>> instances;
+      private final @Nullable Input<List<AccessReviewInstanceArgs>> instances;
 
     public Input<List<AccessReviewInstanceArgs>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -148,7 +148,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -159,7 +159,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="justificationRequiredOnApproval")
-    private final @Nullable Input<Boolean> justificationRequiredOnApproval;
+      private final @Nullable Input<Boolean> justificationRequiredOnApproval;
 
     public Input<Boolean> getJustificationRequiredOnApproval() {
         return this.justificationRequiredOnApproval == null ? Input.empty() : this.justificationRequiredOnApproval;
@@ -170,7 +170,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="mailNotificationsEnabled")
-    private final @Nullable Input<Boolean> mailNotificationsEnabled;
+      private final @Nullable Input<Boolean> mailNotificationsEnabled;
 
     public Input<Boolean> getMailNotificationsEnabled() {
         return this.mailNotificationsEnabled == null ? Input.empty() : this.mailNotificationsEnabled;
@@ -181,7 +181,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="numberOfOccurrences")
-    private final @Nullable Input<Integer> numberOfOccurrences;
+      private final @Nullable Input<Integer> numberOfOccurrences;
 
     public Input<Integer> getNumberOfOccurrences() {
         return this.numberOfOccurrences == null ? Input.empty() : this.numberOfOccurrences;
@@ -192,7 +192,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="recommendationsEnabled")
-    private final @Nullable Input<Boolean> recommendationsEnabled;
+      private final @Nullable Input<Boolean> recommendationsEnabled;
 
     public Input<Boolean> getRecommendationsEnabled() {
         return this.recommendationsEnabled == null ? Input.empty() : this.recommendationsEnabled;
@@ -203,7 +203,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="reminderNotificationsEnabled")
-    private final @Nullable Input<Boolean> reminderNotificationsEnabled;
+      private final @Nullable Input<Boolean> reminderNotificationsEnabled;
 
     public Input<Boolean> getReminderNotificationsEnabled() {
         return this.reminderNotificationsEnabled == null ? Input.empty() : this.reminderNotificationsEnabled;
@@ -214,7 +214,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="reviewers")
-    private final @Nullable Input<List<AccessReviewReviewerArgs>> reviewers;
+      private final @Nullable Input<List<AccessReviewReviewerArgs>> reviewers;
 
     public Input<List<AccessReviewReviewerArgs>> getReviewers() {
         return this.reviewers == null ? Input.empty() : this.reviewers;
@@ -225,7 +225,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scheduleDefinitionId")
-    private final @Nullable Input<String> scheduleDefinitionId;
+      private final @Nullable Input<String> scheduleDefinitionId;
 
     public Input<String> getScheduleDefinitionId() {
         return this.scheduleDefinitionId == null ? Input.empty() : this.scheduleDefinitionId;
@@ -236,7 +236,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="startDate")
-    private final @Nullable Input<String> startDate;
+      private final @Nullable Input<String> startDate;
 
     public Input<String> getStartDate() {
         return this.startDate == null ? Input.empty() : this.startDate;
@@ -247,7 +247,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type;
+      private final @Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type;
 
     public Input<Either<String,AccessReviewRecurrenceRangeType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -591,7 +591,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public AccessReviewScheduleDefinitionByIdArgs build() {
             return new AccessReviewScheduleDefinitionByIdArgs(autoApplyDecisionsEnabled, backupReviewers, defaultDecision, defaultDecisionEnabled, descriptionForAdmins, descriptionForReviewers, displayName, endDate, inactiveDuration, instanceDurationInDays, instances, interval, justificationRequiredOnApproval, mailNotificationsEnabled, numberOfOccurrences, recommendationsEnabled, reminderNotificationsEnabled, reviewers, scheduleDefinitionId, startDate, type);
         }

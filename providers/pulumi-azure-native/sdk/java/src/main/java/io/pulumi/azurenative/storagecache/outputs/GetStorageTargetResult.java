@@ -9,7 +9,7 @@ import io.pulumi.azurenative.storagecache.outputs.NamespaceJunctionResponse;
 import io.pulumi.azurenative.storagecache.outputs.Nfs3TargetResponse;
 import io.pulumi.azurenative.storagecache.outputs.SystemDataResponse;
 import io.pulumi.azurenative.storagecache.outputs.UnknownTargetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -110,84 +110,84 @@ public final class GetStorageTargetResult {
     /**
      * Properties when targetType is blobNfs.
      * 
-     */
+    */
     public Optional<BlobNfsTargetResponse> getBlobNfs() {
         return Optional.ofNullable(this.blobNfs);
     }
     /**
      * Properties when targetType is clfs.
      * 
-     */
+    */
     public Optional<ClfsTargetResponse> getClfs() {
         return Optional.ofNullable(this.clfs);
     }
     /**
      * Resource ID of the Storage Target.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of Cache namespace junctions to target for namespace associations.
      * 
-     */
+    */
     public List<NamespaceJunctionResponse> getJunctions() {
         return this.junctions == null ? List.of() : this.junctions;
     }
     /**
      * Region name string.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of the Storage Target.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties when targetType is nfs3.
      * 
-     */
+    */
     public Optional<Nfs3TargetResponse> getNfs3() {
         return Optional.ofNullable(this.nfs3);
     }
     /**
      * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The system meta data relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the Storage Target.
      * 
-     */
+    */
     public String getTargetType() {
         return this.targetType;
     }
     /**
      * Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Properties when targetType is unknown.
      * 
-     */
+    */
     public Optional<UnknownTargetResponse> getUnknown() {
         return Optional.ofNullable(this.unknown);
     }
@@ -293,7 +293,6 @@ public final class GetStorageTargetResult {
             this.unknown = unknown;
             return this;
         }
-
         public GetStorageTargetResult build() {
             return new GetStorageTargetResult(blobNfs, clfs, id, junctions, location, name, nfs3, provisioningState, systemData, targetType, type, unknown);
         }

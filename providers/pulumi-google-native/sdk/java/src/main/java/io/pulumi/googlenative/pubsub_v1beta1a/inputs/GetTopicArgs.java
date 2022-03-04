@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta1a.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTopicArgs Empty = new GetTopicArgs();
 
     @InputImport(name="topicId", required=true)
-    private final String topicId;
+      private final String topicId;
 
     public String getTopicId() {
         return this.topicId;
@@ -51,7 +51,6 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }
-
         public GetTopicArgs build() {
             return new GetTopicArgs(topicId);
         }

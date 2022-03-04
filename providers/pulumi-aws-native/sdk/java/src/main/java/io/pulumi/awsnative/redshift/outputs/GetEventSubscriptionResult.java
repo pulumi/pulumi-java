@@ -8,7 +8,7 @@ import io.pulumi.awsnative.redshift.enums.EventSubscriptionSeverity;
 import io.pulumi.awsnative.redshift.enums.EventSubscriptionSourceType;
 import io.pulumi.awsnative.redshift.enums.EventSubscriptionStatus;
 import io.pulumi.awsnative.redshift.outputs.EventSubscriptionTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -117,91 +117,91 @@ public final class GetEventSubscriptionResult {
     /**
      * The name of the Amazon Redshift event notification subscription.
      * 
-     */
+    */
     public Optional<String> getCustSubscriptionId() {
         return Optional.ofNullable(this.custSubscriptionId);
     }
     /**
      * The AWS account associated with the Amazon Redshift event notification subscription.
      * 
-     */
+    */
     public Optional<String> getCustomerAwsId() {
         return Optional.ofNullable(this.customerAwsId);
     }
     /**
      * A boolean value; set to true to activate the subscription, and set to false to create the subscription but not activate it.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Specifies the Amazon Redshift event categories to be published by the event notification subscription.
      * 
-     */
+    */
     public List<EventSubscriptionEventCategoriesItem> getEventCategories() {
         return this.eventCategories == null ? List.of() : this.eventCategories;
     }
     /**
      * The list of Amazon Redshift event categories specified in the event notification subscription.
      * 
-     */
+    */
     public List<String> getEventCategoriesList() {
         return this.eventCategoriesList == null ? List.of() : this.eventCategoriesList;
     }
     /**
      * Specifies the Amazon Redshift event severity to be published by the event notification subscription.
      * 
-     */
+    */
     public Optional<EventSubscriptionSeverity> getSeverity() {
         return Optional.ofNullable(this.severity);
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit the event notifications.
      * 
-     */
+    */
     public Optional<String> getSnsTopicArn() {
         return Optional.ofNullable(this.snsTopicArn);
     }
     /**
      * A list of one or more identifiers of Amazon Redshift source objects.
      * 
-     */
+    */
     public List<String> getSourceIds() {
         return this.sourceIds == null ? List.of() : this.sourceIds;
     }
     /**
      * A list of the sources that publish events to the Amazon Redshift event notification subscription.
      * 
-     */
+    */
     public List<String> getSourceIdsList() {
         return this.sourceIdsList == null ? List.of() : this.sourceIdsList;
     }
     /**
      * The type of source that will be generating the events.
      * 
-     */
+    */
     public Optional<EventSubscriptionSourceType> getSourceType() {
         return Optional.ofNullable(this.sourceType);
     }
     /**
      * The status of the Amazon Redshift event notification subscription.
      * 
-     */
+    */
     public Optional<EventSubscriptionStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The date and time the Amazon Redshift event notification subscription was created.
      * 
-     */
+    */
     public Optional<String> getSubscriptionCreationTime() {
         return Optional.ofNullable(this.subscriptionCreationTime);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<EventSubscriptionTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -314,7 +314,6 @@ public final class GetEventSubscriptionResult {
             this.tags = tags;
             return this;
         }
-
         public GetEventSubscriptionResult build() {
             return new GetEventSubscriptionResult(custSubscriptionId, customerAwsId, enabled, eventCategories, eventCategoriesList, severity, snsTopicArn, sourceIds, sourceIdsList, sourceType, status, subscriptionCreationTime, tags);
         }

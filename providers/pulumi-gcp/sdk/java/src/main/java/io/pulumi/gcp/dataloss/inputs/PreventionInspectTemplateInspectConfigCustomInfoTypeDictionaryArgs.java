@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @InputImport(name="cloudStoragePath")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> getCloudStoragePath() {
         return this.cloudStoragePath == null ? Input.empty() : this.cloudStoragePath;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @InputImport(name="wordList")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> getWordList() {
         return this.wordList == null ? Input.empty() : this.wordList;
@@ -92,7 +92,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.wordList = Input.ofNullable(wordList);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs(cloudStoragePath, wordList);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.inputs.GetInstanceFailoverGroupArgs;
 import io.pulumi.azurenative.sql.outputs.GetInstanceFailoverGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceFailoverGroup {
-/**
- * An instance failover group.
+    private GetInstanceFailoverGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceFailoverGroupArgs.Builder a);
+    }
+    private static GetInstanceFailoverGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceFailoverGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An instance failover group.
  * API Version: 2020-11-01-preview.
  * 
- *
- * An instance failover group.
+     *
+     * An instance failover group.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceFailoverGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An instance failover group.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * An instance failover group.
+     * 
+     */
     public static CompletableFuture<GetInstanceFailoverGroupResult> invokeAsync(GetInstanceFailoverGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getInstanceFailoverGroup", TypeShape.of(GetInstanceFailoverGroupResult.class), args == null ? GetInstanceFailoverGroupArgs.Empty : args, Utilities.withVersion(options));
     }

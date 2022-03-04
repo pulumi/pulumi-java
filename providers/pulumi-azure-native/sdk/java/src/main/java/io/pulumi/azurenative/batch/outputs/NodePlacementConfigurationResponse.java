@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class NodePlacementConfigurationResponse {
     /**
      * Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.
      * 
-     */
+    */
     public Optional<String> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
@@ -54,7 +54,6 @@ public final class NodePlacementConfigurationResponse {
             this.policy = policy;
             return this;
         }
-
         public NodePlacementConfigurationResponse build() {
             return new NodePlacementConfigurationResponse(policy);
         }

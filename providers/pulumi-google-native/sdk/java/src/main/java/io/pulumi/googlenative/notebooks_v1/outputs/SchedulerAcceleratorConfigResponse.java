@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SchedulerAcceleratorConfigResponse {
     /**
      * Count of cores of this accelerator.
      * 
-     */
+    */
     public String getCoreCount() {
         return this.coreCount;
     }
     /**
      * Type of this accelerator.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class SchedulerAcceleratorConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SchedulerAcceleratorConfigResponse build() {
             return new SchedulerAcceleratorConfigResponse(coreCount, type);
         }

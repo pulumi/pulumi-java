@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-    private final @Nullable Boolean autoUpgradeMinorVersion;
+      private final @Nullable Boolean autoUpgradeMinorVersion;
 
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -40,7 +40,7 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protectedSettings")
-    private final @Nullable Object protectedSettings;
+      private final @Nullable Object protectedSettings;
 
     public Optional<Object> getProtectedSettings() {
         return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
@@ -51,35 +51,35 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisionAfterExtensions")
-    private final @Nullable List<String> provisionAfterExtensions;
+      private final @Nullable List<String> provisionAfterExtensions;
 
     public List<String> getProvisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }
 
     @InputImport(name="publisher", required=true)
-    private final String publisher;
+      private final String publisher;
 
     public String getPublisher() {
         return this.publisher;
     }
 
     @InputImport(name="settings")
-    private final @Nullable Object settings;
+      private final @Nullable Object settings;
 
     public Optional<Object> getSettings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
     }
 
     @InputImport(name="typeHandlerVersion")
-    private final @Nullable String typeHandlerVersion;
+      private final @Nullable String typeHandlerVersion;
 
     public Optional<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
@@ -188,7 +188,6 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public VMExtensionResponse build() {
             return new VMExtensionResponse(autoUpgradeMinorVersion, name, protectedSettings, provisionAfterExtensions, publisher, settings, type, typeHandlerVersion);
         }

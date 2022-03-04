@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GitHubActionCodeConfigurationResponse {
     /**
      * Runtime stack is used to determine the workflow file content for code base apps.
      * 
-     */
+    */
     public Optional<String> getRuntimeStack() {
         return Optional.ofNullable(this.runtimeStack);
     }
     /**
      * Runtime version is used to determine what build version to set in the workflow file.
      * 
-     */
+    */
     public Optional<String> getRuntimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -76,7 +76,6 @@ public final class GitHubActionCodeConfigurationResponse {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public GitHubActionCodeConfigurationResponse build() {
             return new GitHubActionCodeConfigurationResponse(runtimeStack, runtimeVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resourceconnector.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ApplianceCredentialKubeconfigResponse {
     /**
      * Name which contains the role of the kubeconfig.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Contains the kubeconfig value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class ApplianceCredentialKubeconfigResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ApplianceCredentialKubeconfigResponse build() {
             return new ApplianceCredentialKubeconfigResponse(name, value);
         }

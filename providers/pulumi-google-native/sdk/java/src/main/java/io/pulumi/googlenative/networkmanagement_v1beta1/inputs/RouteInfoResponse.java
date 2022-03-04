@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destIpRange", required=true)
-    private final String destIpRange;
+      private final String destIpRange;
 
     public String getDestIpRange() {
         return this.destIpRange;
@@ -34,7 +34,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -45,7 +45,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceTags", required=true)
-    private final List<String> instanceTags;
+      private final List<String> instanceTags;
 
     public List<String> getInstanceTags() {
         return this.instanceTags;
@@ -56,7 +56,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkUri", required=true)
-    private final String networkUri;
+      private final String networkUri;
 
     public String getNetworkUri() {
         return this.networkUri;
@@ -67,7 +67,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nextHop", required=true)
-    private final String nextHop;
+      private final String nextHop;
 
     public String getNextHop() {
         return this.nextHop;
@@ -78,7 +78,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nextHopType", required=true)
-    private final String nextHopType;
+      private final String nextHopType;
 
     public String getNextHopType() {
         return this.nextHopType;
@@ -89,7 +89,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -100,7 +100,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeType", required=true)
-    private final String routeType;
+      private final String routeType;
 
     public String getRouteType() {
         return this.routeType;
@@ -111,7 +111,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -230,7 +230,6 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RouteInfoResponse build() {
             return new RouteInfoResponse(destIpRange, displayName, instanceTags, networkUri, nextHop, nextHopType, priority, routeType, uri);
         }

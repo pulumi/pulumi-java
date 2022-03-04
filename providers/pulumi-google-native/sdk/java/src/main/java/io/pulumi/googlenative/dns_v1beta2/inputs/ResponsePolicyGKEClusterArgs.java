@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class ResponsePolicyGKEClusterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="gkeClusterName")
-    private final @Nullable Input<String> gkeClusterName;
+      private final @Nullable Input<String> gkeClusterName;
 
     public Input<String> getGkeClusterName() {
         return this.gkeClusterName == null ? Input.empty() : this.gkeClusterName;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -85,7 +85,6 @@ public final class ResponsePolicyGKEClusterArgs extends io.pulumi.resources.Reso
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public ResponsePolicyGKEClusterArgs build() {
             return new ResponsePolicyGKEClusterArgs(gkeClusterName, kind);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse {
     /**
      * Creation timestamp of the resource within the given system.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Expiration timestamp of the resource within the given system. Currently only applicable to BigQuery resources.
      * 
-     */
+    */
     public String getExpireTime() {
         return this.expireTime;
     }
     /**
      * Timestamp of the last modification of the resource or its metadata within a given system. Note: Depending on the source system, not every modification updates this timestamp. For example, BigQuery timestamps every metadata modification but not data or permission changes.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -95,7 +95,6 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GoogleCloudDatacatalogV1SystemTimestampsResponse build() {
             return new GoogleCloudDatacatalogV1SystemTimestampsResponse(createTime, expireTime, updateTime);
         }

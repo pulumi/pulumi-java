@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class NWRuleSetIpRulesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="action")
-    private final @Nullable String action;
+      private final @Nullable String action;
 
     public Optional<String> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -34,7 +34,7 @@ public final class NWRuleSetIpRulesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipMask")
-    private final @Nullable String ipMask;
+      private final @Nullable String ipMask;
 
     public Optional<String> getIpMask() {
         return this.ipMask == null ? Optional.empty() : Optional.ofNullable(this.ipMask);
@@ -83,7 +83,6 @@ public final class NWRuleSetIpRulesResponse extends io.pulumi.resources.InvokeAr
             this.ipMask = ipMask;
             return this;
         }
-
         public NWRuleSetIpRulesResponse build() {
             return new NWRuleSetIpRulesResponse(action, ipMask);
         }

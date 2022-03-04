@@ -6,21 +6,41 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.security.inputs.GetAssessmentMetadataInSubscriptionArgs;
 import io.pulumi.azurenative.security.outputs.GetAssessmentMetadataInSubscriptionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssessmentMetadataInSubscription {
-/**
- * Security assessment metadata
+    private GetAssessmentMetadataInSubscription() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssessmentMetadataInSubscriptionArgs.Builder a);
+    }
+    private static GetAssessmentMetadataInSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssessmentMetadataInSubscriptionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Security assessment metadata
  * API Version: 2020-01-01.
  * 
- *
- * Security assessment metadata
+     *
+     * Security assessment metadata
  * 
- */
+     */
+    public static CompletableFuture<GetAssessmentMetadataInSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Security assessment metadata
+     * API Version: 2020-01-01.
+     * 
+     *
+         * Security assessment metadata
+     * 
+     */
     public static CompletableFuture<GetAssessmentMetadataInSubscriptionResult> invokeAsync(GetAssessmentMetadataInSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getAssessmentMetadataInSubscription", TypeShape.of(GetAssessmentMetadataInSubscriptionResult.class), args == null ? GetAssessmentMetadataInSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

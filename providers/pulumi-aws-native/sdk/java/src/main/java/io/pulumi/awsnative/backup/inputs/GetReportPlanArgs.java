@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetReportPlanArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="reportPlanArn", required=true)
-    private final String reportPlanArn;
+      private final String reportPlanArn;
 
     public String getReportPlanArn() {
         return this.reportPlanArn;
@@ -55,7 +55,6 @@ public final class GetReportPlanArgs extends io.pulumi.resources.InvokeArgs {
             this.reportPlanArn = Objects.requireNonNull(reportPlanArn);
             return this;
         }
-
         public GetReportPlanArgs build() {
             return new GetReportPlanArgs(reportPlanArn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.MonitoringComponentConfigResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class MonitoringConfigResponse {
     /**
      * Monitoring components configuration
      * 
-     */
+    */
     public MonitoringComponentConfigResponse getComponentConfig() {
         return this.componentConfig;
     }
@@ -52,7 +52,6 @@ public final class MonitoringConfigResponse {
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
         }
-
         public MonitoringConfigResponse build() {
             return new MonitoringConfigResponse(componentConfig);
         }

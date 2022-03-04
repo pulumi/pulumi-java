@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.kms.inputs.RegistryCredentialGetArgs;
 import io.pulumi.gcp.kms.inputs.RegistryEventNotificationConfigItemGetArgs;
 import java.lang.Object;
@@ -24,7 +24,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<List<RegistryCredentialGetArgs>> credentials;
+      private final @Nullable Input<List<RegistryCredentialGetArgs>> credentials;
 
     public Input<List<RegistryCredentialGetArgs>> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -35,7 +35,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventNotificationConfigs")
-    private final @Nullable Input<List<RegistryEventNotificationConfigItemGetArgs>> eventNotificationConfigs;
+      private final @Nullable Input<List<RegistryEventNotificationConfigItemGetArgs>> eventNotificationConfigs;
 
     public Input<List<RegistryEventNotificationConfigItemGetArgs>> getEventNotificationConfigs() {
         return this.eventNotificationConfigs == null ? Input.empty() : this.eventNotificationConfigs;
@@ -46,7 +46,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpConfig")
-    private final @Nullable Input<Map<String,Object>> httpConfig;
+      private final @Nullable Input<Map<String,Object>> httpConfig;
 
     public Input<Map<String,Object>> getHttpConfig() {
         return this.httpConfig == null ? Input.empty() : this.httpConfig;
@@ -60,7 +60,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<String> logLevel;
+      private final @Nullable Input<String> logLevel;
 
     public Input<String> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -71,7 +71,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mqttConfig")
-    private final @Nullable Input<Map<String,Object>> mqttConfig;
+      private final @Nullable Input<Map<String,Object>> mqttConfig;
 
     public Input<Map<String,Object>> getMqttConfig() {
         return this.mqttConfig == null ? Input.empty() : this.mqttConfig;
@@ -82,14 +82,14 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -100,7 +100,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -111,7 +111,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stateNotificationConfig")
-    private final @Nullable Input<Map<String,Object>> stateNotificationConfig;
+      private final @Nullable Input<Map<String,Object>> stateNotificationConfig;
 
     public Input<Map<String,Object>> getStateNotificationConfig() {
         return this.stateNotificationConfig == null ? Input.empty() : this.stateNotificationConfig;
@@ -275,7 +275,6 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
             this.stateNotificationConfig = Input.ofNullable(stateNotificationConfig);
             return this;
         }
-
         public RegistryState build() {
             return new RegistryState(credentials, eventNotificationConfigs, httpConfig, logLevel, mqttConfig, name, project, region, stateNotificationConfig);
         }

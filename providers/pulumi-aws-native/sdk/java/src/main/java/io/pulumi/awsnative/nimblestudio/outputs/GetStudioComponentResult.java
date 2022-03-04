@@ -7,7 +7,7 @@ import io.pulumi.awsnative.nimblestudio.enums.StudioComponentType;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentConfiguration;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentInitializationScript;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentScriptParameterKeyValue;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,35 +71,35 @@ public final class GetStudioComponentResult {
     /**
      * <p>The description.</p>
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <p>The EC2 security groups that control access to the studio component.</p>
      * 
-     */
+    */
     public List<String> getEc2SecurityGroupIds() {
         return this.ec2SecurityGroupIds == null ? List.of() : this.ec2SecurityGroupIds;
     }
     /**
      * <p>Initialization scripts for studio components.</p>
      * 
-     */
+    */
     public List<StudioComponentInitializationScript> getInitializationScripts() {
         return this.initializationScripts == null ? List.of() : this.initializationScripts;
     }
     /**
      * <p>The name for the studio component.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>Parameters for the studio component scripts.</p>
      * 
-     */
+    */
     public List<StudioComponentScriptParameterKeyValue> getScriptParameters() {
         return this.scriptParameters == null ? List.of() : this.scriptParameters;
     }
@@ -183,7 +183,6 @@ public final class GetStudioComponentResult {
             this.type = type;
             return this;
         }
-
         public GetStudioComponentResult build() {
             return new GetStudioComponentResult(configuration, description, ec2SecurityGroupIds, initializationScripts, name, scriptParameters, studioComponentId, type);
         }

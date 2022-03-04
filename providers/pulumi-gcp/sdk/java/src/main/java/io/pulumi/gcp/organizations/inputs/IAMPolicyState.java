@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     public static final IAMPolicyState Empty = new IAMPolicyState();
 
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -26,14 +26,14 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId")
-    private final @Nullable Input<String> orgId;
+      private final @Nullable Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId == null ? Input.empty() : this.orgId;
     }
 
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -107,7 +107,6 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
             this.policyData = Input.ofNullable(policyData);
             return this;
         }
-
         public IAMPolicyState build() {
             return new IAMPolicyState(etag, orgId, policyData);
         }

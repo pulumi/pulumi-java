@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse extends io.pul
      * 
      */
     @InputImport(name="customTag", required=true)
-    private final String customTag;
+      private final String customTag;
 
     public String getCustomTag() {
         return this.customTag;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse extends io.pul
      * 
      */
     @InputImport(name="field", required=true)
-    private final GooglePrivacyDlpV2FieldIdResponse field;
+      private final GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse extends io.pul
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public GooglePrivacyDlpV2QuasiIdentifierFieldResponse build() {
             return new GooglePrivacyDlpV2QuasiIdentifierFieldResponse(customTag, field);
         }

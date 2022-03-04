@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GalleryIdentifierResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="uniqueName", required=true)
-    private final String uniqueName;
+      private final String uniqueName;
 
     public String getUniqueName() {
         return this.uniqueName;
@@ -59,7 +59,6 @@ public final class GalleryIdentifierResponse extends io.pulumi.resources.InvokeA
             this.uniqueName = Objects.requireNonNull(uniqueName);
             return this;
         }
-
         public GalleryIdentifierResponse build() {
             return new GalleryIdentifierResponse(uniqueName);
         }

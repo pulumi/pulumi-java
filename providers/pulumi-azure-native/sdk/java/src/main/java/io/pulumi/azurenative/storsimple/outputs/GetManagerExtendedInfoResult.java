@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -96,77 +96,77 @@ public final class GetManagerExtendedInfoResult {
     /**
      * Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
      * 
-     */
+    */
     public String getAlgorithm() {
         return this.algorithm;
     }
     /**
      * Represents the CEK of the resource.
      * 
-     */
+    */
     public Optional<String> getEncryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
      * Represents the Cert thumbprint that was used to encrypt the CEK.
      * 
-     */
+    */
     public Optional<String> getEncryptionKeyThumbprint() {
         return Optional.ofNullable(this.encryptionKeyThumbprint);
     }
     /**
      * The etag of the resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Represents the CIK of the resource.
      * 
-     */
+    */
     public String getIntegrityKey() {
         return this.integrityKey;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
      * 
-     */
+    */
     public Optional<String> getPortalCertificateThumbprint() {
         return Optional.ofNullable(this.portalCertificateThumbprint);
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The version of the extended info being persisted.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -265,7 +265,6 @@ public final class GetManagerExtendedInfoResult {
             this.version = version;
             return this;
         }
-
         public GetManagerExtendedInfoResult build() {
             return new GetManagerExtendedInfoResult(algorithm, encryptionKey, encryptionKeyThumbprint, etag, id, integrityKey, kind, name, portalCertificateThumbprint, type, version);
         }

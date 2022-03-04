@@ -6,21 +6,41 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.inputs.GetKustoPoolPrincipalAssignmentArgs;
 import io.pulumi.azurenative.synapse.outputs.GetKustoPoolPrincipalAssignmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKustoPoolPrincipalAssignment {
-/**
- * Class representing a cluster principal assignment.
+    private GetKustoPoolPrincipalAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetKustoPoolPrincipalAssignmentArgs.Builder a);
+    }
+    private static GetKustoPoolPrincipalAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKustoPoolPrincipalAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing a cluster principal assignment.
  * API Version: 2021-04-01-preview.
  * 
- *
- * Class representing a cluster principal assignment.
+     *
+     * Class representing a cluster principal assignment.
  * 
- */
+     */
+    public static CompletableFuture<GetKustoPoolPrincipalAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing a cluster principal assignment.
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * Class representing a cluster principal assignment.
+     * 
+     */
     public static CompletableFuture<GetKustoPoolPrincipalAssignmentResult> invokeAsync(GetKustoPoolPrincipalAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getKustoPoolPrincipalAssignment", TypeShape.of(GetKustoPoolPrincipalAssignmentResult.class), args == null ? GetKustoPoolPrincipalAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

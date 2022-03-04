@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DiskPoolVolumeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable List<String> endpoints;
+      private final @Nullable List<String> endpoints;
 
     public List<String> getEndpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
@@ -35,7 +35,7 @@ public final class DiskPoolVolumeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lunName")
-    private final @Nullable String lunName;
+      private final @Nullable String lunName;
 
     public Optional<String> getLunName() {
         return this.lunName == null ? Optional.empty() : Optional.ofNullable(this.lunName);
@@ -84,7 +84,6 @@ public final class DiskPoolVolumeResponse extends io.pulumi.resources.InvokeArgs
             this.lunName = lunName;
             return this;
         }
-
         public DiskPoolVolumeResponse build() {
             return new DiskPoolVolumeResponse(endpoints, lunName);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.elastic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.elastic.inputs.ListVMHostArgs;
 import io.pulumi.azurenative.elastic.outputs.ListVMHostResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListVMHost {
-/**
- * Response of a list operation.
+    private ListVMHost() {}
+    public interface BuilderApplicator {
+        public void apply(ListVMHostArgs.Builder a);
+    }
+    private static ListVMHostArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListVMHostArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response of a list operation.
  * API Version: 2020-07-01.
  * 
- *
- * Response of a list operation.
+     *
+     * Response of a list operation.
  * 
- */
+     */
+    public static CompletableFuture<ListVMHostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response of a list operation.
+     * API Version: 2020-07-01.
+     * 
+     *
+         * Response of a list operation.
+     * 
+     */
     public static CompletableFuture<ListVMHostResult> invokeAsync(ListVMHostArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:listVMHost", TypeShape.of(ListVMHostResult.class), args == null ? ListVMHostArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.ContentHashArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentHash")
-    private final @Nullable Input<ContentHashArgs> contentHash;
+      private final @Nullable Input<ContentHashArgs> contentHash;
 
     public Input<ContentHashArgs> getContentHash() {
         return this.contentHash == null ? Input.empty() : this.contentHash;
@@ -35,7 +35,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -46,7 +46,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -120,7 +120,6 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ContentLinkArgs build() {
             return new ContentLinkArgs(contentHash, uri, version);
         }

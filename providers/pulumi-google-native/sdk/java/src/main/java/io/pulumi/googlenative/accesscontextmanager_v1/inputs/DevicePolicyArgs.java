@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.DevicePolicyAllowedDeviceManagementLevelsItem;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.DevicePolicyAllowedEncryptionStatusesItem;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.OsConstraintArgs;
@@ -27,7 +27,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedDeviceManagementLevels")
-    private final @Nullable Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels;
+      private final @Nullable Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels;
 
     public Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> getAllowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels == null ? Input.empty() : this.allowedDeviceManagementLevels;
@@ -38,7 +38,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedEncryptionStatuses")
-    private final @Nullable Input<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses;
+      private final @Nullable Input<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses;
 
     public Input<List<DevicePolicyAllowedEncryptionStatusesItem>> getAllowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses == null ? Input.empty() : this.allowedEncryptionStatuses;
@@ -49,7 +49,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osConstraints")
-    private final @Nullable Input<List<OsConstraintArgs>> osConstraints;
+      private final @Nullable Input<List<OsConstraintArgs>> osConstraints;
 
     public Input<List<OsConstraintArgs>> getOsConstraints() {
         return this.osConstraints == null ? Input.empty() : this.osConstraints;
@@ -60,7 +60,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireAdminApproval")
-    private final @Nullable Input<Boolean> requireAdminApproval;
+      private final @Nullable Input<Boolean> requireAdminApproval;
 
     public Input<Boolean> getRequireAdminApproval() {
         return this.requireAdminApproval == null ? Input.empty() : this.requireAdminApproval;
@@ -71,7 +71,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireCorpOwned")
-    private final @Nullable Input<Boolean> requireCorpOwned;
+      private final @Nullable Input<Boolean> requireCorpOwned;
 
     public Input<Boolean> getRequireCorpOwned() {
         return this.requireCorpOwned == null ? Input.empty() : this.requireCorpOwned;
@@ -82,7 +82,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireScreenlock")
-    private final @Nullable Input<Boolean> requireScreenlock;
+      private final @Nullable Input<Boolean> requireScreenlock;
 
     public Input<Boolean> getRequireScreenlock() {
         return this.requireScreenlock == null ? Input.empty() : this.requireScreenlock;
@@ -201,7 +201,6 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.requireScreenlock = Input.ofNullable(requireScreenlock);
             return this;
         }
-
         public DevicePolicyArgs build() {
             return new DevicePolicyArgs(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenlock);
         }

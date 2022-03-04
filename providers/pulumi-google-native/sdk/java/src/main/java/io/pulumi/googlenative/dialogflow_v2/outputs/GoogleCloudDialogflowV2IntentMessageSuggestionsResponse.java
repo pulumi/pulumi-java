@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageSuggestionResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsResponse {
     /**
      * The list of suggested replies.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> getSuggestions() {
         return this.suggestions;
     }
@@ -53,7 +53,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsResponse {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageSuggestionsResponse(suggestions);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.ClusterGetPropertiesResponse;
 import io.pulumi.azurenative.hdinsight.outputs.ClusterIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -78,56 +78,56 @@ public final class GetClusterResult {
     /**
      * The ETag for the resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the cluster, if configured.
      * 
-     */
+    */
     public Optional<ClusterIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The Azure Region where the resource lives
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of the cluster.
      * 
-     */
+    */
     public ClusterGetPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -205,7 +205,6 @@ public final class GetClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(etag, id, identity, location, name, properties, tags, type);
         }

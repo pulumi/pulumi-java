@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlFieldResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class StandardSqlTableTypeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="columns", required=true)
-    private final List<StandardSqlFieldResponse> columns;
+      private final List<StandardSqlFieldResponse> columns;
 
     public List<StandardSqlFieldResponse> getColumns() {
         return this.columns;
@@ -60,7 +60,6 @@ public final class StandardSqlTableTypeResponse extends io.pulumi.resources.Invo
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-
         public StandardSqlTableTypeResponse build() {
             return new StandardSqlTableTypeResponse(columns);
         }

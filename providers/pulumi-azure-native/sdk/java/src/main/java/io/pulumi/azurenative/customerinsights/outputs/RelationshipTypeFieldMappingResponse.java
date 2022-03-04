@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class RelationshipTypeFieldMappingResponse {
     /**
      * Specifies the fieldName in profile.
      * 
-     */
+    */
     public String getProfileFieldName() {
         return this.profileFieldName;
     }
     /**
      * Specifies the KeyProperty (from StrongId) of the related profile.
      * 
-     */
+    */
     public String getRelatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }
@@ -74,7 +74,6 @@ public final class RelationshipTypeFieldMappingResponse {
             this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
             return this;
         }
-
         public RelationshipTypeFieldMappingResponse build() {
             return new RelationshipTypeFieldMappingResponse(profileFieldName, relatedProfileKeyProperty);
         }

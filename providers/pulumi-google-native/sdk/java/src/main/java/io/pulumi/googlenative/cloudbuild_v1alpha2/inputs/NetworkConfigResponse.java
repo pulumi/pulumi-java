@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-    private final String peeredNetwork;
+      private final String peeredNetwork;
 
     public String getPeeredNetwork() {
         return this.peeredNetwork;
@@ -59,7 +59,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
-
         public NetworkConfigResponse build() {
             return new NetworkConfigResponse(peeredNetwork);
         }

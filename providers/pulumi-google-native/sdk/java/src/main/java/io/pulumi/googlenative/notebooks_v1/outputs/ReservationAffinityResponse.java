@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ReservationAffinityResponse {
     /**
      * Optional. Type of reservation to consume
      * 
-     */
+    */
     public String getConsumeReservationType() {
         return this.consumeReservationType;
     }
     /**
      * Optional. Corresponds to the label key of reservation resource.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Optional. Corresponds to the label values of reservation resource.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -96,7 +96,6 @@ public final class ReservationAffinityResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ReservationAffinityResponse build() {
             return new ReservationAffinityResponse(consumeReservationType, key, values);
         }

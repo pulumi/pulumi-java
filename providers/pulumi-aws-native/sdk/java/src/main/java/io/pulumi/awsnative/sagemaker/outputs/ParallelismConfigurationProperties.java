@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ParallelismConfigurationProperties {
     /**
      * Maximum parallel execution steps
      * 
-     */
+    */
     public Integer getMaxParallelExecutionSteps() {
         return this.maxParallelExecutionSteps;
     }
@@ -52,7 +52,6 @@ public final class ParallelismConfigurationProperties {
             this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps);
             return this;
         }
-
         public ParallelismConfigurationProperties build() {
             return new ParallelismConfigurationProperties(maxParallelExecutionSteps);
         }

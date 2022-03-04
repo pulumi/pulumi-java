@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayBgpPeerStatusArgs;
 import io.pulumi.azurenative.network.outputs.GetVirtualNetworkGatewayBgpPeerStatusResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayBgpPeerStatus {
-/**
- * Response for list BGP peer status API service call.
+    private GetVirtualNetworkGatewayBgpPeerStatus() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkGatewayBgpPeerStatusArgs.Builder a);
+    }
+    private static GetVirtualNetworkGatewayBgpPeerStatusArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkGatewayBgpPeerStatusArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response for list BGP peer status API service call.
  * API Version: 2020-11-01.
  * 
- *
- * Response for list BGP peer status API service call.
+     *
+     * Response for list BGP peer status API service call.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkGatewayBgpPeerStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response for list BGP peer status API service call.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Response for list BGP peer status API service call.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkGatewayBgpPeerStatusResult> invokeAsync(GetVirtualNetworkGatewayBgpPeerStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayBgpPeerStatus", TypeShape.of(GetVirtualNetworkGatewayBgpPeerStatusResult.class), args == null ? GetVirtualNetworkGatewayBgpPeerStatusArgs.Empty : args, Utilities.withVersion(options));
     }

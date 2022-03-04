@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ComputeResourceResponse {
     /**
      * Memory in GB
      * 
-     */
+    */
     public Double getMemoryInGB() {
         return this.memoryInGB;
     }
     /**
      * Processor count
      * 
-     */
+    */
     public Integer getProcessorCount() {
         return this.processorCount;
     }
@@ -75,7 +75,6 @@ public final class ComputeResourceResponse {
             this.processorCount = Objects.requireNonNull(processorCount);
             return this;
         }
-
         public ComputeResourceResponse build() {
             return new ComputeResourceResponse(memoryInGB, processorCount);
         }

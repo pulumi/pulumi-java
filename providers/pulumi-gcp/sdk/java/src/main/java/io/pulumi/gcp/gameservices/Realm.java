@@ -5,8 +5,8 @@ package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gameservices.RealmArgs;
 import io.pulumi.gcp.gameservices.inputs.RealmState;
@@ -165,6 +165,37 @@ public class Realm extends io.pulumi.resources.CustomResource {
         return this.timeZone;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RealmArgs.Builder a);
+    }
+    private static io.pulumi.gcp.gameservices.RealmArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.gameservices.RealmArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Realm(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Realm(String name) {
+        this(name, RealmArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Realm(String name, RealmArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

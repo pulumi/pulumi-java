@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1SentimentDataResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
     /**
      * The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
      * 
-     */
+    */
     public String getEntityUniqueId() {
         return this.entityUniqueId;
     }
     /**
      * Sentiment expressed for this mention of the entity.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentiment() {
         return this.sentiment;
     }
     /**
      * The type of the entity mention.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(entityUniqueId, sentiment, type);
         }

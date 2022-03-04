@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class FlowMarketoSourcePropertiesArgs extends io.pulumi.resources.R
     public static final FlowMarketoSourcePropertiesArgs Empty = new FlowMarketoSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -57,7 +57,6 @@ public final class FlowMarketoSourcePropertiesArgs extends io.pulumi.resources.R
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
-
         public FlowMarketoSourcePropertiesArgs build() {
             return new FlowMarketoSourcePropertiesArgs(object);
         }

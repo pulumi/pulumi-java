@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd;
 import java.lang.String;
@@ -56,7 +56,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * backendService.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? List.of() : this.requestHeadersToAdds;
     }
@@ -64,7 +64,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * A list of header names for headers that need to be removed from the request
      * prior to forwarding the request to the backendService.
      * 
-     */
+    */
     public List<String> getRequestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? List.of() : this.requestHeadersToRemoves;
     }
@@ -72,7 +72,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * Headers to add the response prior to sending the response back to the client.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd> getResponseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? List.of() : this.responseHeadersToAdds;
     }
@@ -80,7 +80,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * A list of header names for headers that need to be removed from the response
      * prior to sending the response back to the client.
      * 
-     */
+    */
     public List<String> getResponseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? List.of() : this.responseHeadersToRemoves;
     }
@@ -130,7 +130,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AssignmentGroupLabelResponse {
     /**
      * Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
@@ -53,7 +53,6 @@ public final class AssignmentGroupLabelResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public AssignmentGroupLabelResponse build() {
             return new AssignmentGroupLabelResponse(labels);
         }

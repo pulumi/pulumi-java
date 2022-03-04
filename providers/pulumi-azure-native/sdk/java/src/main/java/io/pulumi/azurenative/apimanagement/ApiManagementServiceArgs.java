@@ -13,7 +13,7 @@ import io.pulumi.azurenative.apimanagement.inputs.HostnameConfigurationArgs;
 import io.pulumi.azurenative.apimanagement.inputs.VirtualNetworkConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="additionalLocations")
-    private final @Nullable Input<List<AdditionalLocationArgs>> additionalLocations;
+      private final @Nullable Input<List<AdditionalLocationArgs>> additionalLocations;
 
     public Input<List<AdditionalLocationArgs>> getAdditionalLocations() {
         return this.additionalLocations == null ? Input.empty() : this.additionalLocations;
@@ -42,7 +42,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="apiVersionConstraint")
-    private final @Nullable Input<ApiVersionConstraintArgs> apiVersionConstraint;
+      private final @Nullable Input<ApiVersionConstraintArgs> apiVersionConstraint;
 
     public Input<ApiVersionConstraintArgs> getApiVersionConstraint() {
         return this.apiVersionConstraint == null ? Input.empty() : this.apiVersionConstraint;
@@ -53,7 +53,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certificates")
-    private final @Nullable Input<List<CertificateConfigurationArgs>> certificates;
+      private final @Nullable Input<List<CertificateConfigurationArgs>> certificates;
 
     public Input<List<CertificateConfigurationArgs>> getCertificates() {
         return this.certificates == null ? Input.empty() : this.certificates;
@@ -64,7 +64,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="customProperties")
-    private final @Nullable Input<Map<String,String>> customProperties;
+      private final @Nullable Input<Map<String,String>> customProperties;
 
     public Input<Map<String,String>> getCustomProperties() {
         return this.customProperties == null ? Input.empty() : this.customProperties;
@@ -75,7 +75,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="disableGateway")
-    private final @Nullable Input<Boolean> disableGateway;
+      private final @Nullable Input<Boolean> disableGateway;
 
     public Input<Boolean> getDisableGateway() {
         return this.disableGateway == null ? Input.empty() : this.disableGateway;
@@ -86,7 +86,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableClientCertificate")
-    private final @Nullable Input<Boolean> enableClientCertificate;
+      private final @Nullable Input<Boolean> enableClientCertificate;
 
     public Input<Boolean> getEnableClientCertificate() {
         return this.enableClientCertificate == null ? Input.empty() : this.enableClientCertificate;
@@ -97,7 +97,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="hostnameConfigurations")
-    private final @Nullable Input<List<HostnameConfigurationArgs>> hostnameConfigurations;
+      private final @Nullable Input<List<HostnameConfigurationArgs>> hostnameConfigurations;
 
     public Input<List<HostnameConfigurationArgs>> getHostnameConfigurations() {
         return this.hostnameConfigurations == null ? Input.empty() : this.hostnameConfigurations;
@@ -108,7 +108,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ApiManagementServiceIdentityArgs> identity;
+      private final @Nullable Input<ApiManagementServiceIdentityArgs> identity;
 
     public Input<ApiManagementServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -119,7 +119,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -130,7 +130,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="notificationSenderEmail")
-    private final @Nullable Input<String> notificationSenderEmail;
+      private final @Nullable Input<String> notificationSenderEmail;
 
     public Input<String> getNotificationSenderEmail() {
         return this.notificationSenderEmail == null ? Input.empty() : this.notificationSenderEmail;
@@ -141,7 +141,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publisherEmail", required=true)
-    private final Input<String> publisherEmail;
+      private final Input<String> publisherEmail;
 
     public Input<String> getPublisherEmail() {
         return this.publisherEmail;
@@ -152,7 +152,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publisherName", required=true)
-    private final Input<String> publisherName;
+      private final Input<String> publisherName;
 
     public Input<String> getPublisherName() {
         return this.publisherName;
@@ -163,7 +163,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -174,7 +174,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="restore")
-    private final @Nullable Input<Boolean> restore;
+      private final @Nullable Input<Boolean> restore;
 
     public Input<Boolean> getRestore() {
         return this.restore == null ? Input.empty() : this.restore;
@@ -185,7 +185,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -196,7 +196,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<ApiManagementServiceSkuPropertiesArgs> sku;
+      private final Input<ApiManagementServiceSkuPropertiesArgs> sku;
 
     public Input<ApiManagementServiceSkuPropertiesArgs> getSku() {
         return this.sku;
@@ -207,7 +207,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -218,7 +218,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="virtualNetworkConfiguration")
-    private final @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
+      private final @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
     public Input<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
         return this.virtualNetworkConfiguration == null ? Input.empty() : this.virtualNetworkConfiguration;
@@ -229,7 +229,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="virtualNetworkType")
-    private final @Nullable Input<Either<String,VirtualNetworkType>> virtualNetworkType;
+      private final @Nullable Input<Either<String,VirtualNetworkType>> virtualNetworkType;
 
     public Input<Either<String,VirtualNetworkType>> getVirtualNetworkType() {
         return this.virtualNetworkType == null ? Input.empty() : this.virtualNetworkType;
@@ -240,7 +240,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -569,7 +569,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public ApiManagementServiceArgs build() {
             return new ApiManagementServiceArgs(additionalLocations, apiVersionConstraint, certificates, customProperties, disableGateway, enableClientCertificate, hostnameConfigurations, identity, location, notificationSenderEmail, publisherEmail, publisherName, resourceGroupName, restore, serviceName, sku, tags, virtualNetworkConfiguration, virtualNetworkType, zones);
         }

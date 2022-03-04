@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="appInitialActivity", required=true)
-    private final String appInitialActivity;
+      private final String appInitialActivity;
 
     public String getAppInitialActivity() {
         return this.appInitialActivity;
@@ -33,7 +33,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="bootstrapPackageId", required=true)
-    private final String bootstrapPackageId;
+      private final String bootstrapPackageId;
 
     public String getBootstrapPackageId() {
         return this.bootstrapPackageId;
@@ -44,7 +44,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="bootstrapRunnerClass", required=true)
-    private final String bootstrapRunnerClass;
+      private final String bootstrapRunnerClass;
 
     public String getBootstrapRunnerClass() {
         return this.bootstrapRunnerClass;
@@ -55,7 +55,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxDepth", required=true)
-    private final Integer maxDepth;
+      private final Integer maxDepth;
 
     public Integer getMaxDepth() {
         return this.maxDepth;
@@ -66,7 +66,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxSteps", required=true)
-    private final Integer maxSteps;
+      private final Integer maxSteps;
 
     public Integer getMaxSteps() {
         return this.maxSteps;
@@ -145,7 +145,6 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
             this.maxSteps = Objects.requireNonNull(maxSteps);
             return this;
         }
-
         public AndroidRoboTestResponse build() {
             return new AndroidRoboTestResponse(appInitialActivity, bootstrapPackageId, bootstrapRunnerClass, maxDepth, maxSteps);
         }

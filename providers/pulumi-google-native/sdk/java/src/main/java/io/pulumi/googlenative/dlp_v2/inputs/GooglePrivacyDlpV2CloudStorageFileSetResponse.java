@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse extends io.pulu
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse extends io.pulu
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStorageFileSetResponse build() {
             return new GooglePrivacyDlpV2CloudStorageFileSetResponse(url);
         }

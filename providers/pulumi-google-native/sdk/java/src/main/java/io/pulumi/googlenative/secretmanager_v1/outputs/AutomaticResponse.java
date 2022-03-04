@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.secretmanager_v1.outputs.CustomerManagedEncryptionResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AutomaticResponse {
     /**
      * Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
      * 
-     */
+    */
     public CustomerManagedEncryptionResponse getCustomerManagedEncryption() {
         return this.customerManagedEncryption;
     }
@@ -52,7 +52,6 @@ public final class AutomaticResponse {
             this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
             return this;
         }
-
         public AutomaticResponse build() {
             return new AutomaticResponse(customerManagedEncryption);
         }

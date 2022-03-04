@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DocumentNoteResponse {
     /**
      * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata")
      * 
-     */
+    */
     public String getDataLicence() {
         return this.dataLicence;
     }
     /**
      * Provide a reference number that can be used to understand how to parse and interpret the rest of the file
      * 
-     */
+    */
     public String getSpdxVersion() {
         return this.spdxVersion;
     }
@@ -74,7 +74,6 @@ public final class DocumentNoteResponse {
             this.spdxVersion = Objects.requireNonNull(spdxVersion);
             return this;
         }
-
         public DocumentNoteResponse build() {
             return new DocumentNoteResponse(dataLicence, spdxVersion);
         }

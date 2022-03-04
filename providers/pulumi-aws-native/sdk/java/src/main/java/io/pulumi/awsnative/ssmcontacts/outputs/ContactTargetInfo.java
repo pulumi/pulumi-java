@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmcontacts.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ContactTargetInfo {
     /**
      * The Amazon Resource Name (ARN) of the contact.
      * 
-     */
+    */
     public String getContactId() {
         return this.contactId;
     }
     /**
      * A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.
      * 
-     */
+    */
     public Boolean getIsEssential() {
         return this.isEssential;
     }
@@ -75,7 +75,6 @@ public final class ContactTargetInfo {
             this.isEssential = Objects.requireNonNull(isEssential);
             return this;
         }
-
         public ContactTargetInfo build() {
             return new ContactTargetInfo(contactId, isEssential);
         }

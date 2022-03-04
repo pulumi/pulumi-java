@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class DatabaseTableResponse {
     /**
      * Indicates whether table is empty or not
      * 
-     */
+    */
     public Boolean getHasRows() {
         return this.hasRows;
     }
     /**
      * Schema-qualified name of the table
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -75,7 +75,6 @@ public final class DatabaseTableResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DatabaseTableResponse build() {
             return new DatabaseTableResponse(hasRows, name);
         }

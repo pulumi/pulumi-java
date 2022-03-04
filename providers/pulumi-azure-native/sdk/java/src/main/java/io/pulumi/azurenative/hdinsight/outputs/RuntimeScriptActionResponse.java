@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class RuntimeScriptActionResponse {
     /**
      * The application name of the script action, if any.
      * 
-     */
+    */
     public String getApplicationName() {
         return this.applicationName;
     }
     /**
      * The name of the script action.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The parameters for the script
      * 
-     */
+    */
     public Optional<String> getParameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * The list of roles where script will be executed.
      * 
-     */
+    */
     public List<String> getRoles() {
         return this.roles;
     }
     /**
      * The URI to the script.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -140,7 +140,6 @@ public final class RuntimeScriptActionResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RuntimeScriptActionResponse build() {
             return new RuntimeScriptActionResponse(applicationName, name, parameters, roles, uri);
         }

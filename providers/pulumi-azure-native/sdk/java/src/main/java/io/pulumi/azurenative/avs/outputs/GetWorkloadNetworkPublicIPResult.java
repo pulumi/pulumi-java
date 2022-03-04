@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class GetWorkloadNetworkPublicIPResult {
     /**
      * Display name of the Public IP Block.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Number of Public IPs requested.
      * 
-     */
+    */
     public Optional<Double> getNumberOfPublicIPs() {
         return Optional.ofNullable(this.numberOfPublicIPs);
     }
     /**
      * The provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * CIDR Block of the Public IP Block.
      * 
-     */
+    */
     public String getPublicIPBlock() {
         return this.publicIPBlock;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -182,7 +182,6 @@ public final class GetWorkloadNetworkPublicIPResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkPublicIPResult build() {
             return new GetWorkloadNetworkPublicIPResult(displayName, id, name, numberOfPublicIPs, provisioningState, publicIPBlock, type);
         }

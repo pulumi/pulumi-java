@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class ImageTemplateManagedImageSourceResponse {
     /**
      * ARM resource id of the managed image in customer subscription
      * 
-     */
+    */
     public String getImageId() {
         return this.imageId;
     }
@@ -40,7 +40,7 @@ public final class ImageTemplateManagedImageSourceResponse {
      * Specifies the type of source image you want to start with.
      * Expected value is 'ManagedImage'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -76,7 +76,6 @@ public final class ImageTemplateManagedImageSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateManagedImageSourceResponse build() {
             return new ImageTemplateManagedImageSourceResponse(imageId, type);
         }

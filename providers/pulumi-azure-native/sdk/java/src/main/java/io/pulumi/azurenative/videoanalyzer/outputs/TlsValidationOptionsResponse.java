@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class TlsValidationOptionsResponse {
     /**
      * When set to 'true' causes the certificate subject name validation to be skipped. Default is 'false'.
      * 
-     */
+    */
     public Optional<String> getIgnoreHostname() {
         return Optional.ofNullable(this.ignoreHostname);
     }
     /**
      * When set to 'true' causes the certificate chain trust validation to be skipped. Default is 'false'.
      * 
-     */
+    */
     public Optional<String> getIgnoreSignature() {
         return Optional.ofNullable(this.ignoreSignature);
     }
@@ -76,7 +76,6 @@ public final class TlsValidationOptionsResponse {
             this.ignoreSignature = ignoreSignature;
             return this;
         }
-
         public TlsValidationOptionsResponse build() {
             return new TlsValidationOptionsResponse(ignoreHostname, ignoreSignature);
         }

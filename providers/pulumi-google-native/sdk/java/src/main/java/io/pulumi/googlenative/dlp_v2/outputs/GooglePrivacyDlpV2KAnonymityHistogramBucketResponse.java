@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse;
 import java.lang.String;
 import java.util.List;
@@ -54,35 +54,35 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
     /**
      * Total number of equivalence classes in this bucket.
      * 
-     */
+    */
     public String getBucketSize() {
         return this.bucketSize;
     }
     /**
      * Total number of distinct equivalence classes in this bucket.
      * 
-     */
+    */
     public String getBucketValueCount() {
         return this.bucketValueCount;
     }
     /**
      * Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> getBucketValues() {
         return this.bucketValues;
     }
     /**
      * Lower bound on the size of the equivalence classes in this bucket.
      * 
-     */
+    */
     public String getEquivalenceClassSizeLowerBound() {
         return this.equivalenceClassSizeLowerBound;
     }
     /**
      * Upper bound on the size of the equivalence classes in this bucket.
      * 
-     */
+    */
     public String getEquivalenceClassSizeUpperBound() {
         return this.equivalenceClassSizeUpperBound;
     }
@@ -139,7 +139,6 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
             this.equivalenceClassSizeUpperBound = Objects.requireNonNull(equivalenceClassSizeUpperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2KAnonymityHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, equivalenceClassSizeLowerBound, equivalenceClassSizeUpperBound);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.IngressResponse;
 import io.pulumi.azurenative.web.outputs.RegistryCredentialsResponse;
 import io.pulumi.azurenative.web.outputs.SecretResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,28 +53,28 @@ public final class ConfigurationResponse {
      * ActiveRevisionsMode controls how active revisions are handled for the Container app:
      * <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
      * 
-     */
+    */
     public Optional<String> getActiveRevisionsMode() {
         return Optional.ofNullable(this.activeRevisionsMode);
     }
     /**
      * Ingress configurations.
      * 
-     */
+    */
     public Optional<IngressResponse> getIngress() {
         return Optional.ofNullable(this.ingress);
     }
     /**
      * Collection of private container registry credentials for containers used by the Container app
      * 
-     */
+    */
     public List<RegistryCredentialsResponse> getRegistries() {
         return this.registries == null ? List.of() : this.registries;
     }
     /**
      * Collection of secrets used by a Container app
      * 
-     */
+    */
     public List<SecretResponse> getSecrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
@@ -124,7 +124,6 @@ public final class ConfigurationResponse {
             this.secrets = secrets;
             return this;
         }
-
         public ConfigurationResponse build() {
             return new ConfigurationResponse(activeRevisionsMode, ingress, registries, secrets);
         }

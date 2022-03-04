@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,7 +34,7 @@ public final class CopyVideoResponse {
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
@@ -42,7 +42,7 @@ public final class CopyVideoResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.CopyVideo'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
@@ -78,7 +78,6 @@ public final class CopyVideoResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public CopyVideoResponse build() {
             return new CopyVideoResponse(label, odataType);
         }

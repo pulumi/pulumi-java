@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.PipelineRunTargetType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class PipelineRunTargetPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class PipelineRunTargetPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,PipelineRunTargetType>> type;
+      private final @Nullable Input<Either<String,PipelineRunTargetType>> type;
 
     public Input<Either<String,PipelineRunTargetType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -91,7 +91,6 @@ public final class PipelineRunTargetPropertiesArgs extends io.pulumi.resources.R
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public PipelineRunTargetPropertiesArgs build() {
             return new PipelineRunTargetPropertiesArgs(name, type);
         }

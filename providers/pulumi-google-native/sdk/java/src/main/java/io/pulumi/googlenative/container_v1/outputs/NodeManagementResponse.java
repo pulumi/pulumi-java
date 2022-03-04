@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.AutoUpgradeOptionsResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class NodeManagementResponse {
     /**
      * A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
      * 
-     */
+    */
     public Boolean getAutoRepair() {
         return this.autoRepair;
     }
     /**
      * A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
      * 
-     */
+    */
     public Boolean getAutoUpgrade() {
         return this.autoUpgrade;
     }
     /**
      * Specifies the Auto Upgrade knobs for the node pool.
      * 
-     */
+    */
     public AutoUpgradeOptionsResponse getUpgradeOptions() {
         return this.upgradeOptions;
     }
@@ -96,7 +96,6 @@ public final class NodeManagementResponse {
             this.upgradeOptions = Objects.requireNonNull(upgradeOptions);
             return this;
         }
-
         public NodeManagementResponse build() {
             return new NodeManagementResponse(autoRepair, autoUpgrade, upgradeOptions);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVirtualNetworkGatewayVpnclientIpsecParametersArgs extends 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetVirtualNetworkGatewayVpnclientIpsecParametersArgs extends 
      * 
      */
     @InputImport(name="virtualNetworkGatewayName", required=true)
-    private final String virtualNetworkGatewayName;
+      private final String virtualNetworkGatewayName;
 
     public String getVirtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
@@ -77,7 +77,6 @@ public final class GetVirtualNetworkGatewayVpnclientIpsecParametersArgs extends 
             this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
             return this;
         }
-
         public GetVirtualNetworkGatewayVpnclientIpsecParametersArgs build() {
             return new GetVirtualNetworkGatewayVpnclientIpsecParametersArgs(resourceGroupName, virtualNetworkGatewayName);
         }

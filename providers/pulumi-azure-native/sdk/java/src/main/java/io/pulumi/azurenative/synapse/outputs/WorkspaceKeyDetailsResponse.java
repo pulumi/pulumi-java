@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class WorkspaceKeyDetailsResponse {
     /**
      * Workspace Key sub-resource key vault url
      * 
-     */
+    */
     public Optional<String> getKeyVaultUrl() {
         return Optional.ofNullable(this.keyVaultUrl);
     }
     /**
      * Workspace Key sub-resource name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -76,7 +76,6 @@ public final class WorkspaceKeyDetailsResponse {
             this.name = name;
             return this;
         }
-
         public WorkspaceKeyDetailsResponse build() {
             return new WorkspaceKeyDetailsResponse(keyVaultUrl, name);
         }

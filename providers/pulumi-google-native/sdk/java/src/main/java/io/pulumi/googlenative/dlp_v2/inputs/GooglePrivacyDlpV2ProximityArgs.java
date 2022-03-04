@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="windowAfter")
-    private final @Nullable Input<Integer> windowAfter;
+      private final @Nullable Input<Integer> windowAfter;
 
     public Input<Integer> getWindowAfter() {
         return this.windowAfter == null ? Input.empty() : this.windowAfter;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="windowBefore")
-    private final @Nullable Input<Integer> windowBefore;
+      private final @Nullable Input<Integer> windowBefore;
 
     public Input<Integer> getWindowBefore() {
         return this.windowBefore == null ? Input.empty() : this.windowBefore;
@@ -93,7 +93,6 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
             this.windowBefore = Input.ofNullable(windowBefore);
             return this;
         }
-
         public GooglePrivacyDlpV2ProximityArgs build() {
             return new GooglePrivacyDlpV2ProximityArgs(windowAfter, windowBefore);
         }

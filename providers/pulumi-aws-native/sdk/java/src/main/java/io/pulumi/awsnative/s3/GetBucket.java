@@ -6,17 +6,33 @@ package io.pulumi.awsnative.s3;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.s3.inputs.GetBucketArgs;
 import io.pulumi.awsnative.s3.outputs.GetBucketResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucket {
-/**
- * Resource Type definition for AWS::S3::Bucket
+    private GetBucket() {}
+    public interface BuilderApplicator {
+        public void apply(GetBucketArgs.Builder a);
+    }
+    private static GetBucketArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBucketArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::S3::Bucket
  * 
- */
+     */
+    public static CompletableFuture<GetBucketResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::S3::Bucket
+     * 
+     */
     public static CompletableFuture<GetBucketResult> invokeAsync(GetBucketArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3:getBucket", TypeShape.of(GetBucketResult.class), args == null ? GetBucketArgs.Empty : args, Utilities.withVersion(options));
     }

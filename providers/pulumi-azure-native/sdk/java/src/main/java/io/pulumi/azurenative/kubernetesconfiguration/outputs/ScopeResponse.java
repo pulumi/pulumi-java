@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ScopeClusterResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ScopeNamespaceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class ScopeResponse {
     /**
      * Specifies that the scope of the extensionInstance is Cluster
      * 
-     */
+    */
     public Optional<ScopeClusterResponse> getCluster() {
         return Optional.ofNullable(this.cluster);
     }
     /**
      * Specifies that the scope of the extensionInstance is Namespace
      * 
-     */
+    */
     public Optional<ScopeNamespaceResponse> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -77,7 +77,6 @@ public final class ScopeResponse {
             this.namespace = namespace;
             return this;
         }
-
         public ScopeResponse build() {
             return new ScopeResponse(cluster, namespace);
         }

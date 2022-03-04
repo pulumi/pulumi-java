@@ -10,8 +10,8 @@ import io.pulumi.awsnative.mediaconnect.outputs.FlowOutputEncryption;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowOutputVpcInterfaceAttachment;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -234,6 +234,37 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
         return this.vpcInterfaceAttachment;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FlowOutputArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.mediaconnect.FlowOutputArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.mediaconnect.FlowOutputArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FlowOutput(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FlowOutput(String name) {
+        this(name, FlowOutputArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FlowOutput(String name, FlowOutputArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

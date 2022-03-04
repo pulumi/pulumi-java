@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudWatchRoleArn")
-    private final @Nullable Input<String> cloudWatchRoleArn;
+      private final @Nullable Input<String> cloudWatchRoleArn;
 
     public Input<String> getCloudWatchRoleArn() {
         return this.cloudWatchRoleArn == null ? Input.empty() : this.cloudWatchRoleArn;
@@ -62,7 +62,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudWatchRoleArn = Input.ofNullable(cloudWatchRoleArn);
             return this;
         }
-
         public AccountArgs build() {
             return new AccountArgs(cloudWatchRoleArn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class AssetFileEncryptionMetadataResponse {
     /**
      * The Asset File Id.
      * 
-     */
+    */
     public String getAssetFileId() {
         return this.assetFileId;
     }
     /**
      * The Asset File name.
      * 
-     */
+    */
     public Optional<String> getAssetFileName() {
         return Optional.ofNullable(this.assetFileName);
     }
     /**
      * The Asset File initialization vector.
      * 
-     */
+    */
     public Optional<String> getInitializationVector() {
         return Optional.ofNullable(this.initializationVector);
     }
@@ -97,7 +97,6 @@ public final class AssetFileEncryptionMetadataResponse {
             this.initializationVector = initializationVector;
             return this;
         }
-
         public AssetFileEncryptionMetadataResponse build() {
             return new AssetFileEncryptionMetadataResponse(assetFileId, assetFileName, initializationVector);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TransferManifestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,6 @@ public final class TransferManifestArgs extends io.pulumi.resources.ResourceArgs
             this.location = Input.ofNullable(location);
             return this;
         }
-
         public TransferManifestArgs build() {
             return new TransferManifestArgs(location);
         }

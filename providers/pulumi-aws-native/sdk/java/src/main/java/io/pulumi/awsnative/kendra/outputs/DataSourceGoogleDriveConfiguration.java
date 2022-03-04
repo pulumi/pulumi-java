@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -126,7 +126,6 @@ public final class DataSourceGoogleDriveConfiguration {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public DataSourceGoogleDriveConfiguration build() {
             return new DataSourceGoogleDriveConfiguration(excludeMimeTypes, excludeSharedDrives, excludeUserAccounts, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn);
         }

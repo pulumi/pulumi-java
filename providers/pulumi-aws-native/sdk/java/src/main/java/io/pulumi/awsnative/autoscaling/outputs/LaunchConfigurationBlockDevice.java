@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.autoscaling.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -70,49 +70,49 @@ public final class LaunchConfigurationBlockDevice {
     /**
      * Indicates whether the volume is deleted on instance termination.
      * 
-     */
+    */
     public Optional<Boolean> getDeleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
      * Specifies whether the volume should be encrypted.
      * 
-     */
+    */
     public Optional<Boolean> getEncrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
      * The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
      * 
-     */
+    */
     public Optional<Integer> getIops() {
         return Optional.ofNullable(this.iops);
     }
     /**
      * The snapshot ID of the volume to use.
      * 
-     */
+    */
     public Optional<String> getSnapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
      * The throughput (MiBps) to provision for a gp3 volume.
      * 
-     */
+    */
     public Optional<Integer> getThroughput() {
         return Optional.ofNullable(this.throughput);
     }
     /**
      * The volume size, in GiBs.
      * 
-     */
+    */
     public Optional<Integer> getVolumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
      * The volume type.
      * 
-     */
+    */
     public Optional<String> getVolumeType() {
         return Optional.ofNullable(this.volumeType);
     }
@@ -183,7 +183,6 @@ public final class LaunchConfigurationBlockDevice {
             this.volumeType = volumeType;
             return this;
         }
-
         public LaunchConfigurationBlockDevice build() {
             return new LaunchConfigurationBlockDevice(deleteOnTermination, encrypted, iops, snapshotId, throughput, volumeSize, volumeType);
         }

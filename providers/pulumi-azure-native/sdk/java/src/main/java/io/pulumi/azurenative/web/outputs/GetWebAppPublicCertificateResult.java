@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class GetWebAppPublicCertificateResult {
     /**
      * Public Certificate byte array
      * 
-     */
+    */
     public Optional<String> getBlob() {
         return Optional.ofNullable(this.blob);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Public Certificate Location
      * 
-     */
+    */
     public Optional<String> getPublicCertificateLocation() {
         return Optional.ofNullable(this.publicCertificateLocation);
     }
     /**
      * Certificate Thumbprint
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -181,7 +181,6 @@ public final class GetWebAppPublicCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppPublicCertificateResult build() {
             return new GetWebAppPublicCertificateResult(blob, id, kind, name, publicCertificateLocation, thumbprint, type);
         }

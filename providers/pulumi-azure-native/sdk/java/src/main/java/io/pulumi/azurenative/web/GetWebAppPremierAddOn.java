@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetWebAppPremierAddOnArgs;
 import io.pulumi.azurenative.web.outputs.GetWebAppPremierAddOnResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppPremierAddOn {
-/**
- * Premier add-on.
+    private GetWebAppPremierAddOn() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppPremierAddOnArgs.Builder a);
+    }
+    private static GetWebAppPremierAddOnArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppPremierAddOnArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Premier add-on.
  * API Version: 2020-12-01.
  * 
- *
- * Premier add-on.
+     *
+     * Premier add-on.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppPremierAddOnResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Premier add-on.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Premier add-on.
+     * 
+     */
     public static CompletableFuture<GetWebAppPremierAddOnResult> invokeAsync(GetWebAppPremierAddOnArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPremierAddOn", TypeShape.of(GetWebAppPremierAddOnResult.class), args == null ? GetWebAppPremierAddOnArgs.Empty : args, Utilities.withVersion(options));
     }

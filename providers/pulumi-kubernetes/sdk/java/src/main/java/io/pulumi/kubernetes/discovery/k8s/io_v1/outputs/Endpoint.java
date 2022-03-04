@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.outputs.EndpointConditions;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.outputs.EndpointHints;
@@ -80,56 +80,56 @@ public final class Endpoint {
     /**
      * addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.
      * 
-     */
+    */
     public List<String> getAddresses() {
         return this.addresses;
     }
     /**
      * conditions contains information about the current status of the endpoint.
      * 
-     */
+    */
     public Optional<EndpointConditions> getConditions() {
         return Optional.ofNullable(this.conditions);
     }
     /**
      * deprecatedTopology contains topology information part of the v1beta1 API. This field is deprecated, and will be removed when the v1beta1 API is removed (no sooner than kubernetes v1.24).  While this field can hold values, it is not writable through the v1 API, and any attempts to write to it will be silently ignored. Topology information can be found in the zone and nodeName fields instead.
      * 
-     */
+    */
     public Map<String,String> getDeprecatedTopology() {
         return this.deprecatedTopology == null ? Map.of() : this.deprecatedTopology;
     }
     /**
      * hints contains information associated with how an endpoint should be consumed.
      * 
-     */
+    */
     public Optional<EndpointHints> getHints() {
         return Optional.ofNullable(this.hints);
     }
     /**
      * hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.
      * 
-     */
+    */
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.
      * 
-     */
+    */
     public Optional<String> getNodeName() {
         return Optional.ofNullable(this.nodeName);
     }
     /**
      * targetRef is a reference to a Kubernetes object that represents this endpoint.
      * 
-     */
+    */
     public Optional<ObjectReference> getTargetRef() {
         return Optional.ofNullable(this.targetRef);
     }
     /**
      * zone is the name of the Zone this endpoint exists in.
      * 
-     */
+    */
     public Optional<String> getZone() {
         return Optional.ofNullable(this.zone);
     }
@@ -207,7 +207,6 @@ public final class Endpoint {
             this.zone = zone;
             return this;
         }
-
         public Endpoint build() {
             return new Endpoint(addresses, conditions, deprecatedTopology, hints, hostname, nodeName, targetRef, zone);
         }

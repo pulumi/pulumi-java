@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
      * 
      */
     @InputImport(name="imageType")
-    private final @Nullable Input<String> imageType;
+      private final @Nullable Input<String> imageType;
 
     public Input<String> getImageType() {
         return this.imageType == null ? Input.empty() : this.imageType;
@@ -36,7 +36,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
      * 
      */
     @InputImport(name="minCpuPlatform")
-    private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -49,7 +49,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
      * 
      */
     @InputImport(name="oauthScopes")
-    private final @Nullable Input<List<String>> oauthScopes;
+      private final @Nullable Input<List<String>> oauthScopes;
 
     public Input<List<String>> getOauthScopes() {
         return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
@@ -61,7 +61,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -150,7 +150,6 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
-
         public ClusterClusterAutoscalingAutoProvisioningDefaultsArgs build() {
             return new ClusterClusterAutoscalingAutoProvisioningDefaultsArgs(imageType, minCpuPlatform, oauthScopes, serviceAccount);
         }

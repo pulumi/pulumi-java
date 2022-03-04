@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,7 +44,7 @@ public final class NotificationChannelSensitiveLabels {
      * An authorization token for a notification channel. Channel types that support this field include: slack
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public Optional<String> getAuthToken() {
         return Optional.ofNullable(this.authToken);
     }
@@ -52,7 +52,7 @@ public final class NotificationChannelSensitiveLabels {
      * An password for a notification channel. Channel types that support this field include: webhook_basicauth
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
@@ -60,7 +60,7 @@ public final class NotificationChannelSensitiveLabels {
      * An servicekey token for a notification channel. Channel types that support this field include: pagerduty
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public Optional<String> getServiceKey() {
         return Optional.ofNullable(this.serviceKey);
     }
@@ -103,7 +103,6 @@ public final class NotificationChannelSensitiveLabels {
             this.serviceKey = serviceKey;
             return this;
         }
-
         public NotificationChannelSensitiveLabels build() {
             return new NotificationChannelSensitiveLabels(authToken, password, serviceKey);
         }

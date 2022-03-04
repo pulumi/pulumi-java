@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class UserAssignedIdentityPropertyResponse {
     /**
      * Get the client id for the user assigned identity
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Get the principal id for the user assigned identity
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -74,7 +74,6 @@ public final class UserAssignedIdentityPropertyResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public UserAssignedIdentityPropertyResponse build() {
             return new UserAssignedIdentityPropertyResponse(clientId, principalId);
         }

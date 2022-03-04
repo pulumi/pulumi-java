@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ApplicationPackageContactResponse {
     /**
      * The contact name.
      * 
-     */
+    */
     public Optional<String> getContactName() {
         return Optional.ofNullable(this.contactName);
     }
     /**
      * The contact email.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The contact phone number.
      * 
-     */
+    */
     public String getPhone() {
         return this.phone;
     }
@@ -97,7 +97,6 @@ public final class ApplicationPackageContactResponse {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public ApplicationPackageContactResponse build() {
             return new ApplicationPackageContactResponse(contactName, email, phone);
         }

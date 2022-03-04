@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.PrivateEndpointServiceConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="actionsRequired")
-    private final @Nullable Input<String> actionsRequired;
+      private final @Nullable Input<String> actionsRequired;
 
     public Input<String> getActionsRequired() {
         return this.actionsRequired == null ? Input.empty() : this.actionsRequired;
@@ -36,7 +36,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status;
+      private final @Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
     public Input<Either<String,PrivateEndpointServiceConnectionStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -121,7 +121,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public PrivateLinkServiceConnectionStateArgs build() {
             return new PrivateLinkServiceConnectionStateArgs(actionsRequired, description, status);
         }

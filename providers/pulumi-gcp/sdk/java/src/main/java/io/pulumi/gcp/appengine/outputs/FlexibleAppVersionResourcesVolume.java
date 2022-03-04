@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class FlexibleAppVersionResourcesVolume {
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Volume size in gigabytes.
      * 
-     */
+    */
     public Integer getSizeGb() {
         return this.sizeGb;
     }
     /**
      * Underlying volume type, e.g. 'tmpfs'.
      * 
-     */
+    */
     public String getVolumeType() {
         return this.volumeType;
     }
@@ -96,7 +96,6 @@ public final class FlexibleAppVersionResourcesVolume {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
-
         public FlexibleAppVersionResourcesVolume build() {
             return new FlexibleAppVersionResourcesVolume(name, sizeGb, volumeType);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.containerservice.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -63,42 +63,42 @@ public final class GetPrivateEndpointConnectionResult {
     /**
      * The ID of the private endpoint connection.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the private endpoint connection.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource of private endpoint.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
      * 
-     */
+    */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The current provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class GetPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionResult build() {
             return new GetPrivateEndpointConnectionResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

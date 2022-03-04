@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetCustomApiArgs;
 import io.pulumi.azurenative.web.outputs.GetCustomApiResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomApi {
-/**
- * A custom API
+    private GetCustomApi() {}
+    public interface BuilderApplicator {
+        public void apply(GetCustomApiArgs.Builder a);
+    }
+    private static GetCustomApiArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCustomApiArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A custom API
  * API Version: 2016-06-01.
  * 
- *
- * A custom API
+     *
+     * A custom API
  * 
- */
+     */
+    public static CompletableFuture<GetCustomApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A custom API
+     * API Version: 2016-06-01.
+     * 
+     *
+         * A custom API
+     * 
+     */
     public static CompletableFuture<GetCustomApiResult> invokeAsync(GetCustomApiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getCustomApi", TypeShape.of(GetCustomApiResult.class), args == null ? GetCustomApiArgs.Empty : args, Utilities.withVersion(options));
     }

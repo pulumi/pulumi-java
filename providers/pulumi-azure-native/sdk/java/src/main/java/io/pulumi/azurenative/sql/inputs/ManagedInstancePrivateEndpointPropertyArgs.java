@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagedInstancePrivateEndpointPropertyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -62,7 +62,6 @@ public final class ManagedInstancePrivateEndpointPropertyArgs extends io.pulumi.
             this.id = Input.ofNullable(id);
             return this;
         }
-
         public ManagedInstancePrivateEndpointPropertyArgs build() {
             return new ManagedInstancePrivateEndpointPropertyArgs(id);
         }

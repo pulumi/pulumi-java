@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
      * 
      */
     @InputImport(name="buttonId", required=true)
-    private final Input<String> buttonId;
+      private final Input<String> buttonId;
 
     public Input<String> getButtonId() {
         return this.buttonId;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
      * 
      */
     @InputImport(name="deploymentId", required=true)
-    private final Input<String> deploymentId;
+      private final Input<String> deploymentId;
 
     public Input<String> getDeploymentId() {
         return this.deploymentId;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
      * 
      */
     @InputImport(name="endpointDomain", required=true)
-    private final Input<String> endpointDomain;
+      private final Input<String> endpointDomain;
 
     public Input<String> getEndpointDomain() {
         return this.endpointDomain;
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
      * 
      */
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -144,7 +144,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs(buttonId, deploymentId, endpointDomain, organizationId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ManagedClusterPodIdentityExceptionResponse {
     /**
      * Name of the pod identity exception.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Namespace of the pod identity exception.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
     /**
      * Pod labels to match.
      * 
-     */
+    */
     public Map<String,String> getPodLabels() {
         return this.podLabels;
     }
@@ -96,7 +96,6 @@ public final class ManagedClusterPodIdentityExceptionResponse {
             this.podLabels = Objects.requireNonNull(podLabels);
             return this;
         }
-
         public ManagedClusterPodIdentityExceptionResponse build() {
             return new ManagedClusterPodIdentityExceptionResponse(name, namespace, podLabels);
         }

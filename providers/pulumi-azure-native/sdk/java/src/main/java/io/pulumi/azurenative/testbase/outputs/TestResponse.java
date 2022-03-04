@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.CommandResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,28 +50,28 @@ public final class TestResponse {
     /**
      * The commands used in the test.
      * 
-     */
+    */
     public List<CommandResponse> getCommands() {
         return this.commands;
     }
     /**
      * Indicates if this test is active.It doesn't schedule test for not active Test.
      * 
-     */
+    */
     public Optional<Boolean> getIsActive() {
         return Optional.ofNullable(this.isActive);
     }
     /**
      * The type of the test.
      * 
-     */
+    */
     public String getTestType() {
         return this.testType;
     }
     /**
      * The status of the validation run of the package.
      * 
-     */
+    */
     public String getValidationRunStatus() {
         return this.validationRunStatus;
     }
@@ -121,7 +121,6 @@ public final class TestResponse {
             this.validationRunStatus = Objects.requireNonNull(validationRunStatus);
             return this;
         }
-
         public TestResponse build() {
             return new TestResponse(commands, isActive, testType, validationRunStatus);
         }

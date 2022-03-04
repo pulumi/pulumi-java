@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="acceptedTerms")
-    private final @Nullable Input<Boolean> acceptedTerms;
+      private final @Nullable Input<Boolean> acceptedTerms;
 
     public Input<Boolean> getAcceptedTerms() {
         return this.acceptedTerms == null ? Input.empty() : this.acceptedTerms;
@@ -35,7 +35,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="callingWebHook")
-    private final @Nullable Input<String> callingWebHook;
+      private final @Nullable Input<String> callingWebHook;
 
     public Input<String> getCallingWebHook() {
         return this.callingWebHook == null ? Input.empty() : this.callingWebHook;
@@ -46,7 +46,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="deploymentEnvironment")
-    private final @Nullable Input<String> deploymentEnvironment;
+      private final @Nullable Input<String> deploymentEnvironment;
 
     public Input<String> getDeploymentEnvironment() {
         return this.deploymentEnvironment == null ? Input.empty() : this.deploymentEnvironment;
@@ -57,7 +57,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enableCalling")
-    private final @Nullable Input<Boolean> enableCalling;
+      private final @Nullable Input<Boolean> enableCalling;
 
     public Input<Boolean> getEnableCalling() {
         return this.enableCalling == null ? Input.empty() : this.enableCalling;
@@ -68,7 +68,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="incomingCallRoute")
-    private final @Nullable Input<String> incomingCallRoute;
+      private final @Nullable Input<String> incomingCallRoute;
 
     public Input<String> getIncomingCallRoute() {
         return this.incomingCallRoute == null ? Input.empty() : this.incomingCallRoute;
@@ -79,7 +79,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Input<Boolean> isEnabled;
+      private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -198,7 +198,6 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public MsTeamsChannelPropertiesArgs build() {
             return new MsTeamsChannelPropertiesArgs(acceptedTerms, callingWebHook, deploymentEnvironment, enableCalling, incomingCallRoute, isEnabled);
         }

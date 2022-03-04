@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -118,77 +118,77 @@ public final class HDInsightPigActivityResponse {
     /**
      * User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
      * 
-     */
+    */
     public Optional<Object> getArguments() {
         return Optional.ofNullable(this.arguments);
     }
     /**
      * Allows user to specify defines for Pig job request.
      * 
-     */
+    */
     public Map<String,Object> getDefines() {
         return this.defines == null ? Map.of() : this.defines;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Debug info option.
      * 
-     */
+    */
     public Optional<String> getGetDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Script linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getScriptLinkedService() {
         return Optional.ofNullable(this.scriptLinkedService);
     }
     /**
      * Script path. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getScriptPath() {
         return Optional.ofNullable(this.scriptPath);
     }
     /**
      * Storage linked service references.
      * 
-     */
+    */
     public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
@@ -196,14 +196,14 @@ public final class HDInsightPigActivityResponse {
      * Type of activity.
      * Expected value is 'HDInsightPig'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -316,7 +316,6 @@ public final class HDInsightPigActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public HDInsightPigActivityResponse build() {
             return new HDInsightPigActivityResponse(arguments, defines, dependsOn, description, getDebugInfo, linkedServiceName, name, policy, scriptLinkedService, scriptPath, storageLinkedServices, type, userProperties);
         }

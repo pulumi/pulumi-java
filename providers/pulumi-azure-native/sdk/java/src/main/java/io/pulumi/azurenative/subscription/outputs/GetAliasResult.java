@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.subscription.outputs;
 
 import io.pulumi.azurenative.subscription.outputs.PutAliasResponsePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,28 +46,28 @@ public final class GetAliasResult {
     /**
      * Fully qualified ID for the alias resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Alias ID.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Put Alias response properties.
      * 
-     */
+    */
     public PutAliasResponsePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource type, Microsoft.Subscription/aliases.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GetAliasResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAliasResult build() {
             return new GetAliasResult(id, name, properties, type);
         }

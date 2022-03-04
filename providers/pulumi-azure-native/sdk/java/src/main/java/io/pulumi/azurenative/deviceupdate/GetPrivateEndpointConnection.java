@@ -6,21 +6,41 @@ package io.pulumi.azurenative.deviceupdate;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.deviceupdate.inputs.GetPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.deviceupdate.outputs.GetPrivateEndpointConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnection {
-/**
- * The Private Endpoint Connection resource.
+    private GetPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Private Endpoint Connection resource.
  * API Version: 2020-03-01-preview.
  * 
- *
- * The Private Endpoint Connection resource.
+     *
+     * The Private Endpoint Connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Private Endpoint Connection resource.
+     * API Version: 2020-03-01-preview.
+     * 
+     *
+         * The Private Endpoint Connection resource.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(GetPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deviceupdate:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args == null ? GetPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

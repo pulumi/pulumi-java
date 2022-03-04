@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.TransformSummaryKind;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayData")
-    private final @Nullable Input<List<DisplayDataArgs>> displayData;
+      private final @Nullable Input<List<DisplayDataArgs>> displayData;
 
     public Input<List<DisplayDataArgs>> getDisplayData() {
         return this.displayData == null ? Input.empty() : this.displayData;
@@ -37,7 +37,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -48,7 +48,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="inputCollectionName")
-    private final @Nullable Input<List<String>> inputCollectionName;
+      private final @Nullable Input<List<String>> inputCollectionName;
 
     public Input<List<String>> getInputCollectionName() {
         return this.inputCollectionName == null ? Input.empty() : this.inputCollectionName;
@@ -59,7 +59,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<TransformSummaryKind> kind;
+      private final @Nullable Input<TransformSummaryKind> kind;
 
     public Input<TransformSummaryKind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -70,7 +70,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -81,7 +81,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="outputCollectionName")
-    private final @Nullable Input<List<String>> outputCollectionName;
+      private final @Nullable Input<List<String>> outputCollectionName;
 
     public Input<List<String>> getOutputCollectionName() {
         return this.outputCollectionName == null ? Input.empty() : this.outputCollectionName;
@@ -200,7 +200,6 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
             this.outputCollectionName = Input.ofNullable(outputCollectionName);
             return this;
         }
-
         public TransformSummaryArgs build() {
             return new TransformSummaryArgs(displayData, id, inputCollectionName, kind, name, outputCollectionName);
         }

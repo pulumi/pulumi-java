@@ -6,21 +6,41 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.recoveryservices.inputs.GetProtectionIntentArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.GetProtectionIntentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProtectionIntent {
-/**
- * Base class for backup ProtectionIntent.
+    private GetProtectionIntent() {}
+    public interface BuilderApplicator {
+        public void apply(GetProtectionIntentArgs.Builder a);
+    }
+    private static GetProtectionIntentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProtectionIntentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Base class for backup ProtectionIntent.
  * API Version: 2021-02-01.
  * 
- *
- * Base class for backup ProtectionIntent.
+     *
+     * Base class for backup ProtectionIntent.
  * 
- */
+     */
+    public static CompletableFuture<GetProtectionIntentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Base class for backup ProtectionIntent.
+     * API Version: 2021-02-01.
+     * 
+     *
+         * Base class for backup ProtectionIntent.
+     * 
+     */
     public static CompletableFuture<GetProtectionIntentResult> invokeAsync(GetProtectionIntentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectionIntent", TypeShape.of(GetProtectionIntentResult.class), args == null ? GetProtectionIntentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class ScheduledSourceSynchronizationSettingResponse {
      * Kind of synchronization setting on share.
      * Expected value is 'ScheduleBased'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Recurrence Interval
      * 
-     */
+    */
     public Optional<String> getRecurrenceInterval() {
         return Optional.ofNullable(this.recurrenceInterval);
     }
     /**
      * Synchronization time
      * 
-     */
+    */
     public Optional<String> getSynchronizationTime() {
         return Optional.ofNullable(this.synchronizationTime);
     }
@@ -99,7 +99,6 @@ public final class ScheduledSourceSynchronizationSettingResponse {
             this.synchronizationTime = synchronizationTime;
             return this;
         }
-
         public ScheduledSourceSynchronizationSettingResponse build() {
             return new ScheduledSourceSynchronizationSettingResponse(kind, recurrenceInterval, synchronizationTime);
         }

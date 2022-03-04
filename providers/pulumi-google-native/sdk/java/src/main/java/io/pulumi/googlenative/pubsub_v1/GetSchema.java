@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchema {
-/**
- * Gets a schema.
+    private GetSchema() {}
+    public interface BuilderApplicator {
+        public void apply(GetSchemaArgs.Builder a);
+    }
+    private static GetSchemaArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSchemaArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a schema.
  * 
- */
+     */
+    public static CompletableFuture<GetSchemaResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a schema.
+     * 
+     */
     public static CompletableFuture<GetSchemaResult> invokeAsync(GetSchemaArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsub/v1:getSchema", TypeShape.of(GetSchemaResult.class), args == null ? GetSchemaArgs.Empty : args, Utilities.withVersion(options));
     }

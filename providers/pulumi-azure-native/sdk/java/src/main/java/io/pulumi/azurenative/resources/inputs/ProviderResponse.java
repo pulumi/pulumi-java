@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.inputs.ProviderResourceTypeResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -36,7 +36,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable String namespace;
+      private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
@@ -47,7 +47,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="registrationPolicy", required=true)
-    private final String registrationPolicy;
+      private final String registrationPolicy;
 
     public String getRegistrationPolicy() {
         return this.registrationPolicy;
@@ -58,7 +58,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="registrationState", required=true)
-    private final String registrationState;
+      private final String registrationState;
 
     public String getRegistrationState() {
         return this.registrationState;
@@ -69,7 +69,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceTypes", required=true)
-    private final List<ProviderResourceTypeResponse> resourceTypes;
+      private final List<ProviderResourceTypeResponse> resourceTypes;
 
     public List<ProviderResourceTypeResponse> getResourceTypes() {
         return this.resourceTypes;
@@ -148,7 +148,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
-
         public ProviderResponse build() {
             return new ProviderResponse(id, namespace, registrationPolicy, registrationState, resourceTypes);
         }

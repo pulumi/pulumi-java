@@ -5,8 +5,8 @@ package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionInspectTemplateArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateState;
@@ -123,6 +123,37 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
         return this.parent;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PreventionInspectTemplateArgs.Builder a);
+    }
+    private static io.pulumi.gcp.dataloss.PreventionInspectTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.dataloss.PreventionInspectTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PreventionInspectTemplate(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PreventionInspectTemplate(String name) {
+        this(name, PreventionInspectTemplateArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PreventionInspectTemplate(String name, PreventionInspectTemplateArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

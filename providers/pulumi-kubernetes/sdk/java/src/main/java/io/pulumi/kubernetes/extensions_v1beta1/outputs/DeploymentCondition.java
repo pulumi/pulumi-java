@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class DeploymentCondition {
     /**
      * Last time the condition transitioned from one status to another.
      * 
-     */
+    */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * The last time this condition was updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdateTime() {
         return Optional.ofNullable(this.lastUpdateTime);
     }
     /**
      * A human readable message indicating details about the transition.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The reason for the condition's last transition.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Type of deployment condition.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -160,7 +160,6 @@ public final class DeploymentCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DeploymentCondition build() {
             return new DeploymentCondition(lastTransitionTime, lastUpdateTime, message, reason, status, type);
         }

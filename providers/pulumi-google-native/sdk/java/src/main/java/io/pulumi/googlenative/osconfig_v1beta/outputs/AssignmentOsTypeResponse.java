@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class AssignmentOsTypeResponse {
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS architecture.
      * 
-     */
+    */
     public String getOsArchitecture() {
         return this.osArchitecture;
     }
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
      * 
-     */
+    */
     public String getOsShortName() {
         return this.osShortName;
     }
     /**
      * Targets VM instances with OS Inventory enabled and having the following following OS version.
      * 
-     */
+    */
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -95,7 +95,6 @@ public final class AssignmentOsTypeResponse {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
-
         public AssignmentOsTypeResponse build() {
             return new AssignmentOsTypeResponse(osArchitecture, osShortName, osVersion);
         }

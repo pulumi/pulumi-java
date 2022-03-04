@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class SetValueResponse {
     /**
      * Flag to indicate whether the value represents a secret or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsSecret() {
         return Optional.ofNullable(this.isSecret);
     }
     /**
      * The name of the overridable value.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The overridable value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -98,7 +98,6 @@ public final class SetValueResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SetValueResponse build() {
             return new SetValueResponse(isSecret, name, value);
         }

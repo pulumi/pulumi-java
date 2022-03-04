@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.offazure.outputs;
 
 import io.pulumi.azurenative.offazure.outputs.SitePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -66,35 +66,35 @@ public final class GetHyperVSiteResult {
     /**
      * eTag for concurrency control.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure location in which Sites is created.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the Hyper-V site.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Nested properties of Hyper-V site.
      * 
-     */
+    */
     public SitePropertiesResponse getProperties() {
         return this.properties;
     }
@@ -104,7 +104,7 @@ public final class GetHyperVSiteResult {
     /**
      * Type of resource. Type = Microsoft.OffAzure/HyperVSites.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -175,7 +175,6 @@ public final class GetHyperVSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHyperVSiteResult build() {
             return new GetHyperVSiteResult(eTag, id, location, name, properties, tags, type);
         }

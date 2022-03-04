@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.BigQueryDestinationResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.ConsumptionMeteringConfigResponse;
 import java.lang.Boolean;
@@ -40,21 +40,21 @@ public final class ResourceUsageExportConfigResponse {
     /**
      * Configuration to use BigQuery as usage export destination.
      * 
-     */
+    */
     public BigQueryDestinationResponse getBigqueryDestination() {
         return this.bigqueryDestination;
     }
     /**
      * Configuration to enable resource consumption metering.
      * 
-     */
+    */
     public ConsumptionMeteringConfigResponse getConsumptionMeteringConfig() {
         return this.consumptionMeteringConfig;
     }
     /**
      * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
      * 
-     */
+    */
     public Boolean getEnableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering;
     }
@@ -97,7 +97,6 @@ public final class ResourceUsageExportConfigResponse {
             this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
             return this;
         }
-
         public ResourceUsageExportConfigResponse build() {
             return new ResourceUsageExportConfigResponse(bigqueryDestination, consumptionMeteringConfig, enableNetworkEgressMetering);
         }

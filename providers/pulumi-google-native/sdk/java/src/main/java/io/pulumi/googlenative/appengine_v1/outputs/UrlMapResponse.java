@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.ApiEndpointHandlerResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.ScriptHandlerResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.StaticFilesHandlerResponse;
@@ -76,56 +76,56 @@ public final class UrlMapResponse {
     /**
      * Uses API Endpoints to handle requests.
      * 
-     */
+    */
     public ApiEndpointHandlerResponse getApiEndpoint() {
         return this.apiEndpoint;
     }
     /**
      * Action to take when users access resources that require authentication. Defaults to redirect.
      * 
-     */
+    */
     public String getAuthFailAction() {
         return this.authFailAction;
     }
     /**
      * Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.
      * 
-     */
+    */
     public String getLogin() {
         return this.login;
     }
     /**
      * 30x code to use when performing redirects for the secure field. Defaults to 302.
      * 
-     */
+    */
     public String getRedirectHttpResponseCode() {
         return this.redirectHttpResponseCode;
     }
     /**
      * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script": "auto".
      * 
-     */
+    */
     public ScriptHandlerResponse getScript() {
         return this.script;
     }
     /**
      * Security (HTTPS) enforcement for this URL.
      * 
-     */
+    */
     public String getSecurityLevel() {
         return this.securityLevel;
     }
     /**
      * Returns the contents of a file, such as an image, as the response.
      * 
-     */
+    */
     public StaticFilesHandlerResponse getStaticFiles() {
         return this.staticFiles;
     }
     /**
      * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
      * 
-     */
+    */
     public String getUrlRegex() {
         return this.urlRegex;
     }
@@ -203,7 +203,6 @@ public final class UrlMapResponse {
             this.urlRegex = Objects.requireNonNull(urlRegex);
             return this;
         }
-
         public UrlMapResponse build() {
             return new UrlMapResponse(apiEndpoint, authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

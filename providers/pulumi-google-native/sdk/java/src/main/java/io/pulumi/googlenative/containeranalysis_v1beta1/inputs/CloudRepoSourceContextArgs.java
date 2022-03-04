@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.AliasContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.RepoIdArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="aliasContext")
-    private final @Nullable Input<AliasContextArgs> aliasContext;
+      private final @Nullable Input<AliasContextArgs> aliasContext;
 
     public Input<AliasContextArgs> getAliasContext() {
         return this.aliasContext == null ? Input.empty() : this.aliasContext;
@@ -36,7 +36,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="repoId")
-    private final @Nullable Input<RepoIdArgs> repoId;
+      private final @Nullable Input<RepoIdArgs> repoId;
 
     public Input<RepoIdArgs> getRepoId() {
         return this.repoId == null ? Input.empty() : this.repoId;
@@ -47,7 +47,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="revisionId")
-    private final @Nullable Input<String> revisionId;
+      private final @Nullable Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId == null ? Input.empty() : this.revisionId;
@@ -121,7 +121,6 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
             this.revisionId = Input.ofNullable(revisionId);
             return this;
         }
-
         public CloudRepoSourceContextArgs build() {
             return new CloudRepoSourceContextArgs(aliasContext, repoId, revisionId);
         }

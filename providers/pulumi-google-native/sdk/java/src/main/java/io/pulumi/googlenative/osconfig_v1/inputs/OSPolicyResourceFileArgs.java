@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileGcsArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileRemoteArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowInsecure")
-    private final @Nullable Input<Boolean> allowInsecure;
+      private final @Nullable Input<Boolean> allowInsecure;
 
     public Input<Boolean> getAllowInsecure() {
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
@@ -37,7 +37,7 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="gcs")
-    private final @Nullable Input<OSPolicyResourceFileGcsArgs> gcs;
+      private final @Nullable Input<OSPolicyResourceFileGcsArgs> gcs;
 
     public Input<OSPolicyResourceFileGcsArgs> getGcs() {
         return this.gcs == null ? Input.empty() : this.gcs;
@@ -48,7 +48,7 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="localPath")
-    private final @Nullable Input<String> localPath;
+      private final @Nullable Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath == null ? Input.empty() : this.localPath;
@@ -59,7 +59,7 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="remote")
-    private final @Nullable Input<OSPolicyResourceFileRemoteArgs> remote;
+      private final @Nullable Input<OSPolicyResourceFileRemoteArgs> remote;
 
     public Input<OSPolicyResourceFileRemoteArgs> getRemote() {
         return this.remote == null ? Input.empty() : this.remote;
@@ -148,7 +148,6 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
             this.remote = Input.ofNullable(remote);
             return this;
         }
-
         public OSPolicyResourceFileArgs build() {
             return new OSPolicyResourceFileArgs(allowInsecure, gcs, localPath, remote);
         }

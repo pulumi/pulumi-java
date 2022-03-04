@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class DeviceCredentialPublicKey {
      * The format of the key.
      * Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
      * 
-     */
+    */
     public String getFormat() {
         return this.format;
     }
     /**
      * The key data.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
@@ -76,7 +76,6 @@ public final class DeviceCredentialPublicKey {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public DeviceCredentialPublicKey build() {
             return new DeviceCredentialPublicKey(format, key);
         }

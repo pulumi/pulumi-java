@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.ListNamedValueArgs;
 import io.pulumi.azurenative.apimanagement.outputs.ListNamedValueResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNamedValue {
-/**
- * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+    private ListNamedValue() {}
+    public interface BuilderApplicator {
+        public void apply(ListNamedValueArgs.Builder a);
+    }
+    private static ListNamedValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListNamedValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
  * API Version: 2020-12-01.
  * 
- *
- * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     *
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
  * 
- */
+     */
+    public static CompletableFuture<ListNamedValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * 
+     */
     public static CompletableFuture<ListNamedValueResult> invokeAsync(ListNamedValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listNamedValue", TypeShape.of(ListNamedValueResult.class), args == null ? ListNamedValueArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.secretmanager.inputs.SecretIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class SecretIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     public static final SecretIamMemberArgs Empty = new SecretIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<SecretIamMemberConditionArgs> condition;
+      private final @Nullable Input<SecretIamMemberConditionArgs> condition;
 
     public Input<SecretIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -35,7 +35,7 @@ public final class SecretIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -48,14 +48,14 @@ public final class SecretIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="secretId", required=true)
-    private final Input<String> secretId;
+      private final Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId;
@@ -159,7 +159,6 @@ public final class SecretIamMemberArgs extends io.pulumi.resources.ResourceArgs 
             this.secretId = Input.of(Objects.requireNonNull(secretId));
             return this;
         }
-
         public SecretIamMemberArgs build() {
             return new SecretIamMemberArgs(condition, member, project, role, secretId);
         }

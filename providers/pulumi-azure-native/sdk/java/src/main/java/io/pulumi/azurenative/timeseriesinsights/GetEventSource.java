@@ -6,7 +6,7 @@ package io.pulumi.azurenative.timeseriesinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.timeseriesinsights.inputs.GetEventSourceArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.GetEventSourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: EventHubEventSource, IoTHubEventSource. */
 public class GetEventSource {
-/**
- * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
+    private GetEventSource() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventSourceArgs.Builder a);
+    }
+    private static GetEventSourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventSourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
  * API Version: 2020-05-15.
  * 
- *
- * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
+     *
+     * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
  * 
- * @deprecated
- * Please use one of the variants: EventHubEventSource, IoTHubEventSource.
+     * @Deprecated
+     * Please use one of the variants: EventHubEventSource, IoTHubEventSource.
  * 
- */
+     */
+    public static CompletableFuture<GetEventSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
+     * API Version: 2020-05-15.
+     * 
+     *
+         * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
+     * 
+     * @Deprecated
+         * Please use one of the variants: EventHubEventSource, IoTHubEventSource.
+     * 
+     */
     @Deprecated /* Please use one of the variants: EventHubEventSource, IoTHubEventSource. */
     public static CompletableFuture<GetEventSourceResult> invokeAsync(GetEventSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEventSource", TypeShape.of(GetEventSourceResult.class), args == null ? GetEventSourceArgs.Empty : args, Utilities.withVersion(options));

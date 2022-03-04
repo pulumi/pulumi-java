@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,42 +59,42 @@ public final class GoogleCloudChannelV1ContactInfoResponse {
     /**
      * The customer account contact's display name, formatted as a combination of the customer's first and last name.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The customer account's contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer's username for those accounts. Use this email to invite Team customers.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The customer account contact's first name. Optional for Team customers.
      * 
-     */
+    */
     public String getFirstName() {
         return this.firstName;
     }
     /**
      * The customer account contact's last name. Optional for Team customers.
      * 
-     */
+    */
     public String getLastName() {
         return this.lastName;
     }
     /**
      * The customer account's contact phone number.
      * 
-     */
+    */
     public String getPhone() {
         return this.phone;
     }
     /**
      * Optional. The customer account contact's job title.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -158,7 +158,6 @@ public final class GoogleCloudChannelV1ContactInfoResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudChannelV1ContactInfoResponse build() {
             return new GoogleCloudChannelV1ContactInfoResponse(displayName, email, firstName, lastName, phone, title);
         }

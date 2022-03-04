@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.GoogleCloudRunV1ConditionResponse;
 import io.pulumi.googlenative.run_v1.outputs.ResourceRecordResponse;
 import java.lang.Integer;
@@ -56,35 +56,35 @@ public final class DomainMappingStatusResponse {
     /**
      * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
      * 
-     */
+    */
     public List<GoogleCloudRunV1ConditionResponse> getConditions() {
         return this.conditions;
     }
     /**
      * The name of the route that the mapping currently points to.
      * 
-     */
+    */
     public String getMappedRouteName() {
         return this.mappedRouteName;
     }
     /**
      * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
      * 
-     */
+    */
     public Integer getObservedGeneration() {
         return this.observedGeneration;
     }
     /**
      * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
      * 
-     */
+    */
     public List<ResourceRecordResponse> getResourceRecords() {
         return this.resourceRecords;
     }
     /**
      * Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -141,7 +141,6 @@ public final class DomainMappingStatusResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DomainMappingStatusResponse build() {
             return new DomainMappingStatusResponse(conditions, mappedRouteName, observedGeneration, resourceRecords, url);
         }

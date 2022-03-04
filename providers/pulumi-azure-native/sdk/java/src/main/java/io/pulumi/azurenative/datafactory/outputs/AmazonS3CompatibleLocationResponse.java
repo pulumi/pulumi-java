@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -56,21 +56,21 @@ public final class AmazonS3CompatibleLocationResponse {
     /**
      * Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Optional<Object> getBucketName() {
         return Optional.ofNullable(this.bucketName);
     }
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -78,14 +78,14 @@ public final class AmazonS3CompatibleLocationResponse {
      * Type of dataset storage location.
      * Expected value is 'AmazonS3CompatibleLocation'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -142,7 +142,6 @@ public final class AmazonS3CompatibleLocationResponse {
             this.version = version;
             return this;
         }
-
         public AmazonS3CompatibleLocationResponse build() {
             return new AmazonS3CompatibleLocationResponse(bucketName, fileName, folderPath, type, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class ScriptStackFrameResponse {
     /**
      * One-based end column.
      * 
-     */
+    */
     public Integer getEndColumn() {
         return this.endColumn;
     }
     /**
      * One-based end line.
      * 
-     */
+    */
     public Integer getEndLine() {
         return this.endLine;
     }
     /**
      * Name of the active procedure, empty if in a top-level script.
      * 
-     */
+    */
     public String getProcedureId() {
         return this.procedureId;
     }
     /**
      * One-based start column.
      * 
-     */
+    */
     public Integer getStartColumn() {
         return this.startColumn;
     }
     /**
      * One-based start line.
      * 
-     */
+    */
     public Integer getStartLine() {
         return this.startLine;
     }
     /**
      * Text of the current statement/expression.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
@@ -159,7 +159,6 @@ public final class ScriptStackFrameResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public ScriptStackFrameResponse build() {
             return new ScriptStackFrameResponse(endColumn, endLine, procedureId, startColumn, startLine, text);
         }

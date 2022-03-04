@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GremlinDatabaseGetPropertiesResponseResource {
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB Gremlin database
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A system generated property. A unique identifier.
      * 
-     */
+    */
     public String getRid() {
         return this.rid;
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
-     */
+    */
     public Double getTs() {
         return this.ts;
     }
@@ -117,7 +117,6 @@ public final class GremlinDatabaseGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public GremlinDatabaseGetPropertiesResponseResource build() {
             return new GremlinDatabaseGetPropertiesResponseResource(etag, id, rid, ts);
         }

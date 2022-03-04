@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceSerialPort {
-/**
- * Get the serial port output from a Compute Instance. For more information see
+    private GetInstanceSerialPort() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceSerialPortArgs.Builder a);
+    }
+    private static GetInstanceSerialPortArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceSerialPortArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get the serial port output from a Compute Instance. For more information see
  * the official [API](https://cloud.google.com/compute/docs/instances/viewing-serial-port-output) documentation.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getInstanceSerialPort.
+     *
+     * A collection of arguments for invoking getInstanceSerialPort.
  * 
- *
- * A collection of values returned by getInstanceSerialPort.
+     *
+     * A collection of values returned by getInstanceSerialPort.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceSerialPortResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get the serial port output from a Compute Instance. For more information see
+     * the official [API](https://cloud.google.com/compute/docs/instances/viewing-serial-port-output) documentation.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getInstanceSerialPort.
+     * 
+     *
+         * A collection of values returned by getInstanceSerialPort.
+     * 
+     */
     public static CompletableFuture<GetInstanceSerialPortResult> invokeAsync(GetInstanceSerialPortArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceSerialPort:getInstanceSerialPort", TypeShape.of(GetInstanceSerialPortResult.class), args == null ? GetInstanceSerialPortArgs.Empty : args, Utilities.withVersion(options));
     }

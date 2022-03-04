@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.ConfigFileResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.ImportFileResponse;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class TargetConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="config", required=true)
-    private final ConfigFileResponse config;
+      private final ConfigFileResponse config;
 
     public ConfigFileResponse getConfig() {
         return this.config;
@@ -30,7 +30,7 @@ public final class TargetConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="imports", required=true)
-    private final List<ImportFileResponse> imports;
+      private final List<ImportFileResponse> imports;
 
     public List<ImportFileResponse> getImports() {
         return this.imports;
@@ -79,7 +79,6 @@ public final class TargetConfigurationResponse extends io.pulumi.resources.Invok
             this.imports = Objects.requireNonNull(imports);
             return this;
         }
-
         public TargetConfigurationResponse build() {
             return new TargetConfigurationResponse(config, imports);
         }

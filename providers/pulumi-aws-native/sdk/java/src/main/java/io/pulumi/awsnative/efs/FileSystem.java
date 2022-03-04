@@ -10,8 +10,8 @@ import io.pulumi.awsnative.efs.outputs.FileSystemElasticFileSystemTag;
 import io.pulumi.awsnative.efs.outputs.FileSystemLifecyclePolicy;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -112,6 +112,37 @@ public class FileSystem extends io.pulumi.resources.CustomResource {
         return this.throughputMode;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable FileSystemArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.efs.FileSystemArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.efs.FileSystemArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FileSystem(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FileSystem(String name) {
+        this(name, FileSystemArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FileSystem(String name, @Nullable FileSystemArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

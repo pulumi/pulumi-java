@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.enums.EntityTypes;
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectorName", required=true)
-    private final Input<String> connectorName;
+      private final Input<String> connectorName;
 
     public Input<String> getConnectorName() {
         return this.connectorName;
@@ -34,7 +34,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectorType")
-    private final @Nullable Input<Either<String,ConnectorTypes>> connectorType;
+      private final @Nullable Input<Either<String,ConnectorTypes>> connectorType;
 
     public Input<Either<String,ConnectorTypes>> getConnectorType() {
         return this.connectorType == null ? Input.empty() : this.connectorType;
@@ -45,7 +45,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -56,7 +56,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -67,7 +67,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="entityType", required=true)
-    private final Input<EntityTypes> entityType;
+      private final Input<EntityTypes> entityType;
 
     public Input<EntityTypes> getEntityType() {
         return this.entityType;
@@ -78,7 +78,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="entityTypeName", required=true)
-    private final Input<String> entityTypeName;
+      private final Input<String> entityTypeName;
 
     public Input<String> getEntityTypeName() {
         return this.entityTypeName;
@@ -89,7 +89,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final Input<String> hubName;
+      private final Input<String> hubName;
 
     public Input<String> getHubName() {
         return this.hubName;
@@ -100,7 +100,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mappingName")
-    private final @Nullable Input<String> mappingName;
+      private final @Nullable Input<String> mappingName;
 
     public Input<String> getMappingName() {
         return this.mappingName == null ? Input.empty() : this.mappingName;
@@ -111,7 +111,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mappingProperties", required=true)
-    private final Input<ConnectorMappingPropertiesArgs> mappingProperties;
+      private final Input<ConnectorMappingPropertiesArgs> mappingProperties;
 
     public Input<ConnectorMappingPropertiesArgs> getMappingProperties() {
         return this.mappingProperties;
@@ -122,7 +122,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -301,7 +301,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ConnectorMappingArgs build() {
             return new ConnectorMappingArgs(connectorName, connectorType, description, displayName, entityType, entityTypeName, hubName, mappingName, mappingProperties, resourceGroupName);
         }

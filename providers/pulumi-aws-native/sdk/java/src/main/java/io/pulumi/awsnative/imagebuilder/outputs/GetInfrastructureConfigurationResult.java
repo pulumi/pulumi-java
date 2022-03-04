@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.InfrastructureConfigurationInstanceMetadataOptions;
 import io.pulumi.awsnative.imagebuilder.outputs.InfrastructureConfigurationLogging;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -115,91 +115,91 @@ public final class GetInfrastructureConfigurationResult {
     /**
      * The Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The description of the infrastructure configuration.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The instance metadata option settings for the infrastructure configuration.
      * 
-     */
+    */
     public Optional<InfrastructureConfigurationInstanceMetadataOptions> getInstanceMetadataOptions() {
         return Optional.ofNullable(this.instanceMetadataOptions);
     }
     /**
      * The instance profile of the infrastructure configuration.
      * 
-     */
+    */
     public Optional<String> getInstanceProfileName() {
         return Optional.ofNullable(this.instanceProfileName);
     }
     /**
      * The instance types of the infrastructure configuration.
      * 
-     */
+    */
     public List<String> getInstanceTypes() {
         return this.instanceTypes == null ? List.of() : this.instanceTypes;
     }
     /**
      * The EC2 key pair of the infrastructure configuration..
      * 
-     */
+    */
     public Optional<String> getKeyPair() {
         return Optional.ofNullable(this.keyPair);
     }
     /**
      * The logging configuration of the infrastructure configuration.
      * 
-     */
+    */
     public Optional<InfrastructureConfigurationLogging> getLogging() {
         return Optional.ofNullable(this.logging);
     }
     /**
      * The tags attached to the resource created by Image Builder.
      * 
-     */
+    */
     public Optional<Object> getResourceTags() {
         return Optional.ofNullable(this.resourceTags);
     }
     /**
      * The security group IDs of the infrastructure configuration.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
-     */
+    */
     public Optional<String> getSnsTopicArn() {
         return Optional.ofNullable(this.snsTopicArn);
     }
     /**
      * The subnet ID of the infrastructure configuration.
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * The tags associated with the component.
      * 
-     */
+    */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }
     /**
      * The terminate instance on failure configuration of the infrastructure configuration.
      * 
-     */
+    */
     public Optional<Boolean> getTerminateInstanceOnFailure() {
         return Optional.ofNullable(this.terminateInstanceOnFailure);
     }
@@ -312,7 +312,6 @@ public final class GetInfrastructureConfigurationResult {
             this.terminateInstanceOnFailure = terminateInstanceOnFailure;
             return this;
         }
-
         public GetInfrastructureConfigurationResult build() {
             return new GetInfrastructureConfigurationResult(arn, description, instanceMetadataOptions, instanceProfileName, instanceTypes, keyPair, logging, resourceTags, securityGroupIds, snsTopicArn, subnetId, tags, terminateInstanceOnFailure);
         }

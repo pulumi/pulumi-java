@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigtable.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,11 +15,11 @@ public final class GCPolicyMaxAge {
     /**
      * Number of days before applying GC policy.
      * 
-     * @deprecated
+     * @Deprecated
      * Deprecated in favor of duration
      * 
      */
-    @Deprecated /* Deprecated in favor of duration */
+        @Deprecated /* Deprecated in favor of duration */
     private final @Nullable Integer days;
     /**
      * Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
@@ -38,10 +38,10 @@ public final class GCPolicyMaxAge {
     /**
      * Number of days before applying GC policy.
      * 
-     * @deprecated
+     * @Deprecated
      * Deprecated in favor of duration
      * 
-     */
+    */
     @Deprecated /* Deprecated in favor of duration */
     public Optional<Integer> getDays() {
         return Optional.ofNullable(this.days);
@@ -49,7 +49,7 @@ public final class GCPolicyMaxAge {
     /**
      * Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
      * 
-     */
+    */
     public Optional<String> getDuration() {
         return Optional.ofNullable(this.duration);
     }
@@ -85,7 +85,6 @@ public final class GCPolicyMaxAge {
             this.duration = duration;
             return this;
         }
-
         public GCPolicyMaxAge build() {
             return new GCPolicyMaxAge(days, duration);
         }

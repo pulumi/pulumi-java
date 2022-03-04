@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
     /**
      * The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
      * 
-     */
+    */
     public Double getConfidenceLevel() {
         return this.confidenceLevel;
     }
     /**
      * Lower bound of the interval.
      * 
-     */
+    */
     public Double getLowerBound() {
         return this.lowerBound;
     }
     /**
      * The percent change between an experiment metric's value and the value for its control.
      * 
-     */
+    */
     public Double getRatio() {
         return this.ratio;
     }
     /**
      * Upper bound of the interval.
      * 
-     */
+    */
     public Double getUpperBound() {
         return this.upperBound;
     }
@@ -116,7 +116,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse(confidenceLevel, lowerBound, ratio, upperBound);
         }

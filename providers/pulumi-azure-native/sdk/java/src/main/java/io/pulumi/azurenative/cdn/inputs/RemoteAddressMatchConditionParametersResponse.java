@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class RemoteAddressMatchConditionParametersResponse extends io.pulu
      * 
      */
     @InputImport(name="matchValues")
-    private final @Nullable List<String> matchValues;
+      private final @Nullable List<String> matchValues;
 
     public List<String> getMatchValues() {
         return this.matchValues == null ? List.of() : this.matchValues;
@@ -36,14 +36,14 @@ public final class RemoteAddressMatchConditionParametersResponse extends io.pulu
      * 
      */
     @InputImport(name="negateCondition")
-    private final @Nullable Boolean negateCondition;
+      private final @Nullable Boolean negateCondition;
 
     public Optional<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -54,7 +54,7 @@ public final class RemoteAddressMatchConditionParametersResponse extends io.pulu
      * 
      */
     @InputImport(name="operator", required=true)
-    private final String operator;
+      private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -65,7 +65,7 @@ public final class RemoteAddressMatchConditionParametersResponse extends io.pulu
      * 
      */
     @InputImport(name="transforms")
-    private final @Nullable List<String> transforms;
+      private final @Nullable List<String> transforms;
 
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
@@ -144,7 +144,6 @@ public final class RemoteAddressMatchConditionParametersResponse extends io.pulu
             this.transforms = transforms;
             return this;
         }
-
         public RemoteAddressMatchConditionParametersResponse build() {
             return new RemoteAddressMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
         }

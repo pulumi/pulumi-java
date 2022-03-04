@@ -6,21 +6,41 @@ package io.pulumi.azurenative.billing;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.billing.inputs.ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs;
 import io.pulumi.azurenative.billing.outputs.ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission {
-/**
- * The list of invoice section properties with create subscription permission.
+    private ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission() {}
+    public interface BuilderApplicator {
+        public void apply(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs.Builder a);
+    }
+    private static ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of invoice section properties with create subscription permission.
  * API Version: 2020-05-01.
  * 
- *
- * The list of invoice section properties with create subscription permission.
+     *
+     * The list of invoice section properties with create subscription permission.
  * 
- */
+     */
+    public static CompletableFuture<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of invoice section properties with create subscription permission.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * The list of invoice section properties with create subscription permission.
+     * 
+     */
     public static CompletableFuture<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> invokeAsync(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:billing:listBillingAccountInvoiceSectionsByCreateSubscriptionPermission", TypeShape.of(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult.class), args == null ? ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs.Empty : args, Utilities.withVersion(options));
     }

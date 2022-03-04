@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSpoke {
-/**
- * Gets details about the specified spoke.
+    private GetSpoke() {}
+    public interface BuilderApplicator {
+        public void apply(GetSpokeArgs.Builder a);
+    }
+    private static GetSpokeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSpokeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details about the specified spoke.
  * 
- */
+     */
+    public static CompletableFuture<GetSpokeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details about the specified spoke.
+     * 
+     */
     public static CompletableFuture<GetSpokeResult> invokeAsync(GetSpokeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getSpoke", TypeShape.of(GetSpokeResult.class), args == null ? GetSpokeArgs.Empty : args, Utilities.withVersion(options));
     }

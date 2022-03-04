@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class IconUrisResponse {
     /**
      * URI to hero icon.
      * 
-     */
+    */
     public Optional<String> getHero() {
         return Optional.ofNullable(this.hero);
     }
     /**
      * URI to large icon.
      * 
-     */
+    */
     public Optional<String> getLarge() {
         return Optional.ofNullable(this.large);
     }
     /**
      * URI to medium icon.
      * 
-     */
+    */
     public Optional<String> getMedium() {
         return Optional.ofNullable(this.medium);
     }
     /**
      * URI to small icon.
      * 
-     */
+    */
     public Optional<String> getSmall() {
         return Optional.ofNullable(this.small);
     }
     /**
      * URI to wide icon.
      * 
-     */
+    */
     public Optional<String> getWide() {
         return Optional.ofNullable(this.wide);
     }
@@ -139,7 +139,6 @@ public final class IconUrisResponse {
             this.wide = wide;
             return this;
         }
-
         public IconUrisResponse build() {
             return new IconUrisResponse(hero, large, medium, small, wide);
         }

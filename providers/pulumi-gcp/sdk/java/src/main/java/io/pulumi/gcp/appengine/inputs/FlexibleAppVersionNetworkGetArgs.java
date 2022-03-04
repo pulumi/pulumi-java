@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class FlexibleAppVersionNetworkGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="forwardedPorts")
-    private final @Nullable Input<List<String>> forwardedPorts;
+      private final @Nullable Input<List<String>> forwardedPorts;
 
     public Input<List<String>> getForwardedPorts() {
         return this.forwardedPorts == null ? Input.empty() : this.forwardedPorts;
@@ -32,7 +32,7 @@ public final class FlexibleAppVersionNetworkGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="instanceTag")
-    private final @Nullable Input<String> instanceTag;
+      private final @Nullable Input<String> instanceTag;
 
     public Input<String> getInstanceTag() {
         return this.instanceTag == null ? Input.empty() : this.instanceTag;
@@ -43,7 +43,7 @@ public final class FlexibleAppVersionNetworkGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -54,7 +54,7 @@ public final class FlexibleAppVersionNetworkGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sessionAffinity")
-    private final @Nullable Input<Boolean> sessionAffinity;
+      private final @Nullable Input<Boolean> sessionAffinity;
 
     public Input<Boolean> getSessionAffinity() {
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
@@ -69,7 +69,7 @@ public final class FlexibleAppVersionNetworkGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -173,7 +173,6 @@ public final class FlexibleAppVersionNetworkGetArgs extends io.pulumi.resources.
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
-
         public FlexibleAppVersionNetworkGetArgs build() {
             return new FlexibleAppVersionNetworkGetArgs(forwardedPorts, instanceTag, name, sessionAffinity, subnetwork);
         }

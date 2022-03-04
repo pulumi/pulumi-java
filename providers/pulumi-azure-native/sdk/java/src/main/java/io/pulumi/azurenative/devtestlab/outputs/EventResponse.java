@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class EventResponse {
     /**
      * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
      * 
-     */
+    */
     public Optional<String> getEventName() {
         return Optional.ofNullable(this.eventName);
     }
@@ -54,7 +54,6 @@ public final class EventResponse {
             this.eventName = eventName;
             return this;
         }
-
         public EventResponse build() {
             return new EventResponse(eventName);
         }

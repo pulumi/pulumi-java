@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="actionRequired")
-    private final @Nullable String actionRequired;
+      private final @Nullable String actionRequired;
 
     public Optional<String> getActionRequired() {
         return this.actionRequired == null ? Optional.empty() : Optional.ofNullable(this.actionRequired);
@@ -34,7 +34,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -45,7 +45,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -104,7 +104,6 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public PrivateLinkServiceConnectionStateResponse build() {
             return new PrivateLinkServiceConnectionStateResponse(actionRequired, description, status);
         }

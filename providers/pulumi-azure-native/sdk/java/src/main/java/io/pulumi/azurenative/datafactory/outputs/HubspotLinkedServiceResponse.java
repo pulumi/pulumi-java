@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -119,63 +119,63 @@ public final class HubspotLinkedServiceResponse {
     /**
      * The access token obtained when initially authenticating your OAuth integration.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The client ID associated with your Hubspot application.
      * 
-     */
+    */
     public Object getClientId() {
         return this.clientId;
     }
     /**
      * The client secret associated with your Hubspot application.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The refresh token obtained when initially authenticating your OAuth integration.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getRefreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
@@ -183,28 +183,28 @@ public final class HubspotLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'Hubspot'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
-     */
+    */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
-     */
+    */
     public Optional<Object> getUseHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
      * 
-     */
+    */
     public Optional<Object> getUsePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
@@ -317,7 +317,6 @@ public final class HubspotLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public HubspotLinkedServiceResponse build() {
             return new HubspotLinkedServiceResponse(accessToken, annotations, clientId, clientSecret, connectVia, description, encryptedCredential, parameters, refreshToken, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

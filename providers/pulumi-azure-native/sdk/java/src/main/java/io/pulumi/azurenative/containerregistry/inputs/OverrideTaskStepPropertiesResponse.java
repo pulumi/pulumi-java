@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.ArgumentResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable List<ArgumentResponse> arguments;
+      private final @Nullable List<ArgumentResponse> arguments;
 
     public List<ArgumentResponse> getArguments() {
         return this.arguments == null ? List.of() : this.arguments;
@@ -34,7 +34,7 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="contextPath")
-    private final @Nullable String contextPath;
+      private final @Nullable String contextPath;
 
     public Optional<String> getContextPath() {
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
@@ -45,7 +45,7 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="file")
-    private final @Nullable String file;
+      private final @Nullable String file;
 
     public Optional<String> getFile() {
         return this.file == null ? Optional.empty() : Optional.ofNullable(this.file);
@@ -56,7 +56,7 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+      private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -67,7 +67,7 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="updateTriggerToken")
-    private final @Nullable String updateTriggerToken;
+      private final @Nullable String updateTriggerToken;
 
     public Optional<String> getUpdateTriggerToken() {
         return this.updateTriggerToken == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerToken);
@@ -78,7 +78,7 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="values")
-    private final @Nullable List<SetValueResponse> values;
+      private final @Nullable List<SetValueResponse> values;
 
     public List<SetValueResponse> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -167,7 +167,6 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
             this.values = values;
             return this;
         }
-
         public OverrideTaskStepPropertiesResponse build() {
             return new OverrideTaskStepPropertiesResponse(arguments, contextPath, file, target, updateTriggerToken, values);
         }

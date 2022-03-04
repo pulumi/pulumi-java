@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cipherSuites")
-    private final @Nullable List<String> cipherSuites;
+      private final @Nullable List<String> cipherSuites;
 
     public List<String> getCipherSuites() {
         return this.cipherSuites == null ? List.of() : this.cipherSuites;
@@ -35,7 +35,7 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="disabledSslProtocols")
-    private final @Nullable List<String> disabledSslProtocols;
+      private final @Nullable List<String> disabledSslProtocols;
 
     public List<String> getDisabledSslProtocols() {
         return this.disabledSslProtocols == null ? List.of() : this.disabledSslProtocols;
@@ -46,7 +46,7 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="minProtocolVersion")
-    private final @Nullable String minProtocolVersion;
+      private final @Nullable String minProtocolVersion;
 
     public Optional<String> getMinProtocolVersion() {
         return this.minProtocolVersion == null ? Optional.empty() : Optional.ofNullable(this.minProtocolVersion);
@@ -57,7 +57,7 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable String policyName;
+      private final @Nullable String policyName;
 
     public Optional<String> getPolicyName() {
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
@@ -68,7 +68,7 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="policyType")
-    private final @Nullable String policyType;
+      private final @Nullable String policyType;
 
     public Optional<String> getPolicyType() {
         return this.policyType == null ? Optional.empty() : Optional.ofNullable(this.policyType);
@@ -147,7 +147,6 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
             this.policyType = policyType;
             return this;
         }
-
         public ApplicationGatewaySslPolicyResponse build() {
             return new ApplicationGatewaySslPolicyResponse(cipherSuites, disabledSslProtocols, minProtocolVersion, policyName, policyType);
         }

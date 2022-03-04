@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blockchain.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ApiKeyResponse {
     /**
      * Gets or sets the API key name.
      * 
-     */
+    */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * Gets or sets the API key value.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class ApiKeyResponse {
             this.value = value;
             return this;
         }
-
         public ApiKeyResponse build() {
             return new ApiKeyResponse(keyName, value);
         }

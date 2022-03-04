@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deploymentId", required=true)
-    private final String deploymentId;
+      private final String deploymentId;
 
     public String getDeploymentId() {
         return this.deploymentId;
@@ -28,7 +28,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-    private final String restApiId;
+      private final String restApiId;
 
     public String getRestApiId() {
         return this.restApiId;
@@ -77,7 +77,6 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
-
         public GetDeploymentArgs build() {
             return new GetDeploymentArgs(deploymentId, restApiId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationOperatorPropertiesKeys;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class IntegrationTaskPropertiesMap {
             this.property = Objects.requireNonNull(property);
             return this;
         }
-
         public IntegrationTaskPropertiesMap build() {
             return new IntegrationTaskPropertiesMap(operatorPropertyKey, property);
         }

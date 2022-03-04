@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="interconnectName")
-    private final @Nullable Input<String> interconnectName;
+      private final @Nullable Input<String> interconnectName;
 
     public Input<String> getInterconnectName() {
         return this.interconnectName == null ? Input.empty() : this.interconnectName;
@@ -34,7 +34,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="partnerName")
-    private final @Nullable Input<String> partnerName;
+      private final @Nullable Input<String> partnerName;
 
     public Input<String> getPartnerName() {
         return this.partnerName == null ? Input.empty() : this.partnerName;
@@ -45,7 +45,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="portalUrl")
-    private final @Nullable Input<String> portalUrl;
+      private final @Nullable Input<String> portalUrl;
 
     public Input<String> getPortalUrl() {
         return this.portalUrl == null ? Input.empty() : this.portalUrl;
@@ -119,7 +119,6 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
             this.portalUrl = Input.ofNullable(portalUrl);
             return this;
         }
-
         public InterconnectAttachmentPartnerMetadataArgs build() {
             return new InterconnectAttachmentPartnerMetadataArgs(interconnectName, partnerName, portalUrl);
         }

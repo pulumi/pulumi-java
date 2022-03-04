@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="ignoreCase")
-    private final @Nullable Input<Boolean> ignoreCase;
+      private final @Nullable Input<Boolean> ignoreCase;
 
     public Input<Boolean> getIgnoreCase() {
         return this.ignoreCase == null ? Input.empty() : this.ignoreCase;
@@ -35,7 +35,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="negate")
-    private final @Nullable Input<Boolean> negate;
+      private final @Nullable Input<Boolean> negate;
 
     public Input<Boolean> getNegate() {
         return this.negate == null ? Input.empty() : this.negate;
@@ -46,7 +46,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="pattern")
-    private final @Nullable Input<String> pattern;
+      private final @Nullable Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern == null ? Input.empty() : this.pattern;
@@ -57,7 +57,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="variable")
-    private final @Nullable Input<String> variable;
+      private final @Nullable Input<String> variable;
 
     public Input<String> getVariable() {
         return this.variable == null ? Input.empty() : this.variable;
@@ -146,7 +146,6 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
             this.variable = Input.ofNullable(variable);
             return this;
         }
-
         public ApplicationGatewayRewriteRuleConditionArgs build() {
             return new ApplicationGatewayRewriteRuleConditionArgs(ignoreCase, negate, pattern, variable);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.ResourceGuardOperationDetailResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class ResourceGuardProxyBaseResponse extends io.pulumi.resources.In
     public static final ResourceGuardProxyBaseResponse Empty = new ResourceGuardProxyBaseResponse();
 
     @InputImport(name="lastUpdatedTime")
-    private final @Nullable String lastUpdatedTime;
+      private final @Nullable String lastUpdatedTime;
 
     public Optional<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @InputImport(name="resourceGuardOperationDetails")
-    private final @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
+      private final @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
 
     public List<ResourceGuardOperationDetailResponse> getResourceGuardOperationDetails() {
         return this.resourceGuardOperationDetails == null ? List.of() : this.resourceGuardOperationDetails;
     }
 
     @InputImport(name="resourceGuardResourceId")
-    private final @Nullable String resourceGuardResourceId;
+      private final @Nullable String resourceGuardResourceId;
 
     public Optional<String> getResourceGuardResourceId() {
         return this.resourceGuardResourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceGuardResourceId);
@@ -90,7 +90,6 @@ public final class ResourceGuardProxyBaseResponse extends io.pulumi.resources.In
             this.resourceGuardResourceId = resourceGuardResourceId;
             return this;
         }
-
         public ResourceGuardProxyBaseResponse build() {
             return new ResourceGuardProxyBaseResponse(lastUpdatedTime, resourceGuardOperationDetails, resourceGuardResourceId);
         }

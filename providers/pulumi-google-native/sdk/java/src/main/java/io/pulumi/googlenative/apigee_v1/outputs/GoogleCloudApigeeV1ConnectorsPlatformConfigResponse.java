@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
     /**
      * Flag that specifies whether the Connectors Platform add-on is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.
      * 
-     */
+    */
     public String getExpiresAt() {
         return this.expiresAt;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
-
         public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse build() {
             return new GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(enabled, expiresAt);
         }

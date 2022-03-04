@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.AutoscalingPolicyBasicAlgorithmYarnConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cooldownPeriod")
-    private final @Nullable Input<String> cooldownPeriod;
+      private final @Nullable Input<String> cooldownPeriod;
 
     public Input<String> getCooldownPeriod() {
         return this.cooldownPeriod == null ? Input.empty() : this.cooldownPeriod;
@@ -34,7 +34,7 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="yarnConfig", required=true)
-    private final Input<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig;
+      private final Input<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig;
 
     public Input<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> getYarnConfig() {
         return this.yarnConfig;
@@ -93,7 +93,6 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
             this.yarnConfig = Input.of(Objects.requireNonNull(yarnConfig));
             return this;
         }
-
         public AutoscalingPolicyBasicAlgorithmArgs build() {
             return new AutoscalingPolicyBasicAlgorithmArgs(cooldownPeriod, yarnConfig);
         }

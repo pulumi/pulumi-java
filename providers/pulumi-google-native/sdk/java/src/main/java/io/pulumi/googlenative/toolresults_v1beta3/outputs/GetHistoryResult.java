@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GetHistoryResult {
     /**
      * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
      * 
-     */
+    */
     public String getHistoryId() {
         return this.historyId;
     }
     /**
      * A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
      * 
-     */
+    */
     public String getTestPlatform() {
         return this.testPlatform;
     }
@@ -116,7 +116,6 @@ public final class GetHistoryResult {
             this.testPlatform = Objects.requireNonNull(testPlatform);
             return this;
         }
-
         public GetHistoryResult build() {
             return new GetHistoryResult(displayName, historyId, name, testPlatform);
         }

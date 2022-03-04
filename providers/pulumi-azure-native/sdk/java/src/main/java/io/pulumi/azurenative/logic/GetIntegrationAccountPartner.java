@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.inputs.GetIntegrationAccountPartnerArgs;
 import io.pulumi.azurenative.logic.outputs.GetIntegrationAccountPartnerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationAccountPartner {
-/**
- * The integration account partner.
+    private GetIntegrationAccountPartner() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationAccountPartnerArgs.Builder a);
+    }
+    private static GetIntegrationAccountPartnerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationAccountPartnerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The integration account partner.
  * API Version: 2019-05-01.
  * 
- *
- * The integration account partner.
+     *
+     * The integration account partner.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationAccountPartnerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The integration account partner.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The integration account partner.
+     * 
+     */
     public static CompletableFuture<GetIntegrationAccountPartnerResult> invokeAsync(GetIntegrationAccountPartnerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountPartner", TypeShape.of(GetIntegrationAccountPartnerResult.class), args == null ? GetIntegrationAccountPartnerArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ComputeInstanceLastOperationResponse {
     /**
      * Name of the last operation.
      * 
-     */
+    */
     public Optional<String> getOperationName() {
         return Optional.ofNullable(this.operationName);
     }
     /**
      * Operation status.
      * 
-     */
+    */
     public Optional<String> getOperationStatus() {
         return Optional.ofNullable(this.operationStatus);
     }
     /**
      * Time of the last operation.
      * 
-     */
+    */
     public Optional<String> getOperationTime() {
         return Optional.ofNullable(this.operationTime);
     }
@@ -97,7 +97,6 @@ public final class ComputeInstanceLastOperationResponse {
             this.operationTime = operationTime;
             return this;
         }
-
         public ComputeInstanceLastOperationResponse build() {
             return new ComputeInstanceLastOperationResponse(operationName, operationStatus, operationTime);
         }

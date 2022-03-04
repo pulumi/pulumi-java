@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
     /**
      * Value to replace it with.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ValueResponse getNewValue() {
         return this.newValue;
     }
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
             this.newValue = Objects.requireNonNull(newValue);
             return this;
         }
-
         public GooglePrivacyDlpV2ReplaceValueConfigResponse build() {
             return new GooglePrivacyDlpV2ReplaceValueConfigResponse(newValue);
         }

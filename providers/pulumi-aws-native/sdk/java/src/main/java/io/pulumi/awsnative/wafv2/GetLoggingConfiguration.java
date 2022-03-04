@@ -6,17 +6,33 @@ package io.pulumi.awsnative.wafv2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.wafv2.inputs.GetLoggingConfigurationArgs;
 import io.pulumi.awsnative.wafv2.outputs.GetLoggingConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoggingConfiguration {
-/**
- * A WAFv2 Logging Configuration Resource Provider
+    private GetLoggingConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetLoggingConfigurationArgs.Builder a);
+    }
+    private static GetLoggingConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLoggingConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A WAFv2 Logging Configuration Resource Provider
  * 
- */
+     */
+    public static CompletableFuture<GetLoggingConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A WAFv2 Logging Configuration Resource Provider
+     * 
+     */
     public static CompletableFuture<GetLoggingConfigurationResult> invokeAsync(GetLoggingConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wafv2:getLoggingConfiguration", TypeShape.of(GetLoggingConfigurationResult.class), args == null ? GetLoggingConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

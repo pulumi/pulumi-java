@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.BackfillAllStrategyResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.BackfillNoneStrategyResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.DestinationConfigResponse;
@@ -108,84 +108,84 @@ public final class GetStreamResult {
     /**
      * Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
      * 
-     */
+    */
     public BackfillAllStrategyResponse getBackfillAll() {
         return this.backfillAll;
     }
     /**
      * Do not automatically backfill any objects.
      * 
-     */
+    */
     public BackfillNoneStrategyResponse getBackfillNone() {
         return this.backfillNone;
     }
     /**
      * The creation time of the stream.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
      * 
-     */
+    */
     public String getCustomerManagedEncryptionKey() {
         return this.customerManagedEncryptionKey;
     }
     /**
      * Destination connection profile configuration.
      * 
-     */
+    */
     public DestinationConfigResponse getDestinationConfig() {
         return this.destinationConfig;
     }
     /**
      * Display name.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Errors on the Stream.
      * 
-     */
+    */
     public List<ErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Labels.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The stream's name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Source connection profile configuration.
      * 
-     */
+    */
     public SourceConfigResponse getSourceConfig() {
         return this.sourceConfig;
     }
     /**
      * The state of the stream.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The last update time of the stream.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -291,7 +291,6 @@ public final class GetStreamResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetStreamResult build() {
             return new GetStreamResult(backfillAll, backfillNone, createTime, customerManagedEncryptionKey, destinationConfig, displayName, errors, labels, name, sourceConfig, state, updateTime);
         }

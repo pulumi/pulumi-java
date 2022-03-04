@@ -6,21 +6,41 @@ package io.pulumi.azurenative.servicebus;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicebus.inputs.GetTopicAuthorizationRuleArgs;
 import io.pulumi.azurenative.servicebus.outputs.GetTopicAuthorizationRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTopicAuthorizationRule {
-/**
- * Description of a namespace authorization rule.
+    private GetTopicAuthorizationRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetTopicAuthorizationRuleArgs.Builder a);
+    }
+    private static GetTopicAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTopicAuthorizationRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of a namespace authorization rule.
  * API Version: 2017-04-01.
  * 
- *
- * Description of a namespace authorization rule.
+     *
+     * Description of a namespace authorization rule.
  * 
- */
+     */
+    public static CompletableFuture<GetTopicAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of a namespace authorization rule.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of a namespace authorization rule.
+     * 
+     */
     public static CompletableFuture<GetTopicAuthorizationRuleResult> invokeAsync(GetTopicAuthorizationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getTopicAuthorizationRule", TypeShape.of(GetTopicAuthorizationRuleResult.class), args == null ? GetTopicAuthorizationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

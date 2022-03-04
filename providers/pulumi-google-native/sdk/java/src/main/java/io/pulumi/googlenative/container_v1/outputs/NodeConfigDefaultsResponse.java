@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.GcfsConfigResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class NodeConfigDefaultsResponse {
     /**
      * GCFS (Google Container File System, a.k.a Riptide) options.
      * 
-     */
+    */
     public GcfsConfigResponse getGcfsConfig() {
         return this.gcfsConfig;
     }
@@ -52,7 +52,6 @@ public final class NodeConfigDefaultsResponse {
             this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
             return this;
         }
-
         public NodeConfigDefaultsResponse build() {
             return new NodeConfigDefaultsResponse(gcfsConfig);
         }

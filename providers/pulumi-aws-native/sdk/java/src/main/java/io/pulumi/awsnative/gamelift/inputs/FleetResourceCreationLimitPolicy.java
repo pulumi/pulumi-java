@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class FleetResourceCreationLimitPolicy extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newGameSessionsPerCreator")
-    private final @Nullable Integer newGameSessionsPerCreator;
+      private final @Nullable Integer newGameSessionsPerCreator;
 
     public Optional<Integer> getNewGameSessionsPerCreator() {
         return this.newGameSessionsPerCreator == null ? Optional.empty() : Optional.ofNullable(this.newGameSessionsPerCreator);
@@ -36,7 +36,7 @@ public final class FleetResourceCreationLimitPolicy extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policyPeriodInMinutes")
-    private final @Nullable Integer policyPeriodInMinutes;
+      private final @Nullable Integer policyPeriodInMinutes;
 
     public Optional<Integer> getPolicyPeriodInMinutes() {
         return this.policyPeriodInMinutes == null ? Optional.empty() : Optional.ofNullable(this.policyPeriodInMinutes);
@@ -85,7 +85,6 @@ public final class FleetResourceCreationLimitPolicy extends io.pulumi.resources.
             this.policyPeriodInMinutes = policyPeriodInMinutes;
             return this;
         }
-
         public FleetResourceCreationLimitPolicy build() {
             return new FleetResourceCreationLimitPolicy(newGameSessionsPerCreator, policyPeriodInMinutes);
         }

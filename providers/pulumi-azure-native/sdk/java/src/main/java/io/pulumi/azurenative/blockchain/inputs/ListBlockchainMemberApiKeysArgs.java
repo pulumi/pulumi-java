@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blockchain.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListBlockchainMemberApiKeysArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="blockchainMemberName", required=true)
-    private final String blockchainMemberName;
+      private final String blockchainMemberName;
 
     public String getBlockchainMemberName() {
         return this.blockchainMemberName;
@@ -28,7 +28,7 @@ public final class ListBlockchainMemberApiKeysArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListBlockchainMemberApiKeysArgs extends io.pulumi.resources.I
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListBlockchainMemberApiKeysArgs build() {
             return new ListBlockchainMemberApiKeysArgs(blockchainMemberName, resourceGroupName);
         }

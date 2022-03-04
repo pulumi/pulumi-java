@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AccountPropertiesResponseEndpoints extends io.pulumi.resource
      * 
      */
     @InputImport(name="catalog", required=true)
-    private final String catalog;
+      private final String catalog;
 
     public String getCatalog() {
         return this.catalog;
@@ -32,7 +32,7 @@ public final class AccountPropertiesResponseEndpoints extends io.pulumi.resource
      * 
      */
     @InputImport(name="guardian", required=true)
-    private final String guardian;
+      private final String guardian;
 
     public String getGuardian() {
         return this.guardian;
@@ -43,7 +43,7 @@ public final class AccountPropertiesResponseEndpoints extends io.pulumi.resource
      * 
      */
     @InputImport(name="scan", required=true)
-    private final String scan;
+      private final String scan;
 
     public String getScan() {
         return this.scan;
@@ -102,7 +102,6 @@ public final class AccountPropertiesResponseEndpoints extends io.pulumi.resource
             this.scan = Objects.requireNonNull(scan);
             return this;
         }
-
         public AccountPropertiesResponseEndpoints build() {
             return new AccountPropertiesResponseEndpoints(catalog, guardian, scan);
         }

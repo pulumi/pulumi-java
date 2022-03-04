@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.RequestMethodMatchConditionParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,14 +34,14 @@ public final class DeliveryRuleRequestMethodConditionResponse {
      * The name of the condition for the delivery rule.
      * Expected value is 'RequestMethod'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
-     */
+    */
     public RequestMethodMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }
@@ -77,7 +77,6 @@ public final class DeliveryRuleRequestMethodConditionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleRequestMethodConditionResponse build() {
             return new DeliveryRuleRequestMethodConditionResponse(name, parameters);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="initialRetryIntervalSeconds")
-    private final @Nullable Integer initialRetryIntervalSeconds;
+      private final @Nullable Integer initialRetryIntervalSeconds;
 
     public Optional<Integer> getInitialRetryIntervalSeconds() {
         return this.initialRetryIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.initialRetryIntervalSeconds);
@@ -35,7 +35,7 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="maximumRetryIntervalSeconds")
-    private final @Nullable Integer maximumRetryIntervalSeconds;
+      private final @Nullable Integer maximumRetryIntervalSeconds;
 
     public Optional<Integer> getMaximumRetryIntervalSeconds() {
         return this.maximumRetryIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.maximumRetryIntervalSeconds);
@@ -46,7 +46,7 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retryAttempts")
-    private final @Nullable Integer retryAttempts;
+      private final @Nullable Integer retryAttempts;
 
     public Optional<Integer> getRetryAttempts() {
         return this.retryAttempts == null ? Optional.empty() : Optional.ofNullable(this.retryAttempts);
@@ -57,7 +57,7 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retryIntervalBackoffMultiplier")
-    private final @Nullable Double retryIntervalBackoffMultiplier;
+      private final @Nullable Double retryIntervalBackoffMultiplier;
 
     public Optional<Double> getRetryIntervalBackoffMultiplier() {
         return this.retryIntervalBackoffMultiplier == null ? Optional.empty() : Optional.ofNullable(this.retryIntervalBackoffMultiplier);
@@ -68,7 +68,7 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Integer timeoutSeconds;
+      private final @Nullable Integer timeoutSeconds;
 
     public Optional<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
@@ -147,7 +147,6 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public JobStepExecutionOptionsResponse build() {
             return new JobStepExecutionOptionsResponse(initialRetryIntervalSeconds, maximumRetryIntervalSeconds, retryAttempts, retryIntervalBackoffMultiplier, timeoutSeconds);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -45,7 +45,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="idpConfig", required=true)
-    private final Input<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
+      private final Input<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
 
     public Input<TenantInboundSamlConfigIdpConfigArgs> getIdpConfig() {
         return this.idpConfig;
@@ -58,7 +58,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -83,7 +83,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="spConfig", required=true)
-    private final Input<TenantInboundSamlConfigSpConfigArgs> spConfig;
+      private final Input<TenantInboundSamlConfigSpConfigArgs> spConfig;
 
     public Input<TenantInboundSamlConfigSpConfigArgs> getSpConfig() {
         return this.spConfig;
@@ -94,7 +94,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tenant", required=true)
-    private final Input<String> tenant;
+      private final Input<String> tenant;
 
     public Input<String> getTenant() {
         return this.tenant;
@@ -228,7 +228,6 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
             this.tenant = Input.of(Objects.requireNonNull(tenant));
             return this;
         }
-
         public TenantInboundSamlConfigArgs build() {
             return new TenantInboundSamlConfigArgs(displayName, enabled, idpConfig, name, project, spConfig, tenant);
         }

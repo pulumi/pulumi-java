@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetLocalGatewayRouteArgs;
 import io.pulumi.awsnative.ec2.outputs.GetLocalGatewayRouteResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocalGatewayRoute {
-/**
- * Describes a route for a local gateway route table.
+    private GetLocalGatewayRoute() {}
+    public interface BuilderApplicator {
+        public void apply(GetLocalGatewayRouteArgs.Builder a);
+    }
+    private static GetLocalGatewayRouteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLocalGatewayRouteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a route for a local gateway route table.
  * 
- */
+     */
+    public static CompletableFuture<GetLocalGatewayRouteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a route for a local gateway route table.
+     * 
+     */
     public static CompletableFuture<GetLocalGatewayRouteResult> invokeAsync(GetLocalGatewayRouteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getLocalGatewayRoute", TypeShape.of(GetLocalGatewayRouteResult.class), args == null ? GetLocalGatewayRouteArgs.Empty : args, Utilities.withVersion(options));
     }

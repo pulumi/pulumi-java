@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.TunnelInstanceIAMPolicyArgs;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMPolicyState;
@@ -128,6 +128,37 @@ public class TunnelInstanceIAMPolicy extends io.pulumi.resources.CustomResource 
         return this.zone;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TunnelInstanceIAMPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.iap.TunnelInstanceIAMPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.iap.TunnelInstanceIAMPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TunnelInstanceIAMPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TunnelInstanceIAMPolicy(String name) {
+        this(name, TunnelInstanceIAMPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TunnelInstanceIAMPolicy(String name, TunnelInstanceIAMPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

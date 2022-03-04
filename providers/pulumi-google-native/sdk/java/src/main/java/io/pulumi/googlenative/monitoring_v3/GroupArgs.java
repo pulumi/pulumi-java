@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -31,7 +31,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -42,7 +42,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCluster")
-    private final @Nullable Input<Boolean> isCluster;
+      private final @Nullable Input<Boolean> isCluster;
 
     public Input<Boolean> getIsCluster() {
         return this.isCluster == null ? Input.empty() : this.isCluster;
@@ -53,21 +53,21 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentName")
-    private final @Nullable Input<String> parentName;
+      private final @Nullable Input<String> parentName;
 
     public Input<String> getParentName() {
         return this.parentName == null ? Input.empty() : this.parentName;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="validateOnly")
-    private final @Nullable Input<String> validateOnly;
+      private final @Nullable Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -186,7 +186,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public GroupArgs build() {
             return new GroupArgs(displayName, filter, isCluster, parentName, project, validateOnly);
         }

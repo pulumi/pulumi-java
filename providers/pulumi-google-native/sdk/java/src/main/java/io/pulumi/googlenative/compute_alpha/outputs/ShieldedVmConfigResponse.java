@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ShieldedVmConfigResponse {
     /**
      * Defines whether the instance has integrity monitoring enabled.
      * 
-     */
+    */
     public Boolean getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
     /**
      * Defines whether the instance has Secure Boot enabled.
      * 
-     */
+    */
     public Boolean getEnableSecureBoot() {
         return this.enableSecureBoot;
     }
     /**
      * Defines whether the instance has the vTPM enabled.
      * 
-     */
+    */
     public Boolean getEnableVtpm() {
         return this.enableVtpm;
     }
@@ -95,7 +95,6 @@ public final class ShieldedVmConfigResponse {
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
         }
-
         public ShieldedVmConfigResponse build() {
             return new ShieldedVmConfigResponse(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

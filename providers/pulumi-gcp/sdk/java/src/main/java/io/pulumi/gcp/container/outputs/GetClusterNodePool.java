@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolAutoscaling;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolManagement;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolNetworkConfig;
@@ -88,7 +88,7 @@ public final class GetClusterNodePool {
     /**
      * The name of the cluster.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -229,7 +229,6 @@ public final class GetClusterNodePool {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetClusterNodePool build() {
             return new GetClusterNodePool(autoscalings, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, managements, maxPodsPerNode, name, namePrefix, networkConfigs, nodeConfigs, nodeCount, nodeLocations, upgradeSettings, version);
         }

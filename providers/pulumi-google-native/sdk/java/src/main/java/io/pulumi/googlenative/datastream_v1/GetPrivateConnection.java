@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateConnection {
-/**
- * Use this method to get details about a private connectivity configuration.
+    private GetPrivateConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateConnectionArgs.Builder a);
+    }
+    private static GetPrivateConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this method to get details about a private connectivity configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this method to get details about a private connectivity configuration.
+     * 
+     */
     public static CompletableFuture<GetPrivateConnectionResult> invokeAsync(GetPrivateConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getPrivateConnection", TypeShape.of(GetPrivateConnectionResult.class), args == null ? GetPrivateConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

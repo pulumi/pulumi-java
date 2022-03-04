@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebTypeAppEngingIamBindingArgs;
 import io.pulumi.gcp.iap.inputs.WebTypeAppEngingIamBindingState;
@@ -148,6 +148,37 @@ public class WebTypeAppEngingIamBinding extends io.pulumi.resources.CustomResour
         return this.role;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WebTypeAppEngingIamBindingArgs.Builder a);
+    }
+    private static io.pulumi.gcp.iap.WebTypeAppEngingIamBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.iap.WebTypeAppEngingIamBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WebTypeAppEngingIamBinding(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WebTypeAppEngingIamBinding(String name) {
+        this(name, WebTypeAppEngingIamBindingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WebTypeAppEngingIamBinding(String name, WebTypeAppEngingIamBindingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

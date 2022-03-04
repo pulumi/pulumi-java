@@ -6,21 +6,41 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.migrate.inputs.GetMigrateProjectArgs;
 import io.pulumi.azurenative.migrate.outputs.GetMigrateProjectResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMigrateProject {
-/**
- * Migrate Project REST Resource.
+    private GetMigrateProject() {}
+    public interface BuilderApplicator {
+        public void apply(GetMigrateProjectArgs.Builder a);
+    }
+    private static GetMigrateProjectArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMigrateProjectArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Migrate Project REST Resource.
  * API Version: 2018-09-01-preview.
  * 
- *
- * Migrate Project REST Resource.
+     *
+     * Migrate Project REST Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetMigrateProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Migrate Project REST Resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     *
+         * Migrate Project REST Resource.
+     * 
+     */
     public static CompletableFuture<GetMigrateProjectResult> invokeAsync(GetMigrateProjectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getMigrateProject", TypeShape.of(GetMigrateProjectResult.class), args == null ? GetMigrateProjectArgs.Empty : args, Utilities.withVersion(options));
     }

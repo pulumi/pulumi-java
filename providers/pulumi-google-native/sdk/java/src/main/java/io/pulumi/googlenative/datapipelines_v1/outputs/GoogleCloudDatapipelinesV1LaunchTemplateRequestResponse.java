@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -54,35 +54,35 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
     /**
      * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with 'gs://'.
      * 
-     */
+    */
     public String getGcsPath() {
         return this.gcsPath;
     }
     /**
      * The parameters of the template to launch. This should be part of the body of the POST request.
      * 
-     */
+    */
     public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse getLaunchParameters() {
         return this.launchParameters;
     }
     /**
      * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The ID of the Cloud Platform project that the job belongs to.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * If true, the request is validated but not actually executed. Defaults to false.
      * 
-     */
+    */
     public Boolean getValidateOnly() {
         return this.validateOnly;
     }
@@ -139,7 +139,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse(gcsPath, launchParameters, location, project, validateOnly);
         }

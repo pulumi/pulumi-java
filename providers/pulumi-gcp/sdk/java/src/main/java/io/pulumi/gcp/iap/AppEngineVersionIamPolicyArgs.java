@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -31,7 +31,7 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -43,7 +43,7 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -54,7 +54,7 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -65,7 +65,7 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="versionId", required=true)
-    private final Input<String> versionId;
+      private final Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId;
@@ -169,7 +169,6 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
             this.versionId = Input.of(Objects.requireNonNull(versionId));
             return this;
         }
-
         public AppEngineVersionIamPolicyArgs build() {
             return new AppEngineVersionIamPolicyArgs(appId, policyData, project, service, versionId);
         }

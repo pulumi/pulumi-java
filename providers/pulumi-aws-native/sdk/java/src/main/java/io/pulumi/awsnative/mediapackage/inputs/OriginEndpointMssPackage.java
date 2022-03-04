@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointMssEncryption;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelection;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class OriginEndpointMssPackage extends io.pulumi.resources.InvokeAr
     public static final OriginEndpointMssPackage Empty = new OriginEndpointMssPackage();
 
     @InputImport(name="encryption")
-    private final @Nullable OriginEndpointMssEncryption encryption;
+      private final @Nullable OriginEndpointMssEncryption encryption;
 
     public Optional<OriginEndpointMssEncryption> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -32,7 +32,7 @@ public final class OriginEndpointMssPackage extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="manifestWindowSeconds")
-    private final @Nullable Integer manifestWindowSeconds;
+      private final @Nullable Integer manifestWindowSeconds;
 
     public Optional<Integer> getManifestWindowSeconds() {
         return this.manifestWindowSeconds == null ? Optional.empty() : Optional.ofNullable(this.manifestWindowSeconds);
@@ -43,14 +43,14 @@ public final class OriginEndpointMssPackage extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Integer segmentDurationSeconds;
+      private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
     }
 
     @InputImport(name="streamSelection")
-    private final @Nullable OriginEndpointStreamSelection streamSelection;
+      private final @Nullable OriginEndpointStreamSelection streamSelection;
 
     public Optional<OriginEndpointStreamSelection> getStreamSelection() {
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
@@ -119,7 +119,6 @@ public final class OriginEndpointMssPackage extends io.pulumi.resources.InvokeAr
             this.streamSelection = streamSelection;
             return this;
         }
-
         public OriginEndpointMssPackage build() {
             return new OriginEndpointMssPackage(encryption, manifestWindowSeconds, segmentDurationSeconds, streamSelection);
         }

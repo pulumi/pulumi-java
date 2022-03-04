@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.DeleteCertificateErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,42 +99,42 @@ public final class GetCertificateResult {
     /**
      * This is only returned when the certificate provisioningState is 'Failed'.
      * 
-     */
+    */
     public DeleteCertificateErrorResponse getDeleteCertificateError() {
         return this.deleteCertificateError;
     }
     /**
      * The ETag of the resource, used for concurrency statements.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
      * 
-     */
+    */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * The ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The previous provisioned state of the resource
      * 
-     */
+    */
     public String getPreviousProvisioningState() {
         return this.previousProvisioningState;
     }
@@ -150,28 +150,28 @@ public final class GetCertificateResult {
     /**
      * The public key of the certificate.
      * 
-     */
+    */
     public String getPublicData() {
         return this.publicData;
     }
     /**
      * This must match the thumbprint from the name.
      * 
-     */
+    */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
      * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
      * 
-     */
+    */
     public Optional<String> getThumbprintAlgorithm() {
         return Optional.ofNullable(this.thumbprintAlgorithm);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -284,7 +284,6 @@ public final class GetCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(deleteCertificateError, etag, format, id, name, previousProvisioningState, previousProvisioningStateTransitionTime, provisioningState, provisioningStateTransitionTime, publicData, thumbprint, thumbprintAlgorithm, type);
         }

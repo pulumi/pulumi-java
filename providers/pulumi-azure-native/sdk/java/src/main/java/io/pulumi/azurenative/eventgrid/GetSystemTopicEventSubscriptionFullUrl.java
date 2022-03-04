@@ -6,21 +6,41 @@ package io.pulumi.azurenative.eventgrid;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionFullUrlArgs;
 import io.pulumi.azurenative.eventgrid.outputs.GetSystemTopicEventSubscriptionFullUrlResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSystemTopicEventSubscriptionFullUrl {
-/**
- * Full endpoint url of an event subscription
+    private GetSystemTopicEventSubscriptionFullUrl() {}
+    public interface BuilderApplicator {
+        public void apply(GetSystemTopicEventSubscriptionFullUrlArgs.Builder a);
+    }
+    private static GetSystemTopicEventSubscriptionFullUrlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSystemTopicEventSubscriptionFullUrlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Full endpoint url of an event subscription
  * API Version: 2021-06-01-preview.
  * 
- *
- * Full endpoint url of an event subscription
+     *
+     * Full endpoint url of an event subscription
  * 
- */
+     */
+    public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Full endpoint url of an event subscription
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * Full endpoint url of an event subscription
+     * 
+     */
     public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> invokeAsync(GetSystemTopicEventSubscriptionFullUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopicEventSubscriptionFullUrl", TypeShape.of(GetSystemTopicEventSubscriptionFullUrlResult.class), args == null ? GetSystemTopicEventSubscriptionFullUrlArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.TokenCertificateArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TokenPasswordArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,14 +21,14 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
     public static final TokenCredentialsPropertiesArgs Empty = new TokenCredentialsPropertiesArgs();
 
     @InputImport(name="certificates")
-    private final @Nullable Input<List<TokenCertificateArgs>> certificates;
+      private final @Nullable Input<List<TokenCertificateArgs>> certificates;
 
     public Input<List<TokenCertificateArgs>> getCertificates() {
         return this.certificates == null ? Input.empty() : this.certificates;
     }
 
     @InputImport(name="passwords")
-    private final @Nullable Input<List<TokenPasswordArgs>> passwords;
+      private final @Nullable Input<List<TokenPasswordArgs>> passwords;
 
     public Input<List<TokenPasswordArgs>> getPasswords() {
         return this.passwords == null ? Input.empty() : this.passwords;
@@ -87,7 +87,6 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
             this.passwords = Input.ofNullable(passwords);
             return this;
         }
-
         public TokenCredentialsPropertiesArgs build() {
             return new TokenCredentialsPropertiesArgs(certificates, passwords);
         }

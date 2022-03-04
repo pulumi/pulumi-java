@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class RestorePointCollectionSourcePropertiesResponse {
     /**
      * Resource Id of the source resource used to create this restore point collection
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Location of the source resource used to create this restore point collection.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
@@ -76,7 +76,6 @@ public final class RestorePointCollectionSourcePropertiesResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public RestorePointCollectionSourcePropertiesResponse build() {
             return new RestorePointCollectionSourcePropertiesResponse(id, location);
         }

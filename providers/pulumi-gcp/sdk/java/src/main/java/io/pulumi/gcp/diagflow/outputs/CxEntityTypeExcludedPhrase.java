@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CxEntityTypeExcludedPhrase {
     /**
      * The word or phrase to be excluded.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -54,7 +54,6 @@ public final class CxEntityTypeExcludedPhrase {
             this.value = value;
             return this;
         }
-
         public CxEntityTypeExcludedPhrase build() {
             return new CxEntityTypeExcludedPhrase(value);
         }

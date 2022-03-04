@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -34,7 +34,7 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="logPrefix", required=true)
-    private final Input<String> logPrefix;
+      private final Input<String> logPrefix;
 
     public Input<String> getLogPrefix() {
         return this.logPrefix;
@@ -45,7 +45,7 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="s3BucketArn", required=true)
-    private final Input<String> s3BucketArn;
+      private final Input<String> s3BucketArn;
 
     public Input<String> getS3BucketArn() {
         return this.s3BucketArn;
@@ -119,7 +119,6 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
             this.s3BucketArn = Input.of(Objects.requireNonNull(s3BucketArn));
             return this;
         }
-
         public BotAliasS3BucketLogDestinationArgs build() {
             return new BotAliasS3BucketLogDestinationArgs(kmsKeyArn, logPrefix, s3BucketArn);
         }

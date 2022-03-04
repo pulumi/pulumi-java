@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelExpressionVariable;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelMetricWindow;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class AssetModelMetric {
     /**
      * The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }
     /**
      * The list of variables used in the expression.
      * 
-     */
+    */
     public List<AssetModelExpressionVariable> getVariables() {
         return this.variables;
     }
     /**
      * The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression
      * 
-     */
+    */
     public AssetModelMetricWindow getWindow() {
         return this.window;
     }
@@ -98,7 +98,6 @@ public final class AssetModelMetric {
             this.window = Objects.requireNonNull(window);
             return this;
         }
-
         public AssetModelMetric build() {
             return new AssetModelMetric(expression, variables, window);
         }

@@ -14,7 +14,7 @@ import io.pulumi.azurenative.servicefabricmesh.outputs.ReliableCollectionsRefRes
 import io.pulumi.azurenative.servicefabricmesh.outputs.ResourceRequirementsResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.SettingResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.VolumeReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -136,105 +136,105 @@ public final class ContainerCodePackagePropertiesResponse {
     /**
      * Command array to execute within the container in exec form.
      * 
-     */
+    */
     public List<String> getCommands() {
         return this.commands == null ? List.of() : this.commands;
     }
     /**
      * Reference to sinks in DiagnosticsDescription.
      * 
-     */
+    */
     public Optional<DiagnosticsRefResponse> getDiagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
     /**
      * The endpoints exposed by this container.
      * 
-     */
+    */
     public List<EndpointPropertiesResponse> getEndpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
      * Override for the default entry point in the container.
      * 
-     */
+    */
     public Optional<String> getEntrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
     /**
      * The environment variables to set in this container
      * 
-     */
+    */
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
      * The Container image to use.
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
     /**
      * Image registry credential.
      * 
-     */
+    */
     public Optional<ImageRegistryCredentialResponse> getImageRegistryCredential() {
         return Optional.ofNullable(this.imageRegistryCredential);
     }
     /**
      * Runtime information of a container instance.
      * 
-     */
+    */
     public ContainerInstanceViewResponse getInstanceView() {
         return this.instanceView;
     }
     /**
      * The labels to set in this container.
      * 
-     */
+    */
     public List<ContainerLabelResponse> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * The name of the code package.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
      * 
-     */
+    */
     public List<ReliableCollectionsRefResponse> getReliableCollectionsRefs() {
         return this.reliableCollectionsRefs == null ? List.of() : this.reliableCollectionsRefs;
     }
     /**
      * The resources required by this container.
      * 
-     */
+    */
     public ResourceRequirementsResponse getResources() {
         return this.resources;
     }
     /**
      * The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
      * 
-     */
+    */
     public List<SettingResponse> getSettings() {
         return this.settings == null ? List.of() : this.settings;
     }
     /**
      * Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.
      * 
-     */
+    */
     public List<VolumeReferenceResponse> getVolumeRefs() {
         return this.volumeRefs == null ? List.of() : this.volumeRefs;
     }
     /**
      * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.
      * 
-     */
+    */
     public List<ApplicationScopedVolumeResponse> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
@@ -361,7 +361,6 @@ public final class ContainerCodePackagePropertiesResponse {
             this.volumes = volumes;
             return this;
         }
-
         public ContainerCodePackagePropertiesResponse build() {
             return new ContainerCodePackagePropertiesResponse(commands, diagnostics, endpoints, entrypoint, environmentVariables, image, imageRegistryCredential, instanceView, labels, name, reliableCollectionsRefs, resources, settings, volumeRefs, volumes);
         }

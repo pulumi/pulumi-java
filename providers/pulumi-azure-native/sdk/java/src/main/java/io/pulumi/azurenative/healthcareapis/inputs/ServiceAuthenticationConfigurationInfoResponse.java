@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends io.pul
      * 
      */
     @InputImport(name="audience")
-    private final @Nullable String audience;
+      private final @Nullable String audience;
 
     public Optional<String> getAudience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
@@ -35,7 +35,7 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends io.pul
      * 
      */
     @InputImport(name="authority")
-    private final @Nullable String authority;
+      private final @Nullable String authority;
 
     public Optional<String> getAuthority() {
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
@@ -46,7 +46,7 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends io.pul
      * 
      */
     @InputImport(name="smartProxyEnabled")
-    private final @Nullable Boolean smartProxyEnabled;
+      private final @Nullable Boolean smartProxyEnabled;
 
     public Optional<Boolean> getSmartProxyEnabled() {
         return this.smartProxyEnabled == null ? Optional.empty() : Optional.ofNullable(this.smartProxyEnabled);
@@ -105,7 +105,6 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends io.pul
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
         }
-
         public ServiceAuthenticationConfigurationInfoResponse build() {
             return new ServiceAuthenticationConfigurationInfoResponse(audience, authority, smartProxyEnabled);
         }

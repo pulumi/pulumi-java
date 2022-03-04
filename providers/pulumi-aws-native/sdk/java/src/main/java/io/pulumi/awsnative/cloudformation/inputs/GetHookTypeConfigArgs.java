@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetHookTypeConfigArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="typeArn", required=true)
-    private final String typeArn;
+      private final String typeArn;
 
     public String getTypeArn() {
         return this.typeArn;
@@ -55,7 +55,6 @@ public final class GetHookTypeConfigArgs extends io.pulumi.resources.InvokeArgs 
             this.typeArn = Objects.requireNonNull(typeArn);
             return this;
         }
-
         public GetHookTypeConfigArgs build() {
             return new GetHookTypeConfigArgs(typeArn);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.GetResourceSetArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.GetResourceSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceSet {
-/**
- * Schema for the AWS Route53 Recovery Readiness ResourceSet Resource and API.
+    private GetResourceSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceSetArgs.Builder a);
+    }
+    private static GetResourceSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Schema for the AWS Route53 Recovery Readiness ResourceSet Resource and API.
  * 
- */
+     */
+    public static CompletableFuture<GetResourceSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Schema for the AWS Route53 Recovery Readiness ResourceSet Resource and API.
+     * 
+     */
     public static CompletableFuture<GetResourceSetResult> invokeAsync(GetResourceSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getResourceSet", TypeShape.of(GetResourceSetResult.class), args == null ? GetResourceSetArgs.Empty : args, Utilities.withVersion(options));
     }

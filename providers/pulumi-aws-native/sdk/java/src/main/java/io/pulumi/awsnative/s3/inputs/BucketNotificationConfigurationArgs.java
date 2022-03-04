@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.inputs.BucketLambdaConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketQueueConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTopicConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,28 +23,28 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
     public static final BucketNotificationConfigurationArgs Empty = new BucketNotificationConfigurationArgs();
 
     @InputImport(name="eventBridgeConfiguration")
-    private final @Nullable Input<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
+      private final @Nullable Input<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
 
     public Input<BucketEventBridgeConfigurationArgs> getEventBridgeConfiguration() {
         return this.eventBridgeConfiguration == null ? Input.empty() : this.eventBridgeConfiguration;
     }
 
     @InputImport(name="lambdaConfigurations")
-    private final @Nullable Input<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
+      private final @Nullable Input<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
 
     public Input<List<BucketLambdaConfigurationArgs>> getLambdaConfigurations() {
         return this.lambdaConfigurations == null ? Input.empty() : this.lambdaConfigurations;
     }
 
     @InputImport(name="queueConfigurations")
-    private final @Nullable Input<List<BucketQueueConfigurationArgs>> queueConfigurations;
+      private final @Nullable Input<List<BucketQueueConfigurationArgs>> queueConfigurations;
 
     public Input<List<BucketQueueConfigurationArgs>> getQueueConfigurations() {
         return this.queueConfigurations == null ? Input.empty() : this.queueConfigurations;
     }
 
     @InputImport(name="topicConfigurations")
-    private final @Nullable Input<List<BucketTopicConfigurationArgs>> topicConfigurations;
+      private final @Nullable Input<List<BucketTopicConfigurationArgs>> topicConfigurations;
 
     public Input<List<BucketTopicConfigurationArgs>> getTopicConfigurations() {
         return this.topicConfigurations == null ? Input.empty() : this.topicConfigurations;
@@ -133,7 +133,6 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
             this.topicConfigurations = Input.ofNullable(topicConfigurations);
             return this;
         }
-
         public BucketNotificationConfigurationArgs build() {
             return new BucketNotificationConfigurationArgs(eventBridgeConfiguration, lambdaConfigurations, queueConfigurations, topicConfigurations);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.inputs.ContainerImageResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="customGpuDriverPath", required=true)
-    private final String customGpuDriverPath;
+      private final String customGpuDriverPath;
 
     public String getCustomGpuDriverPath() {
         return this.customGpuDriverPath;
@@ -36,7 +36,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="enableHealthMonitoring", required=true)
-    private final Boolean enableHealthMonitoring;
+      private final Boolean enableHealthMonitoring;
 
     public Boolean getEnableHealthMonitoring() {
         return this.enableHealthMonitoring;
@@ -47,7 +47,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="idleShutdown", required=true)
-    private final Boolean idleShutdown;
+      private final Boolean idleShutdown;
 
     public Boolean getIdleShutdown() {
         return this.idleShutdown;
@@ -58,7 +58,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="idleShutdownTimeout", required=true)
-    private final Integer idleShutdownTimeout;
+      private final Integer idleShutdownTimeout;
 
     public Integer getIdleShutdownTimeout() {
         return this.idleShutdownTimeout;
@@ -69,7 +69,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="installGpuDriver", required=true)
-    private final Boolean installGpuDriver;
+      private final Boolean installGpuDriver;
 
     public Boolean getInstallGpuDriver() {
         return this.installGpuDriver;
@@ -80,7 +80,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="kernels", required=true)
-    private final List<ContainerImageResponse> kernels;
+      private final List<ContainerImageResponse> kernels;
 
     public List<ContainerImageResponse> getKernels() {
         return this.kernels;
@@ -91,7 +91,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="notebookUpgradeSchedule", required=true)
-    private final String notebookUpgradeSchedule;
+      private final String notebookUpgradeSchedule;
 
     public String getNotebookUpgradeSchedule() {
         return this.notebookUpgradeSchedule;
@@ -102,7 +102,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="postStartupScript", required=true)
-    private final String postStartupScript;
+      private final String postStartupScript;
 
     public String getPostStartupScript() {
         return this.postStartupScript;
@@ -211,7 +211,6 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
         }
-
         public RuntimeSoftwareConfigResponse build() {
             return new RuntimeSoftwareConfigResponse(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, kernels, notebookUpgradeSchedule, postStartupScript);
         }

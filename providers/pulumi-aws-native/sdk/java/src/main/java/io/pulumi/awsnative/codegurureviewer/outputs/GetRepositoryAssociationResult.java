@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.codegurureviewer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetRepositoryAssociationResult {
     /**
      * The Amazon Resource Name (ARN) of the repository association.
      * 
-     */
+    */
     public Optional<String> getAssociationArn() {
         return Optional.ofNullable(this.associationArn);
     }
@@ -54,7 +54,6 @@ public final class GetRepositoryAssociationResult {
             this.associationArn = associationArn;
             return this;
         }
-
         public GetRepositoryAssociationResult build() {
             return new GetRepositoryAssociationResult(associationArn);
         }

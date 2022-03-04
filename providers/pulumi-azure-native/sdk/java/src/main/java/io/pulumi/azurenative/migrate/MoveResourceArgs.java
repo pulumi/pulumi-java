@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.MoveResourcePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moveCollectionName", required=true)
-    private final Input<String> moveCollectionName;
+      private final Input<String> moveCollectionName;
 
     public Input<String> getMoveCollectionName() {
         return this.moveCollectionName;
@@ -31,7 +31,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moveResourceName")
-    private final @Nullable Input<String> moveResourceName;
+      private final @Nullable Input<String> moveResourceName;
 
     public Input<String> getMoveResourceName() {
         return this.moveResourceName == null ? Input.empty() : this.moveResourceName;
@@ -42,7 +42,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<MoveResourcePropertiesArgs> properties;
+      private final @Nullable Input<MoveResourcePropertiesArgs> properties;
 
     public Input<MoveResourcePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public MoveResourceArgs build() {
             return new MoveResourceArgs(moveCollectionName, moveResourceName, properties, resourceGroupName);
         }

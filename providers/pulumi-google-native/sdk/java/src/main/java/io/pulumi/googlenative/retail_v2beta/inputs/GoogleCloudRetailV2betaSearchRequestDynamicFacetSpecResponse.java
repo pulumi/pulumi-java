@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse 
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -59,7 +59,6 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse 
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse build() {
             return new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse(mode);
         }

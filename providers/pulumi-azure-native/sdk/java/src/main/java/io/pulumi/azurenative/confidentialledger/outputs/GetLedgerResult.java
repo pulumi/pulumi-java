@@ -5,7 +5,7 @@ package io.pulumi.azurenative.confidentialledger.outputs;
 
 import io.pulumi.azurenative.confidentialledger.outputs.LedgerPropertiesResponse;
 import io.pulumi.azurenative.confidentialledger.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class GetLedgerResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Azure location where the Confidential Ledger is running.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the Resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of Confidential Ledger Resource.
      * 
-     */
+    */
     public LedgerPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Additional tags for Confidential Ledger
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class GetLedgerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLedgerResult build() {
             return new GetLedgerResult(id, location, name, properties, systemData, tags, type);
         }

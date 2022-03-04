@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.LightHouseAuthorizationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
     public static final ProviderHubMetadataThirdPartyProviderAuthorizationArgs Empty = new ProviderHubMetadataThirdPartyProviderAuthorizationArgs();
 
     @InputImport(name="authorizations")
-    private final @Nullable Input<List<LightHouseAuthorizationArgs>> authorizations;
+      private final @Nullable Input<List<LightHouseAuthorizationArgs>> authorizations;
 
     public Input<List<LightHouseAuthorizationArgs>> getAuthorizations() {
         return this.authorizations == null ? Input.empty() : this.authorizations;
     }
 
     @InputImport(name="managedByTenantId")
-    private final @Nullable Input<String> managedByTenantId;
+      private final @Nullable Input<String> managedByTenantId;
 
     public Input<String> getManagedByTenantId() {
         return this.managedByTenantId == null ? Input.empty() : this.managedByTenantId;
@@ -83,7 +83,6 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
             this.managedByTenantId = Input.ofNullable(managedByTenantId);
             return this;
         }
-
         public ProviderHubMetadataThirdPartyProviderAuthorizationArgs build() {
             return new ProviderHubMetadataThirdPartyProviderAuthorizationArgs(authorizations, managedByTenantId);
         }

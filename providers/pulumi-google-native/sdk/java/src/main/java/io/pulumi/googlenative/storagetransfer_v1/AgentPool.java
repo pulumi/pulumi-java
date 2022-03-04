@@ -5,8 +5,8 @@ package io.pulumi.googlenative.storagetransfer_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storagetransfer_v1.AgentPoolArgs;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.BandwidthLimitResponse;
@@ -76,6 +76,37 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AgentPoolArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.storagetransfer_v1.AgentPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.storagetransfer_v1.AgentPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AgentPool(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AgentPool(String name) {
+        this(name, AgentPoolArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AgentPool(String name, AgentPoolArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

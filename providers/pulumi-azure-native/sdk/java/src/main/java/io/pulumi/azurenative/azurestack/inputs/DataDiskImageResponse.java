@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="lun", required=true)
-    private final Integer lun;
+      private final Integer lun;
 
     public Integer getLun() {
         return this.lun;
@@ -33,7 +33,7 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="sourceBlobSasUri", required=true)
-    private final String sourceBlobSasUri;
+      private final String sourceBlobSasUri;
 
     public String getSourceBlobSasUri() {
         return this.sourceBlobSasUri;
@@ -82,7 +82,6 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
             this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
             return this;
         }
-
         public DataDiskImageResponse build() {
             return new DataDiskImageResponse(lun, sourceBlobSasUri);
         }

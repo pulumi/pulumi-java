@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.FleetConfigResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.ScalingConfigResponse;
 import java.lang.String;
@@ -70,49 +70,49 @@ public final class GetConfigResult {
     /**
      * The creation time.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The description of the game server config.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.
      * 
-     */
+    */
     public List<FleetConfigResponse> getFleetConfigs() {
         return this.fleetConfigs;
     }
     /**
      * The labels associated with this game server config. Each label is a key-value pair.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The autoscaling settings.
      * 
-     */
+    */
     public List<ScalingConfigResponse> getScalingConfigs() {
         return this.scalingConfigs;
     }
     /**
      * The last-modified time.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -183,7 +183,6 @@ public final class GetConfigResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(createTime, description, fleetConfigs, labels, name, scalingConfigs, updateTime);
         }

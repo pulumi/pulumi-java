@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMembership {
-/**
- * Retrieves a `Membership`.
+    private GetMembership() {}
+    public interface BuilderApplicator {
+        public void apply(GetMembershipArgs.Builder a);
+    }
+    private static GetMembershipArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMembershipArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves a `Membership`.
  * 
- */
+     */
+    public static CompletableFuture<GetMembershipResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves a `Membership`.
+     * 
+     */
     public static CompletableFuture<GetMembershipResult> invokeAsync(GetMembershipArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudidentity/v1:getMembership", TypeShape.of(GetMembershipResult.class), args == null ? GetMembershipArgs.Empty : args, Utilities.withVersion(options));
     }

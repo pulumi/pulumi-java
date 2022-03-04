@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class InstanceFailoverReplicaResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="available", required=true)
-    private final Boolean available;
+      private final Boolean available;
 
     public Boolean getAvailable() {
         return this.available;
@@ -33,7 +33,7 @@ public final class InstanceFailoverReplicaResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -82,7 +82,6 @@ public final class InstanceFailoverReplicaResponse extends io.pulumi.resources.I
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public InstanceFailoverReplicaResponse build() {
             return new InstanceFailoverReplicaResponse(available, name);
         }

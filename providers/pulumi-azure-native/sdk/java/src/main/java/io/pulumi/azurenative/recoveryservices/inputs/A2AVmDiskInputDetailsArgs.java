@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="diskUri")
-    private final @Nullable Input<String> diskUri;
+      private final @Nullable Input<String> diskUri;
 
     public Input<String> getDiskUri() {
         return this.diskUri == null ? Input.empty() : this.diskUri;
@@ -34,7 +34,7 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="primaryStagingAzureStorageAccountId")
-    private final @Nullable Input<String> primaryStagingAzureStorageAccountId;
+      private final @Nullable Input<String> primaryStagingAzureStorageAccountId;
 
     public Input<String> getPrimaryStagingAzureStorageAccountId() {
         return this.primaryStagingAzureStorageAccountId == null ? Input.empty() : this.primaryStagingAzureStorageAccountId;
@@ -45,7 +45,7 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="recoveryAzureStorageAccountId")
-    private final @Nullable Input<String> recoveryAzureStorageAccountId;
+      private final @Nullable Input<String> recoveryAzureStorageAccountId;
 
     public Input<String> getRecoveryAzureStorageAccountId() {
         return this.recoveryAzureStorageAccountId == null ? Input.empty() : this.recoveryAzureStorageAccountId;
@@ -119,7 +119,6 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
             this.recoveryAzureStorageAccountId = Input.ofNullable(recoveryAzureStorageAccountId);
             return this;
         }
-
         public A2AVmDiskInputDetailsArgs build() {
             return new A2AVmDiskInputDetailsArgs(diskUri, primaryStagingAzureStorageAccountId, recoveryAzureStorageAccountId);
         }

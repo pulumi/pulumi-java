@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class OutputResponse {
     /**
      * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -52,7 +52,6 @@ public final class OutputResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OutputResponse build() {
             return new OutputResponse(uri);
         }

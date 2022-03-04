@@ -6,7 +6,7 @@ package io.pulumi.awsnative.imagebuilder.outputs;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistributionAmiDistributionConfigurationProperties;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistributionContainerDistributionConfigurationProperties;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationLaunchTemplateConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,35 +58,35 @@ public final class DistributionConfigurationDistribution {
     /**
      * The specific AMI settings (for example, launch permissions, AMI tags).
      * 
-     */
+    */
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationProperties> getAmiDistributionConfiguration() {
         return Optional.ofNullable(this.amiDistributionConfiguration);
     }
     /**
      * Container distribution settings for encryption, licensing, and sharing in a specific Region.
      * 
-     */
+    */
     public Optional<DistributionConfigurationDistributionContainerDistributionConfigurationProperties> getContainerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
     }
     /**
      * A group of launchTemplateConfiguration settings that apply to image distribution.
      * 
-     */
+    */
     public List<DistributionConfigurationLaunchTemplateConfiguration> getLaunchTemplateConfigurations() {
         return this.launchTemplateConfigurations == null ? List.of() : this.launchTemplateConfigurations;
     }
     /**
      * The License Manager Configuration to associate with the AMI in the specified Region.
      * 
-     */
+    */
     public List<String> getLicenseConfigurationArns() {
         return this.licenseConfigurationArns == null ? List.of() : this.licenseConfigurationArns;
     }
     /**
      * region
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
@@ -143,7 +143,6 @@ public final class DistributionConfigurationDistribution {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public DistributionConfigurationDistribution build() {
             return new DistributionConfigurationDistribution(amiDistributionConfiguration, containerDistributionConfiguration, launchTemplateConfigurations, licenseConfigurationArns, region);
         }

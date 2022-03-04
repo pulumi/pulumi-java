@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class AutoScalePropertiesResponse {
     /**
      * Whether automatic scaling is enabled for the Big Data pool.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The maximum number of nodes the Big Data pool can support.
      * 
-     */
+    */
     public Optional<Integer> getMaxNodeCount() {
         return Optional.ofNullable(this.maxNodeCount);
     }
     /**
      * The minimum number of nodes the Big Data pool can support.
      * 
-     */
+    */
     public Optional<Integer> getMinNodeCount() {
         return Optional.ofNullable(this.minNodeCount);
     }
@@ -98,7 +98,6 @@ public final class AutoScalePropertiesResponse {
             this.minNodeCount = minNodeCount;
             return this;
         }
-
         public AutoScalePropertiesResponse build() {
             return new AutoScalePropertiesResponse(enabled, maxNodeCount, minNodeCount);
         }

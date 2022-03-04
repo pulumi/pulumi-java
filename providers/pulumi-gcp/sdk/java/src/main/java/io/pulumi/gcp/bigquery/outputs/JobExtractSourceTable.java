@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,14 +41,14 @@ public final class JobExtractSourceTable {
     /**
      * The ID of the dataset containing this model.
      * 
-     */
+    */
     public Optional<String> getDatasetId() {
         return Optional.ofNullable(this.datasetId);
     }
     /**
      * The ID of the project containing this model.
      * 
-     */
+    */
     public Optional<String> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -56,7 +56,7 @@ public final class JobExtractSourceTable {
      * The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
      * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
      * 
-     */
+    */
     public String getTableId() {
         return this.tableId;
     }
@@ -99,7 +99,6 @@ public final class JobExtractSourceTable {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public JobExtractSourceTable build() {
             return new JobExtractSourceTable(datasetId, projectId, tableId);
         }

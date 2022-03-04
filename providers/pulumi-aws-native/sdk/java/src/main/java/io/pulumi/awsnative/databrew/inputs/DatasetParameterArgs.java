@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.enums.DatasetParameterType;
 import io.pulumi.awsnative.databrew.inputs.DatasetDatetimeOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,28 +23,28 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="createColumn")
-    private final @Nullable Input<Boolean> createColumn;
+      private final @Nullable Input<Boolean> createColumn;
 
     public Input<Boolean> getCreateColumn() {
         return this.createColumn == null ? Input.empty() : this.createColumn;
     }
 
     @InputImport(name="datetimeOptions")
-    private final @Nullable Input<DatasetDatetimeOptionsArgs> datetimeOptions;
+      private final @Nullable Input<DatasetDatetimeOptionsArgs> datetimeOptions;
 
     public Input<DatasetDatetimeOptionsArgs> getDatetimeOptions() {
         return this.datetimeOptions == null ? Input.empty() : this.datetimeOptions;
     }
 
     @InputImport(name="filter")
-    private final @Nullable Input<DatasetFilterExpressionArgs> filter;
+      private final @Nullable Input<DatasetFilterExpressionArgs> filter;
 
     public Input<DatasetFilterExpressionArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -55,7 +55,7 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<DatasetParameterType> type;
+      private final Input<DatasetParameterType> type;
 
     public Input<DatasetParameterType> getType() {
         return this.type;
@@ -159,7 +159,6 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DatasetParameterArgs build() {
             return new DatasetParameterArgs(createColumn, datetimeOptions, filter, name, type);
         }

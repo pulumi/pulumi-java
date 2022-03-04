@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * 
      */
     @InputImport(name="fixedDelay", required=true)
-    private final Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
+      private final Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
 
     public Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> getFixedDelay() {
         return this.fixedDelay;
@@ -33,7 +33,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * 
      */
     @InputImport(name="percentage", required=true)
-    private final Input<Double> percentage;
+      private final Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage;
@@ -92,7 +92,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
             this.percentage = Input.of(Objects.requireNonNull(percentage));
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs(fixedDelay, percentage);
         }

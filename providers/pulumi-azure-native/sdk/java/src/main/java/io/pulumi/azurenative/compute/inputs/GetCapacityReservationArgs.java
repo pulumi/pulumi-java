@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetCapacityReservationArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="capacityReservationGroupName", required=true)
-    private final String capacityReservationGroupName;
+      private final String capacityReservationGroupName;
 
     public String getCapacityReservationGroupName() {
         return this.capacityReservationGroupName;
@@ -30,7 +30,7 @@ public final class GetCapacityReservationArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="capacityReservationName", required=true)
-    private final String capacityReservationName;
+      private final String capacityReservationName;
 
     public String getCapacityReservationName() {
         return this.capacityReservationName;
@@ -41,7 +41,7 @@ public final class GetCapacityReservationArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -52,7 +52,7 @@ public final class GetCapacityReservationArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -121,7 +121,6 @@ public final class GetCapacityReservationArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetCapacityReservationArgs build() {
             return new GetCapacityReservationArgs(capacityReservationGroupName, capacityReservationName, expand, resourceGroupName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxPercentUnhealthyServices")
-    private final @Nullable Input<Integer> maxPercentUnhealthyServices;
+      private final @Nullable Input<Integer> maxPercentUnhealthyServices;
 
     public Input<Integer> getMaxPercentUnhealthyServices() {
         return this.maxPercentUnhealthyServices == null ? Input.empty() : this.maxPercentUnhealthyServices;
@@ -66,7 +66,6 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
             this.maxPercentUnhealthyServices = Input.ofNullable(maxPercentUnhealthyServices);
             return this;
         }
-
         public ServiceTypeHealthPolicyArgs build() {
             return new ServiceTypeHealthPolicyArgs(maxPercentUnhealthyServices);
         }

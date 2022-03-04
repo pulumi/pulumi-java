@@ -6,21 +6,41 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.migrate.inputs.GetGroupArgs;
 import io.pulumi.azurenative.migrate.outputs.GetGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGroup {
-/**
- * A group created in a Migration project.
+    private GetGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetGroupArgs.Builder a);
+    }
+    private static GetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A group created in a Migration project.
  * API Version: 2019-10-01.
  * 
- *
- * A group created in a Migration project.
+     *
+     * A group created in a Migration project.
  * 
- */
+     */
+    public static CompletableFuture<GetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A group created in a Migration project.
+     * API Version: 2019-10-01.
+     * 
+     *
+         * A group created in a Migration project.
+     * 
+     */
     public static CompletableFuture<GetGroupResult> invokeAsync(GetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getGroup", TypeShape.of(GetGroupResult.class), args == null ? GetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

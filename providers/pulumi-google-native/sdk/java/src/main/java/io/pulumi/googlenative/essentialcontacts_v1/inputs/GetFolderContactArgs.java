@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.essentialcontacts_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetFolderContactArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetFolderContactArgs Empty = new GetFolderContactArgs();
 
     @InputImport(name="contactId", required=true)
-    private final String contactId;
+      private final String contactId;
 
     public String getContactId() {
         return this.contactId;
     }
 
     @InputImport(name="folderId", required=true)
-    private final String folderId;
+      private final String folderId;
 
     public String getFolderId() {
         return this.folderId;
@@ -69,7 +69,6 @@ public final class GetFolderContactArgs extends io.pulumi.resources.InvokeArgs {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
-
         public GetFolderContactArgs build() {
             return new GetFolderContactArgs(contactId, folderId);
         }

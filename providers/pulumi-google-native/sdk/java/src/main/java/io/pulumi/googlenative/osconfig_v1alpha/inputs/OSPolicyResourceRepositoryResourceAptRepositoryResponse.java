@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
      * 
      */
     @InputImport(name="archiveType", required=true)
-    private final String archiveType;
+      private final String archiveType;
 
     public String getArchiveType() {
         return this.archiveType;
@@ -33,7 +33,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
      * 
      */
     @InputImport(name="components", required=true)
-    private final List<String> components;
+      private final List<String> components;
 
     public List<String> getComponents() {
         return this.components;
@@ -44,7 +44,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
      * 
      */
     @InputImport(name="distribution", required=true)
-    private final String distribution;
+      private final String distribution;
 
     public String getDistribution() {
         return this.distribution;
@@ -55,7 +55,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
      * 
      */
     @InputImport(name="gpgKey", required=true)
-    private final String gpgKey;
+      private final String gpgKey;
 
     public String getGpgKey() {
         return this.gpgKey;
@@ -66,7 +66,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -145,7 +145,6 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceAptRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceAptRepositoryResponse(archiveType, components, distribution, gpgKey, uri);
         }

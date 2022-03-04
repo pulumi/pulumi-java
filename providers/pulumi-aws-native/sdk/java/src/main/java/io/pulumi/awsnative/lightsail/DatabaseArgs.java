@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.lightsail.inputs.DatabaseRelationalDatabaseParameterArgs;
 import io.pulumi.awsnative.lightsail.inputs.DatabaseTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -34,7 +34,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupRetention")
-    private final @Nullable Input<Boolean> backupRetention;
+      private final @Nullable Input<Boolean> backupRetention;
 
     public Input<Boolean> getBackupRetention() {
         return this.backupRetention == null ? Input.empty() : this.backupRetention;
@@ -45,7 +45,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caCertificateIdentifier")
-    private final @Nullable Input<String> caCertificateIdentifier;
+      private final @Nullable Input<String> caCertificateIdentifier;
 
     public Input<String> getCaCertificateIdentifier() {
         return this.caCertificateIdentifier == null ? Input.empty() : this.caCertificateIdentifier;
@@ -56,7 +56,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterDatabaseName", required=true)
-    private final Input<String> masterDatabaseName;
+      private final Input<String> masterDatabaseName;
 
     public Input<String> getMasterDatabaseName() {
         return this.masterDatabaseName;
@@ -67,7 +67,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterUserPassword")
-    private final @Nullable Input<String> masterUserPassword;
+      private final @Nullable Input<String> masterUserPassword;
 
     public Input<String> getMasterUserPassword() {
         return this.masterUserPassword == null ? Input.empty() : this.masterUserPassword;
@@ -78,7 +78,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterUsername", required=true)
-    private final Input<String> masterUsername;
+      private final Input<String> masterUsername;
 
     public Input<String> getMasterUsername() {
         return this.masterUsername;
@@ -89,7 +89,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredBackupWindow")
-    private final @Nullable Input<String> preferredBackupWindow;
+      private final @Nullable Input<String> preferredBackupWindow;
 
     public Input<String> getPreferredBackupWindow() {
         return this.preferredBackupWindow == null ? Input.empty() : this.preferredBackupWindow;
@@ -100,7 +100,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredMaintenanceWindow")
-    private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Input<String> preferredMaintenanceWindow;
 
     public Input<String> getPreferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
@@ -111,7 +111,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publiclyAccessible")
-    private final @Nullable Input<Boolean> publiclyAccessible;
+      private final @Nullable Input<Boolean> publiclyAccessible;
 
     public Input<Boolean> getPubliclyAccessible() {
         return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
@@ -122,7 +122,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationalDatabaseBlueprintId", required=true)
-    private final Input<String> relationalDatabaseBlueprintId;
+      private final Input<String> relationalDatabaseBlueprintId;
 
     public Input<String> getRelationalDatabaseBlueprintId() {
         return this.relationalDatabaseBlueprintId;
@@ -133,7 +133,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationalDatabaseBundleId", required=true)
-    private final Input<String> relationalDatabaseBundleId;
+      private final Input<String> relationalDatabaseBundleId;
 
     public Input<String> getRelationalDatabaseBundleId() {
         return this.relationalDatabaseBundleId;
@@ -144,7 +144,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationalDatabaseName", required=true)
-    private final Input<String> relationalDatabaseName;
+      private final Input<String> relationalDatabaseName;
 
     public Input<String> getRelationalDatabaseName() {
         return this.relationalDatabaseName;
@@ -155,7 +155,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationalDatabaseParameters")
-    private final @Nullable Input<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters;
+      private final @Nullable Input<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters;
 
     public Input<List<DatabaseRelationalDatabaseParameterArgs>> getRelationalDatabaseParameters() {
         return this.relationalDatabaseParameters == null ? Input.empty() : this.relationalDatabaseParameters;
@@ -166,7 +166,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotateMasterUserPassword")
-    private final @Nullable Input<Boolean> rotateMasterUserPassword;
+      private final @Nullable Input<Boolean> rotateMasterUserPassword;
 
     public Input<Boolean> getRotateMasterUserPassword() {
         return this.rotateMasterUserPassword == null ? Input.empty() : this.rotateMasterUserPassword;
@@ -177,7 +177,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DatabaseTagArgs>> tags;
+      private final @Nullable Input<List<DatabaseTagArgs>> tags;
 
     public Input<List<DatabaseTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -431,7 +431,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DatabaseArgs build() {
             return new DatabaseArgs(availabilityZone, backupRetention, caCertificateIdentifier, masterDatabaseName, masterUserPassword, masterUsername, preferredBackupWindow, preferredMaintenanceWindow, publiclyAccessible, relationalDatabaseBlueprintId, relationalDatabaseBundleId, relationalDatabaseName, relationalDatabaseParameters, rotateMasterUserPassword, tags);
         }

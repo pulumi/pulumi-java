@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ConnectionProfileResponse {
     /**
      * The enabled access level for Client Access over RDP.
      * 
-     */
+    */
     public Optional<String> getClientRdpAccess() {
         return Optional.ofNullable(this.clientRdpAccess);
     }
     /**
      * The enabled access level for Client Access over SSH.
      * 
-     */
+    */
     public Optional<String> getClientSshAccess() {
         return Optional.ofNullable(this.clientSshAccess);
     }
     /**
      * The enabled access level for Web Access over RDP.
      * 
-     */
+    */
     public Optional<String> getWebRdpAccess() {
         return Optional.ofNullable(this.webRdpAccess);
     }
     /**
      * The enabled access level for Web Access over SSH.
      * 
-     */
+    */
     public Optional<String> getWebSshAccess() {
         return Optional.ofNullable(this.webSshAccess);
     }
@@ -118,7 +118,6 @@ public final class ConnectionProfileResponse {
             this.webSshAccess = webSshAccess;
             return this;
         }
-
         public ConnectionProfileResponse build() {
             return new ConnectionProfileResponse(clientRdpAccess, clientSshAccess, webRdpAccess, webSshAccess);
         }

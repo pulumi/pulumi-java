@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
@@ -28,7 +28,7 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -77,7 +77,6 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public DatasetReferenceResponse build() {
             return new DatasetReferenceResponse(datasetId, project);
         }

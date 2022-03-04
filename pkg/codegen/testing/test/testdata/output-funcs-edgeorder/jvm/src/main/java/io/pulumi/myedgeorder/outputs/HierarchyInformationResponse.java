@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class HierarchyInformationResponse {
     /**
      * Represents configuration name that uniquely identifies configuration
      * 
-     */
+    */
     public Optional<String> getConfigurationName() {
         return Optional.ofNullable(this.configurationName);
     }
     /**
      * Represents product family name that uniquely identifies product family
      * 
-     */
+    */
     public Optional<String> getProductFamilyName() {
         return Optional.ofNullable(this.productFamilyName);
     }
     /**
      * Represents product line name that uniquely identifies product line
      * 
-     */
+    */
     public Optional<String> getProductLineName() {
         return Optional.ofNullable(this.productLineName);
     }
     /**
      * Represents product name that uniquely identifies product
      * 
-     */
+    */
     public Optional<String> getProductName() {
         return Optional.ofNullable(this.productName);
     }
@@ -118,7 +118,6 @@ public final class HierarchyInformationResponse {
             this.productName = productName;
             return this;
         }
-
         public HierarchyInformationResponse build() {
             return new HierarchyInformationResponse(configurationName, productFamilyName, productLineName, productName);
         }

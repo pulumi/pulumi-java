@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.ResourceManifestResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.ResourceOptionsResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class KubernetesResourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="connectResources", required=true)
-    private final List<ResourceManifestResponse> connectResources;
+      private final List<ResourceManifestResponse> connectResources;
 
     public List<ResourceManifestResponse> getConnectResources() {
         return this.connectResources;
@@ -35,7 +35,7 @@ public final class KubernetesResourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="membershipCrManifest", required=true)
-    private final String membershipCrManifest;
+      private final String membershipCrManifest;
 
     public String getMembershipCrManifest() {
         return this.membershipCrManifest;
@@ -46,7 +46,7 @@ public final class KubernetesResourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="membershipResources", required=true)
-    private final List<ResourceManifestResponse> membershipResources;
+      private final List<ResourceManifestResponse> membershipResources;
 
     public List<ResourceManifestResponse> getMembershipResources() {
         return this.membershipResources;
@@ -57,7 +57,7 @@ public final class KubernetesResourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceOptions", required=true)
-    private final ResourceOptionsResponse resourceOptions;
+      private final ResourceOptionsResponse resourceOptions;
 
     public ResourceOptionsResponse getResourceOptions() {
         return this.resourceOptions;
@@ -126,7 +126,6 @@ public final class KubernetesResourceResponse extends io.pulumi.resources.Invoke
             this.resourceOptions = Objects.requireNonNull(resourceOptions);
             return this;
         }
-
         public KubernetesResourceResponse build() {
             return new KubernetesResourceResponse(connectResources, membershipCrManifest, membershipResources, resourceOptions);
         }

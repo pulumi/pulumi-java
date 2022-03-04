@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetCostAllocationRuleArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="billingAccountId", required=true)
-    private final String billingAccountId;
+      private final String billingAccountId;
 
     public String getBillingAccountId() {
         return this.billingAccountId;
@@ -28,7 +28,7 @@ public final class GetCostAllocationRuleArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ruleName", required=true)
-    private final String ruleName;
+      private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;
@@ -77,7 +77,6 @@ public final class GetCostAllocationRuleArgs extends io.pulumi.resources.InvokeA
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public GetCostAllocationRuleArgs build() {
             return new GetCostAllocationRuleArgs(billingAccountId, ruleName);
         }

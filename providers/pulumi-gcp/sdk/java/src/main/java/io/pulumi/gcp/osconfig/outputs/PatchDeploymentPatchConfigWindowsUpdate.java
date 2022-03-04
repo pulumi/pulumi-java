@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,14 +43,14 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
      * Only apply updates of these windows update classifications. If empty, all updates are applied.
      * Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
      * 
-     */
+    */
     public List<String> getClassifications() {
         return this.classifications == null ? List.of() : this.classifications;
     }
     /**
      * List of KBs to exclude from update.
      * 
-     */
+    */
     public List<String> getExcludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
@@ -58,7 +58,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
      * An exclusive list of kbs to be updated. These are the only patches that will be updated.
      * This field must not be used with other patch configurations.
      * 
-     */
+    */
     public List<String> getExclusivePatches() {
         return this.exclusivePatches == null ? List.of() : this.exclusivePatches;
     }
@@ -101,7 +101,6 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
             this.exclusivePatches = exclusivePatches;
             return this;
         }
-
         public PatchDeploymentPatchConfigWindowsUpdate build() {
             return new PatchDeploymentPatchConfigWindowsUpdate(classifications, excludes, exclusivePatches);
         }

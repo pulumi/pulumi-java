@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storagepool;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storagepool.inputs.GetDiskPoolArgs;
 import io.pulumi.azurenative.storagepool.outputs.GetDiskPoolResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiskPool {
-/**
- * Response for Disk pool request.
+    private GetDiskPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetDiskPoolArgs.Builder a);
+    }
+    private static GetDiskPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDiskPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response for Disk pool request.
  * API Version: 2020-03-15-preview.
  * 
- *
- * Response for Disk pool request.
+     *
+     * Response for Disk pool request.
  * 
- */
+     */
+    public static CompletableFuture<GetDiskPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response for Disk pool request.
+     * API Version: 2020-03-15-preview.
+     * 
+     *
+         * Response for Disk pool request.
+     * 
+     */
     public static CompletableFuture<GetDiskPoolResult> invokeAsync(GetDiskPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagepool:getDiskPool", TypeShape.of(GetDiskPoolResult.class), args == null ? GetDiskPoolArgs.Empty : args, Utilities.withVersion(options));
     }

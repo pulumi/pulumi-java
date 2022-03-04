@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class InstanceReferenceResponse {
     /**
      * The name of the Cloud SQL instance being referenced. This does not include the project ID.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * The region of the Cloud SQL instance being referenced.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
@@ -95,7 +95,6 @@ public final class InstanceReferenceResponse {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public InstanceReferenceResponse build() {
             return new InstanceReferenceResponse(name, project, region);
         }

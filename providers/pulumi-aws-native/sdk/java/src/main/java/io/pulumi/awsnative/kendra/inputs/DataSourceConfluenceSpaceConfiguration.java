@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfluenceSpaceToIndexFieldMapping;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,35 +18,35 @@ public final class DataSourceConfluenceSpaceConfiguration extends io.pulumi.reso
     public static final DataSourceConfluenceSpaceConfiguration Empty = new DataSourceConfluenceSpaceConfiguration();
 
     @InputImport(name="crawlArchivedSpaces")
-    private final @Nullable Boolean crawlArchivedSpaces;
+      private final @Nullable Boolean crawlArchivedSpaces;
 
     public Optional<Boolean> getCrawlArchivedSpaces() {
         return this.crawlArchivedSpaces == null ? Optional.empty() : Optional.ofNullable(this.crawlArchivedSpaces);
     }
 
     @InputImport(name="crawlPersonalSpaces")
-    private final @Nullable Boolean crawlPersonalSpaces;
+      private final @Nullable Boolean crawlPersonalSpaces;
 
     public Optional<Boolean> getCrawlPersonalSpaces() {
         return this.crawlPersonalSpaces == null ? Optional.empty() : Optional.ofNullable(this.crawlPersonalSpaces);
     }
 
     @InputImport(name="excludeSpaces")
-    private final @Nullable List<String> excludeSpaces;
+      private final @Nullable List<String> excludeSpaces;
 
     public List<String> getExcludeSpaces() {
         return this.excludeSpaces == null ? List.of() : this.excludeSpaces;
     }
 
     @InputImport(name="includeSpaces")
-    private final @Nullable List<String> includeSpaces;
+      private final @Nullable List<String> includeSpaces;
 
     public List<String> getIncludeSpaces() {
         return this.includeSpaces == null ? List.of() : this.includeSpaces;
     }
 
     @InputImport(name="spaceFieldMappings")
-    private final @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings;
+      private final @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings;
 
     public List<DataSourceConfluenceSpaceToIndexFieldMapping> getSpaceFieldMappings() {
         return this.spaceFieldMappings == null ? List.of() : this.spaceFieldMappings;
@@ -125,7 +125,6 @@ public final class DataSourceConfluenceSpaceConfiguration extends io.pulumi.reso
             this.spaceFieldMappings = spaceFieldMappings;
             return this;
         }
-
         public DataSourceConfluenceSpaceConfiguration build() {
             return new DataSourceConfluenceSpaceConfiguration(crawlArchivedSpaces, crawlPersonalSpaces, excludeSpaces, includeSpaces, spaceFieldMappings);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class OperationErrorResponse {
     /**
      * Identifies the specific error that occurred.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * This is always `sql#operationError`.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Additional information about the error encountered.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -95,7 +95,6 @@ public final class OperationErrorResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public OperationErrorResponse build() {
             return new OperationErrorResponse(code, kind, message);
         }

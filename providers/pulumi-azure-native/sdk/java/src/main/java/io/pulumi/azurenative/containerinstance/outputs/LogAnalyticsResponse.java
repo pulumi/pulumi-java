@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class LogAnalyticsResponse {
     /**
      * The log type to be used.
      * 
-     */
+    */
     public Optional<String> getLogType() {
         return Optional.ofNullable(this.logType);
     }
     /**
      * Metadata for log analytics.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The workspace id for log analytics
      * 
-     */
+    */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * The workspace key for log analytics
      * 
-     */
+    */
     public String getWorkspaceKey() {
         return this.workspaceKey;
     }
     /**
      * The workspace resource id for log analytics
      * 
-     */
+    */
     public Map<String,String> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Map.of() : this.workspaceResourceId;
     }
@@ -140,7 +140,6 @@ public final class LogAnalyticsResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public LogAnalyticsResponse build() {
             return new LogAnalyticsResponse(logType, metadata, workspaceId, workspaceKey, workspaceResourceId);
         }

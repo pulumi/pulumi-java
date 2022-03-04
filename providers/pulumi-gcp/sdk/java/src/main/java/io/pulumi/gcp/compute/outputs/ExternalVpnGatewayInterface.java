@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +45,7 @@ public final class ExternalVpnGatewayInterface {
      * * `0, 1 - TWO_IPS_REDUNDANCY`
      * * `0, 1, 2, 3 - FOUR_IPS_REDUNDANCY`
      * 
-     */
+    */
     public Optional<Integer> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -55,7 +55,7 @@ public final class ExternalVpnGatewayInterface {
      * your on-premise gateway or another Cloud provider's VPN gateway,
      * it cannot be an IP address from Google Compute Engine.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -91,7 +91,6 @@ public final class ExternalVpnGatewayInterface {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public ExternalVpnGatewayInterface build() {
             return new ExternalVpnGatewayInterface(id, ipAddress);
         }

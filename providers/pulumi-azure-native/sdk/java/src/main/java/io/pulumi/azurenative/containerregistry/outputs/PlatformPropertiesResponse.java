@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class PlatformPropertiesResponse {
     /**
      * The OS architecture.
      * 
-     */
+    */
     public Optional<String> getArchitecture() {
         return Optional.ofNullable(this.architecture);
     }
     /**
      * The operating system type required for the run.
      * 
-     */
+    */
     public String getOs() {
         return this.os;
     }
     /**
      * Variant of the CPU.
      * 
-     */
+    */
     public Optional<String> getVariant() {
         return Optional.ofNullable(this.variant);
     }
@@ -97,7 +97,6 @@ public final class PlatformPropertiesResponse {
             this.variant = variant;
             return this;
         }
-
         public PlatformPropertiesResponse build() {
             return new PlatformPropertiesResponse(architecture, os, variant);
         }

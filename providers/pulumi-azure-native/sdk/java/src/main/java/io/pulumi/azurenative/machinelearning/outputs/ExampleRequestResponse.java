@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class ExampleRequestResponse {
     /**
      * Sample input data for the web service's global parameters
      * 
-     */
+    */
     public Map<String,Object> getGlobalParameters() {
         return this.globalParameters == null ? Map.of() : this.globalParameters;
     }
     /**
      * Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
      * 
-     */
+    */
     public Map<String,List<List<Object>>> getInputs() {
         return this.inputs == null ? Map.of() : this.inputs;
     }
@@ -78,7 +78,6 @@ public final class ExampleRequestResponse {
             this.inputs = inputs;
             return this;
         }
-
         public ExampleRequestResponse build() {
             return new ExampleRequestResponse(globalParameters, inputs);
         }

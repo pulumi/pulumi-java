@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.timestream.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class RetentionPropertiesProperties {
     /**
      * The duration for which data must be stored in the magnetic store.
      * 
-     */
+    */
     public Optional<String> getMagneticStoreRetentionPeriodInDays() {
         return Optional.ofNullable(this.magneticStoreRetentionPeriodInDays);
     }
     /**
      * The duration for which data must be stored in the memory store.
      * 
-     */
+    */
     public Optional<String> getMemoryStoreRetentionPeriodInHours() {
         return Optional.ofNullable(this.memoryStoreRetentionPeriodInHours);
     }
@@ -76,7 +76,6 @@ public final class RetentionPropertiesProperties {
             this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
             return this;
         }
-
         public RetentionPropertiesProperties build() {
             return new RetentionPropertiesProperties(magneticStoreRetentionPeriodInDays, memoryStoreRetentionPeriodInHours);
         }

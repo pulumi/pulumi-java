@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 import io.pulumi.azurenative.machinelearning.enums.DiagnosticsLevel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="expiry")
-    private final @Nullable Input<String> expiry;
+      private final @Nullable Input<String> expiry;
 
     public Input<String> getExpiry() {
         return this.expiry == null ? Input.empty() : this.expiry;
@@ -36,7 +36,7 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="level", required=true)
-    private final Input<Either<String,DiagnosticsLevel>> level;
+      private final Input<Either<String,DiagnosticsLevel>> level;
 
     public Input<Either<String,DiagnosticsLevel>> getLevel() {
         return this.level;
@@ -95,7 +95,6 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
             this.level = Input.of(Objects.requireNonNull(level));
             return this;
         }
-
         public DiagnosticsConfigurationArgs build() {
             return new DiagnosticsConfigurationArgs(expiry, level);
         }

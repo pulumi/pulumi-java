@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.FlowAccessControlConfigurationPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -47,28 +47,28 @@ public final class FlowAccessControlConfigurationResponse {
     /**
      * The access control configuration for workflow actions.
      * 
-     */
+    */
     public Optional<FlowAccessControlConfigurationPolicyResponse> getActions() {
         return Optional.ofNullable(this.actions);
     }
     /**
      * The access control configuration for accessing workflow run contents.
      * 
-     */
+    */
     public Optional<FlowAccessControlConfigurationPolicyResponse> getContents() {
         return Optional.ofNullable(this.contents);
     }
     /**
      * The access control configuration for invoking workflow triggers.
      * 
-     */
+    */
     public Optional<FlowAccessControlConfigurationPolicyResponse> getTriggers() {
         return Optional.ofNullable(this.triggers);
     }
     /**
      * The access control configuration for workflow management.
      * 
-     */
+    */
     public Optional<FlowAccessControlConfigurationPolicyResponse> getWorkflowManagement() {
         return Optional.ofNullable(this.workflowManagement);
     }
@@ -118,7 +118,6 @@ public final class FlowAccessControlConfigurationResponse {
             this.workflowManagement = workflowManagement;
             return this;
         }
-
         public FlowAccessControlConfigurationResponse build() {
             return new FlowAccessControlConfigurationResponse(actions, contents, triggers, workflowManagement);
         }

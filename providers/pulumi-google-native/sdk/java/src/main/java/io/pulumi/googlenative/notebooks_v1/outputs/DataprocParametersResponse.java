@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DataprocParametersResponse {
     /**
      * URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
      * 
-     */
+    */
     public String getCluster() {
         return this.cluster;
     }
@@ -52,7 +52,6 @@ public final class DataprocParametersResponse {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public DataprocParametersResponse build() {
             return new DataprocParametersResponse(cluster);
         }

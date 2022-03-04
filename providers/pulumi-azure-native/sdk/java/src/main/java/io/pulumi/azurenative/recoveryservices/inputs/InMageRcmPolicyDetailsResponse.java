@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="appConsistentFrequencyInMinutes", required=true)
-    private final Integer appConsistentFrequencyInMinutes;
+      private final Integer appConsistentFrequencyInMinutes;
 
     public Integer getAppConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes;
@@ -33,7 +33,7 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="crashConsistentFrequencyInMinutes", required=true)
-    private final Integer crashConsistentFrequencyInMinutes;
+      private final Integer crashConsistentFrequencyInMinutes;
 
     public Integer getCrashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes;
@@ -44,7 +44,7 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableMultiVmSync", required=true)
-    private final String enableMultiVmSync;
+      private final String enableMultiVmSync;
 
     public String getEnableMultiVmSync() {
         return this.enableMultiVmSync;
@@ -56,7 +56,7 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -67,7 +67,7 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="recoveryPointHistoryInMinutes", required=true)
-    private final Integer recoveryPointHistoryInMinutes;
+      private final Integer recoveryPointHistoryInMinutes;
 
     public Integer getRecoveryPointHistoryInMinutes() {
         return this.recoveryPointHistoryInMinutes;
@@ -146,7 +146,6 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
             this.recoveryPointHistoryInMinutes = Objects.requireNonNull(recoveryPointHistoryInMinutes);
             return this;
         }
-
         public InMageRcmPolicyDetailsResponse build() {
             return new InMageRcmPolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, enableMultiVmSync, instanceType, recoveryPointHistoryInMinutes);
         }

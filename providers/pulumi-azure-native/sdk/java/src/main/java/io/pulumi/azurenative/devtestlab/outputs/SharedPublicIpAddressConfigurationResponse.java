@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.InboundNatRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SharedPublicIpAddressConfigurationResponse {
     /**
      * The incoming NAT rules
      * 
-     */
+    */
     public List<InboundNatRuleResponse> getInboundNatRules() {
         return this.inboundNatRules == null ? List.of() : this.inboundNatRules;
     }
@@ -54,7 +54,6 @@ public final class SharedPublicIpAddressConfigurationResponse {
             this.inboundNatRules = inboundNatRules;
             return this;
         }
-
         public SharedPublicIpAddressConfigurationResponse build() {
             return new SharedPublicIpAddressConfigurationResponse(inboundNatRules);
         }

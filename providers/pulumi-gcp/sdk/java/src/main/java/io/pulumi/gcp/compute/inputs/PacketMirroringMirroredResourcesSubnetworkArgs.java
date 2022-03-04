@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PacketMirroringMirroredResourcesSubnetworkArgs extends io.pul
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -61,7 +61,6 @@ public final class PacketMirroringMirroredResourcesSubnetworkArgs extends io.pul
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public PacketMirroringMirroredResourcesSubnetworkArgs build() {
             return new PacketMirroringMirroredResourcesSubnetworkArgs(url);
         }

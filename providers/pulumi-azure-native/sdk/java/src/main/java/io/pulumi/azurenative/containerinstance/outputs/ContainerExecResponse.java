@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContainerExecResponse {
     /**
      * The commands to execute within the container.
      * 
-     */
+    */
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
     }
@@ -54,7 +54,6 @@ public final class ContainerExecResponse {
             this.command = command;
             return this;
         }
-
         public ContainerExecResponse build() {
             return new ContainerExecResponse(command);
         }

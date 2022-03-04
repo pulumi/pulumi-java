@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResponseMetadata;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -50,28 +50,28 @@ public final class ParameterDefinitionsValueResponse {
     /**
      * The allowed values for the parameter.
      * 
-     */
+    */
     public List<Object> getAllowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
     /**
      * The default value for the parameter if no value is provided.
      * 
-     */
+    */
     public Optional<Object> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * General metadata for the parameter.
      * 
-     */
+    */
     public Optional<ParameterDefinitionsValueResponseMetadata> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The data type of the parameter.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -121,7 +121,6 @@ public final class ParameterDefinitionsValueResponse {
             this.type = type;
             return this;
         }
-
         public ParameterDefinitionsValueResponse build() {
             return new ParameterDefinitionsValueResponse(allowedValues, defaultValue, metadata, type);
         }

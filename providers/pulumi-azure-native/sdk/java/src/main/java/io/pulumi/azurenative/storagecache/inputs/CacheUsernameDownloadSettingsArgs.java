@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storagecache.enums.UsernameSource;
 import io.pulumi.azurenative.storagecache.inputs.CacheUsernameDownloadSettingsCredentialsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="autoDownloadCertificate")
-    private final @Nullable Input<Boolean> autoDownloadCertificate;
+      private final @Nullable Input<Boolean> autoDownloadCertificate;
 
     public Input<Boolean> getAutoDownloadCertificate() {
         return this.autoDownloadCertificate == null ? Input.empty() : this.autoDownloadCertificate;
@@ -38,7 +38,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="caCertificateURI")
-    private final @Nullable Input<String> caCertificateURI;
+      private final @Nullable Input<String> caCertificateURI;
 
     public Input<String> getCaCertificateURI() {
         return this.caCertificateURI == null ? Input.empty() : this.caCertificateURI;
@@ -49,7 +49,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<CacheUsernameDownloadSettingsCredentialsArgs> credentials;
+      private final @Nullable Input<CacheUsernameDownloadSettingsCredentialsArgs> credentials;
 
     public Input<CacheUsernameDownloadSettingsCredentialsArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -60,7 +60,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="encryptLdapConnection")
-    private final @Nullable Input<Boolean> encryptLdapConnection;
+      private final @Nullable Input<Boolean> encryptLdapConnection;
 
     public Input<Boolean> getEncryptLdapConnection() {
         return this.encryptLdapConnection == null ? Input.empty() : this.encryptLdapConnection;
@@ -71,7 +71,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="extendedGroups")
-    private final @Nullable Input<Boolean> extendedGroups;
+      private final @Nullable Input<Boolean> extendedGroups;
 
     public Input<Boolean> getExtendedGroups() {
         return this.extendedGroups == null ? Input.empty() : this.extendedGroups;
@@ -82,7 +82,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="groupFileURI")
-    private final @Nullable Input<String> groupFileURI;
+      private final @Nullable Input<String> groupFileURI;
 
     public Input<String> getGroupFileURI() {
         return this.groupFileURI == null ? Input.empty() : this.groupFileURI;
@@ -93,7 +93,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ldapBaseDN")
-    private final @Nullable Input<String> ldapBaseDN;
+      private final @Nullable Input<String> ldapBaseDN;
 
     public Input<String> getLdapBaseDN() {
         return this.ldapBaseDN == null ? Input.empty() : this.ldapBaseDN;
@@ -104,7 +104,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ldapServer")
-    private final @Nullable Input<String> ldapServer;
+      private final @Nullable Input<String> ldapServer;
 
     public Input<String> getLdapServer() {
         return this.ldapServer == null ? Input.empty() : this.ldapServer;
@@ -115,7 +115,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="requireValidCertificate")
-    private final @Nullable Input<Boolean> requireValidCertificate;
+      private final @Nullable Input<Boolean> requireValidCertificate;
 
     public Input<Boolean> getRequireValidCertificate() {
         return this.requireValidCertificate == null ? Input.empty() : this.requireValidCertificate;
@@ -126,7 +126,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="userFileURI")
-    private final @Nullable Input<String> userFileURI;
+      private final @Nullable Input<String> userFileURI;
 
     public Input<String> getUserFileURI() {
         return this.userFileURI == null ? Input.empty() : this.userFileURI;
@@ -137,7 +137,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="usernameSource")
-    private final @Nullable Input<Either<String,UsernameSource>> usernameSource;
+      private final @Nullable Input<Either<String,UsernameSource>> usernameSource;
 
     public Input<Either<String,UsernameSource>> getUsernameSource() {
         return this.usernameSource == null ? Input.empty() : this.usernameSource;
@@ -331,7 +331,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
             this.usernameSource = Input.ofNullable(usernameSource);
             return this;
         }
-
         public CacheUsernameDownloadSettingsArgs build() {
             return new CacheUsernameDownloadSettingsArgs(autoDownloadCertificate, caCertificateURI, credentials, encryptLdapConnection, extendedGroups, groupFileURI, ldapBaseDN, ldapServer, requireValidCertificate, userFileURI, usernameSource);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.ReservationSpecificReservationInstanceProperties;
 import java.lang.Integer;
 import java.util.Objects;
@@ -43,7 +43,7 @@ public final class ReservationSpecificReservation {
     /**
      * The number of resources that are allocated.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
@@ -51,7 +51,7 @@ public final class ReservationSpecificReservation {
      * - 
      * How many instances are in use.
      * 
-     */
+    */
     public Optional<Integer> getInUseCount() {
         return Optional.ofNullable(this.inUseCount);
     }
@@ -59,7 +59,7 @@ public final class ReservationSpecificReservation {
      * The instance properties for the reservation.
      * Structure is documented below.
      * 
-     */
+    */
     public ReservationSpecificReservationInstanceProperties getInstanceProperties() {
         return this.instanceProperties;
     }
@@ -102,7 +102,6 @@ public final class ReservationSpecificReservation {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
-
         public ReservationSpecificReservation build() {
             return new ReservationSpecificReservation(count, inUseCount, instanceProperties);
         }

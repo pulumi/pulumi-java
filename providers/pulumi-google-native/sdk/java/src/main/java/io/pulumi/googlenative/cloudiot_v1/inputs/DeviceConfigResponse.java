@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DeviceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="binaryData", required=true)
-    private final String binaryData;
+      private final String binaryData;
 
     public String getBinaryData() {
         return this.binaryData;
@@ -32,7 +32,7 @@ public final class DeviceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudUpdateTime", required=true)
-    private final String cloudUpdateTime;
+      private final String cloudUpdateTime;
 
     public String getCloudUpdateTime() {
         return this.cloudUpdateTime;
@@ -43,7 +43,7 @@ public final class DeviceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deviceAckTime", required=true)
-    private final String deviceAckTime;
+      private final String deviceAckTime;
 
     public String getDeviceAckTime() {
         return this.deviceAckTime;
@@ -54,7 +54,7 @@ public final class DeviceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -123,7 +123,6 @@ public final class DeviceConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public DeviceConfigResponse build() {
             return new DeviceConfigResponse(binaryData, cloudUpdateTime, deviceAckTime, version);
         }

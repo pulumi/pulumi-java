@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ExportPipelineTargetPropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyVaultUri", required=true)
-    private final String keyVaultUri;
+      private final String keyVaultUri;
 
     public String getKeyVaultUri() {
         return this.keyVaultUri;
@@ -34,7 +34,7 @@ public final class ExportPipelineTargetPropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -47,7 +47,7 @@ public final class ExportPipelineTargetPropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable String uri;
+      private final @Nullable String uri;
 
     public Optional<String> getUri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
@@ -106,7 +106,6 @@ public final class ExportPipelineTargetPropertiesResponse extends io.pulumi.reso
             this.uri = uri;
             return this;
         }
-
         public ExportPipelineTargetPropertiesResponse build() {
             return new ExportPipelineTargetPropertiesResponse(keyVaultUri, type, uri);
         }

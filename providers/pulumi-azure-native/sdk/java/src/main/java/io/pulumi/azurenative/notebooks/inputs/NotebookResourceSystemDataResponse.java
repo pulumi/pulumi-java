@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notebooks.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,42 +19,42 @@ public final class NotebookResourceSystemDataResponse extends io.pulumi.resource
     public static final NotebookResourceSystemDataResponse Empty = new NotebookResourceSystemDataResponse();
 
     @InputImport(name="createdAt")
-    private final @Nullable String createdAt;
+      private final @Nullable String createdAt;
 
     public Optional<String> getCreatedAt() {
         return this.createdAt == null ? Optional.empty() : Optional.ofNullable(this.createdAt);
     }
 
     @InputImport(name="createdBy")
-    private final @Nullable String createdBy;
+      private final @Nullable String createdBy;
 
     public Optional<String> getCreatedBy() {
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
     @InputImport(name="createdByType")
-    private final @Nullable String createdByType;
+      private final @Nullable String createdByType;
 
     public Optional<String> getCreatedByType() {
         return this.createdByType == null ? Optional.empty() : Optional.ofNullable(this.createdByType);
     }
 
     @InputImport(name="lastModifiedAt")
-    private final @Nullable String lastModifiedAt;
+      private final @Nullable String lastModifiedAt;
 
     public Optional<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedAt);
     }
 
     @InputImport(name="lastModifiedBy")
-    private final @Nullable String lastModifiedBy;
+      private final @Nullable String lastModifiedBy;
 
     public Optional<String> getLastModifiedBy() {
         return this.lastModifiedBy == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedBy);
     }
 
     @InputImport(name="lastModifiedByType")
-    private final @Nullable String lastModifiedByType;
+      private final @Nullable String lastModifiedByType;
 
     public Optional<String> getLastModifiedByType() {
         return this.lastModifiedByType == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedByType);
@@ -143,7 +143,6 @@ public final class NotebookResourceSystemDataResponse extends io.pulumi.resource
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public NotebookResourceSystemDataResponse build() {
             return new NotebookResourceSystemDataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

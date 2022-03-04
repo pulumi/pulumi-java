@@ -6,21 +6,41 @@ package io.pulumi.azurenative.botservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.botservice.inputs.GetBotConnectionArgs;
 import io.pulumi.azurenative.botservice.outputs.GetBotConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBotConnection {
-/**
- * Bot channel resource definition
+    private GetBotConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetBotConnectionArgs.Builder a);
+    }
+    private static GetBotConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBotConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Bot channel resource definition
  * API Version: 2021-03-01.
  * 
- *
- * Bot channel resource definition
+     *
+     * Bot channel resource definition
  * 
- */
+     */
+    public static CompletableFuture<GetBotConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Bot channel resource definition
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Bot channel resource definition
+     * 
+     */
     public static CompletableFuture<GetBotConnectionResult> invokeAsync(GetBotConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:getBotConnection", TypeShape.of(GetBotConnectionResult.class), args == null ? GetBotConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.autoscaling;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.autoscaling.inputs.GetWarmPoolArgs;
 import io.pulumi.awsnative.autoscaling.outputs.GetWarmPoolResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWarmPool {
-/**
- * Resource schema for AWS::AutoScaling::WarmPool.
+    private GetWarmPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetWarmPoolArgs.Builder a);
+    }
+    private static GetWarmPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWarmPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::AutoScaling::WarmPool.
  * 
- */
+     */
+    public static CompletableFuture<GetWarmPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::AutoScaling::WarmPool.
+     * 
+     */
     public static CompletableFuture<GetWarmPoolResult> invokeAsync(GetWarmPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:autoscaling:getWarmPool", TypeShape.of(GetWarmPoolResult.class), args == null ? GetWarmPoolArgs.Empty : args, Utilities.withVersion(options));
     }

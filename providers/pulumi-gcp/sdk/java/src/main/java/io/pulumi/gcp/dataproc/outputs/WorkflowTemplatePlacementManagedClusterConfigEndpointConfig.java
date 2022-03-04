@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -36,7 +36,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
     /**
      * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getEnableHttpPortAccess() {
         return Optional.ofNullable(this.enableHttpPortAccess);
     }
@@ -44,7 +44,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
      * - 
      * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
      * 
-     */
+    */
     public Map<String,String> getHttpPorts() {
         return this.httpPorts == null ? Map.of() : this.httpPorts;
     }
@@ -80,7 +80,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
             this.httpPorts = httpPorts;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigEndpointConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigEndpointConfig(enableHttpPortAccess, httpPorts);
         }

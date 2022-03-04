@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="accountKey")
-    private final @Nullable Input<AzureKeyVaultSecretReferenceArgs> accountKey;
+      private final @Nullable Input<AzureKeyVaultSecretReferenceArgs> accountKey;
 
     public Input<AzureKeyVaultSecretReferenceArgs> getAccountKey() {
         return this.accountKey == null ? Input.empty() : this.accountKey;
@@ -43,7 +43,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="accountKind")
-    private final @Nullable Input<String> accountKind;
+      private final @Nullable Input<String> accountKind;
 
     public Input<String> getAccountKind() {
         return this.accountKind == null ? Input.empty() : this.accountKind;
@@ -54,7 +54,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -65,7 +65,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="azureCloudType")
-    private final @Nullable Input<Object> azureCloudType;
+      private final @Nullable Input<Object> azureCloudType;
 
     public Input<Object> getAzureCloudType() {
         return this.azureCloudType == null ? Input.empty() : this.azureCloudType;
@@ -76,7 +76,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -87,7 +87,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable Input<Object> connectionString;
+      private final @Nullable Input<Object> connectionString;
 
     public Input<Object> getConnectionString() {
         return this.connectionString == null ? Input.empty() : this.connectionString;
@@ -98,7 +98,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -109,7 +109,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -120,7 +120,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<String> encryptedCredential;
+      private final @Nullable Input<String> encryptedCredential;
 
     public Input<String> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -131,7 +131,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -142,7 +142,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sasToken")
-    private final @Nullable Input<AzureKeyVaultSecretReferenceArgs> sasToken;
+      private final @Nullable Input<AzureKeyVaultSecretReferenceArgs> sasToken;
 
     public Input<AzureKeyVaultSecretReferenceArgs> getSasToken() {
         return this.sasToken == null ? Input.empty() : this.sasToken;
@@ -153,7 +153,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sasUri")
-    private final @Nullable Input<Object> sasUri;
+      private final @Nullable Input<Object> sasUri;
 
     public Input<Object> getSasUri() {
         return this.sasUri == null ? Input.empty() : this.sasUri;
@@ -164,7 +164,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceEndpoint")
-    private final @Nullable Input<String> serviceEndpoint;
+      private final @Nullable Input<String> serviceEndpoint;
 
     public Input<String> getServiceEndpoint() {
         return this.serviceEndpoint == null ? Input.empty() : this.serviceEndpoint;
@@ -175,7 +175,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="servicePrincipalId")
-    private final @Nullable Input<Object> servicePrincipalId;
+      private final @Nullable Input<Object> servicePrincipalId;
 
     public Input<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
@@ -186,7 +186,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="servicePrincipalKey")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
@@ -197,7 +197,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="tenant")
-    private final @Nullable Input<Object> tenant;
+      private final @Nullable Input<Object> tenant;
 
     public Input<Object> getTenant() {
         return this.tenant == null ? Input.empty() : this.tenant;
@@ -209,7 +209,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -493,7 +493,6 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureBlobStorageLinkedServiceArgs build() {
             return new AzureBlobStorageLinkedServiceArgs(accountKey, accountKind, annotations, azureCloudType, connectVia, connectionString, credential, description, encryptedCredential, parameters, sasToken, sasUri, serviceEndpoint, servicePrincipalId, servicePrincipalKey, tenant, type);
         }

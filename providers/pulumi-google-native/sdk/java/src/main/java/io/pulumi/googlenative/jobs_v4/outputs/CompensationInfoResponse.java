@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.CompensationEntryResponse;
 import io.pulumi.googlenative.jobs_v4.outputs.CompensationRangeResponse;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class CompensationInfoResponse {
     /**
      * Annualized base compensation range. Computed as base compensation entry's CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
-     */
+    */
     public CompensationRangeResponse getAnnualizedBaseCompensationRange() {
         return this.annualizedBaseCompensationRange;
     }
     /**
      * Annualized total compensation range. Computed as all compensation entries' CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
-     */
+    */
     public CompensationRangeResponse getAnnualizedTotalCompensationRange() {
         return this.annualizedTotalCompensationRange;
     }
     /**
      * Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
      * 
-     */
+    */
     public List<CompensationEntryResponse> getEntries() {
         return this.entries;
     }
@@ -97,7 +97,6 @@ public final class CompensationInfoResponse {
             this.entries = Objects.requireNonNull(entries);
             return this;
         }
-
         public CompensationInfoResponse build() {
             return new CompensationInfoResponse(annualizedBaseCompensationRange, annualizedTotalCompensationRange, entries);
         }

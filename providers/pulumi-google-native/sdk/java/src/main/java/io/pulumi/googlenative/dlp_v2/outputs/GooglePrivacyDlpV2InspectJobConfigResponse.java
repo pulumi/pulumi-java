@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ActionResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StorageConfigResponse;
@@ -49,28 +49,28 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse {
     /**
      * Actions to execute at the completion of the job.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2ActionResponse> getActions() {
         return this.actions;
     }
     /**
      * How and what to scan for.
      * 
-     */
+    */
     public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
         return this.inspectConfig;
     }
     /**
      * If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
      * 
-     */
+    */
     public String getInspectTemplateName() {
         return this.inspectTemplateName;
     }
     /**
      * The data to scan.
      * 
-     */
+    */
     public GooglePrivacyDlpV2StorageConfigResponse getStorageConfig() {
         return this.storageConfig;
     }
@@ -120,7 +120,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectJobConfigResponse build() {
             return new GooglePrivacyDlpV2InspectJobConfigResponse(actions, inspectConfig, inspectTemplateName, storageConfig);
         }

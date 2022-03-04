@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult 
     /**
      * The date and time on which the function app was registered with the static site.
      * 
-     */
+    */
     public String getCreatedOn() {
         return this.createdOn;
     }
     /**
      * The region of the function app registered with the static site
      * 
-     */
+    */
     public Optional<String> getFunctionAppRegion() {
         return Optional.ofNullable(this.functionAppRegion);
     }
     /**
      * The resource id of the function app registered with the static site
      * 
-     */
+    */
     public Optional<String> getFunctionAppResourceId() {
         return Optional.ofNullable(this.functionAppResourceId);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -181,7 +181,6 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult 
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult build() {
             return new GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult(createdOn, functionAppRegion, functionAppResourceId, id, kind, name, type);
         }

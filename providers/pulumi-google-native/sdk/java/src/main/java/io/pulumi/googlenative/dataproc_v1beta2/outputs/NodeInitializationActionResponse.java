@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class NodeInitializationActionResponse {
     /**
      * Cloud Storage URI of executable file.
      * 
-     */
+    */
     public String getExecutableFile() {
         return this.executableFile;
     }
     /**
      * Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
      * 
-     */
+    */
     public String getExecutionTimeout() {
         return this.executionTimeout;
     }
@@ -74,7 +74,6 @@ public final class NodeInitializationActionResponse {
             this.executionTimeout = Objects.requireNonNull(executionTimeout);
             return this;
         }
-
         public NodeInitializationActionResponse build() {
             return new NodeInitializationActionResponse(executableFile, executionTimeout);
         }

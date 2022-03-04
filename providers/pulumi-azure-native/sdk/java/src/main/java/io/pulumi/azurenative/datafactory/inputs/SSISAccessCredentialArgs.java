@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceArgs
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<Object> domain;
+      private final Input<Object> domain;
 
     public Input<Object> getDomain() {
         return this.domain;
@@ -36,7 +36,7 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password;
@@ -47,7 +47,7 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<Object> userName;
+      private final Input<Object> userName;
 
     public Input<Object> getUserName() {
         return this.userName;
@@ -121,7 +121,6 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }
-
         public SSISAccessCredentialArgs build() {
             return new SSISAccessCredentialArgs(domain, password, userName);
         }

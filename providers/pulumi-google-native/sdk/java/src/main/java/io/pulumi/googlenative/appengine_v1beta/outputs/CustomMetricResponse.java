@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class CustomMetricResponse {
     /**
      * Allows filtering on the metric's fields.
      * 
-     */
+    */
     public String getFilter() {
         return this.filter;
     }
     /**
      * The name of the metric.
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
      * 
-     */
+    */
     public Double getSingleInstanceAssignment() {
         return this.singleInstanceAssignment;
     }
     /**
      * The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
      * 
-     */
+    */
     public String getTargetType() {
         return this.targetType;
     }
     /**
      * The target value for the metric.
      * 
-     */
+    */
     public Double getTargetUtilization() {
         return this.targetUtilization;
     }
@@ -138,7 +138,6 @@ public final class CustomMetricResponse {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
-
         public CustomMetricResponse build() {
             return new CustomMetricResponse(filter, metricName, singleInstanceAssignment, targetType, targetUtilization);
         }

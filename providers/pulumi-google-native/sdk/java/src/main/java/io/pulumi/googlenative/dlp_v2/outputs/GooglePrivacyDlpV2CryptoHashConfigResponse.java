@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CryptoKeyResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
     /**
      * The key used by the hash function.
      * 
-     */
+    */
     public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
         return this.cryptoKey;
     }
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoHashConfigResponse build() {
             return new GooglePrivacyDlpV2CryptoHashConfigResponse(cryptoKey);
         }

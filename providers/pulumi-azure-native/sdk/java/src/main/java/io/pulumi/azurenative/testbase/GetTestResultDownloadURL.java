@@ -6,21 +6,41 @@ package io.pulumi.azurenative.testbase;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.testbase.inputs.GetTestResultDownloadURLArgs;
 import io.pulumi.azurenative.testbase.outputs.GetTestResultDownloadURLResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestResultDownloadURL {
-/**
- * The response of getting a download URL.
+    private GetTestResultDownloadURL() {}
+    public interface BuilderApplicator {
+        public void apply(GetTestResultDownloadURLArgs.Builder a);
+    }
+    private static GetTestResultDownloadURLArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTestResultDownloadURLArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response of getting a download URL.
  * API Version: 2020-12-16-preview.
  * 
- *
- * The response of getting a download URL.
+     *
+     * The response of getting a download URL.
  * 
- */
+     */
+    public static CompletableFuture<GetTestResultDownloadURLResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response of getting a download URL.
+     * API Version: 2020-12-16-preview.
+     * 
+     *
+         * The response of getting a download URL.
+     * 
+     */
     public static CompletableFuture<GetTestResultDownloadURLResult> invokeAsync(GetTestResultDownloadURLArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestResultDownloadURL", TypeShape.of(GetTestResultDownloadURLResult.class), args == null ? GetTestResultDownloadURLArgs.Empty : args, Utilities.withVersion(options));
     }

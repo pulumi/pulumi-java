@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -90,28 +90,28 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
     /**
      * The name of the Azure Data Explorer database.
      * 
-     */
+    */
     public String getAdxDatabaseName() {
         return this.adxDatabaseName;
     }
     /**
      * The URI of the Azure Data Explorer endpoint.
      * 
-     */
+    */
     public String getAdxEndpointUri() {
         return this.adxEndpointUri;
     }
     /**
      * The resource ID of the Azure Data Explorer cluster.
      * 
-     */
+    */
     public String getAdxResourceId() {
         return this.adxResourceId;
     }
     /**
      * The name of the Azure Data Explorer table.
      * 
-     */
+    */
     public Optional<String> getAdxTableName() {
         return Optional.ofNullable(this.adxTableName);
     }
@@ -119,42 +119,42 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
      * The type of time series connection resource.
      * Expected value is 'AzureDataExplorer'.
      * 
-     */
+    */
     public String getConnectionType() {
         return this.connectionType;
     }
     /**
      * The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
      * 
-     */
+    */
     public Optional<String> getEventHubConsumerGroup() {
         return Optional.ofNullable(this.eventHubConsumerGroup);
     }
     /**
      * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
      * 
-     */
+    */
     public String getEventHubEndpointUri() {
         return this.eventHubEndpointUri;
     }
     /**
      * The EventHub name in the EventHub namespace for identity-based authentication.
      * 
-     */
+    */
     public String getEventHubEntityPath() {
         return this.eventHubEntityPath;
     }
     /**
      * The resource ID of the EventHub namespace.
      * 
-     */
+    */
     public String getEventHubNamespaceResourceId() {
         return this.eventHubNamespaceResourceId;
     }
     /**
      * The provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -246,7 +246,6 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public AzureDataExplorerConnectionPropertiesResponse build() {
             return new AzureDataExplorerConnectionPropertiesResponse(adxDatabaseName, adxEndpointUri, adxResourceId, adxTableName, connectionType, eventHubConsumerGroup, eventHubEndpointUri, eventHubEntityPath, eventHubNamespaceResourceId, provisioningState);
         }

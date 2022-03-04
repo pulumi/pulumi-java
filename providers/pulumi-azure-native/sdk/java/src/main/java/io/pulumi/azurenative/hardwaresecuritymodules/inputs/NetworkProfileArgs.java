@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hardwaresecuritymodules.inputs;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.ApiEntityReferenceArgs;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.NetworkInterfaceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Input<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -32,7 +32,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<ApiEntityReferenceArgs> subnet;
+      private final @Nullable Input<ApiEntityReferenceArgs> subnet;
 
     public Input<ApiEntityReferenceArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -91,7 +91,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public NetworkProfileArgs build() {
             return new NetworkProfileArgs(networkInterfaces, subnet);
         }

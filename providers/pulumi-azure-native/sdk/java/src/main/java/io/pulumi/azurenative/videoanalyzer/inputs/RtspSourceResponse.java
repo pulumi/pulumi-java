@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.inputs.TlsEndpointResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.UnsecuredEndpointResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint;
+      private final Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint;
 
     public Either<TlsEndpointResponse,UnsecuredEndpointResponse> getEndpoint() {
         return this.endpoint;
@@ -37,7 +37,7 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -48,7 +48,7 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transport")
-    private final @Nullable String transport;
+      private final @Nullable String transport;
 
     public Optional<String> getTransport() {
         return this.transport == null ? Optional.empty() : Optional.ofNullable(this.transport);
@@ -60,7 +60,7 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -129,7 +129,6 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RtspSourceResponse build() {
             return new RtspSourceResponse(endpoint, name, transport, type);
         }

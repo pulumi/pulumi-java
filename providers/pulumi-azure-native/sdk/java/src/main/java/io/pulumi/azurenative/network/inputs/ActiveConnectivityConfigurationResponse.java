@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ConfigurationGroupResponse;
 import io.pulumi.azurenative.network.inputs.ConnectivityGroupItemResponse;
 import io.pulumi.azurenative.network.inputs.HubResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="appliesToGroups")
-    private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
+      private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
 
     public List<ConnectivityGroupItemResponse> getAppliesToGroups() {
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
@@ -38,7 +38,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="commitTime")
-    private final @Nullable String commitTime;
+      private final @Nullable String commitTime;
 
     public Optional<String> getCommitTime() {
         return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
@@ -49,7 +49,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="configurationGroups")
-    private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
+      private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
 
     public List<ConfigurationGroupResponse> getConfigurationGroups() {
         return this.configurationGroups == null ? List.of() : this.configurationGroups;
@@ -60,7 +60,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="connectivityTopology", required=true)
-    private final String connectivityTopology;
+      private final String connectivityTopology;
 
     public String getConnectivityTopology() {
         return this.connectivityTopology;
@@ -71,7 +71,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="deleteExistingPeering")
-    private final @Nullable String deleteExistingPeering;
+      private final @Nullable String deleteExistingPeering;
 
     public Optional<String> getDeleteExistingPeering() {
         return this.deleteExistingPeering == null ? Optional.empty() : Optional.ofNullable(this.deleteExistingPeering);
@@ -82,7 +82,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -93,7 +93,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -104,7 +104,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="hubs")
-    private final @Nullable List<HubResponse> hubs;
+      private final @Nullable List<HubResponse> hubs;
 
     public List<HubResponse> getHubs() {
         return this.hubs == null ? List.of() : this.hubs;
@@ -115,7 +115,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -126,7 +126,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="isGlobal")
-    private final @Nullable String isGlobal;
+      private final @Nullable String isGlobal;
 
     public Optional<String> getIsGlobal() {
         return this.isGlobal == null ? Optional.empty() : Optional.ofNullable(this.isGlobal);
@@ -137,7 +137,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -148,7 +148,7 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="region")
-    private final @Nullable String region;
+      private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -297,7 +297,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
             this.region = region;
             return this;
         }
-
         public ActiveConnectivityConfigurationResponse build() {
             return new ActiveConnectivityConfigurationResponse(appliesToGroups, commitTime, configurationGroups, connectivityTopology, deleteExistingPeering, description, displayName, hubs, id, isGlobal, provisioningState, region);
         }

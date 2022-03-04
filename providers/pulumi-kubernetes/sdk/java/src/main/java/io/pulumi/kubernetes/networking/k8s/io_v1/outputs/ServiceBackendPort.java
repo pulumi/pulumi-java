@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ServiceBackendPort {
     /**
      * Name is the name of the port on the Service. This is a mutually exclusive setting with "Number".
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with "Name".
      * 
-     */
+    */
     public Optional<Integer> getNumber() {
         return Optional.ofNullable(this.number);
     }
@@ -77,7 +77,6 @@ public final class ServiceBackendPort {
             this.number = number;
             return this;
         }
-
         public ServiceBackendPort build() {
             return new ServiceBackendPort(name, number);
         }

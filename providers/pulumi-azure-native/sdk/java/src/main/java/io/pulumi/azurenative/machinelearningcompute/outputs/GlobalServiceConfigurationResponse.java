@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningcompute.outputs;
 import io.pulumi.azurenative.machinelearningcompute.outputs.AutoScaleConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.ServiceAuthConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.SslConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -50,28 +50,28 @@ public final class GlobalServiceConfigurationResponse {
     /**
      * The auto-scale configuration
      * 
-     */
+    */
     public Optional<AutoScaleConfigurationResponse> getAutoScale() {
         return Optional.ofNullable(this.autoScale);
     }
     /**
      * The configuration ETag for updates.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
      * 
-     */
+    */
     public Optional<ServiceAuthConfigurationResponse> getServiceAuth() {
         return Optional.ofNullable(this.serviceAuth);
     }
     /**
      * The SSL configuration properties
      * 
-     */
+    */
     public Optional<SslConfigurationResponse> getSsl() {
         return Optional.ofNullable(this.ssl);
     }
@@ -121,7 +121,6 @@ public final class GlobalServiceConfigurationResponse {
             this.ssl = ssl;
             return this;
         }
-
         public GlobalServiceConfigurationResponse build() {
             return new GlobalServiceConfigurationResponse(autoScale, etag, serviceAuth, ssl);
         }

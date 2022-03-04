@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FrontDoorMatchConditionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -37,7 +37,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable String enabledState;
+      private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
@@ -48,7 +48,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="matchConditions", required=true)
-    private final List<FrontDoorMatchConditionResponse> matchConditions;
+      private final List<FrontDoorMatchConditionResponse> matchConditions;
 
     public List<FrontDoorMatchConditionResponse> getMatchConditions() {
         return this.matchConditions;
@@ -59,7 +59,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -70,7 +70,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -81,7 +81,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rateLimitDurationInMinutes")
-    private final @Nullable Integer rateLimitDurationInMinutes;
+      private final @Nullable Integer rateLimitDurationInMinutes;
 
     public Optional<Integer> getRateLimitDurationInMinutes() {
         return this.rateLimitDurationInMinutes == null ? Optional.empty() : Optional.ofNullable(this.rateLimitDurationInMinutes);
@@ -92,7 +92,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rateLimitThreshold")
-    private final @Nullable Integer rateLimitThreshold;
+      private final @Nullable Integer rateLimitThreshold;
 
     public Optional<Integer> getRateLimitThreshold() {
         return this.rateLimitThreshold == null ? Optional.empty() : Optional.ofNullable(this.rateLimitThreshold);
@@ -103,7 +103,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final String ruleType;
+      private final String ruleType;
 
     public String getRuleType() {
         return this.ruleType;
@@ -212,7 +212,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public CustomRuleResponse build() {
             return new CustomRuleResponse(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold, ruleType);
         }

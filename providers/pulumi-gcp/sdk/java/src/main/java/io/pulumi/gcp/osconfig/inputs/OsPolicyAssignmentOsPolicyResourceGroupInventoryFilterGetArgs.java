@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs
      * 
      */
     @InputImport(name="osShortName", required=true)
-    private final Input<String> osShortName;
+      private final Input<String> osShortName;
 
     public Input<String> getOsShortName() {
         return this.osShortName;
@@ -30,7 +30,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs
      * 
      */
     @InputImport(name="osVersion")
-    private final @Nullable Input<String> osVersion;
+      private final @Nullable Input<String> osVersion;
 
     public Input<String> getOsVersion() {
         return this.osVersion == null ? Input.empty() : this.osVersion;
@@ -89,7 +89,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs
             this.osVersion = Input.ofNullable(osVersion);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs(osShortName, osVersion);
         }

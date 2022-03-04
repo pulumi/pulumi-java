@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebActivityAuthenticationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -109,63 +109,63 @@ public final class WebHookActivityResponse {
     /**
      * Authentication method used for calling the endpoint.
      * 
-     */
+    */
     public Optional<WebActivityAuthenticationResponse> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getBody() {
         return Optional.ofNullable(this.body);
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getHeaders() {
         return Optional.ofNullable(this.headers);
     }
     /**
      * Rest API method for target endpoint.
      * 
-     */
+    */
     public String getMethod() {
         return this.method;
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode >= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getReportStatusOnCallBack() {
         return Optional.ofNullable(this.reportStatusOnCallBack);
     }
     /**
      * The timeout within which the webhook should be called back. If there is no value specified, it defaults to 10 minutes. Type: string. Pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -173,21 +173,21 @@ public final class WebHookActivityResponse {
      * Type of activity.
      * Expected value is 'WebHook'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * WebHook activity target endpoint and path. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getUrl() {
         return this.url;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -293,7 +293,6 @@ public final class WebHookActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public WebHookActivityResponse build() {
             return new WebHookActivityResponse(authentication, body, dependsOn, description, headers, method, name, reportStatusOnCallBack, timeout, type, url, userProperties);
         }

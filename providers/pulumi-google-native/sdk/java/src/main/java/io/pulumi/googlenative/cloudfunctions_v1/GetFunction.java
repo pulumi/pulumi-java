@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFunction {
-/**
- * Returns a function with the given name from the requested project.
+    private GetFunction() {}
+    public interface BuilderApplicator {
+        public void apply(GetFunctionArgs.Builder a);
+    }
+    private static GetFunctionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFunctionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns a function with the given name from the requested project.
  * 
- */
+     */
+    public static CompletableFuture<GetFunctionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns a function with the given name from the requested project.
+     * 
+     */
     public static CompletableFuture<GetFunctionResult> invokeAsync(GetFunctionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudfunctions/v1:getFunction", TypeShape.of(GetFunctionResult.class), args == null ? GetFunctionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class HostedZoneQueryLoggingConfig {
     /**
      * The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.
      * 
-     */
+    */
     public String getCloudWatchLogsLogGroupArn() {
         return this.cloudWatchLogsLogGroupArn;
     }
@@ -52,7 +52,6 @@ public final class HostedZoneQueryLoggingConfig {
             this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn);
             return this;
         }
-
         public HostedZoneQueryLoggingConfig build() {
             return new HostedZoneQueryLoggingConfig(cloudWatchLogsLogGroupArn);
         }

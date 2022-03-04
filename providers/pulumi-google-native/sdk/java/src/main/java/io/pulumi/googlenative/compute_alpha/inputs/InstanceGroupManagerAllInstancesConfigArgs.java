@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.InstancePropertiesPatchArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<InstancePropertiesPatchArgs> properties;
+      private final @Nullable Input<InstancePropertiesPatchArgs> properties;
 
     public Input<InstancePropertiesPatchArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -62,7 +62,6 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public InstanceGroupManagerAllInstancesConfigArgs build() {
             return new InstanceGroupManagerAllInstancesConfigArgs(properties);
         }

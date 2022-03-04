@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1.outputs.DsRecordResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class CustomDnsResponse {
     /**
      * The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
      * 
-     */
+    */
     public List<DsRecordResponse> getDsRecords() {
         return this.dsRecords;
     }
     /**
      * A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
      * 
-     */
+    */
     public List<String> getNameServers() {
         return this.nameServers;
     }
@@ -76,7 +76,6 @@ public final class CustomDnsResponse {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
         public CustomDnsResponse build() {
             return new CustomDnsResponse(dsRecords, nameServers);
         }

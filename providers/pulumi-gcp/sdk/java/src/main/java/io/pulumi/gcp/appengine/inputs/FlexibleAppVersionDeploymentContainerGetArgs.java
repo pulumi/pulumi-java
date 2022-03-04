@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class FlexibleAppVersionDeploymentContainerGetArgs extends io.pulum
      * 
      */
     @InputImport(name="image", required=true)
-    private final Input<String> image;
+      private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -62,7 +62,6 @@ public final class FlexibleAppVersionDeploymentContainerGetArgs extends io.pulum
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }
-
         public FlexibleAppVersionDeploymentContainerGetArgs build() {
             return new FlexibleAppVersionDeploymentContainerGetArgs(image);
         }

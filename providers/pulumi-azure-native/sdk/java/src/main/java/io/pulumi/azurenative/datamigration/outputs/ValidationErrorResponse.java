@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ValidationErrorResponse {
     /**
      * Severity of the error
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * Error Text
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
@@ -74,7 +74,6 @@ public final class ValidationErrorResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public ValidationErrorResponse build() {
             return new ValidationErrorResponse(severity, text);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -32,7 +32,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="containerImage", required=true)
-    private final String containerImage;
+      private final String containerImage;
 
     public String getContainerImage() {
         return this.containerImage;
@@ -43,7 +43,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -54,7 +54,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="framework", required=true)
-    private final String framework;
+      private final String framework;
 
     public String getFramework() {
         return this.framework;
@@ -65,7 +65,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="snapshot", required=true)
-    private final String snapshot;
+      private final String snapshot;
 
     public String getSnapshot() {
         return this.snapshot;
@@ -76,7 +76,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -87,7 +87,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="targetImage", required=true)
-    private final String targetImage;
+      private final String targetImage;
 
     public String getTargetImage() {
         return this.targetImage;
@@ -98,7 +98,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="targetVersion", required=true)
-    private final String targetVersion;
+      private final String targetVersion;
 
     public String getTargetVersion() {
         return this.targetVersion;
@@ -109,7 +109,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -120,7 +120,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="vmImage", required=true)
-    private final String vmImage;
+      private final String vmImage;
 
     public String getVmImage() {
         return this.vmImage;
@@ -249,7 +249,6 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }
-
         public UpgradeHistoryEntryResponse build() {
             return new UpgradeHistoryEntryResponse(action, containerImage, createTime, framework, snapshot, state, targetImage, targetVersion, version, vmImage);
         }

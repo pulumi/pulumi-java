@@ -6,21 +6,41 @@ package io.pulumi.azurenative.edgeorder;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.edgeorder.inputs.ListProductFamiliesArgs;
 import io.pulumi.azurenative.edgeorder.outputs.ListProductFamiliesResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListProductFamilies {
-/**
- * The list of product families.
+    private ListProductFamilies() {}
+    public interface BuilderApplicator {
+        public void apply(ListProductFamiliesArgs.Builder a);
+    }
+    private static ListProductFamiliesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListProductFamiliesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of product families.
  * API Version: 2021-12-01.
  * 
- *
- * The list of product families.
+     *
+     * The list of product families.
  * 
- */
+     */
+    public static CompletableFuture<ListProductFamiliesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of product families.
+     * API Version: 2021-12-01.
+     * 
+     *
+         * The list of product families.
+     * 
+     */
     public static CompletableFuture<ListProductFamiliesResult> invokeAsync(ListProductFamiliesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:edgeorder:listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args == null ? ListProductFamiliesArgs.Empty : args, Utilities.withVersion(options));
     }

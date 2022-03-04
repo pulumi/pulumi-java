@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.DataConnectorDataTypeCommonArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class AlertsDataTypeOfDataConnectorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="alerts")
-    private final @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
+      private final @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
 
     public Input<DataConnectorDataTypeCommonArgs> getAlerts() {
         return this.alerts == null ? Input.empty() : this.alerts;
@@ -66,7 +66,6 @@ public final class AlertsDataTypeOfDataConnectorArgs extends io.pulumi.resources
             this.alerts = Input.ofNullable(alerts);
             return this;
         }
-
         public AlertsDataTypeOfDataConnectorArgs build() {
             return new AlertsDataTypeOfDataConnectorArgs(alerts);
         }

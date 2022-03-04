@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SyncPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -35,7 +35,7 @@ public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="syncProperties", required=true)
-    private final SyncPropertiesResponse syncProperties;
+      private final SyncPropertiesResponse syncProperties;
 
     public SyncPropertiesResponse getSyncProperties() {
         return this.syncProperties;
@@ -84,7 +84,6 @@ public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.syncProperties = Objects.requireNonNull(syncProperties);
             return this;
         }
-
         public ParentPropertiesResponse build() {
             return new ParentPropertiesResponse(id, syncProperties);
         }

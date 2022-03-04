@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.ProvisioningState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable Input<String> apiId;
+      private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -31,7 +31,7 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gatewayId", required=true)
-    private final Input<String> gatewayId;
+      private final Input<String> gatewayId;
 
     public Input<String> getGatewayId() {
         return this.gatewayId;
@@ -42,7 +42,7 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<ProvisioningState> provisioningState;
+      private final @Nullable Input<ProvisioningState> provisioningState;
 
     public Input<ProvisioningState> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -53,7 +53,7 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -168,7 +168,6 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public GatewayApiEntityTagArgs build() {
             return new GatewayApiEntityTagArgs(apiId, gatewayId, provisioningState, resourceGroupName, serviceName);
         }

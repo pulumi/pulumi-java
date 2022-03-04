@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ResourceAccessRuleResponse {
     /**
      * Resource Id
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Tenant Id
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -76,7 +76,6 @@ public final class ResourceAccessRuleResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public ResourceAccessRuleResponse build() {
             return new ResourceAccessRuleResponse(resourceId, tenantId);
         }

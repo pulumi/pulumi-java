@@ -10,7 +10,7 @@ import io.pulumi.azurenative.devtestlab.inputs.LabAnnouncementPropertiesArgs;
 import io.pulumi.azurenative.devtestlab.inputs.LabSupportPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="announcement")
-    private final @Nullable Input<LabAnnouncementPropertiesArgs> announcement;
+      private final @Nullable Input<LabAnnouncementPropertiesArgs> announcement;
 
     public Input<LabAnnouncementPropertiesArgs> getAnnouncement() {
         return this.announcement == null ? Input.empty() : this.announcement;
@@ -38,7 +38,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentPermission")
-    private final @Nullable Input<Either<String,EnvironmentPermission>> environmentPermission;
+      private final @Nullable Input<Either<String,EnvironmentPermission>> environmentPermission;
 
     public Input<Either<String,EnvironmentPermission>> getEnvironmentPermission() {
         return this.environmentPermission == null ? Input.empty() : this.environmentPermission;
@@ -49,7 +49,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedProperties")
-    private final @Nullable Input<Map<String,String>> extendedProperties;
+      private final @Nullable Input<Map<String,String>> extendedProperties;
 
     public Input<Map<String,String>> getExtendedProperties() {
         return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
@@ -60,7 +60,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labStorageType")
-    private final @Nullable Input<Either<String,StorageType>> labStorageType;
+      private final @Nullable Input<Either<String,StorageType>> labStorageType;
 
     public Input<Either<String,StorageType>> getLabStorageType() {
         return this.labStorageType == null ? Input.empty() : this.labStorageType;
@@ -71,7 +71,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -82,7 +82,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mandatoryArtifactsResourceIdsLinux")
-    private final @Nullable Input<List<String>> mandatoryArtifactsResourceIdsLinux;
+      private final @Nullable Input<List<String>> mandatoryArtifactsResourceIdsLinux;
 
     public Input<List<String>> getMandatoryArtifactsResourceIdsLinux() {
         return this.mandatoryArtifactsResourceIdsLinux == null ? Input.empty() : this.mandatoryArtifactsResourceIdsLinux;
@@ -93,7 +93,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mandatoryArtifactsResourceIdsWindows")
-    private final @Nullable Input<List<String>> mandatoryArtifactsResourceIdsWindows;
+      private final @Nullable Input<List<String>> mandatoryArtifactsResourceIdsWindows;
 
     public Input<List<String>> getMandatoryArtifactsResourceIdsWindows() {
         return this.mandatoryArtifactsResourceIdsWindows == null ? Input.empty() : this.mandatoryArtifactsResourceIdsWindows;
@@ -104,7 +104,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -117,7 +117,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="premiumDataDisks")
-    private final @Nullable Input<Either<String,PremiumDataDisk>> premiumDataDisks;
+      private final @Nullable Input<Either<String,PremiumDataDisk>> premiumDataDisks;
 
     public Input<Either<String,PremiumDataDisk>> getPremiumDataDisks() {
         return this.premiumDataDisks == null ? Input.empty() : this.premiumDataDisks;
@@ -128,7 +128,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -139,7 +139,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="support")
-    private final @Nullable Input<LabSupportPropertiesArgs> support;
+      private final @Nullable Input<LabSupportPropertiesArgs> support;
 
     public Input<LabSupportPropertiesArgs> getSupport() {
         return this.support == null ? Input.empty() : this.support;
@@ -150,7 +150,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -359,7 +359,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public LabArgs build() {
             return new LabArgs(announcement, environmentPermission, extendedProperties, labStorageType, location, mandatoryArtifactsResourceIdsLinux, mandatoryArtifactsResourceIdsWindows, name, premiumDataDisks, resourceGroupName, support, tags);
         }

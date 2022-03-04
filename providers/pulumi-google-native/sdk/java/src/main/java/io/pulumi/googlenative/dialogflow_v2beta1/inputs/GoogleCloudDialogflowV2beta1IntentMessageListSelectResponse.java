@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse e
      * 
      */
     @InputImport(name="items", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> getItems() {
         return this.items;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse e
      * 
      */
     @InputImport(name="subtitle", required=true)
-    private final String subtitle;
+      private final String subtitle;
 
     public String getSubtitle() {
         return this.subtitle;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse e
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -104,7 +104,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse e
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse(items, subtitle, title);
         }

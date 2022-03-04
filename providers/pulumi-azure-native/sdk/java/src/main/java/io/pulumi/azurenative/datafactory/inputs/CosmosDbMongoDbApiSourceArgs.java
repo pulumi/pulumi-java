@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.MongoDbCursorMethodsPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="additionalColumns")
-    private final @Nullable Input<Object> additionalColumns;
+      private final @Nullable Input<Object> additionalColumns;
 
     public Input<Object> getAdditionalColumns() {
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
@@ -36,7 +36,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="batchSize")
-    private final @Nullable Input<Object> batchSize;
+      private final @Nullable Input<Object> batchSize;
 
     public Input<Object> getBatchSize() {
         return this.batchSize == null ? Input.empty() : this.batchSize;
@@ -47,7 +47,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cursorMethods")
-    private final @Nullable Input<MongoDbCursorMethodsPropertiesArgs> cursorMethods;
+      private final @Nullable Input<MongoDbCursorMethodsPropertiesArgs> cursorMethods;
 
     public Input<MongoDbCursorMethodsPropertiesArgs> getCursorMethods() {
         return this.cursorMethods == null ? Input.empty() : this.cursorMethods;
@@ -58,7 +58,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -69,7 +69,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<Object> filter;
+      private final @Nullable Input<Object> filter;
 
     public Input<Object> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -80,7 +80,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -91,7 +91,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="queryTimeout")
-    private final @Nullable Input<Object> queryTimeout;
+      private final @Nullable Input<Object> queryTimeout;
 
     public Input<Object> getQueryTimeout() {
         return this.queryTimeout == null ? Input.empty() : this.queryTimeout;
@@ -102,7 +102,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Input<Object> sourceRetryCount;
 
     public Input<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
@@ -113,7 +113,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Input<Object> sourceRetryWait;
 
     public Input<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
@@ -125,7 +125,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -304,7 +304,6 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public CosmosDbMongoDbApiSourceArgs build() {
             return new CosmosDbMongoDbApiSourceArgs(additionalColumns, batchSize, cursorMethods, disableMetricsCollection, filter, maxConcurrentConnections, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

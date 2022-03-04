@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.EndpointInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.LatencyDistributionResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.StatusResponse;
@@ -25,7 +25,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="abortCause", required=true)
-    private final String abortCause;
+      private final String abortCause;
 
     public String getAbortCause() {
         return this.abortCause;
@@ -36,7 +36,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="endpointInfo", required=true)
-    private final EndpointInfoResponse endpointInfo;
+      private final EndpointInfoResponse endpointInfo;
 
     public EndpointInfoResponse getEndpointInfo() {
         return this.endpointInfo;
@@ -47,7 +47,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="error", required=true)
-    private final StatusResponse error;
+      private final StatusResponse error;
 
     public StatusResponse getError() {
         return this.error;
@@ -58,7 +58,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="probingLatency", required=true)
-    private final LatencyDistributionResponse probingLatency;
+      private final LatencyDistributionResponse probingLatency;
 
     public LatencyDistributionResponse getProbingLatency() {
         return this.probingLatency;
@@ -69,7 +69,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="result", required=true)
-    private final String result;
+      private final String result;
 
     public String getResult() {
         return this.result;
@@ -80,7 +80,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="sentProbeCount", required=true)
-    private final Integer sentProbeCount;
+      private final Integer sentProbeCount;
 
     public Integer getSentProbeCount() {
         return this.sentProbeCount;
@@ -91,7 +91,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="successfulProbeCount", required=true)
-    private final Integer successfulProbeCount;
+      private final Integer successfulProbeCount;
 
     public Integer getSuccessfulProbeCount() {
         return this.successfulProbeCount;
@@ -102,7 +102,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="verifyTime", required=true)
-    private final String verifyTime;
+      private final String verifyTime;
 
     public String getVerifyTime() {
         return this.verifyTime;
@@ -211,7 +211,6 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }
-
         public ProbingDetailsResponse build() {
             return new ProbingDetailsResponse(abortCause, endpointInfo, error, probingLatency, result, sentProbeCount, successfulProbeCount, verifyTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class TimeOfDayResponse {
     /**
      * Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
      * 
-     */
+    */
     public Integer getHours() {
         return this.hours;
     }
     /**
      * Minutes of hour of day. Must be from 0 to 59.
      * 
-     */
+    */
     public Integer getMinutes() {
         return this.minutes;
     }
     /**
      * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
      * 
-     */
+    */
     public Integer getNanos() {
         return this.nanos;
     }
     /**
      * Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
      * 
-     */
+    */
     public Integer getSeconds() {
         return this.seconds;
     }
@@ -116,7 +116,6 @@ public final class TimeOfDayResponse {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public TimeOfDayResponse build() {
             return new TimeOfDayResponse(hours, minutes, nanos, seconds);
         }

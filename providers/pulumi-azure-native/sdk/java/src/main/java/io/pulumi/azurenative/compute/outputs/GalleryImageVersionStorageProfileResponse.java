@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.GalleryArtifactVersionSourceResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryDataDiskImageResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryOSDiskImageResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,21 +43,21 @@ public final class GalleryImageVersionStorageProfileResponse {
     /**
      * A list of data disk images.
      * 
-     */
+    */
     public List<GalleryDataDiskImageResponse> getDataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
     }
     /**
      * This is the OS disk image.
      * 
-     */
+    */
     public Optional<GalleryOSDiskImageResponse> getOsDiskImage() {
         return Optional.ofNullable(this.osDiskImage);
     }
     /**
      * The gallery artifact version source.
      * 
-     */
+    */
     public Optional<GalleryArtifactVersionSourceResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
@@ -100,7 +100,6 @@ public final class GalleryImageVersionStorageProfileResponse {
             this.source = source;
             return this;
         }
-
         public GalleryImageVersionStorageProfileResponse build() {
             return new GalleryImageVersionStorageProfileResponse(dataDiskImages, osDiskImage, source);
         }

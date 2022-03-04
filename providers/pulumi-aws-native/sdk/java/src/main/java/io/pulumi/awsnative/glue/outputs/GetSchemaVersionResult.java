@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.glue.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetSchemaVersionResult {
     /**
      * Represents the version ID associated with the schema version.
      * 
-     */
+    */
     public Optional<String> getVersionId() {
         return Optional.ofNullable(this.versionId);
     }
@@ -54,7 +54,6 @@ public final class GetSchemaVersionResult {
             this.versionId = versionId;
             return this;
         }
-
         public GetSchemaVersionResult build() {
             return new GetSchemaVersionResult(versionId);
         }

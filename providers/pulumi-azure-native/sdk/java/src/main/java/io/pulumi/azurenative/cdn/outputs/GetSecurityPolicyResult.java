@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.SecurityPolicyWebApplicationFirewallParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,42 +69,42 @@ public final class GetSecurityPolicyResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * object which contains security policy parameters
      * 
-     */
+    */
     public Optional<SecurityPolicyWebApplicationFirewallParametersResponse> getParameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * Provisioning status
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -175,7 +175,6 @@ public final class GetSecurityPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecurityPolicyResult build() {
             return new GetSecurityPolicyResult(deploymentStatus, id, name, parameters, provisioningState, systemData, type);
         }

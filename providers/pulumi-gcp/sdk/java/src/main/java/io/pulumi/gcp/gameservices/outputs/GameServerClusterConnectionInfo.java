@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gameservices.outputs.GameServerClusterConnectionInfoGkeClusterReference;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class GameServerClusterConnectionInfo {
      * Reference of the GKE cluster where the game servers are installed.
      * Structure is documented below.
      * 
-     */
+    */
     public GameServerClusterConnectionInfoGkeClusterReference getGkeClusterReference() {
         return this.gkeClusterReference;
     }
@@ -45,7 +45,7 @@ public final class GameServerClusterConnectionInfo {
      * instances will be created. The namespace existence will be validated
      * during creation.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
@@ -81,7 +81,6 @@ public final class GameServerClusterConnectionInfo {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public GameServerClusterConnectionInfo build() {
             return new GameServerClusterConnectionInfo(gkeClusterReference, namespace);
         }

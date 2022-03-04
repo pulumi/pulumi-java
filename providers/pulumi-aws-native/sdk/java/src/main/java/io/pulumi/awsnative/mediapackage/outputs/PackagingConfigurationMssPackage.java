@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationMssEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationMssManifest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +38,7 @@ public final class PackagingConfigurationMssPackage {
     /**
      * A list of MSS manifest configurations.
      * 
-     */
+    */
     public List<PackagingConfigurationMssManifest> getMssManifests() {
         return this.mssManifests;
     }
@@ -84,7 +84,6 @@ public final class PackagingConfigurationMssPackage {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public PackagingConfigurationMssPackage build() {
             return new PackagingConfigurationMssPackage(encryption, mssManifests, segmentDurationSeconds);
         }

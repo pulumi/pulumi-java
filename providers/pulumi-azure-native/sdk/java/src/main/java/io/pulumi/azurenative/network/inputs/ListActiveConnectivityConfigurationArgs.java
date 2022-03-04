@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListActiveConnectivityConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final String networkManagerName;
+      private final String networkManagerName;
 
     public String getNetworkManagerName() {
         return this.networkManagerName;
@@ -31,7 +31,7 @@ public final class ListActiveConnectivityConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="regions")
-    private final @Nullable List<String> regions;
+      private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
@@ -42,7 +42,7 @@ public final class ListActiveConnectivityConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ListActiveConnectivityConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="skipToken")
-    private final @Nullable String skipToken;
+      private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -122,7 +122,6 @@ public final class ListActiveConnectivityConfigurationArgs extends io.pulumi.res
             this.skipToken = skipToken;
             return this;
         }
-
         public ListActiveConnectivityConfigurationArgs build() {
             return new ListActiveConnectivityConfigurationArgs(networkManagerName, regions, resourceGroupName, skipToken);
         }

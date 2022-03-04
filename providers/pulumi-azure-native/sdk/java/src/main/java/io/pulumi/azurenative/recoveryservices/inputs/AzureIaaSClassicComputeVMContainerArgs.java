@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -40,7 +40,7 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="containerType", required=true)
-    private final Input<String> containerType;
+      private final Input<String> containerType;
 
     public Input<String> getContainerType() {
         return this.containerType;
@@ -51,7 +51,7 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -62,7 +62,7 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="healthStatus")
-    private final @Nullable Input<String> healthStatus;
+      private final @Nullable Input<String> healthStatus;
 
     public Input<String> getHealthStatus() {
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
@@ -73,7 +73,7 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="registrationStatus")
-    private final @Nullable Input<String> registrationStatus;
+      private final @Nullable Input<String> registrationStatus;
 
     public Input<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
@@ -84,7 +84,7 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable Input<String> resourceGroup;
+      private final @Nullable Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
@@ -95,7 +95,7 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="virtualMachineId")
-    private final @Nullable Input<String> virtualMachineId;
+      private final @Nullable Input<String> virtualMachineId;
 
     public Input<String> getVirtualMachineId() {
         return this.virtualMachineId == null ? Input.empty() : this.virtualMachineId;
@@ -106,7 +106,7 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="virtualMachineVersion")
-    private final @Nullable Input<String> virtualMachineVersion;
+      private final @Nullable Input<String> virtualMachineVersion;
 
     public Input<String> getVirtualMachineVersion() {
         return this.virtualMachineVersion == null ? Input.empty() : this.virtualMachineVersion;
@@ -255,7 +255,6 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
             this.virtualMachineVersion = Input.ofNullable(virtualMachineVersion);
             return this;
         }
-
         public AzureIaaSClassicComputeVMContainerArgs build() {
             return new AzureIaaSClassicComputeVMContainerArgs(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus, resourceGroup, virtualMachineId, virtualMachineVersion);
         }

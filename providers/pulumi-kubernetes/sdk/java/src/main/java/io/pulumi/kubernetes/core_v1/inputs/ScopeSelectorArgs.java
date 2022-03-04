@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ScopedResourceSelectorRequirementArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchExpressions")
-    private final @Nullable Input<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
+      private final @Nullable Input<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
 
     public Input<List<ScopedResourceSelectorRequirementArgs>> getMatchExpressions() {
         return this.matchExpressions == null ? Input.empty() : this.matchExpressions;
@@ -67,7 +67,6 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
             this.matchExpressions = Input.ofNullable(matchExpressions);
             return this;
         }
-
         public ScopeSelectorArgs build() {
             return new ScopeSelectorArgs(matchExpressions);
         }

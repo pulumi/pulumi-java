@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.spanner.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -65,7 +65,7 @@ public final class GetInstanceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -175,7 +175,6 @@ public final class GetInstanceResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(config, displayName, forceDestroy, id, labels, name, numNodes, processingUnits, project, state);
         }

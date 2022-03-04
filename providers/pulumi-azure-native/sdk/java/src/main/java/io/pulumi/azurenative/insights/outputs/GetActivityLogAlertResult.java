@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ActionListResponse;
 import io.pulumi.azurenative.insights.outputs.AlertRuleAllOfConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -94,70 +94,70 @@ public final class GetActivityLogAlertResult {
     /**
      * The actions that will activate when the condition is met.
      * 
-     */
+    */
     public ActionListResponse getActions() {
         return this.actions;
     }
     /**
      * The condition that will cause this alert to activate.
      * 
-     */
+    */
     public AlertRuleAllOfConditionResponse getCondition() {
         return this.condition;
     }
     /**
      * A description of this Activity Log Alert rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -249,7 +249,6 @@ public final class GetActivityLogAlertResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetActivityLogAlertResult build() {
             return new GetActivityLogAlertResult(actions, condition, description, enabled, id, location, name, scopes, tags, type);
         }

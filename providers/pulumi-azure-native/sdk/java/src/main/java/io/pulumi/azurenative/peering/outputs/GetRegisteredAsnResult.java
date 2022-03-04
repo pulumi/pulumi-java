@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class GetRegisteredAsnResult {
     /**
      * The customer's ASN from which traffic originates.
      * 
-     */
+    */
     public Optional<Integer> getAsn() {
         return Optional.ofNullable(this.asn);
     }
     /**
      * The ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The peering service prefix key that is to be shared with the customer.
      * 
-     */
+    */
     public String getPeeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class GetRegisteredAsnResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegisteredAsnResult build() {
             return new GetRegisteredAsnResult(asn, id, name, peeringServicePrefixKey, provisioningState, type);
         }

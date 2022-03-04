@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
     /**
      * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
      * 
-     */
+    */
     public Integer getAvailabilityDomainCount() {
         return this.availabilityDomainCount;
     }
     /**
      * Specifies network collocation
      * 
-     */
+    */
     public String getCollocation() {
         return this.collocation;
     }
     /**
      * Number of vms in this placement group
      * 
-     */
+    */
     public Integer getVmCount() {
         return this.vmCount;
     }
@@ -96,7 +96,6 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }
-
         public ResourcePolicyGroupPlacementPolicyResponse build() {
             return new ResourcePolicyGroupPlacementPolicyResponse(availabilityDomainCount, collocation, vmCount);
         }

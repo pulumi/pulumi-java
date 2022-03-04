@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserDataMapping {
-/**
- * Gets the specified User data mapping.
+    private GetUserDataMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserDataMappingArgs.Builder a);
+    }
+    private static GetUserDataMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserDataMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified User data mapping.
  * 
- */
+     */
+    public static CompletableFuture<GetUserDataMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified User data mapping.
+     * 
+     */
     public static CompletableFuture<GetUserDataMappingResult> invokeAsync(GetUserDataMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1:getUserDataMapping", TypeShape.of(GetUserDataMappingResult.class), args == null ? GetUserDataMappingArgs.Empty : args, Utilities.withVersion(options));
     }

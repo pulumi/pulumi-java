@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class SecurityPolicyAssociationResponse {
     /**
      * The resource that the security policy is attached to.
      * 
-     */
+    */
     public String getAttachmentId() {
         return this.attachmentId;
     }
     /**
      * The display name of the security policy of the association.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The name for an association.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The security policy ID of the association.
      * 
-     */
+    */
     public String getSecurityPolicyId() {
         return this.securityPolicyId;
     }
@@ -116,7 +116,6 @@ public final class SecurityPolicyAssociationResponse {
             this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
             return this;
         }
-
         public SecurityPolicyAssociationResponse build() {
             return new SecurityPolicyAssociationResponse(attachmentId, displayName, name, securityPolicyId);
         }

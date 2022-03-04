@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="created", required=true)
-    private final Integer created;
+      private final Integer created;
 
     public Integer getCreated() {
         return this.created;
@@ -35,7 +35,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -46,7 +46,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="expires")
-    private final @Nullable Integer expires;
+      private final @Nullable Integer expires;
 
     public Optional<Integer> getExpires() {
         return this.expires == null ? Optional.empty() : Optional.ofNullable(this.expires);
@@ -57,7 +57,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="notBefore")
-    private final @Nullable Integer notBefore;
+      private final @Nullable Integer notBefore;
 
     public Optional<Integer> getNotBefore() {
         return this.notBefore == null ? Optional.empty() : Optional.ofNullable(this.notBefore);
@@ -68,7 +68,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="updated", required=true)
-    private final Integer updated;
+      private final Integer updated;
 
     public Integer getUpdated() {
         return this.updated;
@@ -147,7 +147,6 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public SecretAttributesResponse build() {
             return new SecretAttributesResponse(created, enabled, expires, notBefore, updated);
         }

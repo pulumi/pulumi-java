@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceSessionKeysAbpV11;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class WirelessDeviceAbpV11 {
             this.sessionKeys = Objects.requireNonNull(sessionKeys);
             return this;
         }
-
         public WirelessDeviceAbpV11 build() {
             return new WirelessDeviceAbpV11(devAddr, sessionKeys);
         }

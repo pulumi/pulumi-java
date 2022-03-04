@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="assetName", required=true)
-    private final Input<String> assetName;
+      private final Input<String> assetName;
 
     public Input<String> getAssetName() {
         return this.assetName;
@@ -35,7 +35,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="datasetVersion", required=true)
-    private final Input<String> datasetVersion;
+      private final Input<String> datasetVersion;
 
     public Input<String> getDatasetVersion() {
         return this.datasetVersion;
@@ -46,7 +46,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enableIncrementalDatasetRefresh")
-    private final @Nullable Input<Boolean> enableIncrementalDatasetRefresh;
+      private final @Nullable Input<Boolean> enableIncrementalDatasetRefresh;
 
     public Input<Boolean> getEnableIncrementalDatasetRefresh() {
         return this.enableIncrementalDatasetRefresh == null ? Input.empty() : this.enableIncrementalDatasetRefresh;
@@ -120,7 +120,6 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
             this.enableIncrementalDatasetRefresh = Input.ofNullable(enableIncrementalDatasetRefresh);
             return this;
         }
-
         public LabelingDatasetConfigurationArgs build() {
             return new LabelingDatasetConfigurationArgs(assetName, datasetVersion, enableIncrementalDatasetRefresh);
         }

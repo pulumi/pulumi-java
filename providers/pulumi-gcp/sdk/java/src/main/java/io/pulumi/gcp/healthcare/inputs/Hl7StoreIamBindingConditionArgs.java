@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class Hl7StoreIamBindingConditionArgs extends io.pulumi.resources.R
     public static final Hl7StoreIamBindingConditionArgs Empty = new Hl7StoreIamBindingConditionArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+      private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
     }
 
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -103,7 +103,6 @@ public final class Hl7StoreIamBindingConditionArgs extends io.pulumi.resources.R
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public Hl7StoreIamBindingConditionArgs build() {
             return new Hl7StoreIamBindingConditionArgs(description, expression, title);
         }

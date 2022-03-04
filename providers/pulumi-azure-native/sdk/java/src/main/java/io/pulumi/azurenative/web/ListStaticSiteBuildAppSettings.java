@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListStaticSiteBuildAppSettingsArgs;
 import io.pulumi.azurenative.web.outputs.ListStaticSiteBuildAppSettingsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStaticSiteBuildAppSettings {
-/**
- * String dictionary resource.
+    private ListStaticSiteBuildAppSettings() {}
+    public interface BuilderApplicator {
+        public void apply(ListStaticSiteBuildAppSettingsArgs.Builder a);
+    }
+    private static ListStaticSiteBuildAppSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListStaticSiteBuildAppSettingsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * String dictionary resource.
  * API Version: 2020-12-01.
  * 
- *
- * String dictionary resource.
+     *
+     * String dictionary resource.
  * 
- */
+     */
+    public static CompletableFuture<ListStaticSiteBuildAppSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * String dictionary resource.
+     * 
+     */
     public static CompletableFuture<ListStaticSiteBuildAppSettingsResult> invokeAsync(ListStaticSiteBuildAppSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteBuildAppSettings", TypeShape.of(ListStaticSiteBuildAppSettingsResult.class), args == null ? ListStaticSiteBuildAppSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

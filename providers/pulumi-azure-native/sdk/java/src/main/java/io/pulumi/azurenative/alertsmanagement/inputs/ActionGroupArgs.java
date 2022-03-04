@@ -8,7 +8,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.ConditionsArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.ScopeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionGroupId", required=true)
-    private final Input<String> actionGroupId;
+      private final Input<String> actionGroupId;
 
     public Input<String> getActionGroupId() {
         return this.actionGroupId;
@@ -38,7 +38,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<ConditionsArgs> conditions;
+      private final @Nullable Input<ConditionsArgs> conditions;
 
     public Input<ConditionsArgs> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -49,7 +49,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<ScopeArgs> scope;
+      private final @Nullable Input<ScopeArgs> scope;
 
     public Input<ScopeArgs> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -71,7 +71,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,ActionRuleStatus>> status;
+      private final @Nullable Input<Either<String,ActionRuleStatus>> status;
 
     public Input<Either<String,ActionRuleStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -83,7 +83,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -202,7 +202,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ActionGroupArgs build() {
             return new ActionGroupArgs(actionGroupId, conditions, description, scope, status, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class DataDisksGroupsResponse {
     /**
      * ReadOnly. The DiskSize in GB. Do not set this value.
      * 
-     */
+    */
     public Integer getDiskSizeGB() {
         return this.diskSizeGB;
     }
     /**
      * The number of disks per node.
      * 
-     */
+    */
     public Optional<Integer> getDisksPerNode() {
         return Optional.ofNullable(this.disksPerNode);
     }
     /**
      * ReadOnly. The storage account type. Do not set this value.
      * 
-     */
+    */
     public String getStorageAccountType() {
         return this.storageAccountType;
     }
@@ -98,7 +98,6 @@ public final class DataDisksGroupsResponse {
             this.storageAccountType = Objects.requireNonNull(storageAccountType);
             return this;
         }
-
         public DataDisksGroupsResponse build() {
             return new DataDisksGroupsResponse(diskSizeGB, disksPerNode, storageAccountType);
         }

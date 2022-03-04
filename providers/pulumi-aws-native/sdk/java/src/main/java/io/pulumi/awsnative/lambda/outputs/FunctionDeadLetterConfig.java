@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class FunctionDeadLetterConfig {
     /**
      * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
      * 
-     */
+    */
     public Optional<String> getTargetArn() {
         return Optional.ofNullable(this.targetArn);
     }
@@ -54,7 +54,6 @@ public final class FunctionDeadLetterConfig {
             this.targetArn = targetArn;
             return this;
         }
-
         public FunctionDeadLetterConfig build() {
             return new FunctionDeadLetterConfig(targetArn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.devopsguru.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ResourceCollectionCloudFormationCollectionFilter {
     /**
      * An array of CloudFormation stack names.
      * 
-     */
+    */
     public List<String> getStackNames() {
         return this.stackNames == null ? List.of() : this.stackNames;
     }
@@ -54,7 +54,6 @@ public final class ResourceCollectionCloudFormationCollectionFilter {
             this.stackNames = stackNames;
             return this;
         }
-
         public ResourceCollectionCloudFormationCollectionFilter build() {
             return new ResourceCollectionCloudFormationCollectionFilter(stackNames);
         }

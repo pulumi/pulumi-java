@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.AddressPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -31,14 +31,14 @@ public final class AddressDetailsResponse {
     /**
      * Customer address and contact details. It should be address resource
      * 
-     */
+    */
     public AddressPropertiesResponse getForwardAddress() {
         return this.forwardAddress;
     }
     /**
      * Return shipping address
      * 
-     */
+    */
     public AddressPropertiesResponse getReturnAddress() {
         return this.returnAddress;
     }
@@ -74,7 +74,6 @@ public final class AddressDetailsResponse {
             this.returnAddress = Objects.requireNonNull(returnAddress);
             return this;
         }
-
         public AddressDetailsResponse build() {
             return new AddressDetailsResponse(forwardAddress, returnAddress);
         }

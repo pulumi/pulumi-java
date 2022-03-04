@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1IntentParameterResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse;
 import java.lang.Boolean;
@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
      * 
      */
     @InputImport(name="isFallback", required=true)
-    private final Boolean isFallback;
+      private final Boolean isFallback;
 
     public Boolean getIsFallback() {
         return this.isFallback;
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -82,7 +82,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters;
+      private final List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters;
 
     public List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> getParameters() {
         return this.parameters;
@@ -93,7 +93,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -104,7 +104,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
      * 
      */
     @InputImport(name="trainingPhrases", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases;
+      private final List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases;
 
     public List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> getTrainingPhrases() {
         return this.trainingPhrases;
@@ -213,7 +213,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
             this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentResponse build() {
             return new GoogleCloudDialogflowCxV3beta1IntentResponse(description, displayName, isFallback, labels, name, parameters, priority, trainingPhrases);
         }

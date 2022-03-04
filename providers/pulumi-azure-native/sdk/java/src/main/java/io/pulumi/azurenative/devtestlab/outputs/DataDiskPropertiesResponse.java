@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.AttachNewDataDiskOptionsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class DataDiskPropertiesResponse {
     /**
      * Specifies options to attach a new disk to the virtual machine.
      * 
-     */
+    */
     public Optional<AttachNewDataDiskOptionsResponse> getAttachNewDataDiskOptions() {
         return Optional.ofNullable(this.attachNewDataDiskOptions);
     }
     /**
      * Specifies the existing lab disk id to attach to virtual machine.
      * 
-     */
+    */
     public Optional<String> getExistingLabDiskId() {
         return Optional.ofNullable(this.existingLabDiskId);
     }
     /**
      * Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
      * 
-     */
+    */
     public Optional<String> getHostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
@@ -98,7 +98,6 @@ public final class DataDiskPropertiesResponse {
             this.hostCaching = hostCaching;
             return this;
         }
-
         public DataDiskPropertiesResponse build() {
             return new DataDiskPropertiesResponse(attachNewDataDiskOptions, existingLabDiskId, hostCaching);
         }

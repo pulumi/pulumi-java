@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.inputs;
 
 import io.pulumi.azurenative.managednetwork.inputs.ManagedNetworkPeeringPolicyPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -35,7 +35,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -46,7 +46,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -57,7 +57,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties;
+      private final @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties;
 
     public Optional<ManagedNetworkPeeringPolicyPropertiesResponse> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -68,7 +68,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -147,7 +147,6 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedNetworkPeeringPolicyResponse build() {
             return new ManagedNetworkPeeringPolicyResponse(id, location, name, properties, type);
         }

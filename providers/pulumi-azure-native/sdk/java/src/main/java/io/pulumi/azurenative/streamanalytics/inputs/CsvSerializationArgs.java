@@ -6,7 +6,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 import io.pulumi.azurenative.streamanalytics.enums.Encoding;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<Either<String,Encoding>> encoding;
+      private final @Nullable Input<Either<String,Encoding>> encoding;
 
     public Input<Either<String,Encoding>> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -36,7 +36,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fieldDelimiter")
-    private final @Nullable Input<String> fieldDelimiter;
+      private final @Nullable Input<String> fieldDelimiter;
 
     public Input<String> getFieldDelimiter() {
         return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
@@ -48,7 +48,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -122,7 +122,6 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public CsvSerializationArgs build() {
             return new CsvSerializationArgs(encoding, fieldDelimiter, type);
         }

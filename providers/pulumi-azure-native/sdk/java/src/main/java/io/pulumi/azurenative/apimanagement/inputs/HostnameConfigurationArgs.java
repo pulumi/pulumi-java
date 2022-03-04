@@ -7,7 +7,7 @@ import io.pulumi.azurenative.apimanagement.enums.HostnameType;
 import io.pulumi.azurenative.apimanagement.inputs.CertificateInformationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<CertificateInformationArgs> certificate;
+      private final @Nullable Input<CertificateInformationArgs> certificate;
 
     public Input<CertificateInformationArgs> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -38,7 +38,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificatePassword")
-    private final @Nullable Input<String> certificatePassword;
+      private final @Nullable Input<String> certificatePassword;
 
     public Input<String> getCertificatePassword() {
         return this.certificatePassword == null ? Input.empty() : this.certificatePassword;
@@ -49,7 +49,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultSslBinding")
-    private final @Nullable Input<Boolean> defaultSslBinding;
+      private final @Nullable Input<Boolean> defaultSslBinding;
 
     public Input<Boolean> getDefaultSslBinding() {
         return this.defaultSslBinding == null ? Input.empty() : this.defaultSslBinding;
@@ -60,7 +60,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encodedCertificate")
-    private final @Nullable Input<String> encodedCertificate;
+      private final @Nullable Input<String> encodedCertificate;
 
     public Input<String> getEncodedCertificate() {
         return this.encodedCertificate == null ? Input.empty() : this.encodedCertificate;
@@ -71,7 +71,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostName", required=true)
-    private final Input<String> hostName;
+      private final Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName;
@@ -82,7 +82,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="identityClientId")
-    private final @Nullable Input<String> identityClientId;
+      private final @Nullable Input<String> identityClientId;
 
     public Input<String> getIdentityClientId() {
         return this.identityClientId == null ? Input.empty() : this.identityClientId;
@@ -93,7 +93,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyVaultId")
-    private final @Nullable Input<String> keyVaultId;
+      private final @Nullable Input<String> keyVaultId;
 
     public Input<String> getKeyVaultId() {
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
@@ -104,7 +104,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="negotiateClientCertificate")
-    private final @Nullable Input<Boolean> negotiateClientCertificate;
+      private final @Nullable Input<Boolean> negotiateClientCertificate;
 
     public Input<Boolean> getNegotiateClientCertificate() {
         return this.negotiateClientCertificate == null ? Input.empty() : this.negotiateClientCertificate;
@@ -115,7 +115,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,HostnameType>> type;
+      private final Input<Either<String,HostnameType>> type;
 
     public Input<Either<String,HostnameType>> getType() {
         return this.type;
@@ -279,7 +279,6 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public HostnameConfigurationArgs build() {
             return new HostnameConfigurationArgs(certificate, certificatePassword, defaultSslBinding, encodedCertificate, hostName, identityClientId, keyVaultId, negotiateClientCertificate, type);
         }

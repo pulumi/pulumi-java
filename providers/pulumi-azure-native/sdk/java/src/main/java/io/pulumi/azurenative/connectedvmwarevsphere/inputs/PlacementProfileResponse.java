@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PlacementProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="clusterId")
-    private final @Nullable String clusterId;
+      private final @Nullable String clusterId;
 
     public Optional<String> getClusterId() {
         return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
@@ -34,7 +34,7 @@ public final class PlacementProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="datastoreId")
-    private final @Nullable String datastoreId;
+      private final @Nullable String datastoreId;
 
     public Optional<String> getDatastoreId() {
         return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
@@ -45,7 +45,7 @@ public final class PlacementProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="hostId")
-    private final @Nullable String hostId;
+      private final @Nullable String hostId;
 
     public Optional<String> getHostId() {
         return this.hostId == null ? Optional.empty() : Optional.ofNullable(this.hostId);
@@ -56,7 +56,7 @@ public final class PlacementProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourcePoolId")
-    private final @Nullable String resourcePoolId;
+      private final @Nullable String resourcePoolId;
 
     public Optional<String> getResourcePoolId() {
         return this.resourcePoolId == null ? Optional.empty() : Optional.ofNullable(this.resourcePoolId);
@@ -125,7 +125,6 @@ public final class PlacementProfileResponse extends io.pulumi.resources.InvokeAr
             this.resourcePoolId = resourcePoolId;
             return this;
         }
-
         public PlacementProfileResponse build() {
             return new PlacementProfileResponse(clusterId, datastoreId, hostId, resourcePoolId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Input<String> range;
+      private final @Nullable Input<String> range;
 
     public Input<String> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -30,7 +30,7 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="skipLeadingRows")
-    private final @Nullable Input<String> skipLeadingRows;
+      private final @Nullable Input<String> skipLeadingRows;
 
     public Input<String> getSkipLeadingRows() {
         return this.skipLeadingRows == null ? Input.empty() : this.skipLeadingRows;
@@ -89,7 +89,6 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
             this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
             return this;
         }
-
         public GoogleSheetsOptionsArgs build() {
             return new GoogleSheetsOptionsArgs(range, skipLeadingRows);
         }

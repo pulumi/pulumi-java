@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="definition", required=true)
-    private final Input<BlobInventoryPolicyDefinitionArgs> definition;
+      private final Input<BlobInventoryPolicyDefinitionArgs> definition;
 
     public Input<BlobInventoryPolicyDefinitionArgs> getDefinition() {
         return this.definition;
@@ -35,7 +35,7 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -46,7 +46,7 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -120,7 +120,6 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public BlobInventoryPolicyRuleArgs build() {
             return new BlobInventoryPolicyRuleArgs(definition, enabled, name);
         }

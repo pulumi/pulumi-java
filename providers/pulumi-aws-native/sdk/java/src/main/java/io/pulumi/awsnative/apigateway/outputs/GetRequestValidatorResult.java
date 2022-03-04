@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class GetRequestValidatorResult {
     /**
      * ID of the request validator.
      * 
-     */
+    */
     public Optional<String> getRequestValidatorId() {
         return Optional.ofNullable(this.requestValidatorId);
     }
     /**
      * Indicates whether to validate the request body according to the configured schema for the targeted API and method.
      * 
-     */
+    */
     public Optional<Boolean> getValidateRequestBody() {
         return Optional.ofNullable(this.validateRequestBody);
     }
     /**
      * Indicates whether to validate request parameters.
      * 
-     */
+    */
     public Optional<Boolean> getValidateRequestParameters() {
         return Optional.ofNullable(this.validateRequestParameters);
     }
@@ -98,7 +98,6 @@ public final class GetRequestValidatorResult {
             this.validateRequestParameters = validateRequestParameters;
             return this;
         }
-
         public GetRequestValidatorResult build() {
             return new GetRequestValidatorResult(requestValidatorId, validateRequestBody, validateRequestParameters);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearning.outputs.BlobLocationResponse;
 import io.pulumi.azurenative.machinelearning.outputs.InputPortResponse;
 import io.pulumi.azurenative.machinelearning.outputs.ModuleAssetParameterResponse;
 import io.pulumi.azurenative.machinelearning.outputs.OutputPortResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -81,56 +81,56 @@ public final class AssetItemResponse {
     /**
      * Asset's Id.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Information about the asset's input ports.
      * 
-     */
+    */
     public Map<String,InputPortResponse> getInputPorts() {
         return this.inputPorts == null ? Map.of() : this.inputPorts;
     }
     /**
      * Access information for the asset.
      * 
-     */
+    */
     public BlobLocationResponse getLocationInfo() {
         return this.locationInfo;
     }
     /**
      * If the asset is a custom module, this holds the module's metadata.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * Asset's friendly name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Information about the asset's output ports.
      * 
-     */
+    */
     public Map<String,OutputPortResponse> getOutputPorts() {
         return this.outputPorts == null ? Map.of() : this.outputPorts;
     }
     /**
      * If the asset is a custom module, this holds the module's parameters.
      * 
-     */
+    */
     public List<ModuleAssetParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Asset's type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -208,7 +208,6 @@ public final class AssetItemResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AssetItemResponse build() {
             return new AssetItemResponse(id, inputPorts, locationInfo, metadata, name, outputPorts, parameters, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class AppDevExperienceFeatureSpecResponse {
         public Builder(AppDevExperienceFeatureSpecResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AppDevExperienceFeatureSpecResponse build() {
             return new AppDevExperienceFeatureSpecResponse();
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetGatewayHostnameConfigurationArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetGatewayHostnameConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGatewayHostnameConfiguration {
-/**
- * Gateway hostname configuration details.
+    private GetGatewayHostnameConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetGatewayHostnameConfigurationArgs.Builder a);
+    }
+    private static GetGatewayHostnameConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGatewayHostnameConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gateway hostname configuration details.
  * API Version: 2020-12-01.
  * 
- *
- * Gateway hostname configuration details.
+     *
+     * Gateway hostname configuration details.
  * 
- */
+     */
+    public static CompletableFuture<GetGatewayHostnameConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gateway hostname configuration details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Gateway hostname configuration details.
+     * 
+     */
     public static CompletableFuture<GetGatewayHostnameConfigurationResult> invokeAsync(GetGatewayHostnameConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGatewayHostnameConfiguration", TypeShape.of(GetGatewayHostnameConfigurationResult.class), args == null ? GetGatewayHostnameConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

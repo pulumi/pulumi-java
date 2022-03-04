@@ -5,8 +5,8 @@ package io.pulumi.gcp.oslogin;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.oslogin.SshPublicKeyArgs;
 import io.pulumi.gcp.oslogin.inputs.SshPublicKeyState;
@@ -110,6 +110,37 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
         return this.user;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SshPublicKeyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.oslogin.SshPublicKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.oslogin.SshPublicKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SshPublicKey(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SshPublicKey(String name) {
+        this(name, SshPublicKeyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SshPublicKey(String name, SshPublicKeyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

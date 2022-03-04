@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ToolResultsHistoryResponse {
     /**
      * A tool results history ID.
      * 
-     */
+    */
     public String getHistoryId() {
         return this.historyId;
     }
     /**
      * The cloud project that owns the tool results history.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
@@ -74,7 +74,6 @@ public final class ToolResultsHistoryResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public ToolResultsHistoryResponse build() {
             return new ToolResultsHistoryResponse(historyId, project);
         }

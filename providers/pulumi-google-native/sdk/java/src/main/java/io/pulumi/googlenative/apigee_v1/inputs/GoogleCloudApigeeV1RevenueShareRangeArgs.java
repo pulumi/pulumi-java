@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<String> end;
+      private final @Nullable Input<String> end;
 
     public Input<String> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="sharePercentage")
-    private final @Nullable Input<Double> sharePercentage;
+      private final @Nullable Input<Double> sharePercentage;
 
     public Input<Double> getSharePercentage() {
         return this.sharePercentage == null ? Input.empty() : this.sharePercentage;
@@ -46,7 +46,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="start")
-    private final @Nullable Input<String> start;
+      private final @Nullable Input<String> start;
 
     public Input<String> getStart() {
         return this.start == null ? Input.empty() : this.start;
@@ -120,7 +120,6 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends io.pulumi.re
             this.start = Input.ofNullable(start);
             return this;
         }
-
         public GoogleCloudApigeeV1RevenueShareRangeArgs build() {
             return new GoogleCloudApigeeV1RevenueShareRangeArgs(end, sharePercentage, start);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.networkmanager.inputs.GetSiteArgs;
 import io.pulumi.awsnative.networkmanager.outputs.GetSiteResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSite {
-/**
- * The AWS::NetworkManager::Site type describes a site.
+    private GetSite() {}
+    public interface BuilderApplicator {
+        public void apply(GetSiteArgs.Builder a);
+    }
+    private static GetSiteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSiteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::NetworkManager::Site type describes a site.
  * 
- */
+     */
+    public static CompletableFuture<GetSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::NetworkManager::Site type describes a site.
+     * 
+     */
     public static CompletableFuture<GetSiteResult> invokeAsync(GetSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getSite", TypeShape.of(GetSiteResult.class), args == null ? GetSiteArgs.Empty : args, Utilities.withVersion(options));
     }

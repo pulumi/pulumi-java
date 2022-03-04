@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.EncoderNamedPreset;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -36,7 +36,7 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="presetName", required=true)
-    private final Input<Either<String,EncoderNamedPreset>> presetName;
+      private final Input<Either<String,EncoderNamedPreset>> presetName;
 
     public Input<Either<String,EncoderNamedPreset>> getPresetName() {
         return this.presetName;
@@ -95,7 +95,6 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
             this.presetName = Input.of(Objects.requireNonNull(presetName));
             return this;
         }
-
         public BuiltInStandardEncoderPresetArgs build() {
             return new BuiltInStandardEncoderPresetArgs(odataType, presetName);
         }

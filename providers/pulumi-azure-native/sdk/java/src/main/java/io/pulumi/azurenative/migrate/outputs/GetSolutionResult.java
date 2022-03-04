@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.SolutionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class GetSolutionResult {
     /**
      * Gets or sets the ETAG for optimistic concurrency control.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Gets the relative URL to get to this REST resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets the name of this REST resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the properties of the solution.
      * 
-     */
+    */
     public SolutionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Gets the type of this REST resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetSolutionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSolutionResult build() {
             return new GetSolutionResult(etag, id, name, properties, type);
         }

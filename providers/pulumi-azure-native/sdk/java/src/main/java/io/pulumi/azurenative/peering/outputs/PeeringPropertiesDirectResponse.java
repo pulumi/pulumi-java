@@ -5,7 +5,7 @@ package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.DirectConnectionResponse;
 import io.pulumi.azurenative.peering.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -51,28 +51,28 @@ public final class PeeringPropertiesDirectResponse {
     /**
      * The set of connections that constitute a direct peering.
      * 
-     */
+    */
     public List<DirectConnectionResponse> getConnections() {
         return this.connections == null ? List.of() : this.connections;
     }
     /**
      * The type of direct peering.
      * 
-     */
+    */
     public Optional<String> getDirectPeeringType() {
         return Optional.ofNullable(this.directPeeringType);
     }
     /**
      * The reference of the peer ASN.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getPeerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
     /**
      * The flag that indicates whether or not the peering is used for peering service.
      * 
-     */
+    */
     public Boolean getUseForPeeringService() {
         return this.useForPeeringService;
     }
@@ -122,7 +122,6 @@ public final class PeeringPropertiesDirectResponse {
             this.useForPeeringService = Objects.requireNonNull(useForPeeringService);
             return this;
         }
-
         public PeeringPropertiesDirectResponse build() {
             return new PeeringPropertiesDirectResponse(connections, directPeeringType, peerAsn, useForPeeringService);
         }

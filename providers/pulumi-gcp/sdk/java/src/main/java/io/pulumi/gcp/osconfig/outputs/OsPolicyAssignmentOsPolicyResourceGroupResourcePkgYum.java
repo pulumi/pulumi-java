@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
     /**
      * Required. The name of the repository.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -52,7 +52,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum(name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GalleryIdentifierResponse {
     /**
      * The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
      * 
-     */
+    */
     public String getUniqueName() {
         return this.uniqueName;
     }
@@ -52,7 +52,6 @@ public final class GalleryIdentifierResponse {
             this.uniqueName = Objects.requireNonNull(uniqueName);
             return this;
         }
-
         public GalleryIdentifierResponse build() {
             return new GalleryIdentifierResponse(uniqueName);
         }

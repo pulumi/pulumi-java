@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.saas.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class SaasPropertiesResponseTerm {
     /**
      * The end date of the current term
      * 
-     */
+    */
     public Optional<String> getEndDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
      * The start date of the current term
      * 
-     */
+    */
     public Optional<String> getStartDate() {
         return Optional.ofNullable(this.startDate);
     }
     /**
      * The unit indicating Monthly / Yearly
      * 
-     */
+    */
     public Optional<String> getTermUnit() {
         return Optional.ofNullable(this.termUnit);
     }
@@ -97,7 +97,6 @@ public final class SaasPropertiesResponseTerm {
             this.termUnit = termUnit;
             return this;
         }
-
         public SaasPropertiesResponseTerm build() {
             return new SaasPropertiesResponseTerm(endDate, startDate, termUnit);
         }

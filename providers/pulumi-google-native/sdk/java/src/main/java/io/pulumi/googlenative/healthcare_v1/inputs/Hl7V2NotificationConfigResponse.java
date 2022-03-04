@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class Hl7V2NotificationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -32,7 +32,7 @@ public final class Hl7V2NotificationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-    private final String pubsubTopic;
+      private final String pubsubTopic;
 
     public String getPubsubTopic() {
         return this.pubsubTopic;
@@ -81,7 +81,6 @@ public final class Hl7V2NotificationConfigResponse extends io.pulumi.resources.I
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Hl7V2NotificationConfigResponse build() {
             return new Hl7V2NotificationConfigResponse(filter, pubsubTopic);
         }

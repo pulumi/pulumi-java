@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class AuthorityResponse {
     /**
      * An identity provider that reflects the `issuer` in the workload identity pool.
      * 
-     */
+    */
     public String getIdentityProvider() {
         return this.identityProvider;
     }
     /**
      * Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length <2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }
     /**
      * Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be validated using this field.
      * 
-     */
+    */
     public String getOidcJwks() {
         return this.oidcJwks;
     }
     /**
      * The name of the workload identity pool in which `issuer` will be recognized. There is a single Workload Identity Pool per Hub that is shared between all Memberships that belong to that Hub. For a Hub hosted in {PROJECT_ID}, the workload pool format is `{PROJECT_ID}.hub.id.goog`, although this is subject to change in newer versions of this API.
      * 
-     */
+    */
     public String getWorkloadIdentityPool() {
         return this.workloadIdentityPool;
     }
@@ -116,7 +116,6 @@ public final class AuthorityResponse {
             this.workloadIdentityPool = Objects.requireNonNull(workloadIdentityPool);
             return this;
         }
-
         public AuthorityResponse build() {
             return new AuthorityResponse(identityProvider, issuer, oidcJwks, workloadIdentityPool);
         }

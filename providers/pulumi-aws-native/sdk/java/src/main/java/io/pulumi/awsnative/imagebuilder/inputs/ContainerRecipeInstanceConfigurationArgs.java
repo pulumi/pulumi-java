@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceBlockDeviceMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="blockDeviceMappings")
-    private final @Nullable Input<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
+      private final @Nullable Input<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
     public Input<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> getBlockDeviceMappings() {
         return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
@@ -36,7 +36,7 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -95,7 +95,6 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
             this.image = Input.ofNullable(image);
             return this;
         }
-
         public ContainerRecipeInstanceConfigurationArgs build() {
             return new ContainerRecipeInstanceConfigurationArgs(blockDeviceMappings, image);
         }

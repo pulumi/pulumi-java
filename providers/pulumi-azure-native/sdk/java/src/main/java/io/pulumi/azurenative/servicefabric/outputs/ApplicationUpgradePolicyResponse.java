@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ArmApplicationHealthPolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ArmRollingUpgradeMonitoringPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -64,42 +64,42 @@ public final class ApplicationUpgradePolicyResponse {
     /**
      * Defines a health policy used to evaluate the health of an application or one of its children entities.
      * 
-     */
+    */
     public Optional<ArmApplicationHealthPolicyResponse> getApplicationHealthPolicy() {
         return Optional.ofNullable(this.applicationHealthPolicy);
     }
     /**
      * If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
      * 
-     */
+    */
     public Optional<Boolean> getForceRestart() {
         return Optional.ofNullable(this.forceRestart);
     }
     /**
      * Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.
      * 
-     */
+    */
     public Optional<Boolean> getRecreateApplication() {
         return Optional.ofNullable(this.recreateApplication);
     }
     /**
      * The policy used for monitoring the application upgrade
      * 
-     */
+    */
     public Optional<ArmRollingUpgradeMonitoringPolicyResponse> getRollingUpgradeMonitoringPolicy() {
         return Optional.ofNullable(this.rollingUpgradeMonitoringPolicy);
     }
     /**
      * The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
      * 
-     */
+    */
     public Optional<String> getUpgradeMode() {
         return Optional.ofNullable(this.upgradeMode);
     }
     /**
      * The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
      * 
-     */
+    */
     public Optional<String> getUpgradeReplicaSetCheckTimeout() {
         return Optional.ofNullable(this.upgradeReplicaSetCheckTimeout);
     }
@@ -163,7 +163,6 @@ public final class ApplicationUpgradePolicyResponse {
             this.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
         }
-
         public ApplicationUpgradePolicyResponse build() {
             return new ApplicationUpgradePolicyResponse(applicationHealthPolicy, forceRestart, recreateApplication, rollingUpgradeMonitoringPolicy, upgradeMode, upgradeReplicaSetCheckTimeout);
         }

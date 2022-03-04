@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.AssignedUserResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PersonalComputeInstanceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="assignedUser")
-    private final @Nullable AssignedUserResponse assignedUser;
+      private final @Nullable AssignedUserResponse assignedUser;
 
     public Optional<AssignedUserResponse> getAssignedUser() {
         return this.assignedUser == null ? Optional.empty() : Optional.ofNullable(this.assignedUser);
@@ -61,7 +61,6 @@ public final class PersonalComputeInstanceSettingsResponse extends io.pulumi.res
             this.assignedUser = assignedUser;
             return this;
         }
-
         public PersonalComputeInstanceSettingsResponse build() {
             return new PersonalComputeInstanceSettingsResponse(assignedUser);
         }

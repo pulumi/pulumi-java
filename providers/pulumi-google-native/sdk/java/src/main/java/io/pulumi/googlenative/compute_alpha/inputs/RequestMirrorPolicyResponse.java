@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RequestMirrorPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="backendService", required=true)
-    private final String backendService;
+      private final String backendService;
 
     public String getBackendService() {
         return this.backendService;
@@ -59,7 +59,6 @@ public final class RequestMirrorPolicyResponse extends io.pulumi.resources.Invok
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public RequestMirrorPolicyResponse build() {
             return new RequestMirrorPolicyResponse(backendService);
         }

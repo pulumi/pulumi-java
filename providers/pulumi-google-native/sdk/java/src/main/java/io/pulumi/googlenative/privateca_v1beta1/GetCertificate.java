@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificate {
-/**
- * Returns a Certificate.
+    private GetCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetCertificateArgs.Builder a);
+    }
+    private static GetCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns a Certificate.
  * 
- */
+     */
+    public static CompletableFuture<GetCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns a Certificate.
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> invokeAsync(GetCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1beta1:getCertificate", TypeShape.of(GetCertificateResult.class), args == null ? GetCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

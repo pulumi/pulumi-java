@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.DataMaskingEntityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<List<DataMaskingEntityArgs>> headers;
+      private final @Nullable Input<List<DataMaskingEntityArgs>> headers;
 
     public Input<List<DataMaskingEntityArgs>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -31,7 +31,7 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryParams")
-    private final @Nullable Input<List<DataMaskingEntityArgs>> queryParams;
+      private final @Nullable Input<List<DataMaskingEntityArgs>> queryParams;
 
     public Input<List<DataMaskingEntityArgs>> getQueryParams() {
         return this.queryParams == null ? Input.empty() : this.queryParams;
@@ -90,7 +90,6 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
             this.queryParams = Input.ofNullable(queryParams);
             return this;
         }
-
         public DataMaskingArgs build() {
             return new DataMaskingArgs(headers, queryParams);
         }

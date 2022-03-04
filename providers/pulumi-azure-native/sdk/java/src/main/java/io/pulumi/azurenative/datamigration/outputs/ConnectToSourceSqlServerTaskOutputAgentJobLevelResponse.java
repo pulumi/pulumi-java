@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigrationEligibilityInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -76,49 +76,49 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The state of the original AgentJob.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The type of AgentJob.
      * 
-     */
+    */
     public String getJobCategory() {
         return this.jobCategory;
     }
     /**
      * The owner of the AgentJob
      * 
-     */
+    */
     public String getJobOwner() {
         return this.jobOwner;
     }
     /**
      * UTC Date and time when the AgentJob was last executed.
      * 
-     */
+    */
     public String getLastExecutedOn() {
         return this.lastExecutedOn;
     }
     /**
      * Information about eligibility of agent job for migration.
      * 
-     */
+    */
     public MigrationEligibilityInfoResponse getMigrationEligibility() {
         return this.migrationEligibility;
     }
     /**
      * AgentJob name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -126,7 +126,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
      * Type of result - database level or task level
      * Expected value is 'AgentJobLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
@@ -204,7 +204,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse(id, isEnabled, jobCategory, jobOwner, lastExecutedOn, migrationEligibility, name, resultType);
         }

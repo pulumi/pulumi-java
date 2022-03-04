@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleRpcStatusResponse;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
     /**
      * Details of errors that occurred.
      * 
-     */
+    */
     public List<GoogleRpcStatusResponse> getPartialFailures() {
         return this.partialFailures;
     }
@@ -68,7 +68,6 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
             this.partialFailures = Objects.requireNonNull(partialFailures);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1AttemptResponse build() {
             return new GoogleCloudDatalabelingV1beta1AttemptResponse(attemptTime, partialFailures);
         }

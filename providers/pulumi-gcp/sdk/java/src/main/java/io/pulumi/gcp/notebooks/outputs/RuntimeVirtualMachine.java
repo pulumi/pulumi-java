@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.notebooks.outputs.RuntimeVirtualMachineVirtualMachineConfig;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +45,7 @@ public final class RuntimeVirtualMachine {
      * - 
      * The unique identifier of the Managed Compute Engine instance.
      * 
-     */
+    */
     public Optional<String> getInstanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -53,7 +53,7 @@ public final class RuntimeVirtualMachine {
      * - 
      * The user-friendly name of the Managed Compute Engine instance.
      * 
-     */
+    */
     public Optional<String> getInstanceName() {
         return Optional.ofNullable(this.instanceName);
     }
@@ -61,7 +61,7 @@ public final class RuntimeVirtualMachine {
      * Virtual Machine configuration settings.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RuntimeVirtualMachineVirtualMachineConfig> getVirtualMachineConfig() {
         return Optional.ofNullable(this.virtualMachineConfig);
     }
@@ -104,7 +104,6 @@ public final class RuntimeVirtualMachine {
             this.virtualMachineConfig = virtualMachineConfig;
             return this;
         }
-
         public RuntimeVirtualMachine build() {
             return new RuntimeVirtualMachine(instanceId, instanceName, virtualMachineConfig);
         }

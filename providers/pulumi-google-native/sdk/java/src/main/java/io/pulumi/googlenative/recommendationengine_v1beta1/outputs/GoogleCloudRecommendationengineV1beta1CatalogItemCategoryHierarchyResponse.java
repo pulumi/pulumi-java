@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
     /**
      * Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).
      * 
-     */
+    */
     public List<String> getCategories() {
         return this.categories;
     }
@@ -53,7 +53,6 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse build() {
             return new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(categories);
         }

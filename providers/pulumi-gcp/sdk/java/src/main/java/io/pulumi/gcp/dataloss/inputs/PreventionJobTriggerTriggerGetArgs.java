@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerScheduleGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PreventionJobTriggerTriggerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
+      private final @Nullable Input<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
 
     public Input<PreventionJobTriggerTriggerScheduleGetArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -63,7 +63,6 @@ public final class PreventionJobTriggerTriggerGetArgs extends io.pulumi.resource
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
-
         public PreventionJobTriggerTriggerGetArgs build() {
             return new PreventionJobTriggerTriggerGetArgs(schedule);
         }

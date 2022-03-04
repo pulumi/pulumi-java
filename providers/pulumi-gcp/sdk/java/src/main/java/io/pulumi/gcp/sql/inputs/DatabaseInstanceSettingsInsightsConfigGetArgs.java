@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="queryInsightsEnabled")
-    private final @Nullable Input<Boolean> queryInsightsEnabled;
+      private final @Nullable Input<Boolean> queryInsightsEnabled;
 
     public Input<Boolean> getQueryInsightsEnabled() {
         return this.queryInsightsEnabled == null ? Input.empty() : this.queryInsightsEnabled;
@@ -31,7 +31,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="queryStringLength")
-    private final @Nullable Input<Integer> queryStringLength;
+      private final @Nullable Input<Integer> queryStringLength;
 
     public Input<Integer> getQueryStringLength() {
         return this.queryStringLength == null ? Input.empty() : this.queryStringLength;
@@ -42,7 +42,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="recordApplicationTags")
-    private final @Nullable Input<Boolean> recordApplicationTags;
+      private final @Nullable Input<Boolean> recordApplicationTags;
 
     public Input<Boolean> getRecordApplicationTags() {
         return this.recordApplicationTags == null ? Input.empty() : this.recordApplicationTags;
@@ -53,7 +53,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="recordClientAddress")
-    private final @Nullable Input<Boolean> recordClientAddress;
+      private final @Nullable Input<Boolean> recordClientAddress;
 
     public Input<Boolean> getRecordClientAddress() {
         return this.recordClientAddress == null ? Input.empty() : this.recordClientAddress;
@@ -142,7 +142,6 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
             this.recordClientAddress = Input.ofNullable(recordClientAddress);
             return this;
         }
-
         public DatabaseInstanceSettingsInsightsConfigGetArgs build() {
             return new DatabaseInstanceSettingsInsightsConfigGetArgs(queryInsightsEnabled, queryStringLength, recordApplicationTags, recordClientAddress);
         }

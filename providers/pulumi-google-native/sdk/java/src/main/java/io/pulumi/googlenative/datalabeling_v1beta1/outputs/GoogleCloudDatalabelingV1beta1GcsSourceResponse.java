@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
     /**
      * The input URI of source file. This must be a Cloud Storage path (`gs://...`).
      * 
-     */
+    */
     public String getInputUri() {
         return this.inputUri;
     }
     /**
      * The format of the source file. Only "text/csv" is supported.
      * 
-     */
+    */
     public String getMimeType() {
         return this.mimeType;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1GcsSourceResponse build() {
             return new GoogleCloudDatalabelingV1beta1GcsSourceResponse(inputUri, mimeType);
         }

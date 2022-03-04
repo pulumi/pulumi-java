@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends io.pulu
      * 
      */
     @InputImport(name="networkGroupName", required=true)
-    private final String networkGroupName;
+      private final String networkGroupName;
 
     public String getNetworkGroupName() {
         return this.networkGroupName;
@@ -30,7 +30,7 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends io.pulu
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final String networkManagerName;
+      private final String networkManagerName;
 
     public String getNetworkManagerName() {
         return this.networkManagerName;
@@ -41,7 +41,7 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends io.pulu
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends io.pulu
      * 
      */
     @InputImport(name="skipToken")
-    private final @Nullable String skipToken;
+      private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -121,7 +121,6 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends io.pulu
             this.skipToken = skipToken;
             return this;
         }
-
         public ListEffectiveVirtualNetworkByNetworkGroupArgs build() {
             return new ListEffectiveVirtualNetworkByNetworkGroupArgs(networkGroupName, networkManagerName, resourceGroupName, skipToken);
         }

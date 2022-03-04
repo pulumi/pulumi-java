@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class MissionProfileDataflowEdge {
             this.source = source;
             return this;
         }
-
         public MissionProfileDataflowEdge build() {
             return new MissionProfileDataflowEdge(destination, source);
         }

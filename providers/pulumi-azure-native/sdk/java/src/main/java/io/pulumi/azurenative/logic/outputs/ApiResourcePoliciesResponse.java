@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ApiResourcePoliciesResponse {
     /**
      * The API level only policies XML as embedded content.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The content link to the policies.
      * 
-     */
+    */
     public Optional<String> getContentLink() {
         return Optional.ofNullable(this.contentLink);
     }
@@ -76,7 +76,6 @@ public final class ApiResourcePoliciesResponse {
             this.contentLink = contentLink;
             return this;
         }
-
         public ApiResourcePoliciesResponse build() {
             return new ApiResourcePoliciesResponse(content, contentLink);
         }

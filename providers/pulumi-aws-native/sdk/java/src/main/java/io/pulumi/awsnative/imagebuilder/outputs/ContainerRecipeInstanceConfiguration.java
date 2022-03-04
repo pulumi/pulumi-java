@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.ContainerRecipeInstanceBlockDeviceMapping;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ContainerRecipeInstanceConfiguration {
     /**
      * Defines the block devices to attach for building an instance from this Image Builder AMI.
      * 
-     */
+    */
     public List<ContainerRecipeInstanceBlockDeviceMapping> getBlockDeviceMappings() {
         return this.blockDeviceMappings == null ? List.of() : this.blockDeviceMappings;
     }
     /**
      * The AMI ID to use as the base image for a container build and test instance. If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
      * 
-     */
+    */
     public Optional<String> getImage() {
         return Optional.ofNullable(this.image);
     }
@@ -78,7 +78,6 @@ public final class ContainerRecipeInstanceConfiguration {
             this.image = image;
             return this;
         }
-
         public ContainerRecipeInstanceConfiguration build() {
             return new ContainerRecipeInstanceConfiguration(blockDeviceMappings, image);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class StatefulPolicyPreservedStateResponse {
     /**
      * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
      * 
-     */
+    */
     public Map<String,String> getDisks() {
         return this.disks;
     }
     /**
      * External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
      * 
-     */
+    */
     public Map<String,String> getExternalIPs() {
         return this.externalIPs;
     }
     /**
      * Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
      * 
-     */
+    */
     public Map<String,String> getInternalIPs() {
         return this.internalIPs;
     }
@@ -96,7 +96,6 @@ public final class StatefulPolicyPreservedStateResponse {
             this.internalIPs = Objects.requireNonNull(internalIPs);
             return this;
         }
-
         public StatefulPolicyPreservedStateResponse build() {
             return new StatefulPolicyPreservedStateResponse(disks, externalIPs, internalIPs);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationTargetContainerRepositoryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="containerTags")
-    private final @Nullable Input<List<String>> containerTags;
+      private final @Nullable Input<List<String>> containerTags;
 
     public Input<List<String>> getContainerTags() {
         return this.containerTags == null ? Input.empty() : this.containerTags;
@@ -36,7 +36,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="targetRepository")
-    private final @Nullable Input<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository;
+      private final @Nullable Input<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository;
 
     public Input<DistributionConfigurationTargetContainerRepositoryArgs> getTargetRepository() {
         return this.targetRepository == null ? Input.empty() : this.targetRepository;
@@ -121,7 +121,6 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             this.targetRepository = Input.ofNullable(targetRepository);
             return this;
         }
-
         public DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs build() {
             return new DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs(containerTags, description, targetRepository);
         }

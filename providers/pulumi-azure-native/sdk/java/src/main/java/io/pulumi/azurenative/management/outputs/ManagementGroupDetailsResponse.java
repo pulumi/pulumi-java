@@ -5,7 +5,7 @@ package io.pulumi.azurenative.management.outputs;
 
 import io.pulumi.azurenative.management.outputs.ManagementGroupPathElementResponse;
 import io.pulumi.azurenative.management.outputs.ParentGroupInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -58,35 +58,35 @@ public final class ManagementGroupDetailsResponse {
     /**
      * (Optional) The ID of the parent management group.
      * 
-     */
+    */
     public Optional<ParentGroupInfoResponse> getParent() {
         return Optional.ofNullable(this.parent);
     }
     /**
      * The path from the root to the current group.
      * 
-     */
+    */
     public List<ManagementGroupPathElementResponse> getPath() {
         return this.path == null ? List.of() : this.path;
     }
     /**
      * The identity of the principal or process that updated the object.
      * 
-     */
+    */
     public Optional<String> getUpdatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
     /**
      * The date and time when this object was last updated.
      * 
-     */
+    */
     public Optional<String> getUpdatedTime() {
         return Optional.ofNullable(this.updatedTime);
     }
     /**
      * The version number of the object.
      * 
-     */
+    */
     public Optional<Double> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -143,7 +143,6 @@ public final class ManagementGroupDetailsResponse {
             this.version = version;
             return this;
         }
-
         public ManagementGroupDetailsResponse build() {
             return new ManagementGroupDetailsResponse(parent, path, updatedBy, updatedTime, version);
         }

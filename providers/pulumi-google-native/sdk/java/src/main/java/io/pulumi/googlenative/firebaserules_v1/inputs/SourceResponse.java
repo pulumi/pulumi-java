@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebaserules_v1.inputs.FileResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="files", required=true)
-    private final List<FileResponse> files;
+      private final List<FileResponse> files;
 
     public List<FileResponse> getFiles() {
         return this.files;
@@ -60,7 +60,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
             this.files = Objects.requireNonNull(files);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(files);
         }

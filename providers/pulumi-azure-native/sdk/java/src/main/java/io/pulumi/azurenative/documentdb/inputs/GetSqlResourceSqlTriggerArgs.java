@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final String containerName;
+      private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -39,7 +39,7 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -50,7 +50,7 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="triggerName", required=true)
-    private final String triggerName;
+      private final String triggerName;
 
     public String getTriggerName() {
         return this.triggerName;
@@ -140,7 +140,6 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
         }
-
         public GetSqlResourceSqlTriggerArgs build() {
             return new GetSqlResourceSqlTriggerArgs(accountName, containerName, databaseName, resourceGroupName, triggerName);
         }

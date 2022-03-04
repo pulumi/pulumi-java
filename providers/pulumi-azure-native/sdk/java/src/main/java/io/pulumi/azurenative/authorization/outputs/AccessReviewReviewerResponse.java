@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AccessReviewReviewerResponse {
     /**
      * The id of the reviewer(user/servicePrincipal)
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The identity type : user/servicePrincipal
      * 
-     */
+    */
     public String getPrincipalType() {
         return this.principalType;
     }
@@ -76,7 +76,6 @@ public final class AccessReviewReviewerResponse {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public AccessReviewReviewerResponse build() {
             return new AccessReviewReviewerResponse(principalId, principalType);
         }

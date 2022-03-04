@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DefaultPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="artifactStorage", required=true)
-    private final String artifactStorage;
+      private final String artifactStorage;
 
     public String getArtifactStorage() {
         return this.artifactStorage;
@@ -32,7 +32,7 @@ public final class DefaultPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -81,7 +81,6 @@ public final class DefaultPoolResponse extends io.pulumi.resources.InvokeArgs {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public DefaultPoolResponse build() {
             return new DefaultPoolResponse(artifactStorage, serviceAccount);
         }

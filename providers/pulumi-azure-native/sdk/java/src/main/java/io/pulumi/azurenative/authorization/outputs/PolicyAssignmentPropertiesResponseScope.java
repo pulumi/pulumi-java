@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class PolicyAssignmentPropertiesResponseScope {
     /**
      * Display name of the resource
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Scope id of the resource
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Type of the resource
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class PolicyAssignmentPropertiesResponseScope {
             this.type = type;
             return this;
         }
-
         public PolicyAssignmentPropertiesResponseScope build() {
             return new PolicyAssignmentPropertiesResponseScope(displayName, id, type);
         }

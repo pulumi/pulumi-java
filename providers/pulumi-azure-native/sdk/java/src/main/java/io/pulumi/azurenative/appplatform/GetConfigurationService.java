@@ -6,21 +6,41 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appplatform.inputs.GetConfigurationServiceArgs;
 import io.pulumi.azurenative.appplatform.outputs.GetConfigurationServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigurationService {
-/**
- * Application Configuration Service resource
+    private GetConfigurationService() {}
+    public interface BuilderApplicator {
+        public void apply(GetConfigurationServiceArgs.Builder a);
+    }
+    private static GetConfigurationServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConfigurationServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Application Configuration Service resource
  * API Version: 2022-01-01-preview.
  * 
- *
- * Application Configuration Service resource
+     *
+     * Application Configuration Service resource
  * 
- */
+     */
+    public static CompletableFuture<GetConfigurationServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Application Configuration Service resource
+     * API Version: 2022-01-01-preview.
+     * 
+     *
+         * Application Configuration Service resource
+     * 
+     */
     public static CompletableFuture<GetConfigurationServiceResult> invokeAsync(GetConfigurationServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getConfigurationService", TypeShape.of(GetConfigurationServiceResult.class), args == null ? GetConfigurationServiceArgs.Empty : args, Utilities.withVersion(options));
     }

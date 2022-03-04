@@ -6,21 +6,41 @@ package io.pulumi.azurenative.desktopvirtualization;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.desktopvirtualization.inputs.GetMSIXPackageArgs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.GetMSIXPackageResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMSIXPackage {
-/**
- * Schema for MSIX Package properties.
+    private GetMSIXPackage() {}
+    public interface BuilderApplicator {
+        public void apply(GetMSIXPackageArgs.Builder a);
+    }
+    private static GetMSIXPackageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMSIXPackageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Schema for MSIX Package properties.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Schema for MSIX Package properties.
+     *
+     * Schema for MSIX Package properties.
  * 
- */
+     */
+    public static CompletableFuture<GetMSIXPackageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Schema for MSIX Package properties.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Schema for MSIX Package properties.
+     * 
+     */
     public static CompletableFuture<GetMSIXPackageResult> invokeAsync(GetMSIXPackageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getMSIXPackage", TypeShape.of(GetMSIXPackageResult.class), args == null ? GetMSIXPackageArgs.Empty : args, Utilities.withVersion(options));
     }

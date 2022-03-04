@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.VulnerabilityLocationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedLocation", required=true)
-    private final Input<VulnerabilityLocationArgs> affectedLocation;
+      private final Input<VulnerabilityLocationArgs> affectedLocation;
 
     public Input<VulnerabilityLocationArgs> getAffectedLocation() {
         return this.affectedLocation;
@@ -35,7 +35,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedLocation")
-    private final @Nullable Input<VulnerabilityLocationArgs> fixedLocation;
+      private final @Nullable Input<VulnerabilityLocationArgs> fixedLocation;
 
     public Input<VulnerabilityLocationArgs> getFixedLocation() {
         return this.fixedLocation == null ? Input.empty() : this.fixedLocation;
@@ -46,7 +46,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageType")
-    private final @Nullable Input<String> packageType;
+      private final @Nullable Input<String> packageType;
 
     public Input<String> getPackageType() {
         return this.packageType == null ? Input.empty() : this.packageType;
@@ -120,7 +120,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             this.packageType = Input.ofNullable(packageType);
             return this;
         }
-
         public PackageIssueArgs build() {
             return new PackageIssueArgs(affectedLocation, fixedLocation, packageType);
         }

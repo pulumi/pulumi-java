@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupImmunityTimePropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class RuleGroupCaptchaConfigArgs extends io.pulumi.resources.Resour
     public static final RuleGroupCaptchaConfigArgs Empty = new RuleGroupCaptchaConfigArgs();
 
     @InputImport(name="immunityTimeProperty")
-    private final @Nullable Input<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
+      private final @Nullable Input<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
 
     public Input<RuleGroupImmunityTimePropertyArgs> getImmunityTimeProperty() {
         return this.immunityTimeProperty == null ? Input.empty() : this.immunityTimeProperty;
@@ -58,7 +58,6 @@ public final class RuleGroupCaptchaConfigArgs extends io.pulumi.resources.Resour
             this.immunityTimeProperty = Input.ofNullable(immunityTimeProperty);
             return this;
         }
-
         public RuleGroupCaptchaConfigArgs build() {
             return new RuleGroupCaptchaConfigArgs(immunityTimeProperty);
         }

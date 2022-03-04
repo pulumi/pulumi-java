@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1EntityMentionDataResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1HoldDataResponse;
@@ -95,70 +95,70 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse {
     /**
      * The boundary in the conversation where the annotation ends, inclusive.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getAnnotationEndBoundary() {
         return this.annotationEndBoundary;
     }
     /**
      * The boundary in the conversation where the annotation starts, inclusive.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getAnnotationStartBoundary() {
         return this.annotationStartBoundary;
     }
     /**
      * The channel of the audio where the annotation occurs. For single-channel audio, this field is not populated.
      * 
-     */
+    */
     public Integer getChannelTag() {
         return this.channelTag;
     }
     /**
      * Data specifying an entity mention.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse getEntityMentionData() {
         return this.entityMentionData;
     }
     /**
      * Data specifying a hold.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1HoldDataResponse getHoldData() {
         return this.holdData;
     }
     /**
      * Data specifying an intent match.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse getIntentMatchData() {
         return this.intentMatchData;
     }
     /**
      * Data specifying an interruption.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1InterruptionDataResponse getInterruptionData() {
         return this.interruptionData;
     }
     /**
      * Data specifying a phrase match.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse getPhraseMatchData() {
         return this.phraseMatchData;
     }
     /**
      * Data specifying sentiment.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentimentData() {
         return this.sentimentData;
     }
     /**
      * Data specifying silence.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1SilenceDataResponse getSilenceData() {
         return this.silenceData;
     }
@@ -250,7 +250,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse {
             this.silenceData = Objects.requireNonNull(silenceData);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1CallAnnotationResponse build() {
             return new GoogleCloudContactcenterinsightsV1CallAnnotationResponse(annotationEndBoundary, annotationStartBoundary, channelTag, entityMentionData, holdData, intentMatchData, interruptionData, phraseMatchData, sentimentData, silenceData);
         }

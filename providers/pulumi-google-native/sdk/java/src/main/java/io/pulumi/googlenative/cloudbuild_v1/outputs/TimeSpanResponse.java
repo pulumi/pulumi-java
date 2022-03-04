@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class TimeSpanResponse {
     /**
      * End of time span.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Start of time span.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -74,7 +74,6 @@ public final class TimeSpanResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public TimeSpanResponse build() {
             return new TimeSpanResponse(endTime, startTime);
         }

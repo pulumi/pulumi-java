@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FormParameterArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -67,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormArgs extends io.pulumi.reso
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FormArgs build() {
             return new GoogleCloudDialogflowCxV3beta1FormArgs(parameters);
         }

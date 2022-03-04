@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ConnectionStateResponse {
     /**
      * Description of the connection state.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Status of the connection.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -76,7 +76,6 @@ public final class ConnectionStateResponse {
             this.status = status;
             return this;
         }
-
         public ConnectionStateResponse build() {
             return new ConnectionStateResponse(description, status);
         }

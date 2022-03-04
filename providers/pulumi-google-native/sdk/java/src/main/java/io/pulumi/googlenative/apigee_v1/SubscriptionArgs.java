@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiproduct")
-    private final @Nullable Input<String> apiproduct;
+      private final @Nullable Input<String> apiproduct;
 
     public Input<String> getApiproduct() {
         return this.apiproduct == null ? Input.empty() : this.apiproduct;
     }
 
     @InputImport(name="developerId", required=true)
-    private final Input<String> developerId;
+      private final Input<String> developerId;
 
     public Input<String> getDeveloperId() {
         return this.developerId;
@@ -37,14 +37,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -55,7 +55,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -159,7 +159,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public SubscriptionArgs build() {
             return new SubscriptionArgs(apiproduct, developerId, endTime, organizationId, startTime);
         }

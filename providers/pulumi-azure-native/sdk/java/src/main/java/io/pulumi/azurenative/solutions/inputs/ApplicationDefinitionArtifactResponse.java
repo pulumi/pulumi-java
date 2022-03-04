@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -43,7 +43,7 @@ public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -102,7 +102,6 @@ public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resou
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ApplicationDefinitionArtifactResponse build() {
             return new ApplicationDefinitionArtifactResponse(name, type, uri);
         }

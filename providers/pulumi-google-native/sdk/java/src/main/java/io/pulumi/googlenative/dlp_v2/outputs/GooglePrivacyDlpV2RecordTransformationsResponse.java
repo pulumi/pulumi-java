@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldTransformationResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RecordSuppressionResponse;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse {
     /**
      * Transform the record by applying various field transformations.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2FieldTransformationResponse> getFieldTransformations() {
         return this.fieldTransformations;
     }
     /**
      * Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2RecordSuppressionResponse> getRecordSuppressions() {
         return this.recordSuppressions;
     }
@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse {
             this.recordSuppressions = Objects.requireNonNull(recordSuppressions);
             return this;
         }
-
         public GooglePrivacyDlpV2RecordTransformationsResponse build() {
             return new GooglePrivacyDlpV2RecordTransformationsResponse(fieldTransformations, recordSuppressions);
         }

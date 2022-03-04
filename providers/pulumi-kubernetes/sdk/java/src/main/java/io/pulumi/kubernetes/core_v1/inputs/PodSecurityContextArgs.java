@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
 import io.pulumi.kubernetes.core_v1.inputs.SeccompProfileArgs;
 import io.pulumi.kubernetes.core_v1.inputs.SysctlArgs;
@@ -34,7 +34,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fsGroup")
-    private final @Nullable Input<Integer> fsGroup;
+      private final @Nullable Input<Integer> fsGroup;
 
     public Input<Integer> getFsGroup() {
         return this.fsGroup == null ? Input.empty() : this.fsGroup;
@@ -45,7 +45,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fsGroupChangePolicy")
-    private final @Nullable Input<String> fsGroupChangePolicy;
+      private final @Nullable Input<String> fsGroupChangePolicy;
 
     public Input<String> getFsGroupChangePolicy() {
         return this.fsGroupChangePolicy == null ? Input.empty() : this.fsGroupChangePolicy;
@@ -56,7 +56,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="runAsGroup")
-    private final @Nullable Input<Integer> runAsGroup;
+      private final @Nullable Input<Integer> runAsGroup;
 
     public Input<Integer> getRunAsGroup() {
         return this.runAsGroup == null ? Input.empty() : this.runAsGroup;
@@ -67,7 +67,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="runAsNonRoot")
-    private final @Nullable Input<Boolean> runAsNonRoot;
+      private final @Nullable Input<Boolean> runAsNonRoot;
 
     public Input<Boolean> getRunAsNonRoot() {
         return this.runAsNonRoot == null ? Input.empty() : this.runAsNonRoot;
@@ -78,7 +78,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="runAsUser")
-    private final @Nullable Input<Integer> runAsUser;
+      private final @Nullable Input<Integer> runAsUser;
 
     public Input<Integer> getRunAsUser() {
         return this.runAsUser == null ? Input.empty() : this.runAsUser;
@@ -89,7 +89,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="seLinuxOptions")
-    private final @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
+      private final @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
 
     public Input<SELinuxOptionsArgs> getSeLinuxOptions() {
         return this.seLinuxOptions == null ? Input.empty() : this.seLinuxOptions;
@@ -100,7 +100,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="seccompProfile")
-    private final @Nullable Input<SeccompProfileArgs> seccompProfile;
+      private final @Nullable Input<SeccompProfileArgs> seccompProfile;
 
     public Input<SeccompProfileArgs> getSeccompProfile() {
         return this.seccompProfile == null ? Input.empty() : this.seccompProfile;
@@ -111,7 +111,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="supplementalGroups")
-    private final @Nullable Input<List<Integer>> supplementalGroups;
+      private final @Nullable Input<List<Integer>> supplementalGroups;
 
     public Input<List<Integer>> getSupplementalGroups() {
         return this.supplementalGroups == null ? Input.empty() : this.supplementalGroups;
@@ -122,7 +122,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sysctls")
-    private final @Nullable Input<List<SysctlArgs>> sysctls;
+      private final @Nullable Input<List<SysctlArgs>> sysctls;
 
     public Input<List<SysctlArgs>> getSysctls() {
         return this.sysctls == null ? Input.empty() : this.sysctls;
@@ -133,7 +133,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="windowsOptions")
-    private final @Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions;
+      private final @Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions;
 
     public Input<WindowsSecurityContextOptionsArgs> getWindowsOptions() {
         return this.windowsOptions == null ? Input.empty() : this.windowsOptions;
@@ -312,7 +312,6 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
             this.windowsOptions = Input.ofNullable(windowsOptions);
             return this;
         }
-
         public PodSecurityContextArgs build() {
             return new PodSecurityContextArgs(fsGroup, fsGroupChangePolicy, runAsGroup, runAsNonRoot, runAsUser, seLinuxOptions, seccompProfile, supplementalGroups, sysctls, windowsOptions);
         }

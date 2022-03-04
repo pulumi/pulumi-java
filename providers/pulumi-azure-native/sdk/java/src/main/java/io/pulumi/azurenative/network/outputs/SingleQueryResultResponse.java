@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -99,77 +99,77 @@ public final class SingleQueryResultResponse {
     /**
      * Describes what is the signature enforces
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Describes the list of destination ports related to this signature
      * 
-     */
+    */
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
      * 
-     */
+    */
     public Optional<Integer> getDirection() {
         return Optional.ofNullable(this.direction);
     }
     /**
      * Describes the groups the signature belongs to
      * 
-     */
+    */
     public Optional<String> getGroup() {
         return Optional.ofNullable(this.group);
     }
     /**
      * Describes if this override is inherited from base policy or not
      * 
-     */
+    */
     public Optional<Boolean> getInheritedFromParentPolicy() {
         return Optional.ofNullable(this.inheritedFromParentPolicy);
     }
     /**
      * Describes the last updated time of the signature (provided from 3rd party vendor)
      * 
-     */
+    */
     public Optional<String> getLastUpdated() {
         return Optional.ofNullable(this.lastUpdated);
     }
     /**
      * The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
      * 
-     */
+    */
     public Optional<Integer> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * Describes the protocol the signatures is being enforced in
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
      * 
-     */
+    */
     public Optional<Integer> getSeverity() {
         return Optional.ofNullable(this.severity);
     }
     /**
      * The ID of the signature
      * 
-     */
+    */
     public Optional<Integer> getSignatureId() {
         return Optional.ofNullable(this.signatureId);
     }
     /**
      * Describes the list of source ports related to this signature
      * 
-     */
+    */
     public List<String> getSourcePorts() {
         return this.sourcePorts == null ? List.of() : this.sourcePorts;
     }
@@ -268,7 +268,6 @@ public final class SingleQueryResultResponse {
             this.sourcePorts = sourcePorts;
             return this;
         }
-
         public SingleQueryResultResponse build() {
             return new SingleQueryResultResponse(description, destinationPorts, direction, group, inheritedFromParentPolicy, lastUpdated, mode, protocol, severity, signatureId, sourcePorts);
         }

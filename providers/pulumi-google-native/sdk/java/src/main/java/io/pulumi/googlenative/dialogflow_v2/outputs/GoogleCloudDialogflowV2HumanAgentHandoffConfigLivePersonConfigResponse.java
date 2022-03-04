@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
     /**
      * Account number of the LivePerson account to connect. This is the account number you input at the login page.
      * 
-     */
+    */
     public String getAccountNumber() {
         return this.accountNumber;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
             this.accountNumber = Objects.requireNonNull(accountNumber);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse(accountNumber);
         }

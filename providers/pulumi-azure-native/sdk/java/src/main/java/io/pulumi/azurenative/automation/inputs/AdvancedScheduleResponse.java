@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.AdvancedScheduleMonthlyOccurrenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="monthDays")
-    private final @Nullable List<Integer> monthDays;
+      private final @Nullable List<Integer> monthDays;
 
     public List<Integer> getMonthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
@@ -37,7 +37,7 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="monthlyOccurrences")
-    private final @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
+      private final @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
 
     public List<AdvancedScheduleMonthlyOccurrenceResponse> getMonthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
@@ -48,7 +48,7 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="weekDays")
-    private final @Nullable List<String> weekDays;
+      private final @Nullable List<String> weekDays;
 
     public List<String> getWeekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
@@ -107,7 +107,6 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
             this.weekDays = weekDays;
             return this;
         }
-
         public AdvancedScheduleResponse build() {
             return new AdvancedScheduleResponse(monthDays, monthlyOccurrences, weekDays);
         }

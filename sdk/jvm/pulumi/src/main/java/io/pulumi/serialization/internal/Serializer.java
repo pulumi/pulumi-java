@@ -11,9 +11,12 @@ import io.pulumi.core.Asset.InvalidAsset;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Either;
 import io.pulumi.core.InputOutput;
-import io.pulumi.core.internal.*;
-import io.pulumi.core.internal.Reflection.TypeShape;
-import io.pulumi.core.internal.annotations.EnumType;
+import io.pulumi.core.TypeShape;
+import io.pulumi.core.annotations.EnumType;
+import io.pulumi.core.internal.CompletableFutures;
+import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.InputOutputData;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.ComponentResource;
 import io.pulumi.resources.CustomResource;
@@ -22,7 +25,6 @@ import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Objects;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -153,7 +155,7 @@ public class Serializer {
             var inputOutput = (InputOutput<Object, ?>) prop;
             log.excessive(String.format("Serialize property[%s]: Recursion into InputOutput", ctx));
 
-            return TypedInputOutput.cast(inputOutput).internalGetDataAsync().thenCompose(
+            return Internal.of(inputOutput).getDataAsync().thenCompose(
                     (InputOutputData<Object> data) -> {
                         this.dependentResources.addAll(data.getResources());
 

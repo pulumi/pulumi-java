@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.Int64RangeMatchResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="exactMatch", required=true)
-    private final String exactMatch;
+      private final String exactMatch;
 
     public String getExactMatch() {
         return this.exactMatch;
@@ -34,7 +34,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final String headerName;
+      private final String headerName;
 
     public String getHeaderName() {
         return this.headerName;
@@ -45,7 +45,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="invertMatch", required=true)
-    private final Boolean invertMatch;
+      private final Boolean invertMatch;
 
     public Boolean getInvertMatch() {
         return this.invertMatch;
@@ -56,7 +56,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="prefixMatch", required=true)
-    private final String prefixMatch;
+      private final String prefixMatch;
 
     public String getPrefixMatch() {
         return this.prefixMatch;
@@ -67,7 +67,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="presentMatch", required=true)
-    private final Boolean presentMatch;
+      private final Boolean presentMatch;
 
     public Boolean getPresentMatch() {
         return this.presentMatch;
@@ -78,7 +78,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="rangeMatch", required=true)
-    private final Int64RangeMatchResponse rangeMatch;
+      private final Int64RangeMatchResponse rangeMatch;
 
     public Int64RangeMatchResponse getRangeMatch() {
         return this.rangeMatch;
@@ -89,7 +89,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="regexMatch", required=true)
-    private final String regexMatch;
+      private final String regexMatch;
 
     public String getRegexMatch() {
         return this.regexMatch;
@@ -100,7 +100,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="suffixMatch", required=true)
-    private final String suffixMatch;
+      private final String suffixMatch;
 
     public String getSuffixMatch() {
         return this.suffixMatch;
@@ -209,7 +209,6 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
             this.suffixMatch = Objects.requireNonNull(suffixMatch);
             return this;
         }
-
         public HttpHeaderMatchResponse build() {
             return new HttpHeaderMatchResponse(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);
         }

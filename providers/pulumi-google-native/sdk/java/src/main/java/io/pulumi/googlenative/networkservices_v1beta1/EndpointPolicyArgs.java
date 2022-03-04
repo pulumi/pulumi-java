@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkservices_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkservices_v1beta1.enums.EndpointPolicyType;
 import io.pulumi.googlenative.networkservices_v1beta1.inputs.EndpointMatcherArgs;
 import io.pulumi.googlenative.networkservices_v1beta1.inputs.TrafficPortSelectorArgs;
@@ -23,7 +23,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationPolicy")
-    private final @Nullable Input<String> authorizationPolicy;
+      private final @Nullable Input<String> authorizationPolicy;
 
     public Input<String> getAuthorizationPolicy() {
         return this.authorizationPolicy == null ? Input.empty() : this.authorizationPolicy;
@@ -34,7 +34,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientTlsPolicy")
-    private final @Nullable Input<String> clientTlsPolicy;
+      private final @Nullable Input<String> clientTlsPolicy;
 
     public Input<String> getClientTlsPolicy() {
         return this.clientTlsPolicy == null ? Input.empty() : this.clientTlsPolicy;
@@ -45,7 +45,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -56,14 +56,14 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointMatcher", required=true)
-    private final Input<EndpointMatcherArgs> endpointMatcher;
+      private final Input<EndpointMatcherArgs> endpointMatcher;
 
     public Input<EndpointMatcherArgs> getEndpointMatcher() {
         return this.endpointMatcher;
     }
 
     @InputImport(name="endpointPolicyId", required=true)
-    private final Input<String> endpointPolicyId;
+      private final Input<String> endpointPolicyId;
 
     public Input<String> getEndpointPolicyId() {
         return this.endpointPolicyId;
@@ -74,14 +74,14 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -92,14 +92,14 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -110,7 +110,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverTlsPolicy")
-    private final @Nullable Input<String> serverTlsPolicy;
+      private final @Nullable Input<String> serverTlsPolicy;
 
     public Input<String> getServerTlsPolicy() {
         return this.serverTlsPolicy == null ? Input.empty() : this.serverTlsPolicy;
@@ -121,7 +121,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficPortSelector")
-    private final @Nullable Input<TrafficPortSelectorArgs> trafficPortSelector;
+      private final @Nullable Input<TrafficPortSelectorArgs> trafficPortSelector;
 
     public Input<TrafficPortSelectorArgs> getTrafficPortSelector() {
         return this.trafficPortSelector == null ? Input.empty() : this.trafficPortSelector;
@@ -132,7 +132,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<EndpointPolicyType> type;
+      private final Input<EndpointPolicyType> type;
 
     public Input<EndpointPolicyType> getType() {
         return this.type;
@@ -341,7 +341,6 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public EndpointPolicyArgs build() {
             return new EndpointPolicyArgs(authorizationPolicy, clientTlsPolicy, description, endpointMatcher, endpointPolicyId, labels, location, name, project, serverTlsPolicy, trafficPortSelector, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityandcompliance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ServicesResourceResponseIdentity {
     /**
      * The principal ID of the resource identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of the resource.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Type of identity being specified, currently SystemAssigned and None are allowed.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class ServicesResourceResponseIdentity {
             this.type = type;
             return this;
         }
-
         public ServicesResourceResponseIdentity build() {
             return new ServicesResourceResponseIdentity(principalId, tenantId, type);
         }

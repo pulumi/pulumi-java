@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSource;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +50,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * Should be in the format of email address. The email address should
      * represent individual user or service account only.
      * 
-     */
+    */
     public List<String> getIdentities() {
         return this.identities == null ? List.of() : this.identities;
     }
@@ -60,7 +60,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * be allowed access.
      * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
      * 
-     */
+    */
     public Optional<String> getIdentityType() {
         return Optional.ofNullable(this.identityType);
     }
@@ -68,7 +68,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * Sources that this `IngressPolicy` authorizes access from.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSource> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }
@@ -111,7 +111,6 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
             this.sources = sources;
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusIngressPolicyIngressFrom build() {
             return new ServicePerimetersServicePerimeterStatusIngressPolicyIngressFrom(identities, identityType, sources);
         }

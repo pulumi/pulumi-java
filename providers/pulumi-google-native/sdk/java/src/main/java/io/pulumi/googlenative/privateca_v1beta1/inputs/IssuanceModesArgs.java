@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowConfigBasedIssuance", required=true)
-    private final Input<Boolean> allowConfigBasedIssuance;
+      private final Input<Boolean> allowConfigBasedIssuance;
 
     public Input<Boolean> getAllowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
@@ -33,7 +33,7 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowCsrBasedIssuance", required=true)
-    private final Input<Boolean> allowCsrBasedIssuance;
+      private final Input<Boolean> allowCsrBasedIssuance;
 
     public Input<Boolean> getAllowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
@@ -92,7 +92,6 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
             this.allowCsrBasedIssuance = Input.of(Objects.requireNonNull(allowCsrBasedIssuance));
             return this;
         }
-
         public IssuanceModesArgs build() {
             return new IssuanceModesArgs(allowConfigBasedIssuance, allowCsrBasedIssuance);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.inputs.GetIntegrationRuntimeArgs;
 import io.pulumi.azurenative.synapse.outputs.GetIntegrationRuntimeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationRuntime {
-/**
- * Integration runtime resource type.
+    private GetIntegrationRuntime() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationRuntimeArgs.Builder a);
+    }
+    private static GetIntegrationRuntimeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationRuntimeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Integration runtime resource type.
  * API Version: 2021-03-01.
  * 
- *
- * Integration runtime resource type.
+     *
+     * Integration runtime resource type.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationRuntimeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Integration runtime resource type.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Integration runtime resource type.
+     * 
+     */
     public static CompletableFuture<GetIntegrationRuntimeResult> invokeAsync(GetIntegrationRuntimeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntime", TypeShape.of(GetIntegrationRuntimeResult.class), args == null ? GetIntegrationRuntimeArgs.Empty : args, Utilities.withVersion(options));
     }

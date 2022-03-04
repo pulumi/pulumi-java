@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.storage.inputs.PermissionScopeArgs;
 import io.pulumi.azurenative.storage.inputs.SshPublicKeyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasSharedKey")
-    private final @Nullable Input<Boolean> hasSharedKey;
+      private final @Nullable Input<Boolean> hasSharedKey;
 
     public Input<Boolean> getHasSharedKey() {
         return this.hasSharedKey == null ? Input.empty() : this.hasSharedKey;
@@ -45,7 +45,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasSshKey")
-    private final @Nullable Input<Boolean> hasSshKey;
+      private final @Nullable Input<Boolean> hasSshKey;
 
     public Input<Boolean> getHasSshKey() {
         return this.hasSshKey == null ? Input.empty() : this.hasSshKey;
@@ -56,7 +56,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasSshPassword")
-    private final @Nullable Input<Boolean> hasSshPassword;
+      private final @Nullable Input<Boolean> hasSshPassword;
 
     public Input<Boolean> getHasSshPassword() {
         return this.hasSshPassword == null ? Input.empty() : this.hasSshPassword;
@@ -67,7 +67,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectory")
-    private final @Nullable Input<String> homeDirectory;
+      private final @Nullable Input<String> homeDirectory;
 
     public Input<String> getHomeDirectory() {
         return this.homeDirectory == null ? Input.empty() : this.homeDirectory;
@@ -78,7 +78,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionScopes")
-    private final @Nullable Input<List<PermissionScopeArgs>> permissionScopes;
+      private final @Nullable Input<List<PermissionScopeArgs>> permissionScopes;
 
     public Input<List<PermissionScopeArgs>> getPermissionScopes() {
         return this.permissionScopes == null ? Input.empty() : this.permissionScopes;
@@ -89,7 +89,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshAuthorizedKeys")
-    private final @Nullable Input<List<SshPublicKeyArgs>> sshAuthorizedKeys;
+      private final @Nullable Input<List<SshPublicKeyArgs>> sshAuthorizedKeys;
 
     public Input<List<SshPublicKeyArgs>> getSshAuthorizedKeys() {
         return this.sshAuthorizedKeys == null ? Input.empty() : this.sshAuthorizedKeys;
@@ -111,7 +111,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -275,7 +275,6 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public LocalUserArgs build() {
             return new LocalUserArgs(accountName, hasSharedKey, hasSshKey, hasSshPassword, homeDirectory, permissionScopes, resourceGroupName, sshAuthorizedKeys, username);
         }

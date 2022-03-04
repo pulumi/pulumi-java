@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ExpressRouteGatewayPropertiesBoundsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
      * 
      */
     @InputImport(name="bounds")
-    private final @Nullable Input<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
+      private final @Nullable Input<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
 
     public Input<ExpressRouteGatewayPropertiesBoundsArgs> getBounds() {
         return this.bounds == null ? Input.empty() : this.bounds;
@@ -66,7 +66,6 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
             this.bounds = Input.ofNullable(bounds);
             return this;
         }
-
         public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs build() {
             return new ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(bounds);
         }

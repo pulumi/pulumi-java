@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
     /**
      * Name of the project scoping this PublicDelegatedSubPrefix.
      * 
-     */
+    */
     public String getDelegateeProject() {
         return this.delegateeProject;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
      * 
-     */
+    */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
     /**
      * Whether the sub prefix is delegated to create Address resources in the delegatee project.
      * 
-     */
+    */
     public Boolean getIsAddress() {
         return this.isAddress;
     }
     /**
      * The name of the sub public delegated prefix.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * The status of the sub public delegated prefix.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -180,7 +180,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public PublicDelegatedPrefixPublicDelegatedSubPrefixResponse build() {
             return new PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(delegateeProject, description, ipCidrRange, isAddress, name, region, status);
         }

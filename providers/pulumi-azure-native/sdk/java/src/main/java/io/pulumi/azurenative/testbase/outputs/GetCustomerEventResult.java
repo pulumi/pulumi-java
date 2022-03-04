@@ -5,7 +5,7 @@ package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.NotificationEventReceiverResponse;
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class GetCustomerEventResult {
     /**
      * The name of the event subscribed to.
      * 
-     */
+    */
     public String getEventName() {
         return this.eventName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The notification event receivers.
      * 
-     */
+    */
     public List<NotificationEventReceiverResponse> getReceivers() {
         return this.receivers;
     }
     /**
      * The system metadata relating to this resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class GetCustomerEventResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCustomerEventResult build() {
             return new GetCustomerEventResult(eventName, id, name, receivers, systemData, type);
         }

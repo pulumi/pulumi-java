@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class VertexAIParametersResponse {
     /**
      * Environment variables. At most 100 environment variables can be specified and unique. Example: GCP_BUCKET=gs://my-bucket/samples/
      * 
-     */
+    */
     public Map<String,String> getEnv() {
         return this.env;
     }
     /**
      * The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the Job should be peered. For example, `projects/12345/global/networks/myVPC`. [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert) is of the form `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in `12345`, and {network} is a network name. Private services access must already be configured for the network. If left unspecified, the job is not peered with any network.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
@@ -75,7 +75,6 @@ public final class VertexAIParametersResponse {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public VertexAIParametersResponse build() {
             return new VertexAIParametersResponse(env, network);
         }

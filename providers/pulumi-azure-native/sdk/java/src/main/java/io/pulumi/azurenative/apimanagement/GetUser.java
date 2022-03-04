@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetUserArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetUserResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUser {
-/**
- * User details.
+    private GetUser() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserArgs.Builder a);
+    }
+    private static GetUserArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * User details.
  * API Version: 2020-12-01.
  * 
- *
- * User details.
+     *
+     * User details.
  * 
- */
+     */
+    public static CompletableFuture<GetUserResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * User details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * User details.
+     * 
+     */
     public static CompletableFuture<GetUserResult> invokeAsync(GetUserArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getUser", TypeShape.of(GetUserResult.class), args == null ? GetUserArgs.Empty : args, Utilities.withVersion(options));
     }

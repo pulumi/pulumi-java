@@ -9,7 +9,7 @@ import io.pulumi.awsnative.timestream.inputs.ScheduledQueryScheduleConfiguration
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryTagArgs;
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryTargetConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,70 +21,70 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
     public static final ScheduledQueryArgs Empty = new ScheduledQueryArgs();
 
     @InputImport(name="clientToken")
-    private final @Nullable Input<String> clientToken;
+      private final @Nullable Input<String> clientToken;
 
     public Input<String> getClientToken() {
         return this.clientToken == null ? Input.empty() : this.clientToken;
     }
 
     @InputImport(name="errorReportConfiguration", required=true)
-    private final Input<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration;
+      private final Input<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration;
 
     public Input<ScheduledQueryErrorReportConfigurationArgs> getErrorReportConfiguration() {
         return this.errorReportConfiguration;
     }
 
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
     @InputImport(name="notificationConfiguration", required=true)
-    private final Input<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration;
+      private final Input<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration;
 
     public Input<ScheduledQueryNotificationConfigurationArgs> getNotificationConfiguration() {
         return this.notificationConfiguration;
     }
 
     @InputImport(name="queryString", required=true)
-    private final Input<String> queryString;
+      private final Input<String> queryString;
 
     public Input<String> getQueryString() {
         return this.queryString;
     }
 
     @InputImport(name="scheduleConfiguration", required=true)
-    private final Input<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration;
+      private final Input<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration;
 
     public Input<ScheduledQueryScheduleConfigurationArgs> getScheduleConfiguration() {
         return this.scheduleConfiguration;
     }
 
     @InputImport(name="scheduledQueryExecutionRoleArn", required=true)
-    private final Input<String> scheduledQueryExecutionRoleArn;
+      private final Input<String> scheduledQueryExecutionRoleArn;
 
     public Input<String> getScheduledQueryExecutionRoleArn() {
         return this.scheduledQueryExecutionRoleArn;
     }
 
     @InputImport(name="scheduledQueryName")
-    private final @Nullable Input<String> scheduledQueryName;
+      private final @Nullable Input<String> scheduledQueryName;
 
     public Input<String> getScheduledQueryName() {
         return this.scheduledQueryName == null ? Input.empty() : this.scheduledQueryName;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<ScheduledQueryTagArgs>> tags;
+      private final @Nullable Input<List<ScheduledQueryTagArgs>> tags;
 
     public Input<List<ScheduledQueryTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="targetConfiguration")
-    private final @Nullable Input<ScheduledQueryTargetConfigurationArgs> targetConfiguration;
+      private final @Nullable Input<ScheduledQueryTargetConfigurationArgs> targetConfiguration;
 
     public Input<ScheduledQueryTargetConfigurationArgs> getTargetConfiguration() {
         return this.targetConfiguration == null ? Input.empty() : this.targetConfiguration;
@@ -263,7 +263,6 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
             this.targetConfiguration = Input.ofNullable(targetConfiguration);
             return this;
         }
-
         public ScheduledQueryArgs build() {
             return new ScheduledQueryArgs(clientToken, errorReportConfiguration, kmsKeyId, notificationConfiguration, queryString, scheduleConfiguration, scheduledQueryExecutionRoleArn, scheduledQueryName, tags, targetConfiguration);
         }

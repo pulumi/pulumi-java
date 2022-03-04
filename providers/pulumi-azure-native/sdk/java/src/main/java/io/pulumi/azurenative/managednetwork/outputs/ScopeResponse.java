@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ResourceIdResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -47,28 +47,28 @@ public final class ScopeResponse {
     /**
      * The collection of management groups covered by the Managed Network
      * 
-     */
+    */
     public List<ResourceIdResponse> getManagementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
     /**
      * The collection of  subnets covered by the Managed Network
      * 
-     */
+    */
     public List<ResourceIdResponse> getSubnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
      * The collection of subscriptions covered by the Managed Network
      * 
-     */
+    */
     public List<ResourceIdResponse> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }
     /**
      * The collection of virtual nets covered by the Managed Network
      * 
-     */
+    */
     public List<ResourceIdResponse> getVirtualNetworks() {
         return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
     }
@@ -118,7 +118,6 @@ public final class ScopeResponse {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public ScopeResponse build() {
             return new ScopeResponse(managementGroups, subnets, subscriptions, virtualNetworks);
         }

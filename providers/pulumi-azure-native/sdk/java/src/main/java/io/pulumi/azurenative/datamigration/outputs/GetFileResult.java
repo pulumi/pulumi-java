@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ProjectFilePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class GetFileResult {
     /**
      * HTTP strong entity tag value. This is ignored if submitted.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Custom file properties
      * 
-     */
+    */
     public ProjectFilePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetFileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFileResult build() {
             return new GetFileResult(etag, id, name, properties, type);
         }

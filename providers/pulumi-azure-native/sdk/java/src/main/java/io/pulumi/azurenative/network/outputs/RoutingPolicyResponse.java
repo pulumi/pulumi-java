@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class RoutingPolicyResponse {
     /**
      * List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
      * 
-     */
+    */
     public List<String> getDestinations() {
         return this.destinations;
     }
     /**
      * The unique name for the routing policy.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The next hop resource id on which this routing policy is applicable to.
      * 
-     */
+    */
     public String getNextHop() {
         return this.nextHop;
     }
@@ -96,7 +96,6 @@ public final class RoutingPolicyResponse {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
-
         public RoutingPolicyResponse build() {
             return new RoutingPolicyResponse(destinations, name, nextHop);
         }

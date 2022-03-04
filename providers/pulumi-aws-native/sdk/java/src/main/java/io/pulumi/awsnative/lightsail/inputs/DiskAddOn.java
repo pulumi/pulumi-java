@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.enums.DiskAddOnStatus;
 import io.pulumi.awsnative.lightsail.inputs.DiskAutoSnapshotAddOn;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,14 +25,14 @@ public final class DiskAddOn extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addOnType", required=true)
-    private final String addOnType;
+      private final String addOnType;
 
     public String getAddOnType() {
         return this.addOnType;
     }
 
     @InputImport(name="autoSnapshotAddOnRequest")
-    private final @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest;
+      private final @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest;
 
     public Optional<DiskAutoSnapshotAddOn> getAutoSnapshotAddOnRequest() {
         return this.autoSnapshotAddOnRequest == null ? Optional.empty() : Optional.ofNullable(this.autoSnapshotAddOnRequest);
@@ -43,7 +43,7 @@ public final class DiskAddOn extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable DiskAddOnStatus status;
+      private final @Nullable DiskAddOnStatus status;
 
     public Optional<DiskAddOnStatus> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -102,7 +102,6 @@ public final class DiskAddOn extends io.pulumi.resources.InvokeArgs {
             this.status = status;
             return this;
         }
-
         public DiskAddOn build() {
             return new DiskAddOn(addOnType, autoSnapshotAddOnRequest, status);
         }

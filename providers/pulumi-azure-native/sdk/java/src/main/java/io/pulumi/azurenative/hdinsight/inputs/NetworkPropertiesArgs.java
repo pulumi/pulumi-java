@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hdinsight.enums.PrivateLink;
 import io.pulumi.azurenative.hdinsight.enums.ResourceProviderConnection;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateLink")
-    private final @Nullable Input<Either<String,PrivateLink>> privateLink;
+      private final @Nullable Input<Either<String,PrivateLink>> privateLink;
 
     public Input<Either<String,PrivateLink>> getPrivateLink() {
         return this.privateLink == null ? Input.empty() : this.privateLink;
@@ -37,7 +37,7 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceProviderConnection")
-    private final @Nullable Input<Either<String,ResourceProviderConnection>> resourceProviderConnection;
+      private final @Nullable Input<Either<String,ResourceProviderConnection>> resourceProviderConnection;
 
     public Input<Either<String,ResourceProviderConnection>> getResourceProviderConnection() {
         return this.resourceProviderConnection == null ? Input.empty() : this.resourceProviderConnection;
@@ -96,7 +96,6 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.resourceProviderConnection = Input.ofNullable(resourceProviderConnection);
             return this;
         }
-
         public NetworkPropertiesArgs build() {
             return new NetworkPropertiesArgs(privateLink, resourceProviderConnection);
         }

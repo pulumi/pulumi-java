@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ExternalMetricStatus {
     /**
      * currentAverageValue is the current value of metric averaged over autoscaled pods.
      * 
-     */
+    */
     public Optional<String> getCurrentAverageValue() {
         return Optional.ofNullable(this.currentAverageValue);
     }
     /**
      * currentValue is the current value of the metric (as a quantity)
      * 
-     */
+    */
     public String getCurrentValue() {
         return this.currentValue;
     }
     /**
      * metricName is the name of a metric used for autoscaling in metric system.
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * metricSelector is used to identify a specific time series within a given metric.
      * 
-     */
+    */
     public Optional<LabelSelector> getMetricSelector() {
         return Optional.ofNullable(this.metricSelector);
     }
@@ -119,7 +119,6 @@ public final class ExternalMetricStatus {
             this.metricSelector = metricSelector;
             return this;
         }
-
         public ExternalMetricStatus build() {
             return new ExternalMetricStatus(currentAverageValue, currentValue, metricName, metricSelector);
         }

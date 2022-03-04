@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends 
      * 
      */
     @InputImport(name="gcsFileUri", required=true)
-    private final String gcsFileUri;
+      private final String gcsFileUri;
 
     public String getGcsFileUri() {
         return this.gcsFileUri;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends 
             this.gcsFileUri = Objects.requireNonNull(gcsFileUri);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1PdfInstructionResponse build() {
             return new GoogleCloudDatalabelingV1beta1PdfInstructionResponse(gcsFileUri);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.OneTimeScheduleResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.PatchConfigResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.PatchInstanceFilterResponse;
@@ -106,84 +106,84 @@ public final class GetPatchDeploymentResult {
     /**
      * Time the patch deployment was created. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. Duration of the patch. After the duration ends, the patch times out.
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }
     /**
      * VM instances to patch.
      * 
-     */
+    */
     public PatchInstanceFilterResponse getInstanceFilter() {
         return this.instanceFilter;
     }
     /**
      * The last time a patch job was started by this deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
-     */
+    */
     public String getLastExecuteTime() {
         return this.lastExecuteTime;
     }
     /**
      * Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Schedule a one-time execution.
      * 
-     */
+    */
     public OneTimeScheduleResponse getOneTimeSchedule() {
         return this.oneTimeSchedule;
     }
     /**
      * Optional. Patch configuration that is applied.
      * 
-     */
+    */
     public PatchConfigResponse getPatchConfig() {
         return this.patchConfig;
     }
     /**
      * Schedule recurring executions.
      * 
-     */
+    */
     public RecurringScheduleResponse getRecurringSchedule() {
         return this.recurringSchedule;
     }
     /**
      * Optional. Rollout strategy of the patch job.
      * 
-     */
+    */
     public PatchRolloutResponse getRollout() {
         return this.rollout;
     }
     /**
      * Current state of the patch deployment.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Time the patch deployment was last updated. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -289,7 +289,6 @@ public final class GetPatchDeploymentResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetPatchDeploymentResult build() {
             return new GetPatchDeploymentResult(createTime, description, duration, instanceFilter, lastExecuteTime, name, oneTimeSchedule, patchConfig, recurringSchedule, rollout, state, updateTime);
         }

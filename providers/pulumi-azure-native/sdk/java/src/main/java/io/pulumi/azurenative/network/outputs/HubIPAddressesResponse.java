@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.HubPublicIPAddressesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class HubIPAddressesResponse {
     /**
      * Private IP Address associated with azure firewall.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * Public IP addresses associated with azure firewall.
      * 
-     */
+    */
     public Optional<HubPublicIPAddressesResponse> getPublicIPs() {
         return Optional.ofNullable(this.publicIPs);
     }
@@ -77,7 +77,6 @@ public final class HubIPAddressesResponse {
             this.publicIPs = publicIPs;
             return this;
         }
-
         public HubIPAddressesResponse build() {
             return new HubIPAddressesResponse(privateIPAddress, publicIPs);
         }

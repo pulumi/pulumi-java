@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ListWorkspaceKeysResult {
     /**
      * Primary authorization key for this workspace.
      * 
-     */
+    */
     public Optional<String> getPrimaryToken() {
         return Optional.ofNullable(this.primaryToken);
     }
     /**
      * Secondary authorization key for this workspace.
      * 
-     */
+    */
     public Optional<String> getSecondaryToken() {
         return Optional.ofNullable(this.secondaryToken);
     }
@@ -76,7 +76,6 @@ public final class ListWorkspaceKeysResult {
             this.secondaryToken = secondaryToken;
             return this;
         }
-
         public ListWorkspaceKeysResult build() {
             return new ListWorkspaceKeysResult(primaryToken, secondaryToken);
         }

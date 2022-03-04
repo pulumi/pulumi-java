@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -31,7 +31,7 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+      private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -42,7 +42,7 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="settingsName")
-    private final @Nullable Input<String> settingsName;
+      private final @Nullable Input<String> settingsName;
 
     public Input<String> getSettingsName() {
         return this.settingsName == null ? Input.empty() : this.settingsName;
@@ -64,7 +64,7 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -168,7 +168,6 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public EntityAnalyticsArgs build() {
             return new EntityAnalyticsArgs(kind, operationalInsightsResourceProvider, resourceGroupName, settingsName, workspaceName);
         }

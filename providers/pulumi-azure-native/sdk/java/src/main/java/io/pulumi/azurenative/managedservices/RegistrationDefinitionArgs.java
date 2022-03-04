@@ -6,7 +6,7 @@ package io.pulumi.azurenative.managedservices;
 import io.pulumi.azurenative.managedservices.inputs.PlanArgs;
 import io.pulumi.azurenative.managedservices.inputs.RegistrationDefinitionPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="plan")
-    private final @Nullable Input<PlanArgs> plan;
+      private final @Nullable Input<PlanArgs> plan;
 
     public Input<PlanArgs> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -32,7 +32,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<RegistrationDefinitionPropertiesArgs> properties;
+      private final @Nullable Input<RegistrationDefinitionPropertiesArgs> properties;
 
     public Input<RegistrationDefinitionPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -43,7 +43,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="registrationDefinitionId")
-    private final @Nullable Input<String> registrationDefinitionId;
+      private final @Nullable Input<String> registrationDefinitionId;
 
     public Input<String> getRegistrationDefinitionId() {
         return this.registrationDefinitionId == null ? Input.empty() : this.registrationDefinitionId;
@@ -54,7 +54,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+      private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -143,7 +143,6 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public RegistrationDefinitionArgs build() {
             return new RegistrationDefinitionArgs(plan, properties, registrationDefinitionId, scope);
         }

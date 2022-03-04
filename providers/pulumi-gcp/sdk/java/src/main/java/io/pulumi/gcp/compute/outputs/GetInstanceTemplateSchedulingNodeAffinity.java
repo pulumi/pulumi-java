@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class GetInstanceTemplateSchedulingNodeAffinity {
     /**
      * The key for the node affinity label.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
@@ -44,7 +44,7 @@ public final class GetInstanceTemplateSchedulingNodeAffinity {
      * The operator. Can be `IN` for node-affinities
      * or `NOT_IN` for anti-affinities.
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
@@ -90,7 +90,6 @@ public final class GetInstanceTemplateSchedulingNodeAffinity {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GetInstanceTemplateSchedulingNodeAffinity build() {
             return new GetInstanceTemplateSchedulingNodeAffinity(key, operator, values);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class TopicRuleIotAnalyticsAction extends io.pulumi.resources.Invok
     public static final TopicRuleIotAnalyticsAction Empty = new TopicRuleIotAnalyticsAction();
 
     @InputImport(name="batchMode")
-    private final @Nullable Boolean batchMode;
+      private final @Nullable Boolean batchMode;
 
     public Optional<Boolean> getBatchMode() {
         return this.batchMode == null ? Optional.empty() : Optional.ofNullable(this.batchMode);
     }
 
     @InputImport(name="channelName", required=true)
-    private final String channelName;
+      private final String channelName;
 
     public String getChannelName() {
         return this.channelName;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -89,7 +89,6 @@ public final class TopicRuleIotAnalyticsAction extends io.pulumi.resources.Invok
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public TopicRuleIotAnalyticsAction build() {
             return new TopicRuleIotAnalyticsAction(batchMode, channelName, roleArn);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.runtimeconfig_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.ConfigIamPolicyArgs;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.outputs.BindingResponse;
@@ -66,6 +66,37 @@ public class ConfigIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ConfigIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.runtimeconfig_v1beta1.ConfigIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.runtimeconfig_v1beta1.ConfigIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ConfigIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ConfigIamPolicy(String name) {
+        this(name, ConfigIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ConfigIamPolicy(String name, ConfigIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

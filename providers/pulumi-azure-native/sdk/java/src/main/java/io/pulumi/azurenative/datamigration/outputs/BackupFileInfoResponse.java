@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class BackupFileInfoResponse {
     /**
      * Sequence number of the backup file in the backup set
      * 
-     */
+    */
     public Optional<Integer> getFamilySequenceNumber() {
         return Optional.ofNullable(this.familySequenceNumber);
     }
     /**
      * Location of the backup file in shared folder
      * 
-     */
+    */
     public Optional<String> getFileLocation() {
         return Optional.ofNullable(this.fileLocation);
     }
     /**
      * Status of the backup file during migration
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -98,7 +98,6 @@ public final class BackupFileInfoResponse {
             this.status = status;
             return this;
         }
-
         public BackupFileInfoResponse build() {
             return new BackupFileInfoResponse(familySequenceNumber, fileLocation, status);
         }

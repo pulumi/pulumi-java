@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AppBundleResponse {
     /**
      * .aab file representing the app bundle under test.
      * 
-     */
+    */
     public FileReferenceResponse getBundleLocation() {
         return this.bundleLocation;
     }
@@ -52,7 +52,6 @@ public final class AppBundleResponse {
             this.bundleLocation = Objects.requireNonNull(bundleLocation);
             return this;
         }
-
         public AppBundleResponse build() {
             return new AppBundleResponse(bundleLocation);
         }

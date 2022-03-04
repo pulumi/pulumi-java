@@ -5,8 +5,8 @@ package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagValueArgs;
 import io.pulumi.gcp.tags.inputs.TagValueState;
@@ -144,6 +144,37 @@ public class TagValue extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TagValueArgs.Builder a);
+    }
+    private static io.pulumi.gcp.tags.TagValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.tags.TagValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TagValue(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TagValue(String name) {
+        this(name, TagValueArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TagValue(String name, TagValueArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

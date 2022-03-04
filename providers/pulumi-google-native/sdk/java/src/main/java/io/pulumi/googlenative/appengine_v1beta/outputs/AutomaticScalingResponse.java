@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1beta.outputs.CpuUtilizationResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.CustomMetricResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.DiskUtilizationResponse;
@@ -123,98 +123,98 @@ public final class AutomaticScalingResponse {
     /**
      * The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
      * 
-     */
+    */
     public String getCoolDownPeriod() {
         return this.coolDownPeriod;
     }
     /**
      * Target scaling by CPU usage.
      * 
-     */
+    */
     public CpuUtilizationResponse getCpuUtilization() {
         return this.cpuUtilization;
     }
     /**
      * Target scaling by user-provided metrics. Only applicable in the App Engine flexible environment.
      * 
-     */
+    */
     public List<CustomMetricResponse> getCustomMetrics() {
         return this.customMetrics;
     }
     /**
      * Target scaling by disk usage.
      * 
-     */
+    */
     public DiskUtilizationResponse getDiskUtilization() {
         return this.diskUtilization;
     }
     /**
      * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
      * 
-     */
+    */
     public Integer getMaxConcurrentRequests() {
         return this.maxConcurrentRequests;
     }
     /**
      * Maximum number of idle instances that should be maintained for this version.
      * 
-     */
+    */
     public Integer getMaxIdleInstances() {
         return this.maxIdleInstances;
     }
     /**
      * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
      * 
-     */
+    */
     public String getMaxPendingLatency() {
         return this.maxPendingLatency;
     }
     /**
      * Maximum number of instances that should be started to handle requests for this version.
      * 
-     */
+    */
     public Integer getMaxTotalInstances() {
         return this.maxTotalInstances;
     }
     /**
      * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
-     */
+    */
     public Integer getMinIdleInstances() {
         return this.minIdleInstances;
     }
     /**
      * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
      * 
-     */
+    */
     public String getMinPendingLatency() {
         return this.minPendingLatency;
     }
     /**
      * Minimum number of running instances that should be maintained for this version.
      * 
-     */
+    */
     public Integer getMinTotalInstances() {
         return this.minTotalInstances;
     }
     /**
      * Target scaling by network usage.
      * 
-     */
+    */
     public NetworkUtilizationResponse getNetworkUtilization() {
         return this.networkUtilization;
     }
     /**
      * Target scaling by request utilization.
      * 
-     */
+    */
     public RequestUtilizationResponse getRequestUtilization() {
         return this.requestUtilization;
     }
     /**
      * Scheduler settings for standard environment.
      * 
-     */
+    */
     public StandardSchedulerSettingsResponse getStandardSchedulerSettings() {
         return this.standardSchedulerSettings;
     }
@@ -334,7 +334,6 @@ public final class AutomaticScalingResponse {
             this.standardSchedulerSettings = Objects.requireNonNull(standardSchedulerSettings);
             return this;
         }
-
         public AutomaticScalingResponse build() {
             return new AutomaticScalingResponse(coolDownPeriod, cpuUtilization, customMetrics, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization, standardSchedulerSettings);
         }

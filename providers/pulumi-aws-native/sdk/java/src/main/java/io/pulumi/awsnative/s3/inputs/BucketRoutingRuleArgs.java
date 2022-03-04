@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketRedirectRuleArgs;
 import io.pulumi.awsnative.s3.inputs.BucketRoutingRuleConditionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,14 +24,14 @@ public final class BucketRoutingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="redirectRule", required=true)
-    private final Input<BucketRedirectRuleArgs> redirectRule;
+      private final Input<BucketRedirectRuleArgs> redirectRule;
 
     public Input<BucketRedirectRuleArgs> getRedirectRule() {
         return this.redirectRule;
     }
 
     @InputImport(name="routingRuleCondition")
-    private final @Nullable Input<BucketRoutingRuleConditionArgs> routingRuleCondition;
+      private final @Nullable Input<BucketRoutingRuleConditionArgs> routingRuleCondition;
 
     public Input<BucketRoutingRuleConditionArgs> getRoutingRuleCondition() {
         return this.routingRuleCondition == null ? Input.empty() : this.routingRuleCondition;
@@ -90,7 +90,6 @@ public final class BucketRoutingRuleArgs extends io.pulumi.resources.ResourceArg
             this.routingRuleCondition = Input.ofNullable(routingRuleCondition);
             return this;
         }
-
         public BucketRoutingRuleArgs build() {
             return new BucketRoutingRuleArgs(redirectRule, routingRuleCondition);
         }

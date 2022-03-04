@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureBlobStorageLocationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="container")
-    private final @Nullable Object container;
+      private final @Nullable Object container;
 
     public Optional<Object> getContainer() {
         return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
@@ -35,7 +35,7 @@ public final class AzureBlobStorageLocationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable Object fileName;
+      private final @Nullable Object fileName;
 
     public Optional<Object> getFileName() {
         return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
@@ -46,7 +46,7 @@ public final class AzureBlobStorageLocationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="folderPath")
-    private final @Nullable Object folderPath;
+      private final @Nullable Object folderPath;
 
     public Optional<Object> getFolderPath() {
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
@@ -58,7 +58,7 @@ public final class AzureBlobStorageLocationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -127,7 +127,6 @@ public final class AzureBlobStorageLocationResponse extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureBlobStorageLocationResponse build() {
             return new AzureBlobStorageLocationResponse(container, fileName, folderPath, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ImageInformationResponse {
     /**
      * Type of the image
      * 
-     */
+    */
     public String getImageType() {
         return this.imageType;
     }
     /**
      * Url of the image
      * 
-     */
+    */
     public String getImageUrl() {
         return this.imageUrl;
     }
@@ -74,7 +74,6 @@ public final class ImageInformationResponse {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }
-
         public ImageInformationResponse build() {
             return new ImageInformationResponse(imageType, imageUrl);
         }

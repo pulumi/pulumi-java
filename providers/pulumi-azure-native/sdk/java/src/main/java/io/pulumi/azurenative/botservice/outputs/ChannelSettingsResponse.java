@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.SiteResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -85,63 +85,63 @@ public final class ChannelSettingsResponse {
     /**
      * The bot icon url
      * 
-     */
+    */
     public Optional<String> getBotIconUrl() {
         return Optional.ofNullable(this.botIconUrl);
     }
     /**
      * The bot id
      * 
-     */
+    */
     public Optional<String> getBotId() {
         return Optional.ofNullable(this.botId);
     }
     /**
      * The channel display name
      * 
-     */
+    */
     public Optional<String> getChannelDisplayName() {
         return Optional.ofNullable(this.channelDisplayName);
     }
     /**
      * The channel id
      * 
-     */
+    */
     public Optional<String> getChannelId() {
         return Optional.ofNullable(this.channelId);
     }
     /**
      * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
      * 
-     */
+    */
     public Optional<Boolean> getDisableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
     /**
      * The extensionKey1
      * 
-     */
+    */
     public Optional<String> getExtensionKey1() {
         return Optional.ofNullable(this.extensionKey1);
     }
     /**
      * The extensionKey2
      * 
-     */
+    */
     public Optional<String> getExtensionKey2() {
         return Optional.ofNullable(this.extensionKey2);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
-     */
+    */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
      * The list of sites
      * 
-     */
+    */
     public List<SiteResponse> getSites() {
         return this.sites == null ? List.of() : this.sites;
     }
@@ -226,7 +226,6 @@ public final class ChannelSettingsResponse {
             this.sites = sites;
             return this;
         }
-
         public ChannelSettingsResponse build() {
             return new ChannelSettingsResponse(botIconUrl, botId, channelDisplayName, channelId, disableLocalAuth, extensionKey1, extensionKey2, isEnabled, sites);
         }

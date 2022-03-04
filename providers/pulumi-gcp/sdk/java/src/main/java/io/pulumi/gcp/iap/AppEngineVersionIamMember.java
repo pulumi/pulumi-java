@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineVersionIamMemberArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineVersionIamMemberState;
@@ -175,6 +175,37 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
         return this.versionId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AppEngineVersionIamMemberArgs.Builder a);
+    }
+    private static io.pulumi.gcp.iap.AppEngineVersionIamMemberArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.iap.AppEngineVersionIamMemberArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AppEngineVersionIamMember(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AppEngineVersionIamMember(String name) {
+        this(name, AppEngineVersionIamMemberArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AppEngineVersionIamMember(String name, AppEngineVersionIamMemberArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

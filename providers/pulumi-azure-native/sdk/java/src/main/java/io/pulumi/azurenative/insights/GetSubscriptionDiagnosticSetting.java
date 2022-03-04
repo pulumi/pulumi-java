@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetSubscriptionDiagnosticSettingArgs;
 import io.pulumi.azurenative.insights.outputs.GetSubscriptionDiagnosticSettingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubscriptionDiagnosticSetting {
-/**
- * The subscription diagnostic setting resource.
+    private GetSubscriptionDiagnosticSetting() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubscriptionDiagnosticSettingArgs.Builder a);
+    }
+    private static GetSubscriptionDiagnosticSettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubscriptionDiagnosticSettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The subscription diagnostic setting resource.
  * API Version: 2017-05-01-preview.
  * 
- *
- * The subscription diagnostic setting resource.
+     *
+     * The subscription diagnostic setting resource.
  * 
- */
+     */
+    public static CompletableFuture<GetSubscriptionDiagnosticSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The subscription diagnostic setting resource.
+     * API Version: 2017-05-01-preview.
+     * 
+     *
+         * The subscription diagnostic setting resource.
+     * 
+     */
     public static CompletableFuture<GetSubscriptionDiagnosticSettingResult> invokeAsync(GetSubscriptionDiagnosticSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getSubscriptionDiagnosticSetting", TypeShape.of(GetSubscriptionDiagnosticSettingResult.class), args == null ? GetSubscriptionDiagnosticSettingArgs.Empty : args, Utilities.withVersion(options));
     }

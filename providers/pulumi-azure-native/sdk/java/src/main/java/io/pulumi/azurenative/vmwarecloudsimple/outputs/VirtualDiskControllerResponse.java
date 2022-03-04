@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class VirtualDiskControllerResponse {
     /**
      * Controller's id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The display name of Controller
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS)
      * 
-     */
+    */
     public String getSubType() {
         return this.subType;
     }
     /**
      * disk controller type (SCSI)
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -116,7 +116,6 @@ public final class VirtualDiskControllerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualDiskControllerResponse build() {
             return new VirtualDiskControllerResponse(id, name, subType, type);
         }

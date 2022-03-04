@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOsPolicyAssignment {
-/**
- * Retrieve an existing OS policy assignment. This method always returns the latest revision. In order to retrieve a previous revision of the assignment, also provide the revision ID in the `name` parameter.
+    private GetOsPolicyAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetOsPolicyAssignmentArgs.Builder a);
+    }
+    private static GetOsPolicyAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOsPolicyAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve an existing OS policy assignment. This method always returns the latest revision. In order to retrieve a previous revision of the assignment, also provide the revision ID in the `name` parameter.
  * 
- */
+     */
+    public static CompletableFuture<GetOsPolicyAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve an existing OS policy assignment. This method always returns the latest revision. In order to retrieve a previous revision of the assignment, also provide the revision ID in the `name` parameter.
+     * 
+     */
     public static CompletableFuture<GetOsPolicyAssignmentResult> invokeAsync(GetOsPolicyAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1alpha:getOsPolicyAssignment", TypeShape.of(GetOsPolicyAssignmentResult.class), args == null ? GetOsPolicyAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

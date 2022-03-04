@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accessLevels", required=true)
-    private final Input<List<String>> accessLevels;
+      private final Input<List<String>> accessLevels;
 
     public Input<List<String>> getAccessLevels() {
         return this.accessLevels;
@@ -31,7 +31,7 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="groupKey", required=true)
-    private final Input<String> groupKey;
+      private final Input<String> groupKey;
 
     public Input<String> getGroupKey() {
         return this.groupKey;
@@ -42,14 +42,14 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -138,7 +138,6 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public GcpUserAccessBindingArgs build() {
             return new GcpUserAccessBindingArgs(accessLevels, groupKey, name, organizationId);
         }

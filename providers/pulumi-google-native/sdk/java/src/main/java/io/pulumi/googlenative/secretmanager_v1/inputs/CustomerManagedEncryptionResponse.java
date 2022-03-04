@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CustomerManagedEncryptionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final String kmsKeyName;
+      private final String kmsKeyName;
 
     public String getKmsKeyName() {
         return this.kmsKeyName;
@@ -59,7 +59,6 @@ public final class CustomerManagedEncryptionResponse extends io.pulumi.resources
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public CustomerManagedEncryptionResponse build() {
             return new CustomerManagedEncryptionResponse(kmsKeyName);
         }

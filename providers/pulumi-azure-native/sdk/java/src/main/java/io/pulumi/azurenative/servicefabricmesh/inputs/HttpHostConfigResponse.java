@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteConfigResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HttpHostConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class HttpHostConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="routes", required=true)
-    private final List<HttpRouteConfigResponse> routes;
+      private final List<HttpRouteConfigResponse> routes;
 
     public List<HttpRouteConfigResponse> getRoutes() {
         return this.routes;
@@ -83,7 +83,6 @@ public final class HttpHostConfigResponse extends io.pulumi.resources.InvokeArgs
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
-
         public HttpHostConfigResponse build() {
             return new HttpHostConfigResponse(name, routes);
         }

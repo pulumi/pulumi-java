@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class NsgReferenceResponse {
     /**
      * Gets the ARM resource ID of the tracked resource being referenced.
      * 
-     */
+    */
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;
     }
@@ -52,7 +52,6 @@ public final class NsgReferenceResponse {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public NsgReferenceResponse build() {
             return new NsgReferenceResponse(sourceArmResourceId);
         }

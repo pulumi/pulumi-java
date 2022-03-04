@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.AllowedAudiencesValidationResponse;
 import io.pulumi.azurenative.web.outputs.ClientRegistrationResponse;
 import io.pulumi.azurenative.web.outputs.LoginScopesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -50,28 +50,28 @@ public final class GoogleResponse {
     /**
      * <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The configuration settings of the login flow.
      * 
-     */
+    */
     public Optional<LoginScopesResponse> getLogin() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The configuration settings of the app registration for the Google provider.
      * 
-     */
+    */
     public Optional<ClientRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }
     /**
      * The configuration settings of the Azure Active Directory token validation flow.
      * 
-     */
+    */
     public Optional<AllowedAudiencesValidationResponse> getValidation() {
         return Optional.ofNullable(this.validation);
     }
@@ -121,7 +121,6 @@ public final class GoogleResponse {
             this.validation = validation;
             return this;
         }
-
         public GoogleResponse build() {
             return new GoogleResponse(enabled, login, registration, validation);
         }

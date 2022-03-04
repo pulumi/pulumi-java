@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorConfig;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorMetricSet;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,14 +53,14 @@ public final class GetAnomalyDetectorResult {
     /**
      * Configuration options for the AnomalyDetector
      * 
-     */
+    */
     public Optional<AnomalyDetectorConfig> getAnomalyDetectorConfig() {
         return Optional.ofNullable(this.anomalyDetectorConfig);
     }
     /**
      * A description for the AnomalyDetector.
      * 
-     */
+    */
     public Optional<String> getAnomalyDetectorDescription() {
         return Optional.ofNullable(this.anomalyDetectorDescription);
     }
@@ -70,14 +70,14 @@ public final class GetAnomalyDetectorResult {
     /**
      * KMS key used to encrypt the AnomalyDetector data
      * 
-     */
+    */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * List of metric sets for anomaly detection
      * 
-     */
+    */
     public List<AnomalyDetectorMetricSet> getMetricSetList() {
         return this.metricSetList == null ? List.of() : this.metricSetList;
     }
@@ -134,7 +134,6 @@ public final class GetAnomalyDetectorResult {
             this.metricSetList = metricSetList;
             return this;
         }
-
         public GetAnomalyDetectorResult build() {
             return new GetAnomalyDetectorResult(anomalyDetectorConfig, anomalyDetectorDescription, arn, kmsKeyArn, metricSetList);
         }

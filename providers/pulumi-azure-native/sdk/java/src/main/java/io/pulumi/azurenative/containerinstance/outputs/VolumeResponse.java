@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.AzureFileVolumeResponse;
 import io.pulumi.azurenative.containerinstance.outputs.GitRepoVolumeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -58,35 +58,35 @@ public final class VolumeResponse {
     /**
      * The Azure File volume.
      * 
-     */
+    */
     public Optional<AzureFileVolumeResponse> getAzureFile() {
         return Optional.ofNullable(this.azureFile);
     }
     /**
      * The empty directory volume.
      * 
-     */
+    */
     public Optional<Object> getEmptyDir() {
         return Optional.ofNullable(this.emptyDir);
     }
     /**
      * The git repo volume.
      * 
-     */
+    */
     public Optional<GitRepoVolumeResponse> getGitRepo() {
         return Optional.ofNullable(this.gitRepo);
     }
     /**
      * The name of the volume.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The secret volume.
      * 
-     */
+    */
     public Map<String,String> getSecret() {
         return this.secret == null ? Map.of() : this.secret;
     }
@@ -143,7 +143,6 @@ public final class VolumeResponse {
             this.secret = secret;
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(azureFile, emptyDir, gitRepo, name, secret);
         }

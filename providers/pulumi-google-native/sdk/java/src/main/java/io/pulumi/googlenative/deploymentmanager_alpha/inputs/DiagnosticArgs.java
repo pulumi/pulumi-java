@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.enums.DiagnosticLevel;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+      private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -31,7 +31,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="level")
-    private final @Nullable Input<DiagnosticLevel> level;
+      private final @Nullable Input<DiagnosticLevel> level;
 
     public Input<DiagnosticLevel> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -90,7 +90,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             this.level = Input.ofNullable(level);
             return this;
         }
-
         public DiagnosticArgs build() {
             return new DiagnosticArgs(field, level);
         }

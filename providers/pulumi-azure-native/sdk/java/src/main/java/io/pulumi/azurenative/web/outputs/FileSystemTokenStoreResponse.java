@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class FileSystemTokenStoreResponse {
     /**
      * The directory in which the tokens will be stored.
      * 
-     */
+    */
     public Optional<String> getDirectory() {
         return Optional.ofNullable(this.directory);
     }
@@ -54,7 +54,6 @@ public final class FileSystemTokenStoreResponse {
             this.directory = directory;
             return this;
         }
-
         public FileSystemTokenStoreResponse build() {
             return new FileSystemTokenStoreResponse(directory);
         }

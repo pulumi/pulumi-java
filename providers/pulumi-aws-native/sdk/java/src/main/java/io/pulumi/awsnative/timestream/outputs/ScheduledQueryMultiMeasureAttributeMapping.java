@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryMultiMeasureAttributeMappingMeasureValueType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class ScheduledQueryMultiMeasureAttributeMapping {
             this.targetMultiMeasureAttributeName = targetMultiMeasureAttributeName;
             return this;
         }
-
         public ScheduledQueryMultiMeasureAttributeMapping build() {
             return new ScheduledQueryMultiMeasureAttributeMapping(measureValueType, sourceColumn, targetMultiMeasureAttributeName);
         }

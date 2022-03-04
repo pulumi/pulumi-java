@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AvroOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="useAvroLogicalTypes", required=true)
-    private final Boolean useAvroLogicalTypes;
+      private final Boolean useAvroLogicalTypes;
 
     public Boolean getUseAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
@@ -55,7 +55,6 @@ public final class AvroOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
             return this;
         }
-
         public AvroOptionsResponse build() {
             return new AvroOptionsResponse(useAvroLogicalTypes);
         }

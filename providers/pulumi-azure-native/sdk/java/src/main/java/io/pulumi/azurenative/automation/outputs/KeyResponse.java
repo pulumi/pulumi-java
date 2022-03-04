@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class KeyResponse {
     /**
      * Automation key name.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * Automation key permissions.
      * 
-     */
+    */
     public String getPermissions() {
         return this.permissions;
     }
     /**
      * Value of the Automation Key used for registration.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -95,7 +95,6 @@ public final class KeyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public KeyResponse build() {
             return new KeyResponse(keyName, permissions, value);
         }

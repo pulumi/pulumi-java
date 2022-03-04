@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SkuResponse {
     /**
      * SKU family name
      * 
-     */
+    */
     public String getFamily() {
         return this.family;
     }
     /**
      * SKU name to specify whether the key vault is a standard vault or a premium vault.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class SkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(family, name);
         }

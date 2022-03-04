@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class BaseImageDependencyResponse {
     /**
      * The sha256-based digest of the image manifest.
      * 
-     */
+    */
     public Optional<String> getDigest() {
         return Optional.ofNullable(this.digest);
     }
     /**
      * The registry login server.
      * 
-     */
+    */
     public Optional<String> getRegistry() {
         return Optional.ofNullable(this.registry);
     }
     /**
      * The repository name.
      * 
-     */
+    */
     public Optional<String> getRepository() {
         return Optional.ofNullable(this.repository);
     }
     /**
      * The tag name.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
     /**
      * The type of the base image dependency.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -139,7 +139,6 @@ public final class BaseImageDependencyResponse {
             this.type = type;
             return this;
         }
-
         public BaseImageDependencyResponse build() {
             return new BaseImageDependencyResponse(digest, registry, repository, tag, type);
         }

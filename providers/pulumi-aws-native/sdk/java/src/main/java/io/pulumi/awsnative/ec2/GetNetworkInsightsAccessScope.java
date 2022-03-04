@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetNetworkInsightsAccessScopeArgs;
 import io.pulumi.awsnative.ec2.outputs.GetNetworkInsightsAccessScopeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkInsightsAccessScope {
-/**
- * Resource schema for AWS::EC2::NetworkInsightsAccessScope
+    private GetNetworkInsightsAccessScope() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkInsightsAccessScopeArgs.Builder a);
+    }
+    private static GetNetworkInsightsAccessScopeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkInsightsAccessScopeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::EC2::NetworkInsightsAccessScope
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkInsightsAccessScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::EC2::NetworkInsightsAccessScope
+     * 
+     */
     public static CompletableFuture<GetNetworkInsightsAccessScopeResult> invokeAsync(GetNetworkInsightsAccessScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getNetworkInsightsAccessScope", TypeShape.of(GetNetworkInsightsAccessScopeResult.class), args == null ? GetNetworkInsightsAccessScopeArgs.Empty : args, Utilities.withVersion(options));
     }

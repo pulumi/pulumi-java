@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth;
 import java.lang.Integer;
 import java.util.Objects;
@@ -39,7 +39,7 @@ public final class PatchDeploymentRecurringScheduleMonthly {
      * Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
      * will not run in February, April, June, etc.
      * 
-     */
+    */
     public Optional<Integer> getMonthDay() {
         return Optional.ofNullable(this.monthDay);
     }
@@ -47,7 +47,7 @@ public final class PatchDeploymentRecurringScheduleMonthly {
      * Week day in a month.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth> getWeekDayOfMonth() {
         return Optional.ofNullable(this.weekDayOfMonth);
     }
@@ -83,7 +83,6 @@ public final class PatchDeploymentRecurringScheduleMonthly {
             this.weekDayOfMonth = weekDayOfMonth;
             return this;
         }
-
         public PatchDeploymentRecurringScheduleMonthly build() {
             return new PatchDeploymentRecurringScheduleMonthly(monthDay, weekDayOfMonth);
         }

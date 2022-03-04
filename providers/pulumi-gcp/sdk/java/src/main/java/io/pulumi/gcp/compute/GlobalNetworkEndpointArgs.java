@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable Input<String> fqdn;
+      private final @Nullable Input<String> fqdn;
 
     public Input<String> getFqdn() {
         return this.fqdn == null ? Input.empty() : this.fqdn;
@@ -32,7 +32,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="globalNetworkEndpointGroup", required=true)
-    private final Input<String> globalNetworkEndpointGroup;
+      private final Input<String> globalNetworkEndpointGroup;
 
     public Input<String> getGlobalNetworkEndpointGroup() {
         return this.globalNetworkEndpointGroup;
@@ -43,7 +43,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -54,7 +54,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+      private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -66,7 +66,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -170,7 +170,6 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public GlobalNetworkEndpointArgs build() {
             return new GlobalNetworkEndpointArgs(fqdn, globalNetworkEndpointGroup, ipAddress, port, project);
         }

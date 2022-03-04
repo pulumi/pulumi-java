@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BucketingConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CharacterMaskConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CryptoDeterministicConfigResponse;
@@ -112,84 +112,84 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
     /**
      * Bucketing
      * 
-     */
+    */
     public GooglePrivacyDlpV2BucketingConfigResponse getBucketingConfig() {
         return this.bucketingConfig;
     }
     /**
      * Mask
      * 
-     */
+    */
     public GooglePrivacyDlpV2CharacterMaskConfigResponse getCharacterMaskConfig() {
         return this.characterMaskConfig;
     }
     /**
      * Deterministic Crypto
      * 
-     */
+    */
     public GooglePrivacyDlpV2CryptoDeterministicConfigResponse getCryptoDeterministicConfig() {
         return this.cryptoDeterministicConfig;
     }
     /**
      * Crypto
      * 
-     */
+    */
     public GooglePrivacyDlpV2CryptoHashConfigResponse getCryptoHashConfig() {
         return this.cryptoHashConfig;
     }
     /**
      * Ffx-Fpe
      * 
-     */
+    */
     public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse getCryptoReplaceFfxFpeConfig() {
         return this.cryptoReplaceFfxFpeConfig;
     }
     /**
      * Date Shift
      * 
-     */
+    */
     public GooglePrivacyDlpV2DateShiftConfigResponse getDateShiftConfig() {
         return this.dateShiftConfig;
     }
     /**
      * Fixed size bucketing
      * 
-     */
+    */
     public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse getFixedSizeBucketingConfig() {
         return this.fixedSizeBucketingConfig;
     }
     /**
      * Redact
      * 
-     */
+    */
     public GooglePrivacyDlpV2RedactConfigResponse getRedactConfig() {
         return this.redactConfig;
     }
     /**
      * Replace with a specified value.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ReplaceValueConfigResponse getReplaceConfig() {
         return this.replaceConfig;
     }
     /**
      * Replace with a value randomly drawn (with replacement) from a dictionary.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse getReplaceDictionaryConfig() {
         return this.replaceDictionaryConfig;
     }
     /**
      * Replace with infotype
      * 
-     */
+    */
     public GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse getReplaceWithInfoTypeConfig() {
         return this.replaceWithInfoTypeConfig;
     }
     /**
      * Time extraction
      * 
-     */
+    */
     public GooglePrivacyDlpV2TimePartConfigResponse getTimePartConfig() {
         return this.timePartConfig;
     }
@@ -295,7 +295,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
             this.timePartConfig = Objects.requireNonNull(timePartConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2PrimitiveTransformationResponse build() {
             return new GooglePrivacyDlpV2PrimitiveTransformationResponse(bucketingConfig, characterMaskConfig, cryptoDeterministicConfig, cryptoHashConfig, cryptoReplaceFfxFpeConfig, dateShiftConfig, fixedSizeBucketingConfig, redactConfig, replaceConfig, replaceDictionaryConfig, replaceWithInfoTypeConfig, timePartConfig);
         }

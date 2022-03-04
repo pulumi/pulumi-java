@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.MetricTarget;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ContainerResourceMetricSource {
     /**
      * container is the name of the container in the pods of the scaling target
      * 
-     */
+    */
     public String getContainer() {
         return this.container;
     }
     /**
      * name is the name of the resource in question.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * target specifies the target value for the given metric
      * 
-     */
+    */
     public MetricTarget getTarget() {
         return this.target;
     }
@@ -96,7 +96,6 @@ public final class ContainerResourceMetricSource {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ContainerResourceMetricSource build() {
             return new ContainerResourceMetricSource(container, name, target);
         }

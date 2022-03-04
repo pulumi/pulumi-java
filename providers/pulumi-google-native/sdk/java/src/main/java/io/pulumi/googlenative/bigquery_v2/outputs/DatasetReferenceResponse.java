@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DatasetReferenceResponse {
     /**
      * [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * [Optional] The ID of the project containing this dataset.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
@@ -74,7 +74,6 @@ public final class DatasetReferenceResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public DatasetReferenceResponse build() {
             return new DatasetReferenceResponse(datasetId, project);
         }

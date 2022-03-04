@@ -14,7 +14,7 @@ import io.pulumi.azurenative.logic.outputs.EdifactProcessingSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactSchemaReferenceResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactValidationOverrideResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactValidationSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -106,77 +106,77 @@ public final class EdifactProtocolSettingsResponse {
     /**
      * The EDIFACT acknowledgement settings.
      * 
-     */
+    */
     public EdifactAcknowledgementSettingsResponse getAcknowledgementSettings() {
         return this.acknowledgementSettings;
     }
     /**
      * The EDIFACT delimiter override settings.
      * 
-     */
+    */
     public List<EdifactDelimiterOverrideResponse> getEdifactDelimiterOverrides() {
         return this.edifactDelimiterOverrides == null ? List.of() : this.edifactDelimiterOverrides;
     }
     /**
      * The EDIFACT envelope override settings.
      * 
-     */
+    */
     public List<EdifactEnvelopeOverrideResponse> getEnvelopeOverrides() {
         return this.envelopeOverrides == null ? List.of() : this.envelopeOverrides;
     }
     /**
      * The EDIFACT envelope settings.
      * 
-     */
+    */
     public EdifactEnvelopeSettingsResponse getEnvelopeSettings() {
         return this.envelopeSettings;
     }
     /**
      * The EDIFACT framing settings.
      * 
-     */
+    */
     public EdifactFramingSettingsResponse getFramingSettings() {
         return this.framingSettings;
     }
     /**
      * The EDIFACT message filter.
      * 
-     */
+    */
     public EdifactMessageFilterResponse getMessageFilter() {
         return this.messageFilter;
     }
     /**
      * The EDIFACT message filter list.
      * 
-     */
+    */
     public List<EdifactMessageIdentifierResponse> getMessageFilterList() {
         return this.messageFilterList == null ? List.of() : this.messageFilterList;
     }
     /**
      * The EDIFACT processing Settings.
      * 
-     */
+    */
     public EdifactProcessingSettingsResponse getProcessingSettings() {
         return this.processingSettings;
     }
     /**
      * The EDIFACT schema references.
      * 
-     */
+    */
     public List<EdifactSchemaReferenceResponse> getSchemaReferences() {
         return this.schemaReferences;
     }
     /**
      * The EDIFACT validation override settings.
      * 
-     */
+    */
     public List<EdifactValidationOverrideResponse> getValidationOverrides() {
         return this.validationOverrides == null ? List.of() : this.validationOverrides;
     }
     /**
      * The EDIFACT validation settings.
      * 
-     */
+    */
     public EdifactValidationSettingsResponse getValidationSettings() {
         return this.validationSettings;
     }
@@ -275,7 +275,6 @@ public final class EdifactProtocolSettingsResponse {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public EdifactProtocolSettingsResponse build() {
             return new EdifactProtocolSettingsResponse(acknowledgementSettings, edifactDelimiterOverrides, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, validationOverrides, validationSettings);
         }

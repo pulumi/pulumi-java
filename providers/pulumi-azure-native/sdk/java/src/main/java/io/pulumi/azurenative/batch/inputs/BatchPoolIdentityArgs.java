@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.PoolIdentityType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<PoolIdentityType> type;
+      private final Input<PoolIdentityType> type;
 
     public Input<PoolIdentityType> getType() {
         return this.type;
@@ -37,7 +37,7 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+      private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 
     public Input<Map<String,Object>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -96,7 +96,6 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public BatchPoolIdentityArgs build() {
             return new BatchPoolIdentityArgs(type, userAssignedIdentities);
         }

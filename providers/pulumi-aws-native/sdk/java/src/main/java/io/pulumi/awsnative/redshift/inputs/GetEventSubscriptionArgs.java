@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="subscriptionName", required=true)
-    private final String subscriptionName;
+      private final String subscriptionName;
 
     public String getSubscriptionName() {
         return this.subscriptionName;
@@ -55,7 +55,6 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
             this.subscriptionName = Objects.requireNonNull(subscriptionName);
             return this;
         }
-
         public GetEventSubscriptionArgs build() {
             return new GetEventSubscriptionArgs(subscriptionName);
         }

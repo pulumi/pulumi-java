@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.gkehub_v1.inputs.BindingArgs;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class FeatureIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
 
     public Input<List<AuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -34,7 +34,7 @@ public final class FeatureIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -45,28 +45,28 @@ public final class FeatureIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="featureId", required=true)
-    private final Input<String> featureId;
+      private final Input<String> featureId;
 
     public Input<String> getFeatureId() {
         return this.featureId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -77,7 +77,7 @@ public final class FeatureIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="updateMask")
-    private final @Nullable Input<String> updateMask;
+      private final @Nullable Input<String> updateMask;
 
     public Input<String> getUpdateMask() {
         return this.updateMask == null ? Input.empty() : this.updateMask;
@@ -88,7 +88,7 @@ public final class FeatureIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -237,7 +237,6 @@ public final class FeatureIamPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public FeatureIamPolicyArgs build() {
             return new FeatureIamPolicyArgs(auditConfigs, bindings, etag, featureId, location, project, updateMask, version);
         }

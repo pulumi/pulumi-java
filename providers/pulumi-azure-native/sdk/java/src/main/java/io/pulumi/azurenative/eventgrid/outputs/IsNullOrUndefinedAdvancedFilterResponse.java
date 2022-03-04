@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,7 +34,7 @@ public final class IsNullOrUndefinedAdvancedFilterResponse {
     /**
      * The field/property in the event based on which you want to filter.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
@@ -42,7 +42,7 @@ public final class IsNullOrUndefinedAdvancedFilterResponse {
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'IsNullOrUndefined'.
      * 
-     */
+    */
     public String getOperatorType() {
         return this.operatorType;
     }
@@ -78,7 +78,6 @@ public final class IsNullOrUndefinedAdvancedFilterResponse {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public IsNullOrUndefinedAdvancedFilterResponse build() {
             return new IsNullOrUndefinedAdvancedFilterResponse(key, operatorType);
         }

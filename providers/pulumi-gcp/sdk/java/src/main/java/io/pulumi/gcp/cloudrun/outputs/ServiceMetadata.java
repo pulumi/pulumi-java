@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -102,7 +102,7 @@ public final class ServiceMetadata {
      * - `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
      *   for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
      * 
-     */
+    */
     public Map<String,String> getAnnotations() {
         return this.annotations == null ? Map.of() : this.annotations;
     }
@@ -110,7 +110,7 @@ public final class ServiceMetadata {
      * - 
      * A sequence number representing a specific generation of the desired state.
      * 
-     */
+    */
     public Optional<Integer> getGeneration() {
         return Optional.ofNullable(this.generation);
     }
@@ -120,7 +120,7 @@ public final class ServiceMetadata {
      * and routes.
      * More info: http://kubernetes.io/docs/user-guide/labels
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
@@ -128,7 +128,7 @@ public final class ServiceMetadata {
      * In Cloud Run the namespace must be equal to either the
      * project ID or project number.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -142,7 +142,7 @@ public final class ServiceMetadata {
      * More info:
      * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
      * 
-     */
+    */
     public Optional<String> getResourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
@@ -150,7 +150,7 @@ public final class ServiceMetadata {
      * - 
      * SelfLink is a URL representing this object.
      * 
-     */
+    */
     public Optional<String> getSelfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -160,7 +160,7 @@ public final class ServiceMetadata {
      * allowed to change on PUT operations.
      * More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
-     */
+    */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }
@@ -231,7 +231,6 @@ public final class ServiceMetadata {
             this.uid = uid;
             return this;
         }
-
         public ServiceMetadata build() {
             return new ServiceMetadata(annotations, generation, labels, namespace, resourceVersion, selfLink, uid);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -48,28 +48,28 @@ public final class GetInstanceBootDiskInitializeParam {
     /**
      * The image from which this disk was initialised.
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
     /**
      * A set of key/value label pairs assigned to the instance.
      * 
-     */
+    */
     public Map<String,Object> getLabels() {
         return this.labels;
     }
     /**
      * The size of the image in gigabytes.
      * 
-     */
+    */
     public Integer getSize() {
         return this.size;
     }
     /**
      * The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -119,7 +119,6 @@ public final class GetInstanceBootDiskInitializeParam {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceBootDiskInitializeParam build() {
             return new GetInstanceBootDiskInitializeParam(image, labels, size, type);
         }

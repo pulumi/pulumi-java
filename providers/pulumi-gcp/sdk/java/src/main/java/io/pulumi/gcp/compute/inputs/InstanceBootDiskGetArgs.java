@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceBootDiskInitializeParamsGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="autoDelete")
-    private final @Nullable Input<Boolean> autoDelete;
+      private final @Nullable Input<Boolean> autoDelete;
 
     public Input<Boolean> getAutoDelete() {
         return this.autoDelete == null ? Input.empty() : this.autoDelete;
@@ -34,7 +34,7 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -48,14 +48,14 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="diskEncryptionKeyRaw")
-    private final @Nullable Input<String> diskEncryptionKeyRaw;
+      private final @Nullable Input<String> diskEncryptionKeyRaw;
 
     public Input<String> getDiskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw == null ? Input.empty() : this.diskEncryptionKeyRaw;
     }
 
     @InputImport(name="diskEncryptionKeySha256")
-    private final @Nullable Input<String> diskEncryptionKeySha256;
+      private final @Nullable Input<String> diskEncryptionKeySha256;
 
     public Input<String> getDiskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256 == null ? Input.empty() : this.diskEncryptionKeySha256;
@@ -68,7 +68,7 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="initializeParams")
-    private final @Nullable Input<InstanceBootDiskInitializeParamsGetArgs> initializeParams;
+      private final @Nullable Input<InstanceBootDiskInitializeParamsGetArgs> initializeParams;
 
     public Input<InstanceBootDiskInitializeParamsGetArgs> getInitializeParams() {
         return this.initializeParams == null ? Input.empty() : this.initializeParams;
@@ -81,7 +81,7 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kmsKeySelfLink")
-    private final @Nullable Input<String> kmsKeySelfLink;
+      private final @Nullable Input<String> kmsKeySelfLink;
 
     public Input<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
@@ -95,7 +95,7 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -106,7 +106,7 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -255,7 +255,6 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public InstanceBootDiskGetArgs build() {
             return new InstanceBootDiskGetArgs(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
     public static final SqlScheduledMaintenanceArgs Empty = new SqlScheduledMaintenanceArgs();
 
     @InputImport(name="canDefer")
-    private final @Nullable Input<Boolean> canDefer;
+      private final @Nullable Input<Boolean> canDefer;
 
     public Input<Boolean> getCanDefer() {
         return this.canDefer == null ? Input.empty() : this.canDefer;
@@ -31,7 +31,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="canReschedule")
-    private final @Nullable Input<Boolean> canReschedule;
+      private final @Nullable Input<Boolean> canReschedule;
 
     public Input<Boolean> getCanReschedule() {
         return this.canReschedule == null ? Input.empty() : this.canReschedule;
@@ -42,7 +42,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="scheduleDeadlineTime")
-    private final @Nullable Input<String> scheduleDeadlineTime;
+      private final @Nullable Input<String> scheduleDeadlineTime;
 
     public Input<String> getScheduleDeadlineTime() {
         return this.scheduleDeadlineTime == null ? Input.empty() : this.scheduleDeadlineTime;
@@ -53,7 +53,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -142,7 +142,6 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public SqlScheduledMaintenanceArgs build() {
             return new SqlScheduledMaintenanceArgs(canDefer, canReschedule, scheduleDeadlineTime, startTime);
         }

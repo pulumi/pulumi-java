@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybriddata.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class SkuResponse {
     /**
      * The sku name. Required for data manager creation, optional for update.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The sku tier. This is based on the SKU name.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -76,7 +76,6 @@ public final class SkuResponse {
             this.tier = tier;
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(name, tier);
         }

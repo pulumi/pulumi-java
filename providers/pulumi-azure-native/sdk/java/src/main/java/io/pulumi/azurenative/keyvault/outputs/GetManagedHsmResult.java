@@ -6,7 +6,7 @@ package io.pulumi.azurenative.keyvault.outputs;
 import io.pulumi.azurenative.keyvault.outputs.ManagedHsmPropertiesResponse;
 import io.pulumi.azurenative.keyvault.outputs.ManagedHsmSkuResponse;
 import io.pulumi.azurenative.keyvault.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -79,56 +79,56 @@ public final class GetManagedHsmResult {
     /**
      * The Azure Resource Manager resource ID for the managed HSM Pool.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The supported Azure location where the managed HSM Pool should be created.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the managed HSM Pool.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the managed HSM
      * 
-     */
+    */
     public ManagedHsmPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * SKU details
      * 
-     */
+    */
     public Optional<ManagedHsmSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the key vault resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type of the managed HSM Pool.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -206,7 +206,6 @@ public final class GetManagedHsmResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedHsmResult build() {
             return new GetManagedHsmResult(id, location, name, properties, sku, systemData, tags, type);
         }

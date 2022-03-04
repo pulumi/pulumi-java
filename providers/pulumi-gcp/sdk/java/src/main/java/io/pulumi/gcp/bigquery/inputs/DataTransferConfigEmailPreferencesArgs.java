@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DataTransferConfigEmailPreferencesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableFailureEmail", required=true)
-    private final Input<Boolean> enableFailureEmail;
+      private final Input<Boolean> enableFailureEmail;
 
     public Input<Boolean> getEnableFailureEmail() {
         return this.enableFailureEmail;
@@ -61,7 +61,6 @@ public final class DataTransferConfigEmailPreferencesArgs extends io.pulumi.reso
             this.enableFailureEmail = Input.of(Objects.requireNonNull(enableFailureEmail));
             return this;
         }
-
         public DataTransferConfigEmailPreferencesArgs build() {
             return new DataTransferConfigEmailPreferencesArgs(enableFailureEmail);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.FlavorDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -71,49 +71,49 @@ public final class ModelVersionResponse {
     /**
      * ARM resource ID of the datastore where the asset is located.
      * 
-     */
+    */
     public Optional<String> getDatastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
      * The asset description text.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Mapping of model flavors to their properties.
      * 
-     */
+    */
     public Map<String,FlavorDataResponse> getFlavors() {
         return this.flavors == null ? Map.of() : this.flavors;
     }
     /**
      * If the name version are system generated (anonymous registration).
      * 
-     */
+    */
     public Optional<Boolean> getIsAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
     /**
      * The path of the file/directory in the datastore.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The asset property dictionary.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
@@ -184,7 +184,6 @@ public final class ModelVersionResponse {
             this.tags = tags;
             return this;
         }
-
         public ModelVersionResponse build() {
             return new ModelVersionResponse(datastoreId, description, flavors, isAnonymous, path, properties, tags);
         }

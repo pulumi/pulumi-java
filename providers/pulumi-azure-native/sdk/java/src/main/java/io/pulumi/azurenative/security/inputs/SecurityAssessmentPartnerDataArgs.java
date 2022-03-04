@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="partnerName", required=true)
-    private final Input<String> partnerName;
+      private final Input<String> partnerName;
 
     public Input<String> getPartnerName() {
         return this.partnerName;
@@ -33,7 +33,7 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="secret", required=true)
-    private final Input<String> secret;
+      private final Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret;
@@ -92,7 +92,6 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
             this.secret = Input.of(Objects.requireNonNull(secret));
             return this;
         }
-
         public SecurityAssessmentPartnerDataArgs build() {
             return new SecurityAssessmentPartnerDataArgs(partnerName, secret);
         }

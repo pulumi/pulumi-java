@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.MountPointMapArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class KubernetesRoleStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable Input<List<MountPointMapArgs>> endpoints;
+      private final @Nullable Input<List<MountPointMapArgs>> endpoints;
 
     public Input<List<MountPointMapArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -67,7 +67,6 @@ public final class KubernetesRoleStorageArgs extends io.pulumi.resources.Resourc
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
-
         public KubernetesRoleStorageArgs build() {
             return new KubernetesRoleStorageArgs(endpoints);
         }

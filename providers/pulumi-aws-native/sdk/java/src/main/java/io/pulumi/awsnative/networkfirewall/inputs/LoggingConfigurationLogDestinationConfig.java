@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinationConfigLogDestinationType;
 import io.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinationConfigLogType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -19,21 +19,21 @@ public final class LoggingConfigurationLogDestinationConfig extends io.pulumi.re
      * 
      */
     @InputImport(name="logDestination", required=true)
-    private final Object logDestination;
+      private final Object logDestination;
 
     public Object getLogDestination() {
         return this.logDestination;
     }
 
     @InputImport(name="logDestinationType", required=true)
-    private final LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType;
+      private final LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType;
 
     public LoggingConfigurationLogDestinationConfigLogDestinationType getLogDestinationType() {
         return this.logDestinationType;
     }
 
     @InputImport(name="logType", required=true)
-    private final LoggingConfigurationLogDestinationConfigLogType logType;
+      private final LoggingConfigurationLogDestinationConfigLogType logType;
 
     public LoggingConfigurationLogDestinationConfigLogType getLogType() {
         return this.logType;
@@ -92,7 +92,6 @@ public final class LoggingConfigurationLogDestinationConfig extends io.pulumi.re
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public LoggingConfigurationLogDestinationConfig build() {
             return new LoggingConfigurationLogDestinationConfig(logDestination, logDestinationType, logType);
         }

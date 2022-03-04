@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetGatewayCertificateAuthorityArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetGatewayCertificateAuthorityResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGatewayCertificateAuthority {
-/**
- * Gateway certificate authority details.
+    private GetGatewayCertificateAuthority() {}
+    public interface BuilderApplicator {
+        public void apply(GetGatewayCertificateAuthorityArgs.Builder a);
+    }
+    private static GetGatewayCertificateAuthorityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGatewayCertificateAuthorityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gateway certificate authority details.
  * API Version: 2020-12-01.
  * 
- *
- * Gateway certificate authority details.
+     *
+     * Gateway certificate authority details.
  * 
- */
+     */
+    public static CompletableFuture<GetGatewayCertificateAuthorityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gateway certificate authority details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Gateway certificate authority details.
+     * 
+     */
     public static CompletableFuture<GetGatewayCertificateAuthorityResult> invokeAsync(GetGatewayCertificateAuthorityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGatewayCertificateAuthority", TypeShape.of(GetGatewayCertificateAuthorityResult.class), args == null ? GetGatewayCertificateAuthorityArgs.Empty : args, Utilities.withVersion(options));
     }

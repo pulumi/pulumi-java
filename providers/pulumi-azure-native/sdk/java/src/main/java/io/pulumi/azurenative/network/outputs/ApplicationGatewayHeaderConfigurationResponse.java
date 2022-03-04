@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ApplicationGatewayHeaderConfigurationResponse {
     /**
      * Header name of the header configuration.
      * 
-     */
+    */
     public Optional<String> getHeaderName() {
         return Optional.ofNullable(this.headerName);
     }
     /**
      * Header value of the header configuration.
      * 
-     */
+    */
     public Optional<String> getHeaderValue() {
         return Optional.ofNullable(this.headerValue);
     }
@@ -76,7 +76,6 @@ public final class ApplicationGatewayHeaderConfigurationResponse {
             this.headerValue = headerValue;
             return this;
         }
-
         public ApplicationGatewayHeaderConfigurationResponse build() {
             return new ApplicationGatewayHeaderConfigurationResponse(headerName, headerValue);
         }

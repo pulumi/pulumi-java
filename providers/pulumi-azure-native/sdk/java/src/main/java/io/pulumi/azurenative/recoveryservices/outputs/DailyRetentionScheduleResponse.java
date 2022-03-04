@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.RetentionDurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class DailyRetentionScheduleResponse {
     /**
      * Retention duration of retention Policy.
      * 
-     */
+    */
     public Optional<RetentionDurationResponse> getRetentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
     /**
      * Retention times of retention policy.
      * 
-     */
+    */
     public List<String> getRetentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }
@@ -78,7 +78,6 @@ public final class DailyRetentionScheduleResponse {
             this.retentionTimes = retentionTimes;
             return this;
         }
-
         public DailyRetentionScheduleResponse build() {
             return new DailyRetentionScheduleResponse(retentionDuration, retentionTimes);
         }

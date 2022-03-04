@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.iotsecurity;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OnPremiseSensorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="onPremiseSensorName")
-    private final @Nullable Input<String> onPremiseSensorName;
+      private final @Nullable Input<String> onPremiseSensorName;
 
     public Input<String> getOnPremiseSensorName() {
         return this.onPremiseSensorName == null ? Input.empty() : this.onPremiseSensorName;
@@ -62,7 +62,6 @@ public final class OnPremiseSensorArgs extends io.pulumi.resources.ResourceArgs 
             this.onPremiseSensorName = Input.ofNullable(onPremiseSensorName);
             return this;
         }
-
         public OnPremiseSensorArgs build() {
             return new OnPremiseSensorArgs(onPremiseSensorName);
         }

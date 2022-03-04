@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ForwardProxyResponse;
 import io.pulumi.azurenative.web.outputs.HttpSettingsRoutesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class HttpSettingsResponse {
     /**
      * The configuration settings of a forward proxy used to make the requests.
      * 
-     */
+    */
     public Optional<ForwardProxyResponse> getForwardProxy() {
         return Optional.ofNullable(this.forwardProxy);
     }
     /**
      * <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
      * 
-     */
+    */
     public Optional<Boolean> getRequireHttps() {
         return Optional.ofNullable(this.requireHttps);
     }
     /**
      * The configuration settings of the paths HTTP requests.
      * 
-     */
+    */
     public Optional<HttpSettingsRoutesResponse> getRoutes() {
         return Optional.ofNullable(this.routes);
     }
@@ -99,7 +99,6 @@ public final class HttpSettingsResponse {
             this.routes = routes;
             return this;
         }
-
         public HttpSettingsResponse build() {
             return new HttpSettingsResponse(forwardProxy, requireHttps, routes);
         }

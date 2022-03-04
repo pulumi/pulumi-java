@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class MemcacheParametersResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="params", required=true)
-    private final Map<String,String> params;
+      private final Map<String,String> params;
 
     public Map<String,String> getParams() {
         return this.params;
@@ -56,7 +56,6 @@ public final class MemcacheParametersResponse extends io.pulumi.resources.Invoke
             this.params = Objects.requireNonNull(params);
             return this;
         }
-
         public MemcacheParametersResponse build() {
             return new MemcacheParametersResponse(params);
         }

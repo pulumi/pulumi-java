@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.inputs.SyncGroupSchemaTableResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SyncGroupSchemaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="masterSyncMemberName")
-    private final @Nullable String masterSyncMemberName;
+      private final @Nullable String masterSyncMemberName;
 
     public Optional<String> getMasterSyncMemberName() {
         return this.masterSyncMemberName == null ? Optional.empty() : Optional.ofNullable(this.masterSyncMemberName);
@@ -36,7 +36,7 @@ public final class SyncGroupSchemaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tables")
-    private final @Nullable List<SyncGroupSchemaTableResponse> tables;
+      private final @Nullable List<SyncGroupSchemaTableResponse> tables;
 
     public List<SyncGroupSchemaTableResponse> getTables() {
         return this.tables == null ? List.of() : this.tables;
@@ -85,7 +85,6 @@ public final class SyncGroupSchemaResponse extends io.pulumi.resources.InvokeArg
             this.tables = tables;
             return this;
         }
-
         public SyncGroupSchemaResponse build() {
             return new SyncGroupSchemaResponse(masterSyncMemberName, tables);
         }

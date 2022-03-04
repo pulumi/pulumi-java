@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.location.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class GetGeofenceCollectionResult {
             this.updateTime = updateTime;
             return this;
         }
-
         public GetGeofenceCollectionResult build() {
             return new GetGeofenceCollectionResult(arn, collectionArn, createTime, kmsKeyId, updateTime);
         }

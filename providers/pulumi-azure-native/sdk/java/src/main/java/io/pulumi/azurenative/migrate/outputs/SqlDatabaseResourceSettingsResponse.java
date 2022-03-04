@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class SqlDatabaseResourceSettingsResponse {
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Sql/servers/databases'.
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets the target Resource name.
      * 
-     */
+    */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }
     /**
      * Defines the zone redundant resource setting.
      * 
-     */
+    */
     public Optional<String> getZoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }
@@ -99,7 +99,6 @@ public final class SqlDatabaseResourceSettingsResponse {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
-
         public SqlDatabaseResourceSettingsResponse build() {
             return new SqlDatabaseResourceSettingsResponse(resourceType, targetResourceName, zoneRedundant);
         }

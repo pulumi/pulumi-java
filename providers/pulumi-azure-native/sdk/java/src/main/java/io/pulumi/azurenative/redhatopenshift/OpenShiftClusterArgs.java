@@ -12,7 +12,7 @@ import io.pulumi.azurenative.redhatopenshift.inputs.NetworkProfileArgs;
 import io.pulumi.azurenative.redhatopenshift.inputs.ServicePrincipalProfileArgs;
 import io.pulumi.azurenative.redhatopenshift.inputs.WorkerProfileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +29,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="apiserverProfile")
-    private final @Nullable Input<APIServerProfileArgs> apiserverProfile;
+      private final @Nullable Input<APIServerProfileArgs> apiserverProfile;
 
     public Input<APIServerProfileArgs> getApiserverProfile() {
         return this.apiserverProfile == null ? Input.empty() : this.apiserverProfile;
@@ -40,7 +40,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clusterProfile")
-    private final @Nullable Input<ClusterProfileArgs> clusterProfile;
+      private final @Nullable Input<ClusterProfileArgs> clusterProfile;
 
     public Input<ClusterProfileArgs> getClusterProfile() {
         return this.clusterProfile == null ? Input.empty() : this.clusterProfile;
@@ -51,7 +51,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="consoleProfile")
-    private final @Nullable Input<ConsoleProfileArgs> consoleProfile;
+      private final @Nullable Input<ConsoleProfileArgs> consoleProfile;
 
     public Input<ConsoleProfileArgs> getConsoleProfile() {
         return this.consoleProfile == null ? Input.empty() : this.consoleProfile;
@@ -62,7 +62,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ingressProfiles")
-    private final @Nullable Input<List<IngressProfileArgs>> ingressProfiles;
+      private final @Nullable Input<List<IngressProfileArgs>> ingressProfiles;
 
     public Input<List<IngressProfileArgs>> getIngressProfiles() {
         return this.ingressProfiles == null ? Input.empty() : this.ingressProfiles;
@@ -73,7 +73,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -84,7 +84,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="masterProfile")
-    private final @Nullable Input<MasterProfileArgs> masterProfile;
+      private final @Nullable Input<MasterProfileArgs> masterProfile;
 
     public Input<MasterProfileArgs> getMasterProfile() {
         return this.masterProfile == null ? Input.empty() : this.masterProfile;
@@ -95,7 +95,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkProfile")
-    private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Input<NetworkProfileArgs> networkProfile;
 
     public Input<NetworkProfileArgs> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -106,7 +106,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<String> provisioningState;
+      private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -117,7 +117,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -128,7 +128,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -139,7 +139,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="servicePrincipalProfile")
-    private final @Nullable Input<ServicePrincipalProfileArgs> servicePrincipalProfile;
+      private final @Nullable Input<ServicePrincipalProfileArgs> servicePrincipalProfile;
 
     public Input<ServicePrincipalProfileArgs> getServicePrincipalProfile() {
         return this.servicePrincipalProfile == null ? Input.empty() : this.servicePrincipalProfile;
@@ -150,7 +150,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -161,7 +161,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workerProfiles")
-    private final @Nullable Input<List<WorkerProfileArgs>> workerProfiles;
+      private final @Nullable Input<List<WorkerProfileArgs>> workerProfiles;
 
     public Input<List<WorkerProfileArgs>> getWorkerProfiles() {
         return this.workerProfiles == null ? Input.empty() : this.workerProfiles;
@@ -385,7 +385,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             this.workerProfiles = Input.ofNullable(workerProfiles);
             return this;
         }
-
         public OpenShiftClusterArgs build() {
             return new OpenShiftClusterArgs(apiserverProfile, clusterProfile, consoleProfile, ingressProfiles, location, masterProfile, networkProfile, provisioningState, resourceGroupName, resourceName, servicePrincipalProfile, tags, workerProfiles);
         }

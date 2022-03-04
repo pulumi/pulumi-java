@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class HostingEnvironmentProfileResponse {
     /**
      * Resource ID of the App Service Environment.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the App Service Environment.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type of the App Service Environment.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -97,7 +97,6 @@ public final class HostingEnvironmentProfileResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HostingEnvironmentProfileResponse build() {
             return new HostingEnvironmentProfileResponse(id, name, type);
         }

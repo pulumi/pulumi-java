@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="formats")
-    private final @Nullable Input<List<String>> formats;
+      private final @Nullable Input<List<String>> formats;
 
     public Input<List<String>> getFormats() {
         return this.formats == null ? Input.empty() : this.formats;
@@ -35,7 +35,7 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="s3BucketName", required=true)
-    private final Input<String> s3BucketName;
+      private final Input<String> s3BucketName;
 
     public Input<String> getS3BucketName() {
         return this.s3BucketName;
@@ -46,7 +46,7 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="s3KeyPrefix")
-    private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Input<String> s3KeyPrefix;
 
     public Input<String> getS3KeyPrefix() {
         return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
@@ -120,7 +120,6 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
             this.s3KeyPrefix = Input.ofNullable(s3KeyPrefix);
             return this;
         }
-
         public ReportDeliveryChannelPropertiesArgs build() {
             return new ReportDeliveryChannelPropertiesArgs(formats, s3BucketName, s3KeyPrefix);
         }

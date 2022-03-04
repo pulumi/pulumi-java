@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicy;
 import io.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicySchedule;
 import io.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicySnapshotProperties;
@@ -45,14 +45,14 @@ public final class ResourcePolicySnapshotSchedulePolicy {
      * Retention policy applied to snapshots created by this resource policy.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ResourcePolicySnapshotSchedulePolicyRetentionPolicy> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * Specifies the frequency for the operation, using the unix-cron format.
      * 
-     */
+    */
     public ResourcePolicySnapshotSchedulePolicySchedule getSchedule() {
         return this.schedule;
     }
@@ -60,7 +60,7 @@ public final class ResourcePolicySnapshotSchedulePolicy {
      * Properties with which the snapshots are created, such as labels.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ResourcePolicySnapshotSchedulePolicySnapshotProperties> getSnapshotProperties() {
         return Optional.ofNullable(this.snapshotProperties);
     }
@@ -103,7 +103,6 @@ public final class ResourcePolicySnapshotSchedulePolicy {
             this.snapshotProperties = snapshotProperties;
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicy build() {
             return new ResourcePolicySnapshotSchedulePolicy(retentionPolicy, schedule, snapshotProperties);
         }

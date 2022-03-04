@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,28 +47,28 @@ public final class SolutionPropertiesResponse {
     /**
      * The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
      * 
-     */
+    */
     public List<String> getContainedResources() {
         return this.containedResources == null ? List.of() : this.containedResources;
     }
     /**
      * The provisioning state for the solution.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
      * 
-     */
+    */
     public List<String> getReferencedResources() {
         return this.referencedResources == null ? List.of() : this.referencedResources;
     }
     /**
      * The azure resourceId for the workspace where the solution will be deployed/enabled.
      * 
-     */
+    */
     public String getWorkspaceResourceId() {
         return this.workspaceResourceId;
     }
@@ -118,7 +118,6 @@ public final class SolutionPropertiesResponse {
             this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId);
             return this;
         }
-
         public SolutionPropertiesResponse build() {
             return new SolutionPropertiesResponse(containedResources, provisioningState, referencedResources, workspaceResourceId);
         }

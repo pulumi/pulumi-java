@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.outputs.PlaybackKeyPairTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetPlaybackKeyPairResult {
     /**
      * Key-pair identifier.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Key-pair identifier.
      * 
-     */
+    */
     public Optional<String> getFingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
      * 
-     */
+    */
     public List<PlaybackKeyPairTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -99,7 +99,6 @@ public final class GetPlaybackKeyPairResult {
             this.tags = tags;
             return this;
         }
-
         public GetPlaybackKeyPairResult build() {
             return new GetPlaybackKeyPairResult(arn, fingerprint, tags);
         }

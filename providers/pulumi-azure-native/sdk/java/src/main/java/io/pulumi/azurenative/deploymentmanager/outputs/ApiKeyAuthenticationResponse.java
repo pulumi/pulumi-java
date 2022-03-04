@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,14 +46,14 @@ public final class ApiKeyAuthenticationResponse {
     /**
      * The location of the authentication key/value pair in the request.
      * 
-     */
+    */
     public String getIn() {
         return this.in;
     }
     /**
      * The key name of the authentication key/value pair.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -61,14 +61,14 @@ public final class ApiKeyAuthenticationResponse {
      * The authentication type.
      * Expected value is 'ApiKey'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The value of the authentication key/value pair.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -118,7 +118,6 @@ public final class ApiKeyAuthenticationResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ApiKeyAuthenticationResponse build() {
             return new ApiKeyAuthenticationResponse(in, name, type, value);
         }

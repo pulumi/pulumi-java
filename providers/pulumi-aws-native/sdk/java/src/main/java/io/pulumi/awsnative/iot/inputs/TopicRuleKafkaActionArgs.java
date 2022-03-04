@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
     public static final TopicRuleKafkaActionArgs Empty = new TopicRuleKafkaActionArgs();
 
     @InputImport(name="clientProperties", required=true)
-    private final Input<Object> clientProperties;
+      private final Input<Object> clientProperties;
 
     public Input<Object> getClientProperties() {
         return this.clientProperties;
     }
 
     @InputImport(name="destinationArn", required=true)
-    private final Input<String> destinationArn;
+      private final Input<String> destinationArn;
 
     public Input<String> getDestinationArn() {
         return this.destinationArn;
     }
 
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
     }
 
     @InputImport(name="partition")
-    private final @Nullable Input<String> partition;
+      private final @Nullable Input<String> partition;
 
     public Input<String> getPartition() {
         return this.partition == null ? Input.empty() : this.partition;
     }
 
     @InputImport(name="topic", required=true)
-    private final Input<String> topic;
+      private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;
@@ -148,7 +148,6 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }
-
         public TopicRuleKafkaActionArgs build() {
             return new TopicRuleKafkaActionArgs(clientProperties, destinationArn, key, partition, topic);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gameservices.outputs.GetGameServerDeploymentRolloutGameServerConfigOverride;
 import java.lang.String;
 import java.util.List;
@@ -55,7 +55,7 @@ public final class GetGameServerDeploymentRolloutResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -66,7 +66,7 @@ public final class GetGameServerDeploymentRolloutResult {
      * The ID of the project in which the resource belongs.
      * If it is not provided, the provider project is used.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
@@ -130,7 +130,6 @@ public final class GetGameServerDeploymentRolloutResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetGameServerDeploymentRolloutResult build() {
             return new GetGameServerDeploymentRolloutResult(defaultGameServerConfig, deploymentId, gameServerConfigOverrides, id, name, project);
         }

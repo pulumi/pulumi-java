@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-    private final @Nullable Input<String> cluster;
+      private final @Nullable Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
@@ -66,7 +66,6 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.cluster = Input.ofNullable(cluster);
             return this;
         }
-
         public GkeClusterArgs build() {
             return new GkeClusterArgs(cluster);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class KubernetesIPConfigurationResponse {
     /**
      * IP address of the Kubernetes node.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * Port of the Kubernetes node.
      * 
-     */
+    */
     public String getPort() {
         return this.port;
     }
@@ -76,7 +76,6 @@ public final class KubernetesIPConfigurationResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public KubernetesIPConfigurationResponse build() {
             return new KubernetesIPConfigurationResponse(ipAddress, port);
         }

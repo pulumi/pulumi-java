@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.inputs.GetJobCredentialArgs;
 import io.pulumi.azurenative.sql.outputs.GetJobCredentialResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobCredential {
-/**
- * A stored credential that can be used by a job to connect to target databases.
+    private GetJobCredential() {}
+    public interface BuilderApplicator {
+        public void apply(GetJobCredentialArgs.Builder a);
+    }
+    private static GetJobCredentialArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJobCredentialArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A stored credential that can be used by a job to connect to target databases.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A stored credential that can be used by a job to connect to target databases.
+     *
+     * A stored credential that can be used by a job to connect to target databases.
  * 
- */
+     */
+    public static CompletableFuture<GetJobCredentialResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A stored credential that can be used by a job to connect to target databases.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A stored credential that can be used by a job to connect to target databases.
+     * 
+     */
     public static CompletableFuture<GetJobCredentialResult> invokeAsync(GetJobCredentialArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobCredential", TypeShape.of(GetJobCredentialResult.class), args == null ? GetJobCredentialArgs.Empty : args, Utilities.withVersion(options));
     }

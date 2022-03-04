@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.MaterialResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SlsaBuilderResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SlsaMetadataResponse;
@@ -45,14 +45,14 @@ public final class SlsaProvenanceResponse {
     /**
      * required
      * 
-     */
+    */
     public SlsaBuilderResponse getBuilder() {
         return this.builder;
     }
     /**
      * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
      * 
-     */
+    */
     public List<MaterialResponse> getMaterials() {
         return this.materials;
     }
@@ -62,7 +62,7 @@ public final class SlsaProvenanceResponse {
     /**
      * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
      * 
-     */
+    */
     public SlsaRecipeResponse getRecipe() {
         return this.recipe;
     }
@@ -112,7 +112,6 @@ public final class SlsaProvenanceResponse {
             this.recipe = Objects.requireNonNull(recipe);
             return this;
         }
-
         public SlsaProvenanceResponse build() {
             return new SlsaProvenanceResponse(builder, materials, metadata, recipe);
         }

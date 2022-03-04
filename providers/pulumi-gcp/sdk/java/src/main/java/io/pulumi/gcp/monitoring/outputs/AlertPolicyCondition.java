@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionAbsent;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionMatchedLog;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionMonitoringQueryLanguage;
@@ -84,7 +84,7 @@ public final class AlertPolicyCondition {
      * continues to receive new data points.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AlertPolicyConditionConditionAbsent> getConditionAbsent() {
         return Optional.ofNullable(this.conditionAbsent);
     }
@@ -93,7 +93,7 @@ public final class AlertPolicyCondition {
      * If set, no other conditions can be present.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AlertPolicyConditionConditionMatchedLog> getConditionMatchedLog() {
         return Optional.ofNullable(this.conditionMatchedLog);
     }
@@ -101,7 +101,7 @@ public final class AlertPolicyCondition {
      * A Monitoring Query Language query that outputs a boolean stream
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AlertPolicyConditionConditionMonitoringQueryLanguage> getConditionMonitoringQueryLanguage() {
         return Optional.ofNullable(this.conditionMonitoringQueryLanguage);
     }
@@ -110,7 +110,7 @@ public final class AlertPolicyCondition {
      * threshold.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AlertPolicyConditionConditionThreshold> getConditionThreshold() {
         return Optional.ofNullable(this.conditionThreshold);
     }
@@ -121,7 +121,7 @@ public final class AlertPolicyCondition {
      * display name for multiple conditions in the same
      * policy.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
@@ -134,7 +134,7 @@ public final class AlertPolicyCondition {
      * the condition is created as part of a new or updated alerting
      * policy.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -198,7 +198,6 @@ public final class AlertPolicyCondition {
             this.name = name;
             return this;
         }
-
         public AlertPolicyCondition build() {
             return new AlertPolicyCondition(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
         }

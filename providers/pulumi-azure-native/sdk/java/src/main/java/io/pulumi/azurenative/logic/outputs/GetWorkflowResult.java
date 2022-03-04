@@ -9,7 +9,7 @@ import io.pulumi.azurenative.logic.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.logic.outputs.SkuResponse;
 import io.pulumi.azurenative.logic.outputs.WorkflowParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -160,133 +160,133 @@ public final class GetWorkflowResult {
     /**
      * The access control configuration.
      * 
-     */
+    */
     public Optional<FlowAccessControlConfigurationResponse> getAccessControl() {
         return Optional.ofNullable(this.accessControl);
     }
     /**
      * Gets the access endpoint.
      * 
-     */
+    */
     public String getAccessEndpoint() {
         return this.accessEndpoint;
     }
     /**
      * Gets the changed time.
      * 
-     */
+    */
     public String getChangedTime() {
         return this.changedTime;
     }
     /**
      * Gets the created time.
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The definition.
      * 
-     */
+    */
     public Optional<Object> getDefinition() {
         return Optional.ofNullable(this.definition);
     }
     /**
      * The endpoints configuration.
      * 
-     */
+    */
     public Optional<FlowEndpointsConfigurationResponse> getEndpointsConfiguration() {
         return Optional.ofNullable(this.endpointsConfiguration);
     }
     /**
      * The resource id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Managed service identity properties.
      * 
-     */
+    */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The integration account.
      * 
-     */
+    */
     public Optional<ResourceReferenceResponse> getIntegrationAccount() {
         return Optional.ofNullable(this.integrationAccount);
     }
     /**
      * The integration service environment.
      * 
-     */
+    */
     public Optional<ResourceReferenceResponse> getIntegrationServiceEnvironment() {
         return Optional.ofNullable(this.integrationServiceEnvironment);
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The parameters.
      * 
-     */
+    */
     public Map<String,WorkflowParameterResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Gets the provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * The state.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets the version.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -441,7 +441,6 @@ public final class GetWorkflowResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetWorkflowResult build() {
             return new GetWorkflowResult(accessControl, accessEndpoint, changedTime, createdTime, definition, endpointsConfiguration, id, identity, integrationAccount, integrationServiceEnvironment, location, name, parameters, provisioningState, sku, state, tags, type, version);
         }

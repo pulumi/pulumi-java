@@ -6,7 +6,7 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationTaskType;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationConnectorOperator;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTaskPropertiesMap;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -103,7 +103,6 @@ public final class IntegrationTask {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public IntegrationTask build() {
             return new IntegrationTask(connectorOperator, destinationField, sourceFields, taskProperties, taskType);
         }

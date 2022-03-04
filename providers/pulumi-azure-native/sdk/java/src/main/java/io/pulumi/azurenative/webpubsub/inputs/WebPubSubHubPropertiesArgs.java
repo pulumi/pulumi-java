@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.EventHandlerArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="anonymousConnectPolicy")
-    private final @Nullable Input<String> anonymousConnectPolicy;
+      private final @Nullable Input<String> anonymousConnectPolicy;
 
     public Input<String> getAnonymousConnectPolicy() {
         return this.anonymousConnectPolicy == null ? Input.empty() : this.anonymousConnectPolicy;
@@ -36,7 +36,7 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="eventHandlers")
-    private final @Nullable Input<List<EventHandlerArgs>> eventHandlers;
+      private final @Nullable Input<List<EventHandlerArgs>> eventHandlers;
 
     public Input<List<EventHandlerArgs>> getEventHandlers() {
         return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
@@ -95,7 +95,6 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
             this.eventHandlers = Input.ofNullable(eventHandlers);
             return this;
         }
-
         public WebPubSubHubPropertiesArgs build() {
             return new WebPubSubHubPropertiesArgs(anonymousConnectPolicy, eventHandlers);
         }

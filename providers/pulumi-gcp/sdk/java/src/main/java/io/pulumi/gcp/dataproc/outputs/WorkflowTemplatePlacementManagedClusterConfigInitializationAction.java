@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
     /**
      * Required. Cloud Storage URI of executable file.
      * 
-     */
+    */
     public Optional<String> getExecutableFile() {
         return Optional.ofNullable(this.executableFile);
     }
     /**
      * Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
      * 
-     */
+    */
     public Optional<String> getExecutionTimeout() {
         return Optional.ofNullable(this.executionTimeout);
     }
@@ -76,7 +76,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
             this.executionTimeout = executionTimeout;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigInitializationAction build() {
             return new WorkflowTemplatePlacementManagedClusterConfigInitializationAction(executableFile, executionTimeout);
         }

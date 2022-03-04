@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.inputs.InstanceReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="caCertificate")
-    private final @Nullable Input<String> caCertificate;
+      private final @Nullable Input<String> caCertificate;
 
     public Input<String> getCaCertificate() {
         return this.caCertificate == null ? Input.empty() : this.caCertificate;
@@ -35,7 +35,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientCertificate")
-    private final @Nullable Input<String> clientCertificate;
+      private final @Nullable Input<String> clientCertificate;
 
     public Input<String> getClientCertificate() {
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
@@ -46,7 +46,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientKey")
-    private final @Nullable Input<String> clientKey;
+      private final @Nullable Input<String> clientKey;
 
     public Input<String> getClientKey() {
         return this.clientKey == null ? Input.empty() : this.clientKey;
@@ -57,7 +57,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dumpFilePath")
-    private final @Nullable Input<String> dumpFilePath;
+      private final @Nullable Input<String> dumpFilePath;
 
     public Input<String> getDumpFilePath() {
         return this.dumpFilePath == null ? Input.empty() : this.dumpFilePath;
@@ -68,7 +68,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="hostPort")
-    private final @Nullable Input<String> hostPort;
+      private final @Nullable Input<String> hostPort;
 
     public Input<String> getHostPort() {
         return this.hostPort == null ? Input.empty() : this.hostPort;
@@ -79,7 +79,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -90,7 +90,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -101,7 +101,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceInstance")
-    private final @Nullable Input<InstanceReferenceArgs> sourceInstance;
+      private final @Nullable Input<InstanceReferenceArgs> sourceInstance;
 
     public Input<InstanceReferenceArgs> getSourceInstance() {
         return this.sourceInstance == null ? Input.empty() : this.sourceInstance;
@@ -112,7 +112,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -276,7 +276,6 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public OnPremisesConfigurationArgs build() {
             return new OnPremisesConfigurationArgs(caCertificate, clientCertificate, clientKey, dumpFilePath, hostPort, kind, password, sourceInstance, username);
         }

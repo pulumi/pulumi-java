@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class RegionAutoscalingPolicyIamPolicyArgs extends io.pulumi.resour
     public static final RegionAutoscalingPolicyIamPolicyArgs Empty = new RegionAutoscalingPolicyIamPolicyArgs();
 
     @InputImport(name="autoscalingPolicyId", required=true)
-    private final Input<String> autoscalingPolicyId;
+      private final Input<String> autoscalingPolicyId;
 
     public Input<String> getAutoscalingPolicyId() {
         return this.autoscalingPolicyId;
@@ -29,7 +29,7 @@ public final class RegionAutoscalingPolicyIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -40,21 +40,21 @@ public final class RegionAutoscalingPolicyIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="regionId", required=true)
-    private final Input<String> regionId;
+      private final Input<String> regionId;
 
     public Input<String> getRegionId() {
         return this.regionId;
@@ -65,7 +65,7 @@ public final class RegionAutoscalingPolicyIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -184,7 +184,6 @@ public final class RegionAutoscalingPolicyIamPolicyArgs extends io.pulumi.resour
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public RegionAutoscalingPolicyIamPolicyArgs build() {
             return new RegionAutoscalingPolicyIamPolicyArgs(autoscalingPolicyId, bindings, etag, project, regionId, version);
         }

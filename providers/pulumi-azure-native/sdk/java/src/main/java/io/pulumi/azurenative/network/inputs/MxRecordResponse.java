@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MxRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exchange")
-    private final @Nullable String exchange;
+      private final @Nullable String exchange;
 
     public Optional<String> getExchange() {
         return this.exchange == null ? Optional.empty() : Optional.ofNullable(this.exchange);
@@ -35,7 +35,7 @@ public final class MxRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preference")
-    private final @Nullable Integer preference;
+      private final @Nullable Integer preference;
 
     public Optional<Integer> getPreference() {
         return this.preference == null ? Optional.empty() : Optional.ofNullable(this.preference);
@@ -84,7 +84,6 @@ public final class MxRecordResponse extends io.pulumi.resources.InvokeArgs {
             this.preference = preference;
             return this;
         }
-
         public MxRecordResponse build() {
             return new MxRecordResponse(exchange, preference);
         }

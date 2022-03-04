@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.AzureStorageInfoValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -32,7 +32,7 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,AzureStorageInfoValueArgs>> properties;
+      private final @Nullable Input<Map<String,AzureStorageInfoValueArgs>> properties;
 
     public Input<Map<String,AzureStorageInfoValueArgs>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -54,7 +54,7 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+      private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -169,7 +169,6 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
-
         public WebAppAzureStorageAccountsSlotArgs build() {
             return new WebAppAzureStorageAccountsSlotArgs(kind, name, properties, resourceGroupName, slot);
         }

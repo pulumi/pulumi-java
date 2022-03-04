@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediaconnect.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class GetFlowVpcInterfaceResult {
     /**
      * IDs of the network interfaces created in customer's account by MediaConnect.
      * 
-     */
+    */
     public List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds == null ? List.of() : this.networkInterfaceIds;
     }
     /**
      * Role Arn MediaConnect can assumes to create ENIs in customer's account.
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * Security Group IDs to be used on ENI.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * Subnet must be in the AZ of the Flow
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -119,7 +119,6 @@ public final class GetFlowVpcInterfaceResult {
             this.subnetId = subnetId;
             return this;
         }
-
         public GetFlowVpcInterfaceResult build() {
             return new GetFlowVpcInterfaceResult(networkInterfaceIds, roleArn, securityGroupIds, subnetId);
         }

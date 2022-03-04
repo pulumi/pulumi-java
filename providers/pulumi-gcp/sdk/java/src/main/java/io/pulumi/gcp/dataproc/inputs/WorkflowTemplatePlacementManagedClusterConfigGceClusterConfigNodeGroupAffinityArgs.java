@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * 
      */
     @InputImport(name="nodeGroup", required=true)
-    private final Input<String> nodeGroup;
+      private final Input<String> nodeGroup;
 
     public Input<String> getNodeGroup() {
         return this.nodeGroup;
@@ -61,7 +61,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             this.nodeGroup = Input.of(Objects.requireNonNull(nodeGroup));
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs(nodeGroup);
         }

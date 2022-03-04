@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApigatewayBackendConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="googleServiceAccount")
-    private final @Nullable Input<String> googleServiceAccount;
+      private final @Nullable Input<String> googleServiceAccount;
 
     public Input<String> getGoogleServiceAccount() {
         return this.googleServiceAccount == null ? Input.empty() : this.googleServiceAccount;
@@ -66,7 +66,6 @@ public final class ApigatewayBackendConfigArgs extends io.pulumi.resources.Resou
             this.googleServiceAccount = Input.ofNullable(googleServiceAccount);
             return this;
         }
-
         public ApigatewayBackendConfigArgs build() {
             return new ApigatewayBackendConfigArgs(googleServiceAccount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
      * Type of the endpoint for the event subscription destination.
      * Expected value is 'StorageQueue'.
      * 
-     */
+    */
     public String getEndpointType() {
         return this.endpointType;
     }
     /**
      * The name of the Storage queue under a storage account that is the destination of an event subscription.
      * 
-     */
+    */
     public Optional<String> getQueueName() {
         return Optional.ofNullable(this.queueName);
     }
     /**
      * The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -99,7 +99,6 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public StorageQueueEventSubscriptionDestinationResponse build() {
             return new StorageQueueEventSubscriptionDestinationResponse(endpointType, queueName, resourceId);
         }

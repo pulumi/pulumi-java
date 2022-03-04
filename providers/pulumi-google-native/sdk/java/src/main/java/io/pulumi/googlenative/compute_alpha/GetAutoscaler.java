@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAutoscaler {
-/**
- * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
+    private GetAutoscaler() {}
+    public interface BuilderApplicator {
+        public void apply(GetAutoscalerArgs.Builder a);
+    }
+    private static GetAutoscalerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAutoscalerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetAutoscalerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetAutoscalerResult> invokeAsync(GetAutoscalerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getAutoscaler", TypeShape.of(GetAutoscalerResult.class), args == null ? GetAutoscalerArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="checksum", required=true)
-    private final List<String> checksum;
+      private final List<String> checksum;
 
     public List<String> getChecksum() {
         return this.checksum;
@@ -33,7 +33,7 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileType", required=true)
-    private final String fileType;
+      private final String fileType;
 
     public String getFileType() {
         return this.fileType;
@@ -44,7 +44,7 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -103,7 +103,6 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public FileNoteResponse build() {
             return new FileNoteResponse(checksum, fileType, title);
         }

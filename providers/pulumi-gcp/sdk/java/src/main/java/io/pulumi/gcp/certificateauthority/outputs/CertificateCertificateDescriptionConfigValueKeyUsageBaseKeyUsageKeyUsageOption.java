@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,63 +82,63 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     /**
      * The key may be used to sign certificates.
      * 
-     */
+    */
     public Optional<Boolean> getCertSign() {
         return Optional.ofNullable(this.certSign);
     }
     /**
      * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
      * 
-     */
+    */
     public Optional<Boolean> getContentCommitment() {
         return Optional.ofNullable(this.contentCommitment);
     }
     /**
      * The key may be used sign certificate revocation lists.
      * 
-     */
+    */
     public Optional<Boolean> getCrlSign() {
         return Optional.ofNullable(this.crlSign);
     }
     /**
      * The key may be used to encipher data.
      * 
-     */
+    */
     public Optional<Boolean> getDataEncipherment() {
         return Optional.ofNullable(this.dataEncipherment);
     }
     /**
      * The key may be used to decipher only.
      * 
-     */
+    */
     public Optional<Boolean> getDecipherOnly() {
         return Optional.ofNullable(this.decipherOnly);
     }
     /**
      * The key may be used for digital signatures.
      * 
-     */
+    */
     public Optional<Boolean> getDigitalSignature() {
         return Optional.ofNullable(this.digitalSignature);
     }
     /**
      * The key may be used to encipher only.
      * 
-     */
+    */
     public Optional<Boolean> getEncipherOnly() {
         return Optional.ofNullable(this.encipherOnly);
     }
     /**
      * The key may be used in a key agreement protocol.
      * 
-     */
+    */
     public Optional<Boolean> getKeyAgreement() {
         return Optional.ofNullable(this.keyAgreement);
     }
     /**
      * The key may be used to encipher other keys.
      * 
-     */
+    */
     public Optional<Boolean> getKeyEncipherment() {
         return Optional.ofNullable(this.keyEncipherment);
     }
@@ -223,7 +223,6 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
             this.keyEncipherment = keyEncipherment;
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }

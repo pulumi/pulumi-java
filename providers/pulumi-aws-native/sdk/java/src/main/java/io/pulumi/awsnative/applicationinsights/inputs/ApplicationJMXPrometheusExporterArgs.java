@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="hostPort")
-    private final @Nullable Input<String> hostPort;
+      private final @Nullable Input<String> hostPort;
 
     public Input<String> getHostPort() {
         return this.hostPort == null ? Input.empty() : this.hostPort;
@@ -34,7 +34,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="jMXURL")
-    private final @Nullable Input<String> jMXURL;
+      private final @Nullable Input<String> jMXURL;
 
     public Input<String> getJMXURL() {
         return this.jMXURL == null ? Input.empty() : this.jMXURL;
@@ -45,7 +45,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="prometheusPort")
-    private final @Nullable Input<String> prometheusPort;
+      private final @Nullable Input<String> prometheusPort;
 
     public Input<String> getPrometheusPort() {
         return this.prometheusPort == null ? Input.empty() : this.prometheusPort;
@@ -119,7 +119,6 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
             this.prometheusPort = Input.ofNullable(prometheusPort);
             return this;
         }
-
         public ApplicationJMXPrometheusExporterArgs build() {
             return new ApplicationJMXPrometheusExporterArgs(hostPort, jMXURL, prometheusPort);
         }

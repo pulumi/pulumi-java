@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<Integer> code;
+      private final @Nullable Input<Integer> code;
 
     public Input<Integer> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -37,7 +37,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="details")
-    private final @Nullable Input<List<Map<String,String>>> details;
+      private final @Nullable Input<List<Map<String,String>>> details;
 
     public Input<List<Map<String,String>>> getDetails() {
         return this.details == null ? Input.empty() : this.details;
@@ -48,7 +48,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -122,7 +122,6 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             this.message = Input.ofNullable(message);
             return this;
         }
-
         public StatusArgs build() {
             return new StatusArgs(code, details, message);
         }

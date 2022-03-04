@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayClientAuthConfigurationResponse {
     /**
      * Verify client certificate issuer name on the application gateway.
      * 
-     */
+    */
     public Optional<Boolean> getVerifyClientCertIssuerDN() {
         return Optional.ofNullable(this.verifyClientCertIssuerDN);
     }
@@ -54,7 +54,6 @@ public final class ApplicationGatewayClientAuthConfigurationResponse {
             this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
             return this;
         }
-
         public ApplicationGatewayClientAuthConfigurationResponse build() {
             return new ApplicationGatewayClientAuthConfigurationResponse(verifyClientCertIssuerDN);
         }

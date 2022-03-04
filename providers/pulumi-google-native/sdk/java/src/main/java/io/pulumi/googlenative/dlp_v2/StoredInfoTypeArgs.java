@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StoredInfoTypeConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
+      private final Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
 
     public Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> getConfig() {
         return this.config;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -45,7 +45,7 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storedInfoTypeId")
-    private final @Nullable Input<String> storedInfoTypeId;
+      private final @Nullable Input<String> storedInfoTypeId;
 
     public Input<String> getStoredInfoTypeId() {
         return this.storedInfoTypeId == null ? Input.empty() : this.storedInfoTypeId;
@@ -134,7 +134,6 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.storedInfoTypeId = Input.ofNullable(storedInfoTypeId);
             return this;
         }
-
         public StoredInfoTypeArgs build() {
             return new StoredInfoTypeArgs(config, location, project, storedInfoTypeId);
         }

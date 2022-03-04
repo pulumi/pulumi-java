@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class AvailabilityInformationResponse {
     /**
      * Current availability stage of the product. Availability stage
      * 
-     */
+    */
     public String getAvailabilityStage() {
         return this.availabilityStage;
     }
     /**
      * Reason why the product is disabled.
      * 
-     */
+    */
     public String getDisabledReason() {
         return this.disabledReason;
     }
     /**
      * Message for why the product is disabled.
      * 
-     */
+    */
     public String getDisabledReasonMessage() {
         return this.disabledReasonMessage;
     }
@@ -95,7 +95,6 @@ public final class AvailabilityInformationResponse {
             this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
             return this;
         }
-
         public AvailabilityInformationResponse build() {
             return new AvailabilityInformationResponse(availabilityStage, disabledReason, disabledReasonMessage);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterBootstrapAccount")
-    private final @Nullable Input<String> clusterBootstrapAccount;
+      private final @Nullable Input<String> clusterBootstrapAccount;
 
     public Input<String> getClusterBootstrapAccount() {
         return this.clusterBootstrapAccount == null ? Input.empty() : this.clusterBootstrapAccount;
@@ -34,7 +34,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterOperatorAccount")
-    private final @Nullable Input<String> clusterOperatorAccount;
+      private final @Nullable Input<String> clusterOperatorAccount;
 
     public Input<String> getClusterOperatorAccount() {
         return this.clusterOperatorAccount == null ? Input.empty() : this.clusterOperatorAccount;
@@ -45,7 +45,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="domainFqdn")
-    private final @Nullable Input<String> domainFqdn;
+      private final @Nullable Input<String> domainFqdn;
 
     public Input<String> getDomainFqdn() {
         return this.domainFqdn == null ? Input.empty() : this.domainFqdn;
@@ -56,7 +56,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fileShareWitnessPath")
-    private final @Nullable Input<String> fileShareWitnessPath;
+      private final @Nullable Input<String> fileShareWitnessPath;
 
     public Input<String> getFileShareWitnessPath() {
         return this.fileShareWitnessPath == null ? Input.empty() : this.fileShareWitnessPath;
@@ -67,7 +67,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ouPath")
-    private final @Nullable Input<String> ouPath;
+      private final @Nullable Input<String> ouPath;
 
     public Input<String> getOuPath() {
         return this.ouPath == null ? Input.empty() : this.ouPath;
@@ -78,7 +78,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlServiceAccount")
-    private final @Nullable Input<String> sqlServiceAccount;
+      private final @Nullable Input<String> sqlServiceAccount;
 
     public Input<String> getSqlServiceAccount() {
         return this.sqlServiceAccount == null ? Input.empty() : this.sqlServiceAccount;
@@ -89,7 +89,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageAccountPrimaryKey")
-    private final @Nullable Input<String> storageAccountPrimaryKey;
+      private final @Nullable Input<String> storageAccountPrimaryKey;
 
     public Input<String> getStorageAccountPrimaryKey() {
         return this.storageAccountPrimaryKey == null ? Input.empty() : this.storageAccountPrimaryKey;
@@ -100,7 +100,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageAccountUrl")
-    private final @Nullable Input<String> storageAccountUrl;
+      private final @Nullable Input<String> storageAccountUrl;
 
     public Input<String> getStorageAccountUrl() {
         return this.storageAccountUrl == null ? Input.empty() : this.storageAccountUrl;
@@ -249,7 +249,6 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
             this.storageAccountUrl = Input.ofNullable(storageAccountUrl);
             return this;
         }
-
         public WsfcDomainProfileArgs build() {
             return new WsfcDomainProfileArgs(clusterBootstrapAccount, clusterOperatorAccount, domainFqdn, fileShareWitnessPath, ouPath, sqlServiceAccount, storageAccountPrimaryKey, storageAccountUrl);
         }

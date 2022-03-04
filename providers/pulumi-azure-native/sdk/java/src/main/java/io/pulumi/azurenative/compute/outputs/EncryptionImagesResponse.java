@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DataDiskImageEncryptionResponse;
 import io.pulumi.azurenative.compute.outputs.OSDiskImageEncryptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class EncryptionImagesResponse {
     /**
      * A list of encryption specifications for data disk images.
      * 
-     */
+    */
     public List<DataDiskImageEncryptionResponse> getDataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
     }
     /**
      * Contains encryption settings for an OS disk image.
      * 
-     */
+    */
     public Optional<OSDiskImageEncryptionResponse> getOsDiskImage() {
         return Optional.ofNullable(this.osDiskImage);
     }
@@ -78,7 +78,6 @@ public final class EncryptionImagesResponse {
             this.osDiskImage = osDiskImage;
             return this;
         }
-
         public EncryptionImagesResponse build() {
             return new EncryptionImagesResponse(dataDiskImages, osDiskImage);
         }

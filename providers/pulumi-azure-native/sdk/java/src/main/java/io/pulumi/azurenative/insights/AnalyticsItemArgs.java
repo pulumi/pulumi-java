@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.enums.ItemType;
 import io.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentAnalyticsItemPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -35,7 +35,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -46,7 +46,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overrideItem")
-    private final @Nullable Input<Boolean> overrideItem;
+      private final @Nullable Input<Boolean> overrideItem;
 
     public Input<Boolean> getOverrideItem() {
         return this.overrideItem == null ? Input.empty() : this.overrideItem;
@@ -68,7 +68,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
+      private final @Nullable Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
 
     public Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -79,7 +79,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -101,7 +101,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<Either<String,ItemScope>> scope;
+      private final @Nullable Input<Either<String,ItemScope>> scope;
 
     public Input<Either<String,ItemScope>> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -112,7 +112,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopePath", required=true)
-    private final Input<String> scopePath;
+      private final Input<String> scopePath;
 
     public Input<String> getScopePath() {
         return this.scopePath;
@@ -123,7 +123,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ItemType>> type;
+      private final @Nullable Input<Either<String,ItemType>> type;
 
     public Input<Either<String,ItemType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -302,7 +302,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public AnalyticsItemArgs build() {
             return new AnalyticsItemArgs(content, id, name, overrideItem, properties, resourceGroupName, resourceName, scope, scopePath, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class MigrationProgressResponse {
     /**
      * Completion Percentage
      * 
-     */
+    */
     public Optional<Double> getCompletionPercentage() {
         return Optional.ofNullable(this.completionPercentage);
     }
     /**
      * Progress Message
      * 
-     */
+    */
     public Optional<String> getProgressMessage() {
         return Optional.ofNullable(this.progressMessage);
     }
@@ -77,7 +77,6 @@ public final class MigrationProgressResponse {
             this.progressMessage = progressMessage;
             return this;
         }
-
         public MigrationProgressResponse build() {
             return new MigrationProgressResponse(completionPercentage, progressMessage);
         }

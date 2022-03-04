@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.GeoBackupPolicyState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -31,7 +31,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="geoBackupPolicyName")
-    private final @Nullable Input<String> geoBackupPolicyName;
+      private final @Nullable Input<String> geoBackupPolicyName;
 
     public Input<String> getGeoBackupPolicyName() {
         return this.geoBackupPolicyName == null ? Input.empty() : this.geoBackupPolicyName;
@@ -42,7 +42,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -64,7 +64,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<GeoBackupPolicyState> state;
+      private final Input<GeoBackupPolicyState> state;
 
     public Input<GeoBackupPolicyState> getState() {
         return this.state;
@@ -168,7 +168,6 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
-
         public GeoBackupPolicyArgs build() {
             return new GeoBackupPolicyArgs(databaseName, geoBackupPolicyName, resourceGroupName, serverName, state);
         }

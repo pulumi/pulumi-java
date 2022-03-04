@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -84,63 +84,63 @@ public final class GetWorkloadGroupResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The workload group importance level.
      * 
-     */
+    */
     public Optional<String> getImportance() {
         return Optional.ofNullable(this.importance);
     }
     /**
      * The workload group cap percentage resource.
      * 
-     */
+    */
     public Integer getMaxResourcePercent() {
         return this.maxResourcePercent;
     }
     /**
      * The workload group request maximum grant percentage.
      * 
-     */
+    */
     public Optional<Double> getMaxResourcePercentPerRequest() {
         return Optional.ofNullable(this.maxResourcePercentPerRequest);
     }
     /**
      * The workload group minimum percentage resource.
      * 
-     */
+    */
     public Integer getMinResourcePercent() {
         return this.minResourcePercent;
     }
     /**
      * The workload group request minimum grant percentage.
      * 
-     */
+    */
     public Double getMinResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The workload group query execution timeout.
      * 
-     */
+    */
     public Optional<Integer> getQueryExecutionTimeout() {
         return Optional.ofNullable(this.queryExecutionTimeout);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -225,7 +225,6 @@ public final class GetWorkloadGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadGroupResult build() {
             return new GetWorkloadGroupResult(id, importance, maxResourcePercent, maxResourcePercentPerRequest, minResourcePercent, minResourcePercentPerRequest, name, queryExecutionTimeout, type);
         }

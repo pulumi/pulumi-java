@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringConfigResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,35 +56,35 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
     /**
      * The Microsoft peering configuration.
      * 
-     */
+    */
     public Optional<ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
         return Optional.ofNullable(this.microsoftPeeringConfig);
     }
     /**
      * The primary address prefix.
      * 
-     */
+    */
     public Optional<String> getPrimaryPeerAddressPrefix() {
         return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
     /**
      * The reference to the RouteFilter resource.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getRouteFilter() {
         return Optional.ofNullable(this.routeFilter);
     }
     /**
      * The secondary address prefix.
      * 
-     */
+    */
     public Optional<String> getSecondaryPeerAddressPrefix() {
         return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
     /**
      * The state of peering.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -141,7 +141,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
             this.state = state;
             return this;
         }
-
         public Ipv6ExpressRouteCircuitPeeringConfigResponse build() {
             return new Ipv6ExpressRouteCircuitPeeringConfigResponse(microsoftPeeringConfig, primaryPeerAddressPrefix, routeFilter, secondaryPeerAddressPrefix, state);
         }

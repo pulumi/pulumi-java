@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ImportFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+      private final String content;
 
     public String getContent() {
         return this.content;
@@ -28,7 +28,7 @@ public final class ImportFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,6 @@ public final class ImportFileResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ImportFileResponse build() {
             return new ImportFileResponse(content, name);
         }

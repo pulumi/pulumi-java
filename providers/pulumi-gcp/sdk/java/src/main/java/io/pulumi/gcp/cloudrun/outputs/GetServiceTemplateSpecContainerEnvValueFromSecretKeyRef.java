@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,7 +30,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
     /**
      * The name of the Cloud Run Service.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -66,7 +66,6 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef build() {
             return new GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef(key, name);
         }

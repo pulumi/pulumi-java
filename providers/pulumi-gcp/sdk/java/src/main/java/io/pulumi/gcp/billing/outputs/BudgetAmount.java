@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.billing.outputs.BudgetAmountSpecifiedAmount;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -43,7 +43,7 @@ public final class BudgetAmount {
      * Boolean. Set value to true to use. Do not set to false, instead
      * use the `specified_amount` block.
      * 
-     */
+    */
     public Optional<Boolean> getLastPeriodAmount() {
         return Optional.ofNullable(this.lastPeriodAmount);
     }
@@ -53,7 +53,7 @@ public final class BudgetAmount {
      * billing account. The currencyCode is provided on output.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<BudgetAmountSpecifiedAmount> getSpecifiedAmount() {
         return Optional.ofNullable(this.specifiedAmount);
     }
@@ -89,7 +89,6 @@ public final class BudgetAmount {
             this.specifiedAmount = specifiedAmount;
             return this;
         }
-
         public BudgetAmount build() {
             return new BudgetAmount(lastPeriodAmount, specifiedAmount);
         }

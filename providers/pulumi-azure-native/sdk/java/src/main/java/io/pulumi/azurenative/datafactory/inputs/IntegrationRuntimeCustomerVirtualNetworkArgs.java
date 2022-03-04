@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IntegrationRuntimeCustomerVirtualNetworkArgs extends io.pulum
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -66,7 +66,6 @@ public final class IntegrationRuntimeCustomerVirtualNetworkArgs extends io.pulum
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
-
         public IntegrationRuntimeCustomerVirtualNetworkArgs build() {
             return new IntegrationRuntimeCustomerVirtualNetworkArgs(subnetId);
         }

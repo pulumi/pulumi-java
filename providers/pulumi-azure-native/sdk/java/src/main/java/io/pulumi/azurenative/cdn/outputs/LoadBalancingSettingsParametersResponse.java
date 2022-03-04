@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class LoadBalancingSettingsParametersResponse {
     /**
      * The additional latency in milliseconds for probes to fall into the lowest latency bucket
      * 
-     */
+    */
     public Optional<Integer> getAdditionalLatencyInMilliseconds() {
         return Optional.ofNullable(this.additionalLatencyInMilliseconds);
     }
     /**
      * The number of samples to consider for load balancing decisions
      * 
-     */
+    */
     public Optional<Integer> getSampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }
     /**
      * The number of samples within the sample period that must succeed
      * 
-     */
+    */
     public Optional<Integer> getSuccessfulSamplesRequired() {
         return Optional.ofNullable(this.successfulSamplesRequired);
     }
@@ -97,7 +97,6 @@ public final class LoadBalancingSettingsParametersResponse {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
-
         public LoadBalancingSettingsParametersResponse build() {
             return new LoadBalancingSettingsParametersResponse(additionalLatencyInMilliseconds, sampleSize, successfulSamplesRequired);
         }

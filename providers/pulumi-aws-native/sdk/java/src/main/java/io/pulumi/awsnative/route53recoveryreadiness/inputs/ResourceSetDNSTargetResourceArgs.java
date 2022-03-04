@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTargetResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -35,7 +35,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hostedZoneArn")
-    private final @Nullable Input<String> hostedZoneArn;
+      private final @Nullable Input<String> hostedZoneArn;
 
     public Input<String> getHostedZoneArn() {
         return this.hostedZoneArn == null ? Input.empty() : this.hostedZoneArn;
@@ -46,7 +46,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recordSetId")
-    private final @Nullable Input<String> recordSetId;
+      private final @Nullable Input<String> recordSetId;
 
     public Input<String> getRecordSetId() {
         return this.recordSetId == null ? Input.empty() : this.recordSetId;
@@ -57,14 +57,14 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recordType")
-    private final @Nullable Input<String> recordType;
+      private final @Nullable Input<String> recordType;
 
     public Input<String> getRecordType() {
         return this.recordType == null ? Input.empty() : this.recordType;
     }
 
     @InputImport(name="targetResource")
-    private final @Nullable Input<ResourceSetTargetResourceArgs> targetResource;
+      private final @Nullable Input<ResourceSetTargetResourceArgs> targetResource;
 
     public Input<ResourceSetTargetResourceArgs> getTargetResource() {
         return this.targetResource == null ? Input.empty() : this.targetResource;
@@ -168,7 +168,6 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
             this.targetResource = Input.ofNullable(targetResource);
             return this;
         }
-
         public ResourceSetDNSTargetResourceArgs build() {
             return new ResourceSetDNSTargetResourceArgs(domainName, hostedZoneArn, recordSetId, recordType, targetResource);
         }

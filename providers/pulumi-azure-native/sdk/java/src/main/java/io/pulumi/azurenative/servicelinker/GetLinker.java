@@ -6,21 +6,41 @@ package io.pulumi.azurenative.servicelinker;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicelinker.inputs.GetLinkerArgs;
 import io.pulumi.azurenative.servicelinker.outputs.GetLinkerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinker {
-/**
- * Linker of source and target resource
+    private GetLinker() {}
+    public interface BuilderApplicator {
+        public void apply(GetLinkerArgs.Builder a);
+    }
+    private static GetLinkerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLinkerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Linker of source and target resource
  * API Version: 2021-11-01-preview.
  * 
- *
- * Linker of source and target resource
+     *
+     * Linker of source and target resource
  * 
- */
+     */
+    public static CompletableFuture<GetLinkerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Linker of source and target resource
+     * API Version: 2021-11-01-preview.
+     * 
+     *
+         * Linker of source and target resource
+     * 
+     */
     public static CompletableFuture<GetLinkerResult> invokeAsync(GetLinkerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicelinker:getLinker", TypeShape.of(GetLinkerResult.class), args == null ? GetLinkerArgs.Empty : args, Utilities.withVersion(options));
     }

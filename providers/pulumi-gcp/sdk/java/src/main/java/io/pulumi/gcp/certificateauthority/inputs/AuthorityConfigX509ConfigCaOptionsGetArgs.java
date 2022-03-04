@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AuthorityConfigX509ConfigCaOptionsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="isCa", required=true)
-    private final Input<Boolean> isCa;
+      private final Input<Boolean> isCa;
 
     public Input<Boolean> getIsCa() {
         return this.isCa;
@@ -32,7 +32,7 @@ public final class AuthorityConfigX509ConfigCaOptionsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxIssuerPathLength")
-    private final @Nullable Input<Integer> maxIssuerPathLength;
+      private final @Nullable Input<Integer> maxIssuerPathLength;
 
     public Input<Integer> getMaxIssuerPathLength() {
         return this.maxIssuerPathLength == null ? Input.empty() : this.maxIssuerPathLength;
@@ -44,7 +44,7 @@ public final class AuthorityConfigX509ConfigCaOptionsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="nonCa")
-    private final @Nullable Input<Boolean> nonCa;
+      private final @Nullable Input<Boolean> nonCa;
 
     public Input<Boolean> getNonCa() {
         return this.nonCa == null ? Input.empty() : this.nonCa;
@@ -57,7 +57,7 @@ public final class AuthorityConfigX509ConfigCaOptionsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="zeroMaxIssuerPathLength")
-    private final @Nullable Input<Boolean> zeroMaxIssuerPathLength;
+      private final @Nullable Input<Boolean> zeroMaxIssuerPathLength;
 
     public Input<Boolean> getZeroMaxIssuerPathLength() {
         return this.zeroMaxIssuerPathLength == null ? Input.empty() : this.zeroMaxIssuerPathLength;
@@ -146,7 +146,6 @@ public final class AuthorityConfigX509ConfigCaOptionsGetArgs extends io.pulumi.r
             this.zeroMaxIssuerPathLength = Input.ofNullable(zeroMaxIssuerPathLength);
             return this;
         }
-
         public AuthorityConfigX509ConfigCaOptionsGetArgs build() {
             return new AuthorityConfigX509ConfigCaOptionsGetArgs(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);
         }

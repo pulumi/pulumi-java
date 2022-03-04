@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetProvisioningTemplateArgs extends io.pulumi.resources.Invok
     public static final GetProvisioningTemplateArgs Empty = new GetProvisioningTemplateArgs();
 
     @InputImport(name="templateName", required=true)
-    private final String templateName;
+      private final String templateName;
 
     public String getTemplateName() {
         return this.templateName;
@@ -51,7 +51,6 @@ public final class GetProvisioningTemplateArgs extends io.pulumi.resources.Invok
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }
-
         public GetProvisioningTemplateArgs build() {
             return new GetProvisioningTemplateArgs(templateName);
         }

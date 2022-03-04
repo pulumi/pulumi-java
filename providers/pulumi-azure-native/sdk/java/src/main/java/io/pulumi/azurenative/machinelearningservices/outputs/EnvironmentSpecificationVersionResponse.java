@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.DockerBuildResponse
 import io.pulumi.azurenative.machinelearningservices.outputs.DockerImageResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.InferenceContainerPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -84,21 +84,21 @@ public final class EnvironmentSpecificationVersionResponse {
      * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
      * <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
      * 
-     */
+    */
     public Optional<String> getCondaFile() {
         return Optional.ofNullable(this.condaFile);
     }
     /**
      * The asset description text.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Configuration settings for Docker.
      * 
-     */
+    */
     public Optional<Either<DockerBuildResponse,DockerImageResponse>> getDocker() {
         return Optional.ofNullable(this.docker);
     }
@@ -106,35 +106,35 @@ public final class EnvironmentSpecificationVersionResponse {
      * Environment specification is either user managed or curated by the Azure ML service
      * <see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
      * 
-     */
+    */
     public String getEnvironmentSpecificationType() {
         return this.environmentSpecificationType;
     }
     /**
      * Defines configuration specific to inference.
      * 
-     */
+    */
     public Optional<InferenceContainerPropertiesResponse> getInferenceContainerProperties() {
         return Optional.ofNullable(this.inferenceContainerProperties);
     }
     /**
      * If the name version are system generated (anonymous registration).
      * 
-     */
+    */
     public Optional<Boolean> getIsAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
     /**
      * The asset property dictionary.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
@@ -212,7 +212,6 @@ public final class EnvironmentSpecificationVersionResponse {
             this.tags = tags;
             return this;
         }
-
         public EnvironmentSpecificationVersionResponse build() {
             return new EnvironmentSpecificationVersionResponse(condaFile, description, docker, environmentSpecificationType, inferenceContainerProperties, isAnonymous, properties, tags);
         }

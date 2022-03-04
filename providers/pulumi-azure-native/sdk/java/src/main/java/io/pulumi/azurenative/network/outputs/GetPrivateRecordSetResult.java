@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.PtrRecordResponse;
 import io.pulumi.azurenative.network.outputs.SoaRecordResponse;
 import io.pulumi.azurenative.network.outputs.SrvRecordResponse;
 import io.pulumi.azurenative.network.outputs.TxtRecordResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -143,112 +143,112 @@ public final class GetPrivateRecordSetResult {
     /**
      * The list of A records in the record set.
      * 
-     */
+    */
     public List<ARecordResponse> getARecords() {
         return this.aRecords == null ? List.of() : this.aRecords;
     }
     /**
      * The list of AAAA records in the record set.
      * 
-     */
+    */
     public List<AaaaRecordResponse> getAaaaRecords() {
         return this.aaaaRecords == null ? List.of() : this.aaaaRecords;
     }
     /**
      * The CNAME record in the record set.
      * 
-     */
+    */
     public Optional<CnameRecordResponse> getCnameRecord() {
         return Optional.ofNullable(this.cnameRecord);
     }
     /**
      * The ETag of the record set.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified domain name of the record set.
      * 
-     */
+    */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Is the record set auto-registered in the Private DNS zone through a virtual network link?
      * 
-     */
+    */
     public Boolean getIsAutoRegistered() {
         return this.isAutoRegistered;
     }
     /**
      * The metadata attached to the record set.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The list of MX records in the record set.
      * 
-     */
+    */
     public List<MxRecordResponse> getMxRecords() {
         return this.mxRecords == null ? List.of() : this.mxRecords;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of PTR records in the record set.
      * 
-     */
+    */
     public List<PtrRecordResponse> getPtrRecords() {
         return this.ptrRecords == null ? List.of() : this.ptrRecords;
     }
     /**
      * The SOA record in the record set.
      * 
-     */
+    */
     public Optional<SoaRecordResponse> getSoaRecord() {
         return Optional.ofNullable(this.soaRecord);
     }
     /**
      * The list of SRV records in the record set.
      * 
-     */
+    */
     public List<SrvRecordResponse> getSrvRecords() {
         return this.srvRecords == null ? List.of() : this.srvRecords;
     }
     /**
      * The TTL (time-to-live) of the records in the record set.
      * 
-     */
+    */
     public Optional<Double> getTtl() {
         return Optional.ofNullable(this.ttl);
     }
     /**
      * The list of TXT records in the record set.
      * 
-     */
+    */
     public List<TxtRecordResponse> getTxtRecords() {
         return this.txtRecords == null ? List.of() : this.txtRecords;
     }
     /**
      * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -382,7 +382,6 @@ public final class GetPrivateRecordSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateRecordSetResult build() {
             return new GetPrivateRecordSetResult(aRecords, aaaaRecords, cnameRecord, etag, fqdn, id, isAutoRegistered, metadata, mxRecords, name, ptrRecords, soaRecord, srvRecords, ttl, txtRecords, type);
         }

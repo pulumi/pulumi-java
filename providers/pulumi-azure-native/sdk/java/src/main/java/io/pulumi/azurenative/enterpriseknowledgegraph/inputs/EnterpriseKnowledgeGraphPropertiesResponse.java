@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.enterpriseknowledgegraph.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Object metadata;
+      private final @Nullable Object metadata;
 
     public Optional<Object> getMetadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
@@ -46,7 +46,7 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+      private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -105,7 +105,6 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends io.pulumi.
             this.provisioningState = provisioningState;
             return this;
         }
-
         public EnterpriseKnowledgeGraphPropertiesResponse build() {
             return new EnterpriseKnowledgeGraphPropertiesResponse(description, metadata, provisioningState);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class OpenIdConnectConfigResponse {
     /**
      * The endpoint to be used to make an authorization request.
      * 
-     */
+    */
     public Optional<String> getAuthorizationEndpoint() {
         return Optional.ofNullable(this.authorizationEndpoint);
     }
     /**
      * The endpoint that provides the keys necessary to validate the token.
      * 
-     */
+    */
     public Optional<String> getCertificationUri() {
         return Optional.ofNullable(this.certificationUri);
     }
     /**
      * The endpoint that issues the token.
      * 
-     */
+    */
     public Optional<String> getIssuer() {
         return Optional.ofNullable(this.issuer);
     }
     /**
      * The endpoint to be used to request a token.
      * 
-     */
+    */
     public Optional<String> getTokenEndpoint() {
         return Optional.ofNullable(this.tokenEndpoint);
     }
     /**
      * The endpoint that contains all the configuration endpoints for the provider.
      * 
-     */
+    */
     public Optional<String> getWellKnownOpenIdConfiguration() {
         return Optional.ofNullable(this.wellKnownOpenIdConfiguration);
     }
@@ -139,7 +139,6 @@ public final class OpenIdConnectConfigResponse {
             this.wellKnownOpenIdConfiguration = wellKnownOpenIdConfiguration;
             return this;
         }
-
         public OpenIdConnectConfigResponse build() {
             return new OpenIdConnectConfigResponse(authorizationEndpoint, certificationUri, issuer, tokenEndpoint, wellKnownOpenIdConfiguration);
         }

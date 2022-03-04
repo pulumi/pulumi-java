@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class BuildArgumentResponse {
     /**
      * Flag to indicate whether the argument represents a secret and want to be removed from build logs.
      * 
-     */
+    */
     public Optional<Boolean> getIsSecret() {
         return Optional.ofNullable(this.isSecret);
     }
     /**
      * The name of the argument.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the argument.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The value of the argument.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -119,7 +119,6 @@ public final class BuildArgumentResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BuildArgumentResponse build() {
             return new BuildArgumentResponse(isSecret, name, type, value);
         }

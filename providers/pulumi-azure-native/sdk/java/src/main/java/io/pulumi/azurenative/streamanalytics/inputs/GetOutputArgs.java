@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetOutputArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final String jobName;
+      private final String jobName;
 
     public String getJobName() {
         return this.jobName;
@@ -28,7 +28,7 @@ public final class GetOutputArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputName", required=true)
-    private final String outputName;
+      private final String outputName;
 
     public String getOutputName() {
         return this.outputName;
@@ -39,7 +39,7 @@ public final class GetOutputArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetOutputArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetOutputArgs build() {
             return new GetOutputArgs(jobName, outputName, resourceGroupName);
         }

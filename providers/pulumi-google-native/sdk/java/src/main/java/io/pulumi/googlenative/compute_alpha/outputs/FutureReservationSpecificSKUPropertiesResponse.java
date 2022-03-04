@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AllocationSpecificSKUAllocationReservedInstancePropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
     /**
      * Properties of the SKU instances being reserved.
      * 
-     */
+    */
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse getInstanceProperties() {
         return this.instanceProperties;
     }
     /**
      * Total number of instances for which capacity assurance is requested at a future time period.
      * 
-     */
+    */
     public String getTotalCount() {
         return this.totalCount;
     }
@@ -75,7 +75,6 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public FutureReservationSpecificSKUPropertiesResponse build() {
             return new FutureReservationSpecificSKUPropertiesResponse(instanceProperties, totalCount);
         }

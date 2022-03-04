@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.outputs;
 
 import io.pulumi.azurenative.operationalinsights.outputs.TagResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -99,77 +99,77 @@ public final class GetSavedSearchResult {
     /**
      * The category of the saved search. This helps the user to find a saved search faster.
      * 
-     */
+    */
     public String getCategory() {
         return this.category;
     }
     /**
      * Saved search display name.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The function alias if query serves as a function.
      * 
-     */
+    */
     public Optional<String> getFunctionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
     /**
      * The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
-     */
+    */
     public Optional<String> getFunctionParameters() {
         return Optional.ofNullable(this.functionParameters);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The query expression for the saved search.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
     /**
      * The tags attached to the saved search.
      * 
-     */
+    */
     public List<TagResponse> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The version number of the query language. The current version is 2 and is the default.
      * 
-     */
+    */
     public Optional<Double> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -268,7 +268,6 @@ public final class GetSavedSearchResult {
             this.version = version;
             return this;
         }
-
         public GetSavedSearchResult build() {
             return new GetSavedSearchResult(category, displayName, etag, functionAlias, functionParameters, id, name, query, tags, type, version);
         }

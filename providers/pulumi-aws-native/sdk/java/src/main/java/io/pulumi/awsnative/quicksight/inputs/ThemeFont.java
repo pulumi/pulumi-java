@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class ThemeFont extends io.pulumi.resources.InvokeArgs {
     public static final ThemeFont Empty = new ThemeFont();
 
     @InputImport(name="fontFamily")
-    private final @Nullable String fontFamily;
+      private final @Nullable String fontFamily;
 
     public Optional<String> getFontFamily() {
         return this.fontFamily == null ? Optional.empty() : Optional.ofNullable(this.fontFamily);
@@ -53,7 +53,6 @@ public final class ThemeFont extends io.pulumi.resources.InvokeArgs {
             this.fontFamily = fontFamily;
             return this;
         }
-
         public ThemeFont build() {
             return new ThemeFont(fontFamily);
         }

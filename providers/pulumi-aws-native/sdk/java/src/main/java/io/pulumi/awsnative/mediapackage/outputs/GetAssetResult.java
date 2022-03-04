@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.AssetEgressEndpoint;
 import io.pulumi.awsnative.mediapackage.outputs.AssetTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -85,63 +85,63 @@ public final class GetAssetResult {
     /**
      * The ARN of the Asset.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time the Asset was initially submitted for Ingest.
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The list of egress endpoints available for the Asset.
      * 
-     */
+    */
     public List<AssetEgressEndpoint> getEgressEndpoints() {
         return this.egressEndpoints == null ? List.of() : this.egressEndpoints;
     }
     /**
      * The unique identifier for the Asset.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The ID of the PackagingGroup for the Asset.
      * 
-     */
+    */
     public Optional<String> getPackagingGroupId() {
         return Optional.ofNullable(this.packagingGroupId);
     }
     /**
      * The resource ID to include in SPEKE key requests.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * ARN of the source object in S3.
      * 
-     */
+    */
     public Optional<String> getSourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }
     /**
      * The IAM role_arn used to access the source S3 bucket.
      * 
-     */
+    */
     public Optional<String> getSourceRoleArn() {
         return Optional.ofNullable(this.sourceRoleArn);
     }
     /**
      * A collection of tags associated with a resource
      * 
-     */
+    */
     public List<AssetTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -226,7 +226,6 @@ public final class GetAssetResult {
             this.tags = tags;
             return this;
         }
-
         public GetAssetResult build() {
             return new GetAssetResult(arn, createdAt, egressEndpoints, id, packagingGroupId, resourceId, sourceArn, sourceRoleArn, tags);
         }

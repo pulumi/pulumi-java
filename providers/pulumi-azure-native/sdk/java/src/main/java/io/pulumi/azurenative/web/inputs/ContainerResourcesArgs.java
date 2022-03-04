@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<Double> cpu;
+      private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -35,7 +35,7 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="memory")
-    private final @Nullable Input<String> memory;
+      private final @Nullable Input<String> memory;
 
     public Input<String> getMemory() {
         return this.memory == null ? Input.empty() : this.memory;
@@ -94,7 +94,6 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
             this.memory = Input.ofNullable(memory);
             return this;
         }
-
         public ContainerResourcesArgs build() {
             return new ContainerResourcesArgs(cpu, memory);
         }

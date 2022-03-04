@@ -6,21 +6,41 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.recoveryservices.inputs.GetProtectionPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.GetProtectionPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProtectionPolicy {
-/**
- * Base class for backup policy. Workload-specific backup policies are derived from this class.
+    private GetProtectionPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetProtectionPolicyArgs.Builder a);
+    }
+    private static GetProtectionPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProtectionPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Base class for backup policy. Workload-specific backup policies are derived from this class.
  * API Version: 2021-02-01.
  * 
- *
- * Base class for backup policy. Workload-specific backup policies are derived from this class.
+     *
+     * Base class for backup policy. Workload-specific backup policies are derived from this class.
  * 
- */
+     */
+    public static CompletableFuture<GetProtectionPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Base class for backup policy. Workload-specific backup policies are derived from this class.
+     * API Version: 2021-02-01.
+     * 
+     *
+         * Base class for backup policy. Workload-specific backup policies are derived from this class.
+     * 
+     */
     public static CompletableFuture<GetProtectionPolicyResult> invokeAsync(GetProtectionPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectionPolicy", TypeShape.of(GetProtectionPolicyResult.class), args == null ? GetProtectionPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

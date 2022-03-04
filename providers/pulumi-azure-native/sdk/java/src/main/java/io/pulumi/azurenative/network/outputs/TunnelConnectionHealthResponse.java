@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class TunnelConnectionHealthResponse {
     /**
      * Virtual Network Gateway connection status.
      * 
-     */
+    */
     public String getConnectionStatus() {
         return this.connectionStatus;
     }
     /**
      * The Egress Bytes Transferred in this connection.
      * 
-     */
+    */
     public Double getEgressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
      * The Ingress Bytes Transferred in this connection.
      * 
-     */
+    */
     public Double getIngressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
      * The time at which connection was established in Utc format.
      * 
-     */
+    */
     public String getLastConnectionEstablishedUtcTime() {
         return this.lastConnectionEstablishedUtcTime;
     }
     /**
      * Tunnel name.
      * 
-     */
+    */
     public String getTunnel() {
         return this.tunnel;
     }
@@ -138,7 +138,6 @@ public final class TunnelConnectionHealthResponse {
             this.tunnel = Objects.requireNonNull(tunnel);
             return this;
         }
-
         public TunnelConnectionHealthResponse build() {
             return new TunnelConnectionHealthResponse(connectionStatus, egressBytesTransferred, ingressBytesTransferred, lastConnectionEstablishedUtcTime, tunnel);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ContainerServiceSshPublicKeyResponse {
     /**
      * Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
      * 
-     */
+    */
     public String getKeyData() {
         return this.keyData;
     }
@@ -52,7 +52,6 @@ public final class ContainerServiceSshPublicKeyResponse {
             this.keyData = Objects.requireNonNull(keyData);
             return this;
         }
-
         public ContainerServiceSshPublicKeyResponse build() {
             return new ContainerServiceSshPublicKeyResponse(keyData);
         }

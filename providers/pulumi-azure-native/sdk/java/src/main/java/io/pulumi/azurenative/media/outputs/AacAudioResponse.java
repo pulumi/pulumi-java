@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -63,21 +63,21 @@ public final class AacAudioResponse {
     /**
      * The bitrate, in bits per second, of the output encoded audio.
      * 
-     */
+    */
     public Optional<Integer> getBitrate() {
         return Optional.ofNullable(this.bitrate);
     }
     /**
      * The number of channels in the audio.
      * 
-     */
+    */
     public Optional<Integer> getChannels() {
         return Optional.ofNullable(this.channels);
     }
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
@@ -85,21 +85,21 @@ public final class AacAudioResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.AacAudio'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The encoding profile to be used when encoding audio with AAC.
      * 
-     */
+    */
     public Optional<String> getProfile() {
         return Optional.ofNullable(this.profile);
     }
     /**
      * The sampling rate to use for encoding in hertz.
      * 
-     */
+    */
     public Optional<Integer> getSamplingRate() {
         return Optional.ofNullable(this.samplingRate);
     }
@@ -163,7 +163,6 @@ public final class AacAudioResponse {
             this.samplingRate = samplingRate;
             return this;
         }
-
         public AacAudioResponse build() {
             return new AacAudioResponse(bitrate, channels, label, odataType, profile, samplingRate);
         }

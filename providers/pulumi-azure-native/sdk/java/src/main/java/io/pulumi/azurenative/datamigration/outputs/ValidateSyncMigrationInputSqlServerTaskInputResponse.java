@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlDbSyncDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -40,21 +40,21 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
     /**
      * Databases to migrate
      * 
-     */
+    */
     public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Information for connecting to source SQL server
      * 
-     */
+    */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Information for connecting to target
      * 
-     */
+    */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -97,7 +97,6 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ValidateSyncMigrationInputSqlServerTaskInputResponse build() {
             return new ValidateSyncMigrationInputSqlServerTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }

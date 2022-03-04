@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.node.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class Overhead {
     /**
      * PodFixed represents the fixed resource overhead associated with running a pod.
      * 
-     */
+    */
     public Map<String,String> getPodFixed() {
         return this.podFixed == null ? Map.of() : this.podFixed;
     }
@@ -54,7 +54,6 @@ public final class Overhead {
             this.podFixed = podFixed;
             return this;
         }
-
         public Overhead build() {
             return new Overhead(podFixed);
         }

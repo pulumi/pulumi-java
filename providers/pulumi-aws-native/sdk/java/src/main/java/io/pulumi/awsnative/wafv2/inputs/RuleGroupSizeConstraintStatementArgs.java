@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupSizeConstraintStatementCompariso
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -22,28 +22,28 @@ public final class RuleGroupSizeConstraintStatementArgs extends io.pulumi.resour
     public static final RuleGroupSizeConstraintStatementArgs Empty = new RuleGroupSizeConstraintStatementArgs();
 
     @InputImport(name="comparisonOperator", required=true)
-    private final Input<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator;
+      private final Input<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator;
 
     public Input<RuleGroupSizeConstraintStatementComparisonOperator> getComparisonOperator() {
         return this.comparisonOperator;
     }
 
     @InputImport(name="fieldToMatch", required=true)
-    private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
+      private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Input<RuleGroupFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="size", required=true)
-    private final Input<Double> size;
+      private final Input<Double> size;
 
     public Input<Double> getSize() {
         return this.size;
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
+      private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Input<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
@@ -132,7 +132,6 @@ public final class RuleGroupSizeConstraintStatementArgs extends io.pulumi.resour
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-
         public RuleGroupSizeConstraintStatementArgs build() {
             return new RuleGroupSizeConstraintStatementArgs(comparisonOperator, fieldToMatch, size, textTransformations);
         }

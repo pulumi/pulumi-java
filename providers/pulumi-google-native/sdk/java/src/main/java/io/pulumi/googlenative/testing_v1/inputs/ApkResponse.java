@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ApkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final FileReferenceResponse location;
+      private final FileReferenceResponse location;
 
     public FileReferenceResponse getLocation() {
         return this.location;
@@ -33,7 +33,7 @@ public final class ApkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="packageName", required=true)
-    private final String packageName;
+      private final String packageName;
 
     public String getPackageName() {
         return this.packageName;
@@ -82,7 +82,6 @@ public final class ApkResponse extends io.pulumi.resources.InvokeArgs {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
-
         public ApkResponse build() {
             return new ApkResponse(location, packageName);
         }

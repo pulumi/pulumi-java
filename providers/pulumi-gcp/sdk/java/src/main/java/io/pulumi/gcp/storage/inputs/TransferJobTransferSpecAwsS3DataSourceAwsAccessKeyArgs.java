@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs extend
      * 
      */
     @InputImport(name="accessKeyId", required=true)
-    private final Input<String> accessKeyId;
+      private final Input<String> accessKeyId;
 
     public Input<String> getAccessKeyId() {
         return this.accessKeyId;
@@ -29,7 +29,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs extend
      * 
      */
     @InputImport(name="secretAccessKey", required=true)
-    private final Input<String> secretAccessKey;
+      private final Input<String> secretAccessKey;
 
     public Input<String> getSecretAccessKey() {
         return this.secretAccessKey;
@@ -88,7 +88,6 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs extend
             this.secretAccessKey = Input.of(Objects.requireNonNull(secretAccessKey));
             return this;
         }
-
         public TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs build() {
             return new TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs(accessKeyId, secretAccessKey);
         }

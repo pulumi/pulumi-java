@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AudioMappingResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -62,42 +62,42 @@ public final class AudioStreamResponse {
     /**
      * Audio bitrate in bits per second. Must be between 1 and 10,000,000.
      * 
-     */
+    */
     public Integer getBitrateBps() {
         return this.bitrateBps;
     }
     /**
      * Number of audio channels. Must be between 1 and 6. The default is 2.
      * 
-     */
+    */
     public Integer getChannelCount() {
         return this.channelCount;
     }
     /**
      * A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `["fl", "fr"]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
      * 
-     */
+    */
     public List<String> getChannelLayout() {
         return this.channelLayout;
     }
     /**
      * The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
      * 
-     */
+    */
     public String getCodec() {
         return this.codec;
     }
     /**
      * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
      * 
-     */
+    */
     public List<AudioMappingResponse> getMapping() {
         return this.mapping;
     }
     /**
      * The audio sample rate in Hertz. The default is 48000 Hertz.
      * 
-     */
+    */
     public Integer getSampleRateHertz() {
         return this.sampleRateHertz;
     }
@@ -161,7 +161,6 @@ public final class AudioStreamResponse {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
         }
-
         public AudioStreamResponse build() {
             return new AudioStreamResponse(bitrateBps, channelCount, channelLayout, codec, mapping, sampleRateHertz);
         }

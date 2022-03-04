@@ -5,8 +5,8 @@ package io.pulumi.googlenative.vision_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vision_v1.ProductSetArgs;
 import io.pulumi.googlenative.vision_v1.outputs.StatusResponse;
@@ -76,6 +76,37 @@ public class ProductSet extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ProductSetArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.vision_v1.ProductSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.vision_v1.ProductSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ProductSet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ProductSet(String name) {
+        this(name, ProductSetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ProductSet(String name, @Nullable ProductSetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

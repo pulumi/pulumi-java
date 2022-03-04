@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.DeviceSecretsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -104,84 +104,84 @@ public final class GetDeviceExtendedInformationResult {
     /**
      * The name of Channel Integrity Key stored in the Client Key Vault
      * 
-     */
+    */
     public Optional<String> getChannelIntegrityKeyName() {
         return Optional.ofNullable(this.channelIntegrityKeyName);
     }
     /**
      * The version of Channel Integrity Key stored in the Client Key Vault
      * 
-     */
+    */
     public Optional<String> getChannelIntegrityKeyVersion() {
         return Optional.ofNullable(this.channelIntegrityKeyVersion);
     }
     /**
      * The Key Vault ARM Id for client secrets
      * 
-     */
+    */
     public Optional<String> getClientSecretStoreId() {
         return Optional.ofNullable(this.clientSecretStoreId);
     }
     /**
      * The url to access the Client Key Vault
      * 
-     */
+    */
     public Optional<String> getClientSecretStoreUrl() {
         return Optional.ofNullable(this.clientSecretStoreUrl);
     }
     /**
      * Device secrets, will be returned only with ODataFilter $expand=deviceSecrets
      * 
-     */
+    */
     public DeviceSecretsResponse getDeviceSecrets() {
         return this.deviceSecrets;
     }
     /**
      * The public part of the encryption certificate. Client uses this to encrypt any secret.
      * 
-     */
+    */
     public Optional<String> getEncryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
      * The digital signature of encrypted certificate.
      * 
-     */
+    */
     public Optional<String> getEncryptionKeyThumbprint() {
         return Optional.ofNullable(this.encryptionKeyThumbprint);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Key vault sync status
      * 
-     */
+    */
     public Optional<String> getKeyVaultSyncStatus() {
         return Optional.ofNullable(this.keyVaultSyncStatus);
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Resource ID of the Resource.
      * 
-     */
+    */
     public String getResourceKey() {
         return this.resourceKey;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -287,7 +287,6 @@ public final class GetDeviceExtendedInformationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeviceExtendedInformationResult build() {
             return new GetDeviceExtendedInformationResult(channelIntegrityKeyName, channelIntegrityKeyVersion, clientSecretStoreId, clientSecretStoreUrl, deviceSecrets, encryptionKey, encryptionKeyThumbprint, id, keyVaultSyncStatus, name, resourceKey, type);
         }

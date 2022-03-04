@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ConfigurationIdentityResponse {
     /**
      * The principal id of the system assigned identity which is used by the configuration.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant id of the system assigned identity which is used by the configuration.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class ConfigurationIdentityResponse {
             this.type = type;
             return this;
         }
-
         public ConfigurationIdentityResponse build() {
             return new ConfigurationIdentityResponse(principalId, tenantId, type);
         }

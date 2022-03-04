@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetStaticSiteCustomDomainArgs;
 import io.pulumi.azurenative.web.outputs.GetStaticSiteCustomDomainResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStaticSiteCustomDomain {
-/**
- * Static Site Custom Domain Overview ARM resource.
+    private GetStaticSiteCustomDomain() {}
+    public interface BuilderApplicator {
+        public void apply(GetStaticSiteCustomDomainArgs.Builder a);
+    }
+    private static GetStaticSiteCustomDomainArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStaticSiteCustomDomainArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Static Site Custom Domain Overview ARM resource.
  * API Version: 2020-12-01.
  * 
- *
- * Static Site Custom Domain Overview ARM resource.
+     *
+     * Static Site Custom Domain Overview ARM resource.
  * 
- */
+     */
+    public static CompletableFuture<GetStaticSiteCustomDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Static Site Custom Domain Overview ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Static Site Custom Domain Overview ARM resource.
+     * 
+     */
     public static CompletableFuture<GetStaticSiteCustomDomainResult> invokeAsync(GetStaticSiteCustomDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSiteCustomDomain", TypeShape.of(GetStaticSiteCustomDomainResult.class), args == null ? GetStaticSiteCustomDomainArgs.Empty : args, Utilities.withVersion(options));
     }

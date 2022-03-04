@@ -34,7 +34,6 @@ public final class RetryResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(RetryResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RetryResponse build() {
             return new RetryResponse();
         }

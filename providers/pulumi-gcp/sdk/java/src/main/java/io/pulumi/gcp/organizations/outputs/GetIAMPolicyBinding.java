@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.organizations.outputs.GetIAMPolicyBindingCondition;
 import java.lang.String;
 import java.util.List;
@@ -51,7 +51,7 @@ public final class GetIAMPolicyBinding {
     /**
      * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
      * 
-     */
+    */
     public Optional<GetIAMPolicyBindingCondition> getCondition() {
         return Optional.ofNullable(this.condition);
     }
@@ -65,7 +65,7 @@ public final class GetIAMPolicyBinding {
      * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
      * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
      * 
-     */
+    */
     public List<String> getMembers() {
         return this.members;
     }
@@ -74,7 +74,7 @@ public final class GetIAMPolicyBinding {
      * See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
      * Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
-     */
+    */
     public String getRole() {
         return this.role;
     }
@@ -117,7 +117,6 @@ public final class GetIAMPolicyBinding {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public GetIAMPolicyBinding build() {
             return new GetIAMPolicyBinding(condition, members, role);
         }

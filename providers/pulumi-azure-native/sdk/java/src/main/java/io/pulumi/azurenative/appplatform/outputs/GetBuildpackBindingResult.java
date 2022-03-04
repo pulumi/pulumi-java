@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.BuildpackBindingPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,35 +54,35 @@ public final class GetBuildpackBindingResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of a buildpack binding
      * 
-     */
+    */
     public BuildpackBindingPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetBuildpackBindingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBuildpackBindingResult build() {
             return new GetBuildpackBindingResult(id, name, properties, systemData, type);
         }

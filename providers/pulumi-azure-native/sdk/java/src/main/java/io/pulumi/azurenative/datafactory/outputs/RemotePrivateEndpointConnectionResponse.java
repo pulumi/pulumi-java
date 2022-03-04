@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.ArmIdWrapperResponse;
 import io.pulumi.azurenative.datafactory.outputs.PrivateLinkConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,14 +38,14 @@ public final class RemotePrivateEndpointConnectionResponse {
     /**
      * PrivateEndpoint of a remote private endpoint connection
      * 
-     */
+    */
     public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The state of a private link connection
      * 
-     */
+    */
     public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -91,7 +91,6 @@ public final class RemotePrivateEndpointConnectionResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public RemotePrivateEndpointConnectionResponse build() {
             return new RemotePrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

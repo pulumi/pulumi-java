@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53resolver.outputs;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleAction;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleBlockOverrideDnsType;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleBlockResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,49 +72,49 @@ public final class FirewallRuleGroupFirewallRule {
     /**
      * Rule Action
      * 
-     */
+    */
     public FirewallRuleGroupFirewallRuleAction getAction() {
         return this.action;
     }
     /**
      * BlockOverrideDnsType
      * 
-     */
+    */
     public Optional<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> getBlockOverrideDnsType() {
         return Optional.ofNullable(this.blockOverrideDnsType);
     }
     /**
      * BlockOverrideDomain
      * 
-     */
+    */
     public Optional<String> getBlockOverrideDomain() {
         return Optional.ofNullable(this.blockOverrideDomain);
     }
     /**
      * BlockOverrideTtl
      * 
-     */
+    */
     public Optional<Integer> getBlockOverrideTtl() {
         return Optional.ofNullable(this.blockOverrideTtl);
     }
     /**
      * BlockResponse
      * 
-     */
+    */
     public Optional<FirewallRuleGroupFirewallRuleBlockResponse> getBlockResponse() {
         return Optional.ofNullable(this.blockResponse);
     }
     /**
      * ResourceId
      * 
-     */
+    */
     public String getFirewallDomainListId() {
         return this.firewallDomainListId;
     }
     /**
      * Rule Priority
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
@@ -185,7 +185,6 @@ public final class FirewallRuleGroupFirewallRule {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public FirewallRuleGroupFirewallRule build() {
             return new FirewallRuleGroupFirewallRule(action, blockOverrideDnsType, blockOverrideDomain, blockOverrideTtl, blockResponse, firewallDomainListId, priority);
         }

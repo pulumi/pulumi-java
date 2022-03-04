@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyId")
-    private final @Nullable Input<String> publicKeyId;
+      private final @Nullable Input<String> publicKeyId;
 
     public Input<String> getPublicKeyId() {
         return this.publicKeyId == null ? Input.empty() : this.publicKeyId;
@@ -34,7 +34,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signature")
-    private final @Nullable Input<String> signature;
+      private final @Nullable Input<String> signature;
 
     public Input<String> getSignature() {
         return this.signature == null ? Input.empty() : this.signature;
@@ -93,7 +93,6 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
             this.signature = Input.ofNullable(signature);
             return this;
         }
-
         public SignatureArgs build() {
             return new SignatureArgs(publicKeyId, signature);
         }

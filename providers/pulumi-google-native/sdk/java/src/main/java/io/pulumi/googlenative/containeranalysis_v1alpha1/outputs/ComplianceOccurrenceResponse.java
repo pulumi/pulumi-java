@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.NonCompliantFileResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class ComplianceOccurrenceResponse {
     /**
      * The reason for non compliance of these files.
      * 
-     */
+    */
     public String getNonComplianceReason() {
         return this.nonComplianceReason;
     }
     /**
      * A list of files which are violating compliance checks.
      * 
-     */
+    */
     public List<NonCompliantFileResponse> getNonCompliantFiles() {
         return this.nonCompliantFiles;
     }
@@ -76,7 +76,6 @@ public final class ComplianceOccurrenceResponse {
             this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles);
             return this;
         }
-
         public ComplianceOccurrenceResponse build() {
             return new ComplianceOccurrenceResponse(nonComplianceReason, nonCompliantFiles);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.MetricCounterSetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class MetricConfigurationResponse {
     /**
      * Host name for the IoT hub associated to the device.
      * 
-     */
+    */
     public List<MetricCounterSetResponse> getCounterSets() {
         return this.counterSets;
     }
     /**
      * The MDM account to which the counters should be pushed.
      * 
-     */
+    */
     public Optional<String> getMdmAccount() {
         return Optional.ofNullable(this.mdmAccount);
     }
     /**
      * The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
      * 
-     */
+    */
     public Optional<String> getMetricNameSpace() {
         return Optional.ofNullable(this.metricNameSpace);
     }
     /**
      * The Resource ID on which the metrics should be pushed.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
@@ -120,7 +120,6 @@ public final class MetricConfigurationResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public MetricConfigurationResponse build() {
             return new MetricConfigurationResponse(counterSets, mdmAccount, metricNameSpace, resourceId);
         }

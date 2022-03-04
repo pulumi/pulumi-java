@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NetworkProfileResponseOutboundIPs extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicIPs", required=true)
-    private final List<String> publicIPs;
+      private final List<String> publicIPs;
 
     public List<String> getPublicIPs() {
         return this.publicIPs;
@@ -60,7 +60,6 @@ public final class NetworkProfileResponseOutboundIPs extends io.pulumi.resources
             this.publicIPs = Objects.requireNonNull(publicIPs);
             return this;
         }
-
         public NetworkProfileResponseOutboundIPs build() {
             return new NetworkProfileResponseOutboundIPs(publicIPs);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.TrafficAnalyticsConfigurationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkWatcherFlowAnalyticsConfiguration")
-    private final @Nullable Input<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
+      private final @Nullable Input<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
 
     public Input<TrafficAnalyticsConfigurationPropertiesArgs> getNetworkWatcherFlowAnalyticsConfiguration() {
         return this.networkWatcherFlowAnalyticsConfiguration == null ? Input.empty() : this.networkWatcherFlowAnalyticsConfiguration;
@@ -66,7 +66,6 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
             this.networkWatcherFlowAnalyticsConfiguration = Input.ofNullable(networkWatcherFlowAnalyticsConfiguration);
             return this;
         }
-
         public TrafficAnalyticsPropertiesArgs build() {
             return new TrafficAnalyticsPropertiesArgs(networkWatcherFlowAnalyticsConfiguration);
         }

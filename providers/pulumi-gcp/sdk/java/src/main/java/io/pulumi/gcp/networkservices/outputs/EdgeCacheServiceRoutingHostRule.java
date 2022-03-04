@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,7 +44,7 @@ public final class EdgeCacheServiceRoutingHostRule {
     /**
      * A human-readable description of the resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -54,14 +54,14 @@ public final class EdgeCacheServiceRoutingHostRule {
      * The only accepted ports are :80 and :443.
      * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the ":authority" header, from the incoming request.
      * 
-     */
+    */
     public List<String> getHosts() {
         return this.hosts;
     }
     /**
      * The name of the pathMatcher associated with this hostRule.
      * 
-     */
+    */
     public String getPathMatcher() {
         return this.pathMatcher;
     }
@@ -104,7 +104,6 @@ public final class EdgeCacheServiceRoutingHostRule {
             this.pathMatcher = Objects.requireNonNull(pathMatcher);
             return this;
         }
-
         public EdgeCacheServiceRoutingHostRule build() {
             return new EdgeCacheServiceRoutingHostRule(description, hosts, pathMatcher);
         }

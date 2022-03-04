@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.enums.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * 
      */
     @InputImport(name="allowedValues")
-    private final @Nullable Input<List<String>> allowedValues;
+      private final @Nullable Input<List<String>> allowedValues;
 
     public Input<List<String>> getAllowedValues() {
         return this.allowedValues == null ? Input.empty() : this.allowedValues;
@@ -36,7 +36,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -95,7 +95,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
             this.policy = Input.ofNullable(policy);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs(allowedValues, policy);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="passwordSecretRef")
-    private final @Nullable Input<String> passwordSecretRef;
+      private final @Nullable Input<String> passwordSecretRef;
 
     public Input<String> getPasswordSecretRef() {
         return this.passwordSecretRef == null ? Input.empty() : this.passwordSecretRef;
@@ -34,7 +34,7 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="server")
-    private final @Nullable Input<String> server;
+      private final @Nullable Input<String> server;
 
     public Input<String> getServer() {
         return this.server == null ? Input.empty() : this.server;
@@ -45,7 +45,7 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -119,7 +119,6 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public RegistryCredentialsArgs build() {
             return new RegistryCredentialsArgs(passwordSecretRef, server, username);
         }

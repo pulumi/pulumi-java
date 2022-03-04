@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.changeanalysis.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdAt", required=true)
-    private final String createdAt;
+      private final String createdAt;
 
     public String getCreatedAt() {
         return this.createdAt;
@@ -32,7 +32,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdBy", required=true)
-    private final String createdBy;
+      private final String createdBy;
 
     public String getCreatedBy() {
         return this.createdBy;
@@ -43,7 +43,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdByType", required=true)
-    private final String createdByType;
+      private final String createdByType;
 
     public String getCreatedByType() {
         return this.createdByType;
@@ -54,7 +54,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastModifiedAt", required=true)
-    private final String lastModifiedAt;
+      private final String lastModifiedAt;
 
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
@@ -65,7 +65,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastModifiedBy", required=true)
-    private final String lastModifiedBy;
+      private final String lastModifiedBy;
 
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
@@ -76,7 +76,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastModifiedByType", required=true)
-    private final String lastModifiedByType;
+      private final String lastModifiedByType;
 
     public String getLastModifiedByType() {
         return this.lastModifiedByType;
@@ -165,7 +165,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
             this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType);
             return this;
         }
-
         public SystemDataResponse build() {
             return new SystemDataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

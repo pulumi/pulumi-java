@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.ListFirewallPolicyIdpsSignaturesFilterValueArgs;
 import io.pulumi.azurenative.network.outputs.ListFirewallPolicyIdpsSignaturesFilterValueResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListFirewallPolicyIdpsSignaturesFilterValue {
-/**
- * Describes the list of all possible values for a specific filter value
+    private ListFirewallPolicyIdpsSignaturesFilterValue() {}
+    public interface BuilderApplicator {
+        public void apply(ListFirewallPolicyIdpsSignaturesFilterValueArgs.Builder a);
+    }
+    private static ListFirewallPolicyIdpsSignaturesFilterValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListFirewallPolicyIdpsSignaturesFilterValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes the list of all possible values for a specific filter value
  * API Version: 2021-05-01.
  * 
- *
- * Describes the list of all possible values for a specific filter value
+     *
+     * Describes the list of all possible values for a specific filter value
  * 
- */
+     */
+    public static CompletableFuture<ListFirewallPolicyIdpsSignaturesFilterValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes the list of all possible values for a specific filter value
+     * API Version: 2021-05-01.
+     * 
+     *
+         * Describes the list of all possible values for a specific filter value
+     * 
+     */
     public static CompletableFuture<ListFirewallPolicyIdpsSignaturesFilterValueResult> invokeAsync(ListFirewallPolicyIdpsSignaturesFilterValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listFirewallPolicyIdpsSignaturesFilterValue", TypeShape.of(ListFirewallPolicyIdpsSignaturesFilterValueResult.class), args == null ? ListFirewallPolicyIdpsSignaturesFilterValueArgs.Empty : args, Utilities.withVersion(options));
     }

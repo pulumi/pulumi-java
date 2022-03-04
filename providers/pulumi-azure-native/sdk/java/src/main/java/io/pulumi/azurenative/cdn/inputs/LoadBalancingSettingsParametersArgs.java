@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="additionalLatencyInMilliseconds")
-    private final @Nullable Input<Integer> additionalLatencyInMilliseconds;
+      private final @Nullable Input<Integer> additionalLatencyInMilliseconds;
 
     public Input<Integer> getAdditionalLatencyInMilliseconds() {
         return this.additionalLatencyInMilliseconds == null ? Input.empty() : this.additionalLatencyInMilliseconds;
@@ -34,7 +34,7 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sampleSize")
-    private final @Nullable Input<Integer> sampleSize;
+      private final @Nullable Input<Integer> sampleSize;
 
     public Input<Integer> getSampleSize() {
         return this.sampleSize == null ? Input.empty() : this.sampleSize;
@@ -45,7 +45,7 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="successfulSamplesRequired")
-    private final @Nullable Input<Integer> successfulSamplesRequired;
+      private final @Nullable Input<Integer> successfulSamplesRequired;
 
     public Input<Integer> getSuccessfulSamplesRequired() {
         return this.successfulSamplesRequired == null ? Input.empty() : this.successfulSamplesRequired;
@@ -119,7 +119,6 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
             this.successfulSamplesRequired = Input.ofNullable(successfulSamplesRequired);
             return this;
         }
-
         public LoadBalancingSettingsParametersArgs build() {
             return new LoadBalancingSettingsParametersArgs(additionalLatencyInMilliseconds, sampleSize, successfulSamplesRequired);
         }

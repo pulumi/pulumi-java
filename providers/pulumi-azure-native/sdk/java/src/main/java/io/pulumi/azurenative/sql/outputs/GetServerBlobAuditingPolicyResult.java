@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -238,14 +238,14 @@ public final class GetServerBlobAuditingPolicyResult {
      * 
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
      * 
-     */
+    */
     public List<String> getAuditActionsAndGroups() {
         return this.auditActionsAndGroups == null ? List.of() : this.auditActionsAndGroups;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -262,7 +262,7 @@ public final class GetServerBlobAuditingPolicyResult {
      * For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
-     */
+    */
     public Optional<Boolean> getIsAzureMonitorTargetEnabled() {
         return Optional.ofNullable(this.isAzureMonitorTargetEnabled);
     }
@@ -278,21 +278,21 @@ public final class GetServerBlobAuditingPolicyResult {
      * For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
-     */
+    */
     public Optional<Boolean> getIsDevopsAuditEnabled() {
         return Optional.ofNullable(this.isDevopsAuditEnabled);
     }
     /**
      * Specifies whether storageAccountAccessKey value is the storage's secondary key.
      * 
-     */
+    */
     public Optional<Boolean> getIsStorageSecondaryKeyInUse() {
         return Optional.ofNullable(this.isStorageSecondaryKeyInUse);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -300,42 +300,42 @@ public final class GetServerBlobAuditingPolicyResult {
      * Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
      * 
-     */
+    */
     public Optional<Integer> getQueueDelayMs() {
         return Optional.ofNullable(this.queueDelayMs);
     }
     /**
      * Specifies the number of days to keep in the audit logs in the storage account.
      * 
-     */
+    */
     public Optional<Integer> getRetentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
     /**
      * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Specifies the blob storage subscription Id.
      * 
-     */
+    */
     public Optional<String> getStorageAccountSubscriptionId() {
         return Optional.ofNullable(this.storageAccountSubscriptionId);
     }
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
      * 
-     */
+    */
     public Optional<String> getStorageEndpoint() {
         return Optional.ofNullable(this.storageEndpoint);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -441,7 +441,6 @@ public final class GetServerBlobAuditingPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerBlobAuditingPolicyResult build() {
             return new GetServerBlobAuditingPolicyResult(auditActionsAndGroups, id, isAzureMonitorTargetEnabled, isDevopsAuditEnabled, isStorageSecondaryKeyInUse, name, queueDelayMs, retentionDays, state, storageAccountSubscriptionId, storageEndpoint, type);
         }

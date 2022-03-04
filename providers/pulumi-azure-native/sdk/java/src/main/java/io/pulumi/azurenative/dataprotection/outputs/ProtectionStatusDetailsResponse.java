@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.UserFacingErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class ProtectionStatusDetailsResponse {
     /**
      * Specifies the protection status error of the resource
      * 
-     */
+    */
     public Optional<UserFacingErrorResponse> getErrorDetails() {
         return Optional.ofNullable(this.errorDetails);
     }
     /**
      * Specifies the protection status of the resource
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -77,7 +77,6 @@ public final class ProtectionStatusDetailsResponse {
             this.status = status;
             return this;
         }
-
         public ProtectionStatusDetailsResponse build() {
             return new ProtectionStatusDetailsResponse(errorDetails, status);
         }

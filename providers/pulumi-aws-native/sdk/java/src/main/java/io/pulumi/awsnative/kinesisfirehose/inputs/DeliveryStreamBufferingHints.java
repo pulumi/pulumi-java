@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class DeliveryStreamBufferingHints extends io.pulumi.resources.Invo
     public static final DeliveryStreamBufferingHints Empty = new DeliveryStreamBufferingHints();
 
     @InputImport(name="intervalInSeconds")
-    private final @Nullable Integer intervalInSeconds;
+      private final @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
     }
 
     @InputImport(name="sizeInMBs")
-    private final @Nullable Integer sizeInMBs;
+      private final @Nullable Integer sizeInMBs;
 
     public Optional<Integer> getSizeInMBs() {
         return this.sizeInMBs == null ? Optional.empty() : Optional.ofNullable(this.sizeInMBs);
@@ -71,7 +71,6 @@ public final class DeliveryStreamBufferingHints extends io.pulumi.resources.Invo
             this.sizeInMBs = sizeInMBs;
             return this;
         }
-
         public DeliveryStreamBufferingHints build() {
             return new DeliveryStreamBufferingHints(intervalInSeconds, sizeInMBs);
         }

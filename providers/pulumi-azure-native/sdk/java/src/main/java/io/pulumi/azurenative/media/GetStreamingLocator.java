@@ -6,21 +6,41 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.media.inputs.GetStreamingLocatorArgs;
 import io.pulumi.azurenative.media.outputs.GetStreamingLocatorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStreamingLocator {
-/**
- * A Streaming Locator resource
+    private GetStreamingLocator() {}
+    public interface BuilderApplicator {
+        public void apply(GetStreamingLocatorArgs.Builder a);
+    }
+    private static GetStreamingLocatorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStreamingLocatorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Streaming Locator resource
  * API Version: 2020-05-01.
  * 
- *
- * A Streaming Locator resource
+     *
+     * A Streaming Locator resource
  * 
- */
+     */
+    public static CompletableFuture<GetStreamingLocatorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Streaming Locator resource
+     * API Version: 2020-05-01.
+     * 
+     *
+         * A Streaming Locator resource
+     * 
+     */
     public static CompletableFuture<GetStreamingLocatorResult> invokeAsync(GetStreamingLocatorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getStreamingLocator", TypeShape.of(GetStreamingLocatorResult.class), args == null ? GetStreamingLocatorArgs.Empty : args, Utilities.withVersion(options));
     }

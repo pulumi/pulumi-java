@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+      private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -34,7 +34,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -45,7 +45,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="keyVaultSecretId")
-    private final @Nullable Input<String> keyVaultSecretId;
+      private final @Nullable Input<String> keyVaultSecretId;
 
     public Input<String> getKeyVaultSecretId() {
         return this.keyVaultSecretId == null ? Input.empty() : this.keyVaultSecretId;
@@ -56,7 +56,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -171,7 +171,6 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
             this.password = Input.ofNullable(password);
             return this;
         }
-
         public ApplicationGatewaySslCertificateArgs build() {
             return new ApplicationGatewaySslCertificateArgs(data, id, keyVaultSecretId, name, password);
         }

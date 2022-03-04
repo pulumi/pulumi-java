@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datapipelines_v1.enums.PipelineState;
 import io.pulumi.googlenative.datapipelines_v1.enums.PipelineType;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1ScheduleSpecArgs;
@@ -24,14 +24,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -42,7 +42,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,14 +53,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineSources")
-    private final @Nullable Input<Map<String,String>> pipelineSources;
+      private final @Nullable Input<Map<String,String>> pipelineSources;
 
     public Input<Map<String,String>> getPipelineSources() {
         return this.pipelineSources == null ? Input.empty() : this.pipelineSources;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -71,7 +71,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleInfo")
-    private final @Nullable Input<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
+      private final @Nullable Input<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
 
     public Input<GoogleCloudDatapipelinesV1ScheduleSpecArgs> getScheduleInfo() {
         return this.scheduleInfo == null ? Input.empty() : this.scheduleInfo;
@@ -82,7 +82,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulerServiceAccountEmail")
-    private final @Nullable Input<String> schedulerServiceAccountEmail;
+      private final @Nullable Input<String> schedulerServiceAccountEmail;
 
     public Input<String> getSchedulerServiceAccountEmail() {
         return this.schedulerServiceAccountEmail == null ? Input.empty() : this.schedulerServiceAccountEmail;
@@ -93,7 +93,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<PipelineState> state;
+      private final Input<PipelineState> state;
 
     public Input<PipelineState> getState() {
         return this.state;
@@ -104,7 +104,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<PipelineType> type;
+      private final Input<PipelineType> type;
 
     public Input<PipelineType> getType() {
         return this.type;
@@ -115,7 +115,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workload")
-    private final @Nullable Input<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
+      private final @Nullable Input<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
 
     public Input<GoogleCloudDatapipelinesV1WorkloadArgs> getWorkload() {
         return this.workload == null ? Input.empty() : this.workload;
@@ -294,7 +294,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.workload = Input.ofNullable(workload);
             return this;
         }
-
         public PipelineArgs build() {
             return new PipelineArgs(displayName, location, name, pipelineSources, project, scheduleInfo, schedulerServiceAccountEmail, state, type, workload);
         }

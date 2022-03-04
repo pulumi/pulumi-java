@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ConnectorVpc {
     /**
      * The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
      * 
-     */
+    */
     public List<String> getSecurityGroups() {
         return this.securityGroups;
     }
     /**
      * The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
      * 
-     */
+    */
     public List<String> getSubnets() {
         return this.subnets;
     }
@@ -75,7 +75,6 @@ public final class ConnectorVpc {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public ConnectorVpc build() {
             return new ConnectorVpc(securityGroups, subnets);
         }

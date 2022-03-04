@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs;
@@ -24,7 +24,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> headerAction;
+      private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> headerAction;
 
     public Input<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -49,7 +49,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * 
      */
     @InputImport(name="matchRules", required=true)
-    private final Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> matchRules;
+      private final Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> matchRules;
 
     public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> getMatchRules() {
         return this.matchRules;
@@ -61,7 +61,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * 
      */
     @InputImport(name="origin")
-    private final @Nullable Input<String> origin;
+      private final @Nullable Input<String> origin;
 
     public Input<String> getOrigin() {
         return this.origin == null ? Input.empty() : this.origin;
@@ -75,7 +75,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<String> priority;
+      private final Input<String> priority;
 
     public Input<String> getPriority() {
         return this.priority;
@@ -87,7 +87,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * 
      */
     @InputImport(name="routeAction")
-    private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> routeAction;
+      private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> routeAction;
 
     public Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> getRouteAction() {
         return this.routeAction == null ? Input.empty() : this.routeAction;
@@ -99,7 +99,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * 
      */
     @InputImport(name="urlRedirect")
-    private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
+      private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
 
     public Input<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> getUrlRedirect() {
         return this.urlRedirect == null ? Input.empty() : this.urlRedirect;
@@ -233,7 +233,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
             this.urlRedirect = Input.ofNullable(urlRedirect);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleArgs(description, headerAction, matchRules, origin, priority, routeAction, urlRedirect);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class TaskDefinitionContainerDependencyArgs extends io.pulumi.resou
     public static final TaskDefinitionContainerDependencyArgs Empty = new TaskDefinitionContainerDependencyArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<String> condition;
+      private final @Nullable Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+      private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -81,7 +81,6 @@ public final class TaskDefinitionContainerDependencyArgs extends io.pulumi.resou
             this.containerName = Input.ofNullable(containerName);
             return this;
         }
-
         public TaskDefinitionContainerDependencyArgs build() {
             return new TaskDefinitionContainerDependencyArgs(condition, containerName);
         }

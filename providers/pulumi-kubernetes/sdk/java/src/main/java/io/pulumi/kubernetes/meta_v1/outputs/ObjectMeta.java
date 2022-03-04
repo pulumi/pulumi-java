@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ManagedFieldsEntry;
 import io.pulumi.kubernetes.meta_v1.outputs.OwnerReference;
 import java.lang.Integer;
@@ -152,14 +152,14 @@ public final class ObjectMeta {
     /**
      * Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
      * 
-     */
+    */
     public Map<String,String> getAnnotations() {
         return this.annotations == null ? Map.of() : this.annotations;
     }
     /**
      * The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
      * 
-     */
+    */
     public Optional<String> getClusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -168,14 +168,14 @@ public final class ObjectMeta {
      * 
      * Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
-     */
+    */
     public Optional<String> getCreationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
     /**
      * Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
      * 
-     */
+    */
     public Optional<Integer> getDeletionGracePeriodSeconds() {
         return Optional.ofNullable(this.deletionGracePeriodSeconds);
     }
@@ -184,14 +184,14 @@ public final class ObjectMeta {
      * 
      * Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
-     */
+    */
     public Optional<String> getDeletionTimestamp() {
         return Optional.ofNullable(this.deletionTimestamp);
     }
     /**
      * Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
      * 
-     */
+    */
     public List<String> getFinalizers() {
         return this.finalizers == null ? List.of() : this.finalizers;
     }
@@ -202,35 +202,35 @@ public final class ObjectMeta {
      * 
      * Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
      * 
-     */
+    */
     public Optional<String> getGenerateName() {
         return Optional.ofNullable(this.generateName);
     }
     /**
      * A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
      * 
-     */
+    */
     public Optional<Integer> getGeneration() {
         return Optional.ofNullable(this.generation);
     }
     /**
      * Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
      * ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.
      * 
-     */
+    */
     public List<ManagedFieldsEntry> getManagedFields() {
         return this.managedFields == null ? List.of() : this.managedFields;
     }
     /**
      * Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -239,14 +239,14 @@ public final class ObjectMeta {
      * 
      * Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
      * 
-     */
+    */
     public List<OwnerReference> getOwnerReferences() {
         return this.ownerReferences == null ? List.of() : this.ownerReferences;
     }
@@ -255,7 +255,7 @@ public final class ObjectMeta {
      * 
      * Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
      * 
-     */
+    */
     public Optional<String> getResourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
@@ -264,7 +264,7 @@ public final class ObjectMeta {
      * 
      * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
      * 
-     */
+    */
     public Optional<String> getSelfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -273,7 +273,7 @@ public final class ObjectMeta {
      * 
      * Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
-     */
+    */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }
@@ -407,7 +407,6 @@ public final class ObjectMeta {
             this.uid = uid;
             return this;
         }
-
         public ObjectMeta build() {
             return new ObjectMeta(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, managedFields, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
         }

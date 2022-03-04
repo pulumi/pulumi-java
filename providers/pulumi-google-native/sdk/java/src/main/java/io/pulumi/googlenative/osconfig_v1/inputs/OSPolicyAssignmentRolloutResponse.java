@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.FixedOrPercentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OSPolicyAssignmentRolloutResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="disruptionBudget", required=true)
-    private final FixedOrPercentResponse disruptionBudget;
+      private final FixedOrPercentResponse disruptionBudget;
 
     public FixedOrPercentResponse getDisruptionBudget() {
         return this.disruptionBudget;
@@ -33,7 +33,7 @@ public final class OSPolicyAssignmentRolloutResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="minWaitDuration", required=true)
-    private final String minWaitDuration;
+      private final String minWaitDuration;
 
     public String getMinWaitDuration() {
         return this.minWaitDuration;
@@ -82,7 +82,6 @@ public final class OSPolicyAssignmentRolloutResponse extends io.pulumi.resources
             this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
             return this;
         }
-
         public OSPolicyAssignmentRolloutResponse build() {
             return new OSPolicyAssignmentRolloutResponse(disruptionBudget, minWaitDuration);
         }

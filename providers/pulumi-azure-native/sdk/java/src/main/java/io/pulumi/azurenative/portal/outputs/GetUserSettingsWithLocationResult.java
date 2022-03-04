@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.UserPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -23,7 +23,7 @@ public final class GetUserSettingsWithLocationResult {
     /**
      * The cloud shell user settings properties.
      * 
-     */
+    */
     public UserPropertiesResponse getProperties() {
         return this.properties;
     }
@@ -52,7 +52,6 @@ public final class GetUserSettingsWithLocationResult {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public GetUserSettingsWithLocationResult build() {
             return new GetUserSettingsWithLocationResult(properties);
         }

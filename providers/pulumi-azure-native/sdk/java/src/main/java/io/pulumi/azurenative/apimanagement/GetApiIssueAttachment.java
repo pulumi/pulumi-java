@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetApiIssueAttachmentArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetApiIssueAttachmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiIssueAttachment {
-/**
- * Issue Attachment Contract details.
+    private GetApiIssueAttachment() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiIssueAttachmentArgs.Builder a);
+    }
+    private static GetApiIssueAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiIssueAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Issue Attachment Contract details.
  * API Version: 2020-12-01.
  * 
- *
- * Issue Attachment Contract details.
+     *
+     * Issue Attachment Contract details.
  * 
- */
+     */
+    public static CompletableFuture<GetApiIssueAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Issue Attachment Contract details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Issue Attachment Contract details.
+     * 
+     */
     public static CompletableFuture<GetApiIssueAttachmentResult> invokeAsync(GetApiIssueAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiIssueAttachment", TypeShape.of(GetApiIssueAttachmentResult.class), args == null ? GetApiIssueAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

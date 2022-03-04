@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjec
     /**
      * Bucket of the Cloud Storage object.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
      * 
-     */
+    */
     public String getGenerationNumber() {
         return this.generationNumber;
     }
     /**
      * Name of the Cloud Storage object.
      * 
-     */
+    */
     public String getObject() {
         return this.object;
     }
@@ -95,7 +95,6 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjec
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject build() {
             return new PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject(bucket, generationNumber, object);
         }

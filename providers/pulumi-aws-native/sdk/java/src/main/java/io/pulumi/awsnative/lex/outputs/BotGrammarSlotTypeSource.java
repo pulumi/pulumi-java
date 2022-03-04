@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class BotGrammarSlotTypeSource {
     /**
      * The Amazon KMS key required to decrypt the contents of the grammar, if any.
      * 
-     */
+    */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * The name of the S3 bucket that contains the grammar source.
      * 
-     */
+    */
     public String getS3BucketName() {
         return this.s3BucketName;
     }
     /**
      * The path to the grammar in the S3 bucket.
      * 
-     */
+    */
     public String getS3ObjectKey() {
         return this.s3ObjectKey;
     }
@@ -97,7 +97,6 @@ public final class BotGrammarSlotTypeSource {
             this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
             return this;
         }
-
         public BotGrammarSlotTypeSource build() {
             return new BotGrammarSlotTypeSource(kmsKeyArn, s3BucketName, s3ObjectKey);
         }

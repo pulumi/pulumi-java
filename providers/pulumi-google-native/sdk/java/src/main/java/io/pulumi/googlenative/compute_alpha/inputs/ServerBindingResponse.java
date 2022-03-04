@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class ServerBindingResponse extends io.pulumi.resources.InvokeArgs 
     public static final ServerBindingResponse Empty = new ServerBindingResponse();
 
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -51,7 +51,6 @@ public final class ServerBindingResponse extends io.pulumi.resources.InvokeArgs 
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServerBindingResponse build() {
             return new ServerBindingResponse(type);
         }

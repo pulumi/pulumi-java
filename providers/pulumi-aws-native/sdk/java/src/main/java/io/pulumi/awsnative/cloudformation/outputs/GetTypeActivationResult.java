@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.TypeActivationVersionBump;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class GetTypeActivationResult {
     /**
      * The Amazon Resource Name (ARN) of the extension.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
      * 
-     */
+    */
     public Optional<Boolean> getAutoUpdate() {
         return Optional.ofNullable(this.autoUpdate);
     }
     /**
      * The Major Version of the type you want to enable
      * 
-     */
+    */
     public Optional<String> getMajorVersion() {
         return Optional.ofNullable(this.majorVersion);
     }
     /**
      * Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
      * 
-     */
+    */
     public Optional<TypeActivationVersionBump> getVersionBump() {
         return Optional.ofNullable(this.versionBump);
     }
@@ -120,7 +120,6 @@ public final class GetTypeActivationResult {
             this.versionBump = versionBump;
             return this;
         }
-
         public GetTypeActivationResult build() {
             return new GetTypeActivationResult(arn, autoUpdate, majorVersion, versionBump);
         }

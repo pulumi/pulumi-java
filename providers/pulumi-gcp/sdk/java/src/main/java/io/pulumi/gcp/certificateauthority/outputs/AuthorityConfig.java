@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigSubjectConfig;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509Config;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class AuthorityConfig {
      * Specifies some of the values in a certificate that are related to the subject.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigSubjectConfig getSubjectConfig() {
         return this.subjectConfig;
     }
@@ -43,7 +43,7 @@ public final class AuthorityConfig {
      * Describes how some of the technical X.509 fields in a certificate should be populated.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigX509Config getX509Config() {
         return this.x509Config;
     }
@@ -79,7 +79,6 @@ public final class AuthorityConfig {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
-
         public AuthorityConfig build() {
             return new AuthorityConfig(subjectConfig, x509Config);
         }

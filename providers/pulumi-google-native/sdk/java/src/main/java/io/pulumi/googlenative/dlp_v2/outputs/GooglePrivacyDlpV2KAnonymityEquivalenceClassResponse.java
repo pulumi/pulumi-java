@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
     /**
      * Size of the equivalence class, for example number of rows with the above set of values.
      * 
-     */
+    */
     public String getEquivalenceClassSize() {
         return this.equivalenceClassSize;
     }
     /**
      * Set of values defining the equivalence class. One value per quasi-identifier column in the original KAnonymity metric message. The order is always the same as the original request.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
         return this.quasiIdsValues;
     }
@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
-
         public GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse build() {
             return new GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(equivalenceClassSize, quasiIdsValues);
         }

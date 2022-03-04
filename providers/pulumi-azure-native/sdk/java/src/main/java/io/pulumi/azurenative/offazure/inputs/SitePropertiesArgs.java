@@ -6,7 +6,7 @@ package io.pulumi.azurenative.offazure.inputs;
 import io.pulumi.azurenative.offazure.inputs.SiteAgentPropertiesArgs;
 import io.pulumi.azurenative.offazure.inputs.SiteSpnPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentDetails")
-    private final @Nullable Input<SiteAgentPropertiesArgs> agentDetails;
+      private final @Nullable Input<SiteAgentPropertiesArgs> agentDetails;
 
     public Input<SiteAgentPropertiesArgs> getAgentDetails() {
         return this.agentDetails == null ? Input.empty() : this.agentDetails;
@@ -36,7 +36,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applianceName")
-    private final @Nullable Input<String> applianceName;
+      private final @Nullable Input<String> applianceName;
 
     public Input<String> getApplianceName() {
         return this.applianceName == null ? Input.empty() : this.applianceName;
@@ -47,7 +47,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="discoverySolutionId")
-    private final @Nullable Input<String> discoverySolutionId;
+      private final @Nullable Input<String> discoverySolutionId;
 
     public Input<String> getDiscoverySolutionId() {
         return this.discoverySolutionId == null ? Input.empty() : this.discoverySolutionId;
@@ -58,7 +58,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePrincipalIdentityDetails")
-    private final @Nullable Input<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails;
+      private final @Nullable Input<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails;
 
     public Input<SiteSpnPropertiesArgs> getServicePrincipalIdentityDetails() {
         return this.servicePrincipalIdentityDetails == null ? Input.empty() : this.servicePrincipalIdentityDetails;
@@ -147,7 +147,6 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.servicePrincipalIdentityDetails = Input.ofNullable(servicePrincipalIdentityDetails);
             return this;
         }
-
         public SitePropertiesArgs build() {
             return new SitePropertiesArgs(agentDetails, applianceName, discoverySolutionId, servicePrincipalIdentityDetails);
         }

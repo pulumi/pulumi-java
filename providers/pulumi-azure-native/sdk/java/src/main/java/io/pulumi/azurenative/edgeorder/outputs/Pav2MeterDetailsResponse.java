@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class Pav2MeterDetailsResponse {
      * Represents billing type.
      * Expected value is 'Pav2'.
      * 
-     */
+    */
     public String getBillingType() {
         return this.billingType;
     }
     /**
      * Charging type.
      * 
-     */
+    */
     public String getChargingType() {
         return this.chargingType;
     }
     /**
      * Validation status of requested data center and transport.
      * 
-     */
+    */
     public String getMeterGuid() {
         return this.meterGuid;
     }
     /**
      * Billing unit applicable for Pav2 billing
      * 
-     */
+    */
     public Double getMultiplier() {
         return this.multiplier;
     }
@@ -119,7 +119,6 @@ public final class Pav2MeterDetailsResponse {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }
-
         public Pav2MeterDetailsResponse build() {
             return new Pav2MeterDetailsResponse(billingType, chargingType, meterGuid, multiplier);
         }

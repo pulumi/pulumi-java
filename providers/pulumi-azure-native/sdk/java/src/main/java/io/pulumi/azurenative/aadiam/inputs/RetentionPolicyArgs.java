@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aadiam.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="days", required=true)
-    private final Input<Integer> days;
+      private final Input<Integer> days;
 
     public Input<Integer> getDays() {
         return this.days;
@@ -34,7 +34,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -93,7 +93,6 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public RetentionPolicyArgs build() {
             return new RetentionPolicyArgs(days, enabled);
         }

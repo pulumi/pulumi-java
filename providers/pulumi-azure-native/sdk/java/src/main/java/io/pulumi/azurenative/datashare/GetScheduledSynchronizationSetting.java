@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetScheduledSynchronizationSettingArgs;
 import io.pulumi.azurenative.datashare.outputs.GetScheduledSynchronizationSettingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScheduledSynchronizationSetting {
-/**
- * A type of synchronization setting based on schedule
+    private GetScheduledSynchronizationSetting() {}
+    public interface BuilderApplicator {
+        public void apply(GetScheduledSynchronizationSettingArgs.Builder a);
+    }
+    private static GetScheduledSynchronizationSettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScheduledSynchronizationSettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A type of synchronization setting based on schedule
  * API Version: 2020-09-01.
  * 
- *
- * A type of synchronization setting based on schedule
+     *
+     * A type of synchronization setting based on schedule
  * 
- */
+     */
+    public static CompletableFuture<GetScheduledSynchronizationSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A type of synchronization setting based on schedule
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A type of synchronization setting based on schedule
+     * 
+     */
     public static CompletableFuture<GetScheduledSynchronizationSettingResult> invokeAsync(GetScheduledSynchronizationSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getScheduledSynchronizationSetting", TypeShape.of(GetScheduledSynchronizationSettingResult.class), args == null ? GetScheduledSynchronizationSettingArgs.Empty : args, Utilities.withVersion(options));
     }

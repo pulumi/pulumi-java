@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ProjectMetadataArgs;
 import io.pulumi.gcp.compute.inputs.ProjectMetadataState;
@@ -69,6 +69,37 @@ public class ProjectMetadata extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ProjectMetadataArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.ProjectMetadataArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.ProjectMetadataArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ProjectMetadata(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ProjectMetadata(String name) {
+        this(name, ProjectMetadataArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ProjectMetadata(String name, ProjectMetadataArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

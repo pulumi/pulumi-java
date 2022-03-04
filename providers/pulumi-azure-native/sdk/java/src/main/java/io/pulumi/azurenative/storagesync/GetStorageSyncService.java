@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storagesync;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storagesync.inputs.GetStorageSyncServiceArgs;
 import io.pulumi.azurenative.storagesync.outputs.GetStorageSyncServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStorageSyncService {
-/**
- * Storage Sync Service object.
+    private GetStorageSyncService() {}
+    public interface BuilderApplicator {
+        public void apply(GetStorageSyncServiceArgs.Builder a);
+    }
+    private static GetStorageSyncServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStorageSyncServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Storage Sync Service object.
  * API Version: 2020-03-01.
  * 
- *
- * Storage Sync Service object.
+     *
+     * Storage Sync Service object.
  * 
- */
+     */
+    public static CompletableFuture<GetStorageSyncServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Storage Sync Service object.
+     * API Version: 2020-03-01.
+     * 
+     *
+         * Storage Sync Service object.
+     * 
+     */
     public static CompletableFuture<GetStorageSyncServiceResult> invokeAsync(GetStorageSyncServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getStorageSyncService", TypeShape.of(GetStorageSyncServiceResult.class), args == null ? GetStorageSyncServiceArgs.Empty : args, Utilities.withVersion(options));
     }

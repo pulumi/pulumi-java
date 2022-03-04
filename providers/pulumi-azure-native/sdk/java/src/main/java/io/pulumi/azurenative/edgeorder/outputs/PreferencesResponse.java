@@ -7,7 +7,7 @@ import io.pulumi.azurenative.edgeorder.outputs.EncryptionPreferencesResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ManagementResourcePreferencesResponse;
 import io.pulumi.azurenative.edgeorder.outputs.NotificationPreferenceResponse;
 import io.pulumi.azurenative.edgeorder.outputs.TransportPreferencesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -51,28 +51,28 @@ public final class PreferencesResponse {
     /**
      * Preferences related to the Encryption.
      * 
-     */
+    */
     public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
     /**
      * Preferences related to the Management resource.
      * 
-     */
+    */
     public Optional<ManagementResourcePreferencesResponse> getManagementResourcePreferences() {
         return Optional.ofNullable(this.managementResourcePreferences);
     }
     /**
      * Notification preferences.
      * 
-     */
+    */
     public List<NotificationPreferenceResponse> getNotificationPreferences() {
         return this.notificationPreferences == null ? List.of() : this.notificationPreferences;
     }
     /**
      * Preferences related to the shipment logistics of the order.
      * 
-     */
+    */
     public Optional<TransportPreferencesResponse> getTransportPreferences() {
         return Optional.ofNullable(this.transportPreferences);
     }
@@ -122,7 +122,6 @@ public final class PreferencesResponse {
             this.transportPreferences = transportPreferences;
             return this;
         }
-
         public PreferencesResponse build() {
             return new PreferencesResponse(encryptionPreferences, managementResourcePreferences, notificationPreferences, transportPreferences);
         }

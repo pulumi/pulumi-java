@@ -6,21 +6,41 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appplatform.inputs.GetApiPortalCustomDomainArgs;
 import io.pulumi.azurenative.appplatform.outputs.GetApiPortalCustomDomainResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiPortalCustomDomain {
-/**
- * Custom domain of the API portal
+    private GetApiPortalCustomDomain() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiPortalCustomDomainArgs.Builder a);
+    }
+    private static GetApiPortalCustomDomainArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiPortalCustomDomainArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Custom domain of the API portal
  * API Version: 2022-01-01-preview.
  * 
- *
- * Custom domain of the API portal
+     *
+     * Custom domain of the API portal
  * 
- */
+     */
+    public static CompletableFuture<GetApiPortalCustomDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Custom domain of the API portal
+     * API Version: 2022-01-01-preview.
+     * 
+     *
+         * Custom domain of the API portal
+     * 
+     */
     public static CompletableFuture<GetApiPortalCustomDomainResult> invokeAsync(GetApiPortalCustomDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getApiPortalCustomDomain", TypeShape.of(GetApiPortalCustomDomainResult.class), args == null ? GetApiPortalCustomDomainArgs.Empty : args, Utilities.withVersion(options));
     }

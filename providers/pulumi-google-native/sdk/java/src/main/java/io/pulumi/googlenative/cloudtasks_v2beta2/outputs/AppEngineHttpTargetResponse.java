@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AppEngineRoutingResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AppEngineHttpTargetResponse {
     /**
      * Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
      * 
-     */
+    */
     public AppEngineRoutingResponse getAppEngineRoutingOverride() {
         return this.appEngineRoutingOverride;
     }
@@ -52,7 +52,6 @@ public final class AppEngineHttpTargetResponse {
             this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
             return this;
         }
-
         public AppEngineHttpTargetResponse build() {
             return new AppEngineHttpTargetResponse(appEngineRoutingOverride);
         }

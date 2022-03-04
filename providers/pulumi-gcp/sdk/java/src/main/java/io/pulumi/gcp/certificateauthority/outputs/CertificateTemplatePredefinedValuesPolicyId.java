@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CertificateTemplatePredefinedValuesPolicyId {
     /**
      * Required. The parts of an OID path. The most significant parts of the path come first.
      * 
-     */
+    */
     public List<Integer> getObjectIdPaths() {
         return this.objectIdPaths;
     }
@@ -53,7 +53,6 @@ public final class CertificateTemplatePredefinedValuesPolicyId {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CertificateTemplatePredefinedValuesPolicyId build() {
             return new CertificateTemplatePredefinedValuesPolicyId(objectIdPaths);
         }

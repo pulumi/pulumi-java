@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.inputs.GetWorkflowArgs;
 import io.pulumi.azurenative.logic.outputs.GetWorkflowResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkflow {
-/**
- * The workflow type.
+    private GetWorkflow() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkflowArgs.Builder a);
+    }
+    private static GetWorkflowArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkflowArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The workflow type.
  * API Version: 2019-05-01.
  * 
- *
- * The workflow type.
+     *
+     * The workflow type.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkflowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The workflow type.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The workflow type.
+     * 
+     */
     public static CompletableFuture<GetWorkflowResult> invokeAsync(GetWorkflowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getWorkflow", TypeShape.of(GetWorkflowResult.class), args == null ? GetWorkflowArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class HashResponse {
     /**
      * The type of hash that was performed.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The hash value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class HashResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HashResponse build() {
             return new HashResponse(type, value);
         }

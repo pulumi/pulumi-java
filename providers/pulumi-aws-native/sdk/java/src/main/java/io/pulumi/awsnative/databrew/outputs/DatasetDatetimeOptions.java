@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class DatasetDatetimeOptions {
     /**
      * Date/time format of a date parameter
      * 
-     */
+    */
     public String getFormat() {
         return this.format;
     }
     /**
      * Locale code for a date parameter
      * 
-     */
+    */
     public Optional<String> getLocaleCode() {
         return Optional.ofNullable(this.localeCode);
     }
     /**
      * Timezone offset
      * 
-     */
+    */
     public Optional<String> getTimezoneOffset() {
         return Optional.ofNullable(this.timezoneOffset);
     }
@@ -97,7 +97,6 @@ public final class DatasetDatetimeOptions {
             this.timezoneOffset = timezoneOffset;
             return this;
         }
-
         public DatasetDatetimeOptions build() {
             return new DatasetDatetimeOptions(format, localeCode, timezoneOffset);
         }

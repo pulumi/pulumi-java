@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.azurenative.operationalinsights.inputs.ColumnArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable Input<List<ColumnArgs>> columns;
+      private final @Nullable Input<List<ColumnArgs>> columns;
 
     public Input<List<ColumnArgs>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;
@@ -36,7 +36,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -58,7 +58,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -147,7 +147,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public SchemaArgs build() {
             return new SchemaArgs(columns, description, displayName, name);
         }

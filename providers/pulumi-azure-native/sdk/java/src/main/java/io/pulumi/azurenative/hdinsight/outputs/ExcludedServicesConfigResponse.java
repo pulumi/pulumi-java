@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ExcludedServicesConfigResponse {
     /**
      * The config id of excluded services.
      * 
-     */
+    */
     public Optional<String> getExcludedServicesConfigId() {
         return Optional.ofNullable(this.excludedServicesConfigId);
     }
     /**
      * The list of excluded services.
      * 
-     */
+    */
     public Optional<String> getExcludedServicesList() {
         return Optional.ofNullable(this.excludedServicesList);
     }
@@ -76,7 +76,6 @@ public final class ExcludedServicesConfigResponse {
             this.excludedServicesList = excludedServicesList;
             return this;
         }
-
         public ExcludedServicesConfigResponse build() {
             return new ExcludedServicesConfigResponse(excludedServicesConfigId, excludedServicesList);
         }

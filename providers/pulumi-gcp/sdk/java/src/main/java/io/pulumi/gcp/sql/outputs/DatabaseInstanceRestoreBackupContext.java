@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -42,7 +42,7 @@ public final class DatabaseInstanceRestoreBackupContext {
     /**
      * The ID of the backup run to restore from.
      * 
-     */
+    */
     public Integer getBackupRunId() {
         return this.backupRunId;
     }
@@ -50,14 +50,14 @@ public final class DatabaseInstanceRestoreBackupContext {
      * The ID of the instance that the backup was taken from. If left empty,
      * this instance's ID will be used.
      * 
-     */
+    */
     public Optional<String> getInstanceId() {
         return Optional.ofNullable(this.instanceId);
     }
     /**
      * The full project ID of the source instance.`
      * 
-     */
+    */
     public Optional<String> getProject() {
         return Optional.ofNullable(this.project);
     }
@@ -100,7 +100,6 @@ public final class DatabaseInstanceRestoreBackupContext {
             this.project = project;
             return this;
         }
-
         public DatabaseInstanceRestoreBackupContext build() {
             return new DatabaseInstanceRestoreBackupContext(backupRunId, instanceId, project);
         }

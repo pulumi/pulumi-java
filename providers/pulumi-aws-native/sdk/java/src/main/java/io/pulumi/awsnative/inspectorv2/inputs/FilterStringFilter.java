@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.inspectorv2.inputs;
 
 import io.pulumi.awsnative.inspectorv2.enums.FilterStringComparison;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class FilterStringFilter extends io.pulumi.resources.InvokeArgs {
     public static final FilterStringFilter Empty = new FilterStringFilter();
 
     @InputImport(name="comparison", required=true)
-    private final FilterStringComparison comparison;
+      private final FilterStringComparison comparison;
 
     public FilterStringComparison getComparison() {
         return this.comparison;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -70,7 +70,6 @@ public final class FilterStringFilter extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FilterStringFilter build() {
             return new FilterStringFilter(comparison, value);
         }

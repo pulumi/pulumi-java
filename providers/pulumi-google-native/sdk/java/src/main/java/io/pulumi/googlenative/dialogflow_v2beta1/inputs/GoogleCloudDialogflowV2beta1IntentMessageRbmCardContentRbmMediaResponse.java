@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * 
      */
     @InputImport(name="fileUri", required=true)
-    private final String fileUri;
+      private final String fileUri;
 
     public String getFileUri() {
         return this.fileUri;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * 
      */
     @InputImport(name="height", required=true)
-    private final String height;
+      private final String height;
 
     public String getHeight() {
         return this.height;
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * 
      */
     @InputImport(name="thumbnailUri", required=true)
-    private final String thumbnailUri;
+      private final String thumbnailUri;
 
     public String getThumbnailUri() {
         return this.thumbnailUri;
@@ -102,7 +102,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
             this.thumbnailUri = Objects.requireNonNull(thumbnailUri);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse(fileUri, height, thumbnailUri);
         }

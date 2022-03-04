@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.LinuxOsInfoResponse;
 import io.pulumi.azurenative.devtestlab.inputs.WindowsOsInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CustomImagePropertiesFromVmResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="linuxOsInfo")
-    private final @Nullable LinuxOsInfoResponse linuxOsInfo;
+      private final @Nullable LinuxOsInfoResponse linuxOsInfo;
 
     public Optional<LinuxOsInfoResponse> getLinuxOsInfo() {
         return this.linuxOsInfo == null ? Optional.empty() : Optional.ofNullable(this.linuxOsInfo);
@@ -36,7 +36,7 @@ public final class CustomImagePropertiesFromVmResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sourceVmId")
-    private final @Nullable String sourceVmId;
+      private final @Nullable String sourceVmId;
 
     public Optional<String> getSourceVmId() {
         return this.sourceVmId == null ? Optional.empty() : Optional.ofNullable(this.sourceVmId);
@@ -47,7 +47,7 @@ public final class CustomImagePropertiesFromVmResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="windowsOsInfo")
-    private final @Nullable WindowsOsInfoResponse windowsOsInfo;
+      private final @Nullable WindowsOsInfoResponse windowsOsInfo;
 
     public Optional<WindowsOsInfoResponse> getWindowsOsInfo() {
         return this.windowsOsInfo == null ? Optional.empty() : Optional.ofNullable(this.windowsOsInfo);
@@ -106,7 +106,6 @@ public final class CustomImagePropertiesFromVmResponse extends io.pulumi.resourc
             this.windowsOsInfo = windowsOsInfo;
             return this;
         }
-
         public CustomImagePropertiesFromVmResponse build() {
             return new CustomImagePropertiesFromVmResponse(linuxOsInfo, sourceVmId, windowsOsInfo);
         }

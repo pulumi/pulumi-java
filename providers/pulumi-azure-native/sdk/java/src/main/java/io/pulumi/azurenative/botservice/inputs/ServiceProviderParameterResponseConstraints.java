@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ServiceProviderParameterResponseConstraints extends io.pulumi
      * 
      */
     @InputImport(name="required")
-    private final @Nullable Boolean required;
+      private final @Nullable Boolean required;
 
     public Optional<Boolean> getRequired() {
         return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
@@ -61,7 +61,6 @@ public final class ServiceProviderParameterResponseConstraints extends io.pulumi
             this.required = required;
             return this;
         }
-
         public ServiceProviderParameterResponseConstraints build() {
             return new ServiceProviderParameterResponseConstraints(required);
         }

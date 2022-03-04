@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CategoricalStatsConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KAnonymityConfigResponse;
@@ -64,42 +64,42 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
     /**
      * Categorical stats
      * 
-     */
+    */
     public GooglePrivacyDlpV2CategoricalStatsConfigResponse getCategoricalStatsConfig() {
         return this.categoricalStatsConfig;
     }
     /**
      * delta-presence
      * 
-     */
+    */
     public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse getDeltaPresenceEstimationConfig() {
         return this.deltaPresenceEstimationConfig;
     }
     /**
      * K-anonymity
      * 
-     */
+    */
     public GooglePrivacyDlpV2KAnonymityConfigResponse getKAnonymityConfig() {
         return this.kAnonymityConfig;
     }
     /**
      * k-map
      * 
-     */
+    */
     public GooglePrivacyDlpV2KMapEstimationConfigResponse getKMapEstimationConfig() {
         return this.kMapEstimationConfig;
     }
     /**
      * l-diversity
      * 
-     */
+    */
     public GooglePrivacyDlpV2LDiversityConfigResponse getLDiversityConfig() {
         return this.lDiversityConfig;
     }
     /**
      * Numerical stats
      * 
-     */
+    */
     public GooglePrivacyDlpV2NumericalStatsConfigResponse getNumericalStatsConfig() {
         return this.numericalStatsConfig;
     }
@@ -163,7 +163,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
             this.numericalStatsConfig = Objects.requireNonNull(numericalStatsConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2PrivacyMetricResponse build() {
             return new GooglePrivacyDlpV2PrivacyMetricResponse(categoricalStatsConfig, deltaPresenceEstimationConfig, kAnonymityConfig, kMapEstimationConfig, lDiversityConfig, numericalStatsConfig);
         }

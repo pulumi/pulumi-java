@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inventoryItemName", required=true)
-    private final String inventoryItemName;
+      private final String inventoryItemName;
 
     public String getInventoryItemName() {
         return this.inventoryItemName;
@@ -28,7 +28,7 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vcenterName", required=true)
-    private final String vcenterName;
+      private final String vcenterName;
 
     public String getVcenterName() {
         return this.vcenterName;
@@ -98,7 +98,6 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
             this.vcenterName = Objects.requireNonNull(vcenterName);
             return this;
         }
-
         public GetInventoryItemArgs build() {
             return new GetInventoryItemArgs(inventoryItemName, resourceGroupName, vcenterName);
         }

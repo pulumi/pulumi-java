@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,7 +57,7 @@ public final class OccurenceAttestationSignature {
      * * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
      * * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
      * 
-     */
+    */
     public String getPublicKeyId() {
         return this.publicKeyId;
     }
@@ -70,7 +70,7 @@ public final class OccurenceAttestationSignature {
      * have a canonical serialization that can always be
      * unambiguously computed to derive the payload.
      * 
-     */
+    */
     public Optional<String> getSignature() {
         return Optional.ofNullable(this.signature);
     }
@@ -106,7 +106,6 @@ public final class OccurenceAttestationSignature {
             this.signature = signature;
             return this;
         }
-
         public OccurenceAttestationSignature build() {
             return new OccurenceAttestationSignature(publicKeyId, signature);
         }

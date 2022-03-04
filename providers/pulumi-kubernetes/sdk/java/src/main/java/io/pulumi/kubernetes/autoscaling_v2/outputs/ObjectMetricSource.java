@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.CrossVersionObjectReference;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricIdentifier;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricTarget;
@@ -40,21 +40,21 @@ public final class ObjectMetricSource {
     /**
      * describedObject specifies the descriptions of a object,such as kind,name apiVersion
      * 
-     */
+    */
     public CrossVersionObjectReference getDescribedObject() {
         return this.describedObject;
     }
     /**
      * metric identifies the target metric by name and selector
      * 
-     */
+    */
     public MetricIdentifier getMetric() {
         return this.metric;
     }
     /**
      * target specifies the target value for the given metric
      * 
-     */
+    */
     public MetricTarget getTarget() {
         return this.target;
     }
@@ -97,7 +97,6 @@ public final class ObjectMetricSource {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ObjectMetricSource build() {
             return new ObjectMetricSource(describedObject, metric, target);
         }

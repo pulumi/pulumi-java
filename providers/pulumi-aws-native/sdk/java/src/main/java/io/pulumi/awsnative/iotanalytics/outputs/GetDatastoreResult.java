@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotanalytics.outputs.DatastorePartitions;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreRetentionPeriod;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreStorage;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -118,7 +118,6 @@ public final class GetDatastoreResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatastoreResult build() {
             return new GetDatastoreResult(datastorePartitions, datastoreStorage, fileFormatConfiguration, id, retentionPeriod, tags);
         }

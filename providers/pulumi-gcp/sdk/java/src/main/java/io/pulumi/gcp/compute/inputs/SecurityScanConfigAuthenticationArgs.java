@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationCustomAccountArgs;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationGoogleAccountArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="customAccount")
-    private final @Nullable Input<SecurityScanConfigAuthenticationCustomAccountArgs> customAccount;
+      private final @Nullable Input<SecurityScanConfigAuthenticationCustomAccountArgs> customAccount;
 
     public Input<SecurityScanConfigAuthenticationCustomAccountArgs> getCustomAccount() {
         return this.customAccount == null ? Input.empty() : this.customAccount;
@@ -33,7 +33,7 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="googleAccount")
-    private final @Nullable Input<SecurityScanConfigAuthenticationGoogleAccountArgs> googleAccount;
+      private final @Nullable Input<SecurityScanConfigAuthenticationGoogleAccountArgs> googleAccount;
 
     public Input<SecurityScanConfigAuthenticationGoogleAccountArgs> getGoogleAccount() {
         return this.googleAccount == null ? Input.empty() : this.googleAccount;
@@ -92,7 +92,6 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
             this.googleAccount = Input.ofNullable(googleAccount);
             return this;
         }
-
         public SecurityScanConfigAuthenticationArgs build() {
             return new SecurityScanConfigAuthenticationArgs(customAccount, googleAccount);
         }

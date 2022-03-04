@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.inputs.ListWorkflowTriggerCallbackUrlArgs;
 import io.pulumi.azurenative.logic.outputs.ListWorkflowTriggerCallbackUrlResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWorkflowTriggerCallbackUrl {
-/**
- * The workflow trigger callback URL.
+    private ListWorkflowTriggerCallbackUrl() {}
+    public interface BuilderApplicator {
+        public void apply(ListWorkflowTriggerCallbackUrlArgs.Builder a);
+    }
+    private static ListWorkflowTriggerCallbackUrlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWorkflowTriggerCallbackUrlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The workflow trigger callback URL.
  * API Version: 2019-05-01.
  * 
- *
- * The workflow trigger callback URL.
+     *
+     * The workflow trigger callback URL.
  * 
- */
+     */
+    public static CompletableFuture<ListWorkflowTriggerCallbackUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The workflow trigger callback URL.
+     * 
+     */
     public static CompletableFuture<ListWorkflowTriggerCallbackUrlResult> invokeAsync(ListWorkflowTriggerCallbackUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowTriggerCallbackUrl", TypeShape.of(ListWorkflowTriggerCallbackUrlResult.class), args == null ? ListWorkflowTriggerCallbackUrlArgs.Empty : args, Utilities.withVersion(options));
     }

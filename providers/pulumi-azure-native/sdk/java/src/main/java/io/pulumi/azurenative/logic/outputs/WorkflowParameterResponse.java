@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class WorkflowParameterResponse {
     /**
      * The description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The metadata.
      * 
-     */
+    */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The value.
      * 
-     */
+    */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -119,7 +119,6 @@ public final class WorkflowParameterResponse {
             this.value = value;
             return this;
         }
-
         public WorkflowParameterResponse build() {
             return new WorkflowParameterResponse(description, metadata, type, value);
         }

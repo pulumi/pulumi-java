@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azurearcdata.outputs;
 import io.pulumi.azurenative.azurearcdata.outputs.DataControllerPropertiesResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -79,56 +79,56 @@ public final class GetDataControllerResult {
     /**
      * The extendedLocation of the resource.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The data controller's properties
      * 
-     */
+    */
     public DataControllerPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -206,7 +206,6 @@ public final class GetDataControllerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataControllerResult build() {
             return new GetDataControllerResult(extendedLocation, id, location, name, properties, systemData, tags, type);
         }

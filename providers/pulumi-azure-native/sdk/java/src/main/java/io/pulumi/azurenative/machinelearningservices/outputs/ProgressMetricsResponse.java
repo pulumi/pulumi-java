@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class ProgressMetricsResponse {
     /**
      * The completed datapoint count.
      * 
-     */
+    */
     public Double getCompletedDatapointCount() {
         return this.completedDatapointCount;
     }
     /**
      * The time of last successful incremental dataset refresh in UTC.
      * 
-     */
+    */
     public String getIncrementalDatasetLastRefreshTime() {
         return this.incrementalDatasetLastRefreshTime;
     }
     /**
      * The skipped datapoint count.
      * 
-     */
+    */
     public Double getSkippedDatapointCount() {
         return this.skippedDatapointCount;
     }
     /**
      * The total datapoint count.
      * 
-     */
+    */
     public Double getTotalDatapointCount() {
         return this.totalDatapointCount;
     }
@@ -117,7 +117,6 @@ public final class ProgressMetricsResponse {
             this.totalDatapointCount = Objects.requireNonNull(totalDatapointCount);
             return this;
         }
-
         public ProgressMetricsResponse build() {
             return new ProgressMetricsResponse(completedDatapointCount, incrementalDatasetLastRefreshTime, skippedDatapointCount, totalDatapointCount);
         }

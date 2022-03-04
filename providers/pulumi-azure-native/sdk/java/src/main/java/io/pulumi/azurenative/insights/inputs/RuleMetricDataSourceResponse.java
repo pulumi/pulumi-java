@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="legacyResourceId")
-    private final @Nullable String legacyResourceId;
+      private final @Nullable String legacyResourceId;
 
     public Optional<String> getLegacyResourceId() {
         return this.legacyResourceId == null ? Optional.empty() : Optional.ofNullable(this.legacyResourceId);
@@ -34,7 +34,7 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="metricName")
-    private final @Nullable String metricName;
+      private final @Nullable String metricName;
 
     public Optional<String> getMetricName() {
         return this.metricName == null ? Optional.empty() : Optional.ofNullable(this.metricName);
@@ -45,7 +45,7 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="metricNamespace")
-    private final @Nullable String metricNamespace;
+      private final @Nullable String metricNamespace;
 
     public Optional<String> getMetricNamespace() {
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
@@ -57,7 +57,7 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -68,7 +68,7 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceLocation")
-    private final @Nullable String resourceLocation;
+      private final @Nullable String resourceLocation;
 
     public Optional<String> getResourceLocation() {
         return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
@@ -79,7 +79,7 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable String resourceUri;
+      private final @Nullable String resourceUri;
 
     public Optional<String> getResourceUri() {
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
@@ -168,7 +168,6 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
             this.resourceUri = resourceUri;
             return this;
         }
-
         public RuleMetricDataSourceResponse build() {
             return new RuleMetricDataSourceResponse(legacyResourceId, metricName, metricNamespace, odataType, resourceLocation, resourceUri);
         }

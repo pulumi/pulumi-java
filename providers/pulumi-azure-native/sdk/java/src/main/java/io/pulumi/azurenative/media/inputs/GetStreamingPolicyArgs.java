@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="streamingPolicyName", required=true)
-    private final String streamingPolicyName;
+      private final String streamingPolicyName;
 
     public String getStreamingPolicyName() {
         return this.streamingPolicyName;
@@ -98,7 +98,6 @@ public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
         }
-
         public GetStreamingPolicyArgs build() {
             return new GetStreamingPolicyArgs(accountName, resourceGroupName, streamingPolicyName);
         }

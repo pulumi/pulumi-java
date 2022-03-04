@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class SpatialSpecResponse {
     /**
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * List of path's spatial type
      * 
-     */
+    */
     public List<String> getTypes() {
         return this.types == null ? List.of() : this.types;
     }
@@ -77,7 +77,6 @@ public final class SpatialSpecResponse {
             this.types = types;
             return this;
         }
-
         public SpatialSpecResponse build() {
             return new SpatialSpecResponse(path, types);
         }

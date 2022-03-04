@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.CloudFunctionEndpointResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudFunction", required=true)
-    private final CloudFunctionEndpointResponse cloudFunction;
+      private final CloudFunctionEndpointResponse cloudFunction;
 
     public CloudFunctionEndpointResponse getCloudFunction() {
         return this.cloudFunction;
@@ -34,7 +34,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudSqlInstance", required=true)
-    private final String cloudSqlInstance;
+      private final String cloudSqlInstance;
 
     public String getCloudSqlInstance() {
         return this.cloudSqlInstance;
@@ -45,7 +45,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gkeMasterCluster", required=true)
-    private final String gkeMasterCluster;
+      private final String gkeMasterCluster;
 
     public String getGkeMasterCluster() {
         return this.gkeMasterCluster;
@@ -56,7 +56,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-    private final String instance;
+      private final String instance;
 
     public String getInstance() {
         return this.instance;
@@ -67,7 +67,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -78,7 +78,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -89,7 +89,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkType", required=true)
-    private final String networkType;
+      private final String networkType;
 
     public String getNetworkType() {
         return this.networkType;
@@ -100,7 +100,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -111,7 +111,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -230,7 +230,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public EndpointResponse build() {
             return new EndpointResponse(cloudFunction, cloudSqlInstance, gkeMasterCluster, instance, ipAddress, network, networkType, port, project);
         }

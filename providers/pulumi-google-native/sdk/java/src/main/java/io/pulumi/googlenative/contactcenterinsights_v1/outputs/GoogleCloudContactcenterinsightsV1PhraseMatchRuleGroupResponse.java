@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
     /**
      * A list of phase match rules that are included in this group.
      * 
-     */
+    */
     public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> getPhraseMatchRules() {
         return this.phraseMatchRules;
     }
     /**
      * The type of this phrase match rule group.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -76,7 +76,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(phraseMatchRules, type);
         }

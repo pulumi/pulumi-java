@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apprunner.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ServiceAuthenticationConfiguration {
     /**
      * Access Role Arn
      * 
-     */
+    */
     public Optional<String> getAccessRoleArn() {
         return Optional.ofNullable(this.accessRoleArn);
     }
     /**
      * Connection Arn
      * 
-     */
+    */
     public Optional<String> getConnectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
@@ -76,7 +76,6 @@ public final class ServiceAuthenticationConfiguration {
             this.connectionArn = connectionArn;
             return this;
         }
-
         public ServiceAuthenticationConfiguration build() {
             return new ServiceAuthenticationConfiguration(accessRoleArn, connectionArn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediaconnect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetFlowArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="flowArn", required=true)
-    private final String flowArn;
+      private final String flowArn;
 
     public String getFlowArn() {
         return this.flowArn;
@@ -55,7 +55,6 @@ public final class GetFlowArgs extends io.pulumi.resources.InvokeArgs {
             this.flowArn = Objects.requireNonNull(flowArn);
             return this;
         }
-
         public GetFlowArgs build() {
             return new GetFlowArgs(flowArn);
         }

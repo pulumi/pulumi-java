@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.DashboardLensResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -71,49 +71,49 @@ public final class GetDashboardResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The dashboard lenses.
      * 
-     */
+    */
     public List<DashboardLensResponse> getLenses() {
         return this.lenses == null ? List.of() : this.lenses;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The dashboard metadata.
      * 
-     */
+    */
     public Map<String,Object> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class GetDashboardResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDashboardResult build() {
             return new GetDashboardResult(id, lenses, location, metadata, name, tags, type);
         }

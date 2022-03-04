@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketNotificationFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class BucketTopicConfiguration {
     /**
      * The Amazon S3 bucket event about which to send notifications.
      * 
-     */
+    */
     public String getEvent() {
         return this.event;
     }
     /**
      * The filtering rules that determine for which objects to send notifications.
      * 
-     */
+    */
     public Optional<BucketNotificationFilter> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
@@ -98,7 +98,6 @@ public final class BucketTopicConfiguration {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public BucketTopicConfiguration build() {
             return new BucketTopicConfiguration(event, filter, topic);
         }

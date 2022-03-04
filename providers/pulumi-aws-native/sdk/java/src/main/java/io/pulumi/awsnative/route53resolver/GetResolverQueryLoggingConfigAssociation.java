@@ -6,17 +6,33 @@ package io.pulumi.awsnative.route53resolver;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53resolver.inputs.GetResolverQueryLoggingConfigAssociationArgs;
 import io.pulumi.awsnative.route53resolver.outputs.GetResolverQueryLoggingConfigAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResolverQueryLoggingConfigAssociation {
-/**
- * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
+    private GetResolverQueryLoggingConfigAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetResolverQueryLoggingConfigAssociationArgs.Builder a);
+    }
+    private static GetResolverQueryLoggingConfigAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResolverQueryLoggingConfigAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
  * 
- */
+     */
+    public static CompletableFuture<GetResolverQueryLoggingConfigAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
+     * 
+     */
     public static CompletableFuture<GetResolverQueryLoggingConfigAssociationResult> invokeAsync(GetResolverQueryLoggingConfigAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverQueryLoggingConfigAssociation", TypeShape.of(GetResolverQueryLoggingConfigAssociationResult.class), args == null ? GetResolverQueryLoggingConfigAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

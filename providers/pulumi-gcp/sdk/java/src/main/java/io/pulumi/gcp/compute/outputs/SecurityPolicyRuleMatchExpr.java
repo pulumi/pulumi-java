@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class SecurityPolicyRuleMatchExpr {
      * Textual representation of an expression in Common Expression Language syntax.
      * The application context of the containing message determines which well-known feature set of CEL is supported.
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }
@@ -54,7 +54,6 @@ public final class SecurityPolicyRuleMatchExpr {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public SecurityPolicyRuleMatchExpr build() {
             return new SecurityPolicyRuleMatchExpr(expression);
         }

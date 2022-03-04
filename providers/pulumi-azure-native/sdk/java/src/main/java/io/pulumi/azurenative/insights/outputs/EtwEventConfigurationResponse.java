@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class EtwEventConfigurationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public EtwEventConfigurationResponse build() {
             return new EtwEventConfigurationResponse(filter, id, name);
         }

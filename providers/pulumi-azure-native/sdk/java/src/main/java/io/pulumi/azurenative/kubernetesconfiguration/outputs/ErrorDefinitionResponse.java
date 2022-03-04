@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ErrorDefinitionResponse {
     /**
      * Service specific error code which serves as the substatus for the HTTP error code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Description of the error.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -74,7 +74,6 @@ public final class ErrorDefinitionResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public ErrorDefinitionResponse build() {
             return new ErrorDefinitionResponse(code, message);
         }

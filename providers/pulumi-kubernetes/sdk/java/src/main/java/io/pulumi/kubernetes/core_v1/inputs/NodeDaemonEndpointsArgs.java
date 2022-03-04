@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.DaemonEndpointArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kubeletEndpoint")
-    private final @Nullable Input<DaemonEndpointArgs> kubeletEndpoint;
+      private final @Nullable Input<DaemonEndpointArgs> kubeletEndpoint;
 
     public Input<DaemonEndpointArgs> getKubeletEndpoint() {
         return this.kubeletEndpoint == null ? Input.empty() : this.kubeletEndpoint;
@@ -66,7 +66,6 @@ public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceA
             this.kubeletEndpoint = Input.ofNullable(kubeletEndpoint);
             return this;
         }
-
         public NodeDaemonEndpointsArgs build() {
             return new NodeDaemonEndpointsArgs(kubeletEndpoint);
         }

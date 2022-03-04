@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class RuntimeClassStrategyOptions {
     /**
      * allowedRuntimeClassNames is a whitelist of RuntimeClass names that may be specified on a pod. A value of "*" means that any RuntimeClass name is allowed, and must be the only item in the list. An empty list requires the RuntimeClassName field to be unset.
      * 
-     */
+    */
     public List<String> getAllowedRuntimeClassNames() {
         return this.allowedRuntimeClassNames;
     }
     /**
      * defaultRuntimeClassName is the default RuntimeClassName to set on the pod. The default MUST be allowed by the allowedRuntimeClassNames list. A value of nil does not mutate the Pod.
      * 
-     */
+    */
     public Optional<String> getDefaultRuntimeClassName() {
         return Optional.ofNullable(this.defaultRuntimeClassName);
     }
@@ -77,7 +77,6 @@ public final class RuntimeClassStrategyOptions {
             this.defaultRuntimeClassName = defaultRuntimeClassName;
             return this;
         }
-
         public RuntimeClassStrategyOptions build() {
             return new RuntimeClassStrategyOptions(allowedRuntimeClassNames, defaultRuntimeClassName);
         }

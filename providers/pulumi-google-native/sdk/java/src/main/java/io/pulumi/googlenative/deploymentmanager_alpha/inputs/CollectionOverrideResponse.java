@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.MethodMapResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.OptionsResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="collection", required=true)
-    private final String collection;
+      private final String collection;
 
     public String getCollection() {
         return this.collection;
@@ -34,7 +34,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="methodMap", required=true)
-    private final MethodMapResponse methodMap;
+      private final MethodMapResponse methodMap;
 
     public MethodMapResponse getMethodMap() {
         return this.methodMap;
@@ -45,7 +45,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="options", required=true)
-    private final OptionsResponse options;
+      private final OptionsResponse options;
 
     public OptionsResponse getOptions() {
         return this.options;
@@ -104,7 +104,6 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public CollectionOverrideResponse build() {
             return new CollectionOverrideResponse(collection, methodMap, options);
         }

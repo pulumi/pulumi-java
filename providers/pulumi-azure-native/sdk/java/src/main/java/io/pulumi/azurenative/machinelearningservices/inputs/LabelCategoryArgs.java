@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelClassArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowMultiSelect")
-    private final @Nullable Input<Boolean> allowMultiSelect;
+      private final @Nullable Input<Boolean> allowMultiSelect;
 
     public Input<Boolean> getAllowMultiSelect() {
         return this.allowMultiSelect == null ? Input.empty() : this.allowMultiSelect;
@@ -37,7 +37,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classes", required=true)
-    private final Input<Map<String,LabelClassArgs>> classes;
+      private final Input<Map<String,LabelClassArgs>> classes;
 
     public Input<Map<String,LabelClassArgs>> getClasses() {
         return this.classes;
@@ -48,7 +48,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -122,7 +122,6 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
-
         public LabelCategoryArgs build() {
             return new LabelCategoryArgs(allowMultiSelect, classes, displayName);
         }

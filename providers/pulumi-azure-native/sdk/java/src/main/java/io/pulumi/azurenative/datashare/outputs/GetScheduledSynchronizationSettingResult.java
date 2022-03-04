@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -89,14 +89,14 @@ public final class GetScheduledSynchronizationSettingResult {
     /**
      * Time at which the synchronization setting was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -104,56 +104,56 @@ public final class GetScheduledSynchronizationSettingResult {
      * Kind of synchronization setting.
      * Expected value is 'ScheduleBased'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Recurrence Interval
      * 
-     */
+    */
     public String getRecurrenceInterval() {
         return this.recurrenceInterval;
     }
     /**
      * Synchronization time
      * 
-     */
+    */
     public String getSynchronizationTime() {
         return this.synchronizationTime;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Name of the user who created the synchronization setting.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
@@ -245,7 +245,6 @@ public final class GetScheduledSynchronizationSettingResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetScheduledSynchronizationSettingResult build() {
             return new GetScheduledSynchronizationSettingResult(createdAt, id, kind, name, provisioningState, recurrenceInterval, synchronizationTime, systemData, type, userName);
         }

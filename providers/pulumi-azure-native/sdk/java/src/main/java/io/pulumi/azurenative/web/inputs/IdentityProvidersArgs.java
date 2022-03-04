@@ -13,7 +13,7 @@ import io.pulumi.azurenative.web.inputs.GoogleArgs;
 import io.pulumi.azurenative.web.inputs.LegacyMicrosoftAccountArgs;
 import io.pulumi.azurenative.web.inputs.TwitterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -33,7 +33,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apple")
-    private final @Nullable Input<AppleArgs> apple;
+      private final @Nullable Input<AppleArgs> apple;
 
     public Input<AppleArgs> getApple() {
         return this.apple == null ? Input.empty() : this.apple;
@@ -44,7 +44,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="azureActiveDirectory")
-    private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
+      private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
 
     public Input<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
         return this.azureActiveDirectory == null ? Input.empty() : this.azureActiveDirectory;
@@ -55,7 +55,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="azureStaticWebApps")
-    private final @Nullable Input<AzureStaticWebAppsArgs> azureStaticWebApps;
+      private final @Nullable Input<AzureStaticWebAppsArgs> azureStaticWebApps;
 
     public Input<AzureStaticWebAppsArgs> getAzureStaticWebApps() {
         return this.azureStaticWebApps == null ? Input.empty() : this.azureStaticWebApps;
@@ -67,7 +67,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customOpenIdConnectProviders")
-    private final @Nullable Input<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
+      private final @Nullable Input<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
 
     public Input<Map<String,CustomOpenIdConnectProviderArgs>> getCustomOpenIdConnectProviders() {
         return this.customOpenIdConnectProviders == null ? Input.empty() : this.customOpenIdConnectProviders;
@@ -78,7 +78,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="facebook")
-    private final @Nullable Input<FacebookArgs> facebook;
+      private final @Nullable Input<FacebookArgs> facebook;
 
     public Input<FacebookArgs> getFacebook() {
         return this.facebook == null ? Input.empty() : this.facebook;
@@ -89,7 +89,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gitHub")
-    private final @Nullable Input<GitHubArgs> gitHub;
+      private final @Nullable Input<GitHubArgs> gitHub;
 
     public Input<GitHubArgs> getGitHub() {
         return this.gitHub == null ? Input.empty() : this.gitHub;
@@ -100,7 +100,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="google")
-    private final @Nullable Input<GoogleArgs> google;
+      private final @Nullable Input<GoogleArgs> google;
 
     public Input<GoogleArgs> getGoogle() {
         return this.google == null ? Input.empty() : this.google;
@@ -111,7 +111,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="legacyMicrosoftAccount")
-    private final @Nullable Input<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
+      private final @Nullable Input<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
 
     public Input<LegacyMicrosoftAccountArgs> getLegacyMicrosoftAccount() {
         return this.legacyMicrosoftAccount == null ? Input.empty() : this.legacyMicrosoftAccount;
@@ -122,7 +122,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="twitter")
-    private final @Nullable Input<TwitterArgs> twitter;
+      private final @Nullable Input<TwitterArgs> twitter;
 
     public Input<TwitterArgs> getTwitter() {
         return this.twitter == null ? Input.empty() : this.twitter;
@@ -286,7 +286,6 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             this.twitter = Input.ofNullable(twitter);
             return this;
         }
-
         public IdentityProvidersArgs build() {
             return new IdentityProvidersArgs(apple, azureActiveDirectory, azureStaticWebApps, customOpenIdConnectProviders, facebook, gitHub, google, legacyMicrosoftAccount, twitter);
         }

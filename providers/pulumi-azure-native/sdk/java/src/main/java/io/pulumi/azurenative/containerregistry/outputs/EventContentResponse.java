@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.outputs.ActorResponse;
 import io.pulumi.azurenative.containerregistry.outputs.RequestResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SourceResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TargetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -72,49 +72,49 @@ public final class EventContentResponse {
     /**
      * The action that encompasses the provided event.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
      * 
-     */
+    */
     public Optional<ActorResponse> getActor() {
         return Optional.ofNullable(this.actor);
     }
     /**
      * The event ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The request that generated the event.
      * 
-     */
+    */
     public Optional<RequestResponse> getRequest() {
         return Optional.ofNullable(this.request);
     }
     /**
      * The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
      * 
-     */
+    */
     public Optional<SourceResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The target of the event.
      * 
-     */
+    */
     public Optional<TargetResponse> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * The time at which the event occurred.
      * 
-     */
+    */
     public Optional<String> getTimestamp() {
         return Optional.ofNullable(this.timestamp);
     }
@@ -185,7 +185,6 @@ public final class EventContentResponse {
             this.timestamp = timestamp;
             return this;
         }
-
         public EventContentResponse build() {
             return new EventContentResponse(action, actor, id, request, source, target, timestamp);
         }

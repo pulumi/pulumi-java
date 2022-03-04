@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.ConfigFileArgs;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.ImportFileArgs;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<ConfigFileArgs> config;
+      private final @Nullable Input<ConfigFileArgs> config;
 
     public Input<ConfigFileArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -32,7 +32,7 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="imports")
-    private final @Nullable Input<List<ImportFileArgs>> imports;
+      private final @Nullable Input<List<ImportFileArgs>> imports;
 
     public Input<List<ImportFileArgs>> getImports() {
         return this.imports == null ? Input.empty() : this.imports;
@@ -91,7 +91,6 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
             this.imports = Input.ofNullable(imports);
             return this;
         }
-
         public TargetConfigurationArgs build() {
             return new TargetConfigurationArgs(config, imports);
         }

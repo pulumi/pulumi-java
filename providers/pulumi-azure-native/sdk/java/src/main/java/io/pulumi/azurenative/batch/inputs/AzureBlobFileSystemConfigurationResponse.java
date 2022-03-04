@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class AzureBlobFileSystemConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="accountKey")
-    private final @Nullable String accountKey;
+      private final @Nullable String accountKey;
 
     public Optional<String> getAccountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -37,14 +37,14 @@ public final class AzureBlobFileSystemConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="blobfuseOptions")
-    private final @Nullable String blobfuseOptions;
+      private final @Nullable String blobfuseOptions;
 
     public Optional<String> getBlobfuseOptions() {
         return this.blobfuseOptions == null ? Optional.empty() : Optional.ofNullable(this.blobfuseOptions);
     }
 
     @InputImport(name="containerName", required=true)
-    private final String containerName;
+      private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -55,7 +55,7 @@ public final class AzureBlobFileSystemConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="relativeMountPath", required=true)
-    private final String relativeMountPath;
+      private final String relativeMountPath;
 
     public String getRelativeMountPath() {
         return this.relativeMountPath;
@@ -66,7 +66,7 @@ public final class AzureBlobFileSystemConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="sasKey")
-    private final @Nullable String sasKey;
+      private final @Nullable String sasKey;
 
     public Optional<String> getSasKey() {
         return this.sasKey == null ? Optional.empty() : Optional.ofNullable(this.sasKey);
@@ -155,7 +155,6 @@ public final class AzureBlobFileSystemConfigurationResponse extends io.pulumi.re
             this.sasKey = sasKey;
             return this;
         }
-
         public AzureBlobFileSystemConfigurationResponse build() {
             return new AzureBlobFileSystemConfigurationResponse(accountKey, accountName, blobfuseOptions, containerName, relativeMountPath, sasKey);
         }

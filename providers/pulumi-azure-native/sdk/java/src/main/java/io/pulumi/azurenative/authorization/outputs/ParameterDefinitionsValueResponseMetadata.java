@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ParameterDefinitionsValueResponseMetadata {
     /**
      * Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
      * 
-     */
+    */
     public Optional<Boolean> getAssignPermissions() {
         return Optional.ofNullable(this.assignPermissions);
     }
     /**
      * The description of the parameter.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name for the parameter.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
      * 
-     */
+    */
     public Optional<String> getStrongType() {
         return Optional.ofNullable(this.strongType);
     }
@@ -119,7 +119,6 @@ public final class ParameterDefinitionsValueResponseMetadata {
             this.strongType = strongType;
             return this;
         }
-
         public ParameterDefinitionsValueResponseMetadata build() {
             return new ParameterDefinitionsValueResponseMetadata(assignPermissions, description, displayName, strongType);
         }

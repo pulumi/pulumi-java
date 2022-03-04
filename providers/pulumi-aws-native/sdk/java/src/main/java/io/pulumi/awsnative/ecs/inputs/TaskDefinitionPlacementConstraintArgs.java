@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class TaskDefinitionPlacementConstraintArgs extends io.pulumi.resou
     public static final TaskDefinitionPlacementConstraintArgs Empty = new TaskDefinitionPlacementConstraintArgs();
 
     @InputImport(name="expression")
-    private final @Nullable Input<String> expression;
+      private final @Nullable Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression == null ? Input.empty() : this.expression;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class TaskDefinitionPlacementConstraintArgs extends io.pulumi.resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public TaskDefinitionPlacementConstraintArgs build() {
             return new TaskDefinitionPlacementConstraintArgs(expression, type);
         }

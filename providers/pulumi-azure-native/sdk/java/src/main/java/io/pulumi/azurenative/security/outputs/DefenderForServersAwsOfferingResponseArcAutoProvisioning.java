@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
     /**
      * Is arc auto provisioning enabled
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Metadata of Service Principal secret for autoprovisioning
      * 
-     */
+    */
     public Optional<DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata> getServicePrincipalSecretMetadata() {
         return Optional.ofNullable(this.servicePrincipalSecretMetadata);
     }
@@ -77,7 +77,6 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
             this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;
         }
-
         public DefenderForServersAwsOfferingResponseArcAutoProvisioning build() {
             return new DefenderForServersAwsOfferingResponseArcAutoProvisioning(enabled, servicePrincipalSecretMetadata);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ChannelCredentialsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="certificates", required=true)
-    private final TlsCertificatePathsResponse certificates;
+      private final TlsCertificatePathsResponse certificates;
 
     public TlsCertificatePathsResponse getCertificates() {
         return this.certificates;
@@ -33,7 +33,7 @@ public final class ChannelCredentialsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="channelCredentialType", required=true)
-    private final String channelCredentialType;
+      private final String channelCredentialType;
 
     public String getChannelCredentialType() {
         return this.channelCredentialType;
@@ -82,7 +82,6 @@ public final class ChannelCredentialsResponse extends io.pulumi.resources.Invoke
             this.channelCredentialType = Objects.requireNonNull(channelCredentialType);
             return this;
         }
-
         public ChannelCredentialsResponse build() {
             return new ChannelCredentialsResponse(certificates, channelCredentialType);
         }

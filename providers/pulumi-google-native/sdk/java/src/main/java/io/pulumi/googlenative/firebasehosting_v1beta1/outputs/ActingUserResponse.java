@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ActingUserResponse {
     /**
      * The email address of the user when the user performed the action.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * A profile image URL for the user. May not be present if the user has changed their email address or deleted their account.
      * 
-     */
+    */
     public String getImageUrl() {
         return this.imageUrl;
     }
@@ -74,7 +74,6 @@ public final class ActingUserResponse {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }
-
         public ActingUserResponse build() {
             return new ActingUserResponse(email, imageUrl);
         }

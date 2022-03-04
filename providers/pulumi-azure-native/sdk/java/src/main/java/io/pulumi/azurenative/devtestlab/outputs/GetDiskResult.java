@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -133,112 +133,112 @@ public final class GetDiskResult {
     /**
      * The creation date of the disk.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * When backed by a blob, the name of the VHD blob without extension.
      * 
-     */
+    */
     public Optional<String> getDiskBlobName() {
         return Optional.ofNullable(this.diskBlobName);
     }
     /**
      * The size of the disk in Gibibytes.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
     /**
      * The storage type for the disk (i.e. Standard, Premium).
      * 
-     */
+    */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * When backed by a blob, the URI of underlying blob.
      * 
-     */
+    */
     public Optional<String> getDiskUri() {
         return Optional.ofNullable(this.diskUri);
     }
     /**
      * The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
      * 
-     */
+    */
     public Optional<String> getHostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource ID of the VM to which this disk is leased.
      * 
-     */
+    */
     public Optional<String> getLeasedByLabVmId() {
         return Optional.ofNullable(this.leasedByLabVmId);
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * When backed by managed disk, this is the ID of the compute disk resource.
      * 
-     */
+    */
     public Optional<String> getManagedDiskId() {
         return Optional.ofNullable(this.managedDiskId);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * When backed by a blob, the storage account where the blob is.
      * 
-     */
+    */
     public Optional<String> getStorageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
@@ -372,7 +372,6 @@ public final class GetDiskResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetDiskResult build() {
             return new GetDiskResult(createdDate, diskBlobName, diskSizeGiB, diskType, diskUri, hostCaching, id, leasedByLabVmId, location, managedDiskId, name, provisioningState, storageAccountId, tags, type, uniqueIdentifier);
         }

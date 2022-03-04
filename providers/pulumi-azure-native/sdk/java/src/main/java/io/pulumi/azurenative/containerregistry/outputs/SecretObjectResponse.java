@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,7 +37,7 @@ public final class SecretObjectResponse {
      * The type of the secret object which determines how the value of the secret object has to be
      * interpreted.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -46,7 +46,7 @@ public final class SecretObjectResponse {
      * based on the type of the secret object. If the type is Opaque, the value will be
      * used as is without any modification.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -82,7 +82,6 @@ public final class SecretObjectResponse {
             this.value = value;
             return this;
         }
-
         public SecretObjectResponse build() {
             return new SecretObjectResponse(type, value);
         }

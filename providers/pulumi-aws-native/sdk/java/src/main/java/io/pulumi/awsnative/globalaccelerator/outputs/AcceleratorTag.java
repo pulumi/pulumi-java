@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.globalaccelerator.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AcceleratorTag {
     /**
      * Key of the tag. Value can be 1 to 127 characters.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value for the tag. Value can be 1 to 255 characters.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class AcceleratorTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AcceleratorTag build() {
             return new AcceleratorTag(key, value);
         }

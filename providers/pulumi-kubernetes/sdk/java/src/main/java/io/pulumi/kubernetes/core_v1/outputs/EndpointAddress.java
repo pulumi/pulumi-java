@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class EndpointAddress {
     /**
      * The Hostname of this endpoint
      * 
-     */
+    */
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
      * 
-     */
+    */
     public String getIp() {
         return this.ip;
     }
     /**
      * Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
      * 
-     */
+    */
     public Optional<String> getNodeName() {
         return Optional.ofNullable(this.nodeName);
     }
     /**
      * Reference to object providing the endpoint.
      * 
-     */
+    */
     public Optional<ObjectReference> getTargetRef() {
         return Optional.ofNullable(this.targetRef);
     }
@@ -119,7 +119,6 @@ public final class EndpointAddress {
             this.targetRef = targetRef;
             return this;
         }
-
         public EndpointAddress build() {
             return new EndpointAddress(hostname, ip, nodeName, targetRef);
         }

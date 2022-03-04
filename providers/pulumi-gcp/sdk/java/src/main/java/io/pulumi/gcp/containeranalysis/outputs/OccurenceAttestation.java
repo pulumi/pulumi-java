@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.containeranalysis.outputs.OccurenceAttestationSignature;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public final class OccurenceAttestation {
      * The serialized payload that is verified by one or
      * more signatures. A base64-encoded string.
      * 
-     */
+    */
     public String getSerializedPayload() {
         return this.serializedPayload;
     }
@@ -52,7 +52,7 @@ public final class OccurenceAttestation {
      * details on signature structure and verification.
      * Structure is documented below.
      * 
-     */
+    */
     public List<OccurenceAttestationSignature> getSignatures() {
         return this.signatures;
     }
@@ -88,7 +88,6 @@ public final class OccurenceAttestation {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public OccurenceAttestation build() {
             return new OccurenceAttestation(serializedPayload, signatures);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class RouterApplianceInstanceResponse {
     /**
      * The IP address on the VM to use for peering.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * The URI of the VM.
      * 
-     */
+    */
     public String getVirtualMachine() {
         return this.virtualMachine;
     }
@@ -74,7 +74,6 @@ public final class RouterApplianceInstanceResponse {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }
-
         public RouterApplianceInstanceResponse build() {
             return new RouterApplianceInstanceResponse(ipAddress, virtualMachine);
         }

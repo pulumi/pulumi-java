@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endRestoreTime")
-    private final @Nullable Input<String> endRestoreTime;
+      private final @Nullable Input<String> endRestoreTime;
 
     public Input<String> getEndRestoreTime() {
         return this.endRestoreTime == null ? Input.empty() : this.endRestoreTime;
@@ -34,7 +34,7 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startRestoreTime")
-    private final @Nullable Input<String> startRestoreTime;
+      private final @Nullable Input<String> startRestoreTime;
 
     public Input<String> getStartRestoreTime() {
         return this.startRestoreTime == null ? Input.empty() : this.startRestoreTime;
@@ -93,7 +93,6 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
             this.startRestoreTime = Input.ofNullable(startRestoreTime);
             return this;
         }
-
         public RestoredLogsArgs build() {
             return new RestoredLogsArgs(endRestoreTime, startRestoreTime);
         }

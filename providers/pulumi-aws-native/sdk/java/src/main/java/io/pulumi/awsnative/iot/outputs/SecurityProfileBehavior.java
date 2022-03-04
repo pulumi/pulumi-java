@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.SecurityProfileBehaviorCriteria;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricDimension;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -52,7 +52,7 @@ public final class SecurityProfileBehavior {
     /**
      * What is measured by the behavior.
      * 
-     */
+    */
     public Optional<String> getMetric() {
         return Optional.ofNullable(this.metric);
     }
@@ -62,14 +62,14 @@ public final class SecurityProfileBehavior {
     /**
      * The name for the behavior.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn't be forwarded for SNS notification.
      * 
-     */
+    */
     public Optional<Boolean> getSuppressAlerts() {
         return Optional.ofNullable(this.suppressAlerts);
     }
@@ -126,7 +126,6 @@ public final class SecurityProfileBehavior {
             this.suppressAlerts = suppressAlerts;
             return this;
         }
-
         public SecurityProfileBehavior build() {
             return new SecurityProfileBehavior(criteria, metric, metricDimension, name, suppressAlerts);
         }

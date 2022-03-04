@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetIntegrationAccountMapArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-    private final String integrationAccountName;
+      private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -28,7 +28,7 @@ public final class GetIntegrationAccountMapArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="mapName", required=true)
-    private final String mapName;
+      private final String mapName;
 
     public String getMapName() {
         return this.mapName;
@@ -39,7 +39,7 @@ public final class GetIntegrationAccountMapArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetIntegrationAccountMapArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetIntegrationAccountMapArgs build() {
             return new GetIntegrationAccountMapArgs(integrationAccountName, mapName, resourceGroupName);
         }

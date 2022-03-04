@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class MethodMapResponse {
     /**
      * The action identifier for the create method to be used for this collection
      * 
-     */
+    */
     public String getCreate() {
         return this.create;
     }
     /**
      * The action identifier for the delete method to be used for this collection
      * 
-     */
+    */
     public String getDelete() {
         return this.delete;
     }
     /**
      * The action identifier for the get method to be used for this collection
      * 
-     */
+    */
     public String getGet() {
         return this.get;
     }
     /**
      * The action identifier for the setIamPolicy method to be used for this collection
      * 
-     */
+    */
     public String getSetIamPolicy() {
         return this.setIamPolicy;
     }
     /**
      * The action identifier for the update method to be used for this collection
      * 
-     */
+    */
     public String getUpdate() {
         return this.update;
     }
@@ -137,7 +137,6 @@ public final class MethodMapResponse {
             this.update = Objects.requireNonNull(update);
             return this;
         }
-
         public MethodMapResponse build() {
             return new MethodMapResponse(create, delete, get, setIamPolicy, update);
         }

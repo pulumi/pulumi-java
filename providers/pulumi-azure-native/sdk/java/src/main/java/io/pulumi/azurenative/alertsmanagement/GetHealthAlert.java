@@ -6,21 +6,41 @@ package io.pulumi.azurenative.alertsmanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.alertsmanagement.inputs.GetHealthAlertArgs;
 import io.pulumi.azurenative.alertsmanagement.outputs.GetHealthAlertResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHealthAlert {
-/**
- * The health alert resource.
+    private GetHealthAlert() {}
+    public interface BuilderApplicator {
+        public void apply(GetHealthAlertArgs.Builder a);
+    }
+    private static GetHealthAlertArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHealthAlertArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The health alert resource.
  * API Version: 2020-08-04-preview.
  * 
- *
- * The health alert resource.
+     *
+     * The health alert resource.
  * 
- */
+     */
+    public static CompletableFuture<GetHealthAlertResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The health alert resource.
+     * API Version: 2020-08-04-preview.
+     * 
+     *
+         * The health alert resource.
+     * 
+     */
     public static CompletableFuture<GetHealthAlertResult> invokeAsync(GetHealthAlertArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getHealthAlert", TypeShape.of(GetHealthAlertResult.class), args == null ? GetHealthAlertArgs.Empty : args, Utilities.withVersion(options));
     }

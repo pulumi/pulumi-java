@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.enums.ManagedClusterSKUName;
 import io.pulumi.azurenative.containerservice.enums.ManagedClusterSKUTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,ManagedClusterSKUName>> name;
+      private final @Nullable Input<Either<String,ManagedClusterSKUName>> name;
 
     public Input<Either<String,ManagedClusterSKUName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -33,7 +33,7 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<Either<String,ManagedClusterSKUTier>> tier;
+      private final @Nullable Input<Either<String,ManagedClusterSKUTier>> tier;
 
     public Input<Either<String,ManagedClusterSKUTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -92,7 +92,6 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public ManagedClusterSKUArgs build() {
             return new ManagedClusterSKUArgs(name, tier);
         }

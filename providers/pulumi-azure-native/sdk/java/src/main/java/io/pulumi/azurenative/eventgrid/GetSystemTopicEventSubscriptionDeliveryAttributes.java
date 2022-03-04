@@ -6,21 +6,41 @@ package io.pulumi.azurenative.eventgrid;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionDeliveryAttributesArgs;
 import io.pulumi.azurenative.eventgrid.outputs.GetSystemTopicEventSubscriptionDeliveryAttributesResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSystemTopicEventSubscriptionDeliveryAttributes {
-/**
- * Result of the Get delivery attributes operation.
+    private GetSystemTopicEventSubscriptionDeliveryAttributes() {}
+    public interface BuilderApplicator {
+        public void apply(GetSystemTopicEventSubscriptionDeliveryAttributesArgs.Builder a);
+    }
+    private static GetSystemTopicEventSubscriptionDeliveryAttributesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSystemTopicEventSubscriptionDeliveryAttributesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Result of the Get delivery attributes operation.
  * API Version: 2021-06-01-preview.
  * 
- *
- * Result of the Get delivery attributes operation.
+     *
+     * Result of the Get delivery attributes operation.
  * 
- */
+     */
+    public static CompletableFuture<GetSystemTopicEventSubscriptionDeliveryAttributesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Result of the Get delivery attributes operation.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * Result of the Get delivery attributes operation.
+     * 
+     */
     public static CompletableFuture<GetSystemTopicEventSubscriptionDeliveryAttributesResult> invokeAsync(GetSystemTopicEventSubscriptionDeliveryAttributesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetSystemTopicEventSubscriptionDeliveryAttributesResult.class), args == null ? GetSystemTopicEventSubscriptionDeliveryAttributesArgs.Empty : args, Utilities.withVersion(options));
     }

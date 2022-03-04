@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,14 +48,14 @@ public final class MiSqlConnectionInfoResponse {
     /**
      * Resource id for Azure SQL database Managed instance
      * 
-     */
+    */
     public String getManagedInstanceResourceId() {
         return this.managedInstanceResourceId;
     }
     /**
      * Password credential.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
@@ -63,14 +63,14 @@ public final class MiSqlConnectionInfoResponse {
      * Type of connection info
      * Expected value is 'MiSqlConnectionInfo'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * User name
      * 
-     */
+    */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }
@@ -120,7 +120,6 @@ public final class MiSqlConnectionInfoResponse {
             this.userName = userName;
             return this;
         }
-
         public MiSqlConnectionInfoResponse build() {
             return new MiSqlConnectionInfoResponse(managedInstanceResourceId, password, type, userName);
         }

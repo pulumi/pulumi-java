@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.LongTermSchedulePolicyResp
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -71,42 +71,42 @@ public final class AzureFileShareProtectionPolicyResponse {
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'AzureStorage'.
      * 
-     */
+    */
     public String getBackupManagementType() {
         return this.backupManagementType;
     }
     /**
      * Number of items associated with this policy.
      * 
-     */
+    */
     public Optional<Integer> getProtectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
      * Retention policy with the details on backup copy retention ranges.
      * 
-     */
+    */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * Backup schedule specified as part of backup policy.
      * 
-     */
+    */
     public Optional<Object> getSchedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
     /**
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
      * 
-     */
+    */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }
     /**
      * Type of workload for the backup management
      * 
-     */
+    */
     public Optional<String> getWorkLoadType() {
         return Optional.ofNullable(this.workLoadType);
     }
@@ -170,7 +170,6 @@ public final class AzureFileShareProtectionPolicyResponse {
             this.workLoadType = workLoadType;
             return this;
         }
-
         public AzureFileShareProtectionPolicyResponse build() {
             return new AzureFileShareProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy, timeZone, workLoadType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class RuntimeConfigResponse {
     /**
      * Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
      * 
-     */
+    */
     public String getContainerImage() {
         return this.containerImage;
     }
     /**
      * Optional. A mapping of property names to values, which are used to configure workload execution.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties;
     }
     /**
      * Optional. Version of the batch runtime.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -96,7 +96,6 @@ public final class RuntimeConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public RuntimeConfigResponse build() {
             return new RuntimeConfigResponse(containerImage, properties, version);
         }

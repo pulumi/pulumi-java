@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ManagedRuleSetArgs;
 import io.pulumi.azurenative.network.inputs.OwaspCrsExclusionEntryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="exclusions")
-    private final @Nullable Input<List<OwaspCrsExclusionEntryArgs>> exclusions;
+      private final @Nullable Input<List<OwaspCrsExclusionEntryArgs>> exclusions;
 
     public Input<List<OwaspCrsExclusionEntryArgs>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -36,7 +36,7 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="managedRuleSets", required=true)
-    private final Input<List<ManagedRuleSetArgs>> managedRuleSets;
+      private final Input<List<ManagedRuleSetArgs>> managedRuleSets;
 
     public Input<List<ManagedRuleSetArgs>> getManagedRuleSets() {
         return this.managedRuleSets;
@@ -95,7 +95,6 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
             this.managedRuleSets = Input.of(Objects.requireNonNull(managedRuleSets));
             return this;
         }
-
         public ManagedRulesDefinitionArgs build() {
             return new ManagedRulesDefinitionArgs(exclusions, managedRuleSets);
         }

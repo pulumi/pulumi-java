@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class StateNotificationConfigResponse {
     /**
      * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
      * 
-     */
+    */
     public String getPubsubTopicName() {
         return this.pubsubTopicName;
     }
@@ -52,7 +52,6 @@ public final class StateNotificationConfigResponse {
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
         }
-
         public StateNotificationConfigResponse build() {
             return new StateNotificationConfigResponse(pubsubTopicName);
         }

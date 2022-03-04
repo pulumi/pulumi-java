@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbformysql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetServerAdministratorArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetServerAdministratorArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -77,7 +77,6 @@ public final class GetServerAdministratorArgs extends io.pulumi.resources.Invoke
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public GetServerAdministratorArgs build() {
             return new GetServerAdministratorArgs(resourceGroupName, serverName);
         }

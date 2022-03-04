@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
     public static final DomainCognitoOptionsArgs Empty = new DomainCognitoOptionsArgs();
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="identityPoolId")
-    private final @Nullable Input<String> identityPoolId;
+      private final @Nullable Input<String> identityPoolId;
 
     public Input<String> getIdentityPoolId() {
         return this.identityPoolId == null ? Input.empty() : this.identityPoolId;
     }
 
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
     }
 
     @InputImport(name="userPoolId")
-    private final @Nullable Input<String> userPoolId;
+      private final @Nullable Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId == null ? Input.empty() : this.userPoolId;
@@ -126,7 +126,6 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
             this.userPoolId = Input.ofNullable(userPoolId);
             return this;
         }
-
         public DomainCognitoOptionsArgs build() {
             return new DomainCognitoOptionsArgs(enabled, identityPoolId, roleArn, userPoolId);
         }

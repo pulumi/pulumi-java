@@ -6,17 +6,33 @@ package io.pulumi.awsnative.s3;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.s3.inputs.GetMultiRegionAccessPointPolicyArgs;
 import io.pulumi.awsnative.s3.outputs.GetMultiRegionAccessPointPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMultiRegionAccessPointPolicy {
-/**
- * The policy to be attached to a Multi Region Access Point
+    private GetMultiRegionAccessPointPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetMultiRegionAccessPointPolicyArgs.Builder a);
+    }
+    private static GetMultiRegionAccessPointPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMultiRegionAccessPointPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The policy to be attached to a Multi Region Access Point
  * 
- */
+     */
+    public static CompletableFuture<GetMultiRegionAccessPointPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The policy to be attached to a Multi Region Access Point
+     * 
+     */
     public static CompletableFuture<GetMultiRegionAccessPointPolicyResult> invokeAsync(GetMultiRegionAccessPointPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3:getMultiRegionAccessPointPolicy", TypeShape.of(GetMultiRegionAccessPointPolicyResult.class), args == null ? GetMultiRegionAccessPointPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

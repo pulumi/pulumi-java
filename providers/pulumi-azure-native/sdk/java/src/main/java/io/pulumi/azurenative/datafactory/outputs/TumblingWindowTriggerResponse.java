@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.SelfDependencyTumblingWindowTri
 import io.pulumi.azurenative.datafactory.outputs.TriggerDependencyReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TumblingWindowTriggerDependencyReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -119,84 +119,84 @@ public final class TumblingWindowTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getDelay() {
         return Optional.ofNullable(this.delay);
     }
     /**
      * Triggers that this trigger depends on. Only tumbling window triggers are supported.
      * 
-     */
+    */
     public List<Object> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Trigger description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * The frequency of the time windows.
      * 
-     */
+    */
     public String getFrequency() {
         return this.frequency;
     }
     /**
      * The interval of the time windows. The minimum interval allowed is 15 Minutes.
      * 
-     */
+    */
     public Integer getInterval() {
         return this.interval;
     }
     /**
      * The max number of parallel time windows (ready for execution) for which a new run is triggered.
      * 
-     */
+    */
     public Integer getMaxConcurrency() {
         return this.maxConcurrency;
     }
     /**
      * Pipeline for which runs are created when an event is fired for trigger window that is ready.
      * 
-     */
+    */
     public TriggerPipelineReferenceResponse getPipeline() {
         return this.pipeline;
     }
     /**
      * Retry policy that will be applied for failed pipeline runs.
      * 
-     */
+    */
     public Optional<RetryPolicyResponse> getRetryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-     */
+    */
     public String getRuntimeState() {
         return this.runtimeState;
     }
     /**
      * The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -204,7 +204,7 @@ public final class TumblingWindowTriggerResponse {
      * Trigger type.
      * Expected value is 'TumblingWindowTrigger'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -317,7 +317,6 @@ public final class TumblingWindowTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TumblingWindowTriggerResponse build() {
             return new TumblingWindowTriggerResponse(annotations, delay, dependsOn, description, endTime, frequency, interval, maxConcurrency, pipeline, retryPolicy, runtimeState, startTime, type);
         }

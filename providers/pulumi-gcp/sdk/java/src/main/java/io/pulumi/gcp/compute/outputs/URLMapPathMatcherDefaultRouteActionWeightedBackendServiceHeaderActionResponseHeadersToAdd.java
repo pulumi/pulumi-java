@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -42,14 +42,14 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
     /**
      * The name of the header to add.
      * 
-     */
+    */
     public Optional<String> getHeaderName() {
         return Optional.ofNullable(this.headerName);
     }
     /**
      * The value of the header to add.
      * 
-     */
+    */
     public Optional<String> getHeaderValue() {
         return Optional.ofNullable(this.headerValue);
     }
@@ -57,7 +57,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * If false, headerValue is appended to any values that already exist for the header.
      * If true, headerValue is set for the header, discarding any values that were set for that header.
      * 
-     */
+    */
     public Optional<Boolean> getReplace() {
         return Optional.ofNullable(this.replace);
     }
@@ -100,7 +100,6 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
             this.replace = replace;
             return this;
         }
-
         public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd build() {
             return new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd(headerName, headerValue, replace);
         }

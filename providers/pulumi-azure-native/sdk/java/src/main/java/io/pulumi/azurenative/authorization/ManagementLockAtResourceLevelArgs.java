@@ -7,7 +7,7 @@ import io.pulumi.azurenative.authorization.enums.LockLevel;
 import io.pulumi.azurenative.authorization.inputs.ManagementLockOwnerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="level", required=true)
-    private final Input<Either<String,LockLevel>> level;
+      private final Input<Either<String,LockLevel>> level;
 
     public Input<Either<String,LockLevel>> getLevel() {
         return this.level;
@@ -34,7 +34,7 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="lockName")
-    private final @Nullable Input<String> lockName;
+      private final @Nullable Input<String> lockName;
 
     public Input<String> getLockName() {
         return this.lockName == null ? Input.empty() : this.lockName;
@@ -45,7 +45,7 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="notes")
-    private final @Nullable Input<String> notes;
+      private final @Nullable Input<String> notes;
 
     public Input<String> getNotes() {
         return this.notes == null ? Input.empty() : this.notes;
@@ -56,7 +56,7 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="owners")
-    private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
+      private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
 
     public Input<List<ManagementLockOwnerArgs>> getOwners() {
         return this.owners == null ? Input.empty() : this.owners;
@@ -67,7 +67,7 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parentResourcePath", required=true)
-    private final Input<String> parentResourcePath;
+      private final Input<String> parentResourcePath;
 
     public Input<String> getParentResourcePath() {
         return this.parentResourcePath;
@@ -78,7 +78,7 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -100,7 +100,7 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceProviderNamespace", required=true)
-    private final Input<String> resourceProviderNamespace;
+      private final Input<String> resourceProviderNamespace;
 
     public Input<String> getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
@@ -111,7 +111,7 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -275,7 +275,6 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public ManagementLockAtResourceLevelArgs build() {
             return new ManagementLockAtResourceLevelArgs(level, lockName, notes, owners, parentResourcePath, resourceGroupName, resourceName, resourceProviderNamespace, resourceType);
         }

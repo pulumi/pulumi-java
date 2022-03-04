@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.CloudErrorBodyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,42 +62,42 @@ public final class StepOperationInfoResponse {
     /**
      * Unique identifier to track the request for ARM-based resources.
      * 
-     */
+    */
     public String getCorrelationId() {
         return this.correlationId;
     }
     /**
      * The name of the ARM deployment initiated as part of the step.
      * 
-     */
+    */
     public String getDeploymentName() {
         return this.deploymentName;
     }
     /**
      * End time of the action in UTC.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The errors, if any, for the action.
      * 
-     */
+    */
     public Optional<CloudErrorBodyResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Last time in UTC this operation was updated.
      * 
-     */
+    */
     public String getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * Start time of the action in UTC.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -161,7 +161,6 @@ public final class StepOperationInfoResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public StepOperationInfoResponse build() {
             return new StepOperationInfoResponse(correlationId, deploymentName, endTime, error, lastUpdatedTime, startTime);
         }

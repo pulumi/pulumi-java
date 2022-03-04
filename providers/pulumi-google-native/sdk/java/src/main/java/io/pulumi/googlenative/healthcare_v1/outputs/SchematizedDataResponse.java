@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SchematizedDataResponse {
     /**
      * JSON output of the parser.
      * 
-     */
+    */
     public String getData() {
         return this.data;
     }
     /**
      * The error output of the parser.
      * 
-     */
+    */
     public String getError() {
         return this.error;
     }
@@ -74,7 +74,6 @@ public final class SchematizedDataResponse {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public SchematizedDataResponse build() {
             return new SchematizedDataResponse(data, error);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -35,7 +35,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyRsaSize")
-    private final @Nullable Input<Integer> keyRsaSize;
+      private final @Nullable Input<Integer> keyRsaSize;
 
     public Input<Integer> getKeyRsaSize() {
         return this.keyRsaSize == null ? Input.empty() : this.keyRsaSize;
@@ -46,7 +46,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVaultUri")
-    private final @Nullable Input<String> keyVaultUri;
+      private final @Nullable Input<String> keyVaultUri;
 
     public Input<String> getKeyVaultUri() {
         return this.keyVaultUri == null ? Input.empty() : this.keyVaultUri;
@@ -57,7 +57,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVersion")
-    private final @Nullable Input<String> keyVersion;
+      private final @Nullable Input<String> keyVersion;
 
     public Input<String> getKeyVersion() {
         return this.keyVersion == null ? Input.empty() : this.keyVersion;
@@ -146,7 +146,6 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.keyVersion = Input.ofNullable(keyVersion);
             return this;
         }
-
         public KeyVaultPropertiesArgs build() {
             return new KeyVaultPropertiesArgs(keyName, keyRsaSize, keyVaultUri, keyVersion);
         }

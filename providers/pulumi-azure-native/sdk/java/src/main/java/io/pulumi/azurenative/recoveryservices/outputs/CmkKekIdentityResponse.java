@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class CmkKekIdentityResponse {
     /**
      * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
      * 
-     */
+    */
     public Optional<Boolean> getUseSystemAssignedIdentity() {
         return Optional.ofNullable(this.useSystemAssignedIdentity);
     }
     /**
      * The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
      * 
-     */
+    */
     public Optional<String> getUserAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
@@ -77,7 +77,6 @@ public final class CmkKekIdentityResponse {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public CmkKekIdentityResponse build() {
             return new CmkKekIdentityResponse(useSystemAssignedIdentity, userAssignedIdentity);
         }

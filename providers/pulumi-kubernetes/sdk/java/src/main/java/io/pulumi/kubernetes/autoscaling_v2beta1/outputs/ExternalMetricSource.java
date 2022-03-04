@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ExternalMetricSource {
     /**
      * metricName is the name of the metric in question.
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * metricSelector is used to identify a specific time series within a given metric.
      * 
-     */
+    */
     public Optional<LabelSelector> getMetricSelector() {
         return Optional.ofNullable(this.metricSelector);
     }
     /**
      * targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
      * 
-     */
+    */
     public Optional<String> getTargetAverageValue() {
         return Optional.ofNullable(this.targetAverageValue);
     }
     /**
      * targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
      * 
-     */
+    */
     public Optional<String> getTargetValue() {
         return Optional.ofNullable(this.targetValue);
     }
@@ -119,7 +119,6 @@ public final class ExternalMetricSource {
             this.targetValue = targetValue;
             return this;
         }
-
         public ExternalMetricSource build() {
             return new ExternalMetricSource(metricName, metricSelector, targetAverageValue, targetValue);
         }

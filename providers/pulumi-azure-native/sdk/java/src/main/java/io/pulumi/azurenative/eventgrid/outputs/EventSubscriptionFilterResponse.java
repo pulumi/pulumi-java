@@ -15,7 +15,7 @@ import io.pulumi.azurenative.eventgrid.outputs.StringContainsAdvancedFilterRespo
 import io.pulumi.azurenative.eventgrid.outputs.StringEndsWithAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StringInAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StringNotInAdvancedFilterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -73,14 +73,14 @@ public final class EventSubscriptionFilterResponse {
     /**
      * An array of advanced filters that are used for filtering event subscriptions.
      * 
-     */
+    */
     public List<Object> getAdvancedFilters() {
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
     }
     /**
      * A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
      * 
-     */
+    */
     public List<String> getIncludedEventTypes() {
         return this.includedEventTypes == null ? List.of() : this.includedEventTypes;
     }
@@ -88,7 +88,7 @@ public final class EventSubscriptionFilterResponse {
      * Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
      * should be compared in a case sensitive manner.
      * 
-     */
+    */
     public Optional<Boolean> getIsSubjectCaseSensitive() {
         return Optional.ofNullable(this.isSubjectCaseSensitive);
     }
@@ -97,7 +97,7 @@ public final class EventSubscriptionFilterResponse {
      * The format of this depends on the publisher of the events.
      * Wildcard characters are not supported in this path.
      * 
-     */
+    */
     public Optional<String> getSubjectBeginsWith() {
         return Optional.ofNullable(this.subjectBeginsWith);
     }
@@ -105,7 +105,7 @@ public final class EventSubscriptionFilterResponse {
      * An optional string to filter events for an event subscription based on a resource path suffix.
      * Wildcard characters are not supported in this path.
      * 
-     */
+    */
     public Optional<String> getSubjectEndsWith() {
         return Optional.ofNullable(this.subjectEndsWith);
     }
@@ -162,7 +162,6 @@ public final class EventSubscriptionFilterResponse {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }
-
         public EventSubscriptionFilterResponse build() {
             return new EventSubscriptionFilterResponse(advancedFilters, includedEventTypes, isSubjectCaseSensitive, subjectBeginsWith, subjectEndsWith);
         }

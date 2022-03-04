@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OptionResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -41,21 +41,21 @@ public final class EnumValueResponse {
     /**
      * Enum value name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Enum value number.
      * 
-     */
+    */
     public Integer getNumber() {
         return this.number;
     }
     /**
      * Protocol buffer options.
      * 
-     */
+    */
     public List<OptionResponse> getOptions() {
         return this.options;
     }
@@ -98,7 +98,6 @@ public final class EnumValueResponse {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public EnumValueResponse build() {
             return new EnumValueResponse(name, number, options);
         }

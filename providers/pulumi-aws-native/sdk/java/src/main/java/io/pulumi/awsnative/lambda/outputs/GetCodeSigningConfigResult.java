@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lambda.outputs;
 
 import io.pulumi.awsnative.lambda.outputs.CodeSigningConfigAllowedPublishers;
 import io.pulumi.awsnative.lambda.outputs.CodeSigningConfigCodeSigningPolicies;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,35 +56,35 @@ public final class GetCodeSigningConfigResult {
     /**
      * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
      * 
-     */
+    */
     public Optional<CodeSigningConfigAllowedPublishers> getAllowedPublishers() {
         return Optional.ofNullable(this.allowedPublishers);
     }
     /**
      * A unique Arn for CodeSigningConfig resource
      * 
-     */
+    */
     public Optional<String> getCodeSigningConfigArn() {
         return Optional.ofNullable(this.codeSigningConfigArn);
     }
     /**
      * A unique identifier for CodeSigningConfig resource
      * 
-     */
+    */
     public Optional<String> getCodeSigningConfigId() {
         return Optional.ofNullable(this.codeSigningConfigId);
     }
     /**
      * Policies to control how to act if a signature is invalid
      * 
-     */
+    */
     public Optional<CodeSigningConfigCodeSigningPolicies> getCodeSigningPolicies() {
         return Optional.ofNullable(this.codeSigningPolicies);
     }
     /**
      * A description of the CodeSigningConfig
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -141,7 +141,6 @@ public final class GetCodeSigningConfigResult {
             this.description = description;
             return this;
         }
-
         public GetCodeSigningConfigResult build() {
             return new GetCodeSigningConfigResult(allowedPublishers, codeSigningConfigArn, codeSigningConfigId, codeSigningPolicies, description);
         }

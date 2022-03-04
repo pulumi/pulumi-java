@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class TaskDefinitionSystemControlArgs extends io.pulumi.resources.R
     public static final TaskDefinitionSystemControlArgs Empty = new TaskDefinitionSystemControlArgs();
 
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -81,7 +81,6 @@ public final class TaskDefinitionSystemControlArgs extends io.pulumi.resources.R
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public TaskDefinitionSystemControlArgs build() {
             return new TaskDefinitionSystemControlArgs(namespace, value);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes e
      * 
      */
     @InputImport(name="publicIPPrefixes")
-    private final @Nullable List<ResourceReferenceResponse> publicIPPrefixes;
+      private final @Nullable List<ResourceReferenceResponse> publicIPPrefixes;
 
     public List<ResourceReferenceResponse> getPublicIPPrefixes() {
         return this.publicIPPrefixes == null ? List.of() : this.publicIPPrefixes;
@@ -62,7 +62,6 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes e
             this.publicIPPrefixes = publicIPPrefixes;
             return this;
         }
-
         public ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes build() {
             return new ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(publicIPPrefixes);
         }

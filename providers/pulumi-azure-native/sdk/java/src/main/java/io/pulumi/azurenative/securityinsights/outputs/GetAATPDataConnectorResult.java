@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.AlertsDataTypeOfDataConnectorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -70,21 +70,21 @@ public final class GetAATPDataConnectorResult {
     /**
      * The available data types for the connector.
      * 
-     */
+    */
     public Optional<AlertsDataTypeOfDataConnectorResponse> getDataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -92,28 +92,28 @@ public final class GetAATPDataConnectorResult {
      * The kind of the data connector
      * Expected value is 'AzureAdvancedThreatProtection'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The tenant id to connect to, and get the data from.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class GetAATPDataConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAATPDataConnectorResult build() {
             return new GetAATPDataConnectorResult(dataTypes, etag, id, kind, name, tenantId, type);
         }

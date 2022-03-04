@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.ClusterIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,14 +21,14 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cluster")
-    private final @Nullable Input<String> cluster;
+      private final @Nullable Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<ClusterIAMBindingConditionGetArgs> condition;
+      private final @Nullable Input<ClusterIAMBindingConditionGetArgs> condition;
 
     public Input<ClusterIAMBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -39,14 +39,14 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -58,7 +58,7 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -70,7 +70,7 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -83,7 +83,7 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -217,7 +217,6 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public ClusterIAMBindingState build() {
             return new ClusterIAMBindingState(cluster, condition, etag, members, project, region, role);
         }

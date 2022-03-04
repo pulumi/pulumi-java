@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.DomainConfigurationServerCertificateSummaryServerCertificateStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class DomainConfigurationServerCertificateSummary {
             this.serverCertificateStatusDetail = serverCertificateStatusDetail;
             return this;
         }
-
         public DomainConfigurationServerCertificateSummary build() {
             return new DomainConfigurationServerCertificateSummary(serverCertificateArn, serverCertificateStatus, serverCertificateStatusDetail);
         }

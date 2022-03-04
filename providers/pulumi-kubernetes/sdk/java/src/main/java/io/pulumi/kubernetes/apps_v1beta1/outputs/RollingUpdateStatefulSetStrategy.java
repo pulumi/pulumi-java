@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class RollingUpdateStatefulSetStrategy {
     /**
      * Partition indicates the ordinal at which the StatefulSet should be partitioned.
      * 
-     */
+    */
     public Optional<Integer> getPartition() {
         return Optional.ofNullable(this.partition);
     }
@@ -54,7 +54,6 @@ public final class RollingUpdateStatefulSetStrategy {
             this.partition = partition;
             return this;
         }
-
         public RollingUpdateStatefulSetStrategy build() {
             return new RollingUpdateStatefulSetStrategy(partition);
         }

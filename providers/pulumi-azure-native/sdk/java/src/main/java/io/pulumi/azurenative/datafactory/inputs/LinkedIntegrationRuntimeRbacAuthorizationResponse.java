@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends io.
      * 
      */
     @InputImport(name="authorizationType", required=true)
-    private final String authorizationType;
+      private final String authorizationType;
 
     public String getAuthorizationType() {
         return this.authorizationType;
@@ -36,7 +36,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends io.
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable CredentialReferenceResponse credential;
+      private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
@@ -47,7 +47,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends io.
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -106,7 +106,6 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends io.
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public LinkedIntegrationRuntimeRbacAuthorizationResponse build() {
             return new LinkedIntegrationRuntimeRbacAuthorizationResponse(authorizationType, credential, resourceId);
         }

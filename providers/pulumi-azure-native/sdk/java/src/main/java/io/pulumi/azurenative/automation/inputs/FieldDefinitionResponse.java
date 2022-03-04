@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isEncrypted")
-    private final @Nullable Boolean isEncrypted;
+      private final @Nullable Boolean isEncrypted;
 
     public Optional<Boolean> getIsEncrypted() {
         return this.isEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isEncrypted);
@@ -35,7 +35,7 @@ public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isOptional")
-    private final @Nullable Boolean isOptional;
+      private final @Nullable Boolean isOptional;
 
     public Optional<Boolean> getIsOptional() {
         return this.isOptional == null ? Optional.empty() : Optional.ofNullable(this.isOptional);
@@ -46,7 +46,7 @@ public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -105,7 +105,6 @@ public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FieldDefinitionResponse build() {
             return new FieldDefinitionResponse(isEncrypted, isOptional, type);
         }

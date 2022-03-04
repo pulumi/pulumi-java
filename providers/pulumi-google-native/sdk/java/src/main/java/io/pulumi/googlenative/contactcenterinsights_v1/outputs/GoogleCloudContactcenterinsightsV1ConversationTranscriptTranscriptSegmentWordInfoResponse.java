@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     /**
      * A confidence estimate between 0.0 and 1.0 of the fidelity of this word. A default value of 0.0 indicates that the value is unset.
      * 
-     */
+    */
     public Double getConfidence() {
         return this.confidence;
     }
     /**
      * Time offset of the end of this word relative to the beginning of the total conversation.
      * 
-     */
+    */
     public String getEndOffset() {
         return this.endOffset;
     }
     /**
      * Time offset of the start of this word relative to the beginning of the total conversation.
      * 
-     */
+    */
     public String getStartOffset() {
         return this.startOffset;
     }
     /**
      * The word itself. Includes punctuation marks that surround the word.
      * 
-     */
+    */
     public String getWord() {
         return this.word;
     }
@@ -117,7 +117,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             this.word = Objects.requireNonNull(word);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(confidence, endOffset, startOffset, word);
         }

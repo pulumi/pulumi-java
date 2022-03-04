@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1TlsInfoResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -69,49 +69,49 @@ public final class GetTargetServerResult {
     /**
      * Optional. A human-readable description of this TargetServer.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The resource id of this target server. Values must match the regular expression
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * Immutable. The protocol used by this TargetServer.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
      * 
-     */
+    */
     public GoogleCloudApigeeV1TlsInfoResponse getSSLInfo() {
         return this.sSLInfo;
     }
@@ -182,7 +182,6 @@ public final class GetTargetServerResult {
             this.sSLInfo = Objects.requireNonNull(sSLInfo);
             return this;
         }
-
         public GetTargetServerResult build() {
             return new GetTargetServerResult(description, host, isEnabled, name, port, protocol, sSLInfo);
         }

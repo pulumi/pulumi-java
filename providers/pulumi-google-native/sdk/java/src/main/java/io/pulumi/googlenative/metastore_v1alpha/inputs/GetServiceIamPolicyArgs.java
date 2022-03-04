@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetServiceIamPolicyArgs extends io.pulumi.resources.InvokeArg
     public static final GetServiceIamPolicyArgs Empty = new GetServiceIamPolicyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
@@ -105,7 +105,6 @@ public final class GetServiceIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public GetServiceIamPolicyArgs build() {
             return new GetServiceIamPolicyArgs(location, optionsRequestedPolicyVersion, project, serviceId);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.LongTermRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleRetentionPolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -46,21 +46,21 @@ public final class AzureSqlProtectionPolicyResponse {
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'AzureSql'.
      * 
-     */
+    */
     public String getBackupManagementType() {
         return this.backupManagementType;
     }
     /**
      * Number of items associated with this policy.
      * 
-     */
+    */
     public Optional<Integer> getProtectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
      * Retention policy details.
      * 
-     */
+    */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -103,7 +103,6 @@ public final class AzureSqlProtectionPolicyResponse {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public AzureSqlProtectionPolicyResponse build() {
             return new AzureSqlProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy);
         }

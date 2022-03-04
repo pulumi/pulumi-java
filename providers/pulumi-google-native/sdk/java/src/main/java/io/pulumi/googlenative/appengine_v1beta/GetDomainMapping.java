@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainMapping {
-/**
- * Gets the specified domain mapping.
+    private GetDomainMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainMappingArgs.Builder a);
+    }
+    private static GetDomainMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified domain mapping.
  * 
- */
+     */
+    public static CompletableFuture<GetDomainMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified domain mapping.
+     * 
+     */
     public static CompletableFuture<GetDomainMappingResult> invokeAsync(GetDomainMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1beta:getDomainMapping", TypeShape.of(GetDomainMappingResult.class), args == null ? GetDomainMappingArgs.Empty : args, Utilities.withVersion(options));
     }

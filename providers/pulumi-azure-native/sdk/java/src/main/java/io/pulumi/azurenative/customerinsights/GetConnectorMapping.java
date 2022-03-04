@@ -6,21 +6,41 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.customerinsights.inputs.GetConnectorMappingArgs;
 import io.pulumi.azurenative.customerinsights.outputs.GetConnectorMappingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectorMapping {
-/**
- * The connector mapping resource format.
+    private GetConnectorMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetConnectorMappingArgs.Builder a);
+    }
+    private static GetConnectorMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConnectorMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The connector mapping resource format.
  * API Version: 2017-04-26.
  * 
- *
- * The connector mapping resource format.
+     *
+     * The connector mapping resource format.
  * 
- */
+     */
+    public static CompletableFuture<GetConnectorMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The connector mapping resource format.
+     * API Version: 2017-04-26.
+     * 
+     *
+         * The connector mapping resource format.
+     * 
+     */
     public static CompletableFuture<GetConnectorMappingResult> invokeAsync(GetConnectorMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getConnectorMapping", TypeShape.of(GetConnectorMappingResult.class), args == null ? GetConnectorMappingArgs.Empty : args, Utilities.withVersion(options));
     }

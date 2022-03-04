@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StandardAppVersionDeploymentFileGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class StandardAppVersionDeploymentFileGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="sha1Sum")
-    private final @Nullable Input<String> sha1Sum;
+      private final @Nullable Input<String> sha1Sum;
 
     public Input<String> getSha1Sum() {
         return this.sha1Sum == null ? Input.empty() : this.sha1Sum;
@@ -41,7 +41,7 @@ public final class StandardAppVersionDeploymentFileGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="sourceUrl", required=true)
-    private final Input<String> sourceUrl;
+      private final Input<String> sourceUrl;
 
     public Input<String> getSourceUrl() {
         return this.sourceUrl;
@@ -115,7 +115,6 @@ public final class StandardAppVersionDeploymentFileGetArgs extends io.pulumi.res
             this.sourceUrl = Input.of(Objects.requireNonNull(sourceUrl));
             return this;
         }
-
         public StandardAppVersionDeploymentFileGetArgs build() {
             return new StandardAppVersionDeploymentFileGetArgs(name, sha1Sum, sourceUrl);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BucketAccessRules extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowPublicOverrides")
-    private final @Nullable Boolean allowPublicOverrides;
+      private final @Nullable Boolean allowPublicOverrides;
 
     public Optional<Boolean> getAllowPublicOverrides() {
         return this.allowPublicOverrides == null ? Optional.empty() : Optional.ofNullable(this.allowPublicOverrides);
@@ -35,7 +35,7 @@ public final class BucketAccessRules extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="getObject")
-    private final @Nullable String getObject;
+      private final @Nullable String getObject;
 
     public Optional<String> getGetObject() {
         return this.getObject == null ? Optional.empty() : Optional.ofNullable(this.getObject);
@@ -84,7 +84,6 @@ public final class BucketAccessRules extends io.pulumi.resources.InvokeArgs {
             this.getObject = getObject;
             return this;
         }
-
         public BucketAccessRules build() {
             return new BucketAccessRules(allowPublicOverrides, getObject);
         }

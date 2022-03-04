@@ -6,7 +6,7 @@ package io.pulumi.awsnative.groundstation;
 import io.pulumi.awsnative.groundstation.inputs.MissionProfileDataflowEdgeArgs;
 import io.pulumi.awsnative.groundstation.inputs.MissionProfileTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactPostPassDurationSeconds")
-    private final @Nullable Input<Integer> contactPostPassDurationSeconds;
+      private final @Nullable Input<Integer> contactPostPassDurationSeconds;
 
     public Input<Integer> getContactPostPassDurationSeconds() {
         return this.contactPostPassDurationSeconds == null ? Input.empty() : this.contactPostPassDurationSeconds;
@@ -34,14 +34,14 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactPrePassDurationSeconds")
-    private final @Nullable Input<Integer> contactPrePassDurationSeconds;
+      private final @Nullable Input<Integer> contactPrePassDurationSeconds;
 
     public Input<Integer> getContactPrePassDurationSeconds() {
         return this.contactPrePassDurationSeconds == null ? Input.empty() : this.contactPrePassDurationSeconds;
     }
 
     @InputImport(name="dataflowEdges", required=true)
-    private final Input<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
+      private final Input<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
 
     public Input<List<MissionProfileDataflowEdgeArgs>> getDataflowEdges() {
         return this.dataflowEdges;
@@ -52,7 +52,7 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumViableContactDurationSeconds", required=true)
-    private final Input<Integer> minimumViableContactDurationSeconds;
+      private final Input<Integer> minimumViableContactDurationSeconds;
 
     public Input<Integer> getMinimumViableContactDurationSeconds() {
         return this.minimumViableContactDurationSeconds;
@@ -63,21 +63,21 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<MissionProfileTagArgs>> tags;
+      private final @Nullable Input<List<MissionProfileTagArgs>> tags;
 
     public Input<List<MissionProfileTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="trackingConfigArn", required=true)
-    private final Input<String> trackingConfigArn;
+      private final Input<String> trackingConfigArn;
 
     public Input<String> getTrackingConfigArn() {
         return this.trackingConfigArn;
@@ -211,7 +211,6 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.trackingConfigArn = Input.of(Objects.requireNonNull(trackingConfigArn));
             return this;
         }
-
         public MissionProfileArgs build() {
             return new MissionProfileArgs(contactPostPassDurationSeconds, contactPrePassDurationSeconds, dataflowEdges, minimumViableContactDurationSeconds, name, tags, trackingConfigArn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse {
     /**
      * The api version.
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * The SAS timestamp.
      * 
-     */
+    */
     public Optional<String> getSe() {
         return Optional.ofNullable(this.se);
     }
     /**
      * The SAS signature.
      * 
-     */
+    */
     public Optional<String> getSig() {
         return Optional.ofNullable(this.sig);
     }
     /**
      * The SAS permissions.
      * 
-     */
+    */
     public Optional<String> getSp() {
         return Optional.ofNullable(this.sp);
     }
     /**
      * The SAS version.
      * 
-     */
+    */
     public Optional<String> getSv() {
         return Optional.ofNullable(this.sv);
     }
@@ -139,7 +139,6 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse {
             this.sv = sv;
             return this;
         }
-
         public WorkflowTriggerListCallbackUrlQueriesResponse build() {
             return new WorkflowTriggerListCallbackUrlQueriesResponse(apiVersion, se, sig, sp, sv);
         }

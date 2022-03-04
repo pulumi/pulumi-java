@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,28 +22,28 @@ public final class ApiConfigIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="api", required=true)
-    private final Input<String> api;
+      private final Input<String> api;
 
     public Input<String> getApi() {
         return this.api;
     }
 
     @InputImport(name="apiConfig", required=true)
-    private final Input<String> apiConfig;
+      private final Input<String> apiConfig;
 
     public Input<String> getApiConfig() {
         return this.apiConfig;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<ApiConfigIamBindingConditionArgs> condition;
+      private final @Nullable Input<ApiConfigIamBindingConditionArgs> condition;
 
     public Input<ApiConfigIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -55,7 +55,7 @@ public final class ApiConfigIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -68,7 +68,7 @@ public final class ApiConfigIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -187,7 +187,6 @@ public final class ApiConfigIamBindingArgs extends io.pulumi.resources.ResourceA
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public ApiConfigIamBindingArgs build() {
             return new ApiConfigIamBindingArgs(api, apiConfig, condition, members, project, role);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="encoding", required=true)
-    private final String encoding;
+      private final String encoding;
 
     public String getEncoding() {
         return this.encoding;
@@ -29,7 +29,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="fieldName", required=true)
-    private final String fieldName;
+      private final String fieldName;
 
     public String getFieldName() {
         return this.fieldName;
@@ -40,7 +40,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="onlyReadLatest", required=true)
-    private final Boolean onlyReadLatest;
+      private final Boolean onlyReadLatest;
 
     public Boolean getOnlyReadLatest() {
         return this.onlyReadLatest;
@@ -51,14 +51,14 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="qualifierEncoded", required=true)
-    private final String qualifierEncoded;
+      private final String qualifierEncoded;
 
     public String getQualifierEncoded() {
         return this.qualifierEncoded;
     }
 
     @InputImport(name="qualifierString", required=true)
-    private final String qualifierString;
+      private final String qualifierString;
 
     public String getQualifierString() {
         return this.qualifierString;
@@ -69,7 +69,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -158,7 +158,6 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BigtableColumnResponse build() {
             return new BigtableColumnResponse(encoding, fieldName, onlyReadLatest, qualifierEncoded, qualifierString, type);
         }

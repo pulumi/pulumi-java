@@ -8,8 +8,8 @@ import io.pulumi.azurenative.sql.ServerBlobAuditingPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -340,6 +340,37 @@ public class ServerBlobAuditingPolicy extends io.pulumi.resources.CustomResource
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ServerBlobAuditingPolicyArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.sql.ServerBlobAuditingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.sql.ServerBlobAuditingPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ServerBlobAuditingPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ServerBlobAuditingPolicy(String name) {
+        this(name, ServerBlobAuditingPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ServerBlobAuditingPolicy(String name, ServerBlobAuditingPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

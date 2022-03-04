@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.PartnerType;
 import io.pulumi.azurenative.logic.inputs.PartnerContentArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<PartnerContentArgs> content;
+      private final Input<PartnerContentArgs> content;
 
     public Input<PartnerContentArgs> getContent() {
         return this.content;
@@ -35,7 +35,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-    private final Input<String> integrationAccountName;
+      private final Input<String> integrationAccountName;
 
     public Input<String> getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -46,7 +46,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -57,7 +57,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+      private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -68,7 +68,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="partnerName")
-    private final @Nullable Input<String> partnerName;
+      private final @Nullable Input<String> partnerName;
 
     public Input<String> getPartnerName() {
         return this.partnerName == null ? Input.empty() : this.partnerName;
@@ -79,7 +79,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="partnerType", required=true)
-    private final Input<Either<String,PartnerType>> partnerType;
+      private final Input<Either<String,PartnerType>> partnerType;
 
     public Input<Either<String,PartnerType>> getPartnerType() {
         return this.partnerType;
@@ -90,7 +90,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -250,7 +250,6 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public IntegrationAccountPartnerArgs build() {
             return new IntegrationAccountPartnerArgs(content, integrationAccountName, location, metadata, partnerName, partnerType, resourceGroupName, tags);
         }

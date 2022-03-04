@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -81,63 +81,63 @@ public final class GetCanaryEvaluationResult {
     /**
      * The stable version that is serving requests.
      * 
-     */
+    */
     public String getControl() {
         return this.control;
     }
     /**
      * Create time of the canary evaluation.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * End time for the evaluation's analysis.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Labels used to filter the metrics used for a canary evaluation.
      * 
-     */
+    */
     public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse getMetricLabels() {
         return this.metricLabels;
     }
     /**
      * Name of the canary evalution.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Start time for the canary evaluation's analysis.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The current state of the canary evaluation.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The newer version that is serving requests.
      * 
-     */
+    */
     public String getTreatment() {
         return this.treatment;
     }
     /**
      * The resulting verdict of the canary evaluations: NONE, PASS, or FAIL.
      * 
-     */
+    */
     public String getVerdict() {
         return this.verdict;
     }
@@ -222,7 +222,6 @@ public final class GetCanaryEvaluationResult {
             this.verdict = Objects.requireNonNull(verdict);
             return this;
         }
-
         public GetCanaryEvaluationResult build() {
             return new GetCanaryEvaluationResult(control, createTime, endTime, metricLabels, name, startTime, state, treatment, verdict);
         }

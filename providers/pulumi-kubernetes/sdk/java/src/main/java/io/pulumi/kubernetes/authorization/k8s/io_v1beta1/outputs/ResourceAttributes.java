@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class ResourceAttributes {
     /**
      * Group is the API Group of the Resource.  "*" means all.
      * 
-     */
+    */
     public Optional<String> getGroup() {
         return Optional.ofNullable(this.group);
     }
     /**
      * Name is the name of the resource being requested for a "get" or deleted for a "delete". "" (empty) means all.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces "" (empty) is defaulted for LocalSubjectAccessReviews "" (empty) is empty for cluster-scoped resources "" (empty) means "all" for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Resource is one of the existing resource types.  "*" means all.
      * 
-     */
+    */
     public Optional<String> getResource() {
         return Optional.ofNullable(this.resource);
     }
     /**
      * Subresource is one of the existing resource types.  "" means none.
      * 
-     */
+    */
     public Optional<String> getSubresource() {
         return Optional.ofNullable(this.subresource);
     }
     /**
      * Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  "*" means all.
      * 
-     */
+    */
     public Optional<String> getVerb() {
         return Optional.ofNullable(this.verb);
     }
     /**
      * Version is the API Version of the Resource.  "*" means all.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -181,7 +181,6 @@ public final class ResourceAttributes {
             this.version = version;
             return this;
         }
-
         public ResourceAttributes build() {
             return new ResourceAttributes(group, name, namespace, resource, subresource, verb, version);
         }

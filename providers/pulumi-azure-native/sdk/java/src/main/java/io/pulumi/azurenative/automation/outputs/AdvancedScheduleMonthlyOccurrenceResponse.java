@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse {
     /**
      * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
      * 
-     */
+    */
     public Optional<String> getDay() {
         return Optional.ofNullable(this.day);
     }
     /**
      * Occurrence of the week within the month. Must be between 1 and 5
      * 
-     */
+    */
     public Optional<Integer> getOccurrence() {
         return Optional.ofNullable(this.occurrence);
     }
@@ -77,7 +77,6 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse {
             this.occurrence = occurrence;
             return this;
         }
-
         public AdvancedScheduleMonthlyOccurrenceResponse build() {
             return new AdvancedScheduleMonthlyOccurrenceResponse(day, occurrence);
         }

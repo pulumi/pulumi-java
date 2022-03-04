@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RateLimitsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxBurstSize", required=true)
-    private final Integer maxBurstSize;
+      private final Integer maxBurstSize;
 
     public Integer getMaxBurstSize() {
         return this.maxBurstSize;
@@ -33,7 +33,7 @@ public final class RateLimitsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxConcurrentDispatches", required=true)
-    private final Integer maxConcurrentDispatches;
+      private final Integer maxConcurrentDispatches;
 
     public Integer getMaxConcurrentDispatches() {
         return this.maxConcurrentDispatches;
@@ -44,7 +44,7 @@ public final class RateLimitsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxDispatchesPerSecond", required=true)
-    private final Double maxDispatchesPerSecond;
+      private final Double maxDispatchesPerSecond;
 
     public Double getMaxDispatchesPerSecond() {
         return this.maxDispatchesPerSecond;
@@ -103,7 +103,6 @@ public final class RateLimitsResponse extends io.pulumi.resources.InvokeArgs {
             this.maxDispatchesPerSecond = Objects.requireNonNull(maxDispatchesPerSecond);
             return this;
         }
-
         public RateLimitsResponse build() {
             return new RateLimitsResponse(maxBurstSize, maxConcurrentDispatches, maxDispatchesPerSecond);
         }

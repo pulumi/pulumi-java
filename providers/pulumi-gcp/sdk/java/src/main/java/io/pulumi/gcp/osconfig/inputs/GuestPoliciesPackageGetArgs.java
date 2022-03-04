@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="desiredState")
-    private final @Nullable Input<String> desiredState;
+      private final @Nullable Input<String> desiredState;
 
     public Input<String> getDesiredState() {
         return this.desiredState == null ? Input.empty() : this.desiredState;
@@ -42,7 +42,7 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="manager")
-    private final @Nullable Input<String> manager;
+      private final @Nullable Input<String> manager;
 
     public Input<String> getManager() {
         return this.manager == null ? Input.empty() : this.manager;
@@ -56,7 +56,7 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -130,7 +130,6 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public GuestPoliciesPackageGetArgs build() {
             return new GuestPoliciesPackageGetArgs(desiredState, manager, name);
         }

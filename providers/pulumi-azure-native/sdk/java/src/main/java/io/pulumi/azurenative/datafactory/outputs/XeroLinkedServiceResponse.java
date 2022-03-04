@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -120,56 +120,56 @@ public final class XeroLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Properties used to connect to Xero. It is mutually exclusive with any other properties in the linked service. Type: object.
      * 
-     */
+    */
     public Optional<Object> getConnectionProperties() {
         return Optional.ofNullable(this.connectionProperties);
     }
     /**
      * The consumer key associated with the Xero application.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getConsumerKey() {
         return Optional.ofNullable(this.consumerKey);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The endpoint of the Xero server. (i.e. api.xero.com)
      * 
-     */
+    */
     public Optional<Object> getHost() {
         return Optional.ofNullable(this.host);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
@@ -177,7 +177,7 @@ public final class XeroLinkedServiceResponse {
      * The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
      * ).
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPrivateKey() {
         return Optional.ofNullable(this.privateKey);
     }
@@ -185,28 +185,28 @@ public final class XeroLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'Xero'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
-     */
+    */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
-     */
+    */
     public Optional<Object> getUseHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
      * 
-     */
+    */
     public Optional<Object> getUsePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
@@ -319,7 +319,6 @@ public final class XeroLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public XeroLinkedServiceResponse build() {
             return new XeroLinkedServiceResponse(annotations, connectVia, connectionProperties, consumerKey, description, encryptedCredential, host, parameters, privateKey, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

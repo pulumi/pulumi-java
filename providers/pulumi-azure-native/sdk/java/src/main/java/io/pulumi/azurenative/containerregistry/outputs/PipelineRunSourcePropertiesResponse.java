@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class PipelineRunSourcePropertiesResponse {
     /**
      * The name of the source.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the source.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -76,7 +76,6 @@ public final class PipelineRunSourcePropertiesResponse {
             this.type = type;
             return this;
         }
-
         public PipelineRunSourcePropertiesResponse build() {
             return new PipelineRunSourcePropertiesResponse(name, type);
         }

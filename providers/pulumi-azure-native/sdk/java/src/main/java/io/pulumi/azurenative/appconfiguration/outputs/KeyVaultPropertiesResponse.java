@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class KeyVaultPropertiesResponse {
     /**
      * The client id of the identity which will be used to access key vault.
      * 
-     */
+    */
     public Optional<String> getIdentityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
     /**
      * The URI of the key vault key used to encrypt data.
      * 
-     */
+    */
     public Optional<String> getKeyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
@@ -76,7 +76,6 @@ public final class KeyVaultPropertiesResponse {
             this.keyIdentifier = keyIdentifier;
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(identityClientId, keyIdentifier);
         }

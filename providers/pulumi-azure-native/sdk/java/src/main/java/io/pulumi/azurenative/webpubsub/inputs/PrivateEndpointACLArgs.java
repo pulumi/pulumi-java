@@ -6,7 +6,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 import io.pulumi.azurenative.webpubsub.enums.WebPubSubRequestType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> allow;
+      private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> allow;
 
     public Input<List<Either<String,WebPubSubRequestType>>> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
@@ -37,7 +37,7 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deny")
-    private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> deny;
+      private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> deny;
 
     public Input<List<Either<String,WebPubSubRequestType>>> getDeny() {
         return this.deny == null ? Input.empty() : this.deny;
@@ -48,7 +48,7 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -122,7 +122,6 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public PrivateEndpointACLArgs build() {
             return new PrivateEndpointACLArgs(allow, deny, name);
         }

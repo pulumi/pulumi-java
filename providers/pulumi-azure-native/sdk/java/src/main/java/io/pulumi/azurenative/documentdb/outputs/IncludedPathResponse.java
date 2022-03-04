@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.IndexesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class IncludedPathResponse {
     /**
      * List of indexes for this path
      * 
-     */
+    */
     public List<IndexesResponse> getIndexes() {
         return this.indexes == null ? List.of() : this.indexes;
     }
     /**
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -78,7 +78,6 @@ public final class IncludedPathResponse {
             this.path = path;
             return this;
         }
-
         public IncludedPathResponse build() {
             return new IncludedPathResponse(indexes, path);
         }

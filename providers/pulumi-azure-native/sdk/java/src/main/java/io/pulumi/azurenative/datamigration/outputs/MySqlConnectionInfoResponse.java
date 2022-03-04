@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -56,21 +56,21 @@ public final class MySqlConnectionInfoResponse {
     /**
      * Password credential.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Port for Server
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * Name of the server
      * 
-     */
+    */
     public String getServerName() {
         return this.serverName;
     }
@@ -78,14 +78,14 @@ public final class MySqlConnectionInfoResponse {
      * Type of connection info
      * Expected value is 'MySqlConnectionInfo'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * User name
      * 
-     */
+    */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }
@@ -142,7 +142,6 @@ public final class MySqlConnectionInfoResponse {
             this.userName = userName;
             return this;
         }
-
         public MySqlConnectionInfoResponse build() {
             return new MySqlConnectionInfoResponse(password, port, serverName, type, userName);
         }

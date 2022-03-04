@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storagepool;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storagepool.inputs.GetIscsiTargetArgs;
 import io.pulumi.azurenative.storagepool.outputs.GetIscsiTargetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIscsiTarget {
-/**
- * Response for iSCSI target requests.
+    private GetIscsiTarget() {}
+    public interface BuilderApplicator {
+        public void apply(GetIscsiTargetArgs.Builder a);
+    }
+    private static GetIscsiTargetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIscsiTargetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response for iSCSI target requests.
  * API Version: 2020-03-15-preview.
  * 
- *
- * Response for iSCSI target requests.
+     *
+     * Response for iSCSI target requests.
  * 
- */
+     */
+    public static CompletableFuture<GetIscsiTargetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response for iSCSI target requests.
+     * API Version: 2020-03-15-preview.
+     * 
+     *
+         * Response for iSCSI target requests.
+     * 
+     */
     public static CompletableFuture<GetIscsiTargetResult> invokeAsync(GetIscsiTargetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagepool:getIscsiTarget", TypeShape.of(GetIscsiTargetResult.class), args == null ? GetIscsiTargetArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.EntityReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse {
     /**
      * The self-hosted integration runtime reference.
      * 
-     */
+    */
     public Optional<EntityReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The path to contain the staged data in the Blob storage.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The staging linked service reference.
      * 
-     */
+    */
     public Optional<EntityReferenceResponse> getStagingLinkedService() {
         return Optional.ofNullable(this.stagingLinkedService);
     }
@@ -98,7 +98,6 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse {
             this.stagingLinkedService = stagingLinkedService;
             return this;
         }
-
         public IntegrationRuntimeDataProxyPropertiesResponse build() {
             return new IntegrationRuntimeDataProxyPropertiesResponse(connectVia, path, stagingLinkedService);
         }

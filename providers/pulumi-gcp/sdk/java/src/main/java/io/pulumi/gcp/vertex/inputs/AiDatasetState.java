@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiDatasetEncryptionSpecGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -33,7 +33,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -45,7 +45,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSpec")
-    private final @Nullable Input<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
+      private final @Nullable Input<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
 
     public Input<AiDatasetEncryptionSpecGetArgs> getEncryptionSpec() {
         return this.encryptionSpec == null ? Input.empty() : this.encryptionSpec;
@@ -56,7 +56,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -67,7 +67,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataSchemaUri")
-    private final @Nullable Input<String> metadataSchemaUri;
+      private final @Nullable Input<String> metadataSchemaUri;
 
     public Input<String> getMetadataSchemaUri() {
         return this.metadataSchemaUri == null ? Input.empty() : this.metadataSchemaUri;
@@ -78,7 +78,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -90,7 +90,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -101,7 +101,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -113,7 +113,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -277,7 +277,6 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public AiDatasetState build() {
             return new AiDatasetState(createTime, displayName, encryptionSpec, labels, metadataSchemaUri, name, project, region, updateTime);
         }

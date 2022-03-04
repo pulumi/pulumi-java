@@ -4,7 +4,7 @@
 package io.pulumi.gcp.securitycenter.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.securitycenter.inputs.NotificationConfigStreamingConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configId")
-    private final @Nullable Input<String> configId;
+      private final @Nullable Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId == null ? Input.empty() : this.configId;
@@ -31,7 +31,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="organization")
-    private final @Nullable Input<String> organization;
+      private final @Nullable Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization == null ? Input.empty() : this.organization;
@@ -67,7 +67,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pubsubTopic")
-    private final @Nullable Input<String> pubsubTopic;
+      private final @Nullable Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic == null ? Input.empty() : this.pubsubTopic;
@@ -78,7 +78,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -90,7 +90,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="streamingConfig")
-    private final @Nullable Input<NotificationConfigStreamingConfigGetArgs> streamingConfig;
+      private final @Nullable Input<NotificationConfigStreamingConfigGetArgs> streamingConfig;
 
     public Input<NotificationConfigStreamingConfigGetArgs> getStreamingConfig() {
         return this.streamingConfig == null ? Input.empty() : this.streamingConfig;
@@ -224,7 +224,6 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
             this.streamingConfig = Input.ofNullable(streamingConfig);
             return this;
         }
-
         public NotificationConfigState build() {
             return new NotificationConfigState(configId, description, name, organization, pubsubTopic, serviceAccount, streamingConfig);
         }

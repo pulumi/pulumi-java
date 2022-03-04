@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="family", required=true)
-    private final String family;
+      private final String family;
 
     public String getFamily() {
         return this.family;
@@ -32,7 +32,7 @@ public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -81,7 +81,6 @@ public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ManagedHsmSkuResponse build() {
             return new ManagedHsmSkuResponse(family, name);
         }

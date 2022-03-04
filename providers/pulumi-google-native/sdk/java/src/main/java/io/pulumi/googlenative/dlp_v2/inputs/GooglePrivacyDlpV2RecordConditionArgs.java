@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExpressionsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="expressions")
-    private final @Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions;
+      private final @Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions;
 
     public Input<GooglePrivacyDlpV2ExpressionsArgs> getExpressions() {
         return this.expressions == null ? Input.empty() : this.expressions;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
             this.expressions = Input.ofNullable(expressions);
             return this;
         }
-
         public GooglePrivacyDlpV2RecordConditionArgs build() {
             return new GooglePrivacyDlpV2RecordConditionArgs(expressions);
         }

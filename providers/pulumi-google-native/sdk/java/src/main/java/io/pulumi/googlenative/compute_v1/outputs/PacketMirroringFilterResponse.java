@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class PacketMirroringFilterResponse {
     /**
      * IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
      * 
-     */
+    */
     public List<String> getCidrRanges() {
         return this.cidrRanges;
     }
     /**
      * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
      * 
-     */
+    */
     public String getDirection() {
         return this.direction;
     }
     /**
      * Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
      * 
-     */
+    */
     public List<String> getIpProtocols() {
         return this.ipProtocols;
     }
@@ -96,7 +96,6 @@ public final class PacketMirroringFilterResponse {
             this.ipProtocols = Objects.requireNonNull(ipProtocols);
             return this;
         }
-
         public PacketMirroringFilterResponse build() {
             return new PacketMirroringFilterResponse(cidrRanges, direction, ipProtocols);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.glue;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.glue.inputs.GetRegistryArgs;
 import io.pulumi.awsnative.glue.outputs.GetRegistryResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistry {
-/**
- * This resource creates a Registry for authoring schemas as part of Glue Schema Registry.
+    private GetRegistry() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegistryArgs.Builder a);
+    }
+    private static GetRegistryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegistryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This resource creates a Registry for authoring schemas as part of Glue Schema Registry.
  * 
- */
+     */
+    public static CompletableFuture<GetRegistryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This resource creates a Registry for authoring schemas as part of Glue Schema Registry.
+     * 
+     */
     public static CompletableFuture<GetRegistryResult> invokeAsync(GetRegistryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:glue:getRegistry", TypeShape.of(GetRegistryResult.class), args == null ? GetRegistryArgs.Empty : args, Utilities.withVersion(options));
     }

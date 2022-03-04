@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionMonitoringOutputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends io.p
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -36,7 +36,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends io.p
      * 
      */
     @InputImport(name="monitoringOutputs", required=true)
-    private final Input<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+      private final Input<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
     public Input<List<ModelBiasJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
         return this.monitoringOutputs;
@@ -95,7 +95,6 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends io.p
             this.monitoringOutputs = Input.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }
-
         public ModelBiasJobDefinitionMonitoringOutputConfigArgs build() {
             return new ModelBiasJobDefinitionMonitoringOutputConfigArgs(kmsKeyId, monitoringOutputs);
         }

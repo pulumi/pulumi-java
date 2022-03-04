@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
     /**
      * Current instances' config revision. This value is in RFC3339 text format.
      * 
-     */
+    */
     public String getCurrentRevision() {
         return this.currentRevision;
     }
     /**
      * A bit indicating whether instances' config has been applied to all managed instances in managed instance group.
      * 
-     */
+    */
     public Boolean getEffective() {
         return this.effective;
     }
@@ -75,7 +75,6 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
             this.effective = Objects.requireNonNull(effective);
             return this;
         }
-
         public InstanceGroupManagerStatusAllInstancesConfigResponse build() {
             return new InstanceGroupManagerStatusAllInstancesConfigResponse(currentRevision, effective);
         }

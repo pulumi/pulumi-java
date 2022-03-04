@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="defaultGid")
-    private final @Nullable Input<Integer> defaultGid;
+      private final @Nullable Input<Integer> defaultGid;
 
     public Input<Integer> getDefaultGid() {
         return this.defaultGid == null ? Input.empty() : this.defaultGid;
@@ -35,7 +35,7 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="defaultUid")
-    private final @Nullable Input<Integer> defaultUid;
+      private final @Nullable Input<Integer> defaultUid;
 
     public Input<Integer> getDefaultUid() {
         return this.defaultUid == null ? Input.empty() : this.defaultUid;
@@ -46,7 +46,7 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mountPath")
-    private final @Nullable Input<String> mountPath;
+      private final @Nullable Input<String> mountPath;
 
     public Input<String> getMountPath() {
         return this.mountPath == null ? Input.empty() : this.mountPath;
@@ -120,7 +120,6 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
             this.mountPath = Input.ofNullable(mountPath);
             return this;
         }
-
         public AppImageConfigFileSystemConfigArgs build() {
             return new AppImageConfigFileSystemConfigArgs(defaultGid, defaultUid, mountPath);
         }

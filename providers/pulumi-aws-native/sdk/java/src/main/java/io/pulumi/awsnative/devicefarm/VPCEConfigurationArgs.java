@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devicefarm;
 
 import io.pulumi.awsnative.devicefarm.inputs.VPCEConfigurationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,35 +17,35 @@ public final class VPCEConfigurationArgs extends io.pulumi.resources.ResourceArg
     public static final VPCEConfigurationArgs Empty = new VPCEConfigurationArgs();
 
     @InputImport(name="serviceDnsName", required=true)
-    private final Input<String> serviceDnsName;
+      private final Input<String> serviceDnsName;
 
     public Input<String> getServiceDnsName() {
         return this.serviceDnsName;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<VPCEConfigurationTagArgs>> tags;
+      private final @Nullable Input<List<VPCEConfigurationTagArgs>> tags;
 
     public Input<List<VPCEConfigurationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="vpceConfigurationDescription")
-    private final @Nullable Input<String> vpceConfigurationDescription;
+      private final @Nullable Input<String> vpceConfigurationDescription;
 
     public Input<String> getVpceConfigurationDescription() {
         return this.vpceConfigurationDescription == null ? Input.empty() : this.vpceConfigurationDescription;
     }
 
     @InputImport(name="vpceConfigurationName", required=true)
-    private final Input<String> vpceConfigurationName;
+      private final Input<String> vpceConfigurationName;
 
     public Input<String> getVpceConfigurationName() {
         return this.vpceConfigurationName;
     }
 
     @InputImport(name="vpceServiceName", required=true)
-    private final Input<String> vpceServiceName;
+      private final Input<String> vpceServiceName;
 
     public Input<String> getVpceServiceName() {
         return this.vpceServiceName;
@@ -149,7 +149,6 @@ public final class VPCEConfigurationArgs extends io.pulumi.resources.ResourceArg
             this.vpceServiceName = Input.of(Objects.requireNonNull(vpceServiceName));
             return this;
         }
-
         public VPCEConfigurationArgs build() {
             return new VPCEConfigurationArgs(serviceDnsName, tags, vpceConfigurationDescription, vpceConfigurationName, vpceServiceName);
         }

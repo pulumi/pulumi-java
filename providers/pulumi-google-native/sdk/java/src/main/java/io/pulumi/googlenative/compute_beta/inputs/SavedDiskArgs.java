@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk")
-    private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Input<String> sourceDisk;
 
     public Input<String> getSourceDisk() {
         return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
@@ -66,7 +66,6 @@ public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceDisk = Input.ofNullable(sourceDisk);
             return this;
         }
-
         public SavedDiskArgs build() {
             return new SavedDiskArgs(sourceDisk);
         }

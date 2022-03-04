@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.RulesetRule;
 import io.pulumi.awsnative.databrew.outputs.RulesetTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,14 +39,14 @@ public final class GetRulesetResult {
     /**
      * Description of the Ruleset
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of the data quality rules in the ruleset
      * 
-     */
+    */
     public List<RulesetRule> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
@@ -92,7 +92,6 @@ public final class GetRulesetResult {
             this.tags = tags;
             return this;
         }
-
         public GetRulesetResult build() {
             return new GetRulesetResult(description, rules, tags);
         }

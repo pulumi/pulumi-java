@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class AttachNewDataDiskOptionsResponse {
     /**
      * The name of the disk to be attached.
      * 
-     */
+    */
     public Optional<String> getDiskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
      * Size of the disk to be attached in Gibibytes.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
     /**
      * The storage type for the disk (i.e. Standard, Premium).
      * 
-     */
+    */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -98,7 +98,6 @@ public final class AttachNewDataDiskOptionsResponse {
             this.diskType = diskType;
             return this;
         }
-
         public AttachNewDataDiskOptionsResponse build() {
             return new AttachNewDataDiskOptionsResponse(diskName, diskSizeGiB, diskType);
         }

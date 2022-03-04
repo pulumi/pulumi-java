@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayConnectTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class GetTransitGatewayConnectResult {
     /**
      * The creation time.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The state of the attachment.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The tags for the attachment.
      * 
-     */
+    */
     public List<TransitGatewayConnectTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The ID of the Connect attachment.
      * 
-     */
+    */
     public Optional<String> getTransitGatewayAttachmentId() {
         return Optional.ofNullable(this.transitGatewayAttachmentId);
     }
     /**
      * The ID of the transit gateway.
      * 
-     */
+    */
     public Optional<String> getTransitGatewayId() {
         return Optional.ofNullable(this.transitGatewayId);
     }
@@ -141,7 +141,6 @@ public final class GetTransitGatewayConnectResult {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public GetTransitGatewayConnectResult build() {
             return new GetTransitGatewayConnectResult(creationTime, state, tags, transitGatewayAttachmentId, transitGatewayId);
         }

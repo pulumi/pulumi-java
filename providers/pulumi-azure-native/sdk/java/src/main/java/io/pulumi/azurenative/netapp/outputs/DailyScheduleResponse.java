@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class DailyScheduleResponse {
     /**
      * Indicates which hour in UTC timezone a snapshot should be taken
      * 
-     */
+    */
     public Optional<Integer> getHour() {
         return Optional.ofNullable(this.hour);
     }
     /**
      * Indicates which minute snapshot should be taken
      * 
-     */
+    */
     public Optional<Integer> getMinute() {
         return Optional.ofNullable(this.minute);
     }
     /**
      * Daily snapshot count to keep
      * 
-     */
+    */
     public Optional<Integer> getSnapshotsToKeep() {
         return Optional.ofNullable(this.snapshotsToKeep);
     }
     /**
      * Resource size in bytes, current storage usage for the volume in bytes
      * 
-     */
+    */
     public Optional<Double> getUsedBytes() {
         return Optional.ofNullable(this.usedBytes);
     }
@@ -119,7 +119,6 @@ public final class DailyScheduleResponse {
             this.usedBytes = usedBytes;
             return this;
         }
-
         public DailyScheduleResponse build() {
             return new DailyScheduleResponse(hour, minute, snapshotsToKeep, usedBytes);
         }

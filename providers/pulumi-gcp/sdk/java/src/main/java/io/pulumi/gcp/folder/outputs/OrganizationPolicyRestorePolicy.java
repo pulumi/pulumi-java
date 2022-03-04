@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class OrganizationPolicyRestorePolicy {
     /**
      * May only be set to true. If set, then the default Policy is restored.
      * 
-     */
+    */
     public Boolean get$default() {
         return this.$default;
     }
@@ -52,7 +52,6 @@ public final class OrganizationPolicyRestorePolicy {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
-
         public OrganizationPolicyRestorePolicy build() {
             return new OrganizationPolicyRestorePolicy($default);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class APIServerProfileResponse {
     /**
      * The IP of the cluster API server (immutable).
      * 
-     */
+    */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * The URL to access the cluster API server (immutable).
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
     /**
      * API server visibility (immutable).
      * 
-     */
+    */
     public Optional<String> getVisibility() {
         return Optional.ofNullable(this.visibility);
     }
@@ -97,7 +97,6 @@ public final class APIServerProfileResponse {
             this.visibility = visibility;
             return this;
         }
-
         public APIServerProfileResponse build() {
             return new APIServerProfileResponse(ip, url, visibility);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
     public static final ResourceRecordSetResponse Empty = new ResourceRecordSetResponse();
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -31,7 +31,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -42,7 +42,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="routingPolicy", required=true)
-    private final RRSetRoutingPolicyResponse routingPolicy;
+      private final RRSetRoutingPolicyResponse routingPolicy;
 
     public RRSetRoutingPolicyResponse getRoutingPolicy() {
         return this.routingPolicy;
@@ -53,7 +53,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="rrdatas", required=true)
-    private final List<String> rrdatas;
+      private final List<String> rrdatas;
 
     public List<String> getRrdatas() {
         return this.rrdatas;
@@ -64,7 +64,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="signatureRrdatas", required=true)
-    private final List<String> signatureRrdatas;
+      private final List<String> signatureRrdatas;
 
     public List<String> getSignatureRrdatas() {
         return this.signatureRrdatas;
@@ -75,7 +75,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ttl", required=true)
-    private final Integer ttl;
+      private final Integer ttl;
 
     public Integer getTtl() {
         return this.ttl;
@@ -86,7 +86,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -185,7 +185,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceRecordSetResponse build() {
             return new ResourceRecordSetResponse(kind, name, routingPolicy, rrdatas, signatureRrdatas, ttl, type);
         }

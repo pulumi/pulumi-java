@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ProviderDefaultTagsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -67,7 +67,6 @@ public final class ProviderDefaultTagsArgs extends io.pulumi.resources.ResourceA
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ProviderDefaultTagsArgs build() {
             return new ProviderDefaultTagsArgs(tags);
         }

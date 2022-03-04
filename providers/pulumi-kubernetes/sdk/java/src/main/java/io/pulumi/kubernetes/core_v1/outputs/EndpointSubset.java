@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EndpointAddress;
 import io.pulumi.kubernetes.core_v1.outputs.EndpointPort;
 import java.util.List;
@@ -41,21 +41,21 @@ public final class EndpointSubset {
     /**
      * IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
      * 
-     */
+    */
     public List<EndpointAddress> getAddresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
     /**
      * IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
      * 
-     */
+    */
     public List<EndpointAddress> getNotReadyAddresses() {
         return this.notReadyAddresses == null ? List.of() : this.notReadyAddresses;
     }
     /**
      * Port numbers available on the related IP addresses.
      * 
-     */
+    */
     public List<EndpointPort> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }
@@ -98,7 +98,6 @@ public final class EndpointSubset {
             this.ports = ports;
             return this;
         }
-
         public EndpointSubset build() {
             return new EndpointSubset(addresses, notReadyAddresses, ports);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.HaVpnGatewayVpnInterfaceGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class HaVpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,7 +38,7 @@ public final class HaVpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -49,7 +49,7 @@ public final class HaVpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -61,7 +61,7 @@ public final class HaVpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -72,7 +72,7 @@ public final class HaVpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -83,7 +83,7 @@ public final class HaVpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -95,7 +95,7 @@ public final class HaVpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnInterfaces")
-    private final @Nullable Input<List<HaVpnGatewayVpnInterfaceGetArgs>> vpnInterfaces;
+      private final @Nullable Input<List<HaVpnGatewayVpnInterfaceGetArgs>> vpnInterfaces;
 
     public Input<List<HaVpnGatewayVpnInterfaceGetArgs>> getVpnInterfaces() {
         return this.vpnInterfaces == null ? Input.empty() : this.vpnInterfaces;
@@ -229,7 +229,6 @@ public final class HaVpnGatewayState extends io.pulumi.resources.ResourceArgs {
             this.vpnInterfaces = Input.ofNullable(vpnInterfaces);
             return this;
         }
-
         public HaVpnGatewayState build() {
             return new HaVpnGatewayState(description, name, network, project, region, selfLink, vpnInterfaces);
         }

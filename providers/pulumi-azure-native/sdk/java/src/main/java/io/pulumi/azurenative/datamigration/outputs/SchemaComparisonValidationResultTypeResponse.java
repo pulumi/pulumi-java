@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class SchemaComparisonValidationResultTypeResponse {
     /**
      * Name of the object that has the difference
      * 
-     */
+    */
     public String getObjectName() {
         return this.objectName;
     }
     /**
      * Type of the object that has the difference. e.g (Table/View/StoredProcedure)
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * Update action type with respect to target
      * 
-     */
+    */
     public String getUpdateAction() {
         return this.updateAction;
     }
@@ -95,7 +95,6 @@ public final class SchemaComparisonValidationResultTypeResponse {
             this.updateAction = Objects.requireNonNull(updateAction);
             return this;
         }
-
         public SchemaComparisonValidationResultTypeResponse build() {
             return new SchemaComparisonValidationResultTypeResponse(objectName, objectType, updateAction);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatchSingleHeaderProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatchSingleQueryArgumentProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupJsonBody;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -70,14 +70,14 @@ public final class RuleGroupFieldToMatch {
     /**
      * All query arguments of a web request.
      * 
-     */
+    */
     public Optional<Object> getAllQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
     /**
      * The body of a web request. This immediately follows the request headers.
      * 
-     */
+    */
     public Optional<Object> getBody() {
         return Optional.ofNullable(this.body);
     }
@@ -87,14 +87,14 @@ public final class RuleGroupFieldToMatch {
     /**
      * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
      * 
-     */
+    */
     public Optional<Object> getMethod() {
         return Optional.ofNullable(this.method);
     }
     /**
      * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
      * 
-     */
+    */
     public Optional<Object> getQueryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -104,14 +104,14 @@ public final class RuleGroupFieldToMatch {
     /**
      * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.
      * 
-     */
+    */
     public Optional<RuleGroupFieldToMatchSingleQueryArgumentProperties> getSingleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
     /**
      * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
      * 
-     */
+    */
     public Optional<Object> getUriPath() {
         return Optional.ofNullable(this.uriPath);
     }
@@ -189,7 +189,6 @@ public final class RuleGroupFieldToMatch {
             this.uriPath = uriPath;
             return this;
         }
-
         public RuleGroupFieldToMatch build() {
             return new RuleGroupFieldToMatch(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }

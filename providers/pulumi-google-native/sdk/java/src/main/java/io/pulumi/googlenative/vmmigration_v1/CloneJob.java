@@ -5,8 +5,8 @@ package io.pulumi.googlenative.vmmigration_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1.CloneJobArgs;
 import io.pulumi.googlenative.vmmigration_v1.outputs.ComputeEngineTargetDetailsResponse;
@@ -107,6 +107,37 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
         return this.stateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CloneJobArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.vmmigration_v1.CloneJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.vmmigration_v1.CloneJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CloneJob(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CloneJob(String name) {
+        this(name, CloneJobArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CloneJob(String name, CloneJobArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

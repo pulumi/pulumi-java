@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConditionContextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accessTime")
-    private final @Nullable Input<String> accessTime;
+      private final @Nullable Input<String> accessTime;
 
     public Input<String> getAccessTime() {
         return this.accessTime == null ? Input.empty() : this.accessTime;
@@ -66,7 +66,6 @@ public final class ConditionContextArgs extends io.pulumi.resources.ResourceArgs
             this.accessTime = Input.ofNullable(accessTime);
             return this;
         }
-
         public ConditionContextArgs build() {
             return new ConditionContextArgs(accessTime);
         }

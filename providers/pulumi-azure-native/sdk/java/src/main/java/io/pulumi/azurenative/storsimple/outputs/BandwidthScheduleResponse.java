@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.TimeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -48,28 +48,28 @@ public final class BandwidthScheduleResponse {
     /**
      * The days of the week when this schedule is applicable.
      * 
-     */
+    */
     public List<String> getDays() {
         return this.days;
     }
     /**
      * The rate in Mbps.
      * 
-     */
+    */
     public Integer getRateInMbps() {
         return this.rateInMbps;
     }
     /**
      * The start time of the schedule.
      * 
-     */
+    */
     public TimeResponse getStart() {
         return this.start;
     }
     /**
      * The stop time of the schedule.
      * 
-     */
+    */
     public TimeResponse getStop() {
         return this.stop;
     }
@@ -119,7 +119,6 @@ public final class BandwidthScheduleResponse {
             this.stop = Objects.requireNonNull(stop);
             return this;
         }
-
         public BandwidthScheduleResponse build() {
             return new BandwidthScheduleResponse(days, rateInMbps, start, stop);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
     public static final RepositoryImageScanningConfigurationArgs Empty = new RepositoryImageScanningConfigurationArgs();
 
     @InputImport(name="scanOnPush")
-    private final @Nullable Input<Boolean> scanOnPush;
+      private final @Nullable Input<Boolean> scanOnPush;
 
     public Input<Boolean> getScanOnPush() {
         return this.scanOnPush == null ? Input.empty() : this.scanOnPush;
@@ -62,7 +62,6 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
             this.scanOnPush = Input.ofNullable(scanOnPush);
             return this;
         }
-
         public RepositoryImageScanningConfigurationArgs build() {
             return new RepositoryImageScanningConfigurationArgs(scanOnPush);
         }

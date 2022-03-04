@@ -6,21 +6,41 @@ package io.pulumi.azurenative.webpubsub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubSharedPrivateLinkResourceArgs;
 import io.pulumi.azurenative.webpubsub.outputs.GetWebPubSubSharedPrivateLinkResourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebPubSubSharedPrivateLinkResource {
-/**
- * Describes a Shared Private Link Resource
+    private GetWebPubSubSharedPrivateLinkResource() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebPubSubSharedPrivateLinkResourceArgs.Builder a);
+    }
+    private static GetWebPubSubSharedPrivateLinkResourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebPubSubSharedPrivateLinkResourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a Shared Private Link Resource
  * API Version: 2021-04-01-preview.
  * 
- *
- * Describes a Shared Private Link Resource
+     *
+     * Describes a Shared Private Link Resource
  * 
- */
+     */
+    public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a Shared Private Link Resource
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * Describes a Shared Private Link Resource
+     * 
+     */
     public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> invokeAsync(GetWebPubSubSharedPrivateLinkResourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSubSharedPrivateLinkResource", TypeShape.of(GetWebPubSubSharedPrivateLinkResourceResult.class), args == null ? GetWebPubSubSharedPrivateLinkResourceArgs.Empty : args, Utilities.withVersion(options));
     }

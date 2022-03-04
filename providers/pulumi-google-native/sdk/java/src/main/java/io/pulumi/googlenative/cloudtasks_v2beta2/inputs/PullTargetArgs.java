@@ -34,7 +34,6 @@ public final class PullTargetArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(PullTargetArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public PullTargetArgs build() {
             return new PullTargetArgs();
         }

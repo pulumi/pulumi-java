@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class LogLocationSettingsResponse {
     /**
      * Log storage linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -77,7 +77,6 @@ public final class LogLocationSettingsResponse {
             this.path = path;
             return this;
         }
-
         public LogLocationSettingsResponse build() {
             return new LogLocationSettingsResponse(linkedServiceName, path);
         }

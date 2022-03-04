@@ -5,7 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.LineRegistrationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class LineChannelPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lineRegistrations", required=true)
-    private final Input<List<LineRegistrationArgs>> lineRegistrations;
+      private final Input<List<LineRegistrationArgs>> lineRegistrations;
 
     public Input<List<LineRegistrationArgs>> getLineRegistrations() {
         return this.lineRegistrations;
@@ -66,7 +66,6 @@ public final class LineChannelPropertiesArgs extends io.pulumi.resources.Resourc
             this.lineRegistrations = Input.of(Objects.requireNonNull(lineRegistrations));
             return this;
         }
-
         public LineChannelPropertiesArgs build() {
             return new LineChannelPropertiesArgs(lineRegistrations);
         }

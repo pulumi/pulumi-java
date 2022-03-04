@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.batch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.batch_v1.inputs.JobSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -35,7 +35,7 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<JobSpecArgs> spec;
+      private final @Nullable Input<JobSpecArgs> spec;
 
     public Input<JobSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -94,7 +94,6 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public JobTemplateSpecArgs build() {
             return new JobTemplateSpecArgs(metadata, spec);
         }

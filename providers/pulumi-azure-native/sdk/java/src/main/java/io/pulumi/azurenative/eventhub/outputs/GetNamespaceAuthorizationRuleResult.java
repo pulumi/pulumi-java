@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GetNamespaceAuthorizationRuleResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
      * 
-     */
+    */
     public List<String> getRights() {
         return this.rights;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GetNamespaceAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNamespaceAuthorizationRuleResult build() {
             return new GetNamespaceAuthorizationRuleResult(id, name, rights, type);
         }

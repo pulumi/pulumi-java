@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudwatch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -70,49 +70,49 @@ public final class GetCompositeAlarmResult {
     /**
      * Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
      * 
-     */
+    */
     public Optional<Boolean> getActionsEnabled() {
         return Optional.ofNullable(this.actionsEnabled);
     }
     /**
      * The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
      * 
-     */
+    */
     public List<String> getAlarmActions() {
         return this.alarmActions == null ? List.of() : this.alarmActions;
     }
     /**
      * The description of the alarm
      * 
-     */
+    */
     public Optional<String> getAlarmDescription() {
         return Optional.ofNullable(this.alarmDescription);
     }
     /**
      * Expression which aggregates the state of other Alarms (Metric or Composite Alarms)
      * 
-     */
+    */
     public Optional<String> getAlarmRule() {
         return Optional.ofNullable(this.alarmRule);
     }
     /**
      * Amazon Resource Name (ARN) of the alarm
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
-     */
+    */
     public List<String> getInsufficientDataActions() {
         return this.insufficientDataActions == null ? List.of() : this.insufficientDataActions;
     }
     /**
      * The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
-     */
+    */
     public List<String> getOKActions() {
         return this.oKActions == null ? List.of() : this.oKActions;
     }
@@ -183,7 +183,6 @@ public final class GetCompositeAlarmResult {
             this.oKActions = oKActions;
             return this;
         }
-
         public GetCompositeAlarmResult build() {
             return new GetCompositeAlarmResult(actionsEnabled, alarmActions, alarmDescription, alarmRule, arn, insufficientDataActions, oKActions);
         }

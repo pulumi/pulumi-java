@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class IdentityPropertiesResponse {
     /**
      * The identity ID.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of resource.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Identity type
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class IdentityPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public IdentityPropertiesResponse build() {
             return new IdentityPropertiesResponse(principalId, tenantId, type);
         }

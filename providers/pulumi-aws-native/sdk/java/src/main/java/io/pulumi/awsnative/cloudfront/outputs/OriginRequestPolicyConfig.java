@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.outputs;
 import io.pulumi.awsnative.cloudfront.outputs.OriginRequestPolicyCookiesConfig;
 import io.pulumi.awsnative.cloudfront.outputs.OriginRequestPolicyHeadersConfig;
 import io.pulumi.awsnative.cloudfront.outputs.OriginRequestPolicyQueryStringsConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -102,7 +102,6 @@ public final class OriginRequestPolicyConfig {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
         }
-
         public OriginRequestPolicyConfig build() {
             return new OriginRequestPolicyConfig(comment, cookiesConfig, headersConfig, name, queryStringsConfig);
         }

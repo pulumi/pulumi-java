@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class IncidentInfoResponse {
     /**
      * Incident Id
      * 
-     */
+    */
     public Optional<String> getIncidentId() {
         return Optional.ofNullable(this.incidentId);
     }
     /**
      * Relation Name
      * 
-     */
+    */
     public Optional<String> getRelationName() {
         return Optional.ofNullable(this.relationName);
     }
     /**
      * The severity of the incident
      * 
-     */
+    */
     public Optional<String> getSeverity() {
         return Optional.ofNullable(this.severity);
     }
     /**
      * The title of the incident
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
@@ -118,7 +118,6 @@ public final class IncidentInfoResponse {
             this.title = title;
             return this;
         }
-
         public IncidentInfoResponse build() {
             return new IncidentInfoResponse(incidentId, relationName, severity, title);
         }

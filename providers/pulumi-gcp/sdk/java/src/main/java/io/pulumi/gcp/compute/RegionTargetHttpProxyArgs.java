@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -48,7 +48,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,7 +60,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -72,7 +72,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="urlMap", required=true)
-    private final Input<String> urlMap;
+      private final Input<String> urlMap;
 
     public Input<String> getUrlMap() {
         return this.urlMap;
@@ -176,7 +176,6 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
             this.urlMap = Input.of(Objects.requireNonNull(urlMap));
             return this;
         }
-
         public RegionTargetHttpProxyArgs build() {
             return new RegionTargetHttpProxyArgs(description, name, project, region, urlMap);
         }

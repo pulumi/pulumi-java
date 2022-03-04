@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connectorName", required=true)
-    private final String connectorName;
+      private final String connectorName;
 
     public String getConnectorName() {
         return this.connectorName;
@@ -55,7 +55,6 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
             this.connectorName = Objects.requireNonNull(connectorName);
             return this;
         }
-
         public GetConnectorArgs build() {
             return new GetConnectorArgs(connectorName);
         }

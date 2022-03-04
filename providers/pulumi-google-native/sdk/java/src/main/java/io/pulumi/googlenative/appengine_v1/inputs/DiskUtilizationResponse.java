@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="targetReadBytesPerSecond", required=true)
-    private final Integer targetReadBytesPerSecond;
+      private final Integer targetReadBytesPerSecond;
 
     public Integer getTargetReadBytesPerSecond() {
         return this.targetReadBytesPerSecond;
@@ -32,7 +32,7 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="targetReadOpsPerSecond", required=true)
-    private final Integer targetReadOpsPerSecond;
+      private final Integer targetReadOpsPerSecond;
 
     public Integer getTargetReadOpsPerSecond() {
         return this.targetReadOpsPerSecond;
@@ -43,7 +43,7 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="targetWriteBytesPerSecond", required=true)
-    private final Integer targetWriteBytesPerSecond;
+      private final Integer targetWriteBytesPerSecond;
 
     public Integer getTargetWriteBytesPerSecond() {
         return this.targetWriteBytesPerSecond;
@@ -54,7 +54,7 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="targetWriteOpsPerSecond", required=true)
-    private final Integer targetWriteOpsPerSecond;
+      private final Integer targetWriteOpsPerSecond;
 
     public Integer getTargetWriteOpsPerSecond() {
         return this.targetWriteOpsPerSecond;
@@ -123,7 +123,6 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
             this.targetWriteOpsPerSecond = Objects.requireNonNull(targetWriteOpsPerSecond);
             return this;
         }
-
         public DiskUtilizationResponse build() {
             return new DiskUtilizationResponse(targetReadBytesPerSecond, targetReadOpsPerSecond, targetWriteBytesPerSecond, targetWriteOpsPerSecond);
         }

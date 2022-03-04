@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +46,7 @@ public final class RouterNatSubnetwork {
     /**
      * Self-link of subnetwork to NAT
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -56,7 +56,7 @@ public final class RouterNatSubnetwork {
      * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
      * sourceIpRangesToNat
      * 
-     */
+    */
     public List<String> getSecondaryIpRangeNames() {
         return this.secondaryIpRangeNames == null ? List.of() : this.secondaryIpRangeNames;
     }
@@ -66,7 +66,7 @@ public final class RouterNatSubnetwork {
      * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
      * `PRIMARY_IP_RANGE`.
      * 
-     */
+    */
     public List<String> getSourceIpRangesToNats() {
         return this.sourceIpRangesToNats;
     }
@@ -109,7 +109,6 @@ public final class RouterNatSubnetwork {
             this.sourceIpRangesToNats = Objects.requireNonNull(sourceIpRangesToNats);
             return this;
         }
-
         public RouterNatSubnetwork build() {
             return new RouterNatSubnetwork(name, secondaryIpRangeNames, sourceIpRangesToNats);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class OptimizedAutoscaleResponse {
     /**
      * A boolean value that indicate if the optimized autoscale feature is enabled or not.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Maximum allowed instances count.
      * 
-     */
+    */
     public Integer getMaximum() {
         return this.maximum;
     }
     /**
      * Minimum allowed instances count.
      * 
-     */
+    */
     public Integer getMinimum() {
         return this.minimum;
     }
     /**
      * The version of the template defined, for instance 1.
      * 
-     */
+    */
     public Integer getVersion() {
         return this.version;
     }
@@ -117,7 +117,6 @@ public final class OptimizedAutoscaleResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public OptimizedAutoscaleResponse build() {
             return new OptimizedAutoscaleResponse(isEnabled, maximum, minimum, version);
         }

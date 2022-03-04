@@ -6,21 +6,41 @@ package io.pulumi.azurenative.notebooks;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.notebooks.inputs.ListNotebookProxyCredentialsArgs;
 import io.pulumi.azurenative.notebooks.outputs.ListNotebookProxyCredentialsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNotebookProxyCredentials {
-/**
- * Credentials and other properties of NotebookProxy resource
+    private ListNotebookProxyCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(ListNotebookProxyCredentialsArgs.Builder a);
+    }
+    private static ListNotebookProxyCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListNotebookProxyCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Credentials and other properties of NotebookProxy resource
  * API Version: 2019-10-11-preview.
  * 
- *
- * Credentials and other properties of NotebookProxy resource
+     *
+     * Credentials and other properties of NotebookProxy resource
  * 
- */
+     */
+    public static CompletableFuture<ListNotebookProxyCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Credentials and other properties of NotebookProxy resource
+     * API Version: 2019-10-11-preview.
+     * 
+     *
+         * Credentials and other properties of NotebookProxy resource
+     * 
+     */
     public static CompletableFuture<ListNotebookProxyCredentialsResult> invokeAsync(ListNotebookProxyCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notebooks:listNotebookProxyCredentials", TypeShape.of(ListNotebookProxyCredentialsResult.class), args == null ? ListNotebookProxyCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

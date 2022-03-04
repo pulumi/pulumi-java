@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDefinitionResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ExportExecutionListResultResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="definition", required=true)
-    private final ExportDefinitionResponse definition;
+      private final ExportDefinitionResponse definition;
 
     public ExportDefinitionResponse getDefinition() {
         return this.definition;
@@ -37,7 +37,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="deliveryInfo", required=true)
-    private final ExportDeliveryInfoResponse deliveryInfo;
+      private final ExportDeliveryInfoResponse deliveryInfo;
 
     public ExportDeliveryInfoResponse getDeliveryInfo() {
         return this.deliveryInfo;
@@ -48,7 +48,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="format")
-    private final @Nullable String format;
+      private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -59,7 +59,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="nextRunTimeEstimate", required=true)
-    private final String nextRunTimeEstimate;
+      private final String nextRunTimeEstimate;
 
     public String getNextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
@@ -70,7 +70,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="runHistory")
-    private final @Nullable ExportExecutionListResultResponse runHistory;
+      private final @Nullable ExportExecutionListResultResponse runHistory;
 
     public Optional<ExportExecutionListResultResponse> getRunHistory() {
         return this.runHistory == null ? Optional.empty() : Optional.ofNullable(this.runHistory);
@@ -149,7 +149,6 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
             this.runHistory = runHistory;
             return this;
         }
-
         public CommonExportPropertiesResponse build() {
             return new CommonExportPropertiesResponse(definition, deliveryInfo, format, nextRunTimeEstimate, runHistory);
         }

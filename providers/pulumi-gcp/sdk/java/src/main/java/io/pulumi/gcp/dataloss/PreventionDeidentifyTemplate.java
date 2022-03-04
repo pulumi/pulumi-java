@@ -5,8 +5,8 @@ package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionDeidentifyTemplateArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateState;
@@ -121,6 +121,37 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
         return this.parent;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PreventionDeidentifyTemplateArgs.Builder a);
+    }
+    private static io.pulumi.gcp.dataloss.PreventionDeidentifyTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.dataloss.PreventionDeidentifyTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PreventionDeidentifyTemplate(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PreventionDeidentifyTemplate(String name) {
+        this(name, PreventionDeidentifyTemplateArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PreventionDeidentifyTemplate(String name, PreventionDeidentifyTemplateArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

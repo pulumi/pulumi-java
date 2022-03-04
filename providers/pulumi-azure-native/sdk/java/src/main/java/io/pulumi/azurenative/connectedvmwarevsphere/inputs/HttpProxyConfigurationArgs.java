@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="httpsProxy")
-    private final @Nullable Input<String> httpsProxy;
+      private final @Nullable Input<String> httpsProxy;
 
     public Input<String> getHttpsProxy() {
         return this.httpsProxy == null ? Input.empty() : this.httpsProxy;
@@ -66,7 +66,6 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
             this.httpsProxy = Input.ofNullable(httpsProxy);
             return this;
         }
-
         public HttpProxyConfigurationArgs build() {
             return new HttpProxyConfigurationArgs(httpsProxy);
         }

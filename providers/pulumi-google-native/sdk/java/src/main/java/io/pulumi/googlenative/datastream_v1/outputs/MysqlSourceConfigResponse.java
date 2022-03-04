@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.MysqlRdbmsResponse;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class MysqlSourceConfigResponse {
     /**
      * MySQL objects to exclude from the stream.
      * 
-     */
+    */
     public MysqlRdbmsResponse getExcludeObjects() {
         return this.excludeObjects;
     }
     /**
      * MySQL objects to retrieve from the source.
      * 
-     */
+    */
     public MysqlRdbmsResponse getIncludeObjects() {
         return this.includeObjects;
     }
@@ -74,7 +74,6 @@ public final class MysqlSourceConfigResponse {
             this.includeObjects = Objects.requireNonNull(includeObjects);
             return this;
         }
-
         public MysqlSourceConfigResponse build() {
             return new MysqlSourceConfigResponse(excludeObjects, includeObjects);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="floatValue")
-    private final @Nullable Input<Double> floatValue;
+      private final @Nullable Input<Double> floatValue;
 
     public Input<Double> getFloatValue() {
         return this.floatValue == null ? Input.empty() : this.floatValue;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="intValue")
-    private final @Nullable Input<String> intValue;
+      private final @Nullable Input<String> intValue;
 
     public Input<String> getIntValue() {
         return this.intValue == null ? Input.empty() : this.intValue;
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameter")
-    private final @Nullable Input<String> parameter;
+      private final @Nullable Input<String> parameter;
 
     public Input<String> getParameter() {
         return this.parameter == null ? Input.empty() : this.parameter;
@@ -57,7 +57,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="stringValue")
-    private final @Nullable Input<String> stringValue;
+      private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
@@ -146,7 +146,6 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }
-
         public GoogleCloudMlV1_Trial_ParameterArgs build() {
             return new GoogleCloudMlV1_Trial_ParameterArgs(floatValue, intValue, parameter, stringValue);
         }

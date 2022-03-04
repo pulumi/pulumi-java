@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.OriginGroupOverrideActionParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class OriginGroupOverrideActionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class OriginGroupOverrideActionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<OriginGroupOverrideActionParametersArgs> parameters;
+      private final Input<OriginGroupOverrideActionParametersArgs> parameters;
 
     public Input<OriginGroupOverrideActionParametersArgs> getParameters() {
         return this.parameters;
@@ -94,7 +94,6 @@ public final class OriginGroupOverrideActionArgs extends io.pulumi.resources.Res
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public OriginGroupOverrideActionArgs build() {
             return new OriginGroupOverrideActionArgs(name, parameters);
         }

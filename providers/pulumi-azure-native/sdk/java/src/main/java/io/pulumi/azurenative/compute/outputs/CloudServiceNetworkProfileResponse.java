@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LoadBalancerConfigurationResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class CloudServiceNetworkProfileResponse {
     /**
      * List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
      * 
-     */
+    */
     public List<LoadBalancerConfigurationResponse> getLoadBalancerConfigurations() {
         return this.loadBalancerConfigurations == null ? List.of() : this.loadBalancerConfigurations;
     }
     /**
      * The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getSwappableCloudService() {
         return Optional.ofNullable(this.swappableCloudService);
     }
@@ -78,7 +78,6 @@ public final class CloudServiceNetworkProfileResponse {
             this.swappableCloudService = swappableCloudService;
             return this;
         }
-
         public CloudServiceNetworkProfileResponse build() {
             return new CloudServiceNetworkProfileResponse(loadBalancerConfigurations, swappableCloudService);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.digitaltwins;
 
 import io.pulumi.azurenative.digitaltwins.inputs.AzureDataExplorerConnectionPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<AzureDataExplorerConnectionPropertiesArgs> properties;
+      private final @Nullable Input<AzureDataExplorerConnectionPropertiesArgs> properties;
 
     public Input<AzureDataExplorerConnectionPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -31,7 +31,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -53,7 +53,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="timeSeriesDatabaseConnectionName")
-    private final @Nullable Input<String> timeSeriesDatabaseConnectionName;
+      private final @Nullable Input<String> timeSeriesDatabaseConnectionName;
 
     public Input<String> getTimeSeriesDatabaseConnectionName() {
         return this.timeSeriesDatabaseConnectionName == null ? Input.empty() : this.timeSeriesDatabaseConnectionName;
@@ -142,7 +142,6 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
             this.timeSeriesDatabaseConnectionName = Input.ofNullable(timeSeriesDatabaseConnectionName);
             return this;
         }
-
         public TimeSeriesDatabaseConnectionArgs build() {
             return new TimeSeriesDatabaseConnectionArgs(properties, resourceGroupName, resourceName, timeSeriesDatabaseConnectionName);
         }

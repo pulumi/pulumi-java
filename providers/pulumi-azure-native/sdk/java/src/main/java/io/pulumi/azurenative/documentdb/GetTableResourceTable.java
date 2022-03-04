@@ -6,21 +6,41 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.inputs.GetTableResourceTableArgs;
 import io.pulumi.azurenative.documentdb.outputs.GetTableResourceTableResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTableResourceTable {
-/**
- * An Azure Cosmos DB Table.
+    private GetTableResourceTable() {}
+    public interface BuilderApplicator {
+        public void apply(GetTableResourceTableArgs.Builder a);
+    }
+    private static GetTableResourceTableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTableResourceTableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Cosmos DB Table.
  * API Version: 2021-03-15.
  * 
- *
- * An Azure Cosmos DB Table.
+     *
+     * An Azure Cosmos DB Table.
  * 
- */
+     */
+    public static CompletableFuture<GetTableResourceTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Cosmos DB Table.
+     * API Version: 2021-03-15.
+     * 
+     *
+         * An Azure Cosmos DB Table.
+     * 
+     */
     public static CompletableFuture<GetTableResourceTableResult> invokeAsync(GetTableResourceTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getTableResourceTable", TypeShape.of(GetTableResourceTableResult.class), args == null ? GetTableResourceTableArgs.Empty : args, Utilities.withVersion(options));
     }

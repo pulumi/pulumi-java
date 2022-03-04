@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.PolicyBooleanPolicyArgs;
 import io.pulumi.gcp.organizations.inputs.PolicyListPolicyArgs;
 import io.pulumi.gcp.organizations.inputs.PolicyRestorePolicyArgs;
@@ -24,7 +24,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="booleanPolicy")
-    private final @Nullable Input<PolicyBooleanPolicyArgs> booleanPolicy;
+      private final @Nullable Input<PolicyBooleanPolicyArgs> booleanPolicy;
 
     public Input<PolicyBooleanPolicyArgs> getBooleanPolicy() {
         return this.booleanPolicy == null ? Input.empty() : this.booleanPolicy;
@@ -35,7 +35,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="constraint", required=true)
-    private final Input<String> constraint;
+      private final Input<String> constraint;
 
     public Input<String> getConstraint() {
         return this.constraint;
@@ -46,7 +46,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="listPolicy")
-    private final @Nullable Input<PolicyListPolicyArgs> listPolicy;
+      private final @Nullable Input<PolicyListPolicyArgs> listPolicy;
 
     public Input<PolicyListPolicyArgs> getListPolicy() {
         return this.listPolicy == null ? Input.empty() : this.listPolicy;
@@ -57,7 +57,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-    private final Input<String> orgId;
+      private final Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId;
@@ -68,7 +68,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorePolicy")
-    private final @Nullable Input<PolicyRestorePolicyArgs> restorePolicy;
+      private final @Nullable Input<PolicyRestorePolicyArgs> restorePolicy;
 
     public Input<PolicyRestorePolicyArgs> getRestorePolicy() {
         return this.restorePolicy == null ? Input.empty() : this.restorePolicy;
@@ -79,7 +79,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -198,7 +198,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public PolicyArgs build() {
             return new PolicyArgs(booleanPolicy, constraint, listPolicy, orgId, restorePolicy, version);
         }

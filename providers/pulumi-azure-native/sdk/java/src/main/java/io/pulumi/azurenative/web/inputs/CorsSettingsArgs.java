@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class CorsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOrigins")
-    private final @Nullable Input<List<String>> allowedOrigins;
+      private final @Nullable Input<List<String>> allowedOrigins;
 
     public Input<List<String>> getAllowedOrigins() {
         return this.allowedOrigins == null ? Input.empty() : this.allowedOrigins;
@@ -39,7 +39,7 @@ public final class CorsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportCredentials")
-    private final @Nullable Input<Boolean> supportCredentials;
+      private final @Nullable Input<Boolean> supportCredentials;
 
     public Input<Boolean> getSupportCredentials() {
         return this.supportCredentials == null ? Input.empty() : this.supportCredentials;
@@ -98,7 +98,6 @@ public final class CorsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.supportCredentials = Input.ofNullable(supportCredentials);
             return this;
         }
-
         public CorsSettingsArgs build() {
             return new CorsSettingsArgs(allowedOrigins, supportCredentials);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class SelfSubjectRulesReviewSpec {
     /**
      * Namespace to evaluate rules for. Required.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -54,7 +54,6 @@ public final class SelfSubjectRulesReviewSpec {
             this.namespace = namespace;
             return this;
         }
-
         public SelfSubjectRulesReviewSpec build() {
             return new SelfSubjectRulesReviewSpec(namespace);
         }

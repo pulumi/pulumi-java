@@ -6,21 +6,41 @@ package io.pulumi.azurenative.powerbidedicated;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.powerbidedicated.inputs.GetAutoScaleVCoreArgs;
 import io.pulumi.azurenative.powerbidedicated.outputs.GetAutoScaleVCoreResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAutoScaleVCore {
-/**
- * Represents an instance of an auto scale v-core resource.
+    private GetAutoScaleVCore() {}
+    public interface BuilderApplicator {
+        public void apply(GetAutoScaleVCoreArgs.Builder a);
+    }
+    private static GetAutoScaleVCoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAutoScaleVCoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents an instance of an auto scale v-core resource.
  * API Version: 2021-01-01.
  * 
- *
- * Represents an instance of an auto scale v-core resource.
+     *
+     * Represents an instance of an auto scale v-core resource.
  * 
- */
+     */
+    public static CompletableFuture<GetAutoScaleVCoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents an instance of an auto scale v-core resource.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Represents an instance of an auto scale v-core resource.
+     * 
+     */
     public static CompletableFuture<GetAutoScaleVCoreResult> invokeAsync(GetAutoScaleVCoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbidedicated:getAutoScaleVCore", TypeShape.of(GetAutoScaleVCoreResult.class), args == null ? GetAutoScaleVCoreArgs.Empty : args, Utilities.withVersion(options));
     }

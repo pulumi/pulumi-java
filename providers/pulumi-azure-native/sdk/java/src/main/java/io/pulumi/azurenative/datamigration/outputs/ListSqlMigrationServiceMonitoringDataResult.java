@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.NodeMonitoringDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ListSqlMigrationServiceMonitoringDataResult {
     /**
      * The name of Integration Runtime.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Integration Runtime node monitoring data.
      * 
-     */
+    */
     public List<NodeMonitoringDataResponse> getNodes() {
         return this.nodes;
     }
@@ -76,7 +76,6 @@ public final class ListSqlMigrationServiceMonitoringDataResult {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
         public ListSqlMigrationServiceMonitoringDataResult build() {
             return new ListSqlMigrationServiceMonitoringDataResult(name, nodes);
         }

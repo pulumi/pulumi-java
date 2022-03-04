@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.EndpointRefResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class NetworkRefResponse {
     /**
      * A list of endpoints that are exposed on this network.
      * 
-     */
+    */
     public List<EndpointRefResponse> getEndpointRefs() {
         return this.endpointRefs == null ? List.of() : this.endpointRefs;
     }
     /**
      * Name of the network
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -78,7 +78,6 @@ public final class NetworkRefResponse {
             this.name = name;
             return this;
         }
-
         public NetworkRefResponse build() {
             return new NetworkRefResponse(endpointRefs, name);
         }

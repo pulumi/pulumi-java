@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class TokenClaimResponse {
     /**
      * Name of the claim which must be present on the token.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Expected value of the claim to be present on the token.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class TokenClaimResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TokenClaimResponse build() {
             return new TokenClaimResponse(name, value);
         }

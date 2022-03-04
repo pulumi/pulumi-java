@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.outputs;
 import io.pulumi.awsnative.appflow.enums.FlowTaskType;
 import io.pulumi.awsnative.appflow.outputs.FlowConnectorOperator;
 import io.pulumi.awsnative.appflow.outputs.FlowTaskPropertiesObject;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,35 +58,35 @@ public final class FlowTask {
     /**
      * Operation to be performed on provided source fields
      * 
-     */
+    */
     public Optional<FlowConnectorOperator> getConnectorOperator() {
         return Optional.ofNullable(this.connectorOperator);
     }
     /**
      * A field value on which source field should be validated
      * 
-     */
+    */
     public Optional<String> getDestinationField() {
         return Optional.ofNullable(this.destinationField);
     }
     /**
      * Source fields on which particular task will be applied
      * 
-     */
+    */
     public List<String> getSourceFields() {
         return this.sourceFields;
     }
     /**
      * A Map used to store task related info
      * 
-     */
+    */
     public List<FlowTaskPropertiesObject> getTaskProperties() {
         return this.taskProperties == null ? List.of() : this.taskProperties;
     }
     /**
      * Type of task
      * 
-     */
+    */
     public FlowTaskType getTaskType() {
         return this.taskType;
     }
@@ -143,7 +143,6 @@ public final class FlowTask {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public FlowTask build() {
             return new FlowTask(connectorOperator, destinationField, sourceFields, taskProperties, taskType);
         }

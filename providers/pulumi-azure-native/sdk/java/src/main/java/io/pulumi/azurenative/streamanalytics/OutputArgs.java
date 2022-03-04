@@ -16,7 +16,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.PowerBIOutputDataSourceArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusQueueOutputDataSourceArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusTopicOutputDataSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -32,7 +32,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasource")
-    private final @Nullable Input<Object> datasource;
+      private final @Nullable Input<Object> datasource;
 
     public Input<Object> getDatasource() {
         return this.datasource == null ? Input.empty() : this.datasource;
@@ -43,7 +43,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final Input<String> jobName;
+      private final Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName;
@@ -54,7 +54,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputName")
-    private final @Nullable Input<String> outputName;
+      private final @Nullable Input<String> outputName;
 
     public Input<String> getOutputName() {
         return this.outputName == null ? Input.empty() : this.outputName;
@@ -76,7 +76,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serialization")
-    private final @Nullable Input<Object> serialization;
+      private final @Nullable Input<Object> serialization;
 
     public Input<Object> getSerialization() {
         return this.serialization == null ? Input.empty() : this.serialization;
@@ -206,7 +206,6 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
             this.serialization = Input.ofNullable(serialization);
             return this;
         }
-
         public OutputArgs build() {
             return new OutputArgs(datasource, jobName, name, outputName, resourceGroupName, serialization);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.authorization.inputs.GetPolicyAssignmentArgs;
 import io.pulumi.azurenative.authorization.outputs.GetPolicyAssignmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicyAssignment {
-/**
- * The policy assignment.
+    private GetPolicyAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetPolicyAssignmentArgs.Builder a);
+    }
+    private static GetPolicyAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPolicyAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The policy assignment.
  * API Version: 2020-09-01.
  * 
- *
- * The policy assignment.
+     *
+     * The policy assignment.
  * 
- */
+     */
+    public static CompletableFuture<GetPolicyAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The policy assignment.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * The policy assignment.
+     * 
+     */
     public static CompletableFuture<GetPolicyAssignmentResult> invokeAsync(GetPolicyAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyAssignment", TypeShape.of(GetPolicyAssignmentResult.class), args == null ? GetPolicyAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

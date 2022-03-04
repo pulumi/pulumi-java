@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveUris")
-    private final @Nullable Input<List<String>> archiveUris;
+      private final @Nullable Input<List<String>> archiveUris;
 
     public Input<List<String>> getArchiveUris() {
         return this.archiveUris == null ? Input.empty() : this.archiveUris;
@@ -35,7 +35,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -46,7 +46,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileUris")
-    private final @Nullable Input<List<String>> fileUris;
+      private final @Nullable Input<List<String>> fileUris;
 
     public Input<List<String>> getFileUris() {
         return this.fileUris == null ? Input.empty() : this.fileUris;
@@ -57,7 +57,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jarFileUris")
-    private final @Nullable Input<List<String>> jarFileUris;
+      private final @Nullable Input<List<String>> jarFileUris;
 
     public Input<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
@@ -68,7 +68,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mainClass")
-    private final @Nullable Input<String> mainClass;
+      private final @Nullable Input<String> mainClass;
 
     public Input<String> getMainClass() {
         return this.mainClass == null ? Input.empty() : this.mainClass;
@@ -79,7 +79,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mainJarFileUri")
-    private final @Nullable Input<String> mainJarFileUri;
+      private final @Nullable Input<String> mainJarFileUri;
 
     public Input<String> getMainJarFileUri() {
         return this.mainJarFileUri == null ? Input.empty() : this.mainJarFileUri;
@@ -198,7 +198,6 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
             this.mainJarFileUri = Input.ofNullable(mainJarFileUri);
             return this;
         }
-
         public SparkBatchArgs build() {
             return new SparkBatchArgs(archiveUris, args, fileUris, jarFileUris, mainClass, mainJarFileUri);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.inputs.GetDatastoreArgs;
 import io.pulumi.azurenative.avs.outputs.GetDatastoreResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatastore {
-/**
- * A datastore resource
+    private GetDatastore() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatastoreArgs.Builder a);
+    }
+    private static GetDatastoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatastoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A datastore resource
  * API Version: 2021-01-01-preview.
  * 
- *
- * A datastore resource
+     *
+     * A datastore resource
  * 
- */
+     */
+    public static CompletableFuture<GetDatastoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A datastore resource
+     * API Version: 2021-01-01-preview.
+     * 
+     *
+         * A datastore resource
+     * 
+     */
     public static CompletableFuture<GetDatastoreResult> invokeAsync(GetDatastoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getDatastore", TypeShape.of(GetDatastoreResult.class), args == null ? GetDatastoreArgs.Empty : args, Utilities.withVersion(options));
     }

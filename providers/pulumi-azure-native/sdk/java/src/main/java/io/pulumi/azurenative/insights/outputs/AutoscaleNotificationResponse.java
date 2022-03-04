@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.EmailNotificationResponse;
 import io.pulumi.azurenative.insights.outputs.WebhookNotificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class AutoscaleNotificationResponse {
     /**
      * the email notification.
      * 
-     */
+    */
     public Optional<EmailNotificationResponse> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * the operation associated with the notification and its value must be "scale"
      * 
-     */
+    */
     public String getOperation() {
         return this.operation;
     }
     /**
      * the collection of webhook notifications.
      * 
-     */
+    */
     public List<WebhookNotificationResponse> getWebhooks() {
         return this.webhooks == null ? List.of() : this.webhooks;
     }
@@ -100,7 +100,6 @@ public final class AutoscaleNotificationResponse {
             this.webhooks = webhooks;
             return this;
         }
-
         public AutoscaleNotificationResponse build() {
             return new AutoscaleNotificationResponse(email, operation, webhooks);
         }

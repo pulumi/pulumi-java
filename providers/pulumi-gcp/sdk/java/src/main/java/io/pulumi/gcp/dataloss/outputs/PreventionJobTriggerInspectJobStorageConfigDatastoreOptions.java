@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
      * A representation of a Datastore kind.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind getKind() {
         return this.kind;
     }
@@ -45,7 +45,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
      * is always by project and namespace, however the namespace ID may be empty.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId getPartitionId() {
         return this.partitionId;
     }
@@ -81,7 +81,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigDatastoreOptions build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptions(kind, partitionId);
         }

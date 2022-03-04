@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.ProjectPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -70,49 +70,49 @@ public final class GetProjectResult {
     /**
      * For optimistic concurrency control.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure location in which project is created.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the project.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the project.
      * 
-     */
+    */
     public ProjectPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Tags provided by Azure Tagging service.
      * 
-     */
+    */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects].
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -183,7 +183,6 @@ public final class GetProjectResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(eTag, id, location, name, properties, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,7 +34,7 @@ public final class GetSubnetworkSecondaryIpRange {
      * The range of IP addresses belonging to this subnetwork
      * secondary range.
      * 
-     */
+    */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
@@ -42,7 +42,7 @@ public final class GetSubnetworkSecondaryIpRange {
      * The name associated with this subnetwork secondary range, used
      * when adding an alias IP range to a VM instance.
      * 
-     */
+    */
     public String getRangeName() {
         return this.rangeName;
     }
@@ -78,7 +78,6 @@ public final class GetSubnetworkSecondaryIpRange {
             this.rangeName = Objects.requireNonNull(rangeName);
             return this;
         }
-
         public GetSubnetworkSecondaryIpRange build() {
             return new GetSubnetworkSecondaryIpRange(ipCidrRange, rangeName);
         }

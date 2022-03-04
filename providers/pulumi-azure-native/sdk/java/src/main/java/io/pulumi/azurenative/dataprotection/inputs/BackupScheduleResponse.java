@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="repeatingTimeIntervals", required=true)
-    private final List<String> repeatingTimeIntervals;
+      private final List<String> repeatingTimeIntervals;
 
     public List<String> getRepeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
@@ -60,7 +60,6 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
             this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals);
             return this;
         }
-
         public BackupScheduleResponse build() {
             return new BackupScheduleResponse(repeatingTimeIntervals);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -97,56 +97,56 @@ public final class DatabricksNotebookActivityResponse {
     /**
      * Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
      * 
-     */
+    */
     public Map<String,Object> getBaseParameters() {
         return this.baseParameters == null ? Map.of() : this.baseParameters;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of libraries to be installed on the cluster that will execute the job.
      * 
-     */
+    */
     public List<Map<String,Object>> getLibraries() {
         return this.libraries == null ? List.of() : this.libraries;
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The absolute path of the notebook to be run in the Databricks Workspace. This path must begin with a slash. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getNotebookPath() {
         return this.notebookPath;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
@@ -154,14 +154,14 @@ public final class DatabricksNotebookActivityResponse {
      * Type of activity.
      * Expected value is 'DatabricksNotebook'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -253,7 +253,6 @@ public final class DatabricksNotebookActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public DatabricksNotebookActivityResponse build() {
             return new DatabricksNotebookActivityResponse(baseParameters, dependsOn, description, libraries, linkedServiceName, name, notebookPath, policy, type, userProperties);
         }

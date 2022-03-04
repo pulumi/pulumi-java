@@ -30,7 +30,6 @@ public final class ToyStoreArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(ToyStoreArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ToyStoreArgs build() {
             return new ToyStoreArgs();
         }

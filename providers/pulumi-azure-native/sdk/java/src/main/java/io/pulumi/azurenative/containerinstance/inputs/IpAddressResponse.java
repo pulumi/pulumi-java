@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.PortResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dnsNameLabel")
-    private final @Nullable String dnsNameLabel;
+      private final @Nullable String dnsNameLabel;
 
     public Optional<String> getDnsNameLabel() {
         return this.dnsNameLabel == null ? Optional.empty() : Optional.ofNullable(this.dnsNameLabel);
@@ -36,7 +36,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fqdn", required=true)
-    private final String fqdn;
+      private final String fqdn;
 
     public String getFqdn() {
         return this.fqdn;
@@ -47,7 +47,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable String ip;
+      private final @Nullable String ip;
 
     public Optional<String> getIp() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
@@ -58,7 +58,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ports", required=true)
-    private final List<PortResponse> ports;
+      private final List<PortResponse> ports;
 
     public List<PortResponse> getPorts() {
         return this.ports;
@@ -69,7 +69,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -148,7 +148,6 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IpAddressResponse build() {
             return new IpAddressResponse(dnsNameLabel, fqdn, ip, ports, type);
         }

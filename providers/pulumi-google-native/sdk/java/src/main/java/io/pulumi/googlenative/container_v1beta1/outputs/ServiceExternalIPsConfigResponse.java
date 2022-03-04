@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ServiceExternalIPsConfigResponse {
     /**
      * Whether Services with ExternalIPs field are allowed or not.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -52,7 +52,6 @@ public final class ServiceExternalIPsConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ServiceExternalIPsConfigResponse build() {
             return new ServiceExternalIPsConfigResponse(enabled);
         }

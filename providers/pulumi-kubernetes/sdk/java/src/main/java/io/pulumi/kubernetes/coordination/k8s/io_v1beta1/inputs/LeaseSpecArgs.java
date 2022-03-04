@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.coordination.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acquireTime")
-    private final @Nullable Input<String> acquireTime;
+      private final @Nullable Input<String> acquireTime;
 
     public Input<String> getAcquireTime() {
         return this.acquireTime == null ? Input.empty() : this.acquireTime;
@@ -35,7 +35,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="holderIdentity")
-    private final @Nullable Input<String> holderIdentity;
+      private final @Nullable Input<String> holderIdentity;
 
     public Input<String> getHolderIdentity() {
         return this.holderIdentity == null ? Input.empty() : this.holderIdentity;
@@ -46,7 +46,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="leaseDurationSeconds")
-    private final @Nullable Input<Integer> leaseDurationSeconds;
+      private final @Nullable Input<Integer> leaseDurationSeconds;
 
     public Input<Integer> getLeaseDurationSeconds() {
         return this.leaseDurationSeconds == null ? Input.empty() : this.leaseDurationSeconds;
@@ -57,7 +57,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="leaseTransitions")
-    private final @Nullable Input<Integer> leaseTransitions;
+      private final @Nullable Input<Integer> leaseTransitions;
 
     public Input<Integer> getLeaseTransitions() {
         return this.leaseTransitions == null ? Input.empty() : this.leaseTransitions;
@@ -68,7 +68,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="renewTime")
-    private final @Nullable Input<String> renewTime;
+      private final @Nullable Input<String> renewTime;
 
     public Input<String> getRenewTime() {
         return this.renewTime == null ? Input.empty() : this.renewTime;
@@ -172,7 +172,6 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.renewTime = Input.ofNullable(renewTime);
             return this;
         }
-
         public LeaseSpecArgs build() {
             return new LeaseSpecArgs(acquireTime, holderIdentity, leaseDurationSeconds, leaseTransitions, renewTime);
         }

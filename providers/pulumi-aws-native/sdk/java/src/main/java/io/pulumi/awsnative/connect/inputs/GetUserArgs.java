@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userArn", required=true)
-    private final String userArn;
+      private final String userArn;
 
     public String getUserArn() {
         return this.userArn;
@@ -55,7 +55,6 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
             this.userArn = Objects.requireNonNull(userArn);
             return this;
         }
-
         public GetUserArgs build() {
             return new GetUserArgs(userArn);
         }

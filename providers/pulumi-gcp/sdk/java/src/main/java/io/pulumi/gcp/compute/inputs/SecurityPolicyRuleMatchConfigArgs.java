@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SecurityPolicyRuleMatchConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="srcIpRanges", required=true)
-    private final Input<List<String>> srcIpRanges;
+      private final Input<List<String>> srcIpRanges;
 
     public Input<List<String>> getSrcIpRanges() {
         return this.srcIpRanges;
@@ -64,7 +64,6 @@ public final class SecurityPolicyRuleMatchConfigArgs extends io.pulumi.resources
             this.srcIpRanges = Input.of(Objects.requireNonNull(srcIpRanges));
             return this;
         }
-
         public SecurityPolicyRuleMatchConfigArgs build() {
             return new SecurityPolicyRuleMatchConfigArgs(srcIpRanges);
         }

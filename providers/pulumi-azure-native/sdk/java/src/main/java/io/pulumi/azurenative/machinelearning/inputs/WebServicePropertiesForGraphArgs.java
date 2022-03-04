@@ -16,7 +16,7 @@ import io.pulumi.azurenative.machinelearning.inputs.StorageAccountArgs;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceKeysArgs;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -37,7 +37,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="assets")
-    private final @Nullable Input<Map<String,AssetItemArgs>> assets;
+      private final @Nullable Input<Map<String,AssetItemArgs>> assets;
 
     public Input<Map<String,AssetItemArgs>> getAssets() {
         return this.assets == null ? Input.empty() : this.assets;
@@ -48,7 +48,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="commitmentPlan")
-    private final @Nullable Input<CommitmentPlanArgs> commitmentPlan;
+      private final @Nullable Input<CommitmentPlanArgs> commitmentPlan;
 
     public Input<CommitmentPlanArgs> getCommitmentPlan() {
         return this.commitmentPlan == null ? Input.empty() : this.commitmentPlan;
@@ -59,7 +59,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -70,7 +70,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diagnostics")
-    private final @Nullable Input<DiagnosticsConfigurationArgs> diagnostics;
+      private final @Nullable Input<DiagnosticsConfigurationArgs> diagnostics;
 
     public Input<DiagnosticsConfigurationArgs> getDiagnostics() {
         return this.diagnostics == null ? Input.empty() : this.diagnostics;
@@ -81,7 +81,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="exampleRequest")
-    private final @Nullable Input<ExampleRequestArgs> exampleRequest;
+      private final @Nullable Input<ExampleRequestArgs> exampleRequest;
 
     public Input<ExampleRequestArgs> getExampleRequest() {
         return this.exampleRequest == null ? Input.empty() : this.exampleRequest;
@@ -92,7 +92,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="exposeSampleData")
-    private final @Nullable Input<Boolean> exposeSampleData;
+      private final @Nullable Input<Boolean> exposeSampleData;
 
     public Input<Boolean> getExposeSampleData() {
         return this.exposeSampleData == null ? Input.empty() : this.exposeSampleData;
@@ -103,7 +103,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<ServiceInputOutputSpecificationArgs> input;
+      private final @Nullable Input<ServiceInputOutputSpecificationArgs> input;
 
     public Input<ServiceInputOutputSpecificationArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -114,7 +114,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<WebServiceKeysArgs> keys;
+      private final @Nullable Input<WebServiceKeysArgs> keys;
 
     public Input<WebServiceKeysArgs> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -125,7 +125,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="machineLearningWorkspace")
-    private final @Nullable Input<MachineLearningWorkspaceArgs> machineLearningWorkspace;
+      private final @Nullable Input<MachineLearningWorkspaceArgs> machineLearningWorkspace;
 
     public Input<MachineLearningWorkspaceArgs> getMachineLearningWorkspace() {
         return this.machineLearningWorkspace == null ? Input.empty() : this.machineLearningWorkspace;
@@ -136,7 +136,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="output")
-    private final @Nullable Input<ServiceInputOutputSpecificationArgs> output;
+      private final @Nullable Input<ServiceInputOutputSpecificationArgs> output;
 
     public Input<ServiceInputOutputSpecificationArgs> getOutput() {
         return this.output == null ? Input.empty() : this.output;
@@ -147,7 +147,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="package")
-    private final @Nullable Input<GraphPackageArgs> $package;
+      private final @Nullable Input<GraphPackageArgs> $package;
 
     public Input<GraphPackageArgs> get$package() {
         return this.$package == null ? Input.empty() : this.$package;
@@ -159,7 +159,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="packageType", required=true)
-    private final Input<String> packageType;
+      private final Input<String> packageType;
 
     public Input<String> getPackageType() {
         return this.packageType;
@@ -170,7 +170,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,WebServiceParameterArgs>> parameters;
+      private final @Nullable Input<Map<String,WebServiceParameterArgs>> parameters;
 
     public Input<Map<String,WebServiceParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -181,7 +181,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="payloadsInBlobStorage")
-    private final @Nullable Input<Boolean> payloadsInBlobStorage;
+      private final @Nullable Input<Boolean> payloadsInBlobStorage;
 
     public Input<Boolean> getPayloadsInBlobStorage() {
         return this.payloadsInBlobStorage == null ? Input.empty() : this.payloadsInBlobStorage;
@@ -192,7 +192,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="payloadsLocation")
-    private final @Nullable Input<BlobLocationArgs> payloadsLocation;
+      private final @Nullable Input<BlobLocationArgs> payloadsLocation;
 
     public Input<BlobLocationArgs> getPayloadsLocation() {
         return this.payloadsLocation == null ? Input.empty() : this.payloadsLocation;
@@ -203,7 +203,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -214,7 +214,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="realtimeConfiguration")
-    private final @Nullable Input<RealtimeConfigurationArgs> realtimeConfiguration;
+      private final @Nullable Input<RealtimeConfigurationArgs> realtimeConfiguration;
 
     public Input<RealtimeConfigurationArgs> getRealtimeConfiguration() {
         return this.realtimeConfiguration == null ? Input.empty() : this.realtimeConfiguration;
@@ -225,7 +225,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storageAccount")
-    private final @Nullable Input<StorageAccountArgs> storageAccount;
+      private final @Nullable Input<StorageAccountArgs> storageAccount;
 
     public Input<StorageAccountArgs> getStorageAccount() {
         return this.storageAccount == null ? Input.empty() : this.storageAccount;
@@ -236,7 +236,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -550,7 +550,6 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public WebServicePropertiesForGraphArgs build() {
             return new WebServicePropertiesForGraphArgs(assets, commitmentPlan, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, output, $package, packageType, parameters, payloadsInBlobStorage, payloadsLocation, readOnly, realtimeConfiguration, storageAccount, title);
         }

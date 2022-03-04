@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -28,7 +28,7 @@ public final class PodReadinessGateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditionType", required=true)
-    private final Input<String> conditionType;
+      private final Input<String> conditionType;
 
     public Input<String> getConditionType() {
         return this.conditionType;
@@ -71,7 +71,6 @@ public final class PodReadinessGateArgs extends io.pulumi.resources.ResourceArgs
             this.conditionType = Input.of(Objects.requireNonNull(conditionType));
             return this;
         }
-
         public PodReadinessGateArgs build() {
             return new PodReadinessGateArgs(conditionType);
         }

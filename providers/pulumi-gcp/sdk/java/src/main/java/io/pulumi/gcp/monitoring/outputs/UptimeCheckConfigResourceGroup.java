@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,7 +34,7 @@ public final class UptimeCheckConfigResourceGroup {
     /**
      * The group of resources being monitored. Should be the `name` of a group
      * 
-     */
+    */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -42,7 +42,7 @@ public final class UptimeCheckConfigResourceGroup {
      * The resource type of the group members.
      * Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -78,7 +78,6 @@ public final class UptimeCheckConfigResourceGroup {
             this.resourceType = resourceType;
             return this;
         }
-
         public UptimeCheckConfigResourceGroup build() {
             return new UptimeCheckConfigResourceGroup(groupId, resourceType);
         }

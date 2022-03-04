@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class CloudErrorBodyResponse {
     /**
      * Error code string.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * More detailed error information.
      * 
-     */
+    */
     public List<CloudErrorBodyResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * Descriptive error information.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Error target
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -119,7 +119,6 @@ public final class CloudErrorBodyResponse {
             this.target = target;
             return this;
         }
-
         public CloudErrorBodyResponse build() {
             return new CloudErrorBodyResponse(code, details, message, target);
         }

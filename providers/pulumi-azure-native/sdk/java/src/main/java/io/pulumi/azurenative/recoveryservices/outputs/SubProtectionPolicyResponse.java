@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.LongTermSchedulePolicyResp
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -47,21 +47,21 @@ public final class SubProtectionPolicyResponse {
     /**
      * Type of backup policy type
      * 
-     */
+    */
     public Optional<String> getPolicyType() {
         return Optional.ofNullable(this.policyType);
     }
     /**
      * Retention policy with the details on backup copy retention ranges.
      * 
-     */
+    */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * Backup schedule specified as part of backup policy.
      * 
-     */
+    */
     public Optional<Object> getSchedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
@@ -104,7 +104,6 @@ public final class SubProtectionPolicyResponse {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public SubProtectionPolicyResponse build() {
             return new SubProtectionPolicyResponse(policyType, retentionPolicy, schedulePolicy);
         }

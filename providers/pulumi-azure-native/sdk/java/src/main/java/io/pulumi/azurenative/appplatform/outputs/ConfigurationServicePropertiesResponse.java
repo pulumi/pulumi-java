@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 import io.pulumi.azurenative.appplatform.outputs.ConfigurationServiceInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.ConfigurationServiceResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.outputs.ConfigurationServiceSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -51,28 +51,28 @@ public final class ConfigurationServicePropertiesResponse {
     /**
      * Collection of instances belong to Application Configuration Service.
      * 
-     */
+    */
     public List<ConfigurationServiceInstanceResponse> getInstances() {
         return this.instances;
     }
     /**
      * State of the Application Configuration Service.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The requested resource quantity for required CPU and Memory.
      * 
-     */
+    */
     public ConfigurationServiceResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
     }
     /**
      * The settings of Application Configuration Service.
      * 
-     */
+    */
     public Optional<ConfigurationServiceSettingsResponse> getSettings() {
         return Optional.ofNullable(this.settings);
     }
@@ -122,7 +122,6 @@ public final class ConfigurationServicePropertiesResponse {
             this.settings = settings;
             return this;
         }
-
         public ConfigurationServicePropertiesResponse build() {
             return new ConfigurationServicePropertiesResponse(instances, provisioningState, resourceRequests, settings);
         }

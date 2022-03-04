@@ -6,17 +6,33 @@ package io.pulumi.awsnative.s3;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.s3.inputs.GetAccessPointArgs;
 import io.pulumi.awsnative.s3.outputs.GetAccessPointResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessPoint {
-/**
- * The AWS::S3::AccessPoint resource is an Amazon S3 resource type that you can use to access buckets.
+    private GetAccessPoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccessPointArgs.Builder a);
+    }
+    private static GetAccessPointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccessPointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::S3::AccessPoint resource is an Amazon S3 resource type that you can use to access buckets.
  * 
- */
+     */
+    public static CompletableFuture<GetAccessPointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::S3::AccessPoint resource is an Amazon S3 resource type that you can use to access buckets.
+     * 
+     */
     public static CompletableFuture<GetAccessPointResult> invokeAsync(GetAccessPointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args == null ? GetAccessPointArgs.Empty : args, Utilities.withVersion(options));
     }

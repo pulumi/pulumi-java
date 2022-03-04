@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @InputImport(name="words", required=true)
-    private final Input<List<String>> words;
+      private final Input<List<String>> words;
 
     public Input<List<String>> getWords() {
         return this.words;
@@ -63,7 +63,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.words = Input.of(Objects.requireNonNull(words));
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs(words);
         }

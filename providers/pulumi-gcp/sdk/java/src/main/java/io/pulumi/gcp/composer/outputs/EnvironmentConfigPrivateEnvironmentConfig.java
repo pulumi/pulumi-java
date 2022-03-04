@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -126,7 +126,6 @@ public final class EnvironmentConfigPrivateEnvironmentConfig {
             this.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
             return this;
         }
-
         public EnvironmentConfigPrivateEnvironmentConfig build() {
             return new EnvironmentConfigPrivateEnvironmentConfig(cloudComposerConnectionSubnetwork, cloudComposerNetworkIpv4CidrBlock, cloudSqlIpv4CidrBlock, enablePrivateEndpoint, enablePrivatelyUsedPublicIps, masterIpv4CidrBlock, webServerIpv4CidrBlock);
         }

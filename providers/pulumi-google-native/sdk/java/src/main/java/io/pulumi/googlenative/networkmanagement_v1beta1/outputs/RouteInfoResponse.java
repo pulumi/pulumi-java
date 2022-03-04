@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -82,63 +82,63 @@ public final class RouteInfoResponse {
     /**
      * Destination IP range of the route.
      * 
-     */
+    */
     public String getDestIpRange() {
         return this.destIpRange;
     }
     /**
      * Name of a Compute Engine route.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Instance tags of the route.
      * 
-     */
+    */
     public List<String> getInstanceTags() {
         return this.instanceTags;
     }
     /**
      * URI of a Compute Engine network.
      * 
-     */
+    */
     public String getNetworkUri() {
         return this.networkUri;
     }
     /**
      * Next hop of the route.
      * 
-     */
+    */
     public String getNextHop() {
         return this.nextHop;
     }
     /**
      * Type of next hop.
      * 
-     */
+    */
     public String getNextHopType() {
         return this.nextHopType;
     }
     /**
      * Priority of the route.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
     /**
      * Type of route.
      * 
-     */
+    */
     public String getRouteType() {
         return this.routeType;
     }
     /**
      * URI of a Compute Engine route. Dynamic route from cloud router does not have a URI. Advertised route from Google Cloud VPC to on-premises network also does not have a URI.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -223,7 +223,6 @@ public final class RouteInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RouteInfoResponse build() {
             return new RouteInfoResponse(destIpRange, displayName, instanceTags, networkUri, nextHop, nextHopType, priority, routeType, uri);
         }

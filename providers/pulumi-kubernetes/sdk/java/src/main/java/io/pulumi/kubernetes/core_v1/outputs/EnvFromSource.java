@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ConfigMapEnvSource;
 import io.pulumi.kubernetes.core_v1.outputs.SecretEnvSource;
 import java.lang.String;
@@ -42,21 +42,21 @@ public final class EnvFromSource {
     /**
      * The ConfigMap to select from
      * 
-     */
+    */
     public Optional<ConfigMapEnvSource> getConfigMapRef() {
         return Optional.ofNullable(this.configMapRef);
     }
     /**
      * An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The Secret to select from
      * 
-     */
+    */
     public Optional<SecretEnvSource> getSecretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -99,7 +99,6 @@ public final class EnvFromSource {
             this.secretRef = secretRef;
             return this;
         }
-
         public EnvFromSource build() {
             return new EnvFromSource(configMapRef, prefix, secretRef);
         }

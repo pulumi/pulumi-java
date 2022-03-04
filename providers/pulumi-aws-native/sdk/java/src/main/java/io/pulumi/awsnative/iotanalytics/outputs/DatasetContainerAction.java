@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetResourceConfiguration;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetVariable;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -88,7 +88,6 @@ public final class DatasetContainerAction {
             this.variables = variables;
             return this;
         }
-
         public DatasetContainerAction build() {
             return new DatasetContainerAction(executionRoleArn, image, resourceConfiguration, variables);
         }

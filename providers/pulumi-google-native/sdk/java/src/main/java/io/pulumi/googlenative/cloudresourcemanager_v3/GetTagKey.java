@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v3;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagKey {
-/**
- * Retrieves a TagKey. This method will return `PERMISSION_DENIED` if the key does not exist or the user does not have permission to view it.
+    private GetTagKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetTagKeyArgs.Builder a);
+    }
+    private static GetTagKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTagKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves a TagKey. This method will return `PERMISSION_DENIED` if the key does not exist or the user does not have permission to view it.
  * 
- */
+     */
+    public static CompletableFuture<GetTagKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves a TagKey. This method will return `PERMISSION_DENIED` if the key does not exist or the user does not have permission to view it.
+     * 
+     */
     public static CompletableFuture<GetTagKeyResult> invokeAsync(GetTagKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagKey", TypeShape.of(GetTagKeyResult.class), args == null ? GetTagKeyArgs.Empty : args, Utilities.withVersion(options));
     }

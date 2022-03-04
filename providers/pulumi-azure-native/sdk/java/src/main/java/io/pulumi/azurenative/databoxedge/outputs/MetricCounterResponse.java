@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.MetricDimensionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class MetricCounterResponse {
     /**
      * The additional dimensions to be added to metric.
      * 
-     */
+    */
     public List<MetricDimensionResponse> getAdditionalDimensions() {
         return this.additionalDimensions == null ? List.of() : this.additionalDimensions;
     }
     /**
      * The dimension filter.
      * 
-     */
+    */
     public List<MetricDimensionResponse> getDimensionFilter() {
         return this.dimensionFilter == null ? List.of() : this.dimensionFilter;
     }
     /**
      * The instance from which counter should be collected.
      * 
-     */
+    */
     public Optional<String> getInstance() {
         return Optional.ofNullable(this.instance);
     }
     /**
      * The counter name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -120,7 +120,6 @@ public final class MetricCounterResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public MetricCounterResponse build() {
             return new MetricCounterResponse(additionalDimensions, dimensionFilter, instance, name);
         }

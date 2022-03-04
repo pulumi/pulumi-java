@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementConfigSyncGitArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
      * 
      */
     @InputImport(name="git")
-    private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
+      private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
 
     public Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> getGit() {
         return this.git == null ? Input.empty() : this.git;
@@ -32,7 +32,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
      * 
      */
     @InputImport(name="sourceFormat")
-    private final @Nullable Input<String> sourceFormat;
+      private final @Nullable Input<String> sourceFormat;
 
     public Input<String> getSourceFormat() {
         return this.sourceFormat == null ? Input.empty() : this.sourceFormat;
@@ -91,7 +91,6 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
             this.sourceFormat = Input.ofNullable(sourceFormat);
             return this;
         }
-
         public FeatureMembershipConfigmanagementConfigSyncArgs build() {
             return new FeatureMembershipConfigmanagementConfigSyncArgs(git, sourceFormat);
         }

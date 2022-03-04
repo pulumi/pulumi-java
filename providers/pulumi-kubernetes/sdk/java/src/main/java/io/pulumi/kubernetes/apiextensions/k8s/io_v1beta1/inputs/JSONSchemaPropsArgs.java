@@ -6,7 +6,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 import com.google.gson.JsonElement;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.ExternalDocumentationArgs;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -27,42 +27,42 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     public static final JSONSchemaPropsArgs Empty = new JSONSchemaPropsArgs();
 
     @InputImport(name="$ref")
-    private final @Nullable Input<String> $ref;
+      private final @Nullable Input<String> $ref;
 
     public Input<String> get$ref() {
         return this.$ref == null ? Input.empty() : this.$ref;
     }
 
     @InputImport(name="$schema")
-    private final @Nullable Input<String> $schema;
+      private final @Nullable Input<String> $schema;
 
     public Input<String> get$schema() {
         return this.$schema == null ? Input.empty() : this.$schema;
     }
 
     @InputImport(name="additionalItems")
-    private final @Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalItems;
+      private final @Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalItems;
 
     public Input<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalItems() {
         return this.additionalItems == null ? Input.empty() : this.additionalItems;
     }
 
     @InputImport(name="additionalProperties")
-    private final @Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties;
+      private final @Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties;
 
     public Input<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalProperties() {
         return this.additionalProperties == null ? Input.empty() : this.additionalProperties;
     }
 
     @InputImport(name="allOf")
-    private final @Nullable Input<List<JSONSchemaPropsArgs>> allOf;
+      private final @Nullable Input<List<JSONSchemaPropsArgs>> allOf;
 
     public Input<List<JSONSchemaPropsArgs>> getAllOf() {
         return this.allOf == null ? Input.empty() : this.allOf;
     }
 
     @InputImport(name="anyOf")
-    private final @Nullable Input<List<JSONSchemaPropsArgs>> anyOf;
+      private final @Nullable Input<List<JSONSchemaPropsArgs>> anyOf;
 
     public Input<List<JSONSchemaPropsArgs>> getAnyOf() {
         return this.anyOf == null ? Input.empty() : this.anyOf;
@@ -73,63 +73,63 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="default")
-    private final @Nullable Input<JsonElement> $default;
+      private final @Nullable Input<JsonElement> $default;
 
     public Input<JsonElement> get$default() {
         return this.$default == null ? Input.empty() : this.$default;
     }
 
     @InputImport(name="definitions")
-    private final @Nullable Input<Map<String,JSONSchemaPropsArgs>> definitions;
+      private final @Nullable Input<Map<String,JSONSchemaPropsArgs>> definitions;
 
     public Input<Map<String,JSONSchemaPropsArgs>> getDefinitions() {
         return this.definitions == null ? Input.empty() : this.definitions;
     }
 
     @InputImport(name="dependencies")
-    private final @Nullable Input<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies;
+      private final @Nullable Input<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies;
 
     public Input<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> getDependencies() {
         return this.dependencies == null ? Input.empty() : this.dependencies;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="enum")
-    private final @Nullable Input<List<JsonElement>> $enum;
+      private final @Nullable Input<List<JsonElement>> $enum;
 
     public Input<List<JsonElement>> get$enum() {
         return this.$enum == null ? Input.empty() : this.$enum;
     }
 
     @InputImport(name="example")
-    private final @Nullable Input<JsonElement> example;
+      private final @Nullable Input<JsonElement> example;
 
     public Input<JsonElement> getExample() {
         return this.example == null ? Input.empty() : this.example;
     }
 
     @InputImport(name="exclusiveMaximum")
-    private final @Nullable Input<Boolean> exclusiveMaximum;
+      private final @Nullable Input<Boolean> exclusiveMaximum;
 
     public Input<Boolean> getExclusiveMaximum() {
         return this.exclusiveMaximum == null ? Input.empty() : this.exclusiveMaximum;
     }
 
     @InputImport(name="exclusiveMinimum")
-    private final @Nullable Input<Boolean> exclusiveMinimum;
+      private final @Nullable Input<Boolean> exclusiveMinimum;
 
     public Input<Boolean> getExclusiveMinimum() {
         return this.exclusiveMinimum == null ? Input.empty() : this.exclusiveMinimum;
     }
 
     @InputImport(name="externalDocs")
-    private final @Nullable Input<ExternalDocumentationArgs> externalDocs;
+      private final @Nullable Input<ExternalDocumentationArgs> externalDocs;
 
     public Input<ExternalDocumentationArgs> getExternalDocs() {
         return this.externalDocs == null ? Input.empty() : this.externalDocs;
@@ -142,154 +142,154 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<String> format;
+      private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;
     }
 
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
     }
 
     @InputImport(name="items")
-    private final @Nullable Input<Either<JSONSchemaPropsArgs,List<JsonElement>>> items;
+      private final @Nullable Input<Either<JSONSchemaPropsArgs,List<JsonElement>>> items;
 
     public Input<Either<JSONSchemaPropsArgs,List<JsonElement>>> getItems() {
         return this.items == null ? Input.empty() : this.items;
     }
 
     @InputImport(name="maxItems")
-    private final @Nullable Input<Integer> maxItems;
+      private final @Nullable Input<Integer> maxItems;
 
     public Input<Integer> getMaxItems() {
         return this.maxItems == null ? Input.empty() : this.maxItems;
     }
 
     @InputImport(name="maxLength")
-    private final @Nullable Input<Integer> maxLength;
+      private final @Nullable Input<Integer> maxLength;
 
     public Input<Integer> getMaxLength() {
         return this.maxLength == null ? Input.empty() : this.maxLength;
     }
 
     @InputImport(name="maxProperties")
-    private final @Nullable Input<Integer> maxProperties;
+      private final @Nullable Input<Integer> maxProperties;
 
     public Input<Integer> getMaxProperties() {
         return this.maxProperties == null ? Input.empty() : this.maxProperties;
     }
 
     @InputImport(name="maximum")
-    private final @Nullable Input<Double> maximum;
+      private final @Nullable Input<Double> maximum;
 
     public Input<Double> getMaximum() {
         return this.maximum == null ? Input.empty() : this.maximum;
     }
 
     @InputImport(name="minItems")
-    private final @Nullable Input<Integer> minItems;
+      private final @Nullable Input<Integer> minItems;
 
     public Input<Integer> getMinItems() {
         return this.minItems == null ? Input.empty() : this.minItems;
     }
 
     @InputImport(name="minLength")
-    private final @Nullable Input<Integer> minLength;
+      private final @Nullable Input<Integer> minLength;
 
     public Input<Integer> getMinLength() {
         return this.minLength == null ? Input.empty() : this.minLength;
     }
 
     @InputImport(name="minProperties")
-    private final @Nullable Input<Integer> minProperties;
+      private final @Nullable Input<Integer> minProperties;
 
     public Input<Integer> getMinProperties() {
         return this.minProperties == null ? Input.empty() : this.minProperties;
     }
 
     @InputImport(name="minimum")
-    private final @Nullable Input<Double> minimum;
+      private final @Nullable Input<Double> minimum;
 
     public Input<Double> getMinimum() {
         return this.minimum == null ? Input.empty() : this.minimum;
     }
 
     @InputImport(name="multipleOf")
-    private final @Nullable Input<Double> multipleOf;
+      private final @Nullable Input<Double> multipleOf;
 
     public Input<Double> getMultipleOf() {
         return this.multipleOf == null ? Input.empty() : this.multipleOf;
     }
 
     @InputImport(name="not")
-    private final @Nullable Input<JSONSchemaPropsArgs> not;
+      private final @Nullable Input<JSONSchemaPropsArgs> not;
 
     public Input<JSONSchemaPropsArgs> getNot() {
         return this.not == null ? Input.empty() : this.not;
     }
 
     @InputImport(name="nullable")
-    private final @Nullable Input<Boolean> nullable;
+      private final @Nullable Input<Boolean> nullable;
 
     public Input<Boolean> getNullable() {
         return this.nullable == null ? Input.empty() : this.nullable;
     }
 
     @InputImport(name="oneOf")
-    private final @Nullable Input<List<JSONSchemaPropsArgs>> oneOf;
+      private final @Nullable Input<List<JSONSchemaPropsArgs>> oneOf;
 
     public Input<List<JSONSchemaPropsArgs>> getOneOf() {
         return this.oneOf == null ? Input.empty() : this.oneOf;
     }
 
     @InputImport(name="pattern")
-    private final @Nullable Input<String> pattern;
+      private final @Nullable Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern == null ? Input.empty() : this.pattern;
     }
 
     @InputImport(name="patternProperties")
-    private final @Nullable Input<Map<String,JSONSchemaPropsArgs>> patternProperties;
+      private final @Nullable Input<Map<String,JSONSchemaPropsArgs>> patternProperties;
 
     public Input<Map<String,JSONSchemaPropsArgs>> getPatternProperties() {
         return this.patternProperties == null ? Input.empty() : this.patternProperties;
     }
 
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,JSONSchemaPropsArgs>> properties;
+      private final @Nullable Input<Map<String,JSONSchemaPropsArgs>> properties;
 
     public Input<Map<String,JSONSchemaPropsArgs>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
     @InputImport(name="required")
-    private final @Nullable Input<List<String>> required;
+      private final @Nullable Input<List<String>> required;
 
     public Input<List<String>> getRequired() {
         return this.required == null ? Input.empty() : this.required;
     }
 
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
     }
 
     @InputImport(name="uniqueItems")
-    private final @Nullable Input<Boolean> uniqueItems;
+      private final @Nullable Input<Boolean> uniqueItems;
 
     public Input<Boolean> getUniqueItems() {
         return this.uniqueItems == null ? Input.empty() : this.uniqueItems;
@@ -300,7 +300,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_embedded_resource")
-    private final @Nullable Input<Boolean> x_kubernetes_embedded_resource;
+      private final @Nullable Input<Boolean> x_kubernetes_embedded_resource;
 
     public Input<Boolean> getX_kubernetes_embedded_resource() {
         return this.x_kubernetes_embedded_resource == null ? Input.empty() : this.x_kubernetes_embedded_resource;
@@ -320,7 +320,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_int_or_string")
-    private final @Nullable Input<Boolean> x_kubernetes_int_or_string;
+      private final @Nullable Input<Boolean> x_kubernetes_int_or_string;
 
     public Input<Boolean> getX_kubernetes_int_or_string() {
         return this.x_kubernetes_int_or_string == null ? Input.empty() : this.x_kubernetes_int_or_string;
@@ -333,7 +333,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_list_map_keys")
-    private final @Nullable Input<List<String>> x_kubernetes_list_map_keys;
+      private final @Nullable Input<List<String>> x_kubernetes_list_map_keys;
 
     public Input<List<String>> getX_kubernetes_list_map_keys() {
         return this.x_kubernetes_list_map_keys == null ? Input.empty() : this.x_kubernetes_list_map_keys;
@@ -357,7 +357,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_list_type")
-    private final @Nullable Input<String> x_kubernetes_list_type;
+      private final @Nullable Input<String> x_kubernetes_list_type;
 
     public Input<String> getX_kubernetes_list_type() {
         return this.x_kubernetes_list_type == null ? Input.empty() : this.x_kubernetes_list_type;
@@ -375,7 +375,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_map_type")
-    private final @Nullable Input<String> x_kubernetes_map_type;
+      private final @Nullable Input<String> x_kubernetes_map_type;
 
     public Input<String> getX_kubernetes_map_type() {
         return this.x_kubernetes_map_type == null ? Input.empty() : this.x_kubernetes_map_type;
@@ -386,7 +386,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_preserve_unknown_fields")
-    private final @Nullable Input<Boolean> x_kubernetes_preserve_unknown_fields;
+      private final @Nullable Input<Boolean> x_kubernetes_preserve_unknown_fields;
 
     public Input<Boolean> getX_kubernetes_preserve_unknown_fields() {
         return this.x_kubernetes_preserve_unknown_fields == null ? Input.empty() : this.x_kubernetes_preserve_unknown_fields;
@@ -1060,7 +1060,6 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             this.x_kubernetes_preserve_unknown_fields = Input.ofNullable(x_kubernetes_preserve_unknown_fields);
             return this;
         }
-
         public JSONSchemaPropsArgs build() {
             return new JSONSchemaPropsArgs($ref, $schema, additionalItems, additionalProperties, allOf, anyOf, $default, definitions, dependencies, description, $enum, example, exclusiveMaximum, exclusiveMinimum, externalDocs, format, id, items, maxItems, maxLength, maxProperties, maximum, minItems, minLength, minProperties, minimum, multipleOf, not, nullable, oneOf, pattern, patternProperties, properties, required, title, type, uniqueItems, x_kubernetes_embedded_resource, x_kubernetes_int_or_string, x_kubernetes_list_map_keys, x_kubernetes_list_type, x_kubernetes_map_type, x_kubernetes_preserve_unknown_fields);
         }

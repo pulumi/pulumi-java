@@ -6,7 +6,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 import io.pulumi.azurenative.connectedvmwarevsphere.enums.OsType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminPassword")
-    private final @Nullable Input<String> adminPassword;
+      private final @Nullable Input<String> adminPassword;
 
     public Input<String> getAdminPassword() {
         return this.adminPassword == null ? Input.empty() : this.adminPassword;
@@ -36,7 +36,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUsername")
-    private final @Nullable Input<String> adminUsername;
+      private final @Nullable Input<String> adminUsername;
 
     public Input<String> getAdminUsername() {
         return this.adminUsername == null ? Input.empty() : this.adminUsername;
@@ -47,7 +47,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computerName")
-    private final @Nullable Input<String> computerName;
+      private final @Nullable Input<String> computerName;
 
     public Input<String> getComputerName() {
         return this.computerName == null ? Input.empty() : this.computerName;
@@ -58,7 +58,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable Input<Either<String,OsType>> osType;
+      private final @Nullable Input<Either<String,OsType>> osType;
 
     public Input<Either<String,OsType>> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -147,7 +147,6 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.osType = Input.ofNullable(osType);
             return this;
         }
-
         public OsProfileArgs build() {
             return new OsProfileArgs(adminPassword, adminUsername, computerName, osType);
         }

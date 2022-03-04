@@ -6,21 +6,41 @@ package io.pulumi.azurenative.orbital;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.orbital.inputs.GetSpacecraftArgs;
 import io.pulumi.azurenative.orbital.outputs.GetSpacecraftResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSpacecraft {
-/**
- * Customer creates a spacecraft resource to schedule a contact.
+    private GetSpacecraft() {}
+    public interface BuilderApplicator {
+        public void apply(GetSpacecraftArgs.Builder a);
+    }
+    private static GetSpacecraftArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSpacecraftArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Customer creates a spacecraft resource to schedule a contact.
  * API Version: 2021-04-04-preview.
  * 
- *
- * Customer creates a spacecraft resource to schedule a contact.
+     *
+     * Customer creates a spacecraft resource to schedule a contact.
  * 
- */
+     */
+    public static CompletableFuture<GetSpacecraftResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Customer creates a spacecraft resource to schedule a contact.
+     * API Version: 2021-04-04-preview.
+     * 
+     *
+         * Customer creates a spacecraft resource to schedule a contact.
+     * 
+     */
     public static CompletableFuture<GetSpacecraftResult> invokeAsync(GetSpacecraftArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:getSpacecraft", TypeShape.of(GetSpacecraftResult.class), args == null ? GetSpacecraftArgs.Empty : args, Utilities.withVersion(options));
     }

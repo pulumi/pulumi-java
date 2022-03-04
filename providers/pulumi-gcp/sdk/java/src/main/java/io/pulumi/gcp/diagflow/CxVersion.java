@@ -5,8 +5,8 @@ package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxVersionArgs;
 import io.pulumi.gcp.diagflow.inputs.CxVersionState;
@@ -149,6 +149,37 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CxVersionArgs.Builder a);
+    }
+    private static io.pulumi.gcp.diagflow.CxVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.diagflow.CxVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CxVersion(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CxVersion(String name) {
+        this(name, CxVersionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CxVersion(String name, CxVersionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

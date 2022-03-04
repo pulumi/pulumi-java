@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -17,35 +17,35 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
     public static final TaskDefinitionDockerVolumeConfigurationArgs Empty = new TaskDefinitionDockerVolumeConfigurationArgs();
 
     @InputImport(name="autoprovision")
-    private final @Nullable Input<Boolean> autoprovision;
+      private final @Nullable Input<Boolean> autoprovision;
 
     public Input<Boolean> getAutoprovision() {
         return this.autoprovision == null ? Input.empty() : this.autoprovision;
     }
 
     @InputImport(name="driver")
-    private final @Nullable Input<String> driver;
+      private final @Nullable Input<String> driver;
 
     public Input<String> getDriver() {
         return this.driver == null ? Input.empty() : this.driver;
     }
 
     @InputImport(name="driverOpts")
-    private final @Nullable Input<Object> driverOpts;
+      private final @Nullable Input<Object> driverOpts;
 
     public Input<Object> getDriverOpts() {
         return this.driverOpts == null ? Input.empty() : this.driverOpts;
     }
 
     @InputImport(name="labels")
-    private final @Nullable Input<Object> labels;
+      private final @Nullable Input<Object> labels;
 
     public Input<Object> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -149,7 +149,6 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
             this.scope = Input.ofNullable(scope);
             return this;
         }
-
         public TaskDefinitionDockerVolumeConfigurationArgs build() {
             return new TaskDefinitionDockerVolumeConfigurationArgs(autoprovision, driver, driverOpts, labels, scope);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class ThemeGutterStyle {
      * <p>This Boolean value controls whether to display a gutter space between sheet tiles.
      *         </p>
      * 
-     */
+    */
     public Optional<Boolean> getShow() {
         return Optional.ofNullable(this.show);
     }
@@ -56,7 +56,6 @@ public final class ThemeGutterStyle {
             this.show = show;
             return this;
         }
-
         public ThemeGutterStyle build() {
             return new ThemeGutterStyle(show);
         }

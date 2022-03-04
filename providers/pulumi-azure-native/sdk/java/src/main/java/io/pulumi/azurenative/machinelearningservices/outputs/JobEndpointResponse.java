@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -49,28 +49,28 @@ public final class JobEndpointResponse {
     /**
      * Url for endpoint.
      * 
-     */
+    */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * Endpoint type.
      * 
-     */
+    */
     public Optional<String> getJobEndpointType() {
         return Optional.ofNullable(this.jobEndpointType);
     }
     /**
      * Port for endpoint.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Additional properties to set on the endpoint.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
@@ -120,7 +120,6 @@ public final class JobEndpointResponse {
             this.properties = properties;
             return this;
         }
-
         public JobEndpointResponse build() {
             return new JobEndpointResponse(endpoint, jobEndpointType, port, properties);
         }

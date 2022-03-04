@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class CertDnsChallengeResponse {
     /**
      * The domain name upon which the DNS challenge must be satisfied.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * The value that must be present as a TXT record on the domain name to satisfy the challenge.
      * 
-     */
+    */
     public String getToken() {
         return this.token;
     }
@@ -74,7 +74,6 @@ public final class CertDnsChallengeResponse {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public CertDnsChallengeResponse build() {
             return new CertDnsChallengeResponse(domainName, token);
         }

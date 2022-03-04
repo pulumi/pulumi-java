@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GetInstanceServiceAccount {
     /**
      * The service account e-mail address.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * A list of service scopes.
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes;
     }
@@ -75,7 +75,6 @@ public final class GetInstanceServiceAccount {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public GetInstanceServiceAccount build() {
             return new GetInstanceServiceAccount(email, scopes);
         }

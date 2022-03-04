@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificateType", required=true)
-    private final String certificateType;
+      private final String certificateType;
 
     public String getCertificateType() {
         return this.certificateType;
@@ -35,7 +35,7 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="minimumTlsVersion")
-    private final @Nullable String minimumTlsVersion;
+      private final @Nullable String minimumTlsVersion;
 
     public Optional<String> getMinimumTlsVersion() {
         return this.minimumTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minimumTlsVersion);
@@ -46,7 +46,7 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable ResourceReferenceResponse secret;
+      private final @Nullable ResourceReferenceResponse secret;
 
     public Optional<ResourceReferenceResponse> getSecret() {
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
@@ -105,7 +105,6 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
             this.secret = secret;
             return this;
         }
-
         public AFDDomainHttpsParametersResponse build() {
             return new AFDDomainHttpsParametersResponse(certificateType, minimumTlsVersion, secret);
         }

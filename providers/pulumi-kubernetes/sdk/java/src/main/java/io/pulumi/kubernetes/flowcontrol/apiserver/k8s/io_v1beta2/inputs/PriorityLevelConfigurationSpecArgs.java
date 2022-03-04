@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.LimitedPriorityLevelConfigurationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="limited")
-    private final @Nullable Input<LimitedPriorityLevelConfigurationArgs> limited;
+      private final @Nullable Input<LimitedPriorityLevelConfigurationArgs> limited;
 
     public Input<LimitedPriorityLevelConfigurationArgs> getLimited() {
         return this.limited == null ? Input.empty() : this.limited;
@@ -35,7 +35,7 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -94,7 +94,6 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public PriorityLevelConfigurationSpecArgs build() {
             return new PriorityLevelConfigurationSpecArgs(limited, type);
         }

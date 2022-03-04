@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketDestinationFormat;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class BucketDestination {
     /**
      * The account ID that owns the destination S3 bucket.
      * 
-     */
+    */
     public Optional<String> getBucketAccountId() {
         return Optional.ofNullable(this.bucketAccountId);
     }
     /**
      * The Amazon Resource Name (ARN) of the bucket to which data is exported.
      * 
-     */
+    */
     public String getBucketArn() {
         return this.bucketArn;
     }
     /**
      * Specifies the file format used when exporting data to Amazon S3.
      * 
-     */
+    */
     public BucketDestinationFormat getFormat() {
         return this.format;
     }
     /**
      * The prefix to use when exporting data. The prefix is prepended to all results.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -119,7 +119,6 @@ public final class BucketDestination {
             this.prefix = prefix;
             return this;
         }
-
         public BucketDestination build() {
             return new BucketDestination(bucketAccountId, bucketArn, format, prefix);
         }

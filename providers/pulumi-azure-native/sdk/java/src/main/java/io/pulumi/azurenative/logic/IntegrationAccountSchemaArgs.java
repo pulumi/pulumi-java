@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.enums.SchemaType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -34,7 +34,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -45,7 +45,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="documentName")
-    private final @Nullable Input<String> documentName;
+      private final @Nullable Input<String> documentName;
 
     public Input<String> getDocumentName() {
         return this.documentName == null ? Input.empty() : this.documentName;
@@ -56,7 +56,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable Input<String> fileName;
+      private final @Nullable Input<String> fileName;
 
     public Input<String> getFileName() {
         return this.fileName == null ? Input.empty() : this.fileName;
@@ -67,7 +67,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-    private final Input<String> integrationAccountName;
+      private final Input<String> integrationAccountName;
 
     public Input<String> getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -78,7 +78,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -89,7 +89,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+      private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -100,7 +100,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="schemaName")
-    private final @Nullable Input<String> schemaName;
+      private final @Nullable Input<String> schemaName;
 
     public Input<String> getSchemaName() {
         return this.schemaName == null ? Input.empty() : this.schemaName;
@@ -122,7 +122,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="schemaType", required=true)
-    private final Input<Either<String,SchemaType>> schemaType;
+      private final Input<Either<String,SchemaType>> schemaType;
 
     public Input<Either<String,SchemaType>> getSchemaType() {
         return this.schemaType;
@@ -133,7 +133,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,7 +144,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetNamespace")
-    private final @Nullable Input<String> targetNamespace;
+      private final @Nullable Input<String> targetNamespace;
 
     public Input<String> getTargetNamespace() {
         return this.targetNamespace == null ? Input.empty() : this.targetNamespace;
@@ -353,7 +353,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             this.targetNamespace = Input.ofNullable(targetNamespace);
             return this;
         }
-
         public IntegrationAccountSchemaArgs build() {
             return new IntegrationAccountSchemaArgs(content, contentType, documentName, fileName, integrationAccountName, location, metadata, resourceGroupName, schemaName, schemaType, tags, targetNamespace);
         }

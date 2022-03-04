@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class AzureSqlProtectedItemExtendedInfoResponse {
     /**
      * The oldest backup copy available for this item in the service.
      * 
-     */
+    */
     public Optional<String> getOldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
      * State of the backup policy associated with this backup item.
      * 
-     */
+    */
     public Optional<String> getPolicyState() {
         return Optional.ofNullable(this.policyState);
     }
     /**
      * Number of available backup copies associated with this backup item.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
@@ -98,7 +98,6 @@ public final class AzureSqlProtectedItemExtendedInfoResponse {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public AzureSqlProtectedItemExtendedInfoResponse build() {
             return new AzureSqlProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount);
         }

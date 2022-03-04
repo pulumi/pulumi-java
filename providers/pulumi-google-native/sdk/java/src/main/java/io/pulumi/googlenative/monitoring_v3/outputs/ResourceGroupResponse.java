@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ResourceGroupResponse {
     /**
      * The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
      * 
-     */
+    */
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * The resource type of the group members.
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
@@ -74,7 +74,6 @@ public final class ResourceGroupResponse {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public ResourceGroupResponse build() {
             return new ResourceGroupResponse(groupId, resourceType);
         }

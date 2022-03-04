@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse {
     /**
      * How many times the value is contained in the field.
      * 
-     */
+    */
     public String getCount() {
         return this.count;
     }
     /**
      * A value contained in the field in question.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ValueResponse getValue() {
         return this.value;
     }
@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GooglePrivacyDlpV2ValueFrequencyResponse build() {
             return new GooglePrivacyDlpV2ValueFrequencyResponse(count, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class TriggerReferenceResponse {
     /**
      * Reference trigger name.
      * 
-     */
+    */
     public String getReferenceName() {
         return this.referenceName;
     }
     /**
      * Trigger reference type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class TriggerReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TriggerReferenceResponse build() {
             return new TriggerReferenceResponse(referenceName, type);
         }

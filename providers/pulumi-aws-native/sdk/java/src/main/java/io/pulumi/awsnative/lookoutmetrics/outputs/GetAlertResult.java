@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetAlertResult {
     /**
      * ARN assigned to the alert.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -54,7 +54,6 @@ public final class GetAlertResult {
             this.arn = arn;
             return this;
         }
-
         public GetAlertResult build() {
             return new GetAlertResult(arn);
         }

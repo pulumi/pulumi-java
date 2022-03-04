@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -70,49 +70,49 @@ public final class GetPrivateEndpointConnectionResult {
     /**
      * Optional ETag.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Resource Id represents the complete path to the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name associated with the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * PrivateEndpointConnectionResource properties
      * 
-     */
+    */
     public PrivateEndpointConnectionResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -183,7 +183,6 @@ public final class GetPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionResult build() {
             return new GetPrivateEndpointConnectionResult(eTag, id, location, name, properties, tags, type);
         }

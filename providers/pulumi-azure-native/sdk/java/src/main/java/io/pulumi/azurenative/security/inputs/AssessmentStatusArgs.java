@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.enums.AssessmentStatusCode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cause")
-    private final @Nullable Input<String> cause;
+      private final @Nullable Input<String> cause;
 
     public Input<String> getCause() {
         return this.cause == null ? Input.empty() : this.cause;
@@ -36,7 +36,7 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="code", required=true)
-    private final Input<Either<String,AssessmentStatusCode>> code;
+      private final Input<Either<String,AssessmentStatusCode>> code;
 
     public Input<Either<String,AssessmentStatusCode>> getCode() {
         return this.code;
@@ -47,7 +47,7 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -121,7 +121,6 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
             this.description = Input.ofNullable(description);
             return this;
         }
-
         public AssessmentStatusArgs build() {
             return new AssessmentStatusArgs(cause, code, description);
         }

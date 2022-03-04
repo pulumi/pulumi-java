@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.enums.SizeTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -48,7 +48,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @InputImport(name="sizeDisk", required=true)
-    private final Input<Either<String,SizeTypes>> sizeDisk;
+      private final Input<Either<String,SizeTypes>> sizeDisk;
 
     public Input<Either<String,SizeTypes>> getSizeDisk() {
         return this.sizeDisk;
@@ -122,7 +122,6 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
             this.sizeDisk = Input.of(Objects.requireNonNull(sizeDisk));
             return this;
         }
-
         public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs build() {
             return new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs(description, kind, sizeDisk);
         }

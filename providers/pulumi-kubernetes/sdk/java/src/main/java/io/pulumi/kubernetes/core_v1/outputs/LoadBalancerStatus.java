@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LoadBalancerIngress;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LoadBalancerStatus {
     /**
      * Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
      * 
-     */
+    */
     public List<LoadBalancerIngress> getIngress() {
         return this.ingress == null ? List.of() : this.ingress;
     }
@@ -54,7 +54,6 @@ public final class LoadBalancerStatus {
             this.ingress = ingress;
             return this;
         }
-
         public LoadBalancerStatus build() {
             return new LoadBalancerStatus(ingress);
         }

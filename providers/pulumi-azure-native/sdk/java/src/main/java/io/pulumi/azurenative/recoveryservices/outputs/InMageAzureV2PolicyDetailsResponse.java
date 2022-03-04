@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -63,14 +63,14 @@ public final class InMageAzureV2PolicyDetailsResponse {
     /**
      * The app consistent snapshot frequency in minutes.
      * 
-     */
+    */
     public Optional<Integer> getAppConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
     /**
      * The crash consistent snapshot frequency in minutes.
      * 
-     */
+    */
     public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
@@ -78,28 +78,28 @@ public final class InMageAzureV2PolicyDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'InMageAzureV2'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * A value indicating whether multi-VM sync has to be enabled.
      * 
-     */
+    */
     public Optional<String> getMultiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
     /**
      * The duration in minutes until which the recovery points need to be stored.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointHistory() {
         return Optional.ofNullable(this.recoveryPointHistory);
     }
     /**
      * The recovery point threshold in minutes.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointThresholdInMinutes() {
         return Optional.ofNullable(this.recoveryPointThresholdInMinutes);
     }
@@ -163,7 +163,6 @@ public final class InMageAzureV2PolicyDetailsResponse {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
         }
-
         public InMageAzureV2PolicyDetailsResponse build() {
             return new InMageAzureV2PolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);
         }

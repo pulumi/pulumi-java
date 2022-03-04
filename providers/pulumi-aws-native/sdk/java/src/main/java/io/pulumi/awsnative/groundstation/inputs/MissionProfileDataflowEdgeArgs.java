@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
     public static final MissionProfileDataflowEdgeArgs Empty = new MissionProfileDataflowEdgeArgs();
 
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+      private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
     }
 
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -81,7 +81,6 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public MissionProfileDataflowEdgeArgs build() {
             return new MissionProfileDataflowEdgeArgs(destination, source);
         }

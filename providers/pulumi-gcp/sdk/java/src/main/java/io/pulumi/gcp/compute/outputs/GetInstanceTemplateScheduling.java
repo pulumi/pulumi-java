@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceTemplateSchedulingNodeAffinity;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -63,7 +63,7 @@ public final class GetInstanceTemplateScheduling {
      * automatically restarted if it is terminated by Compute Engine (not
      * terminated by a user). This defaults to true.
      * 
-     */
+    */
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
     }
@@ -77,7 +77,7 @@ public final class GetInstanceTemplateScheduling {
      * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
      * Structure documented below.
      * 
-     */
+    */
     public List<GetInstanceTemplateSchedulingNodeAffinity> getNodeAffinities() {
         return this.nodeAffinities;
     }
@@ -85,7 +85,7 @@ public final class GetInstanceTemplateScheduling {
      * Defines the maintenance behavior for this
      * instance.
      * 
-     */
+    */
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
     }
@@ -94,7 +94,7 @@ public final class GetInstanceTemplateScheduling {
      * false. Read more on this
      * [here](https://cloud.google.com/compute/docs/instances/preemptible).
      * 
-     */
+    */
     public Boolean getPreemptible() {
         return this.preemptible;
     }
@@ -151,7 +151,6 @@ public final class GetInstanceTemplateScheduling {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public GetInstanceTemplateScheduling build() {
             return new GetInstanceTemplateScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }

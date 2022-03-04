@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ComplianceVersionResponse {
     /**
      * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
      * 
-     */
+    */
     public String getCpeUri() {
         return this.cpeUri;
     }
     /**
      * The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -74,7 +74,6 @@ public final class ComplianceVersionResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ComplianceVersionResponse build() {
             return new ComplianceVersionResponse(cpeUri, version);
         }

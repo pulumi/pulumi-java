@@ -10,8 +10,8 @@ import io.pulumi.azurenative.authorization.outputs.AccessReviewReviewerResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -456,6 +456,37 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
         return this.userPrincipalName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable AccessReviewScheduleDefinitionByIdArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.authorization.AccessReviewScheduleDefinitionByIdArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.authorization.AccessReviewScheduleDefinitionByIdArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AccessReviewScheduleDefinitionById(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AccessReviewScheduleDefinitionById(String name) {
+        this(name, AccessReviewScheduleDefinitionByIdArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AccessReviewScheduleDefinitionById(String name, @Nullable AccessReviewScheduleDefinitionByIdArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

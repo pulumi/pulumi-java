@@ -8,7 +8,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetDatabaseInputDefinitionArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetMetadataArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,28 +22,28 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
     public static final DatasetInputArgs Empty = new DatasetInputArgs();
 
     @InputImport(name="dataCatalogInputDefinition")
-    private final @Nullable Input<DatasetDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
+      private final @Nullable Input<DatasetDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
 
     public Input<DatasetDataCatalogInputDefinitionArgs> getDataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Input.empty() : this.dataCatalogInputDefinition;
     }
 
     @InputImport(name="databaseInputDefinition")
-    private final @Nullable Input<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition;
+      private final @Nullable Input<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition;
 
     public Input<DatasetDatabaseInputDefinitionArgs> getDatabaseInputDefinition() {
         return this.databaseInputDefinition == null ? Input.empty() : this.databaseInputDefinition;
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Input<DatasetMetadataArgs> metadata;
+      private final @Nullable Input<DatasetMetadataArgs> metadata;
 
     public Input<DatasetMetadataArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
     @InputImport(name="s3InputDefinition")
-    private final @Nullable Input<DatasetS3LocationArgs> s3InputDefinition;
+      private final @Nullable Input<DatasetS3LocationArgs> s3InputDefinition;
 
     public Input<DatasetS3LocationArgs> getS3InputDefinition() {
         return this.s3InputDefinition == null ? Input.empty() : this.s3InputDefinition;
@@ -132,7 +132,6 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
             this.s3InputDefinition = Input.ofNullable(s3InputDefinition);
             return this;
         }
-
         public DatasetInputArgs build() {
             return new DatasetInputArgs(dataCatalogInputDefinition, databaseInputDefinition, metadata, s3InputDefinition);
         }

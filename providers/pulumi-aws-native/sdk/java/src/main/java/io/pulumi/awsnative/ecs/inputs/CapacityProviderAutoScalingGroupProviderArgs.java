@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.enums.CapacityProviderAutoScalingGroupProviderManagedTerminationProtection;
 import io.pulumi.awsnative.ecs.inputs.CapacityProviderManagedScalingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,21 +17,21 @@ public final class CapacityProviderAutoScalingGroupProviderArgs extends io.pulum
     public static final CapacityProviderAutoScalingGroupProviderArgs Empty = new CapacityProviderAutoScalingGroupProviderArgs();
 
     @InputImport(name="autoScalingGroupArn", required=true)
-    private final Input<String> autoScalingGroupArn;
+      private final Input<String> autoScalingGroupArn;
 
     public Input<String> getAutoScalingGroupArn() {
         return this.autoScalingGroupArn;
     }
 
     @InputImport(name="managedScaling")
-    private final @Nullable Input<CapacityProviderManagedScalingArgs> managedScaling;
+      private final @Nullable Input<CapacityProviderManagedScalingArgs> managedScaling;
 
     public Input<CapacityProviderManagedScalingArgs> getManagedScaling() {
         return this.managedScaling == null ? Input.empty() : this.managedScaling;
     }
 
     @InputImport(name="managedTerminationProtection")
-    private final @Nullable Input<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection;
+      private final @Nullable Input<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection;
 
     public Input<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> getManagedTerminationProtection() {
         return this.managedTerminationProtection == null ? Input.empty() : this.managedTerminationProtection;
@@ -105,7 +105,6 @@ public final class CapacityProviderAutoScalingGroupProviderArgs extends io.pulum
             this.managedTerminationProtection = Input.ofNullable(managedTerminationProtection);
             return this;
         }
-
         public CapacityProviderAutoScalingGroupProviderArgs build() {
             return new CapacityProviderAutoScalingGroupProviderArgs(autoScalingGroupArn, managedScaling, managedTerminationProtection);
         }

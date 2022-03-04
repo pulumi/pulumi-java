@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -62,28 +62,28 @@ public final class DenylistCustomAlertRuleResponse {
     /**
      * The values to deny. The format of the values depends on the rule type.
      * 
-     */
+    */
     public List<String> getDenylistValues() {
         return this.denylistValues;
     }
     /**
      * The description of the custom alert.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The display name of the custom alert.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Status of the custom alert.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -91,14 +91,14 @@ public final class DenylistCustomAlertRuleResponse {
      * The type of the custom alert rule.
      * Expected value is 'DenylistCustomAlertRule'.
      * 
-     */
+    */
     public String getRuleType() {
         return this.ruleType;
     }
     /**
      * The value type of the items in the list.
      * 
-     */
+    */
     public String getValueType() {
         return this.valueType;
     }
@@ -162,7 +162,6 @@ public final class DenylistCustomAlertRuleResponse {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public DenylistCustomAlertRuleResponse build() {
             return new DenylistCustomAlertRuleResponse(denylistValues, description, displayName, isEnabled, ruleType, valueType);
         }

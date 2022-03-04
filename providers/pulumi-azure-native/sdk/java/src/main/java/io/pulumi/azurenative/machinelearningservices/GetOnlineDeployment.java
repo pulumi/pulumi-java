@@ -6,17 +6,33 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.inputs.GetOnlineDeploymentArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.GetOnlineDeploymentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOnlineDeployment {
-/**
- * API Version: 2021-03-01-preview.
+    private GetOnlineDeployment() {}
+    public interface BuilderApplicator {
+        public void apply(GetOnlineDeploymentArgs.Builder a);
+    }
+    private static GetOnlineDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOnlineDeploymentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2021-03-01-preview.
  * 
- */
+     */
+    public static CompletableFuture<GetOnlineDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2021-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetOnlineDeploymentResult> invokeAsync(GetOnlineDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getOnlineDeployment", TypeShape.of(GetOnlineDeploymentResult.class), args == null ? GetOnlineDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

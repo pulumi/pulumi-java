@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -95,56 +95,56 @@ public final class ValidationActivityResponse {
     /**
      * Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getChildItems() {
         return Optional.ofNullable(this.childItems);
     }
     /**
      * Validation activity dataset reference.
      * 
-     */
+    */
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMinimumSize() {
         return Optional.ofNullable(this.minimumSize);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSleep() {
         return Optional.ofNullable(this.sleep);
     }
     /**
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -152,14 +152,14 @@ public final class ValidationActivityResponse {
      * Type of activity.
      * Expected value is 'Validation'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -251,7 +251,6 @@ public final class ValidationActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ValidationActivityResponse build() {
             return new ValidationActivityResponse(childItems, dataset, dependsOn, description, minimumSize, name, sleep, timeout, type, userProperties);
         }

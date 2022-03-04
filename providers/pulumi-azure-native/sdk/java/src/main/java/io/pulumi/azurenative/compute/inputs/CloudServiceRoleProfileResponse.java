@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleProfilePropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class CloudServiceRoleProfileResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
+      private final @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
 
     public List<CloudServiceRoleProfilePropertiesResponse> getRoles() {
         return this.roles == null ? List.of() : this.roles;
@@ -62,7 +62,6 @@ public final class CloudServiceRoleProfileResponse extends io.pulumi.resources.I
             this.roles = roles;
             return this;
         }
-
         public CloudServiceRoleProfileResponse build() {
             return new CloudServiceRoleProfileResponse(roles);
         }

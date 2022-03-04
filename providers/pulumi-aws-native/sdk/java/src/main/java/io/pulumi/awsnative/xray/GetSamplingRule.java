@@ -6,17 +6,33 @@ package io.pulumi.awsnative.xray;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.xray.inputs.GetSamplingRuleArgs;
 import io.pulumi.awsnative.xray.outputs.GetSamplingRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSamplingRule {
-/**
- * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
+    private GetSamplingRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetSamplingRuleArgs.Builder a);
+    }
+    private static GetSamplingRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSamplingRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
  * 
- */
+     */
+    public static CompletableFuture<GetSamplingRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
+     * 
+     */
     public static CompletableFuture<GetSamplingRuleResult> invokeAsync(GetSamplingRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:xray:getSamplingRule", TypeShape.of(GetSamplingRuleResult.class), args == null ? GetSamplingRuleArgs.Empty : args, Utilities.withVersion(options));
     }

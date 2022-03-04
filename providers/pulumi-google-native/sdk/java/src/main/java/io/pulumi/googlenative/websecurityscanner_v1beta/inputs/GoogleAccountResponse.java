@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleAccountResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -32,7 +32,7 @@ public final class GoogleAccountResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -81,7 +81,6 @@ public final class GoogleAccountResponse extends io.pulumi.resources.InvokeArgs 
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GoogleAccountResponse build() {
             return new GoogleAccountResponse(password, username);
         }

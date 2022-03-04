@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.FileContentBufferResponse;
 import java.util.List;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class InitialStateConfigResponse {
     /**
      * The Key Database (db).
      * 
-     */
+    */
     public List<FileContentBufferResponse> getDbs() {
         return this.dbs;
     }
     /**
      * The forbidden key database (dbx).
      * 
-     */
+    */
     public List<FileContentBufferResponse> getDbxs() {
         return this.dbxs;
     }
     /**
      * The Key Exchange Key (KEK).
      * 
-     */
+    */
     public List<FileContentBufferResponse> getKeks() {
         return this.keks;
     }
     /**
      * The Platform Key (PK).
      * 
-     */
+    */
     public FileContentBufferResponse getPk() {
         return this.pk;
     }
@@ -117,7 +117,6 @@ public final class InitialStateConfigResponse {
             this.pk = Objects.requireNonNull(pk);
             return this;
         }
-
         public InitialStateConfigResponse build() {
             return new InitialStateConfigResponse(dbs, dbxs, keks, pk);
         }

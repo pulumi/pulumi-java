@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.ComputeDataDiskResponse;
 import io.pulumi.azurenative.devtestlab.outputs.ComputeVmInstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class ComputeVmPropertiesResponse {
     /**
      * Gets data disks blob uri for the virtual machine.
      * 
-     */
+    */
     public List<String> getDataDiskIds() {
         return this.dataDiskIds == null ? List.of() : this.dataDiskIds;
     }
     /**
      * Gets all data disks attached to the virtual machine.
      * 
-     */
+    */
     public List<ComputeDataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
      * Gets the network interface ID of the virtual machine.
      * 
-     */
+    */
     public Optional<String> getNetworkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
     /**
      * Gets OS disk blob uri for the virtual machine.
      * 
-     */
+    */
     public Optional<String> getOsDiskId() {
         return Optional.ofNullable(this.osDiskId);
     }
     /**
      * Gets the OS type of the virtual machine.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Gets the statuses of the virtual machine.
      * 
-     */
+    */
     public List<ComputeVmInstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * Gets the size of the virtual machine.
      * 
-     */
+    */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -184,7 +184,6 @@ public final class ComputeVmPropertiesResponse {
             this.vmSize = vmSize;
             return this;
         }
-
         public ComputeVmPropertiesResponse build() {
             return new ComputeVmPropertiesResponse(dataDiskIds, dataDisks, networkInterfaceId, osDiskId, osType, statuses, vmSize);
         }

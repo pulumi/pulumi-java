@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthAlertActionResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthAlertCriteriaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -100,77 +100,77 @@ public final class GetHealthAlertResult {
     /**
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
-     */
+    */
     public List<HealthAlertActionResponse> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * defines the specific alert criteria information.
      * 
-     */
+    */
     public HealthAlertCriteriaResponse getCriteria() {
         return this.criteria;
     }
     /**
      * the description of the health alert that will be included in the alert email.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * the flag that indicates whether the health alert is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Last time the rule was updated in ISO8601 format.
      * 
-     */
+    */
     public String getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * the list of resource id's that this health alert is scoped to.
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -269,7 +269,6 @@ public final class GetHealthAlertResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHealthAlertResult build() {
             return new GetHealthAlertResult(actions, criteria, description, enabled, id, lastUpdatedTime, location, name, scopes, tags, type);
         }

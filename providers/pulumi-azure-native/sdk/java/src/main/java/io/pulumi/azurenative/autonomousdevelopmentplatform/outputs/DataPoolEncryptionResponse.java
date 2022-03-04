@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.autonomousdevelopmentplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class DataPoolEncryptionResponse {
     /**
      * The name of Key Vault key
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * The URI of a soft delete-enabled Key Vault that is in the same location as the Data Pool location
      * 
-     */
+    */
     public String getKeyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The version of Key Vault key
      * 
-     */
+    */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
      * The resource ID of a user-assigned Managed Identity used to access the encryption key in the Key Vault. Requires access to the key operations get, wrap, unwrap, and recover
      * 
-     */
+    */
     public String getUserAssignedIdentity() {
         return this.userAssignedIdentity;
     }
@@ -118,7 +118,6 @@ public final class DataPoolEncryptionResponse {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
-
         public DataPoolEncryptionResponse build() {
             return new DataPoolEncryptionResponse(keyName, keyVaultUri, keyVersion, userAssignedIdentity);
         }

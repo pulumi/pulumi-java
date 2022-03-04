@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class RouterNatRuleActionResponse {
     /**
      * A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.
      * 
-     */
+    */
     public List<String> getSourceNatActiveIps() {
         return this.sourceNatActiveIps;
     }
     /**
      * A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks must have purpose set to PRIVATE_NAT. This field is used for private NAT.
      * 
-     */
+    */
     public List<String> getSourceNatActiveRanges() {
         return this.sourceNatActiveRanges;
     }
     /**
      * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
      * 
-     */
+    */
     public List<String> getSourceNatDrainIps() {
         return this.sourceNatDrainIps;
     }
     /**
      * A list of URLs of subnetworks representing source ranges to be drained. This is only supported on patch/update, and these subnetworks must have previously been used as active ranges in this NAT Rule. This field is used for private NAT.
      * 
-     */
+    */
     public List<String> getSourceNatDrainRanges() {
         return this.sourceNatDrainRanges;
     }
@@ -117,7 +117,6 @@ public final class RouterNatRuleActionResponse {
             this.sourceNatDrainRanges = Objects.requireNonNull(sourceNatDrainRanges);
             return this;
         }
-
         public RouterNatRuleActionResponse build() {
             return new RouterNatRuleActionResponse(sourceNatActiveIps, sourceNatActiveRanges, sourceNatDrainIps, sourceNatDrainRanges);
         }

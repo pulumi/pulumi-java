@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_beta.inputs.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @InputImport(name="guestAccelerators", required=true)
-    private final List<AcceleratorConfigResponse> guestAccelerators;
+      private final List<AcceleratorConfigResponse> guestAccelerators;
 
     public List<AcceleratorConfigResponse> getGuestAccelerators() {
         return this.guestAccelerators;
@@ -36,7 +36,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @InputImport(name="localSsds", required=true)
-    private final List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds;
+      private final List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds;
 
     public List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> getLocalSsds() {
         return this.localSsds;
@@ -47,7 +47,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @InputImport(name="locationHint", required=true)
-    private final String locationHint;
+      private final String locationHint;
 
     public String getLocationHint() {
         return this.locationHint;
@@ -58,7 +58,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -69,7 +69,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @InputImport(name="maintenanceFreezeDurationHours", required=true)
-    private final Integer maintenanceFreezeDurationHours;
+      private final Integer maintenanceFreezeDurationHours;
 
     public Integer getMaintenanceFreezeDurationHours() {
         return this.maintenanceFreezeDurationHours;
@@ -80,7 +80,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @InputImport(name="maintenanceInterval", required=true)
-    private final String maintenanceInterval;
+      private final String maintenanceInterval;
 
     public String getMaintenanceInterval() {
         return this.maintenanceInterval;
@@ -91,7 +91,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * 
      */
     @InputImport(name="minCpuPlatform", required=true)
-    private final String minCpuPlatform;
+      private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
@@ -190,7 +190,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse build() {
             return new AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(guestAccelerators, localSsds, locationHint, machineType, maintenanceFreezeDurationHours, maintenanceInterval, minCpuPlatform);
         }

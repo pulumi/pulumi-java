@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -47,7 +47,7 @@ public final class ResourcePolicyGroupPlacementPolicy {
      * The number of availability domains instances will be spread across. If two instances are in different
      * availability domain, they will not be put in the same low latency network
      * 
-     */
+    */
     public Optional<Integer> getAvailabilityDomainCount() {
         return Optional.ofNullable(this.availabilityDomainCount);
     }
@@ -58,14 +58,14 @@ public final class ResourcePolicyGroupPlacementPolicy {
      * attached.
      * Possible values are `COLLOCATED`.
      * 
-     */
+    */
     public Optional<String> getCollocation() {
         return Optional.ofNullable(this.collocation);
     }
     /**
      * Number of vms in this placement group.
      * 
-     */
+    */
     public Optional<Integer> getVmCount() {
         return Optional.ofNullable(this.vmCount);
     }
@@ -108,7 +108,6 @@ public final class ResourcePolicyGroupPlacementPolicy {
             this.vmCount = vmCount;
             return this;
         }
-
         public ResourcePolicyGroupPlacementPolicy build() {
             return new ResourcePolicyGroupPlacementPolicy(availabilityDomainCount, collocation, vmCount);
         }

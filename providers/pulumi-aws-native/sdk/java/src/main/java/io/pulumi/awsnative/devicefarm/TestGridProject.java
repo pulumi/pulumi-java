@@ -9,8 +9,8 @@ import io.pulumi.awsnative.devicefarm.outputs.TestGridProjectTag;
 import io.pulumi.awsnative.devicefarm.outputs.TestGridProjectVpcConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -52,6 +52,37 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
         return this.vpcConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable TestGridProjectArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.devicefarm.TestGridProjectArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.devicefarm.TestGridProjectArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TestGridProject(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TestGridProject(String name) {
+        this(name, TestGridProjectArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TestGridProject(String name, @Nullable TestGridProjectArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

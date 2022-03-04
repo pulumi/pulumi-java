@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class AccessSelectorResponse {
     /**
      * Optional. The permissions to appear in result.
      * 
-     */
+    */
     public List<String> getPermissions() {
         return this.permissions;
     }
     /**
      * Optional. The roles to appear in result.
      * 
-     */
+    */
     public List<String> getRoles() {
         return this.roles;
     }
@@ -75,7 +75,6 @@ public final class AccessSelectorResponse {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-
         public AccessSelectorResponse build() {
             return new AccessSelectorResponse(permissions, roles);
         }

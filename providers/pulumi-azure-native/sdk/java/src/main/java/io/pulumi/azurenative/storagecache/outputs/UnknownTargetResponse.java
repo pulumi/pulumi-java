@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class UnknownTargetResponse {
     /**
      * Dictionary of string->string pairs containing information about the Storage Target.
      * 
-     */
+    */
     public Map<String,String> getAttributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
@@ -54,7 +54,6 @@ public final class UnknownTargetResponse {
             this.attributes = attributes;
             return this;
         }
-
         public UnknownTargetResponse build() {
             return new UnknownTargetResponse(attributes);
         }

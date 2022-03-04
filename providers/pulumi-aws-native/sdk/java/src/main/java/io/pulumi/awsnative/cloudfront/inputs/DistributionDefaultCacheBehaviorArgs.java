@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.DistributionForwardedValuesArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionFunctionAssociationArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionLambdaFunctionAssociationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -21,133 +21,133 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     public static final DistributionDefaultCacheBehaviorArgs Empty = new DistributionDefaultCacheBehaviorArgs();
 
     @InputImport(name="allowedMethods")
-    private final @Nullable Input<List<String>> allowedMethods;
+      private final @Nullable Input<List<String>> allowedMethods;
 
     public Input<List<String>> getAllowedMethods() {
         return this.allowedMethods == null ? Input.empty() : this.allowedMethods;
     }
 
     @InputImport(name="cachePolicyId")
-    private final @Nullable Input<String> cachePolicyId;
+      private final @Nullable Input<String> cachePolicyId;
 
     public Input<String> getCachePolicyId() {
         return this.cachePolicyId == null ? Input.empty() : this.cachePolicyId;
     }
 
     @InputImport(name="cachedMethods")
-    private final @Nullable Input<List<String>> cachedMethods;
+      private final @Nullable Input<List<String>> cachedMethods;
 
     public Input<List<String>> getCachedMethods() {
         return this.cachedMethods == null ? Input.empty() : this.cachedMethods;
     }
 
     @InputImport(name="compress")
-    private final @Nullable Input<Boolean> compress;
+      private final @Nullable Input<Boolean> compress;
 
     public Input<Boolean> getCompress() {
         return this.compress == null ? Input.empty() : this.compress;
     }
 
     @InputImport(name="defaultTTL")
-    private final @Nullable Input<Double> defaultTTL;
+      private final @Nullable Input<Double> defaultTTL;
 
     public Input<Double> getDefaultTTL() {
         return this.defaultTTL == null ? Input.empty() : this.defaultTTL;
     }
 
     @InputImport(name="fieldLevelEncryptionId")
-    private final @Nullable Input<String> fieldLevelEncryptionId;
+      private final @Nullable Input<String> fieldLevelEncryptionId;
 
     public Input<String> getFieldLevelEncryptionId() {
         return this.fieldLevelEncryptionId == null ? Input.empty() : this.fieldLevelEncryptionId;
     }
 
     @InputImport(name="forwardedValues")
-    private final @Nullable Input<DistributionForwardedValuesArgs> forwardedValues;
+      private final @Nullable Input<DistributionForwardedValuesArgs> forwardedValues;
 
     public Input<DistributionForwardedValuesArgs> getForwardedValues() {
         return this.forwardedValues == null ? Input.empty() : this.forwardedValues;
     }
 
     @InputImport(name="functionAssociations")
-    private final @Nullable Input<List<DistributionFunctionAssociationArgs>> functionAssociations;
+      private final @Nullable Input<List<DistributionFunctionAssociationArgs>> functionAssociations;
 
     public Input<List<DistributionFunctionAssociationArgs>> getFunctionAssociations() {
         return this.functionAssociations == null ? Input.empty() : this.functionAssociations;
     }
 
     @InputImport(name="lambdaFunctionAssociations")
-    private final @Nullable Input<List<DistributionLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
+      private final @Nullable Input<List<DistributionLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
 
     public Input<List<DistributionLambdaFunctionAssociationArgs>> getLambdaFunctionAssociations() {
         return this.lambdaFunctionAssociations == null ? Input.empty() : this.lambdaFunctionAssociations;
     }
 
     @InputImport(name="maxTTL")
-    private final @Nullable Input<Double> maxTTL;
+      private final @Nullable Input<Double> maxTTL;
 
     public Input<Double> getMaxTTL() {
         return this.maxTTL == null ? Input.empty() : this.maxTTL;
     }
 
     @InputImport(name="minTTL")
-    private final @Nullable Input<Double> minTTL;
+      private final @Nullable Input<Double> minTTL;
 
     public Input<Double> getMinTTL() {
         return this.minTTL == null ? Input.empty() : this.minTTL;
     }
 
     @InputImport(name="originRequestPolicyId")
-    private final @Nullable Input<String> originRequestPolicyId;
+      private final @Nullable Input<String> originRequestPolicyId;
 
     public Input<String> getOriginRequestPolicyId() {
         return this.originRequestPolicyId == null ? Input.empty() : this.originRequestPolicyId;
     }
 
     @InputImport(name="realtimeLogConfigArn")
-    private final @Nullable Input<String> realtimeLogConfigArn;
+      private final @Nullable Input<String> realtimeLogConfigArn;
 
     public Input<String> getRealtimeLogConfigArn() {
         return this.realtimeLogConfigArn == null ? Input.empty() : this.realtimeLogConfigArn;
     }
 
     @InputImport(name="responseHeadersPolicyId")
-    private final @Nullable Input<String> responseHeadersPolicyId;
+      private final @Nullable Input<String> responseHeadersPolicyId;
 
     public Input<String> getResponseHeadersPolicyId() {
         return this.responseHeadersPolicyId == null ? Input.empty() : this.responseHeadersPolicyId;
     }
 
     @InputImport(name="smoothStreaming")
-    private final @Nullable Input<Boolean> smoothStreaming;
+      private final @Nullable Input<Boolean> smoothStreaming;
 
     public Input<Boolean> getSmoothStreaming() {
         return this.smoothStreaming == null ? Input.empty() : this.smoothStreaming;
     }
 
     @InputImport(name="targetOriginId", required=true)
-    private final Input<String> targetOriginId;
+      private final Input<String> targetOriginId;
 
     public Input<String> getTargetOriginId() {
         return this.targetOriginId;
     }
 
     @InputImport(name="trustedKeyGroups")
-    private final @Nullable Input<List<String>> trustedKeyGroups;
+      private final @Nullable Input<List<String>> trustedKeyGroups;
 
     public Input<List<String>> getTrustedKeyGroups() {
         return this.trustedKeyGroups == null ? Input.empty() : this.trustedKeyGroups;
     }
 
     @InputImport(name="trustedSigners")
-    private final @Nullable Input<List<String>> trustedSigners;
+      private final @Nullable Input<List<String>> trustedSigners;
 
     public Input<List<String>> getTrustedSigners() {
         return this.trustedSigners == null ? Input.empty() : this.trustedSigners;
     }
 
     @InputImport(name="viewerProtocolPolicy", required=true)
-    private final Input<String> viewerProtocolPolicy;
+      private final Input<String> viewerProtocolPolicy;
 
     public Input<String> getViewerProtocolPolicy() {
         return this.viewerProtocolPolicy;
@@ -461,7 +461,6 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             this.viewerProtocolPolicy = Input.of(Objects.requireNonNull(viewerProtocolPolicy));
             return this;
         }
-
         public DistributionDefaultCacheBehaviorArgs build() {
             return new DistributionDefaultCacheBehaviorArgs(allowedMethods, cachePolicyId, cachedMethods, compress, defaultTTL, fieldLevelEncryptionId, forwardedValues, functionAssociations, lambdaFunctionAssociations, maxTTL, minTTL, originRequestPolicyId, realtimeLogConfigArn, responseHeadersPolicyId, smoothStreaming, targetOriginId, trustedKeyGroups, trustedSigners, viewerProtocolPolicy);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.EncryptionAlgorithm;
 import io.pulumi.azurenative.logic.enums.SigningAlgorithm;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="checkCertificateRevocationListOnReceive", required=true)
-    private final Input<Boolean> checkCertificateRevocationListOnReceive;
+      private final Input<Boolean> checkCertificateRevocationListOnReceive;
 
     public Input<Boolean> getCheckCertificateRevocationListOnReceive() {
         return this.checkCertificateRevocationListOnReceive;
@@ -39,7 +39,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="checkCertificateRevocationListOnSend", required=true)
-    private final Input<Boolean> checkCertificateRevocationListOnSend;
+      private final Input<Boolean> checkCertificateRevocationListOnSend;
 
     public Input<Boolean> getCheckCertificateRevocationListOnSend() {
         return this.checkCertificateRevocationListOnSend;
@@ -50,7 +50,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="checkDuplicateMessage", required=true)
-    private final Input<Boolean> checkDuplicateMessage;
+      private final Input<Boolean> checkDuplicateMessage;
 
     public Input<Boolean> getCheckDuplicateMessage() {
         return this.checkDuplicateMessage;
@@ -61,7 +61,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="compressMessage", required=true)
-    private final Input<Boolean> compressMessage;
+      private final Input<Boolean> compressMessage;
 
     public Input<Boolean> getCompressMessage() {
         return this.compressMessage;
@@ -72,7 +72,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encryptMessage", required=true)
-    private final Input<Boolean> encryptMessage;
+      private final Input<Boolean> encryptMessage;
 
     public Input<Boolean> getEncryptMessage() {
         return this.encryptMessage;
@@ -83,7 +83,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encryptionAlgorithm", required=true)
-    private final Input<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
+      private final Input<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
 
     public Input<Either<String,EncryptionAlgorithm>> getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
@@ -94,7 +94,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="interchangeDuplicatesValidityDays", required=true)
-    private final Input<Integer> interchangeDuplicatesValidityDays;
+      private final Input<Integer> interchangeDuplicatesValidityDays;
 
     public Input<Integer> getInterchangeDuplicatesValidityDays() {
         return this.interchangeDuplicatesValidityDays;
@@ -105,7 +105,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="overrideMessageProperties", required=true)
-    private final Input<Boolean> overrideMessageProperties;
+      private final Input<Boolean> overrideMessageProperties;
 
     public Input<Boolean> getOverrideMessageProperties() {
         return this.overrideMessageProperties;
@@ -116,7 +116,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="signMessage", required=true)
-    private final Input<Boolean> signMessage;
+      private final Input<Boolean> signMessage;
 
     public Input<Boolean> getSignMessage() {
         return this.signMessage;
@@ -127,7 +127,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="signingAlgorithm")
-    private final @Nullable Input<Either<String,SigningAlgorithm>> signingAlgorithm;
+      private final @Nullable Input<Either<String,SigningAlgorithm>> signingAlgorithm;
 
     public Input<Either<String,SigningAlgorithm>> getSigningAlgorithm() {
         return this.signingAlgorithm == null ? Input.empty() : this.signingAlgorithm;
@@ -306,7 +306,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
             this.signingAlgorithm = Input.ofNullable(signingAlgorithm);
             return this;
         }
-
         public AS2ValidationSettingsArgs build() {
             return new AS2ValidationSettingsArgs(checkCertificateRevocationListOnReceive, checkCertificateRevocationListOnSend, checkDuplicateMessage, compressMessage, encryptMessage, encryptionAlgorithm, interchangeDuplicatesValidityDays, overrideMessageProperties, signMessage, signingAlgorithm);
         }

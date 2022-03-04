@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class SparkRBatchResponse {
     /**
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
-     */
+    */
     public List<String> getArchiveUris() {
         return this.archiveUris;
     }
     /**
      * Optional. The arguments to pass to the Spark driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args;
     }
     /**
      * Optional. HCFS URIs of files to be placed in the working directory of each executor.
      * 
-     */
+    */
     public List<String> getFileUris() {
         return this.fileUris;
     }
     /**
      * The HCFS URI of the main R file to use as the driver. Must be a .R or .r file.
      * 
-     */
+    */
     public String getMainRFileUri() {
         return this.mainRFileUri;
     }
@@ -117,7 +117,6 @@ public final class SparkRBatchResponse {
             this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
             return this;
         }
-
         public SparkRBatchResponse build() {
             return new SparkRBatchResponse(archiveUris, args, fileUris, mainRFileUri);
         }

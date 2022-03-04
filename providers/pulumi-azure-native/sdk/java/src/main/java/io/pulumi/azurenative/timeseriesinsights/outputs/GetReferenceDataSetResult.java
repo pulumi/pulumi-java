@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
 import io.pulumi.azurenative.timeseriesinsights.outputs.ReferenceDataSetKeyPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -85,63 +85,63 @@ public final class GetReferenceDataSetResult {
     /**
      * The time the resource was created.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
      * 
-     */
+    */
     public Optional<String> getDataStringComparisonBehavior() {
         return Optional.ofNullable(this.dataStringComparisonBehavior);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The list of key properties for the reference data set.
      * 
-     */
+    */
     public List<ReferenceDataSetKeyPropertyResponse> getKeyProperties() {
         return this.keyProperties;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -226,7 +226,6 @@ public final class GetReferenceDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReferenceDataSetResult build() {
             return new GetReferenceDataSetResult(creationTime, dataStringComparisonBehavior, id, keyProperties, location, name, provisioningState, tags, type);
         }

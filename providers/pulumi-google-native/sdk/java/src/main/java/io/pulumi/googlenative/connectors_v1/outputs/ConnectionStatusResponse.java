@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ConnectionStatusResponse {
     /**
      * Description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * State.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Status provides detailed information for the state.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -95,7 +95,6 @@ public final class ConnectionStatusResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ConnectionStatusResponse build() {
             return new ConnectionStatusResponse(description, state, status);
         }

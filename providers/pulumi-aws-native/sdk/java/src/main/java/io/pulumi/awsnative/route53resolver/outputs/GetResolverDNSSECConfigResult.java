@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverDNSSECConfigValidationStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class GetResolverDNSSECConfigResult {
     /**
      * Id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * AccountId
      * 
-     */
+    */
     public Optional<String> getOwnerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
      * 
-     */
+    */
     public Optional<ResolverDNSSECConfigValidationStatus> getValidationStatus() {
         return Optional.ofNullable(this.validationStatus);
     }
@@ -98,7 +98,6 @@ public final class GetResolverDNSSECConfigResult {
             this.validationStatus = validationStatus;
             return this;
         }
-
         public GetResolverDNSSECConfigResult build() {
             return new GetResolverDNSSECConfigResult(id, ownerId, validationStatus);
         }

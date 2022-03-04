@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ResponseMessageResponse;
@@ -64,42 +64,42 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse {
     /**
      * Conditional cases for this fulfillment.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse> getConditionalCases() {
         return this.conditionalCases;
     }
     /**
      * The list of rich message responses to present to the user.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3beta1ResponseMessageResponse> getMessages() {
         return this.messages;
     }
     /**
      * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
      * 
-     */
+    */
     public Boolean getReturnPartialResponses() {
         return this.returnPartialResponses;
     }
     /**
      * Set parameter values before executing the webhook.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse> getSetParameterActions() {
         return this.setParameterActions;
     }
     /**
      * The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
      * 
-     */
+    */
     public String getTag() {
         return this.tag;
     }
     /**
      * The webhook to call. Format: `projects//locations//agents//webhooks/`.
      * 
-     */
+    */
     public String getWebhook() {
         return this.webhook;
     }
@@ -163,7 +163,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse {
             this.webhook = Objects.requireNonNull(webhook);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FulfillmentResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentResponse(conditionalCases, messages, returnPartialResponses, setParameterActions, tag, webhook);
         }

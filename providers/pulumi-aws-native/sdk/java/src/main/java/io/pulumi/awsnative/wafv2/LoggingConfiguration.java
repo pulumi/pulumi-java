@@ -9,8 +9,8 @@ import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.LoggingFilterProperties;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -93,6 +93,37 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
         return this.resourceArn;
     }
 
+    public interface BuilderApplicator {
+        public void apply(LoggingConfigurationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.wafv2.LoggingConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.wafv2.LoggingConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public LoggingConfiguration(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public LoggingConfiguration(String name) {
+        this(name, LoggingConfigurationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public LoggingConfiguration(String name, LoggingConfigurationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

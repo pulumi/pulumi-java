@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ConnectorCollectionErrorInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="error")
-    private final @Nullable ConnectorCollectionErrorInfoResponse error;
+      private final @Nullable ConnectorCollectionErrorInfoResponse error;
 
     public Optional<ConnectorCollectionErrorInfoResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -35,7 +35,7 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="lastChecked", required=true)
-    private final String lastChecked;
+      private final String lastChecked;
 
     public String getLastChecked() {
         return this.lastChecked;
@@ -46,7 +46,7 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="lastUpdated", required=true)
-    private final String lastUpdated;
+      private final String lastUpdated;
 
     public String getLastUpdated() {
         return this.lastUpdated;
@@ -57,7 +57,7 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sourceLastUpdated", required=true)
-    private final String sourceLastUpdated;
+      private final String sourceLastUpdated;
 
     public String getSourceLastUpdated() {
         return this.sourceLastUpdated;
@@ -126,7 +126,6 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
             this.sourceLastUpdated = Objects.requireNonNull(sourceLastUpdated);
             return this;
         }
-
         public ConnectorCollectionInfoResponse build() {
             return new ConnectorCollectionInfoResponse(error, lastChecked, lastUpdated, sourceLastUpdated);
         }

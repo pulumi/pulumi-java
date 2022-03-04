@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 import io.pulumi.awsnative.sagemaker.outputs.DomainJupyterServerAppSettings;
 import io.pulumi.awsnative.sagemaker.outputs.DomainKernelGatewayAppSettings;
 import io.pulumi.awsnative.sagemaker.outputs.DomainSharingSettings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,35 +58,35 @@ public final class DomainUserSettings {
     /**
      * The user profile Amazon Resource Name (ARN).
      * 
-     */
+    */
     public Optional<String> getExecutionRole() {
         return Optional.ofNullable(this.executionRole);
     }
     /**
      * The Jupyter server's app settings.
      * 
-     */
+    */
     public Optional<DomainJupyterServerAppSettings> getJupyterServerAppSettings() {
         return Optional.ofNullable(this.jupyterServerAppSettings);
     }
     /**
      * The kernel gateway app settings.
      * 
-     */
+    */
     public Optional<DomainKernelGatewayAppSettings> getKernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
     /**
      * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
-     */
+    */
     public List<String> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
      * The sharing settings.
      * 
-     */
+    */
     public Optional<DomainSharingSettings> getSharingSettings() {
         return Optional.ofNullable(this.sharingSettings);
     }
@@ -143,7 +143,6 @@ public final class DomainUserSettings {
             this.sharingSettings = sharingSettings;
             return this;
         }
-
         public DomainUserSettings build() {
             return new DomainUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings);
         }

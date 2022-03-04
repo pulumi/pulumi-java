@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__BuiltInAlgorithmOutputResponse;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * 
      */
     @InputImport(name="allMetrics", required=true)
-    private final List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics;
+      private final List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics;
 
     public List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> getAllMetrics() {
         return this.allMetrics;
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * 
      */
     @InputImport(name="builtInAlgorithmOutput", required=true)
-    private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
+      private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
 
     public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse getBuiltInAlgorithmOutput() {
         return this.builtInAlgorithmOutput;
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -59,7 +59,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * 
      */
     @InputImport(name="finalMetric", required=true)
-    private final GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric;
+      private final GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric;
 
     public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse getFinalMetric() {
         return this.finalMetric;
@@ -70,7 +70,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * 
      */
     @InputImport(name="hyperparameters", required=true)
-    private final Map<String,String> hyperparameters;
+      private final Map<String,String> hyperparameters;
 
     public Map<String,String> getHyperparameters() {
         return this.hyperparameters;
@@ -81,7 +81,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * 
      */
     @InputImport(name="isTrialStoppedEarly", required=true)
-    private final Boolean isTrialStoppedEarly;
+      private final Boolean isTrialStoppedEarly;
 
     public Boolean getIsTrialStoppedEarly() {
         return this.isTrialStoppedEarly;
@@ -92,7 +92,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -103,7 +103,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -114,7 +114,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * 
      */
     @InputImport(name="trialId", required=true)
-    private final String trialId;
+      private final String trialId;
 
     public String getTrialId() {
         return this.trialId;
@@ -125,7 +125,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * 
      */
     @InputImport(name="webAccessUris", required=true)
-    private final Map<String,String> webAccessUris;
+      private final Map<String,String> webAccessUris;
 
     public Map<String,String> getWebAccessUris() {
         return this.webAccessUris;
@@ -254,7 +254,6 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
             this.webAccessUris = Objects.requireNonNull(webAccessUris);
             return this;
         }
-
         public GoogleCloudMlV1__HyperparameterOutputResponse build() {
             return new GoogleCloudMlV1__HyperparameterOutputResponse(allMetrics, builtInAlgorithmOutput, endTime, finalMetric, hyperparameters, isTrialStoppedEarly, startTime, state, trialId, webAccessUris);
         }

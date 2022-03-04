@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class UserIdentityResponse {
     /**
      * Set to the app Id of the client JWT making the request.
      * 
-     */
+    */
     public Optional<String> getAppId() {
         return Optional.ofNullable(this.appId);
     }
     /**
      * Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * Set to the principal name / UPN of the client JWT making the request.
      * 
-     */
+    */
     public Optional<String> getPrincipalName() {
         return Optional.ofNullable(this.principalName);
     }
     /**
      * Set to the tenant ID of the client JWT making the request.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -139,7 +139,6 @@ public final class UserIdentityResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public UserIdentityResponse build() {
             return new UserIdentityResponse(appId, objectId, principalId, principalName, tenantId);
         }

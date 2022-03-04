@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.outputs.RoutingEventHubPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingServiceBusQueueEndpointPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingServiceBusTopicEndpointPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingStorageContainerPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -50,28 +50,28 @@ public final class RoutingEndpointsResponse {
     /**
      * The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
      * 
-     */
+    */
     public List<RoutingEventHubPropertiesResponse> getEventHubs() {
         return this.eventHubs == null ? List.of() : this.eventHubs;
     }
     /**
      * The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.
      * 
-     */
+    */
     public List<RoutingServiceBusQueueEndpointPropertiesResponse> getServiceBusQueues() {
         return this.serviceBusQueues == null ? List.of() : this.serviceBusQueues;
     }
     /**
      * The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.
      * 
-     */
+    */
     public List<RoutingServiceBusTopicEndpointPropertiesResponse> getServiceBusTopics() {
         return this.serviceBusTopics == null ? List.of() : this.serviceBusTopics;
     }
     /**
      * The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.
      * 
-     */
+    */
     public List<RoutingStorageContainerPropertiesResponse> getStorageContainers() {
         return this.storageContainers == null ? List.of() : this.storageContainers;
     }
@@ -121,7 +121,6 @@ public final class RoutingEndpointsResponse {
             this.storageContainers = storageContainers;
             return this;
         }
-
         public RoutingEndpointsResponse build() {
             return new RoutingEndpointsResponse(eventHubs, serviceBusQueues, serviceBusTopics, storageContainers);
         }

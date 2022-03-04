@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudasset;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudasset.OrganizationFeedArgs;
 import io.pulumi.gcp.cloudasset.inputs.OrganizationFeedState;
@@ -201,6 +201,37 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
         return this.orgId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OrganizationFeedArgs.Builder a);
+    }
+    private static io.pulumi.gcp.cloudasset.OrganizationFeedArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.cloudasset.OrganizationFeedArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public OrganizationFeed(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public OrganizationFeed(String name) {
+        this(name, OrganizationFeedArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OrganizationFeed(String name, OrganizationFeedArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

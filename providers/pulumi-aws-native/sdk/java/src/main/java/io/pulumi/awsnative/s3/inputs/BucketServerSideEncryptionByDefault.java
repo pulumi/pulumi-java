@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketServerSideEncryptionByDefaultSSEAlgorithm;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,14 +24,14 @@ public final class BucketServerSideEncryptionByDefault extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kMSMasterKeyID")
-    private final @Nullable String kMSMasterKeyID;
+      private final @Nullable String kMSMasterKeyID;
 
     public Optional<String> getKMSMasterKeyID() {
         return this.kMSMasterKeyID == null ? Optional.empty() : Optional.ofNullable(this.kMSMasterKeyID);
     }
 
     @InputImport(name="sSEAlgorithm", required=true)
-    private final BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm;
+      private final BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm;
 
     public BucketServerSideEncryptionByDefaultSSEAlgorithm getSSEAlgorithm() {
         return this.sSEAlgorithm;
@@ -80,7 +80,6 @@ public final class BucketServerSideEncryptionByDefault extends io.pulumi.resourc
             this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm);
             return this;
         }
-
         public BucketServerSideEncryptionByDefault build() {
             return new BucketServerSideEncryptionByDefault(kMSMasterKeyID, sSEAlgorithm);
         }

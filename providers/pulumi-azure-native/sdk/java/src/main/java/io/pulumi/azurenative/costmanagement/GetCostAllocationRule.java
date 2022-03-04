@@ -6,21 +6,41 @@ package io.pulumi.azurenative.costmanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.costmanagement.inputs.GetCostAllocationRuleArgs;
 import io.pulumi.azurenative.costmanagement.outputs.GetCostAllocationRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCostAllocationRule {
-/**
- * The cost allocation rule model definition
+    private GetCostAllocationRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetCostAllocationRuleArgs.Builder a);
+    }
+    private static GetCostAllocationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCostAllocationRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The cost allocation rule model definition
  * API Version: 2020-03-01-preview.
  * 
- *
- * The cost allocation rule model definition
+     *
+     * The cost allocation rule model definition
  * 
- */
+     */
+    public static CompletableFuture<GetCostAllocationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The cost allocation rule model definition
+     * API Version: 2020-03-01-preview.
+     * 
+     *
+         * The cost allocation rule model definition
+     * 
+     */
     public static CompletableFuture<GetCostAllocationRuleResult> invokeAsync(GetCostAllocationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getCostAllocationRule", TypeShape.of(GetCostAllocationRuleResult.class), args == null ? GetCostAllocationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

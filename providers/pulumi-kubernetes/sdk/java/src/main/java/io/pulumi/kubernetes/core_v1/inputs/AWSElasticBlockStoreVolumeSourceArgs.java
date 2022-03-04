@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+      private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -38,7 +38,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="partition")
-    private final @Nullable Input<Integer> partition;
+      private final @Nullable Input<Integer> partition;
 
     public Input<Integer> getPartition() {
         return this.partition == null ? Input.empty() : this.partition;
@@ -49,7 +49,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -60,7 +60,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="volumeID", required=true)
-    private final Input<String> volumeID;
+      private final Input<String> volumeID;
 
     public Input<String> getVolumeID() {
         return this.volumeID;
@@ -149,7 +149,6 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
             this.volumeID = Input.of(Objects.requireNonNull(volumeID));
             return this;
         }
-
         public AWSElasticBlockStoreVolumeSourceArgs build() {
             return new AWSElasticBlockStoreVolumeSourceArgs(fsType, partition, readOnly, volumeID);
         }

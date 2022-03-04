@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowlistedServiceAccounts")
-    private final @Nullable Input<List<String>> allowlistedServiceAccounts;
+      private final @Nullable Input<List<String>> allowlistedServiceAccounts;
 
     public Input<List<String>> getAllowlistedServiceAccounts() {
         return this.allowlistedServiceAccounts == null ? Input.empty() : this.allowlistedServiceAccounts;
@@ -67,7 +67,6 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
             this.allowlistedServiceAccounts = Input.ofNullable(allowlistedServiceAccounts);
             return this;
         }
-
         public CloudAuditLoggingFeatureSpecArgs build() {
             return new CloudAuditLoggingFeatureSpecArgs(allowlistedServiceAccounts);
         }

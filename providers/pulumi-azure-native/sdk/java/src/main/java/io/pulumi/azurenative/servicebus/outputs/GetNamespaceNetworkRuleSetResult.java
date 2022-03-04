@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicebus.outputs;
 
 import io.pulumi.azurenative.servicebus.outputs.NWRuleSetIpRulesResponse;
 import io.pulumi.azurenative.servicebus.outputs.NWRuleSetVirtualNetworkRulesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -64,42 +64,42 @@ public final class GetNamespaceNetworkRuleSetResult {
     /**
      * Default Action for Network Rule Set
      * 
-     */
+    */
     public Optional<String> getDefaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of IpRules
      * 
-     */
+    */
     public List<NWRuleSetIpRulesResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * List VirtualNetwork Rules
      * 
-     */
+    */
     public List<NWRuleSetVirtualNetworkRulesResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }
@@ -163,7 +163,6 @@ public final class GetNamespaceNetworkRuleSetResult {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public GetNamespaceNetworkRuleSetResult build() {
             return new GetNamespaceNetworkRuleSetResult(defaultAction, id, ipRules, name, type, virtualNetworkRules);
         }

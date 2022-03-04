@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse {
     /**
      * The creation time of the resource within the given system.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The expiration time of the resource within the given system. Currently only apllicable to BigQuery resources.
      * 
-     */
+    */
     public String getExpireTime() {
         return this.expireTime;
     }
     /**
      * The last-modified time of the resource within the given system.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -95,7 +95,6 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1SystemTimestampsResponse build() {
             return new GoogleCloudDatacatalogV1beta1SystemTimestampsResponse(createTime, expireTime, updateTime);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.NotificationRegistrationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +20,14 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="notificationRegistrationName")
-    private final @Nullable Input<String> notificationRegistrationName;
+      private final @Nullable Input<String> notificationRegistrationName;
 
     public Input<String> getNotificationRegistrationName() {
         return this.notificationRegistrationName == null ? Input.empty() : this.notificationRegistrationName;
     }
 
     @InputImport(name="properties")
-    private final @Nullable Input<NotificationRegistrationPropertiesArgs> properties;
+      private final @Nullable Input<NotificationRegistrationPropertiesArgs> properties;
 
     public Input<NotificationRegistrationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -38,7 +38,7 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final Input<String> providerNamespace;
+      private final Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace;
@@ -112,7 +112,6 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
             this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
-
         public NotificationRegistrationArgs build() {
             return new NotificationRegistrationArgs(notificationRegistrationName, properties, providerNamespace);
         }

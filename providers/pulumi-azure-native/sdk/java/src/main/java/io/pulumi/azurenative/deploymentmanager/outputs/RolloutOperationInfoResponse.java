@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.CloudErrorBodyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -55,35 +55,35 @@ public final class RolloutOperationInfoResponse {
     /**
      * The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The detailed error information for any failure.
      * 
-     */
+    */
     public CloudErrorBodyResponse getError() {
         return this.error;
     }
     /**
      * The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
      * 
-     */
+    */
     public Integer getRetryAttempt() {
         return this.retryAttempt;
     }
     /**
      * True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
      * 
-     */
+    */
     public Boolean getSkipSucceededOnRetry() {
         return this.skipSucceededOnRetry;
     }
     /**
      * The start time of the rollout in UTC.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -140,7 +140,6 @@ public final class RolloutOperationInfoResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public RolloutOperationInfoResponse build() {
             return new RolloutOperationInfoResponse(endTime, error, retryAttempt, skipSucceededOnRetry, startTime);
         }

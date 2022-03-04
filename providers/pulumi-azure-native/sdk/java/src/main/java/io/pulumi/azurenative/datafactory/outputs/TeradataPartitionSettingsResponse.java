@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class TeradataPartitionSettingsResponse {
     /**
      * The name of the column that will be used for proceeding range or hash partitioning. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPartitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
     /**
      * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPartitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
     /**
      * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPartitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }
@@ -97,7 +97,6 @@ public final class TeradataPartitionSettingsResponse {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public TeradataPartitionSettingsResponse build() {
             return new TeradataPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }

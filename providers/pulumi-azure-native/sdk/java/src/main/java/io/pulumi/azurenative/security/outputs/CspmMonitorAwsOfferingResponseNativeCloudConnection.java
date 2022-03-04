@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CspmMonitorAwsOfferingResponseNativeCloudConnection {
     /**
      * The cloud role ARN in AWS for this feature
      * 
-     */
+    */
     public Optional<String> getCloudRoleArn() {
         return Optional.ofNullable(this.cloudRoleArn);
     }
@@ -54,7 +54,6 @@ public final class CspmMonitorAwsOfferingResponseNativeCloudConnection {
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public CspmMonitorAwsOfferingResponseNativeCloudConnection build() {
             return new CspmMonitorAwsOfferingResponseNativeCloudConnection(cloudRoleArn);
         }

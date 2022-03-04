@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetTestResultFileResult {
     /**
      * File contents.
      * 
-     */
+    */
     public Optional<String> getData() {
         return Optional.ofNullable(this.data);
     }
     /**
      * The URI that can be used to request the next section of the result file in the event the file is too large for a single request.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
@@ -76,7 +76,6 @@ public final class GetTestResultFileResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public GetTestResultFileResult build() {
             return new GetTestResultFileResult(data, nextLink);
         }

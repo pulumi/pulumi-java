@@ -6,21 +6,41 @@ package io.pulumi.azurenative.eventgrid;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionFullUrlArgs;
 import io.pulumi.azurenative.eventgrid.outputs.GetEventSubscriptionFullUrlResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventSubscriptionFullUrl {
-/**
- * Full endpoint url of an event subscription
+    private GetEventSubscriptionFullUrl() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventSubscriptionFullUrlArgs.Builder a);
+    }
+    private static GetEventSubscriptionFullUrlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventSubscriptionFullUrlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Full endpoint url of an event subscription
  * API Version: 2020-06-01.
  * 
- *
- * Full endpoint url of an event subscription
+     *
+     * Full endpoint url of an event subscription
  * 
- */
+     */
+    public static CompletableFuture<GetEventSubscriptionFullUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Full endpoint url of an event subscription
+     * API Version: 2020-06-01.
+     * 
+     *
+         * Full endpoint url of an event subscription
+     * 
+     */
     public static CompletableFuture<GetEventSubscriptionFullUrlResult> invokeAsync(GetEventSubscriptionFullUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventSubscriptionFullUrl", TypeShape.of(GetEventSubscriptionFullUrlResult.class), args == null ? GetEventSubscriptionFullUrlArgs.Empty : args, Utilities.withVersion(options));
     }

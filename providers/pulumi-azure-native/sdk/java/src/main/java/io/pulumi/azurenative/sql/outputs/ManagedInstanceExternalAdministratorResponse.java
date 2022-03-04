@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class ManagedInstanceExternalAdministratorResponse {
     /**
      * Type of the sever administrator.
      * 
-     */
+    */
     public Optional<String> getAdministratorType() {
         return Optional.ofNullable(this.administratorType);
     }
     /**
      * Azure Active Directory only Authentication enabled.
      * 
-     */
+    */
     public Optional<Boolean> getAzureADOnlyAuthentication() {
         return Optional.ofNullable(this.azureADOnlyAuthentication);
     }
     /**
      * Login name of the server administrator.
      * 
-     */
+    */
     public Optional<String> getLogin() {
         return Optional.ofNullable(this.login);
     }
     /**
      * Principal Type of the sever administrator.
      * 
-     */
+    */
     public Optional<String> getPrincipalType() {
         return Optional.ofNullable(this.principalType);
     }
     /**
      * SID (object ID) of the server administrator.
      * 
-     */
+    */
     public Optional<String> getSid() {
         return Optional.ofNullable(this.sid);
     }
     /**
      * Tenant ID of the administrator.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -161,7 +161,6 @@ public final class ManagedInstanceExternalAdministratorResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public ManagedInstanceExternalAdministratorResponse build() {
             return new ManagedInstanceExternalAdministratorResponse(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);
         }

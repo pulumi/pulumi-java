@@ -6,21 +6,41 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.inputs.GetBigDataPoolArgs;
 import io.pulumi.azurenative.synapse.outputs.GetBigDataPoolResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBigDataPool {
-/**
- * A Big Data pool
+    private GetBigDataPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetBigDataPoolArgs.Builder a);
+    }
+    private static GetBigDataPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBigDataPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Big Data pool
  * API Version: 2021-03-01.
  * 
- *
- * A Big Data pool
+     *
+     * A Big Data pool
  * 
- */
+     */
+    public static CompletableFuture<GetBigDataPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Big Data pool
+     * API Version: 2021-03-01.
+     * 
+     *
+         * A Big Data pool
+     * 
+     */
     public static CompletableFuture<GetBigDataPoolResult> invokeAsync(GetBigDataPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getBigDataPool", TypeShape.of(GetBigDataPoolResult.class), args == null ? GetBigDataPoolArgs.Empty : args, Utilities.withVersion(options));
     }

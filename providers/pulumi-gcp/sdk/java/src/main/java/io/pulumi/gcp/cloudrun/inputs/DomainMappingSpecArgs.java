@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certificateMode")
-    private final @Nullable Input<String> certificateMode;
+      private final @Nullable Input<String> certificateMode;
 
     public Input<String> getCertificateMode() {
         return this.certificateMode == null ? Input.empty() : this.certificateMode;
@@ -36,7 +36,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="forceOverride")
-    private final @Nullable Input<Boolean> forceOverride;
+      private final @Nullable Input<Boolean> forceOverride;
 
     public Input<Boolean> getForceOverride() {
         return this.forceOverride == null ? Input.empty() : this.forceOverride;
@@ -48,7 +48,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routeName", required=true)
-    private final Input<String> routeName;
+      private final Input<String> routeName;
 
     public Input<String> getRouteName() {
         return this.routeName;
@@ -122,7 +122,6 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
             this.routeName = Input.of(Objects.requireNonNull(routeName));
             return this;
         }
-
         public DomainMappingSpecArgs build() {
             return new DomainMappingSpecArgs(certificateMode, forceOverride, routeName);
         }

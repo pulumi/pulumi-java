@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigKeyUsageBaseKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage;
@@ -46,7 +46,7 @@ public final class AuthorityConfigX509ConfigKeyUsage {
      * Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigX509ConfigKeyUsageBaseKeyUsage getBaseKeyUsage() {
         return this.baseKeyUsage;
     }
@@ -54,7 +54,7 @@ public final class AuthorityConfigX509ConfigKeyUsage {
      * Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage getExtendedKeyUsage() {
         return this.extendedKeyUsage;
     }
@@ -62,7 +62,7 @@ public final class AuthorityConfigX509ConfigKeyUsage {
      * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * Structure is documented below.
      * 
-     */
+    */
     public List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }
@@ -105,7 +105,6 @@ public final class AuthorityConfigX509ConfigKeyUsage {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public AuthorityConfigX509ConfigKeyUsage build() {
             return new AuthorityConfigX509ConfigKeyUsage(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

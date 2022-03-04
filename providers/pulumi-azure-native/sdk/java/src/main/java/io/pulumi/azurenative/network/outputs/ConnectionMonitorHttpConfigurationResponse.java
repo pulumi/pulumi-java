@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.HTTPHeaderResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -65,42 +65,42 @@ public final class ConnectionMonitorHttpConfigurationResponse {
     /**
      * The HTTP method to use.
      * 
-     */
+    */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
     /**
      * The path component of the URI. For instance, "/dir1/dir2".
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The port to connect to.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
      * 
-     */
+    */
     public Optional<Boolean> getPreferHTTPS() {
         return Optional.ofNullable(this.preferHTTPS);
     }
     /**
      * The HTTP headers to transmit with the request.
      * 
-     */
+    */
     public List<HTTPHeaderResponse> getRequestHeaders() {
         return this.requestHeaders == null ? List.of() : this.requestHeaders;
     }
     /**
      * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
      * 
-     */
+    */
     public List<String> getValidStatusCodeRanges() {
         return this.validStatusCodeRanges == null ? List.of() : this.validStatusCodeRanges;
     }
@@ -164,7 +164,6 @@ public final class ConnectionMonitorHttpConfigurationResponse {
             this.validStatusCodeRanges = validStatusCodeRanges;
             return this;
         }
-
         public ConnectionMonitorHttpConfigurationResponse build() {
             return new ConnectionMonitorHttpConfigurationResponse(method, path, port, preferHTTPS, requestHeaders, validStatusCodeRanges);
         }

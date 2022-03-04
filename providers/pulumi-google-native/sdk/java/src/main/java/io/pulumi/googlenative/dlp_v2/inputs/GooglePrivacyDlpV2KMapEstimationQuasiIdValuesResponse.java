@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
      * 
      */
     @InputImport(name="estimatedAnonymity", required=true)
-    private final String estimatedAnonymity;
+      private final String estimatedAnonymity;
 
     public String getEstimatedAnonymity() {
         return this.estimatedAnonymity;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
      * 
      */
     @InputImport(name="quasiIdsValues", required=true)
-    private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+      private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
         return this.quasiIdsValues;
@@ -83,7 +83,6 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
-
         public GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(estimatedAnonymity, quasiIdsValues);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="consumerGroupName")
-    private final @Nullable String consumerGroupName;
+      private final @Nullable String consumerGroupName;
 
     public Optional<String> getConsumerGroupName() {
         return this.consumerGroupName == null ? Optional.empty() : Optional.ofNullable(this.consumerGroupName);
@@ -34,7 +34,7 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="eventHubName")
-    private final @Nullable String eventHubName;
+      private final @Nullable String eventHubName;
 
     public Optional<String> getEventHubName() {
         return this.eventHubName == null ? Optional.empty() : Optional.ofNullable(this.eventHubName);
@@ -45,7 +45,7 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="serviceBusNamespace")
-    private final @Nullable String serviceBusNamespace;
+      private final @Nullable String serviceBusNamespace;
 
     public Optional<String> getServiceBusNamespace() {
         return this.serviceBusNamespace == null ? Optional.empty() : Optional.ofNullable(this.serviceBusNamespace);
@@ -56,7 +56,7 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-    private final @Nullable String sharedAccessPolicyKey;
+      private final @Nullable String sharedAccessPolicyKey;
 
     public Optional<String> getSharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
@@ -67,7 +67,7 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-    private final @Nullable String sharedAccessPolicyName;
+      private final @Nullable String sharedAccessPolicyName;
 
     public Optional<String> getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
@@ -79,7 +79,7 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -168,7 +168,6 @@ public final class EventHubStreamInputDataSourceResponse extends io.pulumi.resou
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EventHubStreamInputDataSourceResponse build() {
             return new EventHubStreamInputDataSourceResponse(consumerGroupName, eventHubName, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }

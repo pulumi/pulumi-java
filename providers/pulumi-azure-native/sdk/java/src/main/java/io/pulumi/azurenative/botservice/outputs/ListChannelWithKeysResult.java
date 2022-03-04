@@ -18,7 +18,7 @@ import io.pulumi.azurenative.botservice.outputs.SlackChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.SmsChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.TelegramChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.WebChatChannelResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -142,105 +142,105 @@ public final class ListChannelWithKeysResult {
     /**
      * Changed time of the resource
      * 
-     */
+    */
     public Optional<String> getChangedTime() {
         return Optional.ofNullable(this.changedTime);
     }
     /**
      * Entity tag of the resource
      * 
-     */
+    */
     public Optional<String> getEntityTag() {
         return Optional.ofNullable(this.entityTag);
     }
     /**
      * Entity Tag
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Specifies the resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Required. Gets or sets the Kind of the resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The set of properties specific to bot channel resource
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * Provisioning state of the resource
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The set of properties specific to bot channel resource
      * 
-     */
+    */
     public Optional<Object> getResource() {
         return Optional.ofNullable(this.resource);
     }
     /**
      * Channel settings
      * 
-     */
+    */
     public Optional<ChannelSettingsResponse> getSetting() {
         return Optional.ofNullable(this.setting);
     }
     /**
      * Gets or sets the SKU of the resource.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Entity zones
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones;
     }
@@ -367,7 +367,6 @@ public final class ListChannelWithKeysResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public ListChannelWithKeysResult build() {
             return new ListChannelWithKeysResult(changedTime, entityTag, etag, id, kind, location, name, properties, provisioningState, resource, setting, sku, tags, type, zones);
         }

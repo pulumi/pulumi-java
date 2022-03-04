@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -182,119 +182,119 @@ public final class HiveLinkedServiceResponse {
     /**
      * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
      * 
-     */
+    */
     public Optional<Object> getAllowHostNameCNMismatch() {
         return Optional.ofNullable(this.allowHostNameCNMismatch);
     }
     /**
      * Specifies whether to allow self-signed certificates from the server. The default value is false.
      * 
-     */
+    */
     public Optional<Object> getAllowSelfSignedServerCert() {
         return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The authentication method used to access the Hive server.
      * 
-     */
+    */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
      * 
-     */
+    */
     public Optional<Object> getEnableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * IP address or host name of the Hive server, separated by ';' for multiple hosts (only when serviceDiscoveryMode is enable).
      * 
-     */
+    */
     public Object getHost() {
         return this.host;
     }
     /**
      * The partial URL corresponding to the Hive server.
      * 
-     */
+    */
     public Optional<Object> getHttpPath() {
         return Optional.ofNullable(this.httpPath);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The password corresponding to the user name that you provided in the Username field
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The TCP port that the Hive server uses to listen for client connections.
      * 
-     */
+    */
     public Optional<Object> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The type of Hive server.
      * 
-     */
+    */
     public Optional<String> getServerType() {
         return Optional.ofNullable(this.serverType);
     }
     /**
      * true to indicate using the ZooKeeper service, false not.
      * 
-     */
+    */
     public Optional<Object> getServiceDiscoveryMode() {
         return Optional.ofNullable(this.serviceDiscoveryMode);
     }
     /**
      * The transport protocol to use in the Thrift layer.
      * 
-     */
+    */
     public Optional<String> getThriftTransportProtocol() {
         return Optional.ofNullable(this.thriftTransportProtocol);
     }
     /**
      * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
      * 
-     */
+    */
     public Optional<Object> getTrustedCertPath() {
         return Optional.ofNullable(this.trustedCertPath);
     }
@@ -302,35 +302,35 @@ public final class HiveLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'Hive'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies whether the driver uses native HiveQL queries,or converts them into an equivalent form in HiveQL.
      * 
-     */
+    */
     public Optional<Object> getUseNativeQuery() {
         return Optional.ofNullable(this.useNativeQuery);
     }
     /**
      * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
      * 
-     */
+    */
     public Optional<Object> getUseSystemTrustStore() {
         return Optional.ofNullable(this.useSystemTrustStore);
     }
     /**
      * The user name that you use to access Hive Server.
      * 
-     */
+    */
     public Optional<Object> getUsername() {
         return Optional.ofNullable(this.username);
     }
     /**
      * The namespace on ZooKeeper under which Hive Server 2 nodes are added.
      * 
-     */
+    */
     public Optional<Object> getZooKeeperNameSpace() {
         return Optional.ofNullable(this.zooKeeperNameSpace);
     }
@@ -506,7 +506,6 @@ public final class HiveLinkedServiceResponse {
             this.zooKeeperNameSpace = zooKeeperNameSpace;
             return this;
         }
-
         public HiveLinkedServiceResponse build() {
             return new HiveLinkedServiceResponse(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, httpPath, parameters, password, port, serverType, serviceDiscoveryMode, thriftTransportProtocol, trustedCertPath, type, useNativeQuery, useSystemTrustStore, username, zooKeeperNameSpace);
         }

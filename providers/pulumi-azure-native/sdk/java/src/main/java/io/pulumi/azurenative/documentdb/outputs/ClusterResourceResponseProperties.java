@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.CertificateResponse;
 import io.pulumi.azurenative.documentdb.outputs.SeedNodeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -115,91 +115,91 @@ public final class ClusterResourceResponseProperties {
     /**
      * Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.
      * 
-     */
+    */
     public Optional<String> getAuthenticationMethod() {
         return Optional.ofNullable(this.authenticationMethod);
     }
     /**
      * Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.
      * 
-     */
+    */
     public Optional<String> getCassandraVersion() {
         return Optional.ofNullable(this.cassandraVersion);
     }
     /**
      * List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.
      * 
-     */
+    */
     public List<CertificateResponse> getClientCertificates() {
         return this.clientCertificates == null ? List.of() : this.clientCertificates;
     }
     /**
      * If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.
      * 
-     */
+    */
     public Optional<String> getClusterNameOverride() {
         return Optional.ofNullable(this.clusterNameOverride);
     }
     /**
      * Resource id of a subnet that this cluster's management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'
      * 
-     */
+    */
     public Optional<String> getDelegatedManagementSubnetId() {
         return Optional.ofNullable(this.delegatedManagementSubnetId);
     }
     /**
      * List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.
      * 
-     */
+    */
     public List<CertificateResponse> getExternalGossipCertificates() {
         return this.externalGossipCertificates == null ? List.of() : this.externalGossipCertificates;
     }
     /**
      * List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.
      * 
-     */
+    */
     public List<SeedNodeResponse> getExternalSeedNodes() {
         return this.externalSeedNodes == null ? List.of() : this.externalSeedNodes;
     }
     /**
      * List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.
      * 
-     */
+    */
     public List<CertificateResponse> getGossipCertificates() {
         return this.gossipCertificates;
     }
     /**
      * Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.
      * 
-     */
+    */
     public Optional<Integer> getHoursBetweenBackups() {
         return Optional.ofNullable(this.hoursBetweenBackups);
     }
     /**
      * Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.
      * 
-     */
+    */
     public Optional<SeedNodeResponse> getPrometheusEndpoint() {
         return Optional.ofNullable(this.prometheusEndpoint);
     }
     /**
      * The status of the resource at the time the operation was called.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.
      * 
-     */
+    */
     public Optional<Boolean> getRepairEnabled() {
         return Optional.ofNullable(this.repairEnabled);
     }
     /**
      * List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.
      * 
-     */
+    */
     public List<SeedNodeResponse> getSeedNodes() {
         return this.seedNodes;
     }
@@ -312,7 +312,6 @@ public final class ClusterResourceResponseProperties {
             this.seedNodes = Objects.requireNonNull(seedNodes);
             return this;
         }
-
         public ClusterResourceResponseProperties build() {
             return new ClusterResourceResponseProperties(authenticationMethod, cassandraVersion, clientCertificates, clusterNameOverride, delegatedManagementSubnetId, externalGossipCertificates, externalSeedNodes, gossipCertificates, hoursBetweenBackups, prometheusEndpoint, provisioningState, repairEnabled, seedNodes);
         }

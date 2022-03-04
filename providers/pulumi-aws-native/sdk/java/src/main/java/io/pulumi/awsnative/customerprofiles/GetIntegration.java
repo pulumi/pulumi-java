@@ -6,17 +6,33 @@ package io.pulumi.awsnative.customerprofiles;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.customerprofiles.inputs.GetIntegrationArgs;
 import io.pulumi.awsnative.customerprofiles.outputs.GetIntegrationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegration {
-/**
- * The resource schema for creating an Amazon Connect Customer Profiles Integration.
+    private GetIntegration() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationArgs.Builder a);
+    }
+    private static GetIntegrationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The resource schema for creating an Amazon Connect Customer Profiles Integration.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The resource schema for creating an Amazon Connect Customer Profiles Integration.
+     * 
+     */
     public static CompletableFuture<GetIntegrationResult> invokeAsync(GetIntegrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:customerprofiles:getIntegration", TypeShape.of(GetIntegrationResult.class), args == null ? GetIntegrationArgs.Empty : args, Utilities.withVersion(options));
     }

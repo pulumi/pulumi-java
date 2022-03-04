@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.ConnectionMonitorOutputResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorSourceResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorTestConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorTestGroupResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -162,133 +162,133 @@ public final class GetConnectionMonitorResult {
     /**
      * Determines if the connection monitor will start automatically once created.
      * 
-     */
+    */
     public Optional<Boolean> getAutoStart() {
         return Optional.ofNullable(this.autoStart);
     }
     /**
      * Type of connection monitor.
      * 
-     */
+    */
     public String getConnectionMonitorType() {
         return this.connectionMonitorType;
     }
     /**
      * Describes the destination of connection monitor.
      * 
-     */
+    */
     public Optional<ConnectionMonitorDestinationResponse> getDestination() {
         return Optional.ofNullable(this.destination);
     }
     /**
      * List of connection monitor endpoints.
      * 
-     */
+    */
     public List<ConnectionMonitorEndpointResponse> getEndpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * ID of the connection monitor.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Connection monitor location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Monitoring interval in seconds.
      * 
-     */
+    */
     public Optional<Integer> getMonitoringIntervalInSeconds() {
         return Optional.ofNullable(this.monitoringIntervalInSeconds);
     }
     /**
      * The monitoring status of the connection monitor.
      * 
-     */
+    */
     public String getMonitoringStatus() {
         return this.monitoringStatus;
     }
     /**
      * Name of the connection monitor.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional notes to be associated with the connection monitor.
      * 
-     */
+    */
     public Optional<String> getNotes() {
         return Optional.ofNullable(this.notes);
     }
     /**
      * List of connection monitor outputs.
      * 
-     */
+    */
     public List<ConnectionMonitorOutputResponse> getOutputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
      * The provisioning state of the connection monitor.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes the source of connection monitor.
      * 
-     */
+    */
     public Optional<ConnectionMonitorSourceResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The date and time when the connection monitor was started.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Connection monitor tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * List of connection monitor test configurations.
      * 
-     */
+    */
     public List<ConnectionMonitorTestConfigurationResponse> getTestConfigurations() {
         return this.testConfigurations == null ? List.of() : this.testConfigurations;
     }
     /**
      * List of connection monitor test groups.
      * 
-     */
+    */
     public List<ConnectionMonitorTestGroupResponse> getTestGroups() {
         return this.testGroups == null ? List.of() : this.testGroups;
     }
     /**
      * Connection monitor type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -443,7 +443,6 @@ public final class GetConnectionMonitorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionMonitorResult build() {
             return new GetConnectionMonitorResult(autoStart, connectionMonitorType, destination, endpoints, etag, id, location, monitoringIntervalInSeconds, monitoringStatus, name, notes, outputs, provisioningState, source, startTime, tags, testConfigurations, testGroups, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurestackhci.outputs;
 
 import io.pulumi.azurenative.azurestackhci.outputs.PerNodeStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -112,91 +112,91 @@ public final class GetArcSettingResult {
     /**
      * Aggregate state of Arc agent across the nodes in this HCI cluster.
      * 
-     */
+    */
     public String getAggregateState() {
         return this.aggregateState;
     }
     /**
      * The resource group that hosts the Arc agents, ie. Hybrid Compute Machine resources.
      * 
-     */
+    */
     public String getArcInstanceResourceGroup() {
         return this.arcInstanceResourceGroup;
     }
     /**
      * The timestamp of resource creation (UTC).
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The identity that created the resource.
      * 
-     */
+    */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The type of identity that created the resource.
      * 
-     */
+    */
     public Optional<String> getCreatedByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The timestamp of resource last modification (UTC)
      * 
-     */
+    */
     public Optional<String> getLastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
      * The identity that last modified the resource.
      * 
-     */
+    */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource.
      * 
-     */
+    */
     public Optional<String> getLastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of Arc agent in each of the nodes.
      * 
-     */
+    */
     public List<PerNodeStateResponse> getPerNodeDetails() {
         return this.perNodeDetails;
     }
     /**
      * Provisioning state of the ArcSetting proxy resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -309,7 +309,6 @@ public final class GetArcSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetArcSettingResult build() {
             return new GetArcSettingResult(aggregateState, arcInstanceResourceGroup, createdAt, createdBy, createdByType, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, perNodeDetails, provisioningState, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.CollectorAgentPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,21 +47,21 @@ public final class CollectorPropertiesResponse {
     /**
      * Time when this collector was created. Date-Time represented in ISO-8601 format.
      * 
-     */
+    */
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
     }
     /**
      * The ARM id of the discovery service site.
      * 
-     */
+    */
     public Optional<String> getDiscoverySiteId() {
         return Optional.ofNullable(this.discoverySiteId);
     }
     /**
      * Time when this collector was updated. Date-Time represented in ISO-8601 format.
      * 
-     */
+    */
     public String getUpdatedTimestamp() {
         return this.updatedTimestamp;
     }
@@ -111,7 +111,6 @@ public final class CollectorPropertiesResponse {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }
-
         public CollectorPropertiesResponse build() {
             return new CollectorPropertiesResponse(agentProperties, createdTimestamp, discoverySiteId, updatedTimestamp);
         }

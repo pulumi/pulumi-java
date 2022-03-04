@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLocalNetworkGatewayArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="localNetworkGatewayName", required=true)
-    private final String localNetworkGatewayName;
+      private final String localNetworkGatewayName;
 
     public String getLocalNetworkGatewayName() {
         return this.localNetworkGatewayName;
@@ -28,7 +28,7 @@ public final class GetLocalNetworkGatewayArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetLocalNetworkGatewayArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetLocalNetworkGatewayArgs build() {
             return new GetLocalNetworkGatewayArgs(localNetworkGatewayName, resourceGroupName);
         }

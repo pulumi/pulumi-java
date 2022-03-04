@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeRsaArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ellipticCurve")
-    private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve;
+      private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve;
 
     public Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> getEllipticCurve() {
         return this.ellipticCurve == null ? Input.empty() : this.ellipticCurve;
@@ -33,7 +33,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="rsa")
-    private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa;
+      private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa;
 
     public Input<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> getRsa() {
         return this.rsa == null ? Input.empty() : this.rsa;
@@ -92,7 +92,6 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
             this.rsa = Input.ofNullable(rsa);
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyTypeArgs build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeArgs(ellipticCurve, rsa);
         }

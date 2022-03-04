@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorCount")
-    private final @Nullable Input<Integer> acceleratorCount;
+      private final @Nullable Input<Integer> acceleratorCount;
 
     public Input<Integer> getAcceleratorCount() {
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
@@ -35,7 +35,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorTypeUri")
-    private final @Nullable Input<String> acceleratorTypeUri;
+      private final @Nullable Input<String> acceleratorTypeUri;
 
     public Input<String> getAcceleratorTypeUri() {
         return this.acceleratorTypeUri == null ? Input.empty() : this.acceleratorTypeUri;
@@ -94,7 +94,6 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
             this.acceleratorTypeUri = Input.ofNullable(acceleratorTypeUri);
             return this;
         }
-
         public AcceleratorConfigArgs build() {
             return new AcceleratorConfigArgs(acceleratorCount, acceleratorTypeUri);
         }

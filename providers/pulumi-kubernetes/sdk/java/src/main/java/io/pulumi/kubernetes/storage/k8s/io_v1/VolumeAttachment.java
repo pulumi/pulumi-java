@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.storage.k8s.io_v1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.storage.k8s.io_v1.VolumeAttachmentArgs;
@@ -96,6 +96,37 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VolumeAttachmentArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.storage.k8s.io_v1.VolumeAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.storage.k8s.io_v1.VolumeAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VolumeAttachment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VolumeAttachment(String name) {
+        this(name, VolumeAttachmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VolumeAttachment(String name, VolumeAttachmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

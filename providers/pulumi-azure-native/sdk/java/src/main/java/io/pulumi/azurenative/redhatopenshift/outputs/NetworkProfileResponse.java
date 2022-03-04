@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class NetworkProfileResponse {
     /**
      * The CIDR used for OpenShift/Kubernetes Pods (immutable).
      * 
-     */
+    */
     public Optional<String> getPodCidr() {
         return Optional.ofNullable(this.podCidr);
     }
     /**
      * The CIDR used for OpenShift/Kubernetes Services (immutable).
      * 
-     */
+    */
     public Optional<String> getServiceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
@@ -76,7 +76,6 @@ public final class NetworkProfileResponse {
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(podCidr, serviceCidr);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.healthbot.outputs;
 import io.pulumi.azurenative.healthbot.outputs.HealthBotPropertiesResponse;
 import io.pulumi.azurenative.healthbot.outputs.SkuResponse;
 import io.pulumi.azurenative.healthbot.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -78,56 +78,56 @@ public final class GetBotResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The set of properties specific to Healthbot resource.
      * 
-     */
+    */
     public HealthBotPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * SKU of the HealthBot.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -205,7 +205,6 @@ public final class GetBotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBotResult build() {
             return new GetBotResult(id, location, name, properties, sku, systemData, tags, type);
         }

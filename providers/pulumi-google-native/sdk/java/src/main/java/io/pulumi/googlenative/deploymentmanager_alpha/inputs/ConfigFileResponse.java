@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ConfigFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+      private final String content;
 
     public String getContent() {
         return this.content;
@@ -55,7 +55,6 @@ public final class ConfigFileResponse extends io.pulumi.resources.InvokeArgs {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public ConfigFileResponse build() {
             return new ConfigFileResponse(content);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeComputeProper
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeCustomerVirtualNetworkResponse;
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeSsisPropertiesResponse;
 import io.pulumi.azurenative.datafactory.outputs.ManagedVirtualNetworkReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,42 +73,42 @@ public final class ManagedIntegrationRuntimeResponse {
     /**
      * The compute resource for managed integration runtime.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeComputePropertiesResponse> getComputeProperties() {
         return Optional.ofNullable(this.computeProperties);
     }
     /**
      * The name of virtual network to which Azure-SSIS integration runtime will join
      * 
-     */
+    */
     public Optional<IntegrationRuntimeCustomerVirtualNetworkResponse> getCustomerVirtualNetwork() {
         return Optional.ofNullable(this.customerVirtualNetwork);
     }
     /**
      * Integration runtime description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Managed Virtual Network reference.
      * 
-     */
+    */
     public Optional<ManagedVirtualNetworkReferenceResponse> getManagedVirtualNetwork() {
         return Optional.ofNullable(this.managedVirtualNetwork);
     }
     /**
      * SSIS properties for managed integration runtime.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeSsisPropertiesResponse> getSsisProperties() {
         return Optional.ofNullable(this.ssisProperties);
     }
     /**
      * Integration runtime state, only valid for managed dedicated integration runtime.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -116,7 +116,7 @@ public final class ManagedIntegrationRuntimeResponse {
      * The type of integration runtime.
      * Expected value is 'Managed'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -187,7 +187,6 @@ public final class ManagedIntegrationRuntimeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIntegrationRuntimeResponse build() {
             return new ManagedIntegrationRuntimeResponse(computeProperties, customerVirtualNetwork, description, managedVirtualNetwork, ssisProperties, state, type);
         }

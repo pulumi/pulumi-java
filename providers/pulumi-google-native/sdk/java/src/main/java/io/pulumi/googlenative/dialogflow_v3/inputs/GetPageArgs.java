@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,42 +15,42 @@ public final class GetPageArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetPageArgs Empty = new GetPageArgs();
 
     @InputImport(name="agentId", required=true)
-    private final String agentId;
+      private final String agentId;
 
     public String getAgentId() {
         return this.agentId;
     }
 
     @InputImport(name="flowId", required=true)
-    private final String flowId;
+      private final String flowId;
 
     public String getFlowId() {
         return this.flowId;
     }
 
     @InputImport(name="languageCode")
-    private final @Nullable String languageCode;
+      private final @Nullable String languageCode;
 
     public Optional<String> getLanguageCode() {
         return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="pageId", required=true)
-    private final String pageId;
+      private final String pageId;
 
     public String getPageId() {
         return this.pageId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -139,7 +139,6 @@ public final class GetPageArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetPageArgs build() {
             return new GetPageArgs(agentId, flowId, languageCode, location, pageId, project);
         }

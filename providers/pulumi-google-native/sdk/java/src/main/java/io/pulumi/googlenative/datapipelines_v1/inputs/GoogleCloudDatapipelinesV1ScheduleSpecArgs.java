@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -93,7 +93,6 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1ScheduleSpecArgs build() {
             return new GoogleCloudDatapipelinesV1ScheduleSpecArgs(schedule, timeZone);
         }

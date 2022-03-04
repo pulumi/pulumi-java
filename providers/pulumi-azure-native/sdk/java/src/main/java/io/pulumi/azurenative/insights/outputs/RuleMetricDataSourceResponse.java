@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,21 +62,21 @@ public final class RuleMetricDataSourceResponse {
     /**
      * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
-     */
+    */
     public Optional<String> getLegacyResourceId() {
         return Optional.ofNullable(this.legacyResourceId);
     }
     /**
      * the name of the metric that defines what the rule monitors.
      * 
-     */
+    */
     public Optional<String> getMetricName() {
         return Optional.ofNullable(this.metricName);
     }
     /**
      * the namespace of the metric.
      * 
-     */
+    */
     public Optional<String> getMetricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
@@ -84,21 +84,21 @@ public final class RuleMetricDataSourceResponse {
      * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * the location of the resource.
      * 
-     */
+    */
     public Optional<String> getResourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
     /**
      * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
-     */
+    */
     public Optional<String> getResourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
@@ -162,7 +162,6 @@ public final class RuleMetricDataSourceResponse {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public RuleMetricDataSourceResponse build() {
             return new RuleMetricDataSourceResponse(legacyResourceId, metricName, metricNamespace, odataType, resourceLocation, resourceUri);
         }

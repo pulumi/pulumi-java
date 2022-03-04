@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -28,7 +28,7 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="managerName", required=true)
-    private final String managerName;
+      private final String managerName;
 
     public String getManagerName() {
         return this.managerName;
@@ -39,7 +39,7 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends io.pulumi.res
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetManagerDevicePublicEncryptionKeyArgs build() {
             return new GetManagerDevicePublicEncryptionKeyArgs(deviceName, managerName, resourceGroupName);
         }

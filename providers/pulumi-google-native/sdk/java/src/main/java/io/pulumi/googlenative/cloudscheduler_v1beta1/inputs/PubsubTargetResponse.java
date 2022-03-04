@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PubsubTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attributes", required=true)
-    private final Map<String,String> attributes;
+      private final Map<String,String> attributes;
 
     public Map<String,String> getAttributes() {
         return this.attributes;
@@ -33,7 +33,7 @@ public final class PubsubTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="data", required=true)
-    private final String data;
+      private final String data;
 
     public String getData() {
         return this.data;
@@ -44,7 +44,7 @@ public final class PubsubTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final String topicName;
+      private final String topicName;
 
     public String getTopicName() {
         return this.topicName;
@@ -103,7 +103,6 @@ public final class PubsubTargetResponse extends io.pulumi.resources.InvokeArgs {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public PubsubTargetResponse build() {
             return new PubsubTargetResponse(attributes, data, topicName);
         }

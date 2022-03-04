@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AgentPoolUpgradeSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maxSurge")
-    private final @Nullable Input<String> maxSurge;
+      private final @Nullable Input<String> maxSurge;
 
     public Input<String> getMaxSurge() {
         return this.maxSurge == null ? Input.empty() : this.maxSurge;
@@ -66,7 +66,6 @@ public final class AgentPoolUpgradeSettingsArgs extends io.pulumi.resources.Reso
             this.maxSurge = Input.ofNullable(maxSurge);
             return this;
         }
-
         public AgentPoolUpgradeSettingsArgs build() {
             return new AgentPoolUpgradeSettingsArgs(maxSurge);
         }

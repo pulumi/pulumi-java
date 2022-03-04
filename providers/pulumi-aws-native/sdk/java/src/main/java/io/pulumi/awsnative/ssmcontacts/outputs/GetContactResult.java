@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmcontacts.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetContactResult {
     /**
      * The Amazon Resource Name (ARN) of the contact.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -76,7 +76,6 @@ public final class GetContactResult {
             this.displayName = displayName;
             return this;
         }
-
         public GetContactResult build() {
             return new GetContactResult(arn, displayName);
         }

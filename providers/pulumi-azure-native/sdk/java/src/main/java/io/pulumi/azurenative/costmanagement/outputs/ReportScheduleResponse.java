@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ReportRecurrencePeriodResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class ReportScheduleResponse {
     /**
      * The schedule recurrence.
      * 
-     */
+    */
     public String getRecurrence() {
         return this.recurrence;
     }
     /**
      * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
      * 
-     */
+    */
     public Optional<ReportRecurrencePeriodResponse> getRecurrencePeriod() {
         return Optional.ofNullable(this.recurrencePeriod);
     }
     /**
      * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -98,7 +98,6 @@ public final class ReportScheduleResponse {
             this.status = status;
             return this;
         }
-
         public ReportScheduleResponse build() {
             return new ReportScheduleResponse(recurrence, recurrencePeriod, status);
         }

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.notificationhubs.outputs.MpnsCredentialResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.SharedAccessAuthorizationRulePropertiesResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.WnsCredentialResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -127,98 +127,98 @@ public final class GetNotificationHubResult {
     /**
      * The AdmCredential of the created NotificationHub
      * 
-     */
+    */
     public Optional<AdmCredentialResponse> getAdmCredential() {
         return Optional.ofNullable(this.admCredential);
     }
     /**
      * The ApnsCredential of the created NotificationHub
      * 
-     */
+    */
     public Optional<ApnsCredentialResponse> getApnsCredential() {
         return Optional.ofNullable(this.apnsCredential);
     }
     /**
      * The AuthorizationRules of the created NotificationHub
      * 
-     */
+    */
     public List<SharedAccessAuthorizationRulePropertiesResponse> getAuthorizationRules() {
         return this.authorizationRules == null ? List.of() : this.authorizationRules;
     }
     /**
      * The BaiduCredential of the created NotificationHub
      * 
-     */
+    */
     public Optional<BaiduCredentialResponse> getBaiduCredential() {
         return Optional.ofNullable(this.baiduCredential);
     }
     /**
      * The GcmCredential of the created NotificationHub
      * 
-     */
+    */
     public Optional<GcmCredentialResponse> getGcmCredential() {
         return Optional.ofNullable(this.gcmCredential);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The MpnsCredential of the created NotificationHub
      * 
-     */
+    */
     public Optional<MpnsCredentialResponse> getMpnsCredential() {
         return Optional.ofNullable(this.mpnsCredential);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The RegistrationTtl of the created NotificationHub
      * 
-     */
+    */
     public Optional<String> getRegistrationTtl() {
         return Optional.ofNullable(this.registrationTtl);
     }
     /**
      * The sku of the created namespace
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The WnsCredential of the created NotificationHub
      * 
-     */
+    */
     public Optional<WnsCredentialResponse> getWnsCredential() {
         return Optional.ofNullable(this.wnsCredential);
     }
@@ -338,7 +338,6 @@ public final class GetNotificationHubResult {
             this.wnsCredential = wnsCredential;
             return this;
         }
-
         public GetNotificationHubResult build() {
             return new GetNotificationHubResult(admCredential, apnsCredential, authorizationRules, baiduCredential, gcmCredential, id, location, mpnsCredential, name, registrationTtl, sku, tags, type, wnsCredential);
         }

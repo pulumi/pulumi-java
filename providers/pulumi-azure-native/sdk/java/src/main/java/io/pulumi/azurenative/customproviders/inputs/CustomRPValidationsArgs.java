@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customproviders.inputs;
 import io.pulumi.azurenative.customproviders.enums.ValidationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="specification", required=true)
-    private final Input<String> specification;
+      private final Input<String> specification;
 
     public Input<String> getSpecification() {
         return this.specification;
@@ -36,7 +36,7 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="validationType")
-    private final @Nullable Input<Either<String,ValidationType>> validationType;
+      private final @Nullable Input<Either<String,ValidationType>> validationType;
 
     public Input<Either<String,ValidationType>> getValidationType() {
         return this.validationType == null ? Input.empty() : this.validationType;
@@ -95,7 +95,6 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
             this.validationType = Input.ofNullable(validationType);
             return this;
         }
-
         public CustomRPValidationsArgs build() {
             return new CustomRPValidationsArgs(specification, validationType);
         }

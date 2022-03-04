@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class AttemptStatusResponse {
     /**
      * The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.
      * 
-     */
+    */
     public String getDispatchTime() {
         return this.dispatchTime;
     }
     /**
      * The response from the target for this attempt. If the task has not been attempted or the task is currently running then the response status is unset.
      * 
-     */
+    */
     public StatusResponse getResponseStatus() {
         return this.responseStatus;
     }
     /**
      * The time that this attempt response was received. `response_time` will be truncated to the nearest microsecond.
      * 
-     */
+    */
     public String getResponseTime() {
         return this.responseTime;
     }
     /**
      * The time that this attempt was scheduled. `schedule_time` will be truncated to the nearest microsecond.
      * 
-     */
+    */
     public String getScheduleTime() {
         return this.scheduleTime;
     }
@@ -117,7 +117,6 @@ public final class AttemptStatusResponse {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }
-
         public AttemptStatusResponse build() {
             return new AttemptStatusResponse(dispatchTime, responseStatus, responseTime, scheduleTime);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.autoscaling;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.autoscaling.inputs.GetLaunchConfigurationArgs;
 import io.pulumi.awsnative.autoscaling.outputs.GetLaunchConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLaunchConfiguration {
-/**
- * The AWS::AutoScaling::LaunchConfiguration resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances.
+    private GetLaunchConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetLaunchConfigurationArgs.Builder a);
+    }
+    private static GetLaunchConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLaunchConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::AutoScaling::LaunchConfiguration resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances.
  * 
- */
+     */
+    public static CompletableFuture<GetLaunchConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::AutoScaling::LaunchConfiguration resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances.
+     * 
+     */
     public static CompletableFuture<GetLaunchConfigurationResult> invokeAsync(GetLaunchConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:autoscaling:getLaunchConfiguration", TypeShape.of(GetLaunchConfigurationResult.class), args == null ? GetLaunchConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

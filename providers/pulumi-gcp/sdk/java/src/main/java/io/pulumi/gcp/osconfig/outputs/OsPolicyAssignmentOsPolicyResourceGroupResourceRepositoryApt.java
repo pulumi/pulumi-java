@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt 
     /**
      * Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC
      * 
-     */
+    */
     public String getArchiveType() {
         return this.archiveType;
     }
     /**
      * Required. List of components for this repository. Must contain at least one item.
      * 
-     */
+    */
     public List<String> getComponents() {
         return this.components;
     }
     /**
      * Required. Distribution of this repository.
      * 
-     */
+    */
     public String getDistribution() {
         return this.distribution;
     }
     /**
      * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
      * 
-     */
+    */
     public Optional<String> getGpgKey() {
         return Optional.ofNullable(this.gpgKey);
     }
     /**
      * Required. URI for this repository.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -140,7 +140,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt 
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt(archiveType, components, distribution, gpgKey, uri);
         }

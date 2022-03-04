@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SandboxConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="sandboxType", required=true)
-    private final String sandboxType;
+      private final String sandboxType;
 
     public String getSandboxType() {
         return this.sandboxType;
@@ -32,7 +32,7 @@ public final class SandboxConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class SandboxConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SandboxConfigResponse build() {
             return new SandboxConfigResponse(sandboxType, type);
         }

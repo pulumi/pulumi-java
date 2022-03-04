@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ClientRegistrationResponse;
 import io.pulumi.azurenative.web.outputs.LoginScopesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class GitHubResponse {
     /**
      * <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The configuration settings of the login flow.
      * 
-     */
+    */
     public Optional<LoginScopesResponse> getLogin() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The configuration settings of the app registration for the GitHub provider.
      * 
-     */
+    */
     public Optional<ClientRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }
@@ -99,7 +99,6 @@ public final class GitHubResponse {
             this.registration = registration;
             return this;
         }
-
         public GitHubResponse build() {
             return new GitHubResponse(enabled, login, registration);
         }

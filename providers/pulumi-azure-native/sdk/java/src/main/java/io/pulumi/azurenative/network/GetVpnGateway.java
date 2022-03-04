@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetVpnGatewayArgs;
 import io.pulumi.azurenative.network.outputs.GetVpnGatewayResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpnGateway {
-/**
- * VpnGateway Resource.
+    private GetVpnGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpnGatewayArgs.Builder a);
+    }
+    private static GetVpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpnGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * VpnGateway Resource.
  * API Version: 2020-11-01.
  * 
- *
- * VpnGateway Resource.
+     *
+     * VpnGateway Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetVpnGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * VpnGateway Resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * VpnGateway Resource.
+     * 
+     */
     public static CompletableFuture<GetVpnGatewayResult> invokeAsync(GetVpnGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args == null ? GetVpnGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

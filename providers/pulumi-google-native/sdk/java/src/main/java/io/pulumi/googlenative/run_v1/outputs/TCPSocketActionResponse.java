@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class TCPSocketActionResponse {
     /**
      * (Optional) Optional: Host name to connect to, defaults to the pod IP.
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -75,7 +75,6 @@ public final class TCPSocketActionResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public TCPSocketActionResponse build() {
             return new TCPSocketActionResponse(host, port);
         }

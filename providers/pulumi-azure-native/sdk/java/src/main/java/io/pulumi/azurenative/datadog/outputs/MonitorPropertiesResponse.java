@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datadog.outputs;
 
 import io.pulumi.azurenative.datadog.outputs.DatadogOrganizationPropertiesResponse;
 import io.pulumi.azurenative.datadog.outputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -63,7 +63,7 @@ public final class MonitorPropertiesResponse {
     /**
      * Datadog organization properties
      * 
-     */
+    */
     public Optional<DatadogOrganizationPropertiesResponse> getDatadogOrganizationProperties() {
         return Optional.ofNullable(this.datadogOrganizationProperties);
     }
@@ -73,21 +73,21 @@ public final class MonitorPropertiesResponse {
     /**
      * The priority of the resource.
      * 
-     */
+    */
     public Integer getLiftrResourcePreference() {
         return this.liftrResourcePreference;
     }
     /**
      * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
      * 
-     */
+    */
     public String getMarketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus;
     }
     /**
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
-     */
+    */
     public Optional<String> getMonitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
@@ -97,7 +97,7 @@ public final class MonitorPropertiesResponse {
     /**
      * User info
      * 
-     */
+    */
     public Optional<UserInfoResponse> getUserInfo() {
         return Optional.ofNullable(this.userInfo);
     }
@@ -168,7 +168,6 @@ public final class MonitorPropertiesResponse {
             this.userInfo = userInfo;
             return this;
         }
-
         public MonitorPropertiesResponse build() {
             return new MonitorPropertiesResponse(datadogOrganizationProperties, liftrResourceCategory, liftrResourcePreference, marketplaceSubscriptionStatus, monitoringStatus, provisioningState, userInfo);
         }

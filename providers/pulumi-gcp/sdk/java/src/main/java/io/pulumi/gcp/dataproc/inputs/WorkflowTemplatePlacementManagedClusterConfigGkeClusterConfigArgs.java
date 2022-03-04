@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * 
      */
     @InputImport(name="namespacedGkeDeploymentTarget")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
+      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> getNamespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget == null ? Input.empty() : this.namespacedGkeDeploymentTarget;
@@ -62,7 +62,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             this.namespacedGkeDeploymentTarget = Input.ofNullable(namespacedGkeDeploymentTarget);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs(namespacedGkeDeploymentTarget);
         }

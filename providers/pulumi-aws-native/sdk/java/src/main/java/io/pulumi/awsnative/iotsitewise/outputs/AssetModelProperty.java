@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataType;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataTypeSpec;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelPropertyType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -64,42 +64,42 @@ public final class AssetModelProperty {
     /**
      * The data type of the asset model property.
      * 
-     */
+    */
     public AssetModelDataType getDataType() {
         return this.dataType;
     }
     /**
      * The data type of the structure for this property.
      * 
-     */
+    */
     public Optional<AssetModelDataTypeSpec> getDataTypeSpec() {
         return Optional.ofNullable(this.dataTypeSpec);
     }
     /**
      * Customer provided ID for property.
      * 
-     */
+    */
     public String getLogicalId() {
         return this.logicalId;
     }
     /**
      * The name of the asset model property.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The property type
      * 
-     */
+    */
     public AssetModelPropertyType getType() {
         return this.type;
     }
     /**
      * The unit of the asset model property, such as Newtons or RPM.
      * 
-     */
+    */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);
     }
@@ -163,7 +163,6 @@ public final class AssetModelProperty {
             this.unit = unit;
             return this;
         }
-
         public AssetModelProperty build() {
             return new AssetModelProperty(dataType, dataTypeSpec, logicalId, name, type, unit);
         }

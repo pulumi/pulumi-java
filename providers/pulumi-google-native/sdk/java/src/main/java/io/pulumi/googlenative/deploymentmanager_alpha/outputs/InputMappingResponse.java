@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class InputMappingResponse {
     /**
      * The name of the field that is going to be injected.
      * 
-     */
+    */
     public String getFieldName() {
         return this.fieldName;
     }
     /**
      * The location where this mapping applies.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Regex to evaluate on method to decide if input applies.
      * 
-     */
+    */
     public String getMethodMatch() {
         return this.methodMatch;
     }
     /**
      * A jsonPath expression to select an element.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -116,7 +116,6 @@ public final class InputMappingResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public InputMappingResponse build() {
             return new InputMappingResponse(fieldName, location, methodMatch, value);
         }

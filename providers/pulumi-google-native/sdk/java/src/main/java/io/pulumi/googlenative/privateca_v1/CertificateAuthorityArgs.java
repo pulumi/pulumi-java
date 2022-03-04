@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.enums.CertificateAuthorityType;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateConfigArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.KeyVersionSpecArgs;
@@ -20,14 +20,14 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     public static final CertificateAuthorityArgs Empty = new CertificateAuthorityArgs();
 
     @InputImport(name="caPoolId", required=true)
-    private final Input<String> caPoolId;
+      private final Input<String> caPoolId;
 
     public Input<String> getCaPoolId() {
         return this.caPoolId;
     }
 
     @InputImport(name="certificateAuthorityId", required=true)
-    private final Input<String> certificateAuthorityId;
+      private final Input<String> certificateAuthorityId;
 
     public Input<String> getCertificateAuthorityId() {
         return this.certificateAuthorityId;
@@ -38,7 +38,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<CertificateConfigArgs> config;
+      private final Input<CertificateConfigArgs> config;
 
     public Input<CertificateConfigArgs> getConfig() {
         return this.config;
@@ -49,7 +49,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="gcsBucket")
-    private final @Nullable Input<String> gcsBucket;
+      private final @Nullable Input<String> gcsBucket;
 
     public Input<String> getGcsBucket() {
         return this.gcsBucket == null ? Input.empty() : this.gcsBucket;
@@ -60,7 +60,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keySpec", required=true)
-    private final Input<KeyVersionSpecArgs> keySpec;
+      private final Input<KeyVersionSpecArgs> keySpec;
 
     public Input<KeyVersionSpecArgs> getKeySpec() {
         return this.keySpec;
@@ -71,7 +71,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -82,28 +82,28 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="lifetime", required=true)
-    private final Input<String> lifetime;
+      private final Input<String> lifetime;
 
     public Input<String> getLifetime() {
         return this.lifetime;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -114,7 +114,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subordinateConfig")
-    private final @Nullable Input<SubordinateConfigArgs> subordinateConfig;
+      private final @Nullable Input<SubordinateConfigArgs> subordinateConfig;
 
     public Input<SubordinateConfigArgs> getSubordinateConfig() {
         return this.subordinateConfig == null ? Input.empty() : this.subordinateConfig;
@@ -125,7 +125,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<CertificateAuthorityType> type;
+      private final Input<CertificateAuthorityType> type;
 
     public Input<CertificateAuthorityType> getType() {
         return this.type;
@@ -334,7 +334,6 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public CertificateAuthorityArgs build() {
             return new CertificateAuthorityArgs(caPoolId, certificateAuthorityId, config, gcsBucket, keySpec, labels, lifetime, location, project, requestId, subordinateConfig, type);
         }

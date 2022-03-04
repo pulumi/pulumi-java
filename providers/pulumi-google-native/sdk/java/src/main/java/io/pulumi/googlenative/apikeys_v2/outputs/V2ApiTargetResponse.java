@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class V2ApiTargetResponse {
     /**
      * Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
      * 
-     */
+    */
     public List<String> getMethods() {
         return this.methods;
     }
     /**
      * The service for this restriction. It should be the canonical service name, for example: `translate.googleapis.com`. You can use [`gcloud services list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the project.
      * 
-     */
+    */
     public String getService() {
         return this.service;
     }
@@ -75,7 +75,6 @@ public final class V2ApiTargetResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public V2ApiTargetResponse build() {
             return new V2ApiTargetResponse(methods, service);
         }

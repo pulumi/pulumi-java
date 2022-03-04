@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudsearch_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsearch_v1.DataSourceArgs;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.GSuitePrincipalResponse;
@@ -148,6 +148,37 @@ public class DataSource extends io.pulumi.resources.CustomResource {
         return this.shortName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DataSourceArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.cloudsearch_v1.DataSourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.cloudsearch_v1.DataSourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DataSource(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DataSource(String name) {
+        this(name, DataSourceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DataSource(String name, DataSourceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

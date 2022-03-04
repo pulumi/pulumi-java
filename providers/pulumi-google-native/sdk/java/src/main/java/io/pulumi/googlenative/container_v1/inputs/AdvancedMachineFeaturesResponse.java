@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="threadsPerCore", required=true)
-    private final String threadsPerCore;
+      private final String threadsPerCore;
 
     public String getThreadsPerCore() {
         return this.threadsPerCore;
@@ -59,7 +59,6 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }
-
         public AdvancedMachineFeaturesResponse build() {
             return new AdvancedMachineFeaturesResponse(threadsPerCore);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class DeliveryStreamTagArgs extends io.pulumi.resources.ResourceArg
     public static final DeliveryStreamTagArgs Empty = new DeliveryStreamTagArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -81,7 +81,6 @@ public final class DeliveryStreamTagArgs extends io.pulumi.resources.ResourceArg
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public DeliveryStreamTagArgs build() {
             return new DeliveryStreamTagArgs(key, value);
         }

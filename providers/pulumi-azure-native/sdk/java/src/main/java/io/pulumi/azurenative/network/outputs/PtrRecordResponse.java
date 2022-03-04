@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class PtrRecordResponse {
     /**
      * The PTR target domain name for this PTR record.
      * 
-     */
+    */
     public Optional<String> getPtrdname() {
         return Optional.ofNullable(this.ptrdname);
     }
@@ -54,7 +54,6 @@ public final class PtrRecordResponse {
             this.ptrdname = ptrdname;
             return this;
         }
-
         public PtrRecordResponse build() {
             return new PtrRecordResponse(ptrdname);
         }

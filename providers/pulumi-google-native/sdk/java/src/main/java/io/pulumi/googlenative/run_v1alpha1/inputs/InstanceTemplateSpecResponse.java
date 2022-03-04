@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.InstanceSpecResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class InstanceTemplateSpecResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="spec", required=true)
-    private final InstanceSpecResponse spec;
+      private final InstanceSpecResponse spec;
 
     public InstanceSpecResponse getSpec() {
         return this.spec;
@@ -59,7 +59,6 @@ public final class InstanceTemplateSpecResponse extends io.pulumi.resources.Invo
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public InstanceTemplateSpecResponse build() {
             return new InstanceTemplateSpecResponse(spec);
         }

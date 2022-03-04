@@ -6,21 +6,41 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kusto.inputs.ListClusterLanguageExtensionsArgs;
 import io.pulumi.azurenative.kusto.outputs.ListClusterLanguageExtensionsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListClusterLanguageExtensions {
-/**
- * The list of language extension objects.
+    private ListClusterLanguageExtensions() {}
+    public interface BuilderApplicator {
+        public void apply(ListClusterLanguageExtensionsArgs.Builder a);
+    }
+    private static ListClusterLanguageExtensionsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListClusterLanguageExtensionsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of language extension objects.
  * API Version: 2021-01-01.
  * 
- *
- * The list of language extension objects.
+     *
+     * The list of language extension objects.
  * 
- */
+     */
+    public static CompletableFuture<ListClusterLanguageExtensionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of language extension objects.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * The list of language extension objects.
+     * 
+     */
     public static CompletableFuture<ListClusterLanguageExtensionsResult> invokeAsync(ListClusterLanguageExtensionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:listClusterLanguageExtensions", TypeShape.of(ListClusterLanguageExtensionsResult.class), args == null ? ListClusterLanguageExtensionsArgs.Empty : args, Utilities.withVersion(options));
     }

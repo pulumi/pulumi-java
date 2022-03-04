@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.JobHadoopConfigLoggingConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class JobHadoopConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="archiveUris")
-    private final @Nullable Input<List<String>> archiveUris;
+      private final @Nullable Input<List<String>> archiveUris;
 
     public Input<List<String>> getArchiveUris() {
         return this.archiveUris == null ? Input.empty() : this.archiveUris;
@@ -33,7 +33,7 @@ public final class JobHadoopConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -44,7 +44,7 @@ public final class JobHadoopConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fileUris")
-    private final @Nullable Input<List<String>> fileUris;
+      private final @Nullable Input<List<String>> fileUris;
 
     public Input<List<String>> getFileUris() {
         return this.fileUris == null ? Input.empty() : this.fileUris;
@@ -55,14 +55,14 @@ public final class JobHadoopConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="jarFileUris")
-    private final @Nullable Input<List<String>> jarFileUris;
+      private final @Nullable Input<List<String>> jarFileUris;
 
     public Input<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
     }
 
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<JobHadoopConfigLoggingConfigArgs> loggingConfig;
+      private final @Nullable Input<JobHadoopConfigLoggingConfigArgs> loggingConfig;
 
     public Input<JobHadoopConfigLoggingConfigArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -73,7 +73,7 @@ public final class JobHadoopConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mainClass")
-    private final @Nullable Input<String> mainClass;
+      private final @Nullable Input<String> mainClass;
 
     public Input<String> getMainClass() {
         return this.mainClass == null ? Input.empty() : this.mainClass;
@@ -84,7 +84,7 @@ public final class JobHadoopConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mainJarFileUri")
-    private final @Nullable Input<String> mainJarFileUri;
+      private final @Nullable Input<String> mainJarFileUri;
 
     public Input<String> getMainJarFileUri() {
         return this.mainJarFileUri == null ? Input.empty() : this.mainJarFileUri;
@@ -95,7 +95,7 @@ public final class JobHadoopConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -244,7 +244,6 @@ public final class JobHadoopConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public JobHadoopConfigArgs build() {
             return new JobHadoopConfigArgs(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }

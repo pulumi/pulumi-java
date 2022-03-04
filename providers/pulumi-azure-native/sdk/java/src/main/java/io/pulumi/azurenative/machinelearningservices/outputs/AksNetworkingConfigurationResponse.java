@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class AksNetworkingConfigurationResponse {
     /**
      * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
      * 
-     */
+    */
     public Optional<String> getDnsServiceIP() {
         return Optional.ofNullable(this.dnsServiceIP);
     }
     /**
      * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
      * 
-     */
+    */
     public Optional<String> getDockerBridgeCidr() {
         return Optional.ofNullable(this.dockerBridgeCidr);
     }
     /**
      * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
      * 
-     */
+    */
     public Optional<String> getServiceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
     /**
      * Virtual network subnet resource ID the compute nodes belong to
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -118,7 +118,6 @@ public final class AksNetworkingConfigurationResponse {
             this.subnetId = subnetId;
             return this;
         }
-
         public AksNetworkingConfigurationResponse build() {
             return new AksNetworkingConfigurationResponse(dnsServiceIP, dockerBridgeCidr, serviceCidr, subnetId);
         }

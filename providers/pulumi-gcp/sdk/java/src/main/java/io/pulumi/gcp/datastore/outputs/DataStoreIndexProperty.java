@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datastore.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class DataStoreIndexProperty {
      * The direction the index should optimize for sorting.
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
-     */
+    */
     public String getDirection() {
         return this.direction;
     }
     /**
      * The property name to index.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -76,7 +76,6 @@ public final class DataStoreIndexProperty {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DataStoreIndexProperty build() {
             return new DataStoreIndexProperty(direction, name);
         }

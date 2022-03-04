@@ -6,21 +6,41 @@ package io.pulumi.azurenative.databox;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databox.inputs.ListJobCredentialsArgs;
 import io.pulumi.azurenative.databox.outputs.ListJobCredentialsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListJobCredentials {
-/**
- * List of unencrypted credentials for accessing device.
+    private ListJobCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(ListJobCredentialsArgs.Builder a);
+    }
+    private static ListJobCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListJobCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List of unencrypted credentials for accessing device.
  * API Version: 2020-11-01.
  * 
- *
- * List of unencrypted credentials for accessing device.
+     *
+     * List of unencrypted credentials for accessing device.
  * 
- */
+     */
+    public static CompletableFuture<ListJobCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List of unencrypted credentials for accessing device.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * List of unencrypted credentials for accessing device.
+     * 
+     */
     public static CompletableFuture<ListJobCredentialsResult> invokeAsync(ListJobCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databox:listJobCredentials", TypeShape.of(ListJobCredentialsResult.class), args == null ? ListJobCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,28 +57,28 @@ public final class GetGrantResult {
     /**
      * Arn of the grant.
      * 
-     */
+    */
     public Optional<String> getGrantArn() {
         return Optional.ofNullable(this.grantArn);
     }
     /**
      * Name for the created Grant.
      * 
-     */
+    */
     public Optional<String> getGrantName() {
         return Optional.ofNullable(this.grantName);
     }
     /**
      * Home region for the created grant.
      * 
-     */
+    */
     public Optional<String> getHomeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
     /**
      * License Arn for the grant.
      * 
-     */
+    */
     public Optional<String> getLicenseArn() {
         return Optional.ofNullable(this.licenseArn);
     }
@@ -88,7 +88,7 @@ public final class GetGrantResult {
     /**
      * The version of the grant.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -152,7 +152,6 @@ public final class GetGrantResult {
             this.version = version;
             return this;
         }
-
         public GetGrantResult build() {
             return new GetGrantResult(grantArn, grantName, homeRegion, licenseArn, status, version);
         }

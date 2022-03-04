@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudtasks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -52,7 +52,7 @@ public final class QueueAppEngineRoutingOverride {
      * - 
      * The host that the task is sent to.
      * 
-     */
+    */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
@@ -60,7 +60,7 @@ public final class QueueAppEngineRoutingOverride {
      * App instance.
      * By default, the task is sent to an instance which is available when the task is attempted.
      * 
-     */
+    */
     public Optional<String> getInstance() {
         return Optional.ofNullable(this.instance);
     }
@@ -68,7 +68,7 @@ public final class QueueAppEngineRoutingOverride {
      * App service.
      * By default, the task is sent to the service which is the default service when the task is attempted.
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
@@ -76,7 +76,7 @@ public final class QueueAppEngineRoutingOverride {
      * App version.
      * By default, the task is sent to the version which is the default version when the task is attempted.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -126,7 +126,6 @@ public final class QueueAppEngineRoutingOverride {
             this.version = version;
             return this;
         }
-
         public QueueAppEngineRoutingOverride build() {
             return new QueueAppEngineRoutingOverride(host, instance, service, version);
         }

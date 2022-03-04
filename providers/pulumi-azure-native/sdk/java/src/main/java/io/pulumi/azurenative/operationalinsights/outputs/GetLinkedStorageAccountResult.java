@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,35 +54,35 @@ public final class GetLinkedStorageAccountResult {
     /**
      * Linked storage accounts type.
      * 
-     */
+    */
     public String getDataSourceType() {
         return this.dataSourceType;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Linked storage accounts resources ids.
      * 
-     */
+    */
     public List<String> getStorageAccountIds() {
         return this.storageAccountIds == null ? List.of() : this.storageAccountIds;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetLinkedStorageAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkedStorageAccountResult build() {
             return new GetLinkedStorageAccountResult(dataSourceType, id, name, storageAccountIds, type);
         }

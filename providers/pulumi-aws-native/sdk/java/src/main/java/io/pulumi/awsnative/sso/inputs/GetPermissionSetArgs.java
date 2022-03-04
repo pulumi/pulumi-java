@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sso.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-    private final String instanceArn;
+      private final String instanceArn;
 
     public String getInstanceArn() {
         return this.instanceArn;
@@ -28,7 +28,7 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="permissionSetArn", required=true)
-    private final String permissionSetArn;
+      private final String permissionSetArn;
 
     public String getPermissionSetArn() {
         return this.permissionSetArn;
@@ -77,7 +77,6 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
-
         public GetPermissionSetArgs build() {
             return new GetPermissionSetArgs(instanceArn, permissionSetArn);
         }

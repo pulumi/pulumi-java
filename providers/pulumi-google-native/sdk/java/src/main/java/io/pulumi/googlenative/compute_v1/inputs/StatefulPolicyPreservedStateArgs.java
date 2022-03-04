@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable Input<Map<String,String>> disks;
+      private final @Nullable Input<Map<String,String>> disks;
 
     public Input<Map<String,String>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -67,7 +67,6 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
             this.disks = Input.ofNullable(disks);
             return this;
         }
-
         public StatefulPolicyPreservedStateArgs build() {
             return new StatefulPolicyPreservedStateArgs(disks);
         }

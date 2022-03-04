@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybriddata.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CustomerSecretResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -32,7 +32,7 @@ public final class CustomerSecretResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keyIdentifier", required=true)
-    private final String keyIdentifier;
+      private final String keyIdentifier;
 
     public String getKeyIdentifier() {
         return this.keyIdentifier;
@@ -43,7 +43,7 @@ public final class CustomerSecretResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keyValue", required=true)
-    private final String keyValue;
+      private final String keyValue;
 
     public String getKeyValue() {
         return this.keyValue;
@@ -102,7 +102,6 @@ public final class CustomerSecretResponse extends io.pulumi.resources.InvokeArgs
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
-
         public CustomerSecretResponse build() {
             return new CustomerSecretResponse(algorithm, keyIdentifier, keyValue);
         }

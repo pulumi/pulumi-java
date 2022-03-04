@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1beta2.ResponsePolicyArgs;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ResponsePolicyGKEClusterResponse;
@@ -85,6 +85,37 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
         return this.responsePolicyName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ResponsePolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.dns_v1beta2.ResponsePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.dns_v1beta2.ResponsePolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ResponsePolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ResponsePolicy(String name) {
+        this(name, ResponsePolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ResponsePolicy(String name, @Nullable ResponsePolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

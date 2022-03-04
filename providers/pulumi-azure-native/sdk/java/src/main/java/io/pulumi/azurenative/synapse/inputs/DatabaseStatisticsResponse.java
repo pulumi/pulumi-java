@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DatabaseStatisticsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Double size;
+      private final @Nullable Double size;
 
     public Optional<Double> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
@@ -61,7 +61,6 @@ public final class DatabaseStatisticsResponse extends io.pulumi.resources.Invoke
             this.size = size;
             return this;
         }
-
         public DatabaseStatisticsResponse build() {
             return new DatabaseStatisticsResponse(size);
         }

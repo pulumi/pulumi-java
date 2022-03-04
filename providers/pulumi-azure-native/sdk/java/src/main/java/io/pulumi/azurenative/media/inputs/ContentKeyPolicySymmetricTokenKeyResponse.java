@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="keyValue", required=true)
-    private final String keyValue;
+      private final String keyValue;
 
     public String getKeyValue() {
         return this.keyValue;
@@ -33,7 +33,7 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -82,7 +82,6 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends io.pulumi.r
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicySymmetricTokenKeyResponse build() {
             return new ContentKeyPolicySymmetricTokenKeyResponse(keyValue, odataType);
         }

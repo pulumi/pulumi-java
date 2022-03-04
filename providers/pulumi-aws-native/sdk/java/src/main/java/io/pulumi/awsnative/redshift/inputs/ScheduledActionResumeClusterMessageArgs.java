@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.redshift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ScheduledActionResumeClusterMessageArgs extends io.pulumi.res
     public static final ScheduledActionResumeClusterMessageArgs Empty = new ScheduledActionResumeClusterMessageArgs();
 
     @InputImport(name="clusterIdentifier", required=true)
-    private final Input<String> clusterIdentifier;
+      private final Input<String> clusterIdentifier;
 
     public Input<String> getClusterIdentifier() {
         return this.clusterIdentifier;
@@ -61,7 +61,6 @@ public final class ScheduledActionResumeClusterMessageArgs extends io.pulumi.res
             this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
-
         public ScheduledActionResumeClusterMessageArgs build() {
             return new ScheduledActionResumeClusterMessageArgs(clusterIdentifier);
         }

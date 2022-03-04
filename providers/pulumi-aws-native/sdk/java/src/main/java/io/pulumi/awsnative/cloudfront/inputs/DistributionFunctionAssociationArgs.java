@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
     public static final DistributionFunctionAssociationArgs Empty = new DistributionFunctionAssociationArgs();
 
     @InputImport(name="eventType")
-    private final @Nullable Input<String> eventType;
+      private final @Nullable Input<String> eventType;
 
     public Input<String> getEventType() {
         return this.eventType == null ? Input.empty() : this.eventType;
     }
 
     @InputImport(name="functionARN")
-    private final @Nullable Input<String> functionARN;
+      private final @Nullable Input<String> functionARN;
 
     public Input<String> getFunctionARN() {
         return this.functionARN == null ? Input.empty() : this.functionARN;
@@ -81,7 +81,6 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
             this.functionARN = Input.ofNullable(functionARN);
             return this;
         }
-
         public DistributionFunctionAssociationArgs build() {
             return new DistributionFunctionAssociationArgs(eventType, functionARN);
         }

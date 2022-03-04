@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +19,21 @@ public final class JobOutputLocationArgs extends io.pulumi.resources.ResourceArg
     public static final JobOutputLocationArgs Empty = new JobOutputLocationArgs();
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="bucketOwner")
-    private final @Nullable Input<String> bucketOwner;
+      private final @Nullable Input<String> bucketOwner;
 
     public Input<String> getBucketOwner() {
         return this.bucketOwner == null ? Input.empty() : this.bucketOwner;
     }
 
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -107,7 +107,6 @@ public final class JobOutputLocationArgs extends io.pulumi.resources.ResourceArg
             this.key = Input.ofNullable(key);
             return this;
         }
-
         public JobOutputLocationArgs build() {
             return new JobOutputLocationArgs(bucket, bucketOwner, key);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.ContainerRegistryResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,14 +37,14 @@ public final class ContainerConfigurationResponse {
     /**
      * This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
      * 
-     */
+    */
     public List<String> getContainerImageNames() {
         return this.containerImageNames == null ? List.of() : this.containerImageNames;
     }
     /**
      * If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
      * 
-     */
+    */
     public List<ContainerRegistryResponse> getContainerRegistries() {
         return this.containerRegistries == null ? List.of() : this.containerRegistries;
     }
@@ -90,7 +90,6 @@ public final class ContainerConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContainerConfigurationResponse build() {
             return new ContainerConfigurationResponse(containerImageNames, containerRegistries, type);
         }

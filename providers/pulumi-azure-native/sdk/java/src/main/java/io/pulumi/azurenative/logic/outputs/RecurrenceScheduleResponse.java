@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.RecurrenceScheduleOccurrenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -56,35 +56,35 @@ public final class RecurrenceScheduleResponse {
     /**
      * The hours.
      * 
-     */
+    */
     public List<Integer> getHours() {
         return this.hours == null ? List.of() : this.hours;
     }
     /**
      * The minutes.
      * 
-     */
+    */
     public List<Integer> getMinutes() {
         return this.minutes == null ? List.of() : this.minutes;
     }
     /**
      * The month days.
      * 
-     */
+    */
     public List<Integer> getMonthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
     }
     /**
      * The monthly occurrences.
      * 
-     */
+    */
     public List<RecurrenceScheduleOccurrenceResponse> getMonthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
     /**
      * The days of the week.
      * 
-     */
+    */
     public List<String> getWeekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }
@@ -141,7 +141,6 @@ public final class RecurrenceScheduleResponse {
             this.weekDays = weekDays;
             return this;
         }
-
         public RecurrenceScheduleResponse build() {
             return new RecurrenceScheduleResponse(hours, minutes, monthDays, monthlyOccurrences, weekDays);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval;
 import io.pulumi.googlenative.compute_alpha.inputs.AcceleratorConfigArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs;
@@ -28,7 +28,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="guestAccelerators")
-    private final @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators;
+      private final @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators;
 
     public Input<List<AcceleratorConfigArgs>> getGuestAccelerators() {
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
@@ -39,7 +39,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="localSsds")
-    private final @Nullable Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
+      private final @Nullable Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
 
     public Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> getLocalSsds() {
         return this.localSsds == null ? Input.empty() : this.localSsds;
@@ -50,7 +50,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="locationHint")
-    private final @Nullable Input<String> locationHint;
+      private final @Nullable Input<String> locationHint;
 
     public Input<String> getLocationHint() {
         return this.locationHint == null ? Input.empty() : this.locationHint;
@@ -61,7 +61,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -72,7 +72,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="maintenanceFreezeDurationHours")
-    private final @Nullable Input<Integer> maintenanceFreezeDurationHours;
+      private final @Nullable Input<Integer> maintenanceFreezeDurationHours;
 
     public Input<Integer> getMaintenanceFreezeDurationHours() {
         return this.maintenanceFreezeDurationHours == null ? Input.empty() : this.maintenanceFreezeDurationHours;
@@ -83,7 +83,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="maintenanceInterval")
-    private final @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval;
+      private final @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval;
 
     public Input<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> getMaintenanceInterval() {
         return this.maintenanceInterval == null ? Input.empty() : this.maintenanceInterval;
@@ -94,7 +94,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="minCpuPlatform")
-    private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -228,7 +228,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
-
         public AllocationSpecificSKUAllocationReservedInstancePropertiesArgs build() {
             return new AllocationSpecificSKUAllocationReservedInstancePropertiesArgs(guestAccelerators, localSsds, locationHint, machineType, maintenanceFreezeDurationHours, maintenanceInterval, minCpuPlatform);
         }

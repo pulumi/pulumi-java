@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1alpha1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSpokeIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetSpokeIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetSpokeIamPolicyArgs.Builder a);
+    }
+    private static GetSpokeIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSpokeIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetSpokeIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetSpokeIamPolicyResult> invokeAsync(GetSpokeIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getSpokeIamPolicy", TypeShape.of(GetSpokeIamPolicyResult.class), args == null ? GetSpokeIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

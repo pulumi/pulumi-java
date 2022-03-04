@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualApplianceNicPropertiesResponse;
 import io.pulumi.azurenative.network.outputs.VirtualApplianceSkuPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -152,126 +152,126 @@ public final class GetNetworkVirtualApplianceResult {
     /**
      * Address Prefix.
      * 
-     */
+    */
     public String getAddressPrefix() {
         return this.addressPrefix;
     }
     /**
      * BootStrapConfigurationBlobs storage URLs.
      * 
-     */
+    */
     public List<String> getBootStrapConfigurationBlobs() {
         return this.bootStrapConfigurationBlobs == null ? List.of() : this.bootStrapConfigurationBlobs;
     }
     /**
      * CloudInitConfiguration string in plain text.
      * 
-     */
+    */
     public Optional<String> getCloudInitConfiguration() {
         return Optional.ofNullable(this.cloudInitConfiguration);
     }
     /**
      * CloudInitConfigurationBlob storage URLs.
      * 
-     */
+    */
     public List<String> getCloudInitConfigurationBlobs() {
         return this.cloudInitConfigurationBlobs == null ? List.of() : this.cloudInitConfigurationBlobs;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The service principal that has read access to cloud-init and config blob.
      * 
-     */
+    */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * List of references to InboundSecurityRules.
      * 
-     */
+    */
     public List<SubResourceResponse> getInboundSecurityRules() {
         return this.inboundSecurityRules;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Network Virtual Appliance SKU.
      * 
-     */
+    */
     public Optional<VirtualApplianceSkuPropertiesResponse> getNvaSku() {
         return Optional.ofNullable(this.nvaSku);
     }
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * VirtualAppliance ASN.
      * 
-     */
+    */
     public Optional<Double> getVirtualApplianceAsn() {
         return Optional.ofNullable(this.virtualApplianceAsn);
     }
     /**
      * List of Virtual Appliance Network Interfaces.
      * 
-     */
+    */
     public List<VirtualApplianceNicPropertiesResponse> getVirtualApplianceNics() {
         return this.virtualApplianceNics;
     }
     /**
      * List of references to VirtualApplianceSite.
      * 
-     */
+    */
     public List<SubResourceResponse> getVirtualApplianceSites() {
         return this.virtualApplianceSites;
     }
     /**
      * The Virtual Hub where Network Virtual Appliance is being deployed.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getVirtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
@@ -419,7 +419,6 @@ public final class GetNetworkVirtualApplianceResult {
             this.virtualHub = virtualHub;
             return this;
         }
-
         public GetNetworkVirtualApplianceResult build() {
             return new GetNetworkVirtualApplianceResult(addressPrefix, bootStrapConfigurationBlobs, cloudInitConfiguration, cloudInitConfigurationBlobs, etag, id, identity, inboundSecurityRules, location, name, nvaSku, provisioningState, tags, type, virtualApplianceAsn, virtualApplianceNics, virtualApplianceSites, virtualHub);
         }

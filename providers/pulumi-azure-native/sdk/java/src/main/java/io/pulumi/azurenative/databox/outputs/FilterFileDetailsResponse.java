@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class FilterFileDetailsResponse {
     /**
      * Path of the file that contains the details of all items to transfer.
      * 
-     */
+    */
     public String getFilterFilePath() {
         return this.filterFilePath;
     }
     /**
      * Type of the filter file.
      * 
-     */
+    */
     public String getFilterFileType() {
         return this.filterFileType;
     }
@@ -74,7 +74,6 @@ public final class FilterFileDetailsResponse {
             this.filterFileType = Objects.requireNonNull(filterFileType);
             return this;
         }
-
         public FilterFileDetailsResponse build() {
             return new FilterFileDetailsResponse(filterFilePath, filterFileType);
         }

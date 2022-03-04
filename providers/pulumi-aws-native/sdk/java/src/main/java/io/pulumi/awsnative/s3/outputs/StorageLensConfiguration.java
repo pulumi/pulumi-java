@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.outputs.StorageLensAccountLevel;
 import io.pulumi.awsnative.s3.outputs.StorageLensAwsOrg;
 import io.pulumi.awsnative.s3.outputs.StorageLensBucketsAndRegions;
 import io.pulumi.awsnative.s3.outputs.StorageLensDataExport;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -74,14 +74,14 @@ public final class StorageLensConfiguration {
     /**
      * Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The ARN for the Amazon S3 Storage Lens configuration.
      * 
-     */
+    */
     public Optional<String> getStorageLensArn() {
         return Optional.ofNullable(this.storageLensArn);
     }
@@ -159,7 +159,6 @@ public final class StorageLensConfiguration {
             this.storageLensArn = storageLensArn;
             return this;
         }
-
         public StorageLensConfiguration build() {
             return new StorageLensConfiguration(accountLevel, awsOrg, dataExport, exclude, id, include, isEnabled, storageLensArn);
         }

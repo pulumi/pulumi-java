@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.emrcontainers.outputs;
 
 import io.pulumi.awsnative.emrcontainers.outputs.VirtualClusterTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,14 +41,14 @@ public final class GetVirtualClusterResult {
     /**
      * Id of the virtual cluster.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An array of key-value pairs to apply to this virtual cluster.
      * 
-     */
+    */
     public List<VirtualClusterTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -91,7 +91,6 @@ public final class GetVirtualClusterResult {
             this.tags = tags;
             return this;
         }
-
         public GetVirtualClusterResult build() {
             return new GetVirtualClusterResult(arn, id, tags);
         }

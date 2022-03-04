@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.orgpolicy.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.orgpolicy.outputs.PolicySpecRuleCondition;
 import io.pulumi.gcp.orgpolicy.outputs.PolicySpecRuleValues;
 import java.lang.String;
@@ -56,35 +56,35 @@ public final class PolicySpecRule {
     /**
      * Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
      * 
-     */
+    */
     public Optional<String> getAllowAll() {
         return Optional.ofNullable(this.allowAll);
     }
     /**
      * A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the "||" or "&&" operators. Each subexpression must be of the form "resource.matchTag('/tag_key_short_name, 'tag_value_short_name')". or "resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: "resource.matchTag('123456789/environment, 'prod')". or "resource.matchTagId('tagKeys/123', 'tagValues/456')".
      * 
-     */
+    */
     public Optional<PolicySpecRuleCondition> getCondition() {
         return Optional.ofNullable(this.condition);
     }
     /**
      * Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
      * 
-     */
+    */
     public Optional<String> getDenyAll() {
         return Optional.ofNullable(this.denyAll);
     }
     /**
      * If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
      * 
-     */
+    */
     public Optional<String> getEnforce() {
         return Optional.ofNullable(this.enforce);
     }
     /**
      * List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
      * 
-     */
+    */
     public Optional<PolicySpecRuleValues> getValues() {
         return Optional.ofNullable(this.values);
     }
@@ -141,7 +141,6 @@ public final class PolicySpecRule {
             this.values = values;
             return this;
         }
-
         public PolicySpecRule build() {
             return new PolicySpecRule(allowAll, condition, denyAll, enforce, values);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class RetentionTagResponse {
     /**
      * Retention Tag version.
      * 
-     */
+    */
     public String getETag() {
         return this.eTag;
     }
     /**
      * Retention Tag version.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Retention Tag Name to relate it to retention rule.
      * 
-     */
+    */
     public String getTagName() {
         return this.tagName;
     }
@@ -95,7 +95,6 @@ public final class RetentionTagResponse {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }
-
         public RetentionTagResponse build() {
             return new RetentionTagResponse(eTag, id, tagName);
         }

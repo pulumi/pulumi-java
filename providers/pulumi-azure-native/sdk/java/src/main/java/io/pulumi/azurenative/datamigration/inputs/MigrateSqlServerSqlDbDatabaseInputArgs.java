@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="makeSourceDbReadOnly")
-    private final @Nullable Input<Boolean> makeSourceDbReadOnly;
+      private final @Nullable Input<Boolean> makeSourceDbReadOnly;
 
     public Input<Boolean> getMakeSourceDbReadOnly() {
         return this.makeSourceDbReadOnly == null ? Input.empty() : this.makeSourceDbReadOnly;
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tableMap")
-    private final @Nullable Input<Map<String,String>> tableMap;
+      private final @Nullable Input<Map<String,String>> tableMap;
 
     public Input<Map<String,String>> getTableMap() {
         return this.tableMap == null ? Input.empty() : this.tableMap;
@@ -58,7 +58,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetDatabaseName")
-    private final @Nullable Input<String> targetDatabaseName;
+      private final @Nullable Input<String> targetDatabaseName;
 
     public Input<String> getTargetDatabaseName() {
         return this.targetDatabaseName == null ? Input.empty() : this.targetDatabaseName;
@@ -147,7 +147,6 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
             this.targetDatabaseName = Input.ofNullable(targetDatabaseName);
             return this;
         }
-
         public MigrateSqlServerSqlDbDatabaseInputArgs build() {
             return new MigrateSqlServerSqlDbDatabaseInputArgs(makeSourceDbReadOnly, name, tableMap, targetDatabaseName);
         }

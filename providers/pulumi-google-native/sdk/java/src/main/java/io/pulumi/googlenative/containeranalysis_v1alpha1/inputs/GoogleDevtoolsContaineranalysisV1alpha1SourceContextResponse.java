@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse;
@@ -25,7 +25,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * 
      */
     @InputImport(name="cloudRepo", required=true)
-    private final GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo;
+      private final GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo;
 
     public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse getCloudRepo() {
         return this.cloudRepo;
@@ -36,7 +36,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * 
      */
     @InputImport(name="gerrit", required=true)
-    private final GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit;
+      private final GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit;
 
     public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse getGerrit() {
         return this.gerrit;
@@ -47,7 +47,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * 
      */
     @InputImport(name="git", required=true)
-    private final GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git;
+      private final GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git;
 
     public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse getGit() {
         return this.git;
@@ -58,7 +58,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -127,7 +127,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(cloudRepo, gerrit, git, labels);
         }

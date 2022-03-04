@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedZone {
-/**
- * Provides access to a zone's attributes within Google Cloud DNS.
+    private GetManagedZone() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedZoneArgs.Builder a);
+    }
+    private static GetManagedZoneArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedZoneArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides access to a zone's attributes within Google Cloud DNS.
  * For more information see
  * [the official documentation](https://cloud.google.com/dns/zones/)
  * and
  * [API](https://cloud.google.com/dns/api/v1/managedZones).
  * 
- *
- * A collection of arguments for invoking getManagedZone.
+     *
+     * A collection of arguments for invoking getManagedZone.
  * 
- *
- * A collection of values returned by getManagedZone.
+     *
+     * A collection of values returned by getManagedZone.
  * 
- */
+     */
+    public static CompletableFuture<GetManagedZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides access to a zone's attributes within Google Cloud DNS.
+     * For more information see
+     * [the official documentation](https://cloud.google.com/dns/zones/)
+     * and
+     * [API](https://cloud.google.com/dns/api/v1/managedZones).
+     * 
+     *
+         * A collection of arguments for invoking getManagedZone.
+     * 
+     *
+         * A collection of values returned by getManagedZone.
+     * 
+     */
     public static CompletableFuture<GetManagedZoneResult> invokeAsync(GetManagedZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:dns/getManagedZone:getManagedZone", TypeShape.of(GetManagedZoneResult.class), args == null ? GetManagedZoneArgs.Empty : args, Utilities.withVersion(options));
     }

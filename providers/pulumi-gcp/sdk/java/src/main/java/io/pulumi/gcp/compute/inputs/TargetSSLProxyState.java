@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="backendService")
-    private final @Nullable Input<String> backendService;
+      private final @Nullable Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -32,7 +32,7 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -43,7 +43,7 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -72,7 +72,7 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -86,7 +86,7 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyHeader")
-    private final @Nullable Input<String> proxyHeader;
+      private final @Nullable Input<String> proxyHeader;
 
     public Input<String> getProxyHeader() {
         return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
@@ -97,7 +97,7 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyId")
-    private final @Nullable Input<Integer> proxyId;
+      private final @Nullable Input<Integer> proxyId;
 
     public Input<Integer> getProxyId() {
         return this.proxyId == null ? Input.empty() : this.proxyId;
@@ -108,7 +108,7 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -121,7 +121,7 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sslCertificates")
-    private final @Nullable Input<List<String>> sslCertificates;
+      private final @Nullable Input<List<String>> sslCertificates;
 
     public Input<List<String>> getSslCertificates() {
         return this.sslCertificates == null ? Input.empty() : this.sslCertificates;
@@ -134,7 +134,7 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sslPolicy")
-    private final @Nullable Input<String> sslPolicy;
+      private final @Nullable Input<String> sslPolicy;
 
     public Input<String> getSslPolicy() {
         return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
@@ -313,7 +313,6 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }
-
         public TargetSSLProxyState build() {
             return new TargetSSLProxyState(backendService, creationTimestamp, description, name, project, proxyHeader, proxyId, selfLink, sslCertificates, sslPolicy);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetManagerExtendedInfoArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="managerName", required=true)
-    private final String managerName;
+      private final String managerName;
 
     public String getManagerName() {
         return this.managerName;
@@ -28,7 +28,7 @@ public final class GetManagerExtendedInfoArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetManagerExtendedInfoArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetManagerExtendedInfoArgs build() {
             return new GetManagerExtendedInfoArgs(managerName, resourceGroupName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ScaleRuleAuthResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable String secretRef;
+      private final @Nullable String secretRef;
 
     public Optional<String> getSecretRef() {
         return this.secretRef == null ? Optional.empty() : Optional.ofNullable(this.secretRef);
@@ -34,7 +34,7 @@ public final class ScaleRuleAuthResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="triggerParameter")
-    private final @Nullable String triggerParameter;
+      private final @Nullable String triggerParameter;
 
     public Optional<String> getTriggerParameter() {
         return this.triggerParameter == null ? Optional.empty() : Optional.ofNullable(this.triggerParameter);
@@ -83,7 +83,6 @@ public final class ScaleRuleAuthResponse extends io.pulumi.resources.InvokeArgs 
             this.triggerParameter = triggerParameter;
             return this;
         }
-
         public ScaleRuleAuthResponse build() {
             return new ScaleRuleAuthResponse(secretRef, triggerParameter);
         }

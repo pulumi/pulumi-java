@@ -5,7 +5,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateAlignment;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class InAppTemplateBodyConfigArgs extends io.pulumi.resources.Resou
     public static final InAppTemplateBodyConfigArgs Empty = new InAppTemplateBodyConfigArgs();
 
     @InputImport(name="alignment")
-    private final @Nullable Input<InAppTemplateAlignment> alignment;
+      private final @Nullable Input<InAppTemplateAlignment> alignment;
 
     public Input<InAppTemplateAlignment> getAlignment() {
         return this.alignment == null ? Input.empty() : this.alignment;
     }
 
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
     }
 
     @InputImport(name="textColor")
-    private final @Nullable Input<String> textColor;
+      private final @Nullable Input<String> textColor;
 
     public Input<String> getTextColor() {
         return this.textColor == null ? Input.empty() : this.textColor;
@@ -104,7 +104,6 @@ public final class InAppTemplateBodyConfigArgs extends io.pulumi.resources.Resou
             this.textColor = Input.ofNullable(textColor);
             return this;
         }
-
         public InAppTemplateBodyConfigArgs build() {
             return new InAppTemplateBodyConfigArgs(alignment, body, textColor);
         }

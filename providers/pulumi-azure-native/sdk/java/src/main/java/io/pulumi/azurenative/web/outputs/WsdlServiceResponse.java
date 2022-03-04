@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class WsdlServiceResponse {
     /**
      * List of the endpoints' qualified names
      * 
-     */
+    */
     public List<String> getEndpointQualifiedNames() {
         return this.endpointQualifiedNames == null ? List.of() : this.endpointQualifiedNames;
     }
     /**
      * The service's qualified name
      * 
-     */
+    */
     public String getQualifiedName() {
         return this.qualifiedName;
     }
@@ -76,7 +76,6 @@ public final class WsdlServiceResponse {
             this.qualifiedName = Objects.requireNonNull(qualifiedName);
             return this;
         }
-
         public WsdlServiceResponse build() {
             return new WsdlServiceResponse(endpointQualifiedNames, qualifiedName);
         }

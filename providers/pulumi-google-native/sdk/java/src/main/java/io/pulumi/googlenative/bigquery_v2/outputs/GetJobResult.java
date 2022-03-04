@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatisticsResponse;
@@ -77,56 +77,56 @@ public final class GetJobResult {
     /**
      * [Required] Describes the job configuration.
      * 
-     */
+    */
     public JobConfigurationResponse getConfiguration() {
         return this.configuration;
     }
     /**
      * A hash of this resource.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * [Optional] Reference describing the unique-per-user name of the job.
      * 
-     */
+    */
     public JobReferenceResponse getJobReference() {
         return this.jobReference;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * A URL that can be used to access this resource again.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Information about the job, including starting time and ending time of the job.
      * 
-     */
+    */
     public JobStatisticsResponse getStatistics() {
         return this.statistics;
     }
     /**
      * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
      * 
-     */
+    */
     public JobStatusResponse getStatus() {
         return this.status;
     }
     /**
      * Email address of the user who ran the job.
      * 
-     */
+    */
     public String getUserEmail() {
         return this.userEmail;
     }
@@ -204,7 +204,6 @@ public final class GetJobResult {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(configuration, etag, jobReference, kind, selfLink, statistics, status, userEmail);
         }

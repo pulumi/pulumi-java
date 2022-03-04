@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse {
     /**
      * URL must have length equal or less than 2000 characters.
      * 
-     */
+    */
     public String getRedirectUri() {
         return this.redirectUri;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse {
             this.redirectUri = Objects.requireNonNull(redirectUri);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleRedirectActionResponse build() {
             return new GoogleCloudRetailV2betaRuleRedirectActionResponse(redirectUri);
         }

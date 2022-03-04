@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.outputs.ServiceKeyValuePair;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +38,7 @@ public final class ServiceImageConfiguration {
     /**
      * Port
      * 
-     */
+    */
     public Optional<String> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -48,7 +48,7 @@ public final class ServiceImageConfiguration {
     /**
      * Start Command
      * 
-     */
+    */
     public Optional<String> getStartCommand() {
         return Optional.ofNullable(this.startCommand);
     }
@@ -91,7 +91,6 @@ public final class ServiceImageConfiguration {
             this.startCommand = startCommand;
             return this;
         }
-
         public ServiceImageConfiguration build() {
             return new ServiceImageConfiguration(port, runtimeEnvironmentVariables, startCommand);
         }

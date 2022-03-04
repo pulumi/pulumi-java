@@ -6,21 +6,41 @@ package io.pulumi.azurenative.cdn;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cdn.inputs.GetOriginGroupArgs;
 import io.pulumi.azurenative.cdn.outputs.GetOriginGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOriginGroup {
-/**
- * Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+    private GetOriginGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetOriginGroupArgs.Builder a);
+    }
+    private static GetOriginGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOriginGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
  * API Version: 2020-09-01.
  * 
- *
- * Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+     *
+     * Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
  * 
- */
+     */
+    public static CompletableFuture<GetOriginGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+     * 
+     */
     public static CompletableFuture<GetOriginGroupResult> invokeAsync(GetOriginGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getOriginGroup", TypeShape.of(GetOriginGroupResult.class), args == null ? GetOriginGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
     /**
      * The name of the header to set.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
     /**
      * The value to set the named header to.
      * 
-     */
+    */
     public String getHeaderValue() {
         return this.headerValue;
     }
@@ -74,7 +74,6 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse build() {
             return new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(headerName, headerValue);
         }

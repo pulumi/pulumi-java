@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetJobTemplateArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetJobTemplateArgs Empty = new GetJobTemplateArgs();
 
     @InputImport(name="jobTemplateId", required=true)
-    private final String jobTemplateId;
+      private final String jobTemplateId;
 
     public String getJobTemplateId() {
         return this.jobTemplateId;
@@ -51,7 +51,6 @@ public final class GetJobTemplateArgs extends io.pulumi.resources.InvokeArgs {
             this.jobTemplateId = Objects.requireNonNull(jobTemplateId);
             return this;
         }
-
         public GetJobTemplateArgs build() {
             return new GetJobTemplateArgs(jobTemplateId);
         }

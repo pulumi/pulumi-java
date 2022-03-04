@@ -6,17 +6,33 @@ package io.pulumi.awsnative.lex;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lex.inputs.GetBotAliasArgs;
 import io.pulumi.awsnative.lex.outputs.GetBotAliasResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBotAlias {
-/**
- * A Bot Alias enables you to change the version of a bot without updating applications that use the bot
+    private GetBotAlias() {}
+    public interface BuilderApplicator {
+        public void apply(GetBotAliasArgs.Builder a);
+    }
+    private static GetBotAliasArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBotAliasArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Bot Alias enables you to change the version of a bot without updating applications that use the bot
  * 
- */
+     */
+    public static CompletableFuture<GetBotAliasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Bot Alias enables you to change the version of a bot without updating applications that use the bot
+     * 
+     */
     public static CompletableFuture<GetBotAliasResult> invokeAsync(GetBotAliasArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lex:getBotAlias", TypeShape.of(GetBotAliasResult.class), args == null ? GetBotAliasArgs.Empty : args, Utilities.withVersion(options));
     }

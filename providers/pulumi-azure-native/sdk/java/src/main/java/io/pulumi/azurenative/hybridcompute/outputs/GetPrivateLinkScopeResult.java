@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridcompute.outputs;
 
 import io.pulumi.azurenative.hybridcompute.outputs.HybridComputePrivateLinkScopePropertiesResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -70,49 +70,49 @@ public final class GetPrivateLinkScopeResult {
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties that define a Azure Arc PrivateLinkScope resource.
      * 
-     */
+    */
     public HybridComputePrivateLinkScopePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The system meta data relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -183,7 +183,6 @@ public final class GetPrivateLinkScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateLinkScopeResult build() {
             return new GetPrivateLinkScopeResult(id, location, name, properties, systemData, tags, type);
         }

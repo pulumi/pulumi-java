@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.outputs.RuleEmailActionResponse;
 import io.pulumi.azurenative.insights.outputs.RuleWebhookActionResponse;
 import io.pulumi.azurenative.insights.outputs.ThresholdRuleConditionResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -113,84 +113,84 @@ public final class GetAlertRuleResult {
     /**
      * action that is performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
-     */
+    */
     public Optional<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
-     */
+    */
     public List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * the condition that results in the alert rule being activated.
      * 
-     */
+    */
     public Object getCondition() {
         return this.condition;
     }
     /**
      * the description of the alert rule that will be included in the alert email.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * the flag that indicates whether the alert rule is enabled.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Last time the rule was updated in ISO8601 format.
      * 
-     */
+    */
     public String getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * the provisioning state.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -296,7 +296,6 @@ public final class GetAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAlertRuleResult build() {
             return new GetAlertRuleResult(action, actions, condition, description, id, isEnabled, lastUpdatedTime, location, name, provisioningState, tags, type);
         }

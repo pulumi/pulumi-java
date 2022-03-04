@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.SecretResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class UserPasswordResponse {
     /**
      * Secret version reference containing the password.
      * 
-     */
+    */
     public SecretResponse getPassword() {
         return this.password;
     }
     /**
      * Username.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -75,7 +75,6 @@ public final class UserPasswordResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public UserPasswordResponse build() {
             return new UserPasswordResponse(password, username);
         }

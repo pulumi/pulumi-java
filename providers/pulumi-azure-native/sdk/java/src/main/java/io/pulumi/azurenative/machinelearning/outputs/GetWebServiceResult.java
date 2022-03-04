@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.outputs;
 
 import io.pulumi.azurenative.machinelearning.outputs.WebServicePropertiesForGraphResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class GetWebServiceResult {
     /**
      * Specifies the resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Specifies the name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Contains the property payload that describes the web service.
      * 
-     */
+    */
     public WebServicePropertiesForGraphResponse getProperties() {
         return this.properties;
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class GetWebServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebServiceResult build() {
             return new GetWebServiceResult(id, location, name, properties, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
     /**
      * Maximum value appearing in the column.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ValueResponse getMaxValue() {
         return this.maxValue;
     }
     /**
      * Minimum value appearing in the column.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ValueResponse getMinValue() {
         return this.minValue;
     }
     /**
      * List of 99 values that partition the set of field values into 100 equal sized buckets.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2ValueResponse> getQuantileValues() {
         return this.quantileValues;
     }
@@ -96,7 +96,6 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
             this.quantileValues = Objects.requireNonNull(quantileValues);
             return this;
         }
-
         public GooglePrivacyDlpV2NumericalStatsResultResponse build() {
             return new GooglePrivacyDlpV2NumericalStatsResultResponse(maxValue, minValue, quantileValues);
         }

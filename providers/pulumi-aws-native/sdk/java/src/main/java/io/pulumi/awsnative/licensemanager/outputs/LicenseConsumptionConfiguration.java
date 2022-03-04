@@ -5,7 +5,7 @@ package io.pulumi.awsnative.licensemanager.outputs;
 
 import io.pulumi.awsnative.licensemanager.outputs.LicenseBorrowConfiguration;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseProvisionalConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,7 +75,6 @@ public final class LicenseConsumptionConfiguration {
             this.renewType = renewType;
             return this;
         }
-
         public LicenseConsumptionConfiguration build() {
             return new LicenseConsumptionConfiguration(borrowConfiguration, provisionalConfiguration, renewType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GetExposureControlFeatureValueResult {
     /**
      * The feature name.
      * 
-     */
+    */
     public String getFeatureName() {
         return this.featureName;
     }
     /**
      * The feature value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class GetExposureControlFeatureValueResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetExposureControlFeatureValueResult build() {
             return new GetExposureControlFeatureValueResult(featureName, value);
         }

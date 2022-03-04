@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath> getCloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
@@ -45,7 +45,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * List of words or phrases to search for.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList> getWordList() {
         return Optional.ofNullable(this.wordList);
     }
@@ -81,7 +81,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.wordList = wordList;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary(cloudStoragePath, wordList);
         }

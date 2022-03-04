@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetVersionArgs Empty = new GetVersionArgs();
 
     @InputImport(name="modelId", required=true)
-    private final String modelId;
+      private final String modelId;
 
     public String getModelId() {
         return this.modelId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="versionId", required=true)
-    private final String versionId;
+      private final String versionId;
 
     public String getVersionId() {
         return this.versionId;
@@ -88,7 +88,6 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public GetVersionArgs build() {
             return new GetVersionArgs(modelId, project, versionId);
         }

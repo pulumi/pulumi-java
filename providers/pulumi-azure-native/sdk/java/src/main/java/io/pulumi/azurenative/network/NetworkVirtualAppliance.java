@@ -12,8 +12,8 @@ import io.pulumi.azurenative.network.outputs.VirtualApplianceSkuPropertiesRespon
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -276,6 +276,37 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
         return this.virtualHub;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NetworkVirtualApplianceArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.NetworkVirtualApplianceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.NetworkVirtualApplianceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NetworkVirtualAppliance(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public NetworkVirtualAppliance(String name) {
+        this(name, NetworkVirtualApplianceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NetworkVirtualAppliance(String name, NetworkVirtualApplianceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

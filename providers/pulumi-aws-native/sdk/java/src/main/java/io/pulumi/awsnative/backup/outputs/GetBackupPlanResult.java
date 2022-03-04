@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupPlanResourceType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -101,7 +101,6 @@ public final class GetBackupPlanResult {
             this.versionId = versionId;
             return this;
         }
-
         public GetBackupPlanResult build() {
             return new GetBackupPlanResult(backupPlan, backupPlanArn, backupPlanId, backupPlanTags, versionId);
         }

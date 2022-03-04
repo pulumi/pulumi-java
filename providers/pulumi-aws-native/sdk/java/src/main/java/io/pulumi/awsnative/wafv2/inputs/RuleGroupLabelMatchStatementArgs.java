@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.RuleGroupLabelMatchScope;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,14 +15,14 @@ public final class RuleGroupLabelMatchStatementArgs extends io.pulumi.resources.
     public static final RuleGroupLabelMatchStatementArgs Empty = new RuleGroupLabelMatchStatementArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="scope", required=true)
-    private final Input<RuleGroupLabelMatchScope> scope;
+      private final Input<RuleGroupLabelMatchScope> scope;
 
     public Input<RuleGroupLabelMatchScope> getScope() {
         return this.scope;
@@ -81,7 +81,6 @@ public final class RuleGroupLabelMatchStatementArgs extends io.pulumi.resources.
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public RuleGroupLabelMatchStatementArgs build() {
             return new RuleGroupLabelMatchStatementArgs(key, scope);
         }

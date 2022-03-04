@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ListIntegrationRuntimeAuthKeysResult {
     /**
      * The primary integration runtime authentication key.
      * 
-     */
+    */
     public Optional<String> getAuthKey1() {
         return Optional.ofNullable(this.authKey1);
     }
     /**
      * The secondary integration runtime authentication key.
      * 
-     */
+    */
     public Optional<String> getAuthKey2() {
         return Optional.ofNullable(this.authKey2);
     }
@@ -76,7 +76,6 @@ public final class ListIntegrationRuntimeAuthKeysResult {
             this.authKey2 = authKey2;
             return this;
         }
-
         public ListIntegrationRuntimeAuthKeysResult build() {
             return new ListIntegrationRuntimeAuthKeysResult(authKey1, authKey2);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.EdifactOneWayAgreementResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -31,14 +31,14 @@ public final class EdifactAgreementContentResponse {
     /**
      * The EDIFACT one-way receive agreement.
      * 
-     */
+    */
     public EdifactOneWayAgreementResponse getReceiveAgreement() {
         return this.receiveAgreement;
     }
     /**
      * The EDIFACT one-way send agreement.
      * 
-     */
+    */
     public EdifactOneWayAgreementResponse getSendAgreement() {
         return this.sendAgreement;
     }
@@ -74,7 +74,6 @@ public final class EdifactAgreementContentResponse {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
-
         public EdifactAgreementContentResponse build() {
             return new EdifactAgreementContentResponse(receiveAgreement, sendAgreement);
         }

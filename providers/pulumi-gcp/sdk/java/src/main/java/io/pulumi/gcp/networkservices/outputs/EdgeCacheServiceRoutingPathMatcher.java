@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRule;
 import java.lang.String;
 import java.util.List;
@@ -43,14 +43,14 @@ public final class EdgeCacheServiceRoutingPathMatcher {
     /**
      * A human-readable description of the resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -58,7 +58,7 @@ public final class EdgeCacheServiceRoutingPathMatcher {
      * The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
      * Structure is documented below.
      * 
-     */
+    */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRule> getRouteRules() {
         return this.routeRules;
     }
@@ -101,7 +101,6 @@ public final class EdgeCacheServiceRoutingPathMatcher {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcher build() {
             return new EdgeCacheServiceRoutingPathMatcher(description, name, routeRules);
         }

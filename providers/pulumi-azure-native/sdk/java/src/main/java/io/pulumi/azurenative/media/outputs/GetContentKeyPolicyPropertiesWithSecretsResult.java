@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyOptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class GetContentKeyPolicyPropertiesWithSecretsResult {
     /**
      * The creation date of the Policy
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * A description for the Policy.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The last modified date of the Policy
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * The Key Policy options.
      * 
-     */
+    */
     public List<ContentKeyPolicyOptionResponse> getOptions() {
         return this.options;
     }
     /**
      * The legacy Policy ID.
      * 
-     */
+    */
     public String getPolicyId() {
         return this.policyId;
     }
@@ -141,7 +141,6 @@ public final class GetContentKeyPolicyPropertiesWithSecretsResult {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public GetContentKeyPolicyPropertiesWithSecretsResult build() {
             return new GetContentKeyPolicyPropertiesWithSecretsResult(created, description, lastModified, options, policyId);
         }

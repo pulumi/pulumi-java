@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class GetVirtualRouterPeeringResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the virtual router peering that is unique within a virtual router.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Peer ASN.
      * 
-     */
+    */
     public Optional<Double> getPeerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
     /**
      * Peer IP.
      * 
-     */
+    */
     public Optional<String> getPeerIp() {
         return Optional.ofNullable(this.peerIp);
     }
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Peering type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -182,7 +182,6 @@ public final class GetVirtualRouterPeeringResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualRouterPeeringResult build() {
             return new GetVirtualRouterPeeringResult(etag, id, name, peerAsn, peerIp, provisioningState, type);
         }

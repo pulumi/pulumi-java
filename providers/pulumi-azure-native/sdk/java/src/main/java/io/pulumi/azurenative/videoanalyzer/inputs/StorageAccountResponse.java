@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -35,7 +35,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable ResourceIdentityResponse identity;
+      private final @Nullable ResourceIdentityResponse identity;
 
     public Optional<ResourceIdentityResponse> getIdentity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
@@ -46,7 +46,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -105,7 +105,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(id, identity, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetRegionUrlMapArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRegionUrlMapArgs Empty = new GetRegionUrlMapArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="urlMap", required=true)
-    private final String urlMap;
+      private final String urlMap;
 
     public String getUrlMap() {
         return this.urlMap;
@@ -88,7 +88,6 @@ public final class GetRegionUrlMapArgs extends io.pulumi.resources.InvokeArgs {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
-
         public GetRegionUrlMapArgs build() {
             return new GetRegionUrlMapArgs(project, region, urlMap);
         }

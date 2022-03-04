@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,21 +47,21 @@ public final class MediaGraphAssetSinkResponse {
     /**
      * Asset name.
      * 
-     */
+    */
     public String getAssetName() {
         return this.assetName;
     }
     /**
      * Sink inputs.
      * 
-     */
+    */
     public List<String> getInputs() {
         return this.inputs;
     }
     /**
      * Sink name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -69,7 +69,7 @@ public final class MediaGraphAssetSinkResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphAssetSink'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
@@ -119,7 +119,6 @@ public final class MediaGraphAssetSinkResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MediaGraphAssetSinkResponse build() {
             return new MediaGraphAssetSinkResponse(assetName, inputs, name, odataType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ConnectorCustomPlugin {
     /**
      * The Amazon Resource Name (ARN) of the custom plugin to use.
      * 
-     */
+    */
     public String getCustomPluginArn() {
         return this.customPluginArn;
     }
     /**
      * The revision of the custom plugin to use.
      * 
-     */
+    */
     public Integer getRevision() {
         return this.revision;
     }
@@ -75,7 +75,6 @@ public final class ConnectorCustomPlugin {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public ConnectorCustomPlugin build() {
             return new ConnectorCustomPlugin(customPluginArn, revision);
         }

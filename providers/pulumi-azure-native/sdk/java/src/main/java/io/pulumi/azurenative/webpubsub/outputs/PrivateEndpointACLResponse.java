@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,21 +40,21 @@ public final class PrivateEndpointACLResponse {
     /**
      * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
      * 
-     */
+    */
     public List<String> getAllow() {
         return this.allow == null ? List.of() : this.allow;
     }
     /**
      * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
      * 
-     */
+    */
     public List<String> getDeny() {
         return this.deny == null ? List.of() : this.deny;
     }
     /**
      * Name of the private endpoint connection
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -97,7 +97,6 @@ public final class PrivateEndpointACLResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PrivateEndpointACLResponse build() {
             return new PrivateEndpointACLResponse(allow, deny, name);
         }

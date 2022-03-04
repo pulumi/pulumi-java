@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.ForwardProxyConvention;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="convention")
-    private final @Nullable Input<ForwardProxyConvention> convention;
+      private final @Nullable Input<ForwardProxyConvention> convention;
 
     public Input<ForwardProxyConvention> getConvention() {
         return this.convention == null ? Input.empty() : this.convention;
@@ -35,7 +35,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customHostHeaderName")
-    private final @Nullable Input<String> customHostHeaderName;
+      private final @Nullable Input<String> customHostHeaderName;
 
     public Input<String> getCustomHostHeaderName() {
         return this.customHostHeaderName == null ? Input.empty() : this.customHostHeaderName;
@@ -46,7 +46,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customProtoHeaderName")
-    private final @Nullable Input<String> customProtoHeaderName;
+      private final @Nullable Input<String> customProtoHeaderName;
 
     public Input<String> getCustomProtoHeaderName() {
         return this.customProtoHeaderName == null ? Input.empty() : this.customProtoHeaderName;
@@ -120,7 +120,6 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
             this.customProtoHeaderName = Input.ofNullable(customProtoHeaderName);
             return this;
         }
-
         public ForwardProxyArgs build() {
             return new ForwardProxyArgs(convention, customHostHeaderName, customProtoHeaderName);
         }

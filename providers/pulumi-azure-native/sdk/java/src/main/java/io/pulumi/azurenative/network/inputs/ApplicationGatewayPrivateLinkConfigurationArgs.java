@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayPrivateLinkIpConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable Input<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations;
+      private final @Nullable Input<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations;
 
     public Input<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> getIpConfigurations() {
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
@@ -47,7 +47,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -121,7 +121,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ApplicationGatewayPrivateLinkConfigurationArgs build() {
             return new ApplicationGatewayPrivateLinkConfigurationArgs(id, ipConfigurations, name);
         }

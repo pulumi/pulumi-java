@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,14 +15,14 @@ public final class GetOrganizationPolicyListPolicyAllow extends io.pulumi.resour
     public static final GetOrganizationPolicyListPolicyAllow Empty = new GetOrganizationPolicyListPolicyAllow();
 
     @InputImport(name="all", required=true)
-    private final Boolean all;
+      private final Boolean all;
 
     public Boolean getAll() {
         return this.all;
     }
 
     @InputImport(name="values", required=true)
-    private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -71,7 +71,6 @@ public final class GetOrganizationPolicyListPolicyAllow extends io.pulumi.resour
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GetOrganizationPolicyListPolicyAllow build() {
             return new GetOrganizationPolicyListPolicyAllow(all, values);
         }

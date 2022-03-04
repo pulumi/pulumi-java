@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class StorageAccountConfigurationResponse {
     /**
      * The storage account access key.
      * 
-     */
+    */
     public Optional<String> getStorageAccountKey() {
         return Optional.ofNullable(this.storageAccountKey);
     }
     /**
      * The storage account name.
      * 
-     */
+    */
     public Optional<String> getStorageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
@@ -76,7 +76,6 @@ public final class StorageAccountConfigurationResponse {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public StorageAccountConfigurationResponse build() {
             return new StorageAccountConfigurationResponse(storageAccountKey, storageAccountName);
         }

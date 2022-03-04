@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetDNSSECResult {
         public Builder(GetDNSSECResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetDNSSECResult build() {
             return new GetDNSSECResult();
         }

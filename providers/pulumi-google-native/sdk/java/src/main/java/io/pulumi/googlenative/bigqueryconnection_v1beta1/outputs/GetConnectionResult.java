@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs.CloudSqlPropertiesResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -68,49 +68,49 @@ public final class GetConnectionResult {
     /**
      * Cloud SQL properties.
      * 
-     */
+    */
     public CloudSqlPropertiesResponse getCloudSql() {
         return this.cloudSql;
     }
     /**
      * The creation timestamp of the connection.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * User provided description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * User provided display name for the connection.
      * 
-     */
+    */
     public String getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * True, if credential is configured for this connection.
      * 
-     */
+    */
     public Boolean getHasCredential() {
         return this.hasCredential;
     }
     /**
      * The last update timestamp of the connection.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -181,7 +181,6 @@ public final class GetConnectionResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(cloudSql, creationTime, description, friendlyName, hasCredential, lastModifiedTime, name);
         }

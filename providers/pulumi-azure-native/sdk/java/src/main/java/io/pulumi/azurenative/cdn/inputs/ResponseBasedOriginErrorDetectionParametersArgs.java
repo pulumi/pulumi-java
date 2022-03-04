@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.ResponseBasedDetectedErrorTypes;
 import io.pulumi.azurenative.cdn.inputs.HttpErrorRangeParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
      * 
      */
     @InputImport(name="httpErrorRanges")
-    private final @Nullable Input<List<HttpErrorRangeParametersArgs>> httpErrorRanges;
+      private final @Nullable Input<List<HttpErrorRangeParametersArgs>> httpErrorRanges;
 
     public Input<List<HttpErrorRangeParametersArgs>> getHttpErrorRanges() {
         return this.httpErrorRanges == null ? Input.empty() : this.httpErrorRanges;
@@ -37,7 +37,7 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
      * 
      */
     @InputImport(name="responseBasedDetectedErrorTypes")
-    private final @Nullable Input<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes;
+      private final @Nullable Input<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes;
 
     public Input<ResponseBasedDetectedErrorTypes> getResponseBasedDetectedErrorTypes() {
         return this.responseBasedDetectedErrorTypes == null ? Input.empty() : this.responseBasedDetectedErrorTypes;
@@ -48,7 +48,7 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
      * 
      */
     @InputImport(name="responseBasedFailoverThresholdPercentage")
-    private final @Nullable Input<Integer> responseBasedFailoverThresholdPercentage;
+      private final @Nullable Input<Integer> responseBasedFailoverThresholdPercentage;
 
     public Input<Integer> getResponseBasedFailoverThresholdPercentage() {
         return this.responseBasedFailoverThresholdPercentage == null ? Input.empty() : this.responseBasedFailoverThresholdPercentage;
@@ -122,7 +122,6 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
             this.responseBasedFailoverThresholdPercentage = Input.ofNullable(responseBasedFailoverThresholdPercentage);
             return this;
         }
-
         public ResponseBasedOriginErrorDetectionParametersArgs build() {
             return new ResponseBasedOriginErrorDetectionParametersArgs(httpErrorRanges, responseBasedDetectedErrorTypes, responseBasedFailoverThresholdPercentage);
         }

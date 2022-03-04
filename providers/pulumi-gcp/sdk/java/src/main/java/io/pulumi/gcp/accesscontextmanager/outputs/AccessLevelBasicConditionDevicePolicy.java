@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelBasicConditionDevicePolicyOsConstraint;
 import java.lang.Boolean;
 import java.lang.String;
@@ -73,7 +73,7 @@ public final class AccessLevelBasicConditionDevicePolicy {
      * An empty list allows all management levels.
      * Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
      * 
-     */
+    */
     public List<String> getAllowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels == null ? List.of() : this.allowedDeviceManagementLevels;
     }
@@ -82,7 +82,7 @@ public final class AccessLevelBasicConditionDevicePolicy {
      * An empty list allows all statuses.
      * Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
      * 
-     */
+    */
     public List<String> getAllowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses == null ? List.of() : this.allowedEncryptionStatuses;
     }
@@ -91,21 +91,21 @@ public final class AccessLevelBasicConditionDevicePolicy {
      * An empty list allows all types and all versions.
      * Structure is documented below.
      * 
-     */
+    */
     public List<AccessLevelBasicConditionDevicePolicyOsConstraint> getOsConstraints() {
         return this.osConstraints == null ? List.of() : this.osConstraints;
     }
     /**
      * Whether the device needs to be approved by the customer admin.
      * 
-     */
+    */
     public Optional<Boolean> getRequireAdminApproval() {
         return Optional.ofNullable(this.requireAdminApproval);
     }
     /**
      * Whether the device needs to be corp owned.
      * 
-     */
+    */
     public Optional<Boolean> getRequireCorpOwned() {
         return Optional.ofNullable(this.requireCorpOwned);
     }
@@ -113,7 +113,7 @@ public final class AccessLevelBasicConditionDevicePolicy {
      * Whether or not screenlock is required for the DevicePolicy
      * to be true. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getRequireScreenLock() {
         return Optional.ofNullable(this.requireScreenLock);
     }
@@ -177,7 +177,6 @@ public final class AccessLevelBasicConditionDevicePolicy {
             this.requireScreenLock = requireScreenLock;
             return this;
         }
-
         public AccessLevelBasicConditionDevicePolicy build() {
             return new AccessLevelBasicConditionDevicePolicy(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenLock);
         }

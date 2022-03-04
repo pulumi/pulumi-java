@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.storage.k8s.io_v1.outputs.VolumeAttachmentSource;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class VolumeAttachmentSpec {
     /**
      * Attacher indicates the name of the volume driver that MUST handle this request. This is the name returned by GetPluginName().
      * 
-     */
+    */
     public String getAttacher() {
         return this.attacher;
     }
     /**
      * The node that the volume should be attached to.
      * 
-     */
+    */
     public String getNodeName() {
         return this.nodeName;
     }
     /**
      * Source represents the volume that should be attached.
      * 
-     */
+    */
     public VolumeAttachmentSource getSource() {
         return this.source;
     }
@@ -96,7 +96,6 @@ public final class VolumeAttachmentSpec {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public VolumeAttachmentSpec build() {
             return new VolumeAttachmentSpec(attacher, nodeName, source);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupAppEngineGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudFunctionGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudRunGetArgs;
@@ -24,7 +24,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="appEngine")
-    private final @Nullable Input<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine;
+      private final @Nullable Input<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine;
 
     public Input<RegionNetworkEndpointGroupAppEngineGetArgs> getAppEngine() {
         return this.appEngine == null ? Input.empty() : this.appEngine;
@@ -37,7 +37,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cloudFunction")
-    private final @Nullable Input<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction;
+      private final @Nullable Input<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction;
 
     public Input<RegionNetworkEndpointGroupCloudFunctionGetArgs> getCloudFunction() {
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
@@ -50,7 +50,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cloudRun")
-    private final @Nullable Input<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun;
+      private final @Nullable Input<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun;
 
     public Input<RegionNetworkEndpointGroupCloudRunGetArgs> getCloudRun() {
         return this.cloudRun == null ? Input.empty() : this.cloudRun;
@@ -62,7 +62,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -79,7 +79,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -92,7 +92,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkEndpointType")
-    private final @Nullable Input<String> networkEndpointType;
+      private final @Nullable Input<String> networkEndpointType;
 
     public Input<String> getNetworkEndpointType() {
         return this.networkEndpointType == null ? Input.empty() : this.networkEndpointType;
@@ -104,7 +104,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -115,7 +115,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -126,7 +126,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -290,7 +290,6 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
-
         public RegionNetworkEndpointGroupState build() {
             return new RegionNetworkEndpointGroupState(appEngine, cloudFunction, cloudRun, description, name, networkEndpointType, project, region, selfLink);
         }

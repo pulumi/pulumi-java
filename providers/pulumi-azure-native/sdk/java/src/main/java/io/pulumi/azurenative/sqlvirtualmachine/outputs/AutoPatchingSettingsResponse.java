@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -49,28 +49,28 @@ public final class AutoPatchingSettingsResponse {
     /**
      * Day of week to apply the patch on.
      * 
-     */
+    */
     public Optional<String> getDayOfWeek() {
         return Optional.ofNullable(this.dayOfWeek);
     }
     /**
      * Enable or disable autopatching on SQL virtual machine.
      * 
-     */
+    */
     public Optional<Boolean> getEnable() {
         return Optional.ofNullable(this.enable);
     }
     /**
      * Duration of patching.
      * 
-     */
+    */
     public Optional<Integer> getMaintenanceWindowDuration() {
         return Optional.ofNullable(this.maintenanceWindowDuration);
     }
     /**
      * Hour of the day when patching is initiated. Local VM time.
      * 
-     */
+    */
     public Optional<Integer> getMaintenanceWindowStartingHour() {
         return Optional.ofNullable(this.maintenanceWindowStartingHour);
     }
@@ -120,7 +120,6 @@ public final class AutoPatchingSettingsResponse {
             this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
         }
-
         public AutoPatchingSettingsResponse build() {
             return new AutoPatchingSettingsResponse(dayOfWeek, enable, maintenanceWindowDuration, maintenanceWindowStartingHour);
         }

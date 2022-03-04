@@ -7,8 +7,8 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appstream.ApplicationFleetAssociationArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,6 +31,37 @@ public class ApplicationFleetAssociation extends io.pulumi.resources.CustomResou
         return this.fleetName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ApplicationFleetAssociationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.appstream.ApplicationFleetAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.appstream.ApplicationFleetAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ApplicationFleetAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ApplicationFleetAssociation(String name) {
+        this(name, ApplicationFleetAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApplicationFleetAssociation(String name, ApplicationFleetAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class HardwareProfileResponse {
     /**
      * Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
      * 
-     */
+    */
     public Boolean getCpuHotAddEnabled() {
         return this.cpuHotAddEnabled;
     }
     /**
      * Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
      * 
-     */
+    */
     public Boolean getCpuHotRemoveEnabled() {
         return this.cpuHotRemoveEnabled;
     }
     /**
      * Gets or sets a value indicating whether memory can be added while this virtual machine is running.
      * 
-     */
+    */
     public Boolean getMemoryHotAddEnabled() {
         return this.memoryHotAddEnabled;
     }
     /**
      * Gets or sets memory size in MBs for the vm.
      * 
-     */
+    */
     public Optional<Integer> getMemorySizeMB() {
         return Optional.ofNullable(this.memorySizeMB);
     }
     /**
      * Gets or sets the number of vCPUs for the vm.
      * 
-     */
+    */
     public Optional<Integer> getNumCPUs() {
         return Optional.ofNullable(this.numCPUs);
     }
     /**
      * Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
      * 
-     */
+    */
     public Optional<Integer> getNumCoresPerSocket() {
         return Optional.ofNullable(this.numCoresPerSocket);
     }
@@ -161,7 +161,6 @@ public final class HardwareProfileResponse {
             this.numCoresPerSocket = numCoresPerSocket;
             return this;
         }
-
         public HardwareProfileResponse build() {
             return new HardwareProfileResponse(cpuHotAddEnabled, cpuHotRemoveEnabled, memoryHotAddEnabled, memorySizeMB, numCPUs, numCoresPerSocket);
         }

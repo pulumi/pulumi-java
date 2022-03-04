@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceArn")
-    private final @Nullable Input<String> sourceArn;
+      private final @Nullable Input<String> sourceArn;
 
     public Input<String> getSourceArn() {
         return this.sourceArn == null ? Input.empty() : this.sourceArn;
@@ -62,7 +62,6 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
             this.sourceArn = Input.ofNullable(sourceArn);
             return this;
         }
-
         public DatasetMetadataArgs build() {
             return new DatasetMetadataArgs(sourceArn);
         }

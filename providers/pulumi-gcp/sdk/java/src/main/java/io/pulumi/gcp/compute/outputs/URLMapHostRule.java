@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,7 +44,7 @@ public final class URLMapHostRule {
     /**
      * Description of this test case.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -53,7 +53,7 @@ public final class URLMapHostRule {
      * match any string of ([a-z0-9-.]*). In that case, * must be the first character
      * and must be followed in the pattern by either - or ..
      * 
-     */
+    */
     public List<String> getHosts() {
         return this.hosts;
     }
@@ -61,7 +61,7 @@ public final class URLMapHostRule {
      * The name of the PathMatcher to use to match the path portion of the URL if the
      * hostRule matches the URL's host portion.
      * 
-     */
+    */
     public String getPathMatcher() {
         return this.pathMatcher;
     }
@@ -104,7 +104,6 @@ public final class URLMapHostRule {
             this.pathMatcher = Objects.requireNonNull(pathMatcher);
             return this;
         }
-
         public URLMapHostRule build() {
             return new URLMapHostRule(description, hosts, pathMatcher);
         }

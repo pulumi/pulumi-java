@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.IPRuleResponse;
 import io.pulumi.azurenative.containerregistry.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class NetworkRuleSetResponse {
     /**
      * The default action of allow or deny when no other rules match.
      * 
-     */
+    */
     public String getDefaultAction() {
         return this.defaultAction;
     }
     /**
      * The IP ACL rules.
      * 
-     */
+    */
     public List<IPRuleResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
      * The virtual network rules.
      * 
-     */
+    */
     public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }
@@ -99,7 +99,6 @@ public final class NetworkRuleSetResponse {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(defaultAction, ipRules, virtualNetworkRules);
         }

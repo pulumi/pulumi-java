@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -56,35 +56,35 @@ public final class FallbackRoutePropertiesResponse {
     /**
      * The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
      * 
-     */
+    */
     public Optional<String> getCondition() {
         return Optional.ofNullable(this.condition);
     }
     /**
      * The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
      * 
-     */
+    */
     public List<String> getEndpointNames() {
         return this.endpointNames;
     }
     /**
      * Used to specify whether the fallback route is enabled.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The source to which the routing rule is to be applied to. For example, DeviceMessages
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
@@ -141,7 +141,6 @@ public final class FallbackRoutePropertiesResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public FallbackRoutePropertiesResponse build() {
             return new FallbackRoutePropertiesResponse(condition, endpointNames, isEnabled, name, source);
         }

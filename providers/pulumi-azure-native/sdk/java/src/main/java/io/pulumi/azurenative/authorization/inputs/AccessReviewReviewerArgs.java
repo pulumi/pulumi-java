@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable Input<String> principalId;
+      private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -66,7 +66,6 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
             this.principalId = Input.ofNullable(principalId);
             return this;
         }
-
         public AccessReviewReviewerArgs build() {
             return new AccessReviewReviewerArgs(principalId);
         }

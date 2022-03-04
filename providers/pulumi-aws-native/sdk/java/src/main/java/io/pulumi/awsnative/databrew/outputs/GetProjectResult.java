@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.ProjectSample;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class GetProjectResult {
     /**
      * Dataset name
      * 
-     */
+    */
     public Optional<String> getDatasetName() {
         return Optional.ofNullable(this.datasetName);
     }
     /**
      * Recipe name
      * 
-     */
+    */
     public Optional<String> getRecipeName() {
         return Optional.ofNullable(this.recipeName);
     }
     /**
      * Role arn
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * Sample
      * 
-     */
+    */
     public Optional<ProjectSample> getSample() {
         return Optional.ofNullable(this.sample);
     }
@@ -119,7 +119,6 @@ public final class GetProjectResult {
             this.sample = sample;
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(datasetName, recipeName, roleArn, sample);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagKeyIamBindingArgs;
 import io.pulumi.gcp.tags.inputs.TagKeyIamBindingState;
@@ -118,6 +118,37 @@ public class TagKeyIamBinding extends io.pulumi.resources.CustomResource {
         return this.tagKey;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TagKeyIamBindingArgs.Builder a);
+    }
+    private static io.pulumi.gcp.tags.TagKeyIamBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.tags.TagKeyIamBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TagKeyIamBinding(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TagKeyIamBinding(String name) {
+        this(name, TagKeyIamBindingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TagKeyIamBinding(String name, TagKeyIamBindingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

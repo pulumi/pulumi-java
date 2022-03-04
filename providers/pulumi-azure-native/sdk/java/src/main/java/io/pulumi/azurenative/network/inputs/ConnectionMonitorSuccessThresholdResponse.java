@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConnectionMonitorSuccessThresholdResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="checksFailedPercent")
-    private final @Nullable Integer checksFailedPercent;
+      private final @Nullable Integer checksFailedPercent;
 
     public Optional<Integer> getChecksFailedPercent() {
         return this.checksFailedPercent == null ? Optional.empty() : Optional.ofNullable(this.checksFailedPercent);
@@ -35,7 +35,7 @@ public final class ConnectionMonitorSuccessThresholdResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="roundTripTimeMs")
-    private final @Nullable Double roundTripTimeMs;
+      private final @Nullable Double roundTripTimeMs;
 
     public Optional<Double> getRoundTripTimeMs() {
         return this.roundTripTimeMs == null ? Optional.empty() : Optional.ofNullable(this.roundTripTimeMs);
@@ -84,7 +84,6 @@ public final class ConnectionMonitorSuccessThresholdResponse extends io.pulumi.r
             this.roundTripTimeMs = roundTripTimeMs;
             return this;
         }
-
         public ConnectionMonitorSuccessThresholdResponse build() {
             return new ConnectionMonitorSuccessThresholdResponse(checksFailedPercent, roundTripTimeMs);
         }

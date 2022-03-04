@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EphemeralStorageConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="localSsdCount")
-    private final @Nullable Input<Integer> localSsdCount;
+      private final @Nullable Input<Integer> localSsdCount;
 
     public Input<Integer> getLocalSsdCount() {
         return this.localSsdCount == null ? Input.empty() : this.localSsdCount;
@@ -66,7 +66,6 @@ public final class EphemeralStorageConfigArgs extends io.pulumi.resources.Resour
             this.localSsdCount = Input.ofNullable(localSsdCount);
             return this;
         }
-
         public EphemeralStorageConfigArgs build() {
             return new EphemeralStorageConfigArgs(localSsdCount);
         }

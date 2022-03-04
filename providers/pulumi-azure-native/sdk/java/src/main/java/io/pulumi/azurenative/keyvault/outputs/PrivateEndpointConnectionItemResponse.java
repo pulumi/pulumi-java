@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.keyvault.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,35 +56,35 @@ public final class PrivateEndpointConnectionItemResponse {
     /**
      * Modified whenever there is a change in the state of private endpoint connection.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Id of private endpoint connection.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Properties of the private endpoint object.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Approval state of the private link connection.
      * 
-     */
+    */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -141,7 +141,6 @@ public final class PrivateEndpointConnectionItemResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionItemResponse build() {
             return new PrivateEndpointConnectionItemResponse(etag, id, privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

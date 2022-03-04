@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetDeltaTime;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class DatasetFilter {
             this.deltaTime = deltaTime;
             return this;
         }
-
         public DatasetFilter build() {
             return new DatasetFilter(deltaTime);
         }

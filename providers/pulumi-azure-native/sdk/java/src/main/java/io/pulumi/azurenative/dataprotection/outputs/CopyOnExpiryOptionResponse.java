@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class CopyOnExpiryOptionResponse {
      * Type of the specific object - used for deserializing
      * Expected value is 'CopyOnExpiryOption'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
@@ -54,7 +54,6 @@ public final class CopyOnExpiryOptionResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public CopyOnExpiryOptionResponse build() {
             return new CopyOnExpiryOptionResponse(objectType);
         }

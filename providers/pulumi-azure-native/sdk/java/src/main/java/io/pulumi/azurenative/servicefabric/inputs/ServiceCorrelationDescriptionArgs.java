@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 import io.pulumi.azurenative.servicefabric.enums.ServiceCorrelationScheme;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scheme", required=true)
-    private final Input<Either<String,ServiceCorrelationScheme>> scheme;
+      private final Input<Either<String,ServiceCorrelationScheme>> scheme;
 
     public Input<Either<String,ServiceCorrelationScheme>> getScheme() {
         return this.scheme;
@@ -35,7 +35,7 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -94,7 +94,6 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public ServiceCorrelationDescriptionArgs build() {
             return new ServiceCorrelationDescriptionArgs(scheme, serviceName);
         }

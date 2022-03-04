@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ServiceAccountResponse {
     /**
      * Email address of the service account.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The list of scopes to be made available for this service account.
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes;
     }
@@ -75,7 +75,6 @@ public final class ServiceAccountResponse {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public ServiceAccountResponse build() {
             return new ServiceAccountResponse(email, scopes);
         }

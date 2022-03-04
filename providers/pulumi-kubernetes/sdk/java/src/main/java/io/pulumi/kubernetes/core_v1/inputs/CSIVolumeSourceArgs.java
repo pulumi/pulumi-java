@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="driver", required=true)
-    private final Input<String> driver;
+      private final Input<String> driver;
 
     public Input<String> getDriver() {
         return this.driver;
@@ -37,7 +37,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+      private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -48,7 +48,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="nodePublishSecretRef")
-    private final @Nullable Input<LocalObjectReferenceArgs> nodePublishSecretRef;
+      private final @Nullable Input<LocalObjectReferenceArgs> nodePublishSecretRef;
 
     public Input<LocalObjectReferenceArgs> getNodePublishSecretRef() {
         return this.nodePublishSecretRef == null ? Input.empty() : this.nodePublishSecretRef;
@@ -59,7 +59,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -70,7 +70,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="volumeAttributes")
-    private final @Nullable Input<Map<String,String>> volumeAttributes;
+      private final @Nullable Input<Map<String,String>> volumeAttributes;
 
     public Input<Map<String,String>> getVolumeAttributes() {
         return this.volumeAttributes == null ? Input.empty() : this.volumeAttributes;
@@ -174,7 +174,6 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             this.volumeAttributes = Input.ofNullable(volumeAttributes);
             return this;
         }
-
         public CSIVolumeSourceArgs build() {
             return new CSIVolumeSourceArgs(driver, fsType, nodePublishSecretRef, readOnly, volumeAttributes);
         }

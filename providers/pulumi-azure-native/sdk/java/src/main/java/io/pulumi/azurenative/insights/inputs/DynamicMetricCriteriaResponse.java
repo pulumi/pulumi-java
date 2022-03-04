@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.DynamicThresholdFailingPeriodsResponse;
 import io.pulumi.azurenative.insights.inputs.MetricDimensionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="alertSensitivity", required=true)
-    private final String alertSensitivity;
+      private final String alertSensitivity;
 
     public String getAlertSensitivity() {
         return this.alertSensitivity;
@@ -39,7 +39,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="criterionType", required=true)
-    private final String criterionType;
+      private final String criterionType;
 
     public String getCriterionType() {
         return this.criterionType;
@@ -50,7 +50,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable List<MetricDimensionResponse> dimensions;
+      private final @Nullable List<MetricDimensionResponse> dimensions;
 
     public List<MetricDimensionResponse> getDimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
@@ -61,7 +61,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="failingPeriods", required=true)
-    private final DynamicThresholdFailingPeriodsResponse failingPeriods;
+      private final DynamicThresholdFailingPeriodsResponse failingPeriods;
 
     public DynamicThresholdFailingPeriodsResponse getFailingPeriods() {
         return this.failingPeriods;
@@ -72,7 +72,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="ignoreDataBefore")
-    private final @Nullable String ignoreDataBefore;
+      private final @Nullable String ignoreDataBefore;
 
     public Optional<String> getIgnoreDataBefore() {
         return this.ignoreDataBefore == null ? Optional.empty() : Optional.ofNullable(this.ignoreDataBefore);
@@ -83,7 +83,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final String metricName;
+      private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
@@ -94,7 +94,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="metricNamespace")
-    private final @Nullable String metricNamespace;
+      private final @Nullable String metricNamespace;
 
     public Optional<String> getMetricNamespace() {
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
@@ -105,7 +105,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -116,7 +116,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="operator", required=true)
-    private final String operator;
+      private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -127,7 +127,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="skipMetricValidation")
-    private final @Nullable Boolean skipMetricValidation;
+      private final @Nullable Boolean skipMetricValidation;
 
     public Optional<Boolean> getSkipMetricValidation() {
         return this.skipMetricValidation == null ? Optional.empty() : Optional.ofNullable(this.skipMetricValidation);
@@ -138,7 +138,7 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="timeAggregation", required=true)
-    private final String timeAggregation;
+      private final String timeAggregation;
 
     public String getTimeAggregation() {
         return this.timeAggregation;
@@ -277,7 +277,6 @@ public final class DynamicMetricCriteriaResponse extends io.pulumi.resources.Inv
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
-
         public DynamicMetricCriteriaResponse build() {
             return new DynamicMetricCriteriaResponse(alertSensitivity, criterionType, dimensions, failingPeriods, ignoreDataBefore, metricName, metricNamespace, name, operator, skipMetricValidation, timeAggregation);
         }

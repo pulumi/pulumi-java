@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.NfsAccessPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class CacheSecuritySettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="accessPolicies")
-    private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;
+      private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;
 
     public List<NfsAccessPolicyResponse> getAccessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
@@ -62,7 +62,6 @@ public final class CacheSecuritySettingsResponse extends io.pulumi.resources.Inv
             this.accessPolicies = accessPolicies;
             return this;
         }
-
         public CacheSecuritySettingsResponse build() {
             return new CacheSecuritySettingsResponse(accessPolicies);
         }

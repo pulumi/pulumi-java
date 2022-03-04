@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybriddata.inputs;
 
 import io.pulumi.azurenative.hybriddata.enums.SupportedAlgorithm;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final Input<SupportedAlgorithm> algorithm;
+      private final Input<SupportedAlgorithm> algorithm;
 
     public Input<SupportedAlgorithm> getAlgorithm() {
         return this.algorithm;
@@ -34,7 +34,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyIdentifier", required=true)
-    private final Input<String> keyIdentifier;
+      private final Input<String> keyIdentifier;
 
     public Input<String> getKeyIdentifier() {
         return this.keyIdentifier;
@@ -45,7 +45,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyValue", required=true)
-    private final Input<String> keyValue;
+      private final Input<String> keyValue;
 
     public Input<String> getKeyValue() {
         return this.keyValue;
@@ -119,7 +119,6 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
             this.keyValue = Input.of(Objects.requireNonNull(keyValue));
             return this;
         }
-
         public CustomerSecretArgs build() {
             return new CustomerSecretArgs(algorithm, keyIdentifier, keyValue);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCredentialResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeviceCredentialResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="expirationTime", required=true)
-    private final String expirationTime;
+      private final String expirationTime;
 
     public String getExpirationTime() {
         return this.expirationTime;
@@ -33,7 +33,7 @@ public final class DeviceCredentialResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final PublicKeyCredentialResponse publicKey;
+      private final PublicKeyCredentialResponse publicKey;
 
     public PublicKeyCredentialResponse getPublicKey() {
         return this.publicKey;
@@ -82,7 +82,6 @@ public final class DeviceCredentialResponse extends io.pulumi.resources.InvokeAr
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public DeviceCredentialResponse build() {
             return new DeviceCredentialResponse(expirationTime, publicKey);
         }

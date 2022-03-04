@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ClusterAddonsConfigHorizontalPodAutoscaling {
      * The status of the Istio addon, which makes it easy to set up Istio for services in a
      * cluster. It is disabled by default. Set `disabled = false` to enable.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
@@ -54,7 +54,6 @@ public final class ClusterAddonsConfigHorizontalPodAutoscaling {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public ClusterAddonsConfigHorizontalPodAutoscaling build() {
             return new ClusterAddonsConfigHorizontalPodAutoscaling(disabled);
         }

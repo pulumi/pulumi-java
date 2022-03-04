@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class MetadataItemResponse {
     /**
      * Metadata item key name. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Metadata item value. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class MetadataItemResponse {
             this.value = value;
             return this;
         }
-
         public MetadataItemResponse build() {
             return new MetadataItemResponse(name, value);
         }

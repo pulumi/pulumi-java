@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
     /**
      * Target bytes read per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetReadBytesPerSecond() {
         return Optional.ofNullable(this.targetReadBytesPerSecond);
     }
     /**
      * Target ops read per seconds.
      * 
-     */
+    */
     public Optional<Integer> getTargetReadOpsPerSecond() {
         return Optional.ofNullable(this.targetReadOpsPerSecond);
     }
     /**
      * Target bytes written per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetWriteBytesPerSecond() {
         return Optional.ofNullable(this.targetWriteBytesPerSecond);
     }
     /**
      * Target ops written per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetWriteOpsPerSecond() {
         return Optional.ofNullable(this.targetWriteOpsPerSecond);
     }
@@ -118,7 +118,6 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
             this.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingDiskUtilization build() {
             return new FlexibleAppVersionAutomaticScalingDiskUtilization(targetReadBytesPerSecond, targetReadOpsPerSecond, targetWriteBytesPerSecond, targetWriteOpsPerSecond);
         }

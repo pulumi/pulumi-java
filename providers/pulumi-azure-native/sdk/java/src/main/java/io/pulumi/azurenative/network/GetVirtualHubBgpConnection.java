@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetVirtualHubBgpConnectionArgs;
 import io.pulumi.azurenative.network.outputs.GetVirtualHubBgpConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualHubBgpConnection {
-/**
- * Virtual Appliance Site resource.
+    private GetVirtualHubBgpConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualHubBgpConnectionArgs.Builder a);
+    }
+    private static GetVirtualHubBgpConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualHubBgpConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Virtual Appliance Site resource.
  * API Version: 2020-11-01.
  * 
- *
- * Virtual Appliance Site resource.
+     *
+     * Virtual Appliance Site resource.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualHubBgpConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Virtual Appliance Site resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Virtual Appliance Site resource.
+     * 
+     */
     public static CompletableFuture<GetVirtualHubBgpConnectionResult> invokeAsync(GetVirtualHubBgpConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHubBgpConnection", TypeShape.of(GetVirtualHubBgpConnectionResult.class), args == null ? GetVirtualHubBgpConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

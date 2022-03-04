@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressBackendArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="backend", required=true)
-    private final Input<IngressBackendArgs> backend;
+      private final Input<IngressBackendArgs> backend;
 
     public Input<IngressBackendArgs> getBackend() {
         return this.backend;
@@ -35,7 +35,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -56,7 +56,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pathType", required=true)
-    private final Input<String> pathType;
+      private final Input<String> pathType;
 
     public Input<String> getPathType() {
         return this.pathType;
@@ -130,7 +130,6 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
             this.pathType = Input.of(Objects.requireNonNull(pathType));
             return this;
         }
-
         public HTTPIngressPathArgs build() {
             return new HTTPIngressPathArgs(backend, path, pathType);
         }

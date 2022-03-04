@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1.inputs.SslSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -27,14 +27,14 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
     }
 
     @InputImport(name="overrideStrategy")
-    private final @Nullable Input<String> overrideStrategy;
+      private final @Nullable Input<String> overrideStrategy;
 
     public Input<String> getOverrideStrategy() {
         return this.overrideStrategy == null ? Input.empty() : this.overrideStrategy;
@@ -45,7 +45,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslSettings")
-    private final @Nullable Input<SslSettingsArgs> sslSettings;
+      private final @Nullable Input<SslSettingsArgs> sslSettings;
 
     public Input<SslSettingsArgs> getSslSettings() {
         return this.sslSettings == null ? Input.empty() : this.sslSettings;
@@ -134,7 +134,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.sslSettings = Input.ofNullable(sslSettings);
             return this;
         }
-
         public DomainMappingArgs build() {
             return new DomainMappingArgs(appId, id, overrideStrategy, sslSettings);
         }

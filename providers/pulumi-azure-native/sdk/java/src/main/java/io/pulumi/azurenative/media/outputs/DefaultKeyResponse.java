@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DefaultKeyResponse {
     /**
      * Label can be used to specify Content Key when creating a Streaming Locator
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Policy used by Default Key
      * 
-     */
+    */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -76,7 +76,6 @@ public final class DefaultKeyResponse {
             this.policyName = policyName;
             return this;
         }
-
         public DefaultKeyResponse build() {
             return new DefaultKeyResponse(label, policyName);
         }

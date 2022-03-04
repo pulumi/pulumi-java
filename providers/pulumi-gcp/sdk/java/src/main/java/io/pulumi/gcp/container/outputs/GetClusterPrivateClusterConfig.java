@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterPrivateClusterConfigMasterGlobalAccessConfig;
 import java.lang.Boolean;
 import java.lang.String;
@@ -126,7 +126,6 @@ public final class GetClusterPrivateClusterConfig {
             this.publicEndpoint = Objects.requireNonNull(publicEndpoint);
             return this;
         }
-
         public GetClusterPrivateClusterConfig build() {
             return new GetClusterPrivateClusterConfig(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfigs, masterIpv4CidrBlock, peeringName, privateEndpoint, publicEndpoint);
         }

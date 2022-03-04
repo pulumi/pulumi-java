@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.GroupContractPropertiesResponse;
 import io.pulumi.azurenative.apimanagement.outputs.UserIdentityContractResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -99,77 +99,77 @@ public final class GetUserResult {
     /**
      * Email address.
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * First name.
      * 
-     */
+    */
     public Optional<String> getFirstName() {
         return Optional.ofNullable(this.firstName);
     }
     /**
      * Collection of groups user is part of.
      * 
-     */
+    */
     public List<GroupContractPropertiesResponse> getGroups() {
         return this.groups;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Collection of user identities.
      * 
-     */
+    */
     public List<UserIdentityContractResponse> getIdentities() {
         return this.identities == null ? List.of() : this.identities;
     }
     /**
      * Last name.
      * 
-     */
+    */
     public Optional<String> getLastName() {
         return Optional.ofNullable(this.lastName);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional note about a user set by the administrator.
      * 
-     */
+    */
     public Optional<String> getNote() {
         return Optional.ofNullable(this.note);
     }
     /**
      * Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-     */
+    */
     public Optional<String> getRegistrationDate() {
         return Optional.ofNullable(this.registrationDate);
     }
     /**
      * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -268,7 +268,6 @@ public final class GetUserResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(email, firstName, groups, id, identities, lastName, name, note, registrationDate, state, type);
         }

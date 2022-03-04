@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodAffinityTerm;
 import java.lang.Integer;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class WeightedPodAffinityTerm {
     /**
      * Required. A pod affinity term, associated with the corresponding weight.
      * 
-     */
+    */
     public PodAffinityTerm getPodAffinityTerm() {
         return this.podAffinityTerm;
     }
     /**
      * weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
      * 
-     */
+    */
     public Integer getWeight() {
         return this.weight;
     }
@@ -75,7 +75,6 @@ public final class WeightedPodAffinityTerm {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public WeightedPodAffinityTerm build() {
             return new WeightedPodAffinityTerm(podAffinityTerm, weight);
         }

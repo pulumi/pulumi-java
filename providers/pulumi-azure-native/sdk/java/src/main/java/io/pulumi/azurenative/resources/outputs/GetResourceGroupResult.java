@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.ResourceGroupPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -70,49 +70,49 @@ public final class GetResourceGroupResult {
     /**
      * The ID of the resource group.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The ID of the resource that manages this resource group.
      * 
-     */
+    */
     public Optional<String> getManagedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
      * The name of the resource group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource group properties.
      * 
-     */
+    */
     public ResourceGroupPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The tags attached to the resource group.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource group.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -183,7 +183,6 @@ public final class GetResourceGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceGroupResult build() {
             return new GetResourceGroupResult(id, location, managedBy, name, properties, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -32,7 +32,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceDisk", required=true)
-    private final String sourceDisk;
+      private final String sourceDisk;
 
     public String getSourceDisk() {
         return this.sourceDisk;
@@ -81,7 +81,6 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public AttachedDiskResponse build() {
             return new AttachedDiskResponse(mode, sourceDisk);
         }

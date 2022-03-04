@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class NetworkInterfaceDnsSettingsResponse {
     /**
      * If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
      * 
-     */
+    */
     public List<String> getAppliedDnsServers() {
         return this.appliedDnsServers;
     }
     /**
      * List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
      * 
-     */
+    */
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
      * Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
      * 
-     */
+    */
     public Optional<String> getInternalDnsNameLabel() {
         return Optional.ofNullable(this.internalDnsNameLabel);
     }
     /**
      * Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
      * 
-     */
+    */
     public String getInternalDomainNameSuffix() {
         return this.internalDomainNameSuffix;
     }
     /**
      * Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
      * 
-     */
+    */
     public String getInternalFqdn() {
         return this.internalFqdn;
     }
@@ -140,7 +140,6 @@ public final class NetworkInterfaceDnsSettingsResponse {
             this.internalFqdn = Objects.requireNonNull(internalFqdn);
             return this;
         }
-
         public NetworkInterfaceDnsSettingsResponse build() {
             return new NetworkInterfaceDnsSettingsResponse(appliedDnsServers, dnsServers, internalDnsNameLabel, internalDomainNameSuffix, internalFqdn);
         }

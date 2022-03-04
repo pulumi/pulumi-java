@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class LinkedInfoResponse {
     /**
      * LinkedId id.
      * 
-     */
+    */
     public Optional<String> getLinkedId() {
         return Optional.ofNullable(this.linkedId);
     }
     /**
      * Linked resource name.
      * 
-     */
+    */
     public Optional<String> getLinkedResourceName() {
         return Optional.ofNullable(this.linkedResourceName);
     }
     /**
      * Datastore origin
      * 
-     */
+    */
     public Optional<String> getOrigin() {
         return Optional.ofNullable(this.origin);
     }
@@ -97,7 +97,6 @@ public final class LinkedInfoResponse {
             this.origin = origin;
             return this;
         }
-
         public LinkedInfoResponse build() {
             return new LinkedInfoResponse(linkedId, linkedResourceName, origin);
         }

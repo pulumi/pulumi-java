@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="hostname", required=true)
-    private final String hostname;
+      private final String hostname;
 
     public String getHostname() {
         return this.hostname;
@@ -33,7 +33,7 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -44,7 +44,7 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -55,7 +55,7 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="privateKey", required=true)
-    private final String privateKey;
+      private final String privateKey;
 
     public String getPrivateKey() {
         return this.privateKey;
@@ -66,7 +66,7 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -145,7 +145,6 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ForwardSshTunnelConnectivityResponse build() {
             return new ForwardSshTunnelConnectivityResponse(hostname, password, port, privateKey, username);
         }

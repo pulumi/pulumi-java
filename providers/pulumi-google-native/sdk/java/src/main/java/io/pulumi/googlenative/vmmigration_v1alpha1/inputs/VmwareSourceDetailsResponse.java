@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VmwareSourceDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -32,7 +32,7 @@ public final class VmwareSourceDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="thumbprint", required=true)
-    private final String thumbprint;
+      private final String thumbprint;
 
     public String getThumbprint() {
         return this.thumbprint;
@@ -43,7 +43,7 @@ public final class VmwareSourceDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -54,7 +54,7 @@ public final class VmwareSourceDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="vcenterIp", required=true)
-    private final String vcenterIp;
+      private final String vcenterIp;
 
     public String getVcenterIp() {
         return this.vcenterIp;
@@ -123,7 +123,6 @@ public final class VmwareSourceDetailsResponse extends io.pulumi.resources.Invok
             this.vcenterIp = Objects.requireNonNull(vcenterIp);
             return this;
         }
-
         public VmwareSourceDetailsResponse build() {
             return new VmwareSourceDetailsResponse(password, thumbprint, username, vcenterIp);
         }

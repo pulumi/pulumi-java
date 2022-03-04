@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<String>> fields;
+      private final @Nullable Input<List<String>> fields;
 
     public Input<List<String>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -63,7 +63,6 @@ public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
             this.fields = Input.ofNullable(fields);
             return this;
         }
-
         public ClusteringArgs build() {
             return new ClusteringArgs(fields);
         }

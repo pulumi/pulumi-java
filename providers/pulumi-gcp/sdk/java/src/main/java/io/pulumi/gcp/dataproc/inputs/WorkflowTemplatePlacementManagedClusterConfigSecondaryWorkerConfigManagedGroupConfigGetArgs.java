@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     public static final WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs();
 
     @InputImport(name="instanceGroupManagerName")
-    private final @Nullable Input<String> instanceGroupManagerName;
+      private final @Nullable Input<String> instanceGroupManagerName;
 
     public Input<String> getInstanceGroupManagerName() {
         return this.instanceGroupManagerName == null ? Input.empty() : this.instanceGroupManagerName;
     }
 
     @InputImport(name="instanceTemplateName")
-    private final @Nullable Input<String> instanceTemplateName;
+      private final @Nullable Input<String> instanceTemplateName;
 
     public Input<String> getInstanceTemplateName() {
         return this.instanceTemplateName == null ? Input.empty() : this.instanceTemplateName;
@@ -81,7 +81,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             this.instanceTemplateName = Input.ofNullable(instanceTemplateName);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs(instanceGroupManagerName, instanceTemplateName);
         }

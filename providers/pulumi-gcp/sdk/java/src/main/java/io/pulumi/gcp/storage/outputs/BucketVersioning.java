@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BucketVersioning {
     /**
      * While set to `true`, versioning is fully enabled for this bucket.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -52,7 +52,6 @@ public final class BucketVersioning {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public BucketVersioning build() {
             return new BucketVersioning(enabled);
         }

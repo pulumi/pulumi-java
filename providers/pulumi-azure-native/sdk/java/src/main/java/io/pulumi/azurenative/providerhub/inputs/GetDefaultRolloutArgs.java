@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDefaultRolloutArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final String providerNamespace;
+      private final String providerNamespace;
 
     public String getProviderNamespace() {
         return this.providerNamespace;
@@ -28,7 +28,7 @@ public final class GetDefaultRolloutArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rolloutName", required=true)
-    private final String rolloutName;
+      private final String rolloutName;
 
     public String getRolloutName() {
         return this.rolloutName;
@@ -77,7 +77,6 @@ public final class GetDefaultRolloutArgs extends io.pulumi.resources.InvokeArgs 
             this.rolloutName = Objects.requireNonNull(rolloutName);
             return this;
         }
-
         public GetDefaultRolloutArgs build() {
             return new GetDefaultRolloutArgs(providerNamespace, rolloutName);
         }

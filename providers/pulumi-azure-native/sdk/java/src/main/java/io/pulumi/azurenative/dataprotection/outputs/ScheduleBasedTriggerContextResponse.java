@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.BackupScheduleResponse;
 import io.pulumi.azurenative.dataprotection.outputs.TaggingCriteriaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class ScheduleBasedTriggerContextResponse {
      * Type of the specific object - used for deserializing
      * Expected value is 'ScheduleBasedTriggerContext'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * Schedule for this backup
      * 
-     */
+    */
     public BackupScheduleResponse getSchedule() {
         return this.schedule;
     }
     /**
      * List of tags that can be applicable for given schedule.
      * 
-     */
+    */
     public List<TaggingCriteriaResponse> getTaggingCriteria() {
         return this.taggingCriteria;
     }
@@ -100,7 +100,6 @@ public final class ScheduleBasedTriggerContextResponse {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
-
         public ScheduleBasedTriggerContextResponse build() {
             return new ScheduleBasedTriggerContextResponse(objectType, schedule, taggingCriteria);
         }

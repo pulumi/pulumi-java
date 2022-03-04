@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetCarrierGatewayArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="carrierGatewayId", required=true)
-    private final String carrierGatewayId;
+      private final String carrierGatewayId;
 
     public String getCarrierGatewayId() {
         return this.carrierGatewayId;
@@ -55,7 +55,6 @@ public final class GetCarrierGatewayArgs extends io.pulumi.resources.InvokeArgs 
             this.carrierGatewayId = Objects.requireNonNull(carrierGatewayId);
             return this;
         }
-
         public GetCarrierGatewayArgs build() {
             return new GetCarrierGatewayArgs(carrierGatewayId);
         }

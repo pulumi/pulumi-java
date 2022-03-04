@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,7 +33,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
      * `projects/{PROJECT_ID}/locations/{REGION}/keyRings/
      * {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
      * 
-     */
+    */
     public Optional<String> getKmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
@@ -62,7 +62,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig build() {
             return new RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig(kmsKey);
         }

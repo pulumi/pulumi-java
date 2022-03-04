@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,7 +49,7 @@ public final class GetResourceDefaultVersionResult {
     /**
      * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -58,21 +58,21 @@ public final class GetResourceDefaultVersionResult {
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
-     */
+    */
     public Optional<String> getTypeName() {
         return Optional.ofNullable(this.typeName);
     }
     /**
      * The Amazon Resource Name (ARN) of the type version.
      * 
-     */
+    */
     public Optional<String> getTypeVersionArn() {
         return Optional.ofNullable(this.typeVersionArn);
     }
     /**
      * The ID of an existing version of the resource to set as the default.
      * 
-     */
+    */
     public Optional<String> getVersionId() {
         return Optional.ofNullable(this.versionId);
     }
@@ -122,7 +122,6 @@ public final class GetResourceDefaultVersionResult {
             this.versionId = versionId;
             return this;
         }
-
         public GetResourceDefaultVersionResult build() {
             return new GetResourceDefaultVersionResult(arn, typeName, typeVersionArn, versionId);
         }

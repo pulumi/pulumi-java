@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetApiIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiIamPolicyArgs.Builder a);
+    }
+    private static GetApiIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetApiIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetApiIamPolicyResult> invokeAsync(GetApiIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigateway/v1:getApiIamPolicy", TypeShape.of(GetApiIamPolicyResult.class), args == null ? GetApiIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

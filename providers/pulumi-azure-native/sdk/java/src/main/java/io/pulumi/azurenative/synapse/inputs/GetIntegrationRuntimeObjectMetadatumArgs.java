@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="integrationRuntimeName", required=true)
-    private final String integrationRuntimeName;
+      private final String integrationRuntimeName;
 
     public String getIntegrationRuntimeName() {
         return this.integrationRuntimeName;
@@ -30,7 +30,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="metadataPath")
-    private final @Nullable String metadataPath;
+      private final @Nullable String metadataPath;
 
     public Optional<String> getMetadataPath() {
         return this.metadataPath == null ? Optional.empty() : Optional.ofNullable(this.metadataPath);
@@ -41,7 +41,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -121,7 +121,6 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetIntegrationRuntimeObjectMetadatumArgs build() {
             return new GetIntegrationRuntimeObjectMetadatumArgs(integrationRuntimeName, metadataPath, resourceGroupName, workspaceName);
         }

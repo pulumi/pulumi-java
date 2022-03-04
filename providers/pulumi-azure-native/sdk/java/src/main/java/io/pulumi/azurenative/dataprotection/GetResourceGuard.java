@@ -6,17 +6,33 @@ package io.pulumi.azurenative.dataprotection;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dataprotection.inputs.GetResourceGuardArgs;
 import io.pulumi.azurenative.dataprotection.outputs.GetResourceGuardResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceGuard {
-/**
- * API Version: 2021-10-01-preview.
+    private GetResourceGuard() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceGuardArgs.Builder a);
+    }
+    private static GetResourceGuardArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceGuardArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2021-10-01-preview.
  * 
- */
+     */
+    public static CompletableFuture<GetResourceGuardResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2021-10-01-preview.
+     * 
+     */
     public static CompletableFuture<GetResourceGuardResult> invokeAsync(GetResourceGuardArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dataprotection:getResourceGuard", TypeShape.of(GetResourceGuardResult.class), args == null ? GetResourceGuardArgs.Empty : args, Utilities.withVersion(options));
     }

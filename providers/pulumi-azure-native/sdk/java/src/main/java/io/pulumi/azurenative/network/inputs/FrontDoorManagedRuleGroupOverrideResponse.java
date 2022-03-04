@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FrontDoorManagedRuleOverrideResponse;
 import io.pulumi.azurenative.network.inputs.ManagedRuleExclusionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="exclusions")
-    private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
+      private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
     public List<ManagedRuleExclusionResponse> getExclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
@@ -37,7 +37,7 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="ruleGroupName", required=true)
-    private final String ruleGroupName;
+      private final String ruleGroupName;
 
     public String getRuleGroupName() {
         return this.ruleGroupName;
@@ -48,7 +48,7 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable List<FrontDoorManagedRuleOverrideResponse> rules;
+      private final @Nullable List<FrontDoorManagedRuleOverrideResponse> rules;
 
     public List<FrontDoorManagedRuleOverrideResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
@@ -107,7 +107,6 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends io.pulumi.r
             this.rules = rules;
             return this;
         }
-
         public FrontDoorManagedRuleGroupOverrideResponse build() {
             return new FrontDoorManagedRuleGroupOverrideResponse(exclusions, ruleGroupName, rules);
         }

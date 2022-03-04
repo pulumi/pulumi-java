@@ -6,7 +6,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 import io.pulumi.azurenative.virtualmachineimages.enums.SharedImageStorageAccountType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="artifactTags")
-    private final @Nullable Input<Map<String,String>> artifactTags;
+      private final @Nullable Input<Map<String,String>> artifactTags;
 
     public Input<Map<String,String>> getArtifactTags() {
         return this.artifactTags == null ? Input.empty() : this.artifactTags;
@@ -39,7 +39,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="excludeFromLatest")
-    private final @Nullable Input<Boolean> excludeFromLatest;
+      private final @Nullable Input<Boolean> excludeFromLatest;
 
     public Input<Boolean> getExcludeFromLatest() {
         return this.excludeFromLatest == null ? Input.empty() : this.excludeFromLatest;
@@ -50,7 +50,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="galleryImageId", required=true)
-    private final Input<String> galleryImageId;
+      private final Input<String> galleryImageId;
 
     public Input<String> getGalleryImageId() {
         return this.galleryImageId;
@@ -61,7 +61,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="replicationRegions", required=true)
-    private final Input<List<String>> replicationRegions;
+      private final Input<List<String>> replicationRegions;
 
     public Input<List<String>> getReplicationRegions() {
         return this.replicationRegions;
@@ -72,7 +72,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="runOutputName", required=true)
-    private final Input<String> runOutputName;
+      private final Input<String> runOutputName;
 
     public Input<String> getRunOutputName() {
         return this.runOutputName;
@@ -83,7 +83,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="storageAccountType")
-    private final @Nullable Input<Either<String,SharedImageStorageAccountType>> storageAccountType;
+      private final @Nullable Input<Either<String,SharedImageStorageAccountType>> storageAccountType;
 
     public Input<Either<String,SharedImageStorageAccountType>> getStorageAccountType() {
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
@@ -95,7 +95,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -229,7 +229,6 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ImageTemplateSharedImageDistributorArgs build() {
             return new ImageTemplateSharedImageDistributorArgs(artifactTags, excludeFromLatest, galleryImageId, replicationRegions, runOutputName, storageAccountType, type);
         }

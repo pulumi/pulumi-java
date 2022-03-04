@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.settings.k8s.io_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import io.pulumi.kubernetes.settings.k8s.io_v1alpha1.PodPresetListArgs;
@@ -78,6 +78,37 @@ public class PodPresetList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PodPresetListArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.settings.k8s.io_v1alpha1.PodPresetListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.settings.k8s.io_v1alpha1.PodPresetListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PodPresetList(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PodPresetList(String name) {
+        this(name, PodPresetListArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PodPresetList(String name, PodPresetListArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

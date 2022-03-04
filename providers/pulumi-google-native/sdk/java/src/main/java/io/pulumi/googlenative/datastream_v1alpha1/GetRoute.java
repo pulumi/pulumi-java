@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoute {
-/**
- * Use this method to get details about a route.
+    private GetRoute() {}
+    public interface BuilderApplicator {
+        public void apply(GetRouteArgs.Builder a);
+    }
+    private static GetRouteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRouteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this method to get details about a route.
  * 
- */
+     */
+    public static CompletableFuture<GetRouteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this method to get details about a route.
+     * 
+     */
     public static CompletableFuture<GetRouteResult> invokeAsync(GetRouteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1alpha1:getRoute", TypeShape.of(GetRouteResult.class), args == null ? GetRouteArgs.Empty : args, Utilities.withVersion(options));
     }

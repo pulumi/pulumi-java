@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.InputDefinition;
 import io.pulumi.awsnative.iotevents.outputs.InputTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,7 +44,7 @@ public final class GetInputResult {
     /**
      * A brief description of the input.
      * 
-     */
+    */
     public Optional<String> getInputDescription() {
         return Optional.ofNullable(this.inputDescription);
     }
@@ -53,7 +53,7 @@ public final class GetInputResult {
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
-     */
+    */
     public List<InputTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -96,7 +96,6 @@ public final class GetInputResult {
             this.tags = tags;
             return this;
         }
-
         public GetInputResult build() {
             return new GetInputResult(inputDefinition, inputDescription, tags);
         }

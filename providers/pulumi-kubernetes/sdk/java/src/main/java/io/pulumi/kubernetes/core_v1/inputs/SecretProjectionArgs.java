@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.KeyToPathArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class SecretProjectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<KeyToPathArgs>> items;
+      private final @Nullable Input<List<KeyToPathArgs>> items;
 
     public Input<List<KeyToPathArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -39,7 +39,7 @@ public final class SecretProjectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -50,7 +50,7 @@ public final class SecretProjectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="optional")
-    private final @Nullable Input<Boolean> optional;
+      private final @Nullable Input<Boolean> optional;
 
     public Input<Boolean> getOptional() {
         return this.optional == null ? Input.empty() : this.optional;
@@ -124,7 +124,6 @@ public final class SecretProjectionArgs extends io.pulumi.resources.ResourceArgs
             this.optional = Input.ofNullable(optional);
             return this;
         }
-
         public SecretProjectionArgs build() {
             return new SecretProjectionArgs(items, name, optional);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.certificates.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="expirationSeconds")
-    private final @Nullable Input<Integer> expirationSeconds;
+      private final @Nullable Input<Integer> expirationSeconds;
 
     public Input<Integer> getExpirationSeconds() {
         return this.expirationSeconds == null ? Input.empty() : this.expirationSeconds;
@@ -50,7 +50,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="extra")
-    private final @Nullable Input<Map<String,List<String>>> extra;
+      private final @Nullable Input<Map<String,List<String>>> extra;
 
     public Input<Map<String,List<String>>> getExtra() {
         return this.extra == null ? Input.empty() : this.extra;
@@ -61,7 +61,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="groups")
-    private final @Nullable Input<List<String>> groups;
+      private final @Nullable Input<List<String>> groups;
 
     public Input<List<String>> getGroups() {
         return this.groups == null ? Input.empty() : this.groups;
@@ -72,7 +72,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="request", required=true)
-    private final Input<String> request;
+      private final Input<String> request;
 
     public Input<String> getRequest() {
         return this.request;
@@ -103,7 +103,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="signerName", required=true)
-    private final Input<String> signerName;
+      private final Input<String> signerName;
 
     public Input<String> getSignerName() {
         return this.signerName;
@@ -114,7 +114,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -138,7 +138,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="usages")
-    private final @Nullable Input<List<String>> usages;
+      private final @Nullable Input<List<String>> usages;
 
     public Input<List<String>> getUsages() {
         return this.usages == null ? Input.empty() : this.usages;
@@ -149,7 +149,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -298,7 +298,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public CertificateSigningRequestSpecArgs build() {
             return new CertificateSigningRequestSpecArgs(expirationSeconds, extra, groups, request, signerName, uid, usages, username);
         }

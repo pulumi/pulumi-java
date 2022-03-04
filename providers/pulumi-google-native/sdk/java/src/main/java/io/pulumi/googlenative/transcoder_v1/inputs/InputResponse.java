@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.PreprocessingConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -33,7 +33,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preprocessingConfig", required=true)
-    private final PreprocessingConfigResponse preprocessingConfig;
+      private final PreprocessingConfigResponse preprocessingConfig;
 
     public PreprocessingConfigResponse getPreprocessingConfig() {
         return this.preprocessingConfig;
@@ -44,7 +44,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -103,7 +103,6 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public InputResponse build() {
             return new InputResponse(key, preprocessingConfig, uri);
         }

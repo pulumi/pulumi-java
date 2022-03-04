@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class ApplicationPackageReferenceResponse extends io.pulumi.resourc
     public static final ApplicationPackageReferenceResponse Empty = new ApplicationPackageReferenceResponse();
 
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -26,7 +26,7 @@ public final class ApplicationPackageReferenceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -75,7 +75,6 @@ public final class ApplicationPackageReferenceResponse extends io.pulumi.resourc
             this.version = version;
             return this;
         }
-
         public ApplicationPackageReferenceResponse build() {
             return new ApplicationPackageReferenceResponse(id, version);
         }

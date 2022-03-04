@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="connectMode", required=true)
-    private final String connectMode;
+      private final String connectMode;
 
     public String getConnectMode() {
         return this.connectMode;
@@ -33,7 +33,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ipAddresses", required=true)
-    private final List<String> ipAddresses;
+      private final List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
         return this.ipAddresses;
@@ -44,7 +44,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="modes", required=true)
-    private final List<String> modes;
+      private final List<String> modes;
 
     public List<String> getModes() {
         return this.modes;
@@ -55,7 +55,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -66,7 +66,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="reservedIpRange", required=true)
-    private final String reservedIpRange;
+      private final String reservedIpRange;
 
     public String getReservedIpRange() {
         return this.reservedIpRange;
@@ -145,7 +145,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
-
         public NetworkConfigResponse build() {
             return new NetworkConfigResponse(connectMode, ipAddresses, modes, network, reservedIpRange);
         }

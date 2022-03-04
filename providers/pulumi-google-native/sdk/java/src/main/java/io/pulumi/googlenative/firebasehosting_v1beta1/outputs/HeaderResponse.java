@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class HeaderResponse {
     /**
      * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
-     */
+    */
     public String getGlob() {
         return this.glob;
     }
     /**
      * The additional headers to add to the response.
      * 
-     */
+    */
     public Map<String,String> getHeaders() {
         return this.headers;
     }
     /**
      * The user-supplied RE2 regular expression to match against the request URL path.
      * 
-     */
+    */
     public String getRegex() {
         return this.regex;
     }
@@ -96,7 +96,6 @@ public final class HeaderResponse {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public HeaderResponse build() {
             return new HeaderResponse(glob, headers, regex);
         }

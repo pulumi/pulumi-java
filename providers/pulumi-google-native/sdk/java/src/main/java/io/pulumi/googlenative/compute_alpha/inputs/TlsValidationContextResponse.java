@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.SdsConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TlsValidationContextResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="certificatePath", required=true)
-    private final String certificatePath;
+      private final String certificatePath;
 
     public String getCertificatePath() {
         return this.certificatePath;
@@ -33,7 +33,7 @@ public final class TlsValidationContextResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sdsConfig", required=true)
-    private final SdsConfigResponse sdsConfig;
+      private final SdsConfigResponse sdsConfig;
 
     public SdsConfigResponse getSdsConfig() {
         return this.sdsConfig;
@@ -44,7 +44,7 @@ public final class TlsValidationContextResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="validationSource", required=true)
-    private final String validationSource;
+      private final String validationSource;
 
     public String getValidationSource() {
         return this.validationSource;
@@ -103,7 +103,6 @@ public final class TlsValidationContextResponse extends io.pulumi.resources.Invo
             this.validationSource = Objects.requireNonNull(validationSource);
             return this;
         }
-
         public TlsValidationContextResponse build() {
             return new TlsValidationContextResponse(certificatePath, sdsConfig, validationSource);
         }

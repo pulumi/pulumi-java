@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -118,98 +118,98 @@ public final class GetPolicyResult {
     /**
      * The creation date of the policy.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The description of the policy.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
      * 
-     */
+    */
     public Optional<String> getEvaluatorType() {
         return Optional.ofNullable(this.evaluatorType);
     }
     /**
      * The fact data of the policy.
      * 
-     */
+    */
     public Optional<String> getFactData() {
         return Optional.ofNullable(this.factData);
     }
     /**
      * The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
      * 
-     */
+    */
     public Optional<String> getFactName() {
         return Optional.ofNullable(this.factName);
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The status of the policy.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
      * 
-     */
+    */
     public Optional<String> getThreshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
@@ -329,7 +329,6 @@ public final class GetPolicyResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(createdDate, description, evaluatorType, factData, factName, id, location, name, provisioningState, status, tags, threshold, type, uniqueIdentifier);
         }

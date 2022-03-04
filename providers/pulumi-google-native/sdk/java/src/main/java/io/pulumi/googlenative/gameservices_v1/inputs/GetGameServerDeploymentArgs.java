@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetGameServerDeploymentArgs extends io.pulumi.resources.Invok
     public static final GetGameServerDeploymentArgs Empty = new GetGameServerDeploymentArgs();
 
     @InputImport(name="gameServerDeploymentId", required=true)
-    private final String gameServerDeploymentId;
+      private final String gameServerDeploymentId;
 
     public String getGameServerDeploymentId() {
         return this.gameServerDeploymentId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetGameServerDeploymentArgs extends io.pulumi.resources.Invok
             this.project = project;
             return this;
         }
-
         public GetGameServerDeploymentArgs build() {
             return new GetGameServerDeploymentArgs(gameServerDeploymentId, location, project);
         }

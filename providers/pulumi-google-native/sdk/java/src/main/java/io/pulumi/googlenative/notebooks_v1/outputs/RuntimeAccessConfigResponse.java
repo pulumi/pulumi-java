@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class RuntimeAccessConfigResponse {
     /**
      * The type of access mode this instance.
      * 
-     */
+    */
     public String getAccessType() {
         return this.accessType;
     }
     /**
      * The proxy endpoint that is used to access the runtime.
      * 
-     */
+    */
     public String getProxyUri() {
         return this.proxyUri;
     }
     /**
      * The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
      * 
-     */
+    */
     public String getRuntimeOwner() {
         return this.runtimeOwner;
     }
@@ -95,7 +95,6 @@ public final class RuntimeAccessConfigResponse {
             this.runtimeOwner = Objects.requireNonNull(runtimeOwner);
             return this;
         }
-
         public RuntimeAccessConfigResponse build() {
             return new RuntimeAccessConfigResponse(accessType, proxyUri, runtimeOwner);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.JobInputAssetResponse;
 import io.pulumi.azurenative.media.outputs.JobInputClipResponse;
 import io.pulumi.azurenative.media.outputs.JobInputHttpResponse;
 import io.pulumi.azurenative.media.outputs.JobInputSequenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public final class JobInputsResponse {
     /**
      * List of inputs to a Job.
      * 
-     */
+    */
     public List<Object> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
@@ -47,7 +47,7 @@ public final class JobInputsResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.JobInputs'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
@@ -83,7 +83,6 @@ public final class JobInputsResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public JobInputsResponse build() {
             return new JobInputsResponse(inputs, odataType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -28,7 +28,7 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -39,7 +39,7 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -98,7 +98,6 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public OperationErrorErrorsItemResponse build() {
             return new OperationErrorErrorsItemResponse(code, location, message);
         }

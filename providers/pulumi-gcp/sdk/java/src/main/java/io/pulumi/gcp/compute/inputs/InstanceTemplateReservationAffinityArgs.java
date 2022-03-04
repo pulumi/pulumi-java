@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateReservationAffinitySpecificReservationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InstanceTemplateReservationAffinityArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="specificReservation")
-    private final @Nullable Input<InstanceTemplateReservationAffinitySpecificReservationArgs> specificReservation;
+      private final @Nullable Input<InstanceTemplateReservationAffinitySpecificReservationArgs> specificReservation;
 
     public Input<InstanceTemplateReservationAffinitySpecificReservationArgs> getSpecificReservation() {
         return this.specificReservation == null ? Input.empty() : this.specificReservation;
@@ -32,7 +32,7 @@ public final class InstanceTemplateReservationAffinityArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -91,7 +91,6 @@ public final class InstanceTemplateReservationAffinityArgs extends io.pulumi.res
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public InstanceTemplateReservationAffinityArgs build() {
             return new InstanceTemplateReservationAffinityArgs(specificReservation, type);
         }

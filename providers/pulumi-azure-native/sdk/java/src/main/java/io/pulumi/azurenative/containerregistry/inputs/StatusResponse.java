@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayStatus", required=true)
-    private final String displayStatus;
+      private final String displayStatus;
 
     public String getDisplayStatus() {
         return this.displayStatus;
@@ -32,7 +32,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -43,7 +43,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timestamp", required=true)
-    private final String timestamp;
+      private final String timestamp;
 
     public String getTimestamp() {
         return this.timestamp;
@@ -102,7 +102,6 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public StatusResponse build() {
             return new StatusResponse(displayStatus, message, timestamp);
         }

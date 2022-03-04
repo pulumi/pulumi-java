@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class GetServiceBindingResult {
     /**
      * The timestamp when the resource was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. A free-text description of the resource. Max length 1024 characters.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
      * 
-     */
+    */
     public String getEndpointFilter() {
         return this.endpointFilter;
     }
     /**
      * Optional. Set of label tags associated with the ServiceBinding resource.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
      * 
-     */
+    */
     public String getService() {
         return this.service;
     }
     /**
      * The timestamp when the resource was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -180,7 +180,6 @@ public final class GetServiceBindingResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetServiceBindingResult build() {
             return new GetServiceBindingResult(createTime, description, endpointFilter, labels, name, service, updateTime);
         }

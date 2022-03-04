@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class ClusterEndpoint extends io.pulumi.resources.InvokeArgs {
     public static final ClusterEndpoint Empty = new ClusterEndpoint();
 
     @InputImport(name="endpoint")
-    private final @Nullable String endpoint;
+      private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
     @InputImport(name="region")
-    private final @Nullable String region;
+      private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -71,7 +71,6 @@ public final class ClusterEndpoint extends io.pulumi.resources.InvokeArgs {
             this.region = region;
             return this;
         }
-
         public ClusterEndpoint build() {
             return new ClusterEndpoint(endpoint, region);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.ConfigMapVolumeSourceResponse;
 import io.pulumi.googlenative.run_v1.outputs.SecretVolumeSourceResponse;
 import java.lang.String;
@@ -35,7 +35,7 @@ public final class VolumeResponse {
     /**
      * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -81,7 +81,6 @@ public final class VolumeResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(configMap, name, secret);
         }

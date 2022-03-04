@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VideoPublishingOptionsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="disableArchive")
-    private final @Nullable String disableArchive;
+      private final @Nullable String disableArchive;
 
     public Optional<String> getDisableArchive() {
         return this.disableArchive == null ? Optional.empty() : Optional.ofNullable(this.disableArchive);
@@ -34,7 +34,7 @@ public final class VideoPublishingOptionsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="disableRtspPublishing")
-    private final @Nullable String disableRtspPublishing;
+      private final @Nullable String disableRtspPublishing;
 
     public Optional<String> getDisableRtspPublishing() {
         return this.disableRtspPublishing == null ? Optional.empty() : Optional.ofNullable(this.disableRtspPublishing);
@@ -83,7 +83,6 @@ public final class VideoPublishingOptionsResponse extends io.pulumi.resources.In
             this.disableRtspPublishing = disableRtspPublishing;
             return this;
         }
-
         public VideoPublishingOptionsResponse build() {
             return new VideoPublishingOptionsResponse(disableArchive, disableRtspPublishing);
         }

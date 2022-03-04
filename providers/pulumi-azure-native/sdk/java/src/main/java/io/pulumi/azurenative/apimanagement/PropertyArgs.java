@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="propId")
-    private final @Nullable Input<String> propId;
+      private final @Nullable Input<String> propId;
 
     public Input<String> getPropId() {
         return this.propId == null ? Input.empty() : this.propId;
@@ -43,7 +43,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<Boolean> secret;
+      private final @Nullable Input<Boolean> secret;
 
     public Input<Boolean> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -65,7 +65,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -76,7 +76,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -221,7 +221,6 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public PropertyArgs build() {
             return new PropertyArgs(displayName, propId, resourceGroupName, secret, serviceName, tags, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class RolloutIdentityAuthenticationResponse {
      * The authentication type.
      * Expected value is 'RolloutIdentity'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -54,7 +54,6 @@ public final class RolloutIdentityAuthenticationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RolloutIdentityAuthenticationResponse build() {
             return new RolloutIdentityAuthenticationResponse(type);
         }

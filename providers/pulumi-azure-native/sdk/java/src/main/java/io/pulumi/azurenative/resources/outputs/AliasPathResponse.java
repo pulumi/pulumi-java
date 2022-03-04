@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.AliasPathMetadataResponse;
 import io.pulumi.azurenative.resources.outputs.AliasPatternResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class AliasPathResponse {
     /**
      * The API versions.
      * 
-     */
+    */
     public List<String> getApiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
     /**
      * The metadata of the alias path. If missing, fall back to the default metadata of the alias.
      * 
-     */
+    */
     public AliasPathMetadataResponse getMetadata() {
         return this.metadata;
     }
     /**
      * The path of an alias.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The pattern for an alias path.
      * 
-     */
+    */
     public Optional<AliasPatternResponse> getPattern() {
         return Optional.ofNullable(this.pattern);
     }
@@ -121,7 +121,6 @@ public final class AliasPathResponse {
             this.pattern = pattern;
             return this;
         }
-
         public AliasPathResponse build() {
             return new AliasPathResponse(apiVersions, metadata, path, pattern);
         }

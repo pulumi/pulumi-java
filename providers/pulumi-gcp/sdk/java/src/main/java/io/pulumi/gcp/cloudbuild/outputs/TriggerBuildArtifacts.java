@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildArtifactsObjects;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +46,7 @@ public final class TriggerBuildArtifacts {
      * The digests of the pushed images will be stored in the Build resource's results field.
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * 
-     */
+    */
     public List<String> getImages() {
         return this.images == null ? List.of() : this.images;
     }
@@ -58,7 +58,7 @@ public final class TriggerBuildArtifacts {
      * If any objects fail to be pushed, the build is marked FAILURE.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TriggerBuildArtifactsObjects> getObjects() {
         return Optional.ofNullable(this.objects);
     }
@@ -94,7 +94,6 @@ public final class TriggerBuildArtifacts {
             this.objects = objects;
             return this;
         }
-
         public TriggerBuildArtifacts build() {
             return new TriggerBuildArtifacts(images, objects);
         }

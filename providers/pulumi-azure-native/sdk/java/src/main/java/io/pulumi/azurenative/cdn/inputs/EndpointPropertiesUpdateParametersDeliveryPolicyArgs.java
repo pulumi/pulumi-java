@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.DeliveryRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
      * 
      */
     @InputImport(name="rules", required=true)
-    private final Input<List<DeliveryRuleArgs>> rules;
+      private final Input<List<DeliveryRuleArgs>> rules;
 
     public Input<List<DeliveryRuleArgs>> getRules() {
         return this.rules;
@@ -95,7 +95,6 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
-
         public EndpointPropertiesUpdateParametersDeliveryPolicyArgs build() {
             return new EndpointPropertiesUpdateParametersDeliveryPolicyArgs(description, rules);
         }

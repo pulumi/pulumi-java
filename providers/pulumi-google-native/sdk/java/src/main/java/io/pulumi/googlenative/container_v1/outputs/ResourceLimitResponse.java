@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ResourceLimitResponse {
     /**
      * Maximum amount of the resource in the cluster.
      * 
-     */
+    */
     public String getMaximum() {
         return this.maximum;
     }
     /**
      * Minimum amount of the resource in the cluster.
      * 
-     */
+    */
     public String getMinimum() {
         return this.minimum;
     }
     /**
      * Resource name "cpu", "memory" or gpu-specific string.
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
@@ -95,7 +95,6 @@ public final class ResourceLimitResponse {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public ResourceLimitResponse build() {
             return new ResourceLimitResponse(maximum, minimum, resourceType);
         }

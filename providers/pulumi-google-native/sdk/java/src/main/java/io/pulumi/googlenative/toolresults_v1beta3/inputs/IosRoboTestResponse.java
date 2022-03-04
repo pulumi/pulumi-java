@@ -34,7 +34,6 @@ public final class IosRoboTestResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(IosRoboTestResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public IosRoboTestResponse build() {
             return new IosRoboTestResponse();
         }

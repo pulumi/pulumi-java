@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.GrafeasV1beta1IntotoSignatureResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.LinkResponse;
 import java.util.List;
@@ -60,7 +60,6 @@ public final class GrafeasV1beta1IntotoDetailsResponse {
             this.signed = Objects.requireNonNull(signed);
             return this;
         }
-
         public GrafeasV1beta1IntotoDetailsResponse build() {
             return new GrafeasV1beta1IntotoDetailsResponse(signatures, signed);
         }

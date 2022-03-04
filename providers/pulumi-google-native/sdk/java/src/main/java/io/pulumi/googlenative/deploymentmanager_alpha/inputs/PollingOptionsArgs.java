@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.DiagnosticArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diagnostics")
-    private final @Nullable Input<List<DiagnosticArgs>> diagnostics;
+      private final @Nullable Input<List<DiagnosticArgs>> diagnostics;
 
     public Input<List<DiagnosticArgs>> getDiagnostics() {
         return this.diagnostics == null ? Input.empty() : this.diagnostics;
@@ -32,7 +32,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failCondition")
-    private final @Nullable Input<String> failCondition;
+      private final @Nullable Input<String> failCondition;
 
     public Input<String> getFailCondition() {
         return this.failCondition == null ? Input.empty() : this.failCondition;
@@ -43,7 +43,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="finishCondition")
-    private final @Nullable Input<String> finishCondition;
+      private final @Nullable Input<String> finishCondition;
 
     public Input<String> getFinishCondition() {
         return this.finishCondition == null ? Input.empty() : this.finishCondition;
@@ -54,7 +54,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pollingLink")
-    private final @Nullable Input<String> pollingLink;
+      private final @Nullable Input<String> pollingLink;
 
     public Input<String> getPollingLink() {
         return this.pollingLink == null ? Input.empty() : this.pollingLink;
@@ -65,7 +65,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetLink")
-    private final @Nullable Input<String> targetLink;
+      private final @Nullable Input<String> targetLink;
 
     public Input<String> getTargetLink() {
         return this.targetLink == null ? Input.empty() : this.targetLink;
@@ -169,7 +169,6 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.targetLink = Input.ofNullable(targetLink);
             return this;
         }
-
         public PollingOptionsArgs build() {
             return new PollingOptionsArgs(diagnostics, failCondition, finishCondition, pollingLink, targetLink);
         }

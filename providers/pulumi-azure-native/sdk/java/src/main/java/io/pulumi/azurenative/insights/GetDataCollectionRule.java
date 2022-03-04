@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetDataCollectionRuleArgs;
 import io.pulumi.azurenative.insights.outputs.GetDataCollectionRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataCollectionRule {
-/**
- * Definition of ARM tracked top level resource.
+    private GetDataCollectionRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataCollectionRuleArgs.Builder a);
+    }
+    private static GetDataCollectionRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataCollectionRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of ARM tracked top level resource.
  * API Version: 2019-11-01-preview.
  * 
- *
- * Definition of ARM tracked top level resource.
+     *
+     * Definition of ARM tracked top level resource.
  * 
- */
+     */
+    public static CompletableFuture<GetDataCollectionRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of ARM tracked top level resource.
+     * API Version: 2019-11-01-preview.
+     * 
+     *
+         * Definition of ARM tracked top level resource.
+     * 
+     */
     public static CompletableFuture<GetDataCollectionRuleResult> invokeAsync(GetDataCollectionRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDataCollectionRule", TypeShape.of(GetDataCollectionRuleResult.class), args == null ? GetDataCollectionRuleArgs.Empty : args, Utilities.withVersion(options));
     }

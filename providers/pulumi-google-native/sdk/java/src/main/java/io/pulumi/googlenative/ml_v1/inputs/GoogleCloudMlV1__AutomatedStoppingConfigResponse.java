@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse;
 import java.util.Objects;
@@ -18,14 +18,14 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse extends io.p
     public static final GoogleCloudMlV1__AutomatedStoppingConfigResponse Empty = new GoogleCloudMlV1__AutomatedStoppingConfigResponse();
 
     @InputImport(name="decayCurveStoppingConfig", required=true)
-    private final GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig;
+      private final GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig;
 
     public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse getDecayCurveStoppingConfig() {
         return this.decayCurveStoppingConfig;
     }
 
     @InputImport(name="medianAutomatedStoppingConfig", required=true)
-    private final GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig;
+      private final GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig;
 
     public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse getMedianAutomatedStoppingConfig() {
         return this.medianAutomatedStoppingConfig;
@@ -74,7 +74,6 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse extends io.p
             this.medianAutomatedStoppingConfig = Objects.requireNonNull(medianAutomatedStoppingConfig);
             return this;
         }
-
         public GoogleCloudMlV1__AutomatedStoppingConfigResponse build() {
             return new GoogleCloudMlV1__AutomatedStoppingConfigResponse(decayCurveStoppingConfig, medianAutomatedStoppingConfig);
         }

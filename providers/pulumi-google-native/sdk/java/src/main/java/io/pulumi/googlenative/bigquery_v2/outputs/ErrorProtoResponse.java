@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ErrorProtoResponse {
     /**
      * Debugging information. This property is internal to Google and should not be used.
      * 
-     */
+    */
     public String getDebugInfo() {
         return this.debugInfo;
     }
     /**
      * Specifies where the error occurred, if present.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * A human-readable description of the error.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * A short error code that summarizes the error.
      * 
-     */
+    */
     public String getReason() {
         return this.reason;
     }
@@ -116,7 +116,6 @@ public final class ErrorProtoResponse {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public ErrorProtoResponse build() {
             return new ErrorProtoResponse(debugInfo, location, message, reason);
         }

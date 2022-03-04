@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ParametersLinkResponse {
     /**
      * If included, must match the ContentVersion in the template.
      * 
-     */
+    */
     public Optional<String> getContentVersion() {
         return Optional.ofNullable(this.contentVersion);
     }
     /**
      * The URI of the parameters file.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -76,7 +76,6 @@ public final class ParametersLinkResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ParametersLinkResponse build() {
             return new ParametersLinkResponse(contentVersion, uri);
         }

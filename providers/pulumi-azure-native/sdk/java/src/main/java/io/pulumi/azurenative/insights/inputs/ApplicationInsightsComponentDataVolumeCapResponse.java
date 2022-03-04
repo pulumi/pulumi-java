@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * 
      */
     @InputImport(name="cap")
-    private final @Nullable Double cap;
+      private final @Nullable Double cap;
 
     public Optional<Double> getCap() {
         return this.cap == null ? Optional.empty() : Optional.ofNullable(this.cap);
@@ -36,7 +36,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * 
      */
     @InputImport(name="maxHistoryCap", required=true)
-    private final Double maxHistoryCap;
+      private final Double maxHistoryCap;
 
     public Double getMaxHistoryCap() {
         return this.maxHistoryCap;
@@ -47,7 +47,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * 
      */
     @InputImport(name="resetTime", required=true)
-    private final Integer resetTime;
+      private final Integer resetTime;
 
     public Integer getResetTime() {
         return this.resetTime;
@@ -58,7 +58,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * 
      */
     @InputImport(name="stopSendNotificationWhenHitCap")
-    private final @Nullable Boolean stopSendNotificationWhenHitCap;
+      private final @Nullable Boolean stopSendNotificationWhenHitCap;
 
     public Optional<Boolean> getStopSendNotificationWhenHitCap() {
         return this.stopSendNotificationWhenHitCap == null ? Optional.empty() : Optional.ofNullable(this.stopSendNotificationWhenHitCap);
@@ -69,7 +69,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * 
      */
     @InputImport(name="stopSendNotificationWhenHitThreshold")
-    private final @Nullable Boolean stopSendNotificationWhenHitThreshold;
+      private final @Nullable Boolean stopSendNotificationWhenHitThreshold;
 
     public Optional<Boolean> getStopSendNotificationWhenHitThreshold() {
         return this.stopSendNotificationWhenHitThreshold == null ? Optional.empty() : Optional.ofNullable(this.stopSendNotificationWhenHitThreshold);
@@ -80,7 +80,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * 
      */
     @InputImport(name="warningThreshold")
-    private final @Nullable Integer warningThreshold;
+      private final @Nullable Integer warningThreshold;
 
     public Optional<Integer> getWarningThreshold() {
         return this.warningThreshold == null ? Optional.empty() : Optional.ofNullable(this.warningThreshold);
@@ -169,7 +169,6 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
             this.warningThreshold = warningThreshold;
             return this;
         }
-
         public ApplicationInsightsComponentDataVolumeCapResponse build() {
             return new ApplicationInsightsComponentDataVolumeCapResponse(cap, maxHistoryCap, resetTime, stopSendNotificationWhenHitCap, stopSendNotificationWhenHitThreshold, warningThreshold);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.DiskIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,14 +17,14 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
     public static final DiskIamBindingArgs Empty = new DiskIamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<DiskIamBindingConditionArgs> condition;
+      private final @Nullable Input<DiskIamBindingConditionArgs> condition;
 
     public Input<DiskIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -35,7 +35,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,7 +60,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -73,7 +73,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -192,7 +192,6 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public DiskIamBindingArgs build() {
             return new DiskIamBindingArgs(condition, members, name, project, role, zone);
         }

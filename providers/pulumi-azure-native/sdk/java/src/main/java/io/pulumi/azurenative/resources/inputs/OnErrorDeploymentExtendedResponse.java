@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="deploymentName")
-    private final @Nullable String deploymentName;
+      private final @Nullable String deploymentName;
 
     public Optional<String> getDeploymentName() {
         return this.deploymentName == null ? Optional.empty() : Optional.ofNullable(this.deploymentName);
@@ -34,7 +34,7 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -45,7 +45,7 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -104,7 +104,6 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
             this.type = type;
             return this;
         }
-
         public OnErrorDeploymentExtendedResponse build() {
             return new OnErrorDeploymentExtendedResponse(deploymentName, provisioningState, type);
         }

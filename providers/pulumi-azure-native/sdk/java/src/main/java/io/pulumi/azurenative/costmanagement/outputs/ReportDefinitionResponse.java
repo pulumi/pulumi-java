@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ReportDatasetResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportTimePeriodResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,28 +49,28 @@ public final class ReportDefinitionResponse {
     /**
      * Has definition for data in this report.
      * 
-     */
+    */
     public Optional<ReportDatasetResponse> getDataset() {
         return Optional.ofNullable(this.dataset);
     }
     /**
      * Has time period for pulling data for the report.
      * 
-     */
+    */
     public Optional<ReportTimePeriodResponse> getTimePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
     /**
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
      * 
-     */
+    */
     public String getTimeframe() {
         return this.timeframe;
     }
     /**
      * The type of the report.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -120,7 +120,6 @@ public final class ReportDefinitionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReportDefinitionResponse build() {
             return new ReportDefinitionResponse(dataset, timePeriod, timeframe, type);
         }

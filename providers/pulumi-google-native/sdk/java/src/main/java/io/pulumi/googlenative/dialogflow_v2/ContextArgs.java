@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     public static final ContextArgs Empty = new ContextArgs();
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -28,14 +28,14 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifespanCount")
-    private final @Nullable Input<Integer> lifespanCount;
+      private final @Nullable Input<Integer> lifespanCount;
 
     public Input<Integer> getLifespanCount() {
         return this.lifespanCount == null ? Input.empty() : this.lifespanCount;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -57,28 +57,28 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="sessionId", required=true)
-    private final Input<String> sessionId;
+      private final Input<String> sessionId;
 
     public Input<String> getSessionId() {
         return this.sessionId;
     }
 
     @InputImport(name="userId", required=true)
-    private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;
@@ -227,7 +227,6 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }
-
         public ContextArgs build() {
             return new ContextArgs(environmentId, lifespanCount, location, name, parameters, project, sessionId, userId);
         }

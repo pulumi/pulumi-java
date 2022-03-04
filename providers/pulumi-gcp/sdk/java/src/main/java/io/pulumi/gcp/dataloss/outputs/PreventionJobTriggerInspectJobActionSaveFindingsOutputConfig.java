@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +49,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
      * Only for use with external storage.
      * Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QUERY_COLUMNS`, and `ALL_COLUMNS`.
      * 
-     */
+    */
     public Optional<String> getOutputSchema() {
         return Optional.ofNullable(this.outputSchema);
     }
@@ -57,7 +57,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
      * Information on the location of the target BigQuery Table.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable getTable() {
         return this.table;
     }
@@ -93,7 +93,6 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig(outputSchema, table);
         }

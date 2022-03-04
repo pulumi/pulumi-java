@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-    private final String fileSystemId;
+      private final String fileSystemId;
 
     public String getFileSystemId() {
         return this.fileSystemId;
@@ -34,7 +34,7 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -45,7 +45,7 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="mountTargetId", required=true)
-    private final String mountTargetId;
+      private final String mountTargetId;
 
     public String getMountTargetId() {
         return this.mountTargetId;
@@ -56,7 +56,7 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="smbServerFqdn")
-    private final @Nullable String smbServerFqdn;
+      private final @Nullable String smbServerFqdn;
 
     public Optional<String> getSmbServerFqdn() {
         return this.smbServerFqdn == null ? Optional.empty() : Optional.ofNullable(this.smbServerFqdn);
@@ -125,7 +125,6 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
             this.smbServerFqdn = smbServerFqdn;
             return this;
         }
-
         public MountTargetPropertiesResponse build() {
             return new MountTargetPropertiesResponse(fileSystemId, ipAddress, mountTargetId, smbServerFqdn);
         }

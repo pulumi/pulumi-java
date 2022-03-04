@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class UserAccountCredentialsResponse {
     /**
      * Name of the administrator user account which can be used to SSH to nodes.
      * 
-     */
+    */
     public String getAdminUserName() {
         return this.adminUserName;
     }
     /**
      * Password of the administrator user account.
      * 
-     */
+    */
     public Optional<String> getAdminUserPassword() {
         return Optional.ofNullable(this.adminUserPassword);
     }
     /**
      * SSH public key of the administrator user account.
      * 
-     */
+    */
     public Optional<String> getAdminUserSshPublicKey() {
         return Optional.ofNullable(this.adminUserSshPublicKey);
     }
@@ -97,7 +97,6 @@ public final class UserAccountCredentialsResponse {
             this.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
         }
-
         public UserAccountCredentialsResponse build() {
             return new UserAccountCredentialsResponse(adminUserName, adminUserPassword, adminUserSshPublicKey);
         }

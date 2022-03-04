@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs.outputs;
 import io.pulumi.azurenative.avs.outputs.VmHostPlacementPolicyPropertiesResponse;
 import io.pulumi.azurenative.avs.outputs.VmVmPlacementPolicyPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,28 +48,28 @@ public final class GetPlacementPolicyResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * placement policy properties
      * 
-     */
+    */
     public Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -119,7 +119,6 @@ public final class GetPlacementPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPlacementPolicyResult build() {
             return new GetPlacementPolicyResult(id, name, properties, type);
         }

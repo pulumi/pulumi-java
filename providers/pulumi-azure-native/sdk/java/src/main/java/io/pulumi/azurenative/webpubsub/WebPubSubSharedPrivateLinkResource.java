@@ -9,8 +9,8 @@ import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -145,6 +145,37 @@ public class WebPubSubSharedPrivateLinkResource extends io.pulumi.resources.Cust
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WebPubSubSharedPrivateLinkResourceArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.webpubsub.WebPubSubSharedPrivateLinkResourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.webpubsub.WebPubSubSharedPrivateLinkResourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WebPubSubSharedPrivateLinkResource(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WebPubSubSharedPrivateLinkResource(String name) {
+        this(name, WebPubSubSharedPrivateLinkResourceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WebPubSubSharedPrivateLinkResource(String name, WebPubSubSharedPrivateLinkResourceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

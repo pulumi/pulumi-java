@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.visualstudio.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ExtensionResourcePlanResponse {
     /**
      * Name of the plan.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Product name.
      * 
-     */
+    */
     public Optional<String> getProduct() {
         return Optional.ofNullable(this.product);
     }
     /**
      * Optional: the promotion code associated with the plan.
      * 
-     */
+    */
     public Optional<String> getPromotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * Name of the extension publisher.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * A string that uniquely identifies the plan version.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -139,7 +139,6 @@ public final class ExtensionResourcePlanResponse {
             this.version = version;
             return this;
         }
-
         public ExtensionResourcePlanResponse build() {
             return new ExtensionResourcePlanResponse(name, product, promotionCode, publisher, version);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetAnalyticsItemArgs;
 import io.pulumi.azurenative.insights.outputs.GetAnalyticsItemResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnalyticsItem {
-/**
- * Properties that define an Analytics item that is associated to an Application Insights component.
+    private GetAnalyticsItem() {}
+    public interface BuilderApplicator {
+        public void apply(GetAnalyticsItemArgs.Builder a);
+    }
+    private static GetAnalyticsItemArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAnalyticsItemArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Properties that define an Analytics item that is associated to an Application Insights component.
  * API Version: 2015-05-01.
  * 
- *
- * Properties that define an Analytics item that is associated to an Application Insights component.
+     *
+     * Properties that define an Analytics item that is associated to an Application Insights component.
  * 
- */
+     */
+    public static CompletableFuture<GetAnalyticsItemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Properties that define an Analytics item that is associated to an Application Insights component.
+     * API Version: 2015-05-01.
+     * 
+     *
+         * Properties that define an Analytics item that is associated to an Application Insights component.
+     * 
+     */
     public static CompletableFuture<GetAnalyticsItemResult> invokeAsync(GetAnalyticsItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getAnalyticsItem", TypeShape.of(GetAnalyticsItemResult.class), args == null ? GetAnalyticsItemArgs.Empty : args, Utilities.withVersion(options));
     }

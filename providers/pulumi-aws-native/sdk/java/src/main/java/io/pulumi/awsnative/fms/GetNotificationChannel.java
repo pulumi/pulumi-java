@@ -6,17 +6,33 @@ package io.pulumi.awsnative.fms;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.fms.inputs.GetNotificationChannelArgs;
 import io.pulumi.awsnative.fms.outputs.GetNotificationChannelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationChannel {
-/**
- * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
+    private GetNotificationChannel() {}
+    public interface BuilderApplicator {
+        public void apply(GetNotificationChannelArgs.Builder a);
+    }
+    private static GetNotificationChannelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNotificationChannelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
  * 
- */
+     */
+    public static CompletableFuture<GetNotificationChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
+     * 
+     */
     public static CompletableFuture<GetNotificationChannelResult> invokeAsync(GetNotificationChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:fms:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args == null ? GetNotificationChannelArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.redis.outputs.InstanceMaintenancePolicyWeeklyMaintenanceWindow;
 import java.lang.String;
 import java.util.List;
@@ -63,7 +63,7 @@ public final class InstanceMaintenancePolicy {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-     */
+    */
     public Optional<String> getCreateTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -72,7 +72,7 @@ public final class InstanceMaintenancePolicy {
      * Create/Update methods return INVALID_ARGUMENT if the
      * length is greater than 512.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -82,7 +82,7 @@ public final class InstanceMaintenancePolicy {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-     */
+    */
     public Optional<String> getUpdateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -92,7 +92,7 @@ public final class InstanceMaintenancePolicy {
      * of weekly_window is expected to be one.
      * Structure is documented below.
      * 
-     */
+    */
     public List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> getWeeklyMaintenanceWindows() {
         return this.weeklyMaintenanceWindows == null ? List.of() : this.weeklyMaintenanceWindows;
     }
@@ -142,7 +142,6 @@ public final class InstanceMaintenancePolicy {
             this.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
             return this;
         }
-
         public InstanceMaintenancePolicy build() {
             return new InstanceMaintenancePolicy(createTime, description, updateTime, weeklyMaintenanceWindows);
         }

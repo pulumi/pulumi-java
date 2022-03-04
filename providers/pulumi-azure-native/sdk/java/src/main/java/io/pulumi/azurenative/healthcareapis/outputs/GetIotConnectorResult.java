@@ -7,7 +7,7 @@ import io.pulumi.azurenative.healthcareapis.outputs.IotEventHubIngestionEndpoint
 import io.pulumi.azurenative.healthcareapis.outputs.IotMappingPropertiesResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceManagedIdentityResponseIdentity;
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -101,77 +101,77 @@ public final class GetIotConnectorResult {
     /**
      * Device Mappings.
      * 
-     */
+    */
     public Optional<IotMappingPropertiesResponse> getDeviceMapping() {
         return Optional.ofNullable(this.deviceMapping);
     }
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Setting indicating whether the service has a managed identity associated with it.
      * 
-     */
+    */
     public Optional<ServiceManagedIdentityResponseIdentity> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Source configuration.
      * 
-     */
+    */
     public Optional<IotEventHubIngestionEndpointConfigurationResponse> getIngestionEndpointConfiguration() {
         return Optional.ofNullable(this.ingestionEndpointConfiguration);
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -270,7 +270,6 @@ public final class GetIotConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotConnectorResult build() {
             return new GetIotConnectorResult(deviceMapping, etag, id, identity, ingestionEndpointConfiguration, location, name, provisioningState, systemData, tags, type);
         }

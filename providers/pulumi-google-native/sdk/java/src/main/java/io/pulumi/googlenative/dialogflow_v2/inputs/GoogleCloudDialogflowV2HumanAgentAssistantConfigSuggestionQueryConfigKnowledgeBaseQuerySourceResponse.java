@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @InputImport(name="knowledgeBases", required=true)
-    private final List<String> knowledgeBases;
+      private final List<String> knowledgeBases;
 
     public List<String> getKnowledgeBases() {
         return this.knowledgeBases;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             this.knowledgeBases = Objects.requireNonNull(knowledgeBases);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse(knowledgeBases);
         }

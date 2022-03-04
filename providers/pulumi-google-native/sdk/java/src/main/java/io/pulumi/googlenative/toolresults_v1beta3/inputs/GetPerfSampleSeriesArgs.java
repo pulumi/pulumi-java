@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class GetPerfSampleSeriesArgs extends io.pulumi.resources.InvokeArg
     public static final GetPerfSampleSeriesArgs Empty = new GetPerfSampleSeriesArgs();
 
     @InputImport(name="executionId", required=true)
-    private final String executionId;
+      private final String executionId;
 
     public String getExecutionId() {
         return this.executionId;
     }
 
     @InputImport(name="historyId", required=true)
-    private final String historyId;
+      private final String historyId;
 
     public String getHistoryId() {
         return this.historyId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="sampleSeriesId", required=true)
-    private final String sampleSeriesId;
+      private final String sampleSeriesId;
 
     public String getSampleSeriesId() {
         return this.sampleSeriesId;
     }
 
     @InputImport(name="stepId", required=true)
-    private final String stepId;
+      private final String stepId;
 
     public String getStepId() {
         return this.stepId;
@@ -122,7 +122,6 @@ public final class GetPerfSampleSeriesArgs extends io.pulumi.resources.InvokeArg
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public GetPerfSampleSeriesArgs build() {
             return new GetPerfSampleSeriesArgs(executionId, historyId, project, sampleSeriesId, stepId);
         }

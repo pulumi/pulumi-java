@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ManagementResourcePreferencesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="preferredManagementResourceId")
-    private final @Nullable Input<String> preferredManagementResourceId;
+      private final @Nullable Input<String> preferredManagementResourceId;
 
     public Input<String> getPreferredManagementResourceId() {
         return this.preferredManagementResourceId == null ? Input.empty() : this.preferredManagementResourceId;
@@ -66,7 +66,6 @@ public final class ManagementResourcePreferencesArgs extends io.pulumi.resources
             this.preferredManagementResourceId = Input.ofNullable(preferredManagementResourceId);
             return this;
         }
-
         public ManagementResourcePreferencesArgs build() {
             return new ManagementResourcePreferencesArgs(preferredManagementResourceId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -28,7 +28,7 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="roleName", required=true)
-    private final String roleName;
+      private final String roleName;
 
     public String getRoleName() {
         return this.roleName;
@@ -98,7 +98,6 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
-
         public GetMonitoringConfigArgs build() {
             return new GetMonitoringConfigArgs(deviceName, resourceGroupName, roleName);
         }

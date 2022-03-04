@@ -4,7 +4,7 @@
 package io.pulumi.gcp.assuredworkloads.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadKmsSettingsGetArgs;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceGetArgs;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceSettingGetArgs;
@@ -24,7 +24,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccount")
-    private final @Nullable Input<String> billingAccount;
+      private final @Nullable Input<String> billingAccount;
 
     public Input<String> getBillingAccount() {
         return this.billingAccount == null ? Input.empty() : this.billingAccount;
@@ -35,7 +35,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complianceRegime")
-    private final @Nullable Input<String> complianceRegime;
+      private final @Nullable Input<String> complianceRegime;
 
     public Input<String> getComplianceRegime() {
         return this.complianceRegime == null ? Input.empty() : this.complianceRegime;
@@ -46,7 +46,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -57,7 +57,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -68,7 +68,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsSettings")
-    private final @Nullable Input<WorkloadKmsSettingsGetArgs> kmsSettings;
+      private final @Nullable Input<WorkloadKmsSettingsGetArgs> kmsSettings;
 
     public Input<WorkloadKmsSettingsGetArgs> getKmsSettings() {
         return this.kmsSettings == null ? Input.empty() : this.kmsSettings;
@@ -79,7 +79,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -90,7 +90,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -101,7 +101,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="organization")
-    private final @Nullable Input<String> organization;
+      private final @Nullable Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization == null ? Input.empty() : this.organization;
@@ -123,7 +123,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionedResourcesParent")
-    private final @Nullable Input<String> provisionedResourcesParent;
+      private final @Nullable Input<String> provisionedResourcesParent;
 
     public Input<String> getProvisionedResourcesParent() {
         return this.provisionedResourcesParent == null ? Input.empty() : this.provisionedResourcesParent;
@@ -134,7 +134,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSettings")
-    private final @Nullable Input<List<WorkloadResourceSettingGetArgs>> resourceSettings;
+      private final @Nullable Input<List<WorkloadResourceSettingGetArgs>> resourceSettings;
 
     public Input<List<WorkloadResourceSettingGetArgs>> getResourceSettings() {
         return this.resourceSettings == null ? Input.empty() : this.resourceSettings;
@@ -146,7 +146,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<WorkloadResourceGetArgs>> resources;
+      private final @Nullable Input<List<WorkloadResourceGetArgs>> resources;
 
     public Input<List<WorkloadResourceGetArgs>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -355,7 +355,6 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             this.resources = Input.ofNullable(resources);
             return this;
         }
-
         public WorkloadState build() {
             return new WorkloadState(billingAccount, complianceRegime, createTime, displayName, kmsSettings, labels, location, name, organization, provisionedResourcesParent, resourceSettings, resources);
         }

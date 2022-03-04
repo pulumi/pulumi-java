@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.securitycenter_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="canonicalName")
-    private final @Nullable Input<String> canonicalName;
+      private final @Nullable Input<String> canonicalName;
 
     public Input<String> getCanonicalName() {
         return this.canonicalName == null ? Input.empty() : this.canonicalName;
@@ -30,7 +30,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -52,14 +52,14 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -163,7 +163,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public SourceArgs build() {
             return new SourceArgs(canonicalName, description, displayName, name, organizationId);
         }

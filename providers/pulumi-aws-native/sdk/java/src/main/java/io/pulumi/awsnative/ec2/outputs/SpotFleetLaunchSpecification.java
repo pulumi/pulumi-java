@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ec2.outputs.SpotFleetInstanceRequirementsRequest;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetMonitoring;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetSpotPlacement;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetTagSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -279,7 +279,6 @@ public final class SpotFleetLaunchSpecification {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public SpotFleetLaunchSpecification build() {
             return new SpotFleetLaunchSpecification(blockDeviceMappings, ebsOptimized, iamInstanceProfile, imageId, instanceRequirements, instanceType, kernelId, keyName, monitoring, networkInterfaces, placement, ramdiskId, securityGroups, spotPrice, subnetId, tagSpecifications, userData, weightedCapacity);
         }

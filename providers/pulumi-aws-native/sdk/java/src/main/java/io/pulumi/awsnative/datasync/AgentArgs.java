@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync;
 
 import io.pulumi.awsnative.datasync.inputs.AgentTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activationKey", required=true)
-    private final Input<String> activationKey;
+      private final Input<String> activationKey;
 
     public Input<String> getActivationKey() {
         return this.activationKey;
@@ -32,7 +32,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentName")
-    private final @Nullable Input<String> agentName;
+      private final @Nullable Input<String> agentName;
 
     public Input<String> getAgentName() {
         return this.agentName == null ? Input.empty() : this.agentName;
@@ -43,7 +43,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupArns")
-    private final @Nullable Input<List<String>> securityGroupArns;
+      private final @Nullable Input<List<String>> securityGroupArns;
 
     public Input<List<String>> getSecurityGroupArns() {
         return this.securityGroupArns == null ? Input.empty() : this.securityGroupArns;
@@ -54,7 +54,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetArns")
-    private final @Nullable Input<List<String>> subnetArns;
+      private final @Nullable Input<List<String>> subnetArns;
 
     public Input<List<String>> getSubnetArns() {
         return this.subnetArns == null ? Input.empty() : this.subnetArns;
@@ -65,7 +65,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<AgentTagArgs>> tags;
+      private final @Nullable Input<List<AgentTagArgs>> tags;
 
     public Input<List<AgentTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -76,7 +76,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcEndpointId")
-    private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Input<String> vpcEndpointId;
 
     public Input<String> getVpcEndpointId() {
         return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
@@ -195,7 +195,6 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
             return this;
         }
-
         public AgentArgs build() {
             return new AgentArgs(activationKey, agentName, securityGroupArns, subnetArns, tags, vpcEndpointId);
         }

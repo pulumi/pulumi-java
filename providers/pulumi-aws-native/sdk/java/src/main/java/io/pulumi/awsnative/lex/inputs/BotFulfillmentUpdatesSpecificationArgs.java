@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotFulfillmentStartResponseSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotFulfillmentUpdateResponseSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,14 +26,14 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="active", required=true)
-    private final Input<Boolean> active;
+      private final Input<Boolean> active;
 
     public Input<Boolean> getActive() {
         return this.active;
     }
 
     @InputImport(name="startResponse")
-    private final @Nullable Input<BotFulfillmentStartResponseSpecificationArgs> startResponse;
+      private final @Nullable Input<BotFulfillmentStartResponseSpecificationArgs> startResponse;
 
     public Input<BotFulfillmentStartResponseSpecificationArgs> getStartResponse() {
         return this.startResponse == null ? Input.empty() : this.startResponse;
@@ -44,14 +44,14 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Input<Integer> timeoutInSeconds;
+      private final @Nullable Input<Integer> timeoutInSeconds;
 
     public Input<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
     }
 
     @InputImport(name="updateResponse")
-    private final @Nullable Input<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse;
+      private final @Nullable Input<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse;
 
     public Input<BotFulfillmentUpdateResponseSpecificationArgs> getUpdateResponse() {
         return this.updateResponse == null ? Input.empty() : this.updateResponse;
@@ -140,7 +140,6 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
             this.updateResponse = Input.ofNullable(updateResponse);
             return this;
         }
-
         public BotFulfillmentUpdatesSpecificationArgs build() {
             return new BotFulfillmentUpdatesSpecificationArgs(active, startResponse, timeoutInSeconds, updateResponse);
         }

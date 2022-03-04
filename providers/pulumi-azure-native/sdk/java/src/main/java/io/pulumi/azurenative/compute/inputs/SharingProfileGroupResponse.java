@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SharingProfileGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="ids")
-    private final @Nullable List<String> ids;
+      private final @Nullable List<String> ids;
 
     public List<String> getIds() {
         return this.ids == null ? List.of() : this.ids;
@@ -35,7 +35,7 @@ public final class SharingProfileGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -84,7 +84,6 @@ public final class SharingProfileGroupResponse extends io.pulumi.resources.Invok
             this.type = type;
             return this;
         }
-
         public SharingProfileGroupResponse build() {
             return new SharingProfileGroupResponse(ids, type);
         }

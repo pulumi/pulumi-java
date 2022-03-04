@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class MigrateMISyncCompleteCommandOutputResponse {
     /**
      * List of errors that happened during the command execution
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
@@ -54,7 +54,6 @@ public final class MigrateMISyncCompleteCommandOutputResponse {
             this.errors = errors;
             return this;
         }
-
         public MigrateMISyncCompleteCommandOutputResponse build() {
             return new MigrateMISyncCompleteCommandOutputResponse(errors);
         }

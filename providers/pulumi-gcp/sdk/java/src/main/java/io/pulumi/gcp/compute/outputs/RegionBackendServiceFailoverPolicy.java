@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -65,7 +65,7 @@ public final class RegionBackendServiceFailoverPolicy {
      * This can be set to true only if the protocol is TCP.
      * The default is false.
      * 
-     */
+    */
     public Optional<Boolean> getDisableConnectionDrainOnFailover() {
         return Optional.ofNullable(this.disableConnectionDrainOnFailover);
     }
@@ -75,7 +75,7 @@ public final class RegionBackendServiceFailoverPolicy {
      * set to false, new connections are sent across all VMs in the primary group.
      * The default is false.
      * 
-     */
+    */
     public Optional<Boolean> getDropTrafficIfUnhealthy() {
         return Optional.ofNullable(this.dropTrafficIfUnhealthy);
     }
@@ -89,7 +89,7 @@ public final class RegionBackendServiceFailoverPolicy {
      * VMs with the best effort, or to all VMs when no VM is healthy.
      * This field is only used with l4 load balancing.
      * 
-     */
+    */
     public Optional<Double> getFailoverRatio() {
         return Optional.ofNullable(this.failoverRatio);
     }
@@ -132,7 +132,6 @@ public final class RegionBackendServiceFailoverPolicy {
             this.failoverRatio = failoverRatio;
             return this;
         }
-
         public RegionBackendServiceFailoverPolicy build() {
             return new RegionBackendServiceFailoverPolicy(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }

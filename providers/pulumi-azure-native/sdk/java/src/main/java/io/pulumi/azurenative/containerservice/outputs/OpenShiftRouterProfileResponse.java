@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class OpenShiftRouterProfileResponse {
     /**
      * Auto-allocated FQDN for the OpenShift router.
      * 
-     */
+    */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * Name of the router profile.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * DNS subdomain for OpenShift router.
      * 
-     */
+    */
     public String getPublicSubdomain() {
         return this.publicSubdomain;
     }
@@ -97,7 +97,6 @@ public final class OpenShiftRouterProfileResponse {
             this.publicSubdomain = Objects.requireNonNull(publicSubdomain);
             return this;
         }
-
         public OpenShiftRouterProfileResponse build() {
             return new OpenShiftRouterProfileResponse(fqdn, name, publicSubdomain);
         }

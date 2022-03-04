@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.JobStatusResponse;
 import io.pulumi.azurenative.migrate.inputs.MoveResourceErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
      * 
      */
     @InputImport(name="errors")
-    private final @Nullable MoveResourceErrorResponse errors;
+      private final @Nullable MoveResourceErrorResponse errors;
 
     public Optional<MoveResourceErrorResponse> getErrors() {
         return this.errors == null ? Optional.empty() : Optional.ofNullable(this.errors);
@@ -36,7 +36,7 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
      * 
      */
     @InputImport(name="jobStatus")
-    private final @Nullable JobStatusResponse jobStatus;
+      private final @Nullable JobStatusResponse jobStatus;
 
     public Optional<JobStatusResponse> getJobStatus() {
         return this.jobStatus == null ? Optional.empty() : Optional.ofNullable(this.jobStatus);
@@ -47,7 +47,7 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
      * 
      */
     @InputImport(name="moveState", required=true)
-    private final String moveState;
+      private final String moveState;
 
     public String getMoveState() {
         return this.moveState;
@@ -106,7 +106,6 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
             this.moveState = Objects.requireNonNull(moveState);
             return this;
         }
-
         public MoveResourcePropertiesResponseMoveStatus build() {
             return new MoveResourcePropertiesResponseMoveStatus(errors, jobStatus, moveState);
         }

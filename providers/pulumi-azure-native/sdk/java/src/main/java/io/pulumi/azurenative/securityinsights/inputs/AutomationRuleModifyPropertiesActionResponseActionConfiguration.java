@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.IncidentLabelResponse;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @InputImport(name="classification")
-    private final @Nullable String classification;
+      private final @Nullable String classification;
 
     public Optional<String> getClassification() {
         return this.classification == null ? Optional.empty() : Optional.ofNullable(this.classification);
@@ -37,7 +37,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @InputImport(name="classificationComment")
-    private final @Nullable String classificationComment;
+      private final @Nullable String classificationComment;
 
     public Optional<String> getClassificationComment() {
         return this.classificationComment == null ? Optional.empty() : Optional.ofNullable(this.classificationComment);
@@ -48,7 +48,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @InputImport(name="classificationReason")
-    private final @Nullable String classificationReason;
+      private final @Nullable String classificationReason;
 
     public Optional<String> getClassificationReason() {
         return this.classificationReason == null ? Optional.empty() : Optional.ofNullable(this.classificationReason);
@@ -59,7 +59,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable List<IncidentLabelResponse> labels;
+      private final @Nullable List<IncidentLabelResponse> labels;
 
     public List<IncidentLabelResponse> getLabels() {
         return this.labels == null ? List.of() : this.labels;
@@ -70,7 +70,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable IncidentOwnerInfoResponse owner;
+      private final @Nullable IncidentOwnerInfoResponse owner;
 
     public Optional<IncidentOwnerInfoResponse> getOwner() {
         return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
@@ -81,7 +81,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @InputImport(name="severity")
-    private final @Nullable String severity;
+      private final @Nullable String severity;
 
     public Optional<String> getSeverity() {
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
@@ -92,7 +92,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -191,7 +191,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
             this.status = status;
             return this;
         }
-
         public AutomationRuleModifyPropertiesActionResponseActionConfiguration build() {
             return new AutomationRuleModifyPropertiesActionResponseActionConfiguration(classification, classificationComment, classificationReason, labels, owner, severity, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class StorageLensCloudWatchMetrics {
     /**
      * Specifies whether CloudWatch metrics are enabled or disabled.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -52,7 +52,6 @@ public final class StorageLensCloudWatchMetrics {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public StorageLensCloudWatchMetrics build() {
             return new StorageLensCloudWatchMetrics(isEnabled);
         }

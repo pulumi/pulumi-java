@@ -6,21 +6,41 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kusto.inputs.GetScriptArgs;
 import io.pulumi.azurenative.kusto.outputs.GetScriptResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScript {
-/**
- * Class representing a database script.
+    private GetScript() {}
+    public interface BuilderApplicator {
+        public void apply(GetScriptArgs.Builder a);
+    }
+    private static GetScriptArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScriptArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing a database script.
  * API Version: 2021-01-01.
  * 
- *
- * Class representing a database script.
+     *
+     * Class representing a database script.
  * 
- */
+     */
+    public static CompletableFuture<GetScriptResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing a database script.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Class representing a database script.
+     * 
+     */
     public static CompletableFuture<GetScriptResult> invokeAsync(GetScriptArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getScript", TypeShape.of(GetScriptResult.class), args == null ? GetScriptArgs.Empty : args, Utilities.withVersion(options));
     }

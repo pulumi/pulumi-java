@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.MHSMPrivateEndpointResponse;
 import io.pulumi.azurenative.keyvault.inputs.MHSMPrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable MHSMPrivateEndpointResponse privateEndpoint;
+      private final @Nullable MHSMPrivateEndpointResponse privateEndpoint;
 
     public Optional<MHSMPrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -36,7 +36,7 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+      private final @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<MHSMPrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -47,7 +47,7 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -106,7 +106,6 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public MHSMPrivateEndpointConnectionItemResponse build() {
             return new MHSMPrivateEndpointConnectionItemResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization.outputs;
 import io.pulumi.azurenative.authorization.outputs.IdentityResponse;
 import io.pulumi.azurenative.authorization.outputs.NonComplianceMessageResponse;
 import io.pulumi.azurenative.authorization.outputs.ParameterValuesValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -123,98 +123,98 @@ public final class GetPolicyAssignmentResult {
     /**
      * This message will be part of response in case of policy violation.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the policy assignment.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
      * 
-     */
+    */
     public Optional<String> getEnforcementMode() {
         return Optional.ofNullable(this.enforcementMode);
     }
     /**
      * The ID of the policy assignment.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The managed identity associated with the policy assignment.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location of the policy assignment. Only required when utilizing managed identity.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
-     */
+    */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The name of the policy assignment.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The messages that describe why a resource is non-compliant with the policy.
      * 
-     */
+    */
     public List<NonComplianceMessageResponse> getNonComplianceMessages() {
         return this.nonComplianceMessages == null ? List.of() : this.nonComplianceMessages;
     }
     /**
      * The policy's excluded scopes.
      * 
-     */
+    */
     public List<String> getNotScopes() {
         return this.notScopes == null ? List.of() : this.notScopes;
     }
     /**
      * The parameter values for the assigned policy rule. The keys are the parameter names.
      * 
-     */
+    */
     public Map<String,ParameterValuesValueResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The ID of the policy definition or policy set definition being assigned.
      * 
-     */
+    */
     public Optional<String> getPolicyDefinitionId() {
         return Optional.ofNullable(this.policyDefinitionId);
     }
     /**
      * The scope for the policy assignment.
      * 
-     */
+    */
     public String getScope() {
         return this.scope;
     }
     /**
      * The type of the policy assignment.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -334,7 +334,6 @@ public final class GetPolicyAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyAssignmentResult build() {
             return new GetPolicyAssignmentResult(description, displayName, enforcementMode, id, identity, location, metadata, name, nonComplianceMessages, notScopes, parameters, policyDefinitionId, scope, type);
         }

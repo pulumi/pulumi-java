@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxEnvironmentVersionConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -44,7 +44,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -56,7 +56,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionConfigs", required=true)
-    private final Input<List<CxEnvironmentVersionConfigArgs>> versionConfigs;
+      private final Input<List<CxEnvironmentVersionConfigArgs>> versionConfigs;
 
     public Input<List<CxEnvironmentVersionConfigArgs>> getVersionConfigs() {
         return this.versionConfigs;
@@ -145,7 +145,6 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.versionConfigs = Input.of(Objects.requireNonNull(versionConfigs));
             return this;
         }
-
         public CxEnvironmentArgs build() {
             return new CxEnvironmentArgs(description, displayName, parent, versionConfigs);
         }

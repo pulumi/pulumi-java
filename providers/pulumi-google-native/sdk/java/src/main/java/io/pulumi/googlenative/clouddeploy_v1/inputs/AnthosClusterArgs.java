@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="membership")
-    private final @Nullable Input<String> membership;
+      private final @Nullable Input<String> membership;
 
     public Input<String> getMembership() {
         return this.membership == null ? Input.empty() : this.membership;
@@ -66,7 +66,6 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.membership = Input.ofNullable(membership);
             return this;
         }
-
         public AnthosClusterArgs build() {
             return new AnthosClusterArgs(membership);
         }

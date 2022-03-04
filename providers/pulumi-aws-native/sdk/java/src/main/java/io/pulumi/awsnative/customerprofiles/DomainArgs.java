@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles;
 
 import io.pulumi.awsnative.customerprofiles.inputs.DomainTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterQueueUrl")
-    private final @Nullable Input<String> deadLetterQueueUrl;
+      private final @Nullable Input<String> deadLetterQueueUrl;
 
     public Input<String> getDeadLetterQueueUrl() {
         return this.deadLetterQueueUrl == null ? Input.empty() : this.deadLetterQueueUrl;
@@ -33,7 +33,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultEncryptionKey")
-    private final @Nullable Input<String> defaultEncryptionKey;
+      private final @Nullable Input<String> defaultEncryptionKey;
 
     public Input<String> getDefaultEncryptionKey() {
         return this.defaultEncryptionKey == null ? Input.empty() : this.defaultEncryptionKey;
@@ -44,7 +44,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultExpirationDays")
-    private final @Nullable Input<Integer> defaultExpirationDays;
+      private final @Nullable Input<Integer> defaultExpirationDays;
 
     public Input<Integer> getDefaultExpirationDays() {
         return this.defaultExpirationDays == null ? Input.empty() : this.defaultExpirationDays;
@@ -55,7 +55,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -66,7 +66,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DomainTagArgs>> tags;
+      private final @Nullable Input<List<DomainTagArgs>> tags;
 
     public Input<List<DomainTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -170,7 +170,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DomainArgs build() {
             return new DomainArgs(deadLetterQueueUrl, defaultEncryptionKey, defaultExpirationDays, domainName, tags);
         }

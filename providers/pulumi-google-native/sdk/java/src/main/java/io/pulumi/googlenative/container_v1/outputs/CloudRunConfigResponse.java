@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class CloudRunConfigResponse {
     /**
      * Whether Cloud Run addon is enabled for this cluster.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
     /**
      * Which load balancer type is installed for Cloud Run.
      * 
-     */
+    */
     public String getLoadBalancerType() {
         return this.loadBalancerType;
     }
@@ -75,7 +75,6 @@ public final class CloudRunConfigResponse {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
-
         public CloudRunConfigResponse build() {
             return new CloudRunConfigResponse(disabled, loadBalancerType);
         }

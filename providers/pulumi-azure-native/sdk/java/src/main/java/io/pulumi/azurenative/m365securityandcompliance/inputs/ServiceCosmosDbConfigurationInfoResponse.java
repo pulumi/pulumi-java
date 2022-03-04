@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.m365securityandcompliance.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="keyVaultKeyUri")
-    private final @Nullable String keyVaultKeyUri;
+      private final @Nullable String keyVaultKeyUri;
 
     public Optional<String> getKeyVaultKeyUri() {
         return this.keyVaultKeyUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultKeyUri);
@@ -35,7 +35,7 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="offerThroughput")
-    private final @Nullable Double offerThroughput;
+      private final @Nullable Double offerThroughput;
 
     public Optional<Double> getOfferThroughput() {
         return this.offerThroughput == null ? Optional.empty() : Optional.ofNullable(this.offerThroughput);
@@ -84,7 +84,6 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
             this.offerThroughput = offerThroughput;
             return this;
         }
-
         public ServiceCosmosDbConfigurationInfoResponse build() {
             return new ServiceCosmosDbConfigurationInfoResponse(keyVaultKeyUri, offerThroughput);
         }

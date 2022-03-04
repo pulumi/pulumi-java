@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class RecommendedActionImpactRecordResponse {
     /**
      * Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
      * 
-     */
+    */
     public Double getAbsoluteValue() {
         return this.absoluteValue;
     }
     /**
      * Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
      * 
-     */
+    */
     public Double getChangeValueAbsolute() {
         return this.changeValueAbsolute;
     }
     /**
      * Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
      * 
-     */
+    */
     public Double getChangeValueRelative() {
         return this.changeValueRelative;
     }
     /**
      * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
      * 
-     */
+    */
     public String getDimensionName() {
         return this.dimensionName;
     }
     /**
      * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
      * 
-     */
+    */
     public String getUnit() {
         return this.unit;
     }
@@ -138,7 +138,6 @@ public final class RecommendedActionImpactRecordResponse {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public RecommendedActionImpactRecordResponse build() {
             return new RecommendedActionImpactRecordResponse(absoluteValue, changeValueAbsolute, changeValueRelative, dimensionName, unit);
         }

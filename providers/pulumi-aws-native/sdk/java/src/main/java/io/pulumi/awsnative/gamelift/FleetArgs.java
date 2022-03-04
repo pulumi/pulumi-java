@@ -11,7 +11,7 @@ import io.pulumi.awsnative.gamelift.inputs.FleetLocationConfigurationArgs;
 import io.pulumi.awsnative.gamelift.inputs.FleetResourceCreationLimitPolicyArgs;
 import io.pulumi.awsnative.gamelift.inputs.FleetRuntimeConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildId")
-    private final @Nullable Input<String> buildId;
+      private final @Nullable Input<String> buildId;
 
     public Input<String> getBuildId() {
         return this.buildId == null ? Input.empty() : this.buildId;
@@ -39,7 +39,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateConfiguration")
-    private final @Nullable Input<FleetCertificateConfigurationArgs> certificateConfiguration;
+      private final @Nullable Input<FleetCertificateConfigurationArgs> certificateConfiguration;
 
     public Input<FleetCertificateConfigurationArgs> getCertificateConfiguration() {
         return this.certificateConfiguration == null ? Input.empty() : this.certificateConfiguration;
@@ -50,7 +50,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -61,7 +61,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredEC2Instances")
-    private final @Nullable Input<Integer> desiredEC2Instances;
+      private final @Nullable Input<Integer> desiredEC2Instances;
 
     public Input<Integer> getDesiredEC2Instances() {
         return this.desiredEC2Instances == null ? Input.empty() : this.desiredEC2Instances;
@@ -72,7 +72,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eC2InboundPermissions")
-    private final @Nullable Input<List<FleetIpPermissionArgs>> eC2InboundPermissions;
+      private final @Nullable Input<List<FleetIpPermissionArgs>> eC2InboundPermissions;
 
     public Input<List<FleetIpPermissionArgs>> getEC2InboundPermissions() {
         return this.eC2InboundPermissions == null ? Input.empty() : this.eC2InboundPermissions;
@@ -83,7 +83,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eC2InstanceType")
-    private final @Nullable Input<String> eC2InstanceType;
+      private final @Nullable Input<String> eC2InstanceType;
 
     public Input<String> getEC2InstanceType() {
         return this.eC2InstanceType == null ? Input.empty() : this.eC2InstanceType;
@@ -94,7 +94,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetType")
-    private final @Nullable Input<FleetType> fleetType;
+      private final @Nullable Input<FleetType> fleetType;
 
     public Input<FleetType> getFleetType() {
         return this.fleetType == null ? Input.empty() : this.fleetType;
@@ -105,14 +105,14 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceRoleARN")
-    private final @Nullable Input<String> instanceRoleARN;
+      private final @Nullable Input<String> instanceRoleARN;
 
     public Input<String> getInstanceRoleARN() {
         return this.instanceRoleARN == null ? Input.empty() : this.instanceRoleARN;
     }
 
     @InputImport(name="locations")
-    private final @Nullable Input<List<FleetLocationConfigurationArgs>> locations;
+      private final @Nullable Input<List<FleetLocationConfigurationArgs>> locations;
 
     public Input<List<FleetLocationConfigurationArgs>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -123,7 +123,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logPaths")
-    private final @Nullable Input<List<String>> logPaths;
+      private final @Nullable Input<List<String>> logPaths;
 
     public Input<List<String>> getLogPaths() {
         return this.logPaths == null ? Input.empty() : this.logPaths;
@@ -134,7 +134,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSize")
-    private final @Nullable Input<Integer> maxSize;
+      private final @Nullable Input<Integer> maxSize;
 
     public Input<Integer> getMaxSize() {
         return this.maxSize == null ? Input.empty() : this.maxSize;
@@ -145,7 +145,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricGroups")
-    private final @Nullable Input<List<String>> metricGroups;
+      private final @Nullable Input<List<String>> metricGroups;
 
     public Input<List<String>> getMetricGroups() {
         return this.metricGroups == null ? Input.empty() : this.metricGroups;
@@ -156,7 +156,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minSize")
-    private final @Nullable Input<Integer> minSize;
+      private final @Nullable Input<Integer> minSize;
 
     public Input<Integer> getMinSize() {
         return this.minSize == null ? Input.empty() : this.minSize;
@@ -167,7 +167,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -178,7 +178,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="newGameSessionProtectionPolicy")
-    private final @Nullable Input<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy;
+      private final @Nullable Input<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy;
 
     public Input<FleetNewGameSessionProtectionPolicy> getNewGameSessionProtectionPolicy() {
         return this.newGameSessionProtectionPolicy == null ? Input.empty() : this.newGameSessionProtectionPolicy;
@@ -189,7 +189,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerVpcAwsAccountId")
-    private final @Nullable Input<String> peerVpcAwsAccountId;
+      private final @Nullable Input<String> peerVpcAwsAccountId;
 
     public Input<String> getPeerVpcAwsAccountId() {
         return this.peerVpcAwsAccountId == null ? Input.empty() : this.peerVpcAwsAccountId;
@@ -200,7 +200,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerVpcId")
-    private final @Nullable Input<String> peerVpcId;
+      private final @Nullable Input<String> peerVpcId;
 
     public Input<String> getPeerVpcId() {
         return this.peerVpcId == null ? Input.empty() : this.peerVpcId;
@@ -211,7 +211,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceCreationLimitPolicy")
-    private final @Nullable Input<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
+      private final @Nullable Input<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
 
     public Input<FleetResourceCreationLimitPolicyArgs> getResourceCreationLimitPolicy() {
         return this.resourceCreationLimitPolicy == null ? Input.empty() : this.resourceCreationLimitPolicy;
@@ -224,7 +224,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeConfiguration")
-    private final @Nullable Input<FleetRuntimeConfigurationArgs> runtimeConfiguration;
+      private final @Nullable Input<FleetRuntimeConfigurationArgs> runtimeConfiguration;
 
     public Input<FleetRuntimeConfigurationArgs> getRuntimeConfiguration() {
         return this.runtimeConfiguration == null ? Input.empty() : this.runtimeConfiguration;
@@ -237,7 +237,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptId")
-    private final @Nullable Input<String> scriptId;
+      private final @Nullable Input<String> scriptId;
 
     public Input<String> getScriptId() {
         return this.scriptId == null ? Input.empty() : this.scriptId;
@@ -248,7 +248,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverLaunchParameters")
-    private final @Nullable Input<String> serverLaunchParameters;
+      private final @Nullable Input<String> serverLaunchParameters;
 
     public Input<String> getServerLaunchParameters() {
         return this.serverLaunchParameters == null ? Input.empty() : this.serverLaunchParameters;
@@ -259,7 +259,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverLaunchPath")
-    private final @Nullable Input<String> serverLaunchPath;
+      private final @Nullable Input<String> serverLaunchPath;
 
     public Input<String> getServerLaunchPath() {
         return this.serverLaunchPath == null ? Input.empty() : this.serverLaunchPath;
@@ -618,7 +618,6 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             this.serverLaunchPath = Input.ofNullable(serverLaunchPath);
             return this;
         }
-
         public FleetArgs build() {
             return new FleetArgs(buildId, certificateConfiguration, description, desiredEC2Instances, eC2InboundPermissions, eC2InstanceType, fleetType, instanceRoleARN, locations, logPaths, maxSize, metricGroups, minSize, name, newGameSessionProtectionPolicy, peerVpcAwsAccountId, peerVpcId, resourceCreationLimitPolicy, runtimeConfiguration, scriptId, serverLaunchParameters, serverLaunchPath);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.AdministratorType;
 import io.pulumi.azurenative.sql.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="administratorType")
-    private final @Nullable Input<Either<String,AdministratorType>> administratorType;
+      private final @Nullable Input<Either<String,AdministratorType>> administratorType;
 
     public Input<Either<String,AdministratorType>> getAdministratorType() {
         return this.administratorType == null ? Input.empty() : this.administratorType;
@@ -38,7 +38,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="azureADOnlyAuthentication")
-    private final @Nullable Input<Boolean> azureADOnlyAuthentication;
+      private final @Nullable Input<Boolean> azureADOnlyAuthentication;
 
     public Input<Boolean> getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication == null ? Input.empty() : this.azureADOnlyAuthentication;
@@ -49,7 +49,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<String> login;
+      private final @Nullable Input<String> login;
 
     public Input<String> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -60,7 +60,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="principalType")
-    private final @Nullable Input<Either<String,PrincipalType>> principalType;
+      private final @Nullable Input<Either<String,PrincipalType>> principalType;
 
     public Input<Either<String,PrincipalType>> getPrincipalType() {
         return this.principalType == null ? Input.empty() : this.principalType;
@@ -71,7 +71,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="sid")
-    private final @Nullable Input<String> sid;
+      private final @Nullable Input<String> sid;
 
     public Input<String> getSid() {
         return this.sid == null ? Input.empty() : this.sid;
@@ -82,7 +82,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -201,7 +201,6 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public ManagedInstanceExternalAdministratorArgs build() {
             return new ManagedInstanceExternalAdministratorArgs(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);
         }

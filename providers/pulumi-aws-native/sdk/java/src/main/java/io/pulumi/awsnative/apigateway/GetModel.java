@@ -6,17 +6,33 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.inputs.GetModelArgs;
 import io.pulumi.awsnative.apigateway.outputs.GetModelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModel {
-/**
- * Resource Type definition for AWS::ApiGateway::Model
+    private GetModel() {}
+    public interface BuilderApplicator {
+        public void apply(GetModelArgs.Builder a);
+    }
+    private static GetModelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetModelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::ApiGateway::Model
  * 
- */
+     */
+    public static CompletableFuture<GetModelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::ApiGateway::Model
+     * 
+     */
     public static CompletableFuture<GetModelResult> invokeAsync(GetModelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getModel", TypeShape.of(GetModelResult.class), args == null ? GetModelArgs.Empty : args, Utilities.withVersion(options));
     }

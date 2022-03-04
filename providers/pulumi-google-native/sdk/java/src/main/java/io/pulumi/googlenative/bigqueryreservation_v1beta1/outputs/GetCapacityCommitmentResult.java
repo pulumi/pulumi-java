@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryreservation_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigqueryreservation_v1beta1.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -74,56 +74,56 @@ public final class GetCapacityCommitmentResult {
     /**
      * The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
-     */
+    */
     public String getCommitmentEndTime() {
         return this.commitmentEndTime;
     }
     /**
      * The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
-     */
+    */
     public String getCommitmentStartTime() {
         return this.commitmentStartTime;
     }
     /**
      * For FAILED commitment plan, provides the reason of failure.
      * 
-     */
+    */
     public StatusResponse getFailureStatus() {
         return this.failureStatus;
     }
     /**
      * The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Capacity commitment commitment plan.
      * 
-     */
+    */
     public String getPlan() {
         return this.plan;
     }
     /**
      * The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.
      * 
-     */
+    */
     public String getRenewalPlan() {
         return this.renewalPlan;
     }
     /**
      * Number of slots in this commitment.
      * 
-     */
+    */
     public String getSlotCount() {
         return this.slotCount;
     }
     /**
      * State of the commitment.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -201,7 +201,6 @@ public final class GetCapacityCommitmentResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetCapacityCommitmentResult build() {
             return new GetCapacityCommitmentResult(commitmentEndTime, commitmentStartTime, failureStatus, name, plan, renewalPlan, slotCount, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     /**
      * The resource name of the KMS CryptoKey to use for unwrapping.
      * 
-     */
+    */
     public String getCryptoKeyName() {
         return this.cryptoKeyName;
     }
@@ -40,7 +40,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * The wrapped data crypto key.
      * A base64-encoded string.
      * 
-     */
+    */
     public String getWrappedKey() {
         return this.wrappedKey;
     }
@@ -76,7 +76,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.wrappedKey = Objects.requireNonNull(wrappedKey);
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped(cryptoKeyName, wrappedKey);
         }

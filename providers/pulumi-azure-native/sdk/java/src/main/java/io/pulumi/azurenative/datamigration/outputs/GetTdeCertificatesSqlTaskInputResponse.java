@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.FileShareResponse;
 import io.pulumi.azurenative.datamigration.outputs.SelectedCertificateInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -41,21 +41,21 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
     /**
      * Backup file share information for file share to be used for temporarily storing files.
      * 
-     */
+    */
     public FileShareResponse getBackupFileShare() {
         return this.backupFileShare;
     }
     /**
      * Connection information for SQL Server
      * 
-     */
+    */
     public SqlConnectionInfoResponse getConnectionInfo() {
         return this.connectionInfo;
     }
     /**
      * List containing certificate names and corresponding password to use for encrypting the exported certificate.
      * 
-     */
+    */
     public List<SelectedCertificateInputResponse> getSelectedCertificates() {
         return this.selectedCertificates;
     }
@@ -98,7 +98,6 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
             this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
             return this;
         }
-
         public GetTdeCertificatesSqlTaskInputResponse build() {
             return new GetTdeCertificatesSqlTaskInputResponse(backupFileShare, connectionInfo, selectedCertificates);
         }

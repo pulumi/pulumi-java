@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="modifiedPath")
-    private final @Nullable String modifiedPath;
+      private final @Nullable String modifiedPath;
 
     public Optional<String> getModifiedPath() {
         return this.modifiedPath == null ? Optional.empty() : Optional.ofNullable(this.modifiedPath);
@@ -35,7 +35,7 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="modifiedQueryString")
-    private final @Nullable String modifiedQueryString;
+      private final @Nullable String modifiedQueryString;
 
     public Optional<String> getModifiedQueryString() {
         return this.modifiedQueryString == null ? Optional.empty() : Optional.ofNullable(this.modifiedQueryString);
@@ -46,7 +46,7 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="reroute")
-    private final @Nullable Boolean reroute;
+      private final @Nullable Boolean reroute;
 
     public Optional<Boolean> getReroute() {
         return this.reroute == null ? Optional.empty() : Optional.ofNullable(this.reroute);
@@ -105,7 +105,6 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
             this.reroute = reroute;
             return this;
         }
-
         public ApplicationGatewayUrlConfigurationResponse build() {
             return new ApplicationGatewayUrlConfigurationResponse(modifiedPath, modifiedQueryString, reroute);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos.outputs;
 
 import io.pulumi.azurenative.chaos.outputs.KeyValuePairResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,21 +48,21 @@ public final class DiscreteActionResponse {
     /**
      * String that represents a Capability URN.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of key value pairs.
      * 
-     */
+    */
     public List<KeyValuePairResponse> getParameters() {
         return this.parameters;
     }
     /**
      * String that represents a selector.
      * 
-     */
+    */
     public String getSelectorId() {
         return this.selectorId;
     }
@@ -70,7 +70,7 @@ public final class DiscreteActionResponse {
      * Enum that discriminates between action models.
      * Expected value is 'discrete'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -120,7 +120,6 @@ public final class DiscreteActionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DiscreteActionResponse build() {
             return new DiscreteActionResponse(name, parameters, selectorId, type);
         }

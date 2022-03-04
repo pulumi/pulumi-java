@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hours", required=true)
-    private final Input<Integer> hours;
+      private final Input<Integer> hours;
 
     public Input<Integer> getHours() {
         return this.hours;
@@ -29,7 +29,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="minutes", required=true)
-    private final Input<Integer> minutes;
+      private final Input<Integer> minutes;
 
     public Input<Integer> getMinutes() {
         return this.minutes;
@@ -40,7 +40,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="nanos", required=true)
-    private final Input<Integer> nanos;
+      private final Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos;
@@ -51,7 +51,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="seconds", required=true)
-    private final Input<Integer> seconds;
+      private final Input<Integer> seconds;
 
     public Input<Integer> getSeconds() {
         return this.seconds;
@@ -140,7 +140,6 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
             this.seconds = Input.of(Objects.requireNonNull(seconds));
             return this;
         }
-
         public TransferJobScheduleStartTimeOfDayArgs build() {
             return new TransferJobScheduleStartTimeOfDayArgs(hours, minutes, nanos, seconds);
         }

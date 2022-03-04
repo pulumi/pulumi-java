@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class KubernetesRoleComputeResponse {
     /**
      * Memory in bytes
      * 
-     */
+    */
     public Double getMemoryInBytes() {
         return this.memoryInBytes;
     }
     /**
      * Processor count
      * 
-     */
+    */
     public Integer getProcessorCount() {
         return this.processorCount;
     }
     /**
      * VM profile
      * 
-     */
+    */
     public String getVmProfile() {
         return this.vmProfile;
     }
@@ -97,7 +97,6 @@ public final class KubernetesRoleComputeResponse {
             this.vmProfile = Objects.requireNonNull(vmProfile);
             return this;
         }
-
         public KubernetesRoleComputeResponse build() {
             return new KubernetesRoleComputeResponse(memoryInBytes, processorCount, vmProfile);
         }

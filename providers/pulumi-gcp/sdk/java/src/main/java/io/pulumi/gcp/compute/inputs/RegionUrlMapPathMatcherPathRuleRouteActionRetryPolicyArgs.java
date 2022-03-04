@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs ext
      * 
      */
     @InputImport(name="numRetries")
-    private final @Nullable Input<Integer> numRetries;
+      private final @Nullable Input<Integer> numRetries;
 
     public Input<Integer> getNumRetries() {
         return this.numRetries == null ? Input.empty() : this.numRetries;
@@ -34,7 +34,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs ext
      * 
      */
     @InputImport(name="perTryTimeout")
-    private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout;
+      private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout;
 
     public Input<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs> getPerTryTimeout() {
         return this.perTryTimeout == null ? Input.empty() : this.perTryTimeout;
@@ -65,7 +65,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs ext
      * 
      */
     @InputImport(name="retryConditions")
-    private final @Nullable Input<List<String>> retryConditions;
+      private final @Nullable Input<List<String>> retryConditions;
 
     public Input<List<String>> getRetryConditions() {
         return this.retryConditions == null ? Input.empty() : this.retryConditions;
@@ -139,7 +139,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs ext
             this.retryConditions = Input.ofNullable(retryConditions);
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs(numRetries, perTryTimeout, retryConditions);
         }

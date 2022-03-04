@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.CommitmentPlanPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commitmentPlanName")
-    private final @Nullable Input<String> commitmentPlanName;
+      private final @Nullable Input<String> commitmentPlanName;
 
     public Input<String> getCommitmentPlanName() {
         return this.commitmentPlanName == null ? Input.empty() : this.commitmentPlanName;
@@ -42,7 +42,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<CommitmentPlanPropertiesArgs> properties;
+      private final @Nullable Input<CommitmentPlanPropertiesArgs> properties;
 
     public Input<CommitmentPlanPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public CommitmentPlanArgs build() {
             return new CommitmentPlanArgs(accountName, commitmentPlanName, properties, resourceGroupName);
         }

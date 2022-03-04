@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oSMajorVersion")
-    private final @Nullable String oSMajorVersion;
+      private final @Nullable String oSMajorVersion;
 
     public Optional<String> getOSMajorVersion() {
         return this.oSMajorVersion == null ? Optional.empty() : Optional.ofNullable(this.oSMajorVersion);
@@ -34,7 +34,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oSMinorVersion")
-    private final @Nullable String oSMinorVersion;
+      private final @Nullable String oSMinorVersion;
 
     public Optional<String> getOSMinorVersion() {
         return this.oSMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.oSMinorVersion);
@@ -45,7 +45,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oSVersion")
-    private final @Nullable String oSVersion;
+      private final @Nullable String oSVersion;
 
     public Optional<String> getOSVersion() {
         return this.oSVersion == null ? Optional.empty() : Optional.ofNullable(this.oSVersion);
@@ -56,7 +56,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osEdition")
-    private final @Nullable String osEdition;
+      private final @Nullable String osEdition;
 
     public Optional<String> getOsEdition() {
         return this.osEdition == null ? Optional.empty() : Optional.ofNullable(this.osEdition);
@@ -67,7 +67,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable String osType;
+      private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -78,7 +78,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="productType")
-    private final @Nullable String productType;
+      private final @Nullable String productType;
 
     public Optional<String> getProductType() {
         return this.productType == null ? Optional.empty() : Optional.ofNullable(this.productType);
@@ -167,7 +167,6 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.productType = productType;
             return this;
         }
-
         public OSDetailsResponse build() {
             return new OSDetailsResponse(oSMajorVersion, oSMinorVersion, oSVersion, osEdition, osType, productType);
         }

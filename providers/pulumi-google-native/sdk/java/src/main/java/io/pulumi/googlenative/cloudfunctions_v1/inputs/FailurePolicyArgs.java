@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.RetryArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retry")
-    private final @Nullable Input<RetryArgs> retry;
+      private final @Nullable Input<RetryArgs> retry;
 
     public Input<RetryArgs> getRetry() {
         return this.retry == null ? Input.empty() : this.retry;
@@ -66,7 +66,6 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.retry = Input.ofNullable(retry);
             return this;
         }
-
         public FailurePolicyArgs build() {
             return new FailurePolicyArgs(retry);
         }

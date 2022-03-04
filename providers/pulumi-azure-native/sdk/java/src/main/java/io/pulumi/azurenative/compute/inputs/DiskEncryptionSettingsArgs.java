@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.KeyVaultKeyReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.KeyVaultSecretReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="diskEncryptionKey")
-    private final @Nullable Input<KeyVaultSecretReferenceArgs> diskEncryptionKey;
+      private final @Nullable Input<KeyVaultSecretReferenceArgs> diskEncryptionKey;
 
     public Input<KeyVaultSecretReferenceArgs> getDiskEncryptionKey() {
         return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
@@ -36,7 +36,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -47,7 +47,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="keyEncryptionKey")
-    private final @Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey;
+      private final @Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
     public Input<KeyVaultKeyReferenceArgs> getKeyEncryptionKey() {
         return this.keyEncryptionKey == null ? Input.empty() : this.keyEncryptionKey;
@@ -121,7 +121,6 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
             this.keyEncryptionKey = Input.ofNullable(keyEncryptionKey);
             return this;
         }
-
         public DiskEncryptionSettingsArgs build() {
             return new DiskEncryptionSettingsArgs(diskEncryptionKey, enabled, keyEncryptionKey);
         }

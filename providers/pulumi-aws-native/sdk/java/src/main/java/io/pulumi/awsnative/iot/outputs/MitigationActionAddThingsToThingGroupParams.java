@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class MitigationActionAddThingsToThingGroupParams {
     /**
      * Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
      * 
-     */
+    */
     public Optional<Boolean> getOverrideDynamicGroups() {
         return Optional.ofNullable(this.overrideDynamicGroups);
     }
     /**
      * The list of groups to which you want to add the things that triggered the mitigation action.
      * 
-     */
+    */
     public List<String> getThingGroupNames() {
         return this.thingGroupNames;
     }
@@ -78,7 +78,6 @@ public final class MitigationActionAddThingsToThingGroupParams {
             this.thingGroupNames = Objects.requireNonNull(thingGroupNames);
             return this;
         }
-
         public MitigationActionAddThingsToThingGroupParams build() {
             return new MitigationActionAddThingsToThingGroupParams(overrideDynamicGroups, thingGroupNames);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aadiam;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allTenants")
-    private final @Nullable Input<Boolean> allTenants;
+      private final @Nullable Input<Boolean> allTenants;
 
     public Input<Boolean> getAllTenants() {
         return this.allTenants == null ? Input.empty() : this.allTenants;
@@ -33,7 +33,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ownerTenantId")
-    private final @Nullable Input<String> ownerTenantId;
+      private final @Nullable Input<String> ownerTenantId;
 
     public Input<String> getOwnerTenantId() {
         return this.ownerTenantId == null ? Input.empty() : this.ownerTenantId;
@@ -55,7 +55,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+      private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -66,7 +66,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable Input<String> resourceGroup;
+      private final @Nullable Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
@@ -77,7 +77,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -99,7 +99,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -110,7 +110,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -121,7 +121,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tenants")
-    private final @Nullable Input<List<String>> tenants;
+      private final @Nullable Input<List<String>> tenants;
 
     public Input<List<String>> getTenants() {
         return this.tenants == null ? Input.empty() : this.tenants;
@@ -300,7 +300,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
             this.tenants = Input.ofNullable(tenants);
             return this;
         }
-
         public PrivateLinkForAzureAdArgs build() {
             return new PrivateLinkForAzureAdArgs(allTenants, name, ownerTenantId, policyName, resourceGroup, resourceGroupName, resourceName, subscriptionId, tags, tenants);
         }

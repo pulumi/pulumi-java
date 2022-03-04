@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,63 +82,63 @@ public final class ReturnAddressResponse {
     /**
      * The city name to use when returning the drives.
      * 
-     */
+    */
     public String getCity() {
         return this.city;
     }
     /**
      * The country or region to use when returning the drives.
      * 
-     */
+    */
     public String getCountryOrRegion() {
         return this.countryOrRegion;
     }
     /**
      * Email address of the recipient of the returned drives.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * Phone number of the recipient of the returned drives.
      * 
-     */
+    */
     public String getPhone() {
         return this.phone;
     }
     /**
      * The postal code to use when returning the drives.
      * 
-     */
+    */
     public String getPostalCode() {
         return this.postalCode;
     }
     /**
      * The name of the recipient who will receive the hard drives when they are returned.
      * 
-     */
+    */
     public String getRecipientName() {
         return this.recipientName;
     }
     /**
      * The state or province to use when returning the drives.
      * 
-     */
+    */
     public Optional<String> getStateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
     /**
      * The first line of the street address to use when returning the drives.
      * 
-     */
+    */
     public String getStreetAddress1() {
         return this.streetAddress1;
     }
     /**
      * The second line of the street address to use when returning the drives.
      * 
-     */
+    */
     public Optional<String> getStreetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }
@@ -223,7 +223,6 @@ public final class ReturnAddressResponse {
             this.streetAddress2 = streetAddress2;
             return this;
         }
-
         public ReturnAddressResponse build() {
             return new ReturnAddressResponse(city, countryOrRegion, email, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
         }

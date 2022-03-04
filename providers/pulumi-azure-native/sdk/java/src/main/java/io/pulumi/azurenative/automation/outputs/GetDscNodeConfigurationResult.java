@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.DscConfigurationAssociationPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -85,63 +85,63 @@ public final class GetDscNodeConfigurationResult {
     /**
      * Gets or sets the configuration of the node.
      * 
-     */
+    */
     public Optional<DscConfigurationAssociationPropertyResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Gets or sets creation time.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * If a new build version of NodeConfiguration is required.
      * 
-     */
+    */
     public Optional<Boolean> getIncrementNodeConfigurationBuild() {
         return Optional.ofNullable(this.incrementNodeConfigurationBuild);
     }
     /**
      * Gets or sets the last modified time.
      * 
-     */
+    */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Number of nodes with this node configuration assigned
      * 
-     */
+    */
     public Optional<Double> getNodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
     /**
      * Source of node configuration.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -226,7 +226,6 @@ public final class GetDscNodeConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDscNodeConfigurationResult build() {
             return new GetDscNodeConfigurationResult(configuration, creationTime, id, incrementNodeConfigurationBuild, lastModifiedTime, name, nodeCount, source, type);
         }

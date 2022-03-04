@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessagePlatform;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="basicCard")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> basicCard;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> basicCard;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> getBasicCard() {
         return this.basicCard == null ? Input.empty() : this.basicCard;
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="browseCarouselCard")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> getBrowseCarouselCard() {
         return this.browseCarouselCard == null ? Input.empty() : this.browseCarouselCard;
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="card")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> card;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> card;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> getCard() {
         return this.card == null ? Input.empty() : this.card;
@@ -77,7 +77,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="carouselSelect")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> carouselSelect;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> carouselSelect;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> getCarouselSelect() {
         return this.carouselSelect == null ? Input.empty() : this.carouselSelect;
@@ -88,7 +88,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -99,7 +99,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="linkOutSuggestion")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> getLinkOutSuggestion() {
         return this.linkOutSuggestion == null ? Input.empty() : this.linkOutSuggestion;
@@ -110,7 +110,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="listSelect")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> listSelect;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> listSelect;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> getListSelect() {
         return this.listSelect == null ? Input.empty() : this.listSelect;
@@ -121,7 +121,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="mediaContent")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> mediaContent;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> mediaContent;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> getMediaContent() {
         return this.mediaContent == null ? Input.empty() : this.mediaContent;
@@ -132,7 +132,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="payload")
-    private final @Nullable Input<Map<String,String>> payload;
+      private final @Nullable Input<Map<String,String>> payload;
 
     public Input<Map<String,String>> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -143,7 +143,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessagePlatform> platform;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessagePlatform> platform;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessagePlatform> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -154,7 +154,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="quickReplies")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> quickReplies;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> quickReplies;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> getQuickReplies() {
         return this.quickReplies == null ? Input.empty() : this.quickReplies;
@@ -165,7 +165,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="rbmCarouselRichCard")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> rbmCarouselRichCard;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> rbmCarouselRichCard;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> getRbmCarouselRichCard() {
         return this.rbmCarouselRichCard == null ? Input.empty() : this.rbmCarouselRichCard;
@@ -176,7 +176,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="rbmStandaloneRichCard")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> rbmStandaloneRichCard;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> rbmStandaloneRichCard;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> getRbmStandaloneRichCard() {
         return this.rbmStandaloneRichCard == null ? Input.empty() : this.rbmStandaloneRichCard;
@@ -187,7 +187,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="rbmText")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> rbmText;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> rbmText;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> getRbmText() {
         return this.rbmText == null ? Input.empty() : this.rbmText;
@@ -198,7 +198,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="simpleResponses")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> simpleResponses;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> simpleResponses;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> getSimpleResponses() {
         return this.simpleResponses == null ? Input.empty() : this.simpleResponses;
@@ -209,7 +209,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="suggestions")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> suggestions;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> suggestions;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> getSuggestions() {
         return this.suggestions == null ? Input.empty() : this.suggestions;
@@ -220,7 +220,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="tableCard")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> tableCard;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> tableCard;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> getTableCard() {
         return this.tableCard == null ? Input.empty() : this.tableCard;
@@ -231,7 +231,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="telephonyPlayAudio")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> telephonyPlayAudio;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> telephonyPlayAudio;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> getTelephonyPlayAudio() {
         return this.telephonyPlayAudio == null ? Input.empty() : this.telephonyPlayAudio;
@@ -242,7 +242,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="telephonySynthesizeSpeech")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> telephonySynthesizeSpeech;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> telephonySynthesizeSpeech;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> getTelephonySynthesizeSpeech() {
         return this.telephonySynthesizeSpeech == null ? Input.empty() : this.telephonySynthesizeSpeech;
@@ -253,7 +253,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="telephonyTransferCall")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> telephonyTransferCall;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> telephonyTransferCall;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> getTelephonyTransferCall() {
         return this.telephonyTransferCall == null ? Input.empty() : this.telephonyTransferCall;
@@ -264,7 +264,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> text;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> text;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -608,7 +608,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageArgs(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, rbmCarouselRichCard, rbmStandaloneRichCard, rbmText, simpleResponses, suggestions, tableCard, telephonyPlayAudio, telephonySynthesizeSpeech, telephonyTransferCall, text);
         }

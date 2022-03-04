@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1RoutineSpecArgumentMode;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode;
+      private final @Nullable Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode;
 
     public Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -120,7 +120,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1RoutineSpecArgumentArgs build() {
             return new GoogleCloudDatacatalogV1RoutineSpecArgumentArgs(mode, name, type);
         }

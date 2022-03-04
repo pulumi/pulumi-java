@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class EndpointInfoResponse {
     /**
      * Destination IP address.
      * 
-     */
+    */
     public String getDestinationIp() {
         return this.destinationIp;
     }
     /**
      * URI of the network where this packet is sent to.
      * 
-     */
+    */
     public String getDestinationNetworkUri() {
         return this.destinationNetworkUri;
     }
     /**
      * Destination port. Only valid when protocol is TCP or UDP.
      * 
-     */
+    */
     public Integer getDestinationPort() {
         return this.destinationPort;
     }
     /**
      * IP protocol in string format, for example: "TCP", "UDP", "ICMP".
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * Source IP address.
      * 
-     */
+    */
     public String getSourceIp() {
         return this.sourceIp;
     }
     /**
      * URI of the network where this packet originates from.
      * 
-     */
+    */
     public String getSourceNetworkUri() {
         return this.sourceNetworkUri;
     }
     /**
      * Source port. Only valid when protocol is TCP or UDP.
      * 
-     */
+    */
     public Integer getSourcePort() {
         return this.sourcePort;
     }
@@ -180,7 +180,6 @@ public final class EndpointInfoResponse {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }
-
         public EndpointInfoResponse build() {
             return new EndpointInfoResponse(destinationIp, destinationNetworkUri, destinationPort, protocol, sourceIp, sourceNetworkUri, sourcePort);
         }

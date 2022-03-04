@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="words")
-    private final @Nullable Input<List<String>> words;
+      private final @Nullable Input<List<String>> words;
 
     public Input<List<String>> getWords() {
         return this.words == null ? Input.empty() : this.words;
@@ -67,7 +67,6 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
             this.words = Input.ofNullable(words);
             return this;
         }
-
         public GooglePrivacyDlpV2WordListArgs build() {
             return new GooglePrivacyDlpV2WordListArgs(words);
         }

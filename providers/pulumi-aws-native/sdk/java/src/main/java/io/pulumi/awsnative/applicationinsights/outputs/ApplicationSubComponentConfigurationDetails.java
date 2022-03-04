@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.outputs;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationAlarmMetric;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationLog;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationWindowsEvent;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -42,21 +42,21 @@ public final class ApplicationSubComponentConfigurationDetails {
     /**
      * A list of metrics to monitor for the component.
      * 
-     */
+    */
     public List<ApplicationAlarmMetric> getAlarmMetrics() {
         return this.alarmMetrics == null ? List.of() : this.alarmMetrics;
     }
     /**
      * A list of logs to monitor for the component.
      * 
-     */
+    */
     public List<ApplicationLog> getLogs() {
         return this.logs == null ? List.of() : this.logs;
     }
     /**
      * A list of Windows Events to log.
      * 
-     */
+    */
     public List<ApplicationWindowsEvent> getWindowsEvents() {
         return this.windowsEvents == null ? List.of() : this.windowsEvents;
     }
@@ -99,7 +99,6 @@ public final class ApplicationSubComponentConfigurationDetails {
             this.windowsEvents = windowsEvents;
             return this;
         }
-
         public ApplicationSubComponentConfigurationDetails build() {
             return new ApplicationSubComponentConfigurationDetails(alarmMetrics, logs, windowsEvents);
         }

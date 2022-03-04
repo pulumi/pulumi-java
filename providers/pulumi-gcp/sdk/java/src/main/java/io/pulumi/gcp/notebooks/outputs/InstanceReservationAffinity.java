@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class InstanceReservationAffinity {
      * The type of Compute Reservation.
      * Possible values are `NO_RESERVATION`, `ANY_RESERVATION`, and `SPECIFIC_RESERVATION`.
      * 
-     */
+    */
     public String getConsumeReservationType() {
         return this.consumeReservationType;
     }
     /**
      * Corresponds to the label key of reservation resource.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Corresponds to the label values of reservation resource.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }
@@ -100,7 +100,6 @@ public final class InstanceReservationAffinity {
             this.values = values;
             return this;
         }
-
         public InstanceReservationAffinity build() {
             return new InstanceReservationAffinity(consumeReservationType, key, values);
         }

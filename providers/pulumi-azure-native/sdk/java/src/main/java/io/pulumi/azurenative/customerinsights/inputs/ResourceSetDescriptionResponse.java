@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceSetDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="elements")
-    private final @Nullable List<String> elements;
+      private final @Nullable List<String> elements;
 
     public List<String> getElements() {
         return this.elements == null ? List.of() : this.elements;
@@ -35,7 +35,7 @@ public final class ResourceSetDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="exceptions")
-    private final @Nullable List<String> exceptions;
+      private final @Nullable List<String> exceptions;
 
     public List<String> getExceptions() {
         return this.exceptions == null ? List.of() : this.exceptions;
@@ -84,7 +84,6 @@ public final class ResourceSetDescriptionResponse extends io.pulumi.resources.In
             this.exceptions = exceptions;
             return this;
         }
-
         public ResourceSetDescriptionResponse build() {
             return new ResourceSetDescriptionResponse(elements, exceptions);
         }

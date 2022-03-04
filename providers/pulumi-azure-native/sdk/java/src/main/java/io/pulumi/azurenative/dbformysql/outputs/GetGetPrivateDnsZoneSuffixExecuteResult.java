@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbformysql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetGetPrivateDnsZoneSuffixExecuteResult {
     /**
      * Represents the private DNS zone suffix.
      * 
-     */
+    */
     public Optional<String> getPrivateDnsZoneSuffix() {
         return Optional.ofNullable(this.privateDnsZoneSuffix);
     }
@@ -54,7 +54,6 @@ public final class GetGetPrivateDnsZoneSuffixExecuteResult {
             this.privateDnsZoneSuffix = privateDnsZoneSuffix;
             return this;
         }
-
         public GetGetPrivateDnsZoneSuffixExecuteResult build() {
             return new GetGetPrivateDnsZoneSuffixExecuteResult(privateDnsZoneSuffix);
         }

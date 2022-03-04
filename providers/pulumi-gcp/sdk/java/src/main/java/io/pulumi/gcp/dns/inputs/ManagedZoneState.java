@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.ManagedZoneDnssecConfigGetArgs;
 import io.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigGetArgs;
 import io.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigGetArgs;
@@ -27,7 +27,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,7 +38,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+      private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
@@ -50,7 +50,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnssecConfig")
-    private final @Nullable Input<ManagedZoneDnssecConfigGetArgs> dnssecConfig;
+      private final @Nullable Input<ManagedZoneDnssecConfigGetArgs> dnssecConfig;
 
     public Input<ManagedZoneDnssecConfigGetArgs> getDnssecConfig() {
         return this.dnssecConfig == null ? Input.empty() : this.dnssecConfig;
@@ -61,7 +61,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -75,7 +75,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardingConfig")
-    private final @Nullable Input<ManagedZoneForwardingConfigGetArgs> forwardingConfig;
+      private final @Nullable Input<ManagedZoneForwardingConfigGetArgs> forwardingConfig;
 
     public Input<ManagedZoneForwardingConfigGetArgs> getForwardingConfig() {
         return this.forwardingConfig == null ? Input.empty() : this.forwardingConfig;
@@ -86,7 +86,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -98,7 +98,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -109,7 +109,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameServers")
-    private final @Nullable Input<List<String>> nameServers;
+      private final @Nullable Input<List<String>> nameServers;
 
     public Input<List<String>> getNameServers() {
         return this.nameServers == null ? Input.empty() : this.nameServers;
@@ -122,7 +122,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringConfig")
-    private final @Nullable Input<ManagedZonePeeringConfigGetArgs> peeringConfig;
+      private final @Nullable Input<ManagedZonePeeringConfigGetArgs> peeringConfig;
 
     public Input<ManagedZonePeeringConfigGetArgs> getPeeringConfig() {
         return this.peeringConfig == null ? Input.empty() : this.peeringConfig;
@@ -135,7 +135,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateVisibilityConfig")
-    private final @Nullable Input<ManagedZonePrivateVisibilityConfigGetArgs> privateVisibilityConfig;
+      private final @Nullable Input<ManagedZonePrivateVisibilityConfigGetArgs> privateVisibilityConfig;
 
     public Input<ManagedZonePrivateVisibilityConfigGetArgs> getPrivateVisibilityConfig() {
         return this.privateVisibilityConfig == null ? Input.empty() : this.privateVisibilityConfig;
@@ -147,7 +147,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -160,7 +160,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reverseLookup")
-    private final @Nullable Input<Boolean> reverseLookup;
+      private final @Nullable Input<Boolean> reverseLookup;
 
     public Input<Boolean> getReverseLookup() {
         return this.reverseLookup == null ? Input.empty() : this.reverseLookup;
@@ -172,7 +172,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceDirectoryConfig")
-    private final @Nullable Input<ManagedZoneServiceDirectoryConfigGetArgs> serviceDirectoryConfig;
+      private final @Nullable Input<ManagedZoneServiceDirectoryConfigGetArgs> serviceDirectoryConfig;
 
     public Input<ManagedZoneServiceDirectoryConfigGetArgs> getServiceDirectoryConfig() {
         return this.serviceDirectoryConfig == null ? Input.empty() : this.serviceDirectoryConfig;
@@ -186,7 +186,7 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibility")
-    private final @Nullable Input<String> visibility;
+      private final @Nullable Input<String> visibility;
 
     public Input<String> getVisibility() {
         return this.visibility == null ? Input.empty() : this.visibility;
@@ -425,7 +425,6 @@ public final class ManagedZoneState extends io.pulumi.resources.ResourceArgs {
             this.visibility = Input.ofNullable(visibility);
             return this;
         }
-
         public ManagedZoneState build() {
             return new ManagedZoneState(description, dnsName, dnssecConfig, forceDestroy, forwardingConfig, labels, name, nameServers, peeringConfig, privateVisibilityConfig, project, reverseLookup, serviceDirectoryConfig, visibility);
         }

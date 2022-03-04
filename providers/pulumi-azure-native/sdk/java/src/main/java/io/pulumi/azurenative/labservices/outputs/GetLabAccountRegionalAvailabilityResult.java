@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.RegionalAvailabilityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class GetLabAccountRegionalAvailabilityResult {
     /**
      * Availability information for different size categories per region
      * 
-     */
+    */
     public List<RegionalAvailabilityResponse> getRegionalAvailability() {
         return this.regionalAvailability == null ? List.of() : this.regionalAvailability;
     }
@@ -54,7 +54,6 @@ public final class GetLabAccountRegionalAvailabilityResult {
             this.regionalAvailability = regionalAvailability;
             return this;
         }
-
         public GetLabAccountRegionalAvailabilityResult build() {
             return new GetLabAccountRegionalAvailabilityResult(regionalAvailability);
         }

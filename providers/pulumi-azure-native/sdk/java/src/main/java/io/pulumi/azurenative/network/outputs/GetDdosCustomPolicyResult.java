@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ProtocolCustomSettingsFormatResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -93,70 +93,70 @@ public final class GetDdosCustomPolicyResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The protocol-specific DDoS policy customization parameters.
      * 
-     */
+    */
     public List<ProtocolCustomSettingsFormatResponse> getProtocolCustomSettings() {
         return this.protocolCustomSettings == null ? List.of() : this.protocolCustomSettings;
     }
     /**
      * The provisioning state of the DDoS custom policy resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of public IPs associated with the DDoS custom policy resource. This list is read-only.
      * 
-     */
+    */
     public List<SubResourceResponse> getPublicIPAddresses() {
         return this.publicIPAddresses;
     }
     /**
      * The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -248,7 +248,6 @@ public final class GetDdosCustomPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDdosCustomPolicyResult build() {
             return new GetDdosCustomPolicyResult(etag, id, location, name, protocolCustomSettings, provisioningState, publicIPAddresses, resourceGuid, tags, type);
         }

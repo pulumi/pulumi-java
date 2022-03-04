@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetPipelineArgs Empty = new GetPipelineArgs();
 
     @InputImport(name="pipelineId", required=true)
-    private final String pipelineId;
+      private final String pipelineId;
 
     public String getPipelineId() {
         return this.pipelineId;
@@ -51,7 +51,6 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }
-
         public GetPipelineArgs build() {
             return new GetPipelineArgs(pipelineId);
         }

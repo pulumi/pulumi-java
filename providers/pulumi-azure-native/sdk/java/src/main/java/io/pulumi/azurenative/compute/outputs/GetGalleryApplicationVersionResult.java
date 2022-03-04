@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.GalleryApplicationVersionPublishingProfileResponse;
 import io.pulumi.azurenative.compute.outputs.ReplicationStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -77,56 +77,56 @@ public final class GetGalleryApplicationVersionResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The publishing profile of a gallery image version.
      * 
-     */
+    */
     public GalleryApplicationVersionPublishingProfileResponse getPublishingProfile() {
         return this.publishingProfile;
     }
     /**
      * This is the replication status of the gallery image version.
      * 
-     */
+    */
     public ReplicationStatusResponse getReplicationStatus() {
         return this.replicationStatus;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -204,7 +204,6 @@ public final class GetGalleryApplicationVersionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGalleryApplicationVersionResult build() {
             return new GetGalleryApplicationVersionResult(id, location, name, provisioningState, publishingProfile, replicationStatus, tags, type);
         }

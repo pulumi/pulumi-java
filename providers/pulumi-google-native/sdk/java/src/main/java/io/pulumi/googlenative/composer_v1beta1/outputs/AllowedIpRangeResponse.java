@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AllowedIpRangeResponse {
     /**
      * Optional. User-provided description. It must contain at most 300 characters.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * IP address or range, defined using CIDR notation, of requests that this rule applies to. Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`. IP range prefixes should be properly truncated. For example, `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class AllowedIpRangeResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AllowedIpRangeResponse build() {
             return new AllowedIpRangeResponse(description, value);
         }

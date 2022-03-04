@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmincidents.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class ResponsePlanNotificationTargetItem {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public ResponsePlanNotificationTargetItem build() {
             return new ResponsePlanNotificationTargetItem(snsTopicArn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class PatientIdResponse {
     /**
      * ID type. For example, MRN or NHS.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The patient's unique identifier.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class PatientIdResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PatientIdResponse build() {
             return new PatientIdResponse(type, value);
         }

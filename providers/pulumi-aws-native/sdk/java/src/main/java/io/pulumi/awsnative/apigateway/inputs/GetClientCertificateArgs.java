@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetClientCertificateArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="clientCertificateId", required=true)
-    private final String clientCertificateId;
+      private final String clientCertificateId;
 
     public String getClientCertificateId() {
         return this.clientCertificateId;
@@ -55,7 +55,6 @@ public final class GetClientCertificateArgs extends io.pulumi.resources.InvokeAr
             this.clientCertificateId = Objects.requireNonNull(clientCertificateId);
             return this;
         }
-
         public GetClientCertificateArgs build() {
             return new GetClientCertificateArgs(clientCertificateId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="destination", required=true)
-    private final String destination;
+      private final String destination;
 
     public String getDestination() {
         return this.destination;
@@ -35,7 +35,7 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -46,7 +46,7 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<BlobInventoryPolicyRuleResponse> rules;
+      private final List<BlobInventoryPolicyRuleResponse> rules;
 
     public List<BlobInventoryPolicyRuleResponse> getRules() {
         return this.rules;
@@ -57,7 +57,7 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -126,7 +126,6 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobInventoryPolicySchemaResponse build() {
             return new BlobInventoryPolicySchemaResponse(destination, enabled, rules, type);
         }

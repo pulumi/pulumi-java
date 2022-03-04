@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetInstanceIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceIamPolicyArgs.Builder a);
+    }
+    private static GetInstanceIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetInstanceIamPolicyResult> invokeAsync(GetInstanceIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datafusion/v1:getInstanceIamPolicy", TypeShape.of(GetInstanceIamPolicyResult.class), args == null ? GetInstanceIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConsumptionMeteringConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -66,7 +66,6 @@ public final class ConsumptionMeteringConfigArgs extends io.pulumi.resources.Res
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public ConsumptionMeteringConfigArgs build() {
             return new ConsumptionMeteringConfigArgs(enabled);
         }

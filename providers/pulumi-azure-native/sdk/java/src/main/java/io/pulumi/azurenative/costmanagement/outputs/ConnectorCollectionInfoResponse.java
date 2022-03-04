@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ConnectorCollectionErrorInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class ConnectorCollectionInfoResponse {
     /**
      * Error information of last collection
      * 
-     */
+    */
     public Optional<ConnectorCollectionErrorInfoResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Last time the data acquisition process initiated connecting to the external provider
      * 
-     */
+    */
     public String getLastChecked() {
         return this.lastChecked;
     }
     /**
      * Last time the external data was updated into Azure
      * 
-     */
+    */
     public String getLastUpdated() {
         return this.lastUpdated;
     }
     /**
      * Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
      * 
-     */
+    */
     public String getSourceLastUpdated() {
         return this.sourceLastUpdated;
     }
@@ -119,7 +119,6 @@ public final class ConnectorCollectionInfoResponse {
             this.sourceLastUpdated = Objects.requireNonNull(sourceLastUpdated);
             return this;
         }
-
         public ConnectorCollectionInfoResponse build() {
             return new ConnectorCollectionInfoResponse(error, lastChecked, lastUpdated, sourceLastUpdated);
         }

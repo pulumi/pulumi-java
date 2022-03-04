@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork ex
     public static final GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork Empty = new GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork();
 
     @InputImport(name="expirationTime", required=true)
-    private final String expirationTime;
+      private final String expirationTime;
 
     public String getExpirationTime() {
         return this.expirationTime;
@@ -24,14 +24,14 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork ex
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -90,7 +90,6 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork ex
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork build() {
             return new GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork(expirationTime, name, value);
         }

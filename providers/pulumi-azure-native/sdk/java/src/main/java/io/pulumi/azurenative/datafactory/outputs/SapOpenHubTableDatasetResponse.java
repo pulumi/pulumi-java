@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.DatasetResponseFolder;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -103,70 +103,70 @@ public final class SapOpenHubTableDatasetResponse {
     /**
      * List of tags that can be used for describing the Dataset.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
      * 
-     */
+    */
     public Optional<Object> getBaseRequestId() {
         return Optional.ofNullable(this.baseRequestId);
     }
     /**
      * Dataset description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getExcludeLastRequest() {
         return Optional.ofNullable(this.excludeLastRequest);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-     */
+    */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The name of the Open Hub Destination with destination type as Database Table. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getOpenHubDestinationName() {
         return this.openHubDestinationName;
     }
     /**
      * Parameters for dataset.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-     */
+    */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-     */
+    */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
     }
@@ -174,7 +174,7 @@ public final class SapOpenHubTableDatasetResponse {
      * Type of dataset.
      * Expected value is 'SapOpenHubTable'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -273,7 +273,6 @@ public final class SapOpenHubTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapOpenHubTableDatasetResponse build() {
             return new SapOpenHubTableDatasetResponse(annotations, baseRequestId, description, excludeLastRequest, folder, linkedServiceName, openHubDestinationName, parameters, schema, structure, type);
         }

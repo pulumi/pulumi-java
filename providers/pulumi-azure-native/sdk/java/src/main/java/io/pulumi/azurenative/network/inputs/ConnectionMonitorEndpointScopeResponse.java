@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointScopeItemResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ConnectionMonitorEndpointScopeResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="exclude")
-    private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude;
+      private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude;
 
     public List<ConnectionMonitorEndpointScopeItemResponse> getExclude() {
         return this.exclude == null ? List.of() : this.exclude;
@@ -35,7 +35,7 @@ public final class ConnectionMonitorEndpointScopeResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="include")
-    private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include;
+      private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include;
 
     public List<ConnectionMonitorEndpointScopeItemResponse> getInclude() {
         return this.include == null ? List.of() : this.include;
@@ -84,7 +84,6 @@ public final class ConnectionMonitorEndpointScopeResponse extends io.pulumi.reso
             this.include = include;
             return this;
         }
-
         public ConnectionMonitorEndpointScopeResponse build() {
             return new ConnectionMonitorEndpointScopeResponse(exclude, include);
         }

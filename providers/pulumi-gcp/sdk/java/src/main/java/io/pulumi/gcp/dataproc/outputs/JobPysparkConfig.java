@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.JobPysparkConfigLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -74,28 +74,28 @@ public final class JobPysparkConfig {
     /**
      * HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
-     */
+    */
     public List<String> getArchiveUris() {
         return this.archiveUris == null ? List.of() : this.archiveUris;
     }
     /**
      * The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args == null ? List.of() : this.args;
     }
     /**
      * HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
      * 
-     */
+    */
     public List<String> getFileUris() {
         return this.fileUris == null ? List.of() : this.fileUris;
     }
     /**
      * HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
@@ -105,21 +105,21 @@ public final class JobPysparkConfig {
     /**
      * The HCFS URI of the main Python file to use as the driver. Must be a .py file.
      * 
-     */
+    */
     public String getMainPythonFileUri() {
         return this.mainPythonFileUri;
     }
     /**
      * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
      * 
-     */
+    */
     public List<String> getPythonFileUris() {
         return this.pythonFileUris == null ? List.of() : this.pythonFileUris;
     }
@@ -197,7 +197,6 @@ public final class JobPysparkConfig {
             this.pythonFileUris = pythonFileUris;
             return this;
         }
-
         public JobPysparkConfig build() {
             return new JobPysparkConfig(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
         }

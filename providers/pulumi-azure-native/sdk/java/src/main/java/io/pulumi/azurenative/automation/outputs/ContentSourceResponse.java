@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ContentHashResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class ContentSourceResponse {
     /**
      * Gets or sets the hash.
      * 
-     */
+    */
     public Optional<ContentHashResponse> getHash() {
         return Optional.ofNullable(this.hash);
     }
     /**
      * Gets or sets the content source type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Gets or sets the value of the content. This is based on the content source type.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
     /**
      * Gets or sets the version of the content.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -119,7 +119,6 @@ public final class ContentSourceResponse {
             this.version = version;
             return this;
         }
-
         public ContentSourceResponse build() {
             return new ContentSourceResponse(hash, type, value, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -70,28 +70,28 @@ public final class FlexibleAppVersionLivenessCheck {
     /**
      * Interval between health checks.
      * 
-     */
+    */
     public Optional<String> getCheckInterval() {
         return Optional.ofNullable(this.checkInterval);
     }
     /**
      * Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
      * 
-     */
+    */
     public Optional<Double> getFailureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
      * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
      * 
-     */
+    */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
     /**
      * The initial delay before starting to execute the checks. Default: "300s"
      * 
-     */
+    */
     public Optional<String> getInitialDelay() {
         return Optional.ofNullable(this.initialDelay);
     }
@@ -99,21 +99,21 @@ public final class FlexibleAppVersionLivenessCheck {
      * Path to the static files matched by the URL pattern, from the application root directory.
      * The path can refer to text matched in groupings in the URL pattern.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * Number of consecutive successful checks required before considering the VM healthy. Default: 2.
      * 
-     */
+    */
     public Optional<Double> getSuccessThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * Time before the check is considered failed. Default: "4s"
      * 
-     */
+    */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -184,7 +184,6 @@ public final class FlexibleAppVersionLivenessCheck {
             this.timeout = timeout;
             return this;
         }
-
         public FlexibleAppVersionLivenessCheck build() {
             return new FlexibleAppVersionLivenessCheck(checkInterval, failureThreshold, host, initialDelay, path, successThreshold, timeout);
         }

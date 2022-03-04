@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.MonitoringComponentConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="componentConfig")
-    private final @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
+      private final @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
 
     public Input<MonitoringComponentConfigArgs> getComponentConfig() {
         return this.componentConfig == null ? Input.empty() : this.componentConfig;
@@ -66,7 +66,6 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
             this.componentConfig = Input.ofNullable(componentConfig);
             return this;
         }
-
         public MonitoringConfigArgs build() {
             return new MonitoringConfigArgs(componentConfig);
         }

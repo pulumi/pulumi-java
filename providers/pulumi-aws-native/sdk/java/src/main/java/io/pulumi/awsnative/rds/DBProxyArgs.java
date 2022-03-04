@@ -7,7 +7,7 @@ import io.pulumi.awsnative.rds.enums.DBProxyEngineFamily;
 import io.pulumi.awsnative.rds.inputs.DBProxyAuthFormatArgs;
 import io.pulumi.awsnative.rds.inputs.DBProxyTagFormatArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auth", required=true)
-    private final Input<List<DBProxyAuthFormatArgs>> auth;
+      private final Input<List<DBProxyAuthFormatArgs>> auth;
 
     public Input<List<DBProxyAuthFormatArgs>> getAuth() {
         return this.auth;
@@ -36,7 +36,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dBProxyName")
-    private final @Nullable Input<String> dBProxyName;
+      private final @Nullable Input<String> dBProxyName;
 
     public Input<String> getDBProxyName() {
         return this.dBProxyName == null ? Input.empty() : this.dBProxyName;
@@ -47,7 +47,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="debugLogging")
-    private final @Nullable Input<Boolean> debugLogging;
+      private final @Nullable Input<Boolean> debugLogging;
 
     public Input<Boolean> getDebugLogging() {
         return this.debugLogging == null ? Input.empty() : this.debugLogging;
@@ -58,7 +58,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineFamily", required=true)
-    private final Input<DBProxyEngineFamily> engineFamily;
+      private final Input<DBProxyEngineFamily> engineFamily;
 
     public Input<DBProxyEngineFamily> getEngineFamily() {
         return this.engineFamily;
@@ -69,7 +69,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleClientTimeout")
-    private final @Nullable Input<Integer> idleClientTimeout;
+      private final @Nullable Input<Integer> idleClientTimeout;
 
     public Input<Integer> getIdleClientTimeout() {
         return this.idleClientTimeout == null ? Input.empty() : this.idleClientTimeout;
@@ -80,7 +80,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireTLS")
-    private final @Nullable Input<Boolean> requireTLS;
+      private final @Nullable Input<Boolean> requireTLS;
 
     public Input<Boolean> getRequireTLS() {
         return this.requireTLS == null ? Input.empty() : this.requireTLS;
@@ -91,7 +91,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -102,7 +102,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DBProxyTagFormatArgs>> tags;
+      private final @Nullable Input<List<DBProxyTagFormatArgs>> tags;
 
     public Input<List<DBProxyTagFormatArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -113,7 +113,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-    private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
@@ -124,7 +124,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSubnetIds", required=true)
-    private final Input<List<String>> vpcSubnetIds;
+      private final Input<List<String>> vpcSubnetIds;
 
     public Input<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds;
@@ -303,7 +303,6 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcSubnetIds = Input.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }
-
         public DBProxyArgs build() {
             return new DBProxyArgs(auth, dBProxyName, debugLogging, engineFamily, idleClientTimeout, requireTLS, roleArn, tags, vpcSecurityGroupIds, vpcSubnetIds);
         }

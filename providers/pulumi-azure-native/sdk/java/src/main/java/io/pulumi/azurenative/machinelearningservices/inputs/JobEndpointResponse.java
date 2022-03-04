@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable String endpoint;
+      private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
@@ -36,7 +36,7 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobEndpointType")
-    private final @Nullable String jobEndpointType;
+      private final @Nullable String jobEndpointType;
 
     public Optional<String> getJobEndpointType() {
         return this.jobEndpointType == null ? Optional.empty() : Optional.ofNullable(this.jobEndpointType);
@@ -47,7 +47,7 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+      private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -58,7 +58,7 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -127,7 +127,6 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
             this.properties = properties;
             return this;
         }
-
         public JobEndpointResponse build() {
             return new JobEndpointResponse(endpoint, jobEndpointType, port, properties);
         }

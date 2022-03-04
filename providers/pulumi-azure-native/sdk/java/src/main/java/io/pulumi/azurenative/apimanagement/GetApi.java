@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetApiArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetApiResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApi {
-/**
- * Api details.
+    private GetApi() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiArgs.Builder a);
+    }
+    private static GetApiArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Api details.
  * API Version: 2020-12-01.
  * 
- *
- * Api details.
+     *
+     * Api details.
  * 
- */
+     */
+    public static CompletableFuture<GetApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Api details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Api details.
+     * 
+     */
     public static CompletableFuture<GetApiResult> invokeAsync(GetApiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApi", TypeShape.of(GetApiResult.class), args == null ? GetApiArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetManagementGroupDiagnosticSettingArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="managementGroupId", required=true)
-    private final String managementGroupId;
+      private final String managementGroupId;
 
     public String getManagementGroupId() {
         return this.managementGroupId;
@@ -28,7 +28,7 @@ public final class GetManagementGroupDiagnosticSettingArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,6 @@ public final class GetManagementGroupDiagnosticSettingArgs extends io.pulumi.res
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetManagementGroupDiagnosticSettingArgs build() {
             return new GetManagementGroupDiagnosticSettingArgs(managementGroupId, name);
         }

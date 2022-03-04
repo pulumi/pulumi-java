@@ -11,8 +11,8 @@ import io.pulumi.azurenative.costmanagement.outputs.ReportScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -124,6 +124,37 @@ public class ReportByResourceGroupName extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ReportByResourceGroupNameArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.costmanagement.ReportByResourceGroupNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.costmanagement.ReportByResourceGroupNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ReportByResourceGroupName(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ReportByResourceGroupName(String name) {
+        this(name, ReportByResourceGroupNameArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ReportByResourceGroupName(String name, ReportByResourceGroupNameArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     /**
      * URL
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
     /**
      * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
      * 
-     */
+    */
     public String getUrlTypeHint() {
         return this.urlTypeHint;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
             this.urlTypeHint = Objects.requireNonNull(urlTypeHint);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(url, urlTypeHint);
         }

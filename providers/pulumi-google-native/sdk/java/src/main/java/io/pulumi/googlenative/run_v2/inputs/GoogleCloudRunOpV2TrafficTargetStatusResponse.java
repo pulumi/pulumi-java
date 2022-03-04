@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
      * 
      */
     @InputImport(name="percent", required=true)
-    private final Integer percent;
+      private final Integer percent;
 
     public Integer getPercent() {
         return this.percent;
@@ -33,7 +33,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
      * 
      */
     @InputImport(name="revision", required=true)
-    private final String revision;
+      private final String revision;
 
     public String getRevision() {
         return this.revision;
@@ -44,7 +44,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
      * 
      */
     @InputImport(name="tag", required=true)
-    private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -55,7 +55,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -66,7 +66,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -145,7 +145,6 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudRunOpV2TrafficTargetStatusResponse build() {
             return new GoogleCloudRunOpV2TrafficTargetStatusResponse(percent, revision, tag, type, uri);
         }

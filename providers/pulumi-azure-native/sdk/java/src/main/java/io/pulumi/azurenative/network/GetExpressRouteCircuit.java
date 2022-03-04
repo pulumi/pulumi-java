@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetExpressRouteCircuitArgs;
 import io.pulumi.azurenative.network.outputs.GetExpressRouteCircuitResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExpressRouteCircuit {
-/**
- * ExpressRouteCircuit resource.
+    private GetExpressRouteCircuit() {}
+    public interface BuilderApplicator {
+        public void apply(GetExpressRouteCircuitArgs.Builder a);
+    }
+    private static GetExpressRouteCircuitArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExpressRouteCircuitArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * ExpressRouteCircuit resource.
  * API Version: 2020-11-01.
  * 
- *
- * ExpressRouteCircuit resource.
+     *
+     * ExpressRouteCircuit resource.
  * 
- */
+     */
+    public static CompletableFuture<GetExpressRouteCircuitResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * ExpressRouteCircuit resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * ExpressRouteCircuit resource.
+     * 
+     */
     public static CompletableFuture<GetExpressRouteCircuitResult> invokeAsync(GetExpressRouteCircuitArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteCircuit", TypeShape.of(GetExpressRouteCircuitResult.class), args == null ? GetExpressRouteCircuitArgs.Empty : args, Utilities.withVersion(options));
     }

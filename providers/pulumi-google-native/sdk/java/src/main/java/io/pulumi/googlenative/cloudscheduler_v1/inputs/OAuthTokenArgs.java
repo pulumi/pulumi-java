@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudscheduler_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -34,7 +34,7 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-    private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -93,7 +93,6 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
             return this;
         }
-
         public OAuthTokenArgs build() {
             return new OAuthTokenArgs(scope, serviceAccountEmail);
         }

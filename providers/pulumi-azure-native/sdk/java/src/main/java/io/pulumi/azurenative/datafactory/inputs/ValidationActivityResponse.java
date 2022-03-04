@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="childItems")
-    private final @Nullable Object childItems;
+      private final @Nullable Object childItems;
 
     public Optional<Object> getChildItems() {
         return this.childItems == null ? Optional.empty() : Optional.ofNullable(this.childItems);
@@ -39,7 +39,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final DatasetReferenceResponse dataset;
+      private final DatasetReferenceResponse dataset;
 
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
@@ -50,7 +50,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+      private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -61,7 +61,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -72,7 +72,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="minimumSize")
-    private final @Nullable Object minimumSize;
+      private final @Nullable Object minimumSize;
 
     public Optional<Object> getMinimumSize() {
         return this.minimumSize == null ? Optional.empty() : Optional.ofNullable(this.minimumSize);
@@ -83,7 +83,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -94,7 +94,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sleep")
-    private final @Nullable Object sleep;
+      private final @Nullable Object sleep;
 
     public Optional<Object> getSleep() {
         return this.sleep == null ? Optional.empty() : Optional.ofNullable(this.sleep);
@@ -105,7 +105,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Object timeout;
+      private final @Nullable Object timeout;
 
     public Optional<Object> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -117,7 +117,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -128,7 +128,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+      private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -257,7 +257,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
             this.userProperties = userProperties;
             return this;
         }
-
         public ValidationActivityResponse build() {
             return new ValidationActivityResponse(childItems, dataset, dependsOn, description, minimumSize, name, sleep, timeout, type, userProperties);
         }

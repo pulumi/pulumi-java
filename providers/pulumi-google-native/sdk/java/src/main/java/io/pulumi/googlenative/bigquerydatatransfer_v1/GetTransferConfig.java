@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransferConfig {
-/**
- * Returns information about a data transfer config.
+    private GetTransferConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransferConfigArgs.Builder a);
+    }
+    private static GetTransferConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransferConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns information about a data transfer config.
  * 
- */
+     */
+    public static CompletableFuture<GetTransferConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns information about a data transfer config.
+     * 
+     */
     public static CompletableFuture<GetTransferConfigResult> invokeAsync(GetTransferConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigquerydatatransfer/v1:getTransferConfig", TypeShape.of(GetTransferConfigResult.class), args == null ? GetTransferConfigArgs.Empty : args, Utilities.withVersion(options));
     }

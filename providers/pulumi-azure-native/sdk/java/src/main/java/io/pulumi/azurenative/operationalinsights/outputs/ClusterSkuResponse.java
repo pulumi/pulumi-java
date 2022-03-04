@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ClusterSkuResponse {
     /**
      * The capacity value
      * 
-     */
+    */
     public Optional<Double> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The name of the SKU.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -77,7 +77,6 @@ public final class ClusterSkuResponse {
             this.name = name;
             return this;
         }
-
         public ClusterSkuResponse build() {
             return new ClusterSkuResponse(capacity, name);
         }

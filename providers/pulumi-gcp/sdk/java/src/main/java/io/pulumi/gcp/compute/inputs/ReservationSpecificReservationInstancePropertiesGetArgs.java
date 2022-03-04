@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * 
      */
     @InputImport(name="guestAccelerators")
-    private final @Nullable Input<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators;
+      private final @Nullable Input<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators;
 
     public Input<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> getGuestAccelerators() {
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
@@ -36,7 +36,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * 
      */
     @InputImport(name="localSsds")
-    private final @Nullable Input<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds;
+      private final @Nullable Input<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds;
 
     public Input<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> getLocalSsds() {
         return this.localSsds == null ? Input.empty() : this.localSsds;
@@ -47,7 +47,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final Input<String> machineType;
+      private final Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType;
@@ -61,7 +61,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * 
      */
     @InputImport(name="minCpuPlatform")
-    private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -150,7 +150,6 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
-
         public ReservationSpecificReservationInstancePropertiesGetArgs build() {
             return new ReservationSpecificReservationInstancePropertiesGetArgs(guestAccelerators, localSsds, machineType, minCpuPlatform);
         }

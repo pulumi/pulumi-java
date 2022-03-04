@@ -6,21 +6,41 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.media.inputs.GetAssetArgs;
 import io.pulumi.azurenative.media.outputs.GetAssetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAsset {
-/**
- * An Asset.
+    private GetAsset() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssetArgs.Builder a);
+    }
+    private static GetAssetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Asset.
  * API Version: 2020-05-01.
  * 
- *
- * An Asset.
+     *
+     * An Asset.
  * 
- */
+     */
+    public static CompletableFuture<GetAssetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Asset.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * An Asset.
+     * 
+     */
     public static CompletableFuture<GetAssetResult> invokeAsync(GetAssetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getAsset", TypeShape.of(GetAssetResult.class), args == null ? GetAssetArgs.Empty : args, Utilities.withVersion(options));
     }

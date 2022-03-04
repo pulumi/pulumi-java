@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class EffectiveVirtualNetworkResponse {
     /**
      * Effective vnet Id.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Location of vnet.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Membership Type.
      * 
-     */
+    */
     public Optional<String> getMembershipType() {
         return Optional.ofNullable(this.membershipType);
     }
@@ -97,7 +97,6 @@ public final class EffectiveVirtualNetworkResponse {
             this.membershipType = membershipType;
             return this;
         }
-
         public EffectiveVirtualNetworkResponse build() {
             return new EffectiveVirtualNetworkResponse(id, location, membershipType);
         }

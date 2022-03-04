@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamDeserializer;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class DeliveryStreamInputFormatConfiguration extends io.pulumi.reso
     public static final DeliveryStreamInputFormatConfiguration Empty = new DeliveryStreamInputFormatConfiguration();
 
     @InputImport(name="deserializer")
-    private final @Nullable DeliveryStreamDeserializer deserializer;
+      private final @Nullable DeliveryStreamDeserializer deserializer;
 
     public Optional<DeliveryStreamDeserializer> getDeserializer() {
         return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
@@ -53,7 +53,6 @@ public final class DeliveryStreamInputFormatConfiguration extends io.pulumi.reso
             this.deserializer = deserializer;
             return this;
         }
-
         public DeliveryStreamInputFormatConfiguration build() {
             return new DeliveryStreamInputFormatConfiguration(deserializer);
         }

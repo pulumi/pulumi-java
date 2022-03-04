@@ -5,7 +5,7 @@ package io.pulumi.azurenative.aad.inputs;
 
 import io.pulumi.azurenative.aad.inputs.HealthAlertResponse;
 import io.pulumi.azurenative.aad.inputs.HealthMonitorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="domainControllerIpAddress", required=true)
-    private final List<String> domainControllerIpAddress;
+      private final List<String> domainControllerIpAddress;
 
     public List<String> getDomainControllerIpAddress() {
         return this.domainControllerIpAddress;
@@ -37,7 +37,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="externalAccessIpAddress", required=true)
-    private final String externalAccessIpAddress;
+      private final String externalAccessIpAddress;
 
     public String getExternalAccessIpAddress() {
         return this.externalAccessIpAddress;
@@ -48,7 +48,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="healthAlerts", required=true)
-    private final List<HealthAlertResponse> healthAlerts;
+      private final List<HealthAlertResponse> healthAlerts;
 
     public List<HealthAlertResponse> getHealthAlerts() {
         return this.healthAlerts;
@@ -59,7 +59,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="healthLastEvaluated", required=true)
-    private final String healthLastEvaluated;
+      private final String healthLastEvaluated;
 
     public String getHealthLastEvaluated() {
         return this.healthLastEvaluated;
@@ -70,7 +70,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="healthMonitors", required=true)
-    private final List<HealthMonitorResponse> healthMonitors;
+      private final List<HealthMonitorResponse> healthMonitors;
 
     public List<HealthMonitorResponse> getHealthMonitors() {
         return this.healthMonitors;
@@ -81,7 +81,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -92,7 +92,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="replicaSetId", required=true)
-    private final String replicaSetId;
+      private final String replicaSetId;
 
     public String getReplicaSetId() {
         return this.replicaSetId;
@@ -103,7 +103,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceStatus", required=true)
-    private final String serviceStatus;
+      private final String serviceStatus;
 
     public String getServiceStatus() {
         return this.serviceStatus;
@@ -114,7 +114,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable String subnetId;
+      private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
@@ -125,7 +125,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vnetSiteId", required=true)
-    private final String vnetSiteId;
+      private final String vnetSiteId;
 
     public String getVnetSiteId() {
         return this.vnetSiteId;
@@ -254,7 +254,6 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
             this.vnetSiteId = Objects.requireNonNull(vnetSiteId);
             return this;
         }
-
         public ReplicaSetResponse build() {
             return new ReplicaSetResponse(domainControllerIpAddress, externalAccessIpAddress, healthAlerts, healthLastEvaluated, healthMonitors, location, replicaSetId, serviceStatus, subnetId, vnetSiteId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.CustomErrorRuleResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class CustomErrorResponse {
     /**
      * The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
-     */
+    */
     public List<CustomErrorRuleResponse> getRules() {
         return this.rules;
     }
     /**
      * The list of custom error detail types, e.g. 'google.foo.v1.CustomError'.
      * 
-     */
+    */
     public List<String> getTypes() {
         return this.types;
     }
@@ -76,7 +76,6 @@ public final class CustomErrorResponse {
             this.types = Objects.requireNonNull(types);
             return this;
         }
-
         public CustomErrorResponse build() {
             return new CustomErrorResponse(rules, types);
         }

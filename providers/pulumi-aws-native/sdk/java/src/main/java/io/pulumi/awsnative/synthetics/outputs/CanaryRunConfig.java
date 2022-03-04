@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -49,28 +49,28 @@ public final class CanaryRunConfig {
     /**
      * Enable active tracing if set to true
      * 
-     */
+    */
     public Optional<Boolean> getActiveTracing() {
         return Optional.ofNullable(this.activeTracing);
     }
     /**
      * Environment variable key-value pairs.
      * 
-     */
+    */
     public Optional<Object> getEnvironmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
     /**
      * Provide maximum memory available for canary in MB
      * 
-     */
+    */
     public Optional<Integer> getMemoryInMB() {
         return Optional.ofNullable(this.memoryInMB);
     }
     /**
      * Provide maximum canary timeout per run in seconds
      * 
-     */
+    */
     public Optional<Integer> getTimeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
@@ -120,7 +120,6 @@ public final class CanaryRunConfig {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public CanaryRunConfig build() {
             return new CanaryRunConfig(activeTracing, environmentVariables, memoryInMB, timeoutInSeconds);
         }

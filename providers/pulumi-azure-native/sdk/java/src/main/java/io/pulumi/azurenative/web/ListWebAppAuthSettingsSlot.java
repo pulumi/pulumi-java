@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListWebAppAuthSettingsSlotArgs;
 import io.pulumi.azurenative.web.outputs.ListWebAppAuthSettingsSlotResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppAuthSettingsSlot {
-/**
- * Configuration settings for the Azure App Service Authentication / Authorization feature.
+    private ListWebAppAuthSettingsSlot() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppAuthSettingsSlotArgs.Builder a);
+    }
+    private static ListWebAppAuthSettingsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppAuthSettingsSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Configuration settings for the Azure App Service Authentication / Authorization feature.
  * API Version: 2020-12-01.
  * 
- *
- * Configuration settings for the Azure App Service Authentication / Authorization feature.
+     *
+     * Configuration settings for the Azure App Service Authentication / Authorization feature.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppAuthSettingsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Configuration settings for the Azure App Service Authentication / Authorization feature.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Configuration settings for the Azure App Service Authentication / Authorization feature.
+     * 
+     */
     public static CompletableFuture<ListWebAppAuthSettingsSlotResult> invokeAsync(ListWebAppAuthSettingsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAuthSettingsSlot", TypeShape.of(ListWebAppAuthSettingsSlotResult.class), args == null ? ListWebAppAuthSettingsSlotArgs.Empty : args, Utilities.withVersion(options));
     }

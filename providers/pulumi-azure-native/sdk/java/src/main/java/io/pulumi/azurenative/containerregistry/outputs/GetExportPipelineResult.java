@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 import io.pulumi.azurenative.containerregistry.outputs.ExportPipelineTargetPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -86,63 +86,63 @@ public final class GetExportPipelineResult {
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the export pipeline.
      * 
-     */
+    */
     public Optional<IdentityPropertiesResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location of the export pipeline.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of all options configured for the pipeline.
      * 
-     */
+    */
     public List<String> getOptions() {
         return this.options == null ? List.of() : this.options;
     }
     /**
      * The provisioning state of the pipeline at the time the operation was called.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The target properties of the export pipeline.
      * 
-     */
+    */
     public ExportPipelineTargetPropertiesResponse getTarget() {
         return this.target;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -227,7 +227,6 @@ public final class GetExportPipelineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExportPipelineResult build() {
             return new GetExportPipelineResult(id, identity, location, name, options, provisioningState, systemData, target, type);
         }

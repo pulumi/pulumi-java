@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -70,21 +70,21 @@ public final class WebHookEventSubscriptionDestinationResponse {
     /**
      * The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
      * 
-     */
+    */
     public Optional<String> getAzureActiveDirectoryApplicationIdOrUri() {
         return Optional.ofNullable(this.azureActiveDirectoryApplicationIdOrUri);
     }
     /**
      * The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
      * 
-     */
+    */
     public Optional<String> getAzureActiveDirectoryTenantId() {
         return Optional.ofNullable(this.azureActiveDirectoryTenantId);
     }
     /**
      * The base URL that represents the endpoint of the destination of an event subscription.
      * 
-     */
+    */
     public String getEndpointBaseUrl() {
         return this.endpointBaseUrl;
     }
@@ -92,28 +92,28 @@ public final class WebHookEventSubscriptionDestinationResponse {
      * Type of the endpoint for the event subscription destination.
      * Expected value is 'WebHook'.
      * 
-     */
+    */
     public String getEndpointType() {
         return this.endpointType;
     }
     /**
      * The URL that represents the endpoint of the destination of an event subscription.
      * 
-     */
+    */
     public Optional<String> getEndpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
     /**
      * Maximum number of events per batch.
      * 
-     */
+    */
     public Optional<Integer> getMaxEventsPerBatch() {
         return Optional.ofNullable(this.maxEventsPerBatch);
     }
     /**
      * Preferred batch size in Kilobytes.
      * 
-     */
+    */
     public Optional<Integer> getPreferredBatchSizeInKilobytes() {
         return Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
@@ -184,7 +184,6 @@ public final class WebHookEventSubscriptionDestinationResponse {
             this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }
-
         public WebHookEventSubscriptionDestinationResponse build() {
             return new WebHookEventSubscriptionDestinationResponse(azureActiveDirectoryApplicationIdOrUri, azureActiveDirectoryTenantId, endpointBaseUrl, endpointType, endpointUrl, maxEventsPerBatch, preferredBatchSizeInKilobytes);
         }

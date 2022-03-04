@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,21 +40,21 @@ public final class EnvironmentVariableSetupResponse {
      * The type of custom setup.
      * Expected value is 'EnvironmentVariableSetup'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The name of the environment variable.
      * 
-     */
+    */
     public String getVariableName() {
         return this.variableName;
     }
     /**
      * The value of the environment variable.
      * 
-     */
+    */
     public String getVariableValue() {
         return this.variableValue;
     }
@@ -97,7 +97,6 @@ public final class EnvironmentVariableSetupResponse {
             this.variableValue = Objects.requireNonNull(variableValue);
             return this;
         }
-
         public EnvironmentVariableSetupResponse build() {
             return new EnvironmentVariableSetupResponse(type, variableName, variableValue);
         }

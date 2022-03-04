@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
      * 
      */
     @InputImport(name="managementGroups")
-    private final @Nullable List<String> managementGroups;
+      private final @Nullable List<String> managementGroups;
 
     public List<String> getManagementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
@@ -35,7 +35,7 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
      * 
      */
     @InputImport(name="subscriptions")
-    private final @Nullable List<String> subscriptions;
+      private final @Nullable List<String> subscriptions;
 
     public List<String> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
@@ -84,7 +84,6 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
             this.subscriptions = subscriptions;
             return this;
         }
-
         public NetworkManagerPropertiesResponseNetworkManagerScopes build() {
             return new NetworkManagerPropertiesResponseNetworkManagerScopes(managementGroups, subscriptions);
         }

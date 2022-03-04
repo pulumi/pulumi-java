@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.ThemeErrorType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public final class ThemeError {
     /**
      * <p>The error message.</p>
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
@@ -69,7 +69,6 @@ public final class ThemeError {
             this.type = type;
             return this;
         }
-
         public ThemeError build() {
             return new ThemeError(message, type);
         }

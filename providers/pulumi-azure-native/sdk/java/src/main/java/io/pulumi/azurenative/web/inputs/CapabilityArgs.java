@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+      private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -45,7 +45,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -119,7 +119,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public CapabilityArgs build() {
             return new CapabilityArgs(name, reason, value);
         }

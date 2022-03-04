@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetIotEventsDestinationConfiguration;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetS3DestinationConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class DatasetContentDeliveryRuleDestination extends io.pulumi.resou
     public static final DatasetContentDeliveryRuleDestination Empty = new DatasetContentDeliveryRuleDestination();
 
     @InputImport(name="iotEventsDestinationConfiguration")
-    private final @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration;
+      private final @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration;
 
     public Optional<DatasetIotEventsDestinationConfiguration> getIotEventsDestinationConfiguration() {
         return this.iotEventsDestinationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.iotEventsDestinationConfiguration);
     }
 
     @InputImport(name="s3DestinationConfiguration")
-    private final @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration;
+      private final @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration;
 
     public Optional<DatasetS3DestinationConfiguration> getS3DestinationConfiguration() {
         return this.s3DestinationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.s3DestinationConfiguration);
@@ -72,7 +72,6 @@ public final class DatasetContentDeliveryRuleDestination extends io.pulumi.resou
             this.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
         }
-
         public DatasetContentDeliveryRuleDestination build() {
             return new DatasetContentDeliveryRuleDestination(iotEventsDestinationConfiguration, s3DestinationConfiguration);
         }

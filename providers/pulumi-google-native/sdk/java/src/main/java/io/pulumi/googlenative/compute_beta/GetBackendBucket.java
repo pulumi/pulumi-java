@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackendBucket {
-/**
- * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
+    private GetBackendBucket() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackendBucketArgs.Builder a);
+    }
+    private static GetBackendBucketArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackendBucketArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetBackendBucketResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetBackendBucketResult> invokeAsync(GetBackendBucketArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args == null ? GetBackendBucketArgs.Empty : args, Utilities.withVersion(options));
     }

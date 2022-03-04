@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable Input<String> fqdn;
+      private final @Nullable Input<String> fqdn;
 
     public Input<String> getFqdn() {
         return this.fqdn == null ? Input.empty() : this.fqdn;
@@ -35,7 +35,7 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ipAddresses")
-    private final @Nullable Input<List<String>> ipAddresses;
+      private final @Nullable Input<List<String>> ipAddresses;
 
     public Input<List<String>> getIpAddresses() {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
@@ -94,7 +94,6 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
             this.ipAddresses = Input.ofNullable(ipAddresses);
             return this;
         }
-
         public CustomDnsConfigPropertiesFormatArgs build() {
             return new CustomDnsConfigPropertiesFormatArgs(fqdn, ipAddresses);
         }

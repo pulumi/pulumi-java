@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1GraphQLOperationConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse {
     /**
      * Flag that specifies whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
      * 
-     */
+    */
     public String getOperationConfigType() {
         return this.operationConfigType;
     }
     /**
      * List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
      * 
-     */
+    */
     public List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> getOperationConfigs() {
         return this.operationConfigs;
     }
@@ -76,7 +76,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
-
         public GoogleCloudApigeeV1GraphQLOperationGroupResponse build() {
             return new GoogleCloudApigeeV1GraphQLOperationGroupResponse(operationConfigType, operationConfigs);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.enums.AssetModelTypeName;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelAttribute;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelMetric;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelTransform;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,28 +22,28 @@ public final class AssetModelPropertyType extends io.pulumi.resources.InvokeArgs
     public static final AssetModelPropertyType Empty = new AssetModelPropertyType();
 
     @InputImport(name="attribute")
-    private final @Nullable AssetModelAttribute attribute;
+      private final @Nullable AssetModelAttribute attribute;
 
     public Optional<AssetModelAttribute> getAttribute() {
         return this.attribute == null ? Optional.empty() : Optional.ofNullable(this.attribute);
     }
 
     @InputImport(name="metric")
-    private final @Nullable AssetModelMetric metric;
+      private final @Nullable AssetModelMetric metric;
 
     public Optional<AssetModelMetric> getMetric() {
         return this.metric == null ? Optional.empty() : Optional.ofNullable(this.metric);
     }
 
     @InputImport(name="transform")
-    private final @Nullable AssetModelTransform transform;
+      private final @Nullable AssetModelTransform transform;
 
     public Optional<AssetModelTransform> getTransform() {
         return this.transform == null ? Optional.empty() : Optional.ofNullable(this.transform);
     }
 
     @InputImport(name="typeName", required=true)
-    private final AssetModelTypeName typeName;
+      private final AssetModelTypeName typeName;
 
     public AssetModelTypeName getTypeName() {
         return this.typeName;
@@ -112,7 +112,6 @@ public final class AssetModelPropertyType extends io.pulumi.resources.InvokeArgs
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public AssetModelPropertyType build() {
             return new AssetModelPropertyType(attribute, metric, transform, typeName);
         }

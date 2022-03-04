@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetRouterBgp;
 import java.lang.Boolean;
 import java.lang.String;
@@ -68,7 +68,7 @@ public final class GetRouterResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -175,7 +175,6 @@ public final class GetRouterResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetRouterResult build() {
             return new GetRouterResult(bgps, creationTimestamp, description, encryptedInterconnectRouter, id, name, network, project, region, selfLink);
         }

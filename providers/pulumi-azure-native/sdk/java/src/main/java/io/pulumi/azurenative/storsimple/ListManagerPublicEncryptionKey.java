@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.inputs.ListManagerPublicEncryptionKeyArgs;
 import io.pulumi.azurenative.storsimple.outputs.ListManagerPublicEncryptionKeyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListManagerPublicEncryptionKey {
-/**
- * Represents the secrets encrypted using Symmetric Encryption Key.
+    private ListManagerPublicEncryptionKey() {}
+    public interface BuilderApplicator {
+        public void apply(ListManagerPublicEncryptionKeyArgs.Builder a);
+    }
+    private static ListManagerPublicEncryptionKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListManagerPublicEncryptionKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents the secrets encrypted using Symmetric Encryption Key.
  * API Version: 2017-06-01.
  * 
- *
- * Represents the secrets encrypted using Symmetric Encryption Key.
+     *
+     * Represents the secrets encrypted using Symmetric Encryption Key.
  * 
- */
+     */
+    public static CompletableFuture<ListManagerPublicEncryptionKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents the secrets encrypted using Symmetric Encryption Key.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * Represents the secrets encrypted using Symmetric Encryption Key.
+     * 
+     */
     public static CompletableFuture<ListManagerPublicEncryptionKeyResult> invokeAsync(ListManagerPublicEncryptionKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:listManagerPublicEncryptionKey", TypeShape.of(ListManagerPublicEncryptionKeyResult.class), args == null ? ListManagerPublicEncryptionKeyArgs.Empty : args, Utilities.withVersion(options));
     }

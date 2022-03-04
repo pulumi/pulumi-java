@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeHost")
-    private final @Nullable Input<Boolean> includeHost;
+      private final @Nullable Input<Boolean> includeHost;
 
     public Input<Boolean> getIncludeHost() {
         return this.includeHost == null ? Input.empty() : this.includeHost;
@@ -36,7 +36,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeHttpHeaders")
-    private final @Nullable Input<List<String>> includeHttpHeaders;
+      private final @Nullable Input<List<String>> includeHttpHeaders;
 
     public Input<List<String>> getIncludeHttpHeaders() {
         return this.includeHttpHeaders == null ? Input.empty() : this.includeHttpHeaders;
@@ -47,7 +47,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeNamedCookies")
-    private final @Nullable Input<List<String>> includeNamedCookies;
+      private final @Nullable Input<List<String>> includeNamedCookies;
 
     public Input<List<String>> getIncludeNamedCookies() {
         return this.includeNamedCookies == null ? Input.empty() : this.includeNamedCookies;
@@ -58,7 +58,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeProtocol")
-    private final @Nullable Input<Boolean> includeProtocol;
+      private final @Nullable Input<Boolean> includeProtocol;
 
     public Input<Boolean> getIncludeProtocol() {
         return this.includeProtocol == null ? Input.empty() : this.includeProtocol;
@@ -69,7 +69,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeQueryString")
-    private final @Nullable Input<Boolean> includeQueryString;
+      private final @Nullable Input<Boolean> includeQueryString;
 
     public Input<Boolean> getIncludeQueryString() {
         return this.includeQueryString == null ? Input.empty() : this.includeQueryString;
@@ -80,7 +80,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStringBlacklist")
-    private final @Nullable Input<List<String>> queryStringBlacklist;
+      private final @Nullable Input<List<String>> queryStringBlacklist;
 
     public Input<List<String>> getQueryStringBlacklist() {
         return this.queryStringBlacklist == null ? Input.empty() : this.queryStringBlacklist;
@@ -91,7 +91,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStringWhitelist")
-    private final @Nullable Input<List<String>> queryStringWhitelist;
+      private final @Nullable Input<List<String>> queryStringWhitelist;
 
     public Input<List<String>> getQueryStringWhitelist() {
         return this.queryStringWhitelist == null ? Input.empty() : this.queryStringWhitelist;
@@ -225,7 +225,6 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.queryStringWhitelist = Input.ofNullable(queryStringWhitelist);
             return this;
         }
-
         public CacheKeyPolicyArgs build() {
             return new CacheKeyPolicyArgs(includeHost, includeHttpHeaders, includeNamedCookies, includeProtocol, includeQueryString, queryStringBlacklist, queryStringWhitelist);
         }

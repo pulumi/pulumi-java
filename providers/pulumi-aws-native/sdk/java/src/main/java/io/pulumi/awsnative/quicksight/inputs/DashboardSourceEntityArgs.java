@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DashboardSourceTemplateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class DashboardSourceEntityArgs extends io.pulumi.resources.Resourc
     public static final DashboardSourceEntityArgs Empty = new DashboardSourceEntityArgs();
 
     @InputImport(name="sourceTemplate")
-    private final @Nullable Input<DashboardSourceTemplateArgs> sourceTemplate;
+      private final @Nullable Input<DashboardSourceTemplateArgs> sourceTemplate;
 
     public Input<DashboardSourceTemplateArgs> getSourceTemplate() {
         return this.sourceTemplate == null ? Input.empty() : this.sourceTemplate;
@@ -62,7 +62,6 @@ public final class DashboardSourceEntityArgs extends io.pulumi.resources.Resourc
             this.sourceTemplate = Input.ofNullable(sourceTemplate);
             return this;
         }
-
         public DashboardSourceEntityArgs build() {
             return new DashboardSourceEntityArgs(sourceTemplate);
         }

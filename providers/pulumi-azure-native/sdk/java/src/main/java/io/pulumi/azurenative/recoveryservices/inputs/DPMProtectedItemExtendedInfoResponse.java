@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="diskStorageUsedInBytes")
-    private final @Nullable String diskStorageUsedInBytes;
+      private final @Nullable String diskStorageUsedInBytes;
 
     public Optional<String> getDiskStorageUsedInBytes() {
         return this.diskStorageUsedInBytes == null ? Optional.empty() : Optional.ofNullable(this.diskStorageUsedInBytes);
@@ -37,7 +37,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="isCollocated")
-    private final @Nullable Boolean isCollocated;
+      private final @Nullable Boolean isCollocated;
 
     public Optional<Boolean> getIsCollocated() {
         return this.isCollocated == null ? Optional.empty() : Optional.ofNullable(this.isCollocated);
@@ -48,7 +48,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="isPresentOnCloud")
-    private final @Nullable Boolean isPresentOnCloud;
+      private final @Nullable Boolean isPresentOnCloud;
 
     public Optional<Boolean> getIsPresentOnCloud() {
         return this.isPresentOnCloud == null ? Optional.empty() : Optional.ofNullable(this.isPresentOnCloud);
@@ -59,7 +59,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="lastBackupStatus")
-    private final @Nullable String lastBackupStatus;
+      private final @Nullable String lastBackupStatus;
 
     public Optional<String> getLastBackupStatus() {
         return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
@@ -70,7 +70,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="lastRefreshedAt")
-    private final @Nullable String lastRefreshedAt;
+      private final @Nullable String lastRefreshedAt;
 
     public Optional<String> getLastRefreshedAt() {
         return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);
@@ -81,7 +81,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-    private final @Nullable String oldestRecoveryPoint;
+      private final @Nullable String oldestRecoveryPoint;
 
     public Optional<String> getOldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
@@ -92,7 +92,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="onPremiseLatestRecoveryPoint")
-    private final @Nullable String onPremiseLatestRecoveryPoint;
+      private final @Nullable String onPremiseLatestRecoveryPoint;
 
     public Optional<String> getOnPremiseLatestRecoveryPoint() {
         return this.onPremiseLatestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.onPremiseLatestRecoveryPoint);
@@ -103,7 +103,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="onPremiseOldestRecoveryPoint")
-    private final @Nullable String onPremiseOldestRecoveryPoint;
+      private final @Nullable String onPremiseOldestRecoveryPoint;
 
     public Optional<String> getOnPremiseOldestRecoveryPoint() {
         return this.onPremiseOldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.onPremiseOldestRecoveryPoint);
@@ -114,7 +114,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="onPremiseRecoveryPointCount")
-    private final @Nullable Integer onPremiseRecoveryPointCount;
+      private final @Nullable Integer onPremiseRecoveryPointCount;
 
     public Optional<Integer> getOnPremiseRecoveryPointCount() {
         return this.onPremiseRecoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.onPremiseRecoveryPointCount);
@@ -125,7 +125,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="protectableObjectLoadPath")
-    private final @Nullable Map<String,String> protectableObjectLoadPath;
+      private final @Nullable Map<String,String> protectableObjectLoadPath;
 
     public Map<String,String> getProtectableObjectLoadPath() {
         return this.protectableObjectLoadPath == null ? Map.of() : this.protectableObjectLoadPath;
@@ -136,7 +136,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="protected")
-    private final @Nullable Boolean $protected;
+      private final @Nullable Boolean $protected;
 
     public Optional<Boolean> get$protected() {
         return this.$protected == null ? Optional.empty() : Optional.ofNullable(this.$protected);
@@ -147,7 +147,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="protectionGroupName")
-    private final @Nullable String protectionGroupName;
+      private final @Nullable String protectionGroupName;
 
     public Optional<String> getProtectionGroupName() {
         return this.protectionGroupName == null ? Optional.empty() : Optional.ofNullable(this.protectionGroupName);
@@ -158,7 +158,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="recoveryPointCount")
-    private final @Nullable Integer recoveryPointCount;
+      private final @Nullable Integer recoveryPointCount;
 
     public Optional<Integer> getRecoveryPointCount() {
         return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
@@ -169,7 +169,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="totalDiskStorageSizeInBytes")
-    private final @Nullable String totalDiskStorageSizeInBytes;
+      private final @Nullable String totalDiskStorageSizeInBytes;
 
     public Optional<String> getTotalDiskStorageSizeInBytes() {
         return this.totalDiskStorageSizeInBytes == null ? Optional.empty() : Optional.ofNullable(this.totalDiskStorageSizeInBytes);
@@ -338,7 +338,6 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
             this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
             return this;
         }
-
         public DPMProtectedItemExtendedInfoResponse build() {
             return new DPMProtectedItemExtendedInfoResponse(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, $protected, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
         }

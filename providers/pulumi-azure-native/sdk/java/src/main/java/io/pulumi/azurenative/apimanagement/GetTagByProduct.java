@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetTagByProductArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetTagByProductResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagByProduct {
-/**
- * Tag Contract details.
+    private GetTagByProduct() {}
+    public interface BuilderApplicator {
+        public void apply(GetTagByProductArgs.Builder a);
+    }
+    private static GetTagByProductArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTagByProductArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Tag Contract details.
  * API Version: 2020-12-01.
  * 
- *
- * Tag Contract details.
+     *
+     * Tag Contract details.
  * 
- */
+     */
+    public static CompletableFuture<GetTagByProductResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Tag Contract details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Tag Contract details.
+     * 
+     */
     public static CompletableFuture<GetTagByProductResult> invokeAsync(GetTagByProductArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTagByProduct", TypeShape.of(GetTagByProductResult.class), args == null ? GetTagByProductArgs.Empty : args, Utilities.withVersion(options));
     }

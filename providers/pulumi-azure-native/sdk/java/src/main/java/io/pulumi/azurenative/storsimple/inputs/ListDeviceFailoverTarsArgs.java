@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="managerName", required=true)
-    private final String managerName;
+      private final String managerName;
 
     public String getManagerName() {
         return this.managerName;
@@ -31,7 +31,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sourceDeviceName", required=true)
-    private final String sourceDeviceName;
+      private final String sourceDeviceName;
 
     public String getSourceDeviceName() {
         return this.sourceDeviceName;
@@ -53,7 +53,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="volumeContainers")
-    private final @Nullable List<String> volumeContainers;
+      private final @Nullable List<String> volumeContainers;
 
     public List<String> getVolumeContainers() {
         return this.volumeContainers == null ? List.of() : this.volumeContainers;
@@ -122,7 +122,6 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
             this.volumeContainers = volumeContainers;
             return this;
         }
-
         public ListDeviceFailoverTarsArgs build() {
             return new ListDeviceFailoverTarsArgs(managerName, resourceGroupName, sourceDeviceName, volumeContainers);
         }

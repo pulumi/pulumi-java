@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CloudHealthcareSourceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -59,7 +59,6 @@ public final class CloudHealthcareSourceResponse extends io.pulumi.resources.Inv
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public CloudHealthcareSourceResponse build() {
             return new CloudHealthcareSourceResponse(name);
         }

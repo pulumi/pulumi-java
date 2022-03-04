@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class LocalCopyResponse {
     /**
      * The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or "boot", which represents the Docker instance's boot disk and has a mount point of `/`.
      * 
-     */
+    */
     public String getDisk() {
         return this.disk;
     }
     /**
      * The path within the user's docker container where this input should be localized to and from, relative to the specified disk's mount point. For example: file.txt,
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
@@ -74,7 +74,6 @@ public final class LocalCopyResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public LocalCopyResponse build() {
             return new LocalCopyResponse(disk, path);
         }

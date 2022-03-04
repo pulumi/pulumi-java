@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.DiagnosticConditionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final List<DiagnosticConditionResponse> conditions;
+      private final List<DiagnosticConditionResponse> conditions;
 
     public List<DiagnosticConditionResponse> getConditions() {
         return this.conditions;
@@ -60,7 +60,6 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public DiagnosticsResponse build() {
             return new DiagnosticsResponse(conditions);
         }

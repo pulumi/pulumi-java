@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceAcceleratorConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="coreCount", required=true)
-    private final Input<Integer> coreCount;
+      private final Input<Integer> coreCount;
 
     public Input<Integer> getCoreCount() {
         return this.coreCount;
@@ -31,7 +31,7 @@ public final class InstanceAcceleratorConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -90,7 +90,6 @@ public final class InstanceAcceleratorConfigGetArgs extends io.pulumi.resources.
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public InstanceAcceleratorConfigGetArgs build() {
             return new InstanceAcceleratorConfigGetArgs(coreCount, type);
         }

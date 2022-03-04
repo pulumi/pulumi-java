@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RuleResultsPropertiesResponse {
     /**
      * Expected results in the baseline.
      * 
-     */
+    */
     public List<List<String>> getResults() {
         return this.results == null ? List.of() : this.results;
     }
@@ -54,7 +54,6 @@ public final class RuleResultsPropertiesResponse {
             this.results = results;
             return this;
         }
-
         public RuleResultsPropertiesResponse build() {
             return new RuleResultsPropertiesResponse(results);
         }

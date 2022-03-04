@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io
      * 
      */
     @InputImport(name="status")
-    private final @Nullable InstanceViewStatusResponse status;
+      private final @Nullable InstanceViewStatusResponse status;
 
     public Optional<InstanceViewStatusResponse> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -35,7 +35,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -46,7 +46,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io
      * 
      */
     @InputImport(name="typeHandlerVersion")
-    private final @Nullable String typeHandlerVersion;
+      private final @Nullable String typeHandlerVersion;
 
     public Optional<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
@@ -105,7 +105,6 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public VirtualMachineExtensionHandlerInstanceViewResponse build() {
             return new VirtualMachineExtensionHandlerInstanceViewResponse(status, type, typeHandlerVersion);
         }

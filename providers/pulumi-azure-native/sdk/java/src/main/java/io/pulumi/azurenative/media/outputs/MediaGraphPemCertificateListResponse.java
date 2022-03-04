@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +33,7 @@ public final class MediaGraphPemCertificateListResponse {
     /**
      * PEM formatted public certificates, one per entry.
      * 
-     */
+    */
     public List<String> getCertificates() {
         return this.certificates;
     }
@@ -41,7 +41,7 @@ public final class MediaGraphPemCertificateListResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphPemCertificateList'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
@@ -77,7 +77,6 @@ public final class MediaGraphPemCertificateListResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MediaGraphPemCertificateListResponse build() {
             return new MediaGraphPemCertificateListResponse(certificates, odataType);
         }

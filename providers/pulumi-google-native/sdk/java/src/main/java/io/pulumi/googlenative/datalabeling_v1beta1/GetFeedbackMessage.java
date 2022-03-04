@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFeedbackMessage {
-/**
- * Get a FeedbackMessage object.
+    private GetFeedbackMessage() {}
+    public interface BuilderApplicator {
+        public void apply(GetFeedbackMessageArgs.Builder a);
+    }
+    private static GetFeedbackMessageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFeedbackMessageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a FeedbackMessage object.
  * 
- */
+     */
+    public static CompletableFuture<GetFeedbackMessageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a FeedbackMessage object.
+     * 
+     */
     public static CompletableFuture<GetFeedbackMessageResult> invokeAsync(GetFeedbackMessageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getFeedbackMessage", TypeShape.of(GetFeedbackMessageResult.class), args == null ? GetFeedbackMessageArgs.Empty : args, Utilities.withVersion(options));
     }

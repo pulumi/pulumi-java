@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +72,6 @@ public final class GetHcVpnGatewayVpnInterface {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public GetHcVpnGatewayVpnInterface build() {
             return new GetHcVpnGatewayVpnInterface(id, interconnectAttachment, ipAddress);
         }

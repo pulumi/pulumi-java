@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="effect", required=true)
-    private final Input<String> effect;
+      private final Input<String> effect;
 
     public Input<String> getEffect() {
         return this.effect;
@@ -39,7 +39,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -50,7 +50,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeAdded")
-    private final @Nullable Input<String> timeAdded;
+      private final @Nullable Input<String> timeAdded;
 
     public Input<String> getTimeAdded() {
         return this.timeAdded == null ? Input.empty() : this.timeAdded;
@@ -61,7 +61,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -150,7 +150,6 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public TaintArgs build() {
             return new TaintArgs(effect, key, timeAdded, value);
         }

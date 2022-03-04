@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeSecretItemArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="defaultMode")
-    private final @Nullable Input<Integer> defaultMode;
+      private final @Nullable Input<Integer> defaultMode;
 
     public Input<Integer> getDefaultMode() {
         return this.defaultMode == null ? Input.empty() : this.defaultMode;
@@ -41,7 +41,7 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<ServiceTemplateSpecVolumeSecretItemArgs>> items;
+      private final @Nullable Input<List<ServiceTemplateSpecVolumeSecretItemArgs>> items;
 
     public Input<List<ServiceTemplateSpecVolumeSecretItemArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -60,7 +60,7 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="secretName", required=true)
-    private final Input<String> secretName;
+      private final Input<String> secretName;
 
     public Input<String> getSecretName() {
         return this.secretName;
@@ -134,7 +134,6 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
             this.secretName = Input.of(Objects.requireNonNull(secretName));
             return this;
         }
-
         public ServiceTemplateSpecVolumeSecretArgs build() {
             return new ServiceTemplateSpecVolumeSecretArgs(defaultMode, items, secretName);
         }

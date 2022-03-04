@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.SshConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ssh")
-    private final @Nullable Input<SshConfigurationArgs> ssh;
+      private final @Nullable Input<SshConfigurationArgs> ssh;
 
     public Input<SshConfigurationArgs> getSsh() {
         return this.ssh == null ? Input.empty() : this.ssh;
@@ -66,7 +66,6 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
             this.ssh = Input.ofNullable(ssh);
             return this;
         }
-
         public LinuxConfigurationArgs build() {
             return new LinuxConfigurationArgs(ssh);
         }

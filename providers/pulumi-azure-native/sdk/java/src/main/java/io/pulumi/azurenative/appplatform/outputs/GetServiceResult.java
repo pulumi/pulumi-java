@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.ClusterResourcePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class GetServiceResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The GEO location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the Service resource
      * 
-     */
+    */
     public ClusterResourcePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Sku of the Service resource
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(id, location, name, properties, sku, tags, type);
         }

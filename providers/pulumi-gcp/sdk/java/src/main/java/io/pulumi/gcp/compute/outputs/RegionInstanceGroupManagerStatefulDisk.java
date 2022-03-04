@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class RegionInstanceGroupManagerStatefulDisk {
     /**
      * , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` - detach the disk when the VM is deleted, but do not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
      * 
-     */
+    */
     public Optional<String> getDeleteRule() {
         return Optional.ofNullable(this.deleteRule);
     }
     /**
      * , The device name of the disk to be attached.
      * 
-     */
+    */
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -76,7 +76,6 @@ public final class RegionInstanceGroupManagerStatefulDisk {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public RegionInstanceGroupManagerStatefulDisk build() {
             return new RegionInstanceGroupManagerStatefulDisk(deleteRule, deviceName);
         }

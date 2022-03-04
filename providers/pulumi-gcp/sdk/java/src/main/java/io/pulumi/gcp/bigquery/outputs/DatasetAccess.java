@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.DatasetAccessView;
 import java.lang.String;
 import java.util.Objects;
@@ -74,14 +74,14 @@ public final class DatasetAccess {
      * A domain to grant access to. Any users signed in with the
      * domain specified will be granted the specified access
      * 
-     */
+    */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * An email address of a Google Group to grant access to.
      * 
-     */
+    */
     public Optional<String> getGroupByEmail() {
         return Optional.ofNullable(this.groupByEmail);
     }
@@ -92,14 +92,14 @@ public final class DatasetAccess {
      * are swapped by the API to their basic counterparts. See
      * [official docs](https://cloud.google.com/bigquery/docs/access-control).
      * 
-     */
+    */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }
     /**
      * A special group to grant access to. Possible values include:
      * 
-     */
+    */
     public Optional<String> getSpecialGroup() {
         return Optional.ofNullable(this.specialGroup);
     }
@@ -107,7 +107,7 @@ public final class DatasetAccess {
      * An email address of a user to grant access to. For example:
      * fred@example.com
      * 
-     */
+    */
     public Optional<String> getUserByEmail() {
         return Optional.ofNullable(this.userByEmail);
     }
@@ -119,7 +119,7 @@ public final class DatasetAccess {
      * needs to be granted again via an update operation.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<DatasetAccessView> getView() {
         return Optional.ofNullable(this.view);
     }
@@ -183,7 +183,6 @@ public final class DatasetAccess {
             this.view = view;
             return this;
         }
-
         public DatasetAccess build() {
             return new DatasetAccess(domain, groupByEmail, role, specialGroup, userByEmail, view);
         }

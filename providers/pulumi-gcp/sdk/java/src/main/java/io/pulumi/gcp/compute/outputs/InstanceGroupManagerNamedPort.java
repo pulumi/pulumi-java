@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -33,7 +33,7 @@ public final class InstanceGroupManagerNamedPort {
     /**
      * - Version name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -41,7 +41,7 @@ public final class InstanceGroupManagerNamedPort {
      * The port number.
      * ***
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -77,7 +77,6 @@ public final class InstanceGroupManagerNamedPort {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public InstanceGroupManagerNamedPort build() {
             return new InstanceGroupManagerNamedPort(name, port);
         }

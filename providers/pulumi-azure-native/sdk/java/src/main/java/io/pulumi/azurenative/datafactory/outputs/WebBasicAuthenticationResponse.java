@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -51,28 +51,28 @@ public final class WebBasicAuthenticationResponse {
      * Type of authentication used to connect to the web table source.
      * Expected value is 'Basic'.
      * 
-     */
+    */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * The password for Basic authentication.
      * 
-     */
+    */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password;
     }
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getUrl() {
         return this.url;
     }
     /**
      * User name for Basic authentication. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getUsername() {
         return this.username;
     }
@@ -122,7 +122,6 @@ public final class WebBasicAuthenticationResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public WebBasicAuthenticationResponse build() {
             return new WebBasicAuthenticationResponse(authenticationType, password, url, username);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BotVoiceSettings {
     /**
      * The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
      * 
-     */
+    */
     public String getVoiceId() {
         return this.voiceId;
     }
@@ -52,7 +52,6 @@ public final class BotVoiceSettings {
             this.voiceId = Objects.requireNonNull(voiceId);
             return this;
         }
-
         public BotVoiceSettings build() {
             return new BotVoiceSettings(voiceId);
         }

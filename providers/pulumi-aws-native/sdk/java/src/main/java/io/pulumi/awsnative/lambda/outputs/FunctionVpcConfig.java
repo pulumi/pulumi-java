@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class FunctionVpcConfig {
     /**
      * A list of VPC security groups IDs.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * A list of VPC subnet IDs.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
@@ -76,7 +76,6 @@ public final class FunctionVpcConfig {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public FunctionVpcConfig build() {
             return new FunctionVpcConfig(securityGroupIds, subnetIds);
         }

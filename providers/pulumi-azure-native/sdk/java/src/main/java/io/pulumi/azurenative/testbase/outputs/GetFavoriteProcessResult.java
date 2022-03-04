@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,35 +53,35 @@ public final class GetFavoriteProcessResult {
     /**
      * The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
      * 
-     */
+    */
     public String getActualProcessName() {
         return this.actualProcessName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The system metadata relating to this resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -138,7 +138,6 @@ public final class GetFavoriteProcessResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFavoriteProcessResult build() {
             return new GetFavoriteProcessResult(actualProcessName, id, name, systemData, type);
         }

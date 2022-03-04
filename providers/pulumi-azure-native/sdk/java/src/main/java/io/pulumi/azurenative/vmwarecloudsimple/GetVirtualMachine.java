@@ -6,21 +6,41 @@ package io.pulumi.azurenative.vmwarecloudsimple;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.GetVirtualMachineArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.GetVirtualMachineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachine {
-/**
- * Virtual machine model
+    private GetVirtualMachine() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineArgs.Builder a);
+    }
+    private static GetVirtualMachineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Virtual machine model
  * API Version: 2019-04-01.
  * 
- *
- * Virtual machine model
+     *
+     * Virtual machine model
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Virtual machine model
+     * API Version: 2019-04-01.
+     * 
+     *
+         * Virtual machine model
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineResult> invokeAsync(GetVirtualMachineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:vmwarecloudsimple:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args == null ? GetVirtualMachineArgs.Empty : args, Utilities.withVersion(options));
     }

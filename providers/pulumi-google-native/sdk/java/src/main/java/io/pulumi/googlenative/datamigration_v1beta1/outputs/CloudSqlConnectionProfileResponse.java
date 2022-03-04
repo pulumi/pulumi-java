@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.CloudSqlSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class CloudSqlConnectionProfileResponse {
     /**
      * The Cloud SQL instance ID that this connection profile is associated with.
      * 
-     */
+    */
     public String getCloudSqlId() {
         return this.cloudSqlId;
     }
     /**
      * The Cloud SQL database instance's private IP.
      * 
-     */
+    */
     public String getPrivateIp() {
         return this.privateIp;
     }
     /**
      * The Cloud SQL database instance's public IP.
      * 
-     */
+    */
     public String getPublicIp() {
         return this.publicIp;
     }
     /**
      * Immutable. Metadata used to create the destination Cloud SQL database.
      * 
-     */
+    */
     public CloudSqlSettingsResponse getSettings() {
         return this.settings;
     }
@@ -117,7 +117,6 @@ public final class CloudSqlConnectionProfileResponse {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
-
         public CloudSqlConnectionProfileResponse build() {
             return new CloudSqlConnectionProfileResponse(cloudSqlId, privateIp, publicIp, settings);
         }

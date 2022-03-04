@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.RestHealthCheckStepAttributesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +33,7 @@ public final class HealthCheckStepPropertiesResponse {
     /**
      * The health check step attributes
      * 
-     */
+    */
     public RestHealthCheckStepAttributesResponse getAttributes() {
         return this.attributes;
     }
@@ -41,7 +41,7 @@ public final class HealthCheckStepPropertiesResponse {
      * The type of step.
      * Expected value is 'HealthCheck'.
      * 
-     */
+    */
     public String getStepType() {
         return this.stepType;
     }
@@ -77,7 +77,6 @@ public final class HealthCheckStepPropertiesResponse {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
         }
-
         public HealthCheckStepPropertiesResponse build() {
             return new HealthCheckStepPropertiesResponse(attributes, stepType);
         }

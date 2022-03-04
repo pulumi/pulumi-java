@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.discovery.k8s.io_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.EndpointSliceListArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs.EndpointSlice;
@@ -78,6 +78,37 @@ public class EndpointSliceList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EndpointSliceListArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.discovery.k8s.io_v1beta1.EndpointSliceListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.discovery.k8s.io_v1beta1.EndpointSliceListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public EndpointSliceList(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EndpointSliceList(String name) {
+        this(name, EndpointSliceListArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EndpointSliceList(String name, EndpointSliceListArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

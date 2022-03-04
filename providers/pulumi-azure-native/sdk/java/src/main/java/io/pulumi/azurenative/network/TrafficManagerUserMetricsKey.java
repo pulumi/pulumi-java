@@ -8,8 +8,8 @@ import io.pulumi.azurenative.network.TrafficManagerUserMetricsKeyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -74,6 +74,37 @@ public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomReso
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable TrafficManagerUserMetricsKeyArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.TrafficManagerUserMetricsKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.TrafficManagerUserMetricsKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TrafficManagerUserMetricsKey(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TrafficManagerUserMetricsKey(String name) {
+        this(name, TrafficManagerUserMetricsKeyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TrafficManagerUserMetricsKey(String name, @Nullable TrafficManagerUserMetricsKeyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

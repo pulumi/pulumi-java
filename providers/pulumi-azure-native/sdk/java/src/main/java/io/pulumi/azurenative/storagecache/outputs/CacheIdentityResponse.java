@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class CacheIdentityResponse {
     /**
      * The principal id of the cache.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant id associated with the cache.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity used for the cache
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class CacheIdentityResponse {
             this.type = type;
             return this;
         }
-
         public CacheIdentityResponse build() {
             return new CacheIdentityResponse(principalId, tenantId, type);
         }

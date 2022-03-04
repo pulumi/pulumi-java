@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<String> environment;
+      private final @Nullable Input<String> environment;
 
     public Input<String> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -66,7 +66,6 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
             this.environment = Input.ofNullable(environment);
             return this;
         }
-
         public ControlArgs build() {
             return new ControlArgs(environment);
         }

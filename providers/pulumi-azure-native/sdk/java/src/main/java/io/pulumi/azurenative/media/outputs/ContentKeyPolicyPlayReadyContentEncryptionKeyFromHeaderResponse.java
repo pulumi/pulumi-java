@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderRespon
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
@@ -54,7 +54,6 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderRespon
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse build() {
             return new ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse(odataType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRuleAssetPropertyValue;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,35 +17,35 @@ public final class TopicRulePutAssetPropertyValueEntry extends io.pulumi.resourc
     public static final TopicRulePutAssetPropertyValueEntry Empty = new TopicRulePutAssetPropertyValueEntry();
 
     @InputImport(name="assetId")
-    private final @Nullable String assetId;
+      private final @Nullable String assetId;
 
     public Optional<String> getAssetId() {
         return this.assetId == null ? Optional.empty() : Optional.ofNullable(this.assetId);
     }
 
     @InputImport(name="entryId")
-    private final @Nullable String entryId;
+      private final @Nullable String entryId;
 
     public Optional<String> getEntryId() {
         return this.entryId == null ? Optional.empty() : Optional.ofNullable(this.entryId);
     }
 
     @InputImport(name="propertyAlias")
-    private final @Nullable String propertyAlias;
+      private final @Nullable String propertyAlias;
 
     public Optional<String> getPropertyAlias() {
         return this.propertyAlias == null ? Optional.empty() : Optional.ofNullable(this.propertyAlias);
     }
 
     @InputImport(name="propertyId")
-    private final @Nullable String propertyId;
+      private final @Nullable String propertyId;
 
     public Optional<String> getPropertyId() {
         return this.propertyId == null ? Optional.empty() : Optional.ofNullable(this.propertyId);
     }
 
     @InputImport(name="propertyValues", required=true)
-    private final List<TopicRuleAssetPropertyValue> propertyValues;
+      private final List<TopicRuleAssetPropertyValue> propertyValues;
 
     public List<TopicRuleAssetPropertyValue> getPropertyValues() {
         return this.propertyValues;
@@ -124,7 +124,6 @@ public final class TopicRulePutAssetPropertyValueEntry extends io.pulumi.resourc
             this.propertyValues = Objects.requireNonNull(propertyValues);
             return this;
         }
-
         public TopicRulePutAssetPropertyValueEntry build() {
             return new TopicRulePutAssetPropertyValueEntry(assetId, entryId, propertyAlias, propertyId, propertyValues);
         }

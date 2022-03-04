@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.outputs.RunbookParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -66,42 +66,42 @@ public final class RunbookDraftResponse {
     /**
      * Gets or sets the creation time of the runbook draft.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the draft runbook content link.
      * 
-     */
+    */
     public Optional<ContentLinkResponse> getDraftContentLink() {
         return Optional.ofNullable(this.draftContentLink);
     }
     /**
      * Gets or sets whether runbook is in edit mode.
      * 
-     */
+    */
     public Optional<Boolean> getInEdit() {
         return Optional.ofNullable(this.inEdit);
     }
     /**
      * Gets or sets the last modified time of the runbook draft.
      * 
-     */
+    */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * Gets or sets the runbook output types.
      * 
-     */
+    */
     public List<String> getOutputTypes() {
         return this.outputTypes == null ? List.of() : this.outputTypes;
     }
     /**
      * Gets or sets the runbook draft parameters.
      * 
-     */
+    */
     public Map<String,RunbookParameterResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
@@ -165,7 +165,6 @@ public final class RunbookDraftResponse {
             this.parameters = parameters;
             return this;
         }
-
         public RunbookDraftResponse build() {
             return new RunbookDraftResponse(creationTime, draftContentLink, inEdit, lastModifiedTime, outputTypes, parameters);
         }

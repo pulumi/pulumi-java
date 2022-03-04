@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1.enums.SchemaSettingsEncoding;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<SchemaSettingsEncoding> encoding;
+      private final @Nullable Input<SchemaSettingsEncoding> encoding;
 
     public Input<SchemaSettingsEncoding> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -35,7 +35,7 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema", required=true)
-    private final Input<String> schema;
+      private final Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema;
@@ -94,7 +94,6 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.schema = Input.of(Objects.requireNonNull(schema));
             return this;
         }
-
         public SchemaSettingsArgs build() {
             return new SchemaSettingsArgs(encoding, schema);
         }

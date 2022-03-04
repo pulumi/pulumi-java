@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.LoggingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.QueryListResponse;
 import java.lang.String;
@@ -63,42 +63,42 @@ public final class SparkSqlJobResponse {
     /**
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris;
     }
     /**
      * Optional. The runtime log config for job execution.
      * 
-     */
+    */
     public LoggingConfigResponse getLoggingConfig() {
         return this.loggingConfig;
     }
     /**
      * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties;
     }
     /**
      * The HCFS URI of the script that contains SQL queries.
      * 
-     */
+    */
     public String getQueryFileUri() {
         return this.queryFileUri;
     }
     /**
      * A list of queries.
      * 
-     */
+    */
     public QueryListResponse getQueryList() {
         return this.queryList;
     }
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
      * 
-     */
+    */
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables;
     }
@@ -162,7 +162,6 @@ public final class SparkSqlJobResponse {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
         }
-
         public SparkSqlJobResponse build() {
             return new SparkSqlJobResponse(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }

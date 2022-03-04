@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="applicationName", required=true)
-    private final Input<String> applicationName;
+      private final Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName;
@@ -33,7 +33,7 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endpointName", required=true)
-    private final Input<String> endpointName;
+      private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -44,7 +44,7 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -118,7 +118,6 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public GatewayDestinationArgs build() {
             return new GatewayDestinationArgs(applicationName, endpointName, serviceName);
         }

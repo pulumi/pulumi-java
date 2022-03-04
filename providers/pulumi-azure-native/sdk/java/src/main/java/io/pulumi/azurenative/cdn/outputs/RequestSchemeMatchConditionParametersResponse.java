@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -45,14 +45,14 @@ public final class RequestSchemeMatchConditionParametersResponse {
     /**
      * The match value for the condition of the delivery rule
      * 
-     */
+    */
     public List<String> getMatchValues() {
         return this.matchValues == null ? List.of() : this.matchValues;
     }
     /**
      * Describes if this is negate condition or not
      * 
-     */
+    */
     public Optional<Boolean> getNegateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -62,7 +62,7 @@ public final class RequestSchemeMatchConditionParametersResponse {
     /**
      * Describes operator to be matched
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
@@ -112,7 +112,6 @@ public final class RequestSchemeMatchConditionParametersResponse {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public RequestSchemeMatchConditionParametersResponse build() {
             return new RequestSchemeMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator);
         }

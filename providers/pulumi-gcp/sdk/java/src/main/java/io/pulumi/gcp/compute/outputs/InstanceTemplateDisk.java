@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceTemplateDiskDiskEncryptionKey;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -143,14 +143,14 @@ public final class InstanceTemplateDisk {
      * Whether or not the disk should be auto-deleted.
      * This defaults to true.
      * 
-     */
+    */
     public Optional<Boolean> getAutoDelete() {
         return Optional.ofNullable(this.autoDelete);
     }
     /**
      * Indicates that this is a boot disk.
      * 
-     */
+    */
     public Optional<Boolean> getBoot() {
         return Optional.ofNullable(this.boot);
     }
@@ -159,14 +159,14 @@ public final class InstanceTemplateDisk {
      * /dev/  tree of a Linux operating system running within the instance. If not
      * specified, the server chooses a default device name to apply to this disk.
      * 
-     */
+    */
     public Optional<String> getDeviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * Encrypts or decrypts a disk using a customer-supplied encryption key.
      * 
-     */
+    */
     public Optional<InstanceTemplateDiskDiskEncryptionKey> getDiskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
@@ -174,7 +174,7 @@ public final class InstanceTemplateDisk {
      * Name of the disk. When not provided, this defaults
      * to the name of the instance.
      * 
-     */
+    */
     public Optional<String> getDiskName() {
         return Optional.ofNullable(this.diskName);
     }
@@ -183,7 +183,7 @@ public final class InstanceTemplateDisk {
      * specified, it will inherit the size of its base image. For SCRATCH disks,
      * the size must be exactly 375GB.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
@@ -191,7 +191,7 @@ public final class InstanceTemplateDisk {
      * The GCE disk type. Can be either `"pd-ssd"`,
      * `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
      * 
-     */
+    */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -201,7 +201,7 @@ public final class InstanceTemplateDisk {
      * and the request will fail if you attempt to attach a persistent disk in any other format
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
-     */
+    */
     public Optional<String> get$interface() {
         return Optional.ofNullable(this.$interface);
     }
@@ -209,7 +209,7 @@ public final class InstanceTemplateDisk {
      * A set of ket/value label pairs to assign to disk created from
      * this template
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
@@ -218,14 +218,14 @@ public final class InstanceTemplateDisk {
      * or READ_ONLY. If you are attaching or creating a boot disk, this must
      * read-write mode.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * -- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
      * 
-     */
+    */
     public Optional<String> getResourcePolicies() {
         return Optional.ofNullable(this.resourcePolicies);
     }
@@ -234,7 +234,7 @@ public final class InstanceTemplateDisk {
      * of the disk (such as those managed by `gcp.compute.Disk`) to attach.
      * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
@@ -247,14 +247,14 @@ public final class InstanceTemplateDisk {
      * `{project}/{image}`, `{family}`, or `{image}`.
      * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
-     */
+    */
     public Optional<String> getSourceImage() {
         return Optional.ofNullable(this.sourceImage);
     }
     /**
      * The type of reservation from which this instance can consume resources.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -374,7 +374,6 @@ public final class InstanceTemplateDisk {
             this.type = type;
             return this;
         }
-
         public InstanceTemplateDisk build() {
             return new InstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKey, diskName, diskSizeGb, diskType, $interface, labels, mode, resourcePolicies, source, sourceImage, type);
         }

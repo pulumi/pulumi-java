@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -98,77 +98,77 @@ public final class GetWorkloadNetworkDnsServiceResult {
     /**
      * Default DNS zone of the DNS Service.
      * 
-     */
+    */
     public Optional<String> getDefaultDnsZone() {
         return Optional.ofNullable(this.defaultDnsZone);
     }
     /**
      * Display name of the DNS Service.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * DNS service IP of the DNS Service.
      * 
-     */
+    */
     public Optional<String> getDnsServiceIp() {
         return Optional.ofNullable(this.dnsServiceIp);
     }
     /**
      * FQDN zones of the DNS Service.
      * 
-     */
+    */
     public List<String> getFqdnZones() {
         return this.fqdnZones == null ? List.of() : this.fqdnZones;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * DNS Service log level.
      * 
-     */
+    */
     public Optional<String> getLogLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
      * 
-     */
+    */
     public Optional<Double> getRevision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * DNS Service status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -267,7 +267,6 @@ public final class GetWorkloadNetworkDnsServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkDnsServiceResult build() {
             return new GetWorkloadNetworkDnsServiceResult(defaultDnsZone, displayName, dnsServiceIp, fqdnZones, id, logLevel, name, provisioningState, revision, status, type);
         }

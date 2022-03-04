@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvFromConfigMapRef;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvFromSecretRef;
 import java.lang.String;
@@ -45,14 +45,14 @@ public final class ServiceTemplateSpecContainerEnvFrom {
      * The ConfigMap to select from.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateSpecContainerEnvFromConfigMapRef> getConfigMapRef() {
         return Optional.ofNullable(this.configMapRef);
     }
     /**
      * An optional identifier to prepend to each key in the ConfigMap.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -60,7 +60,7 @@ public final class ServiceTemplateSpecContainerEnvFrom {
      * The Secret to select from.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateSpecContainerEnvFromSecretRef> getSecretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -103,7 +103,6 @@ public final class ServiceTemplateSpecContainerEnvFrom {
             this.secretRef = secretRef;
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvFrom build() {
             return new ServiceTemplateSpecContainerEnvFrom(configMapRef, prefix, secretRef);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PatchDeploymentRecurringScheduleTimeZoneGetArgs extends io.pu
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -30,7 +30,7 @@ public final class PatchDeploymentRecurringScheduleTimeZoneGetArgs extends io.pu
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -89,7 +89,6 @@ public final class PatchDeploymentRecurringScheduleTimeZoneGetArgs extends io.pu
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public PatchDeploymentRecurringScheduleTimeZoneGetArgs build() {
             return new PatchDeploymentRecurringScheduleTimeZoneGetArgs(id, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetes.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class HybridConnectionConfigResponse {
     /**
      * Timestamp when this token will be expired.
      * 
-     */
+    */
     public Double getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * Name of the connection
      * 
-     */
+    */
     public String getHybridConnectionName() {
         return this.hybridConnectionName;
     }
     /**
      * Name of the relay.
      * 
-     */
+    */
     public String getRelay() {
         return this.relay;
     }
     /**
      * Sender access token
      * 
-     */
+    */
     public String getToken() {
         return this.token;
     }
@@ -117,7 +117,6 @@ public final class HybridConnectionConfigResponse {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public HybridConnectionConfigResponse build() {
             return new HybridConnectionConfigResponse(expirationTime, hybridConnectionName, relay, token);
         }

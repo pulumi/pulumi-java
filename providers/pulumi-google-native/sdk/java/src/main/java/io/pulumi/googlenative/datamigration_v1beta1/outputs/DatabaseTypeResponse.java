@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DatabaseTypeResponse {
     /**
      * The database engine.
      * 
-     */
+    */
     public String getEngine() {
         return this.engine;
     }
     /**
      * The database provider.
      * 
-     */
+    */
     public String getProvider() {
         return this.provider;
     }
@@ -74,7 +74,6 @@ public final class DatabaseTypeResponse {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public DatabaseTypeResponse build() {
             return new DatabaseTypeResponse(engine, provider);
         }

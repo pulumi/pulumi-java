@@ -7,7 +7,7 @@ import io.pulumi.awsnative.acmpca.outputs.CertificateExtendedKeyUsage;
 import io.pulumi.awsnative.acmpca.outputs.CertificateGeneralName;
 import io.pulumi.awsnative.acmpca.outputs.CertificateKeyUsage;
 import io.pulumi.awsnative.acmpca.outputs.CertificatePolicyInformation;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -90,7 +90,6 @@ public final class CertificateExtensions {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public CertificateExtensions build() {
             return new CertificateExtensions(certificatePolicies, extendedKeyUsage, keyUsage, subjectAlternativeNames);
         }

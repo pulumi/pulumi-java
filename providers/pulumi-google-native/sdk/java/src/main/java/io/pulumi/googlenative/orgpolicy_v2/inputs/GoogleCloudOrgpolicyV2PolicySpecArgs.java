@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.orgpolicy_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -37,7 +37,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="inheritFromParent")
-    private final @Nullable Input<Boolean> inheritFromParent;
+      private final @Nullable Input<Boolean> inheritFromParent;
 
     public Input<Boolean> getInheritFromParent() {
         return this.inheritFromParent == null ? Input.empty() : this.inheritFromParent;
@@ -48,7 +48,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="reset")
-    private final @Nullable Input<Boolean> reset;
+      private final @Nullable Input<Boolean> reset;
 
     public Input<Boolean> getReset() {
         return this.reset == null ? Input.empty() : this.reset;
@@ -59,7 +59,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> rules;
+      private final @Nullable Input<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> rules;
 
     public Input<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -148,7 +148,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecArgs build() {
             return new GoogleCloudOrgpolicyV2PolicySpecArgs(etag, inheritFromParent, reset, rules);
         }

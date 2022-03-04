@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class ManagementClusterResponse {
     /**
      * The identity
      * 
-     */
+    */
     public Integer getClusterId() {
         return this.clusterId;
     }
     /**
      * The cluster size
      * 
-     */
+    */
     public Integer getClusterSize() {
         return this.clusterSize;
     }
     /**
      * The hosts
      * 
-     */
+    */
     public List<String> getHosts() {
         return this.hosts;
     }
     /**
      * The state of the cluster provisioning
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -118,7 +118,6 @@ public final class ManagementClusterResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ManagementClusterResponse build() {
             return new ManagementClusterResponse(clusterId, clusterSize, hosts, provisioningState);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkmanagement_v1beta1.enums.EndpointNetworkType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.CloudFunctionEndpointArgs;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudFunction")
-    private final @Nullable Input<CloudFunctionEndpointArgs> cloudFunction;
+      private final @Nullable Input<CloudFunctionEndpointArgs> cloudFunction;
 
     public Input<CloudFunctionEndpointArgs> getCloudFunction() {
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
@@ -37,7 +37,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudSqlInstance")
-    private final @Nullable Input<String> cloudSqlInstance;
+      private final @Nullable Input<String> cloudSqlInstance;
 
     public Input<String> getCloudSqlInstance() {
         return this.cloudSqlInstance == null ? Input.empty() : this.cloudSqlInstance;
@@ -48,7 +48,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gkeMasterCluster")
-    private final @Nullable Input<String> gkeMasterCluster;
+      private final @Nullable Input<String> gkeMasterCluster;
 
     public Input<String> getGkeMasterCluster() {
         return this.gkeMasterCluster == null ? Input.empty() : this.gkeMasterCluster;
@@ -59,7 +59,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -70,7 +70,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -81,7 +81,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -92,7 +92,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkType")
-    private final @Nullable Input<EndpointNetworkType> networkType;
+      private final @Nullable Input<EndpointNetworkType> networkType;
 
     public Input<EndpointNetworkType> getNetworkType() {
         return this.networkType == null ? Input.empty() : this.networkType;
@@ -103,7 +103,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -114,7 +114,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -278,7 +278,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public EndpointArgs build() {
             return new EndpointArgs(cloudFunction, cloudSqlInstance, gkeMasterCluster, instance, ipAddress, network, networkType, port, project);
         }

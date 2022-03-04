@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.enterpriseknowledgegraph.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+      private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -46,7 +46,7 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<String> provisioningState;
+      private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -120,7 +120,6 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
-
         public EnterpriseKnowledgeGraphPropertiesArgs build() {
             return new EnterpriseKnowledgeGraphPropertiesArgs(description, metadata, provisioningState);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerregistry.inputs.ListRegistryCredentialsArgs;
 import io.pulumi.azurenative.containerregistry.outputs.ListRegistryCredentialsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListRegistryCredentials {
-/**
- * The response from the ListCredentials operation.
+    private ListRegistryCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(ListRegistryCredentialsArgs.Builder a);
+    }
+    private static ListRegistryCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListRegistryCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response from the ListCredentials operation.
  * API Version: 2019-05-01.
  * 
- *
- * The response from the ListCredentials operation.
+     *
+     * The response from the ListCredentials operation.
  * 
- */
+     */
+    public static CompletableFuture<ListRegistryCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response from the ListCredentials operation.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The response from the ListCredentials operation.
+     * 
+     */
     public static CompletableFuture<ListRegistryCredentialsResult> invokeAsync(ListRegistryCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listRegistryCredentials", TypeShape.of(ListRegistryCredentialsResult.class), args == null ? ListRegistryCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iot.inputs.GetCustomMetricArgs;
 import io.pulumi.awsnative.iot.outputs.GetCustomMetricResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomMetric {
-/**
- * A custom metric published by your devices to Device Defender.
+    private GetCustomMetric() {}
+    public interface BuilderApplicator {
+        public void apply(GetCustomMetricArgs.Builder a);
+    }
+    private static GetCustomMetricArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCustomMetricArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A custom metric published by your devices to Device Defender.
  * 
- */
+     */
+    public static CompletableFuture<GetCustomMetricResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A custom metric published by your devices to Device Defender.
+     * 
+     */
     public static CompletableFuture<GetCustomMetricResult> invokeAsync(GetCustomMetricArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getCustomMetric", TypeShape.of(GetCustomMetricResult.class), args == null ? GetCustomMetricArgs.Empty : args, Utilities.withVersion(options));
     }

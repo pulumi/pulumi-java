@@ -9,7 +9,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.FunctionOutputArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.JavaScriptFunctionBindingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="binding")
-    private final @Nullable Input<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding;
+      private final @Nullable Input<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding;
 
     public Input<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> getBinding() {
         return this.binding == null ? Input.empty() : this.binding;
@@ -40,7 +40,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable Input<List<FunctionInputArgs>> inputs;
+      private final @Nullable Input<List<FunctionInputArgs>> inputs;
 
     public Input<List<FunctionInputArgs>> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -51,7 +51,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="output")
-    private final @Nullable Input<FunctionOutputArgs> output;
+      private final @Nullable Input<FunctionOutputArgs> output;
 
     public Input<FunctionOutputArgs> getOutput() {
         return this.output == null ? Input.empty() : this.output;
@@ -63,7 +63,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -152,7 +152,6 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ScalarFunctionPropertiesArgs build() {
             return new ScalarFunctionPropertiesArgs(binding, inputs, output, type);
         }

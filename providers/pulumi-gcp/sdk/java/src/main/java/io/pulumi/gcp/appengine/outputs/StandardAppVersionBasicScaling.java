@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,14 +36,14 @@ public final class StandardAppVersionBasicScaling {
      * Duration of time after the last request that an instance must wait before the instance is shut down.
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
      * 
-     */
+    */
     public Optional<String> getIdleTimeout() {
         return Optional.ofNullable(this.idleTimeout);
     }
     /**
      * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
      * 
-     */
+    */
     public Integer getMaxInstances() {
         return this.maxInstances;
     }
@@ -79,7 +79,6 @@ public final class StandardAppVersionBasicScaling {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public StandardAppVersionBasicScaling build() {
             return new StandardAppVersionBasicScaling(idleTimeout, maxInstances);
         }

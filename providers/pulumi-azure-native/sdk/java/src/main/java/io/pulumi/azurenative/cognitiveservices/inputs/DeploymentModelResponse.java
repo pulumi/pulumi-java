@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DeploymentModelResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="format")
-    private final @Nullable String format;
+      private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -34,7 +34,7 @@ public final class DeploymentModelResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -45,7 +45,7 @@ public final class DeploymentModelResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -104,7 +104,6 @@ public final class DeploymentModelResponse extends io.pulumi.resources.InvokeArg
             this.version = version;
             return this;
         }
-
         public DeploymentModelResponse build() {
             return new DeploymentModelResponse(format, name, version);
         }

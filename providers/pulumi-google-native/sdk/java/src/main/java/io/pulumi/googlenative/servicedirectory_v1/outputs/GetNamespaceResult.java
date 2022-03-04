@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicedirectory_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GetNamespaceResult {
     /**
      * Optional. Resource labels associated with this namespace. No more than 64 user labels can be associated with a given resource. Label keys and values can be no longer than 63 characters.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -75,7 +75,6 @@ public final class GetNamespaceResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetNamespaceResult build() {
             return new GetNamespaceResult(labels, name);
         }

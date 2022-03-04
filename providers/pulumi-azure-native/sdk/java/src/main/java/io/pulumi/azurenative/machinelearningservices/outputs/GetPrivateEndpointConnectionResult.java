@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.PrivateEndpointResp
 import io.pulumi.azurenative.machinelearningservices.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SkuResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -102,77 +102,77 @@ public final class GetPrivateEndpointConnectionResult {
     /**
      * Specifies the resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the resource.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
      * 
-     */
+    */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the private endpoint connection resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku of the workspace.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -271,7 +271,6 @@ public final class GetPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionResult build() {
             return new GetPrivateEndpointConnectionResult(id, identity, location, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, sku, systemData, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.redis_v1beta1.inputs.WeeklyMaintenanceWindowResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -34,7 +34,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -45,7 +45,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -56,7 +56,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="weeklyMaintenanceWindow", required=true)
-    private final List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
+      private final List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
 
     public List<WeeklyMaintenanceWindowResponse> getWeeklyMaintenanceWindow() {
         return this.weeklyMaintenanceWindow;
@@ -125,7 +125,6 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
             this.weeklyMaintenanceWindow = Objects.requireNonNull(weeklyMaintenanceWindow);
             return this;
         }
-
         public MaintenancePolicyResponse build() {
             return new MaintenancePolicyResponse(createTime, description, updateTime, weeklyMaintenanceWindow);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1.inputs.AllowedIpRangeArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="allowedIpRanges")
-    private final @Nullable Input<List<AllowedIpRangeArgs>> allowedIpRanges;
+      private final @Nullable Input<List<AllowedIpRangeArgs>> allowedIpRanges;
 
     public Input<List<AllowedIpRangeArgs>> getAllowedIpRanges() {
         return this.allowedIpRanges == null ? Input.empty() : this.allowedIpRanges;
@@ -67,7 +67,6 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
             this.allowedIpRanges = Input.ofNullable(allowedIpRanges);
             return this;
         }
-
         public WebServerNetworkAccessControlArgs build() {
             return new WebServerNetworkAccessControlArgs(allowedIpRanges);
         }

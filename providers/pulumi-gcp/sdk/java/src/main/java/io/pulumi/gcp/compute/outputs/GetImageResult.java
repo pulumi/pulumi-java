@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -158,35 +158,35 @@ public final class GetImageResult {
     /**
      * The size of the image tar.gz archive stored in Google Cloud Storage in bytes.
      * 
-     */
+    */
     public Integer getArchiveSizeBytes() {
         return this.archiveSizeBytes;
     }
     /**
      * The creation timestamp in RFC3339 text format.
      * 
-     */
+    */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this image.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The size of the image when restored onto a persistent disk in gigabytes.
      * 
-     */
+    */
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
     }
     /**
      * The family name of the image.
      * 
-     */
+    */
     public String getFamily() {
         return this.family;
     }
@@ -196,7 +196,7 @@ public final class GetImageResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -205,42 +205,42 @@ public final class GetImageResult {
      * encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.google.com/compute/docs/disks/customer-supplied-encryption)
      * that protects this image.
      * 
-     */
+    */
     public String getImageEncryptionKeySha256() {
         return this.imageEncryptionKeySha256;
     }
     /**
      * The unique identifier for the image.
      * 
-     */
+    */
     public String getImageId() {
         return this.imageId;
     }
     /**
      * A fingerprint for the labels being applied to this image.
      * 
-     */
+    */
     public String getLabelFingerprint() {
         return this.labelFingerprint;
     }
     /**
      * A map of labels applied to this image.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * A list of applicable license URI.
      * 
-     */
+    */
     public List<String> getLicenses() {
         return this.licenses;
     }
     /**
      * The name of the image.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -250,14 +250,14 @@ public final class GetImageResult {
     /**
      * The URI of the image.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * The URL of the source disk used to create this image.
      * 
-     */
+    */
     public String getSourceDisk() {
         return this.sourceDisk;
     }
@@ -266,28 +266,28 @@ public final class GetImageResult {
      * encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.google.com/compute/docs/disks/customer-supplied-encryption)
      * that protects this image.
      * 
-     */
+    */
     public String getSourceDiskEncryptionKeySha256() {
         return this.sourceDiskEncryptionKeySha256;
     }
     /**
      * The ID value of the disk used to create this image.
      * 
-     */
+    */
     public String getSourceDiskId() {
         return this.sourceDiskId;
     }
     /**
      * The ID value of the image used to create this image.
      * 
-     */
+    */
     public String getSourceImageId() {
         return this.sourceImageId;
     }
     /**
      * The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -449,7 +449,6 @@ public final class GetImageResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetImageResult build() {
             return new GetImageResult(archiveSizeBytes, creationTimestamp, description, diskSizeGb, family, filter, id, imageEncryptionKeySha256, imageId, labelFingerprint, labels, licenses, name, project, selfLink, sourceDisk, sourceDiskEncryptionKeySha256, sourceDiskId, sourceImageId, status);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlRdbmsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowlist")
-    private final @Nullable Input<MysqlRdbmsArgs> allowlist;
+      private final @Nullable Input<MysqlRdbmsArgs> allowlist;
 
     public Input<MysqlRdbmsArgs> getAllowlist() {
         return this.allowlist == null ? Input.empty() : this.allowlist;
@@ -34,7 +34,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rejectlist")
-    private final @Nullable Input<MysqlRdbmsArgs> rejectlist;
+      private final @Nullable Input<MysqlRdbmsArgs> rejectlist;
 
     public Input<MysqlRdbmsArgs> getRejectlist() {
         return this.rejectlist == null ? Input.empty() : this.rejectlist;
@@ -93,7 +93,6 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
             this.rejectlist = Input.ofNullable(rejectlist);
             return this;
         }
-
         public MysqlSourceConfigArgs build() {
             return new MysqlSourceConfigArgs(allowlist, rejectlist);
         }

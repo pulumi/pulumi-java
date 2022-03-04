@@ -8,8 +8,8 @@ import io.pulumi.awsnative.backup.BackupSelectionArgs;
 import io.pulumi.awsnative.backup.outputs.BackupSelectionResourceType;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -38,6 +38,37 @@ public class BackupSelection extends io.pulumi.resources.CustomResource {
         return this.selectionId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BackupSelectionArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.backup.BackupSelectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.backup.BackupSelectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public BackupSelection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BackupSelection(String name) {
+        this(name, BackupSelectionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BackupSelection(String name, BackupSelectionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

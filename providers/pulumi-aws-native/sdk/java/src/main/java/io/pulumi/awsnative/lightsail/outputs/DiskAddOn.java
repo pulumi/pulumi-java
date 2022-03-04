@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.enums.DiskAddOnStatus;
 import io.pulumi.awsnative.lightsail.outputs.DiskAutoSnapshotAddOn;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,7 +38,7 @@ public final class DiskAddOn {
     /**
      * The add-on type
      * 
-     */
+    */
     public String getAddOnType() {
         return this.addOnType;
     }
@@ -48,7 +48,7 @@ public final class DiskAddOn {
     /**
      * Status of the Addon
      * 
-     */
+    */
     public Optional<DiskAddOnStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -91,7 +91,6 @@ public final class DiskAddOn {
             this.status = status;
             return this;
         }
-
         public DiskAddOn build() {
             return new DiskAddOn(addOnType, autoSnapshotAddOnRequest, status);
         }

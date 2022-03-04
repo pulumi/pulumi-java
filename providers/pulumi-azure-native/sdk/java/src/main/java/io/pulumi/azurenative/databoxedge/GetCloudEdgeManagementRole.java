@@ -6,21 +6,41 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.inputs.GetCloudEdgeManagementRoleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.GetCloudEdgeManagementRoleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudEdgeManagementRole {
-/**
- * CloudEdgeManagementRole role.
+    private GetCloudEdgeManagementRole() {}
+    public interface BuilderApplicator {
+        public void apply(GetCloudEdgeManagementRoleArgs.Builder a);
+    }
+    private static GetCloudEdgeManagementRoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCloudEdgeManagementRoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * CloudEdgeManagementRole role.
  * API Version: 2020-12-01.
  * 
- *
- * CloudEdgeManagementRole role.
+     *
+     * CloudEdgeManagementRole role.
  * 
- */
+     */
+    public static CompletableFuture<GetCloudEdgeManagementRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * CloudEdgeManagementRole role.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * CloudEdgeManagementRole role.
+     * 
+     */
     public static CompletableFuture<GetCloudEdgeManagementRoleResult> invokeAsync(GetCloudEdgeManagementRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getCloudEdgeManagementRole", TypeShape.of(GetCloudEdgeManagementRoleResult.class), args == null ? GetCloudEdgeManagementRoleArgs.Empty : args, Utilities.withVersion(options));
     }

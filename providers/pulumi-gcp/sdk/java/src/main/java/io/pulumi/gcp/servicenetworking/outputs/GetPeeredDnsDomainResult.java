@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicenetworking.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,7 +45,7 @@ public final class GetPeeredDnsDomainResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -131,7 +131,6 @@ public final class GetPeeredDnsDomainResult {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GetPeeredDnsDomainResult build() {
             return new GetPeeredDnsDomainResult(dnsSuffix, id, name, network, parent, project, service);
         }

@@ -30,7 +30,6 @@ public final class DatastoreServiceManagedS3Args extends io.pulumi.resources.Res
         public Builder(DatastoreServiceManagedS3Args defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DatastoreServiceManagedS3Args build() {
             return new DatastoreServiceManagedS3Args();
         }

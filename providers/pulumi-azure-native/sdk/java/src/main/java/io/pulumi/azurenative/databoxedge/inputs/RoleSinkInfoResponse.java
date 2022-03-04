@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RoleSinkInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="roleId", required=true)
-    private final String roleId;
+      private final String roleId;
 
     public String getRoleId() {
         return this.roleId;
@@ -59,7 +59,6 @@ public final class RoleSinkInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
-
         public RoleSinkInfoResponse build() {
             return new RoleSinkInfoResponse(roleId);
         }

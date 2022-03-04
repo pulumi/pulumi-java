@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetAppResourceUploadUrlResult {
     /**
      * Source relative path
      * 
-     */
+    */
     public Optional<String> getRelativePath() {
         return Optional.ofNullable(this.relativePath);
     }
     /**
      * Upload URL
      * 
-     */
+    */
     public Optional<String> getUploadUrl() {
         return Optional.ofNullable(this.uploadUrl);
     }
@@ -76,7 +76,6 @@ public final class GetAppResourceUploadUrlResult {
             this.uploadUrl = uploadUrl;
             return this;
         }
-
         public GetAppResourceUploadUrlResult build() {
             return new GetAppResourceUploadUrlResult(relativePath, uploadUrl);
         }

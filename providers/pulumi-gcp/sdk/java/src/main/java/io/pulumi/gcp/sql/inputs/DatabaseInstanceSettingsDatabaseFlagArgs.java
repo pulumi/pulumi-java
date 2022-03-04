@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DatabaseInstanceSettingsDatabaseFlagArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -31,7 +31,7 @@ public final class DatabaseInstanceSettingsDatabaseFlagArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -90,7 +90,6 @@ public final class DatabaseInstanceSettingsDatabaseFlagArgs extends io.pulumi.re
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public DatabaseInstanceSettingsDatabaseFlagArgs build() {
             return new DatabaseInstanceSettingsDatabaseFlagArgs(name, value);
         }

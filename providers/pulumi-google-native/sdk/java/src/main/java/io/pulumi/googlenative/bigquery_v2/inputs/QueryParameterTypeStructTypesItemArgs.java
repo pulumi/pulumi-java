@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<QueryParameterTypeArgs> type;
+      private final @Nullable Input<QueryParameterTypeArgs> type;
 
     public Input<QueryParameterTypeArgs> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -116,7 +116,6 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public QueryParameterTypeStructTypesItemArgs build() {
             return new QueryParameterTypeStructTypesItemArgs(description, name, type);
         }

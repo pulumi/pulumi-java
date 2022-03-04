@@ -11,8 +11,8 @@ import io.pulumi.azurenative.securityandcompliance.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -162,6 +162,37 @@ public class PrivateLinkServicesForM365ComplianceCenter extends io.pulumi.resour
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PrivateLinkServicesForM365ComplianceCenterArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.securityandcompliance.PrivateLinkServicesForM365ComplianceCenterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.securityandcompliance.PrivateLinkServicesForM365ComplianceCenterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PrivateLinkServicesForM365ComplianceCenter(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PrivateLinkServicesForM365ComplianceCenter(String name) {
+        this(name, PrivateLinkServicesForM365ComplianceCenterArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrivateLinkServicesForM365ComplianceCenter(String name, PrivateLinkServicesForM365ComplianceCenterArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

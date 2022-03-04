@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ACIServiceResponseResponseEncryptionProperties extends io.pul
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final String keyName;
+      private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -32,7 +32,7 @@ public final class ACIServiceResponseResponseEncryptionProperties extends io.pul
      * 
      */
     @InputImport(name="keyVersion", required=true)
-    private final String keyVersion;
+      private final String keyVersion;
 
     public String getKeyVersion() {
         return this.keyVersion;
@@ -43,7 +43,7 @@ public final class ACIServiceResponseResponseEncryptionProperties extends io.pul
      * 
      */
     @InputImport(name="vaultBaseUrl", required=true)
-    private final String vaultBaseUrl;
+      private final String vaultBaseUrl;
 
     public String getVaultBaseUrl() {
         return this.vaultBaseUrl;
@@ -102,7 +102,6 @@ public final class ACIServiceResponseResponseEncryptionProperties extends io.pul
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
-
         public ACIServiceResponseResponseEncryptionProperties build() {
             return new ACIServiceResponseResponseEncryptionProperties(keyName, keyVersion, vaultBaseUrl);
         }

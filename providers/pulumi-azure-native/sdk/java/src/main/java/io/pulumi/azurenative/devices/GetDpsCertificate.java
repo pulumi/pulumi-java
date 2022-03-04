@@ -6,21 +6,41 @@ package io.pulumi.azurenative.devices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devices.inputs.GetDpsCertificateArgs;
 import io.pulumi.azurenative.devices.outputs.GetDpsCertificateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDpsCertificate {
-/**
- * The X509 Certificate.
+    private GetDpsCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetDpsCertificateArgs.Builder a);
+    }
+    private static GetDpsCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDpsCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The X509 Certificate.
  * API Version: 2020-03-01.
  * 
- *
- * The X509 Certificate.
+     *
+     * The X509 Certificate.
  * 
- */
+     */
+    public static CompletableFuture<GetDpsCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The X509 Certificate.
+     * API Version: 2020-03-01.
+     * 
+     *
+         * The X509 Certificate.
+     * 
+     */
     public static CompletableFuture<GetDpsCertificateResult> invokeAsync(GetDpsCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getDpsCertificate", TypeShape.of(GetDpsCertificateResult.class), args == null ? GetDpsCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

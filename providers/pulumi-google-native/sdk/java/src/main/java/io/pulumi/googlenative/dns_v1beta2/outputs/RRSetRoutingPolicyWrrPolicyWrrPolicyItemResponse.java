@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -45,14 +45,14 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
     /**
      * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
      * 
-     */
+    */
     public List<String> getSignatureRrdatas() {
         return this.signatureRrdatas;
     }
     /**
      * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
      * 
-     */
+    */
     public Double getWeight() {
         return this.weight;
     }
@@ -102,7 +102,6 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse build() {
             return new RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse(kind, rrdatas, signatureRrdatas, weight);
         }

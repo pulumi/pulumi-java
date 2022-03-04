@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class CertificateDescriptionResponse {
     /**
      * Thumbprint of the primary certificate.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Thumbprint of the secondary certificate.
      * 
-     */
+    */
     public Optional<String> getThumbprintSecondary() {
         return Optional.ofNullable(this.thumbprintSecondary);
     }
     /**
      * The local certificate store location.
      * 
-     */
+    */
     public Optional<String> getX509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }
@@ -97,7 +97,6 @@ public final class CertificateDescriptionResponse {
             this.x509StoreName = x509StoreName;
             return this;
         }
-
         public CertificateDescriptionResponse build() {
             return new CertificateDescriptionResponse(thumbprint, thumbprintSecondary, x509StoreName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.storage.k8s.io_v1.outputs.CSINodeDriver;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CSINodeSpec {
     /**
      * drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
      * 
-     */
+    */
     public List<CSINodeDriver> getDrivers() {
         return this.drivers;
     }
@@ -53,7 +53,6 @@ public final class CSINodeSpec {
             this.drivers = Objects.requireNonNull(drivers);
             return this;
         }
-
         public CSINodeSpec build() {
             return new CSINodeSpec(drivers);
         }

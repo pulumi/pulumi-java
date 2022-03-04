@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.BlobInventoryPolicySchemaResponse;
 import io.pulumi.azurenative.storage.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,42 +61,42 @@ public final class GetBlobInventoryPolicyResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Returns the last modified date and time of the blob inventory policy.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The storage account blob inventory policy object. It is composed of policy rules.
      * 
-     */
+    */
     public BlobInventoryPolicySchemaResponse getPolicy() {
         return this.policy;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -160,7 +160,6 @@ public final class GetBlobInventoryPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobInventoryPolicyResult build() {
             return new GetBlobInventoryPolicyResult(id, lastModifiedTime, name, policy, systemData, type);
         }

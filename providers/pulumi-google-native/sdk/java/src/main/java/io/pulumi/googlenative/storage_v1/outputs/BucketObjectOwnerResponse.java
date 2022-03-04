@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BucketObjectOwnerResponse {
     /**
      * The entity, in the form user-userId.
      * 
-     */
+    */
     public String getEntity() {
         return this.entity;
     }
     /**
      * The ID for the entity.
      * 
-     */
+    */
     public String getEntityId() {
         return this.entityId;
     }
@@ -74,7 +74,6 @@ public final class BucketObjectOwnerResponse {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
-
         public BucketObjectOwnerResponse build() {
             return new BucketObjectOwnerResponse(entity, entityId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse extends io.
      * 
      */
     @InputImport(name="redirectUri", required=true)
-    private final String redirectUri;
+      private final String redirectUri;
 
     public String getRedirectUri() {
         return this.redirectUri;
@@ -59,7 +59,6 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse extends io.
             this.redirectUri = Objects.requireNonNull(redirectUri);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleRedirectActionResponse build() {
             return new GoogleCloudRetailV2betaRuleRedirectActionResponse(redirectUri);
         }

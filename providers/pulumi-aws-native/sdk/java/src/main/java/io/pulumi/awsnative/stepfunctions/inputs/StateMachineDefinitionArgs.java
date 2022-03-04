@@ -30,7 +30,6 @@ public final class StateMachineDefinitionArgs extends io.pulumi.resources.Resour
         public Builder(StateMachineDefinitionArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StateMachineDefinitionArgs build() {
             return new StateMachineDefinitionArgs();
         }

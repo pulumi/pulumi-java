@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class StorageAccountResponse {
     /**
      * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -76,7 +76,6 @@ public final class StorageAccountResponse {
             this.accountName = accountName;
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(accountKey, accountName);
         }

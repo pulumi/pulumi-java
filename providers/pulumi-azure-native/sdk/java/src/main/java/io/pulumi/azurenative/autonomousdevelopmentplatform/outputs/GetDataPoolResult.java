@@ -5,7 +5,7 @@ package io.pulumi.azurenative.autonomousdevelopmentplatform.outputs;
 
 import io.pulumi.azurenative.autonomousdevelopmentplatform.outputs.DataPoolLocationResponse;
 import io.pulumi.azurenative.autonomousdevelopmentplatform.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class GetDataPoolResult {
     /**
      * The Data Pool's data-plane ID
      * 
-     */
+    */
     public String getDataPoolId() {
         return this.dataPoolId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the collection of locations where Data Pool resources should be created
      * 
-     */
+    */
     public List<DataPoolLocationResponse> getLocations() {
         return this.locations;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the status of the data pool at the time the operation was called
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system meta data relating to this resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -182,7 +182,6 @@ public final class GetDataPoolResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataPoolResult build() {
             return new GetDataPoolResult(dataPoolId, id, locations, name, provisioningState, systemData, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -32,14 +32,14 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="secretId", required=true)
-    private final Input<String> secretId;
+      private final Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId;
@@ -113,7 +113,6 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.secretId = Input.of(Objects.requireNonNull(secretId));
             return this;
         }
-
         public SecretIamPolicyArgs build() {
             return new SecretIamPolicyArgs(policyData, project, secretId);
         }

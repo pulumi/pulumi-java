@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -39,14 +39,14 @@ public final class SecureIotDeviceRemoteTunnelResponse {
     /**
      * The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
      * 
-     */
+    */
     public String getDeviceId() {
         return this.deviceId;
     }
     /**
      * Name of the IoT Hub.
      * 
-     */
+    */
     public String getIotHubName() {
         return this.iotHubName;
     }
@@ -54,7 +54,7 @@ public final class SecureIotDeviceRemoteTunnelResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -97,7 +97,6 @@ public final class SecureIotDeviceRemoteTunnelResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SecureIotDeviceRemoteTunnelResponse build() {
             return new SecureIotDeviceRemoteTunnelResponse(deviceId, iotHubName, type);
         }

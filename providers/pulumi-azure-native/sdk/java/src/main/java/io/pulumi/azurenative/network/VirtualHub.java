@@ -11,8 +11,8 @@ import io.pulumi.azurenative.network.outputs.VirtualHubRouteTableV2Response;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -360,6 +360,37 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
         return this.vpnGateway;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VirtualHubArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.VirtualHubArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.VirtualHubArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VirtualHub(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VirtualHub(String name) {
+        this(name, VirtualHubArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VirtualHub(String name, VirtualHubArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

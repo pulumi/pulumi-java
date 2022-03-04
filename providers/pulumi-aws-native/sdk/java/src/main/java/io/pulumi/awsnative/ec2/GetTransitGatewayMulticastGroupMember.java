@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetTransitGatewayMulticastGroupMemberArgs;
 import io.pulumi.awsnative.ec2.outputs.GetTransitGatewayMulticastGroupMemberResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGatewayMulticastGroupMember {
-/**
- * The AWS::EC2::TransitGatewayMulticastGroupMember registers and deregisters members and sources (network interfaces) with the transit gateway multicast group
+    private GetTransitGatewayMulticastGroupMember() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransitGatewayMulticastGroupMemberArgs.Builder a);
+    }
+    private static GetTransitGatewayMulticastGroupMemberArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransitGatewayMulticastGroupMemberArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::EC2::TransitGatewayMulticastGroupMember registers and deregisters members and sources (network interfaces) with the transit gateway multicast group
  * 
- */
+     */
+    public static CompletableFuture<GetTransitGatewayMulticastGroupMemberResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::EC2::TransitGatewayMulticastGroupMember registers and deregisters members and sources (network interfaces) with the transit gateway multicast group
+     * 
+     */
     public static CompletableFuture<GetTransitGatewayMulticastGroupMemberResult> invokeAsync(GetTransitGatewayMulticastGroupMemberArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getTransitGatewayMulticastGroupMember", TypeShape.of(GetTransitGatewayMulticastGroupMemberResult.class), args == null ? GetTransitGatewayMulticastGroupMemberArgs.Empty : args, Utilities.withVersion(options));
     }

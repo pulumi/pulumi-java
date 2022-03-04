@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class CVSSv3Response extends io.pulumi.resources.InvokeArgs {
     public static final CVSSv3Response Empty = new CVSSv3Response();
 
     @InputImport(name="attackComplexity", required=true)
-    private final String attackComplexity;
+      private final String attackComplexity;
 
     public String getAttackComplexity() {
         return this.attackComplexity;
@@ -29,14 +29,14 @@ public final class CVSSv3Response extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attackVector", required=true)
-    private final String attackVector;
+      private final String attackVector;
 
     public String getAttackVector() {
         return this.attackVector;
     }
 
     @InputImport(name="availabilityImpact", required=true)
-    private final String availabilityImpact;
+      private final String availabilityImpact;
 
     public String getAvailabilityImpact() {
         return this.availabilityImpact;
@@ -47,56 +47,56 @@ public final class CVSSv3Response extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="baseScore", required=true)
-    private final Double baseScore;
+      private final Double baseScore;
 
     public Double getBaseScore() {
         return this.baseScore;
     }
 
     @InputImport(name="confidentialityImpact", required=true)
-    private final String confidentialityImpact;
+      private final String confidentialityImpact;
 
     public String getConfidentialityImpact() {
         return this.confidentialityImpact;
     }
 
     @InputImport(name="exploitabilityScore", required=true)
-    private final Double exploitabilityScore;
+      private final Double exploitabilityScore;
 
     public Double getExploitabilityScore() {
         return this.exploitabilityScore;
     }
 
     @InputImport(name="impactScore", required=true)
-    private final Double impactScore;
+      private final Double impactScore;
 
     public Double getImpactScore() {
         return this.impactScore;
     }
 
     @InputImport(name="integrityImpact", required=true)
-    private final String integrityImpact;
+      private final String integrityImpact;
 
     public String getIntegrityImpact() {
         return this.integrityImpact;
     }
 
     @InputImport(name="privilegesRequired", required=true)
-    private final String privilegesRequired;
+      private final String privilegesRequired;
 
     public String getPrivilegesRequired() {
         return this.privilegesRequired;
     }
 
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
     }
 
     @InputImport(name="userInteraction", required=true)
-    private final String userInteraction;
+      private final String userInteraction;
 
     public String getUserInteraction() {
         return this.userInteraction;
@@ -235,7 +235,6 @@ public final class CVSSv3Response extends io.pulumi.resources.InvokeArgs {
             this.userInteraction = Objects.requireNonNull(userInteraction);
             return this;
         }
-
         public CVSSv3Response build() {
             return new CVSSv3Response(attackComplexity, attackVector, availabilityImpact, baseScore, confidentialityImpact, exploitabilityScore, impactScore, integrityImpact, privilegesRequired, scope, userInteraction);
         }

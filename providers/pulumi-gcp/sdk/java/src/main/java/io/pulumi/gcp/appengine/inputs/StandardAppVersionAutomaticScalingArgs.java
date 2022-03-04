@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="maxConcurrentRequests")
-    private final @Nullable Input<Integer> maxConcurrentRequests;
+      private final @Nullable Input<Integer> maxConcurrentRequests;
 
     public Input<Integer> getMaxConcurrentRequests() {
         return this.maxConcurrentRequests == null ? Input.empty() : this.maxConcurrentRequests;
@@ -33,7 +33,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="maxIdleInstances")
-    private final @Nullable Input<Integer> maxIdleInstances;
+      private final @Nullable Input<Integer> maxIdleInstances;
 
     public Input<Integer> getMaxIdleInstances() {
         return this.maxIdleInstances == null ? Input.empty() : this.maxIdleInstances;
@@ -45,7 +45,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="maxPendingLatency")
-    private final @Nullable Input<String> maxPendingLatency;
+      private final @Nullable Input<String> maxPendingLatency;
 
     public Input<String> getMaxPendingLatency() {
         return this.maxPendingLatency == null ? Input.empty() : this.maxPendingLatency;
@@ -56,7 +56,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="minIdleInstances")
-    private final @Nullable Input<Integer> minIdleInstances;
+      private final @Nullable Input<Integer> minIdleInstances;
 
     public Input<Integer> getMinIdleInstances() {
         return this.minIdleInstances == null ? Input.empty() : this.minIdleInstances;
@@ -68,7 +68,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="minPendingLatency")
-    private final @Nullable Input<String> minPendingLatency;
+      private final @Nullable Input<String> minPendingLatency;
 
     public Input<String> getMinPendingLatency() {
         return this.minPendingLatency == null ? Input.empty() : this.minPendingLatency;
@@ -80,7 +80,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="standardSchedulerSettings")
-    private final @Nullable Input<StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs> standardSchedulerSettings;
+      private final @Nullable Input<StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs> standardSchedulerSettings;
 
     public Input<StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs> getStandardSchedulerSettings() {
         return this.standardSchedulerSettings == null ? Input.empty() : this.standardSchedulerSettings;
@@ -199,7 +199,6 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
             this.standardSchedulerSettings = Input.ofNullable(standardSchedulerSettings);
             return this;
         }
-
         public StandardAppVersionAutomaticScalingArgs build() {
             return new StandardAppVersionAutomaticScalingArgs(maxConcurrentRequests, maxIdleInstances, maxPendingLatency, minIdleInstances, minPendingLatency, standardSchedulerSettings);
         }

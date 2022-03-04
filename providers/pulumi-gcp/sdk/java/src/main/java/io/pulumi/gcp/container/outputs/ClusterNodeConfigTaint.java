@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ClusterNodeConfigTaint {
     /**
      * Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
      * 
-     */
+    */
     public String getEffect() {
         return this.effect;
     }
     /**
      * Key for taint.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value for taint.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -95,7 +95,6 @@ public final class ClusterNodeConfigTaint {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ClusterNodeConfigTaint build() {
             return new ClusterNodeConfigTaint(effect, key, value);
         }

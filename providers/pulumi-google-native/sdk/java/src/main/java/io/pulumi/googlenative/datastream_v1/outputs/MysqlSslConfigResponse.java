@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class MysqlSslConfigResponse {
     /**
      * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
      * 
-     */
+    */
     public String getCaCertificate() {
         return this.caCertificate;
     }
     /**
      * Indicates whether the ca_certificate field is set.
      * 
-     */
+    */
     public Boolean getCaCertificateSet() {
         return this.caCertificateSet;
     }
     /**
      * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
      * 
-     */
+    */
     public String getClientCertificate() {
         return this.clientCertificate;
     }
     /**
      * Indicates whether the client_certificate field is set.
      * 
-     */
+    */
     public Boolean getClientCertificateSet() {
         return this.clientCertificateSet;
     }
     /**
      * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
      * 
-     */
+    */
     public String getClientKey() {
         return this.clientKey;
     }
     /**
      * Indicates whether the client_key field is set.
      * 
-     */
+    */
     public Boolean getClientKeySet() {
         return this.clientKeySet;
     }
@@ -159,7 +159,6 @@ public final class MysqlSslConfigResponse {
             this.clientKeySet = Objects.requireNonNull(clientKeySet);
             return this;
         }
-
         public MysqlSslConfigResponse build() {
             return new MysqlSslConfigResponse(caCertificate, caCertificateSet, clientCertificate, clientCertificateSet, clientKey, clientKeySet);
         }

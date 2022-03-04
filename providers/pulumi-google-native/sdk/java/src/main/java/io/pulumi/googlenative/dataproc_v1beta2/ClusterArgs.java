@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ClusterConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -32,7 +32,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<ClusterConfigArgs> config;
+      private final Input<ClusterConfigArgs> config;
 
     public Input<ClusterConfigArgs> getConfig() {
         return this.config;
@@ -43,7 +43,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -54,21 +54,21 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -187,7 +187,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
-
         public ClusterArgs build() {
             return new ClusterArgs(clusterName, config, labels, project, region, requestId);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise;
 
 import io.pulumi.awsnative.iotsitewise.inputs.ProjectTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetIds")
-    private final @Nullable Input<List<String>> assetIds;
+      private final @Nullable Input<List<String>> assetIds;
 
     public Input<List<String>> getAssetIds() {
         return this.assetIds == null ? Input.empty() : this.assetIds;
@@ -32,7 +32,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalId", required=true)
-    private final Input<String> portalId;
+      private final Input<String> portalId;
 
     public Input<String> getPortalId() {
         return this.portalId;
@@ -43,7 +43,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectDescription")
-    private final @Nullable Input<String> projectDescription;
+      private final @Nullable Input<String> projectDescription;
 
     public Input<String> getProjectDescription() {
         return this.projectDescription == null ? Input.empty() : this.projectDescription;
@@ -54,7 +54,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName")
-    private final @Nullable Input<String> projectName;
+      private final @Nullable Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName == null ? Input.empty() : this.projectName;
@@ -65,7 +65,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ProjectTagArgs>> tags;
+      private final @Nullable Input<List<ProjectTagArgs>> tags;
 
     public Input<List<ProjectTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ProjectArgs build() {
             return new ProjectArgs(assetIds, portalId, projectDescription, projectName, tags);
         }

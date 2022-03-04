@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shell")
-    private final @Nullable Input<String> shell;
+      private final @Nullable Input<String> shell;
 
     public Input<String> getShell() {
         return this.shell == null ? Input.empty() : this.shell;
@@ -66,7 +66,6 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
             this.shell = Input.ofNullable(shell);
             return this;
         }
-
         public EntrypointArgs build() {
             return new EntrypointArgs(shell);
         }

@@ -2,22 +2,23 @@ package io.pulumi.core.internal.annotations;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableMap;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.internal.Reflection;
 
 import java.lang.reflect.Field;
-import java.util.Objects;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
+import static java.util.Objects.requireNonNull;
 
-public final class InputMetadata extends InputOutputMetadata<InputImport> {
+public final class InputMetadata<F> extends InputOutputMetadata<InputImport, F> {
 
     private final InputImport annotation;
 
-    private InputMetadata(Field field, InputImport annotation) {
-        super(field);
-        this.annotation = Objects.requireNonNull(annotation);
+    private InputMetadata(Field field, InputImport annotation, Class<F> fieldType) {
+        super(field, fieldType);
+        this.annotation = requireNonNull(annotation);
     }
 
     @Override
@@ -35,24 +36,25 @@ public final class InputMetadata extends InputOutputMetadata<InputImport> {
         return MoreObjects.toStringHelper(this)
                 .add("name", getName())
                 .add("annotation", this.getAnnotation())
+                .add("fieldType", fieldType)
                 .toString();
     }
 
-    public static ImmutableMap<String, InputMetadata> of(Class<?> extractionType) {
+    public static ImmutableMap<String, InputMetadata<?>> of(Class<?> extractionType) {
         return of(extractionType, field -> true);
     }
 
-    public static ImmutableMap<String, InputMetadata> of(
+    public static ImmutableMap<String, InputMetadata<?>> of(
             Class<?> extractionType,
             Predicate<Field> fieldFilter
     ) {
         return Reflection.allFields(extractionType).stream()
-                .filter(field1 -> field1.isAnnotationPresent(InputImport.class))
+                .filter(f -> f.isAnnotationPresent(InputImport.class))
                 .filter(fieldFilter)
-                .map(field1 -> {
-                    field1.setAccessible(true);
-                    return new InputMetadata(
-                            field1, field1.getAnnotation(InputImport.class)
+                .map(f -> {
+                    f.setAccessible(true);
+                    return new InputMetadata<>(
+                            f, f.getAnnotation(InputImport.class), f.getType()
                     );
                 })
                 .collect(toImmutableMap(

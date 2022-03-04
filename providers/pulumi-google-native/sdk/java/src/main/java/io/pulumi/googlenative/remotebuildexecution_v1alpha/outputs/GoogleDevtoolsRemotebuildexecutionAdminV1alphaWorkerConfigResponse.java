@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -97,77 +97,77 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     /**
      * The accelerator card attached to each VM.
      * 
-     */
+    */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse getAccelerator() {
         return this.accelerator;
     }
     /**
      * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/
      * 
-     */
+    */
     public String getDiskSizeGb() {
         return this.diskSizeGb;
     }
     /**
      * Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.
      * 
-     */
+    */
     public String getDiskType() {
         return this.diskType;
     }
     /**
      * Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.
      * 
-     */
+    */
     public String getMachineType() {
         return this.machineType;
     }
     /**
      * The maximum number of actions a worker can execute concurrently.
      * 
-     */
+    */
     public String getMaxConcurrentActions() {
         return this.maxConcurrentActions;
     }
     /**
      * Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).
      * 
-     */
+    */
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
      * Determines the type of network access granted to workers. Possible values: - "public": Workers can connect to the public internet. - "private": Workers can only connect to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
      * 
-     */
+    */
     public String getNetworkAccess() {
         return this.networkAccess;
     }
     /**
      * Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.
      * 
-     */
+    */
     public Boolean getReserved() {
         return this.reserved;
     }
     /**
      * The node type name to be used for sole-tenant nodes.
      * 
-     */
+    */
     public String getSoleTenantNodeType() {
         return this.soleTenantNodeType;
     }
     /**
      * The name of the image used by each VM.
      * 
-     */
+    */
     public String getVmImage() {
         return this.vmImage;
     }
@@ -266,7 +266,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(accelerator, diskSizeGb, diskType, labels, machineType, maxConcurrentActions, minCpuPlatform, networkAccess, reserved, soleTenantNodeType, vmImage);
         }

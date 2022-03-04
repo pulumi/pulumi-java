@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 import io.pulumi.azurenative.machinelearningservices.outputs.AksNetworkingConfigurationResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SslConfigurationResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemServiceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -73,49 +73,49 @@ public final class AKSResponseProperties {
     /**
      * Number of agents
      * 
-     */
+    */
     public Optional<Integer> getAgentCount() {
         return Optional.ofNullable(this.agentCount);
     }
     /**
      * Agent virtual machine size
      * 
-     */
+    */
     public Optional<String> getAgentVmSize() {
         return Optional.ofNullable(this.agentVmSize);
     }
     /**
      * AKS networking configuration for vnet
      * 
-     */
+    */
     public Optional<AksNetworkingConfigurationResponse> getAksNetworkingConfiguration() {
         return Optional.ofNullable(this.aksNetworkingConfiguration);
     }
     /**
      * Cluster full qualified domain name
      * 
-     */
+    */
     public Optional<String> getClusterFqdn() {
         return Optional.ofNullable(this.clusterFqdn);
     }
     /**
      * Intended usage of the cluster
      * 
-     */
+    */
     public Optional<String> getClusterPurpose() {
         return Optional.ofNullable(this.clusterPurpose);
     }
     /**
      * SSL configuration
      * 
-     */
+    */
     public Optional<SslConfigurationResponse> getSslConfiguration() {
         return Optional.ofNullable(this.sslConfiguration);
     }
     /**
      * System services
      * 
-     */
+    */
     public List<SystemServiceResponse> getSystemServices() {
         return this.systemServices;
     }
@@ -186,7 +186,6 @@ public final class AKSResponseProperties {
             this.systemServices = Objects.requireNonNull(systemServices);
             return this;
         }
-
         public AKSResponseProperties build() {
             return new AKSResponseProperties(agentCount, agentVmSize, aksNetworkingConfiguration, clusterFqdn, clusterPurpose, sslConfiguration, systemServices);
         }

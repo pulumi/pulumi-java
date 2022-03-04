@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="excludePrefixes", required=true)
-    private final List<String> excludePrefixes;
+      private final List<String> excludePrefixes;
 
     public List<String> getExcludePrefixes() {
         return this.excludePrefixes;
@@ -33,7 +33,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="includePrefixes", required=true)
-    private final List<String> includePrefixes;
+      private final List<String> includePrefixes;
 
     public List<String> getIncludePrefixes() {
         return this.includePrefixes;
@@ -44,7 +44,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="lastModifiedBefore", required=true)
-    private final String lastModifiedBefore;
+      private final String lastModifiedBefore;
 
     public String getLastModifiedBefore() {
         return this.lastModifiedBefore;
@@ -55,7 +55,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="lastModifiedSince", required=true)
-    private final String lastModifiedSince;
+      private final String lastModifiedSince;
 
     public String getLastModifiedSince() {
         return this.lastModifiedSince;
@@ -66,7 +66,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="maxTimeElapsedSinceLastModification", required=true)
-    private final String maxTimeElapsedSinceLastModification;
+      private final String maxTimeElapsedSinceLastModification;
 
     public String getMaxTimeElapsedSinceLastModification() {
         return this.maxTimeElapsedSinceLastModification;
@@ -77,7 +77,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="minTimeElapsedSinceLastModification", required=true)
-    private final String minTimeElapsedSinceLastModification;
+      private final String minTimeElapsedSinceLastModification;
 
     public String getMinTimeElapsedSinceLastModification() {
         return this.minTimeElapsedSinceLastModification;
@@ -166,7 +166,6 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
             this.minTimeElapsedSinceLastModification = Objects.requireNonNull(minTimeElapsedSinceLastModification);
             return this;
         }
-
         public ObjectConditionsResponse build() {
             return new ObjectConditionsResponse(excludePrefixes, includePrefixes, lastModifiedBefore, lastModifiedSince, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);
         }

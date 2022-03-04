@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -62,7 +62,6 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public ClusterIdentityUserAssignedIdentitiesArgs build() {
             return new ClusterIdentityUserAssignedIdentitiesArgs(tenantId);
         }

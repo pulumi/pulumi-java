@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.DSSEHintResponse;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DSSEAttestationNoteResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="hint", required=true)
-    private final DSSEHintResponse hint;
+      private final DSSEHintResponse hint;
 
     public DSSEHintResponse getHint() {
         return this.hint;
@@ -55,7 +55,6 @@ public final class DSSEAttestationNoteResponse extends io.pulumi.resources.Invok
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public DSSEAttestationNoteResponse build() {
             return new DSSEAttestationNoteResponse(hint);
         }

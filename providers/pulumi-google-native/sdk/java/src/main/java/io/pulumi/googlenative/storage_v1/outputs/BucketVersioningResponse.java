@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BucketVersioningResponse {
     /**
      * While set to true, versioning is fully enabled for this bucket.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -52,7 +52,6 @@ public final class BucketVersioningResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public BucketVersioningResponse build() {
             return new BucketVersioningResponse(enabled);
         }

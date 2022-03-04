@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -77,21 +77,21 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
      * This translates to the Access-Control-Allow-Credentials response header.
      * 
-     */
+    */
     public Optional<Boolean> getAllowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
     /**
      * Specifies the content for the Access-Control-Allow-Headers response header.
      * 
-     */
+    */
     public List<String> getAllowHeaders() {
         return this.allowHeaders == null ? List.of() : this.allowHeaders;
     }
     /**
      * Specifies the content for the Access-Control-Allow-Methods response header.
      * 
-     */
+    */
     public List<String> getAllowMethods() {
         return this.allowMethods == null ? List.of() : this.allowMethods;
     }
@@ -99,21 +99,21 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * Specifies the list of origins that will be allowed to do CORS requests.
      * This translates to the Access-Control-Allow-Origin response header.
      * 
-     */
+    */
     public List<String> getAllowOrigins() {
         return this.allowOrigins == null ? List.of() : this.allowOrigins;
     }
     /**
      * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
      * 
-     */
+    */
     public Optional<Boolean> getDisabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
      * Specifies the content for the Access-Control-Allow-Headers response header.
      * 
-     */
+    */
     public List<String> getExposeHeaders() {
         return this.exposeHeaders == null ? List.of() : this.exposeHeaders;
     }
@@ -124,7 +124,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * - This translates to the Access-Control-Max-Age header.
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public String getMaxAge() {
         return this.maxAge;
     }
@@ -195,7 +195,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy(allowCredentials, allowHeaders, allowMethods, allowOrigins, disabled, exposeHeaders, maxAge);
         }

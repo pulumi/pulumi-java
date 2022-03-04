@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DatabaseStatisticsResponse {
     /**
      * The database size - the total size of compressed data and index in bytes.
      * 
-     */
+    */
     public Optional<Double> getSize() {
         return Optional.ofNullable(this.size);
     }
@@ -54,7 +54,6 @@ public final class DatabaseStatisticsResponse {
             this.size = size;
             return this;
         }
-
         public DatabaseStatisticsResponse build() {
             return new DatabaseStatisticsResponse(size);
         }

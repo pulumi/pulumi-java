@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blockchain.outputs;
 
 import io.pulumi.azurenative.blockchain.outputs.ApiKeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ListBlockchainMemberApiKeysResult {
     /**
      * Gets or sets the collection of API key.
      * 
-     */
+    */
     public List<ApiKeyResponse> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }
@@ -54,7 +54,6 @@ public final class ListBlockchainMemberApiKeysResult {
             this.keys = keys;
             return this;
         }
-
         public ListBlockchainMemberApiKeysResult build() {
             return new ListBlockchainMemberApiKeysResult(keys);
         }

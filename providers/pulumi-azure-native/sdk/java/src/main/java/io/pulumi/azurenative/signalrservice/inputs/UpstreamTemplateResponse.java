@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -28,7 +28,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="categoryPattern")
-    private final @Nullable String categoryPattern;
+      private final @Nullable String categoryPattern;
 
     public Optional<String> getCategoryPattern() {
         return this.categoryPattern == null ? Optional.empty() : Optional.ofNullable(this.categoryPattern);
@@ -43,7 +43,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="eventPattern")
-    private final @Nullable String eventPattern;
+      private final @Nullable String eventPattern;
 
     public Optional<String> getEventPattern() {
         return this.eventPattern == null ? Optional.empty() : Optional.ofNullable(this.eventPattern);
@@ -58,7 +58,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="hubPattern")
-    private final @Nullable String hubPattern;
+      private final @Nullable String hubPattern;
 
     public Optional<String> getHubPattern() {
         return this.hubPattern == null ? Optional.empty() : Optional.ofNullable(this.hubPattern);
@@ -70,7 +70,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="urlTemplate", required=true)
-    private final String urlTemplate;
+      private final String urlTemplate;
 
     public String getUrlTemplate() {
         return this.urlTemplate;
@@ -139,7 +139,6 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
-
         public UpstreamTemplateResponse build() {
             return new UpstreamTemplateResponse(categoryPattern, eventPattern, hubPattern, urlTemplate);
         }

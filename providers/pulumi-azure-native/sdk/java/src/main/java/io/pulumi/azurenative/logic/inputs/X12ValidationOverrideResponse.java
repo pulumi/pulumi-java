@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
-    private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
+      private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
 
     public Boolean getAllowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
@@ -33,7 +33,7 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="messageId", required=true)
-    private final String messageId;
+      private final String messageId;
 
     public String getMessageId() {
         return this.messageId;
@@ -44,7 +44,7 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="trailingSeparatorPolicy", required=true)
-    private final String trailingSeparatorPolicy;
+      private final String trailingSeparatorPolicy;
 
     public String getTrailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
@@ -55,7 +55,7 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
-    private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
+      private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
 
     public Boolean getTrimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
@@ -66,7 +66,7 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="validateCharacterSet", required=true)
-    private final Boolean validateCharacterSet;
+      private final Boolean validateCharacterSet;
 
     public Boolean getValidateCharacterSet() {
         return this.validateCharacterSet;
@@ -77,7 +77,7 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="validateEDITypes", required=true)
-    private final Boolean validateEDITypes;
+      private final Boolean validateEDITypes;
 
     public Boolean getValidateEDITypes() {
         return this.validateEDITypes;
@@ -88,7 +88,7 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="validateXSDTypes", required=true)
-    private final Boolean validateXSDTypes;
+      private final Boolean validateXSDTypes;
 
     public Boolean getValidateXSDTypes() {
         return this.validateXSDTypes;
@@ -187,7 +187,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }
-
         public X12ValidationOverrideResponse build() {
             return new X12ValidationOverrideResponse(allowLeadingAndTrailingSpacesAndZeroes, messageId, trailingSeparatorPolicy, trimLeadingAndTrailingSpacesAndZeroes, validateCharacterSet, validateEDITypes, validateXSDTypes);
         }

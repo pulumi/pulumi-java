@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CertificateTemplateResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="majorVersion", required=true)
-    private final Integer majorVersion;
+      private final Integer majorVersion;
 
     public Integer getMajorVersion() {
         return this.majorVersion;
@@ -32,7 +32,7 @@ public final class CertificateTemplateResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="minorVersion", required=true)
-    private final Integer minorVersion;
+      private final Integer minorVersion;
 
     public Integer getMinorVersion() {
         return this.minorVersion;
@@ -81,7 +81,6 @@ public final class CertificateTemplateResponse extends io.pulumi.resources.Invok
             this.minorVersion = Objects.requireNonNull(minorVersion);
             return this;
         }
-
         public CertificateTemplateResponse build() {
             return new CertificateTemplateResponse(majorVersion, minorVersion);
         }

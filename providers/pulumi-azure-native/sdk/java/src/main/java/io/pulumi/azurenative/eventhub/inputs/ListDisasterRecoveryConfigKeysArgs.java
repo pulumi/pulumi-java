@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="alias", required=true)
-    private final String alias;
+      private final String alias;
 
     public String getAlias() {
         return this.alias;
@@ -28,7 +28,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="authorizationRuleName", required=true)
-    private final String authorizationRuleName;
+      private final String authorizationRuleName;
 
     public String getAuthorizationRuleName() {
         return this.authorizationRuleName;
@@ -39,7 +39,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+      private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -50,7 +50,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListDisasterRecoveryConfigKeysArgs build() {
             return new ListDisasterRecoveryConfigKeysArgs(alias, authorizationRuleName, namespaceName, resourceGroupName);
         }

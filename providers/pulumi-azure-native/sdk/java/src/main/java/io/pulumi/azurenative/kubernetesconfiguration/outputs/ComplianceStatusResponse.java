@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ComplianceStatusResponse {
     /**
      * The compliance state of the configuration.
      * 
-     */
+    */
     public String getComplianceState() {
         return this.complianceState;
     }
     /**
      * Datetime the configuration was last applied.
      * 
-     */
+    */
     public Optional<String> getLastConfigApplied() {
         return Optional.ofNullable(this.lastConfigApplied);
     }
     /**
      * Message from when the configuration was applied.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Level of the message.
      * 
-     */
+    */
     public Optional<String> getMessageLevel() {
         return Optional.ofNullable(this.messageLevel);
     }
@@ -118,7 +118,6 @@ public final class ComplianceStatusResponse {
             this.messageLevel = messageLevel;
             return this;
         }
-
         public ComplianceStatusResponse build() {
             return new ComplianceStatusResponse(complianceState, lastConfigApplied, message, messageLevel);
         }

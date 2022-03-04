@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicedirectory_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicedirectory_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -33,35 +33,35 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="namespaceId", required=true)
-    private final Input<String> namespaceId;
+      private final Input<String> namespaceId;
 
     public Input<String> getNamespaceId() {
         return this.namespaceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="serviceId", required=true)
-    private final Input<String> serviceId;
+      private final Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId;
@@ -72,7 +72,7 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -206,7 +206,6 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public NamespaceServiceIamPolicyArgs build() {
             return new NamespaceServiceIamPolicyArgs(bindings, etag, location, namespaceId, project, serviceId, version);
         }

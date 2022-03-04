@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BucketEncryptionResponse {
     /**
      * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
      * 
-     */
+    */
     public String getDefaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }
@@ -52,7 +52,6 @@ public final class BucketEncryptionResponse {
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }
-
         public BucketEncryptionResponse build() {
             return new BucketEncryptionResponse(defaultKmsKeyName);
         }

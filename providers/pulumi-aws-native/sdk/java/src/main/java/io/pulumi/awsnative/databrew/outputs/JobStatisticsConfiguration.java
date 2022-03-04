@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobStatisticOverride;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class JobStatisticsConfiguration {
             this.overrides = overrides;
             return this;
         }
-
         public JobStatisticsConfiguration build() {
             return new JobStatisticsConfiguration(includedStatistics, overrides);
         }

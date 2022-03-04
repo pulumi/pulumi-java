@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ExportDeliveryDestinationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class ExportDeliveryInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="destination", required=true)
-    private final ExportDeliveryDestinationResponse destination;
+      private final ExportDeliveryDestinationResponse destination;
 
     public ExportDeliveryDestinationResponse getDestination() {
         return this.destination;
@@ -59,7 +59,6 @@ public final class ExportDeliveryInfoResponse extends io.pulumi.resources.Invoke
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public ExportDeliveryInfoResponse build() {
             return new ExportDeliveryInfoResponse(destination);
         }

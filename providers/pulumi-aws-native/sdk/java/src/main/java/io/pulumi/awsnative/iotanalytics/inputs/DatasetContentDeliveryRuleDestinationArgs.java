@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetIotEventsDestinationConfigurationArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetS3DestinationConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,14 +16,14 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
     public static final DatasetContentDeliveryRuleDestinationArgs Empty = new DatasetContentDeliveryRuleDestinationArgs();
 
     @InputImport(name="iotEventsDestinationConfiguration")
-    private final @Nullable Input<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration;
+      private final @Nullable Input<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration;
 
     public Input<DatasetIotEventsDestinationConfigurationArgs> getIotEventsDestinationConfiguration() {
         return this.iotEventsDestinationConfiguration == null ? Input.empty() : this.iotEventsDestinationConfiguration;
     }
 
     @InputImport(name="s3DestinationConfiguration")
-    private final @Nullable Input<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration;
+      private final @Nullable Input<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
     public Input<DatasetS3DestinationConfigurationArgs> getS3DestinationConfiguration() {
         return this.s3DestinationConfiguration == null ? Input.empty() : this.s3DestinationConfiguration;
@@ -82,7 +82,6 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
             this.s3DestinationConfiguration = Input.ofNullable(s3DestinationConfiguration);
             return this;
         }
-
         public DatasetContentDeliveryRuleDestinationArgs build() {
             return new DatasetContentDeliveryRuleDestinationArgs(iotEventsDestinationConfiguration, s3DestinationConfiguration);
         }

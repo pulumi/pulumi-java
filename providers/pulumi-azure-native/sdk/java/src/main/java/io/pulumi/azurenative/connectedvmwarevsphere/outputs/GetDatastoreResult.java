@@ -6,7 +6,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -136,112 +136,112 @@ public final class GetDatastoreResult {
     /**
      * Gets the name of the corresponding resource in Kubernetes.
      * 
-     */
+    */
     public String getCustomResourceName() {
         return this.customResourceName;
     }
     /**
      * Gets or sets the extended location.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Gets or sets the Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the inventory Item ID for the datastore.
      * 
-     */
+    */
     public Optional<String> getInventoryItemId() {
         return Optional.ofNullable(this.inventoryItemId);
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Gets or sets the location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Gets or sets the vCenter Managed Object name for the datastore.
      * 
-     */
+    */
     public String getMoName() {
         return this.moName;
     }
     /**
      * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the datastore.
      * 
-     */
+    */
     public Optional<String> getMoRefId() {
         return Optional.ofNullable(this.moRefId);
     }
     /**
      * Gets or sets the name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<ResourceStatusResponse> getStatuses() {
         return this.statuses;
     }
     /**
      * The system data.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Gets or sets the Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets or sets the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets or sets a unique identifier for this resource.
      * 
-     */
+    */
     public String getUuid() {
         return this.uuid;
     }
     /**
      * Gets or sets the ARM Id of the vCenter resource in which this datastore resides.
      * 
-     */
+    */
     public Optional<String> getVCenterId() {
         return Optional.ofNullable(this.vCenterId);
     }
@@ -375,7 +375,6 @@ public final class GetDatastoreResult {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public GetDatastoreResult build() {
             return new GetDatastoreResult(customResourceName, extendedLocation, id, inventoryItemId, kind, location, moName, moRefId, name, provisioningState, statuses, systemData, tags, type, uuid, vCenterId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="cert", required=true)
-    private final String cert;
+      private final String cert;
 
     public String getCert() {
         return this.cert;
@@ -32,7 +32,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -43,7 +43,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="expireTime", required=true)
-    private final String expireTime;
+      private final String expireTime;
 
     public String getExpireTime() {
         return this.expireTime;
@@ -54,7 +54,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="serialNumber", required=true)
-    private final String serialNumber;
+      private final String serialNumber;
 
     public String getSerialNumber() {
         return this.serialNumber;
@@ -65,7 +65,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="sha1Fingerprint", required=true)
-    private final String sha1Fingerprint;
+      private final String sha1Fingerprint;
 
     public String getSha1Fingerprint() {
         return this.sha1Fingerprint;
@@ -144,7 +144,6 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public TlsCertificateResponse build() {
             return new TlsCertificateResponse(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,28 +62,28 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
     /**
      * The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getDatabase() {
         return Optional.ofNullable(this.database);
     }
     /**
      * The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getServer() {
         return Optional.ofNullable(this.server);
     }
     /**
      * The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getTable() {
         return Optional.ofNullable(this.table);
     }
@@ -91,14 +91,14 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.Sql/Server/Database'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getUser() {
         return Optional.ofNullable(this.user);
     }
@@ -162,7 +162,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
             this.user = user;
             return this;
         }
-
         public AzureSqlDatabaseOutputDataSourceResponse build() {
             return new AzureSqlDatabaseOutputDataSourceResponse(database, password, server, table, type, user);
         }

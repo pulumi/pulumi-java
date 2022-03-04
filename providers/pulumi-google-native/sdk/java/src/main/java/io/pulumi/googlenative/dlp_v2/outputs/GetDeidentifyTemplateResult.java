@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DeidentifyConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class GetDeidentifyTemplateResult {
     /**
      * The creation timestamp of an inspectTemplate.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The core content of the template.
      * 
-     */
+    */
     public GooglePrivacyDlpV2DeidentifyConfigResponse getDeidentifyConfig() {
         return this.deidentifyConfig;
     }
     /**
      * Short description (max 256 chars).
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Display name (max 256 chars).
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The template name. The template will have one of the following formats: `projects/PROJECT_ID/deidentifyTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/deidentifyTemplates/TEMPLATE_ID`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The last update timestamp of an inspectTemplate.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -159,7 +159,6 @@ public final class GetDeidentifyTemplateResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetDeidentifyTemplateResult build() {
             return new GetDeidentifyTemplateResult(createTime, deidentifyConfig, description, displayName, name, updateTime);
         }

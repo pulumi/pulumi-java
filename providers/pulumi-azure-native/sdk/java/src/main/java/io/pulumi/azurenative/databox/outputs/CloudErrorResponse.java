@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.AdditionalErrorInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class CloudErrorResponse {
     /**
      * Cloud error additional info.
      * 
-     */
+    */
     public List<AdditionalErrorInfoResponse> getAdditionalInfo() {
         return this.additionalInfo;
     }
     /**
      * Cloud error code.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Cloud error details.
      * 
-     */
+    */
     public List<CloudErrorResponse> getDetails() {
         return this.details;
     }
     /**
      * Cloud error message.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Cloud error target.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -141,7 +141,6 @@ public final class CloudErrorResponse {
             this.target = target;
             return this;
         }
-
         public CloudErrorResponse build() {
             return new CloudErrorResponse(additionalInfo, code, details, message, target);
         }

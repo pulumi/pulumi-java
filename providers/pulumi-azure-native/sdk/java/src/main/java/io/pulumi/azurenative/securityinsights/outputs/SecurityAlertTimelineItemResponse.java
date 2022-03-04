@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -90,35 +90,35 @@ public final class SecurityAlertTimelineItemResponse {
     /**
      * The name of the alert type.
      * 
-     */
+    */
     public String getAlertType() {
         return this.alertType;
     }
     /**
      * The alert azure resource id.
      * 
-     */
+    */
     public String getAzureResourceId() {
         return this.azureResourceId;
     }
     /**
      * The alert description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The alert name.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The alert end time.
      * 
-     */
+    */
     public String getEndTimeUtc() {
         return this.endTimeUtc;
     }
@@ -126,35 +126,35 @@ public final class SecurityAlertTimelineItemResponse {
      * The entity query kind
      * Expected value is 'SecurityAlert'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The alert product name.
      * 
-     */
+    */
     public Optional<String> getProductName() {
         return Optional.ofNullable(this.productName);
     }
     /**
      * The alert severity.
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * The alert start time.
      * 
-     */
+    */
     public String getStartTimeUtc() {
         return this.startTimeUtc;
     }
     /**
      * The alert generated time.
      * 
-     */
+    */
     public String getTimeGenerated() {
         return this.timeGenerated;
     }
@@ -246,7 +246,6 @@ public final class SecurityAlertTimelineItemResponse {
             this.timeGenerated = Objects.requireNonNull(timeGenerated);
             return this;
         }
-
         public SecurityAlertTimelineItemResponse build() {
             return new SecurityAlertTimelineItemResponse(alertType, azureResourceId, description, displayName, endTimeUtc, kind, productName, severity, startTimeUtc, timeGenerated);
         }

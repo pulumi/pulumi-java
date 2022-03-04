@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -42,14 +42,14 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
     /**
      * Day of week (`1-7`), starting on Monday
      * 
-     */
+    */
     public Optional<Integer> getDay() {
         return Optional.ofNullable(this.day);
     }
     /**
      * Hour of day (`0-23`), ignored if `day` not set
      * 
-     */
+    */
     public Optional<Integer> getHour() {
         return Optional.ofNullable(this.hour);
     }
@@ -57,7 +57,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
      * Receive updates earlier (`canary`) or later
      * (`stable`)
      * 
-     */
+    */
     public Optional<String> getUpdateTrack() {
         return Optional.ofNullable(this.updateTrack);
     }
@@ -100,7 +100,6 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
             this.updateTrack = updateTrack;
             return this;
         }
-
         public DatabaseInstanceSettingsMaintenanceWindow build() {
             return new DatabaseInstanceSettingsMaintenanceWindow(day, hour, updateTrack);
         }

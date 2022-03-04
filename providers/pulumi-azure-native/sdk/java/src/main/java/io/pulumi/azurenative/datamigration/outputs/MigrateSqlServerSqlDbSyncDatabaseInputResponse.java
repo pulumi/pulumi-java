@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse {
     /**
      * Unique identifier for database
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Migration settings which tune the migration behavior
      * 
-     */
+    */
     public Map<String,String> getMigrationSetting() {
         return this.migrationSetting == null ? Map.of() : this.migrationSetting;
     }
     /**
      * Name of database
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Schema name to be migrated
      * 
-     */
+    */
     public Optional<String> getSchemaName() {
         return Optional.ofNullable(this.schemaName);
     }
     /**
      * Source settings to tune source endpoint migration behavior
      * 
-     */
+    */
     public Map<String,String> getSourceSetting() {
         return this.sourceSetting == null ? Map.of() : this.sourceSetting;
     }
     /**
      * Mapping of source to target tables
      * 
-     */
+    */
     public Map<String,String> getTableMap() {
         return this.tableMap == null ? Map.of() : this.tableMap;
     }
     /**
      * Target database name
      * 
-     */
+    */
     public Optional<String> getTargetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
     /**
      * Target settings to tune target endpoint migration behavior
      * 
-     */
+    */
     public Map<String,String> getTargetSetting() {
         return this.targetSetting == null ? Map.of() : this.targetSetting;
     }
@@ -203,7 +203,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse {
             this.targetSetting = targetSetting;
             return this;
         }
-
         public MigrateSqlServerSqlDbSyncDatabaseInputResponse build() {
             return new MigrateSqlServerSqlDbSyncDatabaseInputResponse(id, migrationSetting, name, schemaName, sourceSetting, tableMap, targetDatabaseName, targetSetting);
         }

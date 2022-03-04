@@ -6,21 +6,41 @@ package io.pulumi.azurenative.peering;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.peering.inputs.GetPeerAsnArgs;
 import io.pulumi.azurenative.peering.outputs.GetPeerAsnResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPeerAsn {
-/**
- * The essential information related to the peer's ASN.
+    private GetPeerAsn() {}
+    public interface BuilderApplicator {
+        public void apply(GetPeerAsnArgs.Builder a);
+    }
+    private static GetPeerAsnArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPeerAsnArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The essential information related to the peer's ASN.
  * API Version: 2021-01-01.
  * 
- *
- * The essential information related to the peer's ASN.
+     *
+     * The essential information related to the peer's ASN.
  * 
- */
+     */
+    public static CompletableFuture<GetPeerAsnResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The essential information related to the peer's ASN.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * The essential information related to the peer's ASN.
+     * 
+     */
     public static CompletableFuture<GetPeerAsnResult> invokeAsync(GetPeerAsnArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPeerAsn", TypeShape.of(GetPeerAsnResult.class), args == null ? GetPeerAsnArgs.Empty : args, Utilities.withVersion(options));
     }

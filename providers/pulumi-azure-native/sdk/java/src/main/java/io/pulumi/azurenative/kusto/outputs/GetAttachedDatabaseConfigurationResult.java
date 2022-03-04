@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.TableLevelSharingPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -91,70 +91,70 @@ public final class GetAttachedDatabaseConfigurationResult {
     /**
      * The list of databases from the clusterResourceId which are currently attached to the cluster.
      * 
-     */
+    */
     public List<String> getAttachedDatabaseNames() {
         return this.attachedDatabaseNames;
     }
     /**
      * The resource id of the cluster where the databases you would like to attach reside.
      * 
-     */
+    */
     public String getClusterResourceId() {
         return this.clusterResourceId;
     }
     /**
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * The default principals modification kind
      * 
-     */
+    */
     public String getDefaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Table level sharing specifications
      * 
-     */
+    */
     public Optional<TableLevelSharingPropertiesResponse> getTableLevelSharingProperties() {
         return Optional.ofNullable(this.tableLevelSharingProperties);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -246,7 +246,6 @@ public final class GetAttachedDatabaseConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAttachedDatabaseConfigurationResult build() {
             return new GetAttachedDatabaseConfigurationResult(attachedDatabaseNames, clusterResourceId, databaseName, defaultPrincipalsModificationKind, id, location, name, provisioningState, tableLevelSharingProperties, type);
         }

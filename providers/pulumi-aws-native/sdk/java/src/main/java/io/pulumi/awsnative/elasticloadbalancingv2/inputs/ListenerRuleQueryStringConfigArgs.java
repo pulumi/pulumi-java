@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleQueryStringKeyValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class ListenerRuleQueryStringConfigArgs extends io.pulumi.resources
     public static final ListenerRuleQueryStringConfigArgs Empty = new ListenerRuleQueryStringConfigArgs();
 
     @InputImport(name="values")
-    private final @Nullable Input<List<ListenerRuleQueryStringKeyValueArgs>> values;
+      private final @Nullable Input<List<ListenerRuleQueryStringKeyValueArgs>> values;
 
     public Input<List<ListenerRuleQueryStringKeyValueArgs>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -59,7 +59,6 @@ public final class ListenerRuleQueryStringConfigArgs extends io.pulumi.resources
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public ListenerRuleQueryStringConfigArgs build() {
             return new ListenerRuleQueryStringConfigArgs(values);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class PurchasePlanResponse {
     /**
      * The plan ID.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
      * 
-     */
+    */
     public Optional<String> getProduct() {
         return Optional.ofNullable(this.product);
     }
     /**
      * The promotion code.
      * 
-     */
+    */
     public Optional<String> getPromotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * The plan ID.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -118,7 +118,6 @@ public final class PurchasePlanResponse {
             this.publisher = publisher;
             return this;
         }
-
         public PurchasePlanResponse build() {
             return new PurchasePlanResponse(name, product, promotionCode, publisher);
         }

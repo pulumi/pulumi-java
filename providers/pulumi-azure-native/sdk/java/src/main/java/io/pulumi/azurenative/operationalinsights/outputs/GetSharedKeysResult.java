@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetSharedKeysResult {
     /**
      * The primary shared key of a workspace.
      * 
-     */
+    */
     public Optional<String> getPrimarySharedKey() {
         return Optional.ofNullable(this.primarySharedKey);
     }
     /**
      * The secondary shared key of a workspace.
      * 
-     */
+    */
     public Optional<String> getSecondarySharedKey() {
         return Optional.ofNullable(this.secondarySharedKey);
     }
@@ -76,7 +76,6 @@ public final class GetSharedKeysResult {
             this.secondarySharedKey = secondarySharedKey;
             return this;
         }
-
         public GetSharedKeysResult build() {
             return new GetSharedKeysResult(primarySharedKey, secondarySharedKey);
         }

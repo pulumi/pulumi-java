@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.managedidentities_v1.outputs.TrustResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -112,91 +112,91 @@ public final class GetDomainResult {
     /**
      * Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used.
      * 
-     */
+    */
     public String getAdmin() {
         return this.admin;
     }
     /**
      * Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
      * 
-     */
+    */
     public Boolean getAuditLogsEnabled() {
         return this.auditLogsEnabled;
     }
     /**
      * Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) the domain instance is connected to. Networks can be added using UpdateDomain. The domain is only available on networks listed in `authorized_networks`. If CIDR subnets overlap between networks, domain creation will fail.
      * 
-     */
+    */
     public List<String> getAuthorizedNetworks() {
         return this.authorizedNetworks;
     }
     /**
      * The time the instance was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would be chosen for an Active Directory set up on an internal network.
      * 
-     */
+    */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * Optional. Resource labels that can contain user-provided metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations;
     }
     /**
      * The unique name of the domain using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
      * 
-     */
+    */
     public String getReservedIpRange() {
         return this.reservedIpRange;
     }
     /**
      * The current state of this domain.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Additional information about the current status of this domain, if available.
      * 
-     */
+    */
     public String getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * The current trusts associated with the domain.
      * 
-     */
+    */
     public List<TrustResponse> getTrusts() {
         return this.trusts;
     }
     /**
      * The last update time.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -309,7 +309,6 @@ public final class GetDomainResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(admin, auditLogsEnabled, authorizedNetworks, createTime, fqdn, labels, locations, name, reservedIpRange, state, statusMessage, trusts, updateTime);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -74,42 +74,42 @@ public final class MongoDbAtlasLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The MongoDB Atlas connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-     */
+    */
     public Object getConnectionString() {
         return this.connectionString;
     }
     /**
      * The name of the MongoDB Atlas database that you want to access. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getDatabase() {
         return this.database;
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
@@ -117,7 +117,7 @@ public final class MongoDbAtlasLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'MongoDbAtlas'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -188,7 +188,6 @@ public final class MongoDbAtlasLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MongoDbAtlasLinkedServiceResponse build() {
             return new MongoDbAtlasLinkedServiceResponse(annotations, connectVia, connectionString, database, description, parameters, type);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devops.enums.PipelineTypeEnum;
 import io.pulumi.azurenative.devops.inputs.BootstrapConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootstrapConfiguration", required=true)
-    private final Input<BootstrapConfigurationArgs> bootstrapConfiguration;
+      private final Input<BootstrapConfigurationArgs> bootstrapConfiguration;
 
     public Input<BootstrapConfigurationArgs> getBootstrapConfiguration() {
         return this.bootstrapConfiguration;
@@ -34,7 +34,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -45,7 +45,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineName")
-    private final @Nullable Input<String> pipelineName;
+      private final @Nullable Input<String> pipelineName;
 
     public Input<String> getPipelineName() {
         return this.pipelineName == null ? Input.empty() : this.pipelineName;
@@ -56,7 +56,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineType", required=true)
-    private final Input<Either<String,PipelineTypeEnum>> pipelineType;
+      private final Input<Either<String,PipelineTypeEnum>> pipelineType;
 
     public Input<Either<String,PipelineTypeEnum>> getPipelineType() {
         return this.pipelineType;
@@ -67,7 +67,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -197,7 +197,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PipelineArgs build() {
             return new PipelineArgs(bootstrapConfiguration, location, pipelineName, pipelineType, resourceGroupName, tags);
         }

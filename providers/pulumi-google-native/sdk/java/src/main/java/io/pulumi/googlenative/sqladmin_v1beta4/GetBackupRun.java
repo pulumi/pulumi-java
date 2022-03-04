@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupRun {
-/**
- * Retrieves a resource containing information about a backup run.
+    private GetBackupRun() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupRunArgs.Builder a);
+    }
+    private static GetBackupRunArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupRunArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves a resource containing information about a backup run.
  * 
- */
+     */
+    public static CompletableFuture<GetBackupRunResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves a resource containing information about a backup run.
+     * 
+     */
     public static CompletableFuture<GetBackupRunResult> invokeAsync(GetBackupRunArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1beta4:getBackupRun", TypeShape.of(GetBackupRunResult.class), args == null ? GetBackupRunArgs.Empty : args, Utilities.withVersion(options));
     }

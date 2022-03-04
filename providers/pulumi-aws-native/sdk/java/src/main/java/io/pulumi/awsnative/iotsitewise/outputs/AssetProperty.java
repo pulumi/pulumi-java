@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.enums.AssetPropertyNotificationState;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class AssetProperty {
     /**
      * The property alias that identifies the property.
      * 
-     */
+    */
     public Optional<String> getAlias() {
         return Optional.ofNullable(this.alias);
     }
     /**
      * Customer provided ID for property.
      * 
-     */
+    */
     public String getLogicalId() {
         return this.logicalId;
     }
     /**
      * The MQTT notification state (ENABLED or DISABLED) for this asset property.
      * 
-     */
+    */
     public Optional<AssetPropertyNotificationState> getNotificationState() {
         return Optional.ofNullable(this.notificationState);
     }
@@ -98,7 +98,6 @@ public final class AssetProperty {
             this.notificationState = notificationState;
             return this;
         }
-
         public AssetProperty build() {
             return new AssetProperty(alias, logicalId, notificationState);
         }

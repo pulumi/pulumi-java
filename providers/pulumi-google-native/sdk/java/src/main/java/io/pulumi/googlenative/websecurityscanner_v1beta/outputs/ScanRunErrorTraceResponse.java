@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.ScanConfigErrorResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class ScanRunErrorTraceResponse {
     /**
      * Indicates the error reason code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
      * 
-     */
+    */
     public Integer getMostCommonHttpErrorCode() {
         return this.mostCommonHttpErrorCode;
     }
     /**
      * If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
      * 
-     */
+    */
     public ScanConfigErrorResponse getScanConfigError() {
         return this.scanConfigError;
     }
@@ -97,7 +97,6 @@ public final class ScanRunErrorTraceResponse {
             this.scanConfigError = Objects.requireNonNull(scanConfigError);
             return this;
         }
-
         public ScanRunErrorTraceResponse build() {
             return new ScanRunErrorTraceResponse(code, mostCommonHttpErrorCode, scanConfigError);
         }

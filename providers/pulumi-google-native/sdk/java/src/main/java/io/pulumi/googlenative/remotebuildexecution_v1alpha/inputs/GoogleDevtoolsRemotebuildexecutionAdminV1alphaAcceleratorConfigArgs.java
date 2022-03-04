@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * 
      */
     @InputImport(name="acceleratorCount")
-    private final @Nullable Input<String> acceleratorCount;
+      private final @Nullable Input<String> acceleratorCount;
 
     public Input<String> getAcceleratorCount() {
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
@@ -34,7 +34,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * 
      */
     @InputImport(name="acceleratorType")
-    private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
@@ -93,7 +93,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
             this.acceleratorType = Input.ofNullable(acceleratorType);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs(acceleratorCount, acceleratorType);
         }

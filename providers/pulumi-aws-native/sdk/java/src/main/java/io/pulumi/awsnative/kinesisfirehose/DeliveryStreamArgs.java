@@ -15,7 +15,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationCon
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSplunkDestinationConfigurationArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,84 +27,84 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
     public static final DeliveryStreamArgs Empty = new DeliveryStreamArgs();
 
     @InputImport(name="amazonopensearchserviceDestinationConfiguration")
-    private final @Nullable Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration;
+      private final @Nullable Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration;
 
     public Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> getAmazonopensearchserviceDestinationConfiguration() {
         return this.amazonopensearchserviceDestinationConfiguration == null ? Input.empty() : this.amazonopensearchserviceDestinationConfiguration;
     }
 
     @InputImport(name="deliveryStreamEncryptionConfigurationInput")
-    private final @Nullable Input<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput;
+      private final @Nullable Input<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput;
 
     public Input<DeliveryStreamEncryptionConfigurationInputArgs> getDeliveryStreamEncryptionConfigurationInput() {
         return this.deliveryStreamEncryptionConfigurationInput == null ? Input.empty() : this.deliveryStreamEncryptionConfigurationInput;
     }
 
     @InputImport(name="deliveryStreamName")
-    private final @Nullable Input<String> deliveryStreamName;
+      private final @Nullable Input<String> deliveryStreamName;
 
     public Input<String> getDeliveryStreamName() {
         return this.deliveryStreamName == null ? Input.empty() : this.deliveryStreamName;
     }
 
     @InputImport(name="deliveryStreamType")
-    private final @Nullable Input<DeliveryStreamType> deliveryStreamType;
+      private final @Nullable Input<DeliveryStreamType> deliveryStreamType;
 
     public Input<DeliveryStreamType> getDeliveryStreamType() {
         return this.deliveryStreamType == null ? Input.empty() : this.deliveryStreamType;
     }
 
     @InputImport(name="elasticsearchDestinationConfiguration")
-    private final @Nullable Input<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration;
+      private final @Nullable Input<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration;
 
     public Input<DeliveryStreamElasticsearchDestinationConfigurationArgs> getElasticsearchDestinationConfiguration() {
         return this.elasticsearchDestinationConfiguration == null ? Input.empty() : this.elasticsearchDestinationConfiguration;
     }
 
     @InputImport(name="extendedS3DestinationConfiguration")
-    private final @Nullable Input<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration;
+      private final @Nullable Input<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration;
 
     public Input<DeliveryStreamExtendedS3DestinationConfigurationArgs> getExtendedS3DestinationConfiguration() {
         return this.extendedS3DestinationConfiguration == null ? Input.empty() : this.extendedS3DestinationConfiguration;
     }
 
     @InputImport(name="httpEndpointDestinationConfiguration")
-    private final @Nullable Input<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration;
+      private final @Nullable Input<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration;
 
     public Input<DeliveryStreamHttpEndpointDestinationConfigurationArgs> getHttpEndpointDestinationConfiguration() {
         return this.httpEndpointDestinationConfiguration == null ? Input.empty() : this.httpEndpointDestinationConfiguration;
     }
 
     @InputImport(name="kinesisStreamSourceConfiguration")
-    private final @Nullable Input<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration;
+      private final @Nullable Input<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration;
 
     public Input<DeliveryStreamKinesisStreamSourceConfigurationArgs> getKinesisStreamSourceConfiguration() {
         return this.kinesisStreamSourceConfiguration == null ? Input.empty() : this.kinesisStreamSourceConfiguration;
     }
 
     @InputImport(name="redshiftDestinationConfiguration")
-    private final @Nullable Input<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration;
+      private final @Nullable Input<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration;
 
     public Input<DeliveryStreamRedshiftDestinationConfigurationArgs> getRedshiftDestinationConfiguration() {
         return this.redshiftDestinationConfiguration == null ? Input.empty() : this.redshiftDestinationConfiguration;
     }
 
     @InputImport(name="s3DestinationConfiguration")
-    private final @Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration;
+      private final @Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
     public Input<DeliveryStreamS3DestinationConfigurationArgs> getS3DestinationConfiguration() {
         return this.s3DestinationConfiguration == null ? Input.empty() : this.s3DestinationConfiguration;
     }
 
     @InputImport(name="splunkDestinationConfiguration")
-    private final @Nullable Input<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration;
+      private final @Nullable Input<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration;
 
     public Input<DeliveryStreamSplunkDestinationConfigurationArgs> getSplunkDestinationConfiguration() {
         return this.splunkDestinationConfiguration == null ? Input.empty() : this.splunkDestinationConfiguration;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<DeliveryStreamTagArgs>> tags;
+      private final @Nullable Input<List<DeliveryStreamTagArgs>> tags;
 
     public Input<List<DeliveryStreamTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -313,7 +313,6 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DeliveryStreamArgs build() {
             return new DeliveryStreamArgs(amazonopensearchserviceDestinationConfiguration, deliveryStreamEncryptionConfigurationInput, deliveryStreamName, deliveryStreamType, elasticsearchDestinationConfiguration, extendedS3DestinationConfiguration, httpEndpointDestinationConfiguration, kinesisStreamSourceConfiguration, redshiftDestinationConfiguration, s3DestinationConfiguration, splunkDestinationConfiguration, tags);
         }

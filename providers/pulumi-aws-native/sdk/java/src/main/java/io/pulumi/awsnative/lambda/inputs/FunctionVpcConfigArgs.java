@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FunctionVpcConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -35,7 +35,7 @@ public final class FunctionVpcConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -94,7 +94,6 @@ public final class FunctionVpcConfigArgs extends io.pulumi.resources.ResourceArg
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
-
         public FunctionVpcConfigArgs build() {
             return new FunctionVpcConfigArgs(securityGroupIds, subnetIds);
         }

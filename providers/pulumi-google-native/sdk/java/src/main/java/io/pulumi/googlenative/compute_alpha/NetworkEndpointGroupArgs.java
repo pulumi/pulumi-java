@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkEndpointGroupNetworkEndpointType;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkEndpointGroupType;
 import io.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupAppEngineArgs;
@@ -27,7 +27,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -38,7 +38,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="appEngine")
-    private final @Nullable Input<NetworkEndpointGroupAppEngineArgs> appEngine;
+      private final @Nullable Input<NetworkEndpointGroupAppEngineArgs> appEngine;
 
     public Input<NetworkEndpointGroupAppEngineArgs> getAppEngine() {
         return this.appEngine == null ? Input.empty() : this.appEngine;
@@ -49,7 +49,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cloudFunction")
-    private final @Nullable Input<NetworkEndpointGroupCloudFunctionArgs> cloudFunction;
+      private final @Nullable Input<NetworkEndpointGroupCloudFunctionArgs> cloudFunction;
 
     public Input<NetworkEndpointGroupCloudFunctionArgs> getCloudFunction() {
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
@@ -60,7 +60,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cloudRun")
-    private final @Nullable Input<NetworkEndpointGroupCloudRunArgs> cloudRun;
+      private final @Nullable Input<NetworkEndpointGroupCloudRunArgs> cloudRun;
 
     public Input<NetworkEndpointGroupCloudRunArgs> getCloudRun() {
         return this.cloudRun == null ? Input.empty() : this.cloudRun;
@@ -71,7 +71,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="defaultPort")
-    private final @Nullable Input<Integer> defaultPort;
+      private final @Nullable Input<Integer> defaultPort;
 
     public Input<Integer> getDefaultPort() {
         return this.defaultPort == null ? Input.empty() : this.defaultPort;
@@ -82,7 +82,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -93,7 +93,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -104,7 +104,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -115,14 +115,14 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkEndpointType")
-    private final @Nullable Input<NetworkEndpointGroupNetworkEndpointType> networkEndpointType;
+      private final @Nullable Input<NetworkEndpointGroupNetworkEndpointType> networkEndpointType;
 
     public Input<NetworkEndpointGroupNetworkEndpointType> getNetworkEndpointType() {
         return this.networkEndpointType == null ? Input.empty() : this.networkEndpointType;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -133,14 +133,14 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="pscTargetService")
-    private final @Nullable Input<String> pscTargetService;
+      private final @Nullable Input<String> pscTargetService;
 
     public Input<String> getPscTargetService() {
         return this.pscTargetService == null ? Input.empty() : this.pscTargetService;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -151,7 +151,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="serverlessDeployment")
-    private final @Nullable Input<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment;
+      private final @Nullable Input<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment;
 
     public Input<NetworkEndpointGroupServerlessDeploymentArgs> getServerlessDeployment() {
         return this.serverlessDeployment == null ? Input.empty() : this.serverlessDeployment;
@@ -162,7 +162,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -173,14 +173,14 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<NetworkEndpointGroupType> type;
+      private final @Nullable Input<NetworkEndpointGroupType> type;
 
     public Input<NetworkEndpointGroupType> getType() {
         return this.type == null ? Input.empty() : this.type;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -449,7 +449,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public NetworkEndpointGroupArgs build() {
             return new NetworkEndpointGroupArgs(annotations, appEngine, cloudFunction, cloudRun, defaultPort, description, name, network, networkEndpointType, project, pscTargetService, requestId, serverlessDeployment, subnetwork, type, zone);
         }

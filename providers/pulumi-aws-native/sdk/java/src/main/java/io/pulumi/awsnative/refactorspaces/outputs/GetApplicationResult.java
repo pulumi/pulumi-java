@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.refactorspaces.outputs;
 
 import io.pulumi.awsnative.refactorspaces.outputs.ApplicationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -73,7 +73,7 @@ public final class GetApplicationResult {
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
-     */
+    */
     public List<ApplicationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -161,7 +161,6 @@ public final class GetApplicationResult {
             this.vpcLinkId = vpcLinkId;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(apiGatewayId, applicationIdentifier, arn, nlbArn, nlbName, proxyUrl, stageName, tags, vpcLinkId);
         }

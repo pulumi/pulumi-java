@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class NetworkUtilizationResponse {
     /**
      * Target bytes received per second.
      * 
-     */
+    */
     public Integer getTargetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond;
     }
     /**
      * Target packets received per second.
      * 
-     */
+    */
     public Integer getTargetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond;
     }
     /**
      * Target bytes sent per second.
      * 
-     */
+    */
     public Integer getTargetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond;
     }
     /**
      * Target packets sent per second.
      * 
-     */
+    */
     public Integer getTargetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond;
     }
@@ -116,7 +116,6 @@ public final class NetworkUtilizationResponse {
             this.targetSentPacketsPerSecond = Objects.requireNonNull(targetSentPacketsPerSecond);
             return this;
         }
-
         public NetworkUtilizationResponse build() {
             return new NetworkUtilizationResponse(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }

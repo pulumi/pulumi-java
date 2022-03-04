@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.KeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ListKeyByAutomationAccountResult {
     /**
      * Lists the automation keys.
      * 
-     */
+    */
     public List<KeyResponse> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }
@@ -54,7 +54,6 @@ public final class ListKeyByAutomationAccountResult {
             this.keys = keys;
             return this;
         }
-
         public ListKeyByAutomationAccountResult build() {
             return new ListKeyByAutomationAccountResult(keys);
         }

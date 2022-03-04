@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class ManagedIntegrationRuntimeErrorResponse {
     /**
      * Error code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Error message.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Managed integration runtime error parameters.
      * 
-     */
+    */
     public List<String> getParameters() {
         return this.parameters;
     }
     /**
      * The time when the error occurred.
      * 
-     */
+    */
     public String getTime() {
         return this.time;
     }
@@ -117,7 +117,6 @@ public final class ManagedIntegrationRuntimeErrorResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public ManagedIntegrationRuntimeErrorResponse build() {
             return new ManagedIntegrationRuntimeErrorResponse(code, message, parameters, time);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
     /**
      * Optional. A namespace within the GKE cluster to deploy into.
      * 
-     */
+    */
     public Optional<String> getClusterNamespace() {
         return Optional.ofNullable(this.clusterNamespace);
     }
     /**
      * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
      * 
-     */
+    */
     public Optional<String> getTargetGkeCluster() {
         return Optional.ofNullable(this.targetGkeCluster);
     }
@@ -76,7 +76,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             this.targetGkeCluster = targetGkeCluster;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget(clusterNamespace, targetGkeCluster);
         }

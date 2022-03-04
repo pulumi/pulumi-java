@@ -5,8 +5,8 @@ package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceAccount.KeyArgs;
 import io.pulumi.gcp.serviceAccount.inputs.KeyState;
@@ -200,6 +200,37 @@ public class Key extends io.pulumi.resources.CustomResource {
         return this.validBefore;
     }
 
+    public interface BuilderApplicator {
+        public void apply(KeyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.serviceAccount.KeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.serviceAccount.KeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Key(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Key(String name) {
+        this(name, KeyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Key(String name, KeyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork;
 import java.lang.Boolean;
 import java.lang.String;
@@ -100,7 +100,6 @@ public final class GetDatabaseInstanceSettingIpConfiguration {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }
-
         public GetDatabaseInstanceSettingIpConfiguration build() {
             return new GetDatabaseInstanceSettingIpConfiguration(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }

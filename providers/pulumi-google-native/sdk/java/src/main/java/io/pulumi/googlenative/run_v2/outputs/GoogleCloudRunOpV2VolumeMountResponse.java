@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudRunOpV2VolumeMountResponse {
     /**
      * Path within the container at which the volume should be mounted. Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be `/cloudsql`. All instances defined in the Volume will be available as `/cloudsql/[instance]`. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run
      * 
-     */
+    */
     public String getMountPath() {
         return this.mountPath;
     }
     /**
      * This must match the Name of a Volume.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudRunOpV2VolumeMountResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudRunOpV2VolumeMountResponse build() {
             return new GoogleCloudRunOpV2VolumeMountResponse(mountPath, name);
         }

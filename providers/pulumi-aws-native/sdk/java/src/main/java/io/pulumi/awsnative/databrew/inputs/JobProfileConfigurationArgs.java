@@ -8,7 +8,7 @@ import io.pulumi.awsnative.databrew.inputs.JobColumnStatisticsConfigurationArgs;
 import io.pulumi.awsnative.databrew.inputs.JobEntityDetectorConfigurationArgs;
 import io.pulumi.awsnative.databrew.inputs.JobStatisticsConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,28 +19,28 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
     public static final JobProfileConfigurationArgs Empty = new JobProfileConfigurationArgs();
 
     @InputImport(name="columnStatisticsConfigurations")
-    private final @Nullable Input<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations;
+      private final @Nullable Input<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations;
 
     public Input<List<JobColumnStatisticsConfigurationArgs>> getColumnStatisticsConfigurations() {
         return this.columnStatisticsConfigurations == null ? Input.empty() : this.columnStatisticsConfigurations;
     }
 
     @InputImport(name="datasetStatisticsConfiguration")
-    private final @Nullable Input<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration;
+      private final @Nullable Input<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration;
 
     public Input<JobStatisticsConfigurationArgs> getDatasetStatisticsConfiguration() {
         return this.datasetStatisticsConfiguration == null ? Input.empty() : this.datasetStatisticsConfiguration;
     }
 
     @InputImport(name="entityDetectorConfiguration")
-    private final @Nullable Input<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration;
+      private final @Nullable Input<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration;
 
     public Input<JobEntityDetectorConfigurationArgs> getEntityDetectorConfiguration() {
         return this.entityDetectorConfiguration == null ? Input.empty() : this.entityDetectorConfiguration;
     }
 
     @InputImport(name="profileColumns")
-    private final @Nullable Input<List<JobColumnSelectorArgs>> profileColumns;
+      private final @Nullable Input<List<JobColumnSelectorArgs>> profileColumns;
 
     public Input<List<JobColumnSelectorArgs>> getProfileColumns() {
         return this.profileColumns == null ? Input.empty() : this.profileColumns;
@@ -129,7 +129,6 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
             this.profileColumns = Input.ofNullable(profileColumns);
             return this;
         }
-
         public JobProfileConfigurationArgs build() {
             return new JobProfileConfigurationArgs(columnStatisticsConfigurations, datasetStatisticsConfiguration, entityDetectorConfiguration, profileColumns);
         }

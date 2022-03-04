@@ -7,7 +7,7 @@ import io.pulumi.azurenative.keyvault.enums.ManagedHsmSkuFamily;
 import io.pulumi.azurenative.keyvault.enums.ManagedHsmSkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family", required=true)
-    private final Input<Either<String,ManagedHsmSkuFamily>> family;
+      private final Input<Either<String,ManagedHsmSkuFamily>> family;
 
     public Input<Either<String,ManagedHsmSkuFamily>> getFamily() {
         return this.family;
@@ -36,7 +36,7 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<ManagedHsmSkuName> name;
+      private final Input<ManagedHsmSkuName> name;
 
     public Input<ManagedHsmSkuName> getName() {
         return this.name;
@@ -95,7 +95,6 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ManagedHsmSkuArgs build() {
             return new ManagedHsmSkuArgs(family, name);
         }

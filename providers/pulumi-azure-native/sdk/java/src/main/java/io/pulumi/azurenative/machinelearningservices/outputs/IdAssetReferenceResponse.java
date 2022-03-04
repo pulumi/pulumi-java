@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class IdAssetReferenceResponse {
     /**
      * ARM resource ID of the asset.
      * 
-     */
+    */
     public String getAssetId() {
         return this.assetId;
     }
@@ -40,7 +40,7 @@ public final class IdAssetReferenceResponse {
      * Enum to determine which reference method to use for an asset.
      * Expected value is 'Id'.
      * 
-     */
+    */
     public String getReferenceType() {
         return this.referenceType;
     }
@@ -76,7 +76,6 @@ public final class IdAssetReferenceResponse {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
-
         public IdAssetReferenceResponse build() {
             return new IdAssetReferenceResponse(assetId, referenceType);
         }

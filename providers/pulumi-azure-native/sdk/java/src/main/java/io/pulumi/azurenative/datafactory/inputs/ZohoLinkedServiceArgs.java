@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accessToken")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -42,7 +42,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -53,7 +53,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -64,7 +64,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionProperties")
-    private final @Nullable Input<Object> connectionProperties;
+      private final @Nullable Input<Object> connectionProperties;
 
     public Input<Object> getConnectionProperties() {
         return this.connectionProperties == null ? Input.empty() : this.connectionProperties;
@@ -75,7 +75,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -86,7 +86,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -97,7 +97,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<Object> endpoint;
+      private final @Nullable Input<Object> endpoint;
 
     public Input<Object> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -108,7 +108,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -120,7 +120,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -131,7 +131,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-    private final @Nullable Input<Object> useEncryptedEndpoints;
+      private final @Nullable Input<Object> useEncryptedEndpoints;
 
     public Input<Object> getUseEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
@@ -142,7 +142,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useHostVerification")
-    private final @Nullable Input<Object> useHostVerification;
+      private final @Nullable Input<Object> useHostVerification;
 
     public Input<Object> getUseHostVerification() {
         return this.useHostVerification == null ? Input.empty() : this.useHostVerification;
@@ -153,7 +153,7 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="usePeerVerification")
-    private final @Nullable Input<Object> usePeerVerification;
+      private final @Nullable Input<Object> usePeerVerification;
 
     public Input<Object> getUsePeerVerification() {
         return this.usePeerVerification == null ? Input.empty() : this.usePeerVerification;
@@ -362,7 +362,6 @@ public final class ZohoLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             this.usePeerVerification = Input.ofNullable(usePeerVerification);
             return this;
         }
-
         public ZohoLinkedServiceArgs build() {
             return new ZohoLinkedServiceArgs(accessToken, annotations, connectVia, connectionProperties, description, encryptedCredential, endpoint, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

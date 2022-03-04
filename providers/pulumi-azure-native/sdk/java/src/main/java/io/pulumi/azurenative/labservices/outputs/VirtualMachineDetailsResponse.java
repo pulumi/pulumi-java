@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,42 +59,42 @@ public final class VirtualMachineDetailsResponse {
     /**
      * Last known compute power state captured in DTL
      * 
-     */
+    */
     public String getLastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
      * PrivateIp address of the compute VM
      * 
-     */
+    */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
     /**
      * Provisioning state of the Dtl VM
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Connection information for Windows
      * 
-     */
+    */
     public String getRdpAuthority() {
         return this.rdpAuthority;
     }
     /**
      * Connection information for Linux
      * 
-     */
+    */
     public String getSshAuthority() {
         return this.sshAuthority;
     }
     /**
      * Compute VM login user name
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
@@ -158,7 +158,6 @@ public final class VirtualMachineDetailsResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public VirtualMachineDetailsResponse build() {
             return new VirtualMachineDetailsResponse(lastKnownPowerState, privateIpAddress, provisioningState, rdpAuthority, sshAuthority, userName);
         }

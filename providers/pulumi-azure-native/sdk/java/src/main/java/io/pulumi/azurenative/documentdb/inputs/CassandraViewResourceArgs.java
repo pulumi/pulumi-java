@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -33,7 +33,7 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="viewDefinition", required=true)
-    private final Input<String> viewDefinition;
+      private final Input<String> viewDefinition;
 
     public Input<String> getViewDefinition() {
         return this.viewDefinition;
@@ -92,7 +92,6 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
             this.viewDefinition = Input.of(Objects.requireNonNull(viewDefinition));
             return this;
         }
-
         public CassandraViewResourceArgs build() {
             return new CassandraViewResourceArgs(id, viewDefinition);
         }

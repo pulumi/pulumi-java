@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AwsAccessKeyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsAccessKey")
-    private final @Nullable Input<AwsAccessKeyArgs> awsAccessKey;
+      private final @Nullable Input<AwsAccessKeyArgs> awsAccessKey;
 
     public Input<AwsAccessKeyArgs> getAwsAccessKey() {
         return this.awsAccessKey == null ? Input.empty() : this.awsAccessKey;
@@ -35,7 +35,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -46,7 +46,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -57,7 +57,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -146,7 +146,6 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
-
         public AwsS3DataArgs build() {
             return new AwsS3DataArgs(awsAccessKey, bucketName, path, roleArn);
         }

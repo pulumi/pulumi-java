@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.ContainerResourceMetricSourceArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.ExternalMetricSourceArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.ObjectMetricSourceArgs;
@@ -28,7 +28,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerResource")
-    private final @Nullable Input<ContainerResourceMetricSourceArgs> containerResource;
+      private final @Nullable Input<ContainerResourceMetricSourceArgs> containerResource;
 
     public Input<ContainerResourceMetricSourceArgs> getContainerResource() {
         return this.containerResource == null ? Input.empty() : this.containerResource;
@@ -39,7 +39,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="external")
-    private final @Nullable Input<ExternalMetricSourceArgs> external;
+      private final @Nullable Input<ExternalMetricSourceArgs> external;
 
     public Input<ExternalMetricSourceArgs> getExternal() {
         return this.external == null ? Input.empty() : this.external;
@@ -50,7 +50,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="object")
-    private final @Nullable Input<ObjectMetricSourceArgs> object;
+      private final @Nullable Input<ObjectMetricSourceArgs> object;
 
     public Input<ObjectMetricSourceArgs> getObject() {
         return this.object == null ? Input.empty() : this.object;
@@ -61,7 +61,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pods")
-    private final @Nullable Input<PodsMetricSourceArgs> pods;
+      private final @Nullable Input<PodsMetricSourceArgs> pods;
 
     public Input<PodsMetricSourceArgs> getPods() {
         return this.pods == null ? Input.empty() : this.pods;
@@ -72,7 +72,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<ResourceMetricSourceArgs> resource;
+      private final @Nullable Input<ResourceMetricSourceArgs> resource;
 
     public Input<ResourceMetricSourceArgs> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -83,7 +83,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -202,7 +202,6 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public MetricSpecArgs build() {
             return new MetricSpecArgs(containerResource, external, object, pods, resource, type);
         }

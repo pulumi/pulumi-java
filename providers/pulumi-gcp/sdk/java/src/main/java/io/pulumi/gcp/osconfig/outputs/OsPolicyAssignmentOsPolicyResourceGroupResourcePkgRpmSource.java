@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcs;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemote;
 import java.lang.Boolean;
@@ -50,28 +50,28 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource {
     /**
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
      * 
-     */
+    */
     public Optional<Boolean> getAllowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
     /**
      * A Cloud Storage object.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcs> getGcs() {
         return Optional.ofNullable(this.gcs);
     }
     /**
      * A local path within the VM to use.
      * 
-     */
+    */
     public Optional<String> getLocalPath() {
         return Optional.ofNullable(this.localPath);
     }
     /**
      * A generic remote file.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemote> getRemote() {
         return Optional.ofNullable(this.remote);
     }
@@ -121,7 +121,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource {
             this.remote = remote;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource(allowInsecure, gcs, localPath, remote);
         }

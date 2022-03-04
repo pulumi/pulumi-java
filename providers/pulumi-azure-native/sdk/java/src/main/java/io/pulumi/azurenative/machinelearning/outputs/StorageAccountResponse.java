@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class StorageAccountResponse {
     /**
      * Specifies the key used to access the storage account.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Specifies the name of the storage account.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -76,7 +76,6 @@ public final class StorageAccountResponse {
             this.name = name;
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(key, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
      * 
      */
     @InputImport(name="bucketSize", required=true)
-    private final String bucketSize;
+      private final String bucketSize;
 
     public String getBucketSize() {
         return this.bucketSize;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
      * 
      */
     @InputImport(name="bucketValueCount", required=true)
-    private final String bucketValueCount;
+      private final String bucketValueCount;
 
     public String getBucketValueCount() {
         return this.bucketValueCount;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
      * 
      */
     @InputImport(name="bucketValues", required=true)
-    private final List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues;
+      private final List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> getBucketValues() {
         return this.bucketValues;
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
      * 
      */
     @InputImport(name="equivalenceClassSizeLowerBound", required=true)
-    private final String equivalenceClassSizeLowerBound;
+      private final String equivalenceClassSizeLowerBound;
 
     public String getEquivalenceClassSizeLowerBound() {
         return this.equivalenceClassSizeLowerBound;
@@ -67,7 +67,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
      * 
      */
     @InputImport(name="equivalenceClassSizeUpperBound", required=true)
-    private final String equivalenceClassSizeUpperBound;
+      private final String equivalenceClassSizeUpperBound;
 
     public String getEquivalenceClassSizeUpperBound() {
         return this.equivalenceClassSizeUpperBound;
@@ -146,7 +146,6 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
             this.equivalenceClassSizeUpperBound = Objects.requireNonNull(equivalenceClassSizeUpperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2KAnonymityHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, equivalenceClassSizeLowerBound, equivalenceClassSizeUpperBound);
         }

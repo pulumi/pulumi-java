@@ -4,7 +4,7 @@
 package io.pulumi.gcp.essentialcontacts;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -30,7 +30,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageTag", required=true)
-    private final Input<String> languageTag;
+      private final Input<String> languageTag;
 
     public Input<String> getLanguageTag() {
         return this.languageTag;
@@ -41,7 +41,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationCategorySubscriptions", required=true)
-    private final Input<List<String>> notificationCategorySubscriptions;
+      private final Input<List<String>> notificationCategorySubscriptions;
 
     public Input<List<String>> getNotificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions;
@@ -52,7 +52,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -141,7 +141,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public ContactArgs build() {
             return new ContactArgs(email, languageTag, notificationCategorySubscriptions, parent);
         }

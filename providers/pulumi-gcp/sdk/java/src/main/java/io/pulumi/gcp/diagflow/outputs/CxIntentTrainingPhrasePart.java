@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class CxIntentTrainingPhrasePart {
     /**
      * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
      * 
-     */
+    */
     public Optional<String> getParameterId() {
         return Optional.ofNullable(this.parameterId);
     }
     /**
      * The text for this part.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
@@ -76,7 +76,6 @@ public final class CxIntentTrainingPhrasePart {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public CxIntentTrainingPhrasePart build() {
             return new CxIntentTrainingPhrasePart(parameterId, text);
         }

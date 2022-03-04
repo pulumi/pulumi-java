@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.FlowSchemaCondition;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FlowSchemaStatus {
     /**
      * `conditions` is a list of the current states of FlowSchema.
      * 
-     */
+    */
     public List<FlowSchemaCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
@@ -54,7 +54,6 @@ public final class FlowSchemaStatus {
             this.conditions = conditions;
             return this;
         }
-
         public FlowSchemaStatus build() {
             return new FlowSchemaStatus(conditions);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ListBatchAccountKeysResult {
     /**
      * The Batch account name.
      * 
-     */
+    */
     public String getAccountName() {
         return this.accountName;
     }
     /**
      * The primary key associated with the account.
      * 
-     */
+    */
     public String getPrimary() {
         return this.primary;
     }
     /**
      * The secondary key associated with the account.
      * 
-     */
+    */
     public String getSecondary() {
         return this.secondary;
     }
@@ -95,7 +95,6 @@ public final class ListBatchAccountKeysResult {
             this.secondary = Objects.requireNonNull(secondary);
             return this;
         }
-
         public ListBatchAccountKeysResult build() {
             return new ListBatchAccountKeysResult(accountName, primary, secondary);
         }

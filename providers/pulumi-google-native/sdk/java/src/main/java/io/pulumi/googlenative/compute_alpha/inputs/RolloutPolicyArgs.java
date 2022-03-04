@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRolloutTime")
-    private final @Nullable Input<String> defaultRolloutTime;
+      private final @Nullable Input<String> defaultRolloutTime;
 
     public Input<String> getDefaultRolloutTime() {
         return this.defaultRolloutTime == null ? Input.empty() : this.defaultRolloutTime;
@@ -35,7 +35,7 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationRolloutPolicies")
-    private final @Nullable Input<Map<String,String>> locationRolloutPolicies;
+      private final @Nullable Input<Map<String,String>> locationRolloutPolicies;
 
     public Input<Map<String,String>> getLocationRolloutPolicies() {
         return this.locationRolloutPolicies == null ? Input.empty() : this.locationRolloutPolicies;
@@ -94,7 +94,6 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.locationRolloutPolicies = Input.ofNullable(locationRolloutPolicies);
             return this;
         }
-
         public RolloutPolicyArgs build() {
             return new RolloutPolicyArgs(defaultRolloutTime, locationRolloutPolicies);
         }

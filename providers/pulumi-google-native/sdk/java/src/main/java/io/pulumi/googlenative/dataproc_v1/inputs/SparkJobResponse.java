@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.LoggingConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="archiveUris", required=true)
-    private final List<String> archiveUris;
+      private final List<String> archiveUris;
 
     public List<String> getArchiveUris() {
         return this.archiveUris;
@@ -35,7 +35,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="args", required=true)
-    private final List<String> args;
+      private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
@@ -46,7 +46,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileUris", required=true)
-    private final List<String> fileUris;
+      private final List<String> fileUris;
 
     public List<String> getFileUris() {
         return this.fileUris;
@@ -57,7 +57,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jarFileUris", required=true)
-    private final List<String> jarFileUris;
+      private final List<String> jarFileUris;
 
     public List<String> getJarFileUris() {
         return this.jarFileUris;
@@ -68,7 +68,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="loggingConfig", required=true)
-    private final LoggingConfigResponse loggingConfig;
+      private final LoggingConfigResponse loggingConfig;
 
     public LoggingConfigResponse getLoggingConfig() {
         return this.loggingConfig;
@@ -79,7 +79,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mainClass", required=true)
-    private final String mainClass;
+      private final String mainClass;
 
     public String getMainClass() {
         return this.mainClass;
@@ -90,7 +90,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mainJarFileUri", required=true)
-    private final String mainJarFileUri;
+      private final String mainJarFileUri;
 
     public String getMainJarFileUri() {
         return this.mainJarFileUri;
@@ -101,7 +101,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Map<String,String> properties;
+      private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties;
@@ -210,7 +210,6 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public SparkJobResponse build() {
             return new SparkJobResponse(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }

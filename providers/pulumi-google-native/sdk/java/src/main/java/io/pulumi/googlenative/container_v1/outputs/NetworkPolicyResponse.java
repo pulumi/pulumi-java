@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class NetworkPolicyResponse {
     /**
      * Whether network policy is enabled on the cluster.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The selected network policy provider.
      * 
-     */
+    */
     public String getProvider() {
         return this.provider;
     }
@@ -75,7 +75,6 @@ public final class NetworkPolicyResponse {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public NetworkPolicyResponse build() {
             return new NetworkPolicyResponse(enabled, provider);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.ConnectionGatewayDefinitionPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionGatewayName")
-    private final @Nullable Input<String> connectionGatewayName;
+      private final @Nullable Input<String> connectionGatewayName;
 
     public Input<String> getConnectionGatewayName() {
         return this.connectionGatewayName == null ? Input.empty() : this.connectionGatewayName;
@@ -32,14 +32,14 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="properties")
-    private final @Nullable Input<ConnectionGatewayDefinitionPropertiesArgs> properties;
+      private final @Nullable Input<ConnectionGatewayDefinitionPropertiesArgs> properties;
 
     public Input<ConnectionGatewayDefinitionPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -50,7 +50,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -72,7 +72,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -191,7 +191,6 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ConnectionGatewayArgs build() {
             return new ConnectionGatewayArgs(connectionGatewayName, location, properties, resourceGroupName, subscriptionId, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ManualResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ScheduleResponse;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2TriggerResponse {
     /**
      * For use with hybrid jobs. Jobs must be manually created and finished.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ManualResponse getManual() {
         return this.manual;
     }
     /**
      * Create a job on a repeating basis based on the elapse of time.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ScheduleResponse getSchedule() {
         return this.schedule;
     }
@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2TriggerResponse {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public GooglePrivacyDlpV2TriggerResponse build() {
             return new GooglePrivacyDlpV2TriggerResponse(manual, schedule);
         }

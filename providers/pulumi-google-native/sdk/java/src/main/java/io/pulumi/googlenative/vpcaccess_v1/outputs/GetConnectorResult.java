@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vpcaccess_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vpcaccess_v1.outputs.SubnetResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -97,77 +97,77 @@ public final class GetConnectorResult {
     /**
      * List of projects using the connector.
      * 
-     */
+    */
     public List<String> getConnectedProjects() {
         return this.connectedProjects;
     }
     /**
      * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
      * 
-     */
+    */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
     /**
      * Machine type of VM Instance underlying connector. Default is e2-micro
      * 
-     */
+    */
     public String getMachineType() {
         return this.machineType;
     }
     /**
      * Maximum value of instances in autoscaling group underlying the connector.
      * 
-     */
+    */
     public Integer getMaxInstances() {
         return this.maxInstances;
     }
     /**
      * Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
      * 
-     */
+    */
     public Integer getMaxThroughput() {
         return this.maxThroughput;
     }
     /**
      * Minimum value of instances in autoscaling group underlying the connector.
      * 
-     */
+    */
     public Integer getMinInstances() {
         return this.minInstances;
     }
     /**
      * Minimum throughput of the connector in Mbps. Default and min is 200.
      * 
-     */
+    */
     public Integer getMinThroughput() {
         return this.minThroughput;
     }
     /**
      * The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Name of a VPC network.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
     /**
      * State of the VPC access connector.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The subnet in which to house the VPC Access Connector.
      * 
-     */
+    */
     public SubnetResponse getSubnet() {
         return this.subnet;
     }
@@ -266,7 +266,6 @@ public final class GetConnectorResult {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
-
         public GetConnectorResult build() {
             return new GetConnectorResult(connectedProjects, ipCidrRange, machineType, maxInstances, maxThroughput, minInstances, minThroughput, name, network, state, subnet);
         }

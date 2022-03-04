@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.enums.ProjectStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="assessmentSolutionId")
-    private final @Nullable Input<String> assessmentSolutionId;
+      private final @Nullable Input<String> assessmentSolutionId;
 
     public Input<String> getAssessmentSolutionId() {
         return this.assessmentSolutionId == null ? Input.empty() : this.assessmentSolutionId;
@@ -36,7 +36,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customerStorageAccountArmId")
-    private final @Nullable Input<String> customerStorageAccountArmId;
+      private final @Nullable Input<String> customerStorageAccountArmId;
 
     public Input<String> getCustomerStorageAccountArmId() {
         return this.customerStorageAccountArmId == null ? Input.empty() : this.customerStorageAccountArmId;
@@ -47,7 +47,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customerWorkspaceId")
-    private final @Nullable Input<String> customerWorkspaceId;
+      private final @Nullable Input<String> customerWorkspaceId;
 
     public Input<String> getCustomerWorkspaceId() {
         return this.customerWorkspaceId == null ? Input.empty() : this.customerWorkspaceId;
@@ -58,7 +58,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customerWorkspaceLocation")
-    private final @Nullable Input<String> customerWorkspaceLocation;
+      private final @Nullable Input<String> customerWorkspaceLocation;
 
     public Input<String> getCustomerWorkspaceLocation() {
         return this.customerWorkspaceLocation == null ? Input.empty() : this.customerWorkspaceLocation;
@@ -69,7 +69,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="projectStatus")
-    private final @Nullable Input<Either<String,ProjectStatus>> projectStatus;
+      private final @Nullable Input<Either<String,ProjectStatus>> projectStatus;
 
     public Input<Either<String,ProjectStatus>> getProjectStatus() {
         return this.projectStatus == null ? Input.empty() : this.projectStatus;
@@ -80,7 +80,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<String> publicNetworkAccess;
+      private final @Nullable Input<String> publicNetworkAccess;
 
     public Input<String> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -199,7 +199,6 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public ProjectPropertiesArgs build() {
             return new ProjectPropertiesArgs(assessmentSolutionId, customerStorageAccountArmId, customerWorkspaceId, customerWorkspaceLocation, projectStatus, publicNetworkAccess);
         }

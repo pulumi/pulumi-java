@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipv4CidrBlock", required=true)
-    private final String ipv4CidrBlock;
+      private final String ipv4CidrBlock;
 
     public String getIpv4CidrBlock() {
         return this.ipv4CidrBlock;
@@ -44,7 +44,7 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="useServiceNetworking", required=true)
-    private final Boolean useServiceNetworking;
+      private final Boolean useServiceNetworking;
 
     public Boolean getUseServiceNetworking() {
         return this.useServiceNetworking;
@@ -103,7 +103,6 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
             return this;
         }
-
         public TpuConfigResponse build() {
             return new TpuConfigResponse(enabled, ipv4CidrBlock, useServiceNetworking);
         }

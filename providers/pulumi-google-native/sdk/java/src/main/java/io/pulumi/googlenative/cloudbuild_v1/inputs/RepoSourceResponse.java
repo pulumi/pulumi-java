@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="branchName", required=true)
-    private final String branchName;
+      private final String branchName;
 
     public String getBranchName() {
         return this.branchName;
@@ -34,7 +34,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="commitSha", required=true)
-    private final String commitSha;
+      private final String commitSha;
 
     public String getCommitSha() {
         return this.commitSha;
@@ -45,7 +45,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dir", required=true)
-    private final String dir;
+      private final String dir;
 
     public String getDir() {
         return this.dir;
@@ -56,7 +56,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="invertRegex", required=true)
-    private final Boolean invertRegex;
+      private final Boolean invertRegex;
 
     public Boolean getInvertRegex() {
         return this.invertRegex;
@@ -67,7 +67,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -78,7 +78,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="repoName", required=true)
-    private final String repoName;
+      private final String repoName;
 
     public String getRepoName() {
         return this.repoName;
@@ -89,7 +89,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="substitutions", required=true)
-    private final Map<String,String> substitutions;
+      private final Map<String,String> substitutions;
 
     public Map<String,String> getSubstitutions() {
         return this.substitutions;
@@ -100,7 +100,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tagName", required=true)
-    private final String tagName;
+      private final String tagName;
 
     public String getTagName() {
         return this.tagName;
@@ -209,7 +209,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }
-
         public RepoSourceResponse build() {
             return new RepoSourceResponse(branchName, commitSha, dir, invertRegex, project, repoName, substitutions, tagName);
         }

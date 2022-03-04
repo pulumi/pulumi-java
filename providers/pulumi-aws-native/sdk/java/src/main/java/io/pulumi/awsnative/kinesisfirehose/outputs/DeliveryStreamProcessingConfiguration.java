@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessor;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -62,7 +62,6 @@ public final class DeliveryStreamProcessingConfiguration {
             this.processors = processors;
             return this;
         }
-
         public DeliveryStreamProcessingConfiguration build() {
             return new DeliveryStreamProcessingConfiguration(enabled, processors);
         }

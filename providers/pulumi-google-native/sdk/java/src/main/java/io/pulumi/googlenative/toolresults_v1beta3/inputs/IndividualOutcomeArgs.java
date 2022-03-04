@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.IndividualOutcomeOutcomeSummary;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import java.lang.Integer;
@@ -26,14 +26,14 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="multistepNumber")
-    private final @Nullable Input<Integer> multistepNumber;
+      private final @Nullable Input<Integer> multistepNumber;
 
     public Input<Integer> getMultistepNumber() {
         return this.multistepNumber == null ? Input.empty() : this.multistepNumber;
     }
 
     @InputImport(name="outcomeSummary")
-    private final @Nullable Input<IndividualOutcomeOutcomeSummary> outcomeSummary;
+      private final @Nullable Input<IndividualOutcomeOutcomeSummary> outcomeSummary;
 
     public Input<IndividualOutcomeOutcomeSummary> getOutcomeSummary() {
         return this.outcomeSummary == null ? Input.empty() : this.outcomeSummary;
@@ -44,14 +44,14 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="runDuration")
-    private final @Nullable Input<DurationArgs> runDuration;
+      private final @Nullable Input<DurationArgs> runDuration;
 
     public Input<DurationArgs> getRunDuration() {
         return this.runDuration == null ? Input.empty() : this.runDuration;
     }
 
     @InputImport(name="stepId")
-    private final @Nullable Input<String> stepId;
+      private final @Nullable Input<String> stepId;
 
     public Input<String> getStepId() {
         return this.stepId == null ? Input.empty() : this.stepId;
@@ -140,7 +140,6 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
             this.stepId = Input.ofNullable(stepId);
             return this;
         }
-
         public IndividualOutcomeArgs build() {
             return new IndividualOutcomeArgs(multistepNumber, outcomeSummary, runDuration, stepId);
         }

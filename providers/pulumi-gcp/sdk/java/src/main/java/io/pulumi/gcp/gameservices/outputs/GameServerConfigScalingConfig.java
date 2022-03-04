@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gameservices.outputs.GameServerConfigScalingConfigSchedule;
 import io.pulumi.gcp.gameservices.outputs.GameServerConfigScalingConfigSelector;
 import java.lang.String;
@@ -57,14 +57,14 @@ public final class GameServerConfigScalingConfig {
      * Example spec can be found :
      * https://agones.dev/site/docs/reference/fleetautoscaler/
      * 
-     */
+    */
     public String getFleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
     /**
      * The name of the ScalingConfig
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -72,7 +72,7 @@ public final class GameServerConfigScalingConfig {
      * The schedules to which this scaling config applies.
      * Structure is documented below.
      * 
-     */
+    */
     public List<GameServerConfigScalingConfigSchedule> getSchedules() {
         return this.schedules == null ? List.of() : this.schedules;
     }
@@ -82,7 +82,7 @@ public final class GameServerConfigScalingConfig {
      * any of the selector entries.
      * Structure is documented below.
      * 
-     */
+    */
     public List<GameServerConfigScalingConfigSelector> getSelectors() {
         return this.selectors == null ? List.of() : this.selectors;
     }
@@ -132,7 +132,6 @@ public final class GameServerConfigScalingConfig {
             this.selectors = selectors;
             return this;
         }
-
         public GameServerConfigScalingConfig build() {
             return new GameServerConfigScalingConfig(fleetAutoscalerSpec, name, schedules, selectors);
         }

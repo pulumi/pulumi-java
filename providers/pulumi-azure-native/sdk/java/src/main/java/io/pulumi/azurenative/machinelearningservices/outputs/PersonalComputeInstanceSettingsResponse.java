@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.AssignedUserResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class PersonalComputeInstanceSettingsResponse {
     /**
      * A user explicitly assigned to a personal compute instance.
      * 
-     */
+    */
     public Optional<AssignedUserResponse> getAssignedUser() {
         return Optional.ofNullable(this.assignedUser);
     }
@@ -54,7 +54,6 @@ public final class PersonalComputeInstanceSettingsResponse {
             this.assignedUser = assignedUser;
             return this;
         }
-
         public PersonalComputeInstanceSettingsResponse build() {
             return new PersonalComputeInstanceSettingsResponse(assignedUser);
         }

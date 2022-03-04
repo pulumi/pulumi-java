@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceAbpV10x;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceAbpV11;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceOtaaV10x;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceOtaaV11;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -129,7 +129,6 @@ public final class WirelessDeviceLoRaWANDevice {
             this.serviceProfileId = serviceProfileId;
             return this;
         }
-
         public WirelessDeviceLoRaWANDevice build() {
             return new WirelessDeviceLoRaWANDevice(abpV10x, abpV11, devEui, deviceProfileId, otaaV10x, otaaV11, serviceProfileId);
         }

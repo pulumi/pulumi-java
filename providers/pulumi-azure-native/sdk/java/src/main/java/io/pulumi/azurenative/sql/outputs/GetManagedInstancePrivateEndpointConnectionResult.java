@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -63,42 +63,42 @@ public final class GetManagedInstancePrivateEndpointConnectionResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Private endpoint which the connection belongs to.
      * 
-     */
+    */
     public Optional<ManagedInstancePrivateEndpointPropertyResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Connection State of the Private Endpoint Connection.
      * 
-     */
+    */
     public Optional<ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * State of the Private Endpoint Connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class GetManagedInstancePrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedInstancePrivateEndpointConnectionResult build() {
             return new GetManagedInstancePrivateEndpointConnectionResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

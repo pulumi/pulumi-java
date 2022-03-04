@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -37,14 +37,14 @@ public final class RecommendationConfigurationPropertiesResponse {
     /**
      * The type of IoT Security recommendation.
      * 
-     */
+    */
     public String getRecommendationType() {
         return this.recommendationType;
     }
     /**
      * Recommendation status. When the recommendation status is disabled recommendations are not generated.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -87,7 +87,6 @@ public final class RecommendationConfigurationPropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public RecommendationConfigurationPropertiesResponse build() {
             return new RecommendationConfigurationPropertiesResponse(name, recommendationType, status);
         }

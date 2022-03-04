@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -105,7 +105,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * PEM representation of the trusted CA's x509
      * certificate.
      * 
-     */
+    */
     public Optional<String> getCaCertificate() {
         return Optional.ofNullable(this.caCertificate);
     }
@@ -113,7 +113,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * PEM representation of the replica's x509
      * certificate.
      * 
-     */
+    */
     public Optional<String> getClientCertificate() {
         return Optional.ofNullable(this.clientCertificate);
     }
@@ -121,7 +121,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * PEM representation of the replica's private key. The
      * corresponding public key in encoded in the `client_certificate`.
      * 
-     */
+    */
     public Optional<String> getClientKey() {
         return Optional.ofNullable(this.clientKey);
     }
@@ -129,7 +129,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * The number of seconds
      * between connect retries.
      * 
-     */
+    */
     public Optional<Integer> getConnectRetryInterval() {
         return Optional.ofNullable(this.connectRetryInterval);
     }
@@ -137,7 +137,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * Path to a SQL file in GCS from which replica
      * instances are created. Format is `gs://bucket/filename`.
      * 
-     */
+    */
     public Optional<String> getDumpFilePath() {
         return Optional.ofNullable(this.dumpFilePath);
     }
@@ -147,7 +147,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * If the master instance fails, the replica instance will be promoted as
      * the new master instance.
      * 
-     */
+    */
     public Optional<Boolean> getFailoverTarget() {
         return Optional.ofNullable(this.failoverTarget);
     }
@@ -155,14 +155,14 @@ public final class DatabaseInstanceReplicaConfiguration {
      * Time in ms between replication
      * heartbeats.
      * 
-     */
+    */
     public Optional<Integer> getMasterHeartbeatPeriod() {
         return Optional.ofNullable(this.masterHeartbeatPeriod);
     }
     /**
      * Password for the replication connection.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
@@ -172,7 +172,7 @@ public final class DatabaseInstanceReplicaConfiguration {
     /**
      * Username for replication connection.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -180,7 +180,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * True if the master's common name
      * value is checked during the SSL handshake.
      * 
-     */
+    */
     public Optional<Boolean> getVerifyServerCertificate() {
         return Optional.ofNullable(this.verifyServerCertificate);
     }
@@ -279,7 +279,6 @@ public final class DatabaseInstanceReplicaConfiguration {
             this.verifyServerCertificate = verifyServerCertificate;
             return this;
         }
-
         public DatabaseInstanceReplicaConfiguration build() {
             return new DatabaseInstanceReplicaConfiguration(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, failoverTarget, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
         }

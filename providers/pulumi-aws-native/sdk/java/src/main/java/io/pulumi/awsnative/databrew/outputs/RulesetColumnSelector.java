@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class RulesetColumnSelector {
     /**
      * The name of a column from a dataset
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A regular expression for selecting a column from a dataset
      * 
-     */
+    */
     public Optional<String> getRegex() {
         return Optional.ofNullable(this.regex);
     }
@@ -76,7 +76,6 @@ public final class RulesetColumnSelector {
             this.regex = regex;
             return this;
         }
-
         public RulesetColumnSelector build() {
             return new RulesetColumnSelector(name, regex);
         }

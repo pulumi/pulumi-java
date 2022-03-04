@@ -7,7 +7,7 @@ import io.pulumi.awsnative.evidently.outputs.LaunchGroupObject;
 import io.pulumi.awsnative.evidently.outputs.LaunchMetricDefinitionObject;
 import io.pulumi.awsnative.evidently.outputs.LaunchStepConfig;
 import io.pulumi.awsnative.evidently.outputs.LaunchTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -67,7 +67,7 @@ public final class GetLaunchResult {
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<LaunchTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -138,7 +138,6 @@ public final class GetLaunchResult {
             this.tags = tags;
             return this;
         }
-
         public GetLaunchResult build() {
             return new GetLaunchResult(arn, description, groups, metricMonitors, randomizationSalt, scheduledSplitsConfig, tags);
         }

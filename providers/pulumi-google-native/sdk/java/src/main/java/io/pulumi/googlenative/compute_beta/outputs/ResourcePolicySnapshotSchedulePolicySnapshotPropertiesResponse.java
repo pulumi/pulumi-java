@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,28 +48,28 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     /**
      * Chain name that the snapshot is created in.
      * 
-     */
+    */
     public String getChainName() {
         return this.chainName;
     }
     /**
      * Indication to perform a 'guest aware' snapshot.
      * 
-     */
+    */
     public Boolean getGuestFlush() {
         return this.guestFlush;
     }
     /**
      * Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
      * 
-     */
+    */
     public List<String> getStorageLocations() {
         return this.storageLocations;
     }
@@ -119,7 +119,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(chainName, guestFlush, labels, storageLocations);
         }

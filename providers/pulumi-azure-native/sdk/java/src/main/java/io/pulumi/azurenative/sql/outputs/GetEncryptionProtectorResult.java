@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -97,77 +97,77 @@ public final class GetEncryptionProtectorResult {
     /**
      * Key auto rotation opt-in flag. Either true or false.
      * 
-     */
+    */
     public Optional<Boolean> getAutoRotationEnabled() {
         return Optional.ofNullable(this.autoRotationEnabled);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the server key.
      * 
-     */
+    */
     public Optional<String> getServerKeyName() {
         return Optional.ofNullable(this.serverKeyName);
     }
     /**
      * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
      * 
-     */
+    */
     public String getServerKeyType() {
         return this.serverKeyType;
     }
     /**
      * Subregion of the encryption protector.
      * 
-     */
+    */
     public String getSubregion() {
         return this.subregion;
     }
     /**
      * Thumbprint of the server key.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The URI of the server key.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -266,7 +266,6 @@ public final class GetEncryptionProtectorResult {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GetEncryptionProtectorResult build() {
             return new GetEncryptionProtectorResult(autoRotationEnabled, id, kind, location, name, serverKeyName, serverKeyType, subregion, thumbprint, type, uri);
         }

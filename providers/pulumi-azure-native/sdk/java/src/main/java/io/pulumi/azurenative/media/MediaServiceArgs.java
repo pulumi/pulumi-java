@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.MediaServiceIdentityArgs;
 import io.pulumi.azurenative.media.inputs.StorageAccountArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+      private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -37,7 +37,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<AccountEncryptionArgs> encryption;
+      private final @Nullable Input<AccountEncryptionArgs> encryption;
 
     public Input<AccountEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -48,7 +48,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<MediaServiceIdentityArgs> identity;
+      private final @Nullable Input<MediaServiceIdentityArgs> identity;
 
     public Input<MediaServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -59,7 +59,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -70,7 +70,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -81,14 +81,14 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccounts")
-    private final @Nullable Input<List<StorageAccountArgs>> storageAccounts;
+      private final @Nullable Input<List<StorageAccountArgs>> storageAccounts;
 
     public Input<List<StorageAccountArgs>> getStorageAccounts() {
         return this.storageAccounts == null ? Input.empty() : this.storageAccounts;
     }
 
     @InputImport(name="storageAuthentication")
-    private final @Nullable Input<Either<String,StorageAuthentication>> storageAuthentication;
+      private final @Nullable Input<Either<String,StorageAuthentication>> storageAuthentication;
 
     public Input<Either<String,StorageAuthentication>> getStorageAuthentication() {
         return this.storageAuthentication == null ? Input.empty() : this.storageAuthentication;
@@ -99,7 +99,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -248,7 +248,6 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public MediaServiceArgs build() {
             return new MediaServiceArgs(accountName, encryption, identity, location, resourceGroupName, storageAccounts, storageAuthentication, tags);
         }

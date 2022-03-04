@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ManagedRuleOverrideResponse {
     /**
      * Identifier for the managed rule.
      * 
-     */
+    */
     public String getRuleId() {
         return this.ruleId;
     }
     /**
      * The state of the managed rule. Defaults to Disabled if not specified.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -76,7 +76,6 @@ public final class ManagedRuleOverrideResponse {
             this.state = state;
             return this;
         }
-
         public ManagedRuleOverrideResponse build() {
             return new ManagedRuleOverrideResponse(ruleId, state);
         }

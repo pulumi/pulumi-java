@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -69,14 +69,14 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
     /**
      * If true requests to different hosts will be cached separately.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeHost() {
         return Optional.ofNullable(this.includeHost);
     }
     /**
      * If true, http and https requests will be cached separately.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeProtocol() {
         return Optional.ofNullable(this.includeProtocol);
     }
@@ -88,7 +88,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
      * If false, the query string will be excluded from the cache
      * key entirely.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeQueryString() {
         return Optional.ofNullable(this.includeQueryString);
     }
@@ -99,7 +99,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
      * '&' and '=' will be percent encoded and not treated as
      * delimiters.
      * 
-     */
+    */
     public List<String> getQueryStringBlacklists() {
         return this.queryStringBlacklists == null ? List.of() : this.queryStringBlacklists;
     }
@@ -110,7 +110,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
      * '&' and '=' will be percent encoded and not treated as
      * delimiters.
      * 
-     */
+    */
     public List<String> getQueryStringWhitelists() {
         return this.queryStringWhitelists == null ? List.of() : this.queryStringWhitelists;
     }
@@ -167,7 +167,6 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
             this.queryStringWhitelists = queryStringWhitelists;
             return this;
         }
-
         public RegionBackendServiceCdnPolicyCacheKeyPolicy build() {
             return new RegionBackendServiceCdnPolicyCacheKeyPolicy(includeHost, includeProtocol, includeQueryString, queryStringBlacklists, queryStringWhitelists);
         }

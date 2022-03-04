@@ -6,7 +6,7 @@ package io.pulumi.awsnative.inspectorv2;
 import io.pulumi.awsnative.inspectorv2.enums.FilterAction;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterCriteriaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterAction", required=true)
-    private final Input<FilterAction> filterAction;
+      private final Input<FilterAction> filterAction;
 
     public Input<FilterAction> getFilterAction() {
         return this.filterAction;
@@ -43,7 +43,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterCriteria", required=true)
-    private final Input<FilterCriteriaArgs> filterCriteria;
+      private final Input<FilterCriteriaArgs> filterCriteria;
 
     public Input<FilterCriteriaArgs> getFilterCriteria() {
         return this.filterCriteria;
@@ -54,7 +54,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -143,7 +143,6 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public FilterArgs build() {
             return new FilterArgs(description, filterAction, filterCriteria, name);
         }

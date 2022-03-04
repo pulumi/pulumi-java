@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ExportRecurrencePeriodResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class ExportScheduleResponse {
     /**
      * The schedule recurrence.
      * 
-     */
+    */
     public Optional<String> getRecurrence() {
         return Optional.ofNullable(this.recurrence);
     }
     /**
      * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
      * 
-     */
+    */
     public Optional<ExportRecurrencePeriodResponse> getRecurrencePeriod() {
         return Optional.ofNullable(this.recurrencePeriod);
     }
     /**
      * The status of the export's schedule. If 'Inactive', the export's schedule is paused.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -98,7 +98,6 @@ public final class ExportScheduleResponse {
             this.status = status;
             return this;
         }
-
         public ExportScheduleResponse build() {
             return new ExportScheduleResponse(recurrence, recurrencePeriod, status);
         }

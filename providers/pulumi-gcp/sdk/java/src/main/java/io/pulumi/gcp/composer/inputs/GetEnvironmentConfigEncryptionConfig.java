@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetEnvironmentConfigEncryptionConfig extends io.pulumi.resour
     public static final GetEnvironmentConfigEncryptionConfig Empty = new GetEnvironmentConfigEncryptionConfig();
 
     @InputImport(name="kmsKeyName", required=true)
-    private final String kmsKeyName;
+      private final String kmsKeyName;
 
     public String getKmsKeyName() {
         return this.kmsKeyName;
@@ -51,7 +51,6 @@ public final class GetEnvironmentConfigEncryptionConfig extends io.pulumi.resour
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public GetEnvironmentConfigEncryptionConfig build() {
             return new GetEnvironmentConfigEncryptionConfig(kmsKeyName);
         }

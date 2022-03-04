@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="functionAppResourceId", required=true)
-    private final String functionAppResourceId;
+      private final String functionAppResourceId;
 
     public String getFunctionAppResourceId() {
         return this.functionAppResourceId;
@@ -35,7 +35,7 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="functionName", required=true)
-    private final String functionName;
+      private final String functionName;
 
     public String getFunctionName() {
         return this.functionName;
@@ -46,7 +46,7 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="httpTriggerUrl", required=true)
-    private final String httpTriggerUrl;
+      private final String httpTriggerUrl;
 
     public String getHttpTriggerUrl() {
         return this.httpTriggerUrl;
@@ -57,7 +57,7 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -68,7 +68,7 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-    private final @Nullable Boolean useCommonAlertSchema;
+      private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
@@ -147,7 +147,6 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public AzureFunctionReceiverResponse build() {
             return new AzureFunctionReceiverResponse(functionAppResourceId, functionName, httpTriggerUrl, name, useCommonAlertSchema);
         }

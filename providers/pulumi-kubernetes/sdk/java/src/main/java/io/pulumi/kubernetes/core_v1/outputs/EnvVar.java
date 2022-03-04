@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EnvVarSource;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class EnvVar {
     /**
      * Name of the environment variable. Must be a C_IDENTIFIER.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
     /**
      * Source for the environment variable's value. Cannot be used if value is not empty.
      * 
-     */
+    */
     public Optional<EnvVarSource> getValueFrom() {
         return Optional.ofNullable(this.valueFrom);
     }
@@ -98,7 +98,6 @@ public final class EnvVar {
             this.valueFrom = valueFrom;
             return this;
         }
-
         public EnvVar build() {
             return new EnvVar(name, value, valueFrom);
         }

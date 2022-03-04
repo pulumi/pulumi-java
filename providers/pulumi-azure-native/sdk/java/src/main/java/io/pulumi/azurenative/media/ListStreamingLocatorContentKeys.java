@@ -6,21 +6,41 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.media.inputs.ListStreamingLocatorContentKeysArgs;
 import io.pulumi.azurenative.media.outputs.ListStreamingLocatorContentKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStreamingLocatorContentKeys {
-/**
- * Class of response for listContentKeys action
+    private ListStreamingLocatorContentKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListStreamingLocatorContentKeysArgs.Builder a);
+    }
+    private static ListStreamingLocatorContentKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListStreamingLocatorContentKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class of response for listContentKeys action
  * API Version: 2020-05-01.
  * 
- *
- * Class of response for listContentKeys action
+     *
+     * Class of response for listContentKeys action
  * 
- */
+     */
+    public static CompletableFuture<ListStreamingLocatorContentKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class of response for listContentKeys action
+     * API Version: 2020-05-01.
+     * 
+     *
+         * Class of response for listContentKeys action
+     * 
+     */
     public static CompletableFuture<ListStreamingLocatorContentKeysResult> invokeAsync(ListStreamingLocatorContentKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:listStreamingLocatorContentKeys", TypeShape.of(ListStreamingLocatorContentKeysResult.class), args == null ? ListStreamingLocatorContentKeysArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -38,14 +38,14 @@ public final class AllowedHostPath {
      * 
      * Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not allow `/food` or `/etc/foo`
      * 
-     */
+    */
     public Optional<String> getPathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
     /**
      * when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -81,7 +81,6 @@ public final class AllowedHostPath {
             this.readOnly = readOnly;
             return this;
         }
-
         public AllowedHostPath build() {
             return new AllowedHostPath(pathPrefix, readOnly);
         }

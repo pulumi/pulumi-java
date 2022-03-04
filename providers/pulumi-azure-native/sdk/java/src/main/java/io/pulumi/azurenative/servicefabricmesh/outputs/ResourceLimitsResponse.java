@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ResourceLimitsResponse {
     /**
      * CPU limits in cores. At present, only full cores are supported.
      * 
-     */
+    */
     public Optional<Double> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * The memory limit in GB.
      * 
-     */
+    */
     public Optional<Double> getMemoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
@@ -76,7 +76,6 @@ public final class ResourceLimitsResponse {
             this.memoryInGB = memoryInGB;
             return this;
         }
-
         public ResourceLimitsResponse build() {
             return new ResourceLimitsResponse(cpu, memoryInGB);
         }

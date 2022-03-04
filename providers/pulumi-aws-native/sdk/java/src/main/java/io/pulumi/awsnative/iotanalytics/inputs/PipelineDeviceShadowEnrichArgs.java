@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,35 +15,35 @@ public final class PipelineDeviceShadowEnrichArgs extends io.pulumi.resources.Re
     public static final PipelineDeviceShadowEnrichArgs Empty = new PipelineDeviceShadowEnrichArgs();
 
     @InputImport(name="attribute", required=true)
-    private final Input<String> attribute;
+      private final Input<String> attribute;
 
     public Input<String> getAttribute() {
         return this.attribute;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-    private final @Nullable Input<String> next;
+      private final @Nullable Input<String> next;
 
     public Input<String> getNext() {
         return this.next == null ? Input.empty() : this.next;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="thingName", required=true)
-    private final Input<String> thingName;
+      private final Input<String> thingName;
 
     public Input<String> getThingName() {
         return this.thingName;
@@ -147,7 +147,6 @@ public final class PipelineDeviceShadowEnrichArgs extends io.pulumi.resources.Re
             this.thingName = Input.of(Objects.requireNonNull(thingName));
             return this;
         }
-
         public PipelineDeviceShadowEnrichArgs build() {
             return new PipelineDeviceShadowEnrichArgs(attribute, name, next, roleArn, thingName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="linkedResourceId")
-    private final @Nullable Input<String> linkedResourceId;
+      private final @Nullable Input<String> linkedResourceId;
 
     public Input<String> getLinkedResourceId() {
         return this.linkedResourceId == null ? Input.empty() : this.linkedResourceId;
@@ -30,7 +30,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="scopeName", required=true)
-    private final Input<String> scopeName;
+      private final Input<String> scopeName;
 
     public Input<String> getScopeName() {
         return this.scopeName;
@@ -141,7 +141,6 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
             this.scopeName = Input.of(Objects.requireNonNull(scopeName));
             return this;
         }
-
         public PrivateLinkScopedResourceArgs build() {
             return new PrivateLinkScopedResourceArgs(linkedResourceId, name, resourceGroupName, scopeName);
         }

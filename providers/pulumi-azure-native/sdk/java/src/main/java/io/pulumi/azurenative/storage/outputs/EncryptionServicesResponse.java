@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.EncryptionServiceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -47,28 +47,28 @@ public final class EncryptionServicesResponse {
     /**
      * The encryption function of the blob storage service.
      * 
-     */
+    */
     public Optional<EncryptionServiceResponse> getBlob() {
         return Optional.ofNullable(this.blob);
     }
     /**
      * The encryption function of the file storage service.
      * 
-     */
+    */
     public Optional<EncryptionServiceResponse> getFile() {
         return Optional.ofNullable(this.file);
     }
     /**
      * The encryption function of the queue storage service.
      * 
-     */
+    */
     public Optional<EncryptionServiceResponse> getQueue() {
         return Optional.ofNullable(this.queue);
     }
     /**
      * The encryption function of the table storage service.
      * 
-     */
+    */
     public Optional<EncryptionServiceResponse> getTable() {
         return Optional.ofNullable(this.table);
     }
@@ -118,7 +118,6 @@ public final class EncryptionServicesResponse {
             this.table = table;
             return this;
         }
-
         public EncryptionServicesResponse build() {
             return new EncryptionServicesResponse(blob, file, queue, table);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetP2sVpnServerConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.GetP2sVpnServerConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetP2sVpnServerConfiguration {
-/**
- * P2SVpnServerConfiguration Resource.
+    private GetP2sVpnServerConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetP2sVpnServerConfigurationArgs.Builder a);
+    }
+    private static GetP2sVpnServerConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetP2sVpnServerConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * P2SVpnServerConfiguration Resource.
  * API Version: 2019-07-01.
  * 
- *
- * P2SVpnServerConfiguration Resource.
+     *
+     * P2SVpnServerConfiguration Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetP2sVpnServerConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * P2SVpnServerConfiguration Resource.
+     * API Version: 2019-07-01.
+     * 
+     *
+         * P2SVpnServerConfiguration Resource.
+     * 
+     */
     public static CompletableFuture<GetP2sVpnServerConfigurationResult> invokeAsync(GetP2sVpnServerConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getP2sVpnServerConfiguration", TypeShape.of(GetP2sVpnServerConfigurationResult.class), args == null ? GetP2sVpnServerConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

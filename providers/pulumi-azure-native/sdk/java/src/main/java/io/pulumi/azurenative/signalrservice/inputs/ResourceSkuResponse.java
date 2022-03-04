@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Integer capacity;
+      private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
@@ -39,7 +39,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="family", required=true)
-    private final String family;
+      private final String family;
 
     public String getFamily() {
         return this.family;
@@ -52,7 +52,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -63,7 +63,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="size", required=true)
-    private final String size;
+      private final String size;
 
     public String getSize() {
         return this.size;
@@ -76,7 +76,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable String tier;
+      private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
@@ -155,7 +155,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
             this.tier = tier;
             return this;
         }
-
         public ResourceSkuResponse build() {
             return new ResourceSkuResponse(capacity, family, name, size, tier);
         }

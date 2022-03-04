@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class DatabaseInstanceSettingsIpConfigurationGetArgs extends io.pul
      * 
      */
     @InputImport(name="allocatedIpRange")
-    private final @Nullable Input<String> allocatedIpRange;
+      private final @Nullable Input<String> allocatedIpRange;
 
     public Input<String> getAllocatedIpRange() {
         return this.allocatedIpRange == null ? Input.empty() : this.allocatedIpRange;
     }
 
     @InputImport(name="authorizedNetworks")
-    private final @Nullable Input<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs>> authorizedNetworks;
+      private final @Nullable Input<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs>> authorizedNetworks;
 
     public Input<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs>> getAuthorizedNetworks() {
         return this.authorizedNetworks == null ? Input.empty() : this.authorizedNetworks;
@@ -42,7 +42,7 @@ public final class DatabaseInstanceSettingsIpConfigurationGetArgs extends io.pul
      * 
      */
     @InputImport(name="ipv4Enabled")
-    private final @Nullable Input<Boolean> ipv4Enabled;
+      private final @Nullable Input<Boolean> ipv4Enabled;
 
     public Input<Boolean> getIpv4Enabled() {
         return this.ipv4Enabled == null ? Input.empty() : this.ipv4Enabled;
@@ -57,7 +57,7 @@ public final class DatabaseInstanceSettingsIpConfigurationGetArgs extends io.pul
      * 
      */
     @InputImport(name="privateNetwork")
-    private final @Nullable Input<String> privateNetwork;
+      private final @Nullable Input<String> privateNetwork;
 
     public Input<String> getPrivateNetwork() {
         return this.privateNetwork == null ? Input.empty() : this.privateNetwork;
@@ -68,7 +68,7 @@ public final class DatabaseInstanceSettingsIpConfigurationGetArgs extends io.pul
      * 
      */
     @InputImport(name="requireSsl")
-    private final @Nullable Input<Boolean> requireSsl;
+      private final @Nullable Input<Boolean> requireSsl;
 
     public Input<Boolean> getRequireSsl() {
         return this.requireSsl == null ? Input.empty() : this.requireSsl;
@@ -172,7 +172,6 @@ public final class DatabaseInstanceSettingsIpConfigurationGetArgs extends io.pul
             this.requireSsl = Input.ofNullable(requireSsl);
             return this;
         }
-
         public DatabaseInstanceSettingsIpConfigurationGetArgs build() {
             return new DatabaseInstanceSettingsIpConfigurationGetArgs(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }

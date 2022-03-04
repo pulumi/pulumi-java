@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class BotAliasS3BucketLogDestination {
     /**
      * The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key for encrypting audio log files stored in an S3 bucket.
      * 
-     */
+    */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * The Amazon S3 key of the deployment package.
      * 
-     */
+    */
     public String getLogPrefix() {
         return this.logPrefix;
     }
     /**
      * The Amazon Resource Name (ARN) of an Amazon S3 bucket where audio log files are stored.
      * 
-     */
+    */
     public String getS3BucketArn() {
         return this.s3BucketArn;
     }
@@ -97,7 +97,6 @@ public final class BotAliasS3BucketLogDestination {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
         }
-
         public BotAliasS3BucketLogDestination build() {
             return new BotAliasS3BucketLogDestination(kmsKeyArn, logPrefix, s3BucketArn);
         }

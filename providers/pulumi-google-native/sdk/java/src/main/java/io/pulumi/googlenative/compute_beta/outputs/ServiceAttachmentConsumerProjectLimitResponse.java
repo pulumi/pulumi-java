@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ServiceAttachmentConsumerProjectLimitResponse {
     /**
      * The value of the limit to set.
      * 
-     */
+    */
     public Integer getConnectionLimit() {
         return this.connectionLimit;
     }
     /**
      * The project id or number for the project to set the limit for.
      * 
-     */
+    */
     public String getProjectIdOrNum() {
         return this.projectIdOrNum;
     }
@@ -75,7 +75,6 @@ public final class ServiceAttachmentConsumerProjectLimitResponse {
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
         }
-
         public ServiceAttachmentConsumerProjectLimitResponse build() {
             return new ServiceAttachmentConsumerProjectLimitResponse(connectionLimit, projectIdOrNum);
         }

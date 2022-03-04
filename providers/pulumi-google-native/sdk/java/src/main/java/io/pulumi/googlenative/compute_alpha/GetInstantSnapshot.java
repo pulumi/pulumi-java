@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstantSnapshot {
-/**
- * Returns the specified InstantSnapshot resource in the specified zone.
+    private GetInstantSnapshot() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstantSnapshotArgs.Builder a);
+    }
+    private static GetInstantSnapshotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstantSnapshotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified InstantSnapshot resource in the specified zone.
  * 
- */
+     */
+    public static CompletableFuture<GetInstantSnapshotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified InstantSnapshot resource in the specified zone.
+     * 
+     */
     public static CompletableFuture<GetInstantSnapshotResult> invokeAsync(GetInstantSnapshotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInstantSnapshot", TypeShape.of(GetInstantSnapshotResult.class), args == null ? GetInstantSnapshotArgs.Empty : args, Utilities.withVersion(options));
     }

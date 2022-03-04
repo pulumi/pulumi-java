@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.HintResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AttestationNoteResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="hint", required=true)
-    private final HintResponse hint;
+      private final HintResponse hint;
 
     public HintResponse getHint() {
         return this.hint;
@@ -59,7 +59,6 @@ public final class AttestationNoteResponse extends io.pulumi.resources.InvokeArg
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public AttestationNoteResponse build() {
             return new AttestationNoteResponse(hint);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiGroups")
-    private final @Nullable Input<List<String>> apiGroups;
+      private final @Nullable Input<List<String>> apiGroups;
 
     public Input<List<String>> getApiGroups() {
         return this.apiGroups == null ? Input.empty() : this.apiGroups;
@@ -35,7 +35,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiVersions")
-    private final @Nullable Input<List<String>> apiVersions;
+      private final @Nullable Input<List<String>> apiVersions;
 
     public Input<List<String>> getApiVersions() {
         return this.apiVersions == null ? Input.empty() : this.apiVersions;
@@ -46,7 +46,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="operations")
-    private final @Nullable Input<List<String>> operations;
+      private final @Nullable Input<List<String>> operations;
 
     public Input<List<String>> getOperations() {
         return this.operations == null ? Input.empty() : this.operations;
@@ -63,7 +63,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<String>> resources;
+      private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -74,7 +74,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -178,7 +178,6 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
             this.scope = Input.ofNullable(scope);
             return this;
         }
-
         public RuleWithOperationsArgs build() {
             return new RuleWithOperationsArgs(apiGroups, apiVersions, operations, resources, scope);
         }

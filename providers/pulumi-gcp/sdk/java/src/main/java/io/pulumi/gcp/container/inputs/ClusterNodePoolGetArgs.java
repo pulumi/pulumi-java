@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterNodePoolAutoscalingGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterNodePoolManagementGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterNodePoolNetworkConfigGetArgs;
@@ -22,7 +22,7 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
     public static final ClusterNodePoolGetArgs Empty = new ClusterNodePoolGetArgs();
 
     @InputImport(name="autoscaling")
-    private final @Nullable Input<ClusterNodePoolAutoscalingGetArgs> autoscaling;
+      private final @Nullable Input<ClusterNodePoolAutoscalingGetArgs> autoscaling;
 
     public Input<ClusterNodePoolAutoscalingGetArgs> getAutoscaling() {
         return this.autoscaling == null ? Input.empty() : this.autoscaling;
@@ -38,35 +38,35 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="initialNodeCount")
-    private final @Nullable Input<Integer> initialNodeCount;
+      private final @Nullable Input<Integer> initialNodeCount;
 
     public Input<Integer> getInitialNodeCount() {
         return this.initialNodeCount == null ? Input.empty() : this.initialNodeCount;
     }
 
     @InputImport(name="instanceGroupUrls")
-    private final @Nullable Input<List<String>> instanceGroupUrls;
+      private final @Nullable Input<List<String>> instanceGroupUrls;
 
     public Input<List<String>> getInstanceGroupUrls() {
         return this.instanceGroupUrls == null ? Input.empty() : this.instanceGroupUrls;
     }
 
     @InputImport(name="managedInstanceGroupUrls")
-    private final @Nullable Input<List<String>> managedInstanceGroupUrls;
+      private final @Nullable Input<List<String>> managedInstanceGroupUrls;
 
     public Input<List<String>> getManagedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls == null ? Input.empty() : this.managedInstanceGroupUrls;
     }
 
     @InputImport(name="management")
-    private final @Nullable Input<ClusterNodePoolManagementGetArgs> management;
+      private final @Nullable Input<ClusterNodePoolManagementGetArgs> management;
 
     public Input<ClusterNodePoolManagementGetArgs> getManagement() {
         return this.management == null ? Input.empty() : this.management;
     }
 
     @InputImport(name="maxPodsPerNode")
-    private final @Nullable Input<Integer> maxPodsPerNode;
+      private final @Nullable Input<Integer> maxPodsPerNode;
 
     public Input<Integer> getMaxPodsPerNode() {
         return this.maxPodsPerNode == null ? Input.empty() : this.maxPodsPerNode;
@@ -78,14 +78,14 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -97,7 +97,7 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkConfig")
-    private final @Nullable Input<ClusterNodePoolNetworkConfigGetArgs> networkConfig;
+      private final @Nullable Input<ClusterNodePoolNetworkConfigGetArgs> networkConfig;
 
     public Input<ClusterNodePoolNetworkConfigGetArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -112,14 +112,14 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nodeConfig")
-    private final @Nullable Input<ClusterNodePoolNodeConfigGetArgs> nodeConfig;
+      private final @Nullable Input<ClusterNodePoolNodeConfigGetArgs> nodeConfig;
 
     public Input<ClusterNodePoolNodeConfigGetArgs> getNodeConfig() {
         return this.nodeConfig == null ? Input.empty() : this.nodeConfig;
     }
 
     @InputImport(name="nodeCount")
-    private final @Nullable Input<Integer> nodeCount;
+      private final @Nullable Input<Integer> nodeCount;
 
     public Input<Integer> getNodeCount() {
         return this.nodeCount == null ? Input.empty() : this.nodeCount;
@@ -133,21 +133,21 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nodeLocations")
-    private final @Nullable Input<List<String>> nodeLocations;
+      private final @Nullable Input<List<String>> nodeLocations;
 
     public Input<List<String>> getNodeLocations() {
         return this.nodeLocations == null ? Input.empty() : this.nodeLocations;
     }
 
     @InputImport(name="upgradeSettings")
-    private final @Nullable Input<ClusterNodePoolUpgradeSettingsGetArgs> upgradeSettings;
+      private final @Nullable Input<ClusterNodePoolUpgradeSettingsGetArgs> upgradeSettings;
 
     public Input<ClusterNodePoolUpgradeSettingsGetArgs> getUpgradeSettings() {
         return this.upgradeSettings == null ? Input.empty() : this.upgradeSettings;
     }
 
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -386,7 +386,6 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ClusterNodePoolGetArgs build() {
             return new ClusterNodePoolGetArgs(autoscaling, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, management, maxPodsPerNode, name, namePrefix, networkConfig, nodeConfig, nodeCount, nodeLocations, upgradeSettings, version);
         }

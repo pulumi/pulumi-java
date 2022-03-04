@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.ContentHashResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contentHash")
-    private final @Nullable ContentHashResponse contentHash;
+      private final @Nullable ContentHashResponse contentHash;
 
     public Optional<ContentHashResponse> getContentHash() {
         return this.contentHash == null ? Optional.empty() : Optional.ofNullable(this.contentHash);
@@ -35,7 +35,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable String uri;
+      private final @Nullable String uri;
 
     public Optional<String> getUri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
@@ -46,7 +46,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -105,7 +105,6 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
             this.version = version;
             return this;
         }
-
         public ContentLinkResponse build() {
             return new ContentLinkResponse(contentHash, uri, version);
         }

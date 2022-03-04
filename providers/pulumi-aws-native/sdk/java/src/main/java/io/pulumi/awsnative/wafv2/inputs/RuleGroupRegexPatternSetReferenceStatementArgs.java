@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class RuleGroupRegexPatternSetReferenceStatementArgs extends io.pul
     public static final RuleGroupRegexPatternSetReferenceStatementArgs Empty = new RuleGroupRegexPatternSetReferenceStatementArgs();
 
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
     }
 
     @InputImport(name="fieldToMatch", required=true)
-    private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
+      private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Input<RuleGroupFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
+      private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Input<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
@@ -105,7 +105,6 @@ public final class RuleGroupRegexPatternSetReferenceStatementArgs extends io.pul
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-
         public RuleGroupRegexPatternSetReferenceStatementArgs build() {
             return new RuleGroupRegexPatternSetReferenceStatementArgs(arn, fieldToMatch, textTransformations);
         }

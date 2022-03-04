@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -40,21 +40,21 @@ public final class SparkSqlBatchResponse {
     /**
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris;
     }
     /**
      * The HCFS URI of the script that contains Spark SQL queries to execute.
      * 
-     */
+    */
     public String getQueryFileUri() {
         return this.queryFileUri;
     }
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
      * 
-     */
+    */
     public Map<String,String> getQueryVariables() {
         return this.queryVariables;
     }
@@ -97,7 +97,6 @@ public final class SparkSqlBatchResponse {
             this.queryVariables = Objects.requireNonNull(queryVariables);
             return this;
         }
-
         public SparkSqlBatchResponse build() {
             return new SparkSqlBatchResponse(jarFileUris, queryFileUri, queryVariables);
         }

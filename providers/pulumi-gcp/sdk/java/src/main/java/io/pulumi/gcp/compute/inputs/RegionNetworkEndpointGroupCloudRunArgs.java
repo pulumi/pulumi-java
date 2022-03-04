@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -35,7 +35,7 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -51,7 +51,7 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="urlMask")
-    private final @Nullable Input<String> urlMask;
+      private final @Nullable Input<String> urlMask;
 
     public Input<String> getUrlMask() {
         return this.urlMask == null ? Input.empty() : this.urlMask;
@@ -125,7 +125,6 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends io.pulumi.reso
             this.urlMask = Input.ofNullable(urlMask);
             return this;
         }
-
         public RegionNetworkEndpointGroupCloudRunArgs build() {
             return new RegionNetworkEndpointGroupCloudRunArgs(service, tag, urlMask);
         }

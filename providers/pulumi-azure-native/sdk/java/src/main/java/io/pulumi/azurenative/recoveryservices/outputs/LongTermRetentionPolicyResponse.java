@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.DailyRetentionScheduleResp
 import io.pulumi.azurenative.recoveryservices.outputs.MonthlyRetentionScheduleResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.WeeklyRetentionScheduleResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.YearlyRetentionScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -59,14 +59,14 @@ public final class LongTermRetentionPolicyResponse {
     /**
      * Daily retention schedule of the protection policy.
      * 
-     */
+    */
     public Optional<DailyRetentionScheduleResponse> getDailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
     /**
      * Monthly retention schedule of the protection policy.
      * 
-     */
+    */
     public Optional<MonthlyRetentionScheduleResponse> getMonthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
@@ -74,21 +74,21 @@ public final class LongTermRetentionPolicyResponse {
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'LongTermRetentionPolicy'.
      * 
-     */
+    */
     public String getRetentionPolicyType() {
         return this.retentionPolicyType;
     }
     /**
      * Weekly retention schedule of the protection policy.
      * 
-     */
+    */
     public Optional<WeeklyRetentionScheduleResponse> getWeeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
     /**
      * Yearly retention schedule of the protection policy.
      * 
-     */
+    */
     public Optional<YearlyRetentionScheduleResponse> getYearlySchedule() {
         return Optional.ofNullable(this.yearlySchedule);
     }
@@ -145,7 +145,6 @@ public final class LongTermRetentionPolicyResponse {
             this.yearlySchedule = yearlySchedule;
             return this;
         }
-
         public LongTermRetentionPolicyResponse build() {
             return new LongTermRetentionPolicyResponse(dailySchedule, monthlySchedule, retentionPolicyType, weeklySchedule, yearlySchedule);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd;
 import java.lang.String;
@@ -54,7 +54,7 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
      * Headers to add to a matching request prior to forwarding the request to the backendService.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? List.of() : this.requestHeadersToAdds;
     }
@@ -62,7 +62,7 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
      * A list of header names for headers that need to be removed from the request prior to
      * forwarding the request to the backendService.
      * 
-     */
+    */
     public List<String> getRequestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? List.of() : this.requestHeadersToRemoves;
     }
@@ -70,7 +70,7 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
      * Headers to add the response prior to sending the response back to the client.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> getResponseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? List.of() : this.responseHeadersToAdds;
     }
@@ -78,7 +78,7 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
      * A list of header names for headers that need to be removed from the response prior to sending the
      * response back to the client.
      * 
-     */
+    */
     public List<String> getResponseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? List.of() : this.responseHeadersToRemoves;
     }
@@ -128,7 +128,6 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleHeaderAction build() {
             return new URLMapPathMatcherRouteRuleHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

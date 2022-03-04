@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,35 +21,35 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
     public static final CertificateAuthorityCrlConfigurationArgs Empty = new CertificateAuthorityCrlConfigurationArgs();
 
     @InputImport(name="customCname")
-    private final @Nullable Input<String> customCname;
+      private final @Nullable Input<String> customCname;
 
     public Input<String> getCustomCname() {
         return this.customCname == null ? Input.empty() : this.customCname;
     }
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="expirationInDays")
-    private final @Nullable Input<Integer> expirationInDays;
+      private final @Nullable Input<Integer> expirationInDays;
 
     public Input<Integer> getExpirationInDays() {
         return this.expirationInDays == null ? Input.empty() : this.expirationInDays;
     }
 
     @InputImport(name="s3BucketName")
-    private final @Nullable Input<String> s3BucketName;
+      private final @Nullable Input<String> s3BucketName;
 
     public Input<String> getS3BucketName() {
         return this.s3BucketName == null ? Input.empty() : this.s3BucketName;
     }
 
     @InputImport(name="s3ObjectAcl")
-    private final @Nullable Input<String> s3ObjectAcl;
+      private final @Nullable Input<String> s3ObjectAcl;
 
     public Input<String> getS3ObjectAcl() {
         return this.s3ObjectAcl == null ? Input.empty() : this.s3ObjectAcl;
@@ -153,7 +153,6 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
             this.s3ObjectAcl = Input.ofNullable(s3ObjectAcl);
             return this;
         }
-
         public CertificateAuthorityCrlConfigurationArgs build() {
             return new CertificateAuthorityCrlConfigurationArgs(customCname, enabled, expirationInDays, s3BucketName, s3ObjectAcl);
         }

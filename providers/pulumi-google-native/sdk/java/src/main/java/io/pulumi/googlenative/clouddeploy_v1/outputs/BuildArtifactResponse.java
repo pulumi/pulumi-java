@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BuildArtifactResponse {
     /**
      * Image name in Skaffold configuration.
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
     /**
      * Image tag to use. This will generally be the full path to an image, such as "gcr.io/my-project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
      * 
-     */
+    */
     public String getTag() {
         return this.tag;
     }
@@ -74,7 +74,6 @@ public final class BuildArtifactResponse {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public BuildArtifactResponse build() {
             return new BuildArtifactResponse(image, tag);
         }

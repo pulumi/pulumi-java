@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.outputs;
 import io.pulumi.azurenative.cdn.outputs.HealthProbeParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -59,35 +59,35 @@ public final class DeepCreatedOriginGroupResponse {
     /**
      * Health probe settings to the origin that is used to determine the health of the origin.
      * 
-     */
+    */
     public Optional<HealthProbeParametersResponse> getHealthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
     /**
      * Origin group name which must be unique within the endpoint.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The source of the content being delivered via CDN within given origin group.
      * 
-     */
+    */
     public List<ResourceReferenceResponse> getOrigins() {
         return this.origins;
     }
     /**
      * The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
      * 
-     */
+    */
     public Optional<ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedOriginErrorDetectionSettings() {
         return Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
     }
     /**
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
-     */
+    */
     public Optional<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
@@ -144,7 +144,6 @@ public final class DeepCreatedOriginGroupResponse {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
-
         public DeepCreatedOriginGroupResponse build() {
             return new DeepCreatedOriginGroupResponse(healthProbeSettings, name, origins, responseBasedOriginErrorDetectionSettings, trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
         }

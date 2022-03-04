@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nameServers", required=true)
-    private final Input<List<String>> nameServers;
+      private final Input<List<String>> nameServers;
 
     public Input<List<String>> getNameServers() {
         return this.nameServers;
@@ -35,7 +35,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<String> options;
+      private final @Nullable Input<String> options;
 
     public Input<String> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -46,7 +46,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="searchDomains")
-    private final @Nullable Input<String> searchDomains;
+      private final @Nullable Input<String> searchDomains;
 
     public Input<String> getSearchDomains() {
         return this.searchDomains == null ? Input.empty() : this.searchDomains;
@@ -120,7 +120,6 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
             this.searchDomains = Input.ofNullable(searchDomains);
             return this;
         }
-
         public DnsConfigurationArgs build() {
             return new DnsConfigurationArgs(nameServers, options, searchDomains);
         }

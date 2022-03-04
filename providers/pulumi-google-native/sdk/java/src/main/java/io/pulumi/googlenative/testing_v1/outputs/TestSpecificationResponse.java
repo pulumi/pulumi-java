@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidInstrumentationTestResponse;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidRoboTestResponse;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidTestLoopResponse;
@@ -95,70 +95,70 @@ public final class TestSpecificationResponse {
     /**
      * An Android instrumentation test.
      * 
-     */
+    */
     public AndroidInstrumentationTestResponse getAndroidInstrumentationTest() {
         return this.androidInstrumentationTest;
     }
     /**
      * An Android robo test.
      * 
-     */
+    */
     public AndroidRoboTestResponse getAndroidRoboTest() {
         return this.androidRoboTest;
     }
     /**
      * An Android Application with a Test Loop.
      * 
-     */
+    */
     public AndroidTestLoopResponse getAndroidTestLoop() {
         return this.androidTestLoop;
     }
     /**
      * Disables performance metrics recording. May reduce test latency.
      * 
-     */
+    */
     public Boolean getDisablePerformanceMetrics() {
         return this.disablePerformanceMetrics;
     }
     /**
      * Disables video recording. May reduce test latency.
      * 
-     */
+    */
     public Boolean getDisableVideoRecording() {
         return this.disableVideoRecording;
     }
     /**
      * An iOS application with a test loop.
      * 
-     */
+    */
     public IosTestLoopResponse getIosTestLoop() {
         return this.iosTestLoop;
     }
     /**
      * Test setup requirements for iOS.
      * 
-     */
+    */
     public IosTestSetupResponse getIosTestSetup() {
         return this.iosTestSetup;
     }
     /**
      * An iOS XCTest, via an .xctestrun file.
      * 
-     */
+    */
     public IosXcTestResponse getIosXcTest() {
         return this.iosXcTest;
     }
     /**
      * Test setup requirements for Android e.g. files to install, bootstrap scripts.
      * 
-     */
+    */
     public TestSetupResponse getTestSetup() {
         return this.testSetup;
     }
     /**
      * Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
      * 
-     */
+    */
     public String getTestTimeout() {
         return this.testTimeout;
     }
@@ -250,7 +250,6 @@ public final class TestSpecificationResponse {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }
-
         public TestSpecificationResponse build() {
             return new TestSpecificationResponse(androidInstrumentationTest, androidRoboTest, androidTestLoop, disablePerformanceMetrics, disableVideoRecording, iosTestLoop, iosTestSetup, iosXcTest, testSetup, testTimeout);
         }

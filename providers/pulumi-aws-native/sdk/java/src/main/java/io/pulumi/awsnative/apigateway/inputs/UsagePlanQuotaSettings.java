@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UsagePlanQuotaSettings extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="limit")
-    private final @Nullable Integer limit;
+      private final @Nullable Integer limit;
 
     public Optional<Integer> getLimit() {
         return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
@@ -31,7 +31,7 @@ public final class UsagePlanQuotaSettings extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="offset")
-    private final @Nullable Integer offset;
+      private final @Nullable Integer offset;
 
     public Optional<Integer> getOffset() {
         return this.offset == null ? Optional.empty() : Optional.ofNullable(this.offset);
@@ -42,7 +42,7 @@ public final class UsagePlanQuotaSettings extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="period")
-    private final @Nullable String period;
+      private final @Nullable String period;
 
     public Optional<String> getPeriod() {
         return this.period == null ? Optional.empty() : Optional.ofNullable(this.period);
@@ -101,7 +101,6 @@ public final class UsagePlanQuotaSettings extends io.pulumi.resources.InvokeArgs
             this.period = period;
             return this;
         }
-
         public UsagePlanQuotaSettings build() {
             return new UsagePlanQuotaSettings(limit, offset, period);
         }

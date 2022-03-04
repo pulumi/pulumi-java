@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class NonResourceAttributes {
     /**
      * Path is the URL path of the request
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Verb is the standard HTTP verb
      * 
-     */
+    */
     public Optional<String> getVerb() {
         return Optional.ofNullable(this.verb);
     }
@@ -76,7 +76,6 @@ public final class NonResourceAttributes {
             this.verb = verb;
             return this;
         }
-
         public NonResourceAttributes build() {
             return new NonResourceAttributes(path, verb);
         }

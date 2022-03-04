@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -120,56 +120,56 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
     /**
      * The Name of the alert rule template used to create this rule.
      * 
-     */
+    */
     public Optional<String> getAlertRuleTemplateName() {
         return Optional.ofNullable(this.alertRuleTemplateName);
     }
     /**
      * The description of the alert rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name for alerts created by this alert rule.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * the alerts' displayNames on which the cases will not be generated
      * 
-     */
+    */
     public List<String> getDisplayNamesExcludeFilter() {
         return this.displayNamesExcludeFilter == null ? List.of() : this.displayNamesExcludeFilter;
     }
     /**
      * the alerts' displayNames on which the cases will be generated
      * 
-     */
+    */
     public List<String> getDisplayNamesFilter() {
         return this.displayNamesFilter == null ? List.of() : this.displayNamesFilter;
     }
     /**
      * Determines whether this alert rule is enabled or disabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -177,42 +177,42 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
      * The kind of the alert rule
      * Expected value is 'MicrosoftSecurityIncidentCreation'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The last time that this alert has been modified.
      * 
-     */
+    */
     public String getLastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The alerts' productName on which the cases will be generated
      * 
-     */
+    */
     public String getProductFilter() {
         return this.productFilter;
     }
     /**
      * the alerts' severities on which the cases will be generated
      * 
-     */
+    */
     public List<String> getSeveritiesFilter() {
         return this.severitiesFilter == null ? List.of() : this.severitiesFilter;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -332,7 +332,6 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMicrosoftSecurityIncidentCreationAlertRuleResult build() {
             return new GetMicrosoftSecurityIncidentCreationAlertRuleResult(alertRuleTemplateName, description, displayName, displayNamesExcludeFilter, displayNamesFilter, enabled, etag, id, kind, lastModifiedUtc, name, productFilter, severitiesFilter, type);
         }

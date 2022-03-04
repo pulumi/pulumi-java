@@ -30,7 +30,6 @@ public final class DatastoreJsonConfiguration extends io.pulumi.resources.Invoke
         public Builder(DatastoreJsonConfiguration defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DatastoreJsonConfiguration build() {
             return new DatastoreJsonConfiguration();
         }

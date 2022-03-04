@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -83,63 +83,63 @@ public final class AS2MdnSettingsResponse {
     /**
      * The disposition notification to header value.
      * 
-     */
+    */
     public Optional<String> getDispositionNotificationTo() {
         return Optional.ofNullable(this.dispositionNotificationTo);
     }
     /**
      * The MDN text.
      * 
-     */
+    */
     public Optional<String> getMdnText() {
         return Optional.ofNullable(this.mdnText);
     }
     /**
      * The signing or hashing algorithm.
      * 
-     */
+    */
     public String getMicHashingAlgorithm() {
         return this.micHashingAlgorithm;
     }
     /**
      * The value indicating whether to send or request a MDN.
      * 
-     */
+    */
     public Boolean getNeedMDN() {
         return this.needMDN;
     }
     /**
      * The receipt delivery URL.
      * 
-     */
+    */
     public Optional<String> getReceiptDeliveryUrl() {
         return Optional.ofNullable(this.receiptDeliveryUrl);
     }
     /**
      * The value indicating whether to send inbound MDN to message box.
      * 
-     */
+    */
     public Boolean getSendInboundMDNToMessageBox() {
         return this.sendInboundMDNToMessageBox;
     }
     /**
      * The value indicating whether to send the asynchronous MDN.
      * 
-     */
+    */
     public Boolean getSendMDNAsynchronously() {
         return this.sendMDNAsynchronously;
     }
     /**
      * The value indicating whether the MDN needs to be signed or not.
      * 
-     */
+    */
     public Boolean getSignMDN() {
         return this.signMDN;
     }
     /**
      * The value indicating whether to sign the outbound MDN if optional.
      * 
-     */
+    */
     public Boolean getSignOutboundMDNIfOptional() {
         return this.signOutboundMDNIfOptional;
     }
@@ -224,7 +224,6 @@ public final class AS2MdnSettingsResponse {
             this.signOutboundMDNIfOptional = Objects.requireNonNull(signOutboundMDNIfOptional);
             return this;
         }
-
         public AS2MdnSettingsResponse build() {
             return new AS2MdnSettingsResponse(dispositionNotificationTo, mdnText, micHashingAlgorithm, needMDN, receiptDeliveryUrl, sendInboundMDNToMessageBox, sendMDNAsynchronously, signMDN, signOutboundMDNIfOptional);
         }

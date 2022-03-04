@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1.inputs.AppDevExperienceFeatureSpecArgs;
 import io.pulumi.googlenative.gkehub_v1.inputs.MultiClusterIngressFeatureSpecArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="appdevexperience")
-    private final @Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience;
+      private final @Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience;
 
     public Input<AppDevExperienceFeatureSpecArgs> getAppdevexperience() {
         return this.appdevexperience == null ? Input.empty() : this.appdevexperience;
@@ -35,7 +35,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="multiclusteringress")
-    private final @Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
+      private final @Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
 
     public Input<MultiClusterIngressFeatureSpecArgs> getMulticlusteringress() {
         return this.multiclusteringress == null ? Input.empty() : this.multiclusteringress;
@@ -94,7 +94,6 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
             this.multiclusteringress = Input.ofNullable(multiclusteringress);
             return this;
         }
-
         public CommonFeatureSpecArgs build() {
             return new CommonFeatureSpecArgs(appdevexperience, multiclusteringress);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAccessReviewScheduleDefinitionByIdArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="scheduleDefinitionId", required=true)
-    private final String scheduleDefinitionId;
+      private final String scheduleDefinitionId;
 
     public String getScheduleDefinitionId() {
         return this.scheduleDefinitionId;
@@ -55,7 +55,6 @@ public final class GetAccessReviewScheduleDefinitionByIdArgs extends io.pulumi.r
             this.scheduleDefinitionId = Objects.requireNonNull(scheduleDefinitionId);
             return this;
         }
-
         public GetAccessReviewScheduleDefinitionByIdArgs build() {
             return new GetAccessReviewScheduleDefinitionByIdArgs(scheduleDefinitionId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -92,70 +92,70 @@ public final class GetConnectionMonitorTestResult {
     /**
      * The Connection Monitor test destination
      * 
-     */
+    */
     public Optional<String> getDestination() {
         return Optional.ofNullable(this.destination);
     }
     /**
      * The Connection Monitor test destination port
      * 
-     */
+    */
     public Optional<Integer> getDestinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
      * The ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The flag that indicates if the Connection Monitor test is successful or not.
      * 
-     */
+    */
     public Boolean getIsTestSuccessful() {
         return this.isTestSuccessful;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The path representing the Connection Monitor test.
      * 
-     */
+    */
     public List<String> getPath() {
         return this.path;
     }
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The Connection Monitor test source agent
      * 
-     */
+    */
     public Optional<String> getSourceAgent() {
         return Optional.ofNullable(this.sourceAgent);
     }
     /**
      * The Connection Monitor test frequency in seconds
      * 
-     */
+    */
     public Optional<Integer> getTestFrequencyInSec() {
         return Optional.ofNullable(this.testFrequencyInSec);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -247,7 +247,6 @@ public final class GetConnectionMonitorTestResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionMonitorTestResult build() {
             return new GetConnectionMonitorTestResult(destination, destinationPort, id, isTestSuccessful, name, path, provisioningState, sourceAgent, testFrequencyInSec, type);
         }

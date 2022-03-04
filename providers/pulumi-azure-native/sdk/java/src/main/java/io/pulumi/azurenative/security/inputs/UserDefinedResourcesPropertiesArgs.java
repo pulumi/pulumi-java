@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="query", required=true)
-    private final Input<String> query;
+      private final Input<String> query;
 
     public Input<String> getQuery() {
         return this.query;
@@ -34,7 +34,7 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="querySubscriptions", required=true)
-    private final Input<List<String>> querySubscriptions;
+      private final Input<List<String>> querySubscriptions;
 
     public Input<List<String>> getQuerySubscriptions() {
         return this.querySubscriptions;
@@ -93,7 +93,6 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
             this.querySubscriptions = Input.of(Objects.requireNonNull(querySubscriptions));
             return this;
         }
-
         public UserDefinedResourcesPropertiesArgs build() {
             return new UserDefinedResourcesPropertiesArgs(query, querySubscriptions);
         }

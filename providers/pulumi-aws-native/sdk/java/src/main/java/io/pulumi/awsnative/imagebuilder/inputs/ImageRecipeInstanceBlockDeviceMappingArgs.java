@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeEbsInstanceBlockDeviceSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -35,7 +35,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ebs")
-    private final @Nullable Input<ImageRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs;
+      private final @Nullable Input<ImageRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs;
 
     public Input<ImageRecipeEbsInstanceBlockDeviceSpecificationArgs> getEbs() {
         return this.ebs == null ? Input.empty() : this.ebs;
@@ -46,7 +46,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="noDevice")
-    private final @Nullable Input<String> noDevice;
+      private final @Nullable Input<String> noDevice;
 
     public Input<String> getNoDevice() {
         return this.noDevice == null ? Input.empty() : this.noDevice;
@@ -57,7 +57,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="virtualName")
-    private final @Nullable Input<String> virtualName;
+      private final @Nullable Input<String> virtualName;
 
     public Input<String> getVirtualName() {
         return this.virtualName == null ? Input.empty() : this.virtualName;
@@ -146,7 +146,6 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
             this.virtualName = Input.ofNullable(virtualName);
             return this;
         }
-
         public ImageRecipeInstanceBlockDeviceMappingArgs build() {
             return new ImageRecipeInstanceBlockDeviceMappingArgs(deviceName, ebs, noDevice, virtualName);
         }

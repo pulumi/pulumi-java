@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,14 +42,14 @@ public final class ImportPipelineSourcePropertiesResponse {
     /**
      * They key vault secret uri to obtain the source storage SAS token.
      * 
-     */
+    */
     public String getKeyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The type of source for the import pipeline.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -58,7 +58,7 @@ public final class ImportPipelineSourcePropertiesResponse {
      * When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
      * When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }
@@ -101,7 +101,6 @@ public final class ImportPipelineSourcePropertiesResponse {
             this.uri = uri;
             return this;
         }
-
         public ImportPipelineSourcePropertiesResponse build() {
             return new ImportPipelineSourcePropertiesResponse(keyVaultUri, type, uri);
         }

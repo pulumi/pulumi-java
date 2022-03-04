@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ListOpenShiftClusterAdminCredentialsResult {
     /**
      * The base64-encoded kubeconfig file.
      * 
-     */
+    */
     public Optional<String> getKubeconfig() {
         return Optional.ofNullable(this.kubeconfig);
     }
@@ -54,7 +54,6 @@ public final class ListOpenShiftClusterAdminCredentialsResult {
             this.kubeconfig = kubeconfig;
             return this;
         }
-
         public ListOpenShiftClusterAdminCredentialsResult build() {
             return new ListOpenShiftClusterAdminCredentialsResult(kubeconfig);
         }

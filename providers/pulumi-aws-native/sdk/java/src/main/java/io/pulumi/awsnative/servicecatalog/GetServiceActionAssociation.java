@@ -6,17 +6,33 @@ package io.pulumi.awsnative.servicecatalog;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalog.inputs.GetServiceActionAssociationArgs;
 import io.pulumi.awsnative.servicecatalog.outputs.GetServiceActionAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceActionAssociation {
-/**
- * Resource Schema for AWS::ServiceCatalog::ServiceActionAssociation
+    private GetServiceActionAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceActionAssociationArgs.Builder a);
+    }
+    private static GetServiceActionAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceActionAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema for AWS::ServiceCatalog::ServiceActionAssociation
  * 
- */
+     */
+    public static CompletableFuture<GetServiceActionAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema for AWS::ServiceCatalog::ServiceActionAssociation
+     * 
+     */
     public static CompletableFuture<GetServiceActionAssociationResult> invokeAsync(GetServiceActionAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalog:getServiceActionAssociation", TypeShape.of(GetServiceActionAssociationResult.class), args == null ? GetServiceActionAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

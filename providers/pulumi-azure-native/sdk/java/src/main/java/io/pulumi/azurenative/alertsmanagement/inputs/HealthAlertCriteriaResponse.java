@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.VmGuestHealthAlertCriterionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class HealthAlertCriteriaResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="allOf")
-    private final @Nullable List<VmGuestHealthAlertCriterionResponse> allOf;
+      private final @Nullable List<VmGuestHealthAlertCriterionResponse> allOf;
 
     public List<VmGuestHealthAlertCriterionResponse> getAllOf() {
         return this.allOf == null ? List.of() : this.allOf;
@@ -62,7 +62,6 @@ public final class HealthAlertCriteriaResponse extends io.pulumi.resources.Invok
             this.allOf = allOf;
             return this;
         }
-
         public HealthAlertCriteriaResponse build() {
             return new HealthAlertCriteriaResponse(allOf);
         }

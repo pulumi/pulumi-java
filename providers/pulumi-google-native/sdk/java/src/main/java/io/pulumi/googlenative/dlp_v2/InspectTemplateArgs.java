@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -42,21 +42,21 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="inspectConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
     public Input<GooglePrivacyDlpV2InspectConfigArgs> getInspectConfig() {
         return this.inspectConfig == null ? Input.empty() : this.inspectConfig;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -67,7 +67,7 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="templateId")
-    private final @Nullable Input<String> templateId;
+      private final @Nullable Input<String> templateId;
 
     public Input<String> getTemplateId() {
         return this.templateId == null ? Input.empty() : this.templateId;
@@ -186,7 +186,6 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
             this.templateId = Input.ofNullable(templateId);
             return this;
         }
-
         public InspectTemplateArgs build() {
             return new InspectTemplateArgs(description, displayName, inspectConfig, location, project, templateId);
         }

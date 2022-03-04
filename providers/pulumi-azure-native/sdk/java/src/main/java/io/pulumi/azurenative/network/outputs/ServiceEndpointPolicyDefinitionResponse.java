@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class ServiceEndpointPolicyDefinitionResponse {
     /**
      * A description for this rule. Restricted to 140 chars.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the service endpoint policy definition resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Service endpoint name.
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
     /**
      * A list of service resources.
      * 
-     */
+    */
     public List<String> getServiceResources() {
         return this.serviceResources == null ? List.of() : this.serviceResources;
     }
@@ -182,7 +182,6 @@ public final class ServiceEndpointPolicyDefinitionResponse {
             this.serviceResources = serviceResources;
             return this;
         }
-
         public ServiceEndpointPolicyDefinitionResponse build() {
             return new ServiceEndpointPolicyDefinitionResponse(description, etag, id, name, provisioningState, service, serviceResources);
         }

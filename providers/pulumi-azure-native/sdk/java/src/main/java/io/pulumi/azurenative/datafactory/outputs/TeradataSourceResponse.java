@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.TeradataPartitionSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -92,63 +92,63 @@ public final class TeradataSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
-     */
+    */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * The partition mechanism that will be used for teradata read in parallel. Possible values include: "None", "Hash", "DynamicRange".
      * 
-     */
+    */
     public Optional<Object> getPartitionOption() {
         return Optional.ofNullable(this.partitionOption);
     }
     /**
      * The settings that will be leveraged for teradata source partitioning.
      * 
-     */
+    */
     public Optional<TeradataPartitionSettingsResponse> getPartitionSettings() {
         return Optional.ofNullable(this.partitionSettings);
     }
     /**
      * Teradata query. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getQuery() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -156,7 +156,7 @@ public final class TeradataSourceResponse {
      * Copy source type.
      * Expected value is 'TeradataSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -248,7 +248,6 @@ public final class TeradataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TeradataSourceResponse build() {
             return new TeradataSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

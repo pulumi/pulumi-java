@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetVersionArgs Empty = new GetVersionArgs();
 
     @InputImport(name="appId", required=true)
-    private final String appId;
+      private final String appId;
 
     public String getAppId() {
         return this.appId;
     }
 
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
     }
 
     @InputImport(name="versionId", required=true)
-    private final String versionId;
+      private final String versionId;
 
     public String getVersionId() {
         return this.versionId;
     }
 
     @InputImport(name="view")
-    private final @Nullable String view;
+      private final @Nullable String view;
 
     public Optional<String> getView() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
@@ -105,7 +105,6 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.view = view;
             return this;
         }
-
         public GetVersionArgs build() {
             return new GetVersionArgs(appId, serviceId, versionId, view);
         }

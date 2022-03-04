@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudRetailV2betaRatingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="averageRating")
-    private final @Nullable Input<Double> averageRating;
+      private final @Nullable Input<Double> averageRating;
 
     public Input<Double> getAverageRating() {
         return this.averageRating == null ? Input.empty() : this.averageRating;
@@ -36,7 +36,7 @@ public final class GoogleCloudRetailV2betaRatingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ratingCount")
-    private final @Nullable Input<Integer> ratingCount;
+      private final @Nullable Input<Integer> ratingCount;
 
     public Input<Integer> getRatingCount() {
         return this.ratingCount == null ? Input.empty() : this.ratingCount;
@@ -47,7 +47,7 @@ public final class GoogleCloudRetailV2betaRatingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ratingHistogram")
-    private final @Nullable Input<List<Integer>> ratingHistogram;
+      private final @Nullable Input<List<Integer>> ratingHistogram;
 
     public Input<List<Integer>> getRatingHistogram() {
         return this.ratingHistogram == null ? Input.empty() : this.ratingHistogram;
@@ -121,7 +121,6 @@ public final class GoogleCloudRetailV2betaRatingArgs extends io.pulumi.resources
             this.ratingHistogram = Input.ofNullable(ratingHistogram);
             return this;
         }
-
         public GoogleCloudRetailV2betaRatingArgs build() {
             return new GoogleCloudRetailV2betaRatingArgs(averageRating, ratingCount, ratingHistogram);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -36,7 +36,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="alwaysRun")
-    private final @Nullable Boolean alwaysRun;
+      private final @Nullable Boolean alwaysRun;
 
     public Optional<Boolean> getAlwaysRun() {
         return this.alwaysRun == null ? Optional.empty() : Optional.ofNullable(this.alwaysRun);
@@ -47,7 +47,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="applyUpdateBefore")
-    private final @Nullable Boolean applyUpdateBefore;
+      private final @Nullable Boolean applyUpdateBefore;
 
     public Optional<Boolean> getApplyUpdateBefore() {
         return this.applyUpdateBefore == null ? Optional.empty() : Optional.ofNullable(this.applyUpdateBefore);
@@ -58,7 +58,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+      private final String content;
 
     public String getContent() {
         return this.content;
@@ -69,7 +69,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final String contentType;
+      private final String contentType;
 
     public String getContentType() {
         return this.contentType;
@@ -80,7 +80,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxRunTime")
-    private final @Nullable Integer maxRunTime;
+      private final @Nullable Integer maxRunTime;
 
     public Optional<Integer> getMaxRunTime() {
         return this.maxRunTime == null ? Optional.empty() : Optional.ofNullable(this.maxRunTime);
@@ -91,7 +91,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -102,7 +102,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restartAfter")
-    private final @Nullable Boolean restartAfter;
+      private final @Nullable Boolean restartAfter;
 
     public Optional<Boolean> getRestartAfter() {
         return this.restartAfter == null ? Optional.empty() : Optional.ofNullable(this.restartAfter);
@@ -113,7 +113,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="runAsInteractive")
-    private final @Nullable Boolean runAsInteractive;
+      private final @Nullable Boolean runAsInteractive;
 
     public Optional<Boolean> getRunAsInteractive() {
         return this.runAsInteractive == null ? Optional.empty() : Optional.ofNullable(this.runAsInteractive);
@@ -124,7 +124,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="runElevated")
-    private final @Nullable Boolean runElevated;
+      private final @Nullable Boolean runElevated;
 
     public Optional<Boolean> getRunElevated() {
         return this.runElevated == null ? Optional.empty() : Optional.ofNullable(this.runElevated);
@@ -253,7 +253,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
             this.runElevated = runElevated;
             return this;
         }
-
         public CommandResponse build() {
             return new CommandResponse(action, alwaysRun, applyUpdateBefore, content, contentType, maxRunTime, name, restartAfter, runAsInteractive, runElevated);
         }

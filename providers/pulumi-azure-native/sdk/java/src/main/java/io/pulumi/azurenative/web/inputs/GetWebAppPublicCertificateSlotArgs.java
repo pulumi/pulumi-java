@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetWebAppPublicCertificateSlotArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppPublicCertificateSlotArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="publicCertificateName", required=true)
-    private final String publicCertificateName;
+      private final String publicCertificateName;
 
     public String getPublicCertificateName() {
         return this.publicCertificateName;
@@ -39,7 +39,7 @@ public final class GetWebAppPublicCertificateSlotArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetWebAppPublicCertificateSlotArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="slot", required=true)
-    private final String slot;
+      private final String slot;
 
     public String getSlot() {
         return this.slot;
@@ -119,7 +119,6 @@ public final class GetWebAppPublicCertificateSlotArgs extends io.pulumi.resource
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public GetWebAppPublicCertificateSlotArgs build() {
             return new GetWebAppPublicCertificateSlotArgs(name, publicCertificateName, resourceGroupName, slot);
         }

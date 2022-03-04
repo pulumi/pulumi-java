@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleRateLimitOptionsBanThreshold;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleRateLimitOptionsRateLimitThreshold;
@@ -81,7 +81,7 @@ public final class SecurityPolicyRuleRateLimitOptions {
      * Can only be specified if the `action` for the rule is "rate_based_ban".
      * If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
      * 
-     */
+    */
     public Optional<Integer> getBanDurationSec() {
         return Optional.ofNullable(this.banDurationSec);
     }
@@ -90,14 +90,14 @@ public final class SecurityPolicyRuleRateLimitOptions {
      * If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also
      * exceed this 'ban_threshold'. Structure is documented below.
      * 
-     */
+    */
     public Optional<SecurityPolicyRuleRateLimitOptionsBanThreshold> getBanThreshold() {
         return Optional.ofNullable(this.banThreshold);
     }
     /**
      * Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
      * 
-     */
+    */
     public String getConformAction() {
         return this.conformAction;
     }
@@ -105,14 +105,14 @@ public final class SecurityPolicyRuleRateLimitOptions {
      * Determines the key to enforce the rate_limit_threshold on.
      * Possible values incude "ALL", "ALL_IPS", "HTTP_HEADER", "IP", "XFF_IP". If not specified, defaults to "ALL".
      * 
-     */
+    */
     public Optional<String> getEnforceOnKey() {
         return Optional.ofNullable(this.enforceOnKey);
     }
     /**
      * Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
      * 
-     */
+    */
     public Optional<String> getEnforceOnKeyName() {
         return Optional.ofNullable(this.enforceOnKeyName);
     }
@@ -120,7 +120,7 @@ public final class SecurityPolicyRuleRateLimitOptions {
      * When a request is denied, returns the HTTP response code specified.
      * Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.
      * 
-     */
+    */
     public String getExceedAction() {
         return this.exceedAction;
     }
@@ -130,7 +130,7 @@ public final class SecurityPolicyRuleRateLimitOptions {
     /**
      * Threshold at which to begin ratelimiting. Structure is documented below.
      * 
-     */
+    */
     public SecurityPolicyRuleRateLimitOptionsRateLimitThreshold getRateLimitThreshold() {
         return this.rateLimitThreshold;
     }
@@ -208,7 +208,6 @@ public final class SecurityPolicyRuleRateLimitOptions {
             this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
             return this;
         }
-
         public SecurityPolicyRuleRateLimitOptions build() {
             return new SecurityPolicyRuleRateLimitOptions(banDurationSec, banThreshold, conformAction, enforceOnKey, enforceOnKeyName, exceedAction, exceedRedirectOptions, rateLimitThreshold);
         }

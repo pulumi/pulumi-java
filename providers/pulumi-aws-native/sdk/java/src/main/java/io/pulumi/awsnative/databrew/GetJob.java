@@ -6,17 +6,33 @@ package io.pulumi.awsnative.databrew;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.databrew.inputs.GetJobArgs;
 import io.pulumi.awsnative.databrew.outputs.GetJobResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJob {
-/**
- * Resource schema for AWS::DataBrew::Job.
+    private GetJob() {}
+    public interface BuilderApplicator {
+        public void apply(GetJobArgs.Builder a);
+    }
+    private static GetJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::DataBrew::Job.
  * 
- */
+     */
+    public static CompletableFuture<GetJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::DataBrew::Job.
+     * 
+     */
     public static CompletableFuture<GetJobResult> invokeAsync(GetJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getJob", TypeShape.of(GetJobResult.class), args == null ? GetJobArgs.Empty : args, Utilities.withVersion(options));
     }

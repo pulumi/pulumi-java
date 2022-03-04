@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1.enums.SchemaType;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition")
-    private final @Nullable Input<String> definition;
+      private final @Nullable Input<String> definition;
 
     public Input<String> getDefinition() {
         return this.definition == null ? Input.empty() : this.definition;
@@ -31,21 +31,21 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="schemaId")
-    private final @Nullable Input<String> schemaId;
+      private final @Nullable Input<String> schemaId;
 
     public Input<String> getSchemaId() {
         return this.schemaId == null ? Input.empty() : this.schemaId;
@@ -56,7 +56,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<SchemaType> type;
+      private final @Nullable Input<SchemaType> type;
 
     public Input<SchemaType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -160,7 +160,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public SchemaArgs build() {
             return new SchemaArgs(definition, name, project, schemaId, type);
         }

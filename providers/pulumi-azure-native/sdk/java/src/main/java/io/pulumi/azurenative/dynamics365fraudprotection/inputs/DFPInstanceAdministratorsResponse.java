@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dynamics365fraudprotection.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DFPInstanceAdministratorsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="members")
-    private final @Nullable List<String> members;
+      private final @Nullable List<String> members;
 
     public List<String> getMembers() {
         return this.members == null ? List.of() : this.members;
@@ -62,7 +62,6 @@ public final class DFPInstanceAdministratorsResponse extends io.pulumi.resources
             this.members = members;
             return this;
         }
-
         public DFPInstanceAdministratorsResponse build() {
             return new DFPInstanceAdministratorsResponse(members);
         }

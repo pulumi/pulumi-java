@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.ConnectionStateResponse;
 import io.pulumi.azurenative.eventgrid.outputs.PrivateEndpointResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class PrivateEndpointConnectionResponse {
     /**
      * GroupIds from the private link service resource.
      * 
-     */
+    */
     public List<String> getGroupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
     /**
      * Fully qualified identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Private Endpoint resource for this Connection.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Details about the state of the connection.
      * 
-     */
+    */
     public Optional<ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the Private Endpoint Connection.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class PrivateEndpointConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(groupIds, id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

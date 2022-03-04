@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.ContactDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ShippingAddressResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class AddressPropertiesResponse {
     /**
      * Status of address validation
      * 
-     */
+    */
     public String getAddressValidationStatus() {
         return this.addressValidationStatus;
     }
     /**
      * Contact details for the address
      * 
-     */
+    */
     public ContactDetailsResponse getContactDetails() {
         return this.contactDetails;
     }
     /**
      * Shipping details for the address
      * 
-     */
+    */
     public Optional<ShippingAddressResponse> getShippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
@@ -99,7 +99,6 @@ public final class AddressPropertiesResponse {
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public AddressPropertiesResponse build() {
             return new AddressPropertiesResponse(addressValidationStatus, contactDetails, shippingAddress);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.certificates.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.inputs.CertificateSigningRequestSpecArgs;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.inputs.CertificateSigningRequestStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -32,7 +32,7 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -43,14 +43,14 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -61,7 +61,7 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="spec", required=true)
-    private final Input<CertificateSigningRequestSpecArgs> spec;
+      private final Input<CertificateSigningRequestSpecArgs> spec;
 
     public Input<CertificateSigningRequestSpecArgs> getSpec() {
         return this.spec;
@@ -72,7 +72,7 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<CertificateSigningRequestStatusArgs> status;
+      private final @Nullable Input<CertificateSigningRequestStatusArgs> status;
 
     public Input<CertificateSigningRequestStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -176,7 +176,6 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public CertificateSigningRequestArgs build() {
             return new CertificateSigningRequestArgs(apiVersion, kind, metadata, spec, status);
         }

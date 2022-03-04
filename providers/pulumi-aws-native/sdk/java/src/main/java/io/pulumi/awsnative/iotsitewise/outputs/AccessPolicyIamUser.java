@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AccessPolicyIamUser {
     /**
      * The ARN of the IAM user.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -54,7 +54,6 @@ public final class AccessPolicyIamUser {
             this.arn = arn;
             return this;
         }
-
         public AccessPolicyIamUser build() {
             return new AccessPolicyIamUser(arn);
         }

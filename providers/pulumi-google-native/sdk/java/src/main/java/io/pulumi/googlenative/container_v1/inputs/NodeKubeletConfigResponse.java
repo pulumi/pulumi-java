@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NodeKubeletConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="cpuCfsQuota", required=true)
-    private final Boolean cpuCfsQuota;
+      private final Boolean cpuCfsQuota;
 
     public Boolean getCpuCfsQuota() {
         return this.cpuCfsQuota;
@@ -33,7 +33,7 @@ public final class NodeKubeletConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="cpuCfsQuotaPeriod", required=true)
-    private final String cpuCfsQuotaPeriod;
+      private final String cpuCfsQuotaPeriod;
 
     public String getCpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod;
@@ -44,7 +44,7 @@ public final class NodeKubeletConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="cpuManagerPolicy", required=true)
-    private final String cpuManagerPolicy;
+      private final String cpuManagerPolicy;
 
     public String getCpuManagerPolicy() {
         return this.cpuManagerPolicy;
@@ -103,7 +103,6 @@ public final class NodeKubeletConfigResponse extends io.pulumi.resources.InvokeA
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
         }
-
         public NodeKubeletConfigResponse build() {
             return new NodeKubeletConfigResponse(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }

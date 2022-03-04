@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class CrossSiteAccessPoliciesResponse {
     /**
      * The content of clientaccesspolicy.xml used by Silverlight.
      * 
-     */
+    */
     public Optional<String> getClientAccessPolicy() {
         return Optional.ofNullable(this.clientAccessPolicy);
     }
     /**
      * The content of crossdomain.xml used by Silverlight.
      * 
-     */
+    */
     public Optional<String> getCrossDomainPolicy() {
         return Optional.ofNullable(this.crossDomainPolicy);
     }
@@ -76,7 +76,6 @@ public final class CrossSiteAccessPoliciesResponse {
             this.crossDomainPolicy = crossDomainPolicy;
             return this;
         }
-
         public CrossSiteAccessPoliciesResponse build() {
             return new CrossSiteAccessPoliciesResponse(clientAccessPolicy, crossDomainPolicy);
         }

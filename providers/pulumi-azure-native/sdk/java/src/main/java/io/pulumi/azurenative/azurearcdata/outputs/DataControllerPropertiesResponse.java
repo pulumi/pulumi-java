@@ -8,7 +8,7 @@ import io.pulumi.azurenative.azurearcdata.outputs.LogAnalyticsWorkspaceConfigRes
 import io.pulumi.azurenative.azurearcdata.outputs.OnPremisePropertyResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.UploadServicePrincipalResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.UploadWatermarkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -77,35 +77,35 @@ public final class DataControllerPropertiesResponse {
     /**
      * Username and password for basic login authentication.
      * 
-     */
+    */
     public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
     /**
      * The raw kubernetes information
      * 
-     */
+    */
     public Optional<Object> getK8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
     /**
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
-     */
+    */
     public Optional<String> getLastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
     }
     /**
      * Log analytics workspace id and primary key
      * 
-     */
+    */
     public Optional<LogAnalyticsWorkspaceConfigResponse> getLogAnalyticsWorkspaceConfig() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceConfig);
     }
     /**
      * Properties from the Kubernetes data controller
      * 
-     */
+    */
     public Optional<OnPremisePropertyResponse> getOnPremiseProperty() {
         return Optional.ofNullable(this.onPremiseProperty);
     }
@@ -115,14 +115,14 @@ public final class DataControllerPropertiesResponse {
     /**
      * Service principal for uploading billing, metrics and logs.
      * 
-     */
+    */
     public Optional<UploadServicePrincipalResponse> getUploadServicePrincipal() {
         return Optional.ofNullable(this.uploadServicePrincipal);
     }
     /**
      * Properties on upload watermark.  Mostly timestamp for each upload data type
      * 
-     */
+    */
     public Optional<UploadWatermarkResponse> getUploadWatermark() {
         return Optional.ofNullable(this.uploadWatermark);
     }
@@ -200,7 +200,6 @@ public final class DataControllerPropertiesResponse {
             this.uploadWatermark = uploadWatermark;
             return this;
         }
-
         public DataControllerPropertiesResponse build() {
             return new DataControllerPropertiesResponse(basicLoginInformation, k8sRaw, lastUploadedDate, logAnalyticsWorkspaceConfig, onPremiseProperty, provisioningState, uploadServicePrincipal, uploadWatermark);
         }

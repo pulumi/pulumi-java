@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.xray.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -22,7 +22,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<Object> attributes;
+      private final @Nullable Input<Object> attributes;
 
     public Input<Object> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -33,7 +33,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedRate")
-    private final @Nullable Input<Double> fixedRate;
+      private final @Nullable Input<Double> fixedRate;
 
     public Input<Double> getFixedRate() {
         return this.fixedRate == null ? Input.empty() : this.fixedRate;
@@ -44,7 +44,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hTTPMethod")
-    private final @Nullable Input<String> hTTPMethod;
+      private final @Nullable Input<String> hTTPMethod;
 
     public Input<String> getHTTPMethod() {
         return this.hTTPMethod == null ? Input.empty() : this.hTTPMethod;
@@ -55,7 +55,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -66,7 +66,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -77,7 +77,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservoirSize")
-    private final @Nullable Input<Integer> reservoirSize;
+      private final @Nullable Input<Integer> reservoirSize;
 
     public Input<Integer> getReservoirSize() {
         return this.reservoirSize == null ? Input.empty() : this.reservoirSize;
@@ -88,21 +88,21 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceARN")
-    private final @Nullable Input<String> resourceARN;
+      private final @Nullable Input<String> resourceARN;
 
     public Input<String> getResourceARN() {
         return this.resourceARN == null ? Input.empty() : this.resourceARN;
     }
 
     @InputImport(name="ruleARN")
-    private final @Nullable Input<String> ruleARN;
+      private final @Nullable Input<String> ruleARN;
 
     public Input<String> getRuleARN() {
         return this.ruleARN == null ? Input.empty() : this.ruleARN;
     }
 
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+      private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -113,7 +113,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -124,7 +124,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceType")
-    private final @Nullable Input<String> serviceType;
+      private final @Nullable Input<String> serviceType;
 
     public Input<String> getServiceType() {
         return this.serviceType == null ? Input.empty() : this.serviceType;
@@ -135,7 +135,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uRLPath")
-    private final @Nullable Input<String> uRLPath;
+      private final @Nullable Input<String> uRLPath;
 
     public Input<String> getURLPath() {
         return this.uRLPath == null ? Input.empty() : this.uRLPath;
@@ -146,7 +146,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -370,7 +370,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public SamplingRuleArgs build() {
             return new SamplingRuleArgs(attributes, fixedRate, hTTPMethod, host, priority, reservoirSize, resourceARN, ruleARN, ruleName, serviceName, serviceType, uRLPath, version);
         }

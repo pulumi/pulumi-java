@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -31,7 +31,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="peerAsn")
-    private final @Nullable Input<Double> peerAsn;
+      private final @Nullable Input<Double> peerAsn;
 
     public Input<Double> getPeerAsn() {
         return this.peerAsn == null ? Input.empty() : this.peerAsn;
@@ -53,7 +53,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="peerIp")
-    private final @Nullable Input<String> peerIp;
+      private final @Nullable Input<String> peerIp;
 
     public Input<String> getPeerIp() {
         return this.peerIp == null ? Input.empty() : this.peerIp;
@@ -64,7 +64,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="peeringName")
-    private final @Nullable Input<String> peeringName;
+      private final @Nullable Input<String> peeringName;
 
     public Input<String> getPeeringName() {
         return this.peeringName == null ? Input.empty() : this.peeringName;
@@ -75,7 +75,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="virtualRouterName", required=true)
-    private final Input<String> virtualRouterName;
+      private final Input<String> virtualRouterName;
 
     public Input<String> getVirtualRouterName() {
         return this.virtualRouterName;
@@ -220,7 +220,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
             this.virtualRouterName = Input.of(Objects.requireNonNull(virtualRouterName));
             return this;
         }
-
         public VirtualRouterPeeringArgs build() {
             return new VirtualRouterPeeringArgs(id, name, peerAsn, peerIp, peeringName, resourceGroupName, virtualRouterName);
         }

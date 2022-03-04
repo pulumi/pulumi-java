@@ -6,17 +6,33 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.recoveryservices.inputs.GetResourceGuardProxyArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.GetResourceGuardProxyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceGuardProxy {
-/**
- * API Version: 2021-02-01-preview.
+    private GetResourceGuardProxy() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceGuardProxyArgs.Builder a);
+    }
+    private static GetResourceGuardProxyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceGuardProxyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2021-02-01-preview.
  * 
- */
+     */
+    public static CompletableFuture<GetResourceGuardProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetResourceGuardProxyResult> invokeAsync(GetResourceGuardProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getResourceGuardProxy", TypeShape.of(GetResourceGuardProxyResult.class), args == null ? GetResourceGuardProxyArgs.Empty : args, Utilities.withVersion(options));
     }

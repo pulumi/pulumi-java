@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ManagedCertificateResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="lastRenewalTime", required=true)
-    private final String lastRenewalTime;
+      private final String lastRenewalTime;
 
     public String getLastRenewalTime() {
         return this.lastRenewalTime;
@@ -32,7 +32,7 @@ public final class ManagedCertificateResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -81,7 +81,6 @@ public final class ManagedCertificateResponse extends io.pulumi.resources.Invoke
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ManagedCertificateResponse build() {
             return new ManagedCertificateResponse(lastRenewalTime, status);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,35 +54,35 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
     /**
      * List of databases on target server
      * 
-     */
+    */
     public List<String> getDatabases() {
         return this.databases;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Version of the target server
      * 
-     */
+    */
     public String getServerVersion() {
         return this.serverVersion;
     }
     /**
      * Target server brand version
      * 
-     */
+    */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Validation errors associated with the task
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }
@@ -139,7 +139,6 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToTargetAzureDbForMySqlTaskOutputResponse build() {
             return new ConnectToTargetAzureDbForMySqlTaskOutputResponse(databases, id, serverVersion, targetServerBrandVersion, validationErrors);
         }

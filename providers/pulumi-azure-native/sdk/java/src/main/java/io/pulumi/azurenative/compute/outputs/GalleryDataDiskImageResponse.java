@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.GalleryArtifactVersionSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class GalleryDataDiskImageResponse {
     /**
      * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
      * 
-     */
+    */
     public Optional<String> getHostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
     /**
      * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
      * 
-     */
+    */
     public Integer getLun() {
         return this.lun;
     }
     /**
      * This property indicates the size of the VHD to be created.
      * 
-     */
+    */
     public Integer getSizeInGB() {
         return this.sizeInGB;
     }
     /**
      * The gallery artifact version source.
      * 
-     */
+    */
     public Optional<GalleryArtifactVersionSourceResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
@@ -120,7 +120,6 @@ public final class GalleryDataDiskImageResponse {
             this.source = source;
             return this;
         }
-
         public GalleryDataDiskImageResponse build() {
             return new GalleryDataDiskImageResponse(hostCaching, lun, sizeInGB, source);
         }

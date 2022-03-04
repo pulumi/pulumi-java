@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.outputs;
 
 import io.pulumi.azurenative.solutions.outputs.JitApproverDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,28 +50,28 @@ public final class ApplicationJitAccessPolicyResponse {
     /**
      * Whether the JIT access is enabled.
      * 
-     */
+    */
     public Boolean getJitAccessEnabled() {
         return this.jitAccessEnabled;
     }
     /**
      * JIT approval mode.
      * 
-     */
+    */
     public Optional<String> getJitApprovalMode() {
         return Optional.ofNullable(this.jitApprovalMode);
     }
     /**
      * The JIT approvers
      * 
-     */
+    */
     public List<JitApproverDefinitionResponse> getJitApprovers() {
         return this.jitApprovers == null ? List.of() : this.jitApprovers;
     }
     /**
      * The maximum duration JIT access is granted. This is an ISO8601 time period value.
      * 
-     */
+    */
     public Optional<String> getMaximumJitAccessDuration() {
         return Optional.ofNullable(this.maximumJitAccessDuration);
     }
@@ -121,7 +121,6 @@ public final class ApplicationJitAccessPolicyResponse {
             this.maximumJitAccessDuration = maximumJitAccessDuration;
             return this;
         }
-
         public ApplicationJitAccessPolicyResponse build() {
             return new ApplicationJitAccessPolicyResponse(jitAccessEnabled, jitApprovalMode, jitApprovers, maximumJitAccessDuration);
         }

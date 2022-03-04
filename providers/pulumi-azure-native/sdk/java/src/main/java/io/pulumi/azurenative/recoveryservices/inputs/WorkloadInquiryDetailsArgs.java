@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.InquiryValidationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inquiryValidation")
-    private final @Nullable Input<InquiryValidationArgs> inquiryValidation;
+      private final @Nullable Input<InquiryValidationArgs> inquiryValidation;
 
     public Input<InquiryValidationArgs> getInquiryValidation() {
         return this.inquiryValidation == null ? Input.empty() : this.inquiryValidation;
@@ -36,7 +36,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="itemCount")
-    private final @Nullable Input<Double> itemCount;
+      private final @Nullable Input<Double> itemCount;
 
     public Input<Double> getItemCount() {
         return this.itemCount == null ? Input.empty() : this.itemCount;
@@ -47,7 +47,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -121,7 +121,6 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public WorkloadInquiryDetailsArgs build() {
             return new WorkloadInquiryDetailsArgs(inquiryValidation, itemCount, type);
         }

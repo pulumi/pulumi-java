@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.MigrateMISyncCompleteCommandInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrateMISyncCompleteCommandOutputResponse;
 import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,35 +60,35 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse {
      * Command type.
      * Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
      * 
-     */
+    */
     public String getCommandType() {
         return this.commandType;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
-     */
+    */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Command input
      * 
-     */
+    */
     public Optional<MigrateMISyncCompleteCommandInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Command output. This is ignored if submitted.
      * 
-     */
+    */
     public MigrateMISyncCompleteCommandOutputResponse getOutput() {
         return this.output;
     }
     /**
      * The state of the command. This is ignored if submitted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -145,7 +145,6 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MigrateMISyncCompleteCommandPropertiesResponse build() {
             return new MigrateMISyncCompleteCommandPropertiesResponse(commandType, errors, input, output, state);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.PolicyAlternativeNameServerConfigArgs;
 import io.pulumi.googlenative.dns_v1beta2.inputs.PolicyNetworkArgs;
 import java.lang.Boolean;
@@ -23,14 +23,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alternativeNameServerConfig")
-    private final @Nullable Input<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
+      private final @Nullable Input<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
 
     public Input<PolicyAlternativeNameServerConfigArgs> getAlternativeNameServerConfig() {
         return this.alternativeNameServerConfig == null ? Input.empty() : this.alternativeNameServerConfig;
     }
 
     @InputImport(name="clientOperationId")
-    private final @Nullable Input<String> clientOperationId;
+      private final @Nullable Input<String> clientOperationId;
 
     public Input<String> getClientOperationId() {
         return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
@@ -41,7 +41,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,7 +52,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableInboundForwarding")
-    private final @Nullable Input<Boolean> enableInboundForwarding;
+      private final @Nullable Input<Boolean> enableInboundForwarding;
 
     public Input<Boolean> getEnableInboundForwarding() {
         return this.enableInboundForwarding == null ? Input.empty() : this.enableInboundForwarding;
@@ -63,7 +63,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableLogging")
-    private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Input<Boolean> enableLogging;
 
     public Input<Boolean> getEnableLogging() {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
@@ -74,14 +74,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -92,7 +92,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -103,14 +103,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networks")
-    private final @Nullable Input<List<PolicyNetworkArgs>> networks;
+      private final @Nullable Input<List<PolicyNetworkArgs>> networks;
 
     public Input<List<PolicyNetworkArgs>> getNetworks() {
         return this.networks == null ? Input.empty() : this.networks;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -289,7 +289,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public PolicyArgs build() {
             return new PolicyArgs(alternativeNameServerConfig, clientOperationId, description, enableInboundForwarding, enableLogging, id, kind, name, networks, project);
         }

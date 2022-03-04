@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="fqdns")
-    private final @Nullable Input<List<String>> fqdns;
+      private final @Nullable Input<List<String>> fqdns;
 
     public Input<List<String>> getFqdns() {
         return this.fqdns == null ? Input.empty() : this.fqdns;
@@ -35,7 +35,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable Input<String> groupId;
+      private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -46,7 +46,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateLinkResourceId")
-    private final @Nullable Input<String> privateLinkResourceId;
+      private final @Nullable Input<String> privateLinkResourceId;
 
     public Input<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
@@ -120,7 +120,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             this.privateLinkResourceId = Input.ofNullable(privateLinkResourceId);
             return this;
         }
-
         public ManagedPrivateEndpointArgs build() {
             return new ManagedPrivateEndpointArgs(fqdns, groupId, privateLinkResourceId);
         }

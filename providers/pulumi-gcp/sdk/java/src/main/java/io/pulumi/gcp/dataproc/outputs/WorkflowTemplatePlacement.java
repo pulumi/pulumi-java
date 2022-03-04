@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementClusterSelector;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedCluster;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class WorkflowTemplatePlacement {
     /**
      * Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.
      * 
-     */
+    */
     public Optional<WorkflowTemplatePlacementClusterSelector> getClusterSelector() {
         return Optional.ofNullable(this.clusterSelector);
     }
     /**
      * A cluster that is managed by the workflow.
      * 
-     */
+    */
     public Optional<WorkflowTemplatePlacementManagedCluster> getManagedCluster() {
         return Optional.ofNullable(this.managedCluster);
     }
@@ -77,7 +77,6 @@ public final class WorkflowTemplatePlacement {
             this.managedCluster = managedCluster;
             return this;
         }
-
         public WorkflowTemplatePlacement build() {
             return new WorkflowTemplatePlacement(clusterSelector, managedCluster);
         }

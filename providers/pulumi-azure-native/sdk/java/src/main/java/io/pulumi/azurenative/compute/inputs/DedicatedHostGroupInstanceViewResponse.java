@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.DedicatedHostInstanceViewWithNameResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class DedicatedHostGroupInstanceViewResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="hosts")
-    private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
+      private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
 
     public List<DedicatedHostInstanceViewWithNameResponse> getHosts() {
         return this.hosts == null ? List.of() : this.hosts;
@@ -58,7 +58,6 @@ public final class DedicatedHostGroupInstanceViewResponse extends io.pulumi.reso
             this.hosts = hosts;
             return this;
         }
-
         public DedicatedHostGroupInstanceViewResponse build() {
             return new DedicatedHostGroupInstanceViewResponse(hosts);
         }

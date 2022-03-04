@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1FulfillmentArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentVersion")
-    private final @Nullable Input<String> agentVersion;
+      private final @Nullable Input<String> agentVersion;
 
     public Input<String> getAgentVersion() {
         return this.agentVersion == null ? Input.empty() : this.agentVersion;
@@ -32,14 +32,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -50,21 +50,21 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fulfillment")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment;
 
     public Input<GoogleCloudDialogflowV2beta1FulfillmentArgs> getFulfillment() {
         return this.fulfillment == null ? Input.empty() : this.fulfillment;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -75,7 +75,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="textToSpeechSettings")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings;
 
     public Input<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> getTextToSpeechSettings() {
         return this.textToSpeechSettings == null ? Input.empty() : this.textToSpeechSettings;
@@ -209,7 +209,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.textToSpeechSettings = Input.ofNullable(textToSpeechSettings);
             return this;
         }
-
         public EnvironmentArgs build() {
             return new EnvironmentArgs(agentVersion, description, environmentId, fulfillment, location, project, textToSpeechSettings);
         }

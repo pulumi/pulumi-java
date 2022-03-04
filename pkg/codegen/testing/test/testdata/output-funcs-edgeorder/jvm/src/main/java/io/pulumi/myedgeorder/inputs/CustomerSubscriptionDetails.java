@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.myedgeorder.inputs.CustomerSubscriptionRegisteredFeatures;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="locationPlacementId")
-    private final @Nullable String locationPlacementId;
+      private final @Nullable String locationPlacementId;
 
     public Optional<String> getLocationPlacementId() {
         return this.locationPlacementId == null ? Optional.empty() : Optional.ofNullable(this.locationPlacementId);
@@ -36,7 +36,7 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="quotaId", required=true)
-    private final String quotaId;
+      private final String quotaId;
 
     public String getQuotaId() {
         return this.quotaId;
@@ -47,7 +47,7 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="registeredFeatures")
-    private final @Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures;
+      private final @Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures;
 
     public List<CustomerSubscriptionRegisteredFeatures> getRegisteredFeatures() {
         return this.registeredFeatures == null ? List.of() : this.registeredFeatures;
@@ -106,7 +106,6 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
             this.registeredFeatures = registeredFeatures;
             return this;
         }
-
         public CustomerSubscriptionDetails build() {
             return new CustomerSubscriptionDetails(locationPlacementId, quotaId, registeredFeatures);
         }

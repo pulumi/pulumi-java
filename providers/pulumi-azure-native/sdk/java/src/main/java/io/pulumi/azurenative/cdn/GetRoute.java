@@ -6,21 +6,41 @@ package io.pulumi.azurenative.cdn;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cdn.inputs.GetRouteArgs;
 import io.pulumi.azurenative.cdn.outputs.GetRouteResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoute {
-/**
- * Friendly Routes name mapping to the any Routes or secret related information.
+    private GetRoute() {}
+    public interface BuilderApplicator {
+        public void apply(GetRouteArgs.Builder a);
+    }
+    private static GetRouteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRouteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Friendly Routes name mapping to the any Routes or secret related information.
  * API Version: 2020-09-01.
  * 
- *
- * Friendly Routes name mapping to the any Routes or secret related information.
+     *
+     * Friendly Routes name mapping to the any Routes or secret related information.
  * 
- */
+     */
+    public static CompletableFuture<GetRouteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Friendly Routes name mapping to the any Routes or secret related information.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * Friendly Routes name mapping to the any Routes or secret related information.
+     * 
+     */
     public static CompletableFuture<GetRouteResult> invokeAsync(GetRouteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getRoute", TypeShape.of(GetRouteResult.class), args == null ? GetRouteArgs.Empty : args, Utilities.withVersion(options));
     }

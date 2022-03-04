@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="wsdlEndpointName")
-    private final @Nullable Input<String> wsdlEndpointName;
+      private final @Nullable Input<String> wsdlEndpointName;
 
     public Input<String> getWsdlEndpointName() {
         return this.wsdlEndpointName == null ? Input.empty() : this.wsdlEndpointName;
@@ -34,7 +34,7 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="wsdlServiceName")
-    private final @Nullable Input<String> wsdlServiceName;
+      private final @Nullable Input<String> wsdlServiceName;
 
     public Input<String> getWsdlServiceName() {
         return this.wsdlServiceName == null ? Input.empty() : this.wsdlServiceName;
@@ -93,7 +93,6 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
             this.wsdlServiceName = Input.ofNullable(wsdlServiceName);
             return this;
         }
-
         public ApiCreateOrUpdatePropertiesWsdlSelectorArgs build() {
             return new ApiCreateOrUpdatePropertiesWsdlSelectorArgs(wsdlEndpointName, wsdlServiceName);
         }

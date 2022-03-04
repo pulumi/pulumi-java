@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout;
 import java.lang.Integer;
 import java.lang.String;
@@ -64,7 +64,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
     /**
      * Specifies the allowed number retries. This number must be > 0.
      * 
-     */
+    */
     public Optional<Integer> getNumRetries() {
         return Optional.ofNullable(this.numRetries);
     }
@@ -72,7 +72,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
      * Specifies a non-zero timeout per retry attempt.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout> getPerTryTimeout() {
         return Optional.ofNullable(this.perTryTimeout);
     }
@@ -99,7 +99,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
      * - unavailable: Loadbalancer will retry if
      *   the gRPC status code in the response header is set to unavailable
      * 
-     */
+    */
     public List<String> getRetryConditions() {
         return this.retryConditions == null ? List.of() : this.retryConditions;
     }
@@ -142,7 +142,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
             this.retryConditions = retryConditions;
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy(numRetries, perTryTimeout, retryConditions);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.enums.RecordingConfigurationThumbnailConfigurationRecordingMode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class RecordingConfigurationThumbnailConfiguration {
     /**
      * Thumbnail Recording Mode, which determines whether thumbnails are recorded at an interval or are disabled.
      * 
-     */
+    */
     public RecordingConfigurationThumbnailConfigurationRecordingMode getRecordingMode() {
         return this.recordingMode;
     }
     /**
      * Thumbnail recording Target Interval Seconds defines the interval at which thumbnails are recorded. This field is required if RecordingMode is INTERVAL.
      * 
-     */
+    */
     public Optional<Integer> getTargetIntervalSeconds() {
         return Optional.ofNullable(this.targetIntervalSeconds);
     }
@@ -77,7 +77,6 @@ public final class RecordingConfigurationThumbnailConfiguration {
             this.targetIntervalSeconds = targetIntervalSeconds;
             return this;
         }
-
         public RecordingConfigurationThumbnailConfiguration build() {
             return new RecordingConfigurationThumbnailConfiguration(recordingMode, targetIntervalSeconds);
         }

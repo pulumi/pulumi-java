@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EncryptionConfigurationResponse {
     /**
      * [Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
@@ -52,7 +52,6 @@ public final class EncryptionConfigurationResponse {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public EncryptionConfigurationResponse build() {
             return new EncryptionConfigurationResponse(kmsKeyName);
         }

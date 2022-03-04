@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigDisk
      * 
      */
     @InputImport(name="bootDiskSizeGb")
-    private final @Nullable Input<Integer> bootDiskSizeGb;
+      private final @Nullable Input<Integer> bootDiskSizeGb;
 
     public Input<Integer> getBootDiskSizeGb() {
         return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
@@ -31,7 +31,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigDisk
      * 
      */
     @InputImport(name="bootDiskType")
-    private final @Nullable Input<String> bootDiskType;
+      private final @Nullable Input<String> bootDiskType;
 
     public Input<String> getBootDiskType() {
         return this.bootDiskType == null ? Input.empty() : this.bootDiskType;
@@ -42,7 +42,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigDisk
      * 
      */
     @InputImport(name="numLocalSsds")
-    private final @Nullable Input<Integer> numLocalSsds;
+      private final @Nullable Input<Integer> numLocalSsds;
 
     public Input<Integer> getNumLocalSsds() {
         return this.numLocalSsds == null ? Input.empty() : this.numLocalSsds;
@@ -116,7 +116,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigDisk
             this.numLocalSsds = Input.ofNullable(numLocalSsds);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }

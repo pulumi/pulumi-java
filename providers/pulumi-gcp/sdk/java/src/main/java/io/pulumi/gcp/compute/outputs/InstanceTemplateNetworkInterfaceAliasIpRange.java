@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,7 +43,7 @@ public final class InstanceTemplateNetworkInterfaceAliasIpRange {
      * netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
      * error.
      * 
-     */
+    */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
@@ -52,7 +52,7 @@ public final class InstanceTemplateNetworkInterfaceAliasIpRange {
      * the secondary range from which to allocate the IP CIDR range for this alias IP
      * range. If left unspecified, the primary range of the subnetwork will be used.
      * 
-     */
+    */
     public Optional<String> getSubnetworkRangeName() {
         return Optional.ofNullable(this.subnetworkRangeName);
     }
@@ -88,7 +88,6 @@ public final class InstanceTemplateNetworkInterfaceAliasIpRange {
             this.subnetworkRangeName = subnetworkRangeName;
             return this;
         }
-
         public InstanceTemplateNetworkInterfaceAliasIpRange build() {
             return new InstanceTemplateNetworkInterfaceAliasIpRange(ipCidrRange, subnetworkRangeName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="blueprintName", required=true)
-    private final String blueprintName;
+      private final String blueprintName;
 
     public String getBlueprintName() {
         return this.blueprintName;
@@ -28,7 +28,7 @@ public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceScope", required=true)
-    private final String resourceScope;
+      private final String resourceScope;
 
     public String getResourceScope() {
         return this.resourceScope;
@@ -39,7 +39,7 @@ public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="versionId", required=true)
-    private final String versionId;
+      private final String versionId;
 
     public String getVersionId() {
         return this.versionId;
@@ -98,7 +98,6 @@ public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeA
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public GetPublishedBlueprintArgs build() {
             return new GetPublishedBlueprintArgs(blueprintName, resourceScope, versionId);
         }

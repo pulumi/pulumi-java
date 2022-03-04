@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelExpressionVariable;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelMetricWindow;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-    private final String expression;
+      private final String expression;
 
     public String getExpression() {
         return this.expression;
@@ -31,7 +31,7 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="variables", required=true)
-    private final List<AssetModelExpressionVariable> variables;
+      private final List<AssetModelExpressionVariable> variables;
 
     public List<AssetModelExpressionVariable> getVariables() {
         return this.variables;
@@ -42,7 +42,7 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="window", required=true)
-    private final AssetModelMetricWindow window;
+      private final AssetModelMetricWindow window;
 
     public AssetModelMetricWindow getWindow() {
         return this.window;
@@ -101,7 +101,6 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
             this.window = Objects.requireNonNull(window);
             return this;
         }
-
         public AssetModelMetric build() {
             return new AssetModelMetric(expression, variables, window);
         }

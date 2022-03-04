@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class GetProviderInstanceResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A JSON string containing metadata of the provider instance.
      * 
-     */
+    */
     public Optional<String> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A JSON string containing the properties of the provider instance.
      * 
-     */
+    */
     public String getProperties() {
         return this.properties;
     }
     /**
      * State of provisioning of the provider instance
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -160,7 +160,6 @@ public final class GetProviderInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProviderInstanceResult build() {
             return new GetProviderInstanceResult(id, metadata, name, properties, provisioningState, type);
         }

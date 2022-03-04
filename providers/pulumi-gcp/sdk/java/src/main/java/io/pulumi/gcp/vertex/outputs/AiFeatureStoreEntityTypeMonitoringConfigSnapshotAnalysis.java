@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
     /**
      * The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.
      * 
-     */
+    */
     public Optional<Boolean> getDisabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -43,7 +43,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
      * Configuration of the snapshot analysis based monitoring pipeline running interval. The value is rolled up to full day.
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getMonitoringInterval() {
         return Optional.ofNullable(this.monitoringInterval);
     }
@@ -79,7 +79,6 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
             this.monitoringInterval = monitoringInterval;
             return this;
         }
-
         public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis(disabled, monitoringInterval);
         }

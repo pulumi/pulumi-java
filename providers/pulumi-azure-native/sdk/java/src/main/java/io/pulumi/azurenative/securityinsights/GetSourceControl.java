@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.inputs.GetSourceControlArgs;
 import io.pulumi.azurenative.securityinsights.outputs.GetSourceControlResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSourceControl {
-/**
- * Represents a SourceControl in Azure Security Insights.
+    private GetSourceControl() {}
+    public interface BuilderApplicator {
+        public void apply(GetSourceControlArgs.Builder a);
+    }
+    private static GetSourceControlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSourceControlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a SourceControl in Azure Security Insights.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Represents a SourceControl in Azure Security Insights.
+     *
+     * Represents a SourceControl in Azure Security Insights.
  * 
- */
+     */
+    public static CompletableFuture<GetSourceControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a SourceControl in Azure Security Insights.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Represents a SourceControl in Azure Security Insights.
+     * 
+     */
     public static CompletableFuture<GetSourceControlResult> invokeAsync(GetSourceControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getSourceControl", TypeShape.of(GetSourceControlResult.class), args == null ? GetSourceControlArgs.Empty : args, Utilities.withVersion(options));
     }

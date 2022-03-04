@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIngressRule {
-/**
- * Gets the specified firewall rule.
+    private GetIngressRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetIngressRuleArgs.Builder a);
+    }
+    private static GetIngressRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIngressRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified firewall rule.
  * 
- */
+     */
+    public static CompletableFuture<GetIngressRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified firewall rule.
+     * 
+     */
     public static CompletableFuture<GetIngressRuleResult> invokeAsync(GetIngressRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1beta:getIngressRule", TypeShape.of(GetIngressRuleResult.class), args == null ? GetIngressRuleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.AppEngineServiceIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AppEngineServiceIamMemberState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -32,7 +32,7 @@ public final class AppEngineServiceIamMemberState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<AppEngineServiceIamMemberConditionGetArgs> condition;
+      private final @Nullable Input<AppEngineServiceIamMemberConditionGetArgs> condition;
 
     public Input<AppEngineServiceIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -43,14 +43,14 @@ public final class AppEngineServiceIamMemberState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -62,7 +62,7 @@ public final class AppEngineServiceIamMemberState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -75,7 +75,7 @@ public final class AppEngineServiceIamMemberState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -86,7 +86,7 @@ public final class AppEngineServiceIamMemberState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -220,7 +220,6 @@ public final class AppEngineServiceIamMemberState extends io.pulumi.resources.Re
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public AppEngineServiceIamMemberState build() {
             return new AppEngineServiceIamMemberState(appId, condition, etag, member, project, role, service);
         }

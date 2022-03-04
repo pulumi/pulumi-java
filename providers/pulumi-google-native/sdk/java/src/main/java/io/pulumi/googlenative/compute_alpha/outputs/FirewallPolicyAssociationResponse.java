@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class FirewallPolicyAssociationResponse {
     /**
      * The target that the firewall policy is attached to.
      * 
-     */
+    */
     public String getAttachmentTarget() {
         return this.attachmentTarget;
     }
     /**
      * Deprecated, please use short name instead. The display name of the firewall policy of the association.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The firewall policy ID of the association.
      * 
-     */
+    */
     public String getFirewallPolicyId() {
         return this.firewallPolicyId;
     }
     /**
      * The name for an association.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The short name of the firewall policy of the association.
      * 
-     */
+    */
     public String getShortName() {
         return this.shortName;
     }
@@ -137,7 +137,6 @@ public final class FirewallPolicyAssociationResponse {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public FirewallPolicyAssociationResponse build() {
             return new FirewallPolicyAssociationResponse(attachmentTarget, displayName, firewallPolicyId, name, shortName);
         }

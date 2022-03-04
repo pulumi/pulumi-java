@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SchemaComparisonValidationResultTypeResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidationErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -50,28 +50,28 @@ public final class SchemaComparisonValidationResultResponse {
     /**
      * List of schema differences between the source and target databases
      * 
-     */
+    */
     public SchemaComparisonValidationResultTypeResponse getSchemaDifferences() {
         return this.schemaDifferences;
     }
     /**
      * Count of source database objects
      * 
-     */
+    */
     public Map<String,Double> getSourceDatabaseObjectCount() {
         return this.sourceDatabaseObjectCount == null ? Map.of() : this.sourceDatabaseObjectCount;
     }
     /**
      * Count of target database objects
      * 
-     */
+    */
     public Map<String,Double> getTargetDatabaseObjectCount() {
         return this.targetDatabaseObjectCount == null ? Map.of() : this.targetDatabaseObjectCount;
     }
     /**
      * List of errors that happened while performing schema compare validation
      * 
-     */
+    */
     public ValidationErrorResponse getValidationErrors() {
         return this.validationErrors;
     }
@@ -121,7 +121,6 @@ public final class SchemaComparisonValidationResultResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public SchemaComparisonValidationResultResponse build() {
             return new SchemaComparisonValidationResultResponse(schemaDifferences, sourceDatabaseObjectCount, targetDatabaseObjectCount, validationErrors);
         }

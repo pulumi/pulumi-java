@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BlueprintStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="lastModified", required=true)
-    private final String lastModified;
+      private final String lastModified;
 
     public String getLastModified() {
         return this.lastModified;
@@ -32,7 +32,7 @@ public final class BlueprintStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="timeCreated", required=true)
-    private final String timeCreated;
+      private final String timeCreated;
 
     public String getTimeCreated() {
         return this.timeCreated;
@@ -81,7 +81,6 @@ public final class BlueprintStatusResponse extends io.pulumi.resources.InvokeArg
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public BlueprintStatusResponse build() {
             return new BlueprintStatusResponse(lastModified, timeCreated);
         }

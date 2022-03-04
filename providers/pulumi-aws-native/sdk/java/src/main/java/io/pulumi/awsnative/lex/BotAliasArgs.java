@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lex.inputs.BotAliasLocaleSettingsItemArgs;
 import io.pulumi.awsnative.lex.inputs.BotAliasTagArgs;
 import io.pulumi.awsnative.lex.inputs.SentimentAnalysisSettingsPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotAliasArgs Empty = new BotAliasArgs();
 
     @InputImport(name="botAliasLocaleSettings")
-    private final @Nullable Input<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
+      private final @Nullable Input<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
 
     public Input<List<BotAliasLocaleSettingsItemArgs>> getBotAliasLocaleSettings() {
         return this.botAliasLocaleSettings == null ? Input.empty() : this.botAliasLocaleSettings;
     }
 
     @InputImport(name="botAliasName")
-    private final @Nullable Input<String> botAliasName;
+      private final @Nullable Input<String> botAliasName;
 
     public Input<String> getBotAliasName() {
         return this.botAliasName == null ? Input.empty() : this.botAliasName;
@@ -38,35 +38,35 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botAliasTags")
-    private final @Nullable Input<List<BotAliasTagArgs>> botAliasTags;
+      private final @Nullable Input<List<BotAliasTagArgs>> botAliasTags;
 
     public Input<List<BotAliasTagArgs>> getBotAliasTags() {
         return this.botAliasTags == null ? Input.empty() : this.botAliasTags;
     }
 
     @InputImport(name="botId", required=true)
-    private final Input<String> botId;
+      private final Input<String> botId;
 
     public Input<String> getBotId() {
         return this.botId;
     }
 
     @InputImport(name="botVersion")
-    private final @Nullable Input<String> botVersion;
+      private final @Nullable Input<String> botVersion;
 
     public Input<String> getBotVersion() {
         return this.botVersion == null ? Input.empty() : this.botVersion;
     }
 
     @InputImport(name="conversationLogSettings")
-    private final @Nullable Input<BotAliasConversationLogSettingsArgs> conversationLogSettings;
+      private final @Nullable Input<BotAliasConversationLogSettingsArgs> conversationLogSettings;
 
     public Input<BotAliasConversationLogSettingsArgs> getConversationLogSettings() {
         return this.conversationLogSettings == null ? Input.empty() : this.conversationLogSettings;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -77,7 +77,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sentimentAnalysisSettings")
-    private final @Nullable Input<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
+      private final @Nullable Input<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
 
     public Input<SentimentAnalysisSettingsPropertiesArgs> getSentimentAnalysisSettings() {
         return this.sentimentAnalysisSettings == null ? Input.empty() : this.sentimentAnalysisSettings;
@@ -226,7 +226,6 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.sentimentAnalysisSettings = Input.ofNullable(sentimentAnalysisSettings);
             return this;
         }
-
         public BotAliasArgs build() {
             return new BotAliasArgs(botAliasLocaleSettings, botAliasName, botAliasTags, botId, botVersion, conversationLogSettings, description, sentimentAnalysisSettings);
         }

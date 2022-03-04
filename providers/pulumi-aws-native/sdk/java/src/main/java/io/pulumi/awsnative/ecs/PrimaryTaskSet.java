@@ -7,8 +7,8 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ecs.PrimaryTaskSetArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -61,6 +61,37 @@ public class PrimaryTaskSet extends io.pulumi.resources.CustomResource {
         return this.taskSetId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PrimaryTaskSetArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ecs.PrimaryTaskSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ecs.PrimaryTaskSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PrimaryTaskSet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PrimaryTaskSet(String name) {
+        this(name, PrimaryTaskSetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrimaryTaskSet(String name, PrimaryTaskSetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

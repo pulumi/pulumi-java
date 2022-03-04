@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetInstanceRequirementsRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -114,7 +114,6 @@ public final class SpotFleetLaunchTemplateOverrides {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public SpotFleetLaunchTemplateOverrides build() {
             return new SpotFleetLaunchTemplateOverrides(availabilityZone, instanceRequirements, instanceType, spotPrice, subnetId, weightedCapacity);
         }

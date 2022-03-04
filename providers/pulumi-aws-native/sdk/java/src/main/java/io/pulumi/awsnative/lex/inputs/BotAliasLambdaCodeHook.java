@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BotAliasLambdaCodeHook extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="codeHookInterfaceVersion", required=true)
-    private final String codeHookInterfaceVersion;
+      private final String codeHookInterfaceVersion;
 
     public String getCodeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
@@ -32,7 +32,7 @@ public final class BotAliasLambdaCodeHook extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lambdaArn", required=true)
-    private final String lambdaArn;
+      private final String lambdaArn;
 
     public String getLambdaArn() {
         return this.lambdaArn;
@@ -81,7 +81,6 @@ public final class BotAliasLambdaCodeHook extends io.pulumi.resources.InvokeArgs
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
-
         public BotAliasLambdaCodeHook build() {
             return new BotAliasLambdaCodeHook(codeHookInterfaceVersion, lambdaArn);
         }

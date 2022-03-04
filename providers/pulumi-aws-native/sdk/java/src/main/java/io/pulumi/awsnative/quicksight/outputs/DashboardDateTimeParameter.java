@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class DashboardDateTimeParameter {
     /**
      * <p>A display name for the date-time parameter.</p>
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * <p>The values for the date-time parameter.</p>
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -75,7 +75,6 @@ public final class DashboardDateTimeParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public DashboardDateTimeParameter build() {
             return new DashboardDateTimeParameter(name, values);
         }

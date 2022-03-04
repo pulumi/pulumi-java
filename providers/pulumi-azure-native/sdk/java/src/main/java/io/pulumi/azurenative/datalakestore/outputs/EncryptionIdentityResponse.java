@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class EncryptionIdentityResponse {
     /**
      * The principal identifier associated with the encryption.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant identifier associated with the encryption.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -95,7 +95,6 @@ public final class EncryptionIdentityResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncryptionIdentityResponse build() {
             return new EncryptionIdentityResponse(principalId, tenantId, type);
         }

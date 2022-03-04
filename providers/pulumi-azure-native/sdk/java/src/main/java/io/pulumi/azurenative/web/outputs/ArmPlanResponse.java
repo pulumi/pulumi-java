@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ArmPlanResponse {
     /**
      * The name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The product.
      * 
-     */
+    */
     public Optional<String> getProduct() {
         return Optional.ofNullable(this.product);
     }
     /**
      * The promotion code.
      * 
-     */
+    */
     public Optional<String> getPromotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * The publisher.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * Version of product.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -139,7 +139,6 @@ public final class ArmPlanResponse {
             this.version = version;
             return this;
         }
-
         public ArmPlanResponse build() {
             return new ArmPlanResponse(name, product, promotionCode, publisher, version);
         }

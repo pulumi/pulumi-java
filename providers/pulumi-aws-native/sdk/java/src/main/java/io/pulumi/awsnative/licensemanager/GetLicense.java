@@ -6,17 +6,33 @@ package io.pulumi.awsnative.licensemanager;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.licensemanager.inputs.GetLicenseArgs;
 import io.pulumi.awsnative.licensemanager.outputs.GetLicenseResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLicense {
-/**
- * Resource Type definition for AWS::LicenseManager::License
+    private GetLicense() {}
+    public interface BuilderApplicator {
+        public void apply(GetLicenseArgs.Builder a);
+    }
+    private static GetLicenseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLicenseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::LicenseManager::License
  * 
- */
+     */
+    public static CompletableFuture<GetLicenseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::LicenseManager::License
+     * 
+     */
     public static CompletableFuture<GetLicenseResult> invokeAsync(GetLicenseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:licensemanager:getLicense", TypeShape.of(GetLicenseResult.class), args == null ? GetLicenseArgs.Empty : args, Utilities.withVersion(options));
     }

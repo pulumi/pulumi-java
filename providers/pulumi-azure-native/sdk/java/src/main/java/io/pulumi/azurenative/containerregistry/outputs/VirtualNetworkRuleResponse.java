@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class VirtualNetworkRuleResponse {
     /**
      * The action of virtual network rule.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
      * 
-     */
+    */
     public String getVirtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }
@@ -76,7 +76,6 @@ public final class VirtualNetworkRuleResponse {
             this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(action, virtualNetworkResourceId);
         }

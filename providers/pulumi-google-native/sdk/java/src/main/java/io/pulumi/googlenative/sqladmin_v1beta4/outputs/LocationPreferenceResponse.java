@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class LocationPreferenceResponse {
     /**
      * The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
      * 
-     */
+    */
     public String getFollowGaeApplication() {
         return this.followGaeApplication;
     }
     /**
      * This is always `sql#locationPreference`.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
      * 
-     */
+    */
     public String getSecondaryZone() {
         return this.secondaryZone;
     }
     /**
      * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }
@@ -116,7 +116,6 @@ public final class LocationPreferenceResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public LocationPreferenceResponse build() {
             return new LocationPreferenceResponse(followGaeApplication, kind, secondaryZone, zone);
         }

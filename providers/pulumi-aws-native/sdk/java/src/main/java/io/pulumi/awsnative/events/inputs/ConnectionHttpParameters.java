@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.events.inputs;
 
 import io.pulumi.awsnative.events.inputs.ConnectionParameter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,21 +16,21 @@ public final class ConnectionHttpParameters extends io.pulumi.resources.InvokeAr
     public static final ConnectionHttpParameters Empty = new ConnectionHttpParameters();
 
     @InputImport(name="bodyParameters")
-    private final @Nullable List<ConnectionParameter> bodyParameters;
+      private final @Nullable List<ConnectionParameter> bodyParameters;
 
     public List<ConnectionParameter> getBodyParameters() {
         return this.bodyParameters == null ? List.of() : this.bodyParameters;
     }
 
     @InputImport(name="headerParameters")
-    private final @Nullable List<ConnectionParameter> headerParameters;
+      private final @Nullable List<ConnectionParameter> headerParameters;
 
     public List<ConnectionParameter> getHeaderParameters() {
         return this.headerParameters == null ? List.of() : this.headerParameters;
     }
 
     @InputImport(name="queryStringParameters")
-    private final @Nullable List<ConnectionParameter> queryStringParameters;
+      private final @Nullable List<ConnectionParameter> queryStringParameters;
 
     public List<ConnectionParameter> getQueryStringParameters() {
         return this.queryStringParameters == null ? List.of() : this.queryStringParameters;
@@ -89,7 +89,6 @@ public final class ConnectionHttpParameters extends io.pulumi.resources.InvokeAr
             this.queryStringParameters = queryStringParameters;
             return this;
         }
-
         public ConnectionHttpParameters build() {
             return new ConnectionHttpParameters(bodyParameters, headerParameters, queryStringParameters);
         }

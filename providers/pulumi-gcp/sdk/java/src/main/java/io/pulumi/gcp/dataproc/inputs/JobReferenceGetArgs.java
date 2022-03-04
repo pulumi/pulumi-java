@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class JobReferenceGetArgs extends io.pulumi.resources.ResourceArgs 
     public static final JobReferenceGetArgs Empty = new JobReferenceGetArgs();
 
     @InputImport(name="jobId")
-    private final @Nullable Input<String> jobId;
+      private final @Nullable Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId == null ? Input.empty() : this.jobId;
@@ -58,7 +58,6 @@ public final class JobReferenceGetArgs extends io.pulumi.resources.ResourceArgs 
             this.jobId = Input.ofNullable(jobId);
             return this;
         }
-
         public JobReferenceGetArgs build() {
             return new JobReferenceGetArgs(jobId);
         }

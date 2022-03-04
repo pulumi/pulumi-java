@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreCustomerManagedS3StorageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class DatastoreIotSiteWiseMultiLayerStorageArgs extends io.pulumi.r
     public static final DatastoreIotSiteWiseMultiLayerStorageArgs Empty = new DatastoreIotSiteWiseMultiLayerStorageArgs();
 
     @InputImport(name="customerManagedS3Storage")
-    private final @Nullable Input<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage;
+      private final @Nullable Input<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage;
 
     public Input<DatastoreCustomerManagedS3StorageArgs> getCustomerManagedS3Storage() {
         return this.customerManagedS3Storage == null ? Input.empty() : this.customerManagedS3Storage;
@@ -58,7 +58,6 @@ public final class DatastoreIotSiteWiseMultiLayerStorageArgs extends io.pulumi.r
             this.customerManagedS3Storage = Input.ofNullable(customerManagedS3Storage);
             return this;
         }
-
         public DatastoreIotSiteWiseMultiLayerStorageArgs build() {
             return new DatastoreIotSiteWiseMultiLayerStorageArgs(customerManagedS3Storage);
         }

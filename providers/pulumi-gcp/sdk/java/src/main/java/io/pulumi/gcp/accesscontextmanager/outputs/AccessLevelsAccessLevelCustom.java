@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelCustomExpr;
 import java.util.Objects;
 
@@ -29,7 +29,7 @@ public final class AccessLevelsAccessLevelCustom {
      * custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
      * Structure is documented below.
      * 
-     */
+    */
     public AccessLevelsAccessLevelCustomExpr getExpr() {
         return this.expr;
     }
@@ -58,7 +58,6 @@ public final class AccessLevelsAccessLevelCustom {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
-
         public AccessLevelsAccessLevelCustom build() {
             return new AccessLevelsAccessLevelCustom(expr);
         }

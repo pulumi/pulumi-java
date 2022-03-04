@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SecretVersionResponse {
     /**
      * Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as '/etc/secrets' and path as `/secret_foo` would mount the secret value file at `/etc/secrets/secret_foo`.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * Version of the secret (version number or the string 'latest'). It is preferrable to use `latest` version with secret volumes as secret value changes are reflected immediately.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -74,7 +74,6 @@ public final class SecretVersionResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SecretVersionResponse build() {
             return new SecretVersionResponse(path, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AzureAppPushReceiverResponse {
     /**
      * The email address registered for the Azure mobile app.
      * 
-     */
+    */
     public String getEmailAddress() {
         return this.emailAddress;
     }
     /**
      * The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class AzureAppPushReceiverResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AzureAppPushReceiverResponse build() {
             return new AzureAppPushReceiverResponse(emailAddress, name);
         }

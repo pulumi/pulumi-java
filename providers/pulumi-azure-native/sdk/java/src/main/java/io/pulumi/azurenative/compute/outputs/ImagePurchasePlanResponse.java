@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ImagePurchasePlanResponse {
     /**
      * The plan ID.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The product ID.
      * 
-     */
+    */
     public Optional<String> getProduct() {
         return Optional.ofNullable(this.product);
     }
     /**
      * The publisher ID.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -97,7 +97,6 @@ public final class ImagePurchasePlanResponse {
             this.publisher = publisher;
             return this;
         }
-
         public ImagePurchasePlanResponse build() {
             return new ImagePurchasePlanResponse(name, product, publisher);
         }

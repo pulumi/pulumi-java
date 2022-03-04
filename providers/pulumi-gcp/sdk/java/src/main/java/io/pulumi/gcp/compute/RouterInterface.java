@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RouterInterfaceArgs;
 import io.pulumi.gcp.compute.inputs.RouterInterfaceState;
@@ -153,6 +153,37 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
         return this.vpnTunnel;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RouterInterfaceArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.RouterInterfaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.RouterInterfaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RouterInterface(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RouterInterface(String name) {
+        this(name, RouterInterfaceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RouterInterface(String name, RouterInterfaceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enableAutomaticUpdates")
-    private final @Nullable Boolean enableAutomaticUpdates;
+      private final @Nullable Boolean enableAutomaticUpdates;
 
     public Optional<Boolean> getEnableAutomaticUpdates() {
         return this.enableAutomaticUpdates == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticUpdates);
@@ -57,7 +57,6 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
-
         public WindowsConfigurationResponse build() {
             return new WindowsConfigurationResponse(enableAutomaticUpdates);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instituteSize", required=true)
-    private final String instituteSize;
+      private final String instituteSize;
 
     public String getInstituteSize() {
         return this.instituteSize;
@@ -32,7 +32,7 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instituteType", required=true)
-    private final String instituteType;
+      private final String instituteType;
 
     public String getInstituteType() {
         return this.instituteType;
@@ -43,7 +43,7 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="website", required=true)
-    private final String website;
+      private final String website;
 
     public String getWebsite() {
         return this.website;
@@ -102,7 +102,6 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
             this.website = Objects.requireNonNull(website);
             return this;
         }
-
         public GoogleCloudChannelV1EduDataResponse build() {
             return new GoogleCloudChannelV1EduDataResponse(instituteSize, instituteType, website);
         }

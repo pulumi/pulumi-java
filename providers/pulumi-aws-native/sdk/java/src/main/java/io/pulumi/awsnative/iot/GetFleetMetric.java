@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iot.inputs.GetFleetMetricArgs;
 import io.pulumi.awsnative.iot.outputs.GetFleetMetricResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFleetMetric {
-/**
- * An aggregated metric of certain devices in your fleet
+    private GetFleetMetric() {}
+    public interface BuilderApplicator {
+        public void apply(GetFleetMetricArgs.Builder a);
+    }
+    private static GetFleetMetricArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFleetMetricArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An aggregated metric of certain devices in your fleet
  * 
- */
+     */
+    public static CompletableFuture<GetFleetMetricResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An aggregated metric of certain devices in your fleet
+     * 
+     */
     public static CompletableFuture<GetFleetMetricResult> invokeAsync(GetFleetMetricArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getFleetMetric", TypeShape.of(GetFleetMetricResult.class), args == null ? GetFleetMetricArgs.Empty : args, Utilities.withVersion(options));
     }

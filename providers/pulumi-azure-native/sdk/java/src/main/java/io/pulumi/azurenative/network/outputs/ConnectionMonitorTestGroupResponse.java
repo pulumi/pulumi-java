@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -56,35 +56,35 @@ public final class ConnectionMonitorTestGroupResponse {
     /**
      * List of destination endpoint names.
      * 
-     */
+    */
     public List<String> getDestinations() {
         return this.destinations;
     }
     /**
      * Value indicating whether test group is disabled.
      * 
-     */
+    */
     public Optional<Boolean> getDisable() {
         return Optional.ofNullable(this.disable);
     }
     /**
      * The name of the connection monitor test group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of source endpoint names.
      * 
-     */
+    */
     public List<String> getSources() {
         return this.sources;
     }
     /**
      * List of test configuration names.
      * 
-     */
+    */
     public List<String> getTestConfigurations() {
         return this.testConfigurations;
     }
@@ -141,7 +141,6 @@ public final class ConnectionMonitorTestGroupResponse {
             this.testConfigurations = Objects.requireNonNull(testConfigurations);
             return this;
         }
-
         public ConnectionMonitorTestGroupResponse build() {
             return new ConnectionMonitorTestGroupResponse(destinations, disable, name, sources, testConfigurations);
         }

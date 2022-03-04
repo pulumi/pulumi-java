@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCertificateArgs Empty = new GetCertificateArgs();
 
     @InputImport(name="certificateAuthorityId", required=true)
-    private final String certificateAuthorityId;
+      private final String certificateAuthorityId;
 
     public String getCertificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
     @InputImport(name="certificateId", required=true)
-    private final String certificateId;
+      private final String certificateId;
 
     public String getCertificateId() {
         return this.certificateId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetCertificateArgs build() {
             return new GetCertificateArgs(certificateAuthorityId, certificateId, location, project);
         }

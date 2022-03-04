@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TriggerBuildAvailableSecretsSecretManagerArgs extends io.pulu
      * 
      */
     @InputImport(name="env", required=true)
-    private final Input<String> env;
+      private final Input<String> env;
 
     public Input<String> getEnv() {
         return this.env;
@@ -32,7 +32,7 @@ public final class TriggerBuildAvailableSecretsSecretManagerArgs extends io.pulu
      * 
      */
     @InputImport(name="versionName", required=true)
-    private final Input<String> versionName;
+      private final Input<String> versionName;
 
     public Input<String> getVersionName() {
         return this.versionName;
@@ -91,7 +91,6 @@ public final class TriggerBuildAvailableSecretsSecretManagerArgs extends io.pulu
             this.versionName = Input.of(Objects.requireNonNull(versionName));
             return this;
         }
-
         public TriggerBuildAvailableSecretsSecretManagerArgs build() {
             return new TriggerBuildAvailableSecretsSecretManagerArgs(env, versionName);
         }

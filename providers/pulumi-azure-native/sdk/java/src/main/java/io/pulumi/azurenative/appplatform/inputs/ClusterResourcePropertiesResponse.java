@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.NetworkProfileResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="networkProfile")
-    private final @Nullable NetworkProfileResponse networkProfile;
+      private final @Nullable NetworkProfileResponse networkProfile;
 
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return this.networkProfile == null ? Optional.empty() : Optional.ofNullable(this.networkProfile);
@@ -36,7 +36,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -47,7 +47,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
@@ -58,7 +58,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="version", required=true)
-    private final Integer version;
+      private final Integer version;
 
     public Integer getVersion() {
         return this.version;
@@ -127,7 +127,6 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ClusterResourcePropertiesResponse build() {
             return new ClusterResourcePropertiesResponse(networkProfile, provisioningState, serviceId, version);
         }

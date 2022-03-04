@@ -5,11 +5,10 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Maps;
-import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;
@@ -90,7 +89,7 @@ public class StackReference extends CustomResource {
         var value = Output.tuple(name.toOutput(), this.outputs).applyValue(
                 v -> Maps.tryGetValue(v.t2, v.t1).orElse(null));
 
-        return TypedInputOutput.cast(value).internalWithIsSecret(isSecretOutputName(name));
+        return io.pulumi.core.internal.Internal.of(value).withIsSecret(isSecretOutputName(name));
     }
 
     /**
@@ -105,7 +104,7 @@ public class StackReference extends CustomResource {
                 v -> Maps.tryGetValue(v.t3, v.t1).orElseThrow(
                         () -> new KeyMissingException(v.t1, v.t2)));
 
-        return TypedInputOutput.cast(value).internalWithIsSecret(isSecretOutputName(name));
+        return io.pulumi.core.internal.Internal.of(value).withIsSecret(isSecretOutputName(name));
     }
 
     /**
@@ -119,7 +118,7 @@ public class StackReference extends CustomResource {
      * @return The value of the referenced stack output.
      */
     public CompletableFuture<Object> getValueAsync(Input<String> name) {
-        return TypedInputOutput.cast(this.getOutput(name)).internalGetDataAsync()
+        return io.pulumi.core.internal.Internal.of(this.getOutput(name)).getDataAsync()
                 .thenApply(data -> {
                     if (data.isSecret()) {
                         throw new UnsupportedOperationException(
@@ -139,7 +138,7 @@ public class StackReference extends CustomResource {
      * @return The value of the referenced stack output.
      */
     public CompletableFuture<Object> requireValueAsync(Input<String> name) {
-        return TypedInputOutput.cast(this.requireOutput(name)).internalGetDataAsync()
+        return io.pulumi.core.internal.Internal.of(this.requireOutput(name)).getDataAsync()
                 .thenApply(data -> {
                     if (data.isSecret()) {
                         throw new UnsupportedOperationException(
@@ -150,13 +149,13 @@ public class StackReference extends CustomResource {
     }
 
     private CompletableFuture<Boolean> isSecretOutputName(Input<String> name) {
-        return TypedInputOutput.cast(name).internalGetDataAsync().thenCompose(
-                (InputOutputData<String> nameOutput) -> TypedInputOutput.cast(this.secretOutputNames).internalGetDataAsync().thenCompose(
+        return io.pulumi.core.internal.Internal.of(name).getDataAsync().thenCompose(
+                (InputOutputData<String> nameOutput) -> io.pulumi.core.internal.Internal.of(this.secretOutputNames).getDataAsync().thenCompose(
                         (InputOutputData<ImmutableList<String>> secretOutputNamesData) -> {
                             // If either the name or set of secret outputs is unknown, we can't do anything smart,
                             // so we just copy the secret-ness from the entire outputs value.
                             if (!(nameOutput.isKnown() && secretOutputNamesData.isKnown())) {
-                                return TypedInputOutput.cast(this.outputs).view(InputOutputData::isSecret);
+                                return io.pulumi.core.internal.Internal.of(this.outputs).isSecret();
                             }
 
                             // Otherwise, if we have a list of outputs we know are secret, we can use that list to determine if this

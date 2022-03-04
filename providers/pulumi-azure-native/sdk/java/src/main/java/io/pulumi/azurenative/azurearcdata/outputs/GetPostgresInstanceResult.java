@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurearcdata.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.PostgresInstancePropertiesResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.PostgresInstanceSkuResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -87,63 +87,63 @@ public final class GetPostgresInstanceResult {
     /**
      * The extendedLocation of the resource.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * null
      * 
-     */
+    */
     public PostgresInstancePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource sku.
      * 
-     */
+    */
     public Optional<PostgresInstanceSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -228,7 +228,6 @@ public final class GetPostgresInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPostgresInstanceResult build() {
             return new GetPostgresInstanceResult(extendedLocation, id, location, name, properties, sku, systemData, tags, type);
         }

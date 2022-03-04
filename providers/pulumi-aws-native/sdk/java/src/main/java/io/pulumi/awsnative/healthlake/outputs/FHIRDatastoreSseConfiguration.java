@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.healthlake.outputs;
 
 import io.pulumi.awsnative.healthlake.outputs.FHIRDatastoreKmsEncryptionConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class FHIRDatastoreSseConfiguration {
             this.kmsEncryptionConfig = Objects.requireNonNull(kmsEncryptionConfig);
             return this;
         }
-
         public FHIRDatastoreSseConfiguration build() {
             return new FHIRDatastoreSseConfiguration(kmsEncryptionConfig);
         }

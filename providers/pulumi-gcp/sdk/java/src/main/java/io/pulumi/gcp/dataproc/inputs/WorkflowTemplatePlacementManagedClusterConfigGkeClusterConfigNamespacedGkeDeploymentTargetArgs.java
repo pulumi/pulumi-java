@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * 
      */
     @InputImport(name="clusterNamespace")
-    private final @Nullable Input<String> clusterNamespace;
+      private final @Nullable Input<String> clusterNamespace;
 
     public Input<String> getClusterNamespace() {
         return this.clusterNamespace == null ? Input.empty() : this.clusterNamespace;
@@ -30,7 +30,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * 
      */
     @InputImport(name="targetGkeCluster")
-    private final @Nullable Input<String> targetGkeCluster;
+      private final @Nullable Input<String> targetGkeCluster;
 
     public Input<String> getTargetGkeCluster() {
         return this.targetGkeCluster == null ? Input.empty() : this.targetGkeCluster;
@@ -89,7 +89,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             this.targetGkeCluster = Input.ofNullable(targetGkeCluster);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs(clusterNamespace, targetGkeCluster);
         }

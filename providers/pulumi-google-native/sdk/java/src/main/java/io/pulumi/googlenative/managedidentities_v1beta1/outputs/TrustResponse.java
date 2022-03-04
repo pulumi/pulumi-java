@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -96,77 +96,77 @@ public final class TrustResponse {
     /**
      * The time the instance was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The last heartbeat time when the trust was known to be connected.
      * 
-     */
+    */
     public String getLastTrustHeartbeatTime() {
         return this.lastTrustHeartbeatTime;
     }
     /**
      * The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
      * 
-     */
+    */
     public Boolean getSelectiveAuthentication() {
         return this.selectiveAuthentication;
     }
     /**
      * The current state of the trust.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Additional information about the current state of the trust, if available.
      * 
-     */
+    */
     public String getStateDescription() {
         return this.stateDescription;
     }
     /**
      * The target DNS server IP addresses which can resolve the remote domain involved in the trust.
      * 
-     */
+    */
     public List<String> getTargetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
     }
     /**
      * The fully qualified target domain name which will be in trust with the current domain.
      * 
-     */
+    */
     public String getTargetDomainName() {
         return this.targetDomainName;
     }
     /**
      * The trust direction, which decides if the current domain is trusted, trusting, or both.
      * 
-     */
+    */
     public String getTrustDirection() {
         return this.trustDirection;
     }
     /**
      * Input only. The trust secret used for the handshake with the target domain. It will not be stored.
      * 
-     */
+    */
     public String getTrustHandshakeSecret() {
         return this.trustHandshakeSecret;
     }
     /**
      * The type of trust represented by the trust resource.
      * 
-     */
+    */
     public String getTrustType() {
         return this.trustType;
     }
     /**
      * The last update time.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -265,7 +265,6 @@ public final class TrustResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public TrustResponse build() {
             return new TrustResponse(createTime, lastTrustHeartbeatTime, selectiveAuthentication, state, stateDescription, targetDnsIpAddresses, targetDomainName, trustDirection, trustHandshakeSecret, trustType, updateTime);
         }

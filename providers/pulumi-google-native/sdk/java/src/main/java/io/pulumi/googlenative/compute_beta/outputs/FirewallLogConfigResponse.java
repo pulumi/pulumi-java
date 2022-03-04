@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class FirewallLogConfigResponse {
     /**
      * This field denotes whether to enable logging for a particular firewall rule.
      * 
-     */
+    */
     public Boolean getEnable() {
         return this.enable;
     }
     /**
      * This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
      * 
-     */
+    */
     public String getMetadata() {
         return this.metadata;
     }
@@ -75,7 +75,6 @@ public final class FirewallLogConfigResponse {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public FirewallLogConfigResponse build() {
             return new FirewallLogConfigResponse(enable, metadata);
         }

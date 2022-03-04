@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class GetManagedInstanceAdministratorResult {
     /**
      * Type of the managed instance administrator.
      * 
-     */
+    */
     public String getAdministratorType() {
         return this.administratorType;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Login name of the managed instance administrator.
      * 
-     */
+    */
     public String getLogin() {
         return this.login;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * SID (object ID) of the managed instance administrator.
      * 
-     */
+    */
     public String getSid() {
         return this.sid;
     }
     /**
      * Tenant ID of the managed instance administrator.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -181,7 +181,6 @@ public final class GetManagedInstanceAdministratorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedInstanceAdministratorResult build() {
             return new GetManagedInstanceAdministratorResult(administratorType, id, login, name, sid, tenantId, type);
         }

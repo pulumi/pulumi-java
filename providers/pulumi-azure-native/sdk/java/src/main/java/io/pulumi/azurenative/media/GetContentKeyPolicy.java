@@ -6,21 +6,41 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.media.inputs.GetContentKeyPolicyArgs;
 import io.pulumi.azurenative.media.outputs.GetContentKeyPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContentKeyPolicy {
-/**
- * A Content Key Policy resource.
+    private GetContentKeyPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetContentKeyPolicyArgs.Builder a);
+    }
+    private static GetContentKeyPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetContentKeyPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Content Key Policy resource.
  * API Version: 2020-05-01.
  * 
- *
- * A Content Key Policy resource.
+     *
+     * A Content Key Policy resource.
  * 
- */
+     */
+    public static CompletableFuture<GetContentKeyPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Content Key Policy resource.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * A Content Key Policy resource.
+     * 
+     */
     public static CompletableFuture<GetContentKeyPolicyResult> invokeAsync(GetContentKeyPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getContentKeyPolicy", TypeShape.of(GetContentKeyPolicyResult.class), args == null ? GetContentKeyPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

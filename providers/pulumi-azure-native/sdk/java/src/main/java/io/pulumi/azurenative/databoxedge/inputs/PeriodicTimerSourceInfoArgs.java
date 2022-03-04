@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<String> schedule;
+      private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;
@@ -34,7 +34,7 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -45,7 +45,7 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -119,7 +119,6 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public PeriodicTimerSourceInfoArgs build() {
             return new PeriodicTimerSourceInfoArgs(schedule, startTime, topic);
         }

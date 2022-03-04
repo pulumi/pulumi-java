@@ -6,21 +6,41 @@ package io.pulumi.azurenative.search;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.search.inputs.GetSharedPrivateLinkResourceArgs;
 import io.pulumi.azurenative.search.outputs.GetSharedPrivateLinkResourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSharedPrivateLinkResource {
-/**
- * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
+    private GetSharedPrivateLinkResource() {}
+    public interface BuilderApplicator {
+        public void apply(GetSharedPrivateLinkResourceArgs.Builder a);
+    }
+    private static GetSharedPrivateLinkResourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSharedPrivateLinkResourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
  * API Version: 2020-08-01.
  * 
- *
- * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
+     *
+     * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
  * 
- */
+     */
+    public static CompletableFuture<GetSharedPrivateLinkResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
+     * API Version: 2020-08-01.
+     * 
+     *
+         * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
+     * 
+     */
     public static CompletableFuture<GetSharedPrivateLinkResourceResult> invokeAsync(GetSharedPrivateLinkResourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:getSharedPrivateLinkResource", TypeShape.of(GetSharedPrivateLinkResourceResult.class), args == null ? GetSharedPrivateLinkResourceArgs.Empty : args, Utilities.withVersion(options));
     }

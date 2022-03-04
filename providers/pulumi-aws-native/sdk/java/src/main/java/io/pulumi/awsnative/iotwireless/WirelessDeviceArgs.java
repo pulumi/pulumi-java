@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotwireless.enums.WirelessDeviceType;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceLoRaWANDeviceArgs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationName", required=true)
-    private final Input<String> destinationName;
+      private final Input<String> destinationName;
 
     public Input<String> getDestinationName() {
         return this.destinationName;
@@ -45,7 +45,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUplinkReceivedAt")
-    private final @Nullable Input<String> lastUplinkReceivedAt;
+      private final @Nullable Input<String> lastUplinkReceivedAt;
 
     public Input<String> getLastUplinkReceivedAt() {
         return this.lastUplinkReceivedAt == null ? Input.empty() : this.lastUplinkReceivedAt;
@@ -56,7 +56,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loRaWAN")
-    private final @Nullable Input<WirelessDeviceLoRaWANDeviceArgs> loRaWAN;
+      private final @Nullable Input<WirelessDeviceLoRaWANDeviceArgs> loRaWAN;
 
     public Input<WirelessDeviceLoRaWANDeviceArgs> getLoRaWAN() {
         return this.loRaWAN == null ? Input.empty() : this.loRaWAN;
@@ -67,7 +67,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<WirelessDeviceTagArgs>> tags;
+      private final @Nullable Input<List<WirelessDeviceTagArgs>> tags;
 
     public Input<List<WirelessDeviceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thingArn")
-    private final @Nullable Input<String> thingArn;
+      private final @Nullable Input<String> thingArn;
 
     public Input<String> getThingArn() {
         return this.thingArn == null ? Input.empty() : this.thingArn;
@@ -100,7 +100,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<WirelessDeviceType> type;
+      private final Input<WirelessDeviceType> type;
 
     public Input<WirelessDeviceType> getType() {
         return this.type;
@@ -249,7 +249,6 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public WirelessDeviceArgs build() {
             return new WirelessDeviceArgs(description, destinationName, lastUplinkReceivedAt, loRaWAN, name, tags, thingArn, type);
         }

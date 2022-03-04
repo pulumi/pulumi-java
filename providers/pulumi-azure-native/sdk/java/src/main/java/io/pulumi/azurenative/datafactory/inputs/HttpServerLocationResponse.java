@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HttpServerLocationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable Object fileName;
+      private final @Nullable Object fileName;
 
     public Optional<Object> getFileName() {
         return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
@@ -35,7 +35,7 @@ public final class HttpServerLocationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="folderPath")
-    private final @Nullable Object folderPath;
+      private final @Nullable Object folderPath;
 
     public Optional<Object> getFolderPath() {
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
@@ -46,7 +46,7 @@ public final class HttpServerLocationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="relativeUrl")
-    private final @Nullable Object relativeUrl;
+      private final @Nullable Object relativeUrl;
 
     public Optional<Object> getRelativeUrl() {
         return this.relativeUrl == null ? Optional.empty() : Optional.ofNullable(this.relativeUrl);
@@ -58,7 +58,7 @@ public final class HttpServerLocationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -127,7 +127,6 @@ public final class HttpServerLocationResponse extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HttpServerLocationResponse build() {
             return new HttpServerLocationResponse(fileName, folderPath, relativeUrl, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class PatchDeploymentRecurringScheduleTimeZone {
     /**
      * IANA Time Zone Database time zone, e.g. "America/New_York".
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * IANA Time Zone Database version number, e.g. "2019a".
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -76,7 +76,6 @@ public final class PatchDeploymentRecurringScheduleTimeZone {
             this.version = version;
             return this;
         }
-
         public PatchDeploymentRecurringScheduleTimeZone build() {
             return new PatchDeploymentRecurringScheduleTimeZone(id, version);
         }

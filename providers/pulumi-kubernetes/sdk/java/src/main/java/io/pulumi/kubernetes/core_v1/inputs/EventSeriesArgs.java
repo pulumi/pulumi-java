@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastObservedTime")
-    private final @Nullable Input<String> lastObservedTime;
+      private final @Nullable Input<String> lastObservedTime;
 
     public Input<String> getLastObservedTime() {
         return this.lastObservedTime == null ? Input.empty() : this.lastObservedTime;
@@ -46,7 +46,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -120,7 +120,6 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public EventSeriesArgs build() {
             return new EventSeriesArgs(count, lastObservedTime, state);
         }

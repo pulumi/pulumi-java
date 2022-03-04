@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ListDeploymentInfoResult {
     /**
      * Disk capacity of the elasticsearch in Elastic cloud deployment.
      * 
-     */
+    */
     public String getDiskCapacity() {
         return this.diskCapacity;
     }
     /**
      * RAM capacity of the elasticsearch in Elastic cloud deployment.
      * 
-     */
+    */
     public String getMemoryCapacity() {
         return this.memoryCapacity;
     }
     /**
      * The Elastic deployment status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Version of the elasticsearch in Elastic cloud deployment.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -116,7 +116,6 @@ public final class ListDeploymentInfoResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ListDeploymentInfoResult build() {
             return new ListDeploymentInfoResult(diskCapacity, memoryCapacity, status, version);
         }

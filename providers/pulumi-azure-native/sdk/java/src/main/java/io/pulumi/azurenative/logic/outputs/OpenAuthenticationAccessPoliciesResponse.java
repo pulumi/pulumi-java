@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.OpenAuthenticationAccessPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class OpenAuthenticationAccessPoliciesResponse {
     /**
      * Open authentication policies.
      * 
-     */
+    */
     public Map<String,OpenAuthenticationAccessPolicyResponse> getPolicies() {
         return this.policies == null ? Map.of() : this.policies;
     }
@@ -55,7 +55,6 @@ public final class OpenAuthenticationAccessPoliciesResponse {
             this.policies = policies;
             return this;
         }
-
         public OpenAuthenticationAccessPoliciesResponse build() {
             return new OpenAuthenticationAccessPoliciesResponse(policies);
         }

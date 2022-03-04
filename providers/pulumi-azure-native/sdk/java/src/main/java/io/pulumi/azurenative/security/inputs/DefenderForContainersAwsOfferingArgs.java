@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingKin
 import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingKubernetesScubaReaderArgs;
 import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingKubernetesServiceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cloudWatchToKinesis")
-    private final @Nullable Input<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis;
+      private final @Nullable Input<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis;
 
     public Input<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> getCloudWatchToKinesis() {
         return this.cloudWatchToKinesis == null ? Input.empty() : this.cloudWatchToKinesis;
@@ -38,7 +38,7 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kinesisToS3")
-    private final @Nullable Input<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3;
+      private final @Nullable Input<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3;
 
     public Input<DefenderForContainersAwsOfferingKinesisToS3Args> getKinesisToS3() {
         return this.kinesisToS3 == null ? Input.empty() : this.kinesisToS3;
@@ -49,7 +49,7 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kubernetesScubaReader")
-    private final @Nullable Input<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader;
+      private final @Nullable Input<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader;
 
     public Input<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> getKubernetesScubaReader() {
         return this.kubernetesScubaReader == null ? Input.empty() : this.kubernetesScubaReader;
@@ -60,7 +60,7 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kubernetesService")
-    private final @Nullable Input<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService;
+      private final @Nullable Input<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService;
 
     public Input<DefenderForContainersAwsOfferingKubernetesServiceArgs> getKubernetesService() {
         return this.kubernetesService == null ? Input.empty() : this.kubernetesService;
@@ -72,7 +72,7 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="offeringType", required=true)
-    private final Input<String> offeringType;
+      private final Input<String> offeringType;
 
     public Input<String> getOfferingType() {
         return this.offeringType;
@@ -176,7 +176,6 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
             this.offeringType = Input.of(Objects.requireNonNull(offeringType));
             return this;
         }
-
         public DefenderForContainersAwsOfferingArgs build() {
             return new DefenderForContainersAwsOfferingArgs(cloudWatchToKinesis, kinesisToS3, kubernetesScubaReader, kubernetesService, offeringType);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.groundstation.outputs;
 import io.pulumi.awsnative.groundstation.outputs.ConfigDecodeConfig;
 import io.pulumi.awsnative.groundstation.outputs.ConfigDemodulationConfig;
 import io.pulumi.awsnative.groundstation.outputs.ConfigSpectrumConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -75,7 +75,6 @@ public final class ConfigAntennaDownlinkDemodDecodeConfig {
             this.spectrumConfig = spectrumConfig;
             return this;
         }
-
         public ConfigAntennaDownlinkDemodDecodeConfig build() {
             return new ConfigAntennaDownlinkDemodDecodeConfig(decodeConfig, demodulationConfig, spectrumConfig);
         }

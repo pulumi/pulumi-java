@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,7 +41,7 @@ public final class NodeTemplateNodeTypeFlexibility {
     /**
      * Number of virtual CPUs to use.
      * 
-     */
+    */
     public Optional<String> getCpus() {
         return Optional.ofNullable(this.cpus);
     }
@@ -49,14 +49,14 @@ public final class NodeTemplateNodeTypeFlexibility {
      * - 
      * Use local SSD
      * 
-     */
+    */
     public Optional<String> getLocalSsd() {
         return Optional.ofNullable(this.localSsd);
     }
     /**
      * Physical memory available to the node, defined in MB.
      * 
-     */
+    */
     public Optional<String> getMemory() {
         return Optional.ofNullable(this.memory);
     }
@@ -99,7 +99,6 @@ public final class NodeTemplateNodeTypeFlexibility {
             this.memory = memory;
             return this;
         }
-
         public NodeTemplateNodeTypeFlexibility build() {
             return new NodeTemplateNodeTypeFlexibility(cpus, localSsd, memory);
         }

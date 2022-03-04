@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public final class DatabaseInstanceSettingsLocationPreference {
      * A GAE application whose zone to remain
      * in. Must be in the same region as this instance.
      * 
-     */
+    */
     public Optional<String> getFollowGaeApplication() {
         return Optional.ofNullable(this.followGaeApplication);
     }
@@ -44,7 +44,7 @@ public final class DatabaseInstanceSettingsLocationPreference {
      * The preferred compute engine
      * [zone](https://cloud.google.com/compute/docs/zones?hl=en).
      * 
-     */
+    */
     public Optional<String> getZone() {
         return Optional.ofNullable(this.zone);
     }
@@ -80,7 +80,6 @@ public final class DatabaseInstanceSettingsLocationPreference {
             this.zone = zone;
             return this;
         }
-
         public DatabaseInstanceSettingsLocationPreference build() {
             return new DatabaseInstanceSettingsLocationPreference(followGaeApplication, zone);
         }

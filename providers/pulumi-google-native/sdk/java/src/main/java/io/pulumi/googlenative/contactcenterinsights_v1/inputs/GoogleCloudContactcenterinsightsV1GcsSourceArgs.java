@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
      * 
      */
     @InputImport(name="audioUri")
-    private final @Nullable Input<String> audioUri;
+      private final @Nullable Input<String> audioUri;
 
     public Input<String> getAudioUri() {
         return this.audioUri == null ? Input.empty() : this.audioUri;
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
      * 
      */
     @InputImport(name="transcriptUri")
-    private final @Nullable Input<String> transcriptUri;
+      private final @Nullable Input<String> transcriptUri;
 
     public Input<String> getTranscriptUri() {
         return this.transcriptUri == null ? Input.empty() : this.transcriptUri;
@@ -93,7 +93,6 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
             this.transcriptUri = Input.ofNullable(transcriptUri);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1GcsSourceArgs build() {
             return new GoogleCloudContactcenterinsightsV1GcsSourceArgs(audioUri, transcriptUri);
         }

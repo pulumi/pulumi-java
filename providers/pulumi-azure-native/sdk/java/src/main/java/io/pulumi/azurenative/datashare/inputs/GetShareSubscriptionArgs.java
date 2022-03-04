@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetShareSubscriptionArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetShareSubscriptionArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetShareSubscriptionArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final String shareSubscriptionName;
+      private final String shareSubscriptionName;
 
     public String getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -98,7 +98,6 @@ public final class GetShareSubscriptionArgs extends io.pulumi.resources.InvokeAr
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public GetShareSubscriptionArgs build() {
             return new GetShareSubscriptionArgs(accountName, resourceGroupName, shareSubscriptionName);
         }

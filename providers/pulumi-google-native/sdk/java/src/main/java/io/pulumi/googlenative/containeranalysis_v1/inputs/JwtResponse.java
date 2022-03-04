@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class JwtResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="compactJwt", required=true)
-    private final String compactJwt;
+      private final String compactJwt;
 
     public String getCompactJwt() {
         return this.compactJwt;
@@ -55,7 +55,6 @@ public final class JwtResponse extends io.pulumi.resources.InvokeArgs {
             this.compactJwt = Objects.requireNonNull(compactJwt);
             return this;
         }
-
         public JwtResponse build() {
             return new JwtResponse(compactJwt);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class MetricStreamFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -65,7 +65,6 @@ public final class MetricStreamFilterArgs extends io.pulumi.resources.ResourceAr
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }
-
         public MetricStreamFilterArgs build() {
             return new MetricStreamFilterArgs(namespace);
         }

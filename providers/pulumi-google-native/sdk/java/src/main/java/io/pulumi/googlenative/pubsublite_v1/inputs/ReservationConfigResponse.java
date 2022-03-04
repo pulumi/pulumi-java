@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ReservationConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="throughputReservation", required=true)
-    private final String throughputReservation;
+      private final String throughputReservation;
 
     public String getThroughputReservation() {
         return this.throughputReservation;
@@ -59,7 +59,6 @@ public final class ReservationConfigResponse extends io.pulumi.resources.InvokeA
             this.throughputReservation = Objects.requireNonNull(throughputReservation);
             return this;
         }
-
         public ReservationConfigResponse build() {
             return new ReservationConfigResponse(throughputReservation);
         }

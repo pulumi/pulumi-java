@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ManagementGroupLogSettingsResponse {
     /**
      * Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
      * 
-     */
+    */
     public String getCategory() {
         return this.category;
     }
     /**
      * a value indicating whether this log is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -75,7 +75,6 @@ public final class ManagementGroupLogSettingsResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ManagementGroupLogSettingsResponse build() {
             return new ManagementGroupLogSettingsResponse(category, enabled);
         }

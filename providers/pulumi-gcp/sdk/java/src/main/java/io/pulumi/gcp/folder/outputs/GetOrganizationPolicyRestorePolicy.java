@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class GetOrganizationPolicyRestorePolicy {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
-
         public GetOrganizationPolicyRestorePolicy build() {
             return new GetOrganizationPolicyRestorePolicy($default);
         }

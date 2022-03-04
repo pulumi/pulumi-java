@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHmacKey {
-/**
- * Retrieves an HMAC key's metadata
+    private GetHmacKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetHmacKeyArgs.Builder a);
+    }
+    private static GetHmacKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHmacKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves an HMAC key's metadata
  * 
- */
+     */
+    public static CompletableFuture<GetHmacKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves an HMAC key's metadata
+     * 
+     */
     public static CompletableFuture<GetHmacKeyResult> invokeAsync(GetHmacKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getHmacKey", TypeShape.of(GetHmacKeyResult.class), args == null ? GetHmacKeyArgs.Empty : args, Utilities.withVersion(options));
     }

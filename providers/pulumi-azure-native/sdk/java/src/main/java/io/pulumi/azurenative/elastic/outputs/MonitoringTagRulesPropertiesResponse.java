@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.elastic.outputs;
 
 import io.pulumi.azurenative.elastic.outputs.LogRulesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class MonitoringTagRulesPropertiesResponse {
     /**
      * Rules for sending logs.
      * 
-     */
+    */
     public Optional<LogRulesResponse> getLogRules() {
         return Optional.ofNullable(this.logRules);
     }
     /**
      * Provisioning state of the monitoring tag rules.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -77,7 +77,6 @@ public final class MonitoringTagRulesPropertiesResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public MonitoringTagRulesPropertiesResponse build() {
             return new MonitoringTagRulesPropertiesResponse(logRules, provisioningState);
         }

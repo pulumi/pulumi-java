@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -37,14 +37,14 @@ public final class GuestPoliciesPackageRepositoryGoo {
      * This means that requests to create multiple recipes with the same name and version are rejected since they
      * could potentially have conflicting assignments.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The url of the repository.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -80,7 +80,6 @@ public final class GuestPoliciesPackageRepositoryGoo {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GuestPoliciesPackageRepositoryGoo build() {
             return new GuestPoliciesPackageRepositoryGoo(name, url);
         }

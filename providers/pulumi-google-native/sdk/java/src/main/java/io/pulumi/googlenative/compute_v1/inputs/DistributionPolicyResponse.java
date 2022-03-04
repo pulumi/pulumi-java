@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.DistributionPolicyZoneConfigurationResponse;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class DistributionPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetShape", required=true)
-    private final String targetShape;
+      private final String targetShape;
 
     public String getTargetShape() {
         return this.targetShape;
@@ -30,7 +30,7 @@ public final class DistributionPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="zones", required=true)
-    private final List<DistributionPolicyZoneConfigurationResponse> zones;
+      private final List<DistributionPolicyZoneConfigurationResponse> zones;
 
     public List<DistributionPolicyZoneConfigurationResponse> getZones() {
         return this.zones;
@@ -79,7 +79,6 @@ public final class DistributionPolicyResponse extends io.pulumi.resources.Invoke
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public DistributionPolicyResponse build() {
             return new DistributionPolicyResponse(targetShape, zones);
         }

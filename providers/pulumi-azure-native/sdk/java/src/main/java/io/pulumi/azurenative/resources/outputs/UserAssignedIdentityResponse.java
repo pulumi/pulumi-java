@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class UserAssignedIdentityResponse {
     /**
      * Client App Id associated with this identity.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Azure Active Directory principal ID associated with this identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -74,7 +74,6 @@ public final class UserAssignedIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public UserAssignedIdentityResponse build() {
             return new UserAssignedIdentityResponse(clientId, principalId);
         }

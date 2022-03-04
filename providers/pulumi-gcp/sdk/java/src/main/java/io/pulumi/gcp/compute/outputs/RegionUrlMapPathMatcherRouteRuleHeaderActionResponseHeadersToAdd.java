@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,14 +41,14 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersTo
     /**
      * The name of the header.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
     /**
      * The value of the header to add.
      * 
-     */
+    */
     public String getHeaderValue() {
         return this.headerValue;
     }
@@ -57,7 +57,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersTo
      * header. If true, headerValue is set for the header, discarding any values that
      * were set for that header.
      * 
-     */
+    */
     public Boolean getReplace() {
         return this.replace;
     }
@@ -100,7 +100,6 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersTo
             this.replace = Objects.requireNonNull(replace);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd build() {
             return new RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd(headerName, headerValue, replace);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.InstanceDisk;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class InstanceHardware {
     /**
      * CPU count of the Instance.
      * 
-     */
+    */
     public Optional<Integer> getCpuCount() {
         return Optional.ofNullable(this.cpuCount);
     }
     /**
      * Disks attached to the Instance.
      * 
-     */
+    */
     public List<InstanceDisk> getDisks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
      * RAM Size of the Instance.
      * 
-     */
+    */
     public Optional<Integer> getRamSizeInGb() {
         return Optional.ofNullable(this.ramSizeInGb);
     }
@@ -99,7 +99,6 @@ public final class InstanceHardware {
             this.ramSizeInGb = ramSizeInGb;
             return this;
         }
-
         public InstanceHardware build() {
             return new InstanceHardware(cpuCount, disks, ramSizeInGb);
         }

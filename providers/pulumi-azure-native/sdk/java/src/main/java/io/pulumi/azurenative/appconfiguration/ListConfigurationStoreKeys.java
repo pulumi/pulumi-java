@@ -6,21 +6,41 @@ package io.pulumi.azurenative.appconfiguration;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appconfiguration.inputs.ListConfigurationStoreKeysArgs;
 import io.pulumi.azurenative.appconfiguration.outputs.ListConfigurationStoreKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListConfigurationStoreKeys {
-/**
- * The result of a request to list API keys.
+    private ListConfigurationStoreKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListConfigurationStoreKeysArgs.Builder a);
+    }
+    private static ListConfigurationStoreKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListConfigurationStoreKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The result of a request to list API keys.
  * API Version: 2020-06-01.
  * 
- *
- * The result of a request to list API keys.
+     *
+     * The result of a request to list API keys.
  * 
- */
+     */
+    public static CompletableFuture<ListConfigurationStoreKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The result of a request to list API keys.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * The result of a request to list API keys.
+     * 
+     */
     public static CompletableFuture<ListConfigurationStoreKeysResult> invokeAsync(ListConfigurationStoreKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:listConfigurationStoreKeys", TypeShape.of(ListConfigurationStoreKeysResult.class), args == null ? ListConfigurationStoreKeysArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InstanceTemplateArgs;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateState;
@@ -526,6 +526,37 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
         return this.tagsFingerprint;
     }
 
+    public interface BuilderApplicator {
+        public void apply(InstanceTemplateArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.InstanceTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.InstanceTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public InstanceTemplate(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public InstanceTemplate(String name) {
+        this(name, InstanceTemplateArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public InstanceTemplate(String name, InstanceTemplateArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

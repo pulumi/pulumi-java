@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.outputs;
 
 import io.pulumi.azurenative.webpubsub.outputs.ManagedIdentitySettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class UpstreamAuthSettingsResponse {
     /**
      * Managed identity settings for upstream.
      * 
-     */
+    */
     public Optional<ManagedIdentitySettingsResponse> getManagedIdentity() {
         return Optional.ofNullable(this.managedIdentity);
     }
     /**
      * Upstream auth type enum.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -77,7 +77,6 @@ public final class UpstreamAuthSettingsResponse {
             this.type = type;
             return this;
         }
-
         public UpstreamAuthSettingsResponse build() {
             return new UpstreamAuthSettingsResponse(managedIdentity, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addressLine1")
-    private final @Nullable String addressLine1;
+      private final @Nullable String addressLine1;
 
     public Optional<String> getAddressLine1() {
         return this.addressLine1 == null ? Optional.empty() : Optional.ofNullable(this.addressLine1);
@@ -34,7 +34,7 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addressLine2")
-    private final @Nullable String addressLine2;
+      private final @Nullable String addressLine2;
 
     public Optional<String> getAddressLine2() {
         return this.addressLine2 == null ? Optional.empty() : Optional.ofNullable(this.addressLine2);
@@ -45,7 +45,7 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addressLine3")
-    private final @Nullable String addressLine3;
+      private final @Nullable String addressLine3;
 
     public Optional<String> getAddressLine3() {
         return this.addressLine3 == null ? Optional.empty() : Optional.ofNullable(this.addressLine3);
@@ -56,7 +56,7 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="city")
-    private final @Nullable String city;
+      private final @Nullable String city;
 
     public Optional<String> getCity() {
         return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
@@ -67,7 +67,7 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="country", required=true)
-    private final String country;
+      private final String country;
 
     public String getCountry() {
         return this.country;
@@ -78,7 +78,7 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="postalCode")
-    private final @Nullable String postalCode;
+      private final @Nullable String postalCode;
 
     public Optional<String> getPostalCode() {
         return this.postalCode == null ? Optional.empty() : Optional.ofNullable(this.postalCode);
@@ -89,7 +89,7 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -188,7 +188,6 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
             this.state = state;
             return this;
         }
-
         public AddressResponse build() {
             return new AddressResponse(addressLine1, addressLine2, addressLine3, city, country, postalCode, state);
         }

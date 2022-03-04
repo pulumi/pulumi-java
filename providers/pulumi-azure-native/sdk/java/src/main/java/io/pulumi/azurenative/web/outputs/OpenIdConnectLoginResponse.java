@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class OpenIdConnectLoginResponse {
     /**
      * The name of the claim that contains the users name.
      * 
-     */
+    */
     public Optional<String> getNameClaimType() {
         return Optional.ofNullable(this.nameClaimType);
     }
     /**
      * A list of the scopes that should be requested while authenticating.
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
@@ -77,7 +77,6 @@ public final class OpenIdConnectLoginResponse {
             this.scopes = scopes;
             return this;
         }
-
         public OpenIdConnectLoginResponse build() {
             return new OpenIdConnectLoginResponse(nameClaimType, scopes);
         }

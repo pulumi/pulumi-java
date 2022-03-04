@@ -14,8 +14,8 @@ import io.pulumi.awsnative.kendra.outputs.IndexTag;
 import io.pulumi.awsnative.kendra.outputs.IndexUserTokenConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -133,6 +133,37 @@ public class Index extends io.pulumi.resources.CustomResource {
         return this.userTokenConfigurations;
     }
 
+    public interface BuilderApplicator {
+        public void apply(IndexArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.kendra.IndexArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.kendra.IndexArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Index(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Index(String name) {
+        this(name, IndexArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Index(String name, IndexArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

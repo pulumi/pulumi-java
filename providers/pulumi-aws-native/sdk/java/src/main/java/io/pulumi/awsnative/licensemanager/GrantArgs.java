@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.licensemanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     public static final GrantArgs Empty = new GrantArgs();
 
     @InputImport(name="allowedOperations")
-    private final @Nullable Input<List<String>> allowedOperations;
+      private final @Nullable Input<List<String>> allowedOperations;
 
     public Input<List<String>> getAllowedOperations() {
         return this.allowedOperations == null ? Input.empty() : this.allowedOperations;
@@ -27,7 +27,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grantName")
-    private final @Nullable Input<String> grantName;
+      private final @Nullable Input<String> grantName;
 
     public Input<String> getGrantName() {
         return this.grantName == null ? Input.empty() : this.grantName;
@@ -38,7 +38,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeRegion")
-    private final @Nullable Input<String> homeRegion;
+      private final @Nullable Input<String> homeRegion;
 
     public Input<String> getHomeRegion() {
         return this.homeRegion == null ? Input.empty() : this.homeRegion;
@@ -49,21 +49,21 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseArn")
-    private final @Nullable Input<String> licenseArn;
+      private final @Nullable Input<String> licenseArn;
 
     public Input<String> getLicenseArn() {
         return this.licenseArn == null ? Input.empty() : this.licenseArn;
     }
 
     @InputImport(name="principals")
-    private final @Nullable Input<List<String>> principals;
+      private final @Nullable Input<List<String>> principals;
 
     public Input<List<String>> getPrincipals() {
         return this.principals == null ? Input.empty() : this.principals;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -182,7 +182,6 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public GrantArgs build() {
             return new GrantArgs(allowedOperations, grantName, homeRegion, licenseArn, principals, status);
         }

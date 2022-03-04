@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ApplicationRuleResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyFilterRuleCollectionActionResponse;
 import io.pulumi.azurenative.network.outputs.NatRuleResponse;
 import io.pulumi.azurenative.network.outputs.NetworkRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -62,21 +62,21 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
     /**
      * The action type of a Filter rule collection.
      * 
-     */
+    */
     public Optional<FirewallPolicyFilterRuleCollectionActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The name of the rule collection.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule Collection resource.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
@@ -84,14 +84,14 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
      * The type of the rule collection.
      * Expected value is 'FirewallPolicyFilterRuleCollection'.
      * 
-     */
+    */
     public String getRuleCollectionType() {
         return this.ruleCollectionType;
     }
     /**
      * List of rules included in a rule collection.
      * 
-     */
+    */
     public List<Object> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
@@ -148,7 +148,6 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
             this.rules = rules;
             return this;
         }
-
         public FirewallPolicyFilterRuleCollectionResponse build() {
             return new FirewallPolicyFilterRuleCollectionResponse(action, name, priority, ruleCollectionType, rules);
         }

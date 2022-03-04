@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.ImageResponse;
 import java.lang.String;
 import java.util.Map;
@@ -47,28 +47,28 @@ public final class SignatureResponse {
     /**
      * Optional. An image of the user's signature.
      * 
-     */
+    */
     public ImageResponse getImage() {
         return this.image;
     }
     /**
      * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
     /**
      * Optional. Timestamp of the signature.
      * 
-     */
+    */
     public String getSignatureTime() {
         return this.signatureTime;
     }
     /**
      * User's UUID provided by the client.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
@@ -118,7 +118,6 @@ public final class SignatureResponse {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public SignatureResponse build() {
             return new SignatureResponse(image, metadata, signatureTime, userId);
         }

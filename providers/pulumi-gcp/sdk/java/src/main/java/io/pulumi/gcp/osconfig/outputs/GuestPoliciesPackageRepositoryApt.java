@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,21 +60,21 @@ public final class GuestPoliciesPackageRepositoryApt {
      * Default value is `DEB`.
      * Possible values are `DEB` and `DEB_SRC`.
      * 
-     */
+    */
     public Optional<String> getArchiveType() {
         return Optional.ofNullable(this.archiveType);
     }
     /**
      * List of components for this repository. Must contain at least one item.
      * 
-     */
+    */
     public List<String> getComponents() {
         return this.components;
     }
     /**
      * Distribution of this repository.
      * 
-     */
+    */
     public String getDistribution() {
         return this.distribution;
     }
@@ -82,14 +82,14 @@ public final class GuestPoliciesPackageRepositoryApt {
      * URI of the key file for this repository. The agent maintains a keyring at
      * /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
      * 
-     */
+    */
     public Optional<String> getGpgKey() {
         return Optional.ofNullable(this.gpgKey);
     }
     /**
      * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -146,7 +146,6 @@ public final class GuestPoliciesPackageRepositoryApt {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GuestPoliciesPackageRepositoryApt build() {
             return new GuestPoliciesPackageRepositoryApt(archiveType, components, distribution, gpgKey, uri);
         }

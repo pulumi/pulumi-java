@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotMultipleValuesSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotObfuscationSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotValueElicitationSettingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,42 +22,42 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotSlotArgs Empty = new BotSlotArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="multipleValuesSetting")
-    private final @Nullable Input<BotMultipleValuesSettingArgs> multipleValuesSetting;
+      private final @Nullable Input<BotMultipleValuesSettingArgs> multipleValuesSetting;
 
     public Input<BotMultipleValuesSettingArgs> getMultipleValuesSetting() {
         return this.multipleValuesSetting == null ? Input.empty() : this.multipleValuesSetting;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="obfuscationSetting")
-    private final @Nullable Input<BotObfuscationSettingArgs> obfuscationSetting;
+      private final @Nullable Input<BotObfuscationSettingArgs> obfuscationSetting;
 
     public Input<BotObfuscationSettingArgs> getObfuscationSetting() {
         return this.obfuscationSetting == null ? Input.empty() : this.obfuscationSetting;
     }
 
     @InputImport(name="slotTypeName", required=true)
-    private final Input<String> slotTypeName;
+      private final Input<String> slotTypeName;
 
     public Input<String> getSlotTypeName() {
         return this.slotTypeName;
     }
 
     @InputImport(name="valueElicitationSetting", required=true)
-    private final Input<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
+      private final Input<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
 
     public Input<BotSlotValueElicitationSettingArgs> getValueElicitationSetting() {
         return this.valueElicitationSetting;
@@ -176,7 +176,6 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
             this.valueElicitationSetting = Input.of(Objects.requireNonNull(valueElicitationSetting));
             return this;
         }
-
         public BotSlotArgs build() {
             return new BotSlotArgs(description, multipleValuesSetting, name, obfuscationSetting, slotTypeName, valueElicitationSetting);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.ConnectionStatePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -64,42 +64,42 @@ public final class ManagedPrivateEndpointResponse {
     /**
      * The managed private endpoint connection state
      * 
-     */
+    */
     public Optional<ConnectionStatePropertiesResponse> getConnectionState() {
         return Optional.ofNullable(this.connectionState);
     }
     /**
      * Fully qualified domain names
      * 
-     */
+    */
     public List<String> getFqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
     /**
      * The groupId to which the managed private endpoint is created
      * 
-     */
+    */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * Denotes whether the managed private endpoint is reserved
      * 
-     */
+    */
     public Boolean getIsReserved() {
         return this.isReserved;
     }
     /**
      * The ARM resource ID of the resource to which the managed private endpoint is created
      * 
-     */
+    */
     public Optional<String> getPrivateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
      * The managed private endpoint provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -163,7 +163,6 @@ public final class ManagedPrivateEndpointResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ManagedPrivateEndpointResponse build() {
             return new ManagedPrivateEndpointResponse(connectionState, fqdns, groupId, isReserved, privateLinkResourceId, provisioningState);
         }

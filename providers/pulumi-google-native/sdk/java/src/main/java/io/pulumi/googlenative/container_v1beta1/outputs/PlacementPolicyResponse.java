@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class PlacementPolicyResponse {
     /**
      * The type of placement.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -52,7 +52,6 @@ public final class PlacementPolicyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PlacementPolicyResponse build() {
             return new PlacementPolicyResponse(type);
         }

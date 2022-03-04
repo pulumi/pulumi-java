@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PolicyAdmissionWhitelistPatternArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="namePattern", required=true)
-    private final Input<String> namePattern;
+      private final Input<String> namePattern;
 
     public Input<String> getNamePattern() {
         return this.namePattern;
@@ -64,7 +64,6 @@ public final class PolicyAdmissionWhitelistPatternArgs extends io.pulumi.resourc
             this.namePattern = Input.of(Objects.requireNonNull(namePattern));
             return this;
         }
-
         public PolicyAdmissionWhitelistPatternArgs build() {
             return new PolicyAdmissionWhitelistPatternArgs(namePattern);
         }

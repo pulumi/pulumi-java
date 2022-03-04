@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.InternalCheckerState;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -35,7 +35,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gcpZone")
-    private final @Nullable Input<String> gcpZone;
+      private final @Nullable Input<String> gcpZone;
 
     public Input<String> getGcpZone() {
         return this.gcpZone == null ? Input.empty() : this.gcpZone;
@@ -46,7 +46,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -68,7 +68,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="peerProjectId")
-    private final @Nullable Input<String> peerProjectId;
+      private final @Nullable Input<String> peerProjectId;
 
     public Input<String> getPeerProjectId() {
         return this.peerProjectId == null ? Input.empty() : this.peerProjectId;
@@ -79,7 +79,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<InternalCheckerState> state;
+      private final @Nullable Input<InternalCheckerState> state;
 
     public Input<InternalCheckerState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -198,7 +198,6 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public InternalCheckerArgs build() {
             return new InternalCheckerArgs(displayName, gcpZone, name, network, peerProjectId, state);
         }

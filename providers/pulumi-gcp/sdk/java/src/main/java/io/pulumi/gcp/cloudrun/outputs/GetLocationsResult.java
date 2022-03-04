@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class GetLocationsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The list of Cloud Run locations available for the given project.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations;
     }
@@ -88,7 +88,6 @@ public final class GetLocationsResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetLocationsResult build() {
             return new GetLocationsResult(id, locations, project);
         }

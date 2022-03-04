@@ -10,7 +10,7 @@ import io.pulumi.azurenative.apimanagement.inputs.BackendProxyContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.BackendTlsPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendId")
-    private final @Nullable Input<String> backendId;
+      private final @Nullable Input<String> backendId;
 
     public Input<String> getBackendId() {
         return this.backendId == null ? Input.empty() : this.backendId;
@@ -36,7 +36,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<BackendCredentialsContractArgs> credentials;
+      private final @Nullable Input<BackendCredentialsContractArgs> credentials;
 
     public Input<BackendCredentialsContractArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -47,7 +47,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<BackendPropertiesArgs> properties;
+      private final @Nullable Input<BackendPropertiesArgs> properties;
 
     public Input<BackendPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -69,7 +69,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<Either<String,BackendProtocol>> protocol;
+      private final Input<Either<String,BackendProtocol>> protocol;
 
     public Input<Either<String,BackendProtocol>> getProtocol() {
         return this.protocol;
@@ -80,7 +80,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxy")
-    private final @Nullable Input<BackendProxyContractArgs> proxy;
+      private final @Nullable Input<BackendProxyContractArgs> proxy;
 
     public Input<BackendProxyContractArgs> getProxy() {
         return this.proxy == null ? Input.empty() : this.proxy;
@@ -91,7 +91,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -102,7 +102,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -113,7 +113,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -124,7 +124,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -135,7 +135,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tls")
-    private final @Nullable Input<BackendTlsPropertiesArgs> tls;
+      private final @Nullable Input<BackendTlsPropertiesArgs> tls;
 
     public Input<BackendTlsPropertiesArgs> getTls() {
         return this.tls == null ? Input.empty() : this.tls;
@@ -146,7 +146,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -355,7 +355,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public BackendArgs build() {
             return new BackendArgs(backendId, credentials, description, properties, protocol, proxy, resourceGroupName, resourceId, serviceName, title, tls, url);
         }

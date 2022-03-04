@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,35 +54,35 @@ public final class IterationResultResponse {
     /**
      * Time taken to run the iteration in milliseconds.
      * 
-     */
+    */
     public String getDurationMs() {
         return this.durationMs;
     }
     /**
      * Loss computed on the eval data at the end of iteration.
      * 
-     */
+    */
     public Double getEvalLoss() {
         return this.evalLoss;
     }
     /**
      * Index of the iteration, 0 based.
      * 
-     */
+    */
     public Integer getIndex() {
         return this.index;
     }
     /**
      * Learn rate used for this iteration.
      * 
-     */
+    */
     public Double getLearnRate() {
         return this.learnRate;
     }
     /**
      * Loss computed on the training data at the end of iteration.
      * 
-     */
+    */
     public Double getTrainingLoss() {
         return this.trainingLoss;
     }
@@ -139,7 +139,6 @@ public final class IterationResultResponse {
             this.trainingLoss = Objects.requireNonNull(trainingLoss);
             return this;
         }
-
         public IterationResultResponse build() {
             return new IterationResultResponse(durationMs, evalLoss, index, learnRate, trainingLoss);
         }

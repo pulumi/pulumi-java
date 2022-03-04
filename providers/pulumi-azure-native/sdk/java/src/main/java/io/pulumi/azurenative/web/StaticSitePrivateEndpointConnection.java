@@ -10,8 +10,8 @@ import io.pulumi.azurenative.web.outputs.PrivateLinkConnectionStateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -124,6 +124,37 @@ public class StaticSitePrivateEndpointConnection extends io.pulumi.resources.Cus
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(StaticSitePrivateEndpointConnectionArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.web.StaticSitePrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.web.StaticSitePrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public StaticSitePrivateEndpointConnection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public StaticSitePrivateEndpointConnection(String name) {
+        this(name, StaticSitePrivateEndpointConnectionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public StaticSitePrivateEndpointConnection(String name, StaticSitePrivateEndpointConnectionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkEndpointGroup {
-/**
- * Use this data source to access a Network Endpoint Group's attributes.
+    private GetNetworkEndpointGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkEndpointGroupArgs.Builder a);
+    }
+    private static GetNetworkEndpointGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkEndpointGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to access a Network Endpoint Group's attributes.
  * 
  * The NEG may be found by providing either a `self_link`, or a `name` and a `zone`.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getNetworkEndpointGroup.
+     *
+     * A collection of arguments for invoking getNetworkEndpointGroup.
  * 
- *
- * A collection of values returned by getNetworkEndpointGroup.
+     *
+     * A collection of values returned by getNetworkEndpointGroup.
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkEndpointGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to access a Network Endpoint Group's attributes.
+     * 
+     * The NEG may be found by providing either a `self_link`, or a `name` and a `zone`.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getNetworkEndpointGroup.
+     * 
+     *
+         * A collection of values returned by getNetworkEndpointGroup.
+     * 
+     */
     public static CompletableFuture<GetNetworkEndpointGroupResult> invokeAsync(@Nullable GetNetworkEndpointGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetworkEndpointGroup:getNetworkEndpointGroup", TypeShape.of(GetNetworkEndpointGroupResult.class), args == null ? GetNetworkEndpointGroupArgs.Empty : args, Utilities.withVersion(options));
     }

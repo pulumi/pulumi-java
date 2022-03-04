@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch;
@@ -102,7 +102,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
      * be specified.
      * 
-     */
+    */
     public Optional<String> getFullPathMatch() {
         return Optional.ofNullable(this.fullPathMatch);
     }
@@ -111,7 +111,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * headers in the request.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch> getHeaderMatches() {
         return this.headerMatches == null ? List.of() : this.headerMatches;
     }
@@ -119,7 +119,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
      * Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getIgnoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
@@ -137,7 +137,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter> getMetadataFilters() {
         return this.metadataFilters == null ? List.of() : this.metadataFilters;
     }
@@ -146,7 +146,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
      * must be set.
      * 
-     */
+    */
     public Optional<String> getPrefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -155,7 +155,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * corresponding query parameters in the request.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> getQueryParameterMatches() {
         return this.queryParameterMatches == null ? List.of() : this.queryParameterMatches;
     }
@@ -165,7 +165,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
      * exactMatch and regexMatch must be set.
      * 
-     */
+    */
     public Optional<String> getRegexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }
@@ -236,7 +236,6 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
             this.regexMatch = regexMatch;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleMatchRule build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRule(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }

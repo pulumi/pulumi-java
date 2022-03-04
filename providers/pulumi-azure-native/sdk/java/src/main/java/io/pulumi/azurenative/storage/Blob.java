@@ -9,8 +9,8 @@ import io.pulumi.azurenative.storage.enums.BlobAccessTier;
 import io.pulumi.azurenative.storage.enums.BlobType;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -127,6 +127,37 @@ public class Blob extends io.pulumi.resources.CustomResource {
         return this.url;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BlobArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.storage.BlobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.storage.BlobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Blob(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Blob(String name) {
+        this(name, BlobArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Blob(String name, BlobArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

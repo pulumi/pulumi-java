@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.ServerInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,35 +54,35 @@ public final class GetServerTrustGroupResult {
     /**
      * Group members information for the server trust group.
      * 
-     */
+    */
     public List<ServerInfoResponse> getGroupMembers() {
         return this.groupMembers;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Trust scope of the server trust group.
      * 
-     */
+    */
     public List<String> getTrustScopes() {
         return this.trustScopes;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetServerTrustGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerTrustGroupResult build() {
             return new GetServerTrustGroupResult(groupMembers, id, name, trustScopes, type);
         }

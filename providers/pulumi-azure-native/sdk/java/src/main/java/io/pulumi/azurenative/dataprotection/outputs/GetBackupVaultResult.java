@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.outputs;
 import io.pulumi.azurenative.dataprotection.outputs.BackupVaultResponse;
 import io.pulumi.azurenative.dataprotection.outputs.DppIdentityDetailsResponse;
 import io.pulumi.azurenative.dataprotection.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -86,63 +86,63 @@ public final class GetBackupVaultResult {
     /**
      * Optional ETag.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Resource Id represents the complete path to the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Input Managed Identity Details
      * 
-     */
+    */
     public Optional<DppIdentityDetailsResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name associated with the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * BackupVaultResource properties
      * 
-     */
+    */
     public BackupVaultResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -227,7 +227,6 @@ public final class GetBackupVaultResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBackupVaultResult build() {
             return new GetBackupVaultResult(eTag, id, identity, location, name, properties, systemData, tags, type);
         }

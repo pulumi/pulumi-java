@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -61,42 +61,42 @@ public final class OracleProfileResponse {
     /**
      * Connection string attributes
      * 
-     */
+    */
     public Map<String,String> getConnectionAttributes() {
         return this.connectionAttributes;
     }
     /**
      * Database for the Oracle connection.
      * 
-     */
+    */
     public String getDatabaseService() {
         return this.databaseService;
     }
     /**
      * Hostname for the Oracle connection.
      * 
-     */
+    */
     public String getHostname() {
         return this.hostname;
     }
     /**
      * Password for the Oracle connection.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * Port for the Oracle connection, default value is 1521.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * Username for the Oracle connection.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -160,7 +160,6 @@ public final class OracleProfileResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public OracleProfileResponse build() {
             return new OracleProfileResponse(connectionAttributes, databaseService, hostname, password, port, username);
         }

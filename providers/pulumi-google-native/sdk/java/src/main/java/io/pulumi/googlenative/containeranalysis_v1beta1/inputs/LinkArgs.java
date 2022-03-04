@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ByProductsArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.EnvironmentArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoArtifactArgs;
@@ -27,7 +27,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="byproducts")
-    private final @Nullable Input<ByProductsArgs> byproducts;
+      private final @Nullable Input<ByProductsArgs> byproducts;
 
     public Input<ByProductsArgs> getByproducts() {
         return this.byproducts == null ? Input.empty() : this.byproducts;
@@ -38,7 +38,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command")
-    private final @Nullable Input<List<String>> command;
+      private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -49,7 +49,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<EnvironmentArgs> environment;
+      private final @Nullable Input<EnvironmentArgs> environment;
 
     public Input<EnvironmentArgs> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -60,7 +60,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="materials")
-    private final @Nullable Input<List<GrafeasV1beta1IntotoArtifactArgs>> materials;
+      private final @Nullable Input<List<GrafeasV1beta1IntotoArtifactArgs>> materials;
 
     public Input<List<GrafeasV1beta1IntotoArtifactArgs>> getMaterials() {
         return this.materials == null ? Input.empty() : this.materials;
@@ -71,7 +71,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="products")
-    private final @Nullable Input<List<GrafeasV1beta1IntotoArtifactArgs>> products;
+      private final @Nullable Input<List<GrafeasV1beta1IntotoArtifactArgs>> products;
 
     public Input<List<GrafeasV1beta1IntotoArtifactArgs>> getProducts() {
         return this.products == null ? Input.empty() : this.products;
@@ -175,7 +175,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             this.products = Input.ofNullable(products);
             return this;
         }
-
         public LinkArgs build() {
             return new LinkArgs(byproducts, command, environment, materials, products);
         }

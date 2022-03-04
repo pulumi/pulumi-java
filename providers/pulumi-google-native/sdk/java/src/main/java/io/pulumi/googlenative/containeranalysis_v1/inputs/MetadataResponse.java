@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CompletenessResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="buildFinishedOn", required=true)
-    private final String buildFinishedOn;
+      private final String buildFinishedOn;
 
     public String getBuildFinishedOn() {
         return this.buildFinishedOn;
@@ -34,7 +34,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="buildInvocationId", required=true)
-    private final String buildInvocationId;
+      private final String buildInvocationId;
 
     public String getBuildInvocationId() {
         return this.buildInvocationId;
@@ -45,7 +45,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="buildStartedOn", required=true)
-    private final String buildStartedOn;
+      private final String buildStartedOn;
 
     public String getBuildStartedOn() {
         return this.buildStartedOn;
@@ -56,7 +56,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="completeness", required=true)
-    private final CompletenessResponse completeness;
+      private final CompletenessResponse completeness;
 
     public CompletenessResponse getCompleteness() {
         return this.completeness;
@@ -67,7 +67,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="reproducible", required=true)
-    private final Boolean reproducible;
+      private final Boolean reproducible;
 
     public Boolean getReproducible() {
         return this.reproducible;
@@ -146,7 +146,6 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
             this.reproducible = Objects.requireNonNull(reproducible);
             return this;
         }
-
         public MetadataResponse build() {
             return new MetadataResponse(buildFinishedOn, buildInvocationId, buildStartedOn, completeness, reproducible);
         }

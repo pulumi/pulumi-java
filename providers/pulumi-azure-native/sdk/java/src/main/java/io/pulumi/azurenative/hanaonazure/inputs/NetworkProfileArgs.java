@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.azurenative.hanaonazure.inputs.IpAddressArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<IpAddressArgs>> networkInterfaces;
+      private final @Nullable Input<List<IpAddressArgs>> networkInterfaces;
 
     public Input<List<IpAddressArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -67,7 +67,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
-
         public NetworkProfileArgs build() {
             return new NetworkProfileArgs(networkInterfaces);
         }

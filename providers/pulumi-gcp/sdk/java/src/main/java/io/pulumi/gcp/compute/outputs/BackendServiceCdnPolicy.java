@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.BackendServiceCdnPolicyCacheKeyPolicy;
 import io.pulumi.gcp.compute.outputs.BackendServiceCdnPolicyNegativeCachingPolicy;
 import java.lang.Boolean;
@@ -102,7 +102,7 @@ public final class BackendServiceCdnPolicy {
      * The CacheKeyPolicy for this CdnPolicy.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<BackendServiceCdnPolicyCacheKeyPolicy> getCacheKeyPolicy() {
         return Optional.ofNullable(this.cacheKeyPolicy);
     }
@@ -111,14 +111,14 @@ public final class BackendServiceCdnPolicy {
      * The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC
      * Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STATIC`.
      * 
-     */
+    */
     public Optional<String> getCacheMode() {
         return Optional.ofNullable(this.cacheMode);
     }
     /**
      * Specifies the maximum allowed TTL for cached content served by this origin.
      * 
-     */
+    */
     public Optional<Integer> getClientTtl() {
         return Optional.ofNullable(this.clientTtl);
     }
@@ -126,21 +126,21 @@ public final class BackendServiceCdnPolicy {
      * Specifies the default TTL for cached content served by this origin for responses
      * that do not have an existing valid TTL (max-age or s-max-age).
      * 
-     */
+    */
     public Optional<Integer> getDefaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
      * Specifies the maximum allowed TTL for cached content served by this origin.
      * 
-     */
+    */
     public Optional<Integer> getMaxTtl() {
         return Optional.ofNullable(this.maxTtl);
     }
     /**
      * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
      * 
-     */
+    */
     public Optional<Boolean> getNegativeCaching() {
         return Optional.ofNullable(this.negativeCaching);
     }
@@ -149,14 +149,14 @@ public final class BackendServiceCdnPolicy {
      * Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
      * Structure is documented below.
      * 
-     */
+    */
     public List<BackendServiceCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicies() {
         return this.negativeCachingPolicies == null ? List.of() : this.negativeCachingPolicies;
     }
     /**
      * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
      * 
-     */
+    */
     public Optional<Integer> getServeWhileStale() {
         return Optional.ofNullable(this.serveWhileStale);
     }
@@ -171,7 +171,7 @@ public final class BackendServiceCdnPolicy {
      * existing Cache-Control header. The actual headers served in
      * responses will not be altered.
      * 
-     */
+    */
     public Optional<Integer> getSignedUrlCacheMaxAgeSec() {
         return Optional.ofNullable(this.signedUrlCacheMaxAgeSec);
     }
@@ -256,7 +256,6 @@ public final class BackendServiceCdnPolicy {
             this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
         }
-
         public BackendServiceCdnPolicy build() {
             return new BackendServiceCdnPolicy(cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }

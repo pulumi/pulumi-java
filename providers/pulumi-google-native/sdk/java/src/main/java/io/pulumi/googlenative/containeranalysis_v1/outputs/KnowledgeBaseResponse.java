@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class KnowledgeBaseResponse {
     /**
      * The KB name (generally of the form KB[0-9]+ (e.g., KB123456)).
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A link to the KB in the [Windows update catalog] (https://www.catalog.update.microsoft.com/).
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -74,7 +74,6 @@ public final class KnowledgeBaseResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public KnowledgeBaseResponse build() {
             return new KnowledgeBaseResponse(name, url);
         }

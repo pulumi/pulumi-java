@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class GetVirtualNetworkRuleResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
-     */
+    */
     public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Virtual Network Rule State
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The ARM resource id of the virtual network subnet.
      * 
-     */
+    */
     public String getVirtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
@@ -161,7 +161,6 @@ public final class GetVirtualNetworkRuleResult {
             this.virtualNetworkSubnetId = Objects.requireNonNull(virtualNetworkSubnetId);
             return this;
         }
-
         public GetVirtualNetworkRuleResult build() {
             return new GetVirtualNetworkRuleResult(id, ignoreMissingVnetServiceEndpoint, name, state, type, virtualNetworkSubnetId);
         }

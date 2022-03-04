@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.offazure.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class SiteAgentPropertiesResponse {
     /**
      * ID of the agent.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Key vault ARM Id.
      * 
-     */
+    */
     public Optional<String> getKeyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
     /**
      * Key vault URI.
      * 
-     */
+    */
     public Optional<String> getKeyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
      * Last heartbeat time of the agent in UTC.
      * 
-     */
+    */
     public String getLastHeartBeatUtc() {
         return this.lastHeartBeatUtc;
     }
     /**
      * Version of the agent.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -139,7 +139,6 @@ public final class SiteAgentPropertiesResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SiteAgentPropertiesResponse build() {
             return new SiteAgentPropertiesResponse(id, keyVaultId, keyVaultUri, lastHeartBeatUtc, version);
         }

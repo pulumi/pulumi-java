@@ -6,21 +6,41 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.operationalinsights.inputs.GetQueryPackArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.GetQueryPackResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueryPack {
-/**
- * An Log Analytics QueryPack definition.
+    private GetQueryPack() {}
+    public interface BuilderApplicator {
+        public void apply(GetQueryPackArgs.Builder a);
+    }
+    private static GetQueryPackArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetQueryPackArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Log Analytics QueryPack definition.
  * API Version: 2019-09-01-preview.
  * 
- *
- * An Log Analytics QueryPack definition.
+     *
+     * An Log Analytics QueryPack definition.
  * 
- */
+     */
+    public static CompletableFuture<GetQueryPackResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Log Analytics QueryPack definition.
+     * API Version: 2019-09-01-preview.
+     * 
+     *
+         * An Log Analytics QueryPack definition.
+     * 
+     */
     public static CompletableFuture<GetQueryPackResult> invokeAsync(GetQueryPackArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getQueryPack", TypeShape.of(GetQueryPackResult.class), args == null ? GetQueryPackArgs.Empty : args, Utilities.withVersion(options));
     }

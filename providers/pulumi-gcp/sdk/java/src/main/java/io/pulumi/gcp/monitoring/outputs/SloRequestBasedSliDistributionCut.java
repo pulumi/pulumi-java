@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloRequestBasedSliDistributionCutRange;
 import java.lang.String;
 import java.util.Objects;
@@ -44,7 +44,7 @@ public final class SloRequestBasedSliDistributionCut {
      * Must have ValueType = DISTRIBUTION and
      * MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-     */
+    */
     public String getDistributionFilter() {
         return this.distributionFilter;
     }
@@ -57,7 +57,7 @@ public final class SloRequestBasedSliDistributionCut {
      * `range.min <= X <= range.max` for a good window.
      * Structure is documented below.
      * 
-     */
+    */
     public SloRequestBasedSliDistributionCutRange getRange() {
         return this.range;
     }
@@ -93,7 +93,6 @@ public final class SloRequestBasedSliDistributionCut {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public SloRequestBasedSliDistributionCut build() {
             return new SloRequestBasedSliDistributionCut(distributionFilter, range);
         }

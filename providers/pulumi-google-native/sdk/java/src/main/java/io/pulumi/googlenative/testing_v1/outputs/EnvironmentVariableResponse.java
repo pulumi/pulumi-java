@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class EnvironmentVariableResponse {
     /**
      * Key for the environment variable.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value for the environment variable.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class EnvironmentVariableResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EnvironmentVariableResponse build() {
             return new EnvironmentVariableResponse(key, value);
         }

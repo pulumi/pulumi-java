@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BiEngineReasonResponse {
     /**
      * High-level BI Engine reason for partial or disabled acceleration.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Free form human-readable reason for partial or disabled acceleration.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -74,7 +74,6 @@ public final class BiEngineReasonResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public BiEngineReasonResponse build() {
             return new BiEngineReasonResponse(code, message);
         }

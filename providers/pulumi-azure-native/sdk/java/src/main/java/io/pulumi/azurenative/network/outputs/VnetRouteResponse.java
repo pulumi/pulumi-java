@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.StaticRouteResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class VnetRouteResponse {
     /**
      * List of all Static Routes.
      * 
-     */
+    */
     public List<StaticRouteResponse> getStaticRoutes() {
         return this.staticRoutes == null ? List.of() : this.staticRoutes;
     }
@@ -54,7 +54,6 @@ public final class VnetRouteResponse {
             this.staticRoutes = staticRoutes;
             return this;
         }
-
         public VnetRouteResponse build() {
             return new VnetRouteResponse(staticRoutes);
         }

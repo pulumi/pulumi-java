@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,7 +57,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      * The image type to use for this node. Note that changing the image type
      * will delete and recreate all nodes in the node pool.
      * 
-     */
+    */
     public Optional<String> getImageType() {
         return Optional.ofNullable(this.imageType);
     }
@@ -68,7 +68,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
      * for more information.
      * 
-     */
+    */
     public Optional<String> getMinCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -77,7 +77,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      * on all of the node VMs under the "default" service account.
      * Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
      * 
-     */
+    */
     public List<String> getOauthScopes() {
         return this.oauthScopes == null ? List.of() : this.oauthScopes;
     }
@@ -85,7 +85,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      * The service account to be used by the Node VMs.
      * If not specified, the "default" service account is used.
      * 
-     */
+    */
     public Optional<String> getServiceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -135,7 +135,6 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public ClusterClusterAutoscalingAutoProvisioningDefaults build() {
             return new ClusterClusterAutoscalingAutoProvisioningDefaults(imageType, minCpuPlatform, oauthScopes, serviceAccount);
         }

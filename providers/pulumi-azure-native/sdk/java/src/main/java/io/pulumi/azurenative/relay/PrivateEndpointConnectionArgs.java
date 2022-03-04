@@ -6,7 +6,7 @@ package io.pulumi.azurenative.relay;
 import io.pulumi.azurenative.relay.inputs.PrivateEndpointArgs;
 import io.pulumi.azurenative.relay.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -33,7 +33,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -44,7 +44,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
+      private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
     public Input<PrivateEndpointArgs> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
@@ -55,7 +55,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -66,7 +66,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -77,7 +77,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(location, namespaceName, privateEndpoint, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName, tags);
         }

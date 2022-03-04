@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class NonResourceRule {
     /**
      * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  "*" means all.
      * 
-     */
+    */
     public List<String> getNonResourceURLs() {
         return this.nonResourceURLs == null ? List.of() : this.nonResourceURLs;
     }
     /**
      * Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.
      * 
-     */
+    */
     public List<String> getVerbs() {
         return this.verbs;
     }
@@ -76,7 +76,6 @@ public final class NonResourceRule {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-
         public NonResourceRule build() {
             return new NonResourceRule(nonResourceURLs, verbs);
         }

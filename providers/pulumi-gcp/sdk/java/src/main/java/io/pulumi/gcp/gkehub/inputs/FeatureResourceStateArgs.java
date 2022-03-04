@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class FeatureResourceStateArgs extends io.pulumi.resources.Resource
     public static final FeatureResourceStateArgs Empty = new FeatureResourceStateArgs();
 
     @InputImport(name="hasResources")
-    private final @Nullable Input<Boolean> hasResources;
+      private final @Nullable Input<Boolean> hasResources;
 
     public Input<Boolean> getHasResources() {
         return this.hasResources == null ? Input.empty() : this.hasResources;
     }
 
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -82,7 +82,6 @@ public final class FeatureResourceStateArgs extends io.pulumi.resources.Resource
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public FeatureResourceStateArgs build() {
             return new FeatureResourceStateArgs(hasResources, state);
         }

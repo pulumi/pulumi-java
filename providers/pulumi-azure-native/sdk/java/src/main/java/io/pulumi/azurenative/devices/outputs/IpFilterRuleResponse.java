@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class IpFilterRuleResponse {
     /**
      * The desired action for requests captured by this rule.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * The name of the IP filter rule.
      * 
-     */
+    */
     public String getFilterName() {
         return this.filterName;
     }
     /**
      * A string that contains the IP address range in CIDR notation for the rule.
      * 
-     */
+    */
     public String getIpMask() {
         return this.ipMask;
     }
@@ -95,7 +95,6 @@ public final class IpFilterRuleResponse {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
-
         public IpFilterRuleResponse build() {
             return new IpFilterRuleResponse(action, filterName, ipMask);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.LoggingConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="archiveUris", required=true)
-    private final List<String> archiveUris;
+      private final List<String> archiveUris;
 
     public List<String> getArchiveUris() {
         return this.archiveUris;
@@ -35,7 +35,7 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="args", required=true)
-    private final List<String> args;
+      private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
@@ -46,7 +46,7 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileUris", required=true)
-    private final List<String> fileUris;
+      private final List<String> fileUris;
 
     public List<String> getFileUris() {
         return this.fileUris;
@@ -57,7 +57,7 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jarFileUris", required=true)
-    private final List<String> jarFileUris;
+      private final List<String> jarFileUris;
 
     public List<String> getJarFileUris() {
         return this.jarFileUris;
@@ -68,7 +68,7 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="loggingConfig", required=true)
-    private final LoggingConfigResponse loggingConfig;
+      private final LoggingConfigResponse loggingConfig;
 
     public LoggingConfigResponse getLoggingConfig() {
         return this.loggingConfig;
@@ -79,7 +79,7 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mainPythonFileUri", required=true)
-    private final String mainPythonFileUri;
+      private final String mainPythonFileUri;
 
     public String getMainPythonFileUri() {
         return this.mainPythonFileUri;
@@ -90,7 +90,7 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Map<String,String> properties;
+      private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties;
@@ -101,7 +101,7 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pythonFileUris", required=true)
-    private final List<String> pythonFileUris;
+      private final List<String> pythonFileUris;
 
     public List<String> getPythonFileUris() {
         return this.pythonFileUris;
@@ -210,7 +210,6 @@ public final class PySparkJobResponse extends io.pulumi.resources.InvokeArgs {
             this.pythonFileUris = Objects.requireNonNull(pythonFileUris);
             return this;
         }
-
         public PySparkJobResponse build() {
             return new PySparkJobResponse(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
         }

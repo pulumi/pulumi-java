@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class StatusConditionResponse {
     /**
      * Canonical code of the condition.
      * 
-     */
+    */
     public String getCanonicalCode() {
         return this.canonicalCode;
     }
     /**
      * Human-friendly representation of the condition
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -74,7 +74,6 @@ public final class StatusConditionResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public StatusConditionResponse build() {
             return new StatusConditionResponse(canonicalCode, message);
         }

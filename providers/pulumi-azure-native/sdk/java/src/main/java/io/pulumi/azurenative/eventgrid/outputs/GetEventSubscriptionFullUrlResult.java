@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetEventSubscriptionFullUrlResult {
     /**
      * The URL that represents the endpoint of the destination of an event subscription.
      * 
-     */
+    */
     public Optional<String> getEndpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
@@ -54,7 +54,6 @@ public final class GetEventSubscriptionFullUrlResult {
             this.endpointUrl = endpointUrl;
             return this;
         }
-
         public GetEventSubscriptionFullUrlResult build() {
             return new GetEventSubscriptionFullUrlResult(endpointUrl);
         }

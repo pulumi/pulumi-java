@@ -8,7 +8,7 @@ import io.pulumi.azurenative.orbital.enums.Polarization;
 import io.pulumi.azurenative.orbital.inputs.ContactProfileLinkChannelArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="channels", required=true)
-    private final Input<List<ContactProfileLinkChannelArgs>> channels;
+      private final Input<List<ContactProfileLinkChannelArgs>> channels;
 
     public Input<List<ContactProfileLinkChannelArgs>> getChannels() {
         return this.channels;
@@ -40,7 +40,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="direction", required=true)
-    private final Input<Either<String,Direction>> direction;
+      private final Input<Either<String,Direction>> direction;
 
     public Input<Either<String,Direction>> getDirection() {
         return this.direction;
@@ -51,7 +51,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eirpdBW")
-    private final @Nullable Input<Double> eirpdBW;
+      private final @Nullable Input<Double> eirpdBW;
 
     public Input<Double> getEirpdBW() {
         return this.eirpdBW == null ? Input.empty() : this.eirpdBW;
@@ -62,7 +62,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gainOverTemperature")
-    private final @Nullable Input<Double> gainOverTemperature;
+      private final @Nullable Input<Double> gainOverTemperature;
 
     public Input<Double> getGainOverTemperature() {
         return this.gainOverTemperature == null ? Input.empty() : this.gainOverTemperature;
@@ -73,7 +73,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="polarization", required=true)
-    private final Input<Either<String,Polarization>> polarization;
+      private final Input<Either<String,Polarization>> polarization;
 
     public Input<Either<String,Polarization>> getPolarization() {
         return this.polarization;
@@ -177,7 +177,6 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
             this.polarization = Input.of(Objects.requireNonNull(polarization));
             return this;
         }
-
         public ContactProfileLinkArgs build() {
             return new ContactProfileLinkArgs(channels, direction, eirpdBW, gainOverTemperature, polarization);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListPrivateCloudAdminCredentialsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final String privateCloudName;
+      private final String privateCloudName;
 
     public String getPrivateCloudName() {
         return this.privateCloudName;
@@ -28,7 +28,7 @@ public final class ListPrivateCloudAdminCredentialsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListPrivateCloudAdminCredentialsArgs extends io.pulumi.resour
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListPrivateCloudAdminCredentialsArgs build() {
             return new ListPrivateCloudAdminCredentialsArgs(privateCloudName, resourceGroupName);
         }

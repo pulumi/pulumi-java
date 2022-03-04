@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -77,56 +77,56 @@ public final class GetJobAgentResult {
     /**
      * Resource ID of the database to store job metadata in.
      * 
-     */
+    */
     public String getDatabaseId() {
         return this.databaseId;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name and tier of the SKU.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The state of the job agent.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -204,7 +204,6 @@ public final class GetJobAgentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobAgentResult build() {
             return new GetJobAgentResult(databaseId, id, location, name, sku, state, tags, type);
         }

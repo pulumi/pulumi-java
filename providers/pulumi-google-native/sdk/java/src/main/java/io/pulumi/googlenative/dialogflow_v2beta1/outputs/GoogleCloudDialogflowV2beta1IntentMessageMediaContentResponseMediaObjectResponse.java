@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageImageResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     /**
      * Url where the media is stored.
      * 
-     */
+    */
     public String getContentUrl() {
         return this.contentUrl;
     }
     /**
      * Optional. Description of media card.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. Icon to display above media content.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getIcon() {
         return this.icon;
     }
     /**
      * Optional. Image to display above media content.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getLargeImage() {
         return this.largeImage;
     }
     /**
      * Name of media card.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -138,7 +138,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse(contentUrl, description, icon, largeImage, name);
         }

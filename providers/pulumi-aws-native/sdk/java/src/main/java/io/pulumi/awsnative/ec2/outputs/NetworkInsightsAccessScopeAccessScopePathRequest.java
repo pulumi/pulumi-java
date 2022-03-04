@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopePathStatementRequest;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeThroughResourcesStatementRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,7 +75,6 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequest {
             this.throughResources = throughResources;
             return this;
         }
-
         public NetworkInsightsAccessScopeAccessScopePathRequest build() {
             return new NetworkInsightsAccessScopeAccessScopePathRequest(destination, source, throughResources);
         }

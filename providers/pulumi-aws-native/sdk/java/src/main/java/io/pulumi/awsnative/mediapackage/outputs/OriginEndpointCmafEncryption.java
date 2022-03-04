@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointSpekeKeyProvider;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -38,14 +38,14 @@ public final class OriginEndpointCmafEncryption {
     /**
      * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don't specify a value, then MediaPackage creates the constant initialization vector (IV).
      * 
-     */
+    */
     public Optional<String> getConstantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
      * Time (in seconds) between each encryption key rotation.
      * 
-     */
+    */
     public Optional<Integer> getKeyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
@@ -91,7 +91,6 @@ public final class OriginEndpointCmafEncryption {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public OriginEndpointCmafEncryption build() {
             return new OriginEndpointCmafEncryption(constantInitializationVector, keyRotationIntervalSeconds, spekeKeyProvider);
         }

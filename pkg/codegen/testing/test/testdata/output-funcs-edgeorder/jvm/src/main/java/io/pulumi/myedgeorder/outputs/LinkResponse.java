@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class LinkResponse {
     /**
      * Type of link
      * 
-     */
+    */
     public String getLinkType() {
         return this.linkType;
     }
     /**
      * Url of the link
      * 
-     */
+    */
     public String getLinkUrl() {
         return this.linkUrl;
     }
@@ -74,7 +74,6 @@ public final class LinkResponse {
             this.linkUrl = Objects.requireNonNull(linkUrl);
             return this;
         }
-
         public LinkResponse build() {
             return new LinkResponse(linkType, linkUrl);
         }

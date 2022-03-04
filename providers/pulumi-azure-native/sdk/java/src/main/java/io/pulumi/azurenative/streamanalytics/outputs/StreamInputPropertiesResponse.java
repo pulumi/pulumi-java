@@ -10,7 +10,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.DiagnosticsResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.EventHubStreamInputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.IoTHubStreamInputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.JsonSerializationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -63,28 +63,28 @@ public final class StreamInputPropertiesResponse {
     /**
      * Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<Object> getDatasource() {
         return Optional.ofNullable(this.datasource);
     }
     /**
      * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
      * 
-     */
+    */
     public DiagnosticsResponse getDiagnostics() {
         return this.diagnostics;
     }
     /**
      * The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<Object> getSerialization() {
         return Optional.ofNullable(this.serialization);
     }
@@ -92,7 +92,7 @@ public final class StreamInputPropertiesResponse {
      * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Stream'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -149,7 +149,6 @@ public final class StreamInputPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StreamInputPropertiesResponse build() {
             return new StreamInputPropertiesResponse(datasource, diagnostics, etag, serialization, type);
         }

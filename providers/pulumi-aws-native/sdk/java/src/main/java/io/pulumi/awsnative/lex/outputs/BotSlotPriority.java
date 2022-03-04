@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class BotSlotPriority {
     /**
      * The name of the slot.
      * 
-     */
+    */
     public String getSlotName() {
         return this.slotName;
     }
@@ -67,7 +67,6 @@ public final class BotSlotPriority {
             this.slotName = Objects.requireNonNull(slotName);
             return this;
         }
-
         public BotSlotPriority build() {
             return new BotSlotPriority(priority, slotName);
         }

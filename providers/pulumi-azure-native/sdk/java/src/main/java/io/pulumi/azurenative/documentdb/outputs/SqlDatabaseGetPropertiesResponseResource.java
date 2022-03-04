@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class SqlDatabaseGetPropertiesResponseResource {
     /**
      * A system generated property that specified the addressable path of the collections resource.
      * 
-     */
+    */
     public Optional<String> getColls() {
         return Optional.ofNullable(this.colls);
     }
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB SQL database
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A system generated property. A unique identifier.
      * 
-     */
+    */
     public String getRid() {
         return this.rid;
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
-     */
+    */
     public Double getTs() {
         return this.ts;
     }
     /**
      * A system generated property that specifies the addressable path of the users resource.
      * 
-     */
+    */
     public Optional<String> getUsers() {
         return Optional.ofNullable(this.users);
     }
@@ -161,7 +161,6 @@ public final class SqlDatabaseGetPropertiesResponseResource {
             this.users = users;
             return this;
         }
-
         public SqlDatabaseGetPropertiesResponseResource build() {
             return new SqlDatabaseGetPropertiesResponseResource(colls, etag, id, rid, ts, users);
         }

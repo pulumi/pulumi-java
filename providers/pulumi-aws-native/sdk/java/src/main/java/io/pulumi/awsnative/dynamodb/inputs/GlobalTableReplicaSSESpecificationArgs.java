@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class GlobalTableReplicaSSESpecificationArgs extends io.pulumi.reso
     public static final GlobalTableReplicaSSESpecificationArgs Empty = new GlobalTableReplicaSSESpecificationArgs();
 
     @InputImport(name="kMSMasterKeyId", required=true)
-    private final Input<String> kMSMasterKeyId;
+      private final Input<String> kMSMasterKeyId;
 
     public Input<String> getKMSMasterKeyId() {
         return this.kMSMasterKeyId;
@@ -57,7 +57,6 @@ public final class GlobalTableReplicaSSESpecificationArgs extends io.pulumi.reso
             this.kMSMasterKeyId = Input.of(Objects.requireNonNull(kMSMasterKeyId));
             return this;
         }
-
         public GlobalTableReplicaSSESpecificationArgs build() {
             return new GlobalTableReplicaSSESpecificationArgs(kMSMasterKeyId);
         }

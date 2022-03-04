@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.MpiResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.OutputDataBindingResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.PyTorchResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.TensorFlowResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -83,49 +83,49 @@ public final class TrialComponentResponse {
     /**
      * ARM resource ID of the code asset.
      * 
-     */
+    */
     public Optional<String> getCodeId() {
         return Optional.ofNullable(this.codeId);
     }
     /**
      * The command to execute on startup of the job. eg. "python train.py"
      * 
-     */
+    */
     public String getCommand() {
         return this.command;
     }
     /**
      * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
      * 
-     */
+    */
     public Optional<Object> getDistribution() {
         return Optional.ofNullable(this.distribution);
     }
     /**
      * The ARM resource ID of the Environment specification for the job.
      * 
-     */
+    */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
      * Environment variables included in the job.
      * 
-     */
+    */
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * Mapping of input data bindings used in the job.
      * 
-     */
+    */
     public Map<String,InputDataBindingResponse> getInputDataBindings() {
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
     }
     /**
      * Mapping of output data bindings used in the job.
      * 
-     */
+    */
     public Map<String,OutputDataBindingResponse> getOutputDataBindings() {
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
     }
@@ -133,7 +133,7 @@ public final class TrialComponentResponse {
      * The max run duration in ISO 8601 format, after which the trial component will be cancelled.
      * Only supports duration with precision as low as Seconds.
      * 
-     */
+    */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -211,7 +211,6 @@ public final class TrialComponentResponse {
             this.timeout = timeout;
             return this;
         }
-
         public TrialComponentResponse build() {
             return new TrialComponentResponse(codeId, command, distribution, environmentId, environmentVariables, inputDataBindings, outputDataBindings, timeout);
         }

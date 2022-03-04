@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationBucketPolicyOnlyArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationUniformBucketLevelAccessArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bucketPolicyOnly")
-    private final @Nullable Input<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
+      private final @Nullable Input<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
 
     public Input<BucketIamConfigurationBucketPolicyOnlyArgs> getBucketPolicyOnly() {
         return this.bucketPolicyOnly == null ? Input.empty() : this.bucketPolicyOnly;
@@ -36,7 +36,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publicAccessPrevention")
-    private final @Nullable Input<String> publicAccessPrevention;
+      private final @Nullable Input<String> publicAccessPrevention;
 
     public Input<String> getPublicAccessPrevention() {
         return this.publicAccessPrevention == null ? Input.empty() : this.publicAccessPrevention;
@@ -47,7 +47,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="uniformBucketLevelAccess")
-    private final @Nullable Input<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
+      private final @Nullable Input<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
 
     public Input<BucketIamConfigurationUniformBucketLevelAccessArgs> getUniformBucketLevelAccess() {
         return this.uniformBucketLevelAccess == null ? Input.empty() : this.uniformBucketLevelAccess;
@@ -121,7 +121,6 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
             this.uniformBucketLevelAccess = Input.ofNullable(uniformBucketLevelAccess);
             return this;
         }
-
         public BucketIamConfigurationArgs build() {
             return new BucketIamConfigurationArgs(bucketPolicyOnly, publicAccessPrevention, uniformBucketLevelAccess);
         }

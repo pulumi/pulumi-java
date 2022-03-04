@@ -6,7 +6,7 @@ package io.pulumi.awsnative.connect.inputs;
 import io.pulumi.awsnative.connect.enums.HoursOfOperationConfigDay;
 import io.pulumi.awsnative.connect.inputs.HoursOfOperationTimeSliceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -23,7 +23,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="day", required=true)
-    private final Input<HoursOfOperationConfigDay> day;
+      private final Input<HoursOfOperationConfigDay> day;
 
     public Input<HoursOfOperationConfigDay> getDay() {
         return this.day;
@@ -34,7 +34,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final Input<HoursOfOperationTimeSliceArgs> endTime;
+      private final Input<HoursOfOperationTimeSliceArgs> endTime;
 
     public Input<HoursOfOperationTimeSliceArgs> getEndTime() {
         return this.endTime;
@@ -45,7 +45,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<HoursOfOperationTimeSliceArgs> startTime;
+      private final Input<HoursOfOperationTimeSliceArgs> startTime;
 
     public Input<HoursOfOperationTimeSliceArgs> getStartTime() {
         return this.startTime;
@@ -119,7 +119,6 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public HoursOfOperationConfigArgs build() {
             return new HoursOfOperationConfigArgs(day, endTime, startTime);
         }

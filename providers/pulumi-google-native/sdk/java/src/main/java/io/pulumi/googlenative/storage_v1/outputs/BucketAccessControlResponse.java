@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketAccessControlProjectTeamResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -99,21 +99,21 @@ public final class BucketAccessControlResponse {
     /**
      * The name of the bucket.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * The domain associated with the entity, if any.
      * 
-     */
+    */
     public String getDomain() {
         return this.domain;
     }
     /**
      * The email address associated with the entity, if any.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
@@ -131,49 +131,49 @@ public final class BucketAccessControlResponse {
      * - The group example@googlegroups.com would be group-example@googlegroups.com.
      * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
      * 
-     */
+    */
     public String getEntity() {
         return this.entity;
     }
     /**
      * The ID for the entity, if any.
      * 
-     */
+    */
     public String getEntityId() {
         return this.entityId;
     }
     /**
      * HTTP 1.1 Entity tag for the access-control entry.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The project team associated with the entity, if any.
      * 
-     */
+    */
     public BucketAccessControlProjectTeamResponse getProjectTeam() {
         return this.projectTeam;
     }
     /**
      * The access permission for the entity.
      * 
-     */
+    */
     public String getRole() {
         return this.role;
     }
     /**
      * The link to this access-control entry.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
@@ -265,7 +265,6 @@ public final class BucketAccessControlResponse {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public BucketAccessControlResponse build() {
             return new BucketAccessControlResponse(bucket, domain, email, entity, entityId, etag, kind, projectTeam, role, selfLink);
         }

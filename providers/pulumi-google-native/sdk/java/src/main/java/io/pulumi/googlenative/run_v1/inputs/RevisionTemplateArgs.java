@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;
 import io.pulumi.googlenative.run_v1.inputs.RevisionSpecArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RevisionTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -35,7 +35,7 @@ public final class RevisionTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<RevisionSpecArgs> spec;
+      private final @Nullable Input<RevisionSpecArgs> spec;
 
     public Input<RevisionSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -94,7 +94,6 @@ public final class RevisionTemplateArgs extends io.pulumi.resources.ResourceArgs
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public RevisionTemplateArgs build() {
             return new RevisionTemplateArgs(metadata, spec);
         }

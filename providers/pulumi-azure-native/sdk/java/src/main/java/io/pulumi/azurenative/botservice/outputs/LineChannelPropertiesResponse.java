@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.LineRegistrationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -41,21 +41,21 @@ public final class LineChannelPropertiesResponse {
     /**
      * Callback Url to enter in line registration.
      * 
-     */
+    */
     public String getCallbackUrl() {
         return this.callbackUrl;
     }
     /**
      * Whether this channel is validated for the bot
      * 
-     */
+    */
     public Boolean getIsValidated() {
         return this.isValidated;
     }
     /**
      * The list of line channel registrations
      * 
-     */
+    */
     public List<LineRegistrationResponse> getLineRegistrations() {
         return this.lineRegistrations;
     }
@@ -98,7 +98,6 @@ public final class LineChannelPropertiesResponse {
             this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
             return this;
         }
-
         public LineChannelPropertiesResponse build() {
             return new LineChannelPropertiesResponse(callbackUrl, isValidated, lineRegistrations);
         }

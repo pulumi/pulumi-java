@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerservice.inputs.ListManagedClusterMonitoringUserCredentialsArgs;
 import io.pulumi.azurenative.containerservice.outputs.ListManagedClusterMonitoringUserCredentialsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListManagedClusterMonitoringUserCredentials {
-/**
- * The list of credential result response.
+    private ListManagedClusterMonitoringUserCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(ListManagedClusterMonitoringUserCredentialsArgs.Builder a);
+    }
+    private static ListManagedClusterMonitoringUserCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListManagedClusterMonitoringUserCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of credential result response.
  * API Version: 2021-03-01.
  * 
- *
- * The list of credential result response.
+     *
+     * The list of credential result response.
  * 
- */
+     */
+    public static CompletableFuture<ListManagedClusterMonitoringUserCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of credential result response.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * The list of credential result response.
+     * 
+     */
     public static CompletableFuture<ListManagedClusterMonitoringUserCredentialsResult> invokeAsync(ListManagedClusterMonitoringUserCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerservice:listManagedClusterMonitoringUserCredentials", TypeShape.of(ListManagedClusterMonitoringUserCredentialsResult.class), args == null ? ListManagedClusterMonitoringUserCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

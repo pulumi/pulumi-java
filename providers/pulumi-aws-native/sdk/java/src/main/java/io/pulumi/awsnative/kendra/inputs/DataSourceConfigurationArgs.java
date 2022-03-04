@@ -14,7 +14,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceSharePointConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWorkDocsConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,70 +24,70 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
     public static final DataSourceConfigurationArgs Empty = new DataSourceConfigurationArgs();
 
     @InputImport(name="confluenceConfiguration")
-    private final @Nullable Input<DataSourceConfluenceConfigurationArgs> confluenceConfiguration;
+      private final @Nullable Input<DataSourceConfluenceConfigurationArgs> confluenceConfiguration;
 
     public Input<DataSourceConfluenceConfigurationArgs> getConfluenceConfiguration() {
         return this.confluenceConfiguration == null ? Input.empty() : this.confluenceConfiguration;
     }
 
     @InputImport(name="databaseConfiguration")
-    private final @Nullable Input<DataSourceDatabaseConfigurationArgs> databaseConfiguration;
+      private final @Nullable Input<DataSourceDatabaseConfigurationArgs> databaseConfiguration;
 
     public Input<DataSourceDatabaseConfigurationArgs> getDatabaseConfiguration() {
         return this.databaseConfiguration == null ? Input.empty() : this.databaseConfiguration;
     }
 
     @InputImport(name="googleDriveConfiguration")
-    private final @Nullable Input<DataSourceGoogleDriveConfigurationArgs> googleDriveConfiguration;
+      private final @Nullable Input<DataSourceGoogleDriveConfigurationArgs> googleDriveConfiguration;
 
     public Input<DataSourceGoogleDriveConfigurationArgs> getGoogleDriveConfiguration() {
         return this.googleDriveConfiguration == null ? Input.empty() : this.googleDriveConfiguration;
     }
 
     @InputImport(name="oneDriveConfiguration")
-    private final @Nullable Input<DataSourceOneDriveConfigurationArgs> oneDriveConfiguration;
+      private final @Nullable Input<DataSourceOneDriveConfigurationArgs> oneDriveConfiguration;
 
     public Input<DataSourceOneDriveConfigurationArgs> getOneDriveConfiguration() {
         return this.oneDriveConfiguration == null ? Input.empty() : this.oneDriveConfiguration;
     }
 
     @InputImport(name="s3Configuration")
-    private final @Nullable Input<DataSourceS3DataSourceConfigurationArgs> s3Configuration;
+      private final @Nullable Input<DataSourceS3DataSourceConfigurationArgs> s3Configuration;
 
     public Input<DataSourceS3DataSourceConfigurationArgs> getS3Configuration() {
         return this.s3Configuration == null ? Input.empty() : this.s3Configuration;
     }
 
     @InputImport(name="salesforceConfiguration")
-    private final @Nullable Input<DataSourceSalesforceConfigurationArgs> salesforceConfiguration;
+      private final @Nullable Input<DataSourceSalesforceConfigurationArgs> salesforceConfiguration;
 
     public Input<DataSourceSalesforceConfigurationArgs> getSalesforceConfiguration() {
         return this.salesforceConfiguration == null ? Input.empty() : this.salesforceConfiguration;
     }
 
     @InputImport(name="serviceNowConfiguration")
-    private final @Nullable Input<DataSourceServiceNowConfigurationArgs> serviceNowConfiguration;
+      private final @Nullable Input<DataSourceServiceNowConfigurationArgs> serviceNowConfiguration;
 
     public Input<DataSourceServiceNowConfigurationArgs> getServiceNowConfiguration() {
         return this.serviceNowConfiguration == null ? Input.empty() : this.serviceNowConfiguration;
     }
 
     @InputImport(name="sharePointConfiguration")
-    private final @Nullable Input<DataSourceSharePointConfigurationArgs> sharePointConfiguration;
+      private final @Nullable Input<DataSourceSharePointConfigurationArgs> sharePointConfiguration;
 
     public Input<DataSourceSharePointConfigurationArgs> getSharePointConfiguration() {
         return this.sharePointConfiguration == null ? Input.empty() : this.sharePointConfiguration;
     }
 
     @InputImport(name="webCrawlerConfiguration")
-    private final @Nullable Input<DataSourceWebCrawlerConfigurationArgs> webCrawlerConfiguration;
+      private final @Nullable Input<DataSourceWebCrawlerConfigurationArgs> webCrawlerConfiguration;
 
     public Input<DataSourceWebCrawlerConfigurationArgs> getWebCrawlerConfiguration() {
         return this.webCrawlerConfiguration == null ? Input.empty() : this.webCrawlerConfiguration;
     }
 
     @InputImport(name="workDocsConfiguration")
-    private final @Nullable Input<DataSourceWorkDocsConfigurationArgs> workDocsConfiguration;
+      private final @Nullable Input<DataSourceWorkDocsConfigurationArgs> workDocsConfiguration;
 
     public Input<DataSourceWorkDocsConfigurationArgs> getWorkDocsConfiguration() {
         return this.workDocsConfiguration == null ? Input.empty() : this.workDocsConfiguration;
@@ -266,7 +266,6 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             this.workDocsConfiguration = Input.ofNullable(workDocsConfiguration);
             return this;
         }
-
         public DataSourceConfigurationArgs build() {
             return new DataSourceConfigurationArgs(confluenceConfiguration, databaseConfiguration, googleDriveConfiguration, oneDriveConfiguration, s3Configuration, salesforceConfiguration, serviceNowConfiguration, sharePointConfiguration, webCrawlerConfiguration, workDocsConfiguration);
         }

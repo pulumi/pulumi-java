@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.enums.ConsentState;
 import io.pulumi.googlenative.healthcare_v1.inputs.GoogleCloudHealthcareV1ConsentPolicyArgs;
 import java.lang.String;
@@ -23,21 +23,21 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consentArtifact", required=true)
-    private final Input<String> consentArtifact;
+      private final Input<String> consentArtifact;
 
     public Input<String> getConsentArtifact() {
         return this.consentArtifact;
     }
 
     @InputImport(name="consentStoreId", required=true)
-    private final Input<String> consentStoreId;
+      private final Input<String> consentStoreId;
 
     public Input<String> getConsentStoreId() {
         return this.consentStoreId;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -48,14 +48,14 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+      private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -77,7 +77,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,14 +88,14 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policies")
-    private final @Nullable Input<List<GoogleCloudHealthcareV1ConsentPolicyArgs>> policies;
+      private final @Nullable Input<List<GoogleCloudHealthcareV1ConsentPolicyArgs>> policies;
 
     public Input<List<GoogleCloudHealthcareV1ConsentPolicyArgs>> getPolicies() {
         return this.policies == null ? Input.empty() : this.policies;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -106,7 +106,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<ConsentState> state;
+      private final Input<ConsentState> state;
 
     public Input<ConsentState> getState() {
         return this.state;
@@ -117,7 +117,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<String> ttl;
+      private final @Nullable Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -128,7 +128,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId", required=true)
-    private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;
@@ -337,7 +337,6 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }
-
         public ConsentArgs build() {
             return new ConsentArgs(consentArtifact, consentStoreId, datasetId, expireTime, location, metadata, name, policies, project, state, ttl, userId);
         }

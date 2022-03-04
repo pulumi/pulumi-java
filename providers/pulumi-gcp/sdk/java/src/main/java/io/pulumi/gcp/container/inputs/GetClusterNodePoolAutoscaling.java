@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetClusterNodePoolAutoscaling extends io.pulumi.resources.Inv
     public static final GetClusterNodePoolAutoscaling Empty = new GetClusterNodePoolAutoscaling();
 
     @InputImport(name="maxNodeCount", required=true)
-    private final Integer maxNodeCount;
+      private final Integer maxNodeCount;
 
     public Integer getMaxNodeCount() {
         return this.maxNodeCount;
     }
 
     @InputImport(name="minNodeCount", required=true)
-    private final Integer minNodeCount;
+      private final Integer minNodeCount;
 
     public Integer getMinNodeCount() {
         return this.minNodeCount;
@@ -69,7 +69,6 @@ public final class GetClusterNodePoolAutoscaling extends io.pulumi.resources.Inv
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }
-
         public GetClusterNodePoolAutoscaling build() {
             return new GetClusterNodePoolAutoscaling(maxNodeCount, minNodeCount);
         }

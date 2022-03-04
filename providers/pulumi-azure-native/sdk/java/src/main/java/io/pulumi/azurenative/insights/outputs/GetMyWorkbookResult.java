@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.MyWorkbookManagedIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -133,112 +133,112 @@ public final class GetMyWorkbookResult {
     /**
      * Workbook category, as defined by the user at creation time.
      * 
-     */
+    */
     public String getCategory() {
         return this.category;
     }
     /**
      * The user-defined name of the private workbook.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource etag
      * 
-     */
+    */
     public Map<String,String> getEtag() {
         return this.etag == null ? Map.of() : this.etag;
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Identity used for BYOS
      * 
-     */
+    */
     public Optional<MyWorkbookManagedIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of workbook. Choices are user and shared.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Configuration of this particular private workbook. Configuration data is a string containing valid JSON
      * 
-     */
+    */
     public String getSerializedData() {
         return this.serializedData;
     }
     /**
      * Optional resourceId for a source resource.
      * 
-     */
+    */
     public Optional<String> getSourceId() {
         return Optional.ofNullable(this.sourceId);
     }
     /**
      * BYOS Storage Account URI
      * 
-     */
+    */
     public Optional<String> getStorageUri() {
         return Optional.ofNullable(this.storageUri);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Date and time in UTC of the last modification that was made to this private workbook definition.
      * 
-     */
+    */
     public String getTimeModified() {
         return this.timeModified;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Unique user id of the specific user that owns this private workbook.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
     /**
      * This instance's version of the data model. This can change as new features are added that can be marked private workbook.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -372,7 +372,6 @@ public final class GetMyWorkbookResult {
             this.version = version;
             return this;
         }
-
         public GetMyWorkbookResult build() {
             return new GetMyWorkbookResult(category, displayName, etag, id, identity, kind, location, name, serializedData, sourceId, storageUri, tags, timeModified, type, userId, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class BaiduCredentialResponse {
     /**
      * Baidu Api Key.
      * 
-     */
+    */
     public Optional<String> getBaiduApiKey() {
         return Optional.ofNullable(this.baiduApiKey);
     }
     /**
      * Baidu Endpoint.
      * 
-     */
+    */
     public Optional<String> getBaiduEndPoint() {
         return Optional.ofNullable(this.baiduEndPoint);
     }
     /**
      * Baidu Secret Key
      * 
-     */
+    */
     public Optional<String> getBaiduSecretKey() {
         return Optional.ofNullable(this.baiduSecretKey);
     }
@@ -97,7 +97,6 @@ public final class BaiduCredentialResponse {
             this.baiduSecretKey = baiduSecretKey;
             return this;
         }
-
         public BaiduCredentialResponse build() {
             return new BaiduCredentialResponse(baiduApiKey, baiduEndPoint, baiduSecretKey);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.KerberosConfigResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="kerberosConfig", required=true)
-    private final KerberosConfigResponse kerberosConfig;
+      private final KerberosConfigResponse kerberosConfig;
 
     public KerberosConfigResponse getKerberosConfig() {
         return this.kerberosConfig;
@@ -59,7 +59,6 @@ public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }
-
         public SecurityConfigResponse build() {
             return new SecurityConfigResponse(kerberosConfig);
         }

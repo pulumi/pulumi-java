@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -49,14 +49,14 @@ public final class VmwareCbtPolicyDetailsResponse {
     /**
      * The app consistent snapshot frequency in minutes.
      * 
-     */
+    */
     public Optional<Integer> getAppConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
     /**
      * The crash consistent snapshot frequency in minutes.
      * 
-     */
+    */
     public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
@@ -64,14 +64,14 @@ public final class VmwareCbtPolicyDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMwareCbt'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The duration in minutes until which the recovery points need to be stored.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointHistoryInMinutes() {
         return Optional.ofNullable(this.recoveryPointHistoryInMinutes);
     }
@@ -121,7 +121,6 @@ public final class VmwareCbtPolicyDetailsResponse {
             this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;
         }
-
         public VmwareCbtPolicyDetailsResponse build() {
             return new VmwareCbtPolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, recoveryPointHistoryInMinutes);
         }

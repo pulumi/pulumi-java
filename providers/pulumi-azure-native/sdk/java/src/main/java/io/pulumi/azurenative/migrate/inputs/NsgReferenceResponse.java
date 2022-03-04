@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NsgReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-    private final String sourceArmResourceId;
+      private final String sourceArmResourceId;
 
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;
@@ -59,7 +59,6 @@ public final class NsgReferenceResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public NsgReferenceResponse build() {
             return new NsgReferenceResponse(sourceArmResourceId);
         }

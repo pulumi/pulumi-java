@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class InputTag {
     /**
      * Key of the Tag.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value of the Tag.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class InputTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public InputTag build() {
             return new InputTag(key, value);
         }

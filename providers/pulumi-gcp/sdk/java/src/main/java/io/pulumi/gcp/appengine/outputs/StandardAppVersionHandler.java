@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionHandlerScript;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionHandlerStaticFiles;
 import java.lang.String;
@@ -79,7 +79,7 @@ public final class StandardAppVersionHandler {
      * Actions to take when the user is not logged in.
      * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
      * 
-     */
+    */
     public Optional<String> getAuthFailAction() {
         return Optional.ofNullable(this.authFailAction);
     }
@@ -87,7 +87,7 @@ public final class StandardAppVersionHandler {
      * Methods to restrict access to a URL based on login status.
      * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
      * 
-     */
+    */
     public Optional<String> getLogin() {
         return Optional.ofNullable(this.login);
     }
@@ -95,7 +95,7 @@ public final class StandardAppVersionHandler {
      * 30x code to use when performing redirects for the secure field.
      * Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
      * 
-     */
+    */
     public Optional<String> getRedirectHttpResponseCode() {
         return Optional.ofNullable(this.redirectHttpResponseCode);
     }
@@ -104,7 +104,7 @@ public final class StandardAppVersionHandler {
      * Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<StandardAppVersionHandlerScript> getScript() {
         return Optional.ofNullable(this.script);
     }
@@ -112,7 +112,7 @@ public final class StandardAppVersionHandler {
      * Security (HTTPS) enforcement for this URL.
      * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
      * 
-     */
+    */
     public Optional<String> getSecurityLevel() {
         return Optional.ofNullable(this.securityLevel);
     }
@@ -120,7 +120,7 @@ public final class StandardAppVersionHandler {
      * Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<StandardAppVersionHandlerStaticFiles> getStaticFiles() {
         return Optional.ofNullable(this.staticFiles);
     }
@@ -128,7 +128,7 @@ public final class StandardAppVersionHandler {
      * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
      * All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
      * 
-     */
+    */
     public Optional<String> getUrlRegex() {
         return Optional.ofNullable(this.urlRegex);
     }
@@ -199,7 +199,6 @@ public final class StandardAppVersionHandler {
             this.urlRegex = urlRegex;
             return this;
         }
-
         public StandardAppVersionHandler build() {
             return new StandardAppVersionHandler(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

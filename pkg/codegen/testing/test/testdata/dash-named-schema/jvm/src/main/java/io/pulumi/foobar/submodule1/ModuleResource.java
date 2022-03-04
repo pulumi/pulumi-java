@@ -5,8 +5,8 @@ package io.pulumi.foobar.submodule1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.foobar.Utilities;
 import io.pulumi.foobar.outputs.TopLevel;
 import io.pulumi.foobar.submodule1.ModuleResourceArgs;
@@ -21,6 +21,37 @@ public class ModuleResource extends io.pulumi.resources.CustomResource {
         return this.thing;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ModuleResourceArgs.Builder a);
+    }
+    private static io.pulumi.foobar.submodule1.ModuleResourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.foobar.submodule1.ModuleResourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ModuleResource(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ModuleResource(String name) {
+        this(name, ModuleResourceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ModuleResource(String name, @Nullable ModuleResourceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

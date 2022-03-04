@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ClfsTargetResponse {
     /**
      * Resource ID of storage container.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -54,7 +54,6 @@ public final class ClfsTargetResponse {
             this.target = target;
             return this;
         }
-
         public ClfsTargetResponse build() {
             return new ClfsTargetResponse(target);
         }

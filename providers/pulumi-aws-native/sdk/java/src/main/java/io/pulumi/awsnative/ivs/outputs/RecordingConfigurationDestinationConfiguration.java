@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.outputs.RecordingConfigurationS3DestinationConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class RecordingConfigurationDestinationConfiguration {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
-
         public RecordingConfigurationDestinationConfiguration build() {
             return new RecordingConfigurationDestinationConfiguration(s3);
         }

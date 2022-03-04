@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managedservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="delegatedRoleDefinitionIds")
-    private final @Nullable List<String> delegatedRoleDefinitionIds;
+      private final @Nullable List<String> delegatedRoleDefinitionIds;
 
     public List<String> getDelegatedRoleDefinitionIds() {
         return this.delegatedRoleDefinitionIds == null ? List.of() : this.delegatedRoleDefinitionIds;
@@ -35,7 +35,7 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -46,7 +46,7 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="principalIdDisplayName")
-    private final @Nullable String principalIdDisplayName;
+      private final @Nullable String principalIdDisplayName;
 
     public Optional<String> getPrincipalIdDisplayName() {
         return this.principalIdDisplayName == null ? Optional.empty() : Optional.ofNullable(this.principalIdDisplayName);
@@ -57,7 +57,7 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-    private final String roleDefinitionId;
+      private final String roleDefinitionId;
 
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
@@ -126,7 +126,6 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public AuthorizationResponse build() {
             return new AuthorizationResponse(delegatedRoleDefinitionIds, principalId, principalIdDisplayName, roleDefinitionId);
         }

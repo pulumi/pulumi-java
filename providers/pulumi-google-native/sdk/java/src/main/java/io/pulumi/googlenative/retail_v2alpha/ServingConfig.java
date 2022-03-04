@@ -5,8 +5,8 @@ package io.pulumi.googlenative.retail_v2alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.retail_v2alpha.ServingConfigArgs;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse;
@@ -260,6 +260,37 @@ public class ServingConfig extends io.pulumi.resources.CustomResource {
         return this.twowaySynonymsControlIds;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ServingConfigArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.retail_v2alpha.ServingConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.retail_v2alpha.ServingConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ServingConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ServingConfig(String name) {
+        this(name, ServingConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ServingConfig(String name, ServingConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

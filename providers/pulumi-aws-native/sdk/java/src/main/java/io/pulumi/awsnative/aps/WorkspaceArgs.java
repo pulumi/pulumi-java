@@ -5,7 +5,7 @@ package io.pulumi.awsnative.aps;
 
 import io.pulumi.awsnative.aps.inputs.WorkspaceTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertManagerDefinition")
-    private final @Nullable Input<String> alertManagerDefinition;
+      private final @Nullable Input<String> alertManagerDefinition;
 
     public Input<String> getAlertManagerDefinition() {
         return this.alertManagerDefinition == null ? Input.empty() : this.alertManagerDefinition;
@@ -32,7 +32,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -43,7 +43,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<WorkspaceTagArgs>> tags;
+      private final @Nullable Input<List<WorkspaceTagArgs>> tags;
 
     public Input<List<WorkspaceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -117,7 +117,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public WorkspaceArgs build() {
             return new WorkspaceArgs(alertManagerDefinition, alias, tags);
         }

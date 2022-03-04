@@ -6,17 +6,33 @@ package io.pulumi.azurenative.providerhub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.providerhub.inputs.GetSkusArgs;
 import io.pulumi.azurenative.providerhub.outputs.GetSkusResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSkus {
-/**
- * API Version: 2020-11-20.
+    private GetSkus() {}
+    public interface BuilderApplicator {
+        public void apply(GetSkusArgs.Builder a);
+    }
+    private static GetSkusArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSkusArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2020-11-20.
  * 
- */
+     */
+    public static CompletableFuture<GetSkusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2020-11-20.
+     * 
+     */
     public static CompletableFuture<GetSkusResult> invokeAsync(GetSkusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getSkus", TypeShape.of(GetSkusResult.class), args == null ? GetSkusArgs.Empty : args, Utilities.withVersion(options));
     }

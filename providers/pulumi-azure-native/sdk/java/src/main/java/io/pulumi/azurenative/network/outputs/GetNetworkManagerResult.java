@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.NetworkManagerPropertiesResponseNetworkManagerScopes;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -107,84 +107,84 @@ public final class GetNetworkManagerResult {
     /**
      * A description of the network manager.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A friendly name for the network manager.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Scope Access.
      * 
-     */
+    */
     public List<String> getNetworkManagerScopeAccesses() {
         return this.networkManagerScopeAccesses == null ? List.of() : this.networkManagerScopeAccesses;
     }
     /**
      * Scope of Network Manager.
      * 
-     */
+    */
     public Optional<NetworkManagerPropertiesResponseNetworkManagerScopes> getNetworkManagerScopes() {
         return Optional.ofNullable(this.networkManagerScopes);
     }
     /**
      * The provisioning state of the scope assignment resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata related to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -290,7 +290,6 @@ public final class GetNetworkManagerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkManagerResult build() {
             return new GetNetworkManagerResult(description, displayName, etag, id, location, name, networkManagerScopeAccesses, networkManagerScopes, provisioningState, systemData, tags, type);
         }

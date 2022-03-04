@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -119,98 +119,98 @@ public final class GetPrivateZoneResult {
     /**
      * The ETag of the zone.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Private zone internal Id
      * 
-     */
+    */
     public String getInternalId() {
         return this.internalId;
     }
     /**
      * The Azure Region where the resource lives
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public Double getMaxNumberOfRecordSets() {
         return this.maxNumberOfRecordSets;
     }
     /**
      * The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public Double getMaxNumberOfVirtualNetworkLinks() {
         return this.maxNumberOfVirtualNetworkLinks;
     }
     /**
      * The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public Double getMaxNumberOfVirtualNetworkLinksWithRegistration() {
         return this.maxNumberOfVirtualNetworkLinksWithRegistration;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public Double getNumberOfRecordSets() {
         return this.numberOfRecordSets;
     }
     /**
      * The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public Double getNumberOfVirtualNetworkLinks() {
         return this.numberOfVirtualNetworkLinks;
     }
     /**
      * The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public Double getNumberOfVirtualNetworkLinksWithRegistration() {
         return this.numberOfVirtualNetworkLinksWithRegistration;
     }
     /**
      * The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -330,7 +330,6 @@ public final class GetPrivateZoneResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateZoneResult build() {
             return new GetPrivateZoneResult(etag, id, internalId, location, maxNumberOfRecordSets, maxNumberOfVirtualNetworkLinks, maxNumberOfVirtualNetworkLinksWithRegistration, name, numberOfRecordSets, numberOfVirtualNetworkLinks, numberOfVirtualNetworkLinksWithRegistration, provisioningState, tags, type);
         }

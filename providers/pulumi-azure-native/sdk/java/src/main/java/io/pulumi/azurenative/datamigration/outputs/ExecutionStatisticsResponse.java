@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.WaitStatisticsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -65,42 +65,42 @@ public final class ExecutionStatisticsResponse {
     /**
      * CPU Time in millisecond(s) for the query execution
      * 
-     */
+    */
     public Double getCpuTimeMs() {
         return this.cpuTimeMs;
     }
     /**
      * Time taken in millisecond(s) for executing the query
      * 
-     */
+    */
     public Double getElapsedTimeMs() {
         return this.elapsedTimeMs;
     }
     /**
      * No. of query executions
      * 
-     */
+    */
     public Double getExecutionCount() {
         return this.executionCount;
     }
     /**
      * Indicates whether the query resulted in an error
      * 
-     */
+    */
     public Boolean getHasErrors() {
         return this.hasErrors;
     }
     /**
      * List of sql Errors
      * 
-     */
+    */
     public List<String> getSqlErrors() {
         return this.sqlErrors;
     }
     /**
      * Dictionary of sql query execution wait types and the respective statistics
      * 
-     */
+    */
     public Map<String,WaitStatisticsResponse> getWaitStats() {
         return this.waitStats == null ? Map.of() : this.waitStats;
     }
@@ -164,7 +164,6 @@ public final class ExecutionStatisticsResponse {
             this.waitStats = waitStats;
             return this;
         }
-
         public ExecutionStatisticsResponse build() {
             return new ExecutionStatisticsResponse(cpuTimeMs, elapsedTimeMs, executionCount, hasErrors, sqlErrors, waitStats);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class MountTargetPropertiesResponse {
     /**
      * UUID v4 used to identify the MountTarget
      * 
-     */
+    */
     public String getFileSystemId() {
         return this.fileSystemId;
     }
     /**
      * The mount target's IPv4 address
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * UUID v4 used to identify the MountTarget
      * 
-     */
+    */
     public String getMountTargetId() {
         return this.mountTargetId;
     }
     /**
      * The SMB server's Fully Qualified Domain Name, FQDN
      * 
-     */
+    */
     public Optional<String> getSmbServerFqdn() {
         return Optional.ofNullable(this.smbServerFqdn);
     }
@@ -118,7 +118,6 @@ public final class MountTargetPropertiesResponse {
             this.smbServerFqdn = smbServerFqdn;
             return this;
         }
-
         public MountTargetPropertiesResponse build() {
             return new MountTargetPropertiesResponse(fileSystemId, ipAddress, mountTargetId, smbServerFqdn);
         }

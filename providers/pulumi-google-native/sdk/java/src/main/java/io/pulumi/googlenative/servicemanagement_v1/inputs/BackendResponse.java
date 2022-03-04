@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.BackendRuleResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<BackendRuleResponse> rules;
+      private final List<BackendRuleResponse> rules;
 
     public List<BackendRuleResponse> getRules() {
         return this.rules;
@@ -60,7 +60,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BackendResponse build() {
             return new BackendResponse(rules);
         }

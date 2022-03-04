@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan {
     /**
      * A user defined name of the 3rd Party Artifact that is being procured.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
      * 
-     */
+    */
     public String getProduct() {
         return this.product;
     }
     /**
      * A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
      * 
-     */
+    */
     public Optional<String> getPromotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
      * 
-     */
+    */
     public String getPublisher() {
         return this.publisher;
     }
     /**
      * The version of the desired product/artifact.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -139,7 +139,6 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan {
             this.version = version;
             return this;
         }
-
         public ResourceModelWithAllowedPropertySetResponsePlan build() {
             return new ResourceModelWithAllowedPropertySetResponsePlan(name, product, promotionCode, publisher, version);
         }

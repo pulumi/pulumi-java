@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="organizationArns")
-    private final @Nullable Input<List<String>> organizationArns;
+      private final @Nullable Input<List<String>> organizationArns;
 
     public Input<List<String>> getOrganizationArns() {
         return this.organizationArns == null ? Input.empty() : this.organizationArns;
@@ -35,7 +35,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="organizationalUnitArns")
-    private final @Nullable Input<List<String>> organizationalUnitArns;
+      private final @Nullable Input<List<String>> organizationalUnitArns;
 
     public Input<List<String>> getOrganizationalUnitArns() {
         return this.organizationalUnitArns == null ? Input.empty() : this.organizationalUnitArns;
@@ -46,7 +46,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userGroups")
-    private final @Nullable Input<List<String>> userGroups;
+      private final @Nullable Input<List<String>> userGroups;
 
     public Input<List<String>> getUserGroups() {
         return this.userGroups == null ? Input.empty() : this.userGroups;
@@ -57,7 +57,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userIds")
-    private final @Nullable Input<List<String>> userIds;
+      private final @Nullable Input<List<String>> userIds;
 
     public Input<List<String>> getUserIds() {
         return this.userIds == null ? Input.empty() : this.userIds;
@@ -146,7 +146,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.userIds = Input.ofNullable(userIds);
             return this;
         }
-
         public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs(organizationArns, organizationalUnitArns, userGroups, userIds);
         }

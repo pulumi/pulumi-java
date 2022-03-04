@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GuestCredentialResponse {
     /**
      * Gets or sets username to connect with the guest.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -54,7 +54,6 @@ public final class GuestCredentialResponse {
             this.username = username;
             return this;
         }
-
         public GuestCredentialResponse build() {
             return new GuestCredentialResponse(username);
         }

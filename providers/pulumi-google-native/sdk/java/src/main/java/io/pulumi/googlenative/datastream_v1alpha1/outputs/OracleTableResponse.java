@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.OracleColumnResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class OracleTableResponse {
     /**
      * Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
      * 
-     */
+    */
     public List<OracleColumnResponse> getOracleColumns() {
         return this.oracleColumns;
     }
     /**
      * Table name.
      * 
-     */
+    */
     public String getTableName() {
         return this.tableName;
     }
@@ -76,7 +76,6 @@ public final class OracleTableResponse {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public OracleTableResponse build() {
             return new OracleTableResponse(oracleColumns, tableName);
         }

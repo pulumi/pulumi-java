@@ -6,21 +6,41 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.inputs.GetPeriodicTimerEventTriggerArgs;
 import io.pulumi.azurenative.databoxedge.outputs.GetPeriodicTimerEventTriggerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPeriodicTimerEventTrigger {
-/**
- * Trigger details.
+    private GetPeriodicTimerEventTrigger() {}
+    public interface BuilderApplicator {
+        public void apply(GetPeriodicTimerEventTriggerArgs.Builder a);
+    }
+    private static GetPeriodicTimerEventTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPeriodicTimerEventTriggerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Trigger details.
  * API Version: 2020-12-01.
  * 
- *
- * Trigger details.
+     *
+     * Trigger details.
  * 
- */
+     */
+    public static CompletableFuture<GetPeriodicTimerEventTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Trigger details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Trigger details.
+     * 
+     */
     public static CompletableFuture<GetPeriodicTimerEventTriggerResult> invokeAsync(GetPeriodicTimerEventTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getPeriodicTimerEventTrigger", TypeShape.of(GetPeriodicTimerEventTriggerResult.class), args == null ? GetPeriodicTimerEventTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

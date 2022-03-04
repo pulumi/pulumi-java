@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.VmStateDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class ReferenceVmResponse {
     /**
      * The password of the virtual machine. This will be set to null in GET resource API
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The username of the virtual machine
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
     /**
      * VM resource Id for the environment
      * 
-     */
+    */
     public String getVmResourceId() {
         return this.vmResourceId;
     }
     /**
      * The state details for the reference virtual machine.
      * 
-     */
+    */
     public VmStateDetailsResponse getVmStateDetails() {
         return this.vmStateDetails;
     }
@@ -119,7 +119,6 @@ public final class ReferenceVmResponse {
             this.vmStateDetails = Objects.requireNonNull(vmStateDetails);
             return this;
         }
-
         public ReferenceVmResponse build() {
             return new ReferenceVmResponse(password, userName, vmResourceId, vmStateDetails);
         }

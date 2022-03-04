@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ServiceTypeDeltaHealthPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationDeltaHealthPolicyResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultServiceTypeDeltaHealthPolicy")
-    private final @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy;
+      private final @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy;
 
     public Optional<ServiceTypeDeltaHealthPolicyResponse> getDefaultServiceTypeDeltaHealthPolicy() {
         return this.defaultServiceTypeDeltaHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeDeltaHealthPolicy);
@@ -36,7 +36,7 @@ public final class ApplicationDeltaHealthPolicyResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="serviceTypeDeltaHealthPolicies")
-    private final @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
+      private final @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
 
     public Map<String,ServiceTypeDeltaHealthPolicyResponse> getServiceTypeDeltaHealthPolicies() {
         return this.serviceTypeDeltaHealthPolicies == null ? Map.of() : this.serviceTypeDeltaHealthPolicies;
@@ -85,7 +85,6 @@ public final class ApplicationDeltaHealthPolicyResponse extends io.pulumi.resour
             this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
             return this;
         }
-
         public ApplicationDeltaHealthPolicyResponse build() {
             return new ApplicationDeltaHealthPolicyResponse(defaultServiceTypeDeltaHealthPolicy, serviceTypeDeltaHealthPolicies);
         }

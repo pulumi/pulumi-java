@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.transfer.outputs;
 
 import io.pulumi.awsnative.transfer.outputs.WorkflowTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetWorkflowResult {
     /**
      * Specifies the unique Amazon Resource Name (ARN) for the workflow.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
      * 
-     */
+    */
     public List<WorkflowTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A unique identifier for the workflow.
      * 
-     */
+    */
     public Optional<String> getWorkflowId() {
         return Optional.ofNullable(this.workflowId);
     }
@@ -99,7 +99,6 @@ public final class GetWorkflowResult {
             this.workflowId = workflowId;
             return this;
         }
-
         public GetWorkflowResult build() {
             return new GetWorkflowResult(arn, tags, workflowId);
         }

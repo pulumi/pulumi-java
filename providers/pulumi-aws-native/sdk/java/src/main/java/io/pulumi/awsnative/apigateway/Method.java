@@ -10,8 +10,8 @@ import io.pulumi.awsnative.apigateway.outputs.MethodIntegration;
 import io.pulumi.awsnative.apigateway.outputs.MethodResponse;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -207,6 +207,37 @@ public class Method extends io.pulumi.resources.CustomResource {
         return this.restApiId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(MethodArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.apigateway.MethodArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.apigateway.MethodArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Method(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Method(String name) {
+        this(name, MethodArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Method(String name, MethodArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

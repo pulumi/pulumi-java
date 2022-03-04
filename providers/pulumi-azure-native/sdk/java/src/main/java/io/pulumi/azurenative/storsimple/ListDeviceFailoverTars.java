@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.inputs.ListDeviceFailoverTarsArgs;
 import io.pulumi.azurenative.storsimple.outputs.ListDeviceFailoverTarsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDeviceFailoverTars {
-/**
- * The list of all devices in a resource and their eligibility status as a failover target device.
+    private ListDeviceFailoverTars() {}
+    public interface BuilderApplicator {
+        public void apply(ListDeviceFailoverTarsArgs.Builder a);
+    }
+    private static ListDeviceFailoverTarsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListDeviceFailoverTarsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of all devices in a resource and their eligibility status as a failover target device.
  * API Version: 2017-06-01.
  * 
- *
- * The list of all devices in a resource and their eligibility status as a failover target device.
+     *
+     * The list of all devices in a resource and their eligibility status as a failover target device.
  * 
- */
+     */
+    public static CompletableFuture<ListDeviceFailoverTarsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of all devices in a resource and their eligibility status as a failover target device.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * The list of all devices in a resource and their eligibility status as a failover target device.
+     * 
+     */
     public static CompletableFuture<ListDeviceFailoverTarsResult> invokeAsync(ListDeviceFailoverTarsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:listDeviceFailoverTars", TypeShape.of(ListDeviceFailoverTarsResult.class), args == null ? ListDeviceFailoverTarsArgs.Empty : args, Utilities.withVersion(options));
     }

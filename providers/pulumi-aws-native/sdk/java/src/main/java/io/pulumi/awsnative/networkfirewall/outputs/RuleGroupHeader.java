@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderDirection;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderProtocol;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -112,7 +112,6 @@ public final class RuleGroupHeader {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }
-
         public RuleGroupHeader build() {
             return new RuleGroupHeader(destination, destinationPort, direction, protocol, source, sourcePort);
         }

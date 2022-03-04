@@ -6,17 +6,33 @@ package io.pulumi.awsnative.s3outposts;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.s3outposts.inputs.GetAccessPointArgs;
 import io.pulumi.awsnative.s3outposts.outputs.GetAccessPointResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessPoint {
-/**
- * Resource Type Definition for AWS::S3Outposts::AccessPoint
+    private GetAccessPoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccessPointArgs.Builder a);
+    }
+    private static GetAccessPointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccessPointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type Definition for AWS::S3Outposts::AccessPoint
  * 
- */
+     */
+    public static CompletableFuture<GetAccessPointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type Definition for AWS::S3Outposts::AccessPoint
+     * 
+     */
     public static CompletableFuture<GetAccessPointResult> invokeAsync(GetAccessPointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args == null ? GetAccessPointArgs.Empty : args, Utilities.withVersion(options));
     }

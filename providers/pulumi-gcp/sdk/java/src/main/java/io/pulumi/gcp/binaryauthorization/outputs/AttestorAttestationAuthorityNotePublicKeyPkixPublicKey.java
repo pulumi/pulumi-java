@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.binaryauthorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,7 +39,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
      * A PEM-encoded public key, as described in
      * `https://tools.ietf.org/html/rfc7468#section-13`
      * 
-     */
+    */
     public Optional<String> getPublicKeyPem() {
         return Optional.ofNullable(this.publicKeyPem);
     }
@@ -50,7 +50,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
      * publicKeyPem (i.e. this algorithm must match that of the
      * public key).
      * 
-     */
+    */
     public Optional<String> getSignatureAlgorithm() {
         return Optional.ofNullable(this.signatureAlgorithm);
     }
@@ -86,7 +86,6 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
-
         public AttestorAttestationAuthorityNotePublicKeyPkixPublicKey build() {
             return new AttestorAttestationAuthorityNotePublicKeyPkixPublicKey(publicKeyPem, signatureAlgorithm);
         }

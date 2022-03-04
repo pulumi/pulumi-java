@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -99,77 +99,77 @@ public final class KubeletConfigResponse {
     /**
      * Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
      * 
-     */
+    */
     public List<String> getAllowedUnsafeSysctls() {
         return this.allowedUnsafeSysctls == null ? List.of() : this.allowedUnsafeSysctls;
     }
     /**
      * The maximum number of container log files that can be present for a container. The number must be ≥ 2.
      * 
-     */
+    */
     public Optional<Integer> getContainerLogMaxFiles() {
         return Optional.ofNullable(this.containerLogMaxFiles);
     }
     /**
      * The maximum size (e.g. 10Mi) of container log file before it is rotated.
      * 
-     */
+    */
     public Optional<Integer> getContainerLogMaxSizeMB() {
         return Optional.ofNullable(this.containerLogMaxSizeMB);
     }
     /**
      * Enable CPU CFS quota enforcement for containers that specify CPU limits.
      * 
-     */
+    */
     public Optional<Boolean> getCpuCfsQuota() {
         return Optional.ofNullable(this.cpuCfsQuota);
     }
     /**
      * Sets CPU CFS quota period value.
      * 
-     */
+    */
     public Optional<String> getCpuCfsQuotaPeriod() {
         return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
     /**
      * CPU Manager policy to use.
      * 
-     */
+    */
     public Optional<String> getCpuManagerPolicy() {
         return Optional.ofNullable(this.cpuManagerPolicy);
     }
     /**
      * If set to true it will make the Kubelet fail to start if swap is enabled on the node.
      * 
-     */
+    */
     public Optional<Boolean> getFailSwapOn() {
         return Optional.ofNullable(this.failSwapOn);
     }
     /**
      * The percent of disk usage after which image garbage collection is always run.
      * 
-     */
+    */
     public Optional<Integer> getImageGcHighThreshold() {
         return Optional.ofNullable(this.imageGcHighThreshold);
     }
     /**
      * The percent of disk usage before which image garbage collection is never run.
      * 
-     */
+    */
     public Optional<Integer> getImageGcLowThreshold() {
         return Optional.ofNullable(this.imageGcLowThreshold);
     }
     /**
      * The maximum number of processes per pod.
      * 
-     */
+    */
     public Optional<Integer> getPodMaxPids() {
         return Optional.ofNullable(this.podMaxPids);
     }
     /**
      * Topology Manager policy to use.
      * 
-     */
+    */
     public Optional<String> getTopologyManagerPolicy() {
         return Optional.ofNullable(this.topologyManagerPolicy);
     }
@@ -268,7 +268,6 @@ public final class KubeletConfigResponse {
             this.topologyManagerPolicy = topologyManagerPolicy;
             return this;
         }
-
         public KubeletConfigResponse build() {
             return new KubeletConfigResponse(allowedUnsafeSysctls, containerLogMaxFiles, containerLogMaxSizeMB, cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy, failSwapOn, imageGcHighThreshold, imageGcLowThreshold, podMaxPids, topologyManagerPolicy);
         }

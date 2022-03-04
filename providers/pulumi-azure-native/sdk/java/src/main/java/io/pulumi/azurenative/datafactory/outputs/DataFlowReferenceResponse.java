@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -49,28 +49,28 @@ public final class DataFlowReferenceResponse {
     /**
      * Reference data flow parameters from dataset.
      * 
-     */
+    */
     public Optional<Object> getDatasetParameters() {
         return Optional.ofNullable(this.datasetParameters);
     }
     /**
      * Data flow parameters
      * 
-     */
+    */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Reference data flow name.
      * 
-     */
+    */
     public String getReferenceName() {
         return this.referenceName;
     }
     /**
      * Data flow reference type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -120,7 +120,6 @@ public final class DataFlowReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DataFlowReferenceResponse build() {
             return new DataFlowReferenceResponse(datasetParameters, parameters, referenceName, type);
         }

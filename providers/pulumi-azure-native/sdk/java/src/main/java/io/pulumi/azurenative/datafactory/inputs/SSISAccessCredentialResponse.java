@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class SSISAccessCredentialResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Object domain;
+      private final Object domain;
 
     public Object getDomain() {
         return this.domain;
@@ -35,7 +35,7 @@ public final class SSISAccessCredentialResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="password", required=true)
-    private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+      private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password;
@@ -46,7 +46,7 @@ public final class SSISAccessCredentialResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Object userName;
+      private final Object userName;
 
     public Object getUserName() {
         return this.userName;
@@ -105,7 +105,6 @@ public final class SSISAccessCredentialResponse extends io.pulumi.resources.Invo
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public SSISAccessCredentialResponse build() {
             return new SSISAccessCredentialResponse(domain, password, userName);
         }

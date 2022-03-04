@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1FeatureMapArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs;
@@ -19,7 +19,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     public static final CatalogItemArgs Empty = new CatalogItemArgs();
 
     @InputImport(name="catalogId", required=true)
-    private final Input<String> catalogId;
+      private final Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId;
@@ -30,7 +30,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categoryHierarchies", required=true)
-    private final Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
+      private final Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
 
     public Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> getCategoryHierarchies() {
         return this.categoryHierarchies;
@@ -41,7 +41,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,7 +52,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -63,7 +63,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="itemAttributes")
-    private final @Nullable Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
+      private final @Nullable Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
 
     public Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> getItemAttributes() {
         return this.itemAttributes == null ? Input.empty() : this.itemAttributes;
@@ -74,14 +74,14 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="itemGroupId")
-    private final @Nullable Input<String> itemGroupId;
+      private final @Nullable Input<String> itemGroupId;
 
     public Input<String> getItemGroupId() {
         return this.itemGroupId == null ? Input.empty() : this.itemGroupId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -92,14 +92,14 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productMetadata")
-    private final @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
+      private final @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
 
     public Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> getProductMetadata() {
         return this.productMetadata == null ? Input.empty() : this.productMetadata;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -110,7 +110,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -121,7 +121,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -315,7 +315,6 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public CatalogItemArgs build() {
             return new CatalogItemArgs(catalogId, categoryHierarchies, description, id, itemAttributes, itemGroupId, location, productMetadata, project, tags, title);
         }

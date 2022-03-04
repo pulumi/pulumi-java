@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.inputs.ManagedInstancePrivateEndpointPropertyArgs;
 import io.pulumi.azurenative.sql.inputs.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-    private final Input<String> managedInstanceName;
+      private final Input<String> managedInstanceName;
 
     public Input<String> getManagedInstanceName() {
         return this.managedInstanceName;
@@ -32,14 +32,14 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable Input<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
+      private final @Nullable Input<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
 
     public Input<ManagedInstancePrivateEndpointPropertyArgs> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
     }
 
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -50,7 +50,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
+      private final @Nullable Input<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
     public Input<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -61,7 +61,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -165,7 +165,6 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ManagedInstancePrivateEndpointConnectionArgs build() {
             return new ManagedInstancePrivateEndpointConnectionArgs(managedInstanceName, privateEndpoint, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName);
         }

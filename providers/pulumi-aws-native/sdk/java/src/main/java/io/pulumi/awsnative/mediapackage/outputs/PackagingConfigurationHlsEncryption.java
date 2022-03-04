@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationHlsEncryptionEncryptionMethod;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationSpekeKeyProvider;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,14 +38,14 @@ public final class PackagingConfigurationHlsEncryption {
     /**
      * An HTTP Live Streaming (HLS) encryption configuration.
      * 
-     */
+    */
     public Optional<String> getConstantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
      * The encryption method to use.
      * 
-     */
+    */
     public Optional<PackagingConfigurationHlsEncryptionEncryptionMethod> getEncryptionMethod() {
         return Optional.ofNullable(this.encryptionMethod);
     }
@@ -91,7 +91,6 @@ public final class PackagingConfigurationHlsEncryption {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public PackagingConfigurationHlsEncryption build() {
             return new PackagingConfigurationHlsEncryption(constantInitializationVector, encryptionMethod, spekeKeyProvider);
         }

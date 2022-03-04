@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable Input<String> dataset;
+      private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -34,7 +34,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -45,7 +45,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -56,7 +56,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Input<String> table;
+      private final @Nullable Input<String> table;
 
     public Input<String> getTable() {
         return this.table == null ? Input.empty() : this.table;
@@ -145,7 +145,6 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
             this.table = Input.ofNullable(table);
             return this;
         }
-
         public BigQueryIODetailsArgs build() {
             return new BigQueryIODetailsArgs(dataset, project, query, table);
         }

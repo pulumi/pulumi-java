@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.BindingArgs;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
 
     public Input<List<AuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -34,14 +34,14 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -52,28 +52,28 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="rowAccessPolicyId", required=true)
-    private final Input<String> rowAccessPolicyId;
+      private final Input<String> rowAccessPolicyId;
 
     public Input<String> getRowAccessPolicyId() {
         return this.rowAccessPolicyId;
     }
 
     @InputImport(name="tableId", required=true)
-    private final Input<String> tableId;
+      private final Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId;
@@ -84,7 +84,7 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="updateMask")
-    private final @Nullable Input<String> updateMask;
+      private final @Nullable Input<String> updateMask;
 
     public Input<String> getUpdateMask() {
         return this.updateMask == null ? Input.empty() : this.updateMask;
@@ -95,7 +95,7 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -259,7 +259,6 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public RowAccessPolicyIamPolicyArgs build() {
             return new RowAccessPolicyIamPolicyArgs(auditConfigs, bindings, datasetId, etag, project, rowAccessPolicyId, tableId, updateMask, version);
         }

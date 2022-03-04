@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.EdgeUsageDataCollectionPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class ListMediaServiceEdgePoliciesResult {
             this.usageDataCollectionPolicy = usageDataCollectionPolicy;
             return this;
         }
-
         public ListMediaServiceEdgePoliciesResult build() {
             return new ListMediaServiceEdgePoliciesResult(usageDataCollectionPolicy);
         }

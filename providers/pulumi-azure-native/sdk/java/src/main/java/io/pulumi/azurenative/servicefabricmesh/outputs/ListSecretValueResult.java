@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ListSecretValueResult {
     /**
      * The actual value of the secret.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -54,7 +54,6 @@ public final class ListSecretValueResult {
             this.value = value;
             return this;
         }
-
         public ListSecretValueResult build() {
             return new ListSecretValueResult(value);
         }

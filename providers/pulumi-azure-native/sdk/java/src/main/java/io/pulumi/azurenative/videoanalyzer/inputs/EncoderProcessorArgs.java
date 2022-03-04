@@ -8,7 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.EncoderSystemPresetArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.NodeInputArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="inputs", required=true)
-    private final Input<List<NodeInputArgs>> inputs;
+      private final Input<List<NodeInputArgs>> inputs;
 
     public Input<List<NodeInputArgs>> getInputs() {
         return this.inputs;
@@ -38,7 +38,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -49,7 +49,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preset", required=true)
-    private final Input<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
+      private final Input<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
 
     public Input<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> getPreset() {
         return this.preset;
@@ -61,7 +61,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -150,7 +150,6 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public EncoderProcessorArgs build() {
             return new EncoderProcessorArgs(inputs, name, preset, type);
         }

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.budgets.inputs.BudgetsActionActionThresholdArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionDefinitionArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionSubscriberArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,56 +22,56 @@ public final class BudgetsActionArgs extends io.pulumi.resources.ResourceArgs {
     public static final BudgetsActionArgs Empty = new BudgetsActionArgs();
 
     @InputImport(name="actionThreshold", required=true)
-    private final Input<BudgetsActionActionThresholdArgs> actionThreshold;
+      private final Input<BudgetsActionActionThresholdArgs> actionThreshold;
 
     public Input<BudgetsActionActionThresholdArgs> getActionThreshold() {
         return this.actionThreshold;
     }
 
     @InputImport(name="actionType", required=true)
-    private final Input<BudgetsActionActionType> actionType;
+      private final Input<BudgetsActionActionType> actionType;
 
     public Input<BudgetsActionActionType> getActionType() {
         return this.actionType;
     }
 
     @InputImport(name="approvalModel")
-    private final @Nullable Input<BudgetsActionApprovalModel> approvalModel;
+      private final @Nullable Input<BudgetsActionApprovalModel> approvalModel;
 
     public Input<BudgetsActionApprovalModel> getApprovalModel() {
         return this.approvalModel == null ? Input.empty() : this.approvalModel;
     }
 
     @InputImport(name="budgetName", required=true)
-    private final Input<String> budgetName;
+      private final Input<String> budgetName;
 
     public Input<String> getBudgetName() {
         return this.budgetName;
     }
 
     @InputImport(name="definition", required=true)
-    private final Input<BudgetsActionDefinitionArgs> definition;
+      private final Input<BudgetsActionDefinitionArgs> definition;
 
     public Input<BudgetsActionDefinitionArgs> getDefinition() {
         return this.definition;
     }
 
     @InputImport(name="executionRoleArn", required=true)
-    private final Input<String> executionRoleArn;
+      private final Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
 
     @InputImport(name="notificationType", required=true)
-    private final Input<BudgetsActionNotificationType> notificationType;
+      private final Input<BudgetsActionNotificationType> notificationType;
 
     public Input<BudgetsActionNotificationType> getNotificationType() {
         return this.notificationType;
     }
 
     @InputImport(name="subscribers", required=true)
-    private final Input<List<BudgetsActionSubscriberArgs>> subscribers;
+      private final Input<List<BudgetsActionSubscriberArgs>> subscribers;
 
     public Input<List<BudgetsActionSubscriberArgs>> getSubscribers() {
         return this.subscribers;
@@ -220,7 +220,6 @@ public final class BudgetsActionArgs extends io.pulumi.resources.ResourceArgs {
             this.subscribers = Input.of(Objects.requireNonNull(subscribers));
             return this;
         }
-
         public BudgetsActionArgs build() {
             return new BudgetsActionArgs(actionThreshold, actionType, approvalModel, budgetName, definition, executionRoleArn, notificationType, subscribers);
         }

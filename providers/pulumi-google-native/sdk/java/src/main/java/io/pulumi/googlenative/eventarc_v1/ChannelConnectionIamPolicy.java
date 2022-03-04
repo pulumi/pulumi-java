@@ -5,8 +5,8 @@ package io.pulumi.googlenative.eventarc_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.eventarc_v1.ChannelConnectionIamPolicyArgs;
 import io.pulumi.googlenative.eventarc_v1.outputs.AuditConfigResponse;
@@ -81,6 +81,37 @@ public class ChannelConnectionIamPolicy extends io.pulumi.resources.CustomResour
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ChannelConnectionIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.eventarc_v1.ChannelConnectionIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.eventarc_v1.ChannelConnectionIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ChannelConnectionIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ChannelConnectionIamPolicy(String name) {
+        this(name, ChannelConnectionIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ChannelConnectionIamPolicy(String name, ChannelConnectionIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

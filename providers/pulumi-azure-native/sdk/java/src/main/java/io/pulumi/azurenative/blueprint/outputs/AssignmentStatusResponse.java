@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class AssignmentStatusResponse {
     /**
      * Last modified time of this blueprint definition.
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * List of resources that were created by the blueprint assignment.
      * 
-     */
+    */
     public List<String> getManagedResources() {
         return this.managedResources;
     }
     /**
      * Creation time of this blueprint definition.
      * 
-     */
+    */
     public String getTimeCreated() {
         return this.timeCreated;
     }
@@ -96,7 +96,6 @@ public final class AssignmentStatusResponse {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public AssignmentStatusResponse build() {
             return new AssignmentStatusResponse(lastModified, managedResources, timeCreated);
         }

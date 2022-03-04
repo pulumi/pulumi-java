@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.digitaltwins.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="adxDatabaseName", required=true)
-    private final Input<String> adxDatabaseName;
+      private final Input<String> adxDatabaseName;
 
     public Input<String> getAdxDatabaseName() {
         return this.adxDatabaseName;
@@ -34,7 +34,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="adxEndpointUri", required=true)
-    private final Input<String> adxEndpointUri;
+      private final Input<String> adxEndpointUri;
 
     public Input<String> getAdxEndpointUri() {
         return this.adxEndpointUri;
@@ -45,7 +45,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="adxResourceId", required=true)
-    private final Input<String> adxResourceId;
+      private final Input<String> adxResourceId;
 
     public Input<String> getAdxResourceId() {
         return this.adxResourceId;
@@ -56,7 +56,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="adxTableName")
-    private final @Nullable Input<String> adxTableName;
+      private final @Nullable Input<String> adxTableName;
 
     public Input<String> getAdxTableName() {
         return this.adxTableName == null ? Input.empty() : this.adxTableName;
@@ -68,7 +68,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="connectionType", required=true)
-    private final Input<String> connectionType;
+      private final Input<String> connectionType;
 
     public Input<String> getConnectionType() {
         return this.connectionType;
@@ -79,7 +79,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubConsumerGroup")
-    private final @Nullable Input<String> eventHubConsumerGroup;
+      private final @Nullable Input<String> eventHubConsumerGroup;
 
     public Input<String> getEventHubConsumerGroup() {
         return this.eventHubConsumerGroup == null ? Input.empty() : this.eventHubConsumerGroup;
@@ -90,7 +90,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubEndpointUri", required=true)
-    private final Input<String> eventHubEndpointUri;
+      private final Input<String> eventHubEndpointUri;
 
     public Input<String> getEventHubEndpointUri() {
         return this.eventHubEndpointUri;
@@ -101,7 +101,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubEntityPath", required=true)
-    private final Input<String> eventHubEntityPath;
+      private final Input<String> eventHubEntityPath;
 
     public Input<String> getEventHubEntityPath() {
         return this.eventHubEntityPath;
@@ -112,7 +112,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubNamespaceResourceId", required=true)
-    private final Input<String> eventHubNamespaceResourceId;
+      private final Input<String> eventHubNamespaceResourceId;
 
     public Input<String> getEventHubNamespaceResourceId() {
         return this.eventHubNamespaceResourceId;
@@ -276,7 +276,6 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
             this.eventHubNamespaceResourceId = Input.of(Objects.requireNonNull(eventHubNamespaceResourceId));
             return this;
         }
-
         public AzureDataExplorerConnectionPropertiesArgs build() {
             return new AzureDataExplorerConnectionPropertiesArgs(adxDatabaseName, adxEndpointUri, adxResourceId, adxTableName, connectionType, eventHubConsumerGroup, eventHubEndpointUri, eventHubEntityPath, eventHubNamespaceResourceId);
         }

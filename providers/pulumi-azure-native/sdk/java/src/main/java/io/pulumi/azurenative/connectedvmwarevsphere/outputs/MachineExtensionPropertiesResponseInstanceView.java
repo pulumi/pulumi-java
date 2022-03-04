@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.MachineExtensionInstanceViewResponseStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class MachineExtensionPropertiesResponseInstanceView {
     /**
      * The machine extension name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Instance view status.
      * 
-     */
+    */
     public Optional<MachineExtensionInstanceViewResponseStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies the version of the script handler.
      * 
-     */
+    */
     public String getTypeHandlerVersion() {
         return this.typeHandlerVersion;
     }
@@ -119,7 +119,6 @@ public final class MachineExtensionPropertiesResponseInstanceView {
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
         }
-
         public MachineExtensionPropertiesResponseInstanceView build() {
             return new MachineExtensionPropertiesResponseInstanceView(name, status, type, typeHandlerVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class PrePostStepResponse {
     /**
      * The resource Id of the step to be run.
      * 
-     */
+    */
     public String getStepId() {
         return this.stepId;
     }
@@ -52,7 +52,6 @@ public final class PrePostStepResponse {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public PrePostStepResponse build() {
             return new PrePostStepResponse(stepId);
         }

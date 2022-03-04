@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="capacityAllocated", required=true)
-    private final Integer capacityAllocated;
+      private final Integer capacityAllocated;
 
     public Integer getCapacityAllocated() {
         return this.capacityAllocated;
@@ -33,7 +33,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="capacityAssigned", required=true)
-    private final Integer capacityAssigned;
+      private final Integer capacityAssigned;
 
     public Integer getCapacityAssigned() {
         return this.capacityAssigned;
@@ -44,7 +44,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final String clusterId;
+      private final String clusterId;
 
     public String getClusterId() {
         return this.clusterId;
@@ -55,7 +55,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="createdDate", required=true)
-    private final String createdDate;
+      private final String createdDate;
 
     public String getCreatedDate() {
         return this.createdDate;
@@ -66,7 +66,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -145,7 +145,6 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ClusterPropertiesResponse build() {
             return new ClusterPropertiesResponse(capacityAllocated, capacityAssigned, clusterId, createdDate, provisioningState);
         }

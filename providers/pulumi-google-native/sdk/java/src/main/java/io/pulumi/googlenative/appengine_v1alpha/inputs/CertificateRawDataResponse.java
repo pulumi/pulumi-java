@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CertificateRawDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="privateKey", required=true)
-    private final String privateKey;
+      private final String privateKey;
 
     public String getPrivateKey() {
         return this.privateKey;
@@ -32,7 +32,7 @@ public final class CertificateRawDataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="publicCertificate", required=true)
-    private final String publicCertificate;
+      private final String publicCertificate;
 
     public String getPublicCertificate() {
         return this.publicCertificate;
@@ -81,7 +81,6 @@ public final class CertificateRawDataResponse extends io.pulumi.resources.Invoke
             this.publicCertificate = Objects.requireNonNull(publicCertificate);
             return this;
         }
-
         public CertificateRawDataResponse build() {
             return new CertificateRawDataResponse(privateKey, publicCertificate);
         }

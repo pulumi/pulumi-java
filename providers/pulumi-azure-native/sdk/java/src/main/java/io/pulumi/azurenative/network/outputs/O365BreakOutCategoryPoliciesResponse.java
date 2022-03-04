@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class O365BreakOutCategoryPoliciesResponse {
     /**
      * Flag to control allow category.
      * 
-     */
+    */
     public Optional<Boolean> getAllow() {
         return Optional.ofNullable(this.allow);
     }
     /**
      * Flag to control default category.
      * 
-     */
+    */
     public Optional<Boolean> get$default() {
         return Optional.ofNullable(this.$default);
     }
     /**
      * Flag to control optimize category.
      * 
-     */
+    */
     public Optional<Boolean> getOptimize() {
         return Optional.ofNullable(this.optimize);
     }
@@ -97,7 +97,6 @@ public final class O365BreakOutCategoryPoliciesResponse {
             this.optimize = optimize;
             return this;
         }
-
         public O365BreakOutCategoryPoliciesResponse build() {
             return new O365BreakOutCategoryPoliciesResponse(allow, $default, optimize);
         }

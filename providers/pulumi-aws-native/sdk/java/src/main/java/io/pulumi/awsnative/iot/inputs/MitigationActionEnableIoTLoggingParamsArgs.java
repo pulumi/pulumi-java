@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionEnableIoTLoggingParamsLogLevel;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="logLevel", required=true)
-    private final Input<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
+      private final Input<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
 
     public Input<MitigationActionEnableIoTLoggingParamsLogLevel> getLogLevel() {
         return this.logLevel;
@@ -34,7 +34,7 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="roleArnForLogging", required=true)
-    private final Input<String> roleArnForLogging;
+      private final Input<String> roleArnForLogging;
 
     public Input<String> getRoleArnForLogging() {
         return this.roleArnForLogging;
@@ -93,7 +93,6 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
             this.roleArnForLogging = Input.of(Objects.requireNonNull(roleArnForLogging));
             return this;
         }
-
         public MitigationActionEnableIoTLoggingParamsArgs build() {
             return new MitigationActionEnableIoTLoggingParamsArgs(logLevel, roleArnForLogging);
         }

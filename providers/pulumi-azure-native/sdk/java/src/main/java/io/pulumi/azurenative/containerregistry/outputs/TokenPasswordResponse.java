@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class TokenPasswordResponse {
     /**
      * The creation datetime of the password.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The expiry datetime of the password.
      * 
-     */
+    */
     public Optional<String> getExpiry() {
         return Optional.ofNullable(this.expiry);
     }
     /**
      * The password name "password1" or "password2"
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The password value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -118,7 +118,6 @@ public final class TokenPasswordResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TokenPasswordResponse build() {
             return new TokenPasswordResponse(creationTime, expiry, name, value);
         }

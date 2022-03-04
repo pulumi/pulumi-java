@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -60,28 +60,28 @@ public final class FlexibleAppVersionNetwork {
     /**
      * List of ports, or port pairs, to forward from the virtual machine to the application container.
      * 
-     */
+    */
     public List<String> getForwardedPorts() {
         return this.forwardedPorts == null ? List.of() : this.forwardedPorts;
     }
     /**
      * Tag to apply to the instance during creation.
      * 
-     */
+    */
     public Optional<String> getInstanceTag() {
         return Optional.ofNullable(this.instanceTag);
     }
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Enable session affinity.
      * 
-     */
+    */
     public Optional<Boolean> getSessionAffinity() {
         return Optional.ofNullable(this.sessionAffinity);
     }
@@ -92,7 +92,7 @@ public final class FlexibleAppVersionNetwork {
      * If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
      * If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
      * 
-     */
+    */
     public Optional<String> getSubnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -149,7 +149,6 @@ public final class FlexibleAppVersionNetwork {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public FlexibleAppVersionNetwork build() {
             return new FlexibleAppVersionNetwork(forwardedPorts, instanceTag, name, sessionAffinity, subnetwork);
         }

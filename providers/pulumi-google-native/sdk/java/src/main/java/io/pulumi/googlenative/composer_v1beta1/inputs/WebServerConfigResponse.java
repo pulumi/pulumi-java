@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WebServerConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -59,7 +59,6 @@ public final class WebServerConfigResponse extends io.pulumi.resources.InvokeArg
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public WebServerConfigResponse build() {
             return new WebServerConfigResponse(machineType);
         }

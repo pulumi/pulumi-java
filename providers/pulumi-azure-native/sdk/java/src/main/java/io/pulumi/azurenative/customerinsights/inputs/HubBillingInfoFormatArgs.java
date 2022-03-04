@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxUnits")
-    private final @Nullable Input<Integer> maxUnits;
+      private final @Nullable Input<Integer> maxUnits;
 
     public Input<Integer> getMaxUnits() {
         return this.maxUnits == null ? Input.empty() : this.maxUnits;
@@ -35,7 +35,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="minUnits")
-    private final @Nullable Input<Integer> minUnits;
+      private final @Nullable Input<Integer> minUnits;
 
     public Input<Integer> getMinUnits() {
         return this.minUnits == null ? Input.empty() : this.minUnits;
@@ -46,7 +46,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="skuName")
-    private final @Nullable Input<String> skuName;
+      private final @Nullable Input<String> skuName;
 
     public Input<String> getSkuName() {
         return this.skuName == null ? Input.empty() : this.skuName;
@@ -120,7 +120,6 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
             this.skuName = Input.ofNullable(skuName);
             return this;
         }
-
         public HubBillingInfoFormatArgs build() {
             return new HubBillingInfoFormatArgs(maxUnits, minUnits, skuName);
         }

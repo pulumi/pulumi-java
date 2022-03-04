@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firestore_v1beta2.enums.IndexQueryScope;
 import io.pulumi.googlenative.firestore_v1beta2.inputs.GoogleFirestoreAdminV1beta2IndexFieldArgs;
 import java.lang.String;
@@ -18,14 +18,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     public static final IndexArgs Empty = new IndexArgs();
 
     @InputImport(name="collectionGroupId", required=true)
-    private final Input<String> collectionGroupId;
+      private final Input<String> collectionGroupId;
 
     public Input<String> getCollectionGroupId() {
         return this.collectionGroupId;
     }
 
     @InputImport(name="databaseId", required=true)
-    private final Input<String> databaseId;
+      private final Input<String> databaseId;
 
     public Input<String> getDatabaseId() {
         return this.databaseId;
@@ -36,14 +36,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields;
+      private final @Nullable Input<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields;
 
     public Input<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -54,7 +54,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryScope")
-    private final @Nullable Input<IndexQueryScope> queryScope;
+      private final @Nullable Input<IndexQueryScope> queryScope;
 
     public Input<IndexQueryScope> getQueryScope() {
         return this.queryScope == null ? Input.empty() : this.queryScope;
@@ -158,7 +158,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             this.queryScope = Input.ofNullable(queryScope);
             return this;
         }
-
         public IndexArgs build() {
             return new IndexArgs(collectionGroupId, databaseId, fields, project, queryScope);
         }

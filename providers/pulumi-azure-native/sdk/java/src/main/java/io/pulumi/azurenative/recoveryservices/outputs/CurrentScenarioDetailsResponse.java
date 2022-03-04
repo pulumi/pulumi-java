@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class CurrentScenarioDetailsResponse {
     /**
      * ARM Id of the job being executed.
      * 
-     */
+    */
     public Optional<String> getJobId() {
         return Optional.ofNullable(this.jobId);
     }
     /**
      * Scenario name.
      * 
-     */
+    */
     public Optional<String> getScenarioName() {
         return Optional.ofNullable(this.scenarioName);
     }
     /**
      * Start time of the workflow.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -97,7 +97,6 @@ public final class CurrentScenarioDetailsResponse {
             this.startTime = startTime;
             return this;
         }
-
         public CurrentScenarioDetailsResponse build() {
             return new CurrentScenarioDetailsResponse(jobId, scenarioName, startTime);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.AnthosClusterArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.ExecutionConfigArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.GkeClusterArgs;
@@ -25,7 +25,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -36,7 +36,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="anthosCluster")
-    private final @Nullable Input<AnthosClusterArgs> anthosCluster;
+      private final @Nullable Input<AnthosClusterArgs> anthosCluster;
 
     public Input<AnthosClusterArgs> getAnthosCluster() {
         return this.anthosCluster == null ? Input.empty() : this.anthosCluster;
@@ -47,7 +47,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -69,7 +69,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionConfigs")
-    private final @Nullable Input<List<ExecutionConfigArgs>> executionConfigs;
+      private final @Nullable Input<List<ExecutionConfigArgs>> executionConfigs;
 
     public Input<List<ExecutionConfigArgs>> getExecutionConfigs() {
         return this.executionConfigs == null ? Input.empty() : this.executionConfigs;
@@ -80,7 +80,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gke")
-    private final @Nullable Input<GkeClusterArgs> gke;
+      private final @Nullable Input<GkeClusterArgs> gke;
 
     public Input<GkeClusterArgs> getGke() {
         return this.gke == null ? Input.empty() : this.gke;
@@ -91,14 +91,14 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -109,21 +109,21 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -134,21 +134,21 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireApproval")
-    private final @Nullable Input<Boolean> requireApproval;
+      private final @Nullable Input<Boolean> requireApproval;
 
     public Input<Boolean> getRequireApproval() {
         return this.requireApproval == null ? Input.empty() : this.requireApproval;
     }
 
     @InputImport(name="targetId", required=true)
-    private final Input<String> targetId;
+      private final Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId;
     }
 
     @InputImport(name="validateOnly")
-    private final @Nullable Input<String> validateOnly;
+      private final @Nullable Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -387,7 +387,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public TargetArgs build() {
             return new TargetArgs(annotations, anthosCluster, description, etag, executionConfigs, gke, labels, location, name, project, requestId, requireApproval, targetId, validateOnly);
         }

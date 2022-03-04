@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -63,42 +63,42 @@ public final class FeatureMembershipConfigmanagementPolicyController {
     /**
      * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.
      * 
-     */
+    */
     public Optional<String> getAuditIntervalSeconds() {
         return Optional.ofNullable(this.auditIntervalSeconds);
     }
     /**
      * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
      * 
-     */
+    */
     public List<String> getExemptableNamespaces() {
         return this.exemptableNamespaces == null ? List.of() : this.exemptableNamespaces;
     }
     /**
      * Logs all denies and dry run failures.
      * 
-     */
+    */
     public Optional<Boolean> getLogDeniesEnabled() {
         return Optional.ofNullable(this.logDeniesEnabled);
     }
     /**
      * Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated.
      * 
-     */
+    */
     public Optional<Boolean> getReferentialRulesEnabled() {
         return Optional.ofNullable(this.referentialRulesEnabled);
     }
     /**
      * Installs the default template library along with Policy Controller.
      * 
-     */
+    */
     public Optional<Boolean> getTemplateLibraryInstalled() {
         return Optional.ofNullable(this.templateLibraryInstalled);
     }
@@ -162,7 +162,6 @@ public final class FeatureMembershipConfigmanagementPolicyController {
             this.templateLibraryInstalled = templateLibraryInstalled;
             return this;
         }
-
         public FeatureMembershipConfigmanagementPolicyController build() {
             return new FeatureMembershipConfigmanagementPolicyController(auditIntervalSeconds, enabled, exemptableNamespaces, logDeniesEnabled, referentialRulesEnabled, templateLibraryInstalled);
         }

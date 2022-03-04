@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class EndpointResponse {
     /**
      * The URL of the endpoint.
      * 
-     */
+    */
     public Optional<String> getEndpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
     /**
      * The type of the endpoint.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -76,7 +76,6 @@ public final class EndpointResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EndpointResponse build() {
             return new EndpointResponse(endpointUrl, type);
         }

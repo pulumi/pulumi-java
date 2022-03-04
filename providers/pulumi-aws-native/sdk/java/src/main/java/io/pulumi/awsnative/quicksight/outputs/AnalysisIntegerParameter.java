@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class AnalysisIntegerParameter {
     /**
      * <p>The name of the integer parameter.</p>
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * <p>The values for the integer parameter.</p>
      * 
-     */
+    */
     public List<Double> getValues() {
         return this.values;
     }
@@ -76,7 +76,6 @@ public final class AnalysisIntegerParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public AnalysisIntegerParameter build() {
             return new AnalysisIntegerParameter(name, values);
         }

@@ -43,7 +43,7 @@ import io.pulumi.azurenative.datafactory.outputs.ValidationActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WaitActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebHookActivityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -118,42 +118,42 @@ public final class UntilActivityResponse {
     /**
      * List of activities to execute.
      * 
-     */
+    */
     public List<Object> getActivities() {
         return this.activities;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
      * 
-     */
+    */
     public ExpressionResponse getExpression() {
         return this.expression;
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -161,14 +161,14 @@ public final class UntilActivityResponse {
      * Type of activity.
      * Expected value is 'Until'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -246,7 +246,6 @@ public final class UntilActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public UntilActivityResponse build() {
             return new UntilActivityResponse(activities, dependsOn, description, expression, name, timeout, type, userProperties);
         }

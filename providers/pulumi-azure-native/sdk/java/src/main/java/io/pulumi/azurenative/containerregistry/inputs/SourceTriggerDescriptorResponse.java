@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="branchName")
-    private final @Nullable String branchName;
+      private final @Nullable String branchName;
 
     public Optional<String> getBranchName() {
         return this.branchName == null ? Optional.empty() : Optional.ofNullable(this.branchName);
@@ -34,7 +34,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="commitId")
-    private final @Nullable String commitId;
+      private final @Nullable String commitId;
 
     public Optional<String> getCommitId() {
         return this.commitId == null ? Optional.empty() : Optional.ofNullable(this.commitId);
@@ -45,7 +45,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="eventType")
-    private final @Nullable String eventType;
+      private final @Nullable String eventType;
 
     public Optional<String> getEventType() {
         return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
@@ -56,7 +56,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -67,7 +67,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="providerType")
-    private final @Nullable String providerType;
+      private final @Nullable String providerType;
 
     public Optional<String> getProviderType() {
         return this.providerType == null ? Optional.empty() : Optional.ofNullable(this.providerType);
@@ -78,7 +78,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="pullRequestId")
-    private final @Nullable String pullRequestId;
+      private final @Nullable String pullRequestId;
 
     public Optional<String> getPullRequestId() {
         return this.pullRequestId == null ? Optional.empty() : Optional.ofNullable(this.pullRequestId);
@@ -89,7 +89,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="repositoryUrl")
-    private final @Nullable String repositoryUrl;
+      private final @Nullable String repositoryUrl;
 
     public Optional<String> getRepositoryUrl() {
         return this.repositoryUrl == null ? Optional.empty() : Optional.ofNullable(this.repositoryUrl);
@@ -188,7 +188,6 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
             this.repositoryUrl = repositoryUrl;
             return this;
         }
-
         public SourceTriggerDescriptorResponse build() {
             return new SourceTriggerDescriptorResponse(branchName, commitId, eventType, id, providerType, pullRequestId, repositoryUrl);
         }

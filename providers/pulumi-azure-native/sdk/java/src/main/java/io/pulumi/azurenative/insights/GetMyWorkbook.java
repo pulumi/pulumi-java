@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetMyWorkbookArgs;
 import io.pulumi.azurenative.insights.outputs.GetMyWorkbookResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMyWorkbook {
-/**
- * An Application Insights private workbook definition.
+    private GetMyWorkbook() {}
+    public interface BuilderApplicator {
+        public void apply(GetMyWorkbookArgs.Builder a);
+    }
+    private static GetMyWorkbookArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMyWorkbookArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Application Insights private workbook definition.
  * API Version: 2020-10-20.
  * 
- *
- * An Application Insights private workbook definition.
+     *
+     * An Application Insights private workbook definition.
  * 
- */
+     */
+    public static CompletableFuture<GetMyWorkbookResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Application Insights private workbook definition.
+     * API Version: 2020-10-20.
+     * 
+     *
+         * An Application Insights private workbook definition.
+     * 
+     */
     public static CompletableFuture<GetMyWorkbookResult> invokeAsync(GetMyWorkbookArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getMyWorkbook", TypeShape.of(GetMyWorkbookResult.class), args == null ? GetMyWorkbookArgs.Empty : args, Utilities.withVersion(options));
     }

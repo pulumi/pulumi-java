@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionAbsentAggregation;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionAbsentTrigger;
 import java.lang.String;
@@ -98,7 +98,7 @@ public final class AlertPolicyConditionConditionAbsent {
      * field.
      * Structure is documented below.
      * 
-     */
+    */
     public List<AlertPolicyConditionConditionAbsentAggregation> getAggregations() {
         return this.aggregations == null ? List.of() : this.aggregations;
     }
@@ -119,14 +119,14 @@ public final class AlertPolicyConditionConditionAbsent {
      * that unhealthy states are detected and
      * alerted on quickly.
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }
     /**
      * A logs-based filter.
      * 
-     */
+    */
     public Optional<String> getFilter() {
         return Optional.ofNullable(this.filter);
     }
@@ -141,7 +141,7 @@ public final class AlertPolicyConditionConditionAbsent {
      * denominator_aggregations are specified.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AlertPolicyConditionConditionAbsentTrigger> getTrigger() {
         return Optional.ofNullable(this.trigger);
     }
@@ -191,7 +191,6 @@ public final class AlertPolicyConditionConditionAbsent {
             this.trigger = trigger;
             return this;
         }
-
         public AlertPolicyConditionConditionAbsent build() {
             return new AlertPolicyConditionConditionAbsent(aggregations, duration, filter, trigger);
         }

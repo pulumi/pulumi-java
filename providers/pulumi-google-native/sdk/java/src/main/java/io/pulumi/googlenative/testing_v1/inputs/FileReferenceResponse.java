@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="gcsPath", required=true)
-    private final String gcsPath;
+      private final String gcsPath;
 
     public String getGcsPath() {
         return this.gcsPath;
@@ -59,7 +59,6 @@ public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs 
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }
-
         public FileReferenceResponse build() {
             return new FileReferenceResponse(gcsPath);
         }

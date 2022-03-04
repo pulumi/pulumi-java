@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RuleWebhookActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -36,7 +36,7 @@ public final class RuleWebhookActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -47,7 +47,7 @@ public final class RuleWebhookActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="serviceUri")
-    private final @Nullable String serviceUri;
+      private final @Nullable String serviceUri;
 
     public Optional<String> getServiceUri() {
         return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
@@ -106,7 +106,6 @@ public final class RuleWebhookActionResponse extends io.pulumi.resources.InvokeA
             this.serviceUri = serviceUri;
             return this;
         }
-
         public RuleWebhookActionResponse build() {
             return new RuleWebhookActionResponse(odataType, properties, serviceUri);
         }

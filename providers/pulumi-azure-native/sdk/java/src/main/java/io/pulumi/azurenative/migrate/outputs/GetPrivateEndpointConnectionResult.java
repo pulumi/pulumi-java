@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.PrivateEndpointConnectionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class GetPrivateEndpointConnectionResult {
     /**
      * For optimistic concurrency control.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the private endpoint endpoint connection.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the private endpoint endpoint connection.
      * 
-     */
+    */
     public PrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionResult build() {
             return new GetPrivateEndpointConnectionResult(eTag, id, name, properties, type);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.enums.RuntimeVersion;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<Integer> cpu;
+      private final @Nullable Input<Integer> cpu;
 
     public Input<Integer> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -38,7 +38,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Input<Map<String,String>> environmentVariables;
 
     public Input<Map<String,String>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -49,7 +49,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="jvmOptions")
-    private final @Nullable Input<String> jvmOptions;
+      private final @Nullable Input<String> jvmOptions;
 
     public Input<String> getJvmOptions() {
         return this.jvmOptions == null ? Input.empty() : this.jvmOptions;
@@ -60,7 +60,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="memoryInGB")
-    private final @Nullable Input<Integer> memoryInGB;
+      private final @Nullable Input<Integer> memoryInGB;
 
     public Input<Integer> getMemoryInGB() {
         return this.memoryInGB == null ? Input.empty() : this.memoryInGB;
@@ -71,7 +71,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="netCoreMainEntryPath")
-    private final @Nullable Input<String> netCoreMainEntryPath;
+      private final @Nullable Input<String> netCoreMainEntryPath;
 
     public Input<String> getNetCoreMainEntryPath() {
         return this.netCoreMainEntryPath == null ? Input.empty() : this.netCoreMainEntryPath;
@@ -82,7 +82,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="runtimeVersion")
-    private final @Nullable Input<Either<String,RuntimeVersion>> runtimeVersion;
+      private final @Nullable Input<Either<String,RuntimeVersion>> runtimeVersion;
 
     public Input<Either<String,RuntimeVersion>> getRuntimeVersion() {
         return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
@@ -201,7 +201,6 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }
-
         public DeploymentSettingsArgs build() {
             return new DeploymentSettingsArgs(cpu, environmentVariables, jvmOptions, memoryInGB, netCoreMainEntryPath, runtimeVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class WindowsOsInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="windowsOsState")
-    private final @Nullable String windowsOsState;
+      private final @Nullable String windowsOsState;
 
     public Optional<String> getWindowsOsState() {
         return this.windowsOsState == null ? Optional.empty() : Optional.ofNullable(this.windowsOsState);
@@ -61,7 +61,6 @@ public final class WindowsOsInfoResponse extends io.pulumi.resources.InvokeArgs 
             this.windowsOsState = windowsOsState;
             return this;
         }
-
         public WindowsOsInfoResponse build() {
             return new WindowsOsInfoResponse(windowsOsState);
         }

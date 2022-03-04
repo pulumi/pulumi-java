@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.ShareSubscriptionSynchronizationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ListShareSubscriptionSynchronizationsResult {
     /**
      * The Url of next result page.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Collection of items of type DataTransferObjects.
      * 
-     */
+    */
     public List<ShareSubscriptionSynchronizationResponse> getValue() {
         return this.value;
     }
@@ -78,7 +78,6 @@ public final class ListShareSubscriptionSynchronizationsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListShareSubscriptionSynchronizationsResult build() {
             return new ListShareSubscriptionSynchronizationsResult(nextLink, value);
         }

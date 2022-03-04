@@ -7,7 +7,7 @@ import io.pulumi.azurenative.costmanagement.outputs.KpiPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.PivotPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigDatasetResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigTimePeriodResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -158,133 +158,133 @@ public final class GetViewResult {
     /**
      * Show costs accumulated over time.
      * 
-     */
+    */
     public Optional<String> getAccumulated() {
         return Optional.ofNullable(this.accumulated);
     }
     /**
      * Chart type of the main view in Cost Analysis. Required.
      * 
-     */
+    */
     public Optional<String> getChart() {
         return Optional.ofNullable(this.chart);
     }
     /**
      * Date the user created this view.
      * 
-     */
+    */
     public String getCreatedOn() {
         return this.createdOn;
     }
     /**
      * Selected currency.
      * 
-     */
+    */
     public String getCurrency() {
         return this.currency;
     }
     /**
      * Has definition for data in this report config.
      * 
-     */
+    */
     public Optional<ReportConfigDatasetResponse> getDataSet() {
         return Optional.ofNullable(this.dataSet);
     }
     /**
      * Selected date range for viewing cost in.
      * 
-     */
+    */
     public String getDateRange() {
         return this.dateRange;
     }
     /**
      * User input name of the view. Required.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Include monetary commitment
      * 
-     */
+    */
     public Boolean getIncludeMonetaryCommitment() {
         return this.includeMonetaryCommitment;
     }
     /**
      * List of KPIs to show in Cost Analysis UI.
      * 
-     */
+    */
     public List<KpiPropertiesResponse> getKpis() {
         return this.kpis == null ? List.of() : this.kpis;
     }
     /**
      * Metric to use when displaying costs.
      * 
-     */
+    */
     public Optional<String> getMetric() {
         return Optional.ofNullable(this.metric);
     }
     /**
      * Date when the user last modified this view.
      * 
-     */
+    */
     public String getModifiedOn() {
         return this.modifiedOn;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Configuration of 3 sub-views in the Cost Analysis UI.
      * 
-     */
+    */
     public List<PivotPropertiesResponse> getPivots() {
         return this.pivots == null ? List.of() : this.pivots;
     }
     /**
      * Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Has time period for pulling data for the report.
      * 
-     */
+    */
     public Optional<ReportConfigTimePeriodResponse> getTimePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
     /**
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
      * 
-     */
+    */
     public String getTimeframe() {
         return this.timeframe;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -439,7 +439,6 @@ public final class GetViewResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetViewResult build() {
             return new GetViewResult(accumulated, chart, createdOn, currency, dataSet, dateRange, displayName, eTag, id, includeMonetaryCommitment, kpis, metric, modifiedOn, name, pivots, scope, timePeriod, timeframe, type);
         }

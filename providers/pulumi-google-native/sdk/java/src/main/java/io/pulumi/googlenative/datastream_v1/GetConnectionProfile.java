@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectionProfile {
-/**
- * Use this method to get details about a connection profile.
+    private GetConnectionProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetConnectionProfileArgs.Builder a);
+    }
+    private static GetConnectionProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConnectionProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this method to get details about a connection profile.
  * 
- */
+     */
+    public static CompletableFuture<GetConnectionProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this method to get details about a connection profile.
+     * 
+     */
     public static CompletableFuture<GetConnectionProfileResult> invokeAsync(GetConnectionProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getConnectionProfile", TypeShape.of(GetConnectionProfileResult.class), args == null ? GetConnectionProfileArgs.Empty : args, Utilities.withVersion(options));
     }

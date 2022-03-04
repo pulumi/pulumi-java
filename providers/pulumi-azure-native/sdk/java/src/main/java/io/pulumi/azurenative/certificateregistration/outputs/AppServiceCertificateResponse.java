@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.certificateregistration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class AppServiceCertificateResponse {
     /**
      * Key Vault resource Id.
      * 
-     */
+    */
     public Optional<String> getKeyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
     /**
      * Key Vault secret name.
      * 
-     */
+    */
     public Optional<String> getKeyVaultSecretName() {
         return Optional.ofNullable(this.keyVaultSecretName);
     }
     /**
      * Status of the Key Vault secret.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -97,7 +97,6 @@ public final class AppServiceCertificateResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public AppServiceCertificateResponse build() {
             return new AppServiceCertificateResponse(keyVaultId, keyVaultSecretName, provisioningState);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.datasync;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.datasync.inputs.GetLocationEFSArgs;
 import io.pulumi.awsnative.datasync.outputs.GetLocationEFSResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocationEFS {
-/**
- * Resource schema for AWS::DataSync::LocationEFS.
+    private GetLocationEFS() {}
+    public interface BuilderApplicator {
+        public void apply(GetLocationEFSArgs.Builder a);
+    }
+    private static GetLocationEFSArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLocationEFSArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::DataSync::LocationEFS.
  * 
- */
+     */
+    public static CompletableFuture<GetLocationEFSResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::DataSync::LocationEFS.
+     * 
+     */
     public static CompletableFuture<GetLocationEFSResult> invokeAsync(GetLocationEFSArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationEFS", TypeShape.of(GetLocationEFSResult.class), args == null ? GetLocationEFSArgs.Empty : args, Utilities.withVersion(options));
     }

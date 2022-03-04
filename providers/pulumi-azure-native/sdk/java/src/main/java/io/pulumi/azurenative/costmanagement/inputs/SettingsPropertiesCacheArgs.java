@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="channel", required=true)
-    private final Input<String> channel;
+      private final Input<String> channel;
 
     public Input<String> getChannel() {
         return this.channel;
@@ -30,7 +30,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -41,7 +41,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -52,7 +52,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -63,7 +63,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -74,7 +74,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subchannel", required=true)
-    private final Input<String> subchannel;
+      private final Input<String> subchannel;
 
     public Input<String> getSubchannel() {
         return this.subchannel;
@@ -193,7 +193,6 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
             this.subchannel = Input.of(Objects.requireNonNull(subchannel));
             return this;
         }
-
         public SettingsPropertiesCacheArgs build() {
             return new SettingsPropertiesCacheArgs(channel, id, name, parent, status, subchannel);
         }

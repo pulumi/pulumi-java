@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.deploymentmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,7 +34,7 @@ public final class DeploymentTargetImport {
     /**
      * The full contents of the template that you want to import.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
@@ -42,7 +42,7 @@ public final class DeploymentTargetImport {
      * The name of the template to import, as declared in the YAML
      * configuration.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -78,7 +78,6 @@ public final class DeploymentTargetImport {
             this.name = name;
             return this;
         }
-
         public DeploymentTargetImport build() {
             return new DeploymentTargetImport(content, name);
         }

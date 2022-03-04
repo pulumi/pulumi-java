@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v3.outputs.LocationResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class JobDerivedInfoResponse {
     /**
      * Job categories derived from Job.title and Job.description.
      * 
-     */
+    */
     public List<String> getJobCategories() {
         return this.jobCategories;
     }
     /**
      * Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
      * 
-     */
+    */
     public List<LocationResponse> getLocations() {
         return this.locations;
     }
@@ -76,7 +76,6 @@ public final class JobDerivedInfoResponse {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
         public JobDerivedInfoResponse build() {
             return new JobDerivedInfoResponse(jobCategories, locations);
         }

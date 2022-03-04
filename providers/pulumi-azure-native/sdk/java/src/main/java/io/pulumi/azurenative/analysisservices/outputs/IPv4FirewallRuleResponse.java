@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.analysisservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class IPv4FirewallRuleResponse {
     /**
      * The rule name.
      * 
-     */
+    */
     public Optional<String> getFirewallRuleName() {
         return Optional.ofNullable(this.firewallRuleName);
     }
     /**
      * The end range of IPv4.
      * 
-     */
+    */
     public Optional<String> getRangeEnd() {
         return Optional.ofNullable(this.rangeEnd);
     }
     /**
      * The start range of IPv4.
      * 
-     */
+    */
     public Optional<String> getRangeStart() {
         return Optional.ofNullable(this.rangeStart);
     }
@@ -97,7 +97,6 @@ public final class IPv4FirewallRuleResponse {
             this.rangeStart = rangeStart;
             return this;
         }
-
         public IPv4FirewallRuleResponse build() {
             return new IPv4FirewallRuleResponse(firewallRuleName, rangeEnd, rangeStart);
         }

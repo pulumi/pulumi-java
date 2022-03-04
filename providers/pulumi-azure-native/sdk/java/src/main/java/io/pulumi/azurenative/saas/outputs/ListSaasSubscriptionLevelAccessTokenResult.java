@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.saas.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ListSaasSubscriptionLevelAccessTokenResult {
     /**
      * The Publisher Offer Base Uri
      * 
-     */
+    */
     public Optional<String> getPublisherOfferBaseUri() {
         return Optional.ofNullable(this.publisherOfferBaseUri);
     }
     /**
      * The generated token
      * 
-     */
+    */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);
     }
@@ -76,7 +76,6 @@ public final class ListSaasSubscriptionLevelAccessTokenResult {
             this.token = token;
             return this;
         }
-
         public ListSaasSubscriptionLevelAccessTokenResult build() {
             return new ListSaasSubscriptionLevelAccessTokenResult(publisherOfferBaseUri, token);
         }

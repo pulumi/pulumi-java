@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -105,28 +105,28 @@ public final class HyperVReplicaBluePolicyDetailsResponse {
     /**
      * A value indicating the authentication type.
      * 
-     */
+    */
     public Optional<Integer> getAllowedAuthenticationType() {
         return Optional.ofNullable(this.allowedAuthenticationType);
     }
     /**
      * A value indicating the application consistent frequency.
      * 
-     */
+    */
     public Optional<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
         return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
     /**
      * A value indicating whether compression has to be enabled.
      * 
-     */
+    */
     public Optional<String> getCompression() {
         return Optional.ofNullable(this.compression);
     }
     /**
      * A value indicating whether IR is online.
      * 
-     */
+    */
     public Optional<String> getInitialReplicationMethod() {
         return Optional.ofNullable(this.initialReplicationMethod);
     }
@@ -134,56 +134,56 @@ public final class HyperVReplicaBluePolicyDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'HyperVReplica2012R2'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * A value indicating the offline IR export path.
      * 
-     */
+    */
     public Optional<String> getOfflineReplicationExportPath() {
         return Optional.ofNullable(this.offlineReplicationExportPath);
     }
     /**
      * A value indicating the offline IR import path.
      * 
-     */
+    */
     public Optional<String> getOfflineReplicationImportPath() {
         return Optional.ofNullable(this.offlineReplicationImportPath);
     }
     /**
      * A value indicating the online IR start time.
      * 
-     */
+    */
     public Optional<String> getOnlineReplicationStartTime() {
         return Optional.ofNullable(this.onlineReplicationStartTime);
     }
     /**
      * A value indicating the number of recovery points.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPoints() {
         return Optional.ofNullable(this.recoveryPoints);
     }
     /**
      * A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
      * 
-     */
+    */
     public Optional<String> getReplicaDeletionOption() {
         return Optional.ofNullable(this.replicaDeletionOption);
     }
     /**
      * A value indicating the replication interval.
      * 
-     */
+    */
     public Optional<Integer> getReplicationFrequencyInSeconds() {
         return Optional.ofNullable(this.replicationFrequencyInSeconds);
     }
     /**
      * A value indicating the recovery HTTPS port.
      * 
-     */
+    */
     public Optional<Integer> getReplicationPort() {
         return Optional.ofNullable(this.replicationPort);
     }
@@ -289,7 +289,6 @@ public final class HyperVReplicaBluePolicyDetailsResponse {
             this.replicationPort = replicationPort;
             return this;
         }
-
         public HyperVReplicaBluePolicyDetailsResponse build() {
             return new HyperVReplicaBluePolicyDetailsResponse(allowedAuthenticationType, applicationConsistentSnapshotFrequencyInHours, compression, initialReplicationMethod, instanceType, offlineReplicationExportPath, offlineReplicationImportPath, onlineReplicationStartTime, recoveryPoints, replicaDeletionOption, replicationFrequencyInSeconds, replicationPort);
         }

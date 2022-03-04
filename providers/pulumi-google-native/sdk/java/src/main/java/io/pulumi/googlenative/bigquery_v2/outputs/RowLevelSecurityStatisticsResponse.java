@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class RowLevelSecurityStatisticsResponse {
     /**
      * [Preview] Whether any accessed data was protected by row access policies.
      * 
-     */
+    */
     public Boolean getRowLevelSecurityApplied() {
         return this.rowLevelSecurityApplied;
     }
@@ -52,7 +52,6 @@ public final class RowLevelSecurityStatisticsResponse {
             this.rowLevelSecurityApplied = Objects.requireNonNull(rowLevelSecurityApplied);
             return this;
         }
-
         public RowLevelSecurityStatisticsResponse build() {
             return new RowLevelSecurityStatisticsResponse(rowLevelSecurityApplied);
         }

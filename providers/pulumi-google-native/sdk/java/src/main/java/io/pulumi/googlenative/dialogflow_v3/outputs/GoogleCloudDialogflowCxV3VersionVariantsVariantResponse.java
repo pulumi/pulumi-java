@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse {
     /**
      * Whether the variant is for the control group.
      * 
-     */
+    */
     public Boolean getIsControlGroup() {
         return this.isControlGroup;
     }
     /**
      * Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
      * 
-     */
+    */
     public Double getTrafficAllocation() {
         return this.trafficAllocation;
     }
     /**
      * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -97,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3VersionVariantsVariantResponse build() {
             return new GoogleCloudDialogflowCxV3VersionVariantsVariantResponse(isControlGroup, trafficAllocation, version);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.memorydb;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.memorydb.inputs.GetACLArgs;
 import io.pulumi.awsnative.memorydb.outputs.GetACLResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetACL {
-/**
- * Resource Type definition for AWS::MemoryDB::ACL
+    private GetACL() {}
+    public interface BuilderApplicator {
+        public void apply(GetACLArgs.Builder a);
+    }
+    private static GetACLArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetACLArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::MemoryDB::ACL
  * 
- */
+     */
+    public static CompletableFuture<GetACLResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::MemoryDB::ACL
+     * 
+     */
     public static CompletableFuture<GetACLResult> invokeAsync(GetACLArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getACL", TypeShape.of(GetACLResult.class), args == null ? GetACLArgs.Empty : args, Utilities.withVersion(options));
     }

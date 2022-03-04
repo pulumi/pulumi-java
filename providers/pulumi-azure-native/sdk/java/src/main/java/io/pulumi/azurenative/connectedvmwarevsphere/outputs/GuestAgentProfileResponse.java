@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ErrorDetailResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,35 +54,35 @@ public final class GuestAgentProfileResponse {
     /**
      * The hybrid machine agent full version.
      * 
-     */
+    */
     public String getAgentVersion() {
         return this.agentVersion;
     }
     /**
      * Details about the error state.
      * 
-     */
+    */
     public List<ErrorDetailResponse> getErrorDetails() {
         return this.errorDetails;
     }
     /**
      * The time of the last status change.
      * 
-     */
+    */
     public String getLastStatusChange() {
         return this.lastStatusChange;
     }
     /**
      * The status of the hybrid machine agent.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Specifies the VM's unique SMBIOS ID.
      * 
-     */
+    */
     public String getVmUuid() {
         return this.vmUuid;
     }
@@ -139,7 +139,6 @@ public final class GuestAgentProfileResponse {
             this.vmUuid = Objects.requireNonNull(vmUuid);
             return this;
         }
-
         public GuestAgentProfileResponse build() {
             return new GuestAgentProfileResponse(agentVersion, errorDetails, lastStatusChange, status, vmUuid);
         }

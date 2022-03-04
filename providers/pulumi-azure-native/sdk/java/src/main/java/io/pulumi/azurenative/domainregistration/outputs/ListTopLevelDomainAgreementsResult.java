@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.domainregistration.outputs;
 
 import io.pulumi.azurenative.domainregistration.outputs.TldLegalAgreementResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ListTopLevelDomainAgreementsResult {
     /**
      * Link to next page of resources.
      * 
-     */
+    */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * Collection of resources.
      * 
-     */
+    */
     public List<TldLegalAgreementResponse> getValue() {
         return this.value;
     }
@@ -76,7 +76,6 @@ public final class ListTopLevelDomainAgreementsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListTopLevelDomainAgreementsResult build() {
             return new ListTopLevelDomainAgreementsResult(nextLink, value);
         }

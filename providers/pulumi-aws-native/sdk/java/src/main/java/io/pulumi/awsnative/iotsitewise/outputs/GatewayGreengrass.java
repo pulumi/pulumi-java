@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GatewayGreengrass {
     /**
      * The ARN of the Greengrass group.
      * 
-     */
+    */
     public String getGroupArn() {
         return this.groupArn;
     }
@@ -52,7 +52,6 @@ public final class GatewayGreengrass {
             this.groupArn = Objects.requireNonNull(groupArn);
             return this;
         }
-
         public GatewayGreengrass build() {
             return new GatewayGreengrass(groupArn);
         }

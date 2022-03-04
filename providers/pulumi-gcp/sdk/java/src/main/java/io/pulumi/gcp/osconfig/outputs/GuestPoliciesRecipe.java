@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeArtifact;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeInstallStep;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeUpdateStep;
@@ -80,7 +80,7 @@ public final class GuestPoliciesRecipe {
      * Resources available to be used in the steps in the recipe.
      * Structure is documented below.
      * 
-     */
+    */
     public List<GuestPoliciesRecipeArtifact> getArtifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
     }
@@ -93,7 +93,7 @@ public final class GuestPoliciesRecipe {
      * Default value is `INSTALLED`.
      * Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
      * 
-     */
+    */
     public Optional<String> getDesiredState() {
         return Optional.ofNullable(this.desiredState);
     }
@@ -102,7 +102,7 @@ public final class GuestPoliciesRecipe {
      * Any steps taken (including partially completed steps) are not rolled back.
      * Structure is documented below.
      * 
-     */
+    */
     public List<GuestPoliciesRecipeInstallStep> getInstallSteps() {
         return this.installSteps == null ? List.of() : this.installSteps;
     }
@@ -112,7 +112,7 @@ public final class GuestPoliciesRecipe {
      * This means that requests to create multiple recipes with the same name and version are rejected since they
      * could potentially have conflicting assignments.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -121,14 +121,14 @@ public final class GuestPoliciesRecipe {
      * Any steps taken (including partially completed steps) are not rolled back.
      * Structure is documented below.
      * 
-     */
+    */
     public List<GuestPoliciesRecipeUpdateStep> getUpdateSteps() {
         return this.updateSteps == null ? List.of() : this.updateSteps;
     }
     /**
      * The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -192,7 +192,6 @@ public final class GuestPoliciesRecipe {
             this.version = version;
             return this;
         }
-
         public GuestPoliciesRecipe build() {
             return new GuestPoliciesRecipe(artifacts, desiredState, installSteps, name, updateSteps, version);
         }

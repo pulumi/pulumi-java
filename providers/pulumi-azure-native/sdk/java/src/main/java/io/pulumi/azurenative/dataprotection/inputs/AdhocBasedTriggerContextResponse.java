@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.AdhocBasedTaggingCriteriaResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AdhocBasedTriggerContextResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -34,7 +34,7 @@ public final class AdhocBasedTriggerContextResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="taggingCriteria", required=true)
-    private final AdhocBasedTaggingCriteriaResponse taggingCriteria;
+      private final AdhocBasedTaggingCriteriaResponse taggingCriteria;
 
     public AdhocBasedTaggingCriteriaResponse getTaggingCriteria() {
         return this.taggingCriteria;
@@ -83,7 +83,6 @@ public final class AdhocBasedTriggerContextResponse extends io.pulumi.resources.
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
-
         public AdhocBasedTriggerContextResponse build() {
             return new AdhocBasedTriggerContextResponse(objectType, taggingCriteria);
         }

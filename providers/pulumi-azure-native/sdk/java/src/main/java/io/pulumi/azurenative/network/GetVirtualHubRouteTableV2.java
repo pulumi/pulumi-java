@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetVirtualHubRouteTableV2Args;
 import io.pulumi.azurenative.network.outputs.GetVirtualHubRouteTableV2Result;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualHubRouteTableV2 {
-/**
- * VirtualHubRouteTableV2 Resource.
+    private GetVirtualHubRouteTableV2() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualHubRouteTableV2Args.Builder a);
+    }
+    private static GetVirtualHubRouteTableV2Args buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualHubRouteTableV2Args.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * VirtualHubRouteTableV2 Resource.
  * API Version: 2020-11-01.
  * 
- *
- * VirtualHubRouteTableV2 Resource.
+     *
+     * VirtualHubRouteTableV2 Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualHubRouteTableV2Result> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * VirtualHubRouteTableV2 Resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * VirtualHubRouteTableV2 Resource.
+     * 
+     */
     public static CompletableFuture<GetVirtualHubRouteTableV2Result> invokeAsync(GetVirtualHubRouteTableV2Args args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHubRouteTableV2", TypeShape.of(GetVirtualHubRouteTableV2Result.class), args == null ? GetVirtualHubRouteTableV2Args.Empty : args, Utilities.withVersion(options));
     }

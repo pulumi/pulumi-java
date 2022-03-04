@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable List<String> roles;
+      private final @Nullable List<String> roles;
 
     public List<String> getRoles() {
         return this.roles == null ? List.of() : this.roles;
@@ -35,7 +35,7 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -84,7 +84,6 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
             this.state = state;
             return this;
         }
-
         public SecurityContactPropertiesResponseNotificationsByRole build() {
             return new SecurityContactPropertiesResponseNotificationsByRole(roles, state);
         }

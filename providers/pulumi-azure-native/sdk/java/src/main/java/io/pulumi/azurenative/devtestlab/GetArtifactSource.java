@@ -6,21 +6,41 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devtestlab.inputs.GetArtifactSourceArgs;
 import io.pulumi.azurenative.devtestlab.outputs.GetArtifactSourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetArtifactSource {
-/**
- * Properties of an artifact source.
+    private GetArtifactSource() {}
+    public interface BuilderApplicator {
+        public void apply(GetArtifactSourceArgs.Builder a);
+    }
+    private static GetArtifactSourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetArtifactSourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Properties of an artifact source.
  * API Version: 2018-09-15.
  * 
- *
- * Properties of an artifact source.
+     *
+     * Properties of an artifact source.
  * 
- */
+     */
+    public static CompletableFuture<GetArtifactSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Properties of an artifact source.
+     * API Version: 2018-09-15.
+     * 
+     *
+         * Properties of an artifact source.
+     * 
+     */
     public static CompletableFuture<GetArtifactSourceResult> invokeAsync(GetArtifactSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getArtifactSource", TypeShape.of(GetArtifactSourceResult.class), args == null ? GetArtifactSourceArgs.Empty : args, Utilities.withVersion(options));
     }

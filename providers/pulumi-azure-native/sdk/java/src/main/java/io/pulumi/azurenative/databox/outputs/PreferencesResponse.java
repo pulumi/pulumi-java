@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.EncryptionPreferencesResponse;
 import io.pulumi.azurenative.databox.outputs.TransportPreferencesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class PreferencesResponse {
     /**
      * Preferences related to the Encryption.
      * 
-     */
+    */
     public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
     /**
      * Preferred data center region.
      * 
-     */
+    */
     public List<String> getPreferredDataCenterRegion() {
         return this.preferredDataCenterRegion == null ? List.of() : this.preferredDataCenterRegion;
     }
     /**
      * Preferences related to the shipment logistics of the sku.
      * 
-     */
+    */
     public Optional<TransportPreferencesResponse> getTransportPreferences() {
         return Optional.ofNullable(this.transportPreferences);
     }
@@ -100,7 +100,6 @@ public final class PreferencesResponse {
             this.transportPreferences = transportPreferences;
             return this;
         }
-
         public PreferencesResponse build() {
             return new PreferencesResponse(encryptionPreferences, preferredDataCenterRegion, transportPreferences);
         }

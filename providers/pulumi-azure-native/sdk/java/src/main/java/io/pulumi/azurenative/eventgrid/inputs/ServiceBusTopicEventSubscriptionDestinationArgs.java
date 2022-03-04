@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ServiceBusTopicEventSubscriptionDestinationArgs extends io.pu
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final Input<String> endpointType;
+      private final Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType;
@@ -35,7 +35,7 @@ public final class ServiceBusTopicEventSubscriptionDestinationArgs extends io.pu
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -94,7 +94,6 @@ public final class ServiceBusTopicEventSubscriptionDestinationArgs extends io.pu
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
-
         public ServiceBusTopicEventSubscriptionDestinationArgs build() {
             return new ServiceBusTopicEventSubscriptionDestinationArgs(endpointType, resourceId);
         }

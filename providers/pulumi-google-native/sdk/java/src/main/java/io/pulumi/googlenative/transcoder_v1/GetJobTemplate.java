@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobTemplate {
-/**
- * Returns the job template data.
+    private GetJobTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetJobTemplateArgs.Builder a);
+    }
+    private static GetJobTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJobTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the job template data.
  * 
- */
+     */
+    public static CompletableFuture<GetJobTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the job template data.
+     * 
+     */
     public static CompletableFuture<GetJobTemplateResult> invokeAsync(GetJobTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:transcoder/v1:getJobTemplate", TypeShape.of(GetJobTemplateResult.class), args == null ? GetJobTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

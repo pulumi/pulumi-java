@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.ArtifactArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CommandArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SourceArgs;
@@ -28,7 +28,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="buildOptions")
-    private final @Nullable Input<Map<String,String>> buildOptions;
+      private final @Nullable Input<Map<String,String>> buildOptions;
 
     public Input<Map<String,String>> getBuildOptions() {
         return this.buildOptions == null ? Input.empty() : this.buildOptions;
@@ -39,7 +39,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="builderVersion")
-    private final @Nullable Input<String> builderVersion;
+      private final @Nullable Input<String> builderVersion;
 
     public Input<String> getBuilderVersion() {
         return this.builderVersion == null ? Input.empty() : this.builderVersion;
@@ -50,7 +50,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="builtArtifacts")
-    private final @Nullable Input<List<ArtifactArgs>> builtArtifacts;
+      private final @Nullable Input<List<ArtifactArgs>> builtArtifacts;
 
     public Input<List<ArtifactArgs>> getBuiltArtifacts() {
         return this.builtArtifacts == null ? Input.empty() : this.builtArtifacts;
@@ -61,7 +61,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="commands")
-    private final @Nullable Input<List<CommandArgs>> commands;
+      private final @Nullable Input<List<CommandArgs>> commands;
 
     public Input<List<CommandArgs>> getCommands() {
         return this.commands == null ? Input.empty() : this.commands;
@@ -72,7 +72,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -83,7 +83,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creator")
-    private final @Nullable Input<String> creator;
+      private final @Nullable Input<String> creator;
 
     public Input<String> getCreator() {
         return this.creator == null ? Input.empty() : this.creator;
@@ -94,7 +94,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -105,7 +105,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -116,7 +116,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logsUri")
-    private final @Nullable Input<String> logsUri;
+      private final @Nullable Input<String> logsUri;
 
     public Input<String> getLogsUri() {
         return this.logsUri == null ? Input.empty() : this.logsUri;
@@ -127,7 +127,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -138,7 +138,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceProvenance")
-    private final @Nullable Input<SourceArgs> sourceProvenance;
+      private final @Nullable Input<SourceArgs> sourceProvenance;
 
     public Input<SourceArgs> getSourceProvenance() {
         return this.sourceProvenance == null ? Input.empty() : this.sourceProvenance;
@@ -149,7 +149,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -160,7 +160,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="triggerId")
-    private final @Nullable Input<String> triggerId;
+      private final @Nullable Input<String> triggerId;
 
     public Input<String> getTriggerId() {
         return this.triggerId == null ? Input.empty() : this.triggerId;
@@ -384,7 +384,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             this.triggerId = Input.ofNullable(triggerId);
             return this;
         }
-
         public BuildProvenanceArgs build() {
             return new BuildProvenanceArgs(buildOptions, builderVersion, builtArtifacts, commands, createTime, creator, endTime, id, logsUri, project, sourceProvenance, startTime, triggerId);
         }

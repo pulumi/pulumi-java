@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoSignatureArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LinkArgs;
 import java.util.List;
@@ -21,14 +21,14 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
     public static final GrafeasV1beta1IntotoDetailsArgs Empty = new GrafeasV1beta1IntotoDetailsArgs();
 
     @InputImport(name="signatures")
-    private final @Nullable Input<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
+      private final @Nullable Input<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
 
     public Input<List<GrafeasV1beta1IntotoSignatureArgs>> getSignatures() {
         return this.signatures == null ? Input.empty() : this.signatures;
     }
 
     @InputImport(name="signed")
-    private final @Nullable Input<LinkArgs> signed;
+      private final @Nullable Input<LinkArgs> signed;
 
     public Input<LinkArgs> getSigned() {
         return this.signed == null ? Input.empty() : this.signed;
@@ -87,7 +87,6 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
             this.signed = Input.ofNullable(signed);
             return this;
         }
-
         public GrafeasV1beta1IntotoDetailsArgs build() {
             return new GrafeasV1beta1IntotoDetailsArgs(signatures, signed);
         }

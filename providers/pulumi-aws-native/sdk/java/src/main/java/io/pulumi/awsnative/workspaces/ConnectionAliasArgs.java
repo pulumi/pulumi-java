@@ -5,7 +5,7 @@ package io.pulumi.awsnative.workspaces;
 
 import io.pulumi.awsnative.workspaces.inputs.ConnectionAliasTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class ConnectionAliasArgs extends io.pulumi.resources.ResourceArgs 
     public static final ConnectionAliasArgs Empty = new ConnectionAliasArgs();
 
     @InputImport(name="connectionString", required=true)
-    private final Input<String> connectionString;
+      private final Input<String> connectionString;
 
     public Input<String> getConnectionString() {
         return this.connectionString;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<ConnectionAliasTagArgs>> tags;
+      private final @Nullable Input<List<ConnectionAliasTagArgs>> tags;
 
     public Input<List<ConnectionAliasTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -83,7 +83,6 @@ public final class ConnectionAliasArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ConnectionAliasArgs build() {
             return new ConnectionAliasArgs(connectionString, tags);
         }

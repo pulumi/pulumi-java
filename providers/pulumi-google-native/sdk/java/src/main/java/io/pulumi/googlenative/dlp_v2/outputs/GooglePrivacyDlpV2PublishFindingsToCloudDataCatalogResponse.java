@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse {
         public Builder(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse build() {
             return new GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse();
         }

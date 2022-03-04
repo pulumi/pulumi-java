@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class MetadataSourceResponse {
     /**
      * Source type of the content
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the content source.  The repo name, solution name, LA workspace name etc.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * ID of the content source.  The solution ID, workspace ID, etc
      * 
-     */
+    */
     public Optional<String> getSourceId() {
         return Optional.ofNullable(this.sourceId);
     }
@@ -97,7 +97,6 @@ public final class MetadataSourceResponse {
             this.sourceId = sourceId;
             return this;
         }
-
         public MetadataSourceResponse build() {
             return new MetadataSourceResponse(kind, name, sourceId);
         }

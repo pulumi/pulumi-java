@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AutoUserSpecificationResponse {
     /**
      * The default value is nonAdmin.
      * 
-     */
+    */
     public Optional<String> getElevationLevel() {
         return Optional.ofNullable(this.elevationLevel);
     }
     /**
      * The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
@@ -76,7 +76,6 @@ public final class AutoUserSpecificationResponse {
             this.scope = scope;
             return this;
         }
-
         public AutoUserSpecificationResponse build() {
             return new AutoUserSpecificationResponse(elevationLevel, scope);
         }

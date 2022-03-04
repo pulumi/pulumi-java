@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.storage.k8s.io_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import io.pulumi.kubernetes.storage.k8s.io_v1.CSINodeListArgs;
@@ -78,6 +78,37 @@ public class CSINodeList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CSINodeListArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.storage.k8s.io_v1.CSINodeListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.storage.k8s.io_v1.CSINodeListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CSINodeList(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CSINodeList(String name) {
+        this(name, CSINodeListArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CSINodeList(String name, CSINodeListArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

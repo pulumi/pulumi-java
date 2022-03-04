@@ -6,17 +6,33 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.inputs.GetAuthorizerArgs;
 import io.pulumi.awsnative.apigateway.outputs.GetAuthorizerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorizer {
-/**
- * Represents an authorization layer for methods. If enabled on a method, API Gateway will activate the authorizer when a client calls the method.
+    private GetAuthorizer() {}
+    public interface BuilderApplicator {
+        public void apply(GetAuthorizerArgs.Builder a);
+    }
+    private static GetAuthorizerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAuthorizerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents an authorization layer for methods. If enabled on a method, API Gateway will activate the authorizer when a client calls the method.
  * 
- */
+     */
+    public static CompletableFuture<GetAuthorizerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents an authorization layer for methods. If enabled on a method, API Gateway will activate the authorizer when a client calls the method.
+     * 
+     */
     public static CompletableFuture<GetAuthorizerResult> invokeAsync(GetAuthorizerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getAuthorizer", TypeShape.of(GetAuthorizerResult.class), args == null ? GetAuthorizerArgs.Empty : args, Utilities.withVersion(options));
     }

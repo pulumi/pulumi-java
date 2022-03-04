@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class UserAssignedPropertiesResponse {
     /**
      * Arm resource id for user assigned identity to be used to fetch MSI token.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -54,7 +54,6 @@ public final class UserAssignedPropertiesResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public UserAssignedPropertiesResponse build() {
             return new UserAssignedPropertiesResponse(resourceId);
         }

@@ -11,8 +11,8 @@ import io.pulumi.azurenative.databricks.outputs.VirtualNetworkPeeringPropertiesF
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -204,6 +204,37 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
         return this.useRemoteGateways;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VNetPeeringArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.databricks.VNetPeeringArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.databricks.VNetPeeringArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VNetPeering(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VNetPeering(String name) {
+        this(name, VNetPeeringArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VNetPeering(String name, VNetPeeringArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

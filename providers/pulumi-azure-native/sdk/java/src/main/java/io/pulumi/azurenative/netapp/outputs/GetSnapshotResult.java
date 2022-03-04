@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -66,49 +66,49 @@ public final class GetSnapshotResult {
     /**
      * The creation date of the snapshot
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * UUID v4 used to identify the Snapshot
      * 
-     */
+    */
     public String getSnapshotId() {
         return this.snapshotId;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -179,7 +179,6 @@ public final class GetSnapshotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(created, id, location, name, provisioningState, snapshotId, type);
         }

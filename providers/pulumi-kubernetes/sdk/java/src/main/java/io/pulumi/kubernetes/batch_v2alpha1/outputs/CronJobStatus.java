@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v2alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import java.lang.String;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class CronJobStatus {
     /**
      * A list of pointers to currently running jobs.
      * 
-     */
+    */
     public List<ObjectReference> getActive() {
         return this.active == null ? List.of() : this.active;
     }
     /**
      * Information when was the last time the job was successfully scheduled.
      * 
-     */
+    */
     public Optional<String> getLastScheduleTime() {
         return Optional.ofNullable(this.lastScheduleTime);
     }
@@ -78,7 +78,6 @@ public final class CronJobStatus {
             this.lastScheduleTime = lastScheduleTime;
             return this;
         }
-
         public CronJobStatus build() {
             return new CronJobStatus(active, lastScheduleTime);
         }

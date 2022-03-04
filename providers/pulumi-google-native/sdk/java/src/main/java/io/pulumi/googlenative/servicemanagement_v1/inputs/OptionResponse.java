@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class OptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Map<String,String> value;
+      private final Map<String,String> value;
 
     public Map<String,String> getValue() {
         return this.value;
@@ -82,7 +82,6 @@ public final class OptionResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public OptionResponse build() {
             return new OptionResponse(name, value);
         }

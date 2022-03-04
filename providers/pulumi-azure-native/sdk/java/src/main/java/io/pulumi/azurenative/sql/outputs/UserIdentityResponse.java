@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class UserIdentityResponse {
     /**
      * The Azure Active Directory client id.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The Azure Active Directory principal id.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -74,7 +74,6 @@ public final class UserIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public UserIdentityResponse build() {
             return new UserIdentityResponse(clientId, principalId);
         }

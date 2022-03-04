@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.GitFileSourceRepoType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -35,7 +35,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoType")
-    private final @Nullable Input<GitFileSourceRepoType> repoType;
+      private final @Nullable Input<GitFileSourceRepoType> repoType;
 
     public Input<GitFileSourceRepoType> getRepoType() {
         return this.repoType == null ? Input.empty() : this.repoType;
@@ -46,7 +46,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<String> revision;
+      private final @Nullable Input<String> revision;
 
     public Input<String> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -57,7 +57,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -146,7 +146,6 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public GitFileSourceArgs build() {
             return new GitFileSourceArgs(path, repoType, revision, uri);
         }

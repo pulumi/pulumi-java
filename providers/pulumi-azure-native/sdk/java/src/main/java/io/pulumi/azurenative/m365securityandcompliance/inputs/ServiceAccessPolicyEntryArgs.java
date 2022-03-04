@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.m365securityandcompliance.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ServiceAccessPolicyEntryArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<String> objectId;
+      private final Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId;
@@ -65,7 +65,6 @@ public final class ServiceAccessPolicyEntryArgs extends io.pulumi.resources.Reso
             this.objectId = Input.of(Objects.requireNonNull(objectId));
             return this;
         }
-
         public ServiceAccessPolicyEntryArgs build() {
             return new ServiceAccessPolicyEntryArgs(objectId);
         }

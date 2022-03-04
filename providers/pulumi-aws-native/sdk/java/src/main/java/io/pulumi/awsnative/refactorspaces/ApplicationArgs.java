@@ -7,7 +7,7 @@ import io.pulumi.awsnative.refactorspaces.enums.ApplicationProxyType;
 import io.pulumi.awsnative.refactorspaces.inputs.ApplicationApiGatewayProxyInputArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.ApplicationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,28 +19,28 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
     @InputImport(name="apiGatewayProxy")
-    private final @Nullable Input<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy;
+      private final @Nullable Input<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy;
 
     public Input<ApplicationApiGatewayProxyInputArgs> getApiGatewayProxy() {
         return this.apiGatewayProxy == null ? Input.empty() : this.apiGatewayProxy;
     }
 
     @InputImport(name="environmentIdentifier")
-    private final @Nullable Input<String> environmentIdentifier;
+      private final @Nullable Input<String> environmentIdentifier;
 
     public Input<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier == null ? Input.empty() : this.environmentIdentifier;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="proxyType")
-    private final @Nullable Input<ApplicationProxyType> proxyType;
+      private final @Nullable Input<ApplicationProxyType> proxyType;
 
     public Input<ApplicationProxyType> getProxyType() {
         return this.proxyType == null ? Input.empty() : this.proxyType;
@@ -51,14 +51,14 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ApplicationTagArgs>> tags;
+      private final @Nullable Input<List<ApplicationTagArgs>> tags;
 
     public Input<List<ApplicationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;
@@ -177,7 +177,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }
-
         public ApplicationArgs build() {
             return new ApplicationArgs(apiGatewayProxy, environmentIdentifier, name, proxyType, tags, vpcId);
         }

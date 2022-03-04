@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobScheduleScheduleEndDate;
 import io.pulumi.gcp.storage.outputs.TransferJobScheduleScheduleStartDate;
 import io.pulumi.gcp.storage.outputs.TransferJobScheduleStartTimeOfDay;
@@ -42,21 +42,21 @@ public final class TransferJobSchedule {
     /**
      * The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
      * 
-     */
+    */
     public Optional<TransferJobScheduleScheduleEndDate> getScheduleEndDate() {
         return Optional.ofNullable(this.scheduleEndDate);
     }
     /**
      * The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
      * 
-     */
+    */
     public TransferJobScheduleScheduleStartDate getScheduleStartDate() {
         return this.scheduleStartDate;
     }
     /**
      * The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
      * 
-     */
+    */
     public Optional<TransferJobScheduleStartTimeOfDay> getStartTimeOfDay() {
         return Optional.ofNullable(this.startTimeOfDay);
     }
@@ -99,7 +99,6 @@ public final class TransferJobSchedule {
             this.startTimeOfDay = startTimeOfDay;
             return this;
         }
-
         public TransferJobSchedule build() {
             return new TransferJobSchedule(scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }

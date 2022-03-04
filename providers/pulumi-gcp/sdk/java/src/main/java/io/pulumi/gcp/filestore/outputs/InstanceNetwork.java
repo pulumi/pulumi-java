@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.filestore.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -68,7 +68,7 @@ public final class InstanceNetwork {
      * Default value is `DIRECT_PEERING`.
      * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
      * 
-     */
+    */
     public Optional<String> getConnectMode() {
         return Optional.ofNullable(this.connectMode);
     }
@@ -76,7 +76,7 @@ public final class InstanceNetwork {
      * - 
      * A list of IPv4 or IPv6 addresses.
      * 
-     */
+    */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
@@ -85,7 +85,7 @@ public final class InstanceNetwork {
      * IP addresses assigned.
      * Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
      * 
-     */
+    */
     public List<String> getModes() {
         return this.modes;
     }
@@ -93,7 +93,7 @@ public final class InstanceNetwork {
      * The name of the GCE VPC network to which the
      * instance is connected.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
@@ -101,7 +101,7 @@ public final class InstanceNetwork {
      * A /29 CIDR block that identifies the range of IP
      * addresses reserved for this instance.
      * 
-     */
+    */
     public Optional<String> getReservedIpRange() {
         return Optional.ofNullable(this.reservedIpRange);
     }
@@ -158,7 +158,6 @@ public final class InstanceNetwork {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
-
         public InstanceNetwork build() {
             return new InstanceNetwork(connectMode, ipAddresses, modes, network, reservedIpRange);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class FlowDistinguisherMethodArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -65,7 +65,6 @@ public final class FlowDistinguisherMethodArgs extends io.pulumi.resources.Resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public FlowDistinguisherMethodArgs build() {
             return new FlowDistinguisherMethodArgs(type);
         }

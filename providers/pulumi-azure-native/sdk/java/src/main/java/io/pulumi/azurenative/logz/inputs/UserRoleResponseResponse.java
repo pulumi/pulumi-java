@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class UserRoleResponseResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="role")
-    private final @Nullable String role;
+      private final @Nullable String role;
 
     public Optional<String> getRole() {
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
@@ -61,7 +61,6 @@ public final class UserRoleResponseResponse extends io.pulumi.resources.InvokeAr
             this.role = role;
             return this;
         }
-
         public UserRoleResponseResponse build() {
             return new UserRoleResponseResponse(role);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -42,21 +42,21 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
     /**
      * What AWS WAF should do if it fails to completely parse the JSON body.
      * 
-     */
+    */
     public Optional<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> getInvalidFallbackBehavior() {
         return Optional.ofNullable(this.invalidFallbackBehavior);
     }
     /**
      * The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
      * 
-     */
+    */
     public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties getMatchPattern() {
         return this.matchPattern;
     }
     /**
      * The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values.
      * 
-     */
+    */
     public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope getMatchScope() {
         return this.matchScope;
     }
@@ -99,7 +99,6 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
-
         public LoggingConfigurationFieldToMatchJsonBodyProperties build() {
             return new LoggingConfigurationFieldToMatchJsonBodyProperties(invalidFallbackBehavior, matchPattern, matchScope);
         }

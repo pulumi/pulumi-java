@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class CacheConfigurationResponse {
     /**
      * The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
      * 
-     */
+    */
     public Optional<String> getCacheDuration() {
         return Optional.ofNullable(this.cacheDuration);
     }
     /**
      * Whether to use dynamic compression for cached content
      * 
-     */
+    */
     public Optional<String> getDynamicCompression() {
         return Optional.ofNullable(this.dynamicCompression);
     }
     /**
      * Treatment of URL query terms when forming the cache key.
      * 
-     */
+    */
     public Optional<String> getQueryParameterStripDirective() {
         return Optional.ofNullable(this.queryParameterStripDirective);
     }
     /**
      * query parameters to include or exclude (comma separated).
      * 
-     */
+    */
     public Optional<String> getQueryParameters() {
         return Optional.ofNullable(this.queryParameters);
     }
@@ -118,7 +118,6 @@ public final class CacheConfigurationResponse {
             this.queryParameters = queryParameters;
             return this;
         }
-
         public CacheConfigurationResponse build() {
             return new CacheConfigurationResponse(cacheDuration, dynamicCompression, queryParameterStripDirective, queryParameters);
         }

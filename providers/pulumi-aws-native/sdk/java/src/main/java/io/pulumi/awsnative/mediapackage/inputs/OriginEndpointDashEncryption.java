@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProvider;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,14 +24,14 @@ public final class OriginEndpointDashEncryption extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyRotationIntervalSeconds")
-    private final @Nullable Integer keyRotationIntervalSeconds;
+      private final @Nullable Integer keyRotationIntervalSeconds;
 
     public Optional<Integer> getKeyRotationIntervalSeconds() {
         return this.keyRotationIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
 
     @InputImport(name="spekeKeyProvider", required=true)
-    private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
+      private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
     public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {
         return this.spekeKeyProvider;
@@ -80,7 +80,6 @@ public final class OriginEndpointDashEncryption extends io.pulumi.resources.Invo
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public OriginEndpointDashEncryption build() {
             return new OriginEndpointDashEncryption(keyRotationIntervalSeconds, spekeKeyProvider);
         }

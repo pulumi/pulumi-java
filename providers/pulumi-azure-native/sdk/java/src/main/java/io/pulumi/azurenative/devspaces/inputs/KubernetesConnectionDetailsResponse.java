@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devspaces.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class KubernetesConnectionDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -35,7 +35,7 @@ public final class KubernetesConnectionDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kubeConfig")
-    private final @Nullable String kubeConfig;
+      private final @Nullable String kubeConfig;
 
     public Optional<String> getKubeConfig() {
         return this.kubeConfig == null ? Optional.empty() : Optional.ofNullable(this.kubeConfig);
@@ -84,7 +84,6 @@ public final class KubernetesConnectionDetailsResponse extends io.pulumi.resourc
             this.kubeConfig = kubeConfig;
             return this;
         }
-
         public KubernetesConnectionDetailsResponse build() {
             return new KubernetesConnectionDetailsResponse(instanceType, kubeConfig);
         }

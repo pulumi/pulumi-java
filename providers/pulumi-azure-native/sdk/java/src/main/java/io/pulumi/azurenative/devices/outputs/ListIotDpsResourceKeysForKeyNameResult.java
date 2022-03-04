@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ListIotDpsResourceKeysForKeyNameResult {
     /**
      * Name of the key.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * Primary SAS key value.
      * 
-     */
+    */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Rights that this key has.
      * 
-     */
+    */
     public String getRights() {
         return this.rights;
     }
     /**
      * Secondary SAS key value.
      * 
-     */
+    */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -118,7 +118,6 @@ public final class ListIotDpsResourceKeysForKeyNameResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListIotDpsResourceKeysForKeyNameResult build() {
             return new ListIotDpsResourceKeysForKeyNameResult(keyName, primaryKey, rights, secondaryKey);
         }

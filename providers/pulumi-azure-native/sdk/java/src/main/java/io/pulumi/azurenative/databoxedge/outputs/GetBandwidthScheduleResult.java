@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -76,56 +76,56 @@ public final class GetBandwidthScheduleResult {
     /**
      * The days of the week when this schedule is applicable.
      * 
-     */
+    */
     public List<String> getDays() {
         return this.days;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The bandwidth rate in Mbps.
      * 
-     */
+    */
     public Integer getRateInMbps() {
         return this.rateInMbps;
     }
     /**
      * The start time of the schedule in UTC.
      * 
-     */
+    */
     public String getStart() {
         return this.start;
     }
     /**
      * The stop time of the schedule in UTC.
      * 
-     */
+    */
     public String getStop() {
         return this.stop;
     }
     /**
      * Bandwidth object related to ASE resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -203,7 +203,6 @@ public final class GetBandwidthScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBandwidthScheduleResult build() {
             return new GetBandwidthScheduleResult(days, id, name, rateInMbps, start, stop, systemData, type);
         }

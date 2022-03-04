@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionUrlMap {
-/**
- * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+    private GetRegionUrlMap() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionUrlMapArgs.Builder a);
+    }
+    private static GetRegionUrlMapArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionUrlMapArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionUrlMapResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetRegionUrlMapResult> invokeAsync(GetRegionUrlMapArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionUrlMap", TypeShape.of(GetRegionUrlMapResult.class), args == null ? GetRegionUrlMapArgs.Empty : args, Utilities.withVersion(options));
     }

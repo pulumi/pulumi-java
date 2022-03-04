@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.DatabaseAccountConnectionStringResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ListDatabaseAccountConnectionStringsResult {
     /**
      * An array that contains the connection strings for the Cosmos DB account.
      * 
-     */
+    */
     public List<DatabaseAccountConnectionStringResponse> getConnectionStrings() {
         return this.connectionStrings == null ? List.of() : this.connectionStrings;
     }
@@ -54,7 +54,6 @@ public final class ListDatabaseAccountConnectionStringsResult {
             this.connectionStrings = connectionStrings;
             return this;
         }
-
         public ListDatabaseAccountConnectionStringsResult build() {
             return new ListDatabaseAccountConnectionStringsResult(connectionStrings);
         }

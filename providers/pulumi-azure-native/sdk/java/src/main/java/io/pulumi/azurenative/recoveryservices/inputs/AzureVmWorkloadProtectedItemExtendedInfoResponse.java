@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends io.p
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-    private final @Nullable String oldestRecoveryPoint;
+      private final @Nullable String oldestRecoveryPoint;
 
     public Optional<String> getOldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
@@ -35,7 +35,7 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends io.p
      * 
      */
     @InputImport(name="policyState")
-    private final @Nullable String policyState;
+      private final @Nullable String policyState;
 
     public Optional<String> getPolicyState() {
         return this.policyState == null ? Optional.empty() : Optional.ofNullable(this.policyState);
@@ -46,7 +46,7 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends io.p
      * 
      */
     @InputImport(name="recoveryPointCount")
-    private final @Nullable Integer recoveryPointCount;
+      private final @Nullable Integer recoveryPointCount;
 
     public Optional<Integer> getRecoveryPointCount() {
         return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
@@ -105,7 +105,6 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends io.p
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public AzureVmWorkloadProtectedItemExtendedInfoResponse build() {
             return new AzureVmWorkloadProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount);
         }

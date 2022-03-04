@@ -5,8 +5,8 @@ package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.AutoscalingPolicyArgs;
 import io.pulumi.gcp.dataproc.inputs.AutoscalingPolicyState;
@@ -153,6 +153,37 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
         return this.workerConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AutoscalingPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.dataproc.AutoscalingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.dataproc.AutoscalingPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AutoscalingPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AutoscalingPolicy(String name) {
+        this(name, AutoscalingPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AutoscalingPolicy(String name, AutoscalingPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

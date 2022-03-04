@@ -6,21 +6,41 @@ package io.pulumi.azurenative.cache;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cache.inputs.GetPatchScheduleArgs;
 import io.pulumi.azurenative.cache.outputs.GetPatchScheduleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPatchSchedule {
-/**
- * Response to put/get patch schedules for Redis cache.
+    private GetPatchSchedule() {}
+    public interface BuilderApplicator {
+        public void apply(GetPatchScheduleArgs.Builder a);
+    }
+    private static GetPatchScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPatchScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response to put/get patch schedules for Redis cache.
  * API Version: 2020-06-01.
  * 
- *
- * Response to put/get patch schedules for Redis cache.
+     *
+     * Response to put/get patch schedules for Redis cache.
  * 
- */
+     */
+    public static CompletableFuture<GetPatchScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response to put/get patch schedules for Redis cache.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * Response to put/get patch schedules for Redis cache.
+     * 
+     */
     public static CompletableFuture<GetPatchScheduleResult> invokeAsync(GetPatchScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getPatchSchedule", TypeShape.of(GetPatchScheduleResult.class), args == null ? GetPatchScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

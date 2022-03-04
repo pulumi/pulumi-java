@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -71,14 +71,14 @@ public final class GetMECRoleResult {
     /**
      * Activation key of the MEC.
      * 
-     */
+    */
     public Optional<AsymmetricEncryptedSecretResponse> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -86,35 +86,35 @@ public final class GetMECRoleResult {
      * Role type.
      * Expected value is 'MEC'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Role status.
      * 
-     */
+    */
     public String getRoleStatus() {
         return this.roleStatus;
     }
     /**
      * Role configured on ASE resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -185,7 +185,6 @@ public final class GetMECRoleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMECRoleResult build() {
             return new GetMECRoleResult(connectionString, id, kind, name, roleStatus, systemData, type);
         }

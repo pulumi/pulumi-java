@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapDefaultRouteActionFaultInjectionPolicyAbort;
 import io.pulumi.gcp.compute.outputs.URLMapDefaultRouteActionFaultInjectionPolicyDelay;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicy {
      * The specification for how client requests are aborted as part of fault injection.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapDefaultRouteActionFaultInjectionPolicyAbort> getAbort() {
         return Optional.ofNullable(this.abort);
     }
@@ -45,7 +45,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicy {
      * The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapDefaultRouteActionFaultInjectionPolicyDelay> getDelay() {
         return Optional.ofNullable(this.delay);
     }
@@ -81,7 +81,6 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicy {
             this.delay = delay;
             return this;
         }
-
         public URLMapDefaultRouteActionFaultInjectionPolicy build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicy(abort, delay);
         }

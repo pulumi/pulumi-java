@@ -5,8 +5,8 @@ package io.pulumi.googlenative.policysimulator_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.policysimulator_v1beta1.OrganizationReplayArgs;
 import io.pulumi.googlenative.policysimulator_v1beta1.outputs.GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse;
@@ -80,6 +80,37 @@ public class OrganizationReplay extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OrganizationReplayArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.policysimulator_v1beta1.OrganizationReplayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.policysimulator_v1beta1.OrganizationReplayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public OrganizationReplay(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public OrganizationReplay(String name) {
+        this(name, OrganizationReplayArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OrganizationReplay(String name, OrganizationReplayArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class NetworkManagerDeploymentStatusResponse {
     /**
      * Commit Time.
      * 
-     */
+    */
     public Optional<String> getCommitTime() {
         return Optional.ofNullable(this.commitTime);
     }
     /**
      * List of configuration ids.
      * 
-     */
+    */
     public List<String> getConfigurationIds() {
         return this.configurationIds == null ? List.of() : this.configurationIds;
     }
     /**
      * Deployment Status.
      * 
-     */
+    */
     public Optional<String> getDeploymentStatus() {
         return Optional.ofNullable(this.deploymentStatus);
     }
     /**
      * Configuration Deployment Type.
      * 
-     */
+    */
     public Optional<String> getDeploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
      * Error Message.
      * 
-     */
+    */
     public Optional<String> getErrorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * Region Name.
      * 
-     */
+    */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
@@ -161,7 +161,6 @@ public final class NetworkManagerDeploymentStatusResponse {
             this.region = region;
             return this;
         }
-
         public NetworkManagerDeploymentStatusResponse build() {
             return new NetworkManagerDeploymentStatusResponse(commitTime, configurationIds, deploymentStatus, deploymentType, errorMessage, region);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DedicatedHostAllocatableVMResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DedicatedHostAvailableCapacityResponse {
     /**
      * The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.
      * 
-     */
+    */
     public List<DedicatedHostAllocatableVMResponse> getAllocatableVMs() {
         return this.allocatableVMs == null ? List.of() : this.allocatableVMs;
     }
@@ -54,7 +54,6 @@ public final class DedicatedHostAvailableCapacityResponse {
             this.allocatableVMs = allocatableVMs;
             return this;
         }
-
         public DedicatedHostAvailableCapacityResponse build() {
             return new DedicatedHostAvailableCapacityResponse(allocatableVMs);
         }

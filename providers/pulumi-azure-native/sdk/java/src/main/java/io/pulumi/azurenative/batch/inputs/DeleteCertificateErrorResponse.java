@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -35,7 +35,7 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="details")
-    private final @Nullable List<DeleteCertificateErrorResponse> details;
+      private final @Nullable List<DeleteCertificateErrorResponse> details;
 
     public List<DeleteCertificateErrorResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
@@ -46,7 +46,7 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -57,7 +57,7 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+      private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -126,7 +126,6 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
             this.target = target;
             return this;
         }
-
         public DeleteCertificateErrorResponse build() {
             return new DeleteCertificateErrorResponse(code, details, message, target);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iap_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetV1beta1IamPolicy {
-/**
- * Gets the access control policy for an Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
+    private GetV1beta1IamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetV1beta1IamPolicyArgs.Builder a);
+    }
+    private static GetV1beta1IamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetV1beta1IamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for an Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
  * 
- */
+     */
+    public static CompletableFuture<GetV1beta1IamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for an Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
+     * 
+     */
     public static CompletableFuture<GetV1beta1IamPolicyResult> invokeAsync(GetV1beta1IamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iap/v1beta1:getV1beta1IamPolicy", TypeShape.of(GetV1beta1IamPolicyResult.class), args == null ? GetV1beta1IamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

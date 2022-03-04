@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.DiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InitialReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMNicDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -80,7 +80,7 @@ public final class HyperVReplicaBaseReplicationDetailsResponse {
     /**
      * Initial replication details.
      * 
-     */
+    */
     public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
         return Optional.ofNullable(this.initialReplicationDetails);
     }
@@ -88,49 +88,49 @@ public final class HyperVReplicaBaseReplicationDetailsResponse {
      * Gets the Instance type.
      * Expected value is 'HyperVReplicaBaseReplicationDetails'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The Last replication time.
      * 
-     */
+    */
     public Optional<String> getLastReplicatedTime() {
         return Optional.ofNullable(this.lastReplicatedTime);
     }
     /**
      * VM disk details.
      * 
-     */
+    */
     public List<DiskDetailsResponse> getVMDiskDetails() {
         return this.vMDiskDetails == null ? List.of() : this.vMDiskDetails;
     }
     /**
      * The virtual machine Id.
      * 
-     */
+    */
     public Optional<String> getVmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
      * The PE Network details.
      * 
-     */
+    */
     public List<VMNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The protection state for the vm.
      * 
-     */
+    */
     public Optional<String> getVmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
     /**
      * The protection state description for the vm.
      * 
-     */
+    */
     public Optional<String> getVmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }
@@ -208,7 +208,6 @@ public final class HyperVReplicaBaseReplicationDetailsResponse {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
-
         public HyperVReplicaBaseReplicationDetailsResponse build() {
             return new HyperVReplicaBaseReplicationDetailsResponse(initialReplicationDetails, instanceType, lastReplicatedTime, vMDiskDetails, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetRestorePointCollectionArgs;
 import io.pulumi.azurenative.compute.outputs.GetRestorePointCollectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRestorePointCollection {
-/**
- * Create or update Restore Point collection parameters.
+    private GetRestorePointCollection() {}
+    public interface BuilderApplicator {
+        public void apply(GetRestorePointCollectionArgs.Builder a);
+    }
+    private static GetRestorePointCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRestorePointCollectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Create or update Restore Point collection parameters.
  * API Version: 2021-03-01.
  * 
- *
- * Create or update Restore Point collection parameters.
+     *
+     * Create or update Restore Point collection parameters.
  * 
- */
+     */
+    public static CompletableFuture<GetRestorePointCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Create or update Restore Point collection parameters.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Create or update Restore Point collection parameters.
+     * 
+     */
     public static CompletableFuture<GetRestorePointCollectionResult> invokeAsync(GetRestorePointCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getRestorePointCollection", TypeShape.of(GetRestorePointCollectionResult.class), args == null ? GetRestorePointCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

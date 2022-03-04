@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FhirServiceAcrConfigurationResponse {
     /**
      * The list of the Azure container registry login servers.
      * 
-     */
+    */
     public List<String> getLoginServers() {
         return this.loginServers == null ? List.of() : this.loginServers;
     }
@@ -54,7 +54,6 @@ public final class FhirServiceAcrConfigurationResponse {
             this.loginServers = loginServers;
             return this;
         }
-
         public FhirServiceAcrConfigurationResponse build() {
             return new FhirServiceAcrConfigurationResponse(loginServers);
         }

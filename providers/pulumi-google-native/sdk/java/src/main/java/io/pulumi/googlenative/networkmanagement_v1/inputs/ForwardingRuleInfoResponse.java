@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="matchedPortRange", required=true)
-    private final String matchedPortRange;
+      private final String matchedPortRange;
 
     public String getMatchedPortRange() {
         return this.matchedPortRange;
@@ -43,7 +43,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="matchedProtocol", required=true)
-    private final String matchedProtocol;
+      private final String matchedProtocol;
 
     public String getMatchedProtocol() {
         return this.matchedProtocol;
@@ -54,7 +54,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="networkUri", required=true)
-    private final String networkUri;
+      private final String networkUri;
 
     public String getNetworkUri() {
         return this.networkUri;
@@ -65,7 +65,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="target", required=true)
-    private final String target;
+      private final String target;
 
     public String getTarget() {
         return this.target;
@@ -76,7 +76,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -87,7 +87,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="vip", required=true)
-    private final String vip;
+      private final String vip;
 
     public String getVip() {
         return this.vip;
@@ -186,7 +186,6 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
             this.vip = Objects.requireNonNull(vip);
             return this;
         }
-
         public ForwardingRuleInfoResponse build() {
             return new ForwardingRuleInfoResponse(displayName, matchedPortRange, matchedProtocol, networkUri, target, uri, vip);
         }

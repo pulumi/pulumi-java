@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.CompositePathResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class IndexingPolicyResponse {
     /**
      * List of composite path list
      * 
-     */
+    */
     public List<List<CompositePathResponse>> getCompositeIndexes() {
         return this.compositeIndexes == null ? List.of() : this.compositeIndexes;
     }
@@ -54,7 +54,6 @@ public final class IndexingPolicyResponse {
             this.compositeIndexes = compositeIndexes;
             return this;
         }
-
         public IndexingPolicyResponse build() {
             return new IndexingPolicyResponse(compositeIndexes);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.UpgradeDistributionArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributions")
-    private final @Nullable Input<List<UpgradeDistributionArgs>> distributions;
+      private final @Nullable Input<List<UpgradeDistributionArgs>> distributions;
 
     public Input<List<UpgradeDistributionArgs>> getDistributions() {
         return this.distributions == null ? Input.empty() : this.distributions;
@@ -37,7 +37,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="package")
-    private final @Nullable Input<String> $package;
+      private final @Nullable Input<String> $package;
 
     public Input<String> get$package() {
         return this.$package == null ? Input.empty() : this.$package;
@@ -48,7 +48,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<VersionArgs> version;
+      private final @Nullable Input<VersionArgs> version;
 
     public Input<VersionArgs> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -122,7 +122,6 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public UpgradeNoteArgs build() {
             return new UpgradeNoteArgs(distributions, $package, version);
         }

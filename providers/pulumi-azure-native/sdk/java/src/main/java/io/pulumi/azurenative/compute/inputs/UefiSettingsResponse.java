@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class UefiSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secureBootEnabled")
-    private final @Nullable Boolean secureBootEnabled;
+      private final @Nullable Boolean secureBootEnabled;
 
     public Optional<Boolean> getSecureBootEnabled() {
         return this.secureBootEnabled == null ? Optional.empty() : Optional.ofNullable(this.secureBootEnabled);
@@ -34,7 +34,7 @@ public final class UefiSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vTpmEnabled")
-    private final @Nullable Boolean vTpmEnabled;
+      private final @Nullable Boolean vTpmEnabled;
 
     public Optional<Boolean> getVTpmEnabled() {
         return this.vTpmEnabled == null ? Optional.empty() : Optional.ofNullable(this.vTpmEnabled);
@@ -83,7 +83,6 @@ public final class UefiSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.vTpmEnabled = vTpmEnabled;
             return this;
         }
-
         public UefiSettingsResponse build() {
             return new UefiSettingsResponse(secureBootEnabled, vTpmEnabled);
         }

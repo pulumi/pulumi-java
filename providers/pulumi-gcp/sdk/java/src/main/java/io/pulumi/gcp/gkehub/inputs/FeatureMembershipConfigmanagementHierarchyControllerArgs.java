@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
      * 
      */
     @InputImport(name="enableHierarchicalResourceQuota")
-    private final @Nullable Input<Boolean> enableHierarchicalResourceQuota;
+      private final @Nullable Input<Boolean> enableHierarchicalResourceQuota;
 
     public Input<Boolean> getEnableHierarchicalResourceQuota() {
         return this.enableHierarchicalResourceQuota == null ? Input.empty() : this.enableHierarchicalResourceQuota;
@@ -30,7 +30,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
      * 
      */
     @InputImport(name="enablePodTreeLabels")
-    private final @Nullable Input<Boolean> enablePodTreeLabels;
+      private final @Nullable Input<Boolean> enablePodTreeLabels;
 
     public Input<Boolean> getEnablePodTreeLabels() {
         return this.enablePodTreeLabels == null ? Input.empty() : this.enablePodTreeLabels;
@@ -41,7 +41,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -115,7 +115,6 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public FeatureMembershipConfigmanagementHierarchyControllerArgs build() {
             return new FeatureMembershipConfigmanagementHierarchyControllerArgs(enableHierarchicalResourceQuota, enablePodTreeLabels, enabled);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class SuccessDetailResponse {
     /**
      * If a native process other than the app crashed.
      * 
-     */
+    */
     public Boolean getOtherNativeCrash() {
         return this.otherNativeCrash;
     }
@@ -52,7 +52,6 @@ public final class SuccessDetailResponse {
             this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
             return this;
         }
-
         public SuccessDetailResponse build() {
             return new SuccessDetailResponse(otherNativeCrash);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetWebAppHybridConnectionSlotArgs;
 import io.pulumi.azurenative.web.outputs.GetWebAppHybridConnectionSlotResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppHybridConnectionSlot {
-/**
- * Hybrid Connection contract. This is used to configure a Hybrid Connection.
+    private GetWebAppHybridConnectionSlot() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppHybridConnectionSlotArgs.Builder a);
+    }
+    private static GetWebAppHybridConnectionSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppHybridConnectionSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Hybrid Connection contract. This is used to configure a Hybrid Connection.
  * API Version: 2020-12-01.
  * 
- *
- * Hybrid Connection contract. This is used to configure a Hybrid Connection.
+     *
+     * Hybrid Connection contract. This is used to configure a Hybrid Connection.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppHybridConnectionSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Hybrid Connection contract. This is used to configure a Hybrid Connection.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Hybrid Connection contract. This is used to configure a Hybrid Connection.
+     * 
+     */
     public static CompletableFuture<GetWebAppHybridConnectionSlotResult> invokeAsync(GetWebAppHybridConnectionSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHybridConnectionSlot", TypeShape.of(GetWebAppHybridConnectionSlotResult.class), args == null ? GetWebAppHybridConnectionSlotArgs.Empty : args, Utilities.withVersion(options));
     }

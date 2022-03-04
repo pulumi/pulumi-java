@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the container network interface IP configuration resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Sub Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -118,7 +118,6 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContainerNetworkInterfaceIpConfigurationResponse build() {
             return new ContainerNetworkInterfaceIpConfigurationResponse(etag, name, provisioningState, type);
         }

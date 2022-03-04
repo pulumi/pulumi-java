@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucketAccessControl {
-/**
- * Returns the ACL entry for the specified entity on the specified bucket.
+    private GetBucketAccessControl() {}
+    public interface BuilderApplicator {
+        public void apply(GetBucketAccessControlArgs.Builder a);
+    }
+    private static GetBucketAccessControlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBucketAccessControlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the ACL entry for the specified entity on the specified bucket.
  * 
- */
+     */
+    public static CompletableFuture<GetBucketAccessControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the ACL entry for the specified entity on the specified bucket.
+     * 
+     */
     public static CompletableFuture<GetBucketAccessControlResult> invokeAsync(GetBucketAccessControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getBucketAccessControl", TypeShape.of(GetBucketAccessControlResult.class), args == null ? GetBucketAccessControlArgs.Empty : args, Utilities.withVersion(options));
     }

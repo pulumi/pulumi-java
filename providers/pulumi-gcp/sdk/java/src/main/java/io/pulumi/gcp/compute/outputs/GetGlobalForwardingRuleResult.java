@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetGlobalForwardingRuleMetadataFilter;
 import java.lang.String;
 import java.util.List;
@@ -74,7 +74,7 @@ public final class GetGlobalForwardingRuleResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -240,7 +240,6 @@ public final class GetGlobalForwardingRuleResult {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public GetGlobalForwardingRuleResult build() {
             return new GetGlobalForwardingRuleResult(description, id, ipAddress, ipProtocol, ipVersion, labelFingerprint, labels, loadBalancingScheme, metadataFilters, name, network, portRange, project, selfLink, target);
         }

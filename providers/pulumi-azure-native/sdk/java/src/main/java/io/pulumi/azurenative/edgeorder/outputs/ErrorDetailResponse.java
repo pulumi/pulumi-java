@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.ErrorAdditionalInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,35 +54,35 @@ public final class ErrorDetailResponse {
     /**
      * The error additional info.
      * 
-     */
+    */
     public List<ErrorAdditionalInfoResponse> getAdditionalInfo() {
         return this.additionalInfo;
     }
     /**
      * The error code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * The error details.
      * 
-     */
+    */
     public List<ErrorDetailResponse> getDetails() {
         return this.details;
     }
     /**
      * The error message.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * The error target.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }
@@ -139,7 +139,6 @@ public final class ErrorDetailResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ErrorDetailResponse build() {
             return new ErrorDetailResponse(additionalInfo, code, details, message, target);
         }

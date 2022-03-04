@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GetJobCredentialResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The credential user name.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -116,7 +116,6 @@ public final class GetJobCredentialResult {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GetJobCredentialResult build() {
             return new GetJobCredentialResult(id, name, type, username);
         }

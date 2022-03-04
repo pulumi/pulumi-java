@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devspaces.outputs;
 
 import io.pulumi.azurenative.devspaces.outputs.ControllerConnectionDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ListControllerConnectionDetailsResult {
     /**
      * List of Azure Dev Spaces Controller connection details.
      * 
-     */
+    */
     public List<ControllerConnectionDetailsResponse> getConnectionDetailsList() {
         return this.connectionDetailsList == null ? List.of() : this.connectionDetailsList;
     }
@@ -54,7 +54,6 @@ public final class ListControllerConnectionDetailsResult {
             this.connectionDetailsList = connectionDetailsList;
             return this;
         }
-
         public ListControllerConnectionDetailsResult build() {
             return new ListControllerConnectionDetailsResult(connectionDetailsList);
         }

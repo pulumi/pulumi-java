@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accessKey")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessKey() {
         return this.accessKey == null ? Input.empty() : this.accessKey;
@@ -44,7 +44,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<Object> accountName;
+      private final Input<Object> accountName;
 
     public Input<Object> getAccountName() {
         return this.accountName;
@@ -55,7 +55,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -66,7 +66,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="batchUri", required=true)
-    private final Input<Object> batchUri;
+      private final Input<Object> batchUri;
 
     public Input<Object> getBatchUri() {
         return this.batchUri;
@@ -77,7 +77,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -88,7 +88,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -99,7 +99,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -110,7 +110,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -121,7 +121,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -132,7 +132,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -143,7 +143,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="poolName", required=true)
-    private final Input<Object> poolName;
+      private final Input<Object> poolName;
 
     public Input<Object> getPoolName() {
         return this.poolName;
@@ -155,7 +155,7 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -364,7 +364,6 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureBatchLinkedServiceArgs build() {
             return new AzureBatchLinkedServiceArgs(accessKey, accountName, annotations, batchUri, connectVia, credential, description, encryptedCredential, linkedServiceName, parameters, poolName, type);
         }

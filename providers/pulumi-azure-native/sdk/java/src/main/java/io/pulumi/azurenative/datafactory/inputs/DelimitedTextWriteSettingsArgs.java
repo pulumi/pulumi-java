@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fileExtension", required=true)
-    private final Input<Object> fileExtension;
+      private final Input<Object> fileExtension;
 
     public Input<Object> getFileExtension() {
         return this.fileExtension;
@@ -35,7 +35,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fileNamePrefix")
-    private final @Nullable Input<Object> fileNamePrefix;
+      private final @Nullable Input<Object> fileNamePrefix;
 
     public Input<Object> getFileNamePrefix() {
         return this.fileNamePrefix == null ? Input.empty() : this.fileNamePrefix;
@@ -46,7 +46,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxRowsPerFile")
-    private final @Nullable Input<Object> maxRowsPerFile;
+      private final @Nullable Input<Object> maxRowsPerFile;
 
     public Input<Object> getMaxRowsPerFile() {
         return this.maxRowsPerFile == null ? Input.empty() : this.maxRowsPerFile;
@@ -57,7 +57,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="quoteAllText")
-    private final @Nullable Input<Object> quoteAllText;
+      private final @Nullable Input<Object> quoteAllText;
 
     public Input<Object> getQuoteAllText() {
         return this.quoteAllText == null ? Input.empty() : this.quoteAllText;
@@ -69,7 +69,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -173,7 +173,6 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DelimitedTextWriteSettingsArgs build() {
             return new DelimitedTextWriteSettingsArgs(fileExtension, fileNamePrefix, maxRowsPerFile, quoteAllText, type);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.inputs.GetSqlPoolWorkloadGroupArgs;
 import io.pulumi.azurenative.synapse.outputs.GetSqlPoolWorkloadGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlPoolWorkloadGroup {
-/**
- * Workload group operations for a sql pool
+    private GetSqlPoolWorkloadGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlPoolWorkloadGroupArgs.Builder a);
+    }
+    private static GetSqlPoolWorkloadGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlPoolWorkloadGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Workload group operations for a sql pool
  * API Version: 2021-03-01.
  * 
- *
- * Workload group operations for a sql pool
+     *
+     * Workload group operations for a sql pool
  * 
- */
+     */
+    public static CompletableFuture<GetSqlPoolWorkloadGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Workload group operations for a sql pool
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Workload group operations for a sql pool
+     * 
+     */
     public static CompletableFuture<GetSqlPoolWorkloadGroupResult> invokeAsync(GetSqlPoolWorkloadGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolWorkloadGroup", TypeShape.of(GetSqlPoolWorkloadGroupResult.class), args == null ? GetSqlPoolWorkloadGroupArgs.Empty : args, Utilities.withVersion(options));
     }

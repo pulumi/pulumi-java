@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageDiskSignatureExclusionOptionsArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageVolumeExclusionOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskSignatureOptions")
-    private final @Nullable Input<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
+      private final @Nullable Input<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
 
     public Input<List<InMageDiskSignatureExclusionOptionsArgs>> getDiskSignatureOptions() {
         return this.diskSignatureOptions == null ? Input.empty() : this.diskSignatureOptions;
@@ -36,7 +36,7 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="volumeOptions")
-    private final @Nullable Input<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
+      private final @Nullable Input<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
 
     public Input<List<InMageVolumeExclusionOptionsArgs>> getVolumeOptions() {
         return this.volumeOptions == null ? Input.empty() : this.volumeOptions;
@@ -95,7 +95,6 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
             this.volumeOptions = Input.ofNullable(volumeOptions);
             return this;
         }
-
         public InMageDiskExclusionInputArgs build() {
             return new InMageDiskExclusionInputArgs(diskSignatureOptions, volumeOptions);
         }

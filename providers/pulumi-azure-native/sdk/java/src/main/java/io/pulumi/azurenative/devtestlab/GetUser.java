@@ -6,21 +6,41 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devtestlab.inputs.GetUserArgs;
 import io.pulumi.azurenative.devtestlab.outputs.GetUserResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUser {
-/**
- * Profile of a lab user.
+    private GetUser() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserArgs.Builder a);
+    }
+    private static GetUserArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Profile of a lab user.
  * API Version: 2018-09-15.
  * 
- *
- * Profile of a lab user.
+     *
+     * Profile of a lab user.
  * 
- */
+     */
+    public static CompletableFuture<GetUserResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Profile of a lab user.
+     * API Version: 2018-09-15.
+     * 
+     *
+         * Profile of a lab user.
+     * 
+     */
     public static CompletableFuture<GetUserResult> invokeAsync(GetUserArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getUser", TypeShape.of(GetUserResult.class), args == null ? GetUserArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
     public static final GetInstanceNetworkInterfaceIpv6AccessConfig Empty = new GetInstanceNetworkInterfaceIpv6AccessConfig();
 
     @InputImport(name="externalIpv6", required=true)
-    private final String externalIpv6;
+      private final String externalIpv6;
 
     public String getExternalIpv6() {
         return this.externalIpv6;
     }
 
     @InputImport(name="externalIpv6PrefixLength", required=true)
-    private final String externalIpv6PrefixLength;
+      private final String externalIpv6PrefixLength;
 
     public String getExternalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength;
@@ -31,7 +31,7 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
      * 
      */
     @InputImport(name="networkTier", required=true)
-    private final String networkTier;
+      private final String networkTier;
 
     public String getNetworkTier() {
         return this.networkTier;
@@ -42,7 +42,7 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
      * 
      */
     @InputImport(name="publicPtrDomainName", required=true)
-    private final String publicPtrDomainName;
+      private final String publicPtrDomainName;
 
     public String getPublicPtrDomainName() {
         return this.publicPtrDomainName;
@@ -111,7 +111,6 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
         }
-
         public GetInstanceNetworkInterfaceIpv6AccessConfig build() {
             return new GetInstanceNetworkInterfaceIpv6AccessConfig(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);
         }

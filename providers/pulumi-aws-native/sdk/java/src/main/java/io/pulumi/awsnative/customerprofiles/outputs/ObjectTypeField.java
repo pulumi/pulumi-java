@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.ObjectTypeFieldContentType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class ObjectTypeField {
     /**
      * The content type of the field. Used for determining equality when searching.
      * 
-     */
+    */
     public Optional<ObjectTypeFieldContentType> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * A field of a ProfileObject. For example: _source.FirstName, where "_source" is a ProfileObjectType of a Zendesk user and "FirstName" is a field in that ObjectType.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -98,7 +98,6 @@ public final class ObjectTypeField {
             this.target = target;
             return this;
         }
-
         public ObjectTypeField build() {
             return new ObjectTypeField(contentType, source, target);
         }

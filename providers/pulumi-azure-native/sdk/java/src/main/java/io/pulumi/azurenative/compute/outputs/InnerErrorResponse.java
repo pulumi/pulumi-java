@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class InnerErrorResponse {
     /**
      * The internal error message or exception dump.
      * 
-     */
+    */
     public Optional<String> getErrordetail() {
         return Optional.ofNullable(this.errordetail);
     }
     /**
      * The exception type.
      * 
-     */
+    */
     public Optional<String> getExceptiontype() {
         return Optional.ofNullable(this.exceptiontype);
     }
@@ -76,7 +76,6 @@ public final class InnerErrorResponse {
             this.exceptiontype = exceptiontype;
             return this;
         }
-
         public InnerErrorResponse build() {
             return new InnerErrorResponse(errordetail, exceptiontype);
         }

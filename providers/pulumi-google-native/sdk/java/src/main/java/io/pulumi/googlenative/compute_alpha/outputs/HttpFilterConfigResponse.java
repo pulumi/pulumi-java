@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class HttpFilterConfigResponse {
     /**
      * The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl
      * 
-     */
+    */
     public String getConfig() {
         return this.config;
     }
     /**
      * The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct
      * 
-     */
+    */
     public String getConfigTypeUrl() {
         return this.configTypeUrl;
     }
     /**
      * Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm
      * 
-     */
+    */
     public String getFilterName() {
         return this.filterName;
     }
@@ -95,7 +95,6 @@ public final class HttpFilterConfigResponse {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
-
         public HttpFilterConfigResponse build() {
             return new HttpFilterConfigResponse(config, configTypeUrl, filterName);
         }

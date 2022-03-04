@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLRateBasedStatementAggregateKeyType;
 import io.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfiguration;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatement;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,28 +18,28 @@ public final class WebACLRateBasedStatement extends io.pulumi.resources.InvokeAr
     public static final WebACLRateBasedStatement Empty = new WebACLRateBasedStatement();
 
     @InputImport(name="aggregateKeyType", required=true)
-    private final WebACLRateBasedStatementAggregateKeyType aggregateKeyType;
+      private final WebACLRateBasedStatementAggregateKeyType aggregateKeyType;
 
     public WebACLRateBasedStatementAggregateKeyType getAggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @InputImport(name="forwardedIPConfig")
-    private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
+      private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
 
     public Optional<WebACLForwardedIPConfiguration> getForwardedIPConfig() {
         return this.forwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardedIPConfig);
     }
 
     @InputImport(name="limit", required=true)
-    private final Integer limit;
+      private final Integer limit;
 
     public Integer getLimit() {
         return this.limit;
     }
 
     @InputImport(name="scopeDownStatement")
-    private final @Nullable WebACLStatement scopeDownStatement;
+      private final @Nullable WebACLStatement scopeDownStatement;
 
     public Optional<WebACLStatement> getScopeDownStatement() {
         return this.scopeDownStatement == null ? Optional.empty() : Optional.ofNullable(this.scopeDownStatement);
@@ -108,7 +108,6 @@ public final class WebACLRateBasedStatement extends io.pulumi.resources.InvokeAr
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public WebACLRateBasedStatement build() {
             return new WebACLRateBasedStatement(aggregateKeyType, forwardedIPConfig, limit, scopeDownStatement);
         }

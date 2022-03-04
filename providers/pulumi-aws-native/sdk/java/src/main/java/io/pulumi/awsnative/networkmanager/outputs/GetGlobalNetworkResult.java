@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkmanager.outputs;
 
 import io.pulumi.awsnative.networkmanager.outputs.GlobalNetworkTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class GetGlobalNetworkResult {
     /**
      * The Amazon Resource Name (ARN) of the global network.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The description of the global network.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The ID of the global network.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The tags for the global network.
      * 
-     */
+    */
     public List<GlobalNetworkTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -120,7 +120,6 @@ public final class GetGlobalNetworkResult {
             this.tags = tags;
             return this;
         }
-
         public GetGlobalNetworkResult build() {
             return new GetGlobalNetworkResult(arn, description, id, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class SubscriptionStateOverrideActionResponse extends io.pulumi.res
     public static final SubscriptionStateOverrideActionResponse Empty = new SubscriptionStateOverrideActionResponse();
 
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
     }
 
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -69,7 +69,6 @@ public final class SubscriptionStateOverrideActionResponse extends io.pulumi.res
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public SubscriptionStateOverrideActionResponse build() {
             return new SubscriptionStateOverrideActionResponse(action, state);
         }

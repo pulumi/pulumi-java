@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.MonthlyRetentionScheduleArg
 import io.pulumi.azurenative.recoveryservices.inputs.WeeklyRetentionScheduleArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.YearlyRetentionScheduleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dailySchedule")
-    private final @Nullable Input<DailyRetentionScheduleArgs> dailySchedule;
+      private final @Nullable Input<DailyRetentionScheduleArgs> dailySchedule;
 
     public Input<DailyRetentionScheduleArgs> getDailySchedule() {
         return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
@@ -38,7 +38,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="monthlySchedule")
-    private final @Nullable Input<MonthlyRetentionScheduleArgs> monthlySchedule;
+      private final @Nullable Input<MonthlyRetentionScheduleArgs> monthlySchedule;
 
     public Input<MonthlyRetentionScheduleArgs> getMonthlySchedule() {
         return this.monthlySchedule == null ? Input.empty() : this.monthlySchedule;
@@ -50,7 +50,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="retentionPolicyType", required=true)
-    private final Input<String> retentionPolicyType;
+      private final Input<String> retentionPolicyType;
 
     public Input<String> getRetentionPolicyType() {
         return this.retentionPolicyType;
@@ -61,7 +61,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="weeklySchedule")
-    private final @Nullable Input<WeeklyRetentionScheduleArgs> weeklySchedule;
+      private final @Nullable Input<WeeklyRetentionScheduleArgs> weeklySchedule;
 
     public Input<WeeklyRetentionScheduleArgs> getWeeklySchedule() {
         return this.weeklySchedule == null ? Input.empty() : this.weeklySchedule;
@@ -72,7 +72,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="yearlySchedule")
-    private final @Nullable Input<YearlyRetentionScheduleArgs> yearlySchedule;
+      private final @Nullable Input<YearlyRetentionScheduleArgs> yearlySchedule;
 
     public Input<YearlyRetentionScheduleArgs> getYearlySchedule() {
         return this.yearlySchedule == null ? Input.empty() : this.yearlySchedule;
@@ -176,7 +176,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
             this.yearlySchedule = Input.ofNullable(yearlySchedule);
             return this;
         }
-
         public LongTermRetentionPolicyArgs build() {
             return new LongTermRetentionPolicyArgs(dailySchedule, monthlySchedule, retentionPolicyType, weeklySchedule, yearlySchedule);
         }

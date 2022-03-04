@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class NamespaceJunctionResponse {
     /**
      * Namespace path on a Cache for a Storage Target.
      * 
-     */
+    */
     public Optional<String> getNamespacePath() {
         return Optional.ofNullable(this.namespacePath);
     }
     /**
      * Name of the access policy applied to this junction.
      * 
-     */
+    */
     public Optional<String> getNfsAccessPolicy() {
         return Optional.ofNullable(this.nfsAccessPolicy);
     }
     /**
      * NFS export where targetPath exists.
      * 
-     */
+    */
     public Optional<String> getNfsExport() {
         return Optional.ofNullable(this.nfsExport);
     }
     /**
      * Path in Storage Target to which namespacePath points.
      * 
-     */
+    */
     public Optional<String> getTargetPath() {
         return Optional.ofNullable(this.targetPath);
     }
@@ -118,7 +118,6 @@ public final class NamespaceJunctionResponse {
             this.targetPath = targetPath;
             return this;
         }
-
         public NamespaceJunctionResponse build() {
             return new NamespaceJunctionResponse(namespacePath, nfsAccessPolicy, nfsExport, targetPath);
         }

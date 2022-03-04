@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DiagnosticResponse {
     /**
      * JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
      * 
-     */
+    */
     public String getField() {
         return this.field;
     }
     /**
      * Level to record this diagnostic.
      * 
-     */
+    */
     public String getLevel() {
         return this.level;
     }
@@ -74,7 +74,6 @@ public final class DiagnosticResponse {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public DiagnosticResponse build() {
             return new DiagnosticResponse(field, level);
         }

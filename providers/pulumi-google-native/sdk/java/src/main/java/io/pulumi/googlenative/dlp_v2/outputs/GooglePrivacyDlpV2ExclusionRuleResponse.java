@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DictionaryResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ExcludeInfoTypesResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RegexResponse;
@@ -48,28 +48,28 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse {
     /**
      * Dictionary which defines the rule.
      * 
-     */
+    */
     public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
         return this.dictionary;
     }
     /**
      * Set of infoTypes for which findings would affect this rule.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ExcludeInfoTypesResponse getExcludeInfoTypes() {
         return this.excludeInfoTypes;
     }
     /**
      * How the rule is applied, see MatchingType documentation for details.
      * 
-     */
+    */
     public String getMatchingType() {
         return this.matchingType;
     }
     /**
      * Regular expression which defines the rule.
      * 
-     */
+    */
     public GooglePrivacyDlpV2RegexResponse getRegex() {
         return this.regex;
     }
@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public GooglePrivacyDlpV2ExclusionRuleResponse build() {
             return new GooglePrivacyDlpV2ExclusionRuleResponse(dictionary, excludeInfoTypes, matchingType, regex);
         }

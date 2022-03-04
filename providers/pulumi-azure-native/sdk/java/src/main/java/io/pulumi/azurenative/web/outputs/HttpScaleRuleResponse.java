@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ScaleRuleAuthResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -35,14 +35,14 @@ public final class HttpScaleRuleResponse {
     /**
      * Authentication secrets for the custom scale rule.
      * 
-     */
+    */
     public List<ScaleRuleAuthResponse> getAuth() {
         return this.auth == null ? List.of() : this.auth;
     }
     /**
      * Metadata properties to describe http scale rule.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
@@ -78,7 +78,6 @@ public final class HttpScaleRuleResponse {
             this.metadata = metadata;
             return this;
         }
-
         public HttpScaleRuleResponse build() {
             return new HttpScaleRuleResponse(auth, metadata);
         }

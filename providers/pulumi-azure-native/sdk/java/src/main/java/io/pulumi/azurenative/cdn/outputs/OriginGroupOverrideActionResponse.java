@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.OriginGroupOverrideActionParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,14 +34,14 @@ public final class OriginGroupOverrideActionResponse {
      * The name of the action for the delivery rule.
      * Expected value is 'OriginGroupOverride'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
-     */
+    */
     public OriginGroupOverrideActionParametersResponse getParameters() {
         return this.parameters;
     }
@@ -77,7 +77,6 @@ public final class OriginGroupOverrideActionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public OriginGroupOverrideActionResponse build() {
             return new OriginGroupOverrideActionResponse(name, parameters);
         }

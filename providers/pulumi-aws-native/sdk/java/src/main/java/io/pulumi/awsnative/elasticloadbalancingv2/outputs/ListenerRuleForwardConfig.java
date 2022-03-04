@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleTargetGroupStickinessConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleTargetGroupTuple;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,7 +62,6 @@ public final class ListenerRuleForwardConfig {
             this.targetGroups = targetGroups;
             return this;
         }
-
         public ListenerRuleForwardConfig build() {
             return new ListenerRuleForwardConfig(targetGroupStickinessConfig, targetGroups);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class PrivateLinkServiceConnectionResponse {
     /**
      * List of group IDs.
      * 
-     */
+    */
     public List<String> getGroupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
     /**
      * Private link service connection name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Request message.
      * 
-     */
+    */
     public Optional<String> getRequestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -98,7 +98,6 @@ public final class PrivateLinkServiceConnectionResponse {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public PrivateLinkServiceConnectionResponse build() {
             return new PrivateLinkServiceConnectionResponse(groupIds, name, requestMessage);
         }

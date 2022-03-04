@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.search.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ListAdminKeyResult {
     /**
      * The primary admin API key of the search service.
      * 
-     */
+    */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * The secondary admin API key of the search service.
      * 
-     */
+    */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }
@@ -74,7 +74,6 @@ public final class ListAdminKeyResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListAdminKeyResult build() {
             return new ListAdminKeyResult(primaryKey, secondaryKey);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.AzureMachineLearningWebServiceInputColumnResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class AzureMachineLearningWebServiceInputsResponse {
     /**
      * A list of input columns for the Azure Machine Learning web service endpoint.
      * 
-     */
+    */
     public List<AzureMachineLearningWebServiceInputColumnResponse> getColumnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
     /**
      * The name of the input. This is the name provided while authoring the endpoint.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -78,7 +78,6 @@ public final class AzureMachineLearningWebServiceInputsResponse {
             this.name = name;
             return this;
         }
-
         public AzureMachineLearningWebServiceInputsResponse build() {
             return new AzureMachineLearningWebServiceInputsResponse(columnNames, name);
         }

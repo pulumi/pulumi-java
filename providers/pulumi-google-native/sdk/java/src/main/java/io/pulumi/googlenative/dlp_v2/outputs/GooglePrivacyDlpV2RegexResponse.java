@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2RegexResponse {
     /**
      * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
      * 
-     */
+    */
     public List<Integer> getGroupIndexes() {
         return this.groupIndexes;
     }
     /**
      * Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
      * 
-     */
+    */
     public String getPattern() {
         return this.pattern;
     }
@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2RegexResponse {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public GooglePrivacyDlpV2RegexResponse build() {
             return new GooglePrivacyDlpV2RegexResponse(groupIndexes, pattern);
         }

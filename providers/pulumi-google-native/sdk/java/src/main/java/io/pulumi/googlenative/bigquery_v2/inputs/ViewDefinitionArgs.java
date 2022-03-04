@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.UserDefinedFunctionResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -33,7 +33,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useExplicitColumnNames")
-    private final @Nullable Input<Boolean> useExplicitColumnNames;
+      private final @Nullable Input<Boolean> useExplicitColumnNames;
 
     public Input<Boolean> getUseExplicitColumnNames() {
         return this.useExplicitColumnNames == null ? Input.empty() : this.useExplicitColumnNames;
@@ -44,7 +44,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useLegacySql")
-    private final @Nullable Input<Boolean> useLegacySql;
+      private final @Nullable Input<Boolean> useLegacySql;
 
     public Input<Boolean> getUseLegacySql() {
         return this.useLegacySql == null ? Input.empty() : this.useLegacySql;
@@ -55,7 +55,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userDefinedFunctionResources")
-    private final @Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
+      private final @Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 
     public Input<List<UserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {
         return this.userDefinedFunctionResources == null ? Input.empty() : this.userDefinedFunctionResources;
@@ -144,7 +144,6 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.userDefinedFunctionResources = Input.ofNullable(userDefinedFunctionResources);
             return this;
         }
-
         public ViewDefinitionArgs build() {
             return new ViewDefinitionArgs(query, useExplicitColumnNames, useLegacySql, userDefinedFunctionResources);
         }

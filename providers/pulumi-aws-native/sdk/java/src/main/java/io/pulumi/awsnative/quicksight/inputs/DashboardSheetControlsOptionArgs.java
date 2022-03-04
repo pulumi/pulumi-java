@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DashboardUIState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
     public static final DashboardSheetControlsOptionArgs Empty = new DashboardSheetControlsOptionArgs();
 
     @InputImport(name="visibilityState")
-    private final @Nullable Input<DashboardUIState> visibilityState;
+      private final @Nullable Input<DashboardUIState> visibilityState;
 
     public Input<DashboardUIState> getVisibilityState() {
         return this.visibilityState == null ? Input.empty() : this.visibilityState;
@@ -62,7 +62,6 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
             this.visibilityState = Input.ofNullable(visibilityState);
             return this;
         }
-
         public DashboardSheetControlsOptionArgs build() {
             return new DashboardSheetControlsOptionArgs(visibilityState);
         }

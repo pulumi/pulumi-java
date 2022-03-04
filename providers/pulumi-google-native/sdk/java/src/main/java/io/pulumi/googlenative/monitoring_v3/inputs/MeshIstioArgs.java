@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="meshUid")
-    private final @Nullable Input<String> meshUid;
+      private final @Nullable Input<String> meshUid;
 
     public Input<String> getMeshUid() {
         return this.meshUid == null ? Input.empty() : this.meshUid;
@@ -34,7 +34,7 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -45,7 +45,7 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceNamespace")
-    private final @Nullable Input<String> serviceNamespace;
+      private final @Nullable Input<String> serviceNamespace;
 
     public Input<String> getServiceNamespace() {
         return this.serviceNamespace == null ? Input.empty() : this.serviceNamespace;
@@ -119,7 +119,6 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceNamespace = Input.ofNullable(serviceNamespace);
             return this;
         }
-
         public MeshIstioArgs build() {
             return new MeshIstioArgs(meshUid, serviceName, serviceNamespace);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceCrowdingConfigArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceScoringConfigArgs;
@@ -25,7 +25,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crowdingConfig")
-    private final @Nullable Input<SourceCrowdingConfigArgs> crowdingConfig;
+      private final @Nullable Input<SourceCrowdingConfigArgs> crowdingConfig;
 
     public Input<SourceCrowdingConfigArgs> getCrowdingConfig() {
         return this.crowdingConfig == null ? Input.empty() : this.crowdingConfig;
@@ -36,7 +36,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scoringConfig")
-    private final @Nullable Input<SourceScoringConfigArgs> scoringConfig;
+      private final @Nullable Input<SourceScoringConfigArgs> scoringConfig;
 
     public Input<SourceScoringConfigArgs> getScoringConfig() {
         return this.scoringConfig == null ? Input.empty() : this.scoringConfig;
@@ -47,7 +47,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<SourceArgs> source;
+      private final @Nullable Input<SourceArgs> source;
 
     public Input<SourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -121,7 +121,6 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public SourceConfigArgs build() {
             return new SourceConfigArgs(crowdingConfig, scoringConfig, source);
         }

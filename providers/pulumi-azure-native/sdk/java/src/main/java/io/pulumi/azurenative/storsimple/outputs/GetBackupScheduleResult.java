@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.ScheduleRecurrenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -91,70 +91,70 @@ public final class GetBackupScheduleResult {
     /**
      * The type of backup which needs to be taken.
      * 
-     */
+    */
     public String getBackupType() {
         return this.backupType;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The last successful backup run which was triggered for the schedule.
      * 
-     */
+    */
     public String getLastSuccessfulRun() {
         return this.lastSuccessfulRun;
     }
     /**
      * The name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The number of backups to be retained.
      * 
-     */
+    */
     public Double getRetentionCount() {
         return this.retentionCount;
     }
     /**
      * The schedule recurrence.
      * 
-     */
+    */
     public ScheduleRecurrenceResponse getScheduleRecurrence() {
         return this.scheduleRecurrence;
     }
     /**
      * The schedule status.
      * 
-     */
+    */
     public String getScheduleStatus() {
         return this.scheduleStatus;
     }
     /**
      * The start time of the schedule.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -246,7 +246,6 @@ public final class GetBackupScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBackupScheduleResult build() {
             return new GetBackupScheduleResult(backupType, id, kind, lastSuccessfulRun, name, retentionCount, scheduleRecurrence, scheduleStatus, startTime, type);
         }

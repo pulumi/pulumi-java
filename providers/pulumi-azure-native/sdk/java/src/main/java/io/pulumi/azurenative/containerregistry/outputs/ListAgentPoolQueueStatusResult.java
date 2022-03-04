@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ListAgentPoolQueueStatusResult {
     /**
      * The number of pending runs in the queue
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
@@ -54,7 +54,6 @@ public final class ListAgentPoolQueueStatusResult {
             this.count = count;
             return this;
         }
-
         public ListAgentPoolQueueStatusResult build() {
             return new ListAgentPoolQueueStatusResult(count);
         }

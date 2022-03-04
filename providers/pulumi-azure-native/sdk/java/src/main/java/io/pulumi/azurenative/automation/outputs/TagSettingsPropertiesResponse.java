@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -35,14 +35,14 @@ public final class TagSettingsPropertiesResponse {
     /**
      * Filter VMs by Any or All specified tags.
      * 
-     */
+    */
     public Optional<String> getFilterOperator() {
         return Optional.ofNullable(this.filterOperator);
     }
     /**
      * Dictionary of tags with its list of values.
      * 
-     */
+    */
     public Map<String,List<String>> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
@@ -78,7 +78,6 @@ public final class TagSettingsPropertiesResponse {
             this.tags = tags;
             return this;
         }
-
         public TagSettingsPropertiesResponse build() {
             return new TagSettingsPropertiesResponse(filterOperator, tags);
         }

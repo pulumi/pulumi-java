@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.JobCopyArgs;
 import io.pulumi.gcp.bigquery.inputs.JobExtractArgs;
 import io.pulumi.gcp.bigquery.inputs.JobLoadArgs;
@@ -25,7 +25,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copy")
-    private final @Nullable Input<JobCopyArgs> copy;
+      private final @Nullable Input<JobCopyArgs> copy;
 
     public Input<JobCopyArgs> getCopy() {
         return this.copy == null ? Input.empty() : this.copy;
@@ -37,7 +37,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extract")
-    private final @Nullable Input<JobExtractArgs> extract;
+      private final @Nullable Input<JobExtractArgs> extract;
 
     public Input<JobExtractArgs> getExtract() {
         return this.extract == null ? Input.empty() : this.extract;
@@ -48,7 +48,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobId", required=true)
-    private final Input<String> jobId;
+      private final Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId;
@@ -59,7 +59,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobTimeoutMs")
-    private final @Nullable Input<String> jobTimeoutMs;
+      private final @Nullable Input<String> jobTimeoutMs;
 
     public Input<String> getJobTimeoutMs() {
         return this.jobTimeoutMs == null ? Input.empty() : this.jobTimeoutMs;
@@ -70,7 +70,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -82,7 +82,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="load")
-    private final @Nullable Input<JobLoadArgs> load;
+      private final @Nullable Input<JobLoadArgs> load;
 
     public Input<JobLoadArgs> getLoad() {
         return this.load == null ? Input.empty() : this.load;
@@ -93,7 +93,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -105,7 +105,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -117,7 +117,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<JobQueryArgs> query;
+      private final @Nullable Input<JobQueryArgs> query;
 
     public Input<JobQueryArgs> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -281,7 +281,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.query = Input.ofNullable(query);
             return this;
         }
-
         public JobArgs build() {
             return new JobArgs(copy, extract, jobId, jobTimeoutMs, labels, load, location, project, query);
         }

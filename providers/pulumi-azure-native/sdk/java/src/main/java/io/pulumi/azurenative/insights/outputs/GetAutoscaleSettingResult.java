@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.AutoscaleNotificationResponse;
 import io.pulumi.azurenative.insights.outputs.AutoscaleProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -94,70 +94,70 @@ public final class GetAutoscaleSettingResult {
     /**
      * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * the collection of notifications.
      * 
-     */
+    */
     public List<AutoscaleNotificationResponse> getNotifications() {
         return this.notifications == null ? List.of() : this.notifications;
     }
     /**
      * the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
      * 
-     */
+    */
     public List<AutoscaleProfileResponse> getProfiles() {
         return this.profiles;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * the location of the resource that the autoscale setting should be added to.
      * 
-     */
+    */
     public Optional<String> getTargetResourceLocation() {
         return Optional.ofNullable(this.targetResourceLocation);
     }
     /**
      * the resource identifier of the resource that the autoscale setting should be added to.
      * 
-     */
+    */
     public Optional<String> getTargetResourceUri() {
         return Optional.ofNullable(this.targetResourceUri);
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -249,7 +249,6 @@ public final class GetAutoscaleSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutoscaleSettingResult build() {
             return new GetAutoscaleSettingResult(enabled, id, location, name, notifications, profiles, tags, targetResourceLocation, targetResourceUri, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class GetPublicTypeVersionResult {
     /**
      * The Amazon Resource Number (ARN) assigned to the public extension upon publication
      * 
-     */
+    */
     public Optional<String> getPublicTypeArn() {
         return Optional.ofNullable(this.publicTypeArn);
     }
     /**
      * The publisher id assigned by CloudFormation for publishing in this region.
      * 
-     */
+    */
     public Optional<String> getPublisherId() {
         return Optional.ofNullable(this.publisherId);
     }
     /**
      * The Amazon Resource Number (ARN) of the extension with the versionId.
      * 
-     */
+    */
     public Optional<String> getTypeVersionArn() {
         return Optional.ofNullable(this.typeVersionArn);
     }
@@ -97,7 +97,6 @@ public final class GetPublicTypeVersionResult {
             this.typeVersionArn = typeVersionArn;
             return this;
         }
-
         public GetPublicTypeVersionResult build() {
             return new GetPublicTypeVersionResult(publicTypeArn, publisherId, typeVersionArn);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.EnvironmentSizeResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SizeConfigurationPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="environmentSizes")
-    private final @Nullable List<EnvironmentSizeResponse> environmentSizes;
+      private final @Nullable List<EnvironmentSizeResponse> environmentSizes;
 
     public List<EnvironmentSizeResponse> getEnvironmentSizes() {
         return this.environmentSizes == null ? List.of() : this.environmentSizes;
@@ -62,7 +62,6 @@ public final class SizeConfigurationPropertiesResponse extends io.pulumi.resourc
             this.environmentSizes = environmentSizes;
             return this;
         }
-
         public SizeConfigurationPropertiesResponse build() {
             return new SizeConfigurationPropertiesResponse(environmentSizes);
         }

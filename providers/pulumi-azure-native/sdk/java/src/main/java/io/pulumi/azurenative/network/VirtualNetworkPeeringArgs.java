@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkBgpCommunitiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowForwardedTraffic")
-    private final @Nullable Input<Boolean> allowForwardedTraffic;
+      private final @Nullable Input<Boolean> allowForwardedTraffic;
 
     public Input<Boolean> getAllowForwardedTraffic() {
         return this.allowForwardedTraffic == null ? Input.empty() : this.allowForwardedTraffic;
@@ -36,7 +36,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowGatewayTransit")
-    private final @Nullable Input<Boolean> allowGatewayTransit;
+      private final @Nullable Input<Boolean> allowGatewayTransit;
 
     public Input<Boolean> getAllowGatewayTransit() {
         return this.allowGatewayTransit == null ? Input.empty() : this.allowGatewayTransit;
@@ -47,7 +47,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowVirtualNetworkAccess")
-    private final @Nullable Input<Boolean> allowVirtualNetworkAccess;
+      private final @Nullable Input<Boolean> allowVirtualNetworkAccess;
 
     public Input<Boolean> getAllowVirtualNetworkAccess() {
         return this.allowVirtualNetworkAccess == null ? Input.empty() : this.allowVirtualNetworkAccess;
@@ -58,7 +58,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="doNotVerifyRemoteGateways")
-    private final @Nullable Input<Boolean> doNotVerifyRemoteGateways;
+      private final @Nullable Input<Boolean> doNotVerifyRemoteGateways;
 
     public Input<Boolean> getDoNotVerifyRemoteGateways() {
         return this.doNotVerifyRemoteGateways == null ? Input.empty() : this.doNotVerifyRemoteGateways;
@@ -69,7 +69,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -80,7 +80,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -91,7 +91,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="peeringState")
-    private final @Nullable Input<Either<String,VirtualNetworkPeeringState>> peeringState;
+      private final @Nullable Input<Either<String,VirtualNetworkPeeringState>> peeringState;
 
     public Input<Either<String,VirtualNetworkPeeringState>> getPeeringState() {
         return this.peeringState == null ? Input.empty() : this.peeringState;
@@ -102,7 +102,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="remoteAddressSpace")
-    private final @Nullable Input<AddressSpaceArgs> remoteAddressSpace;
+      private final @Nullable Input<AddressSpaceArgs> remoteAddressSpace;
 
     public Input<AddressSpaceArgs> getRemoteAddressSpace() {
         return this.remoteAddressSpace == null ? Input.empty() : this.remoteAddressSpace;
@@ -113,7 +113,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="remoteBgpCommunities")
-    private final @Nullable Input<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities;
+      private final @Nullable Input<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities;
 
     public Input<VirtualNetworkBgpCommunitiesArgs> getRemoteBgpCommunities() {
         return this.remoteBgpCommunities == null ? Input.empty() : this.remoteBgpCommunities;
@@ -124,7 +124,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="remoteVirtualNetwork")
-    private final @Nullable Input<SubResourceArgs> remoteVirtualNetwork;
+      private final @Nullable Input<SubResourceArgs> remoteVirtualNetwork;
 
     public Input<SubResourceArgs> getRemoteVirtualNetwork() {
         return this.remoteVirtualNetwork == null ? Input.empty() : this.remoteVirtualNetwork;
@@ -135,7 +135,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -146,7 +146,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -157,7 +157,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="useRemoteGateways")
-    private final @Nullable Input<Boolean> useRemoteGateways;
+      private final @Nullable Input<Boolean> useRemoteGateways;
 
     public Input<Boolean> getUseRemoteGateways() {
         return this.useRemoteGateways == null ? Input.empty() : this.useRemoteGateways;
@@ -168,7 +168,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="virtualNetworkName", required=true)
-    private final Input<String> virtualNetworkName;
+      private final Input<String> virtualNetworkName;
 
     public Input<String> getVirtualNetworkName() {
         return this.virtualNetworkName;
@@ -179,7 +179,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="virtualNetworkPeeringName")
-    private final @Nullable Input<String> virtualNetworkPeeringName;
+      private final @Nullable Input<String> virtualNetworkPeeringName;
 
     public Input<String> getVirtualNetworkPeeringName() {
         return this.virtualNetworkPeeringName == null ? Input.empty() : this.virtualNetworkPeeringName;
@@ -433,7 +433,6 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             this.virtualNetworkPeeringName = Input.ofNullable(virtualNetworkPeeringName);
             return this;
         }
-
         public VirtualNetworkPeeringArgs build() {
             return new VirtualNetworkPeeringArgs(allowForwardedTraffic, allowGatewayTransit, allowVirtualNetworkAccess, doNotVerifyRemoteGateways, id, name, peeringState, remoteAddressSpace, remoteBgpCommunities, remoteVirtualNetwork, resourceGroupName, type, useRemoteGateways, virtualNetworkName, virtualNetworkPeeringName);
         }

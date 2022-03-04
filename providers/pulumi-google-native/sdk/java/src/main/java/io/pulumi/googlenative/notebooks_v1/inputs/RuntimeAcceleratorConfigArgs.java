@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.RuntimeAcceleratorConfigType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="coreCount")
-    private final @Nullable Input<String> coreCount;
+      private final @Nullable Input<String> coreCount;
 
     public Input<String> getCoreCount() {
         return this.coreCount == null ? Input.empty() : this.coreCount;
@@ -35,7 +35,7 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<RuntimeAcceleratorConfigType> type;
+      private final @Nullable Input<RuntimeAcceleratorConfigType> type;
 
     public Input<RuntimeAcceleratorConfigType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public RuntimeAcceleratorConfigArgs build() {
             return new RuntimeAcceleratorConfigArgs(coreCount, type);
         }

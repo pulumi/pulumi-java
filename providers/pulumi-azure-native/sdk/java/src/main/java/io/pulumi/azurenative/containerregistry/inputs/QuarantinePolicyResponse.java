@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class QuarantinePolicyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -61,7 +61,6 @@ public final class QuarantinePolicyResponse extends io.pulumi.resources.InvokeAr
             this.status = status;
             return this;
         }
-
         public QuarantinePolicyResponse build() {
             return new QuarantinePolicyResponse(status);
         }

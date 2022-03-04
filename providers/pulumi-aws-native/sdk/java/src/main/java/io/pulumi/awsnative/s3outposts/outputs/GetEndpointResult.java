@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3outposts.outputs;
 
 import io.pulumi.awsnative.s3outposts.enums.EndpointStatus;
 import io.pulumi.awsnative.s3outposts.outputs.EndpointNetworkInterface;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,35 +60,35 @@ public final class GetEndpointResult {
     /**
      * The Amazon Resource Name (ARN) of the endpoint.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The VPC CIDR committed by this endpoint.
      * 
-     */
+    */
     public Optional<String> getCidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
     /**
      * The time the endpoint was created.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The ID of the endpoint.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The network interfaces of the endpoint.
      * 
-     */
+    */
     public List<EndpointNetworkInterface> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
@@ -155,7 +155,6 @@ public final class GetEndpointResult {
             this.status = status;
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(arn, cidrBlock, creationTime, id, networkInterfaces, status);
         }

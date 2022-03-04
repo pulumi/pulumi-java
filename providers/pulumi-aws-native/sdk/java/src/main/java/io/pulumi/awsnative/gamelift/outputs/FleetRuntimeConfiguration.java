@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.outputs;
 
 import io.pulumi.awsnative.gamelift.outputs.FleetServerProcess;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class FleetRuntimeConfiguration {
     /**
      * The maximum amount of time (in seconds) that a game session can remain in status ACTIVATING. If the game session is not active before the timeout, activation is terminated and the game session status is changed to TERMINATED.
      * 
-     */
+    */
     public Optional<Integer> getGameSessionActivationTimeoutSeconds() {
         return Optional.ofNullable(this.gameSessionActivationTimeoutSeconds);
     }
     /**
      * The maximum number of game sessions with status ACTIVATING to allow on an instance simultaneously. This setting limits the amount of instance resources that can be used for new game activations at any one time.
      * 
-     */
+    */
     public Optional<Integer> getMaxConcurrentGameSessionActivations() {
         return Optional.ofNullable(this.maxConcurrentGameSessionActivations);
     }
     /**
      * A collection of server process configurations that describe which server processes to run on each instance in a fleet.
      * 
-     */
+    */
     public List<FleetServerProcess> getServerProcesses() {
         return this.serverProcesses == null ? List.of() : this.serverProcesses;
     }
@@ -99,7 +99,6 @@ public final class FleetRuntimeConfiguration {
             this.serverProcesses = serverProcesses;
             return this;
         }
-
         public FleetRuntimeConfiguration build() {
             return new FleetRuntimeConfiguration(gameSessionActivationTimeoutSeconds, maxConcurrentGameSessionActivations, serverProcesses);
         }

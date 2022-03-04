@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class TimeSeriesIdPropertyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class TimeSeriesIdPropertyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -83,7 +83,6 @@ public final class TimeSeriesIdPropertyResponse extends io.pulumi.resources.Invo
             this.type = type;
             return this;
         }
-
         public TimeSeriesIdPropertyResponse build() {
             return new TimeSeriesIdPropertyResponse(name, type);
         }

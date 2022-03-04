@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -49,21 +49,21 @@ public final class FileServerWriteSettingsResponse {
     /**
      * The type of copy behavior for copy sink.
      * 
-     */
+    */
     public Optional<Object> getCopyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -71,7 +71,7 @@ public final class FileServerWriteSettingsResponse {
      * The write setting type.
      * Expected value is 'FileServerWriteSettings'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -121,7 +121,6 @@ public final class FileServerWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FileServerWriteSettingsResponse build() {
             return new FileServerWriteSettingsResponse(copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
         }

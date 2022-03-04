@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AppInsightsCredentialsResponse {
     /**
      * The AppInsights application ID.
      * 
-     */
+    */
     public Optional<String> getAppId() {
         return Optional.ofNullable(this.appId);
     }
     /**
      * The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
      * 
-     */
+    */
     public Optional<String> getInstrumentationKey() {
         return Optional.ofNullable(this.instrumentationKey);
     }
@@ -76,7 +76,6 @@ public final class AppInsightsCredentialsResponse {
             this.instrumentationKey = instrumentationKey;
             return this;
         }
-
         public AppInsightsCredentialsResponse build() {
             return new AppInsightsCredentialsResponse(appId, instrumentationKey);
         }

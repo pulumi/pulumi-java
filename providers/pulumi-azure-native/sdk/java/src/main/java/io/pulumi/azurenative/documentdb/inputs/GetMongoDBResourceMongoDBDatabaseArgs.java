@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetMongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetMongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetMongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetMongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resou
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetMongoDBResourceMongoDBDatabaseArgs build() {
             return new GetMongoDBResourceMongoDBDatabaseArgs(accountName, databaseName, resourceGroupName);
         }

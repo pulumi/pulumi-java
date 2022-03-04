@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class HostNameSslStateResponse {
     /**
      * Indicates whether the hostname is a standard or repository hostname.
      * 
-     */
+    */
     public Optional<String> getHostType() {
         return Optional.ofNullable(this.hostType);
     }
     /**
      * Hostname.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * SSL type.
      * 
-     */
+    */
     public Optional<String> getSslState() {
         return Optional.ofNullable(this.sslState);
     }
     /**
      * SSL certificate thumbprint.
      * 
-     */
+    */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
      * Set to <code>true</code> to update existing hostname.
      * 
-     */
+    */
     public Optional<Boolean> getToUpdate() {
         return Optional.ofNullable(this.toUpdate);
     }
     /**
      * Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
-     */
+    */
     public Optional<String> getVirtualIP() {
         return Optional.ofNullable(this.virtualIP);
     }
@@ -161,7 +161,6 @@ public final class HostNameSslStateResponse {
             this.virtualIP = virtualIP;
             return this;
         }
-
         public HostNameSslStateResponse build() {
             return new HostNameSslStateResponse(hostType, name, sslState, thumbprint, toUpdate, virtualIP);
         }

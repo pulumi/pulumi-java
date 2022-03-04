@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class NodePoolNodeConfigGcfsConfigGetArgs extends io.pulumi.resourc
     public static final NodePoolNodeConfigGcfsConfigGetArgs Empty = new NodePoolNodeConfigGcfsConfigGetArgs();
 
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -57,7 +57,6 @@ public final class NodePoolNodeConfigGcfsConfigGetArgs extends io.pulumi.resourc
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public NodePoolNodeConfigGcfsConfigGetArgs build() {
             return new NodePoolNodeConfigGcfsConfigGetArgs(enabled);
         }

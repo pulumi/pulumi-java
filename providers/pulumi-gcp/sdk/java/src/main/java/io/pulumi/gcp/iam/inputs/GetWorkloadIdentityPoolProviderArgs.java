@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetWorkloadIdentityPoolProviderArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -32,7 +32,7 @@ public final class GetWorkloadIdentityPoolProviderArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workloadIdentityPoolId", required=true)
-    private final String workloadIdentityPoolId;
+      private final String workloadIdentityPoolId;
 
     public String getWorkloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
@@ -44,7 +44,7 @@ public final class GetWorkloadIdentityPoolProviderArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workloadIdentityPoolProviderId", required=true)
-    private final String workloadIdentityPoolProviderId;
+      private final String workloadIdentityPoolProviderId;
 
     public String getWorkloadIdentityPoolProviderId() {
         return this.workloadIdentityPoolProviderId;
@@ -103,7 +103,6 @@ public final class GetWorkloadIdentityPoolProviderArgs extends io.pulumi.resourc
             this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId);
             return this;
         }
-
         public GetWorkloadIdentityPoolProviderArgs build() {
             return new GetWorkloadIdentityPoolProviderArgs(project, workloadIdentityPoolId, workloadIdentityPoolProviderId);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.firebase_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebase_v1beta1.IosAppArgs;
 import java.lang.String;
@@ -119,6 +119,37 @@ public class IosApp extends io.pulumi.resources.CustomResource {
         return this.teamId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable IosAppArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.firebase_v1beta1.IosAppArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.firebase_v1beta1.IosAppArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public IosApp(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public IosApp(String name) {
+        this(name, IosAppArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public IosApp(String name, @Nullable IosAppArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

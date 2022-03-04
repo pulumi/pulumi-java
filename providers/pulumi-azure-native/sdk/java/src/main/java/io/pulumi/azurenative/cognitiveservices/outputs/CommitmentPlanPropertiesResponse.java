@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.CommitmentPeriodResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class CommitmentPlanPropertiesResponse {
     /**
      * AutoRenew commitment plan.
      * 
-     */
+    */
     public Optional<Boolean> getAutoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
     /**
      * Cognitive Services account commitment period.
      * 
-     */
+    */
     public Optional<CommitmentPeriodResponse> getCurrent() {
         return Optional.ofNullable(this.current);
     }
     /**
      * Account hosting model.
      * 
-     */
+    */
     public Optional<String> getHostingModel() {
         return Optional.ofNullable(this.hostingModel);
     }
     /**
      * Cognitive Services account commitment period.
      * 
-     */
+    */
     public CommitmentPeriodResponse getLast() {
         return this.last;
     }
     /**
      * Cognitive Services account commitment period.
      * 
-     */
+    */
     public Optional<CommitmentPeriodResponse> getNext() {
         return Optional.ofNullable(this.next);
     }
     /**
      * Commitment plan type.
      * 
-     */
+    */
     public Optional<String> getPlanType() {
         return Optional.ofNullable(this.planType);
     }
@@ -162,7 +162,6 @@ public final class CommitmentPlanPropertiesResponse {
             this.planType = planType;
             return this;
         }
-
         public CommitmentPlanPropertiesResponse build() {
             return new CommitmentPlanPropertiesResponse(autoRenew, current, hostingModel, last, next, planType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfig {
     /**
      * A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
      * 
-     */
+    */
     public Optional<Boolean> getAllEffective() {
         return Optional.ofNullable(this.allEffective);
     }
@@ -54,7 +54,6 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfig {
             this.allEffective = allEffective;
             return this;
         }
-
         public RegionInstanceGroupManagerStatusStatefulPerInstanceConfig build() {
             return new RegionInstanceGroupManagerStatusStatefulPerInstanceConfig(allEffective);
         }

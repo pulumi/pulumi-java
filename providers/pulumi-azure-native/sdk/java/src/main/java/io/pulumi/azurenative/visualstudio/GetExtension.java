@@ -6,21 +6,41 @@ package io.pulumi.azurenative.visualstudio;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.visualstudio.inputs.GetExtensionArgs;
 import io.pulumi.azurenative.visualstudio.outputs.GetExtensionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExtension {
-/**
- * The response to an extension resource GET request.
+    private GetExtension() {}
+    public interface BuilderApplicator {
+        public void apply(GetExtensionArgs.Builder a);
+    }
+    private static GetExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExtensionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response to an extension resource GET request.
  * API Version: 2014-04-01-preview.
  * 
- *
- * The response to an extension resource GET request.
+     *
+     * The response to an extension resource GET request.
  * 
- */
+     */
+    public static CompletableFuture<GetExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response to an extension resource GET request.
+     * API Version: 2014-04-01-preview.
+     * 
+     *
+         * The response to an extension resource GET request.
+     * 
+     */
     public static CompletableFuture<GetExtensionResult> invokeAsync(GetExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:visualstudio:getExtension", TypeShape.of(GetExtensionResult.class), args == null ? GetExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

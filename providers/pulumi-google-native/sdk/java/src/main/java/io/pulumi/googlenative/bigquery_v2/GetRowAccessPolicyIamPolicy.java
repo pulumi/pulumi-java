@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRowAccessPolicyIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetRowAccessPolicyIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetRowAccessPolicyIamPolicyArgs.Builder a);
+    }
+    private static GetRowAccessPolicyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRowAccessPolicyIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetRowAccessPolicyIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetRowAccessPolicyIamPolicyResult> invokeAsync(GetRowAccessPolicyIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigquery/v2:getRowAccessPolicyIamPolicy", TypeShape.of(GetRowAccessPolicyIamPolicyResult.class), args == null ? GetRowAccessPolicyIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

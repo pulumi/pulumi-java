@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BatchAccountIdentityResponseUserAssignedIdentities {
     /**
      * The client id of user assigned identity.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The principal id of user assigned identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -74,7 +74,6 @@ public final class BatchAccountIdentityResponseUserAssignedIdentities {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public BatchAccountIdentityResponseUserAssignedIdentities build() {
             return new BatchAccountIdentityResponseUserAssignedIdentities(clientId, principalId);
         }

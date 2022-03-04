@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -36,14 +36,14 @@ public final class AppProfileSingleClusterRouting {
      * If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
      * It is unsafe to send these requests to the same table/row/column in multiple clusters.
      * 
-     */
+    */
     public Optional<Boolean> getAllowTransactionalWrites() {
         return Optional.ofNullable(this.allowTransactionalWrites);
     }
     /**
      * The cluster to which read/write requests should be routed.
      * 
-     */
+    */
     public String getClusterId() {
         return this.clusterId;
     }
@@ -79,7 +79,6 @@ public final class AppProfileSingleClusterRouting {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public AppProfileSingleClusterRouting build() {
             return new AppProfileSingleClusterRouting(allowTransactionalWrites, clusterId);
         }

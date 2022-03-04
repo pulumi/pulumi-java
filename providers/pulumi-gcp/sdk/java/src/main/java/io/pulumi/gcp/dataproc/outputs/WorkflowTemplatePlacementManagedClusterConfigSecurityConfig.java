@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
     /**
      * Kerberos related configuration.
      * 
-     */
+    */
     public Optional<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig> getKerberosConfig() {
         return Optional.ofNullable(this.kerberosConfig);
     }
@@ -54,7 +54,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecurityConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecurityConfig(kerberosConfig);
         }

@@ -6,17 +6,33 @@ package io.pulumi.azurenative.azureactivedirectory;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.azureactivedirectory.inputs.GetB2CTenantArgs;
 import io.pulumi.azurenative.azureactivedirectory.outputs.GetB2CTenantResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetB2CTenant {
-/**
- * API Version: 2019-01-01-preview.
+    private GetB2CTenant() {}
+    public interface BuilderApplicator {
+        public void apply(GetB2CTenantArgs.Builder a);
+    }
+    private static GetB2CTenantArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetB2CTenantArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2019-01-01-preview.
  * 
- */
+     */
+    public static CompletableFuture<GetB2CTenantResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2019-01-01-preview.
+     * 
+     */
     public static CompletableFuture<GetB2CTenantResult> invokeAsync(GetB2CTenantArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azureactivedirectory:getB2CTenant", TypeShape.of(GetB2CTenantResult.class), args == null ? GetB2CTenantArgs.Empty : args, Utilities.withVersion(options));
     }

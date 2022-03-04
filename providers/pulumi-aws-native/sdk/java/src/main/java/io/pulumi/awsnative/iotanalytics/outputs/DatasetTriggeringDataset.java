@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class DatasetTriggeringDataset {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
-
         public DatasetTriggeringDataset build() {
             return new DatasetTriggeringDataset(datasetName);
         }

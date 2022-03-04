@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.ApiResourceBackendServiceResponse;
 import io.pulumi.azurenative.web.inputs.ApiResourceDefinitionsResponse;
 import io.pulumi.azurenative.web.inputs.ConnectionParameterResponse;
 import io.pulumi.azurenative.web.inputs.WsdlDefinitionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="apiDefinitions")
-    private final @Nullable ApiResourceDefinitionsResponse apiDefinitions;
+      private final @Nullable ApiResourceDefinitionsResponse apiDefinitions;
 
     public Optional<ApiResourceDefinitionsResponse> getApiDefinitions() {
         return this.apiDefinitions == null ? Optional.empty() : Optional.ofNullable(this.apiDefinitions);
@@ -41,7 +41,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="apiType")
-    private final @Nullable String apiType;
+      private final @Nullable String apiType;
 
     public Optional<String> getApiType() {
         return this.apiType == null ? Optional.empty() : Optional.ofNullable(this.apiType);
@@ -52,7 +52,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="backendService")
-    private final @Nullable ApiResourceBackendServiceResponse backendService;
+      private final @Nullable ApiResourceBackendServiceResponse backendService;
 
     public Optional<ApiResourceBackendServiceResponse> getBackendService() {
         return this.backendService == null ? Optional.empty() : Optional.ofNullable(this.backendService);
@@ -63,7 +63,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="brandColor")
-    private final @Nullable String brandColor;
+      private final @Nullable String brandColor;
 
     public Optional<String> getBrandColor() {
         return this.brandColor == null ? Optional.empty() : Optional.ofNullable(this.brandColor);
@@ -74,7 +74,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="capabilities")
-    private final @Nullable List<String> capabilities;
+      private final @Nullable List<String> capabilities;
 
     public List<String> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
@@ -85,7 +85,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="connectionParameters")
-    private final @Nullable Map<String,ConnectionParameterResponse> connectionParameters;
+      private final @Nullable Map<String,ConnectionParameterResponse> connectionParameters;
 
     public Map<String,ConnectionParameterResponse> getConnectionParameters() {
         return this.connectionParameters == null ? Map.of() : this.connectionParameters;
@@ -96,7 +96,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -107,7 +107,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -118,7 +118,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="iconUri")
-    private final @Nullable String iconUri;
+      private final @Nullable String iconUri;
 
     public Optional<String> getIconUri() {
         return this.iconUri == null ? Optional.empty() : Optional.ofNullable(this.iconUri);
@@ -129,7 +129,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="runtimeUrls")
-    private final @Nullable List<String> runtimeUrls;
+      private final @Nullable List<String> runtimeUrls;
 
     public List<String> getRuntimeUrls() {
         return this.runtimeUrls == null ? List.of() : this.runtimeUrls;
@@ -140,7 +140,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="swagger")
-    private final @Nullable Object swagger;
+      private final @Nullable Object swagger;
 
     public Optional<Object> getSwagger() {
         return this.swagger == null ? Optional.empty() : Optional.ofNullable(this.swagger);
@@ -151,7 +151,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="wsdlDefinition")
-    private final @Nullable WsdlDefinitionResponse wsdlDefinition;
+      private final @Nullable WsdlDefinitionResponse wsdlDefinition;
 
     public Optional<WsdlDefinitionResponse> getWsdlDefinition() {
         return this.wsdlDefinition == null ? Optional.empty() : Optional.ofNullable(this.wsdlDefinition);
@@ -300,7 +300,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
             this.wsdlDefinition = wsdlDefinition;
             return this;
         }
-
         public CustomApiPropertiesDefinitionResponse build() {
             return new CustomApiPropertiesDefinitionResponse(apiDefinitions, apiType, backendService, brandColor, capabilities, connectionParameters, description, displayName, iconUri, runtimeUrls, swagger, wsdlDefinition);
         }

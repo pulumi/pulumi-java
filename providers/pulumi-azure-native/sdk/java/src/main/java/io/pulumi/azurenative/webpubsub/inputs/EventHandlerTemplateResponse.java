@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.UpstreamAuthSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class EventHandlerTemplateResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="auth")
-    private final @Nullable UpstreamAuthSettingsResponse auth;
+      private final @Nullable UpstreamAuthSettingsResponse auth;
 
     public Optional<UpstreamAuthSettingsResponse> getAuth() {
         return this.auth == null ? Optional.empty() : Optional.ofNullable(this.auth);
@@ -38,7 +38,7 @@ public final class EventHandlerTemplateResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="systemEventPattern")
-    private final @Nullable String systemEventPattern;
+      private final @Nullable String systemEventPattern;
 
     public Optional<String> getSystemEventPattern() {
         return this.systemEventPattern == null ? Optional.empty() : Optional.ofNullable(this.systemEventPattern);
@@ -50,7 +50,7 @@ public final class EventHandlerTemplateResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="urlTemplate", required=true)
-    private final String urlTemplate;
+      private final String urlTemplate;
 
     public String getUrlTemplate() {
         return this.urlTemplate;
@@ -65,7 +65,7 @@ public final class EventHandlerTemplateResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userEventPattern")
-    private final @Nullable String userEventPattern;
+      private final @Nullable String userEventPattern;
 
     public Optional<String> getUserEventPattern() {
         return this.userEventPattern == null ? Optional.empty() : Optional.ofNullable(this.userEventPattern);
@@ -134,7 +134,6 @@ public final class EventHandlerTemplateResponse extends io.pulumi.resources.Invo
             this.userEventPattern = userEventPattern;
             return this;
         }
-
         public EventHandlerTemplateResponse build() {
             return new EventHandlerTemplateResponse(auth, systemEventPattern, urlTemplate, userEventPattern);
         }

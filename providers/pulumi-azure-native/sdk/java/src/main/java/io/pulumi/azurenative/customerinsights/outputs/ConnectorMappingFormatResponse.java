@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class ConnectorMappingFormatResponse {
     /**
      * The oData language.
      * 
-     */
+    */
     public Optional<String> getAcceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
      * Character separating array elements.
      * 
-     */
+    */
     public Optional<String> getArraySeparator() {
         return Optional.ofNullable(this.arraySeparator);
     }
     /**
      * The character that signifies a break between columns.
      * 
-     */
+    */
     public Optional<String> getColumnDelimiter() {
         return Optional.ofNullable(this.columnDelimiter);
     }
     /**
      * The type mapping format.
      * 
-     */
+    */
     public String getFormatType() {
         return this.formatType;
     }
     /**
      * Quote character, used to indicate enquoted fields.
      * 
-     */
+    */
     public Optional<String> getQuoteCharacter() {
         return Optional.ofNullable(this.quoteCharacter);
     }
     /**
      * Escape character for quotes, can be the same as the quoteCharacter.
      * 
-     */
+    */
     public Optional<String> getQuoteEscapeCharacter() {
         return Optional.ofNullable(this.quoteEscapeCharacter);
     }
@@ -160,7 +160,6 @@ public final class ConnectorMappingFormatResponse {
             this.quoteEscapeCharacter = quoteEscapeCharacter;
             return this;
         }
-
         public ConnectorMappingFormatResponse build() {
             return new ConnectorMappingFormatResponse(acceptLanguage, arraySeparator, columnDelimiter, formatType, quoteCharacter, quoteEscapeCharacter);
         }

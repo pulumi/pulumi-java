@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends io.pulumi.r
     public static final ResourcePolicyVmMaintenancePolicyResponse Empty = new ResourcePolicyVmMaintenancePolicyResponse();
 
     @InputImport(name="concurrencyControlGroup", required=true)
-    private final ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup;
+      private final ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup;
 
     public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse getConcurrencyControlGroup() {
         return this.concurrencyControlGroup;
@@ -25,7 +25,7 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="maintenanceWindow", required=true)
-    private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
+      private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse getMaintenanceWindow() {
         return this.maintenanceWindow;
@@ -74,7 +74,6 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends io.pulumi.r
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
-
         public ResourcePolicyVmMaintenancePolicyResponse build() {
             return new ResourcePolicyVmMaintenancePolicyResponse(concurrencyControlGroup, maintenanceWindow);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ApiErrorBaseResponse;
 import io.pulumi.azurenative.compute.outputs.InnerErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,35 +57,35 @@ public final class ApiErrorResponse {
     /**
      * The error code.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * The Api error details
      * 
-     */
+    */
     public List<ApiErrorBaseResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * The Api inner error
      * 
-     */
+    */
     public Optional<InnerErrorResponse> getInnererror() {
         return Optional.ofNullable(this.innererror);
     }
     /**
      * The error message.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The target of the particular error.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -142,7 +142,6 @@ public final class ApiErrorResponse {
             this.target = target;
             return this;
         }
-
         public ApiErrorResponse build() {
             return new ApiErrorResponse(code, details, innererror, message, target);
         }

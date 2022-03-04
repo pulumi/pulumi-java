@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class RuleGroupDimension extends io.pulumi.resources.InvokeArgs {
     public static final RuleGroupDimension Empty = new RuleGroupDimension();
 
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -51,7 +51,6 @@ public final class RuleGroupDimension extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RuleGroupDimension build() {
             return new RuleGroupDimension(value);
         }

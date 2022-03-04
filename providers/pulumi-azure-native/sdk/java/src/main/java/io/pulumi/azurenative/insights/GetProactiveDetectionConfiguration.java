@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetProactiveDetectionConfigurationArgs;
 import io.pulumi.azurenative.insights.outputs.GetProactiveDetectionConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProactiveDetectionConfiguration {
-/**
- * Properties that define a ProactiveDetection configuration.
+    private GetProactiveDetectionConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetProactiveDetectionConfigurationArgs.Builder a);
+    }
+    private static GetProactiveDetectionConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProactiveDetectionConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Properties that define a ProactiveDetection configuration.
  * API Version: 2015-05-01.
  * 
- *
- * Properties that define a ProactiveDetection configuration.
+     *
+     * Properties that define a ProactiveDetection configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetProactiveDetectionConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Properties that define a ProactiveDetection configuration.
+     * API Version: 2015-05-01.
+     * 
+     *
+         * Properties that define a ProactiveDetection configuration.
+     * 
+     */
     public static CompletableFuture<GetProactiveDetectionConfigurationResult> invokeAsync(GetProactiveDetectionConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getProactiveDetectionConfiguration", TypeShape.of(GetProactiveDetectionConfigurationResult.class), args == null ? GetProactiveDetectionConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

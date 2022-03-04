@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class SchedulingPolicyShareAttributes {
             this.weightFactor = weightFactor;
             return this;
         }
-
         public SchedulingPolicyShareAttributes build() {
             return new SchedulingPolicyShareAttributes(shareIdentifier, weightFactor);
         }

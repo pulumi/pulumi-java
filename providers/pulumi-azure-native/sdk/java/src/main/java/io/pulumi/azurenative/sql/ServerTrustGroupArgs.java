@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.inputs.ServerInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="groupMembers", required=true)
-    private final Input<List<ServerInfoArgs>> groupMembers;
+      private final Input<List<ServerInfoArgs>> groupMembers;
 
     public Input<List<ServerInfoArgs>> getGroupMembers() {
         return this.groupMembers;
@@ -32,7 +32,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="locationName", required=true)
-    private final Input<String> locationName;
+      private final Input<String> locationName;
 
     public Input<String> getLocationName() {
         return this.locationName;
@@ -43,7 +43,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverTrustGroupName")
-    private final @Nullable Input<String> serverTrustGroupName;
+      private final @Nullable Input<String> serverTrustGroupName;
 
     public Input<String> getServerTrustGroupName() {
         return this.serverTrustGroupName == null ? Input.empty() : this.serverTrustGroupName;
@@ -65,7 +65,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="trustScopes", required=true)
-    private final Input<List<String>> trustScopes;
+      private final Input<List<String>> trustScopes;
 
     public Input<List<String>> getTrustScopes() {
         return this.trustScopes;
@@ -169,7 +169,6 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
             this.trustScopes = Input.of(Objects.requireNonNull(trustScopes));
             return this;
         }
-
         public ServerTrustGroupArgs build() {
             return new ServerTrustGroupArgs(groupMembers, locationName, resourceGroupName, serverTrustGroupName, trustScopes);
         }

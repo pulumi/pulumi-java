@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -31,7 +31,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="peConnectionName")
-    private final @Nullable Input<String> peConnectionName;
+      private final @Nullable Input<String> peConnectionName;
 
     public Input<String> getPeConnectionName() {
         return this.peConnectionName == null ? Input.empty() : this.peConnectionName;
@@ -53,7 +53,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -64,7 +64,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -194,7 +194,6 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public PrivateLinkServicePrivateEndpointConnectionArgs build() {
             return new PrivateLinkServicePrivateEndpointConnectionArgs(id, name, peConnectionName, privateLinkServiceConnectionState, resourceGroupName, serviceName);
         }

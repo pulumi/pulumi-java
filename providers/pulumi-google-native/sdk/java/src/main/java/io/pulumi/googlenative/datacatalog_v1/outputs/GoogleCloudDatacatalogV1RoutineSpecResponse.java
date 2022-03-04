@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1RoutineSpecArgumentResponse;
 import java.lang.String;
@@ -62,42 +62,42 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
     /**
      * Fields specific for BigQuery routines.
      * 
-     */
+    */
     public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse getBigqueryRoutineSpec() {
         return this.bigqueryRoutineSpec;
     }
     /**
      * The body of the routine.
      * 
-     */
+    */
     public String getDefinitionBody() {
         return this.definitionBody;
     }
     /**
      * The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
      * 
-     */
+    */
     public String getLanguage() {
         return this.language;
     }
     /**
      * Return type of the argument. The exact value depends on the source system and the language.
      * 
-     */
+    */
     public String getReturnType() {
         return this.returnType;
     }
     /**
      * Arguments of the routine.
      * 
-     */
+    */
     public List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> getRoutineArguments() {
         return this.routineArguments;
     }
     /**
      * The type of the routine.
      * 
-     */
+    */
     public String getRoutineType() {
         return this.routineType;
     }
@@ -161,7 +161,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
             this.routineType = Objects.requireNonNull(routineType);
             return this;
         }
-
         public GoogleCloudDatacatalogV1RoutineSpecResponse build() {
             return new GoogleCloudDatacatalogV1RoutineSpecResponse(bigqueryRoutineSpec, definitionBody, language, returnType, routineArguments, routineType);
         }

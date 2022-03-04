@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.CertificateProviderInstanceResponse;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderResponse 
      * 
      */
     @InputImport(name="certificateProviderInstance", required=true)
-    private final CertificateProviderInstanceResponse certificateProviderInstance;
+      private final CertificateProviderInstanceResponse certificateProviderInstance;
 
     public CertificateProviderInstanceResponse getCertificateProviderInstance() {
         return this.certificateProviderInstance;
@@ -33,7 +33,7 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderResponse 
      * 
      */
     @InputImport(name="grpcEndpoint", required=true)
-    private final GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint;
+      private final GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint;
 
     public GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse getGrpcEndpoint() {
         return this.grpcEndpoint;
@@ -82,7 +82,6 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderResponse 
             this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
             return this;
         }
-
         public GoogleCloudNetworksecurityV1beta1CertificateProviderResponse build() {
             return new GoogleCloudNetworksecurityV1beta1CertificateProviderResponse(certificateProviderInstance, grpcEndpoint);
         }

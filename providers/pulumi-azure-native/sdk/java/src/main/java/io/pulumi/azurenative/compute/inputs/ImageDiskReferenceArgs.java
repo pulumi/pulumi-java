@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -35,7 +35,7 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lun")
-    private final @Nullable Input<Integer> lun;
+      private final @Nullable Input<Integer> lun;
 
     public Input<Integer> getLun() {
         return this.lun == null ? Input.empty() : this.lun;
@@ -94,7 +94,6 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
             this.lun = Input.ofNullable(lun);
             return this;
         }
-
         public ImageDiskReferenceArgs build() {
             return new ImageDiskReferenceArgs(id, lun);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,7 +38,7 @@ public final class TwitterRegistrationResponse {
      * This setting is required for enabling Twitter Sign-In.
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
-     */
+    */
     public Optional<String> getConsumerKey() {
         return Optional.ofNullable(this.consumerKey);
     }
@@ -46,7 +46,7 @@ public final class TwitterRegistrationResponse {
      * The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
      * application used for sign-in.
      * 
-     */
+    */
     public Optional<String> getConsumerSecretSettingName() {
         return Optional.ofNullable(this.consumerSecretSettingName);
     }
@@ -82,7 +82,6 @@ public final class TwitterRegistrationResponse {
             this.consumerSecretSettingName = consumerSecretSettingName;
             return this;
         }
-
         public TwitterRegistrationResponse build() {
             return new TwitterRegistrationResponse(consumerKey, consumerSecretSettingName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceAcrConfigurationInfoArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="loginServers")
-    private final @Nullable Input<List<String>> loginServers;
+      private final @Nullable Input<List<String>> loginServers;
 
     public Input<List<String>> getLoginServers() {
         return this.loginServers == null ? Input.empty() : this.loginServers;
@@ -67,7 +67,6 @@ public final class ServiceAcrConfigurationInfoArgs extends io.pulumi.resources.R
             this.loginServers = Input.ofNullable(loginServers);
             return this;
         }
-
         public ServiceAcrConfigurationInfoArgs build() {
             return new ServiceAcrConfigurationInfoArgs(loginServers);
         }

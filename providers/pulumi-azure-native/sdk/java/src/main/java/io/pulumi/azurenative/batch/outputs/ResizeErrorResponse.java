@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class ResizeErrorResponse {
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
@@ -46,7 +46,7 @@ public final class ResizeErrorResponse {
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -89,7 +89,6 @@ public final class ResizeErrorResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public ResizeErrorResponse build() {
             return new ResizeErrorResponse(code, details, message);
         }

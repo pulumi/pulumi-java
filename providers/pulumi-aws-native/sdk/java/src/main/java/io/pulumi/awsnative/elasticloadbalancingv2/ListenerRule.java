@@ -9,8 +9,8 @@ import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleAction;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleRuleCondition;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -60,6 +60,37 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
         return this.ruleArn;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ListenerRuleArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.elasticloadbalancingv2.ListenerRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.elasticloadbalancingv2.ListenerRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ListenerRule(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ListenerRule(String name) {
+        this(name, ListenerRuleArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ListenerRule(String name, ListenerRuleArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

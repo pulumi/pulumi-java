@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse {
     /**
      * Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GooglePrivacyDlpV2PublishToPubSubResponse build() {
             return new GooglePrivacyDlpV2PublishToPubSubResponse(topic);
         }

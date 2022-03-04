@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.PredictionDistributionDefinitionResponseDistributions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class PredictionDistributionDefinitionResponse {
     /**
      * Distributions of the prediction.
      * 
-     */
+    */
     public List<PredictionDistributionDefinitionResponseDistributions> getDistributions() {
         return this.distributions == null ? List.of() : this.distributions;
     }
     /**
      * Total negatives in the distribution.
      * 
-     */
+    */
     public Optional<Double> getTotalNegatives() {
         return Optional.ofNullable(this.totalNegatives);
     }
     /**
      * Total positive in the distribution.
      * 
-     */
+    */
     public Optional<Double> getTotalPositives() {
         return Optional.ofNullable(this.totalPositives);
     }
@@ -99,7 +99,6 @@ public final class PredictionDistributionDefinitionResponse {
             this.totalPositives = totalPositives;
             return this;
         }
-
         public PredictionDistributionDefinitionResponse build() {
             return new PredictionDistributionDefinitionResponse(distributions, totalNegatives, totalPositives);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DataSourceType;
 import io.pulumi.azurenative.recoveryservices.inputs.MabFileFolderProtectedItemExtendedInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -41,7 +41,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="backupSetName")
-    private final @Nullable Input<String> backupSetName;
+      private final @Nullable Input<String> backupSetName;
 
     public Input<String> getBackupSetName() {
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
@@ -52,7 +52,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="computerName")
-    private final @Nullable Input<String> computerName;
+      private final @Nullable Input<String> computerName;
 
     public Input<String> getComputerName() {
         return this.computerName == null ? Input.empty() : this.computerName;
@@ -63,7 +63,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+      private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -74,7 +74,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="createMode")
-    private final @Nullable Input<Either<String,CreateMode>> createMode;
+      private final @Nullable Input<Either<String,CreateMode>> createMode;
 
     public Input<Either<String,CreateMode>> getCreateMode() {
         return this.createMode == null ? Input.empty() : this.createMode;
@@ -85,7 +85,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="deferredDeleteSyncTimeInUTC")
-    private final @Nullable Input<Double> deferredDeleteSyncTimeInUTC;
+      private final @Nullable Input<Double> deferredDeleteSyncTimeInUTC;
 
     public Input<Double> getDeferredDeleteSyncTimeInUTC() {
         return this.deferredDeleteSyncTimeInUTC == null ? Input.empty() : this.deferredDeleteSyncTimeInUTC;
@@ -96,7 +96,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="deferredDeleteTimeInUTC")
-    private final @Nullable Input<String> deferredDeleteTimeInUTC;
+      private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
     public Input<String> getDeferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
@@ -107,7 +107,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="deferredDeleteTimeRemaining")
-    private final @Nullable Input<String> deferredDeleteTimeRemaining;
+      private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
     public Input<String> getDeferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
@@ -118,7 +118,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="extendedInfo")
-    private final @Nullable Input<MabFileFolderProtectedItemExtendedInfoArgs> extendedInfo;
+      private final @Nullable Input<MabFileFolderProtectedItemExtendedInfoArgs> extendedInfo;
 
     public Input<MabFileFolderProtectedItemExtendedInfoArgs> getExtendedInfo() {
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
@@ -129,7 +129,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -140,7 +140,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
-    private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
+      private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
     public Input<Boolean> getIsDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
@@ -151,7 +151,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isRehydrate")
-    private final @Nullable Input<Boolean> isRehydrate;
+      private final @Nullable Input<Boolean> isRehydrate;
 
     public Input<Boolean> getIsRehydrate() {
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
@@ -162,7 +162,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isScheduledForDeferredDelete")
-    private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
+      private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
     public Input<Boolean> getIsScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
@@ -173,7 +173,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="lastBackupStatus")
-    private final @Nullable Input<String> lastBackupStatus;
+      private final @Nullable Input<String> lastBackupStatus;
 
     public Input<String> getLastBackupStatus() {
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
@@ -184,7 +184,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="lastBackupTime")
-    private final @Nullable Input<String> lastBackupTime;
+      private final @Nullable Input<String> lastBackupTime;
 
     public Input<String> getLastBackupTime() {
         return this.lastBackupTime == null ? Input.empty() : this.lastBackupTime;
@@ -195,7 +195,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="lastRecoveryPoint")
-    private final @Nullable Input<String> lastRecoveryPoint;
+      private final @Nullable Input<String> lastRecoveryPoint;
 
     public Input<String> getLastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
@@ -206,7 +206,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable Input<String> policyId;
+      private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -218,7 +218,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="protectedItemType", required=true)
-    private final Input<String> protectedItemType;
+      private final Input<String> protectedItemType;
 
     public Input<String> getProtectedItemType() {
         return this.protectedItemType;
@@ -229,7 +229,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="protectionState")
-    private final @Nullable Input<String> protectionState;
+      private final @Nullable Input<String> protectionState;
 
     public Input<String> getProtectionState() {
         return this.protectionState == null ? Input.empty() : this.protectionState;
@@ -240,7 +240,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
@@ -251,7 +251,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="workloadType")
-    private final @Nullable Input<Either<String,DataSourceType>> workloadType;
+      private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 
     public Input<Either<String,DataSourceType>> getWorkloadType() {
         return this.workloadType == null ? Input.empty() : this.workloadType;
@@ -595,7 +595,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
             this.workloadType = Input.ofNullable(workloadType);
             return this;
         }
-
         public MabFileFolderProtectedItemArgs build() {
             return new MabFileFolderProtectedItemArgs(backupManagementType, backupSetName, computerName, containerName, createMode, deferredDeleteSyncTimeInUTC, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemType, protectionState, sourceResourceId, workloadType);
         }

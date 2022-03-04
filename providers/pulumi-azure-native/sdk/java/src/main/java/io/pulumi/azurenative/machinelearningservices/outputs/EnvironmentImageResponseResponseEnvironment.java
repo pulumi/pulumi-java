@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDef
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDefinitionResponseResponsePython;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDefinitionResponseResponseR;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDefinitionResponseResponseSpark;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -80,56 +80,56 @@ public final class EnvironmentImageResponseResponseEnvironment {
     /**
      * The definition of a Docker container.
      * 
-     */
+    */
     public Optional<ModelEnvironmentDefinitionResponseResponseDocker> getDocker() {
         return Optional.ofNullable(this.docker);
     }
     /**
      * Definition of environment variables to be defined in the environment.
      * 
-     */
+    */
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
      * 
-     */
+    */
     public Optional<String> getInferencingStackVersion() {
         return Optional.ofNullable(this.inferencingStackVersion);
     }
     /**
      * The name of the environment.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Settings for a Python environment.
      * 
-     */
+    */
     public Optional<ModelEnvironmentDefinitionResponseResponsePython> getPython() {
         return Optional.ofNullable(this.python);
     }
     /**
      * Settings for a R environment.
      * 
-     */
+    */
     public Optional<ModelEnvironmentDefinitionResponseResponseR> getR() {
         return Optional.ofNullable(this.r);
     }
     /**
      * The configuration for a Spark environment.
      * 
-     */
+    */
     public Optional<ModelEnvironmentDefinitionResponseResponseSpark> getSpark() {
         return Optional.ofNullable(this.spark);
     }
     /**
      * The environment version.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -207,7 +207,6 @@ public final class EnvironmentImageResponseResponseEnvironment {
             this.version = version;
             return this;
         }
-
         public EnvironmentImageResponseResponseEnvironment build() {
             return new EnvironmentImageResponseResponseEnvironment(docker, environmentVariables, inferencingStackVersion, name, python, r, spark, version);
         }

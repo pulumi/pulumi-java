@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ListDatabaseAccountKeysResult {
     /**
      * Base 64 encoded value of the primary read-write key.
      * 
-     */
+    */
     public String getPrimaryMasterKey() {
         return this.primaryMasterKey;
     }
     /**
      * Base 64 encoded value of the primary read-only key.
      * 
-     */
+    */
     public String getPrimaryReadonlyMasterKey() {
         return this.primaryReadonlyMasterKey;
     }
     /**
      * Base 64 encoded value of the secondary read-write key.
      * 
-     */
+    */
     public String getSecondaryMasterKey() {
         return this.secondaryMasterKey;
     }
     /**
      * Base 64 encoded value of the secondary read-only key.
      * 
-     */
+    */
     public String getSecondaryReadonlyMasterKey() {
         return this.secondaryReadonlyMasterKey;
     }
@@ -116,7 +116,6 @@ public final class ListDatabaseAccountKeysResult {
             this.secondaryReadonlyMasterKey = Objects.requireNonNull(secondaryReadonlyMasterKey);
             return this;
         }
-
         public ListDatabaseAccountKeysResult build() {
             return new ListDatabaseAccountKeysResult(primaryMasterKey, primaryReadonlyMasterKey, secondaryMasterKey, secondaryReadonlyMasterKey);
         }

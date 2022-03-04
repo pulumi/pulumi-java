@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hostKey")
-    private final @Nullable Input<String> hostKey;
+      private final @Nullable Input<String> hostKey;
 
     public Input<String> getHostKey() {
         return this.hostKey == null ? Input.empty() : this.hostKey;
@@ -36,7 +36,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hostKeyAlgorithm")
-    private final @Nullable Input<String> hostKeyAlgorithm;
+      private final @Nullable Input<String> hostKeyAlgorithm;
 
     public Input<String> getHostKeyAlgorithm() {
         return this.hostKeyAlgorithm == null ? Input.empty() : this.hostKeyAlgorithm;
@@ -47,7 +47,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="label", required=true)
-    private final Input<String> label;
+      private final Input<String> label;
 
     public Input<String> getLabel() {
         return this.label;
@@ -58,7 +58,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -69,7 +69,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -80,7 +80,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="patterns", required=true)
-    private final Input<List<String>> patterns;
+      private final Input<List<String>> patterns;
 
     public Input<List<String>> getPatterns() {
         return this.patterns;
@@ -91,7 +91,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -102,7 +102,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="searchPaths")
-    private final @Nullable Input<List<String>> searchPaths;
+      private final @Nullable Input<List<String>> searchPaths;
 
     public Input<List<String>> getSearchPaths() {
         return this.searchPaths == null ? Input.empty() : this.searchPaths;
@@ -113,7 +113,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="strictHostKeyChecking")
-    private final @Nullable Input<Boolean> strictHostKeyChecking;
+      private final @Nullable Input<Boolean> strictHostKeyChecking;
 
     public Input<Boolean> getStrictHostKeyChecking() {
         return this.strictHostKeyChecking == null ? Input.empty() : this.strictHostKeyChecking;
@@ -124,7 +124,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -135,7 +135,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -329,7 +329,6 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public ConfigurationServiceGitRepositoryArgs build() {
             return new ConfigurationServiceGitRepositoryArgs(hostKey, hostKeyAlgorithm, label, name, password, patterns, privateKey, searchPaths, strictHostKeyChecking, uri, username);
         }

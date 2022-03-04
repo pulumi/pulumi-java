@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2LeaveUntransformedResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ThrowErrorResponse;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
     /**
      * Ignore errors
      * 
-     */
+    */
     public GooglePrivacyDlpV2LeaveUntransformedResponse getLeaveUntransformed() {
         return this.leaveUntransformed;
     }
     /**
      * Throw an error
      * 
-     */
+    */
     public GooglePrivacyDlpV2ThrowErrorResponse getThrowError() {
         return this.throwError;
     }
@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
             this.throwError = Objects.requireNonNull(throwError);
             return this;
         }
-
         public GooglePrivacyDlpV2TransformationErrorHandlingResponse build() {
             return new GooglePrivacyDlpV2TransformationErrorHandlingResponse(leaveUntransformed, throwError);
         }

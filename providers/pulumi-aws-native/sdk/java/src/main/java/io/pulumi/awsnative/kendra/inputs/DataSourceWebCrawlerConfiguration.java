@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceProxyConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerAuthenticationConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerUrls;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,63 +21,63 @@ public final class DataSourceWebCrawlerConfiguration extends io.pulumi.resources
     public static final DataSourceWebCrawlerConfiguration Empty = new DataSourceWebCrawlerConfiguration();
 
     @InputImport(name="authenticationConfiguration")
-    private final @Nullable DataSourceWebCrawlerAuthenticationConfiguration authenticationConfiguration;
+      private final @Nullable DataSourceWebCrawlerAuthenticationConfiguration authenticationConfiguration;
 
     public Optional<DataSourceWebCrawlerAuthenticationConfiguration> getAuthenticationConfiguration() {
         return this.authenticationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.authenticationConfiguration);
     }
 
     @InputImport(name="crawlDepth")
-    private final @Nullable Integer crawlDepth;
+      private final @Nullable Integer crawlDepth;
 
     public Optional<Integer> getCrawlDepth() {
         return this.crawlDepth == null ? Optional.empty() : Optional.ofNullable(this.crawlDepth);
     }
 
     @InputImport(name="maxContentSizePerPageInMegaBytes")
-    private final @Nullable Double maxContentSizePerPageInMegaBytes;
+      private final @Nullable Double maxContentSizePerPageInMegaBytes;
 
     public Optional<Double> getMaxContentSizePerPageInMegaBytes() {
         return this.maxContentSizePerPageInMegaBytes == null ? Optional.empty() : Optional.ofNullable(this.maxContentSizePerPageInMegaBytes);
     }
 
     @InputImport(name="maxLinksPerPage")
-    private final @Nullable Integer maxLinksPerPage;
+      private final @Nullable Integer maxLinksPerPage;
 
     public Optional<Integer> getMaxLinksPerPage() {
         return this.maxLinksPerPage == null ? Optional.empty() : Optional.ofNullable(this.maxLinksPerPage);
     }
 
     @InputImport(name="maxUrlsPerMinuteCrawlRate")
-    private final @Nullable Integer maxUrlsPerMinuteCrawlRate;
+      private final @Nullable Integer maxUrlsPerMinuteCrawlRate;
 
     public Optional<Integer> getMaxUrlsPerMinuteCrawlRate() {
         return this.maxUrlsPerMinuteCrawlRate == null ? Optional.empty() : Optional.ofNullable(this.maxUrlsPerMinuteCrawlRate);
     }
 
     @InputImport(name="proxyConfiguration")
-    private final @Nullable DataSourceProxyConfiguration proxyConfiguration;
+      private final @Nullable DataSourceProxyConfiguration proxyConfiguration;
 
     public Optional<DataSourceProxyConfiguration> getProxyConfiguration() {
         return this.proxyConfiguration == null ? Optional.empty() : Optional.ofNullable(this.proxyConfiguration);
     }
 
     @InputImport(name="urlExclusionPatterns")
-    private final @Nullable List<String> urlExclusionPatterns;
+      private final @Nullable List<String> urlExclusionPatterns;
 
     public List<String> getUrlExclusionPatterns() {
         return this.urlExclusionPatterns == null ? List.of() : this.urlExclusionPatterns;
     }
 
     @InputImport(name="urlInclusionPatterns")
-    private final @Nullable List<String> urlInclusionPatterns;
+      private final @Nullable List<String> urlInclusionPatterns;
 
     public List<String> getUrlInclusionPatterns() {
         return this.urlInclusionPatterns == null ? List.of() : this.urlInclusionPatterns;
     }
 
     @InputImport(name="urls", required=true)
-    private final DataSourceWebCrawlerUrls urls;
+      private final DataSourceWebCrawlerUrls urls;
 
     public DataSourceWebCrawlerUrls getUrls() {
         return this.urls;
@@ -196,7 +196,6 @@ public final class DataSourceWebCrawlerConfiguration extends io.pulumi.resources
             this.urls = Objects.requireNonNull(urls);
             return this;
         }
-
         public DataSourceWebCrawlerConfiguration build() {
             return new DataSourceWebCrawlerConfiguration(authenticationConfiguration, crawlDepth, maxContentSizePerPageInMegaBytes, maxLinksPerPage, maxUrlsPerMinuteCrawlRate, proxyConfiguration, urlExclusionPatterns, urlInclusionPatterns, urls);
         }

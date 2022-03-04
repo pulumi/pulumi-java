@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,7 +55,7 @@ public final class AccessApprovalSettingsEnrolledService {
      * pubsub.googleapis.com
      * storage.googleapis.com
      * 
-     */
+    */
     public String getCloudProduct() {
         return this.cloudProduct;
     }
@@ -64,7 +64,7 @@ public final class AccessApprovalSettingsEnrolledService {
      * Default value is `BLOCK_ALL`.
      * Possible values are `BLOCK_ALL`.
      * 
-     */
+    */
     public Optional<String> getEnrollmentLevel() {
         return Optional.ofNullable(this.enrollmentLevel);
     }
@@ -100,7 +100,6 @@ public final class AccessApprovalSettingsEnrolledService {
             this.enrollmentLevel = enrollmentLevel;
             return this;
         }
-
         public AccessApprovalSettingsEnrolledService build() {
             return new AccessApprovalSettingsEnrolledService(cloudProduct, enrollmentLevel);
         }

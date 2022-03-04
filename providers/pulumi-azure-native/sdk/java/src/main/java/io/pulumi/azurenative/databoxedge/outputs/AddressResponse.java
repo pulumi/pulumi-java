@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class AddressResponse {
     /**
      * The address line1.
      * 
-     */
+    */
     public Optional<String> getAddressLine1() {
         return Optional.ofNullable(this.addressLine1);
     }
     /**
      * The address line2.
      * 
-     */
+    */
     public Optional<String> getAddressLine2() {
         return Optional.ofNullable(this.addressLine2);
     }
     /**
      * The address line3.
      * 
-     */
+    */
     public Optional<String> getAddressLine3() {
         return Optional.ofNullable(this.addressLine3);
     }
     /**
      * The city name.
      * 
-     */
+    */
     public Optional<String> getCity() {
         return Optional.ofNullable(this.city);
     }
     /**
      * The country name.
      * 
-     */
+    */
     public String getCountry() {
         return this.country;
     }
     /**
      * The postal code.
      * 
-     */
+    */
     public Optional<String> getPostalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
      * The state name.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -181,7 +181,6 @@ public final class AddressResponse {
             this.state = state;
             return this;
         }
-
         public AddressResponse build() {
             return new AddressResponse(addressLine1, addressLine2, addressLine3, city, country, postalCode, state);
         }

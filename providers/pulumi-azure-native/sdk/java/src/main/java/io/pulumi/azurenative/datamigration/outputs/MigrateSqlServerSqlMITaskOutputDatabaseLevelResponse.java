@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -91,35 +91,35 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
     /**
      * Name of the database
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * Migration end time
      * 
-     */
+    */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Migration exceptions and warnings
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Migration progress message
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -127,35 +127,35 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
      * Result type
      * Expected value is 'DatabaseLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Size of the database in megabytes
      * 
-     */
+    */
     public Double getSizeMB() {
         return this.sizeMB;
     }
     /**
      * Current stage of migration
      * 
-     */
+    */
     public String getStage() {
         return this.stage;
     }
     /**
      * Migration start time
      * 
-     */
+    */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -247,7 +247,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(databaseName, endedOn, exceptionsAndWarnings, id, message, resultType, sizeMB, stage, startedOn, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetDiagnosticServiceTokenReadOnlyResult {
     /**
      * JWT token for accessing application insights diagnostic service data.
      * 
-     */
+    */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);
     }
@@ -54,7 +54,6 @@ public final class GetDiagnosticServiceTokenReadOnlyResult {
             this.token = token;
             return this;
         }
-
         public GetDiagnosticServiceTokenReadOnlyResult build() {
             return new GetDiagnosticServiceTokenReadOnlyResult(token);
         }

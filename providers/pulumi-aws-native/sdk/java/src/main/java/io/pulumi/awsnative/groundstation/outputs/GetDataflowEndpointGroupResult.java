@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupEndpointDetails;
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -89,7 +89,6 @@ public final class GetDataflowEndpointGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetDataflowEndpointGroupResult build() {
             return new GetDataflowEndpointGroupResult(arn, endpointDetails, id, tags);
         }

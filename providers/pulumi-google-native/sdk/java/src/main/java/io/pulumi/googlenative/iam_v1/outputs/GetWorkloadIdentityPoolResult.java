@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class GetWorkloadIdentityPoolResult {
     /**
      * A description of the pool. Cannot exceed 256 characters.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
     /**
      * A display name for the pool. Cannot exceed 32 characters.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The resource name of the pool.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The state of the pool.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -138,7 +138,6 @@ public final class GetWorkloadIdentityPoolResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetWorkloadIdentityPoolResult build() {
             return new GetWorkloadIdentityPoolResult(description, disabled, displayName, name, state);
         }

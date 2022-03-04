@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devspaces.outputs;
 
 import io.pulumi.azurenative.devspaces.outputs.KubernetesConnectionDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ControllerConnectionDetailsResponse {
     /**
      * Base class for types that supply values used to connect to container orchestrators
      * 
-     */
+    */
     public Optional<KubernetesConnectionDetailsResponse> getOrchestratorSpecificConnectionDetails() {
         return Optional.ofNullable(this.orchestratorSpecificConnectionDetails);
     }
@@ -54,7 +54,6 @@ public final class ControllerConnectionDetailsResponse {
             this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
             return this;
         }
-
         public ControllerConnectionDetailsResponse build() {
             return new ControllerConnectionDetailsResponse(orchestratorSpecificConnectionDetails);
         }

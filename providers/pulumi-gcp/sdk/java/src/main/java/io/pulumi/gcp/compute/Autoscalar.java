@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.AutoscalarArgs;
 import io.pulumi.gcp.compute.inputs.AutoscalarState;
@@ -49,7 +49,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/autoscalar:Autoscalar default {{name}}
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * gcp.compute.Autoscalar has been deprecated in favor of gcp.compute.Autoscaler
  * 
  */
@@ -185,6 +185,37 @@ public class Autoscalar extends io.pulumi.resources.CustomResource {
         return this.zone;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AutoscalarArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.AutoscalarArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.AutoscalarArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Autoscalar(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Autoscalar(String name) {
+        this(name, AutoscalarArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Autoscalar(String name, AutoscalarArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

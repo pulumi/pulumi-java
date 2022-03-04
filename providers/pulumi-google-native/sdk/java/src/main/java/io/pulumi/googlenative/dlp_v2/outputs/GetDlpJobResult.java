@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ErrorResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectDataSourceDetailsResponse;
@@ -91,70 +91,70 @@ public final class GetDlpJobResult {
     /**
      * Time when the job was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Time when the job finished.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * A stream of errors encountered running the job.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2ErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Results from inspecting a data source.
      * 
-     */
+    */
     public GooglePrivacyDlpV2InspectDataSourceDetailsResponse getInspectDetails() {
         return this.inspectDetails;
     }
     /**
      * If created by a job trigger, the resource name of the trigger that instantiated the job.
      * 
-     */
+    */
     public String getJobTriggerName() {
         return this.jobTriggerName;
     }
     /**
      * The server-assigned name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Results from analyzing risk of a data source.
      * 
-     */
+    */
     public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse getRiskDetails() {
         return this.riskDetails;
     }
     /**
      * Time when the job started.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * State of a job.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The type of job.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -246,7 +246,6 @@ public final class GetDlpJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDlpJobResult build() {
             return new GetDlpJobResult(createTime, endTime, errors, inspectDetails, jobTriggerName, name, riskDetails, startTime, state, type);
         }

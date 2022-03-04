@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupsCount")
-    private final @Nullable Input<Integer> backupsCount;
+      private final @Nullable Input<Integer> backupsCount;
 
     public Input<Integer> getBackupsCount() {
         return this.backupsCount == null ? Input.empty() : this.backupsCount;
@@ -36,7 +36,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyEnabled")
-    private final @Nullable Input<Boolean> policyEnabled;
+      private final @Nullable Input<Boolean> policyEnabled;
 
     public Input<Boolean> getPolicyEnabled() {
         return this.policyEnabled == null ? Input.empty() : this.policyEnabled;
@@ -47,7 +47,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeName")
-    private final @Nullable Input<String> volumeName;
+      private final @Nullable Input<String> volumeName;
 
     public Input<String> getVolumeName() {
         return this.volumeName == null ? Input.empty() : this.volumeName;
@@ -121,7 +121,6 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
             this.volumeName = Input.ofNullable(volumeName);
             return this;
         }
-
         public VolumeBackupsArgs build() {
             return new VolumeBackupsArgs(backupsCount, policyEnabled, volumeName);
         }

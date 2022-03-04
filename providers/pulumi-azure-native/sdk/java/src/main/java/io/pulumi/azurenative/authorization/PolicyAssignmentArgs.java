@@ -9,7 +9,7 @@ import io.pulumi.azurenative.authorization.inputs.NonComplianceMessageArgs;
 import io.pulumi.azurenative.authorization.inputs.ParameterValuesValueArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,7 +38,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -49,7 +49,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enforcementMode")
-    private final @Nullable Input<Either<String,EnforcementMode>> enforcementMode;
+      private final @Nullable Input<Either<String,EnforcementMode>> enforcementMode;
 
     public Input<Either<String,EnforcementMode>> getEnforcementMode() {
         return this.enforcementMode == null ? Input.empty() : this.enforcementMode;
@@ -60,7 +60,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -71,7 +71,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -82,7 +82,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+      private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -93,7 +93,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nonComplianceMessages")
-    private final @Nullable Input<List<NonComplianceMessageArgs>> nonComplianceMessages;
+      private final @Nullable Input<List<NonComplianceMessageArgs>> nonComplianceMessages;
 
     public Input<List<NonComplianceMessageArgs>> getNonComplianceMessages() {
         return this.nonComplianceMessages == null ? Input.empty() : this.nonComplianceMessages;
@@ -104,7 +104,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notScopes")
-    private final @Nullable Input<List<String>> notScopes;
+      private final @Nullable Input<List<String>> notScopes;
 
     public Input<List<String>> getNotScopes() {
         return this.notScopes == null ? Input.empty() : this.notScopes;
@@ -115,7 +115,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterValuesValueArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterValuesValueArgs>> parameters;
 
     public Input<Map<String,ParameterValuesValueArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -126,7 +126,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyAssignmentName")
-    private final @Nullable Input<String> policyAssignmentName;
+      private final @Nullable Input<String> policyAssignmentName;
 
     public Input<String> getPolicyAssignmentName() {
         return this.policyAssignmentName == null ? Input.empty() : this.policyAssignmentName;
@@ -137,7 +137,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyDefinitionId")
-    private final @Nullable Input<String> policyDefinitionId;
+      private final @Nullable Input<String> policyDefinitionId;
 
     public Input<String> getPolicyDefinitionId() {
         return this.policyDefinitionId == null ? Input.empty() : this.policyDefinitionId;
@@ -148,7 +148,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+      private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -357,7 +357,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public PolicyAssignmentArgs build() {
             return new PolicyAssignmentArgs(description, displayName, enforcementMode, identity, location, metadata, nonComplianceMessages, notScopes, parameters, policyAssignmentName, policyDefinitionId, scope);
         }

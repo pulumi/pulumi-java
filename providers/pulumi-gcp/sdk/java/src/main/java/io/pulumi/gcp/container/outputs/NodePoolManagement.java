@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class NodePoolManagement {
     /**
      * Whether the nodes will be automatically repaired.
      * 
-     */
+    */
     public Optional<Boolean> getAutoRepair() {
         return Optional.ofNullable(this.autoRepair);
     }
     /**
      * Whether the nodes will be automatically upgraded.
      * 
-     */
+    */
     public Optional<Boolean> getAutoUpgrade() {
         return Optional.ofNullable(this.autoUpgrade);
     }
@@ -76,7 +76,6 @@ public final class NodePoolManagement {
             this.autoUpgrade = autoUpgrade;
             return this;
         }
-
         public NodePoolManagement build() {
             return new NodePoolManagement(autoRepair, autoUpgrade);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -36,14 +36,14 @@ public final class ClusterNotificationConfigPubsub {
      * Enable the PodSecurityPolicy controller for this cluster.
      * If enabled, pods must be valid under a PodSecurityPolicy to be created.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
      * 
-     */
+    */
     public Optional<String> getTopic() {
         return Optional.ofNullable(this.topic);
     }
@@ -79,7 +79,6 @@ public final class ClusterNotificationConfigPubsub {
             this.topic = topic;
             return this;
         }
-
         public ClusterNotificationConfigPubsub build() {
             return new ClusterNotificationConfigPubsub(enabled, topic);
         }

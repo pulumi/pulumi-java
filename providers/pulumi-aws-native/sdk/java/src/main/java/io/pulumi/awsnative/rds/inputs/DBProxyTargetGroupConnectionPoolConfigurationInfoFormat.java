@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.rds.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
      * 
      */
     @InputImport(name="connectionBorrowTimeout")
-    private final @Nullable Integer connectionBorrowTimeout;
+      private final @Nullable Integer connectionBorrowTimeout;
 
     public Optional<Integer> getConnectionBorrowTimeout() {
         return this.connectionBorrowTimeout == null ? Optional.empty() : Optional.ofNullable(this.connectionBorrowTimeout);
@@ -32,7 +32,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
      * 
      */
     @InputImport(name="initQuery")
-    private final @Nullable String initQuery;
+      private final @Nullable String initQuery;
 
     public Optional<String> getInitQuery() {
         return this.initQuery == null ? Optional.empty() : Optional.ofNullable(this.initQuery);
@@ -43,7 +43,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
      * 
      */
     @InputImport(name="maxConnectionsPercent")
-    private final @Nullable Integer maxConnectionsPercent;
+      private final @Nullable Integer maxConnectionsPercent;
 
     public Optional<Integer> getMaxConnectionsPercent() {
         return this.maxConnectionsPercent == null ? Optional.empty() : Optional.ofNullable(this.maxConnectionsPercent);
@@ -54,7 +54,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
      * 
      */
     @InputImport(name="maxIdleConnectionsPercent")
-    private final @Nullable Integer maxIdleConnectionsPercent;
+      private final @Nullable Integer maxIdleConnectionsPercent;
 
     public Optional<Integer> getMaxIdleConnectionsPercent() {
         return this.maxIdleConnectionsPercent == null ? Optional.empty() : Optional.ofNullable(this.maxIdleConnectionsPercent);
@@ -65,7 +65,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
      * 
      */
     @InputImport(name="sessionPinningFilters")
-    private final @Nullable List<String> sessionPinningFilters;
+      private final @Nullable List<String> sessionPinningFilters;
 
     public List<String> getSessionPinningFilters() {
         return this.sessionPinningFilters == null ? List.of() : this.sessionPinningFilters;
@@ -144,7 +144,6 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
             this.sessionPinningFilters = sessionPinningFilters;
             return this;
         }
-
         public DBProxyTargetGroupConnectionPoolConfigurationInfoFormat build() {
             return new DBProxyTargetGroupConnectionPoolConfigurationInfoFormat(connectionBorrowTimeout, initQuery, maxConnectionsPercent, maxIdleConnectionsPercent, sessionPinningFilters);
         }

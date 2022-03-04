@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInterconnect {
-/**
- * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
+    private GetInterconnect() {}
+    public interface BuilderApplicator {
+        public void apply(GetInterconnectArgs.Builder a);
+    }
+    private static GetInterconnectArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInterconnectArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetInterconnectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetInterconnectResult> invokeAsync(GetInterconnectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getInterconnect", TypeShape.of(GetInterconnectResult.class), args == null ? GetInterconnectArgs.Empty : args, Utilities.withVersion(options));
     }

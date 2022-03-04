@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitPeeringIdResponse;
 import io.pulumi.azurenative.network.inputs.RoutingConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="authorizationKey")
-    private final @Nullable String authorizationKey;
+      private final @Nullable String authorizationKey;
 
     public Optional<String> getAuthorizationKey() {
         return this.authorizationKey == null ? Optional.empty() : Optional.ofNullable(this.authorizationKey);
@@ -38,7 +38,7 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableInternetSecurity")
-    private final @Nullable Boolean enableInternetSecurity;
+      private final @Nullable Boolean enableInternetSecurity;
 
     public Optional<Boolean> getEnableInternetSecurity() {
         return this.enableInternetSecurity == null ? Optional.empty() : Optional.ofNullable(this.enableInternetSecurity);
@@ -49,7 +49,7 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="expressRouteCircuitPeering", required=true)
-    private final ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering;
+      private final ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering;
 
     public ExpressRouteCircuitPeeringIdResponse getExpressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
@@ -60,7 +60,7 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="expressRouteGatewayBypass")
-    private final @Nullable Boolean expressRouteGatewayBypass;
+      private final @Nullable Boolean expressRouteGatewayBypass;
 
     public Optional<Boolean> getExpressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass == null ? Optional.empty() : Optional.ofNullable(this.expressRouteGatewayBypass);
@@ -71,7 +71,7 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -82,7 +82,7 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -93,7 +93,7 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -104,7 +104,7 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="routingConfiguration")
-    private final @Nullable RoutingConfigurationResponse routingConfiguration;
+      private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
     public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
         return this.routingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.routingConfiguration);
@@ -115,7 +115,7 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="routingWeight")
-    private final @Nullable Integer routingWeight;
+      private final @Nullable Integer routingWeight;
 
     public Optional<Integer> getRoutingWeight() {
         return this.routingWeight == null ? Optional.empty() : Optional.ofNullable(this.routingWeight);
@@ -234,7 +234,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
             this.routingWeight = routingWeight;
             return this;
         }
-
         public ExpressRouteConnectionResponse build() {
             return new ExpressRouteConnectionResponse(authorizationKey, enableInternetSecurity, expressRouteCircuitPeering, expressRouteGatewayBypass, id, name, provisioningState, routingConfiguration, routingWeight);
         }

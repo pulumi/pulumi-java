@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnDelimiter")
-    private final @Nullable Input<Object> columnDelimiter;
+      private final @Nullable Input<Object> columnDelimiter;
 
     public Input<Object> getColumnDelimiter() {
         return this.columnDelimiter == null ? Input.empty() : this.columnDelimiter;
@@ -35,7 +35,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deserializer")
-    private final @Nullable Input<Object> deserializer;
+      private final @Nullable Input<Object> deserializer;
 
     public Input<Object> getDeserializer() {
         return this.deserializer == null ? Input.empty() : this.deserializer;
@@ -46,7 +46,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encodingName")
-    private final @Nullable Input<Object> encodingName;
+      private final @Nullable Input<Object> encodingName;
 
     public Input<Object> getEncodingName() {
         return this.encodingName == null ? Input.empty() : this.encodingName;
@@ -57,7 +57,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="escapeChar")
-    private final @Nullable Input<Object> escapeChar;
+      private final @Nullable Input<Object> escapeChar;
 
     public Input<Object> getEscapeChar() {
         return this.escapeChar == null ? Input.empty() : this.escapeChar;
@@ -68,7 +68,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstRowAsHeader")
-    private final @Nullable Input<Object> firstRowAsHeader;
+      private final @Nullable Input<Object> firstRowAsHeader;
 
     public Input<Object> getFirstRowAsHeader() {
         return this.firstRowAsHeader == null ? Input.empty() : this.firstRowAsHeader;
@@ -79,7 +79,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nullValue")
-    private final @Nullable Input<Object> nullValue;
+      private final @Nullable Input<Object> nullValue;
 
     public Input<Object> getNullValue() {
         return this.nullValue == null ? Input.empty() : this.nullValue;
@@ -90,7 +90,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quoteChar")
-    private final @Nullable Input<Object> quoteChar;
+      private final @Nullable Input<Object> quoteChar;
 
     public Input<Object> getQuoteChar() {
         return this.quoteChar == null ? Input.empty() : this.quoteChar;
@@ -101,7 +101,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rowDelimiter")
-    private final @Nullable Input<Object> rowDelimiter;
+      private final @Nullable Input<Object> rowDelimiter;
 
     public Input<Object> getRowDelimiter() {
         return this.rowDelimiter == null ? Input.empty() : this.rowDelimiter;
@@ -112,7 +112,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serializer")
-    private final @Nullable Input<Object> serializer;
+      private final @Nullable Input<Object> serializer;
 
     public Input<Object> getSerializer() {
         return this.serializer == null ? Input.empty() : this.serializer;
@@ -123,7 +123,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipLineCount")
-    private final @Nullable Input<Object> skipLineCount;
+      private final @Nullable Input<Object> skipLineCount;
 
     public Input<Object> getSkipLineCount() {
         return this.skipLineCount == null ? Input.empty() : this.skipLineCount;
@@ -134,7 +134,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="treatEmptyAsNull")
-    private final @Nullable Input<Object> treatEmptyAsNull;
+      private final @Nullable Input<Object> treatEmptyAsNull;
 
     public Input<Object> getTreatEmptyAsNull() {
         return this.treatEmptyAsNull == null ? Input.empty() : this.treatEmptyAsNull;
@@ -146,7 +146,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -355,7 +355,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public TextFormatArgs build() {
             return new TextFormatArgs(columnDelimiter, deserializer, encodingName, escapeChar, firstRowAsHeader, nullValue, quoteChar, rowDelimiter, serializer, skipLineCount, treatEmptyAsNull, type);
         }

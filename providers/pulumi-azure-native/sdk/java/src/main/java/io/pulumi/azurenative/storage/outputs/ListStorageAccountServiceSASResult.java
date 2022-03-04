@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ListStorageAccountServiceSASResult {
     /**
      * List service SAS credentials of specific resource.
      * 
-     */
+    */
     public String getServiceSasToken() {
         return this.serviceSasToken;
     }
@@ -52,7 +52,6 @@ public final class ListStorageAccountServiceSASResult {
             this.serviceSasToken = Objects.requireNonNull(serviceSasToken);
             return this;
         }
-
         public ListStorageAccountServiceSASResult build() {
             return new ListStorageAccountServiceSASResult(serviceSasToken);
         }

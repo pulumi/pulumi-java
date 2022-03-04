@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.enums.DeploymentOccurrencePlatform;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -35,7 +35,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<String> config;
+      private final @Nullable Input<String> config;
 
     public Input<String> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -46,7 +46,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="deployTime", required=true)
-    private final Input<String> deployTime;
+      private final Input<String> deployTime;
 
     public Input<String> getDeployTime() {
         return this.deployTime;
@@ -57,7 +57,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<DeploymentOccurrencePlatform> platform;
+      private final @Nullable Input<DeploymentOccurrencePlatform> platform;
 
     public Input<DeploymentOccurrencePlatform> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -68,7 +68,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="undeployTime")
-    private final @Nullable Input<String> undeployTime;
+      private final @Nullable Input<String> undeployTime;
 
     public Input<String> getUndeployTime() {
         return this.undeployTime == null ? Input.empty() : this.undeployTime;
@@ -79,7 +79,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userEmail")
-    private final @Nullable Input<String> userEmail;
+      private final @Nullable Input<String> userEmail;
 
     public Input<String> getUserEmail() {
         return this.userEmail == null ? Input.empty() : this.userEmail;
@@ -198,7 +198,6 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
             this.userEmail = Input.ofNullable(userEmail);
             return this;
         }
-
         public DeploymentOccurrenceArgs build() {
             return new DeploymentOccurrenceArgs(address, config, deployTime, platform, undeployTime, userEmail);
         }

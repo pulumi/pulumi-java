@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ObjectReplicationPolicyFilterResponse {
     /**
      * Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z
      * 
-     */
+    */
     public Optional<String> getMinCreationTime() {
         return Optional.ofNullable(this.minCreationTime);
     }
     /**
      * Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
      * 
-     */
+    */
     public List<String> getPrefixMatch() {
         return this.prefixMatch == null ? List.of() : this.prefixMatch;
     }
@@ -77,7 +77,6 @@ public final class ObjectReplicationPolicyFilterResponse {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public ObjectReplicationPolicyFilterResponse build() {
             return new ObjectReplicationPolicyFilterResponse(minCreationTime, prefixMatch);
         }

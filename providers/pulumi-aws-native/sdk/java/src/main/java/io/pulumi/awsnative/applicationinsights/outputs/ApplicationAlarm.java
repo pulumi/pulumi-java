@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationAlarmSeverity;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class ApplicationAlarm {
     /**
      * The name of the CloudWatch alarm to be monitored for the component.
      * 
-     */
+    */
     public String getAlarmName() {
         return this.alarmName;
     }
     /**
      * Indicates the degree of outage when the alarm goes off.
      * 
-     */
+    */
     public Optional<ApplicationAlarmSeverity> getSeverity() {
         return Optional.ofNullable(this.severity);
     }
@@ -77,7 +77,6 @@ public final class ApplicationAlarm {
             this.severity = severity;
             return this;
         }
-
         public ApplicationAlarm build() {
             return new ApplicationAlarm(alarmName, severity);
         }

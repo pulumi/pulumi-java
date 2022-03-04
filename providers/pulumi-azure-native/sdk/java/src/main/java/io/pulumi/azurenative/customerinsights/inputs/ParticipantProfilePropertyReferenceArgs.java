@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="interactionPropertyName", required=true)
-    private final Input<String> interactionPropertyName;
+      private final Input<String> interactionPropertyName;
 
     public Input<String> getInteractionPropertyName() {
         return this.interactionPropertyName;
@@ -33,7 +33,7 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="profilePropertyName", required=true)
-    private final Input<String> profilePropertyName;
+      private final Input<String> profilePropertyName;
 
     public Input<String> getProfilePropertyName() {
         return this.profilePropertyName;
@@ -92,7 +92,6 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
             this.profilePropertyName = Input.of(Objects.requireNonNull(profilePropertyName));
             return this;
         }
-
         public ParticipantProfilePropertyReferenceArgs build() {
             return new ParticipantProfilePropertyReferenceArgs(interactionPropertyName, profilePropertyName);
         }

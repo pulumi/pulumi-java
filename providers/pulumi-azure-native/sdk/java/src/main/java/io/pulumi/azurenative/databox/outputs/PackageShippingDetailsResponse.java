@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class PackageShippingDetailsResponse {
     /**
      * Name of the carrier.
      * 
-     */
+    */
     public String getCarrierName() {
         return this.carrierName;
     }
     /**
      * Tracking Id of shipment.
      * 
-     */
+    */
     public String getTrackingId() {
         return this.trackingId;
     }
     /**
      * Url where shipment can be tracked.
      * 
-     */
+    */
     public String getTrackingUrl() {
         return this.trackingUrl;
     }
@@ -95,7 +95,6 @@ public final class PackageShippingDetailsResponse {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }
-
         public PackageShippingDetailsResponse build() {
             return new PackageShippingDetailsResponse(carrierName, trackingId, trackingUrl);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.compute_beta.inputs.BindingArgs;
 import io.pulumi.googlenative.compute_beta.inputs.RuleArgs;
@@ -24,7 +24,7 @@ public final class ReservationIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
 
     public Input<List<AuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -35,7 +35,7 @@ public final class ReservationIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -46,21 +46,21 @@ public final class ReservationIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="resource", required=true)
-    private final Input<String> resource;
+      private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;
@@ -71,7 +71,7 @@ public final class ReservationIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RuleArgs>> rules;
+      private final @Nullable Input<List<RuleArgs>> rules;
 
     public Input<List<RuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -82,14 +82,14 @@ public final class ReservationIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -238,7 +238,6 @@ public final class ReservationIamPolicyArgs extends io.pulumi.resources.Resource
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public ReservationIamPolicyArgs build() {
             return new ReservationIamPolicyArgs(auditConfigs, bindings, etag, project, resource, rules, version, zone);
         }

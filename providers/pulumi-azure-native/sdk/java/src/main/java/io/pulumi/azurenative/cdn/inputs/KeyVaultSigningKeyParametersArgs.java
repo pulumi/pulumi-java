@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     public static final KeyVaultSigningKeyParametersArgs Empty = new KeyVaultSigningKeyParametersArgs();
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -29,7 +29,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -40,7 +40,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretName", required=true)
-    private final Input<String> secretName;
+      private final Input<String> secretName;
 
     public Input<String> getSecretName() {
         return this.secretName;
@@ -51,7 +51,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretVersion", required=true)
-    private final Input<String> secretVersion;
+      private final Input<String> secretVersion;
 
     public Input<String> getSecretVersion() {
         return this.secretVersion;
@@ -62,7 +62,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-    private final Input<String> subscriptionId;
+      private final Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId;
@@ -73,7 +73,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final Input<String> vaultName;
+      private final Input<String> vaultName;
 
     public Input<String> getVaultName() {
         return this.vaultName;
@@ -192,7 +192,6 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
             this.vaultName = Input.of(Objects.requireNonNull(vaultName));
             return this;
         }
-
         public KeyVaultSigningKeyParametersArgs build() {
             return new KeyVaultSigningKeyParametersArgs(odataType, resourceGroupName, secretName, secretVersion, subscriptionId, vaultName);
         }

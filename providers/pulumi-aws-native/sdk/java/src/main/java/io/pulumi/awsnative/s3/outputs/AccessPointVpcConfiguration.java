@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AccessPointVpcConfiguration {
     /**
      * If this field is specified, this access point will only allow connections from the specified VPC ID.
      * 
-     */
+    */
     public Optional<String> getVpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -54,7 +54,6 @@ public final class AccessPointVpcConfiguration {
             this.vpcId = vpcId;
             return this;
         }
-
         public AccessPointVpcConfiguration build() {
             return new AccessPointVpcConfiguration(vpcId);
         }

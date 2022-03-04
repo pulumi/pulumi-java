@@ -5,7 +5,7 @@ package io.pulumi.azurenative.digitaltwins.outputs;
 
 import io.pulumi.azurenative.digitaltwins.outputs.AzureDataExplorerConnectionPropertiesResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,35 +54,35 @@ public final class GetTimeSeriesDatabaseConnectionResult {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Extension resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of a specific time series database connection.
      * 
-     */
+    */
     public AzureDataExplorerConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetTimeSeriesDatabaseConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTimeSeriesDatabaseConnectionResult build() {
             return new GetTimeSeriesDatabaseConnectionResult(id, name, properties, systemData, type);
         }

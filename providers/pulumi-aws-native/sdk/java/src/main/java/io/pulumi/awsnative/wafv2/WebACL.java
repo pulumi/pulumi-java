@@ -14,8 +14,8 @@ import io.pulumi.awsnative.wafv2.outputs.WebACLTag;
 import io.pulumi.awsnative.wafv2.outputs.WebACLVisibilityConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -108,6 +108,37 @@ public class WebACL extends io.pulumi.resources.CustomResource {
         return this.visibilityConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WebACLArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.wafv2.WebACLArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.wafv2.WebACLArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WebACL(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WebACL(String name) {
+        this(name, WebACLArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WebACL(String name, WebACLArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

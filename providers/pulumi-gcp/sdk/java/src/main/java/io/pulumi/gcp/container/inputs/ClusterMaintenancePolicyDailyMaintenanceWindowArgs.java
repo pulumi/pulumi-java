@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowArgs extends io
     public static final ClusterMaintenancePolicyDailyMaintenanceWindowArgs Empty = new ClusterMaintenancePolicyDailyMaintenanceWindowArgs();
 
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+      private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
     }
 
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -81,7 +81,6 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowArgs extends io
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public ClusterMaintenancePolicyDailyMaintenanceWindowArgs build() {
             return new ClusterMaintenancePolicyDailyMaintenanceWindowArgs(duration, startTime);
         }

@@ -5,8 +5,8 @@ package io.pulumi.example;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.Dog;
 import io.pulumi.example.GodArgs;
 import io.pulumi.example.Utilities;
@@ -21,6 +21,37 @@ public class God extends io.pulumi.resources.CustomResource {
         return this.backwards;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable GodArgs.Builder a);
+    }
+    private static io.pulumi.example.GodArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.example.GodArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public God(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public God(String name) {
+        this(name, GodArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public God(String name, @Nullable GodArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

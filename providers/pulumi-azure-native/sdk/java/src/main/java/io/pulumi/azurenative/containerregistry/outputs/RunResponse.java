@@ -10,7 +10,7 @@ import io.pulumi.azurenative.containerregistry.outputs.PlatformPropertiesRespons
 import io.pulumi.azurenative.containerregistry.outputs.SourceTriggerDescriptorResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TimerTriggerDescriptorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -210,182 +210,182 @@ public final class RunResponse {
     /**
      * The machine configuration of the run agent.
      * 
-     */
+    */
     public Optional<AgentPropertiesResponse> getAgentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
     /**
      * The dedicated agent pool for the run.
      * 
-     */
+    */
     public Optional<String> getAgentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
      * The time the run was scheduled.
      * 
-     */
+    */
     public Optional<String> getCreateTime() {
         return Optional.ofNullable(this.createTime);
     }
     /**
      * The list of custom registries that were logged in during this run.
      * 
-     */
+    */
     public List<String> getCustomRegistries() {
         return this.customRegistries == null ? List.of() : this.customRegistries;
     }
     /**
      * The time the run finished.
      * 
-     */
+    */
     public Optional<String> getFinishTime() {
         return Optional.ofNullable(this.finishTime);
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The image update trigger that caused the run. This is applicable if the task has base image trigger configured.
      * 
-     */
+    */
     public Optional<ImageUpdateTriggerResponse> getImageUpdateTrigger() {
         return Optional.ofNullable(this.imageUpdateTrigger);
     }
     /**
      * The value that indicates whether archiving is enabled or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
     /**
      * The last updated time for the run.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * The image description for the log artifact.
      * 
-     */
+    */
     public ImageDescriptorResponse getLogArtifact() {
         return this.logArtifact;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
      * 
-     */
+    */
     public List<ImageDescriptorResponse> getOutputImages() {
         return this.outputImages == null ? List.of() : this.outputImages;
     }
     /**
      * The platform properties against which the run will happen.
      * 
-     */
+    */
     public Optional<PlatformPropertiesResponse> getPlatform() {
         return Optional.ofNullable(this.platform);
     }
     /**
      * The provisioning state of a run.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The error message received from backend systems after the run is scheduled.
      * 
-     */
+    */
     public String getRunErrorMessage() {
         return this.runErrorMessage;
     }
     /**
      * The unique identifier for the run.
      * 
-     */
+    */
     public Optional<String> getRunId() {
         return Optional.ofNullable(this.runId);
     }
     /**
      * The type of run.
      * 
-     */
+    */
     public Optional<String> getRunType() {
         return Optional.ofNullable(this.runType);
     }
     /**
      * The scope of the credentials that were used to login to the source registry during this run.
      * 
-     */
+    */
     public Optional<String> getSourceRegistryAuth() {
         return Optional.ofNullable(this.sourceRegistryAuth);
     }
     /**
      * The source trigger that caused the run.
      * 
-     */
+    */
     public Optional<SourceTriggerDescriptorResponse> getSourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);
     }
     /**
      * The time the run started.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The current status of the run.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The task against which run was scheduled.
      * 
-     */
+    */
     public Optional<String> getTask() {
         return Optional.ofNullable(this.task);
     }
     /**
      * The timer trigger that caused the run.
      * 
-     */
+    */
     public Optional<TimerTriggerDescriptorResponse> getTimerTrigger() {
         return Optional.ofNullable(this.timerTrigger);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The update trigger token passed for the Run.
      * 
-     */
+    */
     public Optional<String> getUpdateTriggerToken() {
         return Optional.ofNullable(this.updateTriggerToken);
     }
@@ -589,7 +589,6 @@ public final class RunResponse {
             this.updateTriggerToken = updateTriggerToken;
             return this;
         }
-
         public RunResponse build() {
             return new RunResponse(agentConfiguration, agentPoolName, createTime, customRegistries, finishTime, id, imageUpdateTrigger, isArchiveEnabled, lastUpdatedTime, logArtifact, name, outputImages, platform, provisioningState, runErrorMessage, runId, runType, sourceRegistryAuth, sourceTrigger, startTime, status, systemData, task, timerTrigger, type, updateTriggerToken);
         }

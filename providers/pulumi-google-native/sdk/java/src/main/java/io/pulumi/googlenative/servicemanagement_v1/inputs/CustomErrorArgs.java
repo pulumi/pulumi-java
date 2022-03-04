@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.CustomErrorRuleArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<CustomErrorRuleArgs>> rules;
+      private final @Nullable Input<List<CustomErrorRuleArgs>> rules;
 
     public Input<List<CustomErrorRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -36,7 +36,7 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="types")
-    private final @Nullable Input<List<String>> types;
+      private final @Nullable Input<List<String>> types;
 
     public Input<List<String>> getTypes() {
         return this.types == null ? Input.empty() : this.types;
@@ -95,7 +95,6 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
             this.types = Input.ofNullable(types);
             return this;
         }
-
         public CustomErrorArgs build() {
             return new CustomErrorArgs(rules, types);
         }

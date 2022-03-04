@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable String apiId;
+      private final @Nullable String apiId;
 
     public Optional<String> getApiId() {
         return this.apiId == null ? Optional.empty() : Optional.ofNullable(this.apiId);
@@ -31,7 +31,7 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stage")
-    private final @Nullable String stage;
+      private final @Nullable String stage;
 
     public Optional<String> getStage() {
         return this.stage == null ? Optional.empty() : Optional.ofNullable(this.stage);
@@ -42,7 +42,7 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="throttle")
-    private final @Nullable Object throttle;
+      private final @Nullable Object throttle;
 
     public Optional<Object> getThrottle() {
         return this.throttle == null ? Optional.empty() : Optional.ofNullable(this.throttle);
@@ -101,7 +101,6 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
             this.throttle = throttle;
             return this;
         }
-
         public UsagePlanApiStage build() {
             return new UsagePlanApiStage(apiId, stage, throttle);
         }

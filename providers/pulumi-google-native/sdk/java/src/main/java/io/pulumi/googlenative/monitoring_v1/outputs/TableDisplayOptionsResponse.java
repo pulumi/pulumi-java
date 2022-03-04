@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TableDisplayOptionsResponse {
     /**
      * Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
      * 
-     */
+    */
     public List<String> getShownColumns() {
         return this.shownColumns;
     }
@@ -53,7 +53,6 @@ public final class TableDisplayOptionsResponse {
             this.shownColumns = Objects.requireNonNull(shownColumns);
             return this;
         }
-
         public TableDisplayOptionsResponse build() {
             return new TableDisplayOptionsResponse(shownColumns);
         }

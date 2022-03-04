@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -170,147 +170,147 @@ public final class A2AProtectedDiskDetailsResponse {
     /**
      * The disk level operations list.
      * 
-     */
+    */
     public List<String> getAllowedDiskLevelOperation() {
         return this.allowedDiskLevelOperation == null ? List.of() : this.allowedDiskLevelOperation;
     }
     /**
      * The data pending at source virtual machine in MB.
      * 
-     */
+    */
     public Optional<Double> getDataPendingAtSourceAgentInMB() {
         return Optional.ofNullable(this.dataPendingAtSourceAgentInMB);
     }
     /**
      * The data pending for replication in MB at staging account.
      * 
-     */
+    */
     public Optional<Double> getDataPendingInStagingStorageAccountInMB() {
         return Optional.ofNullable(this.dataPendingInStagingStorageAccountInMB);
     }
     /**
      * The KeyVault resource id for secret (BEK).
      * 
-     */
+    */
     public Optional<String> getDekKeyVaultArmId() {
         return Optional.ofNullable(this.dekKeyVaultArmId);
     }
     /**
      * The disk capacity in bytes.
      * 
-     */
+    */
     public Optional<Double> getDiskCapacityInBytes() {
         return Optional.ofNullable(this.diskCapacityInBytes);
     }
     /**
      * The disk name.
      * 
-     */
+    */
     public Optional<String> getDiskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
      * The disk state.
      * 
-     */
+    */
     public Optional<String> getDiskState() {
         return Optional.ofNullable(this.diskState);
     }
     /**
      * The type of disk.
      * 
-     */
+    */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * The disk uri.
      * 
-     */
+    */
     public Optional<String> getDiskUri() {
         return Optional.ofNullable(this.diskUri);
     }
     /**
      * A value indicating whether vm has encrypted os disk or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsDiskEncrypted() {
         return Optional.ofNullable(this.isDiskEncrypted);
     }
     /**
      * A value indicating whether disk key got encrypted or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsDiskKeyEncrypted() {
         return Optional.ofNullable(this.isDiskKeyEncrypted);
     }
     /**
      * The KeyVault resource id for key (KEK).
      * 
-     */
+    */
     public Optional<String> getKekKeyVaultArmId() {
         return Optional.ofNullable(this.kekKeyVaultArmId);
     }
     /**
      * The key URL / identifier (KEK).
      * 
-     */
+    */
     public Optional<String> getKeyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
     /**
      * The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
      * 
-     */
+    */
     public Optional<String> getMonitoringJobType() {
         return Optional.ofNullable(this.monitoringJobType);
     }
     /**
      * The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
      * 
-     */
+    */
     public Optional<Integer> getMonitoringPercentageCompletion() {
         return Optional.ofNullable(this.monitoringPercentageCompletion);
     }
     /**
      * The primary disk storage account.
      * 
-     */
+    */
     public Optional<String> getPrimaryDiskAzureStorageAccountId() {
         return Optional.ofNullable(this.primaryDiskAzureStorageAccountId);
     }
     /**
      * The primary staging storage account.
      * 
-     */
+    */
     public Optional<String> getPrimaryStagingAzureStorageAccountId() {
         return Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
     }
     /**
      * The recovery disk storage account.
      * 
-     */
+    */
     public Optional<String> getRecoveryAzureStorageAccountId() {
         return Optional.ofNullable(this.recoveryAzureStorageAccountId);
     }
     /**
      * Recovery disk uri.
      * 
-     */
+    */
     public Optional<String> getRecoveryDiskUri() {
         return Optional.ofNullable(this.recoveryDiskUri);
     }
     /**
      * A value indicating whether resync is required for this disk.
      * 
-     */
+    */
     public Optional<Boolean> getResyncRequired() {
         return Optional.ofNullable(this.resyncRequired);
     }
     /**
      * The secret URL / identifier (BEK).
      * 
-     */
+    */
     public Optional<String> getSecretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);
     }
@@ -479,7 +479,6 @@ public final class A2AProtectedDiskDetailsResponse {
             this.secretIdentifier = secretIdentifier;
             return this;
         }
-
         public A2AProtectedDiskDetailsResponse build() {
             return new A2AProtectedDiskDetailsResponse(allowedDiskLevelOperation, dataPendingAtSourceAgentInMB, dataPendingInStagingStorageAccountInMB, dekKeyVaultArmId, diskCapacityInBytes, diskName, diskState, diskType, diskUri, isDiskEncrypted, isDiskKeyEncrypted, kekKeyVaultArmId, keyIdentifier, monitoringJobType, monitoringPercentageCompletion, primaryDiskAzureStorageAccountId, primaryStagingAzureStorageAccountId, recoveryAzureStorageAccountId, recoveryDiskUri, resyncRequired, secretIdentifier);
         }

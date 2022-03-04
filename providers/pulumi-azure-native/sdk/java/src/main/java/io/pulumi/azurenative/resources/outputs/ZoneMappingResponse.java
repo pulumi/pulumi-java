@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class ZoneMappingResponse {
     /**
      * The location of the zone mapping.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
@@ -69,7 +69,6 @@ public final class ZoneMappingResponse {
             this.zones = zones;
             return this;
         }
-
         public ZoneMappingResponse build() {
             return new ZoneMappingResponse(location, zones);
         }

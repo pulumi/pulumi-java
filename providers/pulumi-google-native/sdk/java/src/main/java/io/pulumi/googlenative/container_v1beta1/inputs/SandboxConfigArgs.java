@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.SandboxConfigType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sandboxType")
-    private final @Nullable Input<String> sandboxType;
+      private final @Nullable Input<String> sandboxType;
 
     public Input<String> getSandboxType() {
         return this.sandboxType == null ? Input.empty() : this.sandboxType;
@@ -35,7 +35,7 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<SandboxConfigType> type;
+      private final @Nullable Input<SandboxConfigType> type;
 
     public Input<SandboxConfigType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public SandboxConfigArgs build() {
             return new SandboxConfigArgs(sandboxType, type);
         }

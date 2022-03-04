@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GetLBIPRangesResult {
     /**
      * The IP ranges used for health checks when **HTTP(S), SSL proxy, TCP proxy, and Internal load balancing** is used
      * 
-     */
+    */
     public List<String> getHttpSslTcpInternals() {
         return this.httpSslTcpInternals;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The IP ranges used for health checks when **Network load balancing** is used
      * 
-     */
+    */
     public List<String> getNetworks() {
         return this.networks;
     }
@@ -96,7 +96,6 @@ public final class GetLBIPRangesResult {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public GetLBIPRangesResult build() {
             return new GetLBIPRangesResult(httpSslTcpInternals, id, networks);
         }

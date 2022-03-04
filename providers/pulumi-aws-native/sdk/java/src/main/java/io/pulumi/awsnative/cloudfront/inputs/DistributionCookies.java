@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class DistributionCookies extends io.pulumi.resources.InvokeArgs {
     public static final DistributionCookies Empty = new DistributionCookies();
 
     @InputImport(name="forward", required=true)
-    private final String forward;
+      private final String forward;
 
     public String getForward() {
         return this.forward;
     }
 
     @InputImport(name="whitelistedNames")
-    private final @Nullable List<String> whitelistedNames;
+      private final @Nullable List<String> whitelistedNames;
 
     public List<String> getWhitelistedNames() {
         return this.whitelistedNames == null ? List.of() : this.whitelistedNames;
@@ -72,7 +72,6 @@ public final class DistributionCookies extends io.pulumi.resources.InvokeArgs {
             this.whitelistedNames = whitelistedNames;
             return this;
         }
-
         public DistributionCookies build() {
             return new DistributionCookies(forward, whitelistedNames);
         }

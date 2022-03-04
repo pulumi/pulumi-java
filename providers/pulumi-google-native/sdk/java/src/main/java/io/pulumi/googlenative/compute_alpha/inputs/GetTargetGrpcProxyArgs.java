@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetTargetGrpcProxyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetTargetGrpcProxyArgs Empty = new GetTargetGrpcProxyArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="targetGrpcProxy", required=true)
-    private final String targetGrpcProxy;
+      private final String targetGrpcProxy;
 
     public String getTargetGrpcProxy() {
         return this.targetGrpcProxy;
@@ -71,7 +71,6 @@ public final class GetTargetGrpcProxyArgs extends io.pulumi.resources.InvokeArgs
             this.targetGrpcProxy = Objects.requireNonNull(targetGrpcProxy);
             return this;
         }
-
         public GetTargetGrpcProxyArgs build() {
             return new GetTargetGrpcProxyArgs(project, targetGrpcProxy);
         }

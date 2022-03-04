@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ListDeviceRegistrationKeyResult {
     /**
      * The registration key for the device.
      * 
-     */
+    */
     public String getRegistrationKey() {
         return this.registrationKey;
     }
@@ -52,7 +52,6 @@ public final class ListDeviceRegistrationKeyResult {
             this.registrationKey = Objects.requireNonNull(registrationKey);
             return this;
         }
-
         public ListDeviceRegistrationKeyResult build() {
             return new ListDeviceRegistrationKeyResult(registrationKey);
         }

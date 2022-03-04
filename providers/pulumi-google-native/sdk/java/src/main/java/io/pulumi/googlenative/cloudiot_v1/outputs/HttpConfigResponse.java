@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class HttpConfigResponse {
     /**
      * If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
      * 
-     */
+    */
     public String getHttpEnabledState() {
         return this.httpEnabledState;
     }
@@ -52,7 +52,6 @@ public final class HttpConfigResponse {
             this.httpEnabledState = Objects.requireNonNull(httpEnabledState);
             return this;
         }
-
         public HttpConfigResponse build() {
             return new HttpConfigResponse(httpEnabledState);
         }

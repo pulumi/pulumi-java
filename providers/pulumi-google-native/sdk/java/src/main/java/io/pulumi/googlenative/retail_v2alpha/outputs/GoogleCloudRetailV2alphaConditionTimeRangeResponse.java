@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse {
     /**
      * End of time range. Range is inclusive.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Start of time range. Range is inclusive.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GoogleCloudRetailV2alphaConditionTimeRangeResponse build() {
             return new GoogleCloudRetailV2alphaConditionTimeRangeResponse(endTime, startTime);
         }

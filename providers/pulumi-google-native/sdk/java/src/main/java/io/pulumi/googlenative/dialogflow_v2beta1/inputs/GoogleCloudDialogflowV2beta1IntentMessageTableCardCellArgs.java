@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs ex
      * 
      */
     @InputImport(name="text", required=true)
-    private final Input<String> text;
+      private final Input<String> text;
 
     public Input<String> getText() {
         return this.text;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs ex
             this.text = Input.of(Objects.requireNonNull(text));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs(text);
         }

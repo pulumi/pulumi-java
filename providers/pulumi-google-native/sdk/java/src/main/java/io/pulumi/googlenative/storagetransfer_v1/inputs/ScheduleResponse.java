@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.DateResponse;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.TimeOfDayResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endTimeOfDay", required=true)
-    private final TimeOfDayResponse endTimeOfDay;
+      private final TimeOfDayResponse endTimeOfDay;
 
     public TimeOfDayResponse getEndTimeOfDay() {
         return this.endTimeOfDay;
@@ -34,7 +34,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="repeatInterval", required=true)
-    private final String repeatInterval;
+      private final String repeatInterval;
 
     public String getRepeatInterval() {
         return this.repeatInterval;
@@ -45,7 +45,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scheduleEndDate", required=true)
-    private final DateResponse scheduleEndDate;
+      private final DateResponse scheduleEndDate;
 
     public DateResponse getScheduleEndDate() {
         return this.scheduleEndDate;
@@ -56,7 +56,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scheduleStartDate", required=true)
-    private final DateResponse scheduleStartDate;
+      private final DateResponse scheduleStartDate;
 
     public DateResponse getScheduleStartDate() {
         return this.scheduleStartDate;
@@ -67,7 +67,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTimeOfDay", required=true)
-    private final TimeOfDayResponse startTimeOfDay;
+      private final TimeOfDayResponse startTimeOfDay;
 
     public TimeOfDayResponse getStartTimeOfDay() {
         return this.startTimeOfDay;
@@ -146,7 +146,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
             this.startTimeOfDay = Objects.requireNonNull(startTimeOfDay);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(endTimeOfDay, repeatInterval, scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }

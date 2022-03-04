@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetScopeConnectionArgs;
 import io.pulumi.azurenative.network.outputs.GetScopeConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScopeConnection {
-/**
- * The Scope Connections resource
+    private GetScopeConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetScopeConnectionArgs.Builder a);
+    }
+    private static GetScopeConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScopeConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Scope Connections resource
  * API Version: 2021-05-01-preview.
  * 
- *
- * The Scope Connections resource
+     *
+     * The Scope Connections resource
  * 
- */
+     */
+    public static CompletableFuture<GetScopeConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Scope Connections resource
+     * API Version: 2021-05-01-preview.
+     * 
+     *
+         * The Scope Connections resource
+     * 
+     */
     public static CompletableFuture<GetScopeConnectionResult> invokeAsync(GetScopeConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getScopeConnection", TypeShape.of(GetScopeConnectionResult.class), args == null ? GetScopeConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

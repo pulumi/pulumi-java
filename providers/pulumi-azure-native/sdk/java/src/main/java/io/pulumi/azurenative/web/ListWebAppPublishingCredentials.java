@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListWebAppPublishingCredentialsArgs;
 import io.pulumi.azurenative.web.outputs.ListWebAppPublishingCredentialsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppPublishingCredentials {
-/**
- * User credentials used for publishing activity.
+    private ListWebAppPublishingCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppPublishingCredentialsArgs.Builder a);
+    }
+    private static ListWebAppPublishingCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppPublishingCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * User credentials used for publishing activity.
  * API Version: 2020-12-01.
  * 
- *
- * User credentials used for publishing activity.
+     *
+     * User credentials used for publishing activity.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppPublishingCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * User credentials used for publishing activity.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * User credentials used for publishing activity.
+     * 
+     */
     public static CompletableFuture<ListWebAppPublishingCredentialsResult> invokeAsync(ListWebAppPublishingCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppPublishingCredentials", TypeShape.of(ListWebAppPublishingCredentialsResult.class), args == null ? ListWebAppPublishingCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudtasks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -79,7 +79,7 @@ public final class QueueRetryConfig {
      * the default.
      * -1 indicates unlimited attempts.
      * 
-     */
+    */
     public Optional<Integer> getMaxAttempts() {
         return Optional.ofNullable(this.maxAttempts);
     }
@@ -88,7 +88,7 @@ public final class QueueRetryConfig {
      * maxBackoff duration after it fails, if the queue's RetryConfig
      * specifies that the task should be retried.
      * 
-     */
+    */
     public Optional<String> getMaxBackoff() {
         return Optional.ofNullable(this.maxBackoff);
     }
@@ -98,7 +98,7 @@ public final class QueueRetryConfig {
      * then increases linearly, and finally retries retries at intervals of maxBackoff
      * up to maxAttempts times.
      * 
-     */
+    */
     public Optional<Integer> getMaxDoublings() {
         return Optional.ofNullable(this.maxDoublings);
     }
@@ -110,7 +110,7 @@ public final class QueueRetryConfig {
      * made and the task will be deleted.
      * If zero, then the task age is unlimited.
      * 
-     */
+    */
     public Optional<String> getMaxRetryDuration() {
         return Optional.ofNullable(this.maxRetryDuration);
     }
@@ -119,7 +119,7 @@ public final class QueueRetryConfig {
      * maxBackoff duration after it fails, if the queue's RetryConfig
      * specifies that the task should be retried.
      * 
-     */
+    */
     public Optional<String> getMinBackoff() {
         return Optional.ofNullable(this.minBackoff);
     }
@@ -176,7 +176,6 @@ public final class QueueRetryConfig {
             this.minBackoff = minBackoff;
             return this;
         }
-
         public QueueRetryConfig build() {
             return new QueueRetryConfig(maxAttempts, maxBackoff, maxDoublings, maxRetryDuration, minBackoff);
         }

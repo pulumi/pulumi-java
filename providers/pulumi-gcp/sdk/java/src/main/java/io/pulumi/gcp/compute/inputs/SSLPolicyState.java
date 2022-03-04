@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -39,7 +39,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customFeatures")
-    private final @Nullable Input<List<String>> customFeatures;
+      private final @Nullable Input<List<String>> customFeatures;
 
     public Input<List<String>> getCustomFeatures() {
         return this.customFeatures == null ? Input.empty() : this.customFeatures;
@@ -50,7 +50,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -61,7 +61,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledFeatures")
-    private final @Nullable Input<List<String>> enabledFeatures;
+      private final @Nullable Input<List<String>> enabledFeatures;
 
     public Input<List<String>> getEnabledFeatures() {
         return this.enabledFeatures == null ? Input.empty() : this.enabledFeatures;
@@ -72,7 +72,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-    private final @Nullable Input<String> fingerprint;
+      private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -86,7 +86,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minTlsVersion")
-    private final @Nullable Input<String> minTlsVersion;
+      private final @Nullable Input<String> minTlsVersion;
 
     public Input<String> getMinTlsVersion() {
         return this.minTlsVersion == null ? Input.empty() : this.minTlsVersion;
@@ -103,7 +103,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -122,7 +122,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable Input<String> profile;
+      private final @Nullable Input<String> profile;
 
     public Input<String> getProfile() {
         return this.profile == null ? Input.empty() : this.profile;
@@ -134,7 +134,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -145,7 +145,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -324,7 +324,6 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
-
         public SSLPolicyState build() {
             return new SSLPolicyState(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, minTlsVersion, name, profile, project, selfLink);
         }

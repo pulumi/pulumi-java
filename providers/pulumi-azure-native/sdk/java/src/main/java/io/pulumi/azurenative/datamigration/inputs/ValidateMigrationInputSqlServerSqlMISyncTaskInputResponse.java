@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datamigration.inputs.FileShareResponse;
 import io.pulumi.azurenative.datamigration.inputs.MiSqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMIDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
      * 
      */
     @InputImport(name="azureApp", required=true)
-    private final AzureActiveDirectoryAppResponse azureApp;
+      private final AzureActiveDirectoryAppResponse azureApp;
 
     public AzureActiveDirectoryAppResponse getAzureApp() {
         return this.azureApp;
@@ -40,7 +40,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
      * 
      */
     @InputImport(name="backupFileShare")
-    private final @Nullable FileShareResponse backupFileShare;
+      private final @Nullable FileShareResponse backupFileShare;
 
     public Optional<FileShareResponse> getBackupFileShare() {
         return this.backupFileShare == null ? Optional.empty() : Optional.ofNullable(this.backupFileShare);
@@ -51,7 +51,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-    private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
+      private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -62,7 +62,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final SqlConnectionInfoResponse sourceConnectionInfo;
+      private final SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -73,7 +73,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
      * 
      */
     @InputImport(name="storageResourceId", required=true)
-    private final String storageResourceId;
+      private final String storageResourceId;
 
     public String getStorageResourceId() {
         return this.storageResourceId;
@@ -84,7 +84,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final MiSqlConnectionInfoResponse targetConnectionInfo;
+      private final MiSqlConnectionInfoResponse targetConnectionInfo;
 
     public MiSqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -173,7 +173,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse build() {
             return new ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse(azureApp, backupFileShare, selectedDatabases, sourceConnectionInfo, storageResourceId, targetConnectionInfo);
         }

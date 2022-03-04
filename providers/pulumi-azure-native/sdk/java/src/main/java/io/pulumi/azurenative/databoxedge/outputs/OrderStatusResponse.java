@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.TrackingInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -58,35 +58,35 @@ public final class OrderStatusResponse {
      * Dictionary to hold generic information which is not stored
      * by the already existing properties
      * 
-     */
+    */
     public Map<String,String> getAdditionalOrderDetails() {
         return this.additionalOrderDetails;
     }
     /**
      * Comments related to this status change.
      * 
-     */
+    */
     public Optional<String> getComments() {
         return Optional.ofNullable(this.comments);
     }
     /**
      * Status of the order as per the allowed status types.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Tracking information related to the state in the ordering flow
      * 
-     */
+    */
     public TrackingInfoResponse getTrackingInformation() {
         return this.trackingInformation;
     }
     /**
      * Time of status update.
      * 
-     */
+    */
     public String getUpdateDateTime() {
         return this.updateDateTime;
     }
@@ -143,7 +143,6 @@ public final class OrderStatusResponse {
             this.updateDateTime = Objects.requireNonNull(updateDateTime);
             return this;
         }
-
         public OrderStatusResponse build() {
             return new OrderStatusResponse(additionalOrderDetails, comments, status, trackingInformation, updateDateTime);
         }

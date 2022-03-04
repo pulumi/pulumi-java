@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SignalRCorsSettingsResponse {
     /**
      * Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
      * 
-     */
+    */
     public List<String> getAllowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
     }
@@ -54,7 +54,6 @@ public final class SignalRCorsSettingsResponse {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
-
         public SignalRCorsSettingsResponse build() {
             return new SignalRCorsSettingsResponse(allowedOrigins);
         }

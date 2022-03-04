@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class SSISChildPackageResponse {
     /**
      * Content for embedded child package. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getPackageContent() {
         return this.packageContent;
     }
     /**
      * Last modified date for embedded child package.
      * 
-     */
+    */
     public Optional<String> getPackageLastModifiedDate() {
         return Optional.ofNullable(this.packageLastModifiedDate);
     }
     /**
      * Name for embedded child package.
      * 
-     */
+    */
     public Optional<String> getPackageName() {
         return Optional.ofNullable(this.packageName);
     }
     /**
      * Path for embedded child package. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getPackagePath() {
         return this.packagePath;
     }
@@ -119,7 +119,6 @@ public final class SSISChildPackageResponse {
             this.packagePath = Objects.requireNonNull(packagePath);
             return this;
         }
-
         public SSISChildPackageResponse build() {
             return new SSISChildPackageResponse(packageContent, packageLastModifiedDate, packageName, packagePath);
         }

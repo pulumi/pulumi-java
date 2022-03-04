@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetVMExtensionArgs;
 import io.pulumi.azurenative.compute.outputs.GetVirtualMachineScaleSetVMExtensionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSetVMExtension {
-/**
- * Describes a VMSS VM Extension.
+    private GetVirtualMachineScaleSetVMExtension() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineScaleSetVMExtensionArgs.Builder a);
+    }
+    private static GetVirtualMachineScaleSetVMExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineScaleSetVMExtensionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a VMSS VM Extension.
  * API Version: 2021-03-01.
  * 
- *
- * Describes a VMSS VM Extension.
+     *
+     * Describes a VMSS VM Extension.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineScaleSetVMExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a VMSS VM Extension.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Describes a VMSS VM Extension.
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineScaleSetVMExtensionResult> invokeAsync(GetVirtualMachineScaleSetVMExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetVMExtension", TypeShape.of(GetVirtualMachineScaleSetVMExtensionResult.class), args == null ? GetVirtualMachineScaleSetVMExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

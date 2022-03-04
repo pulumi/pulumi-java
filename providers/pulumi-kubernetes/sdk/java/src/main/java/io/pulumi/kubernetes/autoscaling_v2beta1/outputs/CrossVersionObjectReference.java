@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class CrossVersionObjectReference {
     /**
      * API version of the referent
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -97,7 +97,6 @@ public final class CrossVersionObjectReference {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public CrossVersionObjectReference build() {
             return new CrossVersionObjectReference(apiVersion, kind, name);
         }

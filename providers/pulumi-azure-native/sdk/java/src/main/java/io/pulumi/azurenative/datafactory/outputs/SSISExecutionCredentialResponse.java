@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -39,21 +39,21 @@ public final class SSISExecutionCredentialResponse {
     /**
      * Domain for windows authentication.
      * 
-     */
+    */
     public Object getDomain() {
         return this.domain;
     }
     /**
      * Password for windows authentication.
      * 
-     */
+    */
     public SecureStringResponse getPassword() {
         return this.password;
     }
     /**
      * UseName for windows authentication.
      * 
-     */
+    */
     public Object getUserName() {
         return this.userName;
     }
@@ -96,7 +96,6 @@ public final class SSISExecutionCredentialResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public SSISExecutionCredentialResponse build() {
             return new SSISExecutionCredentialResponse(domain, password, userName);
         }

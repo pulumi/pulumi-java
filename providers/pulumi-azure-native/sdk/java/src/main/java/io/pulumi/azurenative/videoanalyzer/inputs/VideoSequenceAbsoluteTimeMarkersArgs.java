@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ranges", required=true)
-    private final Input<String> ranges;
+      private final Input<String> ranges;
 
     public Input<String> getRanges() {
         return this.ranges;
@@ -34,7 +34,7 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -93,7 +93,6 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public VideoSequenceAbsoluteTimeMarkersArgs build() {
             return new VideoSequenceAbsoluteTimeMarkersArgs(ranges, type);
         }

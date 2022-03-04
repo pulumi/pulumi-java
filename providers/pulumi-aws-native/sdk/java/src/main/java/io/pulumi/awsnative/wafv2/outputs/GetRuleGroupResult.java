@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupLabelSummary;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRule;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupTag;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupVisibilityConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -74,7 +74,7 @@ public final class GetRuleGroupResult {
     /**
      * Collection of Available Labels.
      * 
-     */
+    */
     public List<RuleGroupLabelSummary> getAvailableLabels() {
         return this.availableLabels == null ? List.of() : this.availableLabels;
     }
@@ -84,7 +84,7 @@ public final class GetRuleGroupResult {
     /**
      * Collection of Consumed Labels.
      * 
-     */
+    */
     public List<RuleGroupLabelSummary> getConsumedLabels() {
         return this.consumedLabels == null ? List.of() : this.consumedLabels;
     }
@@ -103,7 +103,7 @@ public final class GetRuleGroupResult {
     /**
      * Collection of Rules.
      * 
-     */
+    */
     public List<RuleGroupRule> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
@@ -208,7 +208,6 @@ public final class GetRuleGroupResult {
             this.visibilityConfig = visibilityConfig;
             return this;
         }
-
         public GetRuleGroupResult build() {
             return new GetRuleGroupResult(arn, availableLabels, capacity, consumedLabels, customResponseBodies, description, id, labelNamespace, rules, tags, visibilityConfig);
         }

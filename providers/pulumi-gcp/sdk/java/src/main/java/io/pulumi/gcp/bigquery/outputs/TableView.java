@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class TableView {
     /**
      * A query whose result is persisted.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
@@ -43,7 +43,7 @@ public final class TableView {
      * Specifies whether to use BigQuery's legacy SQL for this view.
      * The default value is true. If set to false, the view will use BigQuery's standard SQL.
      * 
-     */
+    */
     public Optional<Boolean> getUseLegacySql() {
         return Optional.ofNullable(this.useLegacySql);
     }
@@ -79,7 +79,6 @@ public final class TableView {
             this.useLegacySql = useLegacySql;
             return this;
         }
-
         public TableView build() {
             return new TableView(query, useLegacySql);
         }

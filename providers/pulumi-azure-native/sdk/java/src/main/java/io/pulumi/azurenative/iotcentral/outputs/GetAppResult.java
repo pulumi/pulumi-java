@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.iotcentral.outputs;
 
 import io.pulumi.azurenative.iotcentral.outputs.AppSkuInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -91,70 +91,70 @@ public final class GetAppResult {
     /**
      * The ID of the application.
      * 
-     */
+    */
     public String getApplicationId() {
         return this.applicationId;
     }
     /**
      * The display name of the application.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The ARM resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The ARM resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A valid instance SKU.
      * 
-     */
+    */
     public AppSkuInfoResponse getSku() {
         return this.sku;
     }
     /**
      * The subdomain of the application.
      * 
-     */
+    */
     public Optional<String> getSubdomain() {
         return Optional.ofNullable(this.subdomain);
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
      * 
-     */
+    */
     public Optional<String> getTemplate() {
         return Optional.ofNullable(this.template);
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -246,7 +246,6 @@ public final class GetAppResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(applicationId, displayName, id, location, name, sku, subdomain, tags, template, type);
         }

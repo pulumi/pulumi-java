@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigHorizontalPodAutoscaling extends io.pul
     public static final GetClusterAddonsConfigHorizontalPodAutoscaling Empty = new GetClusterAddonsConfigHorizontalPodAutoscaling();
 
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -51,7 +51,6 @@ public final class GetClusterAddonsConfigHorizontalPodAutoscaling extends io.pul
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public GetClusterAddonsConfigHorizontalPodAutoscaling build() {
             return new GetClusterAddonsConfigHorizontalPodAutoscaling(disabled);
         }

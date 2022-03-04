@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
     /**
      * Actions required for a private endpoint connection.
      * 
-     */
+    */
     public Optional<String> getActionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
      * The description for the current state of a private endpoint connection.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The status of a private endpoint connection.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -97,7 +97,6 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ConnectionPropertiesResponsePrivateLinkServiceConnectionState build() {
             return new ConnectionPropertiesResponsePrivateLinkServiceConnectionState(actionsRequired, description, status);
         }

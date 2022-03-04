@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.enums.TargetAvailabilityZone;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -37,7 +37,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetAvailabilitySetId")
-    private final @Nullable Input<String> targetAvailabilitySetId;
+      private final @Nullable Input<String> targetAvailabilitySetId;
 
     public Input<String> getTargetAvailabilitySetId() {
         return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
@@ -48,7 +48,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetAvailabilityZone")
-    private final @Nullable Input<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
+      private final @Nullable Input<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
 
     public Input<Either<String,TargetAvailabilityZone>> getTargetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Input.empty() : this.targetAvailabilityZone;
@@ -59,7 +59,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-    private final Input<String> targetResourceName;
+      private final Input<String> targetResourceName;
 
     public Input<String> getTargetResourceName() {
         return this.targetResourceName;
@@ -70,7 +70,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetVmSize")
-    private final @Nullable Input<String> targetVmSize;
+      private final @Nullable Input<String> targetVmSize;
 
     public Input<String> getTargetVmSize() {
         return this.targetVmSize == null ? Input.empty() : this.targetVmSize;
@@ -174,7 +174,6 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
             this.targetVmSize = Input.ofNullable(targetVmSize);
             return this;
         }
-
         public VirtualMachineResourceSettingsArgs build() {
             return new VirtualMachineResourceSettingsArgs(resourceType, targetAvailabilitySetId, targetAvailabilityZone, targetResourceName, targetVmSize);
         }

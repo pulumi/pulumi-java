@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableFreshness")
-    private final @Nullable Input<Boolean> disableFreshness;
+      private final @Nullable Input<Boolean> disableFreshness;
 
     public Input<Boolean> getDisableFreshness() {
         return this.disableFreshness == null ? Input.empty() : this.disableFreshness;
@@ -34,7 +34,7 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disablePersonalization")
-    private final @Nullable Input<Boolean> disablePersonalization;
+      private final @Nullable Input<Boolean> disablePersonalization;
 
     public Input<Boolean> getDisablePersonalization() {
         return this.disablePersonalization == null ? Input.empty() : this.disablePersonalization;
@@ -93,7 +93,6 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.disablePersonalization = Input.ofNullable(disablePersonalization);
             return this;
         }
-
         public ScoringConfigArgs build() {
             return new ScoringConfigArgs(disableFreshness, disablePersonalization);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class JobStepExecutionOptionsResponse {
     /**
      * Initial delay between retries for job step execution.
      * 
-     */
+    */
     public Optional<Integer> getInitialRetryIntervalSeconds() {
         return Optional.ofNullable(this.initialRetryIntervalSeconds);
     }
     /**
      * The maximum amount of time to wait between retries for job step execution.
      * 
-     */
+    */
     public Optional<Integer> getMaximumRetryIntervalSeconds() {
         return Optional.ofNullable(this.maximumRetryIntervalSeconds);
     }
     /**
      * Maximum number of times the job step will be reattempted if the first attempt fails.
      * 
-     */
+    */
     public Optional<Integer> getRetryAttempts() {
         return Optional.ofNullable(this.retryAttempts);
     }
     /**
      * The backoff multiplier for the time between retries.
      * 
-     */
+    */
     public Optional<Double> getRetryIntervalBackoffMultiplier() {
         return Optional.ofNullable(this.retryIntervalBackoffMultiplier);
     }
     /**
      * Execution timeout for the job step.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -140,7 +140,6 @@ public final class JobStepExecutionOptionsResponse {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public JobStepExecutionOptionsResponse build() {
             return new JobStepExecutionOptionsResponse(initialRetryIntervalSeconds, maximumRetryIntervalSeconds, retryAttempts, retryIntervalBackoffMultiplier, timeoutSeconds);
         }

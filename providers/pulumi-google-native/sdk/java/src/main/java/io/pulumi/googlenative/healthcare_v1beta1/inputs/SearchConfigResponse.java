@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SearchParameterResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SearchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="searchParameters", required=true)
-    private final List<SearchParameterResponse> searchParameters;
+      private final List<SearchParameterResponse> searchParameters;
 
     public List<SearchParameterResponse> getSearchParameters() {
         return this.searchParameters;
@@ -60,7 +60,6 @@ public final class SearchConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.searchParameters = Objects.requireNonNull(searchParameters);
             return this;
         }
-
         public SearchConfigResponse build() {
             return new SearchConfigResponse(searchParameters);
         }

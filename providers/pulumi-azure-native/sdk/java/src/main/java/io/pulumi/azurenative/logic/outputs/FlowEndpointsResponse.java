@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.IpAddressResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,14 +33,14 @@ public final class FlowEndpointsResponse {
     /**
      * The access endpoint ip address.
      * 
-     */
+    */
     public List<IpAddressResponse> getAccessEndpointIpAddresses() {
         return this.accessEndpointIpAddresses == null ? List.of() : this.accessEndpointIpAddresses;
     }
     /**
      * The outgoing ip address.
      * 
-     */
+    */
     public List<IpAddressResponse> getOutgoingIpAddresses() {
         return this.outgoingIpAddresses == null ? List.of() : this.outgoingIpAddresses;
     }
@@ -76,7 +76,6 @@ public final class FlowEndpointsResponse {
             this.outgoingIpAddresses = outgoingIpAddresses;
             return this;
         }
-
         public FlowEndpointsResponse build() {
             return new FlowEndpointsResponse(accessEndpointIpAddresses, outgoingIpAddresses);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.lang.Integer;
@@ -66,35 +66,35 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
     /**
      * References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2FieldIdResponse> getExcludedFields() {
         return this.excludedFields;
     }
     /**
      * Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2FieldIdResponse> getIdentifyingFields() {
         return this.identifyingFields;
     }
     /**
      * Limit scanning only to these fields.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2FieldIdResponse> getIncludedFields() {
         return this.includedFields;
     }
     /**
      * Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
      * 
-     */
+    */
     public String getRowsLimit() {
         return this.rowsLimit;
     }
     /**
      * Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
      * 
-     */
+    */
     public Integer getRowsLimitPercent() {
         return this.rowsLimitPercent;
     }
@@ -104,7 +104,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
     /**
      * Complete BigQuery table reference.
      * 
-     */
+    */
     public GooglePrivacyDlpV2BigQueryTableResponse getTableReference() {
         return this.tableReference;
     }
@@ -175,7 +175,6 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
         }
-
         public GooglePrivacyDlpV2BigQueryOptionsResponse build() {
             return new GooglePrivacyDlpV2BigQueryOptionsResponse(excludedFields, identifyingFields, includedFields, rowsLimit, rowsLimitPercent, sampleMethod, tableReference);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.EnumValueResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OptionResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.SourceContextResponse;
@@ -56,35 +56,35 @@ public final class EnumResponse {
     /**
      * Enum value definitions.
      * 
-     */
+    */
     public List<EnumValueResponse> getEnumvalue() {
         return this.enumvalue;
     }
     /**
      * Enum type name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Protocol buffer options.
      * 
-     */
+    */
     public List<OptionResponse> getOptions() {
         return this.options;
     }
     /**
      * The source context.
      * 
-     */
+    */
     public SourceContextResponse getSourceContext() {
         return this.sourceContext;
     }
     /**
      * The source syntax.
      * 
-     */
+    */
     public String getSyntax() {
         return this.syntax;
     }
@@ -141,7 +141,6 @@ public final class EnumResponse {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }
-
         public EnumResponse build() {
             return new EnumResponse(enumvalue, name, options, sourceContext, syntax);
         }

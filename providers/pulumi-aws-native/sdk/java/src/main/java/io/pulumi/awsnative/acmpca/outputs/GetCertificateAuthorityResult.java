@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityRevocationConfiguration;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,21 +46,21 @@ public final class GetCertificateAuthorityResult {
     /**
      * The Amazon Resource Name (ARN) of the certificate authority.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
      * 
-     */
+    */
     public Optional<String> getCertificateSigningRequest() {
         return Optional.ofNullable(this.certificateSigningRequest);
     }
     /**
      * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
      * 
-     */
+    */
     public Optional<CertificateAuthorityRevocationConfiguration> getRevocationConfiguration() {
         return Optional.ofNullable(this.revocationConfiguration);
     }
@@ -113,7 +113,6 @@ public final class GetCertificateAuthorityResult {
             this.tags = tags;
             return this;
         }
-
         public GetCertificateAuthorityResult build() {
             return new GetCertificateAuthorityResult(arn, certificateSigningRequest, revocationConfiguration, tags);
         }

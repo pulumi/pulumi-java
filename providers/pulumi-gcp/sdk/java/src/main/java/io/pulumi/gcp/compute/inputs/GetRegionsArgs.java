@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -31,7 +31,7 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -80,7 +80,6 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
             this.status = status;
             return this;
         }
-
         public GetRegionsArgs build() {
             return new GetRegionsArgs(project, status);
         }

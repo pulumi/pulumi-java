@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListStaticSiteFunctionAppSettingsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class ListStaticSiteFunctionAppSettingsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListStaticSiteFunctionAppSettingsArgs extends io.pulumi.resou
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListStaticSiteFunctionAppSettingsArgs build() {
             return new ListStaticSiteFunctionAppSettingsArgs(name, resourceGroupName);
         }

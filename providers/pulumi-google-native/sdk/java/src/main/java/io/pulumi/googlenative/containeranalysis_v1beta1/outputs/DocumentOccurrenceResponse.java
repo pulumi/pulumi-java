@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,56 +74,56 @@ public final class DocumentOccurrenceResponse {
     /**
      * Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields
      * 
-     */
+    */
     public String getCreatorComment() {
         return this.creatorComment;
     }
     /**
      * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name
      * 
-     */
+    */
     public List<String> getCreators() {
         return this.creators;
     }
     /**
      * A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document
      * 
-     */
+    */
     public String getDocumentComment() {
         return this.documentComment;
     }
     /**
      * Identify any external SPDX documents referenced within this SPDX document
      * 
-     */
+    */
     public List<String> getExternalDocumentRefs() {
         return this.externalDocumentRefs;
     }
     /**
      * A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created
      * 
-     */
+    */
     public String getLicenseListVersion() {
         return this.licenseListVersion;
     }
     /**
      * Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
     /**
      * Identify name of this document as designated by creator
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -201,7 +201,6 @@ public final class DocumentOccurrenceResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public DocumentOccurrenceResponse build() {
             return new DocumentOccurrenceResponse(createTime, creatorComment, creators, documentComment, externalDocumentRefs, licenseListVersion, namespace, title);
         }

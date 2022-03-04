@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -33,7 +33,7 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyRingId")
-    private final @Nullable Input<String> keyRingId;
+      private final @Nullable Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId == null ? Input.empty() : this.keyRingId;
@@ -45,7 +45,7 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -119,7 +119,6 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
             this.policyData = Input.ofNullable(policyData);
             return this;
         }
-
         public KeyRingIAMPolicyState build() {
             return new KeyRingIAMPolicyState(etag, keyRingId, policyData);
         }

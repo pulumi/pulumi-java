@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ActivityDependencyResponse {
     /**
      * Activity name.
      * 
-     */
+    */
     public String getActivity() {
         return this.activity;
     }
     /**
      * Match-Condition for the dependency.
      * 
-     */
+    */
     public List<String> getDependencyConditions() {
         return this.dependencyConditions;
     }
@@ -75,7 +75,6 @@ public final class ActivityDependencyResponse {
             this.dependencyConditions = Objects.requireNonNull(dependencyConditions);
             return this;
         }
-
         public ActivityDependencyResponse build() {
             return new ActivityDependencyResponse(activity, dependencyConditions);
         }

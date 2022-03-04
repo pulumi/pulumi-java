@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotSlotDefaultValue;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class BotSlotDefaultValueSpecification {
     /**
      * A list of slot default values
      * 
-     */
+    */
     public List<BotSlotDefaultValue> getDefaultValueList() {
         return this.defaultValueList;
     }
@@ -53,7 +53,6 @@ public final class BotSlotDefaultValueSpecification {
             this.defaultValueList = Objects.requireNonNull(defaultValueList);
             return this;
         }
-
         public BotSlotDefaultValueSpecification build() {
             return new BotSlotDefaultValueSpecification(defaultValueList);
         }

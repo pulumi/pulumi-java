@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
     public static final MigrateProjectTagsArgs Empty = new MigrateProjectTagsArgs();
 
     @InputImport(name="additionalProperties")
-    private final @Nullable Input<String> additionalProperties;
+      private final @Nullable Input<String> additionalProperties;
 
     public Input<String> getAdditionalProperties() {
         return this.additionalProperties == null ? Input.empty() : this.additionalProperties;
@@ -62,7 +62,6 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
             this.additionalProperties = Input.ofNullable(additionalProperties);
             return this;
         }
-
         public MigrateProjectTagsArgs build() {
             return new MigrateProjectTagsArgs(additionalProperties);
         }

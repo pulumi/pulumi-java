@@ -6,21 +6,41 @@ package io.pulumi.azurenative.netapp;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.netapp.inputs.GetVolumeArgs;
 import io.pulumi.azurenative.netapp.outputs.GetVolumeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVolume {
-/**
- * Volume resource
+    private GetVolume() {}
+    public interface BuilderApplicator {
+        public void apply(GetVolumeArgs.Builder a);
+    }
+    private static GetVolumeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVolumeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Volume resource
  * API Version: 2020-12-01.
  * 
- *
- * Volume resource
+     *
+     * Volume resource
  * 
- */
+     */
+    public static CompletableFuture<GetVolumeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Volume resource
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Volume resource
+     * 
+     */
     public static CompletableFuture<GetVolumeResult> invokeAsync(GetVolumeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getVolume", TypeShape.of(GetVolumeResult.class), args == null ? GetVolumeArgs.Empty : args, Utilities.withVersion(options));
     }

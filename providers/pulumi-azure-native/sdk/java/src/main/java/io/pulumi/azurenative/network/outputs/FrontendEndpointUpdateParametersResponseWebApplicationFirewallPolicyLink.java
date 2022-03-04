@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class FrontendEndpointUpdateParametersResponseWebApplicationFirewal
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -54,7 +54,6 @@ public final class FrontendEndpointUpdateParametersResponseWebApplicationFirewal
             this.id = id;
             return this;
         }
-
         public FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink build() {
             return new FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink(id);
         }

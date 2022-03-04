@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class NetAppVolumeResponse {
     /**
      * File path through which the NFS volume is exposed by the provider
      * 
-     */
+    */
     public Optional<String> getNfsFilePath() {
         return Optional.ofNullable(this.nfsFilePath);
     }
     /**
      * IP address of the NFS provider
      * 
-     */
+    */
     public Optional<String> getNfsProviderIp() {
         return Optional.ofNullable(this.nfsProviderIp);
     }
@@ -76,7 +76,6 @@ public final class NetAppVolumeResponse {
             this.nfsProviderIp = nfsProviderIp;
             return this;
         }
-
         public NetAppVolumeResponse build() {
             return new NetAppVolumeResponse(nfsFilePath, nfsProviderIp);
         }

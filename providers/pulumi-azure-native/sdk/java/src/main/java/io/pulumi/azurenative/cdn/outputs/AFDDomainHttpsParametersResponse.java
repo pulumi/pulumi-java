@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class AFDDomainHttpsParametersResponse {
     /**
      * Defines the source of the SSL certificate.
      * 
-     */
+    */
     public String getCertificateType() {
         return this.certificateType;
     }
     /**
      * TLS protocol version that will be used for Https
      * 
-     */
+    */
     public Optional<String> getMinimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
      * Resource reference to the secret. ie. subs/rg/profile/secret
      * 
-     */
+    */
     public Optional<ResourceReferenceResponse> getSecret() {
         return Optional.ofNullable(this.secret);
     }
@@ -98,7 +98,6 @@ public final class AFDDomainHttpsParametersResponse {
             this.secret = secret;
             return this;
         }
-
         public AFDDomainHttpsParametersResponse build() {
             return new AFDDomainHttpsParametersResponse(certificateType, minimumTlsVersion, secret);
         }

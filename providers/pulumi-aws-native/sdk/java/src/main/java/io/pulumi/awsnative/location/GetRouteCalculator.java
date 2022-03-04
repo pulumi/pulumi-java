@@ -6,17 +6,33 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.location.inputs.GetRouteCalculatorArgs;
 import io.pulumi.awsnative.location.outputs.GetRouteCalculatorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouteCalculator {
-/**
- * Definition of AWS::Location::RouteCalculator Resource Type
+    private GetRouteCalculator() {}
+    public interface BuilderApplicator {
+        public void apply(GetRouteCalculatorArgs.Builder a);
+    }
+    private static GetRouteCalculatorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRouteCalculatorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of AWS::Location::RouteCalculator Resource Type
  * 
- */
+     */
+    public static CompletableFuture<GetRouteCalculatorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of AWS::Location::RouteCalculator Resource Type
+     * 
+     */
     public static CompletableFuture<GetRouteCalculatorResult> invokeAsync(GetRouteCalculatorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getRouteCalculator", TypeShape.of(GetRouteCalculatorResult.class), args == null ? GetRouteCalculatorArgs.Empty : args, Utilities.withVersion(options));
     }

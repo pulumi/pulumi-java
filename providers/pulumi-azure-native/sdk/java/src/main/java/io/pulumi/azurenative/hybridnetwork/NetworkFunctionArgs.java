@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurationArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.SubResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="device")
-    private final @Nullable Input<SubResourceArgs> device;
+      private final @Nullable Input<SubResourceArgs> device;
 
     public Input<SubResourceArgs> getDevice() {
         return this.device == null ? Input.empty() : this.device;
@@ -35,7 +35,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="managedApplicationParameters")
-    private final @Nullable Input<Object> managedApplicationParameters;
+      private final @Nullable Input<Object> managedApplicationParameters;
 
     public Input<Object> getManagedApplicationParameters() {
         return this.managedApplicationParameters == null ? Input.empty() : this.managedApplicationParameters;
@@ -57,7 +57,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkFunctionName")
-    private final @Nullable Input<String> networkFunctionName;
+      private final @Nullable Input<String> networkFunctionName;
 
     public Input<String> getNetworkFunctionName() {
         return this.networkFunctionName == null ? Input.empty() : this.networkFunctionName;
@@ -68,7 +68,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkFunctionUserConfigurations")
-    private final @Nullable Input<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
+      private final @Nullable Input<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
 
     public Input<List<NetworkFunctionUserConfigurationArgs>> getNetworkFunctionUserConfigurations() {
         return this.networkFunctionUserConfigurations == null ? Input.empty() : this.networkFunctionUserConfigurations;
@@ -79,7 +79,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="skuName")
-    private final @Nullable Input<String> skuName;
+      private final @Nullable Input<String> skuName;
 
     public Input<String> getSkuName() {
         return this.skuName == null ? Input.empty() : this.skuName;
@@ -101,7 +101,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vendorName")
-    private final @Nullable Input<String> vendorName;
+      private final @Nullable Input<String> vendorName;
 
     public Input<String> getVendorName() {
         return this.vendorName == null ? Input.empty() : this.vendorName;
@@ -276,7 +276,6 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
             this.vendorName = Input.ofNullable(vendorName);
             return this;
         }
-
         public NetworkFunctionArgs build() {
             return new NetworkFunctionArgs(device, location, managedApplicationParameters, networkFunctionName, networkFunctionUserConfigurations, resourceGroupName, skuName, tags, vendorName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VMResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,28 +46,28 @@ public final class BastionShareableLinkResponse {
     /**
      * The unique Bastion Shareable Link to the virtual machine.
      * 
-     */
+    */
     public String getBsl() {
         return this.bsl;
     }
     /**
      * The time when the link was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Optional field indicating the warning or error message related to the vm in case of partial failure.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Reference of the virtual machine resource.
      * 
-     */
+    */
     public VMResponse getVm() {
         return this.vm;
     }
@@ -117,7 +117,6 @@ public final class BastionShareableLinkResponse {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }
-
         public BastionShareableLinkResponse build() {
             return new BastionShareableLinkResponse(bsl, createdAt, message, vm);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class BudgetTimePeriodResponse {
     /**
      * The end date for the budget. If not provided, we default this to 10 years from the start date.
      * 
-     */
+    */
     public Optional<String> getEndDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
      * The start date for the budget.
      * 
-     */
+    */
     public String getStartDate() {
         return this.startDate;
     }
@@ -76,7 +76,6 @@ public final class BudgetTimePeriodResponse {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
-
         public BudgetTimePeriodResponse build() {
             return new BudgetTimePeriodResponse(endDate, startDate);
         }

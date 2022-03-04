@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse extend
      * 
      */
     @InputImport(name="loggingSettings", required=true)
-    private final GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings;
+      private final GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings;
 
     public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse getLoggingSettings() {
         return this.loggingSettings;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse extend
             this.loggingSettings = Objects.requireNonNull(loggingSettings);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse(loggingSettings);
         }

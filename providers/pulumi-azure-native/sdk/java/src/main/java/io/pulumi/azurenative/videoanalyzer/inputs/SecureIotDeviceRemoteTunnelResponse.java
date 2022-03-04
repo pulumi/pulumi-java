@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SecureIotDeviceRemoteTunnelResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deviceId", required=true)
-    private final String deviceId;
+      private final String deviceId;
 
     public String getDeviceId() {
         return this.deviceId;
@@ -32,7 +32,7 @@ public final class SecureIotDeviceRemoteTunnelResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="iotHubName", required=true)
-    private final String iotHubName;
+      private final String iotHubName;
 
     public String getIotHubName() {
         return this.iotHubName;
@@ -44,7 +44,7 @@ public final class SecureIotDeviceRemoteTunnelResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -103,7 +103,6 @@ public final class SecureIotDeviceRemoteTunnelResponse extends io.pulumi.resourc
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SecureIotDeviceRemoteTunnelResponse build() {
             return new SecureIotDeviceRemoteTunnelResponse(deviceId, iotHubName, type);
         }

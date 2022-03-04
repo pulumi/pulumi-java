@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionVpcConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,14 +37,14 @@ public final class ModelQualityJobDefinitionNetworkConfig {
     /**
      * Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
      * 
-     */
+    */
     public Optional<Boolean> getEnableInterContainerTrafficEncryption() {
         return Optional.ofNullable(this.enableInterContainerTrafficEncryption);
     }
     /**
      * Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
      * 
-     */
+    */
     public Optional<Boolean> getEnableNetworkIsolation() {
         return Optional.ofNullable(this.enableNetworkIsolation);
     }
@@ -90,7 +90,6 @@ public final class ModelQualityJobDefinitionNetworkConfig {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public ModelQualityJobDefinitionNetworkConfig build() {
             return new ModelQualityJobDefinitionNetworkConfig(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }

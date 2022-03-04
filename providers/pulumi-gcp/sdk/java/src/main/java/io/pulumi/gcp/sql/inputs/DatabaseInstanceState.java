@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceCloneGetArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceIpAddressGetArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceReplicaConfigurationGetArgs;
@@ -29,7 +29,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clone")
-    private final @Nullable Input<DatabaseInstanceCloneGetArgs> clone;
+      private final @Nullable Input<DatabaseInstanceCloneGetArgs> clone;
 
     public Input<DatabaseInstanceCloneGetArgs> getClone() {
         return this.clone == null ? Input.empty() : this.clone;
@@ -41,7 +41,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionName")
-    private final @Nullable Input<String> connectionName;
+      private final @Nullable Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName == null ? Input.empty() : this.connectionName;
@@ -60,7 +60,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="databaseVersion")
-    private final @Nullable Input<String> databaseVersion;
+      private final @Nullable Input<String> databaseVersion;
 
     public Input<String> getDatabaseVersion() {
         return this.databaseVersion == null ? Input.empty() : this.databaseVersion;
@@ -72,7 +72,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deletionProtection")
-    private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Input<Boolean> deletionProtection;
 
     public Input<Boolean> getDeletionProtection() {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
@@ -90,7 +90,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptionKeyName")
-    private final @Nullable Input<String> encryptionKeyName;
+      private final @Nullable Input<String> encryptionKeyName;
 
     public Input<String> getEncryptionKeyName() {
         return this.encryptionKeyName == null ? Input.empty() : this.encryptionKeyName;
@@ -101,14 +101,14 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="firstIpAddress")
-    private final @Nullable Input<String> firstIpAddress;
+      private final @Nullable Input<String> firstIpAddress;
 
     public Input<String> getFirstIpAddress() {
         return this.firstIpAddress == null ? Input.empty() : this.firstIpAddress;
     }
 
     @InputImport(name="ipAddresses")
-    private final @Nullable Input<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
+      private final @Nullable Input<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
 
     public Input<List<DatabaseInstanceIpAddressGetArgs>> getIpAddresses() {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
@@ -121,7 +121,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="masterInstanceName")
-    private final @Nullable Input<String> masterInstanceName;
+      private final @Nullable Input<String> masterInstanceName;
 
     public Input<String> getMasterInstanceName() {
         return this.masterInstanceName == null ? Input.empty() : this.masterInstanceName;
@@ -132,7 +132,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -143,7 +143,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
@@ -154,7 +154,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -165,7 +165,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicIpAddress")
-    private final @Nullable Input<String> publicIpAddress;
+      private final @Nullable Input<String> publicIpAddress;
 
     public Input<String> getPublicIpAddress() {
         return this.publicIpAddress == null ? Input.empty() : this.publicIpAddress;
@@ -181,7 +181,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -193,7 +193,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicaConfiguration")
-    private final @Nullable Input<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
+      private final @Nullable Input<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
 
     public Input<DatabaseInstanceReplicaConfigurationGetArgs> getReplicaConfiguration() {
         return this.replicaConfiguration == null ? Input.empty() : this.replicaConfiguration;
@@ -207,7 +207,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="restoreBackupContext")
-    private final @Nullable Input<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
+      private final @Nullable Input<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
 
     public Input<DatabaseInstanceRestoreBackupContextGetArgs> getRestoreBackupContext() {
         return this.restoreBackupContext == null ? Input.empty() : this.restoreBackupContext;
@@ -218,7 +218,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rootPassword")
-    private final @Nullable Input<String> rootPassword;
+      private final @Nullable Input<String> rootPassword;
 
     public Input<String> getRootPassword() {
         return this.rootPassword == null ? Input.empty() : this.rootPassword;
@@ -229,14 +229,14 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
     @InputImport(name="serverCaCerts")
-    private final @Nullable Input<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
+      private final @Nullable Input<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
 
     public Input<List<DatabaseInstanceServerCaCertGetArgs>> getServerCaCerts() {
         return this.serverCaCerts == null ? Input.empty() : this.serverCaCerts;
@@ -248,7 +248,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceAccountEmailAddress")
-    private final @Nullable Input<String> serviceAccountEmailAddress;
+      private final @Nullable Input<String> serviceAccountEmailAddress;
 
     public Input<String> getServiceAccountEmailAddress() {
         return this.serviceAccountEmailAddress == null ? Input.empty() : this.serviceAccountEmailAddress;
@@ -260,7 +260,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<DatabaseInstanceSettingsGetArgs> settings;
+      private final @Nullable Input<DatabaseInstanceSettingsGetArgs> settings;
 
     public Input<DatabaseInstanceSettingsGetArgs> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -589,7 +589,6 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
             this.settings = Input.ofNullable(settings);
             return this;
         }
-
         public DatabaseInstanceState build() {
             return new DatabaseInstanceState(clone, connectionName, databaseVersion, deletionProtection, encryptionKeyName, firstIpAddress, ipAddresses, masterInstanceName, name, privateIpAddress, project, publicIpAddress, region, replicaConfiguration, restoreBackupContext, rootPassword, selfLink, serverCaCerts, serviceAccountEmailAddress, settings);
         }

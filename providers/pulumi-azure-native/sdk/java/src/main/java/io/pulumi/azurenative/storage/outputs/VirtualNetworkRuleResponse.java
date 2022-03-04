@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class VirtualNetworkRuleResponse {
     /**
      * The action of virtual network rule.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Gets the state of virtual network rule.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
      * 
-     */
+    */
     public String getVirtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }
@@ -97,7 +97,6 @@ public final class VirtualNetworkRuleResponse {
             this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(action, state, virtualNetworkResourceId);
         }

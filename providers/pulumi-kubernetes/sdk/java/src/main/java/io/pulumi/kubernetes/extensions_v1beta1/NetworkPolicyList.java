@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.extensions_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.extensions_v1beta1.NetworkPolicyListArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.NetworkPolicy;
@@ -78,6 +78,37 @@ public class NetworkPolicyList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NetworkPolicyListArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.extensions_v1beta1.NetworkPolicyListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.extensions_v1beta1.NetworkPolicyListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NetworkPolicyList(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public NetworkPolicyList(String name) {
+        this(name, NetworkPolicyListArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NetworkPolicyList(String name, NetworkPolicyListArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

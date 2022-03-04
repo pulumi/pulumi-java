@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ScriptsToExecuteResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SetupScriptsResponse {
     /**
      * Customized setup scripts
      * 
-     */
+    */
     public Optional<ScriptsToExecuteResponse> getScripts() {
         return Optional.ofNullable(this.scripts);
     }
@@ -54,7 +54,6 @@ public final class SetupScriptsResponse {
             this.scripts = scripts;
             return this;
         }
-
         public SetupScriptsResponse build() {
             return new SetupScriptsResponse(scripts);
         }

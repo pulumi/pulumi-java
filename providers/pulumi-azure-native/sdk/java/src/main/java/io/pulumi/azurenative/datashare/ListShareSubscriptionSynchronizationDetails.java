@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.ListShareSubscriptionSynchronizationDetailsArgs;
 import io.pulumi.azurenative.datashare.outputs.ListShareSubscriptionSynchronizationDetailsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListShareSubscriptionSynchronizationDetails {
-/**
- * details of synchronization
+    private ListShareSubscriptionSynchronizationDetails() {}
+    public interface BuilderApplicator {
+        public void apply(ListShareSubscriptionSynchronizationDetailsArgs.Builder a);
+    }
+    private static ListShareSubscriptionSynchronizationDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListShareSubscriptionSynchronizationDetailsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * details of synchronization
  * API Version: 2020-09-01.
  * 
- *
- * details of synchronization
+     *
+     * details of synchronization
  * 
- */
+     */
+    public static CompletableFuture<ListShareSubscriptionSynchronizationDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * details of synchronization
+     * API Version: 2020-09-01.
+     * 
+     *
+         * details of synchronization
+     * 
+     */
     public static CompletableFuture<ListShareSubscriptionSynchronizationDetailsResult> invokeAsync(ListShareSubscriptionSynchronizationDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSubscriptionSynchronizationDetails", TypeShape.of(ListShareSubscriptionSynchronizationDetailsResult.class), args == null ? ListShareSubscriptionSynchronizationDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

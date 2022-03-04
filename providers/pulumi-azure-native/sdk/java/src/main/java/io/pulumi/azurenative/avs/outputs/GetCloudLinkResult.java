@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class GetCloudLinkResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identifier of the other private cloud participating in the link.
      * 
-     */
+    */
     public Optional<String> getLinkedCloud() {
         return Optional.ofNullable(this.linkedCloud);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The state of the cloud link.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetCloudLinkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCloudLinkResult build() {
             return new GetCloudLinkResult(id, linkedCloud, name, status, type);
         }

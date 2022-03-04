@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseServerSideEncryptionConfig
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseSourceConfigurationArgs;
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,49 +21,49 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
     public static final KnowledgeBaseArgs Empty = new KnowledgeBaseArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="knowledgeBaseType", required=true)
-    private final Input<KnowledgeBaseType> knowledgeBaseType;
+      private final Input<KnowledgeBaseType> knowledgeBaseType;
 
     public Input<KnowledgeBaseType> getKnowledgeBaseType() {
         return this.knowledgeBaseType;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="renderingConfiguration")
-    private final @Nullable Input<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration;
+      private final @Nullable Input<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration;
 
     public Input<KnowledgeBaseRenderingConfigurationArgs> getRenderingConfiguration() {
         return this.renderingConfiguration == null ? Input.empty() : this.renderingConfiguration;
     }
 
     @InputImport(name="serverSideEncryptionConfiguration")
-    private final @Nullable Input<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
+      private final @Nullable Input<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
     public Input<KnowledgeBaseServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration == null ? Input.empty() : this.serverSideEncryptionConfiguration;
     }
 
     @InputImport(name="sourceConfiguration")
-    private final @Nullable Input<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration;
+      private final @Nullable Input<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration;
 
     public Input<KnowledgeBaseSourceConfigurationArgs> getSourceConfiguration() {
         return this.sourceConfiguration == null ? Input.empty() : this.sourceConfiguration;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<KnowledgeBaseTagArgs>> tags;
+      private final @Nullable Input<List<KnowledgeBaseTagArgs>> tags;
 
     public Input<List<KnowledgeBaseTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -197,7 +197,6 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public KnowledgeBaseArgs build() {
             return new KnowledgeBaseArgs(description, knowledgeBaseType, name, renderingConfiguration, serverSideEncryptionConfiguration, sourceConfiguration, tags);
         }

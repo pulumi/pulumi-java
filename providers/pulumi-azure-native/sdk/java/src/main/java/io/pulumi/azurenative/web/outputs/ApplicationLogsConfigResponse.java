@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.AzureBlobStorageApplicationLogsConfigResponse;
 import io.pulumi.azurenative.web.outputs.AzureTableStorageApplicationLogsConfigResponse;
 import io.pulumi.azurenative.web.outputs.FileSystemApplicationLogsConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -42,21 +42,21 @@ public final class ApplicationLogsConfigResponse {
     /**
      * Application logs to blob storage configuration.
      * 
-     */
+    */
     public Optional<AzureBlobStorageApplicationLogsConfigResponse> getAzureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
     /**
      * Application logs to azure table storage configuration.
      * 
-     */
+    */
     public Optional<AzureTableStorageApplicationLogsConfigResponse> getAzureTableStorage() {
         return Optional.ofNullable(this.azureTableStorage);
     }
     /**
      * Application logs to file system configuration.
      * 
-     */
+    */
     public Optional<FileSystemApplicationLogsConfigResponse> getFileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -99,7 +99,6 @@ public final class ApplicationLogsConfigResponse {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public ApplicationLogsConfigResponse build() {
             return new ApplicationLogsConfigResponse(azureBlobStorage, azureTableStorage, fileSystem);
         }

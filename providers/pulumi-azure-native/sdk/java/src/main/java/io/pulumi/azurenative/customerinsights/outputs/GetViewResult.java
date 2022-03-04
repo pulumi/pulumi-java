@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -90,70 +90,70 @@ public final class GetViewResult {
     /**
      * Date time when view was last modified.
      * 
-     */
+    */
     public String getChanged() {
         return this.changed;
     }
     /**
      * Date time when view was created.
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * View definition.
      * 
-     */
+    */
     public String getDefinition() {
         return this.definition;
     }
     /**
      * Localized display name for the view.
      * 
-     */
+    */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * the hub name.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * the user ID.
      * 
-     */
+    */
     public Optional<String> getUserId() {
         return Optional.ofNullable(this.userId);
     }
     /**
      * Name of the view.
      * 
-     */
+    */
     public String getViewName() {
         return this.viewName;
     }
@@ -245,7 +245,6 @@ public final class GetViewResult {
             this.viewName = Objects.requireNonNull(viewName);
             return this;
         }
-
         public GetViewResult build() {
             return new GetViewResult(changed, created, definition, displayName, id, name, tenantId, type, userId, viewName);
         }

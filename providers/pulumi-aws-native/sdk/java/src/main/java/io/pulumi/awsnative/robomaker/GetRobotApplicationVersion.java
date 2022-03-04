@@ -6,17 +6,33 @@ package io.pulumi.awsnative.robomaker;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.robomaker.inputs.GetRobotApplicationVersionArgs;
 import io.pulumi.awsnative.robomaker.outputs.GetRobotApplicationVersionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRobotApplicationVersion {
-/**
- * An example resource schema demonstrating some basic constructs and validation rules.
+    private GetRobotApplicationVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetRobotApplicationVersionArgs.Builder a);
+    }
+    private static GetRobotApplicationVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRobotApplicationVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
  * 
- */
+     */
+    public static CompletableFuture<GetRobotApplicationVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetRobotApplicationVersionResult> invokeAsync(GetRobotApplicationVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getRobotApplicationVersion", TypeShape.of(GetRobotApplicationVersionResult.class), args == null ? GetRobotApplicationVersionArgs.Empty : args, Utilities.withVersion(options));
     }

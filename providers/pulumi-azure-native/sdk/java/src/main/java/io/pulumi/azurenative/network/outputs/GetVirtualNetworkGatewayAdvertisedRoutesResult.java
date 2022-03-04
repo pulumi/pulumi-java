@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.GatewayRouteResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
     /**
      * List of gateway routes.
      * 
-     */
+    */
     public List<GatewayRouteResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -54,7 +54,6 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
             this.value = value;
             return this;
         }
-
         public GetVirtualNetworkGatewayAdvertisedRoutesResult build() {
             return new GetVirtualNetworkGatewayAdvertisedRoutesResult(value);
         }

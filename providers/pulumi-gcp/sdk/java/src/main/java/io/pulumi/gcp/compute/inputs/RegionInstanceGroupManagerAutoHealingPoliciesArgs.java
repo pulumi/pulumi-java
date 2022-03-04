@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesArgs extends io.
      * 
      */
     @InputImport(name="healthCheck", required=true)
-    private final Input<String> healthCheck;
+      private final Input<String> healthCheck;
 
     public Input<String> getHealthCheck() {
         return this.healthCheck;
@@ -31,7 +31,7 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesArgs extends io.
      * 
      */
     @InputImport(name="initialDelaySec", required=true)
-    private final Input<Integer> initialDelaySec;
+      private final Input<Integer> initialDelaySec;
 
     public Input<Integer> getInitialDelaySec() {
         return this.initialDelaySec;
@@ -90,7 +90,6 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesArgs extends io.
             this.initialDelaySec = Input.of(Objects.requireNonNull(initialDelaySec));
             return this;
         }
-
         public RegionInstanceGroupManagerAutoHealingPoliciesArgs build() {
             return new RegionInstanceGroupManagerAutoHealingPoliciesArgs(healthCheck, initialDelaySec);
         }

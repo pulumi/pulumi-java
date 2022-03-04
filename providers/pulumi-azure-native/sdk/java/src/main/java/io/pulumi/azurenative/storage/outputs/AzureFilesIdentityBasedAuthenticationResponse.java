@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ActiveDirectoryPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class AzureFilesIdentityBasedAuthenticationResponse {
     /**
      * Required if choose AD.
      * 
-     */
+    */
     public Optional<ActiveDirectoryPropertiesResponse> getActiveDirectoryProperties() {
         return Optional.ofNullable(this.activeDirectoryProperties);
     }
     /**
      * Indicates the directory service used.
      * 
-     */
+    */
     public String getDirectoryServiceOptions() {
         return this.directoryServiceOptions;
     }
@@ -77,7 +77,6 @@ public final class AzureFilesIdentityBasedAuthenticationResponse {
             this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions);
             return this;
         }
-
         public AzureFilesIdentityBasedAuthenticationResponse build() {
             return new AzureFilesIdentityBasedAuthenticationResponse(activeDirectoryProperties, directoryServiceOptions);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,7 +34,7 @@ public final class RecoveryPlanManualActionDetailsResponse {
     /**
      * The manual action description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -42,7 +42,7 @@ public final class RecoveryPlanManualActionDetailsResponse {
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is 'ManualActionDetails'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
@@ -78,7 +78,6 @@ public final class RecoveryPlanManualActionDetailsResponse {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public RecoveryPlanManualActionDetailsResponse build() {
             return new RecoveryPlanManualActionDetailsResponse(description, instanceType);
         }

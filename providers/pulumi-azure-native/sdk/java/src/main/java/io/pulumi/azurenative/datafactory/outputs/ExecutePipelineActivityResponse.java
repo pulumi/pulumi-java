@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.PipelineReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -83,35 +83,35 @@ public final class ExecutePipelineActivityResponse {
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Pipeline parameters.
      * 
-     */
+    */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Pipeline reference.
      * 
-     */
+    */
     public PipelineReferenceResponse getPipeline() {
         return this.pipeline;
     }
@@ -119,21 +119,21 @@ public final class ExecutePipelineActivityResponse {
      * Type of activity.
      * Expected value is 'ExecutePipeline'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
      * 
-     */
+    */
     public Optional<Boolean> getWaitOnCompletion() {
         return Optional.ofNullable(this.waitOnCompletion);
     }
@@ -211,7 +211,6 @@ public final class ExecutePipelineActivityResponse {
             this.waitOnCompletion = waitOnCompletion;
             return this;
         }
-
         public ExecutePipelineActivityResponse build() {
             return new ExecutePipelineActivityResponse(dependsOn, description, name, parameters, pipeline, type, userProperties, waitOnCompletion);
         }

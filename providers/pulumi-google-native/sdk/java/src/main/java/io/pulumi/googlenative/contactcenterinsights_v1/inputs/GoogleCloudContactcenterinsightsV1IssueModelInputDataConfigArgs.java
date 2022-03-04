@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
      * 
      */
     @InputImport(name="medium")
-    private final @Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
+      private final @Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
 
     public Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> getMedium() {
         return this.medium == null ? Input.empty() : this.medium;
@@ -94,7 +94,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
             this.medium = Input.ofNullable(medium);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs(filter, medium);
         }

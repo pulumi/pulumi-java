@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.projects.outputs.GetProjectProject;
 import java.lang.String;
 import java.util.List;
@@ -39,14 +39,14 @@ public final class GetProjectResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of projects matching the provided filter. Structure is defined below.
      * 
-     */
+    */
     public List<GetProjectProject> getProjects() {
         return this.projects;
     }
@@ -89,7 +89,6 @@ public final class GetProjectResult {
             this.projects = Objects.requireNonNull(projects);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(filter, id, projects);
         }

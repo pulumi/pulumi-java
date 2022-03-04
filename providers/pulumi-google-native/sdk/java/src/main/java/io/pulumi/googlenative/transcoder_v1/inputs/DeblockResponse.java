@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeblockResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class DeblockResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="strength", required=true)
-    private final Double strength;
+      private final Double strength;
 
     public Double getStrength() {
         return this.strength;
@@ -82,7 +82,6 @@ public final class DeblockResponse extends io.pulumi.resources.InvokeArgs {
             this.strength = Objects.requireNonNull(strength);
             return this;
         }
-
         public DeblockResponse build() {
             return new DeblockResponse(enabled, strength);
         }

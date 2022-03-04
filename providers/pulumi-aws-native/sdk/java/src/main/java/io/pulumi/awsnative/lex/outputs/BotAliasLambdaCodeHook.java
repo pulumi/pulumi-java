@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BotAliasLambdaCodeHook {
     /**
      * The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
      * 
-     */
+    */
     public String getCodeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
     }
     /**
      * The Amazon Resource Name (ARN) of the Lambda function.
      * 
-     */
+    */
     public String getLambdaArn() {
         return this.lambdaArn;
     }
@@ -74,7 +74,6 @@ public final class BotAliasLambdaCodeHook {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
-
         public BotAliasLambdaCodeHook build() {
             return new BotAliasLambdaCodeHook(codeHookInterfaceVersion, lambdaArn);
         }

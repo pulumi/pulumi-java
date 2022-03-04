@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceGroupManagerVersionTargetSize;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class InstanceGroupManagerVersion {
     /**
      * - The full URL to an instance template from which all new instances of this version will be created.
      * 
-     */
+    */
     public String getInstanceTemplate() {
         return this.instanceTemplate;
     }
     /**
      * - Version name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
      * 
-     */
+    */
     public Optional<InstanceGroupManagerVersionTargetSize> getTargetSize() {
         return Optional.ofNullable(this.targetSize);
     }
@@ -98,7 +98,6 @@ public final class InstanceGroupManagerVersion {
             this.targetSize = targetSize;
             return this;
         }
-
         public InstanceGroupManagerVersion build() {
             return new InstanceGroupManagerVersion(instanceTemplate, name, targetSize);
         }

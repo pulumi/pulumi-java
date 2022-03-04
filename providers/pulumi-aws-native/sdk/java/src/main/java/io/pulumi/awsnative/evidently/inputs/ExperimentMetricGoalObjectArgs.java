@@ -5,7 +5,7 @@ package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.awsnative.evidently.enums.ExperimentMetricGoalObjectDesiredChange;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
     public static final ExperimentMetricGoalObjectArgs Empty = new ExperimentMetricGoalObjectArgs();
 
     @InputImport(name="desiredChange", required=true)
-    private final Input<ExperimentMetricGoalObjectDesiredChange> desiredChange;
+      private final Input<ExperimentMetricGoalObjectDesiredChange> desiredChange;
 
     public Input<ExperimentMetricGoalObjectDesiredChange> getDesiredChange() {
         return this.desiredChange;
@@ -27,7 +27,7 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="entityIdKey", required=true)
-    private final Input<String> entityIdKey;
+      private final Input<String> entityIdKey;
 
     public Input<String> getEntityIdKey() {
         return this.entityIdKey;
@@ -38,21 +38,21 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="eventPattern", required=true)
-    private final Input<String> eventPattern;
+      private final Input<String> eventPattern;
 
     public Input<String> getEventPattern() {
         return this.eventPattern;
     }
 
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
     }
 
     @InputImport(name="unitLabel")
-    private final @Nullable Input<String> unitLabel;
+      private final @Nullable Input<String> unitLabel;
 
     public Input<String> getUnitLabel() {
         return this.unitLabel == null ? Input.empty() : this.unitLabel;
@@ -63,7 +63,7 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="valueKey", required=true)
-    private final Input<String> valueKey;
+      private final Input<String> valueKey;
 
     public Input<String> getValueKey() {
         return this.valueKey;
@@ -182,7 +182,6 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
             this.valueKey = Input.of(Objects.requireNonNull(valueKey));
             return this;
         }
-
         public ExperimentMetricGoalObjectArgs build() {
             return new ExperimentMetricGoalObjectArgs(desiredChange, entityIdKey, eventPattern, metricName, unitLabel, valueKey);
         }

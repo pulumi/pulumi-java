@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.AlertRuleLeafConditionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="anyOf")
-    private final @Nullable Input<List<AlertRuleLeafConditionArgs>> anyOf;
+      private final @Nullable Input<List<AlertRuleLeafConditionArgs>> anyOf;
 
     public Input<List<AlertRuleLeafConditionArgs>> getAnyOf() {
         return this.anyOf == null ? Input.empty() : this.anyOf;
@@ -42,7 +42,7 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="containsAny")
-    private final @Nullable Input<List<String>> containsAny;
+      private final @Nullable Input<List<String>> containsAny;
 
     public Input<List<String>> getContainsAny() {
         return this.containsAny == null ? Input.empty() : this.containsAny;
@@ -53,7 +53,7 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="equals")
-    private final @Nullable Input<String> equals;
+      private final @Nullable Input<String> equals;
 
     public Input<String> getEquals() {
         return this.equals == null ? Input.empty() : this.equals;
@@ -65,7 +65,7 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+      private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -154,7 +154,6 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
             this.field = Input.ofNullable(field);
             return this;
         }
-
         public AlertRuleAnyOfOrLeafConditionArgs build() {
             return new AlertRuleAnyOfOrLeafConditionArgs(anyOf, containsAny, equals, field);
         }

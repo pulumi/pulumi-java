@@ -6,21 +6,41 @@ package io.pulumi.azurenative.solutions;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.solutions.inputs.GetJitRequestArgs;
 import io.pulumi.azurenative.solutions.outputs.GetJitRequestResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJitRequest {
-/**
- * Information about JIT request definition.
+    private GetJitRequest() {}
+    public interface BuilderApplicator {
+        public void apply(GetJitRequestArgs.Builder a);
+    }
+    private static GetJitRequestArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJitRequestArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Information about JIT request definition.
  * API Version: 2019-07-01.
  * 
- *
- * Information about JIT request definition.
+     *
+     * Information about JIT request definition.
  * 
- */
+     */
+    public static CompletableFuture<GetJitRequestResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Information about JIT request definition.
+     * API Version: 2019-07-01.
+     * 
+     *
+         * Information about JIT request definition.
+     * 
+     */
     public static CompletableFuture<GetJitRequestResult> invokeAsync(GetJitRequestArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:solutions:getJitRequest", TypeShape.of(GetJitRequestResult.class), args == null ? GetJitRequestArgs.Empty : args, Utilities.withVersion(options));
     }

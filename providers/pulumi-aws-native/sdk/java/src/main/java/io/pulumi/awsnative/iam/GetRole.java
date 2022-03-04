@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iam;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iam.inputs.GetRoleArgs;
 import io.pulumi.awsnative.iam.outputs.GetRoleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRole {
-/**
- * Resource Type definition for AWS::IAM::Role
+    private GetRole() {}
+    public interface BuilderApplicator {
+        public void apply(GetRoleArgs.Builder a);
+    }
+    private static GetRoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::IAM::Role
  * 
- */
+     */
+    public static CompletableFuture<GetRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::IAM::Role
+     * 
+     */
     public static CompletableFuture<GetRoleResult> invokeAsync(GetRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getRole", TypeShape.of(GetRoleResult.class), args == null ? GetRoleArgs.Empty : args, Utilities.withVersion(options));
     }

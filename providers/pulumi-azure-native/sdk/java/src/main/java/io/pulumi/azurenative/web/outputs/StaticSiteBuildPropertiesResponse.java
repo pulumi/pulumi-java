@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class StaticSiteBuildPropertiesResponse {
     /**
      * A custom command to run during deployment of the Azure Functions API application.
      * 
-     */
+    */
     public Optional<String> getApiBuildCommand() {
         return Optional.ofNullable(this.apiBuildCommand);
     }
     /**
      * The path to the api code within the repository.
      * 
-     */
+    */
     public Optional<String> getApiLocation() {
         return Optional.ofNullable(this.apiLocation);
     }
     /**
      * Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
      * 
-     */
+    */
     public Optional<String> getAppArtifactLocation() {
         return Optional.ofNullable(this.appArtifactLocation);
     }
     /**
      * A custom command to run during deployment of the static content application.
      * 
-     */
+    */
     public Optional<String> getAppBuildCommand() {
         return Optional.ofNullable(this.appBuildCommand);
     }
     /**
      * The path to the app code within the repository.
      * 
-     */
+    */
     public Optional<String> getAppLocation() {
         return Optional.ofNullable(this.appLocation);
     }
     /**
      * Github Action secret name override.
      * 
-     */
+    */
     public Optional<String> getGithubActionSecretNameOverride() {
         return Optional.ofNullable(this.githubActionSecretNameOverride);
     }
     /**
      * The output path of the app after building.
      * 
-     */
+    */
     public Optional<String> getOutputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
     /**
      * Skip Github Action workflow generation.
      * 
-     */
+    */
     public Optional<Boolean> getSkipGithubActionWorkflowGeneration() {
         return Optional.ofNullable(this.skipGithubActionWorkflowGeneration);
     }
@@ -203,7 +203,6 @@ public final class StaticSiteBuildPropertiesResponse {
             this.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
             return this;
         }
-
         public StaticSiteBuildPropertiesResponse build() {
             return new StaticSiteBuildPropertiesResponse(apiBuildCommand, apiLocation, appArtifactLocation, appBuildCommand, appLocation, githubActionSecretNameOverride, outputLocation, skipGithubActionWorkflowGeneration);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigateway_v1beta.outputs.ApigatewayBackendConfigResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ApigatewayGatewayConfigResponse {
     /**
      * Backend settings that are applied to all backends of the Gateway.
      * 
-     */
+    */
     public ApigatewayBackendConfigResponse getBackendConfig() {
         return this.backendConfig;
     }
@@ -52,7 +52,6 @@ public final class ApigatewayGatewayConfigResponse {
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }
-
         public ApigatewayGatewayConfigResponse build() {
             return new ApigatewayGatewayConfigResponse(backendConfig);
         }

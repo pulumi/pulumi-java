@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.MySqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.p
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-    private final List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases;
+      private final List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -34,7 +34,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.p
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final MySqlConnectionInfoResponse sourceConnectionInfo;
+      private final MySqlConnectionInfoResponse sourceConnectionInfo;
 
     public MySqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -45,7 +45,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.p
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final MySqlConnectionInfoResponse targetConnectionInfo;
+      private final MySqlConnectionInfoResponse targetConnectionInfo;
 
     public MySqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -104,7 +104,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.p
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskInputResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }

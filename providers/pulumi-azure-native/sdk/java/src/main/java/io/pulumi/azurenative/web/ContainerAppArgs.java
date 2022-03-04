@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.ConfigurationArgs;
 import io.pulumi.azurenative.web.inputs.TemplateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<ConfigurationArgs> configuration;
+      private final @Nullable Input<ConfigurationArgs> configuration;
 
     public Input<ConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -33,7 +33,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -44,7 +44,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeEnvironmentId")
-    private final @Nullable Input<String> kubeEnvironmentId;
+      private final @Nullable Input<String> kubeEnvironmentId;
 
     public Input<String> getKubeEnvironmentId() {
         return this.kubeEnvironmentId == null ? Input.empty() : this.kubeEnvironmentId;
@@ -55,7 +55,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -99,7 +99,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-    private final @Nullable Input<TemplateArgs> template;
+      private final @Nullable Input<TemplateArgs> template;
 
     public Input<TemplateArgs> getTemplate() {
         return this.template == null ? Input.empty() : this.template;
@@ -248,7 +248,6 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
             this.template = Input.ofNullable(template);
             return this;
         }
-
         public ContainerAppArgs build() {
             return new ContainerAppArgs(configuration, kind, kubeEnvironmentId, location, name, resourceGroupName, tags, template);
         }

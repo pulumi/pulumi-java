@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -85,7 +85,7 @@ public final class RegionUrlMapPathMatcherRouteRuleUrlRedirect {
      * The host that will be used in the redirect response instead of the one that was
      * supplied in the request. The value must be between 1 and 255 characters.
      * 
-     */
+    */
     public Optional<String> getHostRedirect() {
         return Optional.ofNullable(this.hostRedirect);
     }
@@ -95,7 +95,7 @@ public final class RegionUrlMapPathMatcherRouteRuleUrlRedirect {
      * request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
      * true for TargetHttpsProxy is not permitted. The default is set to false.
      * 
-     */
+    */
     public Optional<Boolean> getHttpsRedirect() {
         return Optional.ofNullable(this.httpsRedirect);
     }
@@ -106,7 +106,7 @@ public final class RegionUrlMapPathMatcherRouteRuleUrlRedirect {
      * original request will be used for the redirect. The value must be between 1 and 1024
      * characters.
      * 
-     */
+    */
     public Optional<String> getPathRedirect() {
         return Optional.ofNullable(this.pathRedirect);
     }
@@ -117,7 +117,7 @@ public final class RegionUrlMapPathMatcherRouteRuleUrlRedirect {
      * neither. If neither is supplied, the path of the original request will be used for
      * the redirect. The value must be between 1 and 1024 characters.
      * 
-     */
+    */
     public Optional<String> getPrefixRedirect() {
         return Optional.ofNullable(this.prefixRedirect);
     }
@@ -131,7 +131,7 @@ public final class RegionUrlMapPathMatcherRouteRuleUrlRedirect {
      * * PERMANENT_REDIRECT, which corresponds to 308. In this case,
      *   the request method will be retained.
      * 
-     */
+    */
     public Optional<String> getRedirectResponseCode() {
         return Optional.ofNullable(this.redirectResponseCode);
     }
@@ -141,7 +141,7 @@ public final class RegionUrlMapPathMatcherRouteRuleUrlRedirect {
      * retained.
      * This field is required to ensure an empty block is not set. The normal default value is false.
      * 
-     */
+    */
     public Optional<Boolean> getStripQuery() {
         return Optional.ofNullable(this.stripQuery);
     }
@@ -205,7 +205,6 @@ public final class RegionUrlMapPathMatcherRouteRuleUrlRedirect {
             this.stripQuery = stripQuery;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleUrlRedirect build() {
             return new RegionUrlMapPathMatcherRouteRuleUrlRedirect(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

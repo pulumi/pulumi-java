@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProvider;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class PackagingConfigurationMssEncryption extends io.pulumi.resourc
     public static final PackagingConfigurationMssEncryption Empty = new PackagingConfigurationMssEncryption();
 
     @InputImport(name="spekeKeyProvider", required=true)
-    private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
+      private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
     public PackagingConfigurationSpekeKeyProvider getSpekeKeyProvider() {
         return this.spekeKeyProvider;
@@ -55,7 +55,6 @@ public final class PackagingConfigurationMssEncryption extends io.pulumi.resourc
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public PackagingConfigurationMssEncryption build() {
             return new PackagingConfigurationMssEncryption(spekeKeyProvider);
         }

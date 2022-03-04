@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleIamV1AuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="auditLogConfigs")
-    private final @Nullable Input<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs;
+      private final @Nullable Input<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs;
 
     public Input<List<GoogleIamV1AuditLogConfigArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
@@ -36,7 +36,7 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -95,7 +95,6 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public GoogleIamV1AuditConfigArgs build() {
             return new GoogleIamV1AuditConfigArgs(auditLogConfigs, service);
         }

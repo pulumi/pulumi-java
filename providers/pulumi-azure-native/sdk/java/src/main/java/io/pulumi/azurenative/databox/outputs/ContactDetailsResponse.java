@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.NotificationPreferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class ContactDetailsResponse {
     /**
      * Contact name of the person.
      * 
-     */
+    */
     public String getContactName() {
         return this.contactName;
     }
     /**
      * List of Email-ids to be notified about job progress.
      * 
-     */
+    */
     public List<String> getEmailList() {
         return this.emailList;
     }
     /**
      * Mobile number of the contact person.
      * 
-     */
+    */
     public Optional<String> getMobile() {
         return Optional.ofNullable(this.mobile);
     }
     /**
      * Notification preference for a job stage.
      * 
-     */
+    */
     public List<NotificationPreferenceResponse> getNotificationPreference() {
         return this.notificationPreference == null ? List.of() : this.notificationPreference;
     }
     /**
      * Phone number of the contact person.
      * 
-     */
+    */
     public String getPhone() {
         return this.phone;
     }
     /**
      * Phone extension number of the contact person.
      * 
-     */
+    */
     public Optional<String> getPhoneExtension() {
         return Optional.ofNullable(this.phoneExtension);
     }
@@ -162,7 +162,6 @@ public final class ContactDetailsResponse {
             this.phoneExtension = phoneExtension;
             return this;
         }
-
         public ContactDetailsResponse build() {
             return new ContactDetailsResponse(contactName, emailList, mobile, notificationPreference, phone, phoneExtension);
         }

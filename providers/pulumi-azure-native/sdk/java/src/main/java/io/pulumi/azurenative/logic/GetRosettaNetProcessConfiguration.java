@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.inputs.GetRosettaNetProcessConfigurationArgs;
 import io.pulumi.azurenative.logic.outputs.GetRosettaNetProcessConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRosettaNetProcessConfiguration {
-/**
- * The integration account RosettaNet process configuration.
+    private GetRosettaNetProcessConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetRosettaNetProcessConfigurationArgs.Builder a);
+    }
+    private static GetRosettaNetProcessConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRosettaNetProcessConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The integration account RosettaNet process configuration.
  * API Version: 2016-06-01.
  * 
- *
- * The integration account RosettaNet process configuration.
+     *
+     * The integration account RosettaNet process configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetRosettaNetProcessConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The integration account RosettaNet process configuration.
+     * API Version: 2016-06-01.
+     * 
+     *
+         * The integration account RosettaNet process configuration.
+     * 
+     */
     public static CompletableFuture<GetRosettaNetProcessConfigurationResult> invokeAsync(GetRosettaNetProcessConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getRosettaNetProcessConfiguration", TypeShape.of(GetRosettaNetProcessConfigurationResult.class), args == null ? GetRosettaNetProcessConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

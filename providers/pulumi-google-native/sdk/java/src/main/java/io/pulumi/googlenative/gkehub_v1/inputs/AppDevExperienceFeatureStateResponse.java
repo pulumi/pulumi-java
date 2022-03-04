@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1.inputs.StatusResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AppDevExperienceFeatureStateResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="networkingInstallSucceeded", required=true)
-    private final StatusResponse networkingInstallSucceeded;
+      private final StatusResponse networkingInstallSucceeded;
 
     public StatusResponse getNetworkingInstallSucceeded() {
         return this.networkingInstallSucceeded;
@@ -59,7 +59,6 @@ public final class AppDevExperienceFeatureStateResponse extends io.pulumi.resour
             this.networkingInstallSucceeded = Objects.requireNonNull(networkingInstallSucceeded);
             return this;
         }
-
         public AppDevExperienceFeatureStateResponse build() {
             return new AppDevExperienceFeatureStateResponse(networkingInstallSucceeded);
         }

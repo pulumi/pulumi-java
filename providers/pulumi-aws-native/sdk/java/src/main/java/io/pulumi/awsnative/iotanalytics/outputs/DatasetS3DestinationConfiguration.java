@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetGlueConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -87,7 +87,6 @@ public final class DatasetS3DestinationConfiguration {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public DatasetS3DestinationConfiguration build() {
             return new DatasetS3DestinationConfiguration(bucket, glueConfiguration, key, roleArn);
         }

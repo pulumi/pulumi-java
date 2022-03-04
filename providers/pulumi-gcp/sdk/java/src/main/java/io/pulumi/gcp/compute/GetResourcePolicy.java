@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourcePolicy {
-/**
- * Provide access to a Resource Policy's attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
+    private GetResourcePolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourcePolicyArgs.Builder a);
+    }
+    private static GetResourcePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourcePolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provide access to a Resource Policy's attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
  * 
- *
- * A collection of arguments for invoking getResourcePolicy.
+     *
+     * A collection of arguments for invoking getResourcePolicy.
  * 
- *
- * A collection of values returned by getResourcePolicy.
+     *
+     * A collection of values returned by getResourcePolicy.
  * 
- */
+     */
+    public static CompletableFuture<GetResourcePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provide access to a Resource Policy's attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
+     * 
+     *
+         * A collection of arguments for invoking getResourcePolicy.
+     * 
+     *
+         * A collection of values returned by getResourcePolicy.
+     * 
+     */
     public static CompletableFuture<GetResourcePolicyResult> invokeAsync(GetResourcePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getResourcePolicy:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args == null ? GetResourcePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

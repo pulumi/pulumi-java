@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable String endpoint;
+      private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
@@ -34,7 +34,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
      * 
      */
     @InputImport(name="fileSystemId")
-    private final @Nullable String fileSystemId;
+      private final @Nullable String fileSystemId;
 
     public Optional<String> getFileSystemId() {
         return this.fileSystemId == null ? Optional.empty() : Optional.ofNullable(this.fileSystemId);
@@ -45,7 +45,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
      * 
      */
     @InputImport(name="linuxMountPoint")
-    private final @Nullable String linuxMountPoint;
+      private final @Nullable String linuxMountPoint;
 
     public Optional<String> getLinuxMountPoint() {
         return this.linuxMountPoint == null ? Optional.empty() : Optional.ofNullable(this.linuxMountPoint);
@@ -56,7 +56,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
      * 
      */
     @InputImport(name="shareName")
-    private final @Nullable String shareName;
+      private final @Nullable String shareName;
 
     public Optional<String> getShareName() {
         return this.shareName == null ? Optional.empty() : Optional.ofNullable(this.shareName);
@@ -67,7 +67,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
      * 
      */
     @InputImport(name="windowsMountDrive")
-    private final @Nullable String windowsMountDrive;
+      private final @Nullable String windowsMountDrive;
 
     public Optional<String> getWindowsMountDrive() {
         return this.windowsMountDrive == null ? Optional.empty() : Optional.ofNullable(this.windowsMountDrive);
@@ -146,7 +146,6 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
             this.windowsMountDrive = windowsMountDrive;
             return this;
         }
-
         public StudioComponentSharedFileSystemConfiguration build() {
             return new StudioComponentSharedFileSystemConfiguration(endpoint, fileSystemId, linuxMountPoint, shareName, windowsMountDrive);
         }

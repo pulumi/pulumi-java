@@ -11,7 +11,7 @@ import io.pulumi.awsnative.gamelift.inputs.GameServerGroupInstanceDefinitionArgs
 import io.pulumi.awsnative.gamelift.inputs.GameServerGroupLaunchTemplateArgs;
 import io.pulumi.awsnative.gamelift.inputs.GameServerGroupTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoScalingPolicy")
-    private final @Nullable Input<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy;
+      private final @Nullable Input<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy;
 
     public Input<GameServerGroupAutoScalingPolicyArgs> getAutoScalingPolicy() {
         return this.autoScalingPolicy == null ? Input.empty() : this.autoScalingPolicy;
@@ -39,7 +39,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="balancingStrategy")
-    private final @Nullable Input<GameServerGroupBalancingStrategy> balancingStrategy;
+      private final @Nullable Input<GameServerGroupBalancingStrategy> balancingStrategy;
 
     public Input<GameServerGroupBalancingStrategy> getBalancingStrategy() {
         return this.balancingStrategy == null ? Input.empty() : this.balancingStrategy;
@@ -50,7 +50,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deleteOption")
-    private final @Nullable Input<GameServerGroupDeleteOption> deleteOption;
+      private final @Nullable Input<GameServerGroupDeleteOption> deleteOption;
 
     public Input<GameServerGroupDeleteOption> getDeleteOption() {
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
@@ -61,7 +61,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gameServerGroupName")
-    private final @Nullable Input<String> gameServerGroupName;
+      private final @Nullable Input<String> gameServerGroupName;
 
     public Input<String> getGameServerGroupName() {
         return this.gameServerGroupName == null ? Input.empty() : this.gameServerGroupName;
@@ -72,7 +72,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gameServerProtectionPolicy")
-    private final @Nullable Input<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy;
+      private final @Nullable Input<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy;
 
     public Input<GameServerGroupGameServerProtectionPolicy> getGameServerProtectionPolicy() {
         return this.gameServerProtectionPolicy == null ? Input.empty() : this.gameServerProtectionPolicy;
@@ -83,7 +83,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceDefinitions", required=true)
-    private final Input<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions;
+      private final Input<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions;
 
     public Input<List<GameServerGroupInstanceDefinitionArgs>> getInstanceDefinitions() {
         return this.instanceDefinitions;
@@ -94,7 +94,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="launchTemplate", required=true)
-    private final Input<GameServerGroupLaunchTemplateArgs> launchTemplate;
+      private final Input<GameServerGroupLaunchTemplateArgs> launchTemplate;
 
     public Input<GameServerGroupLaunchTemplateArgs> getLaunchTemplate() {
         return this.launchTemplate;
@@ -105,7 +105,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxSize")
-    private final @Nullable Input<Double> maxSize;
+      private final @Nullable Input<Double> maxSize;
 
     public Input<Double> getMaxSize() {
         return this.maxSize == null ? Input.empty() : this.maxSize;
@@ -116,7 +116,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minSize")
-    private final @Nullable Input<Double> minSize;
+      private final @Nullable Input<Double> minSize;
 
     public Input<Double> getMinSize() {
         return this.minSize == null ? Input.empty() : this.minSize;
@@ -127,7 +127,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -138,7 +138,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<GameServerGroupTagArgs>> tags;
+      private final @Nullable Input<List<GameServerGroupTagArgs>> tags;
 
     public Input<List<GameServerGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -149,7 +149,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpcSubnets")
-    private final @Nullable Input<List<String>> vpcSubnets;
+      private final @Nullable Input<List<String>> vpcSubnets;
 
     public Input<List<String>> getVpcSubnets() {
         return this.vpcSubnets == null ? Input.empty() : this.vpcSubnets;
@@ -358,7 +358,6 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
             this.vpcSubnets = Input.ofNullable(vpcSubnets);
             return this;
         }
-
         public GameServerGroupArgs build() {
             return new GameServerGroupArgs(autoScalingPolicy, balancingStrategy, deleteOption, gameServerGroupName, gameServerProtectionPolicy, instanceDefinitions, launchTemplate, maxSize, minSize, roleArn, tags, vpcSubnets);
         }

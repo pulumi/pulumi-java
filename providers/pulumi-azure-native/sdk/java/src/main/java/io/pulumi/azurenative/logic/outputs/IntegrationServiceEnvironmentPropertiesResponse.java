@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.outputs;
 import io.pulumi.azurenative.logic.outputs.FlowEndpointsConfigurationResponse;
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmenEncryptionConfigurationResponse;
 import io.pulumi.azurenative.logic.outputs.NetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -64,42 +64,42 @@ public final class IntegrationServiceEnvironmentPropertiesResponse {
     /**
      * The encryption configuration.
      * 
-     */
+    */
     public Optional<IntegrationServiceEnvironmenEncryptionConfigurationResponse> getEncryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
     /**
      * The endpoints configuration.
      * 
-     */
+    */
     public Optional<FlowEndpointsConfigurationResponse> getEndpointsConfiguration() {
         return Optional.ofNullable(this.endpointsConfiguration);
     }
     /**
      * Gets the tracking id.
      * 
-     */
+    */
     public Optional<String> getIntegrationServiceEnvironmentId() {
         return Optional.ofNullable(this.integrationServiceEnvironmentId);
     }
     /**
      * The network configuration.
      * 
-     */
+    */
     public Optional<NetworkConfigurationResponse> getNetworkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
     /**
      * The provisioning state.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The integration service environment state.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -163,7 +163,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse {
             this.state = state;
             return this;
         }
-
         public IntegrationServiceEnvironmentPropertiesResponse build() {
             return new IntegrationServiceEnvironmentPropertiesResponse(encryptionConfiguration, endpointsConfiguration, integrationServiceEnvironmentId, networkConfiguration, provisioningState, state);
         }

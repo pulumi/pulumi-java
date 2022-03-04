@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyRuleMatcherConfigLayer4ConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
     /**
      * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
-     */
+    */
     public List<String> getDestIpRanges() {
         return this.destIpRanges;
     }
     /**
      * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
-     */
+    */
     public List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> getLayer4Configs() {
         return this.layer4Configs;
     }
     /**
      * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
      * 
-     */
+    */
     public List<String> getSrcIpRanges() {
         return this.srcIpRanges;
     }
@@ -97,7 +97,6 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-
         public SecurityPolicyRuleMatcherConfigResponse build() {
             return new SecurityPolicyRuleMatcherConfigResponse(destIpRanges, layer4Configs, srcIpRanges);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BucketBillingResponse {
     /**
      * When set to true, Requester Pays is enabled for this bucket.
      * 
-     */
+    */
     public Boolean getRequesterPays() {
         return this.requesterPays;
     }
@@ -52,7 +52,6 @@ public final class BucketBillingResponse {
             this.requesterPays = Objects.requireNonNull(requesterPays);
             return this;
         }
-
         public BucketBillingResponse build() {
             return new BucketBillingResponse(requesterPays);
         }

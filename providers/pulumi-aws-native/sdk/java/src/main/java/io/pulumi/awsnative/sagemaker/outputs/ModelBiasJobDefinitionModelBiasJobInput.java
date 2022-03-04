@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelBiasJobDefinitionEndpointInput;
 import io.pulumi.awsnative.sagemaker.outputs.ModelBiasJobDefinitionMonitoringGroundTruthS3Input;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -59,7 +59,6 @@ public final class ModelBiasJobDefinitionModelBiasJobInput {
             this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
             return this;
         }
-
         public ModelBiasJobDefinitionModelBiasJobInput build() {
             return new ModelBiasJobDefinitionModelBiasJobInput(endpointInput, groundTruthS3Input);
         }

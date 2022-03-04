@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetFleetLaunchTemplateOverridesRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetFleetLaunchTemplateSpecificationRequestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,14 +17,14 @@ public final class EC2FleetFleetLaunchTemplateConfigRequestArgs extends io.pulum
     public static final EC2FleetFleetLaunchTemplateConfigRequestArgs Empty = new EC2FleetFleetLaunchTemplateConfigRequestArgs();
 
     @InputImport(name="launchTemplateSpecification")
-    private final @Nullable Input<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification;
+      private final @Nullable Input<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification;
 
     public Input<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> getLaunchTemplateSpecification() {
         return this.launchTemplateSpecification == null ? Input.empty() : this.launchTemplateSpecification;
     }
 
     @InputImport(name="overrides")
-    private final @Nullable Input<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides;
+      private final @Nullable Input<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides;
 
     public Input<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> getOverrides() {
         return this.overrides == null ? Input.empty() : this.overrides;
@@ -83,7 +83,6 @@ public final class EC2FleetFleetLaunchTemplateConfigRequestArgs extends io.pulum
             this.overrides = Input.ofNullable(overrides);
             return this;
         }
-
         public EC2FleetFleetLaunchTemplateConfigRequestArgs build() {
             return new EC2FleetFleetLaunchTemplateConfigRequestArgs(launchTemplateSpecification, overrides);
         }

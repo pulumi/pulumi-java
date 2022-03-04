@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lowerBound", required=true)
-    private final Double lowerBound;
+      private final Double lowerBound;
 
     public Double getLowerBound() {
         return this.lowerBound;
@@ -32,7 +32,7 @@ public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="upperBound", required=true)
-    private final Double upperBound;
+      private final Double upperBound;
 
     public Double getUpperBound() {
         return this.upperBound;
@@ -81,7 +81,6 @@ public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }
-
         public GaugeViewResponse build() {
             return new GaugeViewResponse(lowerBound, upperBound);
         }

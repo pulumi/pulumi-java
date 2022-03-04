@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.GameServerClusterConnectionInfoResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.KubernetesClusterStateResponse;
 import java.lang.String;
@@ -76,56 +76,56 @@ public final class GetGameServerClusterResult {
     /**
      * The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
      * 
-     */
+    */
     public KubernetesClusterStateResponse getClusterState() {
         return this.clusterState;
     }
     /**
      * The game server cluster connection information. This information is used to manage game server clusters.
      * 
-     */
+    */
     public GameServerClusterConnectionInfoResponse getConnectionInfo() {
         return this.connectionInfo;
     }
     /**
      * The creation time.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Human readable description of the cluster.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * ETag of the resource.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The labels associated with this game server cluster. Each label is a key-value pair.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The last-modified time.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -203,7 +203,6 @@ public final class GetGameServerClusterResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGameServerClusterResult build() {
             return new GetGameServerClusterResult(clusterState, connectionInfo, createTime, description, etag, labels, name, updateTime);
         }

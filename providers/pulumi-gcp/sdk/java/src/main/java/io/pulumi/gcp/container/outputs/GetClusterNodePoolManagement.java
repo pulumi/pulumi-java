@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class GetClusterNodePoolManagement {
             this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
             return this;
         }
-
         public GetClusterNodePoolManagement build() {
             return new GetClusterNodePoolManagement(autoRepair, autoUpgrade);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -113,91 +113,91 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse {
     /**
      * Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
      * 
-     */
+    */
     public Optional<Integer> getAgcAndColorStripeRestriction() {
         return Optional.ofNullable(this.agcAndColorStripeRestriction);
     }
     /**
      * Configures Unknown output handling settings of the license.
      * 
-     */
+    */
     public String getAllowPassingVideoContentToUnknownOutput() {
         return this.allowPassingVideoContentToUnknownOutput;
     }
     /**
      * Specifies the output protection level for compressed digital audio.
      * 
-     */
+    */
     public Optional<Integer> getAnalogVideoOpl() {
         return Optional.ofNullable(this.analogVideoOpl);
     }
     /**
      * Specifies the output protection level for compressed digital audio.
      * 
-     */
+    */
     public Optional<Integer> getCompressedDigitalAudioOpl() {
         return Optional.ofNullable(this.compressedDigitalAudioOpl);
     }
     /**
      * Specifies the output protection level for compressed digital video.
      * 
-     */
+    */
     public Optional<Integer> getCompressedDigitalVideoOpl() {
         return Optional.ofNullable(this.compressedDigitalVideoOpl);
     }
     /**
      * Enables the Image Constraint For Analog Component Video Restriction in the license.
      * 
-     */
+    */
     public Boolean getDigitalVideoOnlyContentRestriction() {
         return this.digitalVideoOnlyContentRestriction;
     }
     /**
      * Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.
      * 
-     */
+    */
     public Optional<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse> getExplicitAnalogTelevisionOutputRestriction() {
         return Optional.ofNullable(this.explicitAnalogTelevisionOutputRestriction);
     }
     /**
      * The amount of time that the license is valid after the license is first used to play content.
      * 
-     */
+    */
     public Optional<String> getFirstPlayExpiration() {
         return Optional.ofNullable(this.firstPlayExpiration);
     }
     /**
      * Enables the Image Constraint For Analog Component Video Restriction in the license.
      * 
-     */
+    */
     public Boolean getImageConstraintForAnalogComponentVideoRestriction() {
         return this.imageConstraintForAnalogComponentVideoRestriction;
     }
     /**
      * Enables the Image Constraint For Analog Component Video Restriction in the license.
      * 
-     */
+    */
     public Boolean getImageConstraintForAnalogComputerMonitorRestriction() {
         return this.imageConstraintForAnalogComputerMonitorRestriction;
     }
     /**
      * Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
      * 
-     */
+    */
     public Optional<Integer> getScmsRestriction() {
         return Optional.ofNullable(this.scmsRestriction);
     }
     /**
      * Specifies the output protection level for uncompressed digital audio.
      * 
-     */
+    */
     public Optional<Integer> getUncompressedDigitalAudioOpl() {
         return Optional.ofNullable(this.uncompressedDigitalAudioOpl);
     }
     /**
      * Specifies the output protection level for uncompressed digital video.
      * 
-     */
+    */
     public Optional<Integer> getUncompressedDigitalVideoOpl() {
         return Optional.ofNullable(this.uncompressedDigitalVideoOpl);
     }
@@ -310,7 +310,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse {
             this.uncompressedDigitalVideoOpl = uncompressedDigitalVideoOpl;
             return this;
         }
-
         public ContentKeyPolicyPlayReadyPlayRightResponse build() {
             return new ContentKeyPolicyPlayReadyPlayRightResponse(agcAndColorStripeRestriction, allowPassingVideoContentToUnknownOutput, analogVideoOpl, compressedDigitalAudioOpl, compressedDigitalVideoOpl, digitalVideoOnlyContentRestriction, explicitAnalogTelevisionOutputRestriction, firstPlayExpiration, imageConstraintForAnalogComponentVideoRestriction, imageConstraintForAnalogComputerMonitorRestriction, scmsRestriction, uncompressedDigitalAudioOpl, uncompressedDigitalVideoOpl);
         }

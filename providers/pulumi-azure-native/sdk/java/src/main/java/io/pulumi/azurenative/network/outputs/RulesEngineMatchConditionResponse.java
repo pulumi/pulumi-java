@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -63,42 +63,42 @@ public final class RulesEngineMatchConditionResponse {
     /**
      * Describes if this is negate condition or not
      * 
-     */
+    */
     public Optional<Boolean> getNegateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
     /**
      * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
      * 
-     */
+    */
     public List<String> getRulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
     }
     /**
      * Match Variable
      * 
-     */
+    */
     public String getRulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
     }
     /**
      * Describes operator to apply to the match condition.
      * 
-     */
+    */
     public String getRulesEngineOperator() {
         return this.rulesEngineOperator;
     }
     /**
      * Name of selector in RequestHeader or RequestBody to be matched
      * 
-     */
+    */
     public Optional<String> getSelector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * List of transforms
      * 
-     */
+    */
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
@@ -162,7 +162,6 @@ public final class RulesEngineMatchConditionResponse {
             this.transforms = transforms;
             return this;
         }
-
         public RulesEngineMatchConditionResponse build() {
             return new RulesEngineMatchConditionResponse(negateCondition, rulesEngineMatchValue, rulesEngineMatchVariable, rulesEngineOperator, selector, transforms);
         }

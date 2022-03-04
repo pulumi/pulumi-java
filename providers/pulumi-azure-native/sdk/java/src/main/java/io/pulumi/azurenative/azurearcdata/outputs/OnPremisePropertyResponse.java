@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class OnPremisePropertyResponse {
     /**
      * A globally unique ID identifying the associated Kubernetes cluster
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Certificate that contains the Kubernetes cluster public key used to verify signing
      * 
-     */
+    */
     public String getPublicSigningKey() {
         return this.publicSigningKey;
     }
     /**
      * Unique thumbprint returned to customer to verify the certificate being uploaded
      * 
-     */
+    */
     public Optional<String> getSigningCertificateThumbprint() {
         return Optional.ofNullable(this.signingCertificateThumbprint);
     }
@@ -97,7 +97,6 @@ public final class OnPremisePropertyResponse {
             this.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;
         }
-
         public OnPremisePropertyResponse build() {
             return new OnPremisePropertyResponse(id, publicSigningKey, signingCertificateThumbprint);
         }

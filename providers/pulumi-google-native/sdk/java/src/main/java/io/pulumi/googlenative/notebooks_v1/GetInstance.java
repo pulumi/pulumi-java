@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstance {
-/**
- * Gets details of a single Instance.
+    private GetInstance() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceArgs.Builder a);
+    }
+    private static GetInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single Instance.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single Instance.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> invokeAsync(GetInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:notebooks/v1:getInstance", TypeShape.of(GetInstanceResult.class), args == null ? GetInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

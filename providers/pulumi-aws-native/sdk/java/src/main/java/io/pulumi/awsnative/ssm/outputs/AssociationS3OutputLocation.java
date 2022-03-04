@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssm.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class AssociationS3OutputLocation {
             this.outputS3Region = outputS3Region;
             return this;
         }
-
         public AssociationS3OutputLocation build() {
             return new AssociationS3OutputLocation(outputS3BucketName, outputS3KeyPrefix, outputS3Region);
         }

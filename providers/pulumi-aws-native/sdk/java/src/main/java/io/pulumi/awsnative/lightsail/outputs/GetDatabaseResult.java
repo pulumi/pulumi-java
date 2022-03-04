@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.DatabaseTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -67,14 +67,14 @@ public final class GetDatabaseResult {
     /**
      * When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
      * 
-     */
+    */
     public Optional<Boolean> getBackupRetention() {
         return Optional.ofNullable(this.backupRetention);
     }
     /**
      * Indicates the certificate that needs to be associated with the database.
      * 
-     */
+    */
     public Optional<String> getCaCertificateIdentifier() {
         return Optional.ofNullable(this.caCertificateIdentifier);
     }
@@ -84,28 +84,28 @@ public final class GetDatabaseResult {
     /**
      * The daily time range during which automated backups are created for your new database if automated backups are enabled.
      * 
-     */
+    */
     public Optional<String> getPreferredBackupWindow() {
         return Optional.ofNullable(this.preferredBackupWindow);
     }
     /**
      * The weekly time range during which system maintenance can occur on your new database.
      * 
-     */
+    */
     public Optional<String> getPreferredMaintenanceWindow() {
         return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
     /**
      * Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
      * 
-     */
+    */
     public Optional<Boolean> getPubliclyAccessible() {
         return Optional.ofNullable(this.publiclyAccessible);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<DatabaseTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -176,7 +176,6 @@ public final class GetDatabaseResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(backupRetention, caCertificateIdentifier, databaseArn, preferredBackupWindow, preferredMaintenanceWindow, publiclyAccessible, tags);
         }

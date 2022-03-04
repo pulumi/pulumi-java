@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxAgentSpeechToTextSettingsGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="avatarUri")
-    private final @Nullable Input<String> avatarUri;
+      private final @Nullable Input<String> avatarUri;
 
     public Input<String> getAvatarUri() {
         return this.avatarUri == null ? Input.empty() : this.avatarUri;
@@ -34,7 +34,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultLanguageCode")
-    private final @Nullable Input<String> defaultLanguageCode;
+      private final @Nullable Input<String> defaultLanguageCode;
 
     public Input<String> getDefaultLanguageCode() {
         return this.defaultLanguageCode == null ? Input.empty() : this.defaultLanguageCode;
@@ -45,7 +45,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -56,7 +56,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -67,7 +67,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableSpellCorrection")
-    private final @Nullable Input<Boolean> enableSpellCorrection;
+      private final @Nullable Input<Boolean> enableSpellCorrection;
 
     public Input<Boolean> getEnableSpellCorrection() {
         return this.enableSpellCorrection == null ? Input.empty() : this.enableSpellCorrection;
@@ -78,7 +78,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStackdriverLogging")
-    private final @Nullable Input<Boolean> enableStackdriverLogging;
+      private final @Nullable Input<Boolean> enableStackdriverLogging;
 
     public Input<Boolean> getEnableStackdriverLogging() {
         return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
@@ -92,7 +92,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -103,7 +103,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -115,7 +115,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -126,7 +126,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securitySettings")
-    private final @Nullable Input<String> securitySettings;
+      private final @Nullable Input<String> securitySettings;
 
     public Input<String> getSecuritySettings() {
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
@@ -138,7 +138,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="speechToTextSettings")
-    private final @Nullable Input<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings;
+      private final @Nullable Input<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings;
 
     public Input<CxAgentSpeechToTextSettingsGetArgs> getSpeechToTextSettings() {
         return this.speechToTextSettings == null ? Input.empty() : this.speechToTextSettings;
@@ -151,7 +151,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startFlow")
-    private final @Nullable Input<String> startFlow;
+      private final @Nullable Input<String> startFlow;
 
     public Input<String> getStartFlow() {
         return this.startFlow == null ? Input.empty() : this.startFlow;
@@ -162,7 +162,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedLanguageCodes")
-    private final @Nullable Input<List<String>> supportedLanguageCodes;
+      private final @Nullable Input<List<String>> supportedLanguageCodes;
 
     public Input<List<String>> getSupportedLanguageCodes() {
         return this.supportedLanguageCodes == null ? Input.empty() : this.supportedLanguageCodes;
@@ -174,7 +174,7 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -413,7 +413,6 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public CxAgentState build() {
             return new CxAgentState(avatarUri, defaultLanguageCode, description, displayName, enableSpellCorrection, enableStackdriverLogging, location, name, project, securitySettings, speechToTextSettings, startFlow, supportedLanguageCodes, timeZone);
         }

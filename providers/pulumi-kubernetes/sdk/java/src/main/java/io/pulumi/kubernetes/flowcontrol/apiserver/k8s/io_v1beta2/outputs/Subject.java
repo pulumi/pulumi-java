@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.GroupSubject;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.ServiceAccountSubject;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.UserSubject;
@@ -50,28 +50,28 @@ public final class Subject {
     /**
      * `group` matches based on user group name.
      * 
-     */
+    */
     public Optional<GroupSubject> getGroup() {
         return Optional.ofNullable(this.group);
     }
     /**
      * `kind` indicates which one of the other fields is non-empty. Required
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * `serviceAccount` matches ServiceAccounts.
      * 
-     */
+    */
     public Optional<ServiceAccountSubject> getServiceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
     /**
      * `user` matches based on username.
      * 
-     */
+    */
     public Optional<UserSubject> getUser() {
         return Optional.ofNullable(this.user);
     }
@@ -121,7 +121,6 @@ public final class Subject {
             this.user = user;
             return this;
         }
-
         public Subject build() {
             return new Subject(group, kind, serviceAccount, user);
         }

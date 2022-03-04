@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.ProxyServerPropertiesResponse;
 import io.pulumi.azurenative.security.inputs.ServicePrincipalPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="autoProvision", required=true)
-    private final String autoProvision;
+      private final String autoProvision;
 
     public String getAutoProvision() {
         return this.autoProvision;
@@ -36,7 +36,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="hybridComputeProvisioningState", required=true)
-    private final String hybridComputeProvisioningState;
+      private final String hybridComputeProvisioningState;
 
     public String getHybridComputeProvisioningState() {
         return this.hybridComputeProvisioningState;
@@ -47,7 +47,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="proxyServer")
-    private final @Nullable ProxyServerPropertiesResponse proxyServer;
+      private final @Nullable ProxyServerPropertiesResponse proxyServer;
 
     public Optional<ProxyServerPropertiesResponse> getProxyServer() {
         return this.proxyServer == null ? Optional.empty() : Optional.ofNullable(this.proxyServer);
@@ -58,7 +58,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="region")
-    private final @Nullable String region;
+      private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -69,7 +69,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName")
-    private final @Nullable String resourceGroupName;
+      private final @Nullable String resourceGroupName;
 
     public Optional<String> getResourceGroupName() {
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
@@ -80,7 +80,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="servicePrincipal")
-    private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
+      private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
     public Optional<ServicePrincipalPropertiesResponse> getServicePrincipal() {
         return this.servicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipal);
@@ -169,7 +169,6 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
             this.servicePrincipal = servicePrincipal;
             return this;
         }
-
         public HybridComputeSettingsPropertiesResponse build() {
             return new HybridComputeSettingsPropertiesResponse(autoProvision, hybridComputeProvisioningState, proxyServer, region, resourceGroupName, servicePrincipal);
         }

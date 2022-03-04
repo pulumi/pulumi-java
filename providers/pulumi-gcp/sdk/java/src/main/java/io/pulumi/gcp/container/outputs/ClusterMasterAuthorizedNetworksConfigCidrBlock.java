@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
      * External network that can access Kubernetes master through HTTPS.
      * Must be specified in CIDR notation.
      * 
-     */
+    */
     public String getCidrBlock() {
         return this.cidrBlock;
     }
     /**
      * Field for users to identify CIDR blocks.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -78,7 +78,6 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
             this.displayName = displayName;
             return this;
         }
-
         public ClusterMasterAuthorizedNetworksConfigCidrBlock build() {
             return new ClusterMasterAuthorizedNetworksConfigCidrBlock(cidrBlock, displayName);
         }

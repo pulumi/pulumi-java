@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.UserAccessPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class GetFactoryDataPlaneAccessResult {
     /**
      * Data Plane read only access token.
      * 
-     */
+    */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * Data Plane service base URL.
      * 
-     */
+    */
     public Optional<String> getDataPlaneUrl() {
         return Optional.ofNullable(this.dataPlaneUrl);
     }
     /**
      * The user access policy.
      * 
-     */
+    */
     public Optional<UserAccessPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
@@ -98,7 +98,6 @@ public final class GetFactoryDataPlaneAccessResult {
             this.policy = policy;
             return this;
         }
-
         public GetFactoryDataPlaneAccessResult build() {
             return new GetFactoryDataPlaneAccessResult(accessToken, dataPlaneUrl, policy);
         }

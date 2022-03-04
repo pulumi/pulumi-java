@@ -6,17 +6,33 @@ package io.pulumi.awsnative.mediaconnect;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.mediaconnect.inputs.GetFlowArgs;
 import io.pulumi.awsnative.mediaconnect.outputs.GetFlowResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFlow {
-/**
- * Resource schema for AWS::MediaConnect::Flow
+    private GetFlow() {}
+    public interface BuilderApplicator {
+        public void apply(GetFlowArgs.Builder a);
+    }
+    private static GetFlowArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFlowArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::MediaConnect::Flow
  * 
- */
+     */
+    public static CompletableFuture<GetFlowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::MediaConnect::Flow
+     * 
+     */
     public static CompletableFuture<GetFlowResult> invokeAsync(GetFlowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlow", TypeShape.of(GetFlowResult.class), args == null ? GetFlowArgs.Empty : args, Utilities.withVersion(options));
     }

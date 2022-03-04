@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentProviderNamespace", required=true)
-    private final Input<String> parentProviderNamespace;
+      private final Input<String> parentProviderNamespace;
 
     public Input<String> getParentProviderNamespace() {
         return this.parentProviderNamespace;
@@ -42,7 +42,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResourceName", required=true)
-    private final Input<String> parentResourceName;
+      private final Input<String> parentResourceName;
 
     public Input<String> getParentResourceName() {
         return this.parentResourceName;
@@ -53,7 +53,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResourceType", required=true)
-    private final Input<String> parentResourceType;
+      private final Input<String> parentResourceType;
 
     public Input<String> getParentResourceType() {
         return this.parentResourceType;
@@ -64,7 +64,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<Object> properties;
+      private final Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties;
@@ -75,7 +75,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetName")
-    private final @Nullable Input<String> targetName;
+      private final @Nullable Input<String> targetName;
 
     public Input<String> getTargetName() {
         return this.targetName == null ? Input.empty() : this.targetName;
@@ -220,7 +220,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             this.targetName = Input.ofNullable(targetName);
             return this;
         }
-
         public TargetArgs build() {
             return new TargetArgs(location, parentProviderNamespace, parentResourceName, parentResourceType, properties, resourceGroupName, targetName);
         }

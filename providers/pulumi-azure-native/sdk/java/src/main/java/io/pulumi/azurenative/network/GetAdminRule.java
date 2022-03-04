@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetAdminRuleArgs;
 import io.pulumi.azurenative.network.outputs.GetAdminRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: AdminRule, DefaultAdminRule. */
 public class GetAdminRule {
-/**
- * Network base admin rule.
+    private GetAdminRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetAdminRuleArgs.Builder a);
+    }
+    private static GetAdminRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAdminRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Network base admin rule.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Network base admin rule.
+     *
+     * Network base admin rule.
  * 
- * @deprecated
- * Please use one of the variants: AdminRule, DefaultAdminRule.
+     * @Deprecated
+     * Please use one of the variants: AdminRule, DefaultAdminRule.
  * 
- */
+     */
+    public static CompletableFuture<GetAdminRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Network base admin rule.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Network base admin rule.
+     * 
+     * @Deprecated
+         * Please use one of the variants: AdminRule, DefaultAdminRule.
+     * 
+     */
     @Deprecated /* Please use one of the variants: AdminRule, DefaultAdminRule. */
     public static CompletableFuture<GetAdminRuleResult> invokeAsync(GetAdminRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getAdminRule", TypeShape.of(GetAdminRuleResult.class), args == null ? GetAdminRuleArgs.Empty : args, Utilities.withVersion(options));

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.finspace.outputs;
 import io.pulumi.awsnative.finspace.enums.EnvironmentFederationMode;
 import io.pulumi.awsnative.finspace.enums.EnvironmentStatus;
 import io.pulumi.awsnative.finspace.outputs.EnvironmentFederationParameters;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -95,49 +95,49 @@ public final class GetEnvironmentResult {
     /**
      * AWS account ID associated with the Environment
      * 
-     */
+    */
     public Optional<String> getAwsAccountId() {
         return Optional.ofNullable(this.awsAccountId);
     }
     /**
      * ID for FinSpace created account used to store Environment artifacts
      * 
-     */
+    */
     public Optional<String> getDedicatedServiceAccountId() {
         return Optional.ofNullable(this.dedicatedServiceAccountId);
     }
     /**
      * Description of the Environment
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * ARN of the Environment
      * 
-     */
+    */
     public Optional<String> getEnvironmentArn() {
         return Optional.ofNullable(this.environmentArn);
     }
     /**
      * Unique identifier for representing FinSpace Environment
      * 
-     */
+    */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
      * URL used to login to the Environment
      * 
-     */
+    */
     public Optional<String> getEnvironmentUrl() {
         return Optional.ofNullable(this.environmentUrl);
     }
     /**
      * Federation mode used with the Environment
      * 
-     */
+    */
     public Optional<EnvironmentFederationMode> getFederationMode() {
         return Optional.ofNullable(this.federationMode);
     }
@@ -147,21 +147,21 @@ public final class GetEnvironmentResult {
     /**
      * Name of the Environment
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * SageMaker Studio Domain URL associated with the Environment
      * 
-     */
+    */
     public Optional<String> getSageMakerStudioDomainUrl() {
         return Optional.ofNullable(this.sageMakerStudioDomainUrl);
     }
     /**
      * State of the Environment
      * 
-     */
+    */
     public Optional<EnvironmentStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -260,7 +260,6 @@ public final class GetEnvironmentResult {
             this.status = status;
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(awsAccountId, dedicatedServiceAccountId, description, environmentArn, environmentId, environmentUrl, federationMode, federationParameters, name, sageMakerStudioDomainUrl, status);
         }

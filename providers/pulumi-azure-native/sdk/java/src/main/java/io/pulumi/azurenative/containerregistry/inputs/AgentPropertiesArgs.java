@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<Integer> cpu;
+      private final @Nullable Input<Integer> cpu;
 
     public Input<Integer> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -66,7 +66,6 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.cpu = Input.ofNullable(cpu);
             return this;
         }
-
         public AgentPropertiesArgs build() {
             return new AgentPropertiesArgs(cpu);
         }

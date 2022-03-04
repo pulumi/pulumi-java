@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="emailAddress", required=true)
-    private final String emailAddress;
+      private final String emailAddress;
 
     public String getEmailAddress() {
         return this.emailAddress;
@@ -35,7 +35,7 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -57,7 +57,7 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-    private final @Nullable Boolean useCommonAlertSchema;
+      private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
@@ -126,7 +126,6 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public EmailReceiverResponse build() {
             return new EmailReceiverResponse(emailAddress, name, status, useCommonAlertSchema);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ManagedIntegrationRuntimeNodeResponse {
     /**
      * The errors that occurred on this integration runtime node.
      * 
-     */
+    */
     public List<ManagedIntegrationRuntimeErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * The managed integration runtime node id.
      * 
-     */
+    */
     public String getNodeId() {
         return this.nodeId;
     }
     /**
      * The managed integration runtime node status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -98,7 +98,6 @@ public final class ManagedIntegrationRuntimeNodeResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ManagedIntegrationRuntimeNodeResponse build() {
             return new ManagedIntegrationRuntimeNodeResponse(errors, nodeId, status);
         }

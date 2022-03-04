@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class WebPubSubFeatureResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="flag", required=true)
-    private final String flag;
+      private final String flag;
 
     public String getFlag() {
         return this.flag;
@@ -38,7 +38,7 @@ public final class WebPubSubFeatureResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -49,7 +49,7 @@ public final class WebPubSubFeatureResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -108,7 +108,6 @@ public final class WebPubSubFeatureResponse extends io.pulumi.resources.InvokeAr
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WebPubSubFeatureResponse build() {
             return new WebPubSubFeatureResponse(flag, properties, value);
         }

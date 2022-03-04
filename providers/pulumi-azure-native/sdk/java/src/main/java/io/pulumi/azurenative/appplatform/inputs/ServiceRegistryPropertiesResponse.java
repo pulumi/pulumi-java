@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.ServiceRegistryInstanceResponse;
 import io.pulumi.azurenative.appplatform.inputs.ServiceRegistryResourceRequestsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="instances", required=true)
-    private final List<ServiceRegistryInstanceResponse> instances;
+      private final List<ServiceRegistryInstanceResponse> instances;
 
     public List<ServiceRegistryInstanceResponse> getInstances() {
         return this.instances;
@@ -35,7 +35,7 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -46,7 +46,7 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceRequests", required=true)
-    private final ServiceRegistryResourceRequestsResponse resourceRequests;
+      private final ServiceRegistryResourceRequestsResponse resourceRequests;
 
     public ServiceRegistryResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
@@ -105,7 +105,6 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }
-
         public ServiceRegistryPropertiesResponse build() {
             return new ServiceRegistryPropertiesResponse(instances, provisioningState, resourceRequests);
         }

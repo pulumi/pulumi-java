@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,42 +59,42 @@ public final class GetAuthorizationResult {
     /**
      * The ID of the ExpressRoute Circuit Authorization
      * 
-     */
+    */
     public String getExpressRouteAuthorizationId() {
         return this.expressRouteAuthorizationId;
     }
     /**
      * The key of the ExpressRoute Circuit Authorization
      * 
-     */
+    */
     public String getExpressRouteAuthorizationKey() {
         return this.expressRouteAuthorizationKey;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The state of the  ExpressRoute Circuit Authorization provisioning
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -158,7 +158,6 @@ public final class GetAuthorizationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAuthorizationResult build() {
             return new GetAuthorizationResult(expressRouteAuthorizationId, expressRouteAuthorizationKey, id, name, provisioningState, type);
         }

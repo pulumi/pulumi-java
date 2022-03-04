@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
     /**
      * Specifies the frequency for the operation, using the unix-cron format.
      * 
-     */
+    */
     public String getSchedule() {
         return this.schedule;
     }
@@ -52,7 +52,6 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyScheduleResponse build() {
             return new ResourcePolicyInstanceSchedulePolicyScheduleResponse(schedule);
         }

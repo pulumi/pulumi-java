@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.HttpHeaderActionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backendService")
-    private final @Nullable Input<String> backendService;
+      private final @Nullable Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -36,7 +36,7 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<HttpHeaderActionArgs> headerAction;
+      private final @Nullable Input<HttpHeaderActionArgs> headerAction;
 
     public Input<HttpHeaderActionArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -47,7 +47,7 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+      private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -121,7 +121,6 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public WeightedBackendServiceArgs build() {
             return new WeightedBackendServiceArgs(backendService, headerAction, weight);
         }

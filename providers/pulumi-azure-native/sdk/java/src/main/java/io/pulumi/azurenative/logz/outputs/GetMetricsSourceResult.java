@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logz.outputs;
 import io.pulumi.azurenative.logz.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.logz.outputs.MonitorPropertiesResponse;
 import io.pulumi.azurenative.logz.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -67,7 +67,7 @@ public final class GetMetricsSourceResult {
     /**
      * ARM id of the monitor resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -80,21 +80,21 @@ public final class GetMetricsSourceResult {
     /**
      * Name of the monitor resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties specific to the monitor resource.
      * 
-     */
+    */
     public MonitorPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The system metadata relating to this resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
@@ -104,7 +104,7 @@ public final class GetMetricsSourceResult {
     /**
      * The type of the monitor resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -182,7 +182,6 @@ public final class GetMetricsSourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMetricsSourceResult build() {
             return new GetMetricsSourceResult(id, identity, location, name, properties, systemData, tags, type);
         }

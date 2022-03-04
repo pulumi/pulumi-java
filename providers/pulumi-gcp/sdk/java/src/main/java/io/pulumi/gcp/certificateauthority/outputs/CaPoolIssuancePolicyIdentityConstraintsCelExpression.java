@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class CaPoolIssuancePolicyIdentityConstraintsCelExpression {
     /**
      * Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Textual representation of an expression in Common Expression Language syntax.
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }
     /**
      * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
@@ -118,7 +118,6 @@ public final class CaPoolIssuancePolicyIdentityConstraintsCelExpression {
             this.title = title;
             return this;
         }
-
         public CaPoolIssuancePolicyIdentityConstraintsCelExpression build() {
             return new CaPoolIssuancePolicyIdentityConstraintsCelExpression(description, expression, location, title);
         }

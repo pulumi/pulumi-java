@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ConfigMapNodeConfigSourceArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configMap")
-    private final @Nullable Input<ConfigMapNodeConfigSourceArgs> configMap;
+      private final @Nullable Input<ConfigMapNodeConfigSourceArgs> configMap;
 
     public Input<ConfigMapNodeConfigSourceArgs> getConfigMap() {
         return this.configMap == null ? Input.empty() : this.configMap;
@@ -66,7 +66,6 @@ public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs
             this.configMap = Input.ofNullable(configMap);
             return this;
         }
-
         public NodeConfigSourceArgs build() {
             return new NodeConfigSourceArgs(configMap);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class ExperimentTreatmentToWeight {
             this.treatment = Objects.requireNonNull(treatment);
             return this;
         }
-
         public ExperimentTreatmentToWeight build() {
             return new ExperimentTreatmentToWeight(splitWeight, treatment);
         }

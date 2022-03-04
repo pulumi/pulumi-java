@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout;
 import java.lang.Integer;
 import java.lang.String;
@@ -60,7 +60,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicy {
     /**
      * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
      * 
-     */
+    */
     public Optional<Integer> getNumRetries() {
         return Optional.ofNullable(this.numRetries);
     }
@@ -70,7 +70,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicy {
      * will use the largest timeout among all backend services associated with the route.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout> getPerTryTimeout() {
         return Optional.ofNullable(this.perTryTimeout);
     }
@@ -91,7 +91,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicy {
      * * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
      * * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
      * 
-     */
+    */
     public List<String> getRetryConditions() {
         return this.retryConditions == null ? List.of() : this.retryConditions;
     }
@@ -134,7 +134,6 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicy {
             this.retryConditions = retryConditions;
             return this;
         }
-
         public URLMapPathMatcherDefaultRouteActionRetryPolicy build() {
             return new URLMapPathMatcherDefaultRouteActionRetryPolicy(numRetries, perTryTimeout, retryConditions);
         }

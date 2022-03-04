@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionLoRaWANGatewayVersion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -88,7 +88,6 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreate {
             this.updateVersion = updateVersion;
             return this;
         }
-
         public TaskDefinitionLoRaWANUpdateGatewayTaskCreate build() {
             return new TaskDefinitionLoRaWANUpdateGatewayTaskCreate(currentVersion, sigKeyCrc, updateSignature, updateVersion);
         }

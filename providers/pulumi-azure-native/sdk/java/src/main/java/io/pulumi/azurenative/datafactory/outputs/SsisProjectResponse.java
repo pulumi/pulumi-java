@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SsisEnvironmentReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SsisParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -80,42 +80,42 @@ public final class SsisProjectResponse {
     /**
      * Metadata description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Environment reference in project
      * 
-     */
+    */
     public List<SsisEnvironmentReferenceResponse> getEnvironmentRefs() {
         return this.environmentRefs == null ? List.of() : this.environmentRefs;
     }
     /**
      * Folder id which contains project.
      * 
-     */
+    */
     public Optional<Double> getFolderId() {
         return Optional.ofNullable(this.folderId);
     }
     /**
      * Metadata id.
      * 
-     */
+    */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Metadata name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Parameters in project
      * 
-     */
+    */
     public List<SsisParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
@@ -123,14 +123,14 @@ public final class SsisProjectResponse {
      * The type of SSIS object metadata.
      * Expected value is 'Project'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Project version.
      * 
-     */
+    */
     public Optional<Double> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -208,7 +208,6 @@ public final class SsisProjectResponse {
             this.version = version;
             return this;
         }
-
         public SsisProjectResponse build() {
             return new SsisProjectResponse(description, environmentRefs, folderId, id, name, parameters, type, version);
         }

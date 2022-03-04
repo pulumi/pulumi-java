@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -90,70 +90,70 @@ public final class CertificatePropertiesResponse {
     /**
      * The activate date of certificate.
      * 
-     */
+    */
     public String getActivateDate() {
         return this.activateDate;
     }
     /**
      * The certificate version of key vault.
      * 
-     */
+    */
     public Optional<String> getCertVersion() {
         return Optional.ofNullable(this.certVersion);
     }
     /**
      * The domain list of certificate.
      * 
-     */
+    */
     public List<String> getDnsNames() {
         return this.dnsNames;
     }
     /**
      * The expiration date of certificate.
      * 
-     */
+    */
     public String getExpirationDate() {
         return this.expirationDate;
     }
     /**
      * The issue date of certificate.
      * 
-     */
+    */
     public String getIssuedDate() {
         return this.issuedDate;
     }
     /**
      * The issuer of certificate.
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }
     /**
      * The certificate name of key vault.
      * 
-     */
+    */
     public String getKeyVaultCertName() {
         return this.keyVaultCertName;
     }
     /**
      * The subject name of certificate.
      * 
-     */
+    */
     public String getSubjectName() {
         return this.subjectName;
     }
     /**
      * The thumbprint of certificate.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * The vault uri of user key vault.
      * 
-     */
+    */
     public String getVaultUri() {
         return this.vaultUri;
     }
@@ -245,7 +245,6 @@ public final class CertificatePropertiesResponse {
             this.vaultUri = Objects.requireNonNull(vaultUri);
             return this;
         }
-
         public CertificatePropertiesResponse build() {
             return new CertificatePropertiesResponse(activateDate, certVersion, dnsNames, expirationDate, issuedDate, issuer, keyVaultCertName, subjectName, thumbprint, vaultUri);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -37,7 +37,7 @@ public final class GetKMSSecretCiphertextResult {
     /**
      * Contains the result of encrypting the provided plaintext, encoded in base64.
      * 
-     */
+    */
     public String getCiphertext() {
         return this.ciphertext;
     }
@@ -47,7 +47,7 @@ public final class GetKMSSecretCiphertextResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -100,7 +100,6 @@ public final class GetKMSSecretCiphertextResult {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
-
         public GetKMSSecretCiphertextResult build() {
             return new GetKMSSecretCiphertextResult(ciphertext, cryptoKey, id, plaintext);
         }

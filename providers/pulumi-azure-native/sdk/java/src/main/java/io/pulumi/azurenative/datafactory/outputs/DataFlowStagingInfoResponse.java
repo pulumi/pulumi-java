@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class DataFlowStagingInfoResponse {
     /**
      * Folder path for staging blob. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
      * Staging linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
         return Optional.ofNullable(this.linkedService);
     }
@@ -77,7 +77,6 @@ public final class DataFlowStagingInfoResponse {
             this.linkedService = linkedService;
             return this;
         }
-
         public DataFlowStagingInfoResponse build() {
             return new DataFlowStagingInfoResponse(folderPath, linkedService);
         }

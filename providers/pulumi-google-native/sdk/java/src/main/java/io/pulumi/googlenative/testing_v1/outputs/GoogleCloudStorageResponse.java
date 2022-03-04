@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudStorageResponse {
     /**
      * The path to a directory in GCS that will eventually contain the results for this test. The requesting user must have write access on the bucket in the supplied path.
      * 
-     */
+    */
     public String getGcsPath() {
         return this.gcsPath;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudStorageResponse {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }
-
         public GoogleCloudStorageResponse build() {
             return new GoogleCloudStorageResponse(gcsPath);
         }

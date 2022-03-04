@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class TriggerBuildArtifactsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="images")
-    private final @Nullable Input<List<String>> images;
+      private final @Nullable Input<List<String>> images;
 
     public Input<List<String>> getImages() {
         return this.images == null ? Input.empty() : this.images;
@@ -40,7 +40,7 @@ public final class TriggerBuildArtifactsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="objects")
-    private final @Nullable Input<TriggerBuildArtifactsObjectsArgs> objects;
+      private final @Nullable Input<TriggerBuildArtifactsObjectsArgs> objects;
 
     public Input<TriggerBuildArtifactsObjectsArgs> getObjects() {
         return this.objects == null ? Input.empty() : this.objects;
@@ -99,7 +99,6 @@ public final class TriggerBuildArtifactsArgs extends io.pulumi.resources.Resourc
             this.objects = Input.ofNullable(objects);
             return this;
         }
-
         public TriggerBuildArtifactsArgs build() {
             return new TriggerBuildArtifactsArgs(images, objects);
         }

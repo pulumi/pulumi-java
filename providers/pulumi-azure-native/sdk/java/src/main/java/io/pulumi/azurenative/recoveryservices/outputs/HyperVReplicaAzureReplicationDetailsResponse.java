@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureVmDiskDetailsResponse
 import io.pulumi.azurenative.recoveryservices.outputs.InitialReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.OSDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMNicDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -216,28 +216,28 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
     /**
      * Azure VM Disk details.
      * 
-     */
+    */
     public List<AzureVmDiskDetailsResponse> getAzureVmDiskDetails() {
         return this.azureVmDiskDetails == null ? List.of() : this.azureVmDiskDetails;
     }
     /**
      * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
      * 
-     */
+    */
     public Optional<String> getEnableRdpOnTargetOption() {
         return Optional.ofNullable(this.enableRdpOnTargetOption);
     }
     /**
      * The encryption info.
      * 
-     */
+    */
     public Optional<String> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Initial replication details.
      * 
-     */
+    */
     public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
         return Optional.ofNullable(this.initialReplicationDetails);
     }
@@ -245,161 +245,161 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
      * Gets the Instance type.
      * Expected value is 'HyperVReplicaAzure'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The Last replication time.
      * 
-     */
+    */
     public Optional<String> getLastReplicatedTime() {
         return Optional.ofNullable(this.lastReplicatedTime);
     }
     /**
      * The last RPO calculated time.
      * 
-     */
+    */
     public Optional<String> getLastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
     /**
      * License Type of the VM to be used.
      * 
-     */
+    */
     public Optional<String> getLicenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * The operating system info.
      * 
-     */
+    */
     public Optional<OSDetailsResponse> getOSDetails() {
         return Optional.ofNullable(this.oSDetails);
     }
     /**
      * The recovery availability set Id.
      * 
-     */
+    */
     public Optional<String> getRecoveryAvailabilitySetId() {
         return Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
     /**
      * The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
      * 
-     */
+    */
     public Optional<String> getRecoveryAzureLogStorageAccountId() {
         return Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
     }
     /**
      * The target resource group Id.
      * 
-     */
+    */
     public Optional<String> getRecoveryAzureResourceGroupId() {
         return Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
     /**
      * The recovery Azure storage account.
      * 
-     */
+    */
     public Optional<String> getRecoveryAzureStorageAccount() {
         return Optional.ofNullable(this.recoveryAzureStorageAccount);
     }
     /**
      * The Recovery Azure VM size.
      * 
-     */
+    */
     public Optional<String> getRecoveryAzureVMSize() {
         return Optional.ofNullable(this.recoveryAzureVMSize);
     }
     /**
      * Recovery Azure given name.
      * 
-     */
+    */
     public Optional<String> getRecoveryAzureVmName() {
         return Optional.ofNullable(this.recoveryAzureVmName);
     }
     /**
      * Last RPO value.
      * 
-     */
+    */
     public Optional<Double> getRpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
     /**
      * The selected recovery azure network Id.
      * 
-     */
+    */
     public Optional<String> getSelectedRecoveryAzureNetworkId() {
         return Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
     /**
      * The selected source nic Id which will be used as the primary nic during failover.
      * 
-     */
+    */
     public Optional<String> getSelectedSourceNicId() {
         return Optional.ofNullable(this.selectedSourceNicId);
     }
     /**
      * The CPU count of the VM on the primary side.
      * 
-     */
+    */
     public Optional<Integer> getSourceVmCpuCount() {
         return Optional.ofNullable(this.sourceVmCpuCount);
     }
     /**
      * The RAM size of the VM on the primary side.
      * 
-     */
+    */
     public Optional<Integer> getSourceVmRamSizeInMB() {
         return Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
     /**
      * The target availability zone.
      * 
-     */
+    */
     public Optional<String> getTargetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
     /**
      * The target proximity placement group Id.
      * 
-     */
+    */
     public Optional<String> getTargetProximityPlacementGroupId() {
         return Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
     /**
      * A value indicating whether managed disks should be used during failover.
      * 
-     */
+    */
     public Optional<String> getUseManagedDisks() {
         return Optional.ofNullable(this.useManagedDisks);
     }
     /**
      * The virtual machine Id.
      * 
-     */
+    */
     public Optional<String> getVmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
      * The PE Network details.
      * 
-     */
+    */
     public List<VMNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The protection state for the vm.
      * 
-     */
+    */
     public Optional<String> getVmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
     /**
      * The protection state description for the vm.
      * 
-     */
+    */
     public Optional<String> getVmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }
@@ -610,7 +610,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
-
         public HyperVReplicaAzureReplicationDetailsResponse build() {
             return new HyperVReplicaAzureReplicationDetailsResponse(azureVmDiskDetails, enableRdpOnTargetOption, encryption, initialReplicationDetails, instanceType, lastReplicatedTime, lastRpoCalculatedTime, licenseType, oSDetails, recoveryAvailabilitySetId, recoveryAzureLogStorageAccountId, recoveryAzureResourceGroupId, recoveryAzureStorageAccount, recoveryAzureVMSize, recoveryAzureVmName, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedSourceNicId, sourceVmCpuCount, sourceVmRamSizeInMB, targetAvailabilityZone, targetProximityPlacementGroupId, useManagedDisks, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }

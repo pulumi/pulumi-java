@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -70,35 +70,35 @@ public final class VmHostPlacementPolicyPropertiesResponse {
     /**
      * placement policy affinity type
      * 
-     */
+    */
     public String getAffinityType() {
         return this.affinityType;
     }
     /**
      * Display name of the placement policy
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Host members list
      * 
-     */
+    */
     public List<String> getHostMembers() {
         return this.hostMembers;
     }
     /**
      * The provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether the placement policy is enabled or disabled
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -106,14 +106,14 @@ public final class VmHostPlacementPolicyPropertiesResponse {
      * placement policy type
      * Expected value is 'VmHost'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Virtual machine members list
      * 
-     */
+    */
     public List<String> getVmMembers() {
         return this.vmMembers;
     }
@@ -184,7 +184,6 @@ public final class VmHostPlacementPolicyPropertiesResponse {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }
-
         public VmHostPlacementPolicyPropertiesResponse build() {
             return new VmHostPlacementPolicyPropertiesResponse(affinityType, displayName, hostMembers, provisioningState, state, type, vmMembers);
         }

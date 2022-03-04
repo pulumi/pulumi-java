@@ -9,7 +9,7 @@ import io.pulumi.azurenative.search.inputs.IdentityArgs;
 import io.pulumi.azurenative.search.inputs.NetworkRuleSetArgs;
 import io.pulumi.azurenative.search.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostingMode")
-    private final @Nullable Input<HostingMode> hostingMode;
+      private final @Nullable Input<HostingMode> hostingMode;
 
     public Input<HostingMode> getHostingMode() {
         return this.hostingMode == null ? Input.empty() : this.hostingMode;
@@ -37,7 +37,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -48,7 +48,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -59,7 +59,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkRuleSet")
-    private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
+      private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
 
     public Input<NetworkRuleSetArgs> getNetworkRuleSet() {
         return this.networkRuleSet == null ? Input.empty() : this.networkRuleSet;
@@ -70,7 +70,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionCount")
-    private final @Nullable Input<Integer> partitionCount;
+      private final @Nullable Input<Integer> partitionCount;
 
     public Input<Integer> getPartitionCount() {
         return this.partitionCount == null ? Input.empty() : this.partitionCount;
@@ -81,7 +81,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<PublicNetworkAccess> publicNetworkAccess;
+      private final @Nullable Input<PublicNetworkAccess> publicNetworkAccess;
 
     public Input<PublicNetworkAccess> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -92,7 +92,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaCount")
-    private final @Nullable Input<Integer> replicaCount;
+      private final @Nullable Input<Integer> replicaCount;
 
     public Input<Integer> getReplicaCount() {
         return this.replicaCount == null ? Input.empty() : this.replicaCount;
@@ -103,7 +103,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -114,7 +114,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searchServiceName")
-    private final @Nullable Input<String> searchServiceName;
+      private final @Nullable Input<String> searchServiceName;
 
     public Input<String> getSearchServiceName() {
         return this.searchServiceName == null ? Input.empty() : this.searchServiceName;
@@ -125,7 +125,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -136,7 +136,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -330,7 +330,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(hostingMode, identity, location, networkRuleSet, partitionCount, publicNetworkAccess, replicaCount, resourceGroupName, searchServiceName, sku, tags);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InstanceGroupNamedPortArgs;
 import io.pulumi.gcp.compute.inputs.InstanceGroupNamedPortState;
@@ -126,6 +126,37 @@ public class InstanceGroupNamedPort extends io.pulumi.resources.CustomResource {
         return this.zone;
     }
 
+    public interface BuilderApplicator {
+        public void apply(InstanceGroupNamedPortArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.InstanceGroupNamedPortArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.InstanceGroupNamedPortArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public InstanceGroupNamedPort(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public InstanceGroupNamedPort(String name) {
+        this(name, InstanceGroupNamedPortArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public InstanceGroupNamedPort(String name, InstanceGroupNamedPortArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

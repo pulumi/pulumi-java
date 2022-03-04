@@ -6,21 +6,41 @@ package io.pulumi.azurenative.cognitiveservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cognitiveservices.inputs.GetDeploymentArgs;
 import io.pulumi.azurenative.cognitiveservices.outputs.GetDeploymentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeployment {
-/**
- * Cognitive Services account deployment.
+    private GetDeployment() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeploymentArgs.Builder a);
+    }
+    private static GetDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeploymentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Cognitive Services account deployment.
  * API Version: 2021-10-01.
  * 
- *
- * Cognitive Services account deployment.
+     *
+     * Cognitive Services account deployment.
  * 
- */
+     */
+    public static CompletableFuture<GetDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Cognitive Services account deployment.
+     * API Version: 2021-10-01.
+     * 
+     *
+         * Cognitive Services account deployment.
+     * 
+     */
     public static CompletableFuture<GetDeploymentResult> invokeAsync(GetDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getDeployment", TypeShape.of(GetDeploymentResult.class), args == null ? GetDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

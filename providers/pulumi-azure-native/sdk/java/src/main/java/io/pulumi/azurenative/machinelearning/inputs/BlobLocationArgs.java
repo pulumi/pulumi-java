@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<String> credentials;
+      private final @Nullable Input<String> credentials;
 
     public Input<String> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -34,7 +34,7 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -93,7 +93,6 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public BlobLocationArgs build() {
             return new BlobLocationArgs(credentials, uri);
         }

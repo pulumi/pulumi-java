@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.TemplateResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.TemplateTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class GetTemplateResult {
     /**
      * <p>The Amazon Resource Name (ARN) of the template.</p>
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>A display name for the template.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>A list of resource permissions to be set on the template. </p>
      * 
-     */
+    */
     public List<TemplateResourcePermission> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
      * 
-     */
+    */
     public List<TemplateTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -121,7 +121,6 @@ public final class GetTemplateResult {
             this.tags = tags;
             return this;
         }
-
         public GetTemplateResult build() {
             return new GetTemplateResult(arn, name, permissions, tags);
         }

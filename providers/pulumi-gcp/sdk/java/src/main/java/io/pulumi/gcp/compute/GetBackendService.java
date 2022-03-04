@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackendService {
-/**
- * Provide access to a Backend Service's attribute. For more information
+    private GetBackendService() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackendServiceArgs.Builder a);
+    }
+    private static GetBackendServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackendServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provide access to a Backend Service's attribute. For more information
  * see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
  * and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
  * 
- *
- * A collection of arguments for invoking getBackendService.
+     *
+     * A collection of arguments for invoking getBackendService.
  * 
- *
- * A collection of values returned by getBackendService.
+     *
+     * A collection of values returned by getBackendService.
  * 
- */
+     */
+    public static CompletableFuture<GetBackendServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provide access to a Backend Service's attribute. For more information
+     * see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
+     * and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
+     * 
+     *
+         * A collection of arguments for invoking getBackendService.
+     * 
+     *
+         * A collection of values returned by getBackendService.
+     * 
+     */
     public static CompletableFuture<GetBackendServiceResult> invokeAsync(GetBackendServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getBackendService:getBackendService", TypeShape.of(GetBackendServiceResult.class), args == null ? GetBackendServiceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class SqlDWUpsertSettingsResponse {
     /**
      * Schema name for interim table. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getInterimSchemaName() {
         return Optional.ofNullable(this.interimSchemaName);
     }
     /**
      * Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
      * 
-     */
+    */
     public Optional<Object> getKeys() {
         return Optional.ofNullable(this.keys);
     }
@@ -76,7 +76,6 @@ public final class SqlDWUpsertSettingsResponse {
             this.keys = keys;
             return this;
         }
-
         public SqlDWUpsertSettingsResponse build() {
             return new SqlDWUpsertSettingsResponse(interimSchemaName, keys);
         }

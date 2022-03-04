@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ManagedPrometheusConfigResponse {
     /**
      * Enable Managed Collection.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -52,7 +52,6 @@ public final class ManagedPrometheusConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ManagedPrometheusConfigResponse build() {
             return new ManagedPrometheusConfigResponse(enabled);
         }

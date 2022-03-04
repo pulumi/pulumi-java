@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class SecretEnvVarResponse {
     /**
      * Name of the environment variable.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * Name of the secret in secret manager (not the full resource name).
      * 
-     */
+    */
     public String getSecret() {
         return this.secret;
     }
     /**
      * Version of the secret (version number or the string 'latest'). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -116,7 +116,6 @@ public final class SecretEnvVarResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SecretEnvVarResponse build() {
             return new SecretEnvVarResponse(key, project, secret, version);
         }

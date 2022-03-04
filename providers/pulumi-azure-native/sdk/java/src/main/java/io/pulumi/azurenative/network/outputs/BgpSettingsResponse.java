@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.IPConfigurationBgpPeeringAddressResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -51,28 +51,28 @@ public final class BgpSettingsResponse {
     /**
      * The BGP speaker's ASN.
      * 
-     */
+    */
     public Optional<Double> getAsn() {
         return Optional.ofNullable(this.asn);
     }
     /**
      * The BGP peering address and BGP identifier of this BGP speaker.
      * 
-     */
+    */
     public Optional<String> getBgpPeeringAddress() {
         return Optional.ofNullable(this.bgpPeeringAddress);
     }
     /**
      * BGP peering address with IP configuration ID for virtual network gateway.
      * 
-     */
+    */
     public List<IPConfigurationBgpPeeringAddressResponse> getBgpPeeringAddresses() {
         return this.bgpPeeringAddresses == null ? List.of() : this.bgpPeeringAddresses;
     }
     /**
      * The weight added to routes learned from this BGP speaker.
      * 
-     */
+    */
     public Optional<Integer> getPeerWeight() {
         return Optional.ofNullable(this.peerWeight);
     }
@@ -122,7 +122,6 @@ public final class BgpSettingsResponse {
             this.peerWeight = peerWeight;
             return this;
         }
-
         public BgpSettingsResponse build() {
             return new BgpSettingsResponse(asn, bgpPeeringAddress, bgpPeeringAddresses, peerWeight);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audience", required=true)
-    private final Input<String> audience;
+      private final Input<String> audience;
 
     public Input<String> getAudience() {
         return this.audience;
@@ -35,7 +35,7 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationSeconds")
-    private final @Nullable Input<Integer> expirationSeconds;
+      private final @Nullable Input<Integer> expirationSeconds;
 
     public Input<Integer> getExpirationSeconds() {
         return this.expirationSeconds == null ? Input.empty() : this.expirationSeconds;
@@ -94,7 +94,6 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.expirationSeconds = Input.ofNullable(expirationSeconds);
             return this;
         }
-
         public TokenRequestArgs build() {
             return new TokenRequestArgs(audience, expirationSeconds);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.ContainerIdentityInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GenericContainerExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="containerIdentityInfo")
-    private final @Nullable ContainerIdentityInfoResponse containerIdentityInfo;
+      private final @Nullable ContainerIdentityInfoResponse containerIdentityInfo;
 
     public Optional<ContainerIdentityInfoResponse> getContainerIdentityInfo() {
         return this.containerIdentityInfo == null ? Optional.empty() : Optional.ofNullable(this.containerIdentityInfo);
@@ -36,7 +36,7 @@ public final class GenericContainerExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="rawCertData")
-    private final @Nullable String rawCertData;
+      private final @Nullable String rawCertData;
 
     public Optional<String> getRawCertData() {
         return this.rawCertData == null ? Optional.empty() : Optional.ofNullable(this.rawCertData);
@@ -47,7 +47,7 @@ public final class GenericContainerExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="serviceEndpoints")
-    private final @Nullable Map<String,String> serviceEndpoints;
+      private final @Nullable Map<String,String> serviceEndpoints;
 
     public Map<String,String> getServiceEndpoints() {
         return this.serviceEndpoints == null ? Map.of() : this.serviceEndpoints;
@@ -106,7 +106,6 @@ public final class GenericContainerExtendedInfoResponse extends io.pulumi.resour
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
-
         public GenericContainerExtendedInfoResponse build() {
             return new GenericContainerExtendedInfoResponse(containerIdentityInfo, rawCertData, serviceEndpoints);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1.inputs.PrivateClusterConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cloudComposerNetworkIpv4CidrBlock")
-    private final @Nullable Input<String> cloudComposerNetworkIpv4CidrBlock;
+      private final @Nullable Input<String> cloudComposerNetworkIpv4CidrBlock;
 
     public Input<String> getCloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock == null ? Input.empty() : this.cloudComposerNetworkIpv4CidrBlock;
@@ -36,7 +36,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cloudSqlIpv4CidrBlock")
-    private final @Nullable Input<String> cloudSqlIpv4CidrBlock;
+      private final @Nullable Input<String> cloudSqlIpv4CidrBlock;
 
     public Input<String> getCloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock == null ? Input.empty() : this.cloudSqlIpv4CidrBlock;
@@ -47,7 +47,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enablePrivateEnvironment")
-    private final @Nullable Input<Boolean> enablePrivateEnvironment;
+      private final @Nullable Input<Boolean> enablePrivateEnvironment;
 
     public Input<Boolean> getEnablePrivateEnvironment() {
         return this.enablePrivateEnvironment == null ? Input.empty() : this.enablePrivateEnvironment;
@@ -58,7 +58,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="privateClusterConfig")
-    private final @Nullable Input<PrivateClusterConfigArgs> privateClusterConfig;
+      private final @Nullable Input<PrivateClusterConfigArgs> privateClusterConfig;
 
     public Input<PrivateClusterConfigArgs> getPrivateClusterConfig() {
         return this.privateClusterConfig == null ? Input.empty() : this.privateClusterConfig;
@@ -69,7 +69,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="webServerIpv4CidrBlock")
-    private final @Nullable Input<String> webServerIpv4CidrBlock;
+      private final @Nullable Input<String> webServerIpv4CidrBlock;
 
     public Input<String> getWebServerIpv4CidrBlock() {
         return this.webServerIpv4CidrBlock == null ? Input.empty() : this.webServerIpv4CidrBlock;
@@ -173,7 +173,6 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
             this.webServerIpv4CidrBlock = Input.ofNullable(webServerIpv4CidrBlock);
             return this;
         }
-
         public PrivateEnvironmentConfigArgs build() {
             return new PrivateEnvironmentConfigArgs(cloudComposerNetworkIpv4CidrBlock, cloudSqlIpv4CidrBlock, enablePrivateEnvironment, privateClusterConfig, webServerIpv4CidrBlock);
         }

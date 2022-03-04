@@ -6,21 +6,41 @@ package io.pulumi.azurenative.desktopvirtualization;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.desktopvirtualization.inputs.GetWorkspaceArgs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.GetWorkspaceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkspace {
-/**
- * Represents a Workspace definition.
+    private GetWorkspace() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkspaceArgs.Builder a);
+    }
+    private static GetWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkspaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a Workspace definition.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Represents a Workspace definition.
+     *
+     * Represents a Workspace definition.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a Workspace definition.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Represents a Workspace definition.
+     * 
+     */
     public static CompletableFuture<GetWorkspaceResult> invokeAsync(GetWorkspaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args == null ? GetWorkspaceArgs.Empty : args, Utilities.withVersion(options));
     }

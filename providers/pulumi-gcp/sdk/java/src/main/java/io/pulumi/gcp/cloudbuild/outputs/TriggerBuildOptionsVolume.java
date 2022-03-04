@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,7 +39,7 @@ public final class TriggerBuildOptionsVolume {
      * Volume names must be unique per build step and must be valid names for Docker volumes.
      * Each named volume must be used by at least two build steps.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -48,7 +48,7 @@ public final class TriggerBuildOptionsVolume {
      * Paths must be absolute and cannot conflict with other volume paths on the same
      * build step or with certain reserved volume paths.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -84,7 +84,6 @@ public final class TriggerBuildOptionsVolume {
             this.path = path;
             return this;
         }
-
         public TriggerBuildOptionsVolume build() {
             return new TriggerBuildOptionsVolume(name, path);
         }

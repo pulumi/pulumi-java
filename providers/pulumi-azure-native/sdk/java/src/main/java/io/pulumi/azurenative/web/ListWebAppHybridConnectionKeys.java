@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListWebAppHybridConnectionKeysArgs;
 import io.pulumi.azurenative.web.outputs.ListWebAppHybridConnectionKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppHybridConnectionKeys {
-/**
- * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+    private ListWebAppHybridConnectionKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppHybridConnectionKeysArgs.Builder a);
+    }
+    private static ListWebAppHybridConnectionKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppHybridConnectionKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
  * API Version: 2018-11-01.
  * 
- *
- * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+     *
+     * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppHybridConnectionKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+     * API Version: 2018-11-01.
+     * 
+     *
+         * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+     * 
+     */
     public static CompletableFuture<ListWebAppHybridConnectionKeysResult> invokeAsync(ListWebAppHybridConnectionKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHybridConnectionKeys", TypeShape.of(ListWebAppHybridConnectionKeysResult.class), args == null ? ListWebAppHybridConnectionKeysArgs.Empty : args, Utilities.withVersion(options));
     }

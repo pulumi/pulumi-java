@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.orbital.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class EndPointResponse {
     /**
      * Name of an end point.
      * 
-     */
+    */
     public String getEndPointName() {
         return this.endPointName;
     }
     /**
      * IP Address.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * TCP port to listen on to receive data.
      * 
-     */
+    */
     public String getPort() {
         return this.port;
     }
     /**
      * Protocol either UDP or TCP.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
@@ -116,7 +116,6 @@ public final class EndPointResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public EndPointResponse build() {
             return new EndPointResponse(endPointName, ipAddress, port, protocol);
         }

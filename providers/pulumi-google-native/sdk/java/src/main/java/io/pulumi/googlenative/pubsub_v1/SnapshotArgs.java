@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="snapshotId", required=true)
-    private final Input<String> snapshotId;
+      private final Input<String> snapshotId;
 
     public Input<String> getSnapshotId() {
         return this.snapshotId;
@@ -45,7 +45,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscription", required=true)
-    private final Input<String> subscription;
+      private final Input<String> subscription;
 
     public Input<String> getSubscription() {
         return this.subscription;
@@ -134,7 +134,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.subscription = Input.of(Objects.requireNonNull(subscription));
             return this;
         }
-
         public SnapshotArgs build() {
             return new SnapshotArgs(labels, project, snapshotId, subscription);
         }

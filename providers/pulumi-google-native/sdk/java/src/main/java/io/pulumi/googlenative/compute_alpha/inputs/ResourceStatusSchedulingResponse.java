@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResourceStatusSchedulingResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="availabilityDomain", required=true)
-    private final Integer availabilityDomain;
+      private final Integer availabilityDomain;
 
     public Integer getAvailabilityDomain() {
         return this.availabilityDomain;
@@ -55,7 +55,6 @@ public final class ResourceStatusSchedulingResponse extends io.pulumi.resources.
             this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
             return this;
         }
-
         public ResourceStatusSchedulingResponse build() {
             return new ResourceStatusSchedulingResponse(availabilityDomain);
         }

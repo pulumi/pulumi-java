@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.UrlFileNameMatchConditionParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,14 +34,14 @@ public final class DeliveryRuleUrlFileNameConditionResponse {
      * The name of the condition for the delivery rule.
      * Expected value is 'UrlFileName'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
-     */
+    */
     public UrlFileNameMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }
@@ -77,7 +77,6 @@ public final class DeliveryRuleUrlFileNameConditionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleUrlFileNameConditionResponse build() {
             return new DeliveryRuleUrlFileNameConditionResponse(name, parameters);
         }

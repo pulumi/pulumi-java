@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicyDimension;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -45,7 +45,6 @@ public final class FirewallPolicyPublishMetricAction {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
         public FirewallPolicyPublishMetricAction build() {
             return new FirewallPolicyPublishMetricAction(dimensions);
         }

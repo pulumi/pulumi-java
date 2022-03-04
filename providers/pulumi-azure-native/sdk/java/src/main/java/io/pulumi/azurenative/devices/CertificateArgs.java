@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.devices.inputs.CertificatePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateName")
-    private final @Nullable Input<String> certificateName;
+      private final @Nullable Input<String> certificateName;
 
     public Input<String> getCertificateName() {
         return this.certificateName == null ? Input.empty() : this.certificateName;
@@ -31,7 +31,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<CertificatePropertiesArgs> properties;
+      private final @Nullable Input<CertificatePropertiesArgs> properties;
 
     public Input<CertificatePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -142,7 +142,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public CertificateArgs build() {
             return new CertificateArgs(certificateName, properties, resourceGroupName, resourceName);
         }

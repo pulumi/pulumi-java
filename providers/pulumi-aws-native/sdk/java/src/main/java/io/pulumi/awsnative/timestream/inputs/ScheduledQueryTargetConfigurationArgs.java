@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryTimestreamConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class ScheduledQueryTargetConfigurationArgs extends io.pulumi.resou
     public static final ScheduledQueryTargetConfigurationArgs Empty = new ScheduledQueryTargetConfigurationArgs();
 
     @InputImport(name="timestreamConfiguration", required=true)
-    private final Input<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration;
+      private final Input<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration;
 
     public Input<ScheduledQueryTimestreamConfigurationArgs> getTimestreamConfiguration() {
         return this.timestreamConfiguration;
@@ -61,7 +61,6 @@ public final class ScheduledQueryTargetConfigurationArgs extends io.pulumi.resou
             this.timestreamConfiguration = Input.of(Objects.requireNonNull(timestreamConfiguration));
             return this;
         }
-
         public ScheduledQueryTargetConfigurationArgs build() {
             return new ScheduledQueryTargetConfigurationArgs(timestreamConfiguration);
         }

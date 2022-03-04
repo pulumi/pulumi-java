@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.LocationResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class CompanyDerivedInfoResponse {
     /**
      * A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
      * 
-     */
+    */
     public LocationResponse getHeadquartersLocation() {
         return this.headquartersLocation;
     }
@@ -52,7 +52,6 @@ public final class CompanyDerivedInfoResponse {
             this.headquartersLocation = Objects.requireNonNull(headquartersLocation);
             return this;
         }
-
         public CompanyDerivedInfoResponse build() {
             return new CompanyDerivedInfoResponse(headquartersLocation);
         }

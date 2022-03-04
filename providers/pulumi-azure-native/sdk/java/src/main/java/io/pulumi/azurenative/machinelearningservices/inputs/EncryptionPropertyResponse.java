@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.IdentityForCmkResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable IdentityForCmkResponse identity;
+      private final @Nullable IdentityForCmkResponse identity;
 
     public Optional<IdentityForCmkResponse> getIdentity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
@@ -32,7 +32,7 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keyVaultProperties", required=true)
-    private final KeyVaultPropertiesResponse keyVaultProperties;
+      private final KeyVaultPropertiesResponse keyVaultProperties;
 
     public KeyVaultPropertiesResponse getKeyVaultProperties() {
         return this.keyVaultProperties;
@@ -43,7 +43,7 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -102,7 +102,6 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public EncryptionPropertyResponse build() {
             return new EncryptionPropertyResponse(identity, keyVaultProperties, status);
         }

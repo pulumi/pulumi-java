@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DataSourceMariaDbParameters extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="database", required=true)
-    private final String database;
+      private final String database;
 
     public String getDatabase() {
         return this.database;
@@ -33,7 +33,7 @@ public final class DataSourceMariaDbParameters extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -44,7 +44,7 @@ public final class DataSourceMariaDbParameters extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="port", required=true)
-    private final Double port;
+      private final Double port;
 
     public Double getPort() {
         return this.port;
@@ -103,7 +103,6 @@ public final class DataSourceMariaDbParameters extends io.pulumi.resources.Invok
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceMariaDbParameters build() {
             return new DataSourceMariaDbParameters(database, host, port);
         }

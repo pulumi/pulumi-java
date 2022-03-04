@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SpecificationResponse {
     /**
      * Name of the specification
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Value of the specification
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class SpecificationResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SpecificationResponse build() {
             return new SpecificationResponse(name, value);
         }

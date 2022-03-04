@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.IosAppInfoResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.IosRoboTestResponse;
@@ -56,35 +56,35 @@ public final class IosTestResponse {
     /**
      * Information about the application under test.
      * 
-     */
+    */
     public IosAppInfoResponse getIosAppInfo() {
         return this.iosAppInfo;
     }
     /**
      * An iOS Robo test.
      * 
-     */
+    */
     public IosRoboTestResponse getIosRoboTest() {
         return this.iosRoboTest;
     }
     /**
      * An iOS test loop.
      * 
-     */
+    */
     public IosTestLoopResponse getIosTestLoop() {
         return this.iosTestLoop;
     }
     /**
      * An iOS XCTest.
      * 
-     */
+    */
     public IosXcTestResponse getIosXcTest() {
         return this.iosXcTest;
     }
     /**
      * Max time a test is allowed to run before it is automatically cancelled.
      * 
-     */
+    */
     public DurationResponse getTestTimeout() {
         return this.testTimeout;
     }
@@ -141,7 +141,6 @@ public final class IosTestResponse {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }
-
         public IosTestResponse build() {
             return new IosTestResponse(iosAppInfo, iosRoboTest, iosTestLoop, iosXcTest, testTimeout);
         }

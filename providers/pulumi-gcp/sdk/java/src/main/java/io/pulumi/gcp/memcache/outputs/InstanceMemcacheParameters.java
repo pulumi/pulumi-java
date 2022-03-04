@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.memcache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -36,14 +36,14 @@ public final class InstanceMemcacheParameters {
      * - 
      * This is a unique ID associated with this set of parameters.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * User-defined set of parameters to use in the memcache process.
      * 
-     */
+    */
     public Map<String,String> getParams() {
         return this.params == null ? Map.of() : this.params;
     }
@@ -79,7 +79,6 @@ public final class InstanceMemcacheParameters {
             this.params = params;
             return this;
         }
-
         public InstanceMemcacheParameters build() {
             return new InstanceMemcacheParameters(id, params);
         }

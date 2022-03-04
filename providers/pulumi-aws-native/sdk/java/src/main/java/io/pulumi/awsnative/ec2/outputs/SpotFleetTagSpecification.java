@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetTagSpecificationResourceType;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,7 +62,6 @@ public final class SpotFleetTagSpecification {
             this.tags = tags;
             return this;
         }
-
         public SpotFleetTagSpecification build() {
             return new SpotFleetTagSpecification(resourceType, tags);
         }

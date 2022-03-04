@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class TlsCertificatePropertiesResponse {
     /**
      * Indicates the location of the certificates.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The type of certificate location.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class TlsCertificatePropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TlsCertificatePropertiesResponse build() {
             return new TlsCertificatePropertiesResponse(location, type);
         }

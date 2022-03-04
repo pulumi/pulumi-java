@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -106,70 +106,70 @@ public final class AzureFunctionLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Type of authentication (Required to specify MSI) used to connect to AzureFunction. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The credential reference containing authentication information.
      * 
-     */
+    */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.
      * 
-     */
+    */
     public Object getFunctionAppUrl() {
         return this.functionAppUrl;
     }
     /**
      * Function or Host key for Azure Function App.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getFunctionKey() {
         return Optional.ofNullable(this.functionKey);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Allowed token audiences for azure function.
      * 
-     */
+    */
     public Optional<Object> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -177,7 +177,7 @@ public final class AzureFunctionLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'AzureFunction'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -276,7 +276,6 @@ public final class AzureFunctionLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureFunctionLinkedServiceResponse build() {
             return new AzureFunctionLinkedServiceResponse(annotations, authentication, connectVia, credential, description, encryptedCredential, functionAppUrl, functionKey, parameters, resourceId, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class NodeTemplateNodeTypeFlexibilityResponse extends io.pulumi.res
     public static final NodeTemplateNodeTypeFlexibilityResponse Empty = new NodeTemplateNodeTypeFlexibilityResponse();
 
     @InputImport(name="cpus", required=true)
-    private final String cpus;
+      private final String cpus;
 
     public String getCpus() {
         return this.cpus;
     }
 
     @InputImport(name="localSsd", required=true)
-    private final String localSsd;
+      private final String localSsd;
 
     public String getLocalSsd() {
         return this.localSsd;
     }
 
     @InputImport(name="memory", required=true)
-    private final String memory;
+      private final String memory;
 
     public String getMemory() {
         return this.memory;
@@ -86,7 +86,6 @@ public final class NodeTemplateNodeTypeFlexibilityResponse extends io.pulumi.res
             this.memory = Objects.requireNonNull(memory);
             return this;
         }
-
         public NodeTemplateNodeTypeFlexibilityResponse build() {
             return new NodeTemplateNodeTypeFlexibilityResponse(cpus, localSsd, memory);
         }

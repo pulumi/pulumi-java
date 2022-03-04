@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="podCidr")
-    private final @Nullable String podCidr;
+      private final @Nullable String podCidr;
 
     public Optional<String> getPodCidr() {
         return this.podCidr == null ? Optional.empty() : Optional.ofNullable(this.podCidr);
@@ -34,7 +34,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="serviceCidr")
-    private final @Nullable String serviceCidr;
+      private final @Nullable String serviceCidr;
 
     public Optional<String> getServiceCidr() {
         return this.serviceCidr == null ? Optional.empty() : Optional.ofNullable(this.serviceCidr);
@@ -83,7 +83,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(podCidr, serviceCidr);
         }

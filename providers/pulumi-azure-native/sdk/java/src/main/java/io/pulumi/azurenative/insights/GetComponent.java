@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetComponentArgs;
 import io.pulumi.azurenative.insights.outputs.GetComponentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComponent {
-/**
- * An Application Insights component definition.
+    private GetComponent() {}
+    public interface BuilderApplicator {
+        public void apply(GetComponentArgs.Builder a);
+    }
+    private static GetComponentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetComponentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Application Insights component definition.
  * API Version: 2015-05-01.
  * 
- *
- * An Application Insights component definition.
+     *
+     * An Application Insights component definition.
  * 
- */
+     */
+    public static CompletableFuture<GetComponentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Application Insights component definition.
+     * API Version: 2015-05-01.
+     * 
+     *
+         * An Application Insights component definition.
+     * 
+     */
     public static CompletableFuture<GetComponentResult> invokeAsync(GetComponentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getComponent", TypeShape.of(GetComponentResult.class), args == null ? GetComponentArgs.Empty : args, Utilities.withVersion(options));
     }

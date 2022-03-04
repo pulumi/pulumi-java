@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SshPublicKeyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publicKeys")
-    private final @Nullable Input<List<SshPublicKeyArgs>> publicKeys;
+      private final @Nullable Input<List<SshPublicKeyArgs>> publicKeys;
 
     public Input<List<SshPublicKeyArgs>> getPublicKeys() {
         return this.publicKeys == null ? Input.empty() : this.publicKeys;
@@ -67,7 +67,6 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }
-
         public SshConfigurationArgs build() {
             return new SshConfigurationArgs(publicKeys);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupPositionalConstraint;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupTextTransformation;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -103,7 +103,6 @@ public final class RuleGroupByteMatchStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public RuleGroupByteMatchStatement build() {
             return new RuleGroupByteMatchStatement(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
         }

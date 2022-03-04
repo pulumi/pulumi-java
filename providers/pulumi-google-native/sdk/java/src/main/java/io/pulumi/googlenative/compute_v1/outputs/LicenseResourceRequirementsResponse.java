@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class LicenseResourceRequirementsResponse {
     /**
      * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
      * 
-     */
+    */
     public Integer getMinGuestCpuCount() {
         return this.minGuestCpuCount;
     }
     /**
      * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
      * 
-     */
+    */
     public Integer getMinMemoryMb() {
         return this.minMemoryMb;
     }
@@ -74,7 +74,6 @@ public final class LicenseResourceRequirementsResponse {
             this.minMemoryMb = Objects.requireNonNull(minMemoryMb);
             return this;
         }
-
         public LicenseResourceRequirementsResponse build() {
             return new LicenseResourceRequirementsResponse(minGuestCpuCount, minMemoryMb);
         }

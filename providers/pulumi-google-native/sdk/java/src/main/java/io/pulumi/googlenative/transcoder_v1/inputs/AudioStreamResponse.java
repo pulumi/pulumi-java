@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioMappingResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bitrateBps", required=true)
-    private final Integer bitrateBps;
+      private final Integer bitrateBps;
 
     public Integer getBitrateBps() {
         return this.bitrateBps;
@@ -35,7 +35,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="channelCount", required=true)
-    private final Integer channelCount;
+      private final Integer channelCount;
 
     public Integer getChannelCount() {
         return this.channelCount;
@@ -46,7 +46,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="channelLayout", required=true)
-    private final List<String> channelLayout;
+      private final List<String> channelLayout;
 
     public List<String> getChannelLayout() {
         return this.channelLayout;
@@ -57,7 +57,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="codec", required=true)
-    private final String codec;
+      private final String codec;
 
     public String getCodec() {
         return this.codec;
@@ -68,7 +68,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mapping", required=true)
-    private final List<AudioMappingResponse> mapping;
+      private final List<AudioMappingResponse> mapping;
 
     public List<AudioMappingResponse> getMapping() {
         return this.mapping;
@@ -79,7 +79,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sampleRateHertz", required=true)
-    private final Integer sampleRateHertz;
+      private final Integer sampleRateHertz;
 
     public Integer getSampleRateHertz() {
         return this.sampleRateHertz;
@@ -168,7 +168,6 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
         }
-
         public AudioStreamResponse build() {
             return new AudioStreamResponse(bitrateBps, channelCount, channelLayout, codec, mapping, sampleRateHertz);
         }

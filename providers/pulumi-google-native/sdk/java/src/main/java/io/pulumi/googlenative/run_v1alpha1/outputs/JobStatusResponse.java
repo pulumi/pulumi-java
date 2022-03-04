@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.InstanceStatusResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.JobConditionResponse;
 import java.lang.Integer;
@@ -84,63 +84,63 @@ public final class JobStatusResponse {
     /**
      * Optional. The number of actively running instances. +optional
      * 
-     */
+    */
     public Integer getActive() {
         return this.active;
     }
     /**
      * Optional. Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
-     */
+    */
     public String getCompletionTime() {
         return this.completionTime;
     }
     /**
      * Optional. The latest available observations of a job's current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
      * 
-     */
+    */
     public List<JobConditionResponse> getConditions() {
         return this.conditions;
     }
     /**
      * Optional. The number of instances which reached phase Failed. +optional
      * 
-     */
+    */
     public Integer getFailed() {
         return this.failed;
     }
     /**
      * Optional. ImageDigest holds the resolved digest for the image specified within .Spec.Template.Spec.Container.Image. The digest is resolved during the creation of the Job. This field holds the digest value regardless of whether a tag or digest was originally specified in the Container object.
      * 
-     */
+    */
     public String getImageDigest() {
         return this.imageDigest;
     }
     /**
      * Optional. Status of completed, failed, and running instances. +optional
      * 
-     */
+    */
     public List<InstanceStatusResponse> getInstances() {
         return this.instances;
     }
     /**
      * Optional. The 'generation' of the job that was last processed by the controller.
      * 
-     */
+    */
     public Integer getObservedGeneration() {
         return this.observedGeneration;
     }
     /**
      * Optional. Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Optional. The number of instances which reached phase Succeeded. +optional
      * 
-     */
+    */
     public Integer getSucceeded() {
         return this.succeeded;
     }
@@ -225,7 +225,6 @@ public final class JobStatusResponse {
             this.succeeded = Objects.requireNonNull(succeeded);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(active, completionTime, conditions, failed, imageDigest, instances, observedGeneration, startTime, succeeded);
         }

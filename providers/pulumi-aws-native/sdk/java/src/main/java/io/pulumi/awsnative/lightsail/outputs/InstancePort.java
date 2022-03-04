@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -79,21 +79,21 @@ public final class InstancePort {
     /**
      * Access Direction for Protocol of the Instance(inbound/outbound).
      * 
-     */
+    */
     public Optional<String> getAccessDirection() {
         return Optional.ofNullable(this.accessDirection);
     }
     /**
      * Access From Protocol of the Instance.
      * 
-     */
+    */
     public Optional<String> getAccessFrom() {
         return Optional.ofNullable(this.accessFrom);
     }
     /**
      * Access Type Protocol of the Instance.
      * 
-     */
+    */
     public Optional<String> getAccessType() {
         return Optional.ofNullable(this.accessType);
     }
@@ -106,14 +106,14 @@ public final class InstancePort {
     /**
      * CommonName for Protocol of the Instance.
      * 
-     */
+    */
     public Optional<String> getCommonName() {
         return Optional.ofNullable(this.commonName);
     }
     /**
      * From Port of the Instance.
      * 
-     */
+    */
     public Optional<Integer> getFromPort() {
         return Optional.ofNullable(this.fromPort);
     }
@@ -123,14 +123,14 @@ public final class InstancePort {
     /**
      * Port Protocol of the Instance.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * To Port of the Instance.
      * 
-     */
+    */
     public Optional<Integer> getToPort() {
         return Optional.ofNullable(this.toPort);
     }
@@ -222,7 +222,6 @@ public final class InstancePort {
             this.toPort = toPort;
             return this;
         }
-
         public InstancePort build() {
             return new InstancePort(accessDirection, accessFrom, accessType, cidrListAliases, cidrs, commonName, fromPort, ipv6Cidrs, protocol, toPort);
         }

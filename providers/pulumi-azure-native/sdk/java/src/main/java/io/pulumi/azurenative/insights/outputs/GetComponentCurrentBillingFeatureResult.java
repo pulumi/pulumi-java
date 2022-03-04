@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ApplicationInsightsComponentDataVolumeCapResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class GetComponentCurrentBillingFeatureResult {
     /**
      * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
      * 
-     */
+    */
     public List<String> getCurrentBillingFeatures() {
         return this.currentBillingFeatures == null ? List.of() : this.currentBillingFeatures;
     }
     /**
      * An Application Insights component daily data volume cap
      * 
-     */
+    */
     public Optional<ApplicationInsightsComponentDataVolumeCapResponse> getDataVolumeCap() {
         return Optional.ofNullable(this.dataVolumeCap);
     }
@@ -78,7 +78,6 @@ public final class GetComponentCurrentBillingFeatureResult {
             this.dataVolumeCap = dataVolumeCap;
             return this;
         }
-
         public GetComponentCurrentBillingFeatureResult build() {
             return new GetComponentCurrentBillingFeatureResult(currentBillingFeatures, dataVolumeCap);
         }

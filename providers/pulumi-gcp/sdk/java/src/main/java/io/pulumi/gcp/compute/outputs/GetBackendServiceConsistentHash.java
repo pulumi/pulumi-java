@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceConsistentHashHttpCooky;
 import java.lang.Integer;
 import java.lang.String;
@@ -74,7 +74,6 @@ public final class GetBackendServiceConsistentHash {
             this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
             return this;
         }
-
         public GetBackendServiceConsistentHash build() {
             return new GetBackendServiceConsistentHash(httpCookies, httpHeaderName, minimumRingSize);
         }

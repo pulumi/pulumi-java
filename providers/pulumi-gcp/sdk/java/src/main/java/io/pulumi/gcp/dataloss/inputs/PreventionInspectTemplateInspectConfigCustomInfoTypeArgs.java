@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs;
@@ -24,7 +24,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="dictionary")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> getDictionary() {
         return this.dictionary == null ? Input.empty() : this.dictionary;
@@ -36,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="exclusionType")
-    private final @Nullable Input<String> exclusionType;
+      private final @Nullable Input<String> exclusionType;
 
     public Input<String> getExclusionType() {
         return this.exclusionType == null ? Input.empty() : this.exclusionType;
@@ -51,7 +51,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="infoType", required=true)
-    private final Input<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType;
+      private final Input<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> getInfoType() {
         return this.infoType;
@@ -65,7 +65,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="likelihood")
-    private final @Nullable Input<String> likelihood;
+      private final @Nullable Input<String> likelihood;
 
     public Input<String> getLikelihood() {
         return this.likelihood == null ? Input.empty() : this.likelihood;
@@ -77,7 +77,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -89,7 +89,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @InputImport(name="storedType")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType;
+      private final @Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType;
 
     public Input<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> getStoredType() {
         return this.storedType == null ? Input.empty() : this.storedType;
@@ -208,7 +208,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
             this.storedType = Input.ofNullable(storedType);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeArgs build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeArgs(dictionary, exclusionType, infoType, likelihood, regex, storedType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class WorkloadNetworkSegmentSubnetResponse {
     /**
      * DHCP Range assigned for subnet.
      * 
-     */
+    */
     public List<String> getDhcpRanges() {
         return this.dhcpRanges == null ? List.of() : this.dhcpRanges;
     }
     /**
      * Gateway address.
      * 
-     */
+    */
     public Optional<String> getGatewayAddress() {
         return Optional.ofNullable(this.gatewayAddress);
     }
@@ -77,7 +77,6 @@ public final class WorkloadNetworkSegmentSubnetResponse {
             this.gatewayAddress = gatewayAddress;
             return this;
         }
-
         public WorkloadNetworkSegmentSubnetResponse build() {
             return new WorkloadNetworkSegmentSubnetResponse(dhcpRanges, gatewayAddress);
         }

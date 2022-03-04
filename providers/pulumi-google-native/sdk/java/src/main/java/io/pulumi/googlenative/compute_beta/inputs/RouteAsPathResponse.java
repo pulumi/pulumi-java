@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class RouteAsPathResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="asLists", required=true)
-    private final List<Integer> asLists;
+      private final List<Integer> asLists;
 
     public List<Integer> getAsLists() {
         return this.asLists;
@@ -30,7 +30,7 @@ public final class RouteAsPathResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pathSegmentType", required=true)
-    private final String pathSegmentType;
+      private final String pathSegmentType;
 
     public String getPathSegmentType() {
         return this.pathSegmentType;
@@ -79,7 +79,6 @@ public final class RouteAsPathResponse extends io.pulumi.resources.InvokeArgs {
             this.pathSegmentType = Objects.requireNonNull(pathSegmentType);
             return this;
         }
-
         public RouteAsPathResponse build() {
             return new RouteAsPathResponse(asLists, pathSegmentType);
         }

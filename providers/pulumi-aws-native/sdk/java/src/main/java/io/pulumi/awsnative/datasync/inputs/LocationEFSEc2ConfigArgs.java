@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="securityGroupArns", required=true)
-    private final Input<List<String>> securityGroupArns;
+      private final Input<List<String>> securityGroupArns;
 
     public Input<List<String>> getSecurityGroupArns() {
         return this.securityGroupArns;
@@ -34,7 +34,7 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnetArn", required=true)
-    private final Input<String> subnetArn;
+      private final Input<String> subnetArn;
 
     public Input<String> getSubnetArn() {
         return this.subnetArn;
@@ -93,7 +93,6 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
             this.subnetArn = Input.of(Objects.requireNonNull(subnetArn));
             return this;
         }
-
         public LocationEFSEc2ConfigArgs build() {
             return new LocationEFSEc2ConfigArgs(securityGroupArns, subnetArn);
         }

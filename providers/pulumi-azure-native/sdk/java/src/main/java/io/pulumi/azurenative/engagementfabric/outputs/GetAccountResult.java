@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.engagementfabric.outputs;
 
 import io.pulumi.azurenative.engagementfabric.outputs.SKUResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class GetAccountResult {
     /**
      * The ID of the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The SKU of the resource
      * 
-     */
+    */
     public SKUResponse getSku() {
         return this.sku;
     }
     /**
      * The tags of the resource
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The fully qualified type of the resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(id, location, name, sku, tags, type);
         }

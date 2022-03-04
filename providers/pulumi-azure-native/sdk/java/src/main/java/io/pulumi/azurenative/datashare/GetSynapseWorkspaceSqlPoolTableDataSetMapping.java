@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.GetSynapseWorkspaceSqlPoolTableDataSetMappingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSynapseWorkspaceSqlPoolTableDataSetMapping {
-/**
- * A Synapse Workspace Sql Pool Table data set mapping
+    private GetSynapseWorkspaceSqlPoolTableDataSetMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs.Builder a);
+    }
+    private static GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Synapse Workspace Sql Pool Table data set mapping
  * API Version: 2020-09-01.
  * 
- *
- * A Synapse Workspace Sql Pool Table data set mapping
+     *
+     * A Synapse Workspace Sql Pool Table data set mapping
  * 
- */
+     */
+    public static CompletableFuture<GetSynapseWorkspaceSqlPoolTableDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Synapse Workspace Sql Pool Table data set mapping
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A Synapse Workspace Sql Pool Table data set mapping
+     * 
+     */
     public static CompletableFuture<GetSynapseWorkspaceSqlPoolTableDataSetMappingResult> invokeAsync(GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getSynapseWorkspaceSqlPoolTableDataSetMapping", TypeShape.of(GetSynapseWorkspaceSqlPoolTableDataSetMappingResult.class), args == null ? GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

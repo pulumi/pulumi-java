@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class VpnServerConfigVpnClientRootCertificateResponse {
     /**
      * The certificate name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The certificate public data.
      * 
-     */
+    */
     public Optional<String> getPublicCertData() {
         return Optional.ofNullable(this.publicCertData);
     }
@@ -76,7 +76,6 @@ public final class VpnServerConfigVpnClientRootCertificateResponse {
             this.publicCertData = publicCertData;
             return this;
         }
-
         public VpnServerConfigVpnClientRootCertificateResponse build() {
             return new VpnServerConfigVpnClientRootCertificateResponse(name, publicCertData);
         }

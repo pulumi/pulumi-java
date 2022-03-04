@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class JobQueryDefaultDataset {
     /**
      * The ID of the dataset containing this model.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * The ID of the project containing this model.
      * 
-     */
+    */
     public Optional<String> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -76,7 +76,6 @@ public final class JobQueryDefaultDataset {
             this.projectId = projectId;
             return this;
         }
-
         public JobQueryDefaultDataset build() {
             return new JobQueryDefaultDataset(datasetId, projectId);
         }

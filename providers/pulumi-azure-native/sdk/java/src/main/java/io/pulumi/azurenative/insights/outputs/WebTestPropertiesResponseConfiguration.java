@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class WebTestPropertiesResponseConfiguration {
     /**
      * The XML specification of a WebTest to run against an application.
      * 
-     */
+    */
     public Optional<String> getWebTest() {
         return Optional.ofNullable(this.webTest);
     }
@@ -54,7 +54,6 @@ public final class WebTestPropertiesResponseConfiguration {
             this.webTest = webTest;
             return this;
         }
-
         public WebTestPropertiesResponseConfiguration build() {
             return new WebTestPropertiesResponseConfiguration(webTest);
         }

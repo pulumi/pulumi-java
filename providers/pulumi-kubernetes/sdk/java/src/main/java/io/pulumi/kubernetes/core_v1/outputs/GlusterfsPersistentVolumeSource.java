@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class GlusterfsPersistentVolumeSource {
     /**
      * EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
-     */
+    */
     public String getEndpoints() {
         return this.endpoints;
     }
     /**
      * EndpointsNamespace is the namespace that contains Glusterfs endpoint. If this field is empty, the EndpointNamespace defaults to the same namespace as the bound PVC. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
-     */
+    */
     public Optional<String> getEndpointsNamespace() {
         return Optional.ofNullable(this.endpointsNamespace);
     }
     /**
      * Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -119,7 +119,6 @@ public final class GlusterfsPersistentVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public GlusterfsPersistentVolumeSource build() {
             return new GlusterfsPersistentVolumeSource(endpoints, endpointsNamespace, path, readOnly);
         }

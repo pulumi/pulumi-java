@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse exten
      * 
      */
     @InputImport(name="baseUrl", required=true)
-    private final String baseUrl;
+      private final String baseUrl;
 
     public String getBaseUrl() {
         return this.baseUrl;
@@ -33,7 +33,7 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse exten
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -44,7 +44,7 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse exten
      * 
      */
     @InputImport(name="gpgKeys", required=true)
-    private final List<String> gpgKeys;
+      private final List<String> gpgKeys;
 
     public List<String> getGpgKeys() {
         return this.gpgKeys;
@@ -103,7 +103,6 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse exten
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceYumRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceYumRepositoryResponse(baseUrl, displayName, gpgKeys);
         }

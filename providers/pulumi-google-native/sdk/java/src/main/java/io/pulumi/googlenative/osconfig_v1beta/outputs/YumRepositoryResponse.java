@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class YumRepositoryResponse {
     /**
      * The location of the repository directory.
      * 
-     */
+    */
     public String getBaseUrl() {
         return this.baseUrl;
     }
     /**
      * The display name of the repository.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * URIs of GPG keys.
      * 
-     */
+    */
     public List<String> getGpgKeys() {
         return this.gpgKeys;
     }
@@ -96,7 +96,6 @@ public final class YumRepositoryResponse {
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }
-
         public YumRepositoryResponse build() {
             return new YumRepositoryResponse(baseUrl, displayName, gpgKeys);
         }

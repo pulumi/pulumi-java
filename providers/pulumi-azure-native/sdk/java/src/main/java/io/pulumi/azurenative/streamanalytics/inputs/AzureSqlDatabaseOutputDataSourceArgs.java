@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+      private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -34,7 +34,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -45,7 +45,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="server")
-    private final @Nullable Input<String> server;
+      private final @Nullable Input<String> server;
 
     public Input<String> getServer() {
         return this.server == null ? Input.empty() : this.server;
@@ -56,7 +56,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Input<String> table;
+      private final @Nullable Input<String> table;
 
     public Input<String> getTable() {
         return this.table == null ? Input.empty() : this.table;
@@ -68,7 +68,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -79,7 +79,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="user")
-    private final @Nullable Input<String> user;
+      private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;
@@ -198,7 +198,6 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
             this.user = Input.ofNullable(user);
             return this;
         }
-
         public AzureSqlDatabaseOutputDataSourceArgs build() {
             return new AzureSqlDatabaseOutputDataSourceArgs(database, password, server, table, type, user);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.elastic.outputs;
 
 import io.pulumi.azurenative.elastic.outputs.MonitoringTagRulesPropertiesResponse;
 import io.pulumi.azurenative.elastic.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,35 +54,35 @@ public final class GetTagRuleResult {
     /**
      * The id of the rule set.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the rule set.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the monitoring tag rules.
      * 
-     */
+    */
     public MonitoringTagRulesPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The system metadata relating to this resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the rule set.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetTagRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTagRuleResult build() {
             return new GetTagRuleResult(id, name, properties, systemData, type);
         }

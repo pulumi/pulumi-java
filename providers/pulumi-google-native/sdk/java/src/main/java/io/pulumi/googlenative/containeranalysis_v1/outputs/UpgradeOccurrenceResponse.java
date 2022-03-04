@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.UpgradeDistributionResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.VersionResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.WindowsUpdateResponse;
@@ -48,28 +48,28 @@ public final class UpgradeOccurrenceResponse {
     /**
      * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
      * 
-     */
+    */
     public UpgradeDistributionResponse getDistribution() {
         return this.distribution;
     }
     /**
      * Required for non-Windows OS. The package this Upgrade is for.
      * 
-     */
+    */
     public String get$package() {
         return this.$package;
     }
     /**
      * Required for non-Windows OS. The version of the package in a machine + human readable form.
      * 
-     */
+    */
     public VersionResponse getParsedVersion() {
         return this.parsedVersion;
     }
     /**
      * Required for Windows OS. Represents the metadata about the Windows update.
      * 
-     */
+    */
     public WindowsUpdateResponse getWindowsUpdate() {
         return this.windowsUpdate;
     }
@@ -119,7 +119,6 @@ public final class UpgradeOccurrenceResponse {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }
-
         public UpgradeOccurrenceResponse build() {
             return new UpgradeOccurrenceResponse(distribution, $package, parsedVersion, windowsUpdate);
         }

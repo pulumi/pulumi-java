@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class AccessReviewInstanceResponse {
     /**
      * The DateTime when the review instance is scheduled to end.
      * 
-     */
+    */
     public Optional<String> getEndDateTime() {
         return Optional.ofNullable(this.endDateTime);
     }
     /**
      * The access review instance id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The access review instance name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The DateTime when the review instance is scheduled to be start.
      * 
-     */
+    */
     public Optional<String> getStartDateTime() {
         return Optional.ofNullable(this.startDateTime);
     }
     /**
      * This read-only field specifies the status of an access review instance.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -160,7 +160,6 @@ public final class AccessReviewInstanceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccessReviewInstanceResponse build() {
             return new AccessReviewInstanceResponse(endDateTime, id, name, startDateTime, status, type);
         }

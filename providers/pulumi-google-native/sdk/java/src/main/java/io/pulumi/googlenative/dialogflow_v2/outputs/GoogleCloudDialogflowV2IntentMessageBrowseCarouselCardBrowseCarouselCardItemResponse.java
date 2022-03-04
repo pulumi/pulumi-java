@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageImageResponse;
 import java.lang.String;
@@ -54,35 +54,35 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     /**
      * Optional. Description of the carousel item. Maximum of four lines of text.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
      * 
-     */
+    */
     public String getFooter() {
         return this.footer;
     }
     /**
      * Optional. Hero image for the carousel item.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
         return this.image;
     }
     /**
      * Action to present to the user.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse getOpenUriAction() {
         return this.openUriAction;
     }
     /**
      * Title of the carousel item. Maximum of two lines of text.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -139,7 +139,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse(description, footer, image, openUriAction, title);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs exte
      * 
      */
     @InputImport(name="fullPathMatch")
-    private final @Nullable Input<String> fullPathMatch;
+      private final @Nullable Input<String> fullPathMatch;
 
     public Input<String> getFullPathMatch() {
         return this.fullPathMatch == null ? Input.empty() : this.fullPathMatch;
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs exte
      * 
      */
     @InputImport(name="headerMatches")
-    private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches;
+      private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches;
 
     public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> getHeaderMatches() {
         return this.headerMatches == null ? Input.empty() : this.headerMatches;
@@ -46,7 +46,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs exte
      * 
      */
     @InputImport(name="ignoreCase")
-    private final @Nullable Input<Boolean> ignoreCase;
+      private final @Nullable Input<Boolean> ignoreCase;
 
     public Input<Boolean> getIgnoreCase() {
         return this.ignoreCase == null ? Input.empty() : this.ignoreCase;
@@ -64,7 +64,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs exte
      * 
      */
     @InputImport(name="pathTemplateMatch")
-    private final @Nullable Input<String> pathTemplateMatch;
+      private final @Nullable Input<String> pathTemplateMatch;
 
     public Input<String> getPathTemplateMatch() {
         return this.pathTemplateMatch == null ? Input.empty() : this.pathTemplateMatch;
@@ -75,7 +75,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs exte
      * 
      */
     @InputImport(name="prefixMatch")
-    private final @Nullable Input<String> prefixMatch;
+      private final @Nullable Input<String> prefixMatch;
 
     public Input<String> getPrefixMatch() {
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
@@ -87,7 +87,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs exte
      * 
      */
     @InputImport(name="queryParameterMatches")
-    private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches;
+      private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches;
 
     public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> getQueryParameterMatches() {
         return this.queryParameterMatches == null ? Input.empty() : this.queryParameterMatches;
@@ -206,7 +206,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs exte
             this.queryParameterMatches = Input.ofNullable(queryParameterMatches);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs(fullPathMatch, headerMatches, ignoreCase, pathTemplateMatch, prefixMatch, queryParameterMatches);
         }

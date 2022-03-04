@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class HttpSettingsRoutesResponse {
     /**
      * The prefix that should precede all the authentication/authorization paths.
      * 
-     */
+    */
     public Optional<String> getApiPrefix() {
         return Optional.ofNullable(this.apiPrefix);
     }
@@ -54,7 +54,6 @@ public final class HttpSettingsRoutesResponse {
             this.apiPrefix = apiPrefix;
             return this;
         }
-
         public HttpSettingsRoutesResponse build() {
             return new HttpSettingsRoutesResponse(apiPrefix);
         }

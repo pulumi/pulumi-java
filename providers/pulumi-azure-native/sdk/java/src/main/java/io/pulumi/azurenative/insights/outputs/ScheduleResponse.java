@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ScheduleResponse {
     /**
      * frequency (in minutes) at which rule condition should be evaluated.
      * 
-     */
+    */
     public Integer getFrequencyInMinutes() {
         return this.frequencyInMinutes;
     }
     /**
      * Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
      * 
-     */
+    */
     public Integer getTimeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }
@@ -74,7 +74,6 @@ public final class ScheduleResponse {
             this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(frequencyInMinutes, timeWindowInMinutes);
         }

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.aad.outputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.aad.outputs.ReplicaSetResponse;
 import io.pulumi.azurenative.aad.outputs.ResourceForestSettingsResponse;
 import io.pulumi.azurenative.aad.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -183,154 +183,154 @@ public final class GetDomainServiceResult {
     /**
      * Deployment Id
      * 
-     */
+    */
     public String getDeploymentId() {
         return this.deploymentId;
     }
     /**
      * Domain Configuration Type
      * 
-     */
+    */
     public Optional<String> getDomainConfigurationType() {
         return Optional.ofNullable(this.domainConfigurationType);
     }
     /**
      * The name of the Azure domain that the user would like to deploy Domain Services to.
      * 
-     */
+    */
     public Optional<String> getDomainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
      * DomainSecurity Settings
      * 
-     */
+    */
     public Optional<DomainSecuritySettingsResponse> getDomainSecuritySettings() {
         return Optional.ofNullable(this.domainSecuritySettings);
     }
     /**
      * Resource etag
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Enabled or Disabled flag to turn on Group-based filtered sync
      * 
-     */
+    */
     public Optional<String> getFilteredSync() {
         return Optional.ofNullable(this.filteredSync);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Secure LDAP Settings
      * 
-     */
+    */
     public Optional<LdapsSettingsResponse> getLdapsSettings() {
         return Optional.ofNullable(this.ldapsSettings);
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Migration Properties
      * 
-     */
+    */
     public MigrationPropertiesResponse getMigrationProperties() {
         return this.migrationProperties;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Notification Settings
      * 
-     */
+    */
     public Optional<NotificationSettingsResponse> getNotificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
     /**
      * the current deployment or provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * List of ReplicaSets
      * 
-     */
+    */
     public List<ReplicaSetResponse> getReplicaSets() {
         return this.replicaSets == null ? List.of() : this.replicaSets;
     }
     /**
      * Resource Forest Settings
      * 
-     */
+    */
     public Optional<ResourceForestSettingsResponse> getResourceForestSettings() {
         return Optional.ofNullable(this.resourceForestSettings);
     }
     /**
      * Sku Type
      * 
-     */
+    */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * SyncOwner ReplicaSet Id
      * 
-     */
+    */
     public String getSyncOwner() {
         return this.syncOwner;
     }
     /**
      * The system meta data relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure Active Directory Tenant Id
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Data Model Version
      * 
-     */
+    */
     public Integer getVersion() {
         return this.version;
     }
@@ -506,7 +506,6 @@ public final class GetDomainServiceResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDomainServiceResult build() {
             return new GetDomainServiceResult(deploymentId, domainConfigurationType, domainName, domainSecuritySettings, etag, filteredSync, id, ldapsSettings, location, migrationProperties, name, notificationSettings, provisioningState, replicaSets, resourceForestSettings, sku, syncOwner, systemData, tags, tenantId, type, version);
         }

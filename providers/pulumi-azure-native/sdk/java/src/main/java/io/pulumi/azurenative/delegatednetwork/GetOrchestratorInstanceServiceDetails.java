@@ -6,21 +6,41 @@ package io.pulumi.azurenative.delegatednetwork;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.delegatednetwork.inputs.GetOrchestratorInstanceServiceDetailsArgs;
 import io.pulumi.azurenative.delegatednetwork.outputs.GetOrchestratorInstanceServiceDetailsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrchestratorInstanceServiceDetails {
-/**
- * Represents an instance of a orchestrator.
+    private GetOrchestratorInstanceServiceDetails() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrchestratorInstanceServiceDetailsArgs.Builder a);
+    }
+    private static GetOrchestratorInstanceServiceDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrchestratorInstanceServiceDetailsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents an instance of a orchestrator.
  * API Version: 2021-03-15.
  * 
- *
- * Represents an instance of a orchestrator.
+     *
+     * Represents an instance of a orchestrator.
  * 
- */
+     */
+    public static CompletableFuture<GetOrchestratorInstanceServiceDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents an instance of a orchestrator.
+     * API Version: 2021-03-15.
+     * 
+     *
+         * Represents an instance of a orchestrator.
+     * 
+     */
     public static CompletableFuture<GetOrchestratorInstanceServiceDetailsResult> invokeAsync(GetOrchestratorInstanceServiceDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:delegatednetwork:getOrchestratorInstanceServiceDetails", TypeShape.of(GetOrchestratorInstanceServiceDetailsResult.class), args == null ? GetOrchestratorInstanceServiceDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

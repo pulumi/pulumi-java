@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class TypePropertiesMappingResponse {
     /**
      * Link type.
      * 
-     */
+    */
     public Optional<String> getLinkType() {
         return Optional.ofNullable(this.linkType);
     }
     /**
      *  Property name on the source Entity Type.
      * 
-     */
+    */
     public String getSourcePropertyName() {
         return this.sourcePropertyName;
     }
     /**
      * Property name on the target Entity Type.
      * 
-     */
+    */
     public String getTargetPropertyName() {
         return this.targetPropertyName;
     }
@@ -97,7 +97,6 @@ public final class TypePropertiesMappingResponse {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }
-
         public TypePropertiesMappingResponse build() {
             return new TypePropertiesMappingResponse(linkType, sourcePropertyName, targetPropertyName);
         }

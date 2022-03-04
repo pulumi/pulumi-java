@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.TrackPropertyConditionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class TrackSelectionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="trackSelections")
-    private final @Nullable List<TrackPropertyConditionResponse> trackSelections;
+      private final @Nullable List<TrackPropertyConditionResponse> trackSelections;
 
     public List<TrackPropertyConditionResponse> getTrackSelections() {
         return this.trackSelections == null ? List.of() : this.trackSelections;
@@ -62,7 +62,6 @@ public final class TrackSelectionResponse extends io.pulumi.resources.InvokeArgs
             this.trackSelections = trackSelections;
             return this;
         }
-
         public TrackSelectionResponse build() {
             return new TrackSelectionResponse(trackSelections);
         }

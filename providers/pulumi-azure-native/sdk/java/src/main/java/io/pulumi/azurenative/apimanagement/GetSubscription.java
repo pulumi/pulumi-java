@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetSubscriptionArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetSubscriptionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubscription {
-/**
- * Subscription details.
+    private GetSubscription() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubscriptionArgs.Builder a);
+    }
+    private static GetSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubscriptionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Subscription details.
  * API Version: 2020-12-01.
  * 
- *
- * Subscription details.
+     *
+     * Subscription details.
  * 
- */
+     */
+    public static CompletableFuture<GetSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Subscription details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Subscription details.
+     * 
+     */
     public static CompletableFuture<GetSubscriptionResult> invokeAsync(GetSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getSubscription", TypeShape.of(GetSubscriptionResult.class), args == null ? GetSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

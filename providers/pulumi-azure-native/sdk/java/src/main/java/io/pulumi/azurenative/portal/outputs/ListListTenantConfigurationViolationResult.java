@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.ViolationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ListListTenantConfigurationViolationResult {
     /**
      * The URL to use for getting the next set of results.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * The array of violations.
      * 
-     */
+    */
     public List<ViolationResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -78,7 +78,6 @@ public final class ListListTenantConfigurationViolationResult {
             this.value = value;
             return this;
         }
-
         public ListListTenantConfigurationViolationResult build() {
             return new ListListTenantConfigurationViolationResult(nextLink, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRepositoryIamPolicy {
-/**
- * Gets the IAM policy for a given resource.
+    private GetRepositoryIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetRepositoryIamPolicyArgs.Builder a);
+    }
+    private static GetRepositoryIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRepositoryIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the IAM policy for a given resource.
  * 
- */
+     */
+    public static CompletableFuture<GetRepositoryIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the IAM policy for a given resource.
+     * 
+     */
     public static CompletableFuture<GetRepositoryIamPolicyResult> invokeAsync(GetRepositoryIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:artifactregistry/v1beta2:getRepositoryIamPolicy", TypeShape.of(GetRepositoryIamPolicyResult.class), args == null ? GetRepositoryIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

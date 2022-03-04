@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class PosixGroupResponse {
     /**
      * GID of the POSIX group.
      * 
-     */
+    */
     public String getGid() {
         return this.gid;
     }
     /**
      * Name of the POSIX group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * System identifier for which group name and gid apply to. If not specified it will default to empty value.
      * 
-     */
+    */
     public String getSystemId() {
         return this.systemId;
     }
@@ -95,7 +95,6 @@ public final class PosixGroupResponse {
             this.systemId = Objects.requireNonNull(systemId);
             return this;
         }
-
         public PosixGroupResponse build() {
             return new PosixGroupResponse(gid, name, systemId);
         }

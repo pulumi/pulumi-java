@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FeatureSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="splitHealthChecks", required=true)
-    private final Boolean splitHealthChecks;
+      private final Boolean splitHealthChecks;
 
     public Boolean getSplitHealthChecks() {
         return this.splitHealthChecks;
@@ -32,7 +32,7 @@ public final class FeatureSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="useContainerOptimizedOs", required=true)
-    private final Boolean useContainerOptimizedOs;
+      private final Boolean useContainerOptimizedOs;
 
     public Boolean getUseContainerOptimizedOs() {
         return this.useContainerOptimizedOs;
@@ -81,7 +81,6 @@ public final class FeatureSettingsResponse extends io.pulumi.resources.InvokeArg
             this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs);
             return this;
         }
-
         public FeatureSettingsResponse build() {
             return new FeatureSettingsResponse(splitHealthChecks, useContainerOptimizedOs);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class DimensionsResponse {
     /**
      * Depth of the device.
      * 
-     */
+    */
     public Double getDepth() {
         return this.depth;
     }
     /**
      * Height of the device.
      * 
-     */
+    */
     public Double getHeight() {
         return this.height;
     }
     /**
      * Length of the device.
      * 
-     */
+    */
     public Double getLength() {
         return this.length;
     }
     /**
      * Unit for the dimensions of length, height and width.
      * 
-     */
+    */
     public String getLengthHeightUnit() {
         return this.lengthHeightUnit;
     }
     /**
      * Weight of the device.
      * 
-     */
+    */
     public Double getWeight() {
         return this.weight;
     }
     /**
      * Unit for the dimensions of weight.
      * 
-     */
+    */
     public String getWeightUnit() {
         return this.weightUnit;
     }
     /**
      * Width of the device.
      * 
-     */
+    */
     public Double getWidth() {
         return this.width;
     }
@@ -180,7 +180,6 @@ public final class DimensionsResponse {
             this.width = Objects.requireNonNull(width);
             return this;
         }
-
         public DimensionsResponse build() {
             return new DimensionsResponse(depth, height, length, lengthHeightUnit, weight, weightUnit, width);
         }

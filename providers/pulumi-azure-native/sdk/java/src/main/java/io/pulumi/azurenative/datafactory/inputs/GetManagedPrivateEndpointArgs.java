@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final String factoryName;
+      private final String factoryName;
 
     public String getFactoryName() {
         return this.factoryName;
@@ -28,7 +28,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="managedPrivateEndpointName", required=true)
-    private final String managedPrivateEndpointName;
+      private final String managedPrivateEndpointName;
 
     public String getManagedPrivateEndpointName() {
         return this.managedPrivateEndpointName;
@@ -39,7 +39,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="managedVirtualNetworkName", required=true)
-    private final String managedVirtualNetworkName;
+      private final String managedVirtualNetworkName;
 
     public String getManagedVirtualNetworkName() {
         return this.managedVirtualNetworkName;
@@ -50,7 +50,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetManagedPrivateEndpointArgs build() {
             return new GetManagedPrivateEndpointArgs(factoryName, managedPrivateEndpointName, managedVirtualNetworkName, resourceGroupName);
         }

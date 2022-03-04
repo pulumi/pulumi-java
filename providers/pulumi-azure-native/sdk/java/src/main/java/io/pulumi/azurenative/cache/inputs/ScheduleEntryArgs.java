@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cache.inputs;
 
 import io.pulumi.azurenative.cache.enums.DayOfWeek;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final Input<DayOfWeek> dayOfWeek;
+      private final Input<DayOfWeek> dayOfWeek;
 
     public Input<DayOfWeek> getDayOfWeek() {
         return this.dayOfWeek;
@@ -36,7 +36,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<String> maintenanceWindow;
+      private final @Nullable Input<String> maintenanceWindow;
 
     public Input<String> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -47,7 +47,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startHourUtc", required=true)
-    private final Input<Integer> startHourUtc;
+      private final Input<Integer> startHourUtc;
 
     public Input<Integer> getStartHourUtc() {
         return this.startHourUtc;
@@ -121,7 +121,6 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
             this.startHourUtc = Input.of(Objects.requireNonNull(startHourUtc));
             return this;
         }
-
         public ScheduleEntryArgs build() {
             return new ScheduleEntryArgs(dayOfWeek, maintenanceWindow, startHourUtc);
         }

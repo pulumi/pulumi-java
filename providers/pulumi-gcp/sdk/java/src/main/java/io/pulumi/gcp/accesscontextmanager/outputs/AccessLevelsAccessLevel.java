@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelBasic;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelCustom;
 import java.lang.String;
@@ -62,7 +62,7 @@ public final class AccessLevelsAccessLevel {
      * A set of predefined conditions for the access level and a combining function.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AccessLevelsAccessLevelBasic> getBasic() {
         return Optional.ofNullable(this.basic);
     }
@@ -71,14 +71,14 @@ public final class AccessLevelsAccessLevel {
      * See CEL spec at: https://github.com/google/cel-spec.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AccessLevelsAccessLevelCustom> getCustom() {
         return Optional.ofNullable(this.custom);
     }
     /**
      * Description of the expression
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -87,14 +87,14 @@ public final class AccessLevelsAccessLevel {
      * with a letter and only include alphanumeric and '_'.
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Title for the expression, i.e. a short string describing its purpose.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -151,7 +151,6 @@ public final class AccessLevelsAccessLevel {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public AccessLevelsAccessLevel build() {
             return new AccessLevelsAccessLevel(basic, custom, description, name, title);
         }

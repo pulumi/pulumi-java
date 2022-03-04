@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1.inputs.FleetConfigArgs;
 import io.pulumi.googlenative.gameservices_v1.inputs.ScalingConfigArgs;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConfigArgs Empty = new ConfigArgs();
 
     @InputImport(name="configId", required=true)
-    private final Input<String> configId;
+      private final Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId;
@@ -30,7 +30,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,14 +41,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetConfigs")
-    private final @Nullable Input<List<FleetConfigArgs>> fleetConfigs;
+      private final @Nullable Input<List<FleetConfigArgs>> fleetConfigs;
 
     public Input<List<FleetConfigArgs>> getFleetConfigs() {
         return this.fleetConfigs == null ? Input.empty() : this.fleetConfigs;
     }
 
     @InputImport(name="gameServerDeploymentId", required=true)
-    private final Input<String> gameServerDeploymentId;
+      private final Input<String> gameServerDeploymentId;
 
     public Input<String> getGameServerDeploymentId() {
         return this.gameServerDeploymentId;
@@ -59,14 +59,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -77,14 +77,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -95,7 +95,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingConfigs")
-    private final @Nullable Input<List<ScalingConfigArgs>> scalingConfigs;
+      private final @Nullable Input<List<ScalingConfigArgs>> scalingConfigs;
 
     public Input<List<ScalingConfigArgs>> getScalingConfigs() {
         return this.scalingConfigs == null ? Input.empty() : this.scalingConfigs;
@@ -259,7 +259,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.scalingConfigs = Input.ofNullable(scalingConfigs);
             return this;
         }
-
         public ConfigArgs build() {
             return new ConfigArgs(configId, description, fleetConfigs, gameServerDeploymentId, labels, location, name, project, scalingConfigs);
         }

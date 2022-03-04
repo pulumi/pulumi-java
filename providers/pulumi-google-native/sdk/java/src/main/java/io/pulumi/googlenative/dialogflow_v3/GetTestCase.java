@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestCase {
-/**
- * Gets a test case.
+    private GetTestCase() {}
+    public interface BuilderApplicator {
+        public void apply(GetTestCaseArgs.Builder a);
+    }
+    private static GetTestCaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTestCaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a test case.
  * 
- */
+     */
+    public static CompletableFuture<GetTestCaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a test case.
+     * 
+     */
     public static CompletableFuture<GetTestCaseResult> invokeAsync(GetTestCaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getTestCase", TypeShape.of(GetTestCaseResult.class), args == null ? GetTestCaseArgs.Empty : args, Utilities.withVersion(options));
     }

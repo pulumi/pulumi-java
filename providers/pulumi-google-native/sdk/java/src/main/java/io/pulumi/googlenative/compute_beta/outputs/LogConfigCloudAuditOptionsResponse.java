@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.AuthorizationLoggingOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class LogConfigCloudAuditOptionsResponse {
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public AuthorizationLoggingOptionsResponse getAuthorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getLogName() {
         return this.logName;
     }
@@ -75,7 +75,6 @@ public final class LogConfigCloudAuditOptionsResponse {
             this.logName = Objects.requireNonNull(logName);
             return this;
         }
-
         public LogConfigCloudAuditOptionsResponse build() {
             return new LogConfigCloudAuditOptionsResponse(authorizationLoggingOptions, logName);
         }

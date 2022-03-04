@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerregistry.inputs.GetBuildLogLinkArgs;
 import io.pulumi.azurenative.containerregistry.outputs.GetBuildLogLinkResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBuildLogLink {
-/**
- * The result of get log link operation.
+    private GetBuildLogLink() {}
+    public interface BuilderApplicator {
+        public void apply(GetBuildLogLinkArgs.Builder a);
+    }
+    private static GetBuildLogLinkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBuildLogLinkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The result of get log link operation.
  * API Version: 2018-02-01-preview.
  * 
- *
- * The result of get log link operation.
+     *
+     * The result of get log link operation.
  * 
- */
+     */
+    public static CompletableFuture<GetBuildLogLinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The result of get log link operation.
+     * API Version: 2018-02-01-preview.
+     * 
+     *
+         * The result of get log link operation.
+     * 
+     */
     public static CompletableFuture<GetBuildLogLinkResult> invokeAsync(GetBuildLogLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getBuildLogLink", TypeShape.of(GetBuildLogLinkResult.class), args == null ? GetBuildLogLinkArgs.Empty : args, Utilities.withVersion(options));
     }

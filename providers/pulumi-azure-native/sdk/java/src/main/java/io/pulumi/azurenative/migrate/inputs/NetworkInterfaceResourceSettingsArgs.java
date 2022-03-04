@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.NicIpConfigurationResourceSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="enableAcceleratedNetworking")
-    private final @Nullable Input<Boolean> enableAcceleratedNetworking;
+      private final @Nullable Input<Boolean> enableAcceleratedNetworking;
 
     public Input<Boolean> getEnableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Input.empty() : this.enableAcceleratedNetworking;
@@ -37,7 +37,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable Input<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
+      private final @Nullable Input<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
 
     public Input<List<NicIpConfigurationResourceSettingsArgs>> getIpConfigurations() {
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
@@ -49,7 +49,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -60,7 +60,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-    private final Input<String> targetResourceName;
+      private final Input<String> targetResourceName;
 
     public Input<String> getTargetResourceName() {
         return this.targetResourceName;
@@ -149,7 +149,6 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
             this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
-
         public NetworkInterfaceResourceSettingsArgs build() {
             return new NetworkInterfaceResourceSettingsArgs(enableAcceleratedNetworking, ipConfigurations, resourceType, targetResourceName);
         }

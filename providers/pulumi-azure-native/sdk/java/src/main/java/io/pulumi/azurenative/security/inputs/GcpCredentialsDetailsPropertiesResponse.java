@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="authProviderX509CertUrl", required=true)
-    private final String authProviderX509CertUrl;
+      private final String authProviderX509CertUrl;
 
     public String getAuthProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
@@ -33,7 +33,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="authUri", required=true)
-    private final String authUri;
+      private final String authUri;
 
     public String getAuthUri() {
         return this.authUri;
@@ -44,7 +44,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="authenticationProvisioningState", required=true)
-    private final String authenticationProvisioningState;
+      private final String authenticationProvisioningState;
 
     public String getAuthenticationProvisioningState() {
         return this.authenticationProvisioningState;
@@ -56,7 +56,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final String authenticationType;
+      private final String authenticationType;
 
     public String getAuthenticationType() {
         return this.authenticationType;
@@ -67,7 +67,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="clientEmail", required=true)
-    private final String clientEmail;
+      private final String clientEmail;
 
     public String getClientEmail() {
         return this.clientEmail;
@@ -78,7 +78,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final String clientId;
+      private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -89,7 +89,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="clientX509CertUrl", required=true)
-    private final String clientX509CertUrl;
+      private final String clientX509CertUrl;
 
     public String getClientX509CertUrl() {
         return this.clientX509CertUrl;
@@ -100,7 +100,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="grantedPermissions", required=true)
-    private final List<String> grantedPermissions;
+      private final List<String> grantedPermissions;
 
     public List<String> getGrantedPermissions() {
         return this.grantedPermissions;
@@ -111,7 +111,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -122,7 +122,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="privateKey", required=true)
-    private final String privateKey;
+      private final String privateKey;
 
     public String getPrivateKey() {
         return this.privateKey;
@@ -133,7 +133,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="privateKeyId", required=true)
-    private final String privateKeyId;
+      private final String privateKeyId;
 
     public String getPrivateKeyId() {
         return this.privateKeyId;
@@ -144,7 +144,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="projectId", required=true)
-    private final String projectId;
+      private final String projectId;
 
     public String getProjectId() {
         return this.projectId;
@@ -155,7 +155,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="tokenUri", required=true)
-    private final String tokenUri;
+      private final String tokenUri;
 
     public String getTokenUri() {
         return this.tokenUri;
@@ -166,7 +166,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -335,7 +335,6 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GcpCredentialsDetailsPropertiesResponse build() {
             return new GcpCredentialsDetailsPropertiesResponse(authProviderX509CertUrl, authUri, authenticationProvisioningState, authenticationType, clientEmail, clientId, clientX509CertUrl, grantedPermissions, organizationId, privateKey, privateKeyId, projectId, tokenUri, type);
         }

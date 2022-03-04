@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class StackSetParameter extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameterKey", required=true)
-    private final String parameterKey;
+      private final String parameterKey;
 
     public String getParameterKey() {
         return this.parameterKey;
@@ -28,7 +28,7 @@ public final class StackSetParameter extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameterValue", required=true)
-    private final String parameterValue;
+      private final String parameterValue;
 
     public String getParameterValue() {
         return this.parameterValue;
@@ -77,7 +77,6 @@ public final class StackSetParameter extends io.pulumi.resources.InvokeArgs {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public StackSetParameter build() {
             return new StackSetParameter(parameterKey, parameterValue);
         }

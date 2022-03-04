@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudscheduler.outputs.JobAppEngineHttpTargetAppEngineRouting;
 import java.lang.String;
 import java.util.Map;
@@ -66,7 +66,7 @@ public final class JobAppEngineHttpTarget {
      * App Engine Routing setting for the job.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<JobAppEngineHttpTargetAppEngineRouting> getAppEngineRouting() {
         return Optional.ofNullable(this.appEngineRouting);
     }
@@ -76,7 +76,7 @@ public final class JobAppEngineHttpTarget {
      * It is an error to set body on a job with an incompatible HttpMethod.
      * A base64-encoded string.
      * 
-     */
+    */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
@@ -84,14 +84,14 @@ public final class JobAppEngineHttpTarget {
      * This map contains the header field names and values.
      * Repeated headers are not supported, but a header value can contain commas.
      * 
-     */
+    */
     public Map<String,String> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
      * Which HTTP method to use for the request.
      * 
-     */
+    */
     public Optional<String> getHttpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
@@ -102,7 +102,7 @@ public final class JobAppEngineHttpTarget {
      * If the relative URL is empty, then the root path "/" will be used.
      * No spaces are allowed, and the maximum length allowed is 2083 characters
      * 
-     */
+    */
     public String getRelativeUri() {
         return this.relativeUri;
     }
@@ -159,7 +159,6 @@ public final class JobAppEngineHttpTarget {
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
         }
-
         public JobAppEngineHttpTarget build() {
             return new JobAppEngineHttpTarget(appEngineRouting, body, headers, httpMethod, relativeUri);
         }

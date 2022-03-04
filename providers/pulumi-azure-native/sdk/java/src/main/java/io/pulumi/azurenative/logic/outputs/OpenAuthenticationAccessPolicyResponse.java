@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.OpenAuthenticationPolicyClaimResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class OpenAuthenticationAccessPolicyResponse {
     /**
      * The access policy claims.
      * 
-     */
+    */
     public List<OpenAuthenticationPolicyClaimResponse> getClaims() {
         return this.claims == null ? List.of() : this.claims;
     }
     /**
      * Type of provider for OAuth.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -78,7 +78,6 @@ public final class OpenAuthenticationAccessPolicyResponse {
             this.type = type;
             return this;
         }
-
         public OpenAuthenticationAccessPolicyResponse build() {
             return new OpenAuthenticationAccessPolicyResponse(claims, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class AccountPropertiesResponseEndpoints {
     /**
      * Gets the catalog endpoint.
      * 
-     */
+    */
     public String getCatalog() {
         return this.catalog;
     }
     /**
      * Gets the guardian endpoint.
      * 
-     */
+    */
     public String getGuardian() {
         return this.guardian;
     }
     /**
      * Gets the scan endpoint.
      * 
-     */
+    */
     public String getScan() {
         return this.scan;
     }
@@ -95,7 +95,6 @@ public final class AccountPropertiesResponseEndpoints {
             this.scan = Objects.requireNonNull(scan);
             return this;
         }
-
         public AccountPropertiesResponseEndpoints build() {
             return new AccountPropertiesResponseEndpoints(catalog, guardian, scan);
         }

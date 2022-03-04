@@ -9,8 +9,8 @@ import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerAction;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerCertificate;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -71,6 +71,37 @@ public class Listener extends io.pulumi.resources.CustomResource {
         return this.sslPolicy;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ListenerArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.elasticloadbalancingv2.ListenerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.elasticloadbalancingv2.ListenerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Listener(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Listener(String name) {
+        this(name, ListenerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Listener(String name, ListenerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

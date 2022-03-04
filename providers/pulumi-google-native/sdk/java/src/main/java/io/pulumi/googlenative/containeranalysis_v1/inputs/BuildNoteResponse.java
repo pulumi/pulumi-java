@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BuildNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="builderVersion", required=true)
-    private final String builderVersion;
+      private final String builderVersion;
 
     public String getBuilderVersion() {
         return this.builderVersion;
@@ -59,7 +59,6 @@ public final class BuildNoteResponse extends io.pulumi.resources.InvokeArgs {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }
-
         public BuildNoteResponse build() {
             return new BuildNoteResponse(builderVersion);
         }

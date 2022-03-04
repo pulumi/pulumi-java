@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPolicySetDefinitionArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="policySetDefinitionName", required=true)
-    private final String policySetDefinitionName;
+      private final String policySetDefinitionName;
 
     public String getPolicySetDefinitionName() {
         return this.policySetDefinitionName;
@@ -55,7 +55,6 @@ public final class GetPolicySetDefinitionArgs extends io.pulumi.resources.Invoke
             this.policySetDefinitionName = Objects.requireNonNull(policySetDefinitionName);
             return this;
         }
-
         public GetPolicySetDefinitionArgs build() {
             return new GetPolicySetDefinitionArgs(policySetDefinitionName);
         }

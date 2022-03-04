@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetGatewayRouteTableAssociationResult {
     /**
      * The route table association ID.
      * 
-     */
+    */
     public Optional<String> getAssociationId() {
         return Optional.ofNullable(this.associationId);
     }
     /**
      * The ID of the route table.
      * 
-     */
+    */
     public Optional<String> getRouteTableId() {
         return Optional.ofNullable(this.routeTableId);
     }
@@ -76,7 +76,6 @@ public final class GetGatewayRouteTableAssociationResult {
             this.routeTableId = routeTableId;
             return this;
         }
-
         public GetGatewayRouteTableAssociationResult build() {
             return new GetGatewayRouteTableAssociationResult(associationId, routeTableId);
         }

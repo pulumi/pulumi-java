@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clusterId")
-    private final @Nullable String clusterId;
+      private final @Nullable String clusterId;
 
     public Optional<String> getClusterId() {
         return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
@@ -38,7 +38,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="database", required=true)
-    private final String database;
+      private final String database;
 
     public String getDatabase() {
         return this.database;
@@ -49,7 +49,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="host")
-    private final @Nullable String host;
+      private final @Nullable String host;
 
     public Optional<String> getHost() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
@@ -60,7 +60,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Double port;
+      private final @Nullable Double port;
 
     public Optional<Double> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -129,7 +129,6 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
             this.port = port;
             return this;
         }
-
         public DataSourceRedshiftParameters build() {
             return new DataSourceRedshiftParameters(clusterId, database, host, port);
         }

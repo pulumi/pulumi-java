@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final String apiId;
+      private final String apiId;
 
     public String getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="format")
-    private final @Nullable String format;
+      private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -41,7 +41,7 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyId", required=true)
-    private final String policyId;
+      private final String policyId;
 
     public String getPolicyId() {
         return this.policyId;
@@ -52,7 +52,7 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -142,7 +142,6 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetApiPolicyArgs build() {
             return new GetApiPolicyArgs(apiId, format, policyId, resourceGroupName, serviceName);
         }

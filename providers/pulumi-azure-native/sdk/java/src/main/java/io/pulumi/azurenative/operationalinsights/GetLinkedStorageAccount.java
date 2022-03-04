@@ -6,21 +6,41 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.operationalinsights.inputs.GetLinkedStorageAccountArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.GetLinkedStorageAccountResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinkedStorageAccount {
-/**
- * Linked storage accounts top level resource container.
+    private GetLinkedStorageAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetLinkedStorageAccountArgs.Builder a);
+    }
+    private static GetLinkedStorageAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLinkedStorageAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Linked storage accounts top level resource container.
  * API Version: 2020-08-01.
  * 
- *
- * Linked storage accounts top level resource container.
+     *
+     * Linked storage accounts top level resource container.
  * 
- */
+     */
+    public static CompletableFuture<GetLinkedStorageAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Linked storage accounts top level resource container.
+     * API Version: 2020-08-01.
+     * 
+     *
+         * Linked storage accounts top level resource container.
+     * 
+     */
     public static CompletableFuture<GetLinkedStorageAccountResult> invokeAsync(GetLinkedStorageAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getLinkedStorageAccount", TypeShape.of(GetLinkedStorageAccountResult.class), args == null ? GetLinkedStorageAccountArgs.Empty : args, Utilities.withVersion(options));
     }

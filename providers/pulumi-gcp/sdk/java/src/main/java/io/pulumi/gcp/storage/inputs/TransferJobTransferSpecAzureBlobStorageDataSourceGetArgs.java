@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * 
      */
     @InputImport(name="azureCredentials", required=true)
-    private final Input<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials;
+      private final Input<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials;
 
     public Input<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> getAzureCredentials() {
         return this.azureCredentials;
@@ -31,7 +31,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * 
      */
     @InputImport(name="container", required=true)
-    private final Input<String> container;
+      private final Input<String> container;
 
     public Input<String> getContainer() {
         return this.container;
@@ -42,7 +42,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -53,7 +53,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * 
      */
     @InputImport(name="storageAccount", required=true)
-    private final Input<String> storageAccount;
+      private final Input<String> storageAccount;
 
     public Input<String> getStorageAccount() {
         return this.storageAccount;
@@ -142,7 +142,6 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
             this.storageAccount = Input.of(Objects.requireNonNull(storageAccount));
             return this;
         }
-
         public TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs build() {
             return new TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs(azureCredentials, container, path, storageAccount);
         }

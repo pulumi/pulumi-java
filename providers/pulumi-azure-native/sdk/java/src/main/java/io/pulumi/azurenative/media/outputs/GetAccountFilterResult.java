@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.FilterTrackSelectionResponse;
 import io.pulumi.azurenative.media.outputs.FirstQualityResponse;
 import io.pulumi.azurenative.media.outputs.PresentationTimeRangeResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -73,49 +73,49 @@ public final class GetAccountFilterResult {
     /**
      * The first quality.
      * 
-     */
+    */
     public Optional<FirstQualityResponse> getFirstQuality() {
         return Optional.ofNullable(this.firstQuality);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The presentation time range.
      * 
-     */
+    */
     public Optional<PresentationTimeRangeResponse> getPresentationTimeRange() {
         return Optional.ofNullable(this.presentationTimeRange);
     }
     /**
      * The system metadata relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The tracks selection conditions.
      * 
-     */
+    */
     public List<FilterTrackSelectionResponse> getTracks() {
         return this.tracks == null ? List.of() : this.tracks;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -186,7 +186,6 @@ public final class GetAccountFilterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountFilterResult build() {
             return new GetAccountFilterResult(firstQuality, id, name, presentationTimeRange, systemData, tracks, type);
         }

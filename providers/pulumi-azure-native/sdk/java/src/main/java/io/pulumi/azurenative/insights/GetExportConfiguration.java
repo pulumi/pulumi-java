@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetExportConfigurationArgs;
 import io.pulumi.azurenative.insights.outputs.GetExportConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExportConfiguration {
-/**
- * Properties that define a Continuous Export configuration.
+    private GetExportConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetExportConfigurationArgs.Builder a);
+    }
+    private static GetExportConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExportConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Properties that define a Continuous Export configuration.
  * API Version: 2015-05-01.
  * 
- *
- * Properties that define a Continuous Export configuration.
+     *
+     * Properties that define a Continuous Export configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetExportConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Properties that define a Continuous Export configuration.
+     * API Version: 2015-05-01.
+     * 
+     *
+         * Properties that define a Continuous Export configuration.
+     * 
+     */
     public static CompletableFuture<GetExportConfigurationResult> invokeAsync(GetExportConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getExportConfiguration", TypeShape.of(GetExportConfigurationResult.class), args == null ? GetExportConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

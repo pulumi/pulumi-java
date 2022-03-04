@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.outputs;
 import io.pulumi.azurenative.sql.outputs.FailoverGroupReadOnlyEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.FailoverGroupReadWriteEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.PartnerInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -101,77 +101,77 @@ public final class GetFailoverGroupResult {
     /**
      * List of databases in the failover group.
      * 
-     */
+    */
     public List<String> getDatabases() {
         return this.databases == null ? List.of() : this.databases;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of partner server information for the failover group.
      * 
-     */
+    */
     public List<PartnerInfoResponse> getPartnerServers() {
         return this.partnerServers;
     }
     /**
      * Read-only endpoint of the failover group instance.
      * 
-     */
+    */
     public Optional<FailoverGroupReadOnlyEndpointResponse> getReadOnlyEndpoint() {
         return Optional.ofNullable(this.readOnlyEndpoint);
     }
     /**
      * Read-write endpoint of the failover group instance.
      * 
-     */
+    */
     public FailoverGroupReadWriteEndpointResponse getReadWriteEndpoint() {
         return this.readWriteEndpoint;
     }
     /**
      * Local replication role of the failover group instance.
      * 
-     */
+    */
     public String getReplicationRole() {
         return this.replicationRole;
     }
     /**
      * Replication state of the failover group instance.
      * 
-     */
+    */
     public String getReplicationState() {
         return this.replicationState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -270,7 +270,6 @@ public final class GetFailoverGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFailoverGroupResult build() {
             return new GetFailoverGroupResult(databases, id, location, name, partnerServers, readOnlyEndpoint, readWriteEndpoint, replicationRole, replicationState, tags, type);
         }

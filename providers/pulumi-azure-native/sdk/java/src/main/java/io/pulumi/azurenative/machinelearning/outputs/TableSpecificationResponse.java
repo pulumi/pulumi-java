@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.outputs;
 
 import io.pulumi.azurenative.machinelearning.outputs.ColumnSpecificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class TableSpecificationResponse {
     /**
      * Swagger schema description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The format, if 'type' is not 'object'
      * 
-     */
+    */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * The set of columns within the data table.
      * 
-     */
+    */
     public Map<String,ColumnSpecificationResponse> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Swagger schema title.
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
     /**
      * The type of the entity described in swagger.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -141,7 +141,6 @@ public final class TableSpecificationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TableSpecificationResponse build() {
             return new TableSpecificationResponse(description, format, properties, title, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -31,7 +31,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fingerprint")
-    private final @Nullable Input<String> fingerprint;
+      private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -62,7 +62,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -74,7 +74,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -85,7 +85,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -96,7 +96,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selfLinkWithId")
-    private final @Nullable Input<String> selfLinkWithId;
+      private final @Nullable Input<String> selfLinkWithId;
 
     public Input<String> getSelfLinkWithId() {
         return this.selfLinkWithId == null ? Input.empty() : this.selfLinkWithId;
@@ -109,7 +109,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="urlMap")
-    private final @Nullable Input<String> urlMap;
+      private final @Nullable Input<String> urlMap;
 
     public Input<String> getUrlMap() {
         return this.urlMap == null ? Input.empty() : this.urlMap;
@@ -129,7 +129,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="validateForProxyless")
-    private final @Nullable Input<Boolean> validateForProxyless;
+      private final @Nullable Input<Boolean> validateForProxyless;
 
     public Input<Boolean> getValidateForProxyless() {
         return this.validateForProxyless == null ? Input.empty() : this.validateForProxyless;
@@ -293,7 +293,6 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
             this.validateForProxyless = Input.ofNullable(validateForProxyless);
             return this;
         }
-
         public TargetGrpcProxyState build() {
             return new TargetGrpcProxyState(creationTimestamp, description, fingerprint, name, project, selfLink, selfLinkWithId, urlMap, validateForProxyless);
         }

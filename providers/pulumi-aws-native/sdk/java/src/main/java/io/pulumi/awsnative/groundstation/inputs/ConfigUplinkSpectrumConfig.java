@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigPolarization;
 import io.pulumi.awsnative.groundstation.inputs.ConfigFrequency;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class ConfigUplinkSpectrumConfig extends io.pulumi.resources.Invoke
     public static final ConfigUplinkSpectrumConfig Empty = new ConfigUplinkSpectrumConfig();
 
     @InputImport(name="centerFrequency")
-    private final @Nullable ConfigFrequency centerFrequency;
+      private final @Nullable ConfigFrequency centerFrequency;
 
     public Optional<ConfigFrequency> getCenterFrequency() {
         return this.centerFrequency == null ? Optional.empty() : Optional.ofNullable(this.centerFrequency);
     }
 
     @InputImport(name="polarization")
-    private final @Nullable ConfigPolarization polarization;
+      private final @Nullable ConfigPolarization polarization;
 
     public Optional<ConfigPolarization> getPolarization() {
         return this.polarization == null ? Optional.empty() : Optional.ofNullable(this.polarization);
@@ -72,7 +72,6 @@ public final class ConfigUplinkSpectrumConfig extends io.pulumi.resources.Invoke
             this.polarization = polarization;
             return this;
         }
-
         public ConfigUplinkSpectrumConfig build() {
             return new ConfigUplinkSpectrumConfig(centerFrequency, polarization);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.logging.inputs.MetricMetricDescriptorLabelArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -38,7 +38,7 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<MetricMetricDescriptorLabelArgs>> labels;
+      private final @Nullable Input<List<MetricMetricDescriptorLabelArgs>> labels;
 
     public Input<List<MetricMetricDescriptorLabelArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -52,7 +52,7 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="metricKind", required=true)
-    private final Input<String> metricKind;
+      private final Input<String> metricKind;
 
     public Input<String> getMetricKind() {
         return this.metricKind;
@@ -65,7 +65,7 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+      private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -78,7 +78,7 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="valueType", required=true)
-    private final Input<String> valueType;
+      private final Input<String> valueType;
 
     public Input<String> getValueType() {
         return this.valueType;
@@ -182,7 +182,6 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
             this.valueType = Input.of(Objects.requireNonNull(valueType));
             return this;
         }
-
         public MetricMetricDescriptorArgs build() {
             return new MetricMetricDescriptorArgs(displayName, labels, metricKind, unit, valueType);
         }

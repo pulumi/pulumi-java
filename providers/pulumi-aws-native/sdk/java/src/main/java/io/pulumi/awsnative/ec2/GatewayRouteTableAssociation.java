@@ -7,8 +7,8 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.GatewayRouteTableAssociationArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -61,6 +61,37 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
         return this.routeTableId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(GatewayRouteTableAssociationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ec2.GatewayRouteTableAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ec2.GatewayRouteTableAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public GatewayRouteTableAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public GatewayRouteTableAssociation(String name) {
+        this(name, GatewayRouteTableAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public GatewayRouteTableAssociation(String name, GatewayRouteTableAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

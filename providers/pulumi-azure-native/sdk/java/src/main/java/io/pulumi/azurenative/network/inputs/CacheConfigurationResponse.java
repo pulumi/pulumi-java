@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="cacheDuration")
-    private final @Nullable String cacheDuration;
+      private final @Nullable String cacheDuration;
 
     public Optional<String> getCacheDuration() {
         return this.cacheDuration == null ? Optional.empty() : Optional.ofNullable(this.cacheDuration);
@@ -34,7 +34,7 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dynamicCompression")
-    private final @Nullable String dynamicCompression;
+      private final @Nullable String dynamicCompression;
 
     public Optional<String> getDynamicCompression() {
         return this.dynamicCompression == null ? Optional.empty() : Optional.ofNullable(this.dynamicCompression);
@@ -45,7 +45,7 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="queryParameterStripDirective")
-    private final @Nullable String queryParameterStripDirective;
+      private final @Nullable String queryParameterStripDirective;
 
     public Optional<String> getQueryParameterStripDirective() {
         return this.queryParameterStripDirective == null ? Optional.empty() : Optional.ofNullable(this.queryParameterStripDirective);
@@ -56,7 +56,7 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="queryParameters")
-    private final @Nullable String queryParameters;
+      private final @Nullable String queryParameters;
 
     public Optional<String> getQueryParameters() {
         return this.queryParameters == null ? Optional.empty() : Optional.ofNullable(this.queryParameters);
@@ -125,7 +125,6 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
             this.queryParameters = queryParameters;
             return this;
         }
-
         public CacheConfigurationResponse build() {
             return new CacheConfigurationResponse(cacheDuration, dynamicCompression, queryParameterStripDirective, queryParameters);
         }

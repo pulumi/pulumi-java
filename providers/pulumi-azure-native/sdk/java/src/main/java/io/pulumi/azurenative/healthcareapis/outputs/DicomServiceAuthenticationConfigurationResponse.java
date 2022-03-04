@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class DicomServiceAuthenticationConfigurationResponse {
     /**
      * The audiences for the service
      * 
-     */
+    */
     public List<String> getAudiences() {
         return this.audiences;
     }
     /**
      * The authority url for the service
      * 
-     */
+    */
     public String getAuthority() {
         return this.authority;
     }
@@ -75,7 +75,6 @@ public final class DicomServiceAuthenticationConfigurationResponse {
             this.authority = Objects.requireNonNull(authority);
             return this;
         }
-
         public DicomServiceAuthenticationConfigurationResponse build() {
             return new DicomServiceAuthenticationConfigurationResponse(audiences, authority);
         }

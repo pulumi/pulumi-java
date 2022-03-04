@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanAutomationRunbookActionDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanManualActionDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanScriptActionDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -50,28 +50,28 @@ public final class RecoveryPlanActionResponse {
     /**
      * The action name.
      * 
-     */
+    */
     public String getActionName() {
         return this.actionName;
     }
     /**
      * The custom details.
      * 
-     */
+    */
     public Object getCustomDetails() {
         return this.customDetails;
     }
     /**
      * The list of failover directions.
      * 
-     */
+    */
     public List<String> getFailoverDirections() {
         return this.failoverDirections;
     }
     /**
      * The list of failover types.
      * 
-     */
+    */
     public List<String> getFailoverTypes() {
         return this.failoverTypes;
     }
@@ -121,7 +121,6 @@ public final class RecoveryPlanActionResponse {
             this.failoverTypes = Objects.requireNonNull(failoverTypes);
             return this;
         }
-
         public RecoveryPlanActionResponse build() {
             return new RecoveryPlanActionResponse(actionName, customDetails, failoverDirections, failoverTypes);
         }

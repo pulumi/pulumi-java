@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,7 +42,7 @@ public final class TriggerBuildSourceStorageSource {
     /**
      * Google Cloud Storage bucket containing the source.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
@@ -50,7 +50,7 @@ public final class TriggerBuildSourceStorageSource {
      * Google Cloud Storage generation for the object.
      * If the generation is omitted, the latest generation will be used
      * 
-     */
+    */
     public Optional<String> getGeneration() {
         return Optional.ofNullable(this.generation);
     }
@@ -58,7 +58,7 @@ public final class TriggerBuildSourceStorageSource {
      * Google Cloud Storage object containing the source.
      * This object must be a gzipped archive file (.tar.gz) containing source to build.
      * 
-     */
+    */
     public String getObject() {
         return this.object;
     }
@@ -101,7 +101,6 @@ public final class TriggerBuildSourceStorageSource {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public TriggerBuildSourceStorageSource build() {
             return new TriggerBuildSourceStorageSource(bucket, generation, object);
         }

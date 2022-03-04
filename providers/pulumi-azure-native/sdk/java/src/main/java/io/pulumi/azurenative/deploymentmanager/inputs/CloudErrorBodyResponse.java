@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -35,7 +35,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="details")
-    private final @Nullable List<CloudErrorBodyResponse> details;
+      private final @Nullable List<CloudErrorBodyResponse> details;
 
     public List<CloudErrorBodyResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
@@ -46,7 +46,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -57,7 +57,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+      private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -126,7 +126,6 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
             this.target = target;
             return this;
         }
-
         public CloudErrorBodyResponse build() {
             return new CloudErrorBodyResponse(code, details, message, target);
         }

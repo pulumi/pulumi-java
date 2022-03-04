@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.outputs;
 import io.pulumi.awsnative.appflow.enums.FlowFileType;
 import io.pulumi.awsnative.appflow.outputs.FlowAggregationConfig;
 import io.pulumi.awsnative.appflow.outputs.FlowPrefixConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -75,7 +75,6 @@ public final class FlowUpsolverS3OutputFormatConfig {
             this.prefixConfig = Objects.requireNonNull(prefixConfig);
             return this;
         }
-
         public FlowUpsolverS3OutputFormatConfig build() {
             return new FlowUpsolverS3OutputFormatConfig(aggregationConfig, fileType, prefixConfig);
         }

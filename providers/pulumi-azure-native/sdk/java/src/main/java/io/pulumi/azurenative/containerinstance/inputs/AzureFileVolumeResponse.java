@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureFileVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Boolean readOnly;
+      private final @Nullable Boolean readOnly;
 
     public Optional<Boolean> getReadOnly() {
         return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
@@ -35,7 +35,7 @@ public final class AzureFileVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final String shareName;
+      private final String shareName;
 
     public String getShareName() {
         return this.shareName;
@@ -46,7 +46,7 @@ public final class AzureFileVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="storageAccountKey")
-    private final @Nullable String storageAccountKey;
+      private final @Nullable String storageAccountKey;
 
     public Optional<String> getStorageAccountKey() {
         return this.storageAccountKey == null ? Optional.empty() : Optional.ofNullable(this.storageAccountKey);
@@ -57,7 +57,7 @@ public final class AzureFileVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="storageAccountName", required=true)
-    private final String storageAccountName;
+      private final String storageAccountName;
 
     public String getStorageAccountName() {
         return this.storageAccountName;
@@ -126,7 +126,6 @@ public final class AzureFileVolumeResponse extends io.pulumi.resources.InvokeArg
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
-
         public AzureFileVolumeResponse build() {
             return new AzureFileVolumeResponse(readOnly, shareName, storageAccountKey, storageAccountName);
         }

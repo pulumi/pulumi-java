@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ImportFileResponse {
     /**
      * The contents of the file.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * The name of the file.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class ImportFileResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ImportFileResponse build() {
             return new ImportFileResponse(content, name);
         }

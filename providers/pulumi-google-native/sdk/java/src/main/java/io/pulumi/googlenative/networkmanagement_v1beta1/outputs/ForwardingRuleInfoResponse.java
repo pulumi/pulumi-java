@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -66,49 +66,49 @@ public final class ForwardingRuleInfoResponse {
     /**
      * Name of a Compute Engine forwarding rule.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Port range defined in the forwarding rule that matches the test.
      * 
-     */
+    */
     public String getMatchedPortRange() {
         return this.matchedPortRange;
     }
     /**
      * Protocol defined in the forwarding rule that matches the test.
      * 
-     */
+    */
     public String getMatchedProtocol() {
         return this.matchedProtocol;
     }
     /**
      * Network URI. Only valid for Internal Load Balancer.
      * 
-     */
+    */
     public String getNetworkUri() {
         return this.networkUri;
     }
     /**
      * Target type of the forwarding rule.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }
     /**
      * URI of a Compute Engine forwarding rule.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * VIP of the forwarding rule.
      * 
-     */
+    */
     public String getVip() {
         return this.vip;
     }
@@ -179,7 +179,6 @@ public final class ForwardingRuleInfoResponse {
             this.vip = Objects.requireNonNull(vip);
             return this;
         }
-
         public ForwardingRuleInfoResponse build() {
             return new ForwardingRuleInfoResponse(displayName, matchedPortRange, matchedProtocol, networkUri, target, uri, vip);
         }

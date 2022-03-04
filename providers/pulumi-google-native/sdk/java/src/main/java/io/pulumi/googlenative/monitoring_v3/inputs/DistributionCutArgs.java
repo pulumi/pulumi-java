@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="distributionFilter")
-    private final @Nullable Input<String> distributionFilter;
+      private final @Nullable Input<String> distributionFilter;
 
     public Input<String> getDistributionFilter() {
         return this.distributionFilter == null ? Input.empty() : this.distributionFilter;
@@ -35,7 +35,7 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Input<GoogleMonitoringV3RangeArgs> range;
+      private final @Nullable Input<GoogleMonitoringV3RangeArgs> range;
 
     public Input<GoogleMonitoringV3RangeArgs> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -94,7 +94,6 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
             this.range = Input.ofNullable(range);
             return this;
         }
-
         public DistributionCutArgs build() {
             return new DistributionCutArgs(distributionFilter, range);
         }

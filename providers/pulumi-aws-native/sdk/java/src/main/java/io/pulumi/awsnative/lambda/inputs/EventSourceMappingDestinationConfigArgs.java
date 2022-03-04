@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.inputs.EventSourceMappingOnFailureArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class EventSourceMappingDestinationConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="onFailure")
-    private final @Nullable Input<EventSourceMappingOnFailureArgs> onFailure;
+      private final @Nullable Input<EventSourceMappingOnFailureArgs> onFailure;
 
     public Input<EventSourceMappingOnFailureArgs> getOnFailure() {
         return this.onFailure == null ? Input.empty() : this.onFailure;
@@ -66,7 +66,6 @@ public final class EventSourceMappingDestinationConfigArgs extends io.pulumi.res
             this.onFailure = Input.ofNullable(onFailure);
             return this;
         }
-
         public EventSourceMappingDestinationConfigArgs build() {
             return new EventSourceMappingDestinationConfigArgs(onFailure);
         }

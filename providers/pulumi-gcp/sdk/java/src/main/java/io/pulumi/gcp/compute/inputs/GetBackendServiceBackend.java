@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,14 +15,14 @@ public final class GetBackendServiceBackend extends io.pulumi.resources.InvokeAr
     public static final GetBackendServiceBackend Empty = new GetBackendServiceBackend();
 
     @InputImport(name="balancingMode", required=true)
-    private final String balancingMode;
+      private final String balancingMode;
 
     public String getBalancingMode() {
         return this.balancingMode;
     }
 
     @InputImport(name="capacityScaler", required=true)
-    private final Double capacityScaler;
+      private final Double capacityScaler;
 
     public Double getCapacityScaler() {
         return this.capacityScaler;
@@ -33,63 +33,63 @@ public final class GetBackendServiceBackend extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
     @InputImport(name="group", required=true)
-    private final String group;
+      private final String group;
 
     public String getGroup() {
         return this.group;
     }
 
     @InputImport(name="maxConnections", required=true)
-    private final Integer maxConnections;
+      private final Integer maxConnections;
 
     public Integer getMaxConnections() {
         return this.maxConnections;
     }
 
     @InputImport(name="maxConnectionsPerEndpoint", required=true)
-    private final Integer maxConnectionsPerEndpoint;
+      private final Integer maxConnectionsPerEndpoint;
 
     public Integer getMaxConnectionsPerEndpoint() {
         return this.maxConnectionsPerEndpoint;
     }
 
     @InputImport(name="maxConnectionsPerInstance", required=true)
-    private final Integer maxConnectionsPerInstance;
+      private final Integer maxConnectionsPerInstance;
 
     public Integer getMaxConnectionsPerInstance() {
         return this.maxConnectionsPerInstance;
     }
 
     @InputImport(name="maxRate", required=true)
-    private final Integer maxRate;
+      private final Integer maxRate;
 
     public Integer getMaxRate() {
         return this.maxRate;
     }
 
     @InputImport(name="maxRatePerEndpoint", required=true)
-    private final Double maxRatePerEndpoint;
+      private final Double maxRatePerEndpoint;
 
     public Double getMaxRatePerEndpoint() {
         return this.maxRatePerEndpoint;
     }
 
     @InputImport(name="maxRatePerInstance", required=true)
-    private final Double maxRatePerInstance;
+      private final Double maxRatePerInstance;
 
     public Double getMaxRatePerInstance() {
         return this.maxRatePerInstance;
     }
 
     @InputImport(name="maxUtilization", required=true)
-    private final Double maxUtilization;
+      private final Double maxUtilization;
 
     public Double getMaxUtilization() {
         return this.maxUtilization;
@@ -228,7 +228,6 @@ public final class GetBackendServiceBackend extends io.pulumi.resources.InvokeAr
             this.maxUtilization = Objects.requireNonNull(maxUtilization);
             return this;
         }
-
         public GetBackendServiceBackend build() {
             return new GetBackendServiceBackend(balancingMode, capacityScaler, description, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.EnvironmentContainerImageArgs;
 import io.pulumi.gcp.notebooks.inputs.EnvironmentVmImageArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerImage")
-    private final @Nullable Input<EnvironmentContainerImageArgs> containerImage;
+      private final @Nullable Input<EnvironmentContainerImageArgs> containerImage;
 
     public Input<EnvironmentContainerImageArgs> getContainerImage() {
         return this.containerImage == null ? Input.empty() : this.containerImage;
@@ -33,7 +33,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -55,7 +55,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -67,7 +67,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postStartupScript")
-    private final @Nullable Input<String> postStartupScript;
+      private final @Nullable Input<String> postStartupScript;
 
     public Input<String> getPostStartupScript() {
         return this.postStartupScript == null ? Input.empty() : this.postStartupScript;
@@ -91,7 +91,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -103,7 +103,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmImage")
-    private final @Nullable Input<EnvironmentVmImageArgs> vmImage;
+      private final @Nullable Input<EnvironmentVmImageArgs> vmImage;
 
     public Input<EnvironmentVmImageArgs> getVmImage() {
         return this.vmImage == null ? Input.empty() : this.vmImage;
@@ -252,7 +252,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.vmImage = Input.ofNullable(vmImage);
             return this;
         }
-
         public EnvironmentArgs build() {
             return new EnvironmentArgs(containerImage, description, displayName, location, name, postStartupScript, project, vmImage);
         }

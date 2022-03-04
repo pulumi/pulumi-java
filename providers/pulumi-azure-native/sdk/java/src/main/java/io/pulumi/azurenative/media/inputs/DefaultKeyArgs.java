@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -34,7 +34,7 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+      private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -93,7 +93,6 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.policyName = Input.ofNullable(policyName);
             return this;
         }
-
         public DefaultKeyArgs build() {
             return new DefaultKeyArgs(label, policyName);
         }

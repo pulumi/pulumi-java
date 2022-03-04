@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+      private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="publicKeyType")
-    private final @Nullable String publicKeyType;
+      private final @Nullable String publicKeyType;
 
     public Optional<String> getPublicKeyType() {
         return this.publicKeyType == null ? Optional.empty() : Optional.ofNullable(this.publicKeyType);
     }
 
     @InputImport(name="serviceAccountId", required=true)
-    private final String serviceAccountId;
+      private final String serviceAccountId;
 
     public String getServiceAccountId() {
         return this.serviceAccountId;
@@ -105,7 +105,6 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
             return this;
         }
-
         public GetKeyArgs build() {
             return new GetKeyArgs(keyId, project, publicKeyType, serviceAccountId);
         }

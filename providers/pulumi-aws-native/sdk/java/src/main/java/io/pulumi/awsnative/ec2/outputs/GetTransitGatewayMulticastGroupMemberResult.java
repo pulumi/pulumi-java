@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class GetTransitGatewayMulticastGroupMemberResult {
     /**
      * Indicates that the resource is a transit gateway multicast group member.
      * 
-     */
+    */
     public Optional<Boolean> getGroupMember() {
         return Optional.ofNullable(this.groupMember);
     }
     /**
      * Indicates that the resource is a transit gateway multicast group member.
      * 
-     */
+    */
     public Optional<Boolean> getGroupSource() {
         return Optional.ofNullable(this.groupSource);
     }
     /**
      * The member type (for example, static).
      * 
-     */
+    */
     public Optional<String> getMemberType() {
         return Optional.ofNullable(this.memberType);
     }
     /**
      * The ID of the resource.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The type of resource, for example a VPC attachment.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * The source type.
      * 
-     */
+    */
     public Optional<String> getSourceType() {
         return Optional.ofNullable(this.sourceType);
     }
     /**
      * The ID of the subnet.
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * The ID of the transit gateway attachment.
      * 
-     */
+    */
     public Optional<String> getTransitGatewayAttachmentId() {
         return Optional.ofNullable(this.transitGatewayAttachmentId);
     }
@@ -203,7 +203,6 @@ public final class GetTransitGatewayMulticastGroupMemberResult {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-
         public GetTransitGatewayMulticastGroupMemberResult build() {
             return new GetTransitGatewayMulticastGroupMemberResult(groupMember, groupSource, memberType, resourceId, resourceType, sourceType, subnetId, transitGatewayAttachmentId);
         }

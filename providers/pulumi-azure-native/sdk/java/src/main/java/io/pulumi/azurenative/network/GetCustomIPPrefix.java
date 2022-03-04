@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetCustomIPPrefixArgs;
 import io.pulumi.azurenative.network.outputs.GetCustomIPPrefixResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomIPPrefix {
-/**
- * Custom IP prefix resource.
+    private GetCustomIPPrefix() {}
+    public interface BuilderApplicator {
+        public void apply(GetCustomIPPrefixArgs.Builder a);
+    }
+    private static GetCustomIPPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCustomIPPrefixArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Custom IP prefix resource.
  * API Version: 2020-11-01.
  * 
- *
- * Custom IP prefix resource.
+     *
+     * Custom IP prefix resource.
  * 
- */
+     */
+    public static CompletableFuture<GetCustomIPPrefixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Custom IP prefix resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Custom IP prefix resource.
+     * 
+     */
     public static CompletableFuture<GetCustomIPPrefixResult> invokeAsync(GetCustomIPPrefixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getCustomIPPrefix", TypeShape.of(GetCustomIPPrefixResult.class), args == null ? GetCustomIPPrefixArgs.Empty : args, Utilities.withVersion(options));
     }

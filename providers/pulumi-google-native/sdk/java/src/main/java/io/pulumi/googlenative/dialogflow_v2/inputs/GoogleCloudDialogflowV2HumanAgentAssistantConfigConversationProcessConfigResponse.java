@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
      * 
      */
     @InputImport(name="recentSentencesCount", required=true)
-    private final Integer recentSentencesCount;
+      private final Integer recentSentencesCount;
 
     public Integer getRecentSentencesCount() {
         return this.recentSentencesCount;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
             this.recentSentencesCount = Objects.requireNonNull(recentSentencesCount);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse(recentSentencesCount);
         }

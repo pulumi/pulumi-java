@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public final class DetectorModelIotEvents {
     /**
      * The name of the AWS IoT Events input where the data is sent.
      * 
-     */
+    */
     public String getInputName() {
         return this.inputName;
     }
@@ -69,7 +69,6 @@ public final class DetectorModelIotEvents {
             this.payload = payload;
             return this;
         }
-
         public DetectorModelIotEvents build() {
             return new DetectorModelIotEvents(inputName, payload);
         }

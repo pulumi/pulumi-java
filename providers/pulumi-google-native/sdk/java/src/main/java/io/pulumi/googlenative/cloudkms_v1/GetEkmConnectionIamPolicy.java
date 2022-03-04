@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEkmConnectionIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetEkmConnectionIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetEkmConnectionIamPolicyArgs.Builder a);
+    }
+    private static GetEkmConnectionIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEkmConnectionIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetEkmConnectionIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetEkmConnectionIamPolicyResult> invokeAsync(GetEkmConnectionIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudkms/v1:getEkmConnectionIamPolicy", TypeShape.of(GetEkmConnectionIamPolicyResult.class), args == null ? GetEkmConnectionIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.FrontEndConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,42 +16,42 @@ public final class ArcConfigurationResponse extends io.pulumi.resources.InvokeAr
     public static final ArcConfigurationResponse Empty = new ArcConfigurationResponse();
 
     @InputImport(name="artifactStorageAccessMode")
-    private final @Nullable String artifactStorageAccessMode;
+      private final @Nullable String artifactStorageAccessMode;
 
     public Optional<String> getArtifactStorageAccessMode() {
         return this.artifactStorageAccessMode == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageAccessMode);
     }
 
     @InputImport(name="artifactStorageClassName")
-    private final @Nullable String artifactStorageClassName;
+      private final @Nullable String artifactStorageClassName;
 
     public Optional<String> getArtifactStorageClassName() {
         return this.artifactStorageClassName == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageClassName);
     }
 
     @InputImport(name="artifactStorageMountPath")
-    private final @Nullable String artifactStorageMountPath;
+      private final @Nullable String artifactStorageMountPath;
 
     public Optional<String> getArtifactStorageMountPath() {
         return this.artifactStorageMountPath == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageMountPath);
     }
 
     @InputImport(name="artifactStorageNodeName")
-    private final @Nullable String artifactStorageNodeName;
+      private final @Nullable String artifactStorageNodeName;
 
     public Optional<String> getArtifactStorageNodeName() {
         return this.artifactStorageNodeName == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageNodeName);
     }
 
     @InputImport(name="artifactsStorageType")
-    private final @Nullable String artifactsStorageType;
+      private final @Nullable String artifactsStorageType;
 
     public Optional<String> getArtifactsStorageType() {
         return this.artifactsStorageType == null ? Optional.empty() : Optional.ofNullable(this.artifactsStorageType);
     }
 
     @InputImport(name="frontEndServiceConfiguration")
-    private final @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
+      private final @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
 
     public Optional<FrontEndConfigurationResponse> getFrontEndServiceConfiguration() {
         return this.frontEndServiceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontEndServiceConfiguration);
@@ -140,7 +140,6 @@ public final class ArcConfigurationResponse extends io.pulumi.resources.InvokeAr
             this.frontEndServiceConfiguration = frontEndServiceConfiguration;
             return this;
         }
-
         public ArcConfigurationResponse build() {
             return new ArcConfigurationResponse(artifactStorageAccessMode, artifactStorageClassName, artifactStorageMountPath, artifactStorageNodeName, artifactsStorageType, frontEndServiceConfiguration);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -107,84 +107,84 @@ public final class GetStorageSyncServiceResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Incoming Traffic Policy
      * 
-     */
+    */
     public Optional<String> getIncomingTrafficPolicy() {
         return Optional.ofNullable(this.incomingTrafficPolicy);
     }
     /**
      * Resource Last Operation Name
      * 
-     */
+    */
     public String getLastOperationName() {
         return this.lastOperationName;
     }
     /**
      * StorageSyncService lastWorkflowId
      * 
-     */
+    */
     public String getLastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of private endpoint connection associated with the specified storage sync service
      * 
-     */
+    */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * StorageSyncService Provisioning State
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Storage Sync service status.
      * 
-     */
+    */
     public Integer getStorageSyncServiceStatus() {
         return this.storageSyncServiceStatus;
     }
     /**
      * Storage Sync service Uid
      * 
-     */
+    */
     public String getStorageSyncServiceUid() {
         return this.storageSyncServiceUid;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -290,7 +290,6 @@ public final class GetStorageSyncServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStorageSyncServiceResult build() {
             return new GetStorageSyncServiceResult(id, incomingTrafficPolicy, lastOperationName, lastWorkflowId, location, name, privateEndpointConnections, provisioningState, storageSyncServiceStatus, storageSyncServiceUid, tags, type);
         }

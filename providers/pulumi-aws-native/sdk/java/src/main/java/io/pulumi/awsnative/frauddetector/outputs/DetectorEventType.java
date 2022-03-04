@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.outputs.DetectorEntityType;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorEventVariable;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorLabel;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -79,21 +79,21 @@ public final class DetectorEventType {
     /**
      * The ARN of the event type.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the event type was created.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description of the event type.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -112,21 +112,21 @@ public final class DetectorEventType {
     /**
      * The time when the event type was last updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * The name for the event type
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tags associated with this event type.
      * 
-     */
+    */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -218,7 +218,6 @@ public final class DetectorEventType {
             this.tags = tags;
             return this;
         }
-
         public DetectorEventType build() {
             return new DetectorEventType(arn, createdTime, description, entityTypes, eventVariables, inline, labels, lastUpdatedTime, name, tags);
         }

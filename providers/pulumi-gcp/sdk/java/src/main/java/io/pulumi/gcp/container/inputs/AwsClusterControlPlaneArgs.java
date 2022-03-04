@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AwsClusterControlPlaneAwsServicesAuthenticationArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterControlPlaneConfigEncryptionArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterControlPlaneDatabaseEncryptionArgs;
@@ -28,7 +28,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="awsServicesAuthentication", required=true)
-    private final Input<AwsClusterControlPlaneAwsServicesAuthenticationArgs> awsServicesAuthentication;
+      private final Input<AwsClusterControlPlaneAwsServicesAuthenticationArgs> awsServicesAuthentication;
 
     public Input<AwsClusterControlPlaneAwsServicesAuthenticationArgs> getAwsServicesAuthentication() {
         return this.awsServicesAuthentication;
@@ -39,7 +39,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configEncryption", required=true)
-    private final Input<AwsClusterControlPlaneConfigEncryptionArgs> configEncryption;
+      private final Input<AwsClusterControlPlaneConfigEncryptionArgs> configEncryption;
 
     public Input<AwsClusterControlPlaneConfigEncryptionArgs> getConfigEncryption() {
         return this.configEncryption;
@@ -50,7 +50,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="databaseEncryption", required=true)
-    private final Input<AwsClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption;
+      private final Input<AwsClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption;
 
     public Input<AwsClusterControlPlaneDatabaseEncryptionArgs> getDatabaseEncryption() {
         return this.databaseEncryption;
@@ -61,7 +61,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="iamInstanceProfile", required=true)
-    private final Input<String> iamInstanceProfile;
+      private final Input<String> iamInstanceProfile;
 
     public Input<String> getIamInstanceProfile() {
         return this.iamInstanceProfile;
@@ -72,7 +72,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -83,7 +83,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mainVolume")
-    private final @Nullable Input<AwsClusterControlPlaneMainVolumeArgs> mainVolume;
+      private final @Nullable Input<AwsClusterControlPlaneMainVolumeArgs> mainVolume;
 
     public Input<AwsClusterControlPlaneMainVolumeArgs> getMainVolume() {
         return this.mainVolume == null ? Input.empty() : this.mainVolume;
@@ -94,7 +94,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="proxyConfig")
-    private final @Nullable Input<AwsClusterControlPlaneProxyConfigArgs> proxyConfig;
+      private final @Nullable Input<AwsClusterControlPlaneProxyConfigArgs> proxyConfig;
 
     public Input<AwsClusterControlPlaneProxyConfigArgs> getProxyConfig() {
         return this.proxyConfig == null ? Input.empty() : this.proxyConfig;
@@ -105,7 +105,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rootVolume")
-    private final @Nullable Input<AwsClusterControlPlaneRootVolumeArgs> rootVolume;
+      private final @Nullable Input<AwsClusterControlPlaneRootVolumeArgs> rootVolume;
 
     public Input<AwsClusterControlPlaneRootVolumeArgs> getRootVolume() {
         return this.rootVolume == null ? Input.empty() : this.rootVolume;
@@ -116,7 +116,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -127,7 +127,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sshConfig")
-    private final @Nullable Input<AwsClusterControlPlaneSshConfigArgs> sshConfig;
+      private final @Nullable Input<AwsClusterControlPlaneSshConfigArgs> sshConfig;
 
     public Input<AwsClusterControlPlaneSshConfigArgs> getSshConfig() {
         return this.sshConfig == null ? Input.empty() : this.sshConfig;
@@ -138,7 +138,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -149,7 +149,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -160,7 +160,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -384,7 +384,6 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public AwsClusterControlPlaneArgs build() {
             return new AwsClusterControlPlaneArgs(awsServicesAuthentication, configEncryption, databaseEncryption, iamInstanceProfile, instanceType, mainVolume, proxyConfig, rootVolume, securityGroupIds, sshConfig, subnetIds, tags, version);
         }

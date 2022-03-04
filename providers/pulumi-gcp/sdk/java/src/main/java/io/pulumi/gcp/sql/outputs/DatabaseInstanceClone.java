@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DatabaseInstanceClone {
     /**
      * The timestamp of the point in time that should be restored.
      * 
-     */
+    */
     public Optional<String> getPointInTime() {
         return Optional.ofNullable(this.pointInTime);
     }
     /**
      * Name of the source instance which will be cloned.
      * 
-     */
+    */
     public String getSourceInstanceName() {
         return this.sourceInstanceName;
     }
@@ -76,7 +76,6 @@ public final class DatabaseInstanceClone {
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
         }
-
         public DatabaseInstanceClone build() {
             return new DatabaseInstanceClone(pointInTime, sourceInstanceName);
         }

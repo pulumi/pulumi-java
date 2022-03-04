@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceArgs extend
      * 
      */
     @InputImport(name="accessLevel")
-    private final @Nullable Input<String> accessLevel;
+      private final @Nullable Input<String> accessLevel;
 
     public Input<String> getAccessLevel() {
         return this.accessLevel == null ? Input.empty() : this.accessLevel;
@@ -42,7 +42,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceArgs extend
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<String> resource;
+      private final @Nullable Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -101,7 +101,6 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceArgs extend
             this.resource = Input.ofNullable(resource);
             return this;
         }
-
         public ServicePerimeterSpecIngressPolicyIngressFromSourceArgs build() {
             return new ServicePerimeterSpecIngressPolicyIngressFromSourceArgs(accessLevel, resource);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigtable.InstanceArgs;
 import io.pulumi.gcp.bigtable.inputs.InstanceState;
@@ -98,7 +98,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * `"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
      * is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
      * 
-     * @deprecated
+     * @Deprecated
      * It is recommended to leave this field unspecified since the distinction between "DEVELOPMENT" and "PRODUCTION" instances is going away, and all instances will become "PRODUCTION" instances. This means that new and existing "DEVELOPMENT" instances will be converted to "PRODUCTION" instances. It is recommended for users to use "PRODUCTION" instances in any case, since a 1-node "PRODUCTION" instance is functionally identical to a "DEVELOPMENT" instance, but without the accompanying restrictions.
      * 
      */
@@ -162,6 +162,37 @@ public class Instance extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable InstanceArgs.Builder a);
+    }
+    private static io.pulumi.gcp.bigtable.InstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.bigtable.InstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Instance(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Instance(String name) {
+        this(name, InstanceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Instance(String name, @Nullable InstanceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

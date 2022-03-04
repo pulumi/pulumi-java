@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class NotificationSettingsResponse {
     /**
      * The list of additional recipients
      * 
-     */
+    */
     public List<String> getAdditionalRecipients() {
         return this.additionalRecipients == null ? List.of() : this.additionalRecipients;
     }
     /**
      * Should domain controller admins be notified
      * 
-     */
+    */
     public Optional<String> getNotifyDcAdmins() {
         return Optional.ofNullable(this.notifyDcAdmins);
     }
     /**
      * Should global admins be notified
      * 
-     */
+    */
     public Optional<String> getNotifyGlobalAdmins() {
         return Optional.ofNullable(this.notifyGlobalAdmins);
     }
@@ -98,7 +98,6 @@ public final class NotificationSettingsResponse {
             this.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }
-
         public NotificationSettingsResponse build() {
             return new NotificationSettingsResponse(additionalRecipients, notifyDcAdmins, notifyGlobalAdmins);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GeoFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -33,7 +33,7 @@ public final class GeoFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="countryCodes", required=true)
-    private final List<String> countryCodes;
+      private final List<String> countryCodes;
 
     public List<String> getCountryCodes() {
         return this.countryCodes;
@@ -44,7 +44,7 @@ public final class GeoFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="relativePath", required=true)
-    private final String relativePath;
+      private final String relativePath;
 
     public String getRelativePath() {
         return this.relativePath;
@@ -103,7 +103,6 @@ public final class GeoFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
-
         public GeoFilterResponse build() {
             return new GeoFilterResponse(action, countryCodes, relativePath);
         }

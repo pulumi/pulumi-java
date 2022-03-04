@@ -6,17 +6,33 @@ package io.pulumi.awsnative.emr;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.emr.inputs.GetStudioSessionMappingArgs;
 import io.pulumi.awsnative.emr.outputs.GetStudioSessionMappingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStudioSessionMapping {
-/**
- * An example resource schema demonstrating some basic constructs and validation rules.
+    private GetStudioSessionMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetStudioSessionMappingArgs.Builder a);
+    }
+    private static GetStudioSessionMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStudioSessionMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
  * 
- */
+     */
+    public static CompletableFuture<GetStudioSessionMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetStudioSessionMappingResult> invokeAsync(GetStudioSessionMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:emr:getStudioSessionMapping", TypeShape.of(GetStudioSessionMappingResult.class), args == null ? GetStudioSessionMappingArgs.Empty : args, Utilities.withVersion(options));
     }

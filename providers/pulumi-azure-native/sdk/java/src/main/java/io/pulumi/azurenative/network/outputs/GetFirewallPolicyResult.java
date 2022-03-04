@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.outputs.FirewallPolicyThreatIntelWhitelistR
 import io.pulumi.azurenative.network.outputs.FirewallPolicyTransportSecurityResponse;
 import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -170,140 +170,140 @@ public final class GetFirewallPolicyResult {
     /**
      * The parent firewall policy from which rules are inherited.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getBasePolicy() {
         return Optional.ofNullable(this.basePolicy);
     }
     /**
      * List of references to Child Firewall Policies.
      * 
-     */
+    */
     public List<SubResourceResponse> getChildPolicies() {
         return this.childPolicies;
     }
     /**
      * DNS Proxy Settings definition.
      * 
-     */
+    */
     public Optional<DnsSettingsResponse> getDnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * List of references to Azure Firewalls that this Firewall Policy is associated with.
      * 
-     */
+    */
     public List<SubResourceResponse> getFirewalls() {
         return this.firewalls;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The identity of the firewall policy.
      * 
-     */
+    */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Insights on Firewall Policy.
      * 
-     */
+    */
     public Optional<FirewallPolicyInsightsResponse> getInsights() {
         return Optional.ofNullable(this.insights);
     }
     /**
      * The configuration for Intrusion detection.
      * 
-     */
+    */
     public Optional<FirewallPolicyIntrusionDetectionResponse> getIntrusionDetection() {
         return Optional.ofNullable(this.intrusionDetection);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the firewall policy resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * List of references to FirewallPolicyRuleCollectionGroups.
      * 
-     */
+    */
     public List<SubResourceResponse> getRuleCollectionGroups() {
         return this.ruleCollectionGroups;
     }
     /**
      * The Firewall Policy SKU.
      * 
-     */
+    */
     public Optional<FirewallPolicySkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The private IP addresses/IP ranges to which traffic will not be SNAT.
      * 
-     */
+    */
     public Optional<FirewallPolicySNATResponse> getSnat() {
         return Optional.ofNullable(this.snat);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The operation mode for Threat Intelligence.
      * 
-     */
+    */
     public Optional<String> getThreatIntelMode() {
         return Optional.ofNullable(this.threatIntelMode);
     }
     /**
      * ThreatIntel Whitelist for Firewall Policy.
      * 
-     */
+    */
     public Optional<FirewallPolicyThreatIntelWhitelistResponse> getThreatIntelWhitelist() {
         return Optional.ofNullable(this.threatIntelWhitelist);
     }
     /**
      * TLS Configuration definition.
      * 
-     */
+    */
     public Optional<FirewallPolicyTransportSecurityResponse> getTransportSecurity() {
         return Optional.ofNullable(this.transportSecurity);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -465,7 +465,6 @@ public final class GetFirewallPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFirewallPolicyResult build() {
             return new GetFirewallPolicyResult(basePolicy, childPolicies, dnsSettings, etag, firewalls, id, identity, insights, intrusionDetection, location, name, provisioningState, ruleCollectionGroups, sku, snat, tags, threatIntelMode, threatIntelWhitelist, transportSecurity, type);
         }

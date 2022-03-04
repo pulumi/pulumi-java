@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceFileResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class OSPolicyResourcePackageResourceDebResponse {
     /**
      * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
      * 
-     */
+    */
     public Boolean getPullDeps() {
         return this.pullDeps;
     }
     /**
      * A deb package.
      * 
-     */
+    */
     public OSPolicyResourceFileResponse getSource() {
         return this.source;
     }
@@ -75,7 +75,6 @@ public final class OSPolicyResourcePackageResourceDebResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OSPolicyResourcePackageResourceDebResponse build() {
             return new OSPolicyResourcePackageResourceDebResponse(pullDeps, source);
         }

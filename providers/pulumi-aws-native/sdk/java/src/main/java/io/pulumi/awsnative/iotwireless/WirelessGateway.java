@@ -9,8 +9,8 @@ import io.pulumi.awsnative.iotwireless.outputs.WirelessGatewayLoRaWANGateway;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessGatewayTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -134,6 +134,37 @@ public class WirelessGateway extends io.pulumi.resources.CustomResource {
         return this.thingName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WirelessGatewayArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.iotwireless.WirelessGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.iotwireless.WirelessGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WirelessGateway(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WirelessGateway(String name) {
+        this(name, WirelessGatewayArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WirelessGateway(String name, WirelessGatewayArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

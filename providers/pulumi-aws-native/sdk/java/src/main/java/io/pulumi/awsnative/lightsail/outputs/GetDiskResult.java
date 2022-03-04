@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.outputs;
 import io.pulumi.awsnative.lightsail.outputs.DiskAddOn;
 import io.pulumi.awsnative.lightsail.outputs.DiskLocation;
 import io.pulumi.awsnative.lightsail.outputs.DiskTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -101,21 +101,21 @@ public final class GetDiskResult {
     /**
      * An array of objects representing the add-ons to enable for the new instance.
      * 
-     */
+    */
     public List<DiskAddOn> getAddOns() {
         return this.addOns == null ? List.of() : this.addOns;
     }
     /**
      * Name of the attached Lightsail Instance
      * 
-     */
+    */
     public Optional<String> getAttachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
     /**
      * Attachment State of the Lightsail disk
      * 
-     */
+    */
     public Optional<String> getAttachmentState() {
         return Optional.ofNullable(this.attachmentState);
     }
@@ -125,14 +125,14 @@ public final class GetDiskResult {
     /**
      * Iops of the Lightsail disk
      * 
-     */
+    */
     public Optional<Integer> getIops() {
         return Optional.ofNullable(this.iops);
     }
     /**
      * Check is Disk is attached state
      * 
-     */
+    */
     public Optional<Boolean> getIsAttached() {
         return Optional.ofNullable(this.isAttached);
     }
@@ -142,35 +142,35 @@ public final class GetDiskResult {
     /**
      * Path of the  attached Disk
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Resource type of Lightsail instance.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * State of the Lightsail disk
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Support code to help identify any issues
      * 
-     */
+    */
     public Optional<String> getSupportCode() {
         return Optional.ofNullable(this.supportCode);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<DiskTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -276,7 +276,6 @@ public final class GetDiskResult {
             this.tags = tags;
             return this;
         }
-
         public GetDiskResult build() {
             return new GetDiskResult(addOns, attachedTo, attachmentState, diskArn, iops, isAttached, location, path, resourceType, state, supportCode, tags);
         }

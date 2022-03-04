@@ -6,7 +6,7 @@ package io.pulumi.azurenative.chaos.outputs;
 import io.pulumi.azurenative.chaos.outputs.ContinuousActionResponse;
 import io.pulumi.azurenative.chaos.outputs.DelayActionResponse;
 import io.pulumi.azurenative.chaos.outputs.DiscreteActionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -36,14 +36,14 @@ public final class BranchResponse {
     /**
      * List of actions.
      * 
-     */
+    */
     public List<Object> getActions() {
         return this.actions;
     }
     /**
      * String of the branch name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -79,7 +79,6 @@ public final class BranchResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BranchResponse build() {
             return new BranchResponse(actions, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="boolValue", required=true)
-    private final Boolean boolValue;
+      private final Boolean boolValue;
 
     public Boolean getBoolValue() {
         return this.boolValue;
@@ -34,7 +34,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="intValue", required=true)
-    private final String intValue;
+      private final String intValue;
 
     public String getIntValue() {
         return this.intValue;
@@ -45,7 +45,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -56,7 +56,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="secretValue", required=true)
-    private final SecretResponse secretValue;
+      private final SecretResponse secretValue;
 
     public SecretResponse getSecretValue() {
         return this.secretValue;
@@ -67,7 +67,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="stringValue", required=true)
-    private final String stringValue;
+      private final String stringValue;
 
     public String getStringValue() {
         return this.stringValue;
@@ -146,7 +146,6 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public ConfigVariableResponse build() {
             return new ConfigVariableResponse(boolValue, intValue, key, secretValue, stringValue);
         }

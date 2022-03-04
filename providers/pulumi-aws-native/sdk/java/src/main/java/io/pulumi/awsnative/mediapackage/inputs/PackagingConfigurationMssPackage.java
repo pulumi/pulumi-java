@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssEncryption;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssManifest;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PackagingConfigurationMssPackage extends io.pulumi.resources.
     public static final PackagingConfigurationMssPackage Empty = new PackagingConfigurationMssPackage();
 
     @InputImport(name="encryption")
-    private final @Nullable PackagingConfigurationMssEncryption encryption;
+      private final @Nullable PackagingConfigurationMssEncryption encryption;
 
     public Optional<PackagingConfigurationMssEncryption> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -33,14 +33,14 @@ public final class PackagingConfigurationMssPackage extends io.pulumi.resources.
      * 
      */
     @InputImport(name="mssManifests", required=true)
-    private final List<PackagingConfigurationMssManifest> mssManifests;
+      private final List<PackagingConfigurationMssManifest> mssManifests;
 
     public List<PackagingConfigurationMssManifest> getMssManifests() {
         return this.mssManifests;
     }
 
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Integer segmentDurationSeconds;
+      private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
@@ -99,7 +99,6 @@ public final class PackagingConfigurationMssPackage extends io.pulumi.resources.
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public PackagingConfigurationMssPackage build() {
             return new PackagingConfigurationMssPackage(encryption, mssManifests, segmentDurationSeconds);
         }

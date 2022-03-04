@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.ContainerResponse;
 import io.pulumi.azurenative.web.outputs.DaprResponse;
 import io.pulumi.azurenative.web.outputs.ScaleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -51,28 +51,28 @@ public final class TemplateResponse {
     /**
      * List of container definitions for the Container App.
      * 
-     */
+    */
     public List<ContainerResponse> getContainers() {
         return this.containers == null ? List.of() : this.containers;
     }
     /**
      * Dapr configuration for the Container App.
      * 
-     */
+    */
     public Optional<DaprResponse> getDapr() {
         return Optional.ofNullable(this.dapr);
     }
     /**
      * User friendly suffix that is appended to the revision name
      * 
-     */
+    */
     public Optional<String> getRevisionSuffix() {
         return Optional.ofNullable(this.revisionSuffix);
     }
     /**
      * Scaling properties for the Container App.
      * 
-     */
+    */
     public Optional<ScaleResponse> getScale() {
         return Optional.ofNullable(this.scale);
     }
@@ -122,7 +122,6 @@ public final class TemplateResponse {
             this.scale = scale;
             return this;
         }
-
         public TemplateResponse build() {
             return new TemplateResponse(containers, dapr, revisionSuffix, scale);
         }

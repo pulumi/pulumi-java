@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class IncidentOwnerInfoResponse {
     /**
      * The name of the user the incident is assigned to.
      * 
-     */
+    */
     public Optional<String> getAssignedTo() {
         return Optional.ofNullable(this.assignedTo);
     }
     /**
      * The email of the user the incident is assigned to.
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * The object id of the user the incident is assigned to.
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * The user principal name of the user the incident is assigned to.
      * 
-     */
+    */
     public Optional<String> getUserPrincipalName() {
         return Optional.ofNullable(this.userPrincipalName);
     }
@@ -118,7 +118,6 @@ public final class IncidentOwnerInfoResponse {
             this.userPrincipalName = userPrincipalName;
             return this;
         }
-
         public IncidentOwnerInfoResponse build() {
             return new IncidentOwnerInfoResponse(assignedTo, email, objectId, userPrincipalName);
         }

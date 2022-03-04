@@ -6,21 +6,41 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.inputs.GetDeviceExtendedInformationArgs;
 import io.pulumi.azurenative.databoxedge.outputs.GetDeviceExtendedInformationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeviceExtendedInformation {
-/**
- * The extended Info of the Data Box Edge/Gateway device.
+    private GetDeviceExtendedInformation() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeviceExtendedInformationArgs.Builder a);
+    }
+    private static GetDeviceExtendedInformationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeviceExtendedInformationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The extended Info of the Data Box Edge/Gateway device.
  * API Version: 2020-12-01.
  * 
- *
- * The extended Info of the Data Box Edge/Gateway device.
+     *
+     * The extended Info of the Data Box Edge/Gateway device.
  * 
- */
+     */
+    public static CompletableFuture<GetDeviceExtendedInformationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The extended Info of the Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * The extended Info of the Data Box Edge/Gateway device.
+     * 
+     */
     public static CompletableFuture<GetDeviceExtendedInformationResult> invokeAsync(GetDeviceExtendedInformationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getDeviceExtendedInformation", TypeShape.of(GetDeviceExtendedInformationResult.class), args == null ? GetDeviceExtendedInformationArgs.Empty : args, Utilities.withVersion(options));
     }

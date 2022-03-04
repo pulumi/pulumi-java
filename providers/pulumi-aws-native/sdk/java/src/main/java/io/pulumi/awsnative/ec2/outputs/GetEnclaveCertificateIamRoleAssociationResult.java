@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
     /**
      * The name of the Amazon S3 bucket to which the certificate was uploaded.
      * 
-     */
+    */
     public Optional<String> getCertificateS3BucketName() {
         return Optional.ofNullable(this.certificateS3BucketName);
     }
     /**
      * The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
      * 
-     */
+    */
     public Optional<String> getCertificateS3ObjectKey() {
         return Optional.ofNullable(this.certificateS3ObjectKey);
     }
     /**
      * The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
      * 
-     */
+    */
     public Optional<String> getEncryptionKmsKeyId() {
         return Optional.ofNullable(this.encryptionKmsKeyId);
     }
@@ -97,7 +97,6 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
             this.encryptionKmsKeyId = encryptionKmsKeyId;
             return this;
         }
-
         public GetEnclaveCertificateIamRoleAssociationResult build() {
             return new GetEnclaveCertificateIamRoleAssociationResult(certificateS3BucketName, certificateS3ObjectKey, encryptionKmsKeyId);
         }

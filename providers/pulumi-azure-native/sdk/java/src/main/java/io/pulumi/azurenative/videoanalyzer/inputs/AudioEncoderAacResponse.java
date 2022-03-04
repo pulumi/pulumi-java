@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AudioEncoderAacResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="bitrateKbps")
-    private final @Nullable String bitrateKbps;
+      private final @Nullable String bitrateKbps;
 
     public Optional<String> getBitrateKbps() {
         return this.bitrateKbps == null ? Optional.empty() : Optional.ofNullable(this.bitrateKbps);
@@ -35,7 +35,7 @@ public final class AudioEncoderAacResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -84,7 +84,6 @@ public final class AudioEncoderAacResponse extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AudioEncoderAacResponse build() {
             return new AudioEncoderAacResponse(bitrateKbps, type);
         }

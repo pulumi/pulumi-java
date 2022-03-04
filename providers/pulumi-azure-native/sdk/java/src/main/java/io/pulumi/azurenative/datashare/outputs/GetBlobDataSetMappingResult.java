@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,35 +119,35 @@ public final class GetBlobDataSetMappingResult {
     /**
      * Container that has the file path.
      * 
-     */
+    */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * The id of the source data set.
      * 
-     */
+    */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * Gets the status of the data set mapping.
      * 
-     */
+    */
     public String getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
      * File path within the source data set
      * 
-     */
+    */
     public String getFilePath() {
         return this.filePath;
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -155,63 +155,63 @@ public final class GetBlobDataSetMappingResult {
      * Kind of data set mapping.
      * Expected value is 'Blob'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * File output type
      * 
-     */
+    */
     public Optional<String> getOutputType() {
         return Optional.ofNullable(this.outputType);
     }
     /**
      * Provisioning state of the data set mapping.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource group of storage account.
      * 
-     */
+    */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Storage account name of the source data set.
      * 
-     */
+    */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
     /**
      * Subscription id of storage account.
      * 
-     */
+    */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -331,7 +331,6 @@ public final class GetBlobDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobDataSetMappingResult build() {
             return new GetBlobDataSetMappingResult(containerName, dataSetId, dataSetMappingStatus, filePath, id, kind, name, outputType, provisioningState, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

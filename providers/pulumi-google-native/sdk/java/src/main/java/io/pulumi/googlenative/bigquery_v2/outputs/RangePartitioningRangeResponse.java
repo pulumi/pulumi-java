@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class RangePartitioningRangeResponse {
     /**
      * [TrustedTester] [Required] The end of range partitioning, exclusive.
      * 
-     */
+    */
     public String getEnd() {
         return this.end;
     }
     /**
      * [TrustedTester] [Required] The width of each interval.
      * 
-     */
+    */
     public String getInterval() {
         return this.interval;
     }
     /**
      * [TrustedTester] [Required] The start of range partitioning, inclusive.
      * 
-     */
+    */
     public String getStart() {
         return this.start;
     }
@@ -95,7 +95,6 @@ public final class RangePartitioningRangeResponse {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public RangePartitioningRangeResponse build() {
             return new RangePartitioningRangeResponse(end, interval, start);
         }

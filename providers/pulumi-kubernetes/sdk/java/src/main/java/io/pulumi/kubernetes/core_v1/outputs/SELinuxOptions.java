@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class SELinuxOptions {
     /**
      * Level is SELinux level label that applies to the container.
      * 
-     */
+    */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
     /**
      * Role is a SELinux role label that applies to the container.
      * 
-     */
+    */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }
     /**
      * Type is a SELinux type label that applies to the container.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * User is a SELinux user label that applies to the container.
      * 
-     */
+    */
     public Optional<String> getUser() {
         return Optional.ofNullable(this.user);
     }
@@ -118,7 +118,6 @@ public final class SELinuxOptions {
             this.user = user;
             return this;
         }
-
         public SELinuxOptions build() {
             return new SELinuxOptions(level, role, type, user);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.servicecatalogappregistry;
 
 import io.pulumi.awsnative.servicecatalogappregistry.inputs.ApplicationTagsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,14 +31,14 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<ApplicationTagsArgs> tags;
+      private final @Nullable Input<ApplicationTagsArgs> tags;
 
     public Input<ApplicationTagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ApplicationArgs build() {
             return new ApplicationArgs(description, name, tags);
         }

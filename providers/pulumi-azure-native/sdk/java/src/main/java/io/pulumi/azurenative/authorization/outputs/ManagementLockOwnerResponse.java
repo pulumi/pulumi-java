@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ManagementLockOwnerResponse {
     /**
      * The application ID of the lock owner.
      * 
-     */
+    */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -54,7 +54,6 @@ public final class ManagementLockOwnerResponse {
             this.applicationId = applicationId;
             return this;
         }
-
         public ManagementLockOwnerResponse build() {
             return new ManagementLockOwnerResponse(applicationId);
         }

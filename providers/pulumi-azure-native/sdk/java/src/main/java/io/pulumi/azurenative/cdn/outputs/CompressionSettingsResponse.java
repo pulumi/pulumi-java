@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class CompressionSettingsResponse {
     /**
      * List of content types on which compression applies. The value should be a valid MIME type.
      * 
-     */
+    */
     public List<String> getContentTypesToCompress() {
         return this.contentTypesToCompress == null ? List.of() : this.contentTypesToCompress;
     }
     /**
      * Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
      * 
-     */
+    */
     public Optional<Boolean> getIsCompressionEnabled() {
         return Optional.ofNullable(this.isCompressionEnabled);
     }
@@ -78,7 +78,6 @@ public final class CompressionSettingsResponse {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
-
         public CompressionSettingsResponse build() {
             return new CompressionSettingsResponse(contentTypesToCompress, isCompressionEnabled);
         }

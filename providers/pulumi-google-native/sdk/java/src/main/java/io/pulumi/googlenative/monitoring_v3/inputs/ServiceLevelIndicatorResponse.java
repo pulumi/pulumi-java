@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.BasicSliResponse;
 import io.pulumi.googlenative.monitoring_v3.inputs.RequestBasedSliResponse;
 import io.pulumi.googlenative.monitoring_v3.inputs.WindowsBasedSliResponse;
@@ -23,7 +23,7 @@ public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="basicSli", required=true)
-    private final BasicSliResponse basicSli;
+      private final BasicSliResponse basicSli;
 
     public BasicSliResponse getBasicSli() {
         return this.basicSli;
@@ -34,7 +34,7 @@ public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="requestBased", required=true)
-    private final RequestBasedSliResponse requestBased;
+      private final RequestBasedSliResponse requestBased;
 
     public RequestBasedSliResponse getRequestBased() {
         return this.requestBased;
@@ -45,7 +45,7 @@ public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="windowsBased", required=true)
-    private final WindowsBasedSliResponse windowsBased;
+      private final WindowsBasedSliResponse windowsBased;
 
     public WindowsBasedSliResponse getWindowsBased() {
         return this.windowsBased;
@@ -104,7 +104,6 @@ public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.Inv
             this.windowsBased = Objects.requireNonNull(windowsBased);
             return this;
         }
-
         public ServiceLevelIndicatorResponse build() {
             return new ServiceLevelIndicatorResponse(basicSli, requestBased, windowsBased);
         }

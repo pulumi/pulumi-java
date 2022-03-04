@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -114,91 +114,91 @@ public final class GetVirtualWanResult {
     /**
      * True if branch to branch traffic is allowed.
      * 
-     */
+    */
     public Optional<Boolean> getAllowBranchToBranchTraffic() {
         return Optional.ofNullable(this.allowBranchToBranchTraffic);
     }
     /**
      * True if Vnet to Vnet traffic is allowed.
      * 
-     */
+    */
     public Optional<Boolean> getAllowVnetToVnetTraffic() {
         return Optional.ofNullable(this.allowVnetToVnetTraffic);
     }
     /**
      * Vpn encryption to be disabled or not.
      * 
-     */
+    */
     public Optional<Boolean> getDisableVpnEncryption() {
         return Optional.ofNullable(this.disableVpnEncryption);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The office local breakout category.
      * 
-     */
+    */
     public String getOffice365LocalBreakoutCategory() {
         return this.office365LocalBreakoutCategory;
     }
     /**
      * The provisioning state of the virtual WAN resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * List of VirtualHubs in the VirtualWAN.
      * 
-     */
+    */
     public List<SubResourceResponse> getVirtualHubs() {
         return this.virtualHubs;
     }
     /**
      * List of VpnSites in the VirtualWAN.
      * 
-     */
+    */
     public List<SubResourceResponse> getVpnSites() {
         return this.vpnSites;
     }
@@ -311,7 +311,6 @@ public final class GetVirtualWanResult {
             this.vpnSites = Objects.requireNonNull(vpnSites);
             return this;
         }
-
         public GetVirtualWanResult build() {
             return new GetVirtualWanResult(allowBranchToBranchTraffic, allowVnetToVnetTraffic, disableVpnEncryption, etag, id, location, name, office365LocalBreakoutCategory, provisioningState, tags, type, virtualHubs, vpnSites);
         }

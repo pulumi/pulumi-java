@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="consumeReservationType", required=true)
-    private final Input<String> consumeReservationType;
+      private final Input<String> consumeReservationType;
 
     public Input<String> getConsumeReservationType() {
         return this.consumeReservationType;
@@ -32,7 +32,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -43,7 +43,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -117,7 +117,6 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public InstanceReservationAffinityArgs build() {
             return new InstanceReservationAffinityArgs(consumeReservationType, key, values);
         }

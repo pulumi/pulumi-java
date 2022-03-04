@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class KeyVaultPropertiesResponse {
     /**
      * For future use - The client id of the identity which will be used to access key vault.
      * 
-     */
+    */
     public Optional<String> getIdentityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
     /**
      * Key vault uri to access the encryption key.
      * 
-     */
+    */
     public String getKeyIdentifier() {
         return this.keyIdentifier;
     }
     /**
      * The ArmId of the keyVault where the customer owned encryption key is present.
      * 
-     */
+    */
     public String getKeyVaultArmId() {
         return this.keyVaultArmId;
     }
@@ -97,7 +97,6 @@ public final class KeyVaultPropertiesResponse {
             this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId);
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(identityClientId, keyIdentifier, keyVaultArmId);
         }

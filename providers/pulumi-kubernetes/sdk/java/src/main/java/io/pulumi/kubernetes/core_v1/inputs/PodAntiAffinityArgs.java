@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PodAffinityTermArgs;
 import io.pulumi.kubernetes.core_v1.inputs.WeightedPodAffinityTermArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class PodAntiAffinityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="preferredDuringSchedulingIgnoredDuringExecution")
-    private final @Nullable Input<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
+      private final @Nullable Input<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
 
     public Input<List<WeightedPodAffinityTermArgs>> getPreferredDuringSchedulingIgnoredDuringExecution() {
         return this.preferredDuringSchedulingIgnoredDuringExecution == null ? Input.empty() : this.preferredDuringSchedulingIgnoredDuringExecution;
@@ -36,7 +36,7 @@ public final class PodAntiAffinityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="requiredDuringSchedulingIgnoredDuringExecution")
-    private final @Nullable Input<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution;
+      private final @Nullable Input<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution;
 
     public Input<List<PodAffinityTermArgs>> getRequiredDuringSchedulingIgnoredDuringExecution() {
         return this.requiredDuringSchedulingIgnoredDuringExecution == null ? Input.empty() : this.requiredDuringSchedulingIgnoredDuringExecution;
@@ -95,7 +95,6 @@ public final class PodAntiAffinityArgs extends io.pulumi.resources.ResourceArgs 
             this.requiredDuringSchedulingIgnoredDuringExecution = Input.ofNullable(requiredDuringSchedulingIgnoredDuringExecution);
             return this;
         }
-
         public PodAntiAffinityArgs build() {
             return new PodAntiAffinityArgs(preferredDuringSchedulingIgnoredDuringExecution, requiredDuringSchedulingIgnoredDuringExecution);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DeploymentTargetConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<String> content;
+      private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -61,7 +61,6 @@ public final class DeploymentTargetConfigGetArgs extends io.pulumi.resources.Res
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
-
         public DeploymentTargetConfigGetArgs build() {
             return new DeploymentTargetConfigGetArgs(content);
         }

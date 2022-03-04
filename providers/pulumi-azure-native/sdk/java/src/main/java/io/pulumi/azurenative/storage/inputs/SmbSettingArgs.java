@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.MultichannelArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationMethods")
-    private final @Nullable Input<String> authenticationMethods;
+      private final @Nullable Input<String> authenticationMethods;
 
     public Input<String> getAuthenticationMethods() {
         return this.authenticationMethods == null ? Input.empty() : this.authenticationMethods;
@@ -35,7 +35,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelEncryption")
-    private final @Nullable Input<String> channelEncryption;
+      private final @Nullable Input<String> channelEncryption;
 
     public Input<String> getChannelEncryption() {
         return this.channelEncryption == null ? Input.empty() : this.channelEncryption;
@@ -46,7 +46,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosTicketEncryption")
-    private final @Nullable Input<String> kerberosTicketEncryption;
+      private final @Nullable Input<String> kerberosTicketEncryption;
 
     public Input<String> getKerberosTicketEncryption() {
         return this.kerberosTicketEncryption == null ? Input.empty() : this.kerberosTicketEncryption;
@@ -57,7 +57,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multichannel")
-    private final @Nullable Input<MultichannelArgs> multichannel;
+      private final @Nullable Input<MultichannelArgs> multichannel;
 
     public Input<MultichannelArgs> getMultichannel() {
         return this.multichannel == null ? Input.empty() : this.multichannel;
@@ -68,7 +68,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versions")
-    private final @Nullable Input<String> versions;
+      private final @Nullable Input<String> versions;
 
     public Input<String> getVersions() {
         return this.versions == null ? Input.empty() : this.versions;
@@ -172,7 +172,6 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
             this.versions = Input.ofNullable(versions);
             return this;
         }
-
         public SmbSettingArgs build() {
             return new SmbSettingArgs(authenticationMethods, channelEncryption, kerberosTicketEncryption, multichannel, versions);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetScheduledActionArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="scheduledActionName", required=true)
-    private final String scheduledActionName;
+      private final String scheduledActionName;
 
     public String getScheduledActionName() {
         return this.scheduledActionName;
@@ -55,7 +55,6 @@ public final class GetScheduledActionArgs extends io.pulumi.resources.InvokeArgs
             this.scheduledActionName = Objects.requireNonNull(scheduledActionName);
             return this;
         }
-
         public GetScheduledActionArgs build() {
             return new GetScheduledActionArgs(scheduledActionName);
         }

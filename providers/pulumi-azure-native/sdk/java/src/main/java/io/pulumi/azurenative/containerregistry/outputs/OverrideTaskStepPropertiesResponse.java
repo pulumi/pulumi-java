@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.ArgumentResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SetValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -66,42 +66,42 @@ public final class OverrideTaskStepPropertiesResponse {
      * Gets or sets the collection of override arguments to be used when
      * executing a build step.
      * 
-     */
+    */
     public List<ArgumentResponse> getArguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
      * The source context against which run has to be queued.
      * 
-     */
+    */
     public Optional<String> getContextPath() {
         return Optional.ofNullable(this.contextPath);
     }
     /**
      * The file against which run has to be queued.
      * 
-     */
+    */
     public Optional<String> getFile() {
         return Optional.ofNullable(this.file);
     }
     /**
      * The name of the target build stage for the docker build.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * Base64 encoded update trigger token that will be attached with the base image trigger webhook.
      * 
-     */
+    */
     public Optional<String> getUpdateTriggerToken() {
         return Optional.ofNullable(this.updateTriggerToken);
     }
     /**
      * The collection of overridable values that can be passed when running a Task.
      * 
-     */
+    */
     public List<SetValueResponse> getValues() {
         return this.values == null ? List.of() : this.values;
     }
@@ -165,7 +165,6 @@ public final class OverrideTaskStepPropertiesResponse {
             this.values = values;
             return this;
         }
-
         public OverrideTaskStepPropertiesResponse build() {
             return new OverrideTaskStepPropertiesResponse(arguments, contextPath, file, target, updateTriggerToken, values);
         }

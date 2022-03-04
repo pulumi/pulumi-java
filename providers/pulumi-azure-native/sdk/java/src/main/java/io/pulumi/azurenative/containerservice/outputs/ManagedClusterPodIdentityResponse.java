@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterPodIdentityResponseProvisioningInfo;
 import io.pulumi.azurenative.containerservice.outputs.UserAssignedIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -59,28 +59,28 @@ public final class ManagedClusterPodIdentityResponse {
     /**
      * Binding selector to use for the AzureIdentityBinding resource.
      * 
-     */
+    */
     public Optional<String> getBindingSelector() {
         return Optional.ofNullable(this.bindingSelector);
     }
     /**
      * Information of the user assigned identity.
      * 
-     */
+    */
     public UserAssignedIdentityResponse getIdentity() {
         return this.identity;
     }
     /**
      * Name of the pod identity.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Namespace of the pod identity.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
@@ -90,7 +90,7 @@ public final class ManagedClusterPodIdentityResponse {
     /**
      * The current provisioning state of the pod identity.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -154,7 +154,6 @@ public final class ManagedClusterPodIdentityResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ManagedClusterPodIdentityResponse build() {
             return new ManagedClusterPodIdentityResponse(bindingSelector, identity, name, namespace, provisioningInfo, provisioningState);
         }

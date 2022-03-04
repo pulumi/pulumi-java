@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.UserIdentityPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -51,21 +51,21 @@ public final class ApiManagementServiceIdentityResponse {
     /**
      * The principal id of the identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The client tenant id of the identity.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -75,7 +75,7 @@ public final class ApiManagementServiceIdentityResponse {
      * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
      *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
-     */
+    */
     public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
@@ -125,7 +125,6 @@ public final class ApiManagementServiceIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ApiManagementServiceIdentityResponse build() {
             return new ApiManagementServiceIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

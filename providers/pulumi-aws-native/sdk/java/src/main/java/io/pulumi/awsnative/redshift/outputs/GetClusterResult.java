@@ -6,7 +6,7 @@ package io.pulumi.awsnative.redshift.outputs;
 import io.pulumi.awsnative.redshift.outputs.ClusterEndpoint;
 import io.pulumi.awsnative.redshift.outputs.ClusterLoggingProperties;
 import io.pulumi.awsnative.redshift.outputs.ClusterTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -321,7 +321,7 @@ public final class GetClusterResult {
     /**
      * Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
      * 
-     */
+    */
     public Optional<Boolean> getAllowVersionUpgrade() {
         return Optional.ofNullable(this.allowVersionUpgrade);
     }
@@ -332,126 +332,126 @@ public final class GetClusterResult {
      * disabled - Don't use AQUA.
      * auto - Amazon Redshift determines whether to use AQUA.
      * 
-     */
+    */
     public Optional<String> getAquaConfigurationStatus() {
         return Optional.ofNullable(this.aquaConfigurationStatus);
     }
     /**
      * The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
      * 
-     */
+    */
     public Optional<Integer> getAutomatedSnapshotRetentionPeriod() {
         return Optional.ofNullable(this.automatedSnapshotRetentionPeriod);
     }
     /**
      * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
      * 
-     */
+    */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
      * 
-     */
+    */
     public Optional<Boolean> getAvailabilityZoneRelocation() {
         return Optional.ofNullable(this.availabilityZoneRelocation);
     }
     /**
      * The availability zone relocation status of the cluster
      * 
-     */
+    */
     public Optional<String> getAvailabilityZoneRelocationStatus() {
         return Optional.ofNullable(this.availabilityZoneRelocationStatus);
     }
     /**
      * A boolean value indicating whether the resize operation is using the classic resize process. If you don't provide this parameter or set the value to false , the resize type is elastic.
      * 
-     */
+    */
     public Optional<Boolean> getClassic() {
         return Optional.ofNullable(this.classic);
     }
     /**
      * The name of the parameter group to be associated with this cluster.
      * 
-     */
+    */
     public Optional<String> getClusterParameterGroupName() {
         return Optional.ofNullable(this.clusterParameterGroupName);
     }
     /**
      * A list of security groups to be associated with this cluster.
      * 
-     */
+    */
     public List<String> getClusterSecurityGroups() {
         return this.clusterSecurityGroups == null ? List.of() : this.clusterSecurityGroups;
     }
     /**
      * The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
      * 
-     */
+    */
     public Optional<String> getClusterType() {
         return Optional.ofNullable(this.clusterType);
     }
     /**
      * The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
      * 
-     */
+    */
     public Optional<String> getClusterVersion() {
         return Optional.ofNullable(this.clusterVersion);
     }
     /**
      * A boolean indicating whether to enable the deferred maintenance window.
      * 
-     */
+    */
     public Optional<Boolean> getDeferMaintenance() {
         return Optional.ofNullable(this.deferMaintenance);
     }
     /**
      * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can't specify an end time. The duration must be 45 days or less.
      * 
-     */
+    */
     public Optional<Integer> getDeferMaintenanceDuration() {
         return Optional.ofNullable(this.deferMaintenanceDuration);
     }
     /**
      * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can't specify a duration.
      * 
-     */
+    */
     public Optional<String> getDeferMaintenanceEndTime() {
         return Optional.ofNullable(this.deferMaintenanceEndTime);
     }
     /**
      * A unique identifier for the deferred maintenance window.
      * 
-     */
+    */
     public Optional<String> getDeferMaintenanceIdentifier() {
         return Optional.ofNullable(this.deferMaintenanceIdentifier);
     }
     /**
      * A timestamp indicating the start time for the deferred maintenance window.
      * 
-     */
+    */
     public Optional<String> getDeferMaintenanceStartTime() {
         return Optional.ofNullable(this.deferMaintenanceStartTime);
     }
     /**
      * The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
      * 
-     */
+    */
     public Optional<String> getDestinationRegion() {
         return Optional.ofNullable(this.destinationRegion);
     }
     /**
      * The Elastic IP (EIP) address for the cluster.
      * 
-     */
+    */
     public Optional<String> getElasticIp() {
         return Optional.ofNullable(this.elasticIp);
     }
     /**
      * If true, the data in the cluster is encrypted at rest.
      * 
-     */
+    */
     public Optional<Boolean> getEncrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -465,28 +465,28 @@ public final class GetClusterResult {
      * 
      * Default: false
      * 
-     */
+    */
     public Optional<Boolean> getEnhancedVpcRouting() {
         return Optional.ofNullable(this.enhancedVpcRouting);
     }
     /**
      * Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
      * 
-     */
+    */
     public Optional<String> getHsmClientCertificateIdentifier() {
         return Optional.ofNullable(this.hsmClientCertificateIdentifier);
     }
     /**
      * Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
      * 
-     */
+    */
     public Optional<String> getHsmConfigurationIdentifier() {
         return Optional.ofNullable(this.hsmConfigurationIdentifier);
     }
     /**
      * A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
      * 
-     */
+    */
     public List<String> getIamRoles() {
         return this.iamRoles == null ? List.of() : this.iamRoles;
     }
@@ -496,7 +496,7 @@ public final class GetClusterResult {
     /**
      * The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -506,7 +506,7 @@ public final class GetClusterResult {
     /**
      * The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
      * 
-     */
+    */
     public Optional<String> getMaintenanceTrackName() {
         return Optional.ofNullable(this.maintenanceTrackName);
     }
@@ -515,77 +515,77 @@ public final class GetClusterResult {
      * 
      * The value must be either -1 or an integer between 1 and 3,653.
      * 
-     */
+    */
     public Optional<Integer> getManualSnapshotRetentionPeriod() {
         return Optional.ofNullable(this.manualSnapshotRetentionPeriod);
     }
     /**
      * The node type to be provisioned for the cluster.Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge | ra3.4xlarge | ra3.16xlarge
      * 
-     */
+    */
     public Optional<String> getNodeType() {
         return Optional.ofNullable(this.nodeType);
     }
     /**
      * The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
      * 
-     */
+    */
     public Optional<Integer> getNumberOfNodes() {
         return Optional.ofNullable(this.numberOfNodes);
     }
     /**
      * The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The weekly time range (in UTC) during which automated cluster maintenance can occur.
      * 
-     */
+    */
     public Optional<String> getPreferredMaintenanceWindow() {
         return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
     /**
      * If true, the cluster can be accessed from a public network.
      * 
-     */
+    */
     public Optional<Boolean> getPubliclyAccessible() {
         return Optional.ofNullable(this.publiclyAccessible);
     }
     /**
      * The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
      * 
-     */
+    */
     public Optional<String> getResourceAction() {
         return Optional.ofNullable(this.resourceAction);
     }
     /**
      * The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
      * 
-     */
+    */
     public Optional<String> getRevisionTarget() {
         return Optional.ofNullable(this.revisionTarget);
     }
     /**
      * A boolean indicating if we want to rotate Encryption Keys.
      * 
-     */
+    */
     public Optional<Boolean> getRotateEncryptionKey() {
         return Optional.ofNullable(this.rotateEncryptionKey);
     }
     /**
      * The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
      * 
-     */
+    */
     public Optional<String> getSnapshotCopyGrantName() {
         return Optional.ofNullable(this.snapshotCopyGrantName);
     }
     /**
      * Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
      * 
-     */
+    */
     public Optional<Boolean> getSnapshotCopyManual() {
         return Optional.ofNullable(this.snapshotCopyManual);
     }
@@ -596,21 +596,21 @@ public final class GetClusterResult {
      * 
      *  Constraints: Must be at least 1 and no more than 35.
      * 
-     */
+    */
     public Optional<Integer> getSnapshotCopyRetentionPeriod() {
         return Optional.ofNullable(this.snapshotCopyRetentionPeriod);
     }
     /**
      * The list of tags for the cluster parameter group.
      * 
-     */
+    */
     public List<ClusterTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
      * 
-     */
+    */
     public List<String> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? List.of() : this.vpcSecurityGroupIds;
     }
@@ -926,7 +926,6 @@ public final class GetClusterResult {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(allowVersionUpgrade, aquaConfigurationStatus, automatedSnapshotRetentionPeriod, availabilityZone, availabilityZoneRelocation, availabilityZoneRelocationStatus, classic, clusterParameterGroupName, clusterSecurityGroups, clusterType, clusterVersion, deferMaintenance, deferMaintenanceDuration, deferMaintenanceEndTime, deferMaintenanceIdentifier, deferMaintenanceStartTime, destinationRegion, elasticIp, encrypted, endpoint, enhancedVpcRouting, hsmClientCertificateIdentifier, hsmConfigurationIdentifier, iamRoles, id, kmsKeyId, loggingProperties, maintenanceTrackName, manualSnapshotRetentionPeriod, nodeType, numberOfNodes, port, preferredMaintenanceWindow, publiclyAccessible, resourceAction, revisionTarget, rotateEncryptionKey, snapshotCopyGrantName, snapshotCopyManual, snapshotCopyRetentionPeriod, tags, vpcSecurityGroupIds);
         }

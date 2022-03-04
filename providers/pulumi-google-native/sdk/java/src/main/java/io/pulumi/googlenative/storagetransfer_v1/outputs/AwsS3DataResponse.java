@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.AwsAccessKeyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class AwsS3DataResponse {
     /**
      * Input only. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket must be granted to the access ID of the AWS access key. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
      * 
-     */
+    */
     public AwsAccessKeyResponse getAwsAccessKey() {
         return this.awsAccessKey;
     }
     /**
      * S3 Bucket name (see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-example.html)).
      * 
-     */
+    */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
@@ -117,7 +117,6 @@ public final class AwsS3DataResponse {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public AwsS3DataResponse build() {
             return new AwsS3DataResponse(awsAccessKey, bucketName, path, roleArn);
         }

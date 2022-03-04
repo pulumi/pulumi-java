@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class NoteAttestationAuthorityHintArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="humanReadableName", required=true)
-    private final Input<String> humanReadableName;
+      private final Input<String> humanReadableName;
 
     public Input<String> getHumanReadableName() {
         return this.humanReadableName;
@@ -62,7 +62,6 @@ public final class NoteAttestationAuthorityHintArgs extends io.pulumi.resources.
             this.humanReadableName = Input.of(Objects.requireNonNull(humanReadableName));
             return this;
         }
-
         public NoteAttestationAuthorityHintArgs build() {
             return new NoteAttestationAuthorityHintArgs(humanReadableName);
         }

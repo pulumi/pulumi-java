@@ -5,8 +5,8 @@ package io.pulumi.googlenative.recommendationengine_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.recommendationengine_v1beta1.CatalogItemArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse;
@@ -122,6 +122,37 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
         return this.title;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CatalogItemArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.recommendationengine_v1beta1.CatalogItemArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.recommendationengine_v1beta1.CatalogItemArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CatalogItem(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CatalogItem(String name) {
+        this(name, CatalogItemArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CatalogItem(String name, CatalogItemArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.bigqueryconnection_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.ConnectionArgs;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs.CloudSqlPropertiesResponse;
@@ -119,6 +119,37 @@ public class Connection extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ConnectionArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.bigqueryconnection_v1beta1.ConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.bigqueryconnection_v1beta1.ConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Connection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Connection(String name) {
+        this(name, ConnectionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Connection(String name, @Nullable ConnectionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

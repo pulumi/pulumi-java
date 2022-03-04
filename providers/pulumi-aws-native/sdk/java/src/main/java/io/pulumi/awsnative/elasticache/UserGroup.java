@@ -8,8 +8,8 @@ import io.pulumi.awsnative.elasticache.UserGroupArgs;
 import io.pulumi.awsnative.elasticache.enums.UserGroupEngine;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -91,6 +91,37 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
         return this.userIds;
     }
 
+    public interface BuilderApplicator {
+        public void apply(UserGroupArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.elasticache.UserGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.elasticache.UserGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public UserGroup(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public UserGroup(String name) {
+        this(name, UserGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public UserGroup(String name, UserGroupArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

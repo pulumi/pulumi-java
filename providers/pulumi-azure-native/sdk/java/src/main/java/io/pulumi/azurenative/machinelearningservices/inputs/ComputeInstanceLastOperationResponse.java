@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="operationName")
-    private final @Nullable String operationName;
+      private final @Nullable String operationName;
 
     public Optional<String> getOperationName() {
         return this.operationName == null ? Optional.empty() : Optional.ofNullable(this.operationName);
@@ -34,7 +34,7 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="operationStatus")
-    private final @Nullable String operationStatus;
+      private final @Nullable String operationStatus;
 
     public Optional<String> getOperationStatus() {
         return this.operationStatus == null ? Optional.empty() : Optional.ofNullable(this.operationStatus);
@@ -45,7 +45,7 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="operationTime")
-    private final @Nullable String operationTime;
+      private final @Nullable String operationTime;
 
     public Optional<String> getOperationTime() {
         return this.operationTime == null ? Optional.empty() : Optional.ofNullable(this.operationTime);
@@ -104,7 +104,6 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
             this.operationTime = operationTime;
             return this;
         }
-
         public ComputeInstanceLastOperationResponse build() {
             return new ComputeInstanceLastOperationResponse(operationName, operationStatus, operationTime);
         }

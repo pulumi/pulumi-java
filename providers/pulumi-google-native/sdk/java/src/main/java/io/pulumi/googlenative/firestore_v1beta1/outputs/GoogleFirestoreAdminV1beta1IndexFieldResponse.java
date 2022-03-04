@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firestore_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse {
     /**
      * The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
      * 
-     */
+    */
     public String getFieldPath() {
         return this.fieldPath;
     }
     /**
      * The field's mode.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
@@ -74,7 +74,6 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public GoogleFirestoreAdminV1beta1IndexFieldResponse build() {
             return new GoogleFirestoreAdminV1beta1IndexFieldResponse(fieldPath, mode);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.RetentionDurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,7 +35,7 @@ public final class SimpleRetentionPolicyResponse {
     /**
      * Retention duration of the protection policy.
      * 
-     */
+    */
     public Optional<RetentionDurationResponse> getRetentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
@@ -43,7 +43,7 @@ public final class SimpleRetentionPolicyResponse {
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'SimpleRetentionPolicy'.
      * 
-     */
+    */
     public String getRetentionPolicyType() {
         return this.retentionPolicyType;
     }
@@ -79,7 +79,6 @@ public final class SimpleRetentionPolicyResponse {
             this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
             return this;
         }
-
         public SimpleRetentionPolicyResponse build() {
             return new SimpleRetentionPolicyResponse(retentionDuration, retentionPolicyType);
         }

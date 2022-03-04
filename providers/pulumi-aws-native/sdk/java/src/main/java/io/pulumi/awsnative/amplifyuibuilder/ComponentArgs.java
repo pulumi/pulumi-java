@@ -11,7 +11,7 @@ import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentPropertiesArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentTagsArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentVariantArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,70 +23,70 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     public static final ComponentArgs Empty = new ComponentArgs();
 
     @InputImport(name="bindingProperties")
-    private final @Nullable Input<ComponentBindingPropertiesArgs> bindingProperties;
+      private final @Nullable Input<ComponentBindingPropertiesArgs> bindingProperties;
 
     public Input<ComponentBindingPropertiesArgs> getBindingProperties() {
         return this.bindingProperties == null ? Input.empty() : this.bindingProperties;
     }
 
     @InputImport(name="children")
-    private final @Nullable Input<List<ComponentChildArgs>> children;
+      private final @Nullable Input<List<ComponentChildArgs>> children;
 
     public Input<List<ComponentChildArgs>> getChildren() {
         return this.children == null ? Input.empty() : this.children;
     }
 
     @InputImport(name="collectionProperties")
-    private final @Nullable Input<ComponentCollectionPropertiesArgs> collectionProperties;
+      private final @Nullable Input<ComponentCollectionPropertiesArgs> collectionProperties;
 
     public Input<ComponentCollectionPropertiesArgs> getCollectionProperties() {
         return this.collectionProperties == null ? Input.empty() : this.collectionProperties;
     }
 
     @InputImport(name="componentType")
-    private final @Nullable Input<String> componentType;
+      private final @Nullable Input<String> componentType;
 
     public Input<String> getComponentType() {
         return this.componentType == null ? Input.empty() : this.componentType;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="overrides")
-    private final @Nullable Input<ComponentOverridesArgs> overrides;
+      private final @Nullable Input<ComponentOverridesArgs> overrides;
 
     public Input<ComponentOverridesArgs> getOverrides() {
         return this.overrides == null ? Input.empty() : this.overrides;
     }
 
     @InputImport(name="properties")
-    private final @Nullable Input<ComponentPropertiesArgs> properties;
+      private final @Nullable Input<ComponentPropertiesArgs> properties;
 
     public Input<ComponentPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
     @InputImport(name="sourceId")
-    private final @Nullable Input<String> sourceId;
+      private final @Nullable Input<String> sourceId;
 
     public Input<String> getSourceId() {
         return this.sourceId == null ? Input.empty() : this.sourceId;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<ComponentTagsArgs> tags;
+      private final @Nullable Input<ComponentTagsArgs> tags;
 
     public Input<ComponentTagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="variants")
-    private final @Nullable Input<List<ComponentVariantArgs>> variants;
+      private final @Nullable Input<List<ComponentVariantArgs>> variants;
 
     public Input<List<ComponentVariantArgs>> getVariants() {
         return this.variants == null ? Input.empty() : this.variants;
@@ -265,7 +265,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             this.variants = Input.ofNullable(variants);
             return this;
         }
-
         public ComponentArgs build() {
             return new ComponentArgs(bindingProperties, children, collectionProperties, componentType, name, overrides, properties, sourceId, tags, variants);
         }

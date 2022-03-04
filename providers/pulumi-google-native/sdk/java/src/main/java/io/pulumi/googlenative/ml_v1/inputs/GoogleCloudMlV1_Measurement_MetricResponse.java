@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse extends io.pulumi.
      * 
      */
     @InputImport(name="metric", required=true)
-    private final String metric;
+      private final String metric;
 
     public String getMetric() {
         return this.metric;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse extends io.pulumi.
      * 
      */
     @InputImport(name="value", required=true)
-    private final Double value;
+      private final Double value;
 
     public Double getValue() {
         return this.value;
@@ -82,7 +82,6 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse extends io.pulumi.
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudMlV1_Measurement_MetricResponse build() {
             return new GoogleCloudMlV1_Measurement_MetricResponse(metric, value);
         }

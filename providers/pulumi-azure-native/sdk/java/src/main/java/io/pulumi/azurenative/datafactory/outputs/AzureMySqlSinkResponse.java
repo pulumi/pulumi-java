@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -77,35 +77,35 @@ public final class AzureMySqlSinkResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * A query to execute before starting the copy. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPreCopyScript() {
         return Optional.ofNullable(this.preCopyScript);
     }
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
@@ -113,21 +113,21 @@ public final class AzureMySqlSinkResponse {
      * Copy sink type.
      * Expected value is 'AzureMySqlSink'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getWriteBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getWriteBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
@@ -205,7 +205,6 @@ public final class AzureMySqlSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public AzureMySqlSinkResponse build() {
             return new AzureMySqlSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayBackendHealthServerResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayBackendHttpSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse {
     /**
      * Reference to an ApplicationGatewayBackendHttpSettings resource.
      * 
-     */
+    */
     public Optional<ApplicationGatewayBackendHttpSettingsResponse> getBackendHttpSettings() {
         return Optional.ofNullable(this.backendHttpSettings);
     }
     /**
      * List of ApplicationGatewayBackendHealthServer resources.
      * 
-     */
+    */
     public List<ApplicationGatewayBackendHealthServerResponse> getServers() {
         return this.servers == null ? List.of() : this.servers;
     }
@@ -78,7 +78,6 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse {
             this.servers = servers;
             return this;
         }
-
         public ApplicationGatewayBackendHealthHttpSettingsResponse build() {
             return new ApplicationGatewayBackendHealthHttpSettingsResponse(backendHttpSettings, servers);
         }

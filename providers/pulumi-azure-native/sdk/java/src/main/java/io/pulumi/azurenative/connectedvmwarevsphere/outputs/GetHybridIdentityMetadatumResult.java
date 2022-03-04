@@ -5,7 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.IdentityResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,56 +77,56 @@ public final class GetHybridIdentityMetadatumResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the resource.
      * 
-     */
+    */
     public IdentityResponse getIdentity() {
         return this.identity;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the Public Key.
      * 
-     */
+    */
     public Optional<String> getPublicKey() {
         return Optional.ofNullable(this.publicKey);
     }
     /**
      * The system data.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets or sets the Vm Id.
      * 
-     */
+    */
     public Optional<String> getVmId() {
         return Optional.ofNullable(this.vmId);
     }
@@ -204,7 +204,6 @@ public final class GetHybridIdentityMetadatumResult {
             this.vmId = vmId;
             return this;
         }
-
         public GetHybridIdentityMetadatumResult build() {
             return new GetHybridIdentityMetadatumResult(id, identity, name, provisioningState, publicKey, systemData, type, vmId);
         }

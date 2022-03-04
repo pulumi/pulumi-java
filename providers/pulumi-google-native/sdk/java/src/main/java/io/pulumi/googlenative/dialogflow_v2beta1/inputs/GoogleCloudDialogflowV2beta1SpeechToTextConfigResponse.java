@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse extend
      * 
      */
     @InputImport(name="speechModelVariant", required=true)
-    private final String speechModelVariant;
+      private final String speechModelVariant;
 
     public String getSpeechModelVariant() {
         return this.speechModelVariant;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse extend
             this.speechModelVariant = Objects.requireNonNull(speechModelVariant);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse(speechModelVariant);
         }

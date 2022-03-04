@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.PowerQuerySinkMappingResponse;
 import io.pulumi.azurenative.datafactory.outputs.PowerQuerySinkResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -137,91 +137,91 @@ public final class ExecuteWranglingDataflowActivityResponse {
     /**
      * Compute properties for data flow activity.
      * 
-     */
+    */
     public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> getCompute() {
         return Optional.ofNullable(this.compute);
     }
     /**
      * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
      * 
-     */
+    */
     public Optional<Object> getContinueOnError() {
         return Optional.ofNullable(this.continueOnError);
     }
     /**
      * Data flow reference.
      * 
-     */
+    */
     public DataFlowReferenceResponse getDataFlow() {
         return this.dataFlow;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getIntegrationRuntime() {
         return Optional.ofNullable(this.integrationRuntime);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * List of mapping for Power Query mashup query to sink dataset(s).
      * 
-     */
+    */
     public List<PowerQuerySinkMappingResponse> getQueries() {
         return this.queries == null ? List.of() : this.queries;
     }
     /**
      * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
      * 
-     */
+    */
     public Optional<Object> getRunConcurrently() {
         return Optional.ofNullable(this.runConcurrently);
     }
     /**
      * (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
      * 
-     */
+    */
     public Map<String,PowerQuerySinkResponse> getSinks() {
         return this.sinks == null ? Map.of() : this.sinks;
     }
     /**
      * Staging info for execute data flow activity.
      * 
-     */
+    */
     public Optional<DataFlowStagingInfoResponse> getStaging() {
         return Optional.ofNullable(this.staging);
     }
     /**
      * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Optional<Object> getTraceLevel() {
         return Optional.ofNullable(this.traceLevel);
     }
@@ -229,14 +229,14 @@ public final class ExecuteWranglingDataflowActivityResponse {
      * Type of activity.
      * Expected value is 'ExecuteWranglingDataflow'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -363,7 +363,6 @@ public final class ExecuteWranglingDataflowActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ExecuteWranglingDataflowActivityResponse build() {
             return new ExecuteWranglingDataflowActivityResponse(compute, continueOnError, dataFlow, dependsOn, description, integrationRuntime, name, policy, queries, runConcurrently, sinks, staging, traceLevel, type, userProperties);
         }

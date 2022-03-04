@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.LicenseResourceRequirementsArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,28 +32,28 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="resourceRequirements")
-    private final @Nullable Input<LicenseResourceRequirementsArgs> resourceRequirements;
+      private final @Nullable Input<LicenseResourceRequirementsArgs> resourceRequirements;
 
     public Input<LicenseResourceRequirementsArgs> getResourceRequirements() {
         return this.resourceRequirements == null ? Input.empty() : this.resourceRequirements;
@@ -64,7 +64,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferable")
-    private final @Nullable Input<Boolean> transferable;
+      private final @Nullable Input<Boolean> transferable;
 
     public Input<Boolean> getTransferable() {
         return this.transferable == null ? Input.empty() : this.transferable;
@@ -183,7 +183,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             this.transferable = Input.ofNullable(transferable);
             return this;
         }
-
         public LicenseArgs build() {
             return new LicenseArgs(description, name, project, requestId, resourceRequirements, transferable);
         }

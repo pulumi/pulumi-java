@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.ServerTlsSettingsTlsMode;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsContextArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ServerTlsSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="proxyTlsContext")
-    private final @Nullable Input<TlsContextArgs> proxyTlsContext;
+      private final @Nullable Input<TlsContextArgs> proxyTlsContext;
 
     public Input<TlsContextArgs> getProxyTlsContext() {
         return this.proxyTlsContext == null ? Input.empty() : this.proxyTlsContext;
@@ -37,7 +37,7 @@ public final class ServerTlsSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subjectAltNames")
-    private final @Nullable Input<List<String>> subjectAltNames;
+      private final @Nullable Input<List<String>> subjectAltNames;
 
     public Input<List<String>> getSubjectAltNames() {
         return this.subjectAltNames == null ? Input.empty() : this.subjectAltNames;
@@ -48,7 +48,7 @@ public final class ServerTlsSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tlsMode")
-    private final @Nullable Input<ServerTlsSettingsTlsMode> tlsMode;
+      private final @Nullable Input<ServerTlsSettingsTlsMode> tlsMode;
 
     public Input<ServerTlsSettingsTlsMode> getTlsMode() {
         return this.tlsMode == null ? Input.empty() : this.tlsMode;
@@ -122,7 +122,6 @@ public final class ServerTlsSettingsArgs extends io.pulumi.resources.ResourceArg
             this.tlsMode = Input.ofNullable(tlsMode);
             return this;
         }
-
         public ServerTlsSettingsArgs build() {
             return new ServerTlsSettingsArgs(proxyTlsContext, subjectAltNames, tlsMode);
         }

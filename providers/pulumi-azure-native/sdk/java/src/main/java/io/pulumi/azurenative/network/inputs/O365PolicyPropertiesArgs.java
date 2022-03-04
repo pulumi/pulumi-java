@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.O365BreakOutCategoryPoliciesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class O365PolicyPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="breakOutCategories")
-    private final @Nullable Input<O365BreakOutCategoryPoliciesArgs> breakOutCategories;
+      private final @Nullable Input<O365BreakOutCategoryPoliciesArgs> breakOutCategories;
 
     public Input<O365BreakOutCategoryPoliciesArgs> getBreakOutCategories() {
         return this.breakOutCategories == null ? Input.empty() : this.breakOutCategories;
@@ -66,7 +66,6 @@ public final class O365PolicyPropertiesArgs extends io.pulumi.resources.Resource
             this.breakOutCategories = Input.ofNullable(breakOutCategories);
             return this;
         }
-
         public O365PolicyPropertiesArgs build() {
             return new O365PolicyPropertiesArgs(breakOutCategories);
         }

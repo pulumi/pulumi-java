@@ -6,21 +6,41 @@ package io.pulumi.azurenative.redhatopenshift;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.redhatopenshift.inputs.ListOpenShiftClusterAdminCredentialsArgs;
 import io.pulumi.azurenative.redhatopenshift.outputs.ListOpenShiftClusterAdminCredentialsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListOpenShiftClusterAdminCredentials {
-/**
- * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
+    private ListOpenShiftClusterAdminCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(ListOpenShiftClusterAdminCredentialsArgs.Builder a);
+    }
+    private static ListOpenShiftClusterAdminCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListOpenShiftClusterAdminCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
  * API Version: 2021-09-01-preview.
  * 
- *
- * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
+     *
+     * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
  * 
- */
+     */
+    public static CompletableFuture<ListOpenShiftClusterAdminCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
+     * API Version: 2021-09-01-preview.
+     * 
+     *
+         * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
+     * 
+     */
     public static CompletableFuture<ListOpenShiftClusterAdminCredentialsResult> invokeAsync(ListOpenShiftClusterAdminCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:listOpenShiftClusterAdminCredentials", TypeShape.of(ListOpenShiftClusterAdminCredentialsResult.class), args == null ? ListOpenShiftClusterAdminCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

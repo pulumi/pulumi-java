@@ -6,17 +6,33 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.recoveryservices.inputs.GetRecoveryPointAccessTokenArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.GetRecoveryPointAccessTokenResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRecoveryPointAccessToken {
-/**
- * API Version: 2018-12-20.
+    private GetRecoveryPointAccessToken() {}
+    public interface BuilderApplicator {
+        public void apply(GetRecoveryPointAccessTokenArgs.Builder a);
+    }
+    private static GetRecoveryPointAccessTokenArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRecoveryPointAccessTokenArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2018-12-20.
  * 
- */
+     */
+    public static CompletableFuture<GetRecoveryPointAccessTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2018-12-20.
+     * 
+     */
     public static CompletableFuture<GetRecoveryPointAccessTokenResult> invokeAsync(GetRecoveryPointAccessTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getRecoveryPointAccessToken", TypeShape.of(GetRecoveryPointAccessTokenResult.class), args == null ? GetRecoveryPointAccessTokenArgs.Empty : args, Utilities.withVersion(options));
     }

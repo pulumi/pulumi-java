@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class PodsMetricStatus {
     /**
      * currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity)
      * 
-     */
+    */
     public String getCurrentAverageValue() {
         return this.currentAverageValue;
     }
     /**
      * metricName is the name of the metric in question
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
      * 
-     */
+    */
     public Optional<LabelSelector> getSelector() {
         return Optional.ofNullable(this.selector);
     }
@@ -98,7 +98,6 @@ public final class PodsMetricStatus {
             this.selector = selector;
             return this;
         }
-
         public PodsMetricStatus build() {
             return new PodsMetricStatus(currentAverageValue, metricName, selector);
         }

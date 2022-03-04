@@ -6,7 +6,7 @@ package io.pulumi.azurenative.relay.inputs;
 import io.pulumi.azurenative.relay.enums.SkuName;
 import io.pulumi.azurenative.relay.enums.SkuTier;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<SkuName> name;
+      private final Input<SkuName> name;
 
     public Input<SkuName> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<SkuTier> tier;
+      private final @Nullable Input<SkuTier> tier;
 
     public Input<SkuTier> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -94,7 +94,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public SkuArgs build() {
             return new SkuArgs(name, tier);
         }

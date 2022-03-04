@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRatePlan {
-/**
- * Gets the details of a rate plan.
+    private GetRatePlan() {}
+    public interface BuilderApplicator {
+        public void apply(GetRatePlanArgs.Builder a);
+    }
+    private static GetRatePlanArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRatePlanArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the details of a rate plan.
  * 
- */
+     */
+    public static CompletableFuture<GetRatePlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the details of a rate plan.
+     * 
+     */
     public static CompletableFuture<GetRatePlanResult> invokeAsync(GetRatePlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getRatePlan", TypeShape.of(GetRatePlanResult.class), args == null ? GetRatePlanArgs.Empty : args, Utilities.withVersion(options));
     }

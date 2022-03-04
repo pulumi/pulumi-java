@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ExecutionStageStateResponse {
     /**
      * The time at which the stage transitioned to this state.
      * 
-     */
+    */
     public String getCurrentStateTime() {
         return this.currentStateTime;
     }
     /**
      * The name of the execution stage.
      * 
-     */
+    */
     public String getExecutionStageName() {
         return this.executionStageName;
     }
     /**
      * Executions stage states allow the same set of values as JobState.
      * 
-     */
+    */
     public String getExecutionStageState() {
         return this.executionStageState;
     }
@@ -95,7 +95,6 @@ public final class ExecutionStageStateResponse {
             this.executionStageState = Objects.requireNonNull(executionStageState);
             return this;
         }
-
         public ExecutionStageStateResponse build() {
             return new ExecutionStageStateResponse(currentStateTime, executionStageName, executionStageState);
         }

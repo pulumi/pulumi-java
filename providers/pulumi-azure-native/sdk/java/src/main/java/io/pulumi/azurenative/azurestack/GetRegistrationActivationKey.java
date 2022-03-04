@@ -6,21 +6,41 @@ package io.pulumi.azurenative.azurestack;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.azurestack.inputs.GetRegistrationActivationKeyArgs;
 import io.pulumi.azurenative.azurestack.outputs.GetRegistrationActivationKeyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistrationActivationKey {
-/**
- * The resource containing the Azure Stack activation key.
+    private GetRegistrationActivationKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegistrationActivationKeyArgs.Builder a);
+    }
+    private static GetRegistrationActivationKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegistrationActivationKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The resource containing the Azure Stack activation key.
  * API Version: 2017-06-01.
  * 
- *
- * The resource containing the Azure Stack activation key.
+     *
+     * The resource containing the Azure Stack activation key.
  * 
- */
+     */
+    public static CompletableFuture<GetRegistrationActivationKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The resource containing the Azure Stack activation key.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * The resource containing the Azure Stack activation key.
+     * 
+     */
     public static CompletableFuture<GetRegistrationActivationKeyResult> invokeAsync(GetRegistrationActivationKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestack:getRegistrationActivationKey", TypeShape.of(GetRegistrationActivationKeyResult.class), args == null ? GetRegistrationActivationKeyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.NodeManagementResponse;
 import io.pulumi.googlenative.container_v1.inputs.ShieldedInstanceConfigResponse;
 import io.pulumi.googlenative.container_v1.inputs.UpgradeSettingsResponse;
@@ -26,7 +26,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="bootDiskKmsKey", required=true)
-    private final String bootDiskKmsKey;
+      private final String bootDiskKmsKey;
 
     public String getBootDiskKmsKey() {
         return this.bootDiskKmsKey;
@@ -37,7 +37,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final Integer diskSizeGb;
+      private final Integer diskSizeGb;
 
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
@@ -48,7 +48,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -59,7 +59,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="imageType", required=true)
-    private final String imageType;
+      private final String imageType;
 
     public String getImageType() {
         return this.imageType;
@@ -70,7 +70,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="management", required=true)
-    private final NodeManagementResponse management;
+      private final NodeManagementResponse management;
 
     public NodeManagementResponse getManagement() {
         return this.management;
@@ -81,7 +81,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="minCpuPlatform", required=true)
-    private final String minCpuPlatform;
+      private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
@@ -92,7 +92,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="oauthScopes", required=true)
-    private final List<String> oauthScopes;
+      private final List<String> oauthScopes;
 
     public List<String> getOauthScopes() {
         return this.oauthScopes;
@@ -103,7 +103,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -114,7 +114,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="shieldedInstanceConfig", required=true)
-    private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
+      private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
     public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
@@ -125,7 +125,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="upgradeSettings", required=true)
-    private final UpgradeSettingsResponse upgradeSettings;
+      private final UpgradeSettingsResponse upgradeSettings;
 
     public UpgradeSettingsResponse getUpgradeSettings() {
         return this.upgradeSettings;
@@ -254,7 +254,6 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
         }
-
         public AutoprovisioningNodePoolDefaultsResponse build() {
             return new AutoprovisioningNodePoolDefaultsResponse(bootDiskKmsKey, diskSizeGb, diskType, imageType, management, minCpuPlatform, oauthScopes, serviceAccount, shieldedInstanceConfig, upgradeSettings);
         }

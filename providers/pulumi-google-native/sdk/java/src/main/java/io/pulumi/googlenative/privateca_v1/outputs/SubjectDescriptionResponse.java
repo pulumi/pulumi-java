@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.SubjectAltNamesResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.SubjectResponse;
 import java.lang.String;
@@ -61,42 +61,42 @@ public final class SubjectDescriptionResponse {
     /**
      * The serial number encoded in lowercase hexadecimal.
      * 
-     */
+    */
     public String getHexSerialNumber() {
         return this.hexSerialNumber;
     }
     /**
      * For convenience, the actual lifetime of an issued certificate.
      * 
-     */
+    */
     public String getLifetime() {
         return this.lifetime;
     }
     /**
      * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to 'not_before_time' + 'lifetime' - 1 second.
      * 
-     */
+    */
     public String getNotAfterTime() {
         return this.notAfterTime;
     }
     /**
      * The time at which the certificate becomes valid.
      * 
-     */
+    */
     public String getNotBeforeTime() {
         return this.notBeforeTime;
     }
     /**
      * Contains distinguished name fields such as the common name, location and / organization.
      * 
-     */
+    */
     public SubjectResponse getSubject() {
         return this.subject;
     }
     /**
      * The subject alternative name fields.
      * 
-     */
+    */
     public SubjectAltNamesResponse getSubjectAltName() {
         return this.subjectAltName;
     }
@@ -160,7 +160,6 @@ public final class SubjectDescriptionResponse {
             this.subjectAltName = Objects.requireNonNull(subjectAltName);
             return this;
         }
-
         public SubjectDescriptionResponse build() {
             return new SubjectDescriptionResponse(hexSerialNumber, lifetime, notAfterTime, notBeforeTime, subject, subjectAltName);
         }

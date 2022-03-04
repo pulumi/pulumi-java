@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ClientCertificateCommonNameResponse {
     /**
      * The common name of the client certificate.
      * 
-     */
+    */
     public String getCertificateCommonName() {
         return this.certificateCommonName;
     }
     /**
      * The issuer thumbprint of the client certificate.
      * 
-     */
+    */
     public String getCertificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
     /**
      * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
      * 
-     */
+    */
     public Boolean getIsAdmin() {
         return this.isAdmin;
     }
@@ -96,7 +96,6 @@ public final class ClientCertificateCommonNameResponse {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
-
         public ClientCertificateCommonNameResponse build() {
             return new ClientCertificateCommonNameResponse(certificateCommonName, certificateIssuerThumbprint, isAdmin);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="claimType", required=true)
-    private final String claimType;
+      private final String claimType;
 
     public String getClaimType() {
         return this.claimType;
@@ -36,7 +36,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="claimValue", required=true)
-    private final String claimValue;
+      private final String claimValue;
 
     public String getClaimValue() {
         return this.claimValue;
@@ -47,7 +47,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="createdTime", required=true)
-    private final String createdTime;
+      private final String createdTime;
 
     public String getCreatedTime() {
         return this.createdTime;
@@ -58,7 +58,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final String keyName;
+      private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -69,7 +69,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="modifiedTime", required=true)
-    private final String modifiedTime;
+      private final String modifiedTime;
 
     public String getModifiedTime() {
         return this.modifiedTime;
@@ -80,7 +80,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="primaryKey", required=true)
-    private final String primaryKey;
+      private final String primaryKey;
 
     public String getPrimaryKey() {
         return this.primaryKey;
@@ -91,7 +91,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="revision", required=true)
-    private final Integer revision;
+      private final Integer revision;
 
     public Integer getRevision() {
         return this.revision;
@@ -102,7 +102,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="rights")
-    private final @Nullable List<String> rights;
+      private final @Nullable List<String> rights;
 
     public List<String> getRights() {
         return this.rights == null ? List.of() : this.rights;
@@ -113,7 +113,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="secondaryKey", required=true)
-    private final String secondaryKey;
+      private final String secondaryKey;
 
     public String getSecondaryKey() {
         return this.secondaryKey;
@@ -232,7 +232,6 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public SharedAccessAuthorizationRulePropertiesResponse build() {
             return new SharedAccessAuthorizationRulePropertiesResponse(claimType, claimValue, createdTime, keyName, modifiedTime, primaryKey, revision, rights, secondaryKey);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<DefaultRolloutPropertiesArgs> properties;
+      private final @Nullable Input<DefaultRolloutPropertiesArgs> properties;
 
     public Input<DefaultRolloutPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -31,7 +31,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final Input<String> providerNamespace;
+      private final Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace;
@@ -42,7 +42,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutName")
-    private final @Nullable Input<String> rolloutName;
+      private final @Nullable Input<String> rolloutName;
 
     public Input<String> getRolloutName() {
         return this.rolloutName == null ? Input.empty() : this.rolloutName;
@@ -116,7 +116,6 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
             this.rolloutName = Input.ofNullable(rolloutName);
             return this;
         }
-
         public DefaultRolloutArgs build() {
             return new DefaultRolloutArgs(properties, providerNamespace, rolloutName);
         }

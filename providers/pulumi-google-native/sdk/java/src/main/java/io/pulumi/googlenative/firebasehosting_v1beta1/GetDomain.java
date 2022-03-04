@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomain {
-/**
- * Gets a domain mapping on the specified site.
+    private GetDomain() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainArgs.Builder a);
+    }
+    private static GetDomainArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a domain mapping on the specified site.
  * 
- */
+     */
+    public static CompletableFuture<GetDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a domain mapping on the specified site.
+     * 
+     */
     public static CompletableFuture<GetDomainResult> invokeAsync(GetDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getDomain", TypeShape.of(GetDomainResult.class), args == null ? GetDomainArgs.Empty : args, Utilities.withVersion(options));
     }

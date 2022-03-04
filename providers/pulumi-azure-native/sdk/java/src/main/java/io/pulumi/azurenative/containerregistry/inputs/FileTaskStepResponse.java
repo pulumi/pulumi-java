@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.BaseImageDependencyResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="baseImageDependencies", required=true)
-    private final List<BaseImageDependencyResponse> baseImageDependencies;
+      private final List<BaseImageDependencyResponse> baseImageDependencies;
 
     public List<BaseImageDependencyResponse> getBaseImageDependencies() {
         return this.baseImageDependencies;
@@ -37,7 +37,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contextAccessToken")
-    private final @Nullable String contextAccessToken;
+      private final @Nullable String contextAccessToken;
 
     public Optional<String> getContextAccessToken() {
         return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
@@ -48,7 +48,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contextPath")
-    private final @Nullable String contextPath;
+      private final @Nullable String contextPath;
 
     public Optional<String> getContextPath() {
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
@@ -59,7 +59,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="taskFilePath", required=true)
-    private final String taskFilePath;
+      private final String taskFilePath;
 
     public String getTaskFilePath() {
         return this.taskFilePath;
@@ -71,7 +71,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -82,7 +82,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="values")
-    private final @Nullable List<SetValueResponse> values;
+      private final @Nullable List<SetValueResponse> values;
 
     public List<SetValueResponse> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -93,7 +93,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="valuesFilePath")
-    private final @Nullable String valuesFilePath;
+      private final @Nullable String valuesFilePath;
 
     public Optional<String> getValuesFilePath() {
         return this.valuesFilePath == null ? Optional.empty() : Optional.ofNullable(this.valuesFilePath);
@@ -192,7 +192,6 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
             this.valuesFilePath = valuesFilePath;
             return this;
         }
-
         public FileTaskStepResponse build() {
             return new FileTaskStepResponse(baseImageDependencies, contextAccessToken, contextPath, taskFilePath, type, values, valuesFilePath);
         }

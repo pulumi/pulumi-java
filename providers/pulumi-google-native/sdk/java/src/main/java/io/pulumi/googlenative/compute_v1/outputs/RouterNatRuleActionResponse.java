@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class RouterNatRuleActionResponse {
     /**
      * A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.
      * 
-     */
+    */
     public List<String> getSourceNatActiveIps() {
         return this.sourceNatActiveIps;
     }
     /**
      * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
      * 
-     */
+    */
     public List<String> getSourceNatDrainIps() {
         return this.sourceNatDrainIps;
     }
@@ -75,7 +75,6 @@ public final class RouterNatRuleActionResponse {
             this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps);
             return this;
         }
-
         public RouterNatRuleActionResponse build() {
             return new RouterNatRuleActionResponse(sourceNatActiveIps, sourceNatDrainIps);
         }

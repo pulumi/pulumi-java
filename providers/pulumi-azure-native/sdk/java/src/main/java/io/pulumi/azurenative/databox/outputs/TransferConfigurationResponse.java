@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.TransferConfigurationResponseTransferAllDetails;
 import io.pulumi.azurenative.databox.outputs.TransferConfigurationResponseTransferFilterDetails;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class TransferConfigurationResponse {
     /**
      * Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
      * 
-     */
+    */
     public Optional<TransferConfigurationResponseTransferAllDetails> getTransferAllDetails() {
         return Optional.ofNullable(this.transferAllDetails);
     }
     /**
      * Type of the configuration for transfer.
      * 
-     */
+    */
     public String getTransferConfigurationType() {
         return this.transferConfigurationType;
     }
     /**
      * Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
      * 
-     */
+    */
     public Optional<TransferConfigurationResponseTransferFilterDetails> getTransferFilterDetails() {
         return Optional.ofNullable(this.transferFilterDetails);
     }
@@ -99,7 +99,6 @@ public final class TransferConfigurationResponse {
             this.transferFilterDetails = transferFilterDetails;
             return this;
         }
-
         public TransferConfigurationResponse build() {
             return new TransferConfigurationResponse(transferAllDetails, transferConfigurationType, transferFilterDetails);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -83,35 +83,35 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
     /**
      * Login migration end time
      * 
-     */
+    */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Login migration errors and warnings per login
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Login name.
      * 
-     */
+    */
     public String getLoginName() {
         return this.loginName;
     }
     /**
      * Login migration progress message
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -119,28 +119,28 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
      * Result type
      * Expected value is 'LoginLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Current stage of login
      * 
-     */
+    */
     public String getStage() {
         return this.stage;
     }
     /**
      * Login migration start time
      * 
-     */
+    */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Current state of login
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -225,7 +225,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskOutputLoginLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputLoginLevelResponse(endedOn, exceptionsAndWarnings, id, loginName, message, resultType, stage, startedOn, state);
         }

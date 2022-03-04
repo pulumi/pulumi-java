@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1TableSpecResponse {
     /**
      * If the table is date-sharded, that is, it matches the `[prefix]YYYYMMDD` name pattern, this field is the Data Catalog resource name of the date-sharded grouped entry. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`. Otherwise, `grouped_entry` is empty.
      * 
-     */
+    */
     public String getGroupedEntry() {
         return this.groupedEntry;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDatacatalogV1TableSpecResponse {
             this.groupedEntry = Objects.requireNonNull(groupedEntry);
             return this;
         }
-
         public GoogleCloudDatacatalogV1TableSpecResponse build() {
             return new GoogleCloudDatacatalogV1TableSpecResponse(groupedEntry);
         }

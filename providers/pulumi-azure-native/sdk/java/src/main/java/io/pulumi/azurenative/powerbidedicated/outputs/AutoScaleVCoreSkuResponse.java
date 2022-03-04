@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerbidedicated.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class AutoScaleVCoreSkuResponse {
     /**
      * The capacity of an auto scale v-core resource.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Name of the SKU level.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the Azure pricing tier to which the SKU applies.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -98,7 +98,6 @@ public final class AutoScaleVCoreSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public AutoScaleVCoreSkuResponse build() {
             return new AutoScaleVCoreSkuResponse(capacity, name, tier);
         }

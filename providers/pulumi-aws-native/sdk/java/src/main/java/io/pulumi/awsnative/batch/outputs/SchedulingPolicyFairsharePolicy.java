@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.batch.outputs;
 
 import io.pulumi.awsnative.batch.outputs.SchedulingPolicyShareAttributes;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -40,7 +40,7 @@ public final class SchedulingPolicyFairsharePolicy {
     /**
      * List of Share Attributes
      * 
-     */
+    */
     public List<SchedulingPolicyShareAttributes> getShareDistribution() {
         return this.shareDistribution == null ? List.of() : this.shareDistribution;
     }
@@ -83,7 +83,6 @@ public final class SchedulingPolicyFairsharePolicy {
             this.shareDistribution = shareDistribution;
             return this;
         }
-
         public SchedulingPolicyFairsharePolicy build() {
             return new SchedulingPolicyFairsharePolicy(computeReservation, shareDecaySeconds, shareDistribution);
         }

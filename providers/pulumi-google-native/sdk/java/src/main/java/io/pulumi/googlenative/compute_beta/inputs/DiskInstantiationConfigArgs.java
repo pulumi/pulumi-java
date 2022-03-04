@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.DiskInstantiationConfigInstantiateFrom;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="autoDelete")
-    private final @Nullable Input<Boolean> autoDelete;
+      private final @Nullable Input<Boolean> autoDelete;
 
     public Input<Boolean> getAutoDelete() {
         return this.autoDelete == null ? Input.empty() : this.autoDelete;
@@ -36,7 +36,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customImage")
-    private final @Nullable Input<String> customImage;
+      private final @Nullable Input<String> customImage;
 
     public Input<String> getCustomImage() {
         return this.customImage == null ? Input.empty() : this.customImage;
@@ -47,7 +47,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -58,7 +58,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instantiateFrom")
-    private final @Nullable Input<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
+      private final @Nullable Input<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
 
     public Input<DiskInstantiationConfigInstantiateFrom> getInstantiateFrom() {
         return this.instantiateFrom == null ? Input.empty() : this.instantiateFrom;
@@ -147,7 +147,6 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
             this.instantiateFrom = Input.ofNullable(instantiateFrom);
             return this;
         }
-
         public DiskInstantiationConfigArgs build() {
             return new DiskInstantiationConfigArgs(autoDelete, customImage, deviceName, instantiateFrom);
         }

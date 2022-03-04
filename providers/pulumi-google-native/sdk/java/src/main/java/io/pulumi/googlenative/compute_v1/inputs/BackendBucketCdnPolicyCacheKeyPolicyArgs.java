@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="includeHttpHeaders")
-    private final @Nullable Input<List<String>> includeHttpHeaders;
+      private final @Nullable Input<List<String>> includeHttpHeaders;
 
     public Input<List<String>> getIncludeHttpHeaders() {
         return this.includeHttpHeaders == null ? Input.empty() : this.includeHttpHeaders;
@@ -35,7 +35,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="queryStringWhitelist")
-    private final @Nullable Input<List<String>> queryStringWhitelist;
+      private final @Nullable Input<List<String>> queryStringWhitelist;
 
     public Input<List<String>> getQueryStringWhitelist() {
         return this.queryStringWhitelist == null ? Input.empty() : this.queryStringWhitelist;
@@ -94,7 +94,6 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
             this.queryStringWhitelist = Input.ofNullable(queryStringWhitelist);
             return this;
         }
-
         public BackendBucketCdnPolicyCacheKeyPolicyArgs build() {
             return new BackendBucketCdnPolicyCacheKeyPolicyArgs(includeHttpHeaders, queryStringWhitelist);
         }

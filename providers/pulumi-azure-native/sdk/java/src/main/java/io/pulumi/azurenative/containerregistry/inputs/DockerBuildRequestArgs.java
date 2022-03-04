@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.ArgumentArgs;
 import io.pulumi.azurenative.containerregistry.inputs.CredentialsArgs;
 import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="agentConfiguration")
-    private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
+      private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
 
     public Input<AgentPropertiesArgs> getAgentConfiguration() {
         return this.agentConfiguration == null ? Input.empty() : this.agentConfiguration;
@@ -41,7 +41,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="agentPoolName")
-    private final @Nullable Input<String> agentPoolName;
+      private final @Nullable Input<String> agentPoolName;
 
     public Input<String> getAgentPoolName() {
         return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
@@ -52,7 +52,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<List<ArgumentArgs>> arguments;
+      private final @Nullable Input<List<ArgumentArgs>> arguments;
 
     public Input<List<ArgumentArgs>> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -63,7 +63,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<CredentialsArgs> credentials;
+      private final @Nullable Input<CredentialsArgs> credentials;
 
     public Input<CredentialsArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -74,7 +74,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dockerFilePath", required=true)
-    private final Input<String> dockerFilePath;
+      private final Input<String> dockerFilePath;
 
     public Input<String> getDockerFilePath() {
         return this.dockerFilePath;
@@ -85,7 +85,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="imageNames")
-    private final @Nullable Input<List<String>> imageNames;
+      private final @Nullable Input<List<String>> imageNames;
 
     public Input<List<String>> getImageNames() {
         return this.imageNames == null ? Input.empty() : this.imageNames;
@@ -96,7 +96,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isArchiveEnabled")
-    private final @Nullable Input<Boolean> isArchiveEnabled;
+      private final @Nullable Input<Boolean> isArchiveEnabled;
 
     public Input<Boolean> getIsArchiveEnabled() {
         return this.isArchiveEnabled == null ? Input.empty() : this.isArchiveEnabled;
@@ -107,7 +107,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isPushEnabled")
-    private final @Nullable Input<Boolean> isPushEnabled;
+      private final @Nullable Input<Boolean> isPushEnabled;
 
     public Input<Boolean> getIsPushEnabled() {
         return this.isPushEnabled == null ? Input.empty() : this.isPushEnabled;
@@ -118,7 +118,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logTemplate")
-    private final @Nullable Input<String> logTemplate;
+      private final @Nullable Input<String> logTemplate;
 
     public Input<String> getLogTemplate() {
         return this.logTemplate == null ? Input.empty() : this.logTemplate;
@@ -129,7 +129,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="noCache")
-    private final @Nullable Input<Boolean> noCache;
+      private final @Nullable Input<Boolean> noCache;
 
     public Input<Boolean> getNoCache() {
         return this.noCache == null ? Input.empty() : this.noCache;
@@ -140,7 +140,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="platform", required=true)
-    private final Input<PlatformPropertiesArgs> platform;
+      private final Input<PlatformPropertiesArgs> platform;
 
     public Input<PlatformPropertiesArgs> getPlatform() {
         return this.platform;
@@ -152,7 +152,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceLocation")
-    private final @Nullable Input<String> sourceLocation;
+      private final @Nullable Input<String> sourceLocation;
 
     public Input<String> getSourceLocation() {
         return this.sourceLocation == null ? Input.empty() : this.sourceLocation;
@@ -163,7 +163,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -174,7 +174,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+      private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -186,7 +186,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -440,7 +440,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DockerBuildRequestArgs build() {
             return new DockerBuildRequestArgs(agentConfiguration, agentPoolName, arguments, credentials, dockerFilePath, imageNames, isArchiveEnabled, isPushEnabled, logTemplate, noCache, platform, sourceLocation, target, timeout, type);
         }

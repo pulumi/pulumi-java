@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetCapacityReservationArgs;
 import io.pulumi.azurenative.compute.outputs.GetCapacityReservationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapacityReservation {
-/**
- * Specifies information about the capacity reservation.
+    private GetCapacityReservation() {}
+    public interface BuilderApplicator {
+        public void apply(GetCapacityReservationArgs.Builder a);
+    }
+    private static GetCapacityReservationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCapacityReservationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Specifies information about the capacity reservation.
  * API Version: 2021-04-01.
  * 
- *
- * Specifies information about the capacity reservation.
+     *
+     * Specifies information about the capacity reservation.
  * 
- */
+     */
+    public static CompletableFuture<GetCapacityReservationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Specifies information about the capacity reservation.
+     * API Version: 2021-04-01.
+     * 
+     *
+         * Specifies information about the capacity reservation.
+     * 
+     */
     public static CompletableFuture<GetCapacityReservationResult> invokeAsync(GetCapacityReservationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getCapacityReservation", TypeShape.of(GetCapacityReservationResult.class), args == null ? GetCapacityReservationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.LogConfigCloudAuditOptionsArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.LogConfigCounterOptionsArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.LogConfigDataAccessOptionsArgs;
@@ -25,7 +25,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudAudit")
-    private final @Nullable Input<LogConfigCloudAuditOptionsArgs> cloudAudit;
+      private final @Nullable Input<LogConfigCloudAuditOptionsArgs> cloudAudit;
 
     public Input<LogConfigCloudAuditOptionsArgs> getCloudAudit() {
         return this.cloudAudit == null ? Input.empty() : this.cloudAudit;
@@ -36,7 +36,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="counter")
-    private final @Nullable Input<LogConfigCounterOptionsArgs> counter;
+      private final @Nullable Input<LogConfigCounterOptionsArgs> counter;
 
     public Input<LogConfigCounterOptionsArgs> getCounter() {
         return this.counter == null ? Input.empty() : this.counter;
@@ -47,7 +47,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataAccess")
-    private final @Nullable Input<LogConfigDataAccessOptionsArgs> dataAccess;
+      private final @Nullable Input<LogConfigDataAccessOptionsArgs> dataAccess;
 
     public Input<LogConfigDataAccessOptionsArgs> getDataAccess() {
         return this.dataAccess == null ? Input.empty() : this.dataAccess;
@@ -121,7 +121,6 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.dataAccess = Input.ofNullable(dataAccess);
             return this;
         }
-
         public LogConfigArgs build() {
             return new LogConfigArgs(cloudAudit, counter, dataAccess);
         }

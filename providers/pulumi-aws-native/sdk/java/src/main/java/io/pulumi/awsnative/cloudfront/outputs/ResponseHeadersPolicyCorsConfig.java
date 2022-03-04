@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyAccessControl
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyAccessControlAllowMethods;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyAccessControlAllowOrigins;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyAccessControlExposeHeaders;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -130,7 +130,6 @@ public final class ResponseHeadersPolicyCorsConfig {
             this.originOverride = Objects.requireNonNull(originOverride);
             return this;
         }
-
         public ResponseHeadersPolicyCorsConfig build() {
             return new ResponseHeadersPolicyCorsConfig(accessControlAllowCredentials, accessControlAllowHeaders, accessControlAllowMethods, accessControlAllowOrigins, accessControlExposeHeaders, accessControlMaxAgeSec, originOverride);
         }

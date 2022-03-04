@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.inputs.GetBackupShortTermRetentionPolicyArgs;
 import io.pulumi.azurenative.sql.outputs.GetBackupShortTermRetentionPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupShortTermRetentionPolicy {
-/**
- * A short term retention policy.
+    private GetBackupShortTermRetentionPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupShortTermRetentionPolicyArgs.Builder a);
+    }
+    private static GetBackupShortTermRetentionPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupShortTermRetentionPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A short term retention policy.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A short term retention policy.
+     *
+     * A short term retention policy.
  * 
- */
+     */
+    public static CompletableFuture<GetBackupShortTermRetentionPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A short term retention policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A short term retention policy.
+     * 
+     */
     public static CompletableFuture<GetBackupShortTermRetentionPolicyResult> invokeAsync(GetBackupShortTermRetentionPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getBackupShortTermRetentionPolicy", TypeShape.of(GetBackupShortTermRetentionPolicyResult.class), args == null ? GetBackupShortTermRetentionPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

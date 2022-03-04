@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class TransferJobScheduleStartTimeOfDay {
     /**
      * Hours of day in 24 hour format. Should be from 0 to 23
      * 
-     */
+    */
     public Integer getHours() {
         return this.hours;
     }
     /**
      * Minutes of hour of day. Must be from 0 to 59.
      * 
-     */
+    */
     public Integer getMinutes() {
         return this.minutes;
     }
     /**
      * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
      * 
-     */
+    */
     public Integer getNanos() {
         return this.nanos;
     }
     /**
      * Seconds of minutes of the time. Must normally be from 0 to 59.
      * 
-     */
+    */
     public Integer getSeconds() {
         return this.seconds;
     }
@@ -116,7 +116,6 @@ public final class TransferJobScheduleStartTimeOfDay {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public TransferJobScheduleStartTimeOfDay build() {
             return new TransferJobScheduleStartTimeOfDay(hours, minutes, nanos, seconds);
         }

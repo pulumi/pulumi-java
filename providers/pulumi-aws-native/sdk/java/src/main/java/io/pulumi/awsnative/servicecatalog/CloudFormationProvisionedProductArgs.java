@@ -8,7 +8,7 @@ import io.pulumi.awsnative.servicecatalog.inputs.CloudFormationProvisionedProduc
 import io.pulumi.awsnative.servicecatalog.inputs.CloudFormationProvisionedProductProvisioningPreferencesArgs;
 import io.pulumi.awsnative.servicecatalog.inputs.CloudFormationProvisionedProductTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,84 +20,84 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
     public static final CloudFormationProvisionedProductArgs Empty = new CloudFormationProvisionedProductArgs();
 
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
+      private final @Nullable Input<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
 
     public Input<CloudFormationProvisionedProductAcceptLanguage> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
     }
 
     @InputImport(name="notificationArns")
-    private final @Nullable Input<List<String>> notificationArns;
+      private final @Nullable Input<List<String>> notificationArns;
 
     public Input<List<String>> getNotificationArns() {
         return this.notificationArns == null ? Input.empty() : this.notificationArns;
     }
 
     @InputImport(name="pathId")
-    private final @Nullable Input<String> pathId;
+      private final @Nullable Input<String> pathId;
 
     public Input<String> getPathId() {
         return this.pathId == null ? Input.empty() : this.pathId;
     }
 
     @InputImport(name="pathName")
-    private final @Nullable Input<String> pathName;
+      private final @Nullable Input<String> pathName;
 
     public Input<String> getPathName() {
         return this.pathName == null ? Input.empty() : this.pathName;
     }
 
     @InputImport(name="productId")
-    private final @Nullable Input<String> productId;
+      private final @Nullable Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId == null ? Input.empty() : this.productId;
     }
 
     @InputImport(name="productName")
-    private final @Nullable Input<String> productName;
+      private final @Nullable Input<String> productName;
 
     public Input<String> getProductName() {
         return this.productName == null ? Input.empty() : this.productName;
     }
 
     @InputImport(name="provisionedProductName")
-    private final @Nullable Input<String> provisionedProductName;
+      private final @Nullable Input<String> provisionedProductName;
 
     public Input<String> getProvisionedProductName() {
         return this.provisionedProductName == null ? Input.empty() : this.provisionedProductName;
     }
 
     @InputImport(name="provisioningArtifactId")
-    private final @Nullable Input<String> provisioningArtifactId;
+      private final @Nullable Input<String> provisioningArtifactId;
 
     public Input<String> getProvisioningArtifactId() {
         return this.provisioningArtifactId == null ? Input.empty() : this.provisioningArtifactId;
     }
 
     @InputImport(name="provisioningArtifactName")
-    private final @Nullable Input<String> provisioningArtifactName;
+      private final @Nullable Input<String> provisioningArtifactName;
 
     public Input<String> getProvisioningArtifactName() {
         return this.provisioningArtifactName == null ? Input.empty() : this.provisioningArtifactName;
     }
 
     @InputImport(name="provisioningParameters")
-    private final @Nullable Input<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters;
+      private final @Nullable Input<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters;
 
     public Input<List<CloudFormationProvisionedProductProvisioningParameterArgs>> getProvisioningParameters() {
         return this.provisioningParameters == null ? Input.empty() : this.provisioningParameters;
     }
 
     @InputImport(name="provisioningPreferences")
-    private final @Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences;
+      private final @Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences;
 
     public Input<CloudFormationProvisionedProductProvisioningPreferencesArgs> getProvisioningPreferences() {
         return this.provisioningPreferences == null ? Input.empty() : this.provisioningPreferences;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<CloudFormationProvisionedProductTagArgs>> tags;
+      private final @Nullable Input<List<CloudFormationProvisionedProductTagArgs>> tags;
 
     public Input<List<CloudFormationProvisionedProductTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -306,7 +306,6 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public CloudFormationProvisionedProductArgs build() {
             return new CloudFormationProvisionedProductArgs(acceptLanguage, notificationArns, pathId, pathName, productId, productName, provisionedProductName, provisioningArtifactId, provisioningArtifactName, provisioningParameters, provisioningPreferences, tags);
         }

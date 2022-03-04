@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse {
     /**
      * The deny assignment excluded actions.
      * 
-     */
+    */
     public List<String> getAllowedActions() {
         return this.allowedActions == null ? List.of() : this.allowedActions;
     }
     /**
      * The deny assignment excluded data actions.
      * 
-     */
+    */
     public List<String> getAllowedDataActions() {
         return this.allowedDataActions == null ? List.of() : this.allowedDataActions;
     }
@@ -76,7 +76,6 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse {
             this.allowedDataActions = allowedDataActions;
             return this;
         }
-
         public ApplicationPackageLockingPolicyDefinitionResponse build() {
             return new ApplicationPackageLockingPolicyDefinitionResponse(allowedActions, allowedDataActions);
         }

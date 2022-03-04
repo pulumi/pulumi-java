@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.file_v1beta1.enums.InstanceTier;
 import io.pulumi.googlenative.file_v1beta1.inputs.FileShareConfigArgs;
 import io.pulumi.googlenative.file_v1beta1.inputs.NetworkConfigArgs;
@@ -24,7 +24,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -46,14 +46,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileShares")
-    private final @Nullable Input<List<FileShareConfigArgs>> fileShares;
+      private final @Nullable Input<List<FileShareConfigArgs>> fileShares;
 
     public Input<List<FileShareConfigArgs>> getFileShares() {
         return this.fileShares == null ? Input.empty() : this.fileShares;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -64,7 +64,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -75,14 +75,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -93,14 +93,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networks")
-    private final @Nullable Input<List<NetworkConfigArgs>> networks;
+      private final @Nullable Input<List<NetworkConfigArgs>> networks;
 
     public Input<List<NetworkConfigArgs>> getNetworks() {
         return this.networks == null ? Input.empty() : this.networks;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -111,7 +111,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<InstanceTier> tier;
+      private final @Nullable Input<InstanceTier> tier;
 
     public Input<InstanceTier> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -290,7 +290,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(description, etag, fileShares, instanceId, kmsKeyName, labels, location, networks, project, tier);
         }

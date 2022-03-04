@@ -10,7 +10,7 @@ import io.pulumi.azurenative.powerplatform.inputs.PropertiesLockboxArgs;
 import io.pulumi.azurenative.powerplatform.inputs.PropertiesNetworkInjectionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<PropertiesEncryptionArgs> encryption;
+      private final @Nullable Input<PropertiesEncryptionArgs> encryption;
 
     public Input<PropertiesEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -37,7 +37,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enterprisePolicyName")
-    private final @Nullable Input<String> enterprisePolicyName;
+      private final @Nullable Input<String> enterprisePolicyName;
 
     public Input<String> getEnterprisePolicyName() {
         return this.enterprisePolicyName == null ? Input.empty() : this.enterprisePolicyName;
@@ -48,7 +48,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<EnterprisePolicyIdentityArgs> identity;
+      private final @Nullable Input<EnterprisePolicyIdentityArgs> identity;
 
     public Input<EnterprisePolicyIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -59,7 +59,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,EnterprisePolicyKind>> kind;
+      private final Input<Either<String,EnterprisePolicyKind>> kind;
 
     public Input<Either<String,EnterprisePolicyKind>> getKind() {
         return this.kind;
@@ -70,7 +70,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -81,7 +81,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lockbox")
-    private final @Nullable Input<PropertiesLockboxArgs> lockbox;
+      private final @Nullable Input<PropertiesLockboxArgs> lockbox;
 
     public Input<PropertiesLockboxArgs> getLockbox() {
         return this.lockbox == null ? Input.empty() : this.lockbox;
@@ -92,7 +92,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkInjection")
-    private final @Nullable Input<PropertiesNetworkInjectionArgs> networkInjection;
+      private final @Nullable Input<PropertiesNetworkInjectionArgs> networkInjection;
 
     public Input<PropertiesNetworkInjectionArgs> getNetworkInjection() {
         return this.networkInjection == null ? Input.empty() : this.networkInjection;
@@ -103,7 +103,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -114,7 +114,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -278,7 +278,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public EnterprisePolicyArgs build() {
             return new EnterprisePolicyArgs(encryption, enterprisePolicyName, identity, kind, location, lockbox, networkInjection, resourceGroupName, tags);
         }

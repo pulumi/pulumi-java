@@ -6,7 +6,7 @@ package io.pulumi.awsnative.events.inputs;
 import io.pulumi.awsnative.events.enums.ConnectionOAuthParametersHttpMethod;
 import io.pulumi.awsnative.events.inputs.ConnectionClientParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionHttpParameters;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,28 +18,28 @@ public final class ConnectionOAuthParameters extends io.pulumi.resources.InvokeA
     public static final ConnectionOAuthParameters Empty = new ConnectionOAuthParameters();
 
     @InputImport(name="authorizationEndpoint", required=true)
-    private final String authorizationEndpoint;
+      private final String authorizationEndpoint;
 
     public String getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @InputImport(name="clientParameters", required=true)
-    private final ConnectionClientParameters clientParameters;
+      private final ConnectionClientParameters clientParameters;
 
     public ConnectionClientParameters getClientParameters() {
         return this.clientParameters;
     }
 
     @InputImport(name="httpMethod", required=true)
-    private final ConnectionOAuthParametersHttpMethod httpMethod;
+      private final ConnectionOAuthParametersHttpMethod httpMethod;
 
     public ConnectionOAuthParametersHttpMethod getHttpMethod() {
         return this.httpMethod;
     }
 
     @InputImport(name="oAuthHttpParameters")
-    private final @Nullable ConnectionHttpParameters oAuthHttpParameters;
+      private final @Nullable ConnectionHttpParameters oAuthHttpParameters;
 
     public Optional<ConnectionHttpParameters> getOAuthHttpParameters() {
         return this.oAuthHttpParameters == null ? Optional.empty() : Optional.ofNullable(this.oAuthHttpParameters);
@@ -108,7 +108,6 @@ public final class ConnectionOAuthParameters extends io.pulumi.resources.InvokeA
             this.oAuthHttpParameters = oAuthHttpParameters;
             return this;
         }
-
         public ConnectionOAuthParameters build() {
             return new ConnectionOAuthParameters(authorizationEndpoint, clientParameters, httpMethod, oAuthHttpParameters);
         }

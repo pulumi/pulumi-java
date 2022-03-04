@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class SiteConfigResponse {
     /**
      * .NET Framework version.
      * 
-     */
+    */
     public Optional<String> getNetFrameworkVersion() {
         return Optional.ofNullable(this.netFrameworkVersion);
     }
@@ -54,7 +54,6 @@ public final class SiteConfigResponse {
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
         }
-
         public SiteConfigResponse build() {
             return new SiteConfigResponse(netFrameworkVersion);
         }

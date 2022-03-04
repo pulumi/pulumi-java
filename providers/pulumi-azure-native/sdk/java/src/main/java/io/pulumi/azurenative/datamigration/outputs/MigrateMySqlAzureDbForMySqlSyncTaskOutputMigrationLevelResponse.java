@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,14 +74,14 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
     /**
      * Migration end time
      * 
-     */
+    */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -89,42 +89,42 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
      * Result type
      * Expected value is 'MigrationLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Source server name
      * 
-     */
+    */
     public String getSourceServer() {
         return this.sourceServer;
     }
     /**
      * Source server version
      * 
-     */
+    */
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Migration start time
      * 
-     */
+    */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Target server name
      * 
-     */
+    */
     public String getTargetServer() {
         return this.targetServer;
     }
     /**
      * Target server version
      * 
-     */
+    */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }
@@ -202,7 +202,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse(endedOn, id, resultType, sourceServer, sourceServerVersion, startedOn, targetServer, targetServerVersion);
         }

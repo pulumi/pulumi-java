@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -32,7 +32,7 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timeCreated", required=true)
-    private final String timeCreated;
+      private final String timeCreated;
 
     public String getTimeCreated() {
         return this.timeCreated;
@@ -43,7 +43,7 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timeModified", required=true)
-    private final String timeModified;
+      private final String timeModified;
 
     public String getTimeModified() {
         return this.timeModified;
@@ -102,7 +102,6 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
             this.timeModified = Objects.requireNonNull(timeModified);
             return this;
         }
-
         public TemplateSpecVersionInfoResponse build() {
             return new TemplateSpecVersionInfoResponse(description, timeCreated, timeModified);
         }

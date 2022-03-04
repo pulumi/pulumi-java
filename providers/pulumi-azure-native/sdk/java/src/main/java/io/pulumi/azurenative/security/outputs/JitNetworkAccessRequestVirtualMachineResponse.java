@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessRequestPortResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class JitNetworkAccessRequestVirtualMachineResponse {
     /**
      * Resource ID of the virtual machine that is linked to this policy
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ports that were opened for the virtual machine
      * 
-     */
+    */
     public List<JitNetworkAccessRequestPortResponse> getPorts() {
         return this.ports;
     }
@@ -76,7 +76,6 @@ public final class JitNetworkAccessRequestVirtualMachineResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public JitNetworkAccessRequestVirtualMachineResponse build() {
             return new JitNetworkAccessRequestVirtualMachineResponse(id, ports);
         }

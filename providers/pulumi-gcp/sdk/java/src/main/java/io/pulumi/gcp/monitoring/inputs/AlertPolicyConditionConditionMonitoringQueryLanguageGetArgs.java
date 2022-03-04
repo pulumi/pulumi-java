@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +34,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs e
      * 
      */
     @InputImport(name="duration", required=true)
-    private final Input<String> duration;
+      private final Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration;
@@ -45,7 +45,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs e
      * 
      */
     @InputImport(name="query", required=true)
-    private final Input<String> query;
+      private final Input<String> query;
 
     public Input<String> getQuery() {
         return this.query;
@@ -64,7 +64,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs e
      * 
      */
     @InputImport(name="trigger")
-    private final @Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs> trigger;
+      private final @Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs> trigger;
 
     public Input<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs> getTrigger() {
         return this.trigger == null ? Input.empty() : this.trigger;
@@ -138,7 +138,6 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs e
             this.trigger = Input.ofNullable(trigger);
             return this;
         }
-
         public AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs build() {
             return new AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs(duration, query, trigger);
         }

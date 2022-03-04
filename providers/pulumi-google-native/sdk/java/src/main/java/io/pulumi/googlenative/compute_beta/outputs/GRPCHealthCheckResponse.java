@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GRPCHealthCheckResponse {
     /**
      * The gRPC service name for the health check. This field is optional. The value of grpc_service_name has the following meanings by convention: - Empty service_name means the overall status of all services at the backend. - Non-empty service_name means the health of that gRPC service, as defined by the owner of the service. The grpc_service_name can only be ASCII.
      * 
-     */
+    */
     public String getGrpcServiceName() {
         return this.grpcServiceName;
     }
     /**
      * The port number for the health check request. Must be specified if port_name and port_specification are not set or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence. The port_name should conform to RFC1035.
      * 
-     */
+    */
     public String getPortName() {
         return this.portName;
     }
     /**
      * Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, gRPC health check follows behavior specified in port and portName fields.
      * 
-     */
+    */
     public String getPortSpecification() {
         return this.portSpecification;
     }
@@ -117,7 +117,6 @@ public final class GRPCHealthCheckResponse {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }
-
         public GRPCHealthCheckResponse build() {
             return new GRPCHealthCheckResponse(grpcServiceName, port, portName, portSpecification);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,35 +54,35 @@ public final class VersionResponse {
     /**
      * Used to correct mistakes in the version numbering scheme.
      * 
-     */
+    */
     public Integer getEpoch() {
         return this.epoch;
     }
     /**
      * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
      * 
-     */
+    */
     public Boolean getInclusive() {
         return this.inclusive;
     }
     /**
      * Distinguishes between sentinel MIN/MAX versions and normal versions.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Required only when version kind is NORMAL. The main part of the version name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The iteration of the package build from the above version.
      * 
-     */
+    */
     public String getRevision() {
         return this.revision;
     }
@@ -139,7 +139,6 @@ public final class VersionResponse {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public VersionResponse build() {
             return new VersionResponse(epoch, inclusive, kind, name, revision);
         }

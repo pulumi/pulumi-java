@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts")
-    private final @Nullable Input<List<String>> hosts;
+      private final @Nullable Input<List<String>> hosts;
 
     public Input<List<String>> getHosts() {
         return this.hosts == null ? Input.empty() : this.hosts;
@@ -35,7 +35,7 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretName")
-    private final @Nullable Input<String> secretName;
+      private final @Nullable Input<String> secretName;
 
     public Input<String> getSecretName() {
         return this.secretName == null ? Input.empty() : this.secretName;
@@ -94,7 +94,6 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
             this.secretName = Input.ofNullable(secretName);
             return this;
         }
-
         public IngressTLSArgs build() {
             return new IngressTLSArgs(hosts, secretName);
         }

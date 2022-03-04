@@ -147,7 +147,7 @@ import io.pulumi.azurenative.datafactory.outputs.WebSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XeroSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XmlSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZohoSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -334,147 +334,147 @@ public final class CopyActivityResponse {
     /**
      * Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getDataIntegrationUnits() {
         return Optional.ofNullable(this.dataIntegrationUnits);
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getEnableSkipIncompatibleRow() {
         return Optional.ofNullable(this.enableSkipIncompatibleRow);
     }
     /**
      * Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getEnableStaging() {
         return Optional.ofNullable(this.enableStaging);
     }
     /**
      * List of inputs for the activity.
      * 
-     */
+    */
     public List<DatasetReferenceResponse> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Log settings customer needs provide when enabling log.
      * 
-     */
+    */
     public Optional<LogSettingsResponse> getLogSettings() {
         return Optional.ofNullable(this.logSettings);
     }
     /**
      * (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
      * 
-     */
+    */
     public Optional<LogStorageSettingsResponse> getLogStorageSettings() {
         return Optional.ofNullable(this.logStorageSettings);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of outputs for the activity.
      * 
-     */
+    */
     public List<DatasetReferenceResponse> getOutputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
      * Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getParallelCopies() {
         return Optional.ofNullable(this.parallelCopies);
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Preserve rules.
      * 
-     */
+    */
     public List<Object> getPreserve() {
         return this.preserve == null ? List.of() : this.preserve;
     }
     /**
      * Preserve Rules.
      * 
-     */
+    */
     public List<Object> getPreserveRules() {
         return this.preserveRules == null ? List.of() : this.preserveRules;
     }
     /**
      * Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
      * 
-     */
+    */
     public Optional<RedirectIncompatibleRowSettingsResponse> getRedirectIncompatibleRowSettings() {
         return Optional.ofNullable(this.redirectIncompatibleRowSettings);
     }
     /**
      * Copy activity sink.
      * 
-     */
+    */
     public Object getSink() {
         return this.sink;
     }
     /**
      * Specify the fault tolerance for data consistency.
      * 
-     */
+    */
     public Optional<SkipErrorFileResponse> getSkipErrorFile() {
         return Optional.ofNullable(this.skipErrorFile);
     }
     /**
      * Copy activity source.
      * 
-     */
+    */
     public Object getSource() {
         return this.source;
     }
     /**
      * Specifies interim staging settings when EnableStaging is true.
      * 
-     */
+    */
     public Optional<StagingSettingsResponse> getStagingSettings() {
         return Optional.ofNullable(this.stagingSettings);
     }
     /**
      * Copy activity translator. If not specified, tabular translator is used.
      * 
-     */
+    */
     public Optional<Object> getTranslator() {
         return Optional.ofNullable(this.translator);
     }
@@ -482,21 +482,21 @@ public final class CopyActivityResponse {
      * Type of activity.
      * Expected value is 'Copy'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getValidateDataConsistency() {
         return Optional.ofNullable(this.validateDataConsistency);
     }
@@ -686,7 +686,6 @@ public final class CopyActivityResponse {
             this.validateDataConsistency = validateDataConsistency;
             return this;
         }
-
         public CopyActivityResponse build() {
             return new CopyActivityResponse(dataIntegrationUnits, dependsOn, description, enableSkipIncompatibleRow, enableStaging, inputs, linkedServiceName, logSettings, logStorageSettings, name, outputs, parallelCopies, policy, preserve, preserveRules, redirectIncompatibleRowSettings, sink, skipErrorFile, source, stagingSettings, translator, type, userProperties, validateDataConsistency);
         }

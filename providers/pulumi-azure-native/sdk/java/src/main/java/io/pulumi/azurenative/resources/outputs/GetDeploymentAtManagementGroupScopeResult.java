@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.DeploymentPropertiesExtendedResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class GetDeploymentAtManagementGroupScopeResult {
     /**
      * The ID of the deployment.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * the location of the deployment.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the deployment.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Deployment properties.
      * 
-     */
+    */
     public DeploymentPropertiesExtendedResponse getProperties() {
         return this.properties;
     }
     /**
      * Deployment tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the deployment.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class GetDeploymentAtManagementGroupScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeploymentAtManagementGroupScopeResult build() {
             return new GetDeploymentAtManagementGroupScopeResult(id, location, name, properties, tags, type);
         }

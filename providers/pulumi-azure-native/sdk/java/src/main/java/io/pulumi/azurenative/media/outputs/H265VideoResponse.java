@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.H265LayerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -79,28 +79,28 @@ public final class H265VideoResponse {
     /**
      * Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.
      * 
-     */
+    */
     public Optional<String> getComplexity() {
         return Optional.ofNullable(this.complexity);
     }
     /**
      * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
      * 
-     */
+    */
     public Optional<String> getKeyFrameInterval() {
         return Optional.ofNullable(this.keyFrameInterval);
     }
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * The collection of output H.265 layers to be produced by the encoder.
      * 
-     */
+    */
     public List<H265LayerResponse> getLayers() {
         return this.layers == null ? List.of() : this.layers;
     }
@@ -108,28 +108,28 @@ public final class H265VideoResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.H265Video'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Specifies whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
      * 
-     */
+    */
     public Optional<Boolean> getSceneChangeDetection() {
         return Optional.ofNullable(this.sceneChangeDetection);
     }
     /**
      * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
      * 
-     */
+    */
     public Optional<String> getStretchMode() {
         return Optional.ofNullable(this.stretchMode);
     }
     /**
      * The Video Sync Mode
      * 
-     */
+    */
     public Optional<String> getSyncMode() {
         return Optional.ofNullable(this.syncMode);
     }
@@ -207,7 +207,6 @@ public final class H265VideoResponse {
             this.syncMode = syncMode;
             return this;
         }
-
         public H265VideoResponse build() {
             return new H265VideoResponse(complexity, keyFrameInterval, label, layers, odataType, sceneChangeDetection, stretchMode, syncMode);
         }

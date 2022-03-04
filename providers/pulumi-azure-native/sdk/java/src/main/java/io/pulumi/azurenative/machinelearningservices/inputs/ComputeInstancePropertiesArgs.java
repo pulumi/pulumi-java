@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ResourceIdArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.SetupScriptsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="applicationSharingPolicy")
-    private final @Nullable Input<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
+      private final @Nullable Input<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
 
     public Input<Either<String,ApplicationSharingPolicy>> getApplicationSharingPolicy() {
         return this.applicationSharingPolicy == null ? Input.empty() : this.applicationSharingPolicy;
@@ -41,7 +41,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="computeInstanceAuthorizationType")
-    private final @Nullable Input<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
+      private final @Nullable Input<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
 
     public Input<Either<String,ComputeInstanceAuthorizationType>> getComputeInstanceAuthorizationType() {
         return this.computeInstanceAuthorizationType == null ? Input.empty() : this.computeInstanceAuthorizationType;
@@ -52,7 +52,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="personalComputeInstanceSettings")
-    private final @Nullable Input<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
+      private final @Nullable Input<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
 
     public Input<PersonalComputeInstanceSettingsArgs> getPersonalComputeInstanceSettings() {
         return this.personalComputeInstanceSettings == null ? Input.empty() : this.personalComputeInstanceSettings;
@@ -63,7 +63,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="setupScripts")
-    private final @Nullable Input<SetupScriptsArgs> setupScripts;
+      private final @Nullable Input<SetupScriptsArgs> setupScripts;
 
     public Input<SetupScriptsArgs> getSetupScripts() {
         return this.setupScripts == null ? Input.empty() : this.setupScripts;
@@ -74,7 +74,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sshSettings")
-    private final @Nullable Input<ComputeInstanceSshSettingsArgs> sshSettings;
+      private final @Nullable Input<ComputeInstanceSshSettingsArgs> sshSettings;
 
     public Input<ComputeInstanceSshSettingsArgs> getSshSettings() {
         return this.sshSettings == null ? Input.empty() : this.sshSettings;
@@ -85,7 +85,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<ResourceIdArgs> subnet;
+      private final @Nullable Input<ResourceIdArgs> subnet;
 
     public Input<ResourceIdArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -96,7 +96,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="vmSize")
-    private final @Nullable Input<String> vmSize;
+      private final @Nullable Input<String> vmSize;
 
     public Input<String> getVmSize() {
         return this.vmSize == null ? Input.empty() : this.vmSize;
@@ -230,7 +230,6 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }
-
         public ComputeInstancePropertiesArgs build() {
             return new ComputeInstancePropertiesArgs(applicationSharingPolicy, computeInstanceAuthorizationType, personalComputeInstanceSettings, setupScripts, sshSettings, subnet, vmSize);
         }

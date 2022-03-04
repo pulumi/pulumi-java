@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DurationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class FutureReservationTimeWindowResponse {
     /**
      * Start time of the Future Reservation. The start_time is an RFC3339 string.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -80,7 +80,6 @@ public final class FutureReservationTimeWindowResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public FutureReservationTimeWindowResponse build() {
             return new FutureReservationTimeWindowResponse(duration, endTime, startTime);
         }

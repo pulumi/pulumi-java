@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LabelingJobInstructionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable String uri;
+      private final @Nullable String uri;
 
     public Optional<String> getUri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
@@ -61,7 +61,6 @@ public final class LabelingJobInstructionsResponse extends io.pulumi.resources.I
             this.uri = uri;
             return this;
         }
-
         public LabelingJobInstructionsResponse build() {
             return new LabelingJobInstructionsResponse(uri);
         }

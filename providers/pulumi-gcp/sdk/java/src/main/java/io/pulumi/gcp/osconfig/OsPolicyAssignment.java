@@ -5,8 +5,8 @@ package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.osconfig.OsPolicyAssignmentArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentState;
@@ -263,6 +263,37 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
         return this.uid;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OsPolicyAssignmentArgs.Builder a);
+    }
+    private static io.pulumi.gcp.osconfig.OsPolicyAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.osconfig.OsPolicyAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public OsPolicyAssignment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public OsPolicyAssignment(String name) {
+        this(name, OsPolicyAssignmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OsPolicyAssignment(String name, OsPolicyAssignmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -133,112 +133,112 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
     /**
      * Additional experiment flags for the job.
      * 
-     */
+    */
     public List<String> getAdditionalExperiments() {
         return this.additionalExperiments;
     }
     /**
      * Additional user labels to be specified for the job. Keys and values must follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions). An object containing a list of key/value pairs. Example: `{ "name": "wrench", "mass": "1kg", "count": "3" }`.
      * 
-     */
+    */
     public Map<String,String> getAdditionalUserLabels() {
         return this.additionalUserLabels;
     }
     /**
      * Whether to enable Streaming Engine for the job.
      * 
-     */
+    */
     public Boolean getEnableStreamingEngine() {
         return this.enableStreamingEngine;
     }
     /**
      * Set FlexRS goal for the job. https://cloud.google.com/dataflow/docs/guides/flexrs
      * 
-     */
+    */
     public String getFlexrsGoal() {
         return this.flexrsGoal;
     }
     /**
      * Configuration for VM IPs.
      * 
-     */
+    */
     public String getIpConfiguration() {
         return this.ipConfiguration;
     }
     /**
      * Name for the Cloud KMS key for the job. Key format is: projects//locations//keyRings//cryptoKeys/
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * The machine type to use for the job. Defaults to the value from the template if not specified.
      * 
-     */
+    */
     public String getMachineType() {
         return this.machineType;
     }
     /**
      * The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
      * 
-     */
+    */
     public Integer getMaxWorkers() {
         return this.maxWorkers;
     }
     /**
      * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
     /**
      * The initial number of Compute Engine instances for the job.
      * 
-     */
+    */
     public Integer getNumWorkers() {
         return this.numWorkers;
     }
     /**
      * The email address of the service account to run the job as.
      * 
-     */
+    */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
      * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
      * 
-     */
+    */
     public String getSubnetwork() {
         return this.subnetwork;
     }
     /**
      * The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with `gs://`.
      * 
-     */
+    */
     public String getTempLocation() {
         return this.tempLocation;
     }
     /**
      * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, defaults to the control plane region.
      * 
-     */
+    */
     public String getWorkerRegion() {
         return this.workerRegion;
     }
     /**
      * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
      * 
-     */
+    */
     public String getWorkerZone() {
         return this.workerZone;
     }
     /**
      * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }
@@ -372,7 +372,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse build() {
             return new GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse(additionalExperiments, additionalUserLabels, enableStreamingEngine, flexrsGoal, ipConfiguration, kmsKeyName, machineType, maxWorkers, network, numWorkers, serviceAccountEmail, subnetwork, tempLocation, workerRegion, workerZone, zone);
         }

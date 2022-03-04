@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.keyvault.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -31,7 +31,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -42,7 +42,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final Input<String> vaultName;
+      private final Input<String> vaultName;
 
     public Input<String> getVaultName() {
         return this.vaultName;
@@ -142,7 +142,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.vaultName = Input.of(Objects.requireNonNull(vaultName));
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName, vaultName);
         }

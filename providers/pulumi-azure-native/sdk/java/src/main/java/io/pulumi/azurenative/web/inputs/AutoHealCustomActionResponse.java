@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AutoHealCustomActionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="exe")
-    private final @Nullable String exe;
+      private final @Nullable String exe;
 
     public Optional<String> getExe() {
         return this.exe == null ? Optional.empty() : Optional.ofNullable(this.exe);
@@ -35,7 +35,7 @@ public final class AutoHealCustomActionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable String parameters;
+      private final @Nullable String parameters;
 
     public Optional<String> getParameters() {
         return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
@@ -84,7 +84,6 @@ public final class AutoHealCustomActionResponse extends io.pulumi.resources.Invo
             this.parameters = parameters;
             return this;
         }
-
         public AutoHealCustomActionResponse build() {
             return new AutoHealCustomActionResponse(exe, parameters);
         }

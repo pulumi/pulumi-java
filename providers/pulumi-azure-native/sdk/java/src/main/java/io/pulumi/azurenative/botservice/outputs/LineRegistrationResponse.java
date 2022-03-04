@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class LineRegistrationResponse {
     /**
      * Access token for the line channel registration
      * 
-     */
+    */
     public Optional<String> getChannelAccessToken() {
         return Optional.ofNullable(this.channelAccessToken);
     }
     /**
      * Secret for the line channel registration
      * 
-     */
+    */
     public Optional<String> getChannelSecret() {
         return Optional.ofNullable(this.channelSecret);
     }
     /**
      * Id generated for the line channel registration
      * 
-     */
+    */
     public String getGeneratedId() {
         return this.generatedId;
     }
@@ -97,7 +97,6 @@ public final class LineRegistrationResponse {
             this.generatedId = Objects.requireNonNull(generatedId);
             return this;
         }
-
         public LineRegistrationResponse build() {
             return new LineRegistrationResponse(channelAccessToken, channelSecret, generatedId);
         }

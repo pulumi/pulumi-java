@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SdkVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sdkSupportStatus", required=true)
-    private final String sdkSupportStatus;
+      private final String sdkSupportStatus;
 
     public String getSdkSupportStatus() {
         return this.sdkSupportStatus;
@@ -32,7 +32,7 @@ public final class SdkVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -43,7 +43,7 @@ public final class SdkVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versionDisplayName", required=true)
-    private final String versionDisplayName;
+      private final String versionDisplayName;
 
     public String getVersionDisplayName() {
         return this.versionDisplayName;
@@ -102,7 +102,6 @@ public final class SdkVersionResponse extends io.pulumi.resources.InvokeArgs {
             this.versionDisplayName = Objects.requireNonNull(versionDisplayName);
             return this;
         }
-
         public SdkVersionResponse build() {
             return new SdkVersionResponse(sdkSupportStatus, version, versionDisplayName);
         }

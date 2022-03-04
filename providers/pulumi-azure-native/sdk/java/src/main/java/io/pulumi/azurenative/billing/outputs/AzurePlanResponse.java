@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.billing.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AzurePlanResponse {
     /**
      * The sku description.
      * 
-     */
+    */
     public String getSkuDescription() {
         return this.skuDescription;
     }
     /**
      * The sku id.
      * 
-     */
+    */
     public Optional<String> getSkuId() {
         return Optional.ofNullable(this.skuId);
     }
@@ -76,7 +76,6 @@ public final class AzurePlanResponse {
             this.skuId = skuId;
             return this;
         }
-
         public AzurePlanResponse build() {
             return new AzurePlanResponse(skuDescription, skuId);
         }

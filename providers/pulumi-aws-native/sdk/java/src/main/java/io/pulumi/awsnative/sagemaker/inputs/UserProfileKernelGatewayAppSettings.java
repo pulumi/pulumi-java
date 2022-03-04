@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileCustomImage;
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileResourceSpec;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class UserProfileKernelGatewayAppSettings extends io.pulumi.resourc
      * 
      */
     @InputImport(name="customImages")
-    private final @Nullable List<UserProfileCustomImage> customImages;
+      private final @Nullable List<UserProfileCustomImage> customImages;
 
     public List<UserProfileCustomImage> getCustomImages() {
         return this.customImages == null ? List.of() : this.customImages;
@@ -36,7 +36,7 @@ public final class UserProfileKernelGatewayAppSettings extends io.pulumi.resourc
      * 
      */
     @InputImport(name="defaultResourceSpec")
-    private final @Nullable UserProfileResourceSpec defaultResourceSpec;
+      private final @Nullable UserProfileResourceSpec defaultResourceSpec;
 
     public Optional<UserProfileResourceSpec> getDefaultResourceSpec() {
         return this.defaultResourceSpec == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceSpec);
@@ -85,7 +85,6 @@ public final class UserProfileKernelGatewayAppSettings extends io.pulumi.resourc
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public UserProfileKernelGatewayAppSettings build() {
             return new UserProfileKernelGatewayAppSettings(customImages, defaultResourceSpec);
         }

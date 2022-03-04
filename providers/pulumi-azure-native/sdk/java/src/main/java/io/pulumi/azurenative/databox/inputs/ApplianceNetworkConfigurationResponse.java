@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApplianceNetworkConfigurationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="macAddress", required=true)
-    private final String macAddress;
+      private final String macAddress;
 
     public String getMacAddress() {
         return this.macAddress;
@@ -32,7 +32,7 @@ public final class ApplianceNetworkConfigurationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -81,7 +81,6 @@ public final class ApplianceNetworkConfigurationResponse extends io.pulumi.resou
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ApplianceNetworkConfigurationResponse build() {
             return new ApplianceNetworkConfigurationResponse(macAddress, name);
         }

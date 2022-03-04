@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.outputs;
 
 import io.pulumi.azurenative.scheduler.outputs.JobRecurrenceScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -52,28 +52,28 @@ public final class JobRecurrenceResponse {
     /**
      * Gets or sets the maximum number of times that the job should run.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Gets or sets the time at which the job will complete.
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
      * 
-     */
+    */
     public Optional<String> getFrequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * Gets or sets the interval between retries.
      * 
-     */
+    */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
@@ -133,7 +133,6 @@ public final class JobRecurrenceResponse {
             this.schedule = schedule;
             return this;
         }
-
         public JobRecurrenceResponse build() {
             return new JobRecurrenceResponse(count, endTime, frequency, interval, schedule);
         }

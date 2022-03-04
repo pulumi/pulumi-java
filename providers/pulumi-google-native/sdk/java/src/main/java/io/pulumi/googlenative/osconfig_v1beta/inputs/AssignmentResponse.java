@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AssignmentGroupLabelResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AssignmentOsTypeResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="groupLabels", required=true)
-    private final List<AssignmentGroupLabelResponse> groupLabels;
+      private final List<AssignmentGroupLabelResponse> groupLabels;
 
     public List<AssignmentGroupLabelResponse> getGroupLabels() {
         return this.groupLabels;
@@ -35,7 +35,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceNamePrefixes", required=true)
-    private final List<String> instanceNamePrefixes;
+      private final List<String> instanceNamePrefixes;
 
     public List<String> getInstanceNamePrefixes() {
         return this.instanceNamePrefixes;
@@ -46,7 +46,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instances", required=true)
-    private final List<String> instances;
+      private final List<String> instances;
 
     public List<String> getInstances() {
         return this.instances;
@@ -57,7 +57,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osTypes", required=true)
-    private final List<AssignmentOsTypeResponse> osTypes;
+      private final List<AssignmentOsTypeResponse> osTypes;
 
     public List<AssignmentOsTypeResponse> getOsTypes() {
         return this.osTypes;
@@ -68,7 +68,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zones", required=true)
-    private final List<String> zones;
+      private final List<String> zones;
 
     public List<String> getZones() {
         return this.zones;
@@ -147,7 +147,6 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public AssignmentResponse build() {
             return new AssignmentResponse(groupLabels, instanceNamePrefixes, instances, osTypes, zones);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GatewayGreengrassArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="groupArn", required=true)
-    private final Input<String> groupArn;
+      private final Input<String> groupArn;
 
     public Input<String> getGroupArn() {
         return this.groupArn;
@@ -65,7 +65,6 @@ public final class GatewayGreengrassArgs extends io.pulumi.resources.ResourceArg
             this.groupArn = Input.of(Objects.requireNonNull(groupArn));
             return this;
         }
-
         public GatewayGreengrassArgs build() {
             return new GatewayGreengrassArgs(groupArn);
         }

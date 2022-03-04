@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="durationMs", required=true)
-    private final Integer durationMs;
+      private final Integer durationMs;
 
     public Integer getDurationMs() {
         return this.durationMs;
@@ -33,7 +33,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -44,7 +44,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -55,7 +55,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -66,7 +66,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -77,7 +77,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="synchronizationId", required=true)
-    private final String synchronizationId;
+      private final String synchronizationId;
 
     public String getSynchronizationId() {
         return this.synchronizationId;
@@ -88,7 +88,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="synchronizationMode", required=true)
-    private final String synchronizationMode;
+      private final String synchronizationMode;
 
     public String getSynchronizationMode() {
         return this.synchronizationMode;
@@ -187,7 +187,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
             this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
             return this;
         }
-
         public ShareSubscriptionSynchronizationResponse build() {
             return new ShareSubscriptionSynchronizationResponse(durationMs, endTime, message, startTime, status, synchronizationId, synchronizationMode);
         }

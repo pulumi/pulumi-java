@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyIdentifier")
-    private final @Nullable Input<String> keyIdentifier;
+      private final @Nullable Input<String> keyIdentifier;
 
     public Input<String> getKeyIdentifier() {
         return this.keyIdentifier == null ? Input.empty() : this.keyIdentifier;
@@ -34,7 +34,7 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVaultResourceArmId")
-    private final @Nullable Input<String> keyVaultResourceArmId;
+      private final @Nullable Input<String> keyVaultResourceArmId;
 
     public Input<String> getKeyVaultResourceArmId() {
         return this.keyVaultResourceArmId == null ? Input.empty() : this.keyVaultResourceArmId;
@@ -93,7 +93,6 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
             this.keyVaultResourceArmId = Input.ofNullable(keyVaultResourceArmId);
             return this;
         }
-
         public KeyEncryptionKeyInfoArgs build() {
             return new KeyEncryptionKeyInfoArgs(keyIdentifier, keyVaultResourceArmId);
         }

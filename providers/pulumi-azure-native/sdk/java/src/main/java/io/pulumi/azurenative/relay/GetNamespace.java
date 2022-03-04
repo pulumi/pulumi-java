@@ -6,21 +6,41 @@ package io.pulumi.azurenative.relay;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.relay.inputs.GetNamespaceArgs;
 import io.pulumi.azurenative.relay.outputs.GetNamespaceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamespace {
-/**
- * Description of a namespace resource.
+    private GetNamespace() {}
+    public interface BuilderApplicator {
+        public void apply(GetNamespaceArgs.Builder a);
+    }
+    private static GetNamespaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNamespaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of a namespace resource.
  * API Version: 2017-04-01.
  * 
- *
- * Description of a namespace resource.
+     *
+     * Description of a namespace resource.
  * 
- */
+     */
+    public static CompletableFuture<GetNamespaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of a namespace resource.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of a namespace resource.
+     * 
+     */
     public static CompletableFuture<GetNamespaceResult> invokeAsync(GetNamespaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getNamespace", TypeShape.of(GetNamespaceResult.class), args == null ? GetNamespaceArgs.Empty : args, Utilities.withVersion(options));
     }

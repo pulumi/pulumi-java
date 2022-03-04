@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SecretResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -75,56 +75,56 @@ public final class DeviceSecretsResponse {
     /**
      * Keyvault Id of BMCDefaultUserPassword
      * 
-     */
+    */
     public Optional<SecretResponse> getBmcDefaultUserPassword() {
         return Optional.ofNullable(this.bmcDefaultUserPassword);
     }
     /**
      * Keyvault Id of HcsDataVolumeBitLockerExternalKey
      * 
-     */
+    */
     public Optional<SecretResponse> getHcsDataVolumeBitLockerExternalKey() {
         return Optional.ofNullable(this.hcsDataVolumeBitLockerExternalKey);
     }
     /**
      * Keyvault Id of HcsInternalVolumeBitLockerExternalKey
      * 
-     */
+    */
     public Optional<SecretResponse> getHcsInternalVolumeBitLockerExternalKey() {
         return Optional.ofNullable(this.hcsInternalVolumeBitLockerExternalKey);
     }
     /**
      * Keyvault Id of RotateKeyForDataVolumeBitlocker
      * 
-     */
+    */
     public Optional<SecretResponse> getRotateKeyForDataVolumeBitlocker() {
         return Optional.ofNullable(this.rotateKeyForDataVolumeBitlocker);
     }
     /**
      * Keyvault Id of RotateKeysForSedDrivesSerialized
      * 
-     */
+    */
     public Optional<SecretResponse> getRotateKeysForSedDrivesSerialized() {
         return Optional.ofNullable(this.rotateKeysForSedDrivesSerialized);
     }
     /**
      * Keyvault Id of SEDEncryptionExternalKey
      * 
-     */
+    */
     public Optional<SecretResponse> getSedEncryptionExternalKey() {
         return Optional.ofNullable(this.sedEncryptionExternalKey);
     }
     /**
      * Keyvault Id of SEDEncryptionExternalKeyId
      * 
-     */
+    */
     public Optional<SecretResponse> getSedEncryptionExternalKeyId() {
         return Optional.ofNullable(this.sedEncryptionExternalKeyId);
     }
     /**
      * Keyvault Id of SystemVolumeBitLockerRecoveryKey
      * 
-     */
+    */
     public Optional<SecretResponse> getSystemVolumeBitLockerRecoveryKey() {
         return Optional.ofNullable(this.systemVolumeBitLockerRecoveryKey);
     }
@@ -202,7 +202,6 @@ public final class DeviceSecretsResponse {
             this.systemVolumeBitLockerRecoveryKey = systemVolumeBitLockerRecoveryKey;
             return this;
         }
-
         public DeviceSecretsResponse build() {
             return new DeviceSecretsResponse(bmcDefaultUserPassword, hcsDataVolumeBitLockerExternalKey, hcsInternalVolumeBitLockerExternalKey, rotateKeyForDataVolumeBitlocker, rotateKeysForSedDrivesSerialized, sedEncryptionExternalKey, sedEncryptionExternalKeyId, systemVolumeBitLockerRecoveryKey);
         }

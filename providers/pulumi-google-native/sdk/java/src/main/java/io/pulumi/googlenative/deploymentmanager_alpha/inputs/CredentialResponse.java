@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.BasicAuthResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.ServiceAccountResponse;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="basicAuth", required=true)
-    private final BasicAuthResponse basicAuth;
+      private final BasicAuthResponse basicAuth;
 
     public BasicAuthResponse getBasicAuth() {
         return this.basicAuth;
@@ -34,7 +34,7 @@ public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final ServiceAccountResponse serviceAccount;
+      private final ServiceAccountResponse serviceAccount;
 
     public ServiceAccountResponse getServiceAccount() {
         return this.serviceAccount;
@@ -45,7 +45,7 @@ public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="useProjectDefault", required=true)
-    private final Boolean useProjectDefault;
+      private final Boolean useProjectDefault;
 
     public Boolean getUseProjectDefault() {
         return this.useProjectDefault;
@@ -104,7 +104,6 @@ public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
             this.useProjectDefault = Objects.requireNonNull(useProjectDefault);
             return this;
         }
-
         public CredentialResponse build() {
             return new CredentialResponse(basicAuth, serviceAccount, useProjectDefault);
         }

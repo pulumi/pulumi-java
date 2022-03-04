@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetExpressRouteCrossConnectionPeeringArgs;
 import io.pulumi.azurenative.network.outputs.GetExpressRouteCrossConnectionPeeringResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExpressRouteCrossConnectionPeering {
-/**
- * Peering in an ExpressRoute Cross Connection resource.
+    private GetExpressRouteCrossConnectionPeering() {}
+    public interface BuilderApplicator {
+        public void apply(GetExpressRouteCrossConnectionPeeringArgs.Builder a);
+    }
+    private static GetExpressRouteCrossConnectionPeeringArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExpressRouteCrossConnectionPeeringArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Peering in an ExpressRoute Cross Connection resource.
  * API Version: 2020-11-01.
  * 
- *
- * Peering in an ExpressRoute Cross Connection resource.
+     *
+     * Peering in an ExpressRoute Cross Connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetExpressRouteCrossConnectionPeeringResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Peering in an ExpressRoute Cross Connection resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Peering in an ExpressRoute Cross Connection resource.
+     * 
+     */
     public static CompletableFuture<GetExpressRouteCrossConnectionPeeringResult> invokeAsync(GetExpressRouteCrossConnectionPeeringArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteCrossConnectionPeering", TypeShape.of(GetExpressRouteCrossConnectionPeeringResult.class), args == null ? GetExpressRouteCrossConnectionPeeringArgs.Empty : args, Utilities.withVersion(options));
     }

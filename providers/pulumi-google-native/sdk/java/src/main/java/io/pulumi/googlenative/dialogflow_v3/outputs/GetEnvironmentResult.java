@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse;
 import java.lang.String;
@@ -62,42 +62,42 @@ public final class GetEnvironmentResult {
     /**
      * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The name of the environment. Format: `projects//locations//agents//environments/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The test cases config for continuous tests of this environment.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse getTestCasesConfig() {
         return this.testCasesConfig;
     }
     /**
      * Update time of this environment.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse> getVersionConfigs() {
         return this.versionConfigs;
     }
@@ -161,7 +161,6 @@ public final class GetEnvironmentResult {
             this.versionConfigs = Objects.requireNonNull(versionConfigs);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(description, displayName, name, testCasesConfig, updateTime, versionConfigs);
         }

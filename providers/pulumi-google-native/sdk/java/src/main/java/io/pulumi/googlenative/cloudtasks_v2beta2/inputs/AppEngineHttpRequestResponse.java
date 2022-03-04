@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.AppEngineRoutingResponse;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="appEngineRouting", required=true)
-    private final AppEngineRoutingResponse appEngineRouting;
+      private final AppEngineRoutingResponse appEngineRouting;
 
     public AppEngineRoutingResponse getAppEngineRouting() {
         return this.appEngineRouting;
@@ -34,7 +34,7 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="headers", required=true)
-    private final Map<String,String> headers;
+      private final Map<String,String> headers;
 
     public Map<String,String> getHeaders() {
         return this.headers;
@@ -45,7 +45,7 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="httpMethod", required=true)
-    private final String httpMethod;
+      private final String httpMethod;
 
     public String getHttpMethod() {
         return this.httpMethod;
@@ -56,7 +56,7 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="payload", required=true)
-    private final String payload;
+      private final String payload;
 
     public String getPayload() {
         return this.payload;
@@ -67,7 +67,7 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="relativeUrl", required=true)
-    private final String relativeUrl;
+      private final String relativeUrl;
 
     public String getRelativeUrl() {
         return this.relativeUrl;
@@ -146,7 +146,6 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
             this.relativeUrl = Objects.requireNonNull(relativeUrl);
             return this;
         }
-
         public AppEngineHttpRequestResponse build() {
             return new AppEngineHttpRequestResponse(appEngineRouting, headers, httpMethod, payload, relativeUrl);
         }

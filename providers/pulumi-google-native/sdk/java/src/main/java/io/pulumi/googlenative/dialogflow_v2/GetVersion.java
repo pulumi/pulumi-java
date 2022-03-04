@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVersion {
-/**
- * Retrieves the specified agent version.
+    private GetVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetVersionArgs.Builder a);
+    }
+    private static GetVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified agent version.
  * 
- */
+     */
+    public static CompletableFuture<GetVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified agent version.
+     * 
+     */
     public static CompletableFuture<GetVersionResult> invokeAsync(GetVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getVersion", TypeShape.of(GetVersionResult.class), args == null ? GetVersionArgs.Empty : args, Utilities.withVersion(options));
     }

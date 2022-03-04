@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceRepositoryResourceAptRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceRepositoryResourceGooRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceRepositoryResourceYumRepositoryResponse;
@@ -24,7 +24,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
      * 
      */
     @InputImport(name="apt", required=true)
-    private final OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
+      private final OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
 
     public OSPolicyResourceRepositoryResourceAptRepositoryResponse getApt() {
         return this.apt;
@@ -35,7 +35,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
      * 
      */
     @InputImport(name="goo", required=true)
-    private final OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
+      private final OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
 
     public OSPolicyResourceRepositoryResourceGooRepositoryResponse getGoo() {
         return this.goo;
@@ -46,7 +46,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
      * 
      */
     @InputImport(name="yum", required=true)
-    private final OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
+      private final OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
 
     public OSPolicyResourceRepositoryResourceYumRepositoryResponse getYum() {
         return this.yum;
@@ -57,7 +57,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
      * 
      */
     @InputImport(name="zypper", required=true)
-    private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
+      private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
 
     public OSPolicyResourceRepositoryResourceZypperRepositoryResponse getZypper() {
         return this.zypper;
@@ -126,7 +126,6 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceResponse build() {
             return new OSPolicyResourceRepositoryResourceResponse(apt, goo, yum, zypper);
         }

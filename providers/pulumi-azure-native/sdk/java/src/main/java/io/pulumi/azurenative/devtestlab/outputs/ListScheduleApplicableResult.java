@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.ScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ListScheduleApplicableResult {
     /**
      * Link for next set of results.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Results of the list operation.
      * 
-     */
+    */
     public List<ScheduleResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -78,7 +78,6 @@ public final class ListScheduleApplicableResult {
             this.value = value;
             return this;
         }
-
         public ListScheduleApplicableResult build() {
             return new ListScheduleApplicableResult(nextLink, value);
         }

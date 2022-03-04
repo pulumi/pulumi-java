@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.JobTargetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,28 +47,28 @@ public final class GetJobTargetGroupResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Members of the target group.
      * 
-     */
+    */
     public List<JobTargetResponse> getMembers() {
         return this.members;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -118,7 +118,6 @@ public final class GetJobTargetGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobTargetGroupResult build() {
             return new GetJobTargetGroupResult(id, members, name, type);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterAut
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterMasterPoolProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftRouterProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.PurchasePlanResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -139,112 +139,112 @@ public final class GetOpenShiftManagedClusterResult {
     /**
      * Configuration of OpenShift cluster VMs.
      * 
-     */
+    */
     public List<OpenShiftManagedClusterAgentPoolProfileResponse> getAgentPoolProfiles() {
         return this.agentPoolProfiles == null ? List.of() : this.agentPoolProfiles;
     }
     /**
      * Configures OpenShift authentication.
      * 
-     */
+    */
     public Optional<OpenShiftManagedClusterAuthProfileResponse> getAuthProfile() {
         return Optional.ofNullable(this.authProfile);
     }
     /**
      * Version of OpenShift specified when creating the cluster.
      * 
-     */
+    */
     public String getClusterVersion() {
         return this.clusterVersion;
     }
     /**
      * Service generated FQDN for OpenShift API server loadbalancer internal hostname.
      * 
-     */
+    */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Configuration for OpenShift master VMs.
      * 
-     */
+    */
     public Optional<OpenShiftManagedClusterMasterPoolProfileResponse> getMasterPoolProfile() {
         return Optional.ofNullable(this.masterPoolProfile);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Configuration for OpenShift networking.
      * 
-     */
+    */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Version of OpenShift specified when creating the cluster.
      * 
-     */
+    */
     public String getOpenShiftVersion() {
         return this.openShiftVersion;
     }
     /**
      * Define the resource plan as required by ARM for billing purposes
      * 
-     */
+    */
     public Optional<PurchasePlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * The current deployment or provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Service generated FQDN for OpenShift API server.
      * 
-     */
+    */
     public String getPublicHostname() {
         return this.publicHostname;
     }
     /**
      * Configuration for OpenShift router(s).
      * 
-     */
+    */
     public List<OpenShiftRouterProfileResponse> getRouterProfiles() {
         return this.routerProfiles == null ? List.of() : this.routerProfiles;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -378,7 +378,6 @@ public final class GetOpenShiftManagedClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOpenShiftManagedClusterResult build() {
             return new GetOpenShiftManagedClusterResult(agentPoolProfiles, authProfile, clusterVersion, fqdn, id, location, masterPoolProfile, name, networkProfile, openShiftVersion, plan, provisioningState, publicHostname, routerProfiles, tags, type);
         }

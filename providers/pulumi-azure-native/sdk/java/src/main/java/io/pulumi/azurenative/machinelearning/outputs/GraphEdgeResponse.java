@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class GraphEdgeResponse {
     /**
      * The source graph node's identifier.
      * 
-     */
+    */
     public Optional<String> getSourceNodeId() {
         return Optional.ofNullable(this.sourceNodeId);
     }
     /**
      * The identifier of the source node's port that the edge connects from.
      * 
-     */
+    */
     public Optional<String> getSourcePortId() {
         return Optional.ofNullable(this.sourcePortId);
     }
     /**
      * The destination graph node's identifier.
      * 
-     */
+    */
     public Optional<String> getTargetNodeId() {
         return Optional.ofNullable(this.targetNodeId);
     }
     /**
      * The identifier of the destination node's port that the edge connects into.
      * 
-     */
+    */
     public Optional<String> getTargetPortId() {
         return Optional.ofNullable(this.targetPortId);
     }
@@ -118,7 +118,6 @@ public final class GraphEdgeResponse {
             this.targetPortId = targetPortId;
             return this;
         }
-
         public GraphEdgeResponse build() {
             return new GraphEdgeResponse(sourceNodeId, sourcePortId, targetNodeId, targetPortId);
         }

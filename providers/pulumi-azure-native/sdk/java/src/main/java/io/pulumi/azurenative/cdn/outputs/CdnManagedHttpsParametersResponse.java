@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.CdnCertificateSourceParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -50,28 +50,28 @@ public final class CdnManagedHttpsParametersResponse {
      * Defines the source of the SSL certificate.
      * Expected value is 'Cdn'.
      * 
-     */
+    */
     public String getCertificateSource() {
         return this.certificateSource;
     }
     /**
      * Defines the certificate source parameters using CDN managed certificate for enabling SSL.
      * 
-     */
+    */
     public CdnCertificateSourceParametersResponse getCertificateSourceParameters() {
         return this.certificateSourceParameters;
     }
     /**
      * TLS protocol version that will be used for Https
      * 
-     */
+    */
     public Optional<String> getMinimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
      * Defines the TLS extension protocol that is used for secure delivery.
      * 
-     */
+    */
     public String getProtocolType() {
         return this.protocolType;
     }
@@ -121,7 +121,6 @@ public final class CdnManagedHttpsParametersResponse {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }
-
         public CdnManagedHttpsParametersResponse build() {
             return new CdnManagedHttpsParametersResponse(certificateSource, certificateSourceParameters, minimumTlsVersion, protocolType);
         }

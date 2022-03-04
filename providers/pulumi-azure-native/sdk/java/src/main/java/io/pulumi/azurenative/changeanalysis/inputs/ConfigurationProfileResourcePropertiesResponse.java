@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.changeanalysis.inputs;
 
 import io.pulumi.azurenative.changeanalysis.inputs.NotificationSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConfigurationProfileResourcePropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="notifications")
-    private final @Nullable NotificationSettingsResponse notifications;
+      private final @Nullable NotificationSettingsResponse notifications;
 
     public Optional<NotificationSettingsResponse> getNotifications() {
         return this.notifications == null ? Optional.empty() : Optional.ofNullable(this.notifications);
@@ -61,7 +61,6 @@ public final class ConfigurationProfileResourcePropertiesResponse extends io.pul
             this.notifications = notifications;
             return this;
         }
-
         public ConfigurationProfileResourcePropertiesResponse build() {
             return new ConfigurationProfileResourcePropertiesResponse(notifications);
         }

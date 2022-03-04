@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -92,70 +92,70 @@ public final class GetPolicyDefinitionResult {
     /**
      * The policy definition description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the policy definition.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The ID of the policy definition.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
-     */
+    */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name of the policy definition.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
      * 
-     */
+    */
     public Map<String,ParameterDefinitionsValueResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The policy rule.
      * 
-     */
+    */
     public Optional<Object> getPolicyRule() {
         return Optional.ofNullable(this.policyRule);
     }
     /**
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
-     */
+    */
     public Optional<String> getPolicyType() {
         return Optional.ofNullable(this.policyType);
     }
     /**
      * The type of the resource (Microsoft.Authorization/policyDefinitions).
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -247,7 +247,6 @@ public final class GetPolicyDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyDefinitionResult build() {
             return new GetPolicyDefinitionResult(description, displayName, id, metadata, mode, name, parameters, policyRule, policyType, type);
         }

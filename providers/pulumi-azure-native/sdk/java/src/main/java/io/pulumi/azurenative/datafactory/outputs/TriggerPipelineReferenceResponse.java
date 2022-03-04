@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.PipelineReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -36,14 +36,14 @@ public final class TriggerPipelineReferenceResponse {
     /**
      * Pipeline parameters.
      * 
-     */
+    */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Pipeline reference.
      * 
-     */
+    */
     public Optional<PipelineReferenceResponse> getPipelineReference() {
         return Optional.ofNullable(this.pipelineReference);
     }
@@ -79,7 +79,6 @@ public final class TriggerPipelineReferenceResponse {
             this.pipelineReference = pipelineReference;
             return this;
         }
-
         public TriggerPipelineReferenceResponse build() {
             return new TriggerPipelineReferenceResponse(parameters, pipelineReference);
         }

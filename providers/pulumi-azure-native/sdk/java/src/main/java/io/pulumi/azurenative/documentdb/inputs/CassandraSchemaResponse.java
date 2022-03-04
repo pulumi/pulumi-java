@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.inputs.CassandraPartitionKeyResponse;
 import io.pulumi.azurenative.documentdb.inputs.ClusterKeyResponse;
 import io.pulumi.azurenative.documentdb.inputs.ColumnResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class CassandraSchemaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="clusterKeys")
-    private final @Nullable List<ClusterKeyResponse> clusterKeys;
+      private final @Nullable List<ClusterKeyResponse> clusterKeys;
 
     public List<ClusterKeyResponse> getClusterKeys() {
         return this.clusterKeys == null ? List.of() : this.clusterKeys;
@@ -37,7 +37,7 @@ public final class CassandraSchemaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable List<ColumnResponse> columns;
+      private final @Nullable List<ColumnResponse> columns;
 
     public List<ColumnResponse> getColumns() {
         return this.columns == null ? List.of() : this.columns;
@@ -48,7 +48,7 @@ public final class CassandraSchemaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="partitionKeys")
-    private final @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
+      private final @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
 
     public List<CassandraPartitionKeyResponse> getPartitionKeys() {
         return this.partitionKeys == null ? List.of() : this.partitionKeys;
@@ -107,7 +107,6 @@ public final class CassandraSchemaResponse extends io.pulumi.resources.InvokeArg
             this.partitionKeys = partitionKeys;
             return this;
         }
-
         public CassandraSchemaResponse build() {
             return new CassandraSchemaResponse(clusterKeys, columns, partitionKeys);
         }

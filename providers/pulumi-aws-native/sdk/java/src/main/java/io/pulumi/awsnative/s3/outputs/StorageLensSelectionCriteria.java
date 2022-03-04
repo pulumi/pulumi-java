@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,21 +42,21 @@ public final class StorageLensSelectionCriteria {
     /**
      * Delimiter to divide S3 key into hierarchy of prefixes.
      * 
-     */
+    */
     public Optional<String> getDelimiter() {
         return Optional.ofNullable(this.delimiter);
     }
     /**
      * Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
      * 
-     */
+    */
     public Optional<Integer> getMaxDepth() {
         return Optional.ofNullable(this.maxDepth);
     }
     /**
      * The minimum storage bytes threshold for the prefixes to be included in the analysis.
      * 
-     */
+    */
     public Optional<Double> getMinStorageBytesPercentage() {
         return Optional.ofNullable(this.minStorageBytesPercentage);
     }
@@ -99,7 +99,6 @@ public final class StorageLensSelectionCriteria {
             this.minStorageBytesPercentage = minStorageBytesPercentage;
             return this;
         }
-
         public StorageLensSelectionCriteria build() {
             return new StorageLensSelectionCriteria(delimiter, maxDepth, minStorageBytesPercentage);
         }

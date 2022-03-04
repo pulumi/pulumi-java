@@ -5,7 +5,7 @@ package io.pulumi.azurenative.management.outputs;
 
 import io.pulumi.azurenative.management.outputs.ManagementGroupChildInfoResponse;
 import io.pulumi.azurenative.management.outputs.ManagementGroupDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class GetManagementGroupResult {
     /**
      * The list of children.
      * 
-     */
+    */
     public List<ManagementGroupChildInfoResponse> getChildren() {
         return this.children == null ? List.of() : this.children;
     }
     /**
      * The details of a management group.
      * 
-     */
+    */
     public Optional<ManagementGroupDetailsResponse> getDetails() {
         return Optional.ofNullable(this.details);
     }
     /**
      * The friendly name of the management group.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The fully qualified ID for the management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of the resource.  For example, Microsoft.Management/managementGroups
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class GetManagementGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementGroupResult build() {
             return new GetManagementGroupResult(children, details, displayName, id, name, tenantId, type);
         }

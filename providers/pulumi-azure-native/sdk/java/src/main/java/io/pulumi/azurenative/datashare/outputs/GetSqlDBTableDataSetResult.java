@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -89,21 +89,21 @@ public final class GetSqlDBTableDataSetResult {
     /**
      * Unique id for identifying a data set resource
      * 
-     */
+    */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * Database name of the source data set
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -111,49 +111,49 @@ public final class GetSqlDBTableDataSetResult {
      * Kind of data set.
      * Expected value is 'SqlDBTable'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Schema of the table. Default value is dbo.
      * 
-     */
+    */
     public String getSchemaName() {
         return this.schemaName;
     }
     /**
      * Resource id of SQL server
      * 
-     */
+    */
     public String getSqlServerResourceId() {
         return this.sqlServerResourceId;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * SQL DB table name.
      * 
-     */
+    */
     public String getTableName() {
         return this.tableName;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -245,7 +245,6 @@ public final class GetSqlDBTableDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlDBTableDataSetResult build() {
             return new GetSqlDBTableDataSetResult(dataSetId, databaseName, id, kind, name, schemaName, sqlServerResourceId, systemData, tableName, type);
         }

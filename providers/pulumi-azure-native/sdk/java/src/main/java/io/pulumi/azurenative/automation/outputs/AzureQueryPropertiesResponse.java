@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.TagSettingsPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class AzureQueryPropertiesResponse {
     /**
      * List of locations to scope the query to.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * List of Subscription or Resource Group ARM Ids.
      * 
-     */
+    */
     public List<String> getScope() {
         return this.scope == null ? List.of() : this.scope;
     }
     /**
      * Tag settings for the VM.
      * 
-     */
+    */
     public Optional<TagSettingsPropertiesResponse> getTagSettings() {
         return Optional.ofNullable(this.tagSettings);
     }
@@ -99,7 +99,6 @@ public final class AzureQueryPropertiesResponse {
             this.tagSettings = tagSettings;
             return this;
         }
-
         public AzureQueryPropertiesResponse build() {
             return new AzureQueryPropertiesResponse(locations, scope, tagSettings);
         }

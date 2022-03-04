@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class NetworkInfoResponse {
     /**
      * Name of a Compute Engine network.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The IP range that matches the test.
      * 
-     */
+    */
     public String getMatchedIpRange() {
         return this.matchedIpRange;
     }
     /**
      * URI of a Compute Engine network.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -95,7 +95,6 @@ public final class NetworkInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public NetworkInfoResponse build() {
             return new NetworkInfoResponse(displayName, matchedIpRange, uri);
         }

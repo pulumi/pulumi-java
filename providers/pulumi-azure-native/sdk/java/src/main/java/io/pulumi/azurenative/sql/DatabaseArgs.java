@@ -13,7 +13,7 @@ import io.pulumi.azurenative.sql.enums.SecondaryType;
 import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -32,7 +32,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoPauseDelay")
-    private final @Nullable Input<Integer> autoPauseDelay;
+      private final @Nullable Input<Integer> autoPauseDelay;
 
     public Input<Integer> getAutoPauseDelay() {
         return this.autoPauseDelay == null ? Input.empty() : this.autoPauseDelay;
@@ -43,7 +43,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogCollation")
-    private final @Nullable Input<Either<String,CatalogCollationType>> catalogCollation;
+      private final @Nullable Input<Either<String,CatalogCollationType>> catalogCollation;
 
     public Input<Either<String,CatalogCollationType>> getCatalogCollation() {
         return this.catalogCollation == null ? Input.empty() : this.catalogCollation;
@@ -54,7 +54,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collation")
-    private final @Nullable Input<String> collation;
+      private final @Nullable Input<String> collation;
 
     public Input<String> getCollation() {
         return this.collation == null ? Input.empty() : this.collation;
@@ -81,7 +81,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createMode")
-    private final @Nullable Input<Either<String,CreateMode>> createMode;
+      private final @Nullable Input<Either<String,CreateMode>> createMode;
 
     public Input<Either<String,CreateMode>> getCreateMode() {
         return this.createMode == null ? Input.empty() : this.createMode;
@@ -92,7 +92,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -103,7 +103,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticPoolId")
-    private final @Nullable Input<String> elasticPoolId;
+      private final @Nullable Input<String> elasticPoolId;
 
     public Input<String> getElasticPoolId() {
         return this.elasticPoolId == null ? Input.empty() : this.elasticPoolId;
@@ -114,7 +114,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="highAvailabilityReplicaCount")
-    private final @Nullable Input<Integer> highAvailabilityReplicaCount;
+      private final @Nullable Input<Integer> highAvailabilityReplicaCount;
 
     public Input<Integer> getHighAvailabilityReplicaCount() {
         return this.highAvailabilityReplicaCount == null ? Input.empty() : this.highAvailabilityReplicaCount;
@@ -125,7 +125,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable Input<Either<String,DatabaseLicenseType>> licenseType;
+      private final @Nullable Input<Either<String,DatabaseLicenseType>> licenseType;
 
     public Input<Either<String,DatabaseLicenseType>> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -136,7 +136,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -147,7 +147,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="longTermRetentionBackupResourceId")
-    private final @Nullable Input<String> longTermRetentionBackupResourceId;
+      private final @Nullable Input<String> longTermRetentionBackupResourceId;
 
     public Input<String> getLongTermRetentionBackupResourceId() {
         return this.longTermRetentionBackupResourceId == null ? Input.empty() : this.longTermRetentionBackupResourceId;
@@ -158,7 +158,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceConfigurationId")
-    private final @Nullable Input<String> maintenanceConfigurationId;
+      private final @Nullable Input<String> maintenanceConfigurationId;
 
     public Input<String> getMaintenanceConfigurationId() {
         return this.maintenanceConfigurationId == null ? Input.empty() : this.maintenanceConfigurationId;
@@ -169,7 +169,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSizeBytes")
-    private final @Nullable Input<Double> maxSizeBytes;
+      private final @Nullable Input<Double> maxSizeBytes;
 
     public Input<Double> getMaxSizeBytes() {
         return this.maxSizeBytes == null ? Input.empty() : this.maxSizeBytes;
@@ -180,7 +180,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minCapacity")
-    private final @Nullable Input<Double> minCapacity;
+      private final @Nullable Input<Double> minCapacity;
 
     public Input<Double> getMinCapacity() {
         return this.minCapacity == null ? Input.empty() : this.minCapacity;
@@ -191,7 +191,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readScale")
-    private final @Nullable Input<Either<String,DatabaseReadScale>> readScale;
+      private final @Nullable Input<Either<String,DatabaseReadScale>> readScale;
 
     public Input<Either<String,DatabaseReadScale>> getReadScale() {
         return this.readScale == null ? Input.empty() : this.readScale;
@@ -202,7 +202,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoverableDatabaseId")
-    private final @Nullable Input<String> recoverableDatabaseId;
+      private final @Nullable Input<String> recoverableDatabaseId;
 
     public Input<String> getRecoverableDatabaseId() {
         return this.recoverableDatabaseId == null ? Input.empty() : this.recoverableDatabaseId;
@@ -213,7 +213,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoveryServicesRecoveryPointId")
-    private final @Nullable Input<String> recoveryServicesRecoveryPointId;
+      private final @Nullable Input<String> recoveryServicesRecoveryPointId;
 
     public Input<String> getRecoveryServicesRecoveryPointId() {
         return this.recoveryServicesRecoveryPointId == null ? Input.empty() : this.recoveryServicesRecoveryPointId;
@@ -224,7 +224,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestedBackupStorageRedundancy")
-    private final @Nullable Input<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
+      private final @Nullable Input<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
 
     public Input<Either<String,RequestedBackupStorageRedundancy>> getRequestedBackupStorageRedundancy() {
         return this.requestedBackupStorageRedundancy == null ? Input.empty() : this.requestedBackupStorageRedundancy;
@@ -235,7 +235,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -246,7 +246,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorableDroppedDatabaseId")
-    private final @Nullable Input<String> restorableDroppedDatabaseId;
+      private final @Nullable Input<String> restorableDroppedDatabaseId;
 
     public Input<String> getRestorableDroppedDatabaseId() {
         return this.restorableDroppedDatabaseId == null ? Input.empty() : this.restorableDroppedDatabaseId;
@@ -257,7 +257,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorePointInTime")
-    private final @Nullable Input<String> restorePointInTime;
+      private final @Nullable Input<String> restorePointInTime;
 
     public Input<String> getRestorePointInTime() {
         return this.restorePointInTime == null ? Input.empty() : this.restorePointInTime;
@@ -268,7 +268,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampleName")
-    private final @Nullable Input<Either<String,SampleName>> sampleName;
+      private final @Nullable Input<Either<String,SampleName>> sampleName;
 
     public Input<Either<String,SampleName>> getSampleName() {
         return this.sampleName == null ? Input.empty() : this.sampleName;
@@ -279,7 +279,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryType")
-    private final @Nullable Input<Either<String,SecondaryType>> secondaryType;
+      private final @Nullable Input<Either<String,SecondaryType>> secondaryType;
 
     public Input<Either<String,SecondaryType>> getSecondaryType() {
         return this.secondaryType == null ? Input.empty() : this.secondaryType;
@@ -290,7 +290,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -303,7 +303,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -314,7 +314,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDatabaseDeletionDate")
-    private final @Nullable Input<String> sourceDatabaseDeletionDate;
+      private final @Nullable Input<String> sourceDatabaseDeletionDate;
 
     public Input<String> getSourceDatabaseDeletionDate() {
         return this.sourceDatabaseDeletionDate == null ? Input.empty() : this.sourceDatabaseDeletionDate;
@@ -325,7 +325,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDatabaseId")
-    private final @Nullable Input<String> sourceDatabaseId;
+      private final @Nullable Input<String> sourceDatabaseId;
 
     public Input<String> getSourceDatabaseId() {
         return this.sourceDatabaseId == null ? Input.empty() : this.sourceDatabaseId;
@@ -336,7 +336,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -347,7 +347,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneRedundant")
-    private final @Nullable Input<Boolean> zoneRedundant;
+      private final @Nullable Input<Boolean> zoneRedundant;
 
     public Input<Boolean> getZoneRedundant() {
         return this.zoneRedundant == null ? Input.empty() : this.zoneRedundant;
@@ -796,7 +796,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.zoneRedundant = Input.ofNullable(zoneRedundant);
             return this;
         }
-
         public DatabaseArgs build() {
             return new DatabaseArgs(autoPauseDelay, catalogCollation, collation, createMode, databaseName, elasticPoolId, highAvailabilityReplicaCount, licenseType, location, longTermRetentionBackupResourceId, maintenanceConfigurationId, maxSizeBytes, minCapacity, readScale, recoverableDatabaseId, recoveryServicesRecoveryPointId, requestedBackupStorageRedundancy, resourceGroupName, restorableDroppedDatabaseId, restorePointInTime, sampleName, secondaryType, serverName, sku, sourceDatabaseDeletionDate, sourceDatabaseId, tags, zoneRedundant);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.IncidentInfoResponse;
 import io.pulumi.azurenative.securityinsights.outputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -141,119 +141,119 @@ public final class GetBookmarkResult {
     /**
      * The time the bookmark was created
      * 
-     */
+    */
     public Optional<String> getCreated() {
         return Optional.ofNullable(this.created);
     }
     /**
      * Describes a user that created the bookmark
      * 
-     */
+    */
     public Optional<UserInfoResponse> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The display name of the bookmark
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The bookmark event time
      * 
-     */
+    */
     public Optional<String> getEventTime() {
         return Optional.ofNullable(this.eventTime);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Describes an incident that relates to bookmark
      * 
-     */
+    */
     public Optional<IncidentInfoResponse> getIncidentInfo() {
         return Optional.ofNullable(this.incidentInfo);
     }
     /**
      * List of labels relevant to this bookmark
      * 
-     */
+    */
     public List<String> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The notes of the bookmark
      * 
-     */
+    */
     public Optional<String> getNotes() {
         return Optional.ofNullable(this.notes);
     }
     /**
      * The query of the bookmark.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
     /**
      * The end time for the query
      * 
-     */
+    */
     public Optional<String> getQueryEndTime() {
         return Optional.ofNullable(this.queryEndTime);
     }
     /**
      * The query result of the bookmark.
      * 
-     */
+    */
     public Optional<String> getQueryResult() {
         return Optional.ofNullable(this.queryResult);
     }
     /**
      * The start time for the query
      * 
-     */
+    */
     public Optional<String> getQueryStartTime() {
         return Optional.ofNullable(this.queryStartTime);
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The last time the bookmark was updated
      * 
-     */
+    */
     public Optional<String> getUpdated() {
         return Optional.ofNullable(this.updated);
     }
     /**
      * Describes a user that updated the bookmark
      * 
-     */
+    */
     public Optional<UserInfoResponse> getUpdatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
@@ -394,7 +394,6 @@ public final class GetBookmarkResult {
             this.updatedBy = updatedBy;
             return this;
         }
-
         public GetBookmarkResult build() {
             return new GetBookmarkResult(created, createdBy, displayName, etag, eventTime, id, incidentInfo, labels, name, notes, query, queryEndTime, queryResult, queryStartTime, type, updated, updatedBy);
         }

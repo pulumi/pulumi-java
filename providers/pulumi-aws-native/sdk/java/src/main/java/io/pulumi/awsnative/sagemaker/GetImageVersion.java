@@ -6,17 +6,33 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.sagemaker.inputs.GetImageVersionArgs;
 import io.pulumi.awsnative.sagemaker.outputs.GetImageVersionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImageVersion {
-/**
- * Resource Type definition for AWS::SageMaker::ImageVersion
+    private GetImageVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetImageVersionArgs.Builder a);
+    }
+    private static GetImageVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetImageVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ImageVersion
  * 
- */
+     */
+    public static CompletableFuture<GetImageVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::SageMaker::ImageVersion
+     * 
+     */
     public static CompletableFuture<GetImageVersionResult> invokeAsync(GetImageVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getImageVersion", TypeShape.of(GetImageVersionResult.class), args == null ? GetImageVersionArgs.Empty : args, Utilities.withVersion(options));
     }

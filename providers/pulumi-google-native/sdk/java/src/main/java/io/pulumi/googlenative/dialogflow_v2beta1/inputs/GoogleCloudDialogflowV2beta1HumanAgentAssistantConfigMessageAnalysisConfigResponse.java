@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
      * 
      */
     @InputImport(name="enableEntityExtraction", required=true)
-    private final Boolean enableEntityExtraction;
+      private final Boolean enableEntityExtraction;
 
     public Boolean getEnableEntityExtraction() {
         return this.enableEntityExtraction;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
      * 
      */
     @InputImport(name="enableSentimentAnalysis", required=true)
-    private final Boolean enableSentimentAnalysis;
+      private final Boolean enableSentimentAnalysis;
 
     public Boolean getEnableSentimentAnalysis() {
         return this.enableSentimentAnalysis;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
             this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse(enableEntityExtraction, enableSentimentAnalysis);
         }

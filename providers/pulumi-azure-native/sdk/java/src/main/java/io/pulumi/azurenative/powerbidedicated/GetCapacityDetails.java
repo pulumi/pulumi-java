@@ -6,21 +6,41 @@ package io.pulumi.azurenative.powerbidedicated;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.powerbidedicated.inputs.GetCapacityDetailsArgs;
 import io.pulumi.azurenative.powerbidedicated.outputs.GetCapacityDetailsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapacityDetails {
-/**
- * Represents an instance of a Dedicated Capacity resource.
+    private GetCapacityDetails() {}
+    public interface BuilderApplicator {
+        public void apply(GetCapacityDetailsArgs.Builder a);
+    }
+    private static GetCapacityDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCapacityDetailsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents an instance of a Dedicated Capacity resource.
  * API Version: 2021-01-01.
  * 
- *
- * Represents an instance of a Dedicated Capacity resource.
+     *
+     * Represents an instance of a Dedicated Capacity resource.
  * 
- */
+     */
+    public static CompletableFuture<GetCapacityDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents an instance of a Dedicated Capacity resource.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Represents an instance of a Dedicated Capacity resource.
+     * 
+     */
     public static CompletableFuture<GetCapacityDetailsResult> invokeAsync(GetCapacityDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbidedicated:getCapacityDetails", TypeShape.of(GetCapacityDetailsResult.class), args == null ? GetCapacityDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

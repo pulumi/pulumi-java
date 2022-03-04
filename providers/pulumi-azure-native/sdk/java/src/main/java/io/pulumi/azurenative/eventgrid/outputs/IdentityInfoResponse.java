@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.UserIdentityPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -51,21 +51,21 @@ public final class IdentityInfoResponse {
     /**
      * The principal ID of resource identity.
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The tenant ID of resource.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -74,7 +74,7 @@ public final class IdentityInfoResponse {
      * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * This property is currently not used and reserved for future usage.
      * 
-     */
+    */
     public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
@@ -124,7 +124,6 @@ public final class IdentityInfoResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public IdentityInfoResponse build() {
             return new IdentityInfoResponse(principalId, tenantId, type, userAssignedIdentities);
         }

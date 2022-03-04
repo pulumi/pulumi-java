@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="actionType", required=true)
-    private final String actionType;
+      private final String actionType;
 
     public String getActionType() {
         return this.actionType;
@@ -35,7 +35,7 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable String connectionString;
+      private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
@@ -46,7 +46,7 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="eventHubResourceId")
-    private final @Nullable String eventHubResourceId;
+      private final @Nullable String eventHubResourceId;
 
     public Optional<String> getEventHubResourceId() {
         return this.eventHubResourceId == null ? Optional.empty() : Optional.ofNullable(this.eventHubResourceId);
@@ -57,7 +57,7 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sasPolicyName", required=true)
-    private final String sasPolicyName;
+      private final String sasPolicyName;
 
     public String getSasPolicyName() {
         return this.sasPolicyName;
@@ -126,7 +126,6 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
             this.sasPolicyName = Objects.requireNonNull(sasPolicyName);
             return this;
         }
-
         public AutomationActionEventHubResponse build() {
             return new AutomationActionEventHubResponse(actionType, connectionString, eventHubResourceId, sasPolicyName);
         }

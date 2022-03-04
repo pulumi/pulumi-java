@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.EnvironmentImageRes
 import io.pulumi.azurenative.machinelearningservices.outputs.EnvironmentImageResponseResponseEnvironmentReference;
 import io.pulumi.azurenative.machinelearningservices.outputs.ImageAssetResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -66,42 +66,42 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest {
     /**
      * The list of assets.
      * 
-     */
+    */
     public List<ImageAssetResponse> getAssets() {
         return this.assets == null ? List.of() : this.assets;
     }
     /**
      * The name of the driver file.
      * 
-     */
+    */
     public Optional<String> getDriverProgram() {
         return Optional.ofNullable(this.driverProgram);
     }
     /**
      * The details of the AZURE ML environment.
      * 
-     */
+    */
     public Optional<EnvironmentImageResponseResponseEnvironment> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
     /**
      * The unique identifying details of the AZURE ML environment.
      * 
-     */
+    */
     public Optional<EnvironmentImageResponseResponseEnvironmentReference> getEnvironmentReference() {
         return Optional.ofNullable(this.environmentReference);
     }
     /**
      * The list of model Ids.
      * 
-     */
+    */
     public List<String> getModelIds() {
         return this.modelIds == null ? List.of() : this.modelIds;
     }
     /**
      * The list of models.
      * 
-     */
+    */
     public List<ModelResponse> getModels() {
         return this.models == null ? List.of() : this.models;
     }
@@ -165,7 +165,6 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest {
             this.models = models;
             return this;
         }
-
         public ACIServiceResponseResponseEnvironmentImageRequest build() {
             return new ACIServiceResponseResponseEnvironmentImageRequest(assets, driverProgram, environment, environmentReference, modelIds, models);
         }

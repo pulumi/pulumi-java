@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ConfigurationGroupResponse;
 import io.pulumi.azurenative.network.inputs.ConnectivityGroupItemResponse;
 import io.pulumi.azurenative.network.inputs.HubResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="appliesToGroups")
-    private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
+      private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
 
     public List<ConnectivityGroupItemResponse> getAppliesToGroups() {
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
@@ -38,7 +38,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="configurationGroups")
-    private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
+      private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
 
     public List<ConfigurationGroupResponse> getConfigurationGroups() {
         return this.configurationGroups == null ? List.of() : this.configurationGroups;
@@ -49,7 +49,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="connectivityTopology", required=true)
-    private final String connectivityTopology;
+      private final String connectivityTopology;
 
     public String getConnectivityTopology() {
         return this.connectivityTopology;
@@ -60,7 +60,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="deleteExistingPeering")
-    private final @Nullable String deleteExistingPeering;
+      private final @Nullable String deleteExistingPeering;
 
     public Optional<String> getDeleteExistingPeering() {
         return this.deleteExistingPeering == null ? Optional.empty() : Optional.ofNullable(this.deleteExistingPeering);
@@ -71,7 +71,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -82,7 +82,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -93,7 +93,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="hubs")
-    private final @Nullable List<HubResponse> hubs;
+      private final @Nullable List<HubResponse> hubs;
 
     public List<HubResponse> getHubs() {
         return this.hubs == null ? List.of() : this.hubs;
@@ -104,7 +104,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -115,7 +115,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="isGlobal")
-    private final @Nullable String isGlobal;
+      private final @Nullable String isGlobal;
 
     public Optional<String> getIsGlobal() {
         return this.isGlobal == null ? Optional.empty() : Optional.ofNullable(this.isGlobal);
@@ -126,7 +126,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -255,7 +255,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public EffectiveConnectivityConfigurationResponse build() {
             return new EffectiveConnectivityConfigurationResponse(appliesToGroups, configurationGroups, connectivityTopology, deleteExistingPeering, description, displayName, hubs, id, isGlobal, provisioningState);
         }

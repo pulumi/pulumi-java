@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureResponse extends
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureResponse extends
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1SuggestionFeatureResponse build() {
             return new GoogleCloudDialogflowV2beta1SuggestionFeatureResponse(type);
         }

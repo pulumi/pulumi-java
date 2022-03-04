@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.EntityInsightItemResponse;
 import io.pulumi.azurenative.securityinsights.outputs.GetInsightsResultsMetadataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class GetEntityInsightsResult {
     /**
      * The metadata from the get insights operation results.
      * 
-     */
+    */
     public Optional<GetInsightsResultsMetadataResponse> getMetaData() {
         return Optional.ofNullable(this.metaData);
     }
     /**
      * The insights result values.
      * 
-     */
+    */
     public List<EntityInsightItemResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -78,7 +78,6 @@ public final class GetEntityInsightsResult {
             this.value = value;
             return this;
         }
-
         public GetEntityInsightsResult build() {
             return new GetEntityInsightsResult(metaData, value);
         }

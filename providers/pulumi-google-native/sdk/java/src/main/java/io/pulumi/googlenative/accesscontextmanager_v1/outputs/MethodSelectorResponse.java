@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class MethodSelectorResponse {
     /**
      * Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
      * 
-     */
+    */
     public String getMethod() {
         return this.method;
     }
     /**
      * Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
      * 
-     */
+    */
     public String getPermission() {
         return this.permission;
     }
@@ -74,7 +74,6 @@ public final class MethodSelectorResponse {
             this.permission = Objects.requireNonNull(permission);
             return this;
         }
-
         public MethodSelectorResponse build() {
             return new MethodSelectorResponse(method, permission);
         }

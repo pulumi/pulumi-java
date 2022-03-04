@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cache.inputs;
 import io.pulumi.azurenative.cache.enums.SkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class EnterpriseSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+      private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -37,7 +37,7 @@ public final class EnterpriseSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,SkuName>> name;
+      private final Input<Either<String,SkuName>> name;
 
     public Input<Either<String,SkuName>> getName() {
         return this.name;
@@ -96,7 +96,6 @@ public final class EnterpriseSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public EnterpriseSkuArgs build() {
             return new EnterpriseSkuArgs(capacity, name);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobS3Location;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class JobS3TableOutputOptions {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public JobS3TableOutputOptions build() {
             return new JobS3TableOutputOptions(location);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="templateSpecName", required=true)
-    private final String templateSpecName;
+      private final String templateSpecName;
 
     public String getTemplateSpecName() {
         return this.templateSpecName;
@@ -100,7 +100,6 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
             this.templateSpecName = Objects.requireNonNull(templateSpecName);
             return this;
         }
-
         public GetTemplateSpecArgs build() {
             return new GetTemplateSpecArgs(expand, resourceGroupName, templateSpecName);
         }

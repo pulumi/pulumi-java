@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.RepositoryRefDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="httpsCAFile")
-    private final @Nullable Input<String> httpsCAFile;
+      private final @Nullable Input<String> httpsCAFile;
 
     public Input<String> getHttpsCAFile() {
         return this.httpsCAFile == null ? Input.empty() : this.httpsCAFile;
@@ -36,7 +36,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="httpsUser")
-    private final @Nullable Input<String> httpsUser;
+      private final @Nullable Input<String> httpsUser;
 
     public Input<String> getHttpsUser() {
         return this.httpsUser == null ? Input.empty() : this.httpsUser;
@@ -47,7 +47,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="localAuthRef")
-    private final @Nullable Input<String> localAuthRef;
+      private final @Nullable Input<String> localAuthRef;
 
     public Input<String> getLocalAuthRef() {
         return this.localAuthRef == null ? Input.empty() : this.localAuthRef;
@@ -58,7 +58,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="repositoryRef")
-    private final @Nullable Input<RepositoryRefDefinitionArgs> repositoryRef;
+      private final @Nullable Input<RepositoryRefDefinitionArgs> repositoryRef;
 
     public Input<RepositoryRefDefinitionArgs> getRepositoryRef() {
         return this.repositoryRef == null ? Input.empty() : this.repositoryRef;
@@ -69,7 +69,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sshKnownHosts")
-    private final @Nullable Input<String> sshKnownHosts;
+      private final @Nullable Input<String> sshKnownHosts;
 
     public Input<String> getSshKnownHosts() {
         return this.sshKnownHosts == null ? Input.empty() : this.sshKnownHosts;
@@ -80,7 +80,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="syncIntervalInSeconds")
-    private final @Nullable Input<Double> syncIntervalInSeconds;
+      private final @Nullable Input<Double> syncIntervalInSeconds;
 
     public Input<Double> getSyncIntervalInSeconds() {
         return this.syncIntervalInSeconds == null ? Input.empty() : this.syncIntervalInSeconds;
@@ -91,7 +91,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Input<Double> timeoutInSeconds;
+      private final @Nullable Input<Double> timeoutInSeconds;
 
     public Input<Double> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
@@ -102,7 +102,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -251,7 +251,6 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public GitRepositoryDefinitionArgs build() {
             return new GitRepositoryDefinitionArgs(httpsCAFile, httpsUser, localAuthRef, repositoryRef, sshKnownHosts, syncIntervalInSeconds, timeoutInSeconds, url);
         }

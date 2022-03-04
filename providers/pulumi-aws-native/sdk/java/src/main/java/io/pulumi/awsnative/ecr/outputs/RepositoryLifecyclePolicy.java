@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecr.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class RepositoryLifecyclePolicy {
             this.registryId = registryId;
             return this;
         }
-
         public RepositoryLifecyclePolicy build() {
             return new RepositoryLifecyclePolicy(lifecyclePolicyText, registryId);
         }

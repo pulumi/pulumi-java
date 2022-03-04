@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1RenewalSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse {
     /**
      * Commitment end timestamp.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Optional. Renewal settings applicable for a commitment-based Offer.
      * 
-     */
+    */
     public GoogleCloudChannelV1RenewalSettingsResponse getRenewalSettings() {
         return this.renewalSettings;
     }
     /**
      * Commitment start timestamp.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GoogleCloudChannelV1CommitmentSettingsResponse build() {
             return new GoogleCloudChannelV1CommitmentSettingsResponse(endTime, renewalSettings, startTime);
         }

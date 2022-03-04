@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,42 +14,42 @@ public final class GetHealthCheckSslHealthCheck extends io.pulumi.resources.Invo
     public static final GetHealthCheckSslHealthCheck Empty = new GetHealthCheckSslHealthCheck();
 
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
     }
 
     @InputImport(name="portName", required=true)
-    private final String portName;
+      private final String portName;
 
     public String getPortName() {
         return this.portName;
     }
 
     @InputImport(name="portSpecification", required=true)
-    private final String portSpecification;
+      private final String portSpecification;
 
     public String getPortSpecification() {
         return this.portSpecification;
     }
 
     @InputImport(name="proxyHeader", required=true)
-    private final String proxyHeader;
+      private final String proxyHeader;
 
     public String getProxyHeader() {
         return this.proxyHeader;
     }
 
     @InputImport(name="request", required=true)
-    private final String request;
+      private final String request;
 
     public String getRequest() {
         return this.request;
     }
 
     @InputImport(name="response", required=true)
-    private final String response;
+      private final String response;
 
     public String getResponse() {
         return this.response;
@@ -138,7 +138,6 @@ public final class GetHealthCheckSslHealthCheck extends io.pulumi.resources.Invo
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public GetHealthCheckSslHealthCheck build() {
             return new GetHealthCheckSslHealthCheck(port, portName, portSpecification, proxyHeader, request, response);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceConfluenceSpaceFieldName;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,21 +16,21 @@ public final class DataSourceConfluenceSpaceToIndexFieldMapping extends io.pulum
     public static final DataSourceConfluenceSpaceToIndexFieldMapping Empty = new DataSourceConfluenceSpaceToIndexFieldMapping();
 
     @InputImport(name="dataSourceFieldName", required=true)
-    private final DataSourceConfluenceSpaceFieldName dataSourceFieldName;
+      private final DataSourceConfluenceSpaceFieldName dataSourceFieldName;
 
     public DataSourceConfluenceSpaceFieldName getDataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @InputImport(name="dateFieldFormat")
-    private final @Nullable String dateFieldFormat;
+      private final @Nullable String dateFieldFormat;
 
     public Optional<String> getDateFieldFormat() {
         return this.dateFieldFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFieldFormat);
     }
 
     @InputImport(name="indexFieldName", required=true)
-    private final String indexFieldName;
+      private final String indexFieldName;
 
     public String getIndexFieldName() {
         return this.indexFieldName;
@@ -89,7 +89,6 @@ public final class DataSourceConfluenceSpaceToIndexFieldMapping extends io.pulum
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
-
         public DataSourceConfluenceSpaceToIndexFieldMapping build() {
             return new DataSourceConfluenceSpaceToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

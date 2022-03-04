@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class EmptyDirVolumeSource {
     /**
      * What type of storage medium should back this directory. The default is "" which means to use the node's default medium. Must be an empty string (default) or Memory. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
      * 
-     */
+    */
     public Optional<String> getMedium() {
         return Optional.ofNullable(this.medium);
     }
     /**
      * Total amount of local storage required for this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. The default is nil which means that the limit is undefined. More info: http://kubernetes.io/docs/user-guide/volumes#emptydir
      * 
-     */
+    */
     public Optional<String> getSizeLimit() {
         return Optional.ofNullable(this.sizeLimit);
     }
@@ -76,7 +76,6 @@ public final class EmptyDirVolumeSource {
             this.sizeLimit = sizeLimit;
             return this;
         }
-
         public EmptyDirVolumeSource build() {
             return new EmptyDirVolumeSource(medium, sizeLimit);
         }

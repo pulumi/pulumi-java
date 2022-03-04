@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkACLResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable List<String> allow;
+      private final @Nullable List<String> allow;
 
     public List<String> getAllow() {
         return this.allow == null ? List.of() : this.allow;
@@ -35,7 +35,7 @@ public final class NetworkACLResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deny")
-    private final @Nullable List<String> deny;
+      private final @Nullable List<String> deny;
 
     public List<String> getDeny() {
         return this.deny == null ? List.of() : this.deny;
@@ -84,7 +84,6 @@ public final class NetworkACLResponse extends io.pulumi.resources.InvokeArgs {
             this.deny = deny;
             return this;
         }
-
         public NetworkACLResponse build() {
             return new NetworkACLResponse(allow, deny);
         }

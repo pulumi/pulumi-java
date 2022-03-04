@@ -7,7 +7,7 @@ import io.pulumi.azurenative.netapp.inputs.ReplicationObjectArgs;
 import io.pulumi.azurenative.netapp.inputs.VolumeBackupPropertiesArgs;
 import io.pulumi.azurenative.netapp.inputs.VolumeSnapshotPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="backup")
-    private final @Nullable Input<VolumeBackupPropertiesArgs> backup;
+      private final @Nullable Input<VolumeBackupPropertiesArgs> backup;
 
     public Input<VolumeBackupPropertiesArgs> getBackup() {
         return this.backup == null ? Input.empty() : this.backup;
@@ -36,7 +36,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="replication")
-    private final @Nullable Input<ReplicationObjectArgs> replication;
+      private final @Nullable Input<ReplicationObjectArgs> replication;
 
     public Input<ReplicationObjectArgs> getReplication() {
         return this.replication == null ? Input.empty() : this.replication;
@@ -47,7 +47,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="snapshot")
-    private final @Nullable Input<VolumeSnapshotPropertiesArgs> snapshot;
+      private final @Nullable Input<VolumeSnapshotPropertiesArgs> snapshot;
 
     public Input<VolumeSnapshotPropertiesArgs> getSnapshot() {
         return this.snapshot == null ? Input.empty() : this.snapshot;
@@ -121,7 +121,6 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
             this.snapshot = Input.ofNullable(snapshot);
             return this;
         }
-
         public VolumePropertiesDataProtectionArgs build() {
             return new VolumePropertiesDataProtectionArgs(backup, replication, snapshot);
         }

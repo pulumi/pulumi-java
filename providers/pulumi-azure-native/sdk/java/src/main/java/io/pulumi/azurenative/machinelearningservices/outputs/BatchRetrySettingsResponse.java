@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class BatchRetrySettingsResponse {
     /**
      * Maximum retry count for a mini-batch
      * 
-     */
+    */
     public Optional<Integer> getMaxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }
     /**
      * Invocation timeout for a mini-batch, in ISO 8601 format.
      * 
-     */
+    */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -77,7 +77,6 @@ public final class BatchRetrySettingsResponse {
             this.timeout = timeout;
             return this;
         }
-
         public BatchRetrySettingsResponse build() {
             return new BatchRetrySettingsResponse(maxRetries, timeout);
         }

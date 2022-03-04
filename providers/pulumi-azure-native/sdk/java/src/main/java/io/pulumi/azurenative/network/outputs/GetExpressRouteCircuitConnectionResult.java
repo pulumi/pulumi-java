@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.Ipv6CircuitConnectionConfigResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,77 +98,77 @@ public final class GetExpressRouteCircuitConnectionResult {
     /**
      * /29 IP address space to carve out Customer addresses for tunnels.
      * 
-     */
+    */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * The authorization key.
      * 
-     */
+    */
     public Optional<String> getAuthorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
      * Express Route Circuit connection state.
      * 
-     */
+    */
     public String getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getExpressRouteCircuitPeering() {
         return Optional.ofNullable(this.expressRouteCircuitPeering);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * IPv6 Address PrefixProperties of the express route circuit connection.
      * 
-     */
+    */
     public Optional<Ipv6CircuitConnectionConfigResponse> getIpv6CircuitConnectionConfig() {
         return Optional.ofNullable(this.ipv6CircuitConnectionConfig);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getPeerExpressRouteCircuitPeering() {
         return Optional.ofNullable(this.peerExpressRouteCircuitPeering);
     }
     /**
      * The provisioning state of the express route circuit connection resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -267,7 +267,6 @@ public final class GetExpressRouteCircuitConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExpressRouteCircuitConnectionResult build() {
             return new GetExpressRouteCircuitConnectionResult(addressPrefix, authorizationKey, circuitConnectionStatus, etag, expressRouteCircuitPeering, id, ipv6CircuitConnectionConfig, name, peerExpressRouteCircuitPeering, provisioningState, type);
         }

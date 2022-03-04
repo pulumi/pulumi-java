@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.BackendAuthorizationHeaderCredentialsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authorization")
-    private final @Nullable Input<BackendAuthorizationHeaderCredentialsArgs> authorization;
+      private final @Nullable Input<BackendAuthorizationHeaderCredentialsArgs> authorization;
 
     public Input<BackendAuthorizationHeaderCredentialsArgs> getAuthorization() {
         return this.authorization == null ? Input.empty() : this.authorization;
@@ -37,7 +37,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<List<String>> certificate;
+      private final @Nullable Input<List<String>> certificate;
 
     public Input<List<String>> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -48,7 +48,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="certificateIds")
-    private final @Nullable Input<List<String>> certificateIds;
+      private final @Nullable Input<List<String>> certificateIds;
 
     public Input<List<String>> getCertificateIds() {
         return this.certificateIds == null ? Input.empty() : this.certificateIds;
@@ -59,7 +59,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="header")
-    private final @Nullable Input<Map<String,List<String>>> header;
+      private final @Nullable Input<Map<String,List<String>>> header;
 
     public Input<Map<String,List<String>>> getHeader() {
         return this.header == null ? Input.empty() : this.header;
@@ -70,7 +70,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<Map<String,List<String>>> query;
+      private final @Nullable Input<Map<String,List<String>>> query;
 
     public Input<Map<String,List<String>>> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -174,7 +174,6 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
             this.query = Input.ofNullable(query);
             return this;
         }
-
         public BackendCredentialsContractArgs build() {
             return new BackendCredentialsContractArgs(authorization, certificate, certificateIds, header, query);
         }

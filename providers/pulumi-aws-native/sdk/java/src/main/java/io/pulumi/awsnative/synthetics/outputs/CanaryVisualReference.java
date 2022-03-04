@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.synthetics.outputs;
 
 import io.pulumi.awsnative.synthetics.outputs.CanaryBaseScreenshot;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class CanaryVisualReference {
     /**
      * Canary run id to be used as base reference for visual testing
      * 
-     */
+    */
     public String getBaseCanaryRunId() {
         return this.baseCanaryRunId;
     }
     /**
      * List of screenshots used as base reference for visual testing
      * 
-     */
+    */
     public List<CanaryBaseScreenshot> getBaseScreenshots() {
         return this.baseScreenshots == null ? List.of() : this.baseScreenshots;
     }
@@ -77,7 +77,6 @@ public final class CanaryVisualReference {
             this.baseScreenshots = baseScreenshots;
             return this;
         }
-
         public CanaryVisualReference build() {
             return new CanaryVisualReference(baseCanaryRunId, baseScreenshots);
         }

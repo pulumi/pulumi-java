@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class WorkloadMetadataConfigResponse {
     /**
      * Mode is the configuration for how to expose metadata to workloads running on the node pool.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
      * 
-     */
+    */
     public String getNodeMetadata() {
         return this.nodeMetadata;
     }
@@ -74,7 +74,6 @@ public final class WorkloadMetadataConfigResponse {
             this.nodeMetadata = Objects.requireNonNull(nodeMetadata);
             return this;
         }
-
         public WorkloadMetadataConfigResponse build() {
             return new WorkloadMetadataConfigResponse(mode, nodeMetadata);
         }

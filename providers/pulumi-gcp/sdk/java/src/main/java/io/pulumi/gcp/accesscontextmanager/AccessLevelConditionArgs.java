@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelConditionDevicePolicyArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accessLevel", required=true)
-    private final Input<String> accessLevel;
+      private final Input<String> accessLevel;
 
     public Input<String> getAccessLevel() {
         return this.accessLevel;
@@ -36,7 +36,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="devicePolicy")
-    private final @Nullable Input<AccessLevelConditionDevicePolicyArgs> devicePolicy;
+      private final @Nullable Input<AccessLevelConditionDevicePolicyArgs> devicePolicy;
 
     public Input<AccessLevelConditionDevicePolicyArgs> getDevicePolicy() {
         return this.devicePolicy == null ? Input.empty() : this.devicePolicy;
@@ -56,7 +56,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipSubnetworks")
-    private final @Nullable Input<List<String>> ipSubnetworks;
+      private final @Nullable Input<List<String>> ipSubnetworks;
 
     public Input<List<String>> getIpSubnetworks() {
         return this.ipSubnetworks == null ? Input.empty() : this.ipSubnetworks;
@@ -73,7 +73,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -86,7 +86,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="negate")
-    private final @Nullable Input<Boolean> negate;
+      private final @Nullable Input<Boolean> negate;
 
     public Input<Boolean> getNegate() {
         return this.negate == null ? Input.empty() : this.negate;
@@ -99,7 +99,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="regions")
-    private final @Nullable Input<List<String>> regions;
+      private final @Nullable Input<List<String>> regions;
 
     public Input<List<String>> getRegions() {
         return this.regions == null ? Input.empty() : this.regions;
@@ -114,7 +114,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="requiredAccessLevels")
-    private final @Nullable Input<List<String>> requiredAccessLevels;
+      private final @Nullable Input<List<String>> requiredAccessLevels;
 
     public Input<List<String>> getRequiredAccessLevels() {
         return this.requiredAccessLevels == null ? Input.empty() : this.requiredAccessLevels;
@@ -248,7 +248,6 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
             this.requiredAccessLevels = Input.ofNullable(requiredAccessLevels);
             return this;
         }
-
         public AccessLevelConditionArgs build() {
             return new AccessLevelConditionArgs(accessLevel, devicePolicy, ipSubnetworks, members, negate, regions, requiredAccessLevels);
         }

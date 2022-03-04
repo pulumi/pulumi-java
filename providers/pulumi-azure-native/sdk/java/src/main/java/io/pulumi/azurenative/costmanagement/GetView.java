@@ -6,21 +6,41 @@ package io.pulumi.azurenative.costmanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.costmanagement.inputs.GetViewArgs;
 import io.pulumi.azurenative.costmanagement.outputs.GetViewResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetView {
-/**
- * States and configurations of Cost Analysis.
+    private GetView() {}
+    public interface BuilderApplicator {
+        public void apply(GetViewArgs.Builder a);
+    }
+    private static GetViewArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetViewArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * States and configurations of Cost Analysis.
  * API Version: 2019-11-01.
  * 
- *
- * States and configurations of Cost Analysis.
+     *
+     * States and configurations of Cost Analysis.
  * 
- */
+     */
+    public static CompletableFuture<GetViewResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * States and configurations of Cost Analysis.
+     * API Version: 2019-11-01.
+     * 
+     *
+         * States and configurations of Cost Analysis.
+     * 
+     */
     public static CompletableFuture<GetViewResult> invokeAsync(GetViewArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getView", TypeShape.of(GetViewResult.class), args == null ? GetViewArgs.Empty : args, Utilities.withVersion(options));
     }

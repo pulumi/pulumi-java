@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class WaitStatisticsResponse {
     /**
      * Total no. of waits
      * 
-     */
+    */
     public Double getWaitCount() {
         return this.waitCount;
     }
     /**
      * Total wait time in millisecond(s)
      * 
-     */
+    */
     public Double getWaitTimeMs() {
         return this.waitTimeMs;
     }
     /**
      * Type of the Wait
      * 
-     */
+    */
     public String getWaitType() {
         return this.waitType;
     }
@@ -96,7 +96,6 @@ public final class WaitStatisticsResponse {
             this.waitType = Objects.requireNonNull(waitType);
             return this;
         }
-
         public WaitStatisticsResponse build() {
             return new WaitStatisticsResponse(waitCount, waitTimeMs, waitType);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetes.inputs;
 
 import io.pulumi.azurenative.kubernetes.enums.AuthenticationMethod;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="authenticationMethod", required=true)
-    private final Either<String,AuthenticationMethod> authenticationMethod;
+      private final Either<String,AuthenticationMethod> authenticationMethod;
 
     public Either<String,AuthenticationMethod> getAuthenticationMethod() {
         return this.authenticationMethod;
@@ -31,7 +31,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="clientProxy", required=true)
-    private final Boolean clientProxy;
+      private final Boolean clientProxy;
 
     public Boolean getClientProxy() {
         return this.clientProxy;
@@ -42,7 +42,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -53,7 +53,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -122,7 +122,6 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListConnectedClusterUserCredentialsArgs build() {
             return new ListConnectedClusterUserCredentialsArgs(authenticationMethod, clientProxy, clusterName, resourceGroupName);
         }

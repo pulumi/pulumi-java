@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="attachmentId", required=true)
-    private final Input<String> attachmentId;
+      private final Input<String> attachmentId;
 
     public Input<String> getAttachmentId() {
         return this.attachmentId;
@@ -30,7 +30,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="policyId", required=true)
-    private final Input<String> policyId;
+      private final Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId;
@@ -115,7 +115,6 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
             this.policyId = Input.of(Objects.requireNonNull(policyId));
             return this;
         }
-
         public OrganizationSecurityPolicyAssociationArgs build() {
             return new OrganizationSecurityPolicyAssociationArgs(attachmentId, name, policyId);
         }

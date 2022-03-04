@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class DiskPoolVolumeResponse {
     /**
      * iSCSI provider target IP address list
      * 
-     */
+    */
     public List<String> getEndpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
      * Name of the LUN to be used
      * 
-     */
+    */
     public Optional<String> getLunName() {
         return Optional.ofNullable(this.lunName);
     }
@@ -77,7 +77,6 @@ public final class DiskPoolVolumeResponse {
             this.lunName = lunName;
             return this;
         }
-
         public DiskPoolVolumeResponse build() {
             return new DiskPoolVolumeResponse(endpoints, lunName);
         }

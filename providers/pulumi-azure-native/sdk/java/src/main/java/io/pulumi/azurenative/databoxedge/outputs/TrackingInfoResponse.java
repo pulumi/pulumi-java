@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class TrackingInfoResponse {
     /**
      * Name of the carrier used in the delivery.
      * 
-     */
+    */
     public Optional<String> getCarrierName() {
         return Optional.ofNullable(this.carrierName);
     }
     /**
      * Serial number of the device being tracked.
      * 
-     */
+    */
     public Optional<String> getSerialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
     /**
      * Tracking ID of the shipment.
      * 
-     */
+    */
     public Optional<String> getTrackingId() {
         return Optional.ofNullable(this.trackingId);
     }
     /**
      * Tracking URL of the shipment.
      * 
-     */
+    */
     public Optional<String> getTrackingUrl() {
         return Optional.ofNullable(this.trackingUrl);
     }
@@ -118,7 +118,6 @@ public final class TrackingInfoResponse {
             this.trackingUrl = trackingUrl;
             return this;
         }
-
         public TrackingInfoResponse build() {
             return new TrackingInfoResponse(carrierName, serialNumber, trackingId, trackingUrl);
         }

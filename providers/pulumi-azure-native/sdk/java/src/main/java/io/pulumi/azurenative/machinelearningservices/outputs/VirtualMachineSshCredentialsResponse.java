@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class VirtualMachineSshCredentialsResponse {
     /**
      * Password of admin account
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Private key data
      * 
-     */
+    */
     public Optional<String> getPrivateKeyData() {
         return Optional.ofNullable(this.privateKeyData);
     }
     /**
      * Public key data
      * 
-     */
+    */
     public Optional<String> getPublicKeyData() {
         return Optional.ofNullable(this.publicKeyData);
     }
     /**
      * Username of admin account
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -118,7 +118,6 @@ public final class VirtualMachineSshCredentialsResponse {
             this.username = username;
             return this;
         }
-
         public VirtualMachineSshCredentialsResponse build() {
             return new VirtualMachineSshCredentialsResponse(password, privateKeyData, publicKeyData, username);
         }

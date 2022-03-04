@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.relay.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GetHybridConnectionAuthorizationRuleResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
      * 
-     */
+    */
     public List<String> getRights() {
         return this.rights;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GetHybridConnectionAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHybridConnectionAuthorizationRuleResult build() {
             return new GetHybridConnectionAuthorizationRuleResult(id, name, rights, type);
         }

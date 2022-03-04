@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.enums.SourceKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,SourceKind>> kind;
+      private final Input<Either<String,SourceKind>> kind;
 
     public Input<Either<String,SourceKind>> getKind() {
         return this.kind;
@@ -36,7 +36,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceId")
-    private final @Nullable Input<String> sourceId;
+      private final @Nullable Input<String> sourceId;
 
     public Input<String> getSourceId() {
         return this.sourceId == null ? Input.empty() : this.sourceId;
@@ -121,7 +121,6 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceId = Input.ofNullable(sourceId);
             return this;
         }
-
         public MetadataSourceArgs build() {
             return new MetadataSourceArgs(kind, name, sourceId);
         }

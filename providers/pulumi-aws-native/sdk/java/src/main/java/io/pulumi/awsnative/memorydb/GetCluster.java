@@ -6,17 +6,33 @@ package io.pulumi.awsnative.memorydb;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.memorydb.inputs.GetClusterArgs;
 import io.pulumi.awsnative.memorydb.outputs.GetClusterResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCluster {
-/**
- * The AWS::MemoryDB::Cluster resource creates an Amazon MemoryDB Cluster.
+    private GetCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetClusterArgs.Builder a);
+    }
+    private static GetClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::MemoryDB::Cluster resource creates an Amazon MemoryDB Cluster.
  * 
- */
+     */
+    public static CompletableFuture<GetClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::MemoryDB::Cluster resource creates an Amazon MemoryDB Cluster.
+     * 
+     */
     public static CompletableFuture<GetClusterResult> invokeAsync(GetClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getCluster", TypeShape.of(GetClusterResult.class), args == null ? GetClusterArgs.Empty : args, Utilities.withVersion(options));
     }

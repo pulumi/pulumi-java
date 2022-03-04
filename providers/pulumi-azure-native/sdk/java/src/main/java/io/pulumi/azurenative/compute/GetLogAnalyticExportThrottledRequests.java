@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetLogAnalyticExportThrottledRequestsArgs;
 import io.pulumi.azurenative.compute.outputs.GetLogAnalyticExportThrottledRequestsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLogAnalyticExportThrottledRequests {
-/**
- * LogAnalytics operation status response
+    private GetLogAnalyticExportThrottledRequests() {}
+    public interface BuilderApplicator {
+        public void apply(GetLogAnalyticExportThrottledRequestsArgs.Builder a);
+    }
+    private static GetLogAnalyticExportThrottledRequestsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLogAnalyticExportThrottledRequestsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * LogAnalytics operation status response
  * API Version: 2020-12-01.
  * 
- *
- * LogAnalytics operation status response
+     *
+     * LogAnalytics operation status response
  * 
- */
+     */
+    public static CompletableFuture<GetLogAnalyticExportThrottledRequestsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * LogAnalytics operation status response
+     * API Version: 2020-12-01.
+     * 
+     *
+         * LogAnalytics operation status response
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticExportThrottledRequestsResult> invokeAsync(GetLogAnalyticExportThrottledRequestsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getLogAnalyticExportThrottledRequests", TypeShape.of(GetLogAnalyticExportThrottledRequestsResult.class), args == null ? GetLogAnalyticExportThrottledRequestsArgs.Empty : args, Utilities.withVersion(options));
     }

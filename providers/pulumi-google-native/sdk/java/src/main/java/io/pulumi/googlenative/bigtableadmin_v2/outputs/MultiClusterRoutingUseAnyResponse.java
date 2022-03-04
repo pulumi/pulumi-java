@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MultiClusterRoutingUseAnyResponse {
     /**
      * The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
      * 
-     */
+    */
     public List<String> getClusterIds() {
         return this.clusterIds;
     }
@@ -53,7 +53,6 @@ public final class MultiClusterRoutingUseAnyResponse {
             this.clusterIds = Objects.requireNonNull(clusterIds);
             return this;
         }
-
         public MultiClusterRoutingUseAnyResponse build() {
             return new MultiClusterRoutingUseAnyResponse(clusterIds);
         }

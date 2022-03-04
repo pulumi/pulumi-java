@@ -6,17 +6,33 @@ package io.pulumi.azurenative.devspaces;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devspaces.inputs.ListControllerConnectionDetailsArgs;
 import io.pulumi.azurenative.devspaces.outputs.ListControllerConnectionDetailsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListControllerConnectionDetails {
-/**
- * API Version: 2019-04-01.
+    private ListControllerConnectionDetails() {}
+    public interface BuilderApplicator {
+        public void apply(ListControllerConnectionDetailsArgs.Builder a);
+    }
+    private static ListControllerConnectionDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListControllerConnectionDetailsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2019-04-01.
  * 
- */
+     */
+    public static CompletableFuture<ListControllerConnectionDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2019-04-01.
+     * 
+     */
     public static CompletableFuture<ListControllerConnectionDetailsResult> invokeAsync(ListControllerConnectionDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devspaces:listControllerConnectionDetails", TypeShape.of(ListControllerConnectionDetailsResult.class), args == null ? ListControllerConnectionDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

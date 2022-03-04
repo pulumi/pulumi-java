@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelAction;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class DetectorModelTransitionEvent {
     /**
      * The actions to be performed.
      * 
-     */
+    */
     public List<DetectorModelAction> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
      * 
-     */
+    */
     public String getCondition() {
         return this.condition;
     }
     /**
      * The name of the event.
      * 
-     */
+    */
     public String getEventName() {
         return this.eventName;
     }
     /**
      * The next state to enter.
      * 
-     */
+    */
     public String getNextState() {
         return this.nextState;
     }
@@ -119,7 +119,6 @@ public final class DetectorModelTransitionEvent {
             this.nextState = Objects.requireNonNull(nextState);
             return this;
         }
-
         public DetectorModelTransitionEvent build() {
             return new DetectorModelTransitionEvent(actions, condition, eventName, nextState);
         }

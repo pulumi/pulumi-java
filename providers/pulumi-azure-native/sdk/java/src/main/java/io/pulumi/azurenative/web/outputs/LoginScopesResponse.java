@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LoginScopesResponse {
     /**
      * A list of the scopes that should be requested while authenticating.
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
@@ -54,7 +54,6 @@ public final class LoginScopesResponse {
             this.scopes = scopes;
             return this;
         }
-
         public LoginScopesResponse build() {
             return new LoginScopesResponse(scopes);
         }

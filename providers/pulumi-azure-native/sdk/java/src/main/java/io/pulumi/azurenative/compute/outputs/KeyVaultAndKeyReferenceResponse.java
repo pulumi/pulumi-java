@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SourceVaultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,14 +32,14 @@ public final class KeyVaultAndKeyReferenceResponse {
     /**
      * Url pointing to a key or secret in KeyVault
      * 
-     */
+    */
     public String getKeyUrl() {
         return this.keyUrl;
     }
     /**
      * Resource id of the KeyVault containing the key or secret
      * 
-     */
+    */
     public SourceVaultResponse getSourceVault() {
         return this.sourceVault;
     }
@@ -75,7 +75,6 @@ public final class KeyVaultAndKeyReferenceResponse {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
-
         public KeyVaultAndKeyReferenceResponse build() {
             return new KeyVaultAndKeyReferenceResponse(keyUrl, sourceVault);
         }

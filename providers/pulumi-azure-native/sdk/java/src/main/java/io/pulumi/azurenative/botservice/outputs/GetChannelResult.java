@@ -17,7 +17,7 @@ import io.pulumi.azurenative.botservice.outputs.SlackChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.SmsChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.TelegramChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.WebChatChannelResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -106,70 +106,70 @@ public final class GetChannelResult {
     /**
      * Entity Tag
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Specifies the resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Required. Gets or sets the Kind of the resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The set of properties specific to bot channel resource
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * Gets or sets the SKU of the resource.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Entity zones
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones;
     }
@@ -261,7 +261,6 @@ public final class GetChannelResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(etag, id, kind, location, name, properties, sku, tags, type, zones);
         }

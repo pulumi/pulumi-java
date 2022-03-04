@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ClusterJobResponse {
     /**
      * Resource ID of the streaming job.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The current execution state of the streaming job.
      * 
-     */
+    */
     public String getJobState() {
         return this.jobState;
     }
     /**
      * The number of streaming units that are used by the streaming job.
      * 
-     */
+    */
     public Integer getStreamingUnits() {
         return this.streamingUnits;
     }
@@ -96,7 +96,6 @@ public final class ClusterJobResponse {
             this.streamingUnits = Objects.requireNonNull(streamingUnits);
             return this;
         }
-
         public ClusterJobResponse build() {
             return new ClusterJobResponse(id, jobState, streamingUnits);
         }

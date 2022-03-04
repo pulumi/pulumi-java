@@ -10,8 +10,8 @@ import io.pulumi.azurenative.web.outputs.VirtualNetworkProfileResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -316,6 +316,37 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
         return this.virtualNetwork;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AppServiceEnvironmentArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.web.AppServiceEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.web.AppServiceEnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AppServiceEnvironment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AppServiceEnvironment(String name) {
+        this(name, AppServiceEnvironmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AppServiceEnvironment(String name, AppServiceEnvironmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

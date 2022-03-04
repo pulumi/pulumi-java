@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class FlowVeevaSourceProperties extends io.pulumi.resources.InvokeA
     public static final FlowVeevaSourceProperties Empty = new FlowVeevaSourceProperties();
 
     @InputImport(name="documentType")
-    private final @Nullable String documentType;
+      private final @Nullable String documentType;
 
     public Optional<String> getDocumentType() {
         return this.documentType == null ? Optional.empty() : Optional.ofNullable(this.documentType);
     }
 
     @InputImport(name="includeAllVersions")
-    private final @Nullable Boolean includeAllVersions;
+      private final @Nullable Boolean includeAllVersions;
 
     public Optional<Boolean> getIncludeAllVersions() {
         return this.includeAllVersions == null ? Optional.empty() : Optional.ofNullable(this.includeAllVersions);
     }
 
     @InputImport(name="includeRenditions")
-    private final @Nullable Boolean includeRenditions;
+      private final @Nullable Boolean includeRenditions;
 
     public Optional<Boolean> getIncludeRenditions() {
         return this.includeRenditions == null ? Optional.empty() : Optional.ofNullable(this.includeRenditions);
     }
 
     @InputImport(name="includeSourceFiles")
-    private final @Nullable Boolean includeSourceFiles;
+      private final @Nullable Boolean includeSourceFiles;
 
     public Optional<Boolean> getIncludeSourceFiles() {
         return this.includeSourceFiles == null ? Optional.empty() : Optional.ofNullable(this.includeSourceFiles);
     }
 
     @InputImport(name="object", required=true)
-    private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;
@@ -123,7 +123,6 @@ public final class FlowVeevaSourceProperties extends io.pulumi.resources.InvokeA
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowVeevaSourceProperties build() {
             return new FlowVeevaSourceProperties(documentType, includeAllVersions, includeRenditions, includeSourceFiles, object);
         }

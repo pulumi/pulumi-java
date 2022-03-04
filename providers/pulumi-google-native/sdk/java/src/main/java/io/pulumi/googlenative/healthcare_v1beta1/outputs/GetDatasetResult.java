@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GetDatasetResult {
     /**
      * Resource name of the dataset, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources, such as HL7 messages, where no explicit timezone is specified.
      * 
-     */
+    */
     public String getTimeZone() {
         return this.timeZone;
     }
@@ -74,7 +74,6 @@ public final class GetDatasetResult {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(name, timeZone);
         }

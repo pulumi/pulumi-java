@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs.inputs;
 import io.pulumi.azurenative.avs.enums.SslEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -36,7 +36,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseGroupDN")
-    private final @Nullable Input<String> baseGroupDN;
+      private final @Nullable Input<String> baseGroupDN;
 
     public Input<String> getBaseGroupDN() {
         return this.baseGroupDN == null ? Input.empty() : this.baseGroupDN;
@@ -47,7 +47,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseUserDN")
-    private final @Nullable Input<String> baseUserDN;
+      private final @Nullable Input<String> baseUserDN;
 
     public Input<String> getBaseUserDN() {
         return this.baseUserDN == null ? Input.empty() : this.baseUserDN;
@@ -58,7 +58,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -69,7 +69,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -80,7 +80,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -91,7 +91,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryServer")
-    private final @Nullable Input<String> primaryServer;
+      private final @Nullable Input<String> primaryServer;
 
     public Input<String> getPrimaryServer() {
         return this.primaryServer == null ? Input.empty() : this.primaryServer;
@@ -102,7 +102,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryServer")
-    private final @Nullable Input<String> secondaryServer;
+      private final @Nullable Input<String> secondaryServer;
 
     public Input<String> getSecondaryServer() {
         return this.secondaryServer == null ? Input.empty() : this.secondaryServer;
@@ -113,7 +113,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ssl")
-    private final @Nullable Input<Either<String,SslEnum>> ssl;
+      private final @Nullable Input<Either<String,SslEnum>> ssl;
 
     public Input<Either<String,SslEnum>> getSsl() {
         return this.ssl == null ? Input.empty() : this.ssl;
@@ -124,7 +124,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -303,7 +303,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public IdentitySourceArgs build() {
             return new IdentitySourceArgs(alias, baseGroupDN, baseUserDN, domain, name, password, primaryServer, secondaryServer, ssl, username);
         }

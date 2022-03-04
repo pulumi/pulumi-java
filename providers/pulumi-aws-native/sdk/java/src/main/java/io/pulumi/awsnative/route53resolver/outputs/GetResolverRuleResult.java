@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.outputs.ResolverRuleTag;
 import io.pulumi.awsnative.route53resolver.outputs.ResolverRuleTargetAddress;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -64,42 +64,42 @@ public final class GetResolverRuleResult {
     /**
      * The Amazon Resource Name (ARN) of the resolver rule.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The name for the Resolver rule
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The ID of the endpoint that the rule is associated with.
      * 
-     */
+    */
     public Optional<String> getResolverEndpointId() {
         return Optional.ofNullable(this.resolverEndpointId);
     }
     /**
      * The ID of the endpoint that the rule is associated with.
      * 
-     */
+    */
     public Optional<String> getResolverRuleId() {
         return Optional.ofNullable(this.resolverRuleId);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<ResolverRuleTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
      * 
-     */
+    */
     public List<ResolverRuleTargetAddress> getTargetIps() {
         return this.targetIps == null ? List.of() : this.targetIps;
     }
@@ -163,7 +163,6 @@ public final class GetResolverRuleResult {
             this.targetIps = targetIps;
             return this;
         }
-
         public GetResolverRuleResult build() {
             return new GetResolverRuleResult(arn, name, resolverEndpointId, resolverRuleId, tags, targetIps);
         }

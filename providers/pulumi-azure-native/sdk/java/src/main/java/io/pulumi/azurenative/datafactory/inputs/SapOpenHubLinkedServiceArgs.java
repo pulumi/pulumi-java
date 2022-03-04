@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -42,7 +42,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<Object> clientId;
+      private final @Nullable Input<Object> clientId;
 
     public Input<Object> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -53,7 +53,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -64,7 +64,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -75,7 +75,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -86,7 +86,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="language")
-    private final @Nullable Input<Object> language;
+      private final @Nullable Input<Object> language;
 
     public Input<Object> getLanguage() {
         return this.language == null ? Input.empty() : this.language;
@@ -97,7 +97,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="logonGroup")
-    private final @Nullable Input<Object> logonGroup;
+      private final @Nullable Input<Object> logonGroup;
 
     public Input<Object> getLogonGroup() {
         return this.logonGroup == null ? Input.empty() : this.logonGroup;
@@ -108,7 +108,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageServer")
-    private final @Nullable Input<Object> messageServer;
+      private final @Nullable Input<Object> messageServer;
 
     public Input<Object> getMessageServer() {
         return this.messageServer == null ? Input.empty() : this.messageServer;
@@ -119,7 +119,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageServerService")
-    private final @Nullable Input<Object> messageServerService;
+      private final @Nullable Input<Object> messageServerService;
 
     public Input<Object> getMessageServerService() {
         return this.messageServerService == null ? Input.empty() : this.messageServerService;
@@ -130,7 +130,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -141,7 +141,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -152,7 +152,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="server")
-    private final @Nullable Input<Object> server;
+      private final @Nullable Input<Object> server;
 
     public Input<Object> getServer() {
         return this.server == null ? Input.empty() : this.server;
@@ -163,7 +163,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="systemId")
-    private final @Nullable Input<Object> systemId;
+      private final @Nullable Input<Object> systemId;
 
     public Input<Object> getSystemId() {
         return this.systemId == null ? Input.empty() : this.systemId;
@@ -174,7 +174,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="systemNumber")
-    private final @Nullable Input<Object> systemNumber;
+      private final @Nullable Input<Object> systemNumber;
 
     public Input<Object> getSystemNumber() {
         return this.systemNumber == null ? Input.empty() : this.systemNumber;
@@ -186,7 +186,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -197,7 +197,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<Object> userName;
+      private final @Nullable Input<Object> userName;
 
     public Input<Object> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -466,7 +466,6 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public SapOpenHubLinkedServiceArgs build() {
             return new SapOpenHubLinkedServiceArgs(annotations, clientId, connectVia, description, encryptedCredential, language, logonGroup, messageServer, messageServerService, parameters, password, server, systemId, systemNumber, type, userName);
         }

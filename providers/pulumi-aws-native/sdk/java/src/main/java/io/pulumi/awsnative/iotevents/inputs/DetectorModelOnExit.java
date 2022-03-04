@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelEvent;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class DetectorModelOnExit extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="events")
-    private final @Nullable List<DetectorModelEvent> events;
+      private final @Nullable List<DetectorModelEvent> events;
 
     public List<DetectorModelEvent> getEvents() {
         return this.events == null ? List.of() : this.events;
@@ -62,7 +62,6 @@ public final class DetectorModelOnExit extends io.pulumi.resources.InvokeArgs {
             this.events = events;
             return this;
         }
-
         public DetectorModelOnExit build() {
             return new DetectorModelOnExit(events);
         }

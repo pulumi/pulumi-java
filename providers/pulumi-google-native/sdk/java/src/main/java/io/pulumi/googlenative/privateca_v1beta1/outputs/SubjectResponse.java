@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -66,49 +66,49 @@ public final class SubjectResponse {
     /**
      * The country code of the subject.
      * 
-     */
+    */
     public String getCountryCode() {
         return this.countryCode;
     }
     /**
      * The locality or city of the subject.
      * 
-     */
+    */
     public String getLocality() {
         return this.locality;
     }
     /**
      * The organization of the subject.
      * 
-     */
+    */
     public String getOrganization() {
         return this.organization;
     }
     /**
      * The organizational_unit of the subject.
      * 
-     */
+    */
     public String getOrganizationalUnit() {
         return this.organizationalUnit;
     }
     /**
      * The postal code of the subject.
      * 
-     */
+    */
     public String getPostalCode() {
         return this.postalCode;
     }
     /**
      * The province, territory, or regional state of the subject.
      * 
-     */
+    */
     public String getProvince() {
         return this.province;
     }
     /**
      * The street address of the subject.
      * 
-     */
+    */
     public String getStreetAddress() {
         return this.streetAddress;
     }
@@ -179,7 +179,6 @@ public final class SubjectResponse {
             this.streetAddress = Objects.requireNonNull(streetAddress);
             return this;
         }
-
         public SubjectResponse build() {
             return new SubjectResponse(countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }

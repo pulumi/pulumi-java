@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ConnectionDrainingResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="drainingTimeoutSec", required=true)
-    private final Integer drainingTimeoutSec;
+      private final Integer drainingTimeoutSec;
 
     public Integer getDrainingTimeoutSec() {
         return this.drainingTimeoutSec;
@@ -59,7 +59,6 @@ public final class ConnectionDrainingResponse extends io.pulumi.resources.Invoke
             this.drainingTimeoutSec = Objects.requireNonNull(drainingTimeoutSec);
             return this;
         }
-
         public ConnectionDrainingResponse build() {
             return new ConnectionDrainingResponse(drainingTimeoutSec);
         }

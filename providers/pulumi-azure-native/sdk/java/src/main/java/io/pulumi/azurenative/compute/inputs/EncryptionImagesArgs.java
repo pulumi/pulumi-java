@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.DataDiskImageEncryptionArgs;
 import io.pulumi.azurenative.compute.inputs.OSDiskImageEncryptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataDiskImages")
-    private final @Nullable Input<List<DataDiskImageEncryptionArgs>> dataDiskImages;
+      private final @Nullable Input<List<DataDiskImageEncryptionArgs>> dataDiskImages;
 
     public Input<List<DataDiskImageEncryptionArgs>> getDataDiskImages() {
         return this.dataDiskImages == null ? Input.empty() : this.dataDiskImages;
@@ -36,7 +36,7 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="osDiskImage")
-    private final @Nullable Input<OSDiskImageEncryptionArgs> osDiskImage;
+      private final @Nullable Input<OSDiskImageEncryptionArgs> osDiskImage;
 
     public Input<OSDiskImageEncryptionArgs> getOsDiskImage() {
         return this.osDiskImage == null ? Input.empty() : this.osDiskImage;
@@ -95,7 +95,6 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
             this.osDiskImage = Input.ofNullable(osDiskImage);
             return this;
         }
-
         public EncryptionImagesArgs build() {
             return new EncryptionImagesArgs(dataDiskImages, osDiskImage);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.desktopvirtualization;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.desktopvirtualization.inputs.GetApplicationGroupArgs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.GetApplicationGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationGroup {
-/**
- * Represents a ApplicationGroup definition.
+    private GetApplicationGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetApplicationGroupArgs.Builder a);
+    }
+    private static GetApplicationGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApplicationGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a ApplicationGroup definition.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Represents a ApplicationGroup definition.
+     *
+     * Represents a ApplicationGroup definition.
  * 
- */
+     */
+    public static CompletableFuture<GetApplicationGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a ApplicationGroup definition.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Represents a ApplicationGroup definition.
+     * 
+     */
     public static CompletableFuture<GetApplicationGroupResult> invokeAsync(GetApplicationGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getApplicationGroup", TypeShape.of(GetApplicationGroupResult.class), args == null ? GetApplicationGroupArgs.Empty : args, Utilities.withVersion(options));
     }

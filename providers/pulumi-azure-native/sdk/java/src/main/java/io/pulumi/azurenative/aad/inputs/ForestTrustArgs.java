@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aad.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -34,7 +34,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteDnsIps")
-    private final @Nullable Input<String> remoteDnsIps;
+      private final @Nullable Input<String> remoteDnsIps;
 
     public Input<String> getRemoteDnsIps() {
         return this.remoteDnsIps == null ? Input.empty() : this.remoteDnsIps;
@@ -45,7 +45,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustDirection")
-    private final @Nullable Input<String> trustDirection;
+      private final @Nullable Input<String> trustDirection;
 
     public Input<String> getTrustDirection() {
         return this.trustDirection == null ? Input.empty() : this.trustDirection;
@@ -56,7 +56,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustPassword")
-    private final @Nullable Input<String> trustPassword;
+      private final @Nullable Input<String> trustPassword;
 
     public Input<String> getTrustPassword() {
         return this.trustPassword == null ? Input.empty() : this.trustPassword;
@@ -67,7 +67,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedDomainFqdn")
-    private final @Nullable Input<String> trustedDomainFqdn;
+      private final @Nullable Input<String> trustedDomainFqdn;
 
     public Input<String> getTrustedDomainFqdn() {
         return this.trustedDomainFqdn == null ? Input.empty() : this.trustedDomainFqdn;
@@ -171,7 +171,6 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
             this.trustedDomainFqdn = Input.ofNullable(trustedDomainFqdn);
             return this;
         }
-
         public ForestTrustArgs build() {
             return new ForestTrustArgs(friendlyName, remoteDnsIps, trustDirection, trustPassword, trustedDomainFqdn);
         }

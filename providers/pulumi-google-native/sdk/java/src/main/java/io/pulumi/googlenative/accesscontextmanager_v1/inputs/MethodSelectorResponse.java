@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MethodSelectorResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="method", required=true)
-    private final String method;
+      private final String method;
 
     public String getMethod() {
         return this.method;
@@ -32,7 +32,7 @@ public final class MethodSelectorResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="permission", required=true)
-    private final String permission;
+      private final String permission;
 
     public String getPermission() {
         return this.permission;
@@ -81,7 +81,6 @@ public final class MethodSelectorResponse extends io.pulumi.resources.InvokeArgs
             this.permission = Objects.requireNonNull(permission);
             return this;
         }
-
         public MethodSelectorResponse build() {
             return new MethodSelectorResponse(method, permission);
         }

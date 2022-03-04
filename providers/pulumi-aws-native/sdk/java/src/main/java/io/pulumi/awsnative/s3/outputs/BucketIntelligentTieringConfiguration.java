@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.outputs;
 import io.pulumi.awsnative.s3.enums.BucketIntelligentTieringConfigurationStatus;
 import io.pulumi.awsnative.s3.outputs.BucketTagFilter;
 import io.pulumi.awsnative.s3.outputs.BucketTiering;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,35 +58,35 @@ public final class BucketIntelligentTieringConfiguration {
     /**
      * The ID used to identify the S3 Intelligent-Tiering configuration.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * An object key name prefix that identifies the subset of objects to which the rule applies.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * Specifies the status of the configuration.
      * 
-     */
+    */
     public BucketIntelligentTieringConfigurationStatus getStatus() {
         return this.status;
     }
     /**
      * A container for a key-value pair.
      * 
-     */
+    */
     public List<BucketTagFilter> getTagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
     /**
      * Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.
      * 
-     */
+    */
     public List<BucketTiering> getTierings() {
         return this.tierings;
     }
@@ -143,7 +143,6 @@ public final class BucketIntelligentTieringConfiguration {
             this.tierings = Objects.requireNonNull(tierings);
             return this;
         }
-
         public BucketIntelligentTieringConfiguration build() {
             return new BucketIntelligentTieringConfiguration(id, prefix, status, tagFilters, tierings);
         }

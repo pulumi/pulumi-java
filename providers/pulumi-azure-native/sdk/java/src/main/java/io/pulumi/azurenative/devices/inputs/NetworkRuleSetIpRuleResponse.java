@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class NetworkRuleSetIpRuleResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="action")
-    private final @Nullable String action;
+      private final @Nullable String action;
 
     public Optional<String> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -34,7 +34,7 @@ public final class NetworkRuleSetIpRuleResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="filterName", required=true)
-    private final String filterName;
+      private final String filterName;
 
     public String getFilterName() {
         return this.filterName;
@@ -45,7 +45,7 @@ public final class NetworkRuleSetIpRuleResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="ipMask", required=true)
-    private final String ipMask;
+      private final String ipMask;
 
     public String getIpMask() {
         return this.ipMask;
@@ -104,7 +104,6 @@ public final class NetworkRuleSetIpRuleResponse extends io.pulumi.resources.Invo
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
-
         public NetworkRuleSetIpRuleResponse build() {
             return new NetworkRuleSetIpRuleResponse(action, filterName, ipMask);
         }

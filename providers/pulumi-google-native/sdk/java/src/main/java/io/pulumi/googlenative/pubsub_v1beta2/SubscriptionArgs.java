@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1beta2.inputs.PushConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ackDeadlineSeconds")
-    private final @Nullable Input<Integer> ackDeadlineSeconds;
+      private final @Nullable Input<Integer> ackDeadlineSeconds;
 
     public Input<Integer> getAckDeadlineSeconds() {
         return this.ackDeadlineSeconds == null ? Input.empty() : this.ackDeadlineSeconds;
@@ -32,14 +32,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -50,14 +50,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pushConfig")
-    private final @Nullable Input<PushConfigArgs> pushConfig;
+      private final @Nullable Input<PushConfigArgs> pushConfig;
 
     public Input<PushConfigArgs> getPushConfig() {
         return this.pushConfig == null ? Input.empty() : this.pushConfig;
     }
 
     @InputImport(name="subscriptionId", required=true)
-    private final Input<String> subscriptionId;
+      private final Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId;
@@ -68,7 +68,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -187,7 +187,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public SubscriptionArgs build() {
             return new SubscriptionArgs(ackDeadlineSeconds, name, project, pushConfig, subscriptionId, topic);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="destIpRanges")
-    private final @Nullable Input<List<String>> destIpRanges;
+      private final @Nullable Input<List<String>> destIpRanges;
 
     public Input<List<String>> getDestIpRanges() {
         return this.destIpRanges == null ? Input.empty() : this.destIpRanges;
@@ -34,7 +34,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="layer4Configs", required=true)
-    private final Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs;
+      private final Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs;
 
     public Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> getLayer4Configs() {
         return this.layer4Configs;
@@ -46,7 +46,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="srcIpRanges")
-    private final @Nullable Input<List<String>> srcIpRanges;
+      private final @Nullable Input<List<String>> srcIpRanges;
 
     public Input<List<String>> getSrcIpRanges() {
         return this.srcIpRanges == null ? Input.empty() : this.srcIpRanges;
@@ -120,7 +120,6 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
             this.srcIpRanges = Input.ofNullable(srcIpRanges);
             return this;
         }
-
         public OrganizationSecurityPolicyRuleMatchConfigArgs build() {
             return new OrganizationSecurityPolicyRuleMatchConfigArgs(destIpRanges, layer4Configs, srcIpRanges);
         }

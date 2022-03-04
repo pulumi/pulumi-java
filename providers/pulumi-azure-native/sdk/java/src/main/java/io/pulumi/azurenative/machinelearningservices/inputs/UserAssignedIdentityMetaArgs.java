@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserAssignedIdentityMetaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -34,7 +34,7 @@ public final class UserAssignedIdentityMetaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable Input<String> principalId;
+      private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -93,7 +93,6 @@ public final class UserAssignedIdentityMetaArgs extends io.pulumi.resources.Reso
             this.principalId = Input.ofNullable(principalId);
             return this;
         }
-
         public UserAssignedIdentityMetaArgs build() {
             return new UserAssignedIdentityMetaArgs(clientId, principalId);
         }

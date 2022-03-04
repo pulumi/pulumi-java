@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -178,7 +178,6 @@ public final class ListenerAuthenticateOidcConfig {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }
-
         public ListenerAuthenticateOidcConfig build() {
             return new ListenerAuthenticateOidcConfig(authenticationRequestExtraParams, authorizationEndpoint, clientId, clientSecret, issuer, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, tokenEndpoint, userInfoEndpoint);
         }

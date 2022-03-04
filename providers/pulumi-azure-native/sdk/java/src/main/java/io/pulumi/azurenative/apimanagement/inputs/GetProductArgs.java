@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="productId", required=true)
-    private final String productId;
+      private final String productId;
 
     public String getProductId() {
         return this.productId;
@@ -28,7 +28,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -98,7 +98,6 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetProductArgs build() {
             return new GetProductArgs(productId, resourceGroupName, serviceName);
         }

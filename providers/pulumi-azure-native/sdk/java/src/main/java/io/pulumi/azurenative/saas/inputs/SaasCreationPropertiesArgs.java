@@ -6,7 +6,7 @@ package io.pulumi.azurenative.saas.inputs;
 import io.pulumi.azurenative.saas.enums.PaymentChannelType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="autoRenew")
-    private final @Nullable Input<Boolean> autoRenew;
+      private final @Nullable Input<Boolean> autoRenew;
 
     public Input<Boolean> getAutoRenew() {
         return this.autoRenew == null ? Input.empty() : this.autoRenew;
@@ -39,7 +39,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="offerId")
-    private final @Nullable Input<String> offerId;
+      private final @Nullable Input<String> offerId;
 
     public Input<String> getOfferId() {
         return this.offerId == null ? Input.empty() : this.offerId;
@@ -50,7 +50,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="paymentChannelMetadata")
-    private final @Nullable Input<Map<String,String>> paymentChannelMetadata;
+      private final @Nullable Input<Map<String,String>> paymentChannelMetadata;
 
     public Input<Map<String,String>> getPaymentChannelMetadata() {
         return this.paymentChannelMetadata == null ? Input.empty() : this.paymentChannelMetadata;
@@ -61,7 +61,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="paymentChannelType")
-    private final @Nullable Input<Either<String,PaymentChannelType>> paymentChannelType;
+      private final @Nullable Input<Either<String,PaymentChannelType>> paymentChannelType;
 
     public Input<Either<String,PaymentChannelType>> getPaymentChannelType() {
         return this.paymentChannelType == null ? Input.empty() : this.paymentChannelType;
@@ -72,7 +72,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publisherId")
-    private final @Nullable Input<String> publisherId;
+      private final @Nullable Input<String> publisherId;
 
     public Input<String> getPublisherId() {
         return this.publisherId == null ? Input.empty() : this.publisherId;
@@ -83,7 +83,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publisherTestEnvironment")
-    private final @Nullable Input<String> publisherTestEnvironment;
+      private final @Nullable Input<String> publisherTestEnvironment;
 
     public Input<String> getPublisherTestEnvironment() {
         return this.publisherTestEnvironment == null ? Input.empty() : this.publisherTestEnvironment;
@@ -94,7 +94,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="quantity")
-    private final @Nullable Input<Double> quantity;
+      private final @Nullable Input<Double> quantity;
 
     public Input<Double> getQuantity() {
         return this.quantity == null ? Input.empty() : this.quantity;
@@ -105,7 +105,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="saasResourceName")
-    private final @Nullable Input<String> saasResourceName;
+      private final @Nullable Input<String> saasResourceName;
 
     public Input<String> getSaasResourceName() {
         return this.saasResourceName == null ? Input.empty() : this.saasResourceName;
@@ -116,7 +116,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="saasSessionId")
-    private final @Nullable Input<String> saasSessionId;
+      private final @Nullable Input<String> saasSessionId;
 
     public Input<String> getSaasSessionId() {
         return this.saasSessionId == null ? Input.empty() : this.saasSessionId;
@@ -127,7 +127,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="saasSubscriptionId")
-    private final @Nullable Input<String> saasSubscriptionId;
+      private final @Nullable Input<String> saasSubscriptionId;
 
     public Input<String> getSaasSubscriptionId() {
         return this.saasSubscriptionId == null ? Input.empty() : this.saasSubscriptionId;
@@ -138,7 +138,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="skuId")
-    private final @Nullable Input<String> skuId;
+      private final @Nullable Input<String> skuId;
 
     public Input<String> getSkuId() {
         return this.skuId == null ? Input.empty() : this.skuId;
@@ -149,7 +149,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="termId")
-    private final @Nullable Input<String> termId;
+      private final @Nullable Input<String> termId;
 
     public Input<String> getTermId() {
         return this.termId == null ? Input.empty() : this.termId;
@@ -358,7 +358,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
             this.termId = Input.ofNullable(termId);
             return this;
         }
-
         public SaasCreationPropertiesArgs build() {
             return new SaasCreationPropertiesArgs(autoRenew, offerId, paymentChannelMetadata, paymentChannelType, publisherId, publisherTestEnvironment, quantity, saasResourceName, saasSessionId, saasSubscriptionId, skuId, termId);
         }

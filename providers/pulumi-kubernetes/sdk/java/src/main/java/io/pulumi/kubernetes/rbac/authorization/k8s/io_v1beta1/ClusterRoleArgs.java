@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs.AggregationRuleArgs;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs.PolicyRuleArgs;
@@ -23,7 +23,7 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aggregationRule")
-    private final @Nullable Input<AggregationRuleArgs> aggregationRule;
+      private final @Nullable Input<AggregationRuleArgs> aggregationRule;
 
     public Input<AggregationRuleArgs> getAggregationRule() {
         return this.aggregationRule == null ? Input.empty() : this.aggregationRule;
@@ -34,7 +34,7 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -45,7 +45,7 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -56,7 +56,7 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -67,7 +67,7 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<PolicyRuleArgs>> rules;
+      private final @Nullable Input<List<PolicyRuleArgs>> rules;
 
     public Input<List<PolicyRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -171,7 +171,6 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public ClusterRoleArgs build() {
             return new ClusterRoleArgs(aggregationRule, apiVersion, kind, metadata, rules);
         }

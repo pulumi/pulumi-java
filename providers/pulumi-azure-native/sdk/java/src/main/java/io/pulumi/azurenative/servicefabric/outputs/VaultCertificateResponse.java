@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class VaultCertificateResponse {
     /**
      * For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.
      * 
-     */
+    */
     public String getCertificateStore() {
         return this.certificateStore;
     }
     /**
      * This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
      * 
-     */
+    */
     public String getCertificateUrl() {
         return this.certificateUrl;
     }
@@ -74,7 +74,6 @@ public final class VaultCertificateResponse {
             this.certificateUrl = Objects.requireNonNull(certificateUrl);
             return this;
         }
-
         public VaultCertificateResponse build() {
             return new VaultCertificateResponse(certificateStore, certificateUrl);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class HealthCheckLogConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enable", required=true)
-    private final Boolean enable;
+      private final Boolean enable;
 
     public Boolean getEnable() {
         return this.enable;
@@ -59,7 +59,6 @@ public final class HealthCheckLogConfigResponse extends io.pulumi.resources.Invo
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public HealthCheckLogConfigResponse build() {
             return new HealthCheckLogConfigResponse(enable);
         }

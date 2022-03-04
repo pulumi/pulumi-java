@@ -6,17 +6,33 @@ package io.pulumi.awsnative.codestarnotifications;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.codestarnotifications.inputs.GetNotificationRuleArgs;
 import io.pulumi.awsnative.codestarnotifications.outputs.GetNotificationRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationRule {
-/**
- * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
+    private GetNotificationRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetNotificationRuleArgs.Builder a);
+    }
+    private static GetNotificationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNotificationRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
  * 
- */
+     */
+    public static CompletableFuture<GetNotificationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
+     * 
+     */
     public static CompletableFuture<GetNotificationRuleResult> invokeAsync(GetNotificationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codestarnotifications:getNotificationRule", TypeShape.of(GetNotificationRuleResult.class), args == null ? GetNotificationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

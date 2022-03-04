@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class StorageAccountInternetEndpointsResponse {
     /**
      * Gets the blob endpoint.
      * 
-     */
+    */
     public String getBlob() {
         return this.blob;
     }
     /**
      * Gets the dfs endpoint.
      * 
-     */
+    */
     public String getDfs() {
         return this.dfs;
     }
     /**
      * Gets the file endpoint.
      * 
-     */
+    */
     public String getFile() {
         return this.file;
     }
     /**
      * Gets the web endpoint.
      * 
-     */
+    */
     public String getWeb() {
         return this.web;
     }
@@ -116,7 +116,6 @@ public final class StorageAccountInternetEndpointsResponse {
             this.web = Objects.requireNonNull(web);
             return this;
         }
-
         public StorageAccountInternetEndpointsResponse build() {
             return new StorageAccountInternetEndpointsResponse(blob, dfs, file, web);
         }

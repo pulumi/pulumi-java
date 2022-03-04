@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ContentLinkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -83,35 +83,35 @@ public final class AssemblyPropertiesResponse {
     /**
      * The assembly culture.
      * 
-     */
+    */
     public Optional<String> getAssemblyCulture() {
         return Optional.ofNullable(this.assemblyCulture);
     }
     /**
      * The assembly name.
      * 
-     */
+    */
     public String getAssemblyName() {
         return this.assemblyName;
     }
     /**
      * The assembly public key token.
      * 
-     */
+    */
     public Optional<String> getAssemblyPublicKeyToken() {
         return Optional.ofNullable(this.assemblyPublicKeyToken);
     }
     /**
      * The assembly version.
      * 
-     */
+    */
     public Optional<String> getAssemblyVersion() {
         return Optional.ofNullable(this.assemblyVersion);
     }
     /**
      * The artifact changed time.
      * 
-     */
+    */
     public Optional<String> getChangedTime() {
         return Optional.ofNullable(this.changedTime);
     }
@@ -121,21 +121,21 @@ public final class AssemblyPropertiesResponse {
     /**
      * The content link.
      * 
-     */
+    */
     public Optional<ContentLinkResponse> getContentLink() {
         return Optional.ofNullable(this.contentLink);
     }
     /**
      * The content type.
      * 
-     */
+    */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * The artifact creation time.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -230,7 +230,6 @@ public final class AssemblyPropertiesResponse {
             this.metadata = metadata;
             return this;
         }
-
         public AssemblyPropertiesResponse build() {
             return new AssemblyPropertiesResponse(assemblyCulture, assemblyName, assemblyPublicKeyToken, assemblyVersion, changedTime, content, contentLink, contentType, createdTime, metadata);
         }

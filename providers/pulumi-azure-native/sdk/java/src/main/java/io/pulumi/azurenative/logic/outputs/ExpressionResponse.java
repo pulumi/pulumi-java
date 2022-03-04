@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.AzureResourceErrorInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -46,21 +46,21 @@ public final class ExpressionResponse {
     /**
      * The azure resource error info.
      * 
-     */
+    */
     public Optional<AzureResourceErrorInfoResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * The sub expressions.
      * 
-     */
+    */
     public List<ExpressionResponse> getSubexpressions() {
         return this.subexpressions == null ? List.of() : this.subexpressions;
     }
     /**
      * The text.
      * 
-     */
+    */
     public Optional<String> getText() {
         return Optional.ofNullable(this.text);
     }
@@ -113,7 +113,6 @@ public final class ExpressionResponse {
             this.value = value;
             return this;
         }
-
         public ExpressionResponse build() {
             return new ExpressionResponse(error, subexpressions, text, value);
         }

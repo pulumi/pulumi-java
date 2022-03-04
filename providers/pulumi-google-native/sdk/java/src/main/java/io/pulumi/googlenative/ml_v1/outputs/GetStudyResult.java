@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__StudyConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class GetStudyResult {
     /**
      * Time at which the study was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * A human readable reason why the Study is inactive. This should be empty if a study is ACTIVE or COMPLETED.
      * 
-     */
+    */
     public String getInactiveReason() {
         return this.inactiveReason;
     }
     /**
      * The name of a study.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The detailed state of a study.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Configuration of the study.
      * 
-     */
+    */
     public GoogleCloudMlV1__StudyConfigResponse getStudyConfig() {
         return this.studyConfig;
     }
@@ -138,7 +138,6 @@ public final class GetStudyResult {
             this.studyConfig = Objects.requireNonNull(studyConfig);
             return this;
         }
-
         public GetStudyResult build() {
             return new GetStudyResult(createTime, inactiveReason, name, state, studyConfig);
         }

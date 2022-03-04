@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.EdgeProfileSubscriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EdgeProfileResponse {
     /**
      * Edge Profile Subscription
      * 
-     */
+    */
     public Optional<EdgeProfileSubscriptionResponse> getSubscription() {
         return Optional.ofNullable(this.subscription);
     }
@@ -54,7 +54,6 @@ public final class EdgeProfileResponse {
             this.subscription = subscription;
             return this;
         }
-
         public EdgeProfileResponse build() {
             return new EdgeProfileResponse(subscription);
         }

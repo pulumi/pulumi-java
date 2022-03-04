@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.FileShareArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupFilePaths")
-    private final @Nullable Input<List<String>> backupFilePaths;
+      private final @Nullable Input<List<String>> backupFilePaths;
 
     public Input<List<String>> getBackupFilePaths() {
         return this.backupFilePaths == null ? Input.empty() : this.backupFilePaths;
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupFileShare")
-    private final @Nullable Input<FileShareArgs> backupFileShare;
+      private final @Nullable Input<FileShareArgs> backupFileShare;
 
     public Input<FileShareArgs> getBackupFileShare() {
         return this.backupFileShare == null ? Input.empty() : this.backupFileShare;
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="restoreDatabaseName", required=true)
-    private final Input<String> restoreDatabaseName;
+      private final Input<String> restoreDatabaseName;
 
     public Input<String> getRestoreDatabaseName() {
         return this.restoreDatabaseName;
@@ -147,7 +147,6 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
             this.restoreDatabaseName = Input.of(Objects.requireNonNull(restoreDatabaseName));
             return this;
         }
-
         public MigrateSqlServerSqlMIDatabaseInputArgs build() {
             return new MigrateSqlServerSqlMIDatabaseInputArgs(backupFilePaths, backupFileShare, name, restoreDatabaseName);
         }

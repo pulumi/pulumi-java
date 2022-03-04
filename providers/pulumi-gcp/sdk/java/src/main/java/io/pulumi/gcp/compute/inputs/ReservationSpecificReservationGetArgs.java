@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationInstancePropertiesGetArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="count", required=true)
-    private final Input<Integer> count;
+      private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -32,7 +32,7 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="inUseCount")
-    private final @Nullable Input<Integer> inUseCount;
+      private final @Nullable Input<Integer> inUseCount;
 
     public Input<Integer> getInUseCount() {
         return this.inUseCount == null ? Input.empty() : this.inUseCount;
@@ -44,7 +44,7 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="instanceProperties", required=true)
-    private final Input<ReservationSpecificReservationInstancePropertiesGetArgs> instanceProperties;
+      private final Input<ReservationSpecificReservationInstancePropertiesGetArgs> instanceProperties;
 
     public Input<ReservationSpecificReservationInstancePropertiesGetArgs> getInstanceProperties() {
         return this.instanceProperties;
@@ -118,7 +118,6 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
             this.instanceProperties = Input.of(Objects.requireNonNull(instanceProperties));
             return this;
         }
-
         public ReservationSpecificReservationGetArgs build() {
             return new ReservationSpecificReservationGetArgs(count, inUseCount, instanceProperties);
         }

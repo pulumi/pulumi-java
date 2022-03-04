@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.MABContainerHealthDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.MabContainerExtendedInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -112,35 +112,35 @@ public final class MabContainerResponse {
     /**
      * Agent version of this container.
      * 
-     */
+    */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * Type of backup management for the container.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * Can the container be registered one more time.
      * 
-     */
+    */
     public Optional<Boolean> getCanReRegister() {
         return Optional.ofNullable(this.canReRegister);
     }
     /**
      * Health state of mab container.
      * 
-     */
+    */
     public Optional<String> getContainerHealthState() {
         return Optional.ofNullable(this.containerHealthState);
     }
     /**
      * ContainerID represents the container.
      * 
-     */
+    */
     public Optional<Double> getContainerId() {
         return Optional.ofNullable(this.containerId);
     }
@@ -151,49 +151,49 @@ public final class MabContainerResponse {
      * Backup is VMAppContainer
      * Expected value is 'Windows'.
      * 
-     */
+    */
     public String getContainerType() {
         return this.containerType;
     }
     /**
      * Additional information for this container
      * 
-     */
+    */
     public Optional<MabContainerExtendedInfoResponse> getExtendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Friendly name of the container.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
-     */
+    */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Health details on this mab container.
      * 
-     */
+    */
     public List<MABContainerHealthDetailsResponse> getMabContainerHealthDetails() {
         return this.mabContainerHealthDetails == null ? List.of() : this.mabContainerHealthDetails;
     }
     /**
      * Number of items backed up in this container.
      * 
-     */
+    */
     public Optional<Double> getProtectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
-     */
+    */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
@@ -299,7 +299,6 @@ public final class MabContainerResponse {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public MabContainerResponse build() {
             return new MabContainerResponse(agentVersion, backupManagementType, canReRegister, containerHealthState, containerId, containerType, extendedInfo, friendlyName, healthStatus, mabContainerHealthDetails, protectedItemCount, registrationStatus);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AdditionalCapabilitiesResponse {
     /**
      * The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS. Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getUltraSSDEnabled() {
         return Optional.ofNullable(this.ultraSSDEnabled);
     }
@@ -54,7 +54,6 @@ public final class AdditionalCapabilitiesResponse {
             this.ultraSSDEnabled = ultraSSDEnabled;
             return this;
         }
-
         public AdditionalCapabilitiesResponse build() {
             return new AdditionalCapabilitiesResponse(ultraSSDEnabled);
         }

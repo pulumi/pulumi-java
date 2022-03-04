@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.enums.EventSource;
 import io.pulumi.azurenative.security.inputs.AutomationRuleSetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventSource")
-    private final @Nullable Input<Either<String,EventSource>> eventSource;
+      private final @Nullable Input<Either<String,EventSource>> eventSource;
 
     public Input<Either<String,EventSource>> getEventSource() {
         return this.eventSource == null ? Input.empty() : this.eventSource;
@@ -38,7 +38,7 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ruleSets")
-    private final @Nullable Input<List<AutomationRuleSetArgs>> ruleSets;
+      private final @Nullable Input<List<AutomationRuleSetArgs>> ruleSets;
 
     public Input<List<AutomationRuleSetArgs>> getRuleSets() {
         return this.ruleSets == null ? Input.empty() : this.ruleSets;
@@ -97,7 +97,6 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
             this.ruleSets = Input.ofNullable(ruleSets);
             return this;
         }
-
         public AutomationSourceArgs build() {
             return new AutomationSourceArgs(eventSource, ruleSets);
         }

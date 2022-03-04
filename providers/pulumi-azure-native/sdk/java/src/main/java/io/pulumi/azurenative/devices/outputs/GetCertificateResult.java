@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.CertificatePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,35 +53,35 @@ public final class GetCertificateResult {
     /**
      * The entity tag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the certificate.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The description of an X509 CA Certificate.
      * 
-     */
+    */
     public CertificatePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -138,7 +138,6 @@ public final class GetCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(etag, id, name, properties, type);
         }

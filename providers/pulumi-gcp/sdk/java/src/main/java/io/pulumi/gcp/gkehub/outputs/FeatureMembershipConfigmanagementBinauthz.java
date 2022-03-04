@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class FeatureMembershipConfigmanagementBinauthz {
     /**
      * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,7 +54,6 @@ public final class FeatureMembershipConfigmanagementBinauthz {
             this.enabled = enabled;
             return this;
         }
-
         public FeatureMembershipConfigmanagementBinauthz build() {
             return new FeatureMembershipConfigmanagementBinauthz(enabled);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class InstanceScratchDiskArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="interface", required=true)
-    private final Input<String> $interface;
+      private final Input<String> $interface;
 
     public Input<String> get$interface() {
         return this.$interface;
@@ -61,7 +61,6 @@ public final class InstanceScratchDiskArgs extends io.pulumi.resources.ResourceA
             this.$interface = Input.of(Objects.requireNonNull($interface));
             return this;
         }
-
         public InstanceScratchDiskArgs build() {
             return new InstanceScratchDiskArgs($interface);
         }

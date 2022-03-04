@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -77,56 +77,56 @@ public final class GetWorkloadNetworkDhcpResult {
     /**
      * Type of DHCP: SERVER or RELAY.
      * 
-     */
+    */
     public String getDhcpType() {
         return this.dhcpType;
     }
     /**
      * Display name of the DHCP entity.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
      * 
-     */
+    */
     public Optional<Double> getRevision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * NSX Segments consuming DHCP.
      * 
-     */
+    */
     public List<String> getSegments() {
         return this.segments;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -204,7 +204,6 @@ public final class GetWorkloadNetworkDhcpResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkDhcpResult build() {
             return new GetWorkloadNetworkDhcpResult(dhcpType, displayName, id, name, provisioningState, revision, segments, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.runtimeconfig_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.inputs.EndConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     public static final WaiterArgs Empty = new WaiterArgs();
 
     @InputImport(name="configId", required=true)
-    private final Input<String> configId;
+      private final Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId;
@@ -27,7 +27,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failure")
-    private final @Nullable Input<EndConditionArgs> failure;
+      private final @Nullable Input<EndConditionArgs> failure;
 
     public Input<EndConditionArgs> getFailure() {
         return this.failure == null ? Input.empty() : this.failure;
@@ -38,21 +38,21 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -63,7 +63,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="success")
-    private final @Nullable Input<EndConditionArgs> success;
+      private final @Nullable Input<EndConditionArgs> success;
 
     public Input<EndConditionArgs> getSuccess() {
         return this.success == null ? Input.empty() : this.success;
@@ -74,7 +74,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -208,7 +208,6 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public WaiterArgs build() {
             return new WaiterArgs(configId, failure, name, project, requestId, success, timeout);
         }

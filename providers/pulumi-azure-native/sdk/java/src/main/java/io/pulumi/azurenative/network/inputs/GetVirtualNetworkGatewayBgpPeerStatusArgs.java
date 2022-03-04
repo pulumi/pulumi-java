@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="peer")
-    private final @Nullable String peer;
+      private final @Nullable String peer;
 
     public Optional<String> getPeer() {
         return this.peer == null ? Optional.empty() : Optional.ofNullable(this.peer);
@@ -30,7 +30,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="virtualNetworkGatewayName", required=true)
-    private final String virtualNetworkGatewayName;
+      private final String virtualNetworkGatewayName;
 
     public String getVirtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
@@ -100,7 +100,6 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
             this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
             return this;
         }
-
         public GetVirtualNetworkGatewayBgpPeerStatusArgs build() {
             return new GetVirtualNetworkGatewayBgpPeerStatusArgs(peer, resourceGroupName, virtualNetworkGatewayName);
         }

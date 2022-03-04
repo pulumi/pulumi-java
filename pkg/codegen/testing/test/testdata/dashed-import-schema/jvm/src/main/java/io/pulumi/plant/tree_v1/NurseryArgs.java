@@ -4,7 +4,7 @@
 package io.pulumi.plant.tree_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.plant.tree_v1.enums.RubberTreeVariety;
 import io.pulumi.plant.tree_v1.enums.TreeSize;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizes")
-    private final @Nullable Input<Map<String,TreeSize>> sizes;
+      private final @Nullable Input<Map<String,TreeSize>> sizes;
 
     public Input<Map<String,TreeSize>> getSizes() {
         return this.sizes == null ? Input.empty() : this.sizes;
@@ -34,7 +34,7 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="varieties", required=true)
-    private final Input<List<RubberTreeVariety>> varieties;
+      private final Input<List<RubberTreeVariety>> varieties;
 
     public Input<List<RubberTreeVariety>> getVarieties() {
         return this.varieties;
@@ -93,7 +93,6 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
             this.varieties = Input.of(Objects.requireNonNull(varieties));
             return this;
         }
-
         public NurseryArgs build() {
             return new NurseryArgs(sizes, varieties);
         }

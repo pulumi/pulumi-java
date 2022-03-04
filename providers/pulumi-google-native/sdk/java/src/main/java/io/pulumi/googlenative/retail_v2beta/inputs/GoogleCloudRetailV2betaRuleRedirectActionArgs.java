@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionArgs extends io.pulu
      * 
      */
     @InputImport(name="redirectUri")
-    private final @Nullable Input<String> redirectUri;
+      private final @Nullable Input<String> redirectUri;
 
     public Input<String> getRedirectUri() {
         return this.redirectUri == null ? Input.empty() : this.redirectUri;
@@ -66,7 +66,6 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionArgs extends io.pulu
             this.redirectUri = Input.ofNullable(redirectUri);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleRedirectActionArgs build() {
             return new GoogleCloudRetailV2betaRuleRedirectActionArgs(redirectUri);
         }

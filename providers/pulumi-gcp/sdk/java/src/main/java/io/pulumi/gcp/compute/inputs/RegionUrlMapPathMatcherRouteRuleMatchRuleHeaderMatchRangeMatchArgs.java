@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
      * 
      */
     @InputImport(name="rangeEnd", required=true)
-    private final Input<Integer> rangeEnd;
+      private final Input<Integer> rangeEnd;
 
     public Input<Integer> getRangeEnd() {
         return this.rangeEnd;
@@ -29,7 +29,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
      * 
      */
     @InputImport(name="rangeStart", required=true)
-    private final Input<Integer> rangeStart;
+      private final Input<Integer> rangeStart;
 
     public Input<Integer> getRangeStart() {
         return this.rangeStart;
@@ -88,7 +88,6 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
             this.rangeStart = Input.of(Objects.requireNonNull(rangeStart));
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs(rangeEnd, rangeStart);
         }

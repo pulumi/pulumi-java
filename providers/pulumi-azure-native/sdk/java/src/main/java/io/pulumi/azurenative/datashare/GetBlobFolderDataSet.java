@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetBlobFolderDataSetArgs;
 import io.pulumi.azurenative.datashare.outputs.GetBlobFolderDataSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobFolderDataSet {
-/**
- * An Azure storage blob folder data set.
+    private GetBlobFolderDataSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetBlobFolderDataSetArgs.Builder a);
+    }
+    private static GetBlobFolderDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBlobFolderDataSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure storage blob folder data set.
  * API Version: 2020-09-01.
  * 
- *
- * An Azure storage blob folder data set.
+     *
+     * An Azure storage blob folder data set.
  * 
- */
+     */
+    public static CompletableFuture<GetBlobFolderDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure storage blob folder data set.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * An Azure storage blob folder data set.
+     * 
+     */
     public static CompletableFuture<GetBlobFolderDataSetResult> invokeAsync(GetBlobFolderDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobFolderDataSet", TypeShape.of(GetBlobFolderDataSetResult.class), args == null ? GetBlobFolderDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

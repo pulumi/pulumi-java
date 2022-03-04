@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +46,7 @@ public final class FirewallAllow {
      * Example inputs include: ["22"], ["80","443"], and
      * ["12345-12349"].
      * 
-     */
+    */
     public List<String> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }
@@ -56,7 +56,7 @@ public final class FirewallAllow {
      * one of the following well known protocol strings (tcp, udp,
      * icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
@@ -92,7 +92,6 @@ public final class FirewallAllow {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public FirewallAllow build() {
             return new FirewallAllow(ports, protocol);
         }

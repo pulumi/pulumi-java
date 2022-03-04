@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -80,63 +80,63 @@ public final class GetExportResult {
     /**
      * Time the export job was created.
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * Name of the datastore that is the destination of the export job [datastore]
      * 
-     */
+    */
     public String getDatastoreName() {
         return this.datastoreName;
     }
     /**
      * Description of the export job.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Error is set when export fails
      * 
-     */
+    */
     public String getError() {
         return this.error;
     }
     /**
      * Execution time for this export job. If the job is still in progress, it will be set to the amount of time that has elapsed since`created`, in seconds. Else, it will set to (`updated` - `created`), in seconds.
      * 
-     */
+    */
     public String getExecutionTime() {
         return this.executionTime;
     }
     /**
      * Display name of the export job.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Self link of the export job. A URI that can be used to retrieve the status of an export job. Example: `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
      * 
-     */
+    */
     public String getSelf() {
         return this.self;
     }
     /**
      * Status of the export job. Valid values include `enqueued`, `running`, `completed`, and `failed`.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Time the export job was last updated.
      * 
-     */
+    */
     public String getUpdated() {
         return this.updated;
     }
@@ -221,7 +221,6 @@ public final class GetExportResult {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public GetExportResult build() {
             return new GetExportResult(created, datastoreName, description, error, executionTime, name, self, state, updated);
         }

@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2ThrowErrorResponse extends io.pulumi.resour
         public Builder(GooglePrivacyDlpV2ThrowErrorResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2ThrowErrorResponse build() {
             return new GooglePrivacyDlpV2ThrowErrorResponse();
         }

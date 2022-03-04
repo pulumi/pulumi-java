@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayClientAuthConfigur
 import io.pulumi.azurenative.network.inputs.ApplicationGatewaySslPolicyArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clientAuthConfiguration")
-    private final @Nullable Input<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
+      private final @Nullable Input<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
 
     public Input<ApplicationGatewayClientAuthConfigurationArgs> getClientAuthConfiguration() {
         return this.clientAuthConfiguration == null ? Input.empty() : this.clientAuthConfiguration;
@@ -38,7 +38,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -49,7 +49,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -60,7 +60,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sslPolicy")
-    private final @Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy;
+      private final @Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy;
 
     public Input<ApplicationGatewaySslPolicyArgs> getSslPolicy() {
         return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
@@ -71,7 +71,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="trustedClientCertificates")
-    private final @Nullable Input<List<SubResourceArgs>> trustedClientCertificates;
+      private final @Nullable Input<List<SubResourceArgs>> trustedClientCertificates;
 
     public Input<List<SubResourceArgs>> getTrustedClientCertificates() {
         return this.trustedClientCertificates == null ? Input.empty() : this.trustedClientCertificates;
@@ -175,7 +175,6 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
             this.trustedClientCertificates = Input.ofNullable(trustedClientCertificates);
             return this;
         }
-
         public ApplicationGatewaySslProfileArgs build() {
             return new ApplicationGatewaySslProfileArgs(clientAuthConfiguration, id, name, sslPolicy, trustedClientCertificates);
         }

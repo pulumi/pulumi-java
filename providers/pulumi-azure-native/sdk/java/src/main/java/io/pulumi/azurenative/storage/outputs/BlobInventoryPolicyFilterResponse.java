@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -49,28 +49,28 @@ public final class BlobInventoryPolicyFilterResponse {
     /**
      * An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
      * 
-     */
+    */
     public List<String> getBlobTypes() {
         return this.blobTypes;
     }
     /**
      * Includes blob versions in blob inventory when value set to true.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeBlobVersions() {
         return Optional.ofNullable(this.includeBlobVersions);
     }
     /**
      * Includes blob snapshots in blob inventory when value set to true.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeSnapshots() {
         return Optional.ofNullable(this.includeSnapshots);
     }
     /**
      * An array of strings for blob prefixes to be matched.
      * 
-     */
+    */
     public List<String> getPrefixMatch() {
         return this.prefixMatch == null ? List.of() : this.prefixMatch;
     }
@@ -120,7 +120,6 @@ public final class BlobInventoryPolicyFilterResponse {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public BlobInventoryPolicyFilterResponse build() {
             return new BlobInventoryPolicyFilterResponse(blobTypes, includeBlobVersions, includeSnapshots, prefixMatch);
         }

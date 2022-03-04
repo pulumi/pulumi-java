@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyOptionResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -85,63 +85,63 @@ public final class GetContentKeyPolicyResult {
     /**
      * The creation date of the Policy
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * A description for the Policy.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The last modified date of the Policy
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Key Policy options.
      * 
-     */
+    */
     public List<ContentKeyPolicyOptionResponse> getOptions() {
         return this.options;
     }
     /**
      * The legacy Policy ID.
      * 
-     */
+    */
     public String getPolicyId() {
         return this.policyId;
     }
     /**
      * The system metadata relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -226,7 +226,6 @@ public final class GetContentKeyPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContentKeyPolicyResult build() {
             return new GetContentKeyPolicyResult(created, description, id, lastModified, name, options, policyId, systemData, type);
         }

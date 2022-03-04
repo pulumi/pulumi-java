@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TrafficPercentStrategyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="percentages")
-    private final @Nullable Input<Map<String,String>> percentages;
+      private final @Nullable Input<Map<String,String>> percentages;
 
     public Input<Map<String,String>> getPercentages() {
         return this.percentages == null ? Input.empty() : this.percentages;
@@ -67,7 +67,6 @@ public final class TrafficPercentStrategyArgs extends io.pulumi.resources.Resour
             this.percentages = Input.ofNullable(percentages);
             return this;
         }
-
         public TrafficPercentStrategyArgs build() {
             return new TrafficPercentStrategyArgs(percentages);
         }

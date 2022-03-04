@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.GoogleAutoArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleAuto")
-    private final @Nullable Input<GoogleAutoArgs> googleAuto;
+      private final @Nullable Input<GoogleAutoArgs> googleAuto;
 
     public Input<GoogleAutoArgs> getGoogleAuto() {
         return this.googleAuto == null ? Input.empty() : this.googleAuto;
@@ -66,7 +66,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.googleAuto = Input.ofNullable(googleAuto);
             return this;
         }
-
         public AccountArgs build() {
             return new AccountArgs(googleAuto);
         }

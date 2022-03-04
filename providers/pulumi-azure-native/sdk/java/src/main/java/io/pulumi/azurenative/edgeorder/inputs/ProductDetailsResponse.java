@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 import io.pulumi.azurenative.edgeorder.inputs.DeviceDetailsResponse;
 import io.pulumi.azurenative.edgeorder.inputs.DisplayInfoResponse;
 import io.pulumi.azurenative.edgeorder.inputs.HierarchyInformationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="count", required=true)
-    private final Integer count;
+      private final Integer count;
 
     public Integer getCount() {
         return this.count;
@@ -39,7 +39,7 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="deviceDetails", required=true)
-    private final List<DeviceDetailsResponse> deviceDetails;
+      private final List<DeviceDetailsResponse> deviceDetails;
 
     public List<DeviceDetailsResponse> getDeviceDetails() {
         return this.deviceDetails;
@@ -50,7 +50,7 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="displayInfo")
-    private final @Nullable DisplayInfoResponse displayInfo;
+      private final @Nullable DisplayInfoResponse displayInfo;
 
     public Optional<DisplayInfoResponse> getDisplayInfo() {
         return this.displayInfo == null ? Optional.empty() : Optional.ofNullable(this.displayInfo);
@@ -61,7 +61,7 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="hierarchyInformation", required=true)
-    private final HierarchyInformationResponse hierarchyInformation;
+      private final HierarchyInformationResponse hierarchyInformation;
 
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
@@ -72,7 +72,7 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="productDoubleEncryptionStatus", required=true)
-    private final String productDoubleEncryptionStatus;
+      private final String productDoubleEncryptionStatus;
 
     public String getProductDoubleEncryptionStatus() {
         return this.productDoubleEncryptionStatus;
@@ -151,7 +151,6 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
             this.productDoubleEncryptionStatus = Objects.requireNonNull(productDoubleEncryptionStatus);
             return this;
         }
-
         public ProductDetailsResponse build() {
             return new ProductDetailsResponse(count, deviceDetails, displayInfo, hierarchyInformation, productDoubleEncryptionStatus);
         }

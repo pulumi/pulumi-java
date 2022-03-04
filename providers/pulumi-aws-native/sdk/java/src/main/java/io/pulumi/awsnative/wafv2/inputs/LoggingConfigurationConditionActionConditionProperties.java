@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationConditionActionConditionPropertiesAction;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class LoggingConfigurationConditionActionConditionProperties extend
      * 
      */
     @InputImport(name="action", required=true)
-    private final LoggingConfigurationConditionActionConditionPropertiesAction action;
+      private final LoggingConfigurationConditionActionConditionPropertiesAction action;
 
     public LoggingConfigurationConditionActionConditionPropertiesAction getAction() {
         return this.action;
@@ -59,7 +59,6 @@ public final class LoggingConfigurationConditionActionConditionProperties extend
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public LoggingConfigurationConditionActionConditionProperties build() {
             return new LoggingConfigurationConditionActionConditionProperties(action);
         }

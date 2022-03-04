@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,7 +41,7 @@ public final class ClusterClusterConfigLifecycleConfig {
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
      * Example: "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getAutoDeleteTime() {
         return Optional.ofNullable(this.autoDeleteTime);
     }
@@ -49,7 +49,7 @@ public final class ClusterClusterConfigLifecycleConfig {
      * The duration to keep the cluster alive while idling
      * (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
      * 
-     */
+    */
     public Optional<String> getIdleDeleteTtl() {
         return Optional.ofNullable(this.idleDeleteTtl);
     }
@@ -95,7 +95,6 @@ public final class ClusterClusterConfigLifecycleConfig {
             this.idleStartTime = idleStartTime;
             return this;
         }
-
         public ClusterClusterConfigLifecycleConfig build() {
             return new ClusterClusterConfigLifecycleConfig(autoDeleteTime, idleDeleteTtl, idleStartTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class GetDatabaseInstanceRestoreBackupContext {
     /**
      * The ID of the project in which the resource belongs.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
@@ -80,7 +80,6 @@ public final class GetDatabaseInstanceRestoreBackupContext {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetDatabaseInstanceRestoreBackupContext build() {
             return new GetDatabaseInstanceRestoreBackupContext(backupRunId, instanceId, project);
         }

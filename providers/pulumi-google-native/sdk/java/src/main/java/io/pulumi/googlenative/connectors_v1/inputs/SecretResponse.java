@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretVersion", required=true)
-    private final String secretVersion;
+      private final String secretVersion;
 
     public String getSecretVersion() {
         return this.secretVersion;
@@ -59,7 +59,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(secretVersion);
         }

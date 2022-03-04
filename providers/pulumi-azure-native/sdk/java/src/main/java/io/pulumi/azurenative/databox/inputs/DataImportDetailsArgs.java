@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databox.inputs.ManagedDiskDetailsArgs;
 import io.pulumi.azurenative.databox.inputs.StorageAccountDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -24,7 +24,7 @@ public final class DataImportDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountDetails", required=true)
-    private final Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
+      private final Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
     public Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> getAccountDetails() {
         return this.accountDetails;
@@ -67,7 +67,6 @@ public final class DataImportDetailsArgs extends io.pulumi.resources.ResourceArg
             this.accountDetails = Input.of(Objects.requireNonNull(accountDetails));
             return this;
         }
-
         public DataImportDetailsArgs build() {
             return new DataImportDetailsArgs(accountDetails);
         }

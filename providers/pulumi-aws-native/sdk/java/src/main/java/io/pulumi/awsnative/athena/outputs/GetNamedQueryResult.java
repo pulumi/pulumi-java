@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.athena.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetNamedQueryResult {
     /**
      * The unique ID of the query.
      * 
-     */
+    */
     public Optional<String> getNamedQueryId() {
         return Optional.ofNullable(this.namedQueryId);
     }
@@ -54,7 +54,6 @@ public final class GetNamedQueryResult {
             this.namedQueryId = namedQueryId;
             return this;
         }
-
         public GetNamedQueryResult build() {
             return new GetNamedQueryResult(namedQueryId);
         }

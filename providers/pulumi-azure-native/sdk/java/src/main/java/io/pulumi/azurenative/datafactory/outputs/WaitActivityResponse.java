@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -66,21 +66,21 @@ public final class WaitActivityResponse {
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -88,21 +88,21 @@ public final class WaitActivityResponse {
      * Type of activity.
      * Expected value is 'Wait'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * Duration in seconds.
      * 
-     */
+    */
     public Object getWaitTimeInSeconds() {
         return this.waitTimeInSeconds;
     }
@@ -166,7 +166,6 @@ public final class WaitActivityResponse {
             this.waitTimeInSeconds = Objects.requireNonNull(waitTimeInSeconds);
             return this;
         }
-
         public WaitActivityResponse build() {
             return new WaitActivityResponse(dependsOn, description, name, type, userProperties, waitTimeInSeconds);
         }

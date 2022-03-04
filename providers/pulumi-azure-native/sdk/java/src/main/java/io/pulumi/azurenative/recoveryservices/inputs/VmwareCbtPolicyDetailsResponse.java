@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="appConsistentFrequencyInMinutes")
-    private final @Nullable Integer appConsistentFrequencyInMinutes;
+      private final @Nullable Integer appConsistentFrequencyInMinutes;
 
     public Optional<Integer> getAppConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.appConsistentFrequencyInMinutes);
@@ -35,7 +35,7 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="crashConsistentFrequencyInMinutes")
-    private final @Nullable Integer crashConsistentFrequencyInMinutes;
+      private final @Nullable Integer crashConsistentFrequencyInMinutes;
 
     public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
@@ -47,7 +47,7 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -58,7 +58,7 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="recoveryPointHistoryInMinutes")
-    private final @Nullable Integer recoveryPointHistoryInMinutes;
+      private final @Nullable Integer recoveryPointHistoryInMinutes;
 
     public Optional<Integer> getRecoveryPointHistoryInMinutes() {
         return this.recoveryPointHistoryInMinutes == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistoryInMinutes);
@@ -127,7 +127,6 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
             this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;
         }
-
         public VmwareCbtPolicyDetailsResponse build() {
             return new VmwareCbtPolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, recoveryPointHistoryInMinutes);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.EndpointInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.StepResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TraceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointInfo", required=true)
-    private final EndpointInfoResponse endpointInfo;
+      private final EndpointInfoResponse endpointInfo;
 
     public EndpointInfoResponse getEndpointInfo() {
         return this.endpointInfo;
@@ -34,7 +34,7 @@ public final class TraceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="steps", required=true)
-    private final List<StepResponse> steps;
+      private final List<StepResponse> steps;
 
     public List<StepResponse> getSteps() {
         return this.steps;
@@ -83,7 +83,6 @@ public final class TraceResponse extends io.pulumi.resources.InvokeArgs {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
         public TraceResponse build() {
             return new TraceResponse(endpointInfo, steps);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
      * 
      */
     @InputImport(name="noSmalltalk", required=true)
-    private final Boolean noSmalltalk;
+      private final Boolean noSmalltalk;
 
     public Boolean getNoSmalltalk() {
         return this.noSmalltalk;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
      * 
      */
     @InputImport(name="onlyEndUser", required=true)
-    private final Boolean onlyEndUser;
+      private final Boolean onlyEndUser;
 
     public Boolean getOnlyEndUser() {
         return this.onlyEndUser;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
             this.onlyEndUser = Objects.requireNonNull(onlyEndUser);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(noSmalltalk, onlyEndUser);
         }

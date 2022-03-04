@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class WebClientCertificateAuthenticationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final String authenticationType;
+      private final String authenticationType;
 
     public String getAuthenticationType() {
         return this.authenticationType;
@@ -37,7 +37,7 @@ public final class WebClientCertificateAuthenticationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="password", required=true)
-    private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+      private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password;
@@ -48,7 +48,7 @@ public final class WebClientCertificateAuthenticationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="pfx", required=true)
-    private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
+      private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPfx() {
         return this.pfx;
@@ -59,7 +59,7 @@ public final class WebClientCertificateAuthenticationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="url", required=true)
-    private final Object url;
+      private final Object url;
 
     public Object getUrl() {
         return this.url;
@@ -128,7 +128,6 @@ public final class WebClientCertificateAuthenticationResponse extends io.pulumi.
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public WebClientCertificateAuthenticationResponse build() {
             return new WebClientCertificateAuthenticationResponse(authenticationType, password, pfx, url);
         }

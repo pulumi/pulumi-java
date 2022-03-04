@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketServerSideEncryptionByDefaultSSEAlgorithm;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public final class BucketServerSideEncryptionByDefault {
     /**
      * "KMSMasterKeyID" can only be used when you set the value of SSEAlgorithm as aws:kms.
      * 
-     */
+    */
     public Optional<String> getKMSMasterKeyID() {
         return Optional.ofNullable(this.kMSMasterKeyID);
     }
@@ -69,7 +69,6 @@ public final class BucketServerSideEncryptionByDefault {
             this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm);
             return this;
         }
-
         public BucketServerSideEncryptionByDefault build() {
             return new BucketServerSideEncryptionByDefault(kMSMasterKeyID, sSEAlgorithm);
         }

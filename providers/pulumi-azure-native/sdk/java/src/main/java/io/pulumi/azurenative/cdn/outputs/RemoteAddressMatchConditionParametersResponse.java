@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -52,14 +52,14 @@ public final class RemoteAddressMatchConditionParametersResponse {
     /**
      * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
      * 
-     */
+    */
     public List<String> getMatchValues() {
         return this.matchValues == null ? List.of() : this.matchValues;
     }
     /**
      * Describes if this is negate condition or not
      * 
-     */
+    */
     public Optional<Boolean> getNegateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -69,14 +69,14 @@ public final class RemoteAddressMatchConditionParametersResponse {
     /**
      * Describes operator to be matched
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * List of transforms
      * 
-     */
+    */
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
@@ -133,7 +133,6 @@ public final class RemoteAddressMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public RemoteAddressMatchConditionParametersResponse build() {
             return new RemoteAddressMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
         }

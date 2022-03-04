@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityandcompliance.outputs;
 import io.pulumi.azurenative.securityandcompliance.outputs.ServicesPropertiesResponse;
 import io.pulumi.azurenative.securityandcompliance.outputs.ServicesResourceResponseIdentity;
 import io.pulumi.azurenative.securityandcompliance.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -93,70 +93,70 @@ public final class GetprivateLinkServicesForEDMUploadResult {
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Setting indicating whether the service has a managed identity associated with it.
      * 
-     */
+    */
     public Optional<ServicesResourceResponseIdentity> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of the service.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The common properties of a service.
      * 
-     */
+    */
     public ServicesPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Required property for system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -248,7 +248,6 @@ public final class GetprivateLinkServicesForEDMUploadResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetprivateLinkServicesForEDMUploadResult build() {
             return new GetprivateLinkServicesForEDMUploadResult(etag, id, identity, kind, location, name, properties, systemData, tags, type);
         }

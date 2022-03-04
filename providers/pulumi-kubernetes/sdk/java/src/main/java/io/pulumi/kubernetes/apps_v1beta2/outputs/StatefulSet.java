@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.StatefulSetSpec;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.StatefulSetStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -53,14 +53,14 @@ public final class StatefulSet {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
@@ -70,14 +70,14 @@ public final class StatefulSet {
     /**
      * Spec defines the desired identities of pods in this set.
      * 
-     */
+    */
     public Optional<StatefulSetSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }
     /**
      * Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time.
      * 
-     */
+    */
     public Optional<StatefulSetStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -134,7 +134,6 @@ public final class StatefulSet {
             this.status = status;
             return this;
         }
-
         public StatefulSet build() {
             return new StatefulSet(apiVersion, kind, metadata, spec, status);
         }

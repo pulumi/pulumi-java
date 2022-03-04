@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2JobNotificationEmailsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PublishSummaryToCsccResponse;
@@ -64,42 +64,42 @@ public final class GooglePrivacyDlpV2ActionResponse {
     /**
      * Enable email notification for project owners and editors on job's completion/failure.
      * 
-     */
+    */
     public GooglePrivacyDlpV2JobNotificationEmailsResponse getJobNotificationEmails() {
         return this.jobNotificationEmails;
     }
     /**
      * Publish a notification to a pubsub topic.
      * 
-     */
+    */
     public GooglePrivacyDlpV2PublishToPubSubResponse getPubSub() {
         return this.pubSub;
     }
     /**
      * Publish findings to Cloud Datahub.
      * 
-     */
+    */
     public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse getPublishFindingsToCloudDataCatalog() {
         return this.publishFindingsToCloudDataCatalog;
     }
     /**
      * Publish summary to Cloud Security Command Center (Alpha).
      * 
-     */
+    */
     public GooglePrivacyDlpV2PublishSummaryToCsccResponse getPublishSummaryToCscc() {
         return this.publishSummaryToCscc;
     }
     /**
      * Enable Stackdriver metric dlp.googleapis.com/finding_count.
      * 
-     */
+    */
     public GooglePrivacyDlpV2PublishToStackdriverResponse getPublishToStackdriver() {
         return this.publishToStackdriver;
     }
     /**
      * Save resulting findings in a provided location.
      * 
-     */
+    */
     public GooglePrivacyDlpV2SaveFindingsResponse getSaveFindings() {
         return this.saveFindings;
     }
@@ -163,7 +163,6 @@ public final class GooglePrivacyDlpV2ActionResponse {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }
-
         public GooglePrivacyDlpV2ActionResponse build() {
             return new GooglePrivacyDlpV2ActionResponse(jobNotificationEmails, pubSub, publishFindingsToCloudDataCatalog, publishSummaryToCscc, publishToStackdriver, saveFindings);
         }

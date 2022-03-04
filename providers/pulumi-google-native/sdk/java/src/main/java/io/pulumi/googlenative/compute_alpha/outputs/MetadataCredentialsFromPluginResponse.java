@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class MetadataCredentialsFromPluginResponse {
     /**
      * Plugin name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A text proto that conforms to a Struct type definition interpreted by the plugin.
      * 
-     */
+    */
     public String getStructConfig() {
         return this.structConfig;
     }
@@ -74,7 +74,6 @@ public final class MetadataCredentialsFromPluginResponse {
             this.structConfig = Objects.requireNonNull(structConfig);
             return this;
         }
-
         public MetadataCredentialsFromPluginResponse build() {
             return new MetadataCredentialsFromPluginResponse(name, structConfig);
         }

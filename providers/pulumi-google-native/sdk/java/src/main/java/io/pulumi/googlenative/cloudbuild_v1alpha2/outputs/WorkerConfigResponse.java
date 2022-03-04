@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class WorkerConfigResponse {
     /**
      * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size.
      * 
-     */
+    */
     public String getDiskSizeGb() {
         return this.diskSizeGb;
     }
     /**
      * Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool.
      * 
-     */
+    */
     public String getMachineType() {
         return this.machineType;
     }
@@ -74,7 +74,6 @@ public final class WorkerConfigResponse {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public WorkerConfigResponse build() {
             return new WorkerConfigResponse(diskSizeGb, machineType);
         }

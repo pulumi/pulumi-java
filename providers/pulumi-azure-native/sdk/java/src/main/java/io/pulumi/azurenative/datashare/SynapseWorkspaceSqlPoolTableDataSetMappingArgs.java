@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
      * 
      */
     @InputImport(name="dataSetId", required=true)
-    private final Input<String> dataSetId;
+      private final Input<String> dataSetId;
 
     public Input<String> getDataSetId() {
         return this.dataSetId;
@@ -41,7 +41,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
      * 
      */
     @InputImport(name="dataSetMappingName")
-    private final @Nullable Input<String> dataSetMappingName;
+      private final @Nullable Input<String> dataSetMappingName;
 
     public Input<String> getDataSetMappingName() {
         return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
@@ -53,7 +53,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -64,7 +64,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final Input<String> shareSubscriptionName;
+      private final Input<String> shareSubscriptionName;
 
     public Input<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -86,7 +86,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
      * 
      */
     @InputImport(name="synapseWorkspaceSqlPoolTableResourceId", required=true)
-    private final Input<String> synapseWorkspaceSqlPoolTableResourceId;
+      private final Input<String> synapseWorkspaceSqlPoolTableResourceId;
 
     public Input<String> getSynapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
@@ -220,7 +220,6 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
             this.synapseWorkspaceSqlPoolTableResourceId = Input.of(Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId));
             return this;
         }
-
         public SynapseWorkspaceSqlPoolTableDataSetMappingArgs build() {
             return new SynapseWorkspaceSqlPoolTableDataSetMappingArgs(accountName, dataSetId, dataSetMappingName, kind, resourceGroupName, shareSubscriptionName, synapseWorkspaceSqlPoolTableResourceId);
         }

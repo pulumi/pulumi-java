@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.awsnative.evidently.inputs.LaunchGroupToWeight;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class LaunchStepConfig extends io.pulumi.resources.InvokeArgs {
     public static final LaunchStepConfig Empty = new LaunchStepConfig();
 
     @InputImport(name="groupWeights", required=true)
-    private final List<LaunchGroupToWeight> groupWeights;
+      private final List<LaunchGroupToWeight> groupWeights;
 
     public List<LaunchGroupToWeight> getGroupWeights() {
         return this.groupWeights;
     }
 
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -71,7 +71,6 @@ public final class LaunchStepConfig extends io.pulumi.resources.InvokeArgs {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public LaunchStepConfig build() {
             return new LaunchStepConfig(groupWeights, startTime);
         }

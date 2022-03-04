@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CertificateCertificateDescriptionPublicKeyArgs extends io.pul
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<String> format;
+      private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -31,7 +31,7 @@ public final class CertificateCertificateDescriptionPublicKeyArgs extends io.pul
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -90,7 +90,6 @@ public final class CertificateCertificateDescriptionPublicKeyArgs extends io.pul
             this.key = Input.ofNullable(key);
             return this;
         }
-
         public CertificateCertificateDescriptionPublicKeyArgs build() {
             return new CertificateCertificateDescriptionPublicKeyArgs(format, key);
         }

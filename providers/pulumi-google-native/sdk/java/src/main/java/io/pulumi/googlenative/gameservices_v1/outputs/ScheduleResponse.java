@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ScheduleResponse {
     /**
      * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
      * 
-     */
+    */
     public String getCronJobDuration() {
         return this.cronJobDuration;
     }
     /**
      * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
      * 
-     */
+    */
     public String getCronSpec() {
         return this.cronSpec;
     }
     /**
      * The end time of the event.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The start time of the event.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -116,7 +116,6 @@ public final class ScheduleResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(cronJobDuration, cronSpec, endTime, startTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,7 +40,7 @@ public final class SecurityScanConfigAuthenticationCustomAccount {
     /**
      * The login form URL of the website.
      * 
-     */
+    */
     public String getLoginUrl() {
         return this.loginUrl;
     }
@@ -49,14 +49,14 @@ public final class SecurityScanConfigAuthenticationCustomAccount {
      * in GCP.
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The user name of the custom account.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -99,7 +99,6 @@ public final class SecurityScanConfigAuthenticationCustomAccount {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public SecurityScanConfigAuthenticationCustomAccount build() {
             return new SecurityScanConfigAuthenticationCustomAccount(loginUrl, password, username);
         }

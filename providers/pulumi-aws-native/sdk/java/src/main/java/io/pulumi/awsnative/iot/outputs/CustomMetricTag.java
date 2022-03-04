@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class CustomMetricTag {
     /**
      * The tag's key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The tag's value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class CustomMetricTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CustomMetricTag build() {
             return new CustomMetricTag(key, value);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.labservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.labservices.inputs.GetGlobalUserEnvironmentArgs;
 import io.pulumi.azurenative.labservices.outputs.GetGlobalUserEnvironmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalUserEnvironment {
-/**
- * Represents the environments details
+    private GetGlobalUserEnvironment() {}
+    public interface BuilderApplicator {
+        public void apply(GetGlobalUserEnvironmentArgs.Builder a);
+    }
+    private static GetGlobalUserEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGlobalUserEnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents the environments details
  * API Version: 2018-10-15.
  * 
- *
- * Represents the environments details
+     *
+     * Represents the environments details
  * 
- */
+     */
+    public static CompletableFuture<GetGlobalUserEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents the environments details
+     * API Version: 2018-10-15.
+     * 
+     *
+         * Represents the environments details
+     * 
+     */
     public static CompletableFuture<GetGlobalUserEnvironmentResult> invokeAsync(GetGlobalUserEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGlobalUserEnvironment", TypeShape.of(GetGlobalUserEnvironmentResult.class), args == null ? GetGlobalUserEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,14 +49,14 @@ public final class StaticDeliveryAttributeMappingResponse {
     /**
      * Boolean flag to tell if the attribute contains sensitive information .
      * 
-     */
+    */
     public Optional<Boolean> getIsSecret() {
         return Optional.ofNullable(this.isSecret);
     }
     /**
      * Name of the delivery attribute or header.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -64,14 +64,14 @@ public final class StaticDeliveryAttributeMappingResponse {
      * Type of the delivery attribute or header name.
      * Expected value is 'Static'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Value of the delivery attribute.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -121,7 +121,6 @@ public final class StaticDeliveryAttributeMappingResponse {
             this.value = value;
             return this;
         }
-
         public StaticDeliveryAttributeMappingResponse build() {
             return new StaticDeliveryAttributeMappingResponse(isSecret, name, type, value);
         }

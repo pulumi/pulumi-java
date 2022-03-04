@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.FixedOrPercentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class InstanceGroupManagerVersionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instanceTemplate", required=true)
-    private final String instanceTemplate;
+      private final String instanceTemplate;
 
     public String getInstanceTemplate() {
         return this.instanceTemplate;
@@ -29,7 +29,7 @@ public final class InstanceGroupManagerVersionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -40,7 +40,7 @@ public final class InstanceGroupManagerVersionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targetSize", required=true)
-    private final FixedOrPercentResponse targetSize;
+      private final FixedOrPercentResponse targetSize;
 
     public FixedOrPercentResponse getTargetSize() {
         return this.targetSize;
@@ -99,7 +99,6 @@ public final class InstanceGroupManagerVersionResponse extends io.pulumi.resourc
             this.targetSize = Objects.requireNonNull(targetSize);
             return this;
         }
-
         public InstanceGroupManagerVersionResponse build() {
             return new InstanceGroupManagerVersionResponse(instanceTemplate, name, targetSize);
         }

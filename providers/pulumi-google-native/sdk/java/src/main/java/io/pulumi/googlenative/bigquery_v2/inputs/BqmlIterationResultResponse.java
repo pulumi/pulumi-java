@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="durationMs", required=true)
-    private final String durationMs;
+      private final String durationMs;
 
     public String getDurationMs() {
         return this.durationMs;
@@ -30,7 +30,7 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="evalLoss", required=true)
-    private final Double evalLoss;
+      private final Double evalLoss;
 
     public Double getEvalLoss() {
         return this.evalLoss;
@@ -41,7 +41,7 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="index", required=true)
-    private final Integer index;
+      private final Integer index;
 
     public Integer getIndex() {
         return this.index;
@@ -52,7 +52,7 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="learnRate", required=true)
-    private final Double learnRate;
+      private final Double learnRate;
 
     public Double getLearnRate() {
         return this.learnRate;
@@ -63,7 +63,7 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="trainingLoss", required=true)
-    private final Double trainingLoss;
+      private final Double trainingLoss;
 
     public Double getTrainingLoss() {
         return this.trainingLoss;
@@ -142,7 +142,6 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
             this.trainingLoss = Objects.requireNonNull(trainingLoss);
             return this;
         }
-
         public BqmlIterationResultResponse build() {
             return new BqmlIterationResultResponse(durationMs, evalLoss, index, learnRate, trainingLoss);
         }

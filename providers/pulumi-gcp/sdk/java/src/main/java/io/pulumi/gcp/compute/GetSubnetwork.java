@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetwork {
-/**
- * Get a subnetwork within GCE from its name and region.
+    private GetSubnetwork() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubnetworkArgs.Builder a);
+    }
+    private static GetSubnetworkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubnetworkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a subnetwork within GCE from its name and region.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSubnetwork.
+     *
+     * A collection of arguments for invoking getSubnetwork.
  * 
- *
- * A collection of values returned by getSubnetwork.
+     *
+     * A collection of values returned by getSubnetwork.
  * 
- */
+     */
+    public static CompletableFuture<GetSubnetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a subnetwork within GCE from its name and region.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSubnetwork.
+     * 
+     *
+         * A collection of values returned by getSubnetwork.
+     * 
+     */
     public static CompletableFuture<GetSubnetworkResult> invokeAsync(@Nullable GetSubnetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getSubnetwork:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args == null ? GetSubnetworkArgs.Empty : args, Utilities.withVersion(options));
     }

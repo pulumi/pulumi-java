@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -79,28 +79,28 @@ public final class GetEngineVersionsResult {
     /**
      * Version of Kubernetes the service deploys by default.
      * 
-     */
+    */
     public String getDefaultClusterVersion() {
         return this.defaultClusterVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The latest version available in the given zone for use with master instances.
      * 
-     */
+    */
     public String getLatestMasterVersion() {
         return this.latestMasterVersion;
     }
     /**
      * The latest version available in the given zone for use with node instances.
      * 
-     */
+    */
     public String getLatestNodeVersion() {
         return this.latestNodeVersion;
     }
@@ -113,21 +113,21 @@ public final class GetEngineVersionsResult {
     /**
      * A map from a release channel name to the channel's default version.
      * 
-     */
+    */
     public Map<String,String> getReleaseChannelDefaultVersion() {
         return this.releaseChannelDefaultVersion;
     }
     /**
      * A list of versions available in the given zone for use with master instances.
      * 
-     */
+    */
     public List<String> getValidMasterVersions() {
         return this.validMasterVersions;
     }
     /**
      * A list of versions available in the given zone for use with node instances.
      * 
-     */
+    */
     public List<String> getValidNodeVersions() {
         return this.validNodeVersions;
     }
@@ -222,7 +222,6 @@ public final class GetEngineVersionsResult {
             this.versionPrefix = versionPrefix;
             return this;
         }
-
         public GetEngineVersionsResult build() {
             return new GetEngineVersionsResult(defaultClusterVersion, id, latestMasterVersion, latestNodeVersion, location, project, releaseChannelDefaultVersion, validMasterVersions, validNodeVersions, versionPrefix);
         }

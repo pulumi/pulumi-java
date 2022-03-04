@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.ExtensionDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.PerfCounterDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.SyslogDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.WindowsEventLogDataSourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -28,7 +28,7 @@ public final class DataCollectionRuleResponseDataSources extends io.pulumi.resou
      * 
      */
     @InputImport(name="extensions")
-    private final @Nullable List<ExtensionDataSourceResponse> extensions;
+      private final @Nullable List<ExtensionDataSourceResponse> extensions;
 
     public List<ExtensionDataSourceResponse> getExtensions() {
         return this.extensions == null ? List.of() : this.extensions;
@@ -39,7 +39,7 @@ public final class DataCollectionRuleResponseDataSources extends io.pulumi.resou
      * 
      */
     @InputImport(name="performanceCounters")
-    private final @Nullable List<PerfCounterDataSourceResponse> performanceCounters;
+      private final @Nullable List<PerfCounterDataSourceResponse> performanceCounters;
 
     public List<PerfCounterDataSourceResponse> getPerformanceCounters() {
         return this.performanceCounters == null ? List.of() : this.performanceCounters;
@@ -50,7 +50,7 @@ public final class DataCollectionRuleResponseDataSources extends io.pulumi.resou
      * 
      */
     @InputImport(name="syslog")
-    private final @Nullable List<SyslogDataSourceResponse> syslog;
+      private final @Nullable List<SyslogDataSourceResponse> syslog;
 
     public List<SyslogDataSourceResponse> getSyslog() {
         return this.syslog == null ? List.of() : this.syslog;
@@ -61,7 +61,7 @@ public final class DataCollectionRuleResponseDataSources extends io.pulumi.resou
      * 
      */
     @InputImport(name="windowsEventLogs")
-    private final @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
+      private final @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
 
     public List<WindowsEventLogDataSourceResponse> getWindowsEventLogs() {
         return this.windowsEventLogs == null ? List.of() : this.windowsEventLogs;
@@ -130,7 +130,6 @@ public final class DataCollectionRuleResponseDataSources extends io.pulumi.resou
             this.windowsEventLogs = windowsEventLogs;
             return this;
         }
-
         public DataCollectionRuleResponseDataSources build() {
             return new DataCollectionRuleResponseDataSources(extensions, performanceCounters, syslog, windowsEventLogs);
         }

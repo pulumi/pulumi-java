@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetStackSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stackSetId", required=true)
-    private final String stackSetId;
+      private final String stackSetId;
 
     public String getStackSetId() {
         return this.stackSetId;
@@ -55,7 +55,6 @@ public final class GetStackSetArgs extends io.pulumi.resources.InvokeArgs {
             this.stackSetId = Objects.requireNonNull(stackSetId);
             return this;
         }
-
         public GetStackSetArgs build() {
             return new GetStackSetArgs(stackSetId);
         }

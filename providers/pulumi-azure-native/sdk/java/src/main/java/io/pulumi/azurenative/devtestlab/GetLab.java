@@ -6,21 +6,41 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devtestlab.inputs.GetLabArgs;
 import io.pulumi.azurenative.devtestlab.outputs.GetLabResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLab {
-/**
- * A lab.
+    private GetLab() {}
+    public interface BuilderApplicator {
+        public void apply(GetLabArgs.Builder a);
+    }
+    private static GetLabArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLabArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A lab.
  * API Version: 2018-09-15.
  * 
- *
- * A lab.
+     *
+     * A lab.
  * 
- */
+     */
+    public static CompletableFuture<GetLabResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A lab.
+     * API Version: 2018-09-15.
+     * 
+     *
+         * A lab.
+     * 
+     */
     public static CompletableFuture<GetLabResult> invokeAsync(GetLabArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getLab", TypeShape.of(GetLabResult.class), args == null ? GetLabArgs.Empty : args, Utilities.withVersion(options));
     }

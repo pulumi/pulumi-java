@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +27,7 @@ public final class InputAttribute {
      * 
      * _Syntax_: `<field-name>.<field-name>...`
      * 
-     */
+    */
     public String getJsonPath() {
         return this.jsonPath;
     }
@@ -56,7 +56,6 @@ public final class InputAttribute {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
-
         public InputAttribute build() {
             return new InputAttribute(jsonPath);
         }

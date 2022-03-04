@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EventSubscriptionIdentityResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -34,7 +34,7 @@ public final class EventSubscriptionIdentityResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="userAssignedIdentity")
-    private final @Nullable String userAssignedIdentity;
+      private final @Nullable String userAssignedIdentity;
 
     public Optional<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
@@ -83,7 +83,6 @@ public final class EventSubscriptionIdentityResponse extends io.pulumi.resources
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public EventSubscriptionIdentityResponse build() {
             return new EventSubscriptionIdentityResponse(type, userAssignedIdentity);
         }

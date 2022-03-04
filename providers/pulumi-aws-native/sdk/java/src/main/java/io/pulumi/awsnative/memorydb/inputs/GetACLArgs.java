@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.memorydb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetACLArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="aCLName", required=true)
-    private final String aCLName;
+      private final String aCLName;
 
     public String getACLName() {
         return this.aCLName;
@@ -55,7 +55,6 @@ public final class GetACLArgs extends io.pulumi.resources.InvokeArgs {
             this.aCLName = Objects.requireNonNull(aCLName);
             return this;
         }
-
         public GetACLArgs build() {
             return new GetACLArgs(aCLName);
         }

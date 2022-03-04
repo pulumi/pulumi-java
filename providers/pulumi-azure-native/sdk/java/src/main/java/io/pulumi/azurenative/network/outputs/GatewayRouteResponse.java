@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class GatewayRouteResponse {
     /**
      * The route's AS path sequence.
      * 
-     */
+    */
     public String getAsPath() {
         return this.asPath;
     }
     /**
      * The gateway's local address.
      * 
-     */
+    */
     public String getLocalAddress() {
         return this.localAddress;
     }
     /**
      * The route's network prefix.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
     /**
      * The route's next hop.
      * 
-     */
+    */
     public String getNextHop() {
         return this.nextHop;
     }
     /**
      * The source this route was learned from.
      * 
-     */
+    */
     public String getOrigin() {
         return this.origin;
     }
     /**
      * The peer this route was learned from.
      * 
-     */
+    */
     public String getSourcePeer() {
         return this.sourcePeer;
     }
     /**
      * The route's weight.
      * 
-     */
+    */
     public Integer getWeight() {
         return this.weight;
     }
@@ -180,7 +180,6 @@ public final class GatewayRouteResponse {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public GatewayRouteResponse build() {
             return new GatewayRouteResponse(asPath, localAddress, network, nextHop, origin, sourcePeer, weight);
         }

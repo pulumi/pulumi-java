@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3EntityTypeEntityResponse extends io.
      * 
      */
     @InputImport(name="synonyms", required=true)
-    private final List<String> synonyms;
+      private final List<String> synonyms;
 
     public List<String> getSynonyms() {
         return this.synonyms;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3EntityTypeEntityResponse extends io.
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3EntityTypeEntityResponse extends io.
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EntityTypeEntityResponse build() {
             return new GoogleCloudDialogflowCxV3EntityTypeEntityResponse(synonyms, value);
         }

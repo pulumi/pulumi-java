@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,7 +39,7 @@ public final class TriggerBuildArtifactsObjectsTiming {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
      * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -48,7 +48,7 @@ public final class TriggerBuildArtifactsObjectsTiming {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
      * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -84,7 +84,6 @@ public final class TriggerBuildArtifactsObjectsTiming {
             this.startTime = startTime;
             return this;
         }
-
         public TriggerBuildArtifactsObjectsTiming build() {
             return new TriggerBuildArtifactsObjectsTiming(endTime, startTime);
         }

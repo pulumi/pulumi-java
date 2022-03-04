@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice;
 import io.pulumi.azurenative.containerservice.inputs.TimeInWeekArgs;
 import io.pulumi.azurenative.containerservice.inputs.TimeSpanArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="configName")
-    private final @Nullable Input<String> configName;
+      private final @Nullable Input<String> configName;
 
     public Input<String> getConfigName() {
         return this.configName == null ? Input.empty() : this.configName;
@@ -33,7 +33,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="notAllowedTime")
-    private final @Nullable Input<List<TimeSpanArgs>> notAllowedTime;
+      private final @Nullable Input<List<TimeSpanArgs>> notAllowedTime;
 
     public Input<List<TimeSpanArgs>> getNotAllowedTime() {
         return this.notAllowedTime == null ? Input.empty() : this.notAllowedTime;
@@ -44,7 +44,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -66,7 +66,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="timeInWeek")
-    private final @Nullable Input<List<TimeInWeekArgs>> timeInWeek;
+      private final @Nullable Input<List<TimeInWeekArgs>> timeInWeek;
 
     public Input<List<TimeInWeekArgs>> getTimeInWeek() {
         return this.timeInWeek == null ? Input.empty() : this.timeInWeek;
@@ -170,7 +170,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             this.timeInWeek = Input.ofNullable(timeInWeek);
             return this;
         }
-
         public MaintenanceConfigurationArgs build() {
             return new MaintenanceConfigurationArgs(configName, notAllowedTime, resourceGroupName, resourceName, timeInWeek);
         }

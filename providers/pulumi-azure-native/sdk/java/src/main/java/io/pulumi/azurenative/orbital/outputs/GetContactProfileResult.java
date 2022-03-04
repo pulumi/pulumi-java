@@ -5,7 +5,7 @@ package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.ContactProfileLinkResponse;
 import io.pulumi.azurenative.orbital.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -108,84 +108,84 @@ public final class GetContactProfileResult {
     /**
      * Auto track configuration.
      * 
-     */
+    */
     public Optional<String> getAutoTrackingConfiguration() {
         return Optional.ofNullable(this.autoTrackingConfiguration);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The URI of the Event Hub used for telemetry
      * 
-     */
+    */
     public Optional<String> getEventHubUri() {
         return Optional.ofNullable(this.eventHubUri);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Links of the Contact Profile
      * 
-     */
+    */
     public List<ContactProfileLinkResponse> getLinks() {
         return this.links;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Minimum viable elevation for the contact in decimal degrees.
      * 
-     */
+    */
     public Optional<Double> getMinimumElevationDegrees() {
         return Optional.ofNullable(this.minimumElevationDegrees);
     }
     /**
      * Minimum viable contact duration in ISO 8601 format.
      * 
-     */
+    */
     public Optional<String> getMinimumViableContactDuration() {
         return Optional.ofNullable(this.minimumViableContactDuration);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -291,7 +291,6 @@ public final class GetContactProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContactProfileResult build() {
             return new GetContactProfileResult(autoTrackingConfiguration, etag, eventHubUri, id, links, location, minimumElevationDegrees, minimumViableContactDuration, name, systemData, tags, type);
         }

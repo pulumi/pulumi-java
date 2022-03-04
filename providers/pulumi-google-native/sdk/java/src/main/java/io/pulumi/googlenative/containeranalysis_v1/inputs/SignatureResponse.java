@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publicKeyId", required=true)
-    private final String publicKeyId;
+      private final String publicKeyId;
 
     public String getPublicKeyId() {
         return this.publicKeyId;
@@ -32,7 +32,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="signature", required=true)
-    private final String signature;
+      private final String signature;
 
     public String getSignature() {
         return this.signature;
@@ -81,7 +81,6 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public SignatureResponse build() {
             return new SignatureResponse(publicKeyId, signature);
         }

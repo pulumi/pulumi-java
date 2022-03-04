@@ -6,21 +6,41 @@ package io.pulumi.azurenative.labservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.labservices.inputs.ListGlobalUserEnvironmentsArgs;
 import io.pulumi.azurenative.labservices.outputs.ListGlobalUserEnvironmentsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListGlobalUserEnvironments {
-/**
- * Represents the list of environments owned by a user
+    private ListGlobalUserEnvironments() {}
+    public interface BuilderApplicator {
+        public void apply(ListGlobalUserEnvironmentsArgs.Builder a);
+    }
+    private static ListGlobalUserEnvironmentsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListGlobalUserEnvironmentsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents the list of environments owned by a user
  * API Version: 2018-10-15.
  * 
- *
- * Represents the list of environments owned by a user
+     *
+     * Represents the list of environments owned by a user
  * 
- */
+     */
+    public static CompletableFuture<ListGlobalUserEnvironmentsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents the list of environments owned by a user
+     * API Version: 2018-10-15.
+     * 
+     *
+         * Represents the list of environments owned by a user
+     * 
+     */
     public static CompletableFuture<ListGlobalUserEnvironmentsResult> invokeAsync(ListGlobalUserEnvironmentsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:listGlobalUserEnvironments", TypeShape.of(ListGlobalUserEnvironmentsResult.class), args == null ? ListGlobalUserEnvironmentsArgs.Empty : args, Utilities.withVersion(options));
     }

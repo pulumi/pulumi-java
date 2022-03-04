@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class YumSettingsResponse {
     /**
      * List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.
      * 
-     */
+    */
     public List<String> getExcludes() {
         return this.excludes;
     }
     /**
      * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.
      * 
-     */
+    */
     public List<String> getExclusivePackages() {
         return this.exclusivePackages;
     }
     /**
      * Will cause patch to run `yum update-minimal` instead.
      * 
-     */
+    */
     public Boolean getMinimal() {
         return this.minimal;
     }
     /**
      * Adds the `--security` flag to `yum update`. Not supported on all platforms.
      * 
-     */
+    */
     public Boolean getSecurity() {
         return this.security;
     }
@@ -118,7 +118,6 @@ public final class YumSettingsResponse {
             this.security = Objects.requireNonNull(security);
             return this;
         }
-
         public YumSettingsResponse build() {
             return new YumSettingsResponse(excludes, exclusivePackages, minimal, security);
         }

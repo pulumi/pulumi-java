@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.PrivateClusterMasterGlobalAccessConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -68,49 +68,49 @@ public final class PrivateClusterConfigResponse {
     /**
      * Whether the master's internal IP address is used as the cluster endpoint.
      * 
-     */
+    */
     public Boolean getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
     /**
      * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
      * 
-     */
+    */
     public Boolean getEnablePrivateNodes() {
         return this.enablePrivateNodes;
     }
     /**
      * Controls master global access settings.
      * 
-     */
+    */
     public PrivateClusterMasterGlobalAccessConfigResponse getMasterGlobalAccessConfig() {
         return this.masterGlobalAccessConfig;
     }
     /**
      * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network.
      * 
-     */
+    */
     public String getMasterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
     /**
      * The peering name in the customer VPC used by this cluster.
      * 
-     */
+    */
     public String getPeeringName() {
         return this.peeringName;
     }
     /**
      * The internal IP address of this cluster's master endpoint.
      * 
-     */
+    */
     public String getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * The external IP address of this cluster's master endpoint.
      * 
-     */
+    */
     public String getPublicEndpoint() {
         return this.publicEndpoint;
     }
@@ -181,7 +181,6 @@ public final class PrivateClusterConfigResponse {
             this.publicEndpoint = Objects.requireNonNull(publicEndpoint);
             return this;
         }
-
         public PrivateClusterConfigResponse build() {
             return new PrivateClusterConfigResponse(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfig, masterIpv4CidrBlock, peeringName, privateEndpoint, publicEndpoint);
         }

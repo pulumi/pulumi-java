@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.autoscaling_v1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.autoscaling_v1.HorizontalPodAutoscalerArgs;
 import io.pulumi.kubernetes.autoscaling_v1.outputs.HorizontalPodAutoscalerSpec;
@@ -94,6 +94,37 @@ public class HorizontalPodAutoscaler extends io.pulumi.resources.CustomResource 
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable HorizontalPodAutoscalerArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.autoscaling_v1.HorizontalPodAutoscalerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.autoscaling_v1.HorizontalPodAutoscalerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public HorizontalPodAutoscaler(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public HorizontalPodAutoscaler(String name) {
+        this(name, HorizontalPodAutoscalerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public HorizontalPodAutoscaler(String name, @Nullable HorizontalPodAutoscalerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

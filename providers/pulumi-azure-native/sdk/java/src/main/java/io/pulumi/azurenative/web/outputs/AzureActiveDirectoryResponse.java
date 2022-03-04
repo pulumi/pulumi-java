@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.AzureActiveDirectoryLoginResponse;
 import io.pulumi.azurenative.web.outputs.AzureActiveDirectoryRegistrationResponse;
 import io.pulumi.azurenative.web.outputs.AzureActiveDirectoryValidationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -59,7 +59,7 @@ public final class AzureActiveDirectoryResponse {
     /**
      * <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -68,28 +68,28 @@ public final class AzureActiveDirectoryResponse {
      * This is an internal flag primarily intended to support the Azure Management Portal. Users should not
      * read or write to this property.
      * 
-     */
+    */
     public Optional<Boolean> getIsAutoProvisioned() {
         return Optional.ofNullable(this.isAutoProvisioned);
     }
     /**
      * The configuration settings of the Azure Active Directory login flow.
      * 
-     */
+    */
     public Optional<AzureActiveDirectoryLoginResponse> getLogin() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The configuration settings of the Azure Active Directory app registration.
      * 
-     */
+    */
     public Optional<AzureActiveDirectoryRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }
     /**
      * The configuration settings of the Azure Active Directory token validation flow.
      * 
-     */
+    */
     public Optional<AzureActiveDirectoryValidationResponse> getValidation() {
         return Optional.ofNullable(this.validation);
     }
@@ -146,7 +146,6 @@ public final class AzureActiveDirectoryResponse {
             this.validation = validation;
             return this;
         }
-
         public AzureActiveDirectoryResponse build() {
             return new AzureActiveDirectoryResponse(enabled, isAutoProvisioned, login, registration, validation);
         }

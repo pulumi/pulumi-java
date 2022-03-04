@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -92,7 +92,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * If left empty (default value), the public IP on behalf of which this health
      * check is performed will be used.
      * 
-     */
+    */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
@@ -101,7 +101,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * Must be specified if portName and portSpecification are not set
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -109,7 +109,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * Port name as defined in InstanceGroup#NamedPort#name. If both port and
      * port_name are defined, port takes precedence.
      * 
-     */
+    */
     public Optional<String> getPortName() {
         return Optional.ofNullable(this.portName);
     }
@@ -126,7 +126,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      *   `portName` fields.
      *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
      * 
-     */
+    */
     public Optional<String> getPortSpecification() {
         return Optional.ofNullable(this.portSpecification);
     }
@@ -136,7 +136,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * Default value is `NONE`.
      * Possible values are `NONE` and `PROXY_V1`.
      * 
-     */
+    */
     public Optional<String> getProxyHeader() {
         return Optional.ofNullable(this.proxyHeader);
     }
@@ -144,7 +144,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * The request path of the HTTP2 health check request.
      * The default value is /.
      * 
-     */
+    */
     public Optional<String> getRequestPath() {
         return Optional.ofNullable(this.requestPath);
     }
@@ -153,7 +153,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * (the default value), any response will indicate health. The response data
      * can only be ASCII.
      * 
-     */
+    */
     public Optional<String> getResponse() {
         return Optional.ofNullable(this.response);
     }
@@ -224,7 +224,6 @@ public final class RegionHealthCheckHttp2HealthCheck {
             this.response = response;
             return this;
         }
-
         public RegionHealthCheckHttp2HealthCheck build() {
             return new RegionHealthCheckHttp2HealthCheck(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }

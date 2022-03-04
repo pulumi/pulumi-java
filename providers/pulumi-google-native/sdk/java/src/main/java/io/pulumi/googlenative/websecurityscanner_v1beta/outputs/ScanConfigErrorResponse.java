@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ScanConfigErrorResponse {
     /**
      * Indicates the reason code for a configuration failure.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.
      * 
-     */
+    */
     public String getFieldName() {
         return this.fieldName;
     }
@@ -74,7 +74,6 @@ public final class ScanConfigErrorResponse {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
-
         public ScanConfigErrorResponse build() {
             return new ScanConfigErrorResponse(code, fieldName);
         }

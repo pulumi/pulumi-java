@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -56,28 +56,28 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
     /**
      * The type of copy behavior for copy sink.
      * 
-     */
+    */
     public Optional<Object> getCopyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getExpiryDateTime() {
         return Optional.ofNullable(this.expiryDateTime);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -85,7 +85,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
      * The write setting type.
      * Expected value is 'AzureDataLakeStoreWriteSettings'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -142,7 +142,6 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataLakeStoreWriteSettingsResponse build() {
             return new AzureDataLakeStoreWriteSettingsResponse(copyBehavior, disableMetricsCollection, expiryDateTime, maxConcurrentConnections, type);
         }

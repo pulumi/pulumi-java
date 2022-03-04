@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeStatusResponse;
 import io.pulumi.azurenative.datafactory.outputs.SelfHostedIntegrationRuntimeStatusResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,14 +34,14 @@ public final class GetIntegrationRuntimeStatusResult {
     /**
      * The integration runtime name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Integration runtime properties.
      * 
-     */
+    */
     public Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> getProperties() {
         return this.properties;
     }
@@ -77,7 +77,6 @@ public final class GetIntegrationRuntimeStatusResult {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public GetIntegrationRuntimeStatusResult build() {
             return new GetIntegrationRuntimeStatusResult(name, properties);
         }

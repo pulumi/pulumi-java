@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidAppInfoArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidInstrumentationTestArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidRoboTestArgs;
@@ -27,7 +27,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidAppInfo")
-    private final @Nullable Input<AndroidAppInfoArgs> androidAppInfo;
+      private final @Nullable Input<AndroidAppInfoArgs> androidAppInfo;
 
     public Input<AndroidAppInfoArgs> getAndroidAppInfo() {
         return this.androidAppInfo == null ? Input.empty() : this.androidAppInfo;
@@ -38,7 +38,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidInstrumentationTest")
-    private final @Nullable Input<AndroidInstrumentationTestArgs> androidInstrumentationTest;
+      private final @Nullable Input<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
     public Input<AndroidInstrumentationTestArgs> getAndroidInstrumentationTest() {
         return this.androidInstrumentationTest == null ? Input.empty() : this.androidInstrumentationTest;
@@ -49,7 +49,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidRoboTest")
-    private final @Nullable Input<AndroidRoboTestArgs> androidRoboTest;
+      private final @Nullable Input<AndroidRoboTestArgs> androidRoboTest;
 
     public Input<AndroidRoboTestArgs> getAndroidRoboTest() {
         return this.androidRoboTest == null ? Input.empty() : this.androidRoboTest;
@@ -60,7 +60,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidTestLoop")
-    private final @Nullable Input<AndroidTestLoopArgs> androidTestLoop;
+      private final @Nullable Input<AndroidTestLoopArgs> androidTestLoop;
 
     public Input<AndroidTestLoopArgs> getAndroidTestLoop() {
         return this.androidTestLoop == null ? Input.empty() : this.androidTestLoop;
@@ -71,7 +71,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testTimeout")
-    private final @Nullable Input<DurationArgs> testTimeout;
+      private final @Nullable Input<DurationArgs> testTimeout;
 
     public Input<DurationArgs> getTestTimeout() {
         return this.testTimeout == null ? Input.empty() : this.testTimeout;
@@ -175,7 +175,6 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
             this.testTimeout = Input.ofNullable(testTimeout);
             return this;
         }
-
         public AndroidTestArgs build() {
             return new AndroidTestArgs(androidAppInfo, androidInstrumentationTest, androidRoboTest, androidTestLoop, testTimeout);
         }

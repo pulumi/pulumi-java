@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ListManagerPublicEncryptionKeyResult {
     /**
      * The algorithm used to encrypt the "Value".
      * 
-     */
+    */
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
      * The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
     /**
      * The thumbprint of the cert that was used to encrypt "Value".
      * 
-     */
+    */
     public Optional<String> getValueCertificateThumbprint() {
         return Optional.ofNullable(this.valueCertificateThumbprint);
     }
@@ -97,7 +97,6 @@ public final class ListManagerPublicEncryptionKeyResult {
             this.valueCertificateThumbprint = valueCertificateThumbprint;
             return this;
         }
-
         public ListManagerPublicEncryptionKeyResult build() {
             return new ListManagerPublicEncryptionKeyResult(encryptionAlgorithm, value, valueCertificateThumbprint);
         }

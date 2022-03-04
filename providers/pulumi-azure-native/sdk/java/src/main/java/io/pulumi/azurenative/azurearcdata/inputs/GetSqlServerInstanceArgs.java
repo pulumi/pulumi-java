@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSqlServerInstanceArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSqlServerInstanceArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sqlServerInstanceName", required=true)
-    private final String sqlServerInstanceName;
+      private final String sqlServerInstanceName;
 
     public String getSqlServerInstanceName() {
         return this.sqlServerInstanceName;
@@ -77,7 +77,6 @@ public final class GetSqlServerInstanceArgs extends io.pulumi.resources.InvokeAr
             this.sqlServerInstanceName = Objects.requireNonNull(sqlServerInstanceName);
             return this;
         }
-
         public GetSqlServerInstanceArgs build() {
             return new GetSqlServerInstanceArgs(resourceGroupName, sqlServerInstanceName);
         }

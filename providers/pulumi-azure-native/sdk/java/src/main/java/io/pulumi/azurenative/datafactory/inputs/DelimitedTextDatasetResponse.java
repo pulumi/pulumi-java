@@ -19,7 +19,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageLocationResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SftpLocationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +42,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -53,7 +53,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="columnDelimiter")
-    private final @Nullable Object columnDelimiter;
+      private final @Nullable Object columnDelimiter;
 
     public Optional<Object> getColumnDelimiter() {
         return this.columnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.columnDelimiter);
@@ -64,7 +64,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="compressionCodec")
-    private final @Nullable Object compressionCodec;
+      private final @Nullable Object compressionCodec;
 
     public Optional<Object> getCompressionCodec() {
         return this.compressionCodec == null ? Optional.empty() : Optional.ofNullable(this.compressionCodec);
@@ -75,7 +75,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="compressionLevel")
-    private final @Nullable Object compressionLevel;
+      private final @Nullable Object compressionLevel;
 
     public Optional<Object> getCompressionLevel() {
         return this.compressionLevel == null ? Optional.empty() : Optional.ofNullable(this.compressionLevel);
@@ -86,7 +86,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -97,7 +97,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="encodingName")
-    private final @Nullable Object encodingName;
+      private final @Nullable Object encodingName;
 
     public Optional<Object> getEncodingName() {
         return this.encodingName == null ? Optional.empty() : Optional.ofNullable(this.encodingName);
@@ -108,7 +108,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="escapeChar")
-    private final @Nullable Object escapeChar;
+      private final @Nullable Object escapeChar;
 
     public Optional<Object> getEscapeChar() {
         return this.escapeChar == null ? Optional.empty() : Optional.ofNullable(this.escapeChar);
@@ -119,7 +119,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="firstRowAsHeader")
-    private final @Nullable Object firstRowAsHeader;
+      private final @Nullable Object firstRowAsHeader;
 
     public Optional<Object> getFirstRowAsHeader() {
         return this.firstRowAsHeader == null ? Optional.empty() : Optional.ofNullable(this.firstRowAsHeader);
@@ -130,7 +130,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable DatasetResponseFolder folder;
+      private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
@@ -141,7 +141,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final LinkedServiceReferenceResponse linkedServiceName;
+      private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -152,7 +152,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="location", required=true)
-    private final Object location;
+      private final Object location;
 
     public Object getLocation() {
         return this.location;
@@ -163,7 +163,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="nullValue")
-    private final @Nullable Object nullValue;
+      private final @Nullable Object nullValue;
 
     public Optional<Object> getNullValue() {
         return this.nullValue == null ? Optional.empty() : Optional.ofNullable(this.nullValue);
@@ -174,7 +174,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -185,7 +185,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="quoteChar")
-    private final @Nullable Object quoteChar;
+      private final @Nullable Object quoteChar;
 
     public Optional<Object> getQuoteChar() {
         return this.quoteChar == null ? Optional.empty() : Optional.ofNullable(this.quoteChar);
@@ -196,7 +196,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="rowDelimiter")
-    private final @Nullable Object rowDelimiter;
+      private final @Nullable Object rowDelimiter;
 
     public Optional<Object> getRowDelimiter() {
         return this.rowDelimiter == null ? Optional.empty() : Optional.ofNullable(this.rowDelimiter);
@@ -207,7 +207,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Object schema;
+      private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
@@ -218,7 +218,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="structure")
-    private final @Nullable Object structure;
+      private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
@@ -230,7 +230,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -439,7 +439,6 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DelimitedTextDatasetResponse build() {
             return new DelimitedTextDatasetResponse(annotations, columnDelimiter, compressionCodec, compressionLevel, description, encodingName, escapeChar, firstRowAsHeader, folder, linkedServiceName, location, nullValue, parameters, quoteChar, rowDelimiter, schema, structure, type);
         }

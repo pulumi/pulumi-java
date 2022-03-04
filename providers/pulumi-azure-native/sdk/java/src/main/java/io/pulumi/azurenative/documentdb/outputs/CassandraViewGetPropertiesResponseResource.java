@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class CassandraViewGetPropertiesResponseResource {
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB Cassandra view
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A system generated property. A unique identifier.
      * 
-     */
+    */
     public String getRid() {
         return this.rid;
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
-     */
+    */
     public Double getTs() {
         return this.ts;
     }
     /**
      * View Definition of the Cosmos DB Cassandra view
      * 
-     */
+    */
     public String getViewDefinition() {
         return this.viewDefinition;
     }
@@ -138,7 +138,6 @@ public final class CassandraViewGetPropertiesResponseResource {
             this.viewDefinition = Objects.requireNonNull(viewDefinition);
             return this;
         }
-
         public CassandraViewGetPropertiesResponseResource build() {
             return new CassandraViewGetPropertiesResponseResource(etag, id, rid, ts, viewDefinition);
         }

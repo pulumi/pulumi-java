@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azuredata.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class GetSqlServerResult {
     /**
      * Cores of the Sql Server.
      * 
-     */
+    */
     public Optional<Integer> getCores() {
         return Optional.ofNullable(this.cores);
     }
     /**
      * Sql Server Edition.
      * 
-     */
+    */
     public Optional<String> getEdition() {
         return Optional.ofNullable(this.edition);
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Sql Server Json Property Bag.
      * 
-     */
+    */
     public Optional<String> getPropertyBag() {
         return Optional.ofNullable(this.propertyBag);
     }
     /**
      * ID for Parent Sql Server Registration.
      * 
-     */
+    */
     public Optional<String> getRegistrationID() {
         return Optional.ofNullable(this.registrationID);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Version of the Sql Server.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -203,7 +203,6 @@ public final class GetSqlServerResult {
             this.version = version;
             return this;
         }
-
         public GetSqlServerResult build() {
             return new GetSqlServerResult(cores, edition, id, name, propertyBag, registrationID, type, version);
         }

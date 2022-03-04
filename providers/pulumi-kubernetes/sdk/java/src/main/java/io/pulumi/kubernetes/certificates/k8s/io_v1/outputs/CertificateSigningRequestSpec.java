@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -137,28 +137,28 @@ public final class CertificateSigningRequestSpec {
      * 
      * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
      * 
-     */
+    */
     public Optional<Integer> getExpirationSeconds() {
         return Optional.ofNullable(this.expirationSeconds);
     }
     /**
      * extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
-     */
+    */
     public Map<String,List<String>> getExtra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
      * groups contains group membership of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
-     */
+    */
     public List<String> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * request contains an x509 certificate signing request encoded in a "CERTIFICATE REQUEST" PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
      * 
-     */
+    */
     public String getRequest() {
         return this.request;
     }
@@ -185,14 +185,14 @@ public final class CertificateSigningRequestSpec {
      *  5. Expiration/certificate lifetime: whether it is fixed by the signer, configurable by the admin.
      *  6. Whether or not requests for CA certificates are allowed.
      * 
-     */
+    */
     public String getSignerName() {
         return this.signerName;
     }
     /**
      * uid contains the uid of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
-     */
+    */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }
@@ -212,14 +212,14 @@ public final class CertificateSigningRequestSpec {
      *  "ipsec end system", "ipsec tunnel", "ipsec user",
      *  "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"
      * 
-     */
+    */
     public List<String> getUsages() {
         return this.usages == null ? List.of() : this.usages;
     }
     /**
      * username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -297,7 +297,6 @@ public final class CertificateSigningRequestSpec {
             this.username = username;
             return this;
         }
-
         public CertificateSigningRequestSpec build() {
             return new CertificateSigningRequestSpec(expirationSeconds, extra, groups, request, signerName, uid, usages, username);
         }

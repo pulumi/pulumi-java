@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecAwsS3DataSourceAwsAccessKey;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class TransferJobTransferSpecAwsS3DataSource {
     /**
      * AWS credentials block.
      * 
-     */
+    */
     public Optional<TransferJobTransferSpecAwsS3DataSourceAwsAccessKey> getAwsAccessKey() {
         return Optional.ofNullable(this.awsAccessKey);
     }
     /**
      * S3 Bucket name.
      * 
-     */
+    */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * The Amazon Resource Name (ARN) of the role to support temporary credentials via 'AssumeRoleWithWebIdentity'. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a 'AssumeRoleWithWebIdentity' call for the provided role using the [GoogleServiceAccount][] for this project.
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -98,7 +98,6 @@ public final class TransferJobTransferSpecAwsS3DataSource {
             this.roleArn = roleArn;
             return this;
         }
-
         public TransferJobTransferSpecAwsS3DataSource build() {
             return new TransferJobTransferSpecAwsS3DataSource(awsAccessKey, bucketName, roleArn);
         }

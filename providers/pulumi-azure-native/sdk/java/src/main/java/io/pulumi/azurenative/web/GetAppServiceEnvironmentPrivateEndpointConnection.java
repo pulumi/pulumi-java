@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetAppServiceEnvironmentPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.web.outputs.GetAppServiceEnvironmentPrivateEndpointConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppServiceEnvironmentPrivateEndpointConnection {
-/**
- * Remote Private Endpoint Connection ARM resource.
+    private GetAppServiceEnvironmentPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetAppServiceEnvironmentPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetAppServiceEnvironmentPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAppServiceEnvironmentPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Remote Private Endpoint Connection ARM resource.
  * API Version: 2020-12-01.
  * 
- *
- * Remote Private Endpoint Connection ARM resource.
+     *
+     * Remote Private Endpoint Connection ARM resource.
  * 
- */
+     */
+    public static CompletableFuture<GetAppServiceEnvironmentPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Remote Private Endpoint Connection ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Remote Private Endpoint Connection ARM resource.
+     * 
+     */
     public static CompletableFuture<GetAppServiceEnvironmentPrivateEndpointConnectionResult> invokeAsync(GetAppServiceEnvironmentPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getAppServiceEnvironmentPrivateEndpointConnection", TypeShape.of(GetAppServiceEnvironmentPrivateEndpointConnectionResult.class), args == null ? GetAppServiceEnvironmentPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

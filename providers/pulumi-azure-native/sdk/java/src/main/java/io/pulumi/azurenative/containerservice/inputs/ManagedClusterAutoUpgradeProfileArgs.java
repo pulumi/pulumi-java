@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.enums.UpgradeChannel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="upgradeChannel")
-    private final @Nullable Input<Either<String,UpgradeChannel>> upgradeChannel;
+      private final @Nullable Input<Either<String,UpgradeChannel>> upgradeChannel;
 
     public Input<Either<String,UpgradeChannel>> getUpgradeChannel() {
         return this.upgradeChannel == null ? Input.empty() : this.upgradeChannel;
@@ -68,7 +68,6 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
             this.upgradeChannel = Input.ofNullable(upgradeChannel);
             return this;
         }
-
         public ManagedClusterAutoUpgradeProfileArgs build() {
             return new ManagedClusterAutoUpgradeProfileArgs(upgradeChannel);
         }

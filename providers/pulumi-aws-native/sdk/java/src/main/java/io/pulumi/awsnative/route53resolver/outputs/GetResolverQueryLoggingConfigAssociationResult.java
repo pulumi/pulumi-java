@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationError;
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,35 +56,35 @@ public final class GetResolverQueryLoggingConfigAssociationResult {
     /**
      * Rfc3339TimeString
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * ResolverQueryLogConfigAssociationError
      * 
-     */
+    */
     public Optional<ResolverQueryLoggingConfigAssociationError> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * ResolverQueryLogConfigAssociationErrorMessage
      * 
-     */
+    */
     public Optional<String> getErrorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * Id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * ResolverQueryLogConfigAssociationStatus
      * 
-     */
+    */
     public Optional<ResolverQueryLoggingConfigAssociationStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -141,7 +141,6 @@ public final class GetResolverQueryLoggingConfigAssociationResult {
             this.status = status;
             return this;
         }
-
         public GetResolverQueryLoggingConfigAssociationResult build() {
             return new GetResolverQueryLoggingConfigAssociationResult(creationTime, error, errorMessage, id, status);
         }

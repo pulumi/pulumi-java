@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.ContentPathMapArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable Input<String> branch;
+      private final @Nullable Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch == null ? Input.empty() : this.branch;
@@ -36,7 +36,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentLogsUrl")
-    private final @Nullable Input<String> deploymentLogsUrl;
+      private final @Nullable Input<String> deploymentLogsUrl;
 
     public Input<String> getDeploymentLogsUrl() {
         return this.deploymentLogsUrl == null ? Input.empty() : this.deploymentLogsUrl;
@@ -47,7 +47,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayUrl")
-    private final @Nullable Input<String> displayUrl;
+      private final @Nullable Input<String> displayUrl;
 
     public Input<String> getDisplayUrl() {
         return this.displayUrl == null ? Input.empty() : this.displayUrl;
@@ -58,7 +58,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathMapping")
-    private final @Nullable Input<List<ContentPathMapArgs>> pathMapping;
+      private final @Nullable Input<List<ContentPathMapArgs>> pathMapping;
 
     public Input<List<ContentPathMapArgs>> getPathMapping() {
         return this.pathMapping == null ? Input.empty() : this.pathMapping;
@@ -69,7 +69,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -173,7 +173,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public RepositoryArgs build() {
             return new RepositoryArgs(branch, deploymentLogsUrl, displayUrl, pathMapping, url);
         }

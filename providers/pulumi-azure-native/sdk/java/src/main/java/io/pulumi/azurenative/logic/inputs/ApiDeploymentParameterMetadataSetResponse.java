@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ApiDeploymentParameterMetadataResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="packageContentLink")
-    private final @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
+      private final @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
 
     public Optional<ApiDeploymentParameterMetadataResponse> getPackageContentLink() {
         return this.packageContentLink == null ? Optional.empty() : Optional.ofNullable(this.packageContentLink);
@@ -34,7 +34,7 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="redisCacheConnectionString")
-    private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
+      private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
 
     public Optional<ApiDeploymentParameterMetadataResponse> getRedisCacheConnectionString() {
         return this.redisCacheConnectionString == null ? Optional.empty() : Optional.ofNullable(this.redisCacheConnectionString);
@@ -83,7 +83,6 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
             this.redisCacheConnectionString = redisCacheConnectionString;
             return this;
         }
-
         public ApiDeploymentParameterMetadataSetResponse build() {
             return new ApiDeploymentParameterMetadataSetResponse(packageContentLink, redisCacheConnectionString);
         }

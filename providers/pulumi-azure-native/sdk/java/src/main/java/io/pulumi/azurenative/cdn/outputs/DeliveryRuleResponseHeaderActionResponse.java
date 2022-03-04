@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.HeaderActionParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,14 +34,14 @@ public final class DeliveryRuleResponseHeaderActionResponse {
      * The name of the action for the delivery rule.
      * Expected value is 'ModifyResponseHeader'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
-     */
+    */
     public HeaderActionParametersResponse getParameters() {
         return this.parameters;
     }
@@ -77,7 +77,6 @@ public final class DeliveryRuleResponseHeaderActionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleResponseHeaderActionResponse build() {
             return new DeliveryRuleResponseHeaderActionResponse(name, parameters);
         }

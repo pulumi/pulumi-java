@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class CloudRunRewriteResponse {
     /**
      * Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1` if not supplied.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * User-defined ID of the Cloud Run service.
      * 
-     */
+    */
     public String getServiceId() {
         return this.serviceId;
     }
@@ -74,7 +74,6 @@ public final class CloudRunRewriteResponse {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public CloudRunRewriteResponse build() {
             return new CloudRunRewriteResponse(region, serviceId);
         }

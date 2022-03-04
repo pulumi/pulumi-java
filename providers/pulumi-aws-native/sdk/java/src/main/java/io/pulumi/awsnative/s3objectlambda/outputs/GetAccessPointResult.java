@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3objectlambda.outputs;
 import io.pulumi.awsnative.s3objectlambda.outputs.AccessPointObjectLambdaConfiguration;
 import io.pulumi.awsnative.s3objectlambda.outputs.AccessPointPublicAccessBlockConfiguration;
 import io.pulumi.awsnative.s3objectlambda.outputs.PolicyStatusProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -52,14 +52,14 @@ public final class GetAccessPointResult {
     /**
      * The date and time when the Object lambda Access Point was created.
      * 
-     */
+    */
     public Optional<String> getCreationDate() {
         return Optional.ofNullable(this.creationDate);
     }
     /**
      * The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
      * 
-     */
+    */
     public Optional<AccessPointObjectLambdaConfiguration> getObjectLambdaConfiguration() {
         return Optional.ofNullable(this.objectLambdaConfiguration);
     }
@@ -69,7 +69,7 @@ public final class GetAccessPointResult {
     /**
      * The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
      * 
-     */
+    */
     public Optional<AccessPointPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
         return Optional.ofNullable(this.publicAccessBlockConfiguration);
     }
@@ -126,7 +126,6 @@ public final class GetAccessPointResult {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
-
         public GetAccessPointResult build() {
             return new GetAccessPointResult(arn, creationDate, objectLambdaConfiguration, policyStatus, publicAccessBlockConfiguration);
         }

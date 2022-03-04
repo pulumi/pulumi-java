@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageTransitionRouteTriggerFulfillmentMessageText;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessage {
     /**
      * A collection of text responses.
      * 
-     */
+    */
     public Optional<CxPageTransitionRouteTriggerFulfillmentMessageText> getText() {
         return Optional.ofNullable(this.text);
     }
@@ -54,7 +54,6 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessage {
             this.text = text;
             return this;
         }
-
         public CxPageTransitionRouteTriggerFulfillmentMessage build() {
             return new CxPageTransitionRouteTriggerFulfillmentMessage(text);
         }

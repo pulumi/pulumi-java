@@ -6,21 +6,41 @@ package io.pulumi.azurenative.confluent;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.confluent.inputs.GetOrganizationArgs;
 import io.pulumi.azurenative.confluent.outputs.GetOrganizationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganization {
-/**
- * Organization resource.
+    private GetOrganization() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrganizationArgs.Builder a);
+    }
+    private static GetOrganizationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrganizationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Organization resource.
  * API Version: 2020-03-01.
  * 
- *
- * Organization resource.
+     *
+     * Organization resource.
  * 
- */
+     */
+    public static CompletableFuture<GetOrganizationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Organization resource.
+     * API Version: 2020-03-01.
+     * 
+     *
+         * Organization resource.
+     * 
+     */
     public static CompletableFuture<GetOrganizationResult> invokeAsync(GetOrganizationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:confluent:getOrganization", TypeShape.of(GetOrganizationResult.class), args == null ? GetOrganizationArgs.Empty : args, Utilities.withVersion(options));
     }

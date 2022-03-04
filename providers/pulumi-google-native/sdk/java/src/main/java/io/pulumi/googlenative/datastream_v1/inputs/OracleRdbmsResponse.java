@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleSchemaResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OracleRdbmsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oracleSchemas", required=true)
-    private final List<OracleSchemaResponse> oracleSchemas;
+      private final List<OracleSchemaResponse> oracleSchemas;
 
     public List<OracleSchemaResponse> getOracleSchemas() {
         return this.oracleSchemas;
@@ -60,7 +60,6 @@ public final class OracleRdbmsResponse extends io.pulumi.resources.InvokeArgs {
             this.oracleSchemas = Objects.requireNonNull(oracleSchemas);
             return this;
         }
-
         public OracleRdbmsResponse build() {
             return new OracleRdbmsResponse(oracleSchemas);
         }

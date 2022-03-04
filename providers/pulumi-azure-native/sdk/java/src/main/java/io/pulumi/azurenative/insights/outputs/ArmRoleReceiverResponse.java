@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ArmRoleReceiverResponse {
     /**
      * The name of the arm role receiver. Names must be unique across all receivers within an action group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The arm role id.
      * 
-     */
+    */
     public String getRoleId() {
         return this.roleId;
     }
     /**
      * Indicates whether to use common alert schema.
      * 
-     */
+    */
     public Optional<Boolean> getUseCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -98,7 +98,6 @@ public final class ArmRoleReceiverResponse {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public ArmRoleReceiverResponse build() {
             return new ArmRoleReceiverResponse(name, roleId, useCommonAlertSchema);
         }

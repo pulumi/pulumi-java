@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
      * 
      */
     @InputImport(name="availability")
-    private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs> availability;
+      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs> availability;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs> getAvailability() {
         return this.availability == null ? Input.empty() : this.availability;
@@ -35,7 +35,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
      * 
      */
     @InputImport(name="latency")
-    private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs> latency;
+      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs> latency;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs> getLatency() {
         return this.latency == null ? Input.empty() : this.latency;
@@ -51,7 +51,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -67,7 +67,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
      * 
      */
     @InputImport(name="methods")
-    private final @Nullable Input<List<String>> methods;
+      private final @Nullable Input<List<String>> methods;
 
     public Input<List<String>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
@@ -83,7 +83,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
      * 
      */
     @InputImport(name="versions")
-    private final @Nullable Input<List<String>> versions;
+      private final @Nullable Input<List<String>> versions;
 
     public Input<List<String>> getVersions() {
         return this.versions == null ? Input.empty() : this.versions;
@@ -187,7 +187,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
             this.versions = Input.ofNullable(versions);
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs(availability, latency, locations, methods, versions);
         }

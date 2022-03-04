@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigSubjectConfigSubject;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigSubjectConfigSubjectAltName;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class AuthorityConfigSubjectConfig {
      * Contains distinguished name fields such as the location and organization.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigSubjectConfigSubject getSubject() {
         return this.subject;
     }
@@ -45,7 +45,7 @@ public final class AuthorityConfigSubjectConfig {
      * The subject alternative name fields.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AuthorityConfigSubjectConfigSubjectAltName> getSubjectAltName() {
         return Optional.ofNullable(this.subjectAltName);
     }
@@ -81,7 +81,6 @@ public final class AuthorityConfigSubjectConfig {
             this.subjectAltName = subjectAltName;
             return this;
         }
-
         public AuthorityConfigSubjectConfig build() {
             return new AuthorityConfigSubjectConfig(subject, subjectAltName);
         }

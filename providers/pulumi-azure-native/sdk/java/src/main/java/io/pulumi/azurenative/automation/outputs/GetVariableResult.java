@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class GetVariableResult {
     /**
      * Gets or sets the creation time.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the encrypted flag of the variable.
      * 
-     */
+    */
     public Optional<Boolean> getIsEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
     /**
      * Gets or sets the last modified time.
      * 
-     */
+    */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets or sets the value of the variable.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -203,7 +203,6 @@ public final class GetVariableResult {
             this.value = value;
             return this;
         }
-
         public GetVariableResult build() {
             return new GetVariableResult(creationTime, description, id, isEncrypted, lastModifiedTime, name, type, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class ResponseHeadersPolicyXSSProtection extends io.pulumi.resource
     public static final ResponseHeadersPolicyXSSProtection Empty = new ResponseHeadersPolicyXSSProtection();
 
     @InputImport(name="modeBlock")
-    private final @Nullable Boolean modeBlock;
+      private final @Nullable Boolean modeBlock;
 
     public Optional<Boolean> getModeBlock() {
         return this.modeBlock == null ? Optional.empty() : Optional.ofNullable(this.modeBlock);
     }
 
     @InputImport(name="override", required=true)
-    private final Boolean override;
+      private final Boolean override;
 
     public Boolean getOverride() {
         return this.override;
     }
 
     @InputImport(name="protection", required=true)
-    private final Boolean protection;
+      private final Boolean protection;
 
     public Boolean getProtection() {
         return this.protection;
     }
 
     @InputImport(name="reportUri")
-    private final @Nullable String reportUri;
+      private final @Nullable String reportUri;
 
     public Optional<String> getReportUri() {
         return this.reportUri == null ? Optional.empty() : Optional.ofNullable(this.reportUri);
@@ -106,7 +106,6 @@ public final class ResponseHeadersPolicyXSSProtection extends io.pulumi.resource
             this.reportUri = reportUri;
             return this;
         }
-
         public ResponseHeadersPolicyXSSProtection build() {
             return new ResponseHeadersPolicyXSSProtection(modeBlock, override, protection, reportUri);
         }

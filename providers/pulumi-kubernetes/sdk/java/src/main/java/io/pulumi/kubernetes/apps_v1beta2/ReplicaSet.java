@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.apps_v1beta2;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1beta2.ReplicaSetArgs;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.ReplicaSetSpec;
@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 /**
  * ReplicaSet ensures that a specified number of pod replicas are running at any given time.
  * 
- * @deprecated
+ * @Deprecated
  * apps/v1beta2/ReplicaSet is deprecated by apps/v1/ReplicaSet and not supported by Kubernetes v1.16+ clusters.
  * 
  */
@@ -98,6 +98,37 @@ public class ReplicaSet extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ReplicaSetArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.apps_v1beta2.ReplicaSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.apps_v1beta2.ReplicaSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ReplicaSet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ReplicaSet(String name) {
+        this(name, ReplicaSetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ReplicaSet(String name, @Nullable ReplicaSetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SdsConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class TlsValidationContextResponse {
     /**
      * The path to the file holding the CA certificate to validate the client or server certificate.
      * 
-     */
+    */
     public String getCertificatePath() {
         return this.certificatePath;
     }
     /**
      * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
      * 
-     */
+    */
     public SdsConfigResponse getSdsConfig() {
         return this.sdsConfig;
     }
     /**
      * Defines how TLS certificates are obtained.
      * 
-     */
+    */
     public String getValidationSource() {
         return this.validationSource;
     }
@@ -96,7 +96,6 @@ public final class TlsValidationContextResponse {
             this.validationSource = Objects.requireNonNull(validationSource);
             return this;
         }
-
         public TlsValidationContextResponse build() {
             return new TlsValidationContextResponse(certificatePath, sdsConfig, validationSource);
         }

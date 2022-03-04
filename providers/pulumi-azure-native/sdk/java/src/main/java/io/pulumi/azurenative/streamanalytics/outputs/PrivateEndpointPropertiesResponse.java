@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.PrivateLinkServiceConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class PrivateEndpointPropertiesResponse {
     /**
      * The date when this private endpoint was created.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * A list of connections to the remote resource. Immutable after it is set.
      * 
-     */
+    */
     public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
     }
@@ -77,7 +77,6 @@ public final class PrivateEndpointPropertiesResponse {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-
         public PrivateEndpointPropertiesResponse build() {
             return new PrivateEndpointPropertiesResponse(createdDate, manualPrivateLinkServiceConnections);
         }

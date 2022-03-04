@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GetPackageDownloadURLResult {
     /**
      * The download URL.
      * 
-     */
+    */
     public String getDownloadUrl() {
         return this.downloadUrl;
     }
     /**
      * Expiry date of the download URL.
      * 
-     */
+    */
     public String getExpirationTime() {
         return this.expirationTime;
     }
@@ -74,7 +74,6 @@ public final class GetPackageDownloadURLResult {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public GetPackageDownloadURLResult build() {
             return new GetPackageDownloadURLResult(downloadUrl, expirationTime);
         }

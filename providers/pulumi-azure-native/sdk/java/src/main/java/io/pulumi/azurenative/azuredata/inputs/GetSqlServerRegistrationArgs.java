@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azuredata.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSqlServerRegistrationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSqlServerRegistrationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sqlServerRegistrationName", required=true)
-    private final String sqlServerRegistrationName;
+      private final String sqlServerRegistrationName;
 
     public String getSqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
@@ -77,7 +77,6 @@ public final class GetSqlServerRegistrationArgs extends io.pulumi.resources.Invo
             this.sqlServerRegistrationName = Objects.requireNonNull(sqlServerRegistrationName);
             return this;
         }
-
         public GetSqlServerRegistrationArgs build() {
             return new GetSqlServerRegistrationArgs(resourceGroupName, sqlServerRegistrationName);
         }

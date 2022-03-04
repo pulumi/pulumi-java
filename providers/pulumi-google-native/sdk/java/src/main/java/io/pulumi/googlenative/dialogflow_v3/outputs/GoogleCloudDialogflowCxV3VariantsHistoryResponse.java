@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3VersionVariantsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryResponse {
     /**
      * Update time of the variants.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * The flow versions as the variants.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3VersionVariantsResponse getVersionVariants() {
         return this.versionVariants;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryResponse {
             this.versionVariants = Objects.requireNonNull(versionVariants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3VariantsHistoryResponse build() {
             return new GoogleCloudDialogflowCxV3VariantsHistoryResponse(updateTime, versionVariants);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -95,77 +95,77 @@ public final class GetPredictionModelStatusResult {
     /**
      * The model status message.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Version of the model.
      * 
-     */
+    */
     public String getModelVersion() {
         return this.modelVersion;
     }
     /**
      * The prediction GUID ID.
      * 
-     */
+    */
     public String getPredictionGuidId() {
         return this.predictionGuidId;
     }
     /**
      * The prediction name.
      * 
-     */
+    */
     public String getPredictionName() {
         return this.predictionName;
     }
     /**
      * The signals used.
      * 
-     */
+    */
     public Integer getSignalsUsed() {
         return this.signalsUsed;
     }
     /**
      * Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The hub name.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Count of the test set.
      * 
-     */
+    */
     public Integer getTestSetCount() {
         return this.testSetCount;
     }
     /**
      * The training accuracy.
      * 
-     */
+    */
     public Integer getTrainingAccuracy() {
         return this.trainingAccuracy;
     }
     /**
      * Count of the training set.
      * 
-     */
+    */
     public Integer getTrainingSetCount() {
         return this.trainingSetCount;
     }
     /**
      * Count of the validation set.
      * 
-     */
+    */
     public Integer getValidationSetCount() {
         return this.validationSetCount;
     }
@@ -264,7 +264,6 @@ public final class GetPredictionModelStatusResult {
             this.validationSetCount = Objects.requireNonNull(validationSetCount);
             return this;
         }
-
         public GetPredictionModelStatusResult build() {
             return new GetPredictionModelStatusResult(message, modelVersion, predictionGuidId, predictionName, signalsUsed, status, tenantId, testSetCount, trainingAccuracy, trainingSetCount, validationSetCount);
         }

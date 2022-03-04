@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="expectedValue")
-    private final @Nullable String expectedValue;
+      private final @Nullable String expectedValue;
 
     public Optional<String> getExpectedValue() {
         return this.expectedValue == null ? Optional.empty() : Optional.ofNullable(this.expectedValue);
@@ -34,7 +34,7 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="operator")
-    private final @Nullable String operator;
+      private final @Nullable String operator;
 
     public Optional<String> getOperator() {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
@@ -45,7 +45,7 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="propertyJPath")
-    private final @Nullable String propertyJPath;
+      private final @Nullable String propertyJPath;
 
     public Optional<String> getPropertyJPath() {
         return this.propertyJPath == null ? Optional.empty() : Optional.ofNullable(this.propertyJPath);
@@ -56,7 +56,7 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="propertyType")
-    private final @Nullable String propertyType;
+      private final @Nullable String propertyType;
 
     public Optional<String> getPropertyType() {
         return this.propertyType == null ? Optional.empty() : Optional.ofNullable(this.propertyType);
@@ -125,7 +125,6 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
             this.propertyType = propertyType;
             return this;
         }
-
         public AutomationTriggeringRuleResponse build() {
             return new AutomationTriggeringRuleResponse(expectedValue, operator, propertyJPath, propertyType);
         }

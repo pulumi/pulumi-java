@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TopologySelectorTermArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
@@ -30,7 +30,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowVolumeExpansion")
-    private final @Nullable Input<Boolean> allowVolumeExpansion;
+      private final @Nullable Input<Boolean> allowVolumeExpansion;
 
     public Input<Boolean> getAllowVolumeExpansion() {
         return this.allowVolumeExpansion == null ? Input.empty() : this.allowVolumeExpansion;
@@ -41,7 +41,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedTopologies")
-    private final @Nullable Input<List<TopologySelectorTermArgs>> allowedTopologies;
+      private final @Nullable Input<List<TopologySelectorTermArgs>> allowedTopologies;
 
     public Input<List<TopologySelectorTermArgs>> getAllowedTopologies() {
         return this.allowedTopologies == null ? Input.empty() : this.allowedTopologies;
@@ -52,7 +52,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -63,7 +63,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -74,7 +74,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -85,7 +85,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountOptions")
-    private final @Nullable Input<List<String>> mountOptions;
+      private final @Nullable Input<List<String>> mountOptions;
 
     public Input<List<String>> getMountOptions() {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
@@ -96,7 +96,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -107,7 +107,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioner", required=true)
-    private final Input<String> provisioner;
+      private final Input<String> provisioner;
 
     public Input<String> getProvisioner() {
         return this.provisioner;
@@ -118,7 +118,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reclaimPolicy")
-    private final @Nullable Input<String> reclaimPolicy;
+      private final @Nullable Input<String> reclaimPolicy;
 
     public Input<String> getReclaimPolicy() {
         return this.reclaimPolicy == null ? Input.empty() : this.reclaimPolicy;
@@ -129,7 +129,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeBindingMode")
-    private final @Nullable Input<String> volumeBindingMode;
+      private final @Nullable Input<String> volumeBindingMode;
 
     public Input<String> getVolumeBindingMode() {
         return this.volumeBindingMode == null ? Input.empty() : this.volumeBindingMode;
@@ -308,7 +308,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             this.volumeBindingMode = Input.ofNullable(volumeBindingMode);
             return this;
         }
-
         public StorageClassArgs build() {
             return new StorageClassArgs(allowVolumeExpansion, allowedTopologies, apiVersion, kind, metadata, mountOptions, parameters, provisioner, reclaimPolicy, volumeBindingMode);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class GetComputePolicyResult {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The maximum degree of parallelism per job this user can use to submit jobs.
      * 
-     */
+    */
     public Integer getMaxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
     /**
      * The minimum priority per job this user can use to submit jobs.
      * 
-     */
+    */
     public Integer getMinPriorityPerJob() {
         return this.minPriorityPerJob;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The AAD object identifier for the entity to create a policy for.
      * 
-     */
+    */
     public String getObjectId() {
         return this.objectId;
     }
     /**
      * The type of AAD object the object identifier refers to.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -180,7 +180,6 @@ public final class GetComputePolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetComputePolicyResult build() {
             return new GetComputePolicyResult(id, maxDegreeOfParallelismPerJob, minPriorityPerJob, name, objectId, objectType, type);
         }

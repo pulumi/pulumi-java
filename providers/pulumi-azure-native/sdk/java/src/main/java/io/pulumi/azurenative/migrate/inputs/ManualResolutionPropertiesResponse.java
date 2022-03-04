@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ManualResolutionPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetId")
-    private final @Nullable String targetId;
+      private final @Nullable String targetId;
 
     public Optional<String> getTargetId() {
         return this.targetId == null ? Optional.empty() : Optional.ofNullable(this.targetId);
@@ -61,7 +61,6 @@ public final class ManualResolutionPropertiesResponse extends io.pulumi.resource
             this.targetId = targetId;
             return this;
         }
-
         public ManualResolutionPropertiesResponse build() {
             return new ManualResolutionPropertiesResponse(targetId);
         }

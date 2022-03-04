@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValuesConditionResponseConditionProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AutomationRulePropertyValuesConditionResponse extends io.pulu
      * 
      */
     @InputImport(name="conditionProperties", required=true)
-    private final AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
+      private final AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
 
     public AutomationRulePropertyValuesConditionResponseConditionProperties getConditionProperties() {
         return this.conditionProperties;
@@ -34,7 +34,7 @@ public final class AutomationRulePropertyValuesConditionResponse extends io.pulu
      * 
      */
     @InputImport(name="conditionType", required=true)
-    private final String conditionType;
+      private final String conditionType;
 
     public String getConditionType() {
         return this.conditionType;
@@ -83,7 +83,6 @@ public final class AutomationRulePropertyValuesConditionResponse extends io.pulu
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
-
         public AutomationRulePropertyValuesConditionResponse build() {
             return new AutomationRulePropertyValuesConditionResponse(conditionProperties, conditionType);
         }

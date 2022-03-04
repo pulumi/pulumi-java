@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.events.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class EventSeries {
     /**
      * count is the number of occurrences in this series up to the last heartbeat time.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * lastObservedTime is the time when last Event from the series was seen before last heartbeat.
      * 
-     */
+    */
     public String getLastObservedTime() {
         return this.lastObservedTime;
     }
@@ -75,7 +75,6 @@ public final class EventSeries {
             this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
             return this;
         }
-
         public EventSeries build() {
             return new EventSeries(count, lastObservedTime);
         }

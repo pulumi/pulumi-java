@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -105,84 +105,84 @@ public final class GetStorageAccountCredentialResult {
     /**
      * Encrypted storage key.
      * 
-     */
+    */
     public Optional<AsymmetricEncryptedSecretResponse> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * Type of storage accessed on the storage account.
      * 
-     */
+    */
     public String getAccountType() {
         return this.accountType;
     }
     /**
      * Alias for the storage account.
      * 
-     */
+    */
     public String getAlias() {
         return this.alias;
     }
     /**
      * Blob end point for private clouds.
      * 
-     */
+    */
     public Optional<String> getBlobDomainName() {
         return Optional.ofNullable(this.blobDomainName);
     }
     /**
      * Connection string for the storage account. Use this string if username and account key are not specified.
      * 
-     */
+    */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Signifies whether SSL needs to be enabled or not.
      * 
-     */
+    */
     public String getSslStatus() {
         return this.sslStatus;
     }
     /**
      * Id of the storage account.
      * 
-     */
+    */
     public Optional<String> getStorageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
     /**
      * StorageAccountCredential object
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Username for the storage account.
      * 
-     */
+    */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }
@@ -288,7 +288,6 @@ public final class GetStorageAccountCredentialResult {
             this.userName = userName;
             return this;
         }
-
         public GetStorageAccountCredentialResult build() {
             return new GetStorageAccountCredentialResult(accountKey, accountType, alias, blobDomainName, connectionString, id, name, sslStatus, storageAccountId, systemData, type, userName);
         }

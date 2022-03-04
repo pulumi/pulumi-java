@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.DisplayDataResponse;
 import java.lang.String;
 import java.util.List;
@@ -54,35 +54,35 @@ public final class TransformSummaryResponse {
     /**
      * Transform-specific display data.
      * 
-     */
+    */
     public List<DisplayDataResponse> getDisplayData() {
         return this.displayData;
     }
     /**
      * User names for all collection inputs to this transform.
      * 
-     */
+    */
     public List<String> getInputCollectionName() {
         return this.inputCollectionName;
     }
     /**
      * Type of transform.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * User provided name for this transform instance.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * User names for all collection outputs to this transform.
      * 
-     */
+    */
     public List<String> getOutputCollectionName() {
         return this.outputCollectionName;
     }
@@ -139,7 +139,6 @@ public final class TransformSummaryResponse {
             this.outputCollectionName = Objects.requireNonNull(outputCollectionName);
             return this;
         }
-
         public TransformSummaryResponse build() {
             return new TransformSummaryResponse(displayData, inputCollectionName, kind, name, outputCollectionName);
         }

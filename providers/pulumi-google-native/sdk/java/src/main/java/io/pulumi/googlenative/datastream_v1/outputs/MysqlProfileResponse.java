@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.MysqlSslConfigResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,35 +54,35 @@ public final class MysqlProfileResponse {
     /**
      * Hostname for the MySQL connection.
      * 
-     */
+    */
     public String getHostname() {
         return this.hostname;
     }
     /**
      * Input only. Password for the MySQL connection.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * Port for the MySQL connection, default value is 3306.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * SSL configuration for the MySQL connection.
      * 
-     */
+    */
     public MysqlSslConfigResponse getSslConfig() {
         return this.sslConfig;
     }
     /**
      * Username for the MySQL connection.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -139,7 +139,6 @@ public final class MysqlProfileResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MysqlProfileResponse build() {
             return new MysqlProfileResponse(hostname, password, port, sslConfig, username);
         }

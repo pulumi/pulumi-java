@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.ObjectIdResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class CertificateExtensionConstraintsResponse {
     /**
      * Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
      * 
-     */
+    */
     public List<ObjectIdResponse> getAdditionalExtensions() {
         return this.additionalExtensions;
     }
     /**
      * Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
      * 
-     */
+    */
     public List<String> getKnownExtensions() {
         return this.knownExtensions;
     }
@@ -76,7 +76,6 @@ public final class CertificateExtensionConstraintsResponse {
             this.knownExtensions = Objects.requireNonNull(knownExtensions);
             return this;
         }
-
         public CertificateExtensionConstraintsResponse build() {
             return new CertificateExtensionConstraintsResponse(additionalExtensions, knownExtensions);
         }

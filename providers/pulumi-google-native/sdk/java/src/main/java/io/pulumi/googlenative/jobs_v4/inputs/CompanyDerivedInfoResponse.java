@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v4.inputs.LocationResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CompanyDerivedInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="headquartersLocation", required=true)
-    private final LocationResponse headquartersLocation;
+      private final LocationResponse headquartersLocation;
 
     public LocationResponse getHeadquartersLocation() {
         return this.headquartersLocation;
@@ -59,7 +59,6 @@ public final class CompanyDerivedInfoResponse extends io.pulumi.resources.Invoke
             this.headquartersLocation = Objects.requireNonNull(headquartersLocation);
             return this;
         }
-
         public CompanyDerivedInfoResponse build() {
             return new CompanyDerivedInfoResponse(headquartersLocation);
         }

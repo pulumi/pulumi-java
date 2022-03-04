@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.inputs.GetTableArgs;
 import io.pulumi.azurenative.storage.outputs.GetTableResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTable {
-/**
- * Properties of the table, including Id, resource name, resource type.
+    private GetTable() {}
+    public interface BuilderApplicator {
+        public void apply(GetTableArgs.Builder a);
+    }
+    private static GetTableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Properties of the table, including Id, resource name, resource type.
  * API Version: 2021-02-01.
  * 
- *
- * Properties of the table, including Id, resource name, resource type.
+     *
+     * Properties of the table, including Id, resource name, resource type.
  * 
- */
+     */
+    public static CompletableFuture<GetTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Properties of the table, including Id, resource name, resource type.
+     * API Version: 2021-02-01.
+     * 
+     *
+         * Properties of the table, including Id, resource name, resource type.
+     * 
+     */
     public static CompletableFuture<GetTableResult> invokeAsync(GetTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getTable", TypeShape.of(GetTableResult.class), args == null ? GetTableArgs.Empty : args, Utilities.withVersion(options));
     }

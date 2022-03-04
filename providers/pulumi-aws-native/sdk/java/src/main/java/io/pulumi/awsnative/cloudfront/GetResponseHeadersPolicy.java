@@ -6,17 +6,33 @@ package io.pulumi.awsnative.cloudfront;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudfront.inputs.GetResponseHeadersPolicyArgs;
 import io.pulumi.awsnative.cloudfront.outputs.GetResponseHeadersPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResponseHeadersPolicy {
-/**
- * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
+    private GetResponseHeadersPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetResponseHeadersPolicyArgs.Builder a);
+    }
+    private static GetResponseHeadersPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResponseHeadersPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
  * 
- */
+     */
+    public static CompletableFuture<GetResponseHeadersPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
+     * 
+     */
     public static CompletableFuture<GetResponseHeadersPolicyResult> invokeAsync(GetResponseHeadersPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getResponseHeadersPolicy", TypeShape.of(GetResponseHeadersPolicyResult.class), args == null ? GetResponseHeadersPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

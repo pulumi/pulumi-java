@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigtable.inputs.GCPolicyMaxAgeGetArgs;
 import io.pulumi.gcp.bigtable.inputs.GCPolicyMaxVersionGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnFamily")
-    private final @Nullable Input<String> columnFamily;
+      private final @Nullable Input<String> columnFamily;
 
     public Input<String> getColumnFamily() {
         return this.columnFamily == null ? Input.empty() : this.columnFamily;
@@ -33,7 +33,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceName")
-    private final @Nullable Input<String> instanceName;
+      private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
@@ -44,7 +44,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAge")
-    private final @Nullable Input<GCPolicyMaxAgeGetArgs> maxAge;
+      private final @Nullable Input<GCPolicyMaxAgeGetArgs> maxAge;
 
     public Input<GCPolicyMaxAgeGetArgs> getMaxAge() {
         return this.maxAge == null ? Input.empty() : this.maxAge;
@@ -55,7 +55,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxVersions")
-    private final @Nullable Input<List<GCPolicyMaxVersionGetArgs>> maxVersions;
+      private final @Nullable Input<List<GCPolicyMaxVersionGetArgs>> maxVersions;
 
     public Input<List<GCPolicyMaxVersionGetArgs>> getMaxVersions() {
         return this.maxVersions == null ? Input.empty() : this.maxVersions;
@@ -66,7 +66,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -77,7 +77,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -88,7 +88,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Input<String> table;
+      private final @Nullable Input<String> table;
 
     public Input<String> getTable() {
         return this.table == null ? Input.empty() : this.table;
@@ -222,7 +222,6 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
             this.table = Input.ofNullable(table);
             return this;
         }
-
         public GCPolicyState build() {
             return new GCPolicyState(columnFamily, instanceName, maxAge, maxVersions, mode, project, table);
         }

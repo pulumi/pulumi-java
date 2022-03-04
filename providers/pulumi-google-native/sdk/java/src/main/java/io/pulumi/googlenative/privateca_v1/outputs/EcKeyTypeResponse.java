@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EcKeyTypeResponse {
     /**
      * Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
      * 
-     */
+    */
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
     }
@@ -52,7 +52,6 @@ public final class EcKeyTypeResponse {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public EcKeyTypeResponse build() {
             return new EcKeyTypeResponse(signatureAlgorithm);
         }

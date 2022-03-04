@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasCloudWatchLogGroupLogDestination;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class BotAliasTextLogDestination {
             this.cloudWatch = cloudWatch;
             return this;
         }
-
         public BotAliasTextLogDestination build() {
             return new BotAliasTextLogDestination(cloudWatch);
         }

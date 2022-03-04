@@ -7,11 +7,11 @@ import io.pulumi.core.Input;
 import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
-import io.pulumi.core.internal.TypedInputOutput;
-import io.pulumi.core.internal.annotations.InputImport;
-import io.pulumi.core.internal.annotations.OutputCustomType;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.deployment.internal.TestOptions;
@@ -29,7 +29,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
-import static io.pulumi.core.internal.Reflection.TypeShape.of;
+import static io.pulumi.core.TypeShape.of;
 import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
@@ -176,7 +176,7 @@ public class MocksTest {
                 .findFirst();
         assertThat(stack).isPresent();
 
-        var ipFuture = TypedInputOutput.cast(stack.get().publicIp).internalGetDataAsync();
+        var ipFuture = Internal.of(stack.get().publicIp).getDataAsync();
         assertThat(ipFuture).isCompletedExceptionally();
     }
 

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.IpsecPolicyResponse;
 import io.pulumi.azurenative.network.outputs.RadiusServerResponse;
 import io.pulumi.azurenative.network.outputs.VpnClientRevokedCertificateResponse;
 import io.pulumi.azurenative.network.outputs.VpnClientRootCertificateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -109,84 +109,84 @@ public final class VpnClientConfigurationResponse {
     /**
      * The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
      * 
-     */
+    */
     public Optional<String> getAadAudience() {
         return Optional.ofNullable(this.aadAudience);
     }
     /**
      * The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
      * 
-     */
+    */
     public Optional<String> getAadIssuer() {
         return Optional.ofNullable(this.aadIssuer);
     }
     /**
      * The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
      * 
-     */
+    */
     public Optional<String> getAadTenant() {
         return Optional.ofNullable(this.aadTenant);
     }
     /**
      * The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
      * 
-     */
+    */
     public Optional<String> getRadiusServerAddress() {
         return Optional.ofNullable(this.radiusServerAddress);
     }
     /**
      * The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
      * 
-     */
+    */
     public Optional<String> getRadiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
     /**
      * The radiusServers property for multiple radius server configuration.
      * 
-     */
+    */
     public List<RadiusServerResponse> getRadiusServers() {
         return this.radiusServers == null ? List.of() : this.radiusServers;
     }
     /**
      * VPN authentication types for the virtual network gateway..
      * 
-     */
+    */
     public List<String> getVpnAuthenticationTypes() {
         return this.vpnAuthenticationTypes == null ? List.of() : this.vpnAuthenticationTypes;
     }
     /**
      * The reference to the address space resource which represents Address space for P2S VpnClient.
      * 
-     */
+    */
     public Optional<AddressSpaceResponse> getVpnClientAddressPool() {
         return Optional.ofNullable(this.vpnClientAddressPool);
     }
     /**
      * VpnClientIpsecPolicies for virtual network gateway P2S client.
      * 
-     */
+    */
     public List<IpsecPolicyResponse> getVpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies == null ? List.of() : this.vpnClientIpsecPolicies;
     }
     /**
      * VpnClientProtocols for Virtual network gateway.
      * 
-     */
+    */
     public List<String> getVpnClientProtocols() {
         return this.vpnClientProtocols == null ? List.of() : this.vpnClientProtocols;
     }
     /**
      * VpnClientRevokedCertificate for Virtual network gateway.
      * 
-     */
+    */
     public List<VpnClientRevokedCertificateResponse> getVpnClientRevokedCertificates() {
         return this.vpnClientRevokedCertificates == null ? List.of() : this.vpnClientRevokedCertificates;
     }
     /**
      * VpnClientRootCertificate for virtual network gateway.
      * 
-     */
+    */
     public List<VpnClientRootCertificateResponse> getVpnClientRootCertificates() {
         return this.vpnClientRootCertificates == null ? List.of() : this.vpnClientRootCertificates;
     }
@@ -292,7 +292,6 @@ public final class VpnClientConfigurationResponse {
             this.vpnClientRootCertificates = vpnClientRootCertificates;
             return this;
         }
-
         public VpnClientConfigurationResponse build() {
             return new VpnClientConfigurationResponse(aadAudience, aadIssuer, aadTenant, radiusServerAddress, radiusServerSecret, radiusServers, vpnAuthenticationTypes, vpnClientAddressPool, vpnClientIpsecPolicies, vpnClientProtocols, vpnClientRevokedCertificates, vpnClientRootCertificates);
         }

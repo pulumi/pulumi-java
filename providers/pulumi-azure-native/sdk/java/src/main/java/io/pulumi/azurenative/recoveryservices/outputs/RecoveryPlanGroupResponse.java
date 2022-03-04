@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanActionResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanProtectedItemResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class RecoveryPlanGroupResponse {
     /**
      * The end group actions.
      * 
-     */
+    */
     public List<RecoveryPlanActionResponse> getEndGroupActions() {
         return this.endGroupActions == null ? List.of() : this.endGroupActions;
     }
     /**
      * The group type.
      * 
-     */
+    */
     public String getGroupType() {
         return this.groupType;
     }
     /**
      * The list of protected items.
      * 
-     */
+    */
     public List<RecoveryPlanProtectedItemResponse> getReplicationProtectedItems() {
         return this.replicationProtectedItems == null ? List.of() : this.replicationProtectedItems;
     }
     /**
      * The start group actions.
      * 
-     */
+    */
     public List<RecoveryPlanActionResponse> getStartGroupActions() {
         return this.startGroupActions == null ? List.of() : this.startGroupActions;
     }
@@ -120,7 +120,6 @@ public final class RecoveryPlanGroupResponse {
             this.startGroupActions = startGroupActions;
             return this;
         }
-
         public RecoveryPlanGroupResponse build() {
             return new RecoveryPlanGroupResponse(endGroupActions, groupType, replicationProtectedItems, startGroupActions);
         }

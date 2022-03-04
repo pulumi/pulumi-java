@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.FilterResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class PubSubResponse {
     /**
      * Enable notifications for Pub/Sub.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
      * 
-     */
+    */
     public FilterResponse getFilter() {
         return this.filter;
     }
     /**
      * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
@@ -97,7 +97,6 @@ public final class PubSubResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubSubResponse build() {
             return new PubSubResponse(enabled, filter, topic);
         }

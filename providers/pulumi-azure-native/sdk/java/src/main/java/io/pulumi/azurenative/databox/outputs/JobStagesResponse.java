@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class JobStagesResponse {
     /**
      * Display name of the job stage.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Job Stage Details
      * 
-     */
+    */
     public Object getJobStageDetails() {
         return this.jobStageDetails;
     }
     /**
      * Name of the job stage.
      * 
-     */
+    */
     public String getStageName() {
         return this.stageName;
     }
     /**
      * Status of the job stage.
      * 
-     */
+    */
     public String getStageStatus() {
         return this.stageStatus;
     }
     /**
      * Time for the job stage in UTC ISO 8601 format.
      * 
-     */
+    */
     public String getStageTime() {
         return this.stageTime;
     }
@@ -138,7 +138,6 @@ public final class JobStagesResponse {
             this.stageTime = Objects.requireNonNull(stageTime);
             return this;
         }
-
         public JobStagesResponse build() {
             return new JobStagesResponse(displayName, jobStageDetails, stageName, stageStatus, stageTime);
         }

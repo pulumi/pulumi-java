@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecr;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyText", required=true)
-    private final Input<Object> policyText;
+      private final Input<Object> policyText;
 
     public Input<Object> getPolicyText() {
         return this.policyText;
@@ -61,7 +61,6 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.policyText = Input.of(Objects.requireNonNull(policyText));
             return this;
         }
-
         public RegistryPolicyArgs build() {
             return new RegistryPolicyArgs(policyText);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.GallerySharingPermissionTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions;
+      private final @Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions;
 
     public Input<Either<String,GallerySharingPermissionTypes>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -68,7 +68,6 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
-
         public SharingProfileArgs build() {
             return new SharingProfileArgs(permissions);
         }

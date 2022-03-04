@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.AuthorizerStatus;
 import io.pulumi.awsnative.iot.outputs.AuthorizerTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -116,7 +116,6 @@ public final class GetAuthorizerResult {
             this.tokenSigningPublicKeys = tokenSigningPublicKeys;
             return this;
         }
-
         public GetAuthorizerResult build() {
             return new GetAuthorizerResult(arn, authorizerFunctionArn, status, tags, tokenKeyName, tokenSigningPublicKeys);
         }

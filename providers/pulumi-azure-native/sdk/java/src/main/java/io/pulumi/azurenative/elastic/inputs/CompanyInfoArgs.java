@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.elastic.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="business")
-    private final @Nullable Input<String> business;
+      private final @Nullable Input<String> business;
 
     public Input<String> getBusiness() {
         return this.business == null ? Input.empty() : this.business;
@@ -34,7 +34,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="country")
-    private final @Nullable Input<String> country;
+      private final @Nullable Input<String> country;
 
     public Input<String> getCountry() {
         return this.country == null ? Input.empty() : this.country;
@@ -45,7 +45,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -56,7 +56,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="employeesNumber")
-    private final @Nullable Input<String> employeesNumber;
+      private final @Nullable Input<String> employeesNumber;
 
     public Input<String> getEmployeesNumber() {
         return this.employeesNumber == null ? Input.empty() : this.employeesNumber;
@@ -67,7 +67,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -171,7 +171,6 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public CompanyInfoArgs build() {
             return new CompanyInfoArgs(business, country, domain, employeesNumber, state);
         }

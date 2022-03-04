@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.TrialState;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_Trial_ParameterArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__MeasurementArgs;
@@ -23,14 +23,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="finalMeasurement")
-    private final @Nullable Input<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
+      private final @Nullable Input<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
 
     public Input<GoogleCloudMlV1__MeasurementArgs> getFinalMeasurement() {
         return this.finalMeasurement == null ? Input.empty() : this.finalMeasurement;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -41,7 +41,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="measurements")
-    private final @Nullable Input<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
+      private final @Nullable Input<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
 
     public Input<List<GoogleCloudMlV1__MeasurementArgs>> getMeasurements() {
         return this.measurements == null ? Input.empty() : this.measurements;
@@ -52,14 +52,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
+      private final @Nullable Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
 
     public Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -70,14 +70,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<TrialState> state;
+      private final @Nullable Input<TrialState> state;
 
     public Input<TrialState> getState() {
         return this.state == null ? Input.empty() : this.state;
     }
 
     @InputImport(name="studyId", required=true)
-    private final Input<String> studyId;
+      private final Input<String> studyId;
 
     public Input<String> getStudyId() {
         return this.studyId;
@@ -211,7 +211,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
             this.studyId = Input.of(Objects.requireNonNull(studyId));
             return this;
         }
-
         public TrialArgs build() {
             return new TrialArgs(finalMeasurement, location, measurements, parameters, project, state, studyId);
         }

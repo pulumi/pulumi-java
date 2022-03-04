@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ContainerIdentityInfoResponse {
     /**
      * Protection container identity - AAD Tenant
      * 
-     */
+    */
     public Optional<String> getAadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
     /**
      * Protection container identity - Audience
      * 
-     */
+    */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * Protection container identity - AAD Service Principal
      * 
-     */
+    */
     public Optional<String> getServicePrincipalClientId() {
         return Optional.ofNullable(this.servicePrincipalClientId);
     }
     /**
      * Unique name of the container
      * 
-     */
+    */
     public Optional<String> getUniqueName() {
         return Optional.ofNullable(this.uniqueName);
     }
@@ -118,7 +118,6 @@ public final class ContainerIdentityInfoResponse {
             this.uniqueName = uniqueName;
             return this;
         }
-
         public ContainerIdentityInfoResponse build() {
             return new ContainerIdentityInfoResponse(aadTenantId, audience, servicePrincipalClientId, uniqueName);
         }

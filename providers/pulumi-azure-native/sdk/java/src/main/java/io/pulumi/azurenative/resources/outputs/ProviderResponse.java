@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.ProviderResourceTypeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class ProviderResponse {
     /**
      * The provider ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The namespace of the resource provider.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * The registration policy of the resource provider.
      * 
-     */
+    */
     public String getRegistrationPolicy() {
         return this.registrationPolicy;
     }
     /**
      * The registration state of the resource provider.
      * 
-     */
+    */
     public String getRegistrationState() {
         return this.registrationState;
     }
     /**
      * The collection of provider resource types.
      * 
-     */
+    */
     public List<ProviderResourceTypeResponse> getResourceTypes() {
         return this.resourceTypes;
     }
@@ -141,7 +141,6 @@ public final class ProviderResponse {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
-
         public ProviderResponse build() {
             return new ProviderResponse(id, namespace, registrationPolicy, registrationState, resourceTypes);
         }

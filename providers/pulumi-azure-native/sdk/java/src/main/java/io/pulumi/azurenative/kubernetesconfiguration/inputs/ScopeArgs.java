@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeClusterArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeNamespaceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-    private final @Nullable Input<ScopeClusterArgs> cluster;
+      private final @Nullable Input<ScopeClusterArgs> cluster;
 
     public Input<ScopeClusterArgs> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
@@ -35,7 +35,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<ScopeNamespaceArgs> namespace;
+      private final @Nullable Input<ScopeNamespaceArgs> namespace;
 
     public Input<ScopeNamespaceArgs> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -94,7 +94,6 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
-
         public ScopeArgs build() {
             return new ScopeArgs(cluster, namespace);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -48,21 +48,21 @@ public final class ServiceTraffic {
      * provided LatestRevision must be true if RevisionName is empty; it must be
      * false when RevisionName is non-empty.
      * 
-     */
+    */
     public Optional<Boolean> getLatestRevision() {
         return Optional.ofNullable(this.latestRevision);
     }
     /**
      * Percent specifies percent of the traffic to this Revision or Configuration.
      * 
-     */
+    */
     public Integer getPercent() {
         return this.percent;
     }
     /**
      * RevisionName of a specific revision to which to send this portion of traffic.
      * 
-     */
+    */
     public Optional<String> getRevisionName() {
         return Optional.ofNullable(this.revisionName);
     }
@@ -105,7 +105,6 @@ public final class ServiceTraffic {
             this.revisionName = revisionName;
             return this;
         }
-
         public ServiceTraffic build() {
             return new ServiceTraffic(latestRevision, percent, revisionName);
         }

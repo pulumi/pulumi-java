@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="classification")
-    private final @Nullable Input<String> classification;
+      private final @Nullable Input<String> classification;
 
     public Input<String> getClassification() {
         return this.classification == null ? Input.empty() : this.classification;
@@ -35,7 +35,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cpeUri")
-    private final @Nullable Input<String> cpeUri;
+      private final @Nullable Input<String> cpeUri;
 
     public Input<String> getCpeUri() {
         return this.cpeUri == null ? Input.empty() : this.cpeUri;
@@ -46,7 +46,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cve")
-    private final @Nullable Input<List<String>> cve;
+      private final @Nullable Input<List<String>> cve;
 
     public Input<List<String>> getCve() {
         return this.cve == null ? Input.empty() : this.cve;
@@ -57,7 +57,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="severity")
-    private final @Nullable Input<String> severity;
+      private final @Nullable Input<String> severity;
 
     public Input<String> getSeverity() {
         return this.severity == null ? Input.empty() : this.severity;
@@ -146,7 +146,6 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
             this.severity = Input.ofNullable(severity);
             return this;
         }
-
         public UpgradeDistributionArgs build() {
             return new UpgradeDistributionArgs(classification, cpeUri, cve, severity);
         }

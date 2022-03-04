@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.datacatalog.outputs.EntryGcsFilesetSpecSampleGcsFileSpec;
 import java.lang.String;
 import java.util.List;
@@ -56,7 +56,7 @@ public final class EntryGcsFilesetSpec {
      * * gs://bucket_name/a/*{@literal /}b: matches all files in bucket_name that match a/*{@literal /}b pattern, such as a/c/b, a/d/b
      * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
      * 
-     */
+    */
     public List<String> getFilePatterns() {
         return this.filePatterns;
     }
@@ -65,7 +65,7 @@ public final class EntryGcsFilesetSpec {
      * Sample files contained in this fileset, not all files contained in this fileset are represented here.
      * Structure is documented below.
      * 
-     */
+    */
     public List<EntryGcsFilesetSpecSampleGcsFileSpec> getSampleGcsFileSpecs() {
         return this.sampleGcsFileSpecs == null ? List.of() : this.sampleGcsFileSpecs;
     }
@@ -101,7 +101,6 @@ public final class EntryGcsFilesetSpec {
             this.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }
-
         public EntryGcsFilesetSpec build() {
             return new EntryGcsFilesetSpec(filePatterns, sampleGcsFileSpecs);
         }

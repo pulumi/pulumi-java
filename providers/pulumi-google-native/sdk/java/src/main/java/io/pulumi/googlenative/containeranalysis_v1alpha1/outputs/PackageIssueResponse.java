@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.VulnerabilityLocationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class PackageIssueResponse {
     /**
      * The location of the vulnerability.
      * 
-     */
+    */
     public VulnerabilityLocationResponse getAffectedLocation() {
         return this.affectedLocation;
     }
     /**
      * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.
      * 
-     */
+    */
     public String getEffectiveSeverity() {
         return this.effectiveSeverity;
     }
     /**
      * The location of the available fix for vulnerability.
      * 
-     */
+    */
     public VulnerabilityLocationResponse getFixedLocation() {
         return this.fixedLocation;
     }
     /**
      * The type of package (e.g. OS, MAVEN, GO).
      * 
-     */
+    */
     public String getPackageType() {
         return this.packageType;
     }
@@ -130,7 +130,6 @@ public final class PackageIssueResponse {
             this.severityName = Objects.requireNonNull(severityName);
             return this;
         }
-
         public PackageIssueResponse build() {
             return new PackageIssueResponse(affectedLocation, effectiveSeverity, fixedLocation, packageType, severityName);
         }

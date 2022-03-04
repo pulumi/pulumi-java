@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.EndpointInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.LatencyDistributionResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.StatusResponse;
@@ -77,56 +77,56 @@ public final class ProbingDetailsResponse {
     /**
      * The reason probing was aborted.
      * 
-     */
+    */
     public String getAbortCause() {
         return this.abortCause;
     }
     /**
      * The source and destination endpoints derived from the test input and used for active probing.
      * 
-     */
+    */
     public EndpointInfoResponse getEndpointInfo() {
         return this.endpointInfo;
     }
     /**
      * Details about an internal failure or the cancellation of active probing.
      * 
-     */
+    */
     public StatusResponse getError() {
         return this.error;
     }
     /**
      * Latency as measured by active probing in one direction: from the source to the destination endpoint.
      * 
-     */
+    */
     public LatencyDistributionResponse getProbingLatency() {
         return this.probingLatency;
     }
     /**
      * The overall result of active probing.
      * 
-     */
+    */
     public String getResult() {
         return this.result;
     }
     /**
      * Number of probes sent.
      * 
-     */
+    */
     public Integer getSentProbeCount() {
         return this.sentProbeCount;
     }
     /**
      * Number of probes that reached the destination.
      * 
-     */
+    */
     public Integer getSuccessfulProbeCount() {
         return this.successfulProbeCount;
     }
     /**
      * The time that reachability was assessed through active probing.
      * 
-     */
+    */
     public String getVerifyTime() {
         return this.verifyTime;
     }
@@ -204,7 +204,6 @@ public final class ProbingDetailsResponse {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }
-
         public ProbingDetailsResponse build() {
             return new ProbingDetailsResponse(abortCause, endpointInfo, error, probingLatency, result, sentProbeCount, successfulProbeCount, verifyTime);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class VmmToVmmCreateNetworkMappingInputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -67,7 +67,6 @@ public final class VmmToVmmCreateNetworkMappingInputArgs extends io.pulumi.resou
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
-
         public VmmToVmmCreateNetworkMappingInputArgs build() {
             return new VmmToVmmCreateNetworkMappingInputArgs(instanceType);
         }

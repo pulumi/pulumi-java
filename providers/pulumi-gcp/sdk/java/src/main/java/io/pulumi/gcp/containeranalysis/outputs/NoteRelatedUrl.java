@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class NoteRelatedUrl {
     /**
      * Label to describe usage of the URL
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Specific URL associated with the resource.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -76,7 +76,6 @@ public final class NoteRelatedUrl {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public NoteRelatedUrl build() {
             return new NoteRelatedUrl(label, url);
         }

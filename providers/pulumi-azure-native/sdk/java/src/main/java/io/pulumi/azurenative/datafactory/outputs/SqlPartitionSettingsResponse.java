@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class SqlPartitionSettingsResponse {
     /**
      * The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPartitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
     /**
      * The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPartitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
     /**
      * The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPartitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }
@@ -97,7 +97,6 @@ public final class SqlPartitionSettingsResponse {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public SqlPartitionSettingsResponse build() {
             return new SqlPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DiagnosticsConfigurationResponse {
     /**
      * Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
      * 
-     */
+    */
     public Optional<String> getExpiry() {
         return Optional.ofNullable(this.expiry);
     }
     /**
      * Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
      * 
-     */
+    */
     public String getLevel() {
         return this.level;
     }
@@ -76,7 +76,6 @@ public final class DiagnosticsConfigurationResponse {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public DiagnosticsConfigurationResponse build() {
             return new DiagnosticsConfigurationResponse(expiry, level);
         }

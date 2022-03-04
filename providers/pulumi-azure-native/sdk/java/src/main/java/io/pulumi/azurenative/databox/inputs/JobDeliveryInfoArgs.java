@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scheduledDateTime")
-    private final @Nullable Input<String> scheduledDateTime;
+      private final @Nullable Input<String> scheduledDateTime;
 
     public Input<String> getScheduledDateTime() {
         return this.scheduledDateTime == null ? Input.empty() : this.scheduledDateTime;
@@ -66,7 +66,6 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
             this.scheduledDateTime = Input.ofNullable(scheduledDateTime);
             return this;
         }
-
         public JobDeliveryInfoArgs build() {
             return new JobDeliveryInfoArgs(scheduledDateTime);
         }

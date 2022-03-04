@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class LocationS3S3ConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucketAccessRoleArn", required=true)
-    private final Input<String> bucketAccessRoleArn;
+      private final Input<String> bucketAccessRoleArn;
 
     public Input<String> getBucketAccessRoleArn() {
         return this.bucketAccessRoleArn;
@@ -65,7 +65,6 @@ public final class LocationS3S3ConfigArgs extends io.pulumi.resources.ResourceAr
             this.bucketAccessRoleArn = Input.of(Objects.requireNonNull(bucketAccessRoleArn));
             return this;
         }
-
         public LocationS3S3ConfigArgs build() {
             return new LocationS3S3ConfigArgs(bucketAccessRoleArn);
         }

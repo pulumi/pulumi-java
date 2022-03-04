@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="lockDurationAsIso8601")
-    private final @Nullable String lockDurationAsIso8601;
+      private final @Nullable String lockDurationAsIso8601;
 
     public Optional<String> getLockDurationAsIso8601() {
         return this.lockDurationAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.lockDurationAsIso8601);
@@ -35,7 +35,7 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxDeliveryCount")
-    private final @Nullable Integer maxDeliveryCount;
+      private final @Nullable Integer maxDeliveryCount;
 
     public Optional<Integer> getMaxDeliveryCount() {
         return this.maxDeliveryCount == null ? Optional.empty() : Optional.ofNullable(this.maxDeliveryCount);
@@ -46,7 +46,7 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ttlAsIso8601")
-    private final @Nullable String ttlAsIso8601;
+      private final @Nullable String ttlAsIso8601;
 
     public Optional<String> getTtlAsIso8601() {
         return this.ttlAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.ttlAsIso8601);
@@ -105,7 +105,6 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
             this.ttlAsIso8601 = ttlAsIso8601;
             return this;
         }
-
         public MessagingEndpointPropertiesResponse build() {
             return new MessagingEndpointPropertiesResponse(lockDurationAsIso8601, maxDeliveryCount, ttlAsIso8601);
         }

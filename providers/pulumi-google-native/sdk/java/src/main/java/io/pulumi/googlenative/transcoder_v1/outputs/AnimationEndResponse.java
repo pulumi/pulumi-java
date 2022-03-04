@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AnimationEndResponse {
     /**
      * The time to end overlay object, in seconds. Default: 0
      * 
-     */
+    */
     public String getStartTimeOffset() {
         return this.startTimeOffset;
     }
@@ -52,7 +52,6 @@ public final class AnimationEndResponse {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
-
         public AnimationEndResponse build() {
             return new AnimationEndResponse(startTimeOffset);
         }

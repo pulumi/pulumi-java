@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.translate_v3beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceLanguageCode", required=true)
-    private final Input<String> sourceLanguageCode;
+      private final Input<String> sourceLanguageCode;
 
     public Input<String> getSourceLanguageCode() {
         return this.sourceLanguageCode;
@@ -33,7 +33,7 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetLanguageCode", required=true)
-    private final Input<String> targetLanguageCode;
+      private final Input<String> targetLanguageCode;
 
     public Input<String> getTargetLanguageCode() {
         return this.targetLanguageCode;
@@ -92,7 +92,6 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
             this.targetLanguageCode = Input.of(Objects.requireNonNull(targetLanguageCode));
             return this;
         }
-
         public LanguageCodePairArgs build() {
             return new LanguageCodePairArgs(sourceLanguageCode, targetLanguageCode);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ScheduleTriggerRecurrenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -38,7 +38,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pipelines")
-    private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
+      private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
 
     public Input<List<TriggerPipelineReferenceArgs>> getPipelines() {
         return this.pipelines == null ? Input.empty() : this.pipelines;
@@ -60,7 +60,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="recurrence", required=true)
-    private final Input<ScheduleTriggerRecurrenceArgs> recurrence;
+      private final Input<ScheduleTriggerRecurrenceArgs> recurrence;
 
     public Input<ScheduleTriggerRecurrenceArgs> getRecurrence() {
         return this.recurrence;
@@ -72,7 +72,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -176,7 +176,6 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ScheduleTriggerArgs build() {
             return new ScheduleTriggerArgs(annotations, description, pipelines, recurrence, type);
         }

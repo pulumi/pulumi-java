@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfig {
      * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
      * Structure is documented below.
      * 
-     */
+    */
     public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab getKeytab() {
         return this.keytab;
     }
     /**
      * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
      * 
-     */
+    */
     public String getKrb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
     }
     /**
      * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form "primary/instance@REALM", but there is no exact format.
      * 
-     */
+    */
     public String getPrincipal() {
         return this.principal;
     }
@@ -98,7 +98,6 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfig {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfigKerberosConfig build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfig(keytab, krb5ConfigGcsUri, principal);
         }

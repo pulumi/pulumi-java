@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetServiceRunnerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-    private final String labName;
+      private final String labName;
 
     public String getLabName() {
         return this.labName;
@@ -28,7 +28,7 @@ public final class GetServiceRunnerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetServiceRunnerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetServiceRunnerArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetServiceRunnerArgs build() {
             return new GetServiceRunnerArgs(labName, name, resourceGroupName);
         }

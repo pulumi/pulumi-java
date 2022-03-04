@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class BootDiagnosticsResponse {
     /**
      * Whether boot diagnostics should be enabled on the Virtual Machine.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Uri of the storage account to use for placing the console output and screenshot. <br><br>If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
      * 
-     */
+    */
     public Optional<String> getStorageUri() {
         return Optional.ofNullable(this.storageUri);
     }
@@ -77,7 +77,6 @@ public final class BootDiagnosticsResponse {
             this.storageUri = storageUri;
             return this;
         }
-
         public BootDiagnosticsResponse build() {
             return new BootDiagnosticsResponse(enabled, storageUri);
         }

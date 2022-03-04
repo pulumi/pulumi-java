@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.IapTestServiceAccountInfoArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iapTestServiceAccountInfo")
-    private final @Nullable Input<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
+      private final @Nullable Input<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
 
     public Input<IapTestServiceAccountInfoArgs> getIapTestServiceAccountInfo() {
         return this.iapTestServiceAccountInfo == null ? Input.empty() : this.iapTestServiceAccountInfo;
@@ -66,7 +66,6 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.iapTestServiceAccountInfo = Input.ofNullable(iapTestServiceAccountInfo);
             return this;
         }
-
         public IapCredentialArgs build() {
             return new IapCredentialArgs(iapTestServiceAccountInfo);
         }

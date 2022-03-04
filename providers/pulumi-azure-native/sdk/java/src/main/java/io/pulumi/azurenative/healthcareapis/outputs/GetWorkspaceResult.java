@@ -5,7 +5,7 @@ package io.pulumi.azurenative.healthcareapis.outputs;
 
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.WorkspaceResponseProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -78,56 +78,56 @@ public final class GetWorkspaceResult {
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Workspaces resource specific properties.
      * 
-     */
+    */
     public WorkspaceResponseProperties getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -205,7 +205,6 @@ public final class GetWorkspaceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(etag, id, location, name, properties, systemData, tags, type);
         }

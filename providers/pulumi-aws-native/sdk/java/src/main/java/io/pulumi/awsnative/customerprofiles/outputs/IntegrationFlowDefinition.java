@@ -6,7 +6,7 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationSourceFlowConfig;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTask;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTriggerConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -116,7 +116,6 @@ public final class IntegrationFlowDefinition {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
         }
-
         public IntegrationFlowDefinition build() {
             return new IntegrationFlowDefinition(description, flowName, kmsArn, sourceFlowConfig, tasks, triggerConfig);
         }

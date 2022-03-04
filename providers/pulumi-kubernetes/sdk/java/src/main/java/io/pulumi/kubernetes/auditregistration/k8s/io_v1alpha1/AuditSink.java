@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.AuditSinkArgs;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.AuditSinkSpec;
@@ -69,6 +69,37 @@ public class AuditSink extends io.pulumi.resources.CustomResource {
         return this.spec;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable AuditSinkArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.AuditSinkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.AuditSinkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AuditSink(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AuditSink(String name) {
+        this(name, AuditSinkArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AuditSink(String name, @Nullable AuditSinkArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

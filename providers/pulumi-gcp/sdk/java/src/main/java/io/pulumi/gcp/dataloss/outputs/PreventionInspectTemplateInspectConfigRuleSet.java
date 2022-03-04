@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetInfoType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRule;
 import java.util.List;
@@ -36,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
      * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PreventionInspectTemplateInspectConfigRuleSetInfoType> getInfoTypes() {
         return this.infoTypes;
     }
@@ -44,7 +44,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
      * Set of rules to be applied to infoTypes. The rules are applied in order.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PreventionInspectTemplateInspectConfigRuleSetRule> getRules() {
         return this.rules;
     }
@@ -80,7 +80,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSet build() {
             return new PreventionInspectTemplateInspectConfigRuleSet(infoTypes, rules);
         }

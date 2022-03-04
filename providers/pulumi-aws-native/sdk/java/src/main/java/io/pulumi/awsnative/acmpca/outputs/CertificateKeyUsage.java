@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -151,7 +151,6 @@ public final class CertificateKeyUsage {
             this.nonRepudiation = nonRepudiation;
             return this;
         }
-
         public CertificateKeyUsage build() {
             return new CertificateKeyUsage(cRLSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyCertSign, keyEncipherment, nonRepudiation);
         }

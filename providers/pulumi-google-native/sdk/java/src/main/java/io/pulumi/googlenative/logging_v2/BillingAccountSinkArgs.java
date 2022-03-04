@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.logging_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.logging_v2.inputs.BigQueryOptionsArgs;
 import io.pulumi.googlenative.logging_v2.inputs.LogExclusionArgs;
 import java.lang.Boolean;
@@ -23,14 +23,14 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bigqueryOptions")
-    private final @Nullable Input<BigQueryOptionsArgs> bigqueryOptions;
+      private final @Nullable Input<BigQueryOptionsArgs> bigqueryOptions;
 
     public Input<BigQueryOptionsArgs> getBigqueryOptions() {
         return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
     }
 
     @InputImport(name="billingAccountId", required=true)
-    private final Input<String> billingAccountId;
+      private final Input<String> billingAccountId;
 
     public Input<String> getBillingAccountId() {
         return this.billingAccountId;
@@ -41,7 +41,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,7 +52,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<String> destination;
+      private final Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination;
@@ -63,7 +63,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -74,7 +74,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="exclusions")
-    private final @Nullable Input<List<LogExclusionArgs>> exclusions;
+      private final @Nullable Input<List<LogExclusionArgs>> exclusions;
 
     public Input<List<LogExclusionArgs>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -85,7 +85,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -96,7 +96,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeChildren")
-    private final @Nullable Input<Boolean> includeChildren;
+      private final @Nullable Input<Boolean> includeChildren;
 
     public Input<Boolean> getIncludeChildren() {
         return this.includeChildren == null ? Input.empty() : this.includeChildren;
@@ -107,14 +107,14 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="uniqueWriterIdentity")
-    private final @Nullable Input<String> uniqueWriterIdentity;
+      private final @Nullable Input<String> uniqueWriterIdentity;
 
     public Input<String> getUniqueWriterIdentity() {
         return this.uniqueWriterIdentity == null ? Input.empty() : this.uniqueWriterIdentity;
@@ -293,7 +293,6 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             this.uniqueWriterIdentity = Input.ofNullable(uniqueWriterIdentity);
             return this;
         }
-
         public BillingAccountSinkArgs build() {
             return new BillingAccountSinkArgs(bigqueryOptions, billingAccountId, description, destination, disabled, exclusions, filter, includeChildren, name, uniqueWriterIdentity);
         }

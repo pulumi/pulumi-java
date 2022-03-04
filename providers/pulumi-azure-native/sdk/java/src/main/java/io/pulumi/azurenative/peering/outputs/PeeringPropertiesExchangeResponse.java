@@ -5,7 +5,7 @@ package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.ExchangeConnectionResponse;
 import io.pulumi.azurenative.peering.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class PeeringPropertiesExchangeResponse {
     /**
      * The set of connections that constitute an exchange peering.
      * 
-     */
+    */
     public List<ExchangeConnectionResponse> getConnections() {
         return this.connections == null ? List.of() : this.connections;
     }
     /**
      * The reference of the peer ASN.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getPeerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
@@ -78,7 +78,6 @@ public final class PeeringPropertiesExchangeResponse {
             this.peerAsn = peerAsn;
             return this;
         }
-
         public PeeringPropertiesExchangeResponse build() {
             return new PeeringPropertiesExchangeResponse(connections, peerAsn);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.ChannelHlsIngest;
 import io.pulumi.awsnative.mediapackage.outputs.ChannelLogConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,35 +56,35 @@ public final class GetChannelResult {
     /**
      * The Amazon Resource Name (ARN) assigned to the Channel.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A short text description of the Channel.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The configuration parameters for egress access logging.
      * 
-     */
+    */
     public Optional<ChannelLogConfiguration> getEgressAccessLogs() {
         return Optional.ofNullable(this.egressAccessLogs);
     }
     /**
      * A short text description of the Channel.
      * 
-     */
+    */
     public Optional<ChannelHlsIngest> getHlsIngest() {
         return Optional.ofNullable(this.hlsIngest);
     }
     /**
      * The configuration parameters for egress access logging.
      * 
-     */
+    */
     public Optional<ChannelLogConfiguration> getIngressAccessLogs() {
         return Optional.ofNullable(this.ingressAccessLogs);
     }
@@ -141,7 +141,6 @@ public final class GetChannelResult {
             this.ingressAccessLogs = ingressAccessLogs;
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(arn, description, egressAccessLogs, hlsIngest, ingressAccessLogs);
         }

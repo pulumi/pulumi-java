@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.enums.DnsServiceLogLevelEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="defaultDnsZone")
-    private final @Nullable Input<String> defaultDnsZone;
+      private final @Nullable Input<String> defaultDnsZone;
 
     public Input<String> getDefaultDnsZone() {
         return this.defaultDnsZone == null ? Input.empty() : this.defaultDnsZone;
@@ -34,7 +34,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -45,7 +45,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dnsServiceId")
-    private final @Nullable Input<String> dnsServiceId;
+      private final @Nullable Input<String> dnsServiceId;
 
     public Input<String> getDnsServiceId() {
         return this.dnsServiceId == null ? Input.empty() : this.dnsServiceId;
@@ -56,7 +56,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dnsServiceIp")
-    private final @Nullable Input<String> dnsServiceIp;
+      private final @Nullable Input<String> dnsServiceIp;
 
     public Input<String> getDnsServiceIp() {
         return this.dnsServiceIp == null ? Input.empty() : this.dnsServiceIp;
@@ -67,7 +67,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fqdnZones")
-    private final @Nullable Input<List<String>> fqdnZones;
+      private final @Nullable Input<List<String>> fqdnZones;
 
     public Input<List<String>> getFqdnZones() {
         return this.fqdnZones == null ? Input.empty() : this.fqdnZones;
@@ -78,7 +78,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<Either<String,DnsServiceLogLevelEnum>> logLevel;
+      private final @Nullable Input<Either<String,DnsServiceLogLevelEnum>> logLevel;
 
     public Input<Either<String,DnsServiceLogLevelEnum>> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -89,7 +89,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+      private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -100,7 +100,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<Double> revision;
+      private final @Nullable Input<Double> revision;
 
     public Input<Double> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -275,7 +275,6 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
             this.revision = Input.ofNullable(revision);
             return this;
         }
-
         public WorkloadNetworkDnsServiceArgs build() {
             return new WorkloadNetworkDnsServiceArgs(defaultDnsZone, displayName, dnsServiceId, dnsServiceIp, fqdnZones, logLevel, privateCloudName, resourceGroupName, revision);
         }

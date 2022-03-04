@@ -6,21 +6,41 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.inputs.GetMongoDBResourceMongoUserDefinitionArgs;
 import io.pulumi.azurenative.documentdb.outputs.GetMongoDBResourceMongoUserDefinitionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMongoDBResourceMongoUserDefinition {
-/**
- * An Azure Cosmos DB User Definition
+    private GetMongoDBResourceMongoUserDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetMongoDBResourceMongoUserDefinitionArgs.Builder a);
+    }
+    private static GetMongoDBResourceMongoUserDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMongoDBResourceMongoUserDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Cosmos DB User Definition
  * API Version: 2021-10-15-preview.
  * 
- *
- * An Azure Cosmos DB User Definition
+     *
+     * An Azure Cosmos DB User Definition
  * 
- */
+     */
+    public static CompletableFuture<GetMongoDBResourceMongoUserDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Cosmos DB User Definition
+     * API Version: 2021-10-15-preview.
+     * 
+     *
+         * An Azure Cosmos DB User Definition
+     * 
+     */
     public static CompletableFuture<GetMongoDBResourceMongoUserDefinitionResult> invokeAsync(GetMongoDBResourceMongoUserDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoUserDefinition", TypeShape.of(GetMongoDBResourceMongoUserDefinitionResult.class), args == null ? GetMongoDBResourceMongoUserDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

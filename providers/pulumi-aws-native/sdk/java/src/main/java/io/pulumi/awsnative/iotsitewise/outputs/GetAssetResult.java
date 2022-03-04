@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetHierarchy;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetProperty;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -64,7 +64,7 @@ public final class GetAssetResult {
     /**
      * The ARN of the asset
      * 
-     */
+    */
     public Optional<String> getAssetArn() {
         return Optional.ofNullable(this.assetArn);
     }
@@ -74,21 +74,21 @@ public final class GetAssetResult {
     /**
      * The ID of the asset
      * 
-     */
+    */
     public Optional<String> getAssetId() {
         return Optional.ofNullable(this.assetId);
     }
     /**
      * The ID of the asset model from which to create the asset.
      * 
-     */
+    */
     public Optional<String> getAssetModelId() {
         return Optional.ofNullable(this.assetModelId);
     }
     /**
      * A unique, friendly name for the asset.
      * 
-     */
+    */
     public Optional<String> getAssetName() {
         return Optional.ofNullable(this.assetName);
     }
@@ -98,7 +98,7 @@ public final class GetAssetResult {
     /**
      * A list of key-value pairs that contain metadata for the asset.
      * 
-     */
+    */
     public List<AssetTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -169,7 +169,6 @@ public final class GetAssetResult {
             this.tags = tags;
             return this;
         }
-
         public GetAssetResult build() {
             return new GetAssetResult(assetArn, assetHierarchies, assetId, assetModelId, assetName, assetProperties, tags);
         }

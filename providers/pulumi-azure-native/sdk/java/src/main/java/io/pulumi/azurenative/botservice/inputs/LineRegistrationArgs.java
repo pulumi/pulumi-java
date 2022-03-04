@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="channelAccessToken")
-    private final @Nullable Input<String> channelAccessToken;
+      private final @Nullable Input<String> channelAccessToken;
 
     public Input<String> getChannelAccessToken() {
         return this.channelAccessToken == null ? Input.empty() : this.channelAccessToken;
@@ -34,7 +34,7 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="channelSecret")
-    private final @Nullable Input<String> channelSecret;
+      private final @Nullable Input<String> channelSecret;
 
     public Input<String> getChannelSecret() {
         return this.channelSecret == null ? Input.empty() : this.channelSecret;
@@ -93,7 +93,6 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
             this.channelSecret = Input.ofNullable(channelSecret);
             return this;
         }
-
         public LineRegistrationArgs build() {
             return new LineRegistrationArgs(channelAccessToken, channelSecret);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sasKey")
-    private final @Nullable String sasKey;
+      private final @Nullable String sasKey;
 
     public Optional<String> getSasKey() {
         return this.sasKey == null ? Optional.empty() : Optional.ofNullable(this.sasKey);
@@ -30,7 +30,7 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sasKeyName")
-    private final @Nullable String sasKeyName;
+      private final @Nullable String sasKeyName;
 
     public Optional<String> getSasKeyName() {
         return this.sasKeyName == null ? Optional.empty() : Optional.ofNullable(this.sasKeyName);
@@ -41,7 +41,7 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -100,7 +100,6 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
             this.type = type;
             return this;
         }
-
         public ServiceBusAuthenticationResponse build() {
             return new ServiceBusAuthenticationResponse(sasKey, sasKeyName, type);
         }

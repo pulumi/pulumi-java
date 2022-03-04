@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceStatusCondition;
 import java.lang.Integer;
 import java.lang.String;
@@ -102,7 +102,6 @@ public final class ServiceStatus {
             this.url = url;
             return this;
         }
-
         public ServiceStatus build() {
             return new ServiceStatus(conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, url);
         }

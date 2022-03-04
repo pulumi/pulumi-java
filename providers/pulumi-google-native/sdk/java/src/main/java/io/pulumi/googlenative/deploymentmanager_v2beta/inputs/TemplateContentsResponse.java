@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.ImportFileResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="imports", required=true)
-    private final List<ImportFileResponse> imports;
+      private final List<ImportFileResponse> imports;
 
     public List<ImportFileResponse> getImports() {
         return this.imports;
@@ -34,7 +34,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="interpreter", required=true)
-    private final String interpreter;
+      private final String interpreter;
 
     public String getInterpreter() {
         return this.interpreter;
@@ -45,7 +45,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="mainTemplate", required=true)
-    private final String mainTemplate;
+      private final String mainTemplate;
 
     public String getMainTemplate() {
         return this.mainTemplate;
@@ -56,7 +56,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="schema", required=true)
-    private final String schema;
+      private final String schema;
 
     public String getSchema() {
         return this.schema;
@@ -67,7 +67,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="template", required=true)
-    private final String template;
+      private final String template;
 
     public String getTemplate() {
         return this.template;
@@ -146,7 +146,6 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public TemplateContentsResponse build() {
             return new TemplateContentsResponse(imports, interpreter, mainTemplate, schema, template);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyAllowedKeyTypeRsa;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
      * Represents an allowed Elliptic Curve key type.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve> getEllipticCurve() {
         return Optional.ofNullable(this.ellipticCurve);
     }
@@ -45,7 +45,7 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
      * Describes an RSA key that may be used in a Certificate issued from a CaPool.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<CaPoolIssuancePolicyAllowedKeyTypeRsa> getRsa() {
         return Optional.ofNullable(this.rsa);
     }
@@ -81,7 +81,6 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
             this.rsa = rsa;
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyType build() {
             return new CaPoolIssuancePolicyAllowedKeyType(ellipticCurve, rsa);
         }

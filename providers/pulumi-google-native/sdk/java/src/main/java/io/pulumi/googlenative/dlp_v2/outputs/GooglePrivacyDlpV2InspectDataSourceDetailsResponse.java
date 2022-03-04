@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RequestedOptionsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ResultResponse;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
     /**
      * The configuration used for this job.
      * 
-     */
+    */
     public GooglePrivacyDlpV2RequestedOptionsResponse getRequestedOptions() {
         return this.requestedOptions;
     }
     /**
      * A summary of the outcome of this inspection job.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ResultResponse getResult() {
         return this.result;
     }
@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectDataSourceDetailsResponse build() {
             return new GooglePrivacyDlpV2InspectDataSourceDetailsResponse(requestedOptions, result);
         }

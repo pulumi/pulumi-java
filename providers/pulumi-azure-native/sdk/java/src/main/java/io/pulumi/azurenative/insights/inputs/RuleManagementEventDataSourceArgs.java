@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.RuleManagementEventClaimsDataSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="claims")
-    private final @Nullable Input<RuleManagementEventClaimsDataSourceArgs> claims;
+      private final @Nullable Input<RuleManagementEventClaimsDataSourceArgs> claims;
 
     public Input<RuleManagementEventClaimsDataSourceArgs> getClaims() {
         return this.claims == null ? Input.empty() : this.claims;
@@ -35,7 +35,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventName")
-    private final @Nullable Input<String> eventName;
+      private final @Nullable Input<String> eventName;
 
     public Input<String> getEventName() {
         return this.eventName == null ? Input.empty() : this.eventName;
@@ -46,7 +46,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventSource")
-    private final @Nullable Input<String> eventSource;
+      private final @Nullable Input<String> eventSource;
 
     public Input<String> getEventSource() {
         return this.eventSource == null ? Input.empty() : this.eventSource;
@@ -57,7 +57,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="legacyResourceId")
-    private final @Nullable Input<String> legacyResourceId;
+      private final @Nullable Input<String> legacyResourceId;
 
     public Input<String> getLegacyResourceId() {
         return this.legacyResourceId == null ? Input.empty() : this.legacyResourceId;
@@ -68,7 +68,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="level")
-    private final @Nullable Input<String> level;
+      private final @Nullable Input<String> level;
 
     public Input<String> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -79,7 +79,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="metricNamespace")
-    private final @Nullable Input<String> metricNamespace;
+      private final @Nullable Input<String> metricNamespace;
 
     public Input<String> getMetricNamespace() {
         return this.metricNamespace == null ? Input.empty() : this.metricNamespace;
@@ -91,7 +91,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -102,7 +102,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="operationName")
-    private final @Nullable Input<String> operationName;
+      private final @Nullable Input<String> operationName;
 
     public Input<String> getOperationName() {
         return this.operationName == null ? Input.empty() : this.operationName;
@@ -113,7 +113,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName")
-    private final @Nullable Input<String> resourceGroupName;
+      private final @Nullable Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
@@ -124,7 +124,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceLocation")
-    private final @Nullable Input<String> resourceLocation;
+      private final @Nullable Input<String> resourceLocation;
 
     public Input<String> getResourceLocation() {
         return this.resourceLocation == null ? Input.empty() : this.resourceLocation;
@@ -135,7 +135,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceProviderName")
-    private final @Nullable Input<String> resourceProviderName;
+      private final @Nullable Input<String> resourceProviderName;
 
     public Input<String> getResourceProviderName() {
         return this.resourceProviderName == null ? Input.empty() : this.resourceProviderName;
@@ -146,7 +146,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable Input<String> resourceUri;
+      private final @Nullable Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;
@@ -157,7 +157,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -168,7 +168,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="subStatus")
-    private final @Nullable Input<String> subStatus;
+      private final @Nullable Input<String> subStatus;
 
     public Input<String> getSubStatus() {
         return this.subStatus == null ? Input.empty() : this.subStatus;
@@ -407,7 +407,6 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             this.subStatus = Input.ofNullable(subStatus);
             return this;
         }
-
         public RuleManagementEventDataSourceArgs build() {
             return new RuleManagementEventDataSourceArgs(claims, eventName, eventSource, legacyResourceId, level, metricNamespace, odataType, operationName, resourceGroupName, resourceLocation, resourceProviderName, resourceUri, status, subStatus);
         }

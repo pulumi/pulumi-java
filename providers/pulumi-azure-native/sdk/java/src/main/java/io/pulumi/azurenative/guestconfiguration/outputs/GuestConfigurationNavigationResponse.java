@@ -5,7 +5,7 @@ package io.pulumi.azurenative.guestconfiguration.outputs;
 
 import io.pulumi.azurenative.guestconfiguration.outputs.ConfigurationParameterResponse;
 import io.pulumi.azurenative.guestconfiguration.outputs.ConfigurationSettingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -92,70 +92,70 @@ public final class GuestConfigurationNavigationResponse {
     /**
      * Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
      * 
-     */
+    */
     public Optional<String> getAssignmentType() {
         return Optional.ofNullable(this.assignmentType);
     }
     /**
      * The configuration parameters for the guest configuration.
      * 
-     */
+    */
     public List<ConfigurationParameterResponse> getConfigurationParameter() {
         return this.configurationParameter == null ? List.of() : this.configurationParameter;
     }
     /**
      * The protected configuration parameters for the guest configuration.
      * 
-     */
+    */
     public List<ConfigurationParameterResponse> getConfigurationProtectedParameter() {
         return this.configurationProtectedParameter == null ? List.of() : this.configurationProtectedParameter;
     }
     /**
      * The configuration setting for the guest configuration.
      * 
-     */
+    */
     public Optional<ConfigurationSettingResponse> getConfigurationSetting() {
         return Optional.ofNullable(this.configurationSetting);
     }
     /**
      * Combined hash of the guest configuration package and configuration parameters.
      * 
-     */
+    */
     public Optional<String> getContentHash() {
         return Optional.ofNullable(this.contentHash);
     }
     /**
      * Specifies the content type of the configuration. Possible values could be Builtin or Custom.
      * 
-     */
+    */
     public String getContentType() {
         return this.contentType;
     }
     /**
      * Uri of the storage where guest configuration package is uploaded.
      * 
-     */
+    */
     public Optional<String> getContentUri() {
         return Optional.ofNullable(this.contentUri);
     }
     /**
      * Kind of the guest configuration. For example:DSC
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Name of the guest configuration.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Version of the guest configuration.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -247,7 +247,6 @@ public final class GuestConfigurationNavigationResponse {
             this.version = version;
             return this;
         }
-
         public GuestConfigurationNavigationResponse build() {
             return new GuestConfigurationNavigationResponse(assignmentType, configurationParameter, configurationProtectedParameter, configurationSetting, contentHash, contentType, contentUri, kind, name, version);
         }

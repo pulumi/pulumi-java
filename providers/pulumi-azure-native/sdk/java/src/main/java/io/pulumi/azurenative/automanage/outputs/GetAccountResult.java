@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automanage.outputs;
 
 import io.pulumi.azurenative.automanage.outputs.AccountIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class GetAccountResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the Automanage account.
      * 
-     */
+    */
     public Optional<AccountIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(id, identity, location, name, tags, type);
         }

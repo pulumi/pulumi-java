@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -91,70 +91,70 @@ public final class CorrelationFilterResponse {
     /**
      * Content type of the message.
      * 
-     */
+    */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * Identifier of the correlation.
      * 
-     */
+    */
     public Optional<String> getCorrelationId() {
         return Optional.ofNullable(this.correlationId);
     }
     /**
      * Application specific label.
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Identifier of the message.
      * 
-     */
+    */
     public Optional<String> getMessageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
      * dictionary object for custom filters
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Address of the queue to reply to.
      * 
-     */
+    */
     public Optional<String> getReplyTo() {
         return Optional.ofNullable(this.replyTo);
     }
     /**
      * Session identifier to reply to.
      * 
-     */
+    */
     public Optional<String> getReplyToSessionId() {
         return Optional.ofNullable(this.replyToSessionId);
     }
     /**
      * Value that indicates whether the rule action requires preprocessing.
      * 
-     */
+    */
     public Optional<Boolean> getRequiresPreprocessing() {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
     /**
      * Session identifier.
      * 
-     */
+    */
     public Optional<String> getSessionId() {
         return Optional.ofNullable(this.sessionId);
     }
     /**
      * Address to send to.
      * 
-     */
+    */
     public Optional<String> getTo() {
         return Optional.ofNullable(this.to);
     }
@@ -246,7 +246,6 @@ public final class CorrelationFilterResponse {
             this.to = to;
             return this;
         }
-
         public CorrelationFilterResponse build() {
             return new CorrelationFilterResponse(contentType, correlationId, label, messageId, properties, replyTo, replyToSessionId, requiresPreprocessing, sessionId, to);
         }

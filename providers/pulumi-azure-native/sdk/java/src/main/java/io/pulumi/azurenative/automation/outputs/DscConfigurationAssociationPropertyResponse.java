@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DscConfigurationAssociationPropertyResponse {
     /**
      * Gets or sets the name of the Dsc configuration.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -54,7 +54,6 @@ public final class DscConfigurationAssociationPropertyResponse {
             this.name = name;
             return this;
         }
-
         public DscConfigurationAssociationPropertyResponse build() {
             return new DscConfigurationAssociationPropertyResponse(name);
         }

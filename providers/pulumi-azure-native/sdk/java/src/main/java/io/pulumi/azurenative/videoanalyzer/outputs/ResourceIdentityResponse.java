@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ResourceIdentityResponse {
     /**
      * The user assigned managed identity's resource identifier to use when accessing a resource.
      * 
-     */
+    */
     public String getUserAssignedIdentity() {
         return this.userAssignedIdentity;
     }
@@ -52,7 +52,6 @@ public final class ResourceIdentityResponse {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
-
         public ResourceIdentityResponse build() {
             return new ResourceIdentityResponse(userAssignedIdentity);
         }

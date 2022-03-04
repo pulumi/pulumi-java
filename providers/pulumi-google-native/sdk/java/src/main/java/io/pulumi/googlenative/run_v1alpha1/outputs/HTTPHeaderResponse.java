@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class HTTPHeaderResponse {
     /**
      * The header field name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The header field value
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class HTTPHeaderResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HTTPHeaderResponse build() {
             return new HTTPHeaderResponse(name, value);
         }

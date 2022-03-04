@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class AccountPropertiesResponseManagedResources {
     /**
      * Gets the managed event hub namespace resource identifier.
      * 
-     */
+    */
     public String getEventHubNamespace() {
         return this.eventHubNamespace;
     }
     /**
      * Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
      * 
-     */
+    */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Gets the managed storage account resource identifier.
      * 
-     */
+    */
     public String getStorageAccount() {
         return this.storageAccount;
     }
@@ -95,7 +95,6 @@ public final class AccountPropertiesResponseManagedResources {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public AccountPropertiesResponseManagedResources build() {
             return new AccountPropertiesResponseManagedResources(eventHubNamespace, resourceGroup, storageAccount);
         }

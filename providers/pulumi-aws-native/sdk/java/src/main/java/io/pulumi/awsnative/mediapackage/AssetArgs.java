@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage;
 
 import io.pulumi.awsnative.mediapackage.inputs.AssetTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packagingGroupId", required=true)
-    private final Input<String> packagingGroupId;
+      private final Input<String> packagingGroupId;
 
     public Input<String> getPackagingGroupId() {
         return this.packagingGroupId;
@@ -32,7 +32,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -43,7 +43,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceArn", required=true)
-    private final Input<String> sourceArn;
+      private final Input<String> sourceArn;
 
     public Input<String> getSourceArn() {
         return this.sourceArn;
@@ -54,7 +54,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRoleArn", required=true)
-    private final Input<String> sourceRoleArn;
+      private final Input<String> sourceRoleArn;
 
     public Input<String> getSourceRoleArn() {
         return this.sourceRoleArn;
@@ -65,7 +65,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<AssetTagArgs>> tags;
+      private final @Nullable Input<List<AssetTagArgs>> tags;
 
     public Input<List<AssetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AssetArgs build() {
             return new AssetArgs(packagingGroupId, resourceId, sourceArn, sourceRoleArn, tags);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.synapse.enums.Kind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -32,7 +32,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,Kind>> kind;
+      private final Input<Either<String,Kind>> kind;
 
     public Input<Either<String,Kind>> getKind() {
         return this.kind;
@@ -43,7 +43,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kustoPoolName", required=true)
-    private final Input<String> kustoPoolName;
+      private final Input<String> kustoPoolName;
 
     public Input<String> getKustoPoolName() {
         return this.kustoPoolName;
@@ -54,7 +54,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -65,7 +65,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -195,7 +195,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public DatabaseArgs build() {
             return new DatabaseArgs(databaseName, kind, kustoPoolName, location, resourceGroupName, workspaceName);
         }

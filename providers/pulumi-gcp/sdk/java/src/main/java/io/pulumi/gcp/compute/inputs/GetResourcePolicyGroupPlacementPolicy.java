@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,21 +14,21 @@ public final class GetResourcePolicyGroupPlacementPolicy extends io.pulumi.resou
     public static final GetResourcePolicyGroupPlacementPolicy Empty = new GetResourcePolicyGroupPlacementPolicy();
 
     @InputImport(name="availabilityDomainCount", required=true)
-    private final Integer availabilityDomainCount;
+      private final Integer availabilityDomainCount;
 
     public Integer getAvailabilityDomainCount() {
         return this.availabilityDomainCount;
     }
 
     @InputImport(name="collocation", required=true)
-    private final String collocation;
+      private final String collocation;
 
     public String getCollocation() {
         return this.collocation;
     }
 
     @InputImport(name="vmCount", required=true)
-    private final Integer vmCount;
+      private final Integer vmCount;
 
     public Integer getVmCount() {
         return this.vmCount;
@@ -87,7 +87,6 @@ public final class GetResourcePolicyGroupPlacementPolicy extends io.pulumi.resou
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }
-
         public GetResourcePolicyGroupPlacementPolicy build() {
             return new GetResourcePolicyGroupPlacementPolicy(availabilityDomainCount, collocation, vmCount);
         }

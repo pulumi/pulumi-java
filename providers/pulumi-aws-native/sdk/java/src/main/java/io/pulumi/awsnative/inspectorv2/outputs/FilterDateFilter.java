@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.inspectorv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class FilterDateFilter {
             this.startInclusive = startInclusive;
             return this;
         }
-
         public FilterDateFilter build() {
             return new FilterDateFilter(endInclusive, startInclusive);
         }

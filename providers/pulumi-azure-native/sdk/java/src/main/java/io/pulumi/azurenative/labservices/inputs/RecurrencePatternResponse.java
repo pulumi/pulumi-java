@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class RecurrencePatternResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="expirationDate", required=true)
-    private final String expirationDate;
+      private final String expirationDate;
 
     public String getExpirationDate() {
         return this.expirationDate;
@@ -36,7 +36,7 @@ public final class RecurrencePatternResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="frequency", required=true)
-    private final String frequency;
+      private final String frequency;
 
     public String getFrequency() {
         return this.frequency;
@@ -47,7 +47,7 @@ public final class RecurrencePatternResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Integer interval;
+      private final @Nullable Integer interval;
 
     public Optional<Integer> getInterval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
@@ -58,7 +58,7 @@ public final class RecurrencePatternResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="weekDays")
-    private final @Nullable List<String> weekDays;
+      private final @Nullable List<String> weekDays;
 
     public List<String> getWeekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
@@ -127,7 +127,6 @@ public final class RecurrencePatternResponse extends io.pulumi.resources.InvokeA
             this.weekDays = weekDays;
             return this;
         }
-
         public RecurrencePatternResponse build() {
             return new RecurrencePatternResponse(expirationDate, frequency, interval, weekDays);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts")
-    private final @Nullable Input<List<String>> hosts;
+      private final @Nullable Input<List<String>> hosts;
 
     public Input<List<String>> getHosts() {
         return this.hosts == null ? Input.empty() : this.hosts;
@@ -46,7 +46,7 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathMatcher")
-    private final @Nullable Input<String> pathMatcher;
+      private final @Nullable Input<String> pathMatcher;
 
     public Input<String> getPathMatcher() {
         return this.pathMatcher == null ? Input.empty() : this.pathMatcher;
@@ -120,7 +120,6 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.pathMatcher = Input.ofNullable(pathMatcher);
             return this;
         }
-
         public HostRuleArgs build() {
             return new HostRuleArgs(description, hosts, pathMatcher);
         }

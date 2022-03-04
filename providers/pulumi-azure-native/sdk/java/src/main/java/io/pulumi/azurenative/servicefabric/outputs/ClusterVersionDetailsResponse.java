@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ClusterVersionDetailsResponse {
     /**
      * The Service Fabric runtime version of the cluster.
      * 
-     */
+    */
     public Optional<String> getCodeVersion() {
         return Optional.ofNullable(this.codeVersion);
     }
     /**
      * Indicates if this version is for Windows or Linux operating system.
      * 
-     */
+    */
     public Optional<String> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
     /**
      * The date of expiry of support of the version.
      * 
-     */
+    */
     public Optional<String> getSupportExpiryUtc() {
         return Optional.ofNullable(this.supportExpiryUtc);
     }
@@ -97,7 +97,6 @@ public final class ClusterVersionDetailsResponse {
             this.supportExpiryUtc = supportExpiryUtc;
             return this;
         }
-
         public ClusterVersionDetailsResponse build() {
             return new ClusterVersionDetailsResponse(codeVersion, environment, supportExpiryUtc);
         }

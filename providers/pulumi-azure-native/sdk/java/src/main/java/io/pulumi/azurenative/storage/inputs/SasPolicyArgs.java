@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.enums.ExpirationAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationAction", required=true)
-    private final Input<Either<String,ExpirationAction>> expirationAction;
+      private final Input<Either<String,ExpirationAction>> expirationAction;
 
     public Input<Either<String,ExpirationAction>> getExpirationAction() {
         return this.expirationAction;
@@ -35,7 +35,7 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sasExpirationPeriod", required=true)
-    private final Input<String> sasExpirationPeriod;
+      private final Input<String> sasExpirationPeriod;
 
     public Input<String> getSasExpirationPeriod() {
         return this.sasExpirationPeriod;
@@ -94,7 +94,6 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.sasExpirationPeriod = Input.of(Objects.requireNonNull(sasExpirationPeriod));
             return this;
         }
-
         public SasPolicyArgs build() {
             return new SasPolicyArgs(expirationAction, sasExpirationPeriod);
         }

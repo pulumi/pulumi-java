@@ -6,17 +6,33 @@ package io.pulumi.awsnative.appsync;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appsync.inputs.GetDomainNameArgs;
 import io.pulumi.awsnative.appsync.outputs.GetDomainNameResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainName {
-/**
- * Resource Type definition for AWS::AppSync::DomainName
+    private GetDomainName() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainNameArgs.Builder a);
+    }
+    private static GetDomainNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::AppSync::DomainName
  * 
- */
+     */
+    public static CompletableFuture<GetDomainNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::AppSync::DomainName
+     * 
+     */
     public static CompletableFuture<GetDomainNameResult> invokeAsync(GetDomainNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appsync:getDomainName", TypeShape.of(GetDomainNameResult.class), args == null ? GetDomainNameArgs.Empty : args, Utilities.withVersion(options));
     }

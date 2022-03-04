@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.ClientInfoResponse;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -84,63 +84,63 @@ public final class GetIncidentCommentResult {
     /**
      * Describes the client that created the comment
      * 
-     */
+    */
     public ClientInfoResponse getAuthor() {
         return this.author;
     }
     /**
      * The time the comment was created
      * 
-     */
+    */
     public String getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The time the comment was updated
      * 
-     */
+    */
     public String getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
      * The comment message
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -225,7 +225,6 @@ public final class GetIncidentCommentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIncidentCommentResult build() {
             return new GetIncidentCommentResult(author, createdTimeUtc, etag, id, lastModifiedTimeUtc, message, name, systemData, type);
         }

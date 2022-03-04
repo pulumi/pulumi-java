@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class SecretResponse {
     /**
      * Encrypted (using device public key) secret value.
      * 
-     */
+    */
     public Optional<AsymmetricEncryptedSecretResponse> getEncryptedSecret() {
         return Optional.ofNullable(this.encryptedSecret);
     }
     /**
      * Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).
      * 
-     */
+    */
     public Optional<String> getKeyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
@@ -77,7 +77,6 @@ public final class SecretResponse {
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(encryptedSecret, keyVaultId);
         }

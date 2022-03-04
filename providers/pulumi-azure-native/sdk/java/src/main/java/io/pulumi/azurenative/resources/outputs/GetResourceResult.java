@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resources.outputs;
 import io.pulumi.azurenative.resources.outputs.IdentityResponse;
 import io.pulumi.azurenative.resources.outputs.PlanResponse;
 import io.pulumi.azurenative.resources.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -101,77 +101,77 @@ public final class GetResourceResult {
     /**
      * Resource ID
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the resource.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of the resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * ID of the resource that manages this resource.
      * 
-     */
+    */
     public Optional<String> getManagedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The plan of the resource.
      * 
-     */
+    */
     public Optional<PlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * The resource properties.
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * The SKU of the resource.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -270,7 +270,6 @@ public final class GetResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceResult build() {
             return new GetResourceResult(id, identity, kind, location, managedBy, name, plan, properties, sku, tags, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.SecurityAssessmentMetadataPartnerDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -98,7 +98,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
     /**
      * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
      * 
-     */
+    */
     public String getAssessmentType() {
         return this.assessmentType;
     }
@@ -108,56 +108,56 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
     /**
      * Human readable description of the assessment
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * User friendly display name of the assessment
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The implementation effort required to remediate this assessment
      * 
-     */
+    */
     public Optional<String> getImplementationEffort() {
         return Optional.ofNullable(this.implementationEffort);
     }
     /**
      * Describes the partner that created the assessment
      * 
-     */
+    */
     public Optional<SecurityAssessmentMetadataPartnerDataResponse> getPartnerData() {
         return Optional.ofNullable(this.partnerData);
     }
     /**
      * Azure resource ID of the policy definition that turns this assessment calculation on
      * 
-     */
+    */
     public String getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
      * True if this assessment is in preview release status
      * 
-     */
+    */
     public Optional<Boolean> getPreview() {
         return Optional.ofNullable(this.preview);
     }
     /**
      * Human readable description of what you should do to mitigate this security issue
      * 
-     */
+    */
     public Optional<String> getRemediationDescription() {
         return Optional.ofNullable(this.remediationDescription);
     }
     /**
      * The severity level of the assessment
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
@@ -167,7 +167,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
     /**
      * The user impact of the assessment
      * 
-     */
+    */
     public Optional<String> getUserImpact() {
         return Optional.ofNullable(this.userImpact);
     }
@@ -273,7 +273,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
             this.userImpact = userImpact;
             return this;
         }
-
         public SecurityAssessmentMetadataPropertiesResponse build() {
             return new SecurityAssessmentMetadataPropertiesResponse(assessmentType, categories, description, displayName, implementationEffort, partnerData, policyDefinitionId, preview, remediationDescription, severity, threats, userImpact);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs ext
      * 
      */
     @InputImport(name="quickReplies")
-    private final @Nullable Input<List<String>> quickReplies;
+      private final @Nullable Input<List<String>> quickReplies;
 
     public Input<List<String>> getQuickReplies() {
         return this.quickReplies == null ? Input.empty() : this.quickReplies;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs ext
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs ext
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs(quickReplies, title);
         }

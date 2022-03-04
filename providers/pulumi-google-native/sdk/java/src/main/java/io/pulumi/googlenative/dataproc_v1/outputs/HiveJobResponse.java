@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.QueryListResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -63,42 +63,42 @@ public final class HiveJobResponse {
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
      * 
-     */
+    */
     public Boolean getContinueOnFailure() {
         return this.continueOnFailure;
     }
     /**
      * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris;
     }
     /**
      * Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties;
     }
     /**
      * The HCFS URI of the script that contains Hive queries.
      * 
-     */
+    */
     public String getQueryFileUri() {
         return this.queryFileUri;
     }
     /**
      * A list of queries.
      * 
-     */
+    */
     public QueryListResponse getQueryList() {
         return this.queryList;
     }
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
      * 
-     */
+    */
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables;
     }
@@ -162,7 +162,6 @@ public final class HiveJobResponse {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
         }
-
         public HiveJobResponse build() {
             return new HiveJobResponse(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }

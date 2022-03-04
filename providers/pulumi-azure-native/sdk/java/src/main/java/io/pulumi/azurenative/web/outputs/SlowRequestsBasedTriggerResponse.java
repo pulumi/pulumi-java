@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class SlowRequestsBasedTriggerResponse {
     /**
      * Request Count.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Request Path.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Time interval.
      * 
-     */
+    */
     public Optional<String> getTimeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
     /**
      * Time taken.
      * 
-     */
+    */
     public Optional<String> getTimeTaken() {
         return Optional.ofNullable(this.timeTaken);
     }
@@ -119,7 +119,6 @@ public final class SlowRequestsBasedTriggerResponse {
             this.timeTaken = timeTaken;
             return this;
         }
-
         public SlowRequestsBasedTriggerResponse build() {
             return new SlowRequestsBasedTriggerResponse(count, path, timeInterval, timeTaken);
         }

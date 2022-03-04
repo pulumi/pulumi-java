@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.outputs;
 import io.pulumi.azurenative.devtestlab.outputs.ExternalSubnetResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetOverrideResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -115,91 +115,91 @@ public final class GetVirtualNetworkResult {
     /**
      * The allowed subnets of the virtual network.
      * 
-     */
+    */
     public List<SubnetResponse> getAllowedSubnets() {
         return this.allowedSubnets == null ? List.of() : this.allowedSubnets;
     }
     /**
      * The creation date of the virtual network.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The description of the virtual network.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Microsoft.Network resource identifier of the virtual network.
      * 
-     */
+    */
     public Optional<String> getExternalProviderResourceId() {
         return Optional.ofNullable(this.externalProviderResourceId);
     }
     /**
      * The external subnet properties.
      * 
-     */
+    */
     public List<ExternalSubnetResponse> getExternalSubnets() {
         return this.externalSubnets;
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The subnet overrides of the virtual network.
      * 
-     */
+    */
     public List<SubnetOverrideResponse> getSubnetOverrides() {
         return this.subnetOverrides == null ? List.of() : this.subnetOverrides;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
@@ -312,7 +312,6 @@ public final class GetVirtualNetworkResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetVirtualNetworkResult build() {
             return new GetVirtualNetworkResult(allowedSubnets, createdDate, description, externalProviderResourceId, externalSubnets, id, location, name, provisioningState, subnetOverrides, tags, type, uniqueIdentifier);
         }

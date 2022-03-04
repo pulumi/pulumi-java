@@ -25,7 +25,7 @@ import io.pulumi.azurenative.cdn.inputs.OriginGroupOverrideActionResponse;
 import io.pulumi.azurenative.cdn.inputs.UrlRedirectActionResponse;
 import io.pulumi.azurenative.cdn.inputs.UrlRewriteActionResponse;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningActionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -48,7 +48,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-    private final List<Object> actions;
+      private final List<Object> actions;
 
     public List<Object> getActions() {
         return this.actions;
@@ -59,7 +59,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable List<Object> conditions;
+      private final @Nullable List<Object> conditions;
 
     public List<Object> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
@@ -70,7 +70,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -81,7 +81,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="order", required=true)
-    private final Integer order;
+      private final Integer order;
 
     public Integer getOrder() {
         return this.order;
@@ -150,7 +150,6 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public DeliveryRuleResponse build() {
             return new DeliveryRuleResponse(actions, conditions, name, order);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="additionalHeaders")
-    private final @Nullable Object additionalHeaders;
+      private final @Nullable Object additionalHeaders;
 
     public Optional<Object> getAdditionalHeaders() {
         return this.additionalHeaders == null ? Optional.empty() : Optional.ofNullable(this.additionalHeaders);
@@ -36,7 +36,7 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+      private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -47,7 +47,7 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enablePartitionDiscovery")
-    private final @Nullable Boolean enablePartitionDiscovery;
+      private final @Nullable Boolean enablePartitionDiscovery;
 
     public Optional<Boolean> getEnablePartitionDiscovery() {
         return this.enablePartitionDiscovery == null ? Optional.empty() : Optional.ofNullable(this.enablePartitionDiscovery);
@@ -58,7 +58,7 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+      private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -69,7 +69,7 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="partitionRootPath")
-    private final @Nullable Object partitionRootPath;
+      private final @Nullable Object partitionRootPath;
 
     public Optional<Object> getPartitionRootPath() {
         return this.partitionRootPath == null ? Optional.empty() : Optional.ofNullable(this.partitionRootPath);
@@ -80,7 +80,7 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="requestBody")
-    private final @Nullable Object requestBody;
+      private final @Nullable Object requestBody;
 
     public Optional<Object> getRequestBody() {
         return this.requestBody == null ? Optional.empty() : Optional.ofNullable(this.requestBody);
@@ -91,7 +91,7 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="requestMethod")
-    private final @Nullable Object requestMethod;
+      private final @Nullable Object requestMethod;
 
     public Optional<Object> getRequestMethod() {
         return this.requestMethod == null ? Optional.empty() : Optional.ofNullable(this.requestMethod);
@@ -102,7 +102,7 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="requestTimeout")
-    private final @Nullable Object requestTimeout;
+      private final @Nullable Object requestTimeout;
 
     public Optional<Object> getRequestTimeout() {
         return this.requestTimeout == null ? Optional.empty() : Optional.ofNullable(this.requestTimeout);
@@ -114,7 +114,7 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -233,7 +233,6 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HttpReadSettingsResponse build() {
             return new HttpReadSettingsResponse(additionalHeaders, disableMetricsCollection, enablePartitionDiscovery, maxConcurrentConnections, partitionRootPath, requestBody, requestMethod, requestTimeout, type);
         }

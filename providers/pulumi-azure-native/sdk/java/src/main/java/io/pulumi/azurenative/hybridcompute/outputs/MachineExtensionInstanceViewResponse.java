@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridcompute.outputs;
 
 import io.pulumi.azurenative.hybridcompute.outputs.MachineExtensionInstanceViewResponseStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class MachineExtensionInstanceViewResponse {
     /**
      * The machine extension name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Instance view status.
      * 
-     */
+    */
     public Optional<MachineExtensionInstanceViewResponseStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies the version of the script handler.
      * 
-     */
+    */
     public String getTypeHandlerVersion() {
         return this.typeHandlerVersion;
     }
@@ -119,7 +119,6 @@ public final class MachineExtensionInstanceViewResponse {
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
         }
-
         public MachineExtensionInstanceViewResponse build() {
             return new MachineExtensionInstanceViewResponse(name, status, type, typeHandlerVersion);
         }

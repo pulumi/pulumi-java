@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.IPBlock;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.util.Objects;
@@ -45,7 +45,7 @@ public final class NetworkPolicyPeer {
     /**
      * IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
      * 
-     */
+    */
     public Optional<IPBlock> getIpBlock() {
         return Optional.ofNullable(this.ipBlock);
     }
@@ -54,7 +54,7 @@ public final class NetworkPolicyPeer {
      * 
      * If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods in the Namespaces selected by NamespaceSelector.
      * 
-     */
+    */
     public Optional<LabelSelector> getNamespaceSelector() {
         return Optional.ofNullable(this.namespaceSelector);
     }
@@ -63,7 +63,7 @@ public final class NetworkPolicyPeer {
      * 
      * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy's own Namespace.
      * 
-     */
+    */
     public Optional<LabelSelector> getPodSelector() {
         return Optional.ofNullable(this.podSelector);
     }
@@ -106,7 +106,6 @@ public final class NetworkPolicyPeer {
             this.podSelector = podSelector;
             return this;
         }
-
         public NetworkPolicyPeer build() {
             return new NetworkPolicyPeer(ipBlock, namespaceSelector, podSelector);
         }

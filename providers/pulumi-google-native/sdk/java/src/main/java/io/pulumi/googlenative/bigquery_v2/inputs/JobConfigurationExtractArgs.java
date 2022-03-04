@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.ModelReferenceArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="compression")
-    private final @Nullable Input<String> compression;
+      private final @Nullable Input<String> compression;
 
     public Input<String> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -34,7 +34,7 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationFormat")
-    private final @Nullable Input<String> destinationFormat;
+      private final @Nullable Input<String> destinationFormat;
 
     public Input<String> getDestinationFormat() {
         return this.destinationFormat == null ? Input.empty() : this.destinationFormat;
@@ -45,7 +45,7 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationUri")
-    private final @Nullable Input<String> destinationUri;
+      private final @Nullable Input<String> destinationUri;
 
     public Input<String> getDestinationUri() {
         return this.destinationUri == null ? Input.empty() : this.destinationUri;
@@ -56,7 +56,7 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationUris")
-    private final @Nullable Input<List<String>> destinationUris;
+      private final @Nullable Input<List<String>> destinationUris;
 
     public Input<List<String>> getDestinationUris() {
         return this.destinationUris == null ? Input.empty() : this.destinationUris;
@@ -67,7 +67,7 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="fieldDelimiter")
-    private final @Nullable Input<String> fieldDelimiter;
+      private final @Nullable Input<String> fieldDelimiter;
 
     public Input<String> getFieldDelimiter() {
         return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
@@ -78,7 +78,7 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="printHeader")
-    private final @Nullable Input<Boolean> printHeader;
+      private final @Nullable Input<Boolean> printHeader;
 
     public Input<Boolean> getPrintHeader() {
         return this.printHeader == null ? Input.empty() : this.printHeader;
@@ -89,7 +89,7 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceModel")
-    private final @Nullable Input<ModelReferenceArgs> sourceModel;
+      private final @Nullable Input<ModelReferenceArgs> sourceModel;
 
     public Input<ModelReferenceArgs> getSourceModel() {
         return this.sourceModel == null ? Input.empty() : this.sourceModel;
@@ -100,7 +100,7 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceTable")
-    private final @Nullable Input<TableReferenceArgs> sourceTable;
+      private final @Nullable Input<TableReferenceArgs> sourceTable;
 
     public Input<TableReferenceArgs> getSourceTable() {
         return this.sourceTable == null ? Input.empty() : this.sourceTable;
@@ -111,7 +111,7 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="useAvroLogicalTypes")
-    private final @Nullable Input<Boolean> useAvroLogicalTypes;
+      private final @Nullable Input<Boolean> useAvroLogicalTypes;
 
     public Input<Boolean> getUseAvroLogicalTypes() {
         return this.useAvroLogicalTypes == null ? Input.empty() : this.useAvroLogicalTypes;
@@ -275,7 +275,6 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
             this.useAvroLogicalTypes = Input.ofNullable(useAvroLogicalTypes);
             return this;
         }
-
         public JobConfigurationExtractArgs build() {
             return new JobConfigurationExtractArgs(compression, destinationFormat, destinationUri, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
         }

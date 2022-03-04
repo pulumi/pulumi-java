@@ -6,21 +6,41 @@ package io.pulumi.azurenative.solutions;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.solutions.inputs.GetApplicationArgs;
 import io.pulumi.azurenative.solutions.outputs.GetApplicationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplication {
-/**
- * Information about managed application.
+    private GetApplication() {}
+    public interface BuilderApplicator {
+        public void apply(GetApplicationArgs.Builder a);
+    }
+    private static GetApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApplicationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Information about managed application.
  * API Version: 2019-07-01.
  * 
- *
- * Information about managed application.
+     *
+     * Information about managed application.
  * 
- */
+     */
+    public static CompletableFuture<GetApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Information about managed application.
+     * API Version: 2019-07-01.
+     * 
+     *
+         * Information about managed application.
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> invokeAsync(GetApplicationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:solutions:getApplication", TypeShape.of(GetApplicationResult.class), args == null ? GetApplicationArgs.Empty : args, Utilities.withVersion(options));
     }

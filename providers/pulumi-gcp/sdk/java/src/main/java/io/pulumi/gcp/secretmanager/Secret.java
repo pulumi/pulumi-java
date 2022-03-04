@@ -5,8 +5,8 @@ package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.secretmanager.SecretArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretState;
@@ -217,6 +217,37 @@ public class Secret extends io.pulumi.resources.CustomResource {
         return this.ttl;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SecretArgs.Builder a);
+    }
+    private static io.pulumi.gcp.secretmanager.SecretArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.secretmanager.SecretArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Secret(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Secret(String name) {
+        this(name, SecretArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Secret(String name, SecretArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

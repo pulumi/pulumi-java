@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="endDate")
-    private final @Nullable String endDate;
+      private final @Nullable String endDate;
 
     public Optional<String> getEndDate() {
         return this.endDate == null ? Optional.empty() : Optional.ofNullable(this.endDate);
@@ -34,7 +34,7 @@ public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startDate", required=true)
-    private final String startDate;
+      private final String startDate;
 
     public String getStartDate() {
         return this.startDate;
@@ -83,7 +83,6 @@ public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeAr
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
-
         public BudgetTimePeriodResponse build() {
             return new BudgetTimePeriodResponse(endDate, startDate);
         }

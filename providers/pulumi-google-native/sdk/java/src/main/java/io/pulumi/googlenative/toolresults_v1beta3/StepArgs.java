@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.StepState;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.MultiStepArgs;
@@ -30,7 +30,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completionTime")
-    private final @Nullable Input<TimestampArgs> completionTime;
+      private final @Nullable Input<TimestampArgs> completionTime;
 
     public Input<TimestampArgs> getCompletionTime() {
         return this.completionTime == null ? Input.empty() : this.completionTime;
@@ -41,7 +41,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable Input<TimestampArgs> creationTime;
+      private final @Nullable Input<TimestampArgs> creationTime;
 
     public Input<TimestampArgs> getCreationTime() {
         return this.creationTime == null ? Input.empty() : this.creationTime;
@@ -52,7 +52,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -63,7 +63,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceUsageDuration")
-    private final @Nullable Input<DurationArgs> deviceUsageDuration;
+      private final @Nullable Input<DurationArgs> deviceUsageDuration;
 
     public Input<DurationArgs> getDeviceUsageDuration() {
         return this.deviceUsageDuration == null ? Input.empty() : this.deviceUsageDuration;
@@ -74,14 +74,14 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensionValue")
-    private final @Nullable Input<List<StepDimensionValueEntryArgs>> dimensionValue;
+      private final @Nullable Input<List<StepDimensionValueEntryArgs>> dimensionValue;
 
     public Input<List<StepDimensionValueEntryArgs>> getDimensionValue() {
         return this.dimensionValue == null ? Input.empty() : this.dimensionValue;
     }
 
     @InputImport(name="executionId", required=true)
-    private final Input<String> executionId;
+      private final Input<String> executionId;
 
     public Input<String> getExecutionId() {
         return this.executionId;
@@ -92,14 +92,14 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasImages")
-    private final @Nullable Input<Boolean> hasImages;
+      private final @Nullable Input<Boolean> hasImages;
 
     public Input<Boolean> getHasImages() {
         return this.hasImages == null ? Input.empty() : this.hasImages;
     }
 
     @InputImport(name="historyId", required=true)
-    private final Input<String> historyId;
+      private final Input<String> historyId;
 
     public Input<String> getHistoryId() {
         return this.historyId;
@@ -110,7 +110,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<StepLabelsEntryArgs>> labels;
+      private final @Nullable Input<List<StepLabelsEntryArgs>> labels;
 
     public Input<List<StepLabelsEntryArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -121,7 +121,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiStep")
-    private final @Nullable Input<MultiStepArgs> multiStep;
+      private final @Nullable Input<MultiStepArgs> multiStep;
 
     public Input<MultiStepArgs> getMultiStep() {
         return this.multiStep == null ? Input.empty() : this.multiStep;
@@ -132,7 +132,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -143,21 +143,21 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outcome")
-    private final @Nullable Input<OutcomeArgs> outcome;
+      private final @Nullable Input<OutcomeArgs> outcome;
 
     public Input<OutcomeArgs> getOutcome() {
         return this.outcome == null ? Input.empty() : this.outcome;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -168,7 +168,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runDuration")
-    private final @Nullable Input<DurationArgs> runDuration;
+      private final @Nullable Input<DurationArgs> runDuration;
 
     public Input<DurationArgs> getRunDuration() {
         return this.runDuration == null ? Input.empty() : this.runDuration;
@@ -179,7 +179,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<StepState> state;
+      private final @Nullable Input<StepState> state;
 
     public Input<StepState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -190,7 +190,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepId")
-    private final @Nullable Input<String> stepId;
+      private final @Nullable Input<String> stepId;
 
     public Input<String> getStepId() {
         return this.stepId == null ? Input.empty() : this.stepId;
@@ -201,7 +201,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testExecutionStep")
-    private final @Nullable Input<TestExecutionStepArgs> testExecutionStep;
+      private final @Nullable Input<TestExecutionStepArgs> testExecutionStep;
 
     public Input<TestExecutionStepArgs> getTestExecutionStep() {
         return this.testExecutionStep == null ? Input.empty() : this.testExecutionStep;
@@ -212,7 +212,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toolExecutionStep")
-    private final @Nullable Input<ToolExecutionStepArgs> toolExecutionStep;
+      private final @Nullable Input<ToolExecutionStepArgs> toolExecutionStep;
 
     public Input<ToolExecutionStepArgs> getToolExecutionStep() {
         return this.toolExecutionStep == null ? Input.empty() : this.toolExecutionStep;
@@ -526,7 +526,6 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             this.toolExecutionStep = Input.ofNullable(toolExecutionStep);
             return this;
         }
-
         public StepArgs build() {
             return new StepArgs(completionTime, creationTime, description, deviceUsageDuration, dimensionValue, executionId, hasImages, historyId, labels, multiStep, name, outcome, project, requestId, runDuration, state, stepId, testExecutionStep, toolExecutionStep);
         }

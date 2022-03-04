@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.EmailTemplateParametersContractPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -85,63 +85,63 @@ public final class GetEmailTemplateResult {
     /**
      * Email Template Body. This should be a valid XDocument
      * 
-     */
+    */
     public String getBody() {
         return this.body;
     }
     /**
      * Description of the Email Template.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Whether the template is the default template provided by Api Management or has been edited.
      * 
-     */
+    */
     public Boolean getIsDefault() {
         return this.isDefault;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Email Template Parameter values.
      * 
-     */
+    */
     public List<EmailTemplateParametersContractPropertiesResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Subject of the Template.
      * 
-     */
+    */
     public String getSubject() {
         return this.subject;
     }
     /**
      * Title of the Template.
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -226,7 +226,6 @@ public final class GetEmailTemplateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEmailTemplateResult build() {
             return new GetEmailTemplateResult(body, description, id, isDefault, name, parameters, subject, title, type);
         }

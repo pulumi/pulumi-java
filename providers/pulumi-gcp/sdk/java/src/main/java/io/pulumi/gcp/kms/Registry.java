@@ -5,8 +5,8 @@ package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.RegistryArgs;
 import io.pulumi.gcp.kms.inputs.RegistryState;
@@ -19,7 +19,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * @deprecated
+ * @Deprecated
  * gcp.kms.Registry has been deprecated in favor of gcp.iot.Registry
  * 
  */
@@ -151,6 +151,37 @@ public class Registry extends io.pulumi.resources.CustomResource {
         return this.stateNotificationConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable RegistryArgs.Builder a);
+    }
+    private static io.pulumi.gcp.kms.RegistryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.kms.RegistryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Registry(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Registry(String name) {
+        this(name, RegistryArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Registry(String name, @Nullable RegistryArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

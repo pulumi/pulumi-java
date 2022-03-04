@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceRepoSourceArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceStorageSourceArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="repoSource")
-    private final @Nullable Input<TriggerBuildSourceRepoSourceArgs> repoSource;
+      private final @Nullable Input<TriggerBuildSourceRepoSourceArgs> repoSource;
 
     public Input<TriggerBuildSourceRepoSourceArgs> getRepoSource() {
         return this.repoSource == null ? Input.empty() : this.repoSource;
@@ -33,7 +33,7 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageSource")
-    private final @Nullable Input<TriggerBuildSourceStorageSourceArgs> storageSource;
+      private final @Nullable Input<TriggerBuildSourceStorageSourceArgs> storageSource;
 
     public Input<TriggerBuildSourceStorageSourceArgs> getStorageSource() {
         return this.storageSource == null ? Input.empty() : this.storageSource;
@@ -92,7 +92,6 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
             this.storageSource = Input.ofNullable(storageSource);
             return this;
         }
-
         public TriggerBuildSourceArgs build() {
             return new TriggerBuildSourceArgs(repoSource, storageSource);
         }

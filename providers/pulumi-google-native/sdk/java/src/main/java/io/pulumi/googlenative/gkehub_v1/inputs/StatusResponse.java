@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -32,7 +32,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -81,7 +81,6 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public StatusResponse build() {
             return new StatusResponse(code, description);
         }

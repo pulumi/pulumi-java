@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class StreamingbufferResponse {
     /**
      * A lower-bound estimate of the number of bytes currently in the streaming buffer.
      * 
-     */
+    */
     public String getEstimatedBytes() {
         return this.estimatedBytes;
     }
     /**
      * A lower-bound estimate of the number of rows currently in the streaming buffer.
      * 
-     */
+    */
     public String getEstimatedRows() {
         return this.estimatedRows;
     }
     /**
      * Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.
      * 
-     */
+    */
     public String getOldestEntryTime() {
         return this.oldestEntryTime;
     }
@@ -95,7 +95,6 @@ public final class StreamingbufferResponse {
             this.oldestEntryTime = Objects.requireNonNull(oldestEntryTime);
             return this;
         }
-
         public StreamingbufferResponse build() {
             return new StreamingbufferResponse(estimatedBytes, estimatedRows, oldestEntryTime);
         }

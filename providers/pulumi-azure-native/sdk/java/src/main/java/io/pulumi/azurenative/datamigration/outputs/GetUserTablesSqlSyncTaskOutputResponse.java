@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.DatabaseTableResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -49,28 +49,28 @@ public final class GetUserTablesSqlSyncTaskOutputResponse {
     /**
      * Mapping from database name to list of source tables
      * 
-     */
+    */
     public Map<String,List<DatabaseTableResponse>> getDatabasesToSourceTables() {
         return this.databasesToSourceTables;
     }
     /**
      * Mapping from database name to list of target tables
      * 
-     */
+    */
     public Map<String,List<DatabaseTableResponse>> getDatabasesToTargetTables() {
         return this.databasesToTargetTables;
     }
     /**
      * Mapping from database name to list of validation errors
      * 
-     */
+    */
     public Map<String,List<String>> getTableValidationErrors() {
         return this.tableValidationErrors;
     }
     /**
      * Validation errors
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }
@@ -120,7 +120,6 @@ public final class GetUserTablesSqlSyncTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public GetUserTablesSqlSyncTaskOutputResponse build() {
             return new GetUserTablesSqlSyncTaskOutputResponse(databasesToSourceTables, databasesToTargetTables, tableValidationErrors, validationErrors);
         }

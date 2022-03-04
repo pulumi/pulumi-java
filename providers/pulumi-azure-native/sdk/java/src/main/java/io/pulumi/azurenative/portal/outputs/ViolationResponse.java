@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ViolationResponse {
     /**
      * Error message.
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * Id of the item that violates tenant configuration.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Id of the user who owns violated item.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
@@ -95,7 +95,6 @@ public final class ViolationResponse {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public ViolationResponse build() {
             return new ViolationResponse(errorMessage, id, userId);
         }

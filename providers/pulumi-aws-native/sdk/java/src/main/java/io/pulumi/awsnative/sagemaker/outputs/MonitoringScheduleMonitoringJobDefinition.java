@@ -10,7 +10,7 @@ import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringOutputC
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringResources;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleNetworkConfig;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleStoppingCondition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -66,7 +66,7 @@ public final class MonitoringScheduleMonitoringJobDefinition {
     /**
      * Sets the environment variables in the Docker container
      * 
-     */
+    */
     public Optional<Object> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
@@ -88,7 +88,7 @@ public final class MonitoringScheduleMonitoringJobDefinition {
     /**
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
@@ -176,7 +176,6 @@ public final class MonitoringScheduleMonitoringJobDefinition {
             this.stoppingCondition = stoppingCondition;
             return this;
         }
-
         public MonitoringScheduleMonitoringJobDefinition build() {
             return new MonitoringScheduleMonitoringJobDefinition(baselineConfig, environment, monitoringAppSpecification, monitoringInputs, monitoringOutputConfig, monitoringResources, networkConfig, roleArn, stoppingCondition);
         }

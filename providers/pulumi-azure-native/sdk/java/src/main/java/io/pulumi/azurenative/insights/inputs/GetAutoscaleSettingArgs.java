@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAutoscaleSettingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="autoscaleSettingName", required=true)
-    private final String autoscaleSettingName;
+      private final String autoscaleSettingName;
 
     public String getAutoscaleSettingName() {
         return this.autoscaleSettingName;
@@ -28,7 +28,7 @@ public final class GetAutoscaleSettingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetAutoscaleSettingArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetAutoscaleSettingArgs build() {
             return new GetAutoscaleSettingArgs(autoscaleSettingName, resourceGroupName);
         }

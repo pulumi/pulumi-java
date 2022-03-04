@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessor;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class DeliveryStreamProcessingConfiguration extends io.pulumi.resou
     public static final DeliveryStreamProcessingConfiguration Empty = new DeliveryStreamProcessingConfiguration();
 
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @InputImport(name="processors")
-    private final @Nullable List<DeliveryStreamProcessor> processors;
+      private final @Nullable List<DeliveryStreamProcessor> processors;
 
     public List<DeliveryStreamProcessor> getProcessors() {
         return this.processors == null ? List.of() : this.processors;
@@ -73,7 +73,6 @@ public final class DeliveryStreamProcessingConfiguration extends io.pulumi.resou
             this.processors = processors;
             return this;
         }
-
         public DeliveryStreamProcessingConfiguration build() {
             return new DeliveryStreamProcessingConfiguration(enabled, processors);
         }

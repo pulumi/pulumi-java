@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.m365securityandcompliance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -57,35 +57,35 @@ public final class ServiceCorsConfigurationInfoResponse {
     /**
      * If credentials are allowed via CORS.
      * 
-     */
+    */
     public Optional<Boolean> getAllowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
     /**
      * The headers to be allowed via CORS.
      * 
-     */
+    */
     public List<String> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * The max age to be allowed via CORS.
      * 
-     */
+    */
     public Optional<Double> getMaxAge() {
         return Optional.ofNullable(this.maxAge);
     }
     /**
      * The methods to be allowed via CORS.
      * 
-     */
+    */
     public List<String> getMethods() {
         return this.methods == null ? List.of() : this.methods;
     }
     /**
      * The origins to be allowed via CORS.
      * 
-     */
+    */
     public List<String> getOrigins() {
         return this.origins == null ? List.of() : this.origins;
     }
@@ -142,7 +142,6 @@ public final class ServiceCorsConfigurationInfoResponse {
             this.origins = origins;
             return this;
         }
-
         public ServiceCorsConfigurationInfoResponse build() {
             return new ServiceCorsConfigurationInfoResponse(allowCredentials, headers, maxAge, methods, origins);
         }

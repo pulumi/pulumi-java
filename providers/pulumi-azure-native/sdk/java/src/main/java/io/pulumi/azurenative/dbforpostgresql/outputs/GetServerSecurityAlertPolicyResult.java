@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -92,70 +92,70 @@ public final class GetServerSecurityAlertPolicyResult {
     /**
      * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
      * 
-     */
+    */
     public List<String> getDisabledAlerts() {
         return this.disabledAlerts == null ? List.of() : this.disabledAlerts;
     }
     /**
      * Specifies that the alert is sent to the account administrators.
      * 
-     */
+    */
     public Optional<Boolean> getEmailAccountAdmins() {
         return Optional.ofNullable(this.emailAccountAdmins);
     }
     /**
      * Specifies an array of e-mail addresses to which the alert is sent.
      * 
-     */
+    */
     public List<String> getEmailAddresses() {
         return this.emailAddresses == null ? List.of() : this.emailAddresses;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the number of days to keep in the Threat Detection audit logs.
      * 
-     */
+    */
     public Optional<Integer> getRetentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
     /**
      * Specifies the state of the policy, whether it is enabled or disabled.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Specifies the identifier key of the Threat Detection audit storage account.
      * 
-     */
+    */
     public Optional<String> getStorageAccountAccessKey() {
         return Optional.ofNullable(this.storageAccountAccessKey);
     }
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
      * 
-     */
+    */
     public Optional<String> getStorageEndpoint() {
         return Optional.ofNullable(this.storageEndpoint);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -247,7 +247,6 @@ public final class GetServerSecurityAlertPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerSecurityAlertPolicyResult build() {
             return new GetServerSecurityAlertPolicyResult(disabledAlerts, emailAccountAdmins, emailAddresses, id, name, retentionDays, state, storageAccountAccessKey, storageEndpoint, type);
         }

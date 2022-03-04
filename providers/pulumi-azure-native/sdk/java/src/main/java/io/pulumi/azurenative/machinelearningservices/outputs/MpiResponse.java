@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,14 +36,14 @@ public final class MpiResponse {
      * Enum to determine the job distribution type.
      * Expected value is 'Mpi'.
      * 
-     */
+    */
     public String getDistributionType() {
         return this.distributionType;
     }
     /**
      * Number of processes per MPI node.
      * 
-     */
+    */
     public Optional<Integer> getProcessCountPerInstance() {
         return Optional.ofNullable(this.processCountPerInstance);
     }
@@ -79,7 +79,6 @@ public final class MpiResponse {
             this.processCountPerInstance = processCountPerInstance;
             return this;
         }
-
         public MpiResponse build() {
             return new MpiResponse(distributionType, processCountPerInstance);
         }

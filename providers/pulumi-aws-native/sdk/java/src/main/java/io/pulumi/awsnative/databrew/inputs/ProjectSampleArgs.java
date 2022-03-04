@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.enums.ProjectSampleType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<Integer> size;
+      private final @Nullable Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -31,7 +31,7 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<ProjectSampleType> type;
+      private final Input<ProjectSampleType> type;
 
     public Input<ProjectSampleType> getType() {
         return this.type;
@@ -90,7 +90,6 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ProjectSampleArgs build() {
             return new ProjectSampleArgs(size, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v3.outputs.LatLngResponse;
 import io.pulumi.googlenative.jobs_v3.outputs.PostalAddressResponse;
 import java.lang.Double;
@@ -48,28 +48,28 @@ public final class LocationResponse {
     /**
      * An object representing a latitude/longitude pair.
      * 
-     */
+    */
     public LatLngResponse getLatLng() {
         return this.latLng;
     }
     /**
      * The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.
      * 
-     */
+    */
     public String getLocationType() {
         return this.locationType;
     }
     /**
      * Postal address of the location that includes human readable information, such as postal delivery and payments addresses. Given a postal address, a postal service can deliver items to a premises, P.O. Box, or other delivery location.
      * 
-     */
+    */
     public PostalAddressResponse getPostalAddress() {
         return this.postalAddress;
     }
     /**
      * Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.
      * 
-     */
+    */
     public Double getRadiusInMiles() {
         return this.radiusInMiles;
     }
@@ -119,7 +119,6 @@ public final class LocationResponse {
             this.radiusInMiles = Objects.requireNonNull(radiusInMiles);
             return this;
         }
-
         public LocationResponse build() {
             return new LocationResponse(latLng, locationType, postalAddress, radiusInMiles);
         }

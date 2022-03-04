@@ -30,7 +30,6 @@ public final class AttributeGroupTags extends io.pulumi.resources.InvokeArgs {
         public Builder(AttributeGroupTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AttributeGroupTags build() {
             return new AttributeGroupTags();
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLCustomHTTPHeader;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class WebACLCustomRequestHandling {
     /**
      * Collection of HTTP headers.
      * 
-     */
+    */
     public List<WebACLCustomHTTPHeader> getInsertHeaders() {
         return this.insertHeaders;
     }
@@ -53,7 +53,6 @@ public final class WebACLCustomRequestHandling {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
-
         public WebACLCustomRequestHandling build() {
             return new WebACLCustomRequestHandling(insertHeaders);
         }

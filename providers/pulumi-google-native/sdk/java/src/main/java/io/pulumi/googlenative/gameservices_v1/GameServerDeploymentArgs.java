@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
     public static final GameServerDeploymentArgs Empty = new GameServerDeploymentArgs();
 
     @InputImport(name="deploymentId", required=true)
-    private final Input<String> deploymentId;
+      private final Input<String> deploymentId;
 
     public Input<String> getDeploymentId() {
         return this.deploymentId;
@@ -27,7 +27,7 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,7 +38,7 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -49,14 +49,14 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,14 +67,14 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -208,7 +208,6 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public GameServerDeploymentArgs build() {
             return new GameServerDeploymentArgs(deploymentId, description, etag, labels, location, name, project);
         }

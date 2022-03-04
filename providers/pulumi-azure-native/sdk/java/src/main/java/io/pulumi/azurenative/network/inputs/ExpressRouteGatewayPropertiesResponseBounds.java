@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ExpressRouteGatewayPropertiesResponseBounds extends io.pulumi
      * 
      */
     @InputImport(name="max")
-    private final @Nullable Integer max;
+      private final @Nullable Integer max;
 
     public Optional<Integer> getMax() {
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
@@ -34,7 +34,7 @@ public final class ExpressRouteGatewayPropertiesResponseBounds extends io.pulumi
      * 
      */
     @InputImport(name="min")
-    private final @Nullable Integer min;
+      private final @Nullable Integer min;
 
     public Optional<Integer> getMin() {
         return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
@@ -83,7 +83,6 @@ public final class ExpressRouteGatewayPropertiesResponseBounds extends io.pulumi
             this.min = min;
             return this;
         }
-
         public ExpressRouteGatewayPropertiesResponseBounds build() {
             return new ExpressRouteGatewayPropertiesResponseBounds(max, min);
         }

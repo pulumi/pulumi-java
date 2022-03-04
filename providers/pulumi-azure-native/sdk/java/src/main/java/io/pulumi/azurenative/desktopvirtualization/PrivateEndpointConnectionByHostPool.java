@@ -11,8 +11,8 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -119,6 +119,37 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PrivateEndpointConnectionByHostPoolArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.desktopvirtualization.PrivateEndpointConnectionByHostPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.desktopvirtualization.PrivateEndpointConnectionByHostPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PrivateEndpointConnectionByHostPool(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PrivateEndpointConnectionByHostPool(String name) {
+        this(name, PrivateEndpointConnectionByHostPoolArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrivateEndpointConnectionByHostPool(String name, PrivateEndpointConnectionByHostPoolArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,42 +17,42 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
     public static final DistributionCustomOriginConfigArgs Empty = new DistributionCustomOriginConfigArgs();
 
     @InputImport(name="hTTPPort")
-    private final @Nullable Input<Integer> hTTPPort;
+      private final @Nullable Input<Integer> hTTPPort;
 
     public Input<Integer> getHTTPPort() {
         return this.hTTPPort == null ? Input.empty() : this.hTTPPort;
     }
 
     @InputImport(name="hTTPSPort")
-    private final @Nullable Input<Integer> hTTPSPort;
+      private final @Nullable Input<Integer> hTTPSPort;
 
     public Input<Integer> getHTTPSPort() {
         return this.hTTPSPort == null ? Input.empty() : this.hTTPSPort;
     }
 
     @InputImport(name="originKeepaliveTimeout")
-    private final @Nullable Input<Integer> originKeepaliveTimeout;
+      private final @Nullable Input<Integer> originKeepaliveTimeout;
 
     public Input<Integer> getOriginKeepaliveTimeout() {
         return this.originKeepaliveTimeout == null ? Input.empty() : this.originKeepaliveTimeout;
     }
 
     @InputImport(name="originProtocolPolicy", required=true)
-    private final Input<String> originProtocolPolicy;
+      private final Input<String> originProtocolPolicy;
 
     public Input<String> getOriginProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
     @InputImport(name="originReadTimeout")
-    private final @Nullable Input<Integer> originReadTimeout;
+      private final @Nullable Input<Integer> originReadTimeout;
 
     public Input<Integer> getOriginReadTimeout() {
         return this.originReadTimeout == null ? Input.empty() : this.originReadTimeout;
     }
 
     @InputImport(name="originSSLProtocols")
-    private final @Nullable Input<List<String>> originSSLProtocols;
+      private final @Nullable Input<List<String>> originSSLProtocols;
 
     public Input<List<String>> getOriginSSLProtocols() {
         return this.originSSLProtocols == null ? Input.empty() : this.originSSLProtocols;
@@ -171,7 +171,6 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
             this.originSSLProtocols = Input.ofNullable(originSSLProtocols);
             return this;
         }
-
         public DistributionCustomOriginConfigArgs build() {
             return new DistributionCustomOriginConfigArgs(hTTPPort, hTTPSPort, originKeepaliveTimeout, originProtocolPolicy, originReadTimeout, originSSLProtocols);
         }

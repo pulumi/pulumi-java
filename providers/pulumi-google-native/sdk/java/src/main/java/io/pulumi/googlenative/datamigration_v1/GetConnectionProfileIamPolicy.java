@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectionProfileIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetConnectionProfileIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetConnectionProfileIamPolicyArgs.Builder a);
+    }
+    private static GetConnectionProfileIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConnectionProfileIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetConnectionProfileIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetConnectionProfileIamPolicyResult> invokeAsync(GetConnectionProfileIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datamigration/v1:getConnectionProfileIamPolicy", TypeShape.of(GetConnectionProfileIamPolicyResult.class), args == null ? GetConnectionProfileIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

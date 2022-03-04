@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos.outputs;
 
 import io.pulumi.azurenative.chaos.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class GetTargetResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Location of the target resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of the target resource.
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * The system metadata of the target resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class GetTargetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTargetResult build() {
             return new GetTargetResult(id, location, name, properties, systemData, type);
         }

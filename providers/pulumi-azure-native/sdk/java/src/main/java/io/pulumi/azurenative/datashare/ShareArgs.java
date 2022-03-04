@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.datashare.enums.ShareKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareKind")
-    private final @Nullable Input<Either<String,ShareKind>> shareKind;
+      private final @Nullable Input<Either<String,ShareKind>> shareKind;
 
     public Input<Either<String,ShareKind>> getShareKind() {
         return this.shareKind == null ? Input.empty() : this.shareKind;
@@ -65,7 +65,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareName")
-    private final @Nullable Input<String> shareName;
+      private final @Nullable Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName == null ? Input.empty() : this.shareName;
@@ -76,7 +76,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terms")
-    private final @Nullable Input<String> terms;
+      private final @Nullable Input<String> terms;
 
     public Input<String> getTerms() {
         return this.terms == null ? Input.empty() : this.terms;
@@ -195,7 +195,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             this.terms = Input.ofNullable(terms);
             return this;
         }
-
         public ShareArgs build() {
             return new ShareArgs(accountName, description, resourceGroupName, shareKind, shareName, terms);
         }

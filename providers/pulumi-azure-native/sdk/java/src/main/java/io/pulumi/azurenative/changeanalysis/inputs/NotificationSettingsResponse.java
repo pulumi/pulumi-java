@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.changeanalysis.inputs;
 
 import io.pulumi.azurenative.changeanalysis.inputs.AzureMonitorWorkspacePropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="activationState")
-    private final @Nullable String activationState;
+      private final @Nullable String activationState;
 
     public Optional<String> getActivationState() {
         return this.activationState == null ? Optional.empty() : Optional.ofNullable(this.activationState);
@@ -35,7 +35,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="azureMonitorWorkspaceProperties")
-    private final @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
+      private final @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
 
     public Optional<AzureMonitorWorkspacePropertiesResponse> getAzureMonitorWorkspaceProperties() {
         return this.azureMonitorWorkspaceProperties == null ? Optional.empty() : Optional.ofNullable(this.azureMonitorWorkspaceProperties);
@@ -84,7 +84,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
             this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;
         }
-
         public NotificationSettingsResponse build() {
             return new NotificationSettingsResponse(activationState, azureMonitorWorkspaceProperties);
         }

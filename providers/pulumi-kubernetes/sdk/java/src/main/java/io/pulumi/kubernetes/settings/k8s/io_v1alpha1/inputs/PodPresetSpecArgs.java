@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.settings.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.EnvFromSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EnvVarArgs;
 import io.pulumi.kubernetes.core_v1.inputs.VolumeArgs;
@@ -28,7 +28,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-    private final @Nullable Input<List<EnvVarArgs>> env;
+      private final @Nullable Input<List<EnvVarArgs>> env;
 
     public Input<List<EnvVarArgs>> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -39,7 +39,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envFrom")
-    private final @Nullable Input<List<EnvFromSourceArgs>> envFrom;
+      private final @Nullable Input<List<EnvFromSourceArgs>> envFrom;
 
     public Input<List<EnvFromSourceArgs>> getEnvFrom() {
         return this.envFrom == null ? Input.empty() : this.envFrom;
@@ -50,7 +50,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -61,7 +61,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeMounts")
-    private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
+      private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
 
     public Input<List<VolumeMountArgs>> getVolumeMounts() {
         return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
@@ -72,7 +72,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Input<List<VolumeArgs>> volumes;
 
     public Input<List<VolumeArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -176,7 +176,6 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
-
         public PodPresetSpecArgs build() {
             return new PodPresetSpecArgs(env, envFrom, selector, volumeMounts, volumes);
         }

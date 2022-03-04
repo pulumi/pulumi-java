@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoCreateNetwork")
-    private final @Nullable Input<Boolean> autoCreateNetwork;
+      private final @Nullable Input<Boolean> autoCreateNetwork;
 
     public Input<Boolean> getAutoCreateNetwork() {
         return this.autoCreateNetwork == null ? Input.empty() : this.autoCreateNetwork;
@@ -39,7 +39,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccount")
-    private final @Nullable Input<String> billingAccount;
+      private final @Nullable Input<String> billingAccount;
 
     public Input<String> getBillingAccount() {
         return this.billingAccount == null ? Input.empty() : this.billingAccount;
@@ -54,7 +54,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderId")
-    private final @Nullable Input<String> folderId;
+      private final @Nullable Input<String> folderId;
 
     public Input<String> getFolderId() {
         return this.folderId == null ? Input.empty() : this.folderId;
@@ -65,7 +65,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -76,7 +76,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="number")
-    private final @Nullable Input<String> number;
+      private final @Nullable Input<String> number;
 
     public Input<String> getNumber() {
         return this.number == null ? Input.empty() : this.number;
@@ -103,7 +103,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId")
-    private final @Nullable Input<String> orgId;
+      private final @Nullable Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId == null ? Input.empty() : this.orgId;
@@ -114,7 +114,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+      private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -126,7 +126,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipDelete")
-    private final @Nullable Input<Boolean> skipDelete;
+      private final @Nullable Input<Boolean> skipDelete;
 
     public Input<Boolean> getSkipDelete() {
         return this.skipDelete == null ? Input.empty() : this.skipDelete;
@@ -290,7 +290,6 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             this.skipDelete = Input.ofNullable(skipDelete);
             return this;
         }
-
         public ProjectState build() {
             return new ProjectState(autoCreateNetwork, billingAccount, folderId, labels, name, number, orgId, projectId, skipDelete);
         }

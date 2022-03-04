@@ -6,21 +6,41 @@ package io.pulumi.azurenative.agfoodplatform;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.agfoodplatform.inputs.GetExtensionArgs;
 import io.pulumi.azurenative.agfoodplatform.outputs.GetExtensionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExtension {
-/**
- * Extension resource.
+    private GetExtension() {}
+    public interface BuilderApplicator {
+        public void apply(GetExtensionArgs.Builder a);
+    }
+    private static GetExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExtensionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Extension resource.
  * API Version: 2020-05-12-preview.
  * 
- *
- * Extension resource.
+     *
+     * Extension resource.
  * 
- */
+     */
+    public static CompletableFuture<GetExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Extension resource.
+     * API Version: 2020-05-12-preview.
+     * 
+     *
+         * Extension resource.
+     * 
+     */
     public static CompletableFuture<GetExtensionResult> invokeAsync(GetExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:agfoodplatform:getExtension", TypeShape.of(GetExtensionResult.class), args == null ? GetExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

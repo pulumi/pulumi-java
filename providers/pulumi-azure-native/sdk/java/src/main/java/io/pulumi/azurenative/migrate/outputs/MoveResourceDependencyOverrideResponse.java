@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,7 +34,7 @@ public final class MoveResourceDependencyOverrideResponse {
     /**
      * Gets or sets the ARM ID of the dependent resource.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -42,7 +42,7 @@ public final class MoveResourceDependencyOverrideResponse {
      * Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
      * the dependent resource.
      * 
-     */
+    */
     public Optional<String> getTargetId() {
         return Optional.ofNullable(this.targetId);
     }
@@ -78,7 +78,6 @@ public final class MoveResourceDependencyOverrideResponse {
             this.targetId = targetId;
             return this;
         }
-
         public MoveResourceDependencyOverrideResponse build() {
             return new MoveResourceDependencyOverrideResponse(id, targetId);
         }

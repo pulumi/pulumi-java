@@ -6,21 +6,41 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.media.inputs.GetStreamingEndpointArgs;
 import io.pulumi.azurenative.media.outputs.GetStreamingEndpointResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStreamingEndpoint {
-/**
- * The streaming endpoint.
+    private GetStreamingEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetStreamingEndpointArgs.Builder a);
+    }
+    private static GetStreamingEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStreamingEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The streaming endpoint.
  * API Version: 2020-05-01.
  * 
- *
- * The streaming endpoint.
+     *
+     * The streaming endpoint.
  * 
- */
+     */
+    public static CompletableFuture<GetStreamingEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The streaming endpoint.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * The streaming endpoint.
+     * 
+     */
     public static CompletableFuture<GetStreamingEndpointResult> invokeAsync(GetStreamingEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getStreamingEndpoint", TypeShape.of(GetStreamingEndpointResult.class), args == null ? GetStreamingEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

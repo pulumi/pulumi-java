@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GetServiceTemplateSpecContainerResource extends io.pulumi.res
     public static final GetServiceTemplateSpecContainerResource Empty = new GetServiceTemplateSpecContainerResource();
 
     @InputImport(name="limits", required=true)
-    private final Map<String,String> limits;
+      private final Map<String,String> limits;
 
     public Map<String,String> getLimits() {
         return this.limits;
     }
 
     @InputImport(name="requests", required=true)
-    private final Map<String,String> requests;
+      private final Map<String,String> requests;
 
     public Map<String,String> getRequests() {
         return this.requests;
@@ -70,7 +70,6 @@ public final class GetServiceTemplateSpecContainerResource extends io.pulumi.res
             this.requests = Objects.requireNonNull(requests);
             return this;
         }
-
         public GetServiceTemplateSpecContainerResource build() {
             return new GetServiceTemplateSpecContainerResource(limits, requests);
         }

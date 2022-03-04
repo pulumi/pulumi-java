@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class TimeSeriesRatioResponse {
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-     */
+    */
     public String getBadServiceFilter() {
         return this.badServiceFilter;
     }
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-     */
+    */
     public String getGoodServiceFilter() {
         return this.goodServiceFilter;
     }
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-     */
+    */
     public String getTotalServiceFilter() {
         return this.totalServiceFilter;
     }
@@ -95,7 +95,6 @@ public final class TimeSeriesRatioResponse {
             this.totalServiceFilter = Objects.requireNonNull(totalServiceFilter);
             return this;
         }
-
         public TimeSeriesRatioResponse build() {
             return new TimeSeriesRatioResponse(badServiceFilter, goodServiceFilter, totalServiceFilter);
         }

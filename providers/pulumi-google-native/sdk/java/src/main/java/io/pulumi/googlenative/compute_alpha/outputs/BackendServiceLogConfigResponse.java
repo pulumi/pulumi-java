@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class BackendServiceLogConfigResponse {
     /**
      * This field denotes whether to enable logging for the load balancer traffic served by this backend service.
      * 
-     */
+    */
     public Boolean getEnable() {
         return this.enable;
     }
     /**
      * This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.
      * 
-     */
+    */
     public Double getSampleRate() {
         return this.sampleRate;
     }
@@ -75,7 +75,6 @@ public final class BackendServiceLogConfigResponse {
             this.sampleRate = Objects.requireNonNull(sampleRate);
             return this;
         }
-
         public BackendServiceLogConfigResponse build() {
             return new BackendServiceLogConfigResponse(enable, sampleRate);
         }

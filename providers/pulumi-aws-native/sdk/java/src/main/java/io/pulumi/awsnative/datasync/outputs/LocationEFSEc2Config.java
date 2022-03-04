@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class LocationEFSEc2Config {
     /**
      * The Amazon Resource Names (ARNs) of the security groups that are configured for the Amazon EC2 resource.
      * 
-     */
+    */
     public List<String> getSecurityGroupArns() {
         return this.securityGroupArns;
     }
     /**
      * The ARN of the subnet that DataSync uses to access the target EFS file system.
      * 
-     */
+    */
     public String getSubnetArn() {
         return this.subnetArn;
     }
@@ -75,7 +75,6 @@ public final class LocationEFSEc2Config {
             this.subnetArn = Objects.requireNonNull(subnetArn);
             return this;
         }
-
         public LocationEFSEc2Config build() {
             return new LocationEFSEc2Config(securityGroupArns, subnetArn);
         }

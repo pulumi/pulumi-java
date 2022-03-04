@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class VmmDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -60,7 +60,6 @@ public final class VmmDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public VmmDetailsResponse build() {
             return new VmmDetailsResponse(instanceType);
         }

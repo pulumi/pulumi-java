@@ -9,7 +9,7 @@ import io.pulumi.azurenative.synapse.outputs.EnvironmentVariableSetupResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeCustomSetupScriptPropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeDataProxyPropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeSsisCatalogInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -69,42 +69,42 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
     /**
      * Catalog information for managed dedicated integration runtime.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeSsisCatalogInfoResponse> getCatalogInfo() {
         return Optional.ofNullable(this.catalogInfo);
     }
     /**
      * Custom setup script properties for a managed dedicated integration runtime.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeCustomSetupScriptPropertiesResponse> getCustomSetupScriptProperties() {
         return Optional.ofNullable(this.customSetupScriptProperties);
     }
     /**
      * Data proxy properties for a managed dedicated integration runtime.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeDataProxyPropertiesResponse> getDataProxyProperties() {
         return Optional.ofNullable(this.dataProxyProperties);
     }
     /**
      * The edition for the SSIS Integration Runtime
      * 
-     */
+    */
     public Optional<String> getEdition() {
         return Optional.ofNullable(this.edition);
     }
     /**
      * Custom setup without script properties for a SSIS integration runtime.
      * 
-     */
+    */
     public List<Object> getExpressCustomSetupProperties() {
         return this.expressCustomSetupProperties == null ? List.of() : this.expressCustomSetupProperties;
     }
     /**
      * License type for bringing your own license scenario.
      * 
-     */
+    */
     public Optional<String> getLicenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -168,7 +168,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
             this.licenseType = licenseType;
             return this;
         }
-
         public IntegrationRuntimeSsisPropertiesResponse build() {
             return new IntegrationRuntimeSsisPropertiesResponse(catalogInfo, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gsuiteDomain")
-    private final @Nullable Input<Boolean> gsuiteDomain;
+      private final @Nullable Input<Boolean> gsuiteDomain;
 
     public Input<Boolean> getGsuiteDomain() {
         return this.gsuiteDomain == null ? Input.empty() : this.gsuiteDomain;
@@ -31,7 +31,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gsuiteGroupEmail")
-    private final @Nullable Input<String> gsuiteGroupEmail;
+      private final @Nullable Input<String> gsuiteGroupEmail;
 
     public Input<String> getGsuiteGroupEmail() {
         return this.gsuiteGroupEmail == null ? Input.empty() : this.gsuiteGroupEmail;
@@ -42,7 +42,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gsuiteUserEmail")
-    private final @Nullable Input<String> gsuiteUserEmail;
+      private final @Nullable Input<String> gsuiteUserEmail;
 
     public Input<String> getGsuiteUserEmail() {
         return this.gsuiteUserEmail == null ? Input.empty() : this.gsuiteUserEmail;
@@ -116,7 +116,6 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
             this.gsuiteUserEmail = Input.ofNullable(gsuiteUserEmail);
             return this;
         }
-
         public GSuitePrincipalArgs build() {
             return new GSuitePrincipalArgs(gsuiteDomain, gsuiteGroupEmail, gsuiteUserEmail);
         }

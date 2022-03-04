@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ServiceBusAuthenticationResponse {
     /**
      * Gets or sets the SAS key.
      * 
-     */
+    */
     public Optional<String> getSasKey() {
         return Optional.ofNullable(this.sasKey);
     }
     /**
      * Gets or sets the SAS key name.
      * 
-     */
+    */
     public Optional<String> getSasKeyName() {
         return Optional.ofNullable(this.sasKeyName);
     }
     /**
      * Gets or sets the authentication type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class ServiceBusAuthenticationResponse {
             this.type = type;
             return this;
         }
-
         public ServiceBusAuthenticationResponse build() {
             return new ServiceBusAuthenticationResponse(sasKey, sasKeyName, type);
         }

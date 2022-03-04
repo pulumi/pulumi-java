@@ -98,7 +98,7 @@ import io.pulumi.azurenative.datafactory.outputs.WebTableDatasetResponse;
 import io.pulumi.azurenative.datafactory.outputs.XeroObjectDatasetResponse;
 import io.pulumi.azurenative.datafactory.outputs.XmlDatasetResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZohoObjectDatasetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -148,35 +148,35 @@ public final class GetDatasetResult {
     /**
      * Etag identifies change in the resource.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Dataset properties.
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -233,7 +233,6 @@ public final class GetDatasetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(etag, id, name, properties, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2RatingResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="averageRating", required=true)
-    private final Double averageRating;
+      private final Double averageRating;
 
     public Double getAverageRating() {
         return this.averageRating;
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2RatingResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="ratingCount", required=true)
-    private final Integer ratingCount;
+      private final Integer ratingCount;
 
     public Integer getRatingCount() {
         return this.ratingCount;
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2RatingResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="ratingHistogram", required=true)
-    private final List<Integer> ratingHistogram;
+      private final List<Integer> ratingHistogram;
 
     public List<Integer> getRatingHistogram() {
         return this.ratingHistogram;
@@ -104,7 +104,6 @@ public final class GoogleCloudRetailV2RatingResponse extends io.pulumi.resources
             this.ratingHistogram = Objects.requireNonNull(ratingHistogram);
             return this;
         }
-
         public GoogleCloudRetailV2RatingResponse build() {
             return new GoogleCloudRetailV2RatingResponse(averageRating, ratingCount, ratingHistogram);
         }

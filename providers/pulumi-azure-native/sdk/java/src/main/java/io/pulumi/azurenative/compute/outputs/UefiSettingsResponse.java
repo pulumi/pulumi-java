@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class UefiSettingsResponse {
     /**
      * Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
      * 
-     */
+    */
     public Optional<Boolean> getSecureBootEnabled() {
         return Optional.ofNullable(this.secureBootEnabled);
     }
     /**
      * Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
      * 
-     */
+    */
     public Optional<Boolean> getVTpmEnabled() {
         return Optional.ofNullable(this.vTpmEnabled);
     }
@@ -76,7 +76,6 @@ public final class UefiSettingsResponse {
             this.vTpmEnabled = vTpmEnabled;
             return this;
         }
-
         public UefiSettingsResponse build() {
             return new UefiSettingsResponse(secureBootEnabled, vTpmEnabled);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class SecurityPolicyCloudArmorConfigResponse {
     /**
      * If set to true, enables Cloud Armor Machine Learning.
      * 
-     */
+    */
     public Boolean getEnableMl() {
         return this.enableMl;
     }
@@ -52,7 +52,6 @@ public final class SecurityPolicyCloudArmorConfigResponse {
             this.enableMl = Objects.requireNonNull(enableMl);
             return this;
         }
-
         public SecurityPolicyCloudArmorConfigResponse build() {
             return new SecurityPolicyCloudArmorConfigResponse(enableMl);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionUserConfigurationResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -136,112 +136,112 @@ public final class GetNetworkFunctionResult {
     /**
      * The reference to the device resource.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getDevice() {
         return Optional.ofNullable(this.device);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The resource URI of the managed application.
      * 
-     */
+    */
     public SubResourceResponse getManagedApplication() {
         return this.managedApplication;
     }
     /**
      * The parameters for the managed application.
      * 
-     */
+    */
     public Optional<Object> getManagedApplicationParameters() {
         return Optional.ofNullable(this.managedApplicationParameters);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The network function configurations from the user.
      * 
-     */
+    */
     public List<NetworkFunctionUserConfigurationResponse> getNetworkFunctionUserConfigurations() {
         return this.networkFunctionUserConfigurations == null ? List.of() : this.networkFunctionUserConfigurations;
     }
     /**
      * The provisioning state of the network function resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The service key for the network function resource.
      * 
-     */
+    */
     public String getServiceKey() {
         return this.serviceKey;
     }
     /**
      * The sku name for the network function.
      * 
-     */
+    */
     public Optional<String> getSkuName() {
         return Optional.ofNullable(this.skuName);
     }
     /**
      * The sku type for the network function.
      * 
-     */
+    */
     public String getSkuType() {
         return this.skuType;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The vendor name for the network function.
      * 
-     */
+    */
     public Optional<String> getVendorName() {
         return Optional.ofNullable(this.vendorName);
     }
     /**
      * The vendor provisioning state for the network function resource.
      * 
-     */
+    */
     public String getVendorProvisioningState() {
         return this.vendorProvisioningState;
     }
@@ -375,7 +375,6 @@ public final class GetNetworkFunctionResult {
             this.vendorProvisioningState = Objects.requireNonNull(vendorProvisioningState);
             return this;
         }
-
         public GetNetworkFunctionResult build() {
             return new GetNetworkFunctionResult(device, etag, id, location, managedApplication, managedApplicationParameters, name, networkFunctionUserConfigurations, provisioningState, serviceKey, skuName, skuType, tags, type, vendorName, vendorProvisioningState);
         }

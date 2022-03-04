@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,35 +53,35 @@ public final class GetSynchronizationSettingResult {
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of synchronization setting.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -138,7 +138,6 @@ public final class GetSynchronizationSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSynchronizationSettingResult build() {
             return new GetSynchronizationSettingResult(id, kind, name, systemData, type);
         }

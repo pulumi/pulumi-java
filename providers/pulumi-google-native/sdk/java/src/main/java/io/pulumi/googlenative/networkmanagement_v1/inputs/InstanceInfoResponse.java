@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="externalIp", required=true)
-    private final String externalIp;
+      private final String externalIp;
 
     public String getExternalIp() {
         return this.externalIp;
@@ -44,7 +44,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="interface", required=true)
-    private final String $interface;
+      private final String $interface;
 
     public String get$interface() {
         return this.$interface;
@@ -55,7 +55,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="internalIp", required=true)
-    private final String internalIp;
+      private final String internalIp;
 
     public String getInternalIp() {
         return this.internalIp;
@@ -66,7 +66,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkTags", required=true)
-    private final List<String> networkTags;
+      private final List<String> networkTags;
 
     public List<String> getNetworkTags() {
         return this.networkTags;
@@ -77,7 +77,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkUri", required=true)
-    private final String networkUri;
+      private final String networkUri;
 
     public String getNetworkUri() {
         return this.networkUri;
@@ -88,7 +88,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -99,7 +99,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -208,7 +208,6 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public InstanceInfoResponse build() {
             return new InstanceInfoResponse(displayName, externalIp, $interface, internalIp, networkTags, networkUri, serviceAccount, uri);
         }

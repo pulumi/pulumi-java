@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.AddressableResponse;
 import io.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionResponse;
 import io.pulumi.googlenative.run_v1.inputs.TrafficTargetResponse;
@@ -26,7 +26,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="address", required=true)
-    private final AddressableResponse address;
+      private final AddressableResponse address;
 
     public AddressableResponse getAddress() {
         return this.address;
@@ -37,7 +37,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final List<GoogleCloudRunV1ConditionResponse> conditions;
+      private final List<GoogleCloudRunV1ConditionResponse> conditions;
 
     public List<GoogleCloudRunV1ConditionResponse> getConditions() {
         return this.conditions;
@@ -48,7 +48,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="latestCreatedRevisionName", required=true)
-    private final String latestCreatedRevisionName;
+      private final String latestCreatedRevisionName;
 
     public String getLatestCreatedRevisionName() {
         return this.latestCreatedRevisionName;
@@ -59,7 +59,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="latestReadyRevisionName", required=true)
-    private final String latestReadyRevisionName;
+      private final String latestReadyRevisionName;
 
     public String getLatestReadyRevisionName() {
         return this.latestReadyRevisionName;
@@ -70,7 +70,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="observedGeneration", required=true)
-    private final Integer observedGeneration;
+      private final Integer observedGeneration;
 
     public Integer getObservedGeneration() {
         return this.observedGeneration;
@@ -81,7 +81,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="traffic", required=true)
-    private final List<TrafficTargetResponse> traffic;
+      private final List<TrafficTargetResponse> traffic;
 
     public List<TrafficTargetResponse> getTraffic() {
         return this.traffic;
@@ -92,7 +92,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -191,7 +191,6 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ServiceStatusResponse build() {
             return new ServiceStatusResponse(address, conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, traffic, url);
         }

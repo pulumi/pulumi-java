@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -51,7 +51,7 @@ public final class GlobalValidationResponse {
     /**
      * The paths for which unauthenticated flow would not be redirected to the login page.
      * 
-     */
+    */
     public List<String> getExcludedPaths() {
         return this.excludedPaths == null ? List.of() : this.excludedPaths;
     }
@@ -60,21 +60,21 @@ public final class GlobalValidationResponse {
      * This setting is only needed if multiple providers are configured and the unauthenticated client
      * action is set to "RedirectToLoginPage".
      * 
-     */
+    */
     public Optional<String> getRedirectToProvider() {
         return Optional.ofNullable(this.redirectToProvider);
     }
     /**
      * <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getRequireAuthentication() {
         return Optional.ofNullable(this.requireAuthentication);
     }
     /**
      * The action to take when an unauthenticated client attempts to access the app.
      * 
-     */
+    */
     public Optional<String> getUnauthenticatedClientAction() {
         return Optional.ofNullable(this.unauthenticatedClientAction);
     }
@@ -124,7 +124,6 @@ public final class GlobalValidationResponse {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
-
         public GlobalValidationResponse build() {
             return new GlobalValidationResponse(excludedPaths, redirectToProvider, requireAuthentication, unauthenticatedClientAction);
         }

@@ -3,7 +3,7 @@ package io.pulumi.core;
 import com.google.common.collect.Lists;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import io.pulumi.core.internal.InputOutputData;
-import io.pulumi.core.internal.TypedInputOutput;
+import io.pulumi.core.internal.Internal;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,8 +15,8 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static io.pulumi.core.internal.InputOutputData.internalAllHelperAsync;
-import static io.pulumi.core.internal.InputOutputImpl.TupleZeroIn;
-import static io.pulumi.core.internal.InputOutputImpl.TupleZeroOut;
+import static io.pulumi.core.internal.InputOutputInternal.TupleZeroIn;
+import static io.pulumi.core.internal.InputOutputInternal.TupleZeroOut;
 
 public interface Output<T> extends InputOutput<T, Output<T>> {
 
@@ -178,7 +178,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         return new OutputDefault<>(
                 internalAllHelperAsync(inputs
                         .stream()
-                        .map(input -> TypedInputOutput.cast(input).internalGetDataAsync())
+                        .map(input -> Internal.of(input).getDataAsync())
                         .collect(Collectors.toList()))
         );
     }
@@ -187,7 +187,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         return new OutputDefault<>(
                 internalAllHelperAsync(outputs
                         .stream()
-                        .map(output -> TypedInputOutput.cast(output).internalGetDataAsync())
+                        .map(output -> Internal.of(output).getDataAsync())
                         .collect(Collectors.toList()))
         );
     }
@@ -338,5 +338,30 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
             Output<T5> item5, Output<T6> item6, Output<T7> item7, Output<T8> item8
     ) {
         return new OutputDefault<>(InputOutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
+    }
+
+    /**
+     * Takes in a "formattableString" with potential @see {@link Input}s or @see {@link Output}
+     * in the 'placeholder holes'. Conceptually, this method unwraps all the underlying values in the holes,
+     * combines them appropriately with the "formattableString", and produces an @see {@link Output}
+     * containing the final result.
+     * <p>
+     * If any of the @see {@link Input}s or {@link Output}s are not known, the
+     * final result will be not known.
+     * <p>
+     * Similarly, if any of the @see {@link Input}s or @see {@link Input}s are secrets,
+     * then the final result will be a secret.
+     */
+    static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") InputOutput... arguments) {
+        var data = Lists.newArrayList(arguments)
+                .stream()
+                .map(InputOutputData::internalCopyInputOutputData)
+                .collect(Collectors.toList());
+
+        return new OutputDefault<>(
+                internalAllHelperAsync(data)
+                        .thenApply(objs -> objs.apply(
+                                v -> v == null ? null : String.format(formattableString, v.toArray())))
+        );
     }
 }

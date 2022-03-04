@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.maintenance.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="configurationAssignmentName", required=true)
-    private final String configurationAssignmentName;
+      private final String configurationAssignmentName;
 
     public String getConfigurationAssignmentName() {
         return this.configurationAssignmentName;
@@ -28,7 +28,7 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="providerName", required=true)
-    private final String providerName;
+      private final String providerName;
 
     public String getProviderName() {
         return this.providerName;
@@ -39,7 +39,7 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -61,7 +61,7 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceParentName", required=true)
-    private final String resourceParentName;
+      private final String resourceParentName;
 
     public String getResourceParentName() {
         return this.resourceParentName;
@@ -72,7 +72,7 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceParentType", required=true)
-    private final String resourceParentType;
+      private final String resourceParentType;
 
     public String getResourceParentType() {
         return this.resourceParentType;
@@ -83,7 +83,7 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -182,7 +182,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GetConfigurationAssignmentParentArgs build() {
             return new GetConfigurationAssignmentParentArgs(configurationAssignmentName, providerName, resourceGroupName, resourceName, resourceParentName, resourceParentType, resourceType);
         }

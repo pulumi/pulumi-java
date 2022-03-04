@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -41,14 +41,14 @@ public final class NamedPartitionSchemeDescriptionResponse {
     /**
      * The number of partitions.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * Array of size specified by the ‘count’ parameter, for the names of the partitions.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }
@@ -56,7 +56,7 @@ public final class NamedPartitionSchemeDescriptionResponse {
      * Enumerates the ways that a service can be partitioned.
      * Expected value is 'Named'.
      * 
-     */
+    */
     public String getPartitionScheme() {
         return this.partitionScheme;
     }
@@ -99,7 +99,6 @@ public final class NamedPartitionSchemeDescriptionResponse {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
-
         public NamedPartitionSchemeDescriptionResponse build() {
             return new NamedPartitionSchemeDescriptionResponse(count, names, partitionScheme);
         }

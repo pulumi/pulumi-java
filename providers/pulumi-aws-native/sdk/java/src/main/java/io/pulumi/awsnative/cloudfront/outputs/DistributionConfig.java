@@ -13,7 +13,7 @@ import io.pulumi.awsnative.cloudfront.outputs.DistributionOrigin;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginGroups;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionRestrictions;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionViewerCertificate;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -293,7 +293,6 @@ public final class DistributionConfig {
             this.webACLId = webACLId;
             return this;
         }
-
         public DistributionConfig build() {
             return new DistributionConfig(aliases, cNAMEs, cacheBehaviors, comment, customErrorResponses, customOrigin, defaultCacheBehavior, defaultRootObject, enabled, httpVersion, iPV6Enabled, logging, originGroups, origins, priceClass, restrictions, s3Origin, viewerCertificate, webACLId);
         }

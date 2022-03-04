@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1beta1.inputs.DeploymentStrategyArgs;
 import io.pulumi.kubernetes.apps_v1beta1.inputs.RollbackConfigArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
@@ -28,7 +28,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minReadySeconds")
-    private final @Nullable Input<Integer> minReadySeconds;
+      private final @Nullable Input<Integer> minReadySeconds;
 
     public Input<Integer> getMinReadySeconds() {
         return this.minReadySeconds == null ? Input.empty() : this.minReadySeconds;
@@ -39,7 +39,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="paused")
-    private final @Nullable Input<Boolean> paused;
+      private final @Nullable Input<Boolean> paused;
 
     public Input<Boolean> getPaused() {
         return this.paused == null ? Input.empty() : this.paused;
@@ -50,7 +50,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="progressDeadlineSeconds")
-    private final @Nullable Input<Integer> progressDeadlineSeconds;
+      private final @Nullable Input<Integer> progressDeadlineSeconds;
 
     public Input<Integer> getProgressDeadlineSeconds() {
         return this.progressDeadlineSeconds == null ? Input.empty() : this.progressDeadlineSeconds;
@@ -61,7 +61,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas")
-    private final @Nullable Input<Integer> replicas;
+      private final @Nullable Input<Integer> replicas;
 
     public Input<Integer> getReplicas() {
         return this.replicas == null ? Input.empty() : this.replicas;
@@ -72,7 +72,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionHistoryLimit")
-    private final @Nullable Input<Integer> revisionHistoryLimit;
+      private final @Nullable Input<Integer> revisionHistoryLimit;
 
     public Input<Integer> getRevisionHistoryLimit() {
         return this.revisionHistoryLimit == null ? Input.empty() : this.revisionHistoryLimit;
@@ -83,7 +83,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rollbackTo")
-    private final @Nullable Input<RollbackConfigArgs> rollbackTo;
+      private final @Nullable Input<RollbackConfigArgs> rollbackTo;
 
     public Input<RollbackConfigArgs> getRollbackTo() {
         return this.rollbackTo == null ? Input.empty() : this.rollbackTo;
@@ -94,7 +94,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -105,7 +105,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strategy")
-    private final @Nullable Input<DeploymentStrategyArgs> strategy;
+      private final @Nullable Input<DeploymentStrategyArgs> strategy;
 
     public Input<DeploymentStrategyArgs> getStrategy() {
         return this.strategy == null ? Input.empty() : this.strategy;
@@ -116,7 +116,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template", required=true)
-    private final Input<PodTemplateSpecArgs> template;
+      private final Input<PodTemplateSpecArgs> template;
 
     public Input<PodTemplateSpecArgs> getTemplate() {
         return this.template;
@@ -280,7 +280,6 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }
-
         public DeploymentSpecArgs build() {
             return new DeploymentSpecArgs(minReadySeconds, paused, progressDeadlineSeconds, replicas, revisionHistoryLimit, rollbackTo, selector, strategy, template);
         }

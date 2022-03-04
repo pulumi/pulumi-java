@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeEbsInstanceBlockDeviceSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class ImageRecipeInstanceBlockDeviceMapping {
     /**
      * The device to which these mappings apply.
      * 
-     */
+    */
     public Optional<String> getDeviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * Use to manage Amazon EBS-specific configuration for this mapping.
      * 
-     */
+    */
     public Optional<ImageRecipeEbsInstanceBlockDeviceSpecification> getEbs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
      * Use to remove a mapping from the parent image.
      * 
-     */
+    */
     public Optional<String> getNoDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
      * Use to manage instance ephemeral devices.
      * 
-     */
+    */
     public Optional<String> getVirtualName() {
         return Optional.ofNullable(this.virtualName);
     }
@@ -119,7 +119,6 @@ public final class ImageRecipeInstanceBlockDeviceMapping {
             this.virtualName = virtualName;
             return this;
         }
-
         public ImageRecipeInstanceBlockDeviceMapping build() {
             return new ImageRecipeInstanceBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }

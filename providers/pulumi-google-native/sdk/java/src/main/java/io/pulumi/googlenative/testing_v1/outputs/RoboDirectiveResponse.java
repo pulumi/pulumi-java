@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class RoboDirectiveResponse {
     /**
      * The type of action that Robo should perform on the specified element.
      * 
-     */
+    */
     public String getActionType() {
         return this.actionType;
     }
     /**
      * The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
      * 
-     */
+    */
     public String getInputText() {
         return this.inputText;
     }
     /**
      * The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the "foo" part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
      * 
-     */
+    */
     public String getPropResourceName() {
         return this.resourceName;
     }
@@ -95,7 +95,6 @@ public final class RoboDirectiveResponse {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public RoboDirectiveResponse build() {
             return new RoboDirectiveResponse(actionType, inputText, resourceName);
         }

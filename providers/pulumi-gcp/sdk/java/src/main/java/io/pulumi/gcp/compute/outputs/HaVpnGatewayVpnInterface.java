@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -47,7 +47,7 @@ public final class HaVpnGatewayVpnInterface {
     /**
      * The numeric ID of this VPN gateway interface.
      * 
-     */
+    */
     public Optional<Integer> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -59,7 +59,7 @@ public final class HaVpnGatewayVpnInterface {
      * specified interconnect attachment resource.
      * Not currently available publicly.
      * 
-     */
+    */
     public Optional<String> getInterconnectAttachment() {
         return Optional.ofNullable(this.interconnectAttachment);
     }
@@ -67,7 +67,7 @@ public final class HaVpnGatewayVpnInterface {
      * - 
      * The external IP address for this VPN gateway interface.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -110,7 +110,6 @@ public final class HaVpnGatewayVpnInterface {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public HaVpnGatewayVpnInterface build() {
             return new HaVpnGatewayVpnInterface(id, interconnectAttachment, ipAddress);
         }

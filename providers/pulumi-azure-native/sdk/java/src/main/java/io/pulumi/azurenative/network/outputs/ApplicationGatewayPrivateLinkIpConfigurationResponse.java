@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -84,63 +84,63 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of application gateway private link ip configuration.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Whether the ip configuration is primary or not.
      * 
-     */
+    */
     public Optional<Boolean> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
     /**
      * The private IP address of the IP configuration.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The private IP address allocation method.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
      * The provisioning state of the application gateway private link IP configuration.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Reference to the subnet resource.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -225,7 +225,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayPrivateLinkIpConfigurationResponse build() {
             return new ApplicationGatewayPrivateLinkIpConfigurationResponse(etag, id, name, primary, privateIPAddress, privateIPAllocationMethod, provisioningState, subnet, type);
         }

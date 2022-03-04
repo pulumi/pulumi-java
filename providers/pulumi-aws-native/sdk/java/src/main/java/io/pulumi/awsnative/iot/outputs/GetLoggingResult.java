@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.LoggingDefaultLogLevel;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class GetLoggingResult {
     /**
      * The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
-     */
+    */
     public Optional<LoggingDefaultLogLevel> getDefaultLogLevel() {
         return Optional.ofNullable(this.defaultLogLevel);
     }
     /**
      * The ARN of the role that allows IoT to write to Cloudwatch logs.
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -77,7 +77,6 @@ public final class GetLoggingResult {
             this.roleArn = roleArn;
             return this;
         }
-
         public GetLoggingResult build() {
             return new GetLoggingResult(defaultLogLevel, roleArn);
         }

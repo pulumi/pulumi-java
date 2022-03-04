@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,7 +48,7 @@ public final class ManagedIdentityResponse {
     /**
      * Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -56,21 +56,21 @@ public final class ManagedIdentityResponse {
      * Enum to determine identity framework.
      * Expected value is 'Managed'.
      * 
-     */
+    */
     public String getIdentityType() {
         return this.identityType;
     }
     /**
      * Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -120,7 +120,6 @@ public final class ManagedIdentityResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public ManagedIdentityResponse build() {
             return new ManagedIdentityResponse(clientId, identityType, objectId, resourceId);
         }

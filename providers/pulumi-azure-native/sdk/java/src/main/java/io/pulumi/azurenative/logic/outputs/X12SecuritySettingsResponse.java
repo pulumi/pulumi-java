@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class X12SecuritySettingsResponse {
     /**
      * The authorization qualifier.
      * 
-     */
+    */
     public String getAuthorizationQualifier() {
         return this.authorizationQualifier;
     }
     /**
      * The authorization value.
      * 
-     */
+    */
     public Optional<String> getAuthorizationValue() {
         return Optional.ofNullable(this.authorizationValue);
     }
     /**
      * The password value.
      * 
-     */
+    */
     public Optional<String> getPasswordValue() {
         return Optional.ofNullable(this.passwordValue);
     }
     /**
      * The security qualifier.
      * 
-     */
+    */
     public String getSecurityQualifier() {
         return this.securityQualifier;
     }
@@ -118,7 +118,6 @@ public final class X12SecuritySettingsResponse {
             this.securityQualifier = Objects.requireNonNull(securityQualifier);
             return this;
         }
-
         public X12SecuritySettingsResponse build() {
             return new X12SecuritySettingsResponse(authorizationQualifier, authorizationValue, passwordValue, securityQualifier);
         }

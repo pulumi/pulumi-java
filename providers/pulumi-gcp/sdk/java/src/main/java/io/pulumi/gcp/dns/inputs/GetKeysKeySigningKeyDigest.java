@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetKeysKeySigningKeyDigest extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="digest")
-    private final @Nullable String digest;
+      private final @Nullable String digest;
 
     public Optional<String> getDigest() {
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
@@ -30,7 +30,7 @@ public final class GetKeysKeySigningKeyDigest extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -79,7 +79,6 @@ public final class GetKeysKeySigningKeyDigest extends io.pulumi.resources.Invoke
             this.type = type;
             return this;
         }
-
         public GetKeysKeySigningKeyDigest build() {
             return new GetKeysKeySigningKeyDigest(digest, type);
         }

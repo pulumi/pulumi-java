@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceusage;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<Map<String,String>> dimensions;
+      private final @Nullable Input<Map<String,String>> dimensions;
 
     public Input<Map<String,String>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -33,7 +33,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="force")
-    private final @Nullable Input<Boolean> force;
+      private final @Nullable Input<Boolean> force;
 
     public Input<Boolean> getForce() {
         return this.force == null ? Input.empty() : this.force;
@@ -44,7 +44,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="limit", required=true)
-    private final Input<String> limit;
+      private final Input<String> limit;
 
     public Input<String> getLimit() {
         return this.limit;
@@ -55,7 +55,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metric", required=true)
-    private final Input<String> metric;
+      private final Input<String> metric;
 
     public Input<String> getMetric() {
         return this.metric;
@@ -66,7 +66,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="overrideValue", required=true)
-    private final Input<String> overrideValue;
+      private final Input<String> overrideValue;
 
     public Input<String> getOverrideValue() {
         return this.overrideValue;
@@ -78,7 +78,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -89,7 +89,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -223,7 +223,6 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public ConsumerQuotaOverrideArgs build() {
             return new ConsumerQuotaOverrideArgs(dimensions, force, limit, metric, overrideValue, project, service);
         }

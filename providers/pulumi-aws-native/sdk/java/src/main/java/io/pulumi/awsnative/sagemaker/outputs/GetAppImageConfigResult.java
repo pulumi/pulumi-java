@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.AppImageConfigKernelGatewayImageConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class GetAppImageConfigResult {
     /**
      * The Amazon Resource Name (ARN) of the AppImageConfig.
      * 
-     */
+    */
     public Optional<String> getAppImageConfigArn() {
         return Optional.ofNullable(this.appImageConfigArn);
     }
     /**
      * The KernelGatewayImageConfig.
      * 
-     */
+    */
     public Optional<AppImageConfigKernelGatewayImageConfig> getKernelGatewayImageConfig() {
         return Optional.ofNullable(this.kernelGatewayImageConfig);
     }
@@ -77,7 +77,6 @@ public final class GetAppImageConfigResult {
             this.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
-
         public GetAppImageConfigResult build() {
             return new GetAppImageConfigResult(appImageConfigArn, kernelGatewayImageConfig);
         }

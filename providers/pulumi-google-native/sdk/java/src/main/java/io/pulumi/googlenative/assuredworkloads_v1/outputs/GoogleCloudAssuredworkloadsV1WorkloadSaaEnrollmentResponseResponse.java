@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
     /**
      * Indicates SAA enrollment setup error if any.
      * 
-     */
+    */
     public List<String> getSetupErrors() {
         return this.setupErrors;
     }
     /**
      * Indicates SAA enrollment status of a given workload.
      * 
-     */
+    */
     public String getSetupStatus() {
         return this.setupStatus;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
             this.setupStatus = Objects.requireNonNull(setupStatus);
             return this;
         }
-
         public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(setupErrors, setupStatus);
         }

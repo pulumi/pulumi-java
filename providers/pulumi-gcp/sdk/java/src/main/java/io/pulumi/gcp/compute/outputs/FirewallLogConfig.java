@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class FirewallLogConfig {
      * This field denotes whether to include or exclude metadata for firewall logs.
      * Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
      * 
-     */
+    */
     public String getMetadata() {
         return this.metadata;
     }
@@ -54,7 +54,6 @@ public final class FirewallLogConfig {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public FirewallLogConfig build() {
             return new FirewallLogConfig(metadata);
         }

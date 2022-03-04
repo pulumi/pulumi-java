@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
     @InputImport(name="cluster", required=true)
-    private final String cluster;
+      private final String cluster;
 
     public String getCluster() {
         return this.cluster;
     }
 
     @InputImport(name="serviceArn", required=true)
-    private final String serviceArn;
+      private final String serviceArn;
 
     public String getServiceArn() {
         return this.serviceArn;
@@ -69,7 +69,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceArn = Objects.requireNonNull(serviceArn);
             return this;
         }
-
         public GetServiceArgs build() {
             return new GetServiceArgs(cluster, serviceArn);
         }

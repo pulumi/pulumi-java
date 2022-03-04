@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class DatadogInstallMethodResponse {
     /**
      * The installer version.
      * 
-     */
+    */
     public Optional<String> getInstallerVersion() {
         return Optional.ofNullable(this.installerVersion);
     }
     /**
      * The tool.
      * 
-     */
+    */
     public Optional<String> getTool() {
         return Optional.ofNullable(this.tool);
     }
     /**
      * The tool version.
      * 
-     */
+    */
     public Optional<String> getToolVersion() {
         return Optional.ofNullable(this.toolVersion);
     }
@@ -97,7 +97,6 @@ public final class DatadogInstallMethodResponse {
             this.toolVersion = toolVersion;
             return this;
         }
-
         public DatadogInstallMethodResponse build() {
             return new DatadogInstallMethodResponse(installerVersion, tool, toolVersion);
         }

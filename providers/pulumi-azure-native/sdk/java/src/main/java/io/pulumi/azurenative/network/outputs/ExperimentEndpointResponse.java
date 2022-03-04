@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ExperimentEndpointResponse {
     /**
      * The endpoint URL
      * 
-     */
+    */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * The name of the endpoint
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -76,7 +76,6 @@ public final class ExperimentEndpointResponse {
             this.name = name;
             return this;
         }
-
         public ExperimentEndpointResponse build() {
             return new ExperimentEndpointResponse(endpoint, name);
         }

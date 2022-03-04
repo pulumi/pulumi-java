@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="hostRedirect", required=true)
-    private final String hostRedirect;
+      private final String hostRedirect;
 
     public String getHostRedirect() {
         return this.hostRedirect;
@@ -33,7 +33,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="httpsRedirect", required=true)
-    private final Boolean httpsRedirect;
+      private final Boolean httpsRedirect;
 
     public Boolean getHttpsRedirect() {
         return this.httpsRedirect;
@@ -44,7 +44,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="pathRedirect", required=true)
-    private final String pathRedirect;
+      private final String pathRedirect;
 
     public String getPathRedirect() {
         return this.pathRedirect;
@@ -55,7 +55,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="prefixRedirect", required=true)
-    private final String prefixRedirect;
+      private final String prefixRedirect;
 
     public String getPrefixRedirect() {
         return this.prefixRedirect;
@@ -66,7 +66,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="redirectResponseCode", required=true)
-    private final String redirectResponseCode;
+      private final String redirectResponseCode;
 
     public String getRedirectResponseCode() {
         return this.redirectResponseCode;
@@ -77,7 +77,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="stripQuery", required=true)
-    private final Boolean stripQuery;
+      private final Boolean stripQuery;
 
     public Boolean getStripQuery() {
         return this.stripQuery;
@@ -166,7 +166,6 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }
-
         public HttpRedirectActionResponse build() {
             return new HttpRedirectActionResponse(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

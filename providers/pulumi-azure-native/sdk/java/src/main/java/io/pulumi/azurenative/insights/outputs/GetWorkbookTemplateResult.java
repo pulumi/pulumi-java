@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.WorkbookTemplateGalleryResponse;
 import io.pulumi.azurenative.insights.outputs.WorkbookTemplateLocalizedGalleryResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -95,70 +95,70 @@ public final class GetWorkbookTemplateResult {
     /**
      * Information about the author of the workbook template.
      * 
-     */
+    */
     public Optional<String> getAuthor() {
         return Optional.ofNullable(this.author);
     }
     /**
      * Workbook galleries supported by the template.
      * 
-     */
+    */
     public List<WorkbookTemplateGalleryResponse> getGalleries() {
         return this.galleries;
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
      * 
-     */
+    */
     public Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> getLocalized() {
         return this.localized == null ? Map.of() : this.localized;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Valid JSON object containing workbook template payload.
      * 
-     */
+    */
     public Object getTemplateData() {
         return this.templateData;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -250,7 +250,6 @@ public final class GetWorkbookTemplateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkbookTemplateResult build() {
             return new GetWorkbookTemplateResult(author, galleries, id, localized, location, name, priority, tags, templateData, type);
         }

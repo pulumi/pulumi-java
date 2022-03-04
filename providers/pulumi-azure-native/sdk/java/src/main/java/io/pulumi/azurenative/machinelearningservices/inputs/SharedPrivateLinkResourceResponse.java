@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable String groupId;
+      private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
@@ -30,7 +30,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -41,7 +41,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateLinkResourceId")
-    private final @Nullable String privateLinkResourceId;
+      private final @Nullable String privateLinkResourceId;
 
     public Optional<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
@@ -52,7 +52,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="requestMessage")
-    private final @Nullable String requestMessage;
+      private final @Nullable String requestMessage;
 
     public Optional<String> getRequestMessage() {
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
@@ -63,7 +63,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -142,7 +142,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
             this.status = status;
             return this;
         }
-
         public SharedPrivateLinkResourceResponse build() {
             return new SharedPrivateLinkResourceResponse(groupId, name, privateLinkResourceId, requestMessage, status);
         }

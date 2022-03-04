@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends io.pul
      * 
      */
     @InputImport(name="sampler", required=true)
-    private final String sampler;
+      private final String sampler;
 
     public String getSampler() {
         return this.sampler;
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends io.pul
      * 
      */
     @InputImport(name="samplingRate", required=true)
-    private final Double samplingRate;
+      private final Double samplingRate;
 
     public Double getSamplingRate() {
         return this.samplingRate;
@@ -82,7 +82,6 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends io.pul
             this.samplingRate = Objects.requireNonNull(samplingRate);
             return this;
         }
-
         public GoogleCloudApigeeV1TraceSamplingConfigResponse build() {
             return new GoogleCloudApigeeV1TraceSamplingConfigResponse(sampler, samplingRate);
         }

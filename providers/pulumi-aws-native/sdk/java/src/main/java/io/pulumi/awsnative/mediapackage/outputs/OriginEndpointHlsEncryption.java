@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsEncryptionEncryptionMethod;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointSpekeKeyProvider;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,28 +54,28 @@ public final class OriginEndpointHlsEncryption {
     /**
      * A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
      * 
-     */
+    */
     public Optional<String> getConstantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
      * The encryption method to use.
      * 
-     */
+    */
     public Optional<OriginEndpointHlsEncryptionEncryptionMethod> getEncryptionMethod() {
         return Optional.ofNullable(this.encryptionMethod);
     }
     /**
      * Interval (in seconds) between each encryption key rotation.
      * 
-     */
+    */
     public Optional<Integer> getKeyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
     /**
      * When enabled, the EXT-X-KEY tag will be repeated in output manifests.
      * 
-     */
+    */
     public Optional<Boolean> getRepeatExtXKey() {
         return Optional.ofNullable(this.repeatExtXKey);
     }
@@ -135,7 +135,6 @@ public final class OriginEndpointHlsEncryption {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public OriginEndpointHlsEncryption build() {
             return new OriginEndpointHlsEncryption(constantInitializationVector, encryptionMethod, keyRotationIntervalSeconds, repeatExtXKey, spekeKeyProvider);
         }

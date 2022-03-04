@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vpcaccess_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnector {
-/**
- * Gets a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
+    private GetConnector() {}
+    public interface BuilderApplicator {
+        public void apply(GetConnectorArgs.Builder a);
+    }
+    private static GetConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConnectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
  * 
- */
+     */
+    public static CompletableFuture<GetConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
+     * 
+     */
     public static CompletableFuture<GetConnectorResult> invokeAsync(GetConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vpcaccess/v1:getConnector", TypeShape.of(GetConnectorResult.class), args == null ? GetConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

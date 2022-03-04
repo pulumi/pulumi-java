@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.outputs.StreamKeyTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetStreamKeyResult {
     /**
      * Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
      * 
-     */
+    */
     public List<StreamKeyTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Stream-key value.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -99,7 +99,6 @@ public final class GetStreamKeyResult {
             this.value = value;
             return this;
         }
-
         public GetStreamKeyResult build() {
             return new GetStreamKeyResult(arn, tags, value);
         }

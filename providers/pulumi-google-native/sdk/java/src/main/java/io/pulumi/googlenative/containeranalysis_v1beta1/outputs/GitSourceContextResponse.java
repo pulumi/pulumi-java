@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GitSourceContextResponse {
     /**
      * Git commit hash.
      * 
-     */
+    */
     public String getRevisionId() {
         return this.revisionId;
     }
     /**
      * Git repository URL.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -74,7 +74,6 @@ public final class GitSourceContextResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GitSourceContextResponse build() {
             return new GitSourceContextResponse(revisionId, url);
         }

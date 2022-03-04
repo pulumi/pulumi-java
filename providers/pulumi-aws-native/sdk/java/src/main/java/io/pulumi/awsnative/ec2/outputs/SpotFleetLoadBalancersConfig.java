@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetClassicLoadBalancersConfig;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetTargetGroupsConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class SpotFleetLoadBalancersConfig {
             this.targetGroupsConfig = targetGroupsConfig;
             return this;
         }
-
         public SpotFleetLoadBalancersConfig build() {
             return new SpotFleetLoadBalancersConfig(classicLoadBalancersConfig, targetGroupsConfig);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetAccountArgs;
 import io.pulumi.azurenative.datashare.outputs.GetAccountResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccount {
-/**
- * An account data transfer object.
+    private GetAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccountArgs.Builder a);
+    }
+    private static GetAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An account data transfer object.
  * API Version: 2020-09-01.
  * 
- *
- * An account data transfer object.
+     *
+     * An account data transfer object.
  * 
- */
+     */
+    public static CompletableFuture<GetAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An account data transfer object.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * An account data transfer object.
+     * 
+     */
     public static CompletableFuture<GetAccountResult> invokeAsync(GetAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getAccount", TypeShape.of(GetAccountResult.class), args == null ? GetAccountArgs.Empty : args, Utilities.withVersion(options));
     }

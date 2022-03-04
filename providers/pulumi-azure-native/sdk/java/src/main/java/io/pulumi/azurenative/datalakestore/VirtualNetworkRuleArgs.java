@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakestore;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -52,7 +52,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkRuleName")
-    private final @Nullable Input<String> virtualNetworkRuleName;
+      private final @Nullable Input<String> virtualNetworkRuleName;
 
     public Input<String> getVirtualNetworkRuleName() {
         return this.virtualNetworkRuleName == null ? Input.empty() : this.virtualNetworkRuleName;
@@ -141,7 +141,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             this.virtualNetworkRuleName = Input.ofNullable(virtualNetworkRuleName);
             return this;
         }
-
         public VirtualNetworkRuleArgs build() {
             return new VirtualNetworkRuleArgs(accountName, resourceGroupName, subnetId, virtualNetworkRuleName);
         }

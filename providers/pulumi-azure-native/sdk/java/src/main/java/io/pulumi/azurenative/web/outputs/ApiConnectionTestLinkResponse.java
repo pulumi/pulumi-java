@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ApiConnectionTestLinkResponse {
     /**
      * HTTP Method
      * 
-     */
+    */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
     /**
      * Test link request URI
      * 
-     */
+    */
     public Optional<String> getRequestUri() {
         return Optional.ofNullable(this.requestUri);
     }
@@ -76,7 +76,6 @@ public final class ApiConnectionTestLinkResponse {
             this.requestUri = requestUri;
             return this;
         }
-
         public ApiConnectionTestLinkResponse build() {
             return new ApiConnectionTestLinkResponse(method, requestUri);
         }

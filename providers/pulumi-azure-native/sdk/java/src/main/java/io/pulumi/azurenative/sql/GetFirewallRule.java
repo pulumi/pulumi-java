@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.inputs.GetFirewallRuleArgs;
 import io.pulumi.azurenative.sql.outputs.GetFirewallRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallRule {
-/**
- * A server firewall rule.
+    private GetFirewallRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetFirewallRuleArgs.Builder a);
+    }
+    private static GetFirewallRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFirewallRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A server firewall rule.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A server firewall rule.
+     *
+     * A server firewall rule.
  * 
- */
+     */
+    public static CompletableFuture<GetFirewallRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A server firewall rule.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A server firewall rule.
+     * 
+     */
     public static CompletableFuture<GetFirewallRuleResult> invokeAsync(GetFirewallRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args == null ? GetFirewallRuleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudasset_v1.outputs.AccessSelectorResponse;
 import io.pulumi.googlenative.cloudasset_v1.outputs.ConditionContextResponse;
 import io.pulumi.googlenative.cloudasset_v1.outputs.IdentitySelectorResponse;
@@ -64,42 +64,42 @@ public final class IamPolicyAnalysisQueryResponse {
     /**
      * Optional. Specifies roles or permissions for analysis. This is optional.
      * 
-     */
+    */
     public AccessSelectorResponse getAccessSelector() {
         return this.accessSelector;
     }
     /**
      * Optional. The hypothetical context for IAM conditions evaluation.
      * 
-     */
+    */
     public ConditionContextResponse getConditionContext() {
         return this.conditionContext;
     }
     /**
      * Optional. Specifies an identity for analysis.
      * 
-     */
+    */
     public IdentitySelectorResponse getIdentitySelector() {
         return this.identitySelector;
     }
     /**
      * Optional. The query options.
      * 
-     */
+    */
     public OptionsResponse getOptions() {
         return this.options;
     }
     /**
      * Optional. Specifies a resource for analysis.
      * 
-     */
+    */
     public ResourceSelectorResponse getResourceSelector() {
         return this.resourceSelector;
     }
     /**
      * The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as "organizations/123"), a folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
      * 
-     */
+    */
     public String getScope() {
         return this.scope;
     }
@@ -163,7 +163,6 @@ public final class IamPolicyAnalysisQueryResponse {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public IamPolicyAnalysisQueryResponse build() {
             return new IamPolicyAnalysisQueryResponse(accessSelector, conditionContext, identitySelector, options, resourceSelector, scope);
         }

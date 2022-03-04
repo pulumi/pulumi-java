@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="caCertificateAccessUrl", required=true)
-    private final String caCertificateAccessUrl;
+      private final String caCertificateAccessUrl;
 
     public String getCaCertificateAccessUrl() {
         return this.caCertificateAccessUrl;
@@ -32,7 +32,7 @@ public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="crlAccessUrl", required=true)
-    private final String crlAccessUrl;
+      private final String crlAccessUrl;
 
     public String getCrlAccessUrl() {
         return this.crlAccessUrl;
@@ -81,7 +81,6 @@ public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
             this.crlAccessUrl = Objects.requireNonNull(crlAccessUrl);
             return this;
         }
-
         public AccessUrlsResponse build() {
             return new AccessUrlsResponse(caCertificateAccessUrl, crlAccessUrl);
         }

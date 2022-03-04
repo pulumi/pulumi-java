@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
     public static final TaskDefinitionMountPointArgs Empty = new TaskDefinitionMountPointArgs();
 
     @InputImport(name="containerPath")
-    private final @Nullable Input<String> containerPath;
+      private final @Nullable Input<String> containerPath;
 
     public Input<String> getContainerPath() {
         return this.containerPath == null ? Input.empty() : this.containerPath;
     }
 
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
     @InputImport(name="sourceVolume")
-    private final @Nullable Input<String> sourceVolume;
+      private final @Nullable Input<String> sourceVolume;
 
     public Input<String> getSourceVolume() {
         return this.sourceVolume == null ? Input.empty() : this.sourceVolume;
@@ -104,7 +104,6 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
             this.sourceVolume = Input.ofNullable(sourceVolume);
             return this;
         }
-
         public TaskDefinitionMountPointArgs build() {
             return new TaskDefinitionMountPointArgs(containerPath, readOnly, sourceVolume);
         }

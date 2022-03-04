@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.WebBackendServiceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class WebBackendServiceIamMemberArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<WebBackendServiceIamMemberConditionArgs> condition;
+      private final @Nullable Input<WebBackendServiceIamMemberConditionArgs> condition;
 
     public Input<WebBackendServiceIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -40,7 +40,7 @@ public final class WebBackendServiceIamMemberArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -53,7 +53,7 @@ public final class WebBackendServiceIamMemberArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -64,7 +64,7 @@ public final class WebBackendServiceIamMemberArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="webBackendService", required=true)
-    private final Input<String> webBackendService;
+      private final Input<String> webBackendService;
 
     public Input<String> getWebBackendService() {
         return this.webBackendService;
@@ -168,7 +168,6 @@ public final class WebBackendServiceIamMemberArgs extends io.pulumi.resources.Re
             this.webBackendService = Input.of(Objects.requireNonNull(webBackendService));
             return this;
         }
-
         public WebBackendServiceIamMemberArgs build() {
             return new WebBackendServiceIamMemberArgs(condition, member, project, role, webBackendService);
         }

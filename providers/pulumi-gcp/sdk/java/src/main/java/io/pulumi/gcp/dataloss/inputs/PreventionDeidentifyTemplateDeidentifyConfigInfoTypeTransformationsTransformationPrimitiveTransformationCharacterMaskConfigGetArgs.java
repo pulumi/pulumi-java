@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="charactersToIgnores")
-    private final @Nullable Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs>> charactersToIgnores;
+      private final @Nullable Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs>> charactersToIgnores;
 
     public Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs>> getCharactersToIgnores() {
         return this.charactersToIgnores == null ? Input.empty() : this.charactersToIgnores;
@@ -37,7 +37,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="maskingCharacter")
-    private final @Nullable Input<String> maskingCharacter;
+      private final @Nullable Input<String> maskingCharacter;
 
     public Input<String> getMaskingCharacter() {
         return this.maskingCharacter == null ? Input.empty() : this.maskingCharacter;
@@ -48,7 +48,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="numberToMask")
-    private final @Nullable Input<Integer> numberToMask;
+      private final @Nullable Input<Integer> numberToMask;
 
     public Input<Integer> getNumberToMask() {
         return this.numberToMask == null ? Input.empty() : this.numberToMask;
@@ -60,7 +60,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="reverseOrder")
-    private final @Nullable Input<Boolean> reverseOrder;
+      private final @Nullable Input<Boolean> reverseOrder;
 
     public Input<Boolean> getReverseOrder() {
         return this.reverseOrder == null ? Input.empty() : this.reverseOrder;
@@ -149,7 +149,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.reverseOrder = Input.ofNullable(reverseOrder);
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs(charactersToIgnores, maskingCharacter, numberToMask, reverseOrder);
         }

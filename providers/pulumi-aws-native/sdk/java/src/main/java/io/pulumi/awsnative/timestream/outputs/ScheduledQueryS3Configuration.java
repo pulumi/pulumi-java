@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryEncryptionOption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class ScheduledQueryS3Configuration {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
-
         public ScheduledQueryS3Configuration build() {
             return new ScheduledQueryS3Configuration(bucketName, encryptionOption, objectKeyPrefix);
         }

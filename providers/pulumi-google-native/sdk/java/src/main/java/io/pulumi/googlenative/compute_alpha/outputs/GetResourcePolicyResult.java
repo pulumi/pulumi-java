@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyGroupPlacementPolicyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyInstanceSchedulePolicyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyResourceStatusResponse;
@@ -105,7 +105,7 @@ public final class GetResourcePolicyResult {
     /**
      * Creation timestamp in RFC3339 text format.
      * 
-     */
+    */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
@@ -115,28 +115,28 @@ public final class GetResourcePolicyResult {
     /**
      * Resource policy for instances for placement configuration.
      * 
-     */
+    */
     public ResourcePolicyGroupPlacementPolicyResponse getGroupPlacementPolicy() {
         return this.groupPlacementPolicy;
     }
     /**
      * Resource policy for scheduling instance operations.
      * 
-     */
+    */
     public ResourcePolicyInstanceSchedulePolicyResponse getInstanceSchedulePolicy() {
         return this.instanceSchedulePolicy;
     }
     /**
      * Type of the resource. Always compute#resource_policies for resource policies.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -146,42 +146,42 @@ public final class GetResourcePolicyResult {
     /**
      * The system status of the resource policy.
      * 
-     */
+    */
     public ResourcePolicyResourceStatusResponse getResourceStatus() {
         return this.resourceStatus;
     }
     /**
      * Server-defined fully-qualified URL for this resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
      * 
-     */
+    */
     public String getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
      * Resource policy for persistent disks for creating snapshots.
      * 
-     */
+    */
     public ResourcePolicySnapshotSchedulePolicyResponse getSnapshotSchedulePolicy() {
         return this.snapshotSchedulePolicy;
     }
     /**
      * The status of resource policy creation.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource policy applicable to VMs for infrastructure maintenance.
      * 
-     */
+    */
     public ResourcePolicyVmMaintenancePolicyResponse getVmMaintenancePolicy() {
         return this.vmMaintenancePolicy;
     }
@@ -294,7 +294,6 @@ public final class GetResourcePolicyResult {
             this.vmMaintenancePolicy = Objects.requireNonNull(vmMaintenancePolicy);
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(creationTimestamp, description, groupPlacementPolicy, instanceSchedulePolicy, kind, name, region, resourceStatus, selfLink, selfLinkWithId, snapshotSchedulePolicy, status, vmMaintenancePolicy);
         }

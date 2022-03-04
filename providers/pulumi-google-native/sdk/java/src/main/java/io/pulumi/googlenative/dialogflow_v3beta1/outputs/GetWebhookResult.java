@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse;
 import java.lang.Boolean;
@@ -62,42 +62,42 @@ public final class GetWebhookResult {
     /**
      * Indicates whether the webhook is disabled.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
     /**
      * The human-readable name of the webhook, unique within the agent.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Configuration for a generic web service.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse getGenericWebService() {
         return this.genericWebService;
     }
     /**
      * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse getServiceDirectory() {
         return this.serviceDirectory;
     }
     /**
      * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
      * 
-     */
+    */
     public String getTimeout() {
         return this.timeout;
     }
@@ -161,7 +161,6 @@ public final class GetWebhookResult {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public GetWebhookResult build() {
             return new GetWebhookResult(disabled, displayName, genericWebService, name, serviceDirectory, timeout);
         }

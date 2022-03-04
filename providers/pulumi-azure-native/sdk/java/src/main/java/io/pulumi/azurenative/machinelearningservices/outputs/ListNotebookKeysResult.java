@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class ListNotebookKeysResult {
             this.secondaryAccessKey = Objects.requireNonNull(secondaryAccessKey);
             return this;
         }
-
         public ListNotebookKeysResult build() {
             return new ListNotebookKeysResult(primaryAccessKey, secondaryAccessKey);
         }

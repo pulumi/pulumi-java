@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunExecutionState;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunResultState;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScanRunErrorTraceArgs;
@@ -30,7 +30,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -41,7 +41,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorTrace")
-    private final @Nullable Input<ScanRunErrorTraceArgs> errorTrace;
+      private final @Nullable Input<ScanRunErrorTraceArgs> errorTrace;
 
     public Input<ScanRunErrorTraceArgs> getErrorTrace() {
         return this.errorTrace == null ? Input.empty() : this.errorTrace;
@@ -52,7 +52,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionState")
-    private final @Nullable Input<ScanRunExecutionState> executionState;
+      private final @Nullable Input<ScanRunExecutionState> executionState;
 
     public Input<ScanRunExecutionState> getExecutionState() {
         return this.executionState == null ? Input.empty() : this.executionState;
@@ -63,7 +63,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasVulnerabilities")
-    private final @Nullable Input<Boolean> hasVulnerabilities;
+      private final @Nullable Input<Boolean> hasVulnerabilities;
 
     public Input<Boolean> getHasVulnerabilities() {
         return this.hasVulnerabilities == null ? Input.empty() : this.hasVulnerabilities;
@@ -74,7 +74,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -85,7 +85,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="progressPercent")
-    private final @Nullable Input<Integer> progressPercent;
+      private final @Nullable Input<Integer> progressPercent;
 
     public Input<Integer> getProgressPercent() {
         return this.progressPercent == null ? Input.empty() : this.progressPercent;
@@ -96,7 +96,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resultState")
-    private final @Nullable Input<ScanRunResultState> resultState;
+      private final @Nullable Input<ScanRunResultState> resultState;
 
     public Input<ScanRunResultState> getResultState() {
         return this.resultState == null ? Input.empty() : this.resultState;
@@ -107,7 +107,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -118,7 +118,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlsCrawledCount")
-    private final @Nullable Input<String> urlsCrawledCount;
+      private final @Nullable Input<String> urlsCrawledCount;
 
     public Input<String> getUrlsCrawledCount() {
         return this.urlsCrawledCount == null ? Input.empty() : this.urlsCrawledCount;
@@ -129,7 +129,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlsTestedCount")
-    private final @Nullable Input<String> urlsTestedCount;
+      private final @Nullable Input<String> urlsTestedCount;
 
     public Input<String> getUrlsTestedCount() {
         return this.urlsTestedCount == null ? Input.empty() : this.urlsTestedCount;
@@ -140,7 +140,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="warningTraces")
-    private final @Nullable Input<List<ScanRunWarningTraceArgs>> warningTraces;
+      private final @Nullable Input<List<ScanRunWarningTraceArgs>> warningTraces;
 
     public Input<List<ScanRunWarningTraceArgs>> getWarningTraces() {
         return this.warningTraces == null ? Input.empty() : this.warningTraces;
@@ -334,7 +334,6 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             this.warningTraces = Input.ofNullable(warningTraces);
             return this;
         }
-
         public ScanRunArgs build() {
             return new ScanRunArgs(endTime, errorTrace, executionState, hasVulnerabilities, name, progressPercent, resultState, startTime, urlsCrawledCount, urlsTestedCount, warningTraces);
         }

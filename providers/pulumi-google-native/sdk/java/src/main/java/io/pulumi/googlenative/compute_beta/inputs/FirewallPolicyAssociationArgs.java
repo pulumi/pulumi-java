@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attachmentTarget")
-    private final @Nullable Input<String> attachmentTarget;
+      private final @Nullable Input<String> attachmentTarget;
 
     public Input<String> getAttachmentTarget() {
         return this.attachmentTarget == null ? Input.empty() : this.attachmentTarget;
@@ -30,7 +30,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,6 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public FirewallPolicyAssociationArgs build() {
             return new FirewallPolicyAssociationArgs(attachmentTarget, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetArchiveArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetArchiveArgs Empty = new GetArchiveArgs();
 
     @InputImport(name="archiveName", required=true)
-    private final String archiveName;
+      private final String archiveName;
 
     public String getArchiveName() {
         return this.archiveName;
@@ -51,7 +51,6 @@ public final class GetArchiveArgs extends io.pulumi.resources.InvokeArgs {
             this.archiveName = Objects.requireNonNull(archiveName);
             return this;
         }
-
         public GetArchiveArgs build() {
             return new GetArchiveArgs(archiveName);
         }

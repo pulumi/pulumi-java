@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsArgs;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1EntryOverviewArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
      * 
      */
     @InputImport(name="contacts")
-    private final @Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts;
+      private final @Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts;
 
     public Input<GoogleCloudDatacatalogV1ContactsArgs> getContacts() {
         return this.contacts == null ? Input.empty() : this.contacts;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
      * 
      */
     @InputImport(name="entryOverview")
-    private final @Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
+      private final @Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
 
     public Input<GoogleCloudDatacatalogV1EntryOverviewArgs> getEntryOverview() {
         return this.entryOverview == null ? Input.empty() : this.entryOverview;
@@ -94,7 +94,6 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
             this.entryOverview = Input.ofNullable(entryOverview);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BusinessContextArgs build() {
             return new GoogleCloudDatacatalogV1BusinessContextArgs(contacts, entryOverview);
         }

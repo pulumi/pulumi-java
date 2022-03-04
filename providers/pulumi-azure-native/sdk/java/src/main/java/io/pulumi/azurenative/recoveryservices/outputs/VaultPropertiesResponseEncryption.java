@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.CmkKekIdentityResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.CmkKeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class VaultPropertiesResponseEncryption {
     /**
      * Enabling/Disabling the Double Encryption state
      * 
-     */
+    */
     public Optional<String> getInfrastructureEncryption() {
         return Optional.ofNullable(this.infrastructureEncryption);
     }
     /**
      * The details of the identity used for CMK
      * 
-     */
+    */
     public Optional<CmkKekIdentityResponse> getKekIdentity() {
         return Optional.ofNullable(this.kekIdentity);
     }
     /**
      * The properties of the Key Vault which hosts CMK
      * 
-     */
+    */
     public Optional<CmkKeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -99,7 +99,6 @@ public final class VaultPropertiesResponseEncryption {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public VaultPropertiesResponseEncryption build() {
             return new VaultPropertiesResponseEncryption(infrastructureEncryption, kekIdentity, keyVaultProperties);
         }

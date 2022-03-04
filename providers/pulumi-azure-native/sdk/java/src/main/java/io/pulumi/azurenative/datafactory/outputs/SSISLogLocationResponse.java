@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SSISAccessCredentialResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class SSISLogLocationResponse {
     /**
      * The package execution log access credential.
      * 
-     */
+    */
     public Optional<SSISAccessCredentialResponse> getAccessCredential() {
         return Optional.ofNullable(this.accessCredential);
     }
     /**
      * The SSIS package execution log path. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getLogPath() {
         return this.logPath;
     }
     /**
      * Specifies the interval to refresh log. The default interval is 5 minutes. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getLogRefreshInterval() {
         return Optional.ofNullable(this.logRefreshInterval);
     }
     /**
      * The type of SSIS log location.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -120,7 +120,6 @@ public final class SSISLogLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SSISLogLocationResponse build() {
             return new SSISLogLocationResponse(accessCredential, logPath, logRefreshInterval, type);
         }

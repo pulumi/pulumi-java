@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetRouteFilterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetRouteFilterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetRouteFilterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeFilterName", required=true)
-    private final String routeFilterName;
+      private final String routeFilterName;
 
     public String getRouteFilterName() {
         return this.routeFilterName;
@@ -100,7 +100,6 @@ public final class GetRouteFilterArgs extends io.pulumi.resources.InvokeArgs {
             this.routeFilterName = Objects.requireNonNull(routeFilterName);
             return this;
         }
-
         public GetRouteFilterArgs build() {
             return new GetRouteFilterArgs(expand, resourceGroupName, routeFilterName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs extends i
      * 
      */
     @InputImport(name="signatureAlgorithm", required=true)
-    private final Input<String> signatureAlgorithm;
+      private final Input<String> signatureAlgorithm;
 
     public Input<String> getSignatureAlgorithm() {
         return this.signatureAlgorithm;
@@ -62,7 +62,6 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs extends i
             this.signatureAlgorithm = Input.of(Objects.requireNonNull(signatureAlgorithm));
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs(signatureAlgorithm);
         }

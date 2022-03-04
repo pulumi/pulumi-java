@@ -6,17 +6,33 @@ package io.pulumi.awsnative.chatbot;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.chatbot.inputs.GetSlackChannelConfigurationArgs;
 import io.pulumi.awsnative.chatbot.outputs.GetSlackChannelConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSlackChannelConfiguration {
-/**
- * Resource schema for AWS::Chatbot::SlackChannelConfiguration.
+    private GetSlackChannelConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetSlackChannelConfigurationArgs.Builder a);
+    }
+    private static GetSlackChannelConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSlackChannelConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Chatbot::SlackChannelConfiguration.
  * 
- */
+     */
+    public static CompletableFuture<GetSlackChannelConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Chatbot::SlackChannelConfiguration.
+     * 
+     */
     public static CompletableFuture<GetSlackChannelConfigurationResult> invokeAsync(GetSlackChannelConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:chatbot:getSlackChannelConfiguration", TypeShape.of(GetSlackChannelConfigurationResult.class), args == null ? GetSlackChannelConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

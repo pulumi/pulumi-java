@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class GlobalTableContributorInsightsSpecification {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GlobalTableContributorInsightsSpecification build() {
             return new GlobalTableContributorInsightsSpecification(enabled);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleHeaderAction;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleMatchRule;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleRouteAction;
@@ -95,7 +95,7 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherRouteRuleHeaderAction> getHeaderAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -103,7 +103,7 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * The rules for determining a match.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherRouteRuleMatchRule> getMatchRules() {
         return this.matchRules == null ? List.of() : this.matchRules;
     }
@@ -122,7 +122,7 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
      * future without any impact on existing rules.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
@@ -135,14 +135,14 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * or urlRedirect must be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherRouteRuleRouteAction> getRouteAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
      * A reference to expected RegionBackendService resource the given URL should be mapped to.
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
@@ -152,7 +152,7 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherRouteRuleUrlRedirect> getUrlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
@@ -216,7 +216,6 @@ public final class RegionUrlMapPathMatcherRouteRule {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRule build() {
             return new RegionUrlMapPathMatcherRouteRule(headerAction, matchRules, priority, routeAction, service, urlRedirect);
         }

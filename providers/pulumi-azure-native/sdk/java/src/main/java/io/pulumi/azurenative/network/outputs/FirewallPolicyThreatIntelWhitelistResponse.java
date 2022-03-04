@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
     /**
      * List of FQDNs for the ThreatIntel Whitelist.
      * 
-     */
+    */
     public List<String> getFqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
     /**
      * List of IP addresses for the ThreatIntel Whitelist.
      * 
-     */
+    */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
@@ -76,7 +76,6 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public FirewallPolicyThreatIntelWhitelistResponse build() {
             return new FirewallPolicyThreatIntelWhitelistResponse(fqdns, ipAddresses);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -77,28 +77,28 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
     /**
      * Source agent jobs as a map from agent job name to id.
      * 
-     */
+    */
     public Map<String,String> getAgentJobs() {
         return this.agentJobs;
     }
     /**
      * Source databases as a map from database name to database id
      * 
-     */
+    */
     public Map<String,String> getDatabases() {
         return this.databases;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Source logins as a map from login name to login id.
      * 
-     */
+    */
     public Map<String,String> getLogins() {
         return this.logins;
     }
@@ -106,28 +106,28 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
      * Type of result - database level or task level
      * Expected value is 'TaskLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Source server brand version
      * 
-     */
+    */
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
      * Source server version
      * 
-     */
+    */
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Validation errors
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }
@@ -205,7 +205,6 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputTaskLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputTaskLevelResponse(agentJobs, databases, id, logins, resultType, sourceServerBrandVersion, sourceServerVersion, validationErrors);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="access", required=true)
-    private final String access;
+      private final String access;
 
     public String getAccess() {
         return this.access;
@@ -35,7 +35,7 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="anonymousGID")
-    private final @Nullable String anonymousGID;
+      private final @Nullable String anonymousGID;
 
     public Optional<String> getAnonymousGID() {
         return this.anonymousGID == null ? Optional.empty() : Optional.ofNullable(this.anonymousGID);
@@ -46,7 +46,7 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="anonymousUID")
-    private final @Nullable String anonymousUID;
+      private final @Nullable String anonymousUID;
 
     public Optional<String> getAnonymousUID() {
         return this.anonymousUID == null ? Optional.empty() : Optional.ofNullable(this.anonymousUID);
@@ -57,7 +57,7 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable String filter;
+      private final @Nullable String filter;
 
     public Optional<String> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
@@ -68,7 +68,7 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rootSquash")
-    private final @Nullable Boolean rootSquash;
+      private final @Nullable Boolean rootSquash;
 
     public Optional<Boolean> getRootSquash() {
         return this.rootSquash == null ? Optional.empty() : Optional.ofNullable(this.rootSquash);
@@ -79,7 +79,7 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -90,7 +90,7 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="submountAccess")
-    private final @Nullable Boolean submountAccess;
+      private final @Nullable Boolean submountAccess;
 
     public Optional<Boolean> getSubmountAccess() {
         return this.submountAccess == null ? Optional.empty() : Optional.ofNullable(this.submountAccess);
@@ -101,7 +101,7 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="suid")
-    private final @Nullable Boolean suid;
+      private final @Nullable Boolean suid;
 
     public Optional<Boolean> getSuid() {
         return this.suid == null ? Optional.empty() : Optional.ofNullable(this.suid);
@@ -210,7 +210,6 @@ public final class NfsAccessRuleResponse extends io.pulumi.resources.InvokeArgs 
             this.suid = suid;
             return this;
         }
-
         public NfsAccessRuleResponse build() {
             return new NfsAccessRuleResponse(access, anonymousGID, anonymousUID, filter, rootSquash, scope, submountAccess, suid);
         }

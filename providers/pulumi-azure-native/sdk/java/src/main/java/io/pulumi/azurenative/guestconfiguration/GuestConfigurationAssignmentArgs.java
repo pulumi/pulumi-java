@@ -5,7 +5,7 @@ package io.pulumi.azurenative.guestconfiguration;
 
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationAssignmentPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="guestConfigurationAssignmentName")
-    private final @Nullable Input<String> guestConfigurationAssignmentName;
+      private final @Nullable Input<String> guestConfigurationAssignmentName;
 
     public Input<String> getGuestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName == null ? Input.empty() : this.guestConfigurationAssignmentName;
@@ -31,7 +31,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -42,7 +42,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties;
+      private final @Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties;
 
     public Input<GuestConfigurationAssignmentPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -64,7 +64,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vmName", required=true)
-    private final Input<String> vmName;
+      private final Input<String> vmName;
 
     public Input<String> getVmName() {
         return this.vmName;
@@ -194,7 +194,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
             this.vmName = Input.of(Objects.requireNonNull(vmName));
             return this;
         }
-
         public GuestConfigurationAssignmentArgs build() {
             return new GuestConfigurationAssignmentArgs(guestConfigurationAssignmentName, location, name, properties, resourceGroupName, vmName);
         }

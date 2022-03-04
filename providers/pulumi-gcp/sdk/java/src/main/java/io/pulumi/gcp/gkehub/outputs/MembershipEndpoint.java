@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gkehub.outputs.MembershipEndpointGkeCluster;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class MembershipEndpoint {
      * If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<MembershipEndpointGkeCluster> getGkeCluster() {
         return Optional.ofNullable(this.gkeCluster);
     }
@@ -56,7 +56,6 @@ public final class MembershipEndpoint {
             this.gkeCluster = gkeCluster;
             return this;
         }
-
         public MembershipEndpoint build() {
             return new MembershipEndpoint(gkeCluster);
         }

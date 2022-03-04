@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetFlowLogArgs;
 import io.pulumi.azurenative.network.outputs.GetFlowLogResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFlowLog {
-/**
- * A flow log resource.
+    private GetFlowLog() {}
+    public interface BuilderApplicator {
+        public void apply(GetFlowLogArgs.Builder a);
+    }
+    private static GetFlowLogArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFlowLogArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A flow log resource.
  * API Version: 2020-11-01.
  * 
- *
- * A flow log resource.
+     *
+     * A flow log resource.
  * 
- */
+     */
+    public static CompletableFuture<GetFlowLogResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A flow log resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * A flow log resource.
+     * 
+     */
     public static CompletableFuture<GetFlowLogResult> invokeAsync(GetFlowLogArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFlowLog", TypeShape.of(GetFlowLogResult.class), args == null ? GetFlowLogArgs.Empty : args, Utilities.withVersion(options));
     }

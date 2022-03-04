@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class MatchVariableResponse {
     /**
      * The selector of match variable.
      * 
-     */
+    */
     public Optional<String> getSelector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * Match Variable.
      * 
-     */
+    */
     public String getVariableName() {
         return this.variableName;
     }
@@ -76,7 +76,6 @@ public final class MatchVariableResponse {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
-
         public MatchVariableResponse build() {
             return new MatchVariableResponse(selector, variableName);
         }

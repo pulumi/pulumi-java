@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs;
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="apiName")
-    private final @Nullable Input<String> apiName;
+      private final @Nullable Input<String> apiName;
 
     public Input<String> getApiName() {
         return this.apiName == null ? Input.empty() : this.apiName;
@@ -33,7 +33,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="deploymentParameters")
-    private final @Nullable Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
+      private final @Nullable Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
 
     public Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> getDeploymentParameters() {
         return this.deploymentParameters == null ? Input.empty() : this.deploymentParameters;
@@ -44,7 +44,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="integrationServiceEnvironment")
-    private final @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
+      private final @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
 
     public Input<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
         return this.integrationServiceEnvironment == null ? Input.empty() : this.integrationServiceEnvironment;
@@ -55,7 +55,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="integrationServiceEnvironmentName", required=true)
-    private final Input<String> integrationServiceEnvironmentName;
+      private final Input<String> integrationServiceEnvironmentName;
 
     public Input<String> getIntegrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
@@ -66,7 +66,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -77,7 +77,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-    private final Input<String> resourceGroup;
+      private final Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup;
@@ -88,7 +88,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,6 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public IntegrationServiceEnvironmentManagedApiArgs build() {
             return new IntegrationServiceEnvironmentManagedApiArgs(apiName, deploymentParameters, integrationServiceEnvironment, integrationServiceEnvironmentName, location, resourceGroup, tags);
         }

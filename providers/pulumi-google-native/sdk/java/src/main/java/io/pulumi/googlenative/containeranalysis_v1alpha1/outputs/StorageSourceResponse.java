@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class StorageSourceResponse {
     /**
      * Google Cloud Storage bucket containing source (see [Bucket Name Requirements] (https://cloud.google.com/storage/docs/bucket-naming#requirements)).
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * Google Cloud Storage generation for the object.
      * 
-     */
+    */
     public String getGeneration() {
         return this.generation;
     }
     /**
      * Google Cloud Storage object containing source.
      * 
-     */
+    */
     public String getObject() {
         return this.object;
     }
@@ -95,7 +95,6 @@ public final class StorageSourceResponse {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public StorageSourceResponse build() {
             return new StorageSourceResponse(bucket, generation, object);
         }

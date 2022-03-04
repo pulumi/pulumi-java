@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * 
      */
     @InputImport(name="displayPrice", required=true)
-    private final Double displayPrice;
+      private final Double displayPrice;
 
     public Double getDisplayPrice() {
         return this.displayPrice;
@@ -32,7 +32,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * 
      */
     @InputImport(name="originalPrice", required=true)
-    private final Double originalPrice;
+      private final Double originalPrice;
 
     public Double getOriginalPrice() {
         return this.originalPrice;
@@ -81,7 +81,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
             this.originalPrice = Objects.requireNonNull(originalPrice);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(displayPrice, originalPrice);
         }

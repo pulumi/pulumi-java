@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
      * 
      */
     @InputImport(name="timeoutSec")
-    private final @Nullable Input<Integer> timeoutSec;
+      private final @Nullable Input<Integer> timeoutSec;
 
     public Input<Integer> getTimeoutSec() {
         return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
@@ -62,7 +62,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
             this.timeoutSec = Input.ofNullable(timeoutSec);
             return this;
         }
-
         public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(timeoutSec);
         }

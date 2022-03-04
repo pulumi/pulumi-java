@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -30,7 +30,7 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -89,7 +89,6 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public FolderArgs build() {
             return new FolderArgs(displayName, parent);
         }

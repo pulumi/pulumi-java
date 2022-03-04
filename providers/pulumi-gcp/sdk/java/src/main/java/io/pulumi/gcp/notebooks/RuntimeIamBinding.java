@@ -5,8 +5,8 @@ package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.RuntimeIamBindingArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeIamBindingState;
@@ -148,6 +148,37 @@ public class RuntimeIamBinding extends io.pulumi.resources.CustomResource {
         return this.runtimeName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RuntimeIamBindingArgs.Builder a);
+    }
+    private static io.pulumi.gcp.notebooks.RuntimeIamBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.notebooks.RuntimeIamBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RuntimeIamBinding(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RuntimeIamBinding(String name) {
+        this(name, RuntimeIamBindingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RuntimeIamBinding(String name, RuntimeIamBindingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

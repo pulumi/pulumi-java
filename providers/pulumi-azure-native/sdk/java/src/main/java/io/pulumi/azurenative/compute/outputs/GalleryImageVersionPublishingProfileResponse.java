@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.TargetRegionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -65,42 +65,42 @@ public final class GalleryImageVersionPublishingProfileResponse {
     /**
      * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
      * 
-     */
+    */
     public Optional<String> getEndOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
     /**
      * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
      * 
-     */
+    */
     public Optional<Boolean> getExcludeFromLatest() {
         return Optional.ofNullable(this.excludeFromLatest);
     }
     /**
      * The timestamp for when the gallery image version is published.
      * 
-     */
+    */
     public String getPublishedDate() {
         return this.publishedDate;
     }
     /**
      * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
      * 
-     */
+    */
     public Optional<Integer> getReplicaCount() {
         return Optional.ofNullable(this.replicaCount);
     }
     /**
      * Specifies the storage account type to be used to store the image. This property is not updatable.
      * 
-     */
+    */
     public Optional<String> getStorageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
     /**
      * The target regions where the Image Version is going to be replicated to. This property is updatable.
      * 
-     */
+    */
     public List<TargetRegionResponse> getTargetRegions() {
         return this.targetRegions == null ? List.of() : this.targetRegions;
     }
@@ -164,7 +164,6 @@ public final class GalleryImageVersionPublishingProfileResponse {
             this.targetRegions = targetRegions;
             return this;
         }
-
         public GalleryImageVersionPublishingProfileResponse build() {
             return new GalleryImageVersionPublishingProfileResponse(endOfLifeDate, excludeFromLatest, publishedDate, replicaCount, storageAccountType, targetRegions);
         }

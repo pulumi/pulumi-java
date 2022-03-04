@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.LoggingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.inputs.QueryListResponse;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jarFileUris", required=true)
-    private final List<String> jarFileUris;
+      private final List<String> jarFileUris;
 
     public List<String> getJarFileUris() {
         return this.jarFileUris;
@@ -36,7 +36,7 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="loggingConfig", required=true)
-    private final LoggingConfigResponse loggingConfig;
+      private final LoggingConfigResponse loggingConfig;
 
     public LoggingConfigResponse getLoggingConfig() {
         return this.loggingConfig;
@@ -47,7 +47,7 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Map<String,String> properties;
+      private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties;
@@ -58,7 +58,7 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryFileUri", required=true)
-    private final String queryFileUri;
+      private final String queryFileUri;
 
     public String getQueryFileUri() {
         return this.queryFileUri;
@@ -69,7 +69,7 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryList", required=true)
-    private final QueryListResponse queryList;
+      private final QueryListResponse queryList;
 
     public QueryListResponse getQueryList() {
         return this.queryList;
@@ -80,7 +80,7 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scriptVariables", required=true)
-    private final Map<String,String> scriptVariables;
+      private final Map<String,String> scriptVariables;
 
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables;
@@ -169,7 +169,6 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
         }
-
         public SparkSqlJobResponse build() {
             return new SparkSqlJobResponse(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }

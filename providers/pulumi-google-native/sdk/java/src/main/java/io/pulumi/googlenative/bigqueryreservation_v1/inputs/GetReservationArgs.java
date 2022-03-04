@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryreservation_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetReservationArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetReservationArgs Empty = new GetReservationArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="reservationId", required=true)
-    private final String reservationId;
+      private final String reservationId;
 
     public String getReservationId() {
         return this.reservationId;
@@ -88,7 +88,6 @@ public final class GetReservationArgs extends io.pulumi.resources.InvokeArgs {
             this.reservationId = Objects.requireNonNull(reservationId);
             return this;
         }
-
         public GetReservationArgs build() {
             return new GetReservationArgs(location, project, reservationId);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.portal;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.portal.inputs.GetConsoleArgs;
 import io.pulumi.azurenative.portal.outputs.GetConsoleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConsole {
-/**
- * Cloud shell console
+    private GetConsole() {}
+    public interface BuilderApplicator {
+        public void apply(GetConsoleArgs.Builder a);
+    }
+    private static GetConsoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConsoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Cloud shell console
  * API Version: 2018-10-01.
  * 
- *
- * Cloud shell console
+     *
+     * Cloud shell console
  * 
- */
+     */
+    public static CompletableFuture<GetConsoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Cloud shell console
+     * API Version: 2018-10-01.
+     * 
+     *
+         * Cloud shell console
+     * 
+     */
     public static CompletableFuture<GetConsoleResult> invokeAsync(GetConsoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getConsole", TypeShape.of(GetConsoleResult.class), args == null ? GetConsoleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v3.enums.ProcessingOptionsHtmlSanitization;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableStreetAddressResolution")
-    private final @Nullable Input<Boolean> disableStreetAddressResolution;
+      private final @Nullable Input<Boolean> disableStreetAddressResolution;
 
     public Input<Boolean> getDisableStreetAddressResolution() {
         return this.disableStreetAddressResolution == null ? Input.empty() : this.disableStreetAddressResolution;
@@ -35,7 +35,7 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="htmlSanitization")
-    private final @Nullable Input<ProcessingOptionsHtmlSanitization> htmlSanitization;
+      private final @Nullable Input<ProcessingOptionsHtmlSanitization> htmlSanitization;
 
     public Input<ProcessingOptionsHtmlSanitization> getHtmlSanitization() {
         return this.htmlSanitization == null ? Input.empty() : this.htmlSanitization;
@@ -94,7 +94,6 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
             this.htmlSanitization = Input.ofNullable(htmlSanitization);
             return this;
         }
-
         public ProcessingOptionsArgs build() {
             return new ProcessingOptionsArgs(disableStreetAddressResolution, htmlSanitization);
         }

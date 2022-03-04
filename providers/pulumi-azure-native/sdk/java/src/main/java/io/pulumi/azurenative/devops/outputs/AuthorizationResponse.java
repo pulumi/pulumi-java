@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devops.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class AuthorizationResponse {
     /**
      * Type of authorization.
      * 
-     */
+    */
     public String getAuthorizationType() {
         return this.authorizationType;
     }
     /**
      * Authorization parameters corresponding to the authorization type.
      * 
-     */
+    */
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
@@ -76,7 +76,6 @@ public final class AuthorizationResponse {
             this.parameters = parameters;
             return this;
         }
-
         public AuthorizationResponse build() {
             return new AuthorizationResponse(authorizationType, parameters);
         }

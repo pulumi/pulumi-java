@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +29,7 @@ public final class SourceRegistryCredentialsResponse {
      * will be generated using the given scope. These credentials will be used to login to
      * the source registry during the run.
      * 
-     */
+    */
     public Optional<String> getLoginMode() {
         return Optional.ofNullable(this.loginMode);
     }
@@ -58,7 +58,6 @@ public final class SourceRegistryCredentialsResponse {
             this.loginMode = loginMode;
             return this;
         }
-
         public SourceRegistryCredentialsResponse build() {
             return new SourceRegistryCredentialsResponse(loginMode);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetProviderRegistrationArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final String providerNamespace;
+      private final String providerNamespace;
 
     public String getProviderNamespace() {
         return this.providerNamespace;
@@ -55,7 +55,6 @@ public final class GetProviderRegistrationArgs extends io.pulumi.resources.Invok
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
-
         public GetProviderRegistrationArgs build() {
             return new GetProviderRegistrationArgs(providerNamespace);
         }

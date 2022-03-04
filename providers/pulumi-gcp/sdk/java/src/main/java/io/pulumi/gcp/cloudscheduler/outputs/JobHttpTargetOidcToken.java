@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public final class JobHttpTargetOidcToken {
      * Audience to be used when generating OIDC token. If not specified,
      * the URI specified in target will be used.
      * 
-     */
+    */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
@@ -44,7 +44,7 @@ public final class JobHttpTargetOidcToken {
      * Service account email to be used for generating OAuth token.
      * The service account must be within the same project as the job.
      * 
-     */
+    */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
@@ -80,7 +80,6 @@ public final class JobHttpTargetOidcToken {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public JobHttpTargetOidcToken build() {
             return new JobHttpTargetOidcToken(audience, serviceAccountEmail);
         }

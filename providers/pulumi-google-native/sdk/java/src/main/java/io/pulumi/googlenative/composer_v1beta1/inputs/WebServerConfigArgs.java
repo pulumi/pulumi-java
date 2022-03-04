@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WebServerConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -66,7 +66,6 @@ public final class WebServerConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
-
         public WebServerConfigArgs build() {
             return new WebServerConfigArgs(machineType);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.deploymentmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.deploymentmanager.DeploymentArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentState;
@@ -258,6 +258,37 @@ public class Deployment extends io.pulumi.resources.CustomResource {
         return this.target;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DeploymentArgs.Builder a);
+    }
+    private static io.pulumi.gcp.deploymentmanager.DeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.deploymentmanager.DeploymentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Deployment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Deployment(String name) {
+        this(name, DeploymentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Deployment(String name, DeploymentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

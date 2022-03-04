@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceName", required=true)
-    private final String instanceName;
+      private final String instanceName;
 
     public String getInstanceName() {
         return this.instanceName;
@@ -55,7 +55,6 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
-
         public GetInstanceArgs build() {
             return new GetInstanceArgs(instanceName);
         }

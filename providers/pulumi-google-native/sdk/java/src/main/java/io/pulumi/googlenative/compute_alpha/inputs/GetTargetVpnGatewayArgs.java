@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetTargetVpnGatewayArgs extends io.pulumi.resources.InvokeArg
     public static final GetTargetVpnGatewayArgs Empty = new GetTargetVpnGatewayArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="targetVpnGateway", required=true)
-    private final String targetVpnGateway;
+      private final String targetVpnGateway;
 
     public String getTargetVpnGateway() {
         return this.targetVpnGateway;
@@ -88,7 +88,6 @@ public final class GetTargetVpnGatewayArgs extends io.pulumi.resources.InvokeArg
             this.targetVpnGateway = Objects.requireNonNull(targetVpnGateway);
             return this;
         }
-
         public GetTargetVpnGatewayArgs build() {
             return new GetTargetVpnGatewayArgs(project, region, targetVpnGateway);
         }

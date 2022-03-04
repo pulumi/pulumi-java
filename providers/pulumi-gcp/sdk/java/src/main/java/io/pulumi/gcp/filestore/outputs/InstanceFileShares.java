@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.filestore.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.filestore.outputs.InstanceFileSharesNfsExportOption;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,14 +45,14 @@ public final class InstanceFileShares {
      * File share capacity in GiB. This must be at least 1024 GiB
      * for the standard tier, or 2560 GiB for the premium tier.
      * 
-     */
+    */
     public Integer getCapacityGb() {
         return this.capacityGb;
     }
     /**
      * The name of the fileshare (16 characters or less)
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -60,7 +60,7 @@ public final class InstanceFileShares {
      * Nfs Export Options. There is a limit of 10 export options per file share.
      * Structure is documented below.
      * 
-     */
+    */
     public List<InstanceFileSharesNfsExportOption> getNfsExportOptions() {
         return this.nfsExportOptions == null ? List.of() : this.nfsExportOptions;
     }
@@ -103,7 +103,6 @@ public final class InstanceFileShares {
             this.nfsExportOptions = nfsExportOptions;
             return this;
         }
-
         public InstanceFileShares build() {
             return new InstanceFileShares(capacityGb, name, nfsExportOptions);
         }

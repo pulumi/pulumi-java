@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.outputs;
 
 import io.pulumi.azurenative.solutions.outputs.UserAssignedResourceIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class IdentityResponse {
     /**
      * The principal ID of resource identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of resource.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The identity type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
-     */
+    */
     public Map<String,UserAssignedResourceIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
@@ -120,7 +120,6 @@ public final class IdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public IdentityResponse build() {
             return new IdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleIamV1AuditLogConfigResponse {
     /**
      * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
      * 
-     */
+    */
     public List<String> getExemptedMembers() {
         return this.exemptedMembers;
     }
     /**
      * The log type that this config enables.
      * 
-     */
+    */
     public String getLogType() {
         return this.logType;
     }
@@ -75,7 +75,6 @@ public final class GoogleIamV1AuditLogConfigResponse {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public GoogleIamV1AuditLogConfigResponse build() {
             return new GoogleIamV1AuditLogConfigResponse(exemptedMembers, logType);
         }

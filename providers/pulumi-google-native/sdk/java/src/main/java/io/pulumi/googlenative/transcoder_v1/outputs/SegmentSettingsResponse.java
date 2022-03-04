@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class SegmentSettingsResponse {
     /**
      * Create an individual segment file. The default is `false`.
      * 
-     */
+    */
     public Boolean getIndividualSegments() {
         return this.individualSegments;
     }
     /**
      * Duration of the segments in seconds. The default is `6.0s`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).
      * 
-     */
+    */
     public String getSegmentDuration() {
         return this.segmentDuration;
     }
@@ -75,7 +75,6 @@ public final class SegmentSettingsResponse {
             this.segmentDuration = Objects.requireNonNull(segmentDuration);
             return this;
         }
-
         public SegmentSettingsResponse build() {
             return new SegmentSettingsResponse(individualSegments, segmentDuration);
         }

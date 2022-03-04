@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableReliableLogging")
-    private final @Nullable Input<Object> enableReliableLogging;
+      private final @Nullable Input<Object> enableReliableLogging;
 
     public Input<Object> getEnableReliableLogging() {
         return this.enableReliableLogging == null ? Input.empty() : this.enableReliableLogging;
@@ -35,7 +35,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -46,7 +46,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<Object> logLevel;
+      private final @Nullable Input<Object> logLevel;
 
     public Input<Object> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -57,7 +57,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<Object> path;
+      private final @Nullable Input<Object> path;
 
     public Input<Object> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -146,7 +146,6 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public LogStorageSettingsArgs build() {
             return new LogStorageSettingsArgs(enableReliableLogging, linkedServiceName, logLevel, path);
         }

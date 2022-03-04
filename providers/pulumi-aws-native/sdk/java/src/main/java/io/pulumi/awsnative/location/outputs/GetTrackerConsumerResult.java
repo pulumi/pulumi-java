@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.location.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetTrackerConsumerResult {
         public Builder(GetTrackerConsumerResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetTrackerConsumerResult build() {
             return new GetTrackerConsumerResult();
         }

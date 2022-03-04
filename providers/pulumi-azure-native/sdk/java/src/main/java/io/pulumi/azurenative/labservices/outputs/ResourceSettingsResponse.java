@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.ReferenceVmResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class ResourceSettingsResponse {
     /**
      * The translated compute cores of the virtual machine
      * 
-     */
+    */
     public Integer getCores() {
         return this.cores;
     }
     /**
      * The resource id of the gallery image used for creating the virtual machine
      * 
-     */
+    */
     public Optional<String> getGalleryImageResourceId() {
         return Optional.ofNullable(this.galleryImageResourceId);
     }
     /**
      * The unique id of the resource setting
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the image used to created the environment setting
      * 
-     */
+    */
     public String getImageName() {
         return this.imageName;
     }
     /**
      * Details specific to Reference Vm
      * 
-     */
+    */
     public ReferenceVmResponse getReferenceVm() {
         return this.referenceVm;
     }
     /**
      * The size of the virtual machine
      * 
-     */
+    */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
@@ -162,7 +162,6 @@ public final class ResourceSettingsResponse {
             this.size = size;
             return this;
         }
-
         public ResourceSettingsResponse build() {
             return new ResourceSettingsResponse(cores, galleryImageResourceId, id, imageName, referenceVm, size);
         }

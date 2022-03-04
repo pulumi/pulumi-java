@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerregistry.inputs.GetImportPipelineArgs;
 import io.pulumi.azurenative.containerregistry.outputs.GetImportPipelineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImportPipeline {
-/**
- * An object that represents an import pipeline for a container registry.
+    private GetImportPipeline() {}
+    public interface BuilderApplicator {
+        public void apply(GetImportPipelineArgs.Builder a);
+    }
+    private static GetImportPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetImportPipelineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An object that represents an import pipeline for a container registry.
  * API Version: 2020-11-01-preview.
  * 
- *
- * An object that represents an import pipeline for a container registry.
+     *
+     * An object that represents an import pipeline for a container registry.
  * 
- */
+     */
+    public static CompletableFuture<GetImportPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An object that represents an import pipeline for a container registry.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * An object that represents an import pipeline for a container registry.
+     * 
+     */
     public static CompletableFuture<GetImportPipelineResult> invokeAsync(GetImportPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getImportPipeline", TypeShape.of(GetImportPipelineResult.class), args == null ? GetImportPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

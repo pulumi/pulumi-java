@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ConfigMapEnvSourceResponse;
 import io.pulumi.googlenative.run_v1alpha1.inputs.SecretEnvSourceResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="configMapRef", required=true)
-    private final ConfigMapEnvSourceResponse configMapRef;
+      private final ConfigMapEnvSourceResponse configMapRef;
 
     public ConfigMapEnvSourceResponse getConfigMapRef() {
         return this.configMapRef;
@@ -34,7 +34,7 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="prefix", required=true)
-    private final String prefix;
+      private final String prefix;
 
     public String getPrefix() {
         return this.prefix;
@@ -45,7 +45,7 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="secretRef", required=true)
-    private final SecretEnvSourceResponse secretRef;
+      private final SecretEnvSourceResponse secretRef;
 
     public SecretEnvSourceResponse getSecretRef() {
         return this.secretRef;
@@ -104,7 +104,6 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
             this.secretRef = Objects.requireNonNull(secretRef);
             return this;
         }
-
         public EnvFromSourceResponse build() {
             return new EnvFromSourceResponse(configMapRef, prefix, secretRef);
         }

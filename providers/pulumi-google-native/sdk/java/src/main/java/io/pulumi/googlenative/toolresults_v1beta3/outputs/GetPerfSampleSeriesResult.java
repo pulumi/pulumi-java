@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.BasicPerfSampleSeriesResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class GetPerfSampleSeriesResult {
     /**
      * Basic series represented by a line chart
      * 
-     */
+    */
     public BasicPerfSampleSeriesResponse getBasicPerfSampleSeries() {
         return this.basicPerfSampleSeries;
     }
     /**
      * A tool results execution ID.
      * 
-     */
+    */
     public String getExecutionId() {
         return this.executionId;
     }
     /**
      * A tool results history ID.
      * 
-     */
+    */
     public String getHistoryId() {
         return this.historyId;
     }
     /**
      * The cloud project
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * A sample series id
      * 
-     */
+    */
     public String getSampleSeriesId() {
         return this.sampleSeriesId;
     }
     /**
      * A tool results step ID.
      * 
-     */
+    */
     public String getStepId() {
         return this.stepId;
     }
@@ -159,7 +159,6 @@ public final class GetPerfSampleSeriesResult {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public GetPerfSampleSeriesResult build() {
             return new GetPerfSampleSeriesResult(basicPerfSampleSeries, executionId, historyId, project, sampleSeriesId, stepId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SchemaConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recursiveStructureDepth", required=true)
-    private final String recursiveStructureDepth;
+      private final String recursiveStructureDepth;
 
     public String getRecursiveStructureDepth() {
         return this.recursiveStructureDepth;
@@ -32,7 +32,7 @@ public final class SchemaConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="schemaType", required=true)
-    private final String schemaType;
+      private final String schemaType;
 
     public String getSchemaType() {
         return this.schemaType;
@@ -81,7 +81,6 @@ public final class SchemaConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
-
         public SchemaConfigResponse build() {
             return new SchemaConfigResponse(recursiveStructureDepth, schemaType);
         }

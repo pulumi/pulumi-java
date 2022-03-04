@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class RestoredLogsResponse {
     /**
      * The timestamp to end the restore by (UTC).
      * 
-     */
+    */
     public Optional<String> getEndRestoreTime() {
         return Optional.ofNullable(this.endRestoreTime);
     }
     /**
      * The table to restore data from.
      * 
-     */
+    */
     public String getSourceTable() {
         return this.sourceTable;
     }
     /**
      * The timestamp to start the restore from (UTC).
      * 
-     */
+    */
     public Optional<String> getStartRestoreTime() {
         return Optional.ofNullable(this.startRestoreTime);
     }
@@ -97,7 +97,6 @@ public final class RestoredLogsResponse {
             this.startRestoreTime = startRestoreTime;
             return this;
         }
-
         public RestoredLogsResponse build() {
             return new RestoredLogsResponse(endRestoreTime, sourceTable, startRestoreTime);
         }

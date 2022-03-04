@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="emailAddress", required=true)
-    private final Input<String> emailAddress;
+      private final Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress;
@@ -33,7 +33,7 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -92,7 +92,6 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public AzureAppPushReceiverArgs build() {
             return new AzureAppPushReceiverArgs(emailAddress, name);
         }

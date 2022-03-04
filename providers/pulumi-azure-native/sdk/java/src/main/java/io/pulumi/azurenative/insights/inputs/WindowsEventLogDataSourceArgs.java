@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.KnownWindowsEventLogDataSourceStreams;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -40,7 +40,7 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="streams")
-    private final @Nullable Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
+      private final @Nullable Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
 
     public Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> getStreams() {
         return this.streams == null ? Input.empty() : this.streams;
@@ -51,7 +51,7 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="xPathQueries")
-    private final @Nullable Input<List<String>> xPathQueries;
+      private final @Nullable Input<List<String>> xPathQueries;
 
     public Input<List<String>> getXPathQueries() {
         return this.xPathQueries == null ? Input.empty() : this.xPathQueries;
@@ -125,7 +125,6 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
             this.xPathQueries = Input.ofNullable(xPathQueries);
             return this;
         }
-
         public WindowsEventLogDataSourceArgs build() {
             return new WindowsEventLogDataSourceArgs(name, streams, xPathQueries);
         }

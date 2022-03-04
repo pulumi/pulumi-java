@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.EdgeUsageDataEventHubResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class EdgeUsageDataCollectionPolicyResponse {
     /**
      * Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
      * 
-     */
+    */
     public Optional<String> getDataCollectionFrequency() {
         return Optional.ofNullable(this.dataCollectionFrequency);
     }
     /**
      * Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
      * 
-     */
+    */
     public Optional<String> getDataReportingFrequency() {
         return Optional.ofNullable(this.dataReportingFrequency);
     }
     /**
      * Details of Event Hub where the usage will be reported.
      * 
-     */
+    */
     public Optional<EdgeUsageDataEventHubResponse> getEventHubDetails() {
         return Optional.ofNullable(this.eventHubDetails);
     }
     /**
      * Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
      * 
-     */
+    */
     public Optional<String> getMaxAllowedUnreportedUsageDuration() {
         return Optional.ofNullable(this.maxAllowedUnreportedUsageDuration);
     }
@@ -119,7 +119,6 @@ public final class EdgeUsageDataCollectionPolicyResponse {
             this.maxAllowedUnreportedUsageDuration = maxAllowedUnreportedUsageDuration;
             return this;
         }
-
         public EdgeUsageDataCollectionPolicyResponse build() {
             return new EdgeUsageDataCollectionPolicyResponse(dataCollectionFrequency, dataReportingFrequency, eventHubDetails, maxAllowedUnreportedUsageDuration);
         }

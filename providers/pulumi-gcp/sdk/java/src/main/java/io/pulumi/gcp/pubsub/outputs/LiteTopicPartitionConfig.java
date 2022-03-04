@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.pubsub.outputs.LiteTopicPartitionConfigCapacity;
 import java.lang.Integer;
 import java.util.Objects;
@@ -36,14 +36,14 @@ public final class LiteTopicPartitionConfig {
      * The capacity configuration.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<LiteTopicPartitionConfigCapacity> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The number of partitions in the topic. Must be at least 1.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
@@ -79,7 +79,6 @@ public final class LiteTopicPartitionConfig {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public LiteTopicPartitionConfig build() {
             return new LiteTopicPartitionConfig(capacity, count);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class SslConfigResponse {
     /**
      * Input only. The x509 PEM-encoded certificate of the CA that signed the source database server's certificate. The replica will use this certificate to verify it's connecting to the right host.
      * 
-     */
+    */
     public String getCaCertificate() {
         return this.caCertificate;
     }
     /**
      * Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the 'client_key' field is mandatory.
      * 
-     */
+    */
     public String getClientCertificate() {
         return this.clientCertificate;
     }
     /**
      * Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' field is mandatory.
      * 
-     */
+    */
     public String getClientKey() {
         return this.clientKey;
     }
     /**
      * The ssl config type according to 'client_key', 'client_certificate' and 'ca_certificate'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -116,7 +116,6 @@ public final class SslConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SslConfigResponse build() {
             return new SslConfigResponse(caCertificate, clientCertificate, clientKey, type);
         }

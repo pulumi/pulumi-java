@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     /**
      * A list of acceptable values. Only effective when the policy is `RESTRICTED`.
      * 
-     */
+    */
     public List<String> getAllowedValues() {
         return this.allowedValues;
     }
     /**
      * The policy of the feature.
      * 
-     */
+    */
     public String getPolicy() {
         return this.policy;
     }
@@ -75,7 +75,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(allowedValues, policy);
         }

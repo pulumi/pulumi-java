@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2QuasiIdFieldResponse;
@@ -41,21 +41,21 @@ public final class GooglePrivacyDlpV2AuxiliaryTableResponse {
     /**
      * Quasi-identifier columns.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2QuasiIdFieldResponse> getQuasiIds() {
         return this.quasiIds;
     }
     /**
      * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
      * 
-     */
+    */
     public GooglePrivacyDlpV2FieldIdResponse getRelativeFrequency() {
         return this.relativeFrequency;
     }
     /**
      * Auxiliary table location.
      * 
-     */
+    */
     public GooglePrivacyDlpV2BigQueryTableResponse getTable() {
         return this.table;
     }
@@ -98,7 +98,6 @@ public final class GooglePrivacyDlpV2AuxiliaryTableResponse {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public GooglePrivacyDlpV2AuxiliaryTableResponse build() {
             return new GooglePrivacyDlpV2AuxiliaryTableResponse(quasiIds, relativeFrequency, table);
         }

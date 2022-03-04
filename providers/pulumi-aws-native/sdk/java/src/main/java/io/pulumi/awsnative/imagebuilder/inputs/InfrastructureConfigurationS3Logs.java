@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class InfrastructureConfigurationS3Logs extends io.pulumi.resources
      * 
      */
     @InputImport(name="s3BucketName")
-    private final @Nullable String s3BucketName;
+      private final @Nullable String s3BucketName;
 
     public Optional<String> getS3BucketName() {
         return this.s3BucketName == null ? Optional.empty() : Optional.ofNullable(this.s3BucketName);
@@ -34,7 +34,7 @@ public final class InfrastructureConfigurationS3Logs extends io.pulumi.resources
      * 
      */
     @InputImport(name="s3KeyPrefix")
-    private final @Nullable String s3KeyPrefix;
+      private final @Nullable String s3KeyPrefix;
 
     public Optional<String> getS3KeyPrefix() {
         return this.s3KeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.s3KeyPrefix);
@@ -83,7 +83,6 @@ public final class InfrastructureConfigurationS3Logs extends io.pulumi.resources
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public InfrastructureConfigurationS3Logs build() {
             return new InfrastructureConfigurationS3Logs(s3BucketName, s3KeyPrefix);
         }

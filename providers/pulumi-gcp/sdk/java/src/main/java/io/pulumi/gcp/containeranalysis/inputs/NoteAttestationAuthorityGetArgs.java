@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityHintGetArgs;
 import java.util.Objects;
 
@@ -26,7 +26,7 @@ public final class NoteAttestationAuthorityGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="hint", required=true)
-    private final Input<NoteAttestationAuthorityHintGetArgs> hint;
+      private final Input<NoteAttestationAuthorityHintGetArgs> hint;
 
     public Input<NoteAttestationAuthorityHintGetArgs> getHint() {
         return this.hint;
@@ -69,7 +69,6 @@ public final class NoteAttestationAuthorityGetArgs extends io.pulumi.resources.R
             this.hint = Input.of(Objects.requireNonNull(hint));
             return this;
         }
-
         public NoteAttestationAuthorityGetArgs build() {
             return new NoteAttestationAuthorityGetArgs(hint);
         }

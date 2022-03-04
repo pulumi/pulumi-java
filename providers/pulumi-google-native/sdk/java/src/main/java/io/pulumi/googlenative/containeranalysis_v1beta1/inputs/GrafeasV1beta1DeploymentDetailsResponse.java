@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DeploymentResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GrafeasV1beta1DeploymentDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="deployment", required=true)
-    private final DeploymentResponse deployment;
+      private final DeploymentResponse deployment;
 
     public DeploymentResponse getDeployment() {
         return this.deployment;
@@ -59,7 +59,6 @@ public final class GrafeasV1beta1DeploymentDetailsResponse extends io.pulumi.res
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public GrafeasV1beta1DeploymentDetailsResponse build() {
             return new GrafeasV1beta1DeploymentDetailsResponse(deployment);
         }

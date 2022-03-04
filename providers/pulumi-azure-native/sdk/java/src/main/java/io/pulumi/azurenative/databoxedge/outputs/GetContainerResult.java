@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.RefreshDetailsResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -75,56 +75,56 @@ public final class GetContainerResult {
     /**
      * Current status of the container.
      * 
-     */
+    */
     public String getContainerStatus() {
         return this.containerStatus;
     }
     /**
      * The UTC time when container got created.
      * 
-     */
+    */
     public String getCreatedDateTime() {
         return this.createdDateTime;
     }
     /**
      * DataFormat for Container
      * 
-     */
+    */
     public String getDataFormat() {
         return this.dataFormat;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Details of the refresh job on this container.
      * 
-     */
+    */
     public RefreshDetailsResponse getRefreshDetails() {
         return this.refreshDetails;
     }
     /**
      * Container in DataBoxEdge Resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -202,7 +202,6 @@ public final class GetContainerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContainerResult build() {
             return new GetContainerResult(containerStatus, createdDateTime, dataFormat, id, name, refreshDetails, systemData, type);
         }

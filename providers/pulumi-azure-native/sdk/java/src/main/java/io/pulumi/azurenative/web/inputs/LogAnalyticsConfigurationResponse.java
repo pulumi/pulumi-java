@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class LogAnalyticsConfigurationResponse extends io.pulumi.resources
     public static final LogAnalyticsConfigurationResponse Empty = new LogAnalyticsConfigurationResponse();
 
     @InputImport(name="customerId")
-    private final @Nullable String customerId;
+      private final @Nullable String customerId;
 
     public Optional<String> getCustomerId() {
         return this.customerId == null ? Optional.empty() : Optional.ofNullable(this.customerId);
@@ -53,7 +53,6 @@ public final class LogAnalyticsConfigurationResponse extends io.pulumi.resources
             this.customerId = customerId;
             return this;
         }
-
         public LogAnalyticsConfigurationResponse build() {
             return new LogAnalyticsConfigurationResponse(customerId);
         }

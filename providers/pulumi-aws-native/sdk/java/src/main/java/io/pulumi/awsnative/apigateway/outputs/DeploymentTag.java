@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DeploymentTag {
     /**
      * The key name of the tag
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value for the tag
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class DeploymentTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DeploymentTag build() {
             return new DeploymentTag(key, value);
         }

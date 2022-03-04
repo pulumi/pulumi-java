@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class ListenerFixedResponseConfig extends io.pulumi.resources.Invok
     public static final ListenerFixedResponseConfig Empty = new ListenerFixedResponseConfig();
 
     @InputImport(name="contentType")
-    private final @Nullable String contentType;
+      private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
     @InputImport(name="messageBody")
-    private final @Nullable String messageBody;
+      private final @Nullable String messageBody;
 
     public Optional<String> getMessageBody() {
         return this.messageBody == null ? Optional.empty() : Optional.ofNullable(this.messageBody);
     }
 
     @InputImport(name="statusCode", required=true)
-    private final String statusCode;
+      private final String statusCode;
 
     public String getStatusCode() {
         return this.statusCode;
@@ -88,7 +88,6 @@ public final class ListenerFixedResponseConfig extends io.pulumi.resources.Invok
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public ListenerFixedResponseConfig build() {
             return new ListenerFixedResponseConfig(contentType, messageBody, statusCode);
         }

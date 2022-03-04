@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class EndpointConditions {
     /**
      * ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be "true" for terminating endpoints.
      * 
-     */
+    */
     public Optional<Boolean> getReady() {
         return Optional.ofNullable(this.ready);
     }
     /**
      * serving is identical to ready except that it is set regardless of the terminating state of endpoints. This condition should be set to true for a ready endpoint that is terminating. If nil, consumers should defer to the ready condition. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.
      * 
-     */
+    */
     public Optional<Boolean> getServing() {
         return Optional.ofNullable(this.serving);
     }
     /**
      * terminating indicates that this endpoint is terminating. A nil value indicates an unknown state. Consumers should interpret this unknown state to mean that the endpoint is not terminating. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.
      * 
-     */
+    */
     public Optional<Boolean> getTerminating() {
         return Optional.ofNullable(this.terminating);
     }
@@ -97,7 +97,6 @@ public final class EndpointConditions {
             this.terminating = terminating;
             return this;
         }
-
         public EndpointConditions build() {
             return new EndpointConditions(ready, serving, terminating);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="functionName", required=true)
-    private final String functionName;
+      private final String functionName;
 
     public String getFunctionName() {
         return this.functionName;
@@ -55,7 +55,6 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public GetFunctionArgs build() {
             return new GetFunctionArgs(functionName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class StepResponse {
     /**
      * The kind of step in the Cloud Dataflow job.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties;
     }
@@ -96,7 +96,6 @@ public final class StepResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public StepResponse build() {
             return new StepResponse(kind, name, properties);
         }

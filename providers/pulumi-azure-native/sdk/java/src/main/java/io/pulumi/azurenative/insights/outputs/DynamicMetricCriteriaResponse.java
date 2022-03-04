@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DynamicThresholdFailingPeriodsResponse;
 import io.pulumi.azurenative.insights.outputs.MetricDimensionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -101,7 +101,7 @@ public final class DynamicMetricCriteriaResponse {
     /**
      * The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
      * 
-     */
+    */
     public String getAlertSensitivity() {
         return this.alertSensitivity;
     }
@@ -109,70 +109,70 @@ public final class DynamicMetricCriteriaResponse {
      * Specifies the type of threshold criteria
      * Expected value is 'DynamicThresholdCriterion'.
      * 
-     */
+    */
     public String getCriterionType() {
         return this.criterionType;
     }
     /**
      * List of dimension conditions.
      * 
-     */
+    */
     public List<MetricDimensionResponse> getDimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
     /**
      * The minimum number of violations required within the selected lookback time window required to raise an alert.
      * 
-     */
+    */
     public DynamicThresholdFailingPeriodsResponse getFailingPeriods() {
         return this.failingPeriods;
     }
     /**
      * Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
      * 
-     */
+    */
     public Optional<String> getIgnoreDataBefore() {
         return Optional.ofNullable(this.ignoreDataBefore);
     }
     /**
      * Name of the metric.
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * Namespace of the metric.
      * 
-     */
+    */
     public Optional<String> getMetricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
     /**
      * Name of the criteria.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The operator used to compare the metric value against the threshold.
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
      * 
-     */
+    */
     public Optional<Boolean> getSkipMetricValidation() {
         return Optional.ofNullable(this.skipMetricValidation);
     }
     /**
      * the criteria time aggregation types.
      * 
-     */
+    */
     public String getTimeAggregation() {
         return this.timeAggregation;
     }
@@ -271,7 +271,6 @@ public final class DynamicMetricCriteriaResponse {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
-
         public DynamicMetricCriteriaResponse build() {
             return new DynamicMetricCriteriaResponse(alertSensitivity, criterionType, dimensions, failingPeriods, ignoreDataBefore, metricName, metricNamespace, name, operator, skipMetricValidation, timeAggregation);
         }

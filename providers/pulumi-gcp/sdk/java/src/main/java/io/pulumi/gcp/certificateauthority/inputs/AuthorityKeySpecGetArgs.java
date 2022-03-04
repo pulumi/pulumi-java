@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AuthorityKeySpecGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="algorithm")
-    private final @Nullable Input<String> algorithm;
+      private final @Nullable Input<String> algorithm;
 
     public Input<String> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
@@ -33,7 +33,7 @@ public final class AuthorityKeySpecGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cloudKmsKeyVersion")
-    private final @Nullable Input<String> cloudKmsKeyVersion;
+      private final @Nullable Input<String> cloudKmsKeyVersion;
 
     public Input<String> getCloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion == null ? Input.empty() : this.cloudKmsKeyVersion;
@@ -92,7 +92,6 @@ public final class AuthorityKeySpecGetArgs extends io.pulumi.resources.ResourceA
             this.cloudKmsKeyVersion = Input.ofNullable(cloudKmsKeyVersion);
             return this;
         }
-
         public AuthorityKeySpecGetArgs build() {
             return new AuthorityKeySpecGetArgs(algorithm, cloudKmsKeyVersion);
         }

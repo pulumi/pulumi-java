@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     /**
      * Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
      * 
-     */
+    */
     public Integer getRecentSentencesCount() {
         return this.recentSentencesCount;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
             this.recentSentencesCount = Objects.requireNonNull(recentSentencesCount);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse(recentSentencesCount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.servicecatalog.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetServiceActionAssociationArgs extends io.pulumi.resources.I
     public static final GetServiceActionAssociationArgs Empty = new GetServiceActionAssociationArgs();
 
     @InputImport(name="productId", required=true)
-    private final String productId;
+      private final String productId;
 
     public String getProductId() {
         return this.productId;
     }
 
     @InputImport(name="provisioningArtifactId", required=true)
-    private final String provisioningArtifactId;
+      private final String provisioningArtifactId;
 
     public String getProvisioningArtifactId() {
         return this.provisioningArtifactId;
     }
 
     @InputImport(name="serviceActionId", required=true)
-    private final String serviceActionId;
+      private final String serviceActionId;
 
     public String getServiceActionId() {
         return this.serviceActionId;
@@ -86,7 +86,6 @@ public final class GetServiceActionAssociationArgs extends io.pulumi.resources.I
             this.serviceActionId = Objects.requireNonNull(serviceActionId);
             return this;
         }
-
         public GetServiceActionAssociationArgs build() {
             return new GetServiceActionAssociationArgs(productId, provisioningArtifactId, serviceActionId);
         }

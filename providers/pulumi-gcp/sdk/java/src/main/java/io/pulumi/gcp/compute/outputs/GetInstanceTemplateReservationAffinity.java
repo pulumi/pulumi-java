@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceTemplateReservationAffinitySpecificReservation;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class GetInstanceTemplateReservationAffinity {
     /**
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -68,7 +68,6 @@ public final class GetInstanceTemplateReservationAffinity {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceTemplateReservationAffinity build() {
             return new GetInstanceTemplateReservationAffinity(specificReservations, type);
         }

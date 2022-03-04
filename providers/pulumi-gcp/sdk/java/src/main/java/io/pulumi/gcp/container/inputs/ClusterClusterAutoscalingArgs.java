@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsArgs;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingResourceLimitArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class ClusterClusterAutoscalingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="autoProvisioningDefaults")
-    private final @Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs> autoProvisioningDefaults;
+      private final @Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs> autoProvisioningDefaults;
 
     public Input<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs> getAutoProvisioningDefaults() {
         return this.autoProvisioningDefaults == null ? Input.empty() : this.autoProvisioningDefaults;
@@ -38,7 +38,7 @@ public final class ClusterClusterAutoscalingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="autoscalingProfile")
-    private final @Nullable Input<String> autoscalingProfile;
+      private final @Nullable Input<String> autoscalingProfile;
 
     public Input<String> getAutoscalingProfile() {
         return this.autoscalingProfile == null ? Input.empty() : this.autoscalingProfile;
@@ -50,7 +50,7 @@ public final class ClusterClusterAutoscalingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -64,7 +64,7 @@ public final class ClusterClusterAutoscalingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceLimits")
-    private final @Nullable Input<List<ClusterClusterAutoscalingResourceLimitArgs>> resourceLimits;
+      private final @Nullable Input<List<ClusterClusterAutoscalingResourceLimitArgs>> resourceLimits;
 
     public Input<List<ClusterClusterAutoscalingResourceLimitArgs>> getResourceLimits() {
         return this.resourceLimits == null ? Input.empty() : this.resourceLimits;
@@ -153,7 +153,6 @@ public final class ClusterClusterAutoscalingArgs extends io.pulumi.resources.Res
             this.resourceLimits = Input.ofNullable(resourceLimits);
             return this;
         }
-
         public ClusterClusterAutoscalingArgs build() {
             return new ClusterClusterAutoscalingArgs(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="customBgpIpAddresses")
-    private final @Nullable Input<List<String>> customBgpIpAddresses;
+      private final @Nullable Input<List<String>> customBgpIpAddresses;
 
     public Input<List<String>> getCustomBgpIpAddresses() {
         return this.customBgpIpAddresses == null ? Input.empty() : this.customBgpIpAddresses;
@@ -35,7 +35,7 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ipconfigurationId")
-    private final @Nullable Input<String> ipconfigurationId;
+      private final @Nullable Input<String> ipconfigurationId;
 
     public Input<String> getIpconfigurationId() {
         return this.ipconfigurationId == null ? Input.empty() : this.ipconfigurationId;
@@ -94,7 +94,6 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
             this.ipconfigurationId = Input.ofNullable(ipconfigurationId);
             return this;
         }
-
         public IPConfigurationBgpPeeringAddressArgs build() {
             return new IPConfigurationBgpPeeringAddressArgs(customBgpIpAddresses, ipconfigurationId);
         }

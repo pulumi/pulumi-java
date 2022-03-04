@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.StatefulPolicyPreservedStateResponse;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class StatefulPolicyResponse extends io.pulumi.resources.InvokeArgs
     public static final StatefulPolicyResponse Empty = new StatefulPolicyResponse();
 
     @InputImport(name="preservedState", required=true)
-    private final StatefulPolicyPreservedStateResponse preservedState;
+      private final StatefulPolicyPreservedStateResponse preservedState;
 
     public StatefulPolicyPreservedStateResponse getPreservedState() {
         return this.preservedState;
@@ -51,7 +51,6 @@ public final class StatefulPolicyResponse extends io.pulumi.resources.InvokeArgs
             this.preservedState = Objects.requireNonNull(preservedState);
             return this;
         }
-
         public StatefulPolicyResponse build() {
             return new StatefulPolicyResponse(preservedState);
         }

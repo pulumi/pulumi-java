@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVirtualNetworkTapArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetVirtualNetworkTapArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tapName", required=true)
-    private final String tapName;
+      private final String tapName;
 
     public String getTapName() {
         return this.tapName;
@@ -77,7 +77,6 @@ public final class GetVirtualNetworkTapArgs extends io.pulumi.resources.InvokeAr
             this.tapName = Objects.requireNonNull(tapName);
             return this;
         }
-
         public GetVirtualNetworkTapArgs build() {
             return new GetVirtualNetworkTapArgs(resourceGroupName, tapName);
         }

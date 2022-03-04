@@ -6,7 +6,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 import io.pulumi.azurenative.digitaltwins.enums.DigitalTwinsIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,DigitalTwinsIdentityType>> type;
+      private final @Nullable Input<Either<String,DigitalTwinsIdentityType>> type;
 
     public Input<Either<String,DigitalTwinsIdentityType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -68,7 +68,6 @@ public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.Resource
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public DigitalTwinsIdentityArgs build() {
             return new DigitalTwinsIdentityArgs(type);
         }

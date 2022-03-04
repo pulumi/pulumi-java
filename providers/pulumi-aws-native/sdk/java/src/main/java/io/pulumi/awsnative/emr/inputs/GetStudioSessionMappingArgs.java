@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.emr.inputs;
 
 import io.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GetStudioSessionMappingArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="identityName", required=true)
-    private final String identityName;
+      private final String identityName;
 
     public String getIdentityName() {
         return this.identityName;
@@ -29,7 +29,7 @@ public final class GetStudioSessionMappingArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="identityType", required=true)
-    private final StudioSessionMappingIdentityType identityType;
+      private final StudioSessionMappingIdentityType identityType;
 
     public StudioSessionMappingIdentityType getIdentityType() {
         return this.identityType;
@@ -40,7 +40,7 @@ public final class GetStudioSessionMappingArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="studioId", required=true)
-    private final String studioId;
+      private final String studioId;
 
     public String getStudioId() {
         return this.studioId;
@@ -99,7 +99,6 @@ public final class GetStudioSessionMappingArgs extends io.pulumi.resources.Invok
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
-
         public GetStudioSessionMappingArgs build() {
             return new GetStudioSessionMappingArgs(identityName, identityType, studioId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
      * 
      */
     @InputImport(name="targetConcurrentRequests")
-    private final @Nullable Input<Double> targetConcurrentRequests;
+      private final @Nullable Input<Double> targetConcurrentRequests;
 
     public Input<Double> getTargetConcurrentRequests() {
         return this.targetConcurrentRequests == null ? Input.empty() : this.targetConcurrentRequests;
@@ -31,7 +31,7 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
      * 
      */
     @InputImport(name="targetRequestCountPerSecond")
-    private final @Nullable Input<String> targetRequestCountPerSecond;
+      private final @Nullable Input<String> targetRequestCountPerSecond;
 
     public Input<String> getTargetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond == null ? Input.empty() : this.targetRequestCountPerSecond;
@@ -90,7 +90,6 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
             this.targetRequestCountPerSecond = Input.ofNullable(targetRequestCountPerSecond);
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs build() {
             return new FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs(targetConcurrentRequests, targetRequestCountPerSecond);
         }

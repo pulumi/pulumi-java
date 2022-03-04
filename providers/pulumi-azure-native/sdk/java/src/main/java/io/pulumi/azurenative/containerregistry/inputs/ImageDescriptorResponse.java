@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="digest")
-    private final @Nullable String digest;
+      private final @Nullable String digest;
 
     public Optional<String> getDigest() {
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
@@ -34,7 +34,7 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="registry")
-    private final @Nullable String registry;
+      private final @Nullable String registry;
 
     public Optional<String> getRegistry() {
         return this.registry == null ? Optional.empty() : Optional.ofNullable(this.registry);
@@ -45,7 +45,7 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="repository")
-    private final @Nullable String repository;
+      private final @Nullable String repository;
 
     public Optional<String> getRepository() {
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
@@ -56,7 +56,7 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable String tag;
+      private final @Nullable String tag;
 
     public Optional<String> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -125,7 +125,6 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
             this.tag = tag;
             return this;
         }
-
         public ImageDescriptorResponse build() {
             return new ImageDescriptorResponse(digest, registry, repository, tag);
         }

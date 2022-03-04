@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class FeatureResourceStateResponse {
     /**
      * The current state of the Feature resource in the Hub API.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -52,7 +52,6 @@ public final class FeatureResourceStateResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public FeatureResourceStateResponse build() {
             return new FeatureResourceStateResponse(state);
         }

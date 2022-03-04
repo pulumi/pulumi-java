@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class AbsoluteDeleteOptionResponse {
     /**
      * Duration of deletion after given timespan
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }
@@ -40,7 +40,7 @@ public final class AbsoluteDeleteOptionResponse {
      * Type of the specific object - used for deserializing
      * Expected value is 'AbsoluteDeleteOption'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
@@ -76,7 +76,6 @@ public final class AbsoluteDeleteOptionResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public AbsoluteDeleteOptionResponse build() {
             return new AbsoluteDeleteOptionResponse(duration, objectType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,7 +35,7 @@ public final class GetRegistryRepositoryResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -94,7 +94,6 @@ public final class GetRegistryRepositoryResult {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public GetRegistryRepositoryResult build() {
             return new GetRegistryRepositoryResult(id, project, region, repositoryUrl);
         }

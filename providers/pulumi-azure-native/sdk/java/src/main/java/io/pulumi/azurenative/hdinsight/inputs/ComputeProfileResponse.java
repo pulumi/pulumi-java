@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.RoleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ComputeProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable List<RoleResponse> roles;
+      private final @Nullable List<RoleResponse> roles;
 
     public List<RoleResponse> getRoles() {
         return this.roles == null ? List.of() : this.roles;
@@ -62,7 +62,6 @@ public final class ComputeProfileResponse extends io.pulumi.resources.InvokeArgs
             this.roles = roles;
             return this;
         }
-
         public ComputeProfileResponse build() {
             return new ComputeProfileResponse(roles);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions exten
      * 
      */
     @InputImport(name="query")
-    private final @Nullable String query;
+      private final @Nullable String query;
 
     public Optional<String> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
@@ -61,7 +61,6 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions exten
             this.query = query;
             return this;
         }
-
         public ActivityEntityQueriesPropertiesResponseQueryDefinitions build() {
             return new ActivityEntityQueriesPropertiesResponseQueryDefinitions(query);
         }

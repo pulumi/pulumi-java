@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ServiceResponseBaseResponseError;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="computeType", required=true)
-    private final String computeType;
+      private final String computeType;
 
     public String getComputeType() {
         return this.computeType;
@@ -39,7 +39,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="deploymentType")
-    private final @Nullable String deploymentType;
+      private final @Nullable String deploymentType;
 
     public Optional<String> getDeploymentType() {
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
@@ -50,7 +50,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -61,7 +61,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="error", required=true)
-    private final ServiceResponseBaseResponseError error;
+      private final ServiceResponseBaseResponseError error;
 
     public ServiceResponseBaseResponseError getError() {
         return this.error;
@@ -72,7 +72,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isDefault")
-    private final @Nullable Boolean isDefault;
+      private final @Nullable Boolean isDefault;
 
     public Optional<Boolean> getIsDefault() {
         return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
@@ -83,7 +83,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="kvTags")
-    private final @Nullable Map<String,String> kvTags;
+      private final @Nullable Map<String,String> kvTags;
 
     public Map<String,String> getKvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
@@ -94,7 +94,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -105,7 +105,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -116,7 +116,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="trafficPercentile")
-    private final @Nullable Double trafficPercentile;
+      private final @Nullable Double trafficPercentile;
 
     public Optional<Double> getTrafficPercentile() {
         return this.trafficPercentile == null ? Optional.empty() : Optional.ofNullable(this.trafficPercentile);
@@ -127,7 +127,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -256,7 +256,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
             this.type = type;
             return this;
         }
-
         public AKSVariantResponseResponse build() {
             return new AKSVariantResponseResponse(computeType, deploymentType, description, error, isDefault, kvTags, properties, state, trafficPercentile, type);
         }

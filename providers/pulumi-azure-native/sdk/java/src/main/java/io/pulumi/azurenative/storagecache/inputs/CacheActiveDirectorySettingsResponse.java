@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.CacheActiveDirectorySettingsResponseCredentials;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="cacheNetBiosName", required=true)
-    private final String cacheNetBiosName;
+      private final String cacheNetBiosName;
 
     public String getCacheNetBiosName() {
         return this.cacheNetBiosName;
@@ -35,7 +35,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable CacheActiveDirectorySettingsResponseCredentials credentials;
+      private final @Nullable CacheActiveDirectorySettingsResponseCredentials credentials;
 
     public Optional<CacheActiveDirectorySettingsResponseCredentials> getCredentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
@@ -46,7 +46,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="domainJoined", required=true)
-    private final String domainJoined;
+      private final String domainJoined;
 
     public String getDomainJoined() {
         return this.domainJoined;
@@ -57,7 +57,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final String domainName;
+      private final String domainName;
 
     public String getDomainName() {
         return this.domainName;
@@ -68,7 +68,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="domainNetBiosName", required=true)
-    private final String domainNetBiosName;
+      private final String domainNetBiosName;
 
     public String getDomainNetBiosName() {
         return this.domainNetBiosName;
@@ -79,7 +79,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="primaryDnsIpAddress", required=true)
-    private final String primaryDnsIpAddress;
+      private final String primaryDnsIpAddress;
 
     public String getPrimaryDnsIpAddress() {
         return this.primaryDnsIpAddress;
@@ -90,7 +90,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="secondaryDnsIpAddress")
-    private final @Nullable String secondaryDnsIpAddress;
+      private final @Nullable String secondaryDnsIpAddress;
 
     public Optional<String> getSecondaryDnsIpAddress() {
         return this.secondaryDnsIpAddress == null ? Optional.empty() : Optional.ofNullable(this.secondaryDnsIpAddress);
@@ -189,7 +189,6 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
             this.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
         }
-
         public CacheActiveDirectorySettingsResponse build() {
             return new CacheActiveDirectorySettingsResponse(cacheNetBiosName, credentials, domainJoined, domainName, domainNetBiosName, primaryDnsIpAddress, secondaryDnsIpAddress);
         }

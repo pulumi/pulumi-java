@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="category", required=true)
-    private final String category;
+      private final String category;
 
     public String getCategory() {
         return this.category;
@@ -32,7 +32,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="comment", required=true)
-    private final String comment;
+      private final String comment;
 
     public String getComment() {
         return this.comment;
@@ -43,7 +43,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locator", required=true)
-    private final String locator;
+      private final String locator;
 
     public String getLocator() {
         return this.locator;
@@ -54,7 +54,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -123,7 +123,6 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExternalRefResponse build() {
             return new ExternalRefResponse(category, comment, locator, type);
         }

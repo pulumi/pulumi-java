@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databricks.outputs;
 
 import io.pulumi.azurenative.databricks.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.databricks.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class PrivateEndpointConnectionPropertiesResponse {
     /**
      * Private endpoint
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Private endpoint connection state
      * 
-     */
+    */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -99,7 +99,6 @@ public final class PrivateEndpointConnectionPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesResponse build() {
             return new PrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

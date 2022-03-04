@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.WeeklyScheduleDayOfWeek;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final Input<WeeklyScheduleDayOfWeek> dayOfWeek;
+      private final Input<WeeklyScheduleDayOfWeek> dayOfWeek;
 
     public Input<WeeklyScheduleDayOfWeek> getDayOfWeek() {
         return this.dayOfWeek;
@@ -65,7 +65,6 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
-
         public WeeklyScheduleArgs build() {
             return new WeeklyScheduleArgs(dayOfWeek);
         }

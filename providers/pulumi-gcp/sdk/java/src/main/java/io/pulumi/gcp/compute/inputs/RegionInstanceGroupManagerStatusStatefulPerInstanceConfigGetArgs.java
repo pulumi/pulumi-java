@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetA
      * 
      */
     @InputImport(name="allEffective")
-    private final @Nullable Input<Boolean> allEffective;
+      private final @Nullable Input<Boolean> allEffective;
 
     public Input<Boolean> getAllEffective() {
         return this.allEffective == null ? Input.empty() : this.allEffective;
@@ -62,7 +62,6 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetA
             this.allEffective = Input.ofNullable(allEffective);
             return this;
         }
-
         public RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs build() {
             return new RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs(allEffective);
         }

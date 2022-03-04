@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.SchedulingNodeAffinityResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,7 +21,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
     public static final ComputeSchedulingResponse Empty = new ComputeSchedulingResponse();
 
     @InputImport(name="automaticRestart", required=true)
-    private final Boolean automaticRestart;
+      private final Boolean automaticRestart;
 
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
@@ -32,7 +32,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="minNodeCpus", required=true)
-    private final Integer minNodeCpus;
+      private final Integer minNodeCpus;
 
     public Integer getMinNodeCpus() {
         return this.minNodeCpus;
@@ -43,7 +43,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="nodeAffinities", required=true)
-    private final List<SchedulingNodeAffinityResponse> nodeAffinities;
+      private final List<SchedulingNodeAffinityResponse> nodeAffinities;
 
     public List<SchedulingNodeAffinityResponse> getNodeAffinities() {
         return this.nodeAffinities;
@@ -54,7 +54,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="onHostMaintenance", required=true)
-    private final String onHostMaintenance;
+      private final String onHostMaintenance;
 
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
@@ -65,7 +65,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="restartType", required=true)
-    private final String restartType;
+      private final String restartType;
 
     public String getRestartType() {
         return this.restartType;
@@ -144,7 +144,6 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
             this.restartType = Objects.requireNonNull(restartType);
             return this;
         }
-
         public ComputeSchedulingResponse build() {
             return new ComputeSchedulingResponse(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, restartType);
         }

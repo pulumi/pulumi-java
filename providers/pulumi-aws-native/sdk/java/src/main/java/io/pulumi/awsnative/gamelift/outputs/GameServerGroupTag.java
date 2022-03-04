@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GameServerGroupTag {
     /**
      * The key for a developer-defined key:value pair for tagging an AWS resource.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The value for a developer-defined key:value pair for tagging an AWS resource.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class GameServerGroupTag {
             this.value = value;
             return this;
         }
-
         public GameServerGroupTag build() {
             return new GameServerGroupTag(key, value);
         }

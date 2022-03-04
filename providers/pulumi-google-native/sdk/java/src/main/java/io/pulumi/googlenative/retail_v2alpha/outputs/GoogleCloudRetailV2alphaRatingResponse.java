@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class GoogleCloudRetailV2alphaRatingResponse {
     /**
      * The average rating of the Product. The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is returned.
      * 
-     */
+    */
     public Double getAverageRating() {
         return this.averageRating;
     }
     /**
      * The total number of ratings. This value is independent of the value of rating_histogram. This value must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
      * 
-     */
+    */
     public Integer getRatingCount() {
         return this.ratingCount;
     }
     /**
      * List of rating counts per rating value (index = rating - 1). The list is empty if there is no rating. If the list is non-empty, its size is always 5. Otherwise, an INVALID_ARGUMENT error is returned. For example, [41, 14, 13, 47, 303]. It means that the Product got 41 ratings with 1 star, 14 ratings with 2 star, and so on.
      * 
-     */
+    */
     public List<Integer> getRatingHistogram() {
         return this.ratingHistogram;
     }
@@ -97,7 +97,6 @@ public final class GoogleCloudRetailV2alphaRatingResponse {
             this.ratingHistogram = Objects.requireNonNull(ratingHistogram);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRatingResponse build() {
             return new GoogleCloudRetailV2alphaRatingResponse(averageRating, ratingCount, ratingHistogram);
         }

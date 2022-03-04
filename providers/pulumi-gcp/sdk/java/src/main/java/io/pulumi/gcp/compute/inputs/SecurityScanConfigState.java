@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigScheduleGetArgs;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<SecurityScanConfigAuthenticationGetArgs> authentication;
+      private final @Nullable Input<SecurityScanConfigAuthenticationGetArgs> authentication;
 
     public Input<SecurityScanConfigAuthenticationGetArgs> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -37,7 +37,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="blacklistPatterns")
-    private final @Nullable Input<List<String>> blacklistPatterns;
+      private final @Nullable Input<List<String>> blacklistPatterns;
 
     public Input<List<String>> getBlacklistPatterns() {
         return this.blacklistPatterns == null ? Input.empty() : this.blacklistPatterns;
@@ -48,7 +48,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -61,7 +61,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="exportToSecurityCommandCenter")
-    private final @Nullable Input<String> exportToSecurityCommandCenter;
+      private final @Nullable Input<String> exportToSecurityCommandCenter;
 
     public Input<String> getExportToSecurityCommandCenter() {
         return this.exportToSecurityCommandCenter == null ? Input.empty() : this.exportToSecurityCommandCenter;
@@ -73,7 +73,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxQps")
-    private final @Nullable Input<Integer> maxQps;
+      private final @Nullable Input<Integer> maxQps;
 
     public Input<Integer> getMaxQps() {
         return this.maxQps == null ? Input.empty() : this.maxQps;
@@ -84,7 +84,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -96,7 +96,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -108,7 +108,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<SecurityScanConfigScheduleGetArgs> schedule;
+      private final @Nullable Input<SecurityScanConfigScheduleGetArgs> schedule;
 
     public Input<SecurityScanConfigScheduleGetArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -119,7 +119,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="startingUrls")
-    private final @Nullable Input<List<String>> startingUrls;
+      private final @Nullable Input<List<String>> startingUrls;
 
     public Input<List<String>> getStartingUrls() {
         return this.startingUrls == null ? Input.empty() : this.startingUrls;
@@ -131,7 +131,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targetPlatforms")
-    private final @Nullable Input<List<String>> targetPlatforms;
+      private final @Nullable Input<List<String>> targetPlatforms;
 
     public Input<List<String>> getTargetPlatforms() {
         return this.targetPlatforms == null ? Input.empty() : this.targetPlatforms;
@@ -144,7 +144,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userAgent")
-    private final @Nullable Input<String> userAgent;
+      private final @Nullable Input<String> userAgent;
 
     public Input<String> getUserAgent() {
         return this.userAgent == null ? Input.empty() : this.userAgent;
@@ -338,7 +338,6 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             this.userAgent = Input.ofNullable(userAgent);
             return this;
         }
-
         public SecurityScanConfigState build() {
             return new SecurityScanConfigState(authentication, blacklistPatterns, displayName, exportToSecurityCommandCenter, maxQps, name, project, schedule, startingUrls, targetPlatforms, userAgent);
         }

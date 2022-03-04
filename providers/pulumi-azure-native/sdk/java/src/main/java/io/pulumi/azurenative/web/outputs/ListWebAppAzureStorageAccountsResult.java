@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AzureStorageInfoValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class ListWebAppAzureStorageAccountsResult {
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure storage accounts.
      * 
-     */
+    */
     public Map<String,AzureStorageInfoValueResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -141,7 +141,6 @@ public final class ListWebAppAzureStorageAccountsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppAzureStorageAccountsResult build() {
             return new ListWebAppAzureStorageAccountsResult(id, kind, name, properties, type);
         }

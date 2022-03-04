@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -94,7 +94,6 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public CommitmentPeriodArgs build() {
             return new CommitmentPeriodArgs(count, tier);
         }

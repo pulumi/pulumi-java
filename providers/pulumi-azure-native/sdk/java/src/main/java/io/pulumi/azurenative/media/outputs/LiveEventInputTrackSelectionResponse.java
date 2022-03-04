@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class LiveEventInputTrackSelectionResponse {
     /**
      * Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
      * 
-     */
+    */
     public Optional<String> getOperation() {
         return Optional.ofNullable(this.operation);
     }
     /**
      * Property name to select. This property is reserved for future use, any value set on this property will be ignored.
      * 
-     */
+    */
     public Optional<String> getProperty() {
         return Optional.ofNullable(this.property);
     }
     /**
      * Property value to select. This property is reserved for future use, any value set on this property will be ignored.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -97,7 +97,6 @@ public final class LiveEventInputTrackSelectionResponse {
             this.value = value;
             return this;
         }
-
         public LiveEventInputTrackSelectionResponse build() {
             return new LiveEventInputTrackSelectionResponse(operation, property, value);
         }

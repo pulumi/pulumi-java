@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId;
 import java.lang.Boolean;
 import java.lang.String;
@@ -41,7 +41,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * Indicates whether or not this extension is critical (i.e., if the client does not know how to
      * handle this extension, the client should consider this to be an error).
      * 
-     */
+    */
     public Optional<Boolean> getCritical() {
         return Optional.ofNullable(this.critical);
     }
@@ -51,7 +51,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     /**
      * The value of this X.509 extension. A base64-encoded string.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -94,7 +94,6 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.value = value;
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan(critical, obectIds, value);
         }

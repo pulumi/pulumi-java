@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigFileResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse extends io.pulumi.
      * 
      */
     @InputImport(name="document", required=true)
-    private final ApigatewayApiConfigFileResponse document;
+      private final ApigatewayApiConfigFileResponse document;
 
     public ApigatewayApiConfigFileResponse getDocument() {
         return this.document;
@@ -59,7 +59,6 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse extends io.pulumi.
             this.document = Objects.requireNonNull(document);
             return this;
         }
-
         public ApigatewayApiConfigOpenApiDocumentResponse build() {
             return new ApigatewayApiConfigOpenApiDocumentResponse(document);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.agfoodplatform.outputs;
 
 import io.pulumi.azurenative.agfoodplatform.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -88,70 +88,70 @@ public final class GetExtensionResult {
     /**
      * The ETag value to implement optimistic concurrency.
      * 
-     */
+    */
     public String getETag() {
         return this.eTag;
     }
     /**
      * Extension api docs link.
      * 
-     */
+    */
     public String getExtensionApiDocsLink() {
         return this.extensionApiDocsLink;
     }
     /**
      * Extension auth link.
      * 
-     */
+    */
     public String getExtensionAuthLink() {
         return this.extensionAuthLink;
     }
     /**
      * Extension category. e.g. weather/sensor/satellite.
      * 
-     */
+    */
     public String getExtensionCategory() {
         return this.extensionCategory;
     }
     /**
      * Extension Id.
      * 
-     */
+    */
     public String getExtensionId() {
         return this.extensionId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Installed extension version.
      * 
-     */
+    */
     public String getInstalledExtensionVersion() {
         return this.installedExtensionVersion;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -243,7 +243,6 @@ public final class GetExtensionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExtensionResult build() {
             return new GetExtensionResult(eTag, extensionApiDocsLink, extensionAuthLink, extensionCategory, extensionId, id, installedExtensionVersion, name, systemData, type);
         }

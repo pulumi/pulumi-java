@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ArmServiceTypeHealthPolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="considerWarningAsError")
-    private final @Nullable Input<Boolean> considerWarningAsError;
+      private final @Nullable Input<Boolean> considerWarningAsError;
 
     public Input<Boolean> getConsiderWarningAsError() {
         return this.considerWarningAsError == null ? Input.empty() : this.considerWarningAsError;
@@ -38,7 +38,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defaultServiceTypeHealthPolicy")
-    private final @Nullable Input<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
+      private final @Nullable Input<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
     public Input<ArmServiceTypeHealthPolicyArgs> getDefaultServiceTypeHealthPolicy() {
         return this.defaultServiceTypeHealthPolicy == null ? Input.empty() : this.defaultServiceTypeHealthPolicy;
@@ -52,7 +52,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxPercentUnhealthyDeployedApplications")
-    private final @Nullable Input<Integer> maxPercentUnhealthyDeployedApplications;
+      private final @Nullable Input<Integer> maxPercentUnhealthyDeployedApplications;
 
     public Input<Integer> getMaxPercentUnhealthyDeployedApplications() {
         return this.maxPercentUnhealthyDeployedApplications == null ? Input.empty() : this.maxPercentUnhealthyDeployedApplications;
@@ -63,7 +63,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceTypeHealthPolicyMap")
-    private final @Nullable Input<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap;
+      private final @Nullable Input<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap;
 
     public Input<Map<String,ArmServiceTypeHealthPolicyArgs>> getServiceTypeHealthPolicyMap() {
         return this.serviceTypeHealthPolicyMap == null ? Input.empty() : this.serviceTypeHealthPolicyMap;
@@ -152,7 +152,6 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
             this.serviceTypeHealthPolicyMap = Input.ofNullable(serviceTypeHealthPolicyMap);
             return this;
         }
-
         public ArmApplicationHealthPolicyArgs build() {
             return new ArmApplicationHealthPolicyArgs(considerWarningAsError, defaultServiceTypeHealthPolicy, maxPercentUnhealthyDeployedApplications, serviceTypeHealthPolicyMap);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable String etag;
+      private final @Nullable String etag;
 
     public Optional<String> getEtag() {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
@@ -34,7 +34,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -45,7 +45,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -56,7 +56,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -67,7 +67,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable String thumbprint;
+      private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
@@ -146,7 +146,6 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
             this.thumbprint = thumbprint;
             return this;
         }
-
         public P2SVpnServerConfigVpnClientRevokedCertificateResponse build() {
             return new P2SVpnServerConfigVpnClientRevokedCertificateResponse(etag, id, name, provisioningState, thumbprint);
         }

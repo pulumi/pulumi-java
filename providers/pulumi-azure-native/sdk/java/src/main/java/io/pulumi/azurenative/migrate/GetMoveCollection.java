@@ -6,21 +6,41 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.migrate.inputs.GetMoveCollectionArgs;
 import io.pulumi.azurenative.migrate.outputs.GetMoveCollectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMoveCollection {
-/**
- * Define the move collection.
+    private GetMoveCollection() {}
+    public interface BuilderApplicator {
+        public void apply(GetMoveCollectionArgs.Builder a);
+    }
+    private static GetMoveCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMoveCollectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Define the move collection.
  * API Version: 2021-01-01.
  * 
- *
- * Define the move collection.
+     *
+     * Define the move collection.
  * 
- */
+     */
+    public static CompletableFuture<GetMoveCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Define the move collection.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Define the move collection.
+     * 
+     */
     public static CompletableFuture<GetMoveCollectionResult> invokeAsync(GetMoveCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getMoveCollection", TypeShape.of(GetMoveCollectionResult.class), args == null ? GetMoveCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

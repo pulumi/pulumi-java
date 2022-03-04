@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.advisor.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recommendationId", required=true)
-    private final String recommendationId;
+      private final String recommendationId;
 
     public String getRecommendationId() {
         return this.recommendationId;
@@ -39,7 +39,7 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -98,7 +98,6 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public GetSuppressionArgs build() {
             return new GetSuppressionArgs(name, recommendationId, resourceUri);
         }

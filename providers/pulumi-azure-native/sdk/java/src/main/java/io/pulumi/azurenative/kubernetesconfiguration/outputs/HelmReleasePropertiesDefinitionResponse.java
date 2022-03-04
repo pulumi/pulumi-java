@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectReferenceDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class HelmReleasePropertiesDefinitionResponse {
     /**
      * Total number of times that the HelmRelease failed to install or upgrade
      * 
-     */
+    */
     public Optional<Double> getFailureCount() {
         return Optional.ofNullable(this.failureCount);
     }
     /**
      * The reference to the HelmChart object used as the source to this HelmRelease
      * 
-     */
+    */
     public Optional<ObjectReferenceDefinitionResponse> getHelmChartRef() {
         return Optional.ofNullable(this.helmChartRef);
     }
     /**
      * Number of times that the HelmRelease failed to install
      * 
-     */
+    */
     public Optional<Double> getInstallFailureCount() {
         return Optional.ofNullable(this.installFailureCount);
     }
     /**
      * The revision number of the last released object change
      * 
-     */
+    */
     public Optional<Double> getLastRevisionApplied() {
         return Optional.ofNullable(this.lastRevisionApplied);
     }
     /**
      * Number of times that the HelmRelease failed to upgrade
      * 
-     */
+    */
     public Optional<Double> getUpgradeFailureCount() {
         return Optional.ofNullable(this.upgradeFailureCount);
     }
@@ -140,7 +140,6 @@ public final class HelmReleasePropertiesDefinitionResponse {
             this.upgradeFailureCount = upgradeFailureCount;
             return this;
         }
-
         public HelmReleasePropertiesDefinitionResponse build() {
             return new HelmReleasePropertiesDefinitionResponse(failureCount, helmChartRef, installFailureCount, lastRevisionApplied, upgradeFailureCount);
         }

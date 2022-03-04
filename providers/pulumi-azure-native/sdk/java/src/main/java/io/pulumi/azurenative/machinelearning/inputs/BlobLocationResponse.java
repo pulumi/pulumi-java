@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BlobLocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable String credentials;
+      private final @Nullable String credentials;
 
     public Optional<String> getCredentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
@@ -34,7 +34,7 @@ public final class BlobLocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -83,7 +83,6 @@ public final class BlobLocationResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public BlobLocationResponse build() {
             return new BlobLocationResponse(credentials, uri);
         }

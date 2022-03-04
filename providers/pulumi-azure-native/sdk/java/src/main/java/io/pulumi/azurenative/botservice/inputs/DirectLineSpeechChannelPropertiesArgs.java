@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="cognitiveServiceRegion", required=true)
-    private final Input<String> cognitiveServiceRegion;
+      private final Input<String> cognitiveServiceRegion;
 
     public Input<String> getCognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
@@ -35,7 +35,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="cognitiveServiceSubscriptionKey", required=true)
-    private final Input<String> cognitiveServiceSubscriptionKey;
+      private final Input<String> cognitiveServiceSubscriptionKey;
 
     public Input<String> getCognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
@@ -46,7 +46,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="customSpeechModelId")
-    private final @Nullable Input<String> customSpeechModelId;
+      private final @Nullable Input<String> customSpeechModelId;
 
     public Input<String> getCustomSpeechModelId() {
         return this.customSpeechModelId == null ? Input.empty() : this.customSpeechModelId;
@@ -57,7 +57,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="customVoiceDeploymentId")
-    private final @Nullable Input<String> customVoiceDeploymentId;
+      private final @Nullable Input<String> customVoiceDeploymentId;
 
     public Input<String> getCustomVoiceDeploymentId() {
         return this.customVoiceDeploymentId == null ? Input.empty() : this.customVoiceDeploymentId;
@@ -68,7 +68,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="isDefaultBotForCogSvcAccount")
-    private final @Nullable Input<Boolean> isDefaultBotForCogSvcAccount;
+      private final @Nullable Input<Boolean> isDefaultBotForCogSvcAccount;
 
     public Input<Boolean> getIsDefaultBotForCogSvcAccount() {
         return this.isDefaultBotForCogSvcAccount == null ? Input.empty() : this.isDefaultBotForCogSvcAccount;
@@ -79,7 +79,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -198,7 +198,6 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
-
         public DirectLineSpeechChannelPropertiesArgs build() {
             return new DirectLineSpeechChannelPropertiesArgs(cognitiveServiceRegion, cognitiveServiceSubscriptionKey, customSpeechModelId, customVoiceDeploymentId, isDefaultBotForCogSvcAccount, isEnabled);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.KeyVaultKeyReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.KeyVaultSecretReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DiskEncryptionSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="diskEncryptionKey")
-    private final @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey;
+      private final @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey;
 
     public Optional<KeyVaultSecretReferenceResponse> getDiskEncryptionKey() {
         return this.diskEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionKey);
@@ -36,7 +36,7 @@ public final class DiskEncryptionSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -47,7 +47,7 @@ public final class DiskEncryptionSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="keyEncryptionKey")
-    private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
+      private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
     public Optional<KeyVaultKeyReferenceResponse> getKeyEncryptionKey() {
         return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
@@ -106,7 +106,6 @@ public final class DiskEncryptionSettingsResponse extends io.pulumi.resources.In
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-
         public DiskEncryptionSettingsResponse build() {
             return new DiskEncryptionSettingsResponse(diskEncryptionKey, enabled, keyEncryptionKey);
         }

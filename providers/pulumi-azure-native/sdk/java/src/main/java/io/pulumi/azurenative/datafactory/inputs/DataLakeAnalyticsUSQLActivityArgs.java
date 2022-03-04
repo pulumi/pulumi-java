@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="compilationMode")
-    private final @Nullable Input<Object> compilationMode;
+      private final @Nullable Input<Object> compilationMode;
 
     public Input<Object> getCompilationMode() {
         return this.compilationMode == null ? Input.empty() : this.compilationMode;
@@ -41,7 +41,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="degreeOfParallelism")
-    private final @Nullable Input<Object> degreeOfParallelism;
+      private final @Nullable Input<Object> degreeOfParallelism;
 
     public Input<Object> getDegreeOfParallelism() {
         return this.degreeOfParallelism == null ? Input.empty() : this.degreeOfParallelism;
@@ -52,7 +52,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -63,7 +63,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -74,7 +74,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -85,7 +85,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -96,7 +96,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,Object>> parameters;
+      private final @Nullable Input<Map<String,Object>> parameters;
 
     public Input<Map<String,Object>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -107,7 +107,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -118,7 +118,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Object> priority;
+      private final @Nullable Input<Object> priority;
 
     public Input<Object> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -129,7 +129,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="runtimeVersion")
-    private final @Nullable Input<Object> runtimeVersion;
+      private final @Nullable Input<Object> runtimeVersion;
 
     public Input<Object> getRuntimeVersion() {
         return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
@@ -140,7 +140,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scriptLinkedService", required=true)
-    private final Input<LinkedServiceReferenceArgs> scriptLinkedService;
+      private final Input<LinkedServiceReferenceArgs> scriptLinkedService;
 
     public Input<LinkedServiceReferenceArgs> getScriptLinkedService() {
         return this.scriptLinkedService;
@@ -151,7 +151,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scriptPath", required=true)
-    private final Input<Object> scriptPath;
+      private final Input<Object> scriptPath;
 
     public Input<Object> getScriptPath() {
         return this.scriptPath;
@@ -163,7 +163,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -174,7 +174,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -413,7 +413,6 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public DataLakeAnalyticsUSQLActivityArgs build() {
             return new DataLakeAnalyticsUSQLActivityArgs(compilationMode, degreeOfParallelism, dependsOn, description, linkedServiceName, name, parameters, policy, priority, runtimeVersion, scriptLinkedService, scriptPath, type, userProperties);
         }

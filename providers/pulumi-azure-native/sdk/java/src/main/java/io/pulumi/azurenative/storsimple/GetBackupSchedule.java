@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.inputs.GetBackupScheduleArgs;
 import io.pulumi.azurenative.storsimple.outputs.GetBackupScheduleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupSchedule {
-/**
- * The backup schedule.
+    private GetBackupSchedule() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupScheduleArgs.Builder a);
+    }
+    private static GetBackupScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The backup schedule.
  * API Version: 2017-06-01.
  * 
- *
- * The backup schedule.
+     *
+     * The backup schedule.
  * 
- */
+     */
+    public static CompletableFuture<GetBackupScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The backup schedule.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * The backup schedule.
+     * 
+     */
     public static CompletableFuture<GetBackupScheduleResult> invokeAsync(GetBackupScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getBackupSchedule", TypeShape.of(GetBackupScheduleResult.class), args == null ? GetBackupScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

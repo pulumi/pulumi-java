@@ -5,8 +5,8 @@ package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.IamAuditConfigArgs;
 import io.pulumi.gcp.folder.inputs.IamAuditConfigState;
@@ -66,6 +66,37 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
         return this.service;
     }
 
+    public interface BuilderApplicator {
+        public void apply(IamAuditConfigArgs.Builder a);
+    }
+    private static io.pulumi.gcp.folder.IamAuditConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.folder.IamAuditConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public IamAuditConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public IamAuditConfig(String name) {
+        this(name, IamAuditConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public IamAuditConfig(String name, IamAuditConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

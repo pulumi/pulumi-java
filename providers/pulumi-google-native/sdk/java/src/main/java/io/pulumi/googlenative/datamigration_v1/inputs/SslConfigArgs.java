@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caCertificate", required=true)
-    private final Input<String> caCertificate;
+      private final Input<String> caCertificate;
 
     public Input<String> getCaCertificate() {
         return this.caCertificate;
@@ -34,7 +34,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificate")
-    private final @Nullable Input<String> clientCertificate;
+      private final @Nullable Input<String> clientCertificate;
 
     public Input<String> getClientCertificate() {
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
@@ -45,7 +45,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientKey")
-    private final @Nullable Input<String> clientKey;
+      private final @Nullable Input<String> clientKey;
 
     public Input<String> getClientKey() {
         return this.clientKey == null ? Input.empty() : this.clientKey;
@@ -119,7 +119,6 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.clientKey = Input.ofNullable(clientKey);
             return this;
         }
-
         public SslConfigArgs build() {
             return new SslConfigArgs(caCertificate, clientCertificate, clientKey);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudfunctions.inputs.GetFunctionEventTriggerFailurePolicy;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetFunctionEventTrigger extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="eventType", required=true)
-    private final String eventType;
+      private final String eventType;
 
     public String getEventType() {
         return this.eventType;
@@ -32,7 +32,7 @@ public final class GetFunctionEventTrigger extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="failurePolicies", required=true)
-    private final List<GetFunctionEventTriggerFailurePolicy> failurePolicies;
+      private final List<GetFunctionEventTriggerFailurePolicy> failurePolicies;
 
     public List<GetFunctionEventTriggerFailurePolicy> getFailurePolicies() {
         return this.failurePolicies;
@@ -43,7 +43,7 @@ public final class GetFunctionEventTrigger extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -102,7 +102,6 @@ public final class GetFunctionEventTrigger extends io.pulumi.resources.InvokeArg
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public GetFunctionEventTrigger build() {
             return new GetFunctionEventTrigger(eventType, failurePolicies, resource);
         }

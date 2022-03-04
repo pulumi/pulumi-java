@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storagepool.enums.DiskPoolTier;
 import io.pulumi.azurenative.storagepool.inputs.DiskArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalCapabilities")
-    private final @Nullable Input<List<String>> additionalCapabilities;
+      private final @Nullable Input<List<String>> additionalCapabilities;
 
     public Input<List<String>> getAdditionalCapabilities() {
         return this.additionalCapabilities == null ? Input.empty() : this.additionalCapabilities;
@@ -35,7 +35,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZones", required=true)
-    private final Input<List<String>> availabilityZones;
+      private final Input<List<String>> availabilityZones;
 
     public Input<List<String>> getAvailabilityZones() {
         return this.availabilityZones;
@@ -46,7 +46,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskPoolName")
-    private final @Nullable Input<String> diskPoolName;
+      private final @Nullable Input<String> diskPoolName;
 
     public Input<String> getDiskPoolName() {
         return this.diskPoolName == null ? Input.empty() : this.diskPoolName;
@@ -57,7 +57,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable Input<List<DiskArgs>> disks;
+      private final @Nullable Input<List<DiskArgs>> disks;
 
     public Input<List<DiskArgs>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -68,7 +68,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -79,7 +79,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -101,7 +101,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-    private final Input<Either<String,DiskPoolTier>> tier;
+      private final Input<Either<String,DiskPoolTier>> tier;
 
     public Input<Either<String,DiskPoolTier>> getTier() {
         return this.tier;
@@ -276,7 +276,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }
-
         public DiskPoolArgs build() {
             return new DiskPoolArgs(additionalCapabilities, availabilityZones, diskPoolName, disks, location, resourceGroupName, subnetId, tags, tier);
         }

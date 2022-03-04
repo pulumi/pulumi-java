@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="delayEvaluation")
-    private final @Nullable Input<Integer> delayEvaluation;
+      private final @Nullable Input<Integer> delayEvaluation;
 
     public Input<Integer> getDelayEvaluation() {
         return this.delayEvaluation == null ? Input.empty() : this.delayEvaluation;
@@ -35,7 +35,7 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="evaluationInterval")
-    private final @Nullable Input<Integer> evaluationInterval;
+      private final @Nullable Input<Integer> evaluationInterval;
 
     public Input<Integer> getEvaluationInterval() {
         return this.evaluationInterval == null ? Input.empty() : this.evaluationInterval;
@@ -46,7 +46,7 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyType", required=true)
-    private final Input<String> policyType;
+      private final Input<String> policyType;
 
     public Input<String> getPolicyType() {
         return this.policyType;
@@ -120,7 +120,6 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
             this.policyType = Input.of(Objects.requireNonNull(policyType));
             return this;
         }
-
         public MedianStoppingPolicyArgs build() {
             return new MedianStoppingPolicyArgs(delayEvaluation, evaluationInterval, policyType);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.SharedflowArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1EntityMetadataResponse;
@@ -77,6 +77,37 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
         return this.revision;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SharedflowArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.apigee_v1.SharedflowArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.apigee_v1.SharedflowArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Sharedflow(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Sharedflow(String name) {
+        this(name, SharedflowArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Sharedflow(String name, SharedflowArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

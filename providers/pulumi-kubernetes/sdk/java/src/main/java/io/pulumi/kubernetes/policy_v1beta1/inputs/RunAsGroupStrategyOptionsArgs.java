@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.policy_v1beta1.inputs.IDRangeArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ranges")
-    private final @Nullable Input<List<IDRangeArgs>> ranges;
+      private final @Nullable Input<List<IDRangeArgs>> ranges;
 
     public Input<List<IDRangeArgs>> getRanges() {
         return this.ranges == null ? Input.empty() : this.ranges;
@@ -36,7 +36,7 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rule", required=true)
-    private final Input<String> rule;
+      private final Input<String> rule;
 
     public Input<String> getRule() {
         return this.rule;
@@ -95,7 +95,6 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
             this.rule = Input.of(Objects.requireNonNull(rule));
             return this;
         }
-
         public RunAsGroupStrategyOptionsArgs build() {
             return new RunAsGroupStrategyOptionsArgs(ranges, rule);
         }

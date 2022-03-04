@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.AssessmentPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class GetAssessmentResult {
     /**
      * For optimistic concurrency control.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}/assessment/{assessmentName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Unique name of an assessment.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the assessment.
      * 
-     */
+    */
     public AssessmentPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetAssessmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssessmentResult build() {
             return new GetAssessmentResult(eTag, id, name, properties, type);
         }

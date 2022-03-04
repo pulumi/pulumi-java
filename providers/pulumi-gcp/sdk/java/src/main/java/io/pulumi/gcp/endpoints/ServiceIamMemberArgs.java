@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.endpoints.inputs.ServiceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class ServiceIamMemberArgs extends io.pulumi.resources.ResourceArgs
     public static final ServiceIamMemberArgs Empty = new ServiceIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<ServiceIamMemberConditionArgs> condition;
+      private final @Nullable Input<ServiceIamMemberConditionArgs> condition;
 
     public Input<ServiceIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -36,14 +36,14 @@ public final class ServiceIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -132,7 +132,6 @@ public final class ServiceIamMemberArgs extends io.pulumi.resources.ResourceArgs
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public ServiceIamMemberArgs build() {
             return new ServiceIamMemberArgs(condition, member, role, serviceName);
         }

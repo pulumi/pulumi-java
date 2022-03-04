@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2betaColorInfoArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="colorFamilies")
-    private final @Nullable Input<List<String>> colorFamilies;
+      private final @Nullable Input<List<String>> colorFamilies;
 
     public Input<List<String>> getColorFamilies() {
         return this.colorFamilies == null ? Input.empty() : this.colorFamilies;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2betaColorInfoArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="colors")
-    private final @Nullable Input<List<String>> colors;
+      private final @Nullable Input<List<String>> colors;
 
     public Input<List<String>> getColors() {
         return this.colors == null ? Input.empty() : this.colors;
@@ -94,7 +94,6 @@ public final class GoogleCloudRetailV2betaColorInfoArgs extends io.pulumi.resour
             this.colors = Input.ofNullable(colors);
             return this;
         }
-
         public GoogleCloudRetailV2betaColorInfoArgs build() {
             return new GoogleCloudRetailV2betaColorInfoArgs(colorFamilies, colors);
         }

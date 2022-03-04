@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.LogConfigDataAccessOptionsLogMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="logMode")
-    private final @Nullable Input<LogConfigDataAccessOptionsLogMode> logMode;
+      private final @Nullable Input<LogConfigDataAccessOptionsLogMode> logMode;
 
     public Input<LogConfigDataAccessOptionsLogMode> getLogMode() {
         return this.logMode == null ? Input.empty() : this.logMode;
@@ -66,7 +66,6 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
             this.logMode = Input.ofNullable(logMode);
             return this;
         }
-
         public LogConfigDataAccessOptionsArgs build() {
             return new LogConfigDataAccessOptionsArgs(logMode);
         }

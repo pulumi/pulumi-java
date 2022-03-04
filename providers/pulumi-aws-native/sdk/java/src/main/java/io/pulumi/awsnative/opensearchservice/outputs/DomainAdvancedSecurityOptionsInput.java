@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.outputs;
 
 import io.pulumi.awsnative.opensearchservice.outputs.DomainMasterUserOptions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class DomainAdvancedSecurityOptionsInput {
             this.masterUserOptions = masterUserOptions;
             return this;
         }
-
         public DomainAdvancedSecurityOptionsInput build() {
             return new DomainAdvancedSecurityOptionsInput(enabled, internalUserDatabaseEnabled, masterUserOptions);
         }

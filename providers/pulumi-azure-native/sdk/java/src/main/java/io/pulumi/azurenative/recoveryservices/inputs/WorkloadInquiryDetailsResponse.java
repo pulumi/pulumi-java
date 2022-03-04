@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.InquiryValidationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="inquiryValidation")
-    private final @Nullable InquiryValidationResponse inquiryValidation;
+      private final @Nullable InquiryValidationResponse inquiryValidation;
 
     public Optional<InquiryValidationResponse> getInquiryValidation() {
         return this.inquiryValidation == null ? Optional.empty() : Optional.ofNullable(this.inquiryValidation);
@@ -36,7 +36,7 @@ public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="itemCount")
-    private final @Nullable Double itemCount;
+      private final @Nullable Double itemCount;
 
     public Optional<Double> getItemCount() {
         return this.itemCount == null ? Optional.empty() : Optional.ofNullable(this.itemCount);
@@ -47,7 +47,7 @@ public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -106,7 +106,6 @@ public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.In
             this.type = type;
             return this;
         }
-
         public WorkloadInquiryDetailsResponse build() {
             return new WorkloadInquiryDetailsResponse(inquiryValidation, itemCount, type);
         }

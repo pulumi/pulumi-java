@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearning.outputs;
 import io.pulumi.azurenative.machinelearning.outputs.GraphEdgeResponse;
 import io.pulumi.azurenative.machinelearning.outputs.GraphNodeResponse;
 import io.pulumi.azurenative.machinelearning.outputs.GraphParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,21 +44,21 @@ public final class GraphPackageResponse {
     /**
      * The list of edges making up the graph.
      * 
-     */
+    */
     public List<GraphEdgeResponse> getEdges() {
         return this.edges == null ? List.of() : this.edges;
     }
     /**
      * The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
      * 
-     */
+    */
     public Map<String,GraphParameterResponse> getGraphParameters() {
         return this.graphParameters == null ? Map.of() : this.graphParameters;
     }
     /**
      * The set of nodes making up the graph, provided as a nodeId to GraphNode map
      * 
-     */
+    */
     public Map<String,GraphNodeResponse> getNodes() {
         return this.nodes == null ? Map.of() : this.nodes;
     }
@@ -101,7 +101,6 @@ public final class GraphPackageResponse {
             this.nodes = nodes;
             return this;
         }
-
         public GraphPackageResponse build() {
             return new GraphPackageResponse(edges, graphParameters, nodes);
         }

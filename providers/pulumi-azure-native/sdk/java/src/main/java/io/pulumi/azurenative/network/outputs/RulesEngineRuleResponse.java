@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RulesEngineActionResponse;
 import io.pulumi.azurenative.network.outputs.RulesEngineMatchConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -58,35 +58,35 @@ public final class RulesEngineRuleResponse {
     /**
      * Actions to perform on the request and response if all of the match conditions are met.
      * 
-     */
+    */
     public RulesEngineActionResponse getAction() {
         return this.action;
     }
     /**
      * A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
      * 
-     */
+    */
     public List<RulesEngineMatchConditionResponse> getMatchConditions() {
         return this.matchConditions == null ? List.of() : this.matchConditions;
     }
     /**
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
      * 
-     */
+    */
     public Optional<String> getMatchProcessingBehavior() {
         return Optional.ofNullable(this.matchProcessingBehavior);
     }
     /**
      * A name to refer to this specific rule.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A priority assigned to this rule.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
@@ -143,7 +143,6 @@ public final class RulesEngineRuleResponse {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public RulesEngineRuleResponse build() {
             return new RulesEngineRuleResponse(action, matchConditions, matchProcessingBehavior, name, priority);
         }

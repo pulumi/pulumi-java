@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.enums.DataQualityJobDefinitionEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.DataQualityJobDefinitionEndpointInputS3InputMode;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends io.pulumi.r
     public static final DataQualityJobDefinitionEndpointInputArgs Empty = new DataQualityJobDefinitionEndpointInputArgs();
 
     @InputImport(name="endpointName", required=true)
-    private final Input<String> endpointName;
+      private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -32,7 +32,7 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="localPath", required=true)
-    private final Input<String> localPath;
+      private final Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath;
@@ -43,7 +43,7 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="s3DataDistributionType")
-    private final @Nullable Input<DataQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
+      private final @Nullable Input<DataQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
     public Input<DataQualityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
         return this.s3DataDistributionType == null ? Input.empty() : this.s3DataDistributionType;
@@ -54,7 +54,7 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="s3InputMode")
-    private final @Nullable Input<DataQualityJobDefinitionEndpointInputS3InputMode> s3InputMode;
+      private final @Nullable Input<DataQualityJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
     public Input<DataQualityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
         return this.s3InputMode == null ? Input.empty() : this.s3InputMode;
@@ -143,7 +143,6 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends io.pulumi.r
             this.s3InputMode = Input.ofNullable(s3InputMode);
             return this;
         }
-
         public DataQualityJobDefinitionEndpointInputArgs build() {
             return new DataQualityJobDefinitionEndpointInputArgs(endpointName, localPath, s3DataDistributionType, s3InputMode);
         }

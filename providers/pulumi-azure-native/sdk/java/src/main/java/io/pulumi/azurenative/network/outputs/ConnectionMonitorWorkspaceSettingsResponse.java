@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ConnectionMonitorWorkspaceSettingsResponse {
     /**
      * Log analytics workspace resource ID.
      * 
-     */
+    */
     public Optional<String> getWorkspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -54,7 +54,6 @@ public final class ConnectionMonitorWorkspaceSettingsResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public ConnectionMonitorWorkspaceSettingsResponse build() {
             return new ConnectionMonitorWorkspaceSettingsResponse(workspaceResourceId);
         }

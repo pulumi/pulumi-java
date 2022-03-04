@@ -6,21 +6,41 @@ package io.pulumi.azurenative.appconfiguration;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appconfiguration.inputs.ListConfigurationStoreKeyValueArgs;
 import io.pulumi.azurenative.appconfiguration.outputs.ListConfigurationStoreKeyValueResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListConfigurationStoreKeyValue {
-/**
- * The result of a request to retrieve a key-value from the specified configuration store.
+    private ListConfigurationStoreKeyValue() {}
+    public interface BuilderApplicator {
+        public void apply(ListConfigurationStoreKeyValueArgs.Builder a);
+    }
+    private static ListConfigurationStoreKeyValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListConfigurationStoreKeyValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The result of a request to retrieve a key-value from the specified configuration store.
  * API Version: 2020-06-01.
  * 
- *
- * The result of a request to retrieve a key-value from the specified configuration store.
+     *
+     * The result of a request to retrieve a key-value from the specified configuration store.
  * 
- */
+     */
+    public static CompletableFuture<ListConfigurationStoreKeyValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The result of a request to retrieve a key-value from the specified configuration store.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * The result of a request to retrieve a key-value from the specified configuration store.
+     * 
+     */
     public static CompletableFuture<ListConfigurationStoreKeyValueResult> invokeAsync(ListConfigurationStoreKeyValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:listConfigurationStoreKeyValue", TypeShape.of(ListConfigurationStoreKeyValueResult.class), args == null ? ListConfigurationStoreKeyValueArgs.Empty : args, Utilities.withVersion(options));
     }

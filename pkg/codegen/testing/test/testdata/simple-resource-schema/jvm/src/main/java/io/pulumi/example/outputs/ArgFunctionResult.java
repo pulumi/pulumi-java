@@ -3,7 +3,7 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.example.Resource;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class ArgFunctionResult {
             this.result = result;
             return this;
         }
-
         public ArgFunctionResult build() {
             return new ArgFunctionResult(result);
         }

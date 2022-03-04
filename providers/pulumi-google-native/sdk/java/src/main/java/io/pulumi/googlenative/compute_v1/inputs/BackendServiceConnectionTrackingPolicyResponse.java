@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
      * 
      */
     @InputImport(name="connectionPersistenceOnUnhealthyBackends", required=true)
-    private final String connectionPersistenceOnUnhealthyBackends;
+      private final String connectionPersistenceOnUnhealthyBackends;
 
     public String getConnectionPersistenceOnUnhealthyBackends() {
         return this.connectionPersistenceOnUnhealthyBackends;
@@ -33,7 +33,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
      * 
      */
     @InputImport(name="idleTimeoutSec", required=true)
-    private final Integer idleTimeoutSec;
+      private final Integer idleTimeoutSec;
 
     public Integer getIdleTimeoutSec() {
         return this.idleTimeoutSec;
@@ -44,7 +44,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
      * 
      */
     @InputImport(name="trackingMode", required=true)
-    private final String trackingMode;
+      private final String trackingMode;
 
     public String getTrackingMode() {
         return this.trackingMode;
@@ -103,7 +103,6 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
             this.trackingMode = Objects.requireNonNull(trackingMode);
             return this;
         }
-
         public BackendServiceConnectionTrackingPolicyResponse build() {
             return new BackendServiceConnectionTrackingPolicyResponse(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);
         }

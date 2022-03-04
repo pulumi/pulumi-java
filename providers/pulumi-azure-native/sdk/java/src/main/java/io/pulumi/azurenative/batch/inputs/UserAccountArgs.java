@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.enums.ElevationLevel;
 import io.pulumi.azurenative.batch.inputs.LinuxUserConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.WindowsUserConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elevationLevel")
-    private final @Nullable Input<ElevationLevel> elevationLevel;
+      private final @Nullable Input<ElevationLevel> elevationLevel;
 
     public Input<ElevationLevel> getElevationLevel() {
         return this.elevationLevel == null ? Input.empty() : this.elevationLevel;
@@ -33,21 +33,21 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxUserConfiguration")
-    private final @Nullable Input<LinuxUserConfigurationArgs> linuxUserConfiguration;
+      private final @Nullable Input<LinuxUserConfigurationArgs> linuxUserConfiguration;
 
     public Input<LinuxUserConfigurationArgs> getLinuxUserConfiguration() {
         return this.linuxUserConfiguration == null ? Input.empty() : this.linuxUserConfiguration;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -58,7 +58,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsUserConfiguration")
-    private final @Nullable Input<WindowsUserConfigurationArgs> windowsUserConfiguration;
+      private final @Nullable Input<WindowsUserConfigurationArgs> windowsUserConfiguration;
 
     public Input<WindowsUserConfigurationArgs> getWindowsUserConfiguration() {
         return this.windowsUserConfiguration == null ? Input.empty() : this.windowsUserConfiguration;
@@ -162,7 +162,6 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.windowsUserConfiguration = Input.ofNullable(windowsUserConfiguration);
             return this;
         }
-
         public UserAccountArgs build() {
             return new UserAccountArgs(elevationLevel, linuxUserConfiguration, name, password, windowsUserConfiguration);
         }

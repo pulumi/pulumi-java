@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RegexValidationResponse {
     /**
      * RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
      * 
-     */
+    */
     public List<String> getRegexes() {
         return this.regexes;
     }
@@ -53,7 +53,6 @@ public final class RegexValidationResponse {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
-
         public RegexValidationResponse build() {
             return new RegexValidationResponse(regexes);
         }

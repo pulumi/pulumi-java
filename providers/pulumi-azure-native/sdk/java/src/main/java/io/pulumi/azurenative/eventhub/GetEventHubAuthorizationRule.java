@@ -6,21 +6,41 @@ package io.pulumi.azurenative.eventhub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventhub.inputs.GetEventHubAuthorizationRuleArgs;
 import io.pulumi.azurenative.eventhub.outputs.GetEventHubAuthorizationRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventHubAuthorizationRule {
-/**
- * Single item in a List or Get AuthorizationRule operation
+    private GetEventHubAuthorizationRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventHubAuthorizationRuleArgs.Builder a);
+    }
+    private static GetEventHubAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventHubAuthorizationRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Single item in a List or Get AuthorizationRule operation
  * API Version: 2017-04-01.
  * 
- *
- * Single item in a List or Get AuthorizationRule operation
+     *
+     * Single item in a List or Get AuthorizationRule operation
  * 
- */
+     */
+    public static CompletableFuture<GetEventHubAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Single item in a List or Get AuthorizationRule operation
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Single item in a List or Get AuthorizationRule operation
+     * 
+     */
     public static CompletableFuture<GetEventHubAuthorizationRuleResult> invokeAsync(GetEventHubAuthorizationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getEventHubAuthorizationRule", TypeShape.of(GetEventHubAuthorizationRuleResult.class), args == null ? GetEventHubAuthorizationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

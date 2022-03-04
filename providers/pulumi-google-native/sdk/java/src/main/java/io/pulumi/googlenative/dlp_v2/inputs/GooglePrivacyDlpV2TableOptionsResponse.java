@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="identifyingFields", required=true)
-    private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
+      private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> getIdentifyingFields() {
         return this.identifyingFields;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends io.pulumi.reso
             this.identifyingFields = Objects.requireNonNull(identifyingFields);
             return this;
         }
-
         public GooglePrivacyDlpV2TableOptionsResponse build() {
             return new GooglePrivacyDlpV2TableOptionsResponse(identifyingFields);
         }

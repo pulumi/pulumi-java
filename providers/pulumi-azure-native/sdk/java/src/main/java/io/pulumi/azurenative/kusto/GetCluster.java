@@ -6,21 +6,41 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kusto.inputs.GetClusterArgs;
 import io.pulumi.azurenative.kusto.outputs.GetClusterResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCluster {
-/**
- * Class representing a Kusto cluster.
+    private GetCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetClusterArgs.Builder a);
+    }
+    private static GetClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing a Kusto cluster.
  * API Version: 2021-01-01.
  * 
- *
- * Class representing a Kusto cluster.
+     *
+     * Class representing a Kusto cluster.
  * 
- */
+     */
+    public static CompletableFuture<GetClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing a Kusto cluster.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Class representing a Kusto cluster.
+     * 
+     */
     public static CompletableFuture<GetClusterResult> invokeAsync(GetClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getCluster", TypeShape.of(GetClusterResult.class), args == null ? GetClusterArgs.Empty : args, Utilities.withVersion(options));
     }

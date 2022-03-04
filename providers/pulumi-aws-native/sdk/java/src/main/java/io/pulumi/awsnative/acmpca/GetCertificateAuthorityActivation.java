@@ -6,17 +6,33 @@ package io.pulumi.awsnative.acmpca;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.acmpca.inputs.GetCertificateAuthorityActivationArgs;
 import io.pulumi.awsnative.acmpca.outputs.GetCertificateAuthorityActivationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificateAuthorityActivation {
-/**
- * Used to install the certificate authority certificate and update the certificate authority status.
+    private GetCertificateAuthorityActivation() {}
+    public interface BuilderApplicator {
+        public void apply(GetCertificateAuthorityActivationArgs.Builder a);
+    }
+    private static GetCertificateAuthorityActivationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCertificateAuthorityActivationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Used to install the certificate authority certificate and update the certificate authority status.
  * 
- */
+     */
+    public static CompletableFuture<GetCertificateAuthorityActivationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Used to install the certificate authority certificate and update the certificate authority status.
+     * 
+     */
     public static CompletableFuture<GetCertificateAuthorityActivationResult> invokeAsync(GetCertificateAuthorityActivationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:acmpca:getCertificateAuthorityActivation", TypeShape.of(GetCertificateAuthorityActivationResult.class), args == null ? GetCertificateAuthorityActivationArgs.Empty : args, Utilities.withVersion(options));
     }

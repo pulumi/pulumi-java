@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
      * 
      */
     @InputImport(name="configVersion")
-    private final @Nullable Input<String> configVersion;
+      private final @Nullable Input<String> configVersion;
 
     public Input<String> getConfigVersion() {
         return this.configVersion == null ? Input.empty() : this.configVersion;
@@ -32,7 +32,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
      * 
      */
     @InputImport(name="realmsSelector")
-    private final @Nullable Input<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector;
+      private final @Nullable Input<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector;
 
     public Input<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> getRealmsSelector() {
         return this.realmsSelector == null ? Input.empty() : this.realmsSelector;
@@ -91,7 +91,6 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
             this.realmsSelector = Input.ofNullable(realmsSelector);
             return this;
         }
-
         public GameServerDeploymentRolloutGameServerConfigOverrideArgs build() {
             return new GameServerDeploymentRolloutGameServerConfigOverrideArgs(configVersion, realmsSelector);
         }

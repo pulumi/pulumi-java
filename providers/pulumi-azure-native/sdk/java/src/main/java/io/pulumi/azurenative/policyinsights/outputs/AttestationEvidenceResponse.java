@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AttestationEvidenceResponse {
     /**
      * The description for this piece of evidence.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The URI location of the evidence.
      * 
-     */
+    */
     public Optional<String> getSourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }
@@ -76,7 +76,6 @@ public final class AttestationEvidenceResponse {
             this.sourceUri = sourceUri;
             return this;
         }
-
         public AttestationEvidenceResponse build() {
             return new AttestationEvidenceResponse(description, sourceUri);
         }

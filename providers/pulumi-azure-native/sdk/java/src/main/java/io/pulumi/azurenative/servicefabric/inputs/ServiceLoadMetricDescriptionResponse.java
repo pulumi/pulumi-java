@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultLoad")
-    private final @Nullable Integer defaultLoad;
+      private final @Nullable Integer defaultLoad;
 
     public Optional<Integer> getDefaultLoad() {
         return this.defaultLoad == null ? Optional.empty() : Optional.ofNullable(this.defaultLoad);
@@ -35,7 +35,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="primaryDefaultLoad")
-    private final @Nullable Integer primaryDefaultLoad;
+      private final @Nullable Integer primaryDefaultLoad;
 
     public Optional<Integer> getPrimaryDefaultLoad() {
         return this.primaryDefaultLoad == null ? Optional.empty() : Optional.ofNullable(this.primaryDefaultLoad);
@@ -57,7 +57,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="secondaryDefaultLoad")
-    private final @Nullable Integer secondaryDefaultLoad;
+      private final @Nullable Integer secondaryDefaultLoad;
 
     public Optional<Integer> getSecondaryDefaultLoad() {
         return this.secondaryDefaultLoad == null ? Optional.empty() : Optional.ofNullable(this.secondaryDefaultLoad);
@@ -68,7 +68,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable String weight;
+      private final @Nullable String weight;
 
     public Optional<String> getWeight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
@@ -147,7 +147,6 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
             this.weight = weight;
             return this;
         }
-
         public ServiceLoadMetricDescriptionResponse build() {
             return new ServiceLoadMetricDescriptionResponse(defaultLoad, name, primaryDefaultLoad, secondaryDefaultLoad, weight);
         }

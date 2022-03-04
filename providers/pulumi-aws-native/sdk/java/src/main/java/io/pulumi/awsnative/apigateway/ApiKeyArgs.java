@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.apigateway.inputs.ApiKeyStageKeyArgs;
 import io.pulumi.awsnative.apigateway.inputs.ApiKeyTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerId")
-    private final @Nullable Input<String> customerId;
+      private final @Nullable Input<String> customerId;
 
     public Input<String> getCustomerId() {
         return this.customerId == null ? Input.empty() : this.customerId;
@@ -34,7 +34,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -56,7 +56,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="generateDistinctId")
-    private final @Nullable Input<Boolean> generateDistinctId;
+      private final @Nullable Input<Boolean> generateDistinctId;
 
     public Input<Boolean> getGenerateDistinctId() {
         return this.generateDistinctId == null ? Input.empty() : this.generateDistinctId;
@@ -67,7 +67,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageKeys")
-    private final @Nullable Input<List<ApiKeyStageKeyArgs>> stageKeys;
+      private final @Nullable Input<List<ApiKeyStageKeyArgs>> stageKeys;
 
     public Input<List<ApiKeyStageKeyArgs>> getStageKeys() {
         return this.stageKeys == null ? Input.empty() : this.stageKeys;
@@ -89,7 +89,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ApiKeyTagArgs>> tags;
+      private final @Nullable Input<List<ApiKeyTagArgs>> tags;
 
     public Input<List<ApiKeyTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -100,7 +100,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -249,7 +249,6 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ApiKeyArgs build() {
             return new ApiKeyArgs(customerId, description, enabled, generateDistinctId, name, stageKeys, tags, value);
         }

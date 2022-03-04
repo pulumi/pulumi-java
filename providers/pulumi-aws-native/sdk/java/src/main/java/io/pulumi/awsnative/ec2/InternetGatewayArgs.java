@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.InternetGatewayTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<InternetGatewayTagArgs>> tags;
+      private final @Nullable Input<List<InternetGatewayTagArgs>> tags;
 
     public Input<List<InternetGatewayTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -63,7 +63,6 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public InternetGatewayArgs build() {
             return new InternetGatewayArgs(tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.BgpSessionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -92,70 +92,70 @@ public final class DirectConnectionResponse {
     /**
      * The bandwidth of the connection.
      * 
-     */
+    */
     public Optional<Integer> getBandwidthInMbps() {
         return Optional.ofNullable(this.bandwidthInMbps);
     }
     /**
      * The BGP session associated with the connection.
      * 
-     */
+    */
     public Optional<BgpSessionResponse> getBgpSession() {
         return Optional.ofNullable(this.bgpSession);
     }
     /**
      * The unique identifier (GUID) for the connection.
      * 
-     */
+    */
     public Optional<String> getConnectionIdentifier() {
         return Optional.ofNullable(this.connectionIdentifier);
     }
     /**
      * The state of the connection.
      * 
-     */
+    */
     public String getConnectionState() {
         return this.connectionState;
     }
     /**
      * The error message related to the connection state, if any.
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * The ID used within Microsoft's peering provisioning system to track the connection
      * 
-     */
+    */
     public String getMicrosoftTrackingId() {
         return this.microsoftTrackingId;
     }
     /**
      * The PeeringDB.com ID of the facility at which the connection has to be set up.
      * 
-     */
+    */
     public Optional<Integer> getPeeringDBFacilityId() {
         return Optional.ofNullable(this.peeringDBFacilityId);
     }
     /**
      * The bandwidth that is actually provisioned.
      * 
-     */
+    */
     public Integer getProvisionedBandwidthInMbps() {
         return this.provisionedBandwidthInMbps;
     }
     /**
      * The field indicating if Microsoft provides session ip addresses.
      * 
-     */
+    */
     public Optional<String> getSessionAddressProvider() {
         return Optional.ofNullable(this.sessionAddressProvider);
     }
     /**
      * The flag that indicates whether or not the connection is used for peering service.
      * 
-     */
+    */
     public Optional<Boolean> getUseForPeeringService() {
         return Optional.ofNullable(this.useForPeeringService);
     }
@@ -247,7 +247,6 @@ public final class DirectConnectionResponse {
             this.useForPeeringService = useForPeeringService;
             return this;
         }
-
         public DirectConnectionResponse build() {
             return new DirectConnectionResponse(bandwidthInMbps, bgpSession, connectionIdentifier, connectionState, errorMessage, microsoftTrackingId, peeringDBFacilityId, provisionedBandwidthInMbps, sessionAddressProvider, useForPeeringService);
         }

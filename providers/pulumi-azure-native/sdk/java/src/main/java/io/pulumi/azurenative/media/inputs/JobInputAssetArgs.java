@@ -10,7 +10,7 @@ import io.pulumi.azurenative.media.inputs.InputFileArgs;
 import io.pulumi.azurenative.media.inputs.UtcClipTimeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetName", required=true)
-    private final Input<String> assetName;
+      private final Input<String> assetName;
 
     public Input<String> getAssetName() {
         return this.assetName;
@@ -42,7 +42,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
+      private final @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
 
     public Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -53,7 +53,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="files")
-    private final @Nullable Input<List<String>> files;
+      private final @Nullable Input<List<String>> files;
 
     public Input<List<String>> getFiles() {
         return this.files == null ? Input.empty() : this.files;
@@ -64,7 +64,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputDefinitions")
-    private final @Nullable Input<List<Object>> inputDefinitions;
+      private final @Nullable Input<List<Object>> inputDefinitions;
 
     public Input<List<Object>> getInputDefinitions() {
         return this.inputDefinitions == null ? Input.empty() : this.inputDefinitions;
@@ -75,7 +75,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -87,7 +87,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -98,7 +98,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start")
-    private final @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
+      private final @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
 
     public Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getStart() {
         return this.start == null ? Input.empty() : this.start;
@@ -232,7 +232,6 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
             this.start = Input.ofNullable(start);
             return this;
         }
-
         public JobInputAssetArgs build() {
             return new JobInputAssetArgs(assetName, end, files, inputDefinitions, label, odataType, start);
         }

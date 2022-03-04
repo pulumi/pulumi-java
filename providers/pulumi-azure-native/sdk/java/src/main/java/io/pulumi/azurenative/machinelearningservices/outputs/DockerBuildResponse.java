@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.DockerImagePlatformResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,7 @@ public final class DockerBuildResponse {
      * The path is relative to the asset path which must contain a single Blob URI value.
      * <seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
      * 
-     */
+    */
     public Optional<String> getContext() {
         return Optional.ofNullable(this.context);
     }
@@ -62,7 +62,7 @@ public final class DockerBuildResponse {
      * Enum to determine docker specification type. Must be either Build or Image.
      * Expected value is 'Build'.
      * 
-     */
+    */
     public String getDockerSpecificationType() {
         return this.dockerSpecificationType;
     }
@@ -70,14 +70,14 @@ public final class DockerBuildResponse {
      * Docker command line instructions to assemble an image.
      * <seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
      * 
-     */
+    */
     public String getDockerfile() {
         return this.dockerfile;
     }
     /**
      * The platform information of the docker image.
      * 
-     */
+    */
     public Optional<DockerImagePlatformResponse> getPlatform() {
         return Optional.ofNullable(this.platform);
     }
@@ -127,7 +127,6 @@ public final class DockerBuildResponse {
             this.platform = platform;
             return this;
         }
-
         public DockerBuildResponse build() {
             return new DockerBuildResponse(context, dockerSpecificationType, dockerfile, platform);
         }

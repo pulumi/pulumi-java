@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class PermissionScopeResponse {
     /**
      * The permissions for the local user. Possible values include: Read (r), Write (w), Delete (d), List (l), and Create (c).
      * 
-     */
+    */
     public String getPermissions() {
         return this.permissions;
     }
     /**
      * The name of resource, normally the container name or the file share name, used by the local user.
      * 
-     */
+    */
     public String getPropResourceName() {
         return this.resourceName;
     }
     /**
      * The service used by the local user, e.g. blob, file.
      * 
-     */
+    */
     public String getService() {
         return this.service;
     }
@@ -95,7 +95,6 @@ public final class PermissionScopeResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public PermissionScopeResponse build() {
             return new PermissionScopeResponse(permissions, resourceName, service);
         }

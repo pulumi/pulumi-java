@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class VirtualApplianceSkuPropertiesResponse {
     /**
      * Virtual Appliance Scale Unit.
      * 
-     */
+    */
     public Optional<String> getBundledScaleUnit() {
         return Optional.ofNullable(this.bundledScaleUnit);
     }
     /**
      * Virtual Appliance Version.
      * 
-     */
+    */
     public Optional<String> getMarketPlaceVersion() {
         return Optional.ofNullable(this.marketPlaceVersion);
     }
     /**
      * Virtual Appliance Vendor.
      * 
-     */
+    */
     public Optional<String> getVendor() {
         return Optional.ofNullable(this.vendor);
     }
@@ -97,7 +97,6 @@ public final class VirtualApplianceSkuPropertiesResponse {
             this.vendor = vendor;
             return this;
         }
-
         public VirtualApplianceSkuPropertiesResponse build() {
             return new VirtualApplianceSkuPropertiesResponse(bundledScaleUnit, marketPlaceVersion, vendor);
         }

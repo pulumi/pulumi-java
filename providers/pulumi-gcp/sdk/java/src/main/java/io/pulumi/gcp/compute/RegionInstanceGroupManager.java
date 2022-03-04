@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionInstanceGroupManagerArgs;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerState;
@@ -367,6 +367,37 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
         return this.waitForInstancesStatus;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RegionInstanceGroupManagerArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.RegionInstanceGroupManagerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.RegionInstanceGroupManagerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RegionInstanceGroupManager(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RegionInstanceGroupManager(String name) {
+        this(name, RegionInstanceGroupManagerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RegionInstanceGroupManager(String name, RegionInstanceGroupManagerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SecretObjectResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -28,7 +28,7 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable String identity;
+      private final @Nullable String identity;
 
     public Optional<String> getIdentity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
@@ -40,7 +40,7 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="password")
-    private final @Nullable SecretObjectResponse password;
+      private final @Nullable SecretObjectResponse password;
 
     public Optional<SecretObjectResponse> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -51,7 +51,7 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable SecretObjectResponse userName;
+      private final @Nullable SecretObjectResponse userName;
 
     public Optional<SecretObjectResponse> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
@@ -110,7 +110,6 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
             this.userName = userName;
             return this;
         }
-
         public CustomRegistryCredentialsResponse build() {
             return new CustomRegistryCredentialsResponse(identity, password, userName);
         }

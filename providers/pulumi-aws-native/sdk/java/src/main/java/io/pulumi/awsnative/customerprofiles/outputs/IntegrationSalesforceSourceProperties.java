@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.customerprofiles.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class IntegrationSalesforceSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public IntegrationSalesforceSourceProperties build() {
             return new IntegrationSalesforceSourceProperties(enableDynamicFieldUpdate, includeDeletedRecords, object);
         }

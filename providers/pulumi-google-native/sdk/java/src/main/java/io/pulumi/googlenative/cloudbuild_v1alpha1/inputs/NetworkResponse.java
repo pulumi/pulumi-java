@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -32,7 +32,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -43,7 +43,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -102,7 +102,6 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public NetworkResponse build() {
             return new NetworkResponse(network, project, subnetwork);
         }

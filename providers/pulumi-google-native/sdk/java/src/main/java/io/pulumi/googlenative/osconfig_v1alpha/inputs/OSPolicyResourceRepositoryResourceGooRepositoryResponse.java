@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse exten
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse exten
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -81,7 +81,6 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse exten
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceGooRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceGooRepositoryResponse(name, url);
         }

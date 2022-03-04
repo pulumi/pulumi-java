@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class NetworkPropertiesResponse {
     /**
      * Indicates whether or not private link is enabled.
      * 
-     */
+    */
     public Optional<String> getPrivateLink() {
         return Optional.ofNullable(this.privateLink);
     }
     /**
      * The direction for the resource provider connection.
      * 
-     */
+    */
     public Optional<String> getResourceProviderConnection() {
         return Optional.ofNullable(this.resourceProviderConnection);
     }
@@ -76,7 +76,6 @@ public final class NetworkPropertiesResponse {
             this.resourceProviderConnection = resourceProviderConnection;
             return this;
         }
-
         public NetworkPropertiesResponse build() {
             return new NetworkPropertiesResponse(privateLink, resourceProviderConnection);
         }

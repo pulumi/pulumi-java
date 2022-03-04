@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatch;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformation;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class WebACLRegexMatchStatement extends io.pulumi.resources.InvokeA
     public static final WebACLRegexMatchStatement Empty = new WebACLRegexMatchStatement();
 
     @InputImport(name="fieldToMatch", required=true)
-    private final WebACLFieldToMatch fieldToMatch;
+      private final WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="regexString", required=true)
-    private final String regexString;
+      private final String regexString;
 
     public String getRegexString() {
         return this.regexString;
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final List<WebACLTextTransformation> textTransformations;
+      private final List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> getTextTransformations() {
         return this.textTransformations;
@@ -89,7 +89,6 @@ public final class WebACLRegexMatchStatement extends io.pulumi.resources.InvokeA
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public WebACLRegexMatchStatement build() {
             return new WebACLRegexMatchStatement(fieldToMatch, regexString, textTransformations);
         }

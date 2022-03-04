@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="authFailAction")
-    private final @Nullable Input<String> authFailAction;
+      private final @Nullable Input<String> authFailAction;
 
     public Input<String> getAuthFailAction() {
         return this.authFailAction == null ? Input.empty() : this.authFailAction;
@@ -34,7 +34,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<String> login;
+      private final @Nullable Input<String> login;
 
     public Input<String> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -45,7 +45,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="script", required=true)
-    private final Input<String> script;
+      private final Input<String> script;
 
     public Input<String> getScript() {
         return this.script;
@@ -57,7 +57,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="securityLevel")
-    private final @Nullable Input<String> securityLevel;
+      private final @Nullable Input<String> securityLevel;
 
     public Input<String> getSecurityLevel() {
         return this.securityLevel == null ? Input.empty() : this.securityLevel;
@@ -68,7 +68,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -172,7 +172,6 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public FlexibleAppVersionApiConfigArgs build() {
             return new FlexibleAppVersionApiConfigArgs(authFailAction, login, script, securityLevel, url);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="imageVersion", required=true)
-    private final String imageVersion;
+      private final String imageVersion;
 
     public String getImageVersion() {
         return this.imageVersion;
@@ -34,7 +34,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="optionalComponents", required=true)
-    private final List<String> optionalComponents;
+      private final List<String> optionalComponents;
 
     public List<String> getOptionalComponents() {
         return this.optionalComponents;
@@ -45,7 +45,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Map<String,String> properties;
+      private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties;
@@ -104,7 +104,6 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public SoftwareConfigResponse build() {
             return new SoftwareConfigResponse(imageVersion, optionalComponents, properties);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class TopicRulePutItemInputArgs extends io.pulumi.resources.Resourc
     public static final TopicRulePutItemInputArgs Empty = new TopicRulePutItemInputArgs();
 
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
@@ -57,7 +57,6 @@ public final class TopicRulePutItemInputArgs extends io.pulumi.resources.Resourc
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }
-
         public TopicRulePutItemInputArgs build() {
             return new TopicRulePutItemInputArgs(tableName);
         }

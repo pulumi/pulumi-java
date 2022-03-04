@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.BodyDiagnosticSettingsResponse;
 import io.pulumi.azurenative.apimanagement.outputs.DataMaskingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class HttpMessageDiagnosticResponse {
     /**
      * Body logging settings.
      * 
-     */
+    */
     public Optional<BodyDiagnosticSettingsResponse> getBody() {
         return Optional.ofNullable(this.body);
     }
     /**
      * Data masking settings.
      * 
-     */
+    */
     public Optional<DataMaskingResponse> getDataMasking() {
         return Optional.ofNullable(this.dataMasking);
     }
     /**
      * Array of HTTP Headers to log.
      * 
-     */
+    */
     public List<String> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
@@ -100,7 +100,6 @@ public final class HttpMessageDiagnosticResponse {
             this.headers = headers;
             return this;
         }
-
         public HttpMessageDiagnosticResponse build() {
             return new HttpMessageDiagnosticResponse(body, dataMasking, headers);
         }

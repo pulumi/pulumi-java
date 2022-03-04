@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetKeysZoneSigningKeyDigest {
     /**
      * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
      * 
-     */
+    */
     public Optional<String> getDigest() {
         return Optional.ofNullable(this.digest);
     }
     /**
      * Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -76,7 +76,6 @@ public final class GetKeysZoneSigningKeyDigest {
             this.type = type;
             return this;
         }
-
         public GetKeysZoneSigningKeyDigest build() {
             return new GetKeysZoneSigningKeyDigest(digest, type);
         }

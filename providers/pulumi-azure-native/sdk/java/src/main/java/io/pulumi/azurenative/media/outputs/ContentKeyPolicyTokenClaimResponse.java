@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ContentKeyPolicyTokenClaimResponse {
     /**
      * Token claim type.
      * 
-     */
+    */
     public Optional<String> getClaimType() {
         return Optional.ofNullable(this.claimType);
     }
     /**
      * Token claim value.
      * 
-     */
+    */
     public Optional<String> getClaimValue() {
         return Optional.ofNullable(this.claimValue);
     }
@@ -76,7 +76,6 @@ public final class ContentKeyPolicyTokenClaimResponse {
             this.claimValue = claimValue;
             return this;
         }
-
         public ContentKeyPolicyTokenClaimResponse build() {
             return new ContentKeyPolicyTokenClaimResponse(claimType, claimValue);
         }

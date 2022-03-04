@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,21 +62,21 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse {
     /**
      * Type of backup management for the backed up item.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
      * 
-     */
+    */
     public Optional<String> getItemId() {
         return Optional.ofNullable(this.itemId);
     }
     /**
      * ID of the backup policy with which this item is backed up.
      * 
-     */
+    */
     public Optional<String> getPolicyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -84,21 +84,21 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse {
      * backup protectionIntent type.
      * Expected value is 'RecoveryServiceVaultItem'.
      * 
-     */
+    */
     public String getProtectionIntentItemType() {
         return this.protectionIntentItemType;
     }
     /**
      * Backup state of this backup item.
      * 
-     */
+    */
     public Optional<String> getProtectionState() {
         return Optional.ofNullable(this.protectionState);
     }
     /**
      * ARM ID of the resource to be backed up.
      * 
-     */
+    */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
@@ -162,7 +162,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public AzureRecoveryServiceVaultProtectionIntentResponse build() {
             return new AzureRecoveryServiceVaultProtectionIntentResponse(backupManagementType, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId);
         }

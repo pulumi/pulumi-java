@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
             this.retentionUnit = Objects.requireNonNull(retentionUnit);
             return this;
         }
-
         public GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting build() {
             return new GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(retainedBackups, retentionUnit);
         }

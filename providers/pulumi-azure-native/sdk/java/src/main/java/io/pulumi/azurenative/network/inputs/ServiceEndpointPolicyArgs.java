@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ServiceEndpointPolicyDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -37,7 +37,7 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -48,7 +48,7 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceEndpointPolicyDefinitions")
-    private final @Nullable Input<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
+      private final @Nullable Input<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
 
     public Input<List<ServiceEndpointPolicyDefinitionArgs>> getServiceEndpointPolicyDefinitions() {
         return this.serviceEndpointPolicyDefinitions == null ? Input.empty() : this.serviceEndpointPolicyDefinitions;
@@ -59,7 +59,7 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -148,7 +148,6 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ServiceEndpointPolicyArgs build() {
             return new ServiceEndpointPolicyArgs(id, location, serviceEndpointPolicyDefinitions, tags);
         }

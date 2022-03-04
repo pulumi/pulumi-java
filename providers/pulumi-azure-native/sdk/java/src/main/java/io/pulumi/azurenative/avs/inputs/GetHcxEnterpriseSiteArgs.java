@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="hcxEnterpriseSiteName", required=true)
-    private final String hcxEnterpriseSiteName;
+      private final String hcxEnterpriseSiteName;
 
     public String getHcxEnterpriseSiteName() {
         return this.hcxEnterpriseSiteName;
@@ -28,7 +28,7 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final String privateCloudName;
+      private final String privateCloudName;
 
     public String getPrivateCloudName() {
         return this.privateCloudName;
@@ -39,7 +39,7 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetHcxEnterpriseSiteArgs build() {
             return new GetHcxEnterpriseSiteArgs(hcxEnterpriseSiteName, privateCloudName, resourceGroupName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.fms.outputs;
 
 import io.pulumi.awsnative.fms.enums.PolicySecurityServicePolicyDataPropertiesType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class SecurityServicePolicyDataProperties {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SecurityServicePolicyDataProperties build() {
             return new SecurityServicePolicyDataProperties(managedServiceData, type);
         }

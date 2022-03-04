@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ListEASubscriptionListMigrationDatePostResult {
     /**
      * Is subscription in the grand fatherable subscription list.
      * 
-     */
+    */
     public Optional<Boolean> getIsGrandFatherableSubscription() {
         return Optional.ofNullable(this.isGrandFatherableSubscription);
     }
     /**
      * Time to start using new pricing model.
      * 
-     */
+    */
     public Optional<String> getOptedInDate() {
         return Optional.ofNullable(this.optedInDate);
     }
@@ -77,7 +77,6 @@ public final class ListEASubscriptionListMigrationDatePostResult {
             this.optedInDate = optedInDate;
             return this;
         }
-
         public ListEASubscriptionListMigrationDatePostResult build() {
             return new ListEASubscriptionListMigrationDatePostResult(isGrandFatherableSubscription, optedInDate);
         }

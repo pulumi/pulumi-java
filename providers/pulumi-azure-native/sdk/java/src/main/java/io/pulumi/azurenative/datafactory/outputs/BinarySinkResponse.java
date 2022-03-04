@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.AzureDataLakeStoreWriteSettings
 import io.pulumi.azurenative.datafactory.outputs.AzureFileStorageWriteSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.FileServerWriteSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpWriteSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -83,35 +83,35 @@ public final class BinarySinkResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
     /**
      * Binary store settings.
      * 
-     */
+    */
     public Optional<Object> getStoreSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
@@ -119,21 +119,21 @@ public final class BinarySinkResponse {
      * Copy sink type.
      * Expected value is 'BinarySink'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getWriteBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getWriteBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
@@ -211,7 +211,6 @@ public final class BinarySinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public BinarySinkResponse build() {
             return new BinarySinkResponse(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);
         }

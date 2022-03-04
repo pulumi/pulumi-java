@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -55,35 +55,35 @@ public final class GoogleCloudChannelV1ValueResponse {
     /**
      * Represents a boolean value.
      * 
-     */
+    */
     public Boolean getBoolValue() {
         return this.boolValue;
     }
     /**
      * Represents a double value.
      * 
-     */
+    */
     public Double getDoubleValue() {
         return this.doubleValue;
     }
     /**
      * Represents an int64 value.
      * 
-     */
+    */
     public String getInt64Value() {
         return this.int64Value;
     }
     /**
      * Represents an 'Any' proto value.
      * 
-     */
+    */
     public Map<String,String> getProtoValue() {
         return this.protoValue;
     }
     /**
      * Represents a string value.
      * 
-     */
+    */
     public String getStringValue() {
         return this.stringValue;
     }
@@ -140,7 +140,6 @@ public final class GoogleCloudChannelV1ValueResponse {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public GoogleCloudChannelV1ValueResponse build() {
             return new GoogleCloudChannelV1ValueResponse(boolValue, doubleValue, int64Value, protoValue, stringValue);
         }

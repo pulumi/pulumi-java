@@ -5,8 +5,8 @@ package io.pulumi.gcp.serviceusage;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceusage.ConsumerQuotaOverrideArgs;
 import io.pulumi.gcp.serviceusage.inputs.ConsumerQuotaOverrideState;
@@ -164,6 +164,37 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
         return this.service;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ConsumerQuotaOverrideArgs.Builder a);
+    }
+    private static io.pulumi.gcp.serviceusage.ConsumerQuotaOverrideArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.serviceusage.ConsumerQuotaOverrideArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ConsumerQuotaOverride(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ConsumerQuotaOverride(String name) {
+        this(name, ConsumerQuotaOverrideArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ConsumerQuotaOverride(String name, ConsumerQuotaOverrideArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

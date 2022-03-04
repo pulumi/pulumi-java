@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactGcsGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactRemoteGetArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowInsecure")
-    private final @Nullable Input<Boolean> allowInsecure;
+      private final @Nullable Input<Boolean> allowInsecure;
 
     public Input<Boolean> getAllowInsecure() {
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
@@ -36,7 +36,7 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="gcs")
-    private final @Nullable Input<GuestPoliciesRecipeArtifactGcsGetArgs> gcs;
+      private final @Nullable Input<GuestPoliciesRecipeArtifactGcsGetArgs> gcs;
 
     public Input<GuestPoliciesRecipeArtifactGcsGetArgs> getGcs() {
         return this.gcs == null ? Input.empty() : this.gcs;
@@ -48,7 +48,7 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -60,7 +60,7 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="remote")
-    private final @Nullable Input<GuestPoliciesRecipeArtifactRemoteGetArgs> remote;
+      private final @Nullable Input<GuestPoliciesRecipeArtifactRemoteGetArgs> remote;
 
     public Input<GuestPoliciesRecipeArtifactRemoteGetArgs> getRemote() {
         return this.remote == null ? Input.empty() : this.remote;
@@ -149,7 +149,6 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
             this.remote = Input.ofNullable(remote);
             return this;
         }
-
         public GuestPoliciesRecipeArtifactGetArgs build() {
             return new GuestPoliciesRecipeArtifactGetArgs(allowInsecure, gcs, id, remote);
         }

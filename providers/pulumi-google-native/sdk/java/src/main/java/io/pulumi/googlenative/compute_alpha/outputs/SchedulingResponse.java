@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DurationResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SchedulingNodeAffinityResponse;
 import java.lang.Boolean;
@@ -141,119 +141,119 @@ public final class SchedulingResponse {
     /**
      * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
      * 
-     */
+    */
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
     }
     /**
      * Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.
      * 
-     */
+    */
     public Integer getAvailabilityDomain() {
         return this.availabilityDomain;
     }
     /**
      * Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.
      * 
-     */
+    */
     public Integer getCurrentCpus() {
         return this.currentCpus;
     }
     /**
      * Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.
      * 
-     */
+    */
     public String getCurrentMemoryMb() {
         return this.currentMemoryMb;
     }
     /**
      * Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
      * 
-     */
+    */
     public Integer getHostErrorTimeoutSeconds() {
         return this.hostErrorTimeoutSeconds;
     }
     /**
      * Specifies the termination action for the instance.
      * 
-     */
+    */
     public String getInstanceTerminationAction() {
         return this.instanceTerminationAction;
     }
     /**
      * Defines whether the instance is tolerant of higher cpu latency. This can only be set during instance creation, or when the instance is not currently running. It must not be set if the preemptible option is also set.
      * 
-     */
+    */
     public Boolean getLatencyTolerant() {
         return this.latencyTolerant;
     }
     /**
      * An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
      * 
-     */
+    */
     public String getLocationHint() {
         return this.locationHint;
     }
     /**
      * Specifies the number of hours after VM instance creation where the VM won't be scheduled for maintenance.
      * 
-     */
+    */
     public Integer getMaintenanceFreezeDurationHours() {
         return this.maintenanceFreezeDurationHours;
     }
     /**
      * For more information about maintenance intervals, see Setting maintenance intervals.
      * 
-     */
+    */
     public String getMaintenanceInterval() {
         return this.maintenanceInterval;
     }
     /**
      * Specifies the max run duration for the given instance. If specified, the instance termination action will be performed at the end of the run duration.
      * 
-     */
+    */
     public DurationResponse getMaxRunDuration() {
         return this.maxRunDuration;
     }
     /**
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
      * 
-     */
+    */
     public Integer getMinNodeCpus() {
         return this.minNodeCpus;
     }
     /**
      * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
      * 
-     */
+    */
     public List<SchedulingNodeAffinityResponse> getNodeAffinities() {
         return this.nodeAffinities;
     }
     /**
      * Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
      * 
-     */
+    */
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
     }
     /**
      * Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
      * 
-     */
+    */
     public Boolean getPreemptible() {
         return this.preemptible;
     }
     /**
      * Specifies the provisioning model of the instance.
      * 
-     */
+    */
     public String getProvisioningModel() {
         return this.provisioningModel;
     }
     /**
      * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
      * 
-     */
+    */
     public String getTerminationTime() {
         return this.terminationTime;
     }
@@ -394,7 +394,6 @@ public final class SchedulingResponse {
             this.terminationTime = Objects.requireNonNull(terminationTime);
             return this;
         }
-
         public SchedulingResponse build() {
             return new SchedulingResponse(automaticRestart, availabilityDomain, currentCpus, currentMemoryMb, hostErrorTimeoutSeconds, instanceTerminationAction, latencyTolerant, locationHint, maintenanceFreezeDurationHours, maintenanceInterval, maxRunDuration, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel, terminationTime);
         }

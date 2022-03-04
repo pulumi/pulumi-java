@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,42 +59,42 @@ public final class GetSubscriptionResult {
     /**
      * Name of the API product for which the developer is purchasing a subscription.
      * 
-     */
+    */
     public String getApiproduct() {
         return this.apiproduct;
     }
     /**
      * Time when the API product subscription was created in milliseconds since epoch.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Time when the API product subscription ends in milliseconds since epoch.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Time when the API product subscription was last modified in milliseconds since epoch.
      * 
-     */
+    */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Name of the API product subscription.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Time when the API product subscription starts in milliseconds since epoch.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -158,7 +158,6 @@ public final class GetSubscriptionResult {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetSubscriptionResult build() {
             return new GetSubscriptionResult(apiproduct, createdAt, endTime, lastModifiedAt, name, startTime);
         }

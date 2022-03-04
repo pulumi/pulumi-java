@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dbformysql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="charset")
-    private final @Nullable Input<String> charset;
+      private final @Nullable Input<String> charset;
 
     public Input<String> getCharset() {
         return this.charset == null ? Input.empty() : this.charset;
@@ -30,7 +30,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collation")
-    private final @Nullable Input<String> collation;
+      private final @Nullable Input<String> collation;
 
     public Input<String> getCollation() {
         return this.collation == null ? Input.empty() : this.collation;
@@ -41,7 +41,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -52,7 +52,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -167,7 +167,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public DatabaseArgs build() {
             return new DatabaseArgs(charset, collation, databaseName, resourceGroupName, serverName);
         }

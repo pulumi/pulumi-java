@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +45,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressToOperation {
      * AND permissions for the service specified in `serviceName`.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector> getMethodSelectors() {
         return this.methodSelectors == null ? List.of() : this.methodSelectors;
     }
@@ -54,7 +54,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressToOperation {
      * `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
      * field set to `*` will allow all methods AND permissions for all services.
      * 
-     */
+    */
     public Optional<String> getServiceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -90,7 +90,6 @@ public final class ServicePerimeterSpecEgressPolicyEgressToOperation {
             this.serviceName = serviceName;
             return this;
         }
-
         public ServicePerimeterSpecEgressPolicyEgressToOperation build() {
             return new ServicePerimeterSpecEgressPolicyEgressToOperation(methodSelectors, serviceName);
         }

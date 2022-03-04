@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse 
      * 
      */
     @InputImport(name="followupIntentName", required=true)
-    private final String followupIntentName;
+      private final String followupIntentName;
 
     public String getFollowupIntentName() {
         return this.followupIntentName;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse 
      * 
      */
     @InputImport(name="parentFollowupIntentName", required=true)
-    private final String parentFollowupIntentName;
+      private final String parentFollowupIntentName;
 
     public String getParentFollowupIntentName() {
         return this.parentFollowupIntentName;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse 
             this.parentFollowupIntentName = Objects.requireNonNull(parentFollowupIntentName);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse(followupIntentName, parentFollowupIntentName);
         }

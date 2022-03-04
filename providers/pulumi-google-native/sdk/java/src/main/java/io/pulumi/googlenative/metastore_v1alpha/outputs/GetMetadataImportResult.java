@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.DatabaseDumpResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class GetMetadataImportResult {
     /**
      * The time when the metadata import was started.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Immutable. A database dump from a pre-existing metastore's database.
      * 
-     */
+    */
     public DatabaseDumpResponse getDatabaseDump() {
         return this.databaseDump;
     }
     /**
      * The description of the metadata import.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The time when the metadata import finished.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current state of the metadata import.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The time when the metadata import was last updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -180,7 +180,6 @@ public final class GetMetadataImportResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMetadataImportResult build() {
             return new GetMetadataImportResult(createTime, databaseDump, description, endTime, name, state, updateTime);
         }

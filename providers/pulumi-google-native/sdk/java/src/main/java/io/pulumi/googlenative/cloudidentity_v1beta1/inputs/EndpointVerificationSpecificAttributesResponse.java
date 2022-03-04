@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.CertificateAttributesResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EndpointVerificationSpecificAttributesResponse extends io.pul
      * 
      */
     @InputImport(name="certificateAttributes", required=true)
-    private final List<CertificateAttributesResponse> certificateAttributes;
+      private final List<CertificateAttributesResponse> certificateAttributes;
 
     public List<CertificateAttributesResponse> getCertificateAttributes() {
         return this.certificateAttributes;
@@ -60,7 +60,6 @@ public final class EndpointVerificationSpecificAttributesResponse extends io.pul
             this.certificateAttributes = Objects.requireNonNull(certificateAttributes);
             return this;
         }
-
         public EndpointVerificationSpecificAttributesResponse build() {
             return new EndpointVerificationSpecificAttributesResponse(certificateAttributes);
         }

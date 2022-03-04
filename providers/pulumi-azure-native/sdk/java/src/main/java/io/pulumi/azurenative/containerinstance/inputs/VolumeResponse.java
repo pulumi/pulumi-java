@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.AzureFileVolumeResponse;
 import io.pulumi.azurenative.containerinstance.inputs.GitRepoVolumeResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="azureFile")
-    private final @Nullable AzureFileVolumeResponse azureFile;
+      private final @Nullable AzureFileVolumeResponse azureFile;
 
     public Optional<AzureFileVolumeResponse> getAzureFile() {
         return this.azureFile == null ? Optional.empty() : Optional.ofNullable(this.azureFile);
@@ -38,7 +38,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="emptyDir")
-    private final @Nullable Object emptyDir;
+      private final @Nullable Object emptyDir;
 
     public Optional<Object> getEmptyDir() {
         return this.emptyDir == null ? Optional.empty() : Optional.ofNullable(this.emptyDir);
@@ -49,7 +49,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gitRepo")
-    private final @Nullable GitRepoVolumeResponse gitRepo;
+      private final @Nullable GitRepoVolumeResponse gitRepo;
 
     public Optional<GitRepoVolumeResponse> getGitRepo() {
         return this.gitRepo == null ? Optional.empty() : Optional.ofNullable(this.gitRepo);
@@ -60,7 +60,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -71,7 +71,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Map<String,String> secret;
+      private final @Nullable Map<String,String> secret;
 
     public Map<String,String> getSecret() {
         return this.secret == null ? Map.of() : this.secret;
@@ -150,7 +150,6 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
             this.secret = secret;
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(azureFile, emptyDir, gitRepo, name, secret);
         }

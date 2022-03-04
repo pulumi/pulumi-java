@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetGatewayArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetGatewayResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGateway {
-/**
- * Gateway details.
+    private GetGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetGatewayArgs.Builder a);
+    }
+    private static GetGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gateway details.
  * API Version: 2020-12-01.
  * 
- *
- * Gateway details.
+     *
+     * Gateway details.
  * 
- */
+     */
+    public static CompletableFuture<GetGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gateway details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Gateway details.
+     * 
+     */
     public static CompletableFuture<GetGatewayResult> invokeAsync(GetGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGateway", TypeShape.of(GetGatewayResult.class), args == null ? GetGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

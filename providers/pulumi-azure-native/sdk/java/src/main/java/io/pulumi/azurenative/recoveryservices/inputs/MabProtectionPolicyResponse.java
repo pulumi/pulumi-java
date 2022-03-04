@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.LongTermSchedulePolicyRespo
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class MabProtectionPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-    private final String backupManagementType;
+      private final String backupManagementType;
 
     public String getBackupManagementType() {
         return this.backupManagementType;
@@ -43,7 +43,7 @@ public final class MabProtectionPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="protectedItemsCount")
-    private final @Nullable Integer protectedItemsCount;
+      private final @Nullable Integer protectedItemsCount;
 
     public Optional<Integer> getProtectedItemsCount() {
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
@@ -54,7 +54,7 @@ public final class MabProtectionPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
+      private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
     public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> getRetentionPolicy() {
         return this.retentionPolicy == null ? null : this.retentionPolicy;
@@ -65,7 +65,7 @@ public final class MabProtectionPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="schedulePolicy")
-    private final @Nullable Object schedulePolicy;
+      private final @Nullable Object schedulePolicy;
 
     public Object getSchedulePolicy() {
         return this.schedulePolicy == null ? null : this.schedulePolicy;
@@ -134,7 +134,6 @@ public final class MabProtectionPolicyResponse extends io.pulumi.resources.Invok
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public MabProtectionPolicyResponse build() {
             return new MabProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy);
         }

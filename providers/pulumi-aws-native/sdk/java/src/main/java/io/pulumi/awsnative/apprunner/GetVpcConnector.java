@@ -6,17 +6,33 @@ package io.pulumi.awsnative.apprunner;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apprunner.inputs.GetVpcConnectorArgs;
 import io.pulumi.awsnative.apprunner.outputs.GetVpcConnectorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpcConnector {
-/**
- * The AWS::AppRunner::VpcConnector resource specifies an App Runner VpcConnector.
+    private GetVpcConnector() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpcConnectorArgs.Builder a);
+    }
+    private static GetVpcConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpcConnectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::AppRunner::VpcConnector resource specifies an App Runner VpcConnector.
  * 
- */
+     */
+    public static CompletableFuture<GetVpcConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::AppRunner::VpcConnector resource specifies an App Runner VpcConnector.
+     * 
+     */
     public static CompletableFuture<GetVpcConnectorResult> invokeAsync(GetVpcConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apprunner:getVpcConnector", TypeShape.of(GetVpcConnectorResult.class), args == null ? GetVpcConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

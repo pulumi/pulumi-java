@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class WebACLOverrideAction {
     /**
      * Count traffic towards application.
      * 
-     */
+    */
     public Optional<Object> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Keep the RuleGroup or ManagedRuleGroup behavior as is.
      * 
-     */
+    */
     public Optional<Object> getNone() {
         return Optional.ofNullable(this.none);
     }
@@ -76,7 +76,6 @@ public final class WebACLOverrideAction {
             this.none = none;
             return this;
         }
-
         public WebACLOverrideAction build() {
             return new WebACLOverrideAction(count, none);
         }

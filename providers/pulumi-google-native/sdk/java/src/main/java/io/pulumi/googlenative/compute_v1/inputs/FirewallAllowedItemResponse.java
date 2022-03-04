@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class FirewallAllowedItemResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="ipProtocol", required=true)
-    private final String ipProtocol;
+      private final String ipProtocol;
 
     public String getIpProtocol() {
         return this.ipProtocol;
@@ -29,7 +29,7 @@ public final class FirewallAllowedItemResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="ports", required=true)
-    private final List<String> ports;
+      private final List<String> ports;
 
     public List<String> getPorts() {
         return this.ports;
@@ -78,7 +78,6 @@ public final class FirewallAllowedItemResponse extends io.pulumi.resources.Invok
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public FirewallAllowedItemResponse build() {
             return new FirewallAllowedItemResponse(ipProtocol, ports);
         }

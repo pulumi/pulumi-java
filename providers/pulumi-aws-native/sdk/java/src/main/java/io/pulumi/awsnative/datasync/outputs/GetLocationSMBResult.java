@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.outputs.LocationSMBMountOptions;
 import io.pulumi.awsnative.datasync.outputs.LocationSMBTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -67,28 +67,28 @@ public final class GetLocationSMBResult {
     /**
      * The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
      * 
-     */
+    */
     public List<String> getAgentArns() {
         return this.agentArns == null ? List.of() : this.agentArns;
     }
     /**
      * The name of the Windows domain that the SMB server belongs to.
      * 
-     */
+    */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * The Amazon Resource Name (ARN) of the SMB location that is created.
      * 
-     */
+    */
     public Optional<String> getLocationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
      * The URL of the SMB location that was described.
      * 
-     */
+    */
     public Optional<String> getLocationUri() {
         return Optional.ofNullable(this.locationUri);
     }
@@ -98,14 +98,14 @@ public final class GetLocationSMBResult {
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<LocationSMBTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The user who can mount the share, has the permissions to access files and folders in the SMB share.
      * 
-     */
+    */
     public Optional<String> getUser() {
         return Optional.ofNullable(this.user);
     }
@@ -176,7 +176,6 @@ public final class GetLocationSMBResult {
             this.user = user;
             return this;
         }
-
         public GetLocationSMBResult build() {
             return new GetLocationSMBResult(agentArns, domain, locationArn, locationUri, mountOptions, tags, user);
         }

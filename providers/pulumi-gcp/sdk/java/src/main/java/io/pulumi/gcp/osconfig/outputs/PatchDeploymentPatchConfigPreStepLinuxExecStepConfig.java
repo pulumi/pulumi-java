@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject;
 import java.lang.Integer;
 import java.lang.String;
@@ -53,7 +53,7 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfig {
     /**
      * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
      * 
-     */
+    */
     public List<Integer> getAllowedSuccessCodes() {
         return this.allowedSuccessCodes == null ? List.of() : this.allowedSuccessCodes;
     }
@@ -61,7 +61,7 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfig {
      * A Cloud Storage object containing the executable.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject> getGcsObject() {
         return Optional.ofNullable(this.gcsObject);
     }
@@ -70,14 +70,14 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfig {
      * be executed directly, which will likely only succeed for scripts with shebang lines.
      * Possible values are `SHELL` and `POWERSHELL`.
      * 
-     */
+    */
     public Optional<String> getInterpreter() {
         return Optional.ofNullable(this.interpreter);
     }
     /**
      * An absolute path to the executable on the VM.
      * 
-     */
+    */
     public Optional<String> getLocalPath() {
         return Optional.ofNullable(this.localPath);
     }
@@ -127,7 +127,6 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfig {
             this.localPath = localPath;
             return this;
         }
-
         public PatchDeploymentPatchConfigPreStepLinuxExecStepConfig build() {
             return new PatchDeploymentPatchConfigPreStepLinuxExecStepConfig(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }

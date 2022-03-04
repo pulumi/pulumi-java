@@ -6,17 +6,33 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.location.inputs.GetTrackerArgs;
 import io.pulumi.awsnative.location.outputs.GetTrackerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTracker {
-/**
- * Definition of AWS::Location::Tracker Resource Type
+    private GetTracker() {}
+    public interface BuilderApplicator {
+        public void apply(GetTrackerArgs.Builder a);
+    }
+    private static GetTrackerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTrackerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of AWS::Location::Tracker Resource Type
  * 
- */
+     */
+    public static CompletableFuture<GetTrackerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of AWS::Location::Tracker Resource Type
+     * 
+     */
     public static CompletableFuture<GetTrackerResult> invokeAsync(GetTrackerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getTracker", TypeShape.of(GetTrackerResult.class), args == null ? GetTrackerArgs.Empty : args, Utilities.withVersion(options));
     }

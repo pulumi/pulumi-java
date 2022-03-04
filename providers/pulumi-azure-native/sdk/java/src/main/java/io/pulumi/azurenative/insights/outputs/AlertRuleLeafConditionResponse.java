@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,14 +42,14 @@ public final class AlertRuleLeafConditionResponse {
     /**
      * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
      * 
-     */
+    */
     public List<String> getContainsAny() {
         return this.containsAny == null ? List.of() : this.containsAny;
     }
     /**
      * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
      * 
-     */
+    */
     public Optional<String> getEquals() {
         return Optional.ofNullable(this.equals);
     }
@@ -57,7 +57,7 @@ public final class AlertRuleLeafConditionResponse {
      * The name of the Activity Log event's field that this condition will examine.
      * The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
      * 
-     */
+    */
     public Optional<String> getField() {
         return Optional.ofNullable(this.field);
     }
@@ -100,7 +100,6 @@ public final class AlertRuleLeafConditionResponse {
             this.field = field;
             return this;
         }
-
         public AlertRuleLeafConditionResponse build() {
             return new AlertRuleLeafConditionResponse(containsAny, equals, field);
         }

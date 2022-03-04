@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class GetScheduleResult {
     /**
      * Schedule cron
      * 
-     */
+    */
     public Optional<String> getCronExpression() {
         return Optional.ofNullable(this.cronExpression);
     }
@@ -69,7 +69,6 @@ public final class GetScheduleResult {
             this.jobNames = jobNames;
             return this;
         }
-
         public GetScheduleResult build() {
             return new GetScheduleResult(cronExpression, jobNames);
         }

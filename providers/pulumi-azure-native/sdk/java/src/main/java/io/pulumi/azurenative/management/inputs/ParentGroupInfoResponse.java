@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.management.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -34,7 +34,7 @@ public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -45,7 +45,7 @@ public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -104,7 +104,6 @@ public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArg
             this.name = name;
             return this;
         }
-
         public ParentGroupInfoResponse build() {
             return new ParentGroupInfoResponse(displayName, id, name);
         }

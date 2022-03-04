@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="gradeName")
-    private final @Nullable Input<String> gradeName;
+      private final @Nullable Input<String> gradeName;
 
     public Input<String> getGradeName() {
         return this.gradeName == null ? Input.empty() : this.gradeName;
@@ -35,7 +35,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxScoreThreshold")
-    private final @Nullable Input<Integer> maxScoreThreshold;
+      private final @Nullable Input<Integer> maxScoreThreshold;
 
     public Input<Integer> getMaxScoreThreshold() {
         return this.maxScoreThreshold == null ? Input.empty() : this.maxScoreThreshold;
@@ -46,7 +46,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minScoreThreshold")
-    private final @Nullable Input<Integer> minScoreThreshold;
+      private final @Nullable Input<Integer> minScoreThreshold;
 
     public Input<Integer> getMinScoreThreshold() {
         return this.minScoreThreshold == null ? Input.empty() : this.minScoreThreshold;
@@ -120,7 +120,6 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
             this.minScoreThreshold = Input.ofNullable(minScoreThreshold);
             return this;
         }
-
         public PredictionGradesArgs build() {
             return new PredictionGradesArgs(gradeName, maxScoreThreshold, minScoreThreshold);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.CreateRecoveryPlanInputPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<CreateRecoveryPlanInputPropertiesArgs> properties;
+      private final Input<CreateRecoveryPlanInputPropertiesArgs> properties;
 
     public Input<CreateRecoveryPlanInputPropertiesArgs> getProperties() {
         return this.properties;
@@ -31,7 +31,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="recoveryPlanName")
-    private final @Nullable Input<String> recoveryPlanName;
+      private final @Nullable Input<String> recoveryPlanName;
 
     public Input<String> getRecoveryPlanName() {
         return this.recoveryPlanName == null ? Input.empty() : this.recoveryPlanName;
@@ -42,7 +42,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -142,7 +142,6 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public ReplicationRecoveryPlanArgs build() {
             return new ReplicationRecoveryPlanArgs(properties, recoveryPlanName, resourceGroupName, resourceName);
         }

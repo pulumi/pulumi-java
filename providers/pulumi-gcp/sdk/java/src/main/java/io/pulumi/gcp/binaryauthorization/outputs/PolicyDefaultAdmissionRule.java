@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.binaryauthorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,7 +50,7 @@ public final class PolicyDefaultAdmissionRule {
      * The action when a pod creation is denied by the admission rule.
      * Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
      * 
-     */
+    */
     public String getEnforcementMode() {
         return this.enforcementMode;
     }
@@ -58,7 +58,7 @@ public final class PolicyDefaultAdmissionRule {
      * How this admission rule will be evaluated.
      * Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
      * 
-     */
+    */
     public String getEvaluationMode() {
         return this.evaluationMode;
     }
@@ -72,7 +72,7 @@ public final class PolicyDefaultAdmissionRule {
      * Note: this field must be non-empty when the evaluation_mode field
      * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
      * 
-     */
+    */
     public List<String> getRequireAttestationsBies() {
         return this.requireAttestationsBies == null ? List.of() : this.requireAttestationsBies;
     }
@@ -115,7 +115,6 @@ public final class PolicyDefaultAdmissionRule {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
-
         public PolicyDefaultAdmissionRule build() {
             return new PolicyDefaultAdmissionRule(enforcementMode, evaluationMode, requireAttestationsBies);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devspaces.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class KubernetesConnectionDetailsResponse {
      * Gets the Instance type.
      * Expected value is 'Kubernetes'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * Gets the kubeconfig for the cluster.
      * 
-     */
+    */
     public Optional<String> getKubeConfig() {
         return Optional.ofNullable(this.kubeConfig);
     }
@@ -78,7 +78,6 @@ public final class KubernetesConnectionDetailsResponse {
             this.kubeConfig = kubeConfig;
             return this;
         }
-
         public KubernetesConnectionDetailsResponse build() {
             return new KubernetesConnectionDetailsResponse(instanceType, kubeConfig);
         }

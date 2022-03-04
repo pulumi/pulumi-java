@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetVPCDHCPOptionsAssociationArgs;
 import io.pulumi.awsnative.ec2.outputs.GetVPCDHCPOptionsAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVPCDHCPOptionsAssociation {
-/**
- * Associates a set of DHCP options with a VPC, or associates no DHCP options with the VPC.
+    private GetVPCDHCPOptionsAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetVPCDHCPOptionsAssociationArgs.Builder a);
+    }
+    private static GetVPCDHCPOptionsAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVPCDHCPOptionsAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Associates a set of DHCP options with a VPC, or associates no DHCP options with the VPC.
  * 
- */
+     */
+    public static CompletableFuture<GetVPCDHCPOptionsAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Associates a set of DHCP options with a VPC, or associates no DHCP options with the VPC.
+     * 
+     */
     public static CompletableFuture<GetVPCDHCPOptionsAssociationResult> invokeAsync(GetVPCDHCPOptionsAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getVPCDHCPOptionsAssociation", TypeShape.of(GetVPCDHCPOptionsAssociationResult.class), args == null ? GetVPCDHCPOptionsAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

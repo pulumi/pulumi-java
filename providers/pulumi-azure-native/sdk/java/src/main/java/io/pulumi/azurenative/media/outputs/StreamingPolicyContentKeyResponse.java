@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.TrackSelectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class StreamingPolicyContentKeyResponse {
     /**
      * Label can be used to specify Content Key when creating a Streaming Locator
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Policy used by Content Key
      * 
-     */
+    */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);
     }
     /**
      * Tracks which use this content key
      * 
-     */
+    */
     public List<TrackSelectionResponse> getTracks() {
         return this.tracks == null ? List.of() : this.tracks;
     }
@@ -99,7 +99,6 @@ public final class StreamingPolicyContentKeyResponse {
             this.tracks = tracks;
             return this;
         }
-
         public StreamingPolicyContentKeyResponse build() {
             return new StreamingPolicyContentKeyResponse(label, policyName, tracks);
         }

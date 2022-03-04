@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.EndPointResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -70,49 +70,49 @@ public final class ContactProfileLinkChannelResponse {
     /**
      * Bandwidth in MHz
      * 
-     */
+    */
     public Double getBandwidthMHz() {
         return this.bandwidthMHz;
     }
     /**
      * Center Frequency in MHz
      * 
-     */
+    */
     public Double getCenterFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
     /**
      * Configuration for decoding
      * 
-     */
+    */
     public Optional<String> getDecodingConfiguration() {
         return Optional.ofNullable(this.decodingConfiguration);
     }
     /**
      * Configuration for demodulation
      * 
-     */
+    */
     public Optional<String> getDemodulationConfiguration() {
         return Optional.ofNullable(this.demodulationConfiguration);
     }
     /**
      * Configuration for encoding
      * 
-     */
+    */
     public Optional<String> getEncodingConfiguration() {
         return Optional.ofNullable(this.encodingConfiguration);
     }
     /**
      * Customer End point to store/retrieve data during a contact.
      * 
-     */
+    */
     public EndPointResponse getEndPoint() {
         return this.endPoint;
     }
     /**
      * Configuration for modulation
      * 
-     */
+    */
     public Optional<String> getModulationConfiguration() {
         return Optional.ofNullable(this.modulationConfiguration);
     }
@@ -183,7 +183,6 @@ public final class ContactProfileLinkChannelResponse {
             this.modulationConfiguration = modulationConfiguration;
             return this;
         }
-
         public ContactProfileLinkChannelResponse build() {
             return new ContactProfileLinkChannelResponse(bandwidthMHz, centerFrequencyMHz, decodingConfiguration, demodulationConfiguration, encodingConfiguration, endPoint, modulationConfiguration);
         }

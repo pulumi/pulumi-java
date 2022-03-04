@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesis.outputs;
 
 import io.pulumi.awsnative.kinesis.enums.StreamModeDetailsStreamMode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -23,7 +23,7 @@ public final class StreamModeDetails {
     /**
      * The mode of the stream
      * 
-     */
+    */
     public StreamModeDetailsStreamMode getStreamMode() {
         return this.streamMode;
     }
@@ -52,7 +52,6 @@ public final class StreamModeDetails {
             this.streamMode = Objects.requireNonNull(streamMode);
             return this;
         }
-
         public StreamModeDetails build() {
             return new StreamModeDetails(streamMode);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ConnectivityGroupItemResponse;
 import io.pulumi.azurenative.network.outputs.HubResponse;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -114,91 +114,91 @@ public final class GetConnectivityConfigurationResult {
     /**
      * Groups for configuration
      * 
-     */
+    */
     public List<ConnectivityGroupItemResponse> getAppliesToGroups() {
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
     }
     /**
      * Connectivity topology type.
      * 
-     */
+    */
     public String getConnectivityTopology() {
         return this.connectivityTopology;
     }
     /**
      * Flag if need to remove current existing peerings.
      * 
-     */
+    */
     public Optional<String> getDeleteExistingPeering() {
         return Optional.ofNullable(this.deleteExistingPeering);
     }
     /**
      * A description of the connectivity configuration.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A friendly name for the resource.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * List of hubItems
      * 
-     */
+    */
     public List<HubResponse> getHubs() {
         return this.hubs == null ? List.of() : this.hubs;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Flag if global mesh is supported.
      * 
-     */
+    */
     public Optional<String> getIsGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the connectivity configuration resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata related to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -311,7 +311,6 @@ public final class GetConnectivityConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectivityConfigurationResult build() {
             return new GetConnectivityConfigurationResult(appliesToGroups, connectivityTopology, deleteExistingPeering, description, displayName, etag, hubs, id, isGlobal, name, provisioningState, systemData, type);
         }

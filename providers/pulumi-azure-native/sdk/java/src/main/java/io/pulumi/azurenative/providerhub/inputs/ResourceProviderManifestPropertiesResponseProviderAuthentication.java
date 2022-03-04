@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class ResourceProviderManifestPropertiesResponseProviderAuthenticat
     public static final ResourceProviderManifestPropertiesResponseProviderAuthentication Empty = new ResourceProviderManifestPropertiesResponseProviderAuthentication();
 
     @InputImport(name="allowedAudiences", required=true)
-    private final List<String> allowedAudiences;
+      private final List<String> allowedAudiences;
 
     public List<String> getAllowedAudiences() {
         return this.allowedAudiences;
@@ -52,7 +52,6 @@ public final class ResourceProviderManifestPropertiesResponseProviderAuthenticat
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
-
         public ResourceProviderManifestPropertiesResponseProviderAuthentication build() {
             return new ResourceProviderManifestPropertiesResponseProviderAuthentication(allowedAudiences);
         }

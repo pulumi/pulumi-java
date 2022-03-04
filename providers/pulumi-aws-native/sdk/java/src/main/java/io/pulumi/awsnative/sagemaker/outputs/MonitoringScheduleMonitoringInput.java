@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleEndpointInput;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class MonitoringScheduleMonitoringInput {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
-
         public MonitoringScheduleMonitoringInput build() {
             return new MonitoringScheduleMonitoringInput(endpointInput);
         }

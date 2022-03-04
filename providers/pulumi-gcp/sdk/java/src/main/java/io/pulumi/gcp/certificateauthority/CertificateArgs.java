@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthority")
-    private final @Nullable Input<String> certificateAuthority;
+      private final @Nullable Input<String> certificateAuthority;
 
     public Input<String> getCertificateAuthority() {
         return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;
@@ -36,7 +36,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateTemplate")
-    private final @Nullable Input<String> certificateTemplate;
+      private final @Nullable Input<String> certificateTemplate;
 
     public Input<String> getCertificateTemplate() {
         return this.certificateTemplate == null ? Input.empty() : this.certificateTemplate;
@@ -48,7 +48,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<CertificateConfigArgs> config;
+      private final @Nullable Input<CertificateConfigArgs> config;
 
     public Input<CertificateConfigArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -59,7 +59,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -72,7 +72,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifetime")
-    private final @Nullable Input<String> lifetime;
+      private final @Nullable Input<String> lifetime;
 
     public Input<String> getLifetime() {
         return this.lifetime == null ? Input.empty() : this.lifetime;
@@ -84,7 +84,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -95,7 +95,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -106,7 +106,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pemCsr")
-    private final @Nullable Input<String> pemCsr;
+      private final @Nullable Input<String> pemCsr;
 
     public Input<String> getPemCsr() {
         return this.pemCsr == null ? Input.empty() : this.pemCsr;
@@ -117,7 +117,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pool", required=true)
-    private final Input<String> pool;
+      private final Input<String> pool;
 
     public Input<String> getPool() {
         return this.pool;
@@ -129,7 +129,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -308,7 +308,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public CertificateArgs build() {
             return new CertificateArgs(certificateAuthority, certificateTemplate, config, labels, lifetime, location, name, pemCsr, pool, project);
         }

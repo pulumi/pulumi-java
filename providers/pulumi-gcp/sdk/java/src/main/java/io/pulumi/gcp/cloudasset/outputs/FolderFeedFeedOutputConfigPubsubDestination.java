@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudasset.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class FolderFeedFeedOutputConfigPubsubDestination {
     /**
      * Destination on Cloud Pubsub topic.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
@@ -52,7 +52,6 @@ public final class FolderFeedFeedOutputConfigPubsubDestination {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public FolderFeedFeedOutputConfigPubsubDestination build() {
             return new FolderFeedFeedOutputConfigPubsubDestination(topic);
         }

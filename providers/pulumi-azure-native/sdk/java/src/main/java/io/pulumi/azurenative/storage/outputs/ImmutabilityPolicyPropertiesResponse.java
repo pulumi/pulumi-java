@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.UpdateHistoryPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -58,35 +58,35 @@ public final class ImmutabilityPolicyPropertiesResponse {
     /**
      * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
      * 
-     */
+    */
     public Optional<Boolean> getAllowProtectedAppendWrites() {
         return Optional.ofNullable(this.allowProtectedAppendWrites);
     }
     /**
      * ImmutabilityPolicy Etag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The immutability period for the blobs in the container since the policy creation, in days.
      * 
-     */
+    */
     public Optional<Integer> getImmutabilityPeriodSinceCreationInDays() {
         return Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
     /**
      * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The ImmutabilityPolicy update history of the blob container.
      * 
-     */
+    */
     public List<UpdateHistoryPropertyResponse> getUpdateHistory() {
         return this.updateHistory;
     }
@@ -143,7 +143,6 @@ public final class ImmutabilityPolicyPropertiesResponse {
             this.updateHistory = Objects.requireNonNull(updateHistory);
             return this;
         }
-
         public ImmutabilityPolicyPropertiesResponse build() {
             return new ImmutabilityPolicyPropertiesResponse(allowProtectedAppendWrites, etag, immutabilityPeriodSinceCreationInDays, state, updateHistory);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ConnectivityCollectionResponse;
 import io.pulumi.azurenative.managednetwork.outputs.ScopeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -85,63 +85,63 @@ public final class GetManagedNetworkResult {
     /**
      * The collection of groups and policies concerned with connectivity
      * 
-     */
+    */
     public ConnectivityCollectionResponse getConnectivity() {
         return this.connectivity;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the ManagedNetwork resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network
      * 
-     */
+    */
     public Optional<ScopeResponse> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -226,7 +226,6 @@ public final class GetManagedNetworkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedNetworkResult build() {
             return new GetManagedNetworkResult(connectivity, etag, id, location, name, provisioningState, scope, tags, type);
         }

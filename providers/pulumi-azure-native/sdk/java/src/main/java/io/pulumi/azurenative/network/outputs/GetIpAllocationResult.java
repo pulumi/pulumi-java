@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -113,91 +113,91 @@ public final class GetIpAllocationResult {
     /**
      * IpAllocation tags.
      * 
-     */
+    */
     public Map<String,String> getAllocationTags() {
         return this.allocationTags == null ? Map.of() : this.allocationTags;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The IPAM allocation ID.
      * 
-     */
+    */
     public Optional<String> getIpamAllocationId() {
         return Optional.ofNullable(this.ipamAllocationId);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The address prefix for the IpAllocation.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The address prefix length for the IpAllocation.
      * 
-     */
+    */
     public Optional<Integer> getPrefixLength() {
         return Optional.ofNullable(this.prefixLength);
     }
     /**
      * The address prefix Type for the IpAllocation.
      * 
-     */
+    */
     public Optional<String> getPrefixType() {
         return Optional.ofNullable(this.prefixType);
     }
     /**
      * The Subnet that using the prefix of this IpAllocation resource.
      * 
-     */
+    */
     public SubResourceResponse getSubnet() {
         return this.subnet;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The VirtualNetwork that using the prefix of this IpAllocation resource.
      * 
-     */
+    */
     public SubResourceResponse getVirtualNetwork() {
         return this.virtualNetwork;
     }
@@ -310,7 +310,6 @@ public final class GetIpAllocationResult {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
         }
-
         public GetIpAllocationResult build() {
             return new GetIpAllocationResult(allocationTags, etag, id, ipamAllocationId, location, name, prefix, prefixLength, prefixType, subnet, tags, type, virtualNetwork);
         }

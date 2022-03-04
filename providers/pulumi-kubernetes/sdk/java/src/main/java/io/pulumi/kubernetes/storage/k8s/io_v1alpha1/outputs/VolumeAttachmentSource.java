@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeSpec;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class VolumeAttachmentSource {
     /**
      * inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is alpha-level and is only honored by servers that enabled the CSIMigration feature.
      * 
-     */
+    */
     public Optional<PersistentVolumeSpec> getInlineVolumeSpec() {
         return Optional.ofNullable(this.inlineVolumeSpec);
     }
     /**
      * Name of the persistent volume to attach.
      * 
-     */
+    */
     public Optional<String> getPersistentVolumeName() {
         return Optional.ofNullable(this.persistentVolumeName);
     }
@@ -77,7 +77,6 @@ public final class VolumeAttachmentSource {
             this.persistentVolumeName = persistentVolumeName;
             return this;
         }
-
         public VolumeAttachmentSource build() {
             return new VolumeAttachmentSource(inlineVolumeSpec, persistentVolumeName);
         }

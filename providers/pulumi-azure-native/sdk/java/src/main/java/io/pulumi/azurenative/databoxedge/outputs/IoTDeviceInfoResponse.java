@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.AuthenticationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class IoTDeviceInfoResponse {
     /**
      * Encrypted IoT device/IoT edge device connection string.
      * 
-     */
+    */
     public Optional<AuthenticationResponse> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * ID of the IoT device/edge device.
      * 
-     */
+    */
     public String getDeviceId() {
         return this.deviceId;
     }
     /**
      * Host name for the IoT hub associated to the device.
      * 
-     */
+    */
     public String getIoTHostHub() {
         return this.ioTHostHub;
     }
     /**
      * Id for the IoT hub associated to the device.
      * 
-     */
+    */
     public Optional<String> getIoTHostHubId() {
         return Optional.ofNullable(this.ioTHostHubId);
     }
@@ -119,7 +119,6 @@ public final class IoTDeviceInfoResponse {
             this.ioTHostHubId = ioTHostHubId;
             return this;
         }
-
         public IoTDeviceInfoResponse build() {
             return new IoTDeviceInfoResponse(authentication, deviceId, ioTHostHub, ioTHostHubId);
         }

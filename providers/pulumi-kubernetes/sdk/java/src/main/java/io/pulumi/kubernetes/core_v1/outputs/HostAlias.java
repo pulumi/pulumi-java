@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class HostAlias {
     /**
      * Hostnames for the above IP address.
      * 
-     */
+    */
     public List<String> getHostnames() {
         return this.hostnames == null ? List.of() : this.hostnames;
     }
     /**
      * IP address of the host file entry.
      * 
-     */
+    */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
@@ -77,7 +77,6 @@ public final class HostAlias {
             this.ip = ip;
             return this;
         }
-
         public HostAlias build() {
             return new HostAlias(hostnames, ip);
         }

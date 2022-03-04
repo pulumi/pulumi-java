@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * 
      */
     @InputImport(name="dialogflowParticipantName", required=true)
-    private final String dialogflowParticipantName;
+      private final String dialogflowParticipantName;
 
     public String getDialogflowParticipantName() {
         return this.dialogflowParticipantName;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * 
      */
     @InputImport(name="obfuscatedExternalUserId", required=true)
-    private final String obfuscatedExternalUserId;
+      private final String obfuscatedExternalUserId;
 
     public String getObfuscatedExternalUserId() {
         return this.obfuscatedExternalUserId;
@@ -43,7 +43,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+      private final String role;
 
     public String getRole() {
         return this.role;
@@ -54,7 +54,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * 
      */
     @InputImport(name="userId", required=true)
-    private final String userId;
+      private final String userId;
 
     public String getUserId() {
         return this.userId;
@@ -123,7 +123,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(dialogflowParticipantName, obfuscatedExternalUserId, role, userId);
         }

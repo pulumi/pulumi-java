@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class AutomaticResolutionPropertiesResponse {
      * Gets the MoveResource ARM ID of
      * the dependent resource if the resolution type is Automatic.
      * 
-     */
+    */
     public Optional<String> getMoveResourceId() {
         return Optional.ofNullable(this.moveResourceId);
     }
@@ -56,7 +56,6 @@ public final class AutomaticResolutionPropertiesResponse {
             this.moveResourceId = moveResourceId;
             return this;
         }
-
         public AutomaticResolutionPropertiesResponse build() {
             return new AutomaticResolutionPropertiesResponse(moveResourceId);
         }

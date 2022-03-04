@@ -6,17 +6,33 @@ package io.pulumi.awsnative.kms;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.kms.inputs.GetReplicaKeyArgs;
 import io.pulumi.awsnative.kms.outputs.GetReplicaKeyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicaKey {
-/**
- * The AWS::KMS::ReplicaKey resource specifies a multi-region replica customer master key (CMK) in AWS Key Management Service (AWS KMS).
+    private GetReplicaKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetReplicaKeyArgs.Builder a);
+    }
+    private static GetReplicaKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReplicaKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::KMS::ReplicaKey resource specifies a multi-region replica customer master key (CMK) in AWS Key Management Service (AWS KMS).
  * 
- */
+     */
+    public static CompletableFuture<GetReplicaKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::KMS::ReplicaKey resource specifies a multi-region replica customer master key (CMK) in AWS Key Management Service (AWS KMS).
+     * 
+     */
     public static CompletableFuture<GetReplicaKeyResult> invokeAsync(GetReplicaKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kms:getReplicaKey", TypeShape.of(GetReplicaKeyResult.class), args == null ? GetReplicaKeyArgs.Empty : args, Utilities.withVersion(options));
     }

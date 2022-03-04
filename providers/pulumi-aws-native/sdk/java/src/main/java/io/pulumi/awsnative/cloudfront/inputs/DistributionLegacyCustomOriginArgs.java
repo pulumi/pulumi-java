@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,35 +17,35 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
     public static final DistributionLegacyCustomOriginArgs Empty = new DistributionLegacyCustomOriginArgs();
 
     @InputImport(name="dNSName", required=true)
-    private final Input<String> dNSName;
+      private final Input<String> dNSName;
 
     public Input<String> getDNSName() {
         return this.dNSName;
     }
 
     @InputImport(name="hTTPPort")
-    private final @Nullable Input<Integer> hTTPPort;
+      private final @Nullable Input<Integer> hTTPPort;
 
     public Input<Integer> getHTTPPort() {
         return this.hTTPPort == null ? Input.empty() : this.hTTPPort;
     }
 
     @InputImport(name="hTTPSPort")
-    private final @Nullable Input<Integer> hTTPSPort;
+      private final @Nullable Input<Integer> hTTPSPort;
 
     public Input<Integer> getHTTPSPort() {
         return this.hTTPSPort == null ? Input.empty() : this.hTTPSPort;
     }
 
     @InputImport(name="originProtocolPolicy", required=true)
-    private final Input<String> originProtocolPolicy;
+      private final Input<String> originProtocolPolicy;
 
     public Input<String> getOriginProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
     @InputImport(name="originSSLProtocols", required=true)
-    private final Input<List<String>> originSSLProtocols;
+      private final Input<List<String>> originSSLProtocols;
 
     public Input<List<String>> getOriginSSLProtocols() {
         return this.originSSLProtocols;
@@ -149,7 +149,6 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
             this.originSSLProtocols = Input.of(Objects.requireNonNull(originSSLProtocols));
             return this;
         }
-
         public DistributionLegacyCustomOriginArgs build() {
             return new DistributionLegacyCustomOriginArgs(dNSName, hTTPPort, hTTPSPort, originProtocolPolicy, originSSLProtocols);
         }

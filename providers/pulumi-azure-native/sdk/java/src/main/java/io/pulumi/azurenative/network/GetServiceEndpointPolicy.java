@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetServiceEndpointPolicyArgs;
 import io.pulumi.azurenative.network.outputs.GetServiceEndpointPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceEndpointPolicy {
-/**
- * Service End point policy resource.
+    private GetServiceEndpointPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceEndpointPolicyArgs.Builder a);
+    }
+    private static GetServiceEndpointPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceEndpointPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Service End point policy resource.
  * API Version: 2020-11-01.
  * 
- *
- * Service End point policy resource.
+     *
+     * Service End point policy resource.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceEndpointPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Service End point policy resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Service End point policy resource.
+     * 
+     */
     public static CompletableFuture<GetServiceEndpointPolicyResult> invokeAsync(GetServiceEndpointPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getServiceEndpointPolicy", TypeShape.of(GetServiceEndpointPolicyResult.class), args == null ? GetServiceEndpointPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.enums.ResourceRecordType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rrdata")
-    private final @Nullable Input<String> rrdata;
+      private final @Nullable Input<String> rrdata;
 
     public Input<String> getRrdata() {
         return this.rrdata == null ? Input.empty() : this.rrdata;
@@ -46,7 +46,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ResourceRecordType> type;
+      private final @Nullable Input<ResourceRecordType> type;
 
     public Input<ResourceRecordType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -120,7 +120,6 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ResourceRecordArgs build() {
             return new ResourceRecordArgs(name, rrdata, type);
         }

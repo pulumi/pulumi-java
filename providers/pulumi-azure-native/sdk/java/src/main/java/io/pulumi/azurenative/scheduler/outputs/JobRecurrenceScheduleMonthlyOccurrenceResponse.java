@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse {
     /**
      * Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
      * 
-     */
+    */
     public Optional<String> getDay() {
         return Optional.ofNullable(this.day);
     }
     /**
      * Gets or sets the occurrence. Must be between -5 and 5.
      * 
-     */
+    */
     public Optional<Integer> getOccurrence() {
         return Optional.ofNullable(this.occurrence);
     }
@@ -77,7 +77,6 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse {
             this.occurrence = occurrence;
             return this;
         }
-
         public JobRecurrenceScheduleMonthlyOccurrenceResponse build() {
             return new JobRecurrenceScheduleMonthlyOccurrenceResponse(day, occurrence);
         }

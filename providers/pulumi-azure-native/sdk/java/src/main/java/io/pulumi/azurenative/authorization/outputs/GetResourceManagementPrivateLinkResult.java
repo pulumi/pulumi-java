@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.ResourceManagementPrivateLinkEndpointConnectionsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -51,21 +51,21 @@ public final class GetResourceManagementPrivateLinkResult {
     /**
      * The rmplResourceID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * the region of the rmpl
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The rmpl Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -75,7 +75,7 @@ public final class GetResourceManagementPrivateLinkResult {
     /**
      * The operation type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -132,7 +132,6 @@ public final class GetResourceManagementPrivateLinkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceManagementPrivateLinkResult build() {
             return new GetResourceManagementPrivateLinkResult(id, location, name, properties, type);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.robomaker;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.robomaker.inputs.GetSimulationApplicationArgs;
 import io.pulumi.awsnative.robomaker.outputs.GetSimulationApplicationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSimulationApplication {
-/**
- * An example resource schema demonstrating some basic constructs and validation rules.
+    private GetSimulationApplication() {}
+    public interface BuilderApplicator {
+        public void apply(GetSimulationApplicationArgs.Builder a);
+    }
+    private static GetSimulationApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSimulationApplicationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
  * 
- */
+     */
+    public static CompletableFuture<GetSimulationApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetSimulationApplicationResult> invokeAsync(GetSimulationApplicationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getSimulationApplication", TypeShape.of(GetSimulationApplicationResult.class), args == null ? GetSimulationApplicationArgs.Empty : args, Utilities.withVersion(options));
     }

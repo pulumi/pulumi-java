@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch;
 import java.lang.Boolean;
 import java.lang.String;
@@ -101,14 +101,14 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
      * must be set.
      * 
-     */
+    */
     public Optional<String> getExactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
     /**
      * The name of the header.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
@@ -117,7 +117,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * above are met. If set to true, the headerMatch is considered a match if the
      * match criteria above are NOT met. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getInvertMatch() {
         return Optional.ofNullable(this.invertMatch);
     }
@@ -126,7 +126,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
      * must be set.
      * 
-     */
+    */
     public Optional<String> getPrefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -135,7 +135,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * parameter, irrespective of whether the parameter has a value or not. Only one of
      * presentMatch, exactMatch and regexMatch must be set.
      * 
-     */
+    */
     public Optional<Boolean> getPresentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
@@ -151,7 +151,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      *   rangeMatch must be set.
      *   Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch> getRangeMatch() {
         return Optional.ofNullable(this.rangeMatch);
     }
@@ -161,7 +161,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
      * exactMatch and regexMatch must be set.
      * 
-     */
+    */
     public Optional<String> getRegexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }
@@ -170,7 +170,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
      * must be set.
      * 
-     */
+    */
     public Optional<String> getSuffixMatch() {
         return Optional.ofNullable(this.suffixMatch);
     }
@@ -248,7 +248,6 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
             this.suffixMatch = suffixMatch;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);
         }

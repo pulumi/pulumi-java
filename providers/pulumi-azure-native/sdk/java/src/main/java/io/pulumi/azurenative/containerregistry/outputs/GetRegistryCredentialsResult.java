@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetRegistryCredentialsResult {
     /**
      * The administrator password.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The administrator username.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -76,7 +76,6 @@ public final class GetRegistryCredentialsResult {
             this.username = username;
             return this;
         }
-
         public GetRegistryCredentialsResult build() {
             return new GetRegistryCredentialsResult(password, username);
         }

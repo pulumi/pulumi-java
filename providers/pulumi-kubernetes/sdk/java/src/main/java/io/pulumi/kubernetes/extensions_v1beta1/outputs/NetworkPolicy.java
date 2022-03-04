@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.NetworkPolicySpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
@@ -49,28 +49,28 @@ public final class NetworkPolicy {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
-     */
+    */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Specification of the desired behavior for this NetworkPolicy.
      * 
-     */
+    */
     public Optional<NetworkPolicySpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }
@@ -120,7 +120,6 @@ public final class NetworkPolicy {
             this.spec = spec;
             return this;
         }
-
         public NetworkPolicy build() {
             return new NetworkPolicy(apiVersion, kind, metadata, spec);
         }

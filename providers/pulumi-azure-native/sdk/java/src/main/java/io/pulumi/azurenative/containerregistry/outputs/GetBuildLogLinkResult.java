@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetBuildLogLinkResult {
     /**
      * The link to logs for a azure container registry build.
      * 
-     */
+    */
     public Optional<String> getLogLink() {
         return Optional.ofNullable(this.logLink);
     }
@@ -54,7 +54,6 @@ public final class GetBuildLogLinkResult {
             this.logLink = logLink;
             return this;
         }
-
         public GetBuildLogLinkResult build() {
             return new GetBuildLogLinkResult(logLink);
         }

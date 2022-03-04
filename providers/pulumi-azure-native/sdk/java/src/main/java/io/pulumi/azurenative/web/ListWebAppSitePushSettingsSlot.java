@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListWebAppSitePushSettingsSlotArgs;
 import io.pulumi.azurenative.web.outputs.ListWebAppSitePushSettingsSlotResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppSitePushSettingsSlot {
-/**
- * Push settings for the App.
+    private ListWebAppSitePushSettingsSlot() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppSitePushSettingsSlotArgs.Builder a);
+    }
+    private static ListWebAppSitePushSettingsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppSitePushSettingsSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Push settings for the App.
  * API Version: 2020-12-01.
  * 
- *
- * Push settings for the App.
+     *
+     * Push settings for the App.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppSitePushSettingsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Push settings for the App.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Push settings for the App.
+     * 
+     */
     public static CompletableFuture<ListWebAppSitePushSettingsSlotResult> invokeAsync(ListWebAppSitePushSettingsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSitePushSettingsSlot", TypeShape.of(ListWebAppSitePushSettingsSlotResult.class), args == null ? ListWebAppSitePushSettingsSlotArgs.Empty : args, Utilities.withVersion(options));
     }

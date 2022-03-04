@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.ServiceDeploymentControllerType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class ServiceDeploymentController {
             this.type = type;
             return this;
         }
-
         public ServiceDeploymentController build() {
             return new ServiceDeploymentController(type);
         }

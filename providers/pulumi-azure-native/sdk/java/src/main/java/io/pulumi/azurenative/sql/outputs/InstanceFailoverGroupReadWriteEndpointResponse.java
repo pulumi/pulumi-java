@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse {
     /**
      * Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
      * 
-     */
+    */
     public String getFailoverPolicy() {
         return this.failoverPolicy;
     }
     /**
      * Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
      * 
-     */
+    */
     public Optional<Integer> getFailoverWithDataLossGracePeriodMinutes() {
         return Optional.ofNullable(this.failoverWithDataLossGracePeriodMinutes);
     }
@@ -77,7 +77,6 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse {
             this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
             return this;
         }
-
         public InstanceFailoverGroupReadWriteEndpointResponse build() {
             return new InstanceFailoverGroupReadWriteEndpointResponse(failoverPolicy, failoverWithDataLossGracePeriodMinutes);
         }

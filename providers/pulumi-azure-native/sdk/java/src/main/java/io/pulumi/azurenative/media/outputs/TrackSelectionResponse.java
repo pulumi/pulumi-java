@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.TrackPropertyConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class TrackSelectionResponse {
     /**
      * TrackSelections is a track property condition list which can specify track(s)
      * 
-     */
+    */
     public List<TrackPropertyConditionResponse> getTrackSelections() {
         return this.trackSelections == null ? List.of() : this.trackSelections;
     }
@@ -54,7 +54,6 @@ public final class TrackSelectionResponse {
             this.trackSelections = trackSelections;
             return this;
         }
-
         public TrackSelectionResponse build() {
             return new TrackSelectionResponse(trackSelections);
         }

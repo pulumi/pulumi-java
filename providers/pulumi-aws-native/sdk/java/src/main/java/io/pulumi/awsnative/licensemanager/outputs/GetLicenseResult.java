@@ -8,7 +8,7 @@ import io.pulumi.awsnative.licensemanager.outputs.LicenseEntitlement;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseIssuerData;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseMetadata;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseValidityDateFormat;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -89,7 +89,7 @@ public final class GetLicenseResult {
     /**
      * Beneficiary of the license.
      * 
-     */
+    */
     public Optional<String> getBeneficiary() {
         return Optional.ofNullable(this.beneficiary);
     }
@@ -102,7 +102,7 @@ public final class GetLicenseResult {
     /**
      * Home region for the created license.
      * 
-     */
+    */
     public Optional<String> getHomeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
@@ -112,7 +112,7 @@ public final class GetLicenseResult {
     /**
      * Amazon Resource Name is a unique name for each resource.
      * 
-     */
+    */
     public Optional<String> getLicenseArn() {
         return Optional.ofNullable(this.licenseArn);
     }
@@ -122,21 +122,21 @@ public final class GetLicenseResult {
     /**
      * Name for the created license.
      * 
-     */
+    */
     public Optional<String> getLicenseName() {
         return Optional.ofNullable(this.licenseName);
     }
     /**
      * Product name for the created license.
      * 
-     */
+    */
     public Optional<String> getProductName() {
         return Optional.ofNullable(this.productName);
     }
     /**
      * ProductSKU of the license.
      * 
-     */
+    */
     public Optional<String> getProductSKU() {
         return Optional.ofNullable(this.productSKU);
     }
@@ -146,7 +146,7 @@ public final class GetLicenseResult {
     /**
      * The version of the license.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -252,7 +252,6 @@ public final class GetLicenseResult {
             this.version = version;
             return this;
         }
-
         public GetLicenseResult build() {
             return new GetLicenseResult(beneficiary, consumptionConfiguration, entitlements, homeRegion, issuer, licenseArn, licenseMetadata, licenseName, productName, productSKU, validity, version);
         }

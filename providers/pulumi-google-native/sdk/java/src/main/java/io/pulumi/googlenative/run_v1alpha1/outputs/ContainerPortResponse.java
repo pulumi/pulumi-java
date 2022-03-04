@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ContainerPortResponse {
     /**
      * (Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.
      * 
-     */
+    */
     public Integer getContainerPort() {
         return this.containerPort;
     }
     /**
      * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
@@ -96,7 +96,6 @@ public final class ContainerPortResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public ContainerPortResponse build() {
             return new ContainerPortResponse(containerPort, name, protocol);
         }

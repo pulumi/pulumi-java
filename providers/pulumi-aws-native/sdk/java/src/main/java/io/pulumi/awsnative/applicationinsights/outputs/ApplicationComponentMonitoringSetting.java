@@ -5,7 +5,7 @@ package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationComponentMonitoringSettingComponentConfigurationMode;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationComponentConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -63,42 +63,42 @@ public final class ApplicationComponentMonitoringSetting {
     /**
      * The ARN of the compnonent.
      * 
-     */
+    */
     public Optional<String> getComponentARN() {
         return Optional.ofNullable(this.componentARN);
     }
     /**
      * The component monitoring configuration mode.
      * 
-     */
+    */
     public ApplicationComponentMonitoringSettingComponentConfigurationMode getComponentConfigurationMode() {
         return this.componentConfigurationMode;
     }
     /**
      * The name of the component.
      * 
-     */
+    */
     public Optional<String> getComponentName() {
         return Optional.ofNullable(this.componentName);
     }
     /**
      * The monitoring configuration of the component.
      * 
-     */
+    */
     public Optional<ApplicationComponentConfiguration> getCustomComponentConfiguration() {
         return Optional.ofNullable(this.customComponentConfiguration);
     }
     /**
      * The overwritten settings on default component monitoring configuration.
      * 
-     */
+    */
     public Optional<ApplicationComponentConfiguration> getDefaultOverwriteComponentConfiguration() {
         return Optional.ofNullable(this.defaultOverwriteComponentConfiguration);
     }
     /**
      * The tier of the application component.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
@@ -162,7 +162,6 @@ public final class ApplicationComponentMonitoringSetting {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public ApplicationComponentMonitoringSetting build() {
             return new ApplicationComponentMonitoringSetting(componentARN, componentConfigurationMode, componentName, customComponentConfiguration, defaultOverwriteComponentConfiguration, tier);
         }

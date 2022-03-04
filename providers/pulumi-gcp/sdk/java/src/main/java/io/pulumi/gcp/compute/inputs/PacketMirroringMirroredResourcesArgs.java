@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesInstanceArgs;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesSubnetworkArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<PacketMirroringMirroredResourcesInstanceArgs>> instances;
+      private final @Nullable Input<List<PacketMirroringMirroredResourcesInstanceArgs>> instances;
 
     public Input<List<PacketMirroringMirroredResourcesInstanceArgs>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -35,7 +35,7 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="subnetworks")
-    private final @Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks;
+      private final @Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks;
 
     public Input<List<PacketMirroringMirroredResourcesSubnetworkArgs>> getSubnetworks() {
         return this.subnetworks == null ? Input.empty() : this.subnetworks;
@@ -46,7 +46,7 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -120,7 +120,6 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PacketMirroringMirroredResourcesArgs build() {
             return new PacketMirroringMirroredResourcesArgs(instances, subnetworks, tags);
         }

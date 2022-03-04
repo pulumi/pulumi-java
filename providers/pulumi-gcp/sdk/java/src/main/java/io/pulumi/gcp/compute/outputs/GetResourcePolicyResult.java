@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicyGroupPlacementPolicy;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicyInstanceSchedulePolicy;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicy;
@@ -62,7 +62,7 @@ public final class GetResourcePolicyResult {
     /**
      * Description of this Resource Policy.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -72,7 +72,7 @@ public final class GetResourcePolicyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -91,7 +91,7 @@ public final class GetResourcePolicyResult {
     /**
      * The URI of the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
@@ -179,7 +179,6 @@ public final class GetResourcePolicyResult {
             this.snapshotSchedulePolicies = Objects.requireNonNull(snapshotSchedulePolicies);
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(description, groupPlacementPolicies, id, instanceSchedulePolicies, name, project, region, selfLink, snapshotSchedulePolicies);
         }

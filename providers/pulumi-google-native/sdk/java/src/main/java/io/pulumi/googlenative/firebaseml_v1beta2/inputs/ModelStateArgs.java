@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaseml_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="published")
-    private final @Nullable Input<Boolean> published;
+      private final @Nullable Input<Boolean> published;
 
     public Input<Boolean> getPublished() {
         return this.published == null ? Input.empty() : this.published;
@@ -66,7 +66,6 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
             this.published = Input.ofNullable(published);
             return this;
         }
-
         public ModelStateArgs build() {
             return new ModelStateArgs(published);
         }

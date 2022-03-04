@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetLocalGatewayRouteResult {
     /**
      * The state of the route.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The route type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -76,7 +76,6 @@ public final class GetLocalGatewayRouteResult {
             this.type = type;
             return this;
         }
-
         public GetLocalGatewayRouteResult build() {
             return new GetLocalGatewayRouteResult(state, type);
         }

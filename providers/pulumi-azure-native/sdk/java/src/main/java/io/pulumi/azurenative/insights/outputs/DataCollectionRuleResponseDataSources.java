@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.outputs.ExtensionDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.PerfCounterDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.SyslogDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.WindowsEventLogDataSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -50,28 +50,28 @@ public final class DataCollectionRuleResponseDataSources {
     /**
      * The list of Azure VM extension data source configurations.
      * 
-     */
+    */
     public List<ExtensionDataSourceResponse> getExtensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
     /**
      * The list of performance counter data source configurations.
      * 
-     */
+    */
     public List<PerfCounterDataSourceResponse> getPerformanceCounters() {
         return this.performanceCounters == null ? List.of() : this.performanceCounters;
     }
     /**
      * The list of Syslog data source configurations.
      * 
-     */
+    */
     public List<SyslogDataSourceResponse> getSyslog() {
         return this.syslog == null ? List.of() : this.syslog;
     }
     /**
      * The list of Windows Event Log data source configurations.
      * 
-     */
+    */
     public List<WindowsEventLogDataSourceResponse> getWindowsEventLogs() {
         return this.windowsEventLogs == null ? List.of() : this.windowsEventLogs;
     }
@@ -121,7 +121,6 @@ public final class DataCollectionRuleResponseDataSources {
             this.windowsEventLogs = windowsEventLogs;
             return this;
         }
-
         public DataCollectionRuleResponseDataSources build() {
             return new DataCollectionRuleResponseDataSources(extensions, performanceCounters, syslog, windowsEventLogs);
         }

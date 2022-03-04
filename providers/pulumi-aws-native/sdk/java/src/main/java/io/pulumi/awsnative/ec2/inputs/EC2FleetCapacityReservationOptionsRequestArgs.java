@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetCapacityReservationOptionsRequestUsageStrategy;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
     public static final EC2FleetCapacityReservationOptionsRequestArgs Empty = new EC2FleetCapacityReservationOptionsRequestArgs();
 
     @InputImport(name="usageStrategy")
-    private final @Nullable Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
+      private final @Nullable Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
 
     public Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> getUsageStrategy() {
         return this.usageStrategy == null ? Input.empty() : this.usageStrategy;
@@ -58,7 +58,6 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
             this.usageStrategy = Input.ofNullable(usageStrategy);
             return this;
         }
-
         public EC2FleetCapacityReservationOptionsRequestArgs build() {
             return new EC2FleetCapacityReservationOptionsRequestArgs(usageStrategy);
         }

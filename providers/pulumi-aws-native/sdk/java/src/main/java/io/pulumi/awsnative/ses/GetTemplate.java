@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ses;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ses.inputs.GetTemplateArgs;
 import io.pulumi.awsnative.ses.outputs.GetTemplateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTemplate {
-/**
- * Resource Type definition for AWS::SES::Template
+    private GetTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetTemplateArgs.Builder a);
+    }
+    private static GetTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::SES::Template
  * 
- */
+     */
+    public static CompletableFuture<GetTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::SES::Template
+     * 
+     */
     public static CompletableFuture<GetTemplateResult> invokeAsync(GetTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getTemplate", TypeShape.of(GetTemplateResult.class), args == null ? GetTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

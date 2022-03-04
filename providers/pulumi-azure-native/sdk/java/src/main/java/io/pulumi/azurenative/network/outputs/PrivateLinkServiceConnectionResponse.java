@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -84,63 +84,63 @@ public final class PrivateLinkServiceConnectionResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
      * 
-     */
+    */
     public List<String> getGroupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A collection of read-only information about the state of the connection to the remote resource.
      * 
-     */
+    */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * The resource id of private link service.
      * 
-     */
+    */
     public Optional<String> getPrivateLinkServiceId() {
         return Optional.ofNullable(this.privateLinkServiceId);
     }
     /**
      * The provisioning state of the private link service connection resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
      * 
-     */
+    */
     public Optional<String> getRequestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -225,7 +225,6 @@ public final class PrivateLinkServiceConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateLinkServiceConnectionResponse build() {
             return new PrivateLinkServiceConnectionResponse(etag, groupIds, id, name, privateLinkServiceConnectionState, privateLinkServiceId, provisioningState, requestMessage, type);
         }

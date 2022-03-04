@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,28 +47,28 @@ public final class ServicePrincipalCertificateAuthInfoResponse {
      * The authentication type.
      * Expected value is 'servicePrincipalCertificate'.
      * 
-     */
+    */
     public String getAuthType() {
         return this.authType;
     }
     /**
      * ServicePrincipal certificate for servicePrincipal auth.
      * 
-     */
+    */
     public String getCertificate() {
         return this.certificate;
     }
     /**
      * Application clientId for servicePrincipal auth.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Principal Id for servicePrincipal auth.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -118,7 +118,6 @@ public final class ServicePrincipalCertificateAuthInfoResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ServicePrincipalCertificateAuthInfoResponse build() {
             return new ServicePrincipalCertificateAuthInfoResponse(authType, certificate, clientId, principalId);
         }

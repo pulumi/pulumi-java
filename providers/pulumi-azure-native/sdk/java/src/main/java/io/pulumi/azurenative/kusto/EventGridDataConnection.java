@@ -8,8 +8,8 @@ import io.pulumi.azurenative.kusto.EventGridDataConnectionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -217,6 +217,37 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EventGridDataConnectionArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.kusto.EventGridDataConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.kusto.EventGridDataConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public EventGridDataConnection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EventGridDataConnection(String name) {
+        this(name, EventGridDataConnectionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EventGridDataConnection(String name, EventGridDataConnectionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

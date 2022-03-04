@@ -11,7 +11,7 @@ import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorLogDeliveryArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorPluginArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorWorkerConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConnectorArgs Empty = new ConnectorArgs();
 
     @InputImport(name="capacity", required=true)
-    private final Input<ConnectorCapacityArgs> capacity;
+      private final Input<ConnectorCapacityArgs> capacity;
 
     public Input<ConnectorCapacityArgs> getCapacity() {
         return this.capacity;
@@ -35,7 +35,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorConfiguration", required=true)
-    private final Input<Object> connectorConfiguration;
+      private final Input<Object> connectorConfiguration;
 
     public Input<Object> getConnectorConfiguration() {
         return this.connectorConfiguration;
@@ -46,7 +46,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorDescription")
-    private final @Nullable Input<String> connectorDescription;
+      private final @Nullable Input<String> connectorDescription;
 
     public Input<String> getConnectorDescription() {
         return this.connectorDescription == null ? Input.empty() : this.connectorDescription;
@@ -57,28 +57,28 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorName")
-    private final @Nullable Input<String> connectorName;
+      private final @Nullable Input<String> connectorName;
 
     public Input<String> getConnectorName() {
         return this.connectorName == null ? Input.empty() : this.connectorName;
     }
 
     @InputImport(name="kafkaCluster", required=true)
-    private final Input<ConnectorKafkaClusterArgs> kafkaCluster;
+      private final Input<ConnectorKafkaClusterArgs> kafkaCluster;
 
     public Input<ConnectorKafkaClusterArgs> getKafkaCluster() {
         return this.kafkaCluster;
     }
 
     @InputImport(name="kafkaClusterClientAuthentication", required=true)
-    private final Input<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication;
+      private final Input<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication;
 
     public Input<ConnectorKafkaClusterClientAuthenticationArgs> getKafkaClusterClientAuthentication() {
         return this.kafkaClusterClientAuthentication;
     }
 
     @InputImport(name="kafkaClusterEncryptionInTransit", required=true)
-    private final Input<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit;
+      private final Input<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit;
 
     public Input<ConnectorKafkaClusterEncryptionInTransitArgs> getKafkaClusterEncryptionInTransit() {
         return this.kafkaClusterEncryptionInTransit;
@@ -89,14 +89,14 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kafkaConnectVersion", required=true)
-    private final Input<String> kafkaConnectVersion;
+      private final Input<String> kafkaConnectVersion;
 
     public Input<String> getKafkaConnectVersion() {
         return this.kafkaConnectVersion;
     }
 
     @InputImport(name="logDelivery")
-    private final @Nullable Input<ConnectorLogDeliveryArgs> logDelivery;
+      private final @Nullable Input<ConnectorLogDeliveryArgs> logDelivery;
 
     public Input<ConnectorLogDeliveryArgs> getLogDelivery() {
         return this.logDelivery == null ? Input.empty() : this.logDelivery;
@@ -107,7 +107,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plugins", required=true)
-    private final Input<List<ConnectorPluginArgs>> plugins;
+      private final Input<List<ConnectorPluginArgs>> plugins;
 
     public Input<List<ConnectorPluginArgs>> getPlugins() {
         return this.plugins;
@@ -118,14 +118,14 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceExecutionRoleArn", required=true)
-    private final Input<String> serviceExecutionRoleArn;
+      private final Input<String> serviceExecutionRoleArn;
 
     public Input<String> getServiceExecutionRoleArn() {
         return this.serviceExecutionRoleArn;
     }
 
     @InputImport(name="workerConfiguration")
-    private final @Nullable Input<ConnectorWorkerConfigurationArgs> workerConfiguration;
+      private final @Nullable Input<ConnectorWorkerConfigurationArgs> workerConfiguration;
 
     public Input<ConnectorWorkerConfigurationArgs> getWorkerConfiguration() {
         return this.workerConfiguration == null ? Input.empty() : this.workerConfiguration;
@@ -334,7 +334,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.workerConfiguration = Input.ofNullable(workerConfiguration);
             return this;
         }
-
         public ConnectorArgs build() {
             return new ConnectorArgs(capacity, connectorConfiguration, connectorDescription, connectorName, kafkaCluster, kafkaClusterClientAuthentication, kafkaClusterEncryptionInTransit, kafkaConnectVersion, logDelivery, plugins, serviceExecutionRoleArn, workerConfiguration);
         }

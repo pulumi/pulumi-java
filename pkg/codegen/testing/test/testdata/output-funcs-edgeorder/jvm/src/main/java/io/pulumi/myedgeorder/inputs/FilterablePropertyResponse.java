@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FilterablePropertyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="supportedValues", required=true)
-    private final List<String> supportedValues;
+      private final List<String> supportedValues;
 
     public List<String> getSupportedValues() {
         return this.supportedValues;
@@ -33,7 +33,7 @@ public final class FilterablePropertyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class FilterablePropertyResponse extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FilterablePropertyResponse build() {
             return new FilterablePropertyResponse(supportedValues, type);
         }

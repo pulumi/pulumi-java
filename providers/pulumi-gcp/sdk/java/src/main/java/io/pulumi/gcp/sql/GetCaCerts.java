@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCaCerts {
-/**
- * Get all of the trusted Certificate Authorities (CAs) for the specified SQL database instance. For more information see the
+    private GetCaCerts() {}
+    public interface BuilderApplicator {
+        public void apply(GetCaCertsArgs.Builder a);
+    }
+    private static GetCaCertsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCaCertsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get all of the trusted Certificate Authorities (CAs) for the specified SQL database instance. For more information see the
  * [official documentation](https://cloud.google.com/sql/)
  * and
  * [API](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances/listServerCas).
  * 
- *
- * A collection of arguments for invoking getCaCerts.
+     *
+     * A collection of arguments for invoking getCaCerts.
  * 
- *
- * A collection of values returned by getCaCerts.
+     *
+     * A collection of values returned by getCaCerts.
  * 
- */
+     */
+    public static CompletableFuture<GetCaCertsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get all of the trusted Certificate Authorities (CAs) for the specified SQL database instance. For more information see the
+     * [official documentation](https://cloud.google.com/sql/)
+     * and
+     * [API](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances/listServerCas).
+     * 
+     *
+         * A collection of arguments for invoking getCaCerts.
+     * 
+     *
+         * A collection of values returned by getCaCerts.
+     * 
+     */
     public static CompletableFuture<GetCaCertsResult> invokeAsync(GetCaCertsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:sql/getCaCerts:getCaCerts", TypeShape.of(GetCaCertsResult.class), args == null ? GetCaCertsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.DayOfWeek;
 import io.pulumi.azurenative.recoveryservices.enums.WeekOfMonth;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class WeeklyRetentionFormatArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="daysOfTheWeek")
-    private final @Nullable Input<List<DayOfWeek>> daysOfTheWeek;
+      private final @Nullable Input<List<DayOfWeek>> daysOfTheWeek;
 
     public Input<List<DayOfWeek>> getDaysOfTheWeek() {
         return this.daysOfTheWeek == null ? Input.empty() : this.daysOfTheWeek;
@@ -36,7 +36,7 @@ public final class WeeklyRetentionFormatArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="weeksOfTheMonth")
-    private final @Nullable Input<List<WeekOfMonth>> weeksOfTheMonth;
+      private final @Nullable Input<List<WeekOfMonth>> weeksOfTheMonth;
 
     public Input<List<WeekOfMonth>> getWeeksOfTheMonth() {
         return this.weeksOfTheMonth == null ? Input.empty() : this.weeksOfTheMonth;
@@ -95,7 +95,6 @@ public final class WeeklyRetentionFormatArgs extends io.pulumi.resources.Resourc
             this.weeksOfTheMonth = Input.ofNullable(weeksOfTheMonth);
             return this;
         }
-
         public WeeklyRetentionFormatArgs build() {
             return new WeeklyRetentionFormatArgs(daysOfTheWeek, weeksOfTheMonth);
         }

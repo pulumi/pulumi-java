@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
     public static final CertificateExtendedKeyUsageArgs Empty = new CertificateExtendedKeyUsageArgs();
 
     @InputImport(name="extendedKeyUsageObjectIdentifier")
-    private final @Nullable Input<String> extendedKeyUsageObjectIdentifier;
+      private final @Nullable Input<String> extendedKeyUsageObjectIdentifier;
 
     public Input<String> getExtendedKeyUsageObjectIdentifier() {
         return this.extendedKeyUsageObjectIdentifier == null ? Input.empty() : this.extendedKeyUsageObjectIdentifier;
     }
 
     @InputImport(name="extendedKeyUsageType")
-    private final @Nullable Input<String> extendedKeyUsageType;
+      private final @Nullable Input<String> extendedKeyUsageType;
 
     public Input<String> getExtendedKeyUsageType() {
         return this.extendedKeyUsageType == null ? Input.empty() : this.extendedKeyUsageType;
@@ -85,7 +85,6 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
             this.extendedKeyUsageType = Input.ofNullable(extendedKeyUsageType);
             return this;
         }
-
         public CertificateExtendedKeyUsageArgs build() {
             return new CertificateExtendedKeyUsageArgs(extendedKeyUsageObjectIdentifier, extendedKeyUsageType);
         }

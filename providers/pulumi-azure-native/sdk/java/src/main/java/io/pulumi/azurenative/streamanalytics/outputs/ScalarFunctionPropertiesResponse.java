@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.FunctionInputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.FunctionOutputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.JavaScriptFunctionBindingResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,28 +61,28 @@ public final class ScalarFunctionPropertiesResponse {
     /**
      * The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
      * 
-     */
+    */
     public Optional<Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse>> getBinding() {
         return Optional.ofNullable(this.binding);
     }
     /**
      * The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * A list of inputs describing the parameters of the function.
      * 
-     */
+    */
     public List<FunctionInputResponse> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
      * The output of the function.
      * 
-     */
+    */
     public Optional<FunctionOutputResponse> getOutput() {
         return Optional.ofNullable(this.output);
     }
@@ -90,7 +90,7 @@ public final class ScalarFunctionPropertiesResponse {
      * Indicates the type of function.
      * Expected value is 'Scalar'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -147,7 +147,6 @@ public final class ScalarFunctionPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ScalarFunctionPropertiesResponse build() {
             return new ScalarFunctionPropertiesResponse(binding, etag, inputs, output, type);
         }

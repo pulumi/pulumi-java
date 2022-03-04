@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.inputs.FlowDestinationConnectorProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class FlowDestinationFlowConfig extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="connectorProfileName")
-    private final @Nullable String connectorProfileName;
+      private final @Nullable String connectorProfileName;
 
     public Optional<String> getConnectorProfileName() {
         return this.connectorProfileName == null ? Optional.empty() : Optional.ofNullable(this.connectorProfileName);
@@ -36,7 +36,7 @@ public final class FlowDestinationFlowConfig extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="connectorType", required=true)
-    private final FlowConnectorType connectorType;
+      private final FlowConnectorType connectorType;
 
     public FlowConnectorType getConnectorType() {
         return this.connectorType;
@@ -47,7 +47,7 @@ public final class FlowDestinationFlowConfig extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="destinationConnectorProperties", required=true)
-    private final FlowDestinationConnectorProperties destinationConnectorProperties;
+      private final FlowDestinationConnectorProperties destinationConnectorProperties;
 
     public FlowDestinationConnectorProperties getDestinationConnectorProperties() {
         return this.destinationConnectorProperties;
@@ -106,7 +106,6 @@ public final class FlowDestinationFlowConfig extends io.pulumi.resources.InvokeA
             this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
             return this;
         }
-
         public FlowDestinationFlowConfig build() {
             return new FlowDestinationFlowConfig(connectorProfileName, connectorType, destinationConnectorProperties);
         }

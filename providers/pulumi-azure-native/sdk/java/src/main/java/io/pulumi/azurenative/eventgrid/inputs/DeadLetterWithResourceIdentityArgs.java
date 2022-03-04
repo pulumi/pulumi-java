@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 import io.pulumi.azurenative.eventgrid.inputs.EventSubscriptionIdentityArgs;
 import io.pulumi.azurenative.eventgrid.inputs.StorageBlobDeadLetterDestinationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deadLetterDestination")
-    private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
+      private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
     public Input<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
         return this.deadLetterDestination == null ? Input.empty() : this.deadLetterDestination;
@@ -36,7 +36,7 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<EventSubscriptionIdentityArgs> identity;
+      private final @Nullable Input<EventSubscriptionIdentityArgs> identity;
 
     public Input<EventSubscriptionIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -95,7 +95,6 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
             this.identity = Input.ofNullable(identity);
             return this;
         }
-
         public DeadLetterWithResourceIdentityArgs build() {
             return new DeadLetterWithResourceIdentityArgs(deadLetterDestination, identity);
         }

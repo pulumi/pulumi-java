@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NodeGroupAffinityResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="nodeGroupUri", required=true)
-    private final String nodeGroupUri;
+      private final String nodeGroupUri;
 
     public String getNodeGroupUri() {
         return this.nodeGroupUri;
@@ -59,7 +59,6 @@ public final class NodeGroupAffinityResponse extends io.pulumi.resources.InvokeA
             this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri);
             return this;
         }
-
         public NodeGroupAffinityResponse build() {
             return new NodeGroupAffinityResponse(nodeGroupUri);
         }

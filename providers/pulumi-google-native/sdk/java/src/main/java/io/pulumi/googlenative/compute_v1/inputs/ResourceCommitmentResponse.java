@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="acceleratorType", required=true)
-    private final String acceleratorType;
+      private final String acceleratorType;
 
     public String getAcceleratorType() {
         return this.acceleratorType;
@@ -32,7 +32,7 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="amount", required=true)
-    private final String amount;
+      private final String amount;
 
     public String getAmount() {
         return this.amount;
@@ -43,7 +43,7 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,6 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceCommitmentResponse build() {
             return new ResourceCommitmentResponse(acceleratorType, amount, type);
         }

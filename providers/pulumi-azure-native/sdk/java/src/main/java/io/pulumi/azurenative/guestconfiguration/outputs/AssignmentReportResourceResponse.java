@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
 import io.pulumi.azurenative.guestconfiguration.outputs.AssignmentReportResourceComplianceReasonResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -49,28 +49,28 @@ public final class AssignmentReportResourceResponse {
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
      * 
-     */
+    */
     public String getComplianceStatus() {
         return this.complianceStatus;
     }
     /**
      * Properties of a guest configuration assignment resource.
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * Compliance reason and reason code for a resource.
      * 
-     */
+    */
     public List<AssignmentReportResourceComplianceReasonResponse> getReasons() {
         return this.reasons == null ? List.of() : this.reasons;
     }
     /**
      * Name of the guest configuration assignment resource setting.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
@@ -120,7 +120,6 @@ public final class AssignmentReportResourceResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public AssignmentReportResourceResponse build() {
             return new AssignmentReportResourceResponse(complianceStatus, properties, reasons, resourceId);
         }

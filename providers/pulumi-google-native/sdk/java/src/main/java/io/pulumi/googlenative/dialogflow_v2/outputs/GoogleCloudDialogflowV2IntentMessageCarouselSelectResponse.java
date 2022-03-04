@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse {
     /**
      * Carousel items.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> getItems() {
         return this.items;
     }
@@ -53,7 +53,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse(items);
         }

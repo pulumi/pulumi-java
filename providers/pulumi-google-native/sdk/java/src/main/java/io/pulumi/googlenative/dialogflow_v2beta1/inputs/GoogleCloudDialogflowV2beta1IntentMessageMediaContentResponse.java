@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="mediaObjects", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> getMediaObjects() {
         return this.mediaObjects;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="mediaType", required=true)
-    private final String mediaType;
+      private final String mediaType;
 
     public String getMediaType() {
         return this.mediaType;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse(mediaObjects, mediaType);
         }

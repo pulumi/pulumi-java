@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.outputs.AnalysisDateTimeParameter;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisDecimalParameter;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisIntegerParameter;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisStringParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -50,28 +50,28 @@ public final class AnalysisParameters {
     /**
      * <p>Date-time parameters.</p>
      * 
-     */
+    */
     public List<AnalysisDateTimeParameter> getDateTimeParameters() {
         return this.dateTimeParameters == null ? List.of() : this.dateTimeParameters;
     }
     /**
      * <p>Decimal parameters.</p>
      * 
-     */
+    */
     public List<AnalysisDecimalParameter> getDecimalParameters() {
         return this.decimalParameters == null ? List.of() : this.decimalParameters;
     }
     /**
      * <p>Integer parameters.</p>
      * 
-     */
+    */
     public List<AnalysisIntegerParameter> getIntegerParameters() {
         return this.integerParameters == null ? List.of() : this.integerParameters;
     }
     /**
      * <p>String parameters.</p>
      * 
-     */
+    */
     public List<AnalysisStringParameter> getStringParameters() {
         return this.stringParameters == null ? List.of() : this.stringParameters;
     }
@@ -121,7 +121,6 @@ public final class AnalysisParameters {
             this.stringParameters = stringParameters;
             return this;
         }
-
         public AnalysisParameters build() {
             return new AnalysisParameters(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
         }

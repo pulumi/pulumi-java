@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -32,7 +32,7 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -43,7 +43,7 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="valueType", required=true)
-    private final String valueType;
+      private final String valueType;
 
     public String getValueType() {
         return this.valueType;
@@ -102,7 +102,6 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public LabelDescriptorResponse build() {
             return new LabelDescriptorResponse(description, key, valueType);
         }

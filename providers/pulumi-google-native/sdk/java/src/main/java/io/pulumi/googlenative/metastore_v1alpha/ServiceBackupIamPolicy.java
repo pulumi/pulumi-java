@@ -5,8 +5,8 @@ package io.pulumi.googlenative.metastore_v1alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1alpha.ServiceBackupIamPolicyArgs;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.AuditConfigResponse;
@@ -81,6 +81,37 @@ public class ServiceBackupIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ServiceBackupIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.metastore_v1alpha.ServiceBackupIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.metastore_v1alpha.ServiceBackupIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ServiceBackupIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ServiceBackupIamPolicy(String name) {
+        this(name, ServiceBackupIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ServiceBackupIamPolicy(String name, ServiceBackupIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

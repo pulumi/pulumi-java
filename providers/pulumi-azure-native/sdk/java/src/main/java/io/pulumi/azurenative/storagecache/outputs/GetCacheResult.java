@@ -12,7 +12,7 @@ import io.pulumi.azurenative.storagecache.outputs.CacheResponseSku;
 import io.pulumi.azurenative.storagecache.outputs.CacheSecuritySettingsResponse;
 import io.pulumi.azurenative.storagecache.outputs.CacheUpgradeStatusResponse;
 import io.pulumi.azurenative.storagecache.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -157,126 +157,126 @@ public final class GetCacheResult {
     /**
      * The size of this Cache, in GB.
      * 
-     */
+    */
     public Optional<Integer> getCacheSizeGB() {
         return Optional.ofNullable(this.cacheSizeGB);
     }
     /**
      * Specifies Directory Services settings of the cache.
      * 
-     */
+    */
     public Optional<CacheDirectorySettingsResponse> getDirectoryServicesSettings() {
         return Optional.ofNullable(this.directoryServicesSettings);
     }
     /**
      * Specifies encryption settings of the cache.
      * 
-     */
+    */
     public Optional<CacheEncryptionSettingsResponse> getEncryptionSettings() {
         return Optional.ofNullable(this.encryptionSettings);
     }
     /**
      * Health of the Cache.
      * 
-     */
+    */
     public CacheHealthResponse getHealth() {
         return this.health;
     }
     /**
      * Resource ID of the Cache.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the cache, if configured.
      * 
-     */
+    */
     public Optional<CacheIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Region name string.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Array of IP addresses that can be used by clients mounting this Cache.
      * 
-     */
+    */
     public List<String> getMountAddresses() {
         return this.mountAddresses;
     }
     /**
      * Name of Cache.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies network settings of the cache.
      * 
-     */
+    */
     public Optional<CacheNetworkSettingsResponse> getNetworkSettings() {
         return Optional.ofNullable(this.networkSettings);
     }
     /**
      * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Specifies security settings of the cache.
      * 
-     */
+    */
     public Optional<CacheSecuritySettingsResponse> getSecuritySettings() {
         return Optional.ofNullable(this.securitySettings);
     }
     /**
      * SKU for the Cache.
      * 
-     */
+    */
     public Optional<CacheResponseSku> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Subnet used for the Cache.
      * 
-     */
+    */
     public Optional<String> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * The system meta data relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of the Cache; Microsoft.StorageCache/Cache
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Upgrade status of the Cache.
      * 
-     */
+    */
     public Optional<CacheUpgradeStatusResponse> getUpgradeStatus() {
         return Optional.ofNullable(this.upgradeStatus);
     }
@@ -424,7 +424,6 @@ public final class GetCacheResult {
             this.upgradeStatus = upgradeStatus;
             return this;
         }
-
         public GetCacheResult build() {
             return new GetCacheResult(cacheSizeGB, directoryServicesSettings, encryptionSettings, health, id, identity, location, mountAddresses, name, networkSettings, provisioningState, securitySettings, sku, subnet, systemData, tags, type, upgradeStatus);
         }

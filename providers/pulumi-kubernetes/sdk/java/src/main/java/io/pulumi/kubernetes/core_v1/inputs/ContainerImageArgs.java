@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="names", required=true)
-    private final Input<List<String>> names;
+      private final Input<List<String>> names;
 
     public Input<List<String>> getNames() {
         return this.names;
@@ -36,7 +36,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeBytes")
-    private final @Nullable Input<Integer> sizeBytes;
+      private final @Nullable Input<Integer> sizeBytes;
 
     public Input<Integer> getSizeBytes() {
         return this.sizeBytes == null ? Input.empty() : this.sizeBytes;
@@ -95,7 +95,6 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
             this.sizeBytes = Input.ofNullable(sizeBytes);
             return this;
         }
-
         public ContainerImageArgs build() {
             return new ContainerImageArgs(names, sizeBytes);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetNetworkInterfaceTapConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.GetNetworkInterfaceTapConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkInterfaceTapConfiguration {
-/**
- * Tap configuration in a Network Interface.
+    private GetNetworkInterfaceTapConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkInterfaceTapConfigurationArgs.Builder a);
+    }
+    private static GetNetworkInterfaceTapConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkInterfaceTapConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Tap configuration in a Network Interface.
  * API Version: 2020-11-01.
  * 
- *
- * Tap configuration in a Network Interface.
+     *
+     * Tap configuration in a Network Interface.
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkInterfaceTapConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Tap configuration in a Network Interface.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Tap configuration in a Network Interface.
+     * 
+     */
     public static CompletableFuture<GetNetworkInterfaceTapConfigurationResult> invokeAsync(GetNetworkInterfaceTapConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkInterfaceTapConfiguration", TypeShape.of(GetNetworkInterfaceTapConfigurationResult.class), args == null ? GetNetworkInterfaceTapConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.connect;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.connect.inputs.GetUserArgs;
 import io.pulumi.awsnative.connect.outputs.GetUserResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUser {
-/**
- * Resource Type definition for AWS::Connect::User
+    private GetUser() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserArgs.Builder a);
+    }
+    private static GetUserArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Connect::User
  * 
- */
+     */
+    public static CompletableFuture<GetUserResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Connect::User
+     * 
+     */
     public static CompletableFuture<GetUserResult> invokeAsync(GetUserArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getUser", TypeShape.of(GetUserResult.class), args == null ? GetUserArgs.Empty : args, Utilities.withVersion(options));
     }

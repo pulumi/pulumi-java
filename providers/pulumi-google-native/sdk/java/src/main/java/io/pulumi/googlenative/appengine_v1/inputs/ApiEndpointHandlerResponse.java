@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApiEndpointHandlerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="scriptPath", required=true)
-    private final String scriptPath;
+      private final String scriptPath;
 
     public String getScriptPath() {
         return this.scriptPath;
@@ -59,7 +59,6 @@ public final class ApiEndpointHandlerResponse extends io.pulumi.resources.Invoke
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
-
         public ApiEndpointHandlerResponse build() {
             return new ApiEndpointHandlerResponse(scriptPath);
         }

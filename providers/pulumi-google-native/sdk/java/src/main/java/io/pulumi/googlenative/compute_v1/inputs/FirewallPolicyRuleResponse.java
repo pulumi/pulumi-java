@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.FirewallPolicyRuleMatcherResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -36,7 +36,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -47,7 +47,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -58,7 +58,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -69,7 +69,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enableLogging", required=true)
-    private final Boolean enableLogging;
+      private final Boolean enableLogging;
 
     public Boolean getEnableLogging() {
         return this.enableLogging;
@@ -80,7 +80,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -91,7 +91,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="match", required=true)
-    private final FirewallPolicyRuleMatcherResponse match;
+      private final FirewallPolicyRuleMatcherResponse match;
 
     public FirewallPolicyRuleMatcherResponse getMatch() {
         return this.match;
@@ -102,7 +102,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -113,7 +113,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ruleTupleCount", required=true)
-    private final Integer ruleTupleCount;
+      private final Integer ruleTupleCount;
 
     public Integer getRuleTupleCount() {
         return this.ruleTupleCount;
@@ -124,7 +124,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetResources", required=true)
-    private final List<String> targetResources;
+      private final List<String> targetResources;
 
     public List<String> getTargetResources() {
         return this.targetResources;
@@ -135,7 +135,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetServiceAccounts", required=true)
-    private final List<String> targetServiceAccounts;
+      private final List<String> targetServiceAccounts;
 
     public List<String> getTargetServiceAccounts() {
         return this.targetServiceAccounts;
@@ -274,7 +274,6 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
-
         public FirewallPolicyRuleResponse build() {
             return new FirewallPolicyRuleResponse(action, description, direction, disabled, enableLogging, kind, match, priority, ruleTupleCount, targetResources, targetServiceAccounts);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class Gen2StorageConfigurationOutputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -59,7 +59,6 @@ public final class Gen2StorageConfigurationOutputResponse extends io.pulumi.reso
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Gen2StorageConfigurationOutputResponse build() {
             return new Gen2StorageConfigurationOutputResponse(accountName);
         }

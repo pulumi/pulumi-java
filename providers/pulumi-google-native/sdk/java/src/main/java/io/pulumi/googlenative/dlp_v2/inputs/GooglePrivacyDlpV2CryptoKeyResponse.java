@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TransientCryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2UnwrappedCryptoKeyResponse;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kmsWrapped", required=true)
-    private final GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
+      private final GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
 
     public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse getKmsWrapped() {
         return this.kmsWrapped;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="transient", required=true)
-    private final GooglePrivacyDlpV2TransientCryptoKeyResponse $transient;
+      private final GooglePrivacyDlpV2TransientCryptoKeyResponse $transient;
 
     public GooglePrivacyDlpV2TransientCryptoKeyResponse get$transient() {
         return this.$transient;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="unwrapped", required=true)
-    private final GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
+      private final GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 
     public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse getUnwrapped() {
         return this.unwrapped;
@@ -104,7 +104,6 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
             this.unwrapped = Objects.requireNonNull(unwrapped);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoKeyResponse build() {
             return new GooglePrivacyDlpV2CryptoKeyResponse(kmsWrapped, $transient, unwrapped);
         }

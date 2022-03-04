@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ReportRecurrencePeriodResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="from", required=true)
-    private final String from;
+      private final String from;
 
     public String getFrom() {
         return this.from;
@@ -34,7 +34,7 @@ public final class ReportRecurrencePeriodResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="to")
-    private final @Nullable String to;
+      private final @Nullable String to;
 
     public Optional<String> getTo() {
         return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
@@ -83,7 +83,6 @@ public final class ReportRecurrencePeriodResponse extends io.pulumi.resources.In
             this.to = to;
             return this;
         }
-
         public ReportRecurrencePeriodResponse build() {
             return new ReportRecurrencePeriodResponse(from, to);
         }

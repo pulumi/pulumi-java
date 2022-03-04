@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetDomainConfigurationArgs extends io.pulumi.resources.Invoke
     public static final GetDomainConfigurationArgs Empty = new GetDomainConfigurationArgs();
 
     @InputImport(name="domainConfigurationName", required=true)
-    private final String domainConfigurationName;
+      private final String domainConfigurationName;
 
     public String getDomainConfigurationName() {
         return this.domainConfigurationName;
@@ -51,7 +51,6 @@ public final class GetDomainConfigurationArgs extends io.pulumi.resources.Invoke
             this.domainConfigurationName = Objects.requireNonNull(domainConfigurationName);
             return this;
         }
-
         public GetDomainConfigurationArgs build() {
             return new GetDomainConfigurationArgs(domainConfigurationName);
         }

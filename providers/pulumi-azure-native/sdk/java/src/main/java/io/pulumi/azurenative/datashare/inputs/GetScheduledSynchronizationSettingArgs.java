@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final String shareName;
+      private final String shareName;
 
     public String getShareName() {
         return this.shareName;
@@ -50,7 +50,7 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="synchronizationSettingName", required=true)
-    private final String synchronizationSettingName;
+      private final String synchronizationSettingName;
 
     public String getSynchronizationSettingName() {
         return this.synchronizationSettingName;
@@ -119,7 +119,6 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
             this.synchronizationSettingName = Objects.requireNonNull(synchronizationSettingName);
             return this;
         }
-
         public GetScheduledSynchronizationSettingArgs build() {
             return new GetScheduledSynchronizationSettingArgs(accountName, resourceGroupName, shareName, synchronizationSettingName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class CloudFrontOriginAccessIdentityConfig extends io.pulumi.resour
     public static final CloudFrontOriginAccessIdentityConfig Empty = new CloudFrontOriginAccessIdentityConfig();
 
     @InputImport(name="comment", required=true)
-    private final String comment;
+      private final String comment;
 
     public String getComment() {
         return this.comment;
@@ -51,7 +51,6 @@ public final class CloudFrontOriginAccessIdentityConfig extends io.pulumi.resour
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public CloudFrontOriginAccessIdentityConfig build() {
             return new CloudFrontOriginAccessIdentityConfig(comment);
         }

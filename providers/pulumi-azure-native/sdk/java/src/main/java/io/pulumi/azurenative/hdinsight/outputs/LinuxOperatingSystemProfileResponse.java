@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.SshProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class LinuxOperatingSystemProfileResponse {
     /**
      * The password.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The SSH profile.
      * 
-     */
+    */
     public Optional<SshProfileResponse> getSshProfile() {
         return Optional.ofNullable(this.sshProfile);
     }
     /**
      * The username.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -98,7 +98,6 @@ public final class LinuxOperatingSystemProfileResponse {
             this.username = username;
             return this;
         }
-
         public LinuxOperatingSystemProfileResponse build() {
             return new LinuxOperatingSystemProfileResponse(password, sshProfile, username);
         }

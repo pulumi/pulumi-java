@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -30,7 +30,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kmsKeyServiceAccount")
-    private final @Nullable Input<String> kmsKeyServiceAccount;
+      private final @Nullable Input<String> kmsKeyServiceAccount;
 
     public Input<String> getKmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount == null ? Input.empty() : this.kmsKeyServiceAccount;
@@ -41,7 +41,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rawKey")
-    private final @Nullable Input<String> rawKey;
+      private final @Nullable Input<String> rawKey;
 
     public Input<String> getRawKey() {
         return this.rawKey == null ? Input.empty() : this.rawKey;
@@ -52,7 +52,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rsaEncryptedKey")
-    private final @Nullable Input<String> rsaEncryptedKey;
+      private final @Nullable Input<String> rsaEncryptedKey;
 
     public Input<String> getRsaEncryptedKey() {
         return this.rsaEncryptedKey == null ? Input.empty() : this.rsaEncryptedKey;
@@ -141,7 +141,6 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
             this.rsaEncryptedKey = Input.ofNullable(rsaEncryptedKey);
             return this;
         }
-
         public CustomerEncryptionKeyArgs build() {
             return new CustomerEncryptionKeyArgs(kmsKeyName, kmsKeyServiceAccount, rawKey, rsaEncryptedKey);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetMachineLearningComputeArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="computeName", required=true)
-    private final String computeName;
+      private final String computeName;
 
     public String getComputeName() {
         return this.computeName;
@@ -28,7 +28,7 @@ public final class GetMachineLearningComputeArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetMachineLearningComputeArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -98,7 +98,6 @@ public final class GetMachineLearningComputeArgs extends io.pulumi.resources.Inv
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetMachineLearningComputeArgs build() {
             return new GetMachineLearningComputeArgs(computeName, resourceGroupName, workspaceName);
         }

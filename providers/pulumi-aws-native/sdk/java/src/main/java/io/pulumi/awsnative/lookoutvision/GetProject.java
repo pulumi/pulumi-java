@@ -6,17 +6,33 @@ package io.pulumi.awsnative.lookoutvision;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lookoutvision.inputs.GetProjectArgs;
 import io.pulumi.awsnative.lookoutvision.outputs.GetProjectResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProject {
-/**
- * The AWS::LookoutVision::Project type creates an Amazon Lookout for Vision project. A project is a grouping of the resources needed to create and manage a Lookout for Vision model.
+    private GetProject() {}
+    public interface BuilderApplicator {
+        public void apply(GetProjectArgs.Builder a);
+    }
+    private static GetProjectArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProjectArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::LookoutVision::Project type creates an Amazon Lookout for Vision project. A project is a grouping of the resources needed to create and manage a Lookout for Vision model.
  * 
- */
+     */
+    public static CompletableFuture<GetProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::LookoutVision::Project type creates an Amazon Lookout for Vision project. A project is a grouping of the resources needed to create and manage a Lookout for Vision model.
+     * 
+     */
     public static CompletableFuture<GetProjectResult> invokeAsync(GetProjectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lookoutvision:getProject", TypeShape.of(GetProjectResult.class), args == null ? GetProjectArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.StorageLensActivityMetrics;
 import io.pulumi.awsnative.s3.outputs.StorageLensPrefixLevel;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class StorageLensBucketLevel {
             this.prefixLevel = prefixLevel;
             return this;
         }
-
         public StorageLensBucketLevel build() {
             return new StorageLensBucketLevel(activityMetrics, prefixLevel);
         }

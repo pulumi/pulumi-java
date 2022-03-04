@@ -6,21 +6,41 @@ package io.pulumi.azurenative.visualstudio;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.visualstudio.inputs.GetAccountArgs;
 import io.pulumi.azurenative.visualstudio.outputs.GetAccountResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccount {
-/**
- * The response to an account resource GET request.
+    private GetAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccountArgs.Builder a);
+    }
+    private static GetAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response to an account resource GET request.
  * API Version: 2014-04-01-preview.
  * 
- *
- * The response to an account resource GET request.
+     *
+     * The response to an account resource GET request.
  * 
- */
+     */
+    public static CompletableFuture<GetAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response to an account resource GET request.
+     * API Version: 2014-04-01-preview.
+     * 
+     *
+         * The response to an account resource GET request.
+     * 
+     */
     public static CompletableFuture<GetAccountResult> invokeAsync(GetAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:visualstudio:getAccount", TypeShape.of(GetAccountResult.class), args == null ? GetAccountArgs.Empty : args, Utilities.withVersion(options));
     }

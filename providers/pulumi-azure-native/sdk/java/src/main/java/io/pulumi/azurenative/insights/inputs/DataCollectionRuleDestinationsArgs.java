@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.DestinationsSpecAzureMonitorMetricsArgs;
 import io.pulumi.azurenative.insights.inputs.LogAnalyticsDestinationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="azureMonitorMetrics")
-    private final @Nullable Input<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
+      private final @Nullable Input<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
 
     public Input<DestinationsSpecAzureMonitorMetricsArgs> getAzureMonitorMetrics() {
         return this.azureMonitorMetrics == null ? Input.empty() : this.azureMonitorMetrics;
@@ -36,7 +36,7 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="logAnalytics")
-    private final @Nullable Input<List<LogAnalyticsDestinationArgs>> logAnalytics;
+      private final @Nullable Input<List<LogAnalyticsDestinationArgs>> logAnalytics;
 
     public Input<List<LogAnalyticsDestinationArgs>> getLogAnalytics() {
         return this.logAnalytics == null ? Input.empty() : this.logAnalytics;
@@ -95,7 +95,6 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
             this.logAnalytics = Input.ofNullable(logAnalytics);
             return this;
         }
-
         public DataCollectionRuleDestinationsArgs build() {
             return new DataCollectionRuleDestinationsArgs(azureMonitorMetrics, logAnalytics);
         }

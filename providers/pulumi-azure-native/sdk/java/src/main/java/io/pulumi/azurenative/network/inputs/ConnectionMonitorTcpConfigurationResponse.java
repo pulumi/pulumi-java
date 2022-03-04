@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ConnectionMonitorTcpConfigurationResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="destinationPortBehavior")
-    private final @Nullable String destinationPortBehavior;
+      private final @Nullable String destinationPortBehavior;
 
     public Optional<String> getDestinationPortBehavior() {
         return this.destinationPortBehavior == null ? Optional.empty() : Optional.ofNullable(this.destinationPortBehavior);
@@ -36,7 +36,7 @@ public final class ConnectionMonitorTcpConfigurationResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="disableTraceRoute")
-    private final @Nullable Boolean disableTraceRoute;
+      private final @Nullable Boolean disableTraceRoute;
 
     public Optional<Boolean> getDisableTraceRoute() {
         return this.disableTraceRoute == null ? Optional.empty() : Optional.ofNullable(this.disableTraceRoute);
@@ -47,7 +47,7 @@ public final class ConnectionMonitorTcpConfigurationResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+      private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -106,7 +106,6 @@ public final class ConnectionMonitorTcpConfigurationResponse extends io.pulumi.r
             this.port = port;
             return this;
         }
-
         public ConnectionMonitorTcpConfigurationResponse build() {
             return new ConnectionMonitorTcpConfigurationResponse(destinationPortBehavior, disableTraceRoute, port);
         }

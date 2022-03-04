@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devspaces.inputs;
 
 import io.pulumi.azurenative.devspaces.inputs.KubernetesConnectionDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ControllerConnectionDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="orchestratorSpecificConnectionDetails")
-    private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
+      private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
 
     public Optional<KubernetesConnectionDetailsResponse> getOrchestratorSpecificConnectionDetails() {
         return this.orchestratorSpecificConnectionDetails == null ? Optional.empty() : Optional.ofNullable(this.orchestratorSpecificConnectionDetails);
@@ -57,7 +57,6 @@ public final class ControllerConnectionDetailsResponse extends io.pulumi.resourc
             this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
             return this;
         }
-
         public ControllerConnectionDetailsResponse build() {
             return new ControllerConnectionDetailsResponse(orchestratorSpecificConnectionDetails);
         }

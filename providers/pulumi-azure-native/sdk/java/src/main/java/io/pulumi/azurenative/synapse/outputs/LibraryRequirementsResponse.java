@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class LibraryRequirementsResponse {
     /**
      * The library requirements.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The filename of the library requirements file.
      * 
-     */
+    */
     public Optional<String> getFilename() {
         return Optional.ofNullable(this.filename);
     }
     /**
      * The last update time of the library requirements file.
      * 
-     */
+    */
     public String getTime() {
         return this.time;
     }
@@ -97,7 +97,6 @@ public final class LibraryRequirementsResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public LibraryRequirementsResponse build() {
             return new LibraryRequirementsResponse(content, filename, time);
         }

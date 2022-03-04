@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceChatterFeedConfigu
 import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceKnowledgeArticleConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceStandardObjectAttachmentConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceStandardObjectConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -157,7 +157,6 @@ public final class DataSourceSalesforceConfiguration {
             this.standardObjectConfigurations = standardObjectConfigurations;
             return this;
         }
-
         public DataSourceSalesforceConfiguration build() {
             return new DataSourceSalesforceConfiguration(chatterFeedConfiguration, crawlAttachments, excludeAttachmentFilePatterns, includeAttachmentFilePatterns, knowledgeArticleConfiguration, secretArn, serverUrl, standardObjectAttachmentConfiguration, standardObjectConfigurations);
         }

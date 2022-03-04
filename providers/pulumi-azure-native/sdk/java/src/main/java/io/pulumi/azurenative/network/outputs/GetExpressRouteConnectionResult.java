@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringIdResponse;
 import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -86,63 +86,63 @@ public final class GetExpressRouteConnectionResult {
     /**
      * Authorization key to establish the connection.
      * 
-     */
+    */
     public Optional<String> getAuthorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
      * Enable internet security.
      * 
-     */
+    */
     public Optional<Boolean> getEnableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
     /**
      * The ExpressRoute circuit peering.
      * 
-     */
+    */
     public ExpressRouteCircuitPeeringIdResponse getExpressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
     }
     /**
      * Enable FastPath to vWan Firewall hub.
      * 
-     */
+    */
     public Optional<Boolean> getExpressRouteGatewayBypass() {
         return Optional.ofNullable(this.expressRouteGatewayBypass);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the express route connection resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
-     */
+    */
     public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }
     /**
      * The routing weight associated to the connection.
      * 
-     */
+    */
     public Optional<Integer> getRoutingWeight() {
         return Optional.ofNullable(this.routingWeight);
     }
@@ -227,7 +227,6 @@ public final class GetExpressRouteConnectionResult {
             this.routingWeight = routingWeight;
             return this;
         }
-
         public GetExpressRouteConnectionResult build() {
             return new GetExpressRouteConnectionResult(authorizationKey, enableInternetSecurity, expressRouteCircuitPeering, expressRouteGatewayBypass, id, name, provisioningState, routingConfiguration, routingWeight);
         }

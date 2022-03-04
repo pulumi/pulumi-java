@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class NetworkPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="privateLink")
-    private final @Nullable String privateLink;
+      private final @Nullable String privateLink;
 
     public Optional<String> getPrivateLink() {
         return this.privateLink == null ? Optional.empty() : Optional.ofNullable(this.privateLink);
@@ -34,7 +34,7 @@ public final class NetworkPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceProviderConnection")
-    private final @Nullable String resourceProviderConnection;
+      private final @Nullable String resourceProviderConnection;
 
     public Optional<String> getResourceProviderConnection() {
         return this.resourceProviderConnection == null ? Optional.empty() : Optional.ofNullable(this.resourceProviderConnection);
@@ -83,7 +83,6 @@ public final class NetworkPropertiesResponse extends io.pulumi.resources.InvokeA
             this.resourceProviderConnection = resourceProviderConnection;
             return this;
         }
-
         public NetworkPropertiesResponse build() {
             return new NetworkPropertiesResponse(privateLink, resourceProviderConnection);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderAction;
 import java.lang.Integer;
 import java.lang.String;
@@ -51,7 +51,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendService {
     /**
      * The full or partial URL to the BackendService resource being mirrored to.
      * 
-     */
+    */
     public Optional<String> getBackendService() {
         return Optional.ofNullable(this.backendService);
     }
@@ -62,7 +62,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendService {
      * HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderAction> getHeaderAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -74,7 +74,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendService {
      * as determined by the BackendService's session affinity policy.
      * The value must be between 0 and 1000
      * 
-     */
+    */
     public Optional<Integer> getWeight() {
         return Optional.ofNullable(this.weight);
     }
@@ -117,7 +117,6 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendService {
             this.weight = weight;
             return this;
         }
-
         public URLMapPathMatcherDefaultRouteActionWeightedBackendService build() {
             return new URLMapPathMatcherDefaultRouteActionWeightedBackendService(backendService, headerAction, weight);
         }

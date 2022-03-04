@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.relay.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -98,77 +98,77 @@ public final class GetWCFRelayResult {
     /**
      * The time the WCF relay was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Returns true if the relay is dynamic; otherwise, false.
      * 
-     */
+    */
     public Boolean getIsDynamic() {
         return this.isDynamic;
     }
     /**
      * The number of listeners for this relay. Note that min :1 and max:25 are supported.
      * 
-     */
+    */
     public Integer getListenerCount() {
         return this.listenerCount;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * WCF relay type.
      * 
-     */
+    */
     public Optional<String> getRelayType() {
         return Optional.ofNullable(this.relayType);
     }
     /**
      * Returns true if client authorization is needed for this relay; otherwise, false.
      * 
-     */
+    */
     public Optional<Boolean> getRequiresClientAuthorization() {
         return Optional.ofNullable(this.requiresClientAuthorization);
     }
     /**
      * Returns true if transport security is needed for this relay; otherwise, false.
      * 
-     */
+    */
     public Optional<Boolean> getRequiresTransportSecurity() {
         return Optional.ofNullable(this.requiresTransportSecurity);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
      * 
-     */
+    */
     public String getUpdatedAt() {
         return this.updatedAt;
     }
     /**
      * The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
-     */
+    */
     public Optional<String> getUserMetadata() {
         return Optional.ofNullable(this.userMetadata);
     }
@@ -267,7 +267,6 @@ public final class GetWCFRelayResult {
             this.userMetadata = userMetadata;
             return this;
         }
-
         public GetWCFRelayResult build() {
             return new GetWCFRelayResult(createdAt, id, isDynamic, listenerCount, name, relayType, requiresClientAuthorization, requiresTransportSecurity, type, updatedAt, userMetadata);
         }

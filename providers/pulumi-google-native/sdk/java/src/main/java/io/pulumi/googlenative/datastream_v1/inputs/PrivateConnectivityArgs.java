@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateConnection", required=true)
-    private final Input<String> privateConnection;
+      private final Input<String> privateConnection;
 
     public Input<String> getPrivateConnection() {
         return this.privateConnection;
@@ -65,7 +65,6 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
             this.privateConnection = Input.of(Objects.requireNonNull(privateConnection));
             return this;
         }
-
         public PrivateConnectivityArgs build() {
             return new PrivateConnectivityArgs(privateConnection);
         }

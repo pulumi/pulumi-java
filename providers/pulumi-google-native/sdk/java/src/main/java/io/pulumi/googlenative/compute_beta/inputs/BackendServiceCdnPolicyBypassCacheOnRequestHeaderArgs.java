@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs extends
      * 
      */
     @InputImport(name="headerName")
-    private final @Nullable Input<String> headerName;
+      private final @Nullable Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName == null ? Input.empty() : this.headerName;
@@ -66,7 +66,6 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs extends
             this.headerName = Input.ofNullable(headerName);
             return this;
         }
-
         public BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs build() {
             return new BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs(headerName);
         }

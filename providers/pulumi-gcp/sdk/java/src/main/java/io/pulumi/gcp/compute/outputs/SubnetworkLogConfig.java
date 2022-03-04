@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -77,7 +77,7 @@ public final class SubnetworkLogConfig {
      * Default value is `INTERVAL_5_SEC`.
      * Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
      * 
-     */
+    */
     public Optional<String> getAggregationInterval() {
         return Optional.ofNullable(this.aggregationInterval);
     }
@@ -86,7 +86,7 @@ public final class SubnetworkLogConfig {
      * https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
      * The default value is 'true', which evaluates to include everything.
      * 
-     */
+    */
     public Optional<String> getFilterExpr() {
         return Optional.ofNullable(this.filterExpr);
     }
@@ -97,7 +97,7 @@ public final class SubnetworkLogConfig {
      * reported and 0.0 means no logs are reported. Default is 0.5 which means
      * half of all collected logs are reported.
      * 
-     */
+    */
     public Optional<Double> getFlowSampling() {
         return Optional.ofNullable(this.flowSampling);
     }
@@ -108,7 +108,7 @@ public final class SubnetworkLogConfig {
      * Default value is `INCLUDE_ALL_METADATA`.
      * Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
      * 
-     */
+    */
     public Optional<String> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -116,7 +116,7 @@ public final class SubnetworkLogConfig {
      * List of metadata fields that should be added to reported logs.
      * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
      * 
-     */
+    */
     public List<String> getMetadataFields() {
         return this.metadataFields == null ? List.of() : this.metadataFields;
     }
@@ -173,7 +173,6 @@ public final class SubnetworkLogConfig {
             this.metadataFields = metadataFields;
             return this;
         }
-
         public SubnetworkLogConfig build() {
             return new SubnetworkLogConfig(aggregationInterval, filterExpr, flowSampling, metadata, metadataFields);
         }

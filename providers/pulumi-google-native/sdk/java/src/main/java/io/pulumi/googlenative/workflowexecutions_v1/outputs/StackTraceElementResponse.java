@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.workflowexecutions_v1.outputs.PositionResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class StackTraceElementResponse {
     /**
      * The source position information of the stack trace element.
      * 
-     */
+    */
     public PositionResponse getPosition() {
         return this.position;
     }
     /**
      * The routine where the error occurred.
      * 
-     */
+    */
     public String getRoutine() {
         return this.routine;
     }
     /**
      * The step the error occurred at.
      * 
-     */
+    */
     public String getStep() {
         return this.step;
     }
@@ -96,7 +96,6 @@ public final class StackTraceElementResponse {
             this.step = Objects.requireNonNull(step);
             return this;
         }
-
         public StackTraceElementResponse build() {
             return new StackTraceElementResponse(position, routine, step);
         }

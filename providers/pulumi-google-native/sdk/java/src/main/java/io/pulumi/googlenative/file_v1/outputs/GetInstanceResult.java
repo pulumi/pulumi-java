@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.file_v1.outputs.FileShareConfigResponse;
 import io.pulumi.googlenative.file_v1.outputs.NetworkConfigResponse;
 import java.lang.Boolean;
@@ -113,91 +113,91 @@ public final class GetInstanceResult {
     /**
      * The time when the instance was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The description of the instance (2048 characters or less).
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * File system shares on the instance. For this version, only a single file share is supported.
      * 
-     */
+    */
     public List<FileShareConfigResponse> getFileShares() {
         return this.fileShares;
     }
     /**
      * KMS key name used for data encryption.
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * Resource labels to represent user provided metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the instance, in the format `projects/{project}/locations/{location}/instances/{instance}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * VPC networks to which the instance is connected. For this version, only a single network is supported.
      * 
-     */
+    */
     public List<NetworkConfigResponse> getNetworks() {
         return this.networks;
     }
     /**
      * Reserved for future use.
      * 
-     */
+    */
     public Boolean getSatisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
      * The instance state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Additional information about the instance state, if available.
      * 
-     */
+    */
     public String getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * field indicates all the reasons the instance is in "SUSPENDED" state.
      * 
-     */
+    */
     public List<String> getSuspensionReasons() {
         return this.suspensionReasons;
     }
     /**
      * The service tier of the instance.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
@@ -310,7 +310,6 @@ public final class GetInstanceResult {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(createTime, description, etag, fileShares, kmsKeyName, labels, name, networks, satisfiesPzs, state, statusMessage, suspensionReasons, tier);
         }

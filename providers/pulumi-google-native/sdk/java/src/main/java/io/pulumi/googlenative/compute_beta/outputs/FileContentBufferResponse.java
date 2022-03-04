@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class FileContentBufferResponse {
     /**
      * The raw content in the secure keys file.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * The file type of source file.
      * 
-     */
+    */
     public String getFileType() {
         return this.fileType;
     }
@@ -74,7 +74,6 @@ public final class FileContentBufferResponse {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }
-
         public FileContentBufferResponse build() {
             return new FileContentBufferResponse(content, fileType);
         }

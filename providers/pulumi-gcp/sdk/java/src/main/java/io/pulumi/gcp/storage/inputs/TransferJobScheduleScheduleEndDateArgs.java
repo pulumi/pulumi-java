@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TransferJobScheduleScheduleEndDateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="day", required=true)
-    private final Input<Integer> day;
+      private final Input<Integer> day;
 
     public Input<Integer> getDay() {
         return this.day;
@@ -29,7 +29,7 @@ public final class TransferJobScheduleScheduleEndDateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="month", required=true)
-    private final Input<Integer> month;
+      private final Input<Integer> month;
 
     public Input<Integer> getMonth() {
         return this.month;
@@ -40,7 +40,7 @@ public final class TransferJobScheduleScheduleEndDateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="year", required=true)
-    private final Input<Integer> year;
+      private final Input<Integer> year;
 
     public Input<Integer> getYear() {
         return this.year;
@@ -114,7 +114,6 @@ public final class TransferJobScheduleScheduleEndDateArgs extends io.pulumi.reso
             this.year = Input.of(Objects.requireNonNull(year));
             return this;
         }
-
         public TransferJobScheduleScheduleEndDateArgs build() {
             return new TransferJobScheduleScheduleEndDateArgs(day, month, year);
         }

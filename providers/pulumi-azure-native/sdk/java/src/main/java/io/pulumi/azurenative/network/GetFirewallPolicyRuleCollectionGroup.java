@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetFirewallPolicyRuleCollectionGroupArgs;
 import io.pulumi.azurenative.network.outputs.GetFirewallPolicyRuleCollectionGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallPolicyRuleCollectionGroup {
-/**
- * Rule Collection Group resource.
+    private GetFirewallPolicyRuleCollectionGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetFirewallPolicyRuleCollectionGroupArgs.Builder a);
+    }
+    private static GetFirewallPolicyRuleCollectionGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFirewallPolicyRuleCollectionGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Rule Collection Group resource.
  * API Version: 2020-11-01.
  * 
- *
- * Rule Collection Group resource.
+     *
+     * Rule Collection Group resource.
  * 
- */
+     */
+    public static CompletableFuture<GetFirewallPolicyRuleCollectionGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Rule Collection Group resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Rule Collection Group resource.
+     * 
+     */
     public static CompletableFuture<GetFirewallPolicyRuleCollectionGroupResult> invokeAsync(GetFirewallPolicyRuleCollectionGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFirewallPolicyRuleCollectionGroup", TypeShape.of(GetFirewallPolicyRuleCollectionGroupResult.class), args == null ? GetFirewallPolicyRuleCollectionGroupArgs.Empty : args, Utilities.withVersion(options));
     }

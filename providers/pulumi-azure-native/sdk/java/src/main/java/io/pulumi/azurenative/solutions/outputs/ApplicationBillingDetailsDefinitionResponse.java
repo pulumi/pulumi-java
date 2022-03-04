@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ApplicationBillingDetailsDefinitionResponse {
     /**
      * The managed application resource usage Id.
      * 
-     */
+    */
     public Optional<String> getResourceUsageId() {
         return Optional.ofNullable(this.resourceUsageId);
     }
@@ -54,7 +54,6 @@ public final class ApplicationBillingDetailsDefinitionResponse {
             this.resourceUsageId = resourceUsageId;
             return this;
         }
-
         public ApplicationBillingDetailsDefinitionResponse build() {
             return new ApplicationBillingDetailsDefinitionResponse(resourceUsageId);
         }

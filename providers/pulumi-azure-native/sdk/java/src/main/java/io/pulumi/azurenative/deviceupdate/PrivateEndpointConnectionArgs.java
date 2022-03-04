@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deviceupdate;
 
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="groupIds")
-    private final @Nullable Input<List<String>> groupIds;
+      private final @Nullable Input<List<String>> groupIds;
 
     public Input<List<String>> getGroupIds() {
         return this.groupIds == null ? Input.empty() : this.groupIds;
@@ -43,7 +43,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -54,7 +54,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-    private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -65,7 +65,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -169,7 +169,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(accountName, groupIds, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName);
         }

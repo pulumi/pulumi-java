@@ -6,21 +6,41 @@ package io.pulumi.azurenative.resourceconnector;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.resourceconnector.inputs.ListApplianceClusterUserCredentialArgs;
 import io.pulumi.azurenative.resourceconnector.outputs.ListApplianceClusterUserCredentialResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListApplianceClusterUserCredential {
-/**
- * The List Cluster User Credential appliance.
+    private ListApplianceClusterUserCredential() {}
+    public interface BuilderApplicator {
+        public void apply(ListApplianceClusterUserCredentialArgs.Builder a);
+    }
+    private static ListApplianceClusterUserCredentialArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListApplianceClusterUserCredentialArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The List Cluster User Credential appliance.
  * API Version: 2021-10-31-preview.
  * 
- *
- * The List Cluster User Credential appliance.
+     *
+     * The List Cluster User Credential appliance.
  * 
- */
+     */
+    public static CompletableFuture<ListApplianceClusterUserCredentialResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The List Cluster User Credential appliance.
+     * API Version: 2021-10-31-preview.
+     * 
+     *
+         * The List Cluster User Credential appliance.
+     * 
+     */
     public static CompletableFuture<ListApplianceClusterUserCredentialResult> invokeAsync(ListApplianceClusterUserCredentialArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resourceconnector:listApplianceClusterUserCredential", TypeShape.of(ListApplianceClusterUserCredentialResult.class), args == null ? ListApplianceClusterUserCredentialArgs.Empty : args, Utilities.withVersion(options));
     }

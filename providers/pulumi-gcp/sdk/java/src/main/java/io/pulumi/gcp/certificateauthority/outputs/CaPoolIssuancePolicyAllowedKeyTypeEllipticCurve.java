@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve {
      * The algorithm used.
      * Possible values are `ECDSA_P256`, `ECDSA_P384`, and `EDDSA_25519`.
      * 
-     */
+    */
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
     }
@@ -54,7 +54,6 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve(signatureAlgorithm);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="defaultPort")
-    private final @Nullable Input<Integer> defaultPort;
+      private final @Nullable Input<Integer> defaultPort;
 
     public Input<Integer> getDefaultPort() {
         return this.defaultPort == null ? Input.empty() : this.defaultPort;
@@ -33,7 +33,7 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkEndpointType")
-    private final @Nullable Input<String> networkEndpointType;
+      private final @Nullable Input<String> networkEndpointType;
 
     public Input<String> getNetworkEndpointType() {
         return this.networkEndpointType == null ? Input.empty() : this.networkEndpointType;
@@ -74,7 +74,7 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -85,7 +85,7 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -204,7 +204,6 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
-
         public GlobalNetworkEndpointGroupState build() {
             return new GlobalNetworkEndpointGroupState(defaultPort, description, name, networkEndpointType, project, selfLink);
         }

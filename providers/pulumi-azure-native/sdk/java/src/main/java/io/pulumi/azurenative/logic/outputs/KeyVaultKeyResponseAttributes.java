@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class KeyVaultKeyResponseAttributes {
     /**
      * When the key was created.
      * 
-     */
+    */
     public Optional<Double> getCreated() {
         return Optional.ofNullable(this.created);
     }
     /**
      * Whether the key is enabled or not.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * When the key was updated.
      * 
-     */
+    */
     public Optional<Double> getUpdated() {
         return Optional.ofNullable(this.updated);
     }
@@ -98,7 +98,6 @@ public final class KeyVaultKeyResponseAttributes {
             this.updated = updated;
             return this;
         }
-
         public KeyVaultKeyResponseAttributes build() {
             return new KeyVaultKeyResponseAttributes(created, enabled, updated);
         }

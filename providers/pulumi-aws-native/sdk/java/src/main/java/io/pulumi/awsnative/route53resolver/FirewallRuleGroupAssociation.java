@@ -10,8 +10,8 @@ import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationSta
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupAssociationTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -206,6 +206,37 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
         return this.vpcId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FirewallRuleGroupAssociationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.route53resolver.FirewallRuleGroupAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.route53resolver.FirewallRuleGroupAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FirewallRuleGroupAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FirewallRuleGroupAssociation(String name) {
+        this(name, FirewallRuleGroupAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FirewallRuleGroupAssociation(String name, FirewallRuleGroupAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

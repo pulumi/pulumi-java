@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.QueuingConfiguration;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class LimitResponse {
     /**
      * `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`.
      * 
-     */
+    */
     public Optional<QueuingConfiguration> getQueuing() {
         return Optional.ofNullable(this.queuing);
     }
     /**
      * `type` is "Queue" or "Reject". "Queue" means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. "Reject" means that requests that can not be executed upon arrival are rejected. Required.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -77,7 +77,6 @@ public final class LimitResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LimitResponse build() {
             return new LimitResponse(queuing, type);
         }

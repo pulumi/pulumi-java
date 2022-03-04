@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SoftwareRecipeArtifactRemoteResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="checksum", required=true)
-    private final String checksum;
+      private final String checksum;
 
     public String getChecksum() {
         return this.checksum;
@@ -32,7 +32,7 @@ public final class SoftwareRecipeArtifactRemoteResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -81,7 +81,6 @@ public final class SoftwareRecipeArtifactRemoteResponse extends io.pulumi.resour
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public SoftwareRecipeArtifactRemoteResponse build() {
             return new SoftwareRecipeArtifactRemoteResponse(checksum, uri);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iot.enums.SecurityProfileBehaviorCriteriaComparisonOp
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMachineLearningDetectionConfig;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricValue;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileStatisticalThreshold;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,28 +60,28 @@ public final class SecurityProfileBehaviorCriteria {
     /**
      * The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
      * 
-     */
+    */
     public Optional<SecurityProfileBehaviorCriteriaComparisonOperator> getComparisonOperator() {
         return Optional.ofNullable(this.comparisonOperator);
     }
     /**
      * If a device is in violation of the behavior for the specified number of consecutive datapoints, an alarm occurs. If not specified, the default is 1.
      * 
-     */
+    */
     public Optional<Integer> getConsecutiveDatapointsToAlarm() {
         return Optional.ofNullable(this.consecutiveDatapointsToAlarm);
     }
     /**
      * If an alarm has occurred and the offending device is no longer in violation of the behavior for the specified number of consecutive datapoints, the alarm is cleared. If not specified, the default is 1.
      * 
-     */
+    */
     public Optional<Integer> getConsecutiveDatapointsToClear() {
         return Optional.ofNullable(this.consecutiveDatapointsToClear);
     }
     /**
      * Use this to specify the time duration over which the behavior is evaluated.
      * 
-     */
+    */
     public Optional<Integer> getDurationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
@@ -161,7 +161,6 @@ public final class SecurityProfileBehaviorCriteria {
             this.value = value;
             return this;
         }
-
         public SecurityProfileBehaviorCriteria build() {
             return new SecurityProfileBehaviorCriteria(comparisonOperator, consecutiveDatapointsToAlarm, consecutiveDatapointsToClear, durationSeconds, mlDetectionConfig, statisticalThreshold, value);
         }

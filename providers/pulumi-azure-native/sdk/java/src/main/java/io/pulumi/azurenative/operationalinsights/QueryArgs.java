@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.operationalinsights.inputs.LogAnalyticsQueryPackQueryPropertiesRelatedArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body", required=true)
-    private final Input<String> body;
+      private final Input<String> body;
 
     public Input<String> getBody() {
         return this.body;
@@ -34,7 +34,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -56,7 +56,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -67,7 +67,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Object> properties;
+      private final @Nullable Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -78,7 +78,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryPackName", required=true)
-    private final Input<String> queryPackName;
+      private final Input<String> queryPackName;
 
     public Input<String> getQueryPackName() {
         return this.queryPackName;
@@ -89,7 +89,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="related")
-    private final @Nullable Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
+      private final @Nullable Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
 
     public Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> getRelated() {
         return this.related == null ? Input.empty() : this.related;
@@ -100,7 +100,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,List<String>>> tags;
+      private final @Nullable Input<Map<String,List<String>>> tags;
 
     public Input<Map<String,List<String>>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -275,7 +275,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public QueryArgs build() {
             return new QueryArgs(body, description, displayName, id, properties, queryPackName, related, resourceGroupName, tags);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.PersistentDiskArgs;
 import io.pulumi.azurenative.appplatform.inputs.TemporaryDiskArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="activeDeploymentName")
-    private final @Nullable Input<String> activeDeploymentName;
+      private final @Nullable Input<String> activeDeploymentName;
 
     public Input<String> getActiveDeploymentName() {
         return this.activeDeploymentName == null ? Input.empty() : this.activeDeploymentName;
@@ -37,7 +37,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable Input<String> fqdn;
+      private final @Nullable Input<String> fqdn;
 
     public Input<String> getFqdn() {
         return this.fqdn == null ? Input.empty() : this.fqdn;
@@ -48,7 +48,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="httpsOnly")
-    private final @Nullable Input<Boolean> httpsOnly;
+      private final @Nullable Input<Boolean> httpsOnly;
 
     public Input<Boolean> getHttpsOnly() {
         return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
@@ -59,7 +59,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="persistentDisk")
-    private final @Nullable Input<PersistentDiskArgs> persistentDisk;
+      private final @Nullable Input<PersistentDiskArgs> persistentDisk;
 
     public Input<PersistentDiskArgs> getPersistentDisk() {
         return this.persistentDisk == null ? Input.empty() : this.persistentDisk;
@@ -70,7 +70,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="public")
-    private final @Nullable Input<Boolean> $public;
+      private final @Nullable Input<Boolean> $public;
 
     public Input<Boolean> get$public() {
         return this.$public == null ? Input.empty() : this.$public;
@@ -81,7 +81,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="temporaryDisk")
-    private final @Nullable Input<TemporaryDiskArgs> temporaryDisk;
+      private final @Nullable Input<TemporaryDiskArgs> temporaryDisk;
 
     public Input<TemporaryDiskArgs> getTemporaryDisk() {
         return this.temporaryDisk == null ? Input.empty() : this.temporaryDisk;
@@ -200,7 +200,6 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
             this.temporaryDisk = Input.ofNullable(temporaryDisk);
             return this;
         }
-
         public AppResourcePropertiesArgs build() {
             return new AppResourcePropertiesArgs(activeDeploymentName, fqdn, httpsOnly, persistentDisk, $public, temporaryDisk);
         }

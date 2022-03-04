@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.batch_v1.outputs.JobSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class JobTemplateSpec {
     /**
      * Standard object's metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
-     */
+    */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
-     */
+    */
     public Optional<JobSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }
@@ -77,7 +77,6 @@ public final class JobTemplateSpec {
             this.spec = spec;
             return this;
         }
-
         public JobTemplateSpec build() {
             return new JobTemplateSpec(metadata, spec);
         }

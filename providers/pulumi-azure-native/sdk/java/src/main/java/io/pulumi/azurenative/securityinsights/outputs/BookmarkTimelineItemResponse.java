@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -85,35 +85,35 @@ public final class BookmarkTimelineItemResponse {
     /**
      * The bookmark azure resource id.
      * 
-     */
+    */
     public String getAzureResourceId() {
         return this.azureResourceId;
     }
     /**
      * Describes a user that created the bookmark
      * 
-     */
+    */
     public Optional<UserInfoResponse> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The bookmark display name.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The bookmark end time.
      * 
-     */
+    */
     public Optional<String> getEndTimeUtc() {
         return Optional.ofNullable(this.endTimeUtc);
     }
     /**
      * The bookmark event time.
      * 
-     */
+    */
     public Optional<String> getEventTime() {
         return Optional.ofNullable(this.eventTime);
     }
@@ -121,28 +121,28 @@ public final class BookmarkTimelineItemResponse {
      * The entity query kind
      * Expected value is 'Bookmark'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * List of labels relevant to this bookmark
      * 
-     */
+    */
     public List<String> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * The notes of the bookmark
      * 
-     */
+    */
     public Optional<String> getNotes() {
         return Optional.ofNullable(this.notes);
     }
     /**
      * The bookmark start time.
      * 
-     */
+    */
     public Optional<String> getStartTimeUtc() {
         return Optional.ofNullable(this.startTimeUtc);
     }
@@ -227,7 +227,6 @@ public final class BookmarkTimelineItemResponse {
             this.startTimeUtc = startTimeUtc;
             return this;
         }
-
         public BookmarkTimelineItemResponse build() {
             return new BookmarkTimelineItemResponse(azureResourceId, createdBy, displayName, endTimeUtc, eventTime, kind, labels, notes, startTimeUtc);
         }

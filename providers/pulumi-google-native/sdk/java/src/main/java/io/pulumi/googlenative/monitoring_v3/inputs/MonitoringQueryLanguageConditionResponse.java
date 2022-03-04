@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.TriggerResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MonitoringQueryLanguageConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="duration", required=true)
-    private final String duration;
+      private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -33,7 +33,7 @@ public final class MonitoringQueryLanguageConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="query", required=true)
-    private final String query;
+      private final String query;
 
     public String getQuery() {
         return this.query;
@@ -44,7 +44,7 @@ public final class MonitoringQueryLanguageConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="trigger", required=true)
-    private final TriggerResponse trigger;
+      private final TriggerResponse trigger;
 
     public TriggerResponse getTrigger() {
         return this.trigger;
@@ -103,7 +103,6 @@ public final class MonitoringQueryLanguageConditionResponse extends io.pulumi.re
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public MonitoringQueryLanguageConditionResponse build() {
             return new MonitoringQueryLanguageConditionResponse(duration, query, trigger);
         }

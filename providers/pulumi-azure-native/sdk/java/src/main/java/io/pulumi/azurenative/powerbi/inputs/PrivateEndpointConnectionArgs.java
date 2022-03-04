@@ -8,7 +8,7 @@ import io.pulumi.azurenative.powerbi.inputs.ConnectionStateArgs;
 import io.pulumi.azurenative.powerbi.inputs.PrivateEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
+      private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
     public Input<PrivateEndpointArgs> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState;
+      private final @Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<ConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ResourceProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,ResourceProvisioningState>> provisioningState;
 
     public Input<Either<String,ResourceProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -119,7 +119,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

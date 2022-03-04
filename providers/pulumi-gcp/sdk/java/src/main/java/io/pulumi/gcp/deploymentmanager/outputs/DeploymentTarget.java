@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.deploymentmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.deploymentmanager.outputs.DeploymentTargetConfig;
 import io.pulumi.gcp.deploymentmanager.outputs.DeploymentTargetImport;
 import java.util.List;
@@ -39,7 +39,7 @@ public final class DeploymentTarget {
      * The root configuration file to use for this deployment.
      * Structure is documented below.
      * 
-     */
+    */
     public DeploymentTargetConfig getConfig() {
         return this.config;
     }
@@ -49,7 +49,7 @@ public final class DeploymentTarget {
      * import a text file in order to use the file in a template.
      * Structure is documented below.
      * 
-     */
+    */
     public List<DeploymentTargetImport> getImports() {
         return this.imports == null ? List.of() : this.imports;
     }
@@ -85,7 +85,6 @@ public final class DeploymentTarget {
             this.imports = imports;
             return this;
         }
-
         public DeploymentTarget build() {
             return new DeploymentTarget(config, imports);
         }

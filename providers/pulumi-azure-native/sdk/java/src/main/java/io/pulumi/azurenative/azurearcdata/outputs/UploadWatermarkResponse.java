@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class UploadWatermarkResponse {
     /**
      * Last uploaded date for logs from kubernetes cluster. Defaults to current date time
      * 
-     */
+    */
     public Optional<String> getLogs() {
         return Optional.ofNullable(this.logs);
     }
     /**
      * Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
      * 
-     */
+    */
     public Optional<String> getMetrics() {
         return Optional.ofNullable(this.metrics);
     }
     /**
      * Last uploaded date for usages from kubernetes cluster. Defaults to current date time
      * 
-     */
+    */
     public Optional<String> getUsages() {
         return Optional.ofNullable(this.usages);
     }
@@ -97,7 +97,6 @@ public final class UploadWatermarkResponse {
             this.usages = usages;
             return this;
         }
-
         public UploadWatermarkResponse build() {
             return new UploadWatermarkResponse(logs, metrics, usages);
         }

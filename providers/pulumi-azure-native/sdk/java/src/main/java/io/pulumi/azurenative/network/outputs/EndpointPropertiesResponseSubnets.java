@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class EndpointPropertiesResponseSubnets {
     /**
      * First address in the subnet.
      * 
-     */
+    */
     public Optional<String> getFirst() {
         return Optional.ofNullable(this.first);
     }
     /**
      * Last address in the subnet.
      * 
-     */
+    */
     public Optional<String> getLast() {
         return Optional.ofNullable(this.last);
     }
     /**
      * Block size (number of leading bits in the subnet mask).
      * 
-     */
+    */
     public Optional<Integer> getScope() {
         return Optional.ofNullable(this.scope);
     }
@@ -98,7 +98,6 @@ public final class EndpointPropertiesResponseSubnets {
             this.scope = scope;
             return this;
         }
-
         public EndpointPropertiesResponseSubnets build() {
             return new EndpointPropertiesResponseSubnets(first, last, scope);
         }

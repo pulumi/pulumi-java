@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class EdifactSchemaReferenceResponse {
     /**
      * The association assigned code.
      * 
-     */
+    */
     public Optional<String> getAssociationAssignedCode() {
         return Optional.ofNullable(this.associationAssignedCode);
     }
     /**
      * The message id.
      * 
-     */
+    */
     public String getMessageId() {
         return this.messageId;
     }
     /**
      * The message release version.
      * 
-     */
+    */
     public String getMessageRelease() {
         return this.messageRelease;
     }
     /**
      * The message version.
      * 
-     */
+    */
     public String getMessageVersion() {
         return this.messageVersion;
     }
     /**
      * The schema name.
      * 
-     */
+    */
     public String getSchemaName() {
         return this.schemaName;
     }
     /**
      * The sender application id.
      * 
-     */
+    */
     public Optional<String> getSenderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
     /**
      * The sender application qualifier.
      * 
-     */
+    */
     public Optional<String> getSenderApplicationQualifier() {
         return Optional.ofNullable(this.senderApplicationQualifier);
     }
@@ -181,7 +181,6 @@ public final class EdifactSchemaReferenceResponse {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
-
         public EdifactSchemaReferenceResponse build() {
             return new EdifactSchemaReferenceResponse(associationAssignedCode, messageId, messageRelease, messageVersion, schemaName, senderApplicationId, senderApplicationQualifier);
         }

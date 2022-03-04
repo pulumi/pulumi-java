@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class WebServiceParameterResponse {
     /**
      * If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
      * 
-     */
+    */
     public Optional<String> getCertificateThumbprint() {
         return Optional.ofNullable(this.certificateThumbprint);
     }
     /**
      * The parameter value
      * 
-     */
+    */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -77,7 +77,6 @@ public final class WebServiceParameterResponse {
             this.value = value;
             return this;
         }
-
         public WebServiceParameterResponse build() {
             return new WebServiceParameterResponse(certificateThumbprint, value);
         }

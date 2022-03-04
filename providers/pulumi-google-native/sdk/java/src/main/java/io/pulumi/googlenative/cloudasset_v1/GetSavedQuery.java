@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSavedQuery {
-/**
- * Gets details about a saved query.
+    private GetSavedQuery() {}
+    public interface BuilderApplicator {
+        public void apply(GetSavedQueryArgs.Builder a);
+    }
+    private static GetSavedQueryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSavedQueryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details about a saved query.
  * 
- */
+     */
+    public static CompletableFuture<GetSavedQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details about a saved query.
+     * 
+     */
     public static CompletableFuture<GetSavedQueryResult> invokeAsync(GetSavedQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudasset/v1:getSavedQuery", TypeShape.of(GetSavedQueryResult.class), args == null ? GetSavedQueryArgs.Empty : args, Utilities.withVersion(options));
     }

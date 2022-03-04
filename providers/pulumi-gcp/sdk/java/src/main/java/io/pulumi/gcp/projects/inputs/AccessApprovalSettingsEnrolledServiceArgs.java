@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +29,7 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="cloudProduct", required=true)
-    private final Input<String> cloudProduct;
+      private final Input<String> cloudProduct;
 
     public Input<String> getCloudProduct() {
         return this.cloudProduct;
@@ -42,7 +42,7 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="enrollmentLevel")
-    private final @Nullable Input<String> enrollmentLevel;
+      private final @Nullable Input<String> enrollmentLevel;
 
     public Input<String> getEnrollmentLevel() {
         return this.enrollmentLevel == null ? Input.empty() : this.enrollmentLevel;
@@ -101,7 +101,6 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
             this.enrollmentLevel = Input.ofNullable(enrollmentLevel);
             return this;
         }
-
         public AccessApprovalSettingsEnrolledServiceArgs build() {
             return new AccessApprovalSettingsEnrolledServiceArgs(cloudProduct, enrollmentLevel);
         }

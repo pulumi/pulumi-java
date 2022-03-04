@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.enums.MqttConfigMqttEnabledState;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MqttConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mqttEnabledState")
-    private final @Nullable Input<MqttConfigMqttEnabledState> mqttEnabledState;
+      private final @Nullable Input<MqttConfigMqttEnabledState> mqttEnabledState;
 
     public Input<MqttConfigMqttEnabledState> getMqttEnabledState() {
         return this.mqttEnabledState == null ? Input.empty() : this.mqttEnabledState;
@@ -66,7 +66,6 @@ public final class MqttConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.mqttEnabledState = Input.ofNullable(mqttEnabledState);
             return this;
         }
-
         public MqttConfigArgs build() {
             return new MqttConfigArgs(mqttEnabledState);
         }

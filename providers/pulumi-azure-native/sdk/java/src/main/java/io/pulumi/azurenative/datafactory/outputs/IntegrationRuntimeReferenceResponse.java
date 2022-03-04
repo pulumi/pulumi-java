@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -41,21 +41,21 @@ public final class IntegrationRuntimeReferenceResponse {
     /**
      * Arguments for integration runtime.
      * 
-     */
+    */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Reference integration runtime name.
      * 
-     */
+    */
     public String getReferenceName() {
         return this.referenceName;
     }
     /**
      * Type of integration runtime.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -98,7 +98,6 @@ public final class IntegrationRuntimeReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IntegrationRuntimeReferenceResponse build() {
             return new IntegrationRuntimeReferenceResponse(parameters, referenceName, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hanaonazure;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableCustomerAnalytics")
-    private final @Nullable Input<Boolean> enableCustomerAnalytics;
+      private final @Nullable Input<Boolean> enableCustomerAnalytics;
 
     public Input<Boolean> getEnableCustomerAnalytics() {
         return this.enableCustomerAnalytics == null ? Input.empty() : this.enableCustomerAnalytics;
@@ -32,7 +32,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -43,7 +43,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logAnalyticsWorkspaceArmId")
-    private final @Nullable Input<String> logAnalyticsWorkspaceArmId;
+      private final @Nullable Input<String> logAnalyticsWorkspaceArmId;
 
     public Input<String> getLogAnalyticsWorkspaceArmId() {
         return this.logAnalyticsWorkspaceArmId == null ? Input.empty() : this.logAnalyticsWorkspaceArmId;
@@ -54,7 +54,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logAnalyticsWorkspaceId")
-    private final @Nullable Input<String> logAnalyticsWorkspaceId;
+      private final @Nullable Input<String> logAnalyticsWorkspaceId;
 
     public Input<String> getLogAnalyticsWorkspaceId() {
         return this.logAnalyticsWorkspaceId == null ? Input.empty() : this.logAnalyticsWorkspaceId;
@@ -65,7 +65,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logAnalyticsWorkspaceSharedKey")
-    private final @Nullable Input<String> logAnalyticsWorkspaceSharedKey;
+      private final @Nullable Input<String> logAnalyticsWorkspaceSharedKey;
 
     public Input<String> getLogAnalyticsWorkspaceSharedKey() {
         return this.logAnalyticsWorkspaceSharedKey == null ? Input.empty() : this.logAnalyticsWorkspaceSharedKey;
@@ -76,7 +76,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorSubnet")
-    private final @Nullable Input<String> monitorSubnet;
+      private final @Nullable Input<String> monitorSubnet;
 
     public Input<String> getMonitorSubnet() {
         return this.monitorSubnet == null ? Input.empty() : this.monitorSubnet;
@@ -87,7 +87,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sapMonitorName")
-    private final @Nullable Input<String> sapMonitorName;
+      private final @Nullable Input<String> sapMonitorName;
 
     public Input<String> getSapMonitorName() {
         return this.sapMonitorName == null ? Input.empty() : this.sapMonitorName;
@@ -109,7 +109,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -273,7 +273,6 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SapMonitorArgs build() {
             return new SapMonitorArgs(enableCustomerAnalytics, location, logAnalyticsWorkspaceArmId, logAnalyticsWorkspaceId, logAnalyticsWorkspaceSharedKey, monitorSubnet, resourceGroupName, sapMonitorName, tags);
         }

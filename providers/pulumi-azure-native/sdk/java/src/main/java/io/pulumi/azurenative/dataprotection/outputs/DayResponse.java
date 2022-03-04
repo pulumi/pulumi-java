@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class DayResponse {
     /**
      * Date of the month
      * 
-     */
+    */
     public Optional<Integer> getDate() {
         return Optional.ofNullable(this.date);
     }
     /**
      * Whether Date is last date of month
      * 
-     */
+    */
     public Optional<Boolean> getIsLast() {
         return Optional.ofNullable(this.isLast);
     }
@@ -77,7 +77,6 @@ public final class DayResponse {
             this.isLast = isLast;
             return this;
         }
-
         public DayResponse build() {
             return new DayResponse(date, isLast);
         }

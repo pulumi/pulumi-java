@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync.inputs;
 
 import io.pulumi.azurenative.storagesync.inputs.FilesNotTieringErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="errors", required=true)
-    private final List<FilesNotTieringErrorResponse> errors;
+      private final List<FilesNotTieringErrorResponse> errors;
 
     public List<FilesNotTieringErrorResponse> getErrors() {
         return this.errors;
@@ -35,7 +35,7 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="lastUpdatedTimestamp", required=true)
-    private final String lastUpdatedTimestamp;
+      private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -46,7 +46,7 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="totalFileCount", required=true)
-    private final Double totalFileCount;
+      private final Double totalFileCount;
 
     public Double getTotalFileCount() {
         return this.totalFileCount;
@@ -105,7 +105,6 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
             this.totalFileCount = Objects.requireNonNull(totalFileCount);
             return this;
         }
-
         public CloudTieringFilesNotTieringResponse build() {
             return new CloudTieringFilesNotTieringResponse(errors, lastUpdatedTimestamp, totalFileCount);
         }

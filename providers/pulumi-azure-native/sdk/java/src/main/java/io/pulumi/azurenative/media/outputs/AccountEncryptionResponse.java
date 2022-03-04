@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class AccountEncryptionResponse {
     /**
      * The properties of the key used to encrypt the account.
      * 
-     */
+    */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
      * The type of key used to encrypt the Account Key.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -77,7 +77,6 @@ public final class AccountEncryptionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(keyVaultProperties, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auxiliaryTenantIds", json=true)
-    private final @Nullable Input<List<String>> auxiliaryTenantIds;
+      private final @Nullable Input<List<String>> auxiliaryTenantIds;
 
     public Input<List<String>> getAuxiliaryTenantIds() {
         return this.auxiliaryTenantIds == null ? Input.empty() : this.auxiliaryTenantIds;
@@ -32,7 +32,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificatePassword")
-    private final @Nullable Input<String> clientCertificatePassword;
+      private final @Nullable Input<String> clientCertificatePassword;
 
     public Input<String> getClientCertificatePassword() {
         return this.clientCertificatePassword == null ? Input.empty() : this.clientCertificatePassword;
@@ -43,7 +43,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificatePath")
-    private final @Nullable Input<String> clientCertificatePath;
+      private final @Nullable Input<String> clientCertificatePath;
 
     public Input<String> getClientCertificatePath() {
         return this.clientCertificatePath == null ? Input.empty() : this.clientCertificatePath;
@@ -54,7 +54,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -65,7 +65,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+      private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -76,7 +76,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disablePulumiPartnerId", json=true)
-    private final @Nullable Input<Boolean> disablePulumiPartnerId;
+      private final @Nullable Input<Boolean> disablePulumiPartnerId;
 
     public Input<Boolean> getDisablePulumiPartnerId() {
         return this.disablePulumiPartnerId == null ? Input.empty() : this.disablePulumiPartnerId;
@@ -87,7 +87,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<String> environment;
+      private final @Nullable Input<String> environment;
 
     public Input<String> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -98,7 +98,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msiEndpoint")
-    private final @Nullable Input<String> msiEndpoint;
+      private final @Nullable Input<String> msiEndpoint;
 
     public Input<String> getMsiEndpoint() {
         return this.msiEndpoint == null ? Input.empty() : this.msiEndpoint;
@@ -109,7 +109,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerId")
-    private final @Nullable Input<String> partnerId;
+      private final @Nullable Input<String> partnerId;
 
     public Input<String> getPartnerId() {
         return this.partnerId == null ? Input.empty() : this.partnerId;
@@ -120,7 +120,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -131,7 +131,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -142,7 +142,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useMsi", json=true)
-    private final @Nullable Input<Boolean> useMsi;
+      private final @Nullable Input<Boolean> useMsi;
 
     public Input<Boolean> getUseMsi() {
         return this.useMsi == null ? Input.empty() : this.useMsi;
@@ -351,7 +351,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.useMsi = Input.ofNullable(useMsi);
             return this;
         }
-
         public ProviderArgs build() {
             return new ProviderArgs(auxiliaryTenantIds, clientCertificatePassword, clientCertificatePath, clientId, clientSecret, disablePulumiPartnerId, environment, msiEndpoint, partnerId, subscriptionId, tenantId, useMsi);
         }

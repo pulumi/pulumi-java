@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.PrivateClusterMasterGlobalAccessConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enablePrivateEndpoint", required=true)
-    private final Boolean enablePrivateEndpoint;
+      private final Boolean enablePrivateEndpoint;
 
     public Boolean getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
@@ -34,7 +34,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enablePrivateNodes", required=true)
-    private final Boolean enablePrivateNodes;
+      private final Boolean enablePrivateNodes;
 
     public Boolean getEnablePrivateNodes() {
         return this.enablePrivateNodes;
@@ -45,7 +45,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="masterGlobalAccessConfig", required=true)
-    private final PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig;
+      private final PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig;
 
     public PrivateClusterMasterGlobalAccessConfigResponse getMasterGlobalAccessConfig() {
         return this.masterGlobalAccessConfig;
@@ -56,7 +56,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="masterIpv4CidrBlock", required=true)
-    private final String masterIpv4CidrBlock;
+      private final String masterIpv4CidrBlock;
 
     public String getMasterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
@@ -67,7 +67,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="peeringName", required=true)
-    private final String peeringName;
+      private final String peeringName;
 
     public String getPeeringName() {
         return this.peeringName;
@@ -78,7 +78,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="privateEndpoint", required=true)
-    private final String privateEndpoint;
+      private final String privateEndpoint;
 
     public String getPrivateEndpoint() {
         return this.privateEndpoint;
@@ -89,7 +89,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="publicEndpoint", required=true)
-    private final String publicEndpoint;
+      private final String publicEndpoint;
 
     public String getPublicEndpoint() {
         return this.publicEndpoint;
@@ -188,7 +188,6 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
             this.publicEndpoint = Objects.requireNonNull(publicEndpoint);
             return this;
         }
-
         public PrivateClusterConfigResponse build() {
             return new PrivateClusterConfigResponse(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfig, masterIpv4CidrBlock, peeringName, privateEndpoint, publicEndpoint);
         }

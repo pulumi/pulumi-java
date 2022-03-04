@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybriddata.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class CustomerSecretResponse {
     /**
      * The encryption algorithm used to encrypt data.
      * 
-     */
+    */
     public String getAlgorithm() {
         return this.algorithm;
     }
     /**
      * The identifier to the data service input object which this secret corresponds to.
      * 
-     */
+    */
     public String getKeyIdentifier() {
         return this.keyIdentifier;
     }
     /**
      * It contains the encrypted customer secret.
      * 
-     */
+    */
     public String getKeyValue() {
         return this.keyValue;
     }
@@ -95,7 +95,6 @@ public final class CustomerSecretResponse {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
-
         public CustomerSecretResponse build() {
             return new CustomerSecretResponse(algorithm, keyIdentifier, keyValue);
         }

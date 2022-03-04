@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentInitializationScriptRunContext;
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentLaunchProfilePlatform;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,7 +41,7 @@ public final class StudioComponentInitializationScript {
     /**
      * <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
      * 
-     */
+    */
     public Optional<String> getLaunchProfileProtocolVersion() {
         return Optional.ofNullable(this.launchProfileProtocolVersion);
     }
@@ -54,7 +54,7 @@ public final class StudioComponentInitializationScript {
     /**
      * <p>The initialization script.</p>
      * 
-     */
+    */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);
     }
@@ -104,7 +104,6 @@ public final class StudioComponentInitializationScript {
             this.script = script;
             return this;
         }
-
         public StudioComponentInitializationScript build() {
             return new StudioComponentInitializationScript(launchProfileProtocolVersion, platform, runContext, script);
         }

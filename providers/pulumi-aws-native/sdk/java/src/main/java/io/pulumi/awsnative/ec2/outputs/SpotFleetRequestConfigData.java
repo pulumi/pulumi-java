@@ -12,7 +12,7 @@ import io.pulumi.awsnative.ec2.outputs.SpotFleetLaunchSpecification;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetLaunchTemplateConfig;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetLoadBalancersConfig;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetSpotMaintenanceStrategies;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -332,7 +332,6 @@ public final class SpotFleetRequestConfigData {
             this.validUntil = validUntil;
             return this;
         }
-
         public SpotFleetRequestConfigData build() {
             return new SpotFleetRequestConfigData(allocationStrategy, context, excessCapacityTerminationPolicy, iamFleetRole, instanceInterruptionBehavior, instancePoolsToUseCount, launchSpecifications, launchTemplateConfigs, loadBalancersConfig, onDemandAllocationStrategy, onDemandMaxTotalPrice, onDemandTargetCapacity, replaceUnhealthyInstances, spotMaintenanceStrategies, spotMaxTotalPrice, spotPrice, targetCapacity, targetCapacityUnitType, terminateInstancesWithExpiration, type, validFrom, validUntil);
         }

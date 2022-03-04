@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
     /**
      * Must be set if ParameterType is DOUBLE or DISCRETE.
      * 
-     */
+    */
     public Double getFloatValue() {
         return this.floatValue;
     }
     /**
      * Must be set if ParameterType is INTEGER
      * 
-     */
+    */
     public String getIntValue() {
         return this.intValue;
     }
     /**
      * The name of the parameter.
      * 
-     */
+    */
     public String getParameter() {
         return this.parameter;
     }
     /**
      * Must be set if ParameterTypeis CATEGORICAL
      * 
-     */
+    */
     public String getStringValue() {
         return this.stringValue;
     }
@@ -117,7 +117,6 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public GoogleCloudMlV1_Trial_ParameterResponse build() {
             return new GoogleCloudMlV1_Trial_ParameterResponse(floatValue, intValue, parameter, stringValue);
         }

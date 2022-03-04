@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.AssessmentPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assessmentName")
-    private final @Nullable Input<String> assessmentName;
+      private final @Nullable Input<String> assessmentName;
 
     public Input<String> getAssessmentName() {
         return this.assessmentName == null ? Input.empty() : this.assessmentName;
@@ -31,7 +31,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-    private final @Nullable Input<String> eTag;
+      private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -42,7 +42,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-    private final Input<String> groupName;
+      private final Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName;
@@ -53,7 +53,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final Input<String> projectName;
+      private final Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName;
@@ -64,7 +64,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<AssessmentPropertiesArgs> properties;
+      private final Input<AssessmentPropertiesArgs> properties;
 
     public Input<AssessmentPropertiesArgs> getProperties() {
         return this.properties;
@@ -75,7 +75,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -194,7 +194,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public AssessmentArgs build() {
             return new AssessmentArgs(assessmentName, eTag, groupName, projectName, properties, resourceGroupName);
         }

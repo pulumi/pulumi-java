@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.LocationResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class InstallationResponse {
     /**
      * All of the places within the filesystem versions of this package have been found.
      * 
-     */
+    */
     public List<LocationResponse> getLocation() {
         return this.location;
     }
     /**
      * The name of the installed package.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -76,7 +76,6 @@ public final class InstallationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public InstallationResponse build() {
             return new InstallationResponse(location, name);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -33,7 +33,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entityType")
-    private final @Nullable Input<String> entityType;
+      private final @Nullable Input<String> entityType;
 
     public Input<String> getEntityType() {
         return this.entityType == null ? Input.empty() : this.entityType;
@@ -45,7 +45,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fillBehavior")
-    private final @Nullable Input<CxPageFormParameterFillBehaviorArgs> fillBehavior;
+      private final @Nullable Input<CxPageFormParameterFillBehaviorArgs> fillBehavior;
 
     public Input<CxPageFormParameterFillBehaviorArgs> getFillBehavior() {
         return this.fillBehavior == null ? Input.empty() : this.fillBehavior;
@@ -56,7 +56,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isList")
-    private final @Nullable Input<Boolean> isList;
+      private final @Nullable Input<Boolean> isList;
 
     public Input<Boolean> getIsList() {
         return this.isList == null ? Input.empty() : this.isList;
@@ -68,7 +68,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="redact")
-    private final @Nullable Input<Boolean> redact;
+      private final @Nullable Input<Boolean> redact;
 
     public Input<Boolean> getRedact() {
         return this.redact == null ? Input.empty() : this.redact;
@@ -80,7 +80,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="required")
-    private final @Nullable Input<Boolean> required;
+      private final @Nullable Input<Boolean> required;
 
     public Input<Boolean> getRequired() {
         return this.required == null ? Input.empty() : this.required;
@@ -199,7 +199,6 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
             this.required = Input.ofNullable(required);
             return this;
         }
-
         public CxPageFormParameterArgs build() {
             return new CxPageFormParameterArgs(displayName, entityType, fillBehavior, isList, redact, required);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ProductPropertiesResponse {
     /**
      * The version.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -54,7 +54,6 @@ public final class ProductPropertiesResponse {
             this.version = version;
             return this;
         }
-
         public ProductPropertiesResponse build() {
             return new ProductPropertiesResponse(version);
         }

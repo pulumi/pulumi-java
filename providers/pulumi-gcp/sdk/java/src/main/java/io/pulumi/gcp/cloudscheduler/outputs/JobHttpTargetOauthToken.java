@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public final class JobHttpTargetOauthToken {
      * OAuth scope to be used for generating OAuth access token. If not specified,
      * "https://www.googleapis.com/auth/cloud-platform" will be used.
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
@@ -44,7 +44,7 @@ public final class JobHttpTargetOauthToken {
      * Service account email to be used for generating OAuth token.
      * The service account must be within the same project as the job.
      * 
-     */
+    */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
@@ -80,7 +80,6 @@ public final class JobHttpTargetOauthToken {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public JobHttpTargetOauthToken build() {
             return new JobHttpTargetOauthToken(scope, serviceAccountEmail);
         }

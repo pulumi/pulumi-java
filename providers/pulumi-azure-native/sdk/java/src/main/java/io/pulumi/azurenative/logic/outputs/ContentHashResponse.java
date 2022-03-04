@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ContentHashResponse {
     /**
      * The algorithm of the content hash.
      * 
-     */
+    */
     public Optional<String> getAlgorithm() {
         return Optional.ofNullable(this.algorithm);
     }
     /**
      * The value of the content hash.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class ContentHashResponse {
             this.value = value;
             return this;
         }
-
         public ContentHashResponse build() {
             return new ContentHashResponse(algorithm, value);
         }

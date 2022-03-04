@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatabaseInstance {
-/**
- * Use this data source to get information about a Cloud SQL instance.
+    private GetDatabaseInstance() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatabaseInstanceArgs.Builder a);
+    }
+    private static GetDatabaseInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatabaseInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information about a Cloud SQL instance.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDatabaseInstance.
+     *
+     * A collection of arguments for invoking getDatabaseInstance.
  * 
- *
- * A collection of values returned by getDatabaseInstance.
+     *
+     * A collection of values returned by getDatabaseInstance.
  * 
- */
+     */
+    public static CompletableFuture<GetDatabaseInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information about a Cloud SQL instance.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDatabaseInstance.
+     * 
+     *
+         * A collection of values returned by getDatabaseInstance.
+     * 
+     */
     public static CompletableFuture<GetDatabaseInstanceResult> invokeAsync(GetDatabaseInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:sql/getDatabaseInstance:getDatabaseInstance", TypeShape.of(GetDatabaseInstanceResult.class), args == null ? GetDatabaseInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

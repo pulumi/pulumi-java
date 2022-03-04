@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class GetActionResult {
     /**
      * Etag of the action.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
      * 
-     */
+    */
     public String getLogicAppResourceId() {
         return this.logicAppResourceId;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The name of the logic app's workflow.
      * 
-     */
+    */
     public Optional<String> getWorkflowId() {
         return Optional.ofNullable(this.workflowId);
     }
@@ -160,7 +160,6 @@ public final class GetActionResult {
             this.workflowId = workflowId;
             return this;
         }
-
         public GetActionResult build() {
             return new GetActionResult(etag, id, logicAppResourceId, name, type, workflowId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowAllPackageNames")
-    private final @Nullable Input<Boolean> allowAllPackageNames;
+      private final @Nullable Input<Boolean> allowAllPackageNames;
 
     public Input<Boolean> getAllowAllPackageNames() {
         return this.allowAllPackageNames == null ? Input.empty() : this.allowAllPackageNames;
@@ -32,7 +32,7 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowedPackageNames")
-    private final @Nullable Input<List<String>> allowedPackageNames;
+      private final @Nullable Input<List<String>> allowedPackageNames;
 
     public Input<List<String>> getAllowedPackageNames() {
         return this.allowedPackageNames == null ? Input.empty() : this.allowedPackageNames;
@@ -91,7 +91,6 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
             this.allowedPackageNames = Input.ofNullable(allowedPackageNames);
             return this;
         }
-
         public EnterpriseKeyAndroidSettingsArgs build() {
             return new EnterpriseKeyAndroidSettingsArgs(allowAllPackageNames, allowedPackageNames);
         }

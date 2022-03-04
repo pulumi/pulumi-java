@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class StorageProfileResponse {
     /**
      * Backup retention days for the server.
      * 
-     */
+    */
     public Optional<Integer> getBackupRetentionDays() {
         return Optional.ofNullable(this.backupRetentionDays);
     }
     /**
      * Enable Geo-redundant or not for server backup.
      * 
-     */
+    */
     public Optional<String> getGeoRedundantBackup() {
         return Optional.ofNullable(this.geoRedundantBackup);
     }
     /**
      * Enable Storage Auto Grow.
      * 
-     */
+    */
     public Optional<String> getStorageAutogrow() {
         return Optional.ofNullable(this.storageAutogrow);
     }
     /**
      * Max storage allowed for a server.
      * 
-     */
+    */
     public Optional<Integer> getStorageMB() {
         return Optional.ofNullable(this.storageMB);
     }
@@ -119,7 +119,6 @@ public final class StorageProfileResponse {
             this.storageMB = storageMB;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(backupRetentionDays, geoRedundantBackup, storageAutogrow, storageMB);
         }

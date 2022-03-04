@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse {
     /**
      * Categorical features that can take on one of a limited number of possible values. Some examples would be the brand/maker of a product, or country of a customer. Feature names and values must be UTF-8 encoded strings. For example: `{ "colors": {"value": ["yellow", "green"]}, "sizes": {"value":["S", "M"]}`
      * 
-     */
+    */
     public Map<String,String> getCategoricalFeatures() {
         return this.categoricalFeatures;
     }
     /**
      * Numerical features. Some examples would be the height/weight of a product, or age of a customer. Feature names must be UTF-8 encoded strings. For example: `{ "lengths_cm": {"value":[2.3, 15.4]}, "heights_cm": {"value":[8.1, 6.4]} }`
      * 
-     */
+    */
     public Map<String,String> getNumericalFeatures() {
         return this.numericalFeatures;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse {
             this.numericalFeatures = Objects.requireNonNull(numericalFeatures);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1FeatureMapResponse build() {
             return new GoogleCloudRecommendationengineV1beta1FeatureMapResponse(categoricalFeatures, numericalFeatures);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="peerVnetId")
-    private final @Nullable String peerVnetId;
+      private final @Nullable String peerVnetId;
 
     public Optional<String> getPeerVnetId() {
         return this.peerVnetId == null ? Optional.empty() : Optional.ofNullable(this.peerVnetId);
@@ -34,7 +34,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="vnetCidr")
-    private final @Nullable String vnetCidr;
+      private final @Nullable String vnetCidr;
 
     public Optional<String> getVnetCidr() {
         return this.vnetCidr == null ? Optional.empty() : Optional.ofNullable(this.vnetCidr);
@@ -45,7 +45,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="vnetId")
-    private final @Nullable String vnetId;
+      private final @Nullable String vnetId;
 
     public Optional<String> getVnetId() {
         return this.vnetId == null ? Optional.empty() : Optional.ofNullable(this.vnetId);
@@ -104,7 +104,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
             this.vnetId = vnetId;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(peerVnetId, vnetCidr, vnetId);
         }

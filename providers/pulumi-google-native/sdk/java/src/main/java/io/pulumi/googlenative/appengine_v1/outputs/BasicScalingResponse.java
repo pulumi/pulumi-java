@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class BasicScalingResponse {
     /**
      * Duration of time after the last request that an instance must wait before the instance is shut down.
      * 
-     */
+    */
     public String getIdleTimeout() {
         return this.idleTimeout;
     }
     /**
      * Maximum number of instances to create for this version.
      * 
-     */
+    */
     public Integer getMaxInstances() {
         return this.maxInstances;
     }
@@ -75,7 +75,6 @@ public final class BasicScalingResponse {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public BasicScalingResponse build() {
             return new BasicScalingResponse(idleTimeout, maxInstances);
         }

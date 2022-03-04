@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse {
     /**
      * A description of the diff, showing the actual output vs expected output.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The type of diff.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3TestRunDifferenceResponse build() {
             return new GoogleCloudDialogflowCxV3TestRunDifferenceResponse(description, type);
         }

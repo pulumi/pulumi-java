@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
      * 
      */
     @InputImport(name="code")
-    private final @Nullable String code;
+      private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -30,7 +30,7 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -79,7 +79,6 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
             this.message = message;
             return this;
         }
-
         public TransitGatewayPeeringAttachmentPeeringAttachmentStatus build() {
             return new TransitGatewayPeeringAttachmentPeeringAttachmentStatus(code, message);
         }

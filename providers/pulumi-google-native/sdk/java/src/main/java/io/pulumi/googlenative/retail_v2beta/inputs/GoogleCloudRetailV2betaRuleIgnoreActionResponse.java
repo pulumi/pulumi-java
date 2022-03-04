@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse extends io.pu
      * 
      */
     @InputImport(name="ignoreTerms", required=true)
-    private final List<String> ignoreTerms;
+      private final List<String> ignoreTerms;
 
     public List<String> getIgnoreTerms() {
         return this.ignoreTerms;
@@ -60,7 +60,6 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse extends io.pu
             this.ignoreTerms = Objects.requireNonNull(ignoreTerms);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleIgnoreActionResponse build() {
             return new GoogleCloudRetailV2betaRuleIgnoreActionResponse(ignoreTerms);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mwaa.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class EnvironmentNetworkConfiguration {
     /**
      * A list of security groups to use for the environment.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
@@ -76,7 +76,6 @@ public final class EnvironmentNetworkConfiguration {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public EnvironmentNetworkConfiguration build() {
             return new EnvironmentNetworkConfiguration(securityGroupIds, subnetIds);
         }

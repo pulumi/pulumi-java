@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2betaPromotionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="promotionId", required=true)
-    private final String promotionId;
+      private final String promotionId;
 
     public String getPromotionId() {
         return this.promotionId;
@@ -59,7 +59,6 @@ public final class GoogleCloudRetailV2betaPromotionResponse extends io.pulumi.re
             this.promotionId = Objects.requireNonNull(promotionId);
             return this;
         }
-
         public GoogleCloudRetailV2betaPromotionResponse build() {
             return new GoogleCloudRetailV2betaPromotionResponse(promotionId);
         }

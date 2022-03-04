@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketSseKmsEncryptedObjectsStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -23,7 +23,7 @@ public final class BucketSseKmsEncryptedObjects {
     /**
      * Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.
      * 
-     */
+    */
     public BucketSseKmsEncryptedObjectsStatus getStatus() {
         return this.status;
     }
@@ -52,7 +52,6 @@ public final class BucketSseKmsEncryptedObjects {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketSseKmsEncryptedObjects build() {
             return new BucketSseKmsEncryptedObjects(status);
         }

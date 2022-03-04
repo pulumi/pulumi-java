@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.tpu_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preemptible")
-    private final @Nullable Input<Boolean> preemptible;
+      private final @Nullable Input<Boolean> preemptible;
 
     public Input<Boolean> getPreemptible() {
         return this.preemptible == null ? Input.empty() : this.preemptible;
@@ -34,7 +34,7 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reserved")
-    private final @Nullable Input<Boolean> reserved;
+      private final @Nullable Input<Boolean> reserved;
 
     public Input<Boolean> getReserved() {
         return this.reserved == null ? Input.empty() : this.reserved;
@@ -93,7 +93,6 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
             this.reserved = Input.ofNullable(reserved);
             return this;
         }
-
         public SchedulingConfigArgs build() {
             return new SchedulingConfigArgs(preemptible, reserved);
         }

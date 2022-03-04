@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDisk {
-/**
- * Returns a specified persistent disk. Gets a list of available persistent disks by making a list() request.
+    private GetDisk() {}
+    public interface BuilderApplicator {
+        public void apply(GetDiskArgs.Builder a);
+    }
+    private static GetDiskArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDiskArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns a specified persistent disk. Gets a list of available persistent disks by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetDiskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns a specified persistent disk. Gets a list of available persistent disks by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetDiskResult> invokeAsync(GetDiskArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getDisk", TypeShape.of(GetDiskResult.class), args == null ? GetDiskArgs.Empty : args, Utilities.withVersion(options));
     }

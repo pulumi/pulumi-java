@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse {
     /**
      * Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
      * 
-     */
+    */
     public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse getBoundingBoxEvaluationOptions() {
         return this.boundingBoxEvaluationOptions;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse {
             this.boundingBoxEvaluationOptions = Objects.requireNonNull(boundingBoxEvaluationOptions);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1EvaluationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationConfigResponse(boundingBoxEvaluationOptions);
         }

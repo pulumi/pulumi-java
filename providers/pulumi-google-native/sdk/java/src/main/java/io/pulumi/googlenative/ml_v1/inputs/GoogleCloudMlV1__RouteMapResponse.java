@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__RouteMapResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="health", required=true)
-    private final String health;
+      private final String health;
 
     public String getHealth() {
         return this.health;
@@ -32,7 +32,7 @@ public final class GoogleCloudMlV1__RouteMapResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="predict", required=true)
-    private final String predict;
+      private final String predict;
 
     public String getPredict() {
         return this.predict;
@@ -81,7 +81,6 @@ public final class GoogleCloudMlV1__RouteMapResponse extends io.pulumi.resources
             this.predict = Objects.requireNonNull(predict);
             return this;
         }
-
         public GoogleCloudMlV1__RouteMapResponse build() {
             return new GoogleCloudMlV1__RouteMapResponse(health, predict);
         }

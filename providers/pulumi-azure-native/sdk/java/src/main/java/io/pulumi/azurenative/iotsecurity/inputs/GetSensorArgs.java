@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.iotsecurity.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSensorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -28,7 +28,7 @@ public final class GetSensorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sensorName", required=true)
-    private final String sensorName;
+      private final String sensorName;
 
     public String getSensorName() {
         return this.sensorName;
@@ -77,7 +77,6 @@ public final class GetSensorArgs extends io.pulumi.resources.InvokeArgs {
             this.sensorName = Objects.requireNonNull(sensorName);
             return this;
         }
-
         public GetSensorArgs build() {
             return new GetSensorArgs(scope, sensorName);
         }

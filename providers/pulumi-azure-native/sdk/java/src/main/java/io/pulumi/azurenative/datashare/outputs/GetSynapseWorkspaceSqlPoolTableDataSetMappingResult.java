@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -82,21 +82,21 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
     /**
      * The id of the source data set.
      * 
-     */
+    */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * Gets the status of the data set mapping.
      * 
-     */
+    */
     public String getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -104,42 +104,42 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
      * Kind of data set mapping.
      * Expected value is 'SynapseWorkspaceSqlPoolTable'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the data set mapping.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource id of the Synapse Workspace SQL Pool Table
      * 
-     */
+    */
     public String getSynapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -224,7 +224,6 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSynapseWorkspaceSqlPoolTableDataSetMappingResult build() {
             return new GetSynapseWorkspaceSqlPoolTableDataSetMappingResult(dataSetId, dataSetMappingStatus, id, kind, name, provisioningState, synapseWorkspaceSqlPoolTableResourceId, systemData, type);
         }

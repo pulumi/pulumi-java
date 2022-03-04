@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.PerInstanceConfigPreservedStateArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceGroupManager", required=true)
-    private final Input<String> instanceGroupManager;
+      private final Input<String> instanceGroupManager;
 
     public Input<String> getInstanceGroupManager() {
         return this.instanceGroupManager;
@@ -37,7 +37,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minimalAction")
-    private final @Nullable Input<String> minimalAction;
+      private final @Nullable Input<String> minimalAction;
 
     public Input<String> getMinimalAction() {
         return this.minimalAction == null ? Input.empty() : this.minimalAction;
@@ -53,7 +53,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mostDisruptiveAllowedAction")
-    private final @Nullable Input<String> mostDisruptiveAllowedAction;
+      private final @Nullable Input<String> mostDisruptiveAllowedAction;
 
     public Input<String> getMostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction == null ? Input.empty() : this.mostDisruptiveAllowedAction;
@@ -64,7 +64,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="preservedState")
-    private final @Nullable Input<PerInstanceConfigPreservedStateArgs> preservedState;
+      private final @Nullable Input<PerInstanceConfigPreservedStateArgs> preservedState;
 
     public Input<PerInstanceConfigPreservedStateArgs> getPreservedState() {
         return this.preservedState == null ? Input.empty() : this.preservedState;
@@ -88,7 +88,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -101,7 +101,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="removeInstanceStateOnDestroy")
-    private final @Nullable Input<Boolean> removeInstanceStateOnDestroy;
+      private final @Nullable Input<Boolean> removeInstanceStateOnDestroy;
 
     public Input<Boolean> getRemoveInstanceStateOnDestroy() {
         return this.removeInstanceStateOnDestroy == null ? Input.empty() : this.removeInstanceStateOnDestroy;
@@ -112,7 +112,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -261,7 +261,6 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public PerInstanceConfigArgs build() {
             return new PerInstanceConfigArgs(instanceGroupManager, minimalAction, mostDisruptiveAllowedAction, name, preservedState, project, removeInstanceStateOnDestroy, zone);
         }

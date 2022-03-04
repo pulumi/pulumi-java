@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.FrameworkControlControlScopeProperties;
 import io.pulumi.awsnative.backup.outputs.FrameworkControlInputParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class FrameworkControl {
     /**
      * A list of ParameterName and ParameterValue pairs.
      * 
-     */
+    */
     public List<FrameworkControlInputParameter> getControlInputParameters() {
         return this.controlInputParameters == null ? List.of() : this.controlInputParameters;
     }
     /**
      * The name of a control. This name is between 1 and 256 characters.
      * 
-     */
+    */
     public String getControlName() {
         return this.controlName;
     }
     /**
      * The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
      * 
-     */
+    */
     public Optional<FrameworkControlControlScopeProperties> getControlScope() {
         return Optional.ofNullable(this.controlScope);
     }
@@ -100,7 +100,6 @@ public final class FrameworkControl {
             this.controlScope = controlScope;
             return this;
         }
-
         public FrameworkControl build() {
             return new FrameworkControl(controlInputParameters, controlName, controlScope);
         }

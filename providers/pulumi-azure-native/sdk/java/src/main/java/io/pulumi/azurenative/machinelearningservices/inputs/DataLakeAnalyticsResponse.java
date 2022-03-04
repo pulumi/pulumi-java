@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DataLakeAnalyticsResponseProperties;
 import io.pulumi.azurenative.machinelearningservices.inputs.MachineLearningServiceErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class DataLakeAnalyticsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="computeLocation")
-    private final @Nullable String computeLocation;
+      private final @Nullable String computeLocation;
 
     public Optional<String> getComputeLocation() {
         return this.computeLocation == null ? Optional.empty() : Optional.ofNullable(this.computeLocation);
@@ -39,7 +39,7 @@ public final class DataLakeAnalyticsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="computeType", required=true)
-    private final String computeType;
+      private final String computeType;
 
     public String getComputeType() {
         return this.computeType;
@@ -50,7 +50,7 @@ public final class DataLakeAnalyticsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -61,14 +61,14 @@ public final class DataLakeAnalyticsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="isAttachedCompute", required=true)
-    private final Boolean isAttachedCompute;
+      private final Boolean isAttachedCompute;
 
     public Boolean getIsAttachedCompute() {
         return this.isAttachedCompute;
     }
 
     @InputImport(name="properties")
-    private final @Nullable DataLakeAnalyticsResponseProperties properties;
+      private final @Nullable DataLakeAnalyticsResponseProperties properties;
 
     public Optional<DataLakeAnalyticsResponseProperties> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -79,7 +79,7 @@ public final class DataLakeAnalyticsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningErrors", required=true)
-    private final List<MachineLearningServiceErrorResponse> provisioningErrors;
+      private final List<MachineLearningServiceErrorResponse> provisioningErrors;
 
     public List<MachineLearningServiceErrorResponse> getProvisioningErrors() {
         return this.provisioningErrors;
@@ -90,7 +90,7 @@ public final class DataLakeAnalyticsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -101,7 +101,7 @@ public final class DataLakeAnalyticsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+      private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -210,7 +210,6 @@ public final class DataLakeAnalyticsResponse extends io.pulumi.resources.InvokeA
             this.resourceId = resourceId;
             return this;
         }
-
         public DataLakeAnalyticsResponse build() {
             return new DataLakeAnalyticsResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }

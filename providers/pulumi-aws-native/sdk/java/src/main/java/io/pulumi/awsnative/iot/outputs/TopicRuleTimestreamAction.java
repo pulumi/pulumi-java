@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRuleTimestreamDimension;
 import io.pulumi.awsnative.iot.outputs.TopicRuleTimestreamTimestamp;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -116,7 +116,6 @@ public final class TopicRuleTimestreamAction {
             this.timestamp = timestamp;
             return this;
         }
-
         public TopicRuleTimestreamAction build() {
             return new TopicRuleTimestreamAction(batchMode, databaseName, dimensions, roleArn, tableName, timestamp);
         }

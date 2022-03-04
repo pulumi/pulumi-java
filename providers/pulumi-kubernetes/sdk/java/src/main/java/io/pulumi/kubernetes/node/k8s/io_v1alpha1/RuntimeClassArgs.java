@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.node.k8s.io_v1alpha1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.RuntimeClassSpecArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -32,7 +32,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -43,7 +43,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -54,7 +54,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec", required=true)
-    private final Input<RuntimeClassSpecArgs> spec;
+      private final Input<RuntimeClassSpecArgs> spec;
 
     public Input<RuntimeClassSpecArgs> getSpec() {
         return this.spec;
@@ -143,7 +143,6 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
             this.spec = Input.of(Objects.requireNonNull(spec));
             return this;
         }
-
         public RuntimeClassArgs build() {
             return new RuntimeClassArgs(apiVersion, kind, metadata, spec);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class SsisEnvironmentReferenceResponse {
     /**
      * Environment folder name.
      * 
-     */
+    */
     public Optional<String> getEnvironmentFolderName() {
         return Optional.ofNullable(this.environmentFolderName);
     }
     /**
      * Environment name.
      * 
-     */
+    */
     public Optional<String> getEnvironmentName() {
         return Optional.ofNullable(this.environmentName);
     }
     /**
      * Environment reference id.
      * 
-     */
+    */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reference type
      * 
-     */
+    */
     public Optional<String> getReferenceType() {
         return Optional.ofNullable(this.referenceType);
     }
@@ -119,7 +119,6 @@ public final class SsisEnvironmentReferenceResponse {
             this.referenceType = referenceType;
             return this;
         }
-
         public SsisEnvironmentReferenceResponse build() {
             return new SsisEnvironmentReferenceResponse(environmentFolderName, environmentName, id, referenceType);
         }

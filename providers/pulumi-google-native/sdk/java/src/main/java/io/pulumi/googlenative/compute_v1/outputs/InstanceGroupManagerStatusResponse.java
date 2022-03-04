@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.InstanceGroupManagerStatusStatefulResponse;
 import io.pulumi.googlenative.compute_v1.outputs.InstanceGroupManagerStatusVersionTargetResponse;
 import java.lang.Boolean;
@@ -48,28 +48,28 @@ public final class InstanceGroupManagerStatusResponse {
     /**
      * The URL of the Autoscaler that targets this instance group manager.
      * 
-     */
+    */
     public String getAutoscaler() {
         return this.autoscaler;
     }
     /**
      * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
      * 
-     */
+    */
     public Boolean getIsStable() {
         return this.isStable;
     }
     /**
      * Stateful status of the given Instance Group Manager.
      * 
-     */
+    */
     public InstanceGroupManagerStatusStatefulResponse getStateful() {
         return this.stateful;
     }
     /**
      * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
      * 
-     */
+    */
     public InstanceGroupManagerStatusVersionTargetResponse getVersionTarget() {
         return this.versionTarget;
     }
@@ -119,7 +119,6 @@ public final class InstanceGroupManagerStatusResponse {
             this.versionTarget = Objects.requireNonNull(versionTarget);
             return this;
         }
-
         public InstanceGroupManagerStatusResponse build() {
             return new InstanceGroupManagerStatusResponse(autoscaler, isStable, stateful, versionTarget);
         }

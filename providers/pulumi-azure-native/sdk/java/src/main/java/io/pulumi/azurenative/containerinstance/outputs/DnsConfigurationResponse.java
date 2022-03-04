@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class DnsConfigurationResponse {
     /**
      * The DNS servers for the container group.
      * 
-     */
+    */
     public List<String> getNameServers() {
         return this.nameServers;
     }
     /**
      * The DNS options for the container group.
      * 
-     */
+    */
     public Optional<String> getOptions() {
         return Optional.ofNullable(this.options);
     }
     /**
      * The DNS search domains for hostname lookup in the container group.
      * 
-     */
+    */
     public Optional<String> getSearchDomains() {
         return Optional.ofNullable(this.searchDomains);
     }
@@ -98,7 +98,6 @@ public final class DnsConfigurationResponse {
             this.searchDomains = searchDomains;
             return this;
         }
-
         public DnsConfigurationResponse build() {
             return new DnsConfigurationResponse(nameServers, options, searchDomains);
         }

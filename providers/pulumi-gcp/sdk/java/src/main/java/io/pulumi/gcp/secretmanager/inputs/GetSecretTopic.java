@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetSecretTopic extends io.pulumi.resources.InvokeArgs {
     public static final GetSecretTopic Empty = new GetSecretTopic();
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -51,7 +51,6 @@ public final class GetSecretTopic extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSecretTopic build() {
             return new GetSecretTopic(name);
         }

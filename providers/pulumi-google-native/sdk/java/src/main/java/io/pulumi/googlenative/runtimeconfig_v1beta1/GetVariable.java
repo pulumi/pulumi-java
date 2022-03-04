@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVariable {
-/**
- * Gets information about a single variable.
+    private GetVariable() {}
+    public interface BuilderApplicator {
+        public void apply(GetVariableArgs.Builder a);
+    }
+    private static GetVariableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVariableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets information about a single variable.
  * 
- */
+     */
+    public static CompletableFuture<GetVariableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets information about a single variable.
+     * 
+     */
     public static CompletableFuture<GetVariableResult> invokeAsync(GetVariableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:runtimeconfig/v1beta1:getVariable", TypeShape.of(GetVariableResult.class), args == null ? GetVariableArgs.Empty : args, Utilities.withVersion(options));
     }

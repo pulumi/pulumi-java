@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3objectlambda.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="isPublic")
-    private final @Nullable Boolean isPublic;
+      private final @Nullable Boolean isPublic;
 
     public Optional<Boolean> getIsPublic() {
         return this.isPublic == null ? Optional.empty() : Optional.ofNullable(this.isPublic);
@@ -57,7 +57,6 @@ public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs
             this.isPublic = isPublic;
             return this;
         }
-
         public PolicyStatusProperties build() {
             return new PolicyStatusProperties(isPublic);
         }

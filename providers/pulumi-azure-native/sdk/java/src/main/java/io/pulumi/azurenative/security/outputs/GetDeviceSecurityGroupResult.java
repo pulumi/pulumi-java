@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.outputs.AllowlistCustomAlertRuleResponse;
 import io.pulumi.azurenative.security.outputs.DenylistCustomAlertRuleResponse;
 import io.pulumi.azurenative.security.outputs.ThresholdCustomAlertRuleResponse;
 import io.pulumi.azurenative.security.outputs.TimeWindowCustomAlertRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -72,49 +72,49 @@ public final class GetDeviceSecurityGroupResult {
     /**
      * The allow-list custom alert rules.
      * 
-     */
+    */
     public List<AllowlistCustomAlertRuleResponse> getAllowlistRules() {
         return this.allowlistRules == null ? List.of() : this.allowlistRules;
     }
     /**
      * The deny-list custom alert rules.
      * 
-     */
+    */
     public List<DenylistCustomAlertRuleResponse> getDenylistRules() {
         return this.denylistRules == null ? List.of() : this.denylistRules;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of custom alert threshold rules.
      * 
-     */
+    */
     public List<ThresholdCustomAlertRuleResponse> getThresholdRules() {
         return this.thresholdRules == null ? List.of() : this.thresholdRules;
     }
     /**
      * The list of custom alert time-window rules.
      * 
-     */
+    */
     public List<TimeWindowCustomAlertRuleResponse> getTimeWindowRules() {
         return this.timeWindowRules == null ? List.of() : this.timeWindowRules;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -185,7 +185,6 @@ public final class GetDeviceSecurityGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeviceSecurityGroupResult build() {
             return new GetDeviceSecurityGroupResult(allowlistRules, denylistRules, id, name, thresholdRules, timeWindowRules, type);
         }

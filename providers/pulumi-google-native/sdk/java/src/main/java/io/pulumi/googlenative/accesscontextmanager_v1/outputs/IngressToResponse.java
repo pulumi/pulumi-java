@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.ApiOperationResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class IngressToResponse {
     /**
      * A list of ApiOperations allowed to be performed by the sources specified in corresponding IngressFrom in this ServicePerimeter.
      * 
-     */
+    */
     public List<ApiOperationResponse> getOperations() {
         return this.operations;
     }
     /**
      * A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter are allowed.
      * 
-     */
+    */
     public List<String> getResources() {
         return this.resources;
     }
@@ -76,7 +76,6 @@ public final class IngressToResponse {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public IngressToResponse build() {
             return new IngressToResponse(operations, resources);
         }

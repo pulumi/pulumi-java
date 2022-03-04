@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -68,49 +68,49 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
     /**
      * Required if type is `CATEGORICAL`. The list of possible categories.
      * 
-     */
+    */
     public List<String> getCategoricalValues() {
         return this.categoricalValues;
     }
     /**
      * Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
      * 
-     */
+    */
     public List<Double> getDiscreteValues() {
         return this.discreteValues;
     }
     /**
      * Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.
      * 
-     */
+    */
     public Double getMaxValue() {
         return this.maxValue;
     }
     /**
      * Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.
      * 
-     */
+    */
     public Double getMinValue() {
         return this.minValue;
     }
     /**
      * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., "learning_rate".
      * 
-     */
+    */
     public String getParameterName() {
         return this.parameterName;
     }
     /**
      * Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).
      * 
-     */
+    */
     public String getScaleType() {
         return this.scaleType;
     }
     /**
      * The type of the parameter.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -181,7 +181,6 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudMlV1__ParameterSpecResponse build() {
             return new GoogleCloudMlV1__ParameterSpecResponse(categoricalValues, discreteValues, maxValue, minValue, parameterName, scaleType, type);
         }

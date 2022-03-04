@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelPackageGroupTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,21 +18,21 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     public static final ModelPackageGroupArgs Empty = new ModelPackageGroupArgs();
 
     @InputImport(name="modelPackageGroupDescription")
-    private final @Nullable Input<String> modelPackageGroupDescription;
+      private final @Nullable Input<String> modelPackageGroupDescription;
 
     public Input<String> getModelPackageGroupDescription() {
         return this.modelPackageGroupDescription == null ? Input.empty() : this.modelPackageGroupDescription;
     }
 
     @InputImport(name="modelPackageGroupName")
-    private final @Nullable Input<String> modelPackageGroupName;
+      private final @Nullable Input<String> modelPackageGroupName;
 
     public Input<String> getModelPackageGroupName() {
         return this.modelPackageGroupName == null ? Input.empty() : this.modelPackageGroupName;
     }
 
     @InputImport(name="modelPackageGroupPolicy")
-    private final @Nullable Input<Object> modelPackageGroupPolicy;
+      private final @Nullable Input<Object> modelPackageGroupPolicy;
 
     public Input<Object> getModelPackageGroupPolicy() {
         return this.modelPackageGroupPolicy == null ? Input.empty() : this.modelPackageGroupPolicy;
@@ -43,7 +43,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ModelPackageGroupTagArgs>> tags;
+      private final @Nullable Input<List<ModelPackageGroupTagArgs>> tags;
 
     public Input<List<ModelPackageGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -132,7 +132,6 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ModelPackageGroupArgs build() {
             return new ModelPackageGroupArgs(modelPackageGroupDescription, modelPackageGroupName, modelPackageGroupPolicy, tags);
         }

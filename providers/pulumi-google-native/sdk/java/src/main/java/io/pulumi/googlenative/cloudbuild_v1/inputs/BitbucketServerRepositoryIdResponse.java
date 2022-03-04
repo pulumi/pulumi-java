@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="projectKey", required=true)
-    private final String projectKey;
+      private final String projectKey;
 
     public String getProjectKey() {
         return this.projectKey;
@@ -33,7 +33,7 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="repoSlug", required=true)
-    private final String repoSlug;
+      private final String repoSlug;
 
     public String getRepoSlug() {
         return this.repoSlug;
@@ -44,7 +44,7 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="webhookId", required=true)
-    private final Integer webhookId;
+      private final Integer webhookId;
 
     public Integer getWebhookId() {
         return this.webhookId;
@@ -103,7 +103,6 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
             this.webhookId = Objects.requireNonNull(webhookId);
             return this;
         }
-
         public BitbucketServerRepositoryIdResponse build() {
             return new BitbucketServerRepositoryIdResponse(projectKey, repoSlug, webhookId);
         }

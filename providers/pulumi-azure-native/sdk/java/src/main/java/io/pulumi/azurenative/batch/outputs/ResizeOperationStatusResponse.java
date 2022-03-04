@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.ResizeErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -52,21 +52,21 @@ public final class ResizeOperationStatusResponse {
     /**
      * This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.
      * 
-     */
+    */
     public List<ResizeErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * The default value is requeue.
      * 
-     */
+    */
     public Optional<String> getNodeDeallocationOption() {
         return Optional.ofNullable(this.nodeDeallocationOption);
     }
     /**
      * The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
      * 
-     */
+    */
     public Optional<String> getResizeTimeout() {
         return Optional.ofNullable(this.resizeTimeout);
     }
@@ -139,7 +139,6 @@ public final class ResizeOperationStatusResponse {
             this.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }
-
         public ResizeOperationStatusResponse build() {
             return new ResizeOperationStatusResponse(errors, nodeDeallocationOption, resizeTimeout, startTime, targetDedicatedNodes, targetLowPriorityNodes);
         }

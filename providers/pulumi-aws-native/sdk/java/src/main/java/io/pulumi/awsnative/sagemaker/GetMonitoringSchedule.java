@@ -6,17 +6,33 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.sagemaker.inputs.GetMonitoringScheduleArgs;
 import io.pulumi.awsnative.sagemaker.outputs.GetMonitoringScheduleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMonitoringSchedule {
-/**
- * Resource Type definition for AWS::SageMaker::MonitoringSchedule
+    private GetMonitoringSchedule() {}
+    public interface BuilderApplicator {
+        public void apply(GetMonitoringScheduleArgs.Builder a);
+    }
+    private static GetMonitoringScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMonitoringScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::MonitoringSchedule
  * 
- */
+     */
+    public static CompletableFuture<GetMonitoringScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::SageMaker::MonitoringSchedule
+     * 
+     */
     public static CompletableFuture<GetMonitoringScheduleResult> invokeAsync(GetMonitoringScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getMonitoringSchedule", TypeShape.of(GetMonitoringScheduleResult.class), args == null ? GetMonitoringScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

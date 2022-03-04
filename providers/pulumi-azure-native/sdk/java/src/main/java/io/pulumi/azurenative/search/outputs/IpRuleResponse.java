@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.search.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class IpRuleResponse {
     /**
      * Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24) to be allowed.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -54,7 +54,6 @@ public final class IpRuleResponse {
             this.value = value;
             return this;
         }
-
         public IpRuleResponse build() {
             return new IpRuleResponse(value);
         }

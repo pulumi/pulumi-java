@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FilterResponse {
     /**
      * Event types to allowlist.
      * 
-     */
+    */
     public List<String> getEventType() {
         return this.eventType;
     }
@@ -53,7 +53,6 @@ public final class FilterResponse {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public FilterResponse build() {
             return new FilterResponse(eventType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     /**
      * The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
      * 
-     */
+    */
     public String getDialogflowParticipantName() {
         return this.dialogflowParticipantName;
     }
     /**
      * Obfuscated user ID from Dialogflow.
      * 
-     */
+    */
     public String getObfuscatedExternalUserId() {
         return this.obfuscatedExternalUserId;
     }
     /**
      * The role of the participant.
      * 
-     */
+    */
     public String getRole() {
         return this.role;
     }
     /**
      * A user-specified ID representing the participant.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
@@ -116,7 +116,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(dialogflowParticipantName, obfuscatedExternalUserId, role, userId);
         }

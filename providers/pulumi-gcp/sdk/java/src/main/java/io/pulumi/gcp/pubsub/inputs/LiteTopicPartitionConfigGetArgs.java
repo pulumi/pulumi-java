@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigCapacityGetArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LiteTopicPartitionConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<LiteTopicPartitionConfigCapacityGetArgs> capacity;
+      private final @Nullable Input<LiteTopicPartitionConfigCapacityGetArgs> capacity;
 
     public Input<LiteTopicPartitionConfigCapacityGetArgs> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -32,7 +32,7 @@ public final class LiteTopicPartitionConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="count", required=true)
-    private final Input<Integer> count;
+      private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -91,7 +91,6 @@ public final class LiteTopicPartitionConfigGetArgs extends io.pulumi.resources.R
             this.count = Input.of(Objects.requireNonNull(count));
             return this;
         }
-
         public LiteTopicPartitionConfigGetArgs build() {
             return new LiteTopicPartitionConfigGetArgs(capacity, count);
         }

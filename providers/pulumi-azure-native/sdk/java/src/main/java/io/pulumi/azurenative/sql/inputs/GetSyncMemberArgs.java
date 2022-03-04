@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -50,7 +50,7 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="syncGroupName", required=true)
-    private final String syncGroupName;
+      private final String syncGroupName;
 
     public String getSyncGroupName() {
         return this.syncGroupName;
@@ -61,7 +61,7 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="syncMemberName", required=true)
-    private final String syncMemberName;
+      private final String syncMemberName;
 
     public String getSyncMemberName() {
         return this.syncMemberName;
@@ -140,7 +140,6 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
             this.syncMemberName = Objects.requireNonNull(syncMemberName);
             return this;
         }
-
         public GetSyncMemberArgs build() {
             return new GetSyncMemberArgs(databaseName, resourceGroupName, serverName, syncGroupName, syncMemberName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AllowedCSIDriver {
     /**
      * Name is the registered name of the CSI driver
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -52,7 +52,6 @@ public final class AllowedCSIDriver {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AllowedCSIDriver build() {
             return new AllowedCSIDriver(name);
         }

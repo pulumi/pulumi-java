@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointFilterItemResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="items")
-    private final @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
+      private final @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
 
     public List<ConnectionMonitorEndpointFilterItemResponse> getItems() {
         return this.items == null ? List.of() : this.items;
@@ -36,7 +36,7 @@ public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -85,7 +85,6 @@ public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.res
             this.type = type;
             return this;
         }
-
         public ConnectionMonitorEndpointFilterResponse build() {
             return new ConnectionMonitorEndpointFilterResponse(items, type);
         }

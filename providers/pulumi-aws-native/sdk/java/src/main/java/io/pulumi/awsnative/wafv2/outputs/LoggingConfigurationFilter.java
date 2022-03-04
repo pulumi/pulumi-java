@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterBehavior;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterRequirement;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationCondition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -41,21 +41,21 @@ public final class LoggingConfigurationFilter {
     /**
      * How to handle logs that satisfy the filter's conditions and requirement.
      * 
-     */
+    */
     public LoggingConfigurationFilterBehavior getBehavior() {
         return this.behavior;
     }
     /**
      * Match conditions for the filter.
      * 
-     */
+    */
     public List<LoggingConfigurationCondition> getConditions() {
         return this.conditions;
     }
     /**
      * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
      * 
-     */
+    */
     public LoggingConfigurationFilterRequirement getRequirement() {
         return this.requirement;
     }
@@ -98,7 +98,6 @@ public final class LoggingConfigurationFilter {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }
-
         public LoggingConfigurationFilter build() {
             return new LoggingConfigurationFilter(behavior, conditions, requirement);
         }

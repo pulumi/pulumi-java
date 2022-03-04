@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,21 +13,48 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucket {
-/**
- * Gets an existing bucket in Google Cloud Storage service (GCS).
+    private GetBucket() {}
+    public interface BuilderApplicator {
+        public void apply(GetBucketArgs.Builder a);
+    }
+    private static GetBucketArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBucketArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an existing bucket in Google Cloud Storage service (GCS).
  * See [the official documentation](https://cloud.google.com/storage/docs/key-terms#buckets)
  * and
  * [API](https://cloud.google.com/storage/docs/json_api/v1/buckets).
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getBucket.
+     *
+     * A collection of arguments for invoking getBucket.
  * 
- *
- * A collection of values returned by getBucket.
+     *
+     * A collection of values returned by getBucket.
  * 
- */
+     */
+    public static CompletableFuture<GetBucketResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an existing bucket in Google Cloud Storage service (GCS).
+     * See [the official documentation](https://cloud.google.com/storage/docs/key-terms#buckets)
+     * and
+     * [API](https://cloud.google.com/storage/docs/json_api/v1/buckets).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getBucket.
+     * 
+     *
+         * A collection of values returned by getBucket.
+     * 
+     */
     public static CompletableFuture<GetBucketResult> invokeAsync(GetBucketArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args == null ? GetBucketArgs.Empty : args, Utilities.withVersion(options));
     }

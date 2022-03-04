@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurestack.outputs;
 
 import io.pulumi.azurenative.azurestack.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -126,105 +126,105 @@ public final class GetLinkedSubscriptionResult {
     /**
      * The status of the remote management connection of the Azure Stack device.
      * 
-     */
+    */
     public String getDeviceConnectionStatus() {
         return this.deviceConnectionStatus;
     }
     /**
      * The identifier of the Azure Stack device for remote management.
      * 
-     */
+    */
     public String getDeviceId() {
         return this.deviceId;
     }
     /**
      * The connection state of the Azure Stack device.
      * 
-     */
+    */
     public String getDeviceLinkState() {
         return this.deviceLinkState;
     }
     /**
      * The object identifier associated with the Azure Stack device connecting to Azure.
      * 
-     */
+    */
     public String getDeviceObjectId() {
         return this.deviceObjectId;
     }
     /**
      * The entity tag used for optimistic concurrency when modifying the resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The kind of the resource.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
      * 
-     */
+    */
     public String getLastConnectedTime() {
         return this.lastConnectedTime;
     }
     /**
      * The identifier associated with the device subscription.
      * 
-     */
+    */
     public Optional<String> getLinkedSubscriptionId() {
         return Optional.ofNullable(this.linkedSubscriptionId);
     }
     /**
      * Location of the resource.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The identifier associated with the device registration.
      * 
-     */
+    */
     public Optional<String> getRegistrationResourceId() {
         return Optional.ofNullable(this.registrationResourceId);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Custom tags for the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of Resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -351,7 +351,6 @@ public final class GetLinkedSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkedSubscriptionResult build() {
             return new GetLinkedSubscriptionResult(deviceConnectionStatus, deviceId, deviceLinkState, deviceObjectId, etag, id, kind, lastConnectedTime, linkedSubscriptionId, location, name, registrationResourceId, systemData, tags, type);
         }

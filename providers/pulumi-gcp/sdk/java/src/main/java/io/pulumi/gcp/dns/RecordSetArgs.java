@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedZone", required=true)
-    private final Input<String> managedZone;
+      private final Input<String> managedZone;
 
     public Input<String> getManagedZone() {
         return this.managedZone;
@@ -33,7 +33,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rrdatas", required=true)
-    private final Input<List<String>> rrdatas;
+      private final Input<List<String>> rrdatas;
 
     public Input<List<String>> getRrdatas() {
         return this.rrdatas;
@@ -70,7 +70,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<Integer> ttl;
+      private final @Nullable Input<Integer> ttl;
 
     public Input<Integer> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -81,7 +81,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -200,7 +200,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public RecordSetArgs build() {
             return new RecordSetArgs(managedZone, name, project, rrdatas, ttl, type);
         }

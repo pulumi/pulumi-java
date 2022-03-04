@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
     /**
      * The Access Key portion of the credentials.
      * 
-     */
+    */
     public String getAccessKeyId() {
         return this.accessKeyId;
     }
     /**
      * The encryption keys used to encrypt data.
      * 
-     */
+    */
     public String getDatakey() {
         return this.datakey;
     }
     /**
      * The secret key used to sign requests.
      * 
-     */
+    */
     public String getSecretAccessKey() {
         return this.secretAccessKey;
     }
     /**
      * The identiﬁer for the user.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
@@ -116,7 +116,6 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public ConnectorProfileInforNexusConnectorProfileCredentials build() {
             return new ConnectorProfileInforNexusConnectorProfileCredentials(accessKeyId, datakey, secretAccessKey, userId);
         }

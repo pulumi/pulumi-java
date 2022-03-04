@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SourceScoringConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sourceImportance", required=true)
-    private final String sourceImportance;
+      private final String sourceImportance;
 
     public String getSourceImportance() {
         return this.sourceImportance;
@@ -59,7 +59,6 @@ public final class SourceScoringConfigResponse extends io.pulumi.resources.Invok
             this.sourceImportance = Objects.requireNonNull(sourceImportance);
             return this;
         }
-
         public SourceScoringConfigResponse build() {
             return new SourceScoringConfigResponse(sourceImportance);
         }

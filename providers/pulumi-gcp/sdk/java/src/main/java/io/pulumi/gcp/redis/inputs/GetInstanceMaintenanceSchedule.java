@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetInstanceMaintenanceSchedule extends io.pulumi.resources.In
     public static final GetInstanceMaintenanceSchedule Empty = new GetInstanceMaintenanceSchedule();
 
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
     }
 
     @InputImport(name="scheduleDeadlineTime", required=true)
-    private final String scheduleDeadlineTime;
+      private final String scheduleDeadlineTime;
 
     public String getScheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
 
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -86,7 +86,6 @@ public final class GetInstanceMaintenanceSchedule extends io.pulumi.resources.In
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetInstanceMaintenanceSchedule build() {
             return new GetInstanceMaintenanceSchedule(endTime, scheduleDeadlineTime, startTime);
         }

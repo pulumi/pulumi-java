@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class StudioComponentScriptParameterKeyValue {
     /**
      * <p>A script parameter key.</p>
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * <p>A script parameter value.</p>
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class StudioComponentScriptParameterKeyValue {
             this.value = value;
             return this;
         }
-
         public StudioComponentScriptParameterKeyValue build() {
             return new StudioComponentScriptParameterKeyValue(key, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class BackendTlsPropertiesResponse {
     /**
      * Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
      * 
-     */
+    */
     public Optional<Boolean> getValidateCertificateChain() {
         return Optional.ofNullable(this.validateCertificateChain);
     }
     /**
      * Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
      * 
-     */
+    */
     public Optional<Boolean> getValidateCertificateName() {
         return Optional.ofNullable(this.validateCertificateName);
     }
@@ -76,7 +76,6 @@ public final class BackendTlsPropertiesResponse {
             this.validateCertificateName = validateCertificateName;
             return this;
         }
-
         public BackendTlsPropertiesResponse build() {
             return new BackendTlsPropertiesResponse(validateCertificateChain, validateCertificateName);
         }

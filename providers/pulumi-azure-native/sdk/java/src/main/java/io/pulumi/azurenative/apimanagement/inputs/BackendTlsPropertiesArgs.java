@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="validateCertificateChain")
-    private final @Nullable Input<Boolean> validateCertificateChain;
+      private final @Nullable Input<Boolean> validateCertificateChain;
 
     public Input<Boolean> getValidateCertificateChain() {
         return this.validateCertificateChain == null ? Input.empty() : this.validateCertificateChain;
@@ -34,7 +34,7 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="validateCertificateName")
-    private final @Nullable Input<Boolean> validateCertificateName;
+      private final @Nullable Input<Boolean> validateCertificateName;
 
     public Input<Boolean> getValidateCertificateName() {
         return this.validateCertificateName == null ? Input.empty() : this.validateCertificateName;
@@ -93,7 +93,6 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
             this.validateCertificateName = Input.ofNullable(validateCertificateName);
             return this;
         }
-
         public BackendTlsPropertiesArgs build() {
             return new BackendTlsPropertiesArgs(validateCertificateChain, validateCertificateName);
         }

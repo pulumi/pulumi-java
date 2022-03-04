@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.outputs.ReportConfigDatasetConfigura
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigFilterResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigGroupingResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigSortingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -68,42 +68,42 @@ public final class ReportConfigDatasetResponse {
     /**
      * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
      * 
-     */
+    */
     public Map<String,ReportConfigAggregationResponse> getAggregation() {
         return this.aggregation == null ? Map.of() : this.aggregation;
     }
     /**
      * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
      * 
-     */
+    */
     public Optional<ReportConfigDatasetConfigurationResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Has filter expression to use in the report.
      * 
-     */
+    */
     public Optional<ReportConfigFilterResponse> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The granularity of rows in the report.
      * 
-     */
+    */
     public Optional<String> getGranularity() {
         return Optional.ofNullable(this.granularity);
     }
     /**
      * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
      * 
-     */
+    */
     public List<ReportConfigGroupingResponse> getGrouping() {
         return this.grouping == null ? List.of() : this.grouping;
     }
     /**
      * Array of order by expression to use in the report.
      * 
-     */
+    */
     public List<ReportConfigSortingResponse> getSorting() {
         return this.sorting == null ? List.of() : this.sorting;
     }
@@ -167,7 +167,6 @@ public final class ReportConfigDatasetResponse {
             this.sorting = sorting;
             return this;
         }
-
         public ReportConfigDatasetResponse build() {
             return new ReportConfigDatasetResponse(aggregation, configuration, filter, granularity, grouping, sorting);
         }

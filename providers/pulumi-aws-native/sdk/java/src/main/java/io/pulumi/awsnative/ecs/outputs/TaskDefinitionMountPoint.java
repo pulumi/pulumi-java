@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class TaskDefinitionMountPoint {
             this.sourceVolume = sourceVolume;
             return this;
         }
-
         public TaskDefinitionMountPoint build() {
             return new TaskDefinitionMountPoint(containerPath, readOnly, sourceVolume);
         }

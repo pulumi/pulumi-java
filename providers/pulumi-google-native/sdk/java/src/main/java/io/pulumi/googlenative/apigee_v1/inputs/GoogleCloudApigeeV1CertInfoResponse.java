@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="basicConstraints", required=true)
-    private final String basicConstraints;
+      private final String basicConstraints;
 
     public String getBasicConstraints() {
         return this.basicConstraints;
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="expiryDate", required=true)
-    private final String expiryDate;
+      private final String expiryDate;
 
     public String getExpiryDate() {
         return this.expiryDate;
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isValid", required=true)
-    private final String isValid;
+      private final String isValid;
 
     public String getIsValid() {
         return this.isValid;
@@ -56,7 +56,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final String issuer;
+      private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
@@ -67,7 +67,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final String publicKey;
+      private final String publicKey;
 
     public String getPublicKey() {
         return this.publicKey;
@@ -78,7 +78,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serialNumber", required=true)
-    private final String serialNumber;
+      private final String serialNumber;
 
     public String getSerialNumber() {
         return this.serialNumber;
@@ -89,7 +89,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sigAlgName", required=true)
-    private final String sigAlgName;
+      private final String sigAlgName;
 
     public String getSigAlgName() {
         return this.sigAlgName;
@@ -100,7 +100,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subject", required=true)
-    private final String subject;
+      private final String subject;
 
     public String getSubject() {
         return this.subject;
@@ -111,7 +111,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subjectAlternativeNames", required=true)
-    private final List<String> subjectAlternativeNames;
+      private final List<String> subjectAlternativeNames;
 
     public List<String> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames;
@@ -122,7 +122,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="validFrom", required=true)
-    private final String validFrom;
+      private final String validFrom;
 
     public String getValidFrom() {
         return this.validFrom;
@@ -133,7 +133,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="version", required=true)
-    private final Integer version;
+      private final Integer version;
 
     public Integer getVersion() {
         return this.version;
@@ -272,7 +272,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudApigeeV1CertInfoResponse build() {
             return new GoogleCloudApigeeV1CertInfoResponse(basicConstraints, expiryDate, isValid, issuer, publicKey, serialNumber, sigAlgName, subject, subjectAlternativeNames, validFrom, version);
         }

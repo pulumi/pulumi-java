@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.enums.JobTemplateAction;
 import io.pulumi.awsnative.iot.enums.JobTemplateFailureType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<JobTemplateAction> action;
+      private final Input<JobTemplateAction> action;
 
     public Input<JobTemplateAction> getAction() {
         return this.action;
@@ -36,7 +36,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="failureType", required=true)
-    private final Input<JobTemplateFailureType> failureType;
+      private final Input<JobTemplateFailureType> failureType;
 
     public Input<JobTemplateFailureType> getFailureType() {
         return this.failureType;
@@ -47,7 +47,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="minNumberOfExecutedThings", required=true)
-    private final Input<Integer> minNumberOfExecutedThings;
+      private final Input<Integer> minNumberOfExecutedThings;
 
     public Input<Integer> getMinNumberOfExecutedThings() {
         return this.minNumberOfExecutedThings;
@@ -58,7 +58,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="thresholdPercentage", required=true)
-    private final Input<Double> thresholdPercentage;
+      private final Input<Double> thresholdPercentage;
 
     public Input<Double> getThresholdPercentage() {
         return this.thresholdPercentage;
@@ -147,7 +147,6 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
             this.thresholdPercentage = Input.of(Objects.requireNonNull(thresholdPercentage));
             return this;
         }
-
         public JobTemplateAbortCriteriaArgs build() {
             return new JobTemplateAbortCriteriaArgs(action, failureType, minNumberOfExecutedThings, thresholdPercentage);
         }

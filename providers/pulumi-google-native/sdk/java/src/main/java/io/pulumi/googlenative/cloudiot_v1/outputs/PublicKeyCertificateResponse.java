@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudiot_v1.outputs.X509CertificateDetailsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class PublicKeyCertificateResponse {
     /**
      * The certificate data.
      * 
-     */
+    */
     public String getCertificate() {
         return this.certificate;
     }
     /**
      * The certificate format.
      * 
-     */
+    */
     public String getFormat() {
         return this.format;
     }
     /**
      * [Output only] The certificate details. Used only for X.509 certificates.
      * 
-     */
+    */
     public X509CertificateDetailsResponse getX509Details() {
         return this.x509Details;
     }
@@ -96,7 +96,6 @@ public final class PublicKeyCertificateResponse {
             this.x509Details = Objects.requireNonNull(x509Details);
             return this;
         }
-
         public PublicKeyCertificateResponse build() {
             return new PublicKeyCertificateResponse(certificate, format, x509Details);
         }

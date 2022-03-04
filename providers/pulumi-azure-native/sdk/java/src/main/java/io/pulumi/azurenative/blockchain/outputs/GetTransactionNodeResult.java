@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blockchain.outputs;
 
 import io.pulumi.azurenative.blockchain.outputs.FirewallRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -91,70 +91,70 @@ public final class GetTransactionNodeResult {
     /**
      * Gets or sets the transaction node dns endpoint.
      * 
-     */
+    */
     public String getDns() {
         return this.dns;
     }
     /**
      * Gets or sets the firewall rules.
      * 
-     */
+    */
     public List<FirewallRuleResponse> getFirewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;
     }
     /**
      * Fully qualified resource Id of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the transaction node location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Sets the transaction node dns endpoint basic auth password.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Gets or sets the blockchain member provision state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the transaction node public key.
      * 
-     */
+    */
     public String getPublicKey() {
         return this.publicKey;
     }
     /**
      * The type of the service - e.g. "Microsoft.Blockchain"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets or sets the transaction node dns endpoint basic auth user name.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
@@ -246,7 +246,6 @@ public final class GetTransactionNodeResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetTransactionNodeResult build() {
             return new GetTransactionNodeResult(dns, firewallRules, id, location, name, password, provisioningState, publicKey, type, userName);
         }

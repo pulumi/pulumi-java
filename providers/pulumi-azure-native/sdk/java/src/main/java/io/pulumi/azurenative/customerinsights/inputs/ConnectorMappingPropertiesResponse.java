@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingCompleteOpe
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingErrorManagementResponse;
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingFormatResponse;
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingStructureResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="availability", required=true)
-    private final ConnectorMappingAvailabilityResponse availability;
+      private final ConnectorMappingAvailabilityResponse availability;
 
     public ConnectorMappingAvailabilityResponse getAvailability() {
         return this.availability;
@@ -41,7 +41,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="completeOperation", required=true)
-    private final ConnectorMappingCompleteOperationResponse completeOperation;
+      private final ConnectorMappingCompleteOperationResponse completeOperation;
 
     public ConnectorMappingCompleteOperationResponse getCompleteOperation() {
         return this.completeOperation;
@@ -52,7 +52,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="errorManagement", required=true)
-    private final ConnectorMappingErrorManagementResponse errorManagement;
+      private final ConnectorMappingErrorManagementResponse errorManagement;
 
     public ConnectorMappingErrorManagementResponse getErrorManagement() {
         return this.errorManagement;
@@ -63,7 +63,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="fileFilter")
-    private final @Nullable String fileFilter;
+      private final @Nullable String fileFilter;
 
     public Optional<String> getFileFilter() {
         return this.fileFilter == null ? Optional.empty() : Optional.ofNullable(this.fileFilter);
@@ -74,7 +74,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="folderPath")
-    private final @Nullable String folderPath;
+      private final @Nullable String folderPath;
 
     public Optional<String> getFolderPath() {
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
@@ -85,7 +85,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="format", required=true)
-    private final ConnectorMappingFormatResponse format;
+      private final ConnectorMappingFormatResponse format;
 
     public ConnectorMappingFormatResponse getFormat() {
         return this.format;
@@ -96,7 +96,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="hasHeader")
-    private final @Nullable Boolean hasHeader;
+      private final @Nullable Boolean hasHeader;
 
     public Optional<Boolean> getHasHeader() {
         return this.hasHeader == null ? Optional.empty() : Optional.ofNullable(this.hasHeader);
@@ -107,7 +107,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="structure", required=true)
-    private final List<ConnectorMappingStructureResponse> structure;
+      private final List<ConnectorMappingStructureResponse> structure;
 
     public List<ConnectorMappingStructureResponse> getStructure() {
         return this.structure;
@@ -216,7 +216,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
             this.structure = Objects.requireNonNull(structure);
             return this;
         }
-
         public ConnectorMappingPropertiesResponse build() {
             return new ConnectorMappingPropertiesResponse(availability, completeOperation, errorManagement, fileFilter, folderPath, format, hasHeader, structure);
         }

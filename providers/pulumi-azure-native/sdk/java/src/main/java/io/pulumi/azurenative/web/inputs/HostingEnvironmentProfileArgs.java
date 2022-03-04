@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HostingEnvironmentProfileArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -66,7 +66,6 @@ public final class HostingEnvironmentProfileArgs extends io.pulumi.resources.Res
             this.id = Input.ofNullable(id);
             return this;
         }
-
         public HostingEnvironmentProfileArgs build() {
             return new HostingEnvironmentProfileArgs(id);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupDimensionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public final class RuleGroupPublishMetricActionArgs extends io.pulumi.resources.
     public static final RuleGroupPublishMetricActionArgs Empty = new RuleGroupPublishMetricActionArgs();
 
     @InputImport(name="dimensions", required=true)
-    private final Input<List<RuleGroupDimensionArgs>> dimensions;
+      private final Input<List<RuleGroupDimensionArgs>> dimensions;
 
     public Input<List<RuleGroupDimensionArgs>> getDimensions() {
         return this.dimensions;
@@ -58,7 +58,6 @@ public final class RuleGroupPublishMetricActionArgs extends io.pulumi.resources.
             this.dimensions = Input.of(Objects.requireNonNull(dimensions));
             return this;
         }
-
         public RuleGroupPublishMetricActionArgs build() {
             return new RuleGroupPublishMetricActionArgs(dimensions);
         }

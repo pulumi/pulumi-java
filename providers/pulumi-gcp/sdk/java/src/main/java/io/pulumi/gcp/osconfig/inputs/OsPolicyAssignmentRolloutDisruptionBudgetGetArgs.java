@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OsPolicyAssignmentRolloutDisruptionBudgetGetArgs extends io.p
      * 
      */
     @InputImport(name="fixed")
-    private final @Nullable Input<Integer> fixed;
+      private final @Nullable Input<Integer> fixed;
 
     public Input<Integer> getFixed() {
         return this.fixed == null ? Input.empty() : this.fixed;
@@ -30,7 +30,7 @@ public final class OsPolicyAssignmentRolloutDisruptionBudgetGetArgs extends io.p
      * 
      */
     @InputImport(name="percent")
-    private final @Nullable Input<Integer> percent;
+      private final @Nullable Input<Integer> percent;
 
     public Input<Integer> getPercent() {
         return this.percent == null ? Input.empty() : this.percent;
@@ -89,7 +89,6 @@ public final class OsPolicyAssignmentRolloutDisruptionBudgetGetArgs extends io.p
             this.percent = Input.ofNullable(percent);
             return this;
         }
-
         public OsPolicyAssignmentRolloutDisruptionBudgetGetArgs build() {
             return new OsPolicyAssignmentRolloutDisruptionBudgetGetArgs(fixed, percent);
         }

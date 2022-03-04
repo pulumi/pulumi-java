@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -77,56 +77,56 @@ public final class RuntimeSoftwareConfigResponse {
     /**
      * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
      * 
-     */
+    */
     public String getCustomGpuDriverPath() {
         return this.customGpuDriverPath;
     }
     /**
      * Verifies core internal services are running. Default: True
      * 
-     */
+    */
     public Boolean getEnableHealthMonitoring() {
         return this.enableHealthMonitoring;
     }
     /**
      * Runtime will automatically shutdown after idle_shutdown_time. Default: True
      * 
-     */
+    */
     public Boolean getIdleShutdown() {
         return this.idleShutdown;
     }
     /**
      * Time in minutes to wait before shutting down runtime. Default: 180 minutes
      * 
-     */
+    */
     public Integer getIdleShutdownTimeout() {
         return this.idleShutdownTimeout;
     }
     /**
      * Install Nvidia Driver automatically.
      * 
-     */
+    */
     public Boolean getInstallGpuDriver() {
         return this.installGpuDriver;
     }
     /**
      * Optional. Use a list of container images to use as Kernels in the notebook instance.
      * 
-     */
+    */
     public List<ContainerImageResponse> getKernels() {
         return this.kernels;
     }
     /**
      * Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
      * 
-     */
+    */
     public String getNotebookUpgradeSchedule() {
         return this.notebookUpgradeSchedule;
     }
     /**
      * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
      * 
-     */
+    */
     public String getPostStartupScript() {
         return this.postStartupScript;
     }
@@ -204,7 +204,6 @@ public final class RuntimeSoftwareConfigResponse {
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
         }
-
         public RuntimeSoftwareConfigResponse build() {
             return new RuntimeSoftwareConfigResponse(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, kernels, notebookUpgradeSchedule, postStartupScript);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.auditmanager.outputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentDelegationStatus;
 import io.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class AssessmentDelegation {
             this.status = status;
             return this;
         }
-
         public AssessmentDelegation build() {
             return new AssessmentDelegation(assessmentId, assessmentName, comment, controlSetId, createdBy, creationTime, id, lastUpdated, roleArn, roleType, status);
         }

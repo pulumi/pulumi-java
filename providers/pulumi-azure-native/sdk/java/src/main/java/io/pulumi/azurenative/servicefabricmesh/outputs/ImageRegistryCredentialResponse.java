@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ImageRegistryCredentialResponse {
     /**
      * The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Docker image registry server, without protocol such as `http` and `https`.
      * 
-     */
+    */
     public String getServer() {
         return this.server;
     }
     /**
      * The username for the private registry.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -97,7 +97,6 @@ public final class ImageRegistryCredentialResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ImageRegistryCredentialResponse build() {
             return new ImageRegistryCredentialResponse(password, server, username);
         }

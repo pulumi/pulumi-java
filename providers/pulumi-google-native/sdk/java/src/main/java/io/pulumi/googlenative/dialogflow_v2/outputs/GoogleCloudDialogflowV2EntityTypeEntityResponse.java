@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudDialogflowV2EntityTypeEntityResponse {
     /**
      * A collection of value synonyms. For example, if the entity type is *vegetable*, and `value` is *scallions*, a synonym could be *green onions*. For `KIND_LIST` entity types: * This collection must contain exactly one synonym equal to `value`.
      * 
-     */
+    */
     public List<String> getSynonyms() {
         return this.synonyms;
     }
     /**
      * The primary value associated with this entity entry. For example, if the entity type is *vegetable*, the value could be *scallions*. For `KIND_MAP` entity types: * A reference value to be used in place of synonyms. For `KIND_LIST` entity types: * A string that can contain references to other entity types (with or without aliases).
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowV2EntityTypeEntityResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudDialogflowV2EntityTypeEntityResponse build() {
             return new GoogleCloudDialogflowV2EntityTypeEntityResponse(synonyms, value);
         }

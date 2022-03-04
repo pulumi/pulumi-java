@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.inputs.ListBatchEndpointKeysArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.ListBatchEndpointKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBatchEndpointKeys {
-/**
- * Keys for endpoint authentication.
+    private ListBatchEndpointKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListBatchEndpointKeysArgs.Builder a);
+    }
+    private static ListBatchEndpointKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListBatchEndpointKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Keys for endpoint authentication.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Keys for endpoint authentication.
+     *
+     * Keys for endpoint authentication.
  * 
- */
+     */
+    public static CompletableFuture<ListBatchEndpointKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Keys for endpoint authentication.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Keys for endpoint authentication.
+     * 
+     */
     public static CompletableFuture<ListBatchEndpointKeysResult> invokeAsync(ListBatchEndpointKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listBatchEndpointKeys", TypeShape.of(ListBatchEndpointKeysResult.class), args == null ? ListBatchEndpointKeysArgs.Empty : args, Utilities.withVersion(options));
     }

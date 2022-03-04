@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePrivateEndpointConnectionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,14 +32,14 @@ public final class ManagedInstancePecPropertyResponse {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Private endpoint connection properties
      * 
-     */
+    */
     public ManagedInstancePrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
@@ -75,7 +75,6 @@ public final class ManagedInstancePecPropertyResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public ManagedInstancePecPropertyResponse build() {
             return new ManagedInstancePecPropertyResponse(id, properties);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1.BuildArgs;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ArtifactsResponse;
@@ -427,6 +427,37 @@ public class Build extends io.pulumi.resources.CustomResource {
         return this.warnings;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BuildArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.cloudbuild_v1.BuildArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.cloudbuild_v1.BuildArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Build(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Build(String name) {
+        this(name, BuildArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Build(String name, BuildArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

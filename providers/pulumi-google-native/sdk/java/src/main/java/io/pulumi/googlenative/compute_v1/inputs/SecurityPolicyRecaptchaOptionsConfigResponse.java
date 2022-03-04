@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SecurityPolicyRecaptchaOptionsConfigResponse extends io.pulum
      * 
      */
     @InputImport(name="redirectSiteKey", required=true)
-    private final String redirectSiteKey;
+      private final String redirectSiteKey;
 
     public String getRedirectSiteKey() {
         return this.redirectSiteKey;
@@ -55,7 +55,6 @@ public final class SecurityPolicyRecaptchaOptionsConfigResponse extends io.pulum
             this.redirectSiteKey = Objects.requireNonNull(redirectSiteKey);
             return this;
         }
-
         public SecurityPolicyRecaptchaOptionsConfigResponse build() {
             return new SecurityPolicyRecaptchaOptionsConfigResponse(redirectSiteKey);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.IssuancePolicyResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.PublishingOptionsResponse;
 import java.lang.String;
@@ -55,35 +55,35 @@ public final class GetCaPoolResult {
     /**
      * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
      * 
-     */
+    */
     public IssuancePolicyResponse getIssuancePolicy() {
         return this.issuancePolicy;
     }
     /**
      * Optional. Labels with user-defined metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
      * 
-     */
+    */
     public PublishingOptionsResponse getPublishingOptions() {
         return this.publishingOptions;
     }
     /**
      * Immutable. The Tier of this CaPool.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
@@ -140,7 +140,6 @@ public final class GetCaPoolResult {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public GetCaPoolResult build() {
             return new GetCaPoolResult(issuancePolicy, labels, name, publishingOptions, tier);
         }

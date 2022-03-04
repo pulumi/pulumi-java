@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class FileReferenceResponse {
     /**
      * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
      * 
-     */
+    */
     public String getGcsPath() {
         return this.gcsPath;
     }
@@ -52,7 +52,6 @@ public final class FileReferenceResponse {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }
-
         public FileReferenceResponse build() {
             return new FileReferenceResponse(gcsPath);
         }

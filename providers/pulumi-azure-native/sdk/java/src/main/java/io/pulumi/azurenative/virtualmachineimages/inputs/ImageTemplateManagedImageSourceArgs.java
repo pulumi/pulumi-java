@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ImageTemplateManagedImageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="imageId", required=true)
-    private final Input<String> imageId;
+      private final Input<String> imageId;
 
     public Input<String> getImageId() {
         return this.imageId;
@@ -34,7 +34,7 @@ public final class ImageTemplateManagedImageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -93,7 +93,6 @@ public final class ImageTemplateManagedImageSourceArgs extends io.pulumi.resourc
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ImageTemplateManagedImageSourceArgs build() {
             return new ImageTemplateManagedImageSourceArgs(imageId, type);
         }

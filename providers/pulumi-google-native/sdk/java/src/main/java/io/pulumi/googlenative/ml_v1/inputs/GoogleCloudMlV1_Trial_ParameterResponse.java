@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="floatValue", required=true)
-    private final Double floatValue;
+      private final Double floatValue;
 
     public Double getFloatValue() {
         return this.floatValue;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="intValue", required=true)
-    private final String intValue;
+      private final String intValue;
 
     public String getIntValue() {
         return this.intValue;
@@ -44,7 +44,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="parameter", required=true)
-    private final String parameter;
+      private final String parameter;
 
     public String getParameter() {
         return this.parameter;
@@ -55,7 +55,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="stringValue", required=true)
-    private final String stringValue;
+      private final String stringValue;
 
     public String getStringValue() {
         return this.stringValue;
@@ -124,7 +124,6 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public GoogleCloudMlV1_Trial_ParameterResponse build() {
             return new GoogleCloudMlV1_Trial_ParameterResponse(floatValue, intValue, parameter, stringValue);
         }

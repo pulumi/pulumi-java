@@ -5,8 +5,8 @@ package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigtable.TableIamMemberArgs;
 import io.pulumi.gcp.bigtable.inputs.TableIamMemberState;
@@ -143,6 +143,37 @@ public class TableIamMember extends io.pulumi.resources.CustomResource {
         return this.table;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TableIamMemberArgs.Builder a);
+    }
+    private static io.pulumi.gcp.bigtable.TableIamMemberArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.bigtable.TableIamMemberArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TableIamMember(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TableIamMember(String name) {
+        this(name, TableIamMemberArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TableIamMember(String name, TableIamMemberArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

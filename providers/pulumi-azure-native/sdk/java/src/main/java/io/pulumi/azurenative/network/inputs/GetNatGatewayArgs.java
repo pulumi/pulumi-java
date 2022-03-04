@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetNatGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetNatGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="natGatewayName", required=true)
-    private final String natGatewayName;
+      private final String natGatewayName;
 
     public String getNatGatewayName() {
         return this.natGatewayName;
@@ -41,7 +41,7 @@ public final class GetNatGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,6 @@ public final class GetNatGatewayArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetNatGatewayArgs build() {
             return new GetNatGatewayArgs(expand, natGatewayName, resourceGroupName);
         }

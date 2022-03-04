@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GeoFilterResponse {
     /**
      * Action of the geo filter, i.e. allow or block access.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
      * 
-     */
+    */
     public List<String> getCountryCodes() {
         return this.countryCodes;
     }
     /**
      * Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
      * 
-     */
+    */
     public String getRelativePath() {
         return this.relativePath;
     }
@@ -96,7 +96,6 @@ public final class GeoFilterResponse {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
-
         public GeoFilterResponse build() {
             return new GeoFilterResponse(action, countryCodes, relativePath);
         }

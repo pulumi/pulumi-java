@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.inputs.ConfigurationIdentit
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ExtensionStatusArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-    private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
     public Input<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
@@ -36,7 +36,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -47,7 +47,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterResourceName", required=true)
-    private final Input<String> clusterResourceName;
+      private final Input<String> clusterResourceName;
 
     public Input<String> getClusterResourceName() {
         return this.clusterResourceName;
@@ -58,7 +58,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterRp", required=true)
-    private final Input<String> clusterRp;
+      private final Input<String> clusterRp;
 
     public Input<String> getClusterRp() {
         return this.clusterRp;
@@ -69,7 +69,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationProtectedSettings")
-    private final @Nullable Input<Map<String,String>> configurationProtectedSettings;
+      private final @Nullable Input<Map<String,String>> configurationProtectedSettings;
 
     public Input<Map<String,String>> getConfigurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Input.empty() : this.configurationProtectedSettings;
@@ -80,7 +80,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationSettings")
-    private final @Nullable Input<Map<String,String>> configurationSettings;
+      private final @Nullable Input<Map<String,String>> configurationSettings;
 
     public Input<Map<String,String>> getConfigurationSettings() {
         return this.configurationSettings == null ? Input.empty() : this.configurationSettings;
@@ -91,7 +91,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensionInstanceName")
-    private final @Nullable Input<String> extensionInstanceName;
+      private final @Nullable Input<String> extensionInstanceName;
 
     public Input<String> getExtensionInstanceName() {
         return this.extensionInstanceName == null ? Input.empty() : this.extensionInstanceName;
@@ -102,7 +102,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensionType")
-    private final @Nullable Input<String> extensionType;
+      private final @Nullable Input<String> extensionType;
 
     public Input<String> getExtensionType() {
         return this.extensionType == null ? Input.empty() : this.extensionType;
@@ -113,7 +113,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ConfigurationIdentityArgs> identity;
+      private final @Nullable Input<ConfigurationIdentityArgs> identity;
 
     public Input<ConfigurationIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -124,7 +124,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseTrain")
-    private final @Nullable Input<String> releaseTrain;
+      private final @Nullable Input<String> releaseTrain;
 
     public Input<String> getReleaseTrain() {
         return this.releaseTrain == null ? Input.empty() : this.releaseTrain;
@@ -135,7 +135,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -146,7 +146,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<ScopeArgs> scope;
+      private final @Nullable Input<ScopeArgs> scope;
 
     public Input<ScopeArgs> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -157,7 +157,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable Input<List<ExtensionStatusArgs>> statuses;
+      private final @Nullable Input<List<ExtensionStatusArgs>> statuses;
 
     public Input<List<ExtensionStatusArgs>> getStatuses() {
         return this.statuses == null ? Input.empty() : this.statuses;
@@ -168,7 +168,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -407,7 +407,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ExtensionArgs build() {
             return new ExtensionArgs(autoUpgradeMinorVersion, clusterName, clusterResourceName, clusterRp, configurationProtectedSettings, configurationSettings, extensionInstanceName, extensionType, identity, releaseTrain, resourceGroupName, scope, statuses, version);
         }

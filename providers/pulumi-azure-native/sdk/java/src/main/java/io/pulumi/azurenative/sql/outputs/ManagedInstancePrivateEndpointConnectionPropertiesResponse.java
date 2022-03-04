@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse {
     /**
      * Private endpoint which the connection belongs to.
      * 
-     */
+    */
     public Optional<ManagedInstancePrivateEndpointPropertyResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Connection State of the Private Endpoint Connection.
      * 
-     */
+    */
     public Optional<ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * State of the Private Endpoint Connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -99,7 +99,6 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ManagedInstancePrivateEndpointConnectionPropertiesResponse build() {
             return new ManagedInstancePrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ImageIamPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -30,7 +30,7 @@ public final class ImageIamPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -42,7 +42,7 @@ public final class ImageIamPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -54,7 +54,7 @@ public final class ImageIamPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -143,7 +143,6 @@ public final class ImageIamPolicyState extends io.pulumi.resources.ResourceArgs 
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ImageIamPolicyState build() {
             return new ImageIamPolicyState(etag, image, policyData, project);
         }

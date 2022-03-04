@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class HorizontalPodAutoscalerCondition {
     /**
      * lastTransitionTime is the last time the condition transitioned from one status to another
      * 
-     */
+    */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * message is a human-readable explanation containing details about the transition
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * reason is the reason for the condition's last transition.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * status is the status of the condition (True, False, Unknown)
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * type describes the current condition
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class HorizontalPodAutoscalerCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HorizontalPodAutoscalerCondition build() {
             return new HorizontalPodAutoscalerCondition(lastTransitionTime, message, reason, status, type);
         }

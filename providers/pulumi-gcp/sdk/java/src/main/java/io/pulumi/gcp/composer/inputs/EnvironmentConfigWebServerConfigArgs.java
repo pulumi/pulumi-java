@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class EnvironmentConfigWebServerConfigArgs extends io.pulumi.resour
     public static final EnvironmentConfigWebServerConfigArgs Empty = new EnvironmentConfigWebServerConfigArgs();
 
     @InputImport(name="machineType", required=true)
-    private final Input<String> machineType;
+      private final Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType;
@@ -57,7 +57,6 @@ public final class EnvironmentConfigWebServerConfigArgs extends io.pulumi.resour
             this.machineType = Input.of(Objects.requireNonNull(machineType));
             return this;
         }
-
         public EnvironmentConfigWebServerConfigArgs build() {
             return new EnvironmentConfigWebServerConfigArgs(machineType);
         }

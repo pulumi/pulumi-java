@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.websecurityscanner_v1.outputs.IapTestServiceAccountInfoResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class IapCredentialResponse {
     /**
      * Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
      * 
-     */
+    */
     public IapTestServiceAccountInfoResponse getIapTestServiceAccountInfo() {
         return this.iapTestServiceAccountInfo;
     }
@@ -52,7 +52,6 @@ public final class IapCredentialResponse {
             this.iapTestServiceAccountInfo = Objects.requireNonNull(iapTestServiceAccountInfo);
             return this;
         }
-
         public IapCredentialResponse build() {
             return new IapCredentialResponse(iapTestServiceAccountInfo);
         }

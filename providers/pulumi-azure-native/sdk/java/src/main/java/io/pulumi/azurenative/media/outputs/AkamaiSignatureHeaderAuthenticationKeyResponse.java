@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
     /**
      * authentication key
      * 
-     */
+    */
     public Optional<String> getBase64Key() {
         return Optional.ofNullable(this.base64Key);
     }
     /**
      * The expiration time of the authentication key.
      * 
-     */
+    */
     public Optional<String> getExpiration() {
         return Optional.ofNullable(this.expiration);
     }
     /**
      * identifier of the key
      * 
-     */
+    */
     public Optional<String> getIdentifier() {
         return Optional.ofNullable(this.identifier);
     }
@@ -97,7 +97,6 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
             this.identifier = identifier;
             return this;
         }
-
         public AkamaiSignatureHeaderAuthenticationKeyResponse build() {
             return new AkamaiSignatureHeaderAuthenticationKeyResponse(base64Key, expiration, identifier);
         }

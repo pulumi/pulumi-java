@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="exe")
-    private final @Nullable Input<String> exe;
+      private final @Nullable Input<String> exe;
 
     public Input<String> getExe() {
         return this.exe == null ? Input.empty() : this.exe;
@@ -35,7 +35,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<String> parameters;
+      private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -94,7 +94,6 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public AutoHealCustomActionArgs build() {
             return new AutoHealCustomActionArgs(exe, parameters);
         }

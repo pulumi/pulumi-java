@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -67,7 +67,7 @@ public final class InstanceAttachedDisk {
      * Name with which the attached disk will be accessible
      * under `/dev/disk/by-id/google-*`
      * 
-     */
+    */
     public Optional<String> getDeviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -77,7 +77,7 @@ public final class InstanceAttachedDisk {
      * encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
      * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
      * 
-     */
+    */
     public Optional<String> getDiskEncryptionKeyRaw() {
         return Optional.ofNullable(this.diskEncryptionKeyRaw);
     }
@@ -89,7 +89,7 @@ public final class InstanceAttachedDisk {
      * stored in Google Cloud KMS to encrypt this disk. Only one of `kms_key_self_link`
      * and `disk_encryption_key_raw` may be set.
      * 
-     */
+    */
     public Optional<String> getKmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
@@ -99,14 +99,14 @@ public final class InstanceAttachedDisk {
      * between multiple instances, detach it from any read-write instances and
      * attach it to one or more instances in read-only mode.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name or self_link of the disk to attach to this instance.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
@@ -170,7 +170,6 @@ public final class InstanceAttachedDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public InstanceAttachedDisk build() {
             return new InstanceAttachedDisk(deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, kmsKeySelfLink, mode, source);
         }

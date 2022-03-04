@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.AutoHealCustomActionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="actionType")
-    private final @Nullable String actionType;
+      private final @Nullable String actionType;
 
     public Optional<String> getActionType() {
         return this.actionType == null ? Optional.empty() : Optional.ofNullable(this.actionType);
@@ -35,7 +35,7 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="customAction")
-    private final @Nullable AutoHealCustomActionResponse customAction;
+      private final @Nullable AutoHealCustomActionResponse customAction;
 
     public Optional<AutoHealCustomActionResponse> getCustomAction() {
         return this.customAction == null ? Optional.empty() : Optional.ofNullable(this.customAction);
@@ -47,7 +47,7 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="minProcessExecutionTime")
-    private final @Nullable String minProcessExecutionTime;
+      private final @Nullable String minProcessExecutionTime;
 
     public Optional<String> getMinProcessExecutionTime() {
         return this.minProcessExecutionTime == null ? Optional.empty() : Optional.ofNullable(this.minProcessExecutionTime);
@@ -106,7 +106,6 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
             this.minProcessExecutionTime = minProcessExecutionTime;
             return this;
         }
-
         public AutoHealActionsResponse build() {
             return new AutoHealActionsResponse(actionType, customAction, minProcessExecutionTime);
         }

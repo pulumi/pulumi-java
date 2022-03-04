@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleHeaderAction;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRule;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleRouteAction;
@@ -97,7 +97,7 @@ public final class URLMapPathMatcherRouteRule {
      * HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherRouteRuleHeaderAction> getHeaderAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -105,7 +105,7 @@ public final class URLMapPathMatcherRouteRule {
      * The rules for determining a match.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapPathMatcherRouteRuleMatchRule> getMatchRules() {
         return this.matchRules == null ? List.of() : this.matchRules;
     }
@@ -124,7 +124,7 @@ public final class URLMapPathMatcherRouteRule {
      * you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
      * future without any impact on existing rules.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
@@ -137,14 +137,14 @@ public final class URLMapPathMatcherRouteRule {
      * or urlRedirect must be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherRouteRuleRouteAction> getRouteAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
      * The backend service or backend bucket link that should be matched by this test.
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
@@ -154,7 +154,7 @@ public final class URLMapPathMatcherRouteRule {
      * set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherRouteRuleUrlRedirect> getUrlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
@@ -218,7 +218,6 @@ public final class URLMapPathMatcherRouteRule {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public URLMapPathMatcherRouteRule build() {
             return new URLMapPathMatcherRouteRule(headerAction, matchRules, priority, routeAction, service, urlRedirect);
         }

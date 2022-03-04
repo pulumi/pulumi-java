@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class VerticalPodAutoscalingResponse {
     /**
      * Enables vertical pod autoscaling.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -52,7 +52,6 @@ public final class VerticalPodAutoscalingResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public VerticalPodAutoscalingResponse build() {
             return new VerticalPodAutoscalingResponse(enabled);
         }

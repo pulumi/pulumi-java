@@ -6,21 +6,41 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.recoveryservices.inputs.GetPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.GetPrivateEndpointConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnection {
-/**
- * Private Endpoint Connection Response Properties
+    private GetPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Private Endpoint Connection Response Properties
  * API Version: 2021-02-01.
  * 
- *
- * Private Endpoint Connection Response Properties
+     *
+     * Private Endpoint Connection Response Properties
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Private Endpoint Connection Response Properties
+     * API Version: 2021-02-01.
+     * 
+     *
+         * Private Endpoint Connection Response Properties
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(GetPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args == null ? GetPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

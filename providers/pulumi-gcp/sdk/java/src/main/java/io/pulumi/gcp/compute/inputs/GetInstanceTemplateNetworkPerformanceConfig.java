@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetInstanceTemplateNetworkPerformanceConfig extends io.pulumi
      * 
      */
     @InputImport(name="totalEgressBandwidthTier", required=true)
-    private final String totalEgressBandwidthTier;
+      private final String totalEgressBandwidthTier;
 
     public String getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
@@ -55,7 +55,6 @@ public final class GetInstanceTemplateNetworkPerformanceConfig extends io.pulumi
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }
-
         public GetInstanceTemplateNetworkPerformanceConfig build() {
             return new GetInstanceTemplateNetworkPerformanceConfig(totalEgressBandwidthTier);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ListSqlMigrationServiceAuthKeysResult {
     /**
      * The first authentication key.
      * 
-     */
+    */
     public Optional<String> getAuthKey1() {
         return Optional.ofNullable(this.authKey1);
     }
     /**
      * The second authentication key.
      * 
-     */
+    */
     public Optional<String> getAuthKey2() {
         return Optional.ofNullable(this.authKey2);
     }
@@ -76,7 +76,6 @@ public final class ListSqlMigrationServiceAuthKeysResult {
             this.authKey2 = authKey2;
             return this;
         }
-
         public ListSqlMigrationServiceAuthKeysResult build() {
             return new ListSqlMigrationServiceAuthKeysResult(authKey1, authKey2);
         }

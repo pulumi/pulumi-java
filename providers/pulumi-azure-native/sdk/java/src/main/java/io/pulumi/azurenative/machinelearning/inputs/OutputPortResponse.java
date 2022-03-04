@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class OutputPortResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -61,7 +61,6 @@ public final class OutputPortResponse extends io.pulumi.resources.InvokeArgs {
             this.type = type;
             return this;
         }
-
         public OutputPortResponse build() {
             return new OutputPortResponse(type);
         }

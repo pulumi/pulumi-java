@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class SystemAssignedIdentityAuthInfoResponse {
      * The authentication type.
      * Expected value is 'systemAssignedIdentity'.
      * 
-     */
+    */
     public String getAuthType() {
         return this.authType;
     }
@@ -54,7 +54,6 @@ public final class SystemAssignedIdentityAuthInfoResponse {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public SystemAssignedIdentityAuthInfoResponse build() {
             return new SystemAssignedIdentityAuthInfoResponse(authType);
         }

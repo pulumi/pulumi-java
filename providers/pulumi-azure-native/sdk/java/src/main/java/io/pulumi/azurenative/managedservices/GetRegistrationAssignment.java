@@ -6,21 +6,41 @@ package io.pulumi.azurenative.managedservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.managedservices.inputs.GetRegistrationAssignmentArgs;
 import io.pulumi.azurenative.managedservices.outputs.GetRegistrationAssignmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistrationAssignment {
-/**
- * Registration assignment.
+    private GetRegistrationAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegistrationAssignmentArgs.Builder a);
+    }
+    private static GetRegistrationAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegistrationAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Registration assignment.
  * API Version: 2019-09-01.
  * 
- *
- * Registration assignment.
+     *
+     * Registration assignment.
  * 
- */
+     */
+    public static CompletableFuture<GetRegistrationAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Registration assignment.
+     * API Version: 2019-09-01.
+     * 
+     *
+         * Registration assignment.
+     * 
+     */
     public static CompletableFuture<GetRegistrationAssignmentResult> invokeAsync(GetRegistrationAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managedservices:getRegistrationAssignment", TypeShape.of(GetRegistrationAssignmentResult.class), args == null ? GetRegistrationAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

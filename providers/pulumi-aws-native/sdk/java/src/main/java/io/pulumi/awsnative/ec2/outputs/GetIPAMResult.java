@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.IPAMIpamOperatingRegion;
 import io.pulumi.awsnative.ec2.outputs.IPAMTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -75,7 +75,7 @@ public final class GetIPAMResult {
     /**
      * The Amazon Resource Name (ARN) of the IPAM.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -85,42 +85,42 @@ public final class GetIPAMResult {
     /**
      * Id of the IPAM.
      * 
-     */
+    */
     public Optional<String> getIpamId() {
         return Optional.ofNullable(this.ipamId);
     }
     /**
      * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
      * 
-     */
+    */
     public List<IPAMIpamOperatingRegion> getOperatingRegions() {
         return this.operatingRegions == null ? List.of() : this.operatingRegions;
     }
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
      * 
-     */
+    */
     public Optional<String> getPrivateDefaultScopeId() {
         return Optional.ofNullable(this.privateDefaultScopeId);
     }
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
      * 
-     */
+    */
     public Optional<String> getPublicDefaultScopeId() {
         return Optional.ofNullable(this.publicDefaultScopeId);
     }
     /**
      * The number of scopes that currently exist in this IPAM.
      * 
-     */
+    */
     public Optional<Integer> getScopeCount() {
         return Optional.ofNullable(this.scopeCount);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<IPAMTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -198,7 +198,6 @@ public final class GetIPAMResult {
             this.tags = tags;
             return this;
         }
-
         public GetIPAMResult build() {
             return new GetIPAMResult(arn, description, ipamId, operatingRegions, privateDefaultScopeId, publicDefaultScopeId, scopeCount, tags);
         }

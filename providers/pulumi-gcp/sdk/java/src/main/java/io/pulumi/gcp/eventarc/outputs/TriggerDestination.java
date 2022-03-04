@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.eventarc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.eventarc.outputs.TriggerDestinationCloudRunService;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class TriggerDestination {
     /**
      * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
      * 
-     */
+    */
     public Optional<String> getCloudFunction() {
         return Optional.ofNullable(this.cloudFunction);
     }
     /**
      * Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
      * 
-     */
+    */
     public Optional<TriggerDestinationCloudRunService> getCloudRunService() {
         return Optional.ofNullable(this.cloudRunService);
     }
@@ -77,7 +77,6 @@ public final class TriggerDestination {
             this.cloudRunService = cloudRunService;
             return this;
         }
-
         public TriggerDestination build() {
             return new TriggerDestination(cloudFunction, cloudRunService);
         }

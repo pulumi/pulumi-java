@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,7 +31,7 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfig {
      * * GCE_METADATA: Expose all Compute Engine metadata to pods.
      * * GKE_METADATA: Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) is enabled at the cluster level.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
@@ -60,7 +60,6 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfig {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public ClusterNodePoolNodeConfigWorkloadMetadataConfig build() {
             return new ClusterNodePoolNodeConfigWorkloadMetadataConfig(mode);
         }

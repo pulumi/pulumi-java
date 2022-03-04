@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.DatabaseStatisticsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -105,21 +105,21 @@ public final class GetReadOnlyFollowingDatabaseResult {
     /**
      * The name of the attached database configuration cluster
      * 
-     */
+    */
     public String getAttachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
     /**
      * The time the data should be kept in cache for fast queries in TimeSpan.
      * 
-     */
+    */
     public Optional<String> getHotCachePeriod() {
         return Optional.ofNullable(this.hotCachePeriod);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -127,63 +127,63 @@ public final class GetReadOnlyFollowingDatabaseResult {
      * Kind of the database
      * Expected value is 'ReadOnlyFollowing'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The name of the leader cluster
      * 
-     */
+    */
     public String getLeaderClusterResourceId() {
         return this.leaderClusterResourceId;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The principals modification kind of the database
      * 
-     */
+    */
     public String getPrincipalsModificationKind() {
         return this.principalsModificationKind;
     }
     /**
      * The provisioned state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
-     */
+    */
     public String getSoftDeletePeriod() {
         return this.softDeletePeriod;
     }
     /**
      * The statistics of the database.
      * 
-     */
+    */
     public DatabaseStatisticsResponse getStatistics() {
         return this.statistics;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -289,7 +289,6 @@ public final class GetReadOnlyFollowingDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReadOnlyFollowingDatabaseResult build() {
             return new GetReadOnlyFollowingDatabaseResult(attachedDatabaseConfigurationName, hotCachePeriod, id, kind, leaderClusterResourceId, location, name, principalsModificationKind, provisioningState, softDeletePeriod, statistics, type);
         }

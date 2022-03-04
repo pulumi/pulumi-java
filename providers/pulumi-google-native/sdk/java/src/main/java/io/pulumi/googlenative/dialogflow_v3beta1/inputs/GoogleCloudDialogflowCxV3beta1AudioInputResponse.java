@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputResponse extends io.p
      * 
      */
     @InputImport(name="audio", required=true)
-    private final String audio;
+      private final String audio;
 
     public String getAudio() {
         return this.audio;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputResponse extends io.p
      * 
      */
     @InputImport(name="config", required=true)
-    private final GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse config;
+      private final GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse config;
 
     public GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse getConfig() {
         return this.config;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputResponse extends io.p
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1AudioInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1AudioInputResponse(audio, config);
         }

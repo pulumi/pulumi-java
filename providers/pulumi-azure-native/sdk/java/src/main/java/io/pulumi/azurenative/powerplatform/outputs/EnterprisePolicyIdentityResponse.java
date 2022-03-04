@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class EnterprisePolicyIdentityResponse {
     /**
      * The principal id of EnterprisePolicy identity.
      * 
-     */
+    */
     public String getSystemAssignedIdentityPrincipalId() {
         return this.systemAssignedIdentityPrincipalId;
     }
     /**
      * The tenant id associated with the EnterprisePolicy.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class EnterprisePolicyIdentityResponse {
             this.type = type;
             return this;
         }
-
         public EnterprisePolicyIdentityResponse build() {
             return new EnterprisePolicyIdentityResponse(systemAssignedIdentityPrincipalId, tenantId, type);
         }

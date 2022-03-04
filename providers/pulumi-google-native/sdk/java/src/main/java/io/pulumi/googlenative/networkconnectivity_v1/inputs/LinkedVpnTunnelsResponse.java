@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class LinkedVpnTunnelsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="siteToSiteDataTransfer", required=true)
-    private final Boolean siteToSiteDataTransfer;
+      private final Boolean siteToSiteDataTransfer;
 
     public Boolean getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
@@ -34,7 +34,7 @@ public final class LinkedVpnTunnelsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="uris", required=true)
-    private final List<String> uris;
+      private final List<String> uris;
 
     public List<String> getUris() {
         return this.uris;
@@ -83,7 +83,6 @@ public final class LinkedVpnTunnelsResponse extends io.pulumi.resources.InvokeAr
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public LinkedVpnTunnelsResponse build() {
             return new LinkedVpnTunnelsResponse(siteToSiteDataTransfer, uris);
         }

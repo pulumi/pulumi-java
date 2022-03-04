@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetPrivateEndpointConnectionByNameArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetPrivateEndpointConnectionByNameResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionByName {
-/**
- * The Private Endpoint Connection resource.
+    private GetPrivateEndpointConnectionByName() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionByNameArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionByNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionByNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Private Endpoint Connection resource.
  * API Version: 2021-04-01-preview.
  * 
- *
- * The Private Endpoint Connection resource.
+     *
+     * The Private Endpoint Connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Private Endpoint Connection resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * The Private Endpoint Connection resource.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionByNameResult> invokeAsync(GetPrivateEndpointConnectionByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getPrivateEndpointConnectionByName", TypeShape.of(GetPrivateEndpointConnectionByNameResult.class), args == null ? GetPrivateEndpointConnectionByNameArgs.Empty : args, Utilities.withVersion(options));
     }

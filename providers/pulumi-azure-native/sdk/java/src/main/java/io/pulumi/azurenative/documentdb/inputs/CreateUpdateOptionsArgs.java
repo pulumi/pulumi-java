@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.AutoscaleSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="autoscaleSettings")
-    private final @Nullable Input<AutoscaleSettingsArgs> autoscaleSettings;
+      private final @Nullable Input<AutoscaleSettingsArgs> autoscaleSettings;
 
     public Input<AutoscaleSettingsArgs> getAutoscaleSettings() {
         return this.autoscaleSettings == null ? Input.empty() : this.autoscaleSettings;
@@ -35,7 +35,7 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="throughput")
-    private final @Nullable Input<Integer> throughput;
+      private final @Nullable Input<Integer> throughput;
 
     public Input<Integer> getThroughput() {
         return this.throughput == null ? Input.empty() : this.throughput;
@@ -94,7 +94,6 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
             this.throughput = Input.ofNullable(throughput);
             return this;
         }
-
         public CreateUpdateOptionsArgs build() {
             return new CreateUpdateOptionsArgs(autoscaleSettings, throughput);
         }

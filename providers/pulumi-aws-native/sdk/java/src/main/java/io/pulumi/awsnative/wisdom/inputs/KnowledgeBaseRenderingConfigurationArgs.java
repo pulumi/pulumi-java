@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wisdom.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
     public static final KnowledgeBaseRenderingConfigurationArgs Empty = new KnowledgeBaseRenderingConfigurationArgs();
 
     @InputImport(name="templateUri")
-    private final @Nullable Input<String> templateUri;
+      private final @Nullable Input<String> templateUri;
 
     public Input<String> getTemplateUri() {
         return this.templateUri == null ? Input.empty() : this.templateUri;
@@ -58,7 +58,6 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
             this.templateUri = Input.ofNullable(templateUri);
             return this;
         }
-
         public KnowledgeBaseRenderingConfigurationArgs build() {
             return new KnowledgeBaseRenderingConfigurationArgs(templateUri);
         }

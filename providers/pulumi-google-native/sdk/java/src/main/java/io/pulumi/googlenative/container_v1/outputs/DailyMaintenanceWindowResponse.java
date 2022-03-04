@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DailyMaintenanceWindowResponse {
     /**
      * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario. Duration will be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "PTnHnMnS".
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }
     /**
      * Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -74,7 +74,6 @@ public final class DailyMaintenanceWindowResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public DailyMaintenanceWindowResponse build() {
             return new DailyMaintenanceWindowResponse(duration, startTime);
         }

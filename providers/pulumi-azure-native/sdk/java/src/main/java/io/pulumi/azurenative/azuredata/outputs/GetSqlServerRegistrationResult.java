@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azuredata.outputs;
 
 import io.pulumi.azurenative.azuredata.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -84,63 +84,63 @@ public final class GetSqlServerRegistrationResult {
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional Properties as JSON string
      * 
-     */
+    */
     public Optional<String> getPropertyBag() {
         return Optional.ofNullable(this.propertyBag);
     }
     /**
      * Resource Group Name
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * Subscription Id
      * 
-     */
+    */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -225,7 +225,6 @@ public final class GetSqlServerRegistrationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlServerRegistrationResult build() {
             return new GetSqlServerRegistrationResult(id, location, name, propertyBag, resourceGroup, subscriptionId, systemData, tags, type);
         }

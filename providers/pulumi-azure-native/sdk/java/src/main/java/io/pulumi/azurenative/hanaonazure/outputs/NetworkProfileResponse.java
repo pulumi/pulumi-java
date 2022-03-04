@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hanaonazure.outputs;
 
 import io.pulumi.azurenative.hanaonazure.outputs.IpAddressResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class NetworkProfileResponse {
     /**
      * Specifies the circuit id for connecting to express route.
      * 
-     */
+    */
     public String getCircuitId() {
         return this.circuitId;
     }
     /**
      * Specifies the network interfaces for the HANA instance.
      * 
-     */
+    */
     public List<IpAddressResponse> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
@@ -77,7 +77,6 @@ public final class NetworkProfileResponse {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(circuitId, networkInterfaces);
         }

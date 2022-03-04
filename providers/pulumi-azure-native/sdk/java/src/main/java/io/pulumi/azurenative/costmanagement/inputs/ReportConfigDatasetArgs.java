@@ -11,7 +11,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportConfigGroupingArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigSortingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +32,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="aggregation")
-    private final @Nullable Input<Map<String,ReportConfigAggregationArgs>> aggregation;
+      private final @Nullable Input<Map<String,ReportConfigAggregationArgs>> aggregation;
 
     public Input<Map<String,ReportConfigAggregationArgs>> getAggregation() {
         return this.aggregation == null ? Input.empty() : this.aggregation;
@@ -43,7 +43,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<ReportConfigDatasetConfigurationArgs> configuration;
+      private final @Nullable Input<ReportConfigDatasetConfigurationArgs> configuration;
 
     public Input<ReportConfigDatasetConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -54,7 +54,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<ReportConfigFilterArgs> filter;
+      private final @Nullable Input<ReportConfigFilterArgs> filter;
 
     public Input<ReportConfigFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -65,7 +65,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="granularity")
-    private final @Nullable Input<Either<String,ReportGranularityType>> granularity;
+      private final @Nullable Input<Either<String,ReportGranularityType>> granularity;
 
     public Input<Either<String,ReportGranularityType>> getGranularity() {
         return this.granularity == null ? Input.empty() : this.granularity;
@@ -76,7 +76,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="grouping")
-    private final @Nullable Input<List<ReportConfigGroupingArgs>> grouping;
+      private final @Nullable Input<List<ReportConfigGroupingArgs>> grouping;
 
     public Input<List<ReportConfigGroupingArgs>> getGrouping() {
         return this.grouping == null ? Input.empty() : this.grouping;
@@ -87,7 +87,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sorting")
-    private final @Nullable Input<List<ReportConfigSortingArgs>> sorting;
+      private final @Nullable Input<List<ReportConfigSortingArgs>> sorting;
 
     public Input<List<ReportConfigSortingArgs>> getSorting() {
         return this.sorting == null ? Input.empty() : this.sorting;
@@ -206,7 +206,6 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
             this.sorting = Input.ofNullable(sorting);
             return this;
         }
-
         public ReportConfigDatasetArgs build() {
             return new ReportConfigDatasetArgs(aggregation, configuration, filter, granularity, grouping, sorting);
         }

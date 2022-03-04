@@ -6,21 +6,41 @@ package io.pulumi.azurenative.servicefabricmesh;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicefabricmesh.inputs.ListSecretValueArgs;
 import io.pulumi.azurenative.servicefabricmesh.outputs.ListSecretValueResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSecretValue {
-/**
- * This type represents the unencrypted value of the secret.
+    private ListSecretValue() {}
+    public interface BuilderApplicator {
+        public void apply(ListSecretValueArgs.Builder a);
+    }
+    private static ListSecretValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListSecretValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This type represents the unencrypted value of the secret.
  * API Version: 2018-09-01-preview.
  * 
- *
- * This type represents the unencrypted value of the secret.
+     *
+     * This type represents the unencrypted value of the secret.
  * 
- */
+     */
+    public static CompletableFuture<ListSecretValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This type represents the unencrypted value of the secret.
+     * API Version: 2018-09-01-preview.
+     * 
+     *
+         * This type represents the unencrypted value of the secret.
+     * 
+     */
     public static CompletableFuture<ListSecretValueResult> invokeAsync(ListSecretValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:listSecretValue", TypeShape.of(ListSecretValueResult.class), args == null ? ListSecretValueArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="authType", required=true)
-    private final String authType;
+      private final String authType;
 
     public String getAuthType() {
         return this.authType;
@@ -33,7 +33,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="certificate", required=true)
-    private final String certificate;
+      private final String certificate;
 
     public String getCertificate() {
         return this.certificate;
@@ -44,7 +44,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final String clientId;
+      private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -55,7 +55,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -124,7 +124,6 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends io.pulumi
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ServicePrincipalCertificateAuthInfoResponse build() {
             return new ServicePrincipalCertificateAuthInfoResponse(authType, certificate, clientId, principalId);
         }

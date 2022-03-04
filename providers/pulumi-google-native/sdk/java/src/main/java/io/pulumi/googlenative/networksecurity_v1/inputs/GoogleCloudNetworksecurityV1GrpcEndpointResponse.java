@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudNetworksecurityV1GrpcEndpointResponse extends io.p
      * 
      */
     @InputImport(name="targetUri", required=true)
-    private final String targetUri;
+      private final String targetUri;
 
     public String getTargetUri() {
         return this.targetUri;
@@ -59,7 +59,6 @@ public final class GoogleCloudNetworksecurityV1GrpcEndpointResponse extends io.p
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
-
         public GoogleCloudNetworksecurityV1GrpcEndpointResponse build() {
             return new GoogleCloudNetworksecurityV1GrpcEndpointResponse(targetUri);
         }

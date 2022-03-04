@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containsAny")
-    private final @Nullable Input<List<String>> containsAny;
+      private final @Nullable Input<List<String>> containsAny;
 
     public Input<List<String>> getContainsAny() {
         return this.containsAny == null ? Input.empty() : this.containsAny;
@@ -36,7 +36,7 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="equals")
-    private final @Nullable Input<String> equals;
+      private final @Nullable Input<String> equals;
 
     public Input<String> getEquals() {
         return this.equals == null ? Input.empty() : this.equals;
@@ -48,7 +48,7 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+      private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -122,7 +122,6 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
             this.field = Input.ofNullable(field);
             return this;
         }
-
         public AlertRuleLeafConditionArgs build() {
             return new AlertRuleLeafConditionArgs(containsAny, equals, field);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RouteResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -101,77 +101,77 @@ public final class RouteTableResponse {
     /**
      * Whether to disable the routes learned by BGP on that route table. True means disable.
      * 
-     */
+    */
     public Optional<Boolean> getDisableBgpRoutePropagation() {
         return Optional.ofNullable(this.disableBgpRoutePropagation);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the route table resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the route table.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Collection of routes contained within a route table.
      * 
-     */
+    */
     public List<RouteResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
     }
     /**
      * A collection of references to subnets.
      * 
-     */
+    */
     public List<SubnetResponse> getSubnets() {
         return this.subnets;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -270,7 +270,6 @@ public final class RouteTableResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RouteTableResponse build() {
             return new RouteTableResponse(disableBgpRoutePropagation, etag, id, location, name, provisioningState, resourceGuid, routes, subnets, tags, type);
         }

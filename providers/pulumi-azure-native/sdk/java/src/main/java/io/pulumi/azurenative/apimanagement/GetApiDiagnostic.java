@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetApiDiagnosticArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetApiDiagnosticResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiDiagnostic {
-/**
- * Diagnostic details.
+    private GetApiDiagnostic() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiDiagnosticArgs.Builder a);
+    }
+    private static GetApiDiagnosticArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiDiagnosticArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Diagnostic details.
  * API Version: 2020-12-01.
  * 
- *
- * Diagnostic details.
+     *
+     * Diagnostic details.
  * 
- */
+     */
+    public static CompletableFuture<GetApiDiagnosticResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Diagnostic details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Diagnostic details.
+     * 
+     */
     public static CompletableFuture<GetApiDiagnosticResult> invokeAsync(GetApiDiagnosticArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiDiagnostic", TypeShape.of(GetApiDiagnosticResult.class), args == null ? GetApiDiagnosticArgs.Empty : args, Utilities.withVersion(options));
     }

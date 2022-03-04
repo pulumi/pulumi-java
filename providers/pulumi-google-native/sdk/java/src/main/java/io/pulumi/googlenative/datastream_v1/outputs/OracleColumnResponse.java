@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -82,63 +82,63 @@ public final class OracleColumnResponse {
     /**
      * Column name.
      * 
-     */
+    */
     public String getColumn() {
         return this.column;
     }
     /**
      * The Oracle data type.
      * 
-     */
+    */
     public String getDataType() {
         return this.dataType;
     }
     /**
      * Column encoding.
      * 
-     */
+    */
     public String getEncoding() {
         return this.encoding;
     }
     /**
      * Column length.
      * 
-     */
+    */
     public Integer getLength() {
         return this.length;
     }
     /**
      * Whether or not the column can accept a null value.
      * 
-     */
+    */
     public Boolean getNullable() {
         return this.nullable;
     }
     /**
      * The ordinal position of the column in the table.
      * 
-     */
+    */
     public Integer getOrdinalPosition() {
         return this.ordinalPosition;
     }
     /**
      * Column precision.
      * 
-     */
+    */
     public Integer getPrecision() {
         return this.precision;
     }
     /**
      * Whether or not the column represents a primary key.
      * 
-     */
+    */
     public Boolean getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * Column scale.
      * 
-     */
+    */
     public Integer getScale() {
         return this.scale;
     }
@@ -223,7 +223,6 @@ public final class OracleColumnResponse {
             this.scale = Objects.requireNonNull(scale);
             return this;
         }
-
         public OracleColumnResponse build() {
             return new OracleColumnResponse(column, dataType, encoding, length, nullable, ordinalPosition, precision, primaryKey, scale);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.ExpiryDetailResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.RestrictionEvaluationsResponse;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class MembershipRoleResponse {
     /**
      * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
      * 
-     */
+    */
     public ExpiryDetailResponse getExpiryDetail() {
         return this.expiryDetail;
     }
     /**
      * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Evaluations of restrictions applied to parent group on this membership.
      * 
-     */
+    */
     public RestrictionEvaluationsResponse getRestrictionEvaluations() {
         return this.restrictionEvaluations;
     }
@@ -97,7 +97,6 @@ public final class MembershipRoleResponse {
             this.restrictionEvaluations = Objects.requireNonNull(restrictionEvaluations);
             return this;
         }
-
         public MembershipRoleResponse build() {
             return new MembershipRoleResponse(expiryDetail, name, restrictionEvaluations);
         }

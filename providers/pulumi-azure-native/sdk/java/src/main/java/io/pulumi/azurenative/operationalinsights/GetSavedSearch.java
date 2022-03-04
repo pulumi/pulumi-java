@@ -6,21 +6,41 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.operationalinsights.inputs.GetSavedSearchArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.GetSavedSearchResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSavedSearch {
-/**
- * Value object for saved search results.
+    private GetSavedSearch() {}
+    public interface BuilderApplicator {
+        public void apply(GetSavedSearchArgs.Builder a);
+    }
+    private static GetSavedSearchArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSavedSearchArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Value object for saved search results.
  * API Version: 2020-08-01.
  * 
- *
- * Value object for saved search results.
+     *
+     * Value object for saved search results.
  * 
- */
+     */
+    public static CompletableFuture<GetSavedSearchResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Value object for saved search results.
+     * API Version: 2020-08-01.
+     * 
+     *
+         * Value object for saved search results.
+     * 
+     */
     public static CompletableFuture<GetSavedSearchResult> invokeAsync(GetSavedSearchArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getSavedSearch", TypeShape.of(GetSavedSearchResult.class), args == null ? GetSavedSearchArgs.Empty : args, Utilities.withVersion(options));
     }

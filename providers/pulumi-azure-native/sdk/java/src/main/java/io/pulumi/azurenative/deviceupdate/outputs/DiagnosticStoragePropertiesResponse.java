@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class DiagnosticStoragePropertiesResponse {
     /**
      * Authentication Type
      * 
-     */
+    */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * ConnectionString of the diagnostic storage account
      * 
-     */
+    */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * ResourceId of the diagnostic storage account
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
@@ -97,7 +97,6 @@ public final class DiagnosticStoragePropertiesResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public DiagnosticStoragePropertiesResponse build() {
             return new DiagnosticStoragePropertiesResponse(authenticationType, connectionString, resourceId);
         }

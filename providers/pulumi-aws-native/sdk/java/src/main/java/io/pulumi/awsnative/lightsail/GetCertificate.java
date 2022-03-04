@@ -6,17 +6,33 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lightsail.inputs.GetCertificateArgs;
 import io.pulumi.awsnative.lightsail.outputs.GetCertificateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificate {
-/**
- * An example resource schema demonstrating some basic constructs and validation rules.
+    private GetCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetCertificateArgs.Builder a);
+    }
+    private static GetCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
  * 
- */
+     */
+    public static CompletableFuture<GetCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> invokeAsync(GetCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getCertificate", TypeShape.of(GetCertificateResult.class), args == null ? GetCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

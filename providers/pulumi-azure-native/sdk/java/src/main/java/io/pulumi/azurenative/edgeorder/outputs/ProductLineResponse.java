@@ -10,7 +10,7 @@ import io.pulumi.azurenative.edgeorder.outputs.FilterablePropertyResponse;
 import io.pulumi.azurenative.edgeorder.outputs.HierarchyInformationResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ImageInformationResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ProductResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -81,56 +81,56 @@ public final class ProductLineResponse {
     /**
      * Availability information of the product system.
      * 
-     */
+    */
     public AvailabilityInformationResponse getAvailabilityInformation() {
         return this.availabilityInformation;
     }
     /**
      * Cost information for the product system.
      * 
-     */
+    */
     public CostInformationResponse getCostInformation() {
         return this.costInformation;
     }
     /**
      * Description related to the product system.
      * 
-     */
+    */
     public DescriptionResponse getDescription() {
         return this.description;
     }
     /**
      * Display Name for the product system.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * list of filters supported for a product
      * 
-     */
+    */
     public List<FilterablePropertyResponse> getFilterableProperties() {
         return this.filterableProperties;
     }
     /**
      * Hierarchy information of a product.
      * 
-     */
+    */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Image information for the product system.
      * 
-     */
+    */
     public List<ImageInformationResponse> getImageInformation() {
         return this.imageInformation;
     }
     /**
      * List of products in the product line
      * 
-     */
+    */
     public List<ProductResponse> getProducts() {
         return this.products;
     }
@@ -208,7 +208,6 @@ public final class ProductLineResponse {
             this.products = Objects.requireNonNull(products);
             return this;
         }
-
         public ProductLineResponse build() {
             return new ProductLineResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, products);
         }

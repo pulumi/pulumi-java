@@ -6,17 +6,33 @@ package io.pulumi.awsnative.imagebuilder;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.imagebuilder.inputs.GetImagePipelineArgs;
 import io.pulumi.awsnative.imagebuilder.outputs.GetImagePipelineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImagePipeline {
-/**
- * Resource schema for AWS::ImageBuilder::ImagePipeline
+    private GetImagePipeline() {}
+    public interface BuilderApplicator {
+        public void apply(GetImagePipelineArgs.Builder a);
+    }
+    private static GetImagePipelineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetImagePipelineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::ImageBuilder::ImagePipeline
  * 
- */
+     */
+    public static CompletableFuture<GetImagePipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::ImageBuilder::ImagePipeline
+     * 
+     */
     public static CompletableFuture<GetImagePipelineResult> invokeAsync(GetImagePipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getImagePipeline", TypeShape.of(GetImagePipelineResult.class), args == null ? GetImagePipelineArgs.Empty : args, Utilities.withVersion(options));
     }

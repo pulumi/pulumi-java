@@ -6,21 +6,41 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.inputs.GetWorkspaceSqlAadAdminArgs;
 import io.pulumi.azurenative.synapse.outputs.GetWorkspaceSqlAadAdminResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkspaceSqlAadAdmin {
-/**
- * Workspace active directory administrator
+    private GetWorkspaceSqlAadAdmin() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkspaceSqlAadAdminArgs.Builder a);
+    }
+    private static GetWorkspaceSqlAadAdminArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkspaceSqlAadAdminArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Workspace active directory administrator
  * API Version: 2021-03-01.
  * 
- *
- * Workspace active directory administrator
+     *
+     * Workspace active directory administrator
  * 
- */
+     */
+    public static CompletableFuture<GetWorkspaceSqlAadAdminResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Workspace active directory administrator
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Workspace active directory administrator
+     * 
+     */
     public static CompletableFuture<GetWorkspaceSqlAadAdminResult> invokeAsync(GetWorkspaceSqlAadAdminArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getWorkspaceSqlAadAdmin", TypeShape.of(GetWorkspaceSqlAadAdminResult.class), args == null ? GetWorkspaceSqlAadAdminArgs.Empty : args, Utilities.withVersion(options));
     }

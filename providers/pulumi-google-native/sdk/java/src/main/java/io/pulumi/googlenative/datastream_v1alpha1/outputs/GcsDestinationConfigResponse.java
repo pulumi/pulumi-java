@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.AvroFileFormatResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.JsonFileFormatResponse;
 import java.lang.Integer;
@@ -55,35 +55,35 @@ public final class GcsDestinationConfigResponse {
     /**
      * AVRO file format configuration.
      * 
-     */
+    */
     public AvroFileFormatResponse getAvroFileFormat() {
         return this.avroFileFormat;
     }
     /**
      * The maximum duration for which new events are added before a file is closed and a new file is created.
      * 
-     */
+    */
     public String getFileRotationInterval() {
         return this.fileRotationInterval;
     }
     /**
      * The maximum file size to be saved in the bucket.
      * 
-     */
+    */
     public Integer getFileRotationMb() {
         return this.fileRotationMb;
     }
     /**
      * JSON file format configuration.
      * 
-     */
+    */
     public JsonFileFormatResponse getJsonFileFormat() {
         return this.jsonFileFormat;
     }
     /**
      * Path inside the Cloud Storage bucket to write data to.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
@@ -140,7 +140,6 @@ public final class GcsDestinationConfigResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public GcsDestinationConfigResponse build() {
             return new GcsDestinationConfigResponse(avroFileFormat, fileRotationInterval, fileRotationMb, jsonFileFormat, path);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.sql.SourceRepresentationInstanceArgs;
 import io.pulumi.gcp.sql.inputs.SourceRepresentationInstanceState;
@@ -135,6 +135,37 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
         return this.region;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SourceRepresentationInstanceArgs.Builder a);
+    }
+    private static io.pulumi.gcp.sql.SourceRepresentationInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.sql.SourceRepresentationInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SourceRepresentationInstance(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SourceRepresentationInstance(String name) {
+        this(name, SourceRepresentationInstanceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SourceRepresentationInstance(String name, SourceRepresentationInstanceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

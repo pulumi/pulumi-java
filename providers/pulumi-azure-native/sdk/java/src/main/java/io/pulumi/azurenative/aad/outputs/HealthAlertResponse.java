@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -66,49 +66,49 @@ public final class HealthAlertResponse {
     /**
      * Health Alert Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Health Alert Issue
      * 
-     */
+    */
     public String getIssue() {
         return this.issue;
     }
     /**
      * Health Alert Last Detected DateTime
      * 
-     */
+    */
     public String getLastDetected() {
         return this.lastDetected;
     }
     /**
      * Health Alert Name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Health Alert Raised DateTime
      * 
-     */
+    */
     public String getRaised() {
         return this.raised;
     }
     /**
      * Health Alert TSG Link
      * 
-     */
+    */
     public String getResolutionUri() {
         return this.resolutionUri;
     }
     /**
      * Health Alert Severity
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
@@ -179,7 +179,6 @@ public final class HealthAlertResponse {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public HealthAlertResponse build() {
             return new HealthAlertResponse(id, issue, lastDetected, name, raised, resolutionUri, severity);
         }

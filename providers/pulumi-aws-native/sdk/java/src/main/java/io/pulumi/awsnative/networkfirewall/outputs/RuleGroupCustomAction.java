@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupActionDefinition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class RuleGroupCustomAction {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
-
         public RuleGroupCustomAction build() {
             return new RuleGroupCustomAction(actionDefinition, actionName);
         }

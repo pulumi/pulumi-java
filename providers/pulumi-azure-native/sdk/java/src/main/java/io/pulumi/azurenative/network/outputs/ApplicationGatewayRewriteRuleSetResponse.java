@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayRewriteRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class ApplicationGatewayRewriteRuleSetResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the rewrite rule set that is unique within an Application Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the rewrite rule set resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Rewrite rules in the rewrite rule set.
      * 
-     */
+    */
     public List<ApplicationGatewayRewriteRuleResponse> getRewriteRules() {
         return this.rewriteRules == null ? List.of() : this.rewriteRules;
     }
@@ -141,7 +141,6 @@ public final class ApplicationGatewayRewriteRuleSetResponse {
             this.rewriteRules = rewriteRules;
             return this;
         }
-
         public ApplicationGatewayRewriteRuleSetResponse build() {
             return new ApplicationGatewayRewriteRuleSetResponse(etag, id, name, provisioningState, rewriteRules);
         }

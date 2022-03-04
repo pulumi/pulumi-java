@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasLocaleSettings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,7 +31,7 @@ public final class BotAliasLocaleSettingsItem {
     /**
      * A string used to identify the locale
      * 
-     */
+    */
     public String getLocaleId() {
         return this.localeId;
     }
@@ -67,7 +67,6 @@ public final class BotAliasLocaleSettingsItem {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
-
         public BotAliasLocaleSettingsItem build() {
             return new BotAliasLocaleSettingsItem(botAliasLocaleSetting, localeId);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.enums.DataSourceSalesforceStandardObjectName;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,28 +18,28 @@ public final class DataSourceSalesforceStandardObjectConfigurationArgs extends i
     public static final DataSourceSalesforceStandardObjectConfigurationArgs Empty = new DataSourceSalesforceStandardObjectConfigurationArgs();
 
     @InputImport(name="documentDataFieldName", required=true)
-    private final Input<String> documentDataFieldName;
+      private final Input<String> documentDataFieldName;
 
     public Input<String> getDocumentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @InputImport(name="documentTitleFieldName")
-    private final @Nullable Input<String> documentTitleFieldName;
+      private final @Nullable Input<String> documentTitleFieldName;
 
     public Input<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Input.empty() : this.documentTitleFieldName;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+      private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<DataSourceSalesforceStandardObjectName> name;
+      private final Input<DataSourceSalesforceStandardObjectName> name;
 
     public Input<DataSourceSalesforceStandardObjectName> getName() {
         return this.name;
@@ -128,7 +128,6 @@ public final class DataSourceSalesforceStandardObjectConfigurationArgs extends i
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public DataSourceSalesforceStandardObjectConfigurationArgs build() {
             return new DataSourceSalesforceStandardObjectConfigurationArgs(documentDataFieldName, documentTitleFieldName, fieldMappings, name);
         }

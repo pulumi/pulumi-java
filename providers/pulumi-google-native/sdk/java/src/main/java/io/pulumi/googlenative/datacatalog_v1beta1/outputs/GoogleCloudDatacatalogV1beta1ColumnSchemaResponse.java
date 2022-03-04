@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
     /**
      * Name of the column.
      * 
-     */
+    */
     public String getColumn() {
         return this.column;
     }
     /**
      * Optional. Description of the column. Default value is an empty string.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
      * 
-     */
+    */
     public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> getSubcolumns() {
         return this.subcolumns;
     }
     /**
      * Type of the column.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -138,7 +138,6 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1ColumnSchemaResponse build() {
             return new GoogleCloudDatacatalogV1beta1ColumnSchemaResponse(column, description, mode, subcolumns, type);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storsimple.enums.MonitoringStatus;
 import io.pulumi.azurenative.storsimple.enums.VolumeStatus;
 import io.pulumi.azurenative.storsimple.enums.VolumeType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessControlRecordIds", required=true)
-    private final Input<List<String>> accessControlRecordIds;
+      private final Input<List<String>> accessControlRecordIds;
 
     public Input<List<String>> getAccessControlRecordIds() {
         return this.accessControlRecordIds;
@@ -36,7 +36,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -47,7 +47,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Kind> kind;
+      private final @Nullable Input<Kind> kind;
 
     public Input<Kind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -58,7 +58,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managerName", required=true)
-    private final Input<String> managerName;
+      private final Input<String> managerName;
 
     public Input<String> getManagerName() {
         return this.managerName;
@@ -69,7 +69,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoringStatus", required=true)
-    private final Input<MonitoringStatus> monitoringStatus;
+      private final Input<MonitoringStatus> monitoringStatus;
 
     public Input<MonitoringStatus> getMonitoringStatus() {
         return this.monitoringStatus;
@@ -80,7 +80,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeInBytes", required=true)
-    private final Input<Double> sizeInBytes;
+      private final Input<Double> sizeInBytes;
 
     public Input<Double> getSizeInBytes() {
         return this.sizeInBytes;
@@ -102,7 +102,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeContainerName", required=true)
-    private final Input<String> volumeContainerName;
+      private final Input<String> volumeContainerName;
 
     public Input<String> getVolumeContainerName() {
         return this.volumeContainerName;
@@ -113,7 +113,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeName")
-    private final @Nullable Input<String> volumeName;
+      private final @Nullable Input<String> volumeName;
 
     public Input<String> getVolumeName() {
         return this.volumeName == null ? Input.empty() : this.volumeName;
@@ -124,7 +124,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeStatus", required=true)
-    private final Input<VolumeStatus> volumeStatus;
+      private final Input<VolumeStatus> volumeStatus;
 
     public Input<VolumeStatus> getVolumeStatus() {
         return this.volumeStatus;
@@ -135,7 +135,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeType", required=true)
-    private final Input<VolumeType> volumeType;
+      private final Input<VolumeType> volumeType;
 
     public Input<VolumeType> getVolumeType() {
         return this.volumeType;
@@ -329,7 +329,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.volumeType = Input.of(Objects.requireNonNull(volumeType));
             return this;
         }
-
         public VolumeArgs build() {
             return new VolumeArgs(accessControlRecordIds, deviceName, kind, managerName, monitoringStatus, resourceGroupName, sizeInBytes, volumeContainerName, volumeName, volumeStatus, volumeType);
         }

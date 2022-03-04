@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.azurenative.datafactory.inputs.PrivateLinkConnectionApprovalRequestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final Input<String> factoryName;
+      private final Input<String> factoryName;
 
     public Input<String> getFactoryName() {
         return this.factoryName;
@@ -31,7 +31,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -42,7 +42,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<PrivateLinkConnectionApprovalRequestArgs> properties;
+      private final @Nullable Input<PrivateLinkConnectionApprovalRequestArgs> properties;
 
     public Input<PrivateLinkConnectionApprovalRequestArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(factoryName, privateEndpointConnectionName, properties, resourceGroupName);
         }

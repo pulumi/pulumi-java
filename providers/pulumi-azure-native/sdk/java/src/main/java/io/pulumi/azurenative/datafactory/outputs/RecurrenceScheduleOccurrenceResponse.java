@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class RecurrenceScheduleOccurrenceResponse {
     /**
      * The day of the week.
      * 
-     */
+    */
     public Optional<String> getDay() {
         return Optional.ofNullable(this.day);
     }
     /**
      * The occurrence.
      * 
-     */
+    */
     public Optional<Integer> getOccurrence() {
         return Optional.ofNullable(this.occurrence);
     }
@@ -77,7 +77,6 @@ public final class RecurrenceScheduleOccurrenceResponse {
             this.occurrence = occurrence;
             return this;
         }
-
         public RecurrenceScheduleOccurrenceResponse build() {
             return new RecurrenceScheduleOccurrenceResponse(day, occurrence);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2EntityTypeEntityResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -62,42 +62,42 @@ public final class GetEntityTypeResult {
     /**
      * Optional. Indicates whether the entity type can be automatically expanded.
      * 
-     */
+    */
     public String getAutoExpansionMode() {
         return this.autoExpansionMode;
     }
     /**
      * The name of the entity type.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Optional. Enables fuzzy entity extraction during classification.
      * 
-     */
+    */
     public Boolean getEnableFuzzyExtraction() {
         return this.enableFuzzyExtraction;
     }
     /**
      * Optional. The collection of entity entries associated with the entity type.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2EntityTypeEntityResponse> getEntities() {
         return this.entities;
     }
     /**
      * Indicates the kind of entity type.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes methods. Format: `projects//agent/entityTypes/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -161,7 +161,6 @@ public final class GetEntityTypeResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetEntityTypeResult build() {
             return new GetEntityTypeResult(autoExpansionMode, displayName, enableFuzzyExtraction, entities, kind, name);
         }

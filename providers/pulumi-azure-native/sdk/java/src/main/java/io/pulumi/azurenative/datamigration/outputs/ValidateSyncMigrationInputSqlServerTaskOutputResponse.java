@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,21 +40,21 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse {
     /**
      * Database identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of database
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Errors associated with a selected database object
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }
@@ -97,7 +97,6 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ValidateSyncMigrationInputSqlServerTaskOutputResponse build() {
             return new ValidateSyncMigrationInputSqlServerTaskOutputResponse(id, name, validationErrors);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobCsvOutputOptions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class JobOutputFormatOptions {
             this.csv = csv;
             return this;
         }
-
         public JobOutputFormatOptions build() {
             return new JobOutputFormatOptions(csv);
         }

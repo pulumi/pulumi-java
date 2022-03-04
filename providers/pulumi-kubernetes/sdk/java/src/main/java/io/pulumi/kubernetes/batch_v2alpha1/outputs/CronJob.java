@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v2alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.batch_v2alpha1.outputs.CronJobSpec;
 import io.pulumi.kubernetes.batch_v2alpha1.outputs.CronJobStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -57,35 +57,35 @@ public final class CronJob {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
-     */
+    */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Specification of the desired behavior of a cron job, including the schedule. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
-     */
+    */
     public Optional<CronJobSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }
     /**
      * Current status of a cron job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
-     */
+    */
     public Optional<CronJobStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -142,7 +142,6 @@ public final class CronJob {
             this.status = status;
             return this;
         }
-
         public CronJob build() {
             return new CronJob(apiVersion, kind, metadata, spec, status);
         }

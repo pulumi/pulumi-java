@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -30,7 +30,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="audience")
-    private final @Nullable Input<String> audience;
+      private final @Nullable Input<String> audience;
 
     public Input<String> getAudience() {
         return this.audience == null ? Input.empty() : this.audience;
@@ -41,7 +41,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="authority")
-    private final @Nullable Input<String> authority;
+      private final @Nullable Input<String> authority;
 
     public Input<String> getAuthority() {
         return this.authority == null ? Input.empty() : this.authority;
@@ -52,7 +52,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable Input<String> objectId;
+      private final @Nullable Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId == null ? Input.empty() : this.objectId;
@@ -63,7 +63,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -167,7 +167,6 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public CollectorBodyAgentSpnPropertiesArgs build() {
             return new CollectorBodyAgentSpnPropertiesArgs(applicationId, audience, authority, objectId, tenantId);
         }

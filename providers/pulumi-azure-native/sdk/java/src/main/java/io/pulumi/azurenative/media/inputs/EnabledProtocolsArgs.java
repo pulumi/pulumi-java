@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dash", required=true)
-    private final Input<Boolean> dash;
+      private final Input<Boolean> dash;
 
     public Input<Boolean> getDash() {
         return this.dash;
@@ -33,7 +33,7 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="download", required=true)
-    private final Input<Boolean> download;
+      private final Input<Boolean> download;
 
     public Input<Boolean> getDownload() {
         return this.download;
@@ -44,7 +44,7 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hls", required=true)
-    private final Input<Boolean> hls;
+      private final Input<Boolean> hls;
 
     public Input<Boolean> getHls() {
         return this.hls;
@@ -55,7 +55,7 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="smoothStreaming", required=true)
-    private final Input<Boolean> smoothStreaming;
+      private final Input<Boolean> smoothStreaming;
 
     public Input<Boolean> getSmoothStreaming() {
         return this.smoothStreaming;
@@ -144,7 +144,6 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
             this.smoothStreaming = Input.of(Objects.requireNonNull(smoothStreaming));
             return this;
         }
-
         public EnabledProtocolsArgs build() {
             return new EnabledProtocolsArgs(dash, download, hls, smoothStreaming);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.events.outputs;
 
 import io.pulumi.awsnative.events.enums.ConnectionAuthorizationType;
 import io.pulumi.awsnative.events.outputs.AuthParametersProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,7 +48,7 @@ public final class GetConnectionResult {
     /**
      * The arn of the connection resource.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -61,14 +61,14 @@ public final class GetConnectionResult {
     /**
      * Description of the connection.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The arn of the secrets manager secret created in the customer account.
      * 
-     */
+    */
     public Optional<String> getSecretArn() {
         return Optional.ofNullable(this.secretArn);
     }
@@ -125,7 +125,6 @@ public final class GetConnectionResult {
             this.secretArn = secretArn;
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(arn, authParameters, authorizationType, description, secretArn);
         }

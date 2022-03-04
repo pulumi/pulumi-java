@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ClusterClusterTelemetry {
     /**
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -52,7 +52,6 @@ public final class ClusterClusterTelemetry {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ClusterClusterTelemetry build() {
             return new ClusterClusterTelemetry(type);
         }

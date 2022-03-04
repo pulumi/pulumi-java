@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DayOfWeek;
 import io.pulumi.azurenative.recoveryservices.enums.ScheduleRunType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="schedulePolicyType", required=true)
-    private final Input<String> schedulePolicyType;
+      private final Input<String> schedulePolicyType;
 
     public Input<String> getSchedulePolicyType() {
         return this.schedulePolicyType;
@@ -40,7 +40,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scheduleRunDays")
-    private final @Nullable Input<List<DayOfWeek>> scheduleRunDays;
+      private final @Nullable Input<List<DayOfWeek>> scheduleRunDays;
 
     public Input<List<DayOfWeek>> getScheduleRunDays() {
         return this.scheduleRunDays == null ? Input.empty() : this.scheduleRunDays;
@@ -51,7 +51,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scheduleRunFrequency")
-    private final @Nullable Input<Either<String,ScheduleRunType>> scheduleRunFrequency;
+      private final @Nullable Input<Either<String,ScheduleRunType>> scheduleRunFrequency;
 
     public Input<Either<String,ScheduleRunType>> getScheduleRunFrequency() {
         return this.scheduleRunFrequency == null ? Input.empty() : this.scheduleRunFrequency;
@@ -62,7 +62,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scheduleRunTimes")
-    private final @Nullable Input<List<String>> scheduleRunTimes;
+      private final @Nullable Input<List<String>> scheduleRunTimes;
 
     public Input<List<String>> getScheduleRunTimes() {
         return this.scheduleRunTimes == null ? Input.empty() : this.scheduleRunTimes;
@@ -73,7 +73,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scheduleWeeklyFrequency")
-    private final @Nullable Input<Integer> scheduleWeeklyFrequency;
+      private final @Nullable Input<Integer> scheduleWeeklyFrequency;
 
     public Input<Integer> getScheduleWeeklyFrequency() {
         return this.scheduleWeeklyFrequency == null ? Input.empty() : this.scheduleWeeklyFrequency;
@@ -177,7 +177,6 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
             this.scheduleWeeklyFrequency = Input.ofNullable(scheduleWeeklyFrequency);
             return this;
         }
-
         public SimpleSchedulePolicyArgs build() {
             return new SimpleSchedulePolicyArgs(schedulePolicyType, scheduleRunDays, scheduleRunFrequency, scheduleRunTimes, scheduleWeeklyFrequency);
         }

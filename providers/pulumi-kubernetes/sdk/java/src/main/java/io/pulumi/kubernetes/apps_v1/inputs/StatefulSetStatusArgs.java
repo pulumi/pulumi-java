@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1.inputs.StatefulSetConditionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="availableReplicas", required=true)
-    private final Input<Integer> availableReplicas;
+      private final Input<Integer> availableReplicas;
 
     public Input<Integer> getAvailableReplicas() {
         return this.availableReplicas;
@@ -37,7 +37,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="collisionCount")
-    private final @Nullable Input<Integer> collisionCount;
+      private final @Nullable Input<Integer> collisionCount;
 
     public Input<Integer> getCollisionCount() {
         return this.collisionCount == null ? Input.empty() : this.collisionCount;
@@ -48,7 +48,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<StatefulSetConditionArgs>> conditions;
+      private final @Nullable Input<List<StatefulSetConditionArgs>> conditions;
 
     public Input<List<StatefulSetConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -59,7 +59,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="currentReplicas")
-    private final @Nullable Input<Integer> currentReplicas;
+      private final @Nullable Input<Integer> currentReplicas;
 
     public Input<Integer> getCurrentReplicas() {
         return this.currentReplicas == null ? Input.empty() : this.currentReplicas;
@@ -70,7 +70,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="currentRevision")
-    private final @Nullable Input<String> currentRevision;
+      private final @Nullable Input<String> currentRevision;
 
     public Input<String> getCurrentRevision() {
         return this.currentRevision == null ? Input.empty() : this.currentRevision;
@@ -81,7 +81,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
@@ -92,7 +92,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="readyReplicas")
-    private final @Nullable Input<Integer> readyReplicas;
+      private final @Nullable Input<Integer> readyReplicas;
 
     public Input<Integer> getReadyReplicas() {
         return this.readyReplicas == null ? Input.empty() : this.readyReplicas;
@@ -103,7 +103,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicas", required=true)
-    private final Input<Integer> replicas;
+      private final Input<Integer> replicas;
 
     public Input<Integer> getReplicas() {
         return this.replicas;
@@ -114,7 +114,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updateRevision")
-    private final @Nullable Input<String> updateRevision;
+      private final @Nullable Input<String> updateRevision;
 
     public Input<String> getUpdateRevision() {
         return this.updateRevision == null ? Input.empty() : this.updateRevision;
@@ -125,7 +125,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updatedReplicas")
-    private final @Nullable Input<Integer> updatedReplicas;
+      private final @Nullable Input<Integer> updatedReplicas;
 
     public Input<Integer> getUpdatedReplicas() {
         return this.updatedReplicas == null ? Input.empty() : this.updatedReplicas;
@@ -304,7 +304,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
             this.updatedReplicas = Input.ofNullable(updatedReplicas);
             return this;
         }
-
         public StatefulSetStatusArgs build() {
             return new StatefulSetStatusArgs(availableReplicas, collisionCount, conditions, currentReplicas, currentRevision, observedGeneration, readyReplicas, replicas, updateRevision, updatedReplicas);
         }

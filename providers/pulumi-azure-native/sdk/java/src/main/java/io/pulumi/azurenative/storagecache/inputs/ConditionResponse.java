@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -32,7 +32,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timestamp", required=true)
-    private final String timestamp;
+      private final String timestamp;
 
     public String getTimestamp() {
         return this.timestamp;
@@ -81,7 +81,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(message, timestamp);
         }

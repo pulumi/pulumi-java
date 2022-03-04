@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class InputEndpointResponse {
     /**
      * The input endpoint name.
      * 
-     */
+    */
     public Optional<String> getEndpointName() {
         return Optional.ofNullable(this.endpointName);
     }
     /**
      * The input endpoint private port.
      * 
-     */
+    */
     public Optional<Integer> getPrivatePort() {
         return Optional.ofNullable(this.privatePort);
     }
     /**
      * The input endpoint protocol.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The input endpoint public port.
      * 
-     */
+    */
     public Optional<Integer> getPublicPort() {
         return Optional.ofNullable(this.publicPort);
     }
@@ -119,7 +119,6 @@ public final class InputEndpointResponse {
             this.publicPort = publicPort;
             return this;
         }
-
         public InputEndpointResponse build() {
             return new InputEndpointResponse(endpointName, privatePort, protocol, publicPort);
         }

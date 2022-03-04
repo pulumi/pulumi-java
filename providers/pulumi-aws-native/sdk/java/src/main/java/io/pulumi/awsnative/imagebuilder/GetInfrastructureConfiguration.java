@@ -6,17 +6,33 @@ package io.pulumi.awsnative.imagebuilder;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.imagebuilder.inputs.GetInfrastructureConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.outputs.GetInfrastructureConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInfrastructureConfiguration {
-/**
- * Resource schema for AWS::ImageBuilder::InfrastructureConfiguration
+    private GetInfrastructureConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetInfrastructureConfigurationArgs.Builder a);
+    }
+    private static GetInfrastructureConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInfrastructureConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::ImageBuilder::InfrastructureConfiguration
  * 
- */
+     */
+    public static CompletableFuture<GetInfrastructureConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::ImageBuilder::InfrastructureConfiguration
+     * 
+     */
     public static CompletableFuture<GetInfrastructureConfigurationResult> invokeAsync(GetInfrastructureConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getInfrastructureConfiguration", TypeShape.of(GetInfrastructureConfigurationResult.class), args == null ? GetInfrastructureConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,7 +35,7 @@ public final class InstanceGroupManagerVersionTargetSize {
     /**
      * , The number of instances which are managed for this version. Conflicts with `percent`.
      * 
-     */
+    */
     public Optional<Integer> getFixed() {
         return Optional.ofNullable(this.fixed);
     }
@@ -44,7 +44,7 @@ public final class InstanceGroupManagerVersionTargetSize {
      * Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,
      * one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
      * 
-     */
+    */
     public Optional<Integer> getPercent() {
         return Optional.ofNullable(this.percent);
     }
@@ -80,7 +80,6 @@ public final class InstanceGroupManagerVersionTargetSize {
             this.percent = percent;
             return this;
         }
-
         public InstanceGroupManagerVersionTargetSize build() {
             return new InstanceGroupManagerVersionTargetSize(fixed, percent);
         }

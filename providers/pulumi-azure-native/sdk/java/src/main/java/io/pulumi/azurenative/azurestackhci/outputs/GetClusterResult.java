@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurestackhci.outputs;
 
 import io.pulumi.azurenative.azurestackhci.outputs.ClusterReportedPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -176,154 +176,154 @@ public final class GetClusterResult {
     /**
      * App id of cluster AAD identity.
      * 
-     */
+    */
     public String getAadClientId() {
         return this.aadClientId;
     }
     /**
      * Tenant id of cluster AAD identity.
      * 
-     */
+    */
     public String getAadTenantId() {
         return this.aadTenantId;
     }
     /**
      * Type of billing applied to the resource.
      * 
-     */
+    */
     public String getBillingModel() {
         return this.billingModel;
     }
     /**
      * Unique, immutable resource id.
      * 
-     */
+    */
     public String getCloudId() {
         return this.cloudId;
     }
     /**
      * The timestamp of resource creation (UTC).
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The identity that created the resource.
      * 
-     */
+    */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The type of identity that created the resource.
      * 
-     */
+    */
     public Optional<String> getCreatedByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Most recent billing meter timestamp.
      * 
-     */
+    */
     public String getLastBillingTimestamp() {
         return this.lastBillingTimestamp;
     }
     /**
      * The timestamp of resource last modification (UTC)
      * 
-     */
+    */
     public Optional<String> getLastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
      * The identity that last modified the resource.
      * 
-     */
+    */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource.
      * 
-     */
+    */
     public Optional<String> getLastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
     /**
      * Most recent cluster sync timestamp.
      * 
-     */
+    */
     public String getLastSyncTimestamp() {
         return this.lastSyncTimestamp;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * First cluster sync timestamp.
      * 
-     */
+    */
     public String getRegistrationTimestamp() {
         return this.registrationTimestamp;
     }
     /**
      * Properties reported by cluster agent.
      * 
-     */
+    */
     public Optional<ClusterReportedPropertiesResponse> getReportedProperties() {
         return Optional.ofNullable(this.reportedProperties);
     }
     /**
      * Status of the cluster agent.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Number of days remaining in the trial period.
      * 
-     */
+    */
     public Double getTrialDaysRemaining() {
         return this.trialDaysRemaining;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -499,7 +499,6 @@ public final class GetClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(aadClientId, aadTenantId, billingModel, cloudId, createdAt, createdBy, createdByType, id, lastBillingTimestamp, lastModifiedAt, lastModifiedBy, lastModifiedByType, lastSyncTimestamp, location, name, provisioningState, registrationTimestamp, reportedProperties, status, tags, trialDaysRemaining, type);
         }

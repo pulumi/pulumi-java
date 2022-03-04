@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobAction;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfig;
 import java.lang.String;
@@ -44,14 +44,14 @@ public final class PreventionJobTriggerInspectJob {
      * A task to execute on the completion of a job.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PreventionJobTriggerInspectJobAction> getActions() {
         return this.actions;
     }
     /**
      * The name of the template to run when this job is triggered.
      * 
-     */
+    */
     public String getInspectTemplateName() {
         return this.inspectTemplateName;
     }
@@ -59,7 +59,7 @@ public final class PreventionJobTriggerInspectJob {
      * Information on where to inspect
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobStorageConfig getStorageConfig() {
         return this.storageConfig;
     }
@@ -102,7 +102,6 @@ public final class PreventionJobTriggerInspectJob {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
         }
-
         public PreventionJobTriggerInspectJob build() {
             return new PreventionJobTriggerInspectJob(actions, inspectTemplateName, storageConfig);
         }

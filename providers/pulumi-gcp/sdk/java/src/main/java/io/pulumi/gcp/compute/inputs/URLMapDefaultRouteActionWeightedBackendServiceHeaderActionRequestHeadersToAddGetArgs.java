@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionReq
      * 
      */
     @InputImport(name="headerName")
-    private final @Nullable Input<String> headerName;
+      private final @Nullable Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName == null ? Input.empty() : this.headerName;
@@ -31,7 +31,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionReq
      * 
      */
     @InputImport(name="headerValue")
-    private final @Nullable Input<String> headerValue;
+      private final @Nullable Input<String> headerValue;
 
     public Input<String> getHeaderValue() {
         return this.headerValue == null ? Input.empty() : this.headerValue;
@@ -43,7 +43,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionReq
      * 
      */
     @InputImport(name="replace")
-    private final @Nullable Input<Boolean> replace;
+      private final @Nullable Input<Boolean> replace;
 
     public Input<Boolean> getReplace() {
         return this.replace == null ? Input.empty() : this.replace;
@@ -117,7 +117,6 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionReq
             this.replace = Input.ofNullable(replace);
             return this;
         }
-
         public URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs build() {
             return new URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs(headerName, headerValue, replace);
         }

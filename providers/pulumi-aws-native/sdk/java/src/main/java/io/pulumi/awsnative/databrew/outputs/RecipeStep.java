@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.RecipeAction;
 import io.pulumi.awsnative.databrew.outputs.RecipeConditionExpression;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public final class RecipeStep {
     /**
      * Condition expressions applied to the step action
      * 
-     */
+    */
     public List<RecipeConditionExpression> getConditionExpressions() {
         return this.conditionExpressions == null ? List.of() : this.conditionExpressions;
     }
@@ -69,7 +69,6 @@ public final class RecipeStep {
             this.conditionExpressions = conditionExpressions;
             return this;
         }
-
         public RecipeStep build() {
             return new RecipeStep(action, conditionExpressions);
         }

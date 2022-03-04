@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd;
@@ -56,7 +56,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
      * Describes a header to add.
      * Structure is documented below.
      * 
-     */
+    */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd> getRequestHeaderToAdds() {
         return this.requestHeaderToAdds == null ? List.of() : this.requestHeaderToAdds;
     }
@@ -64,7 +64,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
      * A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
      * Structure is documented below.
      * 
-     */
+    */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove> getRequestHeaderToRemoves() {
         return this.requestHeaderToRemoves == null ? List.of() : this.requestHeaderToRemoves;
     }
@@ -73,7 +73,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * Structure is documented below.
      * 
-     */
+    */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd> getResponseHeaderToAdds() {
         return this.responseHeaderToAdds == null ? List.of() : this.responseHeaderToAdds;
     }
@@ -81,7 +81,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
      * A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
      * Structure is documented below.
      * 
-     */
+    */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove> getResponseHeaderToRemoves() {
         return this.responseHeaderToRemoves == null ? List.of() : this.responseHeaderToRemoves;
     }
@@ -131,7 +131,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
             this.responseHeaderToRemoves = responseHeaderToRemoves;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction(requestHeaderToAdds, requestHeaderToRemoves, responseHeaderToAdds, responseHeaderToRemoves);
         }

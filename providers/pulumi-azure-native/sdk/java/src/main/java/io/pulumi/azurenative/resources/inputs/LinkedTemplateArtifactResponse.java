@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LinkedTemplateArtifactResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -33,7 +33,7 @@ public final class LinkedTemplateArtifactResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="template", required=true)
-    private final Object template;
+      private final Object template;
 
     public Object getTemplate() {
         return this.template;
@@ -82,7 +82,6 @@ public final class LinkedTemplateArtifactResponse extends io.pulumi.resources.In
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public LinkedTemplateArtifactResponse build() {
             return new LinkedTemplateArtifactResponse(path, template);
         }

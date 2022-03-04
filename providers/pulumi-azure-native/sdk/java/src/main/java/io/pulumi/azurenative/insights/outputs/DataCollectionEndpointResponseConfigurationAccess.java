@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DataCollectionEndpointResponseConfigurationAccess {
     /**
      * The endpoint. This property is READ-ONLY.
      * 
-     */
+    */
     public String getEndpoint() {
         return this.endpoint;
     }
@@ -52,7 +52,6 @@ public final class DataCollectionEndpointResponseConfigurationAccess {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public DataCollectionEndpointResponseConfigurationAccess build() {
             return new DataCollectionEndpointResponseConfigurationAccess(endpoint);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ChannelIngestEndpoint {
     /**
      * The system generated unique identifier for the IngestEndpoint
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The system generated password for ingest authentication.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The ingest URL to which the source stream should be sent.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
     /**
      * The system generated username for ingest authentication.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -118,7 +118,6 @@ public final class ChannelIngestEndpoint {
             this.username = username;
             return this;
         }
-
         public ChannelIngestEndpoint build() {
             return new ChannelIngestEndpoint(id, password, url, username);
         }

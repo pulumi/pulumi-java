@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.outputs.DatasetDataCatalogInputDefinition;
 import io.pulumi.awsnative.databrew.outputs.DatasetDatabaseInputDefinition;
 import io.pulumi.awsnative.databrew.outputs.DatasetMetadata;
 import io.pulumi.awsnative.databrew.outputs.DatasetS3Location;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -89,7 +89,6 @@ public final class DatasetInput {
             this.s3InputDefinition = s3InputDefinition;
             return this;
         }
-
         public DatasetInput build() {
             return new DatasetInput(dataCatalogInputDefinition, databaseInputDefinition, metadata, s3InputDefinition);
         }

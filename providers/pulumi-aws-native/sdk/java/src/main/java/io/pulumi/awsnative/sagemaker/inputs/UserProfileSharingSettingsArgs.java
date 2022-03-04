@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.UserProfileSharingSettingsNotebookOutputOption;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="notebookOutputOption")
-    private final @Nullable Input<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption;
+      private final @Nullable Input<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption;
 
     public Input<UserProfileSharingSettingsNotebookOutputOption> getNotebookOutputOption() {
         return this.notebookOutputOption == null ? Input.empty() : this.notebookOutputOption;
@@ -35,7 +35,7 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="s3KmsKeyId")
-    private final @Nullable Input<String> s3KmsKeyId;
+      private final @Nullable Input<String> s3KmsKeyId;
 
     public Input<String> getS3KmsKeyId() {
         return this.s3KmsKeyId == null ? Input.empty() : this.s3KmsKeyId;
@@ -46,7 +46,7 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="s3OutputPath")
-    private final @Nullable Input<String> s3OutputPath;
+      private final @Nullable Input<String> s3OutputPath;
 
     public Input<String> getS3OutputPath() {
         return this.s3OutputPath == null ? Input.empty() : this.s3OutputPath;
@@ -120,7 +120,6 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
             this.s3OutputPath = Input.ofNullable(s3OutputPath);
             return this;
         }
-
         public UserProfileSharingSettingsArgs build() {
             return new UserProfileSharingSettingsArgs(notebookOutputOption, s3KmsKeyId, s3OutputPath);
         }

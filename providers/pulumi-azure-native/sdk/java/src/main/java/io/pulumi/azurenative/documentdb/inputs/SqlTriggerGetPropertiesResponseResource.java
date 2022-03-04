@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
      * 
      */
     @InputImport(name="body")
-    private final @Nullable String body;
+      private final @Nullable String body;
 
     public Optional<String> getBody() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
@@ -31,7 +31,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -42,7 +42,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -53,7 +53,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
      * 
      */
     @InputImport(name="rid", required=true)
-    private final String rid;
+      private final String rid;
 
     public String getRid() {
         return this.rid;
@@ -64,7 +64,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
      * 
      */
     @InputImport(name="triggerOperation")
-    private final @Nullable String triggerOperation;
+      private final @Nullable String triggerOperation;
 
     public Optional<String> getTriggerOperation() {
         return this.triggerOperation == null ? Optional.empty() : Optional.ofNullable(this.triggerOperation);
@@ -75,7 +75,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
      * 
      */
     @InputImport(name="triggerType")
-    private final @Nullable String triggerType;
+      private final @Nullable String triggerType;
 
     public Optional<String> getTriggerType() {
         return this.triggerType == null ? Optional.empty() : Optional.ofNullable(this.triggerType);
@@ -86,7 +86,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
      * 
      */
     @InputImport(name="ts", required=true)
-    private final Double ts;
+      private final Double ts;
 
     public Double getTs() {
         return this.ts;
@@ -185,7 +185,6 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public SqlTriggerGetPropertiesResponseResource build() {
             return new SqlTriggerGetPropertiesResponseResource(body, etag, id, rid, triggerOperation, triggerType, ts);
         }

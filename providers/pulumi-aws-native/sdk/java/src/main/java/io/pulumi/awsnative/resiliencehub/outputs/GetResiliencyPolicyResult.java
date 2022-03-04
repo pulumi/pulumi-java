@@ -7,7 +7,7 @@ import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyDataLocationConst
 import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyTier;
 import io.pulumi.awsnative.resiliencehub.outputs.ResiliencyPolicyPolicyMap;
 import io.pulumi.awsnative.resiliencehub.outputs.ResiliencyPolicyTagMap;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -64,7 +64,7 @@ public final class GetResiliencyPolicyResult {
     /**
      * Data Location Constraint of the Policy.
      * 
-     */
+    */
     public Optional<ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
         return Optional.ofNullable(this.dataLocationConstraint);
     }
@@ -74,21 +74,21 @@ public final class GetResiliencyPolicyResult {
     /**
      * Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
-     */
+    */
     public Optional<String> getPolicyArn() {
         return Optional.ofNullable(this.policyArn);
     }
     /**
      * Description of Resiliency Policy.
      * 
-     */
+    */
     public Optional<String> getPolicyDescription() {
         return Optional.ofNullable(this.policyDescription);
     }
     /**
      * Name of Resiliency Policy.
      * 
-     */
+    */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -98,7 +98,7 @@ public final class GetResiliencyPolicyResult {
     /**
      * Resiliency Policy Tier.
      * 
-     */
+    */
     public Optional<ResiliencyPolicyTier> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -169,7 +169,6 @@ public final class GetResiliencyPolicyResult {
             this.tier = tier;
             return this;
         }
-
         public GetResiliencyPolicyResult build() {
             return new GetResiliencyPolicyResult(dataLocationConstraint, policy, policyArn, policyDescription, policyName, tags, tier);
         }

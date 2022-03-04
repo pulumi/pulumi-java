@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class DiscoveredResponse {
     /**
      * The status of discovery for the resource.
      * 
-     */
+    */
     public String getAnalysisStatus() {
         return this.analysisStatus;
     }
     /**
      * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage output only and populated by the API.
      * 
-     */
+    */
     public StatusResponse getAnalysisStatusError() {
         return this.analysisStatusError;
     }
     /**
      * Whether the resource is continuously analyzed.
      * 
-     */
+    */
     public String getContinuousAnalysis() {
         return this.continuousAnalysis;
     }
     /**
      * The CPE of the resource being scanned.
      * 
-     */
+    */
     public String getCpe() {
         return this.cpe;
     }
@@ -117,7 +117,6 @@ public final class DiscoveredResponse {
             this.cpe = Objects.requireNonNull(cpe);
             return this;
         }
-
         public DiscoveredResponse build() {
             return new DiscoveredResponse(analysisStatus, analysisStatusError, continuousAnalysis, cpe);
         }

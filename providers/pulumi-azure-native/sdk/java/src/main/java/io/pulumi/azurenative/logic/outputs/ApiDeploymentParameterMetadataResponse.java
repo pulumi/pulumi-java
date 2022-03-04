@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class ApiDeploymentParameterMetadataResponse {
     /**
      * The description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Indicates whether its required.
      * 
-     */
+    */
     public Optional<Boolean> getIsRequired() {
         return Optional.ofNullable(this.isRequired);
     }
     /**
      * The type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The visibility.
      * 
-     */
+    */
     public Optional<String> getVisibility() {
         return Optional.ofNullable(this.visibility);
     }
@@ -140,7 +140,6 @@ public final class ApiDeploymentParameterMetadataResponse {
             this.visibility = visibility;
             return this;
         }
-
         public ApiDeploymentParameterMetadataResponse build() {
             return new ApiDeploymentParameterMetadataResponse(description, displayName, isRequired, type, visibility);
         }

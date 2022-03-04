@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetGalleryApplicationVersionArgs;
 import io.pulumi.azurenative.compute.outputs.GetGalleryApplicationVersionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGalleryApplicationVersion {
-/**
- * Specifies information about the gallery Application Version that you want to create or update.
+    private GetGalleryApplicationVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetGalleryApplicationVersionArgs.Builder a);
+    }
+    private static GetGalleryApplicationVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGalleryApplicationVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Specifies information about the gallery Application Version that you want to create or update.
  * API Version: 2020-09-30.
  * 
- *
- * Specifies information about the gallery Application Version that you want to create or update.
+     *
+     * Specifies information about the gallery Application Version that you want to create or update.
  * 
- */
+     */
+    public static CompletableFuture<GetGalleryApplicationVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Specifies information about the gallery Application Version that you want to create or update.
+     * API Version: 2020-09-30.
+     * 
+     *
+         * Specifies information about the gallery Application Version that you want to create or update.
+     * 
+     */
     public static CompletableFuture<GetGalleryApplicationVersionResult> invokeAsync(GetGalleryApplicationVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGalleryApplicationVersion", TypeShape.of(GetGalleryApplicationVersionResult.class), args == null ? GetGalleryApplicationVersionArgs.Empty : args, Utilities.withVersion(options));
     }

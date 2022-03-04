@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="expiryTime", required=true)
-    private final String expiryTime;
+      private final String expiryTime;
 
     public String getExpiryTime() {
         return this.expiryTime;
@@ -32,7 +32,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final String issuer;
+      private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
@@ -43,7 +43,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publicKeyType", required=true)
-    private final String publicKeyType;
+      private final String publicKeyType;
 
     public String getPublicKeyType() {
         return this.publicKeyType;
@@ -54,7 +54,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="signatureAlgorithm", required=true)
-    private final String signatureAlgorithm;
+      private final String signatureAlgorithm;
 
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
@@ -65,7 +65,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -76,7 +76,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="subject", required=true)
-    private final String subject;
+      private final String subject;
 
     public String getSubject() {
         return this.subject;
@@ -165,7 +165,6 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public X509CertificateDetailsResponse build() {
             return new X509CertificateDetailsResponse(expiryTime, issuer, publicKeyType, signatureAlgorithm, startTime, subject);
         }

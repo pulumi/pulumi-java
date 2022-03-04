@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -32,7 +32,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Map<String,String> labels;
+      private final @Nullable Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
@@ -44,7 +44,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -55,7 +55,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -66,7 +66,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="userLabels")
-    private final @Nullable Map<String,String> userLabels;
+      private final @Nullable Map<String,String> userLabels;
 
     public Map<String,String> getUserLabels() {
         return this.userLabels == null ? Map.of() : this.userLabels;
@@ -145,7 +145,6 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
             this.userLabels = userLabels;
             return this;
         }
-
         public GetNotificationChannelArgs build() {
             return new GetNotificationChannelArgs(displayName, labels, project, type, userLabels);
         }

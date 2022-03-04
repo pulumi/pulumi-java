@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.DistcpSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -71,42 +71,42 @@ public final class HdfsSourceResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Specifies Distcp-related settings.
      * 
-     */
+    */
     public Optional<DistcpSettingsResponse> getDistcpSettings() {
         return Optional.ofNullable(this.distcpSettings);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getRecursive() {
         return Optional.ofNullable(this.recursive);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -114,7 +114,7 @@ public final class HdfsSourceResponse {
      * Copy source type.
      * Expected value is 'HdfsSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -185,7 +185,6 @@ public final class HdfsSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HdfsSourceResponse build() {
             return new HdfsSourceResponse(disableMetricsCollection, distcpSettings, maxConcurrentConnections, recursive, sourceRetryCount, sourceRetryWait, type);
         }

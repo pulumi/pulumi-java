@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.DatabaseTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,14 +41,14 @@ public final class GetDatabaseResult {
     /**
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<DatabaseTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -91,7 +91,6 @@ public final class GetDatabaseResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(arn, kmsKeyId, tags);
         }

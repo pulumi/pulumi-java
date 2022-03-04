@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="backupRunId", required=true)
-    private final Input<Integer> backupRunId;
+      private final Input<Integer> backupRunId;
 
     public Input<Integer> getBackupRunId() {
         return this.backupRunId;
@@ -32,7 +32,7 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -43,7 +43,7 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -117,7 +117,6 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DatabaseInstanceRestoreBackupContextGetArgs build() {
             return new DatabaseInstanceRestoreBackupContextGetArgs(backupRunId, instanceId, project);
         }

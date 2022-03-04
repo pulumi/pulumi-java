@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceClusterBackupIamPolicy {
-/**
- * Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
+    private GetInstanceClusterBackupIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceClusterBackupIamPolicyArgs.Builder a);
+    }
+    private static GetInstanceClusterBackupIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceClusterBackupIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceClusterBackupIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetInstanceClusterBackupIamPolicyResult> invokeAsync(GetInstanceClusterBackupIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getInstanceClusterBackupIamPolicy", TypeShape.of(GetInstanceClusterBackupIamPolicyResult.class), args == null ? GetInstanceClusterBackupIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

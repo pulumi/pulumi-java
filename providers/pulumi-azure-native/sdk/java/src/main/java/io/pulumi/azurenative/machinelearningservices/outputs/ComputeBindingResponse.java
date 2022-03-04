@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ComputeBindingResponse {
     /**
      * ID of the compute resource.
      * 
-     */
+    */
     public Optional<String> getComputeId() {
         return Optional.ofNullable(this.computeId);
     }
     /**
      * Number of nodes.
      * 
-     */
+    */
     public Optional<Integer> getNodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
@@ -77,7 +77,6 @@ public final class ComputeBindingResponse {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public ComputeBindingResponse build() {
             return new ComputeBindingResponse(computeId, nodeCount);
         }

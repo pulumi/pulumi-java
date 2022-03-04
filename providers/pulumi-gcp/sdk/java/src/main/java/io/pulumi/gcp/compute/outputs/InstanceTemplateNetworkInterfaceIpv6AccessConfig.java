@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,7 +43,7 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfig {
      * The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
-     */
+    */
     public String getNetworkTier() {
         return this.networkTier;
     }
@@ -96,7 +96,6 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfig {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-
         public InstanceTemplateNetworkInterfaceIpv6AccessConfig build() {
             return new InstanceTemplateNetworkInterfaceIpv6AccessConfig(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);
         }

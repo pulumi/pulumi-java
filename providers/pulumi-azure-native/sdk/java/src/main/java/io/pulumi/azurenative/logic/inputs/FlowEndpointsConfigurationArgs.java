@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.FlowEndpointsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class FlowEndpointsConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connector")
-    private final @Nullable Input<FlowEndpointsArgs> connector;
+      private final @Nullable Input<FlowEndpointsArgs> connector;
 
     public Input<FlowEndpointsArgs> getConnector() {
         return this.connector == null ? Input.empty() : this.connector;
@@ -34,7 +34,7 @@ public final class FlowEndpointsConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="workflow")
-    private final @Nullable Input<FlowEndpointsArgs> workflow;
+      private final @Nullable Input<FlowEndpointsArgs> workflow;
 
     public Input<FlowEndpointsArgs> getWorkflow() {
         return this.workflow == null ? Input.empty() : this.workflow;
@@ -93,7 +93,6 @@ public final class FlowEndpointsConfigurationArgs extends io.pulumi.resources.Re
             this.workflow = Input.ofNullable(workflow);
             return this;
         }
-
         public FlowEndpointsConfigurationArgs build() {
             return new FlowEndpointsConfigurationArgs(connector, workflow);
         }

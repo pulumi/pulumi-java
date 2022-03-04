@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.outputs.CompositePathResponse;
 import io.pulumi.azurenative.documentdb.outputs.ExcludedPathResponse;
 import io.pulumi.azurenative.documentdb.outputs.IncludedPathResponse;
 import io.pulumi.azurenative.documentdb.outputs.SpatialSpecResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -67,42 +67,42 @@ public final class IndexingPolicyResponse {
     /**
      * Indicates if the indexing policy is automatic
      * 
-     */
+    */
     public Optional<Boolean> getAutomatic() {
         return Optional.ofNullable(this.automatic);
     }
     /**
      * List of composite path list
      * 
-     */
+    */
     public List<List<CompositePathResponse>> getCompositeIndexes() {
         return this.compositeIndexes == null ? List.of() : this.compositeIndexes;
     }
     /**
      * List of paths to exclude from indexing
      * 
-     */
+    */
     public List<ExcludedPathResponse> getExcludedPaths() {
         return this.excludedPaths == null ? List.of() : this.excludedPaths;
     }
     /**
      * List of paths to include in the indexing
      * 
-     */
+    */
     public List<IncludedPathResponse> getIncludedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
     }
     /**
      * Indicates the indexing mode.
      * 
-     */
+    */
     public Optional<String> getIndexingMode() {
         return Optional.ofNullable(this.indexingMode);
     }
     /**
      * List of spatial specifics
      * 
-     */
+    */
     public List<SpatialSpecResponse> getSpatialIndexes() {
         return this.spatialIndexes == null ? List.of() : this.spatialIndexes;
     }
@@ -166,7 +166,6 @@ public final class IndexingPolicyResponse {
             this.spatialIndexes = spatialIndexes;
             return this;
         }
-
         public IndexingPolicyResponse build() {
             return new IndexingPolicyResponse(automatic, compositeIndexes, excludedPaths, includedPaths, indexingMode, spatialIndexes);
         }

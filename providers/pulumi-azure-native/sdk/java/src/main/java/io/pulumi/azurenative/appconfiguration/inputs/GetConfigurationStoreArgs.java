@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetConfigurationStoreArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="configStoreName", required=true)
-    private final String configStoreName;
+      private final String configStoreName;
 
     public String getConfigStoreName() {
         return this.configStoreName;
@@ -28,7 +28,7 @@ public final class GetConfigurationStoreArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetConfigurationStoreArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetConfigurationStoreArgs build() {
             return new GetConfigurationStoreArgs(configStoreName, resourceGroupName);
         }

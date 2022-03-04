@@ -6,17 +6,33 @@ package io.pulumi.awsnative.devicefarm;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devicefarm.inputs.GetInstanceProfileArgs;
 import io.pulumi.awsnative.devicefarm.outputs.GetInstanceProfileResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceProfile {
-/**
- * AWS::DeviceFarm::InstanceProfile creates a new Device Farm Instance Profile
+    private GetInstanceProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceProfileArgs.Builder a);
+    }
+    private static GetInstanceProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AWS::DeviceFarm::InstanceProfile creates a new Device Farm Instance Profile
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AWS::DeviceFarm::InstanceProfile creates a new Device Farm Instance Profile
+     * 
+     */
     public static CompletableFuture<GetInstanceProfileResult> invokeAsync(GetInstanceProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getInstanceProfile", TypeShape.of(GetInstanceProfileResult.class), args == null ? GetInstanceProfileArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.activedirectory;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<String> domain;
+      private final Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain;
@@ -34,7 +34,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -45,7 +45,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selectiveAuthentication")
-    private final @Nullable Input<Boolean> selectiveAuthentication;
+      private final @Nullable Input<Boolean> selectiveAuthentication;
 
     public Input<Boolean> getSelectiveAuthentication() {
         return this.selectiveAuthentication == null ? Input.empty() : this.selectiveAuthentication;
@@ -56,7 +56,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetDnsIpAddresses", required=true)
-    private final Input<List<String>> targetDnsIpAddresses;
+      private final Input<List<String>> targetDnsIpAddresses;
 
     public Input<List<String>> getTargetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
@@ -67,7 +67,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetDomainName", required=true)
-    private final Input<String> targetDomainName;
+      private final Input<String> targetDomainName;
 
     public Input<String> getTargetDomainName() {
         return this.targetDomainName;
@@ -79,7 +79,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustDirection", required=true)
-    private final Input<String> trustDirection;
+      private final Input<String> trustDirection;
 
     public Input<String> getTrustDirection() {
         return this.trustDirection;
@@ -91,7 +91,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustHandshakeSecret", required=true)
-    private final Input<String> trustHandshakeSecret;
+      private final Input<String> trustHandshakeSecret;
 
     public Input<String> getTrustHandshakeSecret() {
         return this.trustHandshakeSecret;
@@ -103,7 +103,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustType", required=true)
-    private final Input<String> trustType;
+      private final Input<String> trustType;
 
     public Input<String> getTrustType() {
         return this.trustType;
@@ -252,7 +252,6 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
             this.trustType = Input.of(Objects.requireNonNull(trustType));
             return this;
         }
-
         public DomainTrustArgs build() {
             return new DomainTrustArgs(domain, project, selectiveAuthentication, targetDnsIpAddresses, targetDomainName, trustDirection, trustHandshakeSecret, trustType);
         }

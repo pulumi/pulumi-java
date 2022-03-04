@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AaaaRecordResponse {
     /**
      * The IPv6 address of this AAAA record.
      * 
-     */
+    */
     public Optional<String> getIpv6Address() {
         return Optional.ofNullable(this.ipv6Address);
     }
@@ -54,7 +54,6 @@ public final class AaaaRecordResponse {
             this.ipv6Address = ipv6Address;
             return this;
         }
-
         public AaaaRecordResponse build() {
             return new AaaaRecordResponse(ipv6Address);
         }

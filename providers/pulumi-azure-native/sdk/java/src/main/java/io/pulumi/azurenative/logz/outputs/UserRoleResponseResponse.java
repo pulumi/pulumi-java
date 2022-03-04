@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class UserRoleResponseResponse {
     /**
      * User roles on configured in Logz.io account.
      * 
-     */
+    */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }
@@ -54,7 +54,6 @@ public final class UserRoleResponseResponse {
             this.role = role;
             return this;
         }
-
         public UserRoleResponseResponse build() {
             return new UserRoleResponseResponse(role);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.HostingEnvironmentProfileResponse;
 import io.pulumi.azurenative.web.outputs.KubeEnvironmentProfileResponse;
 import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -215,98 +215,98 @@ public final class GetAppServicePlanResult {
     /**
      * The time when the server farm free offer expires.
      * 
-     */
+    */
     public Optional<String> getFreeOfferExpirationTime() {
         return Optional.ofNullable(this.freeOfferExpirationTime);
     }
     /**
      * Geographical location for the App Service plan.
      * 
-     */
+    */
     public String getGeoRegion() {
         return this.geoRegion;
     }
     /**
      * Specification for the App Service Environment to use for the App Service plan.
      * 
-     */
+    */
     public Optional<HostingEnvironmentProfileResponse> getHostingEnvironmentProfile() {
         return Optional.ofNullable(this.hostingEnvironmentProfile);
     }
     /**
      * If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
      * 
-     */
+    */
     public Optional<Boolean> getHyperV() {
         return Optional.ofNullable(this.hyperV);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * If <code>true</code>, this App Service Plan owns spot instances.
      * 
-     */
+    */
     public Optional<Boolean> getIsSpot() {
         return Optional.ofNullable(this.isSpot);
     }
     /**
      * Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
      * 
-     */
+    */
     public Optional<Boolean> getIsXenon() {
         return Optional.ofNullable(this.isXenon);
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Specification for the Kubernetes Environment to use for the App Service plan.
      * 
-     */
+    */
     public Optional<KubeEnvironmentProfileResponse> getKubeEnvironmentProfile() {
         return Optional.ofNullable(this.kubeEnvironmentProfile);
     }
     /**
      * Resource Location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
      * 
-     */
+    */
     public Optional<Integer> getMaximumElasticWorkerCount() {
         return Optional.ofNullable(this.maximumElasticWorkerCount);
     }
     /**
      * Maximum number of instances that can be assigned to this App Service plan.
      * 
-     */
+    */
     public Integer getMaximumNumberOfWorkers() {
         return this.maximumNumberOfWorkers;
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Number of apps assigned to this App Service plan.
      * 
-     */
+    */
     public Integer getNumberOfSites() {
         return this.numberOfSites;
     }
@@ -314,91 +314,91 @@ public final class GetAppServicePlanResult {
      * If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
      * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
      * 
-     */
+    */
     public Optional<Boolean> getPerSiteScaling() {
         return Optional.ofNullable(this.perSiteScaling);
     }
     /**
      * Provisioning state of the App Service Plan.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * If Linux app service plan <code>true</code>, <code>false</code> otherwise.
      * 
-     */
+    */
     public Optional<Boolean> getReserved() {
         return Optional.ofNullable(this.reserved);
     }
     /**
      * Resource group of the App Service plan.
      * 
-     */
+    */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Description of a SKU for a scalable resource.
      * 
-     */
+    */
     public Optional<SkuDescriptionResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The time when the server farm expires. Valid only if it is a spot server farm.
      * 
-     */
+    */
     public Optional<String> getSpotExpirationTime() {
         return Optional.ofNullable(this.spotExpirationTime);
     }
     /**
      * App Service plan status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * App Service plan subscription.
      * 
-     */
+    */
     public String getSubscription() {
         return this.subscription;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Scaling worker count.
      * 
-     */
+    */
     public Optional<Integer> getTargetWorkerCount() {
         return Optional.ofNullable(this.targetWorkerCount);
     }
     /**
      * Scaling worker size ID.
      * 
-     */
+    */
     public Optional<Integer> getTargetWorkerSizeId() {
         return Optional.ofNullable(this.targetWorkerSizeId);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Target worker tier assigned to the App Service plan.
      * 
-     */
+    */
     public Optional<String> getWorkerTierName() {
         return Optional.ofNullable(this.workerTierName);
     }
@@ -609,7 +609,6 @@ public final class GetAppServicePlanResult {
             this.workerTierName = workerTierName;
             return this;
         }
-
         public GetAppServicePlanResult build() {
             return new GetAppServicePlanResult(freeOfferExpirationTime, geoRegion, hostingEnvironmentProfile, hyperV, id, isSpot, isXenon, kind, kubeEnvironmentProfile, location, maximumElasticWorkerCount, maximumNumberOfWorkers, name, numberOfSites, perSiteScaling, provisioningState, reserved, resourceGroup, sku, spotExpirationTime, status, subscription, tags, targetWorkerCount, targetWorkerSizeId, type, workerTierName);
         }

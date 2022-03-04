@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class EventNotificationConfigResponse {
     /**
      * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
      * 
-     */
+    */
     public String getPubsubTopicName() {
         return this.pubsubTopicName;
     }
     /**
      * If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
      * 
-     */
+    */
     public String getSubfolderMatches() {
         return this.subfolderMatches;
     }
@@ -74,7 +74,6 @@ public final class EventNotificationConfigResponse {
             this.subfolderMatches = Objects.requireNonNull(subfolderMatches);
             return this;
         }
-
         public EventNotificationConfigResponse build() {
             return new EventNotificationConfigResponse(pubsubTopicName, subfolderMatches);
         }

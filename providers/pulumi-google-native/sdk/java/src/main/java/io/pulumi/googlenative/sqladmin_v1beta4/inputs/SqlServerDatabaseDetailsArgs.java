@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="compatibilityLevel")
-    private final @Nullable Input<Integer> compatibilityLevel;
+      private final @Nullable Input<Integer> compatibilityLevel;
 
     public Input<Integer> getCompatibilityLevel() {
         return this.compatibilityLevel == null ? Input.empty() : this.compatibilityLevel;
@@ -35,7 +35,7 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryModel")
-    private final @Nullable Input<String> recoveryModel;
+      private final @Nullable Input<String> recoveryModel;
 
     public Input<String> getRecoveryModel() {
         return this.recoveryModel == null ? Input.empty() : this.recoveryModel;
@@ -94,7 +94,6 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
             this.recoveryModel = Input.ofNullable(recoveryModel);
             return this;
         }
-
         public SqlServerDatabaseDetailsArgs build() {
             return new SqlServerDatabaseDetailsArgs(compatibilityLevel, recoveryModel);
         }

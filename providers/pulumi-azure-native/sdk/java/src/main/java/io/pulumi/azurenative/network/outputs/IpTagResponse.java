@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class IpTagResponse {
     /**
      * The IP tag type. Example: FirstPartyUsage.
      * 
-     */
+    */
     public Optional<String> getIpTagType() {
         return Optional.ofNullable(this.ipTagType);
     }
     /**
      * The value of the IP tag associated with the public IP. Example: SQL.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
@@ -76,7 +76,6 @@ public final class IpTagResponse {
             this.tag = tag;
             return this;
         }
-
         public IpTagResponse build() {
             return new IpTagResponse(ipTagType, tag);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class RuleGroupImmunityTimeProperty {
             this.immunityTime = Objects.requireNonNull(immunityTime);
             return this;
         }
-
         public RuleGroupImmunityTimeProperty build() {
             return new RuleGroupImmunityTimeProperty(immunityTime);
         }

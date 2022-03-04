@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.codegurureviewer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class RepositoryAssociationTag {
     /**
      * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. The allowed characters across services are: letters, numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : / @.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length. The allowed characters across services are: letters, numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : / @.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class RepositoryAssociationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RepositoryAssociationTag build() {
             return new RepositoryAssociationTag(key, value);
         }

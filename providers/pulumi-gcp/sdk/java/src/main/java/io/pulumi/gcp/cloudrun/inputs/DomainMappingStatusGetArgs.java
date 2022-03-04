@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusConditionGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusResourceRecordGetArgs;
 import java.lang.Integer;
@@ -19,28 +19,28 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
     public static final DomainMappingStatusGetArgs Empty = new DomainMappingStatusGetArgs();
 
     @InputImport(name="conditions")
-    private final @Nullable Input<List<DomainMappingStatusConditionGetArgs>> conditions;
+      private final @Nullable Input<List<DomainMappingStatusConditionGetArgs>> conditions;
 
     public Input<List<DomainMappingStatusConditionGetArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
     @InputImport(name="mappedRouteName")
-    private final @Nullable Input<String> mappedRouteName;
+      private final @Nullable Input<String> mappedRouteName;
 
     public Input<String> getMappedRouteName() {
         return this.mappedRouteName == null ? Input.empty() : this.mappedRouteName;
     }
 
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
     }
 
     @InputImport(name="resourceRecords")
-    private final @Nullable Input<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords;
+      private final @Nullable Input<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords;
 
     public Input<List<DomainMappingStatusResourceRecordGetArgs>> getResourceRecords() {
         return this.resourceRecords == null ? Input.empty() : this.resourceRecords;
@@ -129,7 +129,6 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
             this.resourceRecords = Input.ofNullable(resourceRecords);
             return this;
         }
-
         public DomainMappingStatusGetArgs build() {
             return new DomainMappingStatusGetArgs(conditions, mappedRouteName, observedGeneration, resourceRecords);
         }

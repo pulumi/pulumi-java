@@ -6,17 +6,33 @@ package io.pulumi.awsnative.customerprofiles;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.customerprofiles.inputs.GetDomainArgs;
 import io.pulumi.awsnative.customerprofiles.outputs.GetDomainResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomain {
-/**
- * A domain defined for 3rd party data source in Profile Service
+    private GetDomain() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainArgs.Builder a);
+    }
+    private static GetDomainArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A domain defined for 3rd party data source in Profile Service
  * 
- */
+     */
+    public static CompletableFuture<GetDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A domain defined for 3rd party data source in Profile Service
+     * 
+     */
     public static CompletableFuture<GetDomainResult> invokeAsync(GetDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:customerprofiles:getDomain", TypeShape.of(GetDomainResult.class), args == null ? GetDomainArgs.Empty : args, Utilities.withVersion(options));
     }

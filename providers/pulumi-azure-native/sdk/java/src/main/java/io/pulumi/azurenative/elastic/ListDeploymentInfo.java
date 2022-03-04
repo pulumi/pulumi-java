@@ -6,21 +6,41 @@ package io.pulumi.azurenative.elastic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.elastic.inputs.ListDeploymentInfoArgs;
 import io.pulumi.azurenative.elastic.outputs.ListDeploymentInfoResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDeploymentInfo {
-/**
- * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
+    private ListDeploymentInfo() {}
+    public interface BuilderApplicator {
+        public void apply(ListDeploymentInfoArgs.Builder a);
+    }
+    private static ListDeploymentInfoArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListDeploymentInfoArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
  * API Version: 2020-07-01.
  * 
- *
- * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
+     *
+     * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
  * 
- */
+     */
+    public static CompletableFuture<ListDeploymentInfoResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
+     * API Version: 2020-07-01.
+     * 
+     *
+         * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
+     * 
+     */
     public static CompletableFuture<ListDeploymentInfoResult> invokeAsync(ListDeploymentInfoArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:listDeploymentInfo", TypeShape.of(ListDeploymentInfoResult.class), args == null ? ListDeploymentInfoArgs.Empty : args, Utilities.withVersion(options));
     }

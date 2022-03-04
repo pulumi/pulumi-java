@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.BackupRetentionSettingsResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -83,63 +83,63 @@ public final class BackupConfigurationResponse {
     /**
      * Backup retention settings.
      * 
-     */
+    */
     public BackupRetentionSettingsResponse getBackupRetentionSettings() {
         return this.backupRetentionSettings;
     }
     /**
      * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
      * 
-     */
+    */
     public Boolean getBinaryLogEnabled() {
         return this.binaryLogEnabled;
     }
     /**
      * Whether this configuration is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * This is always `sql#backupConfiguration`.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Location of the backup
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * (Postgres only) Whether point in time recovery is enabled.
      * 
-     */
+    */
     public Boolean getPointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
     /**
      * Reserved for future use.
      * 
-     */
+    */
     public Boolean getReplicationLogArchivingEnabled() {
         return this.replicationLogArchivingEnabled;
     }
     /**
      * Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The number of days of transaction logs we retain for point in time restore, from 1-7.
      * 
-     */
+    */
     public Integer getTransactionLogRetentionDays() {
         return this.transactionLogRetentionDays;
     }
@@ -224,7 +224,6 @@ public final class BackupConfigurationResponse {
             this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
             return this;
         }
-
         public BackupConfigurationResponse build() {
             return new BackupConfigurationResponse(backupRetentionSettings, binaryLogEnabled, enabled, kind, location, pointInTimeRecoveryEnabled, replicationLogArchivingEnabled, startTime, transactionLogRetentionDays);
         }

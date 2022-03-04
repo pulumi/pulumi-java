@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * 
      */
     @InputImport(name="hostRewrite")
-    private final @Nullable Input<String> hostRewrite;
+      private final @Nullable Input<String> hostRewrite;
 
     public Input<String> getHostRewrite() {
         return this.hostRewrite == null ? Input.empty() : this.hostRewrite;
@@ -30,7 +30,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * 
      */
     @InputImport(name="pathPrefixRewrite")
-    private final @Nullable Input<String> pathPrefixRewrite;
+      private final @Nullable Input<String> pathPrefixRewrite;
 
     public Input<String> getPathPrefixRewrite() {
         return this.pathPrefixRewrite == null ? Input.empty() : this.pathPrefixRewrite;
@@ -51,7 +51,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * 
      */
     @InputImport(name="pathTemplateRewrite")
-    private final @Nullable Input<String> pathTemplateRewrite;
+      private final @Nullable Input<String> pathTemplateRewrite;
 
     public Input<String> getPathTemplateRewrite() {
         return this.pathTemplateRewrite == null ? Input.empty() : this.pathTemplateRewrite;
@@ -125,7 +125,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
             this.pathTemplateRewrite = Input.ofNullable(pathTemplateRewrite);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs(hostRewrite, pathPrefixRewrite, pathTemplateRewrite);
         }

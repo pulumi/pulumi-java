@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.LanguageExtensionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class LanguageExtensionsListResponse {
     /**
      * The list of language extensions.
      * 
-     */
+    */
     public List<LanguageExtensionResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -54,7 +54,6 @@ public final class LanguageExtensionsListResponse {
             this.value = value;
             return this;
         }
-
         public LanguageExtensionsListResponse build() {
             return new LanguageExtensionsListResponse(value);
         }

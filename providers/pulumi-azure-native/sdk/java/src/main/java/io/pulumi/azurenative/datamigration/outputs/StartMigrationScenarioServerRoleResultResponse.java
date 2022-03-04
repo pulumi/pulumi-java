@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,21 +40,21 @@ public final class StartMigrationScenarioServerRoleResultResponse {
     /**
      * Migration exceptions and warnings.
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Name of server role.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Current state of migration
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -97,7 +97,6 @@ public final class StartMigrationScenarioServerRoleResultResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public StartMigrationScenarioServerRoleResultResponse build() {
             return new StartMigrationScenarioServerRoleResultResponse(exceptionsAndWarnings, name, state);
         }

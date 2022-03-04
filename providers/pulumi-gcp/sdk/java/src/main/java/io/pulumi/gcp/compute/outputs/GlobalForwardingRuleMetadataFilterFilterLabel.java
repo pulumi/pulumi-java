@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,7 +34,7 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabel {
      * Name of the metadata label. The length must be between
      * 1 and 1024 characters, inclusive.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -42,7 +42,7 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabel {
      * The value that the label must match. The value has a maximum
      * length of 1024 characters.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -78,7 +78,6 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabel {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GlobalForwardingRuleMetadataFilterFilterLabel build() {
             return new GlobalForwardingRuleMetadataFilterFilterLabel(name, value);
         }

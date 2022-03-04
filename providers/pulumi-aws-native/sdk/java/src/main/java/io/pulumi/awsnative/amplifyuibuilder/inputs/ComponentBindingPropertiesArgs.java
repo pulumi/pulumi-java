@@ -30,7 +30,6 @@ public final class ComponentBindingPropertiesArgs extends io.pulumi.resources.Re
         public Builder(ComponentBindingPropertiesArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ComponentBindingPropertiesArgs build() {
             return new ComponentBindingPropertiesArgs();
         }

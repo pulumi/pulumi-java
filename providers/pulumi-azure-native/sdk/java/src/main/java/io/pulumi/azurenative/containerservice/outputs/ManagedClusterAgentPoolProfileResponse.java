@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.outputs.AgentPoolUpgradeSettingsRe
 import io.pulumi.azurenative.containerservice.outputs.KubeletConfigResponse;
 import io.pulumi.azurenative.containerservice.outputs.LinuxOSConfigResponse;
 import io.pulumi.azurenative.containerservice.outputs.PowerStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -280,252 +280,252 @@ public final class ManagedClusterAgentPoolProfileResponse {
     /**
      * Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
      * 
-     */
+    */
     public List<String> getAvailabilityZones() {
         return this.availabilityZones == null ? List.of() : this.availabilityZones;
     }
     /**
      * Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Whether to enable auto-scaler
      * 
-     */
+    */
     public Optional<Boolean> getEnableAutoScaling() {
         return Optional.ofNullable(this.enableAutoScaling);
     }
     /**
      * Whether to enable EncryptionAtHost
      * 
-     */
+    */
     public Optional<Boolean> getEnableEncryptionAtHost() {
         return Optional.ofNullable(this.enableEncryptionAtHost);
     }
     /**
      * Whether to use FIPS enabled OS
      * 
-     */
+    */
     public Optional<Boolean> getEnableFIPS() {
         return Optional.ofNullable(this.enableFIPS);
     }
     /**
      * Enable public IP for nodes
      * 
-     */
+    */
     public Optional<Boolean> getEnableNodePublicIP() {
         return Optional.ofNullable(this.enableNodePublicIP);
     }
     /**
      * GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
      * 
-     */
+    */
     public Optional<String> getGpuInstanceProfile() {
         return Optional.ofNullable(this.gpuInstanceProfile);
     }
     /**
      * KubeletConfig specifies the configuration of kubelet on agent nodes.
      * 
-     */
+    */
     public Optional<KubeletConfigResponse> getKubeletConfig() {
         return Optional.ofNullable(this.kubeletConfig);
     }
     /**
      * KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
      * 
-     */
+    */
     public Optional<String> getKubeletDiskType() {
         return Optional.ofNullable(this.kubeletDiskType);
     }
     /**
      * LinuxOSConfig specifies the OS configuration of linux agent nodes.
      * 
-     */
+    */
     public Optional<LinuxOSConfigResponse> getLinuxOSConfig() {
         return Optional.ofNullable(this.linuxOSConfig);
     }
     /**
      * Maximum number of nodes for auto-scaling
      * 
-     */
+    */
     public Optional<Integer> getMaxCount() {
         return Optional.ofNullable(this.maxCount);
     }
     /**
      * Maximum number of pods that can run on a node.
      * 
-     */
+    */
     public Optional<Integer> getMaxPods() {
         return Optional.ofNullable(this.maxPods);
     }
     /**
      * Minimum number of nodes for auto-scaling
      * 
-     */
+    */
     public Optional<Integer> getMinCount() {
         return Optional.ofNullable(this.minCount);
     }
     /**
      * AgentPoolMode represents mode of an agent pool
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * Unique name of the agent pool profile in the context of the subscription and resource group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Version of node image
      * 
-     */
+    */
     public String getNodeImageVersion() {
         return this.nodeImageVersion;
     }
     /**
      * Agent pool node labels to be persisted across all nodes in agent pool.
      * 
-     */
+    */
     public Map<String,String> getNodeLabels() {
         return this.nodeLabels == null ? Map.of() : this.nodeLabels;
     }
     /**
      * Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
      * 
-     */
+    */
     public Optional<String> getNodePublicIPPrefixID() {
         return Optional.ofNullable(this.nodePublicIPPrefixID);
     }
     /**
      * Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
      * 
-     */
+    */
     public List<String> getNodeTaints() {
         return this.nodeTaints == null ? List.of() : this.nodeTaints;
     }
     /**
      * Version of orchestrator specified when creating the managed cluster.
      * 
-     */
+    */
     public Optional<String> getOrchestratorVersion() {
         return Optional.ofNullable(this.orchestratorVersion);
     }
     /**
      * OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
      * 
-     */
+    */
     public Optional<Integer> getOsDiskSizeGB() {
         return Optional.ofNullable(this.osDiskSizeGB);
     }
     /**
      * OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
      * 
-     */
+    */
     public Optional<String> getOsDiskType() {
         return Optional.ofNullable(this.osDiskType);
     }
     /**
      * OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
      * 
-     */
+    */
     public Optional<String> getOsSKU() {
         return Optional.ofNullable(this.osSKU);
     }
     /**
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Pod SubnetID specifies the VNet's subnet identifier for pods.
      * 
-     */
+    */
     public Optional<String> getPodSubnetID() {
         return Optional.ofNullable(this.podSubnetID);
     }
     /**
      * Describes whether the Agent Pool is Running or Stopped
      * 
-     */
+    */
     public PowerStateResponse getPowerState() {
         return this.powerState;
     }
     /**
      * The current deployment or provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The ID for Proximity Placement Group.
      * 
-     */
+    */
     public Optional<String> getProximityPlacementGroupID() {
         return Optional.ofNullable(this.proximityPlacementGroupID);
     }
     /**
      * ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
      * 
-     */
+    */
     public Optional<String> getScaleSetEvictionPolicy() {
         return Optional.ofNullable(this.scaleSetEvictionPolicy);
     }
     /**
      * ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
      * 
-     */
+    */
     public Optional<String> getScaleSetPriority() {
         return Optional.ofNullable(this.scaleSetPriority);
     }
     /**
      * SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
      * 
-     */
+    */
     public Optional<Double> getSpotMaxPrice() {
         return Optional.ofNullable(this.spotMaxPrice);
     }
     /**
      * Agent pool tags to be persisted on the agent pool virtual machine scale set.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * AgentPoolType represents types of an agent pool
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Settings for upgrading the agentpool
      * 
-     */
+    */
     public Optional<AgentPoolUpgradeSettingsResponse> getUpgradeSettings() {
         return Optional.ofNullable(this.upgradeSettings);
     }
     /**
      * Size of agent VMs.
      * 
-     */
+    */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }
     /**
      * VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods
      * 
-     */
+    */
     public Optional<String> getVnetSubnetID() {
         return Optional.ofNullable(this.vnetSubnetID);
     }
@@ -799,7 +799,6 @@ public final class ManagedClusterAgentPoolProfileResponse {
             this.vnetSubnetID = vnetSubnetID;
             return this;
         }
-
         public ManagedClusterAgentPoolProfileResponse build() {
             return new ManagedClusterAgentPoolProfileResponse(availabilityZones, count, enableAutoScaling, enableEncryptionAtHost, enableFIPS, enableNodePublicIP, gpuInstanceProfile, kubeletConfig, kubeletDiskType, linuxOSConfig, maxCount, maxPods, minCount, mode, name, nodeImageVersion, nodeLabels, nodePublicIPPrefixID, nodeTaints, orchestratorVersion, osDiskSizeGB, osDiskType, osSKU, osType, podSubnetID, powerState, provisioningState, proximityPlacementGroupID, scaleSetEvictionPolicy, scaleSetPriority, spotMaxPrice, tags, type, upgradeSettings, vmSize, vnetSubnetID);
         }

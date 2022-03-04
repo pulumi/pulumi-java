@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupName")
-    private final @Nullable Input<String> backupName;
+      private final @Nullable Input<String> backupName;
 
     public Input<String> getBackupName() {
         return this.backupName == null ? Input.empty() : this.backupName;
@@ -41,7 +41,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -52,7 +52,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -63,7 +63,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolName", required=true)
-    private final Input<String> poolName;
+      private final Input<String> poolName;
 
     public Input<String> getPoolName() {
         return this.poolName;
@@ -74,7 +74,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -85,7 +85,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeName", required=true)
-    private final Input<String> volumeName;
+      private final Input<String> volumeName;
 
     public Input<String> getVolumeName() {
         return this.volumeName;
@@ -219,7 +219,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.volumeName = Input.of(Objects.requireNonNull(volumeName));
             return this;
         }
-
         public BackupArgs build() {
             return new BackupArgs(accountName, backupName, label, location, poolName, resourceGroupName, volumeName);
         }

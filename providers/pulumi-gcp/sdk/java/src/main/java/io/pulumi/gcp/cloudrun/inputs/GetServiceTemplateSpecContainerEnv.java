@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecContainerEnvValueFrom;
 import java.lang.String;
 import java.util.List;
@@ -19,21 +19,21 @@ public final class GetServiceTemplateSpecContainerEnv extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
     }
 
     @InputImport(name="valueFroms", required=true)
-    private final List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms;
+      private final List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms;
 
     public List<GetServiceTemplateSpecContainerEnvValueFrom> getValueFroms() {
         return this.valueFroms;
@@ -92,7 +92,6 @@ public final class GetServiceTemplateSpecContainerEnv extends io.pulumi.resource
             this.valueFroms = Objects.requireNonNull(valueFroms);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnv build() {
             return new GetServiceTemplateSpecContainerEnv(name, value, valueFroms);
         }

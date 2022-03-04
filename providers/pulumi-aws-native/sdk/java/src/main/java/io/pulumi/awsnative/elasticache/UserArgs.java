@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticache;
 
 import io.pulumi.awsnative.elasticache.enums.UserEngine;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessString")
-    private final @Nullable Input<String> accessString;
+      private final @Nullable Input<String> accessString;
 
     public Input<String> getAccessString() {
         return this.accessString == null ? Input.empty() : this.accessString;
@@ -33,7 +33,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine", required=true)
-    private final Input<UserEngine> engine;
+      private final Input<UserEngine> engine;
 
     public Input<UserEngine> getEngine() {
         return this.engine;
@@ -44,7 +44,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noPasswordRequired")
-    private final @Nullable Input<Boolean> noPasswordRequired;
+      private final @Nullable Input<Boolean> noPasswordRequired;
 
     public Input<Boolean> getNoPasswordRequired() {
         return this.noPasswordRequired == null ? Input.empty() : this.noPasswordRequired;
@@ -55,7 +55,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passwords")
-    private final @Nullable Input<List<String>> passwords;
+      private final @Nullable Input<List<String>> passwords;
 
     public Input<List<String>> getPasswords() {
         return this.passwords == null ? Input.empty() : this.passwords;
@@ -66,7 +66,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId", required=true)
-    private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;
@@ -77,7 +77,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -196,7 +196,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public UserArgs build() {
             return new UserArgs(accessString, engine, noPasswordRequired, passwords, userId, userName);
         }

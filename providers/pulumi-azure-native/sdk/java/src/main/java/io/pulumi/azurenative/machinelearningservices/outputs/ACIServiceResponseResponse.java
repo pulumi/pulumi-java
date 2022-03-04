@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ACIServiceResponseR
 import io.pulumi.azurenative.machinelearningservices.outputs.ContainerResourceRequirementsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ServiceResponseBaseResponseError;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -206,21 +206,21 @@ public final class ACIServiceResponseResponse {
     /**
      * Whether or not Application Insights is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getAppInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
     /**
      * Whether or not authentication is enabled on the service.
      * 
-     */
+    */
     public Optional<Boolean> getAuthEnabled() {
         return Optional.ofNullable(this.authEnabled);
     }
     /**
      * The CName for the service.
      * 
-     */
+    */
     public Optional<String> getCname() {
         return Optional.ofNullable(this.cname);
     }
@@ -228,154 +228,154 @@ public final class ACIServiceResponseResponse {
      * The compute environment type for the service.
      * Expected value is 'ACI'.
      * 
-     */
+    */
     public String getComputeType() {
         return this.computeType;
     }
     /**
      * The container resource requirements.
      * 
-     */
+    */
     public Optional<ContainerResourceRequirementsResponse> getContainerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
     /**
      * Details of the data collection options specified.
      * 
-     */
+    */
     public Optional<ACIServiceResponseResponseDataCollection> getDataCollection() {
         return Optional.ofNullable(this.dataCollection);
     }
     /**
      * The deployment type for the service.
      * 
-     */
+    */
     public Optional<String> getDeploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
      * The service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encryption properties.
      * 
-     */
+    */
     public Optional<ACIServiceResponseResponseEncryptionProperties> getEncryptionProperties() {
         return Optional.ofNullable(this.encryptionProperties);
     }
     /**
      * The Environment, models and assets used for inferencing.
      * 
-     */
+    */
     public Optional<ACIServiceResponseResponseEnvironmentImageRequest> getEnvironmentImageRequest() {
         return Optional.ofNullable(this.environmentImageRequest);
     }
     /**
      * The error details.
      * 
-     */
+    */
     public ServiceResponseBaseResponseError getError() {
         return this.error;
     }
     /**
      * The service tag dictionary. Tags are mutable.
      * 
-     */
+    */
     public Map<String,String> getKvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
     /**
      * The name of the Azure location/region.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Details on the models and configurations.
      * 
-     */
+    */
     public Map<String,Object> getModelConfigMap() {
         return this.modelConfigMap;
     }
     /**
      * The list of models.
      * 
-     */
+    */
     public List<ModelResponse> getModels() {
         return this.models == null ? List.of() : this.models;
     }
     /**
      * The service property dictionary. Properties are immutable.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * The public Fqdn for the service.
      * 
-     */
+    */
     public Optional<String> getPublicFqdn() {
         return Optional.ofNullable(this.publicFqdn);
     }
     /**
      * The public IP address for the service.
      * 
-     */
+    */
     public Optional<String> getPublicIp() {
         return Optional.ofNullable(this.publicIp);
     }
     /**
      * The Uri for sending scoring requests.
      * 
-     */
+    */
     public String getScoringUri() {
         return this.scoringUri;
     }
     /**
      * The public SSL certificate in PEM format to use if SSL is enabled.
      * 
-     */
+    */
     public Optional<String> getSslCertificate() {
         return Optional.ofNullable(this.sslCertificate);
     }
     /**
      * Whether or not SSL is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getSslEnabled() {
         return Optional.ofNullable(this.sslEnabled);
     }
     /**
      * The public SSL key in PEM format for the certificate.
      * 
-     */
+    */
     public Optional<String> getSslKey() {
         return Optional.ofNullable(this.sslKey);
     }
     /**
      * The current state of the service.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The Uri for sending swagger requests.
      * 
-     */
+    */
     public String getSwaggerUri() {
         return this.swaggerUri;
     }
     /**
      * The virtual network configuration.
      * 
-     */
+    */
     public Optional<ACIServiceResponseResponseVnetConfiguration> getVnetConfiguration() {
         return Optional.ofNullable(this.vnetConfiguration);
     }
@@ -572,7 +572,6 @@ public final class ACIServiceResponseResponse {
             this.vnetConfiguration = vnetConfiguration;
             return this;
         }
-
         public ACIServiceResponseResponse build() {
             return new ACIServiceResponseResponse(appInsightsEnabled, authEnabled, cname, computeType, containerResourceRequirements, dataCollection, deploymentType, description, encryptionProperties, environmentImageRequest, error, kvTags, location, modelConfigMap, models, properties, publicFqdn, publicIp, scoringUri, sslCertificate, sslEnabled, sslKey, state, swaggerUri, vnetConfiguration);
         }

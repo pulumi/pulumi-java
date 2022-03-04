@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceRepositoryResourceAptRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceRepositoryResourceGooRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceRepositoryResourceYumRepositoryArgs;
@@ -26,7 +26,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="apt")
-    private final @Nullable Input<OSPolicyResourceRepositoryResourceAptRepositoryArgs> apt;
+      private final @Nullable Input<OSPolicyResourceRepositoryResourceAptRepositoryArgs> apt;
 
     public Input<OSPolicyResourceRepositoryResourceAptRepositoryArgs> getApt() {
         return this.apt == null ? Input.empty() : this.apt;
@@ -37,7 +37,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="goo")
-    private final @Nullable Input<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo;
+      private final @Nullable Input<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo;
 
     public Input<OSPolicyResourceRepositoryResourceGooRepositoryArgs> getGoo() {
         return this.goo == null ? Input.empty() : this.goo;
@@ -48,7 +48,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="yum")
-    private final @Nullable Input<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum;
+      private final @Nullable Input<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum;
 
     public Input<OSPolicyResourceRepositoryResourceYumRepositoryArgs> getYum() {
         return this.yum == null ? Input.empty() : this.yum;
@@ -59,7 +59,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="zypper")
-    private final @Nullable Input<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper;
+      private final @Nullable Input<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper;
 
     public Input<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> getZypper() {
         return this.zypper == null ? Input.empty() : this.zypper;
@@ -148,7 +148,6 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
             this.zypper = Input.ofNullable(zypper);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceArgs build() {
             return new OSPolicyResourceRepositoryResourceArgs(apt, goo, yum, zypper);
         }

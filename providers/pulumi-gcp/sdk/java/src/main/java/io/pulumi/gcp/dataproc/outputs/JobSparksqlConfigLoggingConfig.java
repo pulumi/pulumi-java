@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -45,7 +45,6 @@ public final class JobSparksqlConfigLoggingConfig {
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }
-
         public JobSparksqlConfigLoggingConfig build() {
             return new JobSparksqlConfigLoggingConfig(driverLogLevels);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.forecast.outputs;
 
 import io.pulumi.awsnative.forecast.outputs.AttributesItemProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class SchemaProperties {
             this.attributes = attributes;
             return this;
         }
-
         public SchemaProperties build() {
             return new SchemaProperties(attributes);
         }

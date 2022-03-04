@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxIntentTrainingPhrasePart;
 import java.lang.Integer;
 import java.lang.String;
@@ -50,7 +50,7 @@ public final class CxIntentTrainingPhrase {
     /**
      * The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -64,14 +64,14 @@ public final class CxIntentTrainingPhrase {
      * Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CxIntentTrainingPhrasePart> getParts() {
         return this.parts;
     }
     /**
      * Indicates how many times this example was added to the intent.
      * 
-     */
+    */
     public Optional<Integer> getRepeatCount() {
         return Optional.ofNullable(this.repeatCount);
     }
@@ -114,7 +114,6 @@ public final class CxIntentTrainingPhrase {
             this.repeatCount = repeatCount;
             return this;
         }
-
         public CxIntentTrainingPhrase build() {
             return new CxIntentTrainingPhrase(id, parts, repeatCount);
         }

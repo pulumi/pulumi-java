@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse;
 import java.lang.String;
 import java.util.List;
@@ -54,35 +54,35 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse {
     /**
      * Number of records within these anonymity bounds.
      * 
-     */
+    */
     public String getBucketSize() {
         return this.bucketSize;
     }
     /**
      * Total number of distinct quasi-identifier tuple values in this bucket.
      * 
-     */
+    */
     public String getBucketValueCount() {
         return this.bucketValueCount;
     }
     /**
      * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> getBucketValues() {
         return this.bucketValues;
     }
     /**
      * Always greater than or equal to min_anonymity.
      * 
-     */
+    */
     public String getMaxAnonymity() {
         return this.maxAnonymity;
     }
     /**
      * Always positive.
      * 
-     */
+    */
     public String getMinAnonymity() {
         return this.minAnonymity;
     }
@@ -139,7 +139,6 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse {
             this.minAnonymity = Objects.requireNonNull(minAnonymity);
             return this;
         }
-
         public GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxAnonymity, minAnonymity);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class VirtualDirectoryResponse {
     /**
      * Physical path.
      * 
-     */
+    */
     public Optional<String> getPhysicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
     /**
      * Path to virtual application.
      * 
-     */
+    */
     public Optional<String> getVirtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }
@@ -76,7 +76,6 @@ public final class VirtualDirectoryResponse {
             this.virtualPath = virtualPath;
             return this;
         }
-
         public VirtualDirectoryResponse build() {
             return new VirtualDirectoryResponse(physicalPath, virtualPath);
         }

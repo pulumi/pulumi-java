@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.EncryptionScopeKeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -84,63 +84,63 @@ public final class GetEncryptionScopeResult {
     /**
      * Gets the creation date and time of the encryption scope in UTC.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
      * 
-     */
+    */
     public Optional<EncryptionScopeKeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
      * Gets the last modification date and time of the encryption scope in UTC.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
      * 
-     */
+    */
     public Optional<Boolean> getRequireInfrastructureEncryption() {
         return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
     /**
      * The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -225,7 +225,6 @@ public final class GetEncryptionScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEncryptionScopeResult build() {
             return new GetEncryptionScopeResult(creationTime, id, keyVaultProperties, lastModifiedTime, name, requireInfrastructureEncryption, source, state, type);
         }

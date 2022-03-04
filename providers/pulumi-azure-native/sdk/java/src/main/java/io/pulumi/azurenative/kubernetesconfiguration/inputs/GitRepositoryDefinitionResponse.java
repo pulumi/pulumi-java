@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.RepositoryRefDefinitionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="httpsCAFile")
-    private final @Nullable String httpsCAFile;
+      private final @Nullable String httpsCAFile;
 
     public Optional<String> getHttpsCAFile() {
         return this.httpsCAFile == null ? Optional.empty() : Optional.ofNullable(this.httpsCAFile);
@@ -36,7 +36,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="httpsUser")
-    private final @Nullable String httpsUser;
+      private final @Nullable String httpsUser;
 
     public Optional<String> getHttpsUser() {
         return this.httpsUser == null ? Optional.empty() : Optional.ofNullable(this.httpsUser);
@@ -47,7 +47,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="localAuthRef")
-    private final @Nullable String localAuthRef;
+      private final @Nullable String localAuthRef;
 
     public Optional<String> getLocalAuthRef() {
         return this.localAuthRef == null ? Optional.empty() : Optional.ofNullable(this.localAuthRef);
@@ -58,7 +58,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="repositoryRef")
-    private final @Nullable RepositoryRefDefinitionResponse repositoryRef;
+      private final @Nullable RepositoryRefDefinitionResponse repositoryRef;
 
     public Optional<RepositoryRefDefinitionResponse> getRepositoryRef() {
         return this.repositoryRef == null ? Optional.empty() : Optional.ofNullable(this.repositoryRef);
@@ -69,7 +69,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sshKnownHosts")
-    private final @Nullable String sshKnownHosts;
+      private final @Nullable String sshKnownHosts;
 
     public Optional<String> getSshKnownHosts() {
         return this.sshKnownHosts == null ? Optional.empty() : Optional.ofNullable(this.sshKnownHosts);
@@ -80,7 +80,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="syncIntervalInSeconds")
-    private final @Nullable Double syncIntervalInSeconds;
+      private final @Nullable Double syncIntervalInSeconds;
 
     public Optional<Double> getSyncIntervalInSeconds() {
         return this.syncIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.syncIntervalInSeconds);
@@ -91,7 +91,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Double timeoutInSeconds;
+      private final @Nullable Double timeoutInSeconds;
 
     public Optional<Double> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
@@ -102,7 +102,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+      private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -211,7 +211,6 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
             this.url = url;
             return this;
         }
-
         public GitRepositoryDefinitionResponse build() {
             return new GitRepositoryDefinitionResponse(httpsCAFile, httpsUser, localAuthRef, repositoryRef, sshKnownHosts, syncIntervalInSeconds, timeoutInSeconds, url);
         }

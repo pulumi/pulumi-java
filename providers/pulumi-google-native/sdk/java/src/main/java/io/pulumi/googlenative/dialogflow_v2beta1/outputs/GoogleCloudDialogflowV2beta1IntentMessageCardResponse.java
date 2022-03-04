@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse {
     /**
      * Optional. The collection of card buttons.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> getButtons() {
         return this.buttons;
     }
     /**
      * Optional. The public URI to an image file for the card.
      * 
-     */
+    */
     public String getImageUri() {
         return this.imageUri;
     }
     /**
      * Optional. The subtitle of the card.
      * 
-     */
+    */
     public String getSubtitle() {
         return this.subtitle;
     }
     /**
      * Optional. The title of the card.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -118,7 +118,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardResponse(buttons, imageUri, subtitle, title);
         }

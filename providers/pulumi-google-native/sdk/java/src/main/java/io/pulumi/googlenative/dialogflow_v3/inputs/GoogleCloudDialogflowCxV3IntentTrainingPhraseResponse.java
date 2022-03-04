@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse;
 import java.lang.Integer;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse extends
      * 
      */
     @InputImport(name="parts", required=true)
-    private final List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse> parts;
+      private final List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse> parts;
 
     public List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse> getParts() {
         return this.parts;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse extends
      * 
      */
     @InputImport(name="repeatCount", required=true)
-    private final Integer repeatCount;
+      private final Integer repeatCount;
 
     public Integer getRepeatCount() {
         return this.repeatCount;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse extends
             this.repeatCount = Objects.requireNonNull(repeatCount);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse build() {
             return new GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse(parts, repeatCount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.JobConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GetJobTemplateResult {
     /**
      * The configuration for this template.
      * 
-     */
+    */
     public JobConfigResponse getConfig() {
         return this.config;
     }
     /**
      * The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -75,7 +75,6 @@ public final class GetJobTemplateResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetJobTemplateResult build() {
             return new GetJobTemplateResult(config, name);
         }

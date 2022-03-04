@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class CloudSqlCredentialResponse {
     /**
      * The password for the credential.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The username for the credential.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -74,7 +74,6 @@ public final class CloudSqlCredentialResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public CloudSqlCredentialResponse build() {
             return new CloudSqlCredentialResponse(password, username);
         }

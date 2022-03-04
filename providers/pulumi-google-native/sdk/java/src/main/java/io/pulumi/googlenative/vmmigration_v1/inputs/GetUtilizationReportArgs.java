@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class GetUtilizationReportArgs extends io.pulumi.resources.InvokeAr
     public static final GetUtilizationReportArgs Empty = new GetUtilizationReportArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="sourceId", required=true)
-    private final String sourceId;
+      private final String sourceId;
 
     public String getSourceId() {
         return this.sourceId;
     }
 
     @InputImport(name="utilizationReportId", required=true)
-    private final String utilizationReportId;
+      private final String utilizationReportId;
 
     public String getUtilizationReportId() {
         return this.utilizationReportId;
     }
 
     @InputImport(name="view")
-    private final @Nullable String view;
+      private final @Nullable String view;
 
     public Optional<String> getView() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
@@ -122,7 +122,6 @@ public final class GetUtilizationReportArgs extends io.pulumi.resources.InvokeAr
             this.view = view;
             return this;
         }
-
         public GetUtilizationReportArgs build() {
             return new GetUtilizationReportArgs(location, project, sourceId, utilizationReportId, view);
         }

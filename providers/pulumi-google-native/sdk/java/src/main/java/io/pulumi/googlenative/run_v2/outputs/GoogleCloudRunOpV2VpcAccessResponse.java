@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
     /**
      * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
      * 
-     */
+    */
     public String getConnector() {
         return this.connector;
     }
     /**
      * Traffic VPC egress settings.
      * 
-     */
+    */
     public String getEgress() {
         return this.egress;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
             this.egress = Objects.requireNonNull(egress);
             return this;
         }
-
         public GoogleCloudRunOpV2VpcAccessResponse build() {
             return new GoogleCloudRunOpV2VpcAccessResponse(connector, egress);
         }

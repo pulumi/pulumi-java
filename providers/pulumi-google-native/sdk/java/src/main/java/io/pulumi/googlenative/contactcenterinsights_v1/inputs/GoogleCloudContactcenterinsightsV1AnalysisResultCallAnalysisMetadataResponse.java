@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1CallAnnotationResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1IssueModelResultResponse;
@@ -26,7 +26,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @InputImport(name="annotations", required=true)
-    private final List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations;
+      private final List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations;
 
     public List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> getAnnotations() {
         return this.annotations;
@@ -37,7 +37,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @InputImport(name="entities", required=true)
-    private final Map<String,String> entities;
+      private final Map<String,String> entities;
 
     public Map<String,String> getEntities() {
         return this.entities;
@@ -48,7 +48,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @InputImport(name="intents", required=true)
-    private final Map<String,String> intents;
+      private final Map<String,String> intents;
 
     public Map<String,String> getIntents() {
         return this.intents;
@@ -59,7 +59,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @InputImport(name="issueModelResult", required=true)
-    private final GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult;
+      private final GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult;
 
     public GoogleCloudContactcenterinsightsV1IssueModelResultResponse getIssueModelResult() {
         return this.issueModelResult;
@@ -70,7 +70,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @InputImport(name="phraseMatchers", required=true)
-    private final Map<String,String> phraseMatchers;
+      private final Map<String,String> phraseMatchers;
 
     public Map<String,String> getPhraseMatchers() {
         return this.phraseMatchers;
@@ -81,7 +81,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * 
      */
     @InputImport(name="sentiments", required=true)
-    private final List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
+      private final List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
 
     public List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> getSentiments() {
         return this.sentiments;
@@ -170,7 +170,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
             this.sentiments = Objects.requireNonNull(sentiments);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(annotations, entities, intents, issueModelResult, phraseMatchers, sentiments);
         }

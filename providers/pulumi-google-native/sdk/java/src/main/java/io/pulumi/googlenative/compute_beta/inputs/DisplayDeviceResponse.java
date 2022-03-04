@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DisplayDeviceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enableDisplay", required=true)
-    private final Boolean enableDisplay;
+      private final Boolean enableDisplay;
 
     public Boolean getEnableDisplay() {
         return this.enableDisplay;
@@ -59,7 +59,6 @@ public final class DisplayDeviceResponse extends io.pulumi.resources.InvokeArgs 
             this.enableDisplay = Objects.requireNonNull(enableDisplay);
             return this;
         }
-
         public DisplayDeviceResponse build() {
             return new DisplayDeviceResponse(enableDisplay);
         }

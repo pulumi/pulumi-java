@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -48,28 +48,28 @@ public final class StrongIdResponse {
     /**
      * Localized descriptions.
      * 
-     */
+    */
     public Map<String,String> getDescription() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Localized display name.
      * 
-     */
+    */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * The properties which make up the unique ID.
      * 
-     */
+    */
     public List<String> getKeyPropertyNames() {
         return this.keyPropertyNames;
     }
     /**
      * The Name identifying the strong ID.
      * 
-     */
+    */
     public String getStrongIdName() {
         return this.strongIdName;
     }
@@ -119,7 +119,6 @@ public final class StrongIdResponse {
             this.strongIdName = Objects.requireNonNull(strongIdName);
             return this;
         }
-
         public StrongIdResponse build() {
             return new StrongIdResponse(description, displayName, keyPropertyNames, strongIdName);
         }

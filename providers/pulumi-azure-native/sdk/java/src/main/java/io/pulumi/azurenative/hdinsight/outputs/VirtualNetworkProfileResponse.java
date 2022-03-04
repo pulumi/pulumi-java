@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class VirtualNetworkProfileResponse {
     /**
      * The ID of the virtual network.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the subnet.
      * 
-     */
+    */
     public Optional<String> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -76,7 +76,6 @@ public final class VirtualNetworkProfileResponse {
             this.subnet = subnet;
             return this;
         }
-
         public VirtualNetworkProfileResponse build() {
             return new VirtualNetworkProfileResponse(id, subnet);
         }

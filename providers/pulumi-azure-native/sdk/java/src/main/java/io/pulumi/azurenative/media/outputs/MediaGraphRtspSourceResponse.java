@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.outputs;
 import io.pulumi.azurenative.media.outputs.MediaGraphClearEndpointResponse;
 import io.pulumi.azurenative.media.outputs.MediaGraphTlsEndpointResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,14 +49,14 @@ public final class MediaGraphRtspSourceResponse {
     /**
      * RTSP endpoint of the stream being connected to.
      * 
-     */
+    */
     public Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> getEndpoint() {
         return this.endpoint;
     }
     /**
      * Source name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -64,14 +64,14 @@ public final class MediaGraphRtspSourceResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphRtspSource'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
      * 
-     */
+    */
     public String getTransport() {
         return this.transport;
     }
@@ -121,7 +121,6 @@ public final class MediaGraphRtspSourceResponse {
             this.transport = Objects.requireNonNull(transport);
             return this;
         }
-
         public MediaGraphRtspSourceResponse build() {
             return new MediaGraphRtspSourceResponse(endpoint, name, odataType, transport);
         }

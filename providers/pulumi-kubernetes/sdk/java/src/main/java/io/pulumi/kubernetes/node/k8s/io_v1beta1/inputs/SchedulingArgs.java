@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.node.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TolerationArgs;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeSelector")
-    private final @Nullable Input<Map<String,String>> nodeSelector;
+      private final @Nullable Input<Map<String,String>> nodeSelector;
 
     public Input<Map<String,String>> getNodeSelector() {
         return this.nodeSelector == null ? Input.empty() : this.nodeSelector;
@@ -37,7 +37,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tolerations")
-    private final @Nullable Input<List<TolerationArgs>> tolerations;
+      private final @Nullable Input<List<TolerationArgs>> tolerations;
 
     public Input<List<TolerationArgs>> getTolerations() {
         return this.tolerations == null ? Input.empty() : this.tolerations;
@@ -96,7 +96,6 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             this.tolerations = Input.ofNullable(tolerations);
             return this;
         }
-
         public SchedulingArgs build() {
             return new SchedulingArgs(nodeSelector, tolerations);
         }

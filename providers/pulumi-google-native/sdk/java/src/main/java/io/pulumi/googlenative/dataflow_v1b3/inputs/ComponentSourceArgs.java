@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="originalTransformOrCollection")
-    private final @Nullable Input<String> originalTransformOrCollection;
+      private final @Nullable Input<String> originalTransformOrCollection;
 
     public Input<String> getOriginalTransformOrCollection() {
         return this.originalTransformOrCollection == null ? Input.empty() : this.originalTransformOrCollection;
@@ -45,7 +45,7 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -119,7 +119,6 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public ComponentSourceArgs build() {
             return new ComponentSourceArgs(name, originalTransformOrCollection, userName);
         }

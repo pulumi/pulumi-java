@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainer;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecVolume;
 import java.lang.Integer;
@@ -114,7 +114,6 @@ public final class GetServiceTemplateSpec {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public GetServiceTemplateSpec build() {
             return new GetServiceTemplateSpec(containerConcurrency, containers, serviceAccountName, servingState, timeoutSeconds, volumes);
         }

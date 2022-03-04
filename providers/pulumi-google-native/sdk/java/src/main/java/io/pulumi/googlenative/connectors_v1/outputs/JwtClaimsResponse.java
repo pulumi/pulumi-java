@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class JwtClaimsResponse {
     /**
      * Value for the "aud" claim.
      * 
-     */
+    */
     public String getAudience() {
         return this.audience;
     }
     /**
      * Value for the "iss" claim.
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }
     /**
      * Value for the "sub" claim.
      * 
-     */
+    */
     public String getSubject() {
         return this.subject;
     }
@@ -95,7 +95,6 @@ public final class JwtClaimsResponse {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public JwtClaimsResponse build() {
             return new JwtClaimsResponse(audience, issuer, subject);
         }

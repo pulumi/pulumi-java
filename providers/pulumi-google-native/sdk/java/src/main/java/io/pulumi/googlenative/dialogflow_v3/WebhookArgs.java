@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs;
 import java.lang.Boolean;
@@ -18,7 +18,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     public static final WebhookArgs Empty = new WebhookArgs();
 
     @InputImport(name="agentId", required=true)
-    private final Input<String> agentId;
+      private final Input<String> agentId;
 
     public Input<String> getAgentId() {
         return this.agentId;
@@ -29,7 +29,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -40,7 +40,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -51,14 +51,14 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="genericWebService")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
 
     public Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> getGenericWebService() {
         return this.genericWebService == null ? Input.empty() : this.genericWebService;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -69,14 +69,14 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -87,7 +87,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceDirectory")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs> serviceDirectory;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs> serviceDirectory;
 
     public Input<GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs> getServiceDirectory() {
         return this.serviceDirectory == null ? Input.empty() : this.serviceDirectory;
@@ -98,7 +98,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -262,7 +262,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public WebhookArgs build() {
             return new WebhookArgs(agentId, disabled, displayName, genericWebService, location, name, project, serviceDirectory, timeout);
         }

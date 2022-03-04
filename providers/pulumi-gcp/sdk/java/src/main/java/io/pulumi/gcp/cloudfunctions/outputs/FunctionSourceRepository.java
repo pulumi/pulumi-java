@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -32,7 +32,7 @@ public final class FunctionSourceRepository {
     /**
      * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -68,7 +68,6 @@ public final class FunctionSourceRepository {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public FunctionSourceRepository build() {
             return new FunctionSourceRepository(deployedUrl, url);
         }

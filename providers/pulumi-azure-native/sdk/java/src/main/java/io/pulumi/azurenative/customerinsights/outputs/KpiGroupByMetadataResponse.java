@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class KpiGroupByMetadataResponse {
     /**
      * The display name.
      * 
-     */
+    */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * The name of the field.
      * 
-     */
+    */
     public Optional<String> getFieldName() {
         return Optional.ofNullable(this.fieldName);
     }
     /**
      * The type of the field.
      * 
-     */
+    */
     public Optional<String> getFieldType() {
         return Optional.ofNullable(this.fieldType);
     }
@@ -98,7 +98,6 @@ public final class KpiGroupByMetadataResponse {
             this.fieldType = fieldType;
             return this;
         }
-
         public KpiGroupByMetadataResponse build() {
             return new KpiGroupByMetadataResponse(displayName, fieldName, fieldType);
         }

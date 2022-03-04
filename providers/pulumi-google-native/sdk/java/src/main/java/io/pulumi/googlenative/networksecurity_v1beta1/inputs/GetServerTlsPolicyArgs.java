@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetServerTlsPolicyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetServerTlsPolicyArgs Empty = new GetServerTlsPolicyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="serverTlsPolicyId", required=true)
-    private final String serverTlsPolicyId;
+      private final String serverTlsPolicyId;
 
     public String getServerTlsPolicyId() {
         return this.serverTlsPolicyId;
@@ -88,7 +88,6 @@ public final class GetServerTlsPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.serverTlsPolicyId = Objects.requireNonNull(serverTlsPolicyId);
             return this;
         }
-
         public GetServerTlsPolicyArgs build() {
             return new GetServerTlsPolicyArgs(location, project, serverTlsPolicyId);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.inputs.GetHcxEnterpriseSiteArgs;
 import io.pulumi.azurenative.avs.outputs.GetHcxEnterpriseSiteResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHcxEnterpriseSite {
-/**
- * An HCX Enterprise Site resource
+    private GetHcxEnterpriseSite() {}
+    public interface BuilderApplicator {
+        public void apply(GetHcxEnterpriseSiteArgs.Builder a);
+    }
+    private static GetHcxEnterpriseSiteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHcxEnterpriseSiteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An HCX Enterprise Site resource
  * API Version: 2020-03-20.
  * 
- *
- * An HCX Enterprise Site resource
+     *
+     * An HCX Enterprise Site resource
  * 
- */
+     */
+    public static CompletableFuture<GetHcxEnterpriseSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An HCX Enterprise Site resource
+     * API Version: 2020-03-20.
+     * 
+     *
+         * An HCX Enterprise Site resource
+     * 
+     */
     public static CompletableFuture<GetHcxEnterpriseSiteResult> invokeAsync(GetHcxEnterpriseSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getHcxEnterpriseSite", TypeShape.of(GetHcxEnterpriseSiteResult.class), args == null ? GetHcxEnterpriseSiteArgs.Empty : args, Utilities.withVersion(options));
     }

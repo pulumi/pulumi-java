@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class CertHttpChallengeResponse {
     /**
      * The URL path on which to serve the specified token to satisfy the certificate challenge.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The token to serve at the specified URL path to satisfy the certificate challenge.
      * 
-     */
+    */
     public String getToken() {
         return this.token;
     }
@@ -74,7 +74,6 @@ public final class CertHttpChallengeResponse {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public CertHttpChallengeResponse build() {
             return new CertHttpChallengeResponse(path, token);
         }

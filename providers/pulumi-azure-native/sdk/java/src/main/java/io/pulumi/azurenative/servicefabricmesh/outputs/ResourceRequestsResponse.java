@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ResourceRequestsResponse {
     /**
      * Requested number of CPU cores. At present, only full cores are supported.
      * 
-     */
+    */
     public Double getCpu() {
         return this.cpu;
     }
     /**
      * The memory request in GB for this container.
      * 
-     */
+    */
     public Double getMemoryInGB() {
         return this.memoryInGB;
     }
@@ -74,7 +74,6 @@ public final class ResourceRequestsResponse {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
-
         public ResourceRequestsResponse build() {
             return new ResourceRequestsResponse(cpu, memoryInGB);
         }

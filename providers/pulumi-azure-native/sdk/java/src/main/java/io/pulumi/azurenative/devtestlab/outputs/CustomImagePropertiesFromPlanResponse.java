@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class CustomImagePropertiesFromPlanResponse {
     /**
      * The id of the plan, equivalent to name of the plan
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The offer for the plan from the marketplace image the custom image is derived from
      * 
-     */
+    */
     public Optional<String> getOffer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * The publisher for the plan from the marketplace image the custom image is derived from
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -97,7 +97,6 @@ public final class CustomImagePropertiesFromPlanResponse {
             this.publisher = publisher;
             return this;
         }
-
         public CustomImagePropertiesFromPlanResponse build() {
             return new CustomImagePropertiesFromPlanResponse(id, offer, publisher);
         }

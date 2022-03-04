@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.DistributionArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class PackageNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distribution")
-    private final @Nullable Input<List<DistributionArgs>> distribution;
+      private final @Nullable Input<List<DistributionArgs>> distribution;
 
     public Input<List<DistributionArgs>> getDistribution() {
         return this.distribution == null ? Input.empty() : this.distribution;
@@ -36,7 +36,7 @@ public final class PackageNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -95,7 +95,6 @@ public final class PackageNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public PackageNoteArgs build() {
             return new PackageNoteArgs(distribution, name);
         }

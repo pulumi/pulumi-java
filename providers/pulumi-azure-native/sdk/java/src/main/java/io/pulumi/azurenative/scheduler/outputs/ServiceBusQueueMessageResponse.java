@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.outputs;
 
 import io.pulumi.azurenative.scheduler.outputs.ServiceBusAuthenticationResponse;
 import io.pulumi.azurenative.scheduler.outputs.ServiceBusBrokeredMessagePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class ServiceBusQueueMessageResponse {
     /**
      * Gets or sets the Service Bus authentication.
      * 
-     */
+    */
     public Optional<ServiceBusAuthenticationResponse> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * Gets or sets the brokered message properties.
      * 
-     */
+    */
     public Optional<ServiceBusBrokeredMessagePropertiesResponse> getBrokeredMessageProperties() {
         return Optional.ofNullable(this.brokeredMessageProperties);
     }
     /**
      * Gets or sets the custom message properties.
      * 
-     */
+    */
     public Map<String,String> getCustomMessageProperties() {
         return this.customMessageProperties == null ? Map.of() : this.customMessageProperties;
     }
     /**
      * Gets or sets the message.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Gets or sets the namespace.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Gets or sets the queue name.
      * 
-     */
+    */
     public Optional<String> getQueueName() {
         return Optional.ofNullable(this.queueName);
     }
     /**
      * Gets or sets the transport type.
      * 
-     */
+    */
     public Optional<String> getTransportType() {
         return Optional.ofNullable(this.transportType);
     }
@@ -184,7 +184,6 @@ public final class ServiceBusQueueMessageResponse {
             this.transportType = transportType;
             return this;
         }
-
         public ServiceBusQueueMessageResponse build() {
             return new ServiceBusQueueMessageResponse(authentication, brokeredMessageProperties, customMessageProperties, message, namespace, queueName, transportType);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.EccTokenKeyResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.RsaTokenKeyResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.TokenClaimResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="audiences")
-    private final @Nullable List<String> audiences;
+      private final @Nullable List<String> audiences;
 
     public List<String> getAudiences() {
         return this.audiences == null ? List.of() : this.audiences;
@@ -39,7 +39,7 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="claims")
-    private final @Nullable List<TokenClaimResponse> claims;
+      private final @Nullable List<TokenClaimResponse> claims;
 
     public List<TokenClaimResponse> getClaims() {
         return this.claims == null ? List.of() : this.claims;
@@ -50,7 +50,7 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="issuers")
-    private final @Nullable List<String> issuers;
+      private final @Nullable List<String> issuers;
 
     public List<String> getIssuers() {
         return this.issuers == null ? List.of() : this.issuers;
@@ -61,7 +61,7 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys;
+      private final @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys;
 
     public List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> getKeys() {
         return this.keys == null ? List.of() : this.keys;
@@ -73,7 +73,7 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -152,7 +152,6 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JwtAuthenticationResponse build() {
             return new JwtAuthenticationResponse(audiences, claims, issuers, keys, type);
         }

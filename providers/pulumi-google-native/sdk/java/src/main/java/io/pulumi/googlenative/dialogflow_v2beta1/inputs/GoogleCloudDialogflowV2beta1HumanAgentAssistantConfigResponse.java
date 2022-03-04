@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1NotificationConfigResponse;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
      * 
      */
     @InputImport(name="endUserSuggestionConfig", required=true)
-    private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
+      private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse getEndUserSuggestionConfig() {
         return this.endUserSuggestionConfig;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
      * 
      */
     @InputImport(name="humanAgentSuggestionConfig", required=true)
-    private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
+      private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse getHumanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
      * 
      */
     @InputImport(name="messageAnalysisConfig", required=true)
-    private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
+      private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse getMessageAnalysisConfig() {
         return this.messageAnalysisConfig;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
      * 
      */
     @InputImport(name="notificationConfig", required=true)
-    private final GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
+      private final GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
 
     public GoogleCloudDialogflowV2beta1NotificationConfigResponse getNotificationConfig() {
         return this.notificationConfig;
@@ -125,7 +125,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse(endUserSuggestionConfig, humanAgentSuggestionConfig, messageAnalysisConfig, notificationConfig);
         }

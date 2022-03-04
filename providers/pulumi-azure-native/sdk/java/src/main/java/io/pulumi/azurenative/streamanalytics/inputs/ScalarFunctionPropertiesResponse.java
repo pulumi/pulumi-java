@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.FunctionInputResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.FunctionOutputResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.JavaScriptFunctionBindingResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="binding")
-    private final @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
+      private final @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
 
     public Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> getBinding() {
         return this.binding == null ? null : this.binding;
@@ -40,7 +40,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -51,7 +51,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable List<FunctionInputResponse> inputs;
+      private final @Nullable List<FunctionInputResponse> inputs;
 
     public List<FunctionInputResponse> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
@@ -62,7 +62,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="output")
-    private final @Nullable FunctionOutputResponse output;
+      private final @Nullable FunctionOutputResponse output;
 
     public Optional<FunctionOutputResponse> getOutput() {
         return this.output == null ? Optional.empty() : Optional.ofNullable(this.output);
@@ -74,7 +74,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -153,7 +153,6 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ScalarFunctionPropertiesResponse build() {
             return new ScalarFunctionPropertiesResponse(binding, etag, inputs, output, type);
         }

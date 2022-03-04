@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.ConfigMapKeySelectorArgs;
 import io.pulumi.googlenative.run_v1.inputs.SecretKeySelectorArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configMapKeyRef")
-    private final @Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef;
+      private final @Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef;
 
     public Input<ConfigMapKeySelectorArgs> getConfigMapKeyRef() {
         return this.configMapKeyRef == null ? Input.empty() : this.configMapKeyRef;
@@ -35,7 +35,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretKeyRef")
-    private final @Nullable Input<SecretKeySelectorArgs> secretKeyRef;
+      private final @Nullable Input<SecretKeySelectorArgs> secretKeyRef;
 
     public Input<SecretKeySelectorArgs> getSecretKeyRef() {
         return this.secretKeyRef == null ? Input.empty() : this.secretKeyRef;
@@ -94,7 +94,6 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.secretKeyRef = Input.ofNullable(secretKeyRef);
             return this;
         }
-
         public EnvVarSourceArgs build() {
             return new EnvVarSourceArgs(configMapKeyRef, secretKeyRef);
         }

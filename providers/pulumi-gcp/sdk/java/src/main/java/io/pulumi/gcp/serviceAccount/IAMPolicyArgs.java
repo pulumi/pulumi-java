@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -30,7 +30,7 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountId", required=true)
-    private final Input<String> serviceAccountId;
+      private final Input<String> serviceAccountId;
 
     public Input<String> getServiceAccountId() {
         return this.serviceAccountId;
@@ -89,7 +89,6 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceAccountId = Input.of(Objects.requireNonNull(serviceAccountId));
             return this;
         }
-
         public IAMPolicyArgs build() {
             return new IAMPolicyArgs(policyData, serviceAccountId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -45,7 +45,7 @@ public final class FileSystemHttpLogsConfigResponse {
     /**
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,7 +54,7 @@ public final class FileSystemHttpLogsConfigResponse {
      * Remove files older than X days.
      * 0 or lower means no retention.
      * 
-     */
+    */
     public Optional<Integer> getRetentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -63,7 +63,7 @@ public final class FileSystemHttpLogsConfigResponse {
      * When reached old log files will be removed to make space for new ones.
      * Value can range between 25 and 100.
      * 
-     */
+    */
     public Optional<Integer> getRetentionInMb() {
         return Optional.ofNullable(this.retentionInMb);
     }
@@ -106,7 +106,6 @@ public final class FileSystemHttpLogsConfigResponse {
             this.retentionInMb = retentionInMb;
             return this;
         }
-
         public FileSystemHttpLogsConfigResponse build() {
             return new FileSystemHttpLogsConfigResponse(enabled, retentionInDays, retentionInMb);
         }

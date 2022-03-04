@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final String dayOfWeek;
+      private final String dayOfWeek;
 
     public String getDayOfWeek() {
         return this.dayOfWeek;
@@ -33,7 +33,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="hourOfDay", required=true)
-    private final Integer hourOfDay;
+      private final Integer hourOfDay;
 
     public Integer getHourOfDay() {
         return this.hourOfDay;
@@ -82,7 +82,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
             this.hourOfDay = Objects.requireNonNull(hourOfDay);
             return this;
         }
-
         public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(dayOfWeek, hourOfDay);
         }

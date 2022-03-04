@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class TriggerBuildSecret {
     /**
      * Cloud KMS key name to use to decrypt these envs.
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
@@ -44,7 +44,7 @@ public final class TriggerBuildSecret {
      * Service crypto key. These values must be specified in the build's Secret. These variables
      * will be available to all build steps in this build.
      * 
-     */
+    */
     public Map<String,String> getSecretEnv() {
         return this.secretEnv == null ? Map.of() : this.secretEnv;
     }
@@ -80,7 +80,6 @@ public final class TriggerBuildSecret {
             this.secretEnv = secretEnv;
             return this;
         }
-
         public TriggerBuildSecret build() {
             return new TriggerBuildSecret(kmsKeyName, secretEnv);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.SELinuxOptions;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class SELinuxStrategyOptions {
     /**
      * rule is the strategy that will dictate the allowable labels that may be set.
      * 
-     */
+    */
     public String getRule() {
         return this.rule;
     }
     /**
      * seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
      * 
-     */
+    */
     public Optional<SELinuxOptions> getSeLinuxOptions() {
         return Optional.ofNullable(this.seLinuxOptions);
     }
@@ -77,7 +77,6 @@ public final class SELinuxStrategyOptions {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
-
         public SELinuxStrategyOptions build() {
             return new SELinuxStrategyOptions(rule, seLinuxOptions);
         }

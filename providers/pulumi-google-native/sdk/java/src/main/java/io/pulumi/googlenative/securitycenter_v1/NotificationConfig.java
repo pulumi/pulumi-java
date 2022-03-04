@@ -5,8 +5,8 @@ package io.pulumi.googlenative.securitycenter_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.securitycenter_v1.NotificationConfigArgs;
 import io.pulumi.googlenative.securitycenter_v1.outputs.StreamingConfigResponse;
@@ -90,6 +90,37 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
         return this.streamingConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NotificationConfigArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.securitycenter_v1.NotificationConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.securitycenter_v1.NotificationConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NotificationConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public NotificationConfig(String name) {
+        this(name, NotificationConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NotificationConfig(String name, NotificationConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

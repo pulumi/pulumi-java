@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,63 +82,63 @@ public final class AzureVmDiskDetailsResponse {
     /**
      * The DiskEncryptionSet ARM ID.
      * 
-     */
+    */
     public Optional<String> getDiskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
     /**
      * The disk resource id.
      * 
-     */
+    */
     public Optional<String> getDiskId() {
         return Optional.ofNullable(this.diskId);
     }
     /**
      * Ordinal\LunId of the disk for the Azure VM.
      * 
-     */
+    */
     public Optional<String> getLunId() {
         return Optional.ofNullable(this.lunId);
     }
     /**
      * Max side in MB.
      * 
-     */
+    */
     public Optional<String> getMaxSizeMB() {
         return Optional.ofNullable(this.maxSizeMB);
     }
     /**
      * Blob uri of the Azure disk.
      * 
-     */
+    */
     public Optional<String> getTargetDiskLocation() {
         return Optional.ofNullable(this.targetDiskLocation);
     }
     /**
      * The target Azure disk name.
      * 
-     */
+    */
     public Optional<String> getTargetDiskName() {
         return Optional.ofNullable(this.targetDiskName);
     }
     /**
      * The VHD id.
      * 
-     */
+    */
     public Optional<String> getVhdId() {
         return Optional.ofNullable(this.vhdId);
     }
     /**
      * VHD name.
      * 
-     */
+    */
     public Optional<String> getVhdName() {
         return Optional.ofNullable(this.vhdName);
     }
     /**
      * VHD type.
      * 
-     */
+    */
     public Optional<String> getVhdType() {
         return Optional.ofNullable(this.vhdType);
     }
@@ -223,7 +223,6 @@ public final class AzureVmDiskDetailsResponse {
             this.vhdType = vhdType;
             return this;
         }
-
         public AzureVmDiskDetailsResponse build() {
             return new AzureVmDiskDetailsResponse(diskEncryptionSetId, diskId, lunId, maxSizeMB, targetDiskLocation, targetDiskName, vhdId, vhdName, vhdType);
         }

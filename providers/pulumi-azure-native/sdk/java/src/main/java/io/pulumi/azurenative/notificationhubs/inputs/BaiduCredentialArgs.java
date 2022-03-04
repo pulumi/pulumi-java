@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="baiduApiKey")
-    private final @Nullable Input<String> baiduApiKey;
+      private final @Nullable Input<String> baiduApiKey;
 
     public Input<String> getBaiduApiKey() {
         return this.baiduApiKey == null ? Input.empty() : this.baiduApiKey;
@@ -34,7 +34,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="baiduEndPoint")
-    private final @Nullable Input<String> baiduEndPoint;
+      private final @Nullable Input<String> baiduEndPoint;
 
     public Input<String> getBaiduEndPoint() {
         return this.baiduEndPoint == null ? Input.empty() : this.baiduEndPoint;
@@ -45,7 +45,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="baiduSecretKey")
-    private final @Nullable Input<String> baiduSecretKey;
+      private final @Nullable Input<String> baiduSecretKey;
 
     public Input<String> getBaiduSecretKey() {
         return this.baiduSecretKey == null ? Input.empty() : this.baiduSecretKey;
@@ -119,7 +119,6 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
             this.baiduSecretKey = Input.ofNullable(baiduSecretKey);
             return this;
         }
-
         public BaiduCredentialArgs build() {
             return new BaiduCredentialArgs(baiduApiKey, baiduEndPoint, baiduSecretKey);
         }

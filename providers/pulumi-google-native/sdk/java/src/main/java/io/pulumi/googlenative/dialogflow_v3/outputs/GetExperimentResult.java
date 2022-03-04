@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3ExperimentDefinitionResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3ExperimentResultResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3RolloutConfigResponse;
@@ -128,105 +128,105 @@ public final class GetExperimentResult {
     /**
      * Creation time of this experiment.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The definition of the experiment.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3ExperimentDefinitionResponse getDefinition() {
         return this.definition;
     }
     /**
      * The human-readable description of the experiment.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * End time of this experiment.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
      * 
-     */
+    */
     public String getExperimentLength() {
         return this.experimentLength;
     }
     /**
      * Last update time of this experiment.
      * 
-     */
+    */
     public String getLastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
      * The name of the experiment. Format: projects//locations//agents//environments//experiments/..
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Inference result of the experiment.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3ExperimentResultResponse getResult() {
         return this.result;
     }
     /**
      * The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3RolloutConfigResponse getRolloutConfig() {
         return this.rolloutConfig;
     }
     /**
      * The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
      * 
-     */
+    */
     public String getRolloutFailureReason() {
         return this.rolloutFailureReason;
     }
     /**
      * State of the auto rollout process.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3RolloutStateResponse getRolloutState() {
         return this.rolloutState;
     }
     /**
      * Start time of this experiment.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or RUNNING->DONE.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The history of updates to the experiment variants.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> getVariantsHistory() {
         return this.variantsHistory;
     }
@@ -353,7 +353,6 @@ public final class GetExperimentResult {
             this.variantsHistory = Objects.requireNonNull(variantsHistory);
             return this;
         }
-
         public GetExperimentResult build() {
             return new GetExperimentResult(createTime, definition, description, displayName, endTime, experimentLength, lastUpdateTime, name, result, rolloutConfig, rolloutFailureReason, rolloutState, startTime, state, variantsHistory);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ReplicationSyncResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="lastSyncTime", required=true)
-    private final String lastSyncTime;
+      private final String lastSyncTime;
 
     public String getLastSyncTime() {
         return this.lastSyncTime;
@@ -59,7 +59,6 @@ public final class ReplicationSyncResponse extends io.pulumi.resources.InvokeArg
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
-
         public ReplicationSyncResponse build() {
             return new ReplicationSyncResponse(lastSyncTime);
         }

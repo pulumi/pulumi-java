@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BusinessIdentityResponse {
     /**
      * The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
      * 
-     */
+    */
     public String getQualifier() {
         return this.qualifier;
     }
     /**
      * The user defined business identity value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class BusinessIdentityResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BusinessIdentityResponse build() {
             return new BusinessIdentityResponse(qualifier, value);
         }

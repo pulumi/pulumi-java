@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetPrivateZoneArgs;
 import io.pulumi.azurenative.network.outputs.GetPrivateZoneResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateZone {
-/**
- * Describes a Private DNS zone.
+    private GetPrivateZone() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateZoneArgs.Builder a);
+    }
+    private static GetPrivateZoneArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateZoneArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a Private DNS zone.
  * API Version: 2020-06-01.
  * 
- *
- * Describes a Private DNS zone.
+     *
+     * Describes a Private DNS zone.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a Private DNS zone.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * Describes a Private DNS zone.
+     * 
+     */
     public static CompletableFuture<GetPrivateZoneResult> invokeAsync(GetPrivateZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateZone", TypeShape.of(GetPrivateZoneResult.class), args == null ? GetPrivateZoneArgs.Empty : args, Utilities.withVersion(options));
     }

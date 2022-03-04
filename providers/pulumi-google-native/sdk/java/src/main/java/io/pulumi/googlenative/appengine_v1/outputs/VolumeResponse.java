@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class VolumeResponse {
     /**
      * Unique name for the volume.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Volume size in gigabytes.
      * 
-     */
+    */
     public Double getSizeGb() {
         return this.sizeGb;
     }
     /**
      * Underlying volume type, e.g. 'tmpfs'.
      * 
-     */
+    */
     public String getVolumeType() {
         return this.volumeType;
     }
@@ -96,7 +96,6 @@ public final class VolumeResponse {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(name, sizeGb, volumeType);
         }

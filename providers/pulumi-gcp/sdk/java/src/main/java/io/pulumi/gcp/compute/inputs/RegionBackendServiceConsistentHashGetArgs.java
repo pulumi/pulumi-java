@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceConsistentHashHttpCookieGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class RegionBackendServiceConsistentHashGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="httpCookie")
-    private final @Nullable Input<RegionBackendServiceConsistentHashHttpCookieGetArgs> httpCookie;
+      private final @Nullable Input<RegionBackendServiceConsistentHashHttpCookieGetArgs> httpCookie;
 
     public Input<RegionBackendServiceConsistentHashHttpCookieGetArgs> getHttpCookie() {
         return this.httpCookie == null ? Input.empty() : this.httpCookie;
@@ -37,7 +37,7 @@ public final class RegionBackendServiceConsistentHashGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="httpHeaderName")
-    private final @Nullable Input<String> httpHeaderName;
+      private final @Nullable Input<String> httpHeaderName;
 
     public Input<String> getHttpHeaderName() {
         return this.httpHeaderName == null ? Input.empty() : this.httpHeaderName;
@@ -53,7 +53,7 @@ public final class RegionBackendServiceConsistentHashGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="minimumRingSize")
-    private final @Nullable Input<Integer> minimumRingSize;
+      private final @Nullable Input<Integer> minimumRingSize;
 
     public Input<Integer> getMinimumRingSize() {
         return this.minimumRingSize == null ? Input.empty() : this.minimumRingSize;
@@ -127,7 +127,6 @@ public final class RegionBackendServiceConsistentHashGetArgs extends io.pulumi.r
             this.minimumRingSize = Input.ofNullable(minimumRingSize);
             return this;
         }
-
         public RegionBackendServiceConsistentHashGetArgs build() {
             return new RegionBackendServiceConsistentHashGetArgs(httpCookie, httpHeaderName, minimumRingSize);
         }

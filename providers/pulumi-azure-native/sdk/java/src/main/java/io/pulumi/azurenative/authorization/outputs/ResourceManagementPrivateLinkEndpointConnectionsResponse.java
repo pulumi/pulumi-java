@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
     /**
      * The private endpoint connections.
      * 
-     */
+    */
     public List<String> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
@@ -54,7 +54,6 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
         public ResourceManagementPrivateLinkEndpointConnectionsResponse build() {
             return new ResourceManagementPrivateLinkEndpointConnectionsResponse(privateEndpointConnections);
         }

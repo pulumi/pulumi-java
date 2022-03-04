@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
      * 
      */
     @InputImport(name="numPaths")
-    private final @Nullable Input<Integer> numPaths;
+      private final @Nullable Input<Integer> numPaths;
 
     public Input<Integer> getNumPaths() {
         return this.numPaths == null ? Input.empty() : this.numPaths;
@@ -66,7 +66,6 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
             this.numPaths = Input.ofNullable(numPaths);
             return this;
         }
-
         public GoogleCloudMlV1__SampledShapleyAttributionArgs build() {
             return new GoogleCloudMlV1__SampledShapleyAttributionArgs(numPaths);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.RsaTokenKeyArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.TokenClaimArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="audiences")
-    private final @Nullable Input<List<String>> audiences;
+      private final @Nullable Input<List<String>> audiences;
 
     public Input<List<String>> getAudiences() {
         return this.audiences == null ? Input.empty() : this.audiences;
@@ -39,7 +39,7 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="claims")
-    private final @Nullable Input<List<TokenClaimArgs>> claims;
+      private final @Nullable Input<List<TokenClaimArgs>> claims;
 
     public Input<List<TokenClaimArgs>> getClaims() {
         return this.claims == null ? Input.empty() : this.claims;
@@ -50,7 +50,7 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="issuers")
-    private final @Nullable Input<List<String>> issuers;
+      private final @Nullable Input<List<String>> issuers;
 
     public Input<List<String>> getIssuers() {
         return this.issuers == null ? Input.empty() : this.issuers;
@@ -61,7 +61,7 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
+      private final @Nullable Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
 
     public Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -73,7 +73,7 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -177,7 +177,6 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public JwtAuthenticationArgs build() {
             return new JwtAuthenticationArgs(audiences, claims, issuers, keys, type);
         }

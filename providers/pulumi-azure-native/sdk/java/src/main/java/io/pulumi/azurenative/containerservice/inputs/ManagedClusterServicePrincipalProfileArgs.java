@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -34,7 +34,7 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<String> secret;
+      private final @Nullable Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -93,7 +93,6 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
             this.secret = Input.ofNullable(secret);
             return this;
         }
-
         public ManagedClusterServicePrincipalProfileArgs build() {
             return new ManagedClusterServicePrincipalProfileArgs(clientId, secret);
         }

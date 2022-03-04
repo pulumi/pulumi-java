@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ManagementLockOwnerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -66,7 +66,6 @@ public final class ManagementLockOwnerArgs extends io.pulumi.resources.ResourceA
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
-
         public ManagementLockOwnerArgs build() {
             return new ManagementLockOwnerArgs(applicationId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ListDatastoreSecretsResult {
     /**
      * Credential type used to authentication with storage.
      * 
-     */
+    */
     public String getSecretsType() {
         return this.secretsType;
     }
@@ -52,7 +52,6 @@ public final class ListDatastoreSecretsResult {
             this.secretsType = Objects.requireNonNull(secretsType);
             return this;
         }
-
         public ListDatastoreSecretsResult build() {
             return new ListDatastoreSecretsResult(secretsType);
         }

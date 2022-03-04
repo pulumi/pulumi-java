@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.enums.IpsecIntegrity;
 import io.pulumi.azurenative.network.enums.PfsGroup;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dhGroup", required=true)
-    private final Input<Either<String,DhGroup>> dhGroup;
+      private final Input<Either<String,DhGroup>> dhGroup;
 
     public Input<Either<String,DhGroup>> getDhGroup() {
         return this.dhGroup;
@@ -41,7 +41,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ikeEncryption", required=true)
-    private final Input<Either<String,IkeEncryption>> ikeEncryption;
+      private final Input<Either<String,IkeEncryption>> ikeEncryption;
 
     public Input<Either<String,IkeEncryption>> getIkeEncryption() {
         return this.ikeEncryption;
@@ -52,7 +52,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ikeIntegrity", required=true)
-    private final Input<Either<String,IkeIntegrity>> ikeIntegrity;
+      private final Input<Either<String,IkeIntegrity>> ikeIntegrity;
 
     public Input<Either<String,IkeIntegrity>> getIkeIntegrity() {
         return this.ikeIntegrity;
@@ -63,7 +63,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipsecEncryption", required=true)
-    private final Input<Either<String,IpsecEncryption>> ipsecEncryption;
+      private final Input<Either<String,IpsecEncryption>> ipsecEncryption;
 
     public Input<Either<String,IpsecEncryption>> getIpsecEncryption() {
         return this.ipsecEncryption;
@@ -74,7 +74,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipsecIntegrity", required=true)
-    private final Input<Either<String,IpsecIntegrity>> ipsecIntegrity;
+      private final Input<Either<String,IpsecIntegrity>> ipsecIntegrity;
 
     public Input<Either<String,IpsecIntegrity>> getIpsecIntegrity() {
         return this.ipsecIntegrity;
@@ -85,7 +85,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pfsGroup", required=true)
-    private final Input<Either<String,PfsGroup>> pfsGroup;
+      private final Input<Either<String,PfsGroup>> pfsGroup;
 
     public Input<Either<String,PfsGroup>> getPfsGroup() {
         return this.pfsGroup;
@@ -96,7 +96,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="saDataSizeKilobytes", required=true)
-    private final Input<Integer> saDataSizeKilobytes;
+      private final Input<Integer> saDataSizeKilobytes;
 
     public Input<Integer> getSaDataSizeKilobytes() {
         return this.saDataSizeKilobytes;
@@ -107,7 +107,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="saLifeTimeSeconds", required=true)
-    private final Input<Integer> saLifeTimeSeconds;
+      private final Input<Integer> saLifeTimeSeconds;
 
     public Input<Integer> getSaLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
@@ -256,7 +256,6 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.saLifeTimeSeconds = Input.of(Objects.requireNonNull(saLifeTimeSeconds));
             return this;
         }
-
         public IpsecPolicyArgs build() {
             return new IpsecPolicyArgs(dhGroup, ikeEncryption, ikeIntegrity, ipsecEncryption, ipsecIntegrity, pfsGroup, saDataSizeKilobytes, saLifeTimeSeconds);
         }

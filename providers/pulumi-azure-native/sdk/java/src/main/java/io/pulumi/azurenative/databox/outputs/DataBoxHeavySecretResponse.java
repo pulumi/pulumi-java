@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.AccountCredentialDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.ApplianceNetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class DataBoxHeavySecretResponse {
     /**
      * Per account level access credentials.
      * 
-     */
+    */
     public List<AccountCredentialDetailsResponse> getAccountCredentialDetails() {
         return this.accountCredentialDetails;
     }
     /**
      * Password for out of the box experience on device.
      * 
-     */
+    */
     public String getDevicePassword() {
         return this.devicePassword;
     }
     /**
      * Serial number of the assigned device.
      * 
-     */
+    */
     public String getDeviceSerialNumber() {
         return this.deviceSerialNumber;
     }
     /**
      * The base 64 encoded public key to authenticate with the device
      * 
-     */
+    */
     public String getEncodedValidationCertPubKey() {
         return this.encodedValidationCertPubKey;
     }
     /**
      * Network configuration of the appliance.
      * 
-     */
+    */
     public List<ApplianceNetworkConfigurationResponse> getNetworkConfigurations() {
         return this.networkConfigurations;
     }
@@ -140,7 +140,6 @@ public final class DataBoxHeavySecretResponse {
             this.networkConfigurations = Objects.requireNonNull(networkConfigurations);
             return this;
         }
-
         public DataBoxHeavySecretResponse build() {
             return new DataBoxHeavySecretResponse(accountCredentialDetails, devicePassword, deviceSerialNumber, encodedValidationCertPubKey, networkConfigurations);
         }

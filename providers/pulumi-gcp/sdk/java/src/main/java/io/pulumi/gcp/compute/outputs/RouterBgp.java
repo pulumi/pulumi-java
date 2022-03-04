@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RouterBgpAdvertisedIpRange;
 import java.lang.Integer;
 import java.lang.String;
@@ -67,7 +67,7 @@ public final class RouterBgp {
      * Default value is `DEFAULT`.
      * Possible values are `DEFAULT` and `CUSTOM`.
      * 
-     */
+    */
     public Optional<String> getAdvertiseMode() {
         return Optional.ofNullable(this.advertiseMode);
     }
@@ -79,7 +79,7 @@ public final class RouterBgp {
      * blank to advertise no custom groups.
      * This enum field has the one valid value: ALL_SUBNETS
      * 
-     */
+    */
     public List<String> getAdvertisedGroups() {
         return this.advertisedGroups == null ? List.of() : this.advertisedGroups;
     }
@@ -91,7 +91,7 @@ public final class RouterBgp {
      * Leave this field blank to advertise no custom IP ranges.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RouterBgpAdvertisedIpRange> getAdvertisedIpRanges() {
         return this.advertisedIpRanges == null ? List.of() : this.advertisedIpRanges;
     }
@@ -101,7 +101,7 @@ public final class RouterBgp {
      * this router resource. All VPN tunnels that link to this router
      * will have the same local ASN.
      * 
-     */
+    */
     public Integer getAsn() {
         return this.asn;
     }
@@ -151,7 +151,6 @@ public final class RouterBgp {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }
-
         public RouterBgp build() {
             return new RouterBgp(advertiseMode, advertisedGroups, advertisedIpRanges, asn);
         }

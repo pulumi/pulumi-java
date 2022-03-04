@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
     /**
      * Current volume free space percentage.
      * 
-     */
+    */
     public Integer getCurrentVolumeFreeSpacePercent() {
         return this.currentVolumeFreeSpacePercent;
     }
     /**
      * In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
      * 
-     */
+    */
     public Integer getEffectiveVolumeFreeSpacePolicy() {
         return this.effectiveVolumeFreeSpacePolicy;
     }
     /**
      * Last updated timestamp
      * 
-     */
+    */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
@@ -96,7 +96,6 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
-
         public CloudTieringVolumeFreeSpacePolicyStatusResponse build() {
             return new CloudTieringVolumeFreeSpacePolicyStatusResponse(currentVolumeFreeSpacePercent, effectiveVolumeFreeSpacePolicy, lastUpdatedTimestamp);
         }

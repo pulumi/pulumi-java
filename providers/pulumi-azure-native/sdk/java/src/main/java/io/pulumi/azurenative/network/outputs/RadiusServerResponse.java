@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class RadiusServerResponse {
     /**
      * The address of this radius server.
      * 
-     */
+    */
     public String getRadiusServerAddress() {
         return this.radiusServerAddress;
     }
     /**
      * The initial score assigned to this radius server.
      * 
-     */
+    */
     public Optional<Double> getRadiusServerScore() {
         return Optional.ofNullable(this.radiusServerScore);
     }
     /**
      * The secret used for this radius server.
      * 
-     */
+    */
     public Optional<String> getRadiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
@@ -98,7 +98,6 @@ public final class RadiusServerResponse {
             this.radiusServerSecret = radiusServerSecret;
             return this;
         }
-
         public RadiusServerResponse build() {
             return new RadiusServerResponse(radiusServerAddress, radiusServerScore, radiusServerSecret);
         }

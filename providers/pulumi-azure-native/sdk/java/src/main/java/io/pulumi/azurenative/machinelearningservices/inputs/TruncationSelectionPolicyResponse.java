@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="delayEvaluation")
-    private final @Nullable Integer delayEvaluation;
+      private final @Nullable Integer delayEvaluation;
 
     public Optional<Integer> getDelayEvaluation() {
         return this.delayEvaluation == null ? Optional.empty() : Optional.ofNullable(this.delayEvaluation);
@@ -35,7 +35,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="evaluationInterval")
-    private final @Nullable Integer evaluationInterval;
+      private final @Nullable Integer evaluationInterval;
 
     public Optional<Integer> getEvaluationInterval() {
         return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
@@ -46,7 +46,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="policyType", required=true)
-    private final String policyType;
+      private final String policyType;
 
     public String getPolicyType() {
         return this.policyType;
@@ -57,7 +57,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="truncationPercentage")
-    private final @Nullable Integer truncationPercentage;
+      private final @Nullable Integer truncationPercentage;
 
     public Optional<Integer> getTruncationPercentage() {
         return this.truncationPercentage == null ? Optional.empty() : Optional.ofNullable(this.truncationPercentage);
@@ -126,7 +126,6 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
             this.truncationPercentage = truncationPercentage;
             return this;
         }
-
         public TruncationSelectionPolicyResponse build() {
             return new TruncationSelectionPolicyResponse(delayEvaluation, evaluationInterval, policyType, truncationPercentage);
         }

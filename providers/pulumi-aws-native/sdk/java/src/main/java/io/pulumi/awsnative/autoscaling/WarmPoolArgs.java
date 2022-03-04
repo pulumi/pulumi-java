@@ -5,7 +5,7 @@ package io.pulumi.awsnative.autoscaling;
 
 import io.pulumi.awsnative.autoscaling.inputs.WarmPoolInstanceReusePolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,35 +17,35 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
     public static final WarmPoolArgs Empty = new WarmPoolArgs();
 
     @InputImport(name="autoScalingGroupName", required=true)
-    private final Input<String> autoScalingGroupName;
+      private final Input<String> autoScalingGroupName;
 
     public Input<String> getAutoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 
     @InputImport(name="instanceReusePolicy")
-    private final @Nullable Input<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
+      private final @Nullable Input<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
 
     public Input<WarmPoolInstanceReusePolicyArgs> getInstanceReusePolicy() {
         return this.instanceReusePolicy == null ? Input.empty() : this.instanceReusePolicy;
     }
 
     @InputImport(name="maxGroupPreparedCapacity")
-    private final @Nullable Input<Integer> maxGroupPreparedCapacity;
+      private final @Nullable Input<Integer> maxGroupPreparedCapacity;
 
     public Input<Integer> getMaxGroupPreparedCapacity() {
         return this.maxGroupPreparedCapacity == null ? Input.empty() : this.maxGroupPreparedCapacity;
     }
 
     @InputImport(name="minSize")
-    private final @Nullable Input<Integer> minSize;
+      private final @Nullable Input<Integer> minSize;
 
     public Input<Integer> getMinSize() {
         return this.minSize == null ? Input.empty() : this.minSize;
     }
 
     @InputImport(name="poolState")
-    private final @Nullable Input<String> poolState;
+      private final @Nullable Input<String> poolState;
 
     public Input<String> getPoolState() {
         return this.poolState == null ? Input.empty() : this.poolState;
@@ -149,7 +149,6 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.poolState = Input.ofNullable(poolState);
             return this;
         }
-
         public WarmPoolArgs build() {
             return new WarmPoolArgs(autoScalingGroupName, instanceReusePolicy, maxGroupPreparedCapacity, minSize, poolState);
         }

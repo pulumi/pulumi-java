@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.eventarc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.eventarc.outputs.TriggerTransportPubsub;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TriggerTransport {
     /**
      * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
      * 
-     */
+    */
     public List<TriggerTransportPubsub> getPubsubs() {
         return this.pubsubs == null ? List.of() : this.pubsubs;
     }
@@ -54,7 +54,6 @@ public final class TriggerTransport {
             this.pubsubs = pubsubs;
             return this;
         }
-
         public TriggerTransport build() {
             return new TriggerTransport(pubsubs);
         }

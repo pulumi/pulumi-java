@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -64,42 +64,42 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     /**
      * The tags to apply to AMIs distributed to this Region.
      * 
-     */
+    */
     public Optional<Object> getAmiTags() {
         return Optional.ofNullable(this.amiTags);
     }
     /**
      * The description of the AMI distribution configuration.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The KMS key identifier used to encrypt the distributed image.
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.
      * 
-     */
+    */
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties> getLaunchPermissionConfiguration() {
         return Optional.ofNullable(this.launchPermissionConfiguration);
     }
     /**
      * The name of the AMI distribution configuration.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The ID of accounts to which you want to distribute an image.
      * 
-     */
+    */
     public List<String> getTargetAccountIds() {
         return this.targetAccountIds == null ? List.of() : this.targetAccountIds;
     }
@@ -163,7 +163,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.targetAccountIds = targetAccountIds;
             return this;
         }
-
         public DistributionConfigurationDistributionAmiDistributionConfigurationProperties build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationProperties(amiTags, description, kmsKeyId, launchPermissionConfiguration, name, targetAccountIds);
         }

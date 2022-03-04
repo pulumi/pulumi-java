@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.GroupMembersItemResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -70,49 +70,49 @@ public final class ConfigurationGroupResponse {
     /**
      * Network group conditional filter.
      * 
-     */
+    */
     public Optional<String> getConditionalMembership() {
         return Optional.ofNullable(this.conditionalMembership);
     }
     /**
      * A description of the network group.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A friendly name for the network group.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Group members of network group.
      * 
-     */
+    */
     public List<GroupMembersItemResponse> getGroupMembers() {
         return this.groupMembers == null ? List.of() : this.groupMembers;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Group member type.
      * 
-     */
+    */
     public Optional<String> getMemberType() {
         return Optional.ofNullable(this.memberType);
     }
     /**
      * The provisioning state of the scope assignment resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -183,7 +183,6 @@ public final class ConfigurationGroupResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ConfigurationGroupResponse build() {
             return new ConfigurationGroupResponse(conditionalMembership, description, displayName, groupMembers, id, memberType, provisioningState);
         }

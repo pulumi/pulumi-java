@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ForwardProxyResponse {
     /**
      * The convention used to determine the url of the request made.
      * 
-     */
+    */
     public Optional<String> getConvention() {
         return Optional.ofNullable(this.convention);
     }
     /**
      * The name of the header containing the host of the request.
      * 
-     */
+    */
     public Optional<String> getCustomHostHeaderName() {
         return Optional.ofNullable(this.customHostHeaderName);
     }
     /**
      * The name of the header containing the scheme of the request.
      * 
-     */
+    */
     public Optional<String> getCustomProtoHeaderName() {
         return Optional.ofNullable(this.customProtoHeaderName);
     }
@@ -97,7 +97,6 @@ public final class ForwardProxyResponse {
             this.customProtoHeaderName = customProtoHeaderName;
             return this;
         }
-
         public ForwardProxyResponse build() {
             return new ForwardProxyResponse(convention, customHostHeaderName, customProtoHeaderName);
         }

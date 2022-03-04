@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ConnStringValueTypePairResponse {
     /**
      * Type of database.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Value of pair.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class ConnStringValueTypePairResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ConnStringValueTypePairResponse build() {
             return new ConnStringValueTypePairResponse(type, value);
         }

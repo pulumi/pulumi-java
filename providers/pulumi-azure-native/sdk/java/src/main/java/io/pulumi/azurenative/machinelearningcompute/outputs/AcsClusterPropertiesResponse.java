@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningcompute.outputs;
 
 import io.pulumi.azurenative.machinelearningcompute.outputs.KubernetesClusterPropertiesResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.SystemServiceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -72,49 +72,49 @@ public final class AcsClusterPropertiesResponse {
     /**
      * The number of agent nodes in the Container Service. This can be changed to scale the cluster.
      * 
-     */
+    */
     public Optional<Integer> getAgentCount() {
         return Optional.ofNullable(this.agentCount);
     }
     /**
      * The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
      * 
-     */
+    */
     public Optional<String> getAgentVmSize() {
         return Optional.ofNullable(this.agentVmSize);
     }
     /**
      * The FQDN of the cluster.
      * 
-     */
+    */
     public String getClusterFqdn() {
         return this.clusterFqdn;
     }
     /**
      * The number of master nodes in the container service.
      * 
-     */
+    */
     public Optional<Integer> getMasterCount() {
         return Optional.ofNullable(this.masterCount);
     }
     /**
      * Orchestrator specific properties
      * 
-     */
+    */
     public Optional<KubernetesClusterPropertiesResponse> getOrchestratorProperties() {
         return Optional.ofNullable(this.orchestratorProperties);
     }
     /**
      * Type of orchestrator. It cannot be changed once the cluster is created.
      * 
-     */
+    */
     public String getOrchestratorType() {
         return this.orchestratorType;
     }
     /**
      * The system services deployed to the cluster
      * 
-     */
+    */
     public List<SystemServiceResponse> getSystemServices() {
         return this.systemServices == null ? List.of() : this.systemServices;
     }
@@ -185,7 +185,6 @@ public final class AcsClusterPropertiesResponse {
             this.systemServices = systemServices;
             return this;
         }
-
         public AcsClusterPropertiesResponse build() {
             return new AcsClusterPropertiesResponse(agentCount, agentVmSize, clusterFqdn, masterCount, orchestratorProperties, orchestratorType, systemServices);
         }

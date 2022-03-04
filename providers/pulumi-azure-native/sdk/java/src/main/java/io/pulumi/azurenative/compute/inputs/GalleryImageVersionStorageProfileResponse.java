@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceResponse;
 import io.pulumi.azurenative.compute.inputs.GalleryDataDiskImageResponse;
 import io.pulumi.azurenative.compute.inputs.GalleryOSDiskImageResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="dataDiskImages")
-    private final @Nullable List<GalleryDataDiskImageResponse> dataDiskImages;
+      private final @Nullable List<GalleryDataDiskImageResponse> dataDiskImages;
 
     public List<GalleryDataDiskImageResponse> getDataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
@@ -37,7 +37,7 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="osDiskImage")
-    private final @Nullable GalleryOSDiskImageResponse osDiskImage;
+      private final @Nullable GalleryOSDiskImageResponse osDiskImage;
 
     public Optional<GalleryOSDiskImageResponse> getOsDiskImage() {
         return this.osDiskImage == null ? Optional.empty() : Optional.ofNullable(this.osDiskImage);
@@ -48,7 +48,7 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="source")
-    private final @Nullable GalleryArtifactVersionSourceResponse source;
+      private final @Nullable GalleryArtifactVersionSourceResponse source;
 
     public Optional<GalleryArtifactVersionSourceResponse> getSource() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
@@ -107,7 +107,6 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
             this.source = source;
             return this;
         }
-
         public GalleryImageVersionStorageProfileResponse build() {
             return new GalleryImageVersionStorageProfileResponse(dataDiskImages, osDiskImage, source);
         }

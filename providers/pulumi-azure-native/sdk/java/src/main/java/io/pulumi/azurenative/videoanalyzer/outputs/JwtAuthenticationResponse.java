@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.EccTokenKeyResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.RsaTokenKeyResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.TokenClaimResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -59,28 +59,28 @@ public final class JwtAuthenticationResponse {
     /**
      * List of expected token audiences. Token audience is valid if it matches at least one of the given values.
      * 
-     */
+    */
     public List<String> getAudiences() {
         return this.audiences == null ? List.of() : this.audiences;
     }
     /**
      * List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
      * 
-     */
+    */
     public List<TokenClaimResponse> getClaims() {
         return this.claims == null ? List.of() : this.claims;
     }
     /**
      * List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
      * 
-     */
+    */
     public List<String> getIssuers() {
         return this.issuers == null ? List.of() : this.issuers;
     }
     /**
      * List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
      * 
-     */
+    */
     public List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }
@@ -88,7 +88,7 @@ public final class JwtAuthenticationResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.JwtAuthentication'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -145,7 +145,6 @@ public final class JwtAuthenticationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JwtAuthenticationResponse build() {
             return new JwtAuthenticationResponse(audiences, claims, issuers, keys, type);
         }

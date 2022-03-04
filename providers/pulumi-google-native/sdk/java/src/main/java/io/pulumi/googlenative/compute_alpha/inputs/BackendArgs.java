@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.BackendBalancingMode;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -27,7 +27,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="balancingMode")
-    private final @Nullable Input<BackendBalancingMode> balancingMode;
+      private final @Nullable Input<BackendBalancingMode> balancingMode;
 
     public Input<BackendBalancingMode> getBalancingMode() {
         return this.balancingMode == null ? Input.empty() : this.balancingMode;
@@ -38,7 +38,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityScaler")
-    private final @Nullable Input<Double> capacityScaler;
+      private final @Nullable Input<Double> capacityScaler;
 
     public Input<Double> getCapacityScaler() {
         return this.capacityScaler == null ? Input.empty() : this.capacityScaler;
@@ -49,7 +49,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failover")
-    private final @Nullable Input<Boolean> failover;
+      private final @Nullable Input<Boolean> failover;
 
     public Input<Boolean> getFailover() {
         return this.failover == null ? Input.empty() : this.failover;
@@ -71,7 +71,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="group")
-    private final @Nullable Input<String> group;
+      private final @Nullable Input<String> group;
 
     public Input<String> getGroup() {
         return this.group == null ? Input.empty() : this.group;
@@ -82,7 +82,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConnections")
-    private final @Nullable Input<Integer> maxConnections;
+      private final @Nullable Input<Integer> maxConnections;
 
     public Input<Integer> getMaxConnections() {
         return this.maxConnections == null ? Input.empty() : this.maxConnections;
@@ -93,7 +93,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConnectionsPerEndpoint")
-    private final @Nullable Input<Integer> maxConnectionsPerEndpoint;
+      private final @Nullable Input<Integer> maxConnectionsPerEndpoint;
 
     public Input<Integer> getMaxConnectionsPerEndpoint() {
         return this.maxConnectionsPerEndpoint == null ? Input.empty() : this.maxConnectionsPerEndpoint;
@@ -104,7 +104,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConnectionsPerInstance")
-    private final @Nullable Input<Integer> maxConnectionsPerInstance;
+      private final @Nullable Input<Integer> maxConnectionsPerInstance;
 
     public Input<Integer> getMaxConnectionsPerInstance() {
         return this.maxConnectionsPerInstance == null ? Input.empty() : this.maxConnectionsPerInstance;
@@ -115,7 +115,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRate")
-    private final @Nullable Input<Integer> maxRate;
+      private final @Nullable Input<Integer> maxRate;
 
     public Input<Integer> getMaxRate() {
         return this.maxRate == null ? Input.empty() : this.maxRate;
@@ -126,7 +126,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRatePerEndpoint")
-    private final @Nullable Input<Double> maxRatePerEndpoint;
+      private final @Nullable Input<Double> maxRatePerEndpoint;
 
     public Input<Double> getMaxRatePerEndpoint() {
         return this.maxRatePerEndpoint == null ? Input.empty() : this.maxRatePerEndpoint;
@@ -137,7 +137,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRatePerInstance")
-    private final @Nullable Input<Double> maxRatePerInstance;
+      private final @Nullable Input<Double> maxRatePerInstance;
 
     public Input<Double> getMaxRatePerInstance() {
         return this.maxRatePerInstance == null ? Input.empty() : this.maxRatePerInstance;
@@ -148,7 +148,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxUtilization")
-    private final @Nullable Input<Double> maxUtilization;
+      private final @Nullable Input<Double> maxUtilization;
 
     public Input<Double> getMaxUtilization() {
         return this.maxUtilization == null ? Input.empty() : this.maxUtilization;
@@ -357,7 +357,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             this.maxUtilization = Input.ofNullable(maxUtilization);
             return this;
         }
-
         public BackendArgs build() {
             return new BackendArgs(balancingMode, capacityScaler, description, failover, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class MetadataAuthorResponse {
     /**
      * Email of author contact
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * Link for author/vendor page
      * 
-     */
+    */
     public Optional<String> getLink() {
         return Optional.ofNullable(this.link);
     }
     /**
      * Name of the author. Company or person.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -97,7 +97,6 @@ public final class MetadataAuthorResponse {
             this.name = name;
             return this;
         }
-
         public MetadataAuthorResponse build() {
             return new MetadataAuthorResponse(email, link, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryOutputPath;
@@ -47,7 +47,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
      * Field in a BigQuery table where each cell represents a dictionary phrase.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField> getBigQueryField() {
         return Optional.ofNullable(this.bigQueryField);
     }
@@ -55,7 +55,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
      * Set of files containing newline-delimited lists of dictionary phrases.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet> getCloudStorageFileSet() {
         return Optional.ofNullable(this.cloudStorageFileSet);
     }
@@ -64,7 +64,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
      * If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionStoredInfoTypeLargeCustomDictionaryOutputPath getOutputPath() {
         return this.outputPath;
     }
@@ -107,7 +107,6 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
-
         public PreventionStoredInfoTypeLargeCustomDictionary build() {
             return new PreventionStoredInfoTypeLargeCustomDictionary(bigQueryField, cloudStorageFileSet, outputPath);
         }

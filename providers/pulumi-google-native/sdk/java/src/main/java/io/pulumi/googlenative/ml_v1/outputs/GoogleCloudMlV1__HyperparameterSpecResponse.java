@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__ParameterSpecResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -84,63 +84,63 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse {
     /**
      * Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.
      * 
-     */
+    */
     public String getAlgorithm() {
         return this.algorithm;
     }
     /**
      * Optional. Indicates if the hyperparameter tuning job enables auto trial early stopping.
      * 
-     */
+    */
     public Boolean getEnableTrialEarlyStopping() {
         return this.enableTrialEarlyStopping;
     }
     /**
      * The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`. Defaults to `MAXIMIZE`.
      * 
-     */
+    */
     public String getGoal() {
         return this.goal;
     }
     /**
      * Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all scopes. For versions of TensorFlow prior to 0.12, this should be only the tag passed to tf.Summary. By default, "training/hptuning/metric" will be used.
      * 
-     */
+    */
     public String getHyperparameterMetricTag() {
         return this.hyperparameterMetricTag;
     }
     /**
      * Optional. The number of failed trials that need to be seen before failing the hyperparameter tuning job. You can specify this field to override the default failing criteria for AI Platform hyperparameter tuning jobs. Defaults to zero, which means the service decides when a hyperparameter job should fail.
      * 
-     */
+    */
     public Integer getMaxFailedTrials() {
         return this.maxFailedTrials;
     }
     /**
      * Optional. The number of training trials to run concurrently. You can reduce the time it takes to perform hyperparameter tuning by adding trials in parallel. However, each trail only benefits from the information gained in completed trials. That means that a trial does not get access to the results of trials running at the same time, which could reduce the quality of the overall optimization. Each trial will use the same scale tier and machine types. Defaults to one.
      * 
-     */
+    */
     public Integer getMaxParallelTrials() {
         return this.maxParallelTrials;
     }
     /**
      * Optional. How many training trials should be attempted to optimize the specified hyperparameters. Defaults to one.
      * 
-     */
+    */
     public Integer getMaxTrials() {
         return this.maxTrials;
     }
     /**
      * The set of parameters to tune.
      * 
-     */
+    */
     public List<GoogleCloudMlV1__ParameterSpecResponse> getParams() {
         return this.params;
     }
     /**
      * Optional. The prior hyperparameter tuning job id that users hope to continue with. The job id will be used to find the corresponding vizier study guid and resume the study.
      * 
-     */
+    */
     public String getResumePreviousJobId() {
         return this.resumePreviousJobId;
     }
@@ -225,7 +225,6 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse {
             this.resumePreviousJobId = Objects.requireNonNull(resumePreviousJobId);
             return this;
         }
-
         public GoogleCloudMlV1__HyperparameterSpecResponse build() {
             return new GoogleCloudMlV1__HyperparameterSpecResponse(algorithm, enableTrialEarlyStopping, goal, hyperparameterMetricTag, maxFailedTrials, maxParallelTrials, maxTrials, params, resumePreviousJobId);
         }

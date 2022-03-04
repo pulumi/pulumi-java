@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ImageReferenceResponse {
     /**
      * Specifies in decimal numbers, the exact version of image used to create the virtual machine.
      * 
-     */
+    */
     public Optional<String> getExactVersion() {
         return Optional.ofNullable(this.exactVersion);
     }
     /**
      * Specifies the offer of the image used to create the virtual machine.
      * 
-     */
+    */
     public Optional<String> getOffer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * The image publisher.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * The image SKU.
      * 
-     */
+    */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -139,7 +139,6 @@ public final class ImageReferenceResponse {
             this.version = version;
             return this;
         }
-
         public ImageReferenceResponse build() {
             return new ImageReferenceResponse(exactVersion, offer, publisher, sku, version);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.devices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devices.inputs.ListIotHubResourceKeysForKeyNameArgs;
 import io.pulumi.azurenative.devices.outputs.ListIotHubResourceKeysForKeyNameResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIotHubResourceKeysForKeyName {
-/**
- * The properties of an IoT hub shared access policy.
+    private ListIotHubResourceKeysForKeyName() {}
+    public interface BuilderApplicator {
+        public void apply(ListIotHubResourceKeysForKeyNameArgs.Builder a);
+    }
+    private static ListIotHubResourceKeysForKeyNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListIotHubResourceKeysForKeyNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The properties of an IoT hub shared access policy.
  * API Version: 2020-08-31.
  * 
- *
- * The properties of an IoT hub shared access policy.
+     *
+     * The properties of an IoT hub shared access policy.
  * 
- */
+     */
+    public static CompletableFuture<ListIotHubResourceKeysForKeyNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The properties of an IoT hub shared access policy.
+     * API Version: 2020-08-31.
+     * 
+     *
+         * The properties of an IoT hub shared access policy.
+     * 
+     */
     public static CompletableFuture<ListIotHubResourceKeysForKeyNameResult> invokeAsync(ListIotHubResourceKeysForKeyNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:listIotHubResourceKeysForKeyName", TypeShape.of(ListIotHubResourceKeysForKeyNameResult.class), args == null ? ListIotHubResourceKeysForKeyNameArgs.Empty : args, Utilities.withVersion(options));
     }

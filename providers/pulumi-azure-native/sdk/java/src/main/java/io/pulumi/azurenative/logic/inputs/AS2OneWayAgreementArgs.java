@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.AS2ProtocolSettingsArgs;
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -23,7 +23,7 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="protocolSettings", required=true)
-    private final Input<AS2ProtocolSettingsArgs> protocolSettings;
+      private final Input<AS2ProtocolSettingsArgs> protocolSettings;
 
     public Input<AS2ProtocolSettingsArgs> getProtocolSettings() {
         return this.protocolSettings;
@@ -34,7 +34,7 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="receiverBusinessIdentity", required=true)
-    private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
+      private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
 
     public Input<BusinessIdentityArgs> getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
@@ -45,7 +45,7 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="senderBusinessIdentity", required=true)
-    private final Input<BusinessIdentityArgs> senderBusinessIdentity;
+      private final Input<BusinessIdentityArgs> senderBusinessIdentity;
 
     public Input<BusinessIdentityArgs> getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;
@@ -119,7 +119,6 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
             this.senderBusinessIdentity = Input.of(Objects.requireNonNull(senderBusinessIdentity));
             return this;
         }
-
         public AS2OneWayAgreementArgs build() {
             return new AS2OneWayAgreementArgs(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }

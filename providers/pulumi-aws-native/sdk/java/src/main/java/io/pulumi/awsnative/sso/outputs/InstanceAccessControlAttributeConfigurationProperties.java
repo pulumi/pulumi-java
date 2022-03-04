@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sso.outputs;
 
 import io.pulumi.awsnative.sso.outputs.InstanceAccessControlAttributeConfigurationAccessControlAttribute;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -45,7 +45,6 @@ public final class InstanceAccessControlAttributeConfigurationProperties {
             this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes);
             return this;
         }
-
         public InstanceAccessControlAttributeConfigurationProperties build() {
             return new InstanceAccessControlAttributeConfigurationProperties(accessControlAttributes);
         }

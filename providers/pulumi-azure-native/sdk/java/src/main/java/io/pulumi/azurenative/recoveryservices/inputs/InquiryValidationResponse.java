@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.ErrorDetailResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="additionalDetail", required=true)
-    private final String additionalDetail;
+      private final String additionalDetail;
 
     public String getAdditionalDetail() {
         return this.additionalDetail;
@@ -35,7 +35,7 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="errorDetail")
-    private final @Nullable ErrorDetailResponse errorDetail;
+      private final @Nullable ErrorDetailResponse errorDetail;
 
     public Optional<ErrorDetailResponse> getErrorDetail() {
         return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
@@ -46,7 +46,7 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -105,7 +105,6 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
             this.status = status;
             return this;
         }
-
         public InquiryValidationResponse build() {
             return new InquiryValidationResponse(additionalDetail, errorDetail, status);
         }

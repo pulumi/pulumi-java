@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.ObbFileResponse;
 import io.pulumi.googlenative.testing_v1.inputs.RegularFileResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="obbFile", required=true)
-    private final ObbFileResponse obbFile;
+      private final ObbFileResponse obbFile;
 
     public ObbFileResponse getObbFile() {
         return this.obbFile;
@@ -33,7 +33,7 @@ public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="regularFile", required=true)
-    private final RegularFileResponse regularFile;
+      private final RegularFileResponse regularFile;
 
     public RegularFileResponse getRegularFile() {
         return this.regularFile;
@@ -82,7 +82,6 @@ public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
             this.regularFile = Objects.requireNonNull(regularFile);
             return this;
         }
-
         public DeviceFileResponse build() {
             return new DeviceFileResponse(obbFile, regularFile);
         }

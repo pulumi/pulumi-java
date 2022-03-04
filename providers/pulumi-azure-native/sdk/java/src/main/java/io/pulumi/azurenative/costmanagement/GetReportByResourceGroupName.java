@@ -6,21 +6,41 @@ package io.pulumi.azurenative.costmanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.costmanagement.inputs.GetReportByResourceGroupNameArgs;
 import io.pulumi.azurenative.costmanagement.outputs.GetReportByResourceGroupNameResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReportByResourceGroupName {
-/**
- * A report resource.
+    private GetReportByResourceGroupName() {}
+    public interface BuilderApplicator {
+        public void apply(GetReportByResourceGroupNameArgs.Builder a);
+    }
+    private static GetReportByResourceGroupNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReportByResourceGroupNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A report resource.
  * API Version: 2018-08-01-preview.
  * 
- *
- * A report resource.
+     *
+     * A report resource.
  * 
- */
+     */
+    public static CompletableFuture<GetReportByResourceGroupNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A report resource.
+     * API Version: 2018-08-01-preview.
+     * 
+     *
+         * A report resource.
+     * 
+     */
     public static CompletableFuture<GetReportByResourceGroupNameResult> invokeAsync(GetReportByResourceGroupNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getReportByResourceGroupName", TypeShape.of(GetReportByResourceGroupNameResult.class), args == null ? GetReportByResourceGroupNameArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +29,7 @@ public final class ServiceTypeDeltaHealthPolicyResponse {
      * The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
      * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
      * 
-     */
+    */
     public Optional<Integer> getMaxPercentDeltaUnhealthyServices() {
         return Optional.ofNullable(this.maxPercentDeltaUnhealthyServices);
     }
@@ -58,7 +58,6 @@ public final class ServiceTypeDeltaHealthPolicyResponse {
             this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
             return this;
         }
-
         public ServiceTypeDeltaHealthPolicyResponse build() {
             return new ServiceTypeDeltaHealthPolicyResponse(maxPercentDeltaUnhealthyServices);
         }

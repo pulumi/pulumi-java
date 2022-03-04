@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
      * May contain up to seven (one for each day of the week) snapshot times.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> getDayOfWeeks() {
         return this.dayOfWeeks;
     }
@@ -55,7 +55,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(dayOfWeeks);
         }

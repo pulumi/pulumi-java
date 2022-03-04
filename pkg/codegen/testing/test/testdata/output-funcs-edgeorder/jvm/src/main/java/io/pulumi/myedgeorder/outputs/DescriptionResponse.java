@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.myedgeorder.outputs.LinkResponse;
 import java.lang.String;
 import java.util.List;
@@ -61,42 +61,42 @@ public final class DescriptionResponse {
     /**
      * Attributes for the product system.
      * 
-     */
+    */
     public List<String> getAttributes() {
         return this.attributes;
     }
     /**
      * Type of description.
      * 
-     */
+    */
     public String getDescriptionType() {
         return this.descriptionType;
     }
     /**
      * Keywords for the product system.
      * 
-     */
+    */
     public List<String> getKeywords() {
         return this.keywords;
     }
     /**
      * Links for the product system.
      * 
-     */
+    */
     public List<LinkResponse> getLinks() {
         return this.links;
     }
     /**
      * Long description of the product system.
      * 
-     */
+    */
     public String getLongDescription() {
         return this.longDescription;
     }
     /**
      * Short description of the product system.
      * 
-     */
+    */
     public String getShortDescription() {
         return this.shortDescription;
     }
@@ -160,7 +160,6 @@ public final class DescriptionResponse {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
-
         public DescriptionResponse build() {
             return new DescriptionResponse(attributes, descriptionType, keywords, links, longDescription, shortDescription);
         }

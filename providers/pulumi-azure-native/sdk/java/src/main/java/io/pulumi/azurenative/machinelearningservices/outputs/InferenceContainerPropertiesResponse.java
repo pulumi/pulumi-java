@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.RouteResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -40,21 +40,21 @@ public final class InferenceContainerPropertiesResponse {
     /**
      * The route to check the liveness of the inference server container.
      * 
-     */
+    */
     public Optional<RouteResponse> getLivenessRoute() {
         return Optional.ofNullable(this.livenessRoute);
     }
     /**
      * The route to check the readiness of the inference server container.
      * 
-     */
+    */
     public Optional<RouteResponse> getReadinessRoute() {
         return Optional.ofNullable(this.readinessRoute);
     }
     /**
      * The port to send the scoring requests to, within the inference server container.
      * 
-     */
+    */
     public Optional<RouteResponse> getScoringRoute() {
         return Optional.ofNullable(this.scoringRoute);
     }
@@ -97,7 +97,6 @@ public final class InferenceContainerPropertiesResponse {
             this.scoringRoute = scoringRoute;
             return this;
         }
-
         public InferenceContainerPropertiesResponse build() {
             return new InferenceContainerPropertiesResponse(livenessRoute, readinessRoute, scoringRoute);
         }

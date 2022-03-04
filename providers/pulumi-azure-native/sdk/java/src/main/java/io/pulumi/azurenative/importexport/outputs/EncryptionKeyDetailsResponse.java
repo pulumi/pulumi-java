@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class EncryptionKeyDetailsResponse {
     /**
      * The type of kek encryption key
      * 
-     */
+    */
     public Optional<String> getKekType() {
         return Optional.ofNullable(this.kekType);
     }
     /**
      * Specifies the url for kek encryption key.
      * 
-     */
+    */
     public Optional<String> getKekUrl() {
         return Optional.ofNullable(this.kekUrl);
     }
     /**
      * Specifies the keyvault resource id for kek encryption key.
      * 
-     */
+    */
     public Optional<String> getKekVaultResourceID() {
         return Optional.ofNullable(this.kekVaultResourceID);
     }
@@ -97,7 +97,6 @@ public final class EncryptionKeyDetailsResponse {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }
-
         public EncryptionKeyDetailsResponse build() {
             return new EncryptionKeyDetailsResponse(kekType, kekUrl, kekVaultResourceID);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="pubsubTopicName", required=true)
-    private final Input<String> pubsubTopicName;
+      private final Input<String> pubsubTopicName;
 
     public Input<String> getPubsubTopicName() {
         return this.pubsubTopicName;
@@ -34,7 +34,7 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="subfolderMatches")
-    private final @Nullable Input<String> subfolderMatches;
+      private final @Nullable Input<String> subfolderMatches;
 
     public Input<String> getSubfolderMatches() {
         return this.subfolderMatches == null ? Input.empty() : this.subfolderMatches;
@@ -93,7 +93,6 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
             this.subfolderMatches = Input.ofNullable(subfolderMatches);
             return this;
         }
-
         public RegistryEventNotificationConfigItemArgs build() {
             return new RegistryEventNotificationConfigItemArgs(pubsubTopicName, subfolderMatches);
         }

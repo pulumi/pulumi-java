@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class AzureContainerInfoResponse {
     /**
      * Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
      * 
-     */
+    */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * Storage format used for the file represented by the share.
      * 
-     */
+    */
     public String getDataFormat() {
         return this.dataFormat;
     }
     /**
      * ID of the storage account credential used to access storage.
      * 
-     */
+    */
     public String getStorageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
@@ -95,7 +95,6 @@ public final class AzureContainerInfoResponse {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
         }
-
         public AzureContainerInfoResponse build() {
             return new AzureContainerInfoResponse(containerName, dataFormat, storageAccountCredentialId);
         }

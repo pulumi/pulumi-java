@@ -5,7 +5,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.awsnative.gamelift.enums.FleetIpPermissionProtocol;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fromPort", required=true)
-    private final Input<Integer> fromPort;
+      private final Input<Integer> fromPort;
 
     public Input<Integer> getFromPort() {
         return this.fromPort;
@@ -35,7 +35,7 @@ public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipRange", required=true)
-    private final Input<String> ipRange;
+      private final Input<String> ipRange;
 
     public Input<String> getIpRange() {
         return this.ipRange;
@@ -46,7 +46,7 @@ public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<FleetIpPermissionProtocol> protocol;
+      private final Input<FleetIpPermissionProtocol> protocol;
 
     public Input<FleetIpPermissionProtocol> getProtocol() {
         return this.protocol;
@@ -57,7 +57,7 @@ public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="toPort", required=true)
-    private final Input<Integer> toPort;
+      private final Input<Integer> toPort;
 
     public Input<Integer> getToPort() {
         return this.toPort;
@@ -146,7 +146,6 @@ public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArg
             this.toPort = Input.of(Objects.requireNonNull(toPort));
             return this;
         }
-
         public FleetIpPermissionArgs build() {
             return new FleetIpPermissionArgs(fromPort, ipRange, protocol, toPort);
         }

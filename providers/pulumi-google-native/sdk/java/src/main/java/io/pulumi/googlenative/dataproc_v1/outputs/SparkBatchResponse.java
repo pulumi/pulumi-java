@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class SparkBatchResponse {
     /**
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
-     */
+    */
     public List<String> getArchiveUris() {
         return this.archiveUris;
     }
     /**
      * Optional. The arguments to pass to the driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args;
     }
     /**
      * Optional. HCFS URIs of files to be placed in the working directory of each executor.
      * 
-     */
+    */
     public List<String> getFileUris() {
         return this.fileUris;
     }
     /**
      * Optional. HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris;
     }
     /**
      * Optional. The name of the driver main class. The jar file that contains the class must be in the classpath or specified in jar_file_uris.
      * 
-     */
+    */
     public String getMainClass() {
         return this.mainClass;
     }
     /**
      * Optional. The HCFS URI of the jar file that contains the main class.
      * 
-     */
+    */
     public String getMainJarFileUri() {
         return this.mainJarFileUri;
     }
@@ -159,7 +159,6 @@ public final class SparkBatchResponse {
             this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
             return this;
         }
-
         public SparkBatchResponse build() {
             return new SparkBatchResponse(archiveUris, args, fileUris, jarFileUris, mainClass, mainJarFileUri);
         }

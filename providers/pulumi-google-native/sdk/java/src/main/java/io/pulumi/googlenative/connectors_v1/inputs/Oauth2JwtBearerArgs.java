@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.connectors_v1.inputs.JwtClaimsArgs;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clientKey")
-    private final @Nullable Input<SecretArgs> clientKey;
+      private final @Nullable Input<SecretArgs> clientKey;
 
     public Input<SecretArgs> getClientKey() {
         return this.clientKey == null ? Input.empty() : this.clientKey;
@@ -35,7 +35,7 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="jwtClaims")
-    private final @Nullable Input<JwtClaimsArgs> jwtClaims;
+      private final @Nullable Input<JwtClaimsArgs> jwtClaims;
 
     public Input<JwtClaimsArgs> getJwtClaims() {
         return this.jwtClaims == null ? Input.empty() : this.jwtClaims;
@@ -94,7 +94,6 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
             this.jwtClaims = Input.ofNullable(jwtClaims);
             return this;
         }
-
         public Oauth2JwtBearerArgs build() {
             return new Oauth2JwtBearerArgs(clientKey, jwtClaims);
         }

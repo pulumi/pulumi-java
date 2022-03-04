@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecEgressPolicyGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecIngressPolicyGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecVpcAccessibleServicesGetArgs;
@@ -31,7 +31,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accessLevels")
-    private final @Nullable Input<List<String>> accessLevels;
+      private final @Nullable Input<List<String>> accessLevels;
 
     public Input<List<String>> getAccessLevels() {
         return this.accessLevels == null ? Input.empty() : this.accessLevels;
@@ -46,7 +46,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="egressPolicies")
-    private final @Nullable Input<List<ServicePerimeterSpecEgressPolicyGetArgs>> egressPolicies;
+      private final @Nullable Input<List<ServicePerimeterSpecEgressPolicyGetArgs>> egressPolicies;
 
     public Input<List<ServicePerimeterSpecEgressPolicyGetArgs>> getEgressPolicies() {
         return this.egressPolicies == null ? Input.empty() : this.egressPolicies;
@@ -61,7 +61,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ingressPolicies")
-    private final @Nullable Input<List<ServicePerimeterSpecIngressPolicyGetArgs>> ingressPolicies;
+      private final @Nullable Input<List<ServicePerimeterSpecIngressPolicyGetArgs>> ingressPolicies;
 
     public Input<List<ServicePerimeterSpecIngressPolicyGetArgs>> getIngressPolicies() {
         return this.ingressPolicies == null ? Input.empty() : this.ingressPolicies;
@@ -76,7 +76,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<String>> resources;
+      private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -91,7 +91,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="restrictedServices")
-    private final @Nullable Input<List<String>> restrictedServices;
+      private final @Nullable Input<List<String>> restrictedServices;
 
     public Input<List<String>> getRestrictedServices() {
         return this.restrictedServices == null ? Input.empty() : this.restrictedServices;
@@ -104,7 +104,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vpcAccessibleServices")
-    private final @Nullable Input<ServicePerimeterSpecVpcAccessibleServicesGetArgs> vpcAccessibleServices;
+      private final @Nullable Input<ServicePerimeterSpecVpcAccessibleServicesGetArgs> vpcAccessibleServices;
 
     public Input<ServicePerimeterSpecVpcAccessibleServicesGetArgs> getVpcAccessibleServices() {
         return this.vpcAccessibleServices == null ? Input.empty() : this.vpcAccessibleServices;
@@ -223,7 +223,6 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
             this.vpcAccessibleServices = Input.ofNullable(vpcAccessibleServices);
             return this;
         }
-
         public ServicePerimeterSpecGetArgs build() {
             return new ServicePerimeterSpecGetArgs(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }

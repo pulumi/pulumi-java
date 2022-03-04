@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetAr
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -32,7 +32,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetAr
      * 
      */
     @InputImport(name="monitoringInterval")
-    private final @Nullable Input<String> monitoringInterval;
+      private final @Nullable Input<String> monitoringInterval;
 
     public Input<String> getMonitoringInterval() {
         return this.monitoringInterval == null ? Input.empty() : this.monitoringInterval;
@@ -91,7 +91,6 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetAr
             this.monitoringInterval = Input.ofNullable(monitoringInterval);
             return this;
         }
-
         public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs(disabled, monitoringInterval);
         }

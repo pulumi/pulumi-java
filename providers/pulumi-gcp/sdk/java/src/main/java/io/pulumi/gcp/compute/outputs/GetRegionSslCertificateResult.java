@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -69,7 +69,7 @@ public final class GetRegionSslCertificateResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -186,7 +186,6 @@ public final class GetRegionSslCertificateResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetRegionSslCertificateResult build() {
             return new GetRegionSslCertificateResult(certificate, certificateId, creationTimestamp, description, id, name, namePrefix, privateKey, project, region, selfLink);
         }

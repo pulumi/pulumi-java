@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.config.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accessanalyzer")
-    private final @Nullable String accessanalyzer;
+      private final @Nullable String accessanalyzer;
 
     public Optional<String> getAccessanalyzer() {
         return this.accessanalyzer == null ? Optional.empty() : Optional.ofNullable(this.accessanalyzer);
@@ -34,7 +34,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="acm")
-    private final @Nullable String acm;
+      private final @Nullable String acm;
 
     public Optional<String> getAcm() {
         return this.acm == null ? Optional.empty() : Optional.ofNullable(this.acm);
@@ -45,7 +45,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="acmpca")
-    private final @Nullable String acmpca;
+      private final @Nullable String acmpca;
 
     public Optional<String> getAcmpca() {
         return this.acmpca == null ? Optional.empty() : Optional.ofNullable(this.acmpca);
@@ -56,7 +56,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="amplify")
-    private final @Nullable String amplify;
+      private final @Nullable String amplify;
 
     public Optional<String> getAmplify() {
         return this.amplify == null ? Optional.empty() : Optional.ofNullable(this.amplify);
@@ -67,7 +67,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appconfig")
-    private final @Nullable String appconfig;
+      private final @Nullable String appconfig;
 
     public Optional<String> getAppconfig() {
         return this.appconfig == null ? Optional.empty() : Optional.ofNullable(this.appconfig);
@@ -78,7 +78,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="applicationautoscaling")
-    private final @Nullable String applicationautoscaling;
+      private final @Nullable String applicationautoscaling;
 
     public Optional<String> getApplicationautoscaling() {
         return this.applicationautoscaling == null ? Optional.empty() : Optional.ofNullable(this.applicationautoscaling);
@@ -89,7 +89,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="applicationinsights")
-    private final @Nullable String applicationinsights;
+      private final @Nullable String applicationinsights;
 
     public Optional<String> getApplicationinsights() {
         return this.applicationinsights == null ? Optional.empty() : Optional.ofNullable(this.applicationinsights);
@@ -100,7 +100,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appmesh")
-    private final @Nullable String appmesh;
+      private final @Nullable String appmesh;
 
     public Optional<String> getAppmesh() {
         return this.appmesh == null ? Optional.empty() : Optional.ofNullable(this.appmesh);
@@ -111,7 +111,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apprunner")
-    private final @Nullable String apprunner;
+      private final @Nullable String apprunner;
 
     public Optional<String> getApprunner() {
         return this.apprunner == null ? Optional.empty() : Optional.ofNullable(this.apprunner);
@@ -122,7 +122,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appstream")
-    private final @Nullable String appstream;
+      private final @Nullable String appstream;
 
     public Optional<String> getAppstream() {
         return this.appstream == null ? Optional.empty() : Optional.ofNullable(this.appstream);
@@ -133,7 +133,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appsync")
-    private final @Nullable String appsync;
+      private final @Nullable String appsync;
 
     public Optional<String> getAppsync() {
         return this.appsync == null ? Optional.empty() : Optional.ofNullable(this.appsync);
@@ -144,7 +144,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="athena")
-    private final @Nullable String athena;
+      private final @Nullable String athena;
 
     public Optional<String> getAthena() {
         return this.athena == null ? Optional.empty() : Optional.ofNullable(this.athena);
@@ -155,7 +155,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="auditmanager")
-    private final @Nullable String auditmanager;
+      private final @Nullable String auditmanager;
 
     public Optional<String> getAuditmanager() {
         return this.auditmanager == null ? Optional.empty() : Optional.ofNullable(this.auditmanager);
@@ -166,7 +166,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="autoscaling")
-    private final @Nullable String autoscaling;
+      private final @Nullable String autoscaling;
 
     public Optional<String> getAutoscaling() {
         return this.autoscaling == null ? Optional.empty() : Optional.ofNullable(this.autoscaling);
@@ -177,7 +177,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backup")
-    private final @Nullable String backup;
+      private final @Nullable String backup;
 
     public Optional<String> getBackup() {
         return this.backup == null ? Optional.empty() : Optional.ofNullable(this.backup);
@@ -188,7 +188,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="batch")
-    private final @Nullable String batch;
+      private final @Nullable String batch;
 
     public Optional<String> getBatch() {
         return this.batch == null ? Optional.empty() : Optional.ofNullable(this.batch);
@@ -199,7 +199,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="budgets")
-    private final @Nullable String budgets;
+      private final @Nullable String budgets;
 
     public Optional<String> getBudgets() {
         return this.budgets == null ? Optional.empty() : Optional.ofNullable(this.budgets);
@@ -210,7 +210,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="chime")
-    private final @Nullable String chime;
+      private final @Nullable String chime;
 
     public Optional<String> getChime() {
         return this.chime == null ? Optional.empty() : Optional.ofNullable(this.chime);
@@ -221,7 +221,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloud9")
-    private final @Nullable String cloud9;
+      private final @Nullable String cloud9;
 
     public Optional<String> getCloud9() {
         return this.cloud9 == null ? Optional.empty() : Optional.ofNullable(this.cloud9);
@@ -232,7 +232,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudformation")
-    private final @Nullable String cloudformation;
+      private final @Nullable String cloudformation;
 
     public Optional<String> getCloudformation() {
         return this.cloudformation == null ? Optional.empty() : Optional.ofNullable(this.cloudformation);
@@ -243,7 +243,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudfront")
-    private final @Nullable String cloudfront;
+      private final @Nullable String cloudfront;
 
     public Optional<String> getCloudfront() {
         return this.cloudfront == null ? Optional.empty() : Optional.ofNullable(this.cloudfront);
@@ -254,7 +254,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudhsm")
-    private final @Nullable String cloudhsm;
+      private final @Nullable String cloudhsm;
 
     public Optional<String> getCloudhsm() {
         return this.cloudhsm == null ? Optional.empty() : Optional.ofNullable(this.cloudhsm);
@@ -265,7 +265,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudsearch")
-    private final @Nullable String cloudsearch;
+      private final @Nullable String cloudsearch;
 
     public Optional<String> getCloudsearch() {
         return this.cloudsearch == null ? Optional.empty() : Optional.ofNullable(this.cloudsearch);
@@ -276,7 +276,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudtrail")
-    private final @Nullable String cloudtrail;
+      private final @Nullable String cloudtrail;
 
     public Optional<String> getCloudtrail() {
         return this.cloudtrail == null ? Optional.empty() : Optional.ofNullable(this.cloudtrail);
@@ -287,7 +287,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudwatch")
-    private final @Nullable String cloudwatch;
+      private final @Nullable String cloudwatch;
 
     public Optional<String> getCloudwatch() {
         return this.cloudwatch == null ? Optional.empty() : Optional.ofNullable(this.cloudwatch);
@@ -298,7 +298,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudwatchevents")
-    private final @Nullable String cloudwatchevents;
+      private final @Nullable String cloudwatchevents;
 
     public Optional<String> getCloudwatchevents() {
         return this.cloudwatchevents == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchevents);
@@ -309,7 +309,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudwatchlogs")
-    private final @Nullable String cloudwatchlogs;
+      private final @Nullable String cloudwatchlogs;
 
     public Optional<String> getCloudwatchlogs() {
         return this.cloudwatchlogs == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchlogs);
@@ -320,7 +320,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="codeartifact")
-    private final @Nullable String codeartifact;
+      private final @Nullable String codeartifact;
 
     public Optional<String> getCodeartifact() {
         return this.codeartifact == null ? Optional.empty() : Optional.ofNullable(this.codeartifact);
@@ -331,7 +331,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="codebuild")
-    private final @Nullable String codebuild;
+      private final @Nullable String codebuild;
 
     public Optional<String> getCodebuild() {
         return this.codebuild == null ? Optional.empty() : Optional.ofNullable(this.codebuild);
@@ -342,7 +342,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="codecommit")
-    private final @Nullable String codecommit;
+      private final @Nullable String codecommit;
 
     public Optional<String> getCodecommit() {
         return this.codecommit == null ? Optional.empty() : Optional.ofNullable(this.codecommit);
@@ -353,7 +353,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="codedeploy")
-    private final @Nullable String codedeploy;
+      private final @Nullable String codedeploy;
 
     public Optional<String> getCodedeploy() {
         return this.codedeploy == null ? Optional.empty() : Optional.ofNullable(this.codedeploy);
@@ -364,7 +364,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="codepipeline")
-    private final @Nullable String codepipeline;
+      private final @Nullable String codepipeline;
 
     public Optional<String> getCodepipeline() {
         return this.codepipeline == null ? Optional.empty() : Optional.ofNullable(this.codepipeline);
@@ -375,7 +375,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="codestarconnections")
-    private final @Nullable String codestarconnections;
+      private final @Nullable String codestarconnections;
 
     public Optional<String> getCodestarconnections() {
         return this.codestarconnections == null ? Optional.empty() : Optional.ofNullable(this.codestarconnections);
@@ -386,7 +386,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cognitoidentity")
-    private final @Nullable String cognitoidentity;
+      private final @Nullable String cognitoidentity;
 
     public Optional<String> getCognitoidentity() {
         return this.cognitoidentity == null ? Optional.empty() : Optional.ofNullable(this.cognitoidentity);
@@ -397,7 +397,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="configservice")
-    private final @Nullable String configservice;
+      private final @Nullable String configservice;
 
     public Optional<String> getConfigservice() {
         return this.configservice == null ? Optional.empty() : Optional.ofNullable(this.configservice);
@@ -408,7 +408,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connect")
-    private final @Nullable String connect;
+      private final @Nullable String connect;
 
     public Optional<String> getConnect() {
         return this.connect == null ? Optional.empty() : Optional.ofNullable(this.connect);
@@ -419,7 +419,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cur")
-    private final @Nullable String cur;
+      private final @Nullable String cur;
 
     public Optional<String> getCur() {
         return this.cur == null ? Optional.empty() : Optional.ofNullable(this.cur);
@@ -430,7 +430,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataexchange")
-    private final @Nullable String dataexchange;
+      private final @Nullable String dataexchange;
 
     public Optional<String> getDataexchange() {
         return this.dataexchange == null ? Optional.empty() : Optional.ofNullable(this.dataexchange);
@@ -441,7 +441,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datapipeline")
-    private final @Nullable String datapipeline;
+      private final @Nullable String datapipeline;
 
     public Optional<String> getDatapipeline() {
         return this.datapipeline == null ? Optional.empty() : Optional.ofNullable(this.datapipeline);
@@ -452,7 +452,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datasync")
-    private final @Nullable String datasync;
+      private final @Nullable String datasync;
 
     public Optional<String> getDatasync() {
         return this.datasync == null ? Optional.empty() : Optional.ofNullable(this.datasync);
@@ -463,7 +463,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dax")
-    private final @Nullable String dax;
+      private final @Nullable String dax;
 
     public Optional<String> getDax() {
         return this.dax == null ? Optional.empty() : Optional.ofNullable(this.dax);
@@ -474,7 +474,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="detective")
-    private final @Nullable String detective;
+      private final @Nullable String detective;
 
     public Optional<String> getDetective() {
         return this.detective == null ? Optional.empty() : Optional.ofNullable(this.detective);
@@ -485,7 +485,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="devicefarm")
-    private final @Nullable String devicefarm;
+      private final @Nullable String devicefarm;
 
     public Optional<String> getDevicefarm() {
         return this.devicefarm == null ? Optional.empty() : Optional.ofNullable(this.devicefarm);
@@ -496,7 +496,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="directconnect")
-    private final @Nullable String directconnect;
+      private final @Nullable String directconnect;
 
     public Optional<String> getDirectconnect() {
         return this.directconnect == null ? Optional.empty() : Optional.ofNullable(this.directconnect);
@@ -507,7 +507,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dlm")
-    private final @Nullable String dlm;
+      private final @Nullable String dlm;
 
     public Optional<String> getDlm() {
         return this.dlm == null ? Optional.empty() : Optional.ofNullable(this.dlm);
@@ -518,7 +518,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dms")
-    private final @Nullable String dms;
+      private final @Nullable String dms;
 
     public Optional<String> getDms() {
         return this.dms == null ? Optional.empty() : Optional.ofNullable(this.dms);
@@ -529,7 +529,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="docdb")
-    private final @Nullable String docdb;
+      private final @Nullable String docdb;
 
     public Optional<String> getDocdb() {
         return this.docdb == null ? Optional.empty() : Optional.ofNullable(this.docdb);
@@ -540,7 +540,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ds")
-    private final @Nullable String ds;
+      private final @Nullable String ds;
 
     public Optional<String> getDs() {
         return this.ds == null ? Optional.empty() : Optional.ofNullable(this.ds);
@@ -551,7 +551,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dynamodb")
-    private final @Nullable String dynamodb;
+      private final @Nullable String dynamodb;
 
     public Optional<String> getDynamodb() {
         return this.dynamodb == null ? Optional.empty() : Optional.ofNullable(this.dynamodb);
@@ -562,7 +562,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ec2")
-    private final @Nullable String ec2;
+      private final @Nullable String ec2;
 
     public Optional<String> getEc2() {
         return this.ec2 == null ? Optional.empty() : Optional.ofNullable(this.ec2);
@@ -573,7 +573,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ecr")
-    private final @Nullable String ecr;
+      private final @Nullable String ecr;
 
     public Optional<String> getEcr() {
         return this.ecr == null ? Optional.empty() : Optional.ofNullable(this.ecr);
@@ -584,7 +584,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ecrpublic")
-    private final @Nullable String ecrpublic;
+      private final @Nullable String ecrpublic;
 
     public Optional<String> getEcrpublic() {
         return this.ecrpublic == null ? Optional.empty() : Optional.ofNullable(this.ecrpublic);
@@ -595,7 +595,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ecs")
-    private final @Nullable String ecs;
+      private final @Nullable String ecs;
 
     public Optional<String> getEcs() {
         return this.ecs == null ? Optional.empty() : Optional.ofNullable(this.ecs);
@@ -606,7 +606,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="efs")
-    private final @Nullable String efs;
+      private final @Nullable String efs;
 
     public Optional<String> getEfs() {
         return this.efs == null ? Optional.empty() : Optional.ofNullable(this.efs);
@@ -617,7 +617,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eks")
-    private final @Nullable String eks;
+      private final @Nullable String eks;
 
     public Optional<String> getEks() {
         return this.eks == null ? Optional.empty() : Optional.ofNullable(this.eks);
@@ -628,7 +628,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elasticache")
-    private final @Nullable String elasticache;
+      private final @Nullable String elasticache;
 
     public Optional<String> getElasticache() {
         return this.elasticache == null ? Optional.empty() : Optional.ofNullable(this.elasticache);
@@ -639,7 +639,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elasticbeanstalk")
-    private final @Nullable String elasticbeanstalk;
+      private final @Nullable String elasticbeanstalk;
 
     public Optional<String> getElasticbeanstalk() {
         return this.elasticbeanstalk == null ? Optional.empty() : Optional.ofNullable(this.elasticbeanstalk);
@@ -650,7 +650,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elastictranscoder")
-    private final @Nullable String elastictranscoder;
+      private final @Nullable String elastictranscoder;
 
     public Optional<String> getElastictranscoder() {
         return this.elastictranscoder == null ? Optional.empty() : Optional.ofNullable(this.elastictranscoder);
@@ -661,7 +661,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elb")
-    private final @Nullable String elb;
+      private final @Nullable String elb;
 
     public Optional<String> getElb() {
         return this.elb == null ? Optional.empty() : Optional.ofNullable(this.elb);
@@ -672,7 +672,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elbv2")
-    private final @Nullable String elbv2;
+      private final @Nullable String elbv2;
 
     public Optional<String> getElbv2() {
         return this.elbv2 == null ? Optional.empty() : Optional.ofNullable(this.elbv2);
@@ -683,7 +683,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="emr")
-    private final @Nullable String emr;
+      private final @Nullable String emr;
 
     public Optional<String> getEmr() {
         return this.emr == null ? Optional.empty() : Optional.ofNullable(this.emr);
@@ -694,7 +694,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="emrcontainers")
-    private final @Nullable String emrcontainers;
+      private final @Nullable String emrcontainers;
 
     public Optional<String> getEmrcontainers() {
         return this.emrcontainers == null ? Optional.empty() : Optional.ofNullable(this.emrcontainers);
@@ -705,7 +705,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="es")
-    private final @Nullable String es;
+      private final @Nullable String es;
 
     public Optional<String> getEs() {
         return this.es == null ? Optional.empty() : Optional.ofNullable(this.es);
@@ -716,7 +716,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="firehose")
-    private final @Nullable String firehose;
+      private final @Nullable String firehose;
 
     public Optional<String> getFirehose() {
         return this.firehose == null ? Optional.empty() : Optional.ofNullable(this.firehose);
@@ -727,7 +727,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fms")
-    private final @Nullable String fms;
+      private final @Nullable String fms;
 
     public Optional<String> getFms() {
         return this.fms == null ? Optional.empty() : Optional.ofNullable(this.fms);
@@ -738,7 +738,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="forecast")
-    private final @Nullable String forecast;
+      private final @Nullable String forecast;
 
     public Optional<String> getForecast() {
         return this.forecast == null ? Optional.empty() : Optional.ofNullable(this.forecast);
@@ -749,7 +749,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fsx")
-    private final @Nullable String fsx;
+      private final @Nullable String fsx;
 
     public Optional<String> getFsx() {
         return this.fsx == null ? Optional.empty() : Optional.ofNullable(this.fsx);
@@ -760,7 +760,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gamelift")
-    private final @Nullable String gamelift;
+      private final @Nullable String gamelift;
 
     public Optional<String> getGamelift() {
         return this.gamelift == null ? Optional.empty() : Optional.ofNullable(this.gamelift);
@@ -771,7 +771,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="glacier")
-    private final @Nullable String glacier;
+      private final @Nullable String glacier;
 
     public Optional<String> getGlacier() {
         return this.glacier == null ? Optional.empty() : Optional.ofNullable(this.glacier);
@@ -782,7 +782,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="globalaccelerator")
-    private final @Nullable String globalaccelerator;
+      private final @Nullable String globalaccelerator;
 
     public Optional<String> getGlobalaccelerator() {
         return this.globalaccelerator == null ? Optional.empty() : Optional.ofNullable(this.globalaccelerator);
@@ -793,7 +793,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="glue")
-    private final @Nullable String glue;
+      private final @Nullable String glue;
 
     public Optional<String> getGlue() {
         return this.glue == null ? Optional.empty() : Optional.ofNullable(this.glue);
@@ -804,7 +804,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="greengrass")
-    private final @Nullable String greengrass;
+      private final @Nullable String greengrass;
 
     public Optional<String> getGreengrass() {
         return this.greengrass == null ? Optional.empty() : Optional.ofNullable(this.greengrass);
@@ -815,7 +815,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="guardduty")
-    private final @Nullable String guardduty;
+      private final @Nullable String guardduty;
 
     public Optional<String> getGuardduty() {
         return this.guardduty == null ? Optional.empty() : Optional.ofNullable(this.guardduty);
@@ -826,7 +826,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iam")
-    private final @Nullable String iam;
+      private final @Nullable String iam;
 
     public Optional<String> getIam() {
         return this.iam == null ? Optional.empty() : Optional.ofNullable(this.iam);
@@ -837,7 +837,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identitystore")
-    private final @Nullable String identitystore;
+      private final @Nullable String identitystore;
 
     public Optional<String> getIdentitystore() {
         return this.identitystore == null ? Optional.empty() : Optional.ofNullable(this.identitystore);
@@ -848,7 +848,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imagebuilder")
-    private final @Nullable String imagebuilder;
+      private final @Nullable String imagebuilder;
 
     public Optional<String> getImagebuilder() {
         return this.imagebuilder == null ? Optional.empty() : Optional.ofNullable(this.imagebuilder);
@@ -859,7 +859,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inspector")
-    private final @Nullable String inspector;
+      private final @Nullable String inspector;
 
     public Optional<String> getInspector() {
         return this.inspector == null ? Optional.empty() : Optional.ofNullable(this.inspector);
@@ -870,7 +870,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iot")
-    private final @Nullable String iot;
+      private final @Nullable String iot;
 
     public Optional<String> getIot() {
         return this.iot == null ? Optional.empty() : Optional.ofNullable(this.iot);
@@ -881,7 +881,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iotanalytics")
-    private final @Nullable String iotanalytics;
+      private final @Nullable String iotanalytics;
 
     public Optional<String> getIotanalytics() {
         return this.iotanalytics == null ? Optional.empty() : Optional.ofNullable(this.iotanalytics);
@@ -892,7 +892,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iotevents")
-    private final @Nullable String iotevents;
+      private final @Nullable String iotevents;
 
     public Optional<String> getIotevents() {
         return this.iotevents == null ? Optional.empty() : Optional.ofNullable(this.iotevents);
@@ -903,7 +903,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kafka")
-    private final @Nullable String kafka;
+      private final @Nullable String kafka;
 
     public Optional<String> getKafka() {
         return this.kafka == null ? Optional.empty() : Optional.ofNullable(this.kafka);
@@ -914,7 +914,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kinesis")
-    private final @Nullable String kinesis;
+      private final @Nullable String kinesis;
 
     public Optional<String> getKinesis() {
         return this.kinesis == null ? Optional.empty() : Optional.ofNullable(this.kinesis);
@@ -925,7 +925,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kinesisanalytics")
-    private final @Nullable String kinesisanalytics;
+      private final @Nullable String kinesisanalytics;
 
     public Optional<String> getKinesisanalytics() {
         return this.kinesisanalytics == null ? Optional.empty() : Optional.ofNullable(this.kinesisanalytics);
@@ -936,7 +936,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kinesisanalyticsv2")
-    private final @Nullable String kinesisanalyticsv2;
+      private final @Nullable String kinesisanalyticsv2;
 
     public Optional<String> getKinesisanalyticsv2() {
         return this.kinesisanalyticsv2 == null ? Optional.empty() : Optional.ofNullable(this.kinesisanalyticsv2);
@@ -947,7 +947,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kinesisvideo")
-    private final @Nullable String kinesisvideo;
+      private final @Nullable String kinesisvideo;
 
     public Optional<String> getKinesisvideo() {
         return this.kinesisvideo == null ? Optional.empty() : Optional.ofNullable(this.kinesisvideo);
@@ -958,7 +958,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kms")
-    private final @Nullable String kms;
+      private final @Nullable String kms;
 
     public Optional<String> getKms() {
         return this.kms == null ? Optional.empty() : Optional.ofNullable(this.kms);
@@ -969,7 +969,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lakeformation")
-    private final @Nullable String lakeformation;
+      private final @Nullable String lakeformation;
 
     public Optional<String> getLakeformation() {
         return this.lakeformation == null ? Optional.empty() : Optional.ofNullable(this.lakeformation);
@@ -980,7 +980,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lambda")
-    private final @Nullable String lambda;
+      private final @Nullable String lambda;
 
     public Optional<String> getLambda() {
         return this.lambda == null ? Optional.empty() : Optional.ofNullable(this.lambda);
@@ -991,7 +991,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lexmodels")
-    private final @Nullable String lexmodels;
+      private final @Nullable String lexmodels;
 
     public Optional<String> getLexmodels() {
         return this.lexmodels == null ? Optional.empty() : Optional.ofNullable(this.lexmodels);
@@ -1002,7 +1002,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="licensemanager")
-    private final @Nullable String licensemanager;
+      private final @Nullable String licensemanager;
 
     public Optional<String> getLicensemanager() {
         return this.licensemanager == null ? Optional.empty() : Optional.ofNullable(this.licensemanager);
@@ -1013,7 +1013,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lightsail")
-    private final @Nullable String lightsail;
+      private final @Nullable String lightsail;
 
     public Optional<String> getLightsail() {
         return this.lightsail == null ? Optional.empty() : Optional.ofNullable(this.lightsail);
@@ -1024,7 +1024,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -1035,7 +1035,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="macie")
-    private final @Nullable String macie;
+      private final @Nullable String macie;
 
     public Optional<String> getMacie() {
         return this.macie == null ? Optional.empty() : Optional.ofNullable(this.macie);
@@ -1046,7 +1046,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="macie2")
-    private final @Nullable String macie2;
+      private final @Nullable String macie2;
 
     public Optional<String> getMacie2() {
         return this.macie2 == null ? Optional.empty() : Optional.ofNullable(this.macie2);
@@ -1057,7 +1057,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="managedblockchain")
-    private final @Nullable String managedblockchain;
+      private final @Nullable String managedblockchain;
 
     public Optional<String> getManagedblockchain() {
         return this.managedblockchain == null ? Optional.empty() : Optional.ofNullable(this.managedblockchain);
@@ -1068,7 +1068,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="marketplacecatalog")
-    private final @Nullable String marketplacecatalog;
+      private final @Nullable String marketplacecatalog;
 
     public Optional<String> getMarketplacecatalog() {
         return this.marketplacecatalog == null ? Optional.empty() : Optional.ofNullable(this.marketplacecatalog);
@@ -1079,7 +1079,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mediaconnect")
-    private final @Nullable String mediaconnect;
+      private final @Nullable String mediaconnect;
 
     public Optional<String> getMediaconnect() {
         return this.mediaconnect == null ? Optional.empty() : Optional.ofNullable(this.mediaconnect);
@@ -1090,7 +1090,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mediaconvert")
-    private final @Nullable String mediaconvert;
+      private final @Nullable String mediaconvert;
 
     public Optional<String> getMediaconvert() {
         return this.mediaconvert == null ? Optional.empty() : Optional.ofNullable(this.mediaconvert);
@@ -1101,7 +1101,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="medialive")
-    private final @Nullable String medialive;
+      private final @Nullable String medialive;
 
     public Optional<String> getMedialive() {
         return this.medialive == null ? Optional.empty() : Optional.ofNullable(this.medialive);
@@ -1112,7 +1112,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mediapackage")
-    private final @Nullable String mediapackage;
+      private final @Nullable String mediapackage;
 
     public Optional<String> getMediapackage() {
         return this.mediapackage == null ? Optional.empty() : Optional.ofNullable(this.mediapackage);
@@ -1123,7 +1123,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mediastore")
-    private final @Nullable String mediastore;
+      private final @Nullable String mediastore;
 
     public Optional<String> getMediastore() {
         return this.mediastore == null ? Optional.empty() : Optional.ofNullable(this.mediastore);
@@ -1134,7 +1134,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mediastoredata")
-    private final @Nullable String mediastoredata;
+      private final @Nullable String mediastoredata;
 
     public Optional<String> getMediastoredata() {
         return this.mediastoredata == null ? Optional.empty() : Optional.ofNullable(this.mediastoredata);
@@ -1145,7 +1145,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="memorydb")
-    private final @Nullable String memorydb;
+      private final @Nullable String memorydb;
 
     public Optional<String> getMemorydb() {
         return this.memorydb == null ? Optional.empty() : Optional.ofNullable(this.memorydb);
@@ -1156,7 +1156,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mq")
-    private final @Nullable String mq;
+      private final @Nullable String mq;
 
     public Optional<String> getMq() {
         return this.mq == null ? Optional.empty() : Optional.ofNullable(this.mq);
@@ -1167,7 +1167,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mwaa")
-    private final @Nullable String mwaa;
+      private final @Nullable String mwaa;
 
     public Optional<String> getMwaa() {
         return this.mwaa == null ? Optional.empty() : Optional.ofNullable(this.mwaa);
@@ -1178,7 +1178,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="neptune")
-    private final @Nullable String neptune;
+      private final @Nullable String neptune;
 
     public Optional<String> getNeptune() {
         return this.neptune == null ? Optional.empty() : Optional.ofNullable(this.neptune);
@@ -1189,7 +1189,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkfirewall")
-    private final @Nullable String networkfirewall;
+      private final @Nullable String networkfirewall;
 
     public Optional<String> getNetworkfirewall() {
         return this.networkfirewall == null ? Optional.empty() : Optional.ofNullable(this.networkfirewall);
@@ -1200,7 +1200,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkmanager")
-    private final @Nullable String networkmanager;
+      private final @Nullable String networkmanager;
 
     public Optional<String> getNetworkmanager() {
         return this.networkmanager == null ? Optional.empty() : Optional.ofNullable(this.networkmanager);
@@ -1211,7 +1211,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="opsworks")
-    private final @Nullable String opsworks;
+      private final @Nullable String opsworks;
 
     public Optional<String> getOpsworks() {
         return this.opsworks == null ? Optional.empty() : Optional.ofNullable(this.opsworks);
@@ -1222,7 +1222,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="organizations")
-    private final @Nullable String organizations;
+      private final @Nullable String organizations;
 
     public Optional<String> getOrganizations() {
         return this.organizations == null ? Optional.empty() : Optional.ofNullable(this.organizations);
@@ -1233,7 +1233,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outposts")
-    private final @Nullable String outposts;
+      private final @Nullable String outposts;
 
     public Optional<String> getOutposts() {
         return this.outposts == null ? Optional.empty() : Optional.ofNullable(this.outposts);
@@ -1244,7 +1244,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="personalize")
-    private final @Nullable String personalize;
+      private final @Nullable String personalize;
 
     public Optional<String> getPersonalize() {
         return this.personalize == null ? Optional.empty() : Optional.ofNullable(this.personalize);
@@ -1255,7 +1255,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pinpoint")
-    private final @Nullable String pinpoint;
+      private final @Nullable String pinpoint;
 
     public Optional<String> getPinpoint() {
         return this.pinpoint == null ? Optional.empty() : Optional.ofNullable(this.pinpoint);
@@ -1266,7 +1266,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pricing")
-    private final @Nullable String pricing;
+      private final @Nullable String pricing;
 
     public Optional<String> getPricing() {
         return this.pricing == null ? Optional.empty() : Optional.ofNullable(this.pricing);
@@ -1277,7 +1277,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="qldb")
-    private final @Nullable String qldb;
+      private final @Nullable String qldb;
 
     public Optional<String> getQldb() {
         return this.qldb == null ? Optional.empty() : Optional.ofNullable(this.qldb);
@@ -1288,7 +1288,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="quicksight")
-    private final @Nullable String quicksight;
+      private final @Nullable String quicksight;
 
     public Optional<String> getQuicksight() {
         return this.quicksight == null ? Optional.empty() : Optional.ofNullable(this.quicksight);
@@ -1299,7 +1299,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ram")
-    private final @Nullable String ram;
+      private final @Nullable String ram;
 
     public Optional<String> getRam() {
         return this.ram == null ? Optional.empty() : Optional.ofNullable(this.ram);
@@ -1310,7 +1310,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rds")
-    private final @Nullable String rds;
+      private final @Nullable String rds;
 
     public Optional<String> getRds() {
         return this.rds == null ? Optional.empty() : Optional.ofNullable(this.rds);
@@ -1321,7 +1321,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="redshift")
-    private final @Nullable String redshift;
+      private final @Nullable String redshift;
 
     public Optional<String> getRedshift() {
         return this.redshift == null ? Optional.empty() : Optional.ofNullable(this.redshift);
@@ -1332,7 +1332,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourcegroups")
-    private final @Nullable String resourcegroups;
+      private final @Nullable String resourcegroups;
 
     public Optional<String> getResourcegroups() {
         return this.resourcegroups == null ? Optional.empty() : Optional.ofNullable(this.resourcegroups);
@@ -1343,7 +1343,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourcegroupstaggingapi")
-    private final @Nullable String resourcegroupstaggingapi;
+      private final @Nullable String resourcegroupstaggingapi;
 
     public Optional<String> getResourcegroupstaggingapi() {
         return this.resourcegroupstaggingapi == null ? Optional.empty() : Optional.ofNullable(this.resourcegroupstaggingapi);
@@ -1354,7 +1354,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="route53")
-    private final @Nullable String route53;
+      private final @Nullable String route53;
 
     public Optional<String> getRoute53() {
         return this.route53 == null ? Optional.empty() : Optional.ofNullable(this.route53);
@@ -1365,7 +1365,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="route53domains")
-    private final @Nullable String route53domains;
+      private final @Nullable String route53domains;
 
     public Optional<String> getRoute53domains() {
         return this.route53domains == null ? Optional.empty() : Optional.ofNullable(this.route53domains);
@@ -1376,7 +1376,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="route53recoverycontrolconfig")
-    private final @Nullable String route53recoverycontrolconfig;
+      private final @Nullable String route53recoverycontrolconfig;
 
     public Optional<String> getRoute53recoverycontrolconfig() {
         return this.route53recoverycontrolconfig == null ? Optional.empty() : Optional.ofNullable(this.route53recoverycontrolconfig);
@@ -1387,7 +1387,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="route53recoveryreadiness")
-    private final @Nullable String route53recoveryreadiness;
+      private final @Nullable String route53recoveryreadiness;
 
     public Optional<String> getRoute53recoveryreadiness() {
         return this.route53recoveryreadiness == null ? Optional.empty() : Optional.ofNullable(this.route53recoveryreadiness);
@@ -1398,7 +1398,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="route53resolver")
-    private final @Nullable String route53resolver;
+      private final @Nullable String route53resolver;
 
     public Optional<String> getRoute53resolver() {
         return this.route53resolver == null ? Optional.empty() : Optional.ofNullable(this.route53resolver);
@@ -1409,7 +1409,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="s3")
-    private final @Nullable String s3;
+      private final @Nullable String s3;
 
     public Optional<String> getS3() {
         return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
@@ -1420,7 +1420,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="s3control")
-    private final @Nullable String s3control;
+      private final @Nullable String s3control;
 
     public Optional<String> getS3control() {
         return this.s3control == null ? Optional.empty() : Optional.ofNullable(this.s3control);
@@ -1431,7 +1431,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="s3outposts")
-    private final @Nullable String s3outposts;
+      private final @Nullable String s3outposts;
 
     public Optional<String> getS3outposts() {
         return this.s3outposts == null ? Optional.empty() : Optional.ofNullable(this.s3outposts);
@@ -1442,7 +1442,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sagemaker")
-    private final @Nullable String sagemaker;
+      private final @Nullable String sagemaker;
 
     public Optional<String> getSagemaker() {
         return this.sagemaker == null ? Optional.empty() : Optional.ofNullable(this.sagemaker);
@@ -1453,7 +1453,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="schemas")
-    private final @Nullable String schemas;
+      private final @Nullable String schemas;
 
     public Optional<String> getSchemas() {
         return this.schemas == null ? Optional.empty() : Optional.ofNullable(this.schemas);
@@ -1464,7 +1464,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sdb")
-    private final @Nullable String sdb;
+      private final @Nullable String sdb;
 
     public Optional<String> getSdb() {
         return this.sdb == null ? Optional.empty() : Optional.ofNullable(this.sdb);
@@ -1475,7 +1475,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretsmanager")
-    private final @Nullable String secretsmanager;
+      private final @Nullable String secretsmanager;
 
     public Optional<String> getSecretsmanager() {
         return this.secretsmanager == null ? Optional.empty() : Optional.ofNullable(this.secretsmanager);
@@ -1486,7 +1486,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="securityhub")
-    private final @Nullable String securityhub;
+      private final @Nullable String securityhub;
 
     public Optional<String> getSecurityhub() {
         return this.securityhub == null ? Optional.empty() : Optional.ofNullable(this.securityhub);
@@ -1497,7 +1497,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverlessrepo")
-    private final @Nullable String serverlessrepo;
+      private final @Nullable String serverlessrepo;
 
     public Optional<String> getServerlessrepo() {
         return this.serverlessrepo == null ? Optional.empty() : Optional.ofNullable(this.serverlessrepo);
@@ -1508,7 +1508,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="servicecatalog")
-    private final @Nullable String servicecatalog;
+      private final @Nullable String servicecatalog;
 
     public Optional<String> getServicecatalog() {
         return this.servicecatalog == null ? Optional.empty() : Optional.ofNullable(this.servicecatalog);
@@ -1519,7 +1519,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="servicediscovery")
-    private final @Nullable String servicediscovery;
+      private final @Nullable String servicediscovery;
 
     public Optional<String> getServicediscovery() {
         return this.servicediscovery == null ? Optional.empty() : Optional.ofNullable(this.servicediscovery);
@@ -1530,7 +1530,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="servicequotas")
-    private final @Nullable String servicequotas;
+      private final @Nullable String servicequotas;
 
     public Optional<String> getServicequotas() {
         return this.servicequotas == null ? Optional.empty() : Optional.ofNullable(this.servicequotas);
@@ -1541,7 +1541,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ses")
-    private final @Nullable String ses;
+      private final @Nullable String ses;
 
     public Optional<String> getSes() {
         return this.ses == null ? Optional.empty() : Optional.ofNullable(this.ses);
@@ -1552,7 +1552,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="shield")
-    private final @Nullable String shield;
+      private final @Nullable String shield;
 
     public Optional<String> getShield() {
         return this.shield == null ? Optional.empty() : Optional.ofNullable(this.shield);
@@ -1563,7 +1563,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="signer")
-    private final @Nullable String signer;
+      private final @Nullable String signer;
 
     public Optional<String> getSigner() {
         return this.signer == null ? Optional.empty() : Optional.ofNullable(this.signer);
@@ -1574,7 +1574,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sns")
-    private final @Nullable String sns;
+      private final @Nullable String sns;
 
     public Optional<String> getSns() {
         return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
@@ -1585,7 +1585,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sqs")
-    private final @Nullable String sqs;
+      private final @Nullable String sqs;
 
     public Optional<String> getSqs() {
         return this.sqs == null ? Optional.empty() : Optional.ofNullable(this.sqs);
@@ -1596,7 +1596,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ssm")
-    private final @Nullable String ssm;
+      private final @Nullable String ssm;
 
     public Optional<String> getSsm() {
         return this.ssm == null ? Optional.empty() : Optional.ofNullable(this.ssm);
@@ -1607,7 +1607,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ssoadmin")
-    private final @Nullable String ssoadmin;
+      private final @Nullable String ssoadmin;
 
     public Optional<String> getSsoadmin() {
         return this.ssoadmin == null ? Optional.empty() : Optional.ofNullable(this.ssoadmin);
@@ -1618,7 +1618,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stepfunctions")
-    private final @Nullable String stepfunctions;
+      private final @Nullable String stepfunctions;
 
     public Optional<String> getStepfunctions() {
         return this.stepfunctions == null ? Optional.empty() : Optional.ofNullable(this.stepfunctions);
@@ -1629,7 +1629,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storagegateway")
-    private final @Nullable String storagegateway;
+      private final @Nullable String storagegateway;
 
     public Optional<String> getStoragegateway() {
         return this.storagegateway == null ? Optional.empty() : Optional.ofNullable(this.storagegateway);
@@ -1640,7 +1640,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sts")
-    private final @Nullable String sts;
+      private final @Nullable String sts;
 
     public Optional<String> getSts() {
         return this.sts == null ? Optional.empty() : Optional.ofNullable(this.sts);
@@ -1651,7 +1651,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="swf")
-    private final @Nullable String swf;
+      private final @Nullable String swf;
 
     public Optional<String> getSwf() {
         return this.swf == null ? Optional.empty() : Optional.ofNullable(this.swf);
@@ -1662,7 +1662,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="synthetics")
-    private final @Nullable String synthetics;
+      private final @Nullable String synthetics;
 
     public Optional<String> getSynthetics() {
         return this.synthetics == null ? Optional.empty() : Optional.ofNullable(this.synthetics);
@@ -1673,7 +1673,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timestreamwrite")
-    private final @Nullable String timestreamwrite;
+      private final @Nullable String timestreamwrite;
 
     public Optional<String> getTimestreamwrite() {
         return this.timestreamwrite == null ? Optional.empty() : Optional.ofNullable(this.timestreamwrite);
@@ -1684,7 +1684,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transfer")
-    private final @Nullable String transfer;
+      private final @Nullable String transfer;
 
     public Optional<String> getTransfer() {
         return this.transfer == null ? Optional.empty() : Optional.ofNullable(this.transfer);
@@ -1695,7 +1695,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="waf")
-    private final @Nullable String waf;
+      private final @Nullable String waf;
 
     public Optional<String> getWaf() {
         return this.waf == null ? Optional.empty() : Optional.ofNullable(this.waf);
@@ -1706,7 +1706,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="wafregional")
-    private final @Nullable String wafregional;
+      private final @Nullable String wafregional;
 
     public Optional<String> getWafregional() {
         return this.wafregional == null ? Optional.empty() : Optional.ofNullable(this.wafregional);
@@ -1717,7 +1717,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="wafv2")
-    private final @Nullable String wafv2;
+      private final @Nullable String wafv2;
 
     public Optional<String> getWafv2() {
         return this.wafv2 == null ? Optional.empty() : Optional.ofNullable(this.wafv2);
@@ -1728,7 +1728,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="worklink")
-    private final @Nullable String worklink;
+      private final @Nullable String worklink;
 
     public Optional<String> getWorklink() {
         return this.worklink == null ? Optional.empty() : Optional.ofNullable(this.worklink);
@@ -1739,7 +1739,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workmail")
-    private final @Nullable String workmail;
+      private final @Nullable String workmail;
 
     public Optional<String> getWorkmail() {
         return this.workmail == null ? Optional.empty() : Optional.ofNullable(this.workmail);
@@ -1750,7 +1750,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaces")
-    private final @Nullable String workspaces;
+      private final @Nullable String workspaces;
 
     public Optional<String> getWorkspaces() {
         return this.workspaces == null ? Optional.empty() : Optional.ofNullable(this.workspaces);
@@ -1761,7 +1761,7 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="xray")
-    private final @Nullable String xray;
+      private final @Nullable String xray;
 
     public Optional<String> getXray() {
         return this.xray == null ? Optional.empty() : Optional.ofNullable(this.xray);
@@ -3380,7 +3380,6 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
             this.xray = xray;
             return this;
         }
-
         public Endpoints build() {
             return new Endpoints(accessanalyzer, acm, acmpca, amplify, appconfig, applicationautoscaling, applicationinsights, appmesh, apprunner, appstream, appsync, athena, auditmanager, autoscaling, backup, batch, budgets, chime, cloud9, cloudformation, cloudfront, cloudhsm, cloudsearch, cloudtrail, cloudwatch, cloudwatchevents, cloudwatchlogs, codeartifact, codebuild, codecommit, codedeploy, codepipeline, codestarconnections, cognitoidentity, configservice, connect, cur, dataexchange, datapipeline, datasync, dax, detective, devicefarm, directconnect, dlm, dms, docdb, ds, dynamodb, ec2, ecr, ecrpublic, ecs, efs, eks, elasticache, elasticbeanstalk, elastictranscoder, elb, elbv2, emr, emrcontainers, es, firehose, fms, forecast, fsx, gamelift, glacier, globalaccelerator, glue, greengrass, guardduty, iam, identitystore, imagebuilder, inspector, iot, iotanalytics, iotevents, kafka, kinesis, kinesisanalytics, kinesisanalyticsv2, kinesisvideo, kms, lakeformation, lambda, lexmodels, licensemanager, lightsail, location, macie, macie2, managedblockchain, marketplacecatalog, mediaconnect, mediaconvert, medialive, mediapackage, mediastore, mediastoredata, memorydb, mq, mwaa, neptune, networkfirewall, networkmanager, opsworks, organizations, outposts, personalize, pinpoint, pricing, qldb, quicksight, ram, rds, redshift, resourcegroups, resourcegroupstaggingapi, route53, route53domains, route53recoverycontrolconfig, route53recoveryreadiness, route53resolver, s3, s3control, s3outposts, sagemaker, schemas, sdb, secretsmanager, securityhub, serverlessrepo, servicecatalog, servicediscovery, servicequotas, ses, shield, signer, sns, sqs, ssm, ssoadmin, stepfunctions, storagegateway, sts, swf, synthetics, timestreamwrite, transfer, waf, wafregional, wafv2, worklink, workmail, workspaces, xray);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,14 +41,14 @@ public final class DataPathAssetReferenceResponse {
     /**
      * ARM resource ID of the datastore where the asset is located.
      * 
-     */
+    */
     public Optional<String> getDatastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
      * The path of the file/directory in the datastore.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -56,7 +56,7 @@ public final class DataPathAssetReferenceResponse {
      * Enum to determine which reference method to use for an asset.
      * Expected value is 'DataPath'.
      * 
-     */
+    */
     public String getReferenceType() {
         return this.referenceType;
     }
@@ -99,7 +99,6 @@ public final class DataPathAssetReferenceResponse {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
-
         public DataPathAssetReferenceResponse build() {
             return new DataPathAssetReferenceResponse(datastoreId, path, referenceType);
         }

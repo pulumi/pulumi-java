@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.ExportPipelineTargetProper
 import io.pulumi.azurenative.containerregistry.inputs.ImportPipelineSourcePropertiesResponse;
 import io.pulumi.azurenative.containerregistry.inputs.PipelineTriggerDescriptorResponse;
 import io.pulumi.azurenative.containerregistry.inputs.ProgressPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="catalogDigest")
-    private final @Nullable String catalogDigest;
+      private final @Nullable String catalogDigest;
 
     public Optional<String> getCatalogDigest() {
         return this.catalogDigest == null ? Optional.empty() : Optional.ofNullable(this.catalogDigest);
@@ -39,7 +39,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="finishTime")
-    private final @Nullable String finishTime;
+      private final @Nullable String finishTime;
 
     public Optional<String> getFinishTime() {
         return this.finishTime == null ? Optional.empty() : Optional.ofNullable(this.finishTime);
@@ -50,7 +50,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="importedArtifacts")
-    private final @Nullable List<String> importedArtifacts;
+      private final @Nullable List<String> importedArtifacts;
 
     public List<String> getImportedArtifacts() {
         return this.importedArtifacts == null ? List.of() : this.importedArtifacts;
@@ -61,7 +61,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="pipelineRunErrorMessage")
-    private final @Nullable String pipelineRunErrorMessage;
+      private final @Nullable String pipelineRunErrorMessage;
 
     public Optional<String> getPipelineRunErrorMessage() {
         return this.pipelineRunErrorMessage == null ? Optional.empty() : Optional.ofNullable(this.pipelineRunErrorMessage);
@@ -72,7 +72,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="progress")
-    private final @Nullable ProgressPropertiesResponse progress;
+      private final @Nullable ProgressPropertiesResponse progress;
 
     public Optional<ProgressPropertiesResponse> getProgress() {
         return this.progress == null ? Optional.empty() : Optional.ofNullable(this.progress);
@@ -83,7 +83,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="source")
-    private final @Nullable ImportPipelineSourcePropertiesResponse source;
+      private final @Nullable ImportPipelineSourcePropertiesResponse source;
 
     public Optional<ImportPipelineSourcePropertiesResponse> getSource() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
@@ -94,7 +94,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+      private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -105,7 +105,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -116,7 +116,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="target")
-    private final @Nullable ExportPipelineTargetPropertiesResponse target;
+      private final @Nullable ExportPipelineTargetPropertiesResponse target;
 
     public Optional<ExportPipelineTargetPropertiesResponse> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -127,7 +127,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="trigger")
-    private final @Nullable PipelineTriggerDescriptorResponse trigger;
+      private final @Nullable PipelineTriggerDescriptorResponse trigger;
 
     public Optional<PipelineTriggerDescriptorResponse> getTrigger() {
         return this.trigger == null ? Optional.empty() : Optional.ofNullable(this.trigger);
@@ -256,7 +256,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
             this.trigger = trigger;
             return this;
         }
-
         public PipelineRunResponseResponse build() {
             return new PipelineRunResponseResponse(catalogDigest, finishTime, importedArtifacts, pipelineRunErrorMessage, progress, source, startTime, status, target, trigger);
         }

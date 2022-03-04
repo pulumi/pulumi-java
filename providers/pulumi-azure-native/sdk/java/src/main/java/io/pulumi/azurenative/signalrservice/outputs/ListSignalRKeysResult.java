@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ListSignalRKeysResult {
     /**
      * SignalR connection string constructed via the primaryKey
      * 
-     */
+    */
     public Optional<String> getPrimaryConnectionString() {
         return Optional.ofNullable(this.primaryConnectionString);
     }
     /**
      * The primary access key.
      * 
-     */
+    */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * SignalR connection string constructed via the secondaryKey
      * 
-     */
+    */
     public Optional<String> getSecondaryConnectionString() {
         return Optional.ofNullable(this.secondaryConnectionString);
     }
     /**
      * The secondary access key.
      * 
-     */
+    */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -118,7 +118,6 @@ public final class ListSignalRKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListSignalRKeysResult build() {
             return new ListSignalRKeysResult(primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

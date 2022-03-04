@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.Access;
 import io.pulumi.azurenative.network.enums.RouteFilterRuleType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="access", required=true)
-    private final Input<Either<String,Access>> access;
+      private final Input<Either<String,Access>> access;
 
     public Input<Either<String,Access>> getAccess() {
         return this.access;
@@ -34,7 +34,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="communities", required=true)
-    private final Input<List<String>> communities;
+      private final Input<List<String>> communities;
 
     public Input<List<String>> getCommunities() {
         return this.communities;
@@ -45,7 +45,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -56,7 +56,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,7 +67,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="routeFilterName", required=true)
-    private final Input<String> routeFilterName;
+      private final Input<String> routeFilterName;
 
     public Input<String> getRouteFilterName() {
         return this.routeFilterName;
@@ -100,7 +100,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="routeFilterRuleType", required=true)
-    private final Input<Either<String,RouteFilterRuleType>> routeFilterRuleType;
+      private final Input<Either<String,RouteFilterRuleType>> routeFilterRuleType;
 
     public Input<Either<String,RouteFilterRuleType>> getRouteFilterRuleType() {
         return this.routeFilterRuleType;
@@ -111,7 +111,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+      private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -275,7 +275,6 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
-
         public RouteFilterRuleArgs build() {
             return new RouteFilterRuleArgs(access, communities, id, location, name, resourceGroupName, routeFilterName, routeFilterRuleType, ruleName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gid")
-    private final @Nullable Input<String> gid;
+      private final @Nullable Input<String> gid;
 
     public Input<String> getGid() {
         return this.gid == null ? Input.empty() : this.gid;
@@ -34,7 +34,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemId")
-    private final @Nullable Input<String> systemId;
+      private final @Nullable Input<String> systemId;
 
     public Input<String> getSystemId() {
         return this.systemId == null ? Input.empty() : this.systemId;
@@ -119,7 +119,6 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.systemId = Input.ofNullable(systemId);
             return this;
         }
-
         public PosixGroupArgs build() {
             return new PosixGroupArgs(gid, name, systemId);
         }

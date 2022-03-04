@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FulfillmentFeatureGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -63,7 +63,6 @@ public final class FulfillmentFeatureGetArgs extends io.pulumi.resources.Resourc
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public FulfillmentFeatureGetArgs build() {
             return new FulfillmentFeatureGetArgs(type);
         }

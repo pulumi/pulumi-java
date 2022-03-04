@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -63,42 +63,42 @@ public final class FrontDoorMatchConditionResponse {
     /**
      * List of possible match values.
      * 
-     */
+    */
     public List<String> getMatchValue() {
         return this.matchValue;
     }
     /**
      * Request variable to compare with.
      * 
-     */
+    */
     public String getMatchVariable() {
         return this.matchVariable;
     }
     /**
      * Describes if the result of this condition should be negated.
      * 
-     */
+    */
     public Optional<Boolean> getNegateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
     /**
      * Comparison type to use for matching with the variable value.
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
      * 
-     */
+    */
     public Optional<String> getSelector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * List of transforms.
      * 
-     */
+    */
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
@@ -162,7 +162,6 @@ public final class FrontDoorMatchConditionResponse {
             this.transforms = transforms;
             return this;
         }
-
         public FrontDoorMatchConditionResponse build() {
             return new FrontDoorMatchConditionResponse(matchValue, matchVariable, negateCondition, operator, selector, transforms);
         }

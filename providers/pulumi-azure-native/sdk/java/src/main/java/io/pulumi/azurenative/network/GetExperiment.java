@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetExperimentArgs;
 import io.pulumi.azurenative.network.outputs.GetExperimentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExperiment {
-/**
- * Defines the properties of an Experiment
+    private GetExperiment() {}
+    public interface BuilderApplicator {
+        public void apply(GetExperimentArgs.Builder a);
+    }
+    private static GetExperimentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExperimentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Defines the properties of an Experiment
  * API Version: 2019-11-01.
  * 
- *
- * Defines the properties of an Experiment
+     *
+     * Defines the properties of an Experiment
  * 
- */
+     */
+    public static CompletableFuture<GetExperimentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Defines the properties of an Experiment
+     * API Version: 2019-11-01.
+     * 
+     *
+         * Defines the properties of an Experiment
+     * 
+     */
     public static CompletableFuture<GetExperimentResult> invokeAsync(GetExperimentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExperiment", TypeShape.of(GetExperimentResult.class), args == null ? GetExperimentArgs.Empty : args, Utilities.withVersion(options));
     }

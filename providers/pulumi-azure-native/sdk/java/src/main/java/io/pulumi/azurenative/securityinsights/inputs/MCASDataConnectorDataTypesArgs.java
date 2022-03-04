@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.DataConnectorDataTypeCommonArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="alerts")
-    private final @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
+      private final @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
 
     public Input<DataConnectorDataTypeCommonArgs> getAlerts() {
         return this.alerts == null ? Input.empty() : this.alerts;
@@ -34,7 +34,7 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="discoveryLogs")
-    private final @Nullable Input<DataConnectorDataTypeCommonArgs> discoveryLogs;
+      private final @Nullable Input<DataConnectorDataTypeCommonArgs> discoveryLogs;
 
     public Input<DataConnectorDataTypeCommonArgs> getDiscoveryLogs() {
         return this.discoveryLogs == null ? Input.empty() : this.discoveryLogs;
@@ -93,7 +93,6 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
             this.discoveryLogs = Input.ofNullable(discoveryLogs);
             return this;
         }
-
         public MCASDataConnectorDataTypesArgs build() {
             return new MCASDataConnectorDataTypesArgs(alerts, discoveryLogs);
         }

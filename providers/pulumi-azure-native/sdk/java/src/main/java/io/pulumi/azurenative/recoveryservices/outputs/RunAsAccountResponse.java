@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class RunAsAccountResponse {
     /**
      * The CS RunAs account Id.
      * 
-     */
+    */
     public Optional<String> getAccountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
      * The CS RunAs account name.
      * 
-     */
+    */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -76,7 +76,6 @@ public final class RunAsAccountResponse {
             this.accountName = accountName;
             return this;
         }
-
         public RunAsAccountResponse build() {
             return new RunAsAccountResponse(accountId, accountName);
         }

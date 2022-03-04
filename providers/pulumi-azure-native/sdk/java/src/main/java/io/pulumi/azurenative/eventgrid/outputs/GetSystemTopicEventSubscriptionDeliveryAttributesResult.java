@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventgrid.outputs;
 import io.pulumi.azurenative.eventgrid.outputs.DynamicDeliveryAttributeMappingResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StaticDeliveryAttributeMappingResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
     /**
      * A collection of DeliveryAttributeMapping
      * 
-     */
+    */
     public List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -56,7 +56,6 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
             this.value = value;
             return this;
         }
-
         public GetSystemTopicEventSubscriptionDeliveryAttributesResult build() {
             return new GetSystemTopicEventSubscriptionDeliveryAttributesResult(value);
         }

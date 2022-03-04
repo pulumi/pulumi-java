@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ApiResourceDefinitionsResponse {
     /**
      * The modified swagger URL
      * 
-     */
+    */
     public Optional<String> getModifiedSwaggerUrl() {
         return Optional.ofNullable(this.modifiedSwaggerUrl);
     }
     /**
      * The original swagger URL
      * 
-     */
+    */
     public Optional<String> getOriginalSwaggerUrl() {
         return Optional.ofNullable(this.originalSwaggerUrl);
     }
@@ -76,7 +76,6 @@ public final class ApiResourceDefinitionsResponse {
             this.originalSwaggerUrl = originalSwaggerUrl;
             return this;
         }
-
         public ApiResourceDefinitionsResponse build() {
             return new ApiResourceDefinitionsResponse(modifiedSwaggerUrl, originalSwaggerUrl);
         }

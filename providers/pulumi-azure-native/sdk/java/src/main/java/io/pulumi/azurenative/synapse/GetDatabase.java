@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.inputs.GetDatabaseArgs;
 import io.pulumi.azurenative.synapse.outputs.GetDatabaseResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ReadWriteDatabase. */
 public class GetDatabase {
-/**
- * Class representing a Kusto database.
+    private GetDatabase() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatabaseArgs.Builder a);
+    }
+    private static GetDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatabaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing a Kusto database.
  * API Version: 2021-04-01-preview.
  * 
- *
- * Class representing a Kusto database.
+     *
+     * Class representing a Kusto database.
  * 
- * @deprecated
- * Please use one of the variants: ReadWriteDatabase.
+     * @Deprecated
+     * Please use one of the variants: ReadWriteDatabase.
  * 
- */
+     */
+    public static CompletableFuture<GetDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing a Kusto database.
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * Class representing a Kusto database.
+     * 
+     * @Deprecated
+         * Please use one of the variants: ReadWriteDatabase.
+     * 
+     */
     @Deprecated /* Please use one of the variants: ReadWriteDatabase. */
     public static CompletableFuture<GetDatabaseResult> invokeAsync(GetDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getDatabase", TypeShape.of(GetDatabaseResult.class), args == null ? GetDatabaseArgs.Empty : args, Utilities.withVersion(options));

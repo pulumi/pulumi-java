@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse ext
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse ext
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse build() {
             return new GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(value);
         }

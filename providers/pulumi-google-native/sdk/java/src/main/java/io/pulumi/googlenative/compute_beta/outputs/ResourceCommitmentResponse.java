@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ResourceCommitmentResponse {
     /**
      * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
      * 
-     */
+    */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }
     /**
      * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
      * 
-     */
+    */
     public String getAmount() {
         return this.amount;
     }
     /**
      * Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -95,7 +95,6 @@ public final class ResourceCommitmentResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceCommitmentResponse build() {
             return new ResourceCommitmentResponse(acceleratorType, amount, type);
         }

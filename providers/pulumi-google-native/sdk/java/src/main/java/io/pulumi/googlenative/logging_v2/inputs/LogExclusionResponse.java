@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.logging_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -33,7 +33,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -55,7 +55,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -66,7 +66,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -166,7 +166,6 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public LogExclusionResponse build() {
             return new LogExclusionResponse(createTime, description, disabled, filter, name, updateTime);
         }

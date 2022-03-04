@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="productId", required=true)
-    private final String productId;
+      private final String productId;
 
     public String getProductId() {
         return this.productId;
@@ -28,7 +28,7 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -50,7 +50,7 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tagId", required=true)
-    private final String tagId;
+      private final String tagId;
 
     public String getTagId() {
         return this.tagId;
@@ -119,7 +119,6 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
             this.tagId = Objects.requireNonNull(tagId);
             return this;
         }
-
         public GetTagByProductArgs build() {
             return new GetTagByProductArgs(productId, resourceGroupName, serviceName, tagId);
         }

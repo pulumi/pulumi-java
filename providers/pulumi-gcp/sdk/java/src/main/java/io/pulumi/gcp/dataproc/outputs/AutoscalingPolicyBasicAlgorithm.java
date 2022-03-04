@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.AutoscalingPolicyBasicAlgorithmYarnConfig;
 import java.lang.String;
 import java.util.Objects;
@@ -39,7 +39,7 @@ public final class AutoscalingPolicyBasicAlgorithm {
      * update operation from the previous event has completed.
      * Bounds: [2m, 1d]. Default: 2m.
      * 
-     */
+    */
     public Optional<String> getCooldownPeriod() {
         return Optional.ofNullable(this.cooldownPeriod);
     }
@@ -47,7 +47,7 @@ public final class AutoscalingPolicyBasicAlgorithm {
      * YARN autoscaling configuration.
      * Structure is documented below.
      * 
-     */
+    */
     public AutoscalingPolicyBasicAlgorithmYarnConfig getYarnConfig() {
         return this.yarnConfig;
     }
@@ -83,7 +83,6 @@ public final class AutoscalingPolicyBasicAlgorithm {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
         }
-
         public AutoscalingPolicyBasicAlgorithm build() {
             return new AutoscalingPolicyBasicAlgorithm(cooldownPeriod, yarnConfig);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.inputs.ImageArgs;
 import io.pulumi.googlenative.healthcare_v1.inputs.SignatureArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="consentContentScreenshots")
-    private final @Nullable Input<List<ImageArgs>> consentContentScreenshots;
+      private final @Nullable Input<List<ImageArgs>> consentContentScreenshots;
 
     public Input<List<ImageArgs>> getConsentContentScreenshots() {
         return this.consentContentScreenshots == null ? Input.empty() : this.consentContentScreenshots;
@@ -34,21 +34,21 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="consentContentVersion")
-    private final @Nullable Input<String> consentContentVersion;
+      private final @Nullable Input<String> consentContentVersion;
 
     public Input<String> getConsentContentVersion() {
         return this.consentContentVersion == null ? Input.empty() : this.consentContentVersion;
     }
 
     @InputImport(name="consentStoreId", required=true)
-    private final Input<String> consentStoreId;
+      private final Input<String> consentStoreId;
 
     public Input<String> getConsentStoreId() {
         return this.consentStoreId;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -59,14 +59,14 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="guardianSignature")
-    private final @Nullable Input<SignatureArgs> guardianSignature;
+      private final @Nullable Input<SignatureArgs> guardianSignature;
 
     public Input<SignatureArgs> getGuardianSignature() {
         return this.guardianSignature == null ? Input.empty() : this.guardianSignature;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -77,7 +77,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -88,14 +88,14 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -106,7 +106,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userId", required=true)
-    private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;
@@ -117,7 +117,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userSignature")
-    private final @Nullable Input<SignatureArgs> userSignature;
+      private final @Nullable Input<SignatureArgs> userSignature;
 
     public Input<SignatureArgs> getUserSignature() {
         return this.userSignature == null ? Input.empty() : this.userSignature;
@@ -128,7 +128,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="witnessSignature")
-    private final @Nullable Input<SignatureArgs> witnessSignature;
+      private final @Nullable Input<SignatureArgs> witnessSignature;
 
     public Input<SignatureArgs> getWitnessSignature() {
         return this.witnessSignature == null ? Input.empty() : this.witnessSignature;
@@ -337,7 +337,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             this.witnessSignature = Input.ofNullable(witnessSignature);
             return this;
         }
-
         public ConsentArtifactArgs build() {
             return new ConsentArtifactArgs(consentContentScreenshots, consentContentVersion, consentStoreId, datasetId, guardianSignature, location, metadata, name, project, userId, userSignature, witnessSignature);
         }

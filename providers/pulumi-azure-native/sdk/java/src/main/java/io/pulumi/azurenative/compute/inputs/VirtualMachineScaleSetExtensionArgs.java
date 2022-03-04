@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-    private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
     public Input<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enableAutomaticUpgrade")
-    private final @Nullable Input<Boolean> enableAutomaticUpgrade;
+      private final @Nullable Input<Boolean> enableAutomaticUpgrade;
 
     public Input<Boolean> getEnableAutomaticUpgrade() {
         return this.enableAutomaticUpgrade == null ? Input.empty() : this.enableAutomaticUpgrade;
@@ -48,7 +48,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="forceUpdateTag")
-    private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Input<String> forceUpdateTag;
 
     public Input<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
@@ -59,7 +59,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectedSettings")
-    private final @Nullable Input<Object> protectedSettings;
+      private final @Nullable Input<Object> protectedSettings;
 
     public Input<Object> getProtectedSettings() {
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
@@ -81,7 +81,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="provisionAfterExtensions")
-    private final @Nullable Input<List<String>> provisionAfterExtensions;
+      private final @Nullable Input<List<String>> provisionAfterExtensions;
 
     public Input<List<String>> getProvisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? Input.empty() : this.provisionAfterExtensions;
@@ -92,7 +92,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable Input<String> publisher;
+      private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -103,7 +103,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<Object> settings;
+      private final @Nullable Input<Object> settings;
 
     public Input<Object> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -114,7 +114,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -125,7 +125,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="typeHandlerVersion")
-    private final @Nullable Input<String> typeHandlerVersion;
+      private final @Nullable Input<String> typeHandlerVersion;
 
     public Input<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
@@ -304,7 +304,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
             this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
             return this;
         }
-
         public VirtualMachineScaleSetExtensionArgs build() {
             return new VirtualMachineScaleSetExtensionArgs(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, name, protectedSettings, provisionAfterExtensions, publisher, settings, type, typeHandlerVersion);
         }

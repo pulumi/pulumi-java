@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class GetApiIssueCommentResult {
     /**
      * Date and time when the comment was created.
      * 
-     */
+    */
     public Optional<String> getCreatedDate() {
         return Optional.ofNullable(this.createdDate);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Comment text.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A resource identifier for the user who left the comment.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
@@ -160,7 +160,6 @@ public final class GetApiIssueCommentResult {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetApiIssueCommentResult build() {
             return new GetApiIssueCommentResult(createdDate, id, name, text, type, userId);
         }

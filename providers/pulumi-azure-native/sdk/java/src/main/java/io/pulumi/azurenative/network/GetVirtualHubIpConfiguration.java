@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetVirtualHubIpConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.GetVirtualHubIpConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualHubIpConfiguration {
-/**
- * IpConfigurations.
+    private GetVirtualHubIpConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualHubIpConfigurationArgs.Builder a);
+    }
+    private static GetVirtualHubIpConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualHubIpConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * IpConfigurations.
  * API Version: 2020-11-01.
  * 
- *
- * IpConfigurations.
+     *
+     * IpConfigurations.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualHubIpConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * IpConfigurations.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * IpConfigurations.
+     * 
+     */
     public static CompletableFuture<GetVirtualHubIpConfigurationResult> invokeAsync(GetVirtualHubIpConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHubIpConfiguration", TypeShape.of(GetVirtualHubIpConfigurationResult.class), args == null ? GetVirtualHubIpConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

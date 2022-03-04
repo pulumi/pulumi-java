@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterLogging")
-    private final @Nullable Input<ClusterLoggingArgs> clusterLogging;
+      private final @Nullable Input<ClusterLoggingArgs> clusterLogging;
 
     public Input<ClusterLoggingArgs> getClusterLogging() {
         return this.clusterLogging == null ? Input.empty() : this.clusterLogging;
@@ -65,7 +65,6 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterLogging = Input.ofNullable(clusterLogging);
             return this;
         }
-
         public ClusterLoggingArgs build() {
             return new ClusterLoggingArgs(clusterLogging);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="analysisStatus", required=true)
-    private final String analysisStatus;
+      private final String analysisStatus;
 
     public String getAnalysisStatus() {
         return this.analysisStatus;
@@ -33,7 +33,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="analysisStatusError", required=true)
-    private final StatusResponse analysisStatusError;
+      private final StatusResponse analysisStatusError;
 
     public StatusResponse getAnalysisStatusError() {
         return this.analysisStatusError;
@@ -44,7 +44,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="continuousAnalysis", required=true)
-    private final String continuousAnalysis;
+      private final String continuousAnalysis;
 
     public String getContinuousAnalysis() {
         return this.continuousAnalysis;
@@ -55,7 +55,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cpe", required=true)
-    private final String cpe;
+      private final String cpe;
 
     public String getCpe() {
         return this.cpe;
@@ -124,7 +124,6 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
             this.cpe = Objects.requireNonNull(cpe);
             return this;
         }
-
         public DiscoveredResponse build() {
             return new DiscoveredResponse(analysisStatus, analysisStatusError, continuousAnalysis, cpe);
         }

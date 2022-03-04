@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CategoryArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.IdentityArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categories")
-    private final @Nullable Input<List<CategoryArgs>> categories;
+      private final @Nullable Input<List<CategoryArgs>> categories;
 
     public Input<List<CategoryArgs>> getCategories() {
         return this.categories == null ? Input.empty() : this.categories;
@@ -37,7 +37,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -59,7 +59,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kbArticleIds")
-    private final @Nullable Input<List<String>> kbArticleIds;
+      private final @Nullable Input<List<String>> kbArticleIds;
 
     public Input<List<String>> getKbArticleIds() {
         return this.kbArticleIds == null ? Input.empty() : this.kbArticleIds;
@@ -70,7 +70,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastPublishedTimestamp")
-    private final @Nullable Input<String> lastPublishedTimestamp;
+      private final @Nullable Input<String> lastPublishedTimestamp;
 
     public Input<String> getLastPublishedTimestamp() {
         return this.lastPublishedTimestamp == null ? Input.empty() : this.lastPublishedTimestamp;
@@ -81,7 +81,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportUrl")
-    private final @Nullable Input<String> supportUrl;
+      private final @Nullable Input<String> supportUrl;
 
     public Input<String> getSupportUrl() {
         return this.supportUrl == null ? Input.empty() : this.supportUrl;
@@ -92,7 +92,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -226,7 +226,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public WindowsUpdateArgs build() {
             return new WindowsUpdateArgs(categories, description, identity, kbArticleIds, lastPublishedTimestamp, supportUrl, title);
         }

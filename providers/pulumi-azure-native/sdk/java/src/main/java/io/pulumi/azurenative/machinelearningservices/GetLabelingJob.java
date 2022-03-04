@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.inputs.GetLabelingJobArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.GetLabelingJobResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLabelingJob {
-/**
- * Machine Learning labeling job object wrapped into ARM resource envelope.
+    private GetLabelingJob() {}
+    public interface BuilderApplicator {
+        public void apply(GetLabelingJobArgs.Builder a);
+    }
+    private static GetLabelingJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLabelingJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Machine Learning labeling job object wrapped into ARM resource envelope.
  * API Version: 2020-09-01-preview.
  * 
- *
- * Machine Learning labeling job object wrapped into ARM resource envelope.
+     *
+     * Machine Learning labeling job object wrapped into ARM resource envelope.
  * 
- */
+     */
+    public static CompletableFuture<GetLabelingJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Machine Learning labeling job object wrapped into ARM resource envelope.
+     * API Version: 2020-09-01-preview.
+     * 
+     *
+         * Machine Learning labeling job object wrapped into ARM resource envelope.
+     * 
+     */
     public static CompletableFuture<GetLabelingJobResult> invokeAsync(GetLabelingJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getLabelingJob", TypeShape.of(GetLabelingJobResult.class), args == null ? GetLabelingJobArgs.Empty : args, Utilities.withVersion(options));
     }

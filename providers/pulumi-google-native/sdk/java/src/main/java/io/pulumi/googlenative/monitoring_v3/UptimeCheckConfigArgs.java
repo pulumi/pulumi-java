@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.UptimeCheckConfigCheckerType;
 import io.pulumi.googlenative.monitoring_v3.enums.UptimeCheckConfigSelectedRegionsItem;
 import io.pulumi.googlenative.monitoring_v3.inputs.ContentMatcherArgs;
@@ -29,7 +29,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="checkerType")
-    private final @Nullable Input<UptimeCheckConfigCheckerType> checkerType;
+      private final @Nullable Input<UptimeCheckConfigCheckerType> checkerType;
 
     public Input<UptimeCheckConfigCheckerType> getCheckerType() {
         return this.checkerType == null ? Input.empty() : this.checkerType;
@@ -40,7 +40,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="contentMatchers")
-    private final @Nullable Input<List<ContentMatcherArgs>> contentMatchers;
+      private final @Nullable Input<List<ContentMatcherArgs>> contentMatchers;
 
     public Input<List<ContentMatcherArgs>> getContentMatchers() {
         return this.contentMatchers == null ? Input.empty() : this.contentMatchers;
@@ -51,7 +51,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -62,7 +62,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="httpCheck")
-    private final @Nullable Input<HttpCheckArgs> httpCheck;
+      private final @Nullable Input<HttpCheckArgs> httpCheck;
 
     public Input<HttpCheckArgs> getHttpCheck() {
         return this.httpCheck == null ? Input.empty() : this.httpCheck;
@@ -73,7 +73,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="internalCheckers")
-    private final @Nullable Input<List<InternalCheckerArgs>> internalCheckers;
+      private final @Nullable Input<List<InternalCheckerArgs>> internalCheckers;
 
     public Input<List<InternalCheckerArgs>> getInternalCheckers() {
         return this.internalCheckers == null ? Input.empty() : this.internalCheckers;
@@ -84,7 +84,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="isInternal")
-    private final @Nullable Input<Boolean> isInternal;
+      private final @Nullable Input<Boolean> isInternal;
 
     public Input<Boolean> getIsInternal() {
         return this.isInternal == null ? Input.empty() : this.isInternal;
@@ -95,7 +95,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="monitoredResource")
-    private final @Nullable Input<MonitoredResourceArgs> monitoredResource;
+      private final @Nullable Input<MonitoredResourceArgs> monitoredResource;
 
     public Input<MonitoredResourceArgs> getMonitoredResource() {
         return this.monitoredResource == null ? Input.empty() : this.monitoredResource;
@@ -106,7 +106,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -117,14 +117,14 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="period")
-    private final @Nullable Input<String> period;
+      private final @Nullable Input<String> period;
 
     public Input<String> getPeriod() {
         return this.period == null ? Input.empty() : this.period;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -135,7 +135,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable Input<ResourceGroupArgs> resourceGroup;
+      private final @Nullable Input<ResourceGroupArgs> resourceGroup;
 
     public Input<ResourceGroupArgs> getResourceGroup() {
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
@@ -146,7 +146,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="selectedRegions")
-    private final @Nullable Input<List<UptimeCheckConfigSelectedRegionsItem>> selectedRegions;
+      private final @Nullable Input<List<UptimeCheckConfigSelectedRegionsItem>> selectedRegions;
 
     public Input<List<UptimeCheckConfigSelectedRegionsItem>> getSelectedRegions() {
         return this.selectedRegions == null ? Input.empty() : this.selectedRegions;
@@ -157,7 +157,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tcpCheck")
-    private final @Nullable Input<TcpCheckArgs> tcpCheck;
+      private final @Nullable Input<TcpCheckArgs> tcpCheck;
 
     public Input<TcpCheckArgs> getTcpCheck() {
         return this.tcpCheck == null ? Input.empty() : this.tcpCheck;
@@ -168,7 +168,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -407,7 +407,6 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public UptimeCheckConfigArgs build() {
             return new UptimeCheckConfigArgs(checkerType, contentMatchers, displayName, httpCheck, internalCheckers, isInternal, monitoredResource, name, period, project, resourceGroup, selectedRegions, tcpCheck, timeout);
         }

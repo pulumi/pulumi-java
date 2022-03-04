@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="ask", required=true)
-    private final String ask;
+      private final String ask;
 
     public String getAsk() {
         return this.ask;
@@ -36,7 +36,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="fairPlayPfx", required=true)
-    private final String fairPlayPfx;
+      private final String fairPlayPfx;
 
     public String getFairPlayPfx() {
         return this.fairPlayPfx;
@@ -47,7 +47,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="fairPlayPfxPassword", required=true)
-    private final String fairPlayPfxPassword;
+      private final String fairPlayPfxPassword;
 
     public String getFairPlayPfxPassword() {
         return this.fairPlayPfxPassword;
@@ -59,7 +59,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -70,7 +70,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="offlineRentalConfiguration")
-    private final @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
+      private final @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
 
     public Optional<ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse> getOfflineRentalConfiguration() {
         return this.offlineRentalConfiguration == null ? Optional.empty() : Optional.ofNullable(this.offlineRentalConfiguration);
@@ -81,7 +81,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="rentalAndLeaseKeyType", required=true)
-    private final String rentalAndLeaseKeyType;
+      private final String rentalAndLeaseKeyType;
 
     public String getRentalAndLeaseKeyType() {
         return this.rentalAndLeaseKeyType;
@@ -92,7 +92,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="rentalDuration", required=true)
-    private final Double rentalDuration;
+      private final Double rentalDuration;
 
     public Double getRentalDuration() {
         return this.rentalDuration;
@@ -191,7 +191,6 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
             this.rentalDuration = Objects.requireNonNull(rentalDuration);
             return this;
         }
-
         public ContentKeyPolicyFairPlayConfigurationResponse build() {
             return new ContentKeyPolicyFairPlayConfigurationResponse(ask, fairPlayPfx, fairPlayPfxPassword, odataType, offlineRentalConfiguration, rentalAndLeaseKeyType, rentalDuration);
         }

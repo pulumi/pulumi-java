@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class SBSkuResponse {
     /**
      * The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Name of this SKU.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The billing tier of this particular SKU.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -98,7 +98,6 @@ public final class SBSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public SBSkuResponse build() {
             return new SBSkuResponse(capacity, name, tier);
         }

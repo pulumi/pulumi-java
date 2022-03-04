@@ -6,17 +6,33 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.networkmanager.inputs.GetLinkArgs;
 import io.pulumi.awsnative.networkmanager.outputs.GetLinkResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLink {
-/**
- * The AWS::NetworkManager::Link type describes a link.
+    private GetLink() {}
+    public interface BuilderApplicator {
+        public void apply(GetLinkArgs.Builder a);
+    }
+    private static GetLinkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLinkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::NetworkManager::Link type describes a link.
  * 
- */
+     */
+    public static CompletableFuture<GetLinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::NetworkManager::Link type describes a link.
+     * 
+     */
     public static CompletableFuture<GetLinkResult> invokeAsync(GetLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getLink", TypeShape.of(GetLinkResult.class), args == null ? GetLinkArgs.Empty : args, Utilities.withVersion(options));
     }

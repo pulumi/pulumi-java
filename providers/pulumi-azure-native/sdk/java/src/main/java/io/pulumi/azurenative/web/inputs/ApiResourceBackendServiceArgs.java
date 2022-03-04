@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serviceUrl")
-    private final @Nullable Input<String> serviceUrl;
+      private final @Nullable Input<String> serviceUrl;
 
     public Input<String> getServiceUrl() {
         return this.serviceUrl == null ? Input.empty() : this.serviceUrl;
@@ -66,7 +66,6 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
             this.serviceUrl = Input.ofNullable(serviceUrl);
             return this;
         }
-
         public ApiResourceBackendServiceArgs build() {
             return new ApiResourceBackendServiceArgs(serviceUrl);
         }

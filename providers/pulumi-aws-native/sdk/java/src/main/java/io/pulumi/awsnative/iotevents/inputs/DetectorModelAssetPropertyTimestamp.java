@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DetectorModelAssetPropertyTimestamp extends io.pulumi.resourc
      * 
      */
     @InputImport(name="offsetInNanos")
-    private final @Nullable String offsetInNanos;
+      private final @Nullable String offsetInNanos;
 
     public Optional<String> getOffsetInNanos() {
         return this.offsetInNanos == null ? Optional.empty() : Optional.ofNullable(this.offsetInNanos);
@@ -34,7 +34,7 @@ public final class DetectorModelAssetPropertyTimestamp extends io.pulumi.resourc
      * 
      */
     @InputImport(name="timeInSeconds", required=true)
-    private final String timeInSeconds;
+      private final String timeInSeconds;
 
     public String getTimeInSeconds() {
         return this.timeInSeconds;
@@ -83,7 +83,6 @@ public final class DetectorModelAssetPropertyTimestamp extends io.pulumi.resourc
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
         }
-
         public DetectorModelAssetPropertyTimestamp build() {
             return new DetectorModelAssetPropertyTimestamp(offsetInNanos, timeInSeconds);
         }

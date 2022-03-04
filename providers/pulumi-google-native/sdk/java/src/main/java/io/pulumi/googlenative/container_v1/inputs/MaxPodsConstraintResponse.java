@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MaxPodsConstraintResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="maxPodsPerNode", required=true)
-    private final String maxPodsPerNode;
+      private final String maxPodsPerNode;
 
     public String getMaxPodsPerNode() {
         return this.maxPodsPerNode;
@@ -59,7 +59,6 @@ public final class MaxPodsConstraintResponse extends io.pulumi.resources.InvokeA
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }
-
         public MaxPodsConstraintResponse build() {
             return new MaxPodsConstraintResponse(maxPodsPerNode);
         }

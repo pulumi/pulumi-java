@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,7 +30,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -41,7 +41,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId")
-    private final @Nullable Input<String> orgId;
+      private final @Nullable Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId == null ? Input.empty() : this.orgId;
@@ -142,7 +142,6 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             this.orgId = Input.ofNullable(orgId);
             return this;
         }
-
         public EnvironmentState build() {
             return new EnvironmentState(description, displayName, name, orgId);
         }

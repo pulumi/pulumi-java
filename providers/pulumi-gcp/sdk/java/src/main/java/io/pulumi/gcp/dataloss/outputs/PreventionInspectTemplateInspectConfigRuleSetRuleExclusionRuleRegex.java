@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     /**
      * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
      * 
-     */
+    */
     public List<Integer> getGroupIndexes() {
         return this.groupIndexes == null ? List.of() : this.groupIndexes;
     }
@@ -43,7 +43,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Pattern defining the regular expression.
      * Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
      * 
-     */
+    */
     public String getPattern() {
         return this.pattern;
     }
@@ -79,7 +79,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex(groupIndexes, pattern);
         }

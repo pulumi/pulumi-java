@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AssignmentPropertiesResponseAdditionalData {
     /**
      * Exemption category of this assignment
      * 
-     */
+    */
     public Optional<String> getExemptionCategory() {
         return Optional.ofNullable(this.exemptionCategory);
     }
@@ -54,7 +54,6 @@ public final class AssignmentPropertiesResponseAdditionalData {
             this.exemptionCategory = exemptionCategory;
             return this;
         }
-
         public AssignmentPropertiesResponseAdditionalData build() {
             return new AssignmentPropertiesResponseAdditionalData(exemptionCategory);
         }

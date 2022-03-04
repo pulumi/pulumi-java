@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GuestPoliciesRecipeUpdateStepDpkgInstallation {
     /**
      * The id of the relevant artifact in the recipe.
      * 
-     */
+    */
     public String getArtifactId() {
         return this.artifactId;
     }
@@ -52,7 +52,6 @@ public final class GuestPoliciesRecipeUpdateStepDpkgInstallation {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepDpkgInstallation build() {
             return new GuestPoliciesRecipeUpdateStepDpkgInstallation(artifactId);
         }

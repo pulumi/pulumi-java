@@ -11,8 +11,8 @@ import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncStatusRespons
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -316,6 +316,37 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
         return this.volumeFreeSpacePercent;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ServerEndpointArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.storagesync.ServerEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.storagesync.ServerEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ServerEndpoint(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ServerEndpoint(String name) {
+        this(name, ServerEndpointArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ServerEndpoint(String name, ServerEndpointArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

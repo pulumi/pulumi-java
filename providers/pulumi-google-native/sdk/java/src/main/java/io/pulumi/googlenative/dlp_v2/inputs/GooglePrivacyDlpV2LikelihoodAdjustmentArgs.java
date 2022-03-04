@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fixedLikelihood")
-    private final @Nullable Input<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> fixedLikelihood;
+      private final @Nullable Input<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> fixedLikelihood;
 
     public Input<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> getFixedLikelihood() {
         return this.fixedLikelihood == null ? Input.empty() : this.fixedLikelihood;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
      * 
      */
     @InputImport(name="relativeLikelihood")
-    private final @Nullable Input<Integer> relativeLikelihood;
+      private final @Nullable Input<Integer> relativeLikelihood;
 
     public Input<Integer> getRelativeLikelihood() {
         return this.relativeLikelihood == null ? Input.empty() : this.relativeLikelihood;
@@ -94,7 +94,6 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
             this.relativeLikelihood = Input.ofNullable(relativeLikelihood);
             return this;
         }
-
         public GooglePrivacyDlpV2LikelihoodAdjustmentArgs build() {
             return new GooglePrivacyDlpV2LikelihoodAdjustmentArgs(fixedLikelihood, relativeLikelihood);
         }

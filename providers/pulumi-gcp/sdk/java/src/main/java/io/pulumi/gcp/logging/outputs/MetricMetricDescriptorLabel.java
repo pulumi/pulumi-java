@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,14 +44,14 @@ public final class MetricMetricDescriptorLabel {
      * A description of this metric, which is used in documentation. The maximum length of the
      * description is 8000 characters.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The label key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
@@ -60,7 +60,7 @@ public final class MetricMetricDescriptorLabel {
      * Default value is `STRING`.
      * Possible values are `BOOL`, `INT64`, and `STRING`.
      * 
-     */
+    */
     public Optional<String> getValueType() {
         return Optional.ofNullable(this.valueType);
     }
@@ -103,7 +103,6 @@ public final class MetricMetricDescriptorLabel {
             this.valueType = valueType;
             return this;
         }
-
         public MetricMetricDescriptorLabel build() {
             return new MetricMetricDescriptorLabel(description, key, valueType);
         }

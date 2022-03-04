@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.TemplateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -106,84 +106,84 @@ public final class GetContainerAppResult {
     /**
      * Non versioned Container App configuration properties.
      * 
-     */
+    */
     public Optional<ConfigurationResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource ID of the Container App's KubeEnvironment.
      * 
-     */
+    */
     public Optional<String> getKubeEnvironmentId() {
         return Optional.ofNullable(this.kubeEnvironmentId);
     }
     /**
      * Fully Qualified Domain Name of the latest revision of the Container App.
      * 
-     */
+    */
     public String getLatestRevisionFqdn() {
         return this.latestRevisionFqdn;
     }
     /**
      * Name of the latest revision of the Container App.
      * 
-     */
+    */
     public String getLatestRevisionName() {
         return this.latestRevisionName;
     }
     /**
      * Resource Location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the Container App.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Container App versioned application definition.
      * 
-     */
+    */
     public Optional<TemplateResponse> getTemplate() {
         return Optional.ofNullable(this.template);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -289,7 +289,6 @@ public final class GetContainerAppResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContainerAppResult build() {
             return new GetContainerAppResult(configuration, id, kind, kubeEnvironmentId, latestRevisionFqdn, latestRevisionName, location, name, provisioningState, tags, template, type);
         }

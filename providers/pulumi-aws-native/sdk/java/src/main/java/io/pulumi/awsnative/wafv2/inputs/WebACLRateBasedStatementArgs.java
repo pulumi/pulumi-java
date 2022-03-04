@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.WebACLRateBasedStatementAggregateKeyType;
 import io.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfigurationArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,28 +18,28 @@ public final class WebACLRateBasedStatementArgs extends io.pulumi.resources.Reso
     public static final WebACLRateBasedStatementArgs Empty = new WebACLRateBasedStatementArgs();
 
     @InputImport(name="aggregateKeyType", required=true)
-    private final Input<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
+      private final Input<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
 
     public Input<WebACLRateBasedStatementAggregateKeyType> getAggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @InputImport(name="forwardedIPConfig")
-    private final @Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
+      private final @Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
 
     public Input<WebACLForwardedIPConfigurationArgs> getForwardedIPConfig() {
         return this.forwardedIPConfig == null ? Input.empty() : this.forwardedIPConfig;
     }
 
     @InputImport(name="limit", required=true)
-    private final Input<Integer> limit;
+      private final Input<Integer> limit;
 
     public Input<Integer> getLimit() {
         return this.limit;
     }
 
     @InputImport(name="scopeDownStatement")
-    private final @Nullable Input<WebACLStatementArgs> scopeDownStatement;
+      private final @Nullable Input<WebACLStatementArgs> scopeDownStatement;
 
     public Input<WebACLStatementArgs> getScopeDownStatement() {
         return this.scopeDownStatement == null ? Input.empty() : this.scopeDownStatement;
@@ -128,7 +128,6 @@ public final class WebACLRateBasedStatementArgs extends io.pulumi.resources.Reso
             this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
             return this;
         }
-
         public WebACLRateBasedStatementArgs build() {
             return new WebACLRateBasedStatementArgs(aggregateKeyType, forwardedIPConfig, limit, scopeDownStatement);
         }

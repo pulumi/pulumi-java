@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="authorizationName", required=true)
-    private final String authorizationName;
+      private final String authorizationName;
 
     public String getAuthorizationName() {
         return this.authorizationName;
@@ -28,7 +28,7 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="circuitName", required=true)
-    private final String circuitName;
+      private final String circuitName;
 
     public String getCircuitName() {
         return this.circuitName;
@@ -39,7 +39,7 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends io.pulumi.res
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetExpressRouteCircuitAuthorizationArgs build() {
             return new GetExpressRouteCircuitAuthorizationArgs(authorizationName, circuitName, resourceGroupName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.ContentPathMapResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class RepositoryResponse {
     /**
      * Branch name of repository.
      * 
-     */
+    */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * Url to access repository action logs.
      * 
-     */
+    */
     public Optional<String> getDeploymentLogsUrl() {
         return Optional.ofNullable(this.deploymentLogsUrl);
     }
     /**
      * Display url of repository.
      * 
-     */
+    */
     public Optional<String> getDisplayUrl() {
         return Optional.ofNullable(this.displayUrl);
     }
     /**
      * Dictionary of source control content type and path mapping.
      * 
-     */
+    */
     public List<ContentPathMapResponse> getPathMapping() {
         return this.pathMapping == null ? List.of() : this.pathMapping;
     }
     /**
      * Url of repository.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
@@ -141,7 +141,6 @@ public final class RepositoryResponse {
             this.url = url;
             return this;
         }
-
         public RepositoryResponse build() {
             return new RepositoryResponse(branch, deploymentLogsUrl, displayUrl, pathMapping, url);
         }

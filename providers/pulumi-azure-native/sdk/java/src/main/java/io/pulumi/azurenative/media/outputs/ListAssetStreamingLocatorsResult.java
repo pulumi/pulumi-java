@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.AssetStreamingLocatorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ListAssetStreamingLocatorsResult {
     /**
      * The list of Streaming Locators.
      * 
-     */
+    */
     public List<AssetStreamingLocatorResponse> getStreamingLocators() {
         return this.streamingLocators;
     }
@@ -53,7 +53,6 @@ public final class ListAssetStreamingLocatorsResult {
             this.streamingLocators = Objects.requireNonNull(streamingLocators);
             return this;
         }
-
         public ListAssetStreamingLocatorsResult build() {
             return new ListAssetStreamingLocatorsResult(streamingLocators);
         }

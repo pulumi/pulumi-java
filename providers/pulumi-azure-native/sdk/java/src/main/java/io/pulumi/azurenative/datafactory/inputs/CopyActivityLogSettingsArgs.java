@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CopyActivityLogSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableReliableLogging")
-    private final @Nullable Input<Object> enableReliableLogging;
+      private final @Nullable Input<Object> enableReliableLogging;
 
     public Input<Object> getEnableReliableLogging() {
         return this.enableReliableLogging == null ? Input.empty() : this.enableReliableLogging;
@@ -34,7 +34,7 @@ public final class CopyActivityLogSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<Object> logLevel;
+      private final @Nullable Input<Object> logLevel;
 
     public Input<Object> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -93,7 +93,6 @@ public final class CopyActivityLogSettingsArgs extends io.pulumi.resources.Resou
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
-
         public CopyActivityLogSettingsArgs build() {
             return new CopyActivityLogSettingsArgs(enableReliableLogging, logLevel);
         }

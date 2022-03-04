@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.inputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowFailoverConfigState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,14 +24,14 @@ public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="recoveryWindow")
-    private final @Nullable Input<Integer> recoveryWindow;
+      private final @Nullable Input<Integer> recoveryWindow;
 
     public Input<Integer> getRecoveryWindow() {
         return this.recoveryWindow == null ? Input.empty() : this.recoveryWindow;
     }
 
     @InputImport(name="state")
-    private final @Nullable Input<FlowFailoverConfigState> state;
+      private final @Nullable Input<FlowFailoverConfigState> state;
 
     public Input<FlowFailoverConfigState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -90,7 +90,6 @@ public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceAr
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public FlowFailoverConfigArgs build() {
             return new FlowFailoverConfigArgs(recoveryWindow, state);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.AccountAuditConfigurationAuditCheckConfigurations;
 import io.pulumi.awsnative.iot.outputs.AccountAuditConfigurationAuditNotificationTargetConfigurations;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,7 +40,7 @@ public final class GetAccountAuditConfigurationResult {
     /**
      * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -83,7 +83,6 @@ public final class GetAccountAuditConfigurationResult {
             this.roleArn = roleArn;
             return this;
         }
-
         public GetAccountAuditConfigurationResult build() {
             return new GetAccountAuditConfigurationResult(auditCheckConfigurations, auditNotificationTargetConfigurations, roleArn);
         }

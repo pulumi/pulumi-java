@@ -5,8 +5,8 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TagTemplateIamMemberArgs;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateIamMemberState;
@@ -59,6 +59,37 @@ public class TagTemplateIamMember extends io.pulumi.resources.CustomResource {
         return this.tagTemplate;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TagTemplateIamMemberArgs.Builder a);
+    }
+    private static io.pulumi.gcp.datacatalog.TagTemplateIamMemberArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.datacatalog.TagTemplateIamMemberArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TagTemplateIamMember(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TagTemplateIamMember(String name) {
+        this(name, TagTemplateIamMemberArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TagTemplateIamMember(String name, TagTemplateIamMemberArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

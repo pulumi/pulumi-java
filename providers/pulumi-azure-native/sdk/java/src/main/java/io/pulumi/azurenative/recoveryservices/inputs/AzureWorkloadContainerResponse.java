@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.AzureWorkloadContainerExtendedInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable String backupManagementType;
+      private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
@@ -39,7 +39,7 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="containerType", required=true)
-    private final String containerType;
+      private final String containerType;
 
     public String getContainerType() {
         return this.containerType;
@@ -50,7 +50,7 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="extendedInfo")
-    private final @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo;
+      private final @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo;
 
     public Optional<AzureWorkloadContainerExtendedInfoResponse> getExtendedInfo() {
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
@@ -61,7 +61,7 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable String friendlyName;
+      private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -72,7 +72,7 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="healthStatus")
-    private final @Nullable String healthStatus;
+      private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
@@ -83,7 +83,7 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="lastUpdatedTime")
-    private final @Nullable String lastUpdatedTime;
+      private final @Nullable String lastUpdatedTime;
 
     public Optional<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
@@ -94,7 +94,7 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="operationType")
-    private final @Nullable String operationType;
+      private final @Nullable String operationType;
 
     public Optional<String> getOperationType() {
         return this.operationType == null ? Optional.empty() : Optional.ofNullable(this.operationType);
@@ -105,7 +105,7 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="registrationStatus")
-    private final @Nullable String registrationStatus;
+      private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
@@ -116,7 +116,7 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable String sourceResourceId;
+      private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
@@ -127,7 +127,7 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="workloadType")
-    private final @Nullable String workloadType;
+      private final @Nullable String workloadType;
 
     public Optional<String> getWorkloadType() {
         return this.workloadType == null ? Optional.empty() : Optional.ofNullable(this.workloadType);
@@ -256,7 +256,6 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureWorkloadContainerResponse build() {
             return new AzureWorkloadContainerResponse(backupManagementType, containerType, extendedInfo, friendlyName, healthStatus, lastUpdatedTime, operationType, registrationStatus, sourceResourceId, workloadType);
         }

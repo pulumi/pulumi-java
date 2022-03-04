@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.NormalizedCoordinateResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class AnimationFadeResponse {
     /**
      * The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s
      * 
-     */
+    */
     public String getEndTimeOffset() {
         return this.endTimeOffset;
     }
     /**
      * Type of fade animation: `FADE_IN` or `FADE_OUT`.
      * 
-     */
+    */
     public String getFadeType() {
         return this.fadeType;
     }
     /**
      * The time to start the fade animation, in seconds. Default: 0
      * 
-     */
+    */
     public String getStartTimeOffset() {
         return this.startTimeOffset;
     }
     /**
      * Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
      * 
-     */
+    */
     public NormalizedCoordinateResponse getXy() {
         return this.xy;
     }
@@ -117,7 +117,6 @@ public final class AnimationFadeResponse {
             this.xy = Objects.requireNonNull(xy);
             return this;
         }
-
         public AnimationFadeResponse build() {
             return new AnimationFadeResponse(endTimeOffset, fadeType, startTimeOffset, xy);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -33,7 +33,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
      * 
      */
     @InputImport(name="metric", required=true)
-    private final String metric;
+      private final String metric;
 
     public String getMetric() {
         return this.metric;
@@ -44,7 +44,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
      * 
      */
     @InputImport(name="singleInstanceAssignment", required=true)
-    private final Double singleInstanceAssignment;
+      private final Double singleInstanceAssignment;
 
     public Double getSingleInstanceAssignment() {
         return this.singleInstanceAssignment;
@@ -55,7 +55,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
      * 
      */
     @InputImport(name="utilizationTarget", required=true)
-    private final Double utilizationTarget;
+      private final Double utilizationTarget;
 
     public Double getUtilizationTarget() {
         return this.utilizationTarget;
@@ -66,7 +66,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
      * 
      */
     @InputImport(name="utilizationTargetType", required=true)
-    private final String utilizationTargetType;
+      private final String utilizationTargetType;
 
     public String getUtilizationTargetType() {
         return this.utilizationTargetType;
@@ -145,7 +145,6 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
             this.utilizationTargetType = Objects.requireNonNull(utilizationTargetType);
             return this;
         }
-
         public AutoscalingPolicyCustomMetricUtilizationResponse build() {
             return new AutoscalingPolicyCustomMetricUtilizationResponse(filter, metric, singleInstanceAssignment, utilizationTarget, utilizationTargetType);
         }

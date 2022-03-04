@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ComponentSourceResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ComponentTransformResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.StageSourceResponse;
@@ -70,49 +70,49 @@ public final class ExecutionStageSummaryResponse {
     /**
      * Collections produced and consumed by component transforms of this stage.
      * 
-     */
+    */
     public List<ComponentSourceResponse> getComponentSource() {
         return this.componentSource;
     }
     /**
      * Transforms that comprise this execution stage.
      * 
-     */
+    */
     public List<ComponentTransformResponse> getComponentTransform() {
         return this.componentTransform;
     }
     /**
      * Input sources for this stage.
      * 
-     */
+    */
     public List<StageSourceResponse> getInputSource() {
         return this.inputSource;
     }
     /**
      * Type of transform this stage is executing.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Dataflow service generated name for this stage.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Output sources for this stage.
      * 
-     */
+    */
     public List<StageSourceResponse> getOutputSource() {
         return this.outputSource;
     }
     /**
      * Other stages that must complete before this stage can run.
      * 
-     */
+    */
     public List<String> getPrerequisiteStage() {
         return this.prerequisiteStage;
     }
@@ -183,7 +183,6 @@ public final class ExecutionStageSummaryResponse {
             this.prerequisiteStage = Objects.requireNonNull(prerequisiteStage);
             return this;
         }
-
         public ExecutionStageSummaryResponse build() {
             return new ExecutionStageSummaryResponse(componentSource, componentTransform, inputSource, kind, name, outputSource, prerequisiteStage);
         }

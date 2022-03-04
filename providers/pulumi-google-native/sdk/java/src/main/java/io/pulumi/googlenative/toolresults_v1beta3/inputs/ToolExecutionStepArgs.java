@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="toolExecution")
-    private final @Nullable Input<ToolExecutionArgs> toolExecution;
+      private final @Nullable Input<ToolExecutionArgs> toolExecution;
 
     public Input<ToolExecutionArgs> getToolExecution() {
         return this.toolExecution == null ? Input.empty() : this.toolExecution;
@@ -66,7 +66,6 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
             this.toolExecution = Input.ofNullable(toolExecution);
             return this;
         }
-
         public ToolExecutionStepArgs build() {
             return new ToolExecutionStepArgs(toolExecution);
         }

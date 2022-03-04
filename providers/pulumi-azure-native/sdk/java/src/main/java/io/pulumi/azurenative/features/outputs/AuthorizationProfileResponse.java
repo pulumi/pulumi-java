@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.features.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class AuthorizationProfileResponse {
     /**
      * The approved time
      * 
-     */
+    */
     public String getApprovedTime() {
         return this.approvedTime;
     }
     /**
      * The approver
      * 
-     */
+    */
     public String getApprover() {
         return this.approver;
     }
     /**
      * The requested time
      * 
-     */
+    */
     public String getRequestedTime() {
         return this.requestedTime;
     }
     /**
      * The requester
      * 
-     */
+    */
     public String getRequester() {
         return this.requester;
     }
     /**
      * The requester object id
      * 
-     */
+    */
     public String getRequesterObjectId() {
         return this.requesterObjectId;
     }
@@ -137,7 +137,6 @@ public final class AuthorizationProfileResponse {
             this.requesterObjectId = Objects.requireNonNull(requesterObjectId);
             return this;
         }
-
         public AuthorizationProfileResponse build() {
             return new AuthorizationProfileResponse(approvedTime, approver, requestedTime, requester, requesterObjectId);
         }

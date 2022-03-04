@@ -8,8 +8,8 @@ import io.pulumi.awsnative.certificatemanager.AccountArgs;
 import io.pulumi.awsnative.certificatemanager.outputs.AccountExpiryEventsConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -32,6 +32,37 @@ public class Account extends io.pulumi.resources.CustomResource {
         return this.expiryEventsConfiguration;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AccountArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.certificatemanager.AccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.certificatemanager.AccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Account(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Account(String name) {
+        this(name, AccountArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Account(String name, AccountArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

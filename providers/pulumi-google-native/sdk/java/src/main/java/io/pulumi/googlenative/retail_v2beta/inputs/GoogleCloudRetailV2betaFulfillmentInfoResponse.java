@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoResponse extends io.pul
      * 
      */
     @InputImport(name="placeIds", required=true)
-    private final List<String> placeIds;
+      private final List<String> placeIds;
 
     public List<String> getPlaceIds() {
         return this.placeIds;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoResponse extends io.pul
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoResponse extends io.pul
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudRetailV2betaFulfillmentInfoResponse build() {
             return new GoogleCloudRetailV2betaFulfillmentInfoResponse(placeIds, type);
         }

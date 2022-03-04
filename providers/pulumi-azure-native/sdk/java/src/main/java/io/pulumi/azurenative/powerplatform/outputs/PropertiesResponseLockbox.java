@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class PropertiesResponseLockbox {
     /**
      * lockbox configuration
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -54,7 +54,6 @@ public final class PropertiesResponseLockbox {
             this.state = state;
             return this;
         }
-
         public PropertiesResponseLockbox build() {
             return new PropertiesResponseLockbox(state);
         }

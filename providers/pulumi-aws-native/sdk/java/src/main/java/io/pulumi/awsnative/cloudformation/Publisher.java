@@ -9,8 +9,8 @@ import io.pulumi.awsnative.cloudformation.enums.PublisherIdentityProvider;
 import io.pulumi.awsnative.cloudformation.enums.PublisherStatus;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -106,6 +106,37 @@ public class Publisher extends io.pulumi.resources.CustomResource {
         return this.publisherStatus;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PublisherArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.cloudformation.PublisherArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.cloudformation.PublisherArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Publisher(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Publisher(String name) {
+        this(name, PublisherArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Publisher(String name, PublisherArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

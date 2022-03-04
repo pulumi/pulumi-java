@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ses.outputs;
 
 import io.pulumi.awsnative.ses.outputs.ContactListTag;
 import io.pulumi.awsnative.ses.outputs.ContactListTopic;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class GetContactListResult {
     /**
      * The description of the contact list.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The tags (keys and values) associated with the contact list.
      * 
-     */
+    */
     public List<ContactListTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The topics associated with the contact list.
      * 
-     */
+    */
     public List<ContactListTopic> getTopics() {
         return this.topics == null ? List.of() : this.topics;
     }
@@ -100,7 +100,6 @@ public final class GetContactListResult {
             this.topics = topics;
             return this;
         }
-
         public GetContactListResult build() {
             return new GetContactListResult(description, tags, topics);
         }

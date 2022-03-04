@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayConnectionDrainingResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="affinityCookieName")
-    private final @Nullable String affinityCookieName;
+      private final @Nullable String affinityCookieName;
 
     public Optional<String> getAffinityCookieName() {
         return this.affinityCookieName == null ? Optional.empty() : Optional.ofNullable(this.affinityCookieName);
@@ -39,7 +39,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="authenticationCertificates")
-    private final @Nullable List<SubResourceResponse> authenticationCertificates;
+      private final @Nullable List<SubResourceResponse> authenticationCertificates;
 
     public List<SubResourceResponse> getAuthenticationCertificates() {
         return this.authenticationCertificates == null ? List.of() : this.authenticationCertificates;
@@ -50,7 +50,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="connectionDraining")
-    private final @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining;
+      private final @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining;
 
     public Optional<ApplicationGatewayConnectionDrainingResponse> getConnectionDraining() {
         return this.connectionDraining == null ? Optional.empty() : Optional.ofNullable(this.connectionDraining);
@@ -61,7 +61,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="cookieBasedAffinity")
-    private final @Nullable String cookieBasedAffinity;
+      private final @Nullable String cookieBasedAffinity;
 
     public Optional<String> getCookieBasedAffinity() {
         return this.cookieBasedAffinity == null ? Optional.empty() : Optional.ofNullable(this.cookieBasedAffinity);
@@ -72,7 +72,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -83,7 +83,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="hostName")
-    private final @Nullable String hostName;
+      private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
@@ -94,7 +94,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -105,7 +105,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -116,7 +116,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+      private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -127,7 +127,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="pickHostNameFromBackendAddress")
-    private final @Nullable Boolean pickHostNameFromBackendAddress;
+      private final @Nullable Boolean pickHostNameFromBackendAddress;
 
     public Optional<Boolean> getPickHostNameFromBackendAddress() {
         return this.pickHostNameFromBackendAddress == null ? Optional.empty() : Optional.ofNullable(this.pickHostNameFromBackendAddress);
@@ -138,7 +138,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+      private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -149,7 +149,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="probe")
-    private final @Nullable SubResourceResponse probe;
+      private final @Nullable SubResourceResponse probe;
 
     public Optional<SubResourceResponse> getProbe() {
         return this.probe == null ? Optional.empty() : Optional.ofNullable(this.probe);
@@ -160,7 +160,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="probeEnabled")
-    private final @Nullable Boolean probeEnabled;
+      private final @Nullable Boolean probeEnabled;
 
     public Optional<Boolean> getProbeEnabled() {
         return this.probeEnabled == null ? Optional.empty() : Optional.ofNullable(this.probeEnabled);
@@ -171,7 +171,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+      private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -182,7 +182,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -193,7 +193,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="requestTimeout")
-    private final @Nullable Integer requestTimeout;
+      private final @Nullable Integer requestTimeout;
 
     public Optional<Integer> getRequestTimeout() {
         return this.requestTimeout == null ? Optional.empty() : Optional.ofNullable(this.requestTimeout);
@@ -204,7 +204,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="trustedRootCertificates")
-    private final @Nullable List<SubResourceResponse> trustedRootCertificates;
+      private final @Nullable List<SubResourceResponse> trustedRootCertificates;
 
     public List<SubResourceResponse> getTrustedRootCertificates() {
         return this.trustedRootCertificates == null ? List.of() : this.trustedRootCertificates;
@@ -215,7 +215,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -424,7 +424,6 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayBackendHttpSettingsResponse build() {
             return new ApplicationGatewayBackendHttpSettingsResponse(affinityCookieName, authenticationCertificates, connectionDraining, cookieBasedAffinity, etag, hostName, id, name, path, pickHostNameFromBackendAddress, port, probe, probeEnabled, protocol, provisioningState, requestTimeout, trustedRootCertificates, type);
         }

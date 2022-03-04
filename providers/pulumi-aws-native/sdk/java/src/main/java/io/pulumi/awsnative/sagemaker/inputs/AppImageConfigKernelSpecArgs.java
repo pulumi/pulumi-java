@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AppImageConfigKernelSpecArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -30,7 +30,7 @@ public final class AppImageConfigKernelSpecArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -89,7 +89,6 @@ public final class AppImageConfigKernelSpecArgs extends io.pulumi.resources.Reso
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public AppImageConfigKernelSpecArgs build() {
             return new AppImageConfigKernelSpecArgs(displayName, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse {
     /**
      * Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
      * 
-     */
+    */
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse getDataflowFlexTemplateRequest() {
         return this.dataflowFlexTemplateRequest;
     }
     /**
      * Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
      * 
-     */
+    */
     public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse getDataflowLaunchTemplateRequest() {
         return this.dataflowLaunchTemplateRequest;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse {
             this.dataflowLaunchTemplateRequest = Objects.requireNonNull(dataflowLaunchTemplateRequest);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1WorkloadResponse build() {
             return new GoogleCloudDatapipelinesV1WorkloadResponse(dataflowFlexTemplateRequest, dataflowLaunchTemplateRequest);
         }

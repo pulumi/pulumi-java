@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.SecretReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -57,35 +57,35 @@ public final class FlexPersistentVolumeSource {
     /**
      * Driver is the name of the driver to use for this volume.
      * 
-     */
+    */
     public String getDriver() {
         return this.driver;
     }
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
      * 
-     */
+    */
     public Optional<String> getFsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * Optional: Extra command options if any.
      * 
-     */
+    */
     public Map<String,String> getOptions() {
         return this.options == null ? Map.of() : this.options;
     }
     /**
      * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
      * 
-     */
+    */
     public Optional<SecretReference> getSecretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -142,7 +142,6 @@ public final class FlexPersistentVolumeSource {
             this.secretRef = secretRef;
             return this;
         }
-
         public FlexPersistentVolumeSource build() {
             return new FlexPersistentVolumeSource(driver, fsType, options, readOnly, secretRef);
         }

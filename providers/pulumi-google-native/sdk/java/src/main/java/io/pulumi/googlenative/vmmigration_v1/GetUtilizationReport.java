@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUtilizationReport {
-/**
- * Gets a single Utilization Report.
+    private GetUtilizationReport() {}
+    public interface BuilderApplicator {
+        public void apply(GetUtilizationReportArgs.Builder a);
+    }
+    private static GetUtilizationReportArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUtilizationReportArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a single Utilization Report.
  * 
- */
+     */
+    public static CompletableFuture<GetUtilizationReportResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a single Utilization Report.
+     * 
+     */
     public static CompletableFuture<GetUtilizationReportResult> invokeAsync(GetUtilizationReportArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vmmigration/v1:getUtilizationReport", TypeShape.of(GetUtilizationReportResult.class), args == null ? GetUtilizationReportArgs.Empty : args, Utilities.withVersion(options));
     }

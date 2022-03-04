@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.keyvault.inputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable String etag;
+      private final @Nullable String etag;
 
     public Optional<String> getEtag() {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
@@ -36,7 +36,7 @@ public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -47,7 +47,7 @@ public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable PrivateEndpointResponse privateEndpoint;
+      private final @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -58,7 +58,7 @@ public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+      private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -69,7 +69,7 @@ public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -148,7 +148,6 @@ public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resou
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionItemResponse build() {
             return new PrivateEndpointConnectionItemResponse(etag, id, privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

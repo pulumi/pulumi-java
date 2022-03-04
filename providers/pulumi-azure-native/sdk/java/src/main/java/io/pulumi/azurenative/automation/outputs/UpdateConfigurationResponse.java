@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.outputs;
 import io.pulumi.azurenative.automation.outputs.LinuxPropertiesResponse;
 import io.pulumi.azurenative.automation.outputs.TargetPropertiesResponse;
 import io.pulumi.azurenative.automation.outputs.WindowsPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -72,49 +72,49 @@ public final class UpdateConfigurationResponse {
     /**
      * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
      * 
-     */
+    */
     public List<String> getAzureVirtualMachines() {
         return this.azureVirtualMachines == null ? List.of() : this.azureVirtualMachines;
     }
     /**
      * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
      * 
-     */
+    */
     public Optional<String> getDuration() {
         return Optional.ofNullable(this.duration);
     }
     /**
      * Linux specific update configuration.
      * 
-     */
+    */
     public Optional<LinuxPropertiesResponse> getLinux() {
         return Optional.ofNullable(this.linux);
     }
     /**
      * List of names of non-azure machines targeted by the software update configuration.
      * 
-     */
+    */
     public List<String> getNonAzureComputerNames() {
         return this.nonAzureComputerNames == null ? List.of() : this.nonAzureComputerNames;
     }
     /**
      * operating system of target machines
      * 
-     */
+    */
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
     /**
      * Group targets for the software update configuration.
      * 
-     */
+    */
     public Optional<TargetPropertiesResponse> getTargets() {
         return Optional.ofNullable(this.targets);
     }
     /**
      * Windows specific update configuration.
      * 
-     */
+    */
     public Optional<WindowsPropertiesResponse> getWindows() {
         return Optional.ofNullable(this.windows);
     }
@@ -185,7 +185,6 @@ public final class UpdateConfigurationResponse {
             this.windows = windows;
             return this;
         }
-
         public UpdateConfigurationResponse build() {
             return new UpdateConfigurationResponse(azureVirtualMachines, duration, linux, nonAzureComputerNames, operatingSystem, targets, windows);
         }

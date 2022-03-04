@@ -6,17 +6,33 @@ package io.pulumi.awsnative.servicecatalog;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalog.inputs.GetCloudFormationProvisionedProductArgs;
 import io.pulumi.awsnative.servicecatalog.outputs.GetCloudFormationProvisionedProductResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudFormationProvisionedProduct {
-/**
- * Resource Schema for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+    private GetCloudFormationProvisionedProduct() {}
+    public interface BuilderApplicator {
+        public void apply(GetCloudFormationProvisionedProductArgs.Builder a);
+    }
+    private static GetCloudFormationProvisionedProductArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCloudFormationProvisionedProductArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema for AWS::ServiceCatalog::CloudFormationProvisionedProduct
  * 
- */
+     */
+    public static CompletableFuture<GetCloudFormationProvisionedProductResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+     * 
+     */
     public static CompletableFuture<GetCloudFormationProvisionedProductResult> invokeAsync(GetCloudFormationProvisionedProductArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalog:getCloudFormationProvisionedProduct", TypeShape.of(GetCloudFormationProvisionedProductResult.class), args == null ? GetCloudFormationProvisionedProductArgs.Empty : args, Utilities.withVersion(options));
     }

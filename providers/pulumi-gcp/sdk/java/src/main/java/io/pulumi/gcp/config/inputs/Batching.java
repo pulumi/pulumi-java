@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.config.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class Batching extends io.pulumi.resources.InvokeArgs {
     public static final Batching Empty = new Batching();
 
     @InputImport(name="enableBatching")
-    private final @Nullable Boolean enableBatching;
+      private final @Nullable Boolean enableBatching;
 
     public Optional<Boolean> getEnableBatching() {
         return this.enableBatching == null ? Optional.empty() : Optional.ofNullable(this.enableBatching);
     }
 
     @InputImport(name="sendAfter")
-    private final @Nullable String sendAfter;
+      private final @Nullable String sendAfter;
 
     public Optional<String> getSendAfter() {
         return this.sendAfter == null ? Optional.empty() : Optional.ofNullable(this.sendAfter);
@@ -72,7 +72,6 @@ public final class Batching extends io.pulumi.resources.InvokeArgs {
             this.sendAfter = sendAfter;
             return this;
         }
-
         public Batching build() {
             return new Batching(enableBatching, sendAfter);
         }

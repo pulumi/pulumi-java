@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,98 +17,98 @@ public final class DeviceProfileLoRaWANDeviceProfileArgs extends io.pulumi.resou
     public static final DeviceProfileLoRaWANDeviceProfileArgs Empty = new DeviceProfileLoRaWANDeviceProfileArgs();
 
     @InputImport(name="classBTimeout")
-    private final @Nullable Input<Integer> classBTimeout;
+      private final @Nullable Input<Integer> classBTimeout;
 
     public Input<Integer> getClassBTimeout() {
         return this.classBTimeout == null ? Input.empty() : this.classBTimeout;
     }
 
     @InputImport(name="classCTimeout")
-    private final @Nullable Input<Integer> classCTimeout;
+      private final @Nullable Input<Integer> classCTimeout;
 
     public Input<Integer> getClassCTimeout() {
         return this.classCTimeout == null ? Input.empty() : this.classCTimeout;
     }
 
     @InputImport(name="macVersion")
-    private final @Nullable Input<String> macVersion;
+      private final @Nullable Input<String> macVersion;
 
     public Input<String> getMacVersion() {
         return this.macVersion == null ? Input.empty() : this.macVersion;
     }
 
     @InputImport(name="maxDutyCycle")
-    private final @Nullable Input<Integer> maxDutyCycle;
+      private final @Nullable Input<Integer> maxDutyCycle;
 
     public Input<Integer> getMaxDutyCycle() {
         return this.maxDutyCycle == null ? Input.empty() : this.maxDutyCycle;
     }
 
     @InputImport(name="maxEirp")
-    private final @Nullable Input<Integer> maxEirp;
+      private final @Nullable Input<Integer> maxEirp;
 
     public Input<Integer> getMaxEirp() {
         return this.maxEirp == null ? Input.empty() : this.maxEirp;
     }
 
     @InputImport(name="pingSlotDr")
-    private final @Nullable Input<Integer> pingSlotDr;
+      private final @Nullable Input<Integer> pingSlotDr;
 
     public Input<Integer> getPingSlotDr() {
         return this.pingSlotDr == null ? Input.empty() : this.pingSlotDr;
     }
 
     @InputImport(name="pingSlotFreq")
-    private final @Nullable Input<Integer> pingSlotFreq;
+      private final @Nullable Input<Integer> pingSlotFreq;
 
     public Input<Integer> getPingSlotFreq() {
         return this.pingSlotFreq == null ? Input.empty() : this.pingSlotFreq;
     }
 
     @InputImport(name="pingSlotPeriod")
-    private final @Nullable Input<Integer> pingSlotPeriod;
+      private final @Nullable Input<Integer> pingSlotPeriod;
 
     public Input<Integer> getPingSlotPeriod() {
         return this.pingSlotPeriod == null ? Input.empty() : this.pingSlotPeriod;
     }
 
     @InputImport(name="regParamsRevision")
-    private final @Nullable Input<String> regParamsRevision;
+      private final @Nullable Input<String> regParamsRevision;
 
     public Input<String> getRegParamsRevision() {
         return this.regParamsRevision == null ? Input.empty() : this.regParamsRevision;
     }
 
     @InputImport(name="rfRegion")
-    private final @Nullable Input<String> rfRegion;
+      private final @Nullable Input<String> rfRegion;
 
     public Input<String> getRfRegion() {
         return this.rfRegion == null ? Input.empty() : this.rfRegion;
     }
 
     @InputImport(name="supports32BitFCnt")
-    private final @Nullable Input<Boolean> supports32BitFCnt;
+      private final @Nullable Input<Boolean> supports32BitFCnt;
 
     public Input<Boolean> getSupports32BitFCnt() {
         return this.supports32BitFCnt == null ? Input.empty() : this.supports32BitFCnt;
     }
 
     @InputImport(name="supportsClassB")
-    private final @Nullable Input<Boolean> supportsClassB;
+      private final @Nullable Input<Boolean> supportsClassB;
 
     public Input<Boolean> getSupportsClassB() {
         return this.supportsClassB == null ? Input.empty() : this.supportsClassB;
     }
 
     @InputImport(name="supportsClassC")
-    private final @Nullable Input<Boolean> supportsClassC;
+      private final @Nullable Input<Boolean> supportsClassC;
 
     public Input<Boolean> getSupportsClassC() {
         return this.supportsClassC == null ? Input.empty() : this.supportsClassC;
     }
 
     @InputImport(name="supportsJoin")
-    private final @Nullable Input<Boolean> supportsJoin;
+      private final @Nullable Input<Boolean> supportsJoin;
 
     public Input<Boolean> getSupportsJoin() {
         return this.supportsJoin == null ? Input.empty() : this.supportsJoin;
@@ -347,7 +347,6 @@ public final class DeviceProfileLoRaWANDeviceProfileArgs extends io.pulumi.resou
             this.supportsJoin = Input.ofNullable(supportsJoin);
             return this;
         }
-
         public DeviceProfileLoRaWANDeviceProfileArgs build() {
             return new DeviceProfileLoRaWANDeviceProfileArgs(classBTimeout, classCTimeout, macVersion, maxDutyCycle, maxEirp, pingSlotDr, pingSlotFreq, pingSlotPeriod, regParamsRevision, rfRegion, supports32BitFCnt, supportsClassB, supportsClassC, supportsJoin);
         }

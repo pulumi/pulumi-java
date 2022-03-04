@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile;
 import java.lang.String;
 import java.util.Objects;
@@ -56,21 +56,21 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
     /**
      * A a file with this content. The size of the content is limited to 1024 characters.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * A remote or local source.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile> getFile() {
         return Optional.ofNullable(this.file);
     }
     /**
      * Required. The absolute path of the file within the VM.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
@@ -78,14 +78,14 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
      * - 
      * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
      * 
-     */
+    */
     public Optional<String> getPermissions() {
         return Optional.ofNullable(this.permissions);
     }
     /**
      * Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -142,7 +142,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceFile build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceFile(content, file, path, permissions, state);
         }

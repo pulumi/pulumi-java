@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse 
     /**
      * Optional. The parameter name for the value extracted from the annotated part of the example. This field is required for annotated parts of the training phrase.
      * 
-     */
+    */
     public String getAlias() {
         return this.alias;
     }
     /**
      * Optional. The entity type name prefixed with `@`. This field is required for annotated parts of the training phrase.
      * 
-     */
+    */
     public String getEntityType() {
         return this.entityType;
     }
     /**
      * The text for this part.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
     /**
      * Optional. Indicates whether the text was manually annotated. This field is set to true when the Dialogflow Console is used to manually annotate the part. When creating an annotated part with the API, you must set this to true.
      * 
-     */
+    */
     public Boolean getUserDefined() {
         return this.userDefined;
     }
@@ -117,7 +117,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse 
             this.userDefined = Objects.requireNonNull(userDefined);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse(alias, entityType, text, userDefined);
         }

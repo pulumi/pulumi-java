@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class SubnetResponse {
     /**
      * Resource ID of Virtual Network Subnet
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -52,7 +52,6 @@ public final class SubnetResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public SubnetResponse build() {
             return new SubnetResponse(id);
         }

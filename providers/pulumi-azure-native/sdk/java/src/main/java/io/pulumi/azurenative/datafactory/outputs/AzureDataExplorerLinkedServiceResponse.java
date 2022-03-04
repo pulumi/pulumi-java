@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -106,70 +106,70 @@ public final class AzureDataExplorerLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The credential reference containing authentication information.
      * 
-     */
+    */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Database name for connection. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getDatabase() {
         return this.database;
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Object getEndpoint() {
         return this.endpoint;
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getServicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
      * The key of the service principal used to authenticate against Kusto.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getTenant() {
         return Optional.ofNullable(this.tenant);
     }
@@ -177,7 +177,7 @@ public final class AzureDataExplorerLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'AzureDataExplorer'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -276,7 +276,6 @@ public final class AzureDataExplorerLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataExplorerLinkedServiceResponse build() {
             return new AzureDataExplorerLinkedServiceResponse(annotations, connectVia, credential, database, description, endpoint, parameters, servicePrincipalId, servicePrincipalKey, tenant, type);
         }

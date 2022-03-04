@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.EntityInsightItemResponseQueryTimeInterval;
 import io.pulumi.azurenative.securityinsights.outputs.InsightsTableResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class EntityInsightItemResponse {
     /**
      * Query results for table insights query.
      * 
-     */
+    */
     public List<InsightsTableResultResponse> getChartQueryResults() {
         return this.chartQueryResults == null ? List.of() : this.chartQueryResults;
     }
     /**
      * The query id of the insight
      * 
-     */
+    */
     public Optional<String> getQueryId() {
         return Optional.ofNullable(this.queryId);
     }
     /**
      * The Time interval that the query actually executed on.
      * 
-     */
+    */
     public Optional<EntityInsightItemResponseQueryTimeInterval> getQueryTimeInterval() {
         return Optional.ofNullable(this.queryTimeInterval);
     }
     /**
      * Query results for table insights query.
      * 
-     */
+    */
     public Optional<InsightsTableResultResponse> getTableQueryResults() {
         return Optional.ofNullable(this.tableQueryResults);
     }
@@ -121,7 +121,6 @@ public final class EntityInsightItemResponse {
             this.tableQueryResults = tableQueryResults;
             return this;
         }
-
         public EntityInsightItemResponse build() {
             return new EntityInsightItemResponse(chartQueryResults, queryId, queryTimeInterval, tableQueryResults);
         }

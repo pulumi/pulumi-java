@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class AutoShutdownProfileResponse {
     /**
      * The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
      * 
-     */
+    */
     public Optional<String> getDisconnectDelay() {
         return Optional.ofNullable(this.disconnectDelay);
     }
     /**
      * The amount of time a VM will idle before it is shutdown if this behavior is enabled.
      * 
-     */
+    */
     public Optional<String> getIdleDelay() {
         return Optional.ofNullable(this.idleDelay);
     }
     /**
      * The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
      * 
-     */
+    */
     public Optional<String> getNoConnectDelay() {
         return Optional.ofNullable(this.noConnectDelay);
     }
     /**
      * Whether shutdown on disconnect is enabled
      * 
-     */
+    */
     public Optional<String> getShutdownOnDisconnect() {
         return Optional.ofNullable(this.shutdownOnDisconnect);
     }
     /**
      * Whether a VM will get shutdown when it has idled for a period of time.
      * 
-     */
+    */
     public Optional<String> getShutdownOnIdle() {
         return Optional.ofNullable(this.shutdownOnIdle);
     }
     /**
      * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
      * 
-     */
+    */
     public Optional<String> getShutdownWhenNotConnected() {
         return Optional.ofNullable(this.shutdownWhenNotConnected);
     }
@@ -160,7 +160,6 @@ public final class AutoShutdownProfileResponse {
             this.shutdownWhenNotConnected = shutdownWhenNotConnected;
             return this;
         }
-
         public AutoShutdownProfileResponse build() {
             return new AutoShutdownProfileResponse(disconnectDelay, idleDelay, noConnectDelay, shutdownOnDisconnect, shutdownOnIdle, shutdownWhenNotConnected);
         }

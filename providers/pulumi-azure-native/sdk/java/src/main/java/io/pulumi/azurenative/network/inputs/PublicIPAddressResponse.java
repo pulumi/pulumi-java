@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.NatGatewayResponse;
 import io.pulumi.azurenative.network.inputs.PublicIPAddressDnsSettingsResponse;
 import io.pulumi.azurenative.network.inputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ddosSettings")
-    private final @Nullable DdosSettingsResponse ddosSettings;
+      private final @Nullable DdosSettingsResponse ddosSettings;
 
     public Optional<DdosSettingsResponse> getDdosSettings() {
         return this.ddosSettings == null ? Optional.empty() : Optional.ofNullable(this.ddosSettings);
@@ -45,7 +45,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="dnsSettings")
-    private final @Nullable PublicIPAddressDnsSettingsResponse dnsSettings;
+      private final @Nullable PublicIPAddressDnsSettingsResponse dnsSettings;
 
     public Optional<PublicIPAddressDnsSettingsResponse> getDnsSettings() {
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
@@ -56,7 +56,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -67,7 +67,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable ExtendedLocationResponse extendedLocation;
+      private final @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
@@ -78,7 +78,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -89,7 +89,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-    private final @Nullable Integer idleTimeoutInMinutes;
+      private final @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
@@ -100,7 +100,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable String ipAddress;
+      private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
@@ -111,7 +111,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ipConfiguration", required=true)
-    private final IPConfigurationResponse ipConfiguration;
+      private final IPConfigurationResponse ipConfiguration;
 
     public IPConfigurationResponse getIpConfiguration() {
         return this.ipConfiguration;
@@ -122,7 +122,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ipTags")
-    private final @Nullable List<IpTagResponse> ipTags;
+      private final @Nullable List<IpTagResponse> ipTags;
 
     public List<IpTagResponse> getIpTags() {
         return this.ipTags == null ? List.of() : this.ipTags;
@@ -133,7 +133,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="linkedPublicIPAddress")
-    private final @Nullable PublicIPAddressResponse linkedPublicIPAddress;
+      private final @Nullable PublicIPAddressResponse linkedPublicIPAddress;
 
     public Optional<PublicIPAddressResponse> getLinkedPublicIPAddress() {
         return this.linkedPublicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.linkedPublicIPAddress);
@@ -144,7 +144,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -155,7 +155,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="migrationPhase")
-    private final @Nullable String migrationPhase;
+      private final @Nullable String migrationPhase;
 
     public Optional<String> getMigrationPhase() {
         return this.migrationPhase == null ? Optional.empty() : Optional.ofNullable(this.migrationPhase);
@@ -166,7 +166,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -177,7 +177,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="natGateway")
-    private final @Nullable NatGatewayResponse natGateway;
+      private final @Nullable NatGatewayResponse natGateway;
 
     public Optional<NatGatewayResponse> getNatGateway() {
         return this.natGateway == null ? Optional.empty() : Optional.ofNullable(this.natGateway);
@@ -188,7 +188,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -199,7 +199,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="publicIPAddressVersion")
-    private final @Nullable String publicIPAddressVersion;
+      private final @Nullable String publicIPAddressVersion;
 
     public Optional<String> getPublicIPAddressVersion() {
         return this.publicIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressVersion);
@@ -210,7 +210,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="publicIPAllocationMethod")
-    private final @Nullable String publicIPAllocationMethod;
+      private final @Nullable String publicIPAllocationMethod;
 
     public Optional<String> getPublicIPAllocationMethod() {
         return this.publicIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.publicIPAllocationMethod);
@@ -221,7 +221,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="publicIPPrefix")
-    private final @Nullable SubResourceResponse publicIPPrefix;
+      private final @Nullable SubResourceResponse publicIPPrefix;
 
     public Optional<SubResourceResponse> getPublicIPPrefix() {
         return this.publicIPPrefix == null ? Optional.empty() : Optional.ofNullable(this.publicIPPrefix);
@@ -232,7 +232,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGuid", required=true)
-    private final String resourceGuid;
+      private final String resourceGuid;
 
     public String getResourceGuid() {
         return this.resourceGuid;
@@ -243,7 +243,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="servicePublicIPAddress")
-    private final @Nullable PublicIPAddressResponse servicePublicIPAddress;
+      private final @Nullable PublicIPAddressResponse servicePublicIPAddress;
 
     public Optional<PublicIPAddressResponse> getServicePublicIPAddress() {
         return this.servicePublicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.servicePublicIPAddress);
@@ -254,7 +254,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable PublicIPAddressSkuResponse sku;
+      private final @Nullable PublicIPAddressSkuResponse sku;
 
     public Optional<PublicIPAddressSkuResponse> getSku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
@@ -265,7 +265,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -276,7 +276,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -287,7 +287,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable List<String> zones;
+      private final @Nullable List<String> zones;
 
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
@@ -556,7 +556,6 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
             this.zones = zones;
             return this;
         }
-
         public PublicIPAddressResponse build() {
             return new PublicIPAddressResponse(ddosSettings, dnsSettings, etag, extendedLocation, id, idleTimeoutInMinutes, ipAddress, ipConfiguration, ipTags, linkedPublicIPAddress, location, migrationPhase, name, natGateway, provisioningState, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, resourceGuid, servicePublicIPAddress, sku, tags, type, zones);
         }

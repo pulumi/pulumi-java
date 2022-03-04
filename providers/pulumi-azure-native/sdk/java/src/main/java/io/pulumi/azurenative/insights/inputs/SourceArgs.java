@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.QueryType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedResources")
-    private final @Nullable Input<List<String>> authorizedResources;
+      private final @Nullable Input<List<String>> authorizedResources;
 
     public Input<List<String>> getAuthorizedResources() {
         return this.authorizedResources == null ? Input.empty() : this.authorizedResources;
@@ -37,7 +37,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceId", required=true)
-    private final Input<String> dataSourceId;
+      private final Input<String> dataSourceId;
 
     public Input<String> getDataSourceId() {
         return this.dataSourceId;
@@ -48,7 +48,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -59,7 +59,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryType")
-    private final @Nullable Input<Either<String,QueryType>> queryType;
+      private final @Nullable Input<Either<String,QueryType>> queryType;
 
     public Input<Either<String,QueryType>> getQueryType() {
         return this.queryType == null ? Input.empty() : this.queryType;
@@ -148,7 +148,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.queryType = Input.ofNullable(queryType);
             return this;
         }
-
         public SourceArgs build() {
             return new SourceArgs(authorizedResources, dataSourceId, query, queryType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourcePackageResourceAPTResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourcePackageResourceDebResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourcePackageResourceGooGetResponse;
@@ -80,56 +80,56 @@ public final class OSPolicyResourcePackageResourceResponse {
     /**
      * A package managed by Apt.
      * 
-     */
+    */
     public OSPolicyResourcePackageResourceAPTResponse getApt() {
         return this.apt;
     }
     /**
      * A deb package file.
      * 
-     */
+    */
     public OSPolicyResourcePackageResourceDebResponse getDeb() {
         return this.deb;
     }
     /**
      * The desired state the agent should maintain for this package.
      * 
-     */
+    */
     public String getDesiredState() {
         return this.desiredState;
     }
     /**
      * A package managed by GooGet.
      * 
-     */
+    */
     public OSPolicyResourcePackageResourceGooGetResponse getGooget() {
         return this.googet;
     }
     /**
      * An MSI package.
      * 
-     */
+    */
     public OSPolicyResourcePackageResourceMSIResponse getMsi() {
         return this.msi;
     }
     /**
      * An rpm package file.
      * 
-     */
+    */
     public OSPolicyResourcePackageResourceRPMResponse getRpm() {
         return this.rpm;
     }
     /**
      * A package managed by YUM.
      * 
-     */
+    */
     public OSPolicyResourcePackageResourceYUMResponse getYum() {
         return this.yum;
     }
     /**
      * A package managed by Zypper.
      * 
-     */
+    */
     public OSPolicyResourcePackageResourceZypperResponse getZypper() {
         return this.zypper;
     }
@@ -207,7 +207,6 @@ public final class OSPolicyResourcePackageResourceResponse {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public OSPolicyResourcePackageResourceResponse build() {
             return new OSPolicyResourcePackageResourceResponse(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDetailsResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
 import java.lang.String;
@@ -61,42 +61,42 @@ public final class CloneJobResponse {
     /**
      * Details of the target VM in Compute Engine.
      * 
-     */
+    */
     public ComputeEngineTargetDetailsResponse getComputeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
     /**
      * The time the clone job was created (as an API call, not when it was actually created in the target).
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Provides details for the errors that led to the Clone Job's state.
      * 
-     */
+    */
     public StatusResponse getError() {
         return this.error;
     }
     /**
      * The name of the clone.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of the clone job.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The time the state was last updated.
      * 
-     */
+    */
     public String getStateTime() {
         return this.stateTime;
     }
@@ -160,7 +160,6 @@ public final class CloneJobResponse {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
-
         public CloneJobResponse build() {
             return new CloneJobResponse(computeEngineTargetDetails, createTime, error, name, state, stateTime);
         }

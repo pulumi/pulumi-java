@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="namespacePath")
-    private final @Nullable String namespacePath;
+      private final @Nullable String namespacePath;
 
     public Optional<String> getNamespacePath() {
         return this.namespacePath == null ? Optional.empty() : Optional.ofNullable(this.namespacePath);
@@ -34,7 +34,7 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="nfsAccessPolicy")
-    private final @Nullable String nfsAccessPolicy;
+      private final @Nullable String nfsAccessPolicy;
 
     public Optional<String> getNfsAccessPolicy() {
         return this.nfsAccessPolicy == null ? Optional.empty() : Optional.ofNullable(this.nfsAccessPolicy);
@@ -45,7 +45,7 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="nfsExport")
-    private final @Nullable String nfsExport;
+      private final @Nullable String nfsExport;
 
     public Optional<String> getNfsExport() {
         return this.nfsExport == null ? Optional.empty() : Optional.ofNullable(this.nfsExport);
@@ -56,7 +56,7 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="targetPath")
-    private final @Nullable String targetPath;
+      private final @Nullable String targetPath;
 
     public Optional<String> getTargetPath() {
         return this.targetPath == null ? Optional.empty() : Optional.ofNullable(this.targetPath);
@@ -125,7 +125,6 @@ public final class NamespaceJunctionResponse extends io.pulumi.resources.InvokeA
             this.targetPath = targetPath;
             return this;
         }
-
         public NamespaceJunctionResponse build() {
             return new NamespaceJunctionResponse(namespacePath, nfsAccessPolicy, nfsExport, targetPath);
         }

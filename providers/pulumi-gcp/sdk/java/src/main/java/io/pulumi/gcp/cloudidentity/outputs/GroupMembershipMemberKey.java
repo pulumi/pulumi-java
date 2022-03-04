@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,7 +48,7 @@ public final class GroupMembershipMemberKey {
      * to the Identity Source's requirements.
      * Must be unique within a namespace.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -60,7 +60,7 @@ public final class GroupMembershipMemberKey {
      * The namespace must correspond to an identity source created in Admin Console
      * and must be in the form of `identitysources/{identity_source_id}`.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -96,7 +96,6 @@ public final class GroupMembershipMemberKey {
             this.namespace = namespace;
             return this;
         }
-
         public GroupMembershipMemberKey build() {
             return new GroupMembershipMemberKey(id, namespace);
         }

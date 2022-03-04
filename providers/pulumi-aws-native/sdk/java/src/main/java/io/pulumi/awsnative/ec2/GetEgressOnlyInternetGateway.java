@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetEgressOnlyInternetGatewayArgs;
 import io.pulumi.awsnative.ec2.outputs.GetEgressOnlyInternetGatewayResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEgressOnlyInternetGateway {
-/**
- * Resource Type definition for AWS::EC2::EgressOnlyInternetGateway
+    private GetEgressOnlyInternetGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetEgressOnlyInternetGatewayArgs.Builder a);
+    }
+    private static GetEgressOnlyInternetGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEgressOnlyInternetGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::EC2::EgressOnlyInternetGateway
  * 
- */
+     */
+    public static CompletableFuture<GetEgressOnlyInternetGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::EC2::EgressOnlyInternetGateway
+     * 
+     */
     public static CompletableFuture<GetEgressOnlyInternetGatewayResult> invokeAsync(GetEgressOnlyInternetGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getEgressOnlyInternetGateway", TypeShape.of(GetEgressOnlyInternetGatewayResult.class), args == null ? GetEgressOnlyInternetGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

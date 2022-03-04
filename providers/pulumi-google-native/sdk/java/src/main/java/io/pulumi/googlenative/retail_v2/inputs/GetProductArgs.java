@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetProductArgs Empty = new GetProductArgs();
 
     @InputImport(name="branchId", required=true)
-    private final String branchId;
+      private final String branchId;
 
     public String getBranchId() {
         return this.branchId;
     }
 
     @InputImport(name="catalogId", required=true)
-    private final String catalogId;
+      private final String catalogId;
 
     public String getCatalogId() {
         return this.catalogId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="productId", required=true)
-    private final String productId;
+      private final String productId;
 
     public String getProductId() {
         return this.productId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -122,7 +122,6 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetProductArgs build() {
             return new GetProductArgs(branchId, catalogId, location, productId, project);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,14 +41,14 @@ public final class DetectorModelSqs {
     /**
      * The URL of the SQS queue where the data is written.
      * 
-     */
+    */
     public String getQueueUrl() {
         return this.queueUrl;
     }
     /**
      * Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
      * 
-     */
+    */
     public Optional<Boolean> getUseBase64() {
         return Optional.ofNullable(this.useBase64);
     }
@@ -91,7 +91,6 @@ public final class DetectorModelSqs {
             this.useBase64 = useBase64;
             return this;
         }
-
         public DetectorModelSqs build() {
             return new DetectorModelSqs(payload, queueUrl, useBase64);
         }

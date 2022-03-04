@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appstream.outputs;
 
 import io.pulumi.awsnative.appstream.outputs.AppBlockS3Location;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -88,7 +88,6 @@ public final class AppBlockScriptDetails {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }
-
         public AppBlockScriptDetails build() {
             return new AppBlockScriptDetails(executableParameters, executablePath, scriptS3Location, timeoutInSeconds);
         }

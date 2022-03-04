@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.ServerKeyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="autoRotationEnabled")
-    private final @Nullable Input<Boolean> autoRotationEnabled;
+      private final @Nullable Input<Boolean> autoRotationEnabled;
 
     public Input<Boolean> getAutoRotationEnabled() {
         return this.autoRotationEnabled == null ? Input.empty() : this.autoRotationEnabled;
@@ -33,7 +33,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encryptionProtectorName")
-    private final @Nullable Input<String> encryptionProtectorName;
+      private final @Nullable Input<String> encryptionProtectorName;
 
     public Input<String> getEncryptionProtectorName() {
         return this.encryptionProtectorName == null ? Input.empty() : this.encryptionProtectorName;
@@ -44,7 +44,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serverKeyName")
-    private final @Nullable Input<String> serverKeyName;
+      private final @Nullable Input<String> serverKeyName;
 
     public Input<String> getServerKeyName() {
         return this.serverKeyName == null ? Input.empty() : this.serverKeyName;
@@ -66,7 +66,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serverKeyType", required=true)
-    private final Input<Either<String,ServerKeyType>> serverKeyType;
+      private final Input<Either<String,ServerKeyType>> serverKeyType;
 
     public Input<Either<String,ServerKeyType>> getServerKeyType() {
         return this.serverKeyType;
@@ -77,7 +77,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -196,7 +196,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public EncryptionProtectorArgs build() {
             return new EncryptionProtectorArgs(autoRotationEnabled, encryptionProtectorName, resourceGroupName, serverKeyName, serverKeyType, serverName);
         }

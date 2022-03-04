@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class EncryptionInfoResponse {
     /**
      * The status of encrypt/decrypt calls on underlying data for this resource. Regardless of status, the existing data is always encrypted at rest.
      * 
-     */
+    */
     public StatusResponse getEncryptionStatus() {
         return this.encryptionStatus;
     }
     /**
      * The type of encryption used to protect this resource.
      * 
-     */
+    */
     public String getEncryptionType() {
         return this.encryptionType;
     }
     /**
      * The version of the Cloud KMS key specified in the parent cluster that is in use for the data underlying this table.
      * 
-     */
+    */
     public String getKmsKeyVersion() {
         return this.kmsKeyVersion;
     }
@@ -96,7 +96,6 @@ public final class EncryptionInfoResponse {
             this.kmsKeyVersion = Objects.requireNonNull(kmsKeyVersion);
             return this;
         }
-
         public EncryptionInfoResponse build() {
             return new EncryptionInfoResponse(encryptionStatus, encryptionType, kmsKeyVersion);
         }

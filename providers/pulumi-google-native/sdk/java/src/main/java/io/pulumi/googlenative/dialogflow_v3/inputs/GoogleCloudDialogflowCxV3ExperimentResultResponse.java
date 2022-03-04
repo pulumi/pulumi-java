@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends io.
      * 
      */
     @InputImport(name="lastUpdateTime", required=true)
-    private final String lastUpdateTime;
+      private final String lastUpdateTime;
 
     public String getLastUpdateTime() {
         return this.lastUpdateTime;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends io.
      * 
      */
     @InputImport(name="versionMetrics", required=true)
-    private final List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics;
+      private final List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics;
 
     public List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> getVersionMetrics() {
         return this.versionMetrics;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends io.
             this.versionMetrics = Objects.requireNonNull(versionMetrics);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentResultResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultResponse(lastUpdateTime, versionMetrics);
         }

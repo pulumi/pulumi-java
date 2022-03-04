@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BlobRestoreRangeResponse {
     /**
      * Blob end range. This is exclusive. Empty means account end.
      * 
-     */
+    */
     public String getEndRange() {
         return this.endRange;
     }
     /**
      * Blob start range. This is inclusive. Empty means account start.
      * 
-     */
+    */
     public String getStartRange() {
         return this.startRange;
     }
@@ -74,7 +74,6 @@ public final class BlobRestoreRangeResponse {
             this.startRange = Objects.requireNonNull(startRange);
             return this;
         }
-
         public BlobRestoreRangeResponse build() {
             return new BlobRestoreRangeResponse(endRange, startRange);
         }

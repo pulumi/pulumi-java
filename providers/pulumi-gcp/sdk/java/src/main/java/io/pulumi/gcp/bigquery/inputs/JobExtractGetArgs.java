@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.JobExtractSourceModelGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobExtractSourceTableGetArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compression")
-    private final @Nullable Input<String> compression;
+      private final @Nullable Input<String> compression;
 
     public Input<String> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -37,7 +37,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationFormat")
-    private final @Nullable Input<String> destinationFormat;
+      private final @Nullable Input<String> destinationFormat;
 
     public Input<String> getDestinationFormat() {
         return this.destinationFormat == null ? Input.empty() : this.destinationFormat;
@@ -48,7 +48,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationUris", required=true)
-    private final Input<List<String>> destinationUris;
+      private final Input<List<String>> destinationUris;
 
     public Input<List<String>> getDestinationUris() {
         return this.destinationUris;
@@ -60,7 +60,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldDelimiter")
-    private final @Nullable Input<String> fieldDelimiter;
+      private final @Nullable Input<String> fieldDelimiter;
 
     public Input<String> getFieldDelimiter() {
         return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
@@ -71,7 +71,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="printHeader")
-    private final @Nullable Input<Boolean> printHeader;
+      private final @Nullable Input<Boolean> printHeader;
 
     public Input<Boolean> getPrintHeader() {
         return this.printHeader == null ? Input.empty() : this.printHeader;
@@ -83,7 +83,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceModel")
-    private final @Nullable Input<JobExtractSourceModelGetArgs> sourceModel;
+      private final @Nullable Input<JobExtractSourceModelGetArgs> sourceModel;
 
     public Input<JobExtractSourceModelGetArgs> getSourceModel() {
         return this.sourceModel == null ? Input.empty() : this.sourceModel;
@@ -95,7 +95,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceTable")
-    private final @Nullable Input<JobExtractSourceTableGetArgs> sourceTable;
+      private final @Nullable Input<JobExtractSourceTableGetArgs> sourceTable;
 
     public Input<JobExtractSourceTableGetArgs> getSourceTable() {
         return this.sourceTable == null ? Input.empty() : this.sourceTable;
@@ -106,7 +106,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useAvroLogicalTypes")
-    private final @Nullable Input<Boolean> useAvroLogicalTypes;
+      private final @Nullable Input<Boolean> useAvroLogicalTypes;
 
     public Input<Boolean> getUseAvroLogicalTypes() {
         return this.useAvroLogicalTypes == null ? Input.empty() : this.useAvroLogicalTypes;
@@ -255,7 +255,6 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
             this.useAvroLogicalTypes = Input.ofNullable(useAvroLogicalTypes);
             return this;
         }
-
         public JobExtractGetArgs build() {
             return new JobExtractGetArgs(compression, destinationFormat, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
         }

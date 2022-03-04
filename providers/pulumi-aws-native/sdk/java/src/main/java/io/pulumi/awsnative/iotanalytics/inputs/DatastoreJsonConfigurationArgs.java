@@ -30,7 +30,6 @@ public final class DatastoreJsonConfigurationArgs extends io.pulumi.resources.Re
         public Builder(DatastoreJsonConfigurationArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DatastoreJsonConfigurationArgs build() {
             return new DatastoreJsonConfigurationArgs();
         }

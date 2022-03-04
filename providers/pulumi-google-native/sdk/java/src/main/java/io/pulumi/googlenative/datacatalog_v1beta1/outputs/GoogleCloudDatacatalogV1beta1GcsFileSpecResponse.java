@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datacatalog_v1beta1.outputs.GoogleCloudDatacatalogV1beta1SystemTimestampsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse {
     /**
      * The full file path. Example: `gs://bucket_name/a/b.txt`.
      * 
-     */
+    */
     public String getFilePath() {
         return this.filePath;
     }
     /**
      * Timestamps about the Cloud Storage file.
      * 
-     */
+    */
     public GoogleCloudDatacatalogV1beta1SystemTimestampsResponse getGcsTimestamps() {
         return this.gcsTimestamps;
     }
     /**
      * The size of the file, in bytes.
      * 
-     */
+    */
     public String getSizeBytes() {
         return this.sizeBytes;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1GcsFileSpecResponse build() {
             return new GoogleCloudDatacatalogV1beta1GcsFileSpecResponse(filePath, gcsTimestamps, sizeBytes);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
     public static final WebAppRelayServiceConnectionSlotArgs Empty = new WebAppRelayServiceConnectionSlotArgs();
 
     @InputImport(name="biztalkUri")
-    private final @Nullable Input<String> biztalkUri;
+      private final @Nullable Input<String> biztalkUri;
 
     public Input<String> getBiztalkUri() {
         return this.biztalkUri == null ? Input.empty() : this.biztalkUri;
     }
 
     @InputImport(name="entityConnectionString")
-    private final @Nullable Input<String> entityConnectionString;
+      private final @Nullable Input<String> entityConnectionString;
 
     public Input<String> getEntityConnectionString() {
         return this.entityConnectionString == null ? Input.empty() : this.entityConnectionString;
     }
 
     @InputImport(name="entityName")
-    private final @Nullable Input<String> entityName;
+      private final @Nullable Input<String> entityName;
 
     public Input<String> getEntityName() {
         return this.entityName == null ? Input.empty() : this.entityName;
     }
 
     @InputImport(name="hostname")
-    private final @Nullable Input<String> hostname;
+      private final @Nullable Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname == null ? Input.empty() : this.hostname;
@@ -48,7 +48,7 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -59,21 +59,21 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="resourceConnectionString")
-    private final @Nullable Input<String> resourceConnectionString;
+      private final @Nullable Input<String> resourceConnectionString;
 
     public Input<String> getResourceConnectionString() {
         return this.resourceConnectionString == null ? Input.empty() : this.resourceConnectionString;
@@ -84,14 +84,14 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -102,7 +102,7 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+      private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -296,7 +296,6 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
-
         public WebAppRelayServiceConnectionSlotArgs build() {
             return new WebAppRelayServiceConnectionSlotArgs(biztalkUri, entityConnectionString, entityName, hostname, kind, name, port, resourceConnectionString, resourceGroupName, resourceType, slot);
         }

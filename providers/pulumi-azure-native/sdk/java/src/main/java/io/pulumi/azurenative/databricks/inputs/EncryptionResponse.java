@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable String keyName;
+      private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
@@ -34,7 +34,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keySource")
-    private final @Nullable String keySource;
+      private final @Nullable String keySource;
 
     public Optional<String> getKeySource() {
         return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
@@ -45,7 +45,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyVaultUri")
-    private final @Nullable String keyVaultUri;
+      private final @Nullable String keyVaultUri;
 
     public Optional<String> getKeyVaultUri() {
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
@@ -56,7 +56,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyVersion")
-    private final @Nullable String keyVersion;
+      private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
@@ -125,7 +125,6 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public EncryptionResponse build() {
             return new EncryptionResponse(keyName, keySource, keyVaultUri, keyVersion);
         }

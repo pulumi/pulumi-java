@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LinuxPatchSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.SshConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,28 +49,28 @@ public final class LinuxConfigurationResponse {
     /**
      * Specifies whether password authentication should be disabled.
      * 
-     */
+    */
     public Optional<Boolean> getDisablePasswordAuthentication() {
         return Optional.ofNullable(this.disablePasswordAuthentication);
     }
     /**
      * [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
      * 
-     */
+    */
     public Optional<LinuxPatchSettingsResponse> getPatchSettings() {
         return Optional.ofNullable(this.patchSettings);
     }
     /**
      * Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
      * 
-     */
+    */
     public Optional<Boolean> getProvisionVMAgent() {
         return Optional.ofNullable(this.provisionVMAgent);
     }
     /**
      * Specifies the ssh key configuration for a Linux OS.
      * 
-     */
+    */
     public Optional<SshConfigurationResponse> getSsh() {
         return Optional.ofNullable(this.ssh);
     }
@@ -120,7 +120,6 @@ public final class LinuxConfigurationResponse {
             this.ssh = ssh;
             return this;
         }
-
         public LinuxConfigurationResponse build() {
             return new LinuxConfigurationResponse(disablePasswordAuthentication, patchSettings, provisionVMAgent, ssh);
         }

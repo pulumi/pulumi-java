@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.P2SConnectionConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnClientConnectionHealthResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -124,98 +124,98 @@ public final class GetP2sVpnGatewayResult {
     /**
      * List of all customer specified DNS servers IP addresses.
      * 
-     */
+    */
     public List<String> getCustomDnsServers() {
         return this.customDnsServers == null ? List.of() : this.customDnsServers;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
      * 
-     */
+    */
     public Optional<Boolean> getIsRoutingPreferenceInternet() {
         return Optional.ofNullable(this.isRoutingPreferenceInternet);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of all p2s connection configurations of the gateway.
      * 
-     */
+    */
     public List<P2SConnectionConfigurationResponse> getP2SConnectionConfigurations() {
         return this.p2SConnectionConfigurations == null ? List.of() : this.p2SConnectionConfigurations;
     }
     /**
      * The provisioning state of the P2S VPN gateway resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The VirtualHub to which the gateway belongs.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getVirtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
     /**
      * All P2S VPN clients' connection health status.
      * 
-     */
+    */
     public VpnClientConnectionHealthResponse getVpnClientConnectionHealth() {
         return this.vpnClientConnectionHealth;
     }
     /**
      * The scale unit for this p2s vpn gateway.
      * 
-     */
+    */
     public Optional<Integer> getVpnGatewayScaleUnit() {
         return Optional.ofNullable(this.vpnGatewayScaleUnit);
     }
     /**
      * The VpnServerConfiguration to which the p2sVpnGateway is attached to.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getVpnServerConfiguration() {
         return Optional.ofNullable(this.vpnServerConfiguration);
     }
@@ -335,7 +335,6 @@ public final class GetP2sVpnGatewayResult {
             this.vpnServerConfiguration = vpnServerConfiguration;
             return this;
         }
-
         public GetP2sVpnGatewayResult build() {
             return new GetP2sVpnGatewayResult(customDnsServers, etag, id, isRoutingPreferenceInternet, location, name, p2SConnectionConfigurations, provisioningState, tags, type, virtualHub, vpnClientConnectionHealth, vpnGatewayScaleUnit, vpnServerConfiguration);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateMetadataGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecGetArgs;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ServiceTemplateGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ServiceTemplateMetadataGetArgs> metadata;
+      private final @Nullable Input<ServiceTemplateMetadataGetArgs> metadata;
 
     public Input<ServiceTemplateMetadataGetArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -34,7 +34,7 @@ public final class ServiceTemplateGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<ServiceTemplateSpecGetArgs> spec;
+      private final @Nullable Input<ServiceTemplateSpecGetArgs> spec;
 
     public Input<ServiceTemplateSpecGetArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -93,7 +93,6 @@ public final class ServiceTemplateGetArgs extends io.pulumi.resources.ResourceAr
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public ServiceTemplateGetArgs build() {
             return new ServiceTemplateGetArgs(metadata, spec);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,42 +59,42 @@ public final class AccountPropertiesResponseSystemData {
     /**
      * The timestamp of resource creation (UTC).
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The identity that created the resource.
      * 
-     */
+    */
     public String getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The type of identity that created the resource.
      * 
-     */
+    */
     public String getCreatedByType() {
         return this.createdByType;
     }
     /**
      * The timestamp of the last modification the resource (UTC).
      * 
-     */
+    */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * The identity that last modified the resource.
      * 
-     */
+    */
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The type of identity that last modified the resource.
      * 
-     */
+    */
     public String getLastModifiedByType() {
         return this.lastModifiedByType;
     }
@@ -158,7 +158,6 @@ public final class AccountPropertiesResponseSystemData {
             this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType);
             return this;
         }
-
         public AccountPropertiesResponseSystemData build() {
             return new AccountPropertiesResponseSystemData(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

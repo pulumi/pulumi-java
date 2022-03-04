@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class CustomAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loginUrl", required=true)
-    private final Input<String> loginUrl;
+      private final Input<String> loginUrl;
 
     public Input<String> getLoginUrl() {
         return this.loginUrl;
@@ -33,7 +33,7 @@ public final class CustomAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -44,7 +44,7 @@ public final class CustomAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -118,7 +118,6 @@ public final class CustomAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public CustomAccountArgs build() {
             return new CustomAccountArgs(loginUrl, password, username);
         }

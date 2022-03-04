@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountKey", required=true)
-    private final Input<String> accountKey;
+      private final Input<String> accountKey;
 
     public Input<String> getAccountKey() {
         return this.accountKey;
@@ -33,7 +33,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -45,7 +45,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageType", required=true)
-    private final Input<String> storageType;
+      private final Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType;
@@ -119,7 +119,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.storageType = Input.of(Objects.requireNonNull(storageType));
             return this;
         }
-
         public StorageAccountArgs build() {
             return new StorageAccountArgs(accountKey, accountName, storageType);
         }

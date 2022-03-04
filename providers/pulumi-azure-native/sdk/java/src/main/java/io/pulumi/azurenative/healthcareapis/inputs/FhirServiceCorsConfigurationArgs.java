@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowCredentials")
-    private final @Nullable Input<Boolean> allowCredentials;
+      private final @Nullable Input<Boolean> allowCredentials;
 
     public Input<Boolean> getAllowCredentials() {
         return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
@@ -37,7 +37,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<List<String>> headers;
+      private final @Nullable Input<List<String>> headers;
 
     public Input<List<String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -48,7 +48,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxAge")
-    private final @Nullable Input<Integer> maxAge;
+      private final @Nullable Input<Integer> maxAge;
 
     public Input<Integer> getMaxAge() {
         return this.maxAge == null ? Input.empty() : this.maxAge;
@@ -59,7 +59,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="methods")
-    private final @Nullable Input<List<String>> methods;
+      private final @Nullable Input<List<String>> methods;
 
     public Input<List<String>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
@@ -70,7 +70,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="origins")
-    private final @Nullable Input<List<String>> origins;
+      private final @Nullable Input<List<String>> origins;
 
     public Input<List<String>> getOrigins() {
         return this.origins == null ? Input.empty() : this.origins;
@@ -174,7 +174,6 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
             this.origins = Input.ofNullable(origins);
             return this;
         }
-
         public FhirServiceCorsConfigurationArgs build() {
             return new FhirServiceCorsConfigurationArgs(allowCredentials, headers, maxAge, methods, origins);
         }

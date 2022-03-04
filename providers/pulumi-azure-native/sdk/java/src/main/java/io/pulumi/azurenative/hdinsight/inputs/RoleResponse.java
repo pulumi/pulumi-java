@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hdinsight.inputs.HardwareProfileResponse;
 import io.pulumi.azurenative.hdinsight.inputs.OsProfileResponse;
 import io.pulumi.azurenative.hdinsight.inputs.ScriptActionResponse;
 import io.pulumi.azurenative.hdinsight.inputs.VirtualNetworkProfileResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="autoscaleConfiguration")
-    private final @Nullable AutoscaleResponse autoscaleConfiguration;
+      private final @Nullable AutoscaleResponse autoscaleConfiguration;
 
     public Optional<AutoscaleResponse> getAutoscaleConfiguration() {
         return this.autoscaleConfiguration == null ? Optional.empty() : Optional.ofNullable(this.autoscaleConfiguration);
@@ -43,7 +43,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataDisksGroups")
-    private final @Nullable List<DataDisksGroupsResponse> dataDisksGroups;
+      private final @Nullable List<DataDisksGroupsResponse> dataDisksGroups;
 
     public List<DataDisksGroupsResponse> getDataDisksGroups() {
         return this.dataDisksGroups == null ? List.of() : this.dataDisksGroups;
@@ -54,7 +54,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encryptDataDisks")
-    private final @Nullable Boolean encryptDataDisks;
+      private final @Nullable Boolean encryptDataDisks;
 
     public Optional<Boolean> getEncryptDataDisks() {
         return this.encryptDataDisks == null ? Optional.empty() : Optional.ofNullable(this.encryptDataDisks);
@@ -65,7 +65,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hardwareProfile")
-    private final @Nullable HardwareProfileResponse hardwareProfile;
+      private final @Nullable HardwareProfileResponse hardwareProfile;
 
     public Optional<HardwareProfileResponse> getHardwareProfile() {
         return this.hardwareProfile == null ? Optional.empty() : Optional.ofNullable(this.hardwareProfile);
@@ -76,7 +76,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minInstanceCount")
-    private final @Nullable Integer minInstanceCount;
+      private final @Nullable Integer minInstanceCount;
 
     public Optional<Integer> getMinInstanceCount() {
         return this.minInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.minInstanceCount);
@@ -87,7 +87,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -98,7 +98,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osProfile")
-    private final @Nullable OsProfileResponse osProfile;
+      private final @Nullable OsProfileResponse osProfile;
 
     public Optional<OsProfileResponse> getOsProfile() {
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
@@ -109,7 +109,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scriptActions")
-    private final @Nullable List<ScriptActionResponse> scriptActions;
+      private final @Nullable List<ScriptActionResponse> scriptActions;
 
     public List<ScriptActionResponse> getScriptActions() {
         return this.scriptActions == null ? List.of() : this.scriptActions;
@@ -120,7 +120,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetInstanceCount")
-    private final @Nullable Integer targetInstanceCount;
+      private final @Nullable Integer targetInstanceCount;
 
     public Optional<Integer> getTargetInstanceCount() {
         return this.targetInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.targetInstanceCount);
@@ -131,7 +131,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vMGroupName")
-    private final @Nullable String vMGroupName;
+      private final @Nullable String vMGroupName;
 
     public Optional<String> getVMGroupName() {
         return this.vMGroupName == null ? Optional.empty() : Optional.ofNullable(this.vMGroupName);
@@ -142,7 +142,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="virtualNetworkProfile")
-    private final @Nullable VirtualNetworkProfileResponse virtualNetworkProfile;
+      private final @Nullable VirtualNetworkProfileResponse virtualNetworkProfile;
 
     public Optional<VirtualNetworkProfileResponse> getVirtualNetworkProfile() {
         return this.virtualNetworkProfile == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkProfile);
@@ -281,7 +281,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
-
         public RoleResponse build() {
             return new RoleResponse(autoscaleConfiguration, dataDisksGroups, encryptDataDisks, hardwareProfile, minInstanceCount, name, osProfile, scriptActions, targetInstanceCount, vMGroupName, virtualNetworkProfile);
         }

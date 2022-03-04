@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetExperimentArgs Empty = new GetExperimentArgs();
 
     @InputImport(name="agentId", required=true)
-    private final String agentId;
+      private final String agentId;
 
     public String getAgentId() {
         return this.agentId;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
     @InputImport(name="experimentId", required=true)
-    private final String experimentId;
+      private final String experimentId;
 
     public String getExperimentId() {
         return this.experimentId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -122,7 +122,6 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetExperimentArgs build() {
             return new GetExperimentArgs(agentId, environmentId, experimentId, location, project);
         }

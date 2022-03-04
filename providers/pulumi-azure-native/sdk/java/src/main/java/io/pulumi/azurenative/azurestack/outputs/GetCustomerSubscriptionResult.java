@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class GetCustomerSubscriptionResult {
     /**
      * The entity tag used for optimistic concurrency when modifying the resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Tenant Id.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Type of Resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetCustomerSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCustomerSubscriptionResult build() {
             return new GetCustomerSubscriptionResult(etag, id, name, tenantId, type);
         }

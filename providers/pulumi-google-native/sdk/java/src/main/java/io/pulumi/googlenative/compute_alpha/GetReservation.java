@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReservation {
-/**
- * Retrieves information about the specified reservation.
+    private GetReservation() {}
+    public interface BuilderApplicator {
+        public void apply(GetReservationArgs.Builder a);
+    }
+    private static GetReservationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReservationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves information about the specified reservation.
  * 
- */
+     */
+    public static CompletableFuture<GetReservationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves information about the specified reservation.
+     * 
+     */
     public static CompletableFuture<GetReservationResult> invokeAsync(GetReservationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getReservation", TypeShape.of(GetReservationResult.class), args == null ? GetReservationArgs.Empty : args, Utilities.withVersion(options));
     }

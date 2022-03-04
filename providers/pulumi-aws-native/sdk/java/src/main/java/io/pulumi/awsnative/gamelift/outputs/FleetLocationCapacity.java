@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class FleetLocationCapacity {
     /**
      * The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between the minimum and maximum size limits.
      * 
-     */
+    */
     public Integer getDesiredEC2Instances() {
         return this.desiredEC2Instances;
     }
     /**
      * The maximum value that is allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
      * 
-     */
+    */
     public Integer getMaxSize() {
         return this.maxSize;
     }
     /**
      * The minimum value allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
      * 
-     */
+    */
     public Integer getMinSize() {
         return this.minSize;
     }
@@ -95,7 +95,6 @@ public final class FleetLocationCapacity {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
-
         public FleetLocationCapacity build() {
             return new FleetLocationCapacity(desiredEC2Instances, maxSize, minSize);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="created")
-    private final @Nullable Double created;
+      private final @Nullable Double created;
 
     public Optional<Double> getCreated() {
         return this.created == null ? Optional.empty() : Optional.ofNullable(this.created);
@@ -35,7 +35,7 @@ public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -46,7 +46,7 @@ public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="updated")
-    private final @Nullable Double updated;
+      private final @Nullable Double updated;
 
     public Optional<Double> getUpdated() {
         return this.updated == null ? Optional.empty() : Optional.ofNullable(this.updated);
@@ -105,7 +105,6 @@ public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.Inv
             this.updated = updated;
             return this;
         }
-
         public KeyVaultKeyResponseAttributes build() {
             return new KeyVaultKeyResponseAttributes(created, enabled, updated);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class StandardAppVersionVpcAccessConnector {
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -52,7 +52,6 @@ public final class StandardAppVersionVpcAccessConnector {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public StandardAppVersionVpcAccessConnector build() {
             return new StandardAppVersionVpcAccessConnector(name);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.AssetFileEncryptionMetadataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class GetAssetEncryptionKeyResult {
     /**
      * Asset File encryption metadata.
      * 
-     */
+    */
     public List<AssetFileEncryptionMetadataResponse> getAssetFileEncryptionMetadata() {
         return this.assetFileEncryptionMetadata == null ? List.of() : this.assetFileEncryptionMetadata;
     }
     /**
      * The Asset File storage encryption key.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
@@ -78,7 +78,6 @@ public final class GetAssetEncryptionKeyResult {
             this.key = key;
             return this;
         }
-
         public GetAssetEncryptionKeyResult build() {
             return new GetAssetEncryptionKeyResult(assetFileEncryptionMetadata, key);
         }

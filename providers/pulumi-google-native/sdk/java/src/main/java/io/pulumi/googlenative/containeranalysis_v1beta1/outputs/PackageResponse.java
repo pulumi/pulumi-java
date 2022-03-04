@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DistributionResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class PackageResponse {
     /**
      * The various channels by which a package is distributed.
      * 
-     */
+    */
     public List<DistributionResponse> getDistribution() {
         return this.distribution;
     }
     /**
      * Immutable. The name of the package.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -76,7 +76,6 @@ public final class PackageResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PackageResponse build() {
             return new PackageResponse(distribution, name);
         }

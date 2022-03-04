@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datalakeanalytics;
 import io.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computePolicyName")
-    private final @Nullable Input<String> computePolicyName;
+      private final @Nullable Input<String> computePolicyName;
 
     public Input<String> getComputePolicyName() {
         return this.computePolicyName == null ? Input.empty() : this.computePolicyName;
@@ -44,7 +44,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDegreeOfParallelismPerJob")
-    private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
+      private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
 
     public Input<Integer> getMaxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob == null ? Input.empty() : this.maxDegreeOfParallelismPerJob;
@@ -55,7 +55,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minPriorityPerJob")
-    private final @Nullable Input<Integer> minPriorityPerJob;
+      private final @Nullable Input<Integer> minPriorityPerJob;
 
     public Input<Integer> getMinPriorityPerJob() {
         return this.minPriorityPerJob == null ? Input.empty() : this.minPriorityPerJob;
@@ -66,7 +66,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<String> objectId;
+      private final Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId;
@@ -77,7 +77,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final Input<Either<String,AADObjectType>> objectType;
+      private final Input<Either<String,AADObjectType>> objectType;
 
     public Input<Either<String,AADObjectType>> getObjectType() {
         return this.objectType;
@@ -88,7 +88,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -222,7 +222,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ComputePolicyArgs build() {
             return new ComputePolicyArgs(accountName, computePolicyName, maxDegreeOfParallelismPerJob, minPriorityPerJob, objectId, objectType, resourceGroupName);
         }

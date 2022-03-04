@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.inputs.HealthProbeParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.cdn.inputs.ResponseBasedOriginErrorDetectionParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-    private final Input<String> endpointName;
+      private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -35,7 +35,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthProbeSettings")
-    private final @Nullable Input<HealthProbeParametersArgs> healthProbeSettings;
+      private final @Nullable Input<HealthProbeParametersArgs> healthProbeSettings;
 
     public Input<HealthProbeParametersArgs> getHealthProbeSettings() {
         return this.healthProbeSettings == null ? Input.empty() : this.healthProbeSettings;
@@ -46,7 +46,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroupName")
-    private final @Nullable Input<String> originGroupName;
+      private final @Nullable Input<String> originGroupName;
 
     public Input<String> getOriginGroupName() {
         return this.originGroupName == null ? Input.empty() : this.originGroupName;
@@ -57,7 +57,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origins", required=true)
-    private final Input<List<ResourceReferenceArgs>> origins;
+      private final Input<List<ResourceReferenceArgs>> origins;
 
     public Input<List<ResourceReferenceArgs>> getOrigins() {
         return this.origins;
@@ -68,7 +68,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final Input<String> profileName;
+      private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -79,7 +79,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseBasedOriginErrorDetectionSettings")
-    private final @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
+      private final @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
 
     public Input<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedOriginErrorDetectionSettings() {
         return this.responseBasedOriginErrorDetectionSettings == null ? Input.empty() : this.responseBasedOriginErrorDetectionSettings;
@@ -101,7 +101,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
-    private final @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+      private final @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
     public Input<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Input.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
@@ -250,7 +250,6 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Input.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
             return this;
         }
-
         public OriginGroupArgs build() {
             return new OriginGroupArgs(endpointName, healthProbeSettings, originGroupName, origins, profileName, resourceGroupName, responseBasedOriginErrorDetectionSettings, trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
         }

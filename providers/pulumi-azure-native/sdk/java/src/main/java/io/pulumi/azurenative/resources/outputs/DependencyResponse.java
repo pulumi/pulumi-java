@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.BasicDependencyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class DependencyResponse {
     /**
      * The list of dependencies.
      * 
-     */
+    */
     public List<BasicDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * The ID of the dependency.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The dependency resource name.
      * 
-     */
+    */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }
     /**
      * The dependency resource type.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -120,7 +120,6 @@ public final class DependencyResponse {
             this.resourceType = resourceType;
             return this;
         }
-
         public DependencyResponse build() {
             return new DependencyResponse(dependsOn, id, resourceName, resourceType);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisvideo.outputs;
 
 import io.pulumi.awsnative.kinesisvideo.enums.SignalingChannelType;
 import io.pulumi.awsnative.kinesisvideo.outputs.SignalingChannelTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -51,28 +51,28 @@ public final class GetSignalingChannelResult {
     /**
      * The Amazon Resource Name (ARN) of the Kinesis Video Signaling Channel.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The period of time a signaling channel retains undelivered messages before they are discarded.
      * 
-     */
+    */
     public Optional<Integer> getMessageTtlSeconds() {
         return Optional.ofNullable(this.messageTtlSeconds);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<SignalingChannelTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
      * 
-     */
+    */
     public Optional<SignalingChannelType> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -122,7 +122,6 @@ public final class GetSignalingChannelResult {
             this.type = type;
             return this;
         }
-
         public GetSignalingChannelResult build() {
             return new GetSignalingChannelResult(arn, messageTtlSeconds, tags, type);
         }

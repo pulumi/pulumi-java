@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.FrontendIPConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationLoadBalancerFrontEndIPConfiguration")
-    private final @Nullable Input<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
+      private final @Nullable Input<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
 
     public Input<FrontendIPConfigurationArgs> getDestinationLoadBalancerFrontEndIPConfiguration() {
         return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Input.empty() : this.destinationLoadBalancerFrontEndIPConfiguration;
@@ -38,7 +38,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationNetworkInterfaceIPConfiguration")
-    private final @Nullable Input<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
+      private final @Nullable Input<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
 
     public Input<NetworkInterfaceIPConfigurationArgs> getDestinationNetworkInterfaceIPConfiguration() {
         return this.destinationNetworkInterfaceIPConfiguration == null ? Input.empty() : this.destinationNetworkInterfaceIPConfiguration;
@@ -49,7 +49,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationPort")
-    private final @Nullable Input<Integer> destinationPort;
+      private final @Nullable Input<Integer> destinationPort;
 
     public Input<Integer> getDestinationPort() {
         return this.destinationPort == null ? Input.empty() : this.destinationPort;
@@ -60,7 +60,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -71,7 +71,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -82,7 +82,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -201,7 +201,6 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public VirtualNetworkTapArgs build() {
             return new VirtualNetworkTapArgs(destinationLoadBalancerFrontEndIPConfiguration, destinationNetworkInterfaceIPConfiguration, destinationPort, id, location, tags);
         }

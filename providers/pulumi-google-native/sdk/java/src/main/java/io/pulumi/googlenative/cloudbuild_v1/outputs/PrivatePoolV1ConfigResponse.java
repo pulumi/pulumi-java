@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.NetworkConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.WorkerConfigResponse;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class PrivatePoolV1ConfigResponse {
     /**
      * Network configuration for the pool.
      * 
-     */
+    */
     public NetworkConfigResponse getNetworkConfig() {
         return this.networkConfig;
     }
     /**
      * Machine configuration for the workers in the pool.
      * 
-     */
+    */
     public WorkerConfigResponse getWorkerConfig() {
         return this.workerConfig;
     }
@@ -75,7 +75,6 @@ public final class PrivatePoolV1ConfigResponse {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public PrivatePoolV1ConfigResponse build() {
             return new PrivatePoolV1ConfigResponse(networkConfig, workerConfig);
         }

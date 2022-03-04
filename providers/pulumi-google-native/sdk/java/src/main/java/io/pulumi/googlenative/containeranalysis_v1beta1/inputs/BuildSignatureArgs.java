@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.BuildSignatureKeyType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -35,7 +35,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyType")
-    private final @Nullable Input<BuildSignatureKeyType> keyType;
+      private final @Nullable Input<BuildSignatureKeyType> keyType;
 
     public Input<BuildSignatureKeyType> getKeyType() {
         return this.keyType == null ? Input.empty() : this.keyType;
@@ -46,7 +46,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<String> publicKey;
+      private final @Nullable Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -57,7 +57,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signature", required=true)
-    private final Input<String> signature;
+      private final Input<String> signature;
 
     public Input<String> getSignature() {
         return this.signature;
@@ -146,7 +146,6 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
             this.signature = Input.of(Objects.requireNonNull(signature));
             return this;
         }
-
         public BuildSignatureArgs build() {
             return new BuildSignatureArgs(keyId, keyType, publicKey, signature);
         }

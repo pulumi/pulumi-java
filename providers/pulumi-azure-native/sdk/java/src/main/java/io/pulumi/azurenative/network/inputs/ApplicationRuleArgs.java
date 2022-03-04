@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyRuleApplicationProtocolArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="destinationAddresses")
-    private final @Nullable Input<List<String>> destinationAddresses;
+      private final @Nullable Input<List<String>> destinationAddresses;
 
     public Input<List<String>> getDestinationAddresses() {
         return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
@@ -48,7 +48,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fqdnTags")
-    private final @Nullable Input<List<String>> fqdnTags;
+      private final @Nullable Input<List<String>> fqdnTags;
 
     public Input<List<String>> getFqdnTags() {
         return this.fqdnTags == null ? Input.empty() : this.fqdnTags;
@@ -59,7 +59,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="protocols")
-    private final @Nullable Input<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
+      private final @Nullable Input<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
 
     public Input<List<FirewallPolicyRuleApplicationProtocolArgs>> getProtocols() {
         return this.protocols == null ? Input.empty() : this.protocols;
@@ -82,7 +82,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final Input<String> ruleType;
+      private final Input<String> ruleType;
 
     public Input<String> getRuleType() {
         return this.ruleType;
@@ -93,7 +93,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceAddresses")
-    private final @Nullable Input<List<String>> sourceAddresses;
+      private final @Nullable Input<List<String>> sourceAddresses;
 
     public Input<List<String>> getSourceAddresses() {
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
@@ -104,7 +104,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceIpGroups")
-    private final @Nullable Input<List<String>> sourceIpGroups;
+      private final @Nullable Input<List<String>> sourceIpGroups;
 
     public Input<List<String>> getSourceIpGroups() {
         return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
@@ -115,7 +115,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetFqdns")
-    private final @Nullable Input<List<String>> targetFqdns;
+      private final @Nullable Input<List<String>> targetFqdns;
 
     public Input<List<String>> getTargetFqdns() {
         return this.targetFqdns == null ? Input.empty() : this.targetFqdns;
@@ -126,7 +126,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetUrls")
-    private final @Nullable Input<List<String>> targetUrls;
+      private final @Nullable Input<List<String>> targetUrls;
 
     public Input<List<String>> getTargetUrls() {
         return this.targetUrls == null ? Input.empty() : this.targetUrls;
@@ -137,7 +137,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="terminateTLS")
-    private final @Nullable Input<Boolean> terminateTLS;
+      private final @Nullable Input<Boolean> terminateTLS;
 
     public Input<Boolean> getTerminateTLS() {
         return this.terminateTLS == null ? Input.empty() : this.terminateTLS;
@@ -148,7 +148,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="webCategories")
-    private final @Nullable Input<List<String>> webCategories;
+      private final @Nullable Input<List<String>> webCategories;
 
     public Input<List<String>> getWebCategories() {
         return this.webCategories == null ? Input.empty() : this.webCategories;
@@ -357,7 +357,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.webCategories = Input.ofNullable(webCategories);
             return this;
         }
-
         public ApplicationRuleArgs build() {
             return new ApplicationRuleArgs(description, destinationAddresses, fqdnTags, name, protocols, ruleType, sourceAddresses, sourceIpGroups, targetFqdns, targetUrls, terminateTLS, webCategories);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterResponse extends io.pu
      * 
      */
     @InputImport(name="key")
-    private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -36,7 +36,7 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterResponse extends io.pu
      * 
      */
     @InputImport(name="operatorType", required=true)
-    private final String operatorType;
+      private final String operatorType;
 
     public String getOperatorType() {
         return this.operatorType;
@@ -47,7 +47,7 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterResponse extends io.pu
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Double value;
+      private final @Nullable Double value;
 
     public Optional<Double> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -106,7 +106,6 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterResponse extends io.pu
             this.value = value;
             return this;
         }
-
         public NumberGreaterThanOrEqualsAdvancedFilterResponse build() {
             return new NumberGreaterThanOrEqualsAdvancedFilterResponse(key, operatorType, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.AggregationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="aggregation", required=true)
-    private final AggregationResponse aggregation;
+      private final AggregationResponse aggregation;
 
     public AggregationResponse getAggregation() {
         return this.aggregation;
@@ -33,7 +33,7 @@ public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -82,7 +82,6 @@ public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public RatioPartResponse build() {
             return new RatioPartResponse(aggregation, filter);
         }

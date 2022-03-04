@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SubnetworkArgs;
 import io.pulumi.gcp.compute.inputs.SubnetworkState;
@@ -122,7 +122,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
     /**
      * Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
-     * @deprecated
+     * @Deprecated
      * This field is not useful for users, and has been removed as an output.
      * 
      */
@@ -426,6 +426,37 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
         return this.stackType;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SubnetworkArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.SubnetworkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.SubnetworkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Subnetwork(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Subnetwork(String name) {
+        this(name, SubnetworkArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Subnetwork(String name, SubnetworkArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

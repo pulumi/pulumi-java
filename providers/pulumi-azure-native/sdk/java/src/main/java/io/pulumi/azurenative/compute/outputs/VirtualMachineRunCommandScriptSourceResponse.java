@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class VirtualMachineRunCommandScriptSourceResponse {
     /**
      * Specifies a commandId of predefined built-in script.
      * 
-     */
+    */
     public Optional<String> getCommandId() {
         return Optional.ofNullable(this.commandId);
     }
     /**
      * Specifies the script content to be executed on the VM.
      * 
-     */
+    */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);
     }
     /**
      * Specifies the script download location.
      * 
-     */
+    */
     public Optional<String> getScriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }
@@ -97,7 +97,6 @@ public final class VirtualMachineRunCommandScriptSourceResponse {
             this.scriptUri = scriptUri;
             return this;
         }
-
         public VirtualMachineRunCommandScriptSourceResponse build() {
             return new VirtualMachineRunCommandScriptSourceResponse(commandId, script, scriptUri);
         }

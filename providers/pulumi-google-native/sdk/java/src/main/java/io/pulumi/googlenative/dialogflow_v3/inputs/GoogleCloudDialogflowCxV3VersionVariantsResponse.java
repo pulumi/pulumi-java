@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3VersionVariantsVariantResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsResponse extends io.p
      * 
      */
     @InputImport(name="variants", required=true)
-    private final List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants;
+      private final List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants;
 
     public List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> getVariants() {
         return this.variants;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsResponse extends io.p
             this.variants = Objects.requireNonNull(variants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3VersionVariantsResponse build() {
             return new GoogleCloudDialogflowCxV3VersionVariantsResponse(variants);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
     /**
      * List of realms to match against.
      * 
-     */
+    */
     public List<String> getRealms() {
         return this.realms == null ? List.of() : this.realms;
     }
@@ -54,7 +54,6 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
             this.realms = realms;
             return this;
         }
-
         public GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector build() {
             return new GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(realms);
         }

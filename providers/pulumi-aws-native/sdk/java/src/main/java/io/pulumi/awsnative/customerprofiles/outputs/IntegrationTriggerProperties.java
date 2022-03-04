@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationScheduledTriggerProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class IntegrationTriggerProperties {
             this.scheduled = scheduled;
             return this;
         }
-
         public IntegrationTriggerProperties build() {
             return new IntegrationTriggerProperties(scheduled);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -83,7 +83,6 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
             this.value = value;
             return this;
         }
-
         public ParameterDefinitionResponse build() {
             return new ParameterDefinitionResponse(name, value);
         }

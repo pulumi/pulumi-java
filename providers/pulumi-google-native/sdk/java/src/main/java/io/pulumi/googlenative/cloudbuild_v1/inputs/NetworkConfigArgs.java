@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.NetworkConfigEgressOption;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressOption")
-    private final @Nullable Input<NetworkConfigEgressOption> egressOption;
+      private final @Nullable Input<NetworkConfigEgressOption> egressOption;
 
     public Input<NetworkConfigEgressOption> getEgressOption() {
         return this.egressOption == null ? Input.empty() : this.egressOption;
@@ -35,7 +35,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-    private final Input<String> peeredNetwork;
+      private final Input<String> peeredNetwork;
 
     public Input<String> getPeeredNetwork() {
         return this.peeredNetwork;
@@ -94,7 +94,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.peeredNetwork = Input.of(Objects.requireNonNull(peeredNetwork));
             return this;
         }
-
         public NetworkConfigArgs build() {
             return new NetworkConfigArgs(egressOption, peeredNetwork);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class PackageValidationResultResponse {
     /**
      * Error information.
      * 
-     */
+    */
     public List<String> getErrors() {
         return this.errors;
     }
     /**
      * Indicates whether the package passed the validation.
      * 
-     */
+    */
     public Boolean getIsValid() {
         return this.isValid;
     }
     /**
      * Validation name.
      * 
-     */
+    */
     public String getValidationName() {
         return this.validationName;
     }
@@ -97,7 +97,6 @@ public final class PackageValidationResultResponse {
             this.validationName = Objects.requireNonNull(validationName);
             return this;
         }
-
         public PackageValidationResultResponse build() {
             return new PackageValidationResultResponse(errors, isValid, validationName);
         }

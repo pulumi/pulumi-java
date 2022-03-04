@@ -3,35 +3,37 @@ package io.pulumi.core.internal.annotations;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
+import io.pulumi.core.TypeShape;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.Optionals;
 import io.pulumi.core.internal.Reflection;
-import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;
 import java.lang.reflect.Field;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
+import static java.util.Objects.requireNonNull;
 
-public final class OutputMetadata extends InputOutputMetadata<OutputExport> {
+public final class OutputMetadata<T> extends InputOutputMetadata<OutputExport, Output<T>> {
 
     private final OutputExport annotation;
-    private final TypeShape<?> shape;
+    private final TypeShape<T> dataShape;
 
-    private OutputMetadata(Field field, OutputExport annotation, TypeShape<?> build) {
-        super(field);
-        this.annotation = Objects.requireNonNull(annotation);
-        this.shape = Objects.requireNonNull(build);
+    private OutputMetadata(Field field, OutputExport annotation, Class<Output<T>> fieldType, TypeShape<T> dataShape) {
+        super(field, fieldType);
+        this.annotation = requireNonNull(annotation);
+        this.dataShape = requireNonNull(dataShape);
     }
 
-    public TypeShape<?> getFieldTypeShape() {
-        return this.shape;
+    public TypeShape<T> getDataShape() {
+        return this.dataShape;
     }
 
     @Override
@@ -49,15 +51,16 @@ public final class OutputMetadata extends InputOutputMetadata<OutputExport> {
         return MoreObjects.toStringHelper(this)
                 .add("name", getName())
                 .add("annotation", annotation)
-                .add("shape", shape)
+                .add("fieldType", fieldType)
+                .add("exportShape", dataShape)
                 .toString();
     }
 
-    public static ImmutableMap<String, OutputMetadata> of(Class<?> extractionType) {
+    public static ImmutableMap<String, OutputMetadata<?>> of(Class<?> extractionType) {
         return of(extractionType, field -> true);
     }
 
-    public static ImmutableMap<String, OutputMetadata> of(Class<?> extractionType, Predicate<Field> fieldFilter) {
+    public static ImmutableMap<String, OutputMetadata<?>> of(Class<?> extractionType, Predicate<Field> fieldFilter) {
         var fields = Reflection.allFields(extractionType).stream()
                 .filter(field1 -> field1.isAnnotationPresent(OutputExport.class))
                 .filter(fieldFilter)
@@ -95,14 +98,42 @@ public final class OutputMetadata extends InputOutputMetadata<OutputExport> {
                                 f.getName(), f.getDeclaringClass().getTypeName(), OutputExport.class
                         ));
                     }
-                    var type = export.type();
+                    var fieldType = f.getType();
+                    var exportType = export.type();
                     var parameters = export.parameters();
 
-                    return new OutputMetadata(f, export, TypeShape.builder(type).addParameters(parameters).build());
+                    return of(
+                            f, export, fieldType,
+                            exportType, parameters
+                    );
                 })
                 .collect(toImmutableMap(
                         InputOutputMetadata::getName,
                         Function.identity()
                 ));
+    }
+
+    private static <T> OutputMetadata<T> of(
+            Field field,
+            OutputExport exportAnnotation,
+            Class<?> fieldType,
+            Class<T> dataType, Class<?>[] dataTypeParameters
+    ) {
+        //noinspection unchecked
+        return new OutputMetadata<>(field, exportAnnotation, (Class<Output<T>>) fieldType,
+                TypeShape.builder(dataType).addParameters(dataTypeParameters).build()
+        );
+    }
+
+    public Output<T> getOrSetFieldValue(Object extractionObject, Output<T> defaultOutput) {
+        return getFieldValue(extractionObject).orElseGet(() -> {
+            setFieldValue(extractionObject, defaultOutput);
+            return defaultOutput;
+        });
+    }
+
+    public Output<T> getOrSetIncompleteFieldValue(Object extractionObject) {
+        // Used to inject OutputCompletionSource, must be completed manually before joining
+        return getOrSetFieldValue(extractionObject, Output.of(new CompletableFuture<>()));
     }
 }

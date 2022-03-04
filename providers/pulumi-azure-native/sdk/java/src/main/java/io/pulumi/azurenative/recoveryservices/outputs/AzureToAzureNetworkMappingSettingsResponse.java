@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class AzureToAzureNetworkMappingSettingsResponse {
      * Gets the Instance type.
      * Expected value is 'AzureToAzure'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The primary fabric location.
      * 
-     */
+    */
     public Optional<String> getPrimaryFabricLocation() {
         return Optional.ofNullable(this.primaryFabricLocation);
     }
     /**
      * The recovery fabric location.
      * 
-     */
+    */
     public Optional<String> getRecoveryFabricLocation() {
         return Optional.ofNullable(this.recoveryFabricLocation);
     }
@@ -99,7 +99,6 @@ public final class AzureToAzureNetworkMappingSettingsResponse {
             this.recoveryFabricLocation = recoveryFabricLocation;
             return this;
         }
-
         public AzureToAzureNetworkMappingSettingsResponse build() {
             return new AzureToAzureNetworkMappingSettingsResponse(instanceType, primaryFabricLocation, recoveryFabricLocation);
         }

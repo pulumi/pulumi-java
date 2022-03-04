@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.BuilderPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="buildServiceName", required=true)
-    private final Input<String> buildServiceName;
+      private final Input<String> buildServiceName;
 
     public Input<String> getBuildServiceName() {
         return this.buildServiceName;
@@ -31,7 +31,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="builderName")
-    private final @Nullable Input<String> builderName;
+      private final @Nullable Input<String> builderName;
 
     public Input<String> getBuilderName() {
         return this.builderName == null ? Input.empty() : this.builderName;
@@ -42,7 +42,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<BuilderPropertiesArgs> properties;
+      private final @Nullable Input<BuilderPropertiesArgs> properties;
 
     public Input<BuilderPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -168,7 +168,6 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public BuildServiceBuilderArgs build() {
             return new BuildServiceBuilderArgs(buildServiceName, builderName, properties, resourceGroupName, serviceName);
         }

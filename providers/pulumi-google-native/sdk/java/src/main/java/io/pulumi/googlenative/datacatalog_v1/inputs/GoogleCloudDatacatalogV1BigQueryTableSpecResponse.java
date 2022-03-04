@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1TableSpecResponse;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ViewSpecResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends io.
      * 
      */
     @InputImport(name="tableSourceType", required=true)
-    private final String tableSourceType;
+      private final String tableSourceType;
 
     public String getTableSourceType() {
         return this.tableSourceType;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends io.
      * 
      */
     @InputImport(name="tableSpec", required=true)
-    private final GoogleCloudDatacatalogV1TableSpecResponse tableSpec;
+      private final GoogleCloudDatacatalogV1TableSpecResponse tableSpec;
 
     public GoogleCloudDatacatalogV1TableSpecResponse getTableSpec() {
         return this.tableSpec;
@@ -45,7 +45,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends io.
      * 
      */
     @InputImport(name="viewSpec", required=true)
-    private final GoogleCloudDatacatalogV1ViewSpecResponse viewSpec;
+      private final GoogleCloudDatacatalogV1ViewSpecResponse viewSpec;
 
     public GoogleCloudDatacatalogV1ViewSpecResponse getViewSpec() {
         return this.viewSpec;
@@ -104,7 +104,6 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends io.
             this.viewSpec = Objects.requireNonNull(viewSpec);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BigQueryTableSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryTableSpecResponse(tableSourceType, tableSpec, viewSpec);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.outputs;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisError;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -85,35 +85,35 @@ public final class GetAnalysisResult {
     /**
      * <p>The Amazon Resource Name (ARN) of the analysis.</p>
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>The time that the analysis was created.</p>
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * <p>The ARNs of the datasets of the analysis.</p>
      * 
-     */
+    */
     public List<String> getDataSetArns() {
         return this.dataSetArns == null ? List.of() : this.dataSetArns;
     }
     /**
      * <p>Errors associated with the analysis.</p>
      * 
-     */
+    */
     public List<AnalysisError> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * <p>The descriptive name of the analysis.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -125,7 +125,7 @@ public final class GetAnalysisResult {
      * 
      *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
      * 
-     */
+    */
     public List<AnalysisResourcePermission> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
@@ -133,14 +133,14 @@ public final class GetAnalysisResult {
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             analysis.</p>
      * 
-     */
+    */
     public List<AnalysisTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * <p>The ARN of the theme of the analysis.</p>
      * 
-     */
+    */
     public Optional<String> getThemeArn() {
         return Optional.ofNullable(this.themeArn);
     }
@@ -218,7 +218,6 @@ public final class GetAnalysisResult {
             this.themeArn = themeArn;
             return this;
         }
-
         public GetAnalysisResult build() {
             return new GetAnalysisResult(arn, createdTime, dataSetArns, errors, name, permissions, tags, themeArn);
         }

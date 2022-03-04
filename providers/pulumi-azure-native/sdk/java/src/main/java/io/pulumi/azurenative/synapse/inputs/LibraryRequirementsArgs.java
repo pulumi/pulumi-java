@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -34,7 +34,7 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="filename")
-    private final @Nullable Input<String> filename;
+      private final @Nullable Input<String> filename;
 
     public Input<String> getFilename() {
         return this.filename == null ? Input.empty() : this.filename;
@@ -93,7 +93,6 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
             this.filename = Input.ofNullable(filename);
             return this;
         }
-
         public LibraryRequirementsArgs build() {
             return new LibraryRequirementsArgs(content, filename);
         }

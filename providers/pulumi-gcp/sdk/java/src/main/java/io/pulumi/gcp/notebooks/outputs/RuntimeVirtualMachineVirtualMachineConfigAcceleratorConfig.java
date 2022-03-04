@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
     /**
      * Count of cores of this accelerator.
      * 
-     */
+    */
     public Optional<Integer> getCoreCount() {
         return Optional.ofNullable(this.coreCount);
     }
@@ -45,7 +45,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
      * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
      * rest/v1/projects.locations.runtimes#AcceleratorType`
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -81,7 +81,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
             this.type = type;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig build() {
             return new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig(coreCount, type);
         }

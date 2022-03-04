@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class GetGlobalUserPersonalPreferencesResult {
     /**
      * Array of favorite lab resource ids
      * 
-     */
+    */
     public List<String> getFavoriteLabResourceIds() {
         return this.favoriteLabResourceIds == null ? List.of() : this.favoriteLabResourceIds;
     }
     /**
      * Id to be used by the cache orchestrator
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -77,7 +77,6 @@ public final class GetGlobalUserPersonalPreferencesResult {
             this.id = id;
             return this;
         }
-
         public GetGlobalUserPersonalPreferencesResult build() {
             return new GetGlobalUserPersonalPreferencesResult(favoriteLabResourceIds, id);
         }

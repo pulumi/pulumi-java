@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.globalaccelerator.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class EndpointGroupPortOverride {
             this.listenerPort = Objects.requireNonNull(listenerPort);
             return this;
         }
-
         public EndpointGroupPortOverride build() {
             return new EndpointGroupPortOverride(endpointPort, listenerPort);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptG
      * 
      */
     @InputImport(name="archiveType", required=true)
-    private final Input<String> archiveType;
+      private final Input<String> archiveType;
 
     public Input<String> getArchiveType() {
         return this.archiveType;
@@ -31,7 +31,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptG
      * 
      */
     @InputImport(name="components", required=true)
-    private final Input<List<String>> components;
+      private final Input<List<String>> components;
 
     public Input<List<String>> getComponents() {
         return this.components;
@@ -42,7 +42,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptG
      * 
      */
     @InputImport(name="distribution", required=true)
-    private final Input<String> distribution;
+      private final Input<String> distribution;
 
     public Input<String> getDistribution() {
         return this.distribution;
@@ -53,7 +53,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptG
      * 
      */
     @InputImport(name="gpgKey")
-    private final @Nullable Input<String> gpgKey;
+      private final @Nullable Input<String> gpgKey;
 
     public Input<String> getGpgKey() {
         return this.gpgKey == null ? Input.empty() : this.gpgKey;
@@ -64,7 +64,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptG
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -168,7 +168,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptG
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs(archiveType, components, distribution, gpgKey, uri);
         }

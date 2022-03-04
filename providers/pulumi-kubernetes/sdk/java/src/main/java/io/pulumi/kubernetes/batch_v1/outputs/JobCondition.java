@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -66,35 +66,35 @@ public final class JobCondition {
     /**
      * Last time the condition was checked.
      * 
-     */
+    */
     public Optional<String> getLastProbeTime() {
         return Optional.ofNullable(this.lastProbeTime);
     }
     /**
      * Last time the condition transit from one status to another.
      * 
-     */
+    */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * Human readable message indicating details about last transition.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * (brief) reason for the condition's last transition.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -106,7 +106,7 @@ public final class JobCondition {
      *  - `"Failed"` means the job has failed its execution.
      *  - `"Suspended"` means the job has been suspended.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -170,7 +170,6 @@ public final class JobCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JobCondition build() {
             return new JobCondition(lastProbeTime, lastTransitionTime, message, reason, status, type);
         }

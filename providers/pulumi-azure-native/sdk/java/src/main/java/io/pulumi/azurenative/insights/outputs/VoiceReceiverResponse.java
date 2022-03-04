@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class VoiceReceiverResponse {
     /**
      * The country code of the voice receiver.
      * 
-     */
+    */
     public String getCountryCode() {
         return this.countryCode;
     }
     /**
      * The name of the voice receiver. Names must be unique across all receivers within an action group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The phone number of the voice receiver.
      * 
-     */
+    */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -95,7 +95,6 @@ public final class VoiceReceiverResponse {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public VoiceReceiverResponse build() {
             return new VoiceReceiverResponse(countryCode, name, phoneNumber);
         }

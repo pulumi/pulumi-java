@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CustomInfoTypeResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FindingLimitsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
@@ -72,49 +72,49 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
     /**
      * CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2CustomInfoTypeResponse> getCustomInfoTypes() {
         return this.customInfoTypes;
     }
     /**
      * When true, excludes type information of the findings. This is not used for data profiling.
      * 
-     */
+    */
     public Boolean getExcludeInfoTypes() {
         return this.excludeInfoTypes;
     }
     /**
      * When true, a contextual quote from the data that triggered a finding is included in the response; see Finding.quote. This is not used for data profiling.
      * 
-     */
+    */
     public Boolean getIncludeQuote() {
         return this.includeQuote;
     }
     /**
      * Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2InfoTypeResponse> getInfoTypes() {
         return this.infoTypes;
     }
     /**
      * Configuration to control the number of findings returned. This is not used for data profiling.
      * 
-     */
+    */
     public GooglePrivacyDlpV2FindingLimitsResponse getLimits() {
         return this.limits;
     }
     /**
      * Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.
      * 
-     */
+    */
     public String getMinLikelihood() {
         return this.minLikelihood;
     }
     /**
      * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2InspectionRuleSetResponse> getRuleSet() {
         return this.ruleSet;
     }
@@ -185,7 +185,6 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
             this.ruleSet = Objects.requireNonNull(ruleSet);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectConfigResponse build() {
             return new GooglePrivacyDlpV2InspectConfigResponse(customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSet);
         }

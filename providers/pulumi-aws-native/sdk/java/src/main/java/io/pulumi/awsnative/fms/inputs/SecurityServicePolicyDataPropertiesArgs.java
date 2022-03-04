@@ -5,7 +5,7 @@ package io.pulumi.awsnative.fms.inputs;
 
 import io.pulumi.awsnative.fms.enums.PolicySecurityServicePolicyDataPropertiesType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class SecurityServicePolicyDataPropertiesArgs extends io.pulumi.res
     public static final SecurityServicePolicyDataPropertiesArgs Empty = new SecurityServicePolicyDataPropertiesArgs();
 
     @InputImport(name="managedServiceData")
-    private final @Nullable Input<String> managedServiceData;
+      private final @Nullable Input<String> managedServiceData;
 
     public Input<String> getManagedServiceData() {
         return this.managedServiceData == null ? Input.empty() : this.managedServiceData;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<PolicySecurityServicePolicyDataPropertiesType> type;
+      private final Input<PolicySecurityServicePolicyDataPropertiesType> type;
 
     public Input<PolicySecurityServicePolicyDataPropertiesType> getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class SecurityServicePolicyDataPropertiesArgs extends io.pulumi.res
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SecurityServicePolicyDataPropertiesArgs build() {
             return new SecurityServicePolicyDataPropertiesArgs(managedServiceData, type);
         }

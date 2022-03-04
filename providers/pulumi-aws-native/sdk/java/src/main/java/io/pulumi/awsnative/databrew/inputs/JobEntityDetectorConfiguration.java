@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobAllowedStatistics;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class JobEntityDetectorConfiguration extends io.pulumi.resources.In
     public static final JobEntityDetectorConfiguration Empty = new JobEntityDetectorConfiguration();
 
     @InputImport(name="allowedStatistics")
-    private final @Nullable JobAllowedStatistics allowedStatistics;
+      private final @Nullable JobAllowedStatistics allowedStatistics;
 
     public Optional<JobAllowedStatistics> getAllowedStatistics() {
         return this.allowedStatistics == null ? Optional.empty() : Optional.ofNullable(this.allowedStatistics);
     }
 
     @InputImport(name="entityTypes", required=true)
-    private final List<String> entityTypes;
+      private final List<String> entityTypes;
 
     public List<String> getEntityTypes() {
         return this.entityTypes;
@@ -73,7 +73,6 @@ public final class JobEntityDetectorConfiguration extends io.pulumi.resources.In
             this.entityTypes = Objects.requireNonNull(entityTypes);
             return this;
         }
-
         public JobEntityDetectorConfiguration build() {
             return new JobEntityDetectorConfiguration(allowedStatistics, entityTypes);
         }

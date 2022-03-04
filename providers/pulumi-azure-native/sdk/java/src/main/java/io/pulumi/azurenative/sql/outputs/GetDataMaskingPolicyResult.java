@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,63 +82,63 @@ public final class GetDataMaskingPolicyResult {
     /**
      * The list of the application principals. This is a legacy parameter and is no longer used.
      * 
-     */
+    */
     public String getApplicationPrincipals() {
         return this.applicationPrincipals;
     }
     /**
      * The state of the data masking policy.
      * 
-     */
+    */
     public String getDataMaskingState() {
         return this.dataMaskingState;
     }
     /**
      * The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
      * 
-     */
+    */
     public Optional<String> getExemptPrincipals() {
         return Optional.ofNullable(this.exemptPrincipals);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The kind of data masking policy. Metadata, used for Azure portal.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The location of the data masking policy.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The masking level. This is a legacy parameter and is no longer used.
      * 
-     */
+    */
     public String getMaskingLevel() {
         return this.maskingLevel;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -223,7 +223,6 @@ public final class GetDataMaskingPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataMaskingPolicyResult build() {
             return new GetDataMaskingPolicyResult(applicationPrincipals, dataMaskingState, exemptPrincipals, id, kind, location, maskingLevel, name, type);
         }

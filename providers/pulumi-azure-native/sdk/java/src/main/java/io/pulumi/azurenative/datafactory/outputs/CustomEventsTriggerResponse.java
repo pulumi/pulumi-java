@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -86,56 +86,56 @@ public final class CustomEventsTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Trigger description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The list of event types that cause this trigger to fire.
      * 
-     */
+    */
     public List<Object> getEvents() {
         return this.events;
     }
     /**
      * Pipelines that need to be started.
      * 
-     */
+    */
     public List<TriggerPipelineReferenceResponse> getPipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-     */
+    */
     public String getRuntimeState() {
         return this.runtimeState;
     }
     /**
      * The ARM resource ID of the Azure Event Grid Topic.
      * 
-     */
+    */
     public String getScope() {
         return this.scope;
     }
     /**
      * The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
      * 
-     */
+    */
     public Optional<String> getSubjectBeginsWith() {
         return Optional.ofNullable(this.subjectBeginsWith);
     }
     /**
      * The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
      * 
-     */
+    */
     public Optional<String> getSubjectEndsWith() {
         return Optional.ofNullable(this.subjectEndsWith);
     }
@@ -143,7 +143,7 @@ public final class CustomEventsTriggerResponse {
      * Trigger type.
      * Expected value is 'CustomEventsTrigger'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -228,7 +228,6 @@ public final class CustomEventsTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CustomEventsTriggerResponse build() {
             return new CustomEventsTriggerResponse(annotations, description, events, pipelines, runtimeState, scope, subjectBeginsWith, subjectEndsWith, type);
         }

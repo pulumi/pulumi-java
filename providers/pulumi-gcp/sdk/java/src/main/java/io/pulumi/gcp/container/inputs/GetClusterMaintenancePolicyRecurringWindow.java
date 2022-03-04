@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetClusterMaintenancePolicyRecurringWindow extends io.pulumi.
     public static final GetClusterMaintenancePolicyRecurringWindow Empty = new GetClusterMaintenancePolicyRecurringWindow();
 
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
     }
 
     @InputImport(name="recurrence", required=true)
-    private final String recurrence;
+      private final String recurrence;
 
     public String getRecurrence() {
         return this.recurrence;
     }
 
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -86,7 +86,6 @@ public final class GetClusterMaintenancePolicyRecurringWindow extends io.pulumi.
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetClusterMaintenancePolicyRecurringWindow build() {
             return new GetClusterMaintenancePolicyRecurringWindow(endTime, recurrence, startTime);
         }

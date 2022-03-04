@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class NamedPortResponse {
     /**
      * The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The port number, which can be a value between 1 and 65535.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -75,7 +75,6 @@ public final class NamedPortResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public NamedPortResponse build() {
             return new NamedPortResponse(name, port);
         }

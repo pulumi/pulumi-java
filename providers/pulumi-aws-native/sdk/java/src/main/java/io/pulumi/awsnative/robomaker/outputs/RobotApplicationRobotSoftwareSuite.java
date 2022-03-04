@@ -5,7 +5,7 @@ package io.pulumi.awsnative.robomaker.outputs;
 
 import io.pulumi.awsnative.robomaker.enums.RobotApplicationRobotSoftwareSuiteName;
 import io.pulumi.awsnative.robomaker.enums.RobotApplicationRobotSoftwareSuiteVersion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class RobotApplicationRobotSoftwareSuite {
     /**
      * The name of robot software suite.
      * 
-     */
+    */
     public RobotApplicationRobotSoftwareSuiteName getName() {
         return this.name;
     }
     /**
      * The version of robot software suite.
      * 
-     */
+    */
     public Optional<RobotApplicationRobotSoftwareSuiteVersion> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -77,7 +77,6 @@ public final class RobotApplicationRobotSoftwareSuite {
             this.version = version;
             return this;
         }
-
         public RobotApplicationRobotSoftwareSuite build() {
             return new RobotApplicationRobotSoftwareSuite(name, version);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.offazure;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.offazure.inputs.GetHyperVSiteArgs;
 import io.pulumi.azurenative.offazure.outputs.GetHyperVSiteResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHyperVSite {
-/**
- * Site REST Resource.
+    private GetHyperVSite() {}
+    public interface BuilderApplicator {
+        public void apply(GetHyperVSiteArgs.Builder a);
+    }
+    private static GetHyperVSiteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHyperVSiteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Site REST Resource.
  * API Version: 2020-01-01.
  * 
- *
- * Site REST Resource.
+     *
+     * Site REST Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetHyperVSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Site REST Resource.
+     * API Version: 2020-01-01.
+     * 
+     *
+         * Site REST Resource.
+     * 
+     */
     public static CompletableFuture<GetHyperVSiteResult> invokeAsync(GetHyperVSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:offazure:getHyperVSite", TypeShape.of(GetHyperVSiteResult.class), args == null ? GetHyperVSiteArgs.Empty : args, Utilities.withVersion(options));
     }

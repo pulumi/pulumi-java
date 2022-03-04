@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.GenericContainerExtendedInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,7 @@ public final class GenericContainerResponse {
     /**
      * Type of backup management for the container.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -84,42 +84,42 @@ public final class GenericContainerResponse {
      * Backup is VMAppContainer
      * Expected value is 'GenericContainer'.
      * 
-     */
+    */
     public String getContainerType() {
         return this.containerType;
     }
     /**
      * Extended information (not returned in List container API calls)
      * 
-     */
+    */
     public Optional<GenericContainerExtendedInfoResponse> getExtendedInformation() {
         return Optional.ofNullable(this.extendedInformation);
     }
     /**
      * Name of the container's fabric
      * 
-     */
+    */
     public Optional<String> getFabricName() {
         return Optional.ofNullable(this.fabricName);
     }
     /**
      * Friendly name of the container.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
-     */
+    */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
-     */
+    */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
@@ -190,7 +190,6 @@ public final class GenericContainerResponse {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public GenericContainerResponse build() {
             return new GenericContainerResponse(backupManagementType, containerType, extendedInformation, fabricName, friendlyName, healthStatus, registrationStatus);
         }

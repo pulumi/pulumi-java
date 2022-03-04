@@ -6,17 +6,33 @@ package io.pulumi.awsnative.xray;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.xray.inputs.GetGroupArgs;
 import io.pulumi.awsnative.xray.outputs.GetGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGroup {
-/**
- * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
+    private GetGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetGroupArgs.Builder a);
+    }
+    private static GetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
  * 
- */
+     */
+    public static CompletableFuture<GetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
+     * 
+     */
     public static CompletableFuture<GetGroupResult> invokeAsync(GetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:xray:getGroup", TypeShape.of(GetGroupResult.class), args == null ? GetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

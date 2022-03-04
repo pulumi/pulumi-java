@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class SkuResponse {
     /**
      * The display name of the sku.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The sku family.
      * 
-     */
+    */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The sku name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -97,7 +97,6 @@ public final class SkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(displayName, family, name);
         }

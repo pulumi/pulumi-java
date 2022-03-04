@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricCosts")
-    private final @Nullable Input<Map<String,String>> metricCosts;
+      private final @Nullable Input<Map<String,String>> metricCosts;
 
     public Input<Map<String,String>> getMetricCosts() {
         return this.metricCosts == null ? Input.empty() : this.metricCosts;
@@ -35,7 +35,7 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -94,7 +94,6 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.selector = Input.ofNullable(selector);
             return this;
         }
-
         public MetricRuleArgs build() {
             return new MetricRuleArgs(metricCosts, selector);
         }

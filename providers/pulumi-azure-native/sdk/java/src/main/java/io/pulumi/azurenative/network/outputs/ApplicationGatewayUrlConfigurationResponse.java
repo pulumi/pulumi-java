@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ApplicationGatewayUrlConfigurationResponse {
     /**
      * Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
      * 
-     */
+    */
     public Optional<String> getModifiedPath() {
         return Optional.ofNullable(this.modifiedPath);
     }
     /**
      * Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
      * 
-     */
+    */
     public Optional<String> getModifiedQueryString() {
         return Optional.ofNullable(this.modifiedQueryString);
     }
     /**
      * If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
      * 
-     */
+    */
     public Optional<Boolean> getReroute() {
         return Optional.ofNullable(this.reroute);
     }
@@ -98,7 +98,6 @@ public final class ApplicationGatewayUrlConfigurationResponse {
             this.reroute = reroute;
             return this;
         }
-
         public ApplicationGatewayUrlConfigurationResponse build() {
             return new ApplicationGatewayUrlConfigurationResponse(modifiedPath, modifiedQueryString, reroute);
         }

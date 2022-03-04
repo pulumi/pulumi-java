@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
     /**
      * Call-specific metadata created by the analysis.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse getCallAnalysisMetadata() {
         return this.callAnalysisMetadata;
     }
     /**
      * The time at which the analysis ended.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnalysisResultResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnalysisResultResponse(callAnalysisMetadata, endTime);
         }

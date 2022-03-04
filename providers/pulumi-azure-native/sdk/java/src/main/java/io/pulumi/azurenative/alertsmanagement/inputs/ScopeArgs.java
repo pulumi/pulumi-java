@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 import io.pulumi.azurenative.alertsmanagement.enums.ScopeType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopeType")
-    private final @Nullable Input<Either<String,ScopeType>> scopeType;
+      private final @Nullable Input<Either<String,ScopeType>> scopeType;
 
     public Input<Either<String,ScopeType>> getScopeType() {
         return this.scopeType == null ? Input.empty() : this.scopeType;
@@ -37,7 +37,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -96,7 +96,6 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public ScopeArgs build() {
             return new ScopeArgs(scopeType, values);
         }

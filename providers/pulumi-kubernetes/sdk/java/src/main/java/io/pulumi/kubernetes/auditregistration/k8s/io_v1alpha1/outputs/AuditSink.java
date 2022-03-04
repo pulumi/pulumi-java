@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.AuditSinkSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
@@ -45,14 +45,14 @@ public final class AuditSink {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
@@ -62,7 +62,7 @@ public final class AuditSink {
     /**
      * Spec defines the audit configuration spec
      * 
-     */
+    */
     public Optional<AuditSinkSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }
@@ -112,7 +112,6 @@ public final class AuditSink {
             this.spec = spec;
             return this;
         }
-
         public AuditSink build() {
             return new AuditSink(apiVersion, kind, metadata, spec);
         }

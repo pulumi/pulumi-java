@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class DefaultRolloutSpecificationResponseHighTraffic {
             this.waitDuration = waitDuration;
             return this;
         }
-
         public DefaultRolloutSpecificationResponseHighTraffic build() {
             return new DefaultRolloutSpecificationResponseHighTraffic(regions, waitDuration);
         }

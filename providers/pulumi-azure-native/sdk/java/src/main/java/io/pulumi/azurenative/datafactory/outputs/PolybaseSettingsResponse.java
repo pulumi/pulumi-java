@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class PolybaseSettingsResponse {
     /**
      * Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getRejectSampleValue() {
         return Optional.ofNullable(this.rejectSampleValue);
     }
     /**
      * Reject type.
      * 
-     */
+    */
     public Optional<String> getRejectType() {
         return Optional.ofNullable(this.rejectType);
     }
     /**
      * Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getRejectValue() {
         return Optional.ofNullable(this.rejectValue);
     }
     /**
      * Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getUseTypeDefault() {
         return Optional.ofNullable(this.useTypeDefault);
     }
@@ -119,7 +119,6 @@ public final class PolybaseSettingsResponse {
             this.useTypeDefault = useTypeDefault;
             return this;
         }
-
         public PolybaseSettingsResponse build() {
             return new PolybaseSettingsResponse(rejectSampleValue, rejectType, rejectValue, useTypeDefault);
         }

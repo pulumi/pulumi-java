@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearningcompute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningcompute.inputs.GetOperationalizationClusterArgs;
 import io.pulumi.azurenative.machinelearningcompute.outputs.GetOperationalizationClusterResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOperationalizationCluster {
-/**
- * Instance of an Azure ML Operationalization Cluster resource.
+    private GetOperationalizationCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetOperationalizationClusterArgs.Builder a);
+    }
+    private static GetOperationalizationClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOperationalizationClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Instance of an Azure ML Operationalization Cluster resource.
  * API Version: 2017-08-01-preview.
  * 
- *
- * Instance of an Azure ML Operationalization Cluster resource.
+     *
+     * Instance of an Azure ML Operationalization Cluster resource.
  * 
- */
+     */
+    public static CompletableFuture<GetOperationalizationClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Instance of an Azure ML Operationalization Cluster resource.
+     * API Version: 2017-08-01-preview.
+     * 
+     *
+         * Instance of an Azure ML Operationalization Cluster resource.
+     * 
+     */
     public static CompletableFuture<GetOperationalizationClusterResult> invokeAsync(GetOperationalizationClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningcompute:getOperationalizationCluster", TypeShape.of(GetOperationalizationClusterResult.class), args == null ? GetOperationalizationClusterArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class EncryptionPropertiesResponse {
     /**
      * Type of the key source.
      * 
-     */
+    */
     public Optional<String> getKeySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
      * Additional details when using Microsoft.KeyVault
      * 
-     */
+    */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -77,7 +77,6 @@ public final class EncryptionPropertiesResponse {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public EncryptionPropertiesResponse build() {
             return new EncryptionPropertiesResponse(keySource, keyVaultProperties);
         }

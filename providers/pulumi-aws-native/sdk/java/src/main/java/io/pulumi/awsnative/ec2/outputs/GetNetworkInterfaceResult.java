@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.outputs;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfaceInstanceIpv6Address;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfacePrivateIpAddressSpecification;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfaceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -102,77 +102,77 @@ public final class GetNetworkInterfaceResult {
     /**
      * A description for the network interface.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of security group IDs associated with this network interface.
      * 
-     */
+    */
     public List<String> getGroupSet() {
         return this.groupSet == null ? List.of() : this.groupSet;
     }
     /**
      * Network interface id.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don't specify this property.
      * 
-     */
+    */
     public Optional<Integer> getIpv6AddressCount() {
         return Optional.ofNullable(this.ipv6AddressCount);
     }
     /**
      * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you're specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don't specify this property.
      * 
-     */
+    */
     public List<NetworkInterfaceInstanceIpv6Address> getIpv6Addresses() {
         return this.ipv6Addresses == null ? List.of() : this.ipv6Addresses;
     }
     /**
      * Returns the primary private IP address of the network interface.
      * 
-     */
+    */
     public Optional<String> getPrimaryPrivateIpAddress() {
         return Optional.ofNullable(this.primaryPrivateIpAddress);
     }
     /**
      * Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
      * 
-     */
+    */
     public List<NetworkInterfacePrivateIpAddressSpecification> getPrivateIpAddresses() {
         return this.privateIpAddresses == null ? List.of() : this.privateIpAddresses;
     }
     /**
      * The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range. You can't specify this option and specify more than one private IP address using privateIpAddresses
      * 
-     */
+    */
     public Optional<Integer> getSecondaryPrivateIpAddressCount() {
         return Optional.ofNullable(this.secondaryPrivateIpAddressCount);
     }
     /**
      * Returns the secondary private IP addresses of the network interface.
      * 
-     */
+    */
     public List<String> getSecondaryPrivateIpAddresses() {
         return this.secondaryPrivateIpAddresses == null ? List.of() : this.secondaryPrivateIpAddresses;
     }
     /**
      * Indicates whether traffic to or from the instance is validated.
      * 
-     */
+    */
     public Optional<Boolean> getSourceDestCheck() {
         return Optional.ofNullable(this.sourceDestCheck);
     }
     /**
      * An arbitrary set of tags (key-value pairs) for this network interface.
      * 
-     */
+    */
     public List<NetworkInterfaceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -271,7 +271,6 @@ public final class GetNetworkInterfaceResult {
             this.tags = tags;
             return this;
         }
-
         public GetNetworkInterfaceResult build() {
             return new GetNetworkInterfaceResult(description, groupSet, id, ipv6AddressCount, ipv6Addresses, primaryPrivateIpAddress, privateIpAddresses, secondaryPrivateIpAddressCount, secondaryPrivateIpAddresses, sourceDestCheck, tags);
         }

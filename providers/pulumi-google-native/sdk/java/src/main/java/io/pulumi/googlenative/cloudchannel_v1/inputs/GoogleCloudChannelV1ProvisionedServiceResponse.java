@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
      * 
      */
     @InputImport(name="productId", required=true)
-    private final String productId;
+      private final String productId;
 
     public String getProductId() {
         return this.productId;
@@ -32,7 +32,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
      * 
      */
     @InputImport(name="provisioningId", required=true)
-    private final String provisioningId;
+      private final String provisioningId;
 
     public String getProvisioningId() {
         return this.provisioningId;
@@ -43,7 +43,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
      * 
      */
     @InputImport(name="skuId", required=true)
-    private final String skuId;
+      private final String skuId;
 
     public String getSkuId() {
         return this.skuId;
@@ -102,7 +102,6 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
             this.skuId = Objects.requireNonNull(skuId);
             return this;
         }
-
         public GoogleCloudChannelV1ProvisionedServiceResponse build() {
             return new GoogleCloudChannelV1ProvisionedServiceResponse(productId, provisioningId, skuId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -84,63 +84,63 @@ public final class X12DelimiterOverridesResponse {
     /**
      * The component separator.
      * 
-     */
+    */
     public Integer getComponentSeparator() {
         return this.componentSeparator;
     }
     /**
      * The data element separator.
      * 
-     */
+    */
     public Integer getDataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
      * The message id.
      * 
-     */
+    */
     public Optional<String> getMessageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
      * The protocol version.
      * 
-     */
+    */
     public Optional<String> getProtocolVersion() {
         return Optional.ofNullable(this.protocolVersion);
     }
     /**
      * The replacement character.
      * 
-     */
+    */
     public Integer getReplaceCharacter() {
         return this.replaceCharacter;
     }
     /**
      * The value indicating whether to replace separators in payload.
      * 
-     */
+    */
     public Boolean getReplaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
     /**
      * The segment terminator.
      * 
-     */
+    */
     public Integer getSegmentTerminator() {
         return this.segmentTerminator;
     }
     /**
      * The segment terminator suffix.
      * 
-     */
+    */
     public String getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
     /**
      * The target namespace on which this delimiter settings has to be applied.
      * 
-     */
+    */
     public Optional<String> getTargetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
@@ -225,7 +225,6 @@ public final class X12DelimiterOverridesResponse {
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public X12DelimiterOverridesResponse build() {
             return new X12DelimiterOverridesResponse(componentSeparator, dataElementSeparator, messageId, protocolVersion, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
         }

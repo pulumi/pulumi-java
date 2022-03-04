@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GetClientOpenIdUserInfoResult {
     /**
      * The email of the account used by the provider to authenticate with GCP.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -74,7 +74,6 @@ public final class GetClientOpenIdUserInfoResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetClientOpenIdUserInfoResult build() {
             return new GetClientOpenIdUserInfoResult(email, id);
         }

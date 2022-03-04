@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class StorageAccountDetailsResponse {
      * Account Type of the data to be transferred.
      * Expected value is 'StorageAccount'.
      * 
-     */
+    */
     public String getDataAccountType() {
         return this.dataAccountType;
     }
     /**
      * Storage Account Resource Id.
      * 
-     */
+    */
     public String getStorageAccountId() {
         return this.storageAccountId;
     }
@@ -76,7 +76,6 @@ public final class StorageAccountDetailsResponse {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public StorageAccountDetailsResponse build() {
             return new StorageAccountDetailsResponse(dataAccountType, storageAccountId);
         }

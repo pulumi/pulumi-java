@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="folderMap", required=true)
-    private final Map<String,String> folderMap;
+      private final Map<String,String> folderMap;
 
     public Map<String,String> getFolderMap() {
         return this.folderMap;
@@ -34,7 +34,7 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="projectMap", required=true)
-    private final Map<String,String> projectMap;
+      private final Map<String,String> projectMap;
 
     public Map<String,String> getProjectMap() {
         return this.projectMap;
@@ -45,7 +45,7 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="projects", required=true)
-    private final List<String> projects;
+      private final List<String> projects;
 
     public List<String> getProjects() {
         return this.projects;
@@ -56,7 +56,7 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="shareType", required=true)
-    private final String shareType;
+      private final String shareType;
 
     public String getShareType() {
         return this.shareType;
@@ -125,7 +125,6 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
             this.shareType = Objects.requireNonNull(shareType);
             return this;
         }
-
         public ShareSettingsResponse build() {
             return new ShareSettingsResponse(folderMap, projectMap, projects, shareType);
         }

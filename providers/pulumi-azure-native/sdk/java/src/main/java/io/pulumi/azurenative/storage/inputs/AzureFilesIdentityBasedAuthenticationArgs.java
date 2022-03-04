@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.enums.DirectoryServiceOptions;
 import io.pulumi.azurenative.storage.inputs.ActiveDirectoryPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="activeDirectoryProperties")
-    private final @Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
+      private final @Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
 
     public Input<ActiveDirectoryPropertiesArgs> getActiveDirectoryProperties() {
         return this.activeDirectoryProperties == null ? Input.empty() : this.activeDirectoryProperties;
@@ -37,7 +37,7 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="directoryServiceOptions", required=true)
-    private final Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
+      private final Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
 
     public Input<Either<String,DirectoryServiceOptions>> getDirectoryServiceOptions() {
         return this.directoryServiceOptions;
@@ -96,7 +96,6 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
             this.directoryServiceOptions = Input.of(Objects.requireNonNull(directoryServiceOptions));
             return this;
         }
-
         public AzureFilesIdentityBasedAuthenticationArgs build() {
             return new AzureFilesIdentityBasedAuthenticationArgs(activeDirectoryProperties, directoryServiceOptions);
         }

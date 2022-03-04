@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class InstancePropertiesPatchResponse {
     /**
      * The label key-value pairs that you want to patch onto the instance.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
@@ -75,7 +75,6 @@ public final class InstancePropertiesPatchResponse {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public InstancePropertiesPatchResponse build() {
             return new InstancePropertiesPatchResponse(labels, metadata);
         }

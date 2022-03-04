@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.ListTenantAccessSecretsArgs;
 import io.pulumi.azurenative.apimanagement.outputs.ListTenantAccessSecretsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListTenantAccessSecrets {
-/**
- * Tenant access information contract of the API Management service.
+    private ListTenantAccessSecrets() {}
+    public interface BuilderApplicator {
+        public void apply(ListTenantAccessSecretsArgs.Builder a);
+    }
+    private static ListTenantAccessSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListTenantAccessSecretsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Tenant access information contract of the API Management service.
  * API Version: 2020-12-01.
  * 
- *
- * Tenant access information contract of the API Management service.
+     *
+     * Tenant access information contract of the API Management service.
  * 
- */
+     */
+    public static CompletableFuture<ListTenantAccessSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Tenant access information contract of the API Management service.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Tenant access information contract of the API Management service.
+     * 
+     */
     public static CompletableFuture<ListTenantAccessSecretsResult> invokeAsync(ListTenantAccessSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listTenantAccessSecrets", TypeShape.of(ListTenantAccessSecretsResult.class), args == null ? ListTenantAccessSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datamigration.outputs.MigrateMISyncCompleteCommandP
 import io.pulumi.azurenative.datamigration.outputs.MigrateSyncCompleteCommandPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -73,35 +73,35 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse {
     /**
      * Array of command properties.
      * 
-     */
+    */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
-     */
+    */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Task input
      * 
-     */
+    */
     public Optional<ConnectToSourceSqlServerTaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
-     */
+    */
     public List<Object> getOutput() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -109,7 +109,7 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse {
      * Task type.
      * Expected value is 'ConnectToSource.SqlServer.Sync'.
      * 
-     */
+    */
     public String getTaskType() {
         return this.taskType;
     }
@@ -173,7 +173,6 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ConnectToSourceSqlServerSyncTaskPropertiesResponse build() {
             return new ConnectToSourceSqlServerSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

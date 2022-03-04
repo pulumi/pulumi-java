@@ -5,8 +5,8 @@ package io.pulumi.googlenative.contactcenterinsights_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.contactcenterinsights_v1.PhraseMatcherArgs;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse;
@@ -176,6 +176,37 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
         return this.versionTag;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PhraseMatcherArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.contactcenterinsights_v1.PhraseMatcherArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.contactcenterinsights_v1.PhraseMatcherArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PhraseMatcher(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PhraseMatcher(String name) {
+        this(name, PhraseMatcherArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PhraseMatcher(String name, PhraseMatcherArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class FilteringTagResponse {
     /**
      * Valid actions for a filtering tag.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The name (also known as the key) of the tag.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of the tag.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -97,7 +97,6 @@ public final class FilteringTagResponse {
             this.value = value;
             return this;
         }
-
         public FilteringTagResponse build() {
             return new FilteringTagResponse(action, name, value);
         }

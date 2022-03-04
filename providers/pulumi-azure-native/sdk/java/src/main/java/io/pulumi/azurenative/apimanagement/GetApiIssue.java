@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetApiIssueArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetApiIssueResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiIssue {
-/**
- * Issue Contract details.
+    private GetApiIssue() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiIssueArgs.Builder a);
+    }
+    private static GetApiIssueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiIssueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Issue Contract details.
  * API Version: 2020-12-01.
  * 
- *
- * Issue Contract details.
+     *
+     * Issue Contract details.
  * 
- */
+     */
+    public static CompletableFuture<GetApiIssueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Issue Contract details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Issue Contract details.
+     * 
+     */
     public static CompletableFuture<GetApiIssueResult> invokeAsync(GetApiIssueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiIssue", TypeShape.of(GetApiIssueResult.class), args == null ? GetApiIssueArgs.Empty : args, Utilities.withVersion(options));
     }

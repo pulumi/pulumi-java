@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iotcoredeviceadvisor;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.GetSuiteDefinitionArgs;
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.GetSuiteDefinitionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSuiteDefinition {
-/**
- * An example resource schema demonstrating some basic constructs and validation rules.
+    private GetSuiteDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetSuiteDefinitionArgs.Builder a);
+    }
+    private static GetSuiteDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSuiteDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
  * 
- */
+     */
+    public static CompletableFuture<GetSuiteDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetSuiteDefinitionResult> invokeAsync(GetSuiteDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotcoredeviceadvisor:getSuiteDefinition", TypeShape.of(GetSuiteDefinitionResult.class), args == null ? GetSuiteDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

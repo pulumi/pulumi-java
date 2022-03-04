@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GetProjectKeysResult {
     /**
      * ID of Migration Project.
      * 
-     */
+    */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * Key of Migration Project.
      * 
-     */
+    */
     public String getWorkspaceKey() {
         return this.workspaceKey;
     }
@@ -74,7 +74,6 @@ public final class GetProjectKeysResult {
             this.workspaceKey = Objects.requireNonNull(workspaceKey);
             return this;
         }
-
         public GetProjectKeysResult build() {
             return new GetProjectKeysResult(workspaceId, workspaceKey);
         }

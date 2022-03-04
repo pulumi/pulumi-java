@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse {
     /**
      * Results are appended to this table. The server creates a new table in the given BigQuery dataset if the specified table does not exist. To enable the Cloud Healthcare API to write to your BigQuery table, you must give the Cloud Healthcare API service account the bigquery.dataEditor role. The service account is: `service-{PROJECT_NUMBER}@gcp-sa-healthcare.iam.gserviceaccount.com`. The PROJECT_NUMBER identifies the project that the DICOM store resides in. To get the project number, go to the Cloud Console Dashboard. It is recommended to not have a custom schema in the destination table which could conflict with the schema created by the Cloud Healthcare API. Instance deletions are not applied to the destination table. The destination's table schema will be automatically updated in case a new instance's data is incompatible with the current schema. The schema should not be updated manually as this can cause incompatibilies that cannot be resolved automatically. One resolution in this case is to delete the incompatible table and let the server recreate one, though the newly created table only contains data after the table recreation. BigQuery imposes a 1 MB limit on streaming insert row size, therefore any instance that generates more than 1 MB of BigQuery data will not be streamed. If an instance cannot be streamed to BigQuery, errors will be logged to Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
      * 
-     */
+    */
     public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse getBigqueryDestination() {
         return this.bigqueryDestination;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
-
         public GoogleCloudHealthcareV1beta1DicomStreamConfigResponse build() {
             return new GoogleCloudHealthcareV1beta1DicomStreamConfigResponse(bigqueryDestination);
         }

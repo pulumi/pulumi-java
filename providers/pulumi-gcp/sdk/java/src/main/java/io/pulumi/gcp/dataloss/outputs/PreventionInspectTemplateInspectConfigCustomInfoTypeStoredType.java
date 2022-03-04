@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTyp
      * Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
      * or `projects/project-id/storedInfoTypes/432452342`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -54,7 +54,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTyp
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType(name);
         }

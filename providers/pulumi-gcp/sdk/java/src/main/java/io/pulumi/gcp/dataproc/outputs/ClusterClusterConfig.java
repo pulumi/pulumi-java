@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigAutoscalingConfig;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigEncryptionConfig;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigEndpointConfig;
@@ -161,7 +161,7 @@ public final class ClusterClusterConfig {
      * only be removed by setting `policy_uri = ""`, rather than removing the whole block.
      * Structure defined below.
      * 
-     */
+    */
     public Optional<ClusterClusterConfigAutoscalingConfig> getAutoscalingConfig() {
         return Optional.ofNullable(this.autoscalingConfig);
     }
@@ -172,7 +172,7 @@ public final class ClusterClusterConfig {
      * The Customer managed encryption keys settings for the cluster.
      * Structure defined below.
      * 
-     */
+    */
     public Optional<ClusterClusterConfigEncryptionConfig> getEncryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
@@ -180,7 +180,7 @@ public final class ClusterClusterConfig {
      * The config settings for port access on the cluster.
      * Structure defined below.
      * 
-     */
+    */
     public Optional<ClusterClusterConfigEndpointConfig> getEndpointConfig() {
         return Optional.ofNullable(this.endpointConfig);
     }
@@ -188,7 +188,7 @@ public final class ClusterClusterConfig {
      * Common config settings for resources of Google Compute Engine cluster
      * instances, applicable to all instances in the cluster. Structure defined below.
      * 
-     */
+    */
     public Optional<ClusterClusterConfigGceClusterConfig> getGceClusterConfig() {
         return Optional.ofNullable(this.gceClusterConfig);
     }
@@ -196,7 +196,7 @@ public final class ClusterClusterConfig {
      * Commands to execute on each node after config is completed.
      * You can specify multiple versions of these. Structure defined below.
      * 
-     */
+    */
     public List<ClusterClusterConfigInitializationAction> getInitializationActions() {
         return this.initializationActions == null ? List.of() : this.initializationActions;
     }
@@ -204,7 +204,7 @@ public final class ClusterClusterConfig {
      * The settings for auto deletion cluster schedule.
      * Structure defined below.
      * 
-     */
+    */
     public Optional<ClusterClusterConfigLifecycleConfig> getLifecycleConfig() {
         return Optional.ofNullable(this.lifecycleConfig);
     }
@@ -212,7 +212,7 @@ public final class ClusterClusterConfig {
      * The Google Compute Engine config settings for the master instances
      * in a cluster. Structure defined below.
      * 
-     */
+    */
     public Optional<ClusterClusterConfigMasterConfig> getMasterConfig() {
         return Optional.ofNullable(this.masterConfig);
     }
@@ -221,7 +221,7 @@ public final class ClusterClusterConfig {
      * Structure defined below.
      * ***
      * 
-     */
+    */
     public Optional<ClusterClusterConfigMetastoreConfig> getMetastoreConfig() {
         return Optional.ofNullable(this.metastoreConfig);
     }
@@ -232,14 +232,14 @@ public final class ClusterClusterConfig {
      *   an alias for the api's [secondaryWorkerConfig](https://cloud.google.com/dataproc/docs/reference/rest/v1/ClusterConfig#InstanceGroupConfig). The name doesn't necessarily mean it is preemptible and is named as
      *   such for legacy/compatibility reasons.
      * 
-     */
+    */
     public Optional<ClusterClusterConfigPreemptibleWorkerConfig> getPreemptibleWorkerConfig() {
         return Optional.ofNullable(this.preemptibleWorkerConfig);
     }
     /**
      * Security related configuration. Structure defined below.
      * 
-     */
+    */
     public Optional<ClusterClusterConfigSecurityConfig> getSecurityConfig() {
         return Optional.ofNullable(this.securityConfig);
     }
@@ -247,7 +247,7 @@ public final class ClusterClusterConfig {
      * The config settings for software inside the cluster.
      * Structure defined below.
      * 
-     */
+    */
     public Optional<ClusterClusterConfigSoftwareConfig> getSoftwareConfig() {
         return Optional.ofNullable(this.softwareConfig);
     }
@@ -260,7 +260,7 @@ public final class ClusterClusterConfig {
      * with other clusters in the same region/zone also choosing to use the auto generation
      * option.
      * 
-     */
+    */
     public Optional<String> getStagingBucket() {
         return Optional.ofNullable(this.stagingBucket);
     }
@@ -269,7 +269,7 @@ public final class ClusterClusterConfig {
      * and jobs data, such as Spark and MapReduce history files.
      * Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
      * 
-     */
+    */
     public Optional<String> getTempBucket() {
         return Optional.ofNullable(this.tempBucket);
     }
@@ -277,7 +277,7 @@ public final class ClusterClusterConfig {
      * The Google Compute Engine config settings for the worker instances
      * in a cluster. Structure defined below.
      * 
-     */
+    */
     public Optional<ClusterClusterConfigWorkerConfig> getWorkerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
@@ -404,7 +404,6 @@ public final class ClusterClusterConfig {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public ClusterClusterConfig build() {
             return new ClusterClusterConfig(autoscalingConfig, bucket, encryptionConfig, endpointConfig, gceClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, preemptibleWorkerConfig, securityConfig, softwareConfig, stagingBucket, tempBucket, workerConfig);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.VirtualMachineConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class VirtualMachineResponse {
     /**
      * The unique identifier of the Managed Compute Engine instance.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * The user-friendly name of the Managed Compute Engine instance.
      * 
-     */
+    */
     public String getInstanceName() {
         return this.instanceName;
     }
     /**
      * Virtual Machine configuration settings.
      * 
-     */
+    */
     public VirtualMachineConfigResponse getVirtualMachineConfig() {
         return this.virtualMachineConfig;
     }
@@ -96,7 +96,6 @@ public final class VirtualMachineResponse {
             this.virtualMachineConfig = Objects.requireNonNull(virtualMachineConfig);
             return this;
         }
-
         public VirtualMachineResponse build() {
             return new VirtualMachineResponse(instanceId, instanceName, virtualMachineConfig);
         }

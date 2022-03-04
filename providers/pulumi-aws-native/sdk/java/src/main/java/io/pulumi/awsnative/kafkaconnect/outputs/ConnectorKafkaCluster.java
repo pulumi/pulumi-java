@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorApacheKafkaCluster;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class ConnectorKafkaCluster {
             this.apacheKafkaCluster = Objects.requireNonNull(apacheKafkaCluster);
             return this;
         }
-
         public ConnectorKafkaCluster build() {
             return new ConnectorKafkaCluster(apacheKafkaCluster);
         }

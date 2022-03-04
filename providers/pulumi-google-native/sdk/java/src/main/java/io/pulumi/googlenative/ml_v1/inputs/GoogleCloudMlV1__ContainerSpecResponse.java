@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__ContainerPortResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__EnvVarResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="args", required=true)
-    private final List<String> args;
+      private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="command", required=true)
-    private final List<String> command;
+      private final List<String> command;
 
     public List<String> getCommand() {
         return this.command;
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="env", required=true)
-    private final List<GoogleCloudMlV1__EnvVarResponse> env;
+      private final List<GoogleCloudMlV1__EnvVarResponse> env;
 
     public List<GoogleCloudMlV1__EnvVarResponse> getEnv() {
         return this.env;
@@ -57,7 +57,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="image", required=true)
-    private final String image;
+      private final String image;
 
     public String getImage() {
         return this.image;
@@ -68,7 +68,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="ports", required=true)
-    private final List<GoogleCloudMlV1__ContainerPortResponse> ports;
+      private final List<GoogleCloudMlV1__ContainerPortResponse> ports;
 
     public List<GoogleCloudMlV1__ContainerPortResponse> getPorts() {
         return this.ports;
@@ -147,7 +147,6 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public GoogleCloudMlV1__ContainerSpecResponse build() {
             return new GoogleCloudMlV1__ContainerSpecResponse(args, command, env, image, ports);
         }

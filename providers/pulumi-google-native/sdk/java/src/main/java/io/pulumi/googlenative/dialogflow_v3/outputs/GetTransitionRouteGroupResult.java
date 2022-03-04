@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3TransitionRouteResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class GetTransitionRouteGroupResult {
     /**
      * The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Transition routes associated with the TransitionRouteGroup.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3TransitionRouteResponse> getTransitionRoutes() {
         return this.transitionRoutes;
     }
@@ -97,7 +97,6 @@ public final class GetTransitionRouteGroupResult {
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }
-
         public GetTransitionRouteGroupResult build() {
             return new GetTransitionRouteGroupResult(displayName, name, transitionRoutes);
         }

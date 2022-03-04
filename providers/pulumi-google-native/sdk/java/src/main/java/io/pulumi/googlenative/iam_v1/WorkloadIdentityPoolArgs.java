@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -42,28 +42,28 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="workloadIdentityPoolId", required=true)
-    private final Input<String> workloadIdentityPoolId;
+      private final Input<String> workloadIdentityPoolId;
 
     public Input<String> getWorkloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
@@ -182,7 +182,6 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
             this.workloadIdentityPoolId = Input.of(Objects.requireNonNull(workloadIdentityPoolId));
             return this;
         }
-
         public WorkloadIdentityPoolArgs build() {
             return new WorkloadIdentityPoolArgs(description, disabled, displayName, location, project, workloadIdentityPoolId);
         }

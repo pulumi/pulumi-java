@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
     public static final EnvironmentSettingArgs Empty = new EnvironmentSettingArgs();
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -81,7 +81,6 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public EnvironmentSettingArgs build() {
             return new EnvironmentSettingArgs(name, value);
         }

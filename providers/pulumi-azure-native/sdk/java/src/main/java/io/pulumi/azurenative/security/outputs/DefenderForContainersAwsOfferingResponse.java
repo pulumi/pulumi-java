@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingRe
 import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponseKinesisToS3;
 import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponseKubernetesScubaReader;
 import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponseKubernetesService;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -66,35 +66,35 @@ public final class DefenderForContainersAwsOfferingResponse {
     /**
      * The cloudwatch to kinesis connection configuration
      * 
-     */
+    */
     public Optional<DefenderForContainersAwsOfferingResponseCloudWatchToKinesis> getCloudWatchToKinesis() {
         return Optional.ofNullable(this.cloudWatchToKinesis);
     }
     /**
      * The offering description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The kinesis to s3 connection configuration
      * 
-     */
+    */
     public Optional<DefenderForContainersAwsOfferingResponseKinesisToS3> getKinesisToS3() {
         return Optional.ofNullable(this.kinesisToS3);
     }
     /**
      * The kubernetes to scuba connection configuration
      * 
-     */
+    */
     public Optional<DefenderForContainersAwsOfferingResponseKubernetesScubaReader> getKubernetesScubaReader() {
         return Optional.ofNullable(this.kubernetesScubaReader);
     }
     /**
      * The kubernetes service connection configuration
      * 
-     */
+    */
     public Optional<DefenderForContainersAwsOfferingResponseKubernetesService> getKubernetesService() {
         return Optional.ofNullable(this.kubernetesService);
     }
@@ -102,7 +102,7 @@ public final class DefenderForContainersAwsOfferingResponse {
      * The type of the security offering.
      * Expected value is 'DefenderForContainersAws'.
      * 
-     */
+    */
     public String getOfferingType() {
         return this.offeringType;
     }
@@ -166,7 +166,6 @@ public final class DefenderForContainersAwsOfferingResponse {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public DefenderForContainersAwsOfferingResponse build() {
             return new DefenderForContainersAwsOfferingResponse(cloudWatchToKinesis, description, kinesisToS3, kubernetesScubaReader, kubernetesService, offeringType);
         }

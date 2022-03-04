@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnetResourceId")
-    private final @Nullable Input<String> subnetResourceId;
+      private final @Nullable Input<String> subnetResourceId;
 
     public Input<String> getSubnetResourceId() {
         return this.subnetResourceId == null ? Input.empty() : this.subnetResourceId;
@@ -66,7 +66,6 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
             this.subnetResourceId = Input.ofNullable(subnetResourceId);
             return this;
         }
-
         public VirtualNetworkConfigurationArgs build() {
             return new VirtualNetworkConfigurationArgs(subnetResourceId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.InstanceGroupManagerStatusStatefulResponse;
 import io.pulumi.googlenative.compute_v1.inputs.InstanceGroupManagerStatusVersionTargetResponse;
 import java.lang.Boolean;
@@ -20,7 +20,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="autoscaler", required=true)
-    private final String autoscaler;
+      private final String autoscaler;
 
     public String getAutoscaler() {
         return this.autoscaler;
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="isStable", required=true)
-    private final Boolean isStable;
+      private final Boolean isStable;
 
     public Boolean getIsStable() {
         return this.isStable;
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="stateful", required=true)
-    private final InstanceGroupManagerStatusStatefulResponse stateful;
+      private final InstanceGroupManagerStatusStatefulResponse stateful;
 
     public InstanceGroupManagerStatusStatefulResponse getStateful() {
         return this.stateful;
@@ -53,7 +53,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="versionTarget", required=true)
-    private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
+      private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
     public InstanceGroupManagerStatusVersionTargetResponse getVersionTarget() {
         return this.versionTarget;
@@ -122,7 +122,6 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
             this.versionTarget = Objects.requireNonNull(versionTarget);
             return this;
         }
-
         public InstanceGroupManagerStatusResponse build() {
             return new InstanceGroupManagerStatusResponse(autoscaler, isStable, stateful, versionTarget);
         }

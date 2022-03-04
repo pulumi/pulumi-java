@@ -6,7 +6,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 import io.pulumi.azurenative.streamanalytics.inputs.ReferenceInputPropertiesResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.StreamInputPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -37,7 +37,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -48,7 +48,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
+      private final @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
 
     public Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> getProperties() {
         return this.properties == null ? null : this.properties;
@@ -59,7 +59,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -128,7 +128,6 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InputResponse build() {
             return new InputResponse(id, name, properties, type);
         }

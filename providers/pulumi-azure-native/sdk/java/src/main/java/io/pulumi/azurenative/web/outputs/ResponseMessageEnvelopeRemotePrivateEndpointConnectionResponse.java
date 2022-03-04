@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.outputs.ErrorEntityResponse;
 import io.pulumi.azurenative.web.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.web.outputs.RemotePrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -112,7 +112,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     /**
      * Azure-AsyncOperation Error info.
      * 
-     */
+    */
     public Optional<ErrorEntityResponse> getError() {
         return Optional.ofNullable(this.error);
     }
@@ -121,77 +121,77 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * value for GET requests only.
      * For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * MSI resource
      * 
-     */
+    */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Azure resource manager plan.
      * 
-     */
+    */
     public Optional<ArmPlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * Resource specific properties.
      * 
-     */
+    */
     public Optional<RemotePrivateEndpointConnectionResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * SKU description of the resource.
      * 
-     */
+    */
     public Optional<SkuDescriptionResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Azure-AsyncOperation Status info.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Tags associated with resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of resource e.g "Microsoft.Web/sites".
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Logical Availability Zones the service is hosted in
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }
@@ -297,7 +297,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
             this.zones = zones;
             return this;
         }
-
         public ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse build() {
             return new ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(error, id, identity, location, name, plan, properties, sku, status, tags, type, zones);
         }

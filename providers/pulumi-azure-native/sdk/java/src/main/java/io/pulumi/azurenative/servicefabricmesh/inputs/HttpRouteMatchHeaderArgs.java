@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.enums.HeaderMatchType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,HeaderMatchType>> type;
+      private final @Nullable Input<Either<String,HeaderMatchType>> type;
 
     public Input<Either<String,HeaderMatchType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -47,7 +47,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -121,7 +121,6 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public HttpRouteMatchHeaderArgs build() {
             return new HttpRouteMatchHeaderArgs(name, type, value);
         }

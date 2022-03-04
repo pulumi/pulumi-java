@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkservices_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TrafficPortSelectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<String>> ports;
+      private final @Nullable Input<List<String>> ports;
 
     public Input<List<String>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -67,7 +67,6 @@ public final class TrafficPortSelectorArgs extends io.pulumi.resources.ResourceA
             this.ports = Input.ofNullable(ports);
             return this;
         }
-
         public TrafficPortSelectorArgs build() {
             return new TrafficPortSelectorArgs(ports);
         }

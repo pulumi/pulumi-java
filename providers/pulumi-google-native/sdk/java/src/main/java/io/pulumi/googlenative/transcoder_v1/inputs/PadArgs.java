@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bottomPixels")
-    private final @Nullable Input<Integer> bottomPixels;
+      private final @Nullable Input<Integer> bottomPixels;
 
     public Input<Integer> getBottomPixels() {
         return this.bottomPixels == null ? Input.empty() : this.bottomPixels;
@@ -34,7 +34,7 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="leftPixels")
-    private final @Nullable Input<Integer> leftPixels;
+      private final @Nullable Input<Integer> leftPixels;
 
     public Input<Integer> getLeftPixels() {
         return this.leftPixels == null ? Input.empty() : this.leftPixels;
@@ -45,7 +45,7 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rightPixels")
-    private final @Nullable Input<Integer> rightPixels;
+      private final @Nullable Input<Integer> rightPixels;
 
     public Input<Integer> getRightPixels() {
         return this.rightPixels == null ? Input.empty() : this.rightPixels;
@@ -56,7 +56,7 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topPixels")
-    private final @Nullable Input<Integer> topPixels;
+      private final @Nullable Input<Integer> topPixels;
 
     public Input<Integer> getTopPixels() {
         return this.topPixels == null ? Input.empty() : this.topPixels;
@@ -145,7 +145,6 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
             this.topPixels = Input.ofNullable(topPixels);
             return this;
         }
-
         public PadArgs build() {
             return new PadArgs(bottomPixels, leftPixels, rightPixels, topPixels);
         }

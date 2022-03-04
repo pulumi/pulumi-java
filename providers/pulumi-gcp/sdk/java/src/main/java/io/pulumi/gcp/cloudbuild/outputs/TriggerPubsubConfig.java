@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -50,7 +50,7 @@ public final class TriggerPubsubConfig {
     /**
      * Service account that will make the push request.
      * 
-     */
+    */
     public Optional<String> getServiceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
@@ -59,7 +59,7 @@ public final class TriggerPubsubConfig {
      * Potential issues with the underlying Pub/Sub subscription configuration.
      * Only populated on get requests.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -67,14 +67,14 @@ public final class TriggerPubsubConfig {
      * - 
      * Output only. Name of the subscription.
      * 
-     */
+    */
     public Optional<String> getSubscription() {
         return Optional.ofNullable(this.subscription);
     }
     /**
      * The name of the topic from which this subscription is receiving messages.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
@@ -124,7 +124,6 @@ public final class TriggerPubsubConfig {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public TriggerPubsubConfig build() {
             return new TriggerPubsubConfig(serviceAccountEmail, state, subscription, topic);
         }

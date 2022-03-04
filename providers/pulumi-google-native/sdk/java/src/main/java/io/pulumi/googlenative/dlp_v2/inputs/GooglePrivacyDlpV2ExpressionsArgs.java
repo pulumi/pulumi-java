@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ExpressionsLogicalOperator;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ConditionsArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<GooglePrivacyDlpV2ConditionsArgs> conditions;
+      private final @Nullable Input<GooglePrivacyDlpV2ConditionsArgs> conditions;
 
     public Input<GooglePrivacyDlpV2ConditionsArgs> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="logicalOperator")
-    private final @Nullable Input<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator;
+      private final @Nullable Input<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator;
 
     public Input<GooglePrivacyDlpV2ExpressionsLogicalOperator> getLogicalOperator() {
         return this.logicalOperator == null ? Input.empty() : this.logicalOperator;
@@ -94,7 +94,6 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
             this.logicalOperator = Input.ofNullable(logicalOperator);
             return this;
         }
-
         public GooglePrivacyDlpV2ExpressionsArgs build() {
             return new GooglePrivacyDlpV2ExpressionsArgs(conditions, logicalOperator);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devtestlab.inputs.GetCustomImageArgs;
 import io.pulumi.azurenative.devtestlab.outputs.GetCustomImageResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomImage {
-/**
- * A custom image.
+    private GetCustomImage() {}
+    public interface BuilderApplicator {
+        public void apply(GetCustomImageArgs.Builder a);
+    }
+    private static GetCustomImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCustomImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A custom image.
  * API Version: 2018-09-15.
  * 
- *
- * A custom image.
+     *
+     * A custom image.
  * 
- */
+     */
+    public static CompletableFuture<GetCustomImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A custom image.
+     * API Version: 2018-09-15.
+     * 
+     *
+         * A custom image.
+     * 
+     */
     public static CompletableFuture<GetCustomImageResult> invokeAsync(GetCustomImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getCustomImage", TypeShape.of(GetCustomImageResult.class), args == null ? GetCustomImageArgs.Empty : args, Utilities.withVersion(options));
     }

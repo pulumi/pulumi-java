@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="endedOn", required=true)
-    private final String endedOn;
+      private final String endedOn;
 
     public String getEndedOn() {
         return this.endedOn;
@@ -33,7 +33,7 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="errorPrefix", required=true)
-    private final String errorPrefix;
+      private final String errorPrefix;
 
     public String getErrorPrefix() {
         return this.errorPrefix;
@@ -44,7 +44,7 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="itemsCompletedCount", required=true)
-    private final Double itemsCompletedCount;
+      private final Double itemsCompletedCount;
 
     public Double getItemsCompletedCount() {
         return this.itemsCompletedCount;
@@ -55,7 +55,7 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="itemsCount", required=true)
-    private final Double itemsCount;
+      private final Double itemsCount;
 
     public Double getItemsCount() {
         return this.itemsCount;
@@ -66,7 +66,7 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,7 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="resultPrefix", required=true)
-    private final String resultPrefix;
+      private final String resultPrefix;
 
     public String getResultPrefix() {
         return this.resultPrefix;
@@ -88,7 +88,7 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="startedOn", required=true)
-    private final String startedOn;
+      private final String startedOn;
 
     public String getStartedOn() {
         return this.startedOn;
@@ -99,7 +99,7 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -110,7 +110,7 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="statusMessage", required=true)
-    private final String statusMessage;
+      private final String statusMessage;
 
     public String getStatusMessage() {
         return this.statusMessage;
@@ -229,7 +229,6 @@ public final class DataItemMigrationSummaryResultResponse extends io.pulumi.reso
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public DataItemMigrationSummaryResultResponse build() {
             return new DataItemMigrationSummaryResultResponse(endedOn, errorPrefix, itemsCompletedCount, itemsCount, name, resultPrefix, startedOn, state, statusMessage);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ssmincidents;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ssmincidents.inputs.GetReplicationSetArgs;
 import io.pulumi.awsnative.ssmincidents.outputs.GetReplicationSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationSet {
-/**
- * Resource type definition for AWS::SSMIncidents::ReplicationSet
+    private GetReplicationSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetReplicationSetArgs.Builder a);
+    }
+    private static GetReplicationSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReplicationSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource type definition for AWS::SSMIncidents::ReplicationSet
  * 
- */
+     */
+    public static CompletableFuture<GetReplicationSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource type definition for AWS::SSMIncidents::ReplicationSet
+     * 
+     */
     public static CompletableFuture<GetReplicationSetResult> invokeAsync(GetReplicationSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmincidents:getReplicationSet", TypeShape.of(GetReplicationSetResult.class), args == null ? GetReplicationSetArgs.Empty : args, Utilities.withVersion(options));
     }

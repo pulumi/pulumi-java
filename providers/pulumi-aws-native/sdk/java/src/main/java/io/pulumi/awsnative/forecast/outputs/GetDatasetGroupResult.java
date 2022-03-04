@@ -5,7 +5,7 @@ package io.pulumi.awsnative.forecast.outputs;
 
 import io.pulumi.awsnative.forecast.enums.DatasetGroupDomain;
 import io.pulumi.awsnative.forecast.outputs.DatasetGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class GetDatasetGroupResult {
     /**
      * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
      * 
-     */
+    */
     public List<String> getDatasetArns() {
         return this.datasetArns == null ? List.of() : this.datasetArns;
     }
     /**
      * The Amazon Resource Name (ARN) of the dataset group to delete.
      * 
-     */
+    */
     public Optional<String> getDatasetGroupArn() {
         return Optional.ofNullable(this.datasetGroupArn);
     }
     /**
      * The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
      * 
-     */
+    */
     public Optional<DatasetGroupDomain> getDomain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * The tags of Application Insights application.
      * 
-     */
+    */
     public List<DatasetGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -121,7 +121,6 @@ public final class GetDatasetGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatasetGroupResult build() {
             return new GetDatasetGroupResult(datasetArns, datasetGroupArn, domain, tags);
         }

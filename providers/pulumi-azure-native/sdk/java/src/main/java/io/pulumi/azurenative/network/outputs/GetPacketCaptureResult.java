@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.PacketCaptureFilterResponse;
 import io.pulumi.azurenative.network.outputs.PacketCaptureStorageLocationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -94,70 +94,70 @@ public final class GetPacketCaptureResult {
     /**
      * Number of bytes captured per packet, the remaining bytes are truncated.
      * 
-     */
+    */
     public Optional<Double> getBytesToCapturePerPacket() {
         return Optional.ofNullable(this.bytesToCapturePerPacket);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * A list of packet capture filters.
      * 
-     */
+    */
     public List<PacketCaptureFilterResponse> getFilters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * ID of the packet capture operation.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the packet capture session.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the packet capture session.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The storage location for a packet capture session.
      * 
-     */
+    */
     public PacketCaptureStorageLocationResponse getStorageLocation() {
         return this.storageLocation;
     }
     /**
      * The ID of the targeted resource, only VM is currently supported.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }
     /**
      * Maximum duration of the capture session in seconds.
      * 
-     */
+    */
     public Optional<Integer> getTimeLimitInSeconds() {
         return Optional.ofNullable(this.timeLimitInSeconds);
     }
     /**
      * Maximum size of the capture output.
      * 
-     */
+    */
     public Optional<Double> getTotalBytesPerSession() {
         return Optional.ofNullable(this.totalBytesPerSession);
     }
@@ -249,7 +249,6 @@ public final class GetPacketCaptureResult {
             this.totalBytesPerSession = totalBytesPerSession;
             return this;
         }
-
         public GetPacketCaptureResult build() {
             return new GetPacketCaptureResult(bytesToCapturePerPacket, etag, filters, id, name, provisioningState, storageLocation, target, timeLimitInSeconds, totalBytesPerSession);
         }

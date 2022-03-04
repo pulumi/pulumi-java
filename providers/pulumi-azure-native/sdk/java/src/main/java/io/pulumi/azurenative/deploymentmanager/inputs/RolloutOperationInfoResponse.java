@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.CloudErrorBodyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -35,7 +35,7 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="error", required=true)
-    private final CloudErrorBodyResponse error;
+      private final CloudErrorBodyResponse error;
 
     public CloudErrorBodyResponse getError() {
         return this.error;
@@ -46,7 +46,7 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="retryAttempt", required=true)
-    private final Integer retryAttempt;
+      private final Integer retryAttempt;
 
     public Integer getRetryAttempt() {
         return this.retryAttempt;
@@ -57,7 +57,7 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="skipSucceededOnRetry", required=true)
-    private final Boolean skipSucceededOnRetry;
+      private final Boolean skipSucceededOnRetry;
 
     public Boolean getSkipSucceededOnRetry() {
         return this.skipSucceededOnRetry;
@@ -68,7 +68,7 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -147,7 +147,6 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public RolloutOperationInfoResponse build() {
             return new RolloutOperationInfoResponse(endTime, error, retryAttempt, skipSucceededOnRetry, startTime);
         }

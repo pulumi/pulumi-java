@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,21 +48,21 @@ public final class StatusCause {
      *   "name" - the field "name" on the current resource
      *   "items[0].name" - the field "name" on the first array entry in "items"
      * 
-     */
+    */
     public Optional<String> getField() {
         return Optional.ofNullable(this.field);
     }
     /**
      * A human-readable description of the cause of the error.  This field may be presented as-is to a reader.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * A machine-readable description of the cause of the error. If this value is empty there is no information available.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
@@ -105,7 +105,6 @@ public final class StatusCause {
             this.reason = reason;
             return this;
         }
-
         public StatusCause build() {
             return new StatusCause(field, message, reason);
         }

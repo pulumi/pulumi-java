@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta1a.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class PushConfigResponse {
     /**
      * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use "https://example.com/push".
      * 
-     */
+    */
     public String getPushEndpoint() {
         return this.pushEndpoint;
     }
@@ -52,7 +52,6 @@ public final class PushConfigResponse {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }
-
         public PushConfigResponse build() {
             return new PushConfigResponse(pushEndpoint);
         }

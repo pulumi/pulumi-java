@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class IncidentLabelResponse {
     /**
      * The name of the label
      * 
-     */
+    */
     public String getLabelName() {
         return this.labelName;
     }
     /**
      * The type of the label
      * 
-     */
+    */
     public String getLabelType() {
         return this.labelType;
     }
@@ -74,7 +74,6 @@ public final class IncidentLabelResponse {
             this.labelType = Objects.requireNonNull(labelType);
             return this;
         }
-
         public IncidentLabelResponse build() {
             return new IncidentLabelResponse(labelName, labelType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     public static final VersionArgs Empty = new VersionArgs();
 
     @InputImport(name="agentId", required=true)
-    private final Input<String> agentId;
+      private final Input<String> agentId;
 
     public Input<String> getAgentId() {
         return this.agentId;
@@ -26,7 +26,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,21 +37,21 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="flowId", required=true)
-    private final Input<String> flowId;
+      private final Input<String> flowId;
 
     public Input<String> getFlowId() {
         return this.flowId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -62,14 +62,14 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -203,7 +203,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public VersionArgs build() {
             return new VersionArgs(agentId, description, displayName, flowId, location, name, project);
         }

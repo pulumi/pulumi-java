@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.DataSourceCredentialPair;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public final class DataSourceCredentials {
      *             data source in the ARN is used as the credentials for the
      *             <code>DataSourceCredentials</code> structure.</p>
      * 
-     */
+    */
     public Optional<String> getCopySourceArn() {
         return Optional.ofNullable(this.copySourceArn);
     }
@@ -75,7 +75,6 @@ public final class DataSourceCredentials {
             this.credentialPair = credentialPair;
             return this;
         }
-
         public DataSourceCredentials build() {
             return new DataSourceCredentials(copySourceArn, credentialPair);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.logging_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="usePartitionedTables")
-    private final @Nullable Input<Boolean> usePartitionedTables;
+      private final @Nullable Input<Boolean> usePartitionedTables;
 
     public Input<Boolean> getUsePartitionedTables() {
         return this.usePartitionedTables == null ? Input.empty() : this.usePartitionedTables;
@@ -66,7 +66,6 @@ public final class BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs 
             this.usePartitionedTables = Input.ofNullable(usePartitionedTables);
             return this;
         }
-
         public BigQueryOptionsArgs build() {
             return new BigQueryOptionsArgs(usePartitionedTables);
         }

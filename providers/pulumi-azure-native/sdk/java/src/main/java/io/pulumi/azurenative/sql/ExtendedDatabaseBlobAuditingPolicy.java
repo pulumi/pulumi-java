@@ -8,8 +8,8 @@ import io.pulumi.azurenative.sql.ExtendedDatabaseBlobAuditingPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -322,6 +322,37 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ExtendedDatabaseBlobAuditingPolicyArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.sql.ExtendedDatabaseBlobAuditingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.sql.ExtendedDatabaseBlobAuditingPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ExtendedDatabaseBlobAuditingPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ExtendedDatabaseBlobAuditingPolicy(String name) {
+        this(name, ExtendedDatabaseBlobAuditingPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ExtendedDatabaseBlobAuditingPolicy(String name, ExtendedDatabaseBlobAuditingPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class DeliveryPackageInformationResponse {
     /**
      * The name of the carrier that is used to ship the import or export drives.
      * 
-     */
+    */
     public String getCarrierName() {
         return this.carrierName;
     }
     /**
      * The number of drives included in the package.
      * 
-     */
+    */
     public Optional<Double> getDriveCount() {
         return Optional.ofNullable(this.driveCount);
     }
     /**
      * The date when the package is shipped.
      * 
-     */
+    */
     public Optional<String> getShipDate() {
         return Optional.ofNullable(this.shipDate);
     }
     /**
      * The tracking number of the package.
      * 
-     */
+    */
     public String getTrackingNumber() {
         return this.trackingNumber;
     }
@@ -119,7 +119,6 @@ public final class DeliveryPackageInformationResponse {
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
         }
-
         public DeliveryPackageInformationResponse build() {
             return new DeliveryPackageInformationResponse(carrierName, driveCount, shipDate, trackingNumber);
         }

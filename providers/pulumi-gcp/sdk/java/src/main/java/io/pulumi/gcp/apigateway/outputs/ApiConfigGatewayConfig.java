@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.apigateway.outputs.ApiConfigGatewayConfigBackendConfig;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ApiConfigGatewayConfig {
      * Backend settings that are applied to all backends of the Gateway.
      * Structure is documented below.
      * 
-     */
+    */
     public ApiConfigGatewayConfigBackendConfig getBackendConfig() {
         return this.backendConfig;
     }
@@ -54,7 +54,6 @@ public final class ApiConfigGatewayConfig {
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }
-
         public ApiConfigGatewayConfig build() {
             return new ApiConfigGatewayConfig(backendConfig);
         }

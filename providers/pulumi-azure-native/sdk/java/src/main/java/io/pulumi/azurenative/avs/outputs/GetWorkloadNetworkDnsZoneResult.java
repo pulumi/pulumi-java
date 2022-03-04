@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -91,70 +91,70 @@ public final class GetWorkloadNetworkDnsZoneResult {
     /**
      * Display name of the DNS Zone.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * DNS Server IP array of the DNS Zone.
      * 
-     */
+    */
     public List<String> getDnsServerIps() {
         return this.dnsServerIps == null ? List.of() : this.dnsServerIps;
     }
     /**
      * Number of DNS Services using the DNS zone.
      * 
-     */
+    */
     public Optional<Double> getDnsServices() {
         return Optional.ofNullable(this.dnsServices);
     }
     /**
      * Domain names of the DNS Zone.
      * 
-     */
+    */
     public List<String> getDomain() {
         return this.domain == null ? List.of() : this.domain;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
      * 
-     */
+    */
     public Optional<Double> getRevision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * Source IP of the DNS Zone.
      * 
-     */
+    */
     public Optional<String> getSourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -246,7 +246,6 @@ public final class GetWorkloadNetworkDnsZoneResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkDnsZoneResult build() {
             return new GetWorkloadNetworkDnsZoneResult(displayName, dnsServerIps, dnsServices, domain, id, name, provisioningState, revision, sourceIp, type);
         }

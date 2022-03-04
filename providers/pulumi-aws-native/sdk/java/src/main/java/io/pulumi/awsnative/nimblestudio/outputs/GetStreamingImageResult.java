@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.outputs.StreamingImageEncryptionConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,7 +62,7 @@ public final class GetStreamingImageResult {
     /**
      * <p>A human-readable description of the streaming image.</p>
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -72,28 +72,28 @@ public final class GetStreamingImageResult {
     /**
      * <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
      * 
-     */
+    */
     public List<String> getEulaIds() {
         return this.eulaIds == null ? List.of() : this.eulaIds;
     }
     /**
      * <p>A friendly name for a streaming image resource.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
      * 
-     */
+    */
     public Optional<String> getOwner() {
         return Optional.ofNullable(this.owner);
     }
     /**
      * <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
      * 
-     */
+    */
     public Optional<String> getPlatform() {
         return Optional.ofNullable(this.platform);
     }
@@ -167,7 +167,6 @@ public final class GetStreamingImageResult {
             this.streamingImageId = streamingImageId;
             return this;
         }
-
         public GetStreamingImageResult build() {
             return new GetStreamingImageResult(description, encryptionConfiguration, eulaIds, name, owner, platform, streamingImageId);
         }

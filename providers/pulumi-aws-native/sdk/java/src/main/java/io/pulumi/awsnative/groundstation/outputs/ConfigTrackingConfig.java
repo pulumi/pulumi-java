@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigTrackingConfigAutotrack;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class ConfigTrackingConfig {
             this.autotrack = autotrack;
             return this;
         }
-
         public ConfigTrackingConfig build() {
             return new ConfigTrackingConfig(autotrack);
         }

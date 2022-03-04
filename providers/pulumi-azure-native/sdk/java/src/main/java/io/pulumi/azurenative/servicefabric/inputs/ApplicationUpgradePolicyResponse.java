@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ArmApplicationHealthPolicyResponse;
 import io.pulumi.azurenative.servicefabric.inputs.ArmRollingUpgradeMonitoringPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="applicationHealthPolicy")
-    private final @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy;
+      private final @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy;
 
     public Optional<ArmApplicationHealthPolicyResponse> getApplicationHealthPolicy() {
         return this.applicationHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.applicationHealthPolicy);
@@ -37,7 +37,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="forceRestart")
-    private final @Nullable Boolean forceRestart;
+      private final @Nullable Boolean forceRestart;
 
     public Optional<Boolean> getForceRestart() {
         return this.forceRestart == null ? Optional.empty() : Optional.ofNullable(this.forceRestart);
@@ -48,7 +48,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recreateApplication")
-    private final @Nullable Boolean recreateApplication;
+      private final @Nullable Boolean recreateApplication;
 
     public Optional<Boolean> getRecreateApplication() {
         return this.recreateApplication == null ? Optional.empty() : Optional.ofNullable(this.recreateApplication);
@@ -59,7 +59,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rollingUpgradeMonitoringPolicy")
-    private final @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy;
+      private final @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy;
 
     public Optional<ArmRollingUpgradeMonitoringPolicyResponse> getRollingUpgradeMonitoringPolicy() {
         return this.rollingUpgradeMonitoringPolicy == null ? Optional.empty() : Optional.ofNullable(this.rollingUpgradeMonitoringPolicy);
@@ -70,7 +70,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="upgradeMode")
-    private final @Nullable String upgradeMode;
+      private final @Nullable String upgradeMode;
 
     public Optional<String> getUpgradeMode() {
         return this.upgradeMode == null ? Optional.empty() : Optional.ofNullable(this.upgradeMode);
@@ -81,7 +81,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="upgradeReplicaSetCheckTimeout")
-    private final @Nullable String upgradeReplicaSetCheckTimeout;
+      private final @Nullable String upgradeReplicaSetCheckTimeout;
 
     public Optional<String> getUpgradeReplicaSetCheckTimeout() {
         return this.upgradeReplicaSetCheckTimeout == null ? Optional.empty() : Optional.ofNullable(this.upgradeReplicaSetCheckTimeout);
@@ -170,7 +170,6 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
             this.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
         }
-
         public ApplicationUpgradePolicyResponse build() {
             return new ApplicationUpgradePolicyResponse(applicationHealthPolicy, forceRestart, recreateApplication, rollingUpgradeMonitoringPolicy, upgradeMode, upgradeReplicaSetCheckTimeout);
         }

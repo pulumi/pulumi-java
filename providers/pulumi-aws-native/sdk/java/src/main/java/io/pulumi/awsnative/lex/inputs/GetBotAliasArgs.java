@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetBotAliasArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetBotAliasArgs Empty = new GetBotAliasArgs();
 
     @InputImport(name="botAliasId", required=true)
-    private final String botAliasId;
+      private final String botAliasId;
 
     public String getBotAliasId() {
         return this.botAliasId;
     }
 
     @InputImport(name="botId", required=true)
-    private final String botId;
+      private final String botId;
 
     public String getBotId() {
         return this.botId;
@@ -69,7 +69,6 @@ public final class GetBotAliasArgs extends io.pulumi.resources.InvokeArgs {
             this.botId = Objects.requireNonNull(botId);
             return this;
         }
-
         public GetBotAliasArgs build() {
             return new GetBotAliasArgs(botAliasId, botId);
         }

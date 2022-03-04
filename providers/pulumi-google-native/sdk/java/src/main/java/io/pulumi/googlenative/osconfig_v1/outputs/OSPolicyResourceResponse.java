@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceExecResourceResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceFileResourceResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourcePackageResourceResponse;
@@ -48,28 +48,28 @@ public final class OSPolicyResourceResponse {
     /**
      * Exec resource
      * 
-     */
+    */
     public OSPolicyResourceExecResourceResponse getExec() {
         return this.exec;
     }
     /**
      * File resource
      * 
-     */
+    */
     public OSPolicyResourceFileResourceResponse getFile() {
         return this.file;
     }
     /**
      * Package resource
      * 
-     */
+    */
     public OSPolicyResourcePackageResourceResponse getPkg() {
         return this.pkg;
     }
     /**
      * Package repository resource
      * 
-     */
+    */
     public OSPolicyResourceRepositoryResourceResponse getRepository() {
         return this.repository;
     }
@@ -119,7 +119,6 @@ public final class OSPolicyResourceResponse {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public OSPolicyResourceResponse build() {
             return new OSPolicyResourceResponse(exec, file, pkg, repository);
         }

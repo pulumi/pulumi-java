@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class KeyVaultPropertiesResponse {
     /**
      * The name of the key vault key.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * The Uri of the key vault.
      * 
-     */
+    */
     public String getKeyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The version of the key vault key.
      * 
-     */
+    */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
      * The user assigned identity (ARM resource id) that has access to the key.
      * 
-     */
+    */
     public Optional<String> getUserIdentity() {
         return Optional.ofNullable(this.userIdentity);
     }
@@ -118,7 +118,6 @@ public final class KeyVaultPropertiesResponse {
             this.userIdentity = userIdentity;
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyName, keyVaultUri, keyVersion, userIdentity);
         }

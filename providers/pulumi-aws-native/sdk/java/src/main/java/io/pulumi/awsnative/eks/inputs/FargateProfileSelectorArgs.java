@@ -5,7 +5,7 @@ package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.awsnative.eks.inputs.FargateProfileLabelArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class FargateProfileSelectorArgs extends io.pulumi.resources.Resour
     public static final FargateProfileSelectorArgs Empty = new FargateProfileSelectorArgs();
 
     @InputImport(name="labels")
-    private final @Nullable Input<List<FargateProfileLabelArgs>> labels;
+      private final @Nullable Input<List<FargateProfileLabelArgs>> labels;
 
     public Input<List<FargateProfileLabelArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -83,7 +83,6 @@ public final class FargateProfileSelectorArgs extends io.pulumi.resources.Resour
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }
-
         public FargateProfileSelectorArgs build() {
             return new FargateProfileSelectorArgs(labels, namespace);
         }

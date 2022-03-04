@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.enums.OrganizationMembershipType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
      * 
      */
     @InputImport(name="excludedAccountIds")
-    private final @Nullable Input<List<String>> excludedAccountIds;
+      private final @Nullable Input<List<String>> excludedAccountIds;
 
     public Input<List<String>> getExcludedAccountIds() {
         return this.excludedAccountIds == null ? Input.empty() : this.excludedAccountIds;
@@ -37,7 +37,7 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
      * 
      */
     @InputImport(name="organizationMembershipType")
-    private final @Nullable Input<Either<String,OrganizationMembershipType>> organizationMembershipType;
+      private final @Nullable Input<Either<String,OrganizationMembershipType>> organizationMembershipType;
 
     public Input<Either<String,OrganizationMembershipType>> getOrganizationMembershipType() {
         return this.organizationMembershipType == null ? Input.empty() : this.organizationMembershipType;
@@ -48,7 +48,7 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
      * 
      */
     @InputImport(name="parentHierarchyId")
-    private final @Nullable Input<String> parentHierarchyId;
+      private final @Nullable Input<String> parentHierarchyId;
 
     public Input<String> getParentHierarchyId() {
         return this.parentHierarchyId == null ? Input.empty() : this.parentHierarchyId;
@@ -59,7 +59,7 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
      * 
      */
     @InputImport(name="stacksetName")
-    private final @Nullable Input<String> stacksetName;
+      private final @Nullable Input<String> stacksetName;
 
     public Input<String> getStacksetName() {
         return this.stacksetName == null ? Input.empty() : this.stacksetName;
@@ -148,7 +148,6 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
             this.stacksetName = Input.ofNullable(stacksetName);
             return this;
         }
-
         public SecurityConnectorPropertiesOrganizationalDataArgs build() {
             return new SecurityConnectorPropertiesOrganizationalDataArgs(excludedAccountIds, organizationMembershipType, parentHierarchyId, stacksetName);
         }

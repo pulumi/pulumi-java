@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NetworkPeeringRoutesConfigArgs;
 import io.pulumi.gcp.compute.inputs.NetworkPeeringRoutesConfigState;
@@ -120,6 +120,37 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NetworkPeeringRoutesConfigArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.NetworkPeeringRoutesConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.NetworkPeeringRoutesConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NetworkPeeringRoutesConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public NetworkPeeringRoutesConfig(String name) {
+        this(name, NetworkPeeringRoutesConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NetworkPeeringRoutesConfig(String name, NetworkPeeringRoutesConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

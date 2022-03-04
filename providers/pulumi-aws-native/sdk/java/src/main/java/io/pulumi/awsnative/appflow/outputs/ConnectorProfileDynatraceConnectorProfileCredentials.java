@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentials {
     /**
      * The API tokens used by Dynatrace API to authenticate various API calls.
      * 
-     */
+    */
     public String getApiToken() {
         return this.apiToken;
     }
@@ -52,7 +52,6 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentials {
             this.apiToken = Objects.requireNonNull(apiToken);
             return this;
         }
-
         public ConnectorProfileDynatraceConnectorProfileCredentials build() {
             return new ConnectorProfileDynatraceConnectorProfileCredentials(apiToken);
         }

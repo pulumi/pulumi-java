@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -45,21 +45,21 @@ public final class SqlScheduledMaintenanceResponse {
     /**
      * If the scheduled maintenance can be rescheduled.
      * 
-     */
+    */
     public Boolean getCanReschedule() {
         return this.canReschedule;
     }
     /**
      * Maintenance cannot be rescheduled to start beyond this deadline.
      * 
-     */
+    */
     public String getScheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
     /**
      * The start time of any upcoming scheduled maintenance for this instance.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -109,7 +109,6 @@ public final class SqlScheduledMaintenanceResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public SqlScheduledMaintenanceResponse build() {
             return new SqlScheduledMaintenanceResponse(canDefer, canReschedule, scheduleDeadlineTime, startTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class SkuResponse {
     /**
      * The SKU capacity.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The SKU family.
      * 
-     */
+    */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The SKU model.
      * 
-     */
+    */
     public Optional<String> getModel() {
         return Optional.ofNullable(this.model);
     }
     /**
      * The SKU name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The SKU size.
      * 
-     */
+    */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * The SKU tier.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -161,7 +161,6 @@ public final class SkuResponse {
             this.tier = tier;
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(capacity, family, model, name, size, tier);
         }

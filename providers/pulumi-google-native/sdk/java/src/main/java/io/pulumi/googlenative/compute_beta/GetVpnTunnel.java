@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpnTunnel {
-/**
- * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
+    private GetVpnTunnel() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpnTunnelArgs.Builder a);
+    }
+    private static GetVpnTunnelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpnTunnelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetVpnTunnelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetVpnTunnelResult> invokeAsync(GetVpnTunnelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getVpnTunnel", TypeShape.of(GetVpnTunnelResult.class), args == null ? GetVpnTunnelArgs.Empty : args, Utilities.withVersion(options));
     }

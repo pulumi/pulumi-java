@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends io
      * 
      */
     @InputImport(name="allowAllBundleIds")
-    private final @Nullable Input<Boolean> allowAllBundleIds;
+      private final @Nullable Input<Boolean> allowAllBundleIds;
 
     public Input<Boolean> getAllowAllBundleIds() {
         return this.allowAllBundleIds == null ? Input.empty() : this.allowAllBundleIds;
@@ -36,7 +36,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends io
      * 
      */
     @InputImport(name="allowedBundleIds")
-    private final @Nullable Input<List<String>> allowedBundleIds;
+      private final @Nullable Input<List<String>> allowedBundleIds;
 
     public Input<List<String>> getAllowedBundleIds() {
         return this.allowedBundleIds == null ? Input.empty() : this.allowedBundleIds;
@@ -95,7 +95,6 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends io
             this.allowedBundleIds = Input.ofNullable(allowedBundleIds);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs build() {
             return new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs(allowAllBundleIds, allowedBundleIds);
         }

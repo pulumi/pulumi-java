@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -52,7 +52,7 @@ public final class SnapshotSnapshotEncryptionKey {
     /**
      * The name of the encryption key that is stored in Google Cloud KMS.
      * 
-     */
+    */
     public Optional<String> getKmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
@@ -60,7 +60,7 @@ public final class SnapshotSnapshotEncryptionKey {
      * The service account used for the encryption request for the given KMS key.
      * If absent, the Compute Engine Service Agent service account is used.
      * 
-     */
+    */
     public Optional<String> getKmsKeyServiceAccount() {
         return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
@@ -69,7 +69,7 @@ public final class SnapshotSnapshotEncryptionKey {
      * RFC 4648 base64 to either encrypt or decrypt this resource.
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public Optional<String> getRawKey() {
         return Optional.ofNullable(this.rawKey);
     }
@@ -78,7 +78,7 @@ public final class SnapshotSnapshotEncryptionKey {
      * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
      * encryption key that protects this resource.
      * 
-     */
+    */
     public Optional<String> getSha256() {
         return Optional.ofNullable(this.sha256);
     }
@@ -128,7 +128,6 @@ public final class SnapshotSnapshotEncryptionKey {
             this.sha256 = sha256;
             return this;
         }
-
         public SnapshotSnapshotEncryptionKey build() {
             return new SnapshotSnapshotEncryptionKey(kmsKeySelfLink, kmsKeyServiceAccount, rawKey, sha256);
         }

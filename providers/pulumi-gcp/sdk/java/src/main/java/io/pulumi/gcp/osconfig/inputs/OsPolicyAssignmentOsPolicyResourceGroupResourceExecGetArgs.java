@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs ex
      * 
      */
     @InputImport(name="enforce")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> getEnforce() {
         return this.enforce == null ? Input.empty() : this.enforce;
@@ -31,7 +31,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs ex
      * 
      */
     @InputImport(name="validate", required=true)
-    private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate;
+      private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> getValidate() {
         return this.validate;
@@ -90,7 +90,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs ex
             this.validate = Input.of(Objects.requireNonNull(validate));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs(enforce, validate);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTopic {
-/**
- * Get information about a Google Cloud Pub/Sub Topic. For more information see
+    private GetTopic() {}
+    public interface BuilderApplicator {
+        public void apply(GetTopicArgs.Builder a);
+    }
+    private static GetTopicArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTopicArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information about a Google Cloud Pub/Sub Topic. For more information see
  * the [official documentation](https://cloud.google.com/pubsub/docs/)
  * and [API](https://cloud.google.com/pubsub/docs/apis).
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getTopic.
+     *
+     * A collection of arguments for invoking getTopic.
  * 
- *
- * A collection of values returned by getTopic.
+     *
+     * A collection of values returned by getTopic.
  * 
- */
+     */
+    public static CompletableFuture<GetTopicResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information about a Google Cloud Pub/Sub Topic. For more information see
+     * the [official documentation](https://cloud.google.com/pubsub/docs/)
+     * and [API](https://cloud.google.com/pubsub/docs/apis).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getTopic.
+     * 
+     *
+         * A collection of values returned by getTopic.
+     * 
+     */
     public static CompletableFuture<GetTopicResult> invokeAsync(GetTopicArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:pubsub/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args == null ? GetTopicArgs.Empty : args, Utilities.withVersion(options));
     }

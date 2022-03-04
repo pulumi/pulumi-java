@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     public static final SessionArgs Empty = new SessionArgs();
 
     @InputImport(name="databaseId", required=true)
-    private final Input<String> databaseId;
+      private final Input<String> databaseId;
 
     public Input<String> getDatabaseId() {
         return this.databaseId;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -34,14 +34,14 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -130,7 +130,6 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public SessionArgs build() {
             return new SessionArgs(databaseId, instanceId, labels, project);
         }

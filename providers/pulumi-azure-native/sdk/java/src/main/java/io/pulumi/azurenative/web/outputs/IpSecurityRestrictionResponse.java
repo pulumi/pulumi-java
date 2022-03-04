@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -117,14 +117,14 @@ public final class IpSecurityRestrictionResponse {
     /**
      * Allow or Deny access for this IP range.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP restriction rule description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -146,7 +146,7 @@ public final class IpSecurityRestrictionResponse {
      * X-Azure-FDID and X-FD-HealthProbe.
      * The matching logic is exact match.
      * 
-     */
+    */
     public Map<String,List<String>> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
     }
@@ -156,56 +156,56 @@ public final class IpSecurityRestrictionResponse {
      * CIDR notation such as ipv4/mask (leading bit match). For CIDR,
      * SubnetMask property must not be specified.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * IP restriction rule name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of IP restriction rule.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Subnet mask for the range of IP addresses the restriction is valid for.
      * 
-     */
+    */
     public Optional<String> getSubnetMask() {
         return Optional.ofNullable(this.subnetMask);
     }
     /**
      * (internal) Subnet traffic tag
      * 
-     */
+    */
     public Optional<Integer> getSubnetTrafficTag() {
         return Optional.ofNullable(this.subnetTrafficTag);
     }
     /**
      * Defines what this IP filter will be used for. This is to support IP filtering on proxies.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
     /**
      * Virtual network resource id
      * 
-     */
+    */
     public Optional<String> getVnetSubnetResourceId() {
         return Optional.ofNullable(this.vnetSubnetResourceId);
     }
     /**
      * (internal) Vnet traffic tag
      * 
-     */
+    */
     public Optional<Integer> getVnetTrafficTag() {
         return Optional.ofNullable(this.vnetTrafficTag);
     }
@@ -304,7 +304,6 @@ public final class IpSecurityRestrictionResponse {
             this.vnetTrafficTag = vnetTrafficTag;
             return this;
         }
-
         public IpSecurityRestrictionResponse build() {
             return new IpSecurityRestrictionResponse(action, description, headers, ipAddress, name, priority, subnetMask, subnetTrafficTag, tag, vnetSubnetResourceId, vnetTrafficTag);
         }

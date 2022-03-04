@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LoadBalancerStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.Condition;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class ServiceStatus {
     /**
      * Current service state
      * 
-     */
+    */
     public List<Condition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * LoadBalancer contains the current status of the load-balancer, if one is present.
      * 
-     */
+    */
     public Optional<LoadBalancerStatus> getLoadBalancer() {
         return Optional.ofNullable(this.loadBalancer);
     }
@@ -78,7 +78,6 @@ public final class ServiceStatus {
             this.loadBalancer = loadBalancer;
             return this;
         }
-
         public ServiceStatus build() {
             return new ServiceStatus(conditions, loadBalancer);
         }

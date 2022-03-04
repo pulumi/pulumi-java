@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -106,63 +106,63 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
     /**
      * Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The id of an existing interactive cluster that will be used for all runs of this job. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getClusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The credential reference containing authentication information.
      * 
-     */
+    */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getDomain() {
         return this.domain;
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
@@ -170,14 +170,14 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'AzureDatabricksDeltaLake'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getWorkspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -276,7 +276,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public AzureDatabricksDeltaLakeLinkedServiceResponse build() {
             return new AzureDatabricksDeltaLakeLinkedServiceResponse(accessToken, annotations, clusterId, connectVia, credential, description, domain, encryptedCredential, parameters, type, workspaceResourceId);
         }

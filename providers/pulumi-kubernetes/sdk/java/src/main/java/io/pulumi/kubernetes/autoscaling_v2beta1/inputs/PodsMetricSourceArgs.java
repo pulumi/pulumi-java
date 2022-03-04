@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -35,7 +35,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -46,7 +46,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetAverageValue", required=true)
-    private final Input<String> targetAverageValue;
+      private final Input<String> targetAverageValue;
 
     public Input<String> getTargetAverageValue() {
         return this.targetAverageValue;
@@ -120,7 +120,6 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
             this.targetAverageValue = Input.of(Objects.requireNonNull(targetAverageValue));
             return this;
         }
-
         public PodsMetricSourceArgs build() {
             return new PodsMetricSourceArgs(metricName, selector, targetAverageValue);
         }

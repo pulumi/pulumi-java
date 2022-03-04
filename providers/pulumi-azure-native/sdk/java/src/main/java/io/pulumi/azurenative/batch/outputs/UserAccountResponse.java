@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.LinuxUserConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.WindowsUserConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,14 +48,14 @@ public final class UserAccountResponse {
     /**
      * nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
      * 
-     */
+    */
     public Optional<String> getElevationLevel() {
         return Optional.ofNullable(this.elevationLevel);
     }
     /**
      * This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
      * 
-     */
+    */
     public Optional<LinuxUserConfigurationResponse> getLinuxUserConfiguration() {
         return Optional.ofNullable(this.linuxUserConfiguration);
     }
@@ -68,7 +68,7 @@ public final class UserAccountResponse {
     /**
      * This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.
      * 
-     */
+    */
     public Optional<WindowsUserConfigurationResponse> getWindowsUserConfiguration() {
         return Optional.ofNullable(this.windowsUserConfiguration);
     }
@@ -125,7 +125,6 @@ public final class UserAccountResponse {
             this.windowsUserConfiguration = windowsUserConfiguration;
             return this;
         }
-
         public UserAccountResponse build() {
             return new UserAccountResponse(elevationLevel, linuxUserConfiguration, name, password, windowsUserConfiguration);
         }

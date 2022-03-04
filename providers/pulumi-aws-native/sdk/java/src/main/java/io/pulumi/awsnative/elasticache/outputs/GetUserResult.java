@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetUserResult {
     /**
      * The Amazon Resource Name (ARN) of the user account.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates the user status. Can be "active", "modifying" or "deleting".
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -76,7 +76,6 @@ public final class GetUserResult {
             this.status = status;
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(arn, status);
         }

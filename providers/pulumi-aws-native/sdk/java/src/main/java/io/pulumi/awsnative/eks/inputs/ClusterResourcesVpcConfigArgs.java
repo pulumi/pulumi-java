@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="endpointPrivateAccess")
-    private final @Nullable Input<Boolean> endpointPrivateAccess;
+      private final @Nullable Input<Boolean> endpointPrivateAccess;
 
     public Input<Boolean> getEndpointPrivateAccess() {
         return this.endpointPrivateAccess == null ? Input.empty() : this.endpointPrivateAccess;
@@ -36,7 +36,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="endpointPublicAccess")
-    private final @Nullable Input<Boolean> endpointPublicAccess;
+      private final @Nullable Input<Boolean> endpointPublicAccess;
 
     public Input<Boolean> getEndpointPublicAccess() {
         return this.endpointPublicAccess == null ? Input.empty() : this.endpointPublicAccess;
@@ -47,7 +47,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="publicAccessCidrs")
-    private final @Nullable Input<List<String>> publicAccessCidrs;
+      private final @Nullable Input<List<String>> publicAccessCidrs;
 
     public Input<List<String>> getPublicAccessCidrs() {
         return this.publicAccessCidrs == null ? Input.empty() : this.publicAccessCidrs;
@@ -58,7 +58,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -69,7 +69,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -173,7 +173,6 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
         public ClusterResourcesVpcConfigArgs build() {
             return new ClusterResourcesVpcConfigArgs(endpointPrivateAccess, endpointPublicAccess, publicAccessCidrs, securityGroupIds, subnetIds);
         }

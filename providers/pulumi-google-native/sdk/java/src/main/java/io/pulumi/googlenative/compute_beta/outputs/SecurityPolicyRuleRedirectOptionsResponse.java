@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SecurityPolicyRuleRedirectOptionsResponse {
     /**
      * Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }
     /**
      * Type of the redirect action.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class SecurityPolicyRuleRedirectOptionsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SecurityPolicyRuleRedirectOptionsResponse build() {
             return new SecurityPolicyRuleRedirectOptionsResponse(target, type);
         }

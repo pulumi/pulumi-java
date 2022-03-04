@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.FirewallDomainListStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallDomainListTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -93,70 +93,70 @@ public final class GetFirewallDomainListResult {
     /**
      * Arn
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Rfc3339TimeString
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The id of the creator request.
      * 
-     */
+    */
     public Optional<String> getCreatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
     /**
      * Count
      * 
-     */
+    */
     public Optional<Integer> getDomainCount() {
         return Optional.ofNullable(this.domainCount);
     }
     /**
      * ResourceId
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * ServicePrincipal
      * 
-     */
+    */
     public Optional<String> getManagedOwnerName() {
         return Optional.ofNullable(this.managedOwnerName);
     }
     /**
      * Rfc3339TimeString
      * 
-     */
+    */
     public Optional<String> getModificationTime() {
         return Optional.ofNullable(this.modificationTime);
     }
     /**
      * ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
-     */
+    */
     public Optional<FirewallDomainListStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * FirewallDomainListAssociationStatus
      * 
-     */
+    */
     public Optional<String> getStatusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
     /**
      * Tags
      * 
-     */
+    */
     public List<FirewallDomainListTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -248,7 +248,6 @@ public final class GetFirewallDomainListResult {
             this.tags = tags;
             return this;
         }
-
         public GetFirewallDomainListResult build() {
             return new GetFirewallDomainListResult(arn, creationTime, creatorRequestId, domainCount, id, managedOwnerName, modificationTime, status, statusMessage, tags);
         }

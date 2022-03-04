@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ResourceLocationDataContractResponse {
     /**
      * The city or locality where the resource is located.
      * 
-     */
+    */
     public Optional<String> getCity() {
         return Optional.ofNullable(this.city);
     }
     /**
      * The country or region where the resource is located.
      * 
-     */
+    */
     public Optional<String> getCountryOrRegion() {
         return Optional.ofNullable(this.countryOrRegion);
     }
     /**
      * The district, state, or province where the resource is located.
      * 
-     */
+    */
     public Optional<String> getDistrict() {
         return Optional.ofNullable(this.district);
     }
     /**
      * A canonical name for the geographic or physical location.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -118,7 +118,6 @@ public final class ResourceLocationDataContractResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ResourceLocationDataContractResponse build() {
             return new ResourceLocationDataContractResponse(city, countryOrRegion, district, name);
         }

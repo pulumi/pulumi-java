@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class IotEventHubIngestionEndpointConfigurationResponse {
     /**
      * Consumer group of the event hub to connected to.
      * 
-     */
+    */
     public Optional<String> getConsumerGroup() {
         return Optional.ofNullable(this.consumerGroup);
     }
     /**
      * Event Hub name to connect to.
      * 
-     */
+    */
     public Optional<String> getEventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
     /**
      * Fully qualified namespace of the Event Hub to connect to.
      * 
-     */
+    */
     public Optional<String> getFullyQualifiedEventHubNamespace() {
         return Optional.ofNullable(this.fullyQualifiedEventHubNamespace);
     }
@@ -97,7 +97,6 @@ public final class IotEventHubIngestionEndpointConfigurationResponse {
             this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
         }
-
         public IotEventHubIngestionEndpointConfigurationResponse build() {
             return new IotEventHubIngestionEndpointConfigurationResponse(consumerGroup, eventHubName, fullyQualifiedEventHubNamespace);
         }

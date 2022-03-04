@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ReportComparisonExpressionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class ReportFilterResponse {
     /**
      * The logical "AND" expression. Must have at least 2 items.
      * 
-     */
+    */
     public List<ReportFilterResponse> getAnd() {
         return this.and == null ? List.of() : this.and;
     }
     /**
      * Has comparison expression for a dimension
      * 
-     */
+    */
     public Optional<ReportComparisonExpressionResponse> getDimension() {
         return Optional.ofNullable(this.dimension);
     }
     /**
      * The logical "NOT" expression.
      * 
-     */
+    */
     public Optional<ReportFilterResponse> getNot() {
         return Optional.ofNullable(this.not);
     }
     /**
      * The logical "OR" expression. Must have at least 2 items.
      * 
-     */
+    */
     public List<ReportFilterResponse> getOr() {
         return this.or == null ? List.of() : this.or;
     }
     /**
      * Has comparison expression for a tag
      * 
-     */
+    */
     public Optional<ReportComparisonExpressionResponse> getTag() {
         return Optional.ofNullable(this.tag);
     }
@@ -140,7 +140,6 @@ public final class ReportFilterResponse {
             this.tag = tag;
             return this;
         }
-
         public ReportFilterResponse build() {
             return new ReportFilterResponse(and, dimension, not, or, tag);
         }

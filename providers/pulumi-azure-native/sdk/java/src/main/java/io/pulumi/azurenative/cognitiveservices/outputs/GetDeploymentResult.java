@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.DeploymentPropertiesResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,42 +61,42 @@ public final class GetDeploymentResult {
     /**
      * Resource Etag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of Cognitive Services account deployment.
      * 
-     */
+    */
     public DeploymentPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -160,7 +160,6 @@ public final class GetDeploymentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeploymentResult build() {
             return new GetDeploymentResult(etag, id, name, properties, systemData, type);
         }

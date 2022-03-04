@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cert", required=true)
-    private final String cert;
+      private final String cert;
 
     public String getCert() {
         return this.cert;
@@ -32,7 +32,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="certSerialNumber", required=true)
-    private final String certSerialNumber;
+      private final String certSerialNumber;
 
     public String getCertSerialNumber() {
         return this.certSerialNumber;
@@ -43,7 +43,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="commonName", required=true)
-    private final String commonName;
+      private final String commonName;
 
     public String getCommonName() {
         return this.commonName;
@@ -54,7 +54,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -65,7 +65,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expirationTime", required=true)
-    private final String expirationTime;
+      private final String expirationTime;
 
     public String getExpirationTime() {
         return this.expirationTime;
@@ -76,7 +76,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-    private final String instance;
+      private final String instance;
 
     public String getInstance() {
         return this.instance;
@@ -87,7 +87,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -98,7 +98,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selfLink", required=true)
-    private final String selfLink;
+      private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
@@ -109,7 +109,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sha1Fingerprint", required=true)
-    private final String sha1Fingerprint;
+      private final String sha1Fingerprint;
 
     public String getSha1Fingerprint() {
         return this.sha1Fingerprint;
@@ -228,7 +228,6 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public SslCertResponse build() {
             return new SslCertResponse(cert, certSerialNumber, commonName, createTime, expirationTime, instance, kind, selfLink, sha1Fingerprint);
         }

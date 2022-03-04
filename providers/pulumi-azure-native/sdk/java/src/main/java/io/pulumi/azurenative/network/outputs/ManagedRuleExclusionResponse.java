@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ManagedRuleExclusionResponse {
     /**
      * The variable type to be excluded.
      * 
-     */
+    */
     public String getMatchVariable() {
         return this.matchVariable;
     }
     /**
      * Selector value for which elements in the collection this exclusion applies to.
      * 
-     */
+    */
     public String getSelector() {
         return this.selector;
     }
     /**
      * Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
      * 
-     */
+    */
     public String getSelectorMatchOperator() {
         return this.selectorMatchOperator;
     }
@@ -95,7 +95,6 @@ public final class ManagedRuleExclusionResponse {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
-
         public ManagedRuleExclusionResponse build() {
             return new ManagedRuleExclusionResponse(matchVariable, selector, selectorMatchOperator);
         }

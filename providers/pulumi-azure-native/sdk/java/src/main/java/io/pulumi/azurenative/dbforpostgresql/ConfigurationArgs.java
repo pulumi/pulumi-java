@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dbforpostgresql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationName")
-    private final @Nullable Input<String> configurationName;
+      private final @Nullable Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName == null ? Input.empty() : this.configurationName;
@@ -30,7 +30,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -52,7 +52,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -63,7 +63,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -167,7 +167,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ConfigurationArgs build() {
             return new ConfigurationArgs(configurationName, resourceGroupName, serverName, source, value);
         }

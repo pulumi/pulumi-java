@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class IndexCapacityUnitsConfiguration {
             this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
             return this;
         }
-
         public IndexCapacityUnitsConfiguration build() {
             return new IndexCapacityUnitsConfiguration(queryCapacityUnits, storageCapacityUnits);
         }

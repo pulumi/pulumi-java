@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -79,49 +79,49 @@ public final class RerunTumblingWindowTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Trigger description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The parent trigger reference.
      * 
-     */
+    */
     public Object getParentTrigger() {
         return this.parentTrigger;
     }
     /**
      * The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
      * 
-     */
+    */
     public String getRequestedEndTime() {
         return this.requestedEndTime;
     }
     /**
      * The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
      * 
-     */
+    */
     public String getRequestedStartTime() {
         return this.requestedStartTime;
     }
     /**
      * The max number of parallel time windows (ready for execution) for which a rerun is triggered.
      * 
-     */
+    */
     public Integer getRerunConcurrency() {
         return this.rerunConcurrency;
     }
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-     */
+    */
     public String getRuntimeState() {
         return this.runtimeState;
     }
@@ -129,7 +129,7 @@ public final class RerunTumblingWindowTriggerResponse {
      * Trigger type.
      * Expected value is 'RerunTumblingWindowTrigger'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -207,7 +207,6 @@ public final class RerunTumblingWindowTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RerunTumblingWindowTriggerResponse build() {
             return new RerunTumblingWindowTriggerResponse(annotations, description, parentTrigger, requestedEndTime, requestedStartTime, rerunConcurrency, runtimeState, type);
         }

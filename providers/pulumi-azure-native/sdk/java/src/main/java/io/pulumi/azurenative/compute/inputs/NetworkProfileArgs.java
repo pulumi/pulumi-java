@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.inputs.NetworkInterfaceReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkApiVersion")
-    private final @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
+      private final @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
 
     public Input<Either<String,NetworkApiVersion>> getNetworkApiVersion() {
         return this.networkApiVersion == null ? Input.empty() : this.networkApiVersion;
@@ -39,7 +39,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-    private final @Nullable Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
+      private final @Nullable Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
 
     public Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? Input.empty() : this.networkInterfaceConfigurations;
@@ -50,7 +50,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
+      private final @Nullable Input<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
 
     public Input<List<NetworkInterfaceReferenceArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -124,7 +124,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
-
         public NetworkProfileArgs build() {
             return new NetworkProfileArgs(networkApiVersion, networkInterfaceConfigurations, networkInterfaces);
         }

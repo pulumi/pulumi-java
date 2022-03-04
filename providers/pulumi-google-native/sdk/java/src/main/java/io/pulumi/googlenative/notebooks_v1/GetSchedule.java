@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchedule {
-/**
- * Gets details of schedule
+    private GetSchedule() {}
+    public interface BuilderApplicator {
+        public void apply(GetScheduleArgs.Builder a);
+    }
+    private static GetScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of schedule
  * 
- */
+     */
+    public static CompletableFuture<GetScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of schedule
+     * 
+     */
     public static CompletableFuture<GetScheduleResult> invokeAsync(GetScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:notebooks/v1:getSchedule", TypeShape.of(GetScheduleResult.class), args == null ? GetScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

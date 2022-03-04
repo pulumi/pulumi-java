@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BotButton {
     /**
      * The text that appears on the button.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
     /**
      * The value returned to Amazon Lex when the user chooses this button.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class BotButton {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BotButton build() {
             return new BotButton(text, value);
         }

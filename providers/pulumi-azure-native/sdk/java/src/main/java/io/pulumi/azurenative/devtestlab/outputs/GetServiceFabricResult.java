@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.ApplicableScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -91,70 +91,70 @@ public final class GetServiceFabricResult {
     /**
      * The applicable schedule for the virtual machine.
      * 
-     */
+    */
     public ApplicableScheduleResponse getApplicableSchedule() {
         return this.applicableSchedule;
     }
     /**
      * The resource id of the environment under which the service fabric resource is present
      * 
-     */
+    */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
      * The backing service fabric resource's id
      * 
-     */
+    */
     public Optional<String> getExternalServiceFabricId() {
         return Optional.ofNullable(this.externalServiceFabricId);
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
@@ -246,7 +246,6 @@ public final class GetServiceFabricResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetServiceFabricResult build() {
             return new GetServiceFabricResult(applicableSchedule, environmentId, externalServiceFabricId, id, location, name, provisioningState, tags, type, uniqueIdentifier);
         }

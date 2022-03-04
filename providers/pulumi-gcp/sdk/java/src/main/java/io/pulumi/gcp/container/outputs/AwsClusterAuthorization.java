@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.AwsClusterAuthorizationAdminUser;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AwsClusterAuthorization {
     /**
      * Required. Users to perform operations as a cluster admin. A managed ClusterRoleBinding will be created to grant the `cluster-admin` ClusterRole to the users. At most one user can be specified. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
      * 
-     */
+    */
     public List<AwsClusterAuthorizationAdminUser> getAdminUsers() {
         return this.adminUsers;
     }
@@ -53,7 +53,6 @@ public final class AwsClusterAuthorization {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }
-
         public AwsClusterAuthorization build() {
             return new AwsClusterAuthorization(adminUsers);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -114,91 +114,91 @@ public final class GetZoneResult {
     /**
      * The etag of the zone.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public Double getMaxNumberOfRecordSets() {
         return this.maxNumberOfRecordSets;
     }
     /**
      * The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public Double getMaxNumberOfRecordsPerRecordSet() {
         return this.maxNumberOfRecordsPerRecordSet;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public List<String> getNameServers() {
         return this.nameServers;
     }
     /**
      * The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
-     */
+    */
     public Double getNumberOfRecordSets() {
         return this.numberOfRecordSets;
     }
     /**
      * A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
      * 
-     */
+    */
     public List<SubResourceResponse> getRegistrationVirtualNetworks() {
         return this.registrationVirtualNetworks == null ? List.of() : this.registrationVirtualNetworks;
     }
     /**
      * A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
      * 
-     */
+    */
     public List<SubResourceResponse> getResolutionVirtualNetworks() {
         return this.resolutionVirtualNetworks == null ? List.of() : this.resolutionVirtualNetworks;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The type of this DNS zone (Public or Private).
      * 
-     */
+    */
     public Optional<String> getZoneType() {
         return Optional.ofNullable(this.zoneType);
     }
@@ -311,7 +311,6 @@ public final class GetZoneResult {
             this.zoneType = zoneType;
             return this;
         }
-
         public GetZoneResult build() {
             return new GetZoneResult(etag, id, location, maxNumberOfRecordSets, maxNumberOfRecordsPerRecordSet, name, nameServers, numberOfRecordSets, registrationVirtualNetworks, resolutionVirtualNetworks, tags, type, zoneType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class AzureBackupParamsResponse {
     /**
      * BackupType ; Full/Incremental etc
      * 
-     */
+    */
     public String getBackupType() {
         return this.backupType;
     }
@@ -40,7 +40,7 @@ public final class AzureBackupParamsResponse {
      * Type of the specific object - used for deserializing
      * Expected value is 'AzureBackupParams'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
@@ -76,7 +76,6 @@ public final class AzureBackupParamsResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public AzureBackupParamsResponse build() {
             return new AzureBackupParamsResponse(backupType, objectType);
         }

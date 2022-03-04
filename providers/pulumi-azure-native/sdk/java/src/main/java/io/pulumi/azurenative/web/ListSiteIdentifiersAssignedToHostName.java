@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListSiteIdentifiersAssignedToHostNameArgs;
 import io.pulumi.azurenative.web.outputs.ListSiteIdentifiersAssignedToHostNameResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSiteIdentifiersAssignedToHostName {
-/**
- * Collection of identifiers.
+    private ListSiteIdentifiersAssignedToHostName() {}
+    public interface BuilderApplicator {
+        public void apply(ListSiteIdentifiersAssignedToHostNameArgs.Builder a);
+    }
+    private static ListSiteIdentifiersAssignedToHostNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListSiteIdentifiersAssignedToHostNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Collection of identifiers.
  * API Version: 2020-12-01.
  * 
- *
- * Collection of identifiers.
+     *
+     * Collection of identifiers.
  * 
- */
+     */
+    public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Collection of identifiers.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Collection of identifiers.
+     * 
+     */
     public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> invokeAsync(@Nullable ListSiteIdentifiersAssignedToHostNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listSiteIdentifiersAssignedToHostName", TypeShape.of(ListSiteIdentifiersAssignedToHostNameResult.class), args == null ? ListSiteIdentifiersAssignedToHostNameArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="referenceName", required=true)
-    private final Input<String> referenceName;
+      private final Input<String> referenceName;
 
     public Input<String> getReferenceName() {
         return this.referenceName;
@@ -45,7 +45,7 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -119,7 +119,6 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public PipelineReferenceArgs build() {
             return new PipelineReferenceArgs(name, referenceName, type);
         }

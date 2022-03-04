@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.enums.DataConnectorKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataConnectorId")
-    private final @Nullable Input<String> dataConnectorId;
+      private final @Nullable Input<String> dataConnectorId;
 
     public Input<String> getDataConnectorId() {
         return this.dataConnectorId == null ? Input.empty() : this.dataConnectorId;
@@ -32,7 +32,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,DataConnectorKind>> kind;
+      private final Input<Either<String,DataConnectorKind>> kind;
 
     public Input<Either<String,DataConnectorKind>> getKind() {
         return this.kind;
@@ -43,7 +43,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -143,7 +143,6 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public DataConnectorArgs build() {
             return new DataConnectorArgs(dataConnectorId, kind, resourceGroupName, workspaceName);
         }

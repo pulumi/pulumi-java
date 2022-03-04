@@ -6,21 +6,41 @@ package io.pulumi.azurenative.hybridcompute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hybridcompute.inputs.GetMachineArgs;
 import io.pulumi.azurenative.hybridcompute.outputs.GetMachineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMachine {
-/**
- * Describes a hybrid machine.
+    private GetMachine() {}
+    public interface BuilderApplicator {
+        public void apply(GetMachineArgs.Builder a);
+    }
+    private static GetMachineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMachineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a hybrid machine.
  * API Version: 2020-08-02.
  * 
- *
- * Describes a hybrid machine.
+     *
+     * Describes a hybrid machine.
  * 
- */
+     */
+    public static CompletableFuture<GetMachineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a hybrid machine.
+     * API Version: 2020-08-02.
+     * 
+     *
+         * Describes a hybrid machine.
+     * 
+     */
     public static CompletableFuture<GetMachineResult> invokeAsync(GetMachineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridcompute:getMachine", TypeShape.of(GetMachineResult.class), args == null ? GetMachineArgs.Empty : args, Utilities.withVersion(options));
     }

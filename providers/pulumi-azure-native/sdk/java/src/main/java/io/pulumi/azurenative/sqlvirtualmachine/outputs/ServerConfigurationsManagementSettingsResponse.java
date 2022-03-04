@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.outputs.AdditionalFeaturesServerC
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.SqlConnectivityUpdateSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.SqlStorageUpdateSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.SqlWorkloadTypeUpdateSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -50,28 +50,28 @@ public final class ServerConfigurationsManagementSettingsResponse {
     /**
      * Additional SQL feature settings.
      * 
-     */
+    */
     public Optional<AdditionalFeaturesServerConfigurationsResponse> getAdditionalFeaturesServerConfigurations() {
         return Optional.ofNullable(this.additionalFeaturesServerConfigurations);
     }
     /**
      * SQL connectivity type settings.
      * 
-     */
+    */
     public Optional<SqlConnectivityUpdateSettingsResponse> getSqlConnectivityUpdateSettings() {
         return Optional.ofNullable(this.sqlConnectivityUpdateSettings);
     }
     /**
      * SQL storage update settings.
      * 
-     */
+    */
     public Optional<SqlStorageUpdateSettingsResponse> getSqlStorageUpdateSettings() {
         return Optional.ofNullable(this.sqlStorageUpdateSettings);
     }
     /**
      * SQL workload type settings.
      * 
-     */
+    */
     public Optional<SqlWorkloadTypeUpdateSettingsResponse> getSqlWorkloadTypeUpdateSettings() {
         return Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
     }
@@ -121,7 +121,6 @@ public final class ServerConfigurationsManagementSettingsResponse {
             this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;
         }
-
         public ServerConfigurationsManagementSettingsResponse build() {
             return new ServerConfigurationsManagementSettingsResponse(additionalFeaturesServerConfigurations, sqlConnectivityUpdateSettings, sqlStorageUpdateSettings, sqlWorkloadTypeUpdateSettings);
         }

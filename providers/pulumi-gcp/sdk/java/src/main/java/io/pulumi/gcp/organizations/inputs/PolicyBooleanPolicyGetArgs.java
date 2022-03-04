@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PolicyBooleanPolicyGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enforced", required=true)
-    private final Input<Boolean> enforced;
+      private final Input<Boolean> enforced;
 
     public Input<Boolean> getEnforced() {
         return this.enforced;
@@ -61,7 +61,6 @@ public final class PolicyBooleanPolicyGetArgs extends io.pulumi.resources.Resour
             this.enforced = Input.of(Objects.requireNonNull(enforced));
             return this;
         }
-
         public PolicyBooleanPolicyGetArgs build() {
             return new PolicyBooleanPolicyGetArgs(enforced);
         }

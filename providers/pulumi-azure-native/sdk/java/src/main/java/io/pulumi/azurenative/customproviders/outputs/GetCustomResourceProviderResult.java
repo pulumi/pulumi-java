@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customproviders.outputs;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPActionRouteDefinitionResponse;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPResourceTypeRouteDefinitionResponse;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPValidationsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -86,63 +86,63 @@ public final class GetCustomResourceProviderResult {
     /**
      * A list of actions that the custom resource provider implements.
      * 
-     */
+    */
     public List<CustomRPActionRouteDefinitionResponse> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the resource provider.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * A list of resource types that the custom resource provider implements.
      * 
-     */
+    */
     public List<CustomRPResourceTypeRouteDefinitionResponse> getResourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A list of validations to run on the custom resource provider's requests.
      * 
-     */
+    */
     public List<CustomRPValidationsResponse> getValidations() {
         return this.validations == null ? List.of() : this.validations;
     }
@@ -227,7 +227,6 @@ public final class GetCustomResourceProviderResult {
             this.validations = validations;
             return this;
         }
-
         public GetCustomResourceProviderResult build() {
             return new GetCustomResourceProviderResult(actions, id, location, name, provisioningState, resourceTypes, tags, type, validations);
         }

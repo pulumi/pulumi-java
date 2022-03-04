@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.GenericSignedAttestationResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.PgpSignedAttestationResponse;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class AttestationResponse {
     /**
      * A PGP signed attestation.
      * 
-     */
+    */
     public PgpSignedAttestationResponse getPgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }
@@ -67,7 +67,6 @@ public final class AttestationResponse {
             this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
             return this;
         }
-
         public AttestationResponse build() {
             return new AttestationResponse(genericSignedAttestation, pgpSignedAttestation);
         }

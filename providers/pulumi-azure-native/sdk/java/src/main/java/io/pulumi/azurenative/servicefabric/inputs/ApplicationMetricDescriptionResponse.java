@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="maximumCapacity")
-    private final @Nullable Double maximumCapacity;
+      private final @Nullable Double maximumCapacity;
 
     public Optional<Double> getMaximumCapacity() {
         return this.maximumCapacity == null ? Optional.empty() : Optional.ofNullable(this.maximumCapacity);
@@ -39,7 +39,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -54,7 +54,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="reservationCapacity")
-    private final @Nullable Double reservationCapacity;
+      private final @Nullable Double reservationCapacity;
 
     public Optional<Double> getReservationCapacity() {
         return this.reservationCapacity == null ? Optional.empty() : Optional.ofNullable(this.reservationCapacity);
@@ -67,7 +67,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="totalApplicationCapacity")
-    private final @Nullable Double totalApplicationCapacity;
+      private final @Nullable Double totalApplicationCapacity;
 
     public Optional<Double> getTotalApplicationCapacity() {
         return this.totalApplicationCapacity == null ? Optional.empty() : Optional.ofNullable(this.totalApplicationCapacity);
@@ -136,7 +136,6 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
             this.totalApplicationCapacity = totalApplicationCapacity;
             return this;
         }
-
         public ApplicationMetricDescriptionResponse build() {
             return new ApplicationMetricDescriptionResponse(maximumCapacity, name, reservationCapacity, totalApplicationCapacity);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.ParticipantPropertyReferenceResponse;
 import io.pulumi.azurenative.customerinsights.outputs.TypePropertiesMappingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -136,112 +136,112 @@ public final class GetLinkResult {
     /**
      * Localized descriptions for the Link.
      * 
-     */
+    */
     public Map<String,String> getDescription() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Localized display name for the Link.
      * 
-     */
+    */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The link name.
      * 
-     */
+    */
     public String getLinkName() {
         return this.linkName;
     }
     /**
      * The set of properties mappings between the source and target Types.
      * 
-     */
+    */
     public List<TypePropertiesMappingResponse> getMappings() {
         return this.mappings == null ? List.of() : this.mappings;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
      * 
-     */
+    */
     public Optional<String> getOperationType() {
         return Optional.ofNullable(this.operationType);
     }
     /**
      * The properties that represent the participating profile.
      * 
-     */
+    */
     public List<ParticipantPropertyReferenceResponse> getParticipantPropertyReferences() {
         return this.participantPropertyReferences;
     }
     /**
      * Provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
      * 
-     */
+    */
     public Optional<Boolean> getReferenceOnly() {
         return Optional.ofNullable(this.referenceOnly);
     }
     /**
      * Type of source entity.
      * 
-     */
+    */
     public String getSourceEntityType() {
         return this.sourceEntityType;
     }
     /**
      * Name of the source Entity Type.
      * 
-     */
+    */
     public String getSourceEntityTypeName() {
         return this.sourceEntityTypeName;
     }
     /**
      * Type of target entity.
      * 
-     */
+    */
     public String getTargetEntityType() {
         return this.targetEntityType;
     }
     /**
      * Name of the target Entity Type.
      * 
-     */
+    */
     public String getTargetEntityTypeName() {
         return this.targetEntityTypeName;
     }
     /**
      * The hub name.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -375,7 +375,6 @@ public final class GetLinkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkResult build() {
             return new GetLinkResult(description, displayName, id, linkName, mappings, name, operationType, participantPropertyReferences, provisioningState, referenceOnly, sourceEntityType, sourceEntityTypeName, targetEntityType, targetEntityTypeName, tenantId, type);
         }

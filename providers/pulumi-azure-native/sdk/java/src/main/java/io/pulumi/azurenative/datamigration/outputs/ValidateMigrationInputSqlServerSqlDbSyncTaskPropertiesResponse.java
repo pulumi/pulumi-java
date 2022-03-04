@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidateSyncMigrationInputSqlServerTaskInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidateSyncMigrationInputSqlServerTaskOutputResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -69,35 +69,35 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesRespons
     /**
      * Array of command properties.
      * 
-     */
+    */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
-     */
+    */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Task input
      * 
-     */
+    */
     public Optional<ValidateSyncMigrationInputSqlServerTaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
-     */
+    */
     public List<ValidateSyncMigrationInputSqlServerTaskOutputResponse> getOutput() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -105,7 +105,7 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesRespons
      * Task type.
      * Expected value is 'ValidateMigrationInput.SqlServer.SqlDb.Sync'.
      * 
-     */
+    */
     public String getTaskType() {
         return this.taskType;
     }
@@ -169,7 +169,6 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesRespons
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesResponse build() {
             return new ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

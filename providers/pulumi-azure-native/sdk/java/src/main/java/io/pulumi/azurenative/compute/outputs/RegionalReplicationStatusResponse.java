@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class RegionalReplicationStatusResponse {
     /**
      * The details of the replication status.
      * 
-     */
+    */
     public String getDetails() {
         return this.details;
     }
     /**
      * It indicates progress of the replication job.
      * 
-     */
+    */
     public Integer getProgress() {
         return this.progress;
     }
     /**
      * The region to which the gallery image version is being replicated to.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * This is the regional replication state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -117,7 +117,6 @@ public final class RegionalReplicationStatusResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public RegionalReplicationStatusResponse build() {
             return new RegionalReplicationStatusResponse(details, progress, region, state);
         }

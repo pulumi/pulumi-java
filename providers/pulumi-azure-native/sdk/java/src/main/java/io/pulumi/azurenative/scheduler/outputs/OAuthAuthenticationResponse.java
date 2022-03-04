@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,28 +55,28 @@ public final class OAuthAuthenticationResponse {
     /**
      * Gets or sets the audience.
      * 
-     */
+    */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * Gets or sets the client identifier.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * Gets or sets the secret, return value will always be empty.
      * 
-     */
+    */
     public Optional<String> getSecret() {
         return Optional.ofNullable(this.secret);
     }
     /**
      * Gets or sets the tenant.
      * 
-     */
+    */
     public Optional<String> getTenant() {
         return Optional.ofNullable(this.tenant);
     }
@@ -84,7 +84,7 @@ public final class OAuthAuthenticationResponse {
      * Gets or sets the HTTP authentication type.
      * Expected value is 'ActiveDirectoryOAuth'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -141,7 +141,6 @@ public final class OAuthAuthenticationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OAuthAuthenticationResponse build() {
             return new OAuthAuthenticationResponse(audience, clientId, secret, tenant, type);
         }

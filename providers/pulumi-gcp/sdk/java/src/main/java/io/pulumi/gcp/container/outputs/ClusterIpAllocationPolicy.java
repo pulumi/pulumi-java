@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -64,7 +64,7 @@ public final class ClusterIpAllocationPolicy {
      * from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
      * pick a specific range to use.
      * 
-     */
+    */
     public Optional<String> getClusterIpv4CidrBlock() {
         return Optional.ofNullable(this.clusterIpv4CidrBlock);
     }
@@ -73,7 +73,7 @@ public final class ClusterIpAllocationPolicy {
      * range in the cluster's subnetwork to use for pod IP addresses. Alternatively,
      * `cluster_ipv4_cidr_block` can be used to automatically create a GKE-managed one.
      * 
-     */
+    */
     public Optional<String> getClusterSecondaryRangeName() {
         return Optional.ofNullable(this.clusterSecondaryRangeName);
     }
@@ -84,7 +84,7 @@ public final class ClusterIpAllocationPolicy {
      * from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
      * pick a specific range to use.
      * 
-     */
+    */
     public Optional<String> getServicesIpv4CidrBlock() {
         return Optional.ofNullable(this.servicesIpv4CidrBlock);
     }
@@ -94,7 +94,7 @@ public final class ClusterIpAllocationPolicy {
      * Alternatively, `services_ipv4_cidr_block` can be used to automatically create a
      * GKE-managed one.
      * 
-     */
+    */
     public Optional<String> getServicesSecondaryRangeName() {
         return Optional.ofNullable(this.servicesSecondaryRangeName);
     }
@@ -144,7 +144,6 @@ public final class ClusterIpAllocationPolicy {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
-
         public ClusterIpAllocationPolicy build() {
             return new ClusterIpAllocationPolicy(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.AzureActiveDirectoryAppResponse;
 import io.pulumi.azurenative.datamigration.outputs.MiSqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -32,14 +32,14 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse {
     /**
      * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
      * 
-     */
+    */
     public AzureActiveDirectoryAppResponse getAzureApp() {
         return this.azureApp;
     }
     /**
      * Connection information for Azure SQL Database Managed Instance
      * 
-     */
+    */
     public MiSqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -75,7 +75,6 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ConnectToTargetSqlMISyncTaskInputResponse build() {
             return new ConnectToTargetSqlMISyncTaskInputResponse(azureApp, targetConnectionInfo);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.CencDrmConfigurationResponse;
 import io.pulumi.azurenative.media.inputs.EnabledProtocolsResponse;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysResponse;
 import io.pulumi.azurenative.media.inputs.TrackSelectionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class CommonEncryptionCencResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clearTracks")
-    private final @Nullable List<TrackSelectionResponse> clearTracks;
+      private final @Nullable List<TrackSelectionResponse> clearTracks;
 
     public List<TrackSelectionResponse> getClearTracks() {
         return this.clearTracks == null ? List.of() : this.clearTracks;
@@ -38,7 +38,7 @@ public final class CommonEncryptionCencResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="contentKeys")
-    private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
+      private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
 
     public Optional<StreamingPolicyContentKeysResponse> getContentKeys() {
         return this.contentKeys == null ? Optional.empty() : Optional.ofNullable(this.contentKeys);
@@ -49,7 +49,7 @@ public final class CommonEncryptionCencResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="drm")
-    private final @Nullable CencDrmConfigurationResponse drm;
+      private final @Nullable CencDrmConfigurationResponse drm;
 
     public Optional<CencDrmConfigurationResponse> getDrm() {
         return this.drm == null ? Optional.empty() : Optional.ofNullable(this.drm);
@@ -60,7 +60,7 @@ public final class CommonEncryptionCencResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enabledProtocols")
-    private final @Nullable EnabledProtocolsResponse enabledProtocols;
+      private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
     public Optional<EnabledProtocolsResponse> getEnabledProtocols() {
         return this.enabledProtocols == null ? Optional.empty() : Optional.ofNullable(this.enabledProtocols);
@@ -129,7 +129,6 @@ public final class CommonEncryptionCencResponse extends io.pulumi.resources.Invo
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public CommonEncryptionCencResponse build() {
             return new CommonEncryptionCencResponse(clearTracks, contentKeys, drm, enabledProtocols);
         }

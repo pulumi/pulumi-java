@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.inputs.GetACIServiceArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.GetACIServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetACIService {
-/**
- * Machine Learning service object wrapped into ARM resource envelope.
+    private GetACIService() {}
+    public interface BuilderApplicator {
+        public void apply(GetACIServiceArgs.Builder a);
+    }
+    private static GetACIServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetACIServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Machine Learning service object wrapped into ARM resource envelope.
  * API Version: 2021-01-01.
  * 
- *
- * Machine Learning service object wrapped into ARM resource envelope.
+     *
+     * Machine Learning service object wrapped into ARM resource envelope.
  * 
- */
+     */
+    public static CompletableFuture<GetACIServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Machine Learning service object wrapped into ARM resource envelope.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Machine Learning service object wrapped into ARM resource envelope.
+     * 
+     */
     public static CompletableFuture<GetACIServiceResult> invokeAsync(GetACIServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getACIService", TypeShape.of(GetACIServiceResult.class), args == null ? GetACIServiceArgs.Empty : args, Utilities.withVersion(options));
     }

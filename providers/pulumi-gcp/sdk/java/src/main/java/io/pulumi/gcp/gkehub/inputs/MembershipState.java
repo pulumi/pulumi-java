@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.MembershipAuthorityGetArgs;
 import io.pulumi.gcp.gkehub.inputs.MembershipEndpointGetArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authority")
-    private final @Nullable Input<MembershipAuthorityGetArgs> authority;
+      private final @Nullable Input<MembershipAuthorityGetArgs> authority;
 
     public Input<MembershipAuthorityGetArgs> getAuthority() {
         return this.authority == null ? Input.empty() : this.authority;
@@ -34,13 +34,13 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
     /**
      * The name of this entity type to be displayed on the console. This field is unavailable in v1 of the API.
      * 
-     * @deprecated
+     * @Deprecated
      * This field is unavailable in the GA provider and will be removed from the beta provider in a future release.
      * 
      */
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
     public Input<String> getDescription() {
@@ -53,7 +53,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<MembershipEndpointGetArgs> endpoint;
+      private final @Nullable Input<MembershipEndpointGetArgs> endpoint;
 
     public Input<MembershipEndpointGetArgs> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -64,7 +64,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -75,7 +75,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="membershipId")
-    private final @Nullable Input<String> membershipId;
+      private final @Nullable Input<String> membershipId;
 
     public Input<String> getMembershipId() {
         return this.membershipId == null ? Input.empty() : this.membershipId;
@@ -86,7 +86,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -98,7 +98,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -232,7 +232,6 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public MembershipState build() {
             return new MembershipState(authority, description, endpoint, labels, membershipId, name, project);
         }

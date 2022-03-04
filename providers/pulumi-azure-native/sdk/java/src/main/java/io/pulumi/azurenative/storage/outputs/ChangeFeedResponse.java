@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ChangeFeedResponse {
     /**
      * Indicates whether change feed event logging is enabled for the Blob service.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
      * 
-     */
+    */
     public Optional<Integer> getRetentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -77,7 +77,6 @@ public final class ChangeFeedResponse {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public ChangeFeedResponse build() {
             return new ChangeFeedResponse(enabled, retentionInDays);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkconnectivity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class SpokeLinkedRouterApplianceInstancesInstance {
     /**
      * The IP address on the VM to use for peering.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The URI of the virtual machine resource
      * 
-     */
+    */
     public Optional<String> getVirtualMachine() {
         return Optional.ofNullable(this.virtualMachine);
     }
@@ -76,7 +76,6 @@ public final class SpokeLinkedRouterApplianceInstancesInstance {
             this.virtualMachine = virtualMachine;
             return this;
         }
-
         public SpokeLinkedRouterApplianceInstancesInstance build() {
             return new SpokeLinkedRouterApplianceInstancesInstance(ipAddress, virtualMachine);
         }

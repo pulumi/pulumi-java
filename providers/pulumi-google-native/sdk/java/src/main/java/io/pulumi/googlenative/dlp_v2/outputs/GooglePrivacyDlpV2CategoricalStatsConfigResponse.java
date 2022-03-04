@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse {
     /**
      * Field to compute categorical stats on. All column types are supported except for arrays and structs. However, it may be more informative to use NumericalStats when the field type is supported, depending on the data.
      * 
-     */
+    */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public GooglePrivacyDlpV2CategoricalStatsConfigResponse build() {
             return new GooglePrivacyDlpV2CategoricalStatsConfigResponse(field);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.AccessApprovalSettingsEnrolledServiceArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enrolledServices", required=true)
-    private final Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
+      private final Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
     public Input<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
         return this.enrolledServices;
@@ -38,7 +38,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="notificationEmails")
-    private final @Nullable Input<List<String>> notificationEmails;
+      private final @Nullable Input<List<String>> notificationEmails;
 
     public Input<List<String>> getNotificationEmails() {
         return this.notificationEmails == null ? Input.empty() : this.notificationEmails;
@@ -49,7 +49,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -123,7 +123,6 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public AccessApprovalSettingsArgs build() {
             return new AccessApprovalSettingsArgs(enrolledServices, notificationEmails, organizationId);
         }

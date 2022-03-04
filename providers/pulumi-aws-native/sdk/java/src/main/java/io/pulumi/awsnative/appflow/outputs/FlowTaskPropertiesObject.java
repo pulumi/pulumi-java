@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowOperatorPropertiesKeys;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class FlowTaskPropertiesObject {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FlowTaskPropertiesObject build() {
             return new FlowTaskPropertiesObject(key, value);
         }

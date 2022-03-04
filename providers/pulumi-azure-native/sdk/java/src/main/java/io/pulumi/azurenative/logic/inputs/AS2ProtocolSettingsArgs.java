@@ -11,7 +11,7 @@ import io.pulumi.azurenative.logic.inputs.AS2MessageConnectionSettingsArgs;
 import io.pulumi.azurenative.logic.inputs.AS2SecuritySettingsArgs;
 import io.pulumi.azurenative.logic.inputs.AS2ValidationSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -28,7 +28,7 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="acknowledgementConnectionSettings", required=true)
-    private final Input<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings;
+      private final Input<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings;
 
     public Input<AS2AcknowledgementConnectionSettingsArgs> getAcknowledgementConnectionSettings() {
         return this.acknowledgementConnectionSettings;
@@ -39,7 +39,7 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="envelopeSettings", required=true)
-    private final Input<AS2EnvelopeSettingsArgs> envelopeSettings;
+      private final Input<AS2EnvelopeSettingsArgs> envelopeSettings;
 
     public Input<AS2EnvelopeSettingsArgs> getEnvelopeSettings() {
         return this.envelopeSettings;
@@ -50,7 +50,7 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="errorSettings", required=true)
-    private final Input<AS2ErrorSettingsArgs> errorSettings;
+      private final Input<AS2ErrorSettingsArgs> errorSettings;
 
     public Input<AS2ErrorSettingsArgs> getErrorSettings() {
         return this.errorSettings;
@@ -61,7 +61,7 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mdnSettings", required=true)
-    private final Input<AS2MdnSettingsArgs> mdnSettings;
+      private final Input<AS2MdnSettingsArgs> mdnSettings;
 
     public Input<AS2MdnSettingsArgs> getMdnSettings() {
         return this.mdnSettings;
@@ -72,7 +72,7 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="messageConnectionSettings", required=true)
-    private final Input<AS2MessageConnectionSettingsArgs> messageConnectionSettings;
+      private final Input<AS2MessageConnectionSettingsArgs> messageConnectionSettings;
 
     public Input<AS2MessageConnectionSettingsArgs> getMessageConnectionSettings() {
         return this.messageConnectionSettings;
@@ -83,7 +83,7 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securitySettings", required=true)
-    private final Input<AS2SecuritySettingsArgs> securitySettings;
+      private final Input<AS2SecuritySettingsArgs> securitySettings;
 
     public Input<AS2SecuritySettingsArgs> getSecuritySettings() {
         return this.securitySettings;
@@ -94,7 +94,7 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="validationSettings", required=true)
-    private final Input<AS2ValidationSettingsArgs> validationSettings;
+      private final Input<AS2ValidationSettingsArgs> validationSettings;
 
     public Input<AS2ValidationSettingsArgs> getValidationSettings() {
         return this.validationSettings;
@@ -228,7 +228,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
             this.validationSettings = Input.of(Objects.requireNonNull(validationSettings));
             return this;
         }
-
         public AS2ProtocolSettingsArgs build() {
             return new AS2ProtocolSettingsArgs(acknowledgementConnectionSettings, envelopeSettings, errorSettings, mdnSettings, messageConnectionSettings, securitySettings, validationSettings);
         }

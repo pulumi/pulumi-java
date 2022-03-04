@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ses;
 import io.pulumi.awsnative.ses.inputs.ContactListTagArgs;
 import io.pulumi.awsnative.ses.inputs.ContactListTopicArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactListName")
-    private final @Nullable Input<String> contactListName;
+      private final @Nullable Input<String> contactListName;
 
     public Input<String> getContactListName() {
         return this.contactListName == null ? Input.empty() : this.contactListName;
@@ -33,7 +33,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ContactListTagArgs>> tags;
+      private final @Nullable Input<List<ContactListTagArgs>> tags;
 
     public Input<List<ContactListTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -55,7 +55,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topics")
-    private final @Nullable Input<List<ContactListTopicArgs>> topics;
+      private final @Nullable Input<List<ContactListTopicArgs>> topics;
 
     public Input<List<ContactListTopicArgs>> getTopics() {
         return this.topics == null ? Input.empty() : this.topics;
@@ -144,7 +144,6 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
             this.topics = Input.ofNullable(topics);
             return this;
         }
-
         public ContactListArgs build() {
             return new ContactListArgs(contactListName, description, tags, topics);
         }

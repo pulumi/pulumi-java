@@ -7,8 +7,8 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.location.TrackerConsumerArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,6 +31,37 @@ public class TrackerConsumer extends io.pulumi.resources.CustomResource {
         return this.trackerName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TrackerConsumerArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.location.TrackerConsumerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.location.TrackerConsumerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TrackerConsumer(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TrackerConsumer(String name) {
+        this(name, TrackerConsumerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TrackerConsumer(String name, TrackerConsumerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="excludes")
-    private final @Nullable Input<List<String>> excludes;
+      private final @Nullable Input<List<String>> excludes;
 
     public Input<List<String>> getExcludes() {
         return this.excludes == null ? Input.empty() : this.excludes;
@@ -34,7 +34,7 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="exclusivePackages")
-    private final @Nullable Input<List<String>> exclusivePackages;
+      private final @Nullable Input<List<String>> exclusivePackages;
 
     public Input<List<String>> getExclusivePackages() {
         return this.exclusivePackages == null ? Input.empty() : this.exclusivePackages;
@@ -45,7 +45,7 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minimal")
-    private final @Nullable Input<Boolean> minimal;
+      private final @Nullable Input<Boolean> minimal;
 
     public Input<Boolean> getMinimal() {
         return this.minimal == null ? Input.empty() : this.minimal;
@@ -56,7 +56,7 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="security")
-    private final @Nullable Input<Boolean> security;
+      private final @Nullable Input<Boolean> security;
 
     public Input<Boolean> getSecurity() {
         return this.security == null ? Input.empty() : this.security;
@@ -145,7 +145,6 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
             this.security = Input.ofNullable(security);
             return this;
         }
-
         public PatchDeploymentPatchConfigYumGetArgs build() {
             return new PatchDeploymentPatchConfigYumGetArgs(excludes, exclusivePackages, minimal, security);
         }

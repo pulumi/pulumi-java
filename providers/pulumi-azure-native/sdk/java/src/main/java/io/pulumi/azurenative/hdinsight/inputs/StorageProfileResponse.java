@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.StorageAccountResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="storageaccounts")
-    private final @Nullable List<StorageAccountResponse> storageaccounts;
+      private final @Nullable List<StorageAccountResponse> storageaccounts;
 
     public List<StorageAccountResponse> getStorageaccounts() {
         return this.storageaccounts == null ? List.of() : this.storageaccounts;
@@ -62,7 +62,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
             this.storageaccounts = storageaccounts;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(storageaccounts);
         }

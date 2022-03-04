@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class NatAddressArgs extends io.pulumi.resources.ResourceArgs {
     public static final NatAddressArgs Empty = new NatAddressArgs();
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -26,14 +26,14 @@ public final class NatAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -107,7 +107,6 @@ public final class NatAddressArgs extends io.pulumi.resources.ResourceArgs {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public NatAddressArgs build() {
             return new NatAddressArgs(instanceId, name, organizationId);
         }

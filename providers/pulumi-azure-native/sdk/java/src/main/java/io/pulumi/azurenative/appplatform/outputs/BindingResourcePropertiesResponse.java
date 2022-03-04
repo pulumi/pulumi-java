@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -77,56 +77,56 @@ public final class BindingResourcePropertiesResponse {
     /**
      * Binding parameters of the Binding resource
      * 
-     */
+    */
     public Map<String,Object> getBindingParameters() {
         return this.bindingParameters == null ? Map.of() : this.bindingParameters;
     }
     /**
      * Creation time of the Binding resource
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The generated Spring Boot property file for this binding. The secret will be deducted.
      * 
-     */
+    */
     public String getGeneratedProperties() {
         return this.generatedProperties;
     }
     /**
      * The key of the bound resource
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The Azure resource id of the bound resource
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The name of the bound resource
      * 
-     */
+    */
     public String getPropResourceName() {
         return this.resourceName;
     }
     /**
      * The standard Azure resource type of the bound resource
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Update time of the Binding resource
      * 
-     */
+    */
     public String getUpdatedAt() {
         return this.updatedAt;
     }
@@ -204,7 +204,6 @@ public final class BindingResourcePropertiesResponse {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public BindingResourcePropertiesResponse build() {
             return new BindingResourcePropertiesResponse(bindingParameters, createdAt, generatedProperties, key, resourceId, resourceName, resourceType, updatedAt);
         }

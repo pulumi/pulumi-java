@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
     /**
      * Specifies auth token used for connecting to Notebook server (uses token-based auth).
      * 
-     */
+    */
     public String getAuthToken() {
         return this.authToken;
     }
     /**
      * Specifies the endpoint of Notebook server.
      * 
-     */
+    */
     public String getNotebookServerEndpoint() {
         return this.notebookServerEndpoint;
     }
@@ -74,7 +74,6 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
             this.notebookServerEndpoint = Objects.requireNonNull(notebookServerEndpoint);
             return this;
         }
-
         public ListNotebookWorkspaceConnectionInfoResult build() {
             return new ListNotebookWorkspaceConnectionInfoResult(authToken, notebookServerEndpoint);
         }

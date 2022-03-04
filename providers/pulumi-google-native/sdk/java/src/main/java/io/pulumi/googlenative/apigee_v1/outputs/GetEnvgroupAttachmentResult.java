@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GetEnvgroupAttachmentResult {
     /**
      * The time at which the environment group attachment was created as milliseconds since epoch.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * ID of the attached environment.
      * 
-     */
+    */
     public String getEnvironment() {
         return this.environment;
     }
     /**
      * ID of the environment group attachment.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -95,7 +95,6 @@ public final class GetEnvgroupAttachmentResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetEnvgroupAttachmentResult build() {
             return new GetEnvgroupAttachmentResult(createdAt, environment, name);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.SslCertificateType;
 import io.pulumi.googlenative.compute_v1.inputs.SslCertificateManagedSslCertificateArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SslCertificateSelfManagedSslCertificateArgs;
@@ -22,7 +22,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -33,7 +33,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managed")
-    private final @Nullable Input<SslCertificateManagedSslCertificateArgs> managed;
+      private final @Nullable Input<SslCertificateManagedSslCertificateArgs> managed;
 
     public Input<SslCertificateManagedSslCertificateArgs> getManaged() {
         return this.managed == null ? Input.empty() : this.managed;
@@ -55,7 +55,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,21 +66,21 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -91,7 +91,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfManaged")
-    private final @Nullable Input<SslCertificateSelfManagedSslCertificateArgs> selfManaged;
+      private final @Nullable Input<SslCertificateSelfManagedSslCertificateArgs> selfManaged;
 
     public Input<SslCertificateSelfManagedSslCertificateArgs> getSelfManaged() {
         return this.selfManaged == null ? Input.empty() : this.selfManaged;
@@ -102,7 +102,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<SslCertificateType> type;
+      private final @Nullable Input<SslCertificateType> type;
 
     public Input<SslCertificateType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -266,7 +266,6 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public SslCertificateArgs build() {
             return new SslCertificateArgs(certificate, description, managed, name, privateKey, project, requestId, selfManaged, type);
         }

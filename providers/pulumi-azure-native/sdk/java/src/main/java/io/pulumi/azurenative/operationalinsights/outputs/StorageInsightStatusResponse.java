@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class StorageInsightStatusResponse {
     /**
      * Description of the state of the storage insight.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The state of the storage insight connection to the workspace
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -76,7 +76,6 @@ public final class StorageInsightStatusResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public StorageInsightStatusResponse build() {
             return new StorageInsightStatusResponse(description, state);
         }

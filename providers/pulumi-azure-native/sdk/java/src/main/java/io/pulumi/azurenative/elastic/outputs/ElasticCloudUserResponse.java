@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ElasticCloudUserResponse {
     /**
      * Elastic cloud default dashboard sso URL of the Elastic user account.
      * 
-     */
+    */
     public String getElasticCloudSsoDefaultUrl() {
         return this.elasticCloudSsoDefaultUrl;
     }
     /**
      * Email of the Elastic User Account.
      * 
-     */
+    */
     public String getEmailAddress() {
         return this.emailAddress;
     }
     /**
      * User Id of the elastic account of the User.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -95,7 +95,6 @@ public final class ElasticCloudUserResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ElasticCloudUserResponse build() {
             return new ElasticCloudUserResponse(elasticCloudSsoDefaultUrl, emailAddress, id);
         }

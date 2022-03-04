@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.AppEngineVersionIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -33,14 +33,14 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<AppEngineVersionIamBindingConditionArgs> condition;
+      private final @Nullable Input<AppEngineVersionIamBindingConditionArgs> condition;
 
     public Input<AppEngineVersionIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -52,7 +52,7 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,7 +65,7 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -76,7 +76,7 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -87,7 +87,7 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="versionId", required=true)
-    private final Input<String> versionId;
+      private final Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId;
@@ -221,7 +221,6 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
             this.versionId = Input.of(Objects.requireNonNull(versionId));
             return this;
         }
-
         public AppEngineVersionIamBindingArgs build() {
             return new AppEngineVersionIamBindingArgs(appId, condition, members, project, role, service, versionId);
         }

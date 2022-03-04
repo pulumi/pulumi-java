@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.LicenseResponse;
 import java.lang.String;
 import java.util.List;
@@ -68,49 +68,49 @@ public final class FileOccurrenceResponse {
     /**
      * This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
      * 
-     */
+    */
     public List<String> getAttributions() {
         return this.attributions;
     }
     /**
      * This field provides a place for the SPDX file creator to record any general comments about the file
      * 
-     */
+    */
     public String getComment() {
         return this.comment;
     }
     /**
      * This field provides a place for the SPDX file creator to record file contributors
      * 
-     */
+    */
     public List<String> getContributors() {
         return this.contributors;
     }
     /**
      * Identify the copyright holder of the file, as well as any dates present
      * 
-     */
+    */
     public String getCopyright() {
         return this.copyright;
     }
     /**
      * This field contains the license information actually found in the file, if any
      * 
-     */
+    */
     public List<String> getFilesLicenseInfo() {
         return this.filesLicenseInfo;
     }
     /**
      * This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined
      * 
-     */
+    */
     public LicenseResponse getLicenseConcluded() {
         return this.licenseConcluded;
     }
     /**
      * This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file
      * 
-     */
+    */
     public String getNotice() {
         return this.notice;
     }
@@ -181,7 +181,6 @@ public final class FileOccurrenceResponse {
             this.notice = Objects.requireNonNull(notice);
             return this;
         }
-
         public FileOccurrenceResponse build() {
             return new FileOccurrenceResponse(attributions, comment, contributors, copyright, filesLicenseInfo, licenseConcluded, notice);
         }

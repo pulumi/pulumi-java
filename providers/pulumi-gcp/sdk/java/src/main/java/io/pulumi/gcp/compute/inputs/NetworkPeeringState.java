@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="exportCustomRoutes")
-    private final @Nullable Input<Boolean> exportCustomRoutes;
+      private final @Nullable Input<Boolean> exportCustomRoutes;
 
     public Input<Boolean> getExportCustomRoutes() {
         return this.exportCustomRoutes == null ? Input.empty() : this.exportCustomRoutes;
@@ -31,7 +31,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="exportSubnetRoutesWithPublicIp")
-    private final @Nullable Input<Boolean> exportSubnetRoutesWithPublicIp;
+      private final @Nullable Input<Boolean> exportSubnetRoutesWithPublicIp;
 
     public Input<Boolean> getExportSubnetRoutesWithPublicIp() {
         return this.exportSubnetRoutesWithPublicIp == null ? Input.empty() : this.exportSubnetRoutesWithPublicIp;
@@ -42,7 +42,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="importCustomRoutes")
-    private final @Nullable Input<Boolean> importCustomRoutes;
+      private final @Nullable Input<Boolean> importCustomRoutes;
 
     public Input<Boolean> getImportCustomRoutes() {
         return this.importCustomRoutes == null ? Input.empty() : this.importCustomRoutes;
@@ -53,7 +53,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="importSubnetRoutesWithPublicIp")
-    private final @Nullable Input<Boolean> importSubnetRoutesWithPublicIp;
+      private final @Nullable Input<Boolean> importSubnetRoutesWithPublicIp;
 
     public Input<Boolean> getImportSubnetRoutesWithPublicIp() {
         return this.importSubnetRoutesWithPublicIp == null ? Input.empty() : this.importSubnetRoutesWithPublicIp;
@@ -64,7 +64,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -87,7 +87,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="peerNetwork")
-    private final @Nullable Input<String> peerNetwork;
+      private final @Nullable Input<String> peerNetwork;
 
     public Input<String> getPeerNetwork() {
         return this.peerNetwork == null ? Input.empty() : this.peerNetwork;
@@ -99,7 +99,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -110,7 +110,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="stateDetails")
-    private final @Nullable Input<String> stateDetails;
+      private final @Nullable Input<String> stateDetails;
 
     public Input<String> getStateDetails() {
         return this.stateDetails == null ? Input.empty() : this.stateDetails;
@@ -274,7 +274,6 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             this.stateDetails = Input.ofNullable(stateDetails);
             return this;
         }
-
         public NetworkPeeringState build() {
             return new NetworkPeeringState(exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerNetwork, state, stateDetails);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLStatement;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class WebACLNotStatement {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public WebACLNotStatement build() {
             return new WebACLNotStatement(statement);
         }

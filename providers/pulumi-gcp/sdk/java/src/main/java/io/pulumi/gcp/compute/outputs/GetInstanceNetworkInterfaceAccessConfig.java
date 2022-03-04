@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,21 +40,21 @@ public final class GetInstanceNetworkInterfaceAccessConfig {
      * The IP address that is be 1:1 mapped to the instance's
      * network ip.
      * 
-     */
+    */
     public String getNatIp() {
         return this.natIp;
     }
     /**
      * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
      * 
-     */
+    */
     public String getNetworkTier() {
         return this.networkTier;
     }
     /**
      * The DNS domain name for the public PTR record.
      * 
-     */
+    */
     public String getPublicPtrDomainName() {
         return this.publicPtrDomainName;
     }
@@ -97,7 +97,6 @@ public final class GetInstanceNetworkInterfaceAccessConfig {
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
         }
-
         public GetInstanceNetworkInterfaceAccessConfig build() {
             return new GetInstanceNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }

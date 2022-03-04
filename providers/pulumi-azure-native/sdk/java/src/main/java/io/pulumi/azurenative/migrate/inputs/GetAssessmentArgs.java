@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="assessmentName", required=true)
-    private final String assessmentName;
+      private final String assessmentName;
 
     public String getAssessmentName() {
         return this.assessmentName;
@@ -28,7 +28,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-    private final String groupName;
+      private final String groupName;
 
     public String getGroupName() {
         return this.groupName;
@@ -39,7 +39,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final String projectName;
+      private final String projectName;
 
     public String getProjectName() {
         return this.projectName;
@@ -50,7 +50,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetAssessmentArgs build() {
             return new GetAssessmentArgs(assessmentName, groupName, projectName, resourceGroupName);
         }

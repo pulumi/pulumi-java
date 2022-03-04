@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class BigQueryModelTrainingResponse {
     /**
      * [Output-only, Beta] Index of current ML training iteration. Updated during create model query job to show job progress.
      * 
-     */
+    */
     public Integer getCurrentIteration() {
         return this.currentIteration;
     }
     /**
      * [Output-only, Beta] Expected number of iterations for the create model query job specified as num_iterations in the input query. The actual total number of iterations may be less than this number due to early stop.
      * 
-     */
+    */
     public String getExpectedTotalIterations() {
         return this.expectedTotalIterations;
     }
@@ -75,7 +75,6 @@ public final class BigQueryModelTrainingResponse {
             this.expectedTotalIterations = Objects.requireNonNull(expectedTotalIterations);
             return this;
         }
-
         public BigQueryModelTrainingResponse build() {
             return new BigQueryModelTrainingResponse(currentIteration, expectedTotalIterations);
         }

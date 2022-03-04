@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="container", required=true)
-    private final Input<String> container;
+      private final Input<String> container;
 
     public Input<String> getContainer() {
         return this.container;
@@ -34,7 +34,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -45,7 +45,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rootFolderPath")
-    private final @Nullable Input<String> rootFolderPath;
+      private final @Nullable Input<String> rootFolderPath;
 
     public Input<String> getRootFolderPath() {
         return this.rootFolderPath == null ? Input.empty() : this.rootFolderPath;
@@ -119,7 +119,6 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
             this.rootFolderPath = Input.ofNullable(rootFolderPath);
             return this;
         }
-
         public ReportDeliveryDestinationArgs build() {
             return new ReportDeliveryDestinationArgs(container, resourceId, rootFolderPath);
         }

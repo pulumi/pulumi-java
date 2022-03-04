@@ -6,21 +6,41 @@ package io.pulumi.azurenative.batch;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.batch.inputs.GetPoolArgs;
 import io.pulumi.azurenative.batch.outputs.GetPoolResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPool {
-/**
- * Contains information about a pool.
+    private GetPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetPoolArgs.Builder a);
+    }
+    private static GetPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Contains information about a pool.
  * API Version: 2021-01-01.
  * 
- *
- * Contains information about a pool.
+     *
+     * Contains information about a pool.
  * 
- */
+     */
+    public static CompletableFuture<GetPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Contains information about a pool.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Contains information about a pool.
+     * 
+     */
     public static CompletableFuture<GetPoolResult> invokeAsync(GetPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getPool", TypeShape.of(GetPoolResult.class), args == null ? GetPoolArgs.Empty : args, Utilities.withVersion(options));
     }

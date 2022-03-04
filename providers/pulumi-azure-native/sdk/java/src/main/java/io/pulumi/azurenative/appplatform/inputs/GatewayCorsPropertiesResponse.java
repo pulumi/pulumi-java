@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="allowCredentials")
-    private final @Nullable Boolean allowCredentials;
+      private final @Nullable Boolean allowCredentials;
 
     public Optional<Boolean> getAllowCredentials() {
         return this.allowCredentials == null ? Optional.empty() : Optional.ofNullable(this.allowCredentials);
@@ -37,7 +37,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="allowedHeaders")
-    private final @Nullable List<String> allowedHeaders;
+      private final @Nullable List<String> allowedHeaders;
 
     public List<String> getAllowedHeaders() {
         return this.allowedHeaders == null ? List.of() : this.allowedHeaders;
@@ -48,7 +48,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="allowedMethods")
-    private final @Nullable List<String> allowedMethods;
+      private final @Nullable List<String> allowedMethods;
 
     public List<String> getAllowedMethods() {
         return this.allowedMethods == null ? List.of() : this.allowedMethods;
@@ -59,7 +59,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="allowedOrigins")
-    private final @Nullable List<String> allowedOrigins;
+      private final @Nullable List<String> allowedOrigins;
 
     public List<String> getAllowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
@@ -70,7 +70,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="exposedHeaders")
-    private final @Nullable List<String> exposedHeaders;
+      private final @Nullable List<String> exposedHeaders;
 
     public List<String> getExposedHeaders() {
         return this.exposedHeaders == null ? List.of() : this.exposedHeaders;
@@ -81,7 +81,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="maxAge")
-    private final @Nullable Integer maxAge;
+      private final @Nullable Integer maxAge;
 
     public Optional<Integer> getMaxAge() {
         return this.maxAge == null ? Optional.empty() : Optional.ofNullable(this.maxAge);
@@ -170,7 +170,6 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
             this.maxAge = maxAge;
             return this;
         }
-
         public GatewayCorsPropertiesResponse build() {
             return new GatewayCorsPropertiesResponse(allowCredentials, allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAge);
         }

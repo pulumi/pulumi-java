@@ -6,7 +6,7 @@ package io.pulumi.azurenative.analysisservices.inputs;
 import io.pulumi.azurenative.analysisservices.enums.SkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+      private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -37,7 +37,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -48,7 +48,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<Either<String,SkuTier>> tier;
+      private final @Nullable Input<Either<String,SkuTier>> tier;
 
     public Input<Either<String,SkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -122,7 +122,6 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public ResourceSkuArgs build() {
             return new ResourceSkuArgs(capacity, name, tier);
         }

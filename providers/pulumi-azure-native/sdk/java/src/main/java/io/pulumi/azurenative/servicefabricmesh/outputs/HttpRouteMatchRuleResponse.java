@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.HttpRouteMatchHeaderResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.HttpRouteMatchPathResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class HttpRouteMatchRuleResponse {
     /**
      * headers and their values to match in request.
      * 
-     */
+    */
     public List<HttpRouteMatchHeaderResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * Path to match for routing.
      * 
-     */
+    */
     public HttpRouteMatchPathResponse getPath() {
         return this.path;
     }
@@ -77,7 +77,6 @@ public final class HttpRouteMatchRuleResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public HttpRouteMatchRuleResponse build() {
             return new HttpRouteMatchRuleResponse(headers, path);
         }

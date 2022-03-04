@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class ServerEndpointSyncActivityStatusResponse {
     /**
      * Applied bytes
      * 
-     */
+    */
     public Double getAppliedBytes() {
         return this.appliedBytes;
     }
     /**
      * Applied item count.
      * 
-     */
+    */
     public Double getAppliedItemCount() {
         return this.appliedItemCount;
     }
     /**
      * Per item error count
      * 
-     */
+    */
     public Double getPerItemErrorCount() {
         return this.perItemErrorCount;
     }
     /**
      * Sync mode
      * 
-     */
+    */
     public String getSyncMode() {
         return this.syncMode;
     }
     /**
      * Timestamp when properties were updated
      * 
-     */
+    */
     public String getTimestamp() {
         return this.timestamp;
     }
     /**
      * Total bytes (if available)
      * 
-     */
+    */
     public Double getTotalBytes() {
         return this.totalBytes;
     }
     /**
      * Total item count (if available)
      * 
-     */
+    */
     public Double getTotalItemCount() {
         return this.totalItemCount;
     }
@@ -180,7 +180,6 @@ public final class ServerEndpointSyncActivityStatusResponse {
             this.totalItemCount = Objects.requireNonNull(totalItemCount);
             return this;
         }
-
         public ServerEndpointSyncActivityStatusResponse build() {
             return new ServerEndpointSyncActivityStatusResponse(appliedBytes, appliedItemCount, perItemErrorCount, syncMode, timestamp, totalBytes, totalItemCount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.ClusterMasterAuthClientCertificateConfig;
 import java.lang.String;
 import java.util.Objects;
@@ -39,7 +39,7 @@ public final class ClusterMasterAuth {
     /**
      * Whether client certificate authorization is enabled for this cluster.  For example:
      * 
-     */
+    */
     public ClusterMasterAuthClientCertificateConfig getClientCertificateConfig() {
         return this.clientCertificateConfig;
     }
@@ -95,7 +95,6 @@ public final class ClusterMasterAuth {
             this.clusterCaCertificate = clusterCaCertificate;
             return this;
         }
-
         public ClusterMasterAuth build() {
             return new ClusterMasterAuth(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate);
         }

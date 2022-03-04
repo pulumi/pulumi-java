@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.storage.k8s.io_v1beta1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -145,6 +145,37 @@ public class CSIStorageCapacity extends io.pulumi.resources.CustomResource {
         return this.storageClassName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CSIStorageCapacityArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.storage.k8s.io_v1beta1.CSIStorageCapacityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.storage.k8s.io_v1beta1.CSIStorageCapacityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CSIStorageCapacity(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CSIStorageCapacity(String name) {
+        this(name, CSIStorageCapacityArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CSIStorageCapacity(String name, CSIStorageCapacityArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

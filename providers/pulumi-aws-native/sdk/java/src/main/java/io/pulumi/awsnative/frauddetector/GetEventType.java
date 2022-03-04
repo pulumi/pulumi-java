@@ -6,17 +6,33 @@ package io.pulumi.awsnative.frauddetector;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.frauddetector.inputs.GetEventTypeArgs;
 import io.pulumi.awsnative.frauddetector.outputs.GetEventTypeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventType {
-/**
- * A resource schema for an EventType in Amazon Fraud Detector.
+    private GetEventType() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventTypeArgs.Builder a);
+    }
+    private static GetEventTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A resource schema for an EventType in Amazon Fraud Detector.
  * 
- */
+     */
+    public static CompletableFuture<GetEventTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A resource schema for an EventType in Amazon Fraud Detector.
+     * 
+     */
     public static CompletableFuture<GetEventTypeResult> invokeAsync(GetEventTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getEventType", TypeShape.of(GetEventTypeResult.class), args == null ? GetEventTypeArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.digitaltwins.outputs;
 
 import io.pulumi.azurenative.digitaltwins.outputs.ConnectionPropertiesResponsePrivateEndpoint;
 import io.pulumi.azurenative.digitaltwins.outputs.ConnectionPropertiesResponsePrivateLinkServiceConnectionState;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,7 +42,7 @@ public final class PrivateEndpointConnectionResponseProperties {
     /**
      * The list of group ids for the private endpoint connection.
      * 
-     */
+    */
     public List<String> getGroupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
@@ -55,7 +55,7 @@ public final class PrivateEndpointConnectionResponseProperties {
     /**
      * The provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -105,7 +105,6 @@ public final class PrivateEndpointConnectionResponseProperties {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionResponseProperties build() {
             return new PrivateEndpointConnectionResponseProperties(groupIds, privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

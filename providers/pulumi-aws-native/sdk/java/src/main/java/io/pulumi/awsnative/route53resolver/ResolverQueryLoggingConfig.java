@@ -9,8 +9,8 @@ import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigShare
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigStatus;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -148,6 +148,37 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ResolverQueryLoggingConfigArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.route53resolver.ResolverQueryLoggingConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.route53resolver.ResolverQueryLoggingConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ResolverQueryLoggingConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ResolverQueryLoggingConfig(String name) {
+        this(name, ResolverQueryLoggingConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ResolverQueryLoggingConfig(String name, @Nullable ResolverQueryLoggingConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

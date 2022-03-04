@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs extends io.pu
         public Builder(GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs build() {
             return new GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs();
         }

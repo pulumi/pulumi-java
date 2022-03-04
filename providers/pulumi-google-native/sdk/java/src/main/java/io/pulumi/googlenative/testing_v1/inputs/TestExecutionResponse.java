@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.EnvironmentResponse;
 import io.pulumi.googlenative.testing_v1.inputs.ShardResponse;
 import io.pulumi.googlenative.testing_v1.inputs.TestDetailsResponse;
@@ -26,7 +26,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="environment", required=true)
-    private final EnvironmentResponse environment;
+      private final EnvironmentResponse environment;
 
     public EnvironmentResponse getEnvironment() {
         return this.environment;
@@ -37,7 +37,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="matrixId", required=true)
-    private final String matrixId;
+      private final String matrixId;
 
     public String getMatrixId() {
         return this.matrixId;
@@ -48,7 +48,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -59,7 +59,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="shard", required=true)
-    private final ShardResponse shard;
+      private final ShardResponse shard;
 
     public ShardResponse getShard() {
         return this.shard;
@@ -70,7 +70,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -81,7 +81,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="testDetails", required=true)
-    private final TestDetailsResponse testDetails;
+      private final TestDetailsResponse testDetails;
 
     public TestDetailsResponse getTestDetails() {
         return this.testDetails;
@@ -92,7 +92,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="testSpecification", required=true)
-    private final TestSpecificationResponse testSpecification;
+      private final TestSpecificationResponse testSpecification;
 
     public TestSpecificationResponse getTestSpecification() {
         return this.testSpecification;
@@ -103,7 +103,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="timestamp", required=true)
-    private final String timestamp;
+      private final String timestamp;
 
     public String getTimestamp() {
         return this.timestamp;
@@ -114,7 +114,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="toolResultsStep", required=true)
-    private final ToolResultsStepResponse toolResultsStep;
+      private final ToolResultsStepResponse toolResultsStep;
 
     public ToolResultsStepResponse getToolResultsStep() {
         return this.toolResultsStep;
@@ -233,7 +233,6 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
             this.toolResultsStep = Objects.requireNonNull(toolResultsStep);
             return this;
         }
-
         public TestExecutionResponse build() {
             return new TestExecutionResponse(environment, matrixId, project, shard, state, testDetails, testSpecification, timestamp, toolResultsStep);
         }

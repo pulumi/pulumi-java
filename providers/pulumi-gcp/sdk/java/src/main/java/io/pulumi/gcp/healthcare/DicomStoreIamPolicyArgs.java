@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dicomStoreId", required=true)
-    private final Input<String> dicomStoreId;
+      private final Input<String> dicomStoreId;
 
     public Input<String> getDicomStoreId() {
         return this.dicomStoreId;
@@ -33,7 +33,7 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -92,7 +92,6 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public DicomStoreIamPolicyArgs build() {
             return new DicomStoreIamPolicyArgs(dicomStoreId, policyData);
         }

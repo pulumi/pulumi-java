@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
     /**
      * Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
      * 
-     */
+    */
     public String getFlow() {
         return this.flow;
     }
     /**
      * Session parameters to be compared when calculating differences.
      * 
-     */
+    */
     public List<String> getTrackingParameters() {
         return this.trackingParameters;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
             this.trackingParameters = Objects.requireNonNull(trackingParameters);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1TestConfigResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TestConfigResponse(flow, trackingParameters);
         }

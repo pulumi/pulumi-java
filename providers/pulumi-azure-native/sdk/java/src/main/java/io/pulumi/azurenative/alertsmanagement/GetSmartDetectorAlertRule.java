@@ -6,21 +6,41 @@ package io.pulumi.azurenative.alertsmanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.alertsmanagement.inputs.GetSmartDetectorAlertRuleArgs;
 import io.pulumi.azurenative.alertsmanagement.outputs.GetSmartDetectorAlertRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSmartDetectorAlertRule {
-/**
- * The alert rule information
+    private GetSmartDetectorAlertRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetSmartDetectorAlertRuleArgs.Builder a);
+    }
+    private static GetSmartDetectorAlertRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSmartDetectorAlertRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The alert rule information
  * API Version: 2019-06-01.
  * 
- *
- * The alert rule information
+     *
+     * The alert rule information
  * 
- */
+     */
+    public static CompletableFuture<GetSmartDetectorAlertRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The alert rule information
+     * API Version: 2019-06-01.
+     * 
+     *
+         * The alert rule information
+     * 
+     */
     public static CompletableFuture<GetSmartDetectorAlertRuleResult> invokeAsync(GetSmartDetectorAlertRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getSmartDetectorAlertRule", TypeShape.of(GetSmartDetectorAlertRuleResult.class), args == null ? GetSmartDetectorAlertRuleArgs.Empty : args, Utilities.withVersion(options));
     }

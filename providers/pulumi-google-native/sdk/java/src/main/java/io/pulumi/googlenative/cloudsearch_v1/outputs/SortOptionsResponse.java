@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SortOptionsResponse {
     /**
      * Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
      * 
-     */
+    */
     public String getOperatorName() {
         return this.operatorName;
     }
     /**
      * Ascending is the default sort order
      * 
-     */
+    */
     public String getSortOrder() {
         return this.sortOrder;
     }
@@ -74,7 +74,6 @@ public final class SortOptionsResponse {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }
-
         public SortOptionsResponse build() {
             return new SortOptionsResponse(operatorName, sortOrder);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AzureClusterControlPlaneSshConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="authorizedKey", required=true)
-    private final Input<String> authorizedKey;
+      private final Input<String> authorizedKey;
 
     public Input<String> getAuthorizedKey() {
         return this.authorizedKey;
@@ -61,7 +61,6 @@ public final class AzureClusterControlPlaneSshConfigGetArgs extends io.pulumi.re
             this.authorizedKey = Input.of(Objects.requireNonNull(authorizedKey));
             return this;
         }
-
         public AzureClusterControlPlaneSshConfigGetArgs build() {
             return new AzureClusterControlPlaneSshConfigGetArgs(authorizedKey);
         }

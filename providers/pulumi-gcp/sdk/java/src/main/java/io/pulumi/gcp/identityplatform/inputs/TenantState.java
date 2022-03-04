@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowPasswordSignup")
-    private final @Nullable Input<Boolean> allowPasswordSignup;
+      private final @Nullable Input<Boolean> allowPasswordSignup;
 
     public Input<Boolean> getAllowPasswordSignup() {
         return this.allowPasswordSignup == null ? Input.empty() : this.allowPasswordSignup;
@@ -33,7 +33,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableAuth")
-    private final @Nullable Input<Boolean> disableAuth;
+      private final @Nullable Input<Boolean> disableAuth;
 
     public Input<Boolean> getDisableAuth() {
         return this.disableAuth == null ? Input.empty() : this.disableAuth;
@@ -44,7 +44,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -55,7 +55,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableEmailLinkSignin")
-    private final @Nullable Input<Boolean> enableEmailLinkSignin;
+      private final @Nullable Input<Boolean> enableEmailLinkSignin;
 
     public Input<Boolean> getEnableEmailLinkSignin() {
         return this.enableEmailLinkSignin == null ? Input.empty() : this.enableEmailLinkSignin;
@@ -66,7 +66,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -197,7 +197,6 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public TenantState build() {
             return new TenantState(allowPasswordSignup, disableAuth, displayName, enableEmailLinkSignin, name, project);
         }

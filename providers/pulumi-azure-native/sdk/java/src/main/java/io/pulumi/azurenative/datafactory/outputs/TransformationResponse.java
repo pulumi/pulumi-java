@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.DataFlowReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,35 +57,35 @@ public final class TransformationResponse {
     /**
      * Dataset reference.
      * 
-     */
+    */
     public Optional<DatasetReferenceResponse> getDataset() {
         return Optional.ofNullable(this.dataset);
     }
     /**
      * Transformation description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Flowlet Reference
      * 
-     */
+    */
     public Optional<DataFlowReferenceResponse> getFlowlet() {
         return Optional.ofNullable(this.flowlet);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
         return Optional.ofNullable(this.linkedService);
     }
     /**
      * Transformation name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -142,7 +142,6 @@ public final class TransformationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public TransformationResponse build() {
             return new TransformationResponse(dataset, description, flowlet, linkedService, name);
         }

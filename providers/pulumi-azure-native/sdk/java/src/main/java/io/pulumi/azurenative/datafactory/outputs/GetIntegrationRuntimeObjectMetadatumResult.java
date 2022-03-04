@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.SsisEnvironmentResponse;
 import io.pulumi.azurenative.datafactory.outputs.SsisFolderResponse;
 import io.pulumi.azurenative.datafactory.outputs.SsisPackageResponse;
 import io.pulumi.azurenative.datafactory.outputs.SsisProjectResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -39,14 +39,14 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
     /**
      * The link to the next page of results, if any remaining results exist.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of SSIS object metadata.
      * 
-     */
+    */
     public List<Object> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -82,7 +82,6 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
             this.value = value;
             return this;
         }
-
         public GetIntegrationRuntimeObjectMetadatumResult build() {
             return new GetIntegrationRuntimeObjectMetadatumResult(nextLink, value);
         }

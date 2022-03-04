@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GraphParameterLinkResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="nodeId", required=true)
-    private final String nodeId;
+      private final String nodeId;
 
     public String getNodeId() {
         return this.nodeId;
@@ -32,7 +32,7 @@ public final class GraphParameterLinkResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="parameterKey", required=true)
-    private final String parameterKey;
+      private final String parameterKey;
 
     public String getParameterKey() {
         return this.parameterKey;
@@ -81,7 +81,6 @@ public final class GraphParameterLinkResponse extends io.pulumi.resources.Invoke
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }
-
         public GraphParameterLinkResponse build() {
             return new GraphParameterLinkResponse(nodeId, parameterKey);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="generation", required=true)
-    private final String generation;
+      private final String generation;
 
     public String getGeneration() {
         return this.generation;
@@ -43,7 +43,7 @@ public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="object", required=true)
-    private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;
@@ -102,7 +102,6 @@ public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.I
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public OSPolicyResourceFileGcsResponse build() {
             return new OSPolicyResourceFileGcsResponse(bucket, generation, object);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.ListShareSubscriptionSourceShareSynchronizationSettingsArgs;
 import io.pulumi.azurenative.datashare.outputs.ListShareSubscriptionSourceShareSynchronizationSettingsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListShareSubscriptionSourceShareSynchronizationSettings {
-/**
- * List response for get source share Synchronization settings
+    private ListShareSubscriptionSourceShareSynchronizationSettings() {}
+    public interface BuilderApplicator {
+        public void apply(ListShareSubscriptionSourceShareSynchronizationSettingsArgs.Builder a);
+    }
+    private static ListShareSubscriptionSourceShareSynchronizationSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListShareSubscriptionSourceShareSynchronizationSettingsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List response for get source share Synchronization settings
  * API Version: 2020-09-01.
  * 
- *
- * List response for get source share Synchronization settings
+     *
+     * List response for get source share Synchronization settings
  * 
- */
+     */
+    public static CompletableFuture<ListShareSubscriptionSourceShareSynchronizationSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List response for get source share Synchronization settings
+     * API Version: 2020-09-01.
+     * 
+     *
+         * List response for get source share Synchronization settings
+     * 
+     */
     public static CompletableFuture<ListShareSubscriptionSourceShareSynchronizationSettingsResult> invokeAsync(ListShareSubscriptionSourceShareSynchronizationSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSubscriptionSourceShareSynchronizationSettings", TypeShape.of(ListShareSubscriptionSourceShareSynchronizationSettingsResult.class), args == null ? ListShareSubscriptionSourceShareSynchronizationSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

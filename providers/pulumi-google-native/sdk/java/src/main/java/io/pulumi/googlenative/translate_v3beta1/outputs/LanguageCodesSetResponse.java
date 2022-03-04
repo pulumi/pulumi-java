@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LanguageCodesSetResponse {
     /**
      * The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
      * 
-     */
+    */
     public List<String> getLanguageCodes() {
         return this.languageCodes;
     }
@@ -53,7 +53,6 @@ public final class LanguageCodesSetResponse {
             this.languageCodes = Objects.requireNonNull(languageCodes);
             return this;
         }
-
         public LanguageCodesSetResponse build() {
             return new LanguageCodesSetResponse(languageCodes);
         }

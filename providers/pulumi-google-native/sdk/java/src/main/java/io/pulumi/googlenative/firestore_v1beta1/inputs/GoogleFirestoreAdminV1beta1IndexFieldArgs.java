@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firestore_v1beta1.enums.GoogleFirestoreAdminV1beta1IndexFieldMode;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="fieldPath")
-    private final @Nullable Input<String> fieldPath;
+      private final @Nullable Input<String> fieldPath;
 
     public Input<String> getFieldPath() {
         return this.fieldPath == null ? Input.empty() : this.fieldPath;
@@ -35,7 +35,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
+      private final @Nullable Input<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
 
     public Input<GoogleFirestoreAdminV1beta1IndexFieldMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -94,7 +94,6 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public GoogleFirestoreAdminV1beta1IndexFieldArgs build() {
             return new GoogleFirestoreAdminV1beta1IndexFieldArgs(fieldPath, mode);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ssm.enums.AssociationComplianceSeverity;
 import io.pulumi.awsnative.ssm.enums.AssociationSyncCompliance;
 import io.pulumi.awsnative.ssm.outputs.AssociationInstanceAssociationOutputLocation;
 import io.pulumi.awsnative.ssm.outputs.AssociationTarget;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -113,14 +113,14 @@ public final class GetAssociationResult {
     /**
      * Unique identifier of the association.
      * 
-     */
+    */
     public Optional<String> getAssociationId() {
         return Optional.ofNullable(this.associationId);
     }
     /**
      * The name of the association.
      * 
-     */
+    */
     public Optional<String> getAssociationName() {
         return Optional.ofNullable(this.associationName);
     }
@@ -136,14 +136,14 @@ public final class GetAssociationResult {
     /**
      * The version of the SSM document to associate with the target.
      * 
-     */
+    */
     public Optional<String> getDocumentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
      * The ID of the instance that the SSM document is associated with.
      * 
-     */
+    */
     public Optional<String> getInstanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -156,7 +156,7 @@ public final class GetAssociationResult {
     /**
      * The name of the SSM document.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -166,14 +166,14 @@ public final class GetAssociationResult {
     /**
      * Parameter values that the SSM document uses at runtime.
      * 
-     */
+    */
     public Optional<Object> getParameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * A Cron or Rate expression that specifies when the association is applied to the target.
      * 
-     */
+    */
     public Optional<String> getScheduleExpression() {
         return Optional.ofNullable(this.scheduleExpression);
     }
@@ -183,7 +183,7 @@ public final class GetAssociationResult {
     /**
      * The targets that the SSM document sends commands to.
      * 
-     */
+    */
     public List<AssociationTarget> getTargets() {
         return this.targets == null ? List.of() : this.targets;
     }
@@ -327,7 +327,6 @@ public final class GetAssociationResult {
             this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
             return this;
         }
-
         public GetAssociationResult build() {
             return new GetAssociationResult(applyOnlyAtCronInterval, associationId, associationName, automationTargetParameterName, calendarNames, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, syncCompliance, targets, waitForSuccessTimeoutSeconds);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class SchedulerResourceResponse {
     /**
      * Optional. The number of schedulers.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * Optional. CPU request and limit for a single Airflow scheduler replica.
      * 
-     */
+    */
     public Double getCpu() {
         return this.cpu;
     }
     /**
      * Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
      * 
-     */
+    */
     public Double getMemoryGb() {
         return this.memoryGb;
     }
     /**
      * Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
      * 
-     */
+    */
     public Double getStorageGb() {
         return this.storageGb;
     }
@@ -117,7 +117,6 @@ public final class SchedulerResourceResponse {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }
-
         public SchedulerResourceResponse build() {
             return new SchedulerResourceResponse(count, cpu, memoryGb, storageGb);
         }

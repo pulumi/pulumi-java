@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaConditionArgs;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaRuleBoostActionArgs;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs;
@@ -31,7 +31,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="boostAction")
-    private final @Nullable Input<GoogleCloudRetailV2alphaRuleBoostActionArgs> boostAction;
+      private final @Nullable Input<GoogleCloudRetailV2alphaRuleBoostActionArgs> boostAction;
 
     public Input<GoogleCloudRetailV2alphaRuleBoostActionArgs> getBoostAction() {
         return this.boostAction == null ? Input.empty() : this.boostAction;
@@ -42,7 +42,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="condition", required=true)
-    private final Input<GoogleCloudRetailV2alphaConditionArgs> condition;
+      private final Input<GoogleCloudRetailV2alphaConditionArgs> condition;
 
     public Input<GoogleCloudRetailV2alphaConditionArgs> getCondition() {
         return this.condition;
@@ -53,7 +53,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="doNotAssociateAction")
-    private final @Nullable Input<GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs> doNotAssociateAction;
+      private final @Nullable Input<GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs> doNotAssociateAction;
 
     public Input<GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs> getDoNotAssociateAction() {
         return this.doNotAssociateAction == null ? Input.empty() : this.doNotAssociateAction;
@@ -64,7 +64,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="filterAction")
-    private final @Nullable Input<GoogleCloudRetailV2alphaRuleFilterActionArgs> filterAction;
+      private final @Nullable Input<GoogleCloudRetailV2alphaRuleFilterActionArgs> filterAction;
 
     public Input<GoogleCloudRetailV2alphaRuleFilterActionArgs> getFilterAction() {
         return this.filterAction == null ? Input.empty() : this.filterAction;
@@ -75,7 +75,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ignoreAction")
-    private final @Nullable Input<GoogleCloudRetailV2alphaRuleIgnoreActionArgs> ignoreAction;
+      private final @Nullable Input<GoogleCloudRetailV2alphaRuleIgnoreActionArgs> ignoreAction;
 
     public Input<GoogleCloudRetailV2alphaRuleIgnoreActionArgs> getIgnoreAction() {
         return this.ignoreAction == null ? Input.empty() : this.ignoreAction;
@@ -86,7 +86,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onewaySynonymsAction")
-    private final @Nullable Input<GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs> onewaySynonymsAction;
+      private final @Nullable Input<GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs> onewaySynonymsAction;
 
     public Input<GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs> getOnewaySynonymsAction() {
         return this.onewaySynonymsAction == null ? Input.empty() : this.onewaySynonymsAction;
@@ -97,7 +97,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="redirectAction")
-    private final @Nullable Input<GoogleCloudRetailV2alphaRuleRedirectActionArgs> redirectAction;
+      private final @Nullable Input<GoogleCloudRetailV2alphaRuleRedirectActionArgs> redirectAction;
 
     public Input<GoogleCloudRetailV2alphaRuleRedirectActionArgs> getRedirectAction() {
         return this.redirectAction == null ? Input.empty() : this.redirectAction;
@@ -108,7 +108,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="replacementAction")
-    private final @Nullable Input<GoogleCloudRetailV2alphaRuleReplacementActionArgs> replacementAction;
+      private final @Nullable Input<GoogleCloudRetailV2alphaRuleReplacementActionArgs> replacementAction;
 
     public Input<GoogleCloudRetailV2alphaRuleReplacementActionArgs> getReplacementAction() {
         return this.replacementAction == null ? Input.empty() : this.replacementAction;
@@ -119,7 +119,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="twowaySynonymsAction")
-    private final @Nullable Input<GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs> twowaySynonymsAction;
+      private final @Nullable Input<GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs> twowaySynonymsAction;
 
     public Input<GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs> getTwowaySynonymsAction() {
         return this.twowaySynonymsAction == null ? Input.empty() : this.twowaySynonymsAction;
@@ -283,7 +283,6 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
             this.twowaySynonymsAction = Input.ofNullable(twowaySynonymsAction);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleArgs build() {
             return new GoogleCloudRetailV2alphaRuleArgs(boostAction, condition, doNotAssociateAction, filterAction, ignoreAction, onewaySynonymsAction, redirectAction, replacementAction, twowaySynonymsAction);
         }

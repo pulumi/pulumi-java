@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
     /**
      * The password that corresponds to the username.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The name of the user.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -76,7 +76,6 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
             this.username = username;
             return this;
         }
-
         public ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties(password, username);
         }

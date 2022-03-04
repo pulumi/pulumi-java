@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.enums.UserAuthenticationModePropertiesType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class AuthenticationModeProperties {
     /**
      * Passwords used for this user account. You can create up to two passwords for each user.
      * 
-     */
+    */
     public List<String> getPasswords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
     /**
      * Type of authentication strategy for this user.
      * 
-     */
+    */
     public Optional<UserAuthenticationModePropertiesType> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -78,7 +78,6 @@ public final class AuthenticationModeProperties {
             this.type = type;
             return this;
         }
-
         public AuthenticationModeProperties build() {
             return new AuthenticationModeProperties(passwords, type);
         }

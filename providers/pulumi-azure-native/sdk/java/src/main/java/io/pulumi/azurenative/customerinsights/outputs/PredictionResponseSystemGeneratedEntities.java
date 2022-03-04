@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -41,21 +41,21 @@ public final class PredictionResponseSystemGeneratedEntities {
     /**
      * Generated interaction types.
      * 
-     */
+    */
     public List<String> getGeneratedInteractionTypes() {
         return this.generatedInteractionTypes == null ? List.of() : this.generatedInteractionTypes;
     }
     /**
      * Generated KPIs.
      * 
-     */
+    */
     public Map<String,String> getGeneratedKpis() {
         return this.generatedKpis == null ? Map.of() : this.generatedKpis;
     }
     /**
      * Generated links.
      * 
-     */
+    */
     public List<String> getGeneratedLinks() {
         return this.generatedLinks == null ? List.of() : this.generatedLinks;
     }
@@ -98,7 +98,6 @@ public final class PredictionResponseSystemGeneratedEntities {
             this.generatedLinks = generatedLinks;
             return this;
         }
-
         public PredictionResponseSystemGeneratedEntities build() {
             return new PredictionResponseSystemGeneratedEntities(generatedInteractionTypes, generatedKpis, generatedLinks);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableProxy")
-    private final @Nullable Input<Boolean> enableProxy;
+      private final @Nullable Input<Boolean> enableProxy;
 
     public Input<Boolean> getEnableProxy() {
         return this.enableProxy == null ? Input.empty() : this.enableProxy;
@@ -36,7 +36,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireProxyForNetworkRules")
-    private final @Nullable Input<Boolean> requireProxyForNetworkRules;
+      private final @Nullable Input<Boolean> requireProxyForNetworkRules;
 
     public Input<Boolean> getRequireProxyForNetworkRules() {
         return this.requireProxyForNetworkRules == null ? Input.empty() : this.requireProxyForNetworkRules;
@@ -47,7 +47,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servers")
-    private final @Nullable Input<List<String>> servers;
+      private final @Nullable Input<List<String>> servers;
 
     public Input<List<String>> getServers() {
         return this.servers == null ? Input.empty() : this.servers;
@@ -121,7 +121,6 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.servers = Input.ofNullable(servers);
             return this;
         }
-
         public DnsSettingsArgs build() {
             return new DnsSettingsArgs(enableProxy, requireProxyForNetworkRules, servers);
         }

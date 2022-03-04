@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certBlob")
-    private final @Nullable Input<String> certBlob;
+      private final @Nullable Input<String> certBlob;
 
     public Input<String> getCertBlob() {
         return this.certBlob == null ? Input.empty() : this.certBlob;
@@ -32,7 +32,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable Input<String> dnsServers;
+      private final @Nullable Input<String> dnsServers;
 
     public Input<String> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -43,7 +43,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isSwift")
-    private final @Nullable Input<Boolean> isSwift;
+      private final @Nullable Input<Boolean> isSwift;
 
     public Input<Boolean> getIsSwift() {
         return this.isSwift == null ? Input.empty() : this.isSwift;
@@ -54,7 +54,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -65,7 +65,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -76,7 +76,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vnetName")
-    private final @Nullable Input<String> vnetName;
+      private final @Nullable Input<String> vnetName;
 
     public Input<String> getVnetName() {
         return this.vnetName == null ? Input.empty() : this.vnetName;
@@ -98,7 +98,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vnetResourceId")
-    private final @Nullable Input<String> vnetResourceId;
+      private final @Nullable Input<String> vnetResourceId;
 
     public Input<String> getVnetResourceId() {
         return this.vnetResourceId == null ? Input.empty() : this.vnetResourceId;
@@ -247,7 +247,6 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
             this.vnetResourceId = Input.ofNullable(vnetResourceId);
             return this;
         }
-
         public WebAppVnetConnectionArgs build() {
             return new WebAppVnetConnectionArgs(certBlob, dnsServers, isSwift, kind, name, resourceGroupName, vnetName, vnetResourceId);
         }

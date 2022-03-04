@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.enums.RecordingConfigurationState;
 import io.pulumi.awsnative.ivs.outputs.RecordingConfigurationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class GetRecordingConfigurationResult {
     /**
      * Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Recording Configuration State.
      * 
-     */
+    */
     public Optional<RecordingConfigurationState> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
      * 
-     */
+    */
     public List<RecordingConfigurationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -100,7 +100,6 @@ public final class GetRecordingConfigurationResult {
             this.tags = tags;
             return this;
         }
-
         public GetRecordingConfigurationResult build() {
             return new GetRecordingConfigurationResult(arn, state, tags);
         }

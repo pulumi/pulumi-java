@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesis.outputs;
 
 import io.pulumi.awsnative.kinesis.enums.StreamEncryptionEncryptionType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,14 +32,14 @@ public final class StreamEncryption {
     /**
      * The encryption type to use. The only valid value is KMS.
      * 
-     */
+    */
     public StreamEncryptionEncryptionType getEncryptionType() {
         return this.encryptionType;
     }
     /**
      * The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by "alias/".You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
      * 
-     */
+    */
     public String getKeyId() {
         return this.keyId;
     }
@@ -75,7 +75,6 @@ public final class StreamEncryption {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public StreamEncryption build() {
             return new StreamEncryption(encryptionType, keyId);
         }

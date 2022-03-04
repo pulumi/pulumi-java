@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.outputs.CustomerCertificateParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ManagedCertificateParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningKeyParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -72,42 +72,42 @@ public final class GetSecretResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * object which contains secret parameters
      * 
-     */
+    */
     public Optional<Object> getParameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * Provisioning status
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -178,7 +178,6 @@ public final class GetSecretResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(deploymentStatus, id, name, parameters, provisioningState, systemData, type);
         }

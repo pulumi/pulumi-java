@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.KeyVaultCertificateSourceParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -50,28 +50,28 @@ public final class UserManagedHttpsParametersResponse {
      * Defines the source of the SSL certificate.
      * Expected value is 'AzureKeyVault'.
      * 
-     */
+    */
     public String getCertificateSource() {
         return this.certificateSource;
     }
     /**
      * Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
      * 
-     */
+    */
     public KeyVaultCertificateSourceParametersResponse getCertificateSourceParameters() {
         return this.certificateSourceParameters;
     }
     /**
      * TLS protocol version that will be used for Https
      * 
-     */
+    */
     public Optional<String> getMinimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
      * Defines the TLS extension protocol that is used for secure delivery.
      * 
-     */
+    */
     public String getProtocolType() {
         return this.protocolType;
     }
@@ -121,7 +121,6 @@ public final class UserManagedHttpsParametersResponse {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }
-
         public UserManagedHttpsParametersResponse build() {
             return new UserManagedHttpsParametersResponse(certificateSource, certificateSourceParameters, minimumTlsVersion, protocolType);
         }

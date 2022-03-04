@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mwaa.outputs;
 
 import io.pulumi.awsnative.mwaa.outputs.EnvironmentModuleLoggingConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -99,7 +99,6 @@ public final class EnvironmentLoggingConfiguration {
             this.workerLogs = workerLogs;
             return this;
         }
-
         public EnvironmentLoggingConfiguration build() {
             return new EnvironmentLoggingConfiguration(dagProcessingLogs, schedulerLogs, taskLogs, webserverLogs, workerLogs);
         }

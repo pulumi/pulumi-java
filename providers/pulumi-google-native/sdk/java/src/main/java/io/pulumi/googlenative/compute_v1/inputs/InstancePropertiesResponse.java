@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_v1.inputs.AdvancedMachineFeaturesResponse;
 import io.pulumi.googlenative.compute_v1.inputs.AttachedDiskResponse;
@@ -32,7 +32,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="advancedMachineFeatures", required=true)
-    private final AdvancedMachineFeaturesResponse advancedMachineFeatures;
+      private final AdvancedMachineFeaturesResponse advancedMachineFeatures;
 
     public AdvancedMachineFeaturesResponse getAdvancedMachineFeatures() {
         return this.advancedMachineFeatures;
@@ -43,7 +43,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="canIpForward", required=true)
-    private final Boolean canIpForward;
+      private final Boolean canIpForward;
 
     public Boolean getCanIpForward() {
         return this.canIpForward;
@@ -54,7 +54,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="confidentialInstanceConfig", required=true)
-    private final ConfidentialInstanceConfigResponse confidentialInstanceConfig;
+      private final ConfidentialInstanceConfigResponse confidentialInstanceConfig;
 
     public ConfidentialInstanceConfigResponse getConfidentialInstanceConfig() {
         return this.confidentialInstanceConfig;
@@ -65,7 +65,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -76,7 +76,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="disks", required=true)
-    private final List<AttachedDiskResponse> disks;
+      private final List<AttachedDiskResponse> disks;
 
     public List<AttachedDiskResponse> getDisks() {
         return this.disks;
@@ -87,7 +87,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="guestAccelerators", required=true)
-    private final List<AcceleratorConfigResponse> guestAccelerators;
+      private final List<AcceleratorConfigResponse> guestAccelerators;
 
     public List<AcceleratorConfigResponse> getGuestAccelerators() {
         return this.guestAccelerators;
@@ -98,7 +98,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -109,7 +109,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -120,7 +120,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final MetadataResponse metadata;
+      private final MetadataResponse metadata;
 
     public MetadataResponse getMetadata() {
         return this.metadata;
@@ -131,7 +131,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="minCpuPlatform", required=true)
-    private final String minCpuPlatform;
+      private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
@@ -142,7 +142,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="networkInterfaces", required=true)
-    private final List<NetworkInterfaceResponse> networkInterfaces;
+      private final List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
@@ -153,7 +153,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="networkPerformanceConfig", required=true)
-    private final NetworkPerformanceConfigResponse networkPerformanceConfig;
+      private final NetworkPerformanceConfigResponse networkPerformanceConfig;
 
     public NetworkPerformanceConfigResponse getNetworkPerformanceConfig() {
         return this.networkPerformanceConfig;
@@ -164,7 +164,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess", required=true)
-    private final String privateIpv6GoogleAccess;
+      private final String privateIpv6GoogleAccess;
 
     public String getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
@@ -175,7 +175,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="reservationAffinity", required=true)
-    private final ReservationAffinityResponse reservationAffinity;
+      private final ReservationAffinityResponse reservationAffinity;
 
     public ReservationAffinityResponse getReservationAffinity() {
         return this.reservationAffinity;
@@ -186,7 +186,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceManagerTags", required=true)
-    private final Map<String,String> resourceManagerTags;
+      private final Map<String,String> resourceManagerTags;
 
     public Map<String,String> getResourceManagerTags() {
         return this.resourceManagerTags;
@@ -197,7 +197,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourcePolicies", required=true)
-    private final List<String> resourcePolicies;
+      private final List<String> resourcePolicies;
 
     public List<String> getResourcePolicies() {
         return this.resourcePolicies;
@@ -208,7 +208,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="scheduling", required=true)
-    private final SchedulingResponse scheduling;
+      private final SchedulingResponse scheduling;
 
     public SchedulingResponse getScheduling() {
         return this.scheduling;
@@ -219,7 +219,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="serviceAccounts", required=true)
-    private final List<ServiceAccountResponse> serviceAccounts;
+      private final List<ServiceAccountResponse> serviceAccounts;
 
     public List<ServiceAccountResponse> getServiceAccounts() {
         return this.serviceAccounts;
@@ -230,7 +230,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="shieldedInstanceConfig", required=true)
-    private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
+      private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
     public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
@@ -241,7 +241,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tags", required=true)
-    private final TagsResponse tags;
+      private final TagsResponse tags;
 
     public TagsResponse getTags() {
         return this.tags;
@@ -470,7 +470,6 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public InstancePropertiesResponse build() {
             return new InstancePropertiesResponse(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, description, disks, guestAccelerators, labels, machineType, metadata, minCpuPlatform, networkInterfaces, networkPerformanceConfig, privateIpv6GoogleAccess, reservationAffinity, resourceManagerTags, resourcePolicies, scheduling, serviceAccounts, shieldedInstanceConfig, tags);
         }

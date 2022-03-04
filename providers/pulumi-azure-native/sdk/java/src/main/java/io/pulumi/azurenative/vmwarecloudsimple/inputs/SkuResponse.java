@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable String capacity;
+      private final @Nullable String capacity;
 
     public Optional<String> getCapacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
@@ -34,7 +34,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -45,7 +45,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="family")
-    private final @Nullable String family;
+      private final @Nullable String family;
 
     public Optional<String> getFamily() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
@@ -56,7 +56,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -67,7 +67,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable String tier;
+      private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
@@ -146,7 +146,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
             this.tier = tier;
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(capacity, description, family, name, tier);
         }

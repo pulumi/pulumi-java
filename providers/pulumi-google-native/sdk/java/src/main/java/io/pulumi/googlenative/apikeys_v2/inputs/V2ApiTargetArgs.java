@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methods")
-    private final @Nullable Input<List<String>> methods;
+      private final @Nullable Input<List<String>> methods;
 
     public Input<List<String>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
@@ -35,7 +35,7 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -94,7 +94,6 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public V2ApiTargetArgs build() {
             return new V2ApiTargetArgs(methods, service);
         }

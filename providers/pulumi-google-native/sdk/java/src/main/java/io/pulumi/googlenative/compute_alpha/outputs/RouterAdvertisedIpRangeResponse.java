@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class RouterAdvertisedIpRangeResponse {
     /**
      * User-specified description for the IP range.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The IP range to advertise. The value must be a CIDR-formatted string.
      * 
-     */
+    */
     public String getRange() {
         return this.range;
     }
@@ -74,7 +74,6 @@ public final class RouterAdvertisedIpRangeResponse {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public RouterAdvertisedIpRangeResponse build() {
             return new RouterAdvertisedIpRangeResponse(description, range);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class RequestsBasedTriggerResponse {
     /**
      * Request Count.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Time interval.
      * 
-     */
+    */
     public Optional<String> getTimeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
@@ -77,7 +77,6 @@ public final class RequestsBasedTriggerResponse {
             this.timeInterval = timeInterval;
             return this;
         }
-
         public RequestsBasedTriggerResponse build() {
             return new RequestsBasedTriggerResponse(count, timeInterval);
         }

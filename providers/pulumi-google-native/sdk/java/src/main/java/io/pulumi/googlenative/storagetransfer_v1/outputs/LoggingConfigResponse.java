@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class LoggingConfigResponse {
     /**
      * For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
      * 
-     */
+    */
     public Boolean getEnableOnpremGcsTransferLogs() {
         return this.enableOnpremGcsTransferLogs;
     }
     /**
      * States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
      * 
-     */
+    */
     public List<String> getLogActionStates() {
         return this.logActionStates;
     }
     /**
      * Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
      * 
-     */
+    */
     public List<String> getLogActions() {
         return this.logActions;
     }
@@ -97,7 +97,6 @@ public final class LoggingConfigResponse {
             this.logActions = Objects.requireNonNull(logActions);
             return this;
         }
-
         public LoggingConfigResponse build() {
             return new LoggingConfigResponse(enableOnpremGcsTransferLogs, logActionStates, logActions);
         }

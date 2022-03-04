@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -35,7 +35,7 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -46,7 +46,7 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -57,7 +57,7 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+      private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -146,7 +146,6 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public SrvRecordArgs build() {
             return new SrvRecordArgs(port, priority, target, weight);
         }

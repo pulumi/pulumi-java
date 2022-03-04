@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
     /**
      * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.
      * 
-     */
+    */
     public String getInterconnectName() {
         return this.interconnectName;
     }
     /**
      * Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
      * 
-     */
+    */
     public String getPartnerName() {
         return this.partnerName;
     }
     /**
      * URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
      * 
-     */
+    */
     public String getPortalUrl() {
         return this.portalUrl;
     }
@@ -95,7 +95,6 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
             this.portalUrl = Objects.requireNonNull(portalUrl);
             return this;
         }
-
         public InterconnectAttachmentPartnerMetadataResponse build() {
             return new InterconnectAttachmentPartnerMetadataResponse(interconnectName, partnerName, portalUrl);
         }

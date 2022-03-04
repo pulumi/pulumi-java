@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ingestDelay")
-    private final @Nullable Input<String> ingestDelay;
+      private final @Nullable Input<String> ingestDelay;
 
     public Input<String> getIngestDelay() {
         return this.ingestDelay == null ? Input.empty() : this.ingestDelay;
@@ -30,7 +30,7 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="samplePeriod")
-    private final @Nullable Input<String> samplePeriod;
+      private final @Nullable Input<String> samplePeriod;
 
     public Input<String> getSamplePeriod() {
         return this.samplePeriod == null ? Input.empty() : this.samplePeriod;
@@ -89,7 +89,6 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
             this.samplePeriod = Input.ofNullable(samplePeriod);
             return this;
         }
-
         public MetricDescriptorMetadataGetArgs build() {
             return new MetricDescriptorMetadataGetArgs(ingestDelay, samplePeriod);
         }

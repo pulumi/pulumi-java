@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -35,7 +35,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -46,7 +46,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -57,7 +57,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-    private final @Nullable String privateIPAllocationMethod;
+      private final @Nullable String privateIPAllocationMethod;
 
     public Optional<String> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
@@ -68,7 +68,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -79,7 +79,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="publicIPAddress", required=true)
-    private final SubResourceResponse publicIPAddress;
+      private final SubResourceResponse publicIPAddress;
 
     public SubResourceResponse getPublicIPAddress() {
         return this.publicIPAddress;
@@ -90,7 +90,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="subnet", required=true)
-    private final SubResourceResponse subnet;
+      private final SubResourceResponse subnet;
 
     public SubResourceResponse getSubnet() {
         return this.subnet;
@@ -101,7 +101,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -210,7 +210,6 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BastionHostIPConfigurationResponse build() {
             return new BastionHostIPConfigurationResponse(etag, id, name, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet, type);
         }

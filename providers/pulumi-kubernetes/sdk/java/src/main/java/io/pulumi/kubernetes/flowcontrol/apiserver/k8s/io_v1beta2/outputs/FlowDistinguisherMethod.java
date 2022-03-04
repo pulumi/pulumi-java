@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class FlowDistinguisherMethod {
     /**
      * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -52,7 +52,6 @@ public final class FlowDistinguisherMethod {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FlowDistinguisherMethod build() {
             return new FlowDistinguisherMethod(type);
         }

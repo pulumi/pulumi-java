@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.UrlRewriteActionParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,14 +34,14 @@ public final class UrlRewriteActionResponse {
      * The name of the action for the delivery rule.
      * Expected value is 'UrlRewrite'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
-     */
+    */
     public UrlRewriteActionParametersResponse getParameters() {
         return this.parameters;
     }
@@ -77,7 +77,6 @@ public final class UrlRewriteActionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public UrlRewriteActionResponse build() {
             return new UrlRewriteActionResponse(name, parameters);
         }

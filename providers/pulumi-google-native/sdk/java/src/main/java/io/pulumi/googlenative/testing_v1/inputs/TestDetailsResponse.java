@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorMessage", required=true)
-    private final String errorMessage;
+      private final String errorMessage;
 
     public String getErrorMessage() {
         return this.errorMessage;
@@ -33,7 +33,7 @@ public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="progressMessages", required=true)
-    private final List<String> progressMessages;
+      private final List<String> progressMessages;
 
     public List<String> getProgressMessages() {
         return this.progressMessages;
@@ -82,7 +82,6 @@ public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.progressMessages = Objects.requireNonNull(progressMessages);
             return this;
         }
-
         public TestDetailsResponse build() {
             return new TestDetailsResponse(errorMessage, progressMessages);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.HealthProbeRequestType;
 import io.pulumi.azurenative.cdn.enums.ProbeProtocol;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="probeIntervalInSeconds")
-    private final @Nullable Input<Integer> probeIntervalInSeconds;
+      private final @Nullable Input<Integer> probeIntervalInSeconds;
 
     public Input<Integer> getProbeIntervalInSeconds() {
         return this.probeIntervalInSeconds == null ? Input.empty() : this.probeIntervalInSeconds;
@@ -37,7 +37,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="probePath")
-    private final @Nullable Input<String> probePath;
+      private final @Nullable Input<String> probePath;
 
     public Input<String> getProbePath() {
         return this.probePath == null ? Input.empty() : this.probePath;
@@ -48,7 +48,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="probeProtocol")
-    private final @Nullable Input<ProbeProtocol> probeProtocol;
+      private final @Nullable Input<ProbeProtocol> probeProtocol;
 
     public Input<ProbeProtocol> getProbeProtocol() {
         return this.probeProtocol == null ? Input.empty() : this.probeProtocol;
@@ -59,7 +59,7 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="probeRequestType")
-    private final @Nullable Input<HealthProbeRequestType> probeRequestType;
+      private final @Nullable Input<HealthProbeRequestType> probeRequestType;
 
     public Input<HealthProbeRequestType> getProbeRequestType() {
         return this.probeRequestType == null ? Input.empty() : this.probeRequestType;
@@ -148,7 +148,6 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
             this.probeRequestType = Input.ofNullable(probeRequestType);
             return this;
         }
-
         public HealthProbeParametersArgs build() {
             return new HealthProbeParametersArgs(probeIntervalInSeconds, probePath, probeProtocol, probeRequestType);
         }

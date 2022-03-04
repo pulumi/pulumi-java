@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -77,56 +77,56 @@ public final class GetDiskAccessResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
      * 
-     */
+    */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The disk access resource provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The time when the disk access was created.
      * 
-     */
+    */
     public String getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -204,7 +204,6 @@ public final class GetDiskAccessResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDiskAccessResult build() {
             return new GetDiskAccessResult(id, location, name, privateEndpointConnections, provisioningState, tags, timeCreated, type);
         }

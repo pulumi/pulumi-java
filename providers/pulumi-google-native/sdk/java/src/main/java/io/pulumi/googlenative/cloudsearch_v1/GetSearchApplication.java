@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSearchApplication {
-/**
- * Gets the specified search application. **Note:** This API requires an admin account to execute.
+    private GetSearchApplication() {}
+    public interface BuilderApplicator {
+        public void apply(GetSearchApplicationArgs.Builder a);
+    }
+    private static GetSearchApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSearchApplicationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified search application. **Note:** This API requires an admin account to execute.
  * 
- */
+     */
+    public static CompletableFuture<GetSearchApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified search application. **Note:** This API requires an admin account to execute.
+     * 
+     */
     public static CompletableFuture<GetSearchApplicationResult> invokeAsync(GetSearchApplicationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsearch/v1:getSearchApplication", TypeShape.of(GetSearchApplicationResult.class), args == null ? GetSearchApplicationArgs.Empty : args, Utilities.withVersion(options));
     }

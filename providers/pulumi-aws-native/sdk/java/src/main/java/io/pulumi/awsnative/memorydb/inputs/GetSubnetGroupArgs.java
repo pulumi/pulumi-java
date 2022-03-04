@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.memorydb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSubnetGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetGroupName", required=true)
-    private final String subnetGroupName;
+      private final String subnetGroupName;
 
     public String getSubnetGroupName() {
         return this.subnetGroupName;
@@ -55,7 +55,6 @@ public final class GetSubnetGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.subnetGroupName = Objects.requireNonNull(subnetGroupName);
             return this;
         }
-
         public GetSubnetGroupArgs build() {
             return new GetSubnetGroupArgs(subnetGroupName);
         }

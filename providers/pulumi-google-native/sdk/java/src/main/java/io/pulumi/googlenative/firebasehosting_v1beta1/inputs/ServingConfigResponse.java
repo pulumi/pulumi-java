@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.HeaderResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.I18nConfigResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.RedirectResponse;
@@ -27,7 +27,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="appAssociation", required=true)
-    private final String appAssociation;
+      private final String appAssociation;
 
     public String getAppAssociation() {
         return this.appAssociation;
@@ -38,7 +38,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="cleanUrls", required=true)
-    private final Boolean cleanUrls;
+      private final Boolean cleanUrls;
 
     public Boolean getCleanUrls() {
         return this.cleanUrls;
@@ -49,7 +49,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="headers", required=true)
-    private final List<HeaderResponse> headers;
+      private final List<HeaderResponse> headers;
 
     public List<HeaderResponse> getHeaders() {
         return this.headers;
@@ -60,7 +60,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="i18n", required=true)
-    private final I18nConfigResponse i18n;
+      private final I18nConfigResponse i18n;
 
     public I18nConfigResponse getI18n() {
         return this.i18n;
@@ -71,7 +71,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="redirects", required=true)
-    private final List<RedirectResponse> redirects;
+      private final List<RedirectResponse> redirects;
 
     public List<RedirectResponse> getRedirects() {
         return this.redirects;
@@ -82,7 +82,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rewrites", required=true)
-    private final List<RewriteResponse> rewrites;
+      private final List<RewriteResponse> rewrites;
 
     public List<RewriteResponse> getRewrites() {
         return this.rewrites;
@@ -93,7 +93,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="trailingSlashBehavior", required=true)
-    private final String trailingSlashBehavior;
+      private final String trailingSlashBehavior;
 
     public String getTrailingSlashBehavior() {
         return this.trailingSlashBehavior;
@@ -192,7 +192,6 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.trailingSlashBehavior = Objects.requireNonNull(trailingSlashBehavior);
             return this;
         }
-
         public ServingConfigResponse build() {
             return new ServingConfigResponse(appAssociation, cleanUrls, headers, i18n, redirects, rewrites, trailingSlashBehavior);
         }

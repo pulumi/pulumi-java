@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.HubBillingInfoFormatResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -92,70 +92,70 @@ public final class GetHubResult {
     /**
      * API endpoint URL of the hub.
      * 
-     */
+    */
     public String getApiEndpoint() {
         return this.apiEndpoint;
     }
     /**
      * Billing settings of the hub.
      * 
-     */
+    */
     public Optional<HubBillingInfoFormatResponse> getHubBillingInfo() {
         return Optional.ofNullable(this.hubBillingInfo);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the hub.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
      * 
-     */
+    */
     public Optional<Integer> getTenantFeatures() {
         return Optional.ofNullable(this.tenantFeatures);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Web endpoint URL of the hub.
      * 
-     */
+    */
     public String getWebEndpoint() {
         return this.webEndpoint;
     }
@@ -247,7 +247,6 @@ public final class GetHubResult {
             this.webEndpoint = Objects.requireNonNull(webEndpoint);
             return this;
         }
-
         public GetHubResult build() {
             return new GetHubResult(apiEndpoint, hubBillingInfo, id, location, name, provisioningState, tags, tenantFeatures, type, webEndpoint);
         }

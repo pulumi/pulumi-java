@@ -15,7 +15,7 @@ import io.pulumi.azurenative.network.inputs.VirtualNetworkGatewaySkuArgs;
 import io.pulumi.azurenative.network.inputs.VpnClientConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="activeActive")
-    private final @Nullable Input<Boolean> activeActive;
+      private final @Nullable Input<Boolean> activeActive;
 
     public Input<Boolean> getActiveActive() {
         return this.activeActive == null ? Input.empty() : this.activeActive;
@@ -44,7 +44,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bgpSettings")
-    private final @Nullable Input<BgpSettingsArgs> bgpSettings;
+      private final @Nullable Input<BgpSettingsArgs> bgpSettings;
 
     public Input<BgpSettingsArgs> getBgpSettings() {
         return this.bgpSettings == null ? Input.empty() : this.bgpSettings;
@@ -55,7 +55,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="customRoutes")
-    private final @Nullable Input<AddressSpaceArgs> customRoutes;
+      private final @Nullable Input<AddressSpaceArgs> customRoutes;
 
     public Input<AddressSpaceArgs> getCustomRoutes() {
         return this.customRoutes == null ? Input.empty() : this.customRoutes;
@@ -66,7 +66,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableBgp")
-    private final @Nullable Input<Boolean> enableBgp;
+      private final @Nullable Input<Boolean> enableBgp;
 
     public Input<Boolean> getEnableBgp() {
         return this.enableBgp == null ? Input.empty() : this.enableBgp;
@@ -77,7 +77,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableDnsForwarding")
-    private final @Nullable Input<Boolean> enableDnsForwarding;
+      private final @Nullable Input<Boolean> enableDnsForwarding;
 
     public Input<Boolean> getEnableDnsForwarding() {
         return this.enableDnsForwarding == null ? Input.empty() : this.enableDnsForwarding;
@@ -88,7 +88,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enablePrivateIpAddress")
-    private final @Nullable Input<Boolean> enablePrivateIpAddress;
+      private final @Nullable Input<Boolean> enablePrivateIpAddress;
 
     public Input<Boolean> getEnablePrivateIpAddress() {
         return this.enablePrivateIpAddress == null ? Input.empty() : this.enablePrivateIpAddress;
@@ -99,7 +99,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -110,7 +110,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="gatewayDefaultSite")
-    private final @Nullable Input<SubResourceArgs> gatewayDefaultSite;
+      private final @Nullable Input<SubResourceArgs> gatewayDefaultSite;
 
     public Input<SubResourceArgs> getGatewayDefaultSite() {
         return this.gatewayDefaultSite == null ? Input.empty() : this.gatewayDefaultSite;
@@ -121,7 +121,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="gatewayType")
-    private final @Nullable Input<Either<String,VirtualNetworkGatewayType>> gatewayType;
+      private final @Nullable Input<Either<String,VirtualNetworkGatewayType>> gatewayType;
 
     public Input<Either<String,VirtualNetworkGatewayType>> getGatewayType() {
         return this.gatewayType == null ? Input.empty() : this.gatewayType;
@@ -132,7 +132,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -143,7 +143,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable Input<List<VirtualNetworkGatewayIPConfigurationArgs>> ipConfigurations;
+      private final @Nullable Input<List<VirtualNetworkGatewayIPConfigurationArgs>> ipConfigurations;
 
     public Input<List<VirtualNetworkGatewayIPConfigurationArgs>> getIpConfigurations() {
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
@@ -154,7 +154,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -165,7 +165,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -176,7 +176,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<VirtualNetworkGatewaySkuArgs> sku;
+      private final @Nullable Input<VirtualNetworkGatewaySkuArgs> sku;
 
     public Input<VirtualNetworkGatewaySkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -187,7 +187,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -198,7 +198,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vNetExtendedLocationResourceId")
-    private final @Nullable Input<String> vNetExtendedLocationResourceId;
+      private final @Nullable Input<String> vNetExtendedLocationResourceId;
 
     public Input<String> getVNetExtendedLocationResourceId() {
         return this.vNetExtendedLocationResourceId == null ? Input.empty() : this.vNetExtendedLocationResourceId;
@@ -209,7 +209,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="virtualNetworkGatewayName")
-    private final @Nullable Input<String> virtualNetworkGatewayName;
+      private final @Nullable Input<String> virtualNetworkGatewayName;
 
     public Input<String> getVirtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName == null ? Input.empty() : this.virtualNetworkGatewayName;
@@ -220,7 +220,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpnClientConfiguration")
-    private final @Nullable Input<VpnClientConfigurationArgs> vpnClientConfiguration;
+      private final @Nullable Input<VpnClientConfigurationArgs> vpnClientConfiguration;
 
     public Input<VpnClientConfigurationArgs> getVpnClientConfiguration() {
         return this.vpnClientConfiguration == null ? Input.empty() : this.vpnClientConfiguration;
@@ -231,7 +231,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpnGatewayGeneration")
-    private final @Nullable Input<Either<String,VpnGatewayGeneration>> vpnGatewayGeneration;
+      private final @Nullable Input<Either<String,VpnGatewayGeneration>> vpnGatewayGeneration;
 
     public Input<Either<String,VpnGatewayGeneration>> getVpnGatewayGeneration() {
         return this.vpnGatewayGeneration == null ? Input.empty() : this.vpnGatewayGeneration;
@@ -242,7 +242,7 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpnType")
-    private final @Nullable Input<Either<String,VpnType>> vpnType;
+      private final @Nullable Input<Either<String,VpnType>> vpnType;
 
     public Input<Either<String,VpnType>> getVpnType() {
         return this.vpnType == null ? Input.empty() : this.vpnType;
@@ -571,7 +571,6 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
             this.vpnType = Input.ofNullable(vpnType);
             return this;
         }
-
         public VirtualNetworkGatewayArgs build() {
             return new VirtualNetworkGatewayArgs(activeActive, bgpSettings, customRoutes, enableBgp, enableDnsForwarding, enablePrivateIpAddress, extendedLocation, gatewayDefaultSite, gatewayType, id, ipConfigurations, location, resourceGroupName, sku, tags, vNetExtendedLocationResourceId, virtualNetworkGatewayName, vpnClientConfiguration, vpnGatewayGeneration, vpnType);
         }

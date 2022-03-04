@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetBucketArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final String bucketName;
+      private final String bucketName;
 
     public String getBucketName() {
         return this.bucketName;
@@ -55,7 +55,6 @@ public final class GetBucketArgs extends io.pulumi.resources.InvokeArgs {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public GetBucketArgs build() {
             return new GetBucketArgs(bucketName);
         }

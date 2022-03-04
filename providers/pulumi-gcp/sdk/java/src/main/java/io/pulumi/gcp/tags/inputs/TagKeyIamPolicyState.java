@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TagKeyIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -31,7 +31,7 @@ public final class TagKeyIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -42,7 +42,7 @@ public final class TagKeyIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagKey")
-    private final @Nullable Input<String> tagKey;
+      private final @Nullable Input<String> tagKey;
 
     public Input<String> getTagKey() {
         return this.tagKey == null ? Input.empty() : this.tagKey;
@@ -116,7 +116,6 @@ public final class TagKeyIamPolicyState extends io.pulumi.resources.ResourceArgs
             this.tagKey = Input.ofNullable(tagKey);
             return this;
         }
-
         public TagKeyIamPolicyState build() {
             return new TagKeyIamPolicyState(etag, policyData, tagKey);
         }

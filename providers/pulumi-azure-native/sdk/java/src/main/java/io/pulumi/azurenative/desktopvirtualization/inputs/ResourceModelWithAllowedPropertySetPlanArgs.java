@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
      * 
      */
     @InputImport(name="product", required=true)
-    private final Input<String> product;
+      private final Input<String> product;
 
     public Input<String> getProduct() {
         return this.product;
@@ -41,7 +41,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
      * 
      */
     @InputImport(name="promotionCode")
-    private final @Nullable Input<String> promotionCode;
+      private final @Nullable Input<String> promotionCode;
 
     public Input<String> getPromotionCode() {
         return this.promotionCode == null ? Input.empty() : this.promotionCode;
@@ -52,7 +52,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
      * 
      */
     @InputImport(name="publisher", required=true)
-    private final Input<String> publisher;
+      private final Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher;
@@ -63,7 +63,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -167,7 +167,6 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ResourceModelWithAllowedPropertySetPlanArgs build() {
             return new ResourceModelWithAllowedPropertySetPlanArgs(name, product, promotionCode, publisher, version);
         }

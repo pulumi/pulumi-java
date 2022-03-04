@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class NotebookPreparationErrorResponse extends io.pulumi.resources.
     public static final NotebookPreparationErrorResponse Empty = new NotebookPreparationErrorResponse();
 
     @InputImport(name="errorMessage")
-    private final @Nullable String errorMessage;
+      private final @Nullable String errorMessage;
 
     public Optional<String> getErrorMessage() {
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
     @InputImport(name="statusCode")
-    private final @Nullable Integer statusCode;
+      private final @Nullable Integer statusCode;
 
     public Optional<Integer> getStatusCode() {
         return this.statusCode == null ? Optional.empty() : Optional.ofNullable(this.statusCode);
@@ -72,7 +72,6 @@ public final class NotebookPreparationErrorResponse extends io.pulumi.resources.
             this.statusCode = statusCode;
             return this;
         }
-
         public NotebookPreparationErrorResponse build() {
             return new NotebookPreparationErrorResponse(errorMessage, statusCode);
         }

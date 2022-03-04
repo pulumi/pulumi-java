@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.DnsKeySpecResponse;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +43,7 @@ public final class ManagedZoneDnsSecConfigResponse {
     /**
      * Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
      * 
-     */
+    */
     public List<DnsKeySpecResponse> getDefaultKeySpecs() {
         return this.defaultKeySpecs;
     }
@@ -53,14 +53,14 @@ public final class ManagedZoneDnsSecConfigResponse {
     /**
      * Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
      * 
-     */
+    */
     public String getNonExistence() {
         return this.nonExistence;
     }
     /**
      * Specifies whether DNSSEC is enabled, and what mode it is in.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -110,7 +110,6 @@ public final class ManagedZoneDnsSecConfigResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public ManagedZoneDnsSecConfigResponse build() {
             return new ManagedZoneDnsSecConfigResponse(defaultKeySpecs, kind, nonExistence, state);
         }

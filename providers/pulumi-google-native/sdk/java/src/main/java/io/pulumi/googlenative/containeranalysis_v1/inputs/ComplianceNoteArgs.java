@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CisBenchmarkArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.ComplianceVersionArgs;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     public static final ComplianceNoteArgs Empty = new ComplianceNoteArgs();
 
     @InputImport(name="cisBenchmark")
-    private final @Nullable Input<CisBenchmarkArgs> cisBenchmark;
+      private final @Nullable Input<CisBenchmarkArgs> cisBenchmark;
 
     public Input<CisBenchmarkArgs> getCisBenchmark() {
         return this.cisBenchmark == null ? Input.empty() : this.cisBenchmark;
@@ -29,7 +29,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -40,7 +40,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rationale")
-    private final @Nullable Input<String> rationale;
+      private final @Nullable Input<String> rationale;
 
     public Input<String> getRationale() {
         return this.rationale == null ? Input.empty() : this.rationale;
@@ -51,7 +51,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remediation")
-    private final @Nullable Input<String> remediation;
+      private final @Nullable Input<String> remediation;
 
     public Input<String> getRemediation() {
         return this.remediation == null ? Input.empty() : this.remediation;
@@ -62,7 +62,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scanInstructions")
-    private final @Nullable Input<String> scanInstructions;
+      private final @Nullable Input<String> scanInstructions;
 
     public Input<String> getScanInstructions() {
         return this.scanInstructions == null ? Input.empty() : this.scanInstructions;
@@ -73,7 +73,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -84,7 +84,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<List<ComplianceVersionArgs>> version;
+      private final @Nullable Input<List<ComplianceVersionArgs>> version;
 
     public Input<List<ComplianceVersionArgs>> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -218,7 +218,6 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ComplianceNoteArgs build() {
             return new ComplianceNoteArgs(cisBenchmark, description, rationale, remediation, scanInstructions, title, version);
         }

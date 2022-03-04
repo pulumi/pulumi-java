@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,133 +17,133 @@ public final class ServiceProfileLoRaWANServiceProfileArgs extends io.pulumi.res
     public static final ServiceProfileLoRaWANServiceProfileArgs Empty = new ServiceProfileLoRaWANServiceProfileArgs();
 
     @InputImport(name="addGwMetadata")
-    private final @Nullable Input<Boolean> addGwMetadata;
+      private final @Nullable Input<Boolean> addGwMetadata;
 
     public Input<Boolean> getAddGwMetadata() {
         return this.addGwMetadata == null ? Input.empty() : this.addGwMetadata;
     }
 
     @InputImport(name="channelMask")
-    private final @Nullable Input<String> channelMask;
+      private final @Nullable Input<String> channelMask;
 
     public Input<String> getChannelMask() {
         return this.channelMask == null ? Input.empty() : this.channelMask;
     }
 
     @InputImport(name="devStatusReqFreq")
-    private final @Nullable Input<Integer> devStatusReqFreq;
+      private final @Nullable Input<Integer> devStatusReqFreq;
 
     public Input<Integer> getDevStatusReqFreq() {
         return this.devStatusReqFreq == null ? Input.empty() : this.devStatusReqFreq;
     }
 
     @InputImport(name="dlBucketSize")
-    private final @Nullable Input<Integer> dlBucketSize;
+      private final @Nullable Input<Integer> dlBucketSize;
 
     public Input<Integer> getDlBucketSize() {
         return this.dlBucketSize == null ? Input.empty() : this.dlBucketSize;
     }
 
     @InputImport(name="dlRate")
-    private final @Nullable Input<Integer> dlRate;
+      private final @Nullable Input<Integer> dlRate;
 
     public Input<Integer> getDlRate() {
         return this.dlRate == null ? Input.empty() : this.dlRate;
     }
 
     @InputImport(name="dlRatePolicy")
-    private final @Nullable Input<String> dlRatePolicy;
+      private final @Nullable Input<String> dlRatePolicy;
 
     public Input<String> getDlRatePolicy() {
         return this.dlRatePolicy == null ? Input.empty() : this.dlRatePolicy;
     }
 
     @InputImport(name="drMax")
-    private final @Nullable Input<Integer> drMax;
+      private final @Nullable Input<Integer> drMax;
 
     public Input<Integer> getDrMax() {
         return this.drMax == null ? Input.empty() : this.drMax;
     }
 
     @InputImport(name="drMin")
-    private final @Nullable Input<Integer> drMin;
+      private final @Nullable Input<Integer> drMin;
 
     public Input<Integer> getDrMin() {
         return this.drMin == null ? Input.empty() : this.drMin;
     }
 
     @InputImport(name="hrAllowed")
-    private final @Nullable Input<Boolean> hrAllowed;
+      private final @Nullable Input<Boolean> hrAllowed;
 
     public Input<Boolean> getHrAllowed() {
         return this.hrAllowed == null ? Input.empty() : this.hrAllowed;
     }
 
     @InputImport(name="minGwDiversity")
-    private final @Nullable Input<Integer> minGwDiversity;
+      private final @Nullable Input<Integer> minGwDiversity;
 
     public Input<Integer> getMinGwDiversity() {
         return this.minGwDiversity == null ? Input.empty() : this.minGwDiversity;
     }
 
     @InputImport(name="nwkGeoLoc")
-    private final @Nullable Input<Boolean> nwkGeoLoc;
+      private final @Nullable Input<Boolean> nwkGeoLoc;
 
     public Input<Boolean> getNwkGeoLoc() {
         return this.nwkGeoLoc == null ? Input.empty() : this.nwkGeoLoc;
     }
 
     @InputImport(name="prAllowed")
-    private final @Nullable Input<Boolean> prAllowed;
+      private final @Nullable Input<Boolean> prAllowed;
 
     public Input<Boolean> getPrAllowed() {
         return this.prAllowed == null ? Input.empty() : this.prAllowed;
     }
 
     @InputImport(name="raAllowed")
-    private final @Nullable Input<Boolean> raAllowed;
+      private final @Nullable Input<Boolean> raAllowed;
 
     public Input<Boolean> getRaAllowed() {
         return this.raAllowed == null ? Input.empty() : this.raAllowed;
     }
 
     @InputImport(name="reportDevStatusBattery")
-    private final @Nullable Input<Boolean> reportDevStatusBattery;
+      private final @Nullable Input<Boolean> reportDevStatusBattery;
 
     public Input<Boolean> getReportDevStatusBattery() {
         return this.reportDevStatusBattery == null ? Input.empty() : this.reportDevStatusBattery;
     }
 
     @InputImport(name="reportDevStatusMargin")
-    private final @Nullable Input<Boolean> reportDevStatusMargin;
+      private final @Nullable Input<Boolean> reportDevStatusMargin;
 
     public Input<Boolean> getReportDevStatusMargin() {
         return this.reportDevStatusMargin == null ? Input.empty() : this.reportDevStatusMargin;
     }
 
     @InputImport(name="targetPer")
-    private final @Nullable Input<Integer> targetPer;
+      private final @Nullable Input<Integer> targetPer;
 
     public Input<Integer> getTargetPer() {
         return this.targetPer == null ? Input.empty() : this.targetPer;
     }
 
     @InputImport(name="ulBucketSize")
-    private final @Nullable Input<Integer> ulBucketSize;
+      private final @Nullable Input<Integer> ulBucketSize;
 
     public Input<Integer> getUlBucketSize() {
         return this.ulBucketSize == null ? Input.empty() : this.ulBucketSize;
     }
 
     @InputImport(name="ulRate")
-    private final @Nullable Input<Integer> ulRate;
+      private final @Nullable Input<Integer> ulRate;
 
     public Input<Integer> getUlRate() {
         return this.ulRate == null ? Input.empty() : this.ulRate;
     }
 
     @InputImport(name="ulRatePolicy")
-    private final @Nullable Input<String> ulRatePolicy;
+      private final @Nullable Input<String> ulRatePolicy;
 
     public Input<String> getUlRatePolicy() {
         return this.ulRatePolicy == null ? Input.empty() : this.ulRatePolicy;
@@ -457,7 +457,6 @@ public final class ServiceProfileLoRaWANServiceProfileArgs extends io.pulumi.res
             this.ulRatePolicy = Input.ofNullable(ulRatePolicy);
             return this;
         }
-
         public ServiceProfileLoRaWANServiceProfileArgs build() {
             return new ServiceProfileLoRaWANServiceProfileArgs(addGwMetadata, channelMask, devStatusReqFreq, dlBucketSize, dlRate, dlRatePolicy, drMax, drMin, hrAllowed, minGwDiversity, nwkGeoLoc, prAllowed, raAllowed, reportDevStatusBattery, reportDevStatusMargin, targetPer, ulBucketSize, ulRate, ulRatePolicy);
         }

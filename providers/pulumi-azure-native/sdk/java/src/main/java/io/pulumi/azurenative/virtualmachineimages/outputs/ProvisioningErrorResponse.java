@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ProvisioningErrorResponse {
     /**
      * Verbose error message about the provisioning failure
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Error code of the provisioning failure
      * 
-     */
+    */
     public Optional<String> getProvisioningErrorCode() {
         return Optional.ofNullable(this.provisioningErrorCode);
     }
@@ -76,7 +76,6 @@ public final class ProvisioningErrorResponse {
             this.provisioningErrorCode = provisioningErrorCode;
             return this;
         }
-
         public ProvisioningErrorResponse build() {
             return new ProvisioningErrorResponse(message, provisioningErrorCode);
         }

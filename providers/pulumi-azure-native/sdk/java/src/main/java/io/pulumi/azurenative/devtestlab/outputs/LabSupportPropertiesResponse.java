@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class LabSupportPropertiesResponse {
     /**
      * Is the lab support banner active/enabled at this time?
      * 
-     */
+    */
     public Optional<String> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
      * 
-     */
+    */
     public Optional<String> getMarkdown() {
         return Optional.ofNullable(this.markdown);
     }
@@ -76,7 +76,6 @@ public final class LabSupportPropertiesResponse {
             this.markdown = markdown;
             return this;
         }
-
         public LabSupportPropertiesResponse build() {
             return new LabSupportPropertiesResponse(enabled, markdown);
         }

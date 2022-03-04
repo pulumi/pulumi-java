@@ -5,8 +5,8 @@ package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sqladmin_v1beta4.SslCertArgs;
 import java.lang.String;
@@ -146,6 +146,37 @@ public class SslCert extends io.pulumi.resources.CustomResource {
         return this.sha1Fingerprint;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SslCertArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.sqladmin_v1beta4.SslCertArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.sqladmin_v1beta4.SslCertArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SslCert(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SslCert(String name) {
+        this(name, SslCertArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SslCert(String name, SslCertArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

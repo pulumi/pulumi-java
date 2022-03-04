@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyDailyCycleArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extend
     public static final ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs Empty = new ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs();
 
     @InputImport(name="dailyMaintenanceWindow")
-    private final @Nullable Input<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow;
+      private final @Nullable Input<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow;
 
     public Input<ResourcePolicyDailyCycleArgs> getDailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow == null ? Input.empty() : this.dailyMaintenanceWindow;
@@ -62,7 +62,6 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extend
             this.dailyMaintenanceWindow = Input.ofNullable(dailyMaintenanceWindow);
             return this;
         }
-
         public ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs build() {
             return new ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs(dailyMaintenanceWindow);
         }

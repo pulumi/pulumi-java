@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<String> config;
+      private final @Nullable Input<String> config;
 
     public Input<String> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -34,7 +34,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configTypeUrl")
-    private final @Nullable Input<String> configTypeUrl;
+      private final @Nullable Input<String> configTypeUrl;
 
     public Input<String> getConfigTypeUrl() {
         return this.configTypeUrl == null ? Input.empty() : this.configTypeUrl;
@@ -45,7 +45,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="filterName")
-    private final @Nullable Input<String> filterName;
+      private final @Nullable Input<String> filterName;
 
     public Input<String> getFilterName() {
         return this.filterName == null ? Input.empty() : this.filterName;
@@ -119,7 +119,6 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
             this.filterName = Input.ofNullable(filterName);
             return this;
         }
-
         public HttpFilterConfigArgs build() {
             return new HttpFilterConfigArgs(config, configTypeUrl, filterName);
         }

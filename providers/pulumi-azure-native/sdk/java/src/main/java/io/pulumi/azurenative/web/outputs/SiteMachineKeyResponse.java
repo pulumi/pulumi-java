@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class SiteMachineKeyResponse {
     /**
      * Algorithm used for decryption.
      * 
-     */
+    */
     public Optional<String> getDecryption() {
         return Optional.ofNullable(this.decryption);
     }
     /**
      * Decryption key.
      * 
-     */
+    */
     public Optional<String> getDecryptionKey() {
         return Optional.ofNullable(this.decryptionKey);
     }
     /**
      * MachineKey validation.
      * 
-     */
+    */
     public Optional<String> getValidation() {
         return Optional.ofNullable(this.validation);
     }
     /**
      * Validation key.
      * 
-     */
+    */
     public Optional<String> getValidationKey() {
         return Optional.ofNullable(this.validationKey);
     }
@@ -118,7 +118,6 @@ public final class SiteMachineKeyResponse {
             this.validationKey = validationKey;
             return this;
         }
-
         public SiteMachineKeyResponse build() {
             return new SiteMachineKeyResponse(decryption, decryptionKey, validation, validationKey);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class DatasetQueryAction {
             this.sqlQuery = Objects.requireNonNull(sqlQuery);
             return this;
         }
-
         public DatasetQueryAction build() {
             return new DatasetQueryAction(filters, sqlQuery);
         }

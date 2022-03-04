@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfig;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +40,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
     /**
      * Disk Config
      * 
-     */
+    */
     public Optional<ClusterClusterConfigPreemptibleWorkerConfigDiskConfig> getDiskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
@@ -51,7 +51,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
      * Specifies the number of preemptible nodes to create.
      * Defaults to 0.
      * 
-     */
+    */
     public Optional<Integer> getNumInstances() {
         return Optional.ofNullable(this.numInstances);
     }
@@ -94,7 +94,6 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
             this.numInstances = numInstances;
             return this;
         }
-
         public ClusterClusterConfigPreemptibleWorkerConfig build() {
             return new ClusterClusterConfigPreemptibleWorkerConfig(diskConfig, instanceNames, numInstances);
         }

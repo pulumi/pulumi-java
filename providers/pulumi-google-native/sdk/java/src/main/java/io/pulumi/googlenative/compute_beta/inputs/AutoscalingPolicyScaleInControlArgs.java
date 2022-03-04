@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.FixedOrPercentArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxScaledInReplicas")
-    private final @Nullable Input<FixedOrPercentArgs> maxScaledInReplicas;
+      private final @Nullable Input<FixedOrPercentArgs> maxScaledInReplicas;
 
     public Input<FixedOrPercentArgs> getMaxScaledInReplicas() {
         return this.maxScaledInReplicas == null ? Input.empty() : this.maxScaledInReplicas;
@@ -35,7 +35,7 @@ public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="timeWindowSec")
-    private final @Nullable Input<Integer> timeWindowSec;
+      private final @Nullable Input<Integer> timeWindowSec;
 
     public Input<Integer> getTimeWindowSec() {
         return this.timeWindowSec == null ? Input.empty() : this.timeWindowSec;
@@ -94,7 +94,6 @@ public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resourc
             this.timeWindowSec = Input.ofNullable(timeWindowSec);
             return this;
         }
-
         public AutoscalingPolicyScaleInControlArgs build() {
             return new AutoscalingPolicyScaleInControlArgs(maxScaledInReplicas, timeWindowSec);
         }

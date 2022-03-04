@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1beta.inputs.AppDevExperienceFeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1beta.inputs.FeatureStateResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="appdevexperience", required=true)
-    private final AppDevExperienceFeatureStateResponse appdevexperience;
+      private final AppDevExperienceFeatureStateResponse appdevexperience;
 
     public AppDevExperienceFeatureStateResponse getAppdevexperience() {
         return this.appdevexperience;
@@ -33,7 +33,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="state", required=true)
-    private final FeatureStateResponse state;
+      private final FeatureStateResponse state;
 
     public FeatureStateResponse getState() {
         return this.state;
@@ -82,7 +82,6 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public CommonFeatureStateResponse build() {
             return new CommonFeatureStateResponse(appdevexperience, state);
         }

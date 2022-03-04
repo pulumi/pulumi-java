@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WeekDayOfMonthResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final String dayOfWeek;
+      private final String dayOfWeek;
 
     public String getDayOfWeek() {
         return this.dayOfWeek;
@@ -33,7 +33,7 @@ public final class WeekDayOfMonthResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dayOffset", required=true)
-    private final Integer dayOffset;
+      private final Integer dayOffset;
 
     public Integer getDayOffset() {
         return this.dayOffset;
@@ -44,7 +44,7 @@ public final class WeekDayOfMonthResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="weekOrdinal", required=true)
-    private final Integer weekOrdinal;
+      private final Integer weekOrdinal;
 
     public Integer getWeekOrdinal() {
         return this.weekOrdinal;
@@ -103,7 +103,6 @@ public final class WeekDayOfMonthResponse extends io.pulumi.resources.InvokeArgs
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }
-
         public WeekDayOfMonthResponse build() {
             return new WeekDayOfMonthResponse(dayOfWeek, dayOffset, weekOrdinal);
         }

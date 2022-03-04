@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.KeyVaultCertificateSourceParametersResponseVault;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,49 +69,49 @@ public final class CustomHttpsConfigurationResponse {
     /**
      * Defines the source of the SSL certificate
      * 
-     */
+    */
     public String getCertificateSource() {
         return this.certificateSource;
     }
     /**
      * Defines the type of the certificate used for secure connections to a frontendEndpoint
      * 
-     */
+    */
     public Optional<String> getCertificateType() {
         return Optional.ofNullable(this.certificateType);
     }
     /**
      * The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
      * 
-     */
+    */
     public String getMinimumTlsVersion() {
         return this.minimumTlsVersion;
     }
     /**
      * Defines the TLS extension protocol that is used for secure delivery
      * 
-     */
+    */
     public String getProtocolType() {
         return this.protocolType;
     }
     /**
      * The name of the Key Vault secret representing the full certificate PFX
      * 
-     */
+    */
     public Optional<String> getSecretName() {
         return Optional.ofNullable(this.secretName);
     }
     /**
      * The version of the Key Vault secret representing the full certificate PFX
      * 
-     */
+    */
     public Optional<String> getSecretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
      * The Key Vault containing the SSL certificate
      * 
-     */
+    */
     public Optional<KeyVaultCertificateSourceParametersResponseVault> getVault() {
         return Optional.ofNullable(this.vault);
     }
@@ -182,7 +182,6 @@ public final class CustomHttpsConfigurationResponse {
             this.vault = vault;
             return this;
         }
-
         public CustomHttpsConfigurationResponse build() {
             return new CustomHttpsConfigurationResponse(certificateSource, certificateType, minimumTlsVersion, protocolType, secretName, secretVersion, vault);
         }

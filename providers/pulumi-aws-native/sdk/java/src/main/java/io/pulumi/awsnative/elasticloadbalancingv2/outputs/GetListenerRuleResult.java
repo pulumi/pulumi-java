@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleAction;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleRuleCondition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -104,7 +104,6 @@ public final class GetListenerRuleResult {
             this.ruleArn = ruleArn;
             return this;
         }
-
         public GetListenerRuleResult build() {
             return new GetListenerRuleResult(actions, conditions, isDefault, priority, ruleArn);
         }

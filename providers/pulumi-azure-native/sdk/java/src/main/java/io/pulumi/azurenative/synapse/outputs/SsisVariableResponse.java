@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -70,49 +70,49 @@ public final class SsisVariableResponse {
     /**
      * Variable type.
      * 
-     */
+    */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Variable description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Variable id.
      * 
-     */
+    */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Variable name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Whether variable is sensitive.
      * 
-     */
+    */
     public Optional<Boolean> getSensitive() {
         return Optional.ofNullable(this.sensitive);
     }
     /**
      * Variable sensitive value.
      * 
-     */
+    */
     public Optional<String> getSensitiveValue() {
         return Optional.ofNullable(this.sensitiveValue);
     }
     /**
      * Variable value.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -183,7 +183,6 @@ public final class SsisVariableResponse {
             this.value = value;
             return this;
         }
-
         public SsisVariableResponse build() {
             return new SsisVariableResponse(dataType, description, id, name, sensitive, sensitiveValue, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PullRequestFilterResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PushFilterResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enterpriseConfigResourceName", required=true)
-    private final String enterpriseConfigResourceName;
+      private final String enterpriseConfigResourceName;
 
     public String getEnterpriseConfigResourceName() {
         return this.enterpriseConfigResourceName;
@@ -34,7 +34,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="installationId", required=true)
-    private final String installationId;
+      private final String installationId;
 
     public String getInstallationId() {
         return this.installationId;
@@ -45,7 +45,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="owner", required=true)
-    private final String owner;
+      private final String owner;
 
     public String getOwner() {
         return this.owner;
@@ -67,7 +67,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="pullRequest", required=true)
-    private final PullRequestFilterResponse pullRequest;
+      private final PullRequestFilterResponse pullRequest;
 
     public PullRequestFilterResponse getPullRequest() {
         return this.pullRequest;
@@ -78,7 +78,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="push", required=true)
-    private final PushFilterResponse push;
+      private final PushFilterResponse push;
 
     public PushFilterResponse getPush() {
         return this.push;
@@ -167,7 +167,6 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
             this.push = Objects.requireNonNull(push);
             return this;
         }
-
         public GitHubEventsConfigResponse build() {
             return new GitHubEventsConfigResponse(enterpriseConfigResourceName, installationId, name, owner, pullRequest, push);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ScriptHandlerResponse {
     /**
      * Path to the script from the application root directory.
      * 
-     */
+    */
     public String getScriptPath() {
         return this.scriptPath;
     }
@@ -52,7 +52,6 @@ public final class ScriptHandlerResponse {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
-
         public ScriptHandlerResponse build() {
             return new ScriptHandlerResponse(scriptPath);
         }

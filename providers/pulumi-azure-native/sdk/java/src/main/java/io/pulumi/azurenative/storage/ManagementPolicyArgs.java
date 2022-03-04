@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.ManagementPolicySchemaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="managementPolicyName")
-    private final @Nullable Input<String> managementPolicyName;
+      private final @Nullable Input<String> managementPolicyName;
 
     public Input<String> getManagementPolicyName() {
         return this.managementPolicyName == null ? Input.empty() : this.managementPolicyName;
@@ -42,7 +42,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policy", required=true)
-    private final Input<ManagementPolicySchemaArgs> policy;
+      private final Input<ManagementPolicySchemaArgs> policy;
 
     public Input<ManagementPolicySchemaArgs> getPolicy() {
         return this.policy;
@@ -53,7 +53,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ManagementPolicyArgs build() {
             return new ManagementPolicyArgs(accountName, managementPolicyName, policy, resourceGroupName);
         }

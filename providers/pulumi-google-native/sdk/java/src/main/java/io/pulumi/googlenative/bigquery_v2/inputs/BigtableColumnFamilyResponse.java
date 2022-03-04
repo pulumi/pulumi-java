@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.BigtableColumnResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="columns", required=true)
-    private final List<BigtableColumnResponse> columns;
+      private final List<BigtableColumnResponse> columns;
 
     public List<BigtableColumnResponse> getColumns() {
         return this.columns;
@@ -31,7 +31,7 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="encoding", required=true)
-    private final String encoding;
+      private final String encoding;
 
     public String getEncoding() {
         return this.encoding;
@@ -42,7 +42,7 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="familyId", required=true)
-    private final String familyId;
+      private final String familyId;
 
     public String getFamilyId() {
         return this.familyId;
@@ -53,7 +53,7 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="onlyReadLatest", required=true)
-    private final Boolean onlyReadLatest;
+      private final Boolean onlyReadLatest;
 
     public Boolean getOnlyReadLatest() {
         return this.onlyReadLatest;
@@ -64,7 +64,7 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -143,7 +143,6 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BigtableColumnFamilyResponse build() {
             return new BigtableColumnFamilyResponse(columns, encoding, familyId, onlyReadLatest, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ReplicationSyncResponse {
     /**
      * The most updated snapshot created time in the source that finished replication.
      * 
-     */
+    */
     public String getLastSyncTime() {
         return this.lastSyncTime;
     }
@@ -52,7 +52,6 @@ public final class ReplicationSyncResponse {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
-
         public ReplicationSyncResponse build() {
             return new ReplicationSyncResponse(lastSyncTime);
         }

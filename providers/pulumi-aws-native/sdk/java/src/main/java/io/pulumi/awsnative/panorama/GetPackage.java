@@ -6,17 +6,33 @@ package io.pulumi.awsnative.panorama;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.panorama.inputs.GetPackageArgs;
 import io.pulumi.awsnative.panorama.outputs.GetPackageResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPackage {
-/**
- * Schema for Package CloudFormation Resource
+    private GetPackage() {}
+    public interface BuilderApplicator {
+        public void apply(GetPackageArgs.Builder a);
+    }
+    private static GetPackageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPackageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Schema for Package CloudFormation Resource
  * 
- */
+     */
+    public static CompletableFuture<GetPackageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Schema for Package CloudFormation Resource
+     * 
+     */
     public static CompletableFuture<GetPackageResult> invokeAsync(GetPackageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getPackage", TypeShape.of(GetPackageResult.class), args == null ? GetPackageArgs.Empty : args, Utilities.withVersion(options));
     }

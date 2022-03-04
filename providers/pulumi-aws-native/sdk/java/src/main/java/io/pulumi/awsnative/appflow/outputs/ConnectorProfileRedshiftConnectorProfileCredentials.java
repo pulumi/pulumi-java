@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ConnectorProfileRedshiftConnectorProfileCredentials {
     /**
      * The password that corresponds to the username.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The name of the user.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -74,7 +74,6 @@ public final class ConnectorProfileRedshiftConnectorProfileCredentials {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ConnectorProfileRedshiftConnectorProfileCredentials build() {
             return new ConnectorProfileRedshiftConnectorProfileCredentials(password, username);
         }

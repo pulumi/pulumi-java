@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,28 +14,28 @@ public final class GetDatabaseInstanceSettingInsightsConfig extends io.pulumi.re
     public static final GetDatabaseInstanceSettingInsightsConfig Empty = new GetDatabaseInstanceSettingInsightsConfig();
 
     @InputImport(name="queryInsightsEnabled", required=true)
-    private final Boolean queryInsightsEnabled;
+      private final Boolean queryInsightsEnabled;
 
     public Boolean getQueryInsightsEnabled() {
         return this.queryInsightsEnabled;
     }
 
     @InputImport(name="queryStringLength", required=true)
-    private final Integer queryStringLength;
+      private final Integer queryStringLength;
 
     public Integer getQueryStringLength() {
         return this.queryStringLength;
     }
 
     @InputImport(name="recordApplicationTags", required=true)
-    private final Boolean recordApplicationTags;
+      private final Boolean recordApplicationTags;
 
     public Boolean getRecordApplicationTags() {
         return this.recordApplicationTags;
     }
 
     @InputImport(name="recordClientAddress", required=true)
-    private final Boolean recordClientAddress;
+      private final Boolean recordClientAddress;
 
     public Boolean getRecordClientAddress() {
         return this.recordClientAddress;
@@ -104,7 +104,6 @@ public final class GetDatabaseInstanceSettingInsightsConfig extends io.pulumi.re
             this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
             return this;
         }
-
         public GetDatabaseInstanceSettingInsightsConfig build() {
             return new GetDatabaseInstanceSettingInsightsConfig(queryInsightsEnabled, queryStringLength, recordApplicationTags, recordClientAddress);
         }

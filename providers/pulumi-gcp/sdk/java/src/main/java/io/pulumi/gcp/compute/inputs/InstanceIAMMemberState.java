@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<InstanceIAMMemberConditionGetArgs> condition;
+      private final @Nullable Input<InstanceIAMMemberConditionGetArgs> condition;
 
     public Input<InstanceIAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -32,7 +32,7 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -43,14 +43,14 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceName")
-    private final @Nullable Input<String> instanceName;
+      private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -62,7 +62,7 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -75,7 +75,7 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -88,7 +88,7 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -222,7 +222,6 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceIAMMemberState build() {
             return new InstanceIAMMemberState(condition, etag, instanceName, member, project, role, zone);
         }

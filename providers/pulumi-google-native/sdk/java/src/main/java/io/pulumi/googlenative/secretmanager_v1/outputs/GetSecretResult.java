@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.secretmanager_v1.outputs.ReplicationResponse;
 import io.pulumi.googlenative.secretmanager_v1.outputs.RotationResponse;
 import io.pulumi.googlenative.secretmanager_v1.outputs.TopicResponse;
@@ -85,63 +85,63 @@ public final class GetSecretResult {
     /**
      * The time at which the Secret was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Etag of the currently stored Secret.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
      * 
-     */
+    */
     public String getExpireTime() {
         return this.expireTime;
     }
     /**
      * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.
      * 
-     */
+    */
     public ReplicationResponse getReplication() {
         return this.replication;
     }
     /**
      * Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation policy.
      * 
-     */
+    */
     public RotationResponse getRotation() {
         return this.rotation;
     }
     /**
      * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
      * 
-     */
+    */
     public List<TopicResponse> getTopics() {
         return this.topics;
     }
     /**
      * Input only. The TTL for the Secret.
      * 
-     */
+    */
     public String getTtl() {
         return this.ttl;
     }
@@ -226,7 +226,6 @@ public final class GetSecretResult {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(createTime, etag, expireTime, labels, name, replication, rotation, topics, ttl);
         }

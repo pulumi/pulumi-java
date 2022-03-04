@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SnowflakeExportCopyCommandResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -71,42 +71,42 @@ public final class SnowflakeSourceResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Snowflake export settings.
      * 
-     */
+    */
     public Optional<SnowflakeExportCopyCommandResponse> getExportSettings() {
         return Optional.ofNullable(this.exportSettings);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Snowflake Sql query. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getQuery() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -114,7 +114,7 @@ public final class SnowflakeSourceResponse {
      * Copy source type.
      * Expected value is 'SnowflakeSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -185,7 +185,6 @@ public final class SnowflakeSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SnowflakeSourceResponse build() {
             return new SnowflakeSourceResponse(disableMetricsCollection, exportSettings, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

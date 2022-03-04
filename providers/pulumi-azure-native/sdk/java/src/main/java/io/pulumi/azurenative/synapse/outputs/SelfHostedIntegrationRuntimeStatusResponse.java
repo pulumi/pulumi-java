@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.LinkedIntegrationRuntimeResponse;
 import io.pulumi.azurenative.synapse.outputs.SelfHostedIntegrationRuntimeNodeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -163,112 +163,112 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
     /**
      * Whether Self-hosted integration runtime auto update has been turned on.
      * 
-     */
+    */
     public String getAutoUpdate() {
         return this.autoUpdate;
     }
     /**
      * The estimated time when the self-hosted integration runtime will be updated.
      * 
-     */
+    */
     public String getAutoUpdateETA() {
         return this.autoUpdateETA;
     }
     /**
      * Object with additional information about integration runtime capabilities.
      * 
-     */
+    */
     public Map<String,String> getCapabilities() {
         return this.capabilities;
     }
     /**
      * The time at which the integration runtime was created, in ISO8601 format.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The workspace name which the integration runtime belong to.
      * 
-     */
+    */
     public String getDataFactoryName() {
         return this.dataFactoryName;
     }
     /**
      * It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
      * 
-     */
+    */
     public String getInternalChannelEncryption() {
         return this.internalChannelEncryption;
     }
     /**
      * The latest version on download center.
      * 
-     */
+    */
     public String getLatestVersion() {
         return this.latestVersion;
     }
     /**
      * The list of linked integration runtimes that are created to share with this integration runtime.
      * 
-     */
+    */
     public List<LinkedIntegrationRuntimeResponse> getLinks() {
         return this.links == null ? List.of() : this.links;
     }
     /**
      * The local time zone offset in hours.
      * 
-     */
+    */
     public String getLocalTimeZoneOffset() {
         return this.localTimeZoneOffset;
     }
     /**
      * The node communication Channel encryption mode
      * 
-     */
+    */
     public String getNodeCommunicationChannelEncryptionMode() {
         return this.nodeCommunicationChannelEncryptionMode;
     }
     /**
      * The list of nodes for this integration runtime.
      * 
-     */
+    */
     public List<SelfHostedIntegrationRuntimeNodeResponse> getNodes() {
         return this.nodes == null ? List.of() : this.nodes;
     }
     /**
      * The version that the integration runtime is going to update to.
      * 
-     */
+    */
     public String getPushedVersion() {
         return this.pushedVersion;
     }
     /**
      * The date at which the integration runtime will be scheduled to update, in ISO8601 format.
      * 
-     */
+    */
     public String getScheduledUpdateDate() {
         return this.scheduledUpdateDate;
     }
     /**
      * The URLs for the services used in integration runtime backend service.
      * 
-     */
+    */
     public List<String> getServiceUrls() {
         return this.serviceUrls;
     }
     /**
      * The state of integration runtime.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The task queue id of the integration runtime.
      * 
-     */
+    */
     public String getTaskQueueId() {
         return this.taskQueueId;
     }
@@ -276,28 +276,28 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
      * The type of integration runtime.
      * Expected value is 'SelfHosted'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
      * 
-     */
+    */
     public String getUpdateDelayOffset() {
         return this.updateDelayOffset;
     }
     /**
      * Version of the integration runtime.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
     /**
      * Status of the integration runtime version.
      * 
-     */
+    */
     public String getVersionStatus() {
         return this.versionStatus;
     }
@@ -459,7 +459,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
             this.versionStatus = Objects.requireNonNull(versionStatus);
             return this;
         }
-
         public SelfHostedIntegrationRuntimeStatusResponse build() {
             return new SelfHostedIntegrationRuntimeStatusResponse(autoUpdate, autoUpdateETA, capabilities, createTime, dataFactoryName, internalChannelEncryption, latestVersion, links, localTimeZoneOffset, nodeCommunicationChannelEncryptionMode, nodes, pushedVersion, scheduledUpdateDate, serviceUrls, state, taskQueueId, type, updateDelayOffset, version, versionStatus);
         }

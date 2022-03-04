@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="throughputReservation")
-    private final @Nullable Input<String> throughputReservation;
+      private final @Nullable Input<String> throughputReservation;
 
     public Input<String> getThroughputReservation() {
         return this.throughputReservation == null ? Input.empty() : this.throughputReservation;
@@ -62,7 +62,6 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
             this.throughputReservation = Input.ofNullable(throughputReservation);
             return this;
         }
-
         public LiteTopicReservationConfigArgs build() {
             return new LiteTopicReservationConfigArgs(throughputReservation);
         }

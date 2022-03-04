@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.meta_v1.inputs;
 
 import com.google.gson.JsonElement;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -35,7 +35,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fieldsType")
-    private final @Nullable Input<String> fieldsType;
+      private final @Nullable Input<String> fieldsType;
 
     public Input<String> getFieldsType() {
         return this.fieldsType == null ? Input.empty() : this.fieldsType;
@@ -46,7 +46,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fieldsV1")
-    private final @Nullable Input<JsonElement> fieldsV1;
+      private final @Nullable Input<JsonElement> fieldsV1;
 
     public Input<JsonElement> getFieldsV1() {
         return this.fieldsV1 == null ? Input.empty() : this.fieldsV1;
@@ -57,7 +57,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="manager")
-    private final @Nullable Input<String> manager;
+      private final @Nullable Input<String> manager;
 
     public Input<String> getManager() {
         return this.manager == null ? Input.empty() : this.manager;
@@ -68,7 +68,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="operation")
-    private final @Nullable Input<String> operation;
+      private final @Nullable Input<String> operation;
 
     public Input<String> getOperation() {
         return this.operation == null ? Input.empty() : this.operation;
@@ -79,7 +79,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subresource")
-    private final @Nullable Input<String> subresource;
+      private final @Nullable Input<String> subresource;
 
     public Input<String> getSubresource() {
         return this.subresource == null ? Input.empty() : this.subresource;
@@ -90,7 +90,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="time")
-    private final @Nullable Input<String> time;
+      private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;
@@ -224,7 +224,6 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
             this.time = Input.ofNullable(time);
             return this;
         }
-
         public ManagedFieldsEntryArgs build() {
             return new ManagedFieldsEntryArgs(apiVersion, fieldsType, fieldsV1, manager, operation, subresource, time);
         }

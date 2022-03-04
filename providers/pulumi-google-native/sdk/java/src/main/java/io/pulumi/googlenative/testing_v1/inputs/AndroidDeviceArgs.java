@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidModelId", required=true)
-    private final Input<String> androidModelId;
+      private final Input<String> androidModelId;
 
     public Input<String> getAndroidModelId() {
         return this.androidModelId;
@@ -33,7 +33,7 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidVersionId", required=true)
-    private final Input<String> androidVersionId;
+      private final Input<String> androidVersionId;
 
     public Input<String> getAndroidVersionId() {
         return this.androidVersionId;
@@ -44,7 +44,7 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locale", required=true)
-    private final Input<String> locale;
+      private final Input<String> locale;
 
     public Input<String> getLocale() {
         return this.locale;
@@ -55,7 +55,7 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orientation", required=true)
-    private final Input<String> orientation;
+      private final Input<String> orientation;
 
     public Input<String> getOrientation() {
         return this.orientation;
@@ -144,7 +144,6 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.orientation = Input.of(Objects.requireNonNull(orientation));
             return this;
         }
-
         public AndroidDeviceArgs build() {
             return new AndroidDeviceArgs(androidModelId, androidVersionId, locale, orientation);
         }

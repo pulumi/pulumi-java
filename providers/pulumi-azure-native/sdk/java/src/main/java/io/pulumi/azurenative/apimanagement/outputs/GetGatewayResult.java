@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.ResourceLocationDataContractResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class GetGatewayResult {
     /**
      * Gateway description
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gateway location.
      * 
-     */
+    */
     public Optional<ResourceLocationDataContractResponse> getLocationData() {
         return Optional.ofNullable(this.locationData);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetGatewayResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayResult build() {
             return new GetGatewayResult(description, id, locationData, name, type);
         }

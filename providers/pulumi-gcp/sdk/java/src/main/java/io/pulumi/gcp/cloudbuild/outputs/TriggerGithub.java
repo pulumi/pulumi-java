@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerGithubPullRequest;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerGithubPush;
 import java.lang.String;
@@ -56,7 +56,7 @@ public final class TriggerGithub {
      * Volume names must be unique per build step and must be valid names for Docker volumes.
      * Each named volume must be used by at least two build steps.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -64,7 +64,7 @@ public final class TriggerGithub {
      * Owner of the repository. For example: The owner for
      * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
      * 
-     */
+    */
     public Optional<String> getOwner() {
         return Optional.ofNullable(this.owner);
     }
@@ -72,7 +72,7 @@ public final class TriggerGithub {
      * filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TriggerGithubPullRequest> getPullRequest() {
         return Optional.ofNullable(this.pullRequest);
     }
@@ -80,7 +80,7 @@ public final class TriggerGithub {
      * filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TriggerGithubPush> getPush() {
         return Optional.ofNullable(this.push);
     }
@@ -130,7 +130,6 @@ public final class TriggerGithub {
             this.push = push;
             return this;
         }
-
         public TriggerGithub build() {
             return new TriggerGithub(name, owner, pullRequest, push);
         }

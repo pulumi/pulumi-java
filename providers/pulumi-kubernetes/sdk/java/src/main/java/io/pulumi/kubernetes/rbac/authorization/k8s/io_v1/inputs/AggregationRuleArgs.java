@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterRoleSelectors")
-    private final @Nullable Input<List<LabelSelectorArgs>> clusterRoleSelectors;
+      private final @Nullable Input<List<LabelSelectorArgs>> clusterRoleSelectors;
 
     public Input<List<LabelSelectorArgs>> getClusterRoleSelectors() {
         return this.clusterRoleSelectors == null ? Input.empty() : this.clusterRoleSelectors;
@@ -67,7 +67,6 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.clusterRoleSelectors = Input.ofNullable(clusterRoleSelectors);
             return this;
         }
-
         public AggregationRuleArgs build() {
             return new AggregationRuleArgs(clusterRoleSelectors);
         }

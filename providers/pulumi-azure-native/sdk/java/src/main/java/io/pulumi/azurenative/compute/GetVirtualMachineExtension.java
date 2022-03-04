@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetVirtualMachineExtensionArgs;
 import io.pulumi.azurenative.compute.outputs.GetVirtualMachineExtensionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineExtension {
-/**
- * Describes a Virtual Machine Extension.
+    private GetVirtualMachineExtension() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineExtensionArgs.Builder a);
+    }
+    private static GetVirtualMachineExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineExtensionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a Virtual Machine Extension.
  * API Version: 2021-03-01.
  * 
- *
- * Describes a Virtual Machine Extension.
+     *
+     * Describes a Virtual Machine Extension.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a Virtual Machine Extension.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Describes a Virtual Machine Extension.
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineExtensionResult> invokeAsync(GetVirtualMachineExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineExtension", TypeShape.of(GetVirtualMachineExtensionResult.class), args == null ? GetVirtualMachineExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

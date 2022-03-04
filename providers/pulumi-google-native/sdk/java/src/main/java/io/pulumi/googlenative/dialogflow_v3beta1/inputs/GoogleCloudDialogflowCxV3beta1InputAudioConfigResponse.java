@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse extend
      * 
      */
     @InputImport(name="audioEncoding", required=true)
-    private final String audioEncoding;
+      private final String audioEncoding;
 
     public String getAudioEncoding() {
         return this.audioEncoding;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse extend
      * 
      */
     @InputImport(name="enableWordInfo", required=true)
-    private final Boolean enableWordInfo;
+      private final Boolean enableWordInfo;
 
     public Boolean getEnableWordInfo() {
         return this.enableWordInfo;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse extend
      * 
      */
     @InputImport(name="model", required=true)
-    private final String model;
+      private final String model;
 
     public String getModel() {
         return this.model;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse extend
      * 
      */
     @InputImport(name="modelVariant", required=true)
-    private final String modelVariant;
+      private final String modelVariant;
 
     public String getModelVariant() {
         return this.modelVariant;
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse extend
      * 
      */
     @InputImport(name="phraseHints", required=true)
-    private final List<String> phraseHints;
+      private final List<String> phraseHints;
 
     public List<String> getPhraseHints() {
         return this.phraseHints;
@@ -79,7 +79,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse extend
      * 
      */
     @InputImport(name="sampleRateHertz", required=true)
-    private final Integer sampleRateHertz;
+      private final Integer sampleRateHertz;
 
     public Integer getSampleRateHertz() {
         return this.sampleRateHertz;
@@ -90,7 +90,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse extend
      * 
      */
     @InputImport(name="singleUtterance", required=true)
-    private final Boolean singleUtterance;
+      private final Boolean singleUtterance;
 
     public Boolean getSingleUtterance() {
         return this.singleUtterance;
@@ -189,7 +189,6 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse extend
             this.singleUtterance = Objects.requireNonNull(singleUtterance);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse build() {
             return new GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse(audioEncoding, enableWordInfo, model, modelVariant, phraseHints, sampleRateHertz, singleUtterance);
         }

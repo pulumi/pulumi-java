@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetRegionInstanceGroupInstance;
 import java.lang.Integer;
 import java.lang.String;
@@ -57,21 +57,21 @@ public final class GetRegionInstanceGroupResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of instances in the group, as a list of resources, each containing:
      * 
-     */
+    */
     public List<GetRegionInstanceGroupInstance> getInstances() {
         return this.instances;
     }
     /**
      * String port name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -87,7 +87,7 @@ public final class GetRegionInstanceGroupResult {
     /**
      * The number of instances in the group.
      * 
-     */
+    */
     public Integer getSize() {
         return this.size;
     }
@@ -158,7 +158,6 @@ public final class GetRegionInstanceGroupResult {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public GetRegionInstanceGroupResult build() {
             return new GetRegionInstanceGroupResult(id, instances, name, project, region, selfLink, size);
         }

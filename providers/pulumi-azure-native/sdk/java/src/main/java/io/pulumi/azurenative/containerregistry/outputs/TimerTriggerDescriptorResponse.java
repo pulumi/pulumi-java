@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class TimerTriggerDescriptorResponse {
     /**
      * The occurrence that triggered the run.
      * 
-     */
+    */
     public Optional<String> getScheduleOccurrence() {
         return Optional.ofNullable(this.scheduleOccurrence);
     }
     /**
      * The timer trigger name that caused the run.
      * 
-     */
+    */
     public Optional<String> getTimerTriggerName() {
         return Optional.ofNullable(this.timerTriggerName);
     }
@@ -76,7 +76,6 @@ public final class TimerTriggerDescriptorResponse {
             this.timerTriggerName = timerTriggerName;
             return this;
         }
-
         public TimerTriggerDescriptorResponse build() {
             return new TimerTriggerDescriptorResponse(scheduleOccurrence, timerTriggerName);
         }

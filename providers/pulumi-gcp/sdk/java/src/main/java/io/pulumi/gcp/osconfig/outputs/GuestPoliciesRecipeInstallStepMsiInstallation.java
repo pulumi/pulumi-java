@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -41,21 +41,21 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallation {
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
-     */
+    */
     public List<Integer> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? List.of() : this.allowedExitCodes;
     }
     /**
      * The id of the relevant artifact in the recipe.
      * 
-     */
+    */
     public String getArtifactId() {
         return this.artifactId;
     }
     /**
      * The flags to use when installing the MSI. Defaults to the install flag.
      * 
-     */
+    */
     public List<String> getFlags() {
         return this.flags == null ? List.of() : this.flags;
     }
@@ -98,7 +98,6 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallation {
             this.flags = flags;
             return this;
         }
-
         public GuestPoliciesRecipeInstallStepMsiInstallation build() {
             return new GuestPoliciesRecipeInstallStepMsiInstallation(allowedExitCodes, artifactId, flags);
         }

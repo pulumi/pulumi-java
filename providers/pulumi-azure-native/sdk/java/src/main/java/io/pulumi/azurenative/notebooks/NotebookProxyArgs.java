@@ -5,7 +5,7 @@ package io.pulumi.azurenative.notebooks;
 
 import io.pulumi.azurenative.notebooks.inputs.NotebookResourceSystemDataArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostname")
-    private final @Nullable Input<String> hostname;
+      private final @Nullable Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname == null ? Input.empty() : this.hostname;
@@ -31,7 +31,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicDns")
-    private final @Nullable Input<String> publicDns;
+      private final @Nullable Input<String> publicDns;
 
     public Input<String> getPublicDns() {
         return this.publicDns == null ? Input.empty() : this.publicDns;
@@ -42,7 +42,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<String> publicNetworkAccess;
+      private final @Nullable Input<String> publicNetworkAccess;
 
     public Input<String> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -53,7 +53,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -64,7 +64,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -86,7 +86,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryAppId")
-    private final @Nullable Input<String> secondaryAppId;
+      private final @Nullable Input<String> secondaryAppId;
 
     public Input<String> getSecondaryAppId() {
         return this.secondaryAppId == null ? Input.empty() : this.secondaryAppId;
@@ -97,7 +97,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemData")
-    private final @Nullable Input<NotebookResourceSystemDataArgs> systemData;
+      private final @Nullable Input<NotebookResourceSystemDataArgs> systemData;
 
     public Input<NotebookResourceSystemDataArgs> getSystemData() {
         return this.systemData == null ? Input.empty() : this.systemData;
@@ -246,7 +246,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
             this.systemData = Input.ofNullable(systemData);
             return this;
         }
-
         public NotebookProxyArgs build() {
             return new NotebookProxyArgs(hostname, publicDns, publicNetworkAccess, region, resourceGroupName, resourceName, secondaryAppId, systemData);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetStreamingImageArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetStreamingImageArgs Empty = new GetStreamingImageArgs();
 
     @InputImport(name="streamingImageId", required=true)
-    private final String streamingImageId;
+      private final String streamingImageId;
 
     public String getStreamingImageId() {
         return this.streamingImageId;
@@ -24,7 +24,7 @@ public final class GetStreamingImageArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="studioId", required=true)
-    private final String studioId;
+      private final String studioId;
 
     public String getStudioId() {
         return this.studioId;
@@ -73,7 +73,6 @@ public final class GetStreamingImageArgs extends io.pulumi.resources.InvokeArgs 
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
-
         public GetStreamingImageArgs build() {
             return new GetStreamingImageArgs(streamingImageId, studioId);
         }

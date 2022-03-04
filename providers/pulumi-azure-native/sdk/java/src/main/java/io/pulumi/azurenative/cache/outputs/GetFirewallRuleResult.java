@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class GetFirewallRuleResult {
     /**
      * highest IP address included in the range
      * 
-     */
+    */
     public String getEndIP() {
         return this.endIP;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * lowest IP address included in the range
      * 
-     */
+    */
     public String getStartIP() {
         return this.startIP;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -137,7 +137,6 @@ public final class GetFirewallRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFirewallRuleResult build() {
             return new GetFirewallRuleResult(endIP, id, name, startIP, type);
         }

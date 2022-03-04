@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyContentEncryp
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyPlayRightResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="allowTestDevices", required=true)
-    private final Boolean allowTestDevices;
+      private final Boolean allowTestDevices;
 
     public Boolean getAllowTestDevices() {
         return this.allowTestDevices;
@@ -39,7 +39,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="beginDate")
-    private final @Nullable String beginDate;
+      private final @Nullable String beginDate;
 
     public Optional<String> getBeginDate() {
         return this.beginDate == null ? Optional.empty() : Optional.ofNullable(this.beginDate);
@@ -50,7 +50,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="contentKeyLocation", required=true)
-    private final Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation;
+      private final Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation;
 
     public Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> getContentKeyLocation() {
         return this.contentKeyLocation;
@@ -61,7 +61,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final String contentType;
+      private final String contentType;
 
     public String getContentType() {
         return this.contentType;
@@ -72,7 +72,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable String expirationDate;
+      private final @Nullable String expirationDate;
 
     public Optional<String> getExpirationDate() {
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
@@ -83,7 +83,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="gracePeriod")
-    private final @Nullable String gracePeriod;
+      private final @Nullable String gracePeriod;
 
     public Optional<String> getGracePeriod() {
         return this.gracePeriod == null ? Optional.empty() : Optional.ofNullable(this.gracePeriod);
@@ -94,7 +94,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="licenseType", required=true)
-    private final String licenseType;
+      private final String licenseType;
 
     public String getLicenseType() {
         return this.licenseType;
@@ -105,7 +105,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="playRight")
-    private final @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight;
+      private final @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight;
 
     public Optional<ContentKeyPolicyPlayReadyPlayRightResponse> getPlayRight() {
         return this.playRight == null ? Optional.empty() : Optional.ofNullable(this.playRight);
@@ -116,7 +116,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="relativeBeginDate")
-    private final @Nullable String relativeBeginDate;
+      private final @Nullable String relativeBeginDate;
 
     public Optional<String> getRelativeBeginDate() {
         return this.relativeBeginDate == null ? Optional.empty() : Optional.ofNullable(this.relativeBeginDate);
@@ -127,7 +127,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="relativeExpirationDate")
-    private final @Nullable String relativeExpirationDate;
+      private final @Nullable String relativeExpirationDate;
 
     public Optional<String> getRelativeExpirationDate() {
         return this.relativeExpirationDate == null ? Optional.empty() : Optional.ofNullable(this.relativeExpirationDate);
@@ -256,7 +256,6 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
             this.relativeExpirationDate = relativeExpirationDate;
             return this;
         }
-
         public ContentKeyPolicyPlayReadyLicenseResponse build() {
             return new ContentKeyPolicyPlayReadyLicenseResponse(allowTestDevices, beginDate, contentKeyLocation, contentType, expirationDate, gracePeriod, licenseType, playRight, relativeBeginDate, relativeExpirationDate);
         }

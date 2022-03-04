@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.PipelineRunSourcePropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineRunTargetPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -63,35 +63,35 @@ public final class PipelineRunRequestResponse {
      * Specify an image by tag ('hello-world:latest').
      * Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
      * 
-     */
+    */
     public List<String> getArtifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
     }
     /**
      * The digest of the tar used to transfer the artifacts.
      * 
-     */
+    */
     public Optional<String> getCatalogDigest() {
         return Optional.ofNullable(this.catalogDigest);
     }
     /**
      * The resource ID of the pipeline to run.
      * 
-     */
+    */
     public Optional<String> getPipelineResourceId() {
         return Optional.ofNullable(this.pipelineResourceId);
     }
     /**
      * The source properties of the pipeline run.
      * 
-     */
+    */
     public Optional<PipelineRunSourcePropertiesResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The target properties of the pipeline run.
      * 
-     */
+    */
     public Optional<PipelineRunTargetPropertiesResponse> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -148,7 +148,6 @@ public final class PipelineRunRequestResponse {
             this.target = target;
             return this;
         }
-
         public PipelineRunRequestResponse build() {
             return new PipelineRunRequestResponse(artifacts, catalogDigest, pipelineResourceId, source, target);
         }

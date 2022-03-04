@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class ContextRuleResponse {
     /**
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
      * 
-     */
+    */
     public List<String> getAllowedRequestExtensions() {
         return this.allowedRequestExtensions;
     }
     /**
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
      * 
-     */
+    */
     public List<String> getAllowedResponseExtensions() {
         return this.allowedResponseExtensions;
     }
     /**
      * A list of full type names of provided contexts.
      * 
-     */
+    */
     public List<String> getProvided() {
         return this.provided;
     }
     /**
      * A list of full type names of requested contexts.
      * 
-     */
+    */
     public List<String> getRequested() {
         return this.requested;
     }
     /**
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
-     */
+    */
     public String getSelector() {
         return this.selector;
     }
@@ -138,7 +138,6 @@ public final class ContextRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public ContextRuleResponse build() {
             return new ContextRuleResponse(allowedRequestExtensions, allowedResponseExtensions, provided, requested, selector);
         }

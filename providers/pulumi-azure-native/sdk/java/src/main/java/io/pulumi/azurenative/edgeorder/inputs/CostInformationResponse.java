@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.BillingMeterDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="billingInfoUrl", required=true)
-    private final String billingInfoUrl;
+      private final String billingInfoUrl;
 
     public String getBillingInfoUrl() {
         return this.billingInfoUrl;
@@ -34,7 +34,7 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="billingMeterDetails", required=true)
-    private final List<BillingMeterDetailsResponse> billingMeterDetails;
+      private final List<BillingMeterDetailsResponse> billingMeterDetails;
 
     public List<BillingMeterDetailsResponse> getBillingMeterDetails() {
         return this.billingMeterDetails;
@@ -83,7 +83,6 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
             this.billingMeterDetails = Objects.requireNonNull(billingMeterDetails);
             return this;
         }
-
         public CostInformationResponse build() {
             return new CostInformationResponse(billingInfoUrl, billingMeterDetails);
         }

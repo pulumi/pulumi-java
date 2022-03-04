@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -77,21 +77,21 @@ public final class CertificateSigningRequestSpec {
     /**
      * Extra information about the requesting user. See user.Info interface for details.
      * 
-     */
+    */
     public Map<String,List<String>> getExtra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
      * Group information about the requesting user. See user.Info interface for details.
      * 
-     */
+    */
     public List<String> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * Base64-encoded PKCS#10 CSR data
      * 
-     */
+    */
     public String getRequest() {
         return this.request;
     }
@@ -104,14 +104,14 @@ public final class CertificateSigningRequestSpec {
      *  3. Otherwise, it is assigned "kubernetes.io/legacy-unknown".
      *     Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
      * 
-     */
+    */
     public Optional<String> getSignerName() {
         return Optional.ofNullable(this.signerName);
     }
     /**
      * UID information about the requesting user. See user.Info interface for details.
      * 
-     */
+    */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }
@@ -119,14 +119,14 @@ public final class CertificateSigningRequestSpec {
      * allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
      *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
      * 
-     */
+    */
     public List<String> getUsages() {
         return this.usages == null ? List.of() : this.usages;
     }
     /**
      * Information about the requesting user. See user.Info interface for details.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -197,7 +197,6 @@ public final class CertificateSigningRequestSpec {
             this.username = username;
             return this;
         }
-
         public CertificateSigningRequestSpec build() {
             return new CertificateSigningRequestSpec(extra, groups, request, signerName, uid, usages, username);
         }

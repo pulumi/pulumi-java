@@ -6,7 +6,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableKeySchemaArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableProjectionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class GlobalTableLocalSecondaryIndexArgs extends io.pulumi.resource
     public static final GlobalTableLocalSecondaryIndexArgs Empty = new GlobalTableLocalSecondaryIndexArgs();
 
     @InputImport(name="indexName", required=true)
-    private final Input<String> indexName;
+      private final Input<String> indexName;
 
     public Input<String> getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="keySchema", required=true)
-    private final Input<List<GlobalTableKeySchemaArgs>> keySchema;
+      private final Input<List<GlobalTableKeySchemaArgs>> keySchema;
 
     public Input<List<GlobalTableKeySchemaArgs>> getKeySchema() {
         return this.keySchema;
     }
 
     @InputImport(name="projection", required=true)
-    private final Input<GlobalTableProjectionArgs> projection;
+      private final Input<GlobalTableProjectionArgs> projection;
 
     public Input<GlobalTableProjectionArgs> getProjection() {
         return this.projection;
@@ -105,7 +105,6 @@ public final class GlobalTableLocalSecondaryIndexArgs extends io.pulumi.resource
             this.projection = Input.of(Objects.requireNonNull(projection));
             return this;
         }
-
         public GlobalTableLocalSecondaryIndexArgs build() {
             return new GlobalTableLocalSecondaryIndexArgs(indexName, keySchema, projection);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class GetNodeTypesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -33,7 +33,7 @@ public final class GetNodeTypesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable String zone;
+      private final @Nullable String zone;
 
     public Optional<String> getZone() {
         return this.zone == null ? Optional.empty() : Optional.ofNullable(this.zone);
@@ -82,7 +82,6 @@ public final class GetNodeTypesArgs extends io.pulumi.resources.InvokeArgs {
             this.zone = zone;
             return this;
         }
-
         public GetNodeTypesArgs build() {
             return new GetNodeTypesArgs(project, zone);
         }

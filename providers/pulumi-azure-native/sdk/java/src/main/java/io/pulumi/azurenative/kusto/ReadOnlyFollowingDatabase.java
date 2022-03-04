@@ -9,8 +9,8 @@ import io.pulumi.azurenative.kusto.outputs.DatabaseStatisticsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -189,6 +189,37 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ReadOnlyFollowingDatabaseArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.kusto.ReadOnlyFollowingDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.kusto.ReadOnlyFollowingDatabaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ReadOnlyFollowingDatabase(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ReadOnlyFollowingDatabase(String name) {
+        this(name, ReadOnlyFollowingDatabaseArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ReadOnlyFollowingDatabase(String name, ReadOnlyFollowingDatabaseArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

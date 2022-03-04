@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.globalaccelerator.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetEndpointGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointGroupArn", required=true)
-    private final String endpointGroupArn;
+      private final String endpointGroupArn;
 
     public String getEndpointGroupArn() {
         return this.endpointGroupArn;
@@ -55,7 +55,6 @@ public final class GetEndpointGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.endpointGroupArn = Objects.requireNonNull(endpointGroupArn);
             return this;
         }
-
         public GetEndpointGroupArgs build() {
             return new GetEndpointGroupArgs(endpointGroupArn);
         }

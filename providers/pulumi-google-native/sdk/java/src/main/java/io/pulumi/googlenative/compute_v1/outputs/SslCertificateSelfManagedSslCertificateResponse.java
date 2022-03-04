@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SslCertificateSelfManagedSslCertificateResponse {
     /**
      * A local certificate file. The certificate must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
      * 
-     */
+    */
     public String getCertificate() {
         return this.certificate;
     }
     /**
      * A write-only private key in PEM format. Only insert requests will include this field.
      * 
-     */
+    */
     public String getPrivateKey() {
         return this.privateKey;
     }
@@ -74,7 +74,6 @@ public final class SslCertificateSelfManagedSslCertificateResponse {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public SslCertificateSelfManagedSslCertificateResponse build() {
             return new SslCertificateSelfManagedSslCertificateResponse(certificate, privateKey);
         }

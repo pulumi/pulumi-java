@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.WebApplicationFirewallMatchVariable;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -36,7 +36,7 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variableName", required=true)
-    private final Input<Either<String,WebApplicationFirewallMatchVariable>> variableName;
+      private final Input<Either<String,WebApplicationFirewallMatchVariable>> variableName;
 
     public Input<Either<String,WebApplicationFirewallMatchVariable>> getVariableName() {
         return this.variableName;
@@ -95,7 +95,6 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
             this.variableName = Input.of(Objects.requireNonNull(variableName));
             return this;
         }
-
         public MatchVariableArgs build() {
             return new MatchVariableArgs(selector, variableName);
         }

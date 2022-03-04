@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1beta1.outputs.CustomDnsResponse;
 import io.pulumi.googlenative.domains_v1beta1.outputs.GlueRecordResponse;
 import io.pulumi.googlenative.domains_v1beta1.outputs.GoogleDomainsDnsResponse;
@@ -41,21 +41,21 @@ public final class DnsSettingsResponse {
     /**
      * An arbitrary DNS provider identified by its name servers.
      * 
-     */
+    */
     public CustomDnsResponse getCustomDns() {
         return this.customDns;
     }
     /**
      * The list of glue records for this `Registration`. Commonly empty.
      * 
-     */
+    */
     public List<GlueRecordResponse> getGlueRecords() {
         return this.glueRecords;
     }
     /**
      * The free DNS zone provided by [Google Domains](https://domains.google/).
      * 
-     */
+    */
     public GoogleDomainsDnsResponse getGoogleDomainsDns() {
         return this.googleDomainsDns;
     }
@@ -98,7 +98,6 @@ public final class DnsSettingsResponse {
             this.googleDomainsDns = Objects.requireNonNull(googleDomainsDns);
             return this;
         }
-
         public DnsSettingsResponse build() {
             return new DnsSettingsResponse(customDns, glueRecords, googleDomainsDns);
         }

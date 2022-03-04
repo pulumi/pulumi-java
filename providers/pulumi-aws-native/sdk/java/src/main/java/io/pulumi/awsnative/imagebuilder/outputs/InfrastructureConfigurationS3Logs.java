@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class InfrastructureConfigurationS3Logs {
     /**
      * S3BucketName
      * 
-     */
+    */
     public Optional<String> getS3BucketName() {
         return Optional.ofNullable(this.s3BucketName);
     }
     /**
      * S3KeyPrefix
      * 
-     */
+    */
     public Optional<String> getS3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }
@@ -76,7 +76,6 @@ public final class InfrastructureConfigurationS3Logs {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public InfrastructureConfigurationS3Logs build() {
             return new InfrastructureConfigurationS3Logs(s3BucketName, s3KeyPrefix);
         }

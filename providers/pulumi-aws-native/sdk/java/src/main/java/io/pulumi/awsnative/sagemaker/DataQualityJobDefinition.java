@@ -15,8 +15,8 @@ import io.pulumi.awsnative.sagemaker.outputs.DataQualityJobDefinitionStoppingCon
 import io.pulumi.awsnative.sagemaker.outputs.DataQualityJobDefinitionTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -132,6 +132,37 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
         return this.tags;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DataQualityJobDefinitionArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.sagemaker.DataQualityJobDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.sagemaker.DataQualityJobDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DataQualityJobDefinition(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DataQualityJobDefinition(String name) {
+        this(name, DataQualityJobDefinitionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DataQualityJobDefinition(String name, DataQualityJobDefinitionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

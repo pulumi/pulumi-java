@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2ConversationPhoneNumberResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class GetConversationResult {
     /**
      * The Conversation Profile to be used to configure this Conversation. This field cannot be updated. Format: `projects//locations//conversationProfiles/`.
      * 
-     */
+    */
     public String getConversationProfile() {
         return this.conversationProfile;
     }
     /**
      * The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
      * 
-     */
+    */
     public String getConversationStage() {
         return this.conversationStage;
     }
     /**
      * The time the conversation was finished.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The current state of the Conversation.
      * 
-     */
+    */
     public String getLifecycleState() {
         return this.lifecycleState;
     }
     /**
      * The unique identifier of this conversation. Format: `projects//locations//conversations/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * It will not be empty if the conversation is to be connected over telephony.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2ConversationPhoneNumberResponse getPhoneNumber() {
         return this.phoneNumber;
     }
     /**
      * The time the conversation was started.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -180,7 +180,6 @@ public final class GetConversationResult {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetConversationResult build() {
             return new GetConversationResult(conversationProfile, conversationStage, endTime, lifecycleState, name, phoneNumber, startTime);
         }

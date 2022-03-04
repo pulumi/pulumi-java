@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -72,7 +72,6 @@ public final class ModelDefinitionModelOptionsResponse {
             this.modelType = Objects.requireNonNull(modelType);
             return this;
         }
-
         public ModelDefinitionModelOptionsResponse build() {
             return new ModelDefinitionModelOptionsResponse(labels, lossType, modelType);
         }

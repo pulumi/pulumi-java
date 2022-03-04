@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SecretEnvVarResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -32,7 +32,7 @@ public final class SecretEnvVarResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -43,7 +43,7 @@ public final class SecretEnvVarResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secret", required=true)
-    private final String secret;
+      private final String secret;
 
     public String getSecret() {
         return this.secret;
@@ -54,7 +54,7 @@ public final class SecretEnvVarResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -123,7 +123,6 @@ public final class SecretEnvVarResponse extends io.pulumi.resources.InvokeArgs {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SecretEnvVarResponse build() {
             return new SecretEnvVarResponse(key, project, secret, version);
         }

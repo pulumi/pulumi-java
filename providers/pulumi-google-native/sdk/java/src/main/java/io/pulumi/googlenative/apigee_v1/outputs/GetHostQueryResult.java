@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AsyncQueryResultResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1QueryMetadataResponse;
 import java.lang.String;
@@ -110,91 +110,91 @@ public final class GetHostQueryResult {
     /**
      * Creation time of the query.
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * Hostname is available only when query is executed at host level.
      * 
-     */
+    */
     public String getEnvgroupHostname() {
         return this.envgroupHostname;
     }
     /**
      * Error is set when query fails.
      * 
-     */
+    */
     public String getError() {
         return this.error;
     }
     /**
      * ExecutionTime is available only after the query is completed.
      * 
-     */
+    */
     public String getExecutionTime() {
         return this.executionTime;
     }
     /**
      * Asynchronous Query Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Contains information like metrics, dimenstions etc of the AsyncQuery.
      * 
-     */
+    */
     public GoogleCloudApigeeV1QueryMetadataResponse getQueryParams() {
         return this.queryParams;
     }
     /**
      * Asynchronous Report ID.
      * 
-     */
+    */
     public String getReportDefinitionId() {
         return this.reportDefinitionId;
     }
     /**
      * Result is available only after the query is completed.
      * 
-     */
+    */
     public GoogleCloudApigeeV1AsyncQueryResultResponse getResult() {
         return this.result;
     }
     /**
      * ResultFileSize is available only after the query is completed.
      * 
-     */
+    */
     public String getResultFileSize() {
         return this.resultFileSize;
     }
     /**
      * ResultRows is available only after the query is completed.
      * 
-     */
+    */
     public String getResultRows() {
         return this.resultRows;
     }
     /**
      * Self link of the query. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
      * 
-     */
+    */
     public String getSelf() {
         return this.self;
     }
     /**
      * Query state could be "enqueued", "running", "completed", "failed".
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Last updated timestamp for the query.
      * 
-     */
+    */
     public String getUpdated() {
         return this.updated;
     }
@@ -307,7 +307,6 @@ public final class GetHostQueryResult {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public GetHostQueryResult build() {
             return new GetHostQueryResult(created, envgroupHostname, error, executionTime, name, queryParams, reportDefinitionId, result, resultFileSize, resultRows, self, state, updated);
         }

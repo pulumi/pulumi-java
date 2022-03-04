@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1.outputs.ContactSettingsResponse;
 import io.pulumi.googlenative.domains_v1.outputs.DnsSettingsResponse;
 import io.pulumi.googlenative.domains_v1.outputs.ManagementSettingsResponse;
@@ -106,84 +106,84 @@ public final class GetRegistrationResult {
     /**
      * Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
      * 
-     */
+    */
     public ContactSettingsResponse getContactSettings() {
         return this.contactSettings;
     }
     /**
      * The creation timestamp of the `Registration` resource.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
      * 
-     */
+    */
     public DnsSettingsResponse getDnsSettings() {
         return this.dnsSettings;
     }
     /**
      * Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * The expiration timestamp of the `Registration`.
      * 
-     */
+    */
     public String getExpireTime() {
         return this.expireTime;
     }
     /**
      * The set of issues with the `Registration` that require attention.
      * 
-     */
+    */
     public List<String> getIssues() {
         return this.issues;
     }
     /**
      * Set of labels associated with the `Registration`.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
      * 
-     */
+    */
     public ManagementSettingsResponse getManagementSettings() {
         return this.managementSettings;
     }
     /**
      * Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Pending contact settings for the `Registration`. Updates to the `contact_settings` field that change its `registrant_contact` or `privacy` fields require email confirmation by the `registrant_contact` before taking effect. This field is set only if there are pending updates to the `contact_settings` that have not been confirmed. To confirm the changes, the `registrant_contact` must follow the instructions in the email they receive.
      * 
-     */
+    */
     public ContactSettingsResponse getPendingContactSettings() {
         return this.pendingContactSettings;
     }
     /**
      * The state of the `Registration`
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Set of options for the `contact_settings.privacy` field that this `Registration` supports.
      * 
-     */
+    */
     public List<String> getSupportedPrivacy() {
         return this.supportedPrivacy;
     }
@@ -289,7 +289,6 @@ public final class GetRegistrationResult {
             this.supportedPrivacy = Objects.requireNonNull(supportedPrivacy);
             return this;
         }
-
         public GetRegistrationResult build() {
             return new GetRegistrationResult(contactSettings, createTime, dnsSettings, domainName, expireTime, issues, labels, managementSettings, name, pendingContactSettings, state, supportedPrivacy);
         }

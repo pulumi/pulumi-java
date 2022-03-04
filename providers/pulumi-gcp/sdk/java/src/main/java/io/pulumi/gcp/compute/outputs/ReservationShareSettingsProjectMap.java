@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ReservationShareSettingsProjectMap {
     /**
      * The identifier for this object. Format specified above.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The project id/number, should be same as the key of this project config in the project map.
      * 
-     */
+    */
     public Optional<String> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -76,7 +76,6 @@ public final class ReservationShareSettingsProjectMap {
             this.projectId = projectId;
             return this;
         }
-
         public ReservationShareSettingsProjectMap build() {
             return new ReservationShareSettingsProjectMap(id, projectId);
         }

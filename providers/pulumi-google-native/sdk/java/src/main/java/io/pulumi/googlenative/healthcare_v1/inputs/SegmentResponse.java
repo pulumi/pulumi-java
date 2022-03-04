@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SegmentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-    private final Map<String,String> fields;
+      private final Map<String,String> fields;
 
     public Map<String,String> getFields() {
         return this.fields;
@@ -33,7 +33,7 @@ public final class SegmentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="segmentId", required=true)
-    private final String segmentId;
+      private final String segmentId;
 
     public String getSegmentId() {
         return this.segmentId;
@@ -44,7 +44,7 @@ public final class SegmentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="setId", required=true)
-    private final String setId;
+      private final String setId;
 
     public String getSetId() {
         return this.setId;
@@ -103,7 +103,6 @@ public final class SegmentResponse extends io.pulumi.resources.InvokeArgs {
             this.setId = Objects.requireNonNull(setId);
             return this;
         }
-
         public SegmentResponse build() {
             return new SegmentResponse(fields, segmentId, setId);
         }

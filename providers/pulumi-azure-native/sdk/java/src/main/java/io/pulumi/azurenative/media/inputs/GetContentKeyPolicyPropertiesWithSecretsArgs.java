@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulum
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulum
      * 
      */
     @InputImport(name="contentKeyPolicyName", required=true)
-    private final String contentKeyPolicyName;
+      private final String contentKeyPolicyName;
 
     public String getContentKeyPolicyName() {
         return this.contentKeyPolicyName;
@@ -39,7 +39,7 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulum
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetContentKeyPolicyPropertiesWithSecretsArgs build() {
             return new GetContentKeyPolicyPropertiesWithSecretsArgs(accountName, contentKeyPolicyName, resourceGroupName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class DataDiskResponse {
     /**
      * Specifies how the virtual machine should be created.
      * 
-     */
+    */
     public Optional<String> getCreateOption() {
         return Optional.ofNullable(this.createOption);
     }
     /**
      * Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * The name of data disk.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -98,7 +98,6 @@ public final class DataDiskResponse {
             this.name = name;
             return this;
         }
-
         public DataDiskResponse build() {
             return new DataDiskResponse(createOption, diskSizeGB, name);
         }

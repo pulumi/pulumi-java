@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.enums.AxisScale;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -35,7 +35,7 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scale")
-    private final @Nullable Input<AxisScale> scale;
+      private final @Nullable Input<AxisScale> scale;
 
     public Input<AxisScale> getScale() {
         return this.scale == null ? Input.empty() : this.scale;
@@ -94,7 +94,6 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
             this.scale = Input.ofNullable(scale);
             return this;
         }
-
         public AxisArgs build() {
             return new AxisArgs(label, scale);
         }

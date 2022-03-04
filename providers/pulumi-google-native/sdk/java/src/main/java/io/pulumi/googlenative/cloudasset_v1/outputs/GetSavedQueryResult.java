@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudasset_v1.outputs.QueryContentResponse;
 import java.lang.String;
 import java.util.Map;
@@ -75,56 +75,56 @@ public final class GetSavedQueryResult {
     /**
      * The query content.
      * 
-     */
+    */
     public QueryContentResponse getContent() {
         return this.content;
     }
     /**
      * The create time of this saved query.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The account's email address who has created this saved query.
      * 
-     */
+    */
     public String getCreator() {
         return this.creator;
     }
     /**
      * The description of this saved query. This value should be fewer than 255 characters.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The last update time of this saved query.
      * 
-     */
+    */
     public String getLastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
      * The account's email address who has updated this saved query most recently.
      * 
-     */
+    */
     public String getLastUpdater() {
         return this.lastUpdater;
     }
     /**
      * The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -202,7 +202,6 @@ public final class GetSavedQueryResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSavedQueryResult build() {
             return new GetSavedQueryResult(content, createTime, creator, description, labels, lastUpdateTime, lastUpdater, name);
         }

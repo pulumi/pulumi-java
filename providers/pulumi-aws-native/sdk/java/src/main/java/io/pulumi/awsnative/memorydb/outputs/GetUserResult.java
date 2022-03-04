@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.UserTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetUserResult {
     /**
      * The Amazon Resource Name (ARN) of the user account.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates the user status. Can be "active", "modifying" or "deleting".
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * An array of key-value pairs to apply to this user.
      * 
-     */
+    */
     public List<UserTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -99,7 +99,6 @@ public final class GetUserResult {
             this.tags = tags;
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(arn, status, tags);
         }

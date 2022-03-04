@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.NodeTemplateArgs;
 import io.pulumi.googlenative.compute_v1.outputs.AcceleratorConfigResponse;
@@ -219,6 +219,37 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
         return this.statusMessage;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NodeTemplateArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.compute_v1.NodeTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.compute_v1.NodeTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NodeTemplate(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public NodeTemplate(String name) {
+        this(name, NodeTemplateArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NodeTemplate(String name, NodeTemplateArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

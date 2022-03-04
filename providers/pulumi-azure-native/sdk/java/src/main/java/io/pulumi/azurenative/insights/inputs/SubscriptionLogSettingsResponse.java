@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="category")
-    private final @Nullable String category;
+      private final @Nullable String category;
 
     public Optional<String> getCategory() {
         return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
@@ -35,7 +35,7 @@ public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -84,7 +84,6 @@ public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.I
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public SubscriptionLogSettingsResponse build() {
             return new SubscriptionLogSettingsResponse(category, enabled);
         }

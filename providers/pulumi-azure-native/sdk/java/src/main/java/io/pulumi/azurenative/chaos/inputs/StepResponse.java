@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.inputs.BranchResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="branches", required=true)
-    private final List<BranchResponse> branches;
+      private final List<BranchResponse> branches;
 
     public List<BranchResponse> getBranches() {
         return this.branches;
@@ -34,7 +34,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -83,7 +83,6 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public StepResponse build() {
             return new StepResponse(branches, name);
         }

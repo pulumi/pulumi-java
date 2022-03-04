@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.AuthInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,14 +49,14 @@ public final class SourcePropertiesResponse {
     /**
      * The branch name of the source code.
      * 
-     */
+    */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * The full URL to the source code repository
      * 
-     */
+    */
     public String getRepositoryUrl() {
         return this.repositoryUrl;
     }
@@ -64,14 +64,14 @@ public final class SourcePropertiesResponse {
      * The authorization properties for accessing the source code repository and to set up
      * webhooks for notifications.
      * 
-     */
+    */
     public Optional<AuthInfoResponse> getSourceControlAuthProperties() {
         return Optional.ofNullable(this.sourceControlAuthProperties);
     }
     /**
      * The type of source control service.
      * 
-     */
+    */
     public String getSourceControlType() {
         return this.sourceControlType;
     }
@@ -121,7 +121,6 @@ public final class SourcePropertiesResponse {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }
-
         public SourcePropertiesResponse build() {
             return new SourcePropertiesResponse(branch, repositoryUrl, sourceControlAuthProperties, sourceControlType);
         }

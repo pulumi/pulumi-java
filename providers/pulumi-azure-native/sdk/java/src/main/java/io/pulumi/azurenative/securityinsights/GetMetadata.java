@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.inputs.GetMetadataArgs;
 import io.pulumi.azurenative.securityinsights.outputs.GetMetadataResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMetadata {
-/**
- * Metadata resource definition.
+    private GetMetadata() {}
+    public interface BuilderApplicator {
+        public void apply(GetMetadataArgs.Builder a);
+    }
+    private static GetMetadataArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMetadataArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Metadata resource definition.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Metadata resource definition.
+     *
+     * Metadata resource definition.
  * 
- */
+     */
+    public static CompletableFuture<GetMetadataResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Metadata resource definition.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Metadata resource definition.
+     * 
+     */
     public static CompletableFuture<GetMetadataResult> invokeAsync(GetMetadataArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMetadata", TypeShape.of(GetMetadataResult.class), args == null ? GetMetadataArgs.Empty : args, Utilities.withVersion(options));
     }

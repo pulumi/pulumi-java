@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1EntityMetadataResponse;
 import java.lang.String;
 import java.util.List;
@@ -55,35 +55,35 @@ public final class GetApiResult {
     /**
      * User labels applied to this API Proxy.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The id of the most recently created revision for this api proxy.
      * 
-     */
+    */
     public String getLatestRevisionId() {
         return this.latestRevisionId;
     }
     /**
      * Metadata describing the API proxy.
      * 
-     */
+    */
     public GoogleCloudApigeeV1EntityMetadataResponse getMetaData() {
         return this.metaData;
     }
     /**
      * Name of the API proxy.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of revisons defined for the API proxy.
      * 
-     */
+    */
     public List<String> getRevision() {
         return this.revision;
     }
@@ -140,7 +140,6 @@ public final class GetApiResult {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public GetApiResult build() {
             return new GetApiResult(labels, latestRevisionId, metaData, name, revision);
         }

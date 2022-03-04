@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetRegionInstanceGroupInstanceNamedPort;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class GetRegionInstanceGroupInstance {
     /**
      * URL to the instance.
      * 
-     */
+    */
     public String getInstance() {
         return this.instance;
     }
     /**
      * List of named ports in the group, as a list of resources, each containing:
      * 
-     */
+    */
     public List<GetRegionInstanceGroupInstanceNamedPort> getNamedPorts() {
         return this.namedPorts;
     }
     /**
      * String description of current state of the instance.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -97,7 +97,6 @@ public final class GetRegionInstanceGroupInstance {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetRegionInstanceGroupInstance build() {
             return new GetRegionInstanceGroupInstance(instance, namedPorts, status);
         }

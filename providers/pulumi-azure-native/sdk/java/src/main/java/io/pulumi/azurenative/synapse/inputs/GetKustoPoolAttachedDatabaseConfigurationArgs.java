@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="attachedDatabaseConfigurationName", required=true)
-    private final String attachedDatabaseConfigurationName;
+      private final String attachedDatabaseConfigurationName;
 
     public String getAttachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
@@ -28,7 +28,7 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="kustoPoolName", required=true)
-    private final String kustoPoolName;
+      private final String kustoPoolName;
 
     public String getKustoPoolName() {
         return this.kustoPoolName;
@@ -39,7 +39,7 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -119,7 +119,6 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetKustoPoolAttachedDatabaseConfigurationArgs build() {
             return new GetKustoPoolAttachedDatabaseConfigurationArgs(attachedDatabaseConfigurationName, kustoPoolName, resourceGroupName, workspaceName);
         }

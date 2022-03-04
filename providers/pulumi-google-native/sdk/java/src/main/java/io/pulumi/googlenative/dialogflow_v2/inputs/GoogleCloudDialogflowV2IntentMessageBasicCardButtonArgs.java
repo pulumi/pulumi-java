@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
      * 
      */
     @InputImport(name="openUriAction", required=true)
-    private final Input<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
+      private final Input<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
 
     public Input<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> getOpenUriAction() {
         return this.openUriAction;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs(openUriAction, title);
         }

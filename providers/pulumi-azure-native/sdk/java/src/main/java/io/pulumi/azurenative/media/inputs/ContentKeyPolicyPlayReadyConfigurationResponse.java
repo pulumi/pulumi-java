@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyLicenseResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="licenses", required=true)
-    private final List<ContentKeyPolicyPlayReadyLicenseResponse> licenses;
+      private final List<ContentKeyPolicyPlayReadyLicenseResponse> licenses;
 
     public List<ContentKeyPolicyPlayReadyLicenseResponse> getLicenses() {
         return this.licenses;
@@ -37,7 +37,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -48,7 +48,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="responseCustomData")
-    private final @Nullable String responseCustomData;
+      private final @Nullable String responseCustomData;
 
     public Optional<String> getResponseCustomData() {
         return this.responseCustomData == null ? Optional.empty() : Optional.ofNullable(this.responseCustomData);
@@ -107,7 +107,6 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends io.pul
             this.responseCustomData = responseCustomData;
             return this;
         }
-
         public ContentKeyPolicyPlayReadyConfigurationResponse build() {
             return new ContentKeyPolicyPlayReadyConfigurationResponse(licenses, odataType, responseCustomData);
         }

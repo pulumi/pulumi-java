@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
     /**
      * Optional. Height of the image in number of pixels.
      * 
-     */
+    */
     public Integer getHeight() {
         return this.height;
     }
     /**
      * URL of the image with a length limit of 5 KiB.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * Optional. Width of the image in number of pixels.
      * 
-     */
+    */
     public Integer getWidth() {
         return this.width;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
             this.width = Objects.requireNonNull(width);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ImageResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ImageResponse(height, uri, width);
         }

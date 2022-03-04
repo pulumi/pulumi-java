@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      * 
      */
     @InputImport(name="cardContent", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent;
+      private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse getCardContent() {
         return this.cardContent;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      * 
      */
     @InputImport(name="cardOrientation", required=true)
-    private final String cardOrientation;
+      private final String cardOrientation;
 
     public String getCardOrientation() {
         return this.cardOrientation;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      * 
      */
     @InputImport(name="thumbnailImageAlignment", required=true)
-    private final String thumbnailImageAlignment;
+      private final String thumbnailImageAlignment;
 
     public String getThumbnailImageAlignment() {
         return this.thumbnailImageAlignment;
@@ -103,7 +103,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
             this.thumbnailImageAlignment = Objects.requireNonNull(thumbnailImageAlignment);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(cardContent, cardOrientation, thumbnailImageAlignment);
         }

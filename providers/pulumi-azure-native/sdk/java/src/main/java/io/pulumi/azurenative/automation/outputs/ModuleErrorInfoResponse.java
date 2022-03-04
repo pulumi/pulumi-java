@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ModuleErrorInfoResponse {
     /**
      * Gets or sets the error code.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Gets or sets the error message.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
@@ -76,7 +76,6 @@ public final class ModuleErrorInfoResponse {
             this.message = message;
             return this;
         }
-
         public ModuleErrorInfoResponse build() {
             return new ModuleErrorInfoResponse(code, message);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobCopySourceTableArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="datasetId")
-    private final @Nullable Input<String> datasetId;
+      private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -30,7 +30,7 @@ public final class JobCopySourceTableArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+      private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -42,7 +42,7 @@ public final class JobCopySourceTableArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tableId", required=true)
-    private final Input<String> tableId;
+      private final Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId;
@@ -116,7 +116,6 @@ public final class JobCopySourceTableArgs extends io.pulumi.resources.ResourceAr
             this.tableId = Input.of(Objects.requireNonNull(tableId));
             return this;
         }
-
         public JobCopySourceTableArgs build() {
             return new JobCopySourceTableArgs(datasetId, projectId, tableId);
         }

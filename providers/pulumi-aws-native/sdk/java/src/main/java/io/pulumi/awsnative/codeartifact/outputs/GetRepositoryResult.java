@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.codeartifact.outputs;
 
 import io.pulumi.awsnative.codeartifact.outputs.RepositoryTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -71,49 +71,49 @@ public final class GetRepositoryResult {
     /**
      * The ARN of the repository.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A text description of the repository.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of external connections associated with the repository.
      * 
-     */
+    */
     public List<String> getExternalConnections() {
         return this.externalConnections == null ? List.of() : this.externalConnections;
     }
     /**
      * The name of the repository. This is used for GetAtt
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The access control resource policy on the provided repository.
      * 
-     */
+    */
     public Optional<Object> getPermissionsPolicyDocument() {
         return Optional.ofNullable(this.permissionsPolicyDocument);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<RepositoryTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A list of upstream repositories associated with the repository.
      * 
-     */
+    */
     public List<String> getUpstreams() {
         return this.upstreams == null ? List.of() : this.upstreams;
     }
@@ -184,7 +184,6 @@ public final class GetRepositoryResult {
             this.upstreams = upstreams;
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(arn, description, externalConnections, name, permissionsPolicyDocument, tags, upstreams);
         }

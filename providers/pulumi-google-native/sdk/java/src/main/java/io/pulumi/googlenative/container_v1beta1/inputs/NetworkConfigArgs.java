@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.NetworkConfigDatapathProvider;
 import io.pulumi.googlenative.container_v1beta1.enums.NetworkConfigPrivateIpv6GoogleAccess;
 import io.pulumi.googlenative.container_v1beta1.inputs.DNSConfigArgs;
@@ -28,7 +28,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datapathProvider")
-    private final @Nullable Input<NetworkConfigDatapathProvider> datapathProvider;
+      private final @Nullable Input<NetworkConfigDatapathProvider> datapathProvider;
 
     public Input<NetworkConfigDatapathProvider> getDatapathProvider() {
         return this.datapathProvider == null ? Input.empty() : this.datapathProvider;
@@ -39,7 +39,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSnatStatus")
-    private final @Nullable Input<DefaultSnatStatusArgs> defaultSnatStatus;
+      private final @Nullable Input<DefaultSnatStatusArgs> defaultSnatStatus;
 
     public Input<DefaultSnatStatusArgs> getDefaultSnatStatus() {
         return this.defaultSnatStatus == null ? Input.empty() : this.defaultSnatStatus;
@@ -50,7 +50,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsConfig")
-    private final @Nullable Input<DNSConfigArgs> dnsConfig;
+      private final @Nullable Input<DNSConfigArgs> dnsConfig;
 
     public Input<DNSConfigArgs> getDnsConfig() {
         return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
@@ -61,7 +61,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableIntraNodeVisibility")
-    private final @Nullable Input<Boolean> enableIntraNodeVisibility;
+      private final @Nullable Input<Boolean> enableIntraNodeVisibility;
 
     public Input<Boolean> getEnableIntraNodeVisibility() {
         return this.enableIntraNodeVisibility == null ? Input.empty() : this.enableIntraNodeVisibility;
@@ -72,7 +72,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableL4ilbSubsetting")
-    private final @Nullable Input<Boolean> enableL4ilbSubsetting;
+      private final @Nullable Input<Boolean> enableL4ilbSubsetting;
 
     public Input<Boolean> getEnableL4ilbSubsetting() {
         return this.enableL4ilbSubsetting == null ? Input.empty() : this.enableL4ilbSubsetting;
@@ -83,7 +83,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess")
-    private final @Nullable Input<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
+      private final @Nullable Input<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
     public Input<NetworkConfigPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
@@ -94,7 +94,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceExternalIpsConfig")
-    private final @Nullable Input<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig;
+      private final @Nullable Input<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig;
 
     public Input<ServiceExternalIPsConfigArgs> getServiceExternalIpsConfig() {
         return this.serviceExternalIpsConfig == null ? Input.empty() : this.serviceExternalIpsConfig;
@@ -228,7 +228,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceExternalIpsConfig = Input.ofNullable(serviceExternalIpsConfig);
             return this;
         }
-
         public NetworkConfigArgs build() {
             return new NetworkConfigArgs(datapathProvider, defaultSnatStatus, dnsConfig, enableIntraNodeVisibility, enableL4ilbSubsetting, privateIpv6GoogleAccess, serviceExternalIpsConfig);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.cloudformation;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudformation.inputs.GetStackSetArgs;
 import io.pulumi.awsnative.cloudformation.outputs.GetStackSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStackSet {
-/**
- * StackSet as a resource provides one-click experience for provisioning a StackSet and StackInstances
+    private GetStackSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetStackSetArgs.Builder a);
+    }
+    private static GetStackSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStackSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * StackSet as a resource provides one-click experience for provisioning a StackSet and StackInstances
  * 
- */
+     */
+    public static CompletableFuture<GetStackSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * StackSet as a resource provides one-click experience for provisioning a StackSet and StackInstances
+     * 
+     */
     public static CompletableFuture<GetStackSetResult> invokeAsync(GetStackSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getStackSet", TypeShape.of(GetStackSetResult.class), args == null ? GetStackSetArgs.Empty : args, Utilities.withVersion(options));
     }

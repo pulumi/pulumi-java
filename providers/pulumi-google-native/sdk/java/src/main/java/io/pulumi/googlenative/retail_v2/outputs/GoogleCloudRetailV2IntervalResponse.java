@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GoogleCloudRetailV2IntervalResponse {
     /**
      * Exclusive upper bound.
      * 
-     */
+    */
     public Double getExclusiveMaximum() {
         return this.exclusiveMaximum;
     }
     /**
      * Exclusive lower bound.
      * 
-     */
+    */
     public Double getExclusiveMinimum() {
         return this.exclusiveMinimum;
     }
     /**
      * Inclusive upper bound.
      * 
-     */
+    */
     public Double getMaximum() {
         return this.maximum;
     }
     /**
      * Inclusive lower bound.
      * 
-     */
+    */
     public Double getMinimum() {
         return this.minimum;
     }
@@ -116,7 +116,6 @@ public final class GoogleCloudRetailV2IntervalResponse {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public GoogleCloudRetailV2IntervalResponse build() {
             return new GoogleCloudRetailV2IntervalResponse(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
         }

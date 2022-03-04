@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetResourceResult {
     /**
      * A unique primary identifier for a Resource
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -54,7 +54,6 @@ public final class GetResourceResult {
             this.resourceId = resourceId;
             return this;
         }
-
         public GetResourceResult build() {
             return new GetResourceResult(resourceId);
         }

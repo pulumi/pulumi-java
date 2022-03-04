@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcsArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceAr
      * 
      */
     @InputImport(name="allowInsecure")
-    private final @Nullable Input<Boolean> allowInsecure;
+      private final @Nullable Input<Boolean> allowInsecure;
 
     public Input<Boolean> getAllowInsecure() {
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceAr
      * 
      */
     @InputImport(name="gcs")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcsArgs> gcs;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcsArgs> gcs;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcsArgs> getGcs() {
         return this.gcs == null ? Input.empty() : this.gcs;
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceAr
      * 
      */
     @InputImport(name="localPath")
-    private final @Nullable Input<String> localPath;
+      private final @Nullable Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath == null ? Input.empty() : this.localPath;
@@ -55,7 +55,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceAr
      * 
      */
     @InputImport(name="remote")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteArgs> remote;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteArgs> remote;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteArgs> getRemote() {
         return this.remote == null ? Input.empty() : this.remote;
@@ -144,7 +144,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceAr
             this.remote = Input.ofNullable(remote);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs(allowInsecure, gcs, localPath, remote);
         }

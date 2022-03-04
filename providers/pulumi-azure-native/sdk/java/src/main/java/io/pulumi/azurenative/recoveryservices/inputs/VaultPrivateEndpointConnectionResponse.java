@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VaultPrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class VaultPrivateEndpointConnectionResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="privateEndpoint", required=true)
-    private final PrivateEndpointResponse privateEndpoint;
+      private final PrivateEndpointResponse privateEndpoint;
 
     public PrivateEndpointResponse getPrivateEndpoint() {
         return this.privateEndpoint;
@@ -34,7 +34,7 @@ public final class VaultPrivateEndpointConnectionResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-    private final VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+      private final VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public VaultPrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -45,7 +45,7 @@ public final class VaultPrivateEndpointConnectionResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -104,7 +104,6 @@ public final class VaultPrivateEndpointConnectionResponse extends io.pulumi.reso
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public VaultPrivateEndpointConnectionResponse build() {
             return new VaultPrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

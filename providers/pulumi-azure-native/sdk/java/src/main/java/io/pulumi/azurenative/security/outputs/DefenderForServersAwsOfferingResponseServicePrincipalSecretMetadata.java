@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     /**
      * expiration date of service principal secret
      * 
-     */
+    */
     public Optional<String> getExpiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
     /**
      * name of secret resource in parameter store
      * 
-     */
+    */
     public Optional<String> getParameterNameInStore() {
         return Optional.ofNullable(this.parameterNameInStore);
     }
     /**
      * region of parameter store where secret is kept
      * 
-     */
+    */
     public Optional<String> getParameterStoreRegion() {
         return Optional.ofNullable(this.parameterStoreRegion);
     }
@@ -97,7 +97,6 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
             this.parameterStoreRegion = parameterStoreRegion;
             return this;
         }
-
         public DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata build() {
             return new DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(expiryDate, parameterNameInStore, parameterStoreRegion);
         }

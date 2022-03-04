@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.auditmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class AssessmentAWSAccount {
             this.name = name;
             return this;
         }
-
         public AssessmentAWSAccount build() {
             return new AssessmentAWSAccount(emailAddress, id, name);
         }

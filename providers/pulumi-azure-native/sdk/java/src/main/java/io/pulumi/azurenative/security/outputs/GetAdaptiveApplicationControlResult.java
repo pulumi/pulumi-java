@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.outputs.AdaptiveApplicationControlIssueSum
 import io.pulumi.azurenative.security.outputs.PathRecommendationResponse;
 import io.pulumi.azurenative.security.outputs.ProtectionModeResponse;
 import io.pulumi.azurenative.security.outputs.VmRecommendationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -96,21 +96,21 @@ public final class GetAdaptiveApplicationControlResult {
     /**
      * The configuration status of the machines group or machine or rule
      * 
-     */
+    */
     public String getConfigurationStatus() {
         return this.configurationStatus;
     }
     /**
      * The application control policy enforcement/protection mode of the machine group
      * 
-     */
+    */
     public Optional<String> getEnforcementMode() {
         return Optional.ofNullable(this.enforcementMode);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -120,14 +120,14 @@ public final class GetAdaptiveApplicationControlResult {
     /**
      * Location where the resource is stored
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -137,28 +137,28 @@ public final class GetAdaptiveApplicationControlResult {
     /**
      * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
      * 
-     */
+    */
     public Optional<ProtectionModeResponse> getProtectionMode() {
         return Optional.ofNullable(this.protectionMode);
     }
     /**
      * The initial recommendation status of the machine group or machine
      * 
-     */
+    */
     public String getRecommendationStatus() {
         return this.recommendationStatus;
     }
     /**
      * The source type of the machine group
      * 
-     */
+    */
     public String getSourceSystem() {
         return this.sourceSystem;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -267,7 +267,6 @@ public final class GetAdaptiveApplicationControlResult {
             this.vmRecommendations = vmRecommendations;
             return this;
         }
-
         public GetAdaptiveApplicationControlResult build() {
             return new GetAdaptiveApplicationControlResult(configurationStatus, enforcementMode, id, issues, location, name, pathRecommendations, protectionMode, recommendationStatus, sourceSystem, type, vmRecommendations);
         }

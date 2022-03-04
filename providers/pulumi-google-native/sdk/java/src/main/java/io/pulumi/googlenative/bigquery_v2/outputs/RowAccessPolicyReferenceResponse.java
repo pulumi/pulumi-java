@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class RowAccessPolicyReferenceResponse {
     /**
      * [Required] The ID of the dataset containing this row access policy.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * [Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
      * 
-     */
+    */
     public String getPolicyId() {
         return this.policyId;
     }
     /**
      * [Required] The ID of the project containing this row access policy.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * [Required] The ID of the table containing this row access policy.
      * 
-     */
+    */
     public String getTableId() {
         return this.tableId;
     }
@@ -116,7 +116,6 @@ public final class RowAccessPolicyReferenceResponse {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public RowAccessPolicyReferenceResponse build() {
             return new RowAccessPolicyReferenceResponse(datasetId, policyId, project, tableId);
         }

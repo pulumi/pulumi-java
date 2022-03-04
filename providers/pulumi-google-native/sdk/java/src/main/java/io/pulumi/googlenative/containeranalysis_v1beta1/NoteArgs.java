@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.AuthorityArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.BasisArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.BuildArgs;
@@ -33,7 +33,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestationAuthority")
-    private final @Nullable Input<AuthorityArgs> attestationAuthority;
+      private final @Nullable Input<AuthorityArgs> attestationAuthority;
 
     public Input<AuthorityArgs> getAttestationAuthority() {
         return this.attestationAuthority == null ? Input.empty() : this.attestationAuthority;
@@ -44,7 +44,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseImage")
-    private final @Nullable Input<BasisArgs> baseImage;
+      private final @Nullable Input<BasisArgs> baseImage;
 
     public Input<BasisArgs> getBaseImage() {
         return this.baseImage == null ? Input.empty() : this.baseImage;
@@ -55,7 +55,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="build")
-    private final @Nullable Input<BuildArgs> build;
+      private final @Nullable Input<BuildArgs> build;
 
     public Input<BuildArgs> getBuild() {
         return this.build == null ? Input.empty() : this.build;
@@ -66,7 +66,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployable")
-    private final @Nullable Input<DeployableArgs> deployable;
+      private final @Nullable Input<DeployableArgs> deployable;
 
     public Input<DeployableArgs> getDeployable() {
         return this.deployable == null ? Input.empty() : this.deployable;
@@ -77,7 +77,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="discovery")
-    private final @Nullable Input<DiscoveryArgs> discovery;
+      private final @Nullable Input<DiscoveryArgs> discovery;
 
     public Input<DiscoveryArgs> getDiscovery() {
         return this.discovery == null ? Input.empty() : this.discovery;
@@ -88,7 +88,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+      private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -99,7 +99,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intoto")
-    private final @Nullable Input<InTotoArgs> intoto;
+      private final @Nullable Input<InTotoArgs> intoto;
 
     public Input<InTotoArgs> getIntoto() {
         return this.intoto == null ? Input.empty() : this.intoto;
@@ -110,14 +110,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="longDescription")
-    private final @Nullable Input<String> longDescription;
+      private final @Nullable Input<String> longDescription;
 
     public Input<String> getLongDescription() {
         return this.longDescription == null ? Input.empty() : this.longDescription;
     }
 
     @InputImport(name="noteId", required=true)
-    private final Input<String> noteId;
+      private final Input<String> noteId;
 
     public Input<String> getNoteId() {
         return this.noteId;
@@ -128,14 +128,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="package")
-    private final @Nullable Input<PackageArgs> $package;
+      private final @Nullable Input<PackageArgs> $package;
 
     public Input<PackageArgs> get$package() {
         return this.$package == null ? Input.empty() : this.$package;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -146,7 +146,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedNoteNames")
-    private final @Nullable Input<List<String>> relatedNoteNames;
+      private final @Nullable Input<List<String>> relatedNoteNames;
 
     public Input<List<String>> getRelatedNoteNames() {
         return this.relatedNoteNames == null ? Input.empty() : this.relatedNoteNames;
@@ -157,7 +157,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedUrl")
-    private final @Nullable Input<List<RelatedUrlArgs>> relatedUrl;
+      private final @Nullable Input<List<RelatedUrlArgs>> relatedUrl;
 
     public Input<List<RelatedUrlArgs>> getRelatedUrl() {
         return this.relatedUrl == null ? Input.empty() : this.relatedUrl;
@@ -168,7 +168,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sbom")
-    private final @Nullable Input<DocumentNoteArgs> sbom;
+      private final @Nullable Input<DocumentNoteArgs> sbom;
 
     public Input<DocumentNoteArgs> getSbom() {
         return this.sbom == null ? Input.empty() : this.sbom;
@@ -179,7 +179,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortDescription")
-    private final @Nullable Input<String> shortDescription;
+      private final @Nullable Input<String> shortDescription;
 
     public Input<String> getShortDescription() {
         return this.shortDescription == null ? Input.empty() : this.shortDescription;
@@ -190,7 +190,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxFile")
-    private final @Nullable Input<FileNoteArgs> spdxFile;
+      private final @Nullable Input<FileNoteArgs> spdxFile;
 
     public Input<FileNoteArgs> getSpdxFile() {
         return this.spdxFile == null ? Input.empty() : this.spdxFile;
@@ -201,7 +201,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxPackage")
-    private final @Nullable Input<PackageInfoNoteArgs> spdxPackage;
+      private final @Nullable Input<PackageInfoNoteArgs> spdxPackage;
 
     public Input<PackageInfoNoteArgs> getSpdxPackage() {
         return this.spdxPackage == null ? Input.empty() : this.spdxPackage;
@@ -212,7 +212,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxRelationship")
-    private final @Nullable Input<RelationshipNoteArgs> spdxRelationship;
+      private final @Nullable Input<RelationshipNoteArgs> spdxRelationship;
 
     public Input<RelationshipNoteArgs> getSpdxRelationship() {
         return this.spdxRelationship == null ? Input.empty() : this.spdxRelationship;
@@ -223,7 +223,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vulnerability")
-    private final @Nullable Input<VulnerabilityArgs> vulnerability;
+      private final @Nullable Input<VulnerabilityArgs> vulnerability;
 
     public Input<VulnerabilityArgs> getVulnerability() {
         return this.vulnerability == null ? Input.empty() : this.vulnerability;
@@ -537,7 +537,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             this.vulnerability = Input.ofNullable(vulnerability);
             return this;
         }
-
         public NoteArgs build() {
             return new NoteArgs(attestationAuthority, baseImage, build, deployable, discovery, expirationTime, intoto, longDescription, noteId, $package, project, relatedNoteNames, relatedUrl, sbom, shortDescription, spdxFile, spdxPackage, spdxRelationship, vulnerability);
         }

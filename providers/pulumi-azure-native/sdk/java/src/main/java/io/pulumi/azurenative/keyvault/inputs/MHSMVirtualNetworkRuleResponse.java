@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MHSMVirtualNetworkRuleResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -59,7 +59,6 @@ public final class MHSMVirtualNetworkRuleResponse extends io.pulumi.resources.In
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public MHSMVirtualNetworkRuleResponse build() {
             return new MHSMVirtualNetworkRuleResponse(id);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsa {
      * The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
      * service will not enforce an explicit upper bound on RSA modulus sizes.
      * 
-     */
+    */
     public Optional<String> getMaxModulusSize() {
         return Optional.ofNullable(this.maxModulusSize);
     }
@@ -44,7 +44,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsa {
      * The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
      * service-level min RSA modulus size will continue to apply.
      * 
-     */
+    */
     public Optional<String> getMinModulusSize() {
         return Optional.ofNullable(this.minModulusSize);
     }
@@ -80,7 +80,6 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsa {
             this.minModulusSize = minModulusSize;
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyTypeRsa build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeRsa(maxModulusSize, minModulusSize);
         }

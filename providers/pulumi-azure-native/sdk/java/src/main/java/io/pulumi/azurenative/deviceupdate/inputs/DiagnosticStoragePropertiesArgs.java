@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 import io.pulumi.azurenative.deviceupdate.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final Input<Either<String,AuthenticationType>> authenticationType;
+      private final Input<Either<String,AuthenticationType>> authenticationType;
 
     public Input<Either<String,AuthenticationType>> getAuthenticationType() {
         return this.authenticationType;
@@ -36,7 +36,7 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable Input<String> connectionString;
+      private final @Nullable Input<String> connectionString;
 
     public Input<String> getConnectionString() {
         return this.connectionString == null ? Input.empty() : this.connectionString;
@@ -47,7 +47,7 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -121,7 +121,6 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public DiagnosticStoragePropertiesArgs build() {
             return new DiagnosticStoragePropertiesArgs(authenticationType, connectionString, resourceId);
         }

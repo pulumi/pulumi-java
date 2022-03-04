@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.GoogleMonitoringV3RangeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class MetricRangeResponse {
     /**
      * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
      * 
-     */
+    */
     public GoogleMonitoringV3RangeResponse getRange() {
         return this.range;
     }
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
      * 
-     */
+    */
     public String getTimeSeries() {
         return this.timeSeries;
     }
@@ -75,7 +75,6 @@ public final class MetricRangeResponse {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
-
         public MetricRangeResponse build() {
             return new MetricRangeResponse(range, timeSeries);
         }

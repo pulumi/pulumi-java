@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetIntegrationRuntimeArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="integrationRuntimeName", required=true)
-    private final String integrationRuntimeName;
+      private final String integrationRuntimeName;
 
     public String getIntegrationRuntimeName() {
         return this.integrationRuntimeName;
@@ -28,7 +28,7 @@ public final class GetIntegrationRuntimeArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetIntegrationRuntimeArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -98,7 +98,6 @@ public final class GetIntegrationRuntimeArgs extends io.pulumi.resources.InvokeA
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetIntegrationRuntimeArgs build() {
             return new GetIntegrationRuntimeArgs(integrationRuntimeName, resourceGroupName, workspaceName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalog.outputs;
 
 import io.pulumi.awsnative.servicecatalog.enums.CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -128,7 +128,6 @@ public final class CloudFormationProvisionedProductProvisioningPreferences {
             this.stackSetRegions = stackSetRegions;
             return this;
         }
-
         public CloudFormationProvisionedProductProvisioningPreferences build() {
             return new CloudFormationProvisionedProductProvisioningPreferences(stackSetAccounts, stackSetFailureToleranceCount, stackSetFailureTolerancePercentage, stackSetMaxConcurrencyCount, stackSetMaxConcurrencyPercentage, stackSetOperationType, stackSetRegions);
         }

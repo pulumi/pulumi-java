@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,14 +43,14 @@ public final class GetZonesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of zones available in the given region
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }
@@ -116,7 +116,6 @@ public final class GetZonesResult {
             this.status = status;
             return this;
         }
-
         public GetZonesResult build() {
             return new GetZonesResult(id, names, project, region, status);
         }

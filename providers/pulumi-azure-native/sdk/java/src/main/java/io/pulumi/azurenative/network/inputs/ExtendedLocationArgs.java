@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.ExtendedLocationTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ExtendedLocationTypes>> type;
+      private final Input<Either<String,ExtendedLocationTypes>> type;
 
     public Input<Either<String,ExtendedLocationTypes>> getType() {
         return this.type;
@@ -94,7 +94,6 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ExtendedLocationArgs build() {
             return new ExtendedLocationArgs(name, type);
         }

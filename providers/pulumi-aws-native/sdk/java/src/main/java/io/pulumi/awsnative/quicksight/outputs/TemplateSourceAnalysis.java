@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.TemplateDataSetReference;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +34,7 @@ public final class TemplateSourceAnalysis {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -42,7 +42,7 @@ public final class TemplateSourceAnalysis {
      * <p>A structure containing information about the dataset references used as placeholders
      *             in the template.</p>
      * 
-     */
+    */
     public List<TemplateDataSetReference> getDataSetReferences() {
         return this.dataSetReferences;
     }
@@ -78,7 +78,6 @@ public final class TemplateSourceAnalysis {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }
-
         public TemplateSourceAnalysis build() {
             return new TemplateSourceAnalysis(arn, dataSetReferences);
         }

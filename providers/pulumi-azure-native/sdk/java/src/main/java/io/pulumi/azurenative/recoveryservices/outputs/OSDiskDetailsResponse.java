@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class OSDiskDetailsResponse {
     /**
      * The type of the OS on the VM.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The id of the disk containing the OS.
      * 
-     */
+    */
     public Optional<String> getOsVhdId() {
         return Optional.ofNullable(this.osVhdId);
     }
     /**
      * The OS disk VHD name.
      * 
-     */
+    */
     public Optional<String> getVhdName() {
         return Optional.ofNullable(this.vhdName);
     }
@@ -97,7 +97,6 @@ public final class OSDiskDetailsResponse {
             this.vhdName = vhdName;
             return this;
         }
-
         public OSDiskDetailsResponse build() {
             return new OSDiskDetailsResponse(osType, osVhdId, vhdName);
         }

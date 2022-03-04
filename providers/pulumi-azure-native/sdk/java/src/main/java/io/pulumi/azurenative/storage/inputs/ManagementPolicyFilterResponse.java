@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.TagFilterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="blobIndexMatch")
-    private final @Nullable List<TagFilterResponse> blobIndexMatch;
+      private final @Nullable List<TagFilterResponse> blobIndexMatch;
 
     public List<TagFilterResponse> getBlobIndexMatch() {
         return this.blobIndexMatch == null ? List.of() : this.blobIndexMatch;
@@ -36,7 +36,7 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="blobTypes", required=true)
-    private final List<String> blobTypes;
+      private final List<String> blobTypes;
 
     public List<String> getBlobTypes() {
         return this.blobTypes;
@@ -47,7 +47,7 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="prefixMatch")
-    private final @Nullable List<String> prefixMatch;
+      private final @Nullable List<String> prefixMatch;
 
     public List<String> getPrefixMatch() {
         return this.prefixMatch == null ? List.of() : this.prefixMatch;
@@ -106,7 +106,6 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public ManagementPolicyFilterResponse build() {
             return new ManagementPolicyFilterResponse(blobIndexMatch, blobTypes, prefixMatch);
         }

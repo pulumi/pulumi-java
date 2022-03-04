@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class VirtualMachineIpTagResponse {
     /**
      * IP tag type. Example: FirstPartyUsage.
      * 
-     */
+    */
     public Optional<String> getIpTagType() {
         return Optional.ofNullable(this.ipTagType);
     }
     /**
      * IP tag associated with the public IP. Example: SQL, Storage etc.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
@@ -76,7 +76,6 @@ public final class VirtualMachineIpTagResponse {
             this.tag = tag;
             return this;
         }
-
         public VirtualMachineIpTagResponse build() {
             return new VirtualMachineIpTagResponse(ipTagType, tag);
         }

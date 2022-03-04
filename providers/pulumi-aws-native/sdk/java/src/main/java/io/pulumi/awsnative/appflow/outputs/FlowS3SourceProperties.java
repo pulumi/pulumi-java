@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.FlowS3InputFormatConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class FlowS3SourceProperties {
             this.s3InputFormatConfig = s3InputFormatConfig;
             return this;
         }
-
         public FlowS3SourceProperties build() {
             return new FlowS3SourceProperties(bucketName, bucketPrefix, s3InputFormatConfig);
         }

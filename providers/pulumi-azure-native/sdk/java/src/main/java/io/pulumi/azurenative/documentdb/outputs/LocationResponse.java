@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -63,42 +63,42 @@ public final class LocationResponse {
     /**
      * The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
      * 
-     */
+    */
     public String getDocumentEndpoint() {
         return this.documentEndpoint;
     }
     /**
      * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
      * 
-     */
+    */
     public Optional<Integer> getFailoverPriority() {
         return Optional.ofNullable(this.failoverPriority);
     }
     /**
      * The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Flag to indicate whether or not this region is an AvailabilityZone region
      * 
-     */
+    */
     public Optional<Boolean> getIsZoneRedundant() {
         return Optional.ofNullable(this.isZoneRedundant);
     }
     /**
      * The name of the region.
      * 
-     */
+    */
     public Optional<String> getLocationName() {
         return Optional.ofNullable(this.locationName);
     }
     /**
      * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -162,7 +162,6 @@ public final class LocationResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public LocationResponse build() {
             return new LocationResponse(documentEndpoint, failoverPriority, id, isZoneRedundant, locationName, provisioningState);
         }

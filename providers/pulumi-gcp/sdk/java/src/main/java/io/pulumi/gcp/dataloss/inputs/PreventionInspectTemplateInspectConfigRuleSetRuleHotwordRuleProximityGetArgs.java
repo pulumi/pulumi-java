@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
      * 
      */
     @InputImport(name="windowAfter")
-    private final @Nullable Input<Integer> windowAfter;
+      private final @Nullable Input<Integer> windowAfter;
 
     public Input<Integer> getWindowAfter() {
         return this.windowAfter == null ? Input.empty() : this.windowAfter;
@@ -30,7 +30,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
      * 
      */
     @InputImport(name="windowBefore")
-    private final @Nullable Input<Integer> windowBefore;
+      private final @Nullable Input<Integer> windowBefore;
 
     public Input<Integer> getWindowBefore() {
         return this.windowBefore == null ? Input.empty() : this.windowBefore;
@@ -89,7 +89,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
             this.windowBefore = Input.ofNullable(windowBefore);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs(windowAfter, windowBefore);
         }

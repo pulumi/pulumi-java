@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DistributionGroupListReceiverValueResponse {
     /**
      * The list of distribution groups.
      * 
-     */
+    */
     public List<String> getDistributionGroups() {
         return this.distributionGroups == null ? List.of() : this.distributionGroups;
     }
@@ -54,7 +54,6 @@ public final class DistributionGroupListReceiverValueResponse {
             this.distributionGroups = distributionGroups;
             return this;
         }
-
         public DistributionGroupListReceiverValueResponse build() {
             return new DistributionGroupListReceiverValueResponse(distributionGroups);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.RollingUpdateDaemonSet;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class DaemonSetUpdateStrategy {
     /**
      * Rolling update config params. Present only if type = "RollingUpdate".
      * 
-     */
+    */
     public Optional<RollingUpdateDaemonSet> getRollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
     /**
      * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is RollingUpdate.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -77,7 +77,6 @@ public final class DaemonSetUpdateStrategy {
             this.type = type;
             return this;
         }
-
         public DaemonSetUpdateStrategy build() {
             return new DaemonSetUpdateStrategy(rollingUpdate, type);
         }

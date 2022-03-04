@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datamigration.outputs.MiSqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.MySqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.PostgreSqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -111,84 +111,84 @@ public final class GetProjectResult {
     /**
      * UTC Date and time when project was created
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * List of DatabaseInfo
      * 
-     */
+    */
     public List<DatabaseInfoResponse> getDatabasesInfo() {
         return this.databasesInfo == null ? List.of() : this.databasesInfo;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The project's provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Information for connecting to source
      * 
-     */
+    */
     public Optional<Object> getSourceConnectionInfo() {
         return Optional.ofNullable(this.sourceConnectionInfo);
     }
     /**
      * Source platform for the project
      * 
-     */
+    */
     public String getSourcePlatform() {
         return this.sourcePlatform;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Information for connecting to target
      * 
-     */
+    */
     public Optional<Object> getTargetConnectionInfo() {
         return Optional.ofNullable(this.targetConnectionInfo);
     }
     /**
      * Target platform for the project
      * 
-     */
+    */
     public String getTargetPlatform() {
         return this.targetPlatform;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -294,7 +294,6 @@ public final class GetProjectResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(creationTime, databasesInfo, id, location, name, provisioningState, sourceConnectionInfo, sourcePlatform, tags, targetConnectionInfo, targetPlatform, type);
         }

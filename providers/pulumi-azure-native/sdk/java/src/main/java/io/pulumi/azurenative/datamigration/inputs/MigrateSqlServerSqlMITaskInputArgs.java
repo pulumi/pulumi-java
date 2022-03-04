@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMIDatabaseI
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="backupBlobShare", required=true)
-    private final Input<BlobShareArgs> backupBlobShare;
+      private final Input<BlobShareArgs> backupBlobShare;
 
     public Input<BlobShareArgs> getBackupBlobShare() {
         return this.backupBlobShare;
@@ -41,7 +41,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="backupFileShare")
-    private final @Nullable Input<FileShareArgs> backupFileShare;
+      private final @Nullable Input<FileShareArgs> backupFileShare;
 
     public Input<FileShareArgs> getBackupFileShare() {
         return this.backupFileShare == null ? Input.empty() : this.backupFileShare;
@@ -52,7 +52,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="backupMode")
-    private final @Nullable Input<Either<String,BackupMode>> backupMode;
+      private final @Nullable Input<Either<String,BackupMode>> backupMode;
 
     public Input<Either<String,BackupMode>> getBackupMode() {
         return this.backupMode == null ? Input.empty() : this.backupMode;
@@ -63,7 +63,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="selectedAgentJobs")
-    private final @Nullable Input<List<String>> selectedAgentJobs;
+      private final @Nullable Input<List<String>> selectedAgentJobs;
 
     public Input<List<String>> getSelectedAgentJobs() {
         return this.selectedAgentJobs == null ? Input.empty() : this.selectedAgentJobs;
@@ -74,7 +74,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-    private final Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
+      private final Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
     public Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -85,7 +85,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="selectedLogins")
-    private final @Nullable Input<List<String>> selectedLogins;
+      private final @Nullable Input<List<String>> selectedLogins;
 
     public Input<List<String>> getSelectedLogins() {
         return this.selectedLogins == null ? Input.empty() : this.selectedLogins;
@@ -96,7 +96,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
+      private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -107,7 +107,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
+      private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -256,7 +256,6 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
-
         public MigrateSqlServerSqlMITaskInputArgs build() {
             return new MigrateSqlServerSqlMITaskInputArgs(backupBlobShare, backupFileShare, backupMode, selectedAgentJobs, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
         }

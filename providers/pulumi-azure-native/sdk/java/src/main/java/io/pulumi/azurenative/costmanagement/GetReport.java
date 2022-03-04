@@ -6,21 +6,41 @@ package io.pulumi.azurenative.costmanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.costmanagement.inputs.GetReportArgs;
 import io.pulumi.azurenative.costmanagement.outputs.GetReportResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReport {
-/**
- * A report resource.
+    private GetReport() {}
+    public interface BuilderApplicator {
+        public void apply(GetReportArgs.Builder a);
+    }
+    private static GetReportArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReportArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A report resource.
  * API Version: 2018-08-01-preview.
  * 
- *
- * A report resource.
+     *
+     * A report resource.
  * 
- */
+     */
+    public static CompletableFuture<GetReportResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A report resource.
+     * API Version: 2018-08-01-preview.
+     * 
+     *
+         * A report resource.
+     * 
+     */
     public static CompletableFuture<GetReportResult> invokeAsync(GetReportArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getReport", TypeShape.of(GetReportResult.class), args == null ? GetReportArgs.Empty : args, Utilities.withVersion(options));
     }

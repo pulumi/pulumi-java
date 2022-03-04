@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class Capabilities {
     /**
      * Added capabilities
      * 
-     */
+    */
     public List<String> getAdd() {
         return this.add == null ? List.of() : this.add;
     }
     /**
      * Removed capabilities
      * 
-     */
+    */
     public List<String> getDrop() {
         return this.drop == null ? List.of() : this.drop;
     }
@@ -76,7 +76,6 @@ public final class Capabilities {
             this.drop = drop;
             return this;
         }
-
         public Capabilities build() {
             return new Capabilities(add, drop);
         }

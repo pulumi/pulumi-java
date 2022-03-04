@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class SpotFleetFleetLaunchTemplateSpecificationArgs extends io.pulu
     public static final SpotFleetFleetLaunchTemplateSpecificationArgs Empty = new SpotFleetFleetLaunchTemplateSpecificationArgs();
 
     @InputImport(name="launchTemplateId")
-    private final @Nullable Input<String> launchTemplateId;
+      private final @Nullable Input<String> launchTemplateId;
 
     public Input<String> getLaunchTemplateId() {
         return this.launchTemplateId == null ? Input.empty() : this.launchTemplateId;
     }
 
     @InputImport(name="launchTemplateName")
-    private final @Nullable Input<String> launchTemplateName;
+      private final @Nullable Input<String> launchTemplateName;
 
     public Input<String> getLaunchTemplateName() {
         return this.launchTemplateName == null ? Input.empty() : this.launchTemplateName;
     }
 
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -103,7 +103,6 @@ public final class SpotFleetFleetLaunchTemplateSpecificationArgs extends io.pulu
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public SpotFleetFleetLaunchTemplateSpecificationArgs build() {
             return new SpotFleetFleetLaunchTemplateSpecificationArgs(launchTemplateId, launchTemplateName, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class SkuCapabilityResponse {
     /**
      * The name of the SkuCapability.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of the SkuCapability.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class SkuCapabilityResponse {
             this.value = value;
             return this;
         }
-
         public SkuCapabilityResponse build() {
             return new SkuCapabilityResponse(name, value);
         }

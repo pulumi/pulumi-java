@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AzureNodePoolAutoscalingArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolMaxPodsConstraintArgs;
@@ -23,7 +23,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -34,7 +34,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscaling", required=true)
-    private final Input<AzureNodePoolAutoscalingArgs> autoscaling;
+      private final Input<AzureNodePoolAutoscalingArgs> autoscaling;
 
     public Input<AzureNodePoolAutoscalingArgs> getAutoscaling() {
         return this.autoscaling;
@@ -45,7 +45,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureAvailabilityZone")
-    private final @Nullable Input<String> azureAvailabilityZone;
+      private final @Nullable Input<String> azureAvailabilityZone;
 
     public Input<String> getAzureAvailabilityZone() {
         return this.azureAvailabilityZone == null ? Input.empty() : this.azureAvailabilityZone;
@@ -56,7 +56,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster", required=true)
-    private final Input<String> cluster;
+      private final Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster;
@@ -67,7 +67,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<AzureNodePoolConfigArgs> config;
+      private final Input<AzureNodePoolConfigArgs> config;
 
     public Input<AzureNodePoolConfigArgs> getConfig() {
         return this.config;
@@ -78,7 +78,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -89,7 +89,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxPodsConstraint", required=true)
-    private final Input<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
+      private final Input<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
     public Input<AzureNodePoolMaxPodsConstraintArgs> getMaxPodsConstraint() {
         return this.maxPodsConstraint;
@@ -100,7 +100,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -111,7 +111,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -122,7 +122,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -133,7 +133,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -327,7 +327,6 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public AzureNodePoolArgs build() {
             return new AzureNodePoolArgs(annotations, autoscaling, azureAvailabilityZone, cluster, config, location, maxPodsConstraint, name, project, subnetId, version);
         }

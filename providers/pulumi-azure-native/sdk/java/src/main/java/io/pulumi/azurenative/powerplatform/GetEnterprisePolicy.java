@@ -6,21 +6,41 @@ package io.pulumi.azurenative.powerplatform;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.powerplatform.inputs.GetEnterprisePolicyArgs;
 import io.pulumi.azurenative.powerplatform.outputs.GetEnterprisePolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnterprisePolicy {
-/**
- * Definition of the EnterprisePolicy.
+    private GetEnterprisePolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetEnterprisePolicyArgs.Builder a);
+    }
+    private static GetEnterprisePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEnterprisePolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the EnterprisePolicy.
  * API Version: 2020-10-30-preview.
  * 
- *
- * Definition of the EnterprisePolicy.
+     *
+     * Definition of the EnterprisePolicy.
  * 
- */
+     */
+    public static CompletableFuture<GetEnterprisePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the EnterprisePolicy.
+     * API Version: 2020-10-30-preview.
+     * 
+     *
+         * Definition of the EnterprisePolicy.
+     * 
+     */
     public static CompletableFuture<GetEnterprisePolicyResult> invokeAsync(GetEnterprisePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerplatform:getEnterprisePolicy", TypeShape.of(GetEnterprisePolicyResult.class), args == null ? GetEnterprisePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

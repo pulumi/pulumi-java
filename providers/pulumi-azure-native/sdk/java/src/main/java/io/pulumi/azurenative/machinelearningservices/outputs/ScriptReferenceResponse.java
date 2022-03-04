@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ScriptReferenceResponse {
     /**
      * Optional command line arguments passed to the script to run.
      * 
-     */
+    */
     public Optional<String> getScriptArguments() {
         return Optional.ofNullable(this.scriptArguments);
     }
     /**
      * The location of scripts in the mounted volume.
      * 
-     */
+    */
     public Optional<String> getScriptData() {
         return Optional.ofNullable(this.scriptData);
     }
     /**
      * The storage source of the script: inline, workspace.
      * 
-     */
+    */
     public Optional<String> getScriptSource() {
         return Optional.ofNullable(this.scriptSource);
     }
     /**
      * Optional time period passed to timeout command.
      * 
-     */
+    */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -118,7 +118,6 @@ public final class ScriptReferenceResponse {
             this.timeout = timeout;
             return this;
         }
-
         public ScriptReferenceResponse build() {
             return new ScriptReferenceResponse(scriptArguments, scriptData, scriptSource, timeout);
         }

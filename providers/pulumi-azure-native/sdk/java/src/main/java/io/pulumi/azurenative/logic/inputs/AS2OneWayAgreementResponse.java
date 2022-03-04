@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.AS2ProtocolSettingsResponse;
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="protocolSettings", required=true)
-    private final AS2ProtocolSettingsResponse protocolSettings;
+      private final AS2ProtocolSettingsResponse protocolSettings;
 
     public AS2ProtocolSettingsResponse getProtocolSettings() {
         return this.protocolSettings;
@@ -33,7 +33,7 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="receiverBusinessIdentity", required=true)
-    private final BusinessIdentityResponse receiverBusinessIdentity;
+      private final BusinessIdentityResponse receiverBusinessIdentity;
 
     public BusinessIdentityResponse getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
@@ -44,7 +44,7 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="senderBusinessIdentity", required=true)
-    private final BusinessIdentityResponse senderBusinessIdentity;
+      private final BusinessIdentityResponse senderBusinessIdentity;
 
     public BusinessIdentityResponse getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;
@@ -103,7 +103,6 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }
-
         public AS2OneWayAgreementResponse build() {
             return new AS2OneWayAgreementResponse(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }

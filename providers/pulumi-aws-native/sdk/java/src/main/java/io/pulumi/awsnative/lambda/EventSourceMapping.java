@@ -12,8 +12,8 @@ import io.pulumi.awsnative.lambda.outputs.EventSourceMappingSourceAccessConfigur
 import io.pulumi.awsnative.lambda.outputs.FilterCriteriaProperties;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -294,6 +294,37 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
         return this.tumblingWindowInSeconds;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EventSourceMappingArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.lambda.EventSourceMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.lambda.EventSourceMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public EventSourceMapping(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EventSourceMapping(String name) {
+        this(name, EventSourceMappingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EventSourceMapping(String name, EventSourceMappingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

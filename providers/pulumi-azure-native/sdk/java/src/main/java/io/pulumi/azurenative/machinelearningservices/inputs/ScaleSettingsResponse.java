@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ScaleSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="maxNodeCount", required=true)
-    private final Integer maxNodeCount;
+      private final Integer maxNodeCount;
 
     public Integer getMaxNodeCount() {
         return this.maxNodeCount;
@@ -35,7 +35,7 @@ public final class ScaleSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="minNodeCount")
-    private final @Nullable Integer minNodeCount;
+      private final @Nullable Integer minNodeCount;
 
     public Optional<Integer> getMinNodeCount() {
         return this.minNodeCount == null ? Optional.empty() : Optional.ofNullable(this.minNodeCount);
@@ -46,7 +46,7 @@ public final class ScaleSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="nodeIdleTimeBeforeScaleDown")
-    private final @Nullable String nodeIdleTimeBeforeScaleDown;
+      private final @Nullable String nodeIdleTimeBeforeScaleDown;
 
     public Optional<String> getNodeIdleTimeBeforeScaleDown() {
         return this.nodeIdleTimeBeforeScaleDown == null ? Optional.empty() : Optional.ofNullable(this.nodeIdleTimeBeforeScaleDown);
@@ -105,7 +105,6 @@ public final class ScaleSettingsResponse extends io.pulumi.resources.InvokeArgs 
             this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
             return this;
         }
-
         public ScaleSettingsResponse build() {
             return new ScaleSettingsResponse(maxNodeCount, minNodeCount, nodeIdleTimeBeforeScaleDown);
         }

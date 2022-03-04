@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.EdgeProfileResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -76,14 +76,14 @@ public final class GetCloudEdgeManagementRoleResult {
     /**
      * Edge Profile of the resource
      * 
-     */
+    */
     public EdgeProfileResponse getEdgeProfile() {
         return this.edgeProfile;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -91,42 +91,42 @@ public final class GetCloudEdgeManagementRoleResult {
      * Role type.
      * Expected value is 'CloudEdgeManagement'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Local Edge Management Status
      * 
-     */
+    */
     public String getLocalManagementStatus() {
         return this.localManagementStatus;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Role status.
      * 
-     */
+    */
     public String getRoleStatus() {
         return this.roleStatus;
     }
     /**
      * Role configured on ASE resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -204,7 +204,6 @@ public final class GetCloudEdgeManagementRoleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCloudEdgeManagementRoleResult build() {
             return new GetCloudEdgeManagementRoleResult(edgeProfile, id, kind, localManagementStatus, name, roleStatus, systemData, type);
         }

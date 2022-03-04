@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,63 +82,63 @@ public final class GetWorkloadClassifierResult {
     /**
      * The workload classifier context.
      * 
-     */
+    */
     public Optional<String> getContext() {
         return Optional.ofNullable(this.context);
     }
     /**
      * The workload classifier end time for classification.
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The workload classifier importance.
      * 
-     */
+    */
     public Optional<String> getImportance() {
         return Optional.ofNullable(this.importance);
     }
     /**
      * The workload classifier label.
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * The workload classifier member name.
      * 
-     */
+    */
     public String getMemberName() {
         return this.memberName;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The workload classifier start time for classification.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -223,7 +223,6 @@ public final class GetWorkloadClassifierResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadClassifierResult build() {
             return new GetWorkloadClassifierResult(context, endTime, id, importance, label, memberName, name, startTime, type);
         }

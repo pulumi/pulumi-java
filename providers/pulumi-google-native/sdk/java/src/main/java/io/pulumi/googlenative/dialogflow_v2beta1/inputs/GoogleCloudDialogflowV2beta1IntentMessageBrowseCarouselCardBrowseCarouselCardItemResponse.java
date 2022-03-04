@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageImageResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * 
      */
     @InputImport(name="footer", required=true)
-    private final String footer;
+      private final String footer;
 
     public String getFooter() {
         return this.footer;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * 
      */
     @InputImport(name="image", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
+      private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
         return this.image;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * 
      */
     @InputImport(name="openUriAction", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction;
+      private final GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction;
 
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse getOpenUriAction() {
         return this.openUriAction;
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -146,7 +146,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse(description, footer, image, openUriAction, title);
         }

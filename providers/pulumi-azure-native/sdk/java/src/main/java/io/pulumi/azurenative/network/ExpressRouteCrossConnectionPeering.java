@@ -10,8 +10,8 @@ import io.pulumi.azurenative.network.outputs.Ipv6ExpressRouteCircuitPeeringConfi
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -274,6 +274,37 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
         return this.vlanId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ExpressRouteCrossConnectionPeeringArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.ExpressRouteCrossConnectionPeeringArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.ExpressRouteCrossConnectionPeeringArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ExpressRouteCrossConnectionPeering(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ExpressRouteCrossConnectionPeering(String name) {
+        this(name, ExpressRouteCrossConnectionPeeringArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ExpressRouteCrossConnectionPeering(String name, ExpressRouteCrossConnectionPeeringArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

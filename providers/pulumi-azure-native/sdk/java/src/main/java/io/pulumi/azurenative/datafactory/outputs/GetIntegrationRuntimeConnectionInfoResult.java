@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
     /**
      * The on-premises integration runtime host URL.
      * 
-     */
+    */
     public String getHostServiceUri() {
         return this.hostServiceUri;
     }
     /**
      * The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.
      * 
-     */
+    */
     public String getIdentityCertThumbprint() {
         return this.identityCertThumbprint;
     }
     /**
      * Whether the identity certificate is expired.
      * 
-     */
+    */
     public Boolean getIsIdentityCertExprired() {
         return this.isIdentityCertExprired;
     }
     /**
      * The public key for encrypting a credential when transferring the credential to the integration runtime.
      * 
-     */
+    */
     public String getPublicKey() {
         return this.publicKey;
     }
     /**
      * The token generated in service. Callers use this token to authenticate to integration runtime.
      * 
-     */
+    */
     public String getServiceToken() {
         return this.serviceToken;
     }
     /**
      * The integration runtime version.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -159,7 +159,6 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetIntegrationRuntimeConnectionInfoResult build() {
             return new GetIntegrationRuntimeConnectionInfoResult(hostServiceUri, identityCertThumbprint, isIdentityCertExprired, publicKey, serviceToken, version);
         }

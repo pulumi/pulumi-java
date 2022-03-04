@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class SecretKeySelector {
     /**
      * The key of the secret to select from.  Must be a valid secret key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specify whether the Secret or its key must be defined
      * 
-     */
+    */
     public Optional<Boolean> getOptional() {
         return Optional.ofNullable(this.optional);
     }
@@ -98,7 +98,6 @@ public final class SecretKeySelector {
             this.optional = optional;
             return this;
         }
-
         public SecretKeySelector build() {
             return new SecretKeySelector(key, name, optional);
         }

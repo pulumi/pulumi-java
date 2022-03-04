@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.OracleRdbmsResponse;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class OracleSourceConfigResponse {
     /**
      * Oracle objects to exclude from the stream.
      * 
-     */
+    */
     public OracleRdbmsResponse getExcludeObjects() {
         return this.excludeObjects;
     }
     /**
      * Oracle objects to include in the stream.
      * 
-     */
+    */
     public OracleRdbmsResponse getIncludeObjects() {
         return this.includeObjects;
     }
@@ -74,7 +74,6 @@ public final class OracleSourceConfigResponse {
             this.includeObjects = Objects.requireNonNull(includeObjects);
             return this;
         }
-
         public OracleSourceConfigResponse build() {
             return new OracleSourceConfigResponse(excludeObjects, includeObjects);
         }

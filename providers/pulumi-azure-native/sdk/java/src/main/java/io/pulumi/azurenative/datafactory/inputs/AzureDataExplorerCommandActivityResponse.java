@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="command", required=true)
-    private final Object command;
+      private final Object command;
 
     public Object getCommand() {
         return this.command;
@@ -40,7 +40,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="commandTimeout")
-    private final @Nullable Object commandTimeout;
+      private final @Nullable Object commandTimeout;
 
     public Optional<Object> getCommandTimeout() {
         return this.commandTimeout == null ? Optional.empty() : Optional.ofNullable(this.commandTimeout);
@@ -51,7 +51,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+      private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -62,7 +62,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -73,7 +73,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
@@ -84,7 +84,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -95,7 +95,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable ActivityPolicyResponse policy;
+      private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -107,7 +107,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -118,7 +118,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+      private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -237,7 +237,6 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
             this.userProperties = userProperties;
             return this;
         }
-
         public AzureDataExplorerCommandActivityResponse build() {
             return new AzureDataExplorerCommandActivityResponse(command, commandTimeout, dependsOn, description, linkedServiceName, name, policy, type, userProperties);
         }

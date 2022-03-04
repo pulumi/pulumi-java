@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class CustomResponse {
         public Builder(CustomResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public CustomResponse build() {
             return new CustomResponse();
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetIPAMPoolArgs;
 import io.pulumi.awsnative.ec2.outputs.GetIPAMPoolResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIPAMPool {
-/**
- * Resource Schema of AWS::EC2::IPAMPool Type
+    private GetIPAMPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetIPAMPoolArgs.Builder a);
+    }
+    private static GetIPAMPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIPAMPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema of AWS::EC2::IPAMPool Type
  * 
- */
+     */
+    public static CompletableFuture<GetIPAMPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema of AWS::EC2::IPAMPool Type
+     * 
+     */
     public static CompletableFuture<GetIPAMPoolResult> invokeAsync(GetIPAMPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getIPAMPool", TypeShape.of(GetIPAMPoolResult.class), args == null ? GetIPAMPoolArgs.Empty : args, Utilities.withVersion(options));
     }

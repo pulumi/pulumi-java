@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,42 +59,42 @@ public final class VpnGatewayInfoResponse {
     /**
      * Name of a VPN gateway.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * IP address of the VPN gateway.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * URI of a Compute Engine network where the VPN gateway is configured.
      * 
-     */
+    */
     public String getNetworkUri() {
         return this.networkUri;
     }
     /**
      * Name of a Google Cloud region where this VPN gateway is configured.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * URI of a VPN gateway.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
      * 
-     */
+    */
     public String getVpnTunnelUri() {
         return this.vpnTunnelUri;
     }
@@ -158,7 +158,6 @@ public final class VpnGatewayInfoResponse {
             this.vpnTunnelUri = Objects.requireNonNull(vpnTunnelUri);
             return this;
         }
-
         public VpnGatewayInfoResponse build() {
             return new VpnGatewayInfoResponse(displayName, ipAddress, networkUri, region, uri, vpnTunnelUri);
         }

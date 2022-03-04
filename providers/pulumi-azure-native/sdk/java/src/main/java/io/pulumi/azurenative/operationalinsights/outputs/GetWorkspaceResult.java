@@ -7,7 +7,7 @@ import io.pulumi.azurenative.operationalinsights.outputs.PrivateLinkScopedResour
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceCappingResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceFeaturesResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceSkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -153,126 +153,126 @@ public final class GetWorkspaceResult {
     /**
      * Workspace creation date.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * This is a read-only property. Represents the ID associated with the workspace.
      * 
-     */
+    */
     public String getCustomerId() {
         return this.customerId;
     }
     /**
      * The ETag of the workspace.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Workspace features.
      * 
-     */
+    */
     public Optional<WorkspaceFeaturesResponse> getFeatures() {
         return Optional.ofNullable(this.features);
     }
     /**
      * Indicates whether customer managed storage is mandatory for query management.
      * 
-     */
+    */
     public Optional<Boolean> getForceCmkForQuery() {
         return Optional.ofNullable(this.forceCmkForQuery);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Workspace modification date.
      * 
-     */
+    */
     public String getModifiedDate() {
         return this.modifiedDate;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of linked private link scope resources.
      * 
-     */
+    */
     public List<PrivateLinkScopedResourceResponse> getPrivateLinkScopedResources() {
         return this.privateLinkScopedResources;
     }
     /**
      * The provisioning state of the workspace.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The network access type for accessing Log Analytics ingestion.
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccessForIngestion() {
         return Optional.ofNullable(this.publicNetworkAccessForIngestion);
     }
     /**
      * The network access type for accessing Log Analytics query.
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccessForQuery() {
         return Optional.ofNullable(this.publicNetworkAccessForQuery);
     }
     /**
      * The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
      * 
-     */
+    */
     public Optional<Integer> getRetentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
      * The SKU of the workspace.
      * 
-     */
+    */
     public Optional<WorkspaceSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The daily volume cap for ingestion.
      * 
-     */
+    */
     public Optional<WorkspaceCappingResponse> getWorkspaceCapping() {
         return Optional.ofNullable(this.workspaceCapping);
     }
@@ -420,7 +420,6 @@ public final class GetWorkspaceResult {
             this.workspaceCapping = workspaceCapping;
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(createdDate, customerId, eTag, features, forceCmkForQuery, id, location, modifiedDate, name, privateLinkScopedResources, provisioningState, publicNetworkAccessForIngestion, publicNetworkAccessForQuery, retentionInDays, sku, tags, type, workspaceCapping);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customproviders.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetCustomResourceProviderArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetCustomResourceProviderArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceProviderName", required=true)
-    private final String resourceProviderName;
+      private final String resourceProviderName;
 
     public String getResourceProviderName() {
         return this.resourceProviderName;
@@ -77,7 +77,6 @@ public final class GetCustomResourceProviderArgs extends io.pulumi.resources.Inv
             this.resourceProviderName = Objects.requireNonNull(resourceProviderName);
             return this;
         }
-
         public GetCustomResourceProviderArgs build() {
             return new GetCustomResourceProviderArgs(resourceGroupName, resourceProviderName);
         }

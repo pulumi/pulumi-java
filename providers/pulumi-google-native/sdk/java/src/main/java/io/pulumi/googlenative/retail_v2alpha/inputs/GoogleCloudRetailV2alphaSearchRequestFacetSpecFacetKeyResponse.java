@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaIntervalResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
      * 
      */
     @InputImport(name="contains", required=true)
-    private final List<String> contains;
+      private final List<String> contains;
 
     public List<String> getContains() {
         return this.contains;
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
      * 
      */
     @InputImport(name="intervals", required=true)
-    private final List<GoogleCloudRetailV2alphaIntervalResponse> intervals;
+      private final List<GoogleCloudRetailV2alphaIntervalResponse> intervals;
 
     public List<GoogleCloudRetailV2alphaIntervalResponse> getIntervals() {
         return this.intervals;
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
      * 
      */
     @InputImport(name="orderBy", required=true)
-    private final String orderBy;
+      private final String orderBy;
 
     public String getOrderBy() {
         return this.orderBy;
@@ -67,7 +67,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
      * 
      */
     @InputImport(name="prefixes", required=true)
-    private final List<String> prefixes;
+      private final List<String> prefixes;
 
     public List<String> getPrefixes() {
         return this.prefixes;
@@ -78,7 +78,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
      * 
      */
     @InputImport(name="query", required=true)
-    private final String query;
+      private final String query;
 
     public String getQuery() {
         return this.query;
@@ -89,7 +89,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
      * 
      */
     @InputImport(name="restrictedValues", required=true)
-    private final List<String> restrictedValues;
+      private final List<String> restrictedValues;
 
     public List<String> getRestrictedValues() {
         return this.restrictedValues;
@@ -188,7 +188,6 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
             this.restrictedValues = Objects.requireNonNull(restrictedValues);
             return this;
         }
-
         public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse build() {
             return new GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse(contains, intervals, key, orderBy, prefixes, query, restrictedValues);
         }

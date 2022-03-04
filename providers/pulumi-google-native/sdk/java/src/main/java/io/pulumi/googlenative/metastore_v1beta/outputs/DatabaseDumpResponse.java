@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class DatabaseDumpResponse {
     /**
      * The type of the database.
      * 
-     */
+    */
     public String getDatabaseType() {
         return this.databaseType;
     }
     /**
      * A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
      * 
-     */
+    */
     public String getGcsUri() {
         return this.gcsUri;
     }
     /**
      * The name of the source database.
      * 
-     */
+    */
     public String getSourceDatabase() {
         return this.sourceDatabase;
     }
     /**
      * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -116,7 +116,6 @@ public final class DatabaseDumpResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DatabaseDumpResponse build() {
             return new DatabaseDumpResponse(databaseType, gcsUri, sourceDatabase, type);
         }

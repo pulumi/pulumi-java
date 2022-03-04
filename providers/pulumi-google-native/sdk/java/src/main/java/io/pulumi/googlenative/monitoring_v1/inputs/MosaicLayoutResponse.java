@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.TileResponse;
 import java.lang.Integer;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MosaicLayoutResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="columns", required=true)
-    private final Integer columns;
+      private final Integer columns;
 
     public Integer getColumns() {
         return this.columns;
@@ -34,7 +34,7 @@ public final class MosaicLayoutResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tiles", required=true)
-    private final List<TileResponse> tiles;
+      private final List<TileResponse> tiles;
 
     public List<TileResponse> getTiles() {
         return this.tiles;
@@ -83,7 +83,6 @@ public final class MosaicLayoutResponse extends io.pulumi.resources.InvokeArgs {
             this.tiles = Objects.requireNonNull(tiles);
             return this;
         }
-
         public MosaicLayoutResponse build() {
             return new MosaicLayoutResponse(columns, tiles);
         }

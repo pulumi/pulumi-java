@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricsScope", required=true)
-    private final Input<String> metricsScope;
+      private final Input<String> metricsScope;
 
     public Input<String> getMetricsScope() {
         return this.metricsScope;
@@ -30,7 +30,7 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,6 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public MonitoredProjectArgs build() {
             return new MonitoredProjectArgs(metricsScope, name);
         }

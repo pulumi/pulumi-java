@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginGroupMember;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -60,7 +60,6 @@ public final class DistributionOriginGroupMembers {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }
-
         public DistributionOriginGroupMembers build() {
             return new DistributionOriginGroupMembers(items, quantity);
         }

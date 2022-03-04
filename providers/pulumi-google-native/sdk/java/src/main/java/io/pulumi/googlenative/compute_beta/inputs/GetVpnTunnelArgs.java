@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetVpnTunnelArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetVpnTunnelArgs Empty = new GetVpnTunnelArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="vpnTunnel", required=true)
-    private final String vpnTunnel;
+      private final String vpnTunnel;
 
     public String getVpnTunnel() {
         return this.vpnTunnel;
@@ -88,7 +88,6 @@ public final class GetVpnTunnelArgs extends io.pulumi.resources.InvokeArgs {
             this.vpnTunnel = Objects.requireNonNull(vpnTunnel);
             return this;
         }
-
         public GetVpnTunnelArgs build() {
             return new GetVpnTunnelArgs(project, region, vpnTunnel);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datalakeanalytics;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datalakeanalytics.inputs.GetAccountArgs;
 import io.pulumi.azurenative.datalakeanalytics.outputs.GetAccountResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccount {
-/**
- * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
+    private GetAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccountArgs.Builder a);
+    }
+    private static GetAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
  * API Version: 2016-11-01.
  * 
- *
- * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
+     *
+     * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
  * 
- */
+     */
+    public static CompletableFuture<GetAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
+     * API Version: 2016-11-01.
+     * 
+     *
+         * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
+     * 
+     */
     public static CompletableFuture<GetAccountResult> invokeAsync(GetAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:getAccount", TypeShape.of(GetAccountResult.class), args == null ? GetAccountArgs.Empty : args, Utilities.withVersion(options));
     }

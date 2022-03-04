@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="folder", required=true)
-    private final String folder;
+      private final String folder;
 
     public String getFolder() {
         return this.folder;
@@ -31,7 +31,7 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lookupOrganization")
-    private final @Nullable Boolean lookupOrganization;
+      private final @Nullable Boolean lookupOrganization;
 
     public Optional<Boolean> getLookupOrganization() {
         return this.lookupOrganization == null ? Optional.empty() : Optional.ofNullable(this.lookupOrganization);
@@ -80,7 +80,6 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
             this.lookupOrganization = lookupOrganization;
             return this;
         }
-
         public GetFolderArgs build() {
             return new GetFolderArgs(folder, lookupOrganization);
         }

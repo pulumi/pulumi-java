@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2;
 import io.pulumi.awsnative.wafv2.enums.RegexPatternSetScope;
 import io.pulumi.awsnative.wafv2.inputs.RegexPatternSetTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,14 +33,14 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="regularExpressionList", required=true)
-    private final Input<List<String>> regularExpressionList;
+      private final Input<List<String>> regularExpressionList;
 
     public Input<List<String>> getRegularExpressionList() {
         return this.regularExpressionList;
@@ -51,14 +51,14 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<RegexPatternSetScope> scope;
+      private final Input<RegexPatternSetScope> scope;
 
     public Input<RegexPatternSetScope> getScope() {
         return this.scope;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<RegexPatternSetTagArgs>> tags;
+      private final @Nullable Input<List<RegexPatternSetTagArgs>> tags;
 
     public Input<List<RegexPatternSetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -162,7 +162,6 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public RegexPatternSetArgs build() {
             return new RegexPatternSetArgs(description, name, regularExpressionList, scope, tags);
         }

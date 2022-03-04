@@ -9,7 +9,7 @@ import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeComponentConfigura
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeTargetContainerRepositoryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="components")
-    private final @Nullable Input<List<ContainerRecipeComponentConfigurationArgs>> components;
+      private final @Nullable Input<List<ContainerRecipeComponentConfigurationArgs>> components;
 
     public Input<List<ContainerRecipeComponentConfigurationArgs>> getComponents() {
         return this.components == null ? Input.empty() : this.components;
@@ -37,7 +37,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="containerType")
-    private final @Nullable Input<ContainerRecipeContainerType> containerType;
+      private final @Nullable Input<ContainerRecipeContainerType> containerType;
 
     public Input<ContainerRecipeContainerType> getContainerType() {
         return this.containerType == null ? Input.empty() : this.containerType;
@@ -48,7 +48,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -59,7 +59,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dockerfileTemplateData")
-    private final @Nullable Input<String> dockerfileTemplateData;
+      private final @Nullable Input<String> dockerfileTemplateData;
 
     public Input<String> getDockerfileTemplateData() {
         return this.dockerfileTemplateData == null ? Input.empty() : this.dockerfileTemplateData;
@@ -70,7 +70,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dockerfileTemplateUri")
-    private final @Nullable Input<String> dockerfileTemplateUri;
+      private final @Nullable Input<String> dockerfileTemplateUri;
 
     public Input<String> getDockerfileTemplateUri() {
         return this.dockerfileTemplateUri == null ? Input.empty() : this.dockerfileTemplateUri;
@@ -81,7 +81,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="imageOsVersionOverride")
-    private final @Nullable Input<String> imageOsVersionOverride;
+      private final @Nullable Input<String> imageOsVersionOverride;
 
     public Input<String> getImageOsVersionOverride() {
         return this.imageOsVersionOverride == null ? Input.empty() : this.imageOsVersionOverride;
@@ -92,7 +92,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceConfiguration")
-    private final @Nullable Input<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
+      private final @Nullable Input<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
 
     public Input<ContainerRecipeInstanceConfigurationArgs> getInstanceConfiguration() {
         return this.instanceConfiguration == null ? Input.empty() : this.instanceConfiguration;
@@ -103,7 +103,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -114,7 +114,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -125,7 +125,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parentImage")
-    private final @Nullable Input<String> parentImage;
+      private final @Nullable Input<String> parentImage;
 
     public Input<String> getParentImage() {
         return this.parentImage == null ? Input.empty() : this.parentImage;
@@ -136,7 +136,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="platformOverride")
-    private final @Nullable Input<ContainerRecipePlatformOverride> platformOverride;
+      private final @Nullable Input<ContainerRecipePlatformOverride> platformOverride;
 
     public Input<ContainerRecipePlatformOverride> getPlatformOverride() {
         return this.platformOverride == null ? Input.empty() : this.platformOverride;
@@ -147,7 +147,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Object> tags;
+      private final @Nullable Input<Object> tags;
 
     public Input<Object> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -158,7 +158,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetRepository")
-    private final @Nullable Input<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
+      private final @Nullable Input<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
 
     public Input<ContainerRecipeTargetContainerRepositoryArgs> getTargetRepository() {
         return this.targetRepository == null ? Input.empty() : this.targetRepository;
@@ -169,7 +169,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -180,7 +180,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workingDirectory")
-    private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Input<String> workingDirectory;
 
     public Input<String> getWorkingDirectory() {
         return this.workingDirectory == null ? Input.empty() : this.workingDirectory;
@@ -434,7 +434,6 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             this.workingDirectory = Input.ofNullable(workingDirectory);
             return this;
         }
-
         public ContainerRecipeArgs build() {
             return new ContainerRecipeArgs(components, containerType, description, dockerfileTemplateData, dockerfileTemplateUri, imageOsVersionOverride, instanceConfiguration, kmsKeyId, name, parentImage, platformOverride, tags, targetRepository, version, workingDirectory);
         }

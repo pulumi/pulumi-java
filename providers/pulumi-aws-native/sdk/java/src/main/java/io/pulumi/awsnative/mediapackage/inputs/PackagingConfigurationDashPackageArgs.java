@@ -8,7 +8,7 @@ import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashPackageS
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationDashEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationDashManifestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -29,14 +29,14 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="dashManifests", required=true)
-    private final Input<List<PackagingConfigurationDashManifestArgs>> dashManifests;
+      private final Input<List<PackagingConfigurationDashManifestArgs>> dashManifests;
 
     public Input<List<PackagingConfigurationDashManifestArgs>> getDashManifests() {
         return this.dashManifests;
     }
 
     @InputImport(name="encryption")
-    private final @Nullable Input<PackagingConfigurationDashEncryptionArgs> encryption;
+      private final @Nullable Input<PackagingConfigurationDashEncryptionArgs> encryption;
 
     public Input<PackagingConfigurationDashEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -47,7 +47,7 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="includeEncoderConfigurationInSegments")
-    private final @Nullable Input<Boolean> includeEncoderConfigurationInSegments;
+      private final @Nullable Input<Boolean> includeEncoderConfigurationInSegments;
 
     public Input<Boolean> getIncludeEncoderConfigurationInSegments() {
         return this.includeEncoderConfigurationInSegments == null ? Input.empty() : this.includeEncoderConfigurationInSegments;
@@ -58,14 +58,14 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="periodTriggers")
-    private final @Nullable Input<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers;
+      private final @Nullable Input<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers;
 
     public Input<List<PackagingConfigurationDashPackagePeriodTriggersItem>> getPeriodTriggers() {
         return this.periodTriggers == null ? Input.empty() : this.periodTriggers;
     }
 
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Input<Integer> segmentDurationSeconds;
+      private final @Nullable Input<Integer> segmentDurationSeconds;
 
     public Input<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
@@ -76,7 +76,7 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="segmentTemplateFormat")
-    private final @Nullable Input<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat;
+      private final @Nullable Input<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat;
 
     public Input<PackagingConfigurationDashPackageSegmentTemplateFormat> getSegmentTemplateFormat() {
         return this.segmentTemplateFormat == null ? Input.empty() : this.segmentTemplateFormat;
@@ -195,7 +195,6 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
             this.segmentTemplateFormat = Input.ofNullable(segmentTemplateFormat);
             return this;
         }
-
         public PackagingConfigurationDashPackageArgs build() {
             return new PackagingConfigurationDashPackageArgs(dashManifests, encryption, includeEncoderConfigurationInSegments, periodTriggers, segmentDurationSeconds, segmentTemplateFormat);
         }

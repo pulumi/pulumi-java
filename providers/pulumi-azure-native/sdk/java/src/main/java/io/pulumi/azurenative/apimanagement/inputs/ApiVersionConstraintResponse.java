@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApiVersionConstraintResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="minApiVersion")
-    private final @Nullable String minApiVersion;
+      private final @Nullable String minApiVersion;
 
     public Optional<String> getMinApiVersion() {
         return this.minApiVersion == null ? Optional.empty() : Optional.ofNullable(this.minApiVersion);
@@ -61,7 +61,6 @@ public final class ApiVersionConstraintResponse extends io.pulumi.resources.Invo
             this.minApiVersion = minApiVersion;
             return this;
         }
-
         public ApiVersionConstraintResponse build() {
             return new ApiVersionConstraintResponse(minApiVersion);
         }

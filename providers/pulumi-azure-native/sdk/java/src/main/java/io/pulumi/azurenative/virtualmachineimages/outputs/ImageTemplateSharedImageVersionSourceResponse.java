@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
     /**
      * ARM resource id of the image version in the shared image gallery
      * 
-     */
+    */
     public String getImageVersionId() {
         return this.imageVersionId;
     }
@@ -40,7 +40,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
      * Specifies the type of source image you want to start with.
      * Expected value is 'SharedImageVersion'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -76,7 +76,6 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateSharedImageVersionSourceResponse build() {
             return new ImageTemplateSharedImageVersionSourceResponse(imageVersionId, type);
         }

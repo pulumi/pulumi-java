@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.inputs.LiveEventEndpointArgs;
 import io.pulumi.azurenative.media.inputs.LiveEventInputAccessControlArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessControl")
-    private final @Nullable Input<LiveEventInputAccessControlArgs> accessControl;
+      private final @Nullable Input<LiveEventInputAccessControlArgs> accessControl;
 
     public Input<LiveEventInputAccessControlArgs> getAccessControl() {
         return this.accessControl == null ? Input.empty() : this.accessControl;
@@ -39,7 +39,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessToken")
-    private final @Nullable Input<String> accessToken;
+      private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -50,7 +50,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable Input<List<LiveEventEndpointArgs>> endpoints;
+      private final @Nullable Input<List<LiveEventEndpointArgs>> endpoints;
 
     public Input<List<LiveEventEndpointArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -61,7 +61,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyFrameIntervalDuration")
-    private final @Nullable Input<String> keyFrameIntervalDuration;
+      private final @Nullable Input<String> keyFrameIntervalDuration;
 
     public Input<String> getKeyFrameIntervalDuration() {
         return this.keyFrameIntervalDuration == null ? Input.empty() : this.keyFrameIntervalDuration;
@@ -72,7 +72,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamingProtocol", required=true)
-    private final Input<Either<String,LiveEventInputProtocol>> streamingProtocol;
+      private final Input<Either<String,LiveEventInputProtocol>> streamingProtocol;
 
     public Input<Either<String,LiveEventInputProtocol>> getStreamingProtocol() {
         return this.streamingProtocol;
@@ -176,7 +176,6 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
             this.streamingProtocol = Input.of(Objects.requireNonNull(streamingProtocol));
             return this;
         }
-
         public LiveEventInputArgs build() {
             return new LiveEventInputArgs(accessControl, accessToken, endpoints, keyFrameIntervalDuration, streamingProtocol);
         }

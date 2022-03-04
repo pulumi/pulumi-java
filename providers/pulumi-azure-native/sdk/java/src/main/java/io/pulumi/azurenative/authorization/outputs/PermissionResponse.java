@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,28 +47,28 @@ public final class PermissionResponse {
     /**
      * Allowed actions.
      * 
-     */
+    */
     public List<String> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * Allowed Data actions.
      * 
-     */
+    */
     public List<String> getDataActions() {
         return this.dataActions == null ? List.of() : this.dataActions;
     }
     /**
      * Denied actions.
      * 
-     */
+    */
     public List<String> getNotActions() {
         return this.notActions == null ? List.of() : this.notActions;
     }
     /**
      * Denied Data actions.
      * 
-     */
+    */
     public List<String> getNotDataActions() {
         return this.notDataActions == null ? List.of() : this.notDataActions;
     }
@@ -118,7 +118,6 @@ public final class PermissionResponse {
             this.notDataActions = notDataActions;
             return this;
         }
-
         public PermissionResponse build() {
             return new PermissionResponse(actions, dataActions, notActions, notDataActions);
         }

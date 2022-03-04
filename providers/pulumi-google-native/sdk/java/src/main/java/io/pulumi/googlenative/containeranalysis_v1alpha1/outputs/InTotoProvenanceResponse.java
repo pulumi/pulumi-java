@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.BuilderConfigResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.MetadataResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.RecipeResponse;
@@ -45,14 +45,14 @@ public final class InTotoProvenanceResponse {
     /**
      * required
      * 
-     */
+    */
     public BuilderConfigResponse getBuilderConfig() {
         return this.builderConfig;
     }
     /**
      * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
      * 
-     */
+    */
     public List<String> getMaterials() {
         return this.materials;
     }
@@ -62,7 +62,7 @@ public final class InTotoProvenanceResponse {
     /**
      * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
      * 
-     */
+    */
     public RecipeResponse getRecipe() {
         return this.recipe;
     }
@@ -112,7 +112,6 @@ public final class InTotoProvenanceResponse {
             this.recipe = Objects.requireNonNull(recipe);
             return this;
         }
-
         public InTotoProvenanceResponse build() {
             return new InTotoProvenanceResponse(builderConfig, materials, metadata, recipe);
         }

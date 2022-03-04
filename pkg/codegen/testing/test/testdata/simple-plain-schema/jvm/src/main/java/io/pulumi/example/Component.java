@@ -5,8 +5,8 @@ package io.pulumi.example;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.ComponentArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.outputs.Foo;
@@ -73,6 +73,37 @@ public class Component extends io.pulumi.resources.ComponentResource {
         return this.foo;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ComponentArgs.Builder a);
+    }
+    private static io.pulumi.example.ComponentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.example.ComponentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Component(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Component(String name) {
+        this(name, ComponentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Component(String name, ComponentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

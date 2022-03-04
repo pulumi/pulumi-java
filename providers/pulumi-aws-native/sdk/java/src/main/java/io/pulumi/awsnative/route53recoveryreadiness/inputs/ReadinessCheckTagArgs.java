@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ReadinessCheckTagArgs extends io.pulumi.resources.ResourceArg
     public static final ReadinessCheckTagArgs Empty = new ReadinessCheckTagArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<List<String>> value;
+      private final Input<List<String>> value;
 
     public Input<List<String>> getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class ReadinessCheckTagArgs extends io.pulumi.resources.ResourceArg
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public ReadinessCheckTagArgs build() {
             return new ReadinessCheckTagArgs(key, value);
         }

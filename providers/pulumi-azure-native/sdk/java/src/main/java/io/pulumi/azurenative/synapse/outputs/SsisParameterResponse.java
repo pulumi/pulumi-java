@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -105,84 +105,84 @@ public final class SsisParameterResponse {
     /**
      * Parameter type.
      * 
-     */
+    */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Default value of parameter.
      * 
-     */
+    */
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Parameter description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Design default value of parameter.
      * 
-     */
+    */
     public Optional<String> getDesignDefaultValue() {
         return Optional.ofNullable(this.designDefaultValue);
     }
     /**
      * Parameter id.
      * 
-     */
+    */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Parameter name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Whether parameter is required.
      * 
-     */
+    */
     public Optional<Boolean> getRequired() {
         return Optional.ofNullable(this.required);
     }
     /**
      * Whether parameter is sensitive.
      * 
-     */
+    */
     public Optional<Boolean> getSensitive() {
         return Optional.ofNullable(this.sensitive);
     }
     /**
      * Default sensitive value of parameter.
      * 
-     */
+    */
     public Optional<String> getSensitiveDefaultValue() {
         return Optional.ofNullable(this.sensitiveDefaultValue);
     }
     /**
      * Parameter value set.
      * 
-     */
+    */
     public Optional<Boolean> getValueSet() {
         return Optional.ofNullable(this.valueSet);
     }
     /**
      * Parameter value type.
      * 
-     */
+    */
     public Optional<String> getValueType() {
         return Optional.ofNullable(this.valueType);
     }
     /**
      * Parameter reference variable.
      * 
-     */
+    */
     public Optional<String> getVariable() {
         return Optional.ofNullable(this.variable);
     }
@@ -288,7 +288,6 @@ public final class SsisParameterResponse {
             this.variable = variable;
             return this;
         }
-
         public SsisParameterResponse build() {
             return new SsisParameterResponse(dataType, defaultValue, description, designDefaultValue, id, name, required, sensitive, sensitiveDefaultValue, valueSet, valueType, variable);
         }

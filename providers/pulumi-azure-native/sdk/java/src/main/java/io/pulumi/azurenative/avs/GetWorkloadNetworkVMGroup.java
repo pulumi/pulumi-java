@@ -6,21 +6,41 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkVMGroupArgs;
 import io.pulumi.azurenative.avs.outputs.GetWorkloadNetworkVMGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkVMGroup {
-/**
- * NSX VM Group
+    private GetWorkloadNetworkVMGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkloadNetworkVMGroupArgs.Builder a);
+    }
+    private static GetWorkloadNetworkVMGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkloadNetworkVMGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * NSX VM Group
  * API Version: 2020-07-17-preview.
  * 
- *
- * NSX VM Group
+     *
+     * NSX VM Group
  * 
- */
+     */
+    public static CompletableFuture<GetWorkloadNetworkVMGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * NSX VM Group
+     * API Version: 2020-07-17-preview.
+     * 
+     *
+         * NSX VM Group
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkVMGroupResult> invokeAsync(GetWorkloadNetworkVMGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkVMGroup", TypeShape.of(GetWorkloadNetworkVMGroupResult.class), args == null ? GetWorkloadNetworkVMGroupArgs.Empty : args, Utilities.withVersion(options));
     }

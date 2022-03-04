@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -66,7 +66,6 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public DailyMaintenanceWindowArgs build() {
             return new DailyMaintenanceWindowArgs(startTime);
         }

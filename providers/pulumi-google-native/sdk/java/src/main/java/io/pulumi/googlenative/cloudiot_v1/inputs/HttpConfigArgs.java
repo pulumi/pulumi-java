@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.enums.HttpConfigHttpEnabledState;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpEnabledState")
-    private final @Nullable Input<HttpConfigHttpEnabledState> httpEnabledState;
+      private final @Nullable Input<HttpConfigHttpEnabledState> httpEnabledState;
 
     public Input<HttpConfigHttpEnabledState> getHttpEnabledState() {
         return this.httpEnabledState == null ? Input.empty() : this.httpEnabledState;
@@ -66,7 +66,6 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.httpEnabledState = Input.ofNullable(httpEnabledState);
             return this;
         }
-
         public HttpConfigArgs build() {
             return new HttpConfigArgs(httpEnabledState);
         }

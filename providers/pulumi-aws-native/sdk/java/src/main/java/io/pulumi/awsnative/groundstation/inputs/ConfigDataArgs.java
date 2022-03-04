@@ -11,7 +11,7 @@ import io.pulumi.awsnative.groundstation.inputs.ConfigS3RecordingConfigArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigTrackingConfigArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigUplinkEchoConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,49 +21,49 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConfigDataArgs Empty = new ConfigDataArgs();
 
     @InputImport(name="antennaDownlinkConfig")
-    private final @Nullable Input<ConfigAntennaDownlinkConfigArgs> antennaDownlinkConfig;
+      private final @Nullable Input<ConfigAntennaDownlinkConfigArgs> antennaDownlinkConfig;
 
     public Input<ConfigAntennaDownlinkConfigArgs> getAntennaDownlinkConfig() {
         return this.antennaDownlinkConfig == null ? Input.empty() : this.antennaDownlinkConfig;
     }
 
     @InputImport(name="antennaDownlinkDemodDecodeConfig")
-    private final @Nullable Input<ConfigAntennaDownlinkDemodDecodeConfigArgs> antennaDownlinkDemodDecodeConfig;
+      private final @Nullable Input<ConfigAntennaDownlinkDemodDecodeConfigArgs> antennaDownlinkDemodDecodeConfig;
 
     public Input<ConfigAntennaDownlinkDemodDecodeConfigArgs> getAntennaDownlinkDemodDecodeConfig() {
         return this.antennaDownlinkDemodDecodeConfig == null ? Input.empty() : this.antennaDownlinkDemodDecodeConfig;
     }
 
     @InputImport(name="antennaUplinkConfig")
-    private final @Nullable Input<ConfigAntennaUplinkConfigArgs> antennaUplinkConfig;
+      private final @Nullable Input<ConfigAntennaUplinkConfigArgs> antennaUplinkConfig;
 
     public Input<ConfigAntennaUplinkConfigArgs> getAntennaUplinkConfig() {
         return this.antennaUplinkConfig == null ? Input.empty() : this.antennaUplinkConfig;
     }
 
     @InputImport(name="dataflowEndpointConfig")
-    private final @Nullable Input<ConfigDataflowEndpointConfigArgs> dataflowEndpointConfig;
+      private final @Nullable Input<ConfigDataflowEndpointConfigArgs> dataflowEndpointConfig;
 
     public Input<ConfigDataflowEndpointConfigArgs> getDataflowEndpointConfig() {
         return this.dataflowEndpointConfig == null ? Input.empty() : this.dataflowEndpointConfig;
     }
 
     @InputImport(name="s3RecordingConfig")
-    private final @Nullable Input<ConfigS3RecordingConfigArgs> s3RecordingConfig;
+      private final @Nullable Input<ConfigS3RecordingConfigArgs> s3RecordingConfig;
 
     public Input<ConfigS3RecordingConfigArgs> getS3RecordingConfig() {
         return this.s3RecordingConfig == null ? Input.empty() : this.s3RecordingConfig;
     }
 
     @InputImport(name="trackingConfig")
-    private final @Nullable Input<ConfigTrackingConfigArgs> trackingConfig;
+      private final @Nullable Input<ConfigTrackingConfigArgs> trackingConfig;
 
     public Input<ConfigTrackingConfigArgs> getTrackingConfig() {
         return this.trackingConfig == null ? Input.empty() : this.trackingConfig;
     }
 
     @InputImport(name="uplinkEchoConfig")
-    private final @Nullable Input<ConfigUplinkEchoConfigArgs> uplinkEchoConfig;
+      private final @Nullable Input<ConfigUplinkEchoConfigArgs> uplinkEchoConfig;
 
     public Input<ConfigUplinkEchoConfigArgs> getUplinkEchoConfig() {
         return this.uplinkEchoConfig == null ? Input.empty() : this.uplinkEchoConfig;
@@ -197,7 +197,6 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
             this.uplinkEchoConfig = Input.ofNullable(uplinkEchoConfig);
             return this;
         }
-
         public ConfigDataArgs build() {
             return new ConfigDataArgs(antennaDownlinkConfig, antennaDownlinkDemodDecodeConfig, antennaUplinkConfig, dataflowEndpointConfig, s3RecordingConfig, trackingConfig, uplinkEchoConfig);
         }

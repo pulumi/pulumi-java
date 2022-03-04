@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -49,21 +49,21 @@ public final class SsisFolderResponse {
     /**
      * Metadata description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Metadata id.
      * 
-     */
+    */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Metadata name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -71,7 +71,7 @@ public final class SsisFolderResponse {
      * The type of SSIS object metadata.
      * Expected value is 'Folder'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -121,7 +121,6 @@ public final class SsisFolderResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SsisFolderResponse build() {
             return new SsisFolderResponse(description, id, name, type);
         }

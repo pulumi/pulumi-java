@@ -6,7 +6,7 @@ package io.pulumi.azurenative.botservice.inputs;
 import io.pulumi.azurenative.botservice.enums.EnterpriseChannelNodeState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="azureLocation", required=true)
-    private final Input<String> azureLocation;
+      private final Input<String> azureLocation;
 
     public Input<String> getAzureLocation() {
         return this.azureLocation;
@@ -36,7 +36,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="azureSku", required=true)
-    private final Input<String> azureSku;
+      private final Input<String> azureSku;
 
     public Input<String> getAzureSku() {
         return this.azureSku;
@@ -47,7 +47,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,EnterpriseChannelNodeState>> state;
+      private final @Nullable Input<Either<String,EnterpriseChannelNodeState>> state;
 
     public Input<Either<String,EnterpriseChannelNodeState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -147,7 +147,6 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public EnterpriseChannelNodeArgs build() {
             return new EnterpriseChannelNodeArgs(azureLocation, azureSku, name, state);
         }

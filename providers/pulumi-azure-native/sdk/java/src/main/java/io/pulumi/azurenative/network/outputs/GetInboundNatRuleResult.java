@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -114,91 +114,91 @@ public final class GetInboundNatRuleResult {
     /**
      * A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
      * 
-     */
+    */
     public NetworkInterfaceIPConfigurationResponse getBackendIPConfiguration() {
         return this.backendIPConfiguration;
     }
     /**
      * The port used for the internal endpoint. Acceptable values range from 1 to 65535.
      * 
-     */
+    */
     public Optional<Integer> getBackendPort() {
         return Optional.ofNullable(this.backendPort);
     }
     /**
      * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
      * 
-     */
+    */
     public Optional<Boolean> getEnableFloatingIP() {
         return Optional.ofNullable(this.enableFloatingIP);
     }
     /**
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
-     */
+    */
     public Optional<Boolean> getEnableTcpReset() {
         return Optional.ofNullable(this.enableTcpReset);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * A reference to frontend IP addresses.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getFrontendIPConfiguration() {
         return Optional.ofNullable(this.frontendIPConfiguration);
     }
     /**
      * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
      * 
-     */
+    */
     public Optional<Integer> getFrontendPort() {
         return Optional.ofNullable(this.frontendPort);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
      * 
-     */
+    */
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
      * The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The reference to the transport protocol used by the load balancing rule.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The provisioning state of the inbound NAT rule resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -311,7 +311,6 @@ public final class GetInboundNatRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInboundNatRuleResult build() {
             return new GetInboundNatRuleResult(backendIPConfiguration, backendPort, enableFloatingIP, enableTcpReset, etag, frontendIPConfiguration, frontendPort, id, idleTimeoutInMinutes, name, protocol, provisioningState, type);
         }

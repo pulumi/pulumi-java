@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class WorkloadIdentityPoolProviderAws {
     /**
      * The AWS account ID.
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }
@@ -52,7 +52,6 @@ public final class WorkloadIdentityPoolProviderAws {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public WorkloadIdentityPoolProviderAws build() {
             return new WorkloadIdentityPoolProviderAws(accountId);
         }

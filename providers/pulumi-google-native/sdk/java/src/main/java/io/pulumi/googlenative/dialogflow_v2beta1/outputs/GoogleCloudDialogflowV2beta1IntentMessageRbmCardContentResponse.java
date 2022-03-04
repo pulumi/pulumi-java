@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse;
 import java.lang.String;
@@ -48,28 +48,28 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     /**
      * Optional. Description of the card (at most 2000 bytes). At least one of the title, description or media must be set.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. However at least one of the title, description or media must be set. Media (image, GIF or a video) to include in the card.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse getMedia() {
         return this.media;
     }
     /**
      * Optional. List of suggestions to include in the card.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> getSuggestions() {
         return this.suggestions;
     }
     /**
      * Optional. Title of the card (at most 200 bytes). At least one of the title, description or media must be set.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(description, media, suggestions, title);
         }

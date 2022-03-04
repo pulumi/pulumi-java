@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class DataFlowResponse {
     /**
      * List of destinations for this data flow.
      * 
-     */
+    */
     public List<String> getDestinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
     /**
      * List of streams for this data flow.
      * 
-     */
+    */
     public List<String> getStreams() {
         return this.streams == null ? List.of() : this.streams;
     }
@@ -76,7 +76,6 @@ public final class DataFlowResponse {
             this.streams = streams;
             return this;
         }
-
         public DataFlowResponse build() {
             return new DataFlowResponse(destinations, streams);
         }

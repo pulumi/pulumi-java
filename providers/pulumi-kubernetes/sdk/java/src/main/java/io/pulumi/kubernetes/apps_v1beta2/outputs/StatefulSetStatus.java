@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.StatefulSetCondition;
 import java.lang.Integer;
 import java.lang.String;
@@ -85,63 +85,63 @@ public final class StatefulSetStatus {
     /**
      * collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
      * 
-     */
+    */
     public Optional<Integer> getCollisionCount() {
         return Optional.ofNullable(this.collisionCount);
     }
     /**
      * Represents the latest available observations of a statefulset's current state.
      * 
-     */
+    */
     public List<StatefulSetCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision.
      * 
-     */
+    */
     public Optional<Integer> getCurrentReplicas() {
         return Optional.ofNullable(this.currentReplicas);
     }
     /**
      * currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [0,currentReplicas).
      * 
-     */
+    */
     public Optional<String> getCurrentRevision() {
         return Optional.ofNullable(this.currentRevision);
     }
     /**
      * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server.
      * 
-     */
+    */
     public Optional<Integer> getObservedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
     /**
      * readyReplicas is the number of Pods created by the StatefulSet controller that have a Ready Condition.
      * 
-     */
+    */
     public Optional<Integer> getReadyReplicas() {
         return Optional.ofNullable(this.readyReplicas);
     }
     /**
      * replicas is the number of Pods created by the StatefulSet controller.
      * 
-     */
+    */
     public Integer getReplicas() {
         return this.replicas;
     }
     /**
      * updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [replicas-updatedReplicas,replicas)
      * 
-     */
+    */
     public Optional<String> getUpdateRevision() {
         return Optional.ofNullable(this.updateRevision);
     }
     /**
      * updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.
      * 
-     */
+    */
     public Optional<Integer> getUpdatedReplicas() {
         return Optional.ofNullable(this.updatedReplicas);
     }
@@ -226,7 +226,6 @@ public final class StatefulSetStatus {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
-
         public StatefulSetStatus build() {
             return new StatefulSetStatus(collisionCount, conditions, currentReplicas, currentRevision, observedGeneration, readyReplicas, replicas, updateRevision, updatedReplicas);
         }

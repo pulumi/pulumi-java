@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends io.pulu
      * 
      */
     @InputImport(name="connectionLimit", required=true)
-    private final Integer connectionLimit;
+      private final Integer connectionLimit;
 
     public Integer getConnectionLimit() {
         return this.connectionLimit;
@@ -29,7 +29,7 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends io.pulu
      * 
      */
     @InputImport(name="projectIdOrNum", required=true)
-    private final String projectIdOrNum;
+      private final String projectIdOrNum;
 
     public String getProjectIdOrNum() {
         return this.projectIdOrNum;
@@ -78,7 +78,6 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends io.pulu
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
         }
-
         public ServiceAttachmentConsumerProjectLimitResponse build() {
             return new ServiceAttachmentConsumerProjectLimitResponse(connectionLimit, projectIdOrNum);
         }

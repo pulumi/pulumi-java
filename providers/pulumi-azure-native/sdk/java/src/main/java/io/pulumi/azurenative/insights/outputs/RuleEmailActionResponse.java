@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +43,7 @@ public final class RuleEmailActionResponse {
     /**
      * the list of administrator's custom email addresses to notify of the activation of the alert.
      * 
-     */
+    */
     public List<String> getCustomEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
     }
@@ -51,14 +51,14 @@ public final class RuleEmailActionResponse {
      * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
      * 
-     */
+    */
     public Optional<Boolean> getSendToServiceOwners() {
         return Optional.ofNullable(this.sendToServiceOwners);
     }
@@ -101,7 +101,6 @@ public final class RuleEmailActionResponse {
             this.sendToServiceOwners = sendToServiceOwners;
             return this;
         }
-
         public RuleEmailActionResponse build() {
             return new RuleEmailActionResponse(customEmails, odataType, sendToServiceOwners);
         }

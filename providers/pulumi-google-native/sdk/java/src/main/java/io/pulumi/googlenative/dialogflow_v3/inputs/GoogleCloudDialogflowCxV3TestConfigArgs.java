@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="flow")
-    private final @Nullable Input<String> flow;
+      private final @Nullable Input<String> flow;
 
     public Input<String> getFlow() {
         return this.flow == null ? Input.empty() : this.flow;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="trackingParameters")
-    private final @Nullable Input<List<String>> trackingParameters;
+      private final @Nullable Input<List<String>> trackingParameters;
 
     public Input<List<String>> getTrackingParameters() {
         return this.trackingParameters == null ? Input.empty() : this.trackingParameters;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
             this.trackingParameters = Input.ofNullable(trackingParameters);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3TestConfigArgs build() {
             return new GoogleCloudDialogflowCxV3TestConfigArgs(flow, trackingParameters);
         }

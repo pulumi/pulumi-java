@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class EC2FleetVCpuCountRangeRequestArgs extends io.pulumi.resources
     public static final EC2FleetVCpuCountRangeRequestArgs Empty = new EC2FleetVCpuCountRangeRequestArgs();
 
     @InputImport(name="max")
-    private final @Nullable Input<Integer> max;
+      private final @Nullable Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-    private final @Nullable Input<Integer> min;
+      private final @Nullable Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -81,7 +81,6 @@ public final class EC2FleetVCpuCountRangeRequestArgs extends io.pulumi.resources
             this.min = Input.ofNullable(min);
             return this;
         }
-
         public EC2FleetVCpuCountRangeRequestArgs build() {
             return new EC2FleetVCpuCountRangeRequestArgs(max, min);
         }

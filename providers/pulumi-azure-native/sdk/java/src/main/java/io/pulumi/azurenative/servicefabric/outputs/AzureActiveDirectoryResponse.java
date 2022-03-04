@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class AzureActiveDirectoryResponse {
     /**
      * Azure active directory client application id.
      * 
-     */
+    */
     public Optional<String> getClientApplication() {
         return Optional.ofNullable(this.clientApplication);
     }
     /**
      * Azure active directory cluster application id.
      * 
-     */
+    */
     public Optional<String> getClusterApplication() {
         return Optional.ofNullable(this.clusterApplication);
     }
     /**
      * Azure active directory tenant id.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -97,7 +97,6 @@ public final class AzureActiveDirectoryResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public AzureActiveDirectoryResponse build() {
             return new AzureActiveDirectoryResponse(clientApplication, clusterApplication, tenantId);
         }

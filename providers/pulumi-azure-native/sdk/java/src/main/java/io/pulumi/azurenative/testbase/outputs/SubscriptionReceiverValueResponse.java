@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class SubscriptionReceiverValueResponse {
     /**
      * The role of the notification receiver.
      * 
-     */
+    */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }
     /**
      * The subscription id of the notification receiver.
      * 
-     */
+    */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * The subscription name of the notification receiver.
      * 
-     */
+    */
     public Optional<String> getSubscriptionName() {
         return Optional.ofNullable(this.subscriptionName);
     }
@@ -97,7 +97,6 @@ public final class SubscriptionReceiverValueResponse {
             this.subscriptionName = subscriptionName;
             return this;
         }
-
         public SubscriptionReceiverValueResponse build() {
             return new SubscriptionReceiverValueResponse(role, subscriptionId, subscriptionName);
         }

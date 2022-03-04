@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceAbpV11Args;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceOtaaV10xArgs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceOtaaV11Args;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,49 +19,49 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
     public static final WirelessDeviceLoRaWANDeviceArgs Empty = new WirelessDeviceLoRaWANDeviceArgs();
 
     @InputImport(name="abpV10x")
-    private final @Nullable Input<WirelessDeviceAbpV10xArgs> abpV10x;
+      private final @Nullable Input<WirelessDeviceAbpV10xArgs> abpV10x;
 
     public Input<WirelessDeviceAbpV10xArgs> getAbpV10x() {
         return this.abpV10x == null ? Input.empty() : this.abpV10x;
     }
 
     @InputImport(name="abpV11")
-    private final @Nullable Input<WirelessDeviceAbpV11Args> abpV11;
+      private final @Nullable Input<WirelessDeviceAbpV11Args> abpV11;
 
     public Input<WirelessDeviceAbpV11Args> getAbpV11() {
         return this.abpV11 == null ? Input.empty() : this.abpV11;
     }
 
     @InputImport(name="devEui")
-    private final @Nullable Input<String> devEui;
+      private final @Nullable Input<String> devEui;
 
     public Input<String> getDevEui() {
         return this.devEui == null ? Input.empty() : this.devEui;
     }
 
     @InputImport(name="deviceProfileId")
-    private final @Nullable Input<String> deviceProfileId;
+      private final @Nullable Input<String> deviceProfileId;
 
     public Input<String> getDeviceProfileId() {
         return this.deviceProfileId == null ? Input.empty() : this.deviceProfileId;
     }
 
     @InputImport(name="otaaV10x")
-    private final @Nullable Input<WirelessDeviceOtaaV10xArgs> otaaV10x;
+      private final @Nullable Input<WirelessDeviceOtaaV10xArgs> otaaV10x;
 
     public Input<WirelessDeviceOtaaV10xArgs> getOtaaV10x() {
         return this.otaaV10x == null ? Input.empty() : this.otaaV10x;
     }
 
     @InputImport(name="otaaV11")
-    private final @Nullable Input<WirelessDeviceOtaaV11Args> otaaV11;
+      private final @Nullable Input<WirelessDeviceOtaaV11Args> otaaV11;
 
     public Input<WirelessDeviceOtaaV11Args> getOtaaV11() {
         return this.otaaV11 == null ? Input.empty() : this.otaaV11;
     }
 
     @InputImport(name="serviceProfileId")
-    private final @Nullable Input<String> serviceProfileId;
+      private final @Nullable Input<String> serviceProfileId;
 
     public Input<String> getServiceProfileId() {
         return this.serviceProfileId == null ? Input.empty() : this.serviceProfileId;
@@ -195,7 +195,6 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
             this.serviceProfileId = Input.ofNullable(serviceProfileId);
             return this;
         }
-
         public WirelessDeviceLoRaWANDeviceArgs build() {
             return new WirelessDeviceLoRaWANDeviceArgs(abpV10x, abpV11, devEui, deviceProfileId, otaaV10x, otaaV11, serviceProfileId);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketDestinationFormat;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucketAccountId")
-    private final @Nullable Input<String> bucketAccountId;
+      private final @Nullable Input<String> bucketAccountId;
 
     public Input<String> getBucketAccountId() {
         return this.bucketAccountId == null ? Input.empty() : this.bucketAccountId;
@@ -35,7 +35,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucketArn", required=true)
-    private final Input<String> bucketArn;
+      private final Input<String> bucketArn;
 
     public Input<String> getBucketArn() {
         return this.bucketArn;
@@ -46,7 +46,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<BucketDestinationFormat> format;
+      private final Input<BucketDestinationFormat> format;
 
     public Input<BucketDestinationFormat> getFormat() {
         return this.format;
@@ -57,7 +57,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -146,7 +146,6 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
-
         public BucketDestinationArgs build() {
             return new BucketDestinationArgs(bucketAccountId, bucketArn, format, prefix);
         }

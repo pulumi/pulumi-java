@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1beta1.outputs.ContactResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class ContactSettingsResponse {
     /**
      * The administrative contact for the `Registration`.
      * 
-     */
+    */
     public ContactResponse getAdminContact() {
         return this.adminContact;
     }
     /**
      * Privacy setting for the contacts associated with the `Registration`.
      * 
-     */
+    */
     public String getPrivacy() {
         return this.privacy;
     }
     /**
      * The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant receives an email confirmation that they must complete within 15 days to avoid domain suspension.*
      * 
-     */
+    */
     public ContactResponse getRegistrantContact() {
         return this.registrantContact;
     }
     /**
      * The technical contact for the `Registration`.
      * 
-     */
+    */
     public ContactResponse getTechnicalContact() {
         return this.technicalContact;
     }
@@ -117,7 +117,6 @@ public final class ContactSettingsResponse {
             this.technicalContact = Objects.requireNonNull(technicalContact);
             return this;
         }
-
         public ContactSettingsResponse build() {
             return new ContactSettingsResponse(adminContact, privacy, registrantContact, technicalContact);
         }

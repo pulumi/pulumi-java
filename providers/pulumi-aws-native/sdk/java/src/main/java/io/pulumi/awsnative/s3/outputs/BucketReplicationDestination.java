@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.outputs.BucketAccessControlTranslation;
 import io.pulumi.awsnative.s3.outputs.BucketEncryptionConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketMetrics;
 import io.pulumi.awsnative.s3.outputs.BucketReplicationTime;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -67,7 +67,7 @@ public final class BucketReplicationDestination {
     /**
      * The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
      * 
-     */
+    */
     public Optional<BucketReplicationDestinationStorageClass> getStorageClass() {
         return Optional.ofNullable(this.storageClass);
     }
@@ -138,7 +138,6 @@ public final class BucketReplicationDestination {
             this.storageClass = storageClass;
             return this;
         }
-
         public BucketReplicationDestination build() {
             return new BucketReplicationDestination(accessControlTranslation, account, bucket, encryptionConfiguration, metrics, replicationTime, storageClass);
         }

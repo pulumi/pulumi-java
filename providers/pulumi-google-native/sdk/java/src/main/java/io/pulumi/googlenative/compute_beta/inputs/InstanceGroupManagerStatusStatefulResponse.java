@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class InstanceGroupManagerStatusStatefulResponse extends io.pulumi.
      * 
      */
     @InputImport(name="hasStatefulConfig", required=true)
-    private final Boolean hasStatefulConfig;
+      private final Boolean hasStatefulConfig;
 
     public Boolean getHasStatefulConfig() {
         return this.hasStatefulConfig;
@@ -29,7 +29,7 @@ public final class InstanceGroupManagerStatusStatefulResponse extends io.pulumi.
      * 
      */
     @InputImport(name="perInstanceConfigs", required=true)
-    private final InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs;
+      private final InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs;
 
     public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse getPerInstanceConfigs() {
         return this.perInstanceConfigs;
@@ -78,7 +78,6 @@ public final class InstanceGroupManagerStatusStatefulResponse extends io.pulumi.
             this.perInstanceConfigs = Objects.requireNonNull(perInstanceConfigs);
             return this;
         }
-
         public InstanceGroupManagerStatusStatefulResponse build() {
             return new InstanceGroupManagerStatusStatefulResponse(hasStatefulConfig, perInstanceConfigs);
         }

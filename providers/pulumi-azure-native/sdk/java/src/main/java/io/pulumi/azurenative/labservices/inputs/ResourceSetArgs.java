@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSettingId")
-    private final @Nullable Input<String> resourceSettingId;
+      private final @Nullable Input<String> resourceSettingId;
 
     public Input<String> getResourceSettingId() {
         return this.resourceSettingId == null ? Input.empty() : this.resourceSettingId;
@@ -34,7 +34,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmResourceId")
-    private final @Nullable Input<String> vmResourceId;
+      private final @Nullable Input<String> vmResourceId;
 
     public Input<String> getVmResourceId() {
         return this.vmResourceId == null ? Input.empty() : this.vmResourceId;
@@ -93,7 +93,6 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
             this.vmResourceId = Input.ofNullable(vmResourceId);
             return this;
         }
-
         public ResourceSetArgs build() {
             return new ResourceSetArgs(resourceSettingId, vmResourceId);
         }

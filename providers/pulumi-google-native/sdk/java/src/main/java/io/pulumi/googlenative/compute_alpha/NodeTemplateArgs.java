@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.NodeTemplateCpuOvercommitType;
 import io.pulumi.googlenative.compute_alpha.inputs.AcceleratorConfigArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.LocalDiskArgs;
@@ -22,7 +22,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     public static final NodeTemplateArgs Empty = new NodeTemplateArgs();
 
     @InputImport(name="accelerators")
-    private final @Nullable Input<List<AcceleratorConfigArgs>> accelerators;
+      private final @Nullable Input<List<AcceleratorConfigArgs>> accelerators;
 
     public Input<List<AcceleratorConfigArgs>> getAccelerators() {
         return this.accelerators == null ? Input.empty() : this.accelerators;
@@ -33,7 +33,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpuOvercommitType")
-    private final @Nullable Input<NodeTemplateCpuOvercommitType> cpuOvercommitType;
+      private final @Nullable Input<NodeTemplateCpuOvercommitType> cpuOvercommitType;
 
     public Input<NodeTemplateCpuOvercommitType> getCpuOvercommitType() {
         return this.cpuOvercommitType == null ? Input.empty() : this.cpuOvercommitType;
@@ -44,14 +44,14 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="disks")
-    private final @Nullable Input<List<LocalDiskArgs>> disks;
+      private final @Nullable Input<List<LocalDiskArgs>> disks;
 
     public Input<List<LocalDiskArgs>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -62,7 +62,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -73,7 +73,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeAffinityLabels")
-    private final @Nullable Input<Map<String,String>> nodeAffinityLabels;
+      private final @Nullable Input<Map<String,String>> nodeAffinityLabels;
 
     public Input<Map<String,String>> getNodeAffinityLabels() {
         return this.nodeAffinityLabels == null ? Input.empty() : this.nodeAffinityLabels;
@@ -84,7 +84,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeType")
-    private final @Nullable Input<String> nodeType;
+      private final @Nullable Input<String> nodeType;
 
     public Input<String> getNodeType() {
         return this.nodeType == null ? Input.empty() : this.nodeType;
@@ -95,28 +95,28 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTypeFlexibility")
-    private final @Nullable Input<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility;
+      private final @Nullable Input<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility;
 
     public Input<NodeTemplateNodeTypeFlexibilityArgs> getNodeTypeFlexibility() {
         return this.nodeTypeFlexibility == null ? Input.empty() : this.nodeTypeFlexibility;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -127,7 +127,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverBinding")
-    private final @Nullable Input<ServerBindingArgs> serverBinding;
+      private final @Nullable Input<ServerBindingArgs> serverBinding;
 
     public Input<ServerBindingArgs> getServerBinding() {
         return this.serverBinding == null ? Input.empty() : this.serverBinding;
@@ -336,7 +336,6 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.serverBinding = Input.ofNullable(serverBinding);
             return this;
         }
-
         public NodeTemplateArgs build() {
             return new NodeTemplateArgs(accelerators, cpuOvercommitType, description, disks, name, nodeAffinityLabels, nodeType, nodeTypeFlexibility, project, region, requestId, serverBinding);
         }

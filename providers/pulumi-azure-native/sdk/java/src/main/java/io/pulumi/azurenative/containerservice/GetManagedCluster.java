@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerservice.inputs.GetManagedClusterArgs;
 import io.pulumi.azurenative.containerservice.outputs.GetManagedClusterResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedCluster {
-/**
- * Managed cluster.
+    private GetManagedCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedClusterArgs.Builder a);
+    }
+    private static GetManagedClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Managed cluster.
  * API Version: 2021-03-01.
  * 
- *
- * Managed cluster.
+     *
+     * Managed cluster.
  * 
- */
+     */
+    public static CompletableFuture<GetManagedClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Managed cluster.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Managed cluster.
+     * 
+     */
     public static CompletableFuture<GetManagedClusterResult> invokeAsync(GetManagedClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerservice:getManagedCluster", TypeShape.of(GetManagedClusterResult.class), args == null ? GetManagedClusterArgs.Empty : args, Utilities.withVersion(options));
     }

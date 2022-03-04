@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -90,70 +90,70 @@ public final class SkypeChannelPropertiesResponse {
     /**
      * Calling web hook for Skype channel
      * 
-     */
+    */
     public Optional<String> getCallingWebHook() {
         return Optional.ofNullable(this.callingWebHook);
     }
     /**
      * Enable calling for Skype channel
      * 
-     */
+    */
     public Optional<Boolean> getEnableCalling() {
         return Optional.ofNullable(this.enableCalling);
     }
     /**
      * Enable groups for Skype channel
      * 
-     */
+    */
     public Optional<Boolean> getEnableGroups() {
         return Optional.ofNullable(this.enableGroups);
     }
     /**
      * Enable media cards for Skype channel
      * 
-     */
+    */
     public Optional<Boolean> getEnableMediaCards() {
         return Optional.ofNullable(this.enableMediaCards);
     }
     /**
      * Enable messaging for Skype channel
      * 
-     */
+    */
     public Optional<Boolean> getEnableMessaging() {
         return Optional.ofNullable(this.enableMessaging);
     }
     /**
      * Enable screen sharing for Skype channel
      * 
-     */
+    */
     public Optional<Boolean> getEnableScreenSharing() {
         return Optional.ofNullable(this.enableScreenSharing);
     }
     /**
      * Enable video for Skype channel
      * 
-     */
+    */
     public Optional<Boolean> getEnableVideo() {
         return Optional.ofNullable(this.enableVideo);
     }
     /**
      * Group mode for Skype channel
      * 
-     */
+    */
     public Optional<String> getGroupsMode() {
         return Optional.ofNullable(this.groupsMode);
     }
     /**
      * Incoming call route for Skype channel
      * 
-     */
+    */
     public Optional<String> getIncomingCallRoute() {
         return Optional.ofNullable(this.incomingCallRoute);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -245,7 +245,6 @@ public final class SkypeChannelPropertiesResponse {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public SkypeChannelPropertiesResponse build() {
             return new SkypeChannelPropertiesResponse(callingWebHook, enableCalling, enableGroups, enableMediaCards, enableMessaging, enableScreenSharing, enableVideo, groupsMode, incomingCallRoute, isEnabled);
         }

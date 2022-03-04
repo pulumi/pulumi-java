@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayBackendAddressResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
     /**
      * Backend addresses.
      * 
-     */
+    */
     public List<ApplicationGatewayBackendAddressResponse> getBackendAddresses() {
         return this.backendAddresses == null ? List.of() : this.backendAddresses;
     }
     /**
      * Collection of references to IPs defined in network interfaces.
      * 
-     */
+    */
     public List<NetworkInterfaceIPConfigurationResponse> getBackendIPConfigurations() {
         return this.backendIPConfigurations;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the backend address pool that is unique within an Application Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the backend address pool resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -184,7 +184,6 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayBackendAddressPoolResponse build() {
             return new ApplicationGatewayBackendAddressPoolResponse(backendAddresses, backendIPConfigurations, etag, id, name, provisioningState, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -40,21 +40,21 @@ public final class SoftwareConfigResponse {
     /**
      * Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
      * 
-     */
+    */
     public String getImageVersion() {
         return this.imageVersion;
     }
     /**
      * The set of optional components to activate on the cluster.
      * 
-     */
+    */
     public List<String> getOptionalComponents() {
         return this.optionalComponents;
     }
     /**
      * Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties;
     }
@@ -97,7 +97,6 @@ public final class SoftwareConfigResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public SoftwareConfigResponse build() {
             return new SoftwareConfigResponse(imageVersion, optionalComponents, properties);
         }

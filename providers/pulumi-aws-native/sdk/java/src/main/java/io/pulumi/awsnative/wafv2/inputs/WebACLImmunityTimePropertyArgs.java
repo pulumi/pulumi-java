@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
     public static final WebACLImmunityTimePropertyArgs Empty = new WebACLImmunityTimePropertyArgs();
 
     @InputImport(name="immunityTime", required=true)
-    private final Input<Integer> immunityTime;
+      private final Input<Integer> immunityTime;
 
     public Input<Integer> getImmunityTime() {
         return this.immunityTime;
@@ -57,7 +57,6 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
             this.immunityTime = Input.of(Objects.requireNonNull(immunityTime));
             return this;
         }
-
         public WebACLImmunityTimePropertyArgs build() {
             return new WebACLImmunityTimePropertyArgs(immunityTime);
         }

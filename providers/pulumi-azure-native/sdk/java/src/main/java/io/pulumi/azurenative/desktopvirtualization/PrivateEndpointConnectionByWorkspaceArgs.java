@@ -5,7 +5,7 @@ package io.pulumi.azurenative.desktopvirtualization;
 
 import io.pulumi.azurenative.desktopvirtualization.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PrivateEndpointConnectionByWorkspaceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -31,7 +31,7 @@ public final class PrivateEndpointConnectionByWorkspaceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-    private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -42,7 +42,7 @@ public final class PrivateEndpointConnectionByWorkspaceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class PrivateEndpointConnectionByWorkspaceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -142,7 +142,6 @@ public final class PrivateEndpointConnectionByWorkspaceArgs extends io.pulumi.re
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public PrivateEndpointConnectionByWorkspaceArgs build() {
             return new PrivateEndpointConnectionByWorkspaceArgs(privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName, workspaceName);
         }

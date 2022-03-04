@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MonitoringComponentConfigResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="enableComponents", required=true)
-    private final List<String> enableComponents;
+      private final List<String> enableComponents;
 
     public List<String> getEnableComponents() {
         return this.enableComponents;
@@ -60,7 +60,6 @@ public final class MonitoringComponentConfigResponse extends io.pulumi.resources
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public MonitoringComponentConfigResponse build() {
             return new MonitoringComponentConfigResponse(enableComponents);
         }

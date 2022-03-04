@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.ExternalVpnGatewayRedundancyType;
 import io.pulumi.googlenative.compute_v1.inputs.ExternalVpnGatewayInterfaceArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="interfaces")
-    private final @Nullable Input<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
+      private final @Nullable Input<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
 
     public Input<List<ExternalVpnGatewayInterfaceArgs>> getInterfaces() {
         return this.interfaces == null ? Input.empty() : this.interfaces;
@@ -45,7 +45,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -56,14 +56,14 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -74,14 +74,14 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redundancyType")
-    private final @Nullable Input<ExternalVpnGatewayRedundancyType> redundancyType;
+      private final @Nullable Input<ExternalVpnGatewayRedundancyType> redundancyType;
 
     public Input<ExternalVpnGatewayRedundancyType> getRedundancyType() {
         return this.redundancyType == null ? Input.empty() : this.redundancyType;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -215,7 +215,6 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
-
         public ExternalVpnGatewayArgs build() {
             return new ExternalVpnGatewayArgs(description, interfaces, labels, name, project, redundancyType, requestId);
         }

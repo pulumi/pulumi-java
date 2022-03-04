@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DeliveryPackageInformationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="carrierName", required=true)
-    private final String carrierName;
+      private final String carrierName;
 
     public String getCarrierName() {
         return this.carrierName;
@@ -35,7 +35,7 @@ public final class DeliveryPackageInformationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="driveCount")
-    private final @Nullable Double driveCount;
+      private final @Nullable Double driveCount;
 
     public Optional<Double> getDriveCount() {
         return this.driveCount == null ? Optional.empty() : Optional.ofNullable(this.driveCount);
@@ -46,7 +46,7 @@ public final class DeliveryPackageInformationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="shipDate")
-    private final @Nullable String shipDate;
+      private final @Nullable String shipDate;
 
     public Optional<String> getShipDate() {
         return this.shipDate == null ? Optional.empty() : Optional.ofNullable(this.shipDate);
@@ -57,7 +57,7 @@ public final class DeliveryPackageInformationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="trackingNumber", required=true)
-    private final String trackingNumber;
+      private final String trackingNumber;
 
     public String getTrackingNumber() {
         return this.trackingNumber;
@@ -126,7 +126,6 @@ public final class DeliveryPackageInformationResponse extends io.pulumi.resource
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
         }
-
         public DeliveryPackageInformationResponse build() {
             return new DeliveryPackageInformationResponse(carrierName, driveCount, shipDate, trackingNumber);
         }

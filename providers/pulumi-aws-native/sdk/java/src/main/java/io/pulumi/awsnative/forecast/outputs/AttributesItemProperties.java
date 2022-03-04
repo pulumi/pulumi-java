@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.forecast.outputs;
 
 import io.pulumi.awsnative.forecast.enums.DatasetAttributesItemPropertiesAttributeType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class AttributesItemProperties {
     /**
      * Name of the dataset field
      * 
-     */
+    */
     public Optional<String> getAttributeName() {
         return Optional.ofNullable(this.attributeName);
     }
     /**
      * Data type of the field
      * 
-     */
+    */
     public Optional<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
         return Optional.ofNullable(this.attributeType);
     }
@@ -77,7 +77,6 @@ public final class AttributesItemProperties {
             this.attributeType = attributeType;
             return this;
         }
-
         public AttributesItemProperties build() {
             return new AttributesItemProperties(attributeName, attributeType);
         }

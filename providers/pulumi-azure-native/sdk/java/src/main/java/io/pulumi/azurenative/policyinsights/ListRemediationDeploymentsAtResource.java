@@ -6,21 +6,41 @@ package io.pulumi.azurenative.policyinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.policyinsights.inputs.ListRemediationDeploymentsAtResourceArgs;
 import io.pulumi.azurenative.policyinsights.outputs.ListRemediationDeploymentsAtResourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListRemediationDeploymentsAtResource {
-/**
- * List of deployments for a remediation.
+    private ListRemediationDeploymentsAtResource() {}
+    public interface BuilderApplicator {
+        public void apply(ListRemediationDeploymentsAtResourceArgs.Builder a);
+    }
+    private static ListRemediationDeploymentsAtResourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListRemediationDeploymentsAtResourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List of deployments for a remediation.
  * API Version: 2019-07-01.
  * 
- *
- * List of deployments for a remediation.
+     *
+     * List of deployments for a remediation.
  * 
- */
+     */
+    public static CompletableFuture<ListRemediationDeploymentsAtResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     *
+         * List of deployments for a remediation.
+     * 
+     */
     public static CompletableFuture<ListRemediationDeploymentsAtResourceResult> invokeAsync(ListRemediationDeploymentsAtResourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:policyinsights:listRemediationDeploymentsAtResource", TypeShape.of(ListRemediationDeploymentsAtResourceResult.class), args == null ? ListRemediationDeploymentsAtResourceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse.outputs;
 import io.pulumi.azurenative.synapse.outputs.ManagedIntegrationRuntimeErrorResponse;
 import io.pulumi.azurenative.synapse.outputs.ManagedIntegrationRuntimeNodeResponse;
 import io.pulumi.azurenative.synapse.outputs.ManagedIntegrationRuntimeOperationResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,42 +71,42 @@ public final class ManagedIntegrationRuntimeStatusResponse {
     /**
      * The time at which the integration runtime was created, in ISO8601 format.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The workspace name which the integration runtime belong to.
      * 
-     */
+    */
     public String getDataFactoryName() {
         return this.dataFactoryName;
     }
     /**
      * The last operation result that occurred on this integration runtime.
      * 
-     */
+    */
     public ManagedIntegrationRuntimeOperationResultResponse getLastOperation() {
         return this.lastOperation;
     }
     /**
      * The list of nodes for managed integration runtime.
      * 
-     */
+    */
     public List<ManagedIntegrationRuntimeNodeResponse> getNodes() {
         return this.nodes;
     }
     /**
      * The errors that occurred on this integration runtime.
      * 
-     */
+    */
     public List<ManagedIntegrationRuntimeErrorResponse> getOtherErrors() {
         return this.otherErrors;
     }
     /**
      * The state of integration runtime.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -114,7 +114,7 @@ public final class ManagedIntegrationRuntimeStatusResponse {
      * The type of integration runtime.
      * Expected value is 'Managed'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -185,7 +185,6 @@ public final class ManagedIntegrationRuntimeStatusResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIntegrationRuntimeStatusResponse build() {
             return new ManagedIntegrationRuntimeStatusResponse(createTime, dataFactoryName, lastOperation, nodes, otherErrors, state, type);
         }

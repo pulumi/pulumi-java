@@ -6,17 +6,33 @@ package io.pulumi.awsnative.resiliencehub;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.resiliencehub.inputs.GetResiliencyPolicyArgs;
 import io.pulumi.awsnative.resiliencehub.outputs.GetResiliencyPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResiliencyPolicy {
-/**
- * Resource Type Definition for Resiliency Policy.
+    private GetResiliencyPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetResiliencyPolicyArgs.Builder a);
+    }
+    private static GetResiliencyPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResiliencyPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type Definition for Resiliency Policy.
  * 
- */
+     */
+    public static CompletableFuture<GetResiliencyPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type Definition for Resiliency Policy.
+     * 
+     */
     public static CompletableFuture<GetResiliencyPolicyResult> invokeAsync(GetResiliencyPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:resiliencehub:getResiliencyPolicy", TypeShape.of(GetResiliencyPolicyResult.class), args == null ? GetResiliencyPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

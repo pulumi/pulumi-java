@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResourceStatusUpcomingMaintenanceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="canReschedule", required=true)
-    private final Boolean canReschedule;
+      private final Boolean canReschedule;
 
     public Boolean getCanReschedule() {
         return this.canReschedule;
@@ -55,7 +55,6 @@ public final class ResourceStatusUpcomingMaintenanceResponse extends io.pulumi.r
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
         }
-
         public ResourceStatusUpcomingMaintenanceResponse build() {
             return new ResourceStatusUpcomingMaintenanceResponse(canReschedule);
         }

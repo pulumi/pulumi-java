@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class HandlerMappingResponse {
     /**
      * Command-line arguments to be passed to the script processor.
      * 
-     */
+    */
     public Optional<String> getArguments() {
         return Optional.ofNullable(this.arguments);
     }
     /**
      * Requests with this extension will be handled using the specified FastCGI application.
      * 
-     */
+    */
     public Optional<String> getExtension() {
         return Optional.ofNullable(this.extension);
     }
     /**
      * The absolute path to the FastCGI application.
      * 
-     */
+    */
     public Optional<String> getScriptProcessor() {
         return Optional.ofNullable(this.scriptProcessor);
     }
@@ -97,7 +97,6 @@ public final class HandlerMappingResponse {
             this.scriptProcessor = scriptProcessor;
             return this;
         }
-
         public HandlerMappingResponse build() {
             return new HandlerMappingResponse(arguments, extension, scriptProcessor);
         }

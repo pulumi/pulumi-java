@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="constraint", required=true)
-    private final String constraint;
+      private final String constraint;
 
     public String getConstraint() {
         return this.constraint;
@@ -28,7 +28,7 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="folder", required=true)
-    private final String folder;
+      private final String folder;
 
     public String getFolder() {
         return this.folder;
@@ -77,7 +77,6 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
-
         public GetOrganizationPolicyArgs build() {
             return new GetOrganizationPolicyArgs(constraint, folder);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extend
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extend
      * 
      */
     @InputImport(name="synonyms")
-    private final @Nullable Input<List<String>> synonyms;
+      private final @Nullable Input<List<String>> synonyms;
 
     public Input<List<String>> getSynonyms() {
         return this.synonyms == null ? Input.empty() : this.synonyms;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extend
             this.synonyms = Input.ofNullable(synonyms);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs(key, synonyms);
         }

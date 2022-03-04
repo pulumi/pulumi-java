@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DiskSecurityProfileResponse {
     /**
      * Specifies the SecurityType of the VM. Applicable for OS disks only.
      * 
-     */
+    */
     public Optional<String> getSecurityType() {
         return Optional.ofNullable(this.securityType);
     }
@@ -54,7 +54,6 @@ public final class DiskSecurityProfileResponse {
             this.securityType = securityType;
             return this;
         }
-
         public DiskSecurityProfileResponse build() {
             return new DiskSecurityProfileResponse(securityType);
         }

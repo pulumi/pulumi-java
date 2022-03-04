@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class WarmStoreConfigurationPropertiesResponse {
     /**
      * ISO8601 timespan specifying the number of days the environment's events will be available for query from the warm store.
      * 
-     */
+    */
     public String getDataRetention() {
         return this.dataRetention;
     }
@@ -52,7 +52,6 @@ public final class WarmStoreConfigurationPropertiesResponse {
             this.dataRetention = Objects.requireNonNull(dataRetention);
             return this;
         }
-
         public WarmStoreConfigurationPropertiesResponse build() {
             return new WarmStoreConfigurationPropertiesResponse(dataRetention);
         }

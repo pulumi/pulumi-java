@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.BuildArtifactResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.DeliveryPipelineResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.TargetResponse;
@@ -148,126 +148,126 @@ public final class GetReleaseResult {
     /**
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
-     */
+    */
     public Map<String,String> getAnnotations() {
         return this.annotations;
     }
     /**
      * List of artifacts to pass through to Skaffold command.
      * 
-     */
+    */
     public List<BuildArtifactResponse> getBuildArtifacts() {
         return this.buildArtifacts;
     }
     /**
      * Time at which the `Release` was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Snapshot of the parent pipeline taken at release creation time.
      * 
-     */
+    */
     public DeliveryPipelineResponse getDeliveryPipelineSnapshot() {
         return this.deliveryPipelineSnapshot;
     }
     /**
      * Description of the `Release`. Max length is 255 characters.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Optional. Name of the `Release`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Time at which the render completed.
      * 
-     */
+    */
     public String getRenderEndTime() {
         return this.renderEndTime;
     }
     /**
      * Time at which the render began.
      * 
-     */
+    */
     public String getRenderStartTime() {
         return this.renderStartTime;
     }
     /**
      * Current state of the render operation.
      * 
-     */
+    */
     public String getRenderState() {
         return this.renderState;
     }
     /**
      * Filepath of the Skaffold config inside of the config URI.
      * 
-     */
+    */
     public String getSkaffoldConfigPath() {
         return this.skaffoldConfigPath;
     }
     /**
      * Cloud Storage URI of tar.gz archive containing Skaffold configuration.
      * 
-     */
+    */
     public String getSkaffoldConfigUri() {
         return this.skaffoldConfigUri;
     }
     /**
      * The Skaffold version to use when operating on this release, such as "1.20.0". Not all versions are valid; Google Cloud Deploy supports a specific set of versions. If unset, the most recent supported Skaffold version will be used.
      * 
-     */
+    */
     public String getSkaffoldVersion() {
         return this.skaffoldVersion;
     }
     /**
      * Map from target ID to the target artifacts created during the render operation.
      * 
-     */
+    */
     public Map<String,String> getTargetArtifacts() {
         return this.targetArtifacts;
     }
     /**
      * Map from target ID to details of the render operation for that target.
      * 
-     */
+    */
     public Map<String,String> getTargetRenders() {
         return this.targetRenders;
     }
     /**
      * Snapshot of the targets taken at release creation time.
      * 
-     */
+    */
     public List<TargetResponse> getTargetSnapshots() {
         return this.targetSnapshots;
     }
     /**
      * Unique identifier of the `Release`.
      * 
-     */
+    */
     public String getUid() {
         return this.uid;
     }
@@ -415,7 +415,6 @@ public final class GetReleaseResult {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GetReleaseResult build() {
             return new GetReleaseResult(annotations, buildArtifacts, createTime, deliveryPipelineSnapshot, description, etag, labels, name, renderEndTime, renderStartTime, renderState, skaffoldConfigPath, skaffoldConfigUri, skaffoldVersion, targetArtifacts, targetRenders, targetSnapshots, uid);
         }

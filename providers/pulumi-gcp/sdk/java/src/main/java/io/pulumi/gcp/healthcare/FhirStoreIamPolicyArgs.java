@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fhirStoreId", required=true)
-    private final Input<String> fhirStoreId;
+      private final Input<String> fhirStoreId;
 
     public Input<String> getFhirStoreId() {
         return this.fhirStoreId;
@@ -33,7 +33,7 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -92,7 +92,6 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public FhirStoreIamPolicyArgs build() {
             return new FhirStoreIamPolicyArgs(fhirStoreId, policyData);
         }

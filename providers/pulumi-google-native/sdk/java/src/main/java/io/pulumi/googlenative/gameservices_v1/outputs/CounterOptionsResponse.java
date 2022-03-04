@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1.outputs.CustomFieldResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class CounterOptionsResponse {
     /**
      * Custom fields.
      * 
-     */
+    */
     public List<CustomFieldResponse> getCustomFields() {
         return this.customFields;
     }
     /**
      * The field value to attribute.
      * 
-     */
+    */
     public String getField() {
         return this.field;
     }
     /**
      * The metric to update.
      * 
-     */
+    */
     public String getMetric() {
         return this.metric;
     }
@@ -97,7 +97,6 @@ public final class CounterOptionsResponse {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public CounterOptionsResponse build() {
             return new CounterOptionsResponse(customFields, field, metric);
         }

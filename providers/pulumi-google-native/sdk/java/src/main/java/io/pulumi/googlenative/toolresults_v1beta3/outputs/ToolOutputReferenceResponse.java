@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.FileReferenceResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.TestCaseReferenceResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.TimestampResponse;
@@ -40,21 +40,21 @@ public final class ToolOutputReferenceResponse {
     /**
      * The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
      * 
-     */
+    */
     public TimestampResponse getCreationTime() {
         return this.creationTime;
     }
     /**
      * A FileReference to an output file. - In response: always set - In create/update request: always set
      * 
-     */
+    */
     public FileReferenceResponse getOutput() {
         return this.output;
     }
     /**
      * The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional
      * 
-     */
+    */
     public TestCaseReferenceResponse getTestCase() {
         return this.testCase;
     }
@@ -97,7 +97,6 @@ public final class ToolOutputReferenceResponse {
             this.testCase = Objects.requireNonNull(testCase);
             return this;
         }
-
         public ToolOutputReferenceResponse build() {
             return new ToolOutputReferenceResponse(creationTime, output, testCase);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blueprint.inputs;
 import io.pulumi.azurenative.blueprint.enums.AssignmentLockMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="excludedActions")
-    private final @Nullable Input<List<String>> excludedActions;
+      private final @Nullable Input<List<String>> excludedActions;
 
     public Input<List<String>> getExcludedActions() {
         return this.excludedActions == null ? Input.empty() : this.excludedActions;
@@ -37,7 +37,7 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="excludedPrincipals")
-    private final @Nullable Input<List<String>> excludedPrincipals;
+      private final @Nullable Input<List<String>> excludedPrincipals;
 
     public Input<List<String>> getExcludedPrincipals() {
         return this.excludedPrincipals == null ? Input.empty() : this.excludedPrincipals;
@@ -48,7 +48,7 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,AssignmentLockMode>> mode;
+      private final @Nullable Input<Either<String,AssignmentLockMode>> mode;
 
     public Input<Either<String,AssignmentLockMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -122,7 +122,6 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public AssignmentLockSettingsArgs build() {
             return new AssignmentLockSettingsArgs(excludedActions, excludedPrincipals, mode);
         }

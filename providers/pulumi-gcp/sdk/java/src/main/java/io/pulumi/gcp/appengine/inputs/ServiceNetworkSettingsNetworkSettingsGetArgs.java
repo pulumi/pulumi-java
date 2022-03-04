@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends io.pulum
      * 
      */
     @InputImport(name="ingressTrafficAllowed")
-    private final @Nullable Input<String> ingressTrafficAllowed;
+      private final @Nullable Input<String> ingressTrafficAllowed;
 
     public Input<String> getIngressTrafficAllowed() {
         return this.ingressTrafficAllowed == null ? Input.empty() : this.ingressTrafficAllowed;
@@ -64,7 +64,6 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends io.pulum
             this.ingressTrafficAllowed = Input.ofNullable(ingressTrafficAllowed);
             return this;
         }
-
         public ServiceNetworkSettingsNetworkSettingsGetArgs build() {
             return new ServiceNetworkSettingsNetworkSettingsGetArgs(ingressTrafficAllowed);
         }

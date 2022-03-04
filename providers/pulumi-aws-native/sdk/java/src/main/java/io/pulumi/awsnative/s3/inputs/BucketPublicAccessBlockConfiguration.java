@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
      * 
      */
     @InputImport(name="blockPublicAcls")
-    private final @Nullable Boolean blockPublicAcls;
+      private final @Nullable Boolean blockPublicAcls;
 
     public Optional<Boolean> getBlockPublicAcls() {
         return this.blockPublicAcls == null ? Optional.empty() : Optional.ofNullable(this.blockPublicAcls);
@@ -38,7 +38,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
      * 
      */
     @InputImport(name="blockPublicPolicy")
-    private final @Nullable Boolean blockPublicPolicy;
+      private final @Nullable Boolean blockPublicPolicy;
 
     public Optional<Boolean> getBlockPublicPolicy() {
         return this.blockPublicPolicy == null ? Optional.empty() : Optional.ofNullable(this.blockPublicPolicy);
@@ -50,7 +50,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
      * 
      */
     @InputImport(name="ignorePublicAcls")
-    private final @Nullable Boolean ignorePublicAcls;
+      private final @Nullable Boolean ignorePublicAcls;
 
     public Optional<Boolean> getIgnorePublicAcls() {
         return this.ignorePublicAcls == null ? Optional.empty() : Optional.ofNullable(this.ignorePublicAcls);
@@ -62,7 +62,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
      * 
      */
     @InputImport(name="restrictPublicBuckets")
-    private final @Nullable Boolean restrictPublicBuckets;
+      private final @Nullable Boolean restrictPublicBuckets;
 
     public Optional<Boolean> getRestrictPublicBuckets() {
         return this.restrictPublicBuckets == null ? Optional.empty() : Optional.ofNullable(this.restrictPublicBuckets);
@@ -131,7 +131,6 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
         }
-
         public BucketPublicAccessBlockConfiguration build() {
             return new BucketPublicAccessBlockConfiguration(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.vpcaccess;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.vpcaccess.ConnectorArgs;
 import io.pulumi.gcp.vpcaccess.inputs.ConnectorState;
@@ -238,6 +238,37 @@ public class Connector extends io.pulumi.resources.CustomResource {
         return this.subnet;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ConnectorArgs.Builder a);
+    }
+    private static io.pulumi.gcp.vpcaccess.ConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.vpcaccess.ConnectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Connector(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Connector(String name) {
+        this(name, ConnectorArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Connector(String name, @Nullable ConnectorArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

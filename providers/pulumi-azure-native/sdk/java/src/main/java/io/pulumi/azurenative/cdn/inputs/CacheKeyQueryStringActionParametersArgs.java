@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.QueryStringBehavior;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
     public static final CacheKeyQueryStringActionParametersArgs Empty = new CacheKeyQueryStringActionParametersArgs();
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -32,7 +32,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="queryParameters")
-    private final @Nullable Input<String> queryParameters;
+      private final @Nullable Input<String> queryParameters;
 
     public Input<String> getQueryParameters() {
         return this.queryParameters == null ? Input.empty() : this.queryParameters;
@@ -43,7 +43,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="queryStringBehavior", required=true)
-    private final Input<Either<String,QueryStringBehavior>> queryStringBehavior;
+      private final Input<Either<String,QueryStringBehavior>> queryStringBehavior;
 
     public Input<Either<String,QueryStringBehavior>> getQueryStringBehavior() {
         return this.queryStringBehavior;
@@ -117,7 +117,6 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
             this.queryStringBehavior = Input.of(Objects.requireNonNull(queryStringBehavior));
             return this;
         }
-
         public CacheKeyQueryStringActionParametersArgs build() {
             return new CacheKeyQueryStringActionParametersArgs(odataType, queryParameters, queryStringBehavior);
         }

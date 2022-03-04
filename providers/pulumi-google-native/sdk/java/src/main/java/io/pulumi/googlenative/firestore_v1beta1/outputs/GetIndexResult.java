@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firestore_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firestore_v1beta1.outputs.GoogleFirestoreAdminV1beta1IndexFieldResponse;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class GetIndexResult {
     /**
      * The collection ID to which this index applies. Required.
      * 
-     */
+    */
     public String getCollectionId() {
         return this.collectionId;
     }
     /**
      * The fields to index.
      * 
-     */
+    */
     public List<GoogleFirestoreAdminV1beta1IndexFieldResponse> getFields() {
         return this.fields;
     }
     /**
      * The resource name of the index. Output only.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The state of the index. Output only.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -118,7 +118,6 @@ public final class GetIndexResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetIndexResult build() {
             return new GetIndexResult(collectionId, fields, name, state);
         }

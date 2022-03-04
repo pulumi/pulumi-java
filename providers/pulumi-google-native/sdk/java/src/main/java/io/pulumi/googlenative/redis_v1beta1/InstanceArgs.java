@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.redis_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.redis_v1beta1.enums.InstanceConnectMode;
 import io.pulumi.googlenative.redis_v1beta1.enums.InstanceReadReplicasMode;
 import io.pulumi.googlenative.redis_v1beta1.enums.InstanceTier;
@@ -28,7 +28,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alternativeLocationId")
-    private final @Nullable Input<String> alternativeLocationId;
+      private final @Nullable Input<String> alternativeLocationId;
 
     public Input<String> getAlternativeLocationId() {
         return this.alternativeLocationId == null ? Input.empty() : this.alternativeLocationId;
@@ -39,7 +39,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authEnabled")
-    private final @Nullable Input<Boolean> authEnabled;
+      private final @Nullable Input<Boolean> authEnabled;
 
     public Input<Boolean> getAuthEnabled() {
         return this.authEnabled == null ? Input.empty() : this.authEnabled;
@@ -50,7 +50,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-    private final @Nullable Input<String> authorizedNetwork;
+      private final @Nullable Input<String> authorizedNetwork;
 
     public Input<String> getAuthorizedNetwork() {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
@@ -61,7 +61,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectMode")
-    private final @Nullable Input<InstanceConnectMode> connectMode;
+      private final @Nullable Input<InstanceConnectMode> connectMode;
 
     public Input<InstanceConnectMode> getConnectMode() {
         return this.connectMode == null ? Input.empty() : this.connectMode;
@@ -72,14 +72,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -90,7 +90,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -101,7 +101,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -112,7 +112,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenancePolicy")
-    private final @Nullable Input<MaintenancePolicyArgs> maintenancePolicy;
+      private final @Nullable Input<MaintenancePolicyArgs> maintenancePolicy;
 
     public Input<MaintenancePolicyArgs> getMaintenancePolicy() {
         return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
@@ -123,7 +123,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memorySizeGb", required=true)
-    private final Input<Integer> memorySizeGb;
+      private final Input<Integer> memorySizeGb;
 
     public Input<Integer> getMemorySizeGb() {
         return this.memorySizeGb;
@@ -134,7 +134,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -145,14 +145,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="persistenceConfig")
-    private final @Nullable Input<PersistenceConfigArgs> persistenceConfig;
+      private final @Nullable Input<PersistenceConfigArgs> persistenceConfig;
 
     public Input<PersistenceConfigArgs> getPersistenceConfig() {
         return this.persistenceConfig == null ? Input.empty() : this.persistenceConfig;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -163,7 +163,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readReplicasMode")
-    private final @Nullable Input<InstanceReadReplicasMode> readReplicasMode;
+      private final @Nullable Input<InstanceReadReplicasMode> readReplicasMode;
 
     public Input<InstanceReadReplicasMode> getReadReplicasMode() {
         return this.readReplicasMode == null ? Input.empty() : this.readReplicasMode;
@@ -174,7 +174,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redisConfigs")
-    private final @Nullable Input<Map<String,String>> redisConfigs;
+      private final @Nullable Input<Map<String,String>> redisConfigs;
 
     public Input<Map<String,String>> getRedisConfigs() {
         return this.redisConfigs == null ? Input.empty() : this.redisConfigs;
@@ -185,7 +185,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redisVersion")
-    private final @Nullable Input<String> redisVersion;
+      private final @Nullable Input<String> redisVersion;
 
     public Input<String> getRedisVersion() {
         return this.redisVersion == null ? Input.empty() : this.redisVersion;
@@ -196,7 +196,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaCount")
-    private final @Nullable Input<Integer> replicaCount;
+      private final @Nullable Input<Integer> replicaCount;
 
     public Input<Integer> getReplicaCount() {
         return this.replicaCount == null ? Input.empty() : this.replicaCount;
@@ -207,7 +207,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedIpRange")
-    private final @Nullable Input<String> reservedIpRange;
+      private final @Nullable Input<String> reservedIpRange;
 
     public Input<String> getReservedIpRange() {
         return this.reservedIpRange == null ? Input.empty() : this.reservedIpRange;
@@ -218,7 +218,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryIpRange")
-    private final @Nullable Input<String> secondaryIpRange;
+      private final @Nullable Input<String> secondaryIpRange;
 
     public Input<String> getSecondaryIpRange() {
         return this.secondaryIpRange == null ? Input.empty() : this.secondaryIpRange;
@@ -229,7 +229,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-    private final Input<InstanceTier> tier;
+      private final Input<InstanceTier> tier;
 
     public Input<InstanceTier> getTier() {
         return this.tier;
@@ -240,7 +240,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitEncryptionMode")
-    private final @Nullable Input<InstanceTransitEncryptionMode> transitEncryptionMode;
+      private final @Nullable Input<InstanceTransitEncryptionMode> transitEncryptionMode;
 
     public Input<InstanceTransitEncryptionMode> getTransitEncryptionMode() {
         return this.transitEncryptionMode == null ? Input.empty() : this.transitEncryptionMode;
@@ -584,7 +584,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.transitEncryptionMode = Input.ofNullable(transitEncryptionMode);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(alternativeLocationId, authEnabled, authorizedNetwork, connectMode, displayName, instanceId, labels, location, maintenancePolicy, memorySizeGb, name, persistenceConfig, project, readReplicasMode, redisConfigs, redisVersion, replicaCount, reservedIpRange, secondaryIpRange, tier, transitEncryptionMode);
         }

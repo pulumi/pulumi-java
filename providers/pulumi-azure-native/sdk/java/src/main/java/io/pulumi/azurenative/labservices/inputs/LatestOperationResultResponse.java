@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="errorCode", required=true)
-    private final String errorCode;
+      private final String errorCode;
 
     public String getErrorCode() {
         return this.errorCode;
@@ -32,7 +32,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="errorMessage", required=true)
-    private final String errorMessage;
+      private final String errorMessage;
 
     public String getErrorMessage() {
         return this.errorMessage;
@@ -43,7 +43,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="httpMethod", required=true)
-    private final String httpMethod;
+      private final String httpMethod;
 
     public String getHttpMethod() {
         return this.httpMethod;
@@ -54,7 +54,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="operationUrl", required=true)
-    private final String operationUrl;
+      private final String operationUrl;
 
     public String getOperationUrl() {
         return this.operationUrl;
@@ -65,7 +65,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="requestUri", required=true)
-    private final String requestUri;
+      private final String requestUri;
 
     public String getRequestUri() {
         return this.requestUri;
@@ -76,7 +76,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -165,7 +165,6 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public LatestOperationResultResponse build() {
             return new LatestOperationResultResponse(errorCode, errorMessage, httpMethod, operationUrl, requestUri, status);
         }

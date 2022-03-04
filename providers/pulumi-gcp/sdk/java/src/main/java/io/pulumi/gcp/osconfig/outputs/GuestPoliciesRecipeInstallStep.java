@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeInstallStepArchiveExtraction;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeInstallStepDpkgInstallation;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeInstallStepFileCopy;
@@ -82,7 +82,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Extracts an archive into the specified directory.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeInstallStepArchiveExtraction> getArchiveExtraction() {
         return Optional.ofNullable(this.archiveExtraction);
     }
@@ -90,7 +90,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Installs a deb file via dpkg.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeInstallStepDpkgInstallation> getDpkgInstallation() {
         return Optional.ofNullable(this.dpkgInstallation);
     }
@@ -98,7 +98,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Copies a file onto the instance.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeInstallStepFileCopy> getFileCopy() {
         return Optional.ofNullable(this.fileCopy);
     }
@@ -106,7 +106,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Executes an artifact or local file.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeInstallStepFileExec> getFileExec() {
         return Optional.ofNullable(this.fileExec);
     }
@@ -114,7 +114,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Installs an MSI file.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeInstallStepMsiInstallation> getMsiInstallation() {
         return Optional.ofNullable(this.msiInstallation);
     }
@@ -122,7 +122,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Installs an rpm file via the rpm utility.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeInstallStepRpmInstallation> getRpmInstallation() {
         return Optional.ofNullable(this.rpmInstallation);
     }
@@ -130,7 +130,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Runs commands in a shell.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeInstallStepScriptRun> getScriptRun() {
         return Optional.ofNullable(this.scriptRun);
     }
@@ -201,7 +201,6 @@ public final class GuestPoliciesRecipeInstallStep {
             this.scriptRun = scriptRun;
             return this;
         }
-
         public GuestPoliciesRecipeInstallStep build() {
             return new GuestPoliciesRecipeInstallStep(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }

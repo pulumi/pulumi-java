@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionResourcesVolumeGetArgs;
 import java.lang.Double;
 import java.lang.Integer;
@@ -22,7 +22,7 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<Integer> cpu;
+      private final @Nullable Input<Integer> cpu;
 
     public Input<Integer> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -33,7 +33,7 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskGb")
-    private final @Nullable Input<Integer> diskGb;
+      private final @Nullable Input<Integer> diskGb;
 
     public Input<Integer> getDiskGb() {
         return this.diskGb == null ? Input.empty() : this.diskGb;
@@ -44,7 +44,7 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="memoryGb")
-    private final @Nullable Input<Double> memoryGb;
+      private final @Nullable Input<Double> memoryGb;
 
     public Input<Double> getMemoryGb() {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
@@ -56,7 +56,7 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes;
+      private final @Nullable Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes;
 
     public Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -145,7 +145,6 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
-
         public FlexibleAppVersionResourcesGetArgs build() {
             return new FlexibleAppVersionResourcesGetArgs(cpu, diskGb, memoryGb, volumes);
         }

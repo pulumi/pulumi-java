@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,49 +76,49 @@ public final class PowerBIOutputDataSourceResponse {
     /**
      * The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getDataset() {
         return Optional.ofNullable(this.dataset);
     }
     /**
      * The ID of the Power BI group.
      * 
-     */
+    */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.
      * 
-     */
+    */
     public Optional<String> getGroupName() {
         return Optional.ofNullable(this.groupName);
     }
     /**
      * A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getRefreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
     /**
      * The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getTable() {
         return Optional.ofNullable(this.table);
     }
     /**
      * The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
-     */
+    */
     public Optional<String> getTokenUserDisplayName() {
         return Optional.ofNullable(this.tokenUserDisplayName);
     }
     /**
      * The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
-     */
+    */
     public Optional<String> getTokenUserPrincipalName() {
         return Optional.ofNullable(this.tokenUserPrincipalName);
     }
@@ -126,7 +126,7 @@ public final class PowerBIOutputDataSourceResponse {
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'PowerBI'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -204,7 +204,6 @@ public final class PowerBIOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PowerBIOutputDataSourceResponse build() {
             return new PowerBIOutputDataSourceResponse(dataset, groupId, groupName, refreshToken, table, tokenUserDisplayName, tokenUserPrincipalName, type);
         }

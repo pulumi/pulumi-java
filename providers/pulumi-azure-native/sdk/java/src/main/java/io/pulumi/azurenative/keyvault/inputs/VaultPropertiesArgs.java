@@ -10,7 +10,7 @@ import io.pulumi.azurenative.keyvault.inputs.NetworkRuleSetArgs;
 import io.pulumi.azurenative.keyvault.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accessPolicies")
-    private final @Nullable Input<List<AccessPolicyEntryArgs>> accessPolicies;
+      private final @Nullable Input<List<AccessPolicyEntryArgs>> accessPolicies;
 
     public Input<List<AccessPolicyEntryArgs>> getAccessPolicies() {
         return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
@@ -43,7 +43,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createMode")
-    private final @Nullable Input<CreateMode> createMode;
+      private final @Nullable Input<CreateMode> createMode;
 
     public Input<CreateMode> getCreateMode() {
         return this.createMode == null ? Input.empty() : this.createMode;
@@ -54,7 +54,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enablePurgeProtection")
-    private final @Nullable Input<Boolean> enablePurgeProtection;
+      private final @Nullable Input<Boolean> enablePurgeProtection;
 
     public Input<Boolean> getEnablePurgeProtection() {
         return this.enablePurgeProtection == null ? Input.empty() : this.enablePurgeProtection;
@@ -65,7 +65,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableRbacAuthorization")
-    private final @Nullable Input<Boolean> enableRbacAuthorization;
+      private final @Nullable Input<Boolean> enableRbacAuthorization;
 
     public Input<Boolean> getEnableRbacAuthorization() {
         return this.enableRbacAuthorization == null ? Input.empty() : this.enableRbacAuthorization;
@@ -76,7 +76,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableSoftDelete")
-    private final @Nullable Input<Boolean> enableSoftDelete;
+      private final @Nullable Input<Boolean> enableSoftDelete;
 
     public Input<Boolean> getEnableSoftDelete() {
         return this.enableSoftDelete == null ? Input.empty() : this.enableSoftDelete;
@@ -87,7 +87,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabledForDeployment")
-    private final @Nullable Input<Boolean> enabledForDeployment;
+      private final @Nullable Input<Boolean> enabledForDeployment;
 
     public Input<Boolean> getEnabledForDeployment() {
         return this.enabledForDeployment == null ? Input.empty() : this.enabledForDeployment;
@@ -98,7 +98,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabledForDiskEncryption")
-    private final @Nullable Input<Boolean> enabledForDiskEncryption;
+      private final @Nullable Input<Boolean> enabledForDiskEncryption;
 
     public Input<Boolean> getEnabledForDiskEncryption() {
         return this.enabledForDiskEncryption == null ? Input.empty() : this.enabledForDiskEncryption;
@@ -109,7 +109,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabledForTemplateDeployment")
-    private final @Nullable Input<Boolean> enabledForTemplateDeployment;
+      private final @Nullable Input<Boolean> enabledForTemplateDeployment;
 
     public Input<Boolean> getEnabledForTemplateDeployment() {
         return this.enabledForTemplateDeployment == null ? Input.empty() : this.enabledForTemplateDeployment;
@@ -120,7 +120,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkAcls")
-    private final @Nullable Input<NetworkRuleSetArgs> networkAcls;
+      private final @Nullable Input<NetworkRuleSetArgs> networkAcls;
 
     public Input<NetworkRuleSetArgs> getNetworkAcls() {
         return this.networkAcls == null ? Input.empty() : this.networkAcls;
@@ -131,7 +131,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,VaultProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,VaultProvisioningState>> provisioningState;
 
     public Input<Either<String,VaultProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -142,7 +142,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+      private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -153,7 +153,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="softDeleteRetentionInDays")
-    private final @Nullable Input<Integer> softDeleteRetentionInDays;
+      private final @Nullable Input<Integer> softDeleteRetentionInDays;
 
     public Input<Integer> getSoftDeleteRetentionInDays() {
         return this.softDeleteRetentionInDays == null ? Input.empty() : this.softDeleteRetentionInDays;
@@ -164,7 +164,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final Input<String> tenantId;
+      private final Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId;
@@ -175,7 +175,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vaultUri")
-    private final @Nullable Input<String> vaultUri;
+      private final @Nullable Input<String> vaultUri;
 
     public Input<String> getVaultUri() {
         return this.vaultUri == null ? Input.empty() : this.vaultUri;
@@ -414,7 +414,6 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.vaultUri = Input.ofNullable(vaultUri);
             return this;
         }
-
         public VaultPropertiesArgs build() {
             return new VaultPropertiesArgs(accessPolicies, createMode, enablePurgeProtection, enableRbacAuthorization, enableSoftDelete, enabledForDeployment, enabledForDiskEncryption, enabledForTemplateDeployment, networkAcls, provisioningState, sku, softDeleteRetentionInDays, tenantId, vaultUri);
         }

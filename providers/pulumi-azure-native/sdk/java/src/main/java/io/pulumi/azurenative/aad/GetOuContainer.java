@@ -6,21 +6,41 @@ package io.pulumi.azurenative.aad;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.aad.inputs.GetOuContainerArgs;
 import io.pulumi.azurenative.aad.outputs.GetOuContainerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOuContainer {
-/**
- * Resource for OuContainer.
+    private GetOuContainer() {}
+    public interface BuilderApplicator {
+        public void apply(GetOuContainerArgs.Builder a);
+    }
+    private static GetOuContainerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOuContainerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource for OuContainer.
  * API Version: 2021-03-01.
  * 
- *
- * Resource for OuContainer.
+     *
+     * Resource for OuContainer.
  * 
- */
+     */
+    public static CompletableFuture<GetOuContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource for OuContainer.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Resource for OuContainer.
+     * 
+     */
     public static CompletableFuture<GetOuContainerResult> invokeAsync(GetOuContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aad:getOuContainer", TypeShape.of(GetOuContainerResult.class), args == null ? GetOuContainerArgs.Empty : args, Utilities.withVersion(options));
     }

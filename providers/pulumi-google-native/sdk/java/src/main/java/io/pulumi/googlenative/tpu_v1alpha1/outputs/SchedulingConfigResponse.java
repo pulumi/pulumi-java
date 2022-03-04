@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SchedulingConfigResponse {
     /**
      * Defines whether the node is preemptible.
      * 
-     */
+    */
     public Boolean getPreemptible() {
         return this.preemptible;
     }
     /**
      * Whether the node is created under a reservation.
      * 
-     */
+    */
     public Boolean getReserved() {
         return this.reserved;
     }
@@ -74,7 +74,6 @@ public final class SchedulingConfigResponse {
             this.reserved = Objects.requireNonNull(reserved);
             return this;
         }
-
         public SchedulingConfigResponse build() {
             return new SchedulingConfigResponse(preemptible, reserved);
         }

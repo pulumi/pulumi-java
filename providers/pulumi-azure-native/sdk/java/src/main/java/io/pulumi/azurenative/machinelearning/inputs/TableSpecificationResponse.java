@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.ColumnSpecificationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -36,7 +36,7 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="format")
-    private final @Nullable String format;
+      private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -47,7 +47,7 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,ColumnSpecificationResponse> properties;
+      private final @Nullable Map<String,ColumnSpecificationResponse> properties;
 
     public Map<String,ColumnSpecificationResponse> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -58,7 +58,7 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="title")
-    private final @Nullable String title;
+      private final @Nullable String title;
 
     public Optional<String> getTitle() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
@@ -69,7 +69,7 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -148,7 +148,6 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TableSpecificationResponse build() {
             return new TableSpecificationResponse(description, format, properties, title, type);
         }

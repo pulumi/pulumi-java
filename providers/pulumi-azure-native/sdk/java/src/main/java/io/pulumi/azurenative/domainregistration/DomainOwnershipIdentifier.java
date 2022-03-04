@@ -9,8 +9,8 @@ import io.pulumi.azurenative.domainregistration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -100,6 +100,37 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DomainOwnershipIdentifierArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.domainregistration.DomainOwnershipIdentifierArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.domainregistration.DomainOwnershipIdentifierArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DomainOwnershipIdentifier(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DomainOwnershipIdentifier(String name) {
+        this(name, DomainOwnershipIdentifierArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DomainOwnershipIdentifier(String name, DomainOwnershipIdentifierArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

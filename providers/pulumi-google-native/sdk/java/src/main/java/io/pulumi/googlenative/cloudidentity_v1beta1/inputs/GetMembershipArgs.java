@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetMembershipArgs Empty = new GetMembershipArgs();
 
     @InputImport(name="groupId", required=true)
-    private final String groupId;
+      private final String groupId;
 
     public String getGroupId() {
         return this.groupId;
     }
 
     @InputImport(name="membershipId", required=true)
-    private final String membershipId;
+      private final String membershipId;
 
     public String getMembershipId() {
         return this.membershipId;
@@ -69,7 +69,6 @@ public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
             this.membershipId = Objects.requireNonNull(membershipId);
             return this;
         }
-
         public GetMembershipArgs build() {
             return new GetMembershipArgs(groupId, membershipId);
         }

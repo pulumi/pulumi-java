@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyIdentity;
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,35 +56,35 @@ public final class GetAccessPolicyResult {
     /**
      * The ARN of the access policy.
      * 
-     */
+    */
     public Optional<String> getAccessPolicyArn() {
         return Optional.ofNullable(this.accessPolicyArn);
     }
     /**
      * The ID of the access policy.
      * 
-     */
+    */
     public Optional<String> getAccessPolicyId() {
         return Optional.ofNullable(this.accessPolicyId);
     }
     /**
      * The identity for this access policy. Choose either a user or a group but not both.
      * 
-     */
+    */
     public Optional<AccessPolicyIdentity> getAccessPolicyIdentity() {
         return Optional.ofNullable(this.accessPolicyIdentity);
     }
     /**
      * The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
      * 
-     */
+    */
     public Optional<String> getAccessPolicyPermission() {
         return Optional.ofNullable(this.accessPolicyPermission);
     }
     /**
      * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
      * 
-     */
+    */
     public Optional<AccessPolicyResource> getAccessPolicyResource() {
         return Optional.ofNullable(this.accessPolicyResource);
     }
@@ -141,7 +141,6 @@ public final class GetAccessPolicyResult {
             this.accessPolicyResource = accessPolicyResource;
             return this;
         }
-
         public GetAccessPolicyResult build() {
             return new GetAccessPolicyResult(accessPolicyArn, accessPolicyId, accessPolicyIdentity, accessPolicyPermission, accessPolicyResource);
         }

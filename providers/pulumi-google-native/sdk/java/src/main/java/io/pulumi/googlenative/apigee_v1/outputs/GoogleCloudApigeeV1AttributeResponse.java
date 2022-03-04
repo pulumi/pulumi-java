@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudApigeeV1AttributeResponse {
     /**
      * API key of the attribute.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Value of the attribute.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudApigeeV1AttributeResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudApigeeV1AttributeResponse build() {
             return new GoogleCloudApigeeV1AttributeResponse(name, value);
         }

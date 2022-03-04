@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.ClusteringArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.EncryptionConfigurationArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.ExternalDataConfigurationArgs;
@@ -31,14 +31,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clustering")
-    private final @Nullable Input<ClusteringArgs> clustering;
+      private final @Nullable Input<ClusteringArgs> clustering;
 
     public Input<ClusteringArgs> getClustering() {
         return this.clustering == null ? Input.empty() : this.clustering;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -49,7 +49,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable Input<EncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Input<EncryptionConfigurationArgs> encryptionConfiguration;
 
     public Input<EncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
@@ -71,7 +71,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+      private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -82,7 +82,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalDataConfiguration")
-    private final @Nullable Input<ExternalDataConfigurationArgs> externalDataConfiguration;
+      private final @Nullable Input<ExternalDataConfigurationArgs> externalDataConfiguration;
 
     public Input<ExternalDataConfigurationArgs> getExternalDataConfiguration() {
         return this.externalDataConfiguration == null ? Input.empty() : this.externalDataConfiguration;
@@ -93,7 +93,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -104,7 +104,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -115,7 +115,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="materializedView")
-    private final @Nullable Input<MaterializedViewDefinitionArgs> materializedView;
+      private final @Nullable Input<MaterializedViewDefinitionArgs> materializedView;
 
     public Input<MaterializedViewDefinitionArgs> getMaterializedView() {
         return this.materializedView == null ? Input.empty() : this.materializedView;
@@ -126,14 +126,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="model")
-    private final @Nullable Input<ModelDefinitionArgs> model;
+      private final @Nullable Input<ModelDefinitionArgs> model;
 
     public Input<ModelDefinitionArgs> getModel() {
         return this.model == null ? Input.empty() : this.model;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -144,7 +144,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rangePartitioning")
-    private final @Nullable Input<RangePartitioningArgs> rangePartitioning;
+      private final @Nullable Input<RangePartitioningArgs> rangePartitioning;
 
     public Input<RangePartitioningArgs> getRangePartitioning() {
         return this.rangePartitioning == null ? Input.empty() : this.rangePartitioning;
@@ -155,7 +155,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requirePartitionFilter")
-    private final @Nullable Input<Boolean> requirePartitionFilter;
+      private final @Nullable Input<Boolean> requirePartitionFilter;
 
     public Input<Boolean> getRequirePartitionFilter() {
         return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
@@ -166,7 +166,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<TableSchemaArgs> schema;
+      private final @Nullable Input<TableSchemaArgs> schema;
 
     public Input<TableSchemaArgs> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -177,7 +177,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableReference")
-    private final @Nullable Input<TableReferenceArgs> tableReference;
+      private final @Nullable Input<TableReferenceArgs> tableReference;
 
     public Input<TableReferenceArgs> getTableReference() {
         return this.tableReference == null ? Input.empty() : this.tableReference;
@@ -188,7 +188,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timePartitioning")
-    private final @Nullable Input<TimePartitioningArgs> timePartitioning;
+      private final @Nullable Input<TimePartitioningArgs> timePartitioning;
 
     public Input<TimePartitioningArgs> getTimePartitioning() {
         return this.timePartitioning == null ? Input.empty() : this.timePartitioning;
@@ -199,7 +199,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="view")
-    private final @Nullable Input<ViewDefinitionArgs> view;
+      private final @Nullable Input<ViewDefinitionArgs> view;
 
     public Input<ViewDefinitionArgs> getView() {
         return this.view == null ? Input.empty() : this.view;
@@ -483,7 +483,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.view = Input.ofNullable(view);
             return this;
         }
-
         public TableArgs build() {
             return new TableArgs(clustering, datasetId, description, encryptionConfiguration, expirationTime, externalDataConfiguration, friendlyName, labels, materializedView, model, project, rangePartitioning, requirePartitionFilter, schema, tableReference, timePartitioning, view);
         }

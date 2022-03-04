@@ -34,7 +34,6 @@ public final class MasterResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(MasterResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public MasterResponse build() {
             return new MasterResponse();
         }

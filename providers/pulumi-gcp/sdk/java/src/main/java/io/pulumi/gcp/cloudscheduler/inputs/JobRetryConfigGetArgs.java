@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxBackoffDuration")
-    private final @Nullable Input<String> maxBackoffDuration;
+      private final @Nullable Input<String> maxBackoffDuration;
 
     public Input<String> getMaxBackoffDuration() {
         return this.maxBackoffDuration == null ? Input.empty() : this.maxBackoffDuration;
@@ -35,7 +35,7 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxDoublings")
-    private final @Nullable Input<Integer> maxDoublings;
+      private final @Nullable Input<Integer> maxDoublings;
 
     public Input<Integer> getMaxDoublings() {
         return this.maxDoublings == null ? Input.empty() : this.maxDoublings;
@@ -48,7 +48,7 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxRetryDuration")
-    private final @Nullable Input<String> maxRetryDuration;
+      private final @Nullable Input<String> maxRetryDuration;
 
     public Input<String> getMaxRetryDuration() {
         return this.maxRetryDuration == null ? Input.empty() : this.maxRetryDuration;
@@ -60,7 +60,7 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minBackoffDuration")
-    private final @Nullable Input<String> minBackoffDuration;
+      private final @Nullable Input<String> minBackoffDuration;
 
     public Input<String> getMinBackoffDuration() {
         return this.minBackoffDuration == null ? Input.empty() : this.minBackoffDuration;
@@ -73,7 +73,7 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="retryCount")
-    private final @Nullable Input<Integer> retryCount;
+      private final @Nullable Input<Integer> retryCount;
 
     public Input<Integer> getRetryCount() {
         return this.retryCount == null ? Input.empty() : this.retryCount;
@@ -177,7 +177,6 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
             this.retryCount = Input.ofNullable(retryCount);
             return this;
         }
-
         public JobRetryConfigGetArgs build() {
             return new JobRetryConfigGetArgs(maxBackoffDuration, maxDoublings, maxRetryDuration, minBackoffDuration, retryCount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVirtualWanArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetVirtualWanArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="virtualWANName", required=true)
-    private final String virtualWANName;
+      private final String virtualWANName;
 
     public String getVirtualWANName() {
         return this.virtualWANName;
@@ -77,7 +77,6 @@ public final class GetVirtualWanArgs extends io.pulumi.resources.InvokeArgs {
             this.virtualWANName = Objects.requireNonNull(virtualWANName);
             return this;
         }
-
         public GetVirtualWanArgs build() {
             return new GetVirtualWanArgs(resourceGroupName, virtualWANName);
         }

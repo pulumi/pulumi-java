@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ServiceUnitArtifactsResponse {
     /**
      * The path to the ARM parameters file relative to the artifact source.
      * 
-     */
+    */
     public Optional<String> getParametersArtifactSourceRelativePath() {
         return Optional.ofNullable(this.parametersArtifactSourceRelativePath);
     }
     /**
      * The full URI of the ARM parameters file with the SAS token.
      * 
-     */
+    */
     public Optional<String> getParametersUri() {
         return Optional.ofNullable(this.parametersUri);
     }
     /**
      * The path to the ARM template file relative to the artifact source.
      * 
-     */
+    */
     public Optional<String> getTemplateArtifactSourceRelativePath() {
         return Optional.ofNullable(this.templateArtifactSourceRelativePath);
     }
     /**
      * The full URI of the ARM template file with the SAS token.
      * 
-     */
+    */
     public Optional<String> getTemplateUri() {
         return Optional.ofNullable(this.templateUri);
     }
@@ -118,7 +118,6 @@ public final class ServiceUnitArtifactsResponse {
             this.templateUri = templateUri;
             return this;
         }
-
         public ServiceUnitArtifactsResponse build() {
             return new ServiceUnitArtifactsResponse(parametersArtifactSourceRelativePath, parametersUri, templateArtifactSourceRelativePath, templateUri);
         }

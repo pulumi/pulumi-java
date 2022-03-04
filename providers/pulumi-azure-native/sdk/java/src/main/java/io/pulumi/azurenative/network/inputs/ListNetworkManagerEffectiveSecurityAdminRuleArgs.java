@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -30,7 +30,7 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
      * 
      */
     @InputImport(name="skipToken")
-    private final @Nullable String skipToken;
+      private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -41,7 +41,7 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
      * 
      */
     @InputImport(name="virtualNetworkName", required=true)
-    private final String virtualNetworkName;
+      private final String virtualNetworkName;
 
     public String getVirtualNetworkName() {
         return this.virtualNetworkName;
@@ -100,7 +100,6 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
         }
-
         public ListNetworkManagerEffectiveSecurityAdminRuleArgs build() {
             return new ListNetworkManagerEffectiveSecurityAdminRuleArgs(resourceGroupName, skipToken, virtualNetworkName);
         }

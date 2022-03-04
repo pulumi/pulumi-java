@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -68,49 +68,49 @@ public final class MysqlColumnResponse {
     /**
      * Column collation.
      * 
-     */
+    */
     public String getCollation() {
         return this.collation;
     }
     /**
      * Column name.
      * 
-     */
+    */
     public String getColumnName() {
         return this.columnName;
     }
     /**
      * The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
      * 
-     */
+    */
     public String getDataType() {
         return this.dataType;
     }
     /**
      * Column length.
      * 
-     */
+    */
     public Integer getLength() {
         return this.length;
     }
     /**
      * Whether or not the column can accept a null value.
      * 
-     */
+    */
     public Boolean getNullable() {
         return this.nullable;
     }
     /**
      * The ordinal position of the column in the table.
      * 
-     */
+    */
     public Integer getOrdinalPosition() {
         return this.ordinalPosition;
     }
     /**
      * Whether or not the column represents a primary key.
      * 
-     */
+    */
     public Boolean getPrimaryKey() {
         return this.primaryKey;
     }
@@ -181,7 +181,6 @@ public final class MysqlColumnResponse {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public MysqlColumnResponse build() {
             return new MysqlColumnResponse(collation, columnName, dataType, length, nullable, ordinalPosition, primaryKey);
         }

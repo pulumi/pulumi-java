@@ -13,7 +13,7 @@ import io.pulumi.awsnative.kendra.outputs.DataSourceServiceNowConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSharePointConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceWebCrawlerConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceWorkDocsConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -173,7 +173,6 @@ public final class DataSourceConfiguration {
             this.workDocsConfiguration = workDocsConfiguration;
             return this;
         }
-
         public DataSourceConfiguration build() {
             return new DataSourceConfiguration(confluenceConfiguration, databaseConfiguration, googleDriveConfiguration, oneDriveConfiguration, s3Configuration, salesforceConfiguration, serviceNowConfiguration, sharePointConfiguration, webCrawlerConfiguration, workDocsConfiguration);
         }

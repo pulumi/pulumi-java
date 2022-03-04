@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
      * 
      */
     @InputImport(name="categories", required=true)
-    private final List<String> categories;
+      private final List<String> categories;
 
     public List<String> getCategories() {
         return this.categories;
@@ -60,7 +60,6 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse build() {
             return new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(categories);
         }

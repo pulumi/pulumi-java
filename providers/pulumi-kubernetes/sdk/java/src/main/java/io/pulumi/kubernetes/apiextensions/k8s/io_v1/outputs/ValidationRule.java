@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,7 +57,7 @@ public final class ValidationRule {
     /**
      * Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is "failed rule: {Rule}". e.g. "must be a URL with the host matching spec.host"
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
@@ -88,7 +88,7 @@ public final class ValidationRule {
      *     are overwritten by values in `Y` when the key sets of `X` and `Y` intersect. Elements in `Y` with
      *     non-intersecting keys are appended, retaining their partial order.
      * 
-     */
+    */
     public String getRule() {
         return this.rule;
     }
@@ -124,7 +124,6 @@ public final class ValidationRule {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public ValidationRule build() {
             return new ValidationRule(message, rule);
         }

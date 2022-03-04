@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.SslPolicyWarningsItemDataItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class SslPolicyWarningsItemResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -30,7 +30,7 @@ public final class SslPolicyWarningsItemResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="data", required=true)
-    private final List<SslPolicyWarningsItemDataItemResponse> data;
+      private final List<SslPolicyWarningsItemDataItemResponse> data;
 
     public List<SslPolicyWarningsItemDataItemResponse> getData() {
         return this.data;
@@ -41,7 +41,7 @@ public final class SslPolicyWarningsItemResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -100,7 +100,6 @@ public final class SslPolicyWarningsItemResponse extends io.pulumi.resources.Inv
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public SslPolicyWarningsItemResponse build() {
             return new SslPolicyWarningsItemResponse(code, data, message);
         }

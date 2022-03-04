@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.GatewayRouteConfigPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gatewayName", required=true)
-    private final Input<String> gatewayName;
+      private final Input<String> gatewayName;
 
     public Input<String> getGatewayName() {
         return this.gatewayName;
@@ -31,7 +31,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<GatewayRouteConfigPropertiesArgs> properties;
+      private final @Nullable Input<GatewayRouteConfigPropertiesArgs> properties;
 
     public Input<GatewayRouteConfigPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="routeConfigName")
-    private final @Nullable Input<String> routeConfigName;
+      private final @Nullable Input<String> routeConfigName;
 
     public Input<String> getRouteConfigName() {
         return this.routeConfigName == null ? Input.empty() : this.routeConfigName;
@@ -64,7 +64,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -168,7 +168,6 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public GatewayRouteConfigArgs build() {
             return new GatewayRouteConfigArgs(gatewayName, properties, resourceGroupName, routeConfigName, serviceName);
         }

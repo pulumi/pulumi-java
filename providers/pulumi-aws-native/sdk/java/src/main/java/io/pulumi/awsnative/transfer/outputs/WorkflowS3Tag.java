@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.transfer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class WorkflowS3Tag {
     /**
      * The name assigned to the tag that you create.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value that corresponds to the key.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class WorkflowS3Tag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkflowS3Tag build() {
             return new WorkflowS3Tag(key, value);
         }

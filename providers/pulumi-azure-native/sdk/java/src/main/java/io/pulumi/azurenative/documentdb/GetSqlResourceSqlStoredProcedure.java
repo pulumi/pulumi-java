@@ -6,21 +6,41 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlStoredProcedureArgs;
 import io.pulumi.azurenative.documentdb.outputs.GetSqlResourceSqlStoredProcedureResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlStoredProcedure {
-/**
- * An Azure Cosmos DB storedProcedure.
+    private GetSqlResourceSqlStoredProcedure() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlResourceSqlStoredProcedureArgs.Builder a);
+    }
+    private static GetSqlResourceSqlStoredProcedureArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlResourceSqlStoredProcedureArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Cosmos DB storedProcedure.
  * API Version: 2021-03-15.
  * 
- *
- * An Azure Cosmos DB storedProcedure.
+     *
+     * An Azure Cosmos DB storedProcedure.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlResourceSqlStoredProcedureResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Cosmos DB storedProcedure.
+     * API Version: 2021-03-15.
+     * 
+     *
+         * An Azure Cosmos DB storedProcedure.
+     * 
+     */
     public static CompletableFuture<GetSqlResourceSqlStoredProcedureResult> invokeAsync(GetSqlResourceSqlStoredProcedureArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlStoredProcedure", TypeShape.of(GetSqlResourceSqlStoredProcedureResult.class), args == null ? GetSqlResourceSqlStoredProcedureArgs.Empty : args, Utilities.withVersion(options));
     }

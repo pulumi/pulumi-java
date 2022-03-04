@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1beta2.inputs.OidcTokenResponse;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attributes", required=true)
-    private final Map<String,String> attributes;
+      private final Map<String,String> attributes;
 
     public Map<String,String> getAttributes() {
         return this.attributes;
@@ -34,7 +34,7 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oidcToken", required=true)
-    private final OidcTokenResponse oidcToken;
+      private final OidcTokenResponse oidcToken;
 
     public OidcTokenResponse getOidcToken() {
         return this.oidcToken;
@@ -45,7 +45,7 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pushEndpoint", required=true)
-    private final String pushEndpoint;
+      private final String pushEndpoint;
 
     public String getPushEndpoint() {
         return this.pushEndpoint;
@@ -104,7 +104,6 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }
-
         public PushConfigResponse build() {
             return new PushConfigResponse(attributes, oidcToken, pushEndpoint);
         }

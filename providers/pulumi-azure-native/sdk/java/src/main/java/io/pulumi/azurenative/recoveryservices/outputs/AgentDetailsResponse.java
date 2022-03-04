@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.AgentDiskDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,35 +54,35 @@ public final class AgentDetailsResponse {
     /**
      * The Id of the agent running on the server.
      * 
-     */
+    */
     public String getAgentId() {
         return this.agentId;
     }
     /**
      * The machine BIOS Id.
      * 
-     */
+    */
     public String getBiosId() {
         return this.biosId;
     }
     /**
      * The details of agent disks.
      * 
-     */
+    */
     public List<AgentDiskDetailsResponse> getDisks() {
         return this.disks;
     }
     /**
      * The machine FQDN.
      * 
-     */
+    */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * The Id of the machine to which the agent is registered.
      * 
-     */
+    */
     public String getMachineId() {
         return this.machineId;
     }
@@ -139,7 +139,6 @@ public final class AgentDetailsResponse {
             this.machineId = Objects.requireNonNull(machineId);
             return this;
         }
-
         public AgentDetailsResponse build() {
             return new AgentDetailsResponse(agentId, biosId, disks, fqdn, machineId);
         }

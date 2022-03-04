@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.inputs.MySqlReplicaConfigurationArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="failoverTarget")
-    private final @Nullable Input<Boolean> failoverTarget;
+      private final @Nullable Input<Boolean> failoverTarget;
 
     public Input<Boolean> getFailoverTarget() {
         return this.failoverTarget == null ? Input.empty() : this.failoverTarget;
@@ -36,7 +36,7 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -47,7 +47,7 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mysqlReplicaConfiguration")
-    private final @Nullable Input<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration;
+      private final @Nullable Input<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration;
 
     public Input<MySqlReplicaConfigurationArgs> getMysqlReplicaConfiguration() {
         return this.mysqlReplicaConfiguration == null ? Input.empty() : this.mysqlReplicaConfiguration;
@@ -121,7 +121,6 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
             this.mysqlReplicaConfiguration = Input.ofNullable(mysqlReplicaConfiguration);
             return this;
         }
-
         public ReplicaConfigurationArgs build() {
             return new ReplicaConfigurationArgs(failoverTarget, kind, mysqlReplicaConfiguration);
         }

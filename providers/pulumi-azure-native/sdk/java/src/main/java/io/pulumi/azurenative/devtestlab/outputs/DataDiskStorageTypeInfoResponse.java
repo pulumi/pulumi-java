@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DataDiskStorageTypeInfoResponse {
     /**
      * Disk Lun
      * 
-     */
+    */
     public Optional<String> getLun() {
         return Optional.ofNullable(this.lun);
     }
     /**
      * Disk Storage Type
      * 
-     */
+    */
     public Optional<String> getStorageType() {
         return Optional.ofNullable(this.storageType);
     }
@@ -76,7 +76,6 @@ public final class DataDiskStorageTypeInfoResponse {
             this.storageType = storageType;
             return this;
         }
-
         public DataDiskStorageTypeInfoResponse build() {
             return new DataDiskStorageTypeInfoResponse(lun, storageType);
         }

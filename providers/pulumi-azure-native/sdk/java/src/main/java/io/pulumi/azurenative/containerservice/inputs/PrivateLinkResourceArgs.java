@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable Input<String> groupId;
+      private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -35,7 +35,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -46,7 +46,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="requiredMembers")
-    private final @Nullable Input<List<String>> requiredMembers;
+      private final @Nullable Input<List<String>> requiredMembers;
 
     public Input<List<String>> getRequiredMembers() {
         return this.requiredMembers == null ? Input.empty() : this.requiredMembers;
@@ -68,7 +68,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -172,7 +172,6 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public PrivateLinkResourceArgs build() {
             return new PrivateLinkResourceArgs(groupId, id, name, requiredMembers, type);
         }

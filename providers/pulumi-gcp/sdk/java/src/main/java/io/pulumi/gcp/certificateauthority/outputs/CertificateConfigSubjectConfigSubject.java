@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,56 +75,56 @@ public final class CertificateConfigSubjectConfigSubject {
     /**
      * The common name of the distinguished name.
      * 
-     */
+    */
     public String getCommonName() {
         return this.commonName;
     }
     /**
      * The country code of the subject.
      * 
-     */
+    */
     public Optional<String> getCountryCode() {
         return Optional.ofNullable(this.countryCode);
     }
     /**
      * The locality or city of the subject.
      * 
-     */
+    */
     public Optional<String> getLocality() {
         return Optional.ofNullable(this.locality);
     }
     /**
      * The organization of the subject.
      * 
-     */
+    */
     public String getOrganization() {
         return this.organization;
     }
     /**
      * The organizational unit of the subject.
      * 
-     */
+    */
     public Optional<String> getOrganizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
     /**
      * The postal code of the subject.
      * 
-     */
+    */
     public Optional<String> getPostalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
      * The province, territory, or regional state of the subject.
      * 
-     */
+    */
     public Optional<String> getProvince() {
         return Optional.ofNullable(this.province);
     }
     /**
      * The street address of the subject.
      * 
-     */
+    */
     public Optional<String> getStreetAddress() {
         return Optional.ofNullable(this.streetAddress);
     }
@@ -202,7 +202,6 @@ public final class CertificateConfigSubjectConfigSubject {
             this.streetAddress = streetAddress;
             return this;
         }
-
         public CertificateConfigSubjectConfigSubject build() {
             return new CertificateConfigSubjectConfigSubject(commonName, countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }

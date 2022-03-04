@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class LinkedWorkspacePropsResponse {
     /**
      * ResourceId of the link target of the linked workspace.
      * 
-     */
+    */
     public Optional<String> getLinkedWorkspaceResourceId() {
         return Optional.ofNullable(this.linkedWorkspaceResourceId);
     }
     /**
      * ResourceId of the user assigned identity for the linked workspace.
      * 
-     */
+    */
     public Optional<String> getUserAssignedIdentityResourceId() {
         return Optional.ofNullable(this.userAssignedIdentityResourceId);
     }
@@ -76,7 +76,6 @@ public final class LinkedWorkspacePropsResponse {
             this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;
         }
-
         public LinkedWorkspacePropsResponse build() {
             return new LinkedWorkspacePropsResponse(linkedWorkspaceResourceId, userAssignedIdentityResourceId);
         }

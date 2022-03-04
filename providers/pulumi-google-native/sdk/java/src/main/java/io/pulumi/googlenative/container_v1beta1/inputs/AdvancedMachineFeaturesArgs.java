@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="threadsPerCore")
-    private final @Nullable Input<String> threadsPerCore;
+      private final @Nullable Input<String> threadsPerCore;
 
     public Input<String> getThreadsPerCore() {
         return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;
@@ -66,7 +66,6 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             this.threadsPerCore = Input.ofNullable(threadsPerCore);
             return this;
         }
-
         public AdvancedMachineFeaturesArgs build() {
             return new AdvancedMachineFeaturesArgs(threadsPerCore);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.
      * 
      */
     @InputImport(name="properties", required=true)
-    private final List<String> properties;
+      private final List<String> properties;
 
     public List<String> getProperties() {
         return this.properties;
@@ -34,7 +34,7 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.
      * 
      */
     @InputImport(name="source", required=true)
-    private final OSPolicyResourceFileResponse source;
+      private final OSPolicyResourceFileResponse source;
 
     public OSPolicyResourceFileResponse getSource() {
         return this.source;
@@ -83,7 +83,6 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OSPolicyResourcePackageResourceMSIResponse build() {
             return new OSPolicyResourcePackageResourceMSIResponse(properties, source);
         }

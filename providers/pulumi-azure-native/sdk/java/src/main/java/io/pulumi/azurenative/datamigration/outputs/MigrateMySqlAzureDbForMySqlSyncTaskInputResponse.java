@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.MySqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -40,21 +40,21 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
     /**
      * Databases to migrate
      * 
-     */
+    */
     public List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Connection information for source MySQL
      * 
-     */
+    */
     public MySqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Connection information for target Azure Database for MySQL
      * 
-     */
+    */
     public MySqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -97,7 +97,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskInputResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }

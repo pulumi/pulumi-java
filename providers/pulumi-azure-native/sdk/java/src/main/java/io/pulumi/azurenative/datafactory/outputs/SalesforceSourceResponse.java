@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -84,56 +84,56 @@ public final class SalesforceSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
-     */
+    */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Database query. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getQuery() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * The read behavior for the operation. Default is Query.
      * 
-     */
+    */
     public Optional<String> getReadBehavior() {
         return Optional.ofNullable(this.readBehavior);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -141,7 +141,7 @@ public final class SalesforceSourceResponse {
      * Copy source type.
      * Expected value is 'SalesforceSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -226,7 +226,6 @@ public final class SalesforceSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SalesforceSourceResponse build() {
             return new SalesforceSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, readBehavior, sourceRetryCount, sourceRetryWait, type);
         }

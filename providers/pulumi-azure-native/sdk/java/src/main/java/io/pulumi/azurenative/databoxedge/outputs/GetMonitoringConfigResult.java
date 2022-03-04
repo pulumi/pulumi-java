@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.MetricConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,28 +47,28 @@ public final class GetMonitoringConfigResult {
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The metrics configuration details
      * 
-     */
+    */
     public List<MetricConfigurationResponse> getMetricConfigurations() {
         return this.metricConfigurations;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -118,7 +118,6 @@ public final class GetMonitoringConfigResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMonitoringConfigResult build() {
             return new GetMonitoringConfigResult(id, metricConfigurations, name, type);
         }

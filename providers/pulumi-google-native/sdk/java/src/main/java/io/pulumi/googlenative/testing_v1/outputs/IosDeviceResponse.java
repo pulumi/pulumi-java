@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class IosDeviceResponse {
     /**
      * The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-     */
+    */
     public String getIosModelId() {
         return this.iosModelId;
     }
     /**
      * The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-     */
+    */
     public String getIosVersionId() {
         return this.iosVersionId;
     }
     /**
      * The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-     */
+    */
     public String getLocale() {
         return this.locale;
     }
     /**
      * How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-     */
+    */
     public String getOrientation() {
         return this.orientation;
     }
@@ -116,7 +116,6 @@ public final class IosDeviceResponse {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }
-
         public IosDeviceResponse build() {
             return new IosDeviceResponse(iosModelId, iosVersionId, locale, orientation);
         }

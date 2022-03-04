@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wisdom.inputs;
 
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseAppIntegrationsConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class KnowledgeBaseSourceConfigurationArgs extends io.pulumi.resour
     public static final KnowledgeBaseSourceConfigurationArgs Empty = new KnowledgeBaseSourceConfigurationArgs();
 
     @InputImport(name="appIntegrations")
-    private final @Nullable Input<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
+      private final @Nullable Input<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
 
     public Input<KnowledgeBaseAppIntegrationsConfigurationArgs> getAppIntegrations() {
         return this.appIntegrations == null ? Input.empty() : this.appIntegrations;
@@ -58,7 +58,6 @@ public final class KnowledgeBaseSourceConfigurationArgs extends io.pulumi.resour
             this.appIntegrations = Input.ofNullable(appIntegrations);
             return this;
         }
-
         public KnowledgeBaseSourceConfigurationArgs build() {
             return new KnowledgeBaseSourceConfigurationArgs(appIntegrations);
         }

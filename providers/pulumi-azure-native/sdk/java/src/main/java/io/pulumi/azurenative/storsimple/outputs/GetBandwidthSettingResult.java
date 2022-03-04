@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.BandwidthScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -64,42 +64,42 @@ public final class GetBandwidthSettingResult {
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The schedules.
      * 
-     */
+    */
     public List<BandwidthScheduleResponse> getSchedules() {
         return this.schedules;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The number of volumes that uses the bandwidth setting.
      * 
-     */
+    */
     public Integer getVolumeCount() {
         return this.volumeCount;
     }
@@ -163,7 +163,6 @@ public final class GetBandwidthSettingResult {
             this.volumeCount = Objects.requireNonNull(volumeCount);
             return this;
         }
-
         public GetBandwidthSettingResult build() {
             return new GetBandwidthSettingResult(id, kind, name, schedules, type, volumeCount);
         }

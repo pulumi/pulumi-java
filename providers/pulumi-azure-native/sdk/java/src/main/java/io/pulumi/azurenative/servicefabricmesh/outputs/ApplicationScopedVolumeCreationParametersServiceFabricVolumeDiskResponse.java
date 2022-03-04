@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,7 +41,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     /**
      * User readable description of the volume.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -49,14 +49,14 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * Specifies the application-scoped volume kind.
      * Expected value is 'ServiceFabricVolumeDisk'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Volume size
      * 
-     */
+    */
     public String getSizeDisk() {
         return this.sizeDisk;
     }
@@ -99,7 +99,6 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
             this.sizeDisk = Objects.requireNonNull(sizeDisk);
             return this;
         }
-
         public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse build() {
             return new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(description, kind, sizeDisk);
         }

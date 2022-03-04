@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -65,7 +65,7 @@ public final class GetAccountResult {
     /**
      * The display name for the service account.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
@@ -74,21 +74,21 @@ public final class GetAccountResult {
      * should be referenced from any `gcp.organizations.getIAMPolicy` data sources
      * that would grant the service account privileges.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The fully-qualified name of the service account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -98,7 +98,7 @@ public final class GetAccountResult {
     /**
      * The unique id of the service account.
      * 
-     */
+    */
     public String getUniqueId() {
         return this.uniqueId;
     }
@@ -169,7 +169,6 @@ public final class GetAccountResult {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, displayName, email, id, name, project, uniqueId);
         }

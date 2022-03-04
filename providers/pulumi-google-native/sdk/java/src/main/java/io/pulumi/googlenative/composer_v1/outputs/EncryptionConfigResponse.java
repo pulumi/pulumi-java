@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EncryptionConfigResponse {
     /**
      * Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
@@ -52,7 +52,6 @@ public final class EncryptionConfigResponse {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(kmsKeyName);
         }

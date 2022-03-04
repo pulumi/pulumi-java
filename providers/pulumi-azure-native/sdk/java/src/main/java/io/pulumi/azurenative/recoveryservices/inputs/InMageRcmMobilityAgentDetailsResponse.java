@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="agentVersionExpiryDate", required=true)
-    private final String agentVersionExpiryDate;
+      private final String agentVersionExpiryDate;
 
     public String getAgentVersionExpiryDate() {
         return this.agentVersionExpiryDate;
@@ -33,7 +33,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="driverVersion", required=true)
-    private final String driverVersion;
+      private final String driverVersion;
 
     public String getDriverVersion() {
         return this.driverVersion;
@@ -44,7 +44,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="driverVersionExpiryDate", required=true)
-    private final String driverVersionExpiryDate;
+      private final String driverVersionExpiryDate;
 
     public String getDriverVersionExpiryDate() {
         return this.driverVersionExpiryDate;
@@ -55,7 +55,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="isUpgradeable", required=true)
-    private final String isUpgradeable;
+      private final String isUpgradeable;
 
     public String getIsUpgradeable() {
         return this.isUpgradeable;
@@ -66,7 +66,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="lastHeartbeatUtc", required=true)
-    private final String lastHeartbeatUtc;
+      private final String lastHeartbeatUtc;
 
     public String getLastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
@@ -77,7 +77,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="latestUpgradableVersionWithoutReboot", required=true)
-    private final String latestUpgradableVersionWithoutReboot;
+      private final String latestUpgradableVersionWithoutReboot;
 
     public String getLatestUpgradableVersionWithoutReboot() {
         return this.latestUpgradableVersionWithoutReboot;
@@ -88,7 +88,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="latestVersion", required=true)
-    private final String latestVersion;
+      private final String latestVersion;
 
     public String getLatestVersion() {
         return this.latestVersion;
@@ -99,7 +99,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="reasonsBlockingUpgrade", required=true)
-    private final List<String> reasonsBlockingUpgrade;
+      private final List<String> reasonsBlockingUpgrade;
 
     public List<String> getReasonsBlockingUpgrade() {
         return this.reasonsBlockingUpgrade;
@@ -110,7 +110,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -229,7 +229,6 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public InMageRcmMobilityAgentDetailsResponse build() {
             return new InMageRcmMobilityAgentDetailsResponse(agentVersionExpiryDate, driverVersion, driverVersionExpiryDate, isUpgradeable, lastHeartbeatUtc, latestUpgradableVersionWithoutReboot, latestVersion, reasonsBlockingUpgrade, version);
         }

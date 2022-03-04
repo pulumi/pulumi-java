@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datafusion_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datafusion_v1beta1.enums.InstanceType;
 import io.pulumi.googlenative.datafusion_v1beta1.inputs.AcceleratorArgs;
 import io.pulumi.googlenative.datafusion_v1beta1.inputs.CryptoKeyConfigArgs;
@@ -27,7 +27,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accelerators")
-    private final @Nullable Input<List<AcceleratorArgs>> accelerators;
+      private final @Nullable Input<List<AcceleratorArgs>> accelerators;
 
     public Input<List<AcceleratorArgs>> getAccelerators() {
         return this.accelerators == null ? Input.empty() : this.accelerators;
@@ -38,7 +38,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availableVersion")
-    private final @Nullable Input<List<VersionArgs>> availableVersion;
+      private final @Nullable Input<List<VersionArgs>> availableVersion;
 
     public Input<List<VersionArgs>> getAvailableVersion() {
         return this.availableVersion == null ? Input.empty() : this.availableVersion;
@@ -49,7 +49,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cryptoKeyConfig")
-    private final @Nullable Input<CryptoKeyConfigArgs> cryptoKeyConfig;
+      private final @Nullable Input<CryptoKeyConfigArgs> cryptoKeyConfig;
 
     public Input<CryptoKeyConfigArgs> getCryptoKeyConfig() {
         return this.cryptoKeyConfig == null ? Input.empty() : this.cryptoKeyConfig;
@@ -60,7 +60,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataprocServiceAccount")
-    private final @Nullable Input<String> dataprocServiceAccount;
+      private final @Nullable Input<String> dataprocServiceAccount;
 
     public Input<String> getDataprocServiceAccount() {
         return this.dataprocServiceAccount == null ? Input.empty() : this.dataprocServiceAccount;
@@ -71,7 +71,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -82,7 +82,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -93,7 +93,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableRbac")
-    private final @Nullable Input<Boolean> enableRbac;
+      private final @Nullable Input<Boolean> enableRbac;
 
     public Input<Boolean> getEnableRbac() {
         return this.enableRbac == null ? Input.empty() : this.enableRbac;
@@ -104,7 +104,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStackdriverLogging")
-    private final @Nullable Input<Boolean> enableStackdriverLogging;
+      private final @Nullable Input<Boolean> enableStackdriverLogging;
 
     public Input<Boolean> getEnableStackdriverLogging() {
         return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
@@ -115,14 +115,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStackdriverMonitoring")
-    private final @Nullable Input<Boolean> enableStackdriverMonitoring;
+      private final @Nullable Input<Boolean> enableStackdriverMonitoring;
 
     public Input<Boolean> getEnableStackdriverMonitoring() {
         return this.enableStackdriverMonitoring == null ? Input.empty() : this.enableStackdriverMonitoring;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -133,14 +133,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -151,7 +151,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-    private final @Nullable Input<NetworkConfigArgs> networkConfig;
+      private final @Nullable Input<NetworkConfigArgs> networkConfig;
 
     public Input<NetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -162,7 +162,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<Map<String,String>> options;
+      private final @Nullable Input<Map<String,String>> options;
 
     public Input<Map<String,String>> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -173,14 +173,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateInstance")
-    private final @Nullable Input<Boolean> privateInstance;
+      private final @Nullable Input<Boolean> privateInstance;
 
     public Input<Boolean> getPrivateInstance() {
         return this.privateInstance == null ? Input.empty() : this.privateInstance;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -191,7 +191,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<InstanceType> type;
+      private final Input<InstanceType> type;
 
     public Input<InstanceType> getType() {
         return this.type;
@@ -202,7 +202,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -213,7 +213,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -527,7 +527,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(accelerators, availableVersion, cryptoKeyConfig, dataprocServiceAccount, description, displayName, enableRbac, enableStackdriverLogging, enableStackdriverMonitoring, instanceId, labels, location, networkConfig, options, privateInstance, project, type, version, zone);
         }

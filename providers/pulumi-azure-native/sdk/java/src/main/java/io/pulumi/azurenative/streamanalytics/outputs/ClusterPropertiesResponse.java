@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class ClusterPropertiesResponse {
     /**
      * Represents the number of streaming units currently being used on the cluster.
      * 
-     */
+    */
     public Integer getCapacityAllocated() {
         return this.capacityAllocated;
     }
     /**
      * Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
      * 
-     */
+    */
     public Integer getCapacityAssigned() {
         return this.capacityAssigned;
     }
     /**
      * Unique identifier for the cluster.
      * 
-     */
+    */
     public String getClusterId() {
         return this.clusterId;
     }
     /**
      * The date this cluster was created.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -138,7 +138,6 @@ public final class ClusterPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ClusterPropertiesResponse build() {
             return new ClusterPropertiesResponse(capacityAllocated, capacityAssigned, clusterId, createdDate, provisioningState);
         }

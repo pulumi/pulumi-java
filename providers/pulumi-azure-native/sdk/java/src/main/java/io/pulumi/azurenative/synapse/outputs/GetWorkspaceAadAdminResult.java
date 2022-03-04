@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class GetWorkspaceAadAdminResult {
     /**
      * Workspace active directory administrator type
      * 
-     */
+    */
     public Optional<String> getAdministratorType() {
         return Optional.ofNullable(this.administratorType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Login of the workspace active directory administrator
      * 
-     */
+    */
     public Optional<String> getLogin() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Object ID of the workspace active directory administrator
      * 
-     */
+    */
     public Optional<String> getSid() {
         return Optional.ofNullable(this.sid);
     }
     /**
      * Tenant ID of the workspace active directory administrator
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -181,7 +181,6 @@ public final class GetWorkspaceAadAdminResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkspaceAadAdminResult build() {
             return new GetWorkspaceAadAdminResult(administratorType, id, login, name, sid, tenantId, type);
         }

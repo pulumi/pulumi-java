@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,35 +62,35 @@ public final class ClientCertAuthenticationResponse {
     /**
      * Gets or sets the certificate expiration date.
      * 
-     */
+    */
     public Optional<String> getCertificateExpirationDate() {
         return Optional.ofNullable(this.certificateExpirationDate);
     }
     /**
      * Gets or sets the certificate subject name.
      * 
-     */
+    */
     public Optional<String> getCertificateSubjectName() {
         return Optional.ofNullable(this.certificateSubjectName);
     }
     /**
      * Gets or sets the certificate thumbprint.
      * 
-     */
+    */
     public Optional<String> getCertificateThumbprint() {
         return Optional.ofNullable(this.certificateThumbprint);
     }
     /**
      * Gets or sets the certificate password, return value will always be empty.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
      * 
-     */
+    */
     public Optional<String> getPfx() {
         return Optional.ofNullable(this.pfx);
     }
@@ -98,7 +98,7 @@ public final class ClientCertAuthenticationResponse {
      * Gets or sets the HTTP authentication type.
      * Expected value is 'ClientCertificate'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class ClientCertAuthenticationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ClientCertAuthenticationResponse build() {
             return new ClientCertAuthenticationResponse(certificateExpirationDate, certificateSubjectName, certificateThumbprint, password, pfx, type);
         }

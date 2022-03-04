@@ -9,8 +9,8 @@ import io.pulumi.azurenative.storsimple.outputs.AsymmetricEncryptedSecretRespons
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -189,6 +189,37 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
         return this.volumeCount;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VolumeContainerArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.storsimple.VolumeContainerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.storsimple.VolumeContainerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VolumeContainer(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VolumeContainer(String name) {
+        this(name, VolumeContainerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VolumeContainer(String name, VolumeContainerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

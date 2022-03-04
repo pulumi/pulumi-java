@@ -7,8 +7,8 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.signer.ProfilePermissionArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -49,6 +49,37 @@ public class ProfilePermission extends io.pulumi.resources.CustomResource {
         return this.statementId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ProfilePermissionArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.signer.ProfilePermissionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.signer.ProfilePermissionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ProfilePermission(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ProfilePermission(String name) {
+        this(name, ProfilePermissionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ProfilePermission(String name, ProfilePermissionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

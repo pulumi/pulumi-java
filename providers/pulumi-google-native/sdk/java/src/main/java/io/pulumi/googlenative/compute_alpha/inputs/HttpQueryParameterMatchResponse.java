@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="exactMatch", required=true)
-    private final String exactMatch;
+      private final String exactMatch;
 
     public String getExactMatch() {
         return this.exactMatch;
@@ -33,7 +33,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="presentMatch", required=true)
-    private final Boolean presentMatch;
+      private final Boolean presentMatch;
 
     public Boolean getPresentMatch() {
         return this.presentMatch;
@@ -55,7 +55,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="regexMatch", required=true)
-    private final String regexMatch;
+      private final String regexMatch;
 
     public String getRegexMatch() {
         return this.regexMatch;
@@ -124,7 +124,6 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }
-
         public HttpQueryParameterMatchResponse build() {
             return new HttpQueryParameterMatchResponse(exactMatch, name, presentMatch, regexMatch);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetADLSGen2FileDataSetArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetADLSGen2FileDataSetArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dataSetName", required=true)
-    private final String dataSetName;
+      private final String dataSetName;
 
     public String getDataSetName() {
         return this.dataSetName;
@@ -39,7 +39,7 @@ public final class GetADLSGen2FileDataSetArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetADLSGen2FileDataSetArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final String shareName;
+      private final String shareName;
 
     public String getShareName() {
         return this.shareName;
@@ -119,7 +119,6 @@ public final class GetADLSGen2FileDataSetArgs extends io.pulumi.resources.Invoke
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public GetADLSGen2FileDataSetArgs build() {
             return new GetADLSGen2FileDataSetArgs(accountName, dataSetName, resourceGroupName, shareName);
         }

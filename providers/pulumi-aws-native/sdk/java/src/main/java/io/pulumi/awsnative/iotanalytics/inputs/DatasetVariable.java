@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetContentVersionValue;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetOutputFileUriValue;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,35 +18,35 @@ public final class DatasetVariable extends io.pulumi.resources.InvokeArgs {
     public static final DatasetVariable Empty = new DatasetVariable();
 
     @InputImport(name="datasetContentVersionValue")
-    private final @Nullable DatasetContentVersionValue datasetContentVersionValue;
+      private final @Nullable DatasetContentVersionValue datasetContentVersionValue;
 
     public Optional<DatasetContentVersionValue> getDatasetContentVersionValue() {
         return this.datasetContentVersionValue == null ? Optional.empty() : Optional.ofNullable(this.datasetContentVersionValue);
     }
 
     @InputImport(name="doubleValue")
-    private final @Nullable Double doubleValue;
+      private final @Nullable Double doubleValue;
 
     public Optional<Double> getDoubleValue() {
         return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
     }
 
     @InputImport(name="outputFileUriValue")
-    private final @Nullable DatasetOutputFileUriValue outputFileUriValue;
+      private final @Nullable DatasetOutputFileUriValue outputFileUriValue;
 
     public Optional<DatasetOutputFileUriValue> getOutputFileUriValue() {
         return this.outputFileUriValue == null ? Optional.empty() : Optional.ofNullable(this.outputFileUriValue);
     }
 
     @InputImport(name="stringValue")
-    private final @Nullable String stringValue;
+      private final @Nullable String stringValue;
 
     public Optional<String> getStringValue() {
         return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
     }
 
     @InputImport(name="variableName", required=true)
-    private final String variableName;
+      private final String variableName;
 
     public String getVariableName() {
         return this.variableName;
@@ -125,7 +125,6 @@ public final class DatasetVariable extends io.pulumi.resources.InvokeArgs {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
-
         public DatasetVariable build() {
             return new DatasetVariable(datasetContentVersionValue, doubleValue, outputFileUriValue, stringValue, variableName);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databox.outputs.ManagedDiskDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.StorageAccountDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.TransferConfigurationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,21 +44,21 @@ public final class DataExportDetailsResponse {
     /**
      * Account details of the data to be transferred
      * 
-     */
+    */
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> getAccountDetails() {
         return this.accountDetails;
     }
     /**
      * Level of the logs to be collected.
      * 
-     */
+    */
     public Optional<String> getLogCollectionLevel() {
         return Optional.ofNullable(this.logCollectionLevel);
     }
     /**
      * Configuration for the data transfer.
      * 
-     */
+    */
     public TransferConfigurationResponse getTransferConfiguration() {
         return this.transferConfiguration;
     }
@@ -101,7 +101,6 @@ public final class DataExportDetailsResponse {
             this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
             return this;
         }
-
         public DataExportDetailsResponse build() {
             return new DataExportDetailsResponse(accountDetails, logCollectionLevel, transferConfiguration);
         }

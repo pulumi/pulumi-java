@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class UpdateHistoryPropertyResponse {
     /**
      * The immutability period for the blobs in the container since the policy creation, in days.
      * 
-     */
+    */
     public Integer getImmutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays;
     }
     /**
      * Returns the Object ID of the user who updated the ImmutabilityPolicy.
      * 
-     */
+    */
     public String getObjectIdentifier() {
         return this.objectIdentifier;
     }
     /**
      * Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Returns the date and time the ImmutabilityPolicy was updated.
      * 
-     */
+    */
     public String getTimestamp() {
         return this.timestamp;
     }
     /**
      * The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.
      * 
-     */
+    */
     public String getUpdate() {
         return this.update;
     }
     /**
      * Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
      * 
-     */
+    */
     public String getUpn() {
         return this.upn;
     }
@@ -159,7 +159,6 @@ public final class UpdateHistoryPropertyResponse {
             this.upn = Objects.requireNonNull(upn);
             return this;
         }
-
         public UpdateHistoryPropertyResponse build() {
             return new UpdateHistoryPropertyResponse(immutabilityPeriodSinceCreationInDays, objectIdentifier, tenantId, timestamp, update, upn);
         }

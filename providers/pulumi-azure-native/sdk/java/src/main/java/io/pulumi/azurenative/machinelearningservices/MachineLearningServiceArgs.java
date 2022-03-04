@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequest
 import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequestKeysArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="computeType", required=true)
-    private final Input<Either<String,ComputeEnvironmentType>> computeType;
+      private final Input<Either<String,ComputeEnvironmentType>> computeType;
 
     public Input<Either<String,ComputeEnvironmentType>> getComputeType() {
         return this.computeType;
@@ -35,7 +35,7 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="environmentImageRequest")
-    private final @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
+      private final @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
     public Input<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
         return this.environmentImageRequest == null ? Input.empty() : this.environmentImageRequest;
@@ -57,7 +57,7 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<CreateServiceRequestKeysArgs> keys;
+      private final @Nullable Input<CreateServiceRequestKeysArgs> keys;
 
     public Input<CreateServiceRequestKeysArgs> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -68,7 +68,7 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kvTags")
-    private final @Nullable Input<Map<String,String>> kvTags;
+      private final @Nullable Input<Map<String,String>> kvTags;
 
     public Input<Map<String,String>> getKvTags() {
         return this.kvTags == null ? Input.empty() : this.kvTags;
@@ -79,7 +79,7 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -90,7 +90,7 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -101,7 +101,7 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -112,7 +112,7 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -123,7 +123,7 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -302,7 +302,6 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public MachineLearningServiceArgs build() {
             return new MachineLearningServiceArgs(computeType, description, environmentImageRequest, keys, kvTags, location, properties, resourceGroupName, serviceName, workspaceName);
         }

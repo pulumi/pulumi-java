@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency;
 import java.lang.String;
@@ -75,7 +75,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
      * Availability based SLI, dervied from count of requests made to this service that return successfully.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability> getAvailability() {
         return Optional.ofNullable(this.availability);
     }
@@ -83,7 +83,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
      * Parameters for a latency threshold SLI.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency> getLatency() {
         return Optional.ofNullable(this.latency);
     }
@@ -95,7 +95,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
      * that don't support breaking down by location, setting this
      * field will result in an error.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
@@ -107,7 +107,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
      * breaking down by method, setting this field will result in an
      * error.
      * 
-     */
+    */
     public List<String> getMethods() {
         return this.methods == null ? List.of() : this.methods;
     }
@@ -119,7 +119,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
      * that don't support breaking down by version, setting this
      * field will result in an error.
      * 
-     */
+    */
     public List<String> getVersions() {
         return this.versions == null ? List.of() : this.versions;
     }
@@ -176,7 +176,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
             this.versions = versions;
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance(availability, latency, locations, methods, versions);
         }

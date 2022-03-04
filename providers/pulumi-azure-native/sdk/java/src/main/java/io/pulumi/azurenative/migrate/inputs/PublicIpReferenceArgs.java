@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class PublicIpReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-    private final Input<String> sourceArmResourceId;
+      private final Input<String> sourceArmResourceId;
 
     public Input<String> getSourceArmResourceId() {
         return this.sourceArmResourceId;
@@ -65,7 +65,6 @@ public final class PublicIpReferenceArgs extends io.pulumi.resources.ResourceArg
             this.sourceArmResourceId = Input.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
         }
-
         public PublicIpReferenceArgs build() {
             return new PublicIpReferenceArgs(sourceArmResourceId);
         }

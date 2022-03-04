@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.IAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
     public static final IAMBindingState Empty = new IAMBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<IAMBindingConditionGetArgs> condition;
+      private final @Nullable Input<IAMBindingConditionGetArgs> condition;
 
     public Input<IAMBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,7 +28,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -39,7 +39,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -50,7 +50,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId")
-    private final @Nullable Input<String> orgId;
+      private final @Nullable Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId == null ? Input.empty() : this.orgId;
@@ -63,7 +63,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -167,7 +167,6 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public IAMBindingState build() {
             return new IAMBindingState(condition, etag, members, orgId, role);
         }

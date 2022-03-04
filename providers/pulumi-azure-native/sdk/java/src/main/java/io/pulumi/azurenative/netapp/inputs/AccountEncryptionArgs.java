@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keySource")
-    private final @Nullable Input<String> keySource;
+      private final @Nullable Input<String> keySource;
 
     public Input<String> getKeySource() {
         return this.keySource == null ? Input.empty() : this.keySource;
@@ -66,7 +66,6 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
             this.keySource = Input.ofNullable(keySource);
             return this;
         }
-
         public AccountEncryptionArgs build() {
             return new AccountEncryptionArgs(keySource);
         }

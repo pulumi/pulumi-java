@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
      * 
      */
     @InputImport(name="annotationSpecSet", required=true)
-    private final Input<String> annotationSpecSet;
+      private final Input<String> annotationSpecSet;
 
     public Input<String> getAnnotationSpecSet() {
         return this.annotationSpecSet;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
      * 
      */
     @InputImport(name="instructionMessage")
-    private final @Nullable Input<String> instructionMessage;
+      private final @Nullable Input<String> instructionMessage;
 
     public Input<String> getInstructionMessage() {
         return this.instructionMessage == null ? Input.empty() : this.instructionMessage;
@@ -93,7 +93,6 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
             this.instructionMessage = Input.ofNullable(instructionMessage);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(annotationSpecSet, instructionMessage);
         }

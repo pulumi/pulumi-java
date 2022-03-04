@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
      * 
      */
     @InputImport(name="deletionTime", required=true)
-    private final String deletionTime;
+      private final String deletionTime;
 
     public String getDeletionTime() {
         return this.deletionTime;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -35,7 +35,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
      * 
      */
     @InputImport(name="namespaceUrl", required=true)
-    private final String namespaceUrl;
+      private final String namespaceUrl;
 
     public String getNamespaceUrl() {
         return this.namespaceUrl;
@@ -94,7 +94,6 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfigNamespaceResponse build() {
             return new ManagedZoneServiceDirectoryConfigNamespaceResponse(deletionTime, kind, namespaceUrl);
         }

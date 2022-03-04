@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class RecommendedActionMetricInfoResponse {
     /**
      * Gets the name of the metric. e.g., CPU, Number of Queries.
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * Gets the start time of time interval given by this MetricInfo.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
      * 
-     */
+    */
     public String getTimeGrain() {
         return this.timeGrain;
     }
     /**
      * Gets the unit in which metric is measured. e.g., DTU, Frequency
      * 
-     */
+    */
     public String getUnit() {
         return this.unit;
     }
     /**
      * Gets the value of the metric in the time interval given by this MetricInfo.
      * 
-     */
+    */
     public Double getValue() {
         return this.value;
     }
@@ -138,7 +138,6 @@ public final class RecommendedActionMetricInfoResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RecommendedActionMetricInfoResponse build() {
             return new RecommendedActionMetricInfoResponse(metricName, startTime, timeGrain, unit, value);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="alarmRoleArn")
-    private final @Nullable Input<String> alarmRoleArn;
+      private final @Nullable Input<String> alarmRoleArn;
 
     public Input<String> getAlarmRoleArn() {
         return this.alarmRoleArn == null ? Input.empty() : this.alarmRoleArn;
@@ -34,7 +34,7 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notificationLambdaArn")
-    private final @Nullable Input<String> notificationLambdaArn;
+      private final @Nullable Input<String> notificationLambdaArn;
 
     public Input<String> getNotificationLambdaArn() {
         return this.notificationLambdaArn == null ? Input.empty() : this.notificationLambdaArn;
@@ -93,7 +93,6 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.notificationLambdaArn = Input.ofNullable(notificationLambdaArn);
             return this;
         }
-
         public AlarmsPropertiesArgs build() {
             return new AlarmsPropertiesArgs(alarmRoleArn, notificationLambdaArn);
         }

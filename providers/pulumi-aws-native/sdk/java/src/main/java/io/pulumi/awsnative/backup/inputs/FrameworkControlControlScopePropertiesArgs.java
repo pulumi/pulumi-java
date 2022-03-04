@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="complianceResourceIds")
-    private final @Nullable Input<List<String>> complianceResourceIds;
+      private final @Nullable Input<List<String>> complianceResourceIds;
 
     public Input<List<String>> getComplianceResourceIds() {
         return this.complianceResourceIds == null ? Input.empty() : this.complianceResourceIds;
@@ -36,7 +36,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="complianceResourceTypes")
-    private final @Nullable Input<List<String>> complianceResourceTypes;
+      private final @Nullable Input<List<String>> complianceResourceTypes;
 
     public Input<List<String>> getComplianceResourceTypes() {
         return this.complianceResourceTypes == null ? Input.empty() : this.complianceResourceTypes;
@@ -47,7 +47,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FrameworkTagArgs>> tags;
+      private final @Nullable Input<List<FrameworkTagArgs>> tags;
 
     public Input<List<FrameworkTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -121,7 +121,6 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public FrameworkControlControlScopePropertiesArgs build() {
             return new FrameworkControlControlScopePropertiesArgs(complianceResourceIds, complianceResourceTypes, tags);
         }

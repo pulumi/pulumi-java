@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetApiPortalArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apiPortalName", required=true)
-    private final String apiPortalName;
+      private final String apiPortalName;
 
     public String getApiPortalName() {
         return this.apiPortalName;
@@ -28,7 +28,7 @@ public final class GetApiPortalArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetApiPortalArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -98,7 +98,6 @@ public final class GetApiPortalArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetApiPortalArgs build() {
             return new GetApiPortalArgs(apiPortalName, resourceGroupName, serviceName);
         }

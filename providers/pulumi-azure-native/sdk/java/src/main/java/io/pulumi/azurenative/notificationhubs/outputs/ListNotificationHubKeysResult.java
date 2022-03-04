@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ListNotificationHubKeysResult {
     /**
      * KeyName of the created AuthorizationRule
      * 
-     */
+    */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * PrimaryConnectionString of the AuthorizationRule.
      * 
-     */
+    */
     public Optional<String> getPrimaryConnectionString() {
         return Optional.ofNullable(this.primaryConnectionString);
     }
     /**
      * PrimaryKey of the created AuthorizationRule.
      * 
-     */
+    */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * SecondaryConnectionString of the created AuthorizationRule
      * 
-     */
+    */
     public Optional<String> getSecondaryConnectionString() {
         return Optional.ofNullable(this.secondaryConnectionString);
     }
     /**
      * SecondaryKey of the created AuthorizationRule
      * 
-     */
+    */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -139,7 +139,6 @@ public final class ListNotificationHubKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListNotificationHubKeysResult build() {
             return new ListNotificationHubKeysResult(keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

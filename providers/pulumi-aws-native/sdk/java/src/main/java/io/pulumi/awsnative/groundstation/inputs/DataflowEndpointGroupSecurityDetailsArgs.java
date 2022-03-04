@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class DataflowEndpointGroupSecurityDetailsArgs extends io.pulumi.re
     public static final DataflowEndpointGroupSecurityDetailsArgs Empty = new DataflowEndpointGroupSecurityDetailsArgs();
 
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
     }
 
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -104,7 +104,6 @@ public final class DataflowEndpointGroupSecurityDetailsArgs extends io.pulumi.re
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
-
         public DataflowEndpointGroupSecurityDetailsArgs build() {
             return new DataflowEndpointGroupSecurityDetailsArgs(roleArn, securityGroupIds, subnetIds);
         }

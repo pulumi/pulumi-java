@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceColumnDefinitionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceSubresourcesArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceValidationArgs;
@@ -28,7 +28,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="additionalPrinterColumns")
-    private final @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
+      private final @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
     public Input<List<CustomResourceColumnDefinitionArgs>> getAdditionalPrinterColumns() {
         return this.additionalPrinterColumns == null ? Input.empty() : this.additionalPrinterColumns;
@@ -39,7 +39,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deprecated")
-    private final @Nullable Input<Boolean> deprecated;
+      private final @Nullable Input<Boolean> deprecated;
 
     public Input<Boolean> getDeprecated() {
         return this.deprecated == null ? Input.empty() : this.deprecated;
@@ -50,7 +50,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deprecationWarning")
-    private final @Nullable Input<String> deprecationWarning;
+      private final @Nullable Input<String> deprecationWarning;
 
     public Input<String> getDeprecationWarning() {
         return this.deprecationWarning == null ? Input.empty() : this.deprecationWarning;
@@ -61,7 +61,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -72,7 +72,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<CustomResourceValidationArgs> schema;
+      private final @Nullable Input<CustomResourceValidationArgs> schema;
 
     public Input<CustomResourceValidationArgs> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -83,7 +83,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="served", required=true)
-    private final Input<Boolean> served;
+      private final Input<Boolean> served;
 
     public Input<Boolean> getServed() {
         return this.served;
@@ -94,7 +94,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="storage", required=true)
-    private final Input<Boolean> storage;
+      private final Input<Boolean> storage;
 
     public Input<Boolean> getStorage() {
         return this.storage;
@@ -105,7 +105,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subresources")
-    private final @Nullable Input<CustomResourceSubresourcesArgs> subresources;
+      private final @Nullable Input<CustomResourceSubresourcesArgs> subresources;
 
     public Input<CustomResourceSubresourcesArgs> getSubresources() {
         return this.subresources == null ? Input.empty() : this.subresources;
@@ -254,7 +254,6 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
             this.subresources = Input.ofNullable(subresources);
             return this;
         }
-
         public CustomResourceDefinitionVersionArgs build() {
             return new CustomResourceDefinitionVersionArgs(additionalPrinterColumns, deprecated, deprecationWarning, name, schema, served, storage, subresources);
         }

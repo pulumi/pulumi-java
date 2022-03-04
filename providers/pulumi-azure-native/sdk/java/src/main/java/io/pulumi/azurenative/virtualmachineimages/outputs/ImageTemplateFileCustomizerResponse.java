@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,28 +55,28 @@ public final class ImageTemplateFileCustomizerResponse {
     /**
      * The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
      * 
-     */
+    */
     public Optional<String> getDestination() {
         return Optional.ofNullable(this.destination);
     }
     /**
      * Friendly Name to provide context on what this customization step does
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * SHA256 checksum of the file provided in the sourceUri field above
      * 
-     */
+    */
     public Optional<String> getSha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
     /**
      * The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
      * 
-     */
+    */
     public Optional<String> getSourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }
@@ -84,7 +84,7 @@ public final class ImageTemplateFileCustomizerResponse {
      * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
      * Expected value is 'File'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -141,7 +141,6 @@ public final class ImageTemplateFileCustomizerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateFileCustomizerResponse build() {
             return new ImageTemplateFileCustomizerResponse(destination, name, sha256Checksum, sourceUri, type);
         }

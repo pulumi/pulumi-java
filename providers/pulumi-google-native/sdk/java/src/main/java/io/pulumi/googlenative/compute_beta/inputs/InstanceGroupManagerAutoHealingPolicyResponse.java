@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
      * 
      */
     @InputImport(name="healthCheck", required=true)
-    private final String healthCheck;
+      private final String healthCheck;
 
     public String getHealthCheck() {
         return this.healthCheck;
@@ -29,7 +29,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
      * 
      */
     @InputImport(name="initialDelaySec", required=true)
-    private final Integer initialDelaySec;
+      private final Integer initialDelaySec;
 
     public Integer getInitialDelaySec() {
         return this.initialDelaySec;
@@ -78,7 +78,6 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPolicyResponse build() {
             return new InstanceGroupManagerAutoHealingPolicyResponse(healthCheck, initialDelaySec);
         }

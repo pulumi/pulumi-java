@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.ResourceIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class StorageAccountResponse {
     /**
      * The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * A managed identity that Video Analyzer will use to access the storage account.
      * 
-     */
+    */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The current status of the storage account mapping.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -98,7 +98,6 @@ public final class StorageAccountResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(id, identity, status);
         }

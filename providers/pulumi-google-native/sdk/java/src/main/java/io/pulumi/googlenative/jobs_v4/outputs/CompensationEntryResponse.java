@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.CompensationRangeResponse;
 import io.pulumi.googlenative.jobs_v4.outputs.MoneyResponse;
 import java.lang.Double;
@@ -62,42 +62,42 @@ public final class CompensationEntryResponse {
     /**
      * Compensation amount.
      * 
-     */
+    */
     public MoneyResponse getAmount() {
         return this.amount;
     }
     /**
      * Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
      * 
-     */
+    */
     public Double getExpectedUnitsPerYear() {
         return this.expectedUnitsPerYear;
     }
     /**
      * Compensation range.
      * 
-     */
+    */
     public CompensationRangeResponse getRange() {
         return this.range;
     }
     /**
      * Compensation type. Default is CompensationType.COMPENSATION_TYPE_UNSPECIFIED.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
      * 
-     */
+    */
     public String getUnit() {
         return this.unit;
     }
@@ -161,7 +161,6 @@ public final class CompensationEntryResponse {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public CompensationEntryResponse build() {
             return new CompensationEntryResponse(amount, description, expectedUnitsPerYear, range, type, unit);
         }

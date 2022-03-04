@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.KnownPublicNetworkAccessOptions;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
+      private final @Nullable Input<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
 
     public Input<Either<String,KnownPublicNetworkAccessOptions>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -68,7 +68,6 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public DataCollectionEndpointNetworkAclsArgs build() {
             return new DataCollectionEndpointNetworkAclsArgs(publicNetworkAccess);
         }

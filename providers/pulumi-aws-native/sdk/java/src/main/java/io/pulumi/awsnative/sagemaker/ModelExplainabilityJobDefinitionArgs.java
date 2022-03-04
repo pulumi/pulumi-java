@@ -12,7 +12,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionNetw
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionStoppingConditionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,49 +24,49 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
     public static final ModelExplainabilityJobDefinitionArgs Empty = new ModelExplainabilityJobDefinitionArgs();
 
     @InputImport(name="jobDefinitionName")
-    private final @Nullable Input<String> jobDefinitionName;
+      private final @Nullable Input<String> jobDefinitionName;
 
     public Input<String> getJobDefinitionName() {
         return this.jobDefinitionName == null ? Input.empty() : this.jobDefinitionName;
     }
 
     @InputImport(name="jobResources", required=true)
-    private final Input<ModelExplainabilityJobDefinitionMonitoringResourcesArgs> jobResources;
+      private final Input<ModelExplainabilityJobDefinitionMonitoringResourcesArgs> jobResources;
 
     public Input<ModelExplainabilityJobDefinitionMonitoringResourcesArgs> getJobResources() {
         return this.jobResources;
     }
 
     @InputImport(name="modelExplainabilityAppSpecification", required=true)
-    private final Input<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs> modelExplainabilityAppSpecification;
+      private final Input<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs> modelExplainabilityAppSpecification;
 
     public Input<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs> getModelExplainabilityAppSpecification() {
         return this.modelExplainabilityAppSpecification;
     }
 
     @InputImport(name="modelExplainabilityBaselineConfig")
-    private final @Nullable Input<ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs> modelExplainabilityBaselineConfig;
+      private final @Nullable Input<ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs> modelExplainabilityBaselineConfig;
 
     public Input<ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs> getModelExplainabilityBaselineConfig() {
         return this.modelExplainabilityBaselineConfig == null ? Input.empty() : this.modelExplainabilityBaselineConfig;
     }
 
     @InputImport(name="modelExplainabilityJobInput", required=true)
-    private final Input<ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs> modelExplainabilityJobInput;
+      private final Input<ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs> modelExplainabilityJobInput;
 
     public Input<ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs> getModelExplainabilityJobInput() {
         return this.modelExplainabilityJobInput;
     }
 
     @InputImport(name="modelExplainabilityJobOutputConfig", required=true)
-    private final Input<ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs> modelExplainabilityJobOutputConfig;
+      private final Input<ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs> modelExplainabilityJobOutputConfig;
 
     public Input<ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs> getModelExplainabilityJobOutputConfig() {
         return this.modelExplainabilityJobOutputConfig;
     }
 
     @InputImport(name="networkConfig")
-    private final @Nullable Input<ModelExplainabilityJobDefinitionNetworkConfigArgs> networkConfig;
+      private final @Nullable Input<ModelExplainabilityJobDefinitionNetworkConfigArgs> networkConfig;
 
     public Input<ModelExplainabilityJobDefinitionNetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -77,14 +77,14 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stoppingCondition")
-    private final @Nullable Input<ModelExplainabilityJobDefinitionStoppingConditionArgs> stoppingCondition;
+      private final @Nullable Input<ModelExplainabilityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
     public Input<ModelExplainabilityJobDefinitionStoppingConditionArgs> getStoppingCondition() {
         return this.stoppingCondition == null ? Input.empty() : this.stoppingCondition;
@@ -95,7 +95,7 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ModelExplainabilityJobDefinitionTagArgs>> tags;
+      private final @Nullable Input<List<ModelExplainabilityJobDefinitionTagArgs>> tags;
 
     public Input<List<ModelExplainabilityJobDefinitionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -274,7 +274,6 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionArgs build() {
             return new ModelExplainabilityJobDefinitionArgs(jobDefinitionName, jobResources, modelExplainabilityAppSpecification, modelExplainabilityBaselineConfig, modelExplainabilityJobInput, modelExplainabilityJobOutputConfig, networkConfig, roleArn, stoppingCondition, tags);
         }

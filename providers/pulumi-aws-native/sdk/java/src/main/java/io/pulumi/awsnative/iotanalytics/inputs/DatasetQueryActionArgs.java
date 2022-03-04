@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class DatasetQueryActionArgs extends io.pulumi.resources.ResourceAr
     public static final DatasetQueryActionArgs Empty = new DatasetQueryActionArgs();
 
     @InputImport(name="filters")
-    private final @Nullable Input<List<DatasetFilterArgs>> filters;
+      private final @Nullable Input<List<DatasetFilterArgs>> filters;
 
     public Input<List<DatasetFilterArgs>> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
     }
 
     @InputImport(name="sqlQuery", required=true)
-    private final Input<String> sqlQuery;
+      private final Input<String> sqlQuery;
 
     public Input<String> getSqlQuery() {
         return this.sqlQuery;
@@ -83,7 +83,6 @@ public final class DatasetQueryActionArgs extends io.pulumi.resources.ResourceAr
             this.sqlQuery = Input.of(Objects.requireNonNull(sqlQuery));
             return this;
         }
-
         public DatasetQueryActionArgs build() {
             return new DatasetQueryActionArgs(filters, sqlQuery);
         }

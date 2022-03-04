@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceFileResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class OSPolicyResourcePackageResourceRPMResponse {
     /**
      * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
      * 
-     */
+    */
     public Boolean getPullDeps() {
         return this.pullDeps;
     }
     /**
      * An rpm package.
      * 
-     */
+    */
     public OSPolicyResourceFileResponse getSource() {
         return this.source;
     }
@@ -75,7 +75,6 @@ public final class OSPolicyResourcePackageResourceRPMResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OSPolicyResourcePackageResourceRPMResponse build() {
             return new OSPolicyResourcePackageResourceRPMResponse(pullDeps, source);
         }

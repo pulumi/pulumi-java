@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="currentAverageUtilization")
-    private final @Nullable Input<Integer> currentAverageUtilization;
+      private final @Nullable Input<Integer> currentAverageUtilization;
 
     public Input<Integer> getCurrentAverageUtilization() {
         return this.currentAverageUtilization == null ? Input.empty() : this.currentAverageUtilization;
@@ -35,7 +35,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="currentAverageValue", required=true)
-    private final Input<String> currentAverageValue;
+      private final Input<String> currentAverageValue;
 
     public Input<String> getCurrentAverageValue() {
         return this.currentAverageValue;
@@ -46,7 +46,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -120,7 +120,6 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ResourceMetricStatusArgs build() {
             return new ResourceMetricStatusArgs(currentAverageUtilization, currentAverageValue, name);
         }

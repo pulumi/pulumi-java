@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurestackhci.outputs;
 
 import io.pulumi.azurenative.azurestackhci.outputs.PerNodeExtensionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -149,126 +149,126 @@ public final class GetExtensionResult {
     /**
      * Aggregate state of Arc Extensions across the nodes in this HCI cluster.
      * 
-     */
+    */
     public String getAggregateState() {
         return this.aggregateState;
     }
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
-     */
+    */
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
     /**
      * The timestamp of resource creation (UTC).
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The identity that created the resource.
      * 
-     */
+    */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The type of identity that created the resource.
      * 
-     */
+    */
     public Optional<String> getCreatedByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
-     */
+    */
     public Optional<String> getForceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The timestamp of resource last modification (UTC)
      * 
-     */
+    */
     public Optional<String> getLastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
      * The identity that last modified the resource.
      * 
-     */
+    */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource.
      * 
-     */
+    */
     public Optional<String> getLastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of Arc Extension in each of the nodes.
      * 
-     */
+    */
     public List<PerNodeExtensionStateResponse> getPerNodeExtensionDetails() {
         return this.perNodeExtensionDetails;
     }
     /**
      * Protected settings (may contain secrets).
      * 
-     */
+    */
     public Optional<Object> getProtectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
     /**
      * Provisioning state of the Extension proxy resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The name of the extension handler publisher.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * Json formatted public settings for the extension.
      * 
-     */
+    */
     public Optional<Object> getSettings() {
         return Optional.ofNullable(this.settings);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies the version of the script handler.
      * 
-     */
+    */
     public Optional<String> getTypeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
@@ -416,7 +416,6 @@ public final class GetExtensionResult {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public GetExtensionResult build() {
             return new GetExtensionResult(aggregateState, autoUpgradeMinorVersion, createdAt, createdBy, createdByType, forceUpdateTag, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, perNodeExtensionDetails, protectedSettings, provisioningState, publisher, settings, type, typeHandlerVersion);
         }

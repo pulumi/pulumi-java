@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurestack.outputs;
 
 import io.pulumi.azurenative.azurestack.outputs.ProductResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class GetProductsResult {
     /**
      * URI to the next page.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of products.
      * 
-     */
+    */
     public List<ProductResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -78,7 +78,6 @@ public final class GetProductsResult {
             this.value = value;
             return this;
         }
-
         public GetProductsResult build() {
             return new GetProductsResult(nextLink, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class PodSecurityPolicyConfigResponse {
     /**
      * Enable the PodSecurityPolicy controller for this cluster. If enabled, pods must be valid under a PodSecurityPolicy to be created.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -52,7 +52,6 @@ public final class PodSecurityPolicyConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public PodSecurityPolicyConfigResponse build() {
             return new PodSecurityPolicyConfigResponse(enabled);
         }

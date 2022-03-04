@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.enums.AddRemove;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="addRemove")
-    private final @Nullable Either<String,AddRemove> addRemove;
+      private final @Nullable Either<String,AddRemove> addRemove;
 
     public Either<String,AddRemove> getAddRemove() {
         return this.addRemove == null ? null : this.addRemove;
@@ -32,7 +32,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="labAccountResourceId")
-    private final @Nullable String labAccountResourceId;
+      private final @Nullable String labAccountResourceId;
 
     public Optional<String> getLabAccountResourceId() {
         return this.labAccountResourceId == null ? Optional.empty() : Optional.ofNullable(this.labAccountResourceId);
@@ -43,7 +43,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="labResourceId")
-    private final @Nullable String labResourceId;
+      private final @Nullable String labResourceId;
 
     public Optional<String> getLabResourceId() {
         return this.labResourceId == null ? Optional.empty() : Optional.ofNullable(this.labResourceId);
@@ -54,7 +54,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+      private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -123,7 +123,6 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetGlobalUserPersonalPreferencesArgs build() {
             return new GetGlobalUserPersonalPreferencesArgs(addRemove, labAccountResourceId, labResourceId, userName);
         }

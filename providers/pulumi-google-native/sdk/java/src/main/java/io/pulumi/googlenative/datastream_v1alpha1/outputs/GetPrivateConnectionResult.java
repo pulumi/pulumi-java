@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.ErrorResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.VpcPeeringConfigResponse;
 import java.lang.String;
@@ -76,56 +76,56 @@ public final class GetPrivateConnectionResult {
     /**
      * The create time of the resource.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Display name.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * In case of error, the details of the error in a user-friendly format.
      * 
-     */
+    */
     public ErrorResponse getError() {
         return this.error;
     }
     /**
      * Labels.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource's name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The state of the Private Connection.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The update time of the resource.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * VPC Peering Config
      * 
-     */
+    */
     public VpcPeeringConfigResponse getVpcPeeringConfig() {
         return this.vpcPeeringConfig;
     }
@@ -203,7 +203,6 @@ public final class GetPrivateConnectionResult {
             this.vpcPeeringConfig = Objects.requireNonNull(vpcPeeringConfig);
             return this;
         }
-
         public GetPrivateConnectionResult build() {
             return new GetPrivateConnectionResult(createTime, displayName, error, labels, name, state, updateTime, vpcPeeringConfig);
         }

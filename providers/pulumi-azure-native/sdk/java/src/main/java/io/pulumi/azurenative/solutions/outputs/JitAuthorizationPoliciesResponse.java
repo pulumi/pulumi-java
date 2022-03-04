@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class JitAuthorizationPoliciesResponse {
     /**
      * The the principal id that will be granted JIT access.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The role definition id that will be granted to the Principal.
      * 
-     */
+    */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -74,7 +74,6 @@ public final class JitAuthorizationPoliciesResponse {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public JitAuthorizationPoliciesResponse build() {
             return new JitAuthorizationPoliciesResponse(principalId, roleDefinitionId);
         }

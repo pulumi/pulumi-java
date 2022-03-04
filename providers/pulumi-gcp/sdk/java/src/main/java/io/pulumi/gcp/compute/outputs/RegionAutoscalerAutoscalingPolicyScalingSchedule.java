@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -70,49 +70,49 @@ public final class RegionAutoscalerAutoscalingPolicyScalingSchedule {
     /**
      * An optional description of this resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
      * 
-     */
+    */
     public Optional<Boolean> getDisabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
      * The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
      * 
-     */
+    */
     public Integer getDurationSec() {
         return this.durationSec;
     }
     /**
      * Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
      * 
-     */
+    */
     public Integer getMinRequiredReplicas() {
         return this.minRequiredReplicas;
     }
     /**
      * The identifier for this object. Format specified above.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
      * 
-     */
+    */
     public String getSchedule() {
         return this.schedule;
     }
     /**
      * The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
-     */
+    */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -183,7 +183,6 @@ public final class RegionAutoscalerAutoscalingPolicyScalingSchedule {
             this.timeZone = timeZone;
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyScalingSchedule build() {
             return new RegionAutoscalerAutoscalingPolicyScalingSchedule(description, disabled, durationSec, minRequiredReplicas, name, schedule, timeZone);
         }

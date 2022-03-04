@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.athena.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class WorkGroupTagArgs extends io.pulumi.resources.ResourceArgs {
     public static final WorkGroupTagArgs Empty = new WorkGroupTagArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -80,7 +80,6 @@ public final class WorkGroupTagArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public WorkGroupTagArgs build() {
             return new WorkGroupTagArgs(key, value);
         }

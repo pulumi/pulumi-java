@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetEnclaveCertificateIamRoleAssociationArgs;
 import io.pulumi.awsnative.ec2.outputs.GetEnclaveCertificateIamRoleAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnclaveCertificateIamRoleAssociation {
-/**
- * Associates an AWS Identity and Access Management (IAM) role with an AWS Certificate Manager (ACM) certificate. This association is based on Amazon Resource Names and it enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave.
+    private GetEnclaveCertificateIamRoleAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetEnclaveCertificateIamRoleAssociationArgs.Builder a);
+    }
+    private static GetEnclaveCertificateIamRoleAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEnclaveCertificateIamRoleAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Associates an AWS Identity and Access Management (IAM) role with an AWS Certificate Manager (ACM) certificate. This association is based on Amazon Resource Names and it enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave.
  * 
- */
+     */
+    public static CompletableFuture<GetEnclaveCertificateIamRoleAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Associates an AWS Identity and Access Management (IAM) role with an AWS Certificate Manager (ACM) certificate. This association is based on Amazon Resource Names and it enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave.
+     * 
+     */
     public static CompletableFuture<GetEnclaveCertificateIamRoleAssociationResult> invokeAsync(GetEnclaveCertificateIamRoleAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getEnclaveCertificateIamRoleAssociation", TypeShape.of(GetEnclaveCertificateIamRoleAssociationResult.class), args == null ? GetEnclaveCertificateIamRoleAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

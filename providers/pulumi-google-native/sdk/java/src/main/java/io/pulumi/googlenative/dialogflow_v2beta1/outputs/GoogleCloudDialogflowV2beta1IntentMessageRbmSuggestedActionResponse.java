@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse;
@@ -55,35 +55,35 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
     /**
      * Suggested client side action: Dial a phone number
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse getDial() {
         return this.dial;
     }
     /**
      * Suggested client side action: Open a URI on device
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse getOpenUrl() {
         return this.openUrl;
     }
     /**
      * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
      * 
-     */
+    */
     public String getPostbackData() {
         return this.postbackData;
     }
     /**
      * Suggested client side action: Share user location
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse getShareLocation() {
         return this.shareLocation;
     }
     /**
      * Text to display alongside the action.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
@@ -140,7 +140,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse(dial, openUrl, postbackData, shareLocation, text);
         }

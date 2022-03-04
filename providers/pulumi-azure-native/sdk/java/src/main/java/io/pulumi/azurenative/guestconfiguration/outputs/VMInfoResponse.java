@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class VMInfoResponse {
     /**
      * Azure resource Id of the VM.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * UUID(Universally Unique Identifier) of the VM.
      * 
-     */
+    */
     public String getUuid() {
         return this.uuid;
     }
@@ -74,7 +74,6 @@ public final class VMInfoResponse {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public VMInfoResponse build() {
             return new VMInfoResponse(id, uuid);
         }

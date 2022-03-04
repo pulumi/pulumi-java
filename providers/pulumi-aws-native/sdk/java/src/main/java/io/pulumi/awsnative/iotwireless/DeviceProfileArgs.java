@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.iotwireless.inputs.DeviceProfileLoRaWANDeviceProfileArgs;
 import io.pulumi.awsnative.iotwireless.inputs.DeviceProfileTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loRaWAN")
-    private final @Nullable Input<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN;
+      private final @Nullable Input<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN;
 
     public Input<DeviceProfileLoRaWANDeviceProfileArgs> getLoRaWAN() {
         return this.loRaWAN == null ? Input.empty() : this.loRaWAN;
@@ -33,7 +33,7 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DeviceProfileTagArgs>> tags;
+      private final @Nullable Input<List<DeviceProfileTagArgs>> tags;
 
     public Input<List<DeviceProfileTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,6 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DeviceProfileArgs build() {
             return new DeviceProfileArgs(loRaWAN, name, tags);
         }

@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxUnavailable")
-    private final @Nullable Input<Either<Integer,String>> maxUnavailable;
+      private final @Nullable Input<Either<Integer,String>> maxUnavailable;
 
     public Input<Either<Integer,String>> getMaxUnavailable() {
         return this.maxUnavailable == null ? Input.empty() : this.maxUnavailable;
@@ -68,7 +68,6 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
             this.maxUnavailable = Input.ofNullable(maxUnavailable);
             return this;
         }
-
         public RollingUpdateDaemonSetArgs build() {
             return new RollingUpdateDaemonSetArgs(maxUnavailable);
         }

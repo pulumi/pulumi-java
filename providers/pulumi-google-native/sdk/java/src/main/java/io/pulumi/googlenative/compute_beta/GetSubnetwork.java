@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetwork {
-/**
- * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
+    private GetSubnetwork() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubnetworkArgs.Builder a);
+    }
+    private static GetSubnetworkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubnetworkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetSubnetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
+     * 
+     */
     public static CompletableFuture<GetSubnetworkResult> invokeAsync(GetSubnetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args == null ? GetSubnetworkArgs.Empty : args, Utilities.withVersion(options));
     }

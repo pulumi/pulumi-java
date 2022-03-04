@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class SupportInfoResponse {
     /**
      * Support contact email address.
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * Support instructions.
      * 
-     */
+    */
     public Optional<String> getInstructions() {
         return Optional.ofNullable(this.instructions);
     }
     /**
      * Support contact phone number.
      * 
-     */
+    */
     public Optional<String> getPhone() {
         return Optional.ofNullable(this.phone);
     }
     /**
      * Support web address.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
@@ -118,7 +118,6 @@ public final class SupportInfoResponse {
             this.url = url;
             return this;
         }
-
         public SupportInfoResponse build() {
             return new SupportInfoResponse(email, instructions, phone, url);
         }

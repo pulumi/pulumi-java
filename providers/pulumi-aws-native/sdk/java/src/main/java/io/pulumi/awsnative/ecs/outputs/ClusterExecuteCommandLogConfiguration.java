@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class ClusterExecuteCommandLogConfiguration {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public ClusterExecuteCommandLogConfiguration build() {
             return new ClusterExecuteCommandLogConfiguration(cloudWatchEncryptionEnabled, cloudWatchLogGroupName, s3BucketName, s3EncryptionEnabled, s3KeyPrefix);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -81,63 +81,63 @@ public final class GetServerKeyResult {
     /**
      * Key auto rotation opt-in flag. Either true or false.
      * 
-     */
+    */
     public Boolean getAutoRotationEnabled() {
         return this.autoRotationEnabled;
     }
     /**
      * The server key creation date.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Subregion of the server key.
      * 
-     */
+    */
     public String getSubregion() {
         return this.subregion;
     }
     /**
      * Thumbprint of the server key.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -222,7 +222,6 @@ public final class GetServerKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerKeyResult build() {
             return new GetServerKeyResult(autoRotationEnabled, creationDate, id, kind, location, name, subregion, thumbprint, type);
         }

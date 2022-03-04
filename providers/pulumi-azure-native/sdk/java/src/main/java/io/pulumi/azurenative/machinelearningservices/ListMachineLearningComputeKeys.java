@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.inputs.ListMachineLearningComputeKeysArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.ListMachineLearningComputeKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMachineLearningComputeKeys {
-/**
- * Secrets related to a Machine Learning compute. Might differ for every type of compute.
+    private ListMachineLearningComputeKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListMachineLearningComputeKeysArgs.Builder a);
+    }
+    private static ListMachineLearningComputeKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListMachineLearningComputeKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Secrets related to a Machine Learning compute. Might differ for every type of compute.
  * API Version: 2021-01-01.
  * 
- *
- * Secrets related to a Machine Learning compute. Might differ for every type of compute.
+     *
+     * Secrets related to a Machine Learning compute. Might differ for every type of compute.
  * 
- */
+     */
+    public static CompletableFuture<ListMachineLearningComputeKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Secrets related to a Machine Learning compute. Might differ for every type of compute.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Secrets related to a Machine Learning compute. Might differ for every type of compute.
+     * 
+     */
     public static CompletableFuture<ListMachineLearningComputeKeysResult> invokeAsync(ListMachineLearningComputeKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listMachineLearningComputeKeys", TypeShape.of(ListMachineLearningComputeKeysResult.class), args == null ? ListMachineLearningComputeKeysArgs.Empty : args, Utilities.withVersion(options));
     }

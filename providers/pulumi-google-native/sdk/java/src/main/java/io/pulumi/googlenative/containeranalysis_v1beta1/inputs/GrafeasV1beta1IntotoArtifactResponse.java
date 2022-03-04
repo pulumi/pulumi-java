@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactHashesResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GrafeasV1beta1IntotoArtifactResponse extends io.pulumi.resour
     public static final GrafeasV1beta1IntotoArtifactResponse Empty = new GrafeasV1beta1IntotoArtifactResponse();
 
     @InputImport(name="hashes", required=true)
-    private final ArtifactHashesResponse hashes;
+      private final ArtifactHashesResponse hashes;
 
     public ArtifactHashesResponse getHashes() {
         return this.hashes;
     }
 
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -70,7 +70,6 @@ public final class GrafeasV1beta1IntotoArtifactResponse extends io.pulumi.resour
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public GrafeasV1beta1IntotoArtifactResponse build() {
             return new GrafeasV1beta1IntotoArtifactResponse(hashes, resourceUri);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -38,7 +38,7 @@ public final class CaPoolPublishingOptions {
      * X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding
      * X.509 extension will not be written in issued certificates.
      * 
-     */
+    */
     public Boolean getPublishCaCert() {
         return this.publishCaCert;
     }
@@ -48,7 +48,7 @@ public final class CaPoolPublishingOptions {
      * be written in issued certificates. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are
      * also rebuilt shortly after a certificate is revoked.
      * 
-     */
+    */
     public Boolean getPublishCrl() {
         return this.publishCrl;
     }
@@ -84,7 +84,6 @@ public final class CaPoolPublishingOptions {
             this.publishCrl = Objects.requireNonNull(publishCrl);
             return this;
         }
-
         public CaPoolPublishingOptions build() {
             return new CaPoolPublishingOptions(publishCaCert, publishCrl);
         }

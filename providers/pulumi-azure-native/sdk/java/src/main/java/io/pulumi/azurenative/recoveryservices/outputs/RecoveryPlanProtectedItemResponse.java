@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class RecoveryPlanProtectedItemResponse {
     /**
      * The ARM Id of the recovery plan protected item.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The virtual machine Id.
      * 
-     */
+    */
     public Optional<String> getVirtualMachineId() {
         return Optional.ofNullable(this.virtualMachineId);
     }
@@ -76,7 +76,6 @@ public final class RecoveryPlanProtectedItemResponse {
             this.virtualMachineId = virtualMachineId;
             return this;
         }
-
         public RecoveryPlanProtectedItemResponse build() {
             return new RecoveryPlanProtectedItemResponse(id, virtualMachineId);
         }

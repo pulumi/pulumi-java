@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.OrphanedUserInfoResponse;
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
 import io.pulumi.azurenative.datamigration.inputs.StartMigrationScenarioServerRoleResultResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="agentJobs", required=true)
-    private final Map<String,String> agentJobs;
+      private final Map<String,String> agentJobs;
 
     public Map<String,String> getAgentJobs() {
         return this.agentJobs;
@@ -33,7 +33,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="databases", required=true)
-    private final Map<String,String> databases;
+      private final Map<String,String> databases;
 
     public Map<String,String> getDatabases() {
         return this.databases;
@@ -44,7 +44,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="endedOn", required=true)
-    private final String endedOn;
+      private final String endedOn;
 
     public String getEndedOn() {
         return this.endedOn;
@@ -55,7 +55,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="exceptionsAndWarnings", required=true)
-    private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+      private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -66,7 +66,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -77,7 +77,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="logins", required=true)
-    private final Map<String,String> logins;
+      private final Map<String,String> logins;
 
     public Map<String,String> getLogins() {
         return this.logins;
@@ -88,7 +88,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -99,7 +99,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="orphanedUsersInfo", required=true)
-    private final List<OrphanedUserInfoResponse> orphanedUsersInfo;
+      private final List<OrphanedUserInfoResponse> orphanedUsersInfo;
 
     public List<OrphanedUserInfoResponse> getOrphanedUsersInfo() {
         return this.orphanedUsersInfo;
@@ -111,7 +111,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="resultType", required=true)
-    private final String resultType;
+      private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -122,7 +122,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="serverRoleResults", required=true)
-    private final Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
+      private final Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
 
     public Map<String,StartMigrationScenarioServerRoleResultResponse> getServerRoleResults() {
         return this.serverRoleResults;
@@ -133,7 +133,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="sourceServerBrandVersion", required=true)
-    private final String sourceServerBrandVersion;
+      private final String sourceServerBrandVersion;
 
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
@@ -144,7 +144,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="sourceServerVersion", required=true)
-    private final String sourceServerVersion;
+      private final String sourceServerVersion;
 
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
@@ -155,7 +155,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="startedOn", required=true)
-    private final String startedOn;
+      private final String startedOn;
 
     public String getStartedOn() {
         return this.startedOn;
@@ -166,7 +166,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -177,7 +177,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -188,7 +188,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="targetServerBrandVersion", required=true)
-    private final String targetServerBrandVersion;
+      private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -199,7 +199,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * 
      */
     @InputImport(name="targetServerVersion", required=true)
-    private final String targetServerVersion;
+      private final String targetServerVersion;
 
     public String getTargetServerVersion() {
         return this.targetServerVersion;
@@ -398,7 +398,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskOutputMigrationLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputMigrationLevelResponse(agentJobs, databases, endedOn, exceptionsAndWarnings, id, logins, message, orphanedUsersInfo, resultType, serverRoleResults, sourceServerBrandVersion, sourceServerVersion, startedOn, state, status, targetServerBrandVersion, targetServerVersion);
         }

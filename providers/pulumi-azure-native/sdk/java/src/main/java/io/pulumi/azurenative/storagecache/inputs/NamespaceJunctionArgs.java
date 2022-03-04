@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namespacePath")
-    private final @Nullable Input<String> namespacePath;
+      private final @Nullable Input<String> namespacePath;
 
     public Input<String> getNamespacePath() {
         return this.namespacePath == null ? Input.empty() : this.namespacePath;
@@ -34,7 +34,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nfsAccessPolicy")
-    private final @Nullable Input<String> nfsAccessPolicy;
+      private final @Nullable Input<String> nfsAccessPolicy;
 
     public Input<String> getNfsAccessPolicy() {
         return this.nfsAccessPolicy == null ? Input.empty() : this.nfsAccessPolicy;
@@ -45,7 +45,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nfsExport")
-    private final @Nullable Input<String> nfsExport;
+      private final @Nullable Input<String> nfsExport;
 
     public Input<String> getNfsExport() {
         return this.nfsExport == null ? Input.empty() : this.nfsExport;
@@ -56,7 +56,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetPath")
-    private final @Nullable Input<String> targetPath;
+      private final @Nullable Input<String> targetPath;
 
     public Input<String> getTargetPath() {
         return this.targetPath == null ? Input.empty() : this.targetPath;
@@ -145,7 +145,6 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
             this.targetPath = Input.ofNullable(targetPath);
             return this;
         }
-
         public NamespaceJunctionArgs build() {
             return new NamespaceJunctionArgs(namespacePath, nfsAccessPolicy, nfsExport, targetPath);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.OAuth2AuthenticationSettingsContractResponse;
 import io.pulumi.azurenative.apimanagement.inputs.OpenIdAuthenticationSettingsContractResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AuthenticationSettingsContractResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="oAuth2")
-    private final @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2;
+      private final @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2;
 
     public Optional<OAuth2AuthenticationSettingsContractResponse> getOAuth2() {
         return this.oAuth2 == null ? Optional.empty() : Optional.ofNullable(this.oAuth2);
@@ -35,7 +35,7 @@ public final class AuthenticationSettingsContractResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="openid")
-    private final @Nullable OpenIdAuthenticationSettingsContractResponse openid;
+      private final @Nullable OpenIdAuthenticationSettingsContractResponse openid;
 
     public Optional<OpenIdAuthenticationSettingsContractResponse> getOpenid() {
         return this.openid == null ? Optional.empty() : Optional.ofNullable(this.openid);
@@ -84,7 +84,6 @@ public final class AuthenticationSettingsContractResponse extends io.pulumi.reso
             this.openid = openid;
             return this;
         }
-
         public AuthenticationSettingsContractResponse build() {
             return new AuthenticationSettingsContractResponse(oAuth2, openid);
         }

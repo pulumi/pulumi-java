@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ActionGroupsInformationResponse {
     /**
      * An optional custom email subject to use in email notifications.
      * 
-     */
+    */
     public Optional<String> getCustomEmailSubject() {
         return Optional.ofNullable(this.customEmailSubject);
     }
     /**
      * An optional custom web-hook payload to use in web-hook notifications.
      * 
-     */
+    */
     public Optional<String> getCustomWebhookPayload() {
         return Optional.ofNullable(this.customWebhookPayload);
     }
     /**
      * The Action Group resource IDs.
      * 
-     */
+    */
     public List<String> getGroupIds() {
         return this.groupIds;
     }
@@ -98,7 +98,6 @@ public final class ActionGroupsInformationResponse {
             this.groupIds = Objects.requireNonNull(groupIds);
             return this;
         }
-
         public ActionGroupsInformationResponse build() {
             return new ActionGroupsInformationResponse(customEmailSubject, customWebhookPayload, groupIds);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -19,14 +19,14 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.p
     public static final RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse Empty = new RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse();
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
     }
 
     @InputImport(name="rrdatas", required=true)
-    private final List<String> rrdatas;
+      private final List<String> rrdatas;
 
     public List<String> getRrdatas() {
         return this.rrdatas;
@@ -37,7 +37,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.p
      * 
      */
     @InputImport(name="signatureRrdatas", required=true)
-    private final List<String> signatureRrdatas;
+      private final List<String> signatureRrdatas;
 
     public List<String> getSignatureRrdatas() {
         return this.signatureRrdatas;
@@ -48,7 +48,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.p
      * 
      */
     @InputImport(name="weight", required=true)
-    private final Double weight;
+      private final Double weight;
 
     public Double getWeight() {
         return this.weight;
@@ -117,7 +117,6 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.p
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse build() {
             return new RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse(kind, rrdatas, signatureRrdatas, weight);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridconnectivity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class ListEndpointCredentialsResult {
     /**
      * Access key for hybrid connection.
      * 
-     */
+    */
     public String getAccessKey() {
         return this.accessKey;
     }
     /**
      * The expiration of access key in unix time.
      * 
-     */
+    */
     public Optional<Double> getExpiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
     /**
      * Azure Relay hybrid connection name for the resource.
      * 
-     */
+    */
     public String getHybridConnectionName() {
         return this.hybridConnectionName;
     }
     /**
      * The namespace name.
      * 
-     */
+    */
     public String getNamespaceName() {
         return this.namespaceName;
     }
     /**
      * The suffix domain name of relay namespace.
      * 
-     */
+    */
     public String getNamespaceNameSuffix() {
         return this.namespaceNameSuffix;
     }
@@ -140,7 +140,6 @@ public final class ListEndpointCredentialsResult {
             this.namespaceNameSuffix = Objects.requireNonNull(namespaceNameSuffix);
             return this;
         }
-
         public ListEndpointCredentialsResult build() {
             return new ListEndpointCredentialsResult(accessKey, expiresOn, hybridConnectionName, namespaceName, namespaceNameSuffix);
         }

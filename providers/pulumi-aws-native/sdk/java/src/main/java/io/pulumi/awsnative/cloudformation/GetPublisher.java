@@ -6,17 +6,33 @@ package io.pulumi.awsnative.cloudformation;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudformation.inputs.GetPublisherArgs;
 import io.pulumi.awsnative.cloudformation.outputs.GetPublisherResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublisher {
-/**
- * Register as a publisher in the CloudFormation Registry.
+    private GetPublisher() {}
+    public interface BuilderApplicator {
+        public void apply(GetPublisherArgs.Builder a);
+    }
+    private static GetPublisherArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPublisherArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Register as a publisher in the CloudFormation Registry.
  * 
- */
+     */
+    public static CompletableFuture<GetPublisherResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Register as a publisher in the CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetPublisherResult> invokeAsync(GetPublisherArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getPublisher", TypeShape.of(GetPublisherResult.class), args == null ? GetPublisherArgs.Empty : args, Utilities.withVersion(options));
     }

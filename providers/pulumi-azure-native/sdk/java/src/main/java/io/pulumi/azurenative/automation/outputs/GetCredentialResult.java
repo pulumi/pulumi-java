@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class GetCredentialResult {
     /**
      * Gets the creation time.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets the last modified time.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets the user name of the credential.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
@@ -181,7 +181,6 @@ public final class GetCredentialResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetCredentialResult build() {
             return new GetCredentialResult(creationTime, description, id, lastModifiedTime, name, type, userName);
         }

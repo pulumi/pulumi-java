@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class JsonWriteSettingsResponse {
     /**
      * File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.
      * 
-     */
+    */
     public Optional<Object> getFilePattern() {
         return Optional.ofNullable(this.filePattern);
     }
@@ -43,7 +43,7 @@ public final class JsonWriteSettingsResponse {
      * The write setting type.
      * Expected value is 'JsonWriteSettings'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -79,7 +79,6 @@ public final class JsonWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonWriteSettingsResponse build() {
             return new JsonWriteSettingsResponse(filePattern, type);
         }

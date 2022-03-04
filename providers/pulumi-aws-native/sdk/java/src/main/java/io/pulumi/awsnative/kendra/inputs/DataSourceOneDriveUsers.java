@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceS3Path;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class DataSourceOneDriveUsers extends io.pulumi.resources.InvokeArg
     public static final DataSourceOneDriveUsers Empty = new DataSourceOneDriveUsers();
 
     @InputImport(name="oneDriveUserList")
-    private final @Nullable List<String> oneDriveUserList;
+      private final @Nullable List<String> oneDriveUserList;
 
     public List<String> getOneDriveUserList() {
         return this.oneDriveUserList == null ? List.of() : this.oneDriveUserList;
     }
 
     @InputImport(name="oneDriveUserS3Path")
-    private final @Nullable DataSourceS3Path oneDriveUserS3Path;
+      private final @Nullable DataSourceS3Path oneDriveUserS3Path;
 
     public Optional<DataSourceS3Path> getOneDriveUserS3Path() {
         return this.oneDriveUserS3Path == null ? Optional.empty() : Optional.ofNullable(this.oneDriveUserS3Path);
@@ -73,7 +73,6 @@ public final class DataSourceOneDriveUsers extends io.pulumi.resources.InvokeArg
             this.oneDriveUserS3Path = oneDriveUserS3Path;
             return this;
         }
-
         public DataSourceOneDriveUsers build() {
             return new DataSourceOneDriveUsers(oneDriveUserList, oneDriveUserS3Path);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.configuration.outputs;
 
 import io.pulumi.awsnative.configuration.outputs.ConformancePackInputParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetConformancePackResult {
     /**
      * A list of ConformancePackInputParameter objects.
      * 
-     */
+    */
     public List<ConformancePackInputParameter> getConformancePackInputParameters() {
         return this.conformancePackInputParameters == null ? List.of() : this.conformancePackInputParameters;
     }
     /**
      * AWS Config stores intermediate files while processing conformance pack template.
      * 
-     */
+    */
     public Optional<String> getDeliveryS3Bucket() {
         return Optional.ofNullable(this.deliveryS3Bucket);
     }
     /**
      * The prefix for delivery S3 bucket.
      * 
-     */
+    */
     public Optional<String> getDeliveryS3KeyPrefix() {
         return Optional.ofNullable(this.deliveryS3KeyPrefix);
     }
@@ -99,7 +99,6 @@ public final class GetConformancePackResult {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
-
         public GetConformancePackResult build() {
             return new GetConformancePackResult(conformancePackInputParameters, deliveryS3Bucket, deliveryS3KeyPrefix);
         }

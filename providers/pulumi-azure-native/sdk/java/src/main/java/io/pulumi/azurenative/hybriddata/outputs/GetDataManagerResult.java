@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybriddata.outputs;
 
 import io.pulumi.azurenative.hybriddata.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -73,14 +73,14 @@ public final class GetDataManagerResult {
     /**
      * Etag of the Resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -89,21 +89,21 @@ public final class GetDataManagerResult {
      * US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
      * region is specified on update the request will succeed.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The sku type.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
@@ -111,14 +111,14 @@ public final class GetDataManagerResult {
      * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
      * (across resource groups).
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -189,7 +189,6 @@ public final class GetDataManagerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataManagerResult build() {
             return new GetDataManagerResult(etag, id, location, name, sku, tags, type);
         }

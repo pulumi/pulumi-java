@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.DiskEncryptionSetParametersResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ManagedDiskParametersResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="diskEncryptionSet")
-    private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
+      private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
     public Optional<DiskEncryptionSetParametersResponse> getDiskEncryptionSet() {
         return this.diskEncryptionSet == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSet);
@@ -35,7 +35,7 @@ public final class ManagedDiskParametersResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -46,7 +46,7 @@ public final class ManagedDiskParametersResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="storageAccountType")
-    private final @Nullable String storageAccountType;
+      private final @Nullable String storageAccountType;
 
     public Optional<String> getStorageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
@@ -105,7 +105,6 @@ public final class ManagedDiskParametersResponse extends io.pulumi.resources.Inv
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public ManagedDiskParametersResponse build() {
             return new ManagedDiskParametersResponse(diskEncryptionSet, id, storageAccountType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionDeploymentCloudBuildOptions;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionDeploymentContainer;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionDeploymentFile;
@@ -57,7 +57,7 @@ public final class FlexibleAppVersionDeployment {
      * Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<FlexibleAppVersionDeploymentCloudBuildOptions> getCloudBuildOptions() {
         return Optional.ofNullable(this.cloudBuildOptions);
     }
@@ -65,7 +65,7 @@ public final class FlexibleAppVersionDeployment {
      * The Docker image for the container that runs the version.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<FlexibleAppVersionDeploymentContainer> getContainer() {
         return Optional.ofNullable(this.container);
     }
@@ -74,7 +74,7 @@ public final class FlexibleAppVersionDeployment {
      * All files must be readable using the credentials supplied with this call.
      * Structure is documented below.
      * 
-     */
+    */
     public List<FlexibleAppVersionDeploymentFile> getFiles() {
         return this.files == null ? List.of() : this.files;
     }
@@ -82,7 +82,7 @@ public final class FlexibleAppVersionDeployment {
      * Zip File
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<FlexibleAppVersionDeploymentZip> getZip() {
         return Optional.ofNullable(this.zip);
     }
@@ -132,7 +132,6 @@ public final class FlexibleAppVersionDeployment {
             this.zip = zip;
             return this;
         }
-
         public FlexibleAppVersionDeployment build() {
             return new FlexibleAppVersionDeployment(cloudBuildOptions, container, files, zip);
         }

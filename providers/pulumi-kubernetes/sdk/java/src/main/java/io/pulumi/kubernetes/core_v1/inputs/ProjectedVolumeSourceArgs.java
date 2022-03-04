@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.VolumeProjectionArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultMode")
-    private final @Nullable Input<Integer> defaultMode;
+      private final @Nullable Input<Integer> defaultMode;
 
     public Input<Integer> getDefaultMode() {
         return this.defaultMode == null ? Input.empty() : this.defaultMode;
@@ -36,7 +36,7 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sources", required=true)
-    private final Input<List<VolumeProjectionArgs>> sources;
+      private final Input<List<VolumeProjectionArgs>> sources;
 
     public Input<List<VolumeProjectionArgs>> getSources() {
         return this.sources;
@@ -95,7 +95,6 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
             this.sources = Input.of(Objects.requireNonNull(sources));
             return this;
         }
-
         public ProjectedVolumeSourceArgs build() {
             return new ProjectedVolumeSourceArgs(defaultMode, sources);
         }

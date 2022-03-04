@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.InstancePropertiesPostKeyRevocationActionType;
 import io.pulumi.googlenative.compute_beta.enums.InstancePropertiesPrivateIpv6GoogleAccess;
 import io.pulumi.googlenative.compute_beta.inputs.AcceleratorConfigArgs;
@@ -38,7 +38,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="advancedMachineFeatures")
-    private final @Nullable Input<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
+      private final @Nullable Input<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
     public Input<AdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
         return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
@@ -49,7 +49,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="canIpForward")
-    private final @Nullable Input<Boolean> canIpForward;
+      private final @Nullable Input<Boolean> canIpForward;
 
     public Input<Boolean> getCanIpForward() {
         return this.canIpForward == null ? Input.empty() : this.canIpForward;
@@ -60,7 +60,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="confidentialInstanceConfig")
-    private final @Nullable Input<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+      private final @Nullable Input<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     public Input<ConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
         return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
@@ -71,7 +71,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -82,7 +82,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable Input<List<AttachedDiskArgs>> disks;
+      private final @Nullable Input<List<AttachedDiskArgs>> disks;
 
     public Input<List<AttachedDiskArgs>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -93,7 +93,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayDevice")
-    private final @Nullable Input<DisplayDeviceArgs> displayDevice;
+      private final @Nullable Input<DisplayDeviceArgs> displayDevice;
 
     public Input<DisplayDeviceArgs> getDisplayDevice() {
         return this.displayDevice == null ? Input.empty() : this.displayDevice;
@@ -104,7 +104,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="guestAccelerators")
-    private final @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators;
+      private final @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators;
 
     public Input<List<AcceleratorConfigArgs>> getGuestAccelerators() {
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
@@ -115,7 +115,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -126,7 +126,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -137,7 +137,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<MetadataArgs> metadata;
+      private final @Nullable Input<MetadataArgs> metadata;
 
     public Input<MetadataArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -148,7 +148,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="minCpuPlatform")
-    private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -159,7 +159,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Input<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -170,7 +170,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkPerformanceConfig")
-    private final @Nullable Input<NetworkPerformanceConfigArgs> networkPerformanceConfig;
+      private final @Nullable Input<NetworkPerformanceConfigArgs> networkPerformanceConfig;
 
     public Input<NetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
         return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
@@ -181,7 +181,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="postKeyRevocationActionType")
-    private final @Nullable Input<InstancePropertiesPostKeyRevocationActionType> postKeyRevocationActionType;
+      private final @Nullable Input<InstancePropertiesPostKeyRevocationActionType> postKeyRevocationActionType;
 
     public Input<InstancePropertiesPostKeyRevocationActionType> getPostKeyRevocationActionType() {
         return this.postKeyRevocationActionType == null ? Input.empty() : this.postKeyRevocationActionType;
@@ -192,7 +192,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess")
-    private final @Nullable Input<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
+      private final @Nullable Input<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
     public Input<InstancePropertiesPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
@@ -203,7 +203,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="reservationAffinity")
-    private final @Nullable Input<ReservationAffinityArgs> reservationAffinity;
+      private final @Nullable Input<ReservationAffinityArgs> reservationAffinity;
 
     public Input<ReservationAffinityArgs> getReservationAffinity() {
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
@@ -214,7 +214,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceManagerTags")
-    private final @Nullable Input<Map<String,String>> resourceManagerTags;
+      private final @Nullable Input<Map<String,String>> resourceManagerTags;
 
     public Input<Map<String,String>> getResourceManagerTags() {
         return this.resourceManagerTags == null ? Input.empty() : this.resourceManagerTags;
@@ -225,7 +225,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourcePolicies")
-    private final @Nullable Input<List<String>> resourcePolicies;
+      private final @Nullable Input<List<String>> resourcePolicies;
 
     public Input<List<String>> getResourcePolicies() {
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
@@ -236,7 +236,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scheduling")
-    private final @Nullable Input<SchedulingArgs> scheduling;
+      private final @Nullable Input<SchedulingArgs> scheduling;
 
     public Input<SchedulingArgs> getScheduling() {
         return this.scheduling == null ? Input.empty() : this.scheduling;
@@ -247,7 +247,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceAccounts")
-    private final @Nullable Input<List<ServiceAccountArgs>> serviceAccounts;
+      private final @Nullable Input<List<ServiceAccountArgs>> serviceAccounts;
 
     public Input<List<ServiceAccountArgs>> getServiceAccounts() {
         return this.serviceAccounts == null ? Input.empty() : this.serviceAccounts;
@@ -258,7 +258,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-    private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Input<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -269,7 +269,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="shieldedVmConfig")
-    private final @Nullable Input<ShieldedVmConfigArgs> shieldedVmConfig;
+      private final @Nullable Input<ShieldedVmConfigArgs> shieldedVmConfig;
 
     public Input<ShieldedVmConfigArgs> getShieldedVmConfig() {
         return this.shieldedVmConfig == null ? Input.empty() : this.shieldedVmConfig;
@@ -280,7 +280,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<TagsArgs> tags;
+      private final @Nullable Input<TagsArgs> tags;
 
     public Input<TagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -654,7 +654,6 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public InstancePropertiesArgs build() {
             return new InstancePropertiesArgs(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, description, disks, displayDevice, guestAccelerators, labels, machineType, metadata, minCpuPlatform, networkInterfaces, networkPerformanceConfig, postKeyRevocationActionType, privateIpv6GoogleAccess, reservationAffinity, resourceManagerTags, resourcePolicies, scheduling, serviceAccounts, shieldedInstanceConfig, shieldedVmConfig, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.workflows.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -32,7 +32,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -54,7 +54,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -78,7 +78,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -89,7 +89,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -100,7 +100,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionId")
-    private final @Nullable Input<String> revisionId;
+      private final @Nullable Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId == null ? Input.empty() : this.revisionId;
@@ -113,7 +113,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -124,7 +124,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceContents")
-    private final @Nullable Input<String> sourceContents;
+      private final @Nullable Input<String> sourceContents;
 
     public Input<String> getSourceContents() {
         return this.sourceContents == null ? Input.empty() : this.sourceContents;
@@ -135,7 +135,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -147,7 +147,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -356,7 +356,6 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public WorkflowState build() {
             return new WorkflowState(createTime, description, labels, name, namePrefix, project, region, revisionId, serviceAccount, sourceContents, state, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
     /**
      * If the multi cloud account is of membership type organization, list of accounts excluded from offering
      * 
-     */
+    */
     public List<String> getExcludedAccountIds() {
         return this.excludedAccountIds == null ? List.of() : this.excludedAccountIds;
     }
     /**
      * The multi cloud account's membership type in the organization
      * 
-     */
+    */
     public Optional<String> getOrganizationMembershipType() {
         return Optional.ofNullable(this.organizationMembershipType);
     }
     /**
      * If the multi cloud account is not of membership type organization, this will be the ID of the account's parent
      * 
-     */
+    */
     public Optional<String> getParentHierarchyId() {
         return Optional.ofNullable(this.parentHierarchyId);
     }
     /**
      * If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
      * 
-     */
+    */
     public Optional<String> getStacksetName() {
         return Optional.ofNullable(this.stacksetName);
     }
@@ -119,7 +119,6 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
             this.stacksetName = stacksetName;
             return this;
         }
-
         public SecurityConnectorPropertiesResponseOrganizationalData build() {
             return new SecurityConnectorPropertiesResponseOrganizationalData(excludedAccountIds, organizationMembershipType, parentHierarchyId, stacksetName);
         }

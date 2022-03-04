@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetSynchronizationSettingArgs;
 import io.pulumi.azurenative.datashare.outputs.GetSynchronizationSettingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ScheduledSynchronizationSetting. */
 public class GetSynchronizationSetting {
-/**
- * A Synchronization Setting data transfer object.
+    private GetSynchronizationSetting() {}
+    public interface BuilderApplicator {
+        public void apply(GetSynchronizationSettingArgs.Builder a);
+    }
+    private static GetSynchronizationSettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSynchronizationSettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Synchronization Setting data transfer object.
  * API Version: 2020-09-01.
  * 
- *
- * A Synchronization Setting data transfer object.
+     *
+     * A Synchronization Setting data transfer object.
  * 
- * @deprecated
- * Please use one of the variants: ScheduledSynchronizationSetting.
+     * @Deprecated
+     * Please use one of the variants: ScheduledSynchronizationSetting.
  * 
- */
+     */
+    public static CompletableFuture<GetSynchronizationSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Synchronization Setting data transfer object.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A Synchronization Setting data transfer object.
+     * 
+     * @Deprecated
+         * Please use one of the variants: ScheduledSynchronizationSetting.
+     * 
+     */
     @Deprecated /* Please use one of the variants: ScheduledSynchronizationSetting. */
     public static CompletableFuture<GetSynchronizationSettingResult> invokeAsync(GetSynchronizationSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getSynchronizationSetting", TypeShape.of(GetSynchronizationSettingResult.class), args == null ? GetSynchronizationSettingArgs.Empty : args, Utilities.withVersion(options));

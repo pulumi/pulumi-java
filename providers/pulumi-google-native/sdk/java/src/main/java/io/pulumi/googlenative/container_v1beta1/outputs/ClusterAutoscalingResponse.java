@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.AutoprovisioningNodePoolDefaultsResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.ResourceLimitResponse;
 import java.lang.Boolean;
@@ -56,35 +56,35 @@ public final class ClusterAutoscalingResponse {
     /**
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
      * 
-     */
+    */
     public List<String> getAutoprovisioningLocations() {
         return this.autoprovisioningLocations;
     }
     /**
      * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
      * 
-     */
+    */
     public AutoprovisioningNodePoolDefaultsResponse getAutoprovisioningNodePoolDefaults() {
         return this.autoprovisioningNodePoolDefaults;
     }
     /**
      * Defines autoscaling behaviour.
      * 
-     */
+    */
     public String getAutoscalingProfile() {
         return this.autoscalingProfile;
     }
     /**
      * Enables automatic node pool creation and deletion.
      * 
-     */
+    */
     public Boolean getEnableNodeAutoprovisioning() {
         return this.enableNodeAutoprovisioning;
     }
     /**
      * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
      * 
-     */
+    */
     public List<ResourceLimitResponse> getResourceLimits() {
         return this.resourceLimits;
     }
@@ -141,7 +141,6 @@ public final class ClusterAutoscalingResponse {
             this.resourceLimits = Objects.requireNonNull(resourceLimits);
             return this;
         }
-
         public ClusterAutoscalingResponse build() {
             return new ClusterAutoscalingResponse(autoprovisioningLocations, autoprovisioningNodePoolDefaults, autoscalingProfile, enableNodeAutoprovisioning, resourceLimits);
         }

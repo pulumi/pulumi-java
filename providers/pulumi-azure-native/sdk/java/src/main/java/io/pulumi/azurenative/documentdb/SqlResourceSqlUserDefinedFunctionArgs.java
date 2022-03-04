@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.azurenative.documentdb.inputs.SqlUserDefinedFunctionResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+      private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -44,7 +44,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -55,7 +55,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<CreateUpdateOptionsArgs> options;
+      private final @Nullable Input<CreateUpdateOptionsArgs> options;
 
     public Input<CreateUpdateOptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -77,7 +77,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resource", required=true)
-    private final Input<SqlUserDefinedFunctionResourceArgs> resource;
+      private final Input<SqlUserDefinedFunctionResourceArgs> resource;
 
     public Input<SqlUserDefinedFunctionResourceArgs> getResource() {
         return this.resource;
@@ -88,7 +88,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -110,7 +110,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="userDefinedFunctionName")
-    private final @Nullable Input<String> userDefinedFunctionName;
+      private final @Nullable Input<String> userDefinedFunctionName;
 
     public Input<String> getUserDefinedFunctionName() {
         return this.userDefinedFunctionName == null ? Input.empty() : this.userDefinedFunctionName;
@@ -274,7 +274,6 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
             this.userDefinedFunctionName = Input.ofNullable(userDefinedFunctionName);
             return this;
         }
-
         public SqlResourceSqlUserDefinedFunctionArgs build() {
             return new SqlResourceSqlUserDefinedFunctionArgs(accountName, containerName, databaseName, location, options, resource, resourceGroupName, tags, userDefinedFunctionName);
         }

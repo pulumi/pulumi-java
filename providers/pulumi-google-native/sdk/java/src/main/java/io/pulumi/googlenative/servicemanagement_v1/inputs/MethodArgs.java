@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.MethodSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import java.lang.Boolean;
@@ -27,7 +27,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -38,7 +38,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Input<List<OptionArgs>> options;
 
     public Input<List<OptionArgs>> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -49,7 +49,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestStreaming")
-    private final @Nullable Input<Boolean> requestStreaming;
+      private final @Nullable Input<Boolean> requestStreaming;
 
     public Input<Boolean> getRequestStreaming() {
         return this.requestStreaming == null ? Input.empty() : this.requestStreaming;
@@ -60,7 +60,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestTypeUrl")
-    private final @Nullable Input<String> requestTypeUrl;
+      private final @Nullable Input<String> requestTypeUrl;
 
     public Input<String> getRequestTypeUrl() {
         return this.requestTypeUrl == null ? Input.empty() : this.requestTypeUrl;
@@ -71,7 +71,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseStreaming")
-    private final @Nullable Input<Boolean> responseStreaming;
+      private final @Nullable Input<Boolean> responseStreaming;
 
     public Input<Boolean> getResponseStreaming() {
         return this.responseStreaming == null ? Input.empty() : this.responseStreaming;
@@ -82,7 +82,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseTypeUrl")
-    private final @Nullable Input<String> responseTypeUrl;
+      private final @Nullable Input<String> responseTypeUrl;
 
     public Input<String> getResponseTypeUrl() {
         return this.responseTypeUrl == null ? Input.empty() : this.responseTypeUrl;
@@ -93,7 +93,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syntax")
-    private final @Nullable Input<MethodSyntax> syntax;
+      private final @Nullable Input<MethodSyntax> syntax;
 
     public Input<MethodSyntax> getSyntax() {
         return this.syntax == null ? Input.empty() : this.syntax;
@@ -227,7 +227,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             this.syntax = Input.ofNullable(syntax);
             return this;
         }
-
         public MethodArgs build() {
             return new MethodArgs(name, options, requestStreaming, requestTypeUrl, responseStreaming, responseTypeUrl, syntax);
         }

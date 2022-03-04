@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.inputs.GetMDATPDataConnectorArgs;
 import io.pulumi.azurenative.securityinsights.outputs.GetMDATPDataConnectorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMDATPDataConnector {
-/**
- * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
+    private GetMDATPDataConnector() {}
+    public interface BuilderApplicator {
+        public void apply(GetMDATPDataConnectorArgs.Builder a);
+    }
+    private static GetMDATPDataConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMDATPDataConnectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
  * API Version: 2020-01-01.
  * 
- *
- * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
+     *
+     * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
  * 
- */
+     */
+    public static CompletableFuture<GetMDATPDataConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
+     * API Version: 2020-01-01.
+     * 
+     *
+         * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
+     * 
+     */
     public static CompletableFuture<GetMDATPDataConnectorResult> invokeAsync(GetMDATPDataConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMDATPDataConnector", TypeShape.of(GetMDATPDataConnectorResult.class), args == null ? GetMDATPDataConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

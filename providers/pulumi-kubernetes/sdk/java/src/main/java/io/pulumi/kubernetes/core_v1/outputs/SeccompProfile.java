@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,7 +40,7 @@ public final class SeccompProfile {
     /**
      * localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is "Localhost".
      * 
-     */
+    */
     public Optional<String> getLocalhostProfile() {
         return Optional.ofNullable(this.localhostProfile);
     }
@@ -54,7 +54,7 @@ public final class SeccompProfile {
      *  - `"RuntimeDefault"` represents the default container runtime seccomp profile.
      *  - `"Unconfined"` indicates no seccomp profile is applied (A.K.A. unconfined).
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -90,7 +90,6 @@ public final class SeccompProfile {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SeccompProfile build() {
             return new SeccompProfile(localhostProfile, type);
         }

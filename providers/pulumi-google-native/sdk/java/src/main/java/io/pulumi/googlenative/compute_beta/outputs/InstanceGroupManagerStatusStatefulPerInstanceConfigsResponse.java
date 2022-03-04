@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
     /**
      * A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.
      * 
-     */
+    */
     public Boolean getAllEffective() {
         return this.allEffective;
     }
@@ -52,7 +52,6 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
             this.allEffective = Objects.requireNonNull(allEffective);
             return this;
         }
-
         public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse build() {
             return new InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(allEffective);
         }

@@ -38,7 +38,7 @@ build_sdk::
 ensure_sdk::
 	cd sdk/jvm && make ensure
 
-providers_all: provider.random.install provider.aws-native.install provider.kubernetes.install provider.azure-native.install provider.google-native.install provider.gcp.install
+providers_all: provider.random.install provider.aws.install provider.aws-native.install provider.docker.install provider.kubernetes.install provider.azure-native.install provider.google-native.install provider.gcp.install
 
 # Example: make provider.random.build
 provider.%.build:	provider.%.generate
@@ -75,3 +75,7 @@ submodule_update::
 # submodule as symlinks.
 borrow_schemas:: submodule_update
 	find pulumi/pkg/codegen/testing -name "schema.*" -exec ./scripts/borrow-schema.sh "{}" ";"
+
+# Runs `go mod tidy` on every Go project.
+tidy::
+	./scripts/tidy.sh

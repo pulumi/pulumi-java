@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -85,63 +85,63 @@ public final class GetHubVirtualNetworkConnectionResult {
     /**
      * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
      * 
-     */
+    */
     public Optional<Boolean> getAllowHubToRemoteVnetTransit() {
         return Optional.ofNullable(this.allowHubToRemoteVnetTransit);
     }
     /**
      * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
      * 
-     */
+    */
     public Optional<Boolean> getAllowRemoteVnetToUseHubVnetGateways() {
         return Optional.ofNullable(this.allowRemoteVnetToUseHubVnetGateways);
     }
     /**
      * Enable internet security.
      * 
-     */
+    */
     public Optional<Boolean> getEnableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the hub virtual network connection resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Reference to the remote virtual network.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getRemoteVirtualNetwork() {
         return Optional.ofNullable(this.remoteVirtualNetwork);
     }
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
-     */
+    */
     public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }
@@ -226,7 +226,6 @@ public final class GetHubVirtualNetworkConnectionResult {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
-
         public GetHubVirtualNetworkConnectionResult build() {
             return new GetHubVirtualNetworkConnectionResult(allowHubToRemoteVnetTransit, allowRemoteVnetToUseHubVnetGateways, enableInternetSecurity, etag, id, name, provisioningState, remoteVirtualNetwork, routingConfiguration);
         }

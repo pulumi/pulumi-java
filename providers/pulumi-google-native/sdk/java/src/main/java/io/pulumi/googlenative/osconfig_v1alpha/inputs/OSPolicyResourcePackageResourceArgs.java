@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1alpha.enums.OSPolicyResourcePackageResourceDesiredState;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourcePackageResourceAPTArgs;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourcePackageResourceDebArgs;
@@ -30,7 +30,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="apt")
-    private final @Nullable Input<OSPolicyResourcePackageResourceAPTArgs> apt;
+      private final @Nullable Input<OSPolicyResourcePackageResourceAPTArgs> apt;
 
     public Input<OSPolicyResourcePackageResourceAPTArgs> getApt() {
         return this.apt == null ? Input.empty() : this.apt;
@@ -41,7 +41,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deb")
-    private final @Nullable Input<OSPolicyResourcePackageResourceDebArgs> deb;
+      private final @Nullable Input<OSPolicyResourcePackageResourceDebArgs> deb;
 
     public Input<OSPolicyResourcePackageResourceDebArgs> getDeb() {
         return this.deb == null ? Input.empty() : this.deb;
@@ -52,7 +52,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="desiredState", required=true)
-    private final Input<OSPolicyResourcePackageResourceDesiredState> desiredState;
+      private final Input<OSPolicyResourcePackageResourceDesiredState> desiredState;
 
     public Input<OSPolicyResourcePackageResourceDesiredState> getDesiredState() {
         return this.desiredState;
@@ -63,7 +63,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="googet")
-    private final @Nullable Input<OSPolicyResourcePackageResourceGooGetArgs> googet;
+      private final @Nullable Input<OSPolicyResourcePackageResourceGooGetArgs> googet;
 
     public Input<OSPolicyResourcePackageResourceGooGetArgs> getGooget() {
         return this.googet == null ? Input.empty() : this.googet;
@@ -74,7 +74,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="msi")
-    private final @Nullable Input<OSPolicyResourcePackageResourceMSIArgs> msi;
+      private final @Nullable Input<OSPolicyResourcePackageResourceMSIArgs> msi;
 
     public Input<OSPolicyResourcePackageResourceMSIArgs> getMsi() {
         return this.msi == null ? Input.empty() : this.msi;
@@ -85,7 +85,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="rpm")
-    private final @Nullable Input<OSPolicyResourcePackageResourceRPMArgs> rpm;
+      private final @Nullable Input<OSPolicyResourcePackageResourceRPMArgs> rpm;
 
     public Input<OSPolicyResourcePackageResourceRPMArgs> getRpm() {
         return this.rpm == null ? Input.empty() : this.rpm;
@@ -96,7 +96,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="yum")
-    private final @Nullable Input<OSPolicyResourcePackageResourceYUMArgs> yum;
+      private final @Nullable Input<OSPolicyResourcePackageResourceYUMArgs> yum;
 
     public Input<OSPolicyResourcePackageResourceYUMArgs> getYum() {
         return this.yum == null ? Input.empty() : this.yum;
@@ -107,7 +107,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="zypper")
-    private final @Nullable Input<OSPolicyResourcePackageResourceZypperArgs> zypper;
+      private final @Nullable Input<OSPolicyResourcePackageResourceZypperArgs> zypper;
 
     public Input<OSPolicyResourcePackageResourceZypperArgs> getZypper() {
         return this.zypper == null ? Input.empty() : this.zypper;
@@ -256,7 +256,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
             this.zypper = Input.ofNullable(zypper);
             return this;
         }
-
         public OSPolicyResourcePackageResourceArgs build() {
             return new OSPolicyResourcePackageResourceArgs(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }

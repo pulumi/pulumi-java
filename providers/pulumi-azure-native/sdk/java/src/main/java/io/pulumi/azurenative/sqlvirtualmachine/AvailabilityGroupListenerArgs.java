@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sqlvirtualmachine;
 
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.LoadBalancerConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="availabilityGroupListenerName")
-    private final @Nullable Input<String> availabilityGroupListenerName;
+      private final @Nullable Input<String> availabilityGroupListenerName;
 
     public Input<String> getAvailabilityGroupListenerName() {
         return this.availabilityGroupListenerName == null ? Input.empty() : this.availabilityGroupListenerName;
@@ -34,7 +34,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="availabilityGroupName")
-    private final @Nullable Input<String> availabilityGroupName;
+      private final @Nullable Input<String> availabilityGroupName;
 
     public Input<String> getAvailabilityGroupName() {
         return this.availabilityGroupName == null ? Input.empty() : this.availabilityGroupName;
@@ -45,7 +45,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="createDefaultAvailabilityGroupIfNotExist")
-    private final @Nullable Input<Boolean> createDefaultAvailabilityGroupIfNotExist;
+      private final @Nullable Input<Boolean> createDefaultAvailabilityGroupIfNotExist;
 
     public Input<Boolean> getCreateDefaultAvailabilityGroupIfNotExist() {
         return this.createDefaultAvailabilityGroupIfNotExist == null ? Input.empty() : this.createDefaultAvailabilityGroupIfNotExist;
@@ -56,7 +56,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loadBalancerConfigurations")
-    private final @Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
+      private final @Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
     public Input<List<LoadBalancerConfigurationArgs>> getLoadBalancerConfigurations() {
         return this.loadBalancerConfigurations == null ? Input.empty() : this.loadBalancerConfigurations;
@@ -67,7 +67,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -78,7 +78,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sqlVirtualMachineGroupName", required=true)
-    private final Input<String> sqlVirtualMachineGroupName;
+      private final Input<String> sqlVirtualMachineGroupName;
 
     public Input<String> getSqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
@@ -223,7 +223,6 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
             this.sqlVirtualMachineGroupName = Input.of(Objects.requireNonNull(sqlVirtualMachineGroupName));
             return this;
         }
-
         public AvailabilityGroupListenerArgs build() {
             return new AvailabilityGroupListenerArgs(availabilityGroupListenerName, availabilityGroupName, createDefaultAvailabilityGroupIfNotExist, loadBalancerConfigurations, port, resourceGroupName, sqlVirtualMachineGroupName);
         }

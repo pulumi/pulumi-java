@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="health")
-    private final @Nullable Input<String> health;
+      private final @Nullable Input<String> health;
 
     public Input<String> getHealth() {
         return this.health == null ? Input.empty() : this.health;
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="predict")
-    private final @Nullable Input<String> predict;
+      private final @Nullable Input<String> predict;
 
     public Input<String> getPredict() {
         return this.predict == null ? Input.empty() : this.predict;
@@ -93,7 +93,6 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
             this.predict = Input.ofNullable(predict);
             return this;
         }
-
         public GoogleCloudMlV1__RouteMapArgs build() {
             return new GoogleCloudMlV1__RouteMapArgs(health, predict);
         }

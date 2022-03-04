@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.ImageReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetDataDiskResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetOSDiskResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="dataDisks")
-    private final @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
+      private final @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
 
     public List<VirtualMachineScaleSetDataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="imageReference")
-    private final @Nullable ImageReferenceResponse imageReference;
+      private final @Nullable ImageReferenceResponse imageReference;
 
     public Optional<ImageReferenceResponse> getImageReference() {
         return this.imageReference == null ? Optional.empty() : Optional.ofNullable(this.imageReference);
@@ -48,7 +48,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="osDisk")
-    private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
+      private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
 
     public Optional<VirtualMachineScaleSetOSDiskResponse> getOsDisk() {
         return this.osDisk == null ? Optional.empty() : Optional.ofNullable(this.osDisk);
@@ -107,7 +107,6 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
             this.osDisk = osDisk;
             return this;
         }
-
         public VirtualMachineScaleSetStorageProfileResponse build() {
             return new VirtualMachineScaleSetStorageProfileResponse(dataDisks, imageReference, osDisk);
         }

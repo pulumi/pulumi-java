@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,7 +48,7 @@ public final class NodeSelectorRequirement {
     /**
      * The label key that the selector applies to.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
@@ -63,14 +63,14 @@ public final class NodeSelectorRequirement {
      *  - `"Lt"`
      *  - `"NotIn"`
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }
@@ -113,7 +113,6 @@ public final class NodeSelectorRequirement {
             this.values = values;
             return this;
         }
-
         public NodeSelectorRequirement build() {
             return new NodeSelectorRequirement(key, operator, values);
         }

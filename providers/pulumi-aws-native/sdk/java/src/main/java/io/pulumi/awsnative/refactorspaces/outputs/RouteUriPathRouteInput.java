@@ -5,7 +5,7 @@ package io.pulumi.awsnative.refactorspaces.outputs;
 
 import io.pulumi.awsnative.refactorspaces.enums.RouteActivationState;
 import io.pulumi.awsnative.refactorspaces.enums.RouteMethod;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -90,7 +90,6 @@ public final class RouteUriPathRouteInput {
             this.sourcePath = sourcePath;
             return this;
         }
-
         public RouteUriPathRouteInput build() {
             return new RouteUriPathRouteInput(activationState, includeChildPaths, methods, sourcePath);
         }

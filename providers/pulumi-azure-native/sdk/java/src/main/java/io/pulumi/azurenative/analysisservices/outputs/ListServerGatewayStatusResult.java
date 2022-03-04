@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.analysisservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ListServerGatewayStatusResult {
     /**
      * Live message of list gateway. Status: 0 - Live
      * 
-     */
+    */
     public Optional<Integer> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -54,7 +54,6 @@ public final class ListServerGatewayStatusResult {
             this.status = status;
             return this;
         }
-
         public ListServerGatewayStatusResult build() {
             return new ListServerGatewayStatusResult(status);
         }

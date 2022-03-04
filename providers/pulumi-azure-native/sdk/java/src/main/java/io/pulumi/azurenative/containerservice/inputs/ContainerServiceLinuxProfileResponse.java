@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ContainerServiceSshConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ContainerServiceLinuxProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="adminUsername", required=true)
-    private final String adminUsername;
+      private final String adminUsername;
 
     public String getAdminUsername() {
         return this.adminUsername;
@@ -33,7 +33,7 @@ public final class ContainerServiceLinuxProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="ssh", required=true)
-    private final ContainerServiceSshConfigurationResponse ssh;
+      private final ContainerServiceSshConfigurationResponse ssh;
 
     public ContainerServiceSshConfigurationResponse getSsh() {
         return this.ssh;
@@ -82,7 +82,6 @@ public final class ContainerServiceLinuxProfileResponse extends io.pulumi.resour
             this.ssh = Objects.requireNonNull(ssh);
             return this;
         }
-
         public ContainerServiceLinuxProfileResponse build() {
             return new ContainerServiceLinuxProfileResponse(adminUsername, ssh);
         }

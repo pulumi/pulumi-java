@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class CardinalityResponse {
     /**
      * The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
      * 
-     */
+    */
     public Integer getNumber() {
         return this.number;
     }
     /**
      * The root of the variable subtree to monitor. For example, `/foo`.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
@@ -75,7 +75,6 @@ public final class CardinalityResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public CardinalityResponse build() {
             return new CardinalityResponse(number, path);
         }

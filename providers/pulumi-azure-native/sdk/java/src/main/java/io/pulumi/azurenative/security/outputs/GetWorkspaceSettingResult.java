@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class GetWorkspaceSettingResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
      * 
-     */
+    */
     public String getScope() {
         return this.scope;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The full Azure ID of the workspace to save the data in
      * 
-     */
+    */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
@@ -137,7 +137,6 @@ public final class GetWorkspaceSettingResult {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public GetWorkspaceSettingResult build() {
             return new GetWorkspaceSettingResult(id, name, scope, type, workspaceId);
         }

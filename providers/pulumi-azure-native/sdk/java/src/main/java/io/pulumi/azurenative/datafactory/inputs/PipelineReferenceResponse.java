@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="referenceName", required=true)
-    private final String referenceName;
+      private final String referenceName;
 
     public String getReferenceName() {
         return this.referenceName;
@@ -45,7 +45,7 @@ public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -104,7 +104,6 @@ public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PipelineReferenceResponse build() {
             return new PipelineReferenceResponse(name, referenceName, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ListAccountKeysResult {
     /**
      * Gets or sets the primary connection string.
      * 
-     */
+    */
     public Optional<String> getAtlasKafkaPrimaryEndpoint() {
         return Optional.ofNullable(this.atlasKafkaPrimaryEndpoint);
     }
     /**
      * Gets or sets the secondary connection string.
      * 
-     */
+    */
     public Optional<String> getAtlasKafkaSecondaryEndpoint() {
         return Optional.ofNullable(this.atlasKafkaSecondaryEndpoint);
     }
@@ -76,7 +76,6 @@ public final class ListAccountKeysResult {
             this.atlasKafkaSecondaryEndpoint = atlasKafkaSecondaryEndpoint;
             return this;
         }
-
         public ListAccountKeysResult build() {
             return new ListAccountKeysResult(atlasKafkaPrimaryEndpoint, atlasKafkaSecondaryEndpoint);
         }

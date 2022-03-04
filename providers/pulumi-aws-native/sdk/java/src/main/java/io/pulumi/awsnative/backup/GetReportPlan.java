@@ -6,17 +6,33 @@ package io.pulumi.awsnative.backup;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.backup.inputs.GetReportPlanArgs;
 import io.pulumi.awsnative.backup.outputs.GetReportPlanResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReportPlan {
-/**
- * Contains detailed information about a report plan in AWS Backup Audit Manager.
+    private GetReportPlan() {}
+    public interface BuilderApplicator {
+        public void apply(GetReportPlanArgs.Builder a);
+    }
+    private static GetReportPlanArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReportPlanArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Contains detailed information about a report plan in AWS Backup Audit Manager.
  * 
- */
+     */
+    public static CompletableFuture<GetReportPlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Contains detailed information about a report plan in AWS Backup Audit Manager.
+     * 
+     */
     public static CompletableFuture<GetReportPlanResult> invokeAsync(GetReportPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getReportPlan", TypeShape.of(GetReportPlanResult.class), args == null ? GetReportPlanArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DomainCustomImageArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="appImageConfigName", required=true)
-    private final Input<String> appImageConfigName;
+      private final Input<String> appImageConfigName;
 
     public Input<String> getAppImageConfigName() {
         return this.appImageConfigName;
@@ -35,7 +35,7 @@ public final class DomainCustomImageArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="imageName", required=true)
-    private final Input<String> imageName;
+      private final Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName;
@@ -46,7 +46,7 @@ public final class DomainCustomImageArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="imageVersionNumber")
-    private final @Nullable Input<Integer> imageVersionNumber;
+      private final @Nullable Input<Integer> imageVersionNumber;
 
     public Input<Integer> getImageVersionNumber() {
         return this.imageVersionNumber == null ? Input.empty() : this.imageVersionNumber;
@@ -120,7 +120,6 @@ public final class DomainCustomImageArgs extends io.pulumi.resources.ResourceArg
             this.imageVersionNumber = Input.ofNullable(imageVersionNumber);
             return this;
         }
-
         public DomainCustomImageArgs build() {
             return new DomainCustomImageArgs(appImageConfigName, imageName, imageVersionNumber);
         }

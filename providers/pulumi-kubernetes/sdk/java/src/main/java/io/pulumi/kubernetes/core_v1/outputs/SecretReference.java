@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class SecretReference {
     /**
      * Name is unique within a namespace to reference a secret resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace defines the space within which the secret name must be unique.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -76,7 +76,6 @@ public final class SecretReference {
             this.namespace = namespace;
             return this;
         }
-
         public SecretReference build() {
             return new SecretReference(name, namespace);
         }

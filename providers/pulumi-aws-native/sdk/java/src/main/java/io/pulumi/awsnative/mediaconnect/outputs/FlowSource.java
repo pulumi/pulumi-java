@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceProtocol;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowEncryption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -127,105 +127,105 @@ public final class FlowSource {
     /**
      * The type of decryption that is used on the content ingested from this source.
      * 
-     */
+    */
     public Optional<FlowEncryption> getDecryption() {
         return Optional.ofNullable(this.decryption);
     }
     /**
      * A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
      * 
-     */
+    */
     public Optional<String> getEntitlementArn() {
         return Optional.ofNullable(this.entitlementArn);
     }
     /**
      * The IP address that the flow will be listening on for incoming content.
      * 
-     */
+    */
     public Optional<String> getIngestIp() {
         return Optional.ofNullable(this.ingestIp);
     }
     /**
      * The port that the flow will be listening on for incoming content.
      * 
-     */
+    */
     public Optional<Integer> getIngestPort() {
         return Optional.ofNullable(this.ingestPort);
     }
     /**
      * The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
      * 
-     */
+    */
     public Optional<Integer> getMaxBitrate() {
         return Optional.ofNullable(this.maxBitrate);
     }
     /**
      * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
      * 
-     */
+    */
     public Optional<Integer> getMaxLatency() {
         return Optional.ofNullable(this.maxLatency);
     }
     /**
      * The minimum latency in milliseconds.
      * 
-     */
+    */
     public Optional<Integer> getMinLatency() {
         return Optional.ofNullable(this.minLatency);
     }
     /**
      * The name of the source.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The protocol that is used by the source or output.
      * 
-     */
+    */
     public Optional<FlowSourceProtocol> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The ARN of the source.
      * 
-     */
+    */
     public Optional<String> getSourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }
     /**
      * The port that the flow will be listening on for incoming content.(ReadOnly)
      * 
-     */
+    */
     public Optional<String> getSourceIngestPort() {
         return Optional.ofNullable(this.sourceIngestPort);
     }
     /**
      * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
      * 
-     */
+    */
     public Optional<String> getStreamId() {
         return Optional.ofNullable(this.streamId);
     }
     /**
      * The name of the VPC Interface this Source is configured with.
      * 
-     */
+    */
     public Optional<String> getVpcInterfaceName() {
         return Optional.ofNullable(this.vpcInterfaceName);
     }
     /**
      * The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
      * 
-     */
+    */
     public Optional<String> getWhitelistCidr() {
         return Optional.ofNullable(this.whitelistCidr);
     }
@@ -352,7 +352,6 @@ public final class FlowSource {
             this.whitelistCidr = whitelistCidr;
             return this;
         }
-
         public FlowSource build() {
             return new FlowSource(decryption, description, entitlementArn, ingestIp, ingestPort, maxBitrate, maxLatency, minLatency, name, protocol, sourceArn, sourceIngestPort, streamId, vpcInterfaceName, whitelistCidr);
         }

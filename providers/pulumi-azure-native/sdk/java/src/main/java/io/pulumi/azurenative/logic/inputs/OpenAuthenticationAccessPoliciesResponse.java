@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class OpenAuthenticationAccessPoliciesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="policies")
-    private final @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies;
+      private final @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies;
 
     public Map<String,OpenAuthenticationAccessPolicyResponse> getPolicies() {
         return this.policies == null ? Map.of() : this.policies;
@@ -63,7 +63,6 @@ public final class OpenAuthenticationAccessPoliciesResponse extends io.pulumi.re
             this.policies = policies;
             return this;
         }
-
         public OpenAuthenticationAccessPoliciesResponse build() {
             return new OpenAuthenticationAccessPoliciesResponse(policies);
         }

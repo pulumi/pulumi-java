@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends io.pul
      * 
      */
     @InputImport(name="designation", required=true)
-    private final String designation;
+      private final String designation;
 
     public String getDesignation() {
         return this.designation;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends io.pul
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -81,7 +81,6 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends io.pul
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public GoogleCloudDatacatalogV1ContactsPersonResponse build() {
             return new GoogleCloudDatacatalogV1ContactsPersonResponse(designation, email);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.outputs;
 
 import io.pulumi.azurenative.operationalinsights.outputs.MachineReferenceWithHintsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -86,35 +86,35 @@ public final class GetMachineGroupResult {
     /**
      * Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * User defined name for the group
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource ETAG.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Type of the machine group
      * 
-     */
+    */
     public Optional<String> getGroupType() {
         return Optional.ofNullable(this.groupType);
     }
     /**
      * Resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -122,28 +122,28 @@ public final class GetMachineGroupResult {
      * Additional resource type qualifier.
      * Expected value is 'machineGroup'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
      * 
-     */
+    */
     public List<MachineReferenceWithHintsResponse> getMachines() {
         return this.machines == null ? List.of() : this.machines;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -228,7 +228,6 @@ public final class GetMachineGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMachineGroupResult build() {
             return new GetMachineGroupResult(count, displayName, etag, groupType, id, kind, machines, name, type);
         }

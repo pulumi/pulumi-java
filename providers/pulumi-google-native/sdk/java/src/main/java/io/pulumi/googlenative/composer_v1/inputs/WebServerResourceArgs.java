@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<Double> cpu;
+      private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -34,7 +34,7 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="memoryGb")
-    private final @Nullable Input<Double> memoryGb;
+      private final @Nullable Input<Double> memoryGb;
 
     public Input<Double> getMemoryGb() {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
@@ -45,7 +45,7 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageGb")
-    private final @Nullable Input<Double> storageGb;
+      private final @Nullable Input<Double> storageGb;
 
     public Input<Double> getStorageGb() {
         return this.storageGb == null ? Input.empty() : this.storageGb;
@@ -119,7 +119,6 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
             this.storageGb = Input.ofNullable(storageGb);
             return this;
         }
-
         public WebServerResourceArgs build() {
             return new WebServerResourceArgs(cpu, memoryGb, storageGb);
         }

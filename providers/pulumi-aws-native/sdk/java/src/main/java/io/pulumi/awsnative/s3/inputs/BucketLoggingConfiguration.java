@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class BucketLoggingConfiguration extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="destinationBucketName")
-    private final @Nullable String destinationBucketName;
+      private final @Nullable String destinationBucketName;
 
     public Optional<String> getDestinationBucketName() {
         return this.destinationBucketName == null ? Optional.empty() : Optional.ofNullable(this.destinationBucketName);
     }
 
     @InputImport(name="logFilePrefix")
-    private final @Nullable String logFilePrefix;
+      private final @Nullable String logFilePrefix;
 
     public Optional<String> getLogFilePrefix() {
         return this.logFilePrefix == null ? Optional.empty() : Optional.ofNullable(this.logFilePrefix);
@@ -75,7 +75,6 @@ public final class BucketLoggingConfiguration extends io.pulumi.resources.Invoke
             this.logFilePrefix = logFilePrefix;
             return this;
         }
-
         public BucketLoggingConfiguration build() {
             return new BucketLoggingConfiguration(destinationBucketName, logFilePrefix);
         }

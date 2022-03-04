@@ -6,17 +6,33 @@ package io.pulumi.awsnative.signer;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.signer.inputs.GetProfilePermissionArgs;
 import io.pulumi.awsnative.signer.outputs.GetProfilePermissionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProfilePermission {
-/**
- * An example resource schema demonstrating some basic constructs and validation rules.
+    private GetProfilePermission() {}
+    public interface BuilderApplicator {
+        public void apply(GetProfilePermissionArgs.Builder a);
+    }
+    private static GetProfilePermissionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProfilePermissionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
  * 
- */
+     */
+    public static CompletableFuture<GetProfilePermissionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetProfilePermissionResult> invokeAsync(GetProfilePermissionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:signer:getProfilePermission", TypeShape.of(GetProfilePermissionResult.class), args == null ? GetProfilePermissionArgs.Empty : args, Utilities.withVersion(options));
     }

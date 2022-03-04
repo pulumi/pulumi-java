@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.enums.PatchConfigRebootConfig;
 import io.pulumi.googlenative.osconfig_v1.inputs.AptSettingsArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.ExecStepArgs;
@@ -30,7 +30,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apt")
-    private final @Nullable Input<AptSettingsArgs> apt;
+      private final @Nullable Input<AptSettingsArgs> apt;
 
     public Input<AptSettingsArgs> getApt() {
         return this.apt == null ? Input.empty() : this.apt;
@@ -41,7 +41,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="goo")
-    private final @Nullable Input<GooSettingsArgs> goo;
+      private final @Nullable Input<GooSettingsArgs> goo;
 
     public Input<GooSettingsArgs> getGoo() {
         return this.goo == null ? Input.empty() : this.goo;
@@ -52,7 +52,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="migInstancesAllowed")
-    private final @Nullable Input<Boolean> migInstancesAllowed;
+      private final @Nullable Input<Boolean> migInstancesAllowed;
 
     public Input<Boolean> getMigInstancesAllowed() {
         return this.migInstancesAllowed == null ? Input.empty() : this.migInstancesAllowed;
@@ -63,7 +63,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postStep")
-    private final @Nullable Input<ExecStepArgs> postStep;
+      private final @Nullable Input<ExecStepArgs> postStep;
 
     public Input<ExecStepArgs> getPostStep() {
         return this.postStep == null ? Input.empty() : this.postStep;
@@ -74,7 +74,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preStep")
-    private final @Nullable Input<ExecStepArgs> preStep;
+      private final @Nullable Input<ExecStepArgs> preStep;
 
     public Input<ExecStepArgs> getPreStep() {
         return this.preStep == null ? Input.empty() : this.preStep;
@@ -85,7 +85,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rebootConfig")
-    private final @Nullable Input<PatchConfigRebootConfig> rebootConfig;
+      private final @Nullable Input<PatchConfigRebootConfig> rebootConfig;
 
     public Input<PatchConfigRebootConfig> getRebootConfig() {
         return this.rebootConfig == null ? Input.empty() : this.rebootConfig;
@@ -96,7 +96,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsUpdate")
-    private final @Nullable Input<WindowsUpdateSettingsArgs> windowsUpdate;
+      private final @Nullable Input<WindowsUpdateSettingsArgs> windowsUpdate;
 
     public Input<WindowsUpdateSettingsArgs> getWindowsUpdate() {
         return this.windowsUpdate == null ? Input.empty() : this.windowsUpdate;
@@ -107,7 +107,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="yum")
-    private final @Nullable Input<YumSettingsArgs> yum;
+      private final @Nullable Input<YumSettingsArgs> yum;
 
     public Input<YumSettingsArgs> getYum() {
         return this.yum == null ? Input.empty() : this.yum;
@@ -118,7 +118,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zypper")
-    private final @Nullable Input<ZypperSettingsArgs> zypper;
+      private final @Nullable Input<ZypperSettingsArgs> zypper;
 
     public Input<ZypperSettingsArgs> getZypper() {
         return this.zypper == null ? Input.empty() : this.zypper;
@@ -282,7 +282,6 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.zypper = Input.ofNullable(zypper);
             return this;
         }
-
         public PatchConfigArgs build() {
             return new PatchConfigArgs(apt, goo, migInstancesAllowed, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }

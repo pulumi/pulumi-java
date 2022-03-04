@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
     public static final SharedflowArgs Empty = new SharedflowArgs();
 
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -28,7 +28,7 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -39,7 +39,7 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+      private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -50,21 +50,21 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensions")
-    private final @Nullable Input<List<Map<String,String>>> extensions;
+      private final @Nullable Input<List<Map<String,String>>> extensions;
 
     public Input<List<Map<String,String>>> getExtensions() {
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -183,7 +183,6 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public SharedflowArgs build() {
             return new SharedflowArgs(action, contentType, data, extensions, name, organizationId);
         }

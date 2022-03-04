@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleTypeMoneyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudApigeeV1RateRangeResponse {
     /**
      * Ending value of the range. Set to 0 or `null` for the last range of values.
      * 
-     */
+    */
     public String getEnd() {
         return this.end;
     }
     /**
      * Fee to charge when total number of API calls falls within this range.
      * 
-     */
+    */
     public GoogleTypeMoneyResponse getFee() {
         return this.fee;
     }
     /**
      * Starting value of the range. Set to 0 or `null` for the initial range of values.
      * 
-     */
+    */
     public String getStart() {
         return this.start;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudApigeeV1RateRangeResponse {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public GoogleCloudApigeeV1RateRangeResponse build() {
             return new GoogleCloudApigeeV1RateRangeResponse(end, fee, start);
         }

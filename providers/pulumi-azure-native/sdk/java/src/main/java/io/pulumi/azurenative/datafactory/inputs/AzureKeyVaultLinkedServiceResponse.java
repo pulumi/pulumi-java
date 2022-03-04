@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -40,7 +40,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="baseUrl", required=true)
-    private final Object baseUrl;
+      private final Object baseUrl;
 
     public Object getBaseUrl() {
         return this.baseUrl;
@@ -51,7 +51,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -62,7 +62,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable CredentialReferenceResponse credential;
+      private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
@@ -73,7 +73,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -84,7 +84,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -96,7 +96,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -195,7 +195,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureKeyVaultLinkedServiceResponse build() {
             return new AzureKeyVaultLinkedServiceResponse(annotations, baseUrl, connectVia, credential, description, parameters, type);
         }

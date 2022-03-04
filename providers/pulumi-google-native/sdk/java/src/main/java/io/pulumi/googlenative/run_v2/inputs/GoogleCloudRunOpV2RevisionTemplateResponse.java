@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ContainerResponse;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2RevisionScalingResponse;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2VolumeResponse;
@@ -29,7 +29,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="annotations", required=true)
-    private final Map<String,String> annotations;
+      private final Map<String,String> annotations;
 
     public Map<String,String> getAnnotations() {
         return this.annotations;
@@ -40,7 +40,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="confidential", required=true)
-    private final Boolean confidential;
+      private final Boolean confidential;
 
     public Boolean getConfidential() {
         return this.confidential;
@@ -51,7 +51,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="containerConcurrency", required=true)
-    private final Integer containerConcurrency;
+      private final Integer containerConcurrency;
 
     public Integer getContainerConcurrency() {
         return this.containerConcurrency;
@@ -62,7 +62,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="containers", required=true)
-    private final List<GoogleCloudRunOpV2ContainerResponse> containers;
+      private final List<GoogleCloudRunOpV2ContainerResponse> containers;
 
     public List<GoogleCloudRunOpV2ContainerResponse> getContainers() {
         return this.containers;
@@ -73,7 +73,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="encryptionKey", required=true)
-    private final String encryptionKey;
+      private final String encryptionKey;
 
     public String getEncryptionKey() {
         return this.encryptionKey;
@@ -84,7 +84,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="executionEnvironment", required=true)
-    private final String executionEnvironment;
+      private final String executionEnvironment;
 
     public String getExecutionEnvironment() {
         return this.executionEnvironment;
@@ -95,7 +95,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -106,7 +106,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="revision", required=true)
-    private final String revision;
+      private final String revision;
 
     public String getRevision() {
         return this.revision;
@@ -117,7 +117,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="scaling", required=true)
-    private final GoogleCloudRunOpV2RevisionScalingResponse scaling;
+      private final GoogleCloudRunOpV2RevisionScalingResponse scaling;
 
     public GoogleCloudRunOpV2RevisionScalingResponse getScaling() {
         return this.scaling;
@@ -128,7 +128,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -139,7 +139,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="timeout", required=true)
-    private final String timeout;
+      private final String timeout;
 
     public String getTimeout() {
         return this.timeout;
@@ -150,7 +150,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="volumes", required=true)
-    private final List<GoogleCloudRunOpV2VolumeResponse> volumes;
+      private final List<GoogleCloudRunOpV2VolumeResponse> volumes;
 
     public List<GoogleCloudRunOpV2VolumeResponse> getVolumes() {
         return this.volumes;
@@ -161,7 +161,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
      * 
      */
     @InputImport(name="vpcAccess", required=true)
-    private final GoogleCloudRunOpV2VpcAccessResponse vpcAccess;
+      private final GoogleCloudRunOpV2VpcAccessResponse vpcAccess;
 
     public GoogleCloudRunOpV2VpcAccessResponse getVpcAccess() {
         return this.vpcAccess;
@@ -320,7 +320,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
             this.vpcAccess = Objects.requireNonNull(vpcAccess);
             return this;
         }
-
         public GoogleCloudRunOpV2RevisionTemplateResponse build() {
             return new GoogleCloudRunOpV2RevisionTemplateResponse(annotations, confidential, containerConcurrency, containers, encryptionKey, executionEnvironment, labels, revision, scaling, serviceAccount, timeout, volumes, vpcAccess);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.stepfunctions.inputs;
 import io.pulumi.awsnative.stepfunctions.enums.StateMachineLoggingConfigurationLevel;
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineLogDestinationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -18,21 +18,21 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
     public static final StateMachineLoggingConfigurationArgs Empty = new StateMachineLoggingConfigurationArgs();
 
     @InputImport(name="destinations")
-    private final @Nullable Input<List<StateMachineLogDestinationArgs>> destinations;
+      private final @Nullable Input<List<StateMachineLogDestinationArgs>> destinations;
 
     public Input<List<StateMachineLogDestinationArgs>> getDestinations() {
         return this.destinations == null ? Input.empty() : this.destinations;
     }
 
     @InputImport(name="includeExecutionData")
-    private final @Nullable Input<Boolean> includeExecutionData;
+      private final @Nullable Input<Boolean> includeExecutionData;
 
     public Input<Boolean> getIncludeExecutionData() {
         return this.includeExecutionData == null ? Input.empty() : this.includeExecutionData;
     }
 
     @InputImport(name="level")
-    private final @Nullable Input<StateMachineLoggingConfigurationLevel> level;
+      private final @Nullable Input<StateMachineLoggingConfigurationLevel> level;
 
     public Input<StateMachineLoggingConfigurationLevel> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -106,7 +106,6 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
             this.level = Input.ofNullable(level);
             return this;
         }
-
         public StateMachineLoggingConfigurationArgs build() {
             return new StateMachineLoggingConfigurationArgs(destinations, includeExecutionData, level);
         }

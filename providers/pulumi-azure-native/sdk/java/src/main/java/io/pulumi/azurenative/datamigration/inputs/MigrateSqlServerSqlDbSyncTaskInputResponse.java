@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbSyncDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.MigrationValidationOptionsResponse;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-    private final List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
+      private final List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -37,7 +37,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final SqlConnectionInfoResponse sourceConnectionInfo;
+      private final SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -48,7 +48,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final SqlConnectionInfoResponse targetConnectionInfo;
+      private final SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -59,7 +59,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="validationOptions")
-    private final @Nullable MigrationValidationOptionsResponse validationOptions;
+      private final @Nullable MigrationValidationOptionsResponse validationOptions;
 
     public Optional<MigrationValidationOptionsResponse> getValidationOptions() {
         return this.validationOptions == null ? Optional.empty() : Optional.ofNullable(this.validationOptions);
@@ -128,7 +128,6 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
             this.validationOptions = validationOptions;
             return this;
         }
-
         public MigrateSqlServerSqlDbSyncTaskInputResponse build() {
             return new MigrateSqlServerSqlDbSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="localObjectReference")
-    private final @Nullable Input<LocalObjectReferenceArgs> localObjectReference;
+      private final @Nullable Input<LocalObjectReferenceArgs> localObjectReference;
 
     public Input<LocalObjectReferenceArgs> getLocalObjectReference() {
         return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
@@ -36,7 +36,7 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="optional")
-    private final @Nullable Input<Boolean> optional;
+      private final @Nullable Input<Boolean> optional;
 
     public Input<Boolean> getOptional() {
         return this.optional == null ? Input.empty() : this.optional;
@@ -121,7 +121,6 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
             this.optional = Input.ofNullable(optional);
             return this;
         }
-
         public ConfigMapEnvSourceArgs build() {
             return new ConfigMapEnvSourceArgs(localObjectReference, name, optional);
         }

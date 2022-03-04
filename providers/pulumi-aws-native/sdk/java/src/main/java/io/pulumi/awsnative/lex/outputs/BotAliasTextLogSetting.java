@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasTextLogDestination;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class BotAliasTextLogSetting {
             this.enabled = enabled;
             return this;
         }
-
         public BotAliasTextLogSetting build() {
             return new BotAliasTextLogSetting(destination, enabled);
         }

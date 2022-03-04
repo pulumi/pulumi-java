@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ce.CostCategoryArgs;
 import io.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -94,6 +94,37 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
         return this.splitChargeRules;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CostCategoryArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ce.CostCategoryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ce.CostCategoryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CostCategory(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CostCategory(String name) {
+        this(name, CostCategoryArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CostCategory(String name, CostCategoryArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

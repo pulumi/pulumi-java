@@ -5,8 +5,8 @@ package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.ClusterIAMBindingArgs;
 import io.pulumi.gcp.dataproc.inputs.ClusterIAMBindingState;
@@ -146,6 +146,37 @@ public class ClusterIAMBinding extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ClusterIAMBindingArgs.Builder a);
+    }
+    private static io.pulumi.gcp.dataproc.ClusterIAMBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.dataproc.ClusterIAMBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ClusterIAMBinding(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ClusterIAMBinding(String name) {
+        this(name, ClusterIAMBindingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ClusterIAMBinding(String name, ClusterIAMBindingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

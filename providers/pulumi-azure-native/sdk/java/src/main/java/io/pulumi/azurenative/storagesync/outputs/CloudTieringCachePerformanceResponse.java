@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -47,28 +47,28 @@ public final class CloudTieringCachePerformanceResponse {
     /**
      * Count of bytes that were served from the local server
      * 
-     */
+    */
     public Double getCacheHitBytes() {
         return this.cacheHitBytes;
     }
     /**
      * Percentage of total bytes (hit + miss) that were served from the local server
      * 
-     */
+    */
     public Integer getCacheHitBytesPercent() {
         return this.cacheHitBytesPercent;
     }
     /**
      * Count of bytes that were served from the cloud
      * 
-     */
+    */
     public Double getCacheMissBytes() {
         return this.cacheMissBytes;
     }
     /**
      * Last updated timestamp
      * 
-     */
+    */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
@@ -118,7 +118,6 @@ public final class CloudTieringCachePerformanceResponse {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
-
         public CloudTieringCachePerformanceResponse build() {
             return new CloudTieringCachePerformanceResponse(cacheHitBytes, cacheHitBytesPercent, cacheMissBytes, lastUpdatedTimestamp);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DatasetArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetState;
@@ -272,6 +272,37 @@ public class Dataset extends io.pulumi.resources.CustomResource {
         return this.selfLink;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DatasetArgs.Builder a);
+    }
+    private static io.pulumi.gcp.bigquery.DatasetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.bigquery.DatasetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Dataset(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Dataset(String name) {
+        this(name, DatasetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Dataset(String name, DatasetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

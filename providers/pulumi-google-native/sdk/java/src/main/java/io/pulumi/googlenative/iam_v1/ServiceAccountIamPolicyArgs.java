@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.iam_v1.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.iam_v1.inputs.BindingArgs;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class ServiceAccountIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
 
     public Input<List<AuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -34,7 +34,7 @@ public final class ServiceAccountIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -45,21 +45,21 @@ public final class ServiceAccountIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="serviceAccountId", required=true)
-    private final Input<String> serviceAccountId;
+      private final Input<String> serviceAccountId;
 
     public Input<String> getServiceAccountId() {
         return this.serviceAccountId;
@@ -70,7 +70,7 @@ public final class ServiceAccountIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="updateMask")
-    private final @Nullable Input<String> updateMask;
+      private final @Nullable Input<String> updateMask;
 
     public Input<String> getUpdateMask() {
         return this.updateMask == null ? Input.empty() : this.updateMask;
@@ -81,7 +81,7 @@ public final class ServiceAccountIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -215,7 +215,6 @@ public final class ServiceAccountIamPolicyArgs extends io.pulumi.resources.Resou
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ServiceAccountIamPolicyArgs build() {
             return new ServiceAccountIamPolicyArgs(auditConfigs, bindings, etag, project, serviceAccountId, updateMask, version);
         }

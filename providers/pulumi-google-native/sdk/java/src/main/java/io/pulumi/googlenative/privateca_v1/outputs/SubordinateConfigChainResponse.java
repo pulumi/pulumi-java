@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SubordinateConfigChainResponse {
     /**
      * Expected to be in leaf-to-root order according to RFC 5246.
      * 
-     */
+    */
     public List<String> getPemCertificates() {
         return this.pemCertificates;
     }
@@ -53,7 +53,6 @@ public final class SubordinateConfigChainResponse {
             this.pemCertificates = Objects.requireNonNull(pemCertificates);
             return this;
         }
-
         public SubordinateConfigChainResponse build() {
             return new SubordinateConfigChainResponse(pemCertificates);
         }

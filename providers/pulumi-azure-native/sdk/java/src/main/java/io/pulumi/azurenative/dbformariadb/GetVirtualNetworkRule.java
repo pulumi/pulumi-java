@@ -6,21 +6,41 @@ package io.pulumi.azurenative.dbformariadb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dbformariadb.inputs.GetVirtualNetworkRuleArgs;
 import io.pulumi.azurenative.dbformariadb.outputs.GetVirtualNetworkRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkRule {
-/**
- * A virtual network rule.
+    private GetVirtualNetworkRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkRuleArgs.Builder a);
+    }
+    private static GetVirtualNetworkRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A virtual network rule.
  * API Version: 2018-06-01.
  * 
- *
- * A virtual network rule.
+     *
+     * A virtual network rule.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A virtual network rule.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * A virtual network rule.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkRuleResult> invokeAsync(GetVirtualNetworkRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformariadb:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args == null ? GetVirtualNetworkRuleArgs.Empty : args, Utilities.withVersion(options));
     }

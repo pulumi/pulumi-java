@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class DedicatedHostAllocatableVMResponse {
     /**
      * Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.
      * 
-     */
+    */
     public Optional<Double> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * VM size in terms of which the unutilized capacity is represented.
      * 
-     */
+    */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -77,7 +77,6 @@ public final class DedicatedHostAllocatableVMResponse {
             this.vmSize = vmSize;
             return this;
         }
-
         public DedicatedHostAllocatableVMResponse build() {
             return new DedicatedHostAllocatableVMResponse(count, vmSize);
         }

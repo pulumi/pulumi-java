@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPartnerTopicEventSubscriptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="eventSubscriptionName", required=true)
-    private final String eventSubscriptionName;
+      private final String eventSubscriptionName;
 
     public String getEventSubscriptionName() {
         return this.eventSubscriptionName;
@@ -28,7 +28,7 @@ public final class GetPartnerTopicEventSubscriptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="partnerTopicName", required=true)
-    private final String partnerTopicName;
+      private final String partnerTopicName;
 
     public String getPartnerTopicName() {
         return this.partnerTopicName;
@@ -39,7 +39,7 @@ public final class GetPartnerTopicEventSubscriptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetPartnerTopicEventSubscriptionArgs extends io.pulumi.resour
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetPartnerTopicEventSubscriptionArgs build() {
             return new GetPartnerTopicEventSubscriptionArgs(eventSubscriptionName, partnerTopicName, resourceGroupName);
         }

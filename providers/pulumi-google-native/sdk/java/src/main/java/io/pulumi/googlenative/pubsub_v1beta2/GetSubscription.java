@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubscription {
-/**
- * Gets the configuration details of a subscription.
+    private GetSubscription() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubscriptionArgs.Builder a);
+    }
+    private static GetSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubscriptionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the configuration details of a subscription.
  * 
- */
+     */
+    public static CompletableFuture<GetSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the configuration details of a subscription.
+     * 
+     */
     public static CompletableFuture<GetSubscriptionResult> invokeAsync(GetSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsub/v1beta2:getSubscription", TypeShape.of(GetSubscriptionResult.class), args == null ? GetSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

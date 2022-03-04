@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.inputs.GetWatchlistArgs;
 import io.pulumi.azurenative.securityinsights.outputs.GetWatchlistResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWatchlist {
-/**
- * Represents a Watchlist in Azure Security Insights.
+    private GetWatchlist() {}
+    public interface BuilderApplicator {
+        public void apply(GetWatchlistArgs.Builder a);
+    }
+    private static GetWatchlistArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWatchlistArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a Watchlist in Azure Security Insights.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Represents a Watchlist in Azure Security Insights.
+     *
+     * Represents a Watchlist in Azure Security Insights.
  * 
- */
+     */
+    public static CompletableFuture<GetWatchlistResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a Watchlist in Azure Security Insights.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Represents a Watchlist in Azure Security Insights.
+     * 
+     */
     public static CompletableFuture<GetWatchlistResult> invokeAsync(GetWatchlistArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getWatchlist", TypeShape.of(GetWatchlistResult.class), args == null ? GetWatchlistArgs.Empty : args, Utilities.withVersion(options));
     }

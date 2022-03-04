@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class FileIODetailsResponse {
     /**
      * File Pattern used to access files by the connector.
      * 
-     */
+    */
     public String getFilePattern() {
         return this.filePattern;
     }
@@ -52,7 +52,6 @@ public final class FileIODetailsResponse {
             this.filePattern = Objects.requireNonNull(filePattern);
             return this;
         }
-
         public FileIODetailsResponse build() {
             return new FileIODetailsResponse(filePattern);
         }

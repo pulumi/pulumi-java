@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,7 +42,7 @@ public final class RegionNetworkEndpointGroupCloudFunction {
      * The function name is case-sensitive and must be 1-63 characters long.
      * Example value: "func1".
      * 
-     */
+    */
     public Optional<String> getFunction() {
         return Optional.ofNullable(this.function);
     }
@@ -54,7 +54,7 @@ public final class RegionNetworkEndpointGroupCloudFunction {
      * can be backed by the same Serverless NEG with URL mask "/". The URL mask
      * will parse them to { function = "function1" } and { function = "function2" } respectively.
      * 
-     */
+    */
     public Optional<String> getUrlMask() {
         return Optional.ofNullable(this.urlMask);
     }
@@ -90,7 +90,6 @@ public final class RegionNetworkEndpointGroupCloudFunction {
             this.urlMask = urlMask;
             return this;
         }
-
         public RegionNetworkEndpointGroupCloudFunction build() {
             return new RegionNetworkEndpointGroupCloudFunction(function, urlMask);
         }

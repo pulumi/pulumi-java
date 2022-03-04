@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ResourceMoveDetailsResponse {
     /**
      * Denotes whether move operation is in progress
      * 
-     */
+    */
     public Optional<String> getOperationInProgress() {
         return Optional.ofNullable(this.operationInProgress);
     }
     /**
      * Denotes the timeout of the operation to finish
      * 
-     */
+    */
     public Optional<String> getOperationInProgressLockTimeoutInUTC() {
         return Optional.ofNullable(this.operationInProgressLockTimeoutInUTC);
     }
@@ -76,7 +76,6 @@ public final class ResourceMoveDetailsResponse {
             this.operationInProgressLockTimeoutInUTC = operationInProgressLockTimeoutInUTC;
             return this;
         }
-
         public ResourceMoveDetailsResponse build() {
             return new ResourceMoveDetailsResponse(operationInProgress, operationInProgressLockTimeoutInUTC);
         }

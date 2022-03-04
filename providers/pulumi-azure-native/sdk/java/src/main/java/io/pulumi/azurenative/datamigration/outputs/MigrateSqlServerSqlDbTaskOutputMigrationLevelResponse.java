@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.DatabaseSummaryResultResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrationReportResultResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -136,56 +136,56 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
     /**
      * Summary of database results in the migration
      * 
-     */
+    */
     public Map<String,DatabaseSummaryResultResponse> getDatabaseSummary() {
         return this.databaseSummary;
     }
     /**
      * Selected databases as a map from database name to database id
      * 
-     */
+    */
     public Map<String,String> getDatabases() {
         return this.databases;
     }
     /**
      * Duration of task execution in seconds.
      * 
-     */
+    */
     public Double getDurationInSeconds() {
         return this.durationInSeconds;
     }
     /**
      * Migration end time
      * 
-     */
+    */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Migration exceptions and warnings.
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Migration progress message
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Migration Report Result, provides unique url for downloading your migration report.
      * 
-     */
+    */
     public MigrationReportResultResponse getMigrationReport() {
         return this.migrationReport;
     }
@@ -193,56 +193,56 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
      * Result type
      * Expected value is 'MigrationLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Source server brand version
      * 
-     */
+    */
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
      * Source server version
      * 
-     */
+    */
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Migration start time
      * 
-     */
+    */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Current status of migration
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Migration status message
      * 
-     */
+    */
     public String getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * Target server brand version
      * 
-     */
+    */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Target server version
      * 
-     */
+    */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }
@@ -376,7 +376,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(databaseSummary, databases, durationInSeconds, endedOn, exceptionsAndWarnings, id, message, migrationReport, resultType, sourceServerBrandVersion, sourceServerVersion, startedOn, status, statusMessage, targetServerBrandVersion, targetServerVersion);
         }

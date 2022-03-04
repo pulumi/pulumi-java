@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DataTransferConfigEmailPreferences {
     /**
      * If true, email notifications will be sent on transfer run failures.
      * 
-     */
+    */
     public Boolean getEnableFailureEmail() {
         return this.enableFailureEmail;
     }
@@ -52,7 +52,6 @@ public final class DataTransferConfigEmailPreferences {
             this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail);
             return this;
         }
-
         public DataTransferConfigEmailPreferences build() {
             return new DataTransferConfigEmailPreferences(enableFailureEmail);
         }

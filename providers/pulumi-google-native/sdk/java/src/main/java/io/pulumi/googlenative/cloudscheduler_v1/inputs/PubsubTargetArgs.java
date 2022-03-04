@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudscheduler_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Input<Map<String,String>> attributes;
 
     public Input<Map<String,String>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -35,7 +35,7 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+      private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -46,7 +46,7 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final Input<String> topicName;
+      private final Input<String> topicName;
 
     public Input<String> getTopicName() {
         return this.topicName;
@@ -120,7 +120,6 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.topicName = Input.of(Objects.requireNonNull(topicName));
             return this;
         }
-
         public PubsubTargetArgs build() {
             return new PubsubTargetArgs(attributes, data, topicName);
         }

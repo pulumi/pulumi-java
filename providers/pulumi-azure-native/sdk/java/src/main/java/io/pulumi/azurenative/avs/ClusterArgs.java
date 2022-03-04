@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -32,7 +32,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterSize", required=true)
-    private final Input<Integer> clusterSize;
+      private final Input<Integer> clusterSize;
 
     public Input<Integer> getClusterSize() {
         return this.clusterSize;
@@ -43,7 +43,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+      private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -54,7 +54,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+      private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -169,7 +169,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public ClusterArgs build() {
             return new ClusterArgs(clusterName, clusterSize, privateCloudName, resourceGroupName, sku);
         }

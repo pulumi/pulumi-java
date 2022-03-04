@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMetricDescriptor {
-/**
- * Gets a single metric descriptor. This method does not require a Workspace.
+    private GetMetricDescriptor() {}
+    public interface BuilderApplicator {
+        public void apply(GetMetricDescriptorArgs.Builder a);
+    }
+    private static GetMetricDescriptorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMetricDescriptorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a single metric descriptor. This method does not require a Workspace.
  * 
- */
+     */
+    public static CompletableFuture<GetMetricDescriptorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a single metric descriptor. This method does not require a Workspace.
+     * 
+     */
     public static CompletableFuture<GetMetricDescriptorResult> invokeAsync(GetMetricDescriptorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getMetricDescriptor", TypeShape.of(GetMetricDescriptorResult.class), args == null ? GetMetricDescriptorArgs.Empty : args, Utilities.withVersion(options));
     }

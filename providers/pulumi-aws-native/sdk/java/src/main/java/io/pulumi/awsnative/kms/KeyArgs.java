@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kms.enums.KeySpec;
 import io.pulumi.awsnative.kms.enums.KeyUsage;
 import io.pulumi.awsnative.kms.inputs.KeyTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -26,7 +26,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableKeyRotation")
-    private final @Nullable Input<Boolean> enableKeyRotation;
+      private final @Nullable Input<Boolean> enableKeyRotation;
 
     public Input<Boolean> getEnableKeyRotation() {
         return this.enableKeyRotation == null ? Input.empty() : this.enableKeyRotation;
@@ -48,7 +48,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -59,7 +59,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPolicy", required=true)
-    private final Input<Object> keyPolicy;
+      private final Input<Object> keyPolicy;
 
     public Input<Object> getKeyPolicy() {
         return this.keyPolicy;
@@ -70,7 +70,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySpec")
-    private final @Nullable Input<KeySpec> keySpec;
+      private final @Nullable Input<KeySpec> keySpec;
 
     public Input<KeySpec> getKeySpec() {
         return this.keySpec == null ? Input.empty() : this.keySpec;
@@ -81,7 +81,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyUsage")
-    private final @Nullable Input<KeyUsage> keyUsage;
+      private final @Nullable Input<KeyUsage> keyUsage;
 
     public Input<KeyUsage> getKeyUsage() {
         return this.keyUsage == null ? Input.empty() : this.keyUsage;
@@ -92,7 +92,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiRegion")
-    private final @Nullable Input<Boolean> multiRegion;
+      private final @Nullable Input<Boolean> multiRegion;
 
     public Input<Boolean> getMultiRegion() {
         return this.multiRegion == null ? Input.empty() : this.multiRegion;
@@ -103,7 +103,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pendingWindowInDays")
-    private final @Nullable Input<Integer> pendingWindowInDays;
+      private final @Nullable Input<Integer> pendingWindowInDays;
 
     public Input<Integer> getPendingWindowInDays() {
         return this.pendingWindowInDays == null ? Input.empty() : this.pendingWindowInDays;
@@ -114,7 +114,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<KeyTagArgs>> tags;
+      private final @Nullable Input<List<KeyTagArgs>> tags;
 
     public Input<List<KeyTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -278,7 +278,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public KeyArgs build() {
             return new KeyArgs(description, enableKeyRotation, enabled, keyPolicy, keySpec, keyUsage, multiRegion, pendingWindowInDays, tags);
         }

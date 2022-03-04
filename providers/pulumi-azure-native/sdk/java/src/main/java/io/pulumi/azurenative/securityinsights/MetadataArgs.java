@@ -11,7 +11,7 @@ import io.pulumi.azurenative.securityinsights.inputs.MetadataSourceArgs;
 import io.pulumi.azurenative.securityinsights.inputs.MetadataSupportArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="author")
-    private final @Nullable Input<MetadataAuthorArgs> author;
+      private final @Nullable Input<MetadataAuthorArgs> author;
 
     public Input<MetadataAuthorArgs> getAuthor() {
         return this.author == null ? Input.empty() : this.author;
@@ -38,7 +38,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categories")
-    private final @Nullable Input<MetadataCategoriesArgs> categories;
+      private final @Nullable Input<MetadataCategoriesArgs> categories;
 
     public Input<MetadataCategoriesArgs> getCategories() {
         return this.categories == null ? Input.empty() : this.categories;
@@ -49,7 +49,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentId")
-    private final @Nullable Input<String> contentId;
+      private final @Nullable Input<String> contentId;
 
     public Input<String> getContentId() {
         return this.contentId == null ? Input.empty() : this.contentId;
@@ -60,7 +60,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependencies")
-    private final @Nullable Input<MetadataDependenciesArgs> dependencies;
+      private final @Nullable Input<MetadataDependenciesArgs> dependencies;
 
     public Input<MetadataDependenciesArgs> getDependencies() {
         return this.dependencies == null ? Input.empty() : this.dependencies;
@@ -71,7 +71,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstPublishDate")
-    private final @Nullable Input<String> firstPublishDate;
+      private final @Nullable Input<String> firstPublishDate;
 
     public Input<String> getFirstPublishDate() {
         return this.firstPublishDate == null ? Input.empty() : this.firstPublishDate;
@@ -82,7 +82,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,Kind>> kind;
+      private final Input<Either<String,Kind>> kind;
 
     public Input<Either<String,Kind>> getKind() {
         return this.kind;
@@ -93,7 +93,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastPublishDate")
-    private final @Nullable Input<String> lastPublishDate;
+      private final @Nullable Input<String> lastPublishDate;
 
     public Input<String> getLastPublishDate() {
         return this.lastPublishDate == null ? Input.empty() : this.lastPublishDate;
@@ -104,7 +104,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataName")
-    private final @Nullable Input<String> metadataName;
+      private final @Nullable Input<String> metadataName;
 
     public Input<String> getMetadataName() {
         return this.metadataName == null ? Input.empty() : this.metadataName;
@@ -115,7 +115,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+      private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -126,7 +126,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentId", required=true)
-    private final Input<String> parentId;
+      private final Input<String> parentId;
 
     public Input<String> getParentId() {
         return this.parentId;
@@ -137,7 +137,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providers")
-    private final @Nullable Input<List<String>> providers;
+      private final @Nullable Input<List<String>> providers;
 
     public Input<List<String>> getProviders() {
         return this.providers == null ? Input.empty() : this.providers;
@@ -148,7 +148,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -159,7 +159,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<MetadataSourceArgs> source;
+      private final @Nullable Input<MetadataSourceArgs> source;
 
     public Input<MetadataSourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -170,7 +170,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="support")
-    private final @Nullable Input<MetadataSupportArgs> support;
+      private final @Nullable Input<MetadataSupportArgs> support;
 
     public Input<MetadataSupportArgs> getSupport() {
         return this.support == null ? Input.empty() : this.support;
@@ -181,7 +181,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -192,7 +192,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -461,7 +461,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public MetadataArgs build() {
             return new MetadataArgs(author, categories, contentId, dependencies, firstPublishDate, kind, lastPublishDate, metadataName, operationalInsightsResourceProvider, parentId, providers, resourceGroupName, source, support, version, workspaceName);
         }

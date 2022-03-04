@@ -7,7 +7,7 @@ import io.pulumi.awsnative.dynamodb.inputs.GlobalTableKeySchemaArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableProjectionArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableWriteProvisionedThroughputSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,28 +19,28 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
     public static final GlobalTableGlobalSecondaryIndexArgs Empty = new GlobalTableGlobalSecondaryIndexArgs();
 
     @InputImport(name="indexName", required=true)
-    private final Input<String> indexName;
+      private final Input<String> indexName;
 
     public Input<String> getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="keySchema", required=true)
-    private final Input<List<GlobalTableKeySchemaArgs>> keySchema;
+      private final Input<List<GlobalTableKeySchemaArgs>> keySchema;
 
     public Input<List<GlobalTableKeySchemaArgs>> getKeySchema() {
         return this.keySchema;
     }
 
     @InputImport(name="projection", required=true)
-    private final Input<GlobalTableProjectionArgs> projection;
+      private final Input<GlobalTableProjectionArgs> projection;
 
     public Input<GlobalTableProjectionArgs> getProjection() {
         return this.projection;
     }
 
     @InputImport(name="writeProvisionedThroughputSettings")
-    private final @Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
+      private final @Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
 
     public Input<GlobalTableWriteProvisionedThroughputSettingsArgs> getWriteProvisionedThroughputSettings() {
         return this.writeProvisionedThroughputSettings == null ? Input.empty() : this.writeProvisionedThroughputSettings;
@@ -129,7 +129,6 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
             this.writeProvisionedThroughputSettings = Input.ofNullable(writeProvisionedThroughputSettings);
             return this;
         }
-
         public GlobalTableGlobalSecondaryIndexArgs build() {
             return new GlobalTableGlobalSecondaryIndexArgs(indexName, keySchema, projection, writeProvisionedThroughputSettings);
         }

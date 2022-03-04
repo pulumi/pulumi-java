@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressFromArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressToArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingressFrom")
-    private final @Nullable Input<IngressFromArgs> ingressFrom;
+      private final @Nullable Input<IngressFromArgs> ingressFrom;
 
     public Input<IngressFromArgs> getIngressFrom() {
         return this.ingressFrom == null ? Input.empty() : this.ingressFrom;
@@ -35,7 +35,7 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingressTo")
-    private final @Nullable Input<IngressToArgs> ingressTo;
+      private final @Nullable Input<IngressToArgs> ingressTo;
 
     public Input<IngressToArgs> getIngressTo() {
         return this.ingressTo == null ? Input.empty() : this.ingressTo;
@@ -94,7 +94,6 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.ingressTo = Input.ofNullable(ingressTo);
             return this;
         }
-
         public IngressPolicyArgs build() {
             return new IngressPolicyArgs(ingressFrom, ingressTo);
         }

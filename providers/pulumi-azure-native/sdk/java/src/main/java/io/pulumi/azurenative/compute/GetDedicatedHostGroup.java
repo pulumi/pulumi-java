@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetDedicatedHostGroupArgs;
 import io.pulumi.azurenative.compute.outputs.GetDedicatedHostGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDedicatedHostGroup {
-/**
- * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
+    private GetDedicatedHostGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetDedicatedHostGroupArgs.Builder a);
+    }
+    private static GetDedicatedHostGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDedicatedHostGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
  * API Version: 2020-12-01.
  * 
- *
- * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
+     *
+     * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
  * 
- */
+     */
+    public static CompletableFuture<GetDedicatedHostGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
+     * 
+     */
     public static CompletableFuture<GetDedicatedHostGroupResult> invokeAsync(GetDedicatedHostGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDedicatedHostGroup", TypeShape.of(GetDedicatedHostGroupResult.class), args == null ? GetDedicatedHostGroupArgs.Empty : args, Utilities.withVersion(options));
     }

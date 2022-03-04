@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class SpotFleetTargetGroupArgs extends io.pulumi.resources.Resource
     public static final SpotFleetTargetGroupArgs Empty = new SpotFleetTargetGroupArgs();
 
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -57,7 +57,6 @@ public final class SpotFleetTargetGroupArgs extends io.pulumi.resources.Resource
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public SpotFleetTargetGroupArgs build() {
             return new SpotFleetTargetGroupArgs(arn);
         }

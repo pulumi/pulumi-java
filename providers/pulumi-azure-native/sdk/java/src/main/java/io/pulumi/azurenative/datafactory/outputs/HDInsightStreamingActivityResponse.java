@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -160,119 +160,119 @@ public final class HDInsightStreamingActivityResponse {
     /**
      * User specified arguments to HDInsightActivity.
      * 
-     */
+    */
     public List<Object> getArguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
      * Combiner executable name. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getCombiner() {
         return Optional.ofNullable(this.combiner);
     }
     /**
      * Command line environment values.
      * 
-     */
+    */
     public List<Object> getCommandEnvironment() {
         return this.commandEnvironment == null ? List.of() : this.commandEnvironment;
     }
     /**
      * Allows user to specify defines for streaming job request.
      * 
-     */
+    */
     public Map<String,Object> getDefines() {
         return this.defines == null ? Map.of() : this.defines;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Linked service reference where the files are located.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getFileLinkedService() {
         return Optional.ofNullable(this.fileLinkedService);
     }
     /**
      * Paths to streaming job files. Can be directories.
      * 
-     */
+    */
     public List<Object> getFilePaths() {
         return this.filePaths;
     }
     /**
      * Debug info option.
      * 
-     */
+    */
     public Optional<String> getGetDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
      * Input blob path. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getInput() {
         return this.input;
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Mapper executable name. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getMapper() {
         return this.mapper;
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Output blob path. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getOutput() {
         return this.output;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Reducer executable name. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getReducer() {
         return this.reducer;
     }
     /**
      * Storage linked service references.
      * 
-     */
+    */
     public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
@@ -280,14 +280,14 @@ public final class HDInsightStreamingActivityResponse {
      * Type of activity.
      * Expected value is 'HDInsightStreaming'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -442,7 +442,6 @@ public final class HDInsightStreamingActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public HDInsightStreamingActivityResponse build() {
             return new HDInsightStreamingActivityResponse(arguments, combiner, commandEnvironment, defines, dependsOn, description, fileLinkedService, filePaths, getDebugInfo, input, linkedServiceName, mapper, name, output, policy, reducer, storageLinkedServices, type, userProperties);
         }

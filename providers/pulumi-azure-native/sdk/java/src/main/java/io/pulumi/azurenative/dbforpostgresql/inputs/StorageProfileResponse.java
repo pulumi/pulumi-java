@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="backupRetentionDays")
-    private final @Nullable Integer backupRetentionDays;
+      private final @Nullable Integer backupRetentionDays;
 
     public Optional<Integer> getBackupRetentionDays() {
         return this.backupRetentionDays == null ? Optional.empty() : Optional.ofNullable(this.backupRetentionDays);
@@ -35,7 +35,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="geoRedundantBackup")
-    private final @Nullable String geoRedundantBackup;
+      private final @Nullable String geoRedundantBackup;
 
     public Optional<String> getGeoRedundantBackup() {
         return this.geoRedundantBackup == null ? Optional.empty() : Optional.ofNullable(this.geoRedundantBackup);
@@ -46,7 +46,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="storageAutogrow")
-    private final @Nullable String storageAutogrow;
+      private final @Nullable String storageAutogrow;
 
     public Optional<String> getStorageAutogrow() {
         return this.storageAutogrow == null ? Optional.empty() : Optional.ofNullable(this.storageAutogrow);
@@ -57,7 +57,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="storageMB")
-    private final @Nullable Integer storageMB;
+      private final @Nullable Integer storageMB;
 
     public Optional<Integer> getStorageMB() {
         return this.storageMB == null ? Optional.empty() : Optional.ofNullable(this.storageMB);
@@ -126,7 +126,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
             this.storageMB = storageMB;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(backupRetentionDays, geoRedundantBackup, storageAutogrow, storageMB);
         }

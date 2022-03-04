@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.outputs.LocationS3Tag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetLocationS3Result {
     /**
      * The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
      * 
-     */
+    */
     public Optional<String> getLocationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
      * The URL of the S3 location that was described.
      * 
-     */
+    */
     public Optional<String> getLocationUri() {
         return Optional.ofNullable(this.locationUri);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<LocationS3Tag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -99,7 +99,6 @@ public final class GetLocationS3Result {
             this.tags = tags;
             return this;
         }
-
         public GetLocationS3Result build() {
             return new GetLocationS3Result(locationArn, locationUri, tags);
         }

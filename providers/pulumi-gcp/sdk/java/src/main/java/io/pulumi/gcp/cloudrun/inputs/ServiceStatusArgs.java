@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceStatusConditionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,35 +18,35 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServiceStatusArgs Empty = new ServiceStatusArgs();
 
     @InputImport(name="conditions")
-    private final @Nullable Input<List<ServiceStatusConditionArgs>> conditions;
+      private final @Nullable Input<List<ServiceStatusConditionArgs>> conditions;
 
     public Input<List<ServiceStatusConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
     @InputImport(name="latestCreatedRevisionName")
-    private final @Nullable Input<String> latestCreatedRevisionName;
+      private final @Nullable Input<String> latestCreatedRevisionName;
 
     public Input<String> getLatestCreatedRevisionName() {
         return this.latestCreatedRevisionName == null ? Input.empty() : this.latestCreatedRevisionName;
     }
 
     @InputImport(name="latestReadyRevisionName")
-    private final @Nullable Input<String> latestReadyRevisionName;
+      private final @Nullable Input<String> latestReadyRevisionName;
 
     public Input<String> getLatestReadyRevisionName() {
         return this.latestReadyRevisionName == null ? Input.empty() : this.latestReadyRevisionName;
     }
 
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
     }
 
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -150,7 +150,6 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public ServiceStatusArgs build() {
             return new ServiceStatusArgs(conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, url);
         }

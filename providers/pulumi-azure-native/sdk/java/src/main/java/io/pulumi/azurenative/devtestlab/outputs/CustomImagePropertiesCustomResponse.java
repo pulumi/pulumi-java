@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class CustomImagePropertiesCustomResponse {
     /**
      * The image name.
      * 
-     */
+    */
     public Optional<String> getImageName() {
         return Optional.ofNullable(this.imageName);
     }
     /**
      * The OS type of the custom image (i.e. Windows, Linux)
      * 
-     */
+    */
     public String getOsType() {
         return this.osType;
     }
     /**
      * Indicates whether sysprep has been run on the VHD.
      * 
-     */
+    */
     public Optional<Boolean> getSysPrep() {
         return Optional.ofNullable(this.sysPrep);
     }
@@ -98,7 +98,6 @@ public final class CustomImagePropertiesCustomResponse {
             this.sysPrep = sysPrep;
             return this;
         }
-
         public CustomImagePropertiesCustomResponse build() {
             return new CustomImagePropertiesCustomResponse(imageName, osType, sysPrep);
         }

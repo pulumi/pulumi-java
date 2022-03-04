@@ -15,8 +15,8 @@ import io.pulumi.awsnative.ecs.outputs.TaskDefinitionTag;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionVolume;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -146,6 +146,37 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
         return this.volumes;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable TaskDefinitionArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ecs.TaskDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ecs.TaskDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TaskDefinition(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TaskDefinition(String name) {
+        this(name, TaskDefinitionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TaskDefinition(String name, @Nullable TaskDefinitionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

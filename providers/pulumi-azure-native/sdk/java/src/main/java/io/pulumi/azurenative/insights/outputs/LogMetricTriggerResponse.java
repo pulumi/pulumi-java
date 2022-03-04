@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class LogMetricTriggerResponse {
     /**
      * Evaluation of metric on a particular column
      * 
-     */
+    */
     public Optional<String> getMetricColumn() {
         return Optional.ofNullable(this.metricColumn);
     }
     /**
      * Metric Trigger Type - 'Consecutive' or 'Total'
      * 
-     */
+    */
     public Optional<String> getMetricTriggerType() {
         return Optional.ofNullable(this.metricTriggerType);
     }
     /**
      * The threshold of the metric trigger.
      * 
-     */
+    */
     public Optional<Double> getThreshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
      * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
      * 
-     */
+    */
     public Optional<String> getThresholdOperator() {
         return Optional.ofNullable(this.thresholdOperator);
     }
@@ -119,7 +119,6 @@ public final class LogMetricTriggerResponse {
             this.thresholdOperator = thresholdOperator;
             return this;
         }
-
         public LogMetricTriggerResponse build() {
             return new LogMetricTriggerResponse(metricColumn, metricTriggerType, threshold, thresholdOperator);
         }

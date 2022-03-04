@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicedirectory_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetNamespaceServiceIamPolicyArgs extends io.pulumi.resources.
     public static final GetNamespaceServiceIamPolicyArgs Empty = new GetNamespaceServiceIamPolicyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="namespaceId", required=true)
-    private final String namespaceId;
+      private final String namespaceId;
 
     public String getNamespaceId() {
         return this.namespaceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
@@ -105,7 +105,6 @@ public final class GetNamespaceServiceIamPolicyArgs extends io.pulumi.resources.
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public GetNamespaceServiceIamPolicyArgs build() {
             return new GetNamespaceServiceIamPolicyArgs(location, namespaceId, project, serviceId);
         }

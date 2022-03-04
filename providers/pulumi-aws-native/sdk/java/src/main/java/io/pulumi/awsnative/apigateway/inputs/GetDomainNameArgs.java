@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetDomainNameArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDomainNameArgs Empty = new GetDomainNameArgs();
 
     @InputImport(name="domainName", required=true)
-    private final String domainName;
+      private final String domainName;
 
     public String getDomainName() {
         return this.domainName;
@@ -51,7 +51,6 @@ public final class GetDomainNameArgs extends io.pulumi.resources.InvokeArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public GetDomainNameArgs build() {
             return new GetDomainNameArgs(domainName);
         }

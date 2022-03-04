@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends io.
      * 
      */
     @InputImport(name="loginUrl", required=true)
-    private final Input<String> loginUrl;
+      private final Input<String> loginUrl;
 
     public Input<String> getLoginUrl() {
         return this.loginUrl;
@@ -31,7 +31,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends io.
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -42,7 +42,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends io.
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -116,7 +116,6 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends io.
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public SecurityScanConfigAuthenticationCustomAccountArgs build() {
             return new SecurityScanConfigAuthenticationCustomAccountArgs(loginUrl, password, username);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final Input<String> headerName;
+      private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
@@ -33,7 +33,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="regexMatch", required=true)
-    private final Input<String> regexMatch;
+      private final Input<String> regexMatch;
 
     public Input<String> getRegexMatch() {
         return this.regexMatch;
@@ -92,7 +92,6 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
             this.regexMatch = Input.of(Objects.requireNonNull(regexMatch));
             return this;
         }
-
         public HttpHeaderMatchArgs build() {
             return new HttpHeaderMatchArgs(headerName, regexMatch);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ListWorkflowAccessKeySecretKeysResult {
     /**
      * Gets the primary secret key.
      * 
-     */
+    */
     public String getPrimarySecretKey() {
         return this.primarySecretKey;
     }
     /**
      * Gets the secondary secret key.
      * 
-     */
+    */
     public String getSecondarySecretKey() {
         return this.secondarySecretKey;
     }
@@ -74,7 +74,6 @@ public final class ListWorkflowAccessKeySecretKeysResult {
             this.secondarySecretKey = Objects.requireNonNull(secondarySecretKey);
             return this;
         }
-
         public ListWorkflowAccessKeySecretKeysResult build() {
             return new ListWorkflowAccessKeySecretKeysResult(primarySecretKey, secondarySecretKey);
         }

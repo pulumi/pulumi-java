@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class AutomationActionLogicAppResponse {
      * The type of the action that will be triggered by the Automation
      * Expected value is 'LogicApp'.
      * 
-     */
+    */
     public String getActionType() {
         return this.actionType;
     }
     /**
      * The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
      * 
-     */
+    */
     public Optional<String> getLogicAppResourceId() {
         return Optional.ofNullable(this.logicAppResourceId);
     }
     /**
      * The Logic App trigger URI endpoint (it will not be included in any response).
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }
@@ -99,7 +99,6 @@ public final class AutomationActionLogicAppResponse {
             this.uri = uri;
             return this;
         }
-
         public AutomationActionLogicAppResponse build() {
             return new AutomationActionLogicAppResponse(actionType, logicAppResourceId, uri);
         }

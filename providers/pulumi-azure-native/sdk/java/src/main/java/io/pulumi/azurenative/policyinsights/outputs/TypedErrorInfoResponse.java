@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class TypedErrorInfoResponse {
     /**
      * The scenario specific error details.
      * 
-     */
+    */
     public Object getInfo() {
         return this.info;
     }
     /**
      * The type of included error details.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -75,7 +75,6 @@ public final class TypedErrorInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TypedErrorInfoResponse build() {
             return new TypedErrorInfoResponse(info, type);
         }

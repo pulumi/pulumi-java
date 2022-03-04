@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRefere
     /**
      * Volume's name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -52,7 +52,6 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRefere
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference build() {
             return new ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference(name);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.GitHubClientSecretResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -84,56 +84,56 @@ public final class FactoryGitHubConfigurationResponse {
     /**
      * Account name.
      * 
-     */
+    */
     public String getAccountName() {
         return this.accountName;
     }
     /**
      * GitHub bring your own app client id.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * GitHub bring your own app client secret information.
      * 
-     */
+    */
     public Optional<GitHubClientSecretResponse> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * Collaboration branch.
      * 
-     */
+    */
     public String getCollaborationBranch() {
         return this.collaborationBranch;
     }
     /**
      * GitHub Enterprise host name. For example: https://github.mydomain.com
      * 
-     */
+    */
     public Optional<String> getHostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
      * Last commit id.
      * 
-     */
+    */
     public Optional<String> getLastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
     /**
      * Repository name.
      * 
-     */
+    */
     public String getRepositoryName() {
         return this.repositoryName;
     }
     /**
      * Root folder.
      * 
-     */
+    */
     public String getRootFolder() {
         return this.rootFolder;
     }
@@ -141,7 +141,7 @@ public final class FactoryGitHubConfigurationResponse {
      * Type of repo configuration.
      * Expected value is 'FactoryGitHubConfiguration'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -226,7 +226,6 @@ public final class FactoryGitHubConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FactoryGitHubConfigurationResponse build() {
             return new FactoryGitHubConfigurationResponse(accountName, clientId, clientSecret, collaborationBranch, hostName, lastCommitId, repositoryName, rootFolder, type);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.fluidrelay;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.fluidrelay.inputs.GetFluidRelayServerKeysArgs;
 import io.pulumi.azurenative.fluidrelay.outputs.GetFluidRelayServerKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFluidRelayServerKeys {
-/**
- * The set of available keys for this server.
+    private GetFluidRelayServerKeys() {}
+    public interface BuilderApplicator {
+        public void apply(GetFluidRelayServerKeysArgs.Builder a);
+    }
+    private static GetFluidRelayServerKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFluidRelayServerKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The set of available keys for this server.
  * API Version: 2021-03-12-preview.
  * 
- *
- * The set of available keys for this server.
+     *
+     * The set of available keys for this server.
  * 
- */
+     */
+    public static CompletableFuture<GetFluidRelayServerKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The set of available keys for this server.
+     * API Version: 2021-03-12-preview.
+     * 
+     *
+         * The set of available keys for this server.
+     * 
+     */
     public static CompletableFuture<GetFluidRelayServerKeysResult> invokeAsync(GetFluidRelayServerKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:fluidrelay:getFluidRelayServerKeys", TypeShape.of(GetFluidRelayServerKeysResult.class), args == null ? GetFluidRelayServerKeysArgs.Empty : args, Utilities.withVersion(options));
     }

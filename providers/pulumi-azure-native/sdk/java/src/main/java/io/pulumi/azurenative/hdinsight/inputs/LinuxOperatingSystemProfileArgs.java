@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.SshProfileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -35,7 +35,7 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sshProfile")
-    private final @Nullable Input<SshProfileArgs> sshProfile;
+      private final @Nullable Input<SshProfileArgs> sshProfile;
 
     public Input<SshProfileArgs> getSshProfile() {
         return this.sshProfile == null ? Input.empty() : this.sshProfile;
@@ -46,7 +46,7 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -120,7 +120,6 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public LinuxOperatingSystemProfileArgs build() {
             return new LinuxOperatingSystemProfileArgs(password, sshProfile, username);
         }

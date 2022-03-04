@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -32,7 +32,7 @@ public final class JobStatusErrorResult {
     /**
      * The geographic location of the job. The default value is US.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
@@ -81,7 +81,6 @@ public final class JobStatusErrorResult {
             this.reason = reason;
             return this;
         }
-
         public JobStatusErrorResult build() {
             return new JobStatusErrorResult(location, message, reason);
         }

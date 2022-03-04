@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     /**
      * The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.
      * 
-     */
+    */
     public String getAgent() {
         return this.agent;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             this.agent = Objects.requireNonNull(agent);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse(agent);
         }

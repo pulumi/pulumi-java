@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.SecurityScanConfigAuthenticationCustomAccount;
 import io.pulumi.gcp.compute.outputs.SecurityScanConfigAuthenticationGoogleAccount;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class SecurityScanConfigAuthentication {
      * Describes authentication configuration that uses a custom account.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SecurityScanConfigAuthenticationCustomAccount> getCustomAccount() {
         return Optional.ofNullable(this.customAccount);
     }
@@ -45,7 +45,7 @@ public final class SecurityScanConfigAuthentication {
      * Describes authentication configuration that uses a Google account.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SecurityScanConfigAuthenticationGoogleAccount> getGoogleAccount() {
         return Optional.ofNullable(this.googleAccount);
     }
@@ -81,7 +81,6 @@ public final class SecurityScanConfigAuthentication {
             this.googleAccount = googleAccount;
             return this;
         }
-
         public SecurityScanConfigAuthentication build() {
             return new SecurityScanConfigAuthentication(customAccount, googleAccount);
         }

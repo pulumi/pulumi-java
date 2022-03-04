@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.UpgradeMode;
 import io.pulumi.azurenative.compute.inputs.AutomaticOSUpgradePolicyArgs;
 import io.pulumi.azurenative.compute.inputs.RollingUpgradePolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automaticOSUpgradePolicy")
-    private final @Nullable Input<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy;
+      private final @Nullable Input<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy;
 
     public Input<AutomaticOSUpgradePolicyArgs> getAutomaticOSUpgradePolicy() {
         return this.automaticOSUpgradePolicy == null ? Input.empty() : this.automaticOSUpgradePolicy;
@@ -36,7 +36,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<UpgradeMode> mode;
+      private final @Nullable Input<UpgradeMode> mode;
 
     public Input<UpgradeMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -47,7 +47,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rollingUpgradePolicy")
-    private final @Nullable Input<RollingUpgradePolicyArgs> rollingUpgradePolicy;
+      private final @Nullable Input<RollingUpgradePolicyArgs> rollingUpgradePolicy;
 
     public Input<RollingUpgradePolicyArgs> getRollingUpgradePolicy() {
         return this.rollingUpgradePolicy == null ? Input.empty() : this.rollingUpgradePolicy;
@@ -121,7 +121,6 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.rollingUpgradePolicy = Input.ofNullable(rollingUpgradePolicy);
             return this;
         }
-
         public UpgradePolicyArgs build() {
             return new UpgradePolicyArgs(automaticOSUpgradePolicy, mode, rollingUpgradePolicy);
         }

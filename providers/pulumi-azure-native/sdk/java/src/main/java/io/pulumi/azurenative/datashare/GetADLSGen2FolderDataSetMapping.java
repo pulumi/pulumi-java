@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetADLSGen2FolderDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.GetADLSGen2FolderDataSetMappingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetADLSGen2FolderDataSetMapping {
-/**
- * An ADLS Gen2 folder data set mapping.
+    private GetADLSGen2FolderDataSetMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetADLSGen2FolderDataSetMappingArgs.Builder a);
+    }
+    private static GetADLSGen2FolderDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetADLSGen2FolderDataSetMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An ADLS Gen2 folder data set mapping.
  * API Version: 2020-09-01.
  * 
- *
- * An ADLS Gen2 folder data set mapping.
+     *
+     * An ADLS Gen2 folder data set mapping.
  * 
- */
+     */
+    public static CompletableFuture<GetADLSGen2FolderDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An ADLS Gen2 folder data set mapping.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * An ADLS Gen2 folder data set mapping.
+     * 
+     */
     public static CompletableFuture<GetADLSGen2FolderDataSetMappingResult> invokeAsync(GetADLSGen2FolderDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FolderDataSetMapping", TypeShape.of(GetADLSGen2FolderDataSetMappingResult.class), args == null ? GetADLSGen2FolderDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

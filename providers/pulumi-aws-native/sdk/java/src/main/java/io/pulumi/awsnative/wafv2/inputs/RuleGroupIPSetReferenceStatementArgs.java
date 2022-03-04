@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupIPSetForwardedIPConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class RuleGroupIPSetReferenceStatementArgs extends io.pulumi.resour
     public static final RuleGroupIPSetReferenceStatementArgs Empty = new RuleGroupIPSetReferenceStatementArgs();
 
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
     }
 
     @InputImport(name="iPSetForwardedIPConfig")
-    private final @Nullable Input<RuleGroupIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
+      private final @Nullable Input<RuleGroupIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
 
     public Input<RuleGroupIPSetForwardedIPConfigurationArgs> getIPSetForwardedIPConfig() {
         return this.iPSetForwardedIPConfig == null ? Input.empty() : this.iPSetForwardedIPConfig;
@@ -82,7 +82,6 @@ public final class RuleGroupIPSetReferenceStatementArgs extends io.pulumi.resour
             this.iPSetForwardedIPConfig = Input.ofNullable(iPSetForwardedIPConfig);
             return this;
         }
-
         public RuleGroupIPSetReferenceStatementArgs build() {
             return new RuleGroupIPSetReferenceStatementArgs(arn, iPSetForwardedIPConfig);
         }

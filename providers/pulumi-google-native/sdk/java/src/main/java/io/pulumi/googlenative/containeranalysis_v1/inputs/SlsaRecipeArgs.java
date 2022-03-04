@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<Map<String,String>> arguments;
+      private final @Nullable Input<Map<String,String>> arguments;
 
     public Input<Map<String,String>> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -35,7 +35,7 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definedInMaterial")
-    private final @Nullable Input<String> definedInMaterial;
+      private final @Nullable Input<String> definedInMaterial;
 
     public Input<String> getDefinedInMaterial() {
         return this.definedInMaterial == null ? Input.empty() : this.definedInMaterial;
@@ -46,7 +46,7 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entryPoint")
-    private final @Nullable Input<String> entryPoint;
+      private final @Nullable Input<String> entryPoint;
 
     public Input<String> getEntryPoint() {
         return this.entryPoint == null ? Input.empty() : this.entryPoint;
@@ -57,7 +57,7 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<Map<String,String>> environment;
+      private final @Nullable Input<Map<String,String>> environment;
 
     public Input<Map<String,String>> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -68,7 +68,7 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -172,7 +172,6 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public SlsaRecipeArgs build() {
             return new SlsaRecipeArgs(arguments, definedInMaterial, entryPoint, environment, type);
         }

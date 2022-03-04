@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AutoStoragePropertiesResponse {
     /**
      * The UTC time at which storage keys were last synchronized with the Batch account.
      * 
-     */
+    */
     public String getLastKeySync() {
         return this.lastKeySync;
     }
     /**
      * The resource ID of the storage account to be used for auto-storage account.
      * 
-     */
+    */
     public String getStorageAccountId() {
         return this.storageAccountId;
     }
@@ -74,7 +74,6 @@ public final class AutoStoragePropertiesResponse {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public AutoStoragePropertiesResponse build() {
             return new AutoStoragePropertiesResponse(lastKeySync, storageAccountId);
         }

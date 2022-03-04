@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.SshPublicAccess;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="adminPublicKey")
-    private final @Nullable Input<String> adminPublicKey;
+      private final @Nullable Input<String> adminPublicKey;
 
     public Input<String> getAdminPublicKey() {
         return this.adminPublicKey == null ? Input.empty() : this.adminPublicKey;
@@ -36,7 +36,7 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sshPublicAccess")
-    private final @Nullable Input<Either<String,SshPublicAccess>> sshPublicAccess;
+      private final @Nullable Input<Either<String,SshPublicAccess>> sshPublicAccess;
 
     public Input<Either<String,SshPublicAccess>> getSshPublicAccess() {
         return this.sshPublicAccess == null ? Input.empty() : this.sshPublicAccess;
@@ -95,7 +95,6 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
             this.sshPublicAccess = Input.ofNullable(sshPublicAccess);
             return this;
         }
-
         public ComputeInstanceSshSettingsArgs build() {
             return new ComputeInstanceSshSettingsArgs(adminPublicKey, sshPublicAccess);
         }

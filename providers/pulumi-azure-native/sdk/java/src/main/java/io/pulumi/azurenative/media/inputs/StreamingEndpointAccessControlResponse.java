@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.AkamaiAccessControlResponse;
 import io.pulumi.azurenative.media.inputs.IPAccessControlResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class StreamingEndpointAccessControlResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="akamai")
-    private final @Nullable AkamaiAccessControlResponse akamai;
+      private final @Nullable AkamaiAccessControlResponse akamai;
 
     public Optional<AkamaiAccessControlResponse> getAkamai() {
         return this.akamai == null ? Optional.empty() : Optional.ofNullable(this.akamai);
@@ -35,7 +35,7 @@ public final class StreamingEndpointAccessControlResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable IPAccessControlResponse ip;
+      private final @Nullable IPAccessControlResponse ip;
 
     public Optional<IPAccessControlResponse> getIp() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
@@ -84,7 +84,6 @@ public final class StreamingEndpointAccessControlResponse extends io.pulumi.reso
             this.ip = ip;
             return this;
         }
-
         public StreamingEndpointAccessControlResponse build() {
             return new StreamingEndpointAccessControlResponse(akamai, ip);
         }

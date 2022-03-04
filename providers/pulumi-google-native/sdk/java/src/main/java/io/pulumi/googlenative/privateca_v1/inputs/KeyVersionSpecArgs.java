@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.enums.KeyVersionSpecAlgorithm;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm")
-    private final @Nullable Input<KeyVersionSpecAlgorithm> algorithm;
+      private final @Nullable Input<KeyVersionSpecAlgorithm> algorithm;
 
     public Input<KeyVersionSpecAlgorithm> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
@@ -35,7 +35,7 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudKmsKeyVersion")
-    private final @Nullable Input<String> cloudKmsKeyVersion;
+      private final @Nullable Input<String> cloudKmsKeyVersion;
 
     public Input<String> getCloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion == null ? Input.empty() : this.cloudKmsKeyVersion;
@@ -94,7 +94,6 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudKmsKeyVersion = Input.ofNullable(cloudKmsKeyVersion);
             return this;
         }
-
         public KeyVersionSpecArgs build() {
             return new KeyVersionSpecArgs(algorithm, cloudKmsKeyVersion);
         }

@@ -20,7 +20,7 @@ import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageLocationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpLocationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -117,70 +117,70 @@ public final class JsonDatasetResponse {
     /**
      * List of tags that can be used for describing the Dataset.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The data compression method used for the json dataset.
      * 
-     */
+    */
     public Optional<DatasetCompressionResponse> getCompression() {
         return Optional.ofNullable(this.compression);
     }
     /**
      * Dataset description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The code page name of the preferred encoding. If not specified, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncodingName() {
         return Optional.ofNullable(this.encodingName);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-     */
+    */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The location of the json data storage.
      * 
-     */
+    */
     public Object getLocation() {
         return this.location;
     }
     /**
      * Parameters for dataset.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-     */
+    */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-     */
+    */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
     }
@@ -188,7 +188,7 @@ public final class JsonDatasetResponse {
      * Type of dataset.
      * Expected value is 'Json'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -287,7 +287,6 @@ public final class JsonDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonDatasetResponse build() {
             return new JsonDatasetResponse(annotations, compression, description, encodingName, folder, linkedServiceName, location, parameters, schema, structure, type);
         }

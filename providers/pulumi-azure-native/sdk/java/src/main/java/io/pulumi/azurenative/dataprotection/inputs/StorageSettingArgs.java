@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dataprotection.enums.StorageSettingStoreTypes;
 import io.pulumi.azurenative.dataprotection.enums.StorageSettingTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreType")
-    private final @Nullable Input<Either<String,StorageSettingStoreTypes>> datastoreType;
+      private final @Nullable Input<Either<String,StorageSettingStoreTypes>> datastoreType;
 
     public Input<Either<String,StorageSettingStoreTypes>> getDatastoreType() {
         return this.datastoreType == null ? Input.empty() : this.datastoreType;
@@ -37,7 +37,7 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,StorageSettingTypes>> type;
+      private final @Nullable Input<Either<String,StorageSettingTypes>> type;
 
     public Input<Either<String,StorageSettingTypes>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -96,7 +96,6 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public StorageSettingArgs build() {
             return new StorageSettingArgs(datastoreType, type);
         }

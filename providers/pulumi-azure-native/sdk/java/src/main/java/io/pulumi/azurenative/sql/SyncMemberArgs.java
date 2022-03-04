@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.SyncDirection;
 import io.pulumi.azurenative.sql.enums.SyncMemberDbType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -34,7 +34,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseType")
-    private final @Nullable Input<Either<String,SyncMemberDbType>> databaseType;
+      private final @Nullable Input<Either<String,SyncMemberDbType>> databaseType;
 
     public Input<Either<String,SyncMemberDbType>> getDatabaseType() {
         return this.databaseType == null ? Input.empty() : this.databaseType;
@@ -45,7 +45,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -56,7 +56,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -78,7 +78,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlServerDatabaseId")
-    private final @Nullable Input<String> sqlServerDatabaseId;
+      private final @Nullable Input<String> sqlServerDatabaseId;
 
     public Input<String> getSqlServerDatabaseId() {
         return this.sqlServerDatabaseId == null ? Input.empty() : this.sqlServerDatabaseId;
@@ -89,7 +89,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncAgentId")
-    private final @Nullable Input<String> syncAgentId;
+      private final @Nullable Input<String> syncAgentId;
 
     public Input<String> getSyncAgentId() {
         return this.syncAgentId == null ? Input.empty() : this.syncAgentId;
@@ -100,7 +100,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncDirection")
-    private final @Nullable Input<Either<String,SyncDirection>> syncDirection;
+      private final @Nullable Input<Either<String,SyncDirection>> syncDirection;
 
     public Input<Either<String,SyncDirection>> getSyncDirection() {
         return this.syncDirection == null ? Input.empty() : this.syncDirection;
@@ -111,7 +111,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncGroupName", required=true)
-    private final Input<String> syncGroupName;
+      private final Input<String> syncGroupName;
 
     public Input<String> getSyncGroupName() {
         return this.syncGroupName;
@@ -122,7 +122,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncMemberAzureDatabaseResourceId")
-    private final @Nullable Input<String> syncMemberAzureDatabaseResourceId;
+      private final @Nullable Input<String> syncMemberAzureDatabaseResourceId;
 
     public Input<String> getSyncMemberAzureDatabaseResourceId() {
         return this.syncMemberAzureDatabaseResourceId == null ? Input.empty() : this.syncMemberAzureDatabaseResourceId;
@@ -133,7 +133,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncMemberName")
-    private final @Nullable Input<String> syncMemberName;
+      private final @Nullable Input<String> syncMemberName;
 
     public Input<String> getSyncMemberName() {
         return this.syncMemberName == null ? Input.empty() : this.syncMemberName;
@@ -144,7 +144,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usePrivateLinkConnection")
-    private final @Nullable Input<Boolean> usePrivateLinkConnection;
+      private final @Nullable Input<Boolean> usePrivateLinkConnection;
 
     public Input<Boolean> getUsePrivateLinkConnection() {
         return this.usePrivateLinkConnection == null ? Input.empty() : this.usePrivateLinkConnection;
@@ -155,7 +155,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -379,7 +379,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public SyncMemberArgs build() {
             return new SyncMemberArgs(databaseName, databaseType, password, resourceGroupName, serverName, sqlServerDatabaseId, syncAgentId, syncDirection, syncGroupName, syncMemberAzureDatabaseResourceId, syncMemberName, usePrivateLinkConnection, userName);
         }

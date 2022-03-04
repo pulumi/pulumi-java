@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.Ipv6CircuitConnectionConfigResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="addressPrefix")
-    private final @Nullable String addressPrefix;
+      private final @Nullable String addressPrefix;
 
     public Optional<String> getAddressPrefix() {
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
@@ -36,7 +36,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="authorizationKey")
-    private final @Nullable String authorizationKey;
+      private final @Nullable String authorizationKey;
 
     public Optional<String> getAuthorizationKey() {
         return this.authorizationKey == null ? Optional.empty() : Optional.ofNullable(this.authorizationKey);
@@ -47,7 +47,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="circuitConnectionStatus", required=true)
-    private final String circuitConnectionStatus;
+      private final String circuitConnectionStatus;
 
     public String getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;
@@ -58,7 +58,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -69,7 +69,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="expressRouteCircuitPeering")
-    private final @Nullable SubResourceResponse expressRouteCircuitPeering;
+      private final @Nullable SubResourceResponse expressRouteCircuitPeering;
 
     public Optional<SubResourceResponse> getExpressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering == null ? Optional.empty() : Optional.ofNullable(this.expressRouteCircuitPeering);
@@ -80,7 +80,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -91,7 +91,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="ipv6CircuitConnectionConfig")
-    private final @Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig;
+      private final @Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig;
 
     public Optional<Ipv6CircuitConnectionConfigResponse> getIpv6CircuitConnectionConfig() {
         return this.ipv6CircuitConnectionConfig == null ? Optional.empty() : Optional.ofNullable(this.ipv6CircuitConnectionConfig);
@@ -102,7 +102,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -113,7 +113,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="peerExpressRouteCircuitPeering")
-    private final @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
+      private final @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
 
     public Optional<SubResourceResponse> getPeerExpressRouteCircuitPeering() {
         return this.peerExpressRouteCircuitPeering == null ? Optional.empty() : Optional.ofNullable(this.peerExpressRouteCircuitPeering);
@@ -124,7 +124,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -135,7 +135,7 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -274,7 +274,6 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExpressRouteCircuitConnectionResponse build() {
             return new ExpressRouteCircuitConnectionResponse(addressPrefix, authorizationKey, circuitConnectionStatus, etag, expressRouteCircuitPeering, id, ipv6CircuitConnectionConfig, name, peerExpressRouteCircuitPeering, provisioningState, type);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.outputs;
 import io.pulumi.azurenative.documentdb.outputs.CassandraViewGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.CassandraViewGetPropertiesResponseResource;
 import io.pulumi.azurenative.documentdb.outputs.ManagedServiceIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -71,28 +71,28 @@ public final class GetCassandraResourceCassandraViewResult {
     /**
      * The unique resource identifier of the ARM resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
-     */
+    */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location of the resource group to which the resource belongs.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the ARM resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -105,14 +105,14 @@ public final class GetCassandraResourceCassandraViewResult {
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of Azure resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -190,7 +190,6 @@ public final class GetCassandraResourceCassandraViewResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCassandraResourceCassandraViewResult build() {
             return new GetCassandraResourceCassandraViewResult(id, identity, location, name, options, resource, tags, type);
         }

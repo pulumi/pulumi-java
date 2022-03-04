@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -58,7 +58,7 @@ public final class AzureSqlContainerResponse {
     /**
      * Type of backup management for the container.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -69,28 +69,28 @@ public final class AzureSqlContainerResponse {
      * Backup is VMAppContainer
      * Expected value is 'AzureSqlContainer'.
      * 
-     */
+    */
     public String getContainerType() {
         return this.containerType;
     }
     /**
      * Friendly name of the container.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
-     */
+    */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
-     */
+    */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
@@ -147,7 +147,6 @@ public final class AzureSqlContainerResponse {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public AzureSqlContainerResponse build() {
             return new AzureSqlContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.TimeSpanResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class BuiltImageResponse {
     /**
      * Docker Registry 2.0 digest.
      * 
-     */
+    */
     public String getDigest() {
         return this.digest;
     }
     /**
      * Name used to push the container image to Google Container Registry, as presented to `docker push`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Stores timing information for pushing the specified image.
      * 
-     */
+    */
     public TimeSpanResponse getPushTiming() {
         return this.pushTiming;
     }
@@ -96,7 +96,6 @@ public final class BuiltImageResponse {
             this.pushTiming = Objects.requireNonNull(pushTiming);
             return this;
         }
-
         public BuiltImageResponse build() {
             return new BuiltImageResponse(digest, name, pushTiming);
         }

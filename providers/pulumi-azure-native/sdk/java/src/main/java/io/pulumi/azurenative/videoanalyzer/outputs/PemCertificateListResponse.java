@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +33,7 @@ public final class PemCertificateListResponse {
     /**
      * PEM formatted public certificates. One certificate per entry.
      * 
-     */
+    */
     public List<String> getCertificates() {
         return this.certificates;
     }
@@ -41,7 +41,7 @@ public final class PemCertificateListResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -77,7 +77,6 @@ public final class PemCertificateListResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PemCertificateListResponse build() {
             return new PemCertificateListResponse(certificates, type);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.VirtualMachineDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -82,63 +82,63 @@ public final class EnvironmentDetailsResponse {
     /**
      * Description of the Environment
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Publishing state of the environment setting Possible values are Creating, Created, Failed
      * 
-     */
+    */
     public String getEnvironmentState() {
         return this.environmentState;
     }
     /**
      * Resource Id of the environment
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
-     */
+    */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * Name of the Environment
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * When the password was last reset on the environment.
      * 
-     */
+    */
     public String getPasswordLastReset() {
         return this.passwordLastReset;
     }
     /**
      * The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * How long the environment has been used by a lab user
      * 
-     */
+    */
     public String getTotalUsage() {
         return this.totalUsage;
     }
     /**
      * Details of backing DTL virtual machine with compute and network details.
      * 
-     */
+    */
     public VirtualMachineDetailsResponse getVirtualMachineDetails() {
         return this.virtualMachineDetails;
     }
@@ -223,7 +223,6 @@ public final class EnvironmentDetailsResponse {
             this.virtualMachineDetails = Objects.requireNonNull(virtualMachineDetails);
             return this;
         }
-
         public EnvironmentDetailsResponse build() {
             return new EnvironmentDetailsResponse(description, environmentState, id, latestOperationResult, name, passwordLastReset, provisioningState, totalUsage, virtualMachineDetails);
         }

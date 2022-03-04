@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -86,56 +86,56 @@ public final class GetScheduledQueryResult {
     /**
      * Configuration for error reporting. Error reports will be generated when a problem is encountered when writing the query results.
      * 
-     */
+    */
     public Optional<String> getSQErrorReportConfiguration() {
         return Optional.ofNullable(this.sQErrorReportConfiguration);
     }
     /**
      * The Amazon KMS key used to encrypt the scheduled query resource, at-rest. If the Amazon KMS key is not specified, the scheduled query resource will be encrypted with a Timestream owned Amazon KMS key. To specify a KMS key, use the key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix the name with alias/. If ErrorReportConfiguration uses SSE_KMS as encryption type, the same KmsKeyId is used to encrypt the error report at rest.
      * 
-     */
+    */
     public Optional<String> getSQKmsKeyId() {
         return Optional.ofNullable(this.sQKmsKeyId);
     }
     /**
      * The name of the scheduled query. Scheduled query names must be unique within each Region.
      * 
-     */
+    */
     public Optional<String> getSQName() {
         return Optional.ofNullable(this.sQName);
     }
     /**
      * Notification configuration for the scheduled query. A notification is sent by Timestream when a query run finishes, when the state is updated or when you delete it.
      * 
-     */
+    */
     public Optional<String> getSQNotificationConfiguration() {
         return Optional.ofNullable(this.sQNotificationConfiguration);
     }
     /**
      * The query string to run. Parameter names can be specified in the query string @ character followed by an identifier. The named Parameter @scheduled_runtime is reserved and can be used in the query to get the time at which the query is scheduled to run. The timestamp calculated according to the ScheduleConfiguration parameter, will be the value of @scheduled_runtime paramater for each query run. For example, consider an instance of a scheduled query executing on 2021-12-01 00:00:00. For this instance, the @scheduled_runtime parameter is initialized to the timestamp 2021-12-01 00:00:00 when invoking the query.
      * 
-     */
+    */
     public Optional<String> getSQQueryString() {
         return Optional.ofNullable(this.sQQueryString);
     }
     /**
      * Configuration for when the scheduled query is executed.
      * 
-     */
+    */
     public Optional<String> getSQScheduleConfiguration() {
         return Optional.ofNullable(this.sQScheduleConfiguration);
     }
     /**
      * The ARN for the IAM role that Timestream will assume when running the scheduled query.
      * 
-     */
+    */
     public Optional<String> getSQScheduledQueryExecutionRoleArn() {
         return Optional.ofNullable(this.sQScheduledQueryExecutionRoleArn);
     }
     /**
      * Configuration of target store where scheduled query results are written to.
      * 
-     */
+    */
     public Optional<String> getSQTargetConfiguration() {
         return Optional.ofNullable(this.sQTargetConfiguration);
     }
@@ -230,7 +230,6 @@ public final class GetScheduledQueryResult {
             this.tags = tags;
             return this;
         }
-
         public GetScheduledQueryResult build() {
             return new GetScheduledQueryResult(arn, sQErrorReportConfiguration, sQKmsKeyId, sQName, sQNotificationConfiguration, sQQueryString, sQScheduleConfiguration, sQScheduledQueryExecutionRoleArn, sQTargetConfiguration, tags);
         }

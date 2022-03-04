@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.VersioningScheme;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -43,7 +43,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -65,7 +65,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionHeaderName")
-    private final @Nullable Input<String> versionHeaderName;
+      private final @Nullable Input<String> versionHeaderName;
 
     public Input<String> getVersionHeaderName() {
         return this.versionHeaderName == null ? Input.empty() : this.versionHeaderName;
@@ -76,7 +76,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionQueryName")
-    private final @Nullable Input<String> versionQueryName;
+      private final @Nullable Input<String> versionQueryName;
 
     public Input<String> getVersionQueryName() {
         return this.versionQueryName == null ? Input.empty() : this.versionQueryName;
@@ -87,7 +87,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionSetId")
-    private final @Nullable Input<String> versionSetId;
+      private final @Nullable Input<String> versionSetId;
 
     public Input<String> getVersionSetId() {
         return this.versionSetId == null ? Input.empty() : this.versionSetId;
@@ -98,7 +98,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versioningScheme", required=true)
-    private final Input<Either<String,VersioningScheme>> versioningScheme;
+      private final Input<Either<String,VersioningScheme>> versioningScheme;
 
     public Input<Either<String,VersioningScheme>> getVersioningScheme() {
         return this.versioningScheme;
@@ -247,7 +247,6 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
             this.versioningScheme = Input.of(Objects.requireNonNull(versioningScheme));
             return this;
         }
-
         public ApiVersionSetArgs build() {
             return new ApiVersionSetArgs(description, displayName, resourceGroupName, serviceName, versionHeaderName, versionQueryName, versionSetId, versioningScheme);
         }

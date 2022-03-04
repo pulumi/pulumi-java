@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="applicationName", required=true)
-    private final String applicationName;
+      private final String applicationName;
 
     public String getApplicationName() {
         return this.applicationName;
@@ -28,7 +28,7 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -39,7 +39,7 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -119,7 +119,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetServiceArgs build() {
             return new GetServiceArgs(applicationName, clusterName, resourceGroupName, serviceName);
         }

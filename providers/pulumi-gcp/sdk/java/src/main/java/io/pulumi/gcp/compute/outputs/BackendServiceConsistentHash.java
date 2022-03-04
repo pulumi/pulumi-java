@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.BackendServiceConsistentHashHttpCookie;
 import java.lang.Integer;
 import java.lang.String;
@@ -56,7 +56,7 @@ public final class BackendServiceConsistentHash {
      * This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<BackendServiceConsistentHashHttpCookie> getHttpCookie() {
         return Optional.ofNullable(this.httpCookie);
     }
@@ -64,7 +64,7 @@ public final class BackendServiceConsistentHash {
      * The hash based on the value of the specified header field.
      * This field is applicable if the sessionAffinity is set to HEADER_FIELD.
      * 
-     */
+    */
     public Optional<String> getHttpHeaderName() {
         return Optional.ofNullable(this.httpHeaderName);
     }
@@ -76,7 +76,7 @@ public final class BackendServiceConsistentHash {
      * virtual node.
      * Defaults to 1024.
      * 
-     */
+    */
     public Optional<Integer> getMinimumRingSize() {
         return Optional.ofNullable(this.minimumRingSize);
     }
@@ -119,7 +119,6 @@ public final class BackendServiceConsistentHash {
             this.minimumRingSize = minimumRingSize;
             return this;
         }
-
         public BackendServiceConsistentHash build() {
             return new BackendServiceConsistentHash(httpCookie, httpHeaderName, minimumRingSize);
         }

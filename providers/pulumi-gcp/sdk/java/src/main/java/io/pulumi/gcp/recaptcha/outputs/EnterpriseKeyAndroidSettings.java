@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.recaptcha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class EnterpriseKeyAndroidSettings {
     /**
      * If set to true, it means allowed_package_names will not be enforced.
      * 
-     */
+    */
     public Optional<Boolean> getAllowAllPackageNames() {
         return Optional.ofNullable(this.allowAllPackageNames);
     }
     /**
      * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
      * 
-     */
+    */
     public List<String> getAllowedPackageNames() {
         return this.allowedPackageNames == null ? List.of() : this.allowedPackageNames;
     }
@@ -78,7 +78,6 @@ public final class EnterpriseKeyAndroidSettings {
             this.allowedPackageNames = allowedPackageNames;
             return this;
         }
-
         public EnterpriseKeyAndroidSettings build() {
             return new EnterpriseKeyAndroidSettings(allowAllPackageNames, allowedPackageNames);
         }

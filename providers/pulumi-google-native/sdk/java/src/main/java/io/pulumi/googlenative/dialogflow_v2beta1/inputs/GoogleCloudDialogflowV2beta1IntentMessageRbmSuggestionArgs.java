@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
      * 
      */
     @InputImport(name="reply")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> getReply() {
         return this.reply == null ? Input.empty() : this.reply;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
             this.reply = Input.ofNullable(reply);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs(action, reply);
         }

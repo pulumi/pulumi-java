@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     public static final BackupArgs Empty = new BackupArgs();
 
     @InputImport(name="backupId", required=true)
-    private final Input<String> backupId;
+      private final Input<String> backupId;
 
     public Input<String> getBackupId() {
         return this.backupId;
     }
 
     @InputImport(name="clusterId", required=true)
-    private final Input<String> clusterId;
+      private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;
@@ -33,14 +33,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime", required=true)
-    private final Input<String> expireTime;
+      private final Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -51,14 +51,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -69,7 +69,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceTable", required=true)
-    private final Input<String> sourceTable;
+      private final Input<String> sourceTable;
 
     public Input<String> getSourceTable() {
         return this.sourceTable;
@@ -203,7 +203,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceTable = Input.of(Objects.requireNonNull(sourceTable));
             return this;
         }
-
         public BackupArgs build() {
             return new BackupArgs(backupId, clusterId, expireTime, instanceId, name, project, sourceTable);
         }

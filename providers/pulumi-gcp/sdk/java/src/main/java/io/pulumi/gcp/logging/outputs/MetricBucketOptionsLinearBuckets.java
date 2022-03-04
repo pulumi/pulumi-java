@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class MetricBucketOptionsLinearBuckets {
     /**
      * Must be greater than 0.
      * 
-     */
+    */
     public Optional<Integer> getNumFiniteBuckets() {
         return Optional.ofNullable(this.numFiniteBuckets);
     }
     /**
      * Lower bound of the first bucket.
      * 
-     */
+    */
     public Optional<Double> getOffset() {
         return Optional.ofNullable(this.offset);
     }
     /**
      * Must be greater than 0.
      * 
-     */
+    */
     public Optional<Double> getWidth() {
         return Optional.ofNullable(this.width);
     }
@@ -98,7 +98,6 @@ public final class MetricBucketOptionsLinearBuckets {
             this.width = width;
             return this;
         }
-
         public MetricBucketOptionsLinearBuckets build() {
             return new MetricBucketOptionsLinearBuckets(numFiniteBuckets, offset, width);
         }

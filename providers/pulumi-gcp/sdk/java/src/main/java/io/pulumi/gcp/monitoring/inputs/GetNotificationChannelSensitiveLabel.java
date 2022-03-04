@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetNotificationChannelSensitiveLabel extends io.pulumi.resour
     public static final GetNotificationChannelSensitiveLabel Empty = new GetNotificationChannelSensitiveLabel();
 
     @InputImport(name="authToken", required=true)
-    private final String authToken;
+      private final String authToken;
 
     public String getAuthToken() {
         return this.authToken;
     }
 
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
     }
 
     @InputImport(name="serviceKey", required=true)
-    private final String serviceKey;
+      private final String serviceKey;
 
     public String getServiceKey() {
         return this.serviceKey;
@@ -86,7 +86,6 @@ public final class GetNotificationChannelSensitiveLabel extends io.pulumi.resour
             this.serviceKey = Objects.requireNonNull(serviceKey);
             return this;
         }
-
         public GetNotificationChannelSensitiveLabel build() {
             return new GetNotificationChannelSensitiveLabel(authToken, password, serviceKey);
         }

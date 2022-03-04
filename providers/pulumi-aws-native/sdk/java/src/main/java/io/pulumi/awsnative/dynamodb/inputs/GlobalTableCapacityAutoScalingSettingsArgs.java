@@ -5,7 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableTargetTrackingScalingPolicyConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,28 +16,28 @@ public final class GlobalTableCapacityAutoScalingSettingsArgs extends io.pulumi.
     public static final GlobalTableCapacityAutoScalingSettingsArgs Empty = new GlobalTableCapacityAutoScalingSettingsArgs();
 
     @InputImport(name="maxCapacity", required=true)
-    private final Input<Integer> maxCapacity;
+      private final Input<Integer> maxCapacity;
 
     public Input<Integer> getMaxCapacity() {
         return this.maxCapacity;
     }
 
     @InputImport(name="minCapacity", required=true)
-    private final Input<Integer> minCapacity;
+      private final Input<Integer> minCapacity;
 
     public Input<Integer> getMinCapacity() {
         return this.minCapacity;
     }
 
     @InputImport(name="seedCapacity")
-    private final @Nullable Input<Integer> seedCapacity;
+      private final @Nullable Input<Integer> seedCapacity;
 
     public Input<Integer> getSeedCapacity() {
         return this.seedCapacity == null ? Input.empty() : this.seedCapacity;
     }
 
     @InputImport(name="targetTrackingScalingPolicyConfiguration", required=true)
-    private final Input<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
+      private final Input<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
 
     public Input<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> getTargetTrackingScalingPolicyConfiguration() {
         return this.targetTrackingScalingPolicyConfiguration;
@@ -126,7 +126,6 @@ public final class GlobalTableCapacityAutoScalingSettingsArgs extends io.pulumi.
             this.targetTrackingScalingPolicyConfiguration = Input.of(Objects.requireNonNull(targetTrackingScalingPolicyConfiguration));
             return this;
         }
-
         public GlobalTableCapacityAutoScalingSettingsArgs build() {
             return new GlobalTableCapacityAutoScalingSettingsArgs(maxCapacity, minCapacity, seedCapacity, targetTrackingScalingPolicyConfiguration);
         }

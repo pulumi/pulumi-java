@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class SchedulingNodeAffinityResponse {
     /**
      * The label key of Node resource to reference.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The operator to use for the node resources specified in the `values` parameter.
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Corresponds to the label values of Node resource.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -96,7 +96,6 @@ public final class SchedulingNodeAffinityResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public SchedulingNodeAffinityResponse build() {
             return new SchedulingNodeAffinityResponse(key, operator, values);
         }

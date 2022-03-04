@@ -10,8 +10,8 @@ import io.pulumi.awsnative.macie.outputs.FindingsFilterFindingCriteria;
 import io.pulumi.awsnative.macie.outputs.FindingsFilterListItem;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -122,6 +122,37 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
         return this.position;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FindingsFilterArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.macie.FindingsFilterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.macie.FindingsFilterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FindingsFilter(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FindingsFilter(String name) {
+        this(name, FindingsFilterArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FindingsFilter(String name, FindingsFilterArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

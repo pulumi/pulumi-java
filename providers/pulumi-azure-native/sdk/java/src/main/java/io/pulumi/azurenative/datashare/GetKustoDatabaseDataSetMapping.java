@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetKustoDatabaseDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.GetKustoDatabaseDataSetMappingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKustoDatabaseDataSetMapping {
-/**
- * A Kusto database data set mapping
+    private GetKustoDatabaseDataSetMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetKustoDatabaseDataSetMappingArgs.Builder a);
+    }
+    private static GetKustoDatabaseDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKustoDatabaseDataSetMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Kusto database data set mapping
  * API Version: 2020-09-01.
  * 
- *
- * A Kusto database data set mapping
+     *
+     * A Kusto database data set mapping
  * 
- */
+     */
+    public static CompletableFuture<GetKustoDatabaseDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Kusto database data set mapping
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A Kusto database data set mapping
+     * 
+     */
     public static CompletableFuture<GetKustoDatabaseDataSetMappingResult> invokeAsync(GetKustoDatabaseDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getKustoDatabaseDataSetMapping", TypeShape.of(GetKustoDatabaseDataSetMappingResult.class), args == null ? GetKustoDatabaseDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clusterIpv4CidrBlock")
-    private final @Nullable Input<String> clusterIpv4CidrBlock;
+      private final @Nullable Input<String> clusterIpv4CidrBlock;
 
     public Input<String> getClusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock == null ? Input.empty() : this.clusterIpv4CidrBlock;
@@ -35,7 +35,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clusterSecondaryRangeName")
-    private final @Nullable Input<String> clusterSecondaryRangeName;
+      private final @Nullable Input<String> clusterSecondaryRangeName;
 
     public Input<String> getClusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName == null ? Input.empty() : this.clusterSecondaryRangeName;
@@ -46,7 +46,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="servicesIpv4CidrBlock")
-    private final @Nullable Input<String> servicesIpv4CidrBlock;
+      private final @Nullable Input<String> servicesIpv4CidrBlock;
 
     public Input<String> getServicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock == null ? Input.empty() : this.servicesIpv4CidrBlock;
@@ -57,7 +57,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="servicesSecondaryRangeName")
-    private final @Nullable Input<String> servicesSecondaryRangeName;
+      private final @Nullable Input<String> servicesSecondaryRangeName;
 
     public Input<String> getServicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName == null ? Input.empty() : this.servicesSecondaryRangeName;
@@ -68,7 +68,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="useIpAliases")
-    private final @Nullable Input<Boolean> useIpAliases;
+      private final @Nullable Input<Boolean> useIpAliases;
 
     public Input<Boolean> getUseIpAliases() {
         return this.useIpAliases == null ? Input.empty() : this.useIpAliases;
@@ -172,7 +172,6 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             this.useIpAliases = Input.ofNullable(useIpAliases);
             return this;
         }
-
         public IPAllocationPolicyArgs build() {
             return new IPAllocationPolicyArgs(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);
         }

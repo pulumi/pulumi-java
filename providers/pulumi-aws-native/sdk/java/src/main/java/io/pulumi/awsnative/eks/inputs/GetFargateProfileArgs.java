@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.eks.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetFargateProfileArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetFargateProfileArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="fargateProfileName", required=true)
-    private final String fargateProfileName;
+      private final String fargateProfileName;
 
     public String getFargateProfileName() {
         return this.fargateProfileName;
@@ -77,7 +77,6 @@ public final class GetFargateProfileArgs extends io.pulumi.resources.InvokeArgs 
             this.fargateProfileName = Objects.requireNonNull(fargateProfileName);
             return this;
         }
-
         public GetFargateProfileArgs build() {
             return new GetFargateProfileArgs(clusterName, fargateProfileName);
         }

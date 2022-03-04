@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,7 +30,7 @@ public final class PolicyNetworkResponse {
     /**
      * The fully qualified URL of the VPC network to bind to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
      * 
-     */
+    */
     public String getNetworkUrl() {
         return this.networkUrl;
     }
@@ -66,7 +66,6 @@ public final class PolicyNetworkResponse {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public PolicyNetworkResponse build() {
             return new PolicyNetworkResponse(kind, networkUrl);
         }

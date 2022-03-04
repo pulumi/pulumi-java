@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetInterconnectAttachmentArgs extends io.pulumi.resources.Inv
     public static final GetInterconnectAttachmentArgs Empty = new GetInterconnectAttachmentArgs();
 
     @InputImport(name="interconnectAttachment", required=true)
-    private final String interconnectAttachment;
+      private final String interconnectAttachment;
 
     public String getInterconnectAttachment() {
         return this.interconnectAttachment;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,6 @@ public final class GetInterconnectAttachmentArgs extends io.pulumi.resources.Inv
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetInterconnectAttachmentArgs build() {
             return new GetInterconnectAttachmentArgs(interconnectAttachment, project, region);
         }

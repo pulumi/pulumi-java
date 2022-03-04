@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccount {
-/**
- * Get the service account from a project. For more information see
+    private GetAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccountArgs.Builder a);
+    }
+    private static GetAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get the service account from a project. For more information see
  * the official [API](https://cloud.google.com/compute/docs/access/service-accounts) documentation.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getAccount.
+     *
+     * A collection of arguments for invoking getAccount.
  * 
- *
- * A collection of values returned by getAccount.
+     *
+     * A collection of values returned by getAccount.
  * 
- */
+     */
+    public static CompletableFuture<GetAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get the service account from a project. For more information see
+     * the official [API](https://cloud.google.com/compute/docs/access/service-accounts) documentation.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getAccount.
+     * 
+     *
+         * A collection of values returned by getAccount.
+     * 
+     */
     public static CompletableFuture<GetAccountResult> invokeAsync(GetAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:serviceAccount/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args == null ? GetAccountArgs.Empty : args, Utilities.withVersion(options));
     }

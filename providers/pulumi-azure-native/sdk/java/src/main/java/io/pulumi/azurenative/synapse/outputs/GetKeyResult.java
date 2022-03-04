@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class GetKeyResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Used to activate the workspace after a customer managed key is provided.
      * 
-     */
+    */
     public Optional<Boolean> getIsActiveCMK() {
         return Optional.ofNullable(this.isActiveCMK);
     }
     /**
      * The Key Vault Url of the workspace key.
      * 
-     */
+    */
     public Optional<String> getKeyVaultUrl() {
         return Optional.ofNullable(this.keyVaultUrl);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(id, isActiveCMK, keyVaultUrl, name, type);
         }

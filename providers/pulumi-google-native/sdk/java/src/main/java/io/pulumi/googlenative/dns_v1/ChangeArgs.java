@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.enums.ChangeStatus;
 import io.pulumi.googlenative.dns_v1.inputs.ResourceRecordSetArgs;
 import java.lang.Boolean;
@@ -23,14 +23,14 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additions")
-    private final @Nullable Input<List<ResourceRecordSetArgs>> additions;
+      private final @Nullable Input<List<ResourceRecordSetArgs>> additions;
 
     public Input<List<ResourceRecordSetArgs>> getAdditions() {
         return this.additions == null ? Input.empty() : this.additions;
     }
 
     @InputImport(name="clientOperationId")
-    private final @Nullable Input<String> clientOperationId;
+      private final @Nullable Input<String> clientOperationId;
 
     public Input<String> getClientOperationId() {
         return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
@@ -41,7 +41,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletions")
-    private final @Nullable Input<List<ResourceRecordSetArgs>> deletions;
+      private final @Nullable Input<List<ResourceRecordSetArgs>> deletions;
 
     public Input<List<ResourceRecordSetArgs>> getDeletions() {
         return this.deletions == null ? Input.empty() : this.deletions;
@@ -52,7 +52,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -63,28 +63,28 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isServing")
-    private final @Nullable Input<Boolean> isServing;
+      private final @Nullable Input<Boolean> isServing;
 
     public Input<Boolean> getIsServing() {
         return this.isServing == null ? Input.empty() : this.isServing;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="managedZone", required=true)
-    private final Input<String> managedZone;
+      private final Input<String> managedZone;
 
     public Input<String> getManagedZone() {
         return this.managedZone;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -95,7 +95,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -106,7 +106,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<ChangeStatus> status;
+      private final @Nullable Input<ChangeStatus> status;
 
     public Input<ChangeStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -285,7 +285,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public ChangeArgs build() {
             return new ChangeArgs(additions, clientOperationId, deletions, id, isServing, kind, managedZone, project, startTime, status);
         }

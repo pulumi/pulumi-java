@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.speech_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.speech_v1.outputs.ClassItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class GetCustomClassResult {
     /**
      * If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
      * 
-     */
+    */
     public String getCustomClassId() {
         return this.customClassId;
     }
     /**
      * A collection of class items.
      * 
-     */
+    */
     public List<ClassItemResponse> getItems() {
         return this.items;
     }
     /**
      * The resource name of the custom class.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -97,7 +97,6 @@ public final class GetCustomClassResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetCustomClassResult build() {
             return new GetCustomClassResult(customClassId, items, name);
         }

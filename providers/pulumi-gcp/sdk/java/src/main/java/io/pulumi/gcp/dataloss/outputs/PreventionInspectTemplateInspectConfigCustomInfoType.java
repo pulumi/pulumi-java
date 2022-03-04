@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegex;
@@ -77,7 +77,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * Dictionary which defines the rule.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary> getDictionary() {
         return Optional.ofNullable(this.dictionary);
     }
@@ -85,7 +85,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
      * Possible values are `EXCLUSION_TYPE_EXCLUDE`.
      * 
-     */
+    */
     public Optional<String> getExclusionType() {
         return Optional.ofNullable(this.exclusionType);
     }
@@ -96,7 +96,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * treated as a custom info type.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType getInfoType() {
         return this.infoType;
     }
@@ -106,7 +106,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * Default value is `VERY_LIKELY`.
      * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
      * 
-     */
+    */
     public Optional<String> getLikelihood() {
         return Optional.ofNullable(this.likelihood);
     }
@@ -114,7 +114,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * Regular expression which defines the rule.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeRegex> getRegex() {
         return Optional.ofNullable(this.regex);
     }
@@ -122,7 +122,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * A reference to a StoredInfoType to use with scanning.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType> getStoredType() {
         return Optional.ofNullable(this.storedType);
     }
@@ -186,7 +186,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
             this.storedType = storedType;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoType build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoType(dictionary, exclusionType, infoType, likelihood, regex, storedType);
         }

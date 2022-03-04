@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BotSlotValueRegexFilter {
     /**
      * Regex pattern
      * 
-     */
+    */
     public String getPattern() {
         return this.pattern;
     }
@@ -52,7 +52,6 @@ public final class BotSlotValueRegexFilter {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public BotSlotValueRegexFilter build() {
             return new BotSlotValueRegexFilter(pattern);
         }

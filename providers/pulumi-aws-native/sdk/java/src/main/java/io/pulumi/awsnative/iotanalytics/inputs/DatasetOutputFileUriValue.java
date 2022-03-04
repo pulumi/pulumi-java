@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class DatasetOutputFileUriValue extends io.pulumi.resources.InvokeA
     public static final DatasetOutputFileUriValue Empty = new DatasetOutputFileUriValue();
 
     @InputImport(name="fileName", required=true)
-    private final String fileName;
+      private final String fileName;
 
     public String getFileName() {
         return this.fileName;
@@ -51,7 +51,6 @@ public final class DatasetOutputFileUriValue extends io.pulumi.resources.InvokeA
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
-
         public DatasetOutputFileUriValue build() {
             return new DatasetOutputFileUriValue(fileName);
         }

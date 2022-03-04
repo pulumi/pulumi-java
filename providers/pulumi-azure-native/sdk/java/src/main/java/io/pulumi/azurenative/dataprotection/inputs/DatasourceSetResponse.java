@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DatasourceSetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="datasourceType")
-    private final @Nullable String datasourceType;
+      private final @Nullable String datasourceType;
 
     public Optional<String> getDatasourceType() {
         return this.datasourceType == null ? Optional.empty() : Optional.ofNullable(this.datasourceType);
@@ -34,7 +34,7 @@ public final class DatasourceSetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="objectType")
-    private final @Nullable String objectType;
+      private final @Nullable String objectType;
 
     public Optional<String> getObjectType() {
         return this.objectType == null ? Optional.empty() : Optional.ofNullable(this.objectType);
@@ -45,7 +45,7 @@ public final class DatasourceSetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceID", required=true)
-    private final String resourceID;
+      private final String resourceID;
 
     public String getResourceID() {
         return this.resourceID;
@@ -56,7 +56,7 @@ public final class DatasourceSetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceLocation")
-    private final @Nullable String resourceLocation;
+      private final @Nullable String resourceLocation;
 
     public Optional<String> getResourceLocation() {
         return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
@@ -67,7 +67,7 @@ public final class DatasourceSetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable String resourceName;
+      private final @Nullable String resourceName;
 
     public Optional<String> getPropResourceName() {
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
@@ -78,7 +78,7 @@ public final class DatasourceSetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable String resourceType;
+      private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
@@ -89,7 +89,7 @@ public final class DatasourceSetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable String resourceUri;
+      private final @Nullable String resourceUri;
 
     public Optional<String> getResourceUri() {
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
@@ -188,7 +188,6 @@ public final class DatasourceSetResponse extends io.pulumi.resources.InvokeArgs 
             this.resourceUri = resourceUri;
             return this;
         }
-
         public DatasourceSetResponse build() {
             return new DatasourceSetResponse(datasourceType, objectType, resourceID, resourceLocation, resourceName, resourceType, resourceUri);
         }

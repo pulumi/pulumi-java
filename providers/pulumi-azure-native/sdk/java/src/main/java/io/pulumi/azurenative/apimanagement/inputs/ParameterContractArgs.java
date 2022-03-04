@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<String> defaultValue;
+      private final @Nullable Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -36,7 +36,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="required")
-    private final @Nullable Input<Boolean> required;
+      private final @Nullable Input<Boolean> required;
 
     public Input<Boolean> getRequired() {
         return this.required == null ? Input.empty() : this.required;
@@ -69,7 +69,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -80,7 +80,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -199,7 +199,6 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public ParameterContractArgs build() {
             return new ParameterContractArgs(defaultValue, description, name, required, type, values);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetTriggerArgs;
 import io.pulumi.azurenative.datashare.outputs.GetTriggerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ScheduledTrigger. */
 public class GetTrigger {
-/**
- * A Trigger data transfer object.
+    private GetTrigger() {}
+    public interface BuilderApplicator {
+        public void apply(GetTriggerArgs.Builder a);
+    }
+    private static GetTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTriggerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Trigger data transfer object.
  * API Version: 2020-09-01.
  * 
- *
- * A Trigger data transfer object.
+     *
+     * A Trigger data transfer object.
  * 
- * @deprecated
- * Please use one of the variants: ScheduledTrigger.
+     * @Deprecated
+     * Please use one of the variants: ScheduledTrigger.
  * 
- */
+     */
+    public static CompletableFuture<GetTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Trigger data transfer object.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A Trigger data transfer object.
+     * 
+     * @Deprecated
+         * Please use one of the variants: ScheduledTrigger.
+     * 
+     */
     @Deprecated /* Please use one of the variants: ScheduledTrigger. */
     public static CompletableFuture<GetTriggerResult> invokeAsync(GetTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getTrigger", TypeShape.of(GetTriggerResult.class), args == null ? GetTriggerArgs.Empty : args, Utilities.withVersion(options));

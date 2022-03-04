@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dbforpostgresql;
 import io.pulumi.azurenative.dbforpostgresql.enums.AdministratorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="administratorType", required=true)
-    private final Input<Either<String,AdministratorType>> administratorType;
+      private final Input<Either<String,AdministratorType>> administratorType;
 
     public Input<Either<String,AdministratorType>> getAdministratorType() {
         return this.administratorType;
@@ -31,7 +31,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="login", required=true)
-    private final Input<String> login;
+      private final Input<String> login;
 
     public Input<String> getLogin() {
         return this.login;
@@ -42,7 +42,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -64,7 +64,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sid", required=true)
-    private final Input<String> sid;
+      private final Input<String> sid;
 
     public Input<String> getSid() {
         return this.sid;
@@ -75,7 +75,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final Input<String> tenantId;
+      private final Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId;
@@ -194,7 +194,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }
-
         public ServerAdministratorArgs build() {
             return new ServerAdministratorArgs(administratorType, login, resourceGroupName, serverName, sid, tenantId);
         }

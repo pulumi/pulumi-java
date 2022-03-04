@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionGroupId", required=true)
-    private final Input<String> actionGroupId;
+      private final Input<String> actionGroupId;
 
     public Input<String> getActionGroupId() {
         return this.actionGroupId;
@@ -35,7 +35,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookProperties")
-    private final @Nullable Input<Map<String,String>> webhookProperties;
+      private final @Nullable Input<Map<String,String>> webhookProperties;
 
     public Input<Map<String,String>> getWebhookProperties() {
         return this.webhookProperties == null ? Input.empty() : this.webhookProperties;
@@ -94,7 +94,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.webhookProperties = Input.ofNullable(webhookProperties);
             return this;
         }
-
         public ActionGroupArgs build() {
             return new ActionGroupArgs(actionGroupId, webhookProperties);
         }

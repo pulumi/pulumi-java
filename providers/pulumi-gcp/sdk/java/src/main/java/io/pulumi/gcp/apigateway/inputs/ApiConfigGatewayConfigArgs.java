@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigBackendConfigArgs;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ApiConfigGatewayConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backendConfig", required=true)
-    private final Input<ApiConfigGatewayConfigBackendConfigArgs> backendConfig;
+      private final Input<ApiConfigGatewayConfigBackendConfigArgs> backendConfig;
 
     public Input<ApiConfigGatewayConfigBackendConfigArgs> getBackendConfig() {
         return this.backendConfig;
@@ -62,7 +62,6 @@ public final class ApiConfigGatewayConfigArgs extends io.pulumi.resources.Resour
             this.backendConfig = Input.of(Objects.requireNonNull(backendConfig));
             return this;
         }
-
         public ApiConfigGatewayConfigArgs build() {
             return new ApiConfigGatewayConfigArgs(backendConfig);
         }

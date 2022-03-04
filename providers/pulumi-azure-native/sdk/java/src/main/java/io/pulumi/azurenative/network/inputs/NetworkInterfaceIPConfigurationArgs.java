@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkTapArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applicationGatewayBackendAddressPools")
-    private final @Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools;
+      private final @Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools;
 
     public Input<List<ApplicationGatewayBackendAddressPoolArgs>> getApplicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? Input.empty() : this.applicationGatewayBackendAddressPools;
@@ -46,7 +46,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applicationSecurityGroups")
-    private final @Nullable Input<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups;
+      private final @Nullable Input<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups;
 
     public Input<List<ApplicationSecurityGroupArgs>> getApplicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? Input.empty() : this.applicationSecurityGroups;
@@ -57,7 +57,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -68,7 +68,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="loadBalancerBackendAddressPools")
-    private final @Nullable Input<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools;
+      private final @Nullable Input<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools;
 
     public Input<List<BackendAddressPoolArgs>> getLoadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? Input.empty() : this.loadBalancerBackendAddressPools;
@@ -79,7 +79,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="loadBalancerInboundNatRules")
-    private final @Nullable Input<List<InboundNatRuleArgs>> loadBalancerInboundNatRules;
+      private final @Nullable Input<List<InboundNatRuleArgs>> loadBalancerInboundNatRules;
 
     public Input<List<InboundNatRuleArgs>> getLoadBalancerInboundNatRules() {
         return this.loadBalancerInboundNatRules == null ? Input.empty() : this.loadBalancerInboundNatRules;
@@ -90,7 +90,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="primary")
-    private final @Nullable Input<Boolean> primary;
+      private final @Nullable Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;
@@ -112,7 +112,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable Input<String> privateIPAddress;
+      private final @Nullable Input<String> privateIPAddress;
 
     public Input<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
@@ -123,7 +123,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateIPAddressVersion")
-    private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
+      private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
 
     public Input<Either<String,IPVersion>> getPrivateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Input.empty() : this.privateIPAddressVersion;
@@ -134,7 +134,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-    private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+      private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Input<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
@@ -145,7 +145,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="publicIPAddress")
-    private final @Nullable Input<PublicIPAddressArgs> publicIPAddress;
+      private final @Nullable Input<PublicIPAddressArgs> publicIPAddress;
 
     public Input<PublicIPAddressArgs> getPublicIPAddress() {
         return this.publicIPAddress == null ? Input.empty() : this.publicIPAddress;
@@ -156,7 +156,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubnetArgs> subnet;
+      private final @Nullable Input<SubnetArgs> subnet;
 
     public Input<SubnetArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -167,7 +167,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -178,7 +178,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="virtualNetworkTaps")
-    private final @Nullable Input<List<VirtualNetworkTapArgs>> virtualNetworkTaps;
+      private final @Nullable Input<List<VirtualNetworkTapArgs>> virtualNetworkTaps;
 
     public Input<List<VirtualNetworkTapArgs>> getVirtualNetworkTaps() {
         return this.virtualNetworkTaps == null ? Input.empty() : this.virtualNetworkTaps;
@@ -417,7 +417,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             this.virtualNetworkTaps = Input.ofNullable(virtualNetworkTaps);
             return this;
         }
-
         public NetworkInterfaceIPConfigurationArgs build() {
             return new NetworkInterfaceIPConfigurationArgs(applicationGatewayBackendAddressPools, applicationSecurityGroups, id, loadBalancerBackendAddressPools, loadBalancerInboundNatRules, name, primary, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, publicIPAddress, subnet, type, virtualNetworkTaps);
         }

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequest
 import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequestKeysArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -31,7 +31,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aadAuthEnabled")
-    private final @Nullable Input<Boolean> aadAuthEnabled;
+      private final @Nullable Input<Boolean> aadAuthEnabled;
 
     public Input<Boolean> getAadAuthEnabled() {
         return this.aadAuthEnabled == null ? Input.empty() : this.aadAuthEnabled;
@@ -42,7 +42,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appInsightsEnabled")
-    private final @Nullable Input<Boolean> appInsightsEnabled;
+      private final @Nullable Input<Boolean> appInsightsEnabled;
 
     public Input<Boolean> getAppInsightsEnabled() {
         return this.appInsightsEnabled == null ? Input.empty() : this.appInsightsEnabled;
@@ -53,7 +53,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authEnabled")
-    private final @Nullable Input<Boolean> authEnabled;
+      private final @Nullable Input<Boolean> authEnabled;
 
     public Input<Boolean> getAuthEnabled() {
         return this.authEnabled == null ? Input.empty() : this.authEnabled;
@@ -64,7 +64,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoScaler")
-    private final @Nullable Input<AKSServiceCreateRequestAutoScalerArgs> autoScaler;
+      private final @Nullable Input<AKSServiceCreateRequestAutoScalerArgs> autoScaler;
 
     public Input<AKSServiceCreateRequestAutoScalerArgs> getAutoScaler() {
         return this.autoScaler == null ? Input.empty() : this.autoScaler;
@@ -75,7 +75,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeName")
-    private final @Nullable Input<String> computeName;
+      private final @Nullable Input<String> computeName;
 
     public Input<String> getComputeName() {
         return this.computeName == null ? Input.empty() : this.computeName;
@@ -87,7 +87,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeType", required=true)
-    private final Input<String> computeType;
+      private final Input<String> computeType;
 
     public Input<String> getComputeType() {
         return this.computeType;
@@ -98,7 +98,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerResourceRequirements")
-    private final @Nullable Input<ContainerResourceRequirementsArgs> containerResourceRequirements;
+      private final @Nullable Input<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
     public Input<ContainerResourceRequirementsArgs> getContainerResourceRequirements() {
         return this.containerResourceRequirements == null ? Input.empty() : this.containerResourceRequirements;
@@ -109,7 +109,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataCollection")
-    private final @Nullable Input<AKSServiceCreateRequestDataCollectionArgs> dataCollection;
+      private final @Nullable Input<AKSServiceCreateRequestDataCollectionArgs> dataCollection;
 
     public Input<AKSServiceCreateRequestDataCollectionArgs> getDataCollection() {
         return this.dataCollection == null ? Input.empty() : this.dataCollection;
@@ -120,7 +120,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -131,7 +131,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentImageRequest")
-    private final @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
+      private final @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
     public Input<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
         return this.environmentImageRequest == null ? Input.empty() : this.environmentImageRequest;
@@ -142,7 +142,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDefault")
-    private final @Nullable Input<Boolean> isDefault;
+      private final @Nullable Input<Boolean> isDefault;
 
     public Input<Boolean> getIsDefault() {
         return this.isDefault == null ? Input.empty() : this.isDefault;
@@ -153,7 +153,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<CreateServiceRequestKeysArgs> keys;
+      private final @Nullable Input<CreateServiceRequestKeysArgs> keys;
 
     public Input<CreateServiceRequestKeysArgs> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -164,7 +164,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kvTags")
-    private final @Nullable Input<Map<String,String>> kvTags;
+      private final @Nullable Input<Map<String,String>> kvTags;
 
     public Input<Map<String,String>> getKvTags() {
         return this.kvTags == null ? Input.empty() : this.kvTags;
@@ -175,7 +175,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="livenessProbeRequirements")
-    private final @Nullable Input<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements;
+      private final @Nullable Input<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements;
 
     public Input<AKSServiceCreateRequestLivenessProbeRequirementsArgs> getLivenessProbeRequirements() {
         return this.livenessProbeRequirements == null ? Input.empty() : this.livenessProbeRequirements;
@@ -186,7 +186,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -197,7 +197,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentRequestsPerContainer")
-    private final @Nullable Input<Integer> maxConcurrentRequestsPerContainer;
+      private final @Nullable Input<Integer> maxConcurrentRequestsPerContainer;
 
     public Input<Integer> getMaxConcurrentRequestsPerContainer() {
         return this.maxConcurrentRequestsPerContainer == null ? Input.empty() : this.maxConcurrentRequestsPerContainer;
@@ -208,7 +208,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxQueueWaitMs")
-    private final @Nullable Input<Integer> maxQueueWaitMs;
+      private final @Nullable Input<Integer> maxQueueWaitMs;
 
     public Input<Integer> getMaxQueueWaitMs() {
         return this.maxQueueWaitMs == null ? Input.empty() : this.maxQueueWaitMs;
@@ -219,7 +219,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -230,7 +230,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numReplicas")
-    private final @Nullable Input<Integer> numReplicas;
+      private final @Nullable Input<Integer> numReplicas;
 
     public Input<Integer> getNumReplicas() {
         return this.numReplicas == null ? Input.empty() : this.numReplicas;
@@ -241,7 +241,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -252,7 +252,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -263,7 +263,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scoringTimeoutMs")
-    private final @Nullable Input<Integer> scoringTimeoutMs;
+      private final @Nullable Input<Integer> scoringTimeoutMs;
 
     public Input<Integer> getScoringTimeoutMs() {
         return this.scoringTimeoutMs == null ? Input.empty() : this.scoringTimeoutMs;
@@ -274,7 +274,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -285,7 +285,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficPercentile")
-    private final @Nullable Input<Double> trafficPercentile;
+      private final @Nullable Input<Double> trafficPercentile;
 
     public Input<Double> getTrafficPercentile() {
         return this.trafficPercentile == null ? Input.empty() : this.trafficPercentile;
@@ -296,7 +296,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,VariantType>> type;
+      private final @Nullable Input<Either<String,VariantType>> type;
 
     public Input<Either<String,VariantType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -307,7 +307,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -726,7 +726,6 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public AKSServiceArgs build() {
             return new AKSServiceArgs(aadAuthEnabled, appInsightsEnabled, authEnabled, autoScaler, computeName, computeType, containerResourceRequirements, dataCollection, description, environmentImageRequest, isDefault, keys, kvTags, livenessProbeRequirements, location, maxConcurrentRequestsPerContainer, maxQueueWaitMs, namespace, numReplicas, properties, resourceGroupName, scoringTimeoutMs, serviceName, trafficPercentile, type, workspaceName);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.AccountEncryptionResponse;
 import io.pulumi.azurenative.media.outputs.MediaServiceIdentityResponse;
 import io.pulumi.azurenative.media.outputs.StorageAccountResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -98,49 +98,49 @@ public final class GetMediaServiceResult {
     /**
      * The account encryption properties.
      * 
-     */
+    */
     public Optional<AccountEncryptionResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Managed Identity for the Media Services account.
      * 
-     */
+    */
     public Optional<MediaServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The Media Services account ID.
      * 
-     */
+    */
     public String getMediaServiceId() {
         return this.mediaServiceId;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The storage accounts for this resource.
      * 
-     */
+    */
     public List<StorageAccountResponse> getStorageAccounts() {
         return this.storageAccounts == null ? List.of() : this.storageAccounts;
     }
@@ -150,21 +150,21 @@ public final class GetMediaServiceResult {
     /**
      * The system metadata relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -263,7 +263,6 @@ public final class GetMediaServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMediaServiceResult build() {
             return new GetMediaServiceResult(encryption, id, identity, location, mediaServiceId, name, storageAccounts, storageAuthentication, systemData, tags, type);
         }

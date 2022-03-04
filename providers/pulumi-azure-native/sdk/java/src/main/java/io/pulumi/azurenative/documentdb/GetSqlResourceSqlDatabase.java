@@ -6,21 +6,41 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlDatabaseArgs;
 import io.pulumi.azurenative.documentdb.outputs.GetSqlResourceSqlDatabaseResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlDatabase {
-/**
- * An Azure Cosmos DB SQL database.
+    private GetSqlResourceSqlDatabase() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlResourceSqlDatabaseArgs.Builder a);
+    }
+    private static GetSqlResourceSqlDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlResourceSqlDatabaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Cosmos DB SQL database.
  * API Version: 2021-03-15.
  * 
- *
- * An Azure Cosmos DB SQL database.
+     *
+     * An Azure Cosmos DB SQL database.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlResourceSqlDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Cosmos DB SQL database.
+     * API Version: 2021-03-15.
+     * 
+     *
+         * An Azure Cosmos DB SQL database.
+     * 
+     */
     public static CompletableFuture<GetSqlResourceSqlDatabaseResult> invokeAsync(GetSqlResourceSqlDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlDatabase", TypeShape.of(GetSqlResourceSqlDatabaseResult.class), args == null ? GetSqlResourceSqlDatabaseArgs.Empty : args, Utilities.withVersion(options));
     }

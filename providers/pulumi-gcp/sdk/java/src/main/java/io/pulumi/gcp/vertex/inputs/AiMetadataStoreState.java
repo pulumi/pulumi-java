@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiMetadataStoreEncryptionSpecGetArgs;
 import io.pulumi.gcp.vertex.inputs.AiMetadataStoreStateGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -34,7 +34,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryptionSpec")
-    private final @Nullable Input<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec;
+      private final @Nullable Input<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec;
 
     public Input<AiMetadataStoreEncryptionSpecGetArgs> getEncryptionSpec() {
         return this.encryptionSpec == null ? Input.empty() : this.encryptionSpec;
@@ -57,7 +57,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,7 +69,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -80,7 +80,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -91,7 +91,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="states")
-    private final @Nullable Input<List<AiMetadataStoreStateGetArgs>> states;
+      private final @Nullable Input<List<AiMetadataStoreStateGetArgs>> states;
 
     public Input<List<AiMetadataStoreStateGetArgs>> getStates() {
         return this.states == null ? Input.empty() : this.states;
@@ -103,7 +103,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -252,7 +252,6 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public AiMetadataStoreState build() {
             return new AiMetadataStoreState(createTime, description, encryptionSpec, name, project, region, states, updateTime);
         }

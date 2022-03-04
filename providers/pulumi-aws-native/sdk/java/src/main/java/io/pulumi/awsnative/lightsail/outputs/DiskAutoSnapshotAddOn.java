@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DiskAutoSnapshotAddOn {
     /**
      * The daily time when an automatic snapshot will be created.
      * 
-     */
+    */
     public Optional<String> getSnapshotTimeOfDay() {
         return Optional.ofNullable(this.snapshotTimeOfDay);
     }
@@ -54,7 +54,6 @@ public final class DiskAutoSnapshotAddOn {
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }
-
         public DiskAutoSnapshotAddOn build() {
             return new DiskAutoSnapshotAddOn(snapshotTimeOfDay);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -57,35 +57,35 @@ public final class ColumnSpecificationResponse {
     /**
      * If the data type is categorical, this provides the list of accepted categories.
      * 
-     */
+    */
     public List<Object> get$enum() {
         return this.$enum == null ? List.of() : this.$enum;
     }
     /**
      * Additional format information for the data type.
      * 
-     */
+    */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Data type of the column.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Flag indicating if the type supports null values or not.
      * 
-     */
+    */
     public Optional<Boolean> getXMsIsnullable() {
         return Optional.ofNullable(this.xMsIsnullable);
     }
     /**
      * Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
      * 
-     */
+    */
     public Optional<Boolean> getXMsIsordered() {
         return Optional.ofNullable(this.xMsIsordered);
     }
@@ -142,7 +142,6 @@ public final class ColumnSpecificationResponse {
             this.xMsIsordered = xMsIsordered;
             return this;
         }
-
         public ColumnSpecificationResponse build() {
             return new ColumnSpecificationResponse($enum, format, type, xMsIsnullable, xMsIsordered);
         }

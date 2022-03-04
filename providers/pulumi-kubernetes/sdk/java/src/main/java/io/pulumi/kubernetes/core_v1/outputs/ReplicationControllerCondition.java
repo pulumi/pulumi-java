@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ReplicationControllerCondition {
     /**
      * The last time the condition transitioned from one status to another.
      * 
-     */
+    */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * A human readable message indicating details about the transition.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The reason for the condition's last transition.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Type of replication controller condition.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class ReplicationControllerCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReplicationControllerCondition build() {
             return new ReplicationControllerCondition(lastTransitionTime, message, reason, status, type);
         }

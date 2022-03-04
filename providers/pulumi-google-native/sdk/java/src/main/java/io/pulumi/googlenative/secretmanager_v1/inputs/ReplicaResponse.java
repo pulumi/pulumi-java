@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="customerManagedEncryption", required=true)
-    private final CustomerManagedEncryptionResponse customerManagedEncryption;
+      private final CustomerManagedEncryptionResponse customerManagedEncryption;
 
     public CustomerManagedEncryptionResponse getCustomerManagedEncryption() {
         return this.customerManagedEncryption;
@@ -33,7 +33,7 @@ public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -82,7 +82,6 @@ public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public ReplicaResponse build() {
             return new ReplicaResponse(customerManagedEncryption, location);
         }

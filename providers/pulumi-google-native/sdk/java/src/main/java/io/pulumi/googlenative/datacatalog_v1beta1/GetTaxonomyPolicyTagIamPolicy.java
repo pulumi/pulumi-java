@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTaxonomyPolicyTagIamPolicy {
-/**
- * Gets the IAM policy for a taxonomy or a policy tag.
+    private GetTaxonomyPolicyTagIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetTaxonomyPolicyTagIamPolicyArgs.Builder a);
+    }
+    private static GetTaxonomyPolicyTagIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTaxonomyPolicyTagIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the IAM policy for a taxonomy or a policy tag.
  * 
- */
+     */
+    public static CompletableFuture<GetTaxonomyPolicyTagIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the IAM policy for a taxonomy or a policy tag.
+     * 
+     */
     public static CompletableFuture<GetTaxonomyPolicyTagIamPolicyResult> invokeAsync(GetTaxonomyPolicyTagIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getTaxonomyPolicyTagIamPolicy", TypeShape.of(GetTaxonomyPolicyTagIamPolicyResult.class), args == null ? GetTaxonomyPolicyTagIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

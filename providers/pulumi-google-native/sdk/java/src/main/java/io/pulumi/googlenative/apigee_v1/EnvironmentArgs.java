@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.enums.EnvironmentApiProxyType;
 import io.pulumi.googlenative.apigee_v1.enums.EnvironmentDeploymentType;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1PropertiesArgs;
@@ -22,7 +22,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiProxyType")
-    private final @Nullable Input<EnvironmentApiProxyType> apiProxyType;
+      private final @Nullable Input<EnvironmentApiProxyType> apiProxyType;
 
     public Input<EnvironmentApiProxyType> getApiProxyType() {
         return this.apiProxyType == null ? Input.empty() : this.apiProxyType;
@@ -33,7 +33,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentType")
-    private final @Nullable Input<EnvironmentDeploymentType> deploymentType;
+      private final @Nullable Input<EnvironmentDeploymentType> deploymentType;
 
     public Input<EnvironmentDeploymentType> getDeploymentType() {
         return this.deploymentType == null ? Input.empty() : this.deploymentType;
@@ -44,7 +44,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -66,14 +66,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -84,7 +84,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties;
+      private final @Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties;
 
     public Input<GoogleCloudApigeeV1PropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -218,7 +218,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public EnvironmentArgs build() {
             return new EnvironmentArgs(apiProxyType, deploymentType, description, displayName, name, organizationId, properties);
         }

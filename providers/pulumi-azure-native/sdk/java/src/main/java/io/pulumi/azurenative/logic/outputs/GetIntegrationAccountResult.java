@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.IntegrationAccountSkuResponse;
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -78,56 +78,56 @@ public final class GetIntegrationAccountResult {
     /**
      * The resource id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The integration service environment.
      * 
-     */
+    */
     public Optional<ResourceReferenceResponse> getIntegrationServiceEnvironment() {
         return Optional.ofNullable(this.integrationServiceEnvironment);
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The sku.
      * 
-     */
+    */
     public Optional<IntegrationAccountSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The workflow state.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -205,7 +205,6 @@ public final class GetIntegrationAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountResult build() {
             return new GetIntegrationAccountResult(id, integrationServiceEnvironment, location, name, sku, state, tags, type);
         }

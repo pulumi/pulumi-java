@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceOutlierDetectionBaseEjectionTime;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceOutlierDetectionInterval;
 import java.lang.Integer;
@@ -129,7 +129,7 @@ public final class RegionBackendServiceOutlierDetection {
      * 30000ms or 30s.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionBackendServiceOutlierDetectionBaseEjectionTime> getBaseEjectionTime() {
         return Optional.ofNullable(this.baseEjectionTime);
     }
@@ -138,7 +138,7 @@ public final class RegionBackendServiceOutlierDetection {
      * backend host is accessed over HTTP, a 5xx return code qualifies as an error.
      * Defaults to 5.
      * 
-     */
+    */
     public Optional<Integer> getConsecutiveErrors() {
         return Optional.ofNullable(this.consecutiveErrors);
     }
@@ -147,7 +147,7 @@ public final class RegionBackendServiceOutlierDetection {
      * errors that are mapped to one of those status codes) before a consecutive
      * gateway failure ejection occurs. Defaults to 5.
      * 
-     */
+    */
     public Optional<Integer> getConsecutiveGatewayFailure() {
         return Optional.ofNullable(this.consecutiveGatewayFailure);
     }
@@ -156,7 +156,7 @@ public final class RegionBackendServiceOutlierDetection {
      * status is detected through consecutive 5xx. This setting can be used to disable
      * ejection or to ramp it up slowly. Defaults to 100.
      * 
-     */
+    */
     public Optional<Integer> getEnforcingConsecutiveErrors() {
         return Optional.ofNullable(this.enforcingConsecutiveErrors);
     }
@@ -165,7 +165,7 @@ public final class RegionBackendServiceOutlierDetection {
      * status is detected through consecutive gateway failures. This setting can be
      * used to disable ejection or to ramp it up slowly. Defaults to 0.
      * 
-     */
+    */
     public Optional<Integer> getEnforcingConsecutiveGatewayFailure() {
         return Optional.ofNullable(this.enforcingConsecutiveGatewayFailure);
     }
@@ -174,7 +174,7 @@ public final class RegionBackendServiceOutlierDetection {
      * status is detected through success rate statistics. This setting can be used to
      * disable ejection or to ramp it up slowly. Defaults to 100.
      * 
-     */
+    */
     public Optional<Integer> getEnforcingSuccessRate() {
         return Optional.ofNullable(this.enforcingSuccessRate);
     }
@@ -183,7 +183,7 @@ public final class RegionBackendServiceOutlierDetection {
      * ejections as well as hosts being returned to service. Defaults to 10 seconds.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionBackendServiceOutlierDetectionInterval> getInterval() {
         return Optional.ofNullable(this.interval);
     }
@@ -191,7 +191,7 @@ public final class RegionBackendServiceOutlierDetection {
      * Maximum percentage of hosts in the load balancing pool for the backend service
      * that can be ejected. Defaults to 10%.
      * 
-     */
+    */
     public Optional<Integer> getMaxEjectionPercent() {
         return Optional.ofNullable(this.maxEjectionPercent);
     }
@@ -201,7 +201,7 @@ public final class RegionBackendServiceOutlierDetection {
      * detection via success rate statistics is not performed for any host in the
      * cluster. Defaults to 5.
      * 
-     */
+    */
     public Optional<Integer> getSuccessRateMinimumHosts() {
         return Optional.ofNullable(this.successRateMinimumHosts);
     }
@@ -212,7 +212,7 @@ public final class RegionBackendServiceOutlierDetection {
      * detection via success rate statistics is not performed for that host. Defaults
      * to 100.
      * 
-     */
+    */
     public Optional<Integer> getSuccessRateRequestVolume() {
         return Optional.ofNullable(this.successRateRequestVolume);
     }
@@ -224,7 +224,7 @@ public final class RegionBackendServiceOutlierDetection {
      * by a thousand to get a double. That is, if the desired factor is 1.9, the
      * runtime value should be 1900. Defaults to 1900.
      * 
-     */
+    */
     public Optional<Integer> getSuccessRateStdevFactor() {
         return Optional.ofNullable(this.successRateStdevFactor);
     }
@@ -323,7 +323,6 @@ public final class RegionBackendServiceOutlierDetection {
             this.successRateStdevFactor = successRateStdevFactor;
             return this;
         }
-
         public RegionBackendServiceOutlierDetection build() {
             return new RegionBackendServiceOutlierDetection(baseEjectionTime, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, interval, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
         }

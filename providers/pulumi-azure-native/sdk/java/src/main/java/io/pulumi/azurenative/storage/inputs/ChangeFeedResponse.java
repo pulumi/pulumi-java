@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ChangeFeedResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -35,7 +35,7 @@ public final class ChangeFeedResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retentionInDays")
-    private final @Nullable Integer retentionInDays;
+      private final @Nullable Integer retentionInDays;
 
     public Optional<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
@@ -84,7 +84,6 @@ public final class ChangeFeedResponse extends io.pulumi.resources.InvokeArgs {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public ChangeFeedResponse build() {
             return new ChangeFeedResponse(enabled, retentionInDays);
         }

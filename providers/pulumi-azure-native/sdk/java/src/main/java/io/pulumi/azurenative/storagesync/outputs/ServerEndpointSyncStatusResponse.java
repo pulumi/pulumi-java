@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncActivityStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncSessionStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -97,77 +97,77 @@ public final class ServerEndpointSyncStatusResponse {
     /**
      * Combined Health Status.
      * 
-     */
+    */
     public String getCombinedHealth() {
         return this.combinedHealth;
     }
     /**
      * Download sync activity
      * 
-     */
+    */
     public ServerEndpointSyncActivityStatusResponse getDownloadActivity() {
         return this.downloadActivity;
     }
     /**
      * Download Health Status.
      * 
-     */
+    */
     public String getDownloadHealth() {
         return this.downloadHealth;
     }
     /**
      * Download Status
      * 
-     */
+    */
     public ServerEndpointSyncSessionStatusResponse getDownloadStatus() {
         return this.downloadStatus;
     }
     /**
      * Last Updated Timestamp
      * 
-     */
+    */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Offline Data Transfer State
      * 
-     */
+    */
     public String getOfflineDataTransferStatus() {
         return this.offlineDataTransferStatus;
     }
     /**
      * Sync activity
      * 
-     */
+    */
     public String getSyncActivity() {
         return this.syncActivity;
     }
     /**
      * Total count of persistent files not syncing (combined upload + download).
      * 
-     */
+    */
     public Double getTotalPersistentFilesNotSyncingCount() {
         return this.totalPersistentFilesNotSyncingCount;
     }
     /**
      * Upload sync activity
      * 
-     */
+    */
     public ServerEndpointSyncActivityStatusResponse getUploadActivity() {
         return this.uploadActivity;
     }
     /**
      * Upload Health Status.
      * 
-     */
+    */
     public String getUploadHealth() {
         return this.uploadHealth;
     }
     /**
      * Upload Status
      * 
-     */
+    */
     public ServerEndpointSyncSessionStatusResponse getUploadStatus() {
         return this.uploadStatus;
     }
@@ -266,7 +266,6 @@ public final class ServerEndpointSyncStatusResponse {
             this.uploadStatus = Objects.requireNonNull(uploadStatus);
             return this;
         }
-
         public ServerEndpointSyncStatusResponse build() {
             return new ServerEndpointSyncStatusResponse(combinedHealth, downloadActivity, downloadHealth, downloadStatus, lastUpdatedTimestamp, offlineDataTransferStatus, syncActivity, totalPersistentFilesNotSyncingCount, uploadActivity, uploadHealth, uploadStatus);
         }

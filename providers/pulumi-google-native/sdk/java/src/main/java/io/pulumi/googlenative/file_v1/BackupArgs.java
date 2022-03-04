@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     public static final BackupArgs Empty = new BackupArgs();
 
     @InputImport(name="backupId", required=true)
-    private final Input<String> backupId;
+      private final Input<String> backupId;
 
     public Input<String> getBackupId() {
         return this.backupId;
@@ -27,7 +27,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,21 +38,21 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -63,7 +63,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceFileShare")
-    private final @Nullable Input<String> sourceFileShare;
+      private final @Nullable Input<String> sourceFileShare;
 
     public Input<String> getSourceFileShare() {
         return this.sourceFileShare == null ? Input.empty() : this.sourceFileShare;
@@ -74,7 +74,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceInstance")
-    private final @Nullable Input<String> sourceInstance;
+      private final @Nullable Input<String> sourceInstance;
 
     public Input<String> getSourceInstance() {
         return this.sourceInstance == null ? Input.empty() : this.sourceInstance;
@@ -208,7 +208,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceInstance = Input.ofNullable(sourceInstance);
             return this;
         }
-
         public BackupArgs build() {
             return new BackupArgs(backupId, description, labels, location, project, sourceFileShare, sourceInstance);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -90,42 +90,42 @@ public final class GetSchemaRegistryResult {
     /**
      * Exact time the Schema Group was created.
      * 
-     */
+    */
     public String getCreatedAtUtc() {
         return this.createdAtUtc;
     }
     /**
      * The ETag value.
      * 
-     */
+    */
     public String getETag() {
         return this.eTag;
     }
     /**
      * dictionary object for SchemaGroup group properties
      * 
-     */
+    */
     public Map<String,String> getGroupProperties() {
         return this.groupProperties == null ? Map.of() : this.groupProperties;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -138,21 +138,21 @@ public final class GetSchemaRegistryResult {
     /**
      * The system meta data relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Exact time the Schema Group was updated
      * 
-     */
+    */
     public String getUpdatedAtUtc() {
         return this.updatedAtUtc;
     }
@@ -251,7 +251,6 @@ public final class GetSchemaRegistryResult {
             this.updatedAtUtc = Objects.requireNonNull(updatedAtUtc);
             return this;
         }
-
         public GetSchemaRegistryResult build() {
             return new GetSchemaRegistryResult(createdAtUtc, eTag, groupProperties, id, location, name, schemaCompatibility, schemaType, systemData, type, updatedAtUtc);
         }

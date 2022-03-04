@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DateAfterCreationResponse {
     /**
      * Value indicating the age in days after creation
      * 
-     */
+    */
     public Double getDaysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
     }
@@ -52,7 +52,6 @@ public final class DateAfterCreationResponse {
             this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
             return this;
         }
-
         public DateAfterCreationResponse build() {
             return new DateAfterCreationResponse(daysAfterCreationGreaterThan);
         }

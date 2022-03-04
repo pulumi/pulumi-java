@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -32,7 +32,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -43,7 +43,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IdentityResponse build() {
             return new IdentityResponse(principalId, tenantId, type);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.operationalinsights.enums.ColumnDataTypeHintEnum;
 import io.pulumi.azurenative.operationalinsights.enums.ColumnTypeEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataTypeHint")
-    private final @Nullable Input<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
+      private final @Nullable Input<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
 
     public Input<Either<String,ColumnDataTypeHintEnum>> getDataTypeHint() {
         return this.dataTypeHint == null ? Input.empty() : this.dataTypeHint;
@@ -37,7 +37,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -59,7 +59,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ColumnTypeEnum>> type;
+      private final @Nullable Input<Either<String,ColumnTypeEnum>> type;
 
     public Input<Either<String,ColumnTypeEnum>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -174,7 +174,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ColumnArgs build() {
             return new ColumnArgs(dataTypeHint, description, displayName, name, type);
         }

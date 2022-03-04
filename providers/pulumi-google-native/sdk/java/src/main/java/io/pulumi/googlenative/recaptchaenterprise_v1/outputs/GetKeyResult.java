@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.recaptchaenterprise_v1.outputs.GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse;
 import io.pulumi.googlenative.recaptchaenterprise_v1.outputs.GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse;
 import io.pulumi.googlenative.recaptchaenterprise_v1.outputs.GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse;
@@ -86,63 +86,63 @@ public final class GetKeyResult {
     /**
      * Settings for keys that can be used by Android apps.
      * 
-     */
+    */
     public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse getAndroidSettings() {
         return this.androidSettings;
     }
     /**
      * The timestamp corresponding to the creation of this Key.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Human-readable display name of this key. Modifiable by user.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Settings for keys that can be used by iOS apps.
      * 
-     */
+    */
     public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse getIosSettings() {
         return this.iosSettings;
     }
     /**
      * See Creating and managing labels.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource name for the Key in the format "projects/{project}/keys/{key}".
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Options for user acceptance testing.
      * 
-     */
+    */
     public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse getTestingOptions() {
         return this.testingOptions;
     }
     /**
      * Settings for WAF
      * 
-     */
+    */
     public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse getWafSettings() {
         return this.wafSettings;
     }
     /**
      * Settings for keys that can be used by websites.
      * 
-     */
+    */
     public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse getWebSettings() {
         return this.webSettings;
     }
@@ -227,7 +227,6 @@ public final class GetKeyResult {
             this.webSettings = Objects.requireNonNull(webSettings);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(androidSettings, createTime, displayName, iosSettings, labels, name, testingOptions, wafSettings, webSettings);
         }

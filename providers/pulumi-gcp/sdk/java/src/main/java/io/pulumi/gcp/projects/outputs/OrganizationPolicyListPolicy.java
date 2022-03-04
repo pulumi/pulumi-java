@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.projects.outputs.OrganizationPolicyListPolicyAllow;
 import io.pulumi.gcp.projects.outputs.OrganizationPolicyListPolicyDeny;
 import java.lang.Boolean;
@@ -47,7 +47,7 @@ public final class OrganizationPolicyListPolicy {
     /**
      * or `deny` - (Optional) One or the other must be set.
      * 
-     */
+    */
     public Optional<OrganizationPolicyListPolicyAllow> getAllow() {
         return Optional.ofNullable(this.allow);
     }
@@ -58,14 +58,14 @@ public final class OrganizationPolicyListPolicy {
      * If set to true, the values from the effective Policy of the parent resource
      * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
      * 
-     */
+    */
     public Optional<Boolean> getInheritFromParent() {
         return Optional.ofNullable(this.inheritFromParent);
     }
     /**
      * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
      * 
-     */
+    */
     public Optional<String> getSuggestedValue() {
         return Optional.ofNullable(this.suggestedValue);
     }
@@ -115,7 +115,6 @@ public final class OrganizationPolicyListPolicy {
             this.suggestedValue = suggestedValue;
             return this;
         }
-
         public OrganizationPolicyListPolicy build() {
             return new OrganizationPolicyListPolicy(allow, deny, inheritFromParent, suggestedValue);
         }

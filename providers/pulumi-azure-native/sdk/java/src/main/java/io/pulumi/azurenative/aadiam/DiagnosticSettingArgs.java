@@ -5,7 +5,7 @@ package io.pulumi.azurenative.aadiam;
 
 import io.pulumi.azurenative.aadiam.inputs.LogSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventHubAuthorizationRuleId")
-    private final @Nullable Input<String> eventHubAuthorizationRuleId;
+      private final @Nullable Input<String> eventHubAuthorizationRuleId;
 
     public Input<String> getEventHubAuthorizationRuleId() {
         return this.eventHubAuthorizationRuleId == null ? Input.empty() : this.eventHubAuthorizationRuleId;
@@ -32,7 +32,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventHubName")
-    private final @Nullable Input<String> eventHubName;
+      private final @Nullable Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
@@ -43,7 +43,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logs")
-    private final @Nullable Input<List<LogSettingsArgs>> logs;
+      private final @Nullable Input<List<LogSettingsArgs>> logs;
 
     public Input<List<LogSettingsArgs>> getLogs() {
         return this.logs == null ? Input.empty() : this.logs;
@@ -54,7 +54,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceBusRuleId")
-    private final @Nullable Input<String> serviceBusRuleId;
+      private final @Nullable Input<String> serviceBusRuleId;
 
     public Input<String> getServiceBusRuleId() {
         return this.serviceBusRuleId == null ? Input.empty() : this.serviceBusRuleId;
@@ -76,7 +76,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageAccountId")
-    private final @Nullable Input<String> storageAccountId;
+      private final @Nullable Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
@@ -87,7 +87,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="workspaceId")
-    private final @Nullable Input<String> workspaceId;
+      private final @Nullable Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId == null ? Input.empty() : this.workspaceId;
@@ -221,7 +221,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
             this.workspaceId = Input.ofNullable(workspaceId);
             return this;
         }
-
         public DiagnosticSettingArgs build() {
             return new DiagnosticSettingArgs(eventHubAuthorizationRuleId, eventHubName, logs, name, serviceBusRuleId, storageAccountId, workspaceId);
         }

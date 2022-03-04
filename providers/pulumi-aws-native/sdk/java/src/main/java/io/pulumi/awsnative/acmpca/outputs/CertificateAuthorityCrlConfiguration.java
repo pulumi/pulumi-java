@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -101,7 +101,6 @@ public final class CertificateAuthorityCrlConfiguration {
             this.s3ObjectAcl = s3ObjectAcl;
             return this;
         }
-
         public CertificateAuthorityCrlConfiguration build() {
             return new CertificateAuthorityCrlConfiguration(customCname, enabled, expirationInDays, s3BucketName, s3ObjectAcl);
         }

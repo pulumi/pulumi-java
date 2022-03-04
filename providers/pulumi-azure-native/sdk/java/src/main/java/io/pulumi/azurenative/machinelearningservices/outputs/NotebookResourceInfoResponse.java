@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.NotebookPreparationErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,14 +40,14 @@ public final class NotebookResourceInfoResponse {
     /**
      * The error that occurs when preparing notebook.
      * 
-     */
+    */
     public Optional<NotebookPreparationErrorResponse> getNotebookPreparationError() {
         return Optional.ofNullable(this.notebookPreparationError);
     }
     /**
      * the data plane resourceId that used to initialize notebook component
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -90,7 +90,6 @@ public final class NotebookResourceInfoResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public NotebookResourceInfoResponse build() {
             return new NotebookResourceInfoResponse(fqdn, notebookPreparationError, resourceId);
         }

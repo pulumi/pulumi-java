@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultUrlRedirectGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherHeaderActionGetArgs;
@@ -30,7 +30,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="defaultRouteAction")
-    private final @Nullable Input<URLMapPathMatcherDefaultRouteActionGetArgs> defaultRouteAction;
+      private final @Nullable Input<URLMapPathMatcherDefaultRouteActionGetArgs> defaultRouteAction;
 
     public Input<URLMapPathMatcherDefaultRouteActionGetArgs> getDefaultRouteAction() {
         return this.defaultRouteAction == null ? Input.empty() : this.defaultRouteAction;
@@ -41,7 +41,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="defaultService")
-    private final @Nullable Input<String> defaultService;
+      private final @Nullable Input<String> defaultService;
 
     public Input<String> getDefaultService() {
         return this.defaultService == null ? Input.empty() : this.defaultService;
@@ -55,7 +55,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="defaultUrlRedirect")
-    private final @Nullable Input<URLMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect;
+      private final @Nullable Input<URLMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect;
 
     public Input<URLMapPathMatcherDefaultUrlRedirectGetArgs> getDefaultUrlRedirect() {
         return this.defaultUrlRedirect == null ? Input.empty() : this.defaultUrlRedirect;
@@ -66,7 +66,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -81,7 +81,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<URLMapPathMatcherHeaderActionGetArgs> headerAction;
+      private final @Nullable Input<URLMapPathMatcherHeaderActionGetArgs> headerAction;
 
     public Input<URLMapPathMatcherHeaderActionGetArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -93,7 +93,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -110,7 +110,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="pathRules")
-    private final @Nullable Input<List<URLMapPathMatcherPathRuleGetArgs>> pathRules;
+      private final @Nullable Input<List<URLMapPathMatcherPathRuleGetArgs>> pathRules;
 
     public Input<List<URLMapPathMatcherPathRuleGetArgs>> getPathRules() {
         return this.pathRules == null ? Input.empty() : this.pathRules;
@@ -127,7 +127,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="routeRules")
-    private final @Nullable Input<List<URLMapPathMatcherRouteRuleGetArgs>> routeRules;
+      private final @Nullable Input<List<URLMapPathMatcherRouteRuleGetArgs>> routeRules;
 
     public Input<List<URLMapPathMatcherRouteRuleGetArgs>> getRouteRules() {
         return this.routeRules == null ? Input.empty() : this.routeRules;
@@ -276,7 +276,6 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
             this.routeRules = Input.ofNullable(routeRules);
             return this;
         }
-
         public URLMapPathMatcherGetArgs build() {
             return new URLMapPathMatcherGetArgs(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, name, pathRules, routeRules);
         }

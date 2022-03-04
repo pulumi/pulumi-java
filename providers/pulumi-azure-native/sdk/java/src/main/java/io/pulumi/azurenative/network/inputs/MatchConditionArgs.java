@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallTransform;
 import io.pulumi.azurenative.network.inputs.MatchVariableArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchValues", required=true)
-    private final Input<List<String>> matchValues;
+      private final Input<List<String>> matchValues;
 
     public Input<List<String>> getMatchValues() {
         return this.matchValues;
@@ -40,7 +40,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchVariables", required=true)
-    private final Input<List<MatchVariableArgs>> matchVariables;
+      private final Input<List<MatchVariableArgs>> matchVariables;
 
     public Input<List<MatchVariableArgs>> getMatchVariables() {
         return this.matchVariables;
@@ -51,7 +51,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="negationConditon")
-    private final @Nullable Input<Boolean> negationConditon;
+      private final @Nullable Input<Boolean> negationConditon;
 
     public Input<Boolean> getNegationConditon() {
         return this.negationConditon == null ? Input.empty() : this.negationConditon;
@@ -62,7 +62,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<Either<String,WebApplicationFirewallOperator>> operator;
+      private final Input<Either<String,WebApplicationFirewallOperator>> operator;
 
     public Input<Either<String,WebApplicationFirewallOperator>> getOperator() {
         return this.operator;
@@ -73,7 +73,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transforms")
-    private final @Nullable Input<List<Either<String,WebApplicationFirewallTransform>>> transforms;
+      private final @Nullable Input<List<Either<String,WebApplicationFirewallTransform>>> transforms;
 
     public Input<List<Either<String,WebApplicationFirewallTransform>>> getTransforms() {
         return this.transforms == null ? Input.empty() : this.transforms;
@@ -177,7 +177,6 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.transforms = Input.ofNullable(transforms);
             return this;
         }
-
         public MatchConditionArgs build() {
             return new MatchConditionArgs(matchValues, matchVariables, negationConditon, operator, transforms);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigateway.inputs.GatewayIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
     public static final GatewayIamMemberArgs Empty = new GatewayIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<GatewayIamMemberConditionArgs> condition;
+      private final @Nullable Input<GatewayIamMemberConditionArgs> condition;
 
     public Input<GatewayIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="gateway", required=true)
-    private final Input<String> gateway;
+      private final Input<String> gateway;
 
     public Input<String> getGateway() {
         return this.gateway;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -42,7 +42,7 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -56,7 +56,7 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -69,7 +69,7 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -188,7 +188,6 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public GatewayIamMemberArgs build() {
             return new GatewayIamMemberArgs(condition, gateway, member, project, region, role);
         }

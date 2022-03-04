@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retryCount")
-    private final @Nullable Integer retryCount;
+      private final @Nullable Integer retryCount;
 
     public Optional<Integer> getRetryCount() {
         return this.retryCount == null ? Optional.empty() : Optional.ofNullable(this.retryCount);
@@ -31,7 +31,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retryInterval")
-    private final @Nullable String retryInterval;
+      private final @Nullable String retryInterval;
 
     public Optional<String> getRetryInterval() {
         return this.retryInterval == null ? Optional.empty() : Optional.ofNullable(this.retryInterval);
@@ -42,7 +42,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retryType")
-    private final @Nullable String retryType;
+      private final @Nullable String retryType;
 
     public Optional<String> getRetryType() {
         return this.retryType == null ? Optional.empty() : Optional.ofNullable(this.retryType);
@@ -101,7 +101,6 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.retryType = retryType;
             return this;
         }
-
         public RetryPolicyResponse build() {
             return new RetryPolicyResponse(retryCount, retryInterval, retryType);
         }

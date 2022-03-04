@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse e
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-    private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
+      private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
     public List<VirtualMachineScaleSetNetworkConfigurationResponse> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
@@ -62,7 +62,6 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse e
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-
         public VirtualMachineScaleSetVMNetworkProfileConfigurationResponse build() {
             return new VirtualMachineScaleSetVMNetworkProfileConfigurationResponse(networkInterfaceConfigurations);
         }

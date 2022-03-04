@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -71,21 +71,21 @@ public final class GetAnomaliesResult {
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Determines whether the setting is enable or disabled.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -93,28 +93,28 @@ public final class GetAnomaliesResult {
      * The kind of the setting
      * Expected value is 'Anomalies'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -185,7 +185,6 @@ public final class GetAnomaliesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAnomaliesResult build() {
             return new GetAnomaliesResult(etag, id, isEnabled, kind, name, systemData, type);
         }

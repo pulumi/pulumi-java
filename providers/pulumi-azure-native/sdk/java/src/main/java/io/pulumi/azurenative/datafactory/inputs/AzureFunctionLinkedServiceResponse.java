@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -43,7 +43,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Object authentication;
+      private final @Nullable Object authentication;
 
     public Optional<Object> getAuthentication() {
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
@@ -54,7 +54,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -65,7 +65,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable CredentialReferenceResponse credential;
+      private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
@@ -76,7 +76,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -87,7 +87,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -98,7 +98,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="functionAppUrl", required=true)
-    private final Object functionAppUrl;
+      private final Object functionAppUrl;
 
     public Object getFunctionAppUrl() {
         return this.functionAppUrl;
@@ -109,7 +109,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="functionKey")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getFunctionKey() {
         return this.functionKey == null ? null : this.functionKey;
@@ -120,7 +120,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -131,7 +131,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Object resourceId;
+      private final @Nullable Object resourceId;
 
     public Optional<Object> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -143,7 +143,7 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -282,7 +282,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureFunctionLinkedServiceResponse build() {
             return new AzureFunctionLinkedServiceResponse(annotations, authentication, connectVia, credential, description, encryptedCredential, functionAppUrl, functionKey, parameters, resourceId, type);
         }

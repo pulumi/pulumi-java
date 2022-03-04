@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.outputs.PoliciesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SkuResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StatusResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StorageAccountPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -124,98 +124,98 @@ public final class GetRegistryResult {
     /**
      * The value that indicates whether the admin user is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getAdminUserEnabled() {
         return Optional.ofNullable(this.adminUserEnabled);
     }
     /**
      * The creation date of the container registry in ISO8601 format.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The URL that can be used to log into the container registry.
      * 
-     */
+    */
     public String getLoginServer() {
         return this.loginServer;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The network rule set for a container registry.
      * 
-     */
+    */
     public Optional<NetworkRuleSetResponse> getNetworkRuleSet() {
         return Optional.ofNullable(this.networkRuleSet);
     }
     /**
      * The policies for a container registry.
      * 
-     */
+    */
     public Optional<PoliciesResponse> getPolicies() {
         return Optional.ofNullable(this.policies);
     }
     /**
      * The provisioning state of the container registry at the time the operation was called.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the container registry.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * The status of the container registry at the time the operation was called.
      * 
-     */
+    */
     public StatusResponse getStatus() {
         return this.status;
     }
     /**
      * The properties of the storage account for the container registry. Only applicable to Classic SKU.
      * 
-     */
+    */
     public Optional<StorageAccountPropertiesResponse> getStorageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -335,7 +335,6 @@ public final class GetRegistryResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegistryResult build() {
             return new GetRegistryResult(adminUserEnabled, creationDate, id, location, loginServer, name, networkRuleSet, policies, provisioningState, sku, status, storageAccount, tags, type);
         }

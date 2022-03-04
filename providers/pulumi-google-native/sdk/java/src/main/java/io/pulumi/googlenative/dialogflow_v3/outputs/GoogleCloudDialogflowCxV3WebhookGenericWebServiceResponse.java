@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -54,35 +54,35 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse {
     /**
      * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google's default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with "subject alt name". For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
      * 
-     */
+    */
     public List<String> getAllowedCaCerts() {
         return this.allowedCaCerts;
     }
     /**
      * The password for HTTP Basic authentication.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The HTTP request headers to send together with webhook requests.
      * 
-     */
+    */
     public Map<String,String> getRequestHeaders() {
         return this.requestHeaders;
     }
     /**
      * The webhook URI for receiving POST requests. It must use https protocol.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * The user name for HTTP Basic authentication.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -139,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse build() {
             return new GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse(allowedCaCerts, password, requestHeaders, uri, username);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class CniConfigResponse {
     /**
      * Pod Subnet
      * 
-     */
+    */
     public String getPodSubnet() {
         return this.podSubnet;
     }
     /**
      * Service subnet
      * 
-     */
+    */
     public String getServiceSubnet() {
         return this.serviceSubnet;
     }
     /**
      * Cni type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Cni version
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -116,7 +116,6 @@ public final class CniConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public CniConfigResponse build() {
             return new CniConfigResponse(podSubnet, serviceSubnet, type, version);
         }

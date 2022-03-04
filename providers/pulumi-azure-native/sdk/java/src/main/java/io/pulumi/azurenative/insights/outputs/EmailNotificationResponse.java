@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,21 +42,21 @@ public final class EmailNotificationResponse {
     /**
      * the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
      * 
-     */
+    */
     public List<String> getCustomEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
     }
     /**
      * a value indicating whether to send email to subscription administrator.
      * 
-     */
+    */
     public Optional<Boolean> getSendToSubscriptionAdministrator() {
         return Optional.ofNullable(this.sendToSubscriptionAdministrator);
     }
     /**
      * a value indicating whether to send email to subscription co-administrators.
      * 
-     */
+    */
     public Optional<Boolean> getSendToSubscriptionCoAdministrators() {
         return Optional.ofNullable(this.sendToSubscriptionCoAdministrators);
     }
@@ -99,7 +99,6 @@ public final class EmailNotificationResponse {
             this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
         }
-
         public EmailNotificationResponse build() {
             return new EmailNotificationResponse(customEmails, sendToSubscriptionAdministrator, sendToSubscriptionCoAdministrators);
         }

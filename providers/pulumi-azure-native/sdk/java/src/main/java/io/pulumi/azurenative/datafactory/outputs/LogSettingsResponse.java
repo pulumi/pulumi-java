@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.CopyActivityLogSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.LogLocationSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class LogSettingsResponse {
     /**
      * Specifies settings for copy activity log.
      * 
-     */
+    */
     public Optional<CopyActivityLogSettingsResponse> getCopyActivityLogSettings() {
         return Optional.ofNullable(this.copyActivityLogSettings);
     }
     /**
      * Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getEnableCopyActivityLog() {
         return Optional.ofNullable(this.enableCopyActivityLog);
     }
     /**
      * Log location settings customer needs to provide when enabling log.
      * 
-     */
+    */
     public LogLocationSettingsResponse getLogLocationSettings() {
         return this.logLocationSettings;
     }
@@ -99,7 +99,6 @@ public final class LogSettingsResponse {
             this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
             return this;
         }
-
         public LogSettingsResponse build() {
             return new LogSettingsResponse(copyActivityLogSettings, enableCopyActivityLog, logLocationSettings);
         }

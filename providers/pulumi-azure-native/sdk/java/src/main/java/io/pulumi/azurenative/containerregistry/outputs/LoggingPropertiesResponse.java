@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class LoggingPropertiesResponse {
     /**
      * Indicates whether audit logs are enabled on the connected registry.
      * 
-     */
+    */
     public Optional<String> getAuditLogStatus() {
         return Optional.ofNullable(this.auditLogStatus);
     }
     /**
      * The verbosity of logs persisted on the connected registry.
      * 
-     */
+    */
     public Optional<String> getLogLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -76,7 +76,6 @@ public final class LoggingPropertiesResponse {
             this.logLevel = logLevel;
             return this;
         }
-
         public LoggingPropertiesResponse build() {
             return new LoggingPropertiesResponse(auditLogStatus, logLevel);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse {
     /**
      * The phone number to connect to this conversation.
      * 
-     */
+    */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public GoogleCloudDialogflowV2ConversationPhoneNumberResponse build() {
             return new GoogleCloudDialogflowV2ConversationPhoneNumberResponse(phoneNumber);
         }

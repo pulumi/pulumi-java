@@ -11,7 +11,7 @@ import io.pulumi.azurenative.synapse.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.synapse.outputs.PurviewConfigurationResponse;
 import io.pulumi.azurenative.synapse.outputs.VirtualNetworkProfileResponse;
 import io.pulumi.azurenative.synapse.outputs.WorkspaceRepositoryConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -191,161 +191,161 @@ public final class GetWorkspaceResult {
     /**
      * The ADLA resource ID.
      * 
-     */
+    */
     public String getAdlaResourceId() {
         return this.adlaResourceId;
     }
     /**
      * Connectivity endpoints
      * 
-     */
+    */
     public Map<String,String> getConnectivityEndpoints() {
         return this.connectivityEndpoints == null ? Map.of() : this.connectivityEndpoints;
     }
     /**
      * Workspace default data lake storage account details
      * 
-     */
+    */
     public Optional<DataLakeStorageAccountDetailsResponse> getDefaultDataLakeStorage() {
         return Optional.ofNullable(this.defaultDataLakeStorage);
     }
     /**
      * The encryption details of the workspace
      * 
-     */
+    */
     public Optional<EncryptionDetailsResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Workspace level configs and feature flags
      * 
-     */
+    */
     public Map<String,Object> getExtraProperties() {
         return this.extraProperties;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identity of the workspace
      * 
-     */
+    */
     public Optional<ManagedIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
      * 
-     */
+    */
     public Optional<String> getManagedResourceGroupName() {
         return Optional.ofNullable(this.managedResourceGroupName);
     }
     /**
      * Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
      * 
-     */
+    */
     public Optional<String> getManagedVirtualNetwork() {
         return Optional.ofNullable(this.managedVirtualNetwork);
     }
     /**
      * Managed Virtual Network Settings
      * 
-     */
+    */
     public Optional<ManagedVirtualNetworkSettingsResponse> getManagedVirtualNetworkSettings() {
         return Optional.ofNullable(this.managedVirtualNetworkSettings);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Private endpoint connections to the workspace
      * 
-     */
+    */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
      * Resource provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Enable or Disable public network access to workspace
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Purview Configuration
      * 
-     */
+    */
     public Optional<PurviewConfigurationResponse> getPurviewConfiguration() {
         return Optional.ofNullable(this.purviewConfiguration);
     }
     /**
      * Login for workspace SQL active directory administrator
      * 
-     */
+    */
     public Optional<String> getSqlAdministratorLogin() {
         return Optional.ofNullable(this.sqlAdministratorLogin);
     }
     /**
      * SQL administrator login password
      * 
-     */
+    */
     public Optional<String> getSqlAdministratorLoginPassword() {
         return Optional.ofNullable(this.sqlAdministratorLoginPassword);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Virtual Network profile
      * 
-     */
+    */
     public Optional<VirtualNetworkProfileResponse> getVirtualNetworkProfile() {
         return Optional.ofNullable(this.virtualNetworkProfile);
     }
     /**
      * Git integration settings
      * 
-     */
+    */
     public Optional<WorkspaceRepositoryConfigurationResponse> getWorkspaceRepositoryConfiguration() {
         return Optional.ofNullable(this.workspaceRepositoryConfiguration);
     }
     /**
      * The workspace unique identifier
      * 
-     */
+    */
     public String getWorkspaceUID() {
         return this.workspaceUID;
     }
@@ -528,7 +528,6 @@ public final class GetWorkspaceResult {
             this.workspaceUID = Objects.requireNonNull(workspaceUID);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(adlaResourceId, connectivityEndpoints, defaultDataLakeStorage, encryption, extraProperties, id, identity, location, managedResourceGroupName, managedVirtualNetwork, managedVirtualNetworkSettings, name, privateEndpointConnections, provisioningState, publicNetworkAccess, purviewConfiguration, sqlAdministratorLogin, sqlAdministratorLoginPassword, tags, type, virtualNetworkProfile, workspaceRepositoryConfiguration, workspaceUID);
         }

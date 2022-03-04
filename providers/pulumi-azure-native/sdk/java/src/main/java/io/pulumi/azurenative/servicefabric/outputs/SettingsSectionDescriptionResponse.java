@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.SettingsParameterDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class SettingsSectionDescriptionResponse {
     /**
      * The section name of the fabric settings.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The collection of parameters in the section.
      * 
-     */
+    */
     public List<SettingsParameterDescriptionResponse> getParameters() {
         return this.parameters;
     }
@@ -76,7 +76,6 @@ public final class SettingsSectionDescriptionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public SettingsSectionDescriptionResponse build() {
             return new SettingsSectionDescriptionResponse(name, parameters);
         }

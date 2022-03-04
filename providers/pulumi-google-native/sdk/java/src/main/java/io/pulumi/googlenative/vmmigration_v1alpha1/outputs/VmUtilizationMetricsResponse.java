@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -130,112 +130,112 @@ public final class VmUtilizationMetricsResponse {
     /**
      * Average CPU usage, percent.
      * 
-     */
+    */
     public Integer getCpuAverage() {
         return this.cpuAverage;
     }
     /**
      * Average CPU usage, percent.
      * 
-     */
+    */
     public Integer getCpuAveragePercent() {
         return this.cpuAveragePercent;
     }
     /**
      * Max CPU usage, percent.
      * 
-     */
+    */
     public Integer getCpuMax() {
         return this.cpuMax;
     }
     /**
      * Max CPU usage, percent.
      * 
-     */
+    */
     public Integer getCpuMaxPercent() {
         return this.cpuMaxPercent;
     }
     /**
      * Average disk IO rate, in kilobytes per second.
      * 
-     */
+    */
     public String getDiskIoRateAverage() {
         return this.diskIoRateAverage;
     }
     /**
      * Average disk IO rate, in kilobytes per second.
      * 
-     */
+    */
     public String getDiskIoRateAverageKbps() {
         return this.diskIoRateAverageKbps;
     }
     /**
      * Max disk IO rate, in kilobytes per second.
      * 
-     */
+    */
     public String getDiskIoRateMax() {
         return this.diskIoRateMax;
     }
     /**
      * Max disk IO rate, in kilobytes per second.
      * 
-     */
+    */
     public String getDiskIoRateMaxKbps() {
         return this.diskIoRateMaxKbps;
     }
     /**
      * Average memory usage, percent.
      * 
-     */
+    */
     public Integer getMemoryAverage() {
         return this.memoryAverage;
     }
     /**
      * Average memory usage, percent.
      * 
-     */
+    */
     public Integer getMemoryAveragePercent() {
         return this.memoryAveragePercent;
     }
     /**
      * Max memory usage, percent.
      * 
-     */
+    */
     public Integer getMemoryMax() {
         return this.memoryMax;
     }
     /**
      * Max memory usage, percent.
      * 
-     */
+    */
     public Integer getMemoryMaxPercent() {
         return this.memoryMaxPercent;
     }
     /**
      * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
      * 
-     */
+    */
     public String getNetworkThroughputAverage() {
         return this.networkThroughputAverage;
     }
     /**
      * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
      * 
-     */
+    */
     public String getNetworkThroughputAverageKbps() {
         return this.networkThroughputAverageKbps;
     }
     /**
      * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
      * 
-     */
+    */
     public String getNetworkThroughputMax() {
         return this.networkThroughputMax;
     }
     /**
      * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
      * 
-     */
+    */
     public String getNetworkThroughputMaxKbps() {
         return this.networkThroughputMaxKbps;
     }
@@ -369,7 +369,6 @@ public final class VmUtilizationMetricsResponse {
             this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
             return this;
         }
-
         public VmUtilizationMetricsResponse build() {
             return new VmUtilizationMetricsResponse(cpuAverage, cpuAveragePercent, cpuMax, cpuMaxPercent, diskIoRateAverage, diskIoRateAverageKbps, diskIoRateMax, diskIoRateMaxKbps, memoryAverage, memoryAveragePercent, memoryMax, memoryMaxPercent, networkThroughputAverage, networkThroughputAverageKbps, networkThroughputMax, networkThroughputMaxKbps);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.providerhub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.providerhub.inputs.GetDefaultRolloutArgs;
 import io.pulumi.azurenative.providerhub.outputs.GetDefaultRolloutResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefaultRollout {
-/**
- * Default rollout definition.
+    private GetDefaultRollout() {}
+    public interface BuilderApplicator {
+        public void apply(GetDefaultRolloutArgs.Builder a);
+    }
+    private static GetDefaultRolloutArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDefaultRolloutArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Default rollout definition.
  * API Version: 2020-11-20.
  * 
- *
- * Default rollout definition.
+     *
+     * Default rollout definition.
  * 
- */
+     */
+    public static CompletableFuture<GetDefaultRolloutResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Default rollout definition.
+     * API Version: 2020-11-20.
+     * 
+     *
+         * Default rollout definition.
+     * 
+     */
     public static CompletableFuture<GetDefaultRolloutResult> invokeAsync(GetDefaultRolloutArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getDefaultRollout", TypeShape.of(GetDefaultRolloutResult.class), args == null ? GetDefaultRolloutArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageImageResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse;
 import java.lang.String;
@@ -47,28 +47,28 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse {
     /**
      * Optional. The main text describing the item.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. The image to display.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
         return this.image;
     }
     /**
      * Additional information about this option.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse getInfo() {
         return this.info;
     }
     /**
      * The title of the list item.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -118,7 +118,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageListSelectItemResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageListSelectItemResponse(description, image, info, title);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.awsnative.datasync.enums.TaskFilterRuleFilterType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterType")
-    private final @Nullable Input<TaskFilterRuleFilterType> filterType;
+      private final @Nullable Input<TaskFilterRuleFilterType> filterType;
 
     public Input<TaskFilterRuleFilterType> getFilterType() {
         return this.filterType == null ? Input.empty() : this.filterType;
@@ -35,7 +35,7 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -94,7 +94,6 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public TaskFilterRuleArgs build() {
             return new TaskFilterRuleArgs(filterType, value);
         }

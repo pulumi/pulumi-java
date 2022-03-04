@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class RuleGroupAddressArgs extends io.pulumi.resources.ResourceArgs
     public static final RuleGroupAddressArgs Empty = new RuleGroupAddressArgs();
 
     @InputImport(name="addressDefinition", required=true)
-    private final Input<String> addressDefinition;
+      private final Input<String> addressDefinition;
 
     public Input<String> getAddressDefinition() {
         return this.addressDefinition;
@@ -57,7 +57,6 @@ public final class RuleGroupAddressArgs extends io.pulumi.resources.ResourceArgs
             this.addressDefinition = Input.of(Objects.requireNonNull(addressDefinition));
             return this;
         }
-
         public RuleGroupAddressArgs build() {
             return new RuleGroupAddressArgs(addressDefinition);
         }

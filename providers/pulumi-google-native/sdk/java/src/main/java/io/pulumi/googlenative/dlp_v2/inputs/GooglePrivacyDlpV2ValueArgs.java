@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ValueDayOfWeekValue;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleTypeDateArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleTypeTimeOfDayArgs;
@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="booleanValue")
-    private final @Nullable Input<Boolean> booleanValue;
+      private final @Nullable Input<Boolean> booleanValue;
 
     public Input<Boolean> getBooleanValue() {
         return this.booleanValue == null ? Input.empty() : this.booleanValue;
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dateValue")
-    private final @Nullable Input<GoogleTypeDateArgs> dateValue;
+      private final @Nullable Input<GoogleTypeDateArgs> dateValue;
 
     public Input<GoogleTypeDateArgs> getDateValue() {
         return this.dateValue == null ? Input.empty() : this.dateValue;
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dayOfWeekValue")
-    private final @Nullable Input<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue;
+      private final @Nullable Input<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue;
 
     public Input<GooglePrivacyDlpV2ValueDayOfWeekValue> getDayOfWeekValue() {
         return this.dayOfWeekValue == null ? Input.empty() : this.dayOfWeekValue;
@@ -61,7 +61,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="floatValue")
-    private final @Nullable Input<Double> floatValue;
+      private final @Nullable Input<Double> floatValue;
 
     public Input<Double> getFloatValue() {
         return this.floatValue == null ? Input.empty() : this.floatValue;
@@ -72,7 +72,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="integerValue")
-    private final @Nullable Input<String> integerValue;
+      private final @Nullable Input<String> integerValue;
 
     public Input<String> getIntegerValue() {
         return this.integerValue == null ? Input.empty() : this.integerValue;
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="stringValue")
-    private final @Nullable Input<String> stringValue;
+      private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
@@ -94,7 +94,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeValue")
-    private final @Nullable Input<GoogleTypeTimeOfDayArgs> timeValue;
+      private final @Nullable Input<GoogleTypeTimeOfDayArgs> timeValue;
 
     public Input<GoogleTypeTimeOfDayArgs> getTimeValue() {
         return this.timeValue == null ? Input.empty() : this.timeValue;
@@ -105,7 +105,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timestampValue")
-    private final @Nullable Input<String> timestampValue;
+      private final @Nullable Input<String> timestampValue;
 
     public Input<String> getTimestampValue() {
         return this.timestampValue == null ? Input.empty() : this.timestampValue;
@@ -254,7 +254,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
             this.timestampValue = Input.ofNullable(timestampValue);
             return this;
         }
-
         public GooglePrivacyDlpV2ValueArgs build() {
             return new GooglePrivacyDlpV2ValueArgs(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProvider {
-/**
- * Gets an individual WorkloadIdentityPoolProvider.
+    private GetProvider() {}
+    public interface BuilderApplicator {
+        public void apply(GetProviderArgs.Builder a);
+    }
+    private static GetProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an individual WorkloadIdentityPoolProvider.
  * 
- */
+     */
+    public static CompletableFuture<GetProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an individual WorkloadIdentityPoolProvider.
+     * 
+     */
     public static CompletableFuture<GetProviderResult> invokeAsync(GetProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getProvider", TypeShape.of(GetProviderResult.class), args == null ? GetProviderArgs.Empty : args, Utilities.withVersion(options));
     }

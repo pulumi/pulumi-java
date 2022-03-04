@@ -6,17 +6,33 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.inputs.GetUsagePlanArgs;
 import io.pulumi.awsnative.apigateway.outputs.GetUsagePlanResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUsagePlan {
-/**
- * Resource Type definition for AWS::ApiGateway::UsagePlan
+    private GetUsagePlan() {}
+    public interface BuilderApplicator {
+        public void apply(GetUsagePlanArgs.Builder a);
+    }
+    private static GetUsagePlanArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUsagePlanArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::ApiGateway::UsagePlan
  * 
- */
+     */
+    public static CompletableFuture<GetUsagePlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::ApiGateway::UsagePlan
+     * 
+     */
     public static CompletableFuture<GetUsagePlanResult> invokeAsync(GetUsagePlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getUsagePlan", TypeShape.of(GetUsagePlanResult.class), args == null ? GetUsagePlanArgs.Empty : args, Utilities.withVersion(options));
     }

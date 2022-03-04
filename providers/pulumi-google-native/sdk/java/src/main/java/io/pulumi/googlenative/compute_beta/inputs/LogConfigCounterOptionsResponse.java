@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.LogConfigCounterOptionsCustomFieldResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="customFields", required=true)
-    private final List<LogConfigCounterOptionsCustomFieldResponse> customFields;
+      private final List<LogConfigCounterOptionsCustomFieldResponse> customFields;
 
     public List<LogConfigCounterOptionsCustomFieldResponse> getCustomFields() {
         return this.customFields;
@@ -34,7 +34,7 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="field", required=true)
-    private final String field;
+      private final String field;
 
     public String getField() {
         return this.field;
@@ -45,7 +45,7 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="metric", required=true)
-    private final String metric;
+      private final String metric;
 
     public String getMetric() {
         return this.metric;
@@ -104,7 +104,6 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public LogConfigCounterOptionsResponse build() {
             return new LogConfigCounterOptionsResponse(customFields, field, metric);
         }

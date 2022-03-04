@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class JobErrorDetailResponse {
     /**
      * Code describing the error detail.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * A human-readable representation of the error.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -74,7 +74,6 @@ public final class JobErrorDetailResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public JobErrorDetailResponse build() {
             return new JobErrorDetailResponse(code, message);
         }

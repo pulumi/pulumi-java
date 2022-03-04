@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class DelegationResponse {
     /**
      * The actions permitted to the service upon delegation.
      * 
-     */
+    */
     public List<String> getActions() {
         return this.actions;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a subnet. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the service delegation resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).
      * 
-     */
+    */
     public Optional<String> getServiceName() {
         return Optional.ofNullable(this.serviceName);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -182,7 +182,6 @@ public final class DelegationResponse {
             this.type = type;
             return this;
         }
-
         public DelegationResponse build() {
             return new DelegationResponse(actions, etag, id, name, provisioningState, serviceName, type);
         }

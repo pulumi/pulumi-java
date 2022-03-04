@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class SystemParameterResponse {
     /**
      * Define the HTTP header name to use for the parameter. It is case insensitive.
      * 
-     */
+    */
     public String getHttpHeader() {
         return this.httpHeader;
     }
     /**
      * Define the name of the parameter, such as "api_key" . It is case sensitive.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Define the URL query parameter name to use for the parameter. It is case sensitive.
      * 
-     */
+    */
     public String getUrlQueryParameter() {
         return this.urlQueryParameter;
     }
@@ -95,7 +95,6 @@ public final class SystemParameterResponse {
             this.urlQueryParameter = Objects.requireNonNull(urlQueryParameter);
             return this;
         }
-
         public SystemParameterResponse build() {
             return new SystemParameterResponse(httpHeader, name, urlQueryParameter);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -32,7 +32,7 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceAccountEmail", required=true)
-    private final Input<String> serviceAccountEmail;
+      private final Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;
@@ -91,7 +91,6 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
             this.serviceAccountEmail = Input.of(Objects.requireNonNull(serviceAccountEmail));
             return this;
         }
-
         public JobHttpTargetOauthTokenArgs build() {
             return new JobHttpTargetOauthTokenArgs(scope, serviceAccountEmail);
         }

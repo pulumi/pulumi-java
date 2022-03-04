@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable String applicationId;
+      private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
@@ -34,7 +34,7 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable String secret;
+      private final @Nullable String secret;
 
     public Optional<String> getSecret() {
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
@@ -83,7 +83,6 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
             this.secret = secret;
             return this;
         }
-
         public ServicePrincipalPropertiesResponse build() {
             return new ServicePrincipalPropertiesResponse(applicationId, secret);
         }

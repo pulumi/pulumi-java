@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetTransitGatewayConnectArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="transitGatewayAttachmentId", required=true)
-    private final String transitGatewayAttachmentId;
+      private final String transitGatewayAttachmentId;
 
     public String getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
@@ -55,7 +55,6 @@ public final class GetTransitGatewayConnectArgs extends io.pulumi.resources.Invo
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
-
         public GetTransitGatewayConnectArgs build() {
             return new GetTransitGatewayConnectArgs(transitGatewayAttachmentId);
         }

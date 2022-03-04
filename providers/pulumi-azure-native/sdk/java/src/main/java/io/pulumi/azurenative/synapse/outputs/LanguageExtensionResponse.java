@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class LanguageExtensionResponse {
     /**
      * The language extension name.
      * 
-     */
+    */
     public Optional<String> getLanguageExtensionName() {
         return Optional.ofNullable(this.languageExtensionName);
     }
@@ -54,7 +54,6 @@ public final class LanguageExtensionResponse {
             this.languageExtensionName = languageExtensionName;
             return this;
         }
-
         public LanguageExtensionResponse build() {
             return new LanguageExtensionResponse(languageExtensionName);
         }

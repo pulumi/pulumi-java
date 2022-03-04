@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.AdvancedScheduleMonthlyOccurrenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -42,21 +42,21 @@ public final class AdvancedScheduleResponse {
     /**
      * Days of the month that the job should execute on. Must be between 1 and 31.
      * 
-     */
+    */
     public List<Integer> getMonthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
     }
     /**
      * Occurrences of days within a month.
      * 
-     */
+    */
     public List<AdvancedScheduleMonthlyOccurrenceResponse> getMonthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
     /**
      * Days of the week that the job should execute on.
      * 
-     */
+    */
     public List<String> getWeekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }
@@ -99,7 +99,6 @@ public final class AdvancedScheduleResponse {
             this.weekDays = weekDays;
             return this;
         }
-
         public AdvancedScheduleResponse build() {
             return new AdvancedScheduleResponse(monthDays, monthlyOccurrences, weekDays);
         }

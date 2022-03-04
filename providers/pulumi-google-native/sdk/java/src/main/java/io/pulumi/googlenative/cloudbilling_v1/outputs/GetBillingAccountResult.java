@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbilling_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GetBillingAccountResult {
     /**
      * The display name given to the billing account, such as `My Billing Account`. This name is displayed in the Google Cloud Console.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this will be the resource name of the parent billing account that it is being resold through. Otherwise this will be empty.
      * 
-     */
+    */
     public String getMasterBillingAccount() {
         return this.masterBillingAccount;
     }
     /**
      * The resource name of the billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF` would be the resource name for billing account `012345-567890-ABCDEF`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * True if the billing account is open, and will therefore be charged for any usage on associated projects. False if the billing account is closed, and therefore projects associated with it will be unable to use paid services.
      * 
-     */
+    */
     public Boolean getOpen() {
         return this.open;
     }
@@ -117,7 +117,6 @@ public final class GetBillingAccountResult {
             this.open = Objects.requireNonNull(open);
             return this;
         }
-
         public GetBillingAccountResult build() {
             return new GetBillingAccountResult(displayName, masterBillingAccount, name, open);
         }

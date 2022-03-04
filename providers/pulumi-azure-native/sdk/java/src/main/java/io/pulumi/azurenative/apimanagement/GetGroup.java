@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetGroupArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGroup {
-/**
- * Contract details.
+    private GetGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetGroupArgs.Builder a);
+    }
+    private static GetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Contract details.
  * API Version: 2020-12-01.
  * 
- *
- * Contract details.
+     *
+     * Contract details.
  * 
- */
+     */
+    public static CompletableFuture<GetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Contract details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Contract details.
+     * 
+     */
     public static CompletableFuture<GetGroupResult> invokeAsync(GetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGroup", TypeShape.of(GetGroupResult.class), args == null ? GetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

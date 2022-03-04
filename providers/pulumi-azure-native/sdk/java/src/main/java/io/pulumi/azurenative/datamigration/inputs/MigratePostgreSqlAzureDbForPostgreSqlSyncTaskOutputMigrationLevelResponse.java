@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @InputImport(name="endedOn", required=true)
-    private final String endedOn;
+      private final String endedOn;
 
     public String getEndedOn() {
         return this.endedOn;
@@ -28,7 +28,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -40,7 +40,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @InputImport(name="resultType", required=true)
-    private final String resultType;
+      private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -51,7 +51,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @InputImport(name="sourceServer", required=true)
-    private final String sourceServer;
+      private final String sourceServer;
 
     public String getSourceServer() {
         return this.sourceServer;
@@ -62,7 +62,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @InputImport(name="sourceServerVersion", required=true)
-    private final String sourceServerVersion;
+      private final String sourceServerVersion;
 
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
@@ -73,7 +73,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @InputImport(name="startedOn", required=true)
-    private final String startedOn;
+      private final String startedOn;
 
     public String getStartedOn() {
         return this.startedOn;
@@ -84,7 +84,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @InputImport(name="targetServer", required=true)
-    private final String targetServer;
+      private final String targetServer;
 
     public String getTargetServer() {
         return this.targetServer;
@@ -95,7 +95,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @InputImport(name="targetServerVersion", required=true)
-    private final String targetServerVersion;
+      private final String targetServerVersion;
 
     public String getTargetServerVersion() {
         return this.targetServerVersion;
@@ -204,7 +204,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse(endedOn, id, resultType, sourceServer, sourceServerVersion, startedOn, targetServer, targetServerVersion);
         }

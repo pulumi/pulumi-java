@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentDispatches")
-    private final @Nullable Input<Integer> maxConcurrentDispatches;
+      private final @Nullable Input<Integer> maxConcurrentDispatches;
 
     public Input<Integer> getMaxConcurrentDispatches() {
         return this.maxConcurrentDispatches == null ? Input.empty() : this.maxConcurrentDispatches;
@@ -35,7 +35,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDispatchesPerSecond")
-    private final @Nullable Input<Double> maxDispatchesPerSecond;
+      private final @Nullable Input<Double> maxDispatchesPerSecond;
 
     public Input<Double> getMaxDispatchesPerSecond() {
         return this.maxDispatchesPerSecond == null ? Input.empty() : this.maxDispatchesPerSecond;
@@ -94,7 +94,6 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
             this.maxDispatchesPerSecond = Input.ofNullable(maxDispatchesPerSecond);
             return this;
         }
-
         public RateLimitsArgs build() {
             return new RateLimitsArgs(maxConcurrentDispatches, maxDispatchesPerSecond);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class UserIdentityContractResponse {
     /**
      * Identifier value within provider.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Identity provider name.
      * 
-     */
+    */
     public Optional<String> getProvider() {
         return Optional.ofNullable(this.provider);
     }
@@ -76,7 +76,6 @@ public final class UserIdentityContractResponse {
             this.provider = provider;
             return this;
         }
-
         public UserIdentityContractResponse build() {
             return new UserIdentityContractResponse(id, provider);
         }

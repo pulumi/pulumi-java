@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.azurenative.eventgrid.inputs.UserIdentityPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class IdentityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable String principalId;
+      private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
@@ -36,7 +36,7 @@ public final class IdentityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+      private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -47,7 +47,7 @@ public final class IdentityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -60,7 +60,7 @@ public final class IdentityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
+      private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
 
     public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
@@ -129,7 +129,6 @@ public final class IdentityInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public IdentityInfoResponse build() {
             return new IdentityInfoResponse(principalId, tenantId, type, userAssignedIdentities);
         }

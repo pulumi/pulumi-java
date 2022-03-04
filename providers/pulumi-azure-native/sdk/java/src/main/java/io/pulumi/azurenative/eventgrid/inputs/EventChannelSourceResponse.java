@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class EventChannelSourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="source")
-    private final @Nullable String source;
+      private final @Nullable String source;
 
     public Optional<String> getSource() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
@@ -62,7 +62,6 @@ public final class EventChannelSourceResponse extends io.pulumi.resources.Invoke
             this.source = source;
             return this;
         }
-
         public EventChannelSourceResponse build() {
             return new EventChannelSourceResponse(source);
         }

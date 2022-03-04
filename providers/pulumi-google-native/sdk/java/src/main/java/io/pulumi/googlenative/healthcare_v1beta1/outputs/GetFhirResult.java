@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -40,21 +40,21 @@ public final class GetFhirResult {
     /**
      * The HTTP Content-Type header value specifying the content type of the body.
      * 
-     */
+    */
     public String getContentType() {
         return this.contentType;
     }
     /**
      * The HTTP request/response body as raw binary.
      * 
-     */
+    */
     public String getData() {
         return this.data;
     }
     /**
      * Application specific response metadata. Must be set in the first response for streaming APIs.
      * 
-     */
+    */
     public List<Map<String,String>> getExtensions() {
         return this.extensions;
     }
@@ -97,7 +97,6 @@ public final class GetFhirResult {
             this.extensions = Objects.requireNonNull(extensions);
             return this;
         }
-
         public GetFhirResult build() {
             return new GetFhirResult(contentType, data, extensions);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class OrphanedUserInfoResponse {
     /**
      * Parent database of the user
      * 
-     */
+    */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Name of the orphaned user
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -76,7 +76,6 @@ public final class OrphanedUserInfoResponse {
             this.name = name;
             return this;
         }
-
         public OrphanedUserInfoResponse build() {
             return new OrphanedUserInfoResponse(databaseName, name);
         }

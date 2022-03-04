@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ContentLinkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -127,105 +127,105 @@ public final class GetIntegrationAccountSchemaResult {
     /**
      * The changed time.
      * 
-     */
+    */
     public String getChangedTime() {
         return this.changedTime;
     }
     /**
      * The content.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The content link.
      * 
-     */
+    */
     public ContentLinkResponse getContentLink() {
         return this.contentLink;
     }
     /**
      * The content type.
      * 
-     */
+    */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * The created time.
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The document name.
      * 
-     */
+    */
     public Optional<String> getDocumentName() {
         return Optional.ofNullable(this.documentName);
     }
     /**
      * The file name.
      * 
-     */
+    */
     public Optional<String> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * The resource id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The metadata.
      * 
-     */
+    */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Gets the resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The schema type.
      * 
-     */
+    */
     public String getSchemaType() {
         return this.schemaType;
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The target namespace of the schema.
      * 
-     */
+    */
     public Optional<String> getTargetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
     /**
      * Gets the resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -352,7 +352,6 @@ public final class GetIntegrationAccountSchemaResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountSchemaResult build() {
             return new GetIntegrationAccountSchemaResult(changedTime, content, contentLink, contentType, createdTime, documentName, fileName, id, location, metadata, name, schemaType, tags, targetNamespace, type);
         }

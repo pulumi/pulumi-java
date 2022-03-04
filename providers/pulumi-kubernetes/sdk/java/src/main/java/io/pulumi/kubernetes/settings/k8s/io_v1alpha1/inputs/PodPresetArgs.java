@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.settings.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.settings.k8s.io_v1alpha1.inputs.PodPresetSpecArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class PodPresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -36,21 +36,21 @@ public final class PodPresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
     @InputImport(name="spec")
-    private final @Nullable Input<PodPresetSpecArgs> spec;
+      private final @Nullable Input<PodPresetSpecArgs> spec;
 
     public Input<PodPresetSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -139,7 +139,6 @@ public final class PodPresetArgs extends io.pulumi.resources.ResourceArgs {
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public PodPresetArgs build() {
             return new PodPresetArgs(apiVersion, kind, metadata, spec);
         }

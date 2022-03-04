@@ -6,21 +6,41 @@ package io.pulumi.azurenative.connectedvmwarevsphere;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetHybridIdentityMetadatumArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.GetHybridIdentityMetadatumResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHybridIdentityMetadatum {
-/**
- * Defines the HybridIdentityMetadata.
+    private GetHybridIdentityMetadatum() {}
+    public interface BuilderApplicator {
+        public void apply(GetHybridIdentityMetadatumArgs.Builder a);
+    }
+    private static GetHybridIdentityMetadatumArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHybridIdentityMetadatumArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Defines the HybridIdentityMetadata.
  * API Version: 2020-10-01-preview.
  * 
- *
- * Defines the HybridIdentityMetadata.
+     *
+     * Defines the HybridIdentityMetadata.
  * 
- */
+     */
+    public static CompletableFuture<GetHybridIdentityMetadatumResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Defines the HybridIdentityMetadata.
+     * API Version: 2020-10-01-preview.
+     * 
+     *
+         * Defines the HybridIdentityMetadata.
+     * 
+     */
     public static CompletableFuture<GetHybridIdentityMetadatumResult> invokeAsync(GetHybridIdentityMetadatumArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getHybridIdentityMetadatum", TypeShape.of(GetHybridIdentityMetadatumResult.class), args == null ? GetHybridIdentityMetadatumArgs.Empty : args, Utilities.withVersion(options));
     }

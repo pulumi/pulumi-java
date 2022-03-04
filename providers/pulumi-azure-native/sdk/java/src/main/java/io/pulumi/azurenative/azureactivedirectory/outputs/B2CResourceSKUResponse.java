@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azureactivedirectory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class B2CResourceSKUResponse {
     /**
      * The name of the SKU for the tenant.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The tier of the tenant.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -76,7 +76,6 @@ public final class B2CResourceSKUResponse {
             this.tier = tier;
             return this;
         }
-
         public B2CResourceSKUResponse build() {
             return new B2CResourceSKUResponse(name, tier);
         }

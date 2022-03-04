@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class UserInfoResponse {
     /**
      * Email of the user used by Datadog for contacting them if needed
      * 
-     */
+    */
     public Optional<String> getEmailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
     /**
      * Name of the user
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Phone number of the user used by Datadog for contacting them if needed
      * 
-     */
+    */
     public Optional<String> getPhoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }
@@ -97,7 +97,6 @@ public final class UserInfoResponse {
             this.phoneNumber = phoneNumber;
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(emailAddress, name, phoneNumber);
         }

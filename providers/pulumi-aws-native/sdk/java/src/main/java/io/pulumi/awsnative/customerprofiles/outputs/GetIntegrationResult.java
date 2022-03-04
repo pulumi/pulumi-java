@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationObjectTypeMapping;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,35 +57,35 @@ public final class GetIntegrationResult {
     /**
      * The time of this integration got created
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The time of this integration got last updated at
      * 
-     */
+    */
     public Optional<String> getLastUpdatedAt() {
         return Optional.ofNullable(this.lastUpdatedAt);
     }
     /**
      * The name of the ObjectType defined for the 3rd party data in Profile Service
      * 
-     */
+    */
     public Optional<String> getObjectTypeName() {
         return Optional.ofNullable(this.objectTypeName);
     }
     /**
      * The mapping between 3rd party event types and ObjectType names
      * 
-     */
+    */
     public List<IntegrationObjectTypeMapping> getObjectTypeNames() {
         return this.objectTypeNames == null ? List.of() : this.objectTypeNames;
     }
     /**
      * The tags (keys and values) associated with the integration
      * 
-     */
+    */
     public List<IntegrationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -142,7 +142,6 @@ public final class GetIntegrationResult {
             this.tags = tags;
             return this;
         }
-
         public GetIntegrationResult build() {
             return new GetIntegrationResult(createdAt, lastUpdatedAt, objectTypeName, objectTypeNames, tags);
         }

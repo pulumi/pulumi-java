@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.billing.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends io.pu
      * 
      */
     @InputImport(name="billingAccountName", required=true)
-    private final String billingAccountName;
+      private final String billingAccountName;
 
     public String getBillingAccountName() {
         return this.billingAccountName;
@@ -28,7 +28,7 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends io.pu
      * 
      */
     @InputImport(name="billingRoleAssignmentName", required=true)
-    private final String billingRoleAssignmentName;
+      private final String billingRoleAssignmentName;
 
     public String getBillingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
@@ -39,7 +39,7 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends io.pu
      * 
      */
     @InputImport(name="enrollmentAccountName", required=true)
-    private final String enrollmentAccountName;
+      private final String enrollmentAccountName;
 
     public String getEnrollmentAccountName() {
         return this.enrollmentAccountName;
@@ -98,7 +98,6 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends io.pu
             this.enrollmentAccountName = Objects.requireNonNull(enrollmentAccountName);
             return this;
         }
-
         public GetBillingRoleAssignmentByEnrollmentAccountArgs build() {
             return new GetBillingRoleAssignmentByEnrollmentAccountArgs(billingAccountName, billingRoleAssignmentName, enrollmentAccountName);
         }

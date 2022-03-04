@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.RecipeS3Location;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class RecipeDataCatalogInputDefinition extends io.pulumi.resources.
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable String catalogId;
+      private final @Nullable String catalogId;
 
     public Optional<String> getCatalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
@@ -31,7 +31,7 @@ public final class RecipeDataCatalogInputDefinition extends io.pulumi.resources.
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable String databaseName;
+      private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
@@ -42,14 +42,14 @@ public final class RecipeDataCatalogInputDefinition extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable String tableName;
+      private final @Nullable String tableName;
 
     public Optional<String> getTableName() {
         return this.tableName == null ? Optional.empty() : Optional.ofNullable(this.tableName);
     }
 
     @InputImport(name="tempDirectory")
-    private final @Nullable RecipeS3Location tempDirectory;
+      private final @Nullable RecipeS3Location tempDirectory;
 
     public Optional<RecipeS3Location> getTempDirectory() {
         return this.tempDirectory == null ? Optional.empty() : Optional.ofNullable(this.tempDirectory);
@@ -118,7 +118,6 @@ public final class RecipeDataCatalogInputDefinition extends io.pulumi.resources.
             this.tempDirectory = tempDirectory;
             return this;
         }
-
         public RecipeDataCatalogInputDefinition build() {
             return new RecipeDataCatalogInputDefinition(catalogId, databaseName, tableName, tempDirectory);
         }

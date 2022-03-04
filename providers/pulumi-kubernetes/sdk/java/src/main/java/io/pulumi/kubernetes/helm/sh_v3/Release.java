@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.helm.sh_v3;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.helm.sh_v3.ReleaseArgs;
 import io.pulumi.kubernetes.helm.sh_v3.outputs.ReleaseStatus;
@@ -518,6 +518,37 @@ public class Release extends io.pulumi.resources.CustomResource {
         return this.waitForJobs;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ReleaseArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.helm.sh_v3.ReleaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.helm.sh_v3.ReleaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Release(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Release(String name) {
+        this(name, ReleaseArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Release(String name, ReleaseArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="historyId", required=true)
-    private final Input<String> historyId;
+      private final Input<String> historyId;
 
     public Input<String> getHistoryId() {
         return this.historyId;
@@ -33,7 +33,7 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+      private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -92,7 +92,6 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
-
         public ToolResultsHistoryArgs build() {
             return new ToolResultsHistoryArgs(historyId, project);
         }

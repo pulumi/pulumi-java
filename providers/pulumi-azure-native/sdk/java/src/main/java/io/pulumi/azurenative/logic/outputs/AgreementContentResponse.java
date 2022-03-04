@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.outputs;
 import io.pulumi.azurenative.logic.outputs.AS2AgreementContentResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactAgreementContentResponse;
 import io.pulumi.azurenative.logic.outputs.X12AgreementContentResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -42,21 +42,21 @@ public final class AgreementContentResponse {
     /**
      * The AS2 agreement content.
      * 
-     */
+    */
     public Optional<AS2AgreementContentResponse> getAS2() {
         return Optional.ofNullable(this.aS2);
     }
     /**
      * The EDIFACT agreement content.
      * 
-     */
+    */
     public Optional<EdifactAgreementContentResponse> getEdifact() {
         return Optional.ofNullable(this.edifact);
     }
     /**
      * The X12 agreement content.
      * 
-     */
+    */
     public Optional<X12AgreementContentResponse> getX12() {
         return Optional.ofNullable(this.x12);
     }
@@ -99,7 +99,6 @@ public final class AgreementContentResponse {
             this.x12 = x12;
             return this;
         }
-
         public AgreementContentResponse build() {
             return new AgreementContentResponse(aS2, edifact, x12);
         }

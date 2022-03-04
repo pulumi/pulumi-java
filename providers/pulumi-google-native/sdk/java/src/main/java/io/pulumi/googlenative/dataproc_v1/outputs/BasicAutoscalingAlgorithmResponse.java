@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.BasicYarnAutoscalingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.SparkStandaloneAutoscalingConfigResponse;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class BasicAutoscalingAlgorithmResponse {
     /**
      * Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
      * 
-     */
+    */
     public String getCooldownPeriod() {
         return this.cooldownPeriod;
     }
     /**
      * Optional. Spark Standalone autoscaling configuration
      * 
-     */
+    */
     public SparkStandaloneAutoscalingConfigResponse getSparkStandaloneConfig() {
         return this.sparkStandaloneConfig;
     }
     /**
      * Optional. YARN autoscaling configuration.
      * 
-     */
+    */
     public BasicYarnAutoscalingConfigResponse getYarnConfig() {
         return this.yarnConfig;
     }
@@ -97,7 +97,6 @@ public final class BasicAutoscalingAlgorithmResponse {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
         }
-
         public BasicAutoscalingAlgorithmResponse build() {
             return new BasicAutoscalingAlgorithmResponse(cooldownPeriod, sparkStandaloneConfig, yarnConfig);
         }

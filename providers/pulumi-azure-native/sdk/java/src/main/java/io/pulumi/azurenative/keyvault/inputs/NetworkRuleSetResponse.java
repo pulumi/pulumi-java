@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.IPRuleResponse;
 import io.pulumi.azurenative.keyvault.inputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="bypass")
-    private final @Nullable String bypass;
+      private final @Nullable String bypass;
 
     public Optional<String> getBypass() {
         return this.bypass == null ? Optional.empty() : Optional.ofNullable(this.bypass);
@@ -37,7 +37,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="defaultAction")
-    private final @Nullable String defaultAction;
+      private final @Nullable String defaultAction;
 
     public Optional<String> getDefaultAction() {
         return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
@@ -48,7 +48,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ipRules")
-    private final @Nullable List<IPRuleResponse> ipRules;
+      private final @Nullable List<IPRuleResponse> ipRules;
 
     public List<IPRuleResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
@@ -59,7 +59,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="virtualNetworkRules")
-    private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
+      private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
     public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
@@ -128,7 +128,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(bypass, defaultAction, ipRules, virtualNetworkRules);
         }

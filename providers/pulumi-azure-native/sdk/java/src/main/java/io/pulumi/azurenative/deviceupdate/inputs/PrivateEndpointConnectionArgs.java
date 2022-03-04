@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="groupIds")
-    private final @Nullable Input<List<String>> groupIds;
+      private final @Nullable Input<List<String>> groupIds;
 
     public Input<List<String>> getGroupIds() {
         return this.groupIds == null ? Input.empty() : this.groupIds;
@@ -36,7 +36,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-    private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -95,7 +95,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.privateLinkServiceConnectionState = Input.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(groupIds, privateLinkServiceConnectionState);
         }

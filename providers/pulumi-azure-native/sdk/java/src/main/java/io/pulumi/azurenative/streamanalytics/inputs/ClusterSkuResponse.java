@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Integer capacity;
+      private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
@@ -35,7 +35,7 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -84,7 +84,6 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public ClusterSkuResponse build() {
             return new ClusterSkuResponse(capacity, name);
         }

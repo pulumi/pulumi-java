@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class DigitalTwinsIdentityResponse {
     /**
      * The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class DigitalTwinsIdentityResponse {
             this.type = type;
             return this;
         }
-
         public DigitalTwinsIdentityResponse build() {
             return new DigitalTwinsIdentityResponse(principalId, tenantId, type);
         }

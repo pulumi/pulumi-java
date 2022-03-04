@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -98,70 +98,70 @@ public final class SapOpenHubSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
-     */
+    */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
      * 
-     */
+    */
     public Optional<Object> getBaseRequestId() {
         return Optional.ofNullable(this.baseRequestId);
     }
     /**
      * Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getCustomRfcReadTableFunctionModule() {
         return Optional.ofNullable(this.customRfcReadTableFunctionModule);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getExcludeLastRequest() {
         return Optional.ofNullable(this.excludeLastRequest);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getSapDataColumnDelimiter() {
         return Optional.ofNullable(this.sapDataColumnDelimiter);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -169,7 +169,7 @@ public final class SapOpenHubSourceResponse {
      * Copy source type.
      * Expected value is 'SapOpenHubSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -268,7 +268,6 @@ public final class SapOpenHubSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapOpenHubSourceResponse build() {
             return new SapOpenHubSourceResponse(additionalColumns, baseRequestId, customRfcReadTableFunctionModule, disableMetricsCollection, excludeLastRequest, maxConcurrentConnections, queryTimeout, sapDataColumnDelimiter, sourceRetryCount, sourceRetryWait, type);
         }

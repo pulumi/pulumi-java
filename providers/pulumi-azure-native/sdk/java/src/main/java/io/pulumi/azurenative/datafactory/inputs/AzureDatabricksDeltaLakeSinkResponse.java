@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.AzureDatabricksDeltaLakeImportCommandResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+      private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -36,7 +36,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="importSettings")
-    private final @Nullable AzureDatabricksDeltaLakeImportCommandResponse importSettings;
+      private final @Nullable AzureDatabricksDeltaLakeImportCommandResponse importSettings;
 
     public Optional<AzureDatabricksDeltaLakeImportCommandResponse> getImportSettings() {
         return this.importSettings == null ? Optional.empty() : Optional.ofNullable(this.importSettings);
@@ -47,7 +47,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+      private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -58,7 +58,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="preCopyScript")
-    private final @Nullable Object preCopyScript;
+      private final @Nullable Object preCopyScript;
 
     public Optional<Object> getPreCopyScript() {
         return this.preCopyScript == null ? Optional.empty() : Optional.ofNullable(this.preCopyScript);
@@ -69,7 +69,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sinkRetryCount")
-    private final @Nullable Object sinkRetryCount;
+      private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
@@ -80,7 +80,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sinkRetryWait")
-    private final @Nullable Object sinkRetryWait;
+      private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
@@ -92,7 +92,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -103,7 +103,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="writeBatchSize")
-    private final @Nullable Object writeBatchSize;
+      private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
@@ -114,7 +114,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="writeBatchTimeout")
-    private final @Nullable Object writeBatchTimeout;
+      private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
@@ -233,7 +233,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public AzureDatabricksDeltaLakeSinkResponse build() {
             return new AzureDatabricksDeltaLakeSinkResponse(disableMetricsCollection, importSettings, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

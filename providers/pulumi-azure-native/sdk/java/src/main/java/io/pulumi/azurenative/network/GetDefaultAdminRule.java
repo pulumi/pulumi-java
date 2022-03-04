@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetDefaultAdminRuleArgs;
 import io.pulumi.azurenative.network.outputs.GetDefaultAdminRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefaultAdminRule {
-/**
- * Network default admin rule.
+    private GetDefaultAdminRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetDefaultAdminRuleArgs.Builder a);
+    }
+    private static GetDefaultAdminRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDefaultAdminRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Network default admin rule.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Network default admin rule.
+     *
+     * Network default admin rule.
  * 
- */
+     */
+    public static CompletableFuture<GetDefaultAdminRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Network default admin rule.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Network default admin rule.
+     * 
+     */
     public static CompletableFuture<GetDefaultAdminRuleResult> invokeAsync(GetDefaultAdminRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDefaultAdminRule", TypeShape.of(GetDefaultAdminRuleResult.class), args == null ? GetDefaultAdminRuleArgs.Empty : args, Utilities.withVersion(options));
     }

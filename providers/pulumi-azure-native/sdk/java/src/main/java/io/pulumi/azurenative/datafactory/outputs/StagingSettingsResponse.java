@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class StagingSettingsResponse {
     /**
      * Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getEnableCompression() {
         return Optional.ofNullable(this.enableCompression);
     }
     /**
      * Staging linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The path to storage for storing the interim data. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -98,7 +98,6 @@ public final class StagingSettingsResponse {
             this.path = path;
             return this;
         }
-
         public StagingSettingsResponse build() {
             return new StagingSettingsResponse(enableCompression, linkedServiceName, path);
         }

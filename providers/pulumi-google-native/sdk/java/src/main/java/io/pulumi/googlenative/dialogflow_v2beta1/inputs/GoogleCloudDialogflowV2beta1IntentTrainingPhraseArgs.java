@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentTrainingPhraseType;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
      * 
      */
     @InputImport(name="parts", required=true)
-    private final Input<List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs>> parts;
+      private final Input<List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs>> parts;
 
     public Input<List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs>> getParts() {
         return this.parts;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
      * 
      */
     @InputImport(name="timesAddedCount")
-    private final @Nullable Input<Integer> timesAddedCount;
+      private final @Nullable Input<Integer> timesAddedCount;
 
     public Input<Integer> getTimesAddedCount() {
         return this.timesAddedCount == null ? Input.empty() : this.timesAddedCount;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> type;
+      private final Input<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> type;
 
     public Input<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> getType() {
         return this.type;
@@ -122,7 +122,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs(parts, timesAddedCount, type);
         }

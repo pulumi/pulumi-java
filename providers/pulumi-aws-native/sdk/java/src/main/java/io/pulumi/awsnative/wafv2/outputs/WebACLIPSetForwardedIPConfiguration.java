@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationPosition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -73,7 +73,6 @@ public final class WebACLIPSetForwardedIPConfiguration {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public WebACLIPSetForwardedIPConfiguration build() {
             return new WebACLIPSetForwardedIPConfiguration(fallbackBehavior, headerName, position);
         }

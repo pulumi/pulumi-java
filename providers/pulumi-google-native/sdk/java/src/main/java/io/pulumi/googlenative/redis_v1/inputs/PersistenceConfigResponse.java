@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="persistenceMode", required=true)
-    private final String persistenceMode;
+      private final String persistenceMode;
 
     public String getPersistenceMode() {
         return this.persistenceMode;
@@ -32,7 +32,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="rdbNextSnapshotTime", required=true)
-    private final String rdbNextSnapshotTime;
+      private final String rdbNextSnapshotTime;
 
     public String getRdbNextSnapshotTime() {
         return this.rdbNextSnapshotTime;
@@ -43,7 +43,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="rdbSnapshotPeriod", required=true)
-    private final String rdbSnapshotPeriod;
+      private final String rdbSnapshotPeriod;
 
     public String getRdbSnapshotPeriod() {
         return this.rdbSnapshotPeriod;
@@ -54,7 +54,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="rdbSnapshotStartTime", required=true)
-    private final String rdbSnapshotStartTime;
+      private final String rdbSnapshotStartTime;
 
     public String getRdbSnapshotStartTime() {
         return this.rdbSnapshotStartTime;
@@ -123,7 +123,6 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
             this.rdbSnapshotStartTime = Objects.requireNonNull(rdbSnapshotStartTime);
             return this;
         }
-
         public PersistenceConfigResponse build() {
             return new PersistenceConfigResponse(persistenceMode, rdbNextSnapshotTime, rdbSnapshotPeriod, rdbSnapshotStartTime);
         }

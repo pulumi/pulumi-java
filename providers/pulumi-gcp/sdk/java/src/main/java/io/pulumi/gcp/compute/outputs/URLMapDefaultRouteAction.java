@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapDefaultRouteActionCorsPolicy;
 import io.pulumi.gcp.compute.outputs.URLMapDefaultRouteActionFaultInjectionPolicy;
 import io.pulumi.gcp.compute.outputs.URLMapDefaultRouteActionRequestMirrorPolicy;
@@ -99,7 +99,7 @@ public final class URLMapDefaultRouteAction {
      * [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapDefaultRouteActionCorsPolicy> getCorsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
@@ -111,7 +111,7 @@ public final class URLMapDefaultRouteAction {
      * timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapDefaultRouteActionFaultInjectionPolicy> getFaultInjectionPolicy() {
         return Optional.ofNullable(this.faultInjectionPolicy);
     }
@@ -121,7 +121,7 @@ public final class URLMapDefaultRouteAction {
      * the host / authority header is suffixed with -shadow.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapDefaultRouteActionRequestMirrorPolicy> getRequestMirrorPolicy() {
         return Optional.ofNullable(this.requestMirrorPolicy);
     }
@@ -129,7 +129,7 @@ public final class URLMapDefaultRouteAction {
      * Specifies the retry policy associated with this route.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapDefaultRouteActionRetryPolicy> getRetryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -139,7 +139,7 @@ public final class URLMapDefaultRouteAction {
      * If not specified, will use the largest timeout among all backend services associated with the route.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapDefaultRouteActionTimeout> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -147,7 +147,7 @@ public final class URLMapDefaultRouteAction {
      * The spec to modify the URL of the request, prior to forwarding the request to the matched service.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapDefaultRouteActionUrlRewrite> getUrlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
@@ -161,7 +161,7 @@ public final class URLMapDefaultRouteAction {
      * additional settings specified in this HttpRouteAction.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapDefaultRouteActionWeightedBackendService> getWeightedBackendServices() {
         return this.weightedBackendServices == null ? List.of() : this.weightedBackendServices;
     }
@@ -232,7 +232,6 @@ public final class URLMapDefaultRouteAction {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
-
         public URLMapDefaultRouteAction build() {
             return new URLMapDefaultRouteAction(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

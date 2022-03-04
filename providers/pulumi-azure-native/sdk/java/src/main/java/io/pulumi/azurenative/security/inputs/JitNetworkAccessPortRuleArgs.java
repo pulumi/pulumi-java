@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.enums.Protocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowedSourceAddressPrefix")
-    private final @Nullable Input<String> allowedSourceAddressPrefix;
+      private final @Nullable Input<String> allowedSourceAddressPrefix;
 
     public Input<String> getAllowedSourceAddressPrefix() {
         return this.allowedSourceAddressPrefix == null ? Input.empty() : this.allowedSourceAddressPrefix;
@@ -34,7 +34,7 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowedSourceAddressPrefixes")
-    private final @Nullable Input<List<String>> allowedSourceAddressPrefixes;
+      private final @Nullable Input<List<String>> allowedSourceAddressPrefixes;
 
     public Input<List<String>> getAllowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? Input.empty() : this.allowedSourceAddressPrefixes;
@@ -45,21 +45,21 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maxRequestAccessDuration", required=true)
-    private final Input<String> maxRequestAccessDuration;
+      private final Input<String> maxRequestAccessDuration;
 
     public Input<String> getMaxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }
 
     @InputImport(name="number", required=true)
-    private final Input<Integer> number;
+      private final Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number;
     }
 
     @InputImport(name="protocol", required=true)
-    private final Input<Either<String,Protocol>> protocol;
+      private final Input<Either<String,Protocol>> protocol;
 
     public Input<Either<String,Protocol>> getProtocol() {
         return this.protocol;
@@ -163,7 +163,6 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public JitNetworkAccessPortRuleArgs build() {
             return new JitNetworkAccessPortRuleArgs(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, maxRequestAccessDuration, number, protocol);
         }

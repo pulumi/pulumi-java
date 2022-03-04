@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -80,63 +80,63 @@ public final class VpnTunnelInfoResponse {
     /**
      * Name of a VPN tunnel.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * URI of a Compute Engine network where the VPN tunnel is configured.
      * 
-     */
+    */
     public String getNetworkUri() {
         return this.networkUri;
     }
     /**
      * Name of a Google Cloud region where this VPN tunnel is configured.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * URI of a VPN gateway at remote end of the tunnel.
      * 
-     */
+    */
     public String getRemoteGateway() {
         return this.remoteGateway;
     }
     /**
      * Remote VPN gateway's IP address.
      * 
-     */
+    */
     public String getRemoteGatewayIp() {
         return this.remoteGatewayIp;
     }
     /**
      * Type of the routing policy.
      * 
-     */
+    */
     public String getRoutingType() {
         return this.routingType;
     }
     /**
      * URI of the VPN gateway at local end of the tunnel.
      * 
-     */
+    */
     public String getSourceGateway() {
         return this.sourceGateway;
     }
     /**
      * Local VPN gateway's IP address.
      * 
-     */
+    */
     public String getSourceGatewayIp() {
         return this.sourceGatewayIp;
     }
     /**
      * URI of a VPN tunnel.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -221,7 +221,6 @@ public final class VpnTunnelInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public VpnTunnelInfoResponse build() {
             return new VpnTunnelInfoResponse(displayName, networkUri, region, remoteGateway, remoteGatewayIp, routingType, sourceGateway, sourceGatewayIp, uri);
         }

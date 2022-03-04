@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetVirtualHubArgs;
 import io.pulumi.azurenative.network.outputs.GetVirtualHubResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualHub {
-/**
- * VirtualHub Resource.
+    private GetVirtualHub() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualHubArgs.Builder a);
+    }
+    private static GetVirtualHubArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualHubArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * VirtualHub Resource.
  * API Version: 2020-11-01.
  * 
- *
- * VirtualHub Resource.
+     *
+     * VirtualHub Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualHubResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * VirtualHub Resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * VirtualHub Resource.
+     * 
+     */
     public static CompletableFuture<GetVirtualHubResult> invokeAsync(GetVirtualHubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHub", TypeShape.of(GetVirtualHubResult.class), args == null ? GetVirtualHubArgs.Empty : args, Utilities.withVersion(options));
     }

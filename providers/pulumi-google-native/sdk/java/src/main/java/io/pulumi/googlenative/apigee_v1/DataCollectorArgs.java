@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.enums.DataCollectorType;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     public static final DataCollectorArgs Empty = new DataCollectorArgs();
 
     @InputImport(name="dataCollectorId")
-    private final @Nullable Input<String> dataCollectorId;
+      private final @Nullable Input<String> dataCollectorId;
 
     public Input<String> getDataCollectorId() {
         return this.dataCollectorId == null ? Input.empty() : this.dataCollectorId;
@@ -27,7 +27,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,14 +38,14 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -56,7 +56,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<DataCollectorType> type;
+      private final @Nullable Input<DataCollectorType> type;
 
     public Input<DataCollectorType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -160,7 +160,6 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public DataCollectorArgs build() {
             return new DataCollectorArgs(dataCollectorId, description, name, organizationId, type);
         }

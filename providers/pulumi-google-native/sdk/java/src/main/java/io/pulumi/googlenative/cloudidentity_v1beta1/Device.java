@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudidentity_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudidentity_v1beta1.DeviceArgs;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.AndroidAttributesResponse;
@@ -430,6 +430,37 @@ public class Device extends io.pulumi.resources.CustomResource {
         return this.wifiMacAddresses;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable DeviceArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.cloudidentity_v1beta1.DeviceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.cloudidentity_v1beta1.DeviceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Device(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Device(String name) {
+        this(name, DeviceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Device(String name, @Nullable DeviceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

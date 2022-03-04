@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.windowsiot;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminDomainName")
-    private final @Nullable Input<String> adminDomainName;
+      private final @Nullable Input<String> adminDomainName;
 
     public Input<String> getAdminDomainName() {
         return this.adminDomainName == null ? Input.empty() : this.adminDomainName;
@@ -32,7 +32,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingDomainName")
-    private final @Nullable Input<String> billingDomainName;
+      private final @Nullable Input<String> billingDomainName;
 
     public Input<String> getBillingDomainName() {
         return this.billingDomainName == null ? Input.empty() : this.billingDomainName;
@@ -43,7 +43,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -54,7 +54,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -65,7 +65,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notes")
-    private final @Nullable Input<String> notes;
+      private final @Nullable Input<String> notes;
 
     public Input<String> getNotes() {
         return this.notes == null ? Input.empty() : this.notes;
@@ -76,7 +76,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quantity")
-    private final @Nullable Input<Double> quantity;
+      private final @Nullable Input<Double> quantity;
 
     public Input<Double> getQuantity() {
         return this.quantity == null ? Input.empty() : this.quantity;
@@ -87,7 +87,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -247,7 +247,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(adminDomainName, billingDomainName, deviceName, location, notes, quantity, resourceGroupName, tags);
         }

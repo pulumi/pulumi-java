@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -81,63 +81,63 @@ public final class InMageRcmProtectedDiskDetailsResponse {
     /**
      * The disk capacity in bytes.
      * 
-     */
+    */
     public Double getCapacityInBytes() {
         return this.capacityInBytes;
     }
     /**
      * The disk encryption set ARM Id.
      * 
-     */
+    */
     public String getDiskEncryptionSetId() {
         return this.diskEncryptionSetId;
     }
     /**
      * The disk Id.
      * 
-     */
+    */
     public String getDiskId() {
         return this.diskId;
     }
     /**
      * The disk name.
      * 
-     */
+    */
     public String getDiskName() {
         return this.diskName;
     }
     /**
      * The disk type.
      * 
-     */
+    */
     public String getDiskType() {
         return this.diskType;
     }
     /**
      * A value indicating whether the disk is the OS disk.
      * 
-     */
+    */
     public String getIsOSDisk() {
         return this.isOSDisk;
     }
     /**
      * The log storage account ARM Id.
      * 
-     */
+    */
     public String getLogStorageAccountId() {
         return this.logStorageAccountId;
     }
     /**
      * The ARM Id of the seed managed disk.
      * 
-     */
+    */
     public String getSeedManagedDiskId() {
         return this.seedManagedDiskId;
     }
     /**
      * The ARM Id of the target managed disk.
      * 
-     */
+    */
     public String getTargetManagedDiskId() {
         return this.targetManagedDiskId;
     }
@@ -222,7 +222,6 @@ public final class InMageRcmProtectedDiskDetailsResponse {
             this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
             return this;
         }
-
         public InMageRcmProtectedDiskDetailsResponse build() {
             return new InMageRcmProtectedDiskDetailsResponse(capacityInBytes, diskEncryptionSetId, diskId, diskName, diskType, isOSDisk, logStorageAccountId, seedManagedDiskId, targetManagedDiskId);
         }

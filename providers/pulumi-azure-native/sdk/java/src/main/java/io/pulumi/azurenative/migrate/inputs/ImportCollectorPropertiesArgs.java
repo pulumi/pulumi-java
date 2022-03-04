@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
     public static final ImportCollectorPropertiesArgs Empty = new ImportCollectorPropertiesArgs();
 
     @InputImport(name="discoverySiteId")
-    private final @Nullable Input<String> discoverySiteId;
+      private final @Nullable Input<String> discoverySiteId;
 
     public Input<String> getDiscoverySiteId() {
         return this.discoverySiteId == null ? Input.empty() : this.discoverySiteId;
@@ -58,7 +58,6 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
             this.discoverySiteId = Input.ofNullable(discoverySiteId);
             return this;
         }
-
         public ImportCollectorPropertiesArgs build() {
             return new ImportCollectorPropertiesArgs(discoverySiteId);
         }

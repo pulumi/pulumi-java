@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
     /**
      * A string used to identify this tag
      * 
-     */
+    */
     public String getCloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
     /**
      * A string containing the value for the tag
      * 
-     */
+    */
     public String getLogPrefix() {
         return this.logPrefix;
     }
@@ -74,7 +74,6 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
             this.logPrefix = Objects.requireNonNull(logPrefix);
             return this;
         }
-
         public BotAliasCloudWatchLogGroupLogDestination build() {
             return new BotAliasCloudWatchLogGroupLogDestination(cloudWatchLogGroupArn, logPrefix);
         }

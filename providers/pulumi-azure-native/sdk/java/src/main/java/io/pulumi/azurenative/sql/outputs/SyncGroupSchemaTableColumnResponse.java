@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class SyncGroupSchemaTableColumnResponse {
     /**
      * Data size of the column.
      * 
-     */
+    */
     public Optional<String> getDataSize() {
         return Optional.ofNullable(this.dataSize);
     }
     /**
      * Data type of the column.
      * 
-     */
+    */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Quoted name of sync group table column.
      * 
-     */
+    */
     public Optional<String> getQuotedName() {
         return Optional.ofNullable(this.quotedName);
     }
@@ -97,7 +97,6 @@ public final class SyncGroupSchemaTableColumnResponse {
             this.quotedName = quotedName;
             return this;
         }
-
         public SyncGroupSchemaTableColumnResponse build() {
             return new SyncGroupSchemaTableColumnResponse(dataSize, dataType, quotedName);
         }

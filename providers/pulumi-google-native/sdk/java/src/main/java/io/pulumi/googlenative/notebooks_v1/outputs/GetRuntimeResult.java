@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeAccessConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeMetricsResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeSoftwareConfigResponse;
@@ -84,63 +84,63 @@ public final class GetRuntimeResult {
     /**
      * The config settings for accessing runtime.
      * 
-     */
+    */
     public RuntimeAccessConfigResponse getAccessConfig() {
         return this.accessConfig;
     }
     /**
      * Runtime creation time.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Runtime health_state.
      * 
-     */
+    */
     public String getHealthState() {
         return this.healthState;
     }
     /**
      * Contains Runtime daemon metrics such as Service status and JupyterLab stats.
      * 
-     */
+    */
     public RuntimeMetricsResponse getMetrics() {
         return this.metrics;
     }
     /**
      * The resource name of the runtime. Format: `projects/{project}/locations/{location}/runtimes/{runtimeId}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The config settings for software inside the runtime.
      * 
-     */
+    */
     public RuntimeSoftwareConfigResponse getSoftwareConfig() {
         return this.softwareConfig;
     }
     /**
      * Runtime state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Runtime update time.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Use a Compute Engine VM image to start the managed notebook instance.
      * 
-     */
+    */
     public VirtualMachineResponse getVirtualMachine() {
         return this.virtualMachine;
     }
@@ -225,7 +225,6 @@ public final class GetRuntimeResult {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }
-
         public GetRuntimeResult build() {
             return new GetRuntimeResult(accessConfig, createTime, healthState, metrics, name, softwareConfig, state, updateTime, virtualMachine);
         }

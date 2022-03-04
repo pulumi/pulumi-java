@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+      private final String content;
 
     public String getContent() {
         return this.content;
@@ -28,7 +28,7 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="fileType", required=true)
-    private final String fileType;
+      private final String fileType;
 
     public String getFileType() {
         return this.fileType;
@@ -77,7 +77,6 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }
-
         public FileContentBufferResponse build() {
             return new FileContentBufferResponse(content, fileType);
         }

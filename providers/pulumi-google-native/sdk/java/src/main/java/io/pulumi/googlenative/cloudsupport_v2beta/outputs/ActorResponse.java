@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsupport_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class ActorResponse {
     /**
      * The name to display for the actor. If not provided, it is inferred from credentials supplied during case creation. When an email is provided, a display name must also be provided. This will be obfuscated if the user is a Google Support agent.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The email address of the actor. If not provided, it is inferred from credentials supplied during case creation. If the authenticated principal does not have an email address, one must be provided. When a name is provided, an email must also be provided. This will be obfuscated if the user is a Google Support agent.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * Whether the actor is a Google support actor.
      * 
-     */
+    */
     public Boolean getGoogleSupport() {
         return this.googleSupport;
     }
     /**
      * An ID representing the user that was authenticated when the corresponding action was taken. This will be an email address, if one is available, or some other unique ID. See https://cloud.google.com/docs/authentication for more information on types of authentication.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -117,7 +117,6 @@ public final class ActorResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ActorResponse build() {
             return new ActorResponse(displayName, email, googleSupport, principalId);
         }

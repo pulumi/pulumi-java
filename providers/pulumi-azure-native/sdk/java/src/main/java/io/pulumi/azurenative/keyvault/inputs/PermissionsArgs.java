@@ -9,7 +9,7 @@ import io.pulumi.azurenative.keyvault.enums.SecretPermissions;
 import io.pulumi.azurenative.keyvault.enums.StoragePermissions;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificates")
-    private final @Nullable Input<List<Either<String,CertificatePermissions>>> certificates;
+      private final @Nullable Input<List<Either<String,CertificatePermissions>>> certificates;
 
     public Input<List<Either<String,CertificatePermissions>>> getCertificates() {
         return this.certificates == null ? Input.empty() : this.certificates;
@@ -40,7 +40,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<List<Either<String,KeyPermissions>>> keys;
+      private final @Nullable Input<List<Either<String,KeyPermissions>>> keys;
 
     public Input<List<Either<String,KeyPermissions>>> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -51,7 +51,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable Input<List<Either<String,SecretPermissions>>> secrets;
+      private final @Nullable Input<List<Either<String,SecretPermissions>>> secrets;
 
     public Input<List<Either<String,SecretPermissions>>> getSecrets() {
         return this.secrets == null ? Input.empty() : this.secrets;
@@ -62,7 +62,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storage")
-    private final @Nullable Input<List<Either<String,StoragePermissions>>> storage;
+      private final @Nullable Input<List<Either<String,StoragePermissions>>> storage;
 
     public Input<List<Either<String,StoragePermissions>>> getStorage() {
         return this.storage == null ? Input.empty() : this.storage;
@@ -151,7 +151,6 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
             this.storage = Input.ofNullable(storage);
             return this;
         }
-
         public PermissionsArgs build() {
             return new PermissionsArgs(certificates, keys, secrets, storage);
         }

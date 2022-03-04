@@ -5,7 +5,7 @@ package io.pulumi.awsnative.connect.outputs;
 
 import io.pulumi.awsnative.connect.outputs.HoursOfOperationConfig;
 import io.pulumi.awsnative.connect.outputs.HoursOfOperationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class GetHoursOfOperationResult {
     /**
      * Configuration information for the hours of operation: day, start time, and end time.
      * 
-     */
+    */
     public List<HoursOfOperationConfig> getConfig() {
         return this.config == null ? List.of() : this.config;
     }
     /**
      * The description of the hours of operation.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) for the hours of operation.
      * 
-     */
+    */
     public Optional<String> getHoursOfOperationArn() {
         return Optional.ofNullable(this.hoursOfOperationArn);
     }
     /**
      * The identifier of the Amazon Connect instance.
      * 
-     */
+    */
     public Optional<String> getInstanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * The name of the hours of operation.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * One or more tags.
      * 
-     */
+    */
     public List<HoursOfOperationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The time zone of the hours of operation.
      * 
-     */
+    */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -184,7 +184,6 @@ public final class GetHoursOfOperationResult {
             this.timeZone = timeZone;
             return this;
         }
-
         public GetHoursOfOperationResult build() {
             return new GetHoursOfOperationResult(config, description, hoursOfOperationArn, instanceArn, name, tags, timeZone);
         }

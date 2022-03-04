@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.ArgumentResponse;
 import io.pulumi.azurenative.containerregistry.outputs.BaseImageDependencyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -94,63 +94,63 @@ public final class DockerBuildStepResponse {
     /**
      * The collection of override arguments to be used when executing this build step.
      * 
-     */
+    */
     public List<ArgumentResponse> getArguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
      * List of base image dependencies for a step.
      * 
-     */
+    */
     public List<BaseImageDependencyResponse> getBaseImageDependencies() {
         return this.baseImageDependencies;
     }
     /**
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
      * 
-     */
+    */
     public Optional<String> getContextAccessToken() {
         return Optional.ofNullable(this.contextAccessToken);
     }
     /**
      * The URL(absolute or relative) of the source context for the task step.
      * 
-     */
+    */
     public Optional<String> getContextPath() {
         return Optional.ofNullable(this.contextPath);
     }
     /**
      * The Docker file path relative to the source context.
      * 
-     */
+    */
     public String getDockerFilePath() {
         return this.dockerFilePath;
     }
     /**
      * The fully qualified image names including the repository and tag.
      * 
-     */
+    */
     public List<String> getImageNames() {
         return this.imageNames == null ? List.of() : this.imageNames;
     }
     /**
      * The value of this property indicates whether the image built should be pushed to the registry or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsPushEnabled() {
         return Optional.ofNullable(this.isPushEnabled);
     }
     /**
      * The value of this property indicates whether the image cache is enabled or not.
      * 
-     */
+    */
     public Optional<Boolean> getNoCache() {
         return Optional.ofNullable(this.noCache);
     }
     /**
      * The name of the target build stage for the docker build.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -158,7 +158,7 @@ public final class DockerBuildStepResponse {
      * The type of the step.
      * Expected value is 'Docker'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -250,7 +250,6 @@ public final class DockerBuildStepResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DockerBuildStepResponse build() {
             return new DockerBuildStepResponse(arguments, baseImageDependencies, contextAccessToken, contextPath, dockerFilePath, imageNames, isPushEnabled, noCache, target, type);
         }

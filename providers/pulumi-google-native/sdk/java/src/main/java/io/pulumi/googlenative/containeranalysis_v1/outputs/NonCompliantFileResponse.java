@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class NonCompliantFileResponse {
     /**
      * Command to display the non-compliant files.
      * 
-     */
+    */
     public String getDisplayCommand() {
         return this.displayCommand;
     }
     /**
      * display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using 'path'. Empty if `display_command` is set.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * Explains why a file is non compliant for a CIS check.
      * 
-     */
+    */
     public String getReason() {
         return this.reason;
     }
@@ -95,7 +95,6 @@ public final class NonCompliantFileResponse {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public NonCompliantFileResponse build() {
             return new NonCompliantFileResponse(displayCommand, path, reason);
         }

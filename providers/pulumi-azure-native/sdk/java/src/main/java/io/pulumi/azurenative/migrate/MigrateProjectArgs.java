@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.migrate.inputs.MigrateProjectPropertiesArgs;
 import io.pulumi.azurenative.migrate.inputs.MigrateProjectTagsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-    private final @Nullable Input<String> eTag;
+      private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -32,7 +32,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -43,7 +43,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="migrateProjectName")
-    private final @Nullable Input<String> migrateProjectName;
+      private final @Nullable Input<String> migrateProjectName;
 
     public Input<String> getMigrateProjectName() {
         return this.migrateProjectName == null ? Input.empty() : this.migrateProjectName;
@@ -54,7 +54,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<MigrateProjectPropertiesArgs> properties;
+      private final @Nullable Input<MigrateProjectPropertiesArgs> properties;
 
     public Input<MigrateProjectPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -65,7 +65,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<MigrateProjectTagsArgs> tags;
+      private final @Nullable Input<MigrateProjectTagsArgs> tags;
 
     public Input<MigrateProjectTagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -195,7 +195,6 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public MigrateProjectArgs build() {
             return new MigrateProjectArgs(eTag, location, migrateProjectName, properties, resourceGroupName, tags);
         }

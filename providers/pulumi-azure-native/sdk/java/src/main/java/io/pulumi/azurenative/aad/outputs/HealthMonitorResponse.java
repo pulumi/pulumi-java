@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class HealthMonitorResponse {
     /**
      * Health Monitor Details
      * 
-     */
+    */
     public String getDetails() {
         return this.details;
     }
     /**
      * Health Monitor Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Health Monitor Name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -95,7 +95,6 @@ public final class HealthMonitorResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public HealthMonitorResponse build() {
             return new HealthMonitorResponse(details, id, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigGceClusterConfigShieldedInstanceConfig;
 import java.lang.Boolean;
 import java.lang.String;
@@ -110,7 +110,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * (also known as `privateIpGoogleAccess`) must be enabled on the subnetwork that the cluster
      * will be launched in.
      * 
-     */
+    */
     public Optional<Boolean> getInternalIpOnly() {
         return Optional.ofNullable(this.internalIpOnly);
     }
@@ -118,7 +118,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * A map of the Compute Engine metadata entries to add to all instances
      * (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
@@ -127,7 +127,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * network to the cluster will be part of. Conflicts with `subnetwork`.
      * If neither is specified, this defaults to the "default" network.
      * 
-     */
+    */
     public Optional<String> getNetwork() {
         return Optional.ofNullable(this.network);
     }
@@ -135,7 +135,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * The service account to be used by the Node VMs.
      * If not specified, the "default" service account is used.
      * 
-     */
+    */
     public Optional<String> getServiceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -146,14 +146,14 @@ public final class ClusterClusterConfigGceClusterConfig {
      * short names are supported. To allow full access to all Cloud APIs, use the
      * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
      * 
-     */
+    */
     public List<String> getServiceAccountScopes() {
         return this.serviceAccountScopes == null ? List.of() : this.serviceAccountScopes;
     }
     /**
      * Shielded Instance Config for clusters using [Compute Engine Shielded VMs](https://cloud.google.com/security/shielded-cloud/shielded-vm).
      * 
-     */
+    */
     public Optional<ClusterClusterConfigGceClusterConfigShieldedInstanceConfig> getShieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
@@ -161,7 +161,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * The name or self_link of the Google Compute Engine
      * subnetwork the cluster will be part of. Conflicts with `network`.
      * 
-     */
+    */
     public Optional<String> getSubnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -169,7 +169,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * The list of instance tags applied to instances in the cluster.
      * Tags are used to identify valid sources or targets for network firewalls.
      * 
-     */
+    */
     public List<String> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -182,7 +182,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * which computing resources are available for use with other configs such as
      * `cluster_config.master_config.machine_type` and `cluster_config.worker_config.machine_type`.
      * 
-     */
+    */
     public Optional<String> getZone() {
         return Optional.ofNullable(this.zone);
     }
@@ -267,7 +267,6 @@ public final class ClusterClusterConfigGceClusterConfig {
             this.zone = zone;
             return this;
         }
-
         public ClusterClusterConfigGceClusterConfig build() {
             return new ClusterClusterConfigGceClusterConfig(internalIpOnly, metadata, network, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetwork, tags, zone);
         }

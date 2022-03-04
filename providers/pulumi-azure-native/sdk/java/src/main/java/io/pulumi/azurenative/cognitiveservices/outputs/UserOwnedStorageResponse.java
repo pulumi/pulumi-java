@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class UserOwnedStorageResponse {
     /**
      * Full resource id of a Microsoft.Storage resource.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -54,7 +54,6 @@ public final class UserOwnedStorageResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public UserOwnedStorageResponse build() {
             return new UserOwnedStorageResponse(resourceId);
         }

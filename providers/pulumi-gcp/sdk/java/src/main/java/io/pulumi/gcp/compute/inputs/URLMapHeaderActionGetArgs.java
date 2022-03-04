@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapHeaderActionRequestHeadersToAddGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapHeaderActionResponseHeadersToAddGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class URLMapHeaderActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requestHeadersToAdds")
-    private final @Nullable Input<List<URLMapHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
+      private final @Nullable Input<List<URLMapHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
 
     public Input<List<URLMapHeaderActionRequestHeadersToAddGetArgs>> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? Input.empty() : this.requestHeadersToAdds;
@@ -35,7 +35,7 @@ public final class URLMapHeaderActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requestHeadersToRemoves")
-    private final @Nullable Input<List<String>> requestHeadersToRemoves;
+      private final @Nullable Input<List<String>> requestHeadersToRemoves;
 
     public Input<List<String>> getRequestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? Input.empty() : this.requestHeadersToRemoves;
@@ -47,7 +47,7 @@ public final class URLMapHeaderActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="responseHeadersToAdds")
-    private final @Nullable Input<List<URLMapHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
+      private final @Nullable Input<List<URLMapHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
 
     public Input<List<URLMapHeaderActionResponseHeadersToAddGetArgs>> getResponseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? Input.empty() : this.responseHeadersToAdds;
@@ -59,7 +59,7 @@ public final class URLMapHeaderActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="responseHeadersToRemoves")
-    private final @Nullable Input<List<String>> responseHeadersToRemoves;
+      private final @Nullable Input<List<String>> responseHeadersToRemoves;
 
     public Input<List<String>> getResponseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? Input.empty() : this.responseHeadersToRemoves;
@@ -148,7 +148,6 @@ public final class URLMapHeaderActionGetArgs extends io.pulumi.resources.Resourc
             this.responseHeadersToRemoves = Input.ofNullable(responseHeadersToRemoves);
             return this;
         }
-
         public URLMapHeaderActionGetArgs build() {
             return new URLMapHeaderActionGetArgs(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

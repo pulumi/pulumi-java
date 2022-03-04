@@ -5,8 +5,8 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TagTemplateIamPolicyArgs;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateIamPolicyState;
@@ -46,6 +46,37 @@ public class TagTemplateIamPolicy extends io.pulumi.resources.CustomResource {
         return this.tagTemplate;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TagTemplateIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.datacatalog.TagTemplateIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.datacatalog.TagTemplateIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TagTemplateIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TagTemplateIamPolicy(String name) {
+        this(name, TagTemplateIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TagTemplateIamPolicy(String name, TagTemplateIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

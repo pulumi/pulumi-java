@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.PublisherIdentityProvider;
 import io.pulumi.awsnative.cloudformation.enums.PublisherStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,28 +49,28 @@ public final class GetPublisherResult {
     /**
      * The type of account used as the identity provider when registering this publisher with CloudFormation.
      * 
-     */
+    */
     public Optional<PublisherIdentityProvider> getIdentityProvider() {
         return Optional.ofNullable(this.identityProvider);
     }
     /**
      * The publisher id assigned by CloudFormation for publishing in this region.
      * 
-     */
+    */
     public Optional<String> getPublisherId() {
         return Optional.ofNullable(this.publisherId);
     }
     /**
      * The URL to the publisher's profile with the identity provider.
      * 
-     */
+    */
     public Optional<String> getPublisherProfile() {
         return Optional.ofNullable(this.publisherProfile);
     }
     /**
      * Whether the publisher is verified.
      * 
-     */
+    */
     public Optional<PublisherStatus> getPublisherStatus() {
         return Optional.ofNullable(this.publisherStatus);
     }
@@ -120,7 +120,6 @@ public final class GetPublisherResult {
             this.publisherStatus = publisherStatus;
             return this;
         }
-
         public GetPublisherResult build() {
             return new GetPublisherResult(identityProvider, publisherId, publisherProfile, publisherStatus);
         }

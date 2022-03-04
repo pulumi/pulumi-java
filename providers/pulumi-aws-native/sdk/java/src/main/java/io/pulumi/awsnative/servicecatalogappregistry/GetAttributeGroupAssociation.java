@@ -6,17 +6,33 @@ package io.pulumi.awsnative.servicecatalogappregistry;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalogappregistry.inputs.GetAttributeGroupAssociationArgs;
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.GetAttributeGroupAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAttributeGroupAssociation {
-/**
- * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation.
+    private GetAttributeGroupAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetAttributeGroupAssociationArgs.Builder a);
+    }
+    private static GetAttributeGroupAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAttributeGroupAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation.
  * 
- */
+     */
+    public static CompletableFuture<GetAttributeGroupAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation.
+     * 
+     */
     public static CompletableFuture<GetAttributeGroupAssociationResult> invokeAsync(GetAttributeGroupAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getAttributeGroupAssociation", TypeShape.of(GetAttributeGroupAssociationResult.class), args == null ? GetAttributeGroupAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

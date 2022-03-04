@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.NetworkSecurityGroupRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -59,35 +59,35 @@ public final class InboundNatPoolResponse {
     /**
      * This must be unique within a Batch pool. Acceptable values are between 1 and 65535 except for 22, 3389, 29876 and 29877 as these are reserved. If any reserved values are provided the request fails with HTTP status code 400.
      * 
-     */
+    */
     public Integer getBackendPort() {
         return this.backendPort;
     }
     /**
      * Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
      * 
-     */
+    */
     public Integer getFrontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
     }
     /**
      * Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
      * 
-     */
+    */
     public Integer getFrontendPortRangeStart() {
         return this.frontendPortRangeStart;
     }
     /**
      * The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.  If any invalid values are provided the request fails with HTTP status code 400.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.
      * 
-     */
+    */
     public List<NetworkSecurityGroupRuleResponse> getNetworkSecurityGroupRules() {
         return this.networkSecurityGroupRules == null ? List.of() : this.networkSecurityGroupRules;
     }
@@ -154,7 +154,6 @@ public final class InboundNatPoolResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public InboundNatPoolResponse build() {
             return new InboundNatPoolResponse(backendPort, frontendPortRangeEnd, frontendPortRangeStart, name, networkSecurityGroupRules, protocol);
         }

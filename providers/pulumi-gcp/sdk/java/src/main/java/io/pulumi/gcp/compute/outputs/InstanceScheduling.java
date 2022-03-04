@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceSchedulingNodeAffinity;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -70,14 +70,14 @@ public final class InstanceScheduling {
      * restarted if it was terminated by Compute Engine (not a user).
      * Defaults to true.
      * 
-     */
+    */
     public Optional<Boolean> getAutomaticRestart() {
         return Optional.ofNullable(this.automaticRestart);
     }
     /**
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
      * 
-     */
+    */
     public Optional<Integer> getMinNodeCpus() {
         return Optional.ofNullable(this.minNodeCpus);
     }
@@ -88,7 +88,7 @@ public final class InstanceScheduling {
      * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
      * Structure documented below.
      * 
-     */
+    */
     public List<InstanceSchedulingNodeAffinity> getNodeAffinities() {
         return this.nodeAffinities == null ? List.of() : this.nodeAffinities;
     }
@@ -97,7 +97,7 @@ public final class InstanceScheduling {
      * instance. Can be MIGRATE or TERMINATE, for more info, read
      * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options).
      * 
-     */
+    */
     public Optional<String> getOnHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
@@ -106,7 +106,7 @@ public final class InstanceScheduling {
      * If this field is set to true, then `automatic_restart` must be
      * set to false.  Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getPreemptible() {
         return Optional.ofNullable(this.preemptible);
     }
@@ -163,7 +163,6 @@ public final class InstanceScheduling {
             this.preemptible = preemptible;
             return this;
         }
-
         public InstanceScheduling build() {
             return new InstanceScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }

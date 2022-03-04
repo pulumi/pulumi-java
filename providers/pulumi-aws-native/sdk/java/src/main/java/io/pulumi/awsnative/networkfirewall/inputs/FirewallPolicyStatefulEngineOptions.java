@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.FirewallPolicyRuleOrder;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class FirewallPolicyStatefulEngineOptions extends io.pulumi.resourc
     public static final FirewallPolicyStatefulEngineOptions Empty = new FirewallPolicyStatefulEngineOptions();
 
     @InputImport(name="ruleOrder")
-    private final @Nullable FirewallPolicyRuleOrder ruleOrder;
+      private final @Nullable FirewallPolicyRuleOrder ruleOrder;
 
     public Optional<FirewallPolicyRuleOrder> getRuleOrder() {
         return this.ruleOrder == null ? Optional.empty() : Optional.ofNullable(this.ruleOrder);
@@ -53,7 +53,6 @@ public final class FirewallPolicyStatefulEngineOptions extends io.pulumi.resourc
             this.ruleOrder = ruleOrder;
             return this;
         }
-
         public FirewallPolicyStatefulEngineOptions build() {
             return new FirewallPolicyStatefulEngineOptions(ruleOrder);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.ExtendedLocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -32,7 +32,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inventoryItemId")
-    private final @Nullable Input<String> inventoryItemId;
+      private final @Nullable Input<String> inventoryItemId;
 
     public Input<String> getInventoryItemId() {
         return this.inventoryItemId == null ? Input.empty() : this.inventoryItemId;
@@ -43,7 +43,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -54,7 +54,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="moRefId")
-    private final @Nullable Input<String> moRefId;
+      private final @Nullable Input<String> moRefId;
 
     public Input<String> getMoRefId() {
         return this.moRefId == null ? Input.empty() : this.moRefId;
@@ -77,7 +77,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -99,7 +99,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vCenterId")
-    private final @Nullable Input<String> vCenterId;
+      private final @Nullable Input<String> vCenterId;
 
     public Input<String> getVCenterId() {
         return this.vCenterId == null ? Input.empty() : this.vCenterId;
@@ -110,7 +110,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="virtualMachineTemplateName")
-    private final @Nullable Input<String> virtualMachineTemplateName;
+      private final @Nullable Input<String> virtualMachineTemplateName;
 
     public Input<String> getVirtualMachineTemplateName() {
         return this.virtualMachineTemplateName == null ? Input.empty() : this.virtualMachineTemplateName;
@@ -274,7 +274,6 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
             this.virtualMachineTemplateName = Input.ofNullable(virtualMachineTemplateName);
             return this;
         }
-
         public VirtualMachineTemplateArgs build() {
             return new VirtualMachineTemplateArgs(extendedLocation, inventoryItemId, kind, location, moRefId, resourceGroupName, tags, vCenterId, virtualMachineTemplateName);
         }

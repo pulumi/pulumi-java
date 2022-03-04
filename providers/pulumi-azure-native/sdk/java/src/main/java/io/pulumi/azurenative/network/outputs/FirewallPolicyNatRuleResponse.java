@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ApplicationRuleConditionResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyNatRuleActionResponse;
 import io.pulumi.azurenative.network.outputs.NatRuleConditionResponse;
 import io.pulumi.azurenative.network.outputs.NetworkRuleConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -75,28 +75,28 @@ public final class FirewallPolicyNatRuleResponse {
     /**
      * The action type of a Nat rule.
      * 
-     */
+    */
     public Optional<FirewallPolicyNatRuleActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The name of the rule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule resource.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The match conditions for incoming traffic.
      * 
-     */
+    */
     public Optional<Object> getRuleCondition() {
         return Optional.ofNullable(this.ruleCondition);
     }
@@ -104,21 +104,21 @@ public final class FirewallPolicyNatRuleResponse {
      * The type of the rule.
      * Expected value is 'FirewallPolicyNatRule'.
      * 
-     */
+    */
     public String getRuleType() {
         return this.ruleType;
     }
     /**
      * The translated address for this NAT rule.
      * 
-     */
+    */
     public Optional<String> getTranslatedAddress() {
         return Optional.ofNullable(this.translatedAddress);
     }
     /**
      * The translated port for this NAT rule.
      * 
-     */
+    */
     public Optional<String> getTranslatedPort() {
         return Optional.ofNullable(this.translatedPort);
     }
@@ -189,7 +189,6 @@ public final class FirewallPolicyNatRuleResponse {
             this.translatedPort = translatedPort;
             return this;
         }
-
         public FirewallPolicyNatRuleResponse build() {
             return new FirewallPolicyNatRuleResponse(action, name, priority, ruleCondition, ruleType, translatedAddress, translatedPort);
         }

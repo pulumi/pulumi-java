@@ -6,7 +6,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateDefaultButtonConfigurationArgs;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateOverrideButtonConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,28 +16,28 @@ public final class InAppTemplateButtonConfigArgs extends io.pulumi.resources.Res
     public static final InAppTemplateButtonConfigArgs Empty = new InAppTemplateButtonConfigArgs();
 
     @InputImport(name="android")
-    private final @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> android;
+      private final @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> android;
 
     public Input<InAppTemplateOverrideButtonConfigurationArgs> getAndroid() {
         return this.android == null ? Input.empty() : this.android;
     }
 
     @InputImport(name="defaultConfig")
-    private final @Nullable Input<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig;
+      private final @Nullable Input<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig;
 
     public Input<InAppTemplateDefaultButtonConfigurationArgs> getDefaultConfig() {
         return this.defaultConfig == null ? Input.empty() : this.defaultConfig;
     }
 
     @InputImport(name="iOS")
-    private final @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> iOS;
+      private final @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> iOS;
 
     public Input<InAppTemplateOverrideButtonConfigurationArgs> getIOS() {
         return this.iOS == null ? Input.empty() : this.iOS;
     }
 
     @InputImport(name="web")
-    private final @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> web;
+      private final @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> web;
 
     public Input<InAppTemplateOverrideButtonConfigurationArgs> getWeb() {
         return this.web == null ? Input.empty() : this.web;
@@ -126,7 +126,6 @@ public final class InAppTemplateButtonConfigArgs extends io.pulumi.resources.Res
             this.web = Input.ofNullable(web);
             return this;
         }
-
         public InAppTemplateButtonConfigArgs build() {
             return new InAppTemplateButtonConfigArgs(android, defaultConfig, iOS, web);
         }

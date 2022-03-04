@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PkixPublicKeyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="publicKeyPem", required=true)
-    private final String publicKeyPem;
+      private final String publicKeyPem;
 
     public String getPublicKeyPem() {
         return this.publicKeyPem;
@@ -32,7 +32,7 @@ public final class PkixPublicKeyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="signatureAlgorithm", required=true)
-    private final String signatureAlgorithm;
+      private final String signatureAlgorithm;
 
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
@@ -81,7 +81,6 @@ public final class PkixPublicKeyResponse extends io.pulumi.resources.InvokeArgs 
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public PkixPublicKeyResponse build() {
             return new PkixPublicKeyResponse(publicKeyPem, signatureAlgorithm);
         }

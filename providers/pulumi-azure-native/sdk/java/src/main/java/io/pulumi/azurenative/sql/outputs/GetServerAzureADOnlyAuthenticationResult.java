@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GetServerAzureADOnlyAuthenticationResult {
     /**
      * Azure Active Directory only Authentication enabled.
      * 
-     */
+    */
     public Boolean getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GetServerAzureADOnlyAuthenticationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerAzureADOnlyAuthenticationResult build() {
             return new GetServerAzureADOnlyAuthenticationResult(azureADOnlyAuthentication, id, name, type);
         }

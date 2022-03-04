@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="bytesCopied", required=true)
-    private final Double bytesCopied;
+      private final Double bytesCopied;
 
     public Double getBytesCopied() {
         return this.bytesCopied;
@@ -34,7 +34,7 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="percentComplete", required=true)
-    private final Integer percentComplete;
+      private final Integer percentComplete;
 
     public Integer getPercentComplete() {
         return this.percentComplete;
@@ -45,7 +45,7 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="serialNumber", required=true)
-    private final String serialNumber;
+      private final String serialNumber;
 
     public String getSerialNumber() {
         return this.serialNumber;
@@ -56,7 +56,7 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -125,7 +125,6 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataBoxDiskCopyProgressResponse build() {
             return new DataBoxDiskCopyProgressResponse(bytesCopied, percentComplete, serialNumber, status);
         }

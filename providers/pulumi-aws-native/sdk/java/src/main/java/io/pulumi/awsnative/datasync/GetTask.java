@@ -6,17 +6,33 @@ package io.pulumi.awsnative.datasync;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.datasync.inputs.GetTaskArgs;
 import io.pulumi.awsnative.datasync.outputs.GetTaskResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTask {
-/**
- * Resource schema for AWS::DataSync::Task.
+    private GetTask() {}
+    public interface BuilderApplicator {
+        public void apply(GetTaskArgs.Builder a);
+    }
+    private static GetTaskArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTaskArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::DataSync::Task.
  * 
- */
+     */
+    public static CompletableFuture<GetTaskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::DataSync::Task.
+     * 
+     */
     public static CompletableFuture<GetTaskResult> invokeAsync(GetTaskArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getTask", TypeShape.of(GetTaskResult.class), args == null ? GetTaskArgs.Empty : args, Utilities.withVersion(options));
     }

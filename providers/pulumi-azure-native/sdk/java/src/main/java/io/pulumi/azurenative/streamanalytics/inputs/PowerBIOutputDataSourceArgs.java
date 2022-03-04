@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable Input<String> dataset;
+      private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -34,7 +34,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable Input<String> groupId;
+      private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -45,7 +45,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable Input<String> groupName;
+      private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;
@@ -56,7 +56,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="refreshToken")
-    private final @Nullable Input<String> refreshToken;
+      private final @Nullable Input<String> refreshToken;
 
     public Input<String> getRefreshToken() {
         return this.refreshToken == null ? Input.empty() : this.refreshToken;
@@ -67,7 +67,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Input<String> table;
+      private final @Nullable Input<String> table;
 
     public Input<String> getTable() {
         return this.table == null ? Input.empty() : this.table;
@@ -78,7 +78,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tokenUserDisplayName")
-    private final @Nullable Input<String> tokenUserDisplayName;
+      private final @Nullable Input<String> tokenUserDisplayName;
 
     public Input<String> getTokenUserDisplayName() {
         return this.tokenUserDisplayName == null ? Input.empty() : this.tokenUserDisplayName;
@@ -89,7 +89,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tokenUserPrincipalName")
-    private final @Nullable Input<String> tokenUserPrincipalName;
+      private final @Nullable Input<String> tokenUserPrincipalName;
 
     public Input<String> getTokenUserPrincipalName() {
         return this.tokenUserPrincipalName == null ? Input.empty() : this.tokenUserPrincipalName;
@@ -101,7 +101,7 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -250,7 +250,6 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public PowerBIOutputDataSourceArgs build() {
             return new PowerBIOutputDataSourceArgs(dataset, groupId, groupName, refreshToken, table, tokenUserDisplayName, tokenUserPrincipalName, type);
         }

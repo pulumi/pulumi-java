@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1TableSpecResponse;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1ViewSpecResponse;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse {
     /**
      * The table source type.
      * 
-     */
+    */
     public String getTableSourceType() {
         return this.tableSourceType;
     }
     /**
      * Specification of a BigQuery table. Populated only if the `table_source_type` is `BIGQUERY_TABLE`.
      * 
-     */
+    */
     public GoogleCloudDatacatalogV1TableSpecResponse getTableSpec() {
         return this.tableSpec;
     }
     /**
      * Table view specification. Populated only if the `table_source_type` is `BIGQUERY_VIEW`.
      * 
-     */
+    */
     public GoogleCloudDatacatalogV1ViewSpecResponse getViewSpec() {
         return this.viewSpec;
     }
@@ -97,7 +97,6 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse {
             this.viewSpec = Objects.requireNonNull(viewSpec);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BigQueryTableSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryTableSpecResponse(tableSourceType, tableSpec, viewSpec);
         }

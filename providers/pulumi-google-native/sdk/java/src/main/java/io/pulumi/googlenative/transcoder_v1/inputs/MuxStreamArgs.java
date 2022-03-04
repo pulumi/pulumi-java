@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.SegmentSettingsArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="container")
-    private final @Nullable Input<String> container;
+      private final @Nullable Input<String> container;
 
     public Input<String> getContainer() {
         return this.container == null ? Input.empty() : this.container;
@@ -36,7 +36,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elementaryStreams")
-    private final @Nullable Input<List<String>> elementaryStreams;
+      private final @Nullable Input<List<String>> elementaryStreams;
 
     public Input<List<String>> getElementaryStreams() {
         return this.elementaryStreams == null ? Input.empty() : this.elementaryStreams;
@@ -47,7 +47,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable Input<String> fileName;
+      private final @Nullable Input<String> fileName;
 
     public Input<String> getFileName() {
         return this.fileName == null ? Input.empty() : this.fileName;
@@ -58,7 +58,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -69,7 +69,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="segmentSettings")
-    private final @Nullable Input<SegmentSettingsArgs> segmentSettings;
+      private final @Nullable Input<SegmentSettingsArgs> segmentSettings;
 
     public Input<SegmentSettingsArgs> getSegmentSettings() {
         return this.segmentSettings == null ? Input.empty() : this.segmentSettings;
@@ -173,7 +173,6 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
             this.segmentSettings = Input.ofNullable(segmentSettings);
             return this;
         }
-
         public MuxStreamArgs build() {
             return new MuxStreamArgs(container, elementaryStreams, fileName, key, segmentSettings);
         }

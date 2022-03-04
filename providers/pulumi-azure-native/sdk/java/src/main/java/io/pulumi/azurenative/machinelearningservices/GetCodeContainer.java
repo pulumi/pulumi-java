@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.inputs.GetCodeContainerArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.GetCodeContainerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCodeContainer {
-/**
- * Azure Resource Manager resource envelope.
+    private GetCodeContainer() {}
+    public interface BuilderApplicator {
+        public void apply(GetCodeContainerArgs.Builder a);
+    }
+    private static GetCodeContainerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCodeContainerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Azure Resource Manager resource envelope.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Azure Resource Manager resource envelope.
+     *
+     * Azure Resource Manager resource envelope.
  * 
- */
+     */
+    public static CompletableFuture<GetCodeContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Azure Resource Manager resource envelope.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Azure Resource Manager resource envelope.
+     * 
+     */
     public static CompletableFuture<GetCodeContainerResult> invokeAsync(GetCodeContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getCodeContainer", TypeShape.of(GetCodeContainerResult.class), args == null ? GetCodeContainerArgs.Empty : args, Utilities.withVersion(options));
     }

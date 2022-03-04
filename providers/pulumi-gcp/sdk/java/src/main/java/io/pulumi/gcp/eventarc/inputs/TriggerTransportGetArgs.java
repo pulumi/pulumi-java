@@ -4,7 +4,7 @@
 package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.eventarc.inputs.TriggerTransportPubsubGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TriggerTransportGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pubsubs")
-    private final @Nullable Input<List<TriggerTransportPubsubGetArgs>> pubsubs;
+      private final @Nullable Input<List<TriggerTransportPubsubGetArgs>> pubsubs;
 
     public Input<List<TriggerTransportPubsubGetArgs>> getPubsubs() {
         return this.pubsubs == null ? Input.empty() : this.pubsubs;
@@ -63,7 +63,6 @@ public final class TriggerTransportGetArgs extends io.pulumi.resources.ResourceA
             this.pubsubs = Input.ofNullable(pubsubs);
             return this;
         }
-
         public TriggerTransportGetArgs build() {
             return new TriggerTransportGetArgs(pubsubs);
         }

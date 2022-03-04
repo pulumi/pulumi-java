@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearning;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearning.inputs.ListWorkspaceKeysArgs;
 import io.pulumi.azurenative.machinelearning.outputs.ListWorkspaceKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWorkspaceKeys {
-/**
- * Workspace authorization keys for a workspace.
+    private ListWorkspaceKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListWorkspaceKeysArgs.Builder a);
+    }
+    private static ListWorkspaceKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWorkspaceKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Workspace authorization keys for a workspace.
  * API Version: 2016-04-01.
  * 
- *
- * Workspace authorization keys for a workspace.
+     *
+     * Workspace authorization keys for a workspace.
  * 
- */
+     */
+    public static CompletableFuture<ListWorkspaceKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Workspace authorization keys for a workspace.
+     * API Version: 2016-04-01.
+     * 
+     *
+         * Workspace authorization keys for a workspace.
+     * 
+     */
     public static CompletableFuture<ListWorkspaceKeysResult> invokeAsync(ListWorkspaceKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearning:listWorkspaceKeys", TypeShape.of(ListWorkspaceKeysResult.class), args == null ? ListWorkspaceKeysArgs.Empty : args, Utilities.withVersion(options));
     }

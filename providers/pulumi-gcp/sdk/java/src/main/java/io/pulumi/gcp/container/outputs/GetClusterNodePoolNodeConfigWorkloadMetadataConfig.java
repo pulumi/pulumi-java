@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class GetClusterNodePoolNodeConfigWorkloadMetadataConfig {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public GetClusterNodePoolNodeConfigWorkloadMetadataConfig build() {
             return new GetClusterNodePoolNodeConfigWorkloadMetadataConfig(mode);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageEndInteractionRespons
         public Builder(GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse();
         }

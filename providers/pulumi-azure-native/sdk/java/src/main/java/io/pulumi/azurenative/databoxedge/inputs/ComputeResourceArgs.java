@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="memoryInGB", required=true)
-    private final Input<Double> memoryInGB;
+      private final Input<Double> memoryInGB;
 
     public Input<Double> getMemoryInGB() {
         return this.memoryInGB;
@@ -34,7 +34,7 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="processorCount", required=true)
-    private final Input<Integer> processorCount;
+      private final Input<Integer> processorCount;
 
     public Input<Integer> getProcessorCount() {
         return this.processorCount;
@@ -93,7 +93,6 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
             this.processorCount = Input.of(Objects.requireNonNull(processorCount));
             return this;
         }
-
         public ComputeResourceArgs build() {
             return new ComputeResourceArgs(memoryInGB, processorCount);
         }

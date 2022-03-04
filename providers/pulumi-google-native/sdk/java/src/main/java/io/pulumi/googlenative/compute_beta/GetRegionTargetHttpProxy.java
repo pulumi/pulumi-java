@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionTargetHttpProxy {
-/**
- * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
+    private GetRegionTargetHttpProxy() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionTargetHttpProxyArgs.Builder a);
+    }
+    private static GetRegionTargetHttpProxyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionTargetHttpProxyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionTargetHttpProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetRegionTargetHttpProxyResult> invokeAsync(GetRegionTargetHttpProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRegionTargetHttpProxy", TypeShape.of(GetRegionTargetHttpProxyResult.class), args == null ? GetRegionTargetHttpProxyArgs.Empty : args, Utilities.withVersion(options));
     }

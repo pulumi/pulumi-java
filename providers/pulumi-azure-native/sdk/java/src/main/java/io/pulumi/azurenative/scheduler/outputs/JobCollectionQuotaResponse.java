@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.outputs;
 
 import io.pulumi.azurenative.scheduler.outputs.JobMaxRecurrenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class JobCollectionQuotaResponse {
     /**
      * Gets or set the maximum job count.
      * 
-     */
+    */
     public Optional<Integer> getMaxJobCount() {
         return Optional.ofNullable(this.maxJobCount);
     }
     /**
      * Gets or sets the maximum job occurrence.
      * 
-     */
+    */
     public Optional<Integer> getMaxJobOccurrence() {
         return Optional.ofNullable(this.maxJobOccurrence);
     }
     /**
      * Gets or set the maximum recurrence.
      * 
-     */
+    */
     public Optional<JobMaxRecurrenceResponse> getMaxRecurrence() {
         return Optional.ofNullable(this.maxRecurrence);
     }
@@ -98,7 +98,6 @@ public final class JobCollectionQuotaResponse {
             this.maxRecurrence = maxRecurrence;
             return this;
         }
-
         public JobCollectionQuotaResponse build() {
             return new JobCollectionQuotaResponse(maxJobCount, maxJobOccurrence, maxRecurrence);
         }

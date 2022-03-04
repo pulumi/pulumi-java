@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -37,7 +37,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -48,7 +48,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="intervalInSeconds")
-    private final @Nullable Integer intervalInSeconds;
+      private final @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
@@ -59,7 +59,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="loadBalancingRules", required=true)
-    private final List<SubResourceResponse> loadBalancingRules;
+      private final List<SubResourceResponse> loadBalancingRules;
 
     public List<SubResourceResponse> getLoadBalancingRules() {
         return this.loadBalancingRules;
@@ -70,7 +70,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -81,7 +81,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="numberOfProbes")
-    private final @Nullable Integer numberOfProbes;
+      private final @Nullable Integer numberOfProbes;
 
     public Optional<Integer> getNumberOfProbes() {
         return this.numberOfProbes == null ? Optional.empty() : Optional.ofNullable(this.numberOfProbes);
@@ -92,7 +92,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -103,7 +103,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+      private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -114,7 +114,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -125,7 +125,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requestPath")
-    private final @Nullable String requestPath;
+      private final @Nullable String requestPath;
 
     public Optional<String> getRequestPath() {
         return this.requestPath == null ? Optional.empty() : Optional.ofNullable(this.requestPath);
@@ -136,7 +136,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -275,7 +275,6 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ProbeResponse build() {
             return new ProbeResponse(etag, id, intervalInSeconds, loadBalancingRules, name, numberOfProbes, port, protocol, provisioningState, requestPath, type);
         }

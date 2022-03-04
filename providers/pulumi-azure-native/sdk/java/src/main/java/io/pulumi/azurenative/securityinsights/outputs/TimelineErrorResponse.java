@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class TimelineErrorResponse {
     /**
      * the error message
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * the query kind
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * the query id
      * 
-     */
+    */
     public Optional<String> getQueryId() {
         return Optional.ofNullable(this.queryId);
     }
@@ -97,7 +97,6 @@ public final class TimelineErrorResponse {
             this.queryId = queryId;
             return this;
         }
-
         public TimelineErrorResponse build() {
             return new TimelineErrorResponse(errorMessage, kind, queryId);
         }

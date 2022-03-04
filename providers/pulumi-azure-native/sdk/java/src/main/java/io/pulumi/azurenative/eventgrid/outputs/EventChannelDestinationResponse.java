@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,14 +43,14 @@ public final class EventChannelDestinationResponse {
      * Azure subscription ID of the customer creating the event channel. The partner topic
      * associated with the event channel will be created under this Azure subscription.
      * 
-     */
+    */
     public Optional<String> getAzureSubscriptionId() {
         return Optional.ofNullable(this.azureSubscriptionId);
     }
     /**
      * Name of the partner topic associated with the event channel.
      * 
-     */
+    */
     public Optional<String> getPartnerTopicName() {
         return Optional.ofNullable(this.partnerTopicName);
     }
@@ -58,7 +58,7 @@ public final class EventChannelDestinationResponse {
      * Azure Resource Group of the customer creating the event channel. The partner topic
      * associated with the event channel will be created under this resource group.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
@@ -101,7 +101,6 @@ public final class EventChannelDestinationResponse {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public EventChannelDestinationResponse build() {
             return new EventChannelDestinationResponse(azureSubscriptionId, partnerTopicName, resourceGroup);
         }

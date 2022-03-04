@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class FailureInfoResponse {
     /**
      * Explains the failure issue in more detail using hard-coded text.
      * 
-     */
+    */
     public String getDetail() {
         return this.detail;
     }
     /**
      * The name of the failure.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class FailureInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FailureInfoResponse build() {
             return new FailureInfoResponse(detail, type);
         }

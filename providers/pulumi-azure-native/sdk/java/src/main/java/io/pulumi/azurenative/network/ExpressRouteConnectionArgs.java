@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitPeeringIdArgs;
 import io.pulumi.azurenative.network.inputs.RoutingConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="authorizationKey")
-    private final @Nullable Input<String> authorizationKey;
+      private final @Nullable Input<String> authorizationKey;
 
     public Input<String> getAuthorizationKey() {
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
@@ -34,7 +34,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="connectionName")
-    private final @Nullable Input<String> connectionName;
+      private final @Nullable Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName == null ? Input.empty() : this.connectionName;
@@ -45,7 +45,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableInternetSecurity")
-    private final @Nullable Input<Boolean> enableInternetSecurity;
+      private final @Nullable Input<Boolean> enableInternetSecurity;
 
     public Input<Boolean> getEnableInternetSecurity() {
         return this.enableInternetSecurity == null ? Input.empty() : this.enableInternetSecurity;
@@ -56,7 +56,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="expressRouteCircuitPeering", required=true)
-    private final Input<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering;
+      private final Input<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering;
 
     public Input<ExpressRouteCircuitPeeringIdArgs> getExpressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
@@ -67,7 +67,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="expressRouteGatewayBypass")
-    private final @Nullable Input<Boolean> expressRouteGatewayBypass;
+      private final @Nullable Input<Boolean> expressRouteGatewayBypass;
 
     public Input<Boolean> getExpressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass == null ? Input.empty() : this.expressRouteGatewayBypass;
@@ -78,7 +78,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="expressRouteGatewayName", required=true)
-    private final Input<String> expressRouteGatewayName;
+      private final Input<String> expressRouteGatewayName;
 
     public Input<String> getExpressRouteGatewayName() {
         return this.expressRouteGatewayName;
@@ -89,7 +89,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -100,7 +100,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -111,7 +111,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -122,7 +122,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="routingConfiguration")
-    private final @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
+      private final @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
 
     public Input<RoutingConfigurationArgs> getRoutingConfiguration() {
         return this.routingConfiguration == null ? Input.empty() : this.routingConfiguration;
@@ -133,7 +133,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="routingWeight")
-    private final @Nullable Input<Integer> routingWeight;
+      private final @Nullable Input<Integer> routingWeight;
 
     public Input<Integer> getRoutingWeight() {
         return this.routingWeight == null ? Input.empty() : this.routingWeight;
@@ -327,7 +327,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
             this.routingWeight = Input.ofNullable(routingWeight);
             return this;
         }
-
         public ExpressRouteConnectionArgs build() {
             return new ExpressRouteConnectionArgs(authorizationKey, connectionName, enableInternetSecurity, expressRouteCircuitPeering, expressRouteGatewayBypass, expressRouteGatewayName, id, name, resourceGroupName, routingConfiguration, routingWeight);
         }

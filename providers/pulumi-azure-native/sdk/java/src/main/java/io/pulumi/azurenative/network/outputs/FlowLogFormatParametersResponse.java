@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class FlowLogFormatParametersResponse {
     /**
      * The file type of flow log.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The version (revision) of the flow log.
      * 
-     */
+    */
     public Optional<Integer> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -77,7 +77,6 @@ public final class FlowLogFormatParametersResponse {
             this.version = version;
             return this;
         }
-
         public FlowLogFormatParametersResponse build() {
             return new FlowLogFormatParametersResponse(type, version);
         }

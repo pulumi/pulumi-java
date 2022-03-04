@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.ParamIndicator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="paramIndicator", required=true)
-    private final Input<Either<String,ParamIndicator>> paramIndicator;
+      private final Input<Either<String,ParamIndicator>> paramIndicator;
 
     public Input<Either<String,ParamIndicator>> getParamIndicator() {
         return this.paramIndicator;
@@ -35,7 +35,7 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="paramName", required=true)
-    private final Input<String> paramName;
+      private final Input<String> paramName;
 
     public Input<String> getParamName() {
         return this.paramName;
@@ -94,7 +94,6 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
             this.paramName = Input.of(Objects.requireNonNull(paramName));
             return this;
         }
-
         public UrlSigningParamIdentifierArgs build() {
             return new UrlSigningParamIdentifierArgs(paramIndicator, paramName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +44,7 @@ public final class GuestPoliciesRecipeInstallStepScriptRun {
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
-     */
+    */
     public List<Integer> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? List.of() : this.allowedExitCodes;
     }
@@ -53,14 +53,14 @@ public final class GuestPoliciesRecipeInstallStepScriptRun {
      * which likely only succeed for scripts with shebang lines.
      * Possible values are `SHELL` and `POWERSHELL`.
      * 
-     */
+    */
     public Optional<String> getInterpreter() {
         return Optional.ofNullable(this.interpreter);
     }
     /**
      * The shell script to be executed.
      * 
-     */
+    */
     public String getScript() {
         return this.script;
     }
@@ -103,7 +103,6 @@ public final class GuestPoliciesRecipeInstallStepScriptRun {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public GuestPoliciesRecipeInstallStepScriptRun build() {
             return new GuestPoliciesRecipeInstallStepScriptRun(allowedExitCodes, interpreter, script);
         }

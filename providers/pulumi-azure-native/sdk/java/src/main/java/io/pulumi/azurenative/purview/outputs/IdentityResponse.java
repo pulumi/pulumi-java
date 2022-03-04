@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class IdentityResponse {
     /**
      * Service principal object Id
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * Tenant Id
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Identity Type
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class IdentityResponse {
             this.type = type;
             return this;
         }
-
         public IdentityResponse build() {
             return new IdentityResponse(principalId, tenantId, type);
         }

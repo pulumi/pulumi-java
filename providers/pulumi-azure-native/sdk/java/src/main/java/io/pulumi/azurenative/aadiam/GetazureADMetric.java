@@ -6,21 +6,41 @@ package io.pulumi.azurenative.aadiam;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.aadiam.inputs.GetazureADMetricArgs;
 import io.pulumi.azurenative.aadiam.outputs.GetazureADMetricResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetazureADMetric {
-/**
- * AzureADMetrics resource.
+    private GetazureADMetric() {}
+    public interface BuilderApplicator {
+        public void apply(GetazureADMetricArgs.Builder a);
+    }
+    private static GetazureADMetricArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetazureADMetricArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AzureADMetrics resource.
  * API Version: 2020-07-01-preview.
  * 
- *
- * AzureADMetrics resource.
+     *
+     * AzureADMetrics resource.
  * 
- */
+     */
+    public static CompletableFuture<GetazureADMetricResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AzureADMetrics resource.
+     * API Version: 2020-07-01-preview.
+     * 
+     *
+         * AzureADMetrics resource.
+     * 
+     */
     public static CompletableFuture<GetazureADMetricResult> invokeAsync(GetazureADMetricArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aadiam:getazureADMetric", TypeShape.of(GetazureADMetricResult.class), args == null ? GetazureADMetricArgs.Empty : args, Utilities.withVersion(options));
     }

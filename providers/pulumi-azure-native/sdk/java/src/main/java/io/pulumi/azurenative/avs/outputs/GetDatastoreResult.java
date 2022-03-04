@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs.outputs;
 
 import io.pulumi.azurenative.avs.outputs.DiskPoolVolumeResponse;
 import io.pulumi.azurenative.avs.outputs.NetAppVolumeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -63,42 +63,42 @@ public final class GetDatastoreResult {
     /**
      * An iSCSI volume
      * 
-     */
+    */
     public Optional<DiskPoolVolumeResponse> getDiskPoolVolume() {
         return Optional.ofNullable(this.diskPoolVolume);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * An Azure NetApp Files volume
      * 
-     */
+    */
     public Optional<NetAppVolumeResponse> getNetAppVolume() {
         return Optional.ofNullable(this.netAppVolume);
     }
     /**
      * The state of the datastore provisioning
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class GetDatastoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatastoreResult build() {
             return new GetDatastoreResult(diskPoolVolume, id, name, netAppVolume, provisioningState, type);
         }

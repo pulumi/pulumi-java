@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hanaonazure.outputs;
 
 import io.pulumi.azurenative.hanaonazure.outputs.DiskResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.SAPSystemIDResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class StorageProfileResponse {
     /**
      * Specifies information related to SAP system IDs for the hana instance.
      * 
-     */
+    */
     public List<SAPSystemIDResponse> getHanaSids() {
         return this.hanaSids == null ? List.of() : this.hanaSids;
     }
     /**
      * IP Address to connect to storage.
      * 
-     */
+    */
     public String getNfsIpAddress() {
         return this.nfsIpAddress;
     }
     /**
      * Specifies information about the operating system disk used by the hana instance.
      * 
-     */
+    */
     public List<DiskResponse> getOsDisks() {
         return this.osDisks == null ? List.of() : this.osDisks;
     }
@@ -99,7 +99,6 @@ public final class StorageProfileResponse {
             this.osDisks = osDisks;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(hanaSids, nfsIpAddress, osDisks);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.frauddetector;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.frauddetector.inputs.GetEntityTypeArgs;
 import io.pulumi.awsnative.frauddetector.outputs.GetEntityTypeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntityType {
-/**
- * An entity type for fraud detector.
+    private GetEntityType() {}
+    public interface BuilderApplicator {
+        public void apply(GetEntityTypeArgs.Builder a);
+    }
+    private static GetEntityTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEntityTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An entity type for fraud detector.
  * 
- */
+     */
+    public static CompletableFuture<GetEntityTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An entity type for fraud detector.
+     * 
+     */
     public static CompletableFuture<GetEntityTypeResult> invokeAsync(GetEntityTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getEntityType", TypeShape.of(GetEntityTypeResult.class), args == null ? GetEntityTypeArgs.Empty : args, Utilities.withVersion(options));
     }

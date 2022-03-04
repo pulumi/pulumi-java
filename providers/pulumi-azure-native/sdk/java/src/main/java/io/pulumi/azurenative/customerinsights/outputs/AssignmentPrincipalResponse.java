@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -40,21 +40,21 @@ public final class AssignmentPrincipalResponse {
     /**
      * The principal id being assigned to.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * Other metadata for the principal.
      * 
-     */
+    */
     public Map<String,String> getPrincipalMetadata() {
         return this.principalMetadata == null ? Map.of() : this.principalMetadata;
     }
     /**
      * The Type of the principal ID.
      * 
-     */
+    */
     public String getPrincipalType() {
         return this.principalType;
     }
@@ -97,7 +97,6 @@ public final class AssignmentPrincipalResponse {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public AssignmentPrincipalResponse build() {
             return new AssignmentPrincipalResponse(principalId, principalMetadata, principalType);
         }

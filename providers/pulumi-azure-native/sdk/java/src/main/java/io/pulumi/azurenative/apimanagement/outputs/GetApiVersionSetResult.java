@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,56 +75,56 @@ public final class GetApiVersionSetResult {
     /**
      * Description of API Version Set.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Name of API Version Set
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
      * 
-     */
+    */
     public Optional<String> getVersionHeaderName() {
         return Optional.ofNullable(this.versionHeaderName);
     }
     /**
      * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
      * 
-     */
+    */
     public Optional<String> getVersionQueryName() {
         return Optional.ofNullable(this.versionQueryName);
     }
     /**
      * An value that determines where the API Version identifier will be located in a HTTP request.
      * 
-     */
+    */
     public String getVersioningScheme() {
         return this.versioningScheme;
     }
@@ -202,7 +202,6 @@ public final class GetApiVersionSetResult {
             this.versioningScheme = Objects.requireNonNull(versioningScheme);
             return this;
         }
-
         public GetApiVersionSetResult build() {
             return new GetApiVersionSetResult(description, displayName, id, name, type, versionHeaderName, versionQueryName, versioningScheme);
         }

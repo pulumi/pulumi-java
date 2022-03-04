@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.inputs.GetEntityInsightsArgs;
 import io.pulumi.azurenative.securityinsights.outputs.GetEntityInsightsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntityInsights {
-/**
- * The Get Insights result operation response.
+    private GetEntityInsights() {}
+    public interface BuilderApplicator {
+        public void apply(GetEntityInsightsArgs.Builder a);
+    }
+    private static GetEntityInsightsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEntityInsightsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Get Insights result operation response.
  * API Version: 2019-01-01-preview.
  * 
- *
- * The Get Insights result operation response.
+     *
+     * The Get Insights result operation response.
  * 
- */
+     */
+    public static CompletableFuture<GetEntityInsightsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Get Insights result operation response.
+     * API Version: 2019-01-01-preview.
+     * 
+     *
+         * The Get Insights result operation response.
+     * 
+     */
     public static CompletableFuture<GetEntityInsightsResult> invokeAsync(GetEntityInsightsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityInsights", TypeShape.of(GetEntityInsightsResult.class), args == null ? GetEntityInsightsArgs.Empty : args, Utilities.withVersion(options));
     }

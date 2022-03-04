@@ -5,7 +5,7 @@ package io.pulumi.awsnative.robomaker.outputs;
 
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationSimulationSoftwareSuiteName;
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationSimulationSoftwareSuiteVersion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class SimulationApplicationSimulationSoftwareSuite {
     /**
      * The name of the simulation software suite.
      * 
-     */
+    */
     public SimulationApplicationSimulationSoftwareSuiteName getName() {
         return this.name;
     }
     /**
      * The version of the simulation software suite.
      * 
-     */
+    */
     public Optional<SimulationApplicationSimulationSoftwareSuiteVersion> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -77,7 +77,6 @@ public final class SimulationApplicationSimulationSoftwareSuite {
             this.version = version;
             return this;
         }
-
         public SimulationApplicationSimulationSoftwareSuite build() {
             return new SimulationApplicationSimulationSoftwareSuite(name, version);
         }

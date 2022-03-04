@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class SecurityPolicyRuleMatchConfig {
      * to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
      * (can be used to override the default behavior).
      * 
-     */
+    */
     public List<String> getSrcIpRanges() {
         return this.srcIpRanges;
     }
@@ -57,7 +57,6 @@ public final class SecurityPolicyRuleMatchConfig {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-
         public SecurityPolicyRuleMatchConfig build() {
             return new SecurityPolicyRuleMatchConfig(srcIpRanges);
         }

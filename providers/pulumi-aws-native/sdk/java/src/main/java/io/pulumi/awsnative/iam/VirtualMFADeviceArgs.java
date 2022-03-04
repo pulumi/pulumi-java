@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iam;
 
 import io.pulumi.awsnative.iam.inputs.VirtualMFADeviceTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
     public static final VirtualMFADeviceArgs Empty = new VirtualMFADeviceArgs();
 
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<VirtualMFADeviceTagArgs>> tags;
+      private final @Nullable Input<List<VirtualMFADeviceTagArgs>> tags;
 
     public Input<List<VirtualMFADeviceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="users", required=true)
-    private final Input<List<String>> users;
+      private final Input<List<String>> users;
 
     public Input<List<String>> getUsers() {
         return this.users;
     }
 
     @InputImport(name="virtualMfaDeviceName")
-    private final @Nullable Input<String> virtualMfaDeviceName;
+      private final @Nullable Input<String> virtualMfaDeviceName;
 
     public Input<String> getVirtualMfaDeviceName() {
         return this.virtualMfaDeviceName == null ? Input.empty() : this.virtualMfaDeviceName;
@@ -127,7 +127,6 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
             this.virtualMfaDeviceName = Input.ofNullable(virtualMfaDeviceName);
             return this;
         }
-
         public VirtualMFADeviceArgs build() {
             return new VirtualMFADeviceArgs(path, tags, users, virtualMfaDeviceName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="coarseGrainTimestamp")
-    private final @Nullable Input<String> coarseGrainTimestamp;
+      private final @Nullable Input<String> coarseGrainTimestamp;
 
     public Input<String> getCoarseGrainTimestamp() {
         return this.coarseGrainTimestamp == null ? Input.empty() : this.coarseGrainTimestamp;
@@ -30,7 +30,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="fineGrainTimestamp")
-    private final @Nullable Input<String> fineGrainTimestamp;
+      private final @Nullable Input<String> fineGrainTimestamp;
 
     public Input<String> getFineGrainTimestamp() {
         return this.fineGrainTimestamp == null ? Input.empty() : this.fineGrainTimestamp;
@@ -89,7 +89,6 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
             this.fineGrainTimestamp = Input.ofNullable(fineGrainTimestamp);
             return this;
         }
-
         public DatasetCreateRequestTimeSeriesArgs build() {
             return new DatasetCreateRequestTimeSeriesArgs(coarseGrainTimestamp, fineGrainTimestamp);
         }

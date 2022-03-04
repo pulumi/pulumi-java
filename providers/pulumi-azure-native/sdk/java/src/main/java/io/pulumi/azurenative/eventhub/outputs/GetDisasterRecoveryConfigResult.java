@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class GetDisasterRecoveryConfigResult {
     /**
      * Alternate name specified when alias and namespace names are same.
      * 
-     */
+    */
     public Optional<String> getAlternateName() {
         return Optional.ofNullable(this.alternateName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
      * 
-     */
+    */
     public Optional<String> getPartnerNamespace() {
         return Optional.ofNullable(this.partnerNamespace);
     }
     /**
      * Number of entities pending to be replicated.
      * 
-     */
+    */
     public Double getPendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
     /**
      * Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
      * 
-     */
+    */
     public String getRole() {
         return this.role;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -203,7 +203,6 @@ public final class GetDisasterRecoveryConfigResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDisasterRecoveryConfigResult build() {
             return new GetDisasterRecoveryConfigResult(alternateName, id, name, partnerNamespace, pendingReplicationOperationsCount, provisioningState, role, type);
         }

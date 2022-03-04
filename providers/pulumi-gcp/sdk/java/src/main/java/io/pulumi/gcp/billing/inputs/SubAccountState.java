@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccountId")
-    private final @Nullable Input<String> billingAccountId;
+      private final @Nullable Input<String> billingAccountId;
 
     public Input<String> getBillingAccountId() {
         return this.billingAccountId == null ? Input.empty() : this.billingAccountId;
@@ -33,7 +33,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionPolicy")
-    private final @Nullable Input<String> deletionPolicy;
+      private final @Nullable Input<String> deletionPolicy;
 
     public Input<String> getDeletionPolicy() {
         return this.deletionPolicy == null ? Input.empty() : this.deletionPolicy;
@@ -44,7 +44,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -56,7 +56,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterBillingAccount")
-    private final @Nullable Input<String> masterBillingAccount;
+      private final @Nullable Input<String> masterBillingAccount;
 
     public Input<String> getMasterBillingAccount() {
         return this.masterBillingAccount == null ? Input.empty() : this.masterBillingAccount;
@@ -67,7 +67,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="open")
-    private final @Nullable Input<Boolean> open;
+      private final @Nullable Input<Boolean> open;
 
     public Input<Boolean> getOpen() {
         return this.open == null ? Input.empty() : this.open;
@@ -197,7 +197,6 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
             this.open = Input.ofNullable(open);
             return this;
         }
-
         public SubAccountState build() {
             return new SubAccountState(billingAccountId, deletionPolicy, displayName, masterBillingAccount, name, open);
         }

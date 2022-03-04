@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigNodeConfigIpAllocationPolicy;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -17,77 +17,77 @@ public final class GetEnvironmentConfigNodeConfig extends io.pulumi.resources.In
     public static final GetEnvironmentConfigNodeConfig Empty = new GetEnvironmentConfigNodeConfig();
 
     @InputImport(name="diskSizeGb", required=true)
-    private final Integer diskSizeGb;
+      private final Integer diskSizeGb;
 
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
     }
 
     @InputImport(name="enableIpMasqAgent", required=true)
-    private final Boolean enableIpMasqAgent;
+      private final Boolean enableIpMasqAgent;
 
     public Boolean getEnableIpMasqAgent() {
         return this.enableIpMasqAgent;
     }
 
     @InputImport(name="ipAllocationPolicies", required=true)
-    private final List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies;
+      private final List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies;
 
     public List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> getIpAllocationPolicies() {
         return this.ipAllocationPolicies;
     }
 
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
     }
 
     @InputImport(name="maxPodsPerNode", required=true)
-    private final Integer maxPodsPerNode;
+      private final Integer maxPodsPerNode;
 
     public Integer getMaxPodsPerNode() {
         return this.maxPodsPerNode;
     }
 
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
     }
 
     @InputImport(name="oauthScopes", required=true)
-    private final List<String> oauthScopes;
+      private final List<String> oauthScopes;
 
     public List<String> getOauthScopes() {
         return this.oauthScopes;
     }
 
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
     }
 
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
     }
 
     @InputImport(name="tags", required=true)
-    private final List<String> tags;
+      private final List<String> tags;
 
     public List<String> getTags() {
         return this.tags;
     }
 
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -226,7 +226,6 @@ public final class GetEnvironmentConfigNodeConfig extends io.pulumi.resources.In
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetEnvironmentConfigNodeConfig build() {
             return new GetEnvironmentConfigNodeConfig(diskSizeGb, enableIpMasqAgent, ipAllocationPolicies, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags, zone);
         }

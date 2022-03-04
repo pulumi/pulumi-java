@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ImageGuestOsFeature {
      * The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
      * Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `SEV_CAPABLE`, `UEFI_COMPATIBLE`, `VIRTIO_SCSI_MULTIQUEUE`, `WINDOWS`, and `GVNIC`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -54,7 +54,6 @@ public final class ImageGuestOsFeature {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageGuestOsFeature build() {
             return new ImageGuestOsFeature(type);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.ConditionsResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.ScopeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -85,56 +85,56 @@ public final class DiagnosticsResponse {
     /**
      * conditions on which alerts will be filtered
      * 
-     */
+    */
     public Optional<ConditionsResponse> getConditions() {
         return Optional.ofNullable(this.conditions);
     }
     /**
      * Creation time of action rule. Date-Time in ISO-8601 format.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Created by user name.
      * 
-     */
+    */
     public String getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Description of action rule
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Last updated time of action rule. Date-Time in ISO-8601 format.
      * 
-     */
+    */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Last modified by user name.
      * 
-     */
+    */
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * scope on which action rule will apply
      * 
-     */
+    */
     public Optional<ScopeResponse> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Indicates if the given action rule is enabled or disabled
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -142,7 +142,7 @@ public final class DiagnosticsResponse {
      * Indicates type of action rule
      * Expected value is 'Diagnostics'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -227,7 +227,6 @@ public final class DiagnosticsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DiagnosticsResponse build() {
             return new DiagnosticsResponse(conditions, createdAt, createdBy, description, lastModifiedAt, lastModifiedBy, scope, status, type);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.outputs;
 import io.pulumi.azurenative.containerinstance.outputs.EnvironmentVariableResponse;
 import io.pulumi.azurenative.containerinstance.outputs.InitContainerPropertiesDefinitionResponseInstanceView;
 import io.pulumi.azurenative.containerinstance.outputs.VolumeMountResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -65,42 +65,42 @@ public final class InitContainerDefinitionResponse {
     /**
      * The command to execute within the init container in exec form.
      * 
-     */
+    */
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * The environment variables to set in the init container.
      * 
-     */
+    */
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
      * The image of the init container.
      * 
-     */
+    */
     public Optional<String> getImage() {
         return Optional.ofNullable(this.image);
     }
     /**
      * The instance view of the init container. Only valid in response.
      * 
-     */
+    */
     public InitContainerPropertiesDefinitionResponseInstanceView getInstanceView() {
         return this.instanceView;
     }
     /**
      * The name for the init container.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The volume mounts available to the init container.
      * 
-     */
+    */
     public List<VolumeMountResponse> getVolumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
@@ -164,7 +164,6 @@ public final class InitContainerDefinitionResponse {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public InitContainerDefinitionResponse build() {
             return new InitContainerDefinitionResponse(command, environmentVariables, image, instanceView, name, volumeMounts);
         }

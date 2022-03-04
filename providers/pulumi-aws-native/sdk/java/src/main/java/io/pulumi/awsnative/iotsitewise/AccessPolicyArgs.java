@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIdentityArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicyIdentity", required=true)
-    private final Input<AccessPolicyIdentityArgs> accessPolicyIdentity;
+      private final Input<AccessPolicyIdentityArgs> accessPolicyIdentity;
 
     public Input<AccessPolicyIdentityArgs> getAccessPolicyIdentity() {
         return this.accessPolicyIdentity;
@@ -31,7 +31,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicyPermission", required=true)
-    private final Input<String> accessPolicyPermission;
+      private final Input<String> accessPolicyPermission;
 
     public Input<String> getAccessPolicyPermission() {
         return this.accessPolicyPermission;
@@ -42,7 +42,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicyResource", required=true)
-    private final Input<AccessPolicyResourceArgs> accessPolicyResource;
+      private final Input<AccessPolicyResourceArgs> accessPolicyResource;
 
     public Input<AccessPolicyResourceArgs> getAccessPolicyResource() {
         return this.accessPolicyResource;
@@ -116,7 +116,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.accessPolicyResource = Input.of(Objects.requireNonNull(accessPolicyResource));
             return this;
         }
-
         public AccessPolicyArgs build() {
             return new AccessPolicyArgs(accessPolicyIdentity, accessPolicyPermission, accessPolicyResource);
         }

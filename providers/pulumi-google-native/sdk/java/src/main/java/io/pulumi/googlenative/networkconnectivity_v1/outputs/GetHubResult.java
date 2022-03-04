@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.RoutingVPCResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,56 +76,56 @@ public final class GetHubResult {
     /**
      * The time the hub was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * An optional description of the hub.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The VPC networks associated with this hub's spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
      * 
-     */
+    */
     public List<RoutingVPCResponse> getRoutingVpcs() {
         return this.routingVpcs;
     }
     /**
      * The current lifecycle state of this hub.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The Google-generated UUID for the hub. This value is unique across all hub resources. If a hub is deleted and another with the same name is created, the new hub is assigned a different unique_id.
      * 
-     */
+    */
     public String getUniqueId() {
         return this.uniqueId;
     }
     /**
      * The time the hub was last updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -203,7 +203,6 @@ public final class GetHubResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetHubResult build() {
             return new GetHubResult(createTime, description, labels, name, routingVpcs, state, uniqueId, updateTime);
         }

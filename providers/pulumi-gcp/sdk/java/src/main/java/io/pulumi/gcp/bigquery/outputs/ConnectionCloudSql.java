@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.ConnectionCloudSqlCredential;
 import java.lang.String;
 import java.util.Objects;
@@ -49,21 +49,21 @@ public final class ConnectionCloudSql {
      * Cloud SQL properties.
      * Structure is documented below.
      * 
-     */
+    */
     public ConnectionCloudSqlCredential getCredential() {
         return this.credential;
     }
     /**
      * Database name.
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * Cloud SQL instance ID in the form project:location:instance.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
@@ -71,7 +71,7 @@ public final class ConnectionCloudSql {
      * Type of the Cloud SQL database.
      * Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -121,7 +121,6 @@ public final class ConnectionCloudSql {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ConnectionCloudSql build() {
             return new ConnectionCloudSql(credential, database, instanceId, type);
         }

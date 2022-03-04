@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.SkuSettingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,7 +62,6 @@ public final class SkuResourceResponseProperties {
             this.skuSettings = Objects.requireNonNull(skuSettings);
             return this;
         }
-
         public SkuResourceResponseProperties build() {
             return new SkuResourceResponseProperties(provisioningState, skuSettings);
         }

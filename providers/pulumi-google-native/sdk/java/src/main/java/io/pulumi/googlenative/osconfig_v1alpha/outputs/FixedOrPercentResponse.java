@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class FixedOrPercentResponse {
     /**
      * Specifies a fixed value.
      * 
-     */
+    */
     public Integer getFixed() {
         return this.fixed;
     }
     /**
      * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
      * 
-     */
+    */
     public Integer getPercent() {
         return this.percent;
     }
@@ -74,7 +74,6 @@ public final class FixedOrPercentResponse {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public FixedOrPercentResponse build() {
             return new FixedOrPercentResponse(fixed, percent);
         }

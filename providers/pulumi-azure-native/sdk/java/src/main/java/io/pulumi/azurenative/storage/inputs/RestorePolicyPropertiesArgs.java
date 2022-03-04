@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="days")
-    private final @Nullable Input<Integer> days;
+      private final @Nullable Input<Integer> days;
 
     public Input<Integer> getDays() {
         return this.days == null ? Input.empty() : this.days;
@@ -35,7 +35,7 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -94,7 +94,6 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public RestorePolicyPropertiesArgs build() {
             return new RestorePolicyPropertiesArgs(days, enabled);
         }

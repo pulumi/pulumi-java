@@ -19,7 +19,7 @@ import io.pulumi.awsnative.ecs.outputs.TaskDefinitionSecret;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionSystemControl;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionUlimit;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionVolumeFrom;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -207,14 +207,14 @@ public final class TaskDefinitionContainerDefinition {
     /**
      * The environment variables to pass to a container
      * 
-     */
+    */
     public List<TaskDefinitionKeyValuePair> getEnvironment() {
         return this.environment == null ? List.of() : this.environment;
     }
     /**
      * The list of one or more files that contain the environment variables to pass to a container
      * 
-     */
+    */
     public List<TaskDefinitionEnvironmentFile> getEnvironmentFiles() {
         return this.environmentFiles == null ? List.of() : this.environmentFiles;
     }
@@ -236,7 +236,7 @@ public final class TaskDefinitionContainerDefinition {
     /**
      * The image used to start a container. This string is passed directly to the Docker daemon.
      * 
-     */
+    */
     public Optional<String> getImage() {
         return Optional.ofNullable(this.image);
     }
@@ -255,7 +255,7 @@ public final class TaskDefinitionContainerDefinition {
     /**
      * The amount (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed.
      * 
-     */
+    */
     public Optional<Integer> getMemory() {
         return Optional.ofNullable(this.memory);
     }
@@ -268,14 +268,14 @@ public final class TaskDefinitionContainerDefinition {
     /**
      * The name of a container. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Port mappings allow containers to access ports on the host container instance to send or receive traffic.
      * 
-     */
+    */
     public List<TaskDefinitionPortMapping> getPortMappings() {
         return this.portMappings == null ? List.of() : this.portMappings;
     }
@@ -609,7 +609,6 @@ public final class TaskDefinitionContainerDefinition {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public TaskDefinitionContainerDefinition build() {
             return new TaskDefinitionContainerDefinition(command, cpu, dependsOn, disableNetworking, dnsSearchDomains, dnsServers, dockerLabels, dockerSecurityOptions, entryPoint, environment, environmentFiles, essential, extraHosts, firelensConfiguration, healthCheck, hostname, image, interactive, links, linuxParameters, logConfiguration, memory, memoryReservation, mountPoints, name, portMappings, privileged, pseudoTerminal, readonlyRootFilesystem, repositoryCredentials, resourceRequirements, secrets, startTimeout, stopTimeout, systemControls, ulimits, user, volumesFrom, workingDirectory);
         }

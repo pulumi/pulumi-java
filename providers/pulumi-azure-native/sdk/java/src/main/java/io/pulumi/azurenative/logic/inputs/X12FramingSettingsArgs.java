@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import io.pulumi.azurenative.logic.enums.X12CharacterSet;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="characterSet", required=true)
-    private final Input<Either<String,X12CharacterSet>> characterSet;
+      private final Input<Either<String,X12CharacterSet>> characterSet;
 
     public Input<Either<String,X12CharacterSet>> getCharacterSet() {
         return this.characterSet;
@@ -38,7 +38,7 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="componentSeparator", required=true)
-    private final Input<Integer> componentSeparator;
+      private final Input<Integer> componentSeparator;
 
     public Input<Integer> getComponentSeparator() {
         return this.componentSeparator;
@@ -49,7 +49,7 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataElementSeparator", required=true)
-    private final Input<Integer> dataElementSeparator;
+      private final Input<Integer> dataElementSeparator;
 
     public Input<Integer> getDataElementSeparator() {
         return this.dataElementSeparator;
@@ -60,7 +60,7 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="replaceCharacter", required=true)
-    private final Input<Integer> replaceCharacter;
+      private final Input<Integer> replaceCharacter;
 
     public Input<Integer> getReplaceCharacter() {
         return this.replaceCharacter;
@@ -71,7 +71,7 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="replaceSeparatorsInPayload", required=true)
-    private final Input<Boolean> replaceSeparatorsInPayload;
+      private final Input<Boolean> replaceSeparatorsInPayload;
 
     public Input<Boolean> getReplaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
@@ -82,7 +82,7 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="segmentTerminator", required=true)
-    private final Input<Integer> segmentTerminator;
+      private final Input<Integer> segmentTerminator;
 
     public Input<Integer> getSegmentTerminator() {
         return this.segmentTerminator;
@@ -93,7 +93,7 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="segmentTerminatorSuffix", required=true)
-    private final Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
+      private final Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
     public Input<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
@@ -227,7 +227,6 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
             this.segmentTerminatorSuffix = Input.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }
-
         public X12FramingSettingsArgs build() {
             return new X12FramingSettingsArgs(characterSet, componentSeparator, dataElementSeparator, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix);
         }

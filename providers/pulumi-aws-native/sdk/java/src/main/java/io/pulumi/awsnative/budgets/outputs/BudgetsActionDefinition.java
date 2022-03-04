@@ -6,7 +6,7 @@ package io.pulumi.awsnative.budgets.outputs;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionIamActionDefinition;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionScpActionDefinition;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionSsmActionDefinition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -75,7 +75,6 @@ public final class BudgetsActionDefinition {
             this.ssmActionDefinition = ssmActionDefinition;
             return this;
         }
-
         public BudgetsActionDefinition build() {
             return new BudgetsActionDefinition(iamActionDefinition, scpActionDefinition, ssmActionDefinition);
         }

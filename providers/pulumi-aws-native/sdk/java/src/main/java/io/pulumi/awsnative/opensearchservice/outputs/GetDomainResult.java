@@ -13,7 +13,7 @@ import io.pulumi.awsnative.opensearchservice.outputs.DomainServiceSoftwareOption
 import io.pulumi.awsnative.opensearchservice.outputs.DomainSnapshotOptions;
 import io.pulumi.awsnative.opensearchservice.outputs.DomainTag;
 import io.pulumi.awsnative.opensearchservice.outputs.DomainVPCOptions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -143,7 +143,7 @@ public final class GetDomainResult {
     /**
      * An arbitrary set of tags (key-value pairs) for this Domain.
      * 
-     */
+    */
     public List<DomainTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -301,7 +301,6 @@ public final class GetDomainResult {
             this.vPCOptions = vPCOptions;
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(accessPolicies, advancedOptions, arn, clusterConfig, cognitoOptions, domainArn, domainEndpoint, domainEndpointOptions, domainEndpoints, eBSOptions, encryptionAtRestOptions, engineVersion, id, logPublishingOptions, nodeToNodeEncryptionOptions, serviceSoftwareOptions, snapshotOptions, tags, vPCOptions);
         }

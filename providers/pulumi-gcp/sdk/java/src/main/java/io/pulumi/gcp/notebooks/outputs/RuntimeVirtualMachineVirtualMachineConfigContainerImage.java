@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImage {
      * The path to the container image repository.
      * For example: gcr.io/{project_id}/{imageName}
      * 
-     */
+    */
     public String getRepository() {
         return this.repository;
     }
     /**
      * The tag of the container image. If not specified, this defaults to the latest tag.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
@@ -78,7 +78,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImage {
             this.tag = tag;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigContainerImage build() {
             return new RuntimeVirtualMachineVirtualMachineConfigContainerImage(repository, tag);
         }

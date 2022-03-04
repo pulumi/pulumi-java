@@ -5,8 +5,8 @@ package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.secretmanager.SecretVersionArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretVersionState;
@@ -120,6 +120,37 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
         return this.secretData;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SecretVersionArgs.Builder a);
+    }
+    private static io.pulumi.gcp.secretmanager.SecretVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.secretmanager.SecretVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SecretVersion(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SecretVersion(String name) {
+        this(name, SecretVersionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SecretVersion(String name, SecretVersionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

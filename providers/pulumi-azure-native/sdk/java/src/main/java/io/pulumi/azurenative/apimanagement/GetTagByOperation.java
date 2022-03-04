@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetTagByOperationArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetTagByOperationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagByOperation {
-/**
- * Tag Contract details.
+    private GetTagByOperation() {}
+    public interface BuilderApplicator {
+        public void apply(GetTagByOperationArgs.Builder a);
+    }
+    private static GetTagByOperationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTagByOperationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Tag Contract details.
  * API Version: 2020-12-01.
  * 
- *
- * Tag Contract details.
+     *
+     * Tag Contract details.
  * 
- */
+     */
+    public static CompletableFuture<GetTagByOperationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Tag Contract details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Tag Contract details.
+     * 
+     */
     public static CompletableFuture<GetTagByOperationResult> invokeAsync(GetTagByOperationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTagByOperation", TypeShape.of(GetTagByOperationResult.class), args == null ? GetTagByOperationArgs.Empty : args, Utilities.withVersion(options));
     }

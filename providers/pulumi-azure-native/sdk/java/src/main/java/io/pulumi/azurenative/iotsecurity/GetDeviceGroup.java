@@ -6,21 +6,41 @@ package io.pulumi.azurenative.iotsecurity;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.iotsecurity.inputs.GetDeviceGroupArgs;
 import io.pulumi.azurenative.iotsecurity.outputs.GetDeviceGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeviceGroup {
-/**
- * Device group
+    private GetDeviceGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeviceGroupArgs.Builder a);
+    }
+    private static GetDeviceGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeviceGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Device group
  * API Version: 2021-02-01-preview.
  * 
- *
- * Device group
+     *
+     * Device group
  * 
- */
+     */
+    public static CompletableFuture<GetDeviceGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Device group
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Device group
+     * 
+     */
     public static CompletableFuture<GetDeviceGroupResult> invokeAsync(GetDeviceGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getDeviceGroup", TypeShape.of(GetDeviceGroupResult.class), args == null ? GetDeviceGroupArgs.Empty : args, Utilities.withVersion(options));
     }

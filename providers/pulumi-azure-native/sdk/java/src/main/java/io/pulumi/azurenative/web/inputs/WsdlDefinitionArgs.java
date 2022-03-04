@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.enums.WsdlImportMethod;
 import io.pulumi.azurenative.web.inputs.WsdlServiceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -37,7 +37,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importMethod")
-    private final @Nullable Input<Either<String,WsdlImportMethod>> importMethod;
+      private final @Nullable Input<Either<String,WsdlImportMethod>> importMethod;
 
     public Input<Either<String,WsdlImportMethod>> getImportMethod() {
         return this.importMethod == null ? Input.empty() : this.importMethod;
@@ -48,7 +48,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<WsdlServiceArgs> service;
+      private final @Nullable Input<WsdlServiceArgs> service;
 
     public Input<WsdlServiceArgs> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -59,7 +59,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -148,7 +148,6 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public WsdlDefinitionArgs build() {
             return new WsdlDefinitionArgs(content, importMethod, service, url);
         }

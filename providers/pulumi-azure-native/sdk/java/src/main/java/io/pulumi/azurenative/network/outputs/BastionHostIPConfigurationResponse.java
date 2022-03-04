@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,56 +76,56 @@ public final class BastionHostIPConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Private IP allocation method.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
      * The provisioning state of the bastion host IP configuration resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Reference of the PublicIP resource.
      * 
-     */
+    */
     public SubResourceResponse getPublicIPAddress() {
         return this.publicIPAddress;
     }
     /**
      * Reference of the subnet resource.
      * 
-     */
+    */
     public SubResourceResponse getSubnet() {
         return this.subnet;
     }
     /**
      * Ip configuration type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -203,7 +203,6 @@ public final class BastionHostIPConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BastionHostIPConfigurationResponse build() {
             return new BastionHostIPConfigurationResponse(etag, id, name, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet, type);
         }

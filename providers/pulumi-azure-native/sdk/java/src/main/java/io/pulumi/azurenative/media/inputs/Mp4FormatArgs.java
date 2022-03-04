@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.OutputFileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filenamePattern", required=true)
-    private final Input<String> filenamePattern;
+      private final Input<String> filenamePattern;
 
     public Input<String> getFilenamePattern() {
         return this.filenamePattern;
@@ -37,7 +37,7 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -48,7 +48,7 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputFiles")
-    private final @Nullable Input<List<OutputFileArgs>> outputFiles;
+      private final @Nullable Input<List<OutputFileArgs>> outputFiles;
 
     public Input<List<OutputFileArgs>> getOutputFiles() {
         return this.outputFiles == null ? Input.empty() : this.outputFiles;
@@ -122,7 +122,6 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
             this.outputFiles = Input.ofNullable(outputFiles);
             return this;
         }
-
         public Mp4FormatArgs build() {
             return new Mp4FormatArgs(filenamePattern, odataType, outputFiles);
         }

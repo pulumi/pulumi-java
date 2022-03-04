@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CertificateChainsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class KeyOperationAttestationResponse {
     /**
      * The certificate chains needed to validate the attestation
      * 
-     */
+    */
     public CertificateChainsResponse getCertChains() {
         return this.certChains;
     }
     /**
      * The attestation data provided by the HSM when the key operation was performed.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * The format of the attestation data.
      * 
-     */
+    */
     public String getFormat() {
         return this.format;
     }
@@ -96,7 +96,6 @@ public final class KeyOperationAttestationResponse {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public KeyOperationAttestationResponse build() {
             return new KeyOperationAttestationResponse(certChains, content, format);
         }

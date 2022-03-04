@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.AzureActiveDirectoryAppResponse;
 import io.pulumi.azurenative.datamigration.inputs.MiSqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="azureApp", required=true)
-    private final AzureActiveDirectoryAppResponse azureApp;
+      private final AzureActiveDirectoryAppResponse azureApp;
 
     public AzureActiveDirectoryAppResponse getAzureApp() {
         return this.azureApp;
@@ -33,7 +33,7 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final MiSqlConnectionInfoResponse targetConnectionInfo;
+      private final MiSqlConnectionInfoResponse targetConnectionInfo;
 
     public MiSqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -82,7 +82,6 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends io.pulumi.r
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ConnectToTargetSqlMISyncTaskInputResponse build() {
             return new ConnectToTargetSqlMISyncTaskInputResponse(azureApp, targetConnectionInfo);
         }

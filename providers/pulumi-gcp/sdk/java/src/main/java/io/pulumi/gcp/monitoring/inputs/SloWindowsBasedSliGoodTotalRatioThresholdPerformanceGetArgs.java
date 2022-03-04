@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs e
      * 
      */
     @InputImport(name="distributionCut")
-    private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs> distributionCut;
+      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs> distributionCut;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs> getDistributionCut() {
         return this.distributionCut == null ? Input.empty() : this.distributionCut;
@@ -41,7 +41,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs e
      * 
      */
     @InputImport(name="goodTotalRatio")
-    private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs> goodTotalRatio;
+      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs> goodTotalRatio;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs> getGoodTotalRatio() {
         return this.goodTotalRatio == null ? Input.empty() : this.goodTotalRatio;
@@ -100,7 +100,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs e
             this.goodTotalRatio = Input.ofNullable(goodTotalRatio);
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs(distributionCut, goodTotalRatio);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class LinuxUserConfigurationResponse {
     /**
      * The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the gid.
      * 
-     */
+    */
     public Optional<Integer> getGid() {
         return Optional.ofNullable(this.gid);
     }
     /**
      * The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool's enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user's .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user's .ssh directory is done).
      * 
-     */
+    */
     public Optional<String> getSshPrivateKey() {
         return Optional.ofNullable(this.sshPrivateKey);
     }
     /**
      * The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the uid.
      * 
-     */
+    */
     public Optional<Integer> getUid() {
         return Optional.ofNullable(this.uid);
     }
@@ -98,7 +98,6 @@ public final class LinuxUserConfigurationResponse {
             this.uid = uid;
             return this;
         }
-
         public LinuxUserConfigurationResponse build() {
             return new LinuxUserConfigurationResponse(gid, sshPrivateKey, uid);
         }

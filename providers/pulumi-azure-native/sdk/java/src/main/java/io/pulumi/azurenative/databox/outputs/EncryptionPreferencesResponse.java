@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class EncryptionPreferencesResponse {
     /**
      * Defines secondary layer of software-based encryption enablement.
      * 
-     */
+    */
     public Optional<String> getDoubleEncryption() {
         return Optional.ofNullable(this.doubleEncryption);
     }
@@ -54,7 +54,6 @@ public final class EncryptionPreferencesResponse {
             this.doubleEncryption = doubleEncryption;
             return this;
         }
-
         public EncryptionPreferencesResponse build() {
             return new EncryptionPreferencesResponse(doubleEncryption);
         }

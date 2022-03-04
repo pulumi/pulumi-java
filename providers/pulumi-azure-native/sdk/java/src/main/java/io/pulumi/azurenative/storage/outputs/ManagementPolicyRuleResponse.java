@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class ManagementPolicyRuleResponse {
     /**
      * An object that defines the Lifecycle rule.
      * 
-     */
+    */
     public ManagementPolicyDefinitionResponse getDefinition() {
         return this.definition;
     }
     /**
      * Rule is enabled if set to true.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The valid value is Lifecycle
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -120,7 +120,6 @@ public final class ManagementPolicyRuleResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagementPolicyRuleResponse build() {
             return new ManagementPolicyRuleResponse(definition, enabled, name, type);
         }

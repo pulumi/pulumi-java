@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GetKeyRingResult {
     /**
      * The time at which this KeyRing was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class GetKeyRingResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetKeyRingResult build() {
             return new GetKeyRingResult(createTime, name);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.inputs.GetIoTRoleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.GetIoTRoleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIoTRole {
-/**
- * Compute role.
+    private GetIoTRole() {}
+    public interface BuilderApplicator {
+        public void apply(GetIoTRoleArgs.Builder a);
+    }
+    private static GetIoTRoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIoTRoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Compute role.
  * API Version: 2020-12-01.
  * 
- *
- * Compute role.
+     *
+     * Compute role.
  * 
- */
+     */
+    public static CompletableFuture<GetIoTRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Compute role.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Compute role.
+     * 
+     */
     public static CompletableFuture<GetIoTRoleResult> invokeAsync(GetIoTRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getIoTRole", TypeShape.of(GetIoTRoleResult.class), args == null ? GetIoTRoleArgs.Empty : args, Utilities.withVersion(options));
     }

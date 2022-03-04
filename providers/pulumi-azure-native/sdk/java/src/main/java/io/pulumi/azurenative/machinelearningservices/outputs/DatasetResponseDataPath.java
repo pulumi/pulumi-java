@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetResponseSqlDataPath;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -87,63 +87,63 @@ public final class DatasetResponseDataPath {
     /**
      * Additional Properties.
      * 
-     */
+    */
     public Map<String,Object> getAdditionalProperties() {
         return this.additionalProperties == null ? Map.of() : this.additionalProperties;
     }
     /**
      * Azure path for Azure Blob or File
      * 
-     */
+    */
     public String getAzureFilePath() {
         return this.azureFilePath;
     }
     /**
      * Data store Name
      * 
-     */
+    */
     public String getDatastoreName() {
         return this.datastoreName;
     }
     /**
      * HTTP URL.
      * 
-     */
+    */
     public String getHttpUrl() {
         return this.httpUrl;
     }
     /**
      * Specify the partition format of path. Defaults to None.
      * 
-     */
+    */
     public String getPartitionFormat() {
         return this.partitionFormat;
     }
     /**
      * Whether or not to ignore unmatched path.
      * 
-     */
+    */
     public Boolean getPartitionFormatIgnoreError() {
         return this.partitionFormatIgnoreError;
     }
     /**
      * List of files expanded from a file GLOB specified
      * 
-     */
+    */
     public List<String> getPaths() {
         return this.paths;
     }
     /**
      * Relative path in the data store
      * 
-     */
+    */
     public String getRelativePath() {
         return this.relativePath;
     }
     /**
      * Sql Query/Table/Stored Procedure details.
      * 
-     */
+    */
     public Optional<DatasetResponseSqlDataPath> getSqlDataPath() {
         return Optional.ofNullable(this.sqlDataPath);
     }
@@ -228,7 +228,6 @@ public final class DatasetResponseDataPath {
             this.sqlDataPath = sqlDataPath;
             return this;
         }
-
         public DatasetResponseDataPath build() {
             return new DatasetResponseDataPath(additionalProperties, azureFilePath, datastoreName, httpUrl, partitionFormat, partitionFormatIgnoreError, paths, relativePath, sqlDataPath);
         }

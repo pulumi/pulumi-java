@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      * 
      */
     @InputImport(name="allowPlaybackInterruption")
-    private final @Nullable Input<Boolean> allowPlaybackInterruption;
+      private final @Nullable Input<Boolean> allowPlaybackInterruption;
 
     public Input<Boolean> getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption == null ? Input.empty() : this.allowPlaybackInterruption;
@@ -33,7 +33,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      * 
      */
     @InputImport(name="texts")
-    private final @Nullable Input<List<String>> texts;
+      private final @Nullable Input<List<String>> texts;
 
     public Input<List<String>> getTexts() {
         return this.texts == null ? Input.empty() : this.texts;
@@ -92,7 +92,6 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
             this.texts = Input.ofNullable(texts);
             return this;
         }
-
         public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs build() {
             return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs(allowPlaybackInterruption, texts);
         }

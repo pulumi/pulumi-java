@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.frauddetector.inputs;
 
 import io.pulumi.awsnative.frauddetector.inputs.EventTypeTag;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class EventTypeEntityType extends io.pulumi.resources.InvokeArgs {
     public static final EventTypeEntityType Empty = new EventTypeEntityType();
 
     @InputImport(name="arn")
-    private final @Nullable String arn;
+      private final @Nullable String arn;
 
     public Optional<String> getArn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
@@ -29,7 +29,7 @@ public final class EventTypeEntityType extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable String createdTime;
+      private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
@@ -40,14 +40,14 @@ public final class EventTypeEntityType extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @InputImport(name="inline")
-    private final @Nullable Boolean inline;
+      private final @Nullable Boolean inline;
 
     public Optional<Boolean> getInline() {
         return this.inline == null ? Optional.empty() : Optional.ofNullable(this.inline);
@@ -58,14 +58,14 @@ public final class EventTypeEntityType extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastUpdatedTime")
-    private final @Nullable String lastUpdatedTime;
+      private final @Nullable String lastUpdatedTime;
 
     public Optional<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -76,7 +76,7 @@ public final class EventTypeEntityType extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable List<EventTypeTag> tags;
+      private final @Nullable List<EventTypeTag> tags;
 
     public List<EventTypeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
@@ -175,7 +175,6 @@ public final class EventTypeEntityType extends io.pulumi.resources.InvokeArgs {
             this.tags = tags;
             return this;
         }
-
         public EventTypeEntityType build() {
             return new EventTypeEntityType(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }

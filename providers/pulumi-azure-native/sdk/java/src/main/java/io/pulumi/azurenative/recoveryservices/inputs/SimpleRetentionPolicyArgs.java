@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retentionDuration")
-    private final @Nullable Input<RetentionDurationArgs> retentionDuration;
+      private final @Nullable Input<RetentionDurationArgs> retentionDuration;
 
     public Input<RetentionDurationArgs> getRetentionDuration() {
         return this.retentionDuration == null ? Input.empty() : this.retentionDuration;
@@ -36,7 +36,7 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retentionPolicyType", required=true)
-    private final Input<String> retentionPolicyType;
+      private final Input<String> retentionPolicyType;
 
     public Input<String> getRetentionPolicyType() {
         return this.retentionPolicyType;
@@ -95,7 +95,6 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
             this.retentionPolicyType = Input.of(Objects.requireNonNull(retentionPolicyType));
             return this;
         }
-
         public SimpleRetentionPolicyArgs build() {
             return new SimpleRetentionPolicyArgs(retentionDuration, retentionPolicyType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="registryName")
-    private final @Nullable Input<String> registryName;
+      private final @Nullable Input<String> registryName;
 
     public Input<String> getRegistryName() {
         return this.registryName == null ? Input.empty() : this.registryName;
@@ -34,7 +34,7 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schemaArn")
-    private final @Nullable Input<String> schemaArn;
+      private final @Nullable Input<String> schemaArn;
 
     public Input<String> getSchemaArn() {
         return this.schemaArn == null ? Input.empty() : this.schemaArn;
@@ -45,7 +45,7 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schemaName")
-    private final @Nullable Input<String> schemaName;
+      private final @Nullable Input<String> schemaName;
 
     public Input<String> getSchemaName() {
         return this.schemaName == null ? Input.empty() : this.schemaName;
@@ -119,7 +119,6 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
             this.schemaName = Input.ofNullable(schemaName);
             return this;
         }
-
         public SchemaVersionSchemaArgs build() {
             return new SchemaVersionSchemaArgs(registryName, schemaArn, schemaName);
         }

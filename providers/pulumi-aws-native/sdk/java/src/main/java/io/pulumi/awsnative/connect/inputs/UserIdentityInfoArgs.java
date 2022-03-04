@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +19,21 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
     public static final UserIdentityInfoArgs Empty = new UserIdentityInfoArgs();
 
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
     }
 
     @InputImport(name="firstName")
-    private final @Nullable Input<String> firstName;
+      private final @Nullable Input<String> firstName;
 
     public Input<String> getFirstName() {
         return this.firstName == null ? Input.empty() : this.firstName;
     }
 
     @InputImport(name="lastName")
-    private final @Nullable Input<String> lastName;
+      private final @Nullable Input<String> lastName;
 
     public Input<String> getLastName() {
         return this.lastName == null ? Input.empty() : this.lastName;
@@ -107,7 +107,6 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
             this.lastName = Input.ofNullable(lastName);
             return this;
         }
-
         public UserIdentityInfoArgs build() {
             return new UserIdentityInfoArgs(email, firstName, lastName);
         }

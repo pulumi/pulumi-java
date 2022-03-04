@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceDefinitionArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -33,7 +33,7 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="items", required=true)
-    private final Input<List<CustomResourceDefinitionArgs>> items;
+      private final Input<List<CustomResourceDefinitionArgs>> items;
 
     public Input<List<CustomResourceDefinitionArgs>> getItems() {
         return this.items;
@@ -44,14 +44,14 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Input<ListMetaArgs> metadata;
+      private final @Nullable Input<ListMetaArgs> metadata;
 
     public Input<ListMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -140,7 +140,6 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public CustomResourceDefinitionListArgs build() {
             return new CustomResourceDefinitionListArgs(apiVersion, items, kind, metadata);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class VirtualSCSIControllerResponse {
     /**
      * Gets or sets the bus number of the controller.
      * 
-     */
+    */
     public Optional<Integer> getBusNumber() {
         return Optional.ofNullable(this.busNumber);
     }
     /**
      * Gets or sets the key of the controller.
      * 
-     */
+    */
     public Optional<Integer> getControllerKey() {
         return Optional.ofNullable(this.controllerKey);
     }
     /**
      * Gets or sets the SCSI controller unit number.
      * 
-     */
+    */
     public Optional<Integer> getScsiCtlrUnitNumber() {
         return Optional.ofNullable(this.scsiCtlrUnitNumber);
     }
     /**
      * Gets or sets the sharing mode.
      * 
-     */
+    */
     public Optional<String> getSharing() {
         return Optional.ofNullable(this.sharing);
     }
     /**
      * Gets or sets the controller type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -140,7 +140,6 @@ public final class VirtualSCSIControllerResponse {
             this.type = type;
             return this;
         }
-
         public VirtualSCSIControllerResponse build() {
             return new VirtualSCSIControllerResponse(busNumber, controllerKey, scsiCtlrUnitNumber, sharing, type);
         }

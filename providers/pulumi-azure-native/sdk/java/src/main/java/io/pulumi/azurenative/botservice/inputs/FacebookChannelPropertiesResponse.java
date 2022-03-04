@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.FacebookPageResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="appId", required=true)
-    private final String appId;
+      private final String appId;
 
     public String getAppId() {
         return this.appId;
@@ -37,7 +37,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="appSecret")
-    private final @Nullable String appSecret;
+      private final @Nullable String appSecret;
 
     public Optional<String> getAppSecret() {
         return this.appSecret == null ? Optional.empty() : Optional.ofNullable(this.appSecret);
@@ -48,7 +48,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="callbackUrl", required=true)
-    private final String callbackUrl;
+      private final String callbackUrl;
 
     public String getCallbackUrl() {
         return this.callbackUrl;
@@ -59,7 +59,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Boolean isEnabled;
+      private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -70,7 +70,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="pages")
-    private final @Nullable List<FacebookPageResponse> pages;
+      private final @Nullable List<FacebookPageResponse> pages;
 
     public List<FacebookPageResponse> getPages() {
         return this.pages == null ? List.of() : this.pages;
@@ -81,7 +81,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="verifyToken", required=true)
-    private final String verifyToken;
+      private final String verifyToken;
 
     public String getVerifyToken() {
         return this.verifyToken;
@@ -170,7 +170,6 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
             this.verifyToken = Objects.requireNonNull(verifyToken);
             return this;
         }
-
         public FacebookChannelPropertiesResponse build() {
             return new FacebookChannelPropertiesResponse(appId, appSecret, callbackUrl, isEnabled, pages, verifyToken);
         }

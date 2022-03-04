@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
     /**
      * A function alias, used when the type of the item is Function
      * 
-     */
+    */
     public Optional<String> getFunctionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
@@ -54,7 +54,6 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
             this.functionAlias = functionAlias;
             return this;
         }
-
         public ApplicationInsightsComponentAnalyticsItemPropertiesResponse build() {
             return new ApplicationInsightsComponentAnalyticsItemPropertiesResponse(functionAlias);
         }

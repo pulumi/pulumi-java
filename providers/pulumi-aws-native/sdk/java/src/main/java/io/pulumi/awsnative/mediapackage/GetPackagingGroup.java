@@ -6,17 +6,33 @@ package io.pulumi.awsnative.mediapackage;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.mediapackage.inputs.GetPackagingGroupArgs;
 import io.pulumi.awsnative.mediapackage.outputs.GetPackagingGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPackagingGroup {
-/**
- * Resource schema for AWS::MediaPackage::PackagingGroup
+    private GetPackagingGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetPackagingGroupArgs.Builder a);
+    }
+    private static GetPackagingGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPackagingGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::MediaPackage::PackagingGroup
  * 
- */
+     */
+    public static CompletableFuture<GetPackagingGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::MediaPackage::PackagingGroup
+     * 
+     */
     public static CompletableFuture<GetPackagingGroupResult> invokeAsync(GetPackagingGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getPackagingGroup", TypeShape.of(GetPackagingGroupResult.class), args == null ? GetPackagingGroupArgs.Empty : args, Utilities.withVersion(options));
     }

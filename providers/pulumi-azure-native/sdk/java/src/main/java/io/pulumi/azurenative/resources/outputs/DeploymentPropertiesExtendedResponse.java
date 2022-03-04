@@ -11,7 +11,7 @@ import io.pulumi.azurenative.resources.outputs.ParametersLinkResponse;
 import io.pulumi.azurenative.resources.outputs.ProviderResponse;
 import io.pulumi.azurenative.resources.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.resources.outputs.TemplateLinkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -146,119 +146,119 @@ public final class DeploymentPropertiesExtendedResponse {
     /**
      * The correlation ID of the deployment.
      * 
-     */
+    */
     public String getCorrelationId() {
         return this.correlationId;
     }
     /**
      * The debug setting of the deployment.
      * 
-     */
+    */
     public DebugSettingResponse getDebugSetting() {
         return this.debugSetting;
     }
     /**
      * The list of deployment dependencies.
      * 
-     */
+    */
     public List<DependencyResponse> getDependencies() {
         return this.dependencies;
     }
     /**
      * The duration of the template deployment.
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }
     /**
      * The deployment error.
      * 
-     */
+    */
     public ErrorResponseResponse getError() {
         return this.error;
     }
     /**
      * The deployment mode. Possible values are Incremental and Complete.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * The deployment on error behavior.
      * 
-     */
+    */
     public OnErrorDeploymentExtendedResponse getOnErrorDeployment() {
         return this.onErrorDeployment;
     }
     /**
      * Array of provisioned resources.
      * 
-     */
+    */
     public List<ResourceReferenceResponse> getOutputResources() {
         return this.outputResources;
     }
     /**
      * Key/value pairs that represent deployment output.
      * 
-     */
+    */
     public Object getOutputs() {
         return this.outputs;
     }
     /**
      * Deployment parameters.
      * 
-     */
+    */
     public Object getParameters() {
         return this.parameters;
     }
     /**
      * The URI referencing the parameters.
      * 
-     */
+    */
     public ParametersLinkResponse getParametersLink() {
         return this.parametersLink;
     }
     /**
      * The list of resource providers needed for the deployment.
      * 
-     */
+    */
     public List<ProviderResponse> getProviders() {
         return this.providers;
     }
     /**
      * Denotes the state of provisioning.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The hash produced for the template.
      * 
-     */
+    */
     public String getTemplateHash() {
         return this.templateHash;
     }
     /**
      * The URI referencing the template.
      * 
-     */
+    */
     public TemplateLinkResponse getTemplateLink() {
         return this.templateLink;
     }
     /**
      * The timestamp of the template deployment.
      * 
-     */
+    */
     public String getTimestamp() {
         return this.timestamp;
     }
     /**
      * Array of validated resources.
      * 
-     */
+    */
     public List<ResourceReferenceResponse> getValidatedResources() {
         return this.validatedResources;
     }
@@ -399,7 +399,6 @@ public final class DeploymentPropertiesExtendedResponse {
             this.validatedResources = Objects.requireNonNull(validatedResources);
             return this;
         }
-
         public DeploymentPropertiesExtendedResponse build() {
             return new DeploymentPropertiesExtendedResponse(correlationId, debugSetting, dependencies, duration, error, mode, onErrorDeployment, outputResources, outputs, parameters, parametersLink, providers, provisioningState, templateHash, templateLink, timestamp, validatedResources);
         }

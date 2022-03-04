@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LiveEventEncodingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="encodingType")
-    private final @Nullable String encodingType;
+      private final @Nullable String encodingType;
 
     public Optional<String> getEncodingType() {
         return this.encodingType == null ? Optional.empty() : Optional.ofNullable(this.encodingType);
@@ -34,7 +34,7 @@ public final class LiveEventEncodingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="keyFrameInterval")
-    private final @Nullable String keyFrameInterval;
+      private final @Nullable String keyFrameInterval;
 
     public Optional<String> getKeyFrameInterval() {
         return this.keyFrameInterval == null ? Optional.empty() : Optional.ofNullable(this.keyFrameInterval);
@@ -45,7 +45,7 @@ public final class LiveEventEncodingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="presetName")
-    private final @Nullable String presetName;
+      private final @Nullable String presetName;
 
     public Optional<String> getPresetName() {
         return this.presetName == null ? Optional.empty() : Optional.ofNullable(this.presetName);
@@ -56,7 +56,7 @@ public final class LiveEventEncodingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="stretchMode")
-    private final @Nullable String stretchMode;
+      private final @Nullable String stretchMode;
 
     public Optional<String> getStretchMode() {
         return this.stretchMode == null ? Optional.empty() : Optional.ofNullable(this.stretchMode);
@@ -125,7 +125,6 @@ public final class LiveEventEncodingResponse extends io.pulumi.resources.InvokeA
             this.stretchMode = stretchMode;
             return this;
         }
-
         public LiveEventEncodingResponse build() {
             return new LiveEventEncodingResponse(encodingType, keyFrameInterval, presetName, stretchMode);
         }

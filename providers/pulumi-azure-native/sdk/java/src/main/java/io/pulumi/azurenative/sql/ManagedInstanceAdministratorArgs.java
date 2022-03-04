@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.ManagedInstanceAdministratorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
     public static final ManagedInstanceAdministratorArgs Empty = new ManagedInstanceAdministratorArgs();
 
     @InputImport(name="administratorName")
-    private final @Nullable Input<String> administratorName;
+      private final @Nullable Input<String> administratorName;
 
     public Input<String> getAdministratorName() {
         return this.administratorName == null ? Input.empty() : this.administratorName;
@@ -28,7 +28,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="administratorType", required=true)
-    private final Input<Either<String,ManagedInstanceAdministratorType>> administratorType;
+      private final Input<Either<String,ManagedInstanceAdministratorType>> administratorType;
 
     public Input<Either<String,ManagedInstanceAdministratorType>> getAdministratorType() {
         return this.administratorType;
@@ -39,7 +39,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="login", required=true)
-    private final Input<String> login;
+      private final Input<String> login;
 
     public Input<String> getLogin() {
         return this.login;
@@ -50,7 +50,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-    private final Input<String> managedInstanceName;
+      private final Input<String> managedInstanceName;
 
     public Input<String> getManagedInstanceName() {
         return this.managedInstanceName;
@@ -61,7 +61,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -72,7 +72,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sid", required=true)
-    private final Input<String> sid;
+      private final Input<String> sid;
 
     public Input<String> getSid() {
         return this.sid;
@@ -83,7 +83,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -217,7 +217,6 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public ManagedInstanceAdministratorArgs build() {
             return new ManagedInstanceAdministratorArgs(administratorName, administratorType, login, managedInstanceName, resourceGroupName, sid, tenantId);
         }

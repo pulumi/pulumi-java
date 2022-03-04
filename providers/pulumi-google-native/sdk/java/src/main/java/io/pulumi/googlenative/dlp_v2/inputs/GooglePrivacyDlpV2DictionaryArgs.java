@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStoragePathArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudStoragePath")
-    private final @Nullable Input<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath;
+      private final @Nullable Input<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath;
 
     public Input<GooglePrivacyDlpV2CloudStoragePathArgs> getCloudStoragePath() {
         return this.cloudStoragePath == null ? Input.empty() : this.cloudStoragePath;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="wordList")
-    private final @Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList;
+      private final @Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList;
 
     public Input<GooglePrivacyDlpV2WordListArgs> getWordList() {
         return this.wordList == null ? Input.empty() : this.wordList;
@@ -94,7 +94,6 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
             this.wordList = Input.ofNullable(wordList);
             return this;
         }
-
         public GooglePrivacyDlpV2DictionaryArgs build() {
             return new GooglePrivacyDlpV2DictionaryArgs(cloudStoragePath, wordList);
         }

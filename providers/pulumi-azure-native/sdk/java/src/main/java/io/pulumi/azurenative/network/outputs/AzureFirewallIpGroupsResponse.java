@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AzureFirewallIpGroupsResponse {
     /**
      * The iteration number.
      * 
-     */
+    */
     public String getChangeNumber() {
         return this.changeNumber;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -74,7 +74,6 @@ public final class AzureFirewallIpGroupsResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public AzureFirewallIpGroupsResponse build() {
             return new AzureFirewallIpGroupsResponse(changeNumber, id);
         }

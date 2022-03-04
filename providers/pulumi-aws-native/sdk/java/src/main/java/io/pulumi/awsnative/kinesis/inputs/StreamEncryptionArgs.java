@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesis.inputs;
 
 import io.pulumi.awsnative.kinesis.enums.StreamEncryptionEncryptionType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryptionType", required=true)
-    private final Input<StreamEncryptionEncryptionType> encryptionType;
+      private final Input<StreamEncryptionEncryptionType> encryptionType;
 
     public Input<StreamEncryptionEncryptionType> getEncryptionType() {
         return this.encryptionType;
@@ -34,7 +34,7 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final Input<String> keyId;
+      private final Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId;
@@ -93,7 +93,6 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
             this.keyId = Input.of(Objects.requireNonNull(keyId));
             return this;
         }
-
         public StreamEncryptionArgs build() {
             return new StreamEncryptionArgs(encryptionType, keyId);
         }

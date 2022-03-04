@@ -6,21 +6,41 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appplatform.inputs.ListServiceTestKeysArgs;
 import io.pulumi.azurenative.appplatform.outputs.ListServiceTestKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListServiceTestKeys {
-/**
- * Test keys payload
+    private ListServiceTestKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListServiceTestKeysArgs.Builder a);
+    }
+    private static ListServiceTestKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListServiceTestKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Test keys payload
  * API Version: 2020-07-01.
  * 
- *
- * Test keys payload
+     *
+     * Test keys payload
  * 
- */
+     */
+    public static CompletableFuture<ListServiceTestKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Test keys payload
+     * API Version: 2020-07-01.
+     * 
+     *
+         * Test keys payload
+     * 
+     */
     public static CompletableFuture<ListServiceTestKeysResult> invokeAsync(ListServiceTestKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:listServiceTestKeys", TypeShape.of(ListServiceTestKeysResult.class), args == null ? ListServiceTestKeysArgs.Empty : args, Utilities.withVersion(options));
     }

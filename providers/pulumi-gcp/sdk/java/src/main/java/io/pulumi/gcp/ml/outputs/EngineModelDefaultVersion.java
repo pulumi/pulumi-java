@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.ml.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EngineModelDefaultVersion {
     /**
      * The name specified for the version when it was created.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -52,7 +52,6 @@ public final class EngineModelDefaultVersion {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public EngineModelDefaultVersion build() {
             return new EngineModelDefaultVersion(name);
         }

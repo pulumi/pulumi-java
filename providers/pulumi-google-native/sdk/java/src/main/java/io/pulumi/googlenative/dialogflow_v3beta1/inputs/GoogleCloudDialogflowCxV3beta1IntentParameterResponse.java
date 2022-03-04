@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
      * 
      */
     @InputImport(name="entityType", required=true)
-    private final String entityType;
+      private final String entityType;
 
     public String getEntityType() {
         return this.entityType;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
      * 
      */
     @InputImport(name="isList", required=true)
-    private final Boolean isList;
+      private final Boolean isList;
 
     public Boolean getIsList() {
         return this.isList;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
      * 
      */
     @InputImport(name="redact", required=true)
-    private final Boolean redact;
+      private final Boolean redact;
 
     public Boolean getRedact() {
         return this.redact;
@@ -103,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
             this.redact = Objects.requireNonNull(redact);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentParameterResponse build() {
             return new GoogleCloudDialogflowCxV3beta1IntentParameterResponse(entityType, isList, redact);
         }

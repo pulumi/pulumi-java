@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1ApiCategoryDataResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class GetApicategoryResult {
     /**
      * Details of category.
      * 
-     */
+    */
     public GoogleCloudApigeeV1ApiCategoryDataResponse getData() {
         return this.data;
     }
     /**
      * ID that can be used to find errors in the log files.
      * 
-     */
+    */
     public String getErrorCode() {
         return this.errorCode;
     }
     /**
      * Description of the operation.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * ID that can be used to find request details in the log files.
      * 
-     */
+    */
     public String getRequestId() {
         return this.requestId;
     }
     /**
      * Status of the operation.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -138,7 +138,6 @@ public final class GetApicategoryResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetApicategoryResult build() {
             return new GetApicategoryResult(data, errorCode, message, requestId, status);
         }

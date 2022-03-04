@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
      * 
      */
     @InputImport(name="backendService", required=true)
-    private final Input<String> backendService;
+      private final Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService;
@@ -36,7 +36,7 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs> headerAction;
+      private final @Nullable Input<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs> headerAction;
 
     public Input<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -52,7 +52,7 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
      * 
      */
     @InputImport(name="weight", required=true)
-    private final Input<Integer> weight;
+      private final Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight;
@@ -126,7 +126,6 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
             this.weight = Input.of(Objects.requireNonNull(weight));
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs build() {
             return new URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs(backendService, headerAction, weight);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.StatusResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.VmUtilizationInfoResponse;
 import java.lang.Integer;
@@ -91,70 +91,70 @@ public final class GetUtilizationReportResult {
     /**
      * The time the report was created (this refers to the time of the request, not the time the report creation completed).
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The report display name, as assigned by the user.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Provides details on the state of the report in case of an error.
      * 
-     */
+    */
     public StatusResponse getError() {
         return this.error;
     }
     /**
      * The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the "frame_end_time" value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
      * 
-     */
+    */
     public String getFrameEndTime() {
         return this.frameEndTime;
     }
     /**
      * The report unique name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Current state of the report.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The time the state was last set.
      * 
-     */
+    */
     public String getStateTime() {
         return this.stateTime;
     }
     /**
      * Time frame of the report.
      * 
-     */
+    */
     public String getTimeFrame() {
         return this.timeFrame;
     }
     /**
      * Total number of VMs included in the report.
      * 
-     */
+    */
     public Integer getVmCount() {
         return this.vmCount;
     }
     /**
      * List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
-     */
+    */
     public List<VmUtilizationInfoResponse> getVms() {
         return this.vms;
     }
@@ -246,7 +246,6 @@ public final class GetUtilizationReportResult {
             this.vms = Objects.requireNonNull(vms);
             return this;
         }
-
         public GetUtilizationReportResult build() {
             return new GetUtilizationReportResult(createTime, displayName, error, frameEndTime, name, state, stateTime, timeFrame, vmCount, vms);
         }

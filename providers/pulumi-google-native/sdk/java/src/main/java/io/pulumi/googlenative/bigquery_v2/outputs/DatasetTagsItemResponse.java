@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DatasetTagsItemResponse {
     /**
      * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is org id.
      * 
-     */
+    */
     public String getTagKey() {
         return this.tagKey;
     }
     /**
      * [Required] Friendly short name of the tag value, e.g. "production".
      * 
-     */
+    */
     public String getTagValue() {
         return this.tagValue;
     }
@@ -74,7 +74,6 @@ public final class DatasetTagsItemResponse {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
-
         public DatasetTagsItemResponse build() {
             return new DatasetTagsItemResponse(tagKey, tagValue);
         }

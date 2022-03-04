@@ -5,8 +5,8 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.InstanceAttachmentArgs;
 import io.pulumi.gcp.apigee.inputs.InstanceAttachmentState;
@@ -84,6 +84,37 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
+    public interface BuilderApplicator {
+        public void apply(InstanceAttachmentArgs.Builder a);
+    }
+    private static io.pulumi.gcp.apigee.InstanceAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.apigee.InstanceAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public InstanceAttachment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public InstanceAttachment(String name) {
+        this(name, InstanceAttachmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public InstanceAttachment(String name, InstanceAttachmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

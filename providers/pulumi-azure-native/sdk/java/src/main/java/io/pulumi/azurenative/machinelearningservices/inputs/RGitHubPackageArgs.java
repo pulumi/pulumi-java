@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authToken")
-    private final @Nullable Input<String> authToken;
+      private final @Nullable Input<String> authToken;
 
     public Input<String> getAuthToken() {
         return this.authToken == null ? Input.empty() : this.authToken;
@@ -30,7 +30,7 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository")
-    private final @Nullable Input<String> repository;
+      private final @Nullable Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository == null ? Input.empty() : this.repository;
@@ -89,7 +89,6 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
             this.repository = Input.ofNullable(repository);
             return this;
         }
-
         public RGitHubPackageArgs build() {
             return new RGitHubPackageArgs(authToken, repository);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="gsuiteDomain", required=true)
-    private final Boolean gsuiteDomain;
+      private final Boolean gsuiteDomain;
 
     public Boolean getGsuiteDomain() {
         return this.gsuiteDomain;
@@ -29,7 +29,7 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="gsuiteGroupEmail", required=true)
-    private final String gsuiteGroupEmail;
+      private final String gsuiteGroupEmail;
 
     public String getGsuiteGroupEmail() {
         return this.gsuiteGroupEmail;
@@ -40,7 +40,7 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="gsuiteUserEmail", required=true)
-    private final String gsuiteUserEmail;
+      private final String gsuiteUserEmail;
 
     public String getGsuiteUserEmail() {
         return this.gsuiteUserEmail;
@@ -99,7 +99,6 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
             this.gsuiteUserEmail = Objects.requireNonNull(gsuiteUserEmail);
             return this;
         }
-
         public GSuitePrincipalResponse build() {
             return new GSuitePrincipalResponse(gsuiteDomain, gsuiteGroupEmail, gsuiteUserEmail);
         }

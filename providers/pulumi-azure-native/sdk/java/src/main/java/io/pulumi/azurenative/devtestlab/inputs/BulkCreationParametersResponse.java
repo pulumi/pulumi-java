@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BulkCreationParametersResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="instanceCount")
-    private final @Nullable Integer instanceCount;
+      private final @Nullable Integer instanceCount;
 
     public Optional<Integer> getInstanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
@@ -61,7 +61,6 @@ public final class BulkCreationParametersResponse extends io.pulumi.resources.In
             this.instanceCount = instanceCount;
             return this;
         }
-
         public BulkCreationParametersResponse build() {
             return new BulkCreationParametersResponse(instanceCount);
         }

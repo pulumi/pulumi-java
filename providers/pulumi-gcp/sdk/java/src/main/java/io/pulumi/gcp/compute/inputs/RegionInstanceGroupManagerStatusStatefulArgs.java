@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
      * 
      */
     @InputImport(name="hasStatefulConfig")
-    private final @Nullable Input<Boolean> hasStatefulConfig;
+      private final @Nullable Input<Boolean> hasStatefulConfig;
 
     public Input<Boolean> getHasStatefulConfig() {
         return this.hasStatefulConfig == null ? Input.empty() : this.hasStatefulConfig;
@@ -32,7 +32,7 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
      * 
      */
     @InputImport(name="perInstanceConfigs")
-    private final @Nullable Input<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
+      private final @Nullable Input<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
 
     public Input<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> getPerInstanceConfigs() {
         return this.perInstanceConfigs == null ? Input.empty() : this.perInstanceConfigs;
@@ -91,7 +91,6 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
             this.perInstanceConfigs = Input.ofNullable(perInstanceConfigs);
             return this;
         }
-
         public RegionInstanceGroupManagerStatusStatefulArgs build() {
             return new RegionInstanceGroupManagerStatusStatefulArgs(hasStatefulConfig, perInstanceConfigs);
         }

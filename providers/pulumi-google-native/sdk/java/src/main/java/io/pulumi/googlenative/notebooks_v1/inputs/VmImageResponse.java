@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imageFamily", required=true)
-    private final String imageFamily;
+      private final String imageFamily;
 
     public String getImageFamily() {
         return this.imageFamily;
@@ -32,7 +32,7 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imageName", required=true)
-    private final String imageName;
+      private final String imageName;
 
     public String getImageName() {
         return this.imageName;
@@ -43,7 +43,7 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -102,7 +102,6 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public VmImageResponse build() {
             return new VmImageResponse(imageFamily, imageName, project);
         }

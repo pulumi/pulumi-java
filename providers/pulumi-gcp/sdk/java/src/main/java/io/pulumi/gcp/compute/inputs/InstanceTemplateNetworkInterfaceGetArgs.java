@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateNetworkInterfaceAccessConfigGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateNetworkInterfaceAliasIpRangeGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateNetworkInterfaceIpv6AccessConfigGetArgs;
@@ -29,7 +29,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="accessConfigs")
-    private final @Nullable Input<List<InstanceTemplateNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
+      private final @Nullable Input<List<InstanceTemplateNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
 
     public Input<List<InstanceTemplateNetworkInterfaceAccessConfigGetArgs>> getAccessConfigs() {
         return this.accessConfigs == null ? Input.empty() : this.accessConfigs;
@@ -42,7 +42,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="aliasIpRanges")
-    private final @Nullable Input<List<InstanceTemplateNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
+      private final @Nullable Input<List<InstanceTemplateNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
 
     public Input<List<InstanceTemplateNetworkInterfaceAliasIpRangeGetArgs>> getAliasIpRanges() {
         return this.aliasIpRanges == null ? Input.empty() : this.aliasIpRanges;
@@ -55,14 +55,14 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="ipv6AccessConfigs")
-    private final @Nullable Input<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
+      private final @Nullable Input<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
 
     public Input<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigGetArgs>> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? Input.empty() : this.ipv6AccessConfigs;
     }
 
     @InputImport(name="ipv6AccessType")
-    private final @Nullable Input<String> ipv6AccessType;
+      private final @Nullable Input<String> ipv6AccessType;
 
     public Input<String> getIpv6AccessType() {
         return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
@@ -74,7 +74,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -99,7 +99,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="networkIp")
-    private final @Nullable Input<String> networkIp;
+      private final @Nullable Input<String> networkIp;
 
     public Input<String> getNetworkIp() {
         return this.networkIp == null ? Input.empty() : this.networkIp;
@@ -110,7 +110,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="nicType")
-    private final @Nullable Input<String> nicType;
+      private final @Nullable Input<String> nicType;
 
     public Input<String> getNicType() {
         return this.nicType == null ? Input.empty() : this.nicType;
@@ -121,7 +121,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="queueCount")
-    private final @Nullable Input<Integer> queueCount;
+      private final @Nullable Input<Integer> queueCount;
 
     public Input<Integer> getQueueCount() {
         return this.queueCount == null ? Input.empty() : this.queueCount;
@@ -132,7 +132,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="stackType")
-    private final @Nullable Input<String> stackType;
+      private final @Nullable Input<String> stackType;
 
     public Input<String> getStackType() {
         return this.stackType == null ? Input.empty() : this.stackType;
@@ -145,7 +145,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -157,7 +157,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="subnetworkProject")
-    private final @Nullable Input<String> subnetworkProject;
+      private final @Nullable Input<String> subnetworkProject;
 
     public Input<String> getSubnetworkProject() {
         return this.subnetworkProject == null ? Input.empty() : this.subnetworkProject;
@@ -366,7 +366,6 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
             this.subnetworkProject = Input.ofNullable(subnetworkProject);
             return this;
         }
-
         public InstanceTemplateNetworkInterfaceGetArgs build() {
             return new InstanceTemplateNetworkInterfaceGetArgs(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
         }

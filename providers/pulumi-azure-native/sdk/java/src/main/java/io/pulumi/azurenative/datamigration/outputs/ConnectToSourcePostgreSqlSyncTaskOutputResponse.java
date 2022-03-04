@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,35 +54,35 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
     /**
      * List of databases on source server
      * 
-     */
+    */
     public List<String> getDatabases() {
         return this.databases;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Source server brand version
      * 
-     */
+    */
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
      * Version of the source server
      * 
-     */
+    */
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Validation errors associated with the task
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }
@@ -139,7 +139,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToSourcePostgreSqlSyncTaskOutputResponse build() {
             return new ConnectToSourcePostgreSqlSyncTaskOutputResponse(databases, id, sourceServerBrandVersion, sourceServerVersion, validationErrors);
         }

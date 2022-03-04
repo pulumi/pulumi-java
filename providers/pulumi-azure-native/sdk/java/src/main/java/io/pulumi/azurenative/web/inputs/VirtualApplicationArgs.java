@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.VirtualDirectoryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="physicalPath")
-    private final @Nullable Input<String> physicalPath;
+      private final @Nullable Input<String> physicalPath;
 
     public Input<String> getPhysicalPath() {
         return this.physicalPath == null ? Input.empty() : this.physicalPath;
@@ -37,7 +37,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="preloadEnabled")
-    private final @Nullable Input<Boolean> preloadEnabled;
+      private final @Nullable Input<Boolean> preloadEnabled;
 
     public Input<Boolean> getPreloadEnabled() {
         return this.preloadEnabled == null ? Input.empty() : this.preloadEnabled;
@@ -48,7 +48,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualDirectories")
-    private final @Nullable Input<List<VirtualDirectoryArgs>> virtualDirectories;
+      private final @Nullable Input<List<VirtualDirectoryArgs>> virtualDirectories;
 
     public Input<List<VirtualDirectoryArgs>> getVirtualDirectories() {
         return this.virtualDirectories == null ? Input.empty() : this.virtualDirectories;
@@ -59,7 +59,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualPath")
-    private final @Nullable Input<String> virtualPath;
+      private final @Nullable Input<String> virtualPath;
 
     public Input<String> getVirtualPath() {
         return this.virtualPath == null ? Input.empty() : this.virtualPath;
@@ -148,7 +148,6 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
             this.virtualPath = Input.ofNullable(virtualPath);
             return this;
         }
-
         public VirtualApplicationArgs build() {
             return new VirtualApplicationArgs(physicalPath, preloadEnabled, virtualDirectories, virtualPath);
         }

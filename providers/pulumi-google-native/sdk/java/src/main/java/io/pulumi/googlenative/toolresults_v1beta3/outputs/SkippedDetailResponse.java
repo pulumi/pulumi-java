@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class SkippedDetailResponse {
     /**
      * If the App doesn't support the specific API level.
      * 
-     */
+    */
     public Boolean getIncompatibleAppVersion() {
         return this.incompatibleAppVersion;
     }
     /**
      * If the App doesn't run on the specific architecture, for example, x86.
      * 
-     */
+    */
     public Boolean getIncompatibleArchitecture() {
         return this.incompatibleArchitecture;
     }
     /**
      * If the requested OS version doesn't run on the specific device model.
      * 
-     */
+    */
     public Boolean getIncompatibleDevice() {
         return this.incompatibleDevice;
     }
@@ -95,7 +95,6 @@ public final class SkippedDetailResponse {
             this.incompatibleDevice = Objects.requireNonNull(incompatibleDevice);
             return this;
         }
-
         public SkippedDetailResponse build() {
             return new SkippedDetailResponse(incompatibleAppVersion, incompatibleArchitecture, incompatibleDevice);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.AccessReviewHistoryInstanceResponse;
 import io.pulumi.azurenative.authorization.outputs.AccessReviewScopeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -156,133 +156,133 @@ public final class GetAccessReviewHistoryDefinitionByIdResult {
     /**
      * Date time when history definition was created
      * 
-     */
+    */
     public String getCreatedDateTime() {
         return this.createdDateTime;
     }
     /**
      * Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
      * 
-     */
+    */
     public List<String> getDecisions() {
         return this.decisions == null ? List.of() : this.decisions;
     }
     /**
      * The display name for the history definition.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The DateTime when the review is scheduled to end. Required if type is endDate
      * 
-     */
+    */
     public Optional<String> getEndDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
      * The access review history definition id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of access review history instances for this history definition.
      * 
-     */
+    */
     public List<AccessReviewHistoryInstanceResponse> getInstances() {
         return this.instances == null ? List.of() : this.instances;
     }
     /**
      * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
      * 
-     */
+    */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * The access review history definition unique id.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The number of times to repeat the access review. Required and must be positive if type is numbered.
      * 
-     */
+    */
     public Optional<Integer> getNumberOfOccurrences() {
         return Optional.ofNullable(this.numberOfOccurrences);
     }
     /**
      * The identity id
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The identity display name
      * 
-     */
+    */
     public String getPrincipalName() {
         return this.principalName;
     }
     /**
      * The identity type : user/servicePrincipal
      * 
-     */
+    */
     public String getPrincipalType() {
         return this.principalType;
     }
     /**
      * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
      * 
-     */
+    */
     public String getReviewHistoryPeriodEndDateTime() {
         return this.reviewHistoryPeriodEndDateTime;
     }
     /**
      * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
      * 
-     */
+    */
     public String getReviewHistoryPeriodStartDateTime() {
         return this.reviewHistoryPeriodStartDateTime;
     }
     /**
      * A collection of scopes used when selecting review history data
      * 
-     */
+    */
     public List<AccessReviewScopeResponse> getScopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
     /**
      * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
      * 
-     */
+    */
     public Optional<String> getStartDate() {
         return Optional.ofNullable(this.startDate);
     }
     /**
      * This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The user principal name(if valid)
      * 
-     */
+    */
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -437,7 +437,6 @@ public final class GetAccessReviewHistoryDefinitionByIdResult {
             this.userPrincipalName = Objects.requireNonNull(userPrincipalName);
             return this;
         }
-
         public GetAccessReviewHistoryDefinitionByIdResult build() {
             return new GetAccessReviewHistoryDefinitionByIdResult(createdDateTime, decisions, displayName, endDate, id, instances, interval, name, numberOfOccurrences, principalId, principalName, principalType, reviewHistoryPeriodEndDateTime, reviewHistoryPeriodStartDateTime, scopes, startDate, status, type, userPrincipalName);
         }

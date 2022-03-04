@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.NonResourceRule;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.ResourceRule;
 import java.lang.Boolean;
@@ -51,28 +51,28 @@ public final class SubjectRulesReviewStatus {
     /**
      * EvaluationError can appear in combination with Rules. It indicates an error occurred during rule evaluation, such as an authorizer that doesn't support rule evaluation, and that ResourceRules and/or NonResourceRules may be incomplete.
      * 
-     */
+    */
     public Optional<String> getEvaluationError() {
         return Optional.ofNullable(this.evaluationError);
     }
     /**
      * Incomplete is true when the rules returned by this call are incomplete. This is most commonly encountered when an authorizer, such as an external authorizer, doesn't support rules evaluation.
      * 
-     */
+    */
     public Boolean getIncomplete() {
         return this.incomplete;
     }
     /**
      * NonResourceRules is the list of actions the subject is allowed to perform on non-resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.
      * 
-     */
+    */
     public List<NonResourceRule> getNonResourceRules() {
         return this.nonResourceRules;
     }
     /**
      * ResourceRules is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.
      * 
-     */
+    */
     public List<ResourceRule> getResourceRules() {
         return this.resourceRules;
     }
@@ -122,7 +122,6 @@ public final class SubjectRulesReviewStatus {
             this.resourceRules = Objects.requireNonNull(resourceRules);
             return this;
         }
-
         public SubjectRulesReviewStatus build() {
             return new SubjectRulesReviewStatus(evaluationError, incomplete, nonResourceRules, resourceRules);
         }

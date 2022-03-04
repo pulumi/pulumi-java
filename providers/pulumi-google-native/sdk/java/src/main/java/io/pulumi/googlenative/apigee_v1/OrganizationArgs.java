@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.enums.OrganizationBillingType;
 import io.pulumi.googlenative.apigee_v1.enums.OrganizationRuntimeType;
 import io.pulumi.googlenative.apigee_v1.enums.OrganizationType;
@@ -26,7 +26,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonsConfig")
-    private final @Nullable Input<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
+      private final @Nullable Input<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
 
     public Input<GoogleCloudApigeeV1AddonsConfigArgs> getAddonsConfig() {
         return this.addonsConfig == null ? Input.empty() : this.addonsConfig;
@@ -37,7 +37,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyticsRegion", required=true)
-    private final Input<String> analyticsRegion;
+      private final Input<String> analyticsRegion;
 
     public Input<String> getAnalyticsRegion() {
         return this.analyticsRegion;
@@ -48,7 +48,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<List<String>> attributes;
+      private final @Nullable Input<List<String>> attributes;
 
     public Input<List<String>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -59,7 +59,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-    private final @Nullable Input<String> authorizedNetwork;
+      private final @Nullable Input<String> authorizedNetwork;
 
     public Input<String> getAuthorizedNetwork() {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
@@ -70,7 +70,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingType")
-    private final @Nullable Input<OrganizationBillingType> billingType;
+      private final @Nullable Input<OrganizationBillingType> billingType;
 
     public Input<OrganizationBillingType> getBillingType() {
         return this.billingType == null ? Input.empty() : this.billingType;
@@ -81,7 +81,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerName")
-    private final @Nullable Input<String> customerName;
+      private final @Nullable Input<String> customerName;
 
     public Input<String> getCustomerName() {
         return this.customerName == null ? Input.empty() : this.customerName;
@@ -92,7 +92,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -103,14 +103,14 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -121,7 +121,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalDisabled")
-    private final @Nullable Input<Boolean> portalDisabled;
+      private final @Nullable Input<Boolean> portalDisabled;
 
     public Input<Boolean> getPortalDisabled() {
         return this.portalDisabled == null ? Input.empty() : this.portalDisabled;
@@ -132,7 +132,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties;
+      private final @Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties;
 
     public Input<GoogleCloudApigeeV1PropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -143,7 +143,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeDatabaseEncryptionKeyName")
-    private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
+      private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
 
     public Input<String> getRuntimeDatabaseEncryptionKeyName() {
         return this.runtimeDatabaseEncryptionKeyName == null ? Input.empty() : this.runtimeDatabaseEncryptionKeyName;
@@ -154,7 +154,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeType", required=true)
-    private final Input<OrganizationRuntimeType> runtimeType;
+      private final Input<OrganizationRuntimeType> runtimeType;
 
     public Input<OrganizationRuntimeType> getRuntimeType() {
         return this.runtimeType;
@@ -165,7 +165,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<OrganizationType> type;
+      private final @Nullable Input<OrganizationType> type;
 
     public Input<OrganizationType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -404,7 +404,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public OrganizationArgs build() {
             return new OrganizationArgs(addonsConfig, analyticsRegion, attributes, authorizedNetwork, billingType, customerName, description, displayName, parent, portalDisabled, properties, runtimeDatabaseEncryptionKeyName, runtimeType, type);
         }

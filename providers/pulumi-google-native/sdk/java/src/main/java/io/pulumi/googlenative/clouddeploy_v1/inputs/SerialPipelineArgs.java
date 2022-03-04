@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.StageArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stages")
-    private final @Nullable Input<List<StageArgs>> stages;
+      private final @Nullable Input<List<StageArgs>> stages;
 
     public Input<List<StageArgs>> getStages() {
         return this.stages == null ? Input.empty() : this.stages;
@@ -67,7 +67,6 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.stages = Input.ofNullable(stages);
             return this;
         }
-
         public SerialPipelineArgs build() {
             return new SerialPipelineArgs(stages);
         }

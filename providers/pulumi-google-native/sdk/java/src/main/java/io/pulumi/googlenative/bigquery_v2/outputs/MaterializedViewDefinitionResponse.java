@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class MaterializedViewDefinitionResponse {
     /**
      * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".
      * 
-     */
+    */
     public Boolean getEnableRefresh() {
         return this.enableRefresh;
     }
     /**
      * [TrustedTester] The time when this materialized view was last modified, in milliseconds since the epoch.
      * 
-     */
+    */
     public String getLastRefreshTime() {
         return this.lastRefreshTime;
     }
     /**
      * [Required] A query whose result is persisted.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
     /**
      * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).
      * 
-     */
+    */
     public String getRefreshIntervalMs() {
         return this.refreshIntervalMs;
     }
@@ -117,7 +117,6 @@ public final class MaterializedViewDefinitionResponse {
             this.refreshIntervalMs = Objects.requireNonNull(refreshIntervalMs);
             return this;
         }
-
         public MaterializedViewDefinitionResponse build() {
             return new MaterializedViewDefinitionResponse(enableRefresh, lastRefreshTime, query, refreshIntervalMs);
         }

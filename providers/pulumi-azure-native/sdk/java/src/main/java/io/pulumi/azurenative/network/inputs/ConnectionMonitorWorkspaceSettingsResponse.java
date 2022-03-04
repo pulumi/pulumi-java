@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ConnectionMonitorWorkspaceSettingsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="workspaceResourceId")
-    private final @Nullable String workspaceResourceId;
+      private final @Nullable String workspaceResourceId;
 
     public Optional<String> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
@@ -61,7 +61,6 @@ public final class ConnectionMonitorWorkspaceSettingsResponse extends io.pulumi.
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public ConnectionMonitorWorkspaceSettingsResponse build() {
             return new ConnectionMonitorWorkspaceSettingsResponse(workspaceResourceId);
         }

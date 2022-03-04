@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.kms.inputs.CryptoKeyIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<CryptoKeyIAMBindingConditionGetArgs> condition;
+      private final @Nullable Input<CryptoKeyIAMBindingConditionGetArgs> condition;
 
     public Input<CryptoKeyIAMBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -36,7 +36,7 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cryptoKeyId")
-    private final @Nullable Input<String> cryptoKeyId;
+      private final @Nullable Input<String> cryptoKeyId;
 
     public Input<String> getCryptoKeyId() {
         return this.cryptoKeyId == null ? Input.empty() : this.cryptoKeyId;
@@ -47,14 +47,14 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -66,7 +66,7 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -170,7 +170,6 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public CryptoKeyIAMBindingState build() {
             return new CryptoKeyIAMBindingState(condition, cryptoKeyId, etag, members, role);
         }

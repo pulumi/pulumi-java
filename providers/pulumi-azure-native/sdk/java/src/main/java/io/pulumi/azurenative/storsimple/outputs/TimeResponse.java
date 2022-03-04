@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class TimeResponse {
     /**
      * The hour.
      * 
-     */
+    */
     public Integer getHours() {
         return this.hours;
     }
     /**
      * The minute.
      * 
-     */
+    */
     public Integer getMinutes() {
         return this.minutes;
     }
     /**
      * The second.
      * 
-     */
+    */
     public Integer getSeconds() {
         return this.seconds;
     }
@@ -95,7 +95,6 @@ public final class TimeResponse {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public TimeResponse build() {
             return new TimeResponse(hours, minutes, seconds);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.xray.inputs;
 
 import io.pulumi.awsnative.xray.inputs.SamplingRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -31,14 +31,14 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="modifiedAt")
-    private final @Nullable Input<String> modifiedAt;
+      private final @Nullable Input<String> modifiedAt;
 
     public Input<String> getModifiedAt() {
         return this.modifiedAt == null ? Input.empty() : this.modifiedAt;
     }
 
     @InputImport(name="samplingRule")
-    private final @Nullable Input<SamplingRuleArgs> samplingRule;
+      private final @Nullable Input<SamplingRuleArgs> samplingRule;
 
     public Input<SamplingRuleArgs> getSamplingRule() {
         return this.samplingRule == null ? Input.empty() : this.samplingRule;
@@ -112,7 +112,6 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
             this.samplingRule = Input.ofNullable(samplingRule);
             return this;
         }
-
         public SamplingRuleRecordArgs build() {
             return new SamplingRuleRecordArgs(createdAt, modifiedAt, samplingRule);
         }

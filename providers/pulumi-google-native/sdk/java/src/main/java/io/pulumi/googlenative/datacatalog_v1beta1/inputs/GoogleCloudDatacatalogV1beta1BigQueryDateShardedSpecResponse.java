@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final String dataset;
+      private final String dataset;
 
     public String getDataset() {
         return this.dataset;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      * 
      */
     @InputImport(name="shardCount", required=true)
-    private final String shardCount;
+      private final String shardCount;
 
     public String getShardCount() {
         return this.shardCount;
@@ -43,7 +43,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      * 
      */
     @InputImport(name="tablePrefix", required=true)
-    private final String tablePrefix;
+      private final String tablePrefix;
 
     public String getTablePrefix() {
         return this.tablePrefix;
@@ -102,7 +102,6 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
             this.tablePrefix = Objects.requireNonNull(tablePrefix);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse build() {
             return new GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse(dataset, shardCount, tablePrefix);
         }

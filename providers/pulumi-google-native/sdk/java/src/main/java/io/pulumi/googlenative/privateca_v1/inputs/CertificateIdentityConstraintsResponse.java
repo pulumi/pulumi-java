@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.ExprResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
-    private final Boolean allowSubjectAltNamesPassthrough;
+      private final Boolean allowSubjectAltNamesPassthrough;
 
     public Boolean getAllowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
@@ -33,7 +33,7 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="allowSubjectPassthrough", required=true)
-    private final Boolean allowSubjectPassthrough;
+      private final Boolean allowSubjectPassthrough;
 
     public Boolean getAllowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
@@ -44,7 +44,7 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="celExpression", required=true)
-    private final ExprResponse celExpression;
+      private final ExprResponse celExpression;
 
     public ExprResponse getCelExpression() {
         return this.celExpression;
@@ -103,7 +103,6 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
             this.celExpression = Objects.requireNonNull(celExpression);
             return this;
         }
-
         public CertificateIdentityConstraintsResponse build() {
             return new CertificateIdentityConstraintsResponse(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }

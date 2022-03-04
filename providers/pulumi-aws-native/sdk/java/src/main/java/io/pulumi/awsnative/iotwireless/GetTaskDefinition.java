@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotwireless.inputs.GetTaskDefinitionArgs;
 import io.pulumi.awsnative.iotwireless.outputs.GetTaskDefinitionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTaskDefinition {
-/**
- * Creates a gateway task definition.
+    private GetTaskDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetTaskDefinitionArgs.Builder a);
+    }
+    private static GetTaskDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTaskDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Creates a gateway task definition.
  * 
- */
+     */
+    public static CompletableFuture<GetTaskDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Creates a gateway task definition.
+     * 
+     */
     public static CompletableFuture<GetTaskDefinitionResult> invokeAsync(GetTaskDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args == null ? GetTaskDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

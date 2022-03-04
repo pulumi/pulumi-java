@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeResponse;
 import io.pulumi.azurenative.datafactory.outputs.SelfHostedIntegrationRuntimeResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -55,35 +55,35 @@ public final class GetIntegrationRuntimeResult {
     /**
      * Etag identifies change in the resource.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Integration runtime properties.
      * 
-     */
+    */
     public Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse> getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetIntegrationRuntimeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationRuntimeResult build() {
             return new GetIntegrationRuntimeResult(etag, id, name, properties, type);
         }

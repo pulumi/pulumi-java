@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class DeviceCredentialPublicKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<String> format;
+      private final Input<String> format;
 
     public Input<String> getFormat() {
         return this.format;
@@ -30,7 +30,7 @@ public final class DeviceCredentialPublicKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -89,7 +89,6 @@ public final class DeviceCredentialPublicKeyArgs extends io.pulumi.resources.Res
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
-
         public DeviceCredentialPublicKeyArgs build() {
             return new DeviceCredentialPublicKeyArgs(format, key);
         }

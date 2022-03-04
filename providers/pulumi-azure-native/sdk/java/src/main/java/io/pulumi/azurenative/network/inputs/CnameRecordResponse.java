@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CnameRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cname")
-    private final @Nullable String cname;
+      private final @Nullable String cname;
 
     public Optional<String> getCname() {
         return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);
@@ -61,7 +61,6 @@ public final class CnameRecordResponse extends io.pulumi.resources.InvokeArgs {
             this.cname = cname;
             return this;
         }
-
         public CnameRecordResponse build() {
             return new CnameRecordResponse(cname);
         }

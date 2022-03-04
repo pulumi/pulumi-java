@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="assignmentName", required=true)
-    private final String assignmentName;
+      private final String assignmentName;
 
     public String getAssignmentName() {
         return this.assignmentName;
@@ -28,7 +28,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceScope", required=true)
-    private final String resourceScope;
+      private final String resourceScope;
 
     public String getResourceScope() {
         return this.resourceScope;
@@ -77,7 +77,6 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
-
         public GetAssignmentArgs build() {
             return new GetAssignmentArgs(assignmentName, resourceScope);
         }

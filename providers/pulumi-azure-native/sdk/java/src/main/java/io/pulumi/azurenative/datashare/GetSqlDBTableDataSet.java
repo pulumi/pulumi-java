@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetSqlDBTableDataSetArgs;
 import io.pulumi.azurenative.datashare.outputs.GetSqlDBTableDataSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlDBTableDataSet {
-/**
- * A SQL DB table data set.
+    private GetSqlDBTableDataSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlDBTableDataSetArgs.Builder a);
+    }
+    private static GetSqlDBTableDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlDBTableDataSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A SQL DB table data set.
  * API Version: 2020-09-01.
  * 
- *
- * A SQL DB table data set.
+     *
+     * A SQL DB table data set.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlDBTableDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A SQL DB table data set.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A SQL DB table data set.
+     * 
+     */
     public static CompletableFuture<GetSqlDBTableDataSetResult> invokeAsync(GetSqlDBTableDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getSqlDBTableDataSet", TypeShape.of(GetSqlDBTableDataSetResult.class), args == null ? GetSqlDBTableDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

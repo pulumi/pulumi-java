@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ConfigMapEnvSource {
     /**
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specify whether the ConfigMap must be defined
      * 
-     */
+    */
     public Optional<Boolean> getOptional() {
         return Optional.ofNullable(this.optional);
     }
@@ -77,7 +77,6 @@ public final class ConfigMapEnvSource {
             this.optional = optional;
             return this;
         }
-
         public ConfigMapEnvSource build() {
             return new ConfigMapEnvSource(name, optional);
         }

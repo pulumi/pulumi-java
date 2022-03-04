@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.AutoUserSpecificationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="autoUser")
-    private final @Nullable AutoUserSpecificationResponse autoUser;
+      private final @Nullable AutoUserSpecificationResponse autoUser;
 
     public Optional<AutoUserSpecificationResponse> getAutoUser() {
         return this.autoUser == null ? Optional.empty() : Optional.ofNullable(this.autoUser);
@@ -35,7 +35,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable String userName;
+      private final @Nullable String userName;
 
     public Optional<String> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
@@ -84,7 +84,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
             this.userName = userName;
             return this;
         }
-
         public UserIdentityResponse build() {
             return new UserIdentityResponse(autoUser, userName);
         }

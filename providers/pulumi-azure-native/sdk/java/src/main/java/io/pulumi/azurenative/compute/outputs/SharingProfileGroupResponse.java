@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class SharingProfileGroupResponse {
     /**
      * A list of subscription/tenant ids the gallery is aimed to be shared to.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids == null ? List.of() : this.ids;
     }
     /**
      * This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -77,7 +77,6 @@ public final class SharingProfileGroupResponse {
             this.type = type;
             return this;
         }
-
         public SharingProfileGroupResponse build() {
             return new SharingProfileGroupResponse(ids, type);
         }

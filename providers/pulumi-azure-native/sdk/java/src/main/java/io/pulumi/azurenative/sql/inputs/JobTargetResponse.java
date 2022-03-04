@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable String databaseName;
+      private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
@@ -34,7 +34,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elasticPoolName")
-    private final @Nullable String elasticPoolName;
+      private final @Nullable String elasticPoolName;
 
     public Optional<String> getElasticPoolName() {
         return this.elasticPoolName == null ? Optional.empty() : Optional.ofNullable(this.elasticPoolName);
@@ -45,7 +45,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="membershipType")
-    private final @Nullable String membershipType;
+      private final @Nullable String membershipType;
 
     public Optional<String> getMembershipType() {
         return this.membershipType == null ? Optional.empty() : Optional.ofNullable(this.membershipType);
@@ -56,7 +56,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="refreshCredential")
-    private final @Nullable String refreshCredential;
+      private final @Nullable String refreshCredential;
 
     public Optional<String> getRefreshCredential() {
         return this.refreshCredential == null ? Optional.empty() : Optional.ofNullable(this.refreshCredential);
@@ -67,7 +67,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverName")
-    private final @Nullable String serverName;
+      private final @Nullable String serverName;
 
     public Optional<String> getServerName() {
         return this.serverName == null ? Optional.empty() : Optional.ofNullable(this.serverName);
@@ -78,7 +78,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="shardMapName")
-    private final @Nullable String shardMapName;
+      private final @Nullable String shardMapName;
 
     public Optional<String> getShardMapName() {
         return this.shardMapName == null ? Optional.empty() : Optional.ofNullable(this.shardMapName);
@@ -89,7 +89,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -188,7 +188,6 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JobTargetResponse build() {
             return new JobTargetResponse(databaseName, elasticPoolName, membershipType, refreshCredential, serverName, shardMapName, type);
         }

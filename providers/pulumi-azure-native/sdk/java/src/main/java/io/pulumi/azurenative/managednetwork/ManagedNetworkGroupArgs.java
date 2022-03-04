@@ -7,7 +7,7 @@ import io.pulumi.azurenative.managednetwork.enums.Kind;
 import io.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Either<String,Kind>> kind;
+      private final @Nullable Input<Either<String,Kind>> kind;
 
     public Input<Either<String,Kind>> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -34,7 +34,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -45,7 +45,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="managedNetworkGroupName")
-    private final @Nullable Input<String> managedNetworkGroupName;
+      private final @Nullable Input<String> managedNetworkGroupName;
 
     public Input<String> getManagedNetworkGroupName() {
         return this.managedNetworkGroupName == null ? Input.empty() : this.managedNetworkGroupName;
@@ -56,7 +56,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="managedNetworkName", required=true)
-    private final Input<String> managedNetworkName;
+      private final Input<String> managedNetworkName;
 
     public Input<String> getManagedNetworkName() {
         return this.managedNetworkName;
@@ -67,7 +67,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="managementGroups")
-    private final @Nullable Input<List<ResourceIdArgs>> managementGroups;
+      private final @Nullable Input<List<ResourceIdArgs>> managementGroups;
 
     public Input<List<ResourceIdArgs>> getManagementGroups() {
         return this.managementGroups == null ? Input.empty() : this.managementGroups;
@@ -78,7 +78,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subnets")
-    private final @Nullable Input<List<ResourceIdArgs>> subnets;
+      private final @Nullable Input<List<ResourceIdArgs>> subnets;
 
     public Input<List<ResourceIdArgs>> getSubnets() {
         return this.subnets == null ? Input.empty() : this.subnets;
@@ -100,7 +100,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subscriptions")
-    private final @Nullable Input<List<ResourceIdArgs>> subscriptions;
+      private final @Nullable Input<List<ResourceIdArgs>> subscriptions;
 
     public Input<List<ResourceIdArgs>> getSubscriptions() {
         return this.subscriptions == null ? Input.empty() : this.subscriptions;
@@ -111,7 +111,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="virtualNetworks")
-    private final @Nullable Input<List<ResourceIdArgs>> virtualNetworks;
+      private final @Nullable Input<List<ResourceIdArgs>> virtualNetworks;
 
     public Input<List<ResourceIdArgs>> getVirtualNetworks() {
         return this.virtualNetworks == null ? Input.empty() : this.virtualNetworks;
@@ -275,7 +275,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
             this.virtualNetworks = Input.ofNullable(virtualNetworks);
             return this;
         }
-
         public ManagedNetworkGroupArgs build() {
             return new ManagedNetworkGroupArgs(kind, location, managedNetworkGroupName, managedNetworkName, managementGroups, resourceGroupName, subnets, subscriptions, virtualNetworks);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class CacheUpgradeStatusResponse {
     /**
      * Version string of the firmware currently installed on this Cache.
      * 
-     */
+    */
     public String getCurrentFirmwareVersion() {
         return this.currentFirmwareVersion;
     }
     /**
      * Time at which the pending firmware update will automatically be installed on the Cache.
      * 
-     */
+    */
     public String getFirmwareUpdateDeadline() {
         return this.firmwareUpdateDeadline;
     }
     /**
      * True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
      * 
-     */
+    */
     public String getFirmwareUpdateStatus() {
         return this.firmwareUpdateStatus;
     }
     /**
      * Time of the last successful firmware update.
      * 
-     */
+    */
     public String getLastFirmwareUpdate() {
         return this.lastFirmwareUpdate;
     }
     /**
      * When firmwareUpdateAvailable is true, this field holds the version string for the update.
      * 
-     */
+    */
     public String getPendingFirmwareVersion() {
         return this.pendingFirmwareVersion;
     }
@@ -137,7 +137,6 @@ public final class CacheUpgradeStatusResponse {
             this.pendingFirmwareVersion = Objects.requireNonNull(pendingFirmwareVersion);
             return this;
         }
-
         public CacheUpgradeStatusResponse build() {
             return new CacheUpgradeStatusResponse(currentFirmwareVersion, firmwareUpdateDeadline, firmwareUpdateStatus, lastFirmwareUpdate, pendingFirmwareVersion);
         }

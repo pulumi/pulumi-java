@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class RoleSinkInfoResponse {
     /**
      * Compute role ID.
      * 
-     */
+    */
     public String getRoleId() {
         return this.roleId;
     }
@@ -52,7 +52,6 @@ public final class RoleSinkInfoResponse {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
-
         public RoleSinkInfoResponse build() {
             return new RoleSinkInfoResponse(roleId);
         }

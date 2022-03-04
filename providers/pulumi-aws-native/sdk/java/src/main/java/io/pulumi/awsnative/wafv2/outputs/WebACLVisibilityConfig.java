@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +72,6 @@ public final class WebACLVisibilityConfig {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
         }
-
         public WebACLVisibilityConfig build() {
             return new WebACLVisibilityConfig(cloudWatchMetricsEnabled, metricName, sampledRequestsEnabled);
         }

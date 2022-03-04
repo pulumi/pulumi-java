@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class MpnsCredentialResponse {
     /**
      * The certificate key for this credential.
      * 
-     */
+    */
     public Optional<String> getCertificateKey() {
         return Optional.ofNullable(this.certificateKey);
     }
     /**
      * The MPNS certificate.
      * 
-     */
+    */
     public Optional<String> getMpnsCertificate() {
         return Optional.ofNullable(this.mpnsCertificate);
     }
     /**
      * The MPNS certificate Thumbprint
      * 
-     */
+    */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -97,7 +97,6 @@ public final class MpnsCredentialResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public MpnsCredentialResponse build() {
             return new MpnsCredentialResponse(certificateKey, mpnsCertificate, thumbprint);
         }

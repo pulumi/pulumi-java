@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SecretReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class SecretReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -93,7 +93,6 @@ public final class SecretReferenceArgs extends io.pulumi.resources.ResourceArgs 
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
-
         public SecretReferenceArgs build() {
             return new SecretReferenceArgs(name, namespace);
         }

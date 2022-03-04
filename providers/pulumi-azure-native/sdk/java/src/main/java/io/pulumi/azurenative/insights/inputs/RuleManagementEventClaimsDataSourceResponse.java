@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RuleManagementEventClaimsDataSourceResponse extends io.pulumi
      * 
      */
     @InputImport(name="emailAddress")
-    private final @Nullable String emailAddress;
+      private final @Nullable String emailAddress;
 
     public Optional<String> getEmailAddress() {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
@@ -61,7 +61,6 @@ public final class RuleManagementEventClaimsDataSourceResponse extends io.pulumi
             this.emailAddress = emailAddress;
             return this;
         }
-
         public RuleManagementEventClaimsDataSourceResponse build() {
             return new RuleManagementEventClaimsDataSourceResponse(emailAddress);
         }

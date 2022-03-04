@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.inputs.PrivateEndpointConnectionRequestPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -31,7 +31,7 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -42,7 +42,7 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<PrivateEndpointConnectionRequestPropertiesArgs> properties;
+      private final @Nullable Input<PrivateEndpointConnectionRequestPropertiesArgs> properties;
 
     public Input<PrivateEndpointConnectionRequestPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -168,7 +168,6 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public PrivateEndpointConnectionByNameArgs build() {
             return new PrivateEndpointConnectionByNameArgs(id, privateEndpointConnectionName, properties, resourceGroupName, serviceName);
         }

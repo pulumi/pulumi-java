@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.inputs.PrivateLinkServiceIpConfigurationArg
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesAutoApprovalArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesVisibilityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="autoApproval")
-    private final @Nullable Input<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
+      private final @Nullable Input<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
 
     public Input<PrivateLinkServicePropertiesAutoApprovalArgs> getAutoApproval() {
         return this.autoApproval == null ? Input.empty() : this.autoApproval;
@@ -42,7 +42,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableProxyProtocol")
-    private final @Nullable Input<Boolean> enableProxyProtocol;
+      private final @Nullable Input<Boolean> enableProxyProtocol;
 
     public Input<Boolean> getEnableProxyProtocol() {
         return this.enableProxyProtocol == null ? Input.empty() : this.enableProxyProtocol;
@@ -53,7 +53,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -64,7 +64,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fqdns")
-    private final @Nullable Input<List<String>> fqdns;
+      private final @Nullable Input<List<String>> fqdns;
 
     public Input<List<String>> getFqdns() {
         return this.fqdns == null ? Input.empty() : this.fqdns;
@@ -75,7 +75,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -86,7 +86,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable Input<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
+      private final @Nullable Input<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
 
     public Input<List<PrivateLinkServiceIpConfigurationArgs>> getIpConfigurations() {
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
@@ -97,7 +97,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="loadBalancerFrontendIpConfigurations")
-    private final @Nullable Input<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
+      private final @Nullable Input<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
 
     public Input<List<FrontendIPConfigurationArgs>> getLoadBalancerFrontendIpConfigurations() {
         return this.loadBalancerFrontendIpConfigurations == null ? Input.empty() : this.loadBalancerFrontendIpConfigurations;
@@ -108,7 +108,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -119,7 +119,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -130,7 +130,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="visibility")
-    private final @Nullable Input<PrivateLinkServicePropertiesVisibilityArgs> visibility;
+      private final @Nullable Input<PrivateLinkServicePropertiesVisibilityArgs> visibility;
 
     public Input<PrivateLinkServicePropertiesVisibilityArgs> getVisibility() {
         return this.visibility == null ? Input.empty() : this.visibility;
@@ -309,7 +309,6 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             this.visibility = Input.ofNullable(visibility);
             return this;
         }
-
         public PrivateLinkServiceArgs build() {
             return new PrivateLinkServiceArgs(autoApproval, enableProxyProtocol, extendedLocation, fqdns, id, ipConfigurations, loadBalancerFrontendIpConfigurations, location, tags, visibility);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ImageDiskReferenceResponse {
     /**
      * A relative uri containing either a Platform Image Repository or user image reference.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
      * 
-     */
+    */
     public Optional<Integer> getLun() {
         return Optional.ofNullable(this.lun);
     }
@@ -77,7 +77,6 @@ public final class ImageDiskReferenceResponse {
             this.lun = lun;
             return this;
         }
-
         public ImageDiskReferenceResponse build() {
             return new ImageDiskReferenceResponse(id, lun);
         }

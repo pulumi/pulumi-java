@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -66,7 +66,6 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyScheduleArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyScheduleArgs(schedule);
         }

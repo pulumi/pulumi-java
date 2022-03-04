@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.ConfigMapKeySelectorResponse;
 import io.pulumi.googlenative.run_v1.inputs.SecretKeySelectorResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="configMapKeyRef", required=true)
-    private final ConfigMapKeySelectorResponse configMapKeyRef;
+      private final ConfigMapKeySelectorResponse configMapKeyRef;
 
     public ConfigMapKeySelectorResponse getConfigMapKeyRef() {
         return this.configMapKeyRef;
@@ -33,7 +33,7 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretKeyRef", required=true)
-    private final SecretKeySelectorResponse secretKeyRef;
+      private final SecretKeySelectorResponse secretKeyRef;
 
     public SecretKeySelectorResponse getSecretKeyRef() {
         return this.secretKeyRef;
@@ -82,7 +82,6 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }
-
         public EnvVarSourceResponse build() {
             return new EnvVarSourceResponse(configMapKeyRef, secretKeyRef);
         }

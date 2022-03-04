@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final String issuer;
+      private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
@@ -34,7 +34,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="notAfterTime", required=true)
-    private final String notAfterTime;
+      private final String notAfterTime;
 
     public String getNotAfterTime() {
         return this.notAfterTime;
@@ -45,7 +45,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="notBeforeTime", required=true)
-    private final String notBeforeTime;
+      private final String notBeforeTime;
 
     public String getNotBeforeTime() {
         return this.notBeforeTime;
@@ -56,7 +56,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parsed", required=true)
-    private final Boolean parsed;
+      private final Boolean parsed;
 
     public Boolean getParsed() {
         return this.parsed;
@@ -67,7 +67,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rawDer", required=true)
-    private final String rawDer;
+      private final String rawDer;
 
     public String getRawDer() {
         return this.rawDer;
@@ -78,7 +78,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serialNumber", required=true)
-    private final String serialNumber;
+      private final String serialNumber;
 
     public String getSerialNumber() {
         return this.serialNumber;
@@ -89,7 +89,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sha256Fingerprint", required=true)
-    private final String sha256Fingerprint;
+      private final String sha256Fingerprint;
 
     public String getSha256Fingerprint() {
         return this.sha256Fingerprint;
@@ -100,7 +100,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subject", required=true)
-    private final String subject;
+      private final String subject;
 
     public String getSubject() {
         return this.subject;
@@ -111,7 +111,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subjectAlternativeDnsNames", required=true)
-    private final List<String> subjectAlternativeDnsNames;
+      private final List<String> subjectAlternativeDnsNames;
 
     public List<String> getSubjectAlternativeDnsNames() {
         return this.subjectAlternativeDnsNames;
@@ -230,7 +230,6 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
             this.subjectAlternativeDnsNames = Objects.requireNonNull(subjectAlternativeDnsNames);
             return this;
         }
-
         public CertificateResponse build() {
             return new CertificateResponse(issuer, notAfterTime, notBeforeTime, parsed, rawDer, serialNumber, sha256Fingerprint, subject, subjectAlternativeDnsNames);
         }

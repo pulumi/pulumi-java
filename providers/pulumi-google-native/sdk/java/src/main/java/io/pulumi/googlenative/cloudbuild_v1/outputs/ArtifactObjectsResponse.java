@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.TimeSpanResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class ArtifactObjectsResponse {
     /**
      * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Path globs used to match files in the build's workspace.
      * 
-     */
+    */
     public List<String> getPaths() {
         return this.paths;
     }
     /**
      * Stores timing information for pushing all artifact objects.
      * 
-     */
+    */
     public TimeSpanResponse getTiming() {
         return this.timing;
     }
@@ -97,7 +97,6 @@ public final class ArtifactObjectsResponse {
             this.timing = Objects.requireNonNull(timing);
             return this;
         }
-
         public ArtifactObjectsResponse build() {
             return new ArtifactObjectsResponse(location, paths, timing);
         }

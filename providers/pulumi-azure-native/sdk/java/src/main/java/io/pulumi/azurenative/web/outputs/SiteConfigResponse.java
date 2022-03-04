@@ -17,7 +17,7 @@ import io.pulumi.azurenative.web.outputs.PushSettingsResponse;
 import io.pulumi.azurenative.web.outputs.SiteLimitsResponse;
 import io.pulumi.azurenative.web.outputs.SiteMachineKeyResponse;
 import io.pulumi.azurenative.web.outputs.VirtualApplicationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -511,126 +511,126 @@ public final class SiteConfigResponse {
     /**
      * Flag to use Managed Identity Creds for ACR pull
      * 
-     */
+    */
     public Optional<Boolean> getAcrUseManagedIdentityCreds() {
         return Optional.ofNullable(this.acrUseManagedIdentityCreds);
     }
     /**
      * If using user managed identity, the user managed identity ClientId
      * 
-     */
+    */
     public Optional<String> getAcrUserManagedIdentityID() {
         return Optional.ofNullable(this.acrUserManagedIdentityID);
     }
     /**
      * <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getAlwaysOn() {
         return Optional.ofNullable(this.alwaysOn);
     }
     /**
      * Information about the formal API definition for the app.
      * 
-     */
+    */
     public Optional<ApiDefinitionInfoResponse> getApiDefinition() {
         return Optional.ofNullable(this.apiDefinition);
     }
     /**
      * Azure API management settings linked to the app.
      * 
-     */
+    */
     public Optional<ApiManagementConfigResponse> getApiManagementConfig() {
         return Optional.ofNullable(this.apiManagementConfig);
     }
     /**
      * App command line to launch.
      * 
-     */
+    */
     public Optional<String> getAppCommandLine() {
         return Optional.ofNullable(this.appCommandLine);
     }
     /**
      * Application settings.
      * 
-     */
+    */
     public List<NameValuePairResponse> getAppSettings() {
         return this.appSettings == null ? List.of() : this.appSettings;
     }
     /**
      * <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getAutoHealEnabled() {
         return Optional.ofNullable(this.autoHealEnabled);
     }
     /**
      * Auto Heal rules.
      * 
-     */
+    */
     public Optional<AutoHealRulesResponse> getAutoHealRules() {
         return Optional.ofNullable(this.autoHealRules);
     }
     /**
      * Auto-swap slot name.
      * 
-     */
+    */
     public Optional<String> getAutoSwapSlotName() {
         return Optional.ofNullable(this.autoSwapSlotName);
     }
     /**
      * List of Azure Storage Accounts.
      * 
-     */
+    */
     public Map<String,AzureStorageInfoValueResponse> getAzureStorageAccounts() {
         return this.azureStorageAccounts == null ? Map.of() : this.azureStorageAccounts;
     }
     /**
      * Connection strings.
      * 
-     */
+    */
     public List<ConnStringInfoResponse> getConnectionStrings() {
         return this.connectionStrings == null ? List.of() : this.connectionStrings;
     }
     /**
      * Cross-Origin Resource Sharing (CORS) settings.
      * 
-     */
+    */
     public Optional<CorsSettingsResponse> getCors() {
         return Optional.ofNullable(this.cors);
     }
     /**
      * Default documents.
      * 
-     */
+    */
     public List<String> getDefaultDocuments() {
         return this.defaultDocuments == null ? List.of() : this.defaultDocuments;
     }
     /**
      * <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getDetailedErrorLoggingEnabled() {
         return Optional.ofNullable(this.detailedErrorLoggingEnabled);
     }
     /**
      * Document root.
      * 
-     */
+    */
     public Optional<String> getDocumentRoot() {
         return Optional.ofNullable(this.documentRoot);
     }
     /**
      * This is work around for polymorphic types.
      * 
-     */
+    */
     public Optional<ExperimentsResponse> getExperiments() {
         return Optional.ofNullable(this.experiments);
     }
     /**
      * State of FTP / FTPS service
      * 
-     */
+    */
     public Optional<String> getFtpsState() {
         return Optional.ofNullable(this.ftpsState);
     }
@@ -638,7 +638,7 @@ public final class SiteConfigResponse {
      * Maximum number of workers that a site can scale out to.
      * This setting only applies to the Consumption and Elastic Premium Plans
      * 
-     */
+    */
     public Optional<Integer> getFunctionAppScaleLimit() {
         return Optional.ofNullable(this.functionAppScaleLimit);
     }
@@ -647,133 +647,133 @@ public final class SiteConfigResponse {
      * the ScaleController will not monitor event sources directly, but will instead call to the
      * runtime to get scale status.
      * 
-     */
+    */
     public Optional<Boolean> getFunctionsRuntimeScaleMonitoringEnabled() {
         return Optional.ofNullable(this.functionsRuntimeScaleMonitoringEnabled);
     }
     /**
      * Handler mappings.
      * 
-     */
+    */
     public List<HandlerMappingResponse> getHandlerMappings() {
         return this.handlerMappings == null ? List.of() : this.handlerMappings;
     }
     /**
      * Health check path
      * 
-     */
+    */
     public Optional<String> getHealthCheckPath() {
         return Optional.ofNullable(this.healthCheckPath);
     }
     /**
      * Http20Enabled: configures a web site to allow clients to connect over http2.0
      * 
-     */
+    */
     public Optional<Boolean> getHttp20Enabled() {
         return Optional.ofNullable(this.http20Enabled);
     }
     /**
      * <code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getHttpLoggingEnabled() {
         return Optional.ofNullable(this.httpLoggingEnabled);
     }
     /**
      * IP security restrictions for main.
      * 
-     */
+    */
     public List<IpSecurityRestrictionResponse> getIpSecurityRestrictions() {
         return this.ipSecurityRestrictions == null ? List.of() : this.ipSecurityRestrictions;
     }
     /**
      * Java container.
      * 
-     */
+    */
     public Optional<String> getJavaContainer() {
         return Optional.ofNullable(this.javaContainer);
     }
     /**
      * Java container version.
      * 
-     */
+    */
     public Optional<String> getJavaContainerVersion() {
         return Optional.ofNullable(this.javaContainerVersion);
     }
     /**
      * Java version.
      * 
-     */
+    */
     public Optional<String> getJavaVersion() {
         return Optional.ofNullable(this.javaVersion);
     }
     /**
      * Identity to use for Key Vault Reference authentication.
      * 
-     */
+    */
     public Optional<String> getKeyVaultReferenceIdentity() {
         return Optional.ofNullable(this.keyVaultReferenceIdentity);
     }
     /**
      * Site limits.
      * 
-     */
+    */
     public Optional<SiteLimitsResponse> getLimits() {
         return Optional.ofNullable(this.limits);
     }
     /**
      * Linux App Framework and version
      * 
-     */
+    */
     public Optional<String> getLinuxFxVersion() {
         return Optional.ofNullable(this.linuxFxVersion);
     }
     /**
      * Site load balancing.
      * 
-     */
+    */
     public Optional<String> getLoadBalancing() {
         return Optional.ofNullable(this.loadBalancing);
     }
     /**
      * <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getLocalMySqlEnabled() {
         return Optional.ofNullable(this.localMySqlEnabled);
     }
     /**
      * HTTP logs directory size limit.
      * 
-     */
+    */
     public Optional<Integer> getLogsDirectorySizeLimit() {
         return Optional.ofNullable(this.logsDirectorySizeLimit);
     }
     /**
      * Site MachineKey.
      * 
-     */
+    */
     public SiteMachineKeyResponse getMachineKey() {
         return this.machineKey;
     }
     /**
      * Managed pipeline mode.
      * 
-     */
+    */
     public Optional<String> getManagedPipelineMode() {
         return Optional.ofNullable(this.managedPipelineMode);
     }
     /**
      * Managed Service Identity Id
      * 
-     */
+    */
     public Optional<Integer> getManagedServiceIdentityId() {
         return Optional.ofNullable(this.managedServiceIdentityId);
     }
     /**
      * MinTlsVersion: configures the minimum version of TLS required for SSL requests
      * 
-     */
+    */
     public Optional<String> getMinTlsVersion() {
         return Optional.ofNullable(this.minTlsVersion);
     }
@@ -781,42 +781,42 @@ public final class SiteConfigResponse {
      * Number of minimum instance count for a site
      * This setting only applies to the Elastic Plans
      * 
-     */
+    */
     public Optional<Integer> getMinimumElasticInstanceCount() {
         return Optional.ofNullable(this.minimumElasticInstanceCount);
     }
     /**
      * .NET Framework version.
      * 
-     */
+    */
     public Optional<String> getNetFrameworkVersion() {
         return Optional.ofNullable(this.netFrameworkVersion);
     }
     /**
      * Version of Node.js.
      * 
-     */
+    */
     public Optional<String> getNodeVersion() {
         return Optional.ofNullable(this.nodeVersion);
     }
     /**
      * Number of workers.
      * 
-     */
+    */
     public Optional<Integer> getNumberOfWorkers() {
         return Optional.ofNullable(this.numberOfWorkers);
     }
     /**
      * Version of PHP.
      * 
-     */
+    */
     public Optional<String> getPhpVersion() {
         return Optional.ofNullable(this.phpVersion);
     }
     /**
      * Version of PowerShell.
      * 
-     */
+    */
     public Optional<String> getPowerShellVersion() {
         return Optional.ofNullable(this.powerShellVersion);
     }
@@ -824,161 +824,161 @@ public final class SiteConfigResponse {
      * Number of preWarmed instances.
      * This setting only applies to the Consumption and Elastic Plans
      * 
-     */
+    */
     public Optional<Integer> getPreWarmedInstanceCount() {
         return Optional.ofNullable(this.preWarmedInstanceCount);
     }
     /**
      * Property to allow or block all public traffic.
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Publishing user name.
      * 
-     */
+    */
     public Optional<String> getPublishingUsername() {
         return Optional.ofNullable(this.publishingUsername);
     }
     /**
      * Push endpoint settings.
      * 
-     */
+    */
     public Optional<PushSettingsResponse> getPush() {
         return Optional.ofNullable(this.push);
     }
     /**
      * Version of Python.
      * 
-     */
+    */
     public Optional<String> getPythonVersion() {
         return Optional.ofNullable(this.pythonVersion);
     }
     /**
      * <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getRemoteDebuggingEnabled() {
         return Optional.ofNullable(this.remoteDebuggingEnabled);
     }
     /**
      * Remote debugging version.
      * 
-     */
+    */
     public Optional<String> getRemoteDebuggingVersion() {
         return Optional.ofNullable(this.remoteDebuggingVersion);
     }
     /**
      * <code>true</code> if request tracing is enabled; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getRequestTracingEnabled() {
         return Optional.ofNullable(this.requestTracingEnabled);
     }
     /**
      * Request tracing expiration time.
      * 
-     */
+    */
     public Optional<String> getRequestTracingExpirationTime() {
         return Optional.ofNullable(this.requestTracingExpirationTime);
     }
     /**
      * IP security restrictions for scm.
      * 
-     */
+    */
     public List<IpSecurityRestrictionResponse> getScmIpSecurityRestrictions() {
         return this.scmIpSecurityRestrictions == null ? List.of() : this.scmIpSecurityRestrictions;
     }
     /**
      * IP security restrictions for scm to use main.
      * 
-     */
+    */
     public Optional<Boolean> getScmIpSecurityRestrictionsUseMain() {
         return Optional.ofNullable(this.scmIpSecurityRestrictionsUseMain);
     }
     /**
      * ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
      * 
-     */
+    */
     public Optional<String> getScmMinTlsVersion() {
         return Optional.ofNullable(this.scmMinTlsVersion);
     }
     /**
      * SCM type.
      * 
-     */
+    */
     public Optional<String> getScmType() {
         return Optional.ofNullable(this.scmType);
     }
     /**
      * Tracing options.
      * 
-     */
+    */
     public Optional<String> getTracingOptions() {
         return Optional.ofNullable(this.tracingOptions);
     }
     /**
      * <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getUse32BitWorkerProcess() {
         return Optional.ofNullable(this.use32BitWorkerProcess);
     }
     /**
      * Virtual applications.
      * 
-     */
+    */
     public List<VirtualApplicationResponse> getVirtualApplications() {
         return this.virtualApplications == null ? List.of() : this.virtualApplications;
     }
     /**
      * Virtual Network name.
      * 
-     */
+    */
     public Optional<String> getVnetName() {
         return Optional.ofNullable(this.vnetName);
     }
     /**
      * The number of private ports assigned to this app. These will be assigned dynamically on runtime.
      * 
-     */
+    */
     public Optional<Integer> getVnetPrivatePortsCount() {
         return Optional.ofNullable(this.vnetPrivatePortsCount);
     }
     /**
      * Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.
      * 
-     */
+    */
     public Optional<Boolean> getVnetRouteAllEnabled() {
         return Optional.ofNullable(this.vnetRouteAllEnabled);
     }
     /**
      * <code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getWebSocketsEnabled() {
         return Optional.ofNullable(this.webSocketsEnabled);
     }
     /**
      * Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones
      * 
-     */
+    */
     public Optional<String> getWebsiteTimeZone() {
         return Optional.ofNullable(this.websiteTimeZone);
     }
     /**
      * Xenon App Framework and version
      * 
-     */
+    */
     public Optional<String> getWindowsFxVersion() {
         return Optional.ofNullable(this.windowsFxVersion);
     }
     /**
      * Explicit Managed Service Identity Id
      * 
-     */
+    */
     public Optional<Integer> getXManagedServiceIdentityId() {
         return Optional.ofNullable(this.xManagedServiceIdentityId);
     }
@@ -1469,7 +1469,6 @@ public final class SiteConfigResponse {
             this.xManagedServiceIdentityId = xManagedServiceIdentityId;
             return this;
         }
-
         public SiteConfigResponse build() {
             return new SiteConfigResponse(acrUseManagedIdentityCreds, acrUserManagedIdentityID, alwaysOn, apiDefinition, apiManagementConfig, appCommandLine, appSettings, autoHealEnabled, autoHealRules, autoSwapSlotName, azureStorageAccounts, connectionStrings, cors, defaultDocuments, detailedErrorLoggingEnabled, documentRoot, experiments, ftpsState, functionAppScaleLimit, functionsRuntimeScaleMonitoringEnabled, handlerMappings, healthCheckPath, http20Enabled, httpLoggingEnabled, ipSecurityRestrictions, javaContainer, javaContainerVersion, javaVersion, keyVaultReferenceIdentity, limits, linuxFxVersion, loadBalancing, localMySqlEnabled, logsDirectorySizeLimit, machineKey, managedPipelineMode, managedServiceIdentityId, minTlsVersion, minimumElasticInstanceCount, netFrameworkVersion, nodeVersion, numberOfWorkers, phpVersion, powerShellVersion, preWarmedInstanceCount, publicNetworkAccess, publishingUsername, push, pythonVersion, remoteDebuggingEnabled, remoteDebuggingVersion, requestTracingEnabled, requestTracingExpirationTime, scmIpSecurityRestrictions, scmIpSecurityRestrictionsUseMain, scmMinTlsVersion, scmType, tracingOptions, use32BitWorkerProcess, virtualApplications, vnetName, vnetPrivatePortsCount, vnetRouteAllEnabled, webSocketsEnabled, websiteTimeZone, windowsFxVersion, xManagedServiceIdentityId);
         }

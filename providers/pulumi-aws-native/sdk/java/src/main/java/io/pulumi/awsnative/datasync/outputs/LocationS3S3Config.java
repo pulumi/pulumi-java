@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class LocationS3S3Config {
     /**
      * The ARN of the IAM role of the Amazon S3 bucket.
      * 
-     */
+    */
     public String getBucketAccessRoleArn() {
         return this.bucketAccessRoleArn;
     }
@@ -52,7 +52,6 @@ public final class LocationS3S3Config {
             this.bucketAccessRoleArn = Objects.requireNonNull(bucketAccessRoleArn);
             return this;
         }
-
         public LocationS3S3Config build() {
             return new LocationS3S3Config(bucketAccessRoleArn);
         }

@@ -4,13 +4,44 @@
 package io.pulumi.plant.tree_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.plant.Utilities;
 import io.pulumi.plant.tree_v1.NurseryArgs;
 import javax.annotation.Nullable;
 
 @ResourceType(type="plant:tree/v1:Nursery")
 public class Nursery extends io.pulumi.resources.CustomResource {
+    public interface BuilderApplicator {
+        public void apply(NurseryArgs.Builder a);
+    }
+    private static io.pulumi.plant.tree_v1.NurseryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.plant.tree_v1.NurseryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Nursery(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Nursery(String name) {
+        this(name, NurseryArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Nursery(String name, NurseryArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

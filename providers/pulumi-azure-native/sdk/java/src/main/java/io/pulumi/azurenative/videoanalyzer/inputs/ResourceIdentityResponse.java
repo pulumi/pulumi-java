@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="userAssignedIdentity", required=true)
-    private final String userAssignedIdentity;
+      private final String userAssignedIdentity;
 
     public String getUserAssignedIdentity() {
         return this.userAssignedIdentity;
@@ -59,7 +59,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
-
         public ResourceIdentityResponse build() {
             return new ResourceIdentityResponse(userAssignedIdentity);
         }

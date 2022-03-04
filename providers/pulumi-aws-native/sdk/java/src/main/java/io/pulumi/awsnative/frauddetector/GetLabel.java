@@ -6,17 +6,33 @@ package io.pulumi.awsnative.frauddetector;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.frauddetector.inputs.GetLabelArgs;
 import io.pulumi.awsnative.frauddetector.outputs.GetLabelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLabel {
-/**
- * An label for fraud detector.
+    private GetLabel() {}
+    public interface BuilderApplicator {
+        public void apply(GetLabelArgs.Builder a);
+    }
+    private static GetLabelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLabelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An label for fraud detector.
  * 
- */
+     */
+    public static CompletableFuture<GetLabelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An label for fraud detector.
+     * 
+     */
     public static CompletableFuture<GetLabelResult> invokeAsync(GetLabelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getLabel", TypeShape.of(GetLabelResult.class), args == null ? GetLabelArgs.Empty : args, Utilities.withVersion(options));
     }

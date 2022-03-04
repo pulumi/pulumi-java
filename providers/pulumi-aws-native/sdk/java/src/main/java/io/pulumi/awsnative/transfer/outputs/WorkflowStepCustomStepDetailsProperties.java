@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.transfer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class WorkflowStepCustomStepDetailsProperties {
     /**
      * The name of the step, used as an identifier.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The ARN for the lambda function that is being called.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * Timeout, in seconds, for the step.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -98,7 +98,6 @@ public final class WorkflowStepCustomStepDetailsProperties {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public WorkflowStepCustomStepDetailsProperties build() {
             return new WorkflowStepCustomStepDetailsProperties(name, target, timeoutSeconds);
         }

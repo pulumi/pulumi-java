@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -87,70 +87,70 @@ public final class NodeSystemInfo {
     /**
      * The Architecture reported by the node
      * 
-     */
+    */
     public String getArchitecture() {
         return this.architecture;
     }
     /**
      * Boot ID reported by the node.
      * 
-     */
+    */
     public String getBootID() {
         return this.bootID;
     }
     /**
      * ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
      * 
-     */
+    */
     public String getContainerRuntimeVersion() {
         return this.containerRuntimeVersion;
     }
     /**
      * Kernel Version reported by the node from 'uname -r' (e.g. 3.16.0-0.bpo.4-amd64).
      * 
-     */
+    */
     public String getKernelVersion() {
         return this.kernelVersion;
     }
     /**
      * KubeProxy Version reported by the node.
      * 
-     */
+    */
     public String getKubeProxyVersion() {
         return this.kubeProxyVersion;
     }
     /**
      * Kubelet Version reported by the node.
      * 
-     */
+    */
     public String getKubeletVersion() {
         return this.kubeletVersion;
     }
     /**
      * MachineID reported by the node. For unique machine identification in the cluster this field is preferred. Learn more from man(5) machine-id: http://man7.org/linux/man-pages/man5/machine-id.5.html
      * 
-     */
+    */
     public String getMachineID() {
         return this.machineID;
     }
     /**
      * The Operating System reported by the node
      * 
-     */
+    */
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
     /**
      * OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
      * 
-     */
+    */
     public String getOsImage() {
         return this.osImage;
     }
     /**
      * SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid
      * 
-     */
+    */
     public String getSystemUUID() {
         return this.systemUUID;
     }
@@ -242,7 +242,6 @@ public final class NodeSystemInfo {
             this.systemUUID = Objects.requireNonNull(systemUUID);
             return this;
         }
-
         public NodeSystemInfo build() {
             return new NodeSystemInfo(architecture, bootID, containerRuntimeVersion, kernelVersion, kubeProxyVersion, kubeletVersion, machineID, operatingSystem, osImage, systemUUID);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cert", required=true)
-    private final String cert;
+      private final String cert;
 
     public String getCert() {
         return this.cert;
@@ -28,7 +28,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="commonName", required=true)
-    private final String commonName;
+      private final String commonName;
 
     public String getCommonName() {
         return this.commonName;
@@ -39,7 +39,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -50,7 +50,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expirationTime", required=true)
-    private final String expirationTime;
+      private final String expirationTime;
 
     public String getExpirationTime() {
         return this.expirationTime;
@@ -61,7 +61,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sha1Fingerprint", required=true)
-    private final String sha1Fingerprint;
+      private final String sha1Fingerprint;
 
     public String getSha1Fingerprint() {
         return this.sha1Fingerprint;
@@ -140,7 +140,6 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public GetCaCertsCert build() {
             return new GetCaCertsCert(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }

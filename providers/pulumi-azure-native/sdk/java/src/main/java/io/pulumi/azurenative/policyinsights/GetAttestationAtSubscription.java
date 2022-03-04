@@ -6,21 +6,41 @@ package io.pulumi.azurenative.policyinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.policyinsights.inputs.GetAttestationAtSubscriptionArgs;
 import io.pulumi.azurenative.policyinsights.outputs.GetAttestationAtSubscriptionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAttestationAtSubscription {
-/**
- * An attestation resource.
+    private GetAttestationAtSubscription() {}
+    public interface BuilderApplicator {
+        public void apply(GetAttestationAtSubscriptionArgs.Builder a);
+    }
+    private static GetAttestationAtSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAttestationAtSubscriptionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An attestation resource.
  * API Version: 2021-01-01.
  * 
- *
- * An attestation resource.
+     *
+     * An attestation resource.
  * 
- */
+     */
+    public static CompletableFuture<GetAttestationAtSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An attestation resource.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * An attestation resource.
+     * 
+     */
     public static CompletableFuture<GetAttestationAtSubscriptionResult> invokeAsync(GetAttestationAtSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getAttestationAtSubscription", TypeShape.of(GetAttestationAtSubscriptionResult.class), args == null ? GetAttestationAtSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.AsyncOptionsResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.InputMappingResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.ValidationOptionsResponse;
@@ -49,28 +49,28 @@ public final class OptionsResponse {
     /**
      * Options regarding how to thread async requests.
      * 
-     */
+    */
     public List<AsyncOptionsResponse> getAsyncOptions() {
         return this.asyncOptions;
     }
     /**
      * The mappings that apply for requests.
      * 
-     */
+    */
     public List<InputMappingResponse> getInputMappings() {
         return this.inputMappings;
     }
     /**
      * The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
      * 
-     */
+    */
     public String getNameProperty() {
         return this.nameProperty;
     }
     /**
      * Options for how to validate and process properties on a resource.
      * 
-     */
+    */
     public ValidationOptionsResponse getValidationOptions() {
         return this.validationOptions;
     }
@@ -120,7 +120,6 @@ public final class OptionsResponse {
             this.validationOptions = Objects.requireNonNull(validationOptions);
             return this;
         }
-
         public OptionsResponse build() {
             return new OptionsResponse(asyncOptions, inputMappings, nameProperty, validationOptions);
         }

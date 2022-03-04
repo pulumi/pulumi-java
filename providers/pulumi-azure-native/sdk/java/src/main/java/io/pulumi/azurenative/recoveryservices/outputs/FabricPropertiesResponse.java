@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmFabricSpecificDet
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareV2FabricSpecificDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VmmDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -85,56 +85,56 @@ public final class FabricPropertiesResponse {
     /**
      * BCDR state of the fabric.
      * 
-     */
+    */
     public Optional<String> getBcdrState() {
         return Optional.ofNullable(this.bcdrState);
     }
     /**
      * Fabric specific settings.
      * 
-     */
+    */
     public Optional<Object> getCustomDetails() {
         return Optional.ofNullable(this.customDetails);
     }
     /**
      * Encryption details for the fabric.
      * 
-     */
+    */
     public Optional<EncryptionDetailsResponse> getEncryptionDetails() {
         return Optional.ofNullable(this.encryptionDetails);
     }
     /**
      * Friendly name of the fabric.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Health of fabric.
      * 
-     */
+    */
     public Optional<String> getHealth() {
         return Optional.ofNullable(this.health);
     }
     /**
      * Fabric health error details.
      * 
-     */
+    */
     public List<HealthErrorResponse> getHealthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
     /**
      * Dra Registration Id.
      * 
-     */
+    */
     public Optional<String> getInternalIdentifier() {
         return Optional.ofNullable(this.internalIdentifier);
     }
     /**
      * Rollover encryption details for the fabric.
      * 
-     */
+    */
     public Optional<EncryptionDetailsResponse> getRolloverEncryptionDetails() {
         return Optional.ofNullable(this.rolloverEncryptionDetails);
     }
@@ -212,7 +212,6 @@ public final class FabricPropertiesResponse {
             this.rolloverEncryptionDetails = rolloverEncryptionDetails;
             return this;
         }
-
         public FabricPropertiesResponse build() {
             return new FabricPropertiesResponse(bcdrState, customDetails, encryptionDetails, friendlyName, health, healthErrorDetails, internalIdentifier, rolloverEncryptionDetails);
         }

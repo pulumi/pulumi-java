@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automanage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ConfigurationProfilePreferenceVmBackupResponse {
     /**
      * Instant RP retention policy range in days
      * 
-     */
+    */
     public Optional<Integer> getInstantRpRetentionRangeInDays() {
         return Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
     /**
      * Retention policy with the details on backup copy retention ranges.
      * 
-     */
+    */
     public Optional<String> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * Backup schedule specified as part of backup policy.
      * 
-     */
+    */
     public Optional<String> getSchedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
     /**
      * TimeZone optional input as string. For example: Pacific Standard Time
      * 
-     */
+    */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -119,7 +119,6 @@ public final class ConfigurationProfilePreferenceVmBackupResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public ConfigurationProfilePreferenceVmBackupResponse build() {
             return new ConfigurationProfilePreferenceVmBackupResponse(instantRpRetentionRangeInDays, retentionPolicy, schedulePolicy, timeZone);
         }

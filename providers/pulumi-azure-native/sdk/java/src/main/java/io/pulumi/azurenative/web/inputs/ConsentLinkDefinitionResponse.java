@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -34,7 +34,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="firstPartyLoginUri")
-    private final @Nullable String firstPartyLoginUri;
+      private final @Nullable String firstPartyLoginUri;
 
     public Optional<String> getFirstPartyLoginUri() {
         return this.firstPartyLoginUri == null ? Optional.empty() : Optional.ofNullable(this.firstPartyLoginUri);
@@ -45,7 +45,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="link")
-    private final @Nullable String link;
+      private final @Nullable String link;
 
     public Optional<String> getLink() {
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
@@ -56,7 +56,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -125,7 +125,6 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
             this.status = status;
             return this;
         }
-
         public ConsentLinkDefinitionResponse build() {
             return new ConsentLinkDefinitionResponse(displayName, firstPartyLoginUri, link, status);
         }

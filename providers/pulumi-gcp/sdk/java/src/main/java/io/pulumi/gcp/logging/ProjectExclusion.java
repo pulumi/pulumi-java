@@ -5,8 +5,8 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.ProjectExclusionArgs;
 import io.pulumi.gcp.logging.inputs.ProjectExclusionState;
@@ -115,6 +115,37 @@ public class ProjectExclusion extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ProjectExclusionArgs.Builder a);
+    }
+    private static io.pulumi.gcp.logging.ProjectExclusionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.logging.ProjectExclusionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ProjectExclusion(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ProjectExclusion(String name) {
+        this(name, ProjectExclusionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ProjectExclusion(String name, ProjectExclusionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

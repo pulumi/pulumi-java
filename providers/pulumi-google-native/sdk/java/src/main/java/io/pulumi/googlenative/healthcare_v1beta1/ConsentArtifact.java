@@ -5,8 +5,8 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.ConsentArtifactArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ImageResponse;
@@ -135,6 +135,37 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
         return this.witnessSignature;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ConsentArtifactArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.healthcare_v1beta1.ConsentArtifactArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.healthcare_v1beta1.ConsentArtifactArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ConsentArtifact(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ConsentArtifact(String name) {
+        this(name, ConsentArtifactArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ConsentArtifact(String name, ConsentArtifactArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

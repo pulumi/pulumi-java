@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class SkuResponse {
     /**
      * The capacity of the SKU
      * 
-     */
+    */
     public Optional<String> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * dedicatedCloudNode example: 8 x Ten-Core Intel® Xeon® Processor E5-2640 v4 2.40GHz 25MB Cache (90W); 12 x 64GB PC4-19200 2400MHz DDR4 ECC Registered DIMM, ...
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * If the service has different generations of hardware, for the same SKU, then that can be captured here
      * 
-     */
+    */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The name of the SKU for VMWare CloudSimple Node
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The tier of the SKU
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -139,7 +139,6 @@ public final class SkuResponse {
             this.tier = tier;
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(capacity, description, family, name, tier);
         }

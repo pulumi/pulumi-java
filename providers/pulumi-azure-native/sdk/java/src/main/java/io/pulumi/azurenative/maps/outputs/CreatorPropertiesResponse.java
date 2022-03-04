@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.maps.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CreatorPropertiesResponse {
     /**
      * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -54,7 +54,6 @@ public final class CreatorPropertiesResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public CreatorPropertiesResponse build() {
             return new CreatorPropertiesResponse(provisioningState);
         }

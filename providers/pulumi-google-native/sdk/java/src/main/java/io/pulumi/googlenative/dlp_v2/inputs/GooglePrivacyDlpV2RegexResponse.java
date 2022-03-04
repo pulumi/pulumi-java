@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="groupIndexes", required=true)
-    private final List<Integer> groupIndexes;
+      private final List<Integer> groupIndexes;
 
     public List<Integer> getGroupIndexes() {
         return this.groupIndexes;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="pattern", required=true)
-    private final String pattern;
+      private final String pattern;
 
     public String getPattern() {
         return this.pattern;
@@ -83,7 +83,6 @@ public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.I
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public GooglePrivacyDlpV2RegexResponse build() {
             return new GooglePrivacyDlpV2RegexResponse(groupIndexes, pattern);
         }

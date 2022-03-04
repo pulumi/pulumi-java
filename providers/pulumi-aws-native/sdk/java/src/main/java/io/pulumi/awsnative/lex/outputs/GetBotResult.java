@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.DataPrivacyProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -53,7 +53,7 @@ public final class GetBotResult {
     /**
      * Data privacy setting of the Bot.
      * 
-     */
+    */
     public Optional<DataPrivacyProperties> getDataPrivacy() {
         return Optional.ofNullable(this.dataPrivacy);
     }
@@ -66,7 +66,7 @@ public final class GetBotResult {
     /**
      * IdleSessionTTLInSeconds of the resource
      * 
-     */
+    */
     public Optional<Integer> getIdleSessionTTLInSeconds() {
         return Optional.ofNullable(this.idleSessionTTLInSeconds);
     }
@@ -143,7 +143,6 @@ public final class GetBotResult {
             this.roleArn = roleArn;
             return this;
         }
-
         public GetBotResult build() {
             return new GetBotResult(arn, dataPrivacy, description, id, idleSessionTTLInSeconds, name, roleArn);
         }

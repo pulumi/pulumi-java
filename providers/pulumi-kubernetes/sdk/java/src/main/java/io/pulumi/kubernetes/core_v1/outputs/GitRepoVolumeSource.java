@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class GitRepoVolumeSource {
     /**
      * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
-     */
+    */
     public Optional<String> getDirectory() {
         return Optional.ofNullable(this.directory);
     }
     /**
      * Repository URL
      * 
-     */
+    */
     public String getRepository() {
         return this.repository;
     }
     /**
      * Commit hash for the specified revision.
      * 
-     */
+    */
     public Optional<String> getRevision() {
         return Optional.ofNullable(this.revision);
     }
@@ -97,7 +97,6 @@ public final class GitRepoVolumeSource {
             this.revision = revision;
             return this;
         }
-
         public GitRepoVolumeSource build() {
             return new GitRepoVolumeSource(directory, repository, revision);
         }

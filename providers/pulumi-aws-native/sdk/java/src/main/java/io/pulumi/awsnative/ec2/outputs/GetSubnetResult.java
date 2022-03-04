@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SubnetTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -128,7 +128,6 @@ public final class GetSubnetResult {
             this.tags = tags;
             return this;
         }
-
         public GetSubnetResult build() {
             return new GetSubnetResult(assignIpv6AddressOnCreation, ipv6CidrBlock, ipv6CidrBlocks, mapPublicIpOnLaunch, networkAclAssociationId, subnetId, tags);
         }

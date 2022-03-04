@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
     /**
      * The name of the query header to inspect.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -52,7 +52,6 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public LoggingConfigurationFieldToMatchSingleHeaderProperties build() {
             return new LoggingConfigurationFieldToMatchSingleHeaderProperties(name);
         }

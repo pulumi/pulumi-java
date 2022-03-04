@@ -6,21 +6,41 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.authorization.inputs.GetAccessReviewHistoryDefinitionByIdArgs;
 import io.pulumi.azurenative.authorization.outputs.GetAccessReviewHistoryDefinitionByIdResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessReviewHistoryDefinitionById {
-/**
- * Access Review History Definition.
+    private GetAccessReviewHistoryDefinitionById() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccessReviewHistoryDefinitionByIdArgs.Builder a);
+    }
+    private static GetAccessReviewHistoryDefinitionByIdArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccessReviewHistoryDefinitionByIdArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Access Review History Definition.
  * API Version: 2021-11-16-preview.
  * 
- *
- * Access Review History Definition.
+     *
+     * Access Review History Definition.
  * 
- */
+     */
+    public static CompletableFuture<GetAccessReviewHistoryDefinitionByIdResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Access Review History Definition.
+     * API Version: 2021-11-16-preview.
+     * 
+     *
+         * Access Review History Definition.
+     * 
+     */
     public static CompletableFuture<GetAccessReviewHistoryDefinitionByIdResult> invokeAsync(GetAccessReviewHistoryDefinitionByIdArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getAccessReviewHistoryDefinitionById", TypeShape.of(GetAccessReviewHistoryDefinitionByIdResult.class), args == null ? GetAccessReviewHistoryDefinitionByIdArgs.Empty : args, Utilities.withVersion(options));
     }

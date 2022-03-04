@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class TruncationSelectionPolicyResponse {
     /**
      * Number of intervals by which to delay the first evaluation.
      * 
-     */
+    */
     public Optional<Integer> getDelayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
     /**
      * Interval (number of runs) between policy evaluations.
      * 
-     */
+    */
     public Optional<Integer> getEvaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
     /**
      * Expected value is 'TruncationSelection'.
      * 
-     */
+    */
     public String getPolicyType() {
         return this.policyType;
     }
     /**
      * The percentage of runs to cancel at each evaluation interval.
      * 
-     */
+    */
     public Optional<Integer> getTruncationPercentage() {
         return Optional.ofNullable(this.truncationPercentage);
     }
@@ -119,7 +119,6 @@ public final class TruncationSelectionPolicyResponse {
             this.truncationPercentage = truncationPercentage;
             return this;
         }
-
         public TruncationSelectionPolicyResponse build() {
             return new TruncationSelectionPolicyResponse(delayEvaluation, evaluationInterval, policyType, truncationPercentage);
         }

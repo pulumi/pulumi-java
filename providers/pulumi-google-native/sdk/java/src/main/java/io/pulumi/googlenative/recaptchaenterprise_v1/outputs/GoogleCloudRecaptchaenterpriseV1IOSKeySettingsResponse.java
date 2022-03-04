@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
     /**
      * If set to true, allowed_bundle_ids are not enforced.
      * 
-     */
+    */
     public Boolean getAllowAllBundleIds() {
         return this.allowAllBundleIds;
     }
     /**
      * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
      * 
-     */
+    */
     public List<String> getAllowedBundleIds() {
         return this.allowedBundleIds;
     }
@@ -76,7 +76,6 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
             this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(allowAllBundleIds, allowedBundleIds);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildStepVolumeGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -44,7 +44,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dir")
-    private final @Nullable Input<String> dir;
+      private final @Nullable Input<String> dir;
 
     public Input<String> getDir() {
         return this.dir == null ? Input.empty() : this.dir;
@@ -57,7 +57,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entrypoint")
-    private final @Nullable Input<String> entrypoint;
+      private final @Nullable Input<String> entrypoint;
 
     public Input<String> getEntrypoint() {
         return this.entrypoint == null ? Input.empty() : this.entrypoint;
@@ -71,7 +71,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="envs")
-    private final @Nullable Input<List<String>> envs;
+      private final @Nullable Input<List<String>> envs;
 
     public Input<List<String>> getEnvs() {
         return this.envs == null ? Input.empty() : this.envs;
@@ -83,7 +83,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -96,7 +96,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -109,7 +109,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="secretEnvs")
-    private final @Nullable Input<List<String>> secretEnvs;
+      private final @Nullable Input<List<String>> secretEnvs;
 
     public Input<List<String>> getSecretEnvs() {
         return this.secretEnvs == null ? Input.empty() : this.secretEnvs;
@@ -123,7 +123,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -136,7 +136,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timing")
-    private final @Nullable Input<String> timing;
+      private final @Nullable Input<String> timing;
 
     public Input<String> getTiming() {
         return this.timing == null ? Input.empty() : this.timing;
@@ -153,7 +153,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<TriggerBuildStepVolumeGetArgs>> volumes;
+      private final @Nullable Input<List<TriggerBuildStepVolumeGetArgs>> volumes;
 
     public Input<List<TriggerBuildStepVolumeGetArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -168,7 +168,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="waitFors")
-    private final @Nullable Input<List<String>> waitFors;
+      private final @Nullable Input<List<String>> waitFors;
 
     public Input<List<String>> getWaitFors() {
         return this.waitFors == null ? Input.empty() : this.waitFors;
@@ -362,7 +362,6 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
             this.waitFors = Input.ofNullable(waitFors);
             return this;
         }
-
         public TriggerBuildStepGetArgs build() {
             return new TriggerBuildStepGetArgs(args, dir, entrypoint, envs, id, name, secretEnvs, timeout, timing, volumes, waitFors);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class StandardComponentPropertiesResponse {
     /**
      * Component Key matching componentMetadata
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
@@ -54,7 +54,6 @@ public final class StandardComponentPropertiesResponse {
             this.key = key;
             return this;
         }
-
         public StandardComponentPropertiesResponse build() {
             return new StandardComponentPropertiesResponse(key);
         }

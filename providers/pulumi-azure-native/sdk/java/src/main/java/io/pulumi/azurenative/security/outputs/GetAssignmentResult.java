@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.outputs.AssignedComponentItemResponse;
 import io.pulumi.azurenative.security.outputs.AssignedStandardItemResponse;
 import io.pulumi.azurenative.security.outputs.AssignmentPropertiesResponseAdditionalData;
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -144,119 +144,119 @@ public final class GetAssignmentResult {
     /**
      * Additional data about the assignment
      * 
-     */
+    */
     public Optional<AssignmentPropertiesResponseAdditionalData> getAdditionalData() {
         return Optional.ofNullable(this.additionalData);
     }
     /**
      * Component item with key as applied to this standard assignment over the given scope
      * 
-     */
+    */
     public Optional<AssignedComponentItemResponse> getAssignedComponent() {
         return Optional.ofNullable(this.assignedComponent);
     }
     /**
      * Standard item with key as applied to this standard assignment over the given scope
      * 
-     */
+    */
     public Optional<AssignedStandardItemResponse> getAssignedStandard() {
         return Optional.ofNullable(this.assignedStandard);
     }
     /**
      * description of the standardAssignment
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * display name of the standardAssignment
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * expected effect of this assignment (Disable/Exempt/etc)
      * 
-     */
+    */
     public Optional<String> getEffect() {
         return Optional.ofNullable(this.effect);
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Expiration date of this assignment as a full ISO date
      * 
-     */
+    */
     public Optional<String> getExpiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of the resource
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Location where the resource is stored
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
-     */
+    */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * A list of key value pairs that describe the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -397,7 +397,6 @@ public final class GetAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssignmentResult build() {
             return new GetAssignmentResult(additionalData, assignedComponent, assignedStandard, description, displayName, effect, etag, expiresOn, id, kind, location, metadata, name, scope, systemData, tags, type);
         }

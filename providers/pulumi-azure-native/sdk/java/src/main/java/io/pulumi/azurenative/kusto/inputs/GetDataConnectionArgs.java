@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dataConnectionName", required=true)
-    private final String dataConnectionName;
+      private final String dataConnectionName;
 
     public String getDataConnectionName() {
         return this.dataConnectionName;
@@ -39,7 +39,7 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -50,7 +50,7 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDataConnectionArgs build() {
             return new GetDataConnectionArgs(clusterName, dataConnectionName, databaseName, resourceGroupName);
         }

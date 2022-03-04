@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse {
     /**
      * The number of feature permutations to consider when approximating the Shapley values.
      * 
-     */
+    */
     public Integer getNumPaths() {
         return this.numPaths;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse {
             this.numPaths = Objects.requireNonNull(numPaths);
             return this;
         }
-
         public GoogleCloudMlV1__SampledShapleyAttributionResponse build() {
             return new GoogleCloudMlV1__SampledShapleyAttributionResponse(numPaths);
         }

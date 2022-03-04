@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.WebChatSiteResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class WebChatChannelPropertiesResponse {
     /**
      * The list of Web Chat sites
      * 
-     */
+    */
     public List<WebChatSiteResponse> getSites() {
         return this.sites == null ? List.of() : this.sites;
     }
     /**
      * Web chat control embed code
      * 
-     */
+    */
     public String getWebChatEmbedCode() {
         return this.webChatEmbedCode;
     }
@@ -77,7 +77,6 @@ public final class WebChatChannelPropertiesResponse {
             this.webChatEmbedCode = Objects.requireNonNull(webChatEmbedCode);
             return this;
         }
-
         public WebChatChannelPropertiesResponse build() {
             return new WebChatChannelPropertiesResponse(sites, webChatEmbedCode);
         }

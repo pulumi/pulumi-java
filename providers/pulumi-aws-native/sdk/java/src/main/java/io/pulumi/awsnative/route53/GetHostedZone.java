@@ -6,17 +6,33 @@ package io.pulumi.awsnative.route53;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53.inputs.GetHostedZoneArgs;
 import io.pulumi.awsnative.route53.outputs.GetHostedZoneResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHostedZone {
-/**
- * Resource schema for AWS::Route53::HostedZone.
+    private GetHostedZone() {}
+    public interface BuilderApplicator {
+        public void apply(GetHostedZoneArgs.Builder a);
+    }
+    private static GetHostedZoneArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHostedZoneArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Route53::HostedZone.
  * 
- */
+     */
+    public static CompletableFuture<GetHostedZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Route53::HostedZone.
+     * 
+     */
     public static CompletableFuture<GetHostedZoneResult> invokeAsync(GetHostedZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getHostedZone", TypeShape.of(GetHostedZoneResult.class), args == null ? GetHostedZoneArgs.Empty : args, Utilities.withVersion(options));
     }

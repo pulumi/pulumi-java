@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.KeyVaultPropertiesResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable ResourceIdentityResponse identity;
+      private final @Nullable ResourceIdentityResponse identity;
 
     public Optional<ResourceIdentityResponse> getIdentity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
@@ -36,7 +36,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+      private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
@@ -47,7 +47,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -58,7 +58,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -127,7 +127,6 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(identity, keyVaultProperties, status, type);
         }

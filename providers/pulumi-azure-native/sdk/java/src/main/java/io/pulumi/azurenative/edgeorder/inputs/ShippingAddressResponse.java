@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="addressType")
-    private final @Nullable String addressType;
+      private final @Nullable String addressType;
 
     public Optional<String> getAddressType() {
         return this.addressType == null ? Optional.empty() : Optional.ofNullable(this.addressType);
@@ -34,7 +34,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="city")
-    private final @Nullable String city;
+      private final @Nullable String city;
 
     public Optional<String> getCity() {
         return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
@@ -45,7 +45,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="companyName")
-    private final @Nullable String companyName;
+      private final @Nullable String companyName;
 
     public Optional<String> getCompanyName() {
         return this.companyName == null ? Optional.empty() : Optional.ofNullable(this.companyName);
@@ -56,7 +56,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="country", required=true)
-    private final String country;
+      private final String country;
 
     public String getCountry() {
         return this.country;
@@ -67,7 +67,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="postalCode")
-    private final @Nullable String postalCode;
+      private final @Nullable String postalCode;
 
     public Optional<String> getPostalCode() {
         return this.postalCode == null ? Optional.empty() : Optional.ofNullable(this.postalCode);
@@ -78,7 +78,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="stateOrProvince")
-    private final @Nullable String stateOrProvince;
+      private final @Nullable String stateOrProvince;
 
     public Optional<String> getStateOrProvince() {
         return this.stateOrProvince == null ? Optional.empty() : Optional.ofNullable(this.stateOrProvince);
@@ -89,7 +89,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="streetAddress1", required=true)
-    private final String streetAddress1;
+      private final String streetAddress1;
 
     public String getStreetAddress1() {
         return this.streetAddress1;
@@ -100,7 +100,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="streetAddress2")
-    private final @Nullable String streetAddress2;
+      private final @Nullable String streetAddress2;
 
     public Optional<String> getStreetAddress2() {
         return this.streetAddress2 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress2);
@@ -111,7 +111,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="streetAddress3")
-    private final @Nullable String streetAddress3;
+      private final @Nullable String streetAddress3;
 
     public Optional<String> getStreetAddress3() {
         return this.streetAddress3 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress3);
@@ -122,7 +122,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="zipExtendedCode")
-    private final @Nullable String zipExtendedCode;
+      private final @Nullable String zipExtendedCode;
 
     public Optional<String> getZipExtendedCode() {
         return this.zipExtendedCode == null ? Optional.empty() : Optional.ofNullable(this.zipExtendedCode);
@@ -251,7 +251,6 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
             this.zipExtendedCode = zipExtendedCode;
             return this;
         }
-
         public ShippingAddressResponse build() {
             return new ShippingAddressResponse(addressType, city, companyName, country, postalCode, stateOrProvince, streetAddress1, streetAddress2, streetAddress3, zipExtendedCode);
         }

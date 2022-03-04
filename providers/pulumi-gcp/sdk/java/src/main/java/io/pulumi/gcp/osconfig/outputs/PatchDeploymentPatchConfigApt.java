@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,7 +44,7 @@ public final class PatchDeploymentPatchConfigApt {
     /**
      * List of KBs to exclude from update.
      * 
-     */
+    */
     public List<String> getExcludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
@@ -53,7 +53,7 @@ public final class PatchDeploymentPatchConfigApt {
      * If these packages are not installed, they will be ignored. This field cannot be specified with
      * any other patch configuration fields.
      * 
-     */
+    */
     public List<String> getExclusivePackages() {
         return this.exclusivePackages == null ? List.of() : this.exclusivePackages;
     }
@@ -61,7 +61,7 @@ public final class PatchDeploymentPatchConfigApt {
      * By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
      * Possible values are `DIST` and `UPGRADE`.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -104,7 +104,6 @@ public final class PatchDeploymentPatchConfigApt {
             this.type = type;
             return this;
         }
-
         public PatchDeploymentPatchConfigApt build() {
             return new PatchDeploymentPatchConfigApt(excludes, exclusivePackages, type);
         }

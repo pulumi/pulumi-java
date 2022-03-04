@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.TimeSeriesFilterRatioResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.TimeSeriesFilterResponse;
 import java.lang.String;
@@ -47,28 +47,28 @@ public final class TimeSeriesQueryResponse {
     /**
      * Filter parameters to fetch time series.
      * 
-     */
+    */
     public TimeSeriesFilterResponse getTimeSeriesFilter() {
         return this.timeSeriesFilter;
     }
     /**
      * Parameters to fetch a ratio between two time series filters.
      * 
-     */
+    */
     public TimeSeriesFilterRatioResponse getTimeSeriesFilterRatio() {
         return this.timeSeriesFilterRatio;
     }
     /**
      * A query used to fetch time series.
      * 
-     */
+    */
     public String getTimeSeriesQueryLanguage() {
         return this.timeSeriesQueryLanguage;
     }
     /**
      * The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
      * 
-     */
+    */
     public String getUnitOverride() {
         return this.unitOverride;
     }
@@ -118,7 +118,6 @@ public final class TimeSeriesQueryResponse {
             this.unitOverride = Objects.requireNonNull(unitOverride);
             return this;
         }
-
         public TimeSeriesQueryResponse build() {
             return new TimeSeriesQueryResponse(timeSeriesFilter, timeSeriesFilterRatio, timeSeriesQueryLanguage, unitOverride);
         }

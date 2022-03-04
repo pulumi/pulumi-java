@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.outputs.StackSetDeploymentTargets;
 import io.pulumi.awsnative.cloudformation.outputs.StackSetParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,14 +41,14 @@ public final class StackSetStackInstances {
     /**
      * A list of stack set parameters whose values you want to override in the selected stack instances.
      * 
-     */
+    */
     public List<StackSetParameter> getParameterOverrides() {
         return this.parameterOverrides == null ? List.of() : this.parameterOverrides;
     }
     /**
      * The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
      * 
-     */
+    */
     public List<String> getRegions() {
         return this.regions;
     }
@@ -91,7 +91,6 @@ public final class StackSetStackInstances {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-
         public StackSetStackInstances build() {
             return new StackSetStackInstances(deploymentTargets, parameterOverrides, regions);
         }

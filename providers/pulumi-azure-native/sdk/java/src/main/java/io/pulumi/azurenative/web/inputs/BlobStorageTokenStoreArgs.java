@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sasUrlSettingName")
-    private final @Nullable Input<String> sasUrlSettingName;
+      private final @Nullable Input<String> sasUrlSettingName;
 
     public Input<String> getSasUrlSettingName() {
         return this.sasUrlSettingName == null ? Input.empty() : this.sasUrlSettingName;
@@ -66,7 +66,6 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
             this.sasUrlSettingName = Input.ofNullable(sasUrlSettingName);
             return this;
         }
-
         public BlobStorageTokenStoreArgs build() {
             return new BlobStorageTokenStoreArgs(sasUrlSettingName);
         }

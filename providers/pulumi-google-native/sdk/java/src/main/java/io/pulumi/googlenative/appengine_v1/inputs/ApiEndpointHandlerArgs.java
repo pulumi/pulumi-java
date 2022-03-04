@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApiEndpointHandlerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scriptPath")
-    private final @Nullable Input<String> scriptPath;
+      private final @Nullable Input<String> scriptPath;
 
     public Input<String> getScriptPath() {
         return this.scriptPath == null ? Input.empty() : this.scriptPath;
@@ -66,7 +66,6 @@ public final class ApiEndpointHandlerArgs extends io.pulumi.resources.ResourceAr
             this.scriptPath = Input.ofNullable(scriptPath);
             return this;
         }
-
         public ApiEndpointHandlerArgs build() {
             return new ApiEndpointHandlerArgs(scriptPath);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.GetCellArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.GetCellResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCell {
-/**
- * The API Schema for AWS Route53 Recovery Readiness Cells.
+    private GetCell() {}
+    public interface BuilderApplicator {
+        public void apply(GetCellArgs.Builder a);
+    }
+    private static GetCellArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCellArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The API Schema for AWS Route53 Recovery Readiness Cells.
  * 
- */
+     */
+    public static CompletableFuture<GetCellResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The API Schema for AWS Route53 Recovery Readiness Cells.
+     * 
+     */
     public static CompletableFuture<GetCellResult> invokeAsync(GetCellArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getCell", TypeShape.of(GetCellResult.class), args == null ? GetCellArgs.Empty : args, Utilities.withVersion(options));
     }

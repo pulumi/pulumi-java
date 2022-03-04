@@ -5,8 +5,8 @@ package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.AccessApprovalSettingsArgs;
 import io.pulumi.gcp.folder.inputs.AccessApprovalSettingsState;
@@ -125,6 +125,37 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
         return this.notificationEmails;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AccessApprovalSettingsArgs.Builder a);
+    }
+    private static io.pulumi.gcp.folder.AccessApprovalSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.folder.AccessApprovalSettingsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AccessApprovalSettings(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AccessApprovalSettings(String name) {
+        this(name, AccessApprovalSettingsArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AccessApprovalSettings(String name, AccessApprovalSettingsArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

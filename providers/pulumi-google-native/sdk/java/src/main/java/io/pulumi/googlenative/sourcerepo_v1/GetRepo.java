@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sourcerepo_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRepo {
-/**
- * Returns information about a repo.
+    private GetRepo() {}
+    public interface BuilderApplicator {
+        public void apply(GetRepoArgs.Builder a);
+    }
+    private static GetRepoArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRepoArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns information about a repo.
  * 
- */
+     */
+    public static CompletableFuture<GetRepoResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns information about a repo.
+     * 
+     */
     public static CompletableFuture<GetRepoResult> invokeAsync(GetRepoArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sourcerepo/v1:getRepo", TypeShape.of(GetRepoResult.class), args == null ? GetRepoArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.delegatednetwork.outputs;
 
 import io.pulumi.azurenative.delegatednetwork.outputs.ControllerDetailsResponse;
 import io.pulumi.azurenative.delegatednetwork.outputs.OrchestratorIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -127,105 +127,105 @@ public final class GetOrchestratorInstanceServiceDetailsResult {
     /**
      * K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
-     */
+    */
     public Optional<String> getApiServerEndpoint() {
         return Optional.ofNullable(this.apiServerEndpoint);
     }
     /**
      * RootCA certificate of kubernetes cluster base64 encoded
      * 
-     */
+    */
     public Optional<String> getClusterRootCA() {
         return Optional.ofNullable(this.clusterRootCA);
     }
     /**
      * Properties of the controller.
      * 
-     */
+    */
     public ControllerDetailsResponse getControllerDetails() {
         return this.controllerDetails;
     }
     /**
      * An identifier that represents the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the orchestrator
      * 
-     */
+    */
     public Optional<OrchestratorIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of workbook. Choices are user and shared.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * AAD ID used with apiserver
      * 
-     */
+    */
     public Optional<String> getOrchestratorAppId() {
         return Optional.ofNullable(this.orchestratorAppId);
     }
     /**
      * TenantID of server App ID
      * 
-     */
+    */
     public Optional<String> getOrchestratorTenantId() {
         return Optional.ofNullable(this.orchestratorTenantId);
     }
     /**
      * private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
-     */
+    */
     public Optional<String> getPrivateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
      * The current state of orchestratorInstance resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource guid.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -352,7 +352,6 @@ public final class GetOrchestratorInstanceServiceDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOrchestratorInstanceServiceDetailsResult build() {
             return new GetOrchestratorInstanceServiceDetailsResult(apiServerEndpoint, clusterRootCA, controllerDetails, id, identity, kind, location, name, orchestratorAppId, orchestratorTenantId, privateLinkResourceId, provisioningState, resourceGuid, tags, type);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.keyvault;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.keyvault.inputs.GetSecretArgs;
 import io.pulumi.azurenative.keyvault.outputs.GetSecretResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecret {
-/**
- * Resource information with extended details.
+    private GetSecret() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecretArgs.Builder a);
+    }
+    private static GetSecretArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecretArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource information with extended details.
  * API Version: 2019-09-01.
  * 
- *
- * Resource information with extended details.
+     *
+     * Resource information with extended details.
  * 
- */
+     */
+    public static CompletableFuture<GetSecretResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource information with extended details.
+     * API Version: 2019-09-01.
+     * 
+     *
+         * Resource information with extended details.
+     * 
+     */
     public static CompletableFuture<GetSecretResult> invokeAsync(GetSecretArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:keyvault:getSecret", TypeShape.of(GetSecretResult.class), args == null ? GetSecretArgs.Empty : args, Utilities.withVersion(options));
     }

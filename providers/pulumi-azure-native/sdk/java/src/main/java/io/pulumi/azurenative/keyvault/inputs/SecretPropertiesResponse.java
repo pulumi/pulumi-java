@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.SecretAttributesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable SecretAttributesResponse attributes;
+      private final @Nullable SecretAttributesResponse attributes;
 
     public Optional<SecretAttributesResponse> getAttributes() {
         return this.attributes == null ? Optional.empty() : Optional.ofNullable(this.attributes);
@@ -35,7 +35,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable String contentType;
+      private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
@@ -46,7 +46,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="secretUri", required=true)
-    private final String secretUri;
+      private final String secretUri;
 
     public String getSecretUri() {
         return this.secretUri;
@@ -57,7 +57,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="secretUriWithVersion", required=true)
-    private final String secretUriWithVersion;
+      private final String secretUriWithVersion;
 
     public String getSecretUriWithVersion() {
         return this.secretUriWithVersion;
@@ -68,7 +68,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -147,7 +147,6 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.value = value;
             return this;
         }
-
         public SecretPropertiesResponse build() {
             return new SecretPropertiesResponse(attributes, contentType, secretUri, secretUriWithVersion, value);
         }

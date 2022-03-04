@@ -8,7 +8,7 @@ import io.pulumi.azurenative.delegatednetwork.inputs.ControllerDetailsArgs;
 import io.pulumi.azurenative.delegatednetwork.inputs.OrchestratorIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="apiServerEndpoint")
-    private final @Nullable Input<String> apiServerEndpoint;
+      private final @Nullable Input<String> apiServerEndpoint;
 
     public Input<String> getApiServerEndpoint() {
         return this.apiServerEndpoint == null ? Input.empty() : this.apiServerEndpoint;
@@ -35,7 +35,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="clusterRootCA")
-    private final @Nullable Input<String> clusterRootCA;
+      private final @Nullable Input<String> clusterRootCA;
 
     public Input<String> getClusterRootCA() {
         return this.clusterRootCA == null ? Input.empty() : this.clusterRootCA;
@@ -46,7 +46,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="controllerDetails", required=true)
-    private final Input<ControllerDetailsArgs> controllerDetails;
+      private final Input<ControllerDetailsArgs> controllerDetails;
 
     public Input<ControllerDetailsArgs> getControllerDetails() {
         return this.controllerDetails;
@@ -57,7 +57,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<OrchestratorIdentityArgs> identity;
+      private final @Nullable Input<OrchestratorIdentityArgs> identity;
 
     public Input<OrchestratorIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -68,7 +68,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,OrchestratorKind>> kind;
+      private final Input<Either<String,OrchestratorKind>> kind;
 
     public Input<Either<String,OrchestratorKind>> getKind() {
         return this.kind;
@@ -79,7 +79,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -90,7 +90,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="orchestratorAppId")
-    private final @Nullable Input<String> orchestratorAppId;
+      private final @Nullable Input<String> orchestratorAppId;
 
     public Input<String> getOrchestratorAppId() {
         return this.orchestratorAppId == null ? Input.empty() : this.orchestratorAppId;
@@ -101,7 +101,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="orchestratorTenantId")
-    private final @Nullable Input<String> orchestratorTenantId;
+      private final @Nullable Input<String> orchestratorTenantId;
 
     public Input<String> getOrchestratorTenantId() {
         return this.orchestratorTenantId == null ? Input.empty() : this.orchestratorTenantId;
@@ -112,7 +112,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="privateLinkResourceId")
-    private final @Nullable Input<String> privateLinkResourceId;
+      private final @Nullable Input<String> privateLinkResourceId;
 
     public Input<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
@@ -123,7 +123,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -134,7 +134,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -145,7 +145,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -354,7 +354,6 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public OrchestratorInstanceServiceDetailsArgs build() {
             return new OrchestratorInstanceServiceDetailsArgs(apiServerEndpoint, clusterRootCA, controllerDetails, identity, kind, location, orchestratorAppId, orchestratorTenantId, privateLinkResourceId, resourceGroupName, resourceName, tags);
         }

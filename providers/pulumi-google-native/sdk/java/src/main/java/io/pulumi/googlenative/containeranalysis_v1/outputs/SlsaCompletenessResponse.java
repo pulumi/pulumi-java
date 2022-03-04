@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class SlsaCompletenessResponse {
     /**
      * If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
      * 
-     */
+    */
     public Boolean getArguments() {
         return this.arguments;
     }
     /**
      * If true, the builder claims that recipe.environment is claimed to be complete.
      * 
-     */
+    */
     public Boolean getEnvironment() {
         return this.environment;
     }
     /**
      * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".
      * 
-     */
+    */
     public Boolean getMaterials() {
         return this.materials;
     }
@@ -95,7 +95,6 @@ public final class SlsaCompletenessResponse {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
-
         public SlsaCompletenessResponse build() {
             return new SlsaCompletenessResponse(arguments, environment, materials);
         }

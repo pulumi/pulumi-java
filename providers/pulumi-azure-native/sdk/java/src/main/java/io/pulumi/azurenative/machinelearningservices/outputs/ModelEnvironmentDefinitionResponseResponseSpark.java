@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.SparkMavenPackageResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,21 +43,21 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark {
     /**
      * The Spark packages to use.
      * 
-     */
+    */
     public List<SparkMavenPackageResponse> getPackages() {
         return this.packages == null ? List.of() : this.packages;
     }
     /**
      * Whether to precache the packages.
      * 
-     */
+    */
     public Optional<Boolean> getPrecachePackages() {
         return Optional.ofNullable(this.precachePackages);
     }
     /**
      * The list of spark repositories.
      * 
-     */
+    */
     public List<String> getRepositories() {
         return this.repositories == null ? List.of() : this.repositories;
     }
@@ -100,7 +100,6 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark {
             this.repositories = repositories;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponseSpark build() {
             return new ModelEnvironmentDefinitionResponseResponseSpark(packages, precachePackages, repositories);
         }

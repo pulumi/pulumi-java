@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DiskSecretResponse {
     /**
      * Bit Locker key of the disk which can be used to unlock the disk to copy data.
      * 
-     */
+    */
     public String getBitLockerKey() {
         return this.bitLockerKey;
     }
     /**
      * Serial number of the assigned disk.
      * 
-     */
+    */
     public String getDiskSerialNumber() {
         return this.diskSerialNumber;
     }
@@ -74,7 +74,6 @@ public final class DiskSecretResponse {
             this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
             return this;
         }
-
         public DiskSecretResponse build() {
             return new DiskSecretResponse(bitLockerKey, diskSerialNumber);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.TimeSpanResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="digest", required=true)
-    private final String digest;
+      private final String digest;
 
     public String getDigest() {
         return this.digest;
@@ -33,7 +33,7 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pushTiming", required=true)
-    private final TimeSpanResponse pushTiming;
+      private final TimeSpanResponse pushTiming;
 
     public TimeSpanResponse getPushTiming() {
         return this.pushTiming;
@@ -103,7 +103,6 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
             this.pushTiming = Objects.requireNonNull(pushTiming);
             return this;
         }
-
         public BuiltImageResponse build() {
             return new BuiltImageResponse(digest, name, pushTiming);
         }

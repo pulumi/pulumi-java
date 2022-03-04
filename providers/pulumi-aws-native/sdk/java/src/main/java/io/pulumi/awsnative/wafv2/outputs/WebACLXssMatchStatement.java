@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.WebACLTextTransformation;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -60,7 +60,6 @@ public final class WebACLXssMatchStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public WebACLXssMatchStatement build() {
             return new WebACLXssMatchStatement(fieldToMatch, textTransformations);
         }

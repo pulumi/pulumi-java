@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.DomainMappingStatusCondition;
 import io.pulumi.gcp.cloudrun.outputs.DomainMappingStatusResourceRecord;
 import java.lang.Integer;
@@ -90,7 +90,6 @@ public final class DomainMappingStatus {
             this.resourceRecords = resourceRecords;
             return this;
         }
-
         public DomainMappingStatus build() {
             return new DomainMappingStatus(conditions, mappedRouteName, observedGeneration, resourceRecords);
         }

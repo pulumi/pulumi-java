@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
 import io.pulumi.awsnative.route53recoverycontrol.enums.RoutingControlStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class GetRoutingControlResult {
     /**
      * The name of the routing control. You can use any non-white space character in the name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Amazon Resource Name (ARN) of the routing control.
      * 
-     */
+    */
     public Optional<String> getRoutingControlArn() {
         return Optional.ofNullable(this.routingControlArn);
     }
     /**
      * The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
-     */
+    */
     public Optional<RoutingControlStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -98,7 +98,6 @@ public final class GetRoutingControlResult {
             this.status = status;
             return this;
         }
-
         public GetRoutingControlResult build() {
             return new GetRoutingControlResult(name, routingControlArn, status);
         }

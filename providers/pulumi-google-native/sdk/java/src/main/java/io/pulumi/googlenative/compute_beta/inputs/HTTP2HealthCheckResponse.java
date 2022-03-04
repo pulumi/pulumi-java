@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class HTTP2HealthCheckResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -29,7 +29,7 @@ public final class HTTP2HealthCheckResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -40,7 +40,7 @@ public final class HTTP2HealthCheckResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="portName", required=true)
-    private final String portName;
+      private final String portName;
 
     public String getPortName() {
         return this.portName;
@@ -51,7 +51,7 @@ public final class HTTP2HealthCheckResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="portSpecification", required=true)
-    private final String portSpecification;
+      private final String portSpecification;
 
     public String getPortSpecification() {
         return this.portSpecification;
@@ -62,7 +62,7 @@ public final class HTTP2HealthCheckResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="proxyHeader", required=true)
-    private final String proxyHeader;
+      private final String proxyHeader;
 
     public String getProxyHeader() {
         return this.proxyHeader;
@@ -73,7 +73,7 @@ public final class HTTP2HealthCheckResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="requestPath", required=true)
-    private final String requestPath;
+      private final String requestPath;
 
     public String getRequestPath() {
         return this.requestPath;
@@ -84,7 +84,7 @@ public final class HTTP2HealthCheckResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="response", required=true)
-    private final String response;
+      private final String response;
 
     public String getResponse() {
         return this.response;
@@ -183,7 +183,6 @@ public final class HTTP2HealthCheckResponse extends io.pulumi.resources.InvokeAr
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public HTTP2HealthCheckResponse build() {
             return new HTTP2HealthCheckResponse(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }

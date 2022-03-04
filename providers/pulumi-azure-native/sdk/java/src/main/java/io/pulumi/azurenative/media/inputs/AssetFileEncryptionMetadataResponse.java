@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="assetFileId", required=true)
-    private final String assetFileId;
+      private final String assetFileId;
 
     public String getAssetFileId() {
         return this.assetFileId;
@@ -34,7 +34,7 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="assetFileName")
-    private final @Nullable String assetFileName;
+      private final @Nullable String assetFileName;
 
     public Optional<String> getAssetFileName() {
         return this.assetFileName == null ? Optional.empty() : Optional.ofNullable(this.assetFileName);
@@ -45,7 +45,7 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="initializationVector")
-    private final @Nullable String initializationVector;
+      private final @Nullable String initializationVector;
 
     public Optional<String> getInitializationVector() {
         return this.initializationVector == null ? Optional.empty() : Optional.ofNullable(this.initializationVector);
@@ -104,7 +104,6 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
             this.initializationVector = initializationVector;
             return this;
         }
-
         public AssetFileEncryptionMetadataResponse build() {
             return new AssetFileEncryptionMetadataResponse(assetFileId, assetFileName, initializationVector);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.outputs;
 import io.pulumi.azurenative.deploymentmanager.outputs.ApiKeyAuthenticationResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.RolloutIdentityAuthenticationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -41,21 +41,21 @@ public final class RestRequestResponse {
     /**
      * The authentication information required in the request to the health provider.
      * 
-     */
+    */
     public Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> getAuthentication() {
         return this.authentication;
     }
     /**
      * The HTTP method to use for the request.
      * 
-     */
+    */
     public String getMethod() {
         return this.method;
     }
     /**
      * The HTTP URI to use for the request.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -98,7 +98,6 @@ public final class RestRequestResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RestRequestResponse build() {
             return new RestRequestResponse(authentication, method, uri);
         }

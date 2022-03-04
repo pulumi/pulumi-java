@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class MonitoredResourceResponse {
     /**
      * The ARM id of the resource.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reason for why the resource is sending logs (or why it is not sending).
      * 
-     */
+    */
     public Optional<String> getReasonForLogsStatus() {
         return Optional.ofNullable(this.reasonForLogsStatus);
     }
     /**
      * Reason for why the resource is sending metrics (or why it is not sending).
      * 
-     */
+    */
     public Optional<String> getReasonForMetricsStatus() {
         return Optional.ofNullable(this.reasonForMetricsStatus);
     }
     /**
      * Flag indicating if resource is sending logs to Logz.
      * 
-     */
+    */
     public Optional<Boolean> getSendingLogs() {
         return Optional.ofNullable(this.sendingLogs);
     }
     /**
      * Flag indicating if resource is sending metrics to Logz.
      * 
-     */
+    */
     public Optional<Boolean> getSendingMetrics() {
         return Optional.ofNullable(this.sendingMetrics);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
@@ -162,7 +162,6 @@ public final class MonitoredResourceResponse {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(id, reasonForLogsStatus, reasonForMetricsStatus, sendingLogs, sendingMetrics, systemData);
         }

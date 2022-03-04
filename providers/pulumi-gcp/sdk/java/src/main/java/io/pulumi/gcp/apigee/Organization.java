@@ -5,8 +5,8 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.OrganizationArgs;
 import io.pulumi.gcp.apigee.inputs.OrganizationState;
@@ -198,6 +198,37 @@ public class Organization extends io.pulumi.resources.CustomResource {
         return this.subscriptionType;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OrganizationArgs.Builder a);
+    }
+    private static io.pulumi.gcp.apigee.OrganizationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.apigee.OrganizationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Organization(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Organization(String name) {
+        this(name, OrganizationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Organization(String name, OrganizationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.maintenance.outputs;
 
 import io.pulumi.azurenative.maintenance.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,49 +69,49 @@ public final class GetConfigurationAssignmentResult {
     /**
      * Fully qualified identifier of the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Location of the resource
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The maintenance configuration Id
      * 
-     */
+    */
     public Optional<String> getMaintenanceConfigurationId() {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
     /**
      * Name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The unique resourceId
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -182,7 +182,6 @@ public final class GetConfigurationAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationAssignmentResult build() {
             return new GetConfigurationAssignmentResult(id, location, maintenanceConfigurationId, name, resourceId, systemData, type);
         }

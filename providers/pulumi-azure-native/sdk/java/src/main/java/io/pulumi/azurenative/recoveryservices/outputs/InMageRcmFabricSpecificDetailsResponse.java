@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.PushInstallerDetailsRespon
 import io.pulumi.azurenative.recoveryservices.outputs.RcmProxyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.ReplicationAgentDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.ReprotectAgentDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -131,28 +131,28 @@ public final class InMageRcmFabricSpecificDetailsResponse {
     /**
      * The list of agent details.
      * 
-     */
+    */
     public List<AgentDetailsResponse> getAgentDetails() {
         return this.agentDetails;
     }
     /**
      * The control plane Uri.
      * 
-     */
+    */
     public String getControlPlaneUri() {
         return this.controlPlaneUri;
     }
     /**
      * The data plane Uri.
      * 
-     */
+    */
     public String getDataPlaneUri() {
         return this.dataPlaneUri;
     }
     /**
      * The list of DRAs.
      * 
-     */
+    */
     public List<DraDetailsResponse> getDras() {
         return this.dras;
     }
@@ -160,77 +160,77 @@ public final class InMageRcmFabricSpecificDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'InMageRcm'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The ARM Id of the physical site.
      * 
-     */
+    */
     public String getPhysicalSiteId() {
         return this.physicalSiteId;
     }
     /**
      * The list of process servers.
      * 
-     */
+    */
     public List<ProcessServerDetailsResponse> getProcessServers() {
         return this.processServers;
     }
     /**
      * The list of push installers.
      * 
-     */
+    */
     public List<PushInstallerDetailsResponse> getPushInstallers() {
         return this.pushInstallers;
     }
     /**
      * The list of RCM proxies.
      * 
-     */
+    */
     public List<RcmProxyDetailsResponse> getRcmProxies() {
         return this.rcmProxies;
     }
     /**
      * The list of replication agents.
      * 
-     */
+    */
     public List<ReplicationAgentDetailsResponse> getReplicationAgents() {
         return this.replicationAgents;
     }
     /**
      * The list of reprotect agents.
      * 
-     */
+    */
     public List<ReprotectAgentDetailsResponse> getReprotectAgents() {
         return this.reprotectAgents;
     }
     /**
      * The service container Id.
      * 
-     */
+    */
     public String getServiceContainerId() {
         return this.serviceContainerId;
     }
     /**
      * The service endpoint.
      * 
-     */
+    */
     public String getServiceEndpoint() {
         return this.serviceEndpoint;
     }
     /**
      * The service resource Id.
      * 
-     */
+    */
     public String getServiceResourceId() {
         return this.serviceResourceId;
     }
     /**
      * The ARM Id of the VMware site.
      * 
-     */
+    */
     public String getVmwareSiteId() {
         return this.vmwareSiteId;
     }
@@ -357,7 +357,6 @@ public final class InMageRcmFabricSpecificDetailsResponse {
             this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
             return this;
         }
-
         public InMageRcmFabricSpecificDetailsResponse build() {
             return new InMageRcmFabricSpecificDetailsResponse(agentDetails, controlPlaneUri, dataPlaneUri, dras, instanceType, physicalSiteId, processServers, pushInstallers, rcmProxies, replicationAgents, reprotectAgents, serviceContainerId, serviceEndpoint, serviceResourceId, vmwareSiteId);
         }

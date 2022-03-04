@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AdBreakResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.EditAtomResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.ElementaryStreamResponse;
@@ -31,7 +31,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="adBreaks", required=true)
-    private final List<AdBreakResponse> adBreaks;
+      private final List<AdBreakResponse> adBreaks;
 
     public List<AdBreakResponse> getAdBreaks() {
         return this.adBreaks;
@@ -42,7 +42,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="editList", required=true)
-    private final List<EditAtomResponse> editList;
+      private final List<EditAtomResponse> editList;
 
     public List<EditAtomResponse> getEditList() {
         return this.editList;
@@ -53,7 +53,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elementaryStreams", required=true)
-    private final List<ElementaryStreamResponse> elementaryStreams;
+      private final List<ElementaryStreamResponse> elementaryStreams;
 
     public List<ElementaryStreamResponse> getElementaryStreams() {
         return this.elementaryStreams;
@@ -64,7 +64,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputs", required=true)
-    private final List<InputResponse> inputs;
+      private final List<InputResponse> inputs;
 
     public List<InputResponse> getInputs() {
         return this.inputs;
@@ -75,7 +75,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="manifests", required=true)
-    private final List<ManifestResponse> manifests;
+      private final List<ManifestResponse> manifests;
 
     public List<ManifestResponse> getManifests() {
         return this.manifests;
@@ -86,7 +86,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="muxStreams", required=true)
-    private final List<MuxStreamResponse> muxStreams;
+      private final List<MuxStreamResponse> muxStreams;
 
     public List<MuxStreamResponse> getMuxStreams() {
         return this.muxStreams;
@@ -97,7 +97,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="output", required=true)
-    private final OutputResponse output;
+      private final OutputResponse output;
 
     public OutputResponse getOutput() {
         return this.output;
@@ -108,7 +108,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="overlays", required=true)
-    private final List<OverlayResponse> overlays;
+      private final List<OverlayResponse> overlays;
 
     public List<OverlayResponse> getOverlays() {
         return this.overlays;
@@ -119,7 +119,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pubsubDestination", required=true)
-    private final PubsubDestinationResponse pubsubDestination;
+      private final PubsubDestinationResponse pubsubDestination;
 
     public PubsubDestinationResponse getPubsubDestination() {
         return this.pubsubDestination;
@@ -130,7 +130,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="spriteSheets", required=true)
-    private final List<SpriteSheetResponse> spriteSheets;
+      private final List<SpriteSheetResponse> spriteSheets;
 
     public List<SpriteSheetResponse> getSpriteSheets() {
         return this.spriteSheets;
@@ -259,7 +259,6 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.spriteSheets = Objects.requireNonNull(spriteSheets);
             return this;
         }
-
         public JobConfigResponse build() {
             return new JobConfigResponse(adBreaks, editList, elementaryStreams, inputs, manifests, muxStreams, output, overlays, pubsubDestination, spriteSheets);
         }

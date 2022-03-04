@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="product", required=true)
-    private final String product;
+      private final String product;
 
     public String getProduct() {
         return this.product;
@@ -45,7 +45,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="promotionCode")
-    private final @Nullable String promotionCode;
+      private final @Nullable String promotionCode;
 
     public Optional<String> getPromotionCode() {
         return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
@@ -56,7 +56,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publisher", required=true)
-    private final String publisher;
+      private final String publisher;
 
     public String getPublisher() {
         return this.publisher;
@@ -67,7 +67,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -146,7 +146,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public PlanResponse build() {
             return new PlanResponse(name, product, promotionCode, publisher, version);
         }

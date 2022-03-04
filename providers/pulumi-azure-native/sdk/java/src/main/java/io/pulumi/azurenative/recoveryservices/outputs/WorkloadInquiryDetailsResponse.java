@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.InquiryValidationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class WorkloadInquiryDetailsResponse {
     /**
      * Inquiry validation such as permissions and other backup validations.
      * 
-     */
+    */
     public Optional<InquiryValidationResponse> getInquiryValidation() {
         return Optional.ofNullable(this.inquiryValidation);
     }
     /**
      * Contains the protectable item Count inside this Container.
      * 
-     */
+    */
     public Optional<Double> getItemCount() {
         return Optional.ofNullable(this.itemCount);
     }
     /**
      * Type of the Workload such as SQL, Oracle etc.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -99,7 +99,6 @@ public final class WorkloadInquiryDetailsResponse {
             this.type = type;
             return this;
         }
-
         public WorkloadInquiryDetailsResponse build() {
             return new WorkloadInquiryDetailsResponse(inquiryValidation, itemCount, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ImageReferenceResponse {
     /**
      * This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * For example, UbuntuServer or WindowsServer.
      * 
-     */
+    */
     public Optional<String> getOffer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * For example, Canonical or MicrosoftWindowsServer.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * For example, 18.04-LTS or 2019-Datacenter.
      * 
-     */
+    */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -139,7 +139,6 @@ public final class ImageReferenceResponse {
             this.version = version;
             return this;
         }
-
         public ImageReferenceResponse build() {
             return new ImageReferenceResponse(id, offer, publisher, sku, version);
         }

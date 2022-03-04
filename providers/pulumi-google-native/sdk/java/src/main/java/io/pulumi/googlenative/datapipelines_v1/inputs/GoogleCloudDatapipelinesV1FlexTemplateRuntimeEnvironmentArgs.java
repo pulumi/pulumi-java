@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datapipelines_v1.enums.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal;
 import io.pulumi.googlenative.datapipelines_v1.enums.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration;
 import java.lang.Boolean;
@@ -29,7 +29,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="additionalExperiments")
-    private final @Nullable Input<List<String>> additionalExperiments;
+      private final @Nullable Input<List<String>> additionalExperiments;
 
     public Input<List<String>> getAdditionalExperiments() {
         return this.additionalExperiments == null ? Input.empty() : this.additionalExperiments;
@@ -40,7 +40,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="additionalUserLabels")
-    private final @Nullable Input<Map<String,String>> additionalUserLabels;
+      private final @Nullable Input<Map<String,String>> additionalUserLabels;
 
     public Input<Map<String,String>> getAdditionalUserLabels() {
         return this.additionalUserLabels == null ? Input.empty() : this.additionalUserLabels;
@@ -51,7 +51,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="enableStreamingEngine")
-    private final @Nullable Input<Boolean> enableStreamingEngine;
+      private final @Nullable Input<Boolean> enableStreamingEngine;
 
     public Input<Boolean> getEnableStreamingEngine() {
         return this.enableStreamingEngine == null ? Input.empty() : this.enableStreamingEngine;
@@ -62,7 +62,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="flexrsGoal")
-    private final @Nullable Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal> flexrsGoal;
+      private final @Nullable Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal> flexrsGoal;
 
     public Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal> getFlexrsGoal() {
         return this.flexrsGoal == null ? Input.empty() : this.flexrsGoal;
@@ -73,7 +73,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="ipConfiguration")
-    private final @Nullable Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration> ipConfiguration;
+      private final @Nullable Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration> ipConfiguration;
 
     public Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration> getIpConfiguration() {
         return this.ipConfiguration == null ? Input.empty() : this.ipConfiguration;
@@ -84,7 +84,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -95,7 +95,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -106,7 +106,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="maxWorkers")
-    private final @Nullable Input<Integer> maxWorkers;
+      private final @Nullable Input<Integer> maxWorkers;
 
     public Input<Integer> getMaxWorkers() {
         return this.maxWorkers == null ? Input.empty() : this.maxWorkers;
@@ -117,7 +117,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -128,7 +128,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="numWorkers")
-    private final @Nullable Input<Integer> numWorkers;
+      private final @Nullable Input<Integer> numWorkers;
 
     public Input<Integer> getNumWorkers() {
         return this.numWorkers == null ? Input.empty() : this.numWorkers;
@@ -139,7 +139,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="serviceAccountEmail")
-    private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -150,7 +150,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -161,7 +161,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="tempLocation")
-    private final @Nullable Input<String> tempLocation;
+      private final @Nullable Input<String> tempLocation;
 
     public Input<String> getTempLocation() {
         return this.tempLocation == null ? Input.empty() : this.tempLocation;
@@ -172,7 +172,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="workerRegion")
-    private final @Nullable Input<String> workerRegion;
+      private final @Nullable Input<String> workerRegion;
 
     public Input<String> getWorkerRegion() {
         return this.workerRegion == null ? Input.empty() : this.workerRegion;
@@ -183,7 +183,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="workerZone")
-    private final @Nullable Input<String> workerZone;
+      private final @Nullable Input<String> workerZone;
 
     public Input<String> getWorkerZone() {
         return this.workerZone == null ? Input.empty() : this.workerZone;
@@ -194,7 +194,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -463,7 +463,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs build() {
             return new GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs(additionalExperiments, additionalUserLabels, enableStreamingEngine, flexrsGoal, ipConfiguration, kmsKeyName, machineType, maxWorkers, network, numWorkers, serviceAccountEmail, subnetwork, tempLocation, workerRegion, workerZone, zone);
         }

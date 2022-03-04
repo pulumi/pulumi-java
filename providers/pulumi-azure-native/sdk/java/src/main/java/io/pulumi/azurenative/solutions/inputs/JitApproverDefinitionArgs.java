@@ -6,7 +6,7 @@ package io.pulumi.azurenative.solutions.inputs;
 import io.pulumi.azurenative.solutions.enums.JitApproverType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -36,7 +36,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -47,7 +47,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,JitApproverType>> type;
+      private final @Nullable Input<Either<String,JitApproverType>> type;
 
     public Input<Either<String,JitApproverType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -121,7 +121,6 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public JitApproverDefinitionArgs build() {
             return new JitApproverDefinitionArgs(displayName, id, type);
         }

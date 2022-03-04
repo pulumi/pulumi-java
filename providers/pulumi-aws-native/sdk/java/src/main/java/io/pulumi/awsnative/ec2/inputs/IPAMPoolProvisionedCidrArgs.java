@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class IPAMPoolProvisionedCidrArgs extends io.pulumi.resources.Resou
     public static final IPAMPoolProvisionedCidrArgs Empty = new IPAMPoolProvisionedCidrArgs();
 
     @InputImport(name="cidr", required=true)
-    private final Input<String> cidr;
+      private final Input<String> cidr;
 
     public Input<String> getCidr() {
         return this.cidr;
@@ -61,7 +61,6 @@ public final class IPAMPoolProvisionedCidrArgs extends io.pulumi.resources.Resou
             this.cidr = Input.of(Objects.requireNonNull(cidr));
             return this;
         }
-
         public IPAMPoolProvisionedCidrArgs build() {
             return new IPAMPoolProvisionedCidrArgs(cidr);
         }

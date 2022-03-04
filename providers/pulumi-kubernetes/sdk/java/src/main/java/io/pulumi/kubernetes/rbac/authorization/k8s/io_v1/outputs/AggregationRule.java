@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AggregationRule {
     /**
      * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole's permissions will be added
      * 
-     */
+    */
     public List<LabelSelector> getClusterRoleSelectors() {
         return this.clusterRoleSelectors == null ? List.of() : this.clusterRoleSelectors;
     }
@@ -54,7 +54,6 @@ public final class AggregationRule {
             this.clusterRoleSelectors = clusterRoleSelectors;
             return this;
         }
-
         public AggregationRule build() {
             return new AggregationRule(clusterRoleSelectors);
         }

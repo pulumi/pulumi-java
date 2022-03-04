@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,7 +49,7 @@ public final class DatabaseInstanceServerCaCert {
      * The [RFC 3339](https://tools.ietf.org/html/rfc3339)
      * formatted date time string indicating when this whitelist expires.
      * 
-     */
+    */
     public Optional<String> getExpirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -109,7 +109,6 @@ public final class DatabaseInstanceServerCaCert {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-
         public DatabaseInstanceServerCaCert build() {
             return new DatabaseInstanceServerCaCert(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,35 +53,35 @@ public final class GetEdgeModuleResult {
     /**
      * Internal ID generated for the instance of the Video Analyzer edge module.
      * 
-     */
+    */
     public String getEdgeModuleId() {
         return this.edgeModuleId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The system metadata relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -138,7 +138,6 @@ public final class GetEdgeModuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEdgeModuleResult build() {
             return new GetEdgeModuleResult(edgeModuleId, id, name, systemData, type);
         }

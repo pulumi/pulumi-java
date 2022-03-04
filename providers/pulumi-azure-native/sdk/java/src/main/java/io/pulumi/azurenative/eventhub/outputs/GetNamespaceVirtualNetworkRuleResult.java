@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class GetNamespaceVirtualNetworkRuleResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * ARM ID of Virtual Network Subnet
      * 
-     */
+    */
     public Optional<String> getVirtualNetworkSubnetId() {
         return Optional.ofNullable(this.virtualNetworkSubnetId);
     }
@@ -118,7 +118,6 @@ public final class GetNamespaceVirtualNetworkRuleResult {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
-
         public GetNamespaceVirtualNetworkRuleResult build() {
             return new GetNamespaceVirtualNetworkRuleResult(id, name, type, virtualNetworkSubnetId);
         }

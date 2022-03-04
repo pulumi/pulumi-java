@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetManagedDatabaseArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetManagedDatabaseArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-    private final String managedInstanceName;
+      private final String managedInstanceName;
 
     public String getManagedInstanceName() {
         return this.managedInstanceName;
@@ -39,7 +39,7 @@ public final class GetManagedDatabaseArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetManagedDatabaseArgs extends io.pulumi.resources.InvokeArgs
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetManagedDatabaseArgs build() {
             return new GetManagedDatabaseArgs(databaseName, managedInstanceName, resourceGroupName);
         }

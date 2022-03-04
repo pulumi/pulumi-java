@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ConnectionErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class ConnectionStatusDefinitionResponse {
     /**
      * Connection error
      * 
-     */
+    */
     public Optional<ConnectionErrorResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * The gateway status
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Target of the error
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -98,7 +98,6 @@ public final class ConnectionStatusDefinitionResponse {
             this.target = target;
             return this;
         }
-
         public ConnectionStatusDefinitionResponse build() {
             return new ConnectionStatusDefinitionResponse(error, status, target);
         }

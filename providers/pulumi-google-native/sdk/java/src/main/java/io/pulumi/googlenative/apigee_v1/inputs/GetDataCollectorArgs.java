@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetDataCollectorArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDataCollectorArgs Empty = new GetDataCollectorArgs();
 
     @InputImport(name="datacollectorId", required=true)
-    private final String datacollectorId;
+      private final String datacollectorId;
 
     public String getDatacollectorId() {
         return this.datacollectorId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -69,7 +69,6 @@ public final class GetDataCollectorArgs extends io.pulumi.resources.InvokeArgs {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetDataCollectorArgs build() {
             return new GetDataCollectorArgs(datacollectorId, organizationId);
         }

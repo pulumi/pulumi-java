@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.efs.outputs;
 
 import io.pulumi.awsnative.efs.outputs.AccessPointTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GetAccessPointResult {
             this.arn = arn;
             return this;
         }
-
         public GetAccessPointResult build() {
             return new GetAccessPointResult(accessPointId, accessPointTags, arn);
         }

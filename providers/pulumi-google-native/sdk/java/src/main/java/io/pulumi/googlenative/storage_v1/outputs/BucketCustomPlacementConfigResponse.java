@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BucketCustomPlacementConfigResponse {
     /**
      * The list of regional locations in which data is placed.
      * 
-     */
+    */
     public List<String> getDataLocations() {
         return this.dataLocations;
     }
@@ -53,7 +53,6 @@ public final class BucketCustomPlacementConfigResponse {
             this.dataLocations = Objects.requireNonNull(dataLocations);
             return this;
         }
-
         public BucketCustomPlacementConfigResponse build() {
             return new BucketCustomPlacementConfigResponse(dataLocations);
         }

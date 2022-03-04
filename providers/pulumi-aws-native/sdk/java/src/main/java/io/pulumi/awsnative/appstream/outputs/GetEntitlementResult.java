@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appstream.outputs;
 
 import io.pulumi.awsnative.appstream.outputs.EntitlementAttribute;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -101,7 +101,6 @@ public final class GetEntitlementResult {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public GetEntitlementResult build() {
             return new GetEntitlementResult(appVisibility, attributes, createdTime, description, lastModifiedTime);
         }

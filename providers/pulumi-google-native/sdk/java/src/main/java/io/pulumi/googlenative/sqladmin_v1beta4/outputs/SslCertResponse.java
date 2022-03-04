@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -80,63 +80,63 @@ public final class SslCertResponse {
     /**
      * PEM representation.
      * 
-     */
+    */
     public String getCert() {
         return this.cert;
     }
     /**
      * Serial number, as extracted from the certificate.
      * 
-     */
+    */
     public String getCertSerialNumber() {
         return this.certSerialNumber;
     }
     /**
      * User supplied name. Constrained to [a-zA-Z.-_ ]+.
      * 
-     */
+    */
     public String getCommonName() {
         return this.commonName;
     }
     /**
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
-     */
+    */
     public String getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * Name of the database instance.
      * 
-     */
+    */
     public String getInstance() {
         return this.instance;
     }
     /**
      * This is always `sql#sslCert`.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The URI of this resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Sha1 Fingerprint.
      * 
-     */
+    */
     public String getSha1Fingerprint() {
         return this.sha1Fingerprint;
     }
@@ -221,7 +221,6 @@ public final class SslCertResponse {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public SslCertResponse build() {
             return new SslCertResponse(cert, certSerialNumber, commonName, createTime, expirationTime, instance, kind, selfLink, sha1Fingerprint);
         }

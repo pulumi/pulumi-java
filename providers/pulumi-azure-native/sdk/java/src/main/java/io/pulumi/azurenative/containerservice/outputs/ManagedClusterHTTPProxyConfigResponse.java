@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ManagedClusterHTTPProxyConfigResponse {
     /**
      * HTTP proxy server endpoint to use.
      * 
-     */
+    */
     public Optional<String> getHttpProxy() {
         return Optional.ofNullable(this.httpProxy);
     }
     /**
      * HTTPS proxy server endpoint to use.
      * 
-     */
+    */
     public Optional<String> getHttpsProxy() {
         return Optional.ofNullable(this.httpsProxy);
     }
     /**
      * Endpoints that should not go through proxy.
      * 
-     */
+    */
     public List<String> getNoProxy() {
         return this.noProxy == null ? List.of() : this.noProxy;
     }
     /**
      * Alternative CA cert to use for connecting to proxy servers.
      * 
-     */
+    */
     public Optional<String> getTrustedCa() {
         return Optional.ofNullable(this.trustedCa);
     }
@@ -119,7 +119,6 @@ public final class ManagedClusterHTTPProxyConfigResponse {
             this.trustedCa = trustedCa;
             return this;
         }
-
         public ManagedClusterHTTPProxyConfigResponse build() {
             return new ManagedClusterHTTPProxyConfigResponse(httpProxy, httpsProxy, noProxy, trustedCa);
         }

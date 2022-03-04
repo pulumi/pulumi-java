@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class CertificateRawDataResponse {
     /**
      * Unencrypted PEM encoded RSA private key. This field is set once on certificate creation and then encrypted. The key size must be 2048 bits or fewer. Must include the header and footer. Example: -----BEGIN RSA PRIVATE KEY----- -----END RSA PRIVATE KEY----- @InputOnly
      * 
-     */
+    */
     public String getPrivateKey() {
         return this.privateKey;
     }
     /**
      * PEM encoded x.509 public key certificate. This field is set once on certificate creation. Must include the header and footer. Example: -----BEGIN CERTIFICATE----- -----END CERTIFICATE-----
      * 
-     */
+    */
     public String getPublicCertificate() {
         return this.publicCertificate;
     }
@@ -74,7 +74,6 @@ public final class CertificateRawDataResponse {
             this.publicCertificate = Objects.requireNonNull(publicCertificate);
             return this;
         }
-
         public CertificateRawDataResponse build() {
             return new CertificateRawDataResponse(privateKey, publicCertificate);
         }

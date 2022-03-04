@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSuiteDefinitionArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="suiteDefinitionId", required=true)
-    private final String suiteDefinitionId;
+      private final String suiteDefinitionId;
 
     public String getSuiteDefinitionId() {
         return this.suiteDefinitionId;
@@ -55,7 +55,6 @@ public final class GetSuiteDefinitionArgs extends io.pulumi.resources.InvokeArgs
             this.suiteDefinitionId = Objects.requireNonNull(suiteDefinitionId);
             return this;
         }
-
         public GetSuiteDefinitionArgs build() {
             return new GetSuiteDefinitionArgs(suiteDefinitionId);
         }

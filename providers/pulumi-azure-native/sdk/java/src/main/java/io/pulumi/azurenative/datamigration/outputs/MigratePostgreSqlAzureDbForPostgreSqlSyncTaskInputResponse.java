@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.PostgreSqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -40,21 +40,21 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse {
     /**
      * Databases to migrate
      * 
-     */
+    */
     public List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Connection information for source PostgreSQL
      * 
-     */
+    */
     public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Connection information for target Azure Database for PostgreSQL
      * 
-     */
+    */
     public PostgreSqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -97,7 +97,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }

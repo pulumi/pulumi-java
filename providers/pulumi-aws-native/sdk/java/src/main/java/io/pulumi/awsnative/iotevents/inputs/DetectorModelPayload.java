@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DetectorModelPayload extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contentExpression", required=true)
-    private final String contentExpression;
+      private final String contentExpression;
 
     public String getContentExpression() {
         return this.contentExpression;
@@ -34,7 +34,7 @@ public final class DetectorModelPayload extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -83,7 +83,6 @@ public final class DetectorModelPayload extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DetectorModelPayload build() {
             return new DetectorModelPayload(contentExpression, type);
         }

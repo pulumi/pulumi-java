@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ErrorHandlerResponse {
     /**
      * Error condition this handler applies to.
      * 
-     */
+    */
     public String getErrorCode() {
         return this.errorCode;
     }
     /**
      * MIME type of file. Defaults to text/html.
      * 
-     */
+    */
     public String getMimeType() {
         return this.mimeType;
     }
     /**
      * Static file content to be served for this error.
      * 
-     */
+    */
     public String getStaticFile() {
         return this.staticFile;
     }
@@ -95,7 +95,6 @@ public final class ErrorHandlerResponse {
             this.staticFile = Objects.requireNonNull(staticFile);
             return this;
         }
-
         public ErrorHandlerResponse build() {
             return new ErrorHandlerResponse(errorCode, mimeType, staticFile);
         }

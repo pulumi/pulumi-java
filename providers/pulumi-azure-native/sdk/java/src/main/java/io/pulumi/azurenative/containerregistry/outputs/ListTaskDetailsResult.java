@@ -12,7 +12,7 @@ import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesRespons
 import io.pulumi.azurenative.containerregistry.outputs.PlatformPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TriggerPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -165,133 +165,133 @@ public final class ListTaskDetailsResult {
     /**
      * The machine configuration of the run agent.
      * 
-     */
+    */
     public Optional<AgentPropertiesResponse> getAgentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
     /**
      * The dedicated agent pool for the task.
      * 
-     */
+    */
     public Optional<String> getAgentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
      * The creation date of task.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The properties that describes a set of credentials that will be used when this run is invoked.
      * 
-     */
+    */
     public Optional<CredentialsResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
-     */
+    */
     public Optional<IdentityPropertiesResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The value of this property indicates whether the task resource is system task or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsSystemTask() {
         return Optional.ofNullable(this.isSystemTask);
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The template that describes the repository and tag information for run log artifact.
      * 
-     */
+    */
     public Optional<String> getLogTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The platform properties against which the run has to happen.
      * 
-     */
+    */
     public Optional<PlatformPropertiesResponse> getPlatform() {
         return Optional.ofNullable(this.platform);
     }
     /**
      * The provisioning state of the task.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The current status of task.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The properties of a task step.
      * 
-     */
+    */
     public Optional<Object> getStep() {
         return Optional.ofNullable(this.step);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Run timeout in seconds.
      * 
-     */
+    */
     public Optional<Integer> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * The properties that describe all triggers for the task.
      * 
-     */
+    */
     public Optional<TriggerPropertiesResponse> getTrigger() {
         return Optional.ofNullable(this.trigger);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -446,7 +446,6 @@ public final class ListTaskDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListTaskDetailsResult build() {
             return new ListTaskDetailsResult(agentConfiguration, agentPoolName, creationDate, credentials, id, identity, isSystemTask, location, logTemplate, name, platform, provisioningState, status, step, systemData, tags, timeout, trigger, type);
         }

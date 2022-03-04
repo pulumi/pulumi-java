@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.core_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.ReplicationControllerListArgs;
 import io.pulumi.kubernetes.core_v1.outputs.ReplicationController;
@@ -78,6 +78,37 @@ public class ReplicationControllerList extends io.pulumi.resources.CustomResourc
         return this.metadata;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ReplicationControllerListArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.core_v1.ReplicationControllerListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.core_v1.ReplicationControllerListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ReplicationControllerList(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ReplicationControllerList(String name) {
+        this(name, ReplicationControllerListArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ReplicationControllerList(String name, ReplicationControllerListArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

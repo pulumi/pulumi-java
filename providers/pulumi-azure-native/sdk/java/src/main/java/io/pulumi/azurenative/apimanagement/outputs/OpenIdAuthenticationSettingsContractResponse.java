@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class OpenIdAuthenticationSettingsContractResponse {
     /**
      * How to send token to the server.
      * 
-     */
+    */
     public List<String> getBearerTokenSendingMethods() {
         return this.bearerTokenSendingMethods == null ? List.of() : this.bearerTokenSendingMethods;
     }
     /**
      * OAuth authorization server identifier.
      * 
-     */
+    */
     public Optional<String> getOpenidProviderId() {
         return Optional.ofNullable(this.openidProviderId);
     }
@@ -77,7 +77,6 @@ public final class OpenIdAuthenticationSettingsContractResponse {
             this.openidProviderId = openidProviderId;
             return this;
         }
-
         public OpenIdAuthenticationSettingsContractResponse build() {
             return new OpenIdAuthenticationSettingsContractResponse(bearerTokenSendingMethods, openidProviderId);
         }

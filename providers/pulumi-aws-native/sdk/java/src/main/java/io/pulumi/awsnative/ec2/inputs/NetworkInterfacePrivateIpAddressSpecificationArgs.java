@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class NetworkInterfacePrivateIpAddressSpecificationArgs extends io.
     public static final NetworkInterfacePrivateIpAddressSpecificationArgs Empty = new NetworkInterfacePrivateIpAddressSpecificationArgs();
 
     @InputImport(name="primary", required=true)
-    private final Input<Boolean> primary;
+      private final Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary;
     }
 
     @InputImport(name="privateIpAddress", required=true)
-    private final Input<String> privateIpAddress;
+      private final Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress;
@@ -81,7 +81,6 @@ public final class NetworkInterfacePrivateIpAddressSpecificationArgs extends io.
             this.privateIpAddress = Input.of(Objects.requireNonNull(privateIpAddress));
             return this;
         }
-
         public NetworkInterfacePrivateIpAddressSpecificationArgs build() {
             return new NetworkInterfacePrivateIpAddressSpecificationArgs(primary, privateIpAddress);
         }

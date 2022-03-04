@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.ManagerIntrinsicSettingsResponse;
 import io.pulumi.azurenative.storsimple.outputs.ManagerSkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -85,63 +85,63 @@ public final class GetManagerResult {
     /**
      * Represents the type of StorSimple Manager.
      * 
-     */
+    */
     public Optional<ManagerIntrinsicSettingsResponse> getCisIntrinsicSettings() {
         return Optional.ofNullable(this.cisIntrinsicSettings);
     }
     /**
      * The etag of the manager.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo location of the resource.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Specifies the Sku.
      * 
-     */
+    */
     public Optional<ManagerSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The tags attached to the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -226,7 +226,6 @@ public final class GetManagerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagerResult build() {
             return new GetManagerResult(cisIntrinsicSettings, etag, id, location, name, provisioningState, sku, tags, type);
         }

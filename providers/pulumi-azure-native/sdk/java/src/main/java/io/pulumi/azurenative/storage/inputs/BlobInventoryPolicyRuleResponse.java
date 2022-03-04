@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyDefinitionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="definition", required=true)
-    private final BlobInventoryPolicyDefinitionResponse definition;
+      private final BlobInventoryPolicyDefinitionResponse definition;
 
     public BlobInventoryPolicyDefinitionResponse getDefinition() {
         return this.definition;
@@ -34,7 +34,7 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -45,7 +45,7 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -104,7 +104,6 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BlobInventoryPolicyRuleResponse build() {
             return new BlobInventoryPolicyRuleResponse(definition, enabled, name);
         }

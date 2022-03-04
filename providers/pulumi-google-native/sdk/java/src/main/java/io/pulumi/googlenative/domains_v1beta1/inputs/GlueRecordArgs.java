@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostName", required=true)
-    private final Input<String> hostName;
+      private final Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName;
@@ -35,7 +35,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv4Addresses")
-    private final @Nullable Input<List<String>> ipv4Addresses;
+      private final @Nullable Input<List<String>> ipv4Addresses;
 
     public Input<List<String>> getIpv4Addresses() {
         return this.ipv4Addresses == null ? Input.empty() : this.ipv4Addresses;
@@ -46,7 +46,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6Addresses")
-    private final @Nullable Input<List<String>> ipv6Addresses;
+      private final @Nullable Input<List<String>> ipv6Addresses;
 
     public Input<List<String>> getIpv6Addresses() {
         return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
@@ -120,7 +120,6 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
             return this;
         }
-
         public GlueRecordArgs build() {
             return new GlueRecordArgs(hostName, ipv4Addresses, ipv6Addresses);
         }

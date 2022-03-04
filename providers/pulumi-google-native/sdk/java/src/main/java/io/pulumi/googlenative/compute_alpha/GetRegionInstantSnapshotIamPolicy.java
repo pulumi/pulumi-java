@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionInstantSnapshotIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+    private GetRegionInstantSnapshotIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionInstantSnapshotIamPolicyArgs.Builder a);
+    }
+    private static GetRegionInstantSnapshotIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionInstantSnapshotIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionInstantSnapshotIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static CompletableFuture<GetRegionInstantSnapshotIamPolicyResult> invokeAsync(GetRegionInstantSnapshotIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionInstantSnapshotIamPolicy", TypeShape.of(GetRegionInstantSnapshotIamPolicyResult.class), args == null ? GetRegionInstantSnapshotIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

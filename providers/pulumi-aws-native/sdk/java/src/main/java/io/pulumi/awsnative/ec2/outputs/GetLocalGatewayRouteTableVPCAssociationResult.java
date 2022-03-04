@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.LocalGatewayRouteTableVPCAssociationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class GetLocalGatewayRouteTableVPCAssociationResult {
     /**
      * The ID of the local gateway.
      * 
-     */
+    */
     public Optional<String> getLocalGatewayId() {
         return Optional.ofNullable(this.localGatewayId);
     }
     /**
      * The ID of the association.
      * 
-     */
+    */
     public Optional<String> getLocalGatewayRouteTableVpcAssociationId() {
         return Optional.ofNullable(this.localGatewayRouteTableVpcAssociationId);
     }
     /**
      * The state of the association.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The tags for the association.
      * 
-     */
+    */
     public List<LocalGatewayRouteTableVPCAssociationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -120,7 +120,6 @@ public final class GetLocalGatewayRouteTableVPCAssociationResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocalGatewayRouteTableVPCAssociationResult build() {
             return new GetLocalGatewayRouteTableVPCAssociationResult(localGatewayId, localGatewayRouteTableVpcAssociationId, state, tags);
         }

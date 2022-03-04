@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ManagedGroupConfigResponse {
     /**
      * The name of the Instance Group Manager for this group.
      * 
-     */
+    */
     public String getInstanceGroupManagerName() {
         return this.instanceGroupManagerName;
     }
     /**
      * The name of the Instance Template used for the Managed Instance Group.
      * 
-     */
+    */
     public String getInstanceTemplateName() {
         return this.instanceTemplateName;
     }
@@ -74,7 +74,6 @@ public final class ManagedGroupConfigResponse {
             this.instanceTemplateName = Objects.requireNonNull(instanceTemplateName);
             return this;
         }
-
         public ManagedGroupConfigResponse build() {
             return new ManagedGroupConfigResponse(instanceGroupManagerName, instanceTemplateName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class MountPointMapResponse {
     /**
      * Mount point for the share.
      * 
-     */
+    */
     public String getMountPoint() {
         return this.mountPoint;
     }
     /**
      * Mounting type.
      * 
-     */
+    */
     public String getMountType() {
         return this.mountType;
     }
     /**
      * ID of the role to which share is mounted.
      * 
-     */
+    */
     public String getRoleId() {
         return this.roleId;
     }
     /**
      * Role type.
      * 
-     */
+    */
     public String getRoleType() {
         return this.roleType;
     }
     /**
      * ID of the share mounted to the role VM.
      * 
-     */
+    */
     public String getShareId() {
         return this.shareId;
     }
@@ -137,7 +137,6 @@ public final class MountPointMapResponse {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
-
         public MountPointMapResponse build() {
             return new MountPointMapResponse(mountPoint, mountType, roleId, roleType, shareId);
         }

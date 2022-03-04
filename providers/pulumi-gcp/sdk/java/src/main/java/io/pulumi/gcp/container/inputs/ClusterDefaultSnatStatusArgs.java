@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ClusterDefaultSnatStatusArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Input<Boolean> disabled;
+      private final Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled;
@@ -62,7 +62,6 @@ public final class ClusterDefaultSnatStatusArgs extends io.pulumi.resources.Reso
             this.disabled = Input.of(Objects.requireNonNull(disabled));
             return this;
         }
-
         public ClusterDefaultSnatStatusArgs build() {
             return new ClusterDefaultSnatStatusArgs(disabled);
         }

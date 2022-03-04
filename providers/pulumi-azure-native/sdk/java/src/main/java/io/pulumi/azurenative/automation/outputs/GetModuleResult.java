@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.outputs.ModuleErrorInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -144,119 +144,119 @@ public final class GetModuleResult {
     /**
      * Gets or sets the activity count of the module.
      * 
-     */
+    */
     public Optional<Integer> getActivityCount() {
         return Optional.ofNullable(this.activityCount);
     }
     /**
      * Gets or sets the contentLink of the module.
      * 
-     */
+    */
     public Optional<ContentLinkResponse> getContentLink() {
         return Optional.ofNullable(this.contentLink);
     }
     /**
      * Gets or sets the creation time.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the error info of the module.
      * 
-     */
+    */
     public Optional<ModuleErrorInfoResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Gets or sets the etag of the resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets type of module, if its composite or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsComposite() {
         return Optional.ofNullable(this.isComposite);
     }
     /**
      * Gets or sets the isGlobal flag of the module.
      * 
-     */
+    */
     public Optional<Boolean> getIsGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
      * Gets or sets the last modified time.
      * 
-     */
+    */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The Azure Region where the resource lives
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state of the module.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Gets or sets the size in bytes of the module.
      * 
-     */
+    */
     public Optional<Double> getSizeInBytes() {
         return Optional.ofNullable(this.sizeInBytes);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets or sets the version of the module.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -397,7 +397,6 @@ public final class GetModuleResult {
             this.version = version;
             return this;
         }
-
         public GetModuleResult build() {
             return new GetModuleResult(activityCount, contentLink, creationTime, description, error, etag, id, isComposite, isGlobal, lastModifiedTime, location, name, provisioningState, sizeInBytes, tags, type, version);
         }

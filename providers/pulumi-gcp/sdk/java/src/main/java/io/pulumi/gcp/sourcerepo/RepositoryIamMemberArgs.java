@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sourcerepo;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sourcerepo.inputs.RepositoryIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
     public static final RepositoryIamMemberArgs Empty = new RepositoryIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<RepositoryIamMemberConditionArgs> condition;
+      private final @Nullable Input<RepositoryIamMemberConditionArgs> condition;
 
     public Input<RepositoryIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -35,14 +35,14 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="repository", required=true)
-    private final Input<String> repository;
+      private final Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository;
@@ -55,7 +55,7 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -159,7 +159,6 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public RepositoryIamMemberArgs build() {
             return new RepositoryIamMemberArgs(condition, member, project, repository, role);
         }

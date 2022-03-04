@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.LocalCopyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<String> defaultValue;
+      private final @Nullable Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -35,7 +35,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="localCopy")
-    private final @Nullable Input<LocalCopyArgs> localCopy;
+      private final @Nullable Input<LocalCopyArgs> localCopy;
 
     public Input<LocalCopyArgs> getLocalCopy() {
         return this.localCopy == null ? Input.empty() : this.localCopy;
@@ -57,7 +57,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -146,7 +146,6 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public PipelineParameterArgs build() {
             return new PipelineParameterArgs(defaultValue, description, localCopy, name);
         }

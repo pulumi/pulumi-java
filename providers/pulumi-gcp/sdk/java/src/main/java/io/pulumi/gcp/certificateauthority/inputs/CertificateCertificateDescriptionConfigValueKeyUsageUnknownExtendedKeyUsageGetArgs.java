@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     public static final CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs Empty = new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs();
 
     @InputImport(name="obectIds")
-    private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> obectIds;
+      private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> obectIds;
 
     public Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> getObectIds() {
         return this.obectIds == null ? Input.empty() : this.obectIds;
@@ -59,7 +59,6 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
             this.obectIds = Input.ofNullable(obectIds);
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs(obectIds);
         }

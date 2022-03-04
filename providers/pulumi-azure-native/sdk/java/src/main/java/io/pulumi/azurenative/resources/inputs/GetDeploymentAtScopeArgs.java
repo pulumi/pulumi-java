@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDeploymentAtScopeArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="deploymentName", required=true)
-    private final String deploymentName;
+      private final String deploymentName;
 
     public String getDeploymentName() {
         return this.deploymentName;
@@ -28,7 +28,7 @@ public final class GetDeploymentAtScopeArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -77,7 +77,6 @@ public final class GetDeploymentAtScopeArgs extends io.pulumi.resources.InvokeAr
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetDeploymentAtScopeArgs build() {
             return new GetDeploymentAtScopeArgs(deploymentName, scope);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorCount")
-    private final @Nullable Input<Integer> acceleratorCount;
+      private final @Nullable Input<Integer> acceleratorCount;
 
     public Input<Integer> getAcceleratorCount() {
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
@@ -35,7 +35,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorType")
-    private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
@@ -94,7 +94,6 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
             this.acceleratorType = Input.ofNullable(acceleratorType);
             return this;
         }
-
         public AcceleratorConfigArgs build() {
             return new AcceleratorConfigArgs(acceleratorCount, acceleratorType);
         }

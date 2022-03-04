@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class VirtualNetworkResponse {
     /**
      * can be used in vm creation/deletion
      * 
-     */
+    */
     public Boolean getAssignable() {
         return this.assignable;
     }
     /**
      * virtual network id (privateCloudId:vsphereId)
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure region
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * {VirtualNetworkName}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Private Cloud id
      * 
-     */
+    */
     public String getPrivateCloudId() {
         return this.privateCloudId;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -159,7 +159,6 @@ public final class VirtualNetworkResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualNetworkResponse build() {
             return new VirtualNetworkResponse(assignable, id, location, name, privateCloudId, type);
         }

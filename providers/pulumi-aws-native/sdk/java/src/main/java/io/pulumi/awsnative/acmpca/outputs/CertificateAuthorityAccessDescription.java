@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityAccessMethod;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityGeneralName;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -59,7 +59,6 @@ public final class CertificateAuthorityAccessDescription {
             this.accessMethod = Objects.requireNonNull(accessMethod);
             return this;
         }
-
         public CertificateAuthorityAccessDescription build() {
             return new CertificateAuthorityAccessDescription(accessLocation, accessMethod);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -73,7 +73,7 @@ public final class ConnectivityTestSource {
     /**
      * A Compute Engine instance URI.
      * 
-     */
+    */
     public Optional<String> getInstance() {
         return Optional.ofNullable(this.instance);
     }
@@ -82,14 +82,14 @@ public final class ConnectivityTestSource {
      * internal IP. An IPv6 address is only allowed when the test's
      * destination is a global load balancer VIP.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * A Compute Engine network URI.
      * 
-     */
+    */
     public Optional<String> getNetwork() {
         return Optional.ofNullable(this.network);
     }
@@ -97,7 +97,7 @@ public final class ConnectivityTestSource {
      * Type of the network where the endpoint is located.
      * Possible values are `GCP_NETWORK` and `NON_GCP_NETWORK`.
      * 
-     */
+    */
     public Optional<String> getNetworkType() {
         return Optional.ofNullable(this.networkType);
     }
@@ -105,7 +105,7 @@ public final class ConnectivityTestSource {
      * The IP protocol port of the endpoint. Only applicable when
      * protocol is TCP or UDP.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -119,7 +119,7 @@ public final class ConnectivityTestSource {
      *    network that the IP address resides in is defined in the host
      *    project.
      * 
-     */
+    */
     public Optional<String> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -183,7 +183,6 @@ public final class ConnectivityTestSource {
             this.projectId = projectId;
             return this;
         }
-
         public ConnectivityTestSource build() {
             return new ConnectivityTestSource(instance, ipAddress, network, networkType, port, projectId);
         }

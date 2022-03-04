@@ -5,8 +5,8 @@ package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.DefaultSupportedIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.DefaultSupportedIdpConfigState;
@@ -149,6 +149,37 @@ public class DefaultSupportedIdpConfig extends io.pulumi.resources.CustomResourc
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DefaultSupportedIdpConfigArgs.Builder a);
+    }
+    private static io.pulumi.gcp.identityplatform.DefaultSupportedIdpConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.identityplatform.DefaultSupportedIdpConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DefaultSupportedIdpConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DefaultSupportedIdpConfig(String name) {
+        this(name, DefaultSupportedIdpConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DefaultSupportedIdpConfig(String name, DefaultSupportedIdpConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

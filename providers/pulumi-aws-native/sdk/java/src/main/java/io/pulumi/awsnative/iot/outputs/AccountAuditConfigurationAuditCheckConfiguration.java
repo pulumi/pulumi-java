@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AccountAuditConfigurationAuditCheckConfiguration {
     /**
      * True if the check is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,7 +54,6 @@ public final class AccountAuditConfigurationAuditCheckConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public AccountAuditConfigurationAuditCheckConfiguration build() {
             return new AccountAuditConfigurationAuditCheckConfiguration(enabled);
         }

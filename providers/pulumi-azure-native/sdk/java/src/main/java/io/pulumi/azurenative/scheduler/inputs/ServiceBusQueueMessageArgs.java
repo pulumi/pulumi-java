@@ -7,7 +7,7 @@ import io.pulumi.azurenative.scheduler.enums.ServiceBusTransportType;
 import io.pulumi.azurenative.scheduler.inputs.ServiceBusAuthenticationArgs;
 import io.pulumi.azurenative.scheduler.inputs.ServiceBusBrokeredMessagePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<ServiceBusAuthenticationArgs> authentication;
+      private final @Nullable Input<ServiceBusAuthenticationArgs> authentication;
 
     public Input<ServiceBusAuthenticationArgs> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -34,7 +34,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="brokeredMessageProperties")
-    private final @Nullable Input<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties;
+      private final @Nullable Input<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties;
 
     public Input<ServiceBusBrokeredMessagePropertiesArgs> getBrokeredMessageProperties() {
         return this.brokeredMessageProperties == null ? Input.empty() : this.brokeredMessageProperties;
@@ -45,7 +45,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="customMessageProperties")
-    private final @Nullable Input<Map<String,String>> customMessageProperties;
+      private final @Nullable Input<Map<String,String>> customMessageProperties;
 
     public Input<Map<String,String>> getCustomMessageProperties() {
         return this.customMessageProperties == null ? Input.empty() : this.customMessageProperties;
@@ -56,7 +56,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -67,7 +67,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -78,7 +78,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="queueName")
-    private final @Nullable Input<String> queueName;
+      private final @Nullable Input<String> queueName;
 
     public Input<String> getQueueName() {
         return this.queueName == null ? Input.empty() : this.queueName;
@@ -89,7 +89,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transportType")
-    private final @Nullable Input<ServiceBusTransportType> transportType;
+      private final @Nullable Input<ServiceBusTransportType> transportType;
 
     public Input<ServiceBusTransportType> getTransportType() {
         return this.transportType == null ? Input.empty() : this.transportType;
@@ -223,7 +223,6 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
             this.transportType = Input.ofNullable(transportType);
             return this;
         }
-
         public ServiceBusQueueMessageArgs build() {
             return new ServiceBusQueueMessageArgs(authentication, brokeredMessageProperties, customMessageProperties, message, namespace, queueName, transportType);
         }

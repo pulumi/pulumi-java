@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseUrl")
-    private final @Nullable Input<String> baseUrl;
+      private final @Nullable Input<String> baseUrl;
 
     public Input<String> getBaseUrl() {
         return this.baseUrl == null ? Input.empty() : this.baseUrl;
@@ -35,7 +35,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportingEnabled")
-    private final @Nullable Input<Boolean> reportingEnabled;
+      private final @Nullable Input<Boolean> reportingEnabled;
 
     public Input<Boolean> getReportingEnabled() {
         return this.reportingEnabled == null ? Input.empty() : this.reportingEnabled;
@@ -46,7 +46,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePath")
-    private final @Nullable Input<String> servicePath;
+      private final @Nullable Input<String> servicePath;
 
     public Input<String> getServicePath() {
         return this.servicePath == null ? Input.empty() : this.servicePath;
@@ -57,7 +57,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shuffleServicePath")
-    private final @Nullable Input<String> shuffleServicePath;
+      private final @Nullable Input<String> shuffleServicePath;
 
     public Input<String> getShuffleServicePath() {
         return this.shuffleServicePath == null ? Input.empty() : this.shuffleServicePath;
@@ -68,7 +68,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempStoragePrefix")
-    private final @Nullable Input<String> tempStoragePrefix;
+      private final @Nullable Input<String> tempStoragePrefix;
 
     public Input<String> getTempStoragePrefix() {
         return this.tempStoragePrefix == null ? Input.empty() : this.tempStoragePrefix;
@@ -79,7 +79,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerId")
-    private final @Nullable Input<String> workerId;
+      private final @Nullable Input<String> workerId;
 
     public Input<String> getWorkerId() {
         return this.workerId == null ? Input.empty() : this.workerId;
@@ -198,7 +198,6 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.workerId = Input.ofNullable(workerId);
             return this;
         }
-
         public WorkerSettingsArgs build() {
             return new WorkerSettingsArgs(baseUrl, reportingEnabled, servicePath, shuffleServicePath, tempStoragePrefix, workerId);
         }

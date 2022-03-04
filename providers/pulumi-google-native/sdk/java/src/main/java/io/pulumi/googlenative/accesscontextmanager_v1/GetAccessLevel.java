@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessLevel {
-/**
- * Gets an access level based on the resource name.
+    private GetAccessLevel() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccessLevelArgs.Builder a);
+    }
+    private static GetAccessLevelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccessLevelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an access level based on the resource name.
  * 
- */
+     */
+    public static CompletableFuture<GetAccessLevelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an access level based on the resource name.
+     * 
+     */
     public static CompletableFuture<GetAccessLevelResult> invokeAsync(GetAccessLevelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getAccessLevel", TypeShape.of(GetAccessLevelResult.class), args == null ? GetAccessLevelArgs.Empty : args, Utilities.withVersion(options));
     }

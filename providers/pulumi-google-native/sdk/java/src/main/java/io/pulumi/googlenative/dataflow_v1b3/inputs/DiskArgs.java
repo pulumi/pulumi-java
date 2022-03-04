@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<String> diskType;
+      private final @Nullable Input<String> diskType;
 
     public Input<String> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -35,7 +35,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPoint")
-    private final @Nullable Input<String> mountPoint;
+      private final @Nullable Input<String> mountPoint;
 
     public Input<String> getMountPoint() {
         return this.mountPoint == null ? Input.empty() : this.mountPoint;
@@ -46,7 +46,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeGb")
-    private final @Nullable Input<Integer> sizeGb;
+      private final @Nullable Input<Integer> sizeGb;
 
     public Input<Integer> getSizeGb() {
         return this.sizeGb == null ? Input.empty() : this.sizeGb;
@@ -120,7 +120,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.sizeGb = Input.ofNullable(sizeGb);
             return this;
         }
-
         public DiskArgs build() {
             return new DiskArgs(diskType, mountPoint, sizeGb);
         }

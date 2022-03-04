@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,7 +34,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilter
      * The name of the query parameter to match. The query parameter must exist in the
      * request, in the absence of which the request match fails.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -42,7 +42,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilter
      * The value of the label must match the specified value. value can have a maximum
      * length of 1024 characters.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -78,7 +78,6 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilter
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel(name, value);
         }

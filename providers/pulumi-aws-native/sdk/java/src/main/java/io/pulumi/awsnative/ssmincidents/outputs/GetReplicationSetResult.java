@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.outputs.ReplicationSetReplicationRegion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public final class GetReplicationSetResult {
     /**
      * The ARN of the ReplicationSet.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,7 +49,7 @@ public final class GetReplicationSetResult {
     /**
      * The ReplicationSet configuration.
      * 
-     */
+    */
     public List<ReplicationSetReplicationRegion> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }
@@ -92,7 +92,6 @@ public final class GetReplicationSetResult {
             this.regions = regions;
             return this;
         }
-
         public GetReplicationSetResult build() {
             return new GetReplicationSetResult(arn, deletionProtected, regions);
         }

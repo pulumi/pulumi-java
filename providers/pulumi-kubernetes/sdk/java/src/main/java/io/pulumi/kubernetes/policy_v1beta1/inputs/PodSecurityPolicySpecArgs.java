@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.policy_v1beta1.inputs.AllowedCSIDriverArgs;
 import io.pulumi.kubernetes.policy_v1beta1.inputs.AllowedFlexVolumeArgs;
 import io.pulumi.kubernetes.policy_v1beta1.inputs.AllowedHostPathArgs;
@@ -35,7 +35,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowPrivilegeEscalation")
-    private final @Nullable Input<Boolean> allowPrivilegeEscalation;
+      private final @Nullable Input<Boolean> allowPrivilegeEscalation;
 
     public Input<Boolean> getAllowPrivilegeEscalation() {
         return this.allowPrivilegeEscalation == null ? Input.empty() : this.allowPrivilegeEscalation;
@@ -46,7 +46,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedCSIDrivers")
-    private final @Nullable Input<List<AllowedCSIDriverArgs>> allowedCSIDrivers;
+      private final @Nullable Input<List<AllowedCSIDriverArgs>> allowedCSIDrivers;
 
     public Input<List<AllowedCSIDriverArgs>> getAllowedCSIDrivers() {
         return this.allowedCSIDrivers == null ? Input.empty() : this.allowedCSIDrivers;
@@ -57,7 +57,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedCapabilities")
-    private final @Nullable Input<List<String>> allowedCapabilities;
+      private final @Nullable Input<List<String>> allowedCapabilities;
 
     public Input<List<String>> getAllowedCapabilities() {
         return this.allowedCapabilities == null ? Input.empty() : this.allowedCapabilities;
@@ -68,7 +68,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedFlexVolumes")
-    private final @Nullable Input<List<AllowedFlexVolumeArgs>> allowedFlexVolumes;
+      private final @Nullable Input<List<AllowedFlexVolumeArgs>> allowedFlexVolumes;
 
     public Input<List<AllowedFlexVolumeArgs>> getAllowedFlexVolumes() {
         return this.allowedFlexVolumes == null ? Input.empty() : this.allowedFlexVolumes;
@@ -79,7 +79,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedHostPaths")
-    private final @Nullable Input<List<AllowedHostPathArgs>> allowedHostPaths;
+      private final @Nullable Input<List<AllowedHostPathArgs>> allowedHostPaths;
 
     public Input<List<AllowedHostPathArgs>> getAllowedHostPaths() {
         return this.allowedHostPaths == null ? Input.empty() : this.allowedHostPaths;
@@ -90,7 +90,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedProcMountTypes")
-    private final @Nullable Input<List<String>> allowedProcMountTypes;
+      private final @Nullable Input<List<String>> allowedProcMountTypes;
 
     public Input<List<String>> getAllowedProcMountTypes() {
         return this.allowedProcMountTypes == null ? Input.empty() : this.allowedProcMountTypes;
@@ -103,7 +103,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedUnsafeSysctls")
-    private final @Nullable Input<List<String>> allowedUnsafeSysctls;
+      private final @Nullable Input<List<String>> allowedUnsafeSysctls;
 
     public Input<List<String>> getAllowedUnsafeSysctls() {
         return this.allowedUnsafeSysctls == null ? Input.empty() : this.allowedUnsafeSysctls;
@@ -114,7 +114,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultAddCapabilities")
-    private final @Nullable Input<List<String>> defaultAddCapabilities;
+      private final @Nullable Input<List<String>> defaultAddCapabilities;
 
     public Input<List<String>> getDefaultAddCapabilities() {
         return this.defaultAddCapabilities == null ? Input.empty() : this.defaultAddCapabilities;
@@ -125,7 +125,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultAllowPrivilegeEscalation")
-    private final @Nullable Input<Boolean> defaultAllowPrivilegeEscalation;
+      private final @Nullable Input<Boolean> defaultAllowPrivilegeEscalation;
 
     public Input<Boolean> getDefaultAllowPrivilegeEscalation() {
         return this.defaultAllowPrivilegeEscalation == null ? Input.empty() : this.defaultAllowPrivilegeEscalation;
@@ -138,7 +138,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="forbiddenSysctls")
-    private final @Nullable Input<List<String>> forbiddenSysctls;
+      private final @Nullable Input<List<String>> forbiddenSysctls;
 
     public Input<List<String>> getForbiddenSysctls() {
         return this.forbiddenSysctls == null ? Input.empty() : this.forbiddenSysctls;
@@ -149,7 +149,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fsGroup", required=true)
-    private final Input<FSGroupStrategyOptionsArgs> fsGroup;
+      private final Input<FSGroupStrategyOptionsArgs> fsGroup;
 
     public Input<FSGroupStrategyOptionsArgs> getFsGroup() {
         return this.fsGroup;
@@ -160,7 +160,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostIPC")
-    private final @Nullable Input<Boolean> hostIPC;
+      private final @Nullable Input<Boolean> hostIPC;
 
     public Input<Boolean> getHostIPC() {
         return this.hostIPC == null ? Input.empty() : this.hostIPC;
@@ -171,7 +171,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostNetwork")
-    private final @Nullable Input<Boolean> hostNetwork;
+      private final @Nullable Input<Boolean> hostNetwork;
 
     public Input<Boolean> getHostNetwork() {
         return this.hostNetwork == null ? Input.empty() : this.hostNetwork;
@@ -182,7 +182,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostPID")
-    private final @Nullable Input<Boolean> hostPID;
+      private final @Nullable Input<Boolean> hostPID;
 
     public Input<Boolean> getHostPID() {
         return this.hostPID == null ? Input.empty() : this.hostPID;
@@ -193,7 +193,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostPorts")
-    private final @Nullable Input<List<HostPortRangeArgs>> hostPorts;
+      private final @Nullable Input<List<HostPortRangeArgs>> hostPorts;
 
     public Input<List<HostPortRangeArgs>> getHostPorts() {
         return this.hostPorts == null ? Input.empty() : this.hostPorts;
@@ -204,7 +204,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="privileged")
-    private final @Nullable Input<Boolean> privileged;
+      private final @Nullable Input<Boolean> privileged;
 
     public Input<Boolean> getPrivileged() {
         return this.privileged == null ? Input.empty() : this.privileged;
@@ -215,7 +215,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readOnlyRootFilesystem")
-    private final @Nullable Input<Boolean> readOnlyRootFilesystem;
+      private final @Nullable Input<Boolean> readOnlyRootFilesystem;
 
     public Input<Boolean> getReadOnlyRootFilesystem() {
         return this.readOnlyRootFilesystem == null ? Input.empty() : this.readOnlyRootFilesystem;
@@ -226,7 +226,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requiredDropCapabilities")
-    private final @Nullable Input<List<String>> requiredDropCapabilities;
+      private final @Nullable Input<List<String>> requiredDropCapabilities;
 
     public Input<List<String>> getRequiredDropCapabilities() {
         return this.requiredDropCapabilities == null ? Input.empty() : this.requiredDropCapabilities;
@@ -237,7 +237,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="runAsGroup")
-    private final @Nullable Input<RunAsGroupStrategyOptionsArgs> runAsGroup;
+      private final @Nullable Input<RunAsGroupStrategyOptionsArgs> runAsGroup;
 
     public Input<RunAsGroupStrategyOptionsArgs> getRunAsGroup() {
         return this.runAsGroup == null ? Input.empty() : this.runAsGroup;
@@ -248,7 +248,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="runAsUser", required=true)
-    private final Input<RunAsUserStrategyOptionsArgs> runAsUser;
+      private final Input<RunAsUserStrategyOptionsArgs> runAsUser;
 
     public Input<RunAsUserStrategyOptionsArgs> getRunAsUser() {
         return this.runAsUser;
@@ -259,7 +259,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="runtimeClass")
-    private final @Nullable Input<RuntimeClassStrategyOptionsArgs> runtimeClass;
+      private final @Nullable Input<RuntimeClassStrategyOptionsArgs> runtimeClass;
 
     public Input<RuntimeClassStrategyOptionsArgs> getRuntimeClass() {
         return this.runtimeClass == null ? Input.empty() : this.runtimeClass;
@@ -270,7 +270,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="seLinux", required=true)
-    private final Input<SELinuxStrategyOptionsArgs> seLinux;
+      private final Input<SELinuxStrategyOptionsArgs> seLinux;
 
     public Input<SELinuxStrategyOptionsArgs> getSeLinux() {
         return this.seLinux;
@@ -281,7 +281,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="supplementalGroups", required=true)
-    private final Input<SupplementalGroupsStrategyOptionsArgs> supplementalGroups;
+      private final Input<SupplementalGroupsStrategyOptionsArgs> supplementalGroups;
 
     public Input<SupplementalGroupsStrategyOptionsArgs> getSupplementalGroups() {
         return this.supplementalGroups;
@@ -292,7 +292,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<String>> volumes;
+      private final @Nullable Input<List<String>> volumes;
 
     public Input<List<String>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -681,7 +681,6 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
-
         public PodSecurityPolicySpecArgs build() {
             return new PodSecurityPolicySpecArgs(allowPrivilegeEscalation, allowedCSIDrivers, allowedCapabilities, allowedFlexVolumes, allowedHostPaths, allowedProcMountTypes, allowedUnsafeSysctls, defaultAddCapabilities, defaultAllowPrivilegeEscalation, forbiddenSysctls, fsGroup, hostIPC, hostNetwork, hostPID, hostPorts, privileged, readOnlyRootFilesystem, requiredDropCapabilities, runAsGroup, runAsUser, runtimeClass, seLinux, supplementalGroups, volumes);
         }

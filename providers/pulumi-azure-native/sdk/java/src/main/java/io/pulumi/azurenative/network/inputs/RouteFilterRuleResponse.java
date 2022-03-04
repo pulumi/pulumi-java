@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="access", required=true)
-    private final String access;
+      private final String access;
 
     public String getAccess() {
         return this.access;
@@ -35,7 +35,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="communities", required=true)
-    private final List<String> communities;
+      private final List<String> communities;
 
     public List<String> getCommunities() {
         return this.communities;
@@ -46,7 +46,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -57,7 +57,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -68,7 +68,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -79,7 +79,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -90,7 +90,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -101,7 +101,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="routeFilterRuleType", required=true)
-    private final String routeFilterRuleType;
+      private final String routeFilterRuleType;
 
     public String getRouteFilterRuleType() {
         return this.routeFilterRuleType;
@@ -210,7 +210,6 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
             this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType);
             return this;
         }
-
         public RouteFilterRuleResponse build() {
             return new RouteFilterRuleResponse(access, communities, etag, id, location, name, provisioningState, routeFilterRuleType);
         }

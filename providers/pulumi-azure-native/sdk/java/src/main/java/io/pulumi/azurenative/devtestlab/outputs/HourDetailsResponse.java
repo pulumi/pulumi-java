@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class HourDetailsResponse {
     /**
      * Minutes of the hour the schedule will run.
      * 
-     */
+    */
     public Optional<Integer> getMinute() {
         return Optional.ofNullable(this.minute);
     }
@@ -54,7 +54,6 @@ public final class HourDetailsResponse {
             this.minute = minute;
             return this;
         }
-
         public HourDetailsResponse build() {
             return new HourDetailsResponse(minute);
         }

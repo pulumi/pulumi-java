@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType> getInfoTypes() {
         return this.infoTypes;
     }
@@ -55,7 +55,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes(infoTypes);
         }

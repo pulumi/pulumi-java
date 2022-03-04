@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,21 +40,21 @@ public final class StreamingPathResponse {
     /**
      * Encryption scheme
      * 
-     */
+    */
     public String getEncryptionScheme() {
         return this.encryptionScheme;
     }
     /**
      * Streaming paths for each protocol and encryptionScheme pair
      * 
-     */
+    */
     public List<String> getPaths() {
         return this.paths == null ? List.of() : this.paths;
     }
     /**
      * Streaming protocol
      * 
-     */
+    */
     public String getStreamingProtocol() {
         return this.streamingProtocol;
     }
@@ -97,7 +97,6 @@ public final class StreamingPathResponse {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
         }
-
         public StreamingPathResponse build() {
             return new StreamingPathResponse(encryptionScheme, paths, streamingProtocol);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ResourceQuotaStatus {
     /**
      * Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
      * 
-     */
+    */
     public Map<String,String> getHard() {
         return this.hard == null ? Map.of() : this.hard;
     }
     /**
      * Used is the current observed total usage of the resource in the namespace.
      * 
-     */
+    */
     public Map<String,String> getUsed() {
         return this.used == null ? Map.of() : this.used;
     }
@@ -76,7 +76,6 @@ public final class ResourceQuotaStatus {
             this.used = used;
             return this;
         }
-
         public ResourceQuotaStatus build() {
             return new ResourceQuotaStatus(hard, used);
         }

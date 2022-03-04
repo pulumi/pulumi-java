@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesAdditionalExtension;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesCaOptions;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesKeyUsage;
@@ -59,35 +59,35 @@ public final class CertificateTemplatePredefinedValues {
     /**
      * Optional. Describes custom X.509 extensions.
      * 
-     */
+    */
     public List<CertificateTemplatePredefinedValuesAdditionalExtension> getAdditionalExtensions() {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
     /**
      * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
      * 
-     */
+    */
     public List<String> getAiaOcspServers() {
         return this.aiaOcspServers == null ? List.of() : this.aiaOcspServers;
     }
     /**
      * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
      * 
-     */
+    */
     public Optional<CertificateTemplatePredefinedValuesCaOptions> getCaOptions() {
         return Optional.ofNullable(this.caOptions);
     }
     /**
      * Optional. Indicates the intended use for keys that correspond to a certificate.
      * 
-     */
+    */
     public Optional<CertificateTemplatePredefinedValuesKeyUsage> getKeyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
     /**
      * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
      * 
-     */
+    */
     public List<CertificateTemplatePredefinedValuesPolicyId> getPolicyIds() {
         return this.policyIds == null ? List.of() : this.policyIds;
     }
@@ -144,7 +144,6 @@ public final class CertificateTemplatePredefinedValues {
             this.policyIds = policyIds;
             return this;
         }
-
         public CertificateTemplatePredefinedValues build() {
             return new CertificateTemplatePredefinedValues(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

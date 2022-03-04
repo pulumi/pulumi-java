@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DatabaseInstanceCloneGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pointInTime")
-    private final @Nullable Input<String> pointInTime;
+      private final @Nullable Input<String> pointInTime;
 
     public Input<String> getPointInTime() {
         return this.pointInTime == null ? Input.empty() : this.pointInTime;
@@ -30,7 +30,7 @@ public final class DatabaseInstanceCloneGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceInstanceName", required=true)
-    private final Input<String> sourceInstanceName;
+      private final Input<String> sourceInstanceName;
 
     public Input<String> getSourceInstanceName() {
         return this.sourceInstanceName;
@@ -89,7 +89,6 @@ public final class DatabaseInstanceCloneGetArgs extends io.pulumi.resources.Reso
             this.sourceInstanceName = Input.of(Objects.requireNonNull(sourceInstanceName));
             return this;
         }
-
         public DatabaseInstanceCloneGetArgs build() {
             return new DatabaseInstanceCloneGetArgs(pointInTime, sourceInstanceName);
         }

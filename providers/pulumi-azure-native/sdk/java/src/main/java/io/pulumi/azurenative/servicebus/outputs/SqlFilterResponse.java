@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,21 +42,21 @@ public final class SqlFilterResponse {
     /**
      * This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
      * 
-     */
+    */
     public Optional<Integer> getCompatibilityLevel() {
         return Optional.ofNullable(this.compatibilityLevel);
     }
     /**
      * Value that indicates whether the rule action requires preprocessing.
      * 
-     */
+    */
     public Optional<Boolean> getRequiresPreprocessing() {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
     /**
      * The SQL expression. e.g. MyProperty='ABC'
      * 
-     */
+    */
     public Optional<String> getSqlExpression() {
         return Optional.ofNullable(this.sqlExpression);
     }
@@ -99,7 +99,6 @@ public final class SqlFilterResponse {
             this.sqlExpression = sqlExpression;
             return this;
         }
-
         public SqlFilterResponse build() {
             return new SqlFilterResponse(compatibilityLevel, requiresPreprocessing, sqlExpression);
         }

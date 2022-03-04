@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class VirtualNetworkProfileResponse {
     /**
      * Resource id of the Virtual Network.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the Virtual Network (read-only).
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Subnet within the Virtual Network.
      * 
-     */
+    */
     public Optional<String> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Resource type of the Virtual Network (read-only).
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -118,7 +118,6 @@ public final class VirtualNetworkProfileResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualNetworkProfileResponse build() {
             return new VirtualNetworkProfileResponse(id, name, subnet, type);
         }

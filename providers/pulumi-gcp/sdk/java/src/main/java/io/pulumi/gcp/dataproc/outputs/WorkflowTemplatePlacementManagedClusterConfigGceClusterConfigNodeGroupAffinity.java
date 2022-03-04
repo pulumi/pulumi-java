@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     /**
      * Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1`*`node-group-1`
      * 
-     */
+    */
     public String getNodeGroup() {
         return this.nodeGroup;
     }
@@ -52,7 +52,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             this.nodeGroup = Objects.requireNonNull(nodeGroup);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity(nodeGroup);
         }

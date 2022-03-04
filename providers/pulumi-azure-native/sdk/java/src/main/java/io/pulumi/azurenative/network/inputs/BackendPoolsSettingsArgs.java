@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.EnforceCertificateNameCheckEnabledState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enforceCertificateNameCheck")
-    private final @Nullable Input<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
+      private final @Nullable Input<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
 
     public Input<Either<String,EnforceCertificateNameCheckEnabledState>> getEnforceCertificateNameCheck() {
         return this.enforceCertificateNameCheck == null ? Input.empty() : this.enforceCertificateNameCheck;
@@ -37,7 +37,7 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sendRecvTimeoutSeconds")
-    private final @Nullable Input<Integer> sendRecvTimeoutSeconds;
+      private final @Nullable Input<Integer> sendRecvTimeoutSeconds;
 
     public Input<Integer> getSendRecvTimeoutSeconds() {
         return this.sendRecvTimeoutSeconds == null ? Input.empty() : this.sendRecvTimeoutSeconds;
@@ -96,7 +96,6 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
             this.sendRecvTimeoutSeconds = Input.ofNullable(sendRecvTimeoutSeconds);
             return this;
         }
-
         public BackendPoolsSettingsArgs build() {
             return new BackendPoolsSettingsArgs(enforceCertificateNameCheck, sendRecvTimeoutSeconds);
         }

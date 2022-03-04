@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="available")
-    private final @Nullable Input<Boolean> available;
+      private final @Nullable Input<Boolean> available;
 
     public Input<Boolean> getAvailable() {
         return this.available == null ? Input.empty() : this.available;
@@ -35,7 +35,7 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -94,7 +94,6 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public InstanceFailoverReplicaArgs build() {
             return new InstanceFailoverReplicaArgs(available, name);
         }

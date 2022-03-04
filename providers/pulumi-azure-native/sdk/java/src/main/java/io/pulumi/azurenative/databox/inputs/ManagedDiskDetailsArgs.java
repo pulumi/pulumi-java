@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-    private final Input<String> dataAccountType;
+      private final Input<String> dataAccountType;
 
     public Input<String> getDataAccountType() {
         return this.dataAccountType;
@@ -35,7 +35,7 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupId", required=true)
-    private final Input<String> resourceGroupId;
+      private final Input<String> resourceGroupId;
 
     public Input<String> getResourceGroupId() {
         return this.resourceGroupId;
@@ -46,7 +46,7 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sharePassword")
-    private final @Nullable Input<String> sharePassword;
+      private final @Nullable Input<String> sharePassword;
 
     public Input<String> getSharePassword() {
         return this.sharePassword == null ? Input.empty() : this.sharePassword;
@@ -57,7 +57,7 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stagingStorageAccountId", required=true)
-    private final Input<String> stagingStorageAccountId;
+      private final Input<String> stagingStorageAccountId;
 
     public Input<String> getStagingStorageAccountId() {
         return this.stagingStorageAccountId;
@@ -146,7 +146,6 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
             this.stagingStorageAccountId = Input.of(Objects.requireNonNull(stagingStorageAccountId));
             return this;
         }
-
         public ManagedDiskDetailsArgs build() {
             return new ManagedDiskDetailsArgs(dataAccountType, resourceGroupId, sharePassword, stagingStorageAccountId);
         }

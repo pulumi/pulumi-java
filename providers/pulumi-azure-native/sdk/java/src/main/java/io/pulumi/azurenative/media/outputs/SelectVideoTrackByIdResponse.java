@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class SelectVideoTrackByIdResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.SelectVideoTrackById'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Track identifier to select
      * 
-     */
+    */
     public Double getTrackId() {
         return this.trackId;
     }
@@ -77,7 +77,6 @@ public final class SelectVideoTrackByIdResponse {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }
-
         public SelectVideoTrackByIdResponse build() {
             return new SelectVideoTrackByIdResponse(odataType, trackId);
         }

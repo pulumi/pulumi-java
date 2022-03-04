@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.ClientGroupInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class KafkaRestPropertiesResponse {
     /**
      * The information of AAD security group.
      * 
-     */
+    */
     public Optional<ClientGroupInfoResponse> getClientGroupInfo() {
         return Optional.ofNullable(this.clientGroupInfo);
     }
     /**
      * The configurations that need to be overriden.
      * 
-     */
+    */
     public Map<String,String> getConfigurationOverride() {
         return this.configurationOverride == null ? Map.of() : this.configurationOverride;
     }
@@ -78,7 +78,6 @@ public final class KafkaRestPropertiesResponse {
             this.configurationOverride = configurationOverride;
             return this;
         }
-
         public KafkaRestPropertiesResponse build() {
             return new KafkaRestPropertiesResponse(clientGroupInfo, configurationOverride);
         }

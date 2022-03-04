@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,14 +53,14 @@ public final class EccTokenKeyResponse {
     /**
      * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
      * 
-     */
+    */
     public String getAlg() {
         return this.alg;
     }
     /**
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
      * 
-     */
+    */
     public String getKid() {
         return this.kid;
     }
@@ -68,21 +68,21 @@ public final class EccTokenKeyResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EccTokenKey'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * X coordinate.
      * 
-     */
+    */
     public String getX() {
         return this.x;
     }
     /**
      * Y coordinate.
      * 
-     */
+    */
     public String getY() {
         return this.y;
     }
@@ -139,7 +139,6 @@ public final class EccTokenKeyResponse {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public EccTokenKeyResponse build() {
             return new EccTokenKeyResponse(alg, kid, type, x, y);
         }

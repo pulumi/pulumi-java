@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class FacebookPageResponse {
     /**
      * Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * Page id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -76,7 +76,6 @@ public final class FacebookPageResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public FacebookPageResponse build() {
             return new FacebookPageResponse(accessToken, id);
         }

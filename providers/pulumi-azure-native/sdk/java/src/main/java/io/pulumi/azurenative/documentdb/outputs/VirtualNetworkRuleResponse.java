@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class VirtualNetworkRuleResponse {
     /**
      * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
-     */
+    */
     public Optional<Boolean> getIgnoreMissingVNetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVNetServiceEndpoint);
     }
@@ -77,7 +77,6 @@ public final class VirtualNetworkRuleResponse {
             this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, ignoreMissingVNetServiceEndpoint);
         }

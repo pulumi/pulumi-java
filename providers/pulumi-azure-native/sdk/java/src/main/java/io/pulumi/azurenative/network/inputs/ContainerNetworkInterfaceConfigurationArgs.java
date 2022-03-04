@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.IPConfigurationProfileArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="containerNetworkInterfaces")
-    private final @Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces;
+      private final @Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces;
 
     public Input<List<SubResourceArgs>> getContainerNetworkInterfaces() {
         return this.containerNetworkInterfaces == null ? Input.empty() : this.containerNetworkInterfaces;
@@ -37,7 +37,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -48,7 +48,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations;
+      private final @Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations;
 
     public Input<List<IPConfigurationProfileArgs>> getIpConfigurations() {
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
@@ -59,7 +59,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -148,7 +148,6 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ContainerNetworkInterfaceConfigurationArgs build() {
             return new ContainerNetworkInterfaceConfigurationArgs(containerNetworkInterfaces, id, ipConfigurations, name);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aadiam.outputs;
 
 import io.pulumi.azurenative.aadiam.outputs.AzureADMetricsPropertiesFormatResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -58,21 +58,21 @@ public final class GetazureADMetricResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -82,14 +82,14 @@ public final class GetazureADMetricResult {
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -153,7 +153,6 @@ public final class GetazureADMetricResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetazureADMetricResult build() {
             return new GetazureADMetricResult(id, location, name, properties, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class VirtualNetworkRuleResponse {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource identifier for the subnet
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The current state of the VirtualNetwork Rule
      * 
-     */
+    */
     public String getVirtualNetworkRuleState() {
         return this.virtualNetworkRuleState;
     }
@@ -137,7 +137,6 @@ public final class VirtualNetworkRuleResponse {
             this.virtualNetworkRuleState = Objects.requireNonNull(virtualNetworkRuleState);
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, name, subnetId, type, virtualNetworkRuleState);
         }

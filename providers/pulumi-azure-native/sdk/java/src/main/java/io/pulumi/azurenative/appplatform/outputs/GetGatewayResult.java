@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 import io.pulumi.azurenative.appplatform.outputs.GatewayPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SkuResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -64,42 +64,42 @@ public final class GetGatewayResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Spring Cloud Gateway properties payload
      * 
-     */
+    */
     public GatewayPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Sku of the Spring Cloud Gateway resource
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -163,7 +163,6 @@ public final class GetGatewayResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayResult build() {
             return new GetGatewayResult(id, name, properties, sku, systemData, type);
         }

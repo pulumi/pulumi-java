@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.RouterBgpPeerBfdSessionInitializationMode;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minReceiveInterval")
-    private final @Nullable Input<Integer> minReceiveInterval;
+      private final @Nullable Input<Integer> minReceiveInterval;
 
     public Input<Integer> getMinReceiveInterval() {
         return this.minReceiveInterval == null ? Input.empty() : this.minReceiveInterval;
@@ -31,7 +31,7 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minTransmitInterval")
-    private final @Nullable Input<Integer> minTransmitInterval;
+      private final @Nullable Input<Integer> minTransmitInterval;
 
     public Input<Integer> getMinTransmitInterval() {
         return this.minTransmitInterval == null ? Input.empty() : this.minTransmitInterval;
@@ -42,7 +42,7 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="multiplier")
-    private final @Nullable Input<Integer> multiplier;
+      private final @Nullable Input<Integer> multiplier;
 
     public Input<Integer> getMultiplier() {
         return this.multiplier == null ? Input.empty() : this.multiplier;
@@ -53,7 +53,7 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sessionInitializationMode")
-    private final @Nullable Input<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode;
+      private final @Nullable Input<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode;
 
     public Input<RouterBgpPeerBfdSessionInitializationMode> getSessionInitializationMode() {
         return this.sessionInitializationMode == null ? Input.empty() : this.sessionInitializationMode;
@@ -142,7 +142,6 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
             this.sessionInitializationMode = Input.ofNullable(sessionInitializationMode);
             return this;
         }
-
         public RouterBgpPeerBfdArgs build() {
             return new RouterBgpPeerBfdArgs(minReceiveInterval, minTransmitInterval, multiplier, sessionInitializationMode);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EndpointRangeDescriptionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="endPort", required=true)
-    private final Integer endPort;
+      private final Integer endPort;
 
     public Integer getEndPort() {
         return this.endPort;
@@ -32,7 +32,7 @@ public final class EndpointRangeDescriptionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="startPort", required=true)
-    private final Integer startPort;
+      private final Integer startPort;
 
     public Integer getStartPort() {
         return this.startPort;
@@ -81,7 +81,6 @@ public final class EndpointRangeDescriptionResponse extends io.pulumi.resources.
             this.startPort = Objects.requireNonNull(startPort);
             return this;
         }
-
         public EndpointRangeDescriptionResponse build() {
             return new EndpointRangeDescriptionResponse(endPort, startPort);
         }

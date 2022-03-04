@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ModelQualityJobDefinitionConstraintsResource {
     /**
      * The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
      * 
-     */
+    */
     public Optional<String> getS3Uri() {
         return Optional.ofNullable(this.s3Uri);
     }
@@ -54,7 +54,6 @@ public final class ModelQualityJobDefinitionConstraintsResource {
             this.s3Uri = s3Uri;
             return this;
         }
-
         public ModelQualityJobDefinitionConstraintsResource build() {
             return new ModelQualityJobDefinitionConstraintsResource(s3Uri);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudkms_v1.inputs.ExternalProtectionLevelOptionsResponse;
 import io.pulumi.googlenative.cloudkms_v1.inputs.KeyOperationAttestationResponse;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -35,7 +35,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="attestation", required=true)
-    private final KeyOperationAttestationResponse attestation;
+      private final KeyOperationAttestationResponse attestation;
 
     public KeyOperationAttestationResponse getAttestation() {
         return this.attestation;
@@ -46,7 +46,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -57,7 +57,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="destroyEventTime", required=true)
-    private final String destroyEventTime;
+      private final String destroyEventTime;
 
     public String getDestroyEventTime() {
         return this.destroyEventTime;
@@ -68,7 +68,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="destroyTime", required=true)
-    private final String destroyTime;
+      private final String destroyTime;
 
     public String getDestroyTime() {
         return this.destroyTime;
@@ -79,7 +79,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="externalProtectionLevelOptions", required=true)
-    private final ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions;
+      private final ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions;
 
     public ExternalProtectionLevelOptionsResponse getExternalProtectionLevelOptions() {
         return this.externalProtectionLevelOptions;
@@ -90,7 +90,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="generateTime", required=true)
-    private final String generateTime;
+      private final String generateTime;
 
     public String getGenerateTime() {
         return this.generateTime;
@@ -101,7 +101,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="importFailureReason", required=true)
-    private final String importFailureReason;
+      private final String importFailureReason;
 
     public String getImportFailureReason() {
         return this.importFailureReason;
@@ -112,7 +112,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="importJob", required=true)
-    private final String importJob;
+      private final String importJob;
 
     public String getImportJob() {
         return this.importJob;
@@ -123,7 +123,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="importTime", required=true)
-    private final String importTime;
+      private final String importTime;
 
     public String getImportTime() {
         return this.importTime;
@@ -134,7 +134,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -145,7 +145,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="protectionLevel", required=true)
-    private final String protectionLevel;
+      private final String protectionLevel;
 
     public String getProtectionLevel() {
         return this.protectionLevel;
@@ -156,7 +156,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="reimportEligible", required=true)
-    private final Boolean reimportEligible;
+      private final Boolean reimportEligible;
 
     public Boolean getReimportEligible() {
         return this.reimportEligible;
@@ -167,7 +167,7 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -336,7 +336,6 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public CryptoKeyVersionResponse build() {
             return new CryptoKeyVersionResponse(algorithm, attestation, createTime, destroyEventTime, destroyTime, externalProtectionLevelOptions, generateTime, importFailureReason, importJob, importTime, name, protectionLevel, reimportEligible, state);
         }

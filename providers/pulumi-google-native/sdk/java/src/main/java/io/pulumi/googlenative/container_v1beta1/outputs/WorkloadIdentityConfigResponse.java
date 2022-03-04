@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class WorkloadIdentityConfigResponse {
     /**
      * IAM Identity Namespace to attach all Kubernetes Service Accounts to.
      * 
-     */
+    */
     public String getIdentityNamespace() {
         return this.identityNamespace;
     }
     /**
      * identity provider is the third party identity provider.
      * 
-     */
+    */
     public String getIdentityProvider() {
         return this.identityProvider;
     }
     /**
      * The workload pool to attach all Kubernetes service accounts to.
      * 
-     */
+    */
     public String getWorkloadPool() {
         return this.workloadPool;
     }
@@ -95,7 +95,6 @@ public final class WorkloadIdentityConfigResponse {
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
         }
-
         public WorkloadIdentityConfigResponse build() {
             return new WorkloadIdentityConfigResponse(identityNamespace, identityProvider, workloadPool);
         }

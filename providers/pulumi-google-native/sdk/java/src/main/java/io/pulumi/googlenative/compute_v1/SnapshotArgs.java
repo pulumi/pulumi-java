@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.CustomerEncryptionKeyArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="chainName")
-    private final @Nullable Input<String> chainName;
+      private final @Nullable Input<String> chainName;
 
     public Input<String> getChainName() {
         return this.chainName == null ? Input.empty() : this.chainName;
@@ -33,7 +33,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -55,7 +55,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationHint")
-    private final @Nullable Input<String> locationHint;
+      private final @Nullable Input<String> locationHint;
 
     public Input<String> getLocationHint() {
         return this.locationHint == null ? Input.empty() : this.locationHint;
@@ -66,21 +66,21 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -91,7 +91,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotEncryptionKey")
-    private final @Nullable Input<CustomerEncryptionKeyArgs> snapshotEncryptionKey;
+      private final @Nullable Input<CustomerEncryptionKeyArgs> snapshotEncryptionKey;
 
     public Input<CustomerEncryptionKeyArgs> getSnapshotEncryptionKey() {
         return this.snapshotEncryptionKey == null ? Input.empty() : this.snapshotEncryptionKey;
@@ -102,7 +102,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk")
-    private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Input<String> sourceDisk;
 
     public Input<String> getSourceDisk() {
         return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
@@ -113,7 +113,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDiskEncryptionKey")
-    private final @Nullable Input<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
+      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
 
     public Input<CustomerEncryptionKeyArgs> getSourceDiskEncryptionKey() {
         return this.sourceDiskEncryptionKey == null ? Input.empty() : this.sourceDiskEncryptionKey;
@@ -124,7 +124,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageLocations")
-    private final @Nullable Input<List<String>> storageLocations;
+      private final @Nullable Input<List<String>> storageLocations;
 
     public Input<List<String>> getStorageLocations() {
         return this.storageLocations == null ? Input.empty() : this.storageLocations;
@@ -318,7 +318,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.storageLocations = Input.ofNullable(storageLocations);
             return this;
         }
-
         public SnapshotArgs build() {
             return new SnapshotArgs(chainName, description, labels, locationHint, name, project, requestId, snapshotEncryptionKey, sourceDisk, sourceDiskEncryptionKey, storageLocations);
         }

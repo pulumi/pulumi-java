@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class PrivateClusterConfigResponse {
     /**
      * Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
      * 
-     */
+    */
     public Boolean getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
     /**
      * Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of '172.16.0.0/23' is used.
      * 
-     */
+    */
     public String getMasterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
     /**
      * The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster's network.
      * 
-     */
+    */
     public String getMasterIpv4ReservedRange() {
         return this.masterIpv4ReservedRange;
     }
@@ -96,7 +96,6 @@ public final class PrivateClusterConfigResponse {
             this.masterIpv4ReservedRange = Objects.requireNonNull(masterIpv4ReservedRange);
             return this;
         }
-
         public PrivateClusterConfigResponse build() {
             return new PrivateClusterConfigResponse(enablePrivateEndpoint, masterIpv4CidrBlock, masterIpv4ReservedRange);
         }

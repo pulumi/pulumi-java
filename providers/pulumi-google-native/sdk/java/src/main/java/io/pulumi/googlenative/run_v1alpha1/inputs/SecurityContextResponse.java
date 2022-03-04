@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SecurityContextResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="runAsUser", required=true)
-    private final Integer runAsUser;
+      private final Integer runAsUser;
 
     public Integer getRunAsUser() {
         return this.runAsUser;
@@ -59,7 +59,6 @@ public final class SecurityContextResponse extends io.pulumi.resources.InvokeArg
             this.runAsUser = Objects.requireNonNull(runAsUser);
             return this;
         }
-
         public SecurityContextResponse build() {
             return new SecurityContextResponse(runAsUser);
         }

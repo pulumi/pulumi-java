@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssm.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,7 +60,6 @@ public final class ResourceDataSyncAwsOrganizationsSource {
             this.organizationalUnits = organizationalUnits;
             return this;
         }
-
         public ResourceDataSyncAwsOrganizationsSource build() {
             return new ResourceDataSyncAwsOrganizationsSource(organizationSourceType, organizationalUnits);
         }

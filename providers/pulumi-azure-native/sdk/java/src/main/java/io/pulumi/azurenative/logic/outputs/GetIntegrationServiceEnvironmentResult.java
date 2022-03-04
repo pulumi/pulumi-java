@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.outputs;
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentPropertiesResponse;
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentSkuResponse;
 import io.pulumi.azurenative.logic.outputs.ManagedServiceIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -79,56 +79,56 @@ public final class GetIntegrationServiceEnvironmentResult {
     /**
      * The resource id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Managed service identity properties.
      * 
-     */
+    */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The integration service environment properties.
      * 
-     */
+    */
     public IntegrationServiceEnvironmentPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The sku.
      * 
-     */
+    */
     public Optional<IntegrationServiceEnvironmentSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -206,7 +206,6 @@ public final class GetIntegrationServiceEnvironmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationServiceEnvironmentResult build() {
             return new GetIntegrationServiceEnvironmentResult(id, identity, location, name, properties, sku, tags, type);
         }

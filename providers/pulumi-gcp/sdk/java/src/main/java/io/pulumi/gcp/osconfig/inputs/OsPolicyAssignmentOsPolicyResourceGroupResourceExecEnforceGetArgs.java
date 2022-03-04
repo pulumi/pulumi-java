@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -32,7 +32,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs> file;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs> file;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -43,7 +43,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
      * 
      */
     @InputImport(name="interpreter", required=true)
-    private final Input<String> interpreter;
+      private final Input<String> interpreter;
 
     public Input<String> getInterpreter() {
         return this.interpreter;
@@ -54,7 +54,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
      * 
      */
     @InputImport(name="outputFilePath")
-    private final @Nullable Input<String> outputFilePath;
+      private final @Nullable Input<String> outputFilePath;
 
     public Input<String> getOutputFilePath() {
         return this.outputFilePath == null ? Input.empty() : this.outputFilePath;
@@ -65,7 +65,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+      private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -169,7 +169,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
             this.script = Input.ofNullable(script);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs(args, file, interpreter, outputFilePath, script);
         }

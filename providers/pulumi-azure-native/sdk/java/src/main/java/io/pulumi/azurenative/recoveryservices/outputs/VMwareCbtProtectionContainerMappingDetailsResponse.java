@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -68,49 +68,49 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMwareCbt'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The target key vault ARM Id.
      * 
-     */
+    */
     public String getKeyVaultId() {
         return this.keyVaultId;
     }
     /**
      * The target key vault URI.
      * 
-     */
+    */
     public String getKeyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The secret name of the service bus connection string.
      * 
-     */
+    */
     public String getServiceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
     }
     /**
      * The storage account ARM Id.
      * 
-     */
+    */
     public String getStorageAccountId() {
         return this.storageAccountId;
     }
     /**
      * The secret name of the storage account.
      * 
-     */
+    */
     public String getStorageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
     }
     /**
      * The target location.
      * 
-     */
+    */
     public String getTargetLocation() {
         return this.targetLocation;
     }
@@ -181,7 +181,6 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
-
         public VMwareCbtProtectionContainerMappingDetailsResponse build() {
             return new VMwareCbtProtectionContainerMappingDetailsResponse(instanceType, keyVaultId, keyVaultUri, serviceBusConnectionStringSecretName, storageAccountId, storageAccountSasSecretName, targetLocation);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends io.pulu
      * 
      */
     @InputImport(name="deactivateTime", required=true)
-    private final String deactivateTime;
+      private final String deactivateTime;
 
     public String getDeactivateTime() {
         return this.deactivateTime;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -35,7 +35,7 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends io.pulu
      * 
      */
     @InputImport(name="networkUrl", required=true)
-    private final String networkUrl;
+      private final String networkUrl;
 
     public String getNetworkUrl() {
         return this.networkUrl;
@@ -94,7 +94,6 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends io.pulu
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public ManagedZonePeeringConfigTargetNetworkResponse build() {
             return new ManagedZonePeeringConfigTargetNetworkResponse(deactivateTime, kind, networkUrl);
         }

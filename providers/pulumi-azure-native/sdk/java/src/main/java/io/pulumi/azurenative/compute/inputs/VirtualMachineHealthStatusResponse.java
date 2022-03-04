@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class VirtualMachineHealthStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="status", required=true)
-    private final InstanceViewStatusResponse status;
+      private final InstanceViewStatusResponse status;
 
     public InstanceViewStatusResponse getStatus() {
         return this.status;
@@ -59,7 +59,6 @@ public final class VirtualMachineHealthStatusResponse extends io.pulumi.resource
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public VirtualMachineHealthStatusResponse build() {
             return new VirtualMachineHealthStatusResponse(status);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupRuleDefinition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class RuleGroupStatelessRule {
             this.ruleDefinition = Objects.requireNonNull(ruleDefinition);
             return this;
         }
-
         public RuleGroupStatelessRule build() {
             return new RuleGroupStatelessRule(priority, ruleDefinition);
         }

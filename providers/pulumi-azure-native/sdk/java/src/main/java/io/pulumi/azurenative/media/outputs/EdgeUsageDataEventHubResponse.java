@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class EdgeUsageDataEventHubResponse {
     /**
      * Name of the Event Hub where usage will be reported.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace of the Event Hub where usage will be reported.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * SAS token needed to interact with Event Hub.
      * 
-     */
+    */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);
     }
@@ -97,7 +97,6 @@ public final class EdgeUsageDataEventHubResponse {
             this.token = token;
             return this;
         }
-
         public EdgeUsageDataEventHubResponse build() {
             return new EdgeUsageDataEventHubResponse(name, namespace, token);
         }

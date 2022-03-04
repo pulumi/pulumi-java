@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="minCreationTime")
-    private final @Nullable Input<String> minCreationTime;
+      private final @Nullable Input<String> minCreationTime;
 
     public Input<String> getMinCreationTime() {
         return this.minCreationTime == null ? Input.empty() : this.minCreationTime;
@@ -35,7 +35,7 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="prefixMatch")
-    private final @Nullable Input<List<String>> prefixMatch;
+      private final @Nullable Input<List<String>> prefixMatch;
 
     public Input<List<String>> getPrefixMatch() {
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
@@ -94,7 +94,6 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
             this.prefixMatch = Input.ofNullable(prefixMatch);
             return this;
         }
-
         public ObjectReplicationPolicyFilterArgs build() {
             return new ObjectReplicationPolicyFilterArgs(minCreationTime, prefixMatch);
         }

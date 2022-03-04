@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.EntityKeyResponse;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.MembershipRoleResponse;
 import java.lang.String;
@@ -62,42 +62,42 @@ public final class GetMembershipResult {
     /**
      * The time when the `Membership` was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership`. Shall be of the form `groups/{group}/memberships/{membership}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Immutable. The `EntityKey` of the member.
      * 
-     */
+    */
     public EntityKeyResponse getPreferredMemberKey() {
         return this.preferredMemberKey;
     }
     /**
      * The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
      * 
-     */
+    */
     public List<MembershipRoleResponse> getRoles() {
         return this.roles;
     }
     /**
      * The type of the membership.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The time when the `Membership` was last updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -161,7 +161,6 @@ public final class GetMembershipResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMembershipResult build() {
             return new GetMembershipResult(createTime, name, preferredMemberKey, roles, type, updateTime);
         }

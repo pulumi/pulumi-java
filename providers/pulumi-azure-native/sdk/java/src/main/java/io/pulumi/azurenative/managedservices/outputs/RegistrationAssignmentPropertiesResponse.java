@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.RegistrationAssignmentPropertiesResponseRegistrationDefinition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -39,21 +39,21 @@ public final class RegistrationAssignmentPropertiesResponse {
     /**
      * Current state of the registration assignment.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Registration definition inside registration assignment.
      * 
-     */
+    */
     public RegistrationAssignmentPropertiesResponseRegistrationDefinition getRegistrationDefinition() {
         return this.registrationDefinition;
     }
     /**
      * Fully qualified path of the registration definition.
      * 
-     */
+    */
     public String getRegistrationDefinitionId() {
         return this.registrationDefinitionId;
     }
@@ -96,7 +96,6 @@ public final class RegistrationAssignmentPropertiesResponse {
             this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
             return this;
         }
-
         public RegistrationAssignmentPropertiesResponse build() {
             return new RegistrationAssignmentPropertiesResponse(provisioningState, registrationDefinition, registrationDefinitionId);
         }

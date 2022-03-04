@@ -18,7 +18,7 @@ import io.pulumi.awsnative.wafv2.outputs.WebACLRuleGroupReferenceStatement;
 import io.pulumi.awsnative.wafv2.outputs.WebACLSizeConstraintStatement;
 import io.pulumi.awsnative.wafv2.outputs.WebACLSqliMatchStatement;
 import io.pulumi.awsnative.wafv2.outputs.WebACLXssMatchStatement;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -243,7 +243,6 @@ public final class WebACLStatement {
             this.xssMatchStatement = xssMatchStatement;
             return this;
         }
-
         public WebACLStatement build() {
             return new WebACLStatement(andStatement, byteMatchStatement, geoMatchStatement, iPSetReferenceStatement, labelMatchStatement, managedRuleGroupStatement, notStatement, orStatement, rateBasedStatement, regexMatchStatement, regexPatternSetReferenceStatement, ruleGroupReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);
         }

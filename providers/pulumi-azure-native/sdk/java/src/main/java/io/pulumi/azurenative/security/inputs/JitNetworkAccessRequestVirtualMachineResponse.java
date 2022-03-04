@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessRequestPortResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends io.pulu
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -30,7 +30,7 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends io.pulu
      * 
      */
     @InputImport(name="ports", required=true)
-    private final List<JitNetworkAccessRequestPortResponse> ports;
+      private final List<JitNetworkAccessRequestPortResponse> ports;
 
     public List<JitNetworkAccessRequestPortResponse> getPorts() {
         return this.ports;
@@ -79,7 +79,6 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends io.pulu
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public JitNetworkAccessRequestVirtualMachineResponse build() {
             return new JitNetworkAccessRequestVirtualMachineResponse(id, ports);
         }

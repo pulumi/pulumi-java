@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="colSpan", required=true)
-    private final Integer colSpan;
+      private final Integer colSpan;
 
     public Integer getColSpan() {
         return this.colSpan;
@@ -37,7 +37,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Map<String,Object> metadata;
+      private final @Nullable Map<String,Object> metadata;
 
     public Map<String,Object> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
@@ -48,7 +48,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="rowSpan", required=true)
-    private final Integer rowSpan;
+      private final Integer rowSpan;
 
     public Integer getRowSpan() {
         return this.rowSpan;
@@ -59,7 +59,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="x", required=true)
-    private final Integer x;
+      private final Integer x;
 
     public Integer getX() {
         return this.x;
@@ -70,7 +70,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="y", required=true)
-    private final Integer y;
+      private final Integer y;
 
     public Integer getY() {
         return this.y;
@@ -149,7 +149,6 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public DashboardPartsResponsePosition build() {
             return new DashboardPartsResponsePosition(colSpan, metadata, rowSpan, x, y);
         }

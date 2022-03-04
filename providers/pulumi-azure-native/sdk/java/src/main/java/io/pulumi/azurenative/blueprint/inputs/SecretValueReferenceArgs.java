@@ -5,7 +5,7 @@ package io.pulumi.azurenative.blueprint.inputs;
 
 import io.pulumi.azurenative.blueprint.inputs.KeyVaultReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVault", required=true)
-    private final Input<KeyVaultReferenceArgs> keyVault;
+      private final Input<KeyVaultReferenceArgs> keyVault;
 
     public Input<KeyVaultReferenceArgs> getKeyVault() {
         return this.keyVault;
@@ -35,7 +35,7 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="secretName", required=true)
-    private final Input<String> secretName;
+      private final Input<String> secretName;
 
     public Input<String> getSecretName() {
         return this.secretName;
@@ -46,7 +46,7 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="secretVersion")
-    private final @Nullable Input<String> secretVersion;
+      private final @Nullable Input<String> secretVersion;
 
     public Input<String> getSecretVersion() {
         return this.secretVersion == null ? Input.empty() : this.secretVersion;
@@ -120,7 +120,6 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
             this.secretVersion = Input.ofNullable(secretVersion);
             return this;
         }
-
         public SecretValueReferenceArgs build() {
             return new SecretValueReferenceArgs(keyVault, secretName, secretVersion);
         }

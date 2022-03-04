@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.frauddetector.outputs;
 
 import io.pulumi.awsnative.frauddetector.outputs.LabelTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class GetLabelResult {
     /**
      * The label ARN.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The timestamp when the label was created.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The label description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The timestamp when the label was last updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Tags associated with this label.
      * 
-     */
+    */
     public List<LabelTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -141,7 +141,6 @@ public final class GetLabelResult {
             this.tags = tags;
             return this;
         }
-
         public GetLabelResult build() {
             return new GetLabelResult(arn, createdTime, description, lastUpdatedTime, tags);
         }

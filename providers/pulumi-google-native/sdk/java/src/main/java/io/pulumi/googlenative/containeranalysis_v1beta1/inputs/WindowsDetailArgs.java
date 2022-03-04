@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.KnowledgeBaseArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpeUri", required=true)
-    private final Input<String> cpeUri;
+      private final Input<String> cpeUri;
 
     public Input<String> getCpeUri() {
         return this.cpeUri;
@@ -32,7 +32,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixingKbs", required=true)
-    private final Input<List<KnowledgeBaseArgs>> fixingKbs;
+      private final Input<List<KnowledgeBaseArgs>> fixingKbs;
 
     public Input<List<KnowledgeBaseArgs>> getFixingKbs() {
         return this.fixingKbs;
@@ -54,7 +54,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -143,7 +143,6 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public WindowsDetailArgs build() {
             return new WindowsDetailArgs(cpeUri, description, fixingKbs, name);
         }

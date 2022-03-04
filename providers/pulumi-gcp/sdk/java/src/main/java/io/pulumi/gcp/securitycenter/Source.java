@@ -5,8 +5,8 @@ package io.pulumi.gcp.securitycenter;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.securitycenter.SourceArgs;
 import io.pulumi.gcp.securitycenter.inputs.SourceState;
@@ -109,6 +109,37 @@ public class Source extends io.pulumi.resources.CustomResource {
         return this.organization;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SourceArgs.Builder a);
+    }
+    private static io.pulumi.gcp.securitycenter.SourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.securitycenter.SourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Source(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Source(String name) {
+        this(name, SourceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Source(String name, SourceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

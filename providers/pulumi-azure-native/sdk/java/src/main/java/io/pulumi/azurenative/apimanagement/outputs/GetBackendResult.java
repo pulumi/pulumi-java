@@ -7,7 +7,7 @@ import io.pulumi.azurenative.apimanagement.outputs.BackendCredentialsContractRes
 import io.pulumi.azurenative.apimanagement.outputs.BackendPropertiesResponse;
 import io.pulumi.azurenative.apimanagement.outputs.BackendProxyContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.BackendTlsPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -107,84 +107,84 @@ public final class GetBackendResult {
     /**
      * Backend Credentials Contract Properties
      * 
-     */
+    */
     public Optional<BackendCredentialsContractResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * Backend Description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Backend Properties contract
      * 
-     */
+    */
     public BackendPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Backend communication protocol.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * Backend Proxy Contract Properties
      * 
-     */
+    */
     public Optional<BackendProxyContractResponse> getProxy() {
         return Optional.ofNullable(this.proxy);
     }
     /**
      * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Backend Title.
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
     /**
      * Backend TLS Properties
      * 
-     */
+    */
     public Optional<BackendTlsPropertiesResponse> getTls() {
         return Optional.ofNullable(this.tls);
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Runtime Url of the Backend.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -290,7 +290,6 @@ public final class GetBackendResult {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetBackendResult build() {
             return new GetBackendResult(credentials, description, id, name, properties, protocol, proxy, resourceId, title, tls, type, url);
         }

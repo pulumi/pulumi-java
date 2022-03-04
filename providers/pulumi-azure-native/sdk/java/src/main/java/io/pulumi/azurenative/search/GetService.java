@@ -6,21 +6,41 @@ package io.pulumi.azurenative.search;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.search.inputs.GetServiceArgs;
 import io.pulumi.azurenative.search.outputs.GetServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetService {
-/**
- * Describes an Azure Cognitive Search service and its current state.
+    private GetService() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceArgs.Builder a);
+    }
+    private static GetServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes an Azure Cognitive Search service and its current state.
  * API Version: 2020-08-01.
  * 
- *
- * Describes an Azure Cognitive Search service and its current state.
+     *
+     * Describes an Azure Cognitive Search service and its current state.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes an Azure Cognitive Search service and its current state.
+     * API Version: 2020-08-01.
+     * 
+     *
+         * Describes an Azure Cognitive Search service and its current state.
+     * 
+     */
     public static CompletableFuture<GetServiceResult> invokeAsync(GetServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:getService", TypeShape.of(GetServiceResult.class), args == null ? GetServiceArgs.Empty : args, Utilities.withVersion(options));
     }

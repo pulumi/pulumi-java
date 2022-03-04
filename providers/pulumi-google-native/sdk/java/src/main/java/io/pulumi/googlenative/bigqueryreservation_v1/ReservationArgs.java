@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryreservation_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreIdleSlots")
-    private final @Nullable Input<Boolean> ignoreIdleSlots;
+      private final @Nullable Input<Boolean> ignoreIdleSlots;
 
     public Input<Boolean> getIgnoreIdleSlots() {
         return this.ignoreIdleSlots == null ? Input.empty() : this.ignoreIdleSlots;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -38,21 +38,21 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="reservationId")
-    private final @Nullable Input<String> reservationId;
+      private final @Nullable Input<String> reservationId;
 
     public Input<String> getReservationId() {
         return this.reservationId == null ? Input.empty() : this.reservationId;
@@ -63,7 +63,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slotCapacity")
-    private final @Nullable Input<String> slotCapacity;
+      private final @Nullable Input<String> slotCapacity;
 
     public Input<String> getSlotCapacity() {
         return this.slotCapacity == null ? Input.empty() : this.slotCapacity;
@@ -182,7 +182,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             this.slotCapacity = Input.ofNullable(slotCapacity);
             return this;
         }
-
         public ReservationArgs build() {
             return new ReservationArgs(ignoreIdleSlots, location, name, project, reservationId, slotCapacity);
         }

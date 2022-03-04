@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class PriorityLevelConfigurationCondition {
     /**
      * `lastTransitionTime` is the last time the condition transitioned from one status to another.
      * 
-     */
+    */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * `message` is a human-readable message indicating details about last transition.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * `reason` is a unique, one-word, CamelCase reason for the condition's last transition.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * `status` is the status of the condition. Can be True, False, Unknown. Required.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * `type` is the type of the condition. Required.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -139,7 +139,6 @@ public final class PriorityLevelConfigurationCondition {
             this.type = type;
             return this;
         }
-
         public PriorityLevelConfigurationCondition build() {
             return new PriorityLevelConfigurationCondition(lastTransitionTime, message, reason, status, type);
         }

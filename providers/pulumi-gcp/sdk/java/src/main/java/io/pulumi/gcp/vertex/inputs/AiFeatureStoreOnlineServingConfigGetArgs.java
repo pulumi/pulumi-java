@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AiFeatureStoreOnlineServingConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="fixedNodeCount", required=true)
-    private final Input<Integer> fixedNodeCount;
+      private final Input<Integer> fixedNodeCount;
 
     public Input<Integer> getFixedNodeCount() {
         return this.fixedNodeCount;
@@ -61,7 +61,6 @@ public final class AiFeatureStoreOnlineServingConfigGetArgs extends io.pulumi.re
             this.fixedNodeCount = Input.of(Objects.requireNonNull(fixedNodeCount));
             return this;
         }
-
         public AiFeatureStoreOnlineServingConfigGetArgs build() {
             return new AiFeatureStoreOnlineServingConfigGetArgs(fixedNodeCount);
         }

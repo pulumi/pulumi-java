@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class FeatureGroupS3StorageConfigArgs extends io.pulumi.resources.R
     public static final FeatureGroupS3StorageConfigArgs Empty = new FeatureGroupS3StorageConfigArgs();
 
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
     @InputImport(name="s3Uri", required=true)
-    private final Input<String> s3Uri;
+      private final Input<String> s3Uri;
 
     public Input<String> getS3Uri() {
         return this.s3Uri;
@@ -81,7 +81,6 @@ public final class FeatureGroupS3StorageConfigArgs extends io.pulumi.resources.R
             this.s3Uri = Input.of(Objects.requireNonNull(s3Uri));
             return this;
         }
-
         public FeatureGroupS3StorageConfigArgs build() {
             return new FeatureGroupS3StorageConfigArgs(kmsKeyId, s3Uri);
         }

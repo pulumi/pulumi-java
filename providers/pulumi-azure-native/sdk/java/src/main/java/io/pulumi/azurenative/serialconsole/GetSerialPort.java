@@ -6,21 +6,41 @@ package io.pulumi.azurenative.serialconsole;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.serialconsole.inputs.GetSerialPortArgs;
 import io.pulumi.azurenative.serialconsole.outputs.GetSerialPortResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSerialPort {
-/**
- * Represents the serial port of the parent resource.
+    private GetSerialPort() {}
+    public interface BuilderApplicator {
+        public void apply(GetSerialPortArgs.Builder a);
+    }
+    private static GetSerialPortArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSerialPortArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents the serial port of the parent resource.
  * API Version: 2018-05-01.
  * 
- *
- * Represents the serial port of the parent resource.
+     *
+     * Represents the serial port of the parent resource.
  * 
- */
+     */
+    public static CompletableFuture<GetSerialPortResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents the serial port of the parent resource.
+     * API Version: 2018-05-01.
+     * 
+     *
+         * Represents the serial port of the parent resource.
+     * 
+     */
     public static CompletableFuture<GetSerialPortResult> invokeAsync(GetSerialPortArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:serialconsole:getSerialPort", TypeShape.of(GetSerialPortResult.class), args == null ? GetSerialPortArgs.Empty : args, Utilities.withVersion(options));
     }

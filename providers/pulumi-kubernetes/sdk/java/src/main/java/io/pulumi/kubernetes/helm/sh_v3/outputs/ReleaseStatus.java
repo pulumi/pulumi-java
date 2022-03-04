@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.helm.sh_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class ReleaseStatus {
     /**
      * The version number of the application being deployed.
      * 
-     */
+    */
     public Optional<String> getAppVersion() {
         return Optional.ofNullable(this.appVersion);
     }
     /**
      * The name of the chart.
      * 
-     */
+    */
     public Optional<String> getChart() {
         return Optional.ofNullable(this.chart);
     }
     /**
      * Name is the name of the release.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace is the kubernetes namespace of the release.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Version is an int32 which represents the version of the release.
      * 
-     */
+    */
     public Optional<Integer> getRevision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * Status of the release.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * A SemVer 2 conformant version string of the chart.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -182,7 +182,6 @@ public final class ReleaseStatus {
             this.version = version;
             return this;
         }
-
         public ReleaseStatus build() {
             return new ReleaseStatus(appVersion, chart, name, namespace, revision, status, version);
         }

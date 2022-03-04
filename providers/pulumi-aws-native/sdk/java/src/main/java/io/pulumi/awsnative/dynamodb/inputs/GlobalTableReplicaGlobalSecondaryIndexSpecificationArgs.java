@@ -6,7 +6,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableContributorInsightsSpecificationArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableReadProvisionedThroughputSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,21 +17,21 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs exten
     public static final GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs Empty = new GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs();
 
     @InputImport(name="contributorInsightsSpecification")
-    private final @Nullable Input<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
+      private final @Nullable Input<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
 
     public Input<GlobalTableContributorInsightsSpecificationArgs> getContributorInsightsSpecification() {
         return this.contributorInsightsSpecification == null ? Input.empty() : this.contributorInsightsSpecification;
     }
 
     @InputImport(name="indexName", required=true)
-    private final Input<String> indexName;
+      private final Input<String> indexName;
 
     public Input<String> getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="readProvisionedThroughputSettings")
-    private final @Nullable Input<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
+      private final @Nullable Input<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
 
     public Input<GlobalTableReadProvisionedThroughputSettingsArgs> getReadProvisionedThroughputSettings() {
         return this.readProvisionedThroughputSettings == null ? Input.empty() : this.readProvisionedThroughputSettings;
@@ -105,7 +105,6 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs exten
             this.readProvisionedThroughputSettings = Input.ofNullable(readProvisionedThroughputSettings);
             return this;
         }
-
         public GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs build() {
             return new GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs(contributorInsightsSpecification, indexName, readProvisionedThroughputSettings);
         }

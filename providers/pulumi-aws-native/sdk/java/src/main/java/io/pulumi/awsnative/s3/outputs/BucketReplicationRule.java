@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.outputs.BucketDeleteMarkerReplication;
 import io.pulumi.awsnative.s3.outputs.BucketReplicationDestination;
 import io.pulumi.awsnative.s3.outputs.BucketReplicationRuleFilter;
 import io.pulumi.awsnative.s3.outputs.BucketSourceSelectionCriteria;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -70,14 +70,14 @@ public final class BucketReplicationRule {
     /**
      * A unique identifier for the rule.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An object key name prefix that identifies the object or objects to which the rule applies.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -90,7 +90,7 @@ public final class BucketReplicationRule {
     /**
      * Specifies whether the rule is enabled.
      * 
-     */
+    */
     public BucketReplicationRuleStatus getStatus() {
         return this.status;
     }
@@ -168,7 +168,6 @@ public final class BucketReplicationRule {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketReplicationRule build() {
             return new BucketReplicationRule(deleteMarkerReplication, destination, filter, id, prefix, priority, sourceSelectionCriteria, status);
         }

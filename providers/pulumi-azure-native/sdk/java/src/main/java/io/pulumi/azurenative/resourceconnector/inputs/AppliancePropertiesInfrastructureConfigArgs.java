@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resourceconnector.inputs;
 import io.pulumi.azurenative.resourceconnector.enums.Provider;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="provider")
-    private final @Nullable Input<Either<String,Provider>> provider;
+      private final @Nullable Input<Either<String,Provider>> provider;
 
     public Input<Either<String,Provider>> getProvider() {
         return this.provider == null ? Input.empty() : this.provider;
@@ -68,7 +68,6 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
             this.provider = Input.ofNullable(provider);
             return this;
         }
-
         public AppliancePropertiesInfrastructureConfigArgs build() {
             return new AppliancePropertiesInfrastructureConfigArgs(provider);
         }

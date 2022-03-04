@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class OutputPortResponse {
     /**
      * Port data type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -54,7 +54,6 @@ public final class OutputPortResponse {
             this.type = type;
             return this;
         }
-
         public OutputPortResponse build() {
             return new OutputPortResponse(type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SharingProfileGroupResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class SharingProfileResponse {
     /**
      * A list of sharing profile groups.
      * 
-     */
+    */
     public List<SharingProfileGroupResponse> getGroups() {
         return this.groups;
     }
     /**
      * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
      * 
-     */
+    */
     public Optional<String> getPermissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -78,7 +78,6 @@ public final class SharingProfileResponse {
             this.permissions = permissions;
             return this;
         }
-
         public SharingProfileResponse build() {
             return new SharingProfileResponse(groups, permissions);
         }

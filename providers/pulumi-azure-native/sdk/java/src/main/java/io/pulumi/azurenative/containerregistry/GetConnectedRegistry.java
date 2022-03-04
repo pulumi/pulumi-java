@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerregistry.inputs.GetConnectedRegistryArgs;
 import io.pulumi.azurenative.containerregistry.outputs.GetConnectedRegistryResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectedRegistry {
-/**
- * An object that represents a connected registry for a container registry.
+    private GetConnectedRegistry() {}
+    public interface BuilderApplicator {
+        public void apply(GetConnectedRegistryArgs.Builder a);
+    }
+    private static GetConnectedRegistryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConnectedRegistryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An object that represents a connected registry for a container registry.
  * API Version: 2020-11-01-preview.
  * 
- *
- * An object that represents a connected registry for a container registry.
+     *
+     * An object that represents a connected registry for a container registry.
  * 
- */
+     */
+    public static CompletableFuture<GetConnectedRegistryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An object that represents a connected registry for a container registry.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * An object that represents a connected registry for a container registry.
+     * 
+     */
     public static CompletableFuture<GetConnectedRegistryResult> invokeAsync(GetConnectedRegistryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getConnectedRegistry", TypeShape.of(GetConnectedRegistryResult.class), args == null ? GetConnectedRegistryArgs.Empty : args, Utilities.withVersion(options));
     }

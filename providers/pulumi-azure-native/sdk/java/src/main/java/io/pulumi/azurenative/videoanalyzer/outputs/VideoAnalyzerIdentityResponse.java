@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.UserAssignedManagedIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class VideoAnalyzerIdentityResponse {
     /**
      * The identity type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The User Assigned Managed Identities.
      * 
-     */
+    */
     public Map<String,UserAssignedManagedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
@@ -77,7 +77,6 @@ public final class VideoAnalyzerIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public VideoAnalyzerIdentityResponse build() {
             return new VideoAnalyzerIdentityResponse(type, userAssignedIdentities);
         }

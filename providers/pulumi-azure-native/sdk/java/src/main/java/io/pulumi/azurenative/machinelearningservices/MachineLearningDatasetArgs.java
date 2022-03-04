@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequest
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequestTimeSeriesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="datasetName")
-    private final @Nullable Input<String> datasetName;
+      private final @Nullable Input<String> datasetName;
 
     public Input<String> getDatasetName() {
         return this.datasetName == null ? Input.empty() : this.datasetName;
@@ -36,21 +36,21 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="datasetType", required=true)
-    private final Input<Either<String,DatasetType>> datasetType;
+      private final Input<Either<String,DatasetType>> datasetType;
 
     public Input<Either<String,DatasetType>> getDatasetType() {
         return this.datasetType;
     }
 
     @InputImport(name="parameters", required=true)
-    private final Input<DatasetCreateRequestParametersArgs> parameters;
+      private final Input<DatasetCreateRequestParametersArgs> parameters;
 
     public Input<DatasetCreateRequestParametersArgs> getParameters() {
         return this.parameters;
     }
 
     @InputImport(name="registration", required=true)
-    private final Input<DatasetCreateRequestRegistrationArgs> registration;
+      private final Input<DatasetCreateRequestRegistrationArgs> registration;
 
     public Input<DatasetCreateRequestRegistrationArgs> getRegistration() {
         return this.registration;
@@ -61,7 +61,7 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -72,14 +72,14 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="skipValidation")
-    private final @Nullable Input<Boolean> skipValidation;
+      private final @Nullable Input<Boolean> skipValidation;
 
     public Input<Boolean> getSkipValidation() {
         return this.skipValidation == null ? Input.empty() : this.skipValidation;
     }
 
     @InputImport(name="timeSeries")
-    private final @Nullable Input<DatasetCreateRequestTimeSeriesArgs> timeSeries;
+      private final @Nullable Input<DatasetCreateRequestTimeSeriesArgs> timeSeries;
 
     public Input<DatasetCreateRequestTimeSeriesArgs> getTimeSeries() {
         return this.timeSeries == null ? Input.empty() : this.timeSeries;
@@ -90,7 +90,7 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -239,7 +239,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public MachineLearningDatasetArgs build() {
             return new MachineLearningDatasetArgs(datasetName, datasetType, parameters, registration, resourceGroupName, skipValidation, timeSeries, workspaceName);
         }

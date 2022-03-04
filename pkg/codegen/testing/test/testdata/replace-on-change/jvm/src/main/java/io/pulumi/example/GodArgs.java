@@ -30,7 +30,6 @@ public final class GodArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(GodArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GodArgs build() {
             return new GodArgs();
         }

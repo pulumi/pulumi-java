@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.FingerprintResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.LayerResponse;
 import java.lang.Integer;
@@ -49,28 +49,28 @@ public final class ImageOccurrenceResponse {
     /**
      * This contains the base image URL for the derived image occurrence.
      * 
-     */
+    */
     public String getBaseResourceUrl() {
         return this.baseResourceUrl;
     }
     /**
      * The number of layers by which this image differs from the associated image basis.
      * 
-     */
+    */
     public Integer getDistance() {
         return this.distance;
     }
     /**
      * The fingerprint of the derived image.
      * 
-     */
+    */
     public FingerprintResponse getFingerprint() {
         return this.fingerprint;
     }
     /**
      * This contains layer-specific metadata, if populated it has length "distance" and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
      * 
-     */
+    */
     public List<LayerResponse> getLayerInfo() {
         return this.layerInfo;
     }
@@ -120,7 +120,6 @@ public final class ImageOccurrenceResponse {
             this.layerInfo = Objects.requireNonNull(layerInfo);
             return this;
         }
-
         public ImageOccurrenceResponse build() {
             return new ImageOccurrenceResponse(baseResourceUrl, distance, fingerprint, layerInfo);
         }

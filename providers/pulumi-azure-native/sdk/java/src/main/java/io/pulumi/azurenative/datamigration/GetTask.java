@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datamigration;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datamigration.inputs.GetTaskArgs;
 import io.pulumi.azurenative.datamigration.outputs.GetTaskResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTask {
-/**
- * A task resource
+    private GetTask() {}
+    public interface BuilderApplicator {
+        public void apply(GetTaskArgs.Builder a);
+    }
+    private static GetTaskArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTaskArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A task resource
  * API Version: 2018-04-19.
  * 
- *
- * A task resource
+     *
+     * A task resource
  * 
- */
+     */
+    public static CompletableFuture<GetTaskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A task resource
+     * API Version: 2018-04-19.
+     * 
+     *
+         * A task resource
+     * 
+     */
     public static CompletableFuture<GetTaskResult> invokeAsync(GetTaskArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getTask", TypeShape.of(GetTaskResult.class), args == null ? GetTaskArgs.Empty : args, Utilities.withVersion(options));
     }

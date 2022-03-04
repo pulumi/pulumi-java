@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.LimitResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -42,14 +42,14 @@ public final class LimitedPriorityLevelConfiguration {
      * 
      * bigger numbers of ACS mean more reserved concurrent requests (at the expense of every other PL). This field has a default value of 30.
      * 
-     */
+    */
     public Optional<Integer> getAssuredConcurrencyShares() {
         return Optional.ofNullable(this.assuredConcurrencyShares);
     }
     /**
      * `limitResponse` indicates what to do with requests that can not be executed right now
      * 
-     */
+    */
     public Optional<LimitResponse> getLimitResponse() {
         return Optional.ofNullable(this.limitResponse);
     }
@@ -85,7 +85,6 @@ public final class LimitedPriorityLevelConfiguration {
             this.limitResponse = limitResponse;
             return this;
         }
-
         public LimitedPriorityLevelConfiguration build() {
             return new LimitedPriorityLevelConfiguration(assuredConcurrencyShares, limitResponse);
         }

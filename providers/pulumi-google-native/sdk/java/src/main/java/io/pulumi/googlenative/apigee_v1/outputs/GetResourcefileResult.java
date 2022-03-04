@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -40,21 +40,21 @@ public final class GetResourcefileResult {
     /**
      * The HTTP Content-Type header value specifying the content type of the body.
      * 
-     */
+    */
     public String getContentType() {
         return this.contentType;
     }
     /**
      * The HTTP request/response body as raw binary.
      * 
-     */
+    */
     public String getData() {
         return this.data;
     }
     /**
      * Application specific response metadata. Must be set in the first response for streaming APIs.
      * 
-     */
+    */
     public List<Map<String,String>> getExtensions() {
         return this.extensions;
     }
@@ -97,7 +97,6 @@ public final class GetResourcefileResult {
             this.extensions = Objects.requireNonNull(extensions);
             return this;
         }
-
         public GetResourcefileResult build() {
             return new GetResourcefileResult(contentType, data, extensions);
         }

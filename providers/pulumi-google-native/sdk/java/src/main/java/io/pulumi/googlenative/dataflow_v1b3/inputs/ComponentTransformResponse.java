@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ComponentTransformResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ComponentTransformResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="originalTransform", required=true)
-    private final String originalTransform;
+      private final String originalTransform;
 
     public String getOriginalTransform() {
         return this.originalTransform;
@@ -43,7 +43,7 @@ public final class ComponentTransformResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+      private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -102,7 +102,6 @@ public final class ComponentTransformResponse extends io.pulumi.resources.Invoke
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ComponentTransformResponse build() {
             return new ComponentTransformResponse(name, originalTransform, userName);
         }

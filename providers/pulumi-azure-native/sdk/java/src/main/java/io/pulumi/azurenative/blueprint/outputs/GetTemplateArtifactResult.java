@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.outputs;
 
 import io.pulumi.azurenative.blueprint.outputs.ParameterValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -94,28 +94,28 @@ public final class GetTemplateArtifactResult {
     /**
      * Artifacts which need to be deployed before the specified artifact.
      * 
-     */
+    */
     public List<String> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Multi-line explain this resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -123,42 +123,42 @@ public final class GetTemplateArtifactResult {
      * Specifies the kind of blueprint artifact.
      * Expected value is 'template'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of this resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource Manager template blueprint artifact parameter values.
      * 
-     */
+    */
     public Map<String,ParameterValueResponse> getParameters() {
         return this.parameters;
     }
     /**
      * If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * The Resource Manager template blueprint artifact body.
      * 
-     */
+    */
     public Object getTemplate() {
         return this.template;
     }
     /**
      * Type of this resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -250,7 +250,6 @@ public final class GetTemplateArtifactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTemplateArtifactResult build() {
             return new GetTemplateArtifactResult(dependsOn, description, displayName, id, kind, name, parameters, resourceGroup, template, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.CisBenchmarkResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.ComplianceVersionResponse;
 import java.lang.String;
@@ -68,42 +68,42 @@ public final class ComplianceNoteResponse {
     /**
      * A description about this compliance check.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * A rationale for the existence of this compliance check.
      * 
-     */
+    */
     public String getRationale() {
         return this.rationale;
     }
     /**
      * A description of remediation steps if the compliance check fails.
      * 
-     */
+    */
     public String getRemediation() {
         return this.remediation;
     }
     /**
      * Serialized scan instructions with a predefined format.
      * 
-     */
+    */
     public String getScanInstructions() {
         return this.scanInstructions;
     }
     /**
      * The title that identifies this compliance check.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
     /**
      * The OS and config versions the benchmark applies to.
      * 
-     */
+    */
     public List<ComplianceVersionResponse> getVersion() {
         return this.version;
     }
@@ -174,7 +174,6 @@ public final class ComplianceNoteResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ComplianceNoteResponse build() {
             return new ComplianceNoteResponse(cisBenchmark, description, rationale, remediation, scanInstructions, title, version);
         }

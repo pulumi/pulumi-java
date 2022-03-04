@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.enums.RoutingChoice;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publishInternetEndpoints")
-    private final @Nullable Input<Boolean> publishInternetEndpoints;
+      private final @Nullable Input<Boolean> publishInternetEndpoints;
 
     public Input<Boolean> getPublishInternetEndpoints() {
         return this.publishInternetEndpoints == null ? Input.empty() : this.publishInternetEndpoints;
@@ -37,7 +37,7 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publishMicrosoftEndpoints")
-    private final @Nullable Input<Boolean> publishMicrosoftEndpoints;
+      private final @Nullable Input<Boolean> publishMicrosoftEndpoints;
 
     public Input<Boolean> getPublishMicrosoftEndpoints() {
         return this.publishMicrosoftEndpoints == null ? Input.empty() : this.publishMicrosoftEndpoints;
@@ -48,7 +48,7 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routingChoice")
-    private final @Nullable Input<Either<String,RoutingChoice>> routingChoice;
+      private final @Nullable Input<Either<String,RoutingChoice>> routingChoice;
 
     public Input<Either<String,RoutingChoice>> getRoutingChoice() {
         return this.routingChoice == null ? Input.empty() : this.routingChoice;
@@ -122,7 +122,6 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
             this.routingChoice = Input.ofNullable(routingChoice);
             return this;
         }
-
         public RoutingPreferenceArgs build() {
             return new RoutingPreferenceArgs(publishInternetEndpoints, publishMicrosoftEndpoints, routingChoice);
         }

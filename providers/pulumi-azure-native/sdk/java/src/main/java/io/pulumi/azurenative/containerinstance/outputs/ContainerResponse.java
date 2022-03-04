@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerinstance.outputs.ContainerPropertiesRespon
 import io.pulumi.azurenative.containerinstance.outputs.EnvironmentVariableResponse;
 import io.pulumi.azurenative.containerinstance.outputs.ResourceRequirementsResponse;
 import io.pulumi.azurenative.containerinstance.outputs.VolumeMountResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -96,70 +96,70 @@ public final class ContainerResponse {
     /**
      * The commands to execute within the container instance in exec form.
      * 
-     */
+    */
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * The environment variables to set in the container instance.
      * 
-     */
+    */
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
      * The name of the image used to create the container instance.
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
     /**
      * The instance view of the container instance. Only valid in response.
      * 
-     */
+    */
     public ContainerPropertiesResponseInstanceView getInstanceView() {
         return this.instanceView;
     }
     /**
      * The liveness probe.
      * 
-     */
+    */
     public Optional<ContainerProbeResponse> getLivenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
     /**
      * The user-provided name of the container instance.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The exposed ports on the container instance.
      * 
-     */
+    */
     public List<ContainerPortResponse> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }
     /**
      * The readiness probe.
      * 
-     */
+    */
     public Optional<ContainerProbeResponse> getReadinessProbe() {
         return Optional.ofNullable(this.readinessProbe);
     }
     /**
      * The resource requirements of the container instance.
      * 
-     */
+    */
     public ResourceRequirementsResponse getResources() {
         return this.resources;
     }
     /**
      * The volume mounts available to the container instance.
      * 
-     */
+    */
     public List<VolumeMountResponse> getVolumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
@@ -251,7 +251,6 @@ public final class ContainerResponse {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public ContainerResponse build() {
             return new ContainerResponse(command, environmentVariables, image, instanceView, livenessProbe, name, ports, readinessProbe, resources, volumeMounts);
         }

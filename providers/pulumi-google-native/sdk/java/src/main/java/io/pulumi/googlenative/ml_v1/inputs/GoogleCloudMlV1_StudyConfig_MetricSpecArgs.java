@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1_StudyConfig_MetricSpecGoal;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
      * 
      */
     @InputImport(name="goal", required=true)
-    private final Input<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
+      private final Input<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
 
     public Input<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> getGoal() {
         return this.goal;
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
      * 
      */
     @InputImport(name="metric", required=true)
-    private final Input<String> metric;
+      private final Input<String> metric;
 
     public Input<String> getMetric() {
         return this.metric;
@@ -93,7 +93,6 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
             this.metric = Input.of(Objects.requireNonNull(metric));
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfig_MetricSpecArgs build() {
             return new GoogleCloudMlV1_StudyConfig_MetricSpecArgs(goal, metric);
         }

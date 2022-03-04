@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.HttpCheckContentType;
 import io.pulumi.googlenative.monitoring_v3.enums.HttpCheckRequestMethod;
 import io.pulumi.googlenative.monitoring_v3.inputs.BasicAuthenticationArgs;
@@ -29,7 +29,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authInfo")
-    private final @Nullable Input<BasicAuthenticationArgs> authInfo;
+      private final @Nullable Input<BasicAuthenticationArgs> authInfo;
 
     public Input<BasicAuthenticationArgs> getAuthInfo() {
         return this.authInfo == null ? Input.empty() : this.authInfo;
@@ -40,7 +40,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -51,7 +51,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<HttpCheckContentType> contentType;
+      private final @Nullable Input<HttpCheckContentType> contentType;
 
     public Input<HttpCheckContentType> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -62,7 +62,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<Map<String,String>> headers;
+      private final @Nullable Input<Map<String,String>> headers;
 
     public Input<Map<String,String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -73,7 +73,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maskHeaders")
-    private final @Nullable Input<Boolean> maskHeaders;
+      private final @Nullable Input<Boolean> maskHeaders;
 
     public Input<Boolean> getMaskHeaders() {
         return this.maskHeaders == null ? Input.empty() : this.maskHeaders;
@@ -84,7 +84,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -95,7 +95,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -106,7 +106,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestMethod")
-    private final @Nullable Input<HttpCheckRequestMethod> requestMethod;
+      private final @Nullable Input<HttpCheckRequestMethod> requestMethod;
 
     public Input<HttpCheckRequestMethod> getRequestMethod() {
         return this.requestMethod == null ? Input.empty() : this.requestMethod;
@@ -117,7 +117,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useSsl")
-    private final @Nullable Input<Boolean> useSsl;
+      private final @Nullable Input<Boolean> useSsl;
 
     public Input<Boolean> getUseSsl() {
         return this.useSsl == null ? Input.empty() : this.useSsl;
@@ -128,7 +128,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validateSsl")
-    private final @Nullable Input<Boolean> validateSsl;
+      private final @Nullable Input<Boolean> validateSsl;
 
     public Input<Boolean> getValidateSsl() {
         return this.validateSsl == null ? Input.empty() : this.validateSsl;
@@ -307,7 +307,6 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.validateSsl = Input.ofNullable(validateSsl);
             return this;
         }
-
         public HttpCheckArgs build() {
             return new HttpCheckArgs(authInfo, body, contentType, headers, maskHeaders, path, port, requestMethod, useSsl, validateSsl);
         }

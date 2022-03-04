@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable List<String> dnsServers;
+      private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
@@ -35,7 +35,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="gateway")
-    private final @Nullable String gateway;
+      private final @Nullable String gateway;
 
     public Optional<String> getGateway() {
         return this.gateway == null ? Optional.empty() : Optional.ofNullable(this.gateway);
@@ -46,7 +46,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable String ipAddress;
+      private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
@@ -57,7 +57,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="ipAllocationMethod")
-    private final @Nullable String ipAllocationMethod;
+      private final @Nullable String ipAllocationMethod;
 
     public Optional<String> getIpAllocationMethod() {
         return this.ipAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.ipAllocationMethod);
@@ -68,7 +68,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="ipVersion")
-    private final @Nullable String ipVersion;
+      private final @Nullable String ipVersion;
 
     public Optional<String> getIpVersion() {
         return this.ipVersion == null ? Optional.empty() : Optional.ofNullable(this.ipVersion);
@@ -79,7 +79,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable String subnet;
+      private final @Nullable String subnet;
 
     public Optional<String> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -168,7 +168,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
             this.subnet = subnet;
             return this;
         }
-
         public NetworkInterfaceIPConfigurationResponse build() {
             return new NetworkInterfaceIPConfigurationResponse(dnsServers, gateway, ipAddress, ipAllocationMethod, ipVersion, subnet);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ids_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetEndpointIamPolicyArgs extends io.pulumi.resources.InvokeAr
     public static final GetEndpointIamPolicyArgs Empty = new GetEndpointIamPolicyArgs();
 
     @InputImport(name="endpointId", required=true)
-    private final String endpointId;
+      private final String endpointId;
 
     public String getEndpointId() {
         return this.endpointId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetEndpointIamPolicyArgs extends io.pulumi.resources.InvokeAr
             this.project = project;
             return this;
         }
-
         public GetEndpointIamPolicyArgs build() {
             return new GetEndpointIamPolicyArgs(endpointId, location, optionsRequestedPolicyVersion, project);
         }

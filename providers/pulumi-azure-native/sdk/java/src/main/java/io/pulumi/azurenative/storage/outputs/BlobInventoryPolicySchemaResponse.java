@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.BlobInventoryPolicyRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,28 +48,28 @@ public final class BlobInventoryPolicySchemaResponse {
     /**
      * Container name where blob inventory files are stored. Must be pre-created.
      * 
-     */
+    */
     public String getDestination() {
         return this.destination;
     }
     /**
      * Policy is enabled if set to true.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The storage account blob inventory policy rules. The rule is applied when it is enabled.
      * 
-     */
+    */
     public List<BlobInventoryPolicyRuleResponse> getRules() {
         return this.rules;
     }
     /**
      * The valid value is Inventory
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -119,7 +119,6 @@ public final class BlobInventoryPolicySchemaResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobInventoryPolicySchemaResponse build() {
             return new BlobInventoryPolicySchemaResponse(destination, enabled, rules, type);
         }

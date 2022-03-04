@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyFrameInterval")
-    private final @Nullable String keyFrameInterval;
+      private final @Nullable String keyFrameInterval;
 
     public Optional<String> getKeyFrameInterval() {
         return this.keyFrameInterval == null ? Optional.empty() : Optional.ofNullable(this.keyFrameInterval);
@@ -34,7 +34,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable String label;
+      private final @Nullable String label;
 
     public Optional<String> getLabel() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
@@ -46,7 +46,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -57,7 +57,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="range")
-    private final @Nullable String range;
+      private final @Nullable String range;
 
     public Optional<String> getRange() {
         return this.range == null ? Optional.empty() : Optional.ofNullable(this.range);
@@ -68,7 +68,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="start", required=true)
-    private final String start;
+      private final String start;
 
     public String getStart() {
         return this.start;
@@ -79,7 +79,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="step")
-    private final @Nullable String step;
+      private final @Nullable String step;
 
     public Optional<String> getStep() {
         return this.step == null ? Optional.empty() : Optional.ofNullable(this.step);
@@ -90,7 +90,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stretchMode")
-    private final @Nullable String stretchMode;
+      private final @Nullable String stretchMode;
 
     public Optional<String> getStretchMode() {
         return this.stretchMode == null ? Optional.empty() : Optional.ofNullable(this.stretchMode);
@@ -101,7 +101,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="syncMode")
-    private final @Nullable String syncMode;
+      private final @Nullable String syncMode;
 
     public Optional<String> getSyncMode() {
         return this.syncMode == null ? Optional.empty() : Optional.ofNullable(this.syncMode);
@@ -210,7 +210,6 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
             this.syncMode = syncMode;
             return this;
         }
-
         public ImageResponse build() {
             return new ImageResponse(keyFrameInterval, label, odataType, range, start, step, stretchMode, syncMode);
         }

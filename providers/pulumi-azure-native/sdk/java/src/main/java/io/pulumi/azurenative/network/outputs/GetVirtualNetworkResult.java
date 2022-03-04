@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkBgpCommunitiesResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkPeeringResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -155,126 +155,126 @@ public final class GetVirtualNetworkResult {
     /**
      * The AddressSpace that contains an array of IP address ranges that can be used by subnets.
      * 
-     */
+    */
     public Optional<AddressSpaceResponse> getAddressSpace() {
         return Optional.ofNullable(this.addressSpace);
     }
     /**
      * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
      * 
-     */
+    */
     public Optional<VirtualNetworkBgpCommunitiesResponse> getBgpCommunities() {
         return Optional.ofNullable(this.bgpCommunities);
     }
     /**
      * The DDoS protection plan associated with the virtual network.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getDdosProtectionPlan() {
         return Optional.ofNullable(this.ddosProtectionPlan);
     }
     /**
      * The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
      * 
-     */
+    */
     public Optional<DhcpOptionsResponse> getDhcpOptions() {
         return Optional.ofNullable(this.dhcpOptions);
     }
     /**
      * Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
      * 
-     */
+    */
     public Optional<Boolean> getEnableDdosProtection() {
         return Optional.ofNullable(this.enableDdosProtection);
     }
     /**
      * Indicates if VM protection is enabled for all the subnets in the virtual network.
      * 
-     */
+    */
     public Optional<Boolean> getEnableVmProtection() {
         return Optional.ofNullable(this.enableVmProtection);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the virtual network.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Array of IpAllocation which reference this VNET.
      * 
-     */
+    */
     public List<SubResourceResponse> getIpAllocations() {
         return this.ipAllocations == null ? List.of() : this.ipAllocations;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the virtual network resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resourceGuid property of the Virtual Network resource.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * A list of subnets in a Virtual Network.
      * 
-     */
+    */
     public List<SubnetResponse> getSubnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A list of peerings in a Virtual Network.
      * 
-     */
+    */
     public List<VirtualNetworkPeeringResponse> getVirtualNetworkPeerings() {
         return this.virtualNetworkPeerings == null ? List.of() : this.virtualNetworkPeerings;
     }
@@ -422,7 +422,6 @@ public final class GetVirtualNetworkResult {
             this.virtualNetworkPeerings = virtualNetworkPeerings;
             return this;
         }
-
         public GetVirtualNetworkResult build() {
             return new GetVirtualNetworkResult(addressSpace, bgpCommunities, ddosProtectionPlan, dhcpOptions, enableDdosProtection, enableVmProtection, etag, extendedLocation, id, ipAllocations, location, name, provisioningState, resourceGuid, subnets, tags, type, virtualNetworkPeerings);
         }

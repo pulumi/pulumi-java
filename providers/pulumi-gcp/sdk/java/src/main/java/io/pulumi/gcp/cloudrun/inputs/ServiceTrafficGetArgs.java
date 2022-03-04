@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="latestRevision")
-    private final @Nullable Input<Boolean> latestRevision;
+      private final @Nullable Input<Boolean> latestRevision;
 
     public Input<Boolean> getLatestRevision() {
         return this.latestRevision == null ? Input.empty() : this.latestRevision;
@@ -35,7 +35,7 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="percent", required=true)
-    private final Input<Integer> percent;
+      private final Input<Integer> percent;
 
     public Input<Integer> getPercent() {
         return this.percent;
@@ -46,7 +46,7 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="revisionName")
-    private final @Nullable Input<String> revisionName;
+      private final @Nullable Input<String> revisionName;
 
     public Input<String> getRevisionName() {
         return this.revisionName == null ? Input.empty() : this.revisionName;
@@ -120,7 +120,6 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
             this.revisionName = Input.ofNullable(revisionName);
             return this;
         }
-
         public ServiceTrafficGetArgs build() {
             return new ServiceTrafficGetArgs(latestRevision, percent, revisionName);
         }

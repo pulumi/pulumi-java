@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="blobTypes", required=true)
-    private final Input<List<String>> blobTypes;
+      private final Input<List<String>> blobTypes;
 
     public Input<List<String>> getBlobTypes() {
         return this.blobTypes;
@@ -36,7 +36,7 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="includeBlobVersions")
-    private final @Nullable Input<Boolean> includeBlobVersions;
+      private final @Nullable Input<Boolean> includeBlobVersions;
 
     public Input<Boolean> getIncludeBlobVersions() {
         return this.includeBlobVersions == null ? Input.empty() : this.includeBlobVersions;
@@ -47,7 +47,7 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="includeSnapshots")
-    private final @Nullable Input<Boolean> includeSnapshots;
+      private final @Nullable Input<Boolean> includeSnapshots;
 
     public Input<Boolean> getIncludeSnapshots() {
         return this.includeSnapshots == null ? Input.empty() : this.includeSnapshots;
@@ -58,7 +58,7 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="prefixMatch")
-    private final @Nullable Input<List<String>> prefixMatch;
+      private final @Nullable Input<List<String>> prefixMatch;
 
     public Input<List<String>> getPrefixMatch() {
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
@@ -147,7 +147,6 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
             this.prefixMatch = Input.ofNullable(prefixMatch);
             return this;
         }
-
         public BlobInventoryPolicyFilterArgs build() {
             return new BlobInventoryPolicyFilterArgs(blobTypes, includeBlobVersions, includeSnapshots, prefixMatch);
         }

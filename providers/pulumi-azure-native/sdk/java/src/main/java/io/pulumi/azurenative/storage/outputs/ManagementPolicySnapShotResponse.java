@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.DateAfterCreationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -40,21 +40,21 @@ public final class ManagementPolicySnapShotResponse {
     /**
      * The function to delete the blob snapshot
      * 
-     */
+    */
     public Optional<DateAfterCreationResponse> getDelete() {
         return Optional.ofNullable(this.delete);
     }
     /**
      * The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier
      * 
-     */
+    */
     public Optional<DateAfterCreationResponse> getTierToArchive() {
         return Optional.ofNullable(this.tierToArchive);
     }
     /**
      * The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier
      * 
-     */
+    */
     public Optional<DateAfterCreationResponse> getTierToCool() {
         return Optional.ofNullable(this.tierToCool);
     }
@@ -97,7 +97,6 @@ public final class ManagementPolicySnapShotResponse {
             this.tierToCool = tierToCool;
             return this;
         }
-
         public ManagementPolicySnapShotResponse build() {
             return new ManagementPolicySnapShotResponse(delete, tierToArchive, tierToCool);
         }

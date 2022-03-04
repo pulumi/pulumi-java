@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -81,49 +81,49 @@ public final class BlobTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Trigger description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The path of the container/folder that will trigger the pipeline.
      * 
-     */
+    */
     public String getFolderPath() {
         return this.folderPath;
     }
     /**
      * The Azure Storage linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedService() {
         return this.linkedService;
     }
     /**
      * The max number of parallel files to handle when it is triggered.
      * 
-     */
+    */
     public Integer getMaxConcurrency() {
         return this.maxConcurrency;
     }
     /**
      * Pipelines that need to be started.
      * 
-     */
+    */
     public List<TriggerPipelineReferenceResponse> getPipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-     */
+    */
     public String getRuntimeState() {
         return this.runtimeState;
     }
@@ -131,7 +131,7 @@ public final class BlobTriggerResponse {
      * Trigger type.
      * Expected value is 'BlobTrigger'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -209,7 +209,6 @@ public final class BlobTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobTriggerResponse build() {
             return new BlobTriggerResponse(annotations, description, folderPath, linkedService, maxConcurrency, pipelines, runtimeState, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType;
 import java.lang.Integer;
 import java.util.List;
@@ -43,21 +43,21 @@ public final class PreventionInspectTemplateInspectConfigLimits {
      * Configuration of findings limit given for specified infoTypes.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType> getMaxFindingsPerInfoTypes() {
         return this.maxFindingsPerInfoTypes == null ? List.of() : this.maxFindingsPerInfoTypes;
     }
     /**
      * Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
      * 
-     */
+    */
     public Integer getMaxFindingsPerItem() {
         return this.maxFindingsPerItem;
     }
     /**
      * Max number of findings that will be returned per request/job. The maximum returned is 2000.
      * 
-     */
+    */
     public Integer getMaxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
     }
@@ -100,7 +100,6 @@ public final class PreventionInspectTemplateInspectConfigLimits {
             this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigLimits build() {
             return new PreventionInspectTemplateInspectConfigLimits(maxFindingsPerInfoTypes, maxFindingsPerItem, maxFindingsPerRequest);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobDatabaseTableOutputOptions;
 import io.pulumi.awsnative.databrew.inputs.JobS3TableOutputOptions;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,42 +18,42 @@ public final class JobDataCatalogOutput extends io.pulumi.resources.InvokeArgs {
     public static final JobDataCatalogOutput Empty = new JobDataCatalogOutput();
 
     @InputImport(name="catalogId")
-    private final @Nullable String catalogId;
+      private final @Nullable String catalogId;
 
     public Optional<String> getCatalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
     }
 
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="databaseOptions")
-    private final @Nullable JobDatabaseTableOutputOptions databaseOptions;
+      private final @Nullable JobDatabaseTableOutputOptions databaseOptions;
 
     public Optional<JobDatabaseTableOutputOptions> getDatabaseOptions() {
         return this.databaseOptions == null ? Optional.empty() : Optional.ofNullable(this.databaseOptions);
     }
 
     @InputImport(name="overwrite")
-    private final @Nullable Boolean overwrite;
+      private final @Nullable Boolean overwrite;
 
     public Optional<Boolean> getOverwrite() {
         return this.overwrite == null ? Optional.empty() : Optional.ofNullable(this.overwrite);
     }
 
     @InputImport(name="s3Options")
-    private final @Nullable JobS3TableOutputOptions s3Options;
+      private final @Nullable JobS3TableOutputOptions s3Options;
 
     public Optional<JobS3TableOutputOptions> getS3Options() {
         return this.s3Options == null ? Optional.empty() : Optional.ofNullable(this.s3Options);
     }
 
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -142,7 +142,6 @@ public final class JobDataCatalogOutput extends io.pulumi.resources.InvokeArgs {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public JobDataCatalogOutput build() {
             return new JobDataCatalogOutput(catalogId, databaseName, databaseOptions, overwrite, s3Options, tableName);
         }

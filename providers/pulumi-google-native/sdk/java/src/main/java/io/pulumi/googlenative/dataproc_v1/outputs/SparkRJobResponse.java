@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.LoggingConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -62,42 +62,42 @@ public final class SparkRJobResponse {
     /**
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
-     */
+    */
     public List<String> getArchiveUris() {
         return this.archiveUris;
     }
     /**
      * Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args;
     }
     /**
      * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
      * 
-     */
+    */
     public List<String> getFileUris() {
         return this.fileUris;
     }
     /**
      * Optional. The runtime log config for job execution.
      * 
-     */
+    */
     public LoggingConfigResponse getLoggingConfig() {
         return this.loggingConfig;
     }
     /**
      * The HCFS URI of the main R file to use as the driver. Must be a .R file.
      * 
-     */
+    */
     public String getMainRFileUri() {
         return this.mainRFileUri;
     }
     /**
      * Optional. A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties;
     }
@@ -161,7 +161,6 @@ public final class SparkRJobResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public SparkRJobResponse build() {
             return new SparkRJobResponse(archiveUris, args, fileUris, loggingConfig, mainRFileUri, properties);
         }

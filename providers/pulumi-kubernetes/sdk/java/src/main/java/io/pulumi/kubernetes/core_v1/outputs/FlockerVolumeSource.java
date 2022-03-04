@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class FlockerVolumeSource {
     /**
      * Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated
      * 
-     */
+    */
     public Optional<String> getDatasetName() {
         return Optional.ofNullable(this.datasetName);
     }
     /**
      * UUID of the dataset. This is unique identifier of a Flocker dataset
      * 
-     */
+    */
     public Optional<String> getDatasetUUID() {
         return Optional.ofNullable(this.datasetUUID);
     }
@@ -76,7 +76,6 @@ public final class FlockerVolumeSource {
             this.datasetUUID = datasetUUID;
             return this;
         }
-
         public FlockerVolumeSource build() {
             return new FlockerVolumeSource(datasetName, datasetUUID);
         }

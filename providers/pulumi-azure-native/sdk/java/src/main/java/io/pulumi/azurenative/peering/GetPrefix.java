@@ -6,21 +6,41 @@ package io.pulumi.azurenative.peering;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.peering.inputs.GetPrefixArgs;
 import io.pulumi.azurenative.peering.outputs.GetPrefixResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrefix {
-/**
- * The peering service prefix class.
+    private GetPrefix() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrefixArgs.Builder a);
+    }
+    private static GetPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrefixArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The peering service prefix class.
  * API Version: 2021-01-01.
  * 
- *
- * The peering service prefix class.
+     *
+     * The peering service prefix class.
  * 
- */
+     */
+    public static CompletableFuture<GetPrefixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The peering service prefix class.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * The peering service prefix class.
+     * 
+     */
     public static CompletableFuture<GetPrefixResult> invokeAsync(GetPrefixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPrefix", TypeShape.of(GetPrefixResult.class), args == null ? GetPrefixArgs.Empty : args, Utilities.withVersion(options));
     }

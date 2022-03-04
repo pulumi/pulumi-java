@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1DialogflowSourceResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1GcsSourceResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
      * 
      */
     @InputImport(name="dialogflowSource", required=true)
-    private final GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource;
+      private final GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource;
 
     public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse getDialogflowSource() {
         return this.dialogflowSource;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
      * 
      */
     @InputImport(name="gcsSource", required=true)
-    private final GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
+      private final GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
 
     public GoogleCloudContactcenterinsightsV1GcsSourceResponse getGcsSource() {
         return this.gcsSource;
@@ -82,7 +82,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(dialogflowSource, gcsSource);
         }

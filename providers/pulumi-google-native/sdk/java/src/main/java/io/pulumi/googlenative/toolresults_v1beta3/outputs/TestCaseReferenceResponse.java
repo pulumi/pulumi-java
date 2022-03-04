@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class TestCaseReferenceResponse {
     /**
      * The name of the class.
      * 
-     */
+    */
     public String getClassName() {
         return this.className;
     }
     /**
      * The name of the test case. Required.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the test suite to which this test case belongs.
      * 
-     */
+    */
     public String getTestSuiteName() {
         return this.testSuiteName;
     }
@@ -95,7 +95,6 @@ public final class TestCaseReferenceResponse {
             this.testSuiteName = Objects.requireNonNull(testSuiteName);
             return this;
         }
-
         public TestCaseReferenceResponse build() {
             return new TestCaseReferenceResponse(className, name, testSuiteName);
         }

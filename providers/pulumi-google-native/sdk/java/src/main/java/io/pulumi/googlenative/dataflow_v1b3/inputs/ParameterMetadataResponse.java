@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="customMetadata", required=true)
-    private final Map<String,String> customMetadata;
+      private final Map<String,String> customMetadata;
 
     public Map<String,String> getCustomMetadata() {
         return this.customMetadata;
@@ -35,7 +35,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="helpText", required=true)
-    private final String helpText;
+      private final String helpText;
 
     public String getHelpText() {
         return this.helpText;
@@ -46,7 +46,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="isOptional", required=true)
-    private final Boolean isOptional;
+      private final Boolean isOptional;
 
     public Boolean getIsOptional() {
         return this.isOptional;
@@ -57,7 +57,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="label", required=true)
-    private final String label;
+      private final String label;
 
     public String getLabel() {
         return this.label;
@@ -68,7 +68,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -79,7 +79,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="paramType", required=true)
-    private final String paramType;
+      private final String paramType;
 
     public String getParamType() {
         return this.paramType;
@@ -90,7 +90,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="regexes", required=true)
-    private final List<String> regexes;
+      private final List<String> regexes;
 
     public List<String> getRegexes() {
         return this.regexes;
@@ -189,7 +189,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
-
         public ParameterMetadataResponse build() {
             return new ParameterMetadataResponse(customMetadata, helpText, isOptional, label, name, paramType, regexes);
         }

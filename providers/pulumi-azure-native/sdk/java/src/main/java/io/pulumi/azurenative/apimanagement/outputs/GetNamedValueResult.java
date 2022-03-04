@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.KeyVaultContractPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -78,56 +78,56 @@ public final class GetNamedValueResult {
     /**
      * Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * KeyVault location details of the namedValue.
      * 
-     */
+    */
     public Optional<KeyVaultContractPropertiesResponse> getKeyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
-     */
+    */
     public Optional<Boolean> getSecret() {
         return Optional.ofNullable(this.secret);
     }
     /**
      * Optional tags that when provided can be used to filter the NamedValue list.
      * 
-     */
+    */
     public List<String> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -205,7 +205,6 @@ public final class GetNamedValueResult {
             this.value = value;
             return this;
         }
-
         public GetNamedValueResult build() {
             return new GetNamedValueResult(displayName, id, keyVault, name, secret, tags, type, value);
         }

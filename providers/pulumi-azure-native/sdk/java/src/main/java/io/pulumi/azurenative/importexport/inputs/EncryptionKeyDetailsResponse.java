@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="kekType")
-    private final @Nullable String kekType;
+      private final @Nullable String kekType;
 
     public Optional<String> getKekType() {
         return this.kekType == null ? Optional.empty() : Optional.ofNullable(this.kekType);
@@ -34,7 +34,7 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="kekUrl")
-    private final @Nullable String kekUrl;
+      private final @Nullable String kekUrl;
 
     public Optional<String> getKekUrl() {
         return this.kekUrl == null ? Optional.empty() : Optional.ofNullable(this.kekUrl);
@@ -45,7 +45,7 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="kekVaultResourceID")
-    private final @Nullable String kekVaultResourceID;
+      private final @Nullable String kekVaultResourceID;
 
     public Optional<String> getKekVaultResourceID() {
         return this.kekVaultResourceID == null ? Optional.empty() : Optional.ofNullable(this.kekVaultResourceID);
@@ -104,7 +104,6 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }
-
         public EncryptionKeyDetailsResponse build() {
             return new EncryptionKeyDetailsResponse(kekType, kekUrl, kekVaultResourceID);
         }

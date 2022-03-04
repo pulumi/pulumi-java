@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -105,84 +105,84 @@ public final class DriveStatusResponse {
     /**
      * The BitLocker key used to encrypt the drive.
      * 
-     */
+    */
     public Optional<String> getBitLockerKey() {
         return Optional.ofNullable(this.bitLockerKey);
     }
     /**
      * Bytes successfully transferred for the drive.
      * 
-     */
+    */
     public Optional<Double> getBytesSucceeded() {
         return Optional.ofNullable(this.bytesSucceeded);
     }
     /**
      * Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
      * 
-     */
+    */
     public Optional<String> getCopyStatus() {
         return Optional.ofNullable(this.copyStatus);
     }
     /**
      * The drive header hash value.
      * 
-     */
+    */
     public Optional<String> getDriveHeaderHash() {
         return Optional.ofNullable(this.driveHeaderHash);
     }
     /**
      * The drive's hardware serial number, without spaces.
      * 
-     */
+    */
     public Optional<String> getDriveId() {
         return Optional.ofNullable(this.driveId);
     }
     /**
      * A URI that points to the blob containing the error log for the data transfer operation.
      * 
-     */
+    */
     public Optional<String> getErrorLogUri() {
         return Optional.ofNullable(this.errorLogUri);
     }
     /**
      * The relative path of the manifest file on the drive.
      * 
-     */
+    */
     public Optional<String> getManifestFile() {
         return Optional.ofNullable(this.manifestFile);
     }
     /**
      * The Base16-encoded MD5 hash of the manifest file on the drive.
      * 
-     */
+    */
     public Optional<String> getManifestHash() {
         return Optional.ofNullable(this.manifestHash);
     }
     /**
      * A URI that points to the blob containing the drive manifest file.
      * 
-     */
+    */
     public Optional<String> getManifestUri() {
         return Optional.ofNullable(this.manifestUri);
     }
     /**
      * Percentage completed for the drive.
      * 
-     */
+    */
     public Optional<Integer> getPercentComplete() {
         return Optional.ofNullable(this.percentComplete);
     }
     /**
      * The drive's current state.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * A URI that points to the blob containing the verbose log for the data transfer operation.
      * 
-     */
+    */
     public Optional<String> getVerboseLogUri() {
         return Optional.ofNullable(this.verboseLogUri);
     }
@@ -288,7 +288,6 @@ public final class DriveStatusResponse {
             this.verboseLogUri = verboseLogUri;
             return this;
         }
-
         public DriveStatusResponse build() {
             return new DriveStatusResponse(bitLockerKey, bytesSucceeded, copyStatus, driveHeaderHash, driveId, errorLogUri, manifestFile, manifestHash, manifestUri, percentComplete, state, verboseLogUri);
         }

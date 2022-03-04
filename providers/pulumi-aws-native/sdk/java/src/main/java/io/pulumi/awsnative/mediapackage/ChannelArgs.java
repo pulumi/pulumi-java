@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage;
 import io.pulumi.awsnative.mediapackage.inputs.ChannelLogConfigurationArgs;
 import io.pulumi.awsnative.mediapackage.inputs.ChannelTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressAccessLogs")
-    private final @Nullable Input<ChannelLogConfigurationArgs> egressAccessLogs;
+      private final @Nullable Input<ChannelLogConfigurationArgs> egressAccessLogs;
 
     public Input<ChannelLogConfigurationArgs> getEgressAccessLogs() {
         return this.egressAccessLogs == null ? Input.empty() : this.egressAccessLogs;
@@ -44,7 +44,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingressAccessLogs")
-    private final @Nullable Input<ChannelLogConfigurationArgs> ingressAccessLogs;
+      private final @Nullable Input<ChannelLogConfigurationArgs> ingressAccessLogs;
 
     public Input<ChannelLogConfigurationArgs> getIngressAccessLogs() {
         return this.ingressAccessLogs == null ? Input.empty() : this.ingressAccessLogs;
@@ -55,7 +55,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ChannelTagArgs>> tags;
+      private final @Nullable Input<List<ChannelTagArgs>> tags;
 
     public Input<List<ChannelTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,7 +144,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ChannelArgs build() {
             return new ChannelArgs(description, egressAccessLogs, ingressAccessLogs, tags);
         }

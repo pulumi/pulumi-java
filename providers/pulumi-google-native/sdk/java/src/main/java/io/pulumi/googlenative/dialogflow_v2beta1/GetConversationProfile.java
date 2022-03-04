@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConversationProfile {
-/**
- * Retrieves the specified conversation profile.
+    private GetConversationProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetConversationProfileArgs.Builder a);
+    }
+    private static GetConversationProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConversationProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified conversation profile.
  * 
- */
+     */
+    public static CompletableFuture<GetConversationProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified conversation profile.
+     * 
+     */
     public static CompletableFuture<GetConversationProfileResult> invokeAsync(GetConversationProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getConversationProfile", TypeShape.of(GetConversationProfileResult.class), args == null ? GetConversationProfileArgs.Empty : args, Utilities.withVersion(options));
     }

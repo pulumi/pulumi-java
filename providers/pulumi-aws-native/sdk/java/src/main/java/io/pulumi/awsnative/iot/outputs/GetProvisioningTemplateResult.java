@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.ProvisioningTemplateProvisioningHook;
 import io.pulumi.awsnative.iot.outputs.ProvisioningTemplateTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -129,7 +129,6 @@ public final class GetProvisioningTemplateResult {
             this.templateBody = templateBody;
             return this;
         }
-
         public GetProvisioningTemplateResult build() {
             return new GetProvisioningTemplateResult(description, enabled, preProvisioningHook, provisioningRoleArn, tags, templateArn, templateBody);
         }

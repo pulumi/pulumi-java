@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.MetricCriteriaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse {
     /**
      * The list of metric criteria for this 'all of' operation.
      * 
-     */
+    */
     public List<MetricCriteriaResponse> getAllOf() {
         return this.allOf == null ? List.of() : this.allOf;
     }
@@ -43,7 +43,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse {
      * specifies the type of the alert criteria.
      * Expected value is 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
@@ -79,7 +79,6 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MetricAlertSingleResourceMultipleMetricCriteriaResponse build() {
             return new MetricAlertSingleResourceMultipleMetricCriteriaResponse(allOf, odataType);
         }

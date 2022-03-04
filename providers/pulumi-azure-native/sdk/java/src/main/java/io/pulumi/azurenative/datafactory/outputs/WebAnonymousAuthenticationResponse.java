@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class WebAnonymousAuthenticationResponse {
      * Type of authentication used to connect to the web table source.
      * Expected value is 'Anonymous'.
      * 
-     */
+    */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getUrl() {
         return this.url;
     }
@@ -77,7 +77,6 @@ public final class WebAnonymousAuthenticationResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public WebAnonymousAuthenticationResponse build() {
             return new WebAnonymousAuthenticationResponse(authenticationType, url);
         }

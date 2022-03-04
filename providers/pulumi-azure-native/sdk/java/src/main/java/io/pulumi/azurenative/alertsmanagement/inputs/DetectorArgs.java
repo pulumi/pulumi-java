@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -48,7 +48,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePaths")
-    private final @Nullable Input<List<String>> imagePaths;
+      private final @Nullable Input<List<String>> imagePaths;
 
     public Input<List<String>> getImagePaths() {
         return this.imagePaths == null ? Input.empty() : this.imagePaths;
@@ -59,7 +59,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,Object>> parameters;
+      private final @Nullable Input<Map<String,Object>> parameters;
 
     public Input<Map<String,Object>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -81,7 +81,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedResourceTypes")
-    private final @Nullable Input<List<String>> supportedResourceTypes;
+      private final @Nullable Input<List<String>> supportedResourceTypes;
 
     public Input<List<String>> getSupportedResourceTypes() {
         return this.supportedResourceTypes == null ? Input.empty() : this.supportedResourceTypes;
@@ -200,7 +200,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             this.supportedResourceTypes = Input.ofNullable(supportedResourceTypes);
             return this;
         }
-
         public DetectorArgs build() {
             return new DetectorArgs(description, id, imagePaths, name, parameters, supportedResourceTypes);
         }

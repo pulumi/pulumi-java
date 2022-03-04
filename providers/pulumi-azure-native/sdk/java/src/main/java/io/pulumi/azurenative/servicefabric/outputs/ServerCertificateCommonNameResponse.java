@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ServerCertificateCommonNameResponse {
     /**
      * The common name of the server certificate.
      * 
-     */
+    */
     public String getCertificateCommonName() {
         return this.certificateCommonName;
     }
     /**
      * The issuer thumbprint of the server certificate.
      * 
-     */
+    */
     public String getCertificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
@@ -74,7 +74,6 @@ public final class ServerCertificateCommonNameResponse {
             this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
             return this;
         }
-
         public ServerCertificateCommonNameResponse build() {
             return new ServerCertificateCommonNameResponse(certificateCommonName, certificateIssuerThumbprint);
         }

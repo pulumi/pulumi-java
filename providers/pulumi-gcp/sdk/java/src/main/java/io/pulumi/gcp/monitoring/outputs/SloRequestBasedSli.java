@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloRequestBasedSliDistributionCut;
 import io.pulumi.gcp.monitoring.outputs.SloRequestBasedSliGoodTotalRatio;
 import java.util.Objects;
@@ -49,7 +49,7 @@ public final class SloRequestBasedSli {
      * measuring good service and total service.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloRequestBasedSliDistributionCut> getDistributionCut() {
         return Optional.ofNullable(this.distributionCut);
     }
@@ -61,7 +61,7 @@ public final class SloRequestBasedSli {
      * will be assumed.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloRequestBasedSliGoodTotalRatio> getGoodTotalRatio() {
         return Optional.ofNullable(this.goodTotalRatio);
     }
@@ -97,7 +97,6 @@ public final class SloRequestBasedSli {
             this.goodTotalRatio = goodTotalRatio;
             return this;
         }
-
         public SloRequestBasedSli build() {
             return new SloRequestBasedSli(distributionCut, goodTotalRatio);
         }

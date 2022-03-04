@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="triggerName", required=true)
-    private final String triggerName;
+      private final String triggerName;
 
     public String getTriggerName() {
         return this.triggerName;
@@ -39,7 +39,7 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="workflowName", required=true)
-    private final String workflowName;
+      private final String workflowName;
 
     public String getWorkflowName() {
         return this.workflowName;
@@ -98,7 +98,6 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
         }
-
         public ListWorkflowTriggerCallbackUrlArgs build() {
             return new ListWorkflowTriggerCallbackUrlArgs(resourceGroupName, triggerName, workflowName);
         }

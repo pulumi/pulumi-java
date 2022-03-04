@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareCbtNicDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareCbtProtectedDiskDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -142,7 +142,7 @@ public final class VMwareCbtMigrationDetailsResponse {
     /**
      * The data mover RunAs account Id.
      * 
-     */
+    */
     public String getDataMoverRunAsAccountId() {
         return this.dataMoverRunAsAccountId;
     }
@@ -150,112 +150,112 @@ public final class VMwareCbtMigrationDetailsResponse {
      * Gets the instance type.
      * Expected value is 'VMwareCbt'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The last recovery point received time.
      * 
-     */
+    */
     public String getLastRecoveryPointReceived() {
         return this.lastRecoveryPointReceived;
     }
     /**
      * License Type of the VM to be used.
      * 
-     */
+    */
     public Optional<String> getLicenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * The recovery point Id to which the VM was migrated.
      * 
-     */
+    */
     public String getMigrationRecoveryPointId() {
         return this.migrationRecoveryPointId;
     }
     /**
      * The type of the OS on the VM.
      * 
-     */
+    */
     public String getOsType() {
         return this.osType;
     }
     /**
      * The list of protected disks.
      * 
-     */
+    */
     public List<VMwareCbtProtectedDiskDetailsResponse> getProtectedDisks() {
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
     /**
      * The snapshot RunAs account Id.
      * 
-     */
+    */
     public String getSnapshotRunAsAccountId() {
         return this.snapshotRunAsAccountId;
     }
     /**
      * The target availability set Id.
      * 
-     */
+    */
     public Optional<String> getTargetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
     /**
      * The target boot diagnostics storage account ARM Id.
      * 
-     */
+    */
     public Optional<String> getTargetBootDiagnosticsStorageAccountId() {
         return Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
     }
     /**
      * The target location.
      * 
-     */
+    */
     public String getTargetLocation() {
         return this.targetLocation;
     }
     /**
      * The target network Id.
      * 
-     */
+    */
     public Optional<String> getTargetNetworkId() {
         return Optional.ofNullable(this.targetNetworkId);
     }
     /**
      * The target resource group Id.
      * 
-     */
+    */
     public Optional<String> getTargetResourceGroupId() {
         return Optional.ofNullable(this.targetResourceGroupId);
     }
     /**
      * Target VM name.
      * 
-     */
+    */
     public Optional<String> getTargetVmName() {
         return Optional.ofNullable(this.targetVmName);
     }
     /**
      * The target VM size.
      * 
-     */
+    */
     public Optional<String> getTargetVmSize() {
         return Optional.ofNullable(this.targetVmSize);
     }
     /**
      * The network details.
      * 
-     */
+    */
     public List<VMwareCbtNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The ARM Id of the VM discovered in VMware.
      * 
-     */
+    */
     public String getVmwareMachineId() {
         return this.vmwareMachineId;
     }
@@ -396,7 +396,6 @@ public final class VMwareCbtMigrationDetailsResponse {
             this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId);
             return this;
         }
-
         public VMwareCbtMigrationDetailsResponse build() {
             return new VMwareCbtMigrationDetailsResponse(dataMoverRunAsAccountId, instanceType, lastRecoveryPointReceived, licenseType, migrationRecoveryPointId, osType, protectedDisks, snapshotRunAsAccountId, targetAvailabilitySetId, targetBootDiagnosticsStorageAccountId, targetLocation, targetNetworkId, targetResourceGroupId, targetVmName, targetVmSize, vmNics, vmwareMachineId);
         }

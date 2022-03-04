@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ExportTimePeriodResponse {
     /**
      * The start date for export data.
      * 
-     */
+    */
     public String getFrom() {
         return this.from;
     }
     /**
      * The end date for export data.
      * 
-     */
+    */
     public String getTo() {
         return this.to;
     }
@@ -74,7 +74,6 @@ public final class ExportTimePeriodResponse {
             this.to = Objects.requireNonNull(to);
             return this;
         }
-
         public ExportTimePeriodResponse build() {
             return new ExportTimePeriodResponse(from, to);
         }

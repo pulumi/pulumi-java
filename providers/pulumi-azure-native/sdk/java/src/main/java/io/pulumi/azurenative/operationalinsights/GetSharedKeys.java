@@ -6,21 +6,41 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.operationalinsights.inputs.GetSharedKeysArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.GetSharedKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSharedKeys {
-/**
- * The shared keys for a workspace.
+    private GetSharedKeys() {}
+    public interface BuilderApplicator {
+        public void apply(GetSharedKeysArgs.Builder a);
+    }
+    private static GetSharedKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSharedKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The shared keys for a workspace.
  * API Version: 2020-08-01.
  * 
- *
- * The shared keys for a workspace.
+     *
+     * The shared keys for a workspace.
  * 
- */
+     */
+    public static CompletableFuture<GetSharedKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The shared keys for a workspace.
+     * API Version: 2020-08-01.
+     * 
+     *
+         * The shared keys for a workspace.
+     * 
+     */
     public static CompletableFuture<GetSharedKeysResult> invokeAsync(GetSharedKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getSharedKeys", TypeShape.of(GetSharedKeysResult.class), args == null ? GetSharedKeysArgs.Empty : args, Utilities.withVersion(options));
     }

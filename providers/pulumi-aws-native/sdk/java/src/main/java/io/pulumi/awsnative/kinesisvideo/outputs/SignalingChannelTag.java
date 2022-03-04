@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisvideo.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SignalingChannelTag {
     /**
      * The key name of the tag. Specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. The following characters can be used: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value for the tag. Specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:.  The following characters can be used: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class SignalingChannelTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SignalingChannelTag build() {
             return new SignalingChannelTag(key, value);
         }

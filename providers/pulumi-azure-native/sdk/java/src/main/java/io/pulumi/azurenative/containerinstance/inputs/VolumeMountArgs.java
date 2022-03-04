@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPath", required=true)
-    private final Input<String> mountPath;
+      private final Input<String> mountPath;
 
     public Input<String> getMountPath() {
         return this.mountPath;
@@ -35,7 +35,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -120,7 +120,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
-
         public VolumeMountArgs build() {
             return new VolumeMountArgs(mountPath, name, readOnly);
         }

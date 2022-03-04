@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,7 +35,7 @@ public final class PodReadinessGate {
      *  - `"PodScheduled"` represents status of the scheduling process for this pod.
      *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
      * 
-     */
+    */
     public String getConditionType() {
         return this.conditionType;
     }
@@ -64,7 +64,6 @@ public final class PodReadinessGate {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
-
         public PodReadinessGate build() {
             return new PodReadinessGate(conditionType);
         }

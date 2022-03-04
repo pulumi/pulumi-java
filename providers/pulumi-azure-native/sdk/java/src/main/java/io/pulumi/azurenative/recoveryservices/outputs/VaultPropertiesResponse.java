@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.PrivateEndpointConnectionVaultPropertiesResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.UpgradeDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VaultPropertiesResponseEncryption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -65,42 +65,42 @@ public final class VaultPropertiesResponse {
     /**
      * Customer Managed Key details of the resource.
      * 
-     */
+    */
     public Optional<VaultPropertiesResponseEncryption> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * List of private endpoint connection.
      * 
-     */
+    */
     public List<PrivateEndpointConnectionVaultPropertiesResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Private endpoint state for backup.
      * 
-     */
+    */
     public String getPrivateEndpointStateForBackup() {
         return this.privateEndpointStateForBackup;
     }
     /**
      * Private endpoint state for site recovery.
      * 
-     */
+    */
     public String getPrivateEndpointStateForSiteRecovery() {
         return this.privateEndpointStateForSiteRecovery;
     }
     /**
      * Provisioning State.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Details for upgrading vault.
      * 
-     */
+    */
     public Optional<UpgradeDetailsResponse> getUpgradeDetails() {
         return Optional.ofNullable(this.upgradeDetails);
     }
@@ -164,7 +164,6 @@ public final class VaultPropertiesResponse {
             this.upgradeDetails = upgradeDetails;
             return this;
         }
-
         public VaultPropertiesResponse build() {
             return new VaultPropertiesResponse(encryption, privateEndpointConnections, privateEndpointStateForBackup, privateEndpointStateForSiteRecovery, provisioningState, upgradeDetails);
         }

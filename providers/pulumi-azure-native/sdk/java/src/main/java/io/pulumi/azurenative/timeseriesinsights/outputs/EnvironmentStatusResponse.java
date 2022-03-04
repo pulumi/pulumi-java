@@ -5,7 +5,7 @@ package io.pulumi.azurenative.timeseriesinsights.outputs;
 
 import io.pulumi.azurenative.timeseriesinsights.outputs.IngressEnvironmentStatusResponse;
 import io.pulumi.azurenative.timeseriesinsights.outputs.WarmStorageEnvironmentStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -32,14 +32,14 @@ public final class EnvironmentStatusResponse {
     /**
      * An object that represents the status of ingress on an environment.
      * 
-     */
+    */
     public IngressEnvironmentStatusResponse getIngress() {
         return this.ingress;
     }
     /**
      * An object that represents the status of warm storage on an environment.
      * 
-     */
+    */
     public WarmStorageEnvironmentStatusResponse getWarmStorage() {
         return this.warmStorage;
     }
@@ -75,7 +75,6 @@ public final class EnvironmentStatusResponse {
             this.warmStorage = Objects.requireNonNull(warmStorage);
             return this;
         }
-
         public EnvironmentStatusResponse build() {
             return new EnvironmentStatusResponse(ingress, warmStorage);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ThemeTag {
     /**
      * <p>Tag key.</p>
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * <p>Tag value.</p>
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class ThemeTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ThemeTag build() {
             return new ThemeTag(key, value);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="billingAccount", required=true)
-    private final Input<String> billingAccount;
+      private final Input<String> billingAccount;
 
     public Input<String> getBillingAccount() {
         return this.billingAccount;
@@ -31,7 +31,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucketId", required=true)
-    private final Input<String> bucketId;
+      private final Input<String> bucketId;
 
     public Input<String> getBucketId() {
         return this.bucketId;
@@ -42,7 +42,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -64,7 +64,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="retentionDays")
-    private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -168,7 +168,6 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }
-
         public BillingAccountBucketConfigArgs build() {
             return new BillingAccountBucketConfigArgs(billingAccount, bucketId, description, location, retentionDays);
         }

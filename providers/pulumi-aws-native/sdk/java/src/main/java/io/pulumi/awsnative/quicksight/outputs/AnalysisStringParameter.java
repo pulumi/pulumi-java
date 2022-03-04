@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class AnalysisStringParameter {
     /**
      * <p>A display name for a string parameter.</p>
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * <p>The values of a string parameter.</p>
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -75,7 +75,6 @@ public final class AnalysisStringParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public AnalysisStringParameter build() {
             return new AnalysisStringParameter(name, values);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.WsdlServiceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class WsdlDefinitionResponse {
     /**
      * The WSDL content
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The WSDL import method
      * 
-     */
+    */
     public Optional<String> getImportMethod() {
         return Optional.ofNullable(this.importMethod);
     }
     /**
      * The service with name and endpoint names
      * 
-     */
+    */
     public Optional<WsdlServiceResponse> getService() {
         return Optional.ofNullable(this.service);
     }
     /**
      * The WSDL URL
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
@@ -119,7 +119,6 @@ public final class WsdlDefinitionResponse {
             this.url = url;
             return this;
         }
-
         public WsdlDefinitionResponse build() {
             return new WsdlDefinitionResponse(content, importMethod, service, url);
         }

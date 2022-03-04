@@ -15,7 +15,7 @@ import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllow
 import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllowedPropertySetSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRdpProperty")
-    private final @Nullable Input<String> customRdpProperty;
+      private final @Nullable Input<String> customRdpProperty;
 
     public Input<String> getCustomRdpProperty() {
         return this.customRdpProperty == null ? Input.empty() : this.customRdpProperty;
@@ -44,7 +44,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -66,7 +66,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPoolName")
-    private final @Nullable Input<String> hostPoolName;
+      private final @Nullable Input<String> hostPoolName;
 
     public Input<String> getHostPoolName() {
         return this.hostPoolName == null ? Input.empty() : this.hostPoolName;
@@ -77,14 +77,14 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPoolType", required=true)
-    private final Input<Either<String,HostPoolType>> hostPoolType;
+      private final Input<Either<String,HostPoolType>> hostPoolType;
 
     public Input<Either<String,HostPoolType>> getHostPoolType() {
         return this.hostPoolType;
     }
 
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+      private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
     public Input<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -95,7 +95,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -106,7 +106,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerType", required=true)
-    private final Input<Either<String,LoadBalancerType>> loadBalancerType;
+      private final Input<Either<String,LoadBalancerType>> loadBalancerType;
 
     public Input<Either<String,LoadBalancerType>> getLoadBalancerType() {
         return this.loadBalancerType;
@@ -117,7 +117,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -128,7 +128,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedBy")
-    private final @Nullable Input<String> managedBy;
+      private final @Nullable Input<String> managedBy;
 
     public Input<String> getManagedBy() {
         return this.managedBy == null ? Input.empty() : this.managedBy;
@@ -139,7 +139,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSessionLimit")
-    private final @Nullable Input<Integer> maxSessionLimit;
+      private final @Nullable Input<Integer> maxSessionLimit;
 
     public Input<Integer> getMaxSessionLimit() {
         return this.maxSessionLimit == null ? Input.empty() : this.maxSessionLimit;
@@ -150,7 +150,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="migrationRequest")
-    private final @Nullable Input<MigrationRequestPropertiesArgs> migrationRequest;
+      private final @Nullable Input<MigrationRequestPropertiesArgs> migrationRequest;
 
     public Input<MigrationRequestPropertiesArgs> getMigrationRequest() {
         return this.migrationRequest == null ? Input.empty() : this.migrationRequest;
@@ -161,14 +161,14 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="personalDesktopAssignmentType")
-    private final @Nullable Input<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
+      private final @Nullable Input<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
 
     public Input<Either<String,PersonalDesktopAssignmentType>> getPersonalDesktopAssignmentType() {
         return this.personalDesktopAssignmentType == null ? Input.empty() : this.personalDesktopAssignmentType;
     }
 
     @InputImport(name="plan")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+      private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
     public Input<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -179,7 +179,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredAppGroupType", required=true)
-    private final Input<Either<String,PreferredAppGroupType>> preferredAppGroupType;
+      private final Input<Either<String,PreferredAppGroupType>> preferredAppGroupType;
 
     public Input<Either<String,PreferredAppGroupType>> getPreferredAppGroupType() {
         return this.preferredAppGroupType;
@@ -190,7 +190,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationInfo")
-    private final @Nullable Input<RegistrationInfoArgs> registrationInfo;
+      private final @Nullable Input<RegistrationInfoArgs> registrationInfo;
 
     public Input<RegistrationInfoArgs> getRegistrationInfo() {
         return this.registrationInfo == null ? Input.empty() : this.registrationInfo;
@@ -201,7 +201,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -212,14 +212,14 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ring")
-    private final @Nullable Input<Integer> ring;
+      private final @Nullable Input<Integer> ring;
 
     public Input<Integer> getRing() {
         return this.ring == null ? Input.empty() : this.ring;
     }
 
     @InputImport(name="sku")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+      private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
     public Input<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -230,7 +230,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ssoClientId")
-    private final @Nullable Input<String> ssoClientId;
+      private final @Nullable Input<String> ssoClientId;
 
     public Input<String> getSsoClientId() {
         return this.ssoClientId == null ? Input.empty() : this.ssoClientId;
@@ -241,7 +241,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ssoClientSecretKeyVaultPath")
-    private final @Nullable Input<String> ssoClientSecretKeyVaultPath;
+      private final @Nullable Input<String> ssoClientSecretKeyVaultPath;
 
     public Input<String> getSsoClientSecretKeyVaultPath() {
         return this.ssoClientSecretKeyVaultPath == null ? Input.empty() : this.ssoClientSecretKeyVaultPath;
@@ -252,7 +252,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ssoSecretType")
-    private final @Nullable Input<Either<String,SSOSecretType>> ssoSecretType;
+      private final @Nullable Input<Either<String,SSOSecretType>> ssoSecretType;
 
     public Input<Either<String,SSOSecretType>> getSsoSecretType() {
         return this.ssoSecretType == null ? Input.empty() : this.ssoSecretType;
@@ -263,7 +263,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ssoadfsAuthority")
-    private final @Nullable Input<String> ssoadfsAuthority;
+      private final @Nullable Input<String> ssoadfsAuthority;
 
     public Input<String> getSsoadfsAuthority() {
         return this.ssoadfsAuthority == null ? Input.empty() : this.ssoadfsAuthority;
@@ -274,7 +274,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startVMOnConnect")
-    private final @Nullable Input<Boolean> startVMOnConnect;
+      private final @Nullable Input<Boolean> startVMOnConnect;
 
     public Input<Boolean> getStartVMOnConnect() {
         return this.startVMOnConnect == null ? Input.empty() : this.startVMOnConnect;
@@ -285,7 +285,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -296,7 +296,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationEnvironment")
-    private final @Nullable Input<Boolean> validationEnvironment;
+      private final @Nullable Input<Boolean> validationEnvironment;
 
     public Input<Boolean> getValidationEnvironment() {
         return this.validationEnvironment == null ? Input.empty() : this.validationEnvironment;
@@ -307,7 +307,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmTemplate")
-    private final @Nullable Input<String> vmTemplate;
+      private final @Nullable Input<String> vmTemplate;
 
     public Input<String> getVmTemplate() {
         return this.vmTemplate == null ? Input.empty() : this.vmTemplate;
@@ -741,7 +741,6 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.vmTemplate = Input.ofNullable(vmTemplate);
             return this;
         }
-
         public HostPoolArgs build() {
             return new HostPoolArgs(customRdpProperty, description, friendlyName, hostPoolName, hostPoolType, identity, kind, loadBalancerType, location, managedBy, maxSessionLimit, migrationRequest, personalDesktopAssignmentType, plan, preferredAppGroupType, registrationInfo, resourceGroupName, ring, sku, ssoClientId, ssoClientSecretKeyVaultPath, ssoSecretType, ssoadfsAuthority, startVMOnConnect, tags, validationEnvironment, vmTemplate);
         }

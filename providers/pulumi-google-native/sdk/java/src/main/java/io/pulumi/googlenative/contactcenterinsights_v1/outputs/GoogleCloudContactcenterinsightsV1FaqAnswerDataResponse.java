@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -61,42 +61,42 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
     /**
      * The piece of text from the `source` knowledge base document.
      * 
-     */
+    */
     public String getAnswer() {
         return this.answer;
     }
     /**
      * The system's confidence score that this answer is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
-     */
+    */
     public Double getConfidenceScore() {
         return this.confidenceScore;
     }
     /**
      * Map that contains metadata about the FAQ answer and the document that it originates from.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
     /**
      * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}.
      * 
-     */
+    */
     public String getQueryRecord() {
         return this.queryRecord;
     }
     /**
      * The corresponding FAQ question.
      * 
-     */
+    */
     public String getQuestion() {
         return this.question;
     }
     /**
      * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
@@ -160,7 +160,6 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse(answer, confidenceScore, metadata, queryRecord, question, source);
         }

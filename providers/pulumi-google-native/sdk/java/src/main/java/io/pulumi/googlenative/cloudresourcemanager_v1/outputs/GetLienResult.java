@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class GetLienResult {
     /**
      * The creation time of this Lien.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * A system-generated unique identifier for this Lien. Example: `liens/1234abcd`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
      * 
-     */
+    */
     public String getOrigin() {
         return this.origin;
     }
     /**
      * A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens are supported. Example: `projects/1234`
      * 
-     */
+    */
     public String getParent() {
         return this.parent;
     }
     /**
      * Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. Example: 'Holds production API key'
      * 
-     */
+    */
     public String getReason() {
         return this.reason;
     }
     /**
      * The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM permission. The server will validate the permissions against those for which Liens are supported. An empty list is meaningless and will be rejected. Example: ['resourcemanager.projects.delete']
      * 
-     */
+    */
     public List<String> getRestrictions() {
         return this.restrictions;
     }
@@ -159,7 +159,6 @@ public final class GetLienResult {
             this.restrictions = Objects.requireNonNull(restrictions);
             return this;
         }
-
         public GetLienResult build() {
             return new GetLienResult(createTime, name, origin, parent, reason, restrictions);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+      private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -34,7 +34,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="pdID", required=true)
-    private final Input<String> pdID;
+      private final Input<String> pdID;
 
     public Input<String> getPdID() {
         return this.pdID;
@@ -93,7 +93,6 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
             this.pdID = Input.of(Objects.requireNonNull(pdID));
             return this;
         }
-
         public PhotonPersistentDiskVolumeSourceArgs build() {
             return new PhotonPersistentDiskVolumeSourceArgs(fsType, pdID);
         }

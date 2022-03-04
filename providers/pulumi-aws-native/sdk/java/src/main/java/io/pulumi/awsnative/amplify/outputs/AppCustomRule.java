@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplify.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,7 +86,6 @@ public final class AppCustomRule {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public AppCustomRule build() {
             return new AppCustomRule(condition, source, status, target);
         }

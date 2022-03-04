@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class QuickConnectQueueQuickConnectConfig extends io.pulumi.resourc
     public static final QuickConnectQueueQuickConnectConfig Empty = new QuickConnectQueueQuickConnectConfig();
 
     @InputImport(name="contactFlowArn", required=true)
-    private final String contactFlowArn;
+      private final String contactFlowArn;
 
     public String getContactFlowArn() {
         return this.contactFlowArn;
     }
 
     @InputImport(name="queueArn", required=true)
-    private final String queueArn;
+      private final String queueArn;
 
     public String getQueueArn() {
         return this.queueArn;
@@ -73,7 +73,6 @@ public final class QuickConnectQueueQuickConnectConfig extends io.pulumi.resourc
             this.queueArn = Objects.requireNonNull(queueArn);
             return this;
         }
-
         public QuickConnectQueueQuickConnectConfig build() {
             return new QuickConnectQueueQuickConnectConfig(contactFlowArn, queueArn);
         }

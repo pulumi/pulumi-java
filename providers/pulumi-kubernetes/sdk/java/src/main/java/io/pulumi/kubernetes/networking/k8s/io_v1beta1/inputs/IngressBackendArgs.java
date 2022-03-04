@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<TypedLocalObjectReferenceArgs> resource;
+      private final @Nullable Input<TypedLocalObjectReferenceArgs> resource;
 
     public Input<TypedLocalObjectReferenceArgs> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -37,7 +37,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -48,7 +48,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePort", required=true)
-    private final Input<Either<Integer,String>> servicePort;
+      private final Input<Either<Integer,String>> servicePort;
 
     public Input<Either<Integer,String>> getServicePort() {
         return this.servicePort;
@@ -122,7 +122,6 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
             this.servicePort = Input.of(Objects.requireNonNull(servicePort));
             return this;
         }
-
         public IngressBackendArgs build() {
             return new IngressBackendArgs(resource, serviceName, servicePort);
         }

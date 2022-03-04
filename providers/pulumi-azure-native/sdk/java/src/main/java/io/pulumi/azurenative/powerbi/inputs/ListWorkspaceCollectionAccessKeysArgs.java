@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerbi.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="workspaceCollectionName", required=true)
-    private final String workspaceCollectionName;
+      private final String workspaceCollectionName;
 
     public String getWorkspaceCollectionName() {
         return this.workspaceCollectionName;
@@ -77,7 +77,6 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
             this.workspaceCollectionName = Objects.requireNonNull(workspaceCollectionName);
             return this;
         }
-
         public ListWorkspaceCollectionAccessKeysArgs build() {
             return new ListWorkspaceCollectionAccessKeysArgs(resourceGroupName, workspaceCollectionName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="disableConnectionDrainOnFailover")
-    private final @Nullable Input<Boolean> disableConnectionDrainOnFailover;
+      private final @Nullable Input<Boolean> disableConnectionDrainOnFailover;
 
     public Input<Boolean> getDisableConnectionDrainOnFailover() {
         return this.disableConnectionDrainOnFailover == null ? Input.empty() : this.disableConnectionDrainOnFailover;
@@ -41,7 +41,7 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="dropTrafficIfUnhealthy")
-    private final @Nullable Input<Boolean> dropTrafficIfUnhealthy;
+      private final @Nullable Input<Boolean> dropTrafficIfUnhealthy;
 
     public Input<Boolean> getDropTrafficIfUnhealthy() {
         return this.dropTrafficIfUnhealthy == null ? Input.empty() : this.dropTrafficIfUnhealthy;
@@ -59,7 +59,7 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="failoverRatio")
-    private final @Nullable Input<Double> failoverRatio;
+      private final @Nullable Input<Double> failoverRatio;
 
     public Input<Double> getFailoverRatio() {
         return this.failoverRatio == null ? Input.empty() : this.failoverRatio;
@@ -133,7 +133,6 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends io.pulumi.r
             this.failoverRatio = Input.ofNullable(failoverRatio);
             return this;
         }
-
         public RegionBackendServiceFailoverPolicyGetArgs build() {
             return new RegionBackendServiceFailoverPolicyGetArgs(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }

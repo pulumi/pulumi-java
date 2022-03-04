@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsMembershipMemberKey;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsMembershipPreferredMemberKey;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsMembershipRole;
@@ -60,7 +60,7 @@ public final class GetGroupMembershipsMembership {
     /**
      * The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
      * 
-     */
+    */
     public String getGroup() {
         return this.group;
     }
@@ -70,7 +70,7 @@ public final class GetGroupMembershipsMembership {
     /**
      * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -80,7 +80,7 @@ public final class GetGroupMembershipsMembership {
     /**
      * The MembershipRoles that apply to the Membership. Structure is documented below.
      * 
-     */
+    */
     public List<GetGroupMembershipsMembershipRole> getRoles() {
         return this.roles;
     }
@@ -164,7 +164,6 @@ public final class GetGroupMembershipsMembership {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGroupMembershipsMembership build() {
             return new GetGroupMembershipsMembership(createTime, group, memberKeys, name, preferredMemberKeys, roles, type, updateTime);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExitCodeArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolOutputReferenceArgs;
@@ -27,7 +27,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commandLineArguments")
-    private final @Nullable Input<List<String>> commandLineArguments;
+      private final @Nullable Input<List<String>> commandLineArguments;
 
     public Input<List<String>> getCommandLineArguments() {
         return this.commandLineArguments == null ? Input.empty() : this.commandLineArguments;
@@ -38,7 +38,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exitCode")
-    private final @Nullable Input<ToolExitCodeArgs> exitCode;
+      private final @Nullable Input<ToolExitCodeArgs> exitCode;
 
     public Input<ToolExitCodeArgs> getExitCode() {
         return this.exitCode == null ? Input.empty() : this.exitCode;
@@ -49,7 +49,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toolLogs")
-    private final @Nullable Input<List<FileReferenceArgs>> toolLogs;
+      private final @Nullable Input<List<FileReferenceArgs>> toolLogs;
 
     public Input<List<FileReferenceArgs>> getToolLogs() {
         return this.toolLogs == null ? Input.empty() : this.toolLogs;
@@ -60,7 +60,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toolOutputs")
-    private final @Nullable Input<List<ToolOutputReferenceArgs>> toolOutputs;
+      private final @Nullable Input<List<ToolOutputReferenceArgs>> toolOutputs;
 
     public Input<List<ToolOutputReferenceArgs>> getToolOutputs() {
         return this.toolOutputs == null ? Input.empty() : this.toolOutputs;
@@ -149,7 +149,6 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
             this.toolOutputs = Input.ofNullable(toolOutputs);
             return this;
         }
-
         public ToolExecutionArgs build() {
             return new ToolExecutionArgs(commandLineArguments, exitCode, toolLogs, toolOutputs);
         }

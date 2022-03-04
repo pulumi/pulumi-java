@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devicefarm.outputs;
 
 import io.pulumi.awsnative.devicefarm.outputs.InstanceProfileTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -128,7 +128,6 @@ public final class GetInstanceProfileResult {
             this.tags = tags;
             return this;
         }
-
         public GetInstanceProfileResult build() {
             return new GetInstanceProfileResult(arn, description, excludeAppPackagesFromCleanup, name, packageCleanup, rebootAfterUse, tags);
         }

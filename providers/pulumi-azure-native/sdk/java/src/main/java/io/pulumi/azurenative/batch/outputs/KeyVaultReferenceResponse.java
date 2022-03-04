@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class KeyVaultReferenceResponse {
     /**
      * The resource ID of the Azure key vault associated with the Batch account.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The URL of the Azure key vault associated with the Batch account.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -74,7 +74,6 @@ public final class KeyVaultReferenceResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public KeyVaultReferenceResponse build() {
             return new KeyVaultReferenceResponse(id, url);
         }

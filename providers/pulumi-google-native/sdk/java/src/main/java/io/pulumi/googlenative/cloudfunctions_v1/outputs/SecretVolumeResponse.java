@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.SecretVersionResponse;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class SecretVolumeResponse {
     /**
      * The path within the container to mount the secret volume. For example, setting the mount_path as `/etc/secrets` would mount the secret value files under the `/etc/secrets` directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: /etc/secrets Restricted mount paths: /cloudsql, /dev/log, /pod, /proc, /var/log
      * 
-     */
+    */
     public String getMountPath() {
         return this.mountPath;
     }
     /**
      * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * Name of the secret in secret manager (not the full resource name).
      * 
-     */
+    */
     public String getSecret() {
         return this.secret;
     }
     /**
      * List of secret versions to mount for this secret. If empty, the `latest` version of the secret will be made available in a file named after the secret under the mount point.
      * 
-     */
+    */
     public List<SecretVersionResponse> getVersions() {
         return this.versions;
     }
@@ -118,7 +118,6 @@ public final class SecretVolumeResponse {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
         public SecretVolumeResponse build() {
             return new SecretVolumeResponse(mountPath, project, secret, versions);
         }

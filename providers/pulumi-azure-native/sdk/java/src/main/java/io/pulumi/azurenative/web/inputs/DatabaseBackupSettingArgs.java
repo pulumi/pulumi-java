@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.DatabaseType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable Input<String> connectionString;
+      private final @Nullable Input<String> connectionString;
 
     public Input<String> getConnectionString() {
         return this.connectionString == null ? Input.empty() : this.connectionString;
@@ -37,7 +37,7 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionStringName")
-    private final @Nullable Input<String> connectionStringName;
+      private final @Nullable Input<String> connectionStringName;
 
     public Input<String> getConnectionStringName() {
         return this.connectionStringName == null ? Input.empty() : this.connectionStringName;
@@ -48,14 +48,14 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="databaseType", required=true)
-    private final Input<Either<String,DatabaseType>> databaseType;
+      private final Input<Either<String,DatabaseType>> databaseType;
 
     public Input<Either<String,DatabaseType>> getDatabaseType() {
         return this.databaseType;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -144,7 +144,6 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public DatabaseBackupSettingArgs build() {
             return new DatabaseBackupSettingArgs(connectionString, connectionStringName, databaseType, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FailoverPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="failoverPriority")
-    private final @Nullable Integer failoverPriority;
+      private final @Nullable Integer failoverPriority;
 
     public Optional<Integer> getFailoverPriority() {
         return this.failoverPriority == null ? Optional.empty() : Optional.ofNullable(this.failoverPriority);
@@ -35,7 +35,7 @@ public final class FailoverPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -46,7 +46,7 @@ public final class FailoverPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="locationName")
-    private final @Nullable String locationName;
+      private final @Nullable String locationName;
 
     public Optional<String> getLocationName() {
         return this.locationName == null ? Optional.empty() : Optional.ofNullable(this.locationName);
@@ -105,7 +105,6 @@ public final class FailoverPolicyResponse extends io.pulumi.resources.InvokeArgs
             this.locationName = locationName;
             return this;
         }
-
         public FailoverPolicyResponse build() {
             return new FailoverPolicyResponse(failoverPriority, id, locationName);
         }

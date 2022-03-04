@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.OperationErrorErrorsItemResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OperationErrorResponse {
     /**
      * The array of errors encountered while processing this operation.
      * 
-     */
+    */
     public List<OperationErrorErrorsItemResponse> getErrors() {
         return this.errors;
     }
@@ -53,7 +53,6 @@ public final class OperationErrorResponse {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
         public OperationErrorResponse build() {
             return new OperationErrorResponse(errors);
         }

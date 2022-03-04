@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class WebhookNotificationResponse {
     /**
      * a property bag of settings. This value can be empty.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * the service address to receive the notification.
      * 
-     */
+    */
     public Optional<String> getServiceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
@@ -77,7 +77,6 @@ public final class WebhookNotificationResponse {
             this.serviceUri = serviceUri;
             return this;
         }
-
         public WebhookNotificationResponse build() {
             return new WebhookNotificationResponse(properties, serviceUri);
         }

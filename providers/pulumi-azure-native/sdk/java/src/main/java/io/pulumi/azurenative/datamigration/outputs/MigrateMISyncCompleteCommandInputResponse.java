@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class MigrateMISyncCompleteCommandInputResponse {
     /**
      * Name of managed instance database
      * 
-     */
+    */
     public String getSourceDatabaseName() {
         return this.sourceDatabaseName;
     }
@@ -52,7 +52,6 @@ public final class MigrateMISyncCompleteCommandInputResponse {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
-
         public MigrateMISyncCompleteCommandInputResponse build() {
             return new MigrateMISyncCompleteCommandInputResponse(sourceDatabaseName);
         }

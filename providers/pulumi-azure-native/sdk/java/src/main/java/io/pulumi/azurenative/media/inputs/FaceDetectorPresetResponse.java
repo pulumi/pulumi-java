@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FaceDetectorPresetResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="blurType")
-    private final @Nullable String blurType;
+      private final @Nullable String blurType;
 
     public Optional<String> getBlurType() {
         return this.blurType == null ? Optional.empty() : Optional.ofNullable(this.blurType);
@@ -35,7 +35,7 @@ public final class FaceDetectorPresetResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="experimentalOptions")
-    private final @Nullable Map<String,String> experimentalOptions;
+      private final @Nullable Map<String,String> experimentalOptions;
 
     public Map<String,String> getExperimentalOptions() {
         return this.experimentalOptions == null ? Map.of() : this.experimentalOptions;
@@ -46,7 +46,7 @@ public final class FaceDetectorPresetResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+      private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -58,7 +58,7 @@ public final class FaceDetectorPresetResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -69,7 +69,7 @@ public final class FaceDetectorPresetResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resolution")
-    private final @Nullable String resolution;
+      private final @Nullable String resolution;
 
     public Optional<String> getResolution() {
         return this.resolution == null ? Optional.empty() : Optional.ofNullable(this.resolution);
@@ -148,7 +148,6 @@ public final class FaceDetectorPresetResponse extends io.pulumi.resources.Invoke
             this.resolution = resolution;
             return this;
         }
-
         public FaceDetectorPresetResponse build() {
             return new FaceDetectorPresetResponse(blurType, experimentalOptions, mode, odataType, resolution);
         }

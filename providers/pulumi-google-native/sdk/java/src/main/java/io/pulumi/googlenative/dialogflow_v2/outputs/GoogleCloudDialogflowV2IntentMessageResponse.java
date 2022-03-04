@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageBasicCardResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageCardResponse;
@@ -136,105 +136,105 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse {
     /**
      * The basic card response for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageBasicCardResponse getBasicCard() {
         return this.basicCard;
     }
     /**
      * Browse carousel card for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse getBrowseCarouselCard() {
         return this.browseCarouselCard;
     }
     /**
      * The card response.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageCardResponse getCard() {
         return this.card;
     }
     /**
      * The carousel card response for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse getCarouselSelect() {
         return this.carouselSelect;
     }
     /**
      * The image response.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
         return this.image;
     }
     /**
      * The link out suggestion chip for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse getLinkOutSuggestion() {
         return this.linkOutSuggestion;
     }
     /**
      * The list card response for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageListSelectResponse getListSelect() {
         return this.listSelect;
     }
     /**
      * The media content card for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageMediaContentResponse getMediaContent() {
         return this.mediaContent;
     }
     /**
      * A custom platform-specific response.
      * 
-     */
+    */
     public Map<String,String> getPayload() {
         return this.payload;
     }
     /**
      * Optional. The platform that this message is intended for.
      * 
-     */
+    */
     public String getPlatform() {
         return this.platform;
     }
     /**
      * The quick replies response.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse getQuickReplies() {
         return this.quickReplies;
     }
     /**
      * The voice and text-only responses for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse getSimpleResponses() {
         return this.simpleResponses;
     }
     /**
      * The suggestion chips for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse getSuggestions() {
         return this.suggestions;
     }
     /**
      * Table card for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageTableCardResponse getTableCard() {
         return this.tableCard;
     }
     /**
      * The text response.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2IntentMessageTextResponse getText() {
         return this.text;
     }
@@ -361,7 +361,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageResponse(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, simpleResponses, suggestions, tableCard, text);
         }

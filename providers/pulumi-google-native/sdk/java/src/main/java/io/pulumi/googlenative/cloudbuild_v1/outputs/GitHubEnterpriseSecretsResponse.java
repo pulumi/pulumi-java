@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -73,56 +73,56 @@ public final class GitHubEnterpriseSecretsResponse {
     /**
      * The resource name for the OAuth client ID secret in Secret Manager.
      * 
-     */
+    */
     public String getOauthClientIdName() {
         return this.oauthClientIdName;
     }
     /**
      * The resource name for the OAuth client ID secret version in Secret Manager.
      * 
-     */
+    */
     public String getOauthClientIdVersionName() {
         return this.oauthClientIdVersionName;
     }
     /**
      * The resource name for the OAuth secret in Secret Manager.
      * 
-     */
+    */
     public String getOauthSecretName() {
         return this.oauthSecretName;
     }
     /**
      * The resource name for the OAuth secret secret version in Secret Manager.
      * 
-     */
+    */
     public String getOauthSecretVersionName() {
         return this.oauthSecretVersionName;
     }
     /**
      * The resource name for the private key secret.
      * 
-     */
+    */
     public String getPrivateKeyName() {
         return this.privateKeyName;
     }
     /**
      * The resource name for the private key secret version.
      * 
-     */
+    */
     public String getPrivateKeyVersionName() {
         return this.privateKeyVersionName;
     }
     /**
      * The resource name for the webhook secret in Secret Manager.
      * 
-     */
+    */
     public String getWebhookSecretName() {
         return this.webhookSecretName;
     }
     /**
      * The resource name for the webhook secret secret version in Secret Manager.
      * 
-     */
+    */
     public String getWebhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }
@@ -200,7 +200,6 @@ public final class GitHubEnterpriseSecretsResponse {
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
         }
-
         public GitHubEnterpriseSecretsResponse build() {
             return new GitHubEnterpriseSecretsResponse(oauthClientIdName, oauthClientIdVersionName, oauthSecretName, oauthSecretVersionName, privateKeyName, privateKeyVersionName, webhookSecretName, webhookSecretVersionName);
         }

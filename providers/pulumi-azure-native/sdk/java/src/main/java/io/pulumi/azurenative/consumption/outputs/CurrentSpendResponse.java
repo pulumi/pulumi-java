@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class CurrentSpendResponse {
     /**
      * The total amount of cost which is being tracked by the budget.
      * 
-     */
+    */
     public Double getAmount() {
         return this.amount;
     }
     /**
      * The unit of measure for the budget amount.
      * 
-     */
+    */
     public String getUnit() {
         return this.unit;
     }
@@ -75,7 +75,6 @@ public final class CurrentSpendResponse {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public CurrentSpendResponse build() {
             return new CurrentSpendResponse(amount, unit);
         }

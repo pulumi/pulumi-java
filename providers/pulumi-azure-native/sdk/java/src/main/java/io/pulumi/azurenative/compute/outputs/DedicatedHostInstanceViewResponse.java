@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DedicatedHostAvailableCapacityResponse;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class DedicatedHostInstanceViewResponse {
     /**
      * Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
      * 
-     */
+    */
     public String getAssetId() {
         return this.assetId;
     }
     /**
      * Unutilized capacity of the dedicated host.
      * 
-     */
+    */
     public Optional<DedicatedHostAvailableCapacityResponse> getAvailableCapacity() {
         return Optional.ofNullable(this.availableCapacity);
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
@@ -100,7 +100,6 @@ public final class DedicatedHostInstanceViewResponse {
             this.statuses = statuses;
             return this;
         }
-
         public DedicatedHostInstanceViewResponse build() {
             return new DedicatedHostInstanceViewResponse(assetId, availableCapacity, statuses);
         }

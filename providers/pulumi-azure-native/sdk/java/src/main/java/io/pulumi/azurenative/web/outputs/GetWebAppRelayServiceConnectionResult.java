@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -81,21 +81,21 @@ public final class GetWebAppRelayServiceConnectionResult {
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -111,7 +111,7 @@ public final class GetWebAppRelayServiceConnectionResult {
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -210,7 +210,6 @@ public final class GetWebAppRelayServiceConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppRelayServiceConnectionResult build() {
             return new GetWebAppRelayServiceConnectionResult(biztalkUri, entityConnectionString, entityName, hostname, id, kind, name, port, resourceConnectionString, resourceType, type);
         }

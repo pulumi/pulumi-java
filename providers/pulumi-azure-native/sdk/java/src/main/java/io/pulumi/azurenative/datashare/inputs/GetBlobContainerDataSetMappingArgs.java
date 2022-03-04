@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetBlobContainerDataSetMappingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBlobContainerDataSetMappingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dataSetMappingName", required=true)
-    private final String dataSetMappingName;
+      private final String dataSetMappingName;
 
     public String getDataSetMappingName() {
         return this.dataSetMappingName;
@@ -39,7 +39,7 @@ public final class GetBlobContainerDataSetMappingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetBlobContainerDataSetMappingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final String shareSubscriptionName;
+      private final String shareSubscriptionName;
 
     public String getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -119,7 +119,6 @@ public final class GetBlobContainerDataSetMappingArgs extends io.pulumi.resource
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public GetBlobContainerDataSetMappingArgs build() {
             return new GetBlobContainerDataSetMappingArgs(accountName, dataSetMappingName, resourceGroupName, shareSubscriptionName);
         }

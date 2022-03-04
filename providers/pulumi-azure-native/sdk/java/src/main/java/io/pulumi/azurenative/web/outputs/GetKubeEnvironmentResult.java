@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.AppLogsConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.ArcConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.ExtendedLocationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -134,7 +134,7 @@ public final class GetKubeEnvironmentResult {
      * app logs to a destination. Currently only "log-analytics" is
      * supported
      * 
-     */
+    */
     public Optional<AppLogsConfigurationResponse> getAppLogsConfiguration() {
         return Optional.ofNullable(this.appLogsConfiguration);
     }
@@ -143,91 +143,91 @@ public final class GetKubeEnvironmentResult {
      * components types. Eg: Choosing between BuildService kind,
      * FrontEnd Service ArtifactsStorageType etc.
      * 
-     */
+    */
     public Optional<ArcConfigurationResponse> getArcConfiguration() {
         return Optional.ofNullable(this.arcConfiguration);
     }
     /**
      * Default Domain Name for the cluster
      * 
-     */
+    */
     public String getDefaultDomain() {
         return this.defaultDomain;
     }
     /**
      * Any errors that occurred during deployment or deployment validation
      * 
-     */
+    */
     public String getDeploymentErrors() {
         return this.deploymentErrors;
     }
     /**
      * Extended Location.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Only visible within Vnet/Subnet
      * 
-     */
+    */
     public Optional<Boolean> getInternalLoadBalancerEnabled() {
         return Optional.ofNullable(this.internalLoadBalancerEnabled);
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the Kubernetes Environment.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Static IP of the KubeEnvironment
      * 
-     */
+    */
     public Optional<String> getStaticIp() {
         return Optional.ofNullable(this.staticIp);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -354,7 +354,6 @@ public final class GetKubeEnvironmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKubeEnvironmentResult build() {
             return new GetKubeEnvironmentResult(aksResourceID, appLogsConfiguration, arcConfiguration, defaultDomain, deploymentErrors, extendedLocation, id, internalLoadBalancerEnabled, kind, location, name, provisioningState, staticIp, tags, type);
         }

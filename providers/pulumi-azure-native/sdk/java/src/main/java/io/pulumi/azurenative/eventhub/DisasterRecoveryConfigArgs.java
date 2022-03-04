@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -30,7 +30,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="alternateName")
-    private final @Nullable Input<String> alternateName;
+      private final @Nullable Input<String> alternateName;
 
     public Input<String> getAlternateName() {
         return this.alternateName == null ? Input.empty() : this.alternateName;
@@ -41,7 +41,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -52,7 +52,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="partnerNamespace")
-    private final @Nullable Input<String> partnerNamespace;
+      private final @Nullable Input<String> partnerNamespace;
 
     public Input<String> getPartnerNamespace() {
         return this.partnerNamespace == null ? Input.empty() : this.partnerNamespace;
@@ -63,7 +63,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -167,7 +167,6 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public DisasterRecoveryConfigArgs build() {
             return new DisasterRecoveryConfigArgs(alias, alternateName, namespaceName, partnerNamespace, resourceGroupName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.enums.PublicKeyCertificateFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -35,7 +35,7 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<PublicKeyCertificateFormat> format;
+      private final @Nullable Input<PublicKeyCertificateFormat> format;
 
     public Input<PublicKeyCertificateFormat> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -94,7 +94,6 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
             this.format = Input.ofNullable(format);
             return this;
         }
-
         public PublicKeyCertificateArgs build() {
             return new PublicKeyCertificateArgs(certificate, format);
         }

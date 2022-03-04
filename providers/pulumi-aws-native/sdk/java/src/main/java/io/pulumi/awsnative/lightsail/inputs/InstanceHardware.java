@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.inputs.InstanceDisk;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cpuCount")
-    private final @Nullable Integer cpuCount;
+      private final @Nullable Integer cpuCount;
 
     public Optional<Integer> getCpuCount() {
         return this.cpuCount == null ? Optional.empty() : Optional.ofNullable(this.cpuCount);
@@ -36,7 +36,7 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable List<InstanceDisk> disks;
+      private final @Nullable List<InstanceDisk> disks;
 
     public List<InstanceDisk> getDisks() {
         return this.disks == null ? List.of() : this.disks;
@@ -47,7 +47,7 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ramSizeInGb")
-    private final @Nullable Integer ramSizeInGb;
+      private final @Nullable Integer ramSizeInGb;
 
     public Optional<Integer> getRamSizeInGb() {
         return this.ramSizeInGb == null ? Optional.empty() : Optional.ofNullable(this.ramSizeInGb);
@@ -106,7 +106,6 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
             this.ramSizeInGb = ramSizeInGb;
             return this;
         }
-
         public InstanceHardware build() {
             return new InstanceHardware(cpuCount, disks, ramSizeInGb);
         }

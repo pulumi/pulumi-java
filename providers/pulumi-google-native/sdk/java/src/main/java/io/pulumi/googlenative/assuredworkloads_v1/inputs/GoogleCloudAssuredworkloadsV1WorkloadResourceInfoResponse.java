@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -32,7 +32,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -81,7 +81,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(resourceId, resourceType);
         }

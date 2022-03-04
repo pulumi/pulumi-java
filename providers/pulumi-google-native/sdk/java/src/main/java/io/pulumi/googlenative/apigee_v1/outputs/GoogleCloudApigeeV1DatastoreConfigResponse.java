@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
     /**
      * Name of the Cloud Storage bucket. Required for `gcs` target_type.
      * 
-     */
+    */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * BigQuery dataset name Required for `bigquery` target_type.
      * 
-     */
+    */
     public String getDatasetName() {
         return this.datasetName;
     }
     /**
      * Path of Cloud Storage bucket Required for `gcs` target_type.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * GCP project in which the datastore exists
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * Prefix of BigQuery table Required for `bigquery` target_type.
      * 
-     */
+    */
     public String getTablePrefix() {
         return this.tablePrefix;
     }
@@ -137,7 +137,6 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
             this.tablePrefix = Objects.requireNonNull(tablePrefix);
             return this;
         }
-
         public GoogleCloudApigeeV1DatastoreConfigResponse build() {
             return new GoogleCloudApigeeV1DatastoreConfigResponse(bucketName, datasetName, path, project, tablePrefix);
         }

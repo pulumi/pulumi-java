@@ -24,7 +24,7 @@ import io.pulumi.awsnative.iot.outputs.TopicRuleSnsAction;
 import io.pulumi.awsnative.iot.outputs.TopicRuleSqsAction;
 import io.pulumi.awsnative.iot.outputs.TopicRuleStepFunctionsAction;
 import io.pulumi.awsnative.iot.outputs.TopicRuleTimestreamAction;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -327,7 +327,6 @@ public final class TopicRuleAction {
             this.timestream = timestream;
             return this;
         }
-
         public TopicRuleAction build() {
             return new TopicRuleAction(cloudwatchAlarm, cloudwatchLogs, cloudwatchMetric, dynamoDB, dynamoDBv2, elasticsearch, firehose, http, iotAnalytics, iotEvents, iotSiteWise, kafka, kinesis, lambda, openSearch, republish, s3, sns, sqs, stepFunctions, timestream);
         }

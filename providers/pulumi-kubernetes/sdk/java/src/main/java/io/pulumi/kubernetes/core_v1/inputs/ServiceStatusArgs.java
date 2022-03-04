@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ConditionArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<ConditionArgs>> conditions;
+      private final @Nullable Input<List<ConditionArgs>> conditions;
 
     public Input<List<ConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -36,7 +36,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancer")
-    private final @Nullable Input<LoadBalancerStatusArgs> loadBalancer;
+      private final @Nullable Input<LoadBalancerStatusArgs> loadBalancer;
 
     public Input<LoadBalancerStatusArgs> getLoadBalancer() {
         return this.loadBalancer == null ? Input.empty() : this.loadBalancer;
@@ -95,7 +95,6 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.loadBalancer = Input.ofNullable(loadBalancer);
             return this;
         }
-
         public ServiceStatusArgs build() {
             return new ServiceStatusArgs(conditions, loadBalancer);
         }

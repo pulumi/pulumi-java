@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.search.outputs;
 
 import io.pulumi.azurenative.search.outputs.PrivateEndpointConnectionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class PrivateEndpointConnectionResponse {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
      * 
-     */
+    */
     public Optional<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -119,7 +119,6 @@ public final class PrivateEndpointConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(id, name, properties, type);
         }

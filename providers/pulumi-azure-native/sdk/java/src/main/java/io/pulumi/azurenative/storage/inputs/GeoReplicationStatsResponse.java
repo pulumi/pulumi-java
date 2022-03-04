@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GeoReplicationStatsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="canFailover", required=true)
-    private final Boolean canFailover;
+      private final Boolean canFailover;
 
     public Boolean getCanFailover() {
         return this.canFailover;
@@ -33,7 +33,7 @@ public final class GeoReplicationStatsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="lastSyncTime", required=true)
-    private final String lastSyncTime;
+      private final String lastSyncTime;
 
     public String getLastSyncTime() {
         return this.lastSyncTime;
@@ -44,7 +44,7 @@ public final class GeoReplicationStatsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -103,7 +103,6 @@ public final class GeoReplicationStatsResponse extends io.pulumi.resources.Invok
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GeoReplicationStatsResponse build() {
             return new GeoReplicationStatsResponse(canFailover, lastSyncTime, status);
         }

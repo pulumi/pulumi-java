@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="disableTraceRoute")
-    private final @Nullable Input<Boolean> disableTraceRoute;
+      private final @Nullable Input<Boolean> disableTraceRoute;
 
     public Input<Boolean> getDisableTraceRoute() {
         return this.disableTraceRoute == null ? Input.empty() : this.disableTraceRoute;
@@ -66,7 +66,6 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends io.pulumi.reso
             this.disableTraceRoute = Input.ofNullable(disableTraceRoute);
             return this;
         }
-
         public ConnectionMonitorIcmpConfigurationArgs build() {
             return new ConnectionMonitorIcmpConfigurationArgs(disableTraceRoute);
         }

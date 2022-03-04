@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.ReusableConfigWrapperResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AllowedConfigListResponse {
     /**
      * All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
      * 
-     */
+    */
     public List<ReusableConfigWrapperResponse> getAllowedConfigValues() {
         return this.allowedConfigValues;
     }
@@ -53,7 +53,6 @@ public final class AllowedConfigListResponse {
             this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues);
             return this;
         }
-
         public AllowedConfigListResponse build() {
             return new AllowedConfigListResponse(allowedConfigValues);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.RegionalReplicationStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReplicationStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="aggregatedState", required=true)
-    private final String aggregatedState;
+      private final String aggregatedState;
 
     public String getAggregatedState() {
         return this.aggregatedState;
@@ -34,7 +34,7 @@ public final class ReplicationStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="summary", required=true)
-    private final List<RegionalReplicationStatusResponse> summary;
+      private final List<RegionalReplicationStatusResponse> summary;
 
     public List<RegionalReplicationStatusResponse> getSummary() {
         return this.summary;
@@ -83,7 +83,6 @@ public final class ReplicationStatusResponse extends io.pulumi.resources.InvokeA
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public ReplicationStatusResponse build() {
             return new ReplicationStatusResponse(aggregatedState, summary);
         }

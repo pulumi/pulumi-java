@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+      private final String content;
 
     public String getContent() {
         return this.content;
@@ -32,7 +32,7 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="format", required=true)
-    private final String format;
+      private final String format;
 
     public String getFormat() {
         return this.format;
@@ -81,7 +81,6 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public TextResponse build() {
             return new TextResponse(content, format);
         }

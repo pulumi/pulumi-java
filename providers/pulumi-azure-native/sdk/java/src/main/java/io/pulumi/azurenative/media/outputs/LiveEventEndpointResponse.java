@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class LiveEventEndpointResponse {
     /**
      * The endpoint protocol.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The endpoint URL.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
@@ -76,7 +76,6 @@ public final class LiveEventEndpointResponse {
             this.url = url;
             return this;
         }
-
         public LiveEventEndpointResponse build() {
             return new LiveEventEndpointResponse(protocol, url);
         }

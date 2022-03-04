@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentFileGetArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentZipGetArgs;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class StandardAppVersionDeploymentGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="files")
-    private final @Nullable Input<List<StandardAppVersionDeploymentFileGetArgs>> files;
+      private final @Nullable Input<List<StandardAppVersionDeploymentFileGetArgs>> files;
 
     public Input<List<StandardAppVersionDeploymentFileGetArgs>> getFiles() {
         return this.files == null ? Input.empty() : this.files;
@@ -35,7 +35,7 @@ public final class StandardAppVersionDeploymentGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="zip")
-    private final @Nullable Input<StandardAppVersionDeploymentZipGetArgs> zip;
+      private final @Nullable Input<StandardAppVersionDeploymentZipGetArgs> zip;
 
     public Input<StandardAppVersionDeploymentZipGetArgs> getZip() {
         return this.zip == null ? Input.empty() : this.zip;
@@ -94,7 +94,6 @@ public final class StandardAppVersionDeploymentGetArgs extends io.pulumi.resourc
             this.zip = Input.ofNullable(zip);
             return this;
         }
-
         public StandardAppVersionDeploymentGetArgs build() {
             return new StandardAppVersionDeploymentGetArgs(files, zip);
         }

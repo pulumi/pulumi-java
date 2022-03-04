@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ClientAccessRightResponse {
     /**
      * Type of access to be allowed for the client.
      * 
-     */
+    */
     public String getAccessPermission() {
         return this.accessPermission;
     }
     /**
      * IP of the client.
      * 
-     */
+    */
     public String getClient() {
         return this.client;
     }
@@ -74,7 +74,6 @@ public final class ClientAccessRightResponse {
             this.client = Objects.requireNonNull(client);
             return this;
         }
-
         public ClientAccessRightResponse build() {
             return new ClientAccessRightResponse(accessPermission, client);
         }

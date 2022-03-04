@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.ScriptStackFrameResponse;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class ScriptStatisticsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="evaluationKind", required=true)
-    private final String evaluationKind;
+      private final String evaluationKind;
 
     public String getEvaluationKind() {
         return this.evaluationKind;
@@ -30,7 +30,7 @@ public final class ScriptStatisticsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="stackFrames", required=true)
-    private final List<ScriptStackFrameResponse> stackFrames;
+      private final List<ScriptStackFrameResponse> stackFrames;
 
     public List<ScriptStackFrameResponse> getStackFrames() {
         return this.stackFrames;
@@ -79,7 +79,6 @@ public final class ScriptStatisticsResponse extends io.pulumi.resources.InvokeAr
             this.stackFrames = Objects.requireNonNull(stackFrames);
             return this;
         }
-
         public ScriptStatisticsResponse build() {
             return new ScriptStatisticsResponse(evaluationKind, stackFrames);
         }

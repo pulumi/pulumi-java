@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetP2sVpnGatewayArgs;
 import io.pulumi.azurenative.network.outputs.GetP2sVpnGatewayResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetP2sVpnGateway {
-/**
- * P2SVpnGateway Resource.
+    private GetP2sVpnGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetP2sVpnGatewayArgs.Builder a);
+    }
+    private static GetP2sVpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetP2sVpnGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * P2SVpnGateway Resource.
  * API Version: 2020-11-01.
  * 
- *
- * P2SVpnGateway Resource.
+     *
+     * P2SVpnGateway Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetP2sVpnGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * P2SVpnGateway Resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * P2SVpnGateway Resource.
+     * 
+     */
     public static CompletableFuture<GetP2sVpnGatewayResult> invokeAsync(GetP2sVpnGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getP2sVpnGateway", TypeShape.of(GetP2sVpnGatewayResult.class), args == null ? GetP2sVpnGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

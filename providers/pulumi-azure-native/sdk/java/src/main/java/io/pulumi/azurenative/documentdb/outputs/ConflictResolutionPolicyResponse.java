@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ConflictResolutionPolicyResponse {
     /**
      * The conflict resolution path in the case of LastWriterWins mode.
      * 
-     */
+    */
     public Optional<String> getConflictResolutionPath() {
         return Optional.ofNullable(this.conflictResolutionPath);
     }
     /**
      * The procedure to resolve conflicts in the case of custom mode.
      * 
-     */
+    */
     public Optional<String> getConflictResolutionProcedure() {
         return Optional.ofNullable(this.conflictResolutionProcedure);
     }
     /**
      * Indicates the conflict resolution mode.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
@@ -97,7 +97,6 @@ public final class ConflictResolutionPolicyResponse {
             this.mode = mode;
             return this;
         }
-
         public ConflictResolutionPolicyResponse build() {
             return new ConflictResolutionPolicyResponse(conflictResolutionPath, conflictResolutionProcedure, mode);
         }

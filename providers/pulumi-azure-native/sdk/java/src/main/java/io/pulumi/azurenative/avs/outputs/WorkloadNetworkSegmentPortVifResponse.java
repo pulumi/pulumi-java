@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class WorkloadNetworkSegmentPortVifResponse {
     /**
      * Name of port or VIF attached to segment.
      * 
-     */
+    */
     public Optional<String> getPortName() {
         return Optional.ofNullable(this.portName);
     }
@@ -54,7 +54,6 @@ public final class WorkloadNetworkSegmentPortVifResponse {
             this.portName = portName;
             return this;
         }
-
         public WorkloadNetworkSegmentPortVifResponse build() {
             return new WorkloadNetworkSegmentPortVifResponse(portName);
         }

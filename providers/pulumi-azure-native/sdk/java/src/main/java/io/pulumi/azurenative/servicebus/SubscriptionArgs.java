@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.servicebus.enums.EntityStatus;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDeleteOnIdle")
-    private final @Nullable Input<String> autoDeleteOnIdle;
+      private final @Nullable Input<String> autoDeleteOnIdle;
 
     public Input<String> getAutoDeleteOnIdle() {
         return this.autoDeleteOnIdle == null ? Input.empty() : this.autoDeleteOnIdle;
@@ -33,7 +33,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetteringOnFilterEvaluationExceptions")
-    private final @Nullable Input<Boolean> deadLetteringOnFilterEvaluationExceptions;
+      private final @Nullable Input<Boolean> deadLetteringOnFilterEvaluationExceptions;
 
     public Input<Boolean> getDeadLetteringOnFilterEvaluationExceptions() {
         return this.deadLetteringOnFilterEvaluationExceptions == null ? Input.empty() : this.deadLetteringOnFilterEvaluationExceptions;
@@ -44,7 +44,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetteringOnMessageExpiration")
-    private final @Nullable Input<Boolean> deadLetteringOnMessageExpiration;
+      private final @Nullable Input<Boolean> deadLetteringOnMessageExpiration;
 
     public Input<Boolean> getDeadLetteringOnMessageExpiration() {
         return this.deadLetteringOnMessageExpiration == null ? Input.empty() : this.deadLetteringOnMessageExpiration;
@@ -55,7 +55,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultMessageTimeToLive")
-    private final @Nullable Input<String> defaultMessageTimeToLive;
+      private final @Nullable Input<String> defaultMessageTimeToLive;
 
     public Input<String> getDefaultMessageTimeToLive() {
         return this.defaultMessageTimeToLive == null ? Input.empty() : this.defaultMessageTimeToLive;
@@ -66,7 +66,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="duplicateDetectionHistoryTimeWindow")
-    private final @Nullable Input<String> duplicateDetectionHistoryTimeWindow;
+      private final @Nullable Input<String> duplicateDetectionHistoryTimeWindow;
 
     public Input<String> getDuplicateDetectionHistoryTimeWindow() {
         return this.duplicateDetectionHistoryTimeWindow == null ? Input.empty() : this.duplicateDetectionHistoryTimeWindow;
@@ -77,7 +77,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBatchedOperations")
-    private final @Nullable Input<Boolean> enableBatchedOperations;
+      private final @Nullable Input<Boolean> enableBatchedOperations;
 
     public Input<Boolean> getEnableBatchedOperations() {
         return this.enableBatchedOperations == null ? Input.empty() : this.enableBatchedOperations;
@@ -88,7 +88,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardDeadLetteredMessagesTo")
-    private final @Nullable Input<String> forwardDeadLetteredMessagesTo;
+      private final @Nullable Input<String> forwardDeadLetteredMessagesTo;
 
     public Input<String> getForwardDeadLetteredMessagesTo() {
         return this.forwardDeadLetteredMessagesTo == null ? Input.empty() : this.forwardDeadLetteredMessagesTo;
@@ -99,7 +99,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardTo")
-    private final @Nullable Input<String> forwardTo;
+      private final @Nullable Input<String> forwardTo;
 
     public Input<String> getForwardTo() {
         return this.forwardTo == null ? Input.empty() : this.forwardTo;
@@ -110,7 +110,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lockDuration")
-    private final @Nullable Input<String> lockDuration;
+      private final @Nullable Input<String> lockDuration;
 
     public Input<String> getLockDuration() {
         return this.lockDuration == null ? Input.empty() : this.lockDuration;
@@ -121,7 +121,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDeliveryCount")
-    private final @Nullable Input<Integer> maxDeliveryCount;
+      private final @Nullable Input<Integer> maxDeliveryCount;
 
     public Input<Integer> getMaxDeliveryCount() {
         return this.maxDeliveryCount == null ? Input.empty() : this.maxDeliveryCount;
@@ -132,7 +132,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -143,7 +143,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresSession")
-    private final @Nullable Input<Boolean> requiresSession;
+      private final @Nullable Input<Boolean> requiresSession;
 
     public Input<Boolean> getRequiresSession() {
         return this.requiresSession == null ? Input.empty() : this.requiresSession;
@@ -154,7 +154,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -165,7 +165,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<EntityStatus> status;
+      private final @Nullable Input<EntityStatus> status;
 
     public Input<EntityStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -176,7 +176,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionName")
-    private final @Nullable Input<String> subscriptionName;
+      private final @Nullable Input<String> subscriptionName;
 
     public Input<String> getSubscriptionName() {
         return this.subscriptionName == null ? Input.empty() : this.subscriptionName;
@@ -187,7 +187,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final Input<String> topicName;
+      private final Input<String> topicName;
 
     public Input<String> getTopicName() {
         return this.topicName;
@@ -456,7 +456,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.topicName = Input.of(Objects.requireNonNull(topicName));
             return this;
         }
-
         public SubscriptionArgs build() {
             return new SubscriptionArgs(autoDeleteOnIdle, deadLetteringOnFilterEvaluationExceptions, deadLetteringOnMessageExpiration, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, forwardDeadLetteredMessagesTo, forwardTo, lockDuration, maxDeliveryCount, namespaceName, requiresSession, resourceGroupName, status, subscriptionName, topicName);
         }

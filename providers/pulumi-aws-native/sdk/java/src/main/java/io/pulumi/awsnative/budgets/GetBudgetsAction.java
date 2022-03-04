@@ -6,17 +6,33 @@ package io.pulumi.awsnative.budgets;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.budgets.inputs.GetBudgetsActionArgs;
 import io.pulumi.awsnative.budgets.outputs.GetBudgetsActionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBudgetsAction {
-/**
- * An example resource schema demonstrating some basic constructs and validation rules.
+    private GetBudgetsAction() {}
+    public interface BuilderApplicator {
+        public void apply(GetBudgetsActionArgs.Builder a);
+    }
+    private static GetBudgetsActionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBudgetsActionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
  * 
- */
+     */
+    public static CompletableFuture<GetBudgetsActionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetBudgetsActionResult> invokeAsync(GetBudgetsActionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:budgets:getBudgetsAction", TypeShape.of(GetBudgetsActionResult.class), args == null ? GetBudgetsActionArgs.Empty : args, Utilities.withVersion(options));
     }

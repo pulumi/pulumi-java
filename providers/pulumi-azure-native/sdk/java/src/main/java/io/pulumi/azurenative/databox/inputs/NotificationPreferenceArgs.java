@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.enums.NotificationStageName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sendNotification", required=true)
-    private final Input<Boolean> sendNotification;
+      private final Input<Boolean> sendNotification;
 
     public Input<Boolean> getSendNotification() {
         return this.sendNotification;
@@ -36,7 +36,7 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="stageName", required=true)
-    private final Input<Either<String,NotificationStageName>> stageName;
+      private final Input<Either<String,NotificationStageName>> stageName;
 
     public Input<Either<String,NotificationStageName>> getStageName() {
         return this.stageName;
@@ -95,7 +95,6 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
             this.stageName = Input.of(Objects.requireNonNull(stageName));
             return this;
         }
-
         public NotificationPreferenceArgs build() {
             return new NotificationPreferenceArgs(sendNotification, stageName);
         }

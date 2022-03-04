@@ -6,7 +6,7 @@ package io.pulumi.awsnative.connect;
 import io.pulumi.awsnative.connect.inputs.QuickConnectConfigArgs;
 import io.pulumi.awsnative.connect.inputs.QuickConnectTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-    private final Input<String> instanceArn;
+      private final Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn;
@@ -44,7 +44,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quickConnectConfig", required=true)
-    private final Input<QuickConnectConfigArgs> quickConnectConfig;
+      private final Input<QuickConnectConfigArgs> quickConnectConfig;
 
     public Input<QuickConnectConfigArgs> getQuickConnectConfig() {
         return this.quickConnectConfig;
@@ -66,7 +66,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<QuickConnectTagArgs>> tags;
+      private final @Nullable Input<List<QuickConnectTagArgs>> tags;
 
     public Input<List<QuickConnectTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -170,7 +170,6 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public QuickConnectArgs build() {
             return new QuickConnectArgs(description, instanceArn, name, quickConnectConfig, tags);
         }

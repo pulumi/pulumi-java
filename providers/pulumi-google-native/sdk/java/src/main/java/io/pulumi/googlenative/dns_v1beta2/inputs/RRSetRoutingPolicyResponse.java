@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyGeoPolicyResponse;
 import io.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyWrrPolicyResponse;
 import java.lang.String;
@@ -19,35 +19,35 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
     public static final RRSetRoutingPolicyResponse Empty = new RRSetRoutingPolicyResponse();
 
     @InputImport(name="geo", required=true)
-    private final RRSetRoutingPolicyGeoPolicyResponse geo;
+      private final RRSetRoutingPolicyGeoPolicyResponse geo;
 
     public RRSetRoutingPolicyGeoPolicyResponse getGeo() {
         return this.geo;
     }
 
     @InputImport(name="geoPolicy", required=true)
-    private final RRSetRoutingPolicyGeoPolicyResponse geoPolicy;
+      private final RRSetRoutingPolicyGeoPolicyResponse geoPolicy;
 
     public RRSetRoutingPolicyGeoPolicyResponse getGeoPolicy() {
         return this.geoPolicy;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
     }
 
     @InputImport(name="wrr", required=true)
-    private final RRSetRoutingPolicyWrrPolicyResponse wrr;
+      private final RRSetRoutingPolicyWrrPolicyResponse wrr;
 
     public RRSetRoutingPolicyWrrPolicyResponse getWrr() {
         return this.wrr;
     }
 
     @InputImport(name="wrrPolicy", required=true)
-    private final RRSetRoutingPolicyWrrPolicyResponse wrrPolicy;
+      private final RRSetRoutingPolicyWrrPolicyResponse wrrPolicy;
 
     public RRSetRoutingPolicyWrrPolicyResponse getWrrPolicy() {
         return this.wrrPolicy;
@@ -126,7 +126,6 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
             this.wrrPolicy = Objects.requireNonNull(wrrPolicy);
             return this;
         }
-
         public RRSetRoutingPolicyResponse build() {
             return new RRSetRoutingPolicyResponse(geo, geoPolicy, kind, wrr, wrrPolicy);
         }

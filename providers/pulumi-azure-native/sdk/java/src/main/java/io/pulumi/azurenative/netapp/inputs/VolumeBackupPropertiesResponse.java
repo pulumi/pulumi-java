@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backupEnabled")
-    private final @Nullable Boolean backupEnabled;
+      private final @Nullable Boolean backupEnabled;
 
     public Optional<Boolean> getBackupEnabled() {
         return this.backupEnabled == null ? Optional.empty() : Optional.ofNullable(this.backupEnabled);
@@ -35,7 +35,7 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backupPolicyId")
-    private final @Nullable String backupPolicyId;
+      private final @Nullable String backupPolicyId;
 
     public Optional<String> getBackupPolicyId() {
         return this.backupPolicyId == null ? Optional.empty() : Optional.ofNullable(this.backupPolicyId);
@@ -46,7 +46,7 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="policyEnforced")
-    private final @Nullable Boolean policyEnforced;
+      private final @Nullable Boolean policyEnforced;
 
     public Optional<Boolean> getPolicyEnforced() {
         return this.policyEnforced == null ? Optional.empty() : Optional.ofNullable(this.policyEnforced);
@@ -57,7 +57,7 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vaultId")
-    private final @Nullable String vaultId;
+      private final @Nullable String vaultId;
 
     public Optional<String> getVaultId() {
         return this.vaultId == null ? Optional.empty() : Optional.ofNullable(this.vaultId);
@@ -126,7 +126,6 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
             this.vaultId = vaultId;
             return this;
         }
-
         public VolumeBackupPropertiesResponse build() {
             return new VolumeBackupPropertiesResponse(backupEnabled, backupPolicyId, policyEnforced, vaultId);
         }

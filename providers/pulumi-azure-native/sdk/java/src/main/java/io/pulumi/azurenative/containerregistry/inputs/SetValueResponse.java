@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isSecret")
-    private final @Nullable Boolean isSecret;
+      private final @Nullable Boolean isSecret;
 
     public Optional<Boolean> getIsSecret() {
         return this.isSecret == null ? Optional.empty() : Optional.ofNullable(this.isSecret);
@@ -35,7 +35,7 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -105,7 +105,6 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SetValueResponse build() {
             return new SetValueResponse(isSecret, name, value);
         }

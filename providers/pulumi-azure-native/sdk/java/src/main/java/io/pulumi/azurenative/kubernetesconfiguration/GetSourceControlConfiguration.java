@@ -6,21 +6,41 @@ package io.pulumi.azurenative.kubernetesconfiguration;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.GetSourceControlConfigurationArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.GetSourceControlConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSourceControlConfiguration {
-/**
- * The SourceControl Configuration object returned in Get & Put response.
+    private GetSourceControlConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetSourceControlConfigurationArgs.Builder a);
+    }
+    private static GetSourceControlConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSourceControlConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The SourceControl Configuration object returned in Get & Put response.
  * API Version: 2021-03-01.
  * 
- *
- * The SourceControl Configuration object returned in Get & Put response.
+     *
+     * The SourceControl Configuration object returned in Get & Put response.
  * 
- */
+     */
+    public static CompletableFuture<GetSourceControlConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The SourceControl Configuration object returned in Get & Put response.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * The SourceControl Configuration object returned in Get & Put response.
+     * 
+     */
     public static CompletableFuture<GetSourceControlConfigurationResult> invokeAsync(GetSourceControlConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getSourceControlConfiguration", TypeShape.of(GetSourceControlConfigurationResult.class), args == null ? GetSourceControlConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

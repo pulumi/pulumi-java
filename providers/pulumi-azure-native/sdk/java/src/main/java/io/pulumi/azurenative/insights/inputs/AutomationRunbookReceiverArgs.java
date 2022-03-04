@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="automationAccountId", required=true)
-    private final Input<String> automationAccountId;
+      private final Input<String> automationAccountId;
 
     public Input<String> getAutomationAccountId() {
         return this.automationAccountId;
@@ -35,7 +35,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isGlobalRunbook", required=true)
-    private final Input<Boolean> isGlobalRunbook;
+      private final Input<Boolean> isGlobalRunbook;
 
     public Input<Boolean> getIsGlobalRunbook() {
         return this.isGlobalRunbook;
@@ -46,7 +46,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="runbookName", required=true)
-    private final Input<String> runbookName;
+      private final Input<String> runbookName;
 
     public Input<String> getRunbookName() {
         return this.runbookName;
@@ -68,7 +68,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serviceUri")
-    private final @Nullable Input<String> serviceUri;
+      private final @Nullable Input<String> serviceUri;
 
     public Input<String> getServiceUri() {
         return this.serviceUri == null ? Input.empty() : this.serviceUri;
@@ -79,7 +79,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-    private final @Nullable Input<Boolean> useCommonAlertSchema;
+      private final @Nullable Input<Boolean> useCommonAlertSchema;
 
     public Input<Boolean> getUseCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Input.empty() : this.useCommonAlertSchema;
@@ -90,7 +90,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="webhookResourceId", required=true)
-    private final Input<String> webhookResourceId;
+      private final Input<String> webhookResourceId;
 
     public Input<String> getWebhookResourceId() {
         return this.webhookResourceId;
@@ -224,7 +224,6 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
             this.webhookResourceId = Input.of(Objects.requireNonNull(webhookResourceId));
             return this;
         }
-
         public AutomationRunbookReceiverArgs build() {
             return new AutomationRunbookReceiverArgs(automationAccountId, isGlobalRunbook, name, runbookName, serviceUri, useCommonAlertSchema, webhookResourceId);
         }

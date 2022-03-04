@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCorsConfig;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfig;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,35 +18,35 @@ public final class ResponseHeadersPolicyConfig extends io.pulumi.resources.Invok
     public static final ResponseHeadersPolicyConfig Empty = new ResponseHeadersPolicyConfig();
 
     @InputImport(name="comment")
-    private final @Nullable String comment;
+      private final @Nullable String comment;
 
     public Optional<String> getComment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
     @InputImport(name="corsConfig")
-    private final @Nullable ResponseHeadersPolicyCorsConfig corsConfig;
+      private final @Nullable ResponseHeadersPolicyCorsConfig corsConfig;
 
     public Optional<ResponseHeadersPolicyCorsConfig> getCorsConfig() {
         return this.corsConfig == null ? Optional.empty() : Optional.ofNullable(this.corsConfig);
     }
 
     @InputImport(name="customHeadersConfig")
-    private final @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig;
+      private final @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig;
 
     public Optional<ResponseHeadersPolicyCustomHeadersConfig> getCustomHeadersConfig() {
         return this.customHeadersConfig == null ? Optional.empty() : Optional.ofNullable(this.customHeadersConfig);
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="securityHeadersConfig")
-    private final @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig;
+      private final @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig;
 
     public Optional<ResponseHeadersPolicySecurityHeadersConfig> getSecurityHeadersConfig() {
         return this.securityHeadersConfig == null ? Optional.empty() : Optional.ofNullable(this.securityHeadersConfig);
@@ -125,7 +125,6 @@ public final class ResponseHeadersPolicyConfig extends io.pulumi.resources.Invok
             this.securityHeadersConfig = securityHeadersConfig;
             return this;
         }
-
         public ResponseHeadersPolicyConfig build() {
             return new ResponseHeadersPolicyConfig(comment, corsConfig, customHeadersConfig, name, securityHeadersConfig);
         }

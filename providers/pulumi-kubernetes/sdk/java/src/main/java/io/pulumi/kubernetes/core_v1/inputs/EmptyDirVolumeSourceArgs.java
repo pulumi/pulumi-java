@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="medium")
-    private final @Nullable Input<String> medium;
+      private final @Nullable Input<String> medium;
 
     public Input<String> getMedium() {
         return this.medium == null ? Input.empty() : this.medium;
@@ -34,7 +34,7 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sizeLimit")
-    private final @Nullable Input<String> sizeLimit;
+      private final @Nullable Input<String> sizeLimit;
 
     public Input<String> getSizeLimit() {
         return this.sizeLimit == null ? Input.empty() : this.sizeLimit;
@@ -93,7 +93,6 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
             this.sizeLimit = Input.ofNullable(sizeLimit);
             return this;
         }
-
         public EmptyDirVolumeSourceArgs build() {
             return new EmptyDirVolumeSourceArgs(medium, sizeLimit);
         }

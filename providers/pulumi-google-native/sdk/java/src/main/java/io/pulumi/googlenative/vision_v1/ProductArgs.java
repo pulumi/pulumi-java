@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vision_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vision_v1.inputs.KeyValueArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,14 +32,14 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -50,7 +50,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -61,14 +61,14 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productCategory")
-    private final @Nullable Input<String> productCategory;
+      private final @Nullable Input<String> productCategory;
 
     public Input<String> getProductCategory() {
         return this.productCategory == null ? Input.empty() : this.productCategory;
     }
 
     @InputImport(name="productId")
-    private final @Nullable Input<String> productId;
+      private final @Nullable Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId == null ? Input.empty() : this.productId;
@@ -79,14 +79,14 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productLabels")
-    private final @Nullable Input<List<KeyValueArgs>> productLabels;
+      private final @Nullable Input<List<KeyValueArgs>> productLabels;
 
     public Input<List<KeyValueArgs>> getProductLabels() {
         return this.productLabels == null ? Input.empty() : this.productLabels;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -235,7 +235,6 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ProductArgs build() {
             return new ProductArgs(description, displayName, location, name, productCategory, productId, productLabels, project);
         }

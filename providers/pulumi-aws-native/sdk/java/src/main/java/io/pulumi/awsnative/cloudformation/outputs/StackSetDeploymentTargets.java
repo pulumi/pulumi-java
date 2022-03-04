@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class StackSetDeploymentTargets {
     /**
      * AWS accounts that you want to create stack instances in the specified Region(s) for.
      * 
-     */
+    */
     public List<String> getAccounts() {
         return this.accounts == null ? List.of() : this.accounts;
     }
     /**
      * The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
      * 
-     */
+    */
     public List<String> getOrganizationalUnitIds() {
         return this.organizationalUnitIds == null ? List.of() : this.organizationalUnitIds;
     }
@@ -76,7 +76,6 @@ public final class StackSetDeploymentTargets {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
-
         public StackSetDeploymentTargets build() {
             return new StackSetDeploymentTargets(accounts, organizationalUnitIds);
         }

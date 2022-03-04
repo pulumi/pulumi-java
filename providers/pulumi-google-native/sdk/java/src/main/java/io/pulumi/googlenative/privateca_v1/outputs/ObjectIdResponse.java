@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ObjectIdResponse {
     /**
      * The parts of an OID path. The most significant parts of the path come first.
      * 
-     */
+    */
     public List<Integer> getObjectIdPath() {
         return this.objectIdPath;
     }
@@ -53,7 +53,6 @@ public final class ObjectIdResponse {
             this.objectIdPath = Objects.requireNonNull(objectIdPath);
             return this;
         }
-
         public ObjectIdResponse build() {
             return new ObjectIdResponse(objectIdPath);
         }

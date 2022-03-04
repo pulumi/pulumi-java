@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
      * 
      */
     @InputImport(name="fabricName", required=true)
-    private final String fabricName;
+      private final String fabricName;
 
     public String getFabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
      * 
      */
     @InputImport(name="mappingName", required=true)
-    private final String mappingName;
+      private final String mappingName;
 
     public String getMappingName() {
         return this.mappingName;
@@ -39,7 +39,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
      * 
      */
     @InputImport(name="protectionContainerName", required=true)
-    private final String protectionContainerName;
+      private final String protectionContainerName;
 
     public String getProtectionContainerName() {
         return this.protectionContainerName;
@@ -50,7 +50,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -140,7 +140,6 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetReplicationProtectionContainerMappingArgs build() {
             return new GetReplicationProtectionContainerMappingArgs(fabricName, mappingName, protectionContainerName, resourceGroupName, resourceName);
         }

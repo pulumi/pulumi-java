@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ObjectIdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="objectIdPath", required=true)
-    private final List<Integer> objectIdPath;
+      private final List<Integer> objectIdPath;
 
     public List<Integer> getObjectIdPath() {
         return this.objectIdPath;
@@ -60,7 +60,6 @@ public final class ObjectIdResponse extends io.pulumi.resources.InvokeArgs {
             this.objectIdPath = Objects.requireNonNull(objectIdPath);
             return this;
         }
-
         public ObjectIdResponse build() {
             return new ObjectIdResponse(objectIdPath);
         }

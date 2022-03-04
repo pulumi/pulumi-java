@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigAdditionalExtensionObjectId;
 import java.lang.Boolean;
 import java.lang.String;
@@ -43,7 +43,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtension {
      * Indicates whether or not this extension is critical (i.e., if the client does not know how to
      * handle this extension, the client should consider this to be an error).
      * 
-     */
+    */
     public Boolean getCritical() {
         return this.critical;
     }
@@ -51,14 +51,14 @@ public final class AuthorityConfigX509ConfigAdditionalExtension {
      * Describes values that are relevant in a CA certificate.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigX509ConfigAdditionalExtensionObjectId getObjectId() {
         return this.objectId;
     }
     /**
      * The value of this X.509 extension. A base64-encoded string.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -101,7 +101,6 @@ public final class AuthorityConfigX509ConfigAdditionalExtension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AuthorityConfigX509ConfigAdditionalExtension build() {
             return new AuthorityConfigX509ConfigAdditionalExtension(critical, objectId, value);
         }

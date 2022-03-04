@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class AutoPausePropertiesResponse {
     /**
      * Number of minutes of idle time before the Big Data pool is automatically paused.
      * 
-     */
+    */
     public Optional<Integer> getDelayInMinutes() {
         return Optional.ofNullable(this.delayInMinutes);
     }
     /**
      * Whether auto-pausing is enabled for the Big Data pool.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -77,7 +77,6 @@ public final class AutoPausePropertiesResponse {
             this.enabled = enabled;
             return this;
         }
-
         public AutoPausePropertiesResponse build() {
             return new AutoPausePropertiesResponse(delayInMinutes, enabled);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.consumption.outputs.BudgetTimePeriodResponse;
 import io.pulumi.azurenative.consumption.outputs.CurrentSpendResponse;
 import io.pulumi.azurenative.consumption.outputs.ForecastSpendResponse;
 import io.pulumi.azurenative.consumption.outputs.NotificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -110,84 +110,84 @@ public final class GetBudgetResult {
     /**
      * The total amount of cost to track with the budget
      * 
-     */
+    */
     public Double getAmount() {
         return this.amount;
     }
     /**
      * The category of the budget, whether the budget tracks cost or usage.
      * 
-     */
+    */
     public String getCategory() {
         return this.category;
     }
     /**
      * The current amount of cost which is being tracked for a budget.
      * 
-     */
+    */
     public CurrentSpendResponse getCurrentSpend() {
         return this.currentSpend;
     }
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * May be used to filter budgets by user-specified dimensions and/or tags.
      * 
-     */
+    */
     public Optional<BudgetFilterResponse> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The forecasted cost which is being tracked for a budget.
      * 
-     */
+    */
     public ForecastSpendResponse getForecastSpend() {
         return this.forecastSpend;
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Dictionary of notifications associated with the budget. Budget can have up to five notifications.
      * 
-     */
+    */
     public Map<String,NotificationResponse> getNotifications() {
         return this.notifications == null ? Map.of() : this.notifications;
     }
     /**
      * The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
      * 
-     */
+    */
     public String getTimeGrain() {
         return this.timeGrain;
     }
     /**
      * Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
      * 
-     */
+    */
     public BudgetTimePeriodResponse getTimePeriod() {
         return this.timePeriod;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -293,7 +293,6 @@ public final class GetBudgetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBudgetResult build() {
             return new GetBudgetResult(amount, category, currentSpend, eTag, filter, forecastSpend, id, name, notifications, timeGrain, timePeriod, type);
         }

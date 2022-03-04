@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkflowTemplateIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetWorkflowTemplateIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkflowTemplateIamPolicyArgs.Builder a);
+    }
+    private static GetWorkflowTemplateIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkflowTemplateIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkflowTemplateIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetWorkflowTemplateIamPolicyResult> invokeAsync(GetWorkflowTemplateIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1:getWorkflowTemplateIamPolicy", TypeShape.of(GetWorkflowTemplateIamPolicyResult.class), args == null ? GetWorkflowTemplateIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

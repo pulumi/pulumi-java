@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLRateBasedStatementAggregateKeyType;
 import io.pulumi.awsnative.wafv2.outputs.WebACLForwardedIPConfiguration;
 import io.pulumi.awsnative.wafv2.outputs.WebACLStatement;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -89,7 +89,6 @@ public final class WebACLRateBasedStatement {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public WebACLRateBasedStatement build() {
             return new WebACLRateBasedStatement(aggregateKeyType, forwardedIPConfig, limit, scopeDownStatement);
         }

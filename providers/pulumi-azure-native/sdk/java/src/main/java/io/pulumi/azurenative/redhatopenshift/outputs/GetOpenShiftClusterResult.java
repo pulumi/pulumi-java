@@ -11,7 +11,7 @@ import io.pulumi.azurenative.redhatopenshift.outputs.MasterProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.ServicePrincipalProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.WorkerProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -127,98 +127,98 @@ public final class GetOpenShiftClusterResult {
     /**
      * The cluster API server profile.
      * 
-     */
+    */
     public Optional<APIServerProfileResponse> getApiserverProfile() {
         return Optional.ofNullable(this.apiserverProfile);
     }
     /**
      * The cluster profile.
      * 
-     */
+    */
     public Optional<ClusterProfileResponse> getClusterProfile() {
         return Optional.ofNullable(this.clusterProfile);
     }
     /**
      * The console profile.
      * 
-     */
+    */
     public Optional<ConsoleProfileResponse> getConsoleProfile() {
         return Optional.ofNullable(this.consoleProfile);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The cluster ingress profiles.
      * 
-     */
+    */
     public List<IngressProfileResponse> getIngressProfiles() {
         return this.ingressProfiles == null ? List.of() : this.ingressProfiles;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The cluster master profile.
      * 
-     */
+    */
     public Optional<MasterProfileResponse> getMasterProfile() {
         return Optional.ofNullable(this.masterProfile);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The cluster network profile.
      * 
-     */
+    */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * The cluster provisioning state (immutable).
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The cluster service principal profile.
      * 
-     */
+    */
     public Optional<ServicePrincipalProfileResponse> getServicePrincipalProfile() {
         return Optional.ofNullable(this.servicePrincipalProfile);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The cluster worker profiles.
      * 
-     */
+    */
     public List<WorkerProfileResponse> getWorkerProfiles() {
         return this.workerProfiles == null ? List.of() : this.workerProfiles;
     }
@@ -338,7 +338,6 @@ public final class GetOpenShiftClusterResult {
             this.workerProfiles = workerProfiles;
             return this;
         }
-
         public GetOpenShiftClusterResult build() {
             return new GetOpenShiftClusterResult(apiserverProfile, clusterProfile, consoleProfile, id, ingressProfiles, location, masterProfile, name, networkProfile, provisioningState, servicePrincipalProfile, tags, type, workerProfiles);
         }

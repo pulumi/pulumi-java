@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SQLStorageSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="defaultFilePath")
-    private final @Nullable String defaultFilePath;
+      private final @Nullable String defaultFilePath;
 
     public Optional<String> getDefaultFilePath() {
         return this.defaultFilePath == null ? Optional.empty() : Optional.ofNullable(this.defaultFilePath);
@@ -36,7 +36,7 @@ public final class SQLStorageSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="luns")
-    private final @Nullable List<Integer> luns;
+      private final @Nullable List<Integer> luns;
 
     public List<Integer> getLuns() {
         return this.luns == null ? List.of() : this.luns;
@@ -85,7 +85,6 @@ public final class SQLStorageSettingsResponse extends io.pulumi.resources.Invoke
             this.luns = luns;
             return this;
         }
-
         public SQLStorageSettingsResponse build() {
             return new SQLStorageSettingsResponse(defaultFilePath, luns);
         }

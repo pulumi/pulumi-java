@@ -6,21 +6,41 @@ package io.pulumi.azurenative.loadtestservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.loadtestservice.inputs.GetLoadTestArgs;
 import io.pulumi.azurenative.loadtestservice.outputs.GetLoadTestResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoadTest {
-/**
- * LoadTest details
+    private GetLoadTest() {}
+    public interface BuilderApplicator {
+        public void apply(GetLoadTestArgs.Builder a);
+    }
+    private static GetLoadTestArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLoadTestArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * LoadTest details
  * API Version: 2021-12-01-preview.
  * 
- *
- * LoadTest details
+     *
+     * LoadTest details
  * 
- */
+     */
+    public static CompletableFuture<GetLoadTestResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * LoadTest details
+     * API Version: 2021-12-01-preview.
+     * 
+     *
+         * LoadTest details
+     * 
+     */
     public static CompletableFuture<GetLoadTestResult> invokeAsync(GetLoadTestArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:loadtestservice:getLoadTest", TypeShape.of(GetLoadTestResult.class), args == null ? GetLoadTestArgs.Empty : args, Utilities.withVersion(options));
     }

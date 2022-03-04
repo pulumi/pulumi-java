@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ContainerRegistryCredentialsResponse {
     /**
      * The ACR login server name. User name is the first part of the FQDN.
      * 
-     */
+    */
     public String getLoginServer() {
         return this.loginServer;
     }
     /**
      * The ACR primary password.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The ACR secondary password.
      * 
-     */
+    */
     public String getPassword2() {
         return this.password2;
     }
     /**
      * The ACR login username.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -116,7 +116,6 @@ public final class ContainerRegistryCredentialsResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ContainerRegistryCredentialsResponse build() {
             return new ContainerRegistryCredentialsResponse(loginServer, password, password2, username);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BucketLoggingResponse {
     /**
      * The destination bucket where the current bucket's logs should be placed.
      * 
-     */
+    */
     public String getLogBucket() {
         return this.logBucket;
     }
     /**
      * A prefix for log object names.
      * 
-     */
+    */
     public String getLogObjectPrefix() {
         return this.logObjectPrefix;
     }
@@ -74,7 +74,6 @@ public final class BucketLoggingResponse {
             this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
             return this;
         }
-
         public BucketLoggingResponse build() {
             return new BucketLoggingResponse(logBucket, logObjectPrefix);
         }

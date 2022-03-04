@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class TypedErrorInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TypedErrorInfoResponse build() {
             return new TypedErrorInfoResponse(info, type);
         }

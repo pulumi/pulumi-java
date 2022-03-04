@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -88,70 +88,70 @@ public final class DatabaseSummaryResultResponse {
     /**
      * Migration end time
      * 
-     */
+    */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Wildcard string prefix to use for querying all errors of the item
      * 
-     */
+    */
     public String getErrorPrefix() {
         return this.errorPrefix;
     }
     /**
      * Number of successfully completed items
      * 
-     */
+    */
     public Double getItemsCompletedCount() {
         return this.itemsCompletedCount;
     }
     /**
      * Number of items
      * 
-     */
+    */
     public Double getItemsCount() {
         return this.itemsCount;
     }
     /**
      * Name of the item
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Wildcard string prefix to use for querying all sub-tem results of the item
      * 
-     */
+    */
     public String getResultPrefix() {
         return this.resultPrefix;
     }
     /**
      * Size of the database in megabytes
      * 
-     */
+    */
     public Double getSizeMB() {
         return this.sizeMB;
     }
     /**
      * Migration start time
      * 
-     */
+    */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Status message
      * 
-     */
+    */
     public String getStatusMessage() {
         return this.statusMessage;
     }
@@ -243,7 +243,6 @@ public final class DatabaseSummaryResultResponse {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public DatabaseSummaryResultResponse build() {
             return new DatabaseSummaryResultResponse(endedOn, errorPrefix, itemsCompletedCount, itemsCount, name, resultPrefix, sizeMB, startedOn, state, statusMessage);
         }

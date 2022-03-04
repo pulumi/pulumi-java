@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GetTrustedIdProviderResult {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The URL of this trusted identity provider.
      * 
-     */
+    */
     public String getIdProvider() {
         return this.idProvider;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -116,7 +116,6 @@ public final class GetTrustedIdProviderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTrustedIdProviderResult build() {
             return new GetTrustedIdProviderResult(id, idProvider, name, type);
         }

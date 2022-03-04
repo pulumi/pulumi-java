@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sourcerepo.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,7 +49,7 @@ public final class RepositoryPubsubConfig {
      * - JSON: The message payload is a JSON string of SourceRepoEvent.
      *   Possible values are `PROTOBUF` and `JSON`.
      * 
-     */
+    */
     public String getMessageFormat() {
         return this.messageFormat;
     }
@@ -59,14 +59,14 @@ public final class RepositoryPubsubConfig {
      * the caller needs to have iam.serviceAccounts.actAs permission on this service account.
      * If unspecified, it defaults to the compute engine default service account.
      * 
-     */
+    */
     public Optional<String> getServiceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
     /**
      * The identifier for this object. Format specified above.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
@@ -109,7 +109,6 @@ public final class RepositoryPubsubConfig {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public RepositoryPubsubConfig build() {
             return new RepositoryPubsubConfig(messageFormat, serviceAccountEmail, topic);
         }

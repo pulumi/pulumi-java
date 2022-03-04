@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2HotwordRuleResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
     /**
      * Hotword-based detection rule.
      * 
-     */
+    */
     public GooglePrivacyDlpV2HotwordRuleResponse getHotwordRule() {
         return this.hotwordRule;
     }
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
             this.hotwordRule = Objects.requireNonNull(hotwordRule);
             return this;
         }
-
         public GooglePrivacyDlpV2DetectionRuleResponse build() {
             return new GooglePrivacyDlpV2DetectionRuleResponse(hotwordRule);
         }

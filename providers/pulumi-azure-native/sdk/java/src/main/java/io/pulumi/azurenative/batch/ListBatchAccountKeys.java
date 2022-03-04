@@ -6,21 +6,41 @@ package io.pulumi.azurenative.batch;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.batch.inputs.ListBatchAccountKeysArgs;
 import io.pulumi.azurenative.batch.outputs.ListBatchAccountKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBatchAccountKeys {
-/**
- * A set of Azure Batch account keys.
+    private ListBatchAccountKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListBatchAccountKeysArgs.Builder a);
+    }
+    private static ListBatchAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListBatchAccountKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A set of Azure Batch account keys.
  * API Version: 2021-01-01.
  * 
- *
- * A set of Azure Batch account keys.
+     *
+     * A set of Azure Batch account keys.
  * 
- */
+     */
+    public static CompletableFuture<ListBatchAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A set of Azure Batch account keys.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * A set of Azure Batch account keys.
+     * 
+     */
     public static CompletableFuture<ListBatchAccountKeysResult> invokeAsync(ListBatchAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:listBatchAccountKeys", TypeShape.of(ListBatchAccountKeysResult.class), args == null ? ListBatchAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

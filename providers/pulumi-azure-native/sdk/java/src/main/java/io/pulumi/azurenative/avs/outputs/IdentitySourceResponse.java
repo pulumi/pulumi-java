@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -89,70 +89,70 @@ public final class IdentitySourceResponse {
     /**
      * The domain's NetBIOS name
      * 
-     */
+    */
     public Optional<String> getAlias() {
         return Optional.ofNullable(this.alias);
     }
     /**
      * The base distinguished name for groups
      * 
-     */
+    */
     public Optional<String> getBaseGroupDN() {
         return Optional.ofNullable(this.baseGroupDN);
     }
     /**
      * The base distinguished name for users
      * 
-     */
+    */
     public Optional<String> getBaseUserDN() {
         return Optional.ofNullable(this.baseUserDN);
     }
     /**
      * The domain's dns name
      * 
-     */
+    */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * The name of the identity source
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Primary server URL
      * 
-     */
+    */
     public Optional<String> getPrimaryServer() {
         return Optional.ofNullable(this.primaryServer);
     }
     /**
      * Secondary server URL
      * 
-     */
+    */
     public Optional<String> getSecondaryServer() {
         return Optional.ofNullable(this.secondaryServer);
     }
     /**
      * Protect LDAP communication using SSL certificate (LDAPS)
      * 
-     */
+    */
     public Optional<String> getSsl() {
         return Optional.ofNullable(this.ssl);
     }
     /**
      * The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -244,7 +244,6 @@ public final class IdentitySourceResponse {
             this.username = username;
             return this;
         }
-
         public IdentitySourceResponse build() {
             return new IdentitySourceResponse(alias, baseGroupDN, baseUserDN, domain, name, password, primaryServer, secondaryServer, ssl, username);
         }

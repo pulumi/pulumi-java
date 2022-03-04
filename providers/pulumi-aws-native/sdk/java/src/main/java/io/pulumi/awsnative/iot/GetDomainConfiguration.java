@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iot.inputs.GetDomainConfigurationArgs;
 import io.pulumi.awsnative.iot.outputs.GetDomainConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainConfiguration {
-/**
- * Create and manage a Domain Configuration
+    private GetDomainConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainConfigurationArgs.Builder a);
+    }
+    private static GetDomainConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Create and manage a Domain Configuration
  * 
- */
+     */
+    public static CompletableFuture<GetDomainConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Create and manage a Domain Configuration
+     * 
+     */
     public static CompletableFuture<GetDomainConfigurationResult> invokeAsync(GetDomainConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getDomainConfiguration", TypeShape.of(GetDomainConfigurationResult.class), args == null ? GetDomainConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hdinsight.outputs.HardwareProfileResponse;
 import io.pulumi.azurenative.hdinsight.outputs.OsProfileResponse;
 import io.pulumi.azurenative.hdinsight.outputs.ScriptActionResponse;
 import io.pulumi.azurenative.hdinsight.outputs.VirtualNetworkProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -105,77 +105,77 @@ public final class RoleResponse {
     /**
      * The autoscale configurations.
      * 
-     */
+    */
     public Optional<AutoscaleResponse> getAutoscaleConfiguration() {
         return Optional.ofNullable(this.autoscaleConfiguration);
     }
     /**
      * The data disks groups for the role.
      * 
-     */
+    */
     public List<DataDisksGroupsResponse> getDataDisksGroups() {
         return this.dataDisksGroups == null ? List.of() : this.dataDisksGroups;
     }
     /**
      * Indicates whether encrypt the data disks.
      * 
-     */
+    */
     public Optional<Boolean> getEncryptDataDisks() {
         return Optional.ofNullable(this.encryptDataDisks);
     }
     /**
      * The hardware profile.
      * 
-     */
+    */
     public Optional<HardwareProfileResponse> getHardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
     /**
      * The minimum instance count of the cluster.
      * 
-     */
+    */
     public Optional<Integer> getMinInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
     /**
      * The name of the role.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The operating system profile.
      * 
-     */
+    */
     public Optional<OsProfileResponse> getOsProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
      * The list of script actions on the role.
      * 
-     */
+    */
     public List<ScriptActionResponse> getScriptActions() {
         return this.scriptActions == null ? List.of() : this.scriptActions;
     }
     /**
      * The instance count of the cluster.
      * 
-     */
+    */
     public Optional<Integer> getTargetInstanceCount() {
         return Optional.ofNullable(this.targetInstanceCount);
     }
     /**
      * The name of the virtual machine group.
      * 
-     */
+    */
     public Optional<String> getVMGroupName() {
         return Optional.ofNullable(this.vMGroupName);
     }
     /**
      * The virtual network profile.
      * 
-     */
+    */
     public Optional<VirtualNetworkProfileResponse> getVirtualNetworkProfile() {
         return Optional.ofNullable(this.virtualNetworkProfile);
     }
@@ -274,7 +274,6 @@ public final class RoleResponse {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
-
         public RoleResponse build() {
             return new RoleResponse(autoscaleConfiguration, dataDisksGroups, encryptDataDisks, hardwareProfile, minInstanceCount, name, osProfile, scriptActions, targetInstanceCount, vMGroupName, virtualNetworkProfile);
         }

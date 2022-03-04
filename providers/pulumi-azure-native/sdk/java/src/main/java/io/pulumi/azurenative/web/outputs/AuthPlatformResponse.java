@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -44,14 +44,14 @@ public final class AuthPlatformResponse {
      * The path of the config file containing auth settings if they come from a file.
      * If the path is relative, base will the site's root directory.
      * 
-     */
+    */
     public Optional<String> getConfigFilePath() {
         return Optional.ofNullable(this.configFilePath);
     }
     /**
      * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -59,7 +59,7 @@ public final class AuthPlatformResponse {
      * The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
      * 
-     */
+    */
     public Optional<String> getRuntimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -102,7 +102,6 @@ public final class AuthPlatformResponse {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public AuthPlatformResponse build() {
             return new AuthPlatformResponse(configFilePath, enabled, runtimeVersion);
         }

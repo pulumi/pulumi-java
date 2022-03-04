@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class IosTestLoopResponse {
     /**
      * Bundle ID of the app.
      * 
-     */
+    */
     public String getBundleId() {
         return this.bundleId;
     }
@@ -52,7 +52,6 @@ public final class IosTestLoopResponse {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public IosTestLoopResponse build() {
             return new IosTestLoopResponse(bundleId);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.servicefabric.inputs.LoadBalancingRuleArgs;
 import io.pulumi.azurenative.servicefabric.inputs.SettingsSectionDescriptionArgs;
 import io.pulumi.azurenative.servicefabric.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonFeatures")
-    private final @Nullable Input<List<String>> addonFeatures;
+      private final @Nullable Input<List<String>> addonFeatures;
 
     public Input<List<String>> getAddonFeatures() {
         return this.addonFeatures == null ? Input.empty() : this.addonFeatures;
@@ -38,7 +38,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminPassword")
-    private final @Nullable Input<String> adminPassword;
+      private final @Nullable Input<String> adminPassword;
 
     public Input<String> getAdminPassword() {
         return this.adminPassword == null ? Input.empty() : this.adminPassword;
@@ -49,7 +49,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUserName", required=true)
-    private final Input<String> adminUserName;
+      private final Input<String> adminUserName;
 
     public Input<String> getAdminUserName() {
         return this.adminUserName;
@@ -60,7 +60,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureActiveDirectory")
-    private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
+      private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
 
     public Input<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
         return this.azureActiveDirectory == null ? Input.empty() : this.azureActiveDirectory;
@@ -71,7 +71,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientConnectionPort")
-    private final @Nullable Input<Integer> clientConnectionPort;
+      private final @Nullable Input<Integer> clientConnectionPort;
 
     public Input<Integer> getClientConnectionPort() {
         return this.clientConnectionPort == null ? Input.empty() : this.clientConnectionPort;
@@ -82,7 +82,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clients")
-    private final @Nullable Input<List<ClientCertificateArgs>> clients;
+      private final @Nullable Input<List<ClientCertificateArgs>> clients;
 
     public Input<List<ClientCertificateArgs>> getClients() {
         return this.clients == null ? Input.empty() : this.clients;
@@ -93,7 +93,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterCodeVersion")
-    private final @Nullable Input<String> clusterCodeVersion;
+      private final @Nullable Input<String> clusterCodeVersion;
 
     public Input<String> getClusterCodeVersion() {
         return this.clusterCodeVersion == null ? Input.empty() : this.clusterCodeVersion;
@@ -104,7 +104,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -115,7 +115,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName", required=true)
-    private final Input<String> dnsName;
+      private final Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName;
@@ -126,7 +126,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fabricSettings")
-    private final @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings;
+      private final @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
     public Input<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
         return this.fabricSettings == null ? Input.empty() : this.fabricSettings;
@@ -137,7 +137,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpGatewayConnectionPort")
-    private final @Nullable Input<Integer> httpGatewayConnectionPort;
+      private final @Nullable Input<Integer> httpGatewayConnectionPort;
 
     public Input<Integer> getHttpGatewayConnectionPort() {
         return this.httpGatewayConnectionPort == null ? Input.empty() : this.httpGatewayConnectionPort;
@@ -148,7 +148,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancingRules")
-    private final @Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules;
+      private final @Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules;
 
     public Input<List<LoadBalancingRuleArgs>> getLoadBalancingRules() {
         return this.loadBalancingRules == null ? Input.empty() : this.loadBalancingRules;
@@ -159,7 +159,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -170,7 +170,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -181,7 +181,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -192,7 +192,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -461,7 +461,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ManagedClusterArgs build() {
             return new ManagedClusterArgs(addonFeatures, adminPassword, adminUserName, azureActiveDirectory, clientConnectionPort, clients, clusterCodeVersion, clusterName, dnsName, fabricSettings, httpGatewayConnectionPort, loadBalancingRules, location, resourceGroupName, sku, tags);
         }

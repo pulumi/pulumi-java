@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationConditionActionConditionPropertiesAction;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -23,7 +23,7 @@ public final class LoggingConfigurationConditionActionConditionProperties {
     /**
      * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
      * 
-     */
+    */
     public LoggingConfigurationConditionActionConditionPropertiesAction getAction() {
         return this.action;
     }
@@ -52,7 +52,6 @@ public final class LoggingConfigurationConditionActionConditionProperties {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public LoggingConfigurationConditionActionConditionProperties build() {
             return new LoggingConfigurationConditionActionConditionProperties(action);
         }

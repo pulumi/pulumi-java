@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="adminUsername")
-    private final @Nullable String adminUsername;
+      private final @Nullable String adminUsername;
 
     public Optional<String> getAdminUsername() {
         return this.adminUsername == null ? Optional.empty() : Optional.ofNullable(this.adminUsername);
@@ -34,7 +34,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="computerName")
-    private final @Nullable String computerName;
+      private final @Nullable String computerName;
 
     public Optional<String> getComputerName() {
         return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
@@ -45,7 +45,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osName", required=true)
-    private final String osName;
+      private final String osName;
 
     public String getOsName() {
         return this.osName;
@@ -56,7 +56,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable String osType;
+      private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -67,7 +67,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="toolsRunningStatus", required=true)
-    private final String toolsRunningStatus;
+      private final String toolsRunningStatus;
 
     public String getToolsRunningStatus() {
         return this.toolsRunningStatus;
@@ -78,7 +78,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="toolsVersion", required=true)
-    private final String toolsVersion;
+      private final String toolsVersion;
 
     public String getToolsVersion() {
         return this.toolsVersion;
@@ -89,7 +89,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="toolsVersionStatus", required=true)
-    private final String toolsVersionStatus;
+      private final String toolsVersionStatus;
 
     public String getToolsVersionStatus() {
         return this.toolsVersionStatus;
@@ -188,7 +188,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.toolsVersionStatus = Objects.requireNonNull(toolsVersionStatus);
             return this;
         }
-
         public OsProfileResponse build() {
             return new OsProfileResponse(adminUsername, computerName, osName, osType, toolsRunningStatus, toolsVersion, toolsVersionStatus);
         }

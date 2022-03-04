@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -33,7 +33,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -46,7 +46,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCluster")
-    private final @Nullable Input<Boolean> isCluster;
+      private final @Nullable Input<Boolean> isCluster;
 
     public Input<Boolean> getIsCluster() {
         return this.isCluster == null ? Input.empty() : this.isCluster;
@@ -57,7 +57,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentName")
-    private final @Nullable Input<String> parentName;
+      private final @Nullable Input<String> parentName;
 
     public Input<String> getParentName() {
         return this.parentName == null ? Input.empty() : this.parentName;
@@ -82,7 +82,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -201,7 +201,6 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public GroupState build() {
             return new GroupState(displayName, filter, isCluster, name, parentName, project);
         }

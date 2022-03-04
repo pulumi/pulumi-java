@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1EntityMetadataResponse;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class GetSharedflowResult {
     /**
      * The id of the most recently created revision for this shared flow.
      * 
-     */
+    */
     public String getLatestRevisionId() {
         return this.latestRevisionId;
     }
     /**
      * Metadata describing the shared flow.
      * 
-     */
+    */
     public GoogleCloudApigeeV1EntityMetadataResponse getMetaData() {
         return this.metaData;
     }
     /**
      * The ID of the shared flow.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A list of revisions of this shared flow.
      * 
-     */
+    */
     public List<String> getRevision() {
         return this.revision;
     }
@@ -118,7 +118,6 @@ public final class GetSharedflowResult {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public GetSharedflowResult build() {
             return new GetSharedflowResult(latestRevisionId, metaData, name, revision);
         }

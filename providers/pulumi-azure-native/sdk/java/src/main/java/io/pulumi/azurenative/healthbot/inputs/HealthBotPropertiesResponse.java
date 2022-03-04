@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthbot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class HealthBotPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="botManagementPortalLink", required=true)
-    private final String botManagementPortalLink;
+      private final String botManagementPortalLink;
 
     public String getBotManagementPortalLink() {
         return this.botManagementPortalLink;
@@ -32,7 +32,7 @@ public final class HealthBotPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -81,7 +81,6 @@ public final class HealthBotPropertiesResponse extends io.pulumi.resources.Invok
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public HealthBotPropertiesResponse build() {
             return new HealthBotPropertiesResponse(botManagementPortalLink, provisioningState);
         }

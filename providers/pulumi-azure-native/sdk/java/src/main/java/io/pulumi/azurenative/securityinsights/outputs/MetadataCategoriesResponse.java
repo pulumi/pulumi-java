@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class MetadataCategoriesResponse {
     /**
      * domain for the solution content item
      * 
-     */
+    */
     public List<String> getDomains() {
         return this.domains == null ? List.of() : this.domains;
     }
     /**
      * Industry verticals for the solution content item
      * 
-     */
+    */
     public List<String> getVerticals() {
         return this.verticals == null ? List.of() : this.verticals;
     }
@@ -76,7 +76,6 @@ public final class MetadataCategoriesResponse {
             this.verticals = verticals;
             return this;
         }
-
         public MetadataCategoriesResponse build() {
             return new MetadataCategoriesResponse(domains, verticals);
         }

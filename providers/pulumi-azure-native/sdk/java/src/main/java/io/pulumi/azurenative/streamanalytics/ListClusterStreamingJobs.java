@@ -6,21 +6,41 @@ package io.pulumi.azurenative.streamanalytics;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.streamanalytics.inputs.ListClusterStreamingJobsArgs;
 import io.pulumi.azurenative.streamanalytics.outputs.ListClusterStreamingJobsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListClusterStreamingJobs {
-/**
- * A list of streaming jobs. Populated by a List operation.
+    private ListClusterStreamingJobs() {}
+    public interface BuilderApplicator {
+        public void apply(ListClusterStreamingJobsArgs.Builder a);
+    }
+    private static ListClusterStreamingJobsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListClusterStreamingJobsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A list of streaming jobs. Populated by a List operation.
  * API Version: 2020-03-01-preview.
  * 
- *
- * A list of streaming jobs. Populated by a List operation.
+     *
+     * A list of streaming jobs. Populated by a List operation.
  * 
- */
+     */
+    public static CompletableFuture<ListClusterStreamingJobsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A list of streaming jobs. Populated by a List operation.
+     * API Version: 2020-03-01-preview.
+     * 
+     *
+         * A list of streaming jobs. Populated by a List operation.
+     * 
+     */
     public static CompletableFuture<ListClusterStreamingJobsResult> invokeAsync(ListClusterStreamingJobsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:listClusterStreamingJobs", TypeShape.of(ListClusterStreamingJobsResult.class), args == null ? ListClusterStreamingJobsArgs.Empty : args, Utilities.withVersion(options));
     }

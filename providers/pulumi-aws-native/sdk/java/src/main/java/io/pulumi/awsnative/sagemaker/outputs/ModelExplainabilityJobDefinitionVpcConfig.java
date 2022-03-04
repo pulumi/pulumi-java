@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ModelExplainabilityJobDefinitionVpcConfig {
     /**
      * The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
      * 
-     */
+    */
     public List<String> getSubnets() {
         return this.subnets;
     }
@@ -75,7 +75,6 @@ public final class ModelExplainabilityJobDefinitionVpcConfig {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionVpcConfig build() {
             return new ModelExplainabilityJobDefinitionVpcConfig(securityGroupIds, subnets);
         }

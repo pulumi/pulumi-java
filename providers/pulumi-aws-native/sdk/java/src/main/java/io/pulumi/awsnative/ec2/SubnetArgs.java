@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.SubnetTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,56 +18,56 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     public static final SubnetArgs Empty = new SubnetArgs();
 
     @InputImport(name="assignIpv6AddressOnCreation")
-    private final @Nullable Input<Boolean> assignIpv6AddressOnCreation;
+      private final @Nullable Input<Boolean> assignIpv6AddressOnCreation;
 
     public Input<Boolean> getAssignIpv6AddressOnCreation() {
         return this.assignIpv6AddressOnCreation == null ? Input.empty() : this.assignIpv6AddressOnCreation;
     }
 
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
     @InputImport(name="cidrBlock", required=true)
-    private final Input<String> cidrBlock;
+      private final Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock;
     }
 
     @InputImport(name="ipv6CidrBlock")
-    private final @Nullable Input<String> ipv6CidrBlock;
+      private final @Nullable Input<String> ipv6CidrBlock;
 
     public Input<String> getIpv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Input.empty() : this.ipv6CidrBlock;
     }
 
     @InputImport(name="mapPublicIpOnLaunch")
-    private final @Nullable Input<Boolean> mapPublicIpOnLaunch;
+      private final @Nullable Input<Boolean> mapPublicIpOnLaunch;
 
     public Input<Boolean> getMapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch == null ? Input.empty() : this.mapPublicIpOnLaunch;
     }
 
     @InputImport(name="outpostArn")
-    private final @Nullable Input<String> outpostArn;
+      private final @Nullable Input<String> outpostArn;
 
     public Input<String> getOutpostArn() {
         return this.outpostArn == null ? Input.empty() : this.outpostArn;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<SubnetTagArgs>> tags;
+      private final @Nullable Input<List<SubnetTagArgs>> tags;
 
     public Input<List<SubnetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;
@@ -216,7 +216,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public SubnetArgs build() {
             return new SubnetArgs(assignIpv6AddressOnCreation, availabilityZone, cidrBlock, ipv6CidrBlock, mapPublicIpOnLaunch, outpostArn, tags, vpcId);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetDiagnosticSettingArgs;
 import io.pulumi.azurenative.insights.outputs.GetDiagnosticSettingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiagnosticSetting {
-/**
- * The diagnostic setting resource.
+    private GetDiagnosticSetting() {}
+    public interface BuilderApplicator {
+        public void apply(GetDiagnosticSettingArgs.Builder a);
+    }
+    private static GetDiagnosticSettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDiagnosticSettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The diagnostic setting resource.
  * API Version: 2017-05-01-preview.
  * 
- *
- * The diagnostic setting resource.
+     *
+     * The diagnostic setting resource.
  * 
- */
+     */
+    public static CompletableFuture<GetDiagnosticSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The diagnostic setting resource.
+     * API Version: 2017-05-01-preview.
+     * 
+     *
+         * The diagnostic setting resource.
+     * 
+     */
     public static CompletableFuture<GetDiagnosticSettingResult> invokeAsync(GetDiagnosticSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDiagnosticSetting", TypeShape.of(GetDiagnosticSettingResult.class), args == null ? GetDiagnosticSettingArgs.Empty : args, Utilities.withVersion(options));
     }

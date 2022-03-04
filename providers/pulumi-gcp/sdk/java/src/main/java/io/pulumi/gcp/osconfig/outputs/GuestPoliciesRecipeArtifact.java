@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeArtifactGcs;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeArtifactRemote;
 import java.lang.Boolean;
@@ -57,7 +57,7 @@ public final class GuestPoliciesRecipeArtifact {
      * Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
      * GCS: An object generation number must be specified.
      * 
-     */
+    */
     public Optional<Boolean> getAllowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
@@ -65,7 +65,7 @@ public final class GuestPoliciesRecipeArtifact {
      * A Google Cloud Storage artifact.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeArtifactGcs> getGcs() {
         return Optional.ofNullable(this.gcs);
     }
@@ -73,7 +73,7 @@ public final class GuestPoliciesRecipeArtifact {
      * Id of the artifact, which the installation and update steps of this recipe can reference.
      * Artifacts in a recipe cannot have the same id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -81,7 +81,7 @@ public final class GuestPoliciesRecipeArtifact {
      * A generic remote artifact.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeArtifactRemote> getRemote() {
         return Optional.ofNullable(this.remote);
     }
@@ -131,7 +131,6 @@ public final class GuestPoliciesRecipeArtifact {
             this.remote = remote;
             return this;
         }
-
         public GuestPoliciesRecipeArtifact build() {
             return new GuestPoliciesRecipeArtifact(allowInsecure, gcs, id, remote);
         }

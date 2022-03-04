@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class IotMappingPropertiesResponse {
     /**
      * The mapping.
      * 
-     */
+    */
     public Optional<Object> getContent() {
         return Optional.ofNullable(this.content);
     }
@@ -54,7 +54,6 @@ public final class IotMappingPropertiesResponse {
             this.content = content;
             return this;
         }
-
         public IotMappingPropertiesResponse build() {
             return new IotMappingPropertiesResponse(content);
         }

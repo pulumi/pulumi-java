@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -58,7 +58,7 @@ public final class GetSecretVersionResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -158,7 +158,6 @@ public final class GetSecretVersionResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSecretVersionResult build() {
             return new GetSecretVersionResult(createTime, destroyTime, enabled, id, name, project, secret, secretData, version);
         }

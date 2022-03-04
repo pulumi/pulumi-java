@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayNatRuleArgs;
 import io.pulumi.azurenative.network.outputs.GetVirtualNetworkGatewayNatRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayNatRule {
-/**
- * VirtualNetworkGatewayNatRule Resource.
+    private GetVirtualNetworkGatewayNatRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkGatewayNatRuleArgs.Builder a);
+    }
+    private static GetVirtualNetworkGatewayNatRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkGatewayNatRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * VirtualNetworkGatewayNatRule Resource.
  * API Version: 2021-03-01.
  * 
- *
- * VirtualNetworkGatewayNatRule Resource.
+     *
+     * VirtualNetworkGatewayNatRule Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkGatewayNatRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * VirtualNetworkGatewayNatRule Resource.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * VirtualNetworkGatewayNatRule Resource.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkGatewayNatRuleResult> invokeAsync(GetVirtualNetworkGatewayNatRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayNatRule", TypeShape.of(GetVirtualNetworkGatewayNatRuleResult.class), args == null ? GetVirtualNetworkGatewayNatRuleArgs.Empty : args, Utilities.withVersion(options));
     }

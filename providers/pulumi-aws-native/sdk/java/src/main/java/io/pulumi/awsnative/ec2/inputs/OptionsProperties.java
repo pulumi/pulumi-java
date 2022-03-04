@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="applianceModeSupport")
-    private final @Nullable String applianceModeSupport;
+      private final @Nullable String applianceModeSupport;
 
     public Optional<String> getApplianceModeSupport() {
         return this.applianceModeSupport == null ? Optional.empty() : Optional.ofNullable(this.applianceModeSupport);
@@ -34,7 +34,7 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dnsSupport")
-    private final @Nullable String dnsSupport;
+      private final @Nullable String dnsSupport;
 
     public Optional<String> getDnsSupport() {
         return this.dnsSupport == null ? Optional.empty() : Optional.ofNullable(this.dnsSupport);
@@ -45,7 +45,7 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipv6Support")
-    private final @Nullable String ipv6Support;
+      private final @Nullable String ipv6Support;
 
     public Optional<String> getIpv6Support() {
         return this.ipv6Support == null ? Optional.empty() : Optional.ofNullable(this.ipv6Support);
@@ -104,7 +104,6 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
             this.ipv6Support = ipv6Support;
             return this;
         }
-
         public OptionsProperties build() {
             return new OptionsProperties(applianceModeSupport, dnsSupport, ipv6Support);
         }

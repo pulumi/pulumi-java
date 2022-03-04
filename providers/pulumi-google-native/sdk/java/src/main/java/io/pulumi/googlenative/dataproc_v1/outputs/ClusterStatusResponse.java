@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ClusterStatusResponse {
     /**
      * Optional. Output only. Details of cluster's state.
      * 
-     */
+    */
     public String getDetail() {
         return this.detail;
     }
     /**
      * The cluster's state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
-     */
+    */
     public String getStateStartTime() {
         return this.stateStartTime;
     }
     /**
      * Additional state information that includes status reported by the agent.
      * 
-     */
+    */
     public String getSubstate() {
         return this.substate;
     }
@@ -116,7 +116,6 @@ public final class ClusterStatusResponse {
             this.substate = Objects.requireNonNull(substate);
             return this;
         }
-
         public ClusterStatusResponse build() {
             return new ClusterStatusResponse(detail, state, stateStartTime, substate);
         }

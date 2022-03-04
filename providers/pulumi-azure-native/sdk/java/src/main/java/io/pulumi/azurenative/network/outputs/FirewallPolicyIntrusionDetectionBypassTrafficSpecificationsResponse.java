@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     /**
      * Description of the bypass traffic rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or ranges for this rule.
      * 
-     */
+    */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of destination IpGroups for this rule.
      * 
-     */
+    */
     public List<String> getDestinationIpGroups() {
         return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
     }
     /**
      * List of destination ports or ranges.
      * 
-     */
+    */
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Name of the bypass traffic rule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The rule bypass protocol.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * List of source IP addresses or ranges for this rule.
      * 
-     */
+    */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
      * 
-     */
+    */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
@@ -203,7 +203,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse build() {
             return new FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse(description, destinationAddresses, destinationIpGroups, destinationPorts, name, protocol, sourceAddresses, sourceIpGroups);
         }

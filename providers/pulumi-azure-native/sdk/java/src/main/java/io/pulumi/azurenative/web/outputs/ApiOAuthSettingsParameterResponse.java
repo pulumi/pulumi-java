@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ApiOAuthSettingsParameterResponse {
     /**
      * Options available to this parameter
      * 
-     */
+    */
     public Optional<Object> getOptions() {
         return Optional.ofNullable(this.options);
     }
     /**
      * UI definitions per culture as caller can specify the culture
      * 
-     */
+    */
     public Optional<Object> getUiDefinition() {
         return Optional.ofNullable(this.uiDefinition);
     }
     /**
      * Value of the setting
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -98,7 +98,6 @@ public final class ApiOAuthSettingsParameterResponse {
             this.value = value;
             return this;
         }
-
         public ApiOAuthSettingsParameterResponse build() {
             return new ApiOAuthSettingsParameterResponse(options, uiDefinition, value);
         }

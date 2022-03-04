@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dataSourceReferenceId", required=true)
-    private final String dataSourceReferenceId;
+      private final String dataSourceReferenceId;
 
     public String getDataSourceReferenceId() {
         return this.dataSourceReferenceId;
@@ -35,7 +35,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dataSourceType", required=true)
-    private final String dataSourceType;
+      private final String dataSourceType;
 
     public String getDataSourceType() {
         return this.dataSourceType;
@@ -46,7 +46,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="id", required=true)
-    private final Integer id;
+      private final Integer id;
 
     public Integer getId() {
         return this.id;
@@ -57,7 +57,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -68,7 +68,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="precedence")
-    private final @Nullable Integer precedence;
+      private final @Nullable Integer precedence;
 
     public Optional<Integer> getPrecedence() {
         return this.precedence == null ? Optional.empty() : Optional.ofNullable(this.precedence);
@@ -79,7 +79,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -168,7 +168,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataSourcePrecedenceResponse build() {
             return new DataSourcePrecedenceResponse(dataSourceReferenceId, dataSourceType, id, name, precedence, status);
         }

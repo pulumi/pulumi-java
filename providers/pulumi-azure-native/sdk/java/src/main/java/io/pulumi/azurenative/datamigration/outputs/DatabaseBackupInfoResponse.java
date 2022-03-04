@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -76,56 +76,56 @@ public final class DatabaseBackupInfoResponse {
     /**
      * The list of backup files for the current database.
      * 
-     */
+    */
     public List<String> getBackupFiles() {
         return this.backupFiles;
     }
     /**
      * Date and time when the backup operation finished.
      * 
-     */
+    */
     public String getBackupFinishDate() {
         return this.backupFinishDate;
     }
     /**
      * Backup Type.
      * 
-     */
+    */
     public String getBackupType() {
         return this.backupType;
     }
     /**
      * Database name.
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * Number of files in the backup set.
      * 
-     */
+    */
     public Integer getFamilyCount() {
         return this.familyCount;
     }
     /**
      * Whether the backup set is compressed
      * 
-     */
+    */
     public Boolean getIsCompressed() {
         return this.isCompressed;
     }
     /**
      * Database was damaged when backed up, but the backup operation was requested to continue despite errors.
      * 
-     */
+    */
     public Boolean getIsDamaged() {
         return this.isDamaged;
     }
     /**
      * Position of current database backup in the file.
      * 
-     */
+    */
     public Integer getPosition() {
         return this.position;
     }
@@ -203,7 +203,6 @@ public final class DatabaseBackupInfoResponse {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public DatabaseBackupInfoResponse build() {
             return new DatabaseBackupInfoResponse(backupFiles, backupFinishDate, backupType, databaseName, familyCount, isCompressed, isDamaged, position);
         }

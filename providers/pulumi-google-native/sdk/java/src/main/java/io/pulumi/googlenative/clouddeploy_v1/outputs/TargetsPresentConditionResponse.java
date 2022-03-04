@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class TargetsPresentConditionResponse {
     /**
      * The list of Target names that are missing. For example, projects/{project_id}/locations/{location_name}/targets/{target_name}.
      * 
-     */
+    */
     public List<String> getMissingTargets() {
         return this.missingTargets;
     }
     /**
      * True if there aren't any missing Targets.
      * 
-     */
+    */
     public Boolean getStatus() {
         return this.status;
     }
     /**
      * Last time the condition was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -97,7 +97,6 @@ public final class TargetsPresentConditionResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public TargetsPresentConditionResponse build() {
             return new TargetsPresentConditionResponse(missingTargets, status, updateTime);
         }

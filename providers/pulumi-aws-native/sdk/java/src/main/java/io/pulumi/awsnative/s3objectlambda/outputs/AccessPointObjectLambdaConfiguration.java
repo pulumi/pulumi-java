@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3objectlambda.outputs;
 
 import io.pulumi.awsnative.s3objectlambda.outputs.AccessPointTransformationConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -89,7 +89,6 @@ public final class AccessPointObjectLambdaConfiguration {
             this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
             return this;
         }
-
         public AccessPointObjectLambdaConfiguration build() {
             return new AccessPointObjectLambdaConfiguration(allowedFeatures, cloudWatchMetricsEnabled, supportingAccessPoint, transformationConfigurations);
         }

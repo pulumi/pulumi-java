@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final String artifactId;
+      private final String artifactId;
 
     public String getArtifactId() {
         return this.artifactId;
@@ -33,7 +33,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="destination", required=true)
-    private final String destination;
+      private final String destination;
 
     public String getDestination() {
         return this.destination;
@@ -44,7 +44,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="overwrite", required=true)
-    private final Boolean overwrite;
+      private final Boolean overwrite;
 
     public Boolean getOverwrite() {
         return this.overwrite;
@@ -55,7 +55,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final String permissions;
+      private final String permissions;
 
     public String getPermissions() {
         return this.permissions;
@@ -124,7 +124,6 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public SoftwareRecipeStepCopyFileResponse build() {
             return new SoftwareRecipeStepCopyFileResponse(artifactId, destination, overwrite, permissions);
         }

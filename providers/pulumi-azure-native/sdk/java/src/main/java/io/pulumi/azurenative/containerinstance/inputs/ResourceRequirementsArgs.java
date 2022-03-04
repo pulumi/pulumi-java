@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.inputs.ResourceLimitsArgs;
 import io.pulumi.azurenative.containerinstance.inputs.ResourceRequestsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="limits")
-    private final @Nullable Input<ResourceLimitsArgs> limits;
+      private final @Nullable Input<ResourceLimitsArgs> limits;
 
     public Input<ResourceLimitsArgs> getLimits() {
         return this.limits == null ? Input.empty() : this.limits;
@@ -35,7 +35,7 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="requests", required=true)
-    private final Input<ResourceRequestsArgs> requests;
+      private final Input<ResourceRequestsArgs> requests;
 
     public Input<ResourceRequestsArgs> getRequests() {
         return this.requests;
@@ -94,7 +94,6 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
             this.requests = Input.of(Objects.requireNonNull(requests));
             return this;
         }
-
         public ResourceRequirementsArgs build() {
             return new ResourceRequirementsArgs(limits, requests);
         }

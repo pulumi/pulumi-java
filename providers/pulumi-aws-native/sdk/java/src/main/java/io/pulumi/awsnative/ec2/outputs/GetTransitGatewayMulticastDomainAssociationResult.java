@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class GetTransitGatewayMulticastDomainAssociationResult {
     /**
      * The ID of the resource.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The type of resource, for example a VPC attachment.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * The state of the subnet association.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -97,7 +97,6 @@ public final class GetTransitGatewayMulticastDomainAssociationResult {
             this.state = state;
             return this;
         }
-
         public GetTransitGatewayMulticastDomainAssociationResult build() {
             return new GetTransitGatewayMulticastDomainAssociationResult(resourceId, resourceType, state);
         }

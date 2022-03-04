@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class ConnectToTargetSqlDbTaskOutputResponse {
     /**
      * Source databases as a map from database name to database id
      * 
-     */
+    */
     public Map<String,String> getDatabases() {
         return this.databases;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Target server brand version
      * 
-     */
+    */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Version of the target server
      * 
-     */
+    */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }
@@ -117,7 +117,6 @@ public final class ConnectToTargetSqlDbTaskOutputResponse {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public ConnectToTargetSqlDbTaskOutputResponse build() {
             return new ConnectToTargetSqlDbTaskOutputResponse(databases, id, targetServerBrandVersion, targetServerVersion);
         }

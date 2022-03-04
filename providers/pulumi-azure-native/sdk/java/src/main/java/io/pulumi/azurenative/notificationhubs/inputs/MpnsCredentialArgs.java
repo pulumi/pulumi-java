@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateKey")
-    private final @Nullable Input<String> certificateKey;
+      private final @Nullable Input<String> certificateKey;
 
     public Input<String> getCertificateKey() {
         return this.certificateKey == null ? Input.empty() : this.certificateKey;
@@ -34,7 +34,7 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mpnsCertificate")
-    private final @Nullable Input<String> mpnsCertificate;
+      private final @Nullable Input<String> mpnsCertificate;
 
     public Input<String> getMpnsCertificate() {
         return this.mpnsCertificate == null ? Input.empty() : this.mpnsCertificate;
@@ -45,7 +45,7 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable Input<String> thumbprint;
+      private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
@@ -119,7 +119,6 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }
-
         public MpnsCredentialArgs build() {
             return new MpnsCredentialArgs(certificateKey, mpnsCertificate, thumbprint);
         }

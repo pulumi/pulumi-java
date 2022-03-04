@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="destinationPort")
-    private final @Nullable Integer destinationPort;
+      private final @Nullable Integer destinationPort;
 
     public Optional<Integer> getDestinationPort() {
         return this.destinationPort == null ? Optional.empty() : Optional.ofNullable(this.destinationPort);
@@ -35,7 +35,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -46,7 +46,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable String privateIPAddress;
+      private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
@@ -57,7 +57,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publicPort")
-    private final @Nullable Integer publicPort;
+      private final @Nullable Integer publicPort;
 
     public Optional<Integer> getPublicPort() {
         return this.publicPort == null ? Optional.empty() : Optional.ofNullable(this.publicPort);
@@ -126,7 +126,6 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
             this.publicPort = publicPort;
             return this;
         }
-
         public ApplicationGetEndpointResponse build() {
             return new ApplicationGetEndpointResponse(destinationPort, location, privateIPAddress, publicPort);
         }

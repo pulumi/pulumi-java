@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class SqlServerResourceSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -33,7 +33,7 @@ public final class SqlServerResourceSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-    private final String targetResourceName;
+      private final String targetResourceName;
 
     public String getTargetResourceName() {
         return this.targetResourceName;
@@ -82,7 +82,6 @@ public final class SqlServerResourceSettingsResponse extends io.pulumi.resources
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public SqlServerResourceSettingsResponse build() {
             return new SqlServerResourceSettingsResponse(resourceType, targetResourceName);
         }

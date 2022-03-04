@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -30,7 +30,7 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -41,7 +41,7 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -63,7 +63,7 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scopePath", required=true)
-    private final String scopePath;
+      private final String scopePath;
 
     public String getScopePath() {
         return this.scopePath;
@@ -142,7 +142,6 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
             this.scopePath = Objects.requireNonNull(scopePath);
             return this;
         }
-
         public GetAnalyticsItemArgs build() {
             return new GetAnalyticsItemArgs(id, name, resourceGroupName, resourceName, scopePath);
         }

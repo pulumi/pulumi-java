@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.ImageTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     public static final ImageArgs Empty = new ImageArgs();
 
     @InputImport(name="imageDescription")
-    private final @Nullable Input<String> imageDescription;
+      private final @Nullable Input<String> imageDescription;
 
     public Input<String> getImageDescription() {
         return this.imageDescription == null ? Input.empty() : this.imageDescription;
     }
 
     @InputImport(name="imageDisplayName")
-    private final @Nullable Input<String> imageDisplayName;
+      private final @Nullable Input<String> imageDisplayName;
 
     public Input<String> getImageDisplayName() {
         return this.imageDisplayName == null ? Input.empty() : this.imageDisplayName;
     }
 
     @InputImport(name="imageName")
-    private final @Nullable Input<String> imageName;
+      private final @Nullable Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName == null ? Input.empty() : this.imageName;
     }
 
     @InputImport(name="imageRoleArn", required=true)
-    private final Input<String> imageRoleArn;
+      private final Input<String> imageRoleArn;
 
     public Input<String> getImageRoleArn() {
         return this.imageRoleArn;
@@ -49,7 +49,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ImageTagArgs>> tags;
+      private final @Nullable Input<List<ImageTagArgs>> tags;
 
     public Input<List<ImageTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -153,7 +153,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ImageArgs build() {
             return new ImageArgs(imageDescription, imageDisplayName, imageName, imageRoleArn, tags);
         }

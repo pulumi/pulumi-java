@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3outposts.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EndpointNetworkInterface extends io.pulumi.resources.InvokeAr
     public static final EndpointNetworkInterface Empty = new EndpointNetworkInterface();
 
     @InputImport(name="networkInterfaceId", required=true)
-    private final String networkInterfaceId;
+      private final String networkInterfaceId;
 
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
@@ -55,7 +55,6 @@ public final class EndpointNetworkInterface extends io.pulumi.resources.InvokeAr
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public EndpointNetworkInterface build() {
             return new EndpointNetworkInterface(networkInterfaceId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.myedgeorder.outputs.AvailabilityInformationResponse;
 import io.pulumi.myedgeorder.outputs.ConfigurationResponse;
 import io.pulumi.myedgeorder.outputs.CostInformationResponse;
@@ -81,56 +81,56 @@ public final class ProductResponse {
     /**
      * Availability information of the product system.
      * 
-     */
+    */
     public AvailabilityInformationResponse getAvailabilityInformation() {
         return this.availabilityInformation;
     }
     /**
      * List of configurations for the product
      * 
-     */
+    */
     public List<ConfigurationResponse> getConfigurations() {
         return this.configurations;
     }
     /**
      * Cost information for the product system.
      * 
-     */
+    */
     public CostInformationResponse getCostInformation() {
         return this.costInformation;
     }
     /**
      * Description related to the product system.
      * 
-     */
+    */
     public DescriptionResponse getDescription() {
         return this.description;
     }
     /**
      * Display Name for the product system.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * list of filters supported for a product
      * 
-     */
+    */
     public List<FilterablePropertyResponse> getFilterableProperties() {
         return this.filterableProperties;
     }
     /**
      * Hierarchy information of a product.
      * 
-     */
+    */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Image information for the product system.
      * 
-     */
+    */
     public List<ImageInformationResponse> getImageInformation() {
         return this.imageInformation;
     }
@@ -208,7 +208,6 @@ public final class ProductResponse {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
         }
-
         public ProductResponse build() {
             return new ProductResponse(availabilityInformation, configurations, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation);
         }

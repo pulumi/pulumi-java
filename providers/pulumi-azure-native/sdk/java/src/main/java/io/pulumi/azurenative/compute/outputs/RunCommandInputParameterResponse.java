@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class RunCommandInputParameterResponse {
     /**
      * The run command parameter name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The run command parameter value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class RunCommandInputParameterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RunCommandInputParameterResponse build() {
             return new RunCommandInputParameterResponse(name, value);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.authorization.inputs.GetPolicySetDefinitionArgs;
 import io.pulumi.azurenative.authorization.outputs.GetPolicySetDefinitionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicySetDefinition {
-/**
- * The policy set definition.
+    private GetPolicySetDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetPolicySetDefinitionArgs.Builder a);
+    }
+    private static GetPolicySetDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPolicySetDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The policy set definition.
  * API Version: 2020-09-01.
  * 
- *
- * The policy set definition.
+     *
+     * The policy set definition.
  * 
- */
+     */
+    public static CompletableFuture<GetPolicySetDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The policy set definition.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * The policy set definition.
+     * 
+     */
     public static CompletableFuture<GetPolicySetDefinitionResult> invokeAsync(GetPolicySetDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicySetDefinition", TypeShape.of(GetPolicySetDefinitionResult.class), args == null ? GetPolicySetDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

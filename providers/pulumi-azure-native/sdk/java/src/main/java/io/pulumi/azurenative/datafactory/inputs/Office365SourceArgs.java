@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="allowedGroups")
-    private final @Nullable Input<Object> allowedGroups;
+      private final @Nullable Input<Object> allowedGroups;
 
     public Input<Object> getAllowedGroups() {
         return this.allowedGroups == null ? Input.empty() : this.allowedGroups;
@@ -35,7 +35,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dateFilterColumn")
-    private final @Nullable Input<Object> dateFilterColumn;
+      private final @Nullable Input<Object> dateFilterColumn;
 
     public Input<Object> getDateFilterColumn() {
         return this.dateFilterColumn == null ? Input.empty() : this.dateFilterColumn;
@@ -46,7 +46,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -57,7 +57,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<Object> endTime;
+      private final @Nullable Input<Object> endTime;
 
     public Input<Object> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -68,7 +68,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -79,7 +79,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="outputColumns")
-    private final @Nullable Input<Object> outputColumns;
+      private final @Nullable Input<Object> outputColumns;
 
     public Input<Object> getOutputColumns() {
         return this.outputColumns == null ? Input.empty() : this.outputColumns;
@@ -90,7 +90,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Input<Object> sourceRetryCount;
 
     public Input<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
@@ -101,7 +101,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Input<Object> sourceRetryWait;
 
     public Input<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
@@ -112,7 +112,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<Object> startTime;
+      private final @Nullable Input<Object> startTime;
 
     public Input<Object> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -124,7 +124,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -135,7 +135,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userScopeFilterUri")
-    private final @Nullable Input<Object> userScopeFilterUri;
+      private final @Nullable Input<Object> userScopeFilterUri;
 
     public Input<Object> getUserScopeFilterUri() {
         return this.userScopeFilterUri == null ? Input.empty() : this.userScopeFilterUri;
@@ -329,7 +329,6 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
             this.userScopeFilterUri = Input.ofNullable(userScopeFilterUri);
             return this;
         }
-
         public Office365SourceArgs build() {
             return new Office365SourceArgs(allowedGroups, dateFilterColumn, disableMetricsCollection, endTime, maxConcurrentConnections, outputColumns, sourceRetryCount, sourceRetryWait, startTime, type, userScopeFilterUri);
         }

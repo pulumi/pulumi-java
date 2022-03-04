@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyPlayReadyLicenseResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,7 +43,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
     /**
      * The PlayReady licenses.
      * 
-     */
+    */
     public List<ContentKeyPolicyPlayReadyLicenseResponse> getLicenses() {
         return this.licenses;
     }
@@ -51,14 +51,14 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The custom response data.
      * 
-     */
+    */
     public Optional<String> getResponseCustomData() {
         return Optional.ofNullable(this.responseCustomData);
     }
@@ -101,7 +101,6 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
             this.responseCustomData = responseCustomData;
             return this;
         }
-
         public ContentKeyPolicyPlayReadyConfigurationResponse build() {
             return new ContentKeyPolicyPlayReadyConfigurationResponse(licenses, odataType, responseCustomData);
         }

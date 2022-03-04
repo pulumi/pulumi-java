@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class NodeGroupAffinityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nodeGroupUri", required=true)
-    private final Input<String> nodeGroupUri;
+      private final Input<String> nodeGroupUri;
 
     public Input<String> getNodeGroupUri() {
         return this.nodeGroupUri;
@@ -65,7 +65,6 @@ public final class NodeGroupAffinityArgs extends io.pulumi.resources.ResourceArg
             this.nodeGroupUri = Input.of(Objects.requireNonNull(nodeGroupUri));
             return this;
         }
-
         public NodeGroupAffinityArgs build() {
             return new NodeGroupAffinityArgs(nodeGroupUri);
         }

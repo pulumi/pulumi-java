@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetApiOperationPolicyArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetApiOperationPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiOperationPolicy {
-/**
- * Policy Contract details.
+    private GetApiOperationPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiOperationPolicyArgs.Builder a);
+    }
+    private static GetApiOperationPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiOperationPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Policy Contract details.
  * API Version: 2020-12-01.
  * 
- *
- * Policy Contract details.
+     *
+     * Policy Contract details.
  * 
- */
+     */
+    public static CompletableFuture<GetApiOperationPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Policy Contract details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Policy Contract details.
+     * 
+     */
     public static CompletableFuture<GetApiOperationPolicyResult> invokeAsync(GetApiOperationPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiOperationPolicy", TypeShape.of(GetApiOperationPolicyResult.class), args == null ? GetApiOperationPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

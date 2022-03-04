@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -32,14 +32,14 @@ public final class AzureMLWebServiceFileResponse {
     /**
      * The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getFilePath() {
         return this.filePath;
     }
     /**
      * Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
@@ -75,7 +75,6 @@ public final class AzureMLWebServiceFileResponse {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public AzureMLWebServiceFileResponse build() {
             return new AzureMLWebServiceFileResponse(filePath, linkedServiceName);
         }

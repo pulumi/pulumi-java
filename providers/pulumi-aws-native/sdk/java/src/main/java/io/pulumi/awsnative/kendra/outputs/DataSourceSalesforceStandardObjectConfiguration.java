@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceSalesforceStandardObjectName;
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -89,7 +89,6 @@ public final class DataSourceSalesforceStandardObjectConfiguration {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DataSourceSalesforceStandardObjectConfiguration build() {
             return new DataSourceSalesforceStandardObjectConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings, name);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<String> count;
+      private final @Nullable Input<String> count;
 
     public Input<String> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instanceProperties")
-    private final @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
+      private final @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
     public Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {
         return this.instanceProperties == null ? Input.empty() : this.instanceProperties;
@@ -94,7 +94,6 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
             this.instanceProperties = Input.ofNullable(instanceProperties);
             return this;
         }
-
         public AllocationSpecificSKUReservationArgs build() {
             return new AllocationSpecificSKUReservationArgs(count, instanceProperties);
         }

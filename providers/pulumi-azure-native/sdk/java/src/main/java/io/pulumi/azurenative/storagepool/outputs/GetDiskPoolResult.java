@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagepool.outputs;
 
 import io.pulumi.azurenative.storagepool.outputs.DiskResponse;
 import io.pulumi.azurenative.storagepool.outputs.SystemMetadataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -113,91 +113,91 @@ public final class GetDiskPoolResult {
     /**
      * List of additional capabilities for Disk pool.
      * 
-     */
+    */
     public List<String> getAdditionalCapabilities() {
         return this.additionalCapabilities == null ? List.of() : this.additionalCapabilities;
     }
     /**
      * Logical zone for Disk pool resource; example: ["1"].
      * 
-     */
+    */
     public List<String> getAvailabilityZones() {
         return this.availabilityZones;
     }
     /**
      * List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
      * 
-     */
+    */
     public List<DiskResponse> getDisks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of the operation on the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Operational status of the Disk pool.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Azure Resource ID of a Subnet for the Disk pool.
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }
     /**
      * Resource metadata required by ARM RPC
      * 
-     */
+    */
     public SystemMetadataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Determines the SKU of VM deployed for Disk pool
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -310,7 +310,6 @@ public final class GetDiskPoolResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDiskPoolResult build() {
             return new GetDiskPoolResult(additionalCapabilities, availabilityZones, disks, id, location, name, provisioningState, status, subnetId, systemData, tags, tier, type);
         }

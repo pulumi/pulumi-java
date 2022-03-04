@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationParticipantResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse;
@@ -87,63 +87,63 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     /**
      * For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from '1' to 'N'. A channel tag of 0 indicates that the audio is mono.
      * 
-     */
+    */
     public Integer getChannelTag() {
         return this.channelTag;
     }
     /**
      * A confidence estimate between 0.0 and 1.0 of the fidelity of this segment. A default value of 0.0 indicates that the value is unset.
      * 
-     */
+    */
     public Double getConfidence() {
         return this.confidence;
     }
     /**
      * CCAI metadata relating to the current transcript segment.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse getDialogflowSegmentMetadata() {
         return this.dialogflowSegmentMetadata;
     }
     /**
      * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
      * 
-     */
+    */
     public String getLanguageCode() {
         return this.languageCode;
     }
     /**
      * The time that the message occurred, if provided.
      * 
-     */
+    */
     public String getMessageTime() {
         return this.messageTime;
     }
     /**
      * The participant of this segment.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse getSegmentParticipant() {
         return this.segmentParticipant;
     }
     /**
      * The sentiment for this transcript segment.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentiment() {
         return this.sentiment;
     }
     /**
      * The text of this segment.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
     /**
      * A list of the word-specific information for each word in the segment.
      * 
-     */
+    */
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> getWords() {
         return this.words;
     }
@@ -228,7 +228,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             this.words = Objects.requireNonNull(words);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse(channelTag, confidence, dialogflowSegmentMetadata, languageCode, messageTime, segmentParticipant, sentiment, text, words);
         }

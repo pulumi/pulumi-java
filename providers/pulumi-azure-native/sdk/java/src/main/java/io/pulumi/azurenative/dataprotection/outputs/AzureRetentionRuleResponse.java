@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.SourceLifeCycleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +47,7 @@ public final class AzureRetentionRuleResponse {
     /**
      * Expected value is 'AzureRetentionRule'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
@@ -97,7 +97,6 @@ public final class AzureRetentionRuleResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public AzureRetentionRuleResponse build() {
             return new AzureRetentionRuleResponse(isDefault, lifecycles, name, objectType);
         }

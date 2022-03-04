@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.outputs;
 import io.pulumi.azurenative.edgeorder.outputs.DeviceDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.DisplayInfoResponse;
 import io.pulumi.azurenative.edgeorder.outputs.HierarchyInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -59,35 +59,35 @@ public final class ProductDetailsResponse {
     /**
      * Quantity of the product
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * list of device details
      * 
-     */
+    */
     public List<DeviceDetailsResponse> getDeviceDetails() {
         return this.deviceDetails;
     }
     /**
      * Display details of the product
      * 
-     */
+    */
     public Optional<DisplayInfoResponse> getDisplayInfo() {
         return Optional.ofNullable(this.displayInfo);
     }
     /**
      * Hierarchy of the product which uniquely identifies the product
      * 
-     */
+    */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Double encryption status of the configuration. Read-only field.
      * 
-     */
+    */
     public String getProductDoubleEncryptionStatus() {
         return this.productDoubleEncryptionStatus;
     }
@@ -144,7 +144,6 @@ public final class ProductDetailsResponse {
             this.productDoubleEncryptionStatus = Objects.requireNonNull(productDoubleEncryptionStatus);
             return this;
         }
-
         public ProductDetailsResponse build() {
             return new ProductDetailsResponse(count, deviceDetails, displayInfo, hierarchyInformation, productDoubleEncryptionStatus);
         }

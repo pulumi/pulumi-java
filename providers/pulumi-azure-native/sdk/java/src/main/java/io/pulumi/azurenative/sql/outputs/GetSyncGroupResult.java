@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.azurenative.sql.outputs.SyncGroupSchemaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -128,105 +128,105 @@ public final class GetSyncGroupResult {
     /**
      * Conflict logging retention period.
      * 
-     */
+    */
     public Optional<Integer> getConflictLoggingRetentionInDays() {
         return Optional.ofNullable(this.conflictLoggingRetentionInDays);
     }
     /**
      * Conflict resolution policy of the sync group.
      * 
-     */
+    */
     public Optional<String> getConflictResolutionPolicy() {
         return Optional.ofNullable(this.conflictResolutionPolicy);
     }
     /**
      * If conflict logging is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableConflictLogging() {
         return Optional.ofNullable(this.enableConflictLogging);
     }
     /**
      * User name for the sync group hub database credential.
      * 
-     */
+    */
     public Optional<String> getHubDatabaseUserName() {
         return Optional.ofNullable(this.hubDatabaseUserName);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Sync interval of the sync group.
      * 
-     */
+    */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * Last sync time of the sync group.
      * 
-     */
+    */
     public String getLastSyncTime() {
         return this.lastSyncTime;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Private endpoint name of the sync group if use private link connection is enabled.
      * 
-     */
+    */
     public String getPrivateEndpointName() {
         return this.privateEndpointName;
     }
     /**
      * Sync schema of the sync group.
      * 
-     */
+    */
     public Optional<SyncGroupSchemaResponse> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * The name and capacity of the SKU.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * ARM resource id of the sync database in the sync group.
      * 
-     */
+    */
     public Optional<String> getSyncDatabaseId() {
         return Optional.ofNullable(this.syncDatabaseId);
     }
     /**
      * Sync state of the sync group.
      * 
-     */
+    */
     public String getSyncState() {
         return this.syncState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * If use private link connection is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getUsePrivateLinkConnection() {
         return Optional.ofNullable(this.usePrivateLinkConnection);
     }
@@ -353,7 +353,6 @@ public final class GetSyncGroupResult {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
-
         public GetSyncGroupResult build() {
             return new GetSyncGroupResult(conflictLoggingRetentionInDays, conflictResolutionPolicy, enableConflictLogging, hubDatabaseUserName, id, interval, lastSyncTime, name, privateEndpointName, schema, sku, syncDatabaseId, syncState, type, usePrivateLinkConnection);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.DomainMappingSpecResponse;
 import io.pulumi.googlenative.run_v1.outputs.DomainMappingStatusResponse;
 import io.pulumi.googlenative.run_v1.outputs.ObjectMetaResponse;
@@ -55,35 +55,35 @@ public final class GetDomainMappingResult {
     /**
      * The API version for this call such as "domains.cloudrun.com/v1".
      * 
-     */
+    */
     public String getApiVersion() {
         return this.apiVersion;
     }
     /**
      * The kind of resource, in this case "DomainMapping".
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Metadata associated with this BuildTemplate.
      * 
-     */
+    */
     public ObjectMetaResponse getMetadata() {
         return this.metadata;
     }
     /**
      * The spec for this DomainMapping.
      * 
-     */
+    */
     public DomainMappingSpecResponse getSpec() {
         return this.spec;
     }
     /**
      * The current status of the DomainMapping.
      * 
-     */
+    */
     public DomainMappingStatusResponse getStatus() {
         return this.status;
     }
@@ -140,7 +140,6 @@ public final class GetDomainMappingResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetDomainMappingResult build() {
             return new GetDomainMappingResult(apiVersion, kind, metadata, spec, status);
         }

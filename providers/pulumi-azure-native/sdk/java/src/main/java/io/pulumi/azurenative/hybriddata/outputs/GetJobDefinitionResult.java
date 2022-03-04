@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybriddata.outputs;
 
 import io.pulumi.azurenative.hybriddata.outputs.CustomerSecretResponse;
 import io.pulumi.azurenative.hybriddata.outputs.ScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -107,84 +107,84 @@ public final class GetJobDefinitionResult {
     /**
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
-     */
+    */
     public List<CustomerSecretResponse> getCustomerSecrets() {
         return this.customerSecrets == null ? List.of() : this.customerSecrets;
     }
     /**
      * A generic json used differently by each data service type.
      * 
-     */
+    */
     public Optional<Object> getDataServiceInput() {
         return Optional.ofNullable(this.dataServiceInput);
     }
     /**
      * Data Sink Id associated to the job definition.
      * 
-     */
+    */
     public String getDataSinkId() {
         return this.dataSinkId;
     }
     /**
      * Data Source Id associated to the job definition.
      * 
-     */
+    */
     public String getDataSourceId() {
         return this.dataSourceId;
     }
     /**
      * Id of the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Last modified time of the job definition.
      * 
-     */
+    */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * Name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * This is the preferred geo location for the job to run.
      * 
-     */
+    */
     public Optional<String> getRunLocation() {
         return Optional.ofNullable(this.runLocation);
     }
     /**
      * Schedule for running the job definition
      * 
-     */
+    */
     public List<ScheduleResponse> getSchedules() {
         return this.schedules == null ? List.of() : this.schedules;
     }
     /**
      * State of the job definition.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
      * 
-     */
+    */
     public Optional<String> getUserConfirmation() {
         return Optional.ofNullable(this.userConfirmation);
     }
@@ -290,7 +290,6 @@ public final class GetJobDefinitionResult {
             this.userConfirmation = userConfirmation;
             return this;
         }
-
         public GetJobDefinitionResult build() {
             return new GetJobDefinitionResult(customerSecrets, dataServiceInput, dataSinkId, dataSourceId, id, lastModifiedTime, name, runLocation, schedules, state, type, userConfirmation);
         }

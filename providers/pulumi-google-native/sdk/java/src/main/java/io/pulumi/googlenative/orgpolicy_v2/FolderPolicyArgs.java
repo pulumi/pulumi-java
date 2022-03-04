@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.orgpolicy_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class FolderPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final FolderPolicyArgs Empty = new FolderPolicyArgs();
 
     @InputImport(name="folderId", required=true)
-    private final Input<String> folderId;
+      private final Input<String> folderId;
 
     public Input<String> getFolderId() {
         return this.folderId;
@@ -27,7 +27,7 @@ public final class FolderPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -38,7 +38,7 @@ public final class FolderPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
+      private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
     public Input<GoogleCloudOrgpolicyV2PolicySpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -112,7 +112,6 @@ public final class FolderPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public FolderPolicyArgs build() {
             return new FolderPolicyArgs(folderId, name, spec);
         }

@@ -34,7 +34,6 @@ public final class GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs e
         public Builder(GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs build() {
             return new GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs();
         }

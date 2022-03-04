@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TaxonomyIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     public static final TaxonomyIamMemberArgs Empty = new TaxonomyIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<TaxonomyIamMemberConditionArgs> condition;
+      private final @Nullable Input<TaxonomyIamMemberConditionArgs> condition;
 
     public Input<TaxonomyIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -35,14 +35,14 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -55,7 +55,7 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -66,7 +66,7 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="taxonomy", required=true)
-    private final Input<String> taxonomy;
+      private final Input<String> taxonomy;
 
     public Input<String> getTaxonomy() {
         return this.taxonomy;
@@ -185,7 +185,6 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
             this.taxonomy = Input.of(Objects.requireNonNull(taxonomy));
             return this;
         }
-
         public TaxonomyIamMemberArgs build() {
             return new TaxonomyIamMemberArgs(condition, member, project, region, role, taxonomy);
         }

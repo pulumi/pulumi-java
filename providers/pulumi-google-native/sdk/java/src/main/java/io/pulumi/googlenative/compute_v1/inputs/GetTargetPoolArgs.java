@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetTargetPoolArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTargetPoolArgs Empty = new GetTargetPoolArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="targetPool", required=true)
-    private final String targetPool;
+      private final String targetPool;
 
     public String getTargetPool() {
         return this.targetPool;
@@ -88,7 +88,6 @@ public final class GetTargetPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.targetPool = Objects.requireNonNull(targetPool);
             return this;
         }
-
         public GetTargetPoolArgs build() {
             return new GetTargetPoolArgs(project, region, targetPool);
         }

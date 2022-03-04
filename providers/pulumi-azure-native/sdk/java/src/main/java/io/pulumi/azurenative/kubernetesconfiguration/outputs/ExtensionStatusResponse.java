@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ExtensionStatusResponse {
     /**
      * Status code provided by the Extension
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Short description of status of this instance of the extension.
      * 
-     */
+    */
     public Optional<String> getDisplayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
     /**
      * Level of the status.
      * 
-     */
+    */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
     /**
      * Detailed message of the status from the Extension instance.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * DateLiteral (per ISO8601) noting the time of installation status.
      * 
-     */
+    */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);
     }
@@ -139,7 +139,6 @@ public final class ExtensionStatusResponse {
             this.time = time;
             return this;
         }
-
         public ExtensionStatusResponse build() {
             return new ExtensionStatusResponse(code, displayStatus, level, message, time);
         }

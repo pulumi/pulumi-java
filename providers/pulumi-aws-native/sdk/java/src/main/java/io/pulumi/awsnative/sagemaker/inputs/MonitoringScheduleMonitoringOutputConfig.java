@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringOutput;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MonitoringScheduleMonitoringOutputConfig extends io.pulumi.re
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable String kmsKeyId;
+      private final @Nullable String kmsKeyId;
 
     public Optional<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
@@ -36,7 +36,7 @@ public final class MonitoringScheduleMonitoringOutputConfig extends io.pulumi.re
      * 
      */
     @InputImport(name="monitoringOutputs", required=true)
-    private final List<MonitoringScheduleMonitoringOutput> monitoringOutputs;
+      private final List<MonitoringScheduleMonitoringOutput> monitoringOutputs;
 
     public List<MonitoringScheduleMonitoringOutput> getMonitoringOutputs() {
         return this.monitoringOutputs;
@@ -85,7 +85,6 @@ public final class MonitoringScheduleMonitoringOutputConfig extends io.pulumi.re
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-
         public MonitoringScheduleMonitoringOutputConfig build() {
             return new MonitoringScheduleMonitoringOutputConfig(kmsKeyId, monitoringOutputs);
         }

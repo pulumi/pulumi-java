@@ -7,7 +7,7 @@ import io.pulumi.azurenative.eventgrid.inputs.EventChannelDestinationArgs;
 import io.pulumi.azurenative.eventgrid.inputs.EventChannelFilterArgs;
 import io.pulumi.azurenative.eventgrid.inputs.EventChannelSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<EventChannelDestinationArgs> destination;
+      private final @Nullable Input<EventChannelDestinationArgs> destination;
 
     public Input<EventChannelDestinationArgs> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -33,7 +33,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventChannelName")
-    private final @Nullable Input<String> eventChannelName;
+      private final @Nullable Input<String> eventChannelName;
 
     public Input<String> getEventChannelName() {
         return this.eventChannelName == null ? Input.empty() : this.eventChannelName;
@@ -45,7 +45,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTimeIfNotActivatedUtc")
-    private final @Nullable Input<String> expirationTimeIfNotActivatedUtc;
+      private final @Nullable Input<String> expirationTimeIfNotActivatedUtc;
 
     public Input<String> getExpirationTimeIfNotActivatedUtc() {
         return this.expirationTimeIfNotActivatedUtc == null ? Input.empty() : this.expirationTimeIfNotActivatedUtc;
@@ -56,7 +56,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<EventChannelFilterArgs> filter;
+      private final @Nullable Input<EventChannelFilterArgs> filter;
 
     public Input<EventChannelFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -67,7 +67,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerNamespaceName", required=true)
-    private final Input<String> partnerNamespaceName;
+      private final Input<String> partnerNamespaceName;
 
     public Input<String> getPartnerNamespaceName() {
         return this.partnerNamespaceName;
@@ -79,7 +79,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerTopicFriendlyDescription")
-    private final @Nullable Input<String> partnerTopicFriendlyDescription;
+      private final @Nullable Input<String> partnerTopicFriendlyDescription;
 
     public Input<String> getPartnerTopicFriendlyDescription() {
         return this.partnerTopicFriendlyDescription == null ? Input.empty() : this.partnerTopicFriendlyDescription;
@@ -90,7 +90,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<EventChannelSourceArgs> source;
+      private final @Nullable Input<EventChannelSourceArgs> source;
 
     public Input<EventChannelSourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -250,7 +250,6 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public EventChannelArgs build() {
             return new EventChannelArgs(destination, eventChannelName, expirationTimeIfNotActivatedUtc, filter, partnerNamespaceName, partnerTopicFriendlyDescription, resourceGroupName, source);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigGetArgs extends i
      * 
      */
     @InputImport(name="infoTypeTransformations", required=true)
-    private final Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations;
+      private final Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> getInfoTypeTransformations() {
         return this.infoTypeTransformations;
@@ -62,7 +62,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigGetArgs extends i
             this.infoTypeTransformations = Input.of(Objects.requireNonNull(infoTypeTransformations));
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigGetArgs(infoTypeTransformations);
         }

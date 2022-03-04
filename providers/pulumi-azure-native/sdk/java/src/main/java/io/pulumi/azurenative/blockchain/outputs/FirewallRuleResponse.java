@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blockchain.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class FirewallRuleResponse {
     /**
      * Gets or sets the end IP address of the firewall rule range.
      * 
-     */
+    */
     public Optional<String> getEndIpAddress() {
         return Optional.ofNullable(this.endIpAddress);
     }
     /**
      * Gets or sets the name of the firewall rules.
      * 
-     */
+    */
     public Optional<String> getRuleName() {
         return Optional.ofNullable(this.ruleName);
     }
     /**
      * Gets or sets the start IP address of the firewall rule range.
      * 
-     */
+    */
     public Optional<String> getStartIpAddress() {
         return Optional.ofNullable(this.startIpAddress);
     }
@@ -97,7 +97,6 @@ public final class FirewallRuleResponse {
             this.startIpAddress = startIpAddress;
             return this;
         }
-
         public FirewallRuleResponse build() {
             return new FirewallRuleResponse(endIpAddress, ruleName, startIpAddress);
         }

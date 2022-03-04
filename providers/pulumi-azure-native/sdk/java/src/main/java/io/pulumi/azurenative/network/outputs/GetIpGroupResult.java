@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -92,70 +92,70 @@ public final class GetIpGroupResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * List of references to Firewall Policies resources that this IpGroups is associated with.
      * 
-     */
+    */
     public List<SubResourceResponse> getFirewallPolicies() {
         return this.firewallPolicies;
     }
     /**
      * List of references to Firewall resources that this IpGroups is associated with.
      * 
-     */
+    */
     public List<SubResourceResponse> getFirewalls() {
         return this.firewalls;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * IpAddresses/IpAddressPrefixes in the IpGroups resource.
      * 
-     */
+    */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the IpGroups resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -247,7 +247,6 @@ public final class GetIpGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIpGroupResult build() {
             return new GetIpGroupResult(etag, firewallPolicies, firewalls, id, ipAddresses, location, name, provisioningState, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ApiOperationResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class EgressToResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operations", required=true)
-    private final List<ApiOperationResponse> operations;
+      private final List<ApiOperationResponse> operations;
 
     public List<ApiOperationResponse> getOperations() {
         return this.operations;
@@ -34,7 +34,7 @@ public final class EgressToResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resources", required=true)
-    private final List<String> resources;
+      private final List<String> resources;
 
     public List<String> getResources() {
         return this.resources;
@@ -83,7 +83,6 @@ public final class EgressToResponse extends io.pulumi.resources.InvokeArgs {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public EgressToResponse build() {
             return new EgressToResponse(operations, resources);
         }

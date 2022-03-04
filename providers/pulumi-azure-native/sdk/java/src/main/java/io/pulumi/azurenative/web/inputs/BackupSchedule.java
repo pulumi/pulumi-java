@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.FrequencyUnit;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class BackupSchedule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frequencyInterval", required=true)
-    private final Integer frequencyInterval;
+      private final Integer frequencyInterval;
 
     public Integer getFrequencyInterval() {
         return this.frequencyInterval;
@@ -37,7 +37,7 @@ public final class BackupSchedule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frequencyUnit", required=true)
-    private final FrequencyUnit frequencyUnit;
+      private final FrequencyUnit frequencyUnit;
 
     public FrequencyUnit getFrequencyUnit() {
         return this.frequencyUnit;
@@ -48,7 +48,7 @@ public final class BackupSchedule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keepAtLeastOneBackup", required=true)
-    private final Boolean keepAtLeastOneBackup;
+      private final Boolean keepAtLeastOneBackup;
 
     public Boolean getKeepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
@@ -59,7 +59,7 @@ public final class BackupSchedule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retentionPeriodInDays", required=true)
-    private final Integer retentionPeriodInDays;
+      private final Integer retentionPeriodInDays;
 
     public Integer getRetentionPeriodInDays() {
         return this.retentionPeriodInDays;
@@ -70,7 +70,7 @@ public final class BackupSchedule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+      private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -149,7 +149,6 @@ public final class BackupSchedule extends io.pulumi.resources.InvokeArgs {
             this.startTime = startTime;
             return this;
         }
-
         public BackupSchedule build() {
             return new BackupSchedule(frequencyInterval, frequencyUnit, keepAtLeastOneBackup, retentionPeriodInDays, startTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexResponse;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
      * 
      */
     @InputImport(name="dictionary", required=true)
-    private final GooglePrivacyDlpV2DictionaryResponse dictionary;
+      private final GooglePrivacyDlpV2DictionaryResponse dictionary;
 
     public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
         return this.dictionary;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
      * 
      */
     @InputImport(name="largeCustomDictionary", required=true)
-    private final GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
+      private final GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
 
     public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse getLargeCustomDictionary() {
         return this.largeCustomDictionary;
@@ -68,7 +68,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
      * 
      */
     @InputImport(name="regex", required=true)
-    private final GooglePrivacyDlpV2RegexResponse regex;
+      private final GooglePrivacyDlpV2RegexResponse regex;
 
     public GooglePrivacyDlpV2RegexResponse getRegex() {
         return this.regex;
@@ -147,7 +147,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredInfoTypeConfigResponse build() {
             return new GooglePrivacyDlpV2StoredInfoTypeConfigResponse(description, dictionary, displayName, largeCustomDictionary, regex);
         }

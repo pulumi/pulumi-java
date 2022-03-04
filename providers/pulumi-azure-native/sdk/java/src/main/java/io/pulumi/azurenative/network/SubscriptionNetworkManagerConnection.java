@@ -9,8 +9,8 @@ import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -117,6 +117,37 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable SubscriptionNetworkManagerConnectionArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.SubscriptionNetworkManagerConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.SubscriptionNetworkManagerConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SubscriptionNetworkManagerConnection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SubscriptionNetworkManagerConnection(String name) {
+        this(name, SubscriptionNetworkManagerConnectionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SubscriptionNetworkManagerConnection(String name, @Nullable SubscriptionNetworkManagerConnectionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

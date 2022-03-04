@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.ModuleAssetParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interfaceString")
-    private final @Nullable Input<String> interfaceString;
+      private final @Nullable Input<String> interfaceString;
 
     public Input<String> getInterfaceString() {
         return this.interfaceString == null ? Input.empty() : this.interfaceString;
@@ -36,7 +36,7 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<ModuleAssetParameterArgs>> parameters;
+      private final @Nullable Input<List<ModuleAssetParameterArgs>> parameters;
 
     public Input<List<ModuleAssetParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -95,7 +95,6 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public ModeValueInfoArgs build() {
             return new ModeValueInfoArgs(interfaceString, parameters);
         }

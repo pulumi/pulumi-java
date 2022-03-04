@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IncidentOwnerInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="assignedTo")
-    private final @Nullable String assignedTo;
+      private final @Nullable String assignedTo;
 
     public Optional<String> getAssignedTo() {
         return this.assignedTo == null ? Optional.empty() : Optional.ofNullable(this.assignedTo);
@@ -34,7 +34,7 @@ public final class IncidentOwnerInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="email")
-    private final @Nullable String email;
+      private final @Nullable String email;
 
     public Optional<String> getEmail() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
@@ -45,7 +45,7 @@ public final class IncidentOwnerInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable String objectId;
+      private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
@@ -56,7 +56,7 @@ public final class IncidentOwnerInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="userPrincipalName")
-    private final @Nullable String userPrincipalName;
+      private final @Nullable String userPrincipalName;
 
     public Optional<String> getUserPrincipalName() {
         return this.userPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.userPrincipalName);
@@ -125,7 +125,6 @@ public final class IncidentOwnerInfoResponse extends io.pulumi.resources.InvokeA
             this.userPrincipalName = userPrincipalName;
             return this;
         }
-
         public IncidentOwnerInfoResponse build() {
             return new IncidentOwnerInfoResponse(assignedTo, email, objectId, userPrincipalName);
         }

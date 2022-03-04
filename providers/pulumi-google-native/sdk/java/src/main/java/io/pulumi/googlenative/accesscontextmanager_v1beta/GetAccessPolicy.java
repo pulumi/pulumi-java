@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessPolicy {
-/**
- * Get an AccessPolicy by name.
+    private GetAccessPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccessPolicyArgs.Builder a);
+    }
+    private static GetAccessPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccessPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get an AccessPolicy by name.
  * 
- */
+     */
+    public static CompletableFuture<GetAccessPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get an AccessPolicy by name.
+     * 
+     */
     public static CompletableFuture<GetAccessPolicyResult> invokeAsync(GetAccessPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1beta:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args == null ? GetAccessPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

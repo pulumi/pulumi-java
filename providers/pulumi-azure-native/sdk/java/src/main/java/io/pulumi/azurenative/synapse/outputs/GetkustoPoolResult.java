@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.AzureSkuResponse;
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -127,105 +127,105 @@ public final class GetkustoPoolResult {
     /**
      * The Kusto Pool data ingestion URI.
      * 
-     */
+    */
     public String getDataIngestionUri() {
         return this.dataIngestionUri;
     }
     /**
      * The engine type
      * 
-     */
+    */
     public Optional<String> getEngineType() {
         return Optional.ofNullable(this.engineType);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the kusto pool.
      * 
-     */
+    */
     public AzureSkuResponse getSku() {
         return this.sku;
     }
     /**
      * The state of the resource.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The reason for the Kusto Pool's current state.
      * 
-     */
+    */
     public String getStateReason() {
         return this.stateReason;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The Kusto Pool URI.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * The workspace unique identifier.
      * 
-     */
+    */
     public Optional<String> getWorkspaceUid() {
         return Optional.ofNullable(this.workspaceUid);
     }
@@ -352,7 +352,6 @@ public final class GetkustoPoolResult {
             this.workspaceUid = workspaceUid;
             return this;
         }
-
         public GetkustoPoolResult build() {
             return new GetkustoPoolResult(dataIngestionUri, engineType, etag, id, location, name, provisioningState, sku, state, stateReason, systemData, tags, type, uri, workspaceUid);
         }

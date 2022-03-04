@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.autoscaling.outputs;
 
 import io.pulumi.awsnative.autoscaling.outputs.LaunchConfigurationBlockDevice;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class LaunchConfigurationBlockDeviceMapping {
     /**
      * The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
      * 
-     */
+    */
     public String getDeviceName() {
         return this.deviceName;
     }
     /**
      * Parameters used to automatically set up EBS volumes when an instance is launched.
      * 
-     */
+    */
     public Optional<LaunchConfigurationBlockDevice> getEbs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
      * Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
      * 
-     */
+    */
     public Optional<Boolean> getNoDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
      * The name of the virtual device.
      * 
-     */
+    */
     public Optional<String> getVirtualName() {
         return Optional.ofNullable(this.virtualName);
     }
@@ -120,7 +120,6 @@ public final class LaunchConfigurationBlockDeviceMapping {
             this.virtualName = virtualName;
             return this;
         }
-
         public LaunchConfigurationBlockDeviceMapping build() {
             return new LaunchConfigurationBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLCustomRequestHandling;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class WebACLAllowAction {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public WebACLAllowAction build() {
             return new WebACLAllowAction(customRequestHandling);
         }

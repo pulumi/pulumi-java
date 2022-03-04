@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ShareSettingsResponse {
     /**
      * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
      * 
-     */
+    */
     public Map<String,String> getProjectMap() {
         return this.projectMap;
     }
     /**
      * Type of sharing for this shared-reservation
      * 
-     */
+    */
     public String getShareType() {
         return this.shareType;
     }
@@ -75,7 +75,6 @@ public final class ShareSettingsResponse {
             this.shareType = Objects.requireNonNull(shareType);
             return this;
         }
-
         public ShareSettingsResponse build() {
             return new ShareSettingsResponse(projectMap, shareType);
         }

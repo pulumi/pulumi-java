@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowlistValues", required=true)
-    private final Input<List<String>> allowlistValues;
+      private final Input<List<String>> allowlistValues;
 
     public Input<List<String>> getAllowlistValues() {
         return this.allowlistValues;
@@ -35,7 +35,7 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Input<Boolean> isEnabled;
+      private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -47,7 +47,7 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final Input<String> ruleType;
+      private final Input<String> ruleType;
 
     public Input<String> getRuleType() {
         return this.ruleType;
@@ -121,7 +121,6 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }
-
         public AllowlistCustomAlertRuleArgs build() {
             return new AllowlistCustomAlertRuleArgs(allowlistValues, isEnabled, ruleType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaConditionResponse;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaRuleBoostActionResponse;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse;
@@ -88,63 +88,63 @@ public final class GoogleCloudRetailV2alphaRuleResponse {
     /**
      * A boost action.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaRuleBoostActionResponse getBoostAction() {
         return this.boostAction;
     }
     /**
      * The condition that triggers the rule. If the condition is empty, the rule will always apply.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaConditionResponse getCondition() {
         return this.condition;
     }
     /**
      * Prevents term from being associated with other terms.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse getDoNotAssociateAction() {
         return this.doNotAssociateAction;
     }
     /**
      * Filters results.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaRuleFilterActionResponse getFilterAction() {
         return this.filterAction;
     }
     /**
      * Ignores specific terms from query during search.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaRuleIgnoreActionResponse getIgnoreAction() {
         return this.ignoreAction;
     }
     /**
      * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse getOnewaySynonymsAction() {
         return this.onewaySynonymsAction;
     }
     /**
      * Redirects a shopper to a specific page.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaRuleRedirectActionResponse getRedirectAction() {
         return this.redirectAction;
     }
     /**
      * Replaces specific terms in the query.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaRuleReplacementActionResponse getReplacementAction() {
         return this.replacementAction;
     }
     /**
      * Treats a set of terms as synonyms of one another.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse getTwowaySynonymsAction() {
         return this.twowaySynonymsAction;
     }
@@ -229,7 +229,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse {
             this.twowaySynonymsAction = Objects.requireNonNull(twowaySynonymsAction);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleResponse build() {
             return new GoogleCloudRetailV2alphaRuleResponse(boostAction, condition, doNotAssociateAction, filterAction, ignoreAction, onewaySynonymsAction, redirectAction, replacementAction, twowaySynonymsAction);
         }

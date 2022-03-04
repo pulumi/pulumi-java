@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicedirectory_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEndpoint {
-/**
- * Gets an endpoint.
+    private GetEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetEndpointArgs.Builder a);
+    }
+    private static GetEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an endpoint.
  * 
- */
+     */
+    public static CompletableFuture<GetEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an endpoint.
+     * 
+     */
     public static CompletableFuture<GetEndpointResult> invokeAsync(GetEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getEndpoint", TypeShape.of(GetEndpointResult.class), args == null ? GetEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

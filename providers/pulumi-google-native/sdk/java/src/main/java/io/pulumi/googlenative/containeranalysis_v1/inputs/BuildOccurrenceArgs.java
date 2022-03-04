@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.BuildProvenanceArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.InTotoStatementArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="intotoStatement")
-    private final @Nullable Input<InTotoStatementArgs> intotoStatement;
+      private final @Nullable Input<InTotoStatementArgs> intotoStatement;
 
     public Input<InTotoStatementArgs> getIntotoStatement() {
         return this.intotoStatement == null ? Input.empty() : this.intotoStatement;
@@ -36,7 +36,7 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="provenance")
-    private final @Nullable Input<BuildProvenanceArgs> provenance;
+      private final @Nullable Input<BuildProvenanceArgs> provenance;
 
     public Input<BuildProvenanceArgs> getProvenance() {
         return this.provenance == null ? Input.empty() : this.provenance;
@@ -47,7 +47,7 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="provenanceBytes")
-    private final @Nullable Input<String> provenanceBytes;
+      private final @Nullable Input<String> provenanceBytes;
 
     public Input<String> getProvenanceBytes() {
         return this.provenanceBytes == null ? Input.empty() : this.provenanceBytes;
@@ -121,7 +121,6 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
             this.provenanceBytes = Input.ofNullable(provenanceBytes);
             return this;
         }
-
         public BuildOccurrenceArgs build() {
             return new BuildOccurrenceArgs(intotoStatement, provenance, provenanceBytes);
         }

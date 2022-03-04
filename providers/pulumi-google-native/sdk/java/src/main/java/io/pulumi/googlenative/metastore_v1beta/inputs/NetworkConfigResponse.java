@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1beta.inputs.ConsumerResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="consumers", required=true)
-    private final List<ConsumerResponse> consumers;
+      private final List<ConsumerResponse> consumers;
 
     public List<ConsumerResponse> getConsumers() {
         return this.consumers;
@@ -60,7 +60,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.consumers = Objects.requireNonNull(consumers);
             return this;
         }
-
         public NetworkConfigResponse build() {
             return new NetworkConfigResponse(consumers);
         }

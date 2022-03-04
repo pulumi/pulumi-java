@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.GoogleRpcStatusResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class InstanceAttemptResultResponse {
     /**
      * Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
      * 
-     */
+    */
     public Integer getExitCode() {
         return this.exitCode;
     }
     /**
      * Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
      * 
-     */
+    */
     public GoogleRpcStatusResponse getStatus() {
         return this.status;
     }
@@ -75,7 +75,6 @@ public final class InstanceAttemptResultResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public InstanceAttemptResultResponse build() {
             return new InstanceAttemptResultResponse(exitCode, status);
         }

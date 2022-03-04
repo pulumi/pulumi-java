@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TagByApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class TagByApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class TagByApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -52,7 +52,7 @@ public final class TagByApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagId")
-    private final @Nullable Input<String> tagId;
+      private final @Nullable Input<String> tagId;
 
     public Input<String> getTagId() {
         return this.tagId == null ? Input.empty() : this.tagId;
@@ -141,7 +141,6 @@ public final class TagByApiArgs extends io.pulumi.resources.ResourceArgs {
             this.tagId = Input.ofNullable(tagId);
             return this;
         }
-
         public TagByApiArgs build() {
             return new TagByApiArgs(apiId, resourceGroupName, serviceName, tagId);
         }

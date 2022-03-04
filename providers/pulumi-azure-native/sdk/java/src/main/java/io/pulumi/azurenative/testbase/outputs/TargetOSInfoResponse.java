@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class TargetOSInfoResponse {
     /**
      * Specifies the OS update type to test against, e.g., 'Security updates' or 'Feature updates'.
      * 
-     */
+    */
     public String getOsUpdateType() {
         return this.osUpdateType;
     }
     /**
      * Specifies the target OSs to be tested.
      * 
-     */
+    */
     public List<String> getTargetOSs() {
         return this.targetOSs;
     }
@@ -75,7 +75,6 @@ public final class TargetOSInfoResponse {
             this.targetOSs = Objects.requireNonNull(targetOSs);
             return this;
         }
-
         public TargetOSInfoResponse build() {
             return new TargetOSInfoResponse(osUpdateType, targetOSs);
         }

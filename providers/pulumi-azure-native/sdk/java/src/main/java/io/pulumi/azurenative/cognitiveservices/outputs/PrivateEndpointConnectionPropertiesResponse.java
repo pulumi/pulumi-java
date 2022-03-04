@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class PrivateEndpointConnectionPropertiesResponse {
     /**
      * The private link resource group ids.
      * 
-     */
+    */
     public List<String> getGroupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
     /**
      * The resource of private end point.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
      * 
-     */
+    */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
@@ -100,7 +100,6 @@ public final class PrivateEndpointConnectionPropertiesResponse {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesResponse build() {
             return new PrivateEndpointConnectionPropertiesResponse(groupIds, privateEndpoint, privateLinkServiceConnectionState);
         }

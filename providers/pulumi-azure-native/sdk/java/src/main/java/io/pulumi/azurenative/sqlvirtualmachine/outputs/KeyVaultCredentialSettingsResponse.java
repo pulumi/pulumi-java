@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class KeyVaultCredentialSettingsResponse {
     /**
      * Azure Key Vault url.
      * 
-     */
+    */
     public Optional<String> getAzureKeyVaultUrl() {
         return Optional.ofNullable(this.azureKeyVaultUrl);
     }
     /**
      * Credential name.
      * 
-     */
+    */
     public Optional<String> getCredentialName() {
         return Optional.ofNullable(this.credentialName);
     }
     /**
      * Enable or disable key vault credential setting.
      * 
-     */
+    */
     public Optional<Boolean> getEnable() {
         return Optional.ofNullable(this.enable);
     }
     /**
      * Service principal name to access key vault.
      * 
-     */
+    */
     public Optional<String> getServicePrincipalName() {
         return Optional.ofNullable(this.servicePrincipalName);
     }
@@ -119,7 +119,6 @@ public final class KeyVaultCredentialSettingsResponse {
             this.servicePrincipalName = servicePrincipalName;
             return this;
         }
-
         public KeyVaultCredentialSettingsResponse build() {
             return new KeyVaultCredentialSettingsResponse(azureKeyVaultUrl, credentialName, enable, servicePrincipalName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -162,7 +162,7 @@ public final class RegionBackendServiceBackend {
      * Default value is `CONNECTION`.
      * Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
      * 
-     */
+    */
     public Optional<String> getBalancingMode() {
         return Optional.ofNullable(this.balancingMode);
     }
@@ -176,7 +176,7 @@ public final class RegionBackendServiceBackend {
      * A setting of 0 means the group is completely drained, offering
      * 0% of its available Capacity. Valid range is [0.0,1.0].
      * 
-     */
+    */
     public Optional<Double> getCapacityScaler() {
         return Optional.ofNullable(this.capacityScaler);
     }
@@ -184,7 +184,7 @@ public final class RegionBackendServiceBackend {
      * An optional description of this resource.
      * Provide this property when you create the resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -192,7 +192,7 @@ public final class RegionBackendServiceBackend {
      * This field designates whether this is a failover backend. More
      * than one failover backend can be configured for a given RegionBackendService.
      * 
-     */
+    */
     public Optional<Boolean> getFailover() {
         return Optional.ofNullable(this.failover);
     }
@@ -214,7 +214,7 @@ public final class RegionBackendServiceBackend {
      * Group resource using the fully-qualified URL, rather than a
      * partial URL.
      * 
-     */
+    */
     public String getGroup() {
         return this.group;
     }
@@ -222,7 +222,7 @@ public final class RegionBackendServiceBackend {
      * The maximum number of connections to the backend cluster.
      * Defaults to 1024.
      * 
-     */
+    */
     public Optional<Integer> getMaxConnections() {
         return Optional.ofNullable(this.maxConnections);
     }
@@ -235,7 +235,7 @@ public final class RegionBackendServiceBackend {
      * CONNECTION mode, either maxConnections or
      * maxConnectionsPerEndpoint must be set.
      * 
-     */
+    */
     public Optional<Integer> getMaxConnectionsPerEndpoint() {
         return Optional.ofNullable(this.maxConnectionsPerEndpoint);
     }
@@ -248,7 +248,7 @@ public final class RegionBackendServiceBackend {
      * For CONNECTION mode, either maxConnections or
      * maxConnectionsPerInstance must be set.
      * 
-     */
+    */
     public Optional<Integer> getMaxConnectionsPerInstance() {
         return Optional.ofNullable(this.maxConnectionsPerInstance);
     }
@@ -260,7 +260,7 @@ public final class RegionBackendServiceBackend {
      * of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
      * group type, must be set.
      * 
-     */
+    */
     public Optional<Integer> getMaxRate() {
         return Optional.ofNullable(this.maxRate);
     }
@@ -271,7 +271,7 @@ public final class RegionBackendServiceBackend {
      * either maxRate or maxRatePerEndpoint must be set. Cannot be set
      * for INTERNAL backend services.
      * 
-     */
+    */
     public Optional<Double> getMaxRatePerEndpoint() {
         return Optional.ofNullable(this.maxRatePerEndpoint);
     }
@@ -282,7 +282,7 @@ public final class RegionBackendServiceBackend {
      * either maxRate or maxRatePerInstance must be set. Cannot be set
      * for INTERNAL backend services.
      * 
-     */
+    */
     public Optional<Double> getMaxRatePerInstance() {
         return Optional.ofNullable(this.maxRatePerInstance);
     }
@@ -291,7 +291,7 @@ public final class RegionBackendServiceBackend {
      * CPU utilization target for the group. Valid range is [0.0, 1.0].
      * Cannot be set for INTERNAL backend services.
      * 
-     */
+    */
     public Optional<Double> getMaxUtilization() {
         return Optional.ofNullable(this.maxUtilization);
     }
@@ -397,7 +397,6 @@ public final class RegionBackendServiceBackend {
             this.maxUtilization = maxUtilization;
             return this;
         }
-
         public RegionBackendServiceBackend build() {
             return new RegionBackendServiceBackend(balancingMode, capacityScaler, description, failover, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }

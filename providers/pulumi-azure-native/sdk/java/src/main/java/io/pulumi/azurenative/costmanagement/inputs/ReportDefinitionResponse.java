@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportDatasetResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ReportTimePeriodResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable ReportDatasetResponse dataset;
+      private final @Nullable ReportDatasetResponse dataset;
 
     public Optional<ReportDatasetResponse> getDataset() {
         return this.dataset == null ? Optional.empty() : Optional.ofNullable(this.dataset);
@@ -36,7 +36,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="timePeriod")
-    private final @Nullable ReportTimePeriodResponse timePeriod;
+      private final @Nullable ReportTimePeriodResponse timePeriod;
 
     public Optional<ReportTimePeriodResponse> getTimePeriod() {
         return this.timePeriod == null ? Optional.empty() : Optional.ofNullable(this.timePeriod);
@@ -47,7 +47,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="timeframe", required=true)
-    private final String timeframe;
+      private final String timeframe;
 
     public String getTimeframe() {
         return this.timeframe;
@@ -58,7 +58,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -127,7 +127,6 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReportDefinitionResponse build() {
             return new ReportDefinitionResponse(dataset, timePeriod, timeframe, type);
         }

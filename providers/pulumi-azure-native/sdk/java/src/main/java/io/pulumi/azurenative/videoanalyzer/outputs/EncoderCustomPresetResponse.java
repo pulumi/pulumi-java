@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.AudioEncoderAacResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoEncoderH264Response;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,7 +43,7 @@ public final class EncoderCustomPresetResponse {
     /**
      * Describes a custom preset for encoding audio.
      * 
-     */
+    */
     public Optional<AudioEncoderAacResponse> getAudioEncoder() {
         return Optional.ofNullable(this.audioEncoder);
     }
@@ -51,14 +51,14 @@ public final class EncoderCustomPresetResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderCustomPreset'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Describes a custom preset for encoding video.
      * 
-     */
+    */
     public Optional<VideoEncoderH264Response> getVideoEncoder() {
         return Optional.ofNullable(this.videoEncoder);
     }
@@ -101,7 +101,6 @@ public final class EncoderCustomPresetResponse {
             this.videoEncoder = videoEncoder;
             return this;
         }
-
         public EncoderCustomPresetResponse build() {
             return new EncoderCustomPresetResponse(audioEncoder, type, videoEncoder);
         }

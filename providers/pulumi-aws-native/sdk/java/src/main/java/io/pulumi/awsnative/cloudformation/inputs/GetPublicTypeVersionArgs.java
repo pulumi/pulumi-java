@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPublicTypeVersionArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="publicTypeArn", required=true)
-    private final String publicTypeArn;
+      private final String publicTypeArn;
 
     public String getPublicTypeArn() {
         return this.publicTypeArn;
@@ -55,7 +55,6 @@ public final class GetPublicTypeVersionArgs extends io.pulumi.resources.InvokeAr
             this.publicTypeArn = Objects.requireNonNull(publicTypeArn);
             return this;
         }
-
         public GetPublicTypeVersionArgs build() {
             return new GetPublicTypeVersionArgs(publicTypeArn);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.inputs.SecurityPolicyWebApplicationFirewallAssociationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
      * 
      */
     @InputImport(name="associations")
-    private final @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
+      private final @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
 
     public List<SecurityPolicyWebApplicationFirewallAssociationResponse> getAssociations() {
         return this.associations == null ? List.of() : this.associations;
@@ -38,7 +38,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -49,7 +49,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
      * 
      */
     @InputImport(name="wafPolicy")
-    private final @Nullable ResourceReferenceResponse wafPolicy;
+      private final @Nullable ResourceReferenceResponse wafPolicy;
 
     public Optional<ResourceReferenceResponse> getWafPolicy() {
         return this.wafPolicy == null ? Optional.empty() : Optional.ofNullable(this.wafPolicy);
@@ -108,7 +108,6 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
             this.wafPolicy = wafPolicy;
             return this;
         }
-
         public SecurityPolicyWebApplicationFirewallParametersResponse build() {
             return new SecurityPolicyWebApplicationFirewallParametersResponse(associations, type, wafPolicy);
         }

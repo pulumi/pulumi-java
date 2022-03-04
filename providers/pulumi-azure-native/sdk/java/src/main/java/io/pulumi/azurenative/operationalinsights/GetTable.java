@@ -6,21 +6,41 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.operationalinsights.inputs.GetTableArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.GetTableResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTable {
-/**
- * Workspace data table definition.
+    private GetTable() {}
+    public interface BuilderApplicator {
+        public void apply(GetTableArgs.Builder a);
+    }
+    private static GetTableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Workspace data table definition.
  * API Version: 2021-12-01-preview.
  * 
- *
- * Workspace data table definition.
+     *
+     * Workspace data table definition.
  * 
- */
+     */
+    public static CompletableFuture<GetTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Workspace data table definition.
+     * API Version: 2021-12-01-preview.
+     * 
+     *
+         * Workspace data table definition.
+     * 
+     */
     public static CompletableFuture<GetTableResult> invokeAsync(GetTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getTable", TypeShape.of(GetTableResult.class), args == null ? GetTableArgs.Empty : args, Utilities.withVersion(options));
     }

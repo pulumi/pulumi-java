@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ConnectionMonitorSourceResponse {
     /**
      * The source port used by connection monitor.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The ID of the resource used as the source by connection monitor.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
@@ -77,7 +77,6 @@ public final class ConnectionMonitorSourceResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public ConnectionMonitorSourceResponse build() {
             return new ConnectionMonitorSourceResponse(port, resourceId);
         }

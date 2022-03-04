@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -124,105 +124,105 @@ public final class GetRoleAssignmentResult {
     /**
      * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
      * 
-     */
+    */
     public Optional<String> getCondition() {
         return Optional.ofNullable(this.condition);
     }
     /**
      * Version of the condition. Currently accepted value is '2.0'
      * 
-     */
+    */
     public Optional<String> getConditionVersion() {
         return Optional.ofNullable(this.conditionVersion);
     }
     /**
      * Id of the user who created the assignment
      * 
-     */
+    */
     public String getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Time it was created
      * 
-     */
+    */
     public String getCreatedOn() {
         return this.createdOn;
     }
     /**
      * Id of the delegated managed identity resource
      * 
-     */
+    */
     public Optional<String> getDelegatedManagedIdentityResourceId() {
         return Optional.ofNullable(this.delegatedManagedIdentityResourceId);
     }
     /**
      * Description of role assignment
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The role assignment ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The role assignment name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The principal ID.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The principal type of the assigned principal ID.
      * 
-     */
+    */
     public Optional<String> getPrincipalType() {
         return Optional.ofNullable(this.principalType);
     }
     /**
      * The role definition ID.
      * 
-     */
+    */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
      * The role assignment scope.
      * 
-     */
+    */
     public String getScope() {
         return this.scope;
     }
     /**
      * The role assignment type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Id of the user who updated the assignment
      * 
-     */
+    */
     public String getUpdatedBy() {
         return this.updatedBy;
     }
     /**
      * Time it was updated
      * 
-     */
+    */
     public String getUpdatedOn() {
         return this.updatedOn;
     }
@@ -349,7 +349,6 @@ public final class GetRoleAssignmentResult {
             this.updatedOn = Objects.requireNonNull(updatedOn);
             return this;
         }
-
         public GetRoleAssignmentResult build() {
             return new GetRoleAssignmentResult(condition, conditionVersion, createdBy, createdOn, delegatedManagedIdentityResourceId, description, id, name, principalId, principalType, roleDefinitionId, scope, type, updatedBy, updatedOn);
         }

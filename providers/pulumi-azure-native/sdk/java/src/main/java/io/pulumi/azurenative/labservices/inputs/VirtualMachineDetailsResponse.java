@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="lastKnownPowerState", required=true)
-    private final String lastKnownPowerState;
+      private final String lastKnownPowerState;
 
     public String getLastKnownPowerState() {
         return this.lastKnownPowerState;
@@ -32,7 +32,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="privateIpAddress", required=true)
-    private final String privateIpAddress;
+      private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
@@ -43,7 +43,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -54,7 +54,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="rdpAuthority", required=true)
-    private final String rdpAuthority;
+      private final String rdpAuthority;
 
     public String getRdpAuthority() {
         return this.rdpAuthority;
@@ -65,7 +65,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sshAuthority", required=true)
-    private final String sshAuthority;
+      private final String sshAuthority;
 
     public String getSshAuthority() {
         return this.sshAuthority;
@@ -76,7 +76,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+      private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -165,7 +165,6 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public VirtualMachineDetailsResponse build() {
             return new VirtualMachineDetailsResponse(lastKnownPowerState, privateIpAddress, provisioningState, rdpAuthority, sshAuthority, userName);
         }

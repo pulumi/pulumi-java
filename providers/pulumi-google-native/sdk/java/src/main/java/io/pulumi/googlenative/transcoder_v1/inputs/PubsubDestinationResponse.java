@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PubsubDestinationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="topic", required=true)
-    private final String topic;
+      private final String topic;
 
     public String getTopic() {
         return this.topic;
@@ -59,7 +59,6 @@ public final class PubsubDestinationResponse extends io.pulumi.resources.InvokeA
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubsubDestinationResponse build() {
             return new PubsubDestinationResponse(topic);
         }

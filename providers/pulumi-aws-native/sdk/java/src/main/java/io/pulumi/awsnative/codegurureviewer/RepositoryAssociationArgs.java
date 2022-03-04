@@ -6,7 +6,7 @@ package io.pulumi.awsnative.codegurureviewer;
 import io.pulumi.awsnative.codegurureviewer.enums.RepositoryAssociationType;
 import io.pulumi.awsnative.codegurureviewer.inputs.RepositoryAssociationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -33,7 +33,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionArn")
-    private final @Nullable Input<String> connectionArn;
+      private final @Nullable Input<String> connectionArn;
 
     public Input<String> getConnectionArn() {
         return this.connectionArn == null ? Input.empty() : this.connectionArn;
@@ -44,7 +44,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -66,7 +66,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<RepositoryAssociationTagArgs>> tags;
+      private final @Nullable Input<List<RepositoryAssociationTagArgs>> tags;
 
     public Input<List<RepositoryAssociationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<RepositoryAssociationType> type;
+      private final Input<RepositoryAssociationType> type;
 
     public Input<RepositoryAssociationType> getType() {
         return this.type;
@@ -196,7 +196,6 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public RepositoryAssociationArgs build() {
             return new RepositoryAssociationArgs(bucketName, connectionArn, name, owner, tags, type);
         }

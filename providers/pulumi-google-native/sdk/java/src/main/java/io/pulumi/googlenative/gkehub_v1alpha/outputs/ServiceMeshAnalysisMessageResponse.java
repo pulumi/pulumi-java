@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.ServiceMeshAnalysisMessageBaseResponse;
 import java.lang.String;
 import java.util.List;
@@ -48,28 +48,28 @@ public final class ServiceMeshAnalysisMessageResponse {
     /**
      * A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.
      * 
-     */
+    */
     public Map<String,String> getArgs() {
         return this.args;
     }
     /**
      * A human readable description of what the error means. It is suitable for non-internationalize display purposes.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Details common to all types of Istio and ServiceMesh analysis messages.
      * 
-     */
+    */
     public ServiceMeshAnalysisMessageBaseResponse getMessageBase() {
         return this.messageBase;
     }
     /**
      * A list of strings specifying the resource identifiers that were the cause of message generation. A "path" here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
      * 
-     */
+    */
     public List<String> getResourcePaths() {
         return this.resourcePaths;
     }
@@ -119,7 +119,6 @@ public final class ServiceMeshAnalysisMessageResponse {
             this.resourcePaths = Objects.requireNonNull(resourcePaths);
             return this;
         }
-
         public ServiceMeshAnalysisMessageResponse build() {
             return new ServiceMeshAnalysisMessageResponse(args, description, messageBase, resourcePaths);
         }

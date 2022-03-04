@@ -5,8 +5,8 @@ package io.pulumi.gcp.binaryauthorization;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.binaryauthorization.AttestorArgs;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorState;
@@ -107,6 +107,37 @@ public class Attestor extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AttestorArgs.Builder a);
+    }
+    private static io.pulumi.gcp.binaryauthorization.AttestorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.binaryauthorization.AttestorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Attestor(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Attestor(String name) {
+        this(name, AttestorArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Attestor(String name, AttestorArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

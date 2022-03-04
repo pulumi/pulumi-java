@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class InstanceGroupManagerStatusVersionTargetArgs extends io.pulumi
     public static final InstanceGroupManagerStatusVersionTargetArgs Empty = new InstanceGroupManagerStatusVersionTargetArgs();
 
     @InputImport(name="isReached")
-    private final @Nullable Input<Boolean> isReached;
+      private final @Nullable Input<Boolean> isReached;
 
     public Input<Boolean> getIsReached() {
         return this.isReached == null ? Input.empty() : this.isReached;
@@ -58,7 +58,6 @@ public final class InstanceGroupManagerStatusVersionTargetArgs extends io.pulumi
             this.isReached = Input.ofNullable(isReached);
             return this;
         }
-
         public InstanceGroupManagerStatusVersionTargetArgs build() {
             return new InstanceGroupManagerStatusVersionTargetArgs(isReached);
         }

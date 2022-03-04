@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.outputs.OrcFormatResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParquetFormatResponse;
 import io.pulumi.azurenative.datafactory.outputs.TextFormatResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -137,98 +137,98 @@ public final class FileShareDatasetResponse {
     /**
      * List of tags that can be used for describing the Dataset.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The data compression method used for the file system.
      * 
-     */
+    */
     public Optional<DatasetCompressionResponse> getCompression() {
         return Optional.ofNullable(this.compression);
     }
     /**
      * Dataset description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Specify a filter to be used to select a subset of files in the folderPath rather than all files. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileFilter() {
         return Optional.ofNullable(this.fileFilter);
     }
     /**
      * The name of the on-premises file system. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-     */
+    */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * The path of the on-premises file system. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
      * The format of the files.
      * 
-     */
+    */
     public Optional<Object> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The end of file's modified datetime. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getModifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
     /**
      * The start of file's modified datetime. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getModifiedDatetimeStart() {
         return Optional.ofNullable(this.modifiedDatetimeStart);
     }
     /**
      * Parameters for dataset.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-     */
+    */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-     */
+    */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
     }
@@ -236,7 +236,7 @@ public final class FileShareDatasetResponse {
      * Type of dataset.
      * Expected value is 'FileShare'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -363,7 +363,6 @@ public final class FileShareDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FileShareDatasetResponse build() {
             return new FileShareDatasetResponse(annotations, compression, description, fileFilter, fileName, folder, folderPath, format, linkedServiceName, modifiedDatetimeEnd, modifiedDatetimeStart, parameters, schema, structure, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class SourceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceFiles", required=true)
-    private final List<Map<String,String>> sourceFiles;
+      private final List<Map<String,String>> sourceFiles;
 
     public List<Map<String,String>> getSourceFiles() {
         return this.sourceFiles;
@@ -61,7 +61,6 @@ public final class SourceInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceFiles = Objects.requireNonNull(sourceFiles);
             return this;
         }
-
         public SourceInfoResponse build() {
             return new SourceInfoResponse(sourceFiles);
         }

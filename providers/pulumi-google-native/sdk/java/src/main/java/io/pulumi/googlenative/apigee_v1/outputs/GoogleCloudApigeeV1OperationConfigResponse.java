@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1OperationResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1QuotaResponse;
@@ -49,28 +49,28 @@ public final class GoogleCloudApigeeV1OperationConfigResponse {
     /**
      * Name of the API proxy or remote service with which the resources, methods, and quota are associated.
      * 
-     */
+    */
     public String getApiSource() {
         return this.apiSource;
     }
     /**
      * Custom attributes associated with the operation.
      * 
-     */
+    */
     public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
         return this.attributes;
     }
     /**
      * List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
      * 
-     */
+    */
     public List<GoogleCloudApigeeV1OperationResponse> getOperations() {
         return this.operations;
     }
     /**
      * Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
      * 
-     */
+    */
     public GoogleCloudApigeeV1QuotaResponse getQuota() {
         return this.quota;
     }
@@ -120,7 +120,6 @@ public final class GoogleCloudApigeeV1OperationConfigResponse {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
-
         public GoogleCloudApigeeV1OperationConfigResponse build() {
             return new GoogleCloudApigeeV1OperationConfigResponse(apiSource, attributes, operations, quota);
         }

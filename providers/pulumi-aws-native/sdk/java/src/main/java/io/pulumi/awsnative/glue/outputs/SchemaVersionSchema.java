@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.glue.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class SchemaVersionSchema {
     /**
      * Name of the registry to identify where the Schema is located.
      * 
-     */
+    */
     public Optional<String> getRegistryName() {
         return Optional.ofNullable(this.registryName);
     }
     /**
      * Amazon Resource Name for the Schema. This attribute can be used to uniquely represent the Schema.
      * 
-     */
+    */
     public Optional<String> getSchemaArn() {
         return Optional.ofNullable(this.schemaArn);
     }
     /**
      * Name of the schema. This parameter requires RegistryName to be provided.
      * 
-     */
+    */
     public Optional<String> getSchemaName() {
         return Optional.ofNullable(this.schemaName);
     }
@@ -97,7 +97,6 @@ public final class SchemaVersionSchema {
             this.schemaName = schemaName;
             return this;
         }
-
         public SchemaVersionSchema build() {
             return new SchemaVersionSchema(registryName, schemaArn, schemaName);
         }

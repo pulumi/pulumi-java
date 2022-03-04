@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.TIDataConnectorDataTypesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,21 +77,21 @@ public final class GetTIDataConnectorResult {
     /**
      * The available data types for the connector.
      * 
-     */
+    */
     public Optional<TIDataConnectorDataTypesResponse> getDataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -99,35 +99,35 @@ public final class GetTIDataConnectorResult {
      * The kind of the data connector
      * Expected value is 'ThreatIntelligence'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The tenant id to connect to, and get the data from.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The lookback period for the feed to be imported.
      * 
-     */
+    */
     public Optional<String> getTipLookbackPeriod() {
         return Optional.ofNullable(this.tipLookbackPeriod);
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -205,7 +205,6 @@ public final class GetTIDataConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTIDataConnectorResult build() {
             return new GetTIDataConnectorResult(dataTypes, etag, id, kind, name, tenantId, tipLookbackPeriod, type);
         }

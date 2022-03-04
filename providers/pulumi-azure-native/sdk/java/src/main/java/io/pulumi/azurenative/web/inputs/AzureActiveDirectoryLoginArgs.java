@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disableWWWAuthenticate")
-    private final @Nullable Input<Boolean> disableWWWAuthenticate;
+      private final @Nullable Input<Boolean> disableWWWAuthenticate;
 
     public Input<Boolean> getDisableWWWAuthenticate() {
         return this.disableWWWAuthenticate == null ? Input.empty() : this.disableWWWAuthenticate;
@@ -37,7 +37,7 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loginParameters")
-    private final @Nullable Input<List<String>> loginParameters;
+      private final @Nullable Input<List<String>> loginParameters;
 
     public Input<List<String>> getLoginParameters() {
         return this.loginParameters == null ? Input.empty() : this.loginParameters;
@@ -96,7 +96,6 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
             this.loginParameters = Input.ofNullable(loginParameters);
             return this;
         }
-
         public AzureActiveDirectoryLoginArgs build() {
             return new AzureActiveDirectoryLoginArgs(disableWWWAuthenticate, loginParameters);
         }

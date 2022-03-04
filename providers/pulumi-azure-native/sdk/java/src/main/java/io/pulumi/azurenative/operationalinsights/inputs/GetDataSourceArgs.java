@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataSourceName", required=true)
-    private final String dataSourceName;
+      private final String dataSourceName;
 
     public String getDataSourceName() {
         return this.dataSourceName;
@@ -28,7 +28,7 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -98,7 +98,6 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetDataSourceArgs build() {
             return new GetDataSourceArgs(dataSourceName, resourceGroupName, workspaceName);
         }

@@ -9,8 +9,8 @@ import io.pulumi.azurenative.sqlvirtualmachine.outputs.WsfcDomainProfileResponse
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -188,6 +188,37 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
         return this.wsfcDomainProfile;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SqlVirtualMachineGroupArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.sqlvirtualmachine.SqlVirtualMachineGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.sqlvirtualmachine.SqlVirtualMachineGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SqlVirtualMachineGroup(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SqlVirtualMachineGroup(String name) {
+        this(name, SqlVirtualMachineGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SqlVirtualMachineGroup(String name, SqlVirtualMachineGroupArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
     /**
      * Authentication Parameter value.
      * 
-     */
+    */
     public String getParameter() {
         return this.parameter;
     }
     /**
      * Authentication Scheme name.
      * 
-     */
+    */
     public String getScheme() {
         return this.scheme;
     }
@@ -74,7 +74,6 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
-
         public BackendAuthorizationHeaderCredentialsResponse build() {
             return new BackendAuthorizationHeaderCredentialsResponse(parameter, scheme);
         }

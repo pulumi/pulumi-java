@@ -30,7 +30,6 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
         public Builder(SqlResourceSqlContainerArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public SqlResourceSqlContainerArgs build() {
             return new SqlResourceSqlContainerArgs();
         }

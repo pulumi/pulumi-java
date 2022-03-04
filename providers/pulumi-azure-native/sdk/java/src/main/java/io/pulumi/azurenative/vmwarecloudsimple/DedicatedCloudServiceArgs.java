@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.vmwarecloudsimple;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dedicatedCloudServiceName")
-    private final @Nullable Input<String> dedicatedCloudServiceName;
+      private final @Nullable Input<String> dedicatedCloudServiceName;
 
     public Input<String> getDedicatedCloudServiceName() {
         return this.dedicatedCloudServiceName == null ? Input.empty() : this.dedicatedCloudServiceName;
@@ -31,7 +31,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="gatewaySubnet", required=true)
-    private final Input<String> gatewaySubnet;
+      private final Input<String> gatewaySubnet;
 
     public Input<String> getGatewaySubnet() {
         return this.gatewaySubnet;
@@ -42,7 +42,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -53,7 +53,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -168,7 +168,6 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DedicatedCloudServiceArgs build() {
             return new DedicatedCloudServiceArgs(dedicatedCloudServiceName, gatewaySubnet, location, resourceGroupName, tags);
         }

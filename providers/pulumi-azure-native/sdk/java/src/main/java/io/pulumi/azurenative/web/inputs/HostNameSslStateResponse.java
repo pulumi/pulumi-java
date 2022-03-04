@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="hostType")
-    private final @Nullable String hostType;
+      private final @Nullable String hostType;
 
     public Optional<String> getHostType() {
         return this.hostType == null ? Optional.empty() : Optional.ofNullable(this.hostType);
@@ -35,7 +35,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -46,7 +46,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sslState")
-    private final @Nullable String sslState;
+      private final @Nullable String sslState;
 
     public Optional<String> getSslState() {
         return this.sslState == null ? Optional.empty() : Optional.ofNullable(this.sslState);
@@ -57,7 +57,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable String thumbprint;
+      private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
@@ -68,7 +68,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="toUpdate")
-    private final @Nullable Boolean toUpdate;
+      private final @Nullable Boolean toUpdate;
 
     public Optional<Boolean> getToUpdate() {
         return this.toUpdate == null ? Optional.empty() : Optional.ofNullable(this.toUpdate);
@@ -79,7 +79,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="virtualIP")
-    private final @Nullable String virtualIP;
+      private final @Nullable String virtualIP;
 
     public Optional<String> getVirtualIP() {
         return this.virtualIP == null ? Optional.empty() : Optional.ofNullable(this.virtualIP);
@@ -168,7 +168,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
             this.virtualIP = virtualIP;
             return this;
         }
-
         public HostNameSslStateResponse build() {
             return new HostNameSslStateResponse(hostType, name, sslState, thumbprint, toUpdate, virtualIP);
         }

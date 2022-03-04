@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup.inputs;
 import io.pulumi.awsnative.backup.inputs.BackupPlanAdvancedBackupSettingResourceTypeArgs;
 import io.pulumi.awsnative.backup.inputs.BackupPlanBackupRuleResourceTypeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,21 +18,21 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
     public static final BackupPlanResourceTypeArgs Empty = new BackupPlanResourceTypeArgs();
 
     @InputImport(name="advancedBackupSettings")
-    private final @Nullable Input<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
+      private final @Nullable Input<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
 
     public Input<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> getAdvancedBackupSettings() {
         return this.advancedBackupSettings == null ? Input.empty() : this.advancedBackupSettings;
     }
 
     @InputImport(name="backupPlanName", required=true)
-    private final Input<String> backupPlanName;
+      private final Input<String> backupPlanName;
 
     public Input<String> getBackupPlanName() {
         return this.backupPlanName;
     }
 
     @InputImport(name="backupPlanRule", required=true)
-    private final Input<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
+      private final Input<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
 
     public Input<List<BackupPlanBackupRuleResourceTypeArgs>> getBackupPlanRule() {
         return this.backupPlanRule;
@@ -106,7 +106,6 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
             this.backupPlanRule = Input.of(Objects.requireNonNull(backupPlanRule));
             return this;
         }
-
         public BackupPlanResourceTypeArgs build() {
             return new BackupPlanResourceTypeArgs(advancedBackupSettings, backupPlanName, backupPlanRule);
         }

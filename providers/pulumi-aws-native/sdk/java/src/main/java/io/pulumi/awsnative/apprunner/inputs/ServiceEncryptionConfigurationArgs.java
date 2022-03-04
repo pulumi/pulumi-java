@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ServiceEncryptionConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kmsKey", required=true)
-    private final Input<String> kmsKey;
+      private final Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey;
@@ -65,7 +65,6 @@ public final class ServiceEncryptionConfigurationArgs extends io.pulumi.resource
             this.kmsKey = Input.of(Objects.requireNonNull(kmsKey));
             return this;
         }
-
         public ServiceEncryptionConfigurationArgs build() {
             return new ServiceEncryptionConfigurationArgs(kmsKey);
         }

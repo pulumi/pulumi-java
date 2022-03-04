@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FirewallPolicyLogAnalyticsWorkspaceResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse {
     /**
      * The default workspace Id for Firewall Policy Insights.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getDefaultWorkspaceId() {
         return Optional.ofNullable(this.defaultWorkspaceId);
     }
     /**
      * List of workspaces for Firewall Policy Insights.
      * 
-     */
+    */
     public List<FirewallPolicyLogAnalyticsWorkspaceResponse> getWorkspaces() {
         return this.workspaces == null ? List.of() : this.workspaces;
     }
@@ -78,7 +78,6 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse {
             this.workspaces = workspaces;
             return this;
         }
-
         public FirewallPolicyLogAnalyticsResourcesResponse build() {
             return new FirewallPolicyLogAnalyticsResourcesResponse(defaultWorkspaceId, workspaces);
         }

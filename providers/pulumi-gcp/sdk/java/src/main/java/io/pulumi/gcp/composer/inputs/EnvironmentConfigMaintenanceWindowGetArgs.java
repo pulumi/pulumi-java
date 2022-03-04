@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,21 +14,21 @@ public final class EnvironmentConfigMaintenanceWindowGetArgs extends io.pulumi.r
     public static final EnvironmentConfigMaintenanceWindowGetArgs Empty = new EnvironmentConfigMaintenanceWindowGetArgs();
 
     @InputImport(name="endTime", required=true)
-    private final Input<String> endTime;
+      private final Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime;
     }
 
     @InputImport(name="recurrence", required=true)
-    private final Input<String> recurrence;
+      private final Input<String> recurrence;
 
     public Input<String> getRecurrence() {
         return this.recurrence;
     }
 
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -102,7 +102,6 @@ public final class EnvironmentConfigMaintenanceWindowGetArgs extends io.pulumi.r
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public EnvironmentConfigMaintenanceWindowGetArgs build() {
             return new EnvironmentConfigMaintenanceWindowGetArgs(endTime, recurrence, startTime);
         }

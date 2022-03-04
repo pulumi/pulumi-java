@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class StorageAccountKeyResponse {
     /**
      * Creation time of the key, in round trip date format.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Name of the key.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * Permissions for the key -- read-only or full permissions.
      * 
-     */
+    */
     public String getPermissions() {
         return this.permissions;
     }
     /**
      * Base 64-encoded value of the key.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -116,7 +116,6 @@ public final class StorageAccountKeyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StorageAccountKeyResponse build() {
             return new StorageAccountKeyResponse(creationTime, keyName, permissions, value);
         }

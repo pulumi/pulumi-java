@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ComputeInstanceCreatedByResponse {
     /**
      * Uniquely identifies the user within his/her organization.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
     /**
      * Name of the user.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
     /**
      * Uniquely identifies user' Azure Active Directory organization.
      * 
-     */
+    */
     public String getUserOrgId() {
         return this.userOrgId;
     }
@@ -95,7 +95,6 @@ public final class ComputeInstanceCreatedByResponse {
             this.userOrgId = Objects.requireNonNull(userOrgId);
             return this;
         }
-
         public ComputeInstanceCreatedByResponse build() {
             return new ComputeInstanceCreatedByResponse(userId, userName, userOrgId);
         }

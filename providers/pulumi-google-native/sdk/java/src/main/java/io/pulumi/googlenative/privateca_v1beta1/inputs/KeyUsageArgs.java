@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ExtendedKeyUsageOptionsArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.KeyUsageOptionsArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ObjectIdArgs;
@@ -26,7 +26,7 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseKeyUsage")
-    private final @Nullable Input<KeyUsageOptionsArgs> baseKeyUsage;
+      private final @Nullable Input<KeyUsageOptionsArgs> baseKeyUsage;
 
     public Input<KeyUsageOptionsArgs> getBaseKeyUsage() {
         return this.baseKeyUsage == null ? Input.empty() : this.baseKeyUsage;
@@ -37,7 +37,7 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedKeyUsage")
-    private final @Nullable Input<ExtendedKeyUsageOptionsArgs> extendedKeyUsage;
+      private final @Nullable Input<ExtendedKeyUsageOptionsArgs> extendedKeyUsage;
 
     public Input<ExtendedKeyUsageOptionsArgs> getExtendedKeyUsage() {
         return this.extendedKeyUsage == null ? Input.empty() : this.extendedKeyUsage;
@@ -48,7 +48,7 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unknownExtendedKeyUsages")
-    private final @Nullable Input<List<ObjectIdArgs>> unknownExtendedKeyUsages;
+      private final @Nullable Input<List<ObjectIdArgs>> unknownExtendedKeyUsages;
 
     public Input<List<ObjectIdArgs>> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? Input.empty() : this.unknownExtendedKeyUsages;
@@ -122,7 +122,6 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
             this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-
         public KeyUsageArgs build() {
             return new KeyUsageArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

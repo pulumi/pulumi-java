@@ -30,7 +30,6 @@ public final class ComponentBindingProperties extends io.pulumi.resources.Invoke
         public Builder(ComponentBindingProperties defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ComponentBindingProperties build() {
             return new ComponentBindingProperties();
         }

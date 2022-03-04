@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
      * 
      */
     @InputImport(name="operations")
-    private final @Nullable Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationGetArgs>> operations;
+      private final @Nullable Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationGetArgs>> operations;
 
     public Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationGetArgs>> getOperations() {
         return this.operations == null ? Input.empty() : this.operations;
@@ -38,7 +38,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<String>> resources;
+      private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -97,7 +97,6 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
             this.resources = Input.ofNullable(resources);
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusIngressPolicyIngressToGetArgs build() {
             return new ServicePerimetersServicePerimeterStatusIngressPolicyIngressToGetArgs(operations, resources);
         }

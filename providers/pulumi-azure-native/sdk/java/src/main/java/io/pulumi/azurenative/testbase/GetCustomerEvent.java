@@ -6,21 +6,41 @@ package io.pulumi.azurenative.testbase;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.testbase.inputs.GetCustomerEventArgs;
 import io.pulumi.azurenative.testbase.outputs.GetCustomerEventResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomerEvent {
-/**
- * The Customer Notification Event resource.
+    private GetCustomerEvent() {}
+    public interface BuilderApplicator {
+        public void apply(GetCustomerEventArgs.Builder a);
+    }
+    private static GetCustomerEventArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCustomerEventArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Customer Notification Event resource.
  * API Version: 2020-12-16-preview.
  * 
- *
- * The Customer Notification Event resource.
+     *
+     * The Customer Notification Event resource.
  * 
- */
+     */
+    public static CompletableFuture<GetCustomerEventResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Customer Notification Event resource.
+     * API Version: 2020-12-16-preview.
+     * 
+     *
+         * The Customer Notification Event resource.
+     * 
+     */
     public static CompletableFuture<GetCustomerEventResult> invokeAsync(GetCustomerEventArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getCustomerEvent", TypeShape.of(GetCustomerEventResult.class), args == null ? GetCustomerEventArgs.Empty : args, Utilities.withVersion(options));
     }

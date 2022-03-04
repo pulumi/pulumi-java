@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,7 +37,7 @@ public final class SnapshotSourceDiskEncryptionKey {
      * The service account used for the encryption request for the given KMS key.
      * If absent, the Compute Engine Service Agent service account is used.
      * 
-     */
+    */
     public Optional<String> getKmsKeyServiceAccount() {
         return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
@@ -46,7 +46,7 @@ public final class SnapshotSourceDiskEncryptionKey {
      * RFC 4648 base64 to either encrypt or decrypt this resource.
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public Optional<String> getRawKey() {
         return Optional.ofNullable(this.rawKey);
     }
@@ -82,7 +82,6 @@ public final class SnapshotSourceDiskEncryptionKey {
             this.rawKey = rawKey;
             return this;
         }
-
         public SnapshotSourceDiskEncryptionKey build() {
             return new SnapshotSourceDiskEncryptionKey(kmsKeyServiceAccount, rawKey);
         }

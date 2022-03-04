@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.CloudServiceExtensionProfileResponse
 import io.pulumi.azurenative.compute.inputs.CloudServiceNetworkProfileResponse;
 import io.pulumi.azurenative.compute.inputs.CloudServiceOsProfileResponse;
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleProfileResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allowModelOverride")
-    private final @Nullable Boolean allowModelOverride;
+      private final @Nullable Boolean allowModelOverride;
 
     public Optional<Boolean> getAllowModelOverride() {
         return this.allowModelOverride == null ? Optional.empty() : Optional.ofNullable(this.allowModelOverride);
@@ -40,7 +40,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable String configuration;
+      private final @Nullable String configuration;
 
     public Optional<String> getConfiguration() {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
@@ -52,7 +52,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="configurationUrl")
-    private final @Nullable String configurationUrl;
+      private final @Nullable String configurationUrl;
 
     public Optional<String> getConfigurationUrl() {
         return this.configurationUrl == null ? Optional.empty() : Optional.ofNullable(this.configurationUrl);
@@ -63,7 +63,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="extensionProfile")
-    private final @Nullable CloudServiceExtensionProfileResponse extensionProfile;
+      private final @Nullable CloudServiceExtensionProfileResponse extensionProfile;
 
     public Optional<CloudServiceExtensionProfileResponse> getExtensionProfile() {
         return this.extensionProfile == null ? Optional.empty() : Optional.ofNullable(this.extensionProfile);
@@ -74,7 +74,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="networkProfile")
-    private final @Nullable CloudServiceNetworkProfileResponse networkProfile;
+      private final @Nullable CloudServiceNetworkProfileResponse networkProfile;
 
     public Optional<CloudServiceNetworkProfileResponse> getNetworkProfile() {
         return this.networkProfile == null ? Optional.empty() : Optional.ofNullable(this.networkProfile);
@@ -85,7 +85,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="osProfile")
-    private final @Nullable CloudServiceOsProfileResponse osProfile;
+      private final @Nullable CloudServiceOsProfileResponse osProfile;
 
     public Optional<CloudServiceOsProfileResponse> getOsProfile() {
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
@@ -97,7 +97,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="packageUrl")
-    private final @Nullable String packageUrl;
+      private final @Nullable String packageUrl;
 
     public Optional<String> getPackageUrl() {
         return this.packageUrl == null ? Optional.empty() : Optional.ofNullable(this.packageUrl);
@@ -108,7 +108,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -119,7 +119,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="roleProfile")
-    private final @Nullable CloudServiceRoleProfileResponse roleProfile;
+      private final @Nullable CloudServiceRoleProfileResponse roleProfile;
 
     public Optional<CloudServiceRoleProfileResponse> getRoleProfile() {
         return this.roleProfile == null ? Optional.empty() : Optional.ofNullable(this.roleProfile);
@@ -131,7 +131,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="startCloudService")
-    private final @Nullable Boolean startCloudService;
+      private final @Nullable Boolean startCloudService;
 
     public Optional<Boolean> getStartCloudService() {
         return this.startCloudService == null ? Optional.empty() : Optional.ofNullable(this.startCloudService);
@@ -142,7 +142,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="uniqueId", required=true)
-    private final String uniqueId;
+      private final String uniqueId;
 
     public String getUniqueId() {
         return this.uniqueId;
@@ -155,7 +155,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="upgradeMode")
-    private final @Nullable String upgradeMode;
+      private final @Nullable String upgradeMode;
 
     public Optional<String> getUpgradeMode() {
         return this.upgradeMode == null ? Optional.empty() : Optional.ofNullable(this.upgradeMode);
@@ -304,7 +304,6 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
             this.upgradeMode = upgradeMode;
             return this;
         }
-
         public CloudServicePropertiesResponse build() {
             return new CloudServicePropertiesResponse(allowModelOverride, configuration, configurationUrl, extensionProfile, networkProfile, osProfile, packageUrl, provisioningState, roleProfile, startCloudService, uniqueId, upgradeMode);
         }

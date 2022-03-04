@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class TlsCertificateResponse {
     /**
      * PEM representation.
      * 
-     */
+    */
     public String getCert() {
         return this.cert;
     }
     /**
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
      * 
-     */
+    */
     public String getExpireTime() {
         return this.expireTime;
     }
     /**
      * Serial number, as extracted from the certificate.
      * 
-     */
+    */
     public String getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * Sha1 Fingerprint of the certificate.
      * 
-     */
+    */
     public String getSha1Fingerprint() {
         return this.sha1Fingerprint;
     }
@@ -137,7 +137,6 @@ public final class TlsCertificateResponse {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public TlsCertificateResponse build() {
             return new TlsCertificateResponse(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
         }

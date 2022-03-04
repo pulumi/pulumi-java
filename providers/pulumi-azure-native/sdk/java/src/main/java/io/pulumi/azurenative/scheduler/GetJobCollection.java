@@ -6,17 +6,33 @@ package io.pulumi.azurenative.scheduler;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.scheduler.inputs.GetJobCollectionArgs;
 import io.pulumi.azurenative.scheduler.outputs.GetJobCollectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobCollection {
-/**
- * API Version: 2016-03-01.
+    private GetJobCollection() {}
+    public interface BuilderApplicator {
+        public void apply(GetJobCollectionArgs.Builder a);
+    }
+    private static GetJobCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJobCollectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2016-03-01.
  * 
- */
+     */
+    public static CompletableFuture<GetJobCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2016-03-01.
+     * 
+     */
     public static CompletableFuture<GetJobCollectionResult> invokeAsync(GetJobCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:scheduler:getJobCollection", TypeShape.of(GetJobCollectionResult.class), args == null ? GetJobCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

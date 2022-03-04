@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="firstName")
-    private final @Nullable Input<String> firstName;
+      private final @Nullable Input<String> firstName;
 
     public Input<String> getFirstName() {
         return this.firstName == null ? Input.empty() : this.firstName;
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="lastName")
-    private final @Nullable Input<String> lastName;
+      private final @Nullable Input<String> lastName;
 
     public Input<String> getLastName() {
         return this.lastName == null ? Input.empty() : this.lastName;
@@ -56,7 +56,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="phone")
-    private final @Nullable Input<String> phone;
+      private final @Nullable Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone == null ? Input.empty() : this.phone;
@@ -67,7 +67,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -171,7 +171,6 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public GoogleCloudChannelV1ContactInfoArgs build() {
             return new GoogleCloudChannelV1ContactInfoArgs(email, firstName, lastName, phone, title);
         }

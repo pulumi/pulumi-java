@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SqlPartitionSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.StoredProcedureParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -115,84 +115,84 @@ public final class AzureSqlSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
-     */
+    */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
      * 
-     */
+    */
     public Optional<Object> getPartitionOption() {
         return Optional.ofNullable(this.partitionOption);
     }
     /**
      * The settings that will be leveraged for Sql source partitioning.
      * 
-     */
+    */
     public Optional<SqlPartitionSettingsResponse> getPartitionSettings() {
         return Optional.ofNullable(this.partitionSettings);
     }
     /**
      * Which additional types to produce.
      * 
-     */
+    */
     public Optional<Object> getProduceAdditionalTypes() {
         return Optional.ofNullable(this.produceAdditionalTypes);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
      * SQL reader query. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getSqlReaderQuery() {
         return Optional.ofNullable(this.sqlReaderQuery);
     }
     /**
      * Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getSqlReaderStoredProcedureName() {
         return Optional.ofNullable(this.sqlReaderStoredProcedureName);
     }
     /**
      * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
      * 
-     */
+    */
     public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
     }
@@ -200,7 +200,7 @@ public final class AzureSqlSourceResponse {
      * Copy source type.
      * Expected value is 'AzureSqlSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -313,7 +313,6 @@ public final class AzureSqlSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureSqlSourceResponse build() {
             return new AzureSqlSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, produceAdditionalTypes, queryTimeout, sourceRetryCount, sourceRetryWait, sqlReaderQuery, sqlReaderStoredProcedureName, storedProcedureParameters, type);
         }

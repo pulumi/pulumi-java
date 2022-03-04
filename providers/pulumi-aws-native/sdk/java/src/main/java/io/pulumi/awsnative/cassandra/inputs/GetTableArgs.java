@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cassandra.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyspaceName", required=true)
-    private final String keyspaceName;
+      private final String keyspaceName;
 
     public String getKeyspaceName() {
         return this.keyspaceName;
@@ -28,7 +28,7 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -77,7 +77,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public GetTableArgs build() {
             return new GetTableArgs(keyspaceName, tableName);
         }

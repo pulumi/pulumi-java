@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage;
@@ -43,21 +43,21 @@ public final class CertificateTemplatePredefinedValuesKeyUsage {
     /**
      * Describes high-level ways in which a key may be used.
      * 
-     */
+    */
     public Optional<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage> getBaseKeyUsage() {
         return Optional.ofNullable(this.baseKeyUsage);
     }
     /**
      * Detailed scenarios in which a key may be used.
      * 
-     */
+    */
     public Optional<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage> getExtendedKeyUsage() {
         return Optional.ofNullable(this.extendedKeyUsage);
     }
     /**
      * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
      * 
-     */
+    */
     public List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }
@@ -100,7 +100,6 @@ public final class CertificateTemplatePredefinedValuesKeyUsage {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public CertificateTemplatePredefinedValuesKeyUsage build() {
             return new CertificateTemplatePredefinedValuesKeyUsage(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

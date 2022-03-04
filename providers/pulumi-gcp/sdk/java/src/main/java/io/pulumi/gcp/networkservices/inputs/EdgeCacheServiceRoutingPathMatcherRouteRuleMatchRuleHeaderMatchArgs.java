@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @InputImport(name="exactMatch")
-    private final @Nullable Input<String> exactMatch;
+      private final @Nullable Input<String> exactMatch;
 
     public Input<String> getExactMatch() {
         return this.exactMatch == null ? Input.empty() : this.exactMatch;
@@ -32,7 +32,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final Input<String> headerName;
+      private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
@@ -44,7 +44,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @InputImport(name="invertMatch")
-    private final @Nullable Input<Boolean> invertMatch;
+      private final @Nullable Input<Boolean> invertMatch;
 
     public Input<Boolean> getInvertMatch() {
         return this.invertMatch == null ? Input.empty() : this.invertMatch;
@@ -55,7 +55,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @InputImport(name="prefixMatch")
-    private final @Nullable Input<String> prefixMatch;
+      private final @Nullable Input<String> prefixMatch;
 
     public Input<String> getPrefixMatch() {
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
@@ -66,7 +66,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @InputImport(name="presentMatch")
-    private final @Nullable Input<Boolean> presentMatch;
+      private final @Nullable Input<Boolean> presentMatch;
 
     public Input<Boolean> getPresentMatch() {
         return this.presentMatch == null ? Input.empty() : this.presentMatch;
@@ -77,7 +77,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @InputImport(name="suffixMatch")
-    private final @Nullable Input<String> suffixMatch;
+      private final @Nullable Input<String> suffixMatch;
 
     public Input<String> getSuffixMatch() {
         return this.suffixMatch == null ? Input.empty() : this.suffixMatch;
@@ -196,7 +196,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
             this.suffixMatch = Input.ofNullable(suffixMatch);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchArgs(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, suffixMatch);
         }

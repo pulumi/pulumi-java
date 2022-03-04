@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class TelemetryResponse {
     /**
      * The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.
      * 
-     */
+    */
     public String getPropResourceName() {
         return this.resourceName;
     }
@@ -52,7 +52,6 @@ public final class TelemetryResponse {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public TelemetryResponse build() {
             return new TelemetryResponse(resourceName);
         }

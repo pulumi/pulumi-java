@@ -6,17 +6,33 @@ package io.pulumi.awsnative.lookoutmetrics;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lookoutmetrics.inputs.GetAnomalyDetectorArgs;
 import io.pulumi.awsnative.lookoutmetrics.outputs.GetAnomalyDetectorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnomalyDetector {
-/**
- * An Amazon Lookout for Metrics Detector
+    private GetAnomalyDetector() {}
+    public interface BuilderApplicator {
+        public void apply(GetAnomalyDetectorArgs.Builder a);
+    }
+    private static GetAnomalyDetectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAnomalyDetectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Amazon Lookout for Metrics Detector
  * 
- */
+     */
+    public static CompletableFuture<GetAnomalyDetectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Amazon Lookout for Metrics Detector
+     * 
+     */
     public static CompletableFuture<GetAnomalyDetectorResult> invokeAsync(GetAnomalyDetectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lookoutmetrics:getAnomalyDetector", TypeShape.of(GetAnomalyDetectorResult.class), args == null ? GetAnomalyDetectorArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class DeliveryStreamCopyCommand {
             this.dataTableName = Objects.requireNonNull(dataTableName);
             return this;
         }
-
         public DeliveryStreamCopyCommand build() {
             return new DeliveryStreamCopyCommand(copyOptions, dataTableColumns, dataTableName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderAction;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,7 +54,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * forwarding the request to backendService, the loadbalancer applies any relevant
      * headerActions specified as part of this backendServiceWeight.
      * 
-     */
+    */
     public String getBackendService() {
         return this.backendService;
     }
@@ -64,7 +64,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderAction> getHeaderAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -76,7 +76,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * backendService as determined by the BackendService's session affinity policy.
      * The value must be between 0 and 1000
      * 
-     */
+    */
     public Integer getWeight() {
         return this.weight;
     }
@@ -119,7 +119,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService(backendService, headerAction, weight);
         }

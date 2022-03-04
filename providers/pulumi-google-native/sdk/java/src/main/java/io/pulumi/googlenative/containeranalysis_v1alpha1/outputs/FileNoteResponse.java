@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class FileNoteResponse {
     /**
      * Provide a unique identifier to match analysis information on each specific file in a package
      * 
-     */
+    */
     public List<String> getChecksum() {
         return this.checksum;
     }
     /**
      * This field provides information about the type of file identified
      * 
-     */
+    */
     public String getFileType() {
         return this.fileType;
     }
     /**
      * Identify the full path and filename that corresponds to the file information in this section
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -96,7 +96,6 @@ public final class FileNoteResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public FileNoteResponse build() {
             return new FileNoteResponse(checksum, fileType, title);
         }

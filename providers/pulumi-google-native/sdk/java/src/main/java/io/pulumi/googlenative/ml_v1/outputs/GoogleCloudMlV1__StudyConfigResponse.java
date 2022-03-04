@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_StudyConfig_MetricSpecResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_StudyConfig_ParameterSpecResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__AutomatedStoppingConfigResponse;
@@ -49,28 +49,28 @@ public final class GoogleCloudMlV1__StudyConfigResponse {
     /**
      * The search algorithm specified for the study.
      * 
-     */
+    */
     public String getAlgorithm() {
         return this.algorithm;
     }
     /**
      * Configuration for automated stopping of unpromising Trials.
      * 
-     */
+    */
     public GoogleCloudMlV1__AutomatedStoppingConfigResponse getAutomatedStoppingConfig() {
         return this.automatedStoppingConfig;
     }
     /**
      * Metric specs for the study.
      * 
-     */
+    */
     public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> getMetrics() {
         return this.metrics;
     }
     /**
      * The set of parameters to tune.
      * 
-     */
+    */
     public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> getParameters() {
         return this.parameters;
     }
@@ -120,7 +120,6 @@ public final class GoogleCloudMlV1__StudyConfigResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public GoogleCloudMlV1__StudyConfigResponse build() {
             return new GoogleCloudMlV1__StudyConfigResponse(algorithm, automatedStoppingConfig, metrics, parameters);
         }

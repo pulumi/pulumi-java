@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.BuildSignatureResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class BuildTypeResponse {
     /**
      * Version of the builder which produced this Note.
      * 
-     */
+    */
     public String getBuilderVersion() {
         return this.builderVersion;
     }
     /**
      * Signature of the build in Occurrences pointing to the Note containing this `BuilderDetails`.
      * 
-     */
+    */
     public BuildSignatureResponse getSignature() {
         return this.signature;
     }
@@ -75,7 +75,6 @@ public final class BuildTypeResponse {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public BuildTypeResponse build() {
             return new BuildTypeResponse(builderVersion, signature);
         }

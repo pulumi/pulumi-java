@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class IdentityProviderDetailsResponse {
     /**
      * The base authority for Azure Active Directory authentication.
      * 
-     */
+    */
     public Optional<String> getAadAuthority() {
         return Optional.ofNullable(this.aadAuthority);
     }
     /**
      * The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-     */
+    */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-     */
+    */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -139,7 +139,6 @@ public final class IdentityProviderDetailsResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public IdentityProviderDetailsResponse build() {
             return new IdentityProviderDetailsResponse(aadAuthority, applicationId, audience, objectId, tenantId);
         }

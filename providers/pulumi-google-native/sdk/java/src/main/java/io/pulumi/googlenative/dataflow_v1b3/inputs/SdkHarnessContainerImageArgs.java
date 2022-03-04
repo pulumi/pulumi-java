@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="containerImage")
-    private final @Nullable Input<String> containerImage;
+      private final @Nullable Input<String> containerImage;
 
     public Input<String> getContainerImage() {
         return this.containerImage == null ? Input.empty() : this.containerImage;
@@ -35,7 +35,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable Input<String> environmentId;
+      private final @Nullable Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId == null ? Input.empty() : this.environmentId;
@@ -46,7 +46,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="useSingleCorePerContainer")
-    private final @Nullable Input<Boolean> useSingleCorePerContainer;
+      private final @Nullable Input<Boolean> useSingleCorePerContainer;
 
     public Input<Boolean> getUseSingleCorePerContainer() {
         return this.useSingleCorePerContainer == null ? Input.empty() : this.useSingleCorePerContainer;
@@ -120,7 +120,6 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
             this.useSingleCorePerContainer = Input.ofNullable(useSingleCorePerContainer);
             return this;
         }
-
         public SdkHarnessContainerImageArgs build() {
             return new SdkHarnessContainerImageArgs(containerImage, environmentId, useSingleCorePerContainer);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class OpenIdConnectClientCredentialResponse {
     /**
      * The app setting that contains the client secret for the custom Open ID Connect provider.
      * 
-     */
+    */
     public Optional<String> getClientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }
     /**
      * The method that should be used to authenticate the user.
      * 
-     */
+    */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
@@ -76,7 +76,6 @@ public final class OpenIdConnectClientCredentialResponse {
             this.method = method;
             return this;
         }
-
         public OpenIdConnectClientCredentialResponse build() {
             return new OpenIdConnectClientCredentialResponse(clientSecretSettingName, method);
         }

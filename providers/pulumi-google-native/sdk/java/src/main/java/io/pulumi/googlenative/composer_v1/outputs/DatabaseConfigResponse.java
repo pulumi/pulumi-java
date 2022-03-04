@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DatabaseConfigResponse {
     /**
      * Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.
      * 
-     */
+    */
     public String getMachineType() {
         return this.machineType;
     }
@@ -52,7 +52,6 @@ public final class DatabaseConfigResponse {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public DatabaseConfigResponse build() {
             return new DatabaseConfigResponse(machineType);
         }

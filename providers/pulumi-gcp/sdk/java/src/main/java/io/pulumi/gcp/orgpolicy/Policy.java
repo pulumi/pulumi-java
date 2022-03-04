@@ -5,8 +5,8 @@ package io.pulumi.gcp.orgpolicy;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.orgpolicy.PolicyArgs;
 import io.pulumi.gcp.orgpolicy.inputs.PolicyState;
@@ -81,6 +81,37 @@ public class Policy extends io.pulumi.resources.CustomResource {
         return this.spec;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.orgpolicy.PolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.orgpolicy.PolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Policy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Policy(String name) {
+        this(name, PolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Policy(String name, PolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

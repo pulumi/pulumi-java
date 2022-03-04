@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.HubRouteResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -84,63 +84,63 @@ public final class GetHubRouteTableResult {
     /**
      * List of all connections associated with this route table.
      * 
-     */
+    */
     public List<String> getAssociatedConnections() {
         return this.associatedConnections;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * List of labels associated with this route table.
      * 
-     */
+    */
     public List<String> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * List of all connections that advertise to this route table.
      * 
-     */
+    */
     public List<String> getPropagatingConnections() {
         return this.propagatingConnections;
     }
     /**
      * The provisioning state of the RouteTable resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * List of all routes.
      * 
-     */
+    */
     public List<HubRouteResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -225,7 +225,6 @@ public final class GetHubRouteTableResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHubRouteTableResult build() {
             return new GetHubRouteTableResult(associatedConnections, etag, id, labels, name, propagatingConnections, provisioningState, routes, type);
         }

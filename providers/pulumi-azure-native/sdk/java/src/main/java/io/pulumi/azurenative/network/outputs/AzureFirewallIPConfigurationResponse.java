@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,56 +76,56 @@ public final class AzureFirewallIPConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
      * 
-     */
+    */
     public String getPrivateIPAddress() {
         return this.privateIPAddress;
     }
     /**
      * The provisioning state of the Azure firewall IP configuration resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getPublicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
      * Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -203,7 +203,6 @@ public final class AzureFirewallIPConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureFirewallIPConfigurationResponse build() {
             return new AzureFirewallIPConfigurationResponse(etag, id, name, privateIPAddress, provisioningState, publicIPAddress, subnet, type);
         }

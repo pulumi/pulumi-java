@@ -10,7 +10,7 @@ import io.pulumi.azurenative.purview.outputs.AccountResponseSku;
 import io.pulumi.azurenative.purview.outputs.CloudConnectorsResponse;
 import io.pulumi.azurenative.purview.outputs.IdentityResponse;
 import io.pulumi.azurenative.purview.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -163,133 +163,133 @@ public final class GetAccountResult {
      * Cloud connectors.
      * External cloud identifier used as part of scanning configuration.
      * 
-     */
+    */
     public Optional<CloudConnectorsResponse> getCloudConnectors() {
         return Optional.ofNullable(this.cloudConnectors);
     }
     /**
      * Gets the time at which the entity was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Gets the creator of the entity.
      * 
-     */
+    */
     public String getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Gets the creators of the entity's object id.
      * 
-     */
+    */
     public String getCreatedByObjectId() {
         return this.createdByObjectId;
     }
     /**
      * The URIs that are the public endpoints of the account.
      * 
-     */
+    */
     public AccountPropertiesResponseEndpoints getEndpoints() {
         return this.endpoints;
     }
     /**
      * Gets or sets the friendly name.
      * 
-     */
+    */
     public String getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * Gets or sets the identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identity Info on the tracked resource
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Gets or sets the location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets or sets the managed resource group name
      * 
-     */
+    */
     public Optional<String> getManagedResourceGroupName() {
         return Optional.ofNullable(this.managedResourceGroupName);
     }
     /**
      * Gets the resource identifiers of the managed resources.
      * 
-     */
+    */
     public AccountPropertiesResponseManagedResources getManagedResources() {
         return this.managedResources;
     }
     /**
      * Gets or sets the name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the private endpoint connections information.
      * 
-     */
+    */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Gets or sets the state of the provisioning.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the public network access.
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Gets or sets the Sku.
      * 
-     */
+    */
     public AccountResponseSku getSku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public AccountPropertiesResponseSystemData getSystemData() {
         return this.systemData;
     }
     /**
      * Tags on the azure resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets or sets the type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -444,7 +444,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(cloudConnectors, createdAt, createdBy, createdByObjectId, endpoints, friendlyName, id, identity, location, managedResourceGroupName, managedResources, name, privateEndpointConnections, provisioningState, publicNetworkAccess, sku, systemData, tags, type);
         }

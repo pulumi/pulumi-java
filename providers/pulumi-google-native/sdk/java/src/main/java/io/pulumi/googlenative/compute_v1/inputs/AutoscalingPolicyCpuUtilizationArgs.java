@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.AutoscalingPolicyCpuUtilizationPredictiveMethod;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="predictiveMethod")
-    private final @Nullable Input<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
+      private final @Nullable Input<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
 
     public Input<AutoscalingPolicyCpuUtilizationPredictiveMethod> getPredictiveMethod() {
         return this.predictiveMethod == null ? Input.empty() : this.predictiveMethod;
@@ -35,7 +35,7 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="utilizationTarget")
-    private final @Nullable Input<Double> utilizationTarget;
+      private final @Nullable Input<Double> utilizationTarget;
 
     public Input<Double> getUtilizationTarget() {
         return this.utilizationTarget == null ? Input.empty() : this.utilizationTarget;
@@ -94,7 +94,6 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
             this.utilizationTarget = Input.ofNullable(utilizationTarget);
             return this;
         }
-
         public AutoscalingPolicyCpuUtilizationArgs build() {
             return new AutoscalingPolicyCpuUtilizationArgs(predictiveMethod, utilizationTarget);
         }

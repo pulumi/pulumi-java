@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.IntentDefaultResponsePlatformsItem;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.IntentWebhookState;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1ContextArgs;
@@ -28,7 +28,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -39,7 +39,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultResponsePlatforms")
-    private final @Nullable Input<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms;
+      private final @Nullable Input<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms;
 
     public Input<List<IntentDefaultResponsePlatformsItem>> getDefaultResponsePlatforms() {
         return this.defaultResponsePlatforms == null ? Input.empty() : this.defaultResponsePlatforms;
@@ -50,7 +50,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -61,7 +61,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endInteraction")
-    private final @Nullable Input<Boolean> endInteraction;
+      private final @Nullable Input<Boolean> endInteraction;
 
     public Input<Boolean> getEndInteraction() {
         return this.endInteraction == null ? Input.empty() : this.endInteraction;
@@ -72,7 +72,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="events")
-    private final @Nullable Input<List<String>> events;
+      private final @Nullable Input<List<String>> events;
 
     public Input<List<String>> getEvents() {
         return this.events == null ? Input.empty() : this.events;
@@ -83,14 +83,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputContextNames")
-    private final @Nullable Input<List<String>> inputContextNames;
+      private final @Nullable Input<List<String>> inputContextNames;
 
     public Input<List<String>> getInputContextNames() {
         return this.inputContextNames == null ? Input.empty() : this.inputContextNames;
     }
 
     @InputImport(name="intentView")
-    private final @Nullable Input<String> intentView;
+      private final @Nullable Input<String> intentView;
 
     public Input<String> getIntentView() {
         return this.intentView == null ? Input.empty() : this.intentView;
@@ -101,14 +101,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isFallback")
-    private final @Nullable Input<Boolean> isFallback;
+      private final @Nullable Input<Boolean> isFallback;
 
     public Input<Boolean> getIsFallback() {
         return this.isFallback == null ? Input.empty() : this.isFallback;
     }
 
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
@@ -119,14 +119,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="liveAgentHandoff")
-    private final @Nullable Input<Boolean> liveAgentHandoff;
+      private final @Nullable Input<Boolean> liveAgentHandoff;
 
     public Input<Boolean> getLiveAgentHandoff() {
         return this.liveAgentHandoff == null ? Input.empty() : this.liveAgentHandoff;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -137,7 +137,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messages")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageArgs>> messages;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageArgs>> messages;
 
     public Input<List<GoogleCloudDialogflowV2beta1IntentMessageArgs>> getMessages() {
         return this.messages == null ? Input.empty() : this.messages;
@@ -148,7 +148,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mlDisabled")
-    private final @Nullable Input<Boolean> mlDisabled;
+      private final @Nullable Input<Boolean> mlDisabled;
 
     public Input<Boolean> getMlDisabled() {
         return this.mlDisabled == null ? Input.empty() : this.mlDisabled;
@@ -159,7 +159,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -170,7 +170,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputContexts")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2beta1ContextArgs>> outputContexts;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2beta1ContextArgs>> outputContexts;
 
     public Input<List<GoogleCloudDialogflowV2beta1ContextArgs>> getOutputContexts() {
         return this.outputContexts == null ? Input.empty() : this.outputContexts;
@@ -181,7 +181,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentParameterArgs>> parameters;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentParameterArgs>> parameters;
 
     public Input<List<GoogleCloudDialogflowV2beta1IntentParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -192,7 +192,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentFollowupIntentName")
-    private final @Nullable Input<String> parentFollowupIntentName;
+      private final @Nullable Input<String> parentFollowupIntentName;
 
     public Input<String> getParentFollowupIntentName() {
         return this.parentFollowupIntentName == null ? Input.empty() : this.parentFollowupIntentName;
@@ -203,14 +203,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -221,7 +221,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resetContexts")
-    private final @Nullable Input<Boolean> resetContexts;
+      private final @Nullable Input<Boolean> resetContexts;
 
     public Input<Boolean> getResetContexts() {
         return this.resetContexts == null ? Input.empty() : this.resetContexts;
@@ -232,7 +232,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trainingPhrases")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs>> trainingPhrases;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs>> trainingPhrases;
 
     public Input<List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs>> getTrainingPhrases() {
         return this.trainingPhrases == null ? Input.empty() : this.trainingPhrases;
@@ -243,7 +243,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookState")
-    private final @Nullable Input<IntentWebhookState> webhookState;
+      private final @Nullable Input<IntentWebhookState> webhookState;
 
     public Input<IntentWebhookState> getWebhookState() {
         return this.webhookState == null ? Input.empty() : this.webhookState;
@@ -602,7 +602,6 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             this.webhookState = Input.ofNullable(webhookState);
             return this;
         }
-
         public IntentArgs build() {
             return new IntentArgs(action, defaultResponsePlatforms, displayName, endInteraction, events, inputContextNames, intentView, isFallback, languageCode, liveAgentHandoff, location, messages, mlDisabled, name, outputContexts, parameters, parentFollowupIntentName, priority, project, resetContexts, trainingPhrases, webhookState);
         }

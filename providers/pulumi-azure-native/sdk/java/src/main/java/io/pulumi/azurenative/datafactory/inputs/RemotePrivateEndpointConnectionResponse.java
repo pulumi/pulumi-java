@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.ArmIdWrapperResponse;
 import io.pulumi.azurenative.datafactory.inputs.PrivateLinkConnectionStateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable ArmIdWrapperResponse privateEndpoint;
+      private final @Nullable ArmIdWrapperResponse privateEndpoint;
 
     public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -36,14 +36,14 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
+      private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -102,7 +102,6 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public RemotePrivateEndpointConnectionResponse build() {
             return new RemotePrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

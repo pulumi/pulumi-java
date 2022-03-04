@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.xray.outputs;
 
 import io.pulumi.awsnative.xray.outputs.SamplingRule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,14 +37,14 @@ public final class SamplingRuleRecord {
     /**
      * When the rule was created, in Unix time seconds.
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * When the rule was modified, in Unix time seconds.
      * 
-     */
+    */
     public Optional<String> getModifiedAt() {
         return Optional.ofNullable(this.modifiedAt);
     }
@@ -90,7 +90,6 @@ public final class SamplingRuleRecord {
             this.samplingRule = samplingRule;
             return this;
         }
-
         public SamplingRuleRecord build() {
             return new SamplingRuleRecord(createdAt, modifiedAt, samplingRule);
         }

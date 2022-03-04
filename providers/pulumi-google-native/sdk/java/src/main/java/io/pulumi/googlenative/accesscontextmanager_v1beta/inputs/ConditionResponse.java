@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.DevicePolicyResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="devicePolicy", required=true)
-    private final DevicePolicyResponse devicePolicy;
+      private final DevicePolicyResponse devicePolicy;
 
     public DevicePolicyResponse getDevicePolicy() {
         return this.devicePolicy;
@@ -35,7 +35,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipSubnetworks", required=true)
-    private final List<String> ipSubnetworks;
+      private final List<String> ipSubnetworks;
 
     public List<String> getIpSubnetworks() {
         return this.ipSubnetworks;
@@ -46,7 +46,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="members", required=true)
-    private final List<String> members;
+      private final List<String> members;
 
     public List<String> getMembers() {
         return this.members;
@@ -57,7 +57,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="negate", required=true)
-    private final Boolean negate;
+      private final Boolean negate;
 
     public Boolean getNegate() {
         return this.negate;
@@ -68,7 +68,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="regions", required=true)
-    private final List<String> regions;
+      private final List<String> regions;
 
     public List<String> getRegions() {
         return this.regions;
@@ -79,7 +79,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requiredAccessLevels", required=true)
-    private final List<String> requiredAccessLevels;
+      private final List<String> requiredAccessLevels;
 
     public List<String> getRequiredAccessLevels() {
         return this.requiredAccessLevels;
@@ -168,7 +168,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
             this.requiredAccessLevels = Objects.requireNonNull(requiredAccessLevels);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(devicePolicy, ipSubnetworks, members, negate, regions, requiredAccessLevels);
         }

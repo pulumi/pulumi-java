@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDatabaseAdvisorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="advisorName", required=true)
-    private final String advisorName;
+      private final String advisorName;
 
     public String getAdvisorName() {
         return this.advisorName;
@@ -28,7 +28,7 @@ public final class GetDatabaseAdvisorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetDatabaseAdvisorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetDatabaseAdvisorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -119,7 +119,6 @@ public final class GetDatabaseAdvisorArgs extends io.pulumi.resources.InvokeArgs
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public GetDatabaseAdvisorArgs build() {
             return new GetDatabaseAdvisorArgs(advisorName, databaseName, resourceGroupName, serverName);
         }

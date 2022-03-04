@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customproviders.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class GetAssociationResult {
     /**
      * The association id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The association name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the association.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The REST resource instance of the target resource for this association.
      * 
-     */
+    */
     public Optional<String> getTargetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
     /**
      * The association type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetAssociationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssociationResult build() {
             return new GetAssociationResult(id, name, provisioningState, targetResourceId, type);
         }

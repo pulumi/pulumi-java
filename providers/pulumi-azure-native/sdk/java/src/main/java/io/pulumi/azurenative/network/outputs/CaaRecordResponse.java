@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class CaaRecordResponse {
     /**
      * The flags for this CAA record as an integer between 0 and 255.
      * 
-     */
+    */
     public Optional<Integer> getFlags() {
         return Optional.ofNullable(this.flags);
     }
     /**
      * The tag for this CAA record.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
     /**
      * The value for this CAA record.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -98,7 +98,6 @@ public final class CaaRecordResponse {
             this.value = value;
             return this;
         }
-
         public CaaRecordResponse build() {
             return new CaaRecordResponse(flags, tag, value);
         }

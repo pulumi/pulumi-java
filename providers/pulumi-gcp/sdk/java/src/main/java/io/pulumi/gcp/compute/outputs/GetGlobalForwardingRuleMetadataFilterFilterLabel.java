@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +27,7 @@ public final class GetGlobalForwardingRuleMetadataFilterFilterLabel {
     /**
      * The name of the global forwarding rule.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -66,7 +66,6 @@ public final class GetGlobalForwardingRuleMetadataFilterFilterLabel {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetGlobalForwardingRuleMetadataFilterFilterLabel build() {
             return new GetGlobalForwardingRuleMetadataFilterFilterLabel(name, value);
         }

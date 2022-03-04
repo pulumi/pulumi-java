@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final Input<String> clusterId;
+      private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;
@@ -31,7 +31,7 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -44,7 +44,7 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numNodes")
-    private final @Nullable Input<Integer> numNodes;
+      private final @Nullable Input<Integer> numNodes;
 
     public Input<Integer> getNumNodes() {
         return this.numNodes == null ? Input.empty() : this.numNodes;
@@ -56,7 +56,7 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable Input<String> storageType;
+      private final @Nullable Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType == null ? Input.empty() : this.storageType;
@@ -69,7 +69,7 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -173,7 +173,6 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceClusterArgs build() {
             return new InstanceClusterArgs(clusterId, kmsKeyName, numNodes, storageType, zone);
         }

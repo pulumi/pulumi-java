@@ -6,17 +6,33 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.GetRecoveryGroupArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.GetRecoveryGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRecoveryGroup {
-/**
- * AWS Route53 Recovery Readiness Recovery Group Schema and API specifications.
+    private GetRecoveryGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetRecoveryGroupArgs.Builder a);
+    }
+    private static GetRecoveryGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRecoveryGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AWS Route53 Recovery Readiness Recovery Group Schema and API specifications.
  * 
- */
+     */
+    public static CompletableFuture<GetRecoveryGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AWS Route53 Recovery Readiness Recovery Group Schema and API specifications.
+     * 
+     */
     public static CompletableFuture<GetRecoveryGroupResult> invokeAsync(GetRecoveryGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getRecoveryGroup", TypeShape.of(GetRecoveryGroupResult.class), args == null ? GetRecoveryGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CdnEndpointResponse {
     /**
      * ARM Resource ID string.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -54,7 +54,6 @@ public final class CdnEndpointResponse {
             this.id = id;
             return this;
         }
-
         public CdnEndpointResponse build() {
             return new CdnEndpointResponse(id);
         }

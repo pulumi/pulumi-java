@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="attestor")
-    private final @Nullable Input<String> attestor;
+      private final @Nullable Input<String> attestor;
 
     public Input<String> getAttestor() {
         return this.attestor == null ? Input.empty() : this.attestor;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<AttestorIamMemberConditionGetArgs> condition;
+      private final @Nullable Input<AttestorIamMemberConditionGetArgs> condition;
 
     public Input<AttestorIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -38,14 +38,14 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -57,7 +57,7 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -70,7 +70,7 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -189,7 +189,6 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public AttestorIamMemberState build() {
             return new AttestorIamMemberState(attestor, condition, etag, member, project, role);
         }

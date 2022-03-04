@@ -6,21 +6,41 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automation.inputs.GetHybridRunbookWorkerArgs;
 import io.pulumi.azurenative.automation.outputs.GetHybridRunbookWorkerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHybridRunbookWorker {
-/**
- * Definition of hybrid runbook worker.
+    private GetHybridRunbookWorker() {}
+    public interface BuilderApplicator {
+        public void apply(GetHybridRunbookWorkerArgs.Builder a);
+    }
+    private static GetHybridRunbookWorkerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHybridRunbookWorkerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of hybrid runbook worker.
  * API Version: 2021-06-22.
  * 
- *
- * Definition of hybrid runbook worker.
+     *
+     * Definition of hybrid runbook worker.
  * 
- */
+     */
+    public static CompletableFuture<GetHybridRunbookWorkerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of hybrid runbook worker.
+     * API Version: 2021-06-22.
+     * 
+     *
+         * Definition of hybrid runbook worker.
+     * 
+     */
     public static CompletableFuture<GetHybridRunbookWorkerResult> invokeAsync(GetHybridRunbookWorkerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getHybridRunbookWorker", TypeShape.of(GetHybridRunbookWorkerResult.class), args == null ? GetHybridRunbookWorkerArgs.Empty : args, Utilities.withVersion(options));
     }

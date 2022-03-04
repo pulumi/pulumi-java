@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
     /**
      * Optional. Settings for displaying the image. Applies to every image in items.
      * 
-     */
+    */
     public String getImageDisplayOptions() {
         return this.imageDisplayOptions;
     }
     /**
      * List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> getItems() {
         return this.items;
     }
@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse(imageDisplayOptions, items);
         }

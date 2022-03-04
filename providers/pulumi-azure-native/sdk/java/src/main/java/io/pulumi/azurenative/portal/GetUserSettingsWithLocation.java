@@ -6,21 +6,41 @@ package io.pulumi.azurenative.portal;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.portal.inputs.GetUserSettingsWithLocationArgs;
 import io.pulumi.azurenative.portal.outputs.GetUserSettingsWithLocationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserSettingsWithLocation {
-/**
- * Response to get user settings
+    private GetUserSettingsWithLocation() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserSettingsWithLocationArgs.Builder a);
+    }
+    private static GetUserSettingsWithLocationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserSettingsWithLocationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response to get user settings
  * API Version: 2018-10-01.
  * 
- *
- * Response to get user settings
+     *
+     * Response to get user settings
  * 
- */
+     */
+    public static CompletableFuture<GetUserSettingsWithLocationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response to get user settings
+     * API Version: 2018-10-01.
+     * 
+     *
+         * Response to get user settings
+     * 
+     */
     public static CompletableFuture<GetUserSettingsWithLocationResult> invokeAsync(GetUserSettingsWithLocationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getUserSettingsWithLocation", TypeShape.of(GetUserSettingsWithLocationResult.class), args == null ? GetUserSettingsWithLocationArgs.Empty : args, Utilities.withVersion(options));
     }

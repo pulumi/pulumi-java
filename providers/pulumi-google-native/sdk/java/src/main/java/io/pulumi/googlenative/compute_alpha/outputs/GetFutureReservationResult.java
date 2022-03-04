@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FutureReservationSpecificSKUPropertiesResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FutureReservationStatusResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FutureReservationTimeWindowResponse;
@@ -101,14 +101,14 @@ public final class GetFutureReservationResult {
     /**
      * The creation timestamp for this future reservation in RFC3339 text format.
      * 
-     */
+    */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the future reservation.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -118,63 +118,63 @@ public final class GetFutureReservationResult {
     /**
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
      * 
-     */
+    */
     public String getNamePrefix() {
         return this.namePrefix;
     }
     /**
      * Server-defined fully-qualified URL for this resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
      * 
-     */
+    */
     public String getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
      * List of Projects/Folders to share with.
      * 
-     */
+    */
     public ShareSettingsResponse getShareSettings() {
         return this.shareSettings;
     }
     /**
      * Future Reservation configuration to indicate instance properties and total count.
      * 
-     */
+    */
     public FutureReservationSpecificSKUPropertiesResponse getSpecificSkuProperties() {
         return this.specificSkuProperties;
     }
     /**
      * [Output only] Status of the Future Reservation
      * 
-     */
+    */
     public FutureReservationStatusResponse getStatus() {
         return this.status;
     }
     /**
      * Time window for this Future Reservation.
      * 
-     */
+    */
     public FutureReservationTimeWindowResponse getTimeWindow() {
         return this.timeWindow;
     }
     /**
      * URL of the Zone where this future reservation resides.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }
@@ -280,7 +280,6 @@ public final class GetFutureReservationResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetFutureReservationResult build() {
             return new GetFutureReservationResult(creationTimestamp, description, kind, name, namePrefix, selfLink, selfLinkWithId, shareSettings, specificSkuProperties, status, timeWindow, zone);
         }

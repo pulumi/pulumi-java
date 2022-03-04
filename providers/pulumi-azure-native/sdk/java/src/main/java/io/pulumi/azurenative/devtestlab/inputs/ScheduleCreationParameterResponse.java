@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devtestlab.inputs.DayDetailsResponse;
 import io.pulumi.azurenative.devtestlab.inputs.HourDetailsResponse;
 import io.pulumi.azurenative.devtestlab.inputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.devtestlab.inputs.WeekDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="dailyRecurrence")
-    private final @Nullable DayDetailsResponse dailyRecurrence;
+      private final @Nullable DayDetailsResponse dailyRecurrence;
 
     public Optional<DayDetailsResponse> getDailyRecurrence() {
         return this.dailyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.dailyRecurrence);
@@ -39,7 +39,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="hourlyRecurrence")
-    private final @Nullable HourDetailsResponse hourlyRecurrence;
+      private final @Nullable HourDetailsResponse hourlyRecurrence;
 
     public Optional<HourDetailsResponse> getHourlyRecurrence() {
         return this.hourlyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.hourlyRecurrence);
@@ -50,7 +50,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -61,7 +61,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -72,7 +72,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="notificationSettings")
-    private final @Nullable NotificationSettingsResponse notificationSettings;
+      private final @Nullable NotificationSettingsResponse notificationSettings;
 
     public Optional<NotificationSettingsResponse> getNotificationSettings() {
         return this.notificationSettings == null ? Optional.empty() : Optional.ofNullable(this.notificationSettings);
@@ -83,7 +83,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -94,7 +94,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -105,7 +105,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetResourceId")
-    private final @Nullable String targetResourceId;
+      private final @Nullable String targetResourceId;
 
     public Optional<String> getTargetResourceId() {
         return this.targetResourceId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceId);
@@ -116,7 +116,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskType")
-    private final @Nullable String taskType;
+      private final @Nullable String taskType;
 
     public Optional<String> getTaskType() {
         return this.taskType == null ? Optional.empty() : Optional.ofNullable(this.taskType);
@@ -127,7 +127,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="timeZoneId")
-    private final @Nullable String timeZoneId;
+      private final @Nullable String timeZoneId;
 
     public Optional<String> getTimeZoneId() {
         return this.timeZoneId == null ? Optional.empty() : Optional.ofNullable(this.timeZoneId);
@@ -138,7 +138,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="weeklyRecurrence")
-    private final @Nullable WeekDetailsResponse weeklyRecurrence;
+      private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
     public Optional<WeekDetailsResponse> getWeeklyRecurrence() {
         return this.weeklyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.weeklyRecurrence);
@@ -277,7 +277,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }
-
         public ScheduleCreationParameterResponse build() {
             return new ScheduleCreationParameterResponse(dailyRecurrence, hourlyRecurrence, location, name, notificationSettings, status, tags, targetResourceId, taskType, timeZoneId, weeklyRecurrence);
         }

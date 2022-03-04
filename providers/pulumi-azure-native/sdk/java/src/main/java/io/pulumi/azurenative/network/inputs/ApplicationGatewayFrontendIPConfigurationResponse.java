@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -35,7 +35,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -46,7 +46,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -57,7 +57,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable String privateIPAddress;
+      private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
@@ -68,7 +68,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-    private final @Nullable String privateIPAllocationMethod;
+      private final @Nullable String privateIPAllocationMethod;
 
     public Optional<String> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
@@ -79,7 +79,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * 
      */
     @InputImport(name="privateLinkConfiguration")
-    private final @Nullable SubResourceResponse privateLinkConfiguration;
+      private final @Nullable SubResourceResponse privateLinkConfiguration;
 
     public Optional<SubResourceResponse> getPrivateLinkConfiguration() {
         return this.privateLinkConfiguration == null ? Optional.empty() : Optional.ofNullable(this.privateLinkConfiguration);
@@ -90,7 +90,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -101,7 +101,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * 
      */
     @InputImport(name="publicIPAddress")
-    private final @Nullable SubResourceResponse publicIPAddress;
+      private final @Nullable SubResourceResponse publicIPAddress;
 
     public Optional<SubResourceResponse> getPublicIPAddress() {
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
@@ -112,7 +112,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable SubResourceResponse subnet;
+      private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -123,7 +123,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -252,7 +252,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayFrontendIPConfigurationResponse build() {
             return new ApplicationGatewayFrontendIPConfigurationResponse(etag, id, name, privateIPAddress, privateIPAllocationMethod, privateLinkConfiguration, provisioningState, publicIPAddress, subnet, type);
         }

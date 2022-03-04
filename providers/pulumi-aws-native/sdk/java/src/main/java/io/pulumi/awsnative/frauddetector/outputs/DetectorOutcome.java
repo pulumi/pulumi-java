@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.frauddetector.outputs;
 
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -62,14 +62,14 @@ public final class DetectorOutcome {
     /**
      * The time when the outcome was created.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -79,7 +79,7 @@ public final class DetectorOutcome {
     /**
      * The time when the outcome was last updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -89,7 +89,7 @@ public final class DetectorOutcome {
     /**
      * Tags associated with this outcome.
      * 
-     */
+    */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -160,7 +160,6 @@ public final class DetectorOutcome {
             this.tags = tags;
             return this;
         }
-
         public DetectorOutcome build() {
             return new DetectorOutcome(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AutomationScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class AutomationScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scopePath")
-    private final @Nullable Input<String> scopePath;
+      private final @Nullable Input<String> scopePath;
 
     public Input<String> getScopePath() {
         return this.scopePath == null ? Input.empty() : this.scopePath;
@@ -93,7 +93,6 @@ public final class AutomationScopeArgs extends io.pulumi.resources.ResourceArgs 
             this.scopePath = Input.ofNullable(scopePath);
             return this;
         }
-
         public AutomationScopeArgs build() {
             return new AutomationScopeArgs(description, scopePath);
         }

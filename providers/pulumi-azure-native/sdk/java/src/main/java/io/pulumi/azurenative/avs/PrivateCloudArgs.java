@@ -9,7 +9,7 @@ import io.pulumi.azurenative.avs.inputs.ManagementClusterArgs;
 import io.pulumi.azurenative.avs.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identitySources")
-    private final @Nullable Input<List<IdentitySourceArgs>> identitySources;
+      private final @Nullable Input<List<IdentitySourceArgs>> identitySources;
 
     public Input<List<IdentitySourceArgs>> getIdentitySources() {
         return this.identitySources == null ? Input.empty() : this.identitySources;
@@ -37,7 +37,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internet")
-    private final @Nullable Input<Either<String,InternetEnum>> internet;
+      private final @Nullable Input<Either<String,InternetEnum>> internet;
 
     public Input<Either<String,InternetEnum>> getInternet() {
         return this.internet == null ? Input.empty() : this.internet;
@@ -48,7 +48,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -59,7 +59,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managementCluster", required=true)
-    private final Input<ManagementClusterArgs> managementCluster;
+      private final Input<ManagementClusterArgs> managementCluster;
 
     public Input<ManagementClusterArgs> getManagementCluster() {
         return this.managementCluster;
@@ -70,7 +70,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkBlock", required=true)
-    private final Input<String> networkBlock;
+      private final Input<String> networkBlock;
 
     public Input<String> getNetworkBlock() {
         return this.networkBlock;
@@ -81,7 +81,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nsxtPassword")
-    private final @Nullable Input<String> nsxtPassword;
+      private final @Nullable Input<String> nsxtPassword;
 
     public Input<String> getNsxtPassword() {
         return this.nsxtPassword == null ? Input.empty() : this.nsxtPassword;
@@ -92,7 +92,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudName")
-    private final @Nullable Input<String> privateCloudName;
+      private final @Nullable Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName == null ? Input.empty() : this.privateCloudName;
@@ -103,7 +103,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -114,7 +114,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+      private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -125,7 +125,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -136,7 +136,7 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vcenterPassword")
-    private final @Nullable Input<String> vcenterPassword;
+      private final @Nullable Input<String> vcenterPassword;
 
     public Input<String> getVcenterPassword() {
         return this.vcenterPassword == null ? Input.empty() : this.vcenterPassword;
@@ -330,7 +330,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
             this.vcenterPassword = Input.ofNullable(vcenterPassword);
             return this;
         }
-
         public PrivateCloudArgs build() {
             return new PrivateCloudArgs(identitySources, internet, location, managementCluster, networkBlock, nsxtPassword, privateCloudName, resourceGroupName, sku, tags, vcenterPassword);
         }

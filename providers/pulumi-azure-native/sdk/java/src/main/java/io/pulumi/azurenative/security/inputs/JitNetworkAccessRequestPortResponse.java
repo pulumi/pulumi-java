@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="allowedSourceAddressPrefix")
-    private final @Nullable String allowedSourceAddressPrefix;
+      private final @Nullable String allowedSourceAddressPrefix;
 
     public Optional<String> getAllowedSourceAddressPrefix() {
         return this.allowedSourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.allowedSourceAddressPrefix);
@@ -32,7 +32,7 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="allowedSourceAddressPrefixes")
-    private final @Nullable List<String> allowedSourceAddressPrefixes;
+      private final @Nullable List<String> allowedSourceAddressPrefixes;
 
     public List<String> getAllowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
@@ -43,7 +43,7 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="endTimeUtc", required=true)
-    private final String endTimeUtc;
+      private final String endTimeUtc;
 
     public String getEndTimeUtc() {
         return this.endTimeUtc;
@@ -54,14 +54,14 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="mappedPort")
-    private final @Nullable Integer mappedPort;
+      private final @Nullable Integer mappedPort;
 
     public Optional<Integer> getMappedPort() {
         return this.mappedPort == null ? Optional.empty() : Optional.ofNullable(this.mappedPort);
     }
 
     @InputImport(name="number", required=true)
-    private final Integer number;
+      private final Integer number;
 
     public Integer getNumber() {
         return this.number;
@@ -72,7 +72,7 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -83,7 +83,7 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="statusReason", required=true)
-    private final String statusReason;
+      private final String statusReason;
 
     public String getStatusReason() {
         return this.statusReason;
@@ -182,7 +182,6 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }
-
         public JitNetworkAccessRequestPortResponse build() {
             return new JitNetworkAccessRequestPortResponse(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, endTimeUtc, mappedPort, number, status, statusReason);
         }

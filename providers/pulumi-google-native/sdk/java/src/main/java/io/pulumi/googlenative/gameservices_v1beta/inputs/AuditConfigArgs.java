@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.AuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,14 +25,14 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditLogConfigs")
-    private final @Nullable Input<List<AuditLogConfigArgs>> auditLogConfigs;
+      private final @Nullable Input<List<AuditLogConfigArgs>> auditLogConfigs;
 
     public Input<List<AuditLogConfigArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
     }
 
     @InputImport(name="exemptedMembers")
-    private final @Nullable Input<List<String>> exemptedMembers;
+      private final @Nullable Input<List<String>> exemptedMembers;
 
     public Input<List<String>> getExemptedMembers() {
         return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
@@ -43,7 +43,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -117,7 +117,6 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public AuditConfigArgs build() {
             return new AuditConfigArgs(auditLogConfigs, exemptedMembers, service);
         }

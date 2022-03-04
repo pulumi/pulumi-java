@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistribution;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -50,28 +50,28 @@ public final class GetDistributionConfigurationResult {
     /**
      * The Amazon Resource Name (ARN) of the distribution configuration.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The description of the distribution configuration.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The distributions of the distribution configuration.
      * 
-     */
+    */
     public List<DistributionConfigurationDistribution> getDistributions() {
         return this.distributions == null ? List.of() : this.distributions;
     }
     /**
      * The tags associated with the component.
      * 
-     */
+    */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }
@@ -121,7 +121,6 @@ public final class GetDistributionConfigurationResult {
             this.tags = tags;
             return this;
         }
-
         public GetDistributionConfigurationResult build() {
             return new GetDistributionConfigurationResult(arn, description, distributions, tags);
         }

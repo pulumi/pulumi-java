@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.PriorityLevelConfigurationListArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.PriorityLevelConfiguration;
@@ -78,6 +78,37 @@ public class PriorityLevelConfigurationList extends io.pulumi.resources.CustomRe
         return this.metadata;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PriorityLevelConfigurationListArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.PriorityLevelConfigurationListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.PriorityLevelConfigurationListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PriorityLevelConfigurationList(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PriorityLevelConfigurationList(String name) {
+        this(name, PriorityLevelConfigurationListArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PriorityLevelConfigurationList(String name, PriorityLevelConfigurationListArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

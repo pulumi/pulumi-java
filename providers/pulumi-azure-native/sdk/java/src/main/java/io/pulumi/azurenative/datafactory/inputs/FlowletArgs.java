@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.DataFlowSinkArgs;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -40,7 +40,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -51,7 +51,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable Input<DataFlowFolderArgs> folder;
+      private final @Nullable Input<DataFlowFolderArgs> folder;
 
     public Input<DataFlowFolderArgs> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
@@ -62,7 +62,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+      private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -73,7 +73,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptLines")
-    private final @Nullable Input<List<String>> scriptLines;
+      private final @Nullable Input<List<String>> scriptLines;
 
     public Input<List<String>> getScriptLines() {
         return this.scriptLines == null ? Input.empty() : this.scriptLines;
@@ -84,7 +84,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinks")
-    private final @Nullable Input<List<DataFlowSinkArgs>> sinks;
+      private final @Nullable Input<List<DataFlowSinkArgs>> sinks;
 
     public Input<List<DataFlowSinkArgs>> getSinks() {
         return this.sinks == null ? Input.empty() : this.sinks;
@@ -95,7 +95,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources")
-    private final @Nullable Input<List<DataFlowSourceArgs>> sources;
+      private final @Nullable Input<List<DataFlowSourceArgs>> sources;
 
     public Input<List<DataFlowSourceArgs>> getSources() {
         return this.sources == null ? Input.empty() : this.sources;
@@ -106,7 +106,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transformations")
-    private final @Nullable Input<List<TransformationArgs>> transformations;
+      private final @Nullable Input<List<TransformationArgs>> transformations;
 
     public Input<List<TransformationArgs>> getTransformations() {
         return this.transformations == null ? Input.empty() : this.transformations;
@@ -118,7 +118,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -282,7 +282,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public FlowletArgs build() {
             return new FlowletArgs(annotations, description, folder, script, scriptLines, sinks, sources, transformations, type);
         }

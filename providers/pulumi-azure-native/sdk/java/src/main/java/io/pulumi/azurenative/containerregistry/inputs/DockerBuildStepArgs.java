@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.ArgumentArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<List<ArgumentArgs>> arguments;
+      private final @Nullable Input<List<ArgumentArgs>> arguments;
 
     public Input<List<ArgumentArgs>> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -37,7 +37,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="contextAccessToken")
-    private final @Nullable Input<String> contextAccessToken;
+      private final @Nullable Input<String> contextAccessToken;
 
     public Input<String> getContextAccessToken() {
         return this.contextAccessToken == null ? Input.empty() : this.contextAccessToken;
@@ -48,7 +48,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="contextPath")
-    private final @Nullable Input<String> contextPath;
+      private final @Nullable Input<String> contextPath;
 
     public Input<String> getContextPath() {
         return this.contextPath == null ? Input.empty() : this.contextPath;
@@ -59,7 +59,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dockerFilePath", required=true)
-    private final Input<String> dockerFilePath;
+      private final Input<String> dockerFilePath;
 
     public Input<String> getDockerFilePath() {
         return this.dockerFilePath;
@@ -70,7 +70,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="imageNames")
-    private final @Nullable Input<List<String>> imageNames;
+      private final @Nullable Input<List<String>> imageNames;
 
     public Input<List<String>> getImageNames() {
         return this.imageNames == null ? Input.empty() : this.imageNames;
@@ -81,7 +81,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isPushEnabled")
-    private final @Nullable Input<Boolean> isPushEnabled;
+      private final @Nullable Input<Boolean> isPushEnabled;
 
     public Input<Boolean> getIsPushEnabled() {
         return this.isPushEnabled == null ? Input.empty() : this.isPushEnabled;
@@ -92,7 +92,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="noCache")
-    private final @Nullable Input<Boolean> noCache;
+      private final @Nullable Input<Boolean> noCache;
 
     public Input<Boolean> getNoCache() {
         return this.noCache == null ? Input.empty() : this.noCache;
@@ -103,7 +103,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -115,7 +115,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -279,7 +279,6 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DockerBuildStepArgs build() {
             return new DockerBuildStepArgs(arguments, contextAccessToken, contextPath, dockerFilePath, imageNames, isPushEnabled, noCache, target, type);
         }

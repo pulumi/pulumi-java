@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.FieldResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class TypeResponse {
     /**
      * The (sub) fields this type has (if not primitive).
      * 
-     */
+    */
     public List<FieldResponse> getFields() {
         return this.fields;
     }
     /**
      * The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
      * 
-     */
+    */
     public String getPrimitive() {
         return this.primitive;
     }
@@ -97,7 +97,6 @@ public final class TypeResponse {
             this.primitive = Objects.requireNonNull(primitive);
             return this;
         }
-
         public TypeResponse build() {
             return new TypeResponse(fields, name, primitive);
         }

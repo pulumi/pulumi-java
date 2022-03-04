@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class GetClientConfigResult {
     /**
      * The OAuth2 access token used by the client to authenticate against the Google Cloud API.
      * 
-     */
+    */
     public String getAccessToken() {
         return this.accessToken;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ID of the project to apply any resources to.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * The region to operate under.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * The zone to operate under.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }
@@ -137,7 +137,6 @@ public final class GetClientConfigResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetClientConfigResult build() {
             return new GetClientConfigResult(accessToken, id, project, region, zone);
         }

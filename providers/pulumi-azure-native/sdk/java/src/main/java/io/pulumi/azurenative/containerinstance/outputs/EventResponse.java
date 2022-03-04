@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class EventResponse {
     /**
      * The count of the event.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * The date-time of the earliest logged event.
      * 
-     */
+    */
     public String getFirstTimestamp() {
         return this.firstTimestamp;
     }
     /**
      * The date-time of the latest logged event.
      * 
-     */
+    */
     public String getLastTimestamp() {
         return this.lastTimestamp;
     }
     /**
      * The event message.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * The event name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The event type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -159,7 +159,6 @@ public final class EventResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EventResponse build() {
             return new EventResponse(count, firstTimestamp, lastTimestamp, message, name, type);
         }

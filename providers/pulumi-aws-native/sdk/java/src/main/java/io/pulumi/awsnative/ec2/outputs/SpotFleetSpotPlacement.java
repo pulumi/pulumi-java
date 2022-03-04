@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetSpotPlacementTenancy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class SpotFleetSpotPlacement {
             this.tenancy = tenancy;
             return this;
         }
-
         public SpotFleetSpotPlacement build() {
             return new SpotFleetSpotPlacement(availabilityZone, groupName, tenancy);
         }

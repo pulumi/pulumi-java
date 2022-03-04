@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numFacetBuckets")
-    private final @Nullable Input<Integer> numFacetBuckets;
+      private final @Nullable Input<Integer> numFacetBuckets;
 
     public Input<Integer> getNumFacetBuckets() {
         return this.numFacetBuckets == null ? Input.empty() : this.numFacetBuckets;
@@ -35,7 +35,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectType")
-    private final @Nullable Input<String> objectType;
+      private final @Nullable Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType == null ? Input.empty() : this.objectType;
@@ -46,7 +46,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatorName")
-    private final @Nullable Input<String> operatorName;
+      private final @Nullable Input<String> operatorName;
 
     public Input<String> getOperatorName() {
         return this.operatorName == null ? Input.empty() : this.operatorName;
@@ -57,7 +57,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceName")
-    private final @Nullable Input<String> sourceName;
+      private final @Nullable Input<String> sourceName;
 
     public Input<String> getSourceName() {
         return this.sourceName == null ? Input.empty() : this.sourceName;
@@ -146,7 +146,6 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceName = Input.ofNullable(sourceName);
             return this;
         }
-
         public FacetOptionsArgs build() {
             return new FacetOptionsArgs(numFacetBuckets, objectType, operatorName, sourceName);
         }

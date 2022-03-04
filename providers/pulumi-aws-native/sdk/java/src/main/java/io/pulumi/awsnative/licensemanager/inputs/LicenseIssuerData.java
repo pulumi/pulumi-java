@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class LicenseIssuerData extends io.pulumi.resources.InvokeArgs {
     public static final LicenseIssuerData Empty = new LicenseIssuerData();
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="signKey")
-    private final @Nullable String signKey;
+      private final @Nullable String signKey;
 
     public Optional<String> getSignKey() {
         return this.signKey == null ? Optional.empty() : Optional.ofNullable(this.signKey);
@@ -71,7 +71,6 @@ public final class LicenseIssuerData extends io.pulumi.resources.InvokeArgs {
             this.signKey = signKey;
             return this;
         }
-
         public LicenseIssuerData build() {
             return new LicenseIssuerData(name, signKey);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.batch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.batch_v1.inputs.JobConditionArgs;
 import io.pulumi.kubernetes.batch_v1.inputs.UncountedTerminatedPodsArgs;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-    private final @Nullable Input<Integer> active;
+      private final @Nullable Input<Integer> active;
 
     public Input<Integer> getActive() {
         return this.active == null ? Input.empty() : this.active;
@@ -38,7 +38,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completedIndexes")
-    private final @Nullable Input<String> completedIndexes;
+      private final @Nullable Input<String> completedIndexes;
 
     public Input<String> getCompletedIndexes() {
         return this.completedIndexes == null ? Input.empty() : this.completedIndexes;
@@ -49,7 +49,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completionTime")
-    private final @Nullable Input<String> completionTime;
+      private final @Nullable Input<String> completionTime;
 
     public Input<String> getCompletionTime() {
         return this.completionTime == null ? Input.empty() : this.completionTime;
@@ -60,7 +60,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<JobConditionArgs>> conditions;
+      private final @Nullable Input<List<JobConditionArgs>> conditions;
 
     public Input<List<JobConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -71,7 +71,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failed")
-    private final @Nullable Input<Integer> failed;
+      private final @Nullable Input<Integer> failed;
 
     public Input<Integer> getFailed() {
         return this.failed == null ? Input.empty() : this.failed;
@@ -84,7 +84,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ready")
-    private final @Nullable Input<Integer> ready;
+      private final @Nullable Input<Integer> ready;
 
     public Input<Integer> getReady() {
         return this.ready == null ? Input.empty() : this.ready;
@@ -95,7 +95,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -106,7 +106,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="succeeded")
-    private final @Nullable Input<Integer> succeeded;
+      private final @Nullable Input<Integer> succeeded;
 
     public Input<Integer> getSucceeded() {
         return this.succeeded == null ? Input.empty() : this.succeeded;
@@ -122,7 +122,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uncountedTerminatedPods")
-    private final @Nullable Input<UncountedTerminatedPodsArgs> uncountedTerminatedPods;
+      private final @Nullable Input<UncountedTerminatedPodsArgs> uncountedTerminatedPods;
 
     public Input<UncountedTerminatedPodsArgs> getUncountedTerminatedPods() {
         return this.uncountedTerminatedPods == null ? Input.empty() : this.uncountedTerminatedPods;
@@ -286,7 +286,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.uncountedTerminatedPods = Input.ofNullable(uncountedTerminatedPods);
             return this;
         }
-
         public JobStatusArgs build() {
             return new JobStatusArgs(active, completedIndexes, completionTime, conditions, failed, ready, startTime, succeeded, uncountedTerminatedPods);
         }

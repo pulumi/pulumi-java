@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -59,7 +59,7 @@ public final class DataDiskResponse {
      * 
      *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
      * 
-     */
+    */
     public Optional<String> getCaching() {
         return Optional.ofNullable(this.caching);
     }
@@ -69,7 +69,7 @@ public final class DataDiskResponse {
     /**
      * The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
      * 
-     */
+    */
     public Integer getLun() {
         return this.lun;
     }
@@ -79,7 +79,7 @@ public final class DataDiskResponse {
      *  Standard_LRS - The data disk should use standard locally redundant storage.
      *  Premium_LRS - The data disk should use premium locally redundant storage.
      * 
-     */
+    */
     public Optional<String> getStorageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -129,7 +129,6 @@ public final class DataDiskResponse {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public DataDiskResponse build() {
             return new DataDiskResponse(caching, diskSizeGB, lun, storageAccountType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DataFlowResponseFolder {
     /**
      * The name of the folder that this data flow is in.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -54,7 +54,6 @@ public final class DataFlowResponseFolder {
             this.name = name;
             return this;
         }
-
         public DataFlowResponseFolder build() {
             return new DataFlowResponseFolder(name);
         }

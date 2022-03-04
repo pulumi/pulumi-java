@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class OperationErrorErrorsItemResponse {
     /**
      * The error type identifier for this error.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Indicates the field in the request that caused the error. This property is optional.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * An optional, human-readable error message.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -95,7 +95,6 @@ public final class OperationErrorErrorsItemResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public OperationErrorErrorsItemResponse build() {
             return new OperationErrorErrorsItemResponse(code, location, message);
         }

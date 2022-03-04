@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.PlanResponse;
 import io.pulumi.azurenative.managedservices.outputs.RegistrationDefinitionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,35 +56,35 @@ public final class GetRegistrationDefinitionResult {
     /**
      * Fully qualified path of the registration definition.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the registration definition.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Plan details for the managed services.
      * 
-     */
+    */
     public Optional<PlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * Properties of a registration definition.
      * 
-     */
+    */
     public RegistrationDefinitionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -141,7 +141,6 @@ public final class GetRegistrationDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegistrationDefinitionResult build() {
             return new GetRegistrationDefinitionResult(id, name, plan, properties, type);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.confidentialledger.outputs;
 
 import io.pulumi.azurenative.confidentialledger.outputs.AADBasedSecurityPrincipalResponse;
 import io.pulumi.azurenative.confidentialledger.outputs.CertBasedSecurityPrincipalResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -85,63 +85,63 @@ public final class LedgerPropertiesResponse {
     /**
      * Array of all AAD based Security Principals.
      * 
-     */
+    */
     public List<AADBasedSecurityPrincipalResponse> getAadBasedSecurityPrincipals() {
         return this.aadBasedSecurityPrincipals == null ? List.of() : this.aadBasedSecurityPrincipals;
     }
     /**
      * Array of all cert based Security Principals.
      * 
-     */
+    */
     public List<CertBasedSecurityPrincipalResponse> getCertBasedSecurityPrincipals() {
         return this.certBasedSecurityPrincipals == null ? List.of() : this.certBasedSecurityPrincipals;
     }
     /**
      * Endpoint for accessing network identity.
      * 
-     */
+    */
     public String getIdentityServiceUri() {
         return this.identityServiceUri;
     }
     /**
      * Internal namespace for the Ledger
      * 
-     */
+    */
     public String getLedgerInternalNamespace() {
         return this.ledgerInternalNamespace;
     }
     /**
      * Unique name for the Confidential Ledger.
      * 
-     */
+    */
     public String getLedgerName() {
         return this.ledgerName;
     }
     /**
      * Name of the Blob Storage Account for saving ledger files
      * 
-     */
+    */
     public Optional<String> getLedgerStorageAccount() {
         return Optional.ofNullable(this.ledgerStorageAccount);
     }
     /**
      * Type of Confidential Ledger
      * 
-     */
+    */
     public Optional<String> getLedgerType() {
         return Optional.ofNullable(this.ledgerType);
     }
     /**
      * Endpoint for calling Ledger Service.
      * 
-     */
+    */
     public String getLedgerUri() {
         return this.ledgerUri;
     }
     /**
      * Provisioning state of Ledger Resource
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -226,7 +226,6 @@ public final class LedgerPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public LedgerPropertiesResponse build() {
             return new LedgerPropertiesResponse(aadBasedSecurityPrincipals, certBasedSecurityPrincipals, identityServiceUri, ledgerInternalNamespace, ledgerName, ledgerStorageAccount, ledgerType, ledgerUri, provisioningState);
         }

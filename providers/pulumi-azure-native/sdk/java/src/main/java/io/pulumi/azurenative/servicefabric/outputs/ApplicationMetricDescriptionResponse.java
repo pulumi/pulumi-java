@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -62,14 +62,14 @@ public final class ApplicationMetricDescriptionResponse {
      * When creating a new application with application capacity defined, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
      * When updating existing application with application capacity, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
      * 
-     */
+    */
     public Optional<Double> getMaximumCapacity() {
         return Optional.ofNullable(this.maximumCapacity);
     }
     /**
      * The name of the metric.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -80,7 +80,7 @@ public final class ApplicationMetricDescriptionResponse {
      * If set to zero, no capacity is reserved for this metric.
      * When setting application capacity or when updating application capacity; this value must be smaller than or equal to MaximumCapacity for each metric.
      * 
-     */
+    */
     public Optional<Double> getReservationCapacity() {
         return Optional.ofNullable(this.reservationCapacity);
     }
@@ -89,7 +89,7 @@ public final class ApplicationMetricDescriptionResponse {
      * This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
      * When creating a new application with application capacity defined, the product of MaximumNodes and MaximumCapacity must always be smaller than or equal to this value.
      * 
-     */
+    */
     public Optional<Double> getTotalApplicationCapacity() {
         return Optional.ofNullable(this.totalApplicationCapacity);
     }
@@ -139,7 +139,6 @@ public final class ApplicationMetricDescriptionResponse {
             this.totalApplicationCapacity = totalApplicationCapacity;
             return this;
         }
-
         public ApplicationMetricDescriptionResponse build() {
             return new ApplicationMetricDescriptionResponse(maximumCapacity, name, reservationCapacity, totalApplicationCapacity);
         }

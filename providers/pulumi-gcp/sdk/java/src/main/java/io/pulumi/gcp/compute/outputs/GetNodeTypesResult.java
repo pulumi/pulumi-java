@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,14 +38,14 @@ public final class GetNodeTypesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of node types available in the given zone and project.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }
@@ -101,7 +101,6 @@ public final class GetNodeTypesResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetNodeTypesResult build() {
             return new GetNodeTypesResult(id, names, project, zone);
         }

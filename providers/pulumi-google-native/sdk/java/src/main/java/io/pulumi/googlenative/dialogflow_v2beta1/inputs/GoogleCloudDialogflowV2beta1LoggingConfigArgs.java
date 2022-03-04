@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="enableStackdriverLogging")
-    private final @Nullable Input<Boolean> enableStackdriverLogging;
+      private final @Nullable Input<Boolean> enableStackdriverLogging;
 
     public Input<Boolean> getEnableStackdriverLogging() {
         return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends io.pulu
             this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1LoggingConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1LoggingConfigArgs(enableStackdriverLogging);
         }

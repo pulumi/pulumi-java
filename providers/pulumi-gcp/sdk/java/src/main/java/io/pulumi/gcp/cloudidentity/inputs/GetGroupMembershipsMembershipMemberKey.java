@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class GetGroupMembershipsMembershipMemberKey extends io.pulumi.reso
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -33,7 +33,7 @@ public final class GetGroupMembershipsMembershipMemberKey extends io.pulumi.reso
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+      private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
@@ -82,7 +82,6 @@ public final class GetGroupMembershipsMembershipMemberKey extends io.pulumi.reso
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public GetGroupMembershipsMembershipMemberKey build() {
             return new GetGroupMembershipsMembershipMemberKey(id, namespace);
         }

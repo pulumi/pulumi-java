@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class YarnApplicationResponse {
     /**
      * The application name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The numerical progress of the application, from 1 to 100.
      * 
-     */
+    */
     public Double getProgress() {
         return this.progress;
     }
     /**
      * The application state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
      * 
-     */
+    */
     public String getTrackingUrl() {
         return this.trackingUrl;
     }
@@ -117,7 +117,6 @@ public final class YarnApplicationResponse {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }
-
         public YarnApplicationResponse build() {
             return new YarnApplicationResponse(name, progress, state, trackingUrl);
         }

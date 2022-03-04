@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MetricRuleArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.QuotaLimitArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limits")
-    private final @Nullable Input<List<QuotaLimitArgs>> limits;
+      private final @Nullable Input<List<QuotaLimitArgs>> limits;
 
     public Input<List<QuotaLimitArgs>> getLimits() {
         return this.limits == null ? Input.empty() : this.limits;
@@ -36,7 +36,7 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricRules")
-    private final @Nullable Input<List<MetricRuleArgs>> metricRules;
+      private final @Nullable Input<List<MetricRuleArgs>> metricRules;
 
     public Input<List<MetricRuleArgs>> getMetricRules() {
         return this.metricRules == null ? Input.empty() : this.metricRules;
@@ -95,7 +95,6 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
             this.metricRules = Input.ofNullable(metricRules);
             return this;
         }
-
         public QuotaArgs build() {
             return new QuotaArgs(limits, metricRules);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ExprResponse {
     /**
      * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Textual representation of an expression in Common Expression Language syntax.
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }
     /**
      * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -116,7 +116,6 @@ public final class ExprResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ExprResponse build() {
             return new ExprResponse(description, expression, location, title);
         }

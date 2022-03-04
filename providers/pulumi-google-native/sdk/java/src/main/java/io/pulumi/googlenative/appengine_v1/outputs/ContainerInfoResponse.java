@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ContainerInfoResponse {
     /**
      * URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest. Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
@@ -52,7 +52,6 @@ public final class ContainerInfoResponse {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public ContainerInfoResponse build() {
             return new ContainerInfoResponse(image);
         }

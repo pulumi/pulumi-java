@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class BucketRoutingRuleCondition {
     /**
      * The HTTP error code when the redirect is applied.
      * 
-     */
+    */
     public Optional<String> getHttpErrorCodeReturnedEquals() {
         return Optional.ofNullable(this.httpErrorCodeReturnedEquals);
     }
     /**
      * The object key name prefix when the redirect is applied.
      * 
-     */
+    */
     public Optional<String> getKeyPrefixEquals() {
         return Optional.ofNullable(this.keyPrefixEquals);
     }
@@ -76,7 +76,6 @@ public final class BucketRoutingRuleCondition {
             this.keyPrefixEquals = keyPrefixEquals;
             return this;
         }
-
         public BucketRoutingRuleCondition build() {
             return new BucketRoutingRuleCondition(httpErrorCodeReturnedEquals, keyPrefixEquals);
         }

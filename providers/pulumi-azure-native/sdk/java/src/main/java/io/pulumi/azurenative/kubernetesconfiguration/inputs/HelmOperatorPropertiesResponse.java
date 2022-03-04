@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class HelmOperatorPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="chartValues")
-    private final @Nullable String chartValues;
+      private final @Nullable String chartValues;
 
     public Optional<String> getChartValues() {
         return this.chartValues == null ? Optional.empty() : Optional.ofNullable(this.chartValues);
@@ -34,7 +34,7 @@ public final class HelmOperatorPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="chartVersion")
-    private final @Nullable String chartVersion;
+      private final @Nullable String chartVersion;
 
     public Optional<String> getChartVersion() {
         return this.chartVersion == null ? Optional.empty() : Optional.ofNullable(this.chartVersion);
@@ -83,7 +83,6 @@ public final class HelmOperatorPropertiesResponse extends io.pulumi.resources.In
             this.chartVersion = chartVersion;
             return this;
         }
-
         public HelmOperatorPropertiesResponse build() {
             return new HelmOperatorPropertiesResponse(chartValues, chartVersion);
         }

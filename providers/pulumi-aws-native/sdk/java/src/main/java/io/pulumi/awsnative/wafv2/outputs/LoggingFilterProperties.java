@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationLoggingFilterPropertiesDefaultBehavior;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class LoggingFilterProperties {
     /**
      * Default handling for logs that don't match any of the specified filtering conditions.
      * 
-     */
+    */
     public LoggingConfigurationLoggingFilterPropertiesDefaultBehavior getDefaultBehavior() {
         return this.defaultBehavior;
     }
     /**
      * The filters that you want to apply to the logs.
      * 
-     */
+    */
     public List<LoggingConfigurationFilter> getFilters() {
         return this.filters;
     }
@@ -76,7 +76,6 @@ public final class LoggingFilterProperties {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
         public LoggingFilterProperties build() {
             return new LoggingFilterProperties(defaultBehavior, filters);
         }

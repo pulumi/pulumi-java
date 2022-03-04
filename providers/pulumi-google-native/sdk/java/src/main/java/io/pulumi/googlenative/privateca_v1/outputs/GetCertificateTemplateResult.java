@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateExtensionConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateIdentityConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.X509ParametersResponse;
@@ -77,56 +77,56 @@ public final class GetCertificateTemplateResult {
     /**
      * The time at which this CertificateTemplate was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. A human-readable description of scenarios this template is intended for.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
      * 
-     */
+    */
     public CertificateIdentityConstraintsResponse getIdentityConstraints() {
         return this.identityConstraints;
     }
     /**
      * Optional. Labels with user-defined metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
      * 
-     */
+    */
     public CertificateExtensionConstraintsResponse getPassthroughExtensions() {
         return this.passthroughExtensions;
     }
     /**
      * Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
      * 
-     */
+    */
     public X509ParametersResponse getPredefinedValues() {
         return this.predefinedValues;
     }
     /**
      * The time at which this CertificateTemplate was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -204,7 +204,6 @@ public final class GetCertificateTemplateResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCertificateTemplateResult build() {
             return new GetCertificateTemplateResult(createTime, description, identityConstraints, labels, name, passthroughExtensions, predefinedValues, updateTime);
         }

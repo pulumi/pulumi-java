@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class X12MessageFilterResponse {
     /**
      * The message filter type.
      * 
-     */
+    */
     public String getMessageFilterType() {
         return this.messageFilterType;
     }
@@ -52,7 +52,6 @@ public final class X12MessageFilterResponse {
             this.messageFilterType = Objects.requireNonNull(messageFilterType);
             return this;
         }
-
         public X12MessageFilterResponse build() {
             return new X12MessageFilterResponse(messageFilterType);
         }

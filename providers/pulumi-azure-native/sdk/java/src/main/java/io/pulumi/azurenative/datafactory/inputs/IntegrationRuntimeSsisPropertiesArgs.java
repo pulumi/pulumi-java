@@ -16,7 +16,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeSsisCatalogInf
 import io.pulumi.azurenative.datafactory.inputs.PackageStoreArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="catalogInfo")
-    private final @Nullable Input<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo;
+      private final @Nullable Input<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo;
 
     public Input<IntegrationRuntimeSsisCatalogInfoArgs> getCatalogInfo() {
         return this.catalogInfo == null ? Input.empty() : this.catalogInfo;
@@ -48,7 +48,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -59,7 +59,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="customSetupScriptProperties")
-    private final @Nullable Input<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties;
+      private final @Nullable Input<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties;
 
     public Input<IntegrationRuntimeCustomSetupScriptPropertiesArgs> getCustomSetupScriptProperties() {
         return this.customSetupScriptProperties == null ? Input.empty() : this.customSetupScriptProperties;
@@ -70,7 +70,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dataProxyProperties")
-    private final @Nullable Input<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties;
+      private final @Nullable Input<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties;
 
     public Input<IntegrationRuntimeDataProxyPropertiesArgs> getDataProxyProperties() {
         return this.dataProxyProperties == null ? Input.empty() : this.dataProxyProperties;
@@ -81,7 +81,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="edition")
-    private final @Nullable Input<Either<String,IntegrationRuntimeEdition>> edition;
+      private final @Nullable Input<Either<String,IntegrationRuntimeEdition>> edition;
 
     public Input<Either<String,IntegrationRuntimeEdition>> getEdition() {
         return this.edition == null ? Input.empty() : this.edition;
@@ -92,7 +92,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="expressCustomSetupProperties")
-    private final @Nullable Input<List<Object>> expressCustomSetupProperties;
+      private final @Nullable Input<List<Object>> expressCustomSetupProperties;
 
     public Input<List<Object>> getExpressCustomSetupProperties() {
         return this.expressCustomSetupProperties == null ? Input.empty() : this.expressCustomSetupProperties;
@@ -103,7 +103,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable Input<Either<String,IntegrationRuntimeLicenseType>> licenseType;
+      private final @Nullable Input<Either<String,IntegrationRuntimeLicenseType>> licenseType;
 
     public Input<Either<String,IntegrationRuntimeLicenseType>> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -114,7 +114,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="packageStores")
-    private final @Nullable Input<List<PackageStoreArgs>> packageStores;
+      private final @Nullable Input<List<PackageStoreArgs>> packageStores;
 
     public Input<List<PackageStoreArgs>> getPackageStores() {
         return this.packageStores == null ? Input.empty() : this.packageStores;
@@ -263,7 +263,6 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
             this.packageStores = Input.ofNullable(packageStores);
             return this;
         }
-
         public IntegrationRuntimeSsisPropertiesArgs build() {
             return new IntegrationRuntimeSsisPropertiesArgs(catalogInfo, credential, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType, packageStores);
         }

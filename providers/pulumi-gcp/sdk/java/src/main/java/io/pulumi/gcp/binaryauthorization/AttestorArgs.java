@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNoteArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestationAuthorityNote", required=true)
-    private final Input<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote;
+      private final Input<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote;
 
     public Input<AttestorAttestationAuthorityNoteArgs> getAttestationAuthorityNote() {
         return this.attestationAuthorityNote;
@@ -33,7 +33,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -145,7 +145,6 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public AttestorArgs build() {
             return new AttestorArgs(attestationAuthorityNote, description, name, project);
         }

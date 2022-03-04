@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class SoftwareRecipeStepExtractArchiveResponse {
     /**
      * The id of the relevant artifact in the recipe.
      * 
-     */
+    */
     public String getArtifactId() {
         return this.artifactId;
     }
     /**
      * Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
      * 
-     */
+    */
     public String getDestination() {
         return this.destination;
     }
     /**
      * The type of the archive to extract.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -95,7 +95,6 @@ public final class SoftwareRecipeStepExtractArchiveResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SoftwareRecipeStepExtractArchiveResponse build() {
             return new SoftwareRecipeStepExtractArchiveResponse(artifactId, destination, type);
         }

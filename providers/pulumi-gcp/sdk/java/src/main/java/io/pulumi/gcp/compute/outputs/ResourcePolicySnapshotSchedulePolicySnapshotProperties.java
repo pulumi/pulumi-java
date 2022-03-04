@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -43,14 +43,14 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     /**
      * Whether to perform a 'guest aware' snapshot.
      * 
-     */
+    */
     public Optional<Boolean> getGuestFlush() {
         return Optional.ofNullable(this.guestFlush);
     }
     /**
      * A set of key-value pairs.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
@@ -58,7 +58,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
      * Cloud Storage bucket location to store the auto snapshot
      * (regional or multi-regional)
      * 
-     */
+    */
     public Optional<String> getStorageLocations() {
         return Optional.ofNullable(this.storageLocations);
     }
@@ -101,7 +101,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
             this.storageLocations = storageLocations;
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicySnapshotProperties build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotProperties(guestFlush, labels, storageLocations);
         }

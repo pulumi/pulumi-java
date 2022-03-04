@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WorkflowTemplateJobPrestoJobLoggingConfig {
     /**
      * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
      * 
-     */
+    */
     public Map<String,String> getDriverLogLevels() {
         return this.driverLogLevels == null ? Map.of() : this.driverLogLevels;
     }
@@ -54,7 +54,6 @@ public final class WorkflowTemplateJobPrestoJobLoggingConfig {
             this.driverLogLevels = driverLogLevels;
             return this;
         }
-
         public WorkflowTemplateJobPrestoJobLoggingConfig build() {
             return new WorkflowTemplateJobPrestoJobLoggingConfig(driverLogLevels);
         }

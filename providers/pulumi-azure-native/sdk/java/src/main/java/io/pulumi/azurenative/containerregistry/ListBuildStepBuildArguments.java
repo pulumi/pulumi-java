@@ -6,21 +6,41 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerregistry.inputs.ListBuildStepBuildArgumentsArgs;
 import io.pulumi.azurenative.containerregistry.outputs.ListBuildStepBuildArgumentsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBuildStepBuildArguments {
-/**
- * The list of build arguments for a build step.
+    private ListBuildStepBuildArguments() {}
+    public interface BuilderApplicator {
+        public void apply(ListBuildStepBuildArgumentsArgs.Builder a);
+    }
+    private static ListBuildStepBuildArgumentsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListBuildStepBuildArgumentsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of build arguments for a build step.
  * API Version: 2018-02-01-preview.
  * 
- *
- * The list of build arguments for a build step.
+     *
+     * The list of build arguments for a build step.
  * 
- */
+     */
+    public static CompletableFuture<ListBuildStepBuildArgumentsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of build arguments for a build step.
+     * API Version: 2018-02-01-preview.
+     * 
+     *
+         * The list of build arguments for a build step.
+     * 
+     */
     public static CompletableFuture<ListBuildStepBuildArgumentsResult> invokeAsync(ListBuildStepBuildArgumentsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listBuildStepBuildArguments", TypeShape.of(ListBuildStepBuildArgumentsResult.class), args == null ? ListBuildStepBuildArgumentsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -67,14 +67,14 @@ public final class GetOrganizationResult {
     /**
      * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The Google for Work customer ID of the Organization.
      * 
-     */
+    */
     public String getDirectoryCustomerId() {
         return this.directoryCustomerId;
     }
@@ -84,28 +84,28 @@ public final class GetOrganizationResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Organization's current lifecycle state.
      * 
-     */
+    */
     public String getLifecycleState() {
         return this.lifecycleState;
     }
     /**
      * The resource name of the Organization in the form `organizations/{organization_id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Organization ID.
      * 
-     */
+    */
     public String getOrgId() {
         return this.orgId;
     }
@@ -186,7 +186,6 @@ public final class GetOrganizationResult {
             this.organization = organization;
             return this;
         }
-
         public GetOrganizationResult build() {
             return new GetOrganizationResult(createTime, directoryCustomerId, domain, id, lifecycleState, name, orgId, organization);
         }

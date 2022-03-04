@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigComparisonExpressionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="and")
-    private final @Nullable List<ReportConfigFilterResponse> and;
+      private final @Nullable List<ReportConfigFilterResponse> and;
 
     public List<ReportConfigFilterResponse> getAnd() {
         return this.and == null ? List.of() : this.and;
@@ -35,7 +35,7 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable ReportConfigComparisonExpressionResponse dimensions;
+      private final @Nullable ReportConfigComparisonExpressionResponse dimensions;
 
     public Optional<ReportConfigComparisonExpressionResponse> getDimensions() {
         return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
@@ -46,7 +46,7 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="or")
-    private final @Nullable List<ReportConfigFilterResponse> or;
+      private final @Nullable List<ReportConfigFilterResponse> or;
 
     public List<ReportConfigFilterResponse> getOr() {
         return this.or == null ? List.of() : this.or;
@@ -57,7 +57,7 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tagKey")
-    private final @Nullable ReportConfigComparisonExpressionResponse tagKey;
+      private final @Nullable ReportConfigComparisonExpressionResponse tagKey;
 
     public Optional<ReportConfigComparisonExpressionResponse> getTagKey() {
         return this.tagKey == null ? Optional.empty() : Optional.ofNullable(this.tagKey);
@@ -68,7 +68,7 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tagValue")
-    private final @Nullable ReportConfigComparisonExpressionResponse tagValue;
+      private final @Nullable ReportConfigComparisonExpressionResponse tagValue;
 
     public Optional<ReportConfigComparisonExpressionResponse> getTagValue() {
         return this.tagValue == null ? Optional.empty() : Optional.ofNullable(this.tagValue);
@@ -79,7 +79,7 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable ReportConfigComparisonExpressionResponse tags;
+      private final @Nullable ReportConfigComparisonExpressionResponse tags;
 
     public Optional<ReportConfigComparisonExpressionResponse> getTags() {
         return this.tags == null ? Optional.empty() : Optional.ofNullable(this.tags);
@@ -168,7 +168,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
             this.tags = tags;
             return this;
         }
-
         public ReportConfigFilterResponse build() {
             return new ReportConfigFilterResponse(and, dimensions, or, tagKey, tagValue, tags);
         }

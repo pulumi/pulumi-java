@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -30,7 +30,7 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -89,7 +89,6 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public NoteRelatedUrlArgs build() {
             return new NoteRelatedUrlArgs(label, url);
         }

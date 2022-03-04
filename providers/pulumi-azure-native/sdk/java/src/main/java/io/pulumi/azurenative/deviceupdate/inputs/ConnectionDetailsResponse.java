@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final String groupId;
+      private final String groupId;
 
     public String getGroupId() {
         return this.groupId;
@@ -32,7 +32,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -43,7 +43,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="linkIdentifier", required=true)
-    private final String linkIdentifier;
+      private final String linkIdentifier;
 
     public String getLinkIdentifier() {
         return this.linkIdentifier;
@@ -54,7 +54,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="memberName", required=true)
-    private final String memberName;
+      private final String memberName;
 
     public String getMemberName() {
         return this.memberName;
@@ -65,7 +65,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="privateIpAddress", required=true)
-    private final String privateIpAddress;
+      private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
@@ -144,7 +144,6 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public ConnectionDetailsResponse build() {
             return new ConnectionDetailsResponse(groupId, id, linkIdentifier, memberName, privateIpAddress);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class StorageProfileResponse {
     /**
      * Size of file share
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeInGB() {
         return Optional.ofNullable(this.diskSizeInGB);
     }
     /**
      * Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
      * 
-     */
+    */
     public Optional<String> getFileShareName() {
         return Optional.ofNullable(this.fileShareName);
     }
     /**
      * Full resource ID of storage account.
      * 
-     */
+    */
     public Optional<String> getStorageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }
@@ -98,7 +98,6 @@ public final class StorageProfileResponse {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(diskSizeInGB, fileShareName, storageAccountResourceId);
         }

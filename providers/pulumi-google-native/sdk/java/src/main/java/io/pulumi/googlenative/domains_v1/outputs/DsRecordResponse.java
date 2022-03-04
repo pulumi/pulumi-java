@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class DsRecordResponse {
     /**
      * The algorithm used to generate the referenced DNSKEY.
      * 
-     */
+    */
     public String getAlgorithm() {
         return this.algorithm;
     }
     /**
      * The digest generated from the referenced DNSKEY.
      * 
-     */
+    */
     public String getDigest() {
         return this.digest;
     }
     /**
      * The hash function used to generate the digest of the referenced DNSKEY.
      * 
-     */
+    */
     public String getDigestType() {
         return this.digestType;
     }
     /**
      * The key tag of the record. Must be set in range 0 -- 65535.
      * 
-     */
+    */
     public Integer getKeyTag() {
         return this.keyTag;
     }
@@ -117,7 +117,6 @@ public final class DsRecordResponse {
             this.keyTag = Objects.requireNonNull(keyTag);
             return this;
         }
-
         public DsRecordResponse build() {
             return new DsRecordResponse(algorithm, digest, digestType, keyTag);
         }

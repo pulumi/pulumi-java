@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class EventSource {
     /**
      * Component from which the event is generated.
      * 
-     */
+    */
     public Optional<String> getComponent() {
         return Optional.ofNullable(this.component);
     }
     /**
      * Node name on which the event is generated.
      * 
-     */
+    */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
@@ -76,7 +76,6 @@ public final class EventSource {
             this.host = host;
             return this;
         }
-
         public EventSource build() {
             return new EventSource(component, host);
         }

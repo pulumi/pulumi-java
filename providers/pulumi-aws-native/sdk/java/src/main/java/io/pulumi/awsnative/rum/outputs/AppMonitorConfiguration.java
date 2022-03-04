@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.rum.outputs;
 
 import io.pulumi.awsnative.rum.enums.AppMonitorTelemetry;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -86,63 +86,63 @@ public final class AppMonitorConfiguration {
     /**
      * If you set this to true, the RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
      * 
-     */
+    */
     public Optional<Boolean> getAllowCookies() {
         return Optional.ofNullable(this.allowCookies);
     }
     /**
      * If you set this to true, RUM enables xray tracing for the user sessions that RUM samples. RUM adds an xray trace header to allowed HTTP requests. It also records an xray segment for allowed HTTP requests. You can see traces and segments from these user sessions in the xray console and the CW ServiceLens console.
      * 
-     */
+    */
     public Optional<Boolean> getEnableXRay() {
         return Optional.ofNullable(this.enableXRay);
     }
     /**
      * A list of URLs in your website or application to exclude from RUM data collection. You can't include both ExcludedPages and IncludedPages in the same operation.
      * 
-     */
+    */
     public List<String> getExcludedPages() {
         return this.excludedPages == null ? List.of() : this.excludedPages;
     }
     /**
      * A list of pages in the RUM console that are to be displayed with a favorite icon.
      * 
-     */
+    */
     public List<String> getFavoritePages() {
         return this.favoritePages == null ? List.of() : this.favoritePages;
     }
     /**
      * The ARN of the guest IAM role that is attached to the identity pool that is used to authorize the sending of data to RUM.
      * 
-     */
+    */
     public Optional<String> getGuestRoleArn() {
         return Optional.ofNullable(this.guestRoleArn);
     }
     /**
      * The ID of the identity pool that is used to authorize the sending of data to RUM.
      * 
-     */
+    */
     public Optional<String> getIdentityPoolId() {
         return Optional.ofNullable(this.identityPoolId);
     }
     /**
      * If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can't include both ExcludedPages and IncludedPages in the same operation.
      * 
-     */
+    */
     public List<String> getIncludedPages() {
         return this.includedPages == null ? List.of() : this.includedPages;
     }
     /**
      * Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. If you omit this parameter, the default of 10 is used.
      * 
-     */
+    */
     public Optional<Double> getSessionSampleRate() {
         return Optional.ofNullable(this.sessionSampleRate);
     }
     /**
      * An array that lists the types of telemetry data that this app monitor is to collect.
      * 
-     */
+    */
     public List<AppMonitorTelemetry> getTelemetries() {
         return this.telemetries == null ? List.of() : this.telemetries;
     }
@@ -227,7 +227,6 @@ public final class AppMonitorConfiguration {
             this.telemetries = telemetries;
             return this;
         }
-
         public AppMonitorConfiguration build() {
             return new AppMonitorConfiguration(allowCookies, enableXRay, excludedPages, favoritePages, guestRoleArn, identityPoolId, includedPages, sessionSampleRate, telemetries);
         }

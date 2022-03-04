@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,14 +44,14 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
      * The [RFC 3339](https://tools.ietf.org/html/rfc3339)
      * formatted date time string indicating when this whitelist expires.
      * 
-     */
+    */
     public Optional<String> getExpirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
     /**
      * A name for this whitelist entry.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -60,7 +60,7 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
      * access this instance. Must be set even if other two attributes are not for
      * the whitelist to become active.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -103,7 +103,6 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork build() {
             return new DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork(expirationTime, name, value);
         }

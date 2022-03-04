@@ -5,8 +5,8 @@ package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagKeyIamMemberArgs;
 import io.pulumi.gcp.tags.inputs.TagKeyIamMemberState;
@@ -117,6 +117,37 @@ public class TagKeyIamMember extends io.pulumi.resources.CustomResource {
         return this.tagKey;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TagKeyIamMemberArgs.Builder a);
+    }
+    private static io.pulumi.gcp.tags.TagKeyIamMemberArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.tags.TagKeyIamMemberArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TagKeyIamMember(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TagKeyIamMember(String name) {
+        this(name, TagKeyIamMemberArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TagKeyIamMember(String name, TagKeyIamMemberArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +46,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4Config {
      * known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp),
      * or the IP protocol number.
      * 
-     */
+    */
     public String getIpProtocol() {
         return this.ipProtocol;
     }
@@ -58,7 +58,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4Config {
      * Example inputs include: ["22"], ["80","443"], and
      * ["12345-12349"].
      * 
-     */
+    */
     public List<String> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }
@@ -94,7 +94,6 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4Config {
             this.ports = ports;
             return this;
         }
-
         public OrganizationSecurityPolicyRuleMatchConfigLayer4Config build() {
             return new OrganizationSecurityPolicyRuleMatchConfigLayer4Config(ipProtocol, ports);
         }

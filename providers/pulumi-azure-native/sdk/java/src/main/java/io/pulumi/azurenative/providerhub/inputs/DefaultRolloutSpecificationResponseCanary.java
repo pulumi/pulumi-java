@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class DefaultRolloutSpecificationResponseCanary extends io.pulumi.r
     public static final DefaultRolloutSpecificationResponseCanary Empty = new DefaultRolloutSpecificationResponseCanary();
 
     @InputImport(name="regions")
-    private final @Nullable List<String> regions;
+      private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
     @InputImport(name="skipRegions")
-    private final @Nullable List<String> skipRegions;
+      private final @Nullable List<String> skipRegions;
 
     public List<String> getSkipRegions() {
         return this.skipRegions == null ? List.of() : this.skipRegions;
@@ -72,7 +72,6 @@ public final class DefaultRolloutSpecificationResponseCanary extends io.pulumi.r
             this.skipRegions = skipRegions;
             return this;
         }
-
         public DefaultRolloutSpecificationResponseCanary build() {
             return new DefaultRolloutSpecificationResponseCanary(regions, skipRegions);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayHeaderConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayUrlConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse {
     /**
      * Request Header Actions in the Action Set.
      * 
-     */
+    */
     public List<ApplicationGatewayHeaderConfigurationResponse> getRequestHeaderConfigurations() {
         return this.requestHeaderConfigurations == null ? List.of() : this.requestHeaderConfigurations;
     }
     /**
      * Response Header Actions in the Action Set.
      * 
-     */
+    */
     public List<ApplicationGatewayHeaderConfigurationResponse> getResponseHeaderConfigurations() {
         return this.responseHeaderConfigurations == null ? List.of() : this.responseHeaderConfigurations;
     }
     /**
      * Url Configuration Action in the Action Set.
      * 
-     */
+    */
     public Optional<ApplicationGatewayUrlConfigurationResponse> getUrlConfiguration() {
         return Optional.ofNullable(this.urlConfiguration);
     }
@@ -99,7 +99,6 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse {
             this.urlConfiguration = urlConfiguration;
             return this;
         }
-
         public ApplicationGatewayRewriteRuleActionSetResponse build() {
             return new ApplicationGatewayRewriteRuleActionSetResponse(requestHeaderConfigurations, responseHeaderConfigurations, urlConfiguration);
         }

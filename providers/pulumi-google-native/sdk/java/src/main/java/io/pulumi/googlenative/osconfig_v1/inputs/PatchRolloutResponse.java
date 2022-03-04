@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.FixedOrPercentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PatchRolloutResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disruptionBudget", required=true)
-    private final FixedOrPercentResponse disruptionBudget;
+      private final FixedOrPercentResponse disruptionBudget;
 
     public FixedOrPercentResponse getDisruptionBudget() {
         return this.disruptionBudget;
@@ -33,7 +33,7 @@ public final class PatchRolloutResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -82,7 +82,6 @@ public final class PatchRolloutResponse extends io.pulumi.resources.InvokeArgs {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public PatchRolloutResponse build() {
             return new PatchRolloutResponse(disruptionBudget, mode);
         }

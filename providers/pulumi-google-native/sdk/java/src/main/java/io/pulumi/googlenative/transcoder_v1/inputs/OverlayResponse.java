@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.ImageResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="animations", required=true)
-    private final List<AnimationResponse> animations;
+      private final List<AnimationResponse> animations;
 
     public List<AnimationResponse> getAnimations() {
         return this.animations;
@@ -34,7 +34,7 @@ public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="image", required=true)
-    private final ImageResponse image;
+      private final ImageResponse image;
 
     public ImageResponse getImage() {
         return this.image;
@@ -83,7 +83,6 @@ public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public OverlayResponse build() {
             return new OverlayResponse(animations, image);
         }

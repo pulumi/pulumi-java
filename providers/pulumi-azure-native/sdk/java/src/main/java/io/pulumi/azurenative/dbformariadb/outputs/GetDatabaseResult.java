@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbformariadb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class GetDatabaseResult {
     /**
      * The charset of the database.
      * 
-     */
+    */
     public Optional<String> getCharset() {
         return Optional.ofNullable(this.charset);
     }
     /**
      * The collation of the database.
      * 
-     */
+    */
     public Optional<String> getCollation() {
         return Optional.ofNullable(this.collation);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(charset, collation, id, name, type);
         }

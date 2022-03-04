@@ -6,21 +6,41 @@ package io.pulumi.azurenative.hybridnetwork;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hybridnetwork.inputs.ListDeviceRegistrationKeyArgs;
 import io.pulumi.azurenative.hybridnetwork.outputs.ListDeviceRegistrationKeyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDeviceRegistrationKey {
-/**
- * The device registration key.
+    private ListDeviceRegistrationKey() {}
+    public interface BuilderApplicator {
+        public void apply(ListDeviceRegistrationKeyArgs.Builder a);
+    }
+    private static ListDeviceRegistrationKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListDeviceRegistrationKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The device registration key.
  * API Version: 2020-01-01-preview.
  * 
- *
- * The device registration key.
+     *
+     * The device registration key.
  * 
- */
+     */
+    public static CompletableFuture<ListDeviceRegistrationKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The device registration key.
+     * API Version: 2020-01-01-preview.
+     * 
+     *
+         * The device registration key.
+     * 
+     */
     public static CompletableFuture<ListDeviceRegistrationKeyResult> invokeAsync(ListDeviceRegistrationKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:listDeviceRegistrationKey", TypeShape.of(ListDeviceRegistrationKeyResult.class), args == null ? ListDeviceRegistrationKeyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="elasticCloudSsoDefaultUrl", required=true)
-    private final String elasticCloudSsoDefaultUrl;
+      private final String elasticCloudSsoDefaultUrl;
 
     public String getElasticCloudSsoDefaultUrl() {
         return this.elasticCloudSsoDefaultUrl;
@@ -32,7 +32,7 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="emailAddress", required=true)
-    private final String emailAddress;
+      private final String emailAddress;
 
     public String getEmailAddress() {
         return this.emailAddress;
@@ -43,7 +43,7 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -102,7 +102,6 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ElasticCloudUserResponse build() {
             return new ElasticCloudUserResponse(elasticCloudSsoDefaultUrl, emailAddress, id);
         }

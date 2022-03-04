@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ConnectToSourcePostgreSqlSyncTaskInputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends io.pu
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<ConnectToSourcePostgreSqlSyncTaskInputArgs> input;
+      private final @Nullable Input<ConnectToSourcePostgreSqlSyncTaskInputArgs> input;
 
     public Input<ConnectToSourcePostgreSqlSyncTaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends io.pu
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final Input<String> taskType;
+      private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;
@@ -95,7 +95,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends io.pu
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }
-
         public ConnectToSourcePostgreSqlSyncTaskPropertiesArgs build() {
             return new ConnectToSourcePostgreSqlSyncTaskPropertiesArgs(input, taskType);
         }

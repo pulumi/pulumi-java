@@ -4,7 +4,7 @@
 package io.pulumi.gcp.securitycenter;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.securitycenter.inputs.NotificationConfigStreamingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configId", required=true)
-    private final Input<String> configId;
+      private final Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId;
@@ -31,7 +31,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="organization", required=true)
-    private final Input<String> organization;
+      private final Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization;
@@ -55,7 +55,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-    private final Input<String> pubsubTopic;
+      private final Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic;
@@ -67,7 +67,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="streamingConfig", required=true)
-    private final Input<NotificationConfigStreamingConfigArgs> streamingConfig;
+      private final Input<NotificationConfigStreamingConfigArgs> streamingConfig;
 
     public Input<NotificationConfigStreamingConfigArgs> getStreamingConfig() {
         return this.streamingConfig;
@@ -171,7 +171,6 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             this.streamingConfig = Input.of(Objects.requireNonNull(streamingConfig));
             return this;
         }
-
         public NotificationConfigArgs build() {
             return new NotificationConfigArgs(configId, description, organization, pubsubTopic, streamingConfig);
         }

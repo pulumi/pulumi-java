@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ClusterDnsConfig {
     /**
      * Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
      * 
-     */
+    */
     public Optional<String> getClusterDns() {
         return Optional.ofNullable(this.clusterDns);
     }
     /**
      * The suffix used for all cluster service records.
      * 
-     */
+    */
     public Optional<String> getClusterDnsDomain() {
         return Optional.ofNullable(this.clusterDnsDomain);
     }
     /**
      * The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
      * 
-     */
+    */
     public Optional<String> getClusterDnsScope() {
         return Optional.ofNullable(this.clusterDnsScope);
     }
@@ -97,7 +97,6 @@ public final class ClusterDnsConfig {
             this.clusterDnsScope = clusterDnsScope;
             return this;
         }
-
         public ClusterDnsConfig build() {
             return new ClusterDnsConfig(clusterDns, clusterDnsDomain, clusterDnsScope);
         }

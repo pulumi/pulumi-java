@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GetTagResult {
     /**
      * The name of the tag, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the version the tag refers to, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/sha256:5243811" If the package or version ID parts contain slashes, the slashes are escaped.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -74,7 +74,6 @@ public final class GetTagResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetTagResult build() {
             return new GetTagResult(name, version);
         }

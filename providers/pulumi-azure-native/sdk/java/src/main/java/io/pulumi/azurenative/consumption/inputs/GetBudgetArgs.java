@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="budgetName", required=true)
-    private final String budgetName;
+      private final String budgetName;
 
     public String getBudgetName() {
         return this.budgetName;
@@ -28,7 +28,7 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -77,7 +77,6 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetBudgetArgs build() {
             return new GetBudgetArgs(budgetName, scope);
         }

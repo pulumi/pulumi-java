@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.translate_v3beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.translate_v3beta1.inputs.GlossaryInputConfigArgs;
 import io.pulumi.googlenative.translate_v3beta1.inputs.LanguageCodePairArgs;
 import io.pulumi.googlenative.translate_v3beta1.inputs.LanguageCodesSetArgs;
@@ -22,7 +22,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputConfig", required=true)
-    private final Input<GlossaryInputConfigArgs> inputConfig;
+      private final Input<GlossaryInputConfigArgs> inputConfig;
 
     public Input<GlossaryInputConfigArgs> getInputConfig() {
         return this.inputConfig;
@@ -33,7 +33,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCodesSet")
-    private final @Nullable Input<LanguageCodesSetArgs> languageCodesSet;
+      private final @Nullable Input<LanguageCodesSetArgs> languageCodesSet;
 
     public Input<LanguageCodesSetArgs> getLanguageCodesSet() {
         return this.languageCodesSet == null ? Input.empty() : this.languageCodesSet;
@@ -44,14 +44,14 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languagePair")
-    private final @Nullable Input<LanguageCodePairArgs> languagePair;
+      private final @Nullable Input<LanguageCodePairArgs> languagePair;
 
     public Input<LanguageCodePairArgs> getLanguagePair() {
         return this.languagePair == null ? Input.empty() : this.languagePair;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -62,14 +62,14 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -188,7 +188,6 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public GlossaryArgs build() {
             return new GlossaryArgs(inputConfig, languageCodesSet, languagePair, location, name, project);
         }

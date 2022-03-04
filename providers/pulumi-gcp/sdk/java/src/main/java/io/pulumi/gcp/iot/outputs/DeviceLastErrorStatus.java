@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -77,7 +77,6 @@ public final class DeviceLastErrorStatus {
             this.number = number;
             return this;
         }
-
         public DeviceLastErrorStatus build() {
             return new DeviceLastErrorStatus(details, message, number);
         }

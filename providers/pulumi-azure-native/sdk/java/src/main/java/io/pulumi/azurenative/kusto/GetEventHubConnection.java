@@ -6,21 +6,41 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kusto.inputs.GetEventHubConnectionArgs;
 import io.pulumi.azurenative.kusto.outputs.GetEventHubConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventHubConnection {
-/**
- * Class representing an event hub connection.
+    private GetEventHubConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventHubConnectionArgs.Builder a);
+    }
+    private static GetEventHubConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventHubConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing an event hub connection.
  * API Version: 2018-09-07-preview.
  * 
- *
- * Class representing an event hub connection.
+     *
+     * Class representing an event hub connection.
  * 
- */
+     */
+    public static CompletableFuture<GetEventHubConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing an event hub connection.
+     * API Version: 2018-09-07-preview.
+     * 
+     *
+         * Class representing an event hub connection.
+     * 
+     */
     public static CompletableFuture<GetEventHubConnectionResult> invokeAsync(GetEventHubConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getEventHubConnection", TypeShape.of(GetEventHubConnectionResult.class), args == null ? GetEventHubConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

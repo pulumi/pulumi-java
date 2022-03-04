@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -61,42 +61,42 @@ public final class CloudTieringSpaceSavingsResponse {
     /**
      * Cached content size on the server
      * 
-     */
+    */
     public Double getCachedSizeBytes() {
         return this.cachedSizeBytes;
     }
     /**
      * Last updated timestamp
      * 
-     */
+    */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Count of bytes saved on the server
      * 
-     */
+    */
     public Double getSpaceSavingsBytes() {
         return this.spaceSavingsBytes;
     }
     /**
      * Percentage of cached size over total size
      * 
-     */
+    */
     public Integer getSpaceSavingsPercent() {
         return this.spaceSavingsPercent;
     }
     /**
      * Total size of content in the azure file share
      * 
-     */
+    */
     public Double getTotalSizeCloudBytes() {
         return this.totalSizeCloudBytes;
     }
     /**
      * Volume size
      * 
-     */
+    */
     public Double getVolumeSizeBytes() {
         return this.volumeSizeBytes;
     }
@@ -160,7 +160,6 @@ public final class CloudTieringSpaceSavingsResponse {
             this.volumeSizeBytes = Objects.requireNonNull(volumeSizeBytes);
             return this;
         }
-
         public CloudTieringSpaceSavingsResponse build() {
             return new CloudTieringSpaceSavingsResponse(cachedSizeBytes, lastUpdatedTimestamp, spaceSavingsBytes, spaceSavingsPercent, totalSizeCloudBytes, volumeSizeBytes);
         }

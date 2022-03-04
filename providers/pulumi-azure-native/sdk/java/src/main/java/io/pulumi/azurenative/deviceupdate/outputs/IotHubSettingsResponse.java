@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class IotHubSettingsResponse {
     /**
      * EventHub connection string.
      * 
-     */
+    */
     public Optional<String> getEventHubConnectionString() {
         return Optional.ofNullable(this.eventHubConnectionString);
     }
     /**
      * IoTHub connection string.
      * 
-     */
+    */
     public Optional<String> getIoTHubConnectionString() {
         return Optional.ofNullable(this.ioTHubConnectionString);
     }
     /**
      * IoTHub resource ID
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
@@ -97,7 +97,6 @@ public final class IotHubSettingsResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public IotHubSettingsResponse build() {
             return new IotHubSettingsResponse(eventHubConnectionString, ioTHubConnectionString, resourceId);
         }

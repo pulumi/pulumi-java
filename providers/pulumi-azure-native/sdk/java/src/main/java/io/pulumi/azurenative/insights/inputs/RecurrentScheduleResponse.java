@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class RecurrentScheduleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="days", required=true)
-    private final List<String> days;
+      private final List<String> days;
 
     public List<String> getDays() {
         return this.days;
@@ -34,7 +34,7 @@ public final class RecurrentScheduleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="hours", required=true)
-    private final List<Integer> hours;
+      private final List<Integer> hours;
 
     public List<Integer> getHours() {
         return this.hours;
@@ -45,7 +45,7 @@ public final class RecurrentScheduleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="minutes", required=true)
-    private final List<Integer> minutes;
+      private final List<Integer> minutes;
 
     public List<Integer> getMinutes() {
         return this.minutes;
@@ -56,7 +56,7 @@ public final class RecurrentScheduleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="timeZone", required=true)
-    private final String timeZone;
+      private final String timeZone;
 
     public String getTimeZone() {
         return this.timeZone;
@@ -125,7 +125,6 @@ public final class RecurrentScheduleResponse extends io.pulumi.resources.InvokeA
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public RecurrentScheduleResponse build() {
             return new RecurrentScheduleResponse(days, hours, minutes, timeZone);
         }

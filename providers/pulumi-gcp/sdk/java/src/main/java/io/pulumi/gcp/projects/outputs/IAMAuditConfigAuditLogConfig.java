@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class IAMAuditConfigAuditLogConfig {
     /**
      * Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
      * 
-     */
+    */
     public List<String> getExemptedMembers() {
         return this.exemptedMembers == null ? List.of() : this.exemptedMembers;
     }
     /**
      * Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
      * 
-     */
+    */
     public String getLogType() {
         return this.logType;
     }
@@ -76,7 +76,6 @@ public final class IAMAuditConfigAuditLogConfig {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public IAMAuditConfigAuditLogConfig build() {
             return new IAMAuditConfigAuditLogConfig(exemptedMembers, logType);
         }

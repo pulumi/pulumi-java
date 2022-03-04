@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class InputDataBindingResponse {
     /**
      * ARM resource ID of the registered dataVersion.
      * 
-     */
+    */
     public Optional<String> getDataId() {
         return Optional.ofNullable(this.dataId);
     }
     /**
      * Mechanism for accessing the data artifact.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * Location of data inside the container process.
      * 
-     */
+    */
     public Optional<String> getPathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }
@@ -97,7 +97,6 @@ public final class InputDataBindingResponse {
             this.pathOnCompute = pathOnCompute;
             return this;
         }
-
         public InputDataBindingResponse build() {
             return new InputDataBindingResponse(dataId, mode, pathOnCompute);
         }

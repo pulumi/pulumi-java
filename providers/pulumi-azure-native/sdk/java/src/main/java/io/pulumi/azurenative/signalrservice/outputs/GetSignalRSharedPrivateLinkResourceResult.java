@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.signalrservice.outputs;
 
 import io.pulumi.azurenative.signalrservice.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -83,63 +83,63 @@ public final class GetSignalRSharedPrivateLinkResourceResult {
     /**
      * The group id from the provider of resource the shared private link resource is for
      * 
-     */
+    */
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource id of the resource the shared private link resource is for
      * 
-     */
+    */
     public String getPrivateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
      * Provisioning state of the shared private link resource
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The request message for requesting approval of the shared private link resource
      * 
-     */
+    */
     public Optional<String> getRequestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
      * Status of the shared private link resource
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -224,7 +224,6 @@ public final class GetSignalRSharedPrivateLinkResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSignalRSharedPrivateLinkResourceResult build() {
             return new GetSignalRSharedPrivateLinkResourceResult(groupId, id, name, privateLinkResourceId, provisioningState, requestMessage, status, systemData, type);
         }

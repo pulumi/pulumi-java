@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final Input<String> clusterId;
+      private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;
@@ -34,7 +34,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionInfo", required=true)
-    private final Input<GameServerClusterConnectionInfoArgs> connectionInfo;
+      private final Input<GameServerClusterConnectionInfoArgs> connectionInfo;
 
     public Input<GameServerClusterConnectionInfoArgs> getConnectionInfo() {
         return this.connectionInfo;
@@ -45,7 +45,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -68,7 +68,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -80,7 +80,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -91,7 +91,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="realmId", required=true)
-    private final Input<String> realmId;
+      private final Input<String> realmId;
 
     public Input<String> getRealmId() {
         return this.realmId;
@@ -225,7 +225,6 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
             this.realmId = Input.of(Objects.requireNonNull(realmId));
             return this;
         }
-
         public GameServerClusterArgs build() {
             return new GameServerClusterArgs(clusterId, connectionInfo, description, labels, location, project, realmId);
         }

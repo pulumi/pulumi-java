@@ -11,7 +11,7 @@ import io.pulumi.azurenative.cognitiveservices.inputs.PrivateEndpointConnectionA
 import io.pulumi.azurenative.cognitiveservices.inputs.UserOwnedStorageArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="apiProperties")
-    private final @Nullable Input<CognitiveServicesAccountApiPropertiesArgs> apiProperties;
+      private final @Nullable Input<CognitiveServicesAccountApiPropertiesArgs> apiProperties;
 
     public Input<CognitiveServicesAccountApiPropertiesArgs> getApiProperties() {
         return this.apiProperties == null ? Input.empty() : this.apiProperties;
@@ -42,7 +42,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="customSubDomainName")
-    private final @Nullable Input<String> customSubDomainName;
+      private final @Nullable Input<String> customSubDomainName;
 
     public Input<String> getCustomSubDomainName() {
         return this.customSubDomainName == null ? Input.empty() : this.customSubDomainName;
@@ -53,7 +53,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<EncryptionArgs> encryption;
+      private final @Nullable Input<EncryptionArgs> encryption;
 
     public Input<EncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -64,7 +64,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="networkAcls")
-    private final @Nullable Input<NetworkRuleSetArgs> networkAcls;
+      private final @Nullable Input<NetworkRuleSetArgs> networkAcls;
 
     public Input<NetworkRuleSetArgs> getNetworkAcls() {
         return this.networkAcls == null ? Input.empty() : this.networkAcls;
@@ -75,7 +75,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="privateEndpointConnections")
-    private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+      private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Input<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
@@ -86,7 +86,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -97,7 +97,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="userOwnedStorage")
-    private final @Nullable Input<List<UserOwnedStorageArgs>> userOwnedStorage;
+      private final @Nullable Input<List<UserOwnedStorageArgs>> userOwnedStorage;
 
     public Input<List<UserOwnedStorageArgs>> getUserOwnedStorage() {
         return this.userOwnedStorage == null ? Input.empty() : this.userOwnedStorage;
@@ -231,7 +231,6 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
             this.userOwnedStorage = Input.ofNullable(userOwnedStorage);
             return this;
         }
-
         public CognitiveServicesAccountPropertiesArgs build() {
             return new CognitiveServicesAccountPropertiesArgs(apiProperties, customSubDomainName, encryption, networkAcls, privateEndpointConnections, publicNetworkAccess, userOwnedStorage);
         }

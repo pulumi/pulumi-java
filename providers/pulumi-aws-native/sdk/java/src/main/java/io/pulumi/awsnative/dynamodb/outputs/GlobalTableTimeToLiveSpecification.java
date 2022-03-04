@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class GlobalTableTimeToLiveSpecification {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GlobalTableTimeToLiveSpecification build() {
             return new GlobalTableTimeToLiveSpecification(attributeName, enabled);
         }

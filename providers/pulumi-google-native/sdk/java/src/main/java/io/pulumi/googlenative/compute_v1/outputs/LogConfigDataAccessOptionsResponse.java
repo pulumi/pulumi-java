@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class LogConfigDataAccessOptionsResponse {
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getLogMode() {
         return this.logMode;
     }
@@ -52,7 +52,6 @@ public final class LogConfigDataAccessOptionsResponse {
             this.logMode = Objects.requireNonNull(logMode);
             return this;
         }
-
         public LogConfigDataAccessOptionsResponse build() {
             return new LogConfigDataAccessOptionsResponse(logMode);
         }

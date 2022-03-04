@@ -148,7 +148,7 @@ import io.pulumi.azurenative.datafactory.inputs.XeroSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.XmlSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -169,7 +169,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataIntegrationUnits")
-    private final @Nullable Input<Object> dataIntegrationUnits;
+      private final @Nullable Input<Object> dataIntegrationUnits;
 
     public Input<Object> getDataIntegrationUnits() {
         return this.dataIntegrationUnits == null ? Input.empty() : this.dataIntegrationUnits;
@@ -180,7 +180,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -191,7 +191,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -202,7 +202,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableSkipIncompatibleRow")
-    private final @Nullable Input<Object> enableSkipIncompatibleRow;
+      private final @Nullable Input<Object> enableSkipIncompatibleRow;
 
     public Input<Object> getEnableSkipIncompatibleRow() {
         return this.enableSkipIncompatibleRow == null ? Input.empty() : this.enableSkipIncompatibleRow;
@@ -213,7 +213,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStaging")
-    private final @Nullable Input<Object> enableStaging;
+      private final @Nullable Input<Object> enableStaging;
 
     public Input<Object> getEnableStaging() {
         return this.enableStaging == null ? Input.empty() : this.enableStaging;
@@ -224,7 +224,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable Input<List<DatasetReferenceArgs>> inputs;
+      private final @Nullable Input<List<DatasetReferenceArgs>> inputs;
 
     public Input<List<DatasetReferenceArgs>> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -235,7 +235,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -246,7 +246,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logSettings")
-    private final @Nullable Input<LogSettingsArgs> logSettings;
+      private final @Nullable Input<LogSettingsArgs> logSettings;
 
     public Input<LogSettingsArgs> getLogSettings() {
         return this.logSettings == null ? Input.empty() : this.logSettings;
@@ -257,7 +257,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logStorageSettings")
-    private final @Nullable Input<LogStorageSettingsArgs> logStorageSettings;
+      private final @Nullable Input<LogStorageSettingsArgs> logStorageSettings;
 
     public Input<LogStorageSettingsArgs> getLogStorageSettings() {
         return this.logStorageSettings == null ? Input.empty() : this.logStorageSettings;
@@ -268,7 +268,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -279,7 +279,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputs")
-    private final @Nullable Input<List<DatasetReferenceArgs>> outputs;
+      private final @Nullable Input<List<DatasetReferenceArgs>> outputs;
 
     public Input<List<DatasetReferenceArgs>> getOutputs() {
         return this.outputs == null ? Input.empty() : this.outputs;
@@ -290,7 +290,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parallelCopies")
-    private final @Nullable Input<Object> parallelCopies;
+      private final @Nullable Input<Object> parallelCopies;
 
     public Input<Object> getParallelCopies() {
         return this.parallelCopies == null ? Input.empty() : this.parallelCopies;
@@ -301,7 +301,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -312,7 +312,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserve")
-    private final @Nullable Input<List<Object>> preserve;
+      private final @Nullable Input<List<Object>> preserve;
 
     public Input<List<Object>> getPreserve() {
         return this.preserve == null ? Input.empty() : this.preserve;
@@ -323,7 +323,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserveRules")
-    private final @Nullable Input<List<Object>> preserveRules;
+      private final @Nullable Input<List<Object>> preserveRules;
 
     public Input<List<Object>> getPreserveRules() {
         return this.preserveRules == null ? Input.empty() : this.preserveRules;
@@ -334,7 +334,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redirectIncompatibleRowSettings")
-    private final @Nullable Input<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings;
+      private final @Nullable Input<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings;
 
     public Input<RedirectIncompatibleRowSettingsArgs> getRedirectIncompatibleRowSettings() {
         return this.redirectIncompatibleRowSettings == null ? Input.empty() : this.redirectIncompatibleRowSettings;
@@ -345,7 +345,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sink", required=true)
-    private final Input<Object> sink;
+      private final Input<Object> sink;
 
     public Input<Object> getSink() {
         return this.sink;
@@ -356,7 +356,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipErrorFile")
-    private final @Nullable Input<SkipErrorFileArgs> skipErrorFile;
+      private final @Nullable Input<SkipErrorFileArgs> skipErrorFile;
 
     public Input<SkipErrorFileArgs> getSkipErrorFile() {
         return this.skipErrorFile == null ? Input.empty() : this.skipErrorFile;
@@ -367,7 +367,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<Object> source;
+      private final Input<Object> source;
 
     public Input<Object> getSource() {
         return this.source;
@@ -378,7 +378,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stagingSettings")
-    private final @Nullable Input<StagingSettingsArgs> stagingSettings;
+      private final @Nullable Input<StagingSettingsArgs> stagingSettings;
 
     public Input<StagingSettingsArgs> getStagingSettings() {
         return this.stagingSettings == null ? Input.empty() : this.stagingSettings;
@@ -389,7 +389,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="translator")
-    private final @Nullable Input<Object> translator;
+      private final @Nullable Input<Object> translator;
 
     public Input<Object> getTranslator() {
         return this.translator == null ? Input.empty() : this.translator;
@@ -401,7 +401,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -412,7 +412,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -423,7 +423,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validateDataConsistency")
-    private final @Nullable Input<Object> validateDataConsistency;
+      private final @Nullable Input<Object> validateDataConsistency;
 
     public Input<Object> getValidateDataConsistency() {
         return this.validateDataConsistency == null ? Input.empty() : this.validateDataConsistency;
@@ -812,7 +812,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.validateDataConsistency = Input.ofNullable(validateDataConsistency);
             return this;
         }
-
         public CopyActivityArgs build() {
             return new CopyActivityArgs(dataIntegrationUnits, dependsOn, description, enableSkipIncompatibleRow, enableStaging, inputs, linkedServiceName, logSettings, logStorageSettings, name, outputs, parallelCopies, policy, preserve, preserveRules, redirectIncompatibleRowSettings, sink, skipErrorFile, source, stagingSettings, translator, type, userProperties, validateDataConsistency);
         }

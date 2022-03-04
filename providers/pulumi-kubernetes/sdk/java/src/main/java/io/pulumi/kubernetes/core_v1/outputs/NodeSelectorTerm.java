@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeSelectorRequirement;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class NodeSelectorTerm {
     /**
      * A list of node selector requirements by node's labels.
      * 
-     */
+    */
     public List<NodeSelectorRequirement> getMatchExpressions() {
         return this.matchExpressions == null ? List.of() : this.matchExpressions;
     }
     /**
      * A list of node selector requirements by node's fields.
      * 
-     */
+    */
     public List<NodeSelectorRequirement> getMatchFields() {
         return this.matchFields == null ? List.of() : this.matchFields;
     }
@@ -76,7 +76,6 @@ public final class NodeSelectorTerm {
             this.matchFields = matchFields;
             return this;
         }
-
         public NodeSelectorTerm build() {
             return new NodeSelectorTerm(matchExpressions, matchFields);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.media.inputs.GetAssetEncryptionKeyArgs;
 import io.pulumi.azurenative.media.outputs.GetAssetEncryptionKeyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssetEncryptionKey {
-/**
- * Data needed to decrypt asset files encrypted with legacy storage encryption.
+    private GetAssetEncryptionKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssetEncryptionKeyArgs.Builder a);
+    }
+    private static GetAssetEncryptionKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssetEncryptionKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Data needed to decrypt asset files encrypted with legacy storage encryption.
  * API Version: 2020-05-01.
  * 
- *
- * Data needed to decrypt asset files encrypted with legacy storage encryption.
+     *
+     * Data needed to decrypt asset files encrypted with legacy storage encryption.
  * 
- */
+     */
+    public static CompletableFuture<GetAssetEncryptionKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Data needed to decrypt asset files encrypted with legacy storage encryption.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * Data needed to decrypt asset files encrypted with legacy storage encryption.
+     * 
+     */
     public static CompletableFuture<GetAssetEncryptionKeyResult> invokeAsync(GetAssetEncryptionKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getAssetEncryptionKey", TypeShape.of(GetAssetEncryptionKeyResult.class), args == null ? GetAssetEncryptionKeyArgs.Empty : args, Utilities.withVersion(options));
     }

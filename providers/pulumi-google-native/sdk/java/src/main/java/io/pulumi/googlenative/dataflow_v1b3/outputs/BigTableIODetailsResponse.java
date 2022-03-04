@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class BigTableIODetailsResponse {
     /**
      * InstanceId accessed in the connection.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * ProjectId accessed in the connection.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * TableId accessed in the connection.
      * 
-     */
+    */
     public String getTableId() {
         return this.tableId;
     }
@@ -95,7 +95,6 @@ public final class BigTableIODetailsResponse {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public BigTableIODetailsResponse build() {
             return new BigTableIODetailsResponse(instanceId, project, tableId);
         }

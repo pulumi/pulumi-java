@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelProperty;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class AssetModelCompositeModel {
     /**
      * The property definitions of the asset model. You can specify up to 200 properties per asset model.
      * 
-     */
+    */
     public List<AssetModelProperty> getCompositeModelProperties() {
         return this.compositeModelProperties == null ? List.of() : this.compositeModelProperties;
     }
     /**
      * A description for the asset composite model.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A unique, friendly name for the asset composite model.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the composite model. For alarm composite models, this type is AWS/ALARM
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -120,7 +120,6 @@ public final class AssetModelCompositeModel {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AssetModelCompositeModel build() {
             return new AssetModelCompositeModel(compositeModelProperties, description, name, type);
         }

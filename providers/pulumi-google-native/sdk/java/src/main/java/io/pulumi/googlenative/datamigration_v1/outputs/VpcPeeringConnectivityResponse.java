@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class VpcPeeringConnectivityResponse {
     /**
      * The name of the VPC network to peer with the Cloud SQL private network.
      * 
-     */
+    */
     public String getVpc() {
         return this.vpc;
     }
@@ -52,7 +52,6 @@ public final class VpcPeeringConnectivityResponse {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }
-
         public VpcPeeringConnectivityResponse build() {
             return new VpcPeeringConnectivityResponse(vpc);
         }

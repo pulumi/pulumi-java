@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class CacheUsernameDownloadSettingsResponseCredentials {
     /**
      * The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
      * 
-     */
+    */
     public Optional<String> getBindDn() {
         return Optional.ofNullable(this.bindDn);
     }
     /**
      * The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
      * 
-     */
+    */
     public Optional<String> getBindPassword() {
         return Optional.ofNullable(this.bindPassword);
     }
@@ -76,7 +76,6 @@ public final class CacheUsernameDownloadSettingsResponseCredentials {
             this.bindPassword = bindPassword;
             return this;
         }
-
         public CacheUsernameDownloadSettingsResponseCredentials build() {
             return new CacheUsernameDownloadSettingsResponseCredentials(bindDn, bindPassword);
         }

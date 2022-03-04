@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="instanceCount")
-    private final @Nullable Integer instanceCount;
+      private final @Nullable Integer instanceCount;
 
     public Optional<Integer> getInstanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
@@ -31,7 +31,7 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="maxInstances")
-    private final @Nullable Integer maxInstances;
+      private final @Nullable Integer maxInstances;
 
     public Optional<Integer> getMaxInstances() {
         return this.maxInstances == null ? Optional.empty() : Optional.ofNullable(this.maxInstances);
@@ -42,7 +42,7 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="minInstances")
-    private final @Nullable Integer minInstances;
+      private final @Nullable Integer minInstances;
 
     public Optional<Integer> getMinInstances() {
         return this.minInstances == null ? Optional.empty() : Optional.ofNullable(this.minInstances);
@@ -53,7 +53,7 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="scaleType", required=true)
-    private final String scaleType;
+      private final String scaleType;
 
     public String getScaleType() {
         return this.scaleType;
@@ -122,7 +122,6 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
-
         public ManualScaleSettingsResponse build() {
             return new ManualScaleSettingsResponse(instanceCount, maxInstances, minInstances, scaleType);
         }

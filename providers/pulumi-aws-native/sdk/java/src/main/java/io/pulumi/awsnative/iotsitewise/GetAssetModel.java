@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iotsitewise;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotsitewise.inputs.GetAssetModelArgs;
 import io.pulumi.awsnative.iotsitewise.outputs.GetAssetModelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssetModel {
-/**
- * Resource schema for AWS::IoTSiteWise::AssetModel
+    private GetAssetModel() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssetModelArgs.Builder a);
+    }
+    private static GetAssetModelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssetModelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::IoTSiteWise::AssetModel
  * 
- */
+     */
+    public static CompletableFuture<GetAssetModelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::IoTSiteWise::AssetModel
+     * 
+     */
     public static CompletableFuture<GetAssetModelResult> invokeAsync(GetAssetModelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getAssetModel", TypeShape.of(GetAssetModelResult.class), args == null ? GetAssetModelArgs.Empty : args, Utilities.withVersion(options));
     }

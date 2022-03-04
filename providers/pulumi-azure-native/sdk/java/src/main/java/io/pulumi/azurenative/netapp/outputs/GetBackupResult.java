@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -104,84 +104,84 @@ public final class GetBackupResult {
     /**
      * UUID v4 used to identify the Backup
      * 
-     */
+    */
     public String getBackupId() {
         return this.backupId;
     }
     /**
      * Type of backup Manual or Scheduled
      * 
-     */
+    */
     public String getBackupType() {
         return this.backupType;
     }
     /**
      * The creation date of the backup
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * Failure reason
      * 
-     */
+    */
     public String getFailureReason() {
         return this.failureReason;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Label for backup
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Size of backup
      * 
-     */
+    */
     public Double getSize() {
         return this.size;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Volume name
      * 
-     */
+    */
     public String getVolumeName() {
         return this.volumeName;
     }
@@ -287,7 +287,6 @@ public final class GetBackupResult {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(backupId, backupType, creationDate, failureReason, id, label, location, name, provisioningState, size, type, volumeName);
         }

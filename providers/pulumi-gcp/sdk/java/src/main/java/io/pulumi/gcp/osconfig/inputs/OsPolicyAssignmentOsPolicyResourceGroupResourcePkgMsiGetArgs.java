@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs 
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<List<String>> properties;
+      private final @Nullable Input<List<String>> properties;
 
     public Input<List<String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -32,7 +32,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs 
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs> source;
+      private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs> source;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs> getSource() {
         return this.source;
@@ -91,7 +91,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs 
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs(properties, source);
         }

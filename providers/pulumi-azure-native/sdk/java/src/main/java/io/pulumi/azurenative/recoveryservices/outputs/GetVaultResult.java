@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.IdentityDataResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SkuResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SystemDataResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -94,70 +94,70 @@ public final class GetVaultResult {
     /**
      * Optional ETag.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource Id represents the complete path to the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
-     */
+    */
     public Optional<IdentityDataResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name associated with the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the vault.
      * 
-     */
+    */
     public VaultPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Identifies the unique system identifier for each Azure resource.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -249,7 +249,6 @@ public final class GetVaultResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVaultResult build() {
             return new GetVaultResult(etag, id, identity, location, name, properties, sku, systemData, tags, type);
         }

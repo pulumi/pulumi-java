@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.DailyRetentionFormatResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RetentionDurationResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.WeeklyRetentionFormatResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,35 +58,35 @@ public final class MonthlyRetentionScheduleResponse {
     /**
      * Retention duration of retention Policy.
      * 
-     */
+    */
     public Optional<RetentionDurationResponse> getRetentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
     /**
      * Daily retention format for monthly retention policy.
      * 
-     */
+    */
     public Optional<DailyRetentionFormatResponse> getRetentionScheduleDaily() {
         return Optional.ofNullable(this.retentionScheduleDaily);
     }
     /**
      * Retention schedule format type for monthly retention policy.
      * 
-     */
+    */
     public Optional<String> getRetentionScheduleFormatType() {
         return Optional.ofNullable(this.retentionScheduleFormatType);
     }
     /**
      * Weekly retention format for monthly retention policy.
      * 
-     */
+    */
     public Optional<WeeklyRetentionFormatResponse> getRetentionScheduleWeekly() {
         return Optional.ofNullable(this.retentionScheduleWeekly);
     }
     /**
      * Retention times of retention policy.
      * 
-     */
+    */
     public List<String> getRetentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }
@@ -143,7 +143,6 @@ public final class MonthlyRetentionScheduleResponse {
             this.retentionTimes = retentionTimes;
             return this;
         }
-
         public MonthlyRetentionScheduleResponse build() {
             return new MonthlyRetentionScheduleResponse(retentionDuration, retentionScheduleDaily, retentionScheduleFormatType, retentionScheduleWeekly, retentionTimes);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHl7V2Store {
-/**
- * Gets the specified HL7v2 store.
+    private GetHl7V2Store() {}
+    public interface BuilderApplicator {
+        public void apply(GetHl7V2StoreArgs.Builder a);
+    }
+    private static GetHl7V2StoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHl7V2StoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified HL7v2 store.
  * 
- */
+     */
+    public static CompletableFuture<GetHl7V2StoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified HL7v2 store.
+     * 
+     */
     public static CompletableFuture<GetHl7V2StoreResult> invokeAsync(GetHl7V2StoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getHl7V2Store", TypeShape.of(GetHl7V2StoreResult.class), args == null ? GetHl7V2StoreArgs.Empty : args, Utilities.withVersion(options));
     }

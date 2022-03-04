@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AppRegistrationResponse;
 import io.pulumi.azurenative.web.outputs.LoginScopesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class FacebookResponse {
     /**
      * <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The version of the Facebook api to be used while logging in.
      * 
-     */
+    */
     public Optional<String> getGraphApiVersion() {
         return Optional.ofNullable(this.graphApiVersion);
     }
     /**
      * The configuration settings of the login flow.
      * 
-     */
+    */
     public Optional<LoginScopesResponse> getLogin() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The configuration settings of the app registration for the Facebook provider.
      * 
-     */
+    */
     public Optional<AppRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }
@@ -121,7 +121,6 @@ public final class FacebookResponse {
             this.registration = registration;
             return this;
         }
-
         public FacebookResponse build() {
             return new FacebookResponse(enabled, graphApiVersion, login, registration);
         }

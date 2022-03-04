@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.batch.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -66,35 +66,35 @@ public final class PrivateEndpointConnectionResponse {
     /**
      * The ETag of the resource, used for concurrency statements.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The private endpoint of the private endpoint connection.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The private link service connection state of the private endpoint connection
      * 
-     */
+    */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -104,7 +104,7 @@ public final class PrivateEndpointConnectionResponse {
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -175,7 +175,6 @@ public final class PrivateEndpointConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(etag, id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

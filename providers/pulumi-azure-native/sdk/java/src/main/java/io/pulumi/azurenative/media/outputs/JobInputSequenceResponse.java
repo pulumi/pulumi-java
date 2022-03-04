@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.JobInputClipResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class JobInputSequenceResponse {
     /**
      * JobInputs that make up the timeline.
      * 
-     */
+    */
     public List<JobInputClipResponse> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
@@ -43,7 +43,7 @@ public final class JobInputSequenceResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.JobInputSequence'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
@@ -79,7 +79,6 @@ public final class JobInputSequenceResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public JobInputSequenceResponse build() {
             return new JobInputSequenceResponse(inputs, odataType);
         }

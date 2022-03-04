@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.inputs.GetWatchlistItemArgs;
 import io.pulumi.azurenative.securityinsights.outputs.GetWatchlistItemResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWatchlistItem {
-/**
- * Represents a Watchlist item in Azure Security Insights.
+    private GetWatchlistItem() {}
+    public interface BuilderApplicator {
+        public void apply(GetWatchlistItemArgs.Builder a);
+    }
+    private static GetWatchlistItemArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWatchlistItemArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a Watchlist item in Azure Security Insights.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Represents a Watchlist item in Azure Security Insights.
+     *
+     * Represents a Watchlist item in Azure Security Insights.
  * 
- */
+     */
+    public static CompletableFuture<GetWatchlistItemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a Watchlist item in Azure Security Insights.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Represents a Watchlist item in Azure Security Insights.
+     * 
+     */
     public static CompletableFuture<GetWatchlistItemResult> invokeAsync(GetWatchlistItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getWatchlistItem", TypeShape.of(GetWatchlistItemResult.class), args == null ? GetWatchlistItemArgs.Empty : args, Utilities.withVersion(options));
     }

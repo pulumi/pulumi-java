@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CosmosDbSettingsResponse {
     /**
      * The throughput of the collections in cosmosdb database
      * 
-     */
+    */
     public Optional<Integer> getCollectionsThroughput() {
         return Optional.ofNullable(this.collectionsThroughput);
     }
@@ -54,7 +54,6 @@ public final class CosmosDbSettingsResponse {
             this.collectionsThroughput = collectionsThroughput;
             return this;
         }
-
         public CosmosDbSettingsResponse build() {
             return new CosmosDbSettingsResponse(collectionsThroughput);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.SharedPublicIpAddressConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -83,63 +83,63 @@ public final class NetworkInterfacePropertiesResponse {
     /**
      * The DNS name.
      * 
-     */
+    */
     public Optional<String> getDnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
      * The private IP address.
      * 
-     */
+    */
     public Optional<String> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * The public IP address.
      * 
-     */
+    */
     public Optional<String> getPublicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
     /**
      * The resource ID of the public IP address.
      * 
-     */
+    */
     public Optional<String> getPublicIpAddressId() {
         return Optional.ofNullable(this.publicIpAddressId);
     }
     /**
      * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
      * 
-     */
+    */
     public Optional<String> getRdpAuthority() {
         return Optional.ofNullable(this.rdpAuthority);
     }
     /**
      * The configuration for sharing a public IP address across multiple virtual machines.
      * 
-     */
+    */
     public Optional<SharedPublicIpAddressConfigurationResponse> getSharedPublicIpAddressConfiguration() {
         return Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
     /**
      * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
      * 
-     */
+    */
     public Optional<String> getSshAuthority() {
         return Optional.ofNullable(this.sshAuthority);
     }
     /**
      * The resource ID of the sub net.
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * The resource ID of the virtual network.
      * 
-     */
+    */
     public Optional<String> getVirtualNetworkId() {
         return Optional.ofNullable(this.virtualNetworkId);
     }
@@ -224,7 +224,6 @@ public final class NetworkInterfacePropertiesResponse {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
-
         public NetworkInterfacePropertiesResponse build() {
             return new NetworkInterfacePropertiesResponse(dnsName, privateIpAddress, publicIpAddress, publicIpAddressId, rdpAuthority, sharedPublicIpAddressConfiguration, sshAuthority, subnetId, virtualNetworkId);
         }

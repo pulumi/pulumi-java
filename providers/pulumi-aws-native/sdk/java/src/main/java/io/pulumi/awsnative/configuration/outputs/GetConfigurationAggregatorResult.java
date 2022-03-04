@@ -6,7 +6,7 @@ package io.pulumi.awsnative.configuration.outputs;
 import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorAccountAggregationSource;
 import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorOrganizationAggregationSource;
 import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +46,7 @@ public final class GetConfigurationAggregatorResult {
     /**
      * The Amazon Resource Name (ARN) of the aggregator.
      * 
-     */
+    */
     public Optional<String> getConfigurationAggregatorArn() {
         return Optional.ofNullable(this.configurationAggregatorArn);
     }
@@ -56,7 +56,7 @@ public final class GetConfigurationAggregatorResult {
     /**
      * The tags for the configuration aggregator.
      * 
-     */
+    */
     public List<ConfigurationAggregatorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -106,7 +106,6 @@ public final class GetConfigurationAggregatorResult {
             this.tags = tags;
             return this;
         }
-
         public GetConfigurationAggregatorResult build() {
             return new GetConfigurationAggregatorResult(accountAggregationSources, configurationAggregatorArn, organizationAggregationSource, tags);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetBlobContainerDataSetArgs;
 import io.pulumi.azurenative.datashare.outputs.GetBlobContainerDataSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobContainerDataSet {
-/**
- * An Azure storage blob container data set.
+    private GetBlobContainerDataSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetBlobContainerDataSetArgs.Builder a);
+    }
+    private static GetBlobContainerDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBlobContainerDataSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure storage blob container data set.
  * API Version: 2020-09-01.
  * 
- *
- * An Azure storage blob container data set.
+     *
+     * An Azure storage blob container data set.
  * 
- */
+     */
+    public static CompletableFuture<GetBlobContainerDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure storage blob container data set.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * An Azure storage blob container data set.
+     * 
+     */
     public static CompletableFuture<GetBlobContainerDataSetResult> invokeAsync(GetBlobContainerDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobContainerDataSet", TypeShape.of(GetBlobContainerDataSetResult.class), args == null ? GetBlobContainerDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

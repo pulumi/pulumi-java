@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ReadinessCheckTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readinessCheckName")
-    private final @Nullable Input<String> readinessCheckName;
+      private final @Nullable Input<String> readinessCheckName;
 
     public Input<String> getReadinessCheckName() {
         return this.readinessCheckName == null ? Input.empty() : this.readinessCheckName;
@@ -32,7 +32,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSetName")
-    private final @Nullable Input<String> resourceSetName;
+      private final @Nullable Input<String> resourceSetName;
 
     public Input<String> getResourceSetName() {
         return this.resourceSetName == null ? Input.empty() : this.resourceSetName;
@@ -43,7 +43,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ReadinessCheckTagArgs>> tags;
+      private final @Nullable Input<List<ReadinessCheckTagArgs>> tags;
 
     public Input<List<ReadinessCheckTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -117,7 +117,6 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ReadinessCheckArgs build() {
             return new ReadinessCheckArgs(readinessCheckName, resourceSetName, tags);
         }

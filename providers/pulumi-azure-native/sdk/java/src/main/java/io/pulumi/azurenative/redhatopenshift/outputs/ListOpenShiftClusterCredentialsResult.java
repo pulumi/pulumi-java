@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ListOpenShiftClusterCredentialsResult {
     /**
      * The password for the kubeadmin user
      * 
-     */
+    */
     public Optional<String> getKubeadminPassword() {
         return Optional.ofNullable(this.kubeadminPassword);
     }
     /**
      * The username for the kubeadmin user
      * 
-     */
+    */
     public Optional<String> getKubeadminUsername() {
         return Optional.ofNullable(this.kubeadminUsername);
     }
@@ -76,7 +76,6 @@ public final class ListOpenShiftClusterCredentialsResult {
             this.kubeadminUsername = kubeadminUsername;
             return this;
         }
-
         public ListOpenShiftClusterCredentialsResult build() {
             return new ListOpenShiftClusterCredentialsResult(kubeadminPassword, kubeadminUsername);
         }

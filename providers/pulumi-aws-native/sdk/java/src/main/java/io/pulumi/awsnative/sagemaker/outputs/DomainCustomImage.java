@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class DomainCustomImage {
     /**
      * The Name of the AppImageConfig.
      * 
-     */
+    */
     public String getAppImageConfigName() {
         return this.appImageConfigName;
     }
     /**
      * The name of the CustomImage. Must be unique to your account.
      * 
-     */
+    */
     public String getImageName() {
         return this.imageName;
     }
     /**
      * The version number of the CustomImage.
      * 
-     */
+    */
     public Optional<Integer> getImageVersionNumber() {
         return Optional.ofNullable(this.imageVersionNumber);
     }
@@ -98,7 +98,6 @@ public final class DomainCustomImage {
             this.imageVersionNumber = imageVersionNumber;
             return this;
         }
-
         public DomainCustomImage build() {
             return new DomainCustomImage(appImageConfigName, imageName, imageVersionNumber);
         }

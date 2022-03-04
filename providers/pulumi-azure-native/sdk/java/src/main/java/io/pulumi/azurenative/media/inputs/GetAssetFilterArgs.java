@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAssetFilterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetAssetFilterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="assetName", required=true)
-    private final String assetName;
+      private final String assetName;
 
     public String getAssetName() {
         return this.assetName;
@@ -39,7 +39,7 @@ public final class GetAssetFilterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filterName", required=true)
-    private final String filterName;
+      private final String filterName;
 
     public String getFilterName() {
         return this.filterName;
@@ -50,7 +50,7 @@ public final class GetAssetFilterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetAssetFilterArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetAssetFilterArgs build() {
             return new GetAssetFilterArgs(accountName, assetName, filterName, resourceGroupName);
         }

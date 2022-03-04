@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetApiSchemaArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetApiSchemaResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiSchema {
-/**
- * Schema Contract details.
+    private GetApiSchema() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiSchemaArgs.Builder a);
+    }
+    private static GetApiSchemaArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiSchemaArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Schema Contract details.
  * API Version: 2020-12-01.
  * 
- *
- * Schema Contract details.
+     *
+     * Schema Contract details.
  * 
- */
+     */
+    public static CompletableFuture<GetApiSchemaResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Schema Contract details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Schema Contract details.
+     * 
+     */
     public static CompletableFuture<GetApiSchemaResult> invokeAsync(GetApiSchemaArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiSchema", TypeShape.of(GetApiSchemaResult.class), args == null ? GetApiSchemaArgs.Empty : args, Utilities.withVersion(options));
     }

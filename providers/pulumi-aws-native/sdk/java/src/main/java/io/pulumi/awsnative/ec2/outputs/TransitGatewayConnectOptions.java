@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class TransitGatewayConnectOptions {
     /**
      * The tunnel protocol.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -54,7 +54,6 @@ public final class TransitGatewayConnectOptions {
             this.protocol = protocol;
             return this;
         }
-
         public TransitGatewayConnectOptions build() {
             return new TransitGatewayConnectOptions(protocol);
         }

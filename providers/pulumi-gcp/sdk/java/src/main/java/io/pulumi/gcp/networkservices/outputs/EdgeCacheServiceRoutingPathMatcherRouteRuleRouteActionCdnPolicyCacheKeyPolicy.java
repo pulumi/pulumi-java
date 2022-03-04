@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * If true, requests to different hosts will be cached separately.
      * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
      * 
-     */
+    */
     public Optional<Boolean> getExcludeHost() {
         return Optional.ofNullable(this.excludeHost);
     }
@@ -88,7 +88,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * excludeQueryParameters is set, the entire query string will be
      * included.
      * 
-     */
+    */
     public Optional<Boolean> getExcludeQueryString() {
         return Optional.ofNullable(this.excludeQueryString);
     }
@@ -96,14 +96,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Names of query string parameters to exclude from cache keys. All other parameters will be included.
      * Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
      * 
-     */
+    */
     public List<String> getExcludedQueryParameters() {
         return this.excludedQueryParameters == null ? List.of() : this.excludedQueryParameters;
     }
     /**
      * If true, http and https requests will be cached separately.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeProtocol() {
         return Optional.ofNullable(this.includeProtocol);
     }
@@ -114,7 +114,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * - To include the HTTP method, use ":method"
      *   Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
      * 
-     */
+    */
     public List<String> getIncludedHeaderNames() {
         return this.includedHeaderNames == null ? List.of() : this.includedHeaderNames;
     }
@@ -122,7 +122,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Names of query string parameters to include in cache keys. All other parameters will be excluded.
      * Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
      * 
-     */
+    */
     public List<String> getIncludedQueryParameters() {
         return this.includedQueryParameters == null ? List.of() : this.includedQueryParameters;
     }
@@ -186,7 +186,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
             this.includedQueryParameters = includedQueryParameters;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy(excludeHost, excludeQueryString, excludedQueryParameters, includeProtocol, includedHeaderNames, includedQueryParameters);
         }

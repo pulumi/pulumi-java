@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     /**
      * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
      * 
-     */
+    */
     public Optional<String> getExactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
     /**
      * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
      * 
-     */
+    */
     public Optional<Boolean> getPresentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
@@ -98,7 +98,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
             this.presentMatch = presentMatch;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch(exactMatch, name, presentMatch);
         }

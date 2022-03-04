@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebase_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAndroidApp {
-/**
- * Gets the specified AndroidApp.
+    private GetAndroidApp() {}
+    public interface BuilderApplicator {
+        public void apply(GetAndroidAppArgs.Builder a);
+    }
+    private static GetAndroidAppArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAndroidAppArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified AndroidApp.
  * 
- */
+     */
+    public static CompletableFuture<GetAndroidAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified AndroidApp.
+     * 
+     */
     public static CompletableFuture<GetAndroidAppResult> invokeAsync(GetAndroidAppArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebase/v1beta1:getAndroidApp", TypeShape.of(GetAndroidAppResult.class), args == null ? GetAndroidAppArgs.Empty : args, Utilities.withVersion(options));
     }

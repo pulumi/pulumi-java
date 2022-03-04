@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetFoldersArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parentId", required=true)
-    private final String parentId;
+      private final String parentId;
 
     public String getParentId() {
         return this.parentId;
@@ -55,7 +55,6 @@ public final class GetFoldersArgs extends io.pulumi.resources.InvokeArgs {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
-
         public GetFoldersArgs build() {
             return new GetFoldersArgs(parentId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class PacketMirroringForwardingRuleInfoResponse {
     /**
      * Unique identifier for the forwarding rule; defined by the server.
      * 
-     */
+    */
     public String getCanonicalUrl() {
         return this.canonicalUrl;
     }
     /**
      * Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -74,7 +74,6 @@ public final class PacketMirroringForwardingRuleInfoResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PacketMirroringForwardingRuleInfoResponse build() {
             return new PacketMirroringForwardingRuleInfoResponse(canonicalUrl, url);
         }

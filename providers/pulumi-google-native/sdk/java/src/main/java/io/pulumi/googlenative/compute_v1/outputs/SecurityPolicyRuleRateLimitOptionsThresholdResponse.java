@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
     /**
      * Number of HTTP(S) requests for calculating the threshold.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * Interval over which the threshold is computed.
      * 
-     */
+    */
     public Integer getIntervalSec() {
         return this.intervalSec;
     }
@@ -74,7 +74,6 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
             this.intervalSec = Objects.requireNonNull(intervalSec);
             return this;
         }
-
         public SecurityPolicyRuleRateLimitOptionsThresholdResponse build() {
             return new SecurityPolicyRuleRateLimitOptionsThresholdResponse(count, intervalSec);
         }

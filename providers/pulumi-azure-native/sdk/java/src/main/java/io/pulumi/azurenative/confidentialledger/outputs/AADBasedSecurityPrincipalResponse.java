@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confidentialledger.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class AADBasedSecurityPrincipalResponse {
     /**
      * LedgerRole associated with the Security Principal of Ledger
      * 
-     */
+    */
     public Optional<String> getLedgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }
     /**
      * UUID/GUID based Principal Id of the Security Principal
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * UUID/GUID based Tenant Id of the Security Principal
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -97,7 +97,6 @@ public final class AADBasedSecurityPrincipalResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public AADBasedSecurityPrincipalResponse build() {
             return new AADBasedSecurityPrincipalResponse(ledgerRoleName, principalId, tenantId);
         }

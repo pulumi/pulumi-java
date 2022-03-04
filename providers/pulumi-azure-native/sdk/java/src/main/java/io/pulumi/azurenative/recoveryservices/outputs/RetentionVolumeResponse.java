@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -49,28 +49,28 @@ public final class RetentionVolumeResponse {
     /**
      * The volume capacity.
      * 
-     */
+    */
     public Optional<Double> getCapacityInBytes() {
         return Optional.ofNullable(this.capacityInBytes);
     }
     /**
      * The free space available in this volume.
      * 
-     */
+    */
     public Optional<Double> getFreeSpaceInBytes() {
         return Optional.ofNullable(this.freeSpaceInBytes);
     }
     /**
      * The threshold percentage.
      * 
-     */
+    */
     public Optional<Integer> getThresholdPercentage() {
         return Optional.ofNullable(this.thresholdPercentage);
     }
     /**
      * The volume name.
      * 
-     */
+    */
     public Optional<String> getVolumeName() {
         return Optional.ofNullable(this.volumeName);
     }
@@ -120,7 +120,6 @@ public final class RetentionVolumeResponse {
             this.volumeName = volumeName;
             return this;
         }
-
         public RetentionVolumeResponse build() {
             return new RetentionVolumeResponse(capacityInBytes, freeSpaceInBytes, thresholdPercentage, volumeName);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.inputs.GetSqlPoolWorkloadClassifierArgs;
 import io.pulumi.azurenative.synapse.outputs.GetSqlPoolWorkloadClassifierResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlPoolWorkloadClassifier {
-/**
- * Workload classifier operations for a data warehouse
+    private GetSqlPoolWorkloadClassifier() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlPoolWorkloadClassifierArgs.Builder a);
+    }
+    private static GetSqlPoolWorkloadClassifierArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlPoolWorkloadClassifierArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Workload classifier operations for a data warehouse
  * API Version: 2021-03-01.
  * 
- *
- * Workload classifier operations for a data warehouse
+     *
+     * Workload classifier operations for a data warehouse
  * 
- */
+     */
+    public static CompletableFuture<GetSqlPoolWorkloadClassifierResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Workload classifier operations for a data warehouse
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Workload classifier operations for a data warehouse
+     * 
+     */
     public static CompletableFuture<GetSqlPoolWorkloadClassifierResult> invokeAsync(GetSqlPoolWorkloadClassifierArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolWorkloadClassifier", TypeShape.of(GetSqlPoolWorkloadClassifierResult.class), args == null ? GetSqlPoolWorkloadClassifierArgs.Empty : args, Utilities.withVersion(options));
     }

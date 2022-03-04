@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TransportPreferencesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="preferredShipmentType", required=true)
-    private final String preferredShipmentType;
+      private final String preferredShipmentType;
 
     public String getPreferredShipmentType() {
         return this.preferredShipmentType;
@@ -59,7 +59,6 @@ public final class TransportPreferencesResponse extends io.pulumi.resources.Invo
             this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType);
             return this;
         }
-
         public TransportPreferencesResponse build() {
             return new TransportPreferencesResponse(preferredShipmentType);
         }

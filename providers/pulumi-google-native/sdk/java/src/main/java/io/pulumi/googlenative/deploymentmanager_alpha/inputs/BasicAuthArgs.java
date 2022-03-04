@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
     public static final BasicAuthArgs Empty = new BasicAuthArgs();
 
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
     }
 
     @InputImport(name="user")
-    private final @Nullable Input<String> user;
+      private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;
@@ -85,7 +85,6 @@ public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
             this.user = Input.ofNullable(user);
             return this;
         }
-
         public BasicAuthArgs build() {
             return new BasicAuthArgs(password, user);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.FeatureGroupFeatureDefinitionFeatureType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class FeatureGroupFeatureDefinition {
             this.featureType = Objects.requireNonNull(featureType);
             return this;
         }
-
         public FeatureGroupFeatureDefinition build() {
             return new FeatureGroupFeatureDefinition(featureName, featureType);
         }

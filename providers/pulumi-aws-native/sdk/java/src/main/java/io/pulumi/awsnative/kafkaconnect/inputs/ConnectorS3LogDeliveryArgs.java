@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -35,7 +35,7 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -46,7 +46,7 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -120,7 +120,6 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
-
         public ConnectorS3LogDeliveryArgs build() {
             return new ConnectorS3LogDeliveryArgs(bucket, enabled, prefix);
         }

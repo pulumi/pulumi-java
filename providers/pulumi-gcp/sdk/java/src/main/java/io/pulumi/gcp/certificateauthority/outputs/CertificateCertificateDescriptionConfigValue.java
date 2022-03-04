@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionConfigValueKeyUsage;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class CertificateCertificateDescriptionConfigValue {
      * Indicates the intended use for keys that correspond to a certificate.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateCertificateDescriptionConfigValueKeyUsage> getKeyUsages() {
         return this.keyUsages == null ? List.of() : this.keyUsages;
     }
@@ -56,7 +56,6 @@ public final class CertificateCertificateDescriptionConfigValue {
             this.keyUsages = keyUsages;
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValue build() {
             return new CertificateCertificateDescriptionConfigValue(keyUsages);
         }

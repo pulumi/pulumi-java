@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ComputeInstanceApplicationResponse {
     /**
      * Name of the ComputeInstance application.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Application' endpoint URI.
      * 
-     */
+    */
     public Optional<String> getEndpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
@@ -76,7 +76,6 @@ public final class ComputeInstanceApplicationResponse {
             this.endpointUri = endpointUri;
             return this;
         }
-
         public ComputeInstanceApplicationResponse build() {
             return new ComputeInstanceApplicationResponse(displayName, endpointUri);
         }

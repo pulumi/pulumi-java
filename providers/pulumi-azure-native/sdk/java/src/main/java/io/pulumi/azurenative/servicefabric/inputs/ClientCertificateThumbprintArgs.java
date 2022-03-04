@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateThumbprint", required=true)
-    private final Input<String> certificateThumbprint;
+      private final Input<String> certificateThumbprint;
 
     public Input<String> getCertificateThumbprint() {
         return this.certificateThumbprint;
@@ -34,7 +34,7 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="isAdmin", required=true)
-    private final Input<Boolean> isAdmin;
+      private final Input<Boolean> isAdmin;
 
     public Input<Boolean> getIsAdmin() {
         return this.isAdmin;
@@ -93,7 +93,6 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
             this.isAdmin = Input.of(Objects.requireNonNull(isAdmin));
             return this;
         }
-
         public ClientCertificateThumbprintArgs build() {
             return new ClientCertificateThumbprintArgs(certificateThumbprint, isAdmin);
         }

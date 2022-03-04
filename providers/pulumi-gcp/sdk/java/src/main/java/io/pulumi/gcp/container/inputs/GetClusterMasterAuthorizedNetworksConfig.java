@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.GetClusterMasterAuthorizedNetworksConfigCidrBlock;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class GetClusterMasterAuthorizedNetworksConfig extends io.pulumi.re
     public static final GetClusterMasterAuthorizedNetworksConfig Empty = new GetClusterMasterAuthorizedNetworksConfig();
 
     @InputImport(name="cidrBlocks", required=true)
-    private final List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
+      private final List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
 
     public List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {
         return this.cidrBlocks;
@@ -52,7 +52,6 @@ public final class GetClusterMasterAuthorizedNetworksConfig extends io.pulumi.re
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
-
         public GetClusterMasterAuthorizedNetworksConfig build() {
             return new GetClusterMasterAuthorizedNetworksConfig(cidrBlocks);
         }

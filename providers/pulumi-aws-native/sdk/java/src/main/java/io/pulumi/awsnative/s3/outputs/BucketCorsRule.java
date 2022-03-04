@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketCorsRuleAllowedMethodsItem;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -64,42 +64,42 @@ public final class BucketCorsRule {
     /**
      * Headers that are specified in the Access-Control-Request-Headers header.
      * 
-     */
+    */
     public List<String> getAllowedHeaders() {
         return this.allowedHeaders == null ? List.of() : this.allowedHeaders;
     }
     /**
      * An HTTP method that you allow the origin to execute.
      * 
-     */
+    */
     public List<BucketCorsRuleAllowedMethodsItem> getAllowedMethods() {
         return this.allowedMethods;
     }
     /**
      * One or more origins you want customers to be able to access the bucket from.
      * 
-     */
+    */
     public List<String> getAllowedOrigins() {
         return this.allowedOrigins;
     }
     /**
      * One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
      * 
-     */
+    */
     public List<String> getExposedHeaders() {
         return this.exposedHeaders == null ? List.of() : this.exposedHeaders;
     }
     /**
      * A unique identifier for this rule.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The time in seconds that your browser is to cache the preflight response for the specified resource.
      * 
-     */
+    */
     public Optional<Integer> getMaxAge() {
         return Optional.ofNullable(this.maxAge);
     }
@@ -163,7 +163,6 @@ public final class BucketCorsRule {
             this.maxAge = maxAge;
             return this;
         }
-
         public BucketCorsRule build() {
             return new BucketCorsRule(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, id, maxAge);
         }

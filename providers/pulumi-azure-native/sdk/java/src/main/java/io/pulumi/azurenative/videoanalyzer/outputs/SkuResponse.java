@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SkuResponse {
     /**
      * The SKU name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The SKU tier.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
@@ -74,7 +74,6 @@ public final class SkuResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(name, tier);
         }

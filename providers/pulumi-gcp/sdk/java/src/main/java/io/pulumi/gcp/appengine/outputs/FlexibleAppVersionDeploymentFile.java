@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class FlexibleAppVersionDeploymentFile {
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * SHA1 checksum of the file
      * 
-     */
+    */
     public Optional<String> getSha1Sum() {
         return Optional.ofNullable(this.sha1Sum);
     }
     /**
      * Source URL
      * 
-     */
+    */
     public String getSourceUrl() {
         return this.sourceUrl;
     }
@@ -97,7 +97,6 @@ public final class FlexibleAppVersionDeploymentFile {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
-
         public FlexibleAppVersionDeploymentFile build() {
             return new FlexibleAppVersionDeploymentFile(name, sha1Sum, sourceUrl);
         }

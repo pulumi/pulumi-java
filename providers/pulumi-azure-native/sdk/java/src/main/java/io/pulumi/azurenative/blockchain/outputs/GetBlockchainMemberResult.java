@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blockchain.outputs;
 import io.pulumi.azurenative.blockchain.outputs.BlockchainMemberNodesSkuResponse;
 import io.pulumi.azurenative.blockchain.outputs.FirewallRuleResponse;
 import io.pulumi.azurenative.blockchain.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -164,140 +164,140 @@ public final class GetBlockchainMemberResult {
     /**
      * Gets or sets the consortium for the blockchain member.
      * 
-     */
+    */
     public Optional<String> getConsortium() {
         return Optional.ofNullable(this.consortium);
     }
     /**
      * Gets the managed consortium management account address.
      * 
-     */
+    */
     public String getConsortiumManagementAccountAddress() {
         return this.consortiumManagementAccountAddress;
     }
     /**
      * Sets the managed consortium management account password.
      * 
-     */
+    */
     public Optional<String> getConsortiumManagementAccountPassword() {
         return Optional.ofNullable(this.consortiumManagementAccountPassword);
     }
     /**
      * Gets the display name of the member in the consortium.
      * 
-     */
+    */
     public Optional<String> getConsortiumMemberDisplayName() {
         return Optional.ofNullable(this.consortiumMemberDisplayName);
     }
     /**
      * Gets the role of the member in the consortium.
      * 
-     */
+    */
     public Optional<String> getConsortiumRole() {
         return Optional.ofNullable(this.consortiumRole);
     }
     /**
      * Gets the dns endpoint of the blockchain member.
      * 
-     */
+    */
     public String getDns() {
         return this.dns;
     }
     /**
      * Gets or sets firewall rules
      * 
-     */
+    */
     public List<FirewallRuleResponse> getFirewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;
     }
     /**
      * Fully qualified resource Id of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The GEO location of the blockchain service.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Sets the basic auth password of the blockchain member.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Gets or sets the blockchain protocol.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * Gets or sets the blockchain member provision state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets the public key of the blockchain member (default transaction node).
      * 
-     */
+    */
     public String getPublicKey() {
         return this.publicKey;
     }
     /**
      * Gets the Ethereum root contract address of the blockchain.
      * 
-     */
+    */
     public String getRootContractAddress() {
         return this.rootContractAddress;
     }
     /**
      * Gets or sets the blockchain member Sku.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Tags of the service which is a list of key value pairs that describes the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the service - e.g. "Microsoft.Blockchain"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets the auth user name of the blockchain member.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
     /**
      * Gets or sets the blockchain validator nodes Sku.
      * 
-     */
+    */
     public Optional<BlockchainMemberNodesSkuResponse> getValidatorNodesSku() {
         return Optional.ofNullable(this.validatorNodesSku);
     }
@@ -459,7 +459,6 @@ public final class GetBlockchainMemberResult {
             this.validatorNodesSku = validatorNodesSku;
             return this;
         }
-
         public GetBlockchainMemberResult build() {
             return new GetBlockchainMemberResult(consortium, consortiumManagementAccountAddress, consortiumManagementAccountPassword, consortiumMemberDisplayName, consortiumRole, dns, firewallRules, id, location, name, password, protocol, provisioningState, publicKey, rootContractAddress, sku, tags, type, userName, validatorNodesSku);
         }

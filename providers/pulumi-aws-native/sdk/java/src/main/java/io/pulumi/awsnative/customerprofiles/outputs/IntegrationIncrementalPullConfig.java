@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.customerprofiles.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class IntegrationIncrementalPullConfig {
             this.datetimeTypeFieldName = datetimeTypeFieldName;
             return this;
         }
-
         public IntegrationIncrementalPullConfig build() {
             return new IntegrationIncrementalPullConfig(datetimeTypeFieldName);
         }

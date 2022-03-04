@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EntrypointResponse {
     /**
      * The format should be a shell command that can be fed to bash -c.
      * 
-     */
+    */
     public String getShell() {
         return this.shell;
     }
@@ -52,7 +52,6 @@ public final class EntrypointResponse {
             this.shell = Objects.requireNonNull(shell);
             return this;
         }
-
         public EntrypointResponse build() {
             return new EntrypointResponse(shell);
         }

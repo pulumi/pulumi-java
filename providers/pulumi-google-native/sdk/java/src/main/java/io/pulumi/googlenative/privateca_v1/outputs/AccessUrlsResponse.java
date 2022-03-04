@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class AccessUrlsResponse {
     /**
      * The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.
      * 
-     */
+    */
     public String getCaCertificateAccessUrl() {
         return this.caCertificateAccessUrl;
     }
     /**
      * The URLs where this CertificateAuthority's CRLs are published. This will only be set for CAs that have been activated.
      * 
-     */
+    */
     public List<String> getCrlAccessUrls() {
         return this.crlAccessUrls;
     }
@@ -75,7 +75,6 @@ public final class AccessUrlsResponse {
             this.crlAccessUrls = Objects.requireNonNull(crlAccessUrls);
             return this;
         }
-
         public AccessUrlsResponse build() {
             return new AccessUrlsResponse(caCertificateAccessUrl, crlAccessUrls);
         }

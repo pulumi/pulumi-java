@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,14 +37,14 @@ public final class GuestPoliciesRecipeArtifactRemote {
      * If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any
      * of the steps.
      * 
-     */
+    */
     public Optional<String> getCheckSum() {
         return Optional.ofNullable(this.checkSum);
     }
     /**
      * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }
@@ -80,7 +80,6 @@ public final class GuestPoliciesRecipeArtifactRemote {
             this.uri = uri;
             return this;
         }
-
         public GuestPoliciesRecipeArtifactRemote build() {
             return new GuestPoliciesRecipeArtifactRemote(checkSum, uri);
         }

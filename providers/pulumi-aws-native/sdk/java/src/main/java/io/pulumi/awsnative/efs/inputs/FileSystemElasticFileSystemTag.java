@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.efs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class FileSystemElasticFileSystemTag extends io.pulumi.resources.In
     public static final FileSystemElasticFileSystemTag Empty = new FileSystemElasticFileSystemTag();
 
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -69,7 +69,6 @@ public final class FileSystemElasticFileSystemTag extends io.pulumi.resources.In
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FileSystemElasticFileSystemTag build() {
             return new FileSystemElasticFileSystemTag(key, value);
         }

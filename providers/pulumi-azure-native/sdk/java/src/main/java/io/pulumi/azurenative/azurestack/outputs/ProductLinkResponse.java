@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ProductLinkResponse {
     /**
      * The description of the link.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The URI corresponding to the link.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }
@@ -76,7 +76,6 @@ public final class ProductLinkResponse {
             this.uri = uri;
             return this;
         }
-
         public ProductLinkResponse build() {
             return new ProductLinkResponse(displayName, uri);
         }

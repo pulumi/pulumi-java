@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class EmailReceiverResponse {
     /**
      * The email address of this receiver.
      * 
-     */
+    */
     public String getEmailAddress() {
         return this.emailAddress;
     }
     /**
      * The name of the email receiver. Names must be unique across all receivers within an action group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The receiver status of the e-mail.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Indicates whether to use common alert schema.
      * 
-     */
+    */
     public Optional<Boolean> getUseCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -119,7 +119,6 @@ public final class EmailReceiverResponse {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public EmailReceiverResponse build() {
             return new EmailReceiverResponse(emailAddress, name, status, useCommonAlertSchema);
         }

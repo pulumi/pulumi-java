@@ -1,8 +1,8 @@
 package io.pulumi.core;
 
 import io.pulumi.core.internal.InputOutputData;
-import io.pulumi.core.internal.InputOutputImpl;
-import io.pulumi.core.internal.TypedInputOutput;
+import io.pulumi.core.internal.InputOutputInternal;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -11,7 +11,7 @@ import java.util.function.Function;
 
 @ParametersAreNonnullByDefault
 @InternalUse
-public final class InputDefault<T> extends InputOutputImpl<T, Input<T>> implements Input<T> {
+public final class InputDefault<T> extends InputOutputInternal<T, Input<T>> implements Input<T> {
 
     InputDefault(T value) {
         super(value);
@@ -44,9 +44,9 @@ public final class InputDefault<T> extends InputOutputImpl<T, Input<T>> implemen
 
     @Override
     public <U> Input<U> apply(Function<T, Input<U>> func) {
-        return new InputDefault<>(InputOutputData.apply(this.dataFuture, func.andThen(
-                o -> TypedInputOutput.cast(o).internalGetDataAsync())));
+        return new InputDefault<>(InputOutputData.apply(
+                this.dataFuture,
+                func.andThen(o -> Internal.of(o).getDataAsync())
+        ));
     }
-
-    // Static section -----
 }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.outputs;
 import io.pulumi.azurenative.sql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.sql.outputs.ServerExternalAdministratorResponse;
 import io.pulumi.azurenative.sql.outputs.ServerPrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -150,126 +150,126 @@ public final class GetServerResult {
     /**
      * Administrator username for the server. Once created it cannot be changed.
      * 
-     */
+    */
     public Optional<String> getAdministratorLogin() {
         return Optional.ofNullable(this.administratorLogin);
     }
     /**
      * The Azure Active Directory identity of the server.
      * 
-     */
+    */
     public Optional<ServerExternalAdministratorResponse> getAdministrators() {
         return Optional.ofNullable(this.administrators);
     }
     /**
      * The fully qualified domain name of the server.
      * 
-     */
+    */
     public String getFullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Azure Active Directory identity of the server.
      * 
-     */
+    */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * A CMK URI of the key to use for encryption.
      * 
-     */
+    */
     public Optional<String> getKeyId() {
         return Optional.ofNullable(this.keyId);
     }
     /**
      * Kind of sql server. This is metadata used for the Azure portal experience.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
      * 
-     */
+    */
     public Optional<String> getMinimalTlsVersion() {
         return Optional.ofNullable(this.minimalTlsVersion);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource id of a user assigned identity to be used by default.
      * 
-     */
+    */
     public Optional<String> getPrimaryUserAssignedIdentityId() {
         return Optional.ofNullable(this.primaryUserAssignedIdentityId);
     }
     /**
      * List of private endpoint connections on a server
      * 
-     */
+    */
     public List<ServerPrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The state of the server.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The version of the server.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
     /**
      * Whether or not existing server has a workspace created and if it allows connection from workspace
      * 
-     */
+    */
     public String getWorkspaceFeature() {
         return this.workspaceFeature;
     }
@@ -417,7 +417,6 @@ public final class GetServerResult {
             this.workspaceFeature = Objects.requireNonNull(workspaceFeature);
             return this;
         }
-
         public GetServerResult build() {
             return new GetServerResult(administratorLogin, administrators, fullyQualifiedDomainName, id, identity, keyId, kind, location, minimalTlsVersion, name, primaryUserAssignedIdentityId, privateEndpointConnections, publicNetworkAccess, state, tags, type, version, workspaceFeature);
         }

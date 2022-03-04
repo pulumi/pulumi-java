@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stepName", required=true)
-    private final String stepName;
+      private final String stepName;
 
     public String getStepName() {
         return this.stepName;
@@ -77,7 +77,6 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
             this.stepName = Objects.requireNonNull(stepName);
             return this;
         }
-
         public GetStepArgs build() {
             return new GetStepArgs(resourceGroupName, stepName);
         }

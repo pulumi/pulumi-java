@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -42,21 +42,21 @@ public final class DeploymentCanarySetting {
     /**
      * The percent (0-100) of traffic diverted to a canary deployment.
      * 
-     */
+    */
     public Optional<Double> getPercentTraffic() {
         return Optional.ofNullable(this.percentTraffic);
     }
     /**
      * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.
      * 
-     */
+    */
     public Optional<Object> getStageVariableOverrides() {
         return Optional.ofNullable(this.stageVariableOverrides);
     }
     /**
      * Whether the canary deployment uses the stage cache or not.
      * 
-     */
+    */
     public Optional<Boolean> getUseStageCache() {
         return Optional.ofNullable(this.useStageCache);
     }
@@ -99,7 +99,6 @@ public final class DeploymentCanarySetting {
             this.useStageCache = useStageCache;
             return this;
         }
-
         public DeploymentCanarySetting build() {
             return new DeploymentCanarySetting(percentTraffic, stageVariableOverrides, useStageCache);
         }

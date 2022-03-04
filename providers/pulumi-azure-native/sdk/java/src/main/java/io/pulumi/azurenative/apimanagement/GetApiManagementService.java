@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetApiManagementServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiManagementService {
-/**
- * A single API Management service resource in List or Get response.
+    private GetApiManagementService() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiManagementServiceArgs.Builder a);
+    }
+    private static GetApiManagementServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiManagementServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A single API Management service resource in List or Get response.
  * API Version: 2020-12-01.
  * 
- *
- * A single API Management service resource in List or Get response.
+     *
+     * A single API Management service resource in List or Get response.
  * 
- */
+     */
+    public static CompletableFuture<GetApiManagementServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A single API Management service resource in List or Get response.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * A single API Management service resource in List or Get response.
+     * 
+     */
     public static CompletableFuture<GetApiManagementServiceResult> invokeAsync(GetApiManagementServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementService", TypeShape.of(GetApiManagementServiceResult.class), args == null ? GetApiManagementServiceArgs.Empty : args, Utilities.withVersion(options));
     }

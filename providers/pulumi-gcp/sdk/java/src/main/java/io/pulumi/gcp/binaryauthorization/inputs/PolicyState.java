@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyAdmissionWhitelistPatternGetArgs;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyClusterAdmissionRuleGetArgs;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyDefaultAdmissionRuleGetArgs;
@@ -26,7 +26,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="admissionWhitelistPatterns")
-    private final @Nullable Input<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns;
+      private final @Nullable Input<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns;
 
     public Input<List<PolicyAdmissionWhitelistPatternGetArgs>> getAdmissionWhitelistPatterns() {
         return this.admissionWhitelistPatterns == null ? Input.empty() : this.admissionWhitelistPatterns;
@@ -41,7 +41,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterAdmissionRules")
-    private final @Nullable Input<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules;
+      private final @Nullable Input<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules;
 
     public Input<List<PolicyClusterAdmissionRuleGetArgs>> getClusterAdmissionRules() {
         return this.clusterAdmissionRules == null ? Input.empty() : this.clusterAdmissionRules;
@@ -54,7 +54,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAdmissionRule")
-    private final @Nullable Input<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule;
+      private final @Nullable Input<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule;
 
     public Input<PolicyDefaultAdmissionRuleGetArgs> getDefaultAdmissionRule() {
         return this.defaultAdmissionRule == null ? Input.empty() : this.defaultAdmissionRule;
@@ -65,7 +65,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -79,7 +79,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalPolicyEvaluationMode")
-    private final @Nullable Input<String> globalPolicyEvaluationMode;
+      private final @Nullable Input<String> globalPolicyEvaluationMode;
 
     public Input<String> getGlobalPolicyEvaluationMode() {
         return this.globalPolicyEvaluationMode == null ? Input.empty() : this.globalPolicyEvaluationMode;
@@ -91,7 +91,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -210,7 +210,6 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public PolicyState build() {
             return new PolicyState(admissionWhitelistPatterns, clusterAdmissionRules, defaultAdmissionRule, description, globalPolicyEvaluationMode, project);
         }

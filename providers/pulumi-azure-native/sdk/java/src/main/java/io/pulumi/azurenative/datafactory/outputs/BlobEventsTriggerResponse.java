@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -94,63 +94,63 @@ public final class BlobEventsTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
      * 
-     */
+    */
     public Optional<String> getBlobPathBeginsWith() {
         return Optional.ofNullable(this.blobPathBeginsWith);
     }
     /**
      * The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
      * 
-     */
+    */
     public Optional<String> getBlobPathEndsWith() {
         return Optional.ofNullable(this.blobPathEndsWith);
     }
     /**
      * Trigger description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The type of events that cause this trigger to fire.
      * 
-     */
+    */
     public List<String> getEvents() {
         return this.events;
     }
     /**
      * If set to true, blobs with zero bytes will be ignored.
      * 
-     */
+    */
     public Optional<Boolean> getIgnoreEmptyBlobs() {
         return Optional.ofNullable(this.ignoreEmptyBlobs);
     }
     /**
      * Pipelines that need to be started.
      * 
-     */
+    */
     public List<TriggerPipelineReferenceResponse> getPipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-     */
+    */
     public String getRuntimeState() {
         return this.runtimeState;
     }
     /**
      * The ARM resource ID of the Storage Account.
      * 
-     */
+    */
     public String getScope() {
         return this.scope;
     }
@@ -158,7 +158,7 @@ public final class BlobEventsTriggerResponse {
      * Trigger type.
      * Expected value is 'BlobEventsTrigger'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -250,7 +250,6 @@ public final class BlobEventsTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobEventsTriggerResponse build() {
             return new BlobEventsTriggerResponse(annotations, blobPathBeginsWith, blobPathEndsWith, description, events, ignoreEmptyBlobs, pipelines, runtimeState, scope, type);
         }

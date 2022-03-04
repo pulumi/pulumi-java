@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.VmwareSourceDetailsResponse;
 import java.lang.String;
 import java.util.Map;
@@ -61,42 +61,42 @@ public final class GetSourceResult {
     /**
      * The create time timestamp.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * User-provided description of the source.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The labels of the source.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The Source name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The update time timestamp.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Vmware type source details.
      * 
-     */
+    */
     public VmwareSourceDetailsResponse getVmware() {
         return this.vmware;
     }
@@ -160,7 +160,6 @@ public final class GetSourceResult {
             this.vmware = Objects.requireNonNull(vmware);
             return this;
         }
-
         public GetSourceResult build() {
             return new GetSourceResult(createTime, description, labels, name, updateTime, vmware);
         }

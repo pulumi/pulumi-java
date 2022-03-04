@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.PersistentDiskResponse;
 import io.pulumi.azurenative.appplatform.inputs.TemporaryDiskResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="activeDeploymentName")
-    private final @Nullable String activeDeploymentName;
+      private final @Nullable String activeDeploymentName;
 
     public Optional<String> getActiveDeploymentName() {
         return this.activeDeploymentName == null ? Optional.empty() : Optional.ofNullable(this.activeDeploymentName);
@@ -37,7 +37,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="createdTime", required=true)
-    private final String createdTime;
+      private final String createdTime;
 
     public String getCreatedTime() {
         return this.createdTime;
@@ -48,7 +48,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable String fqdn;
+      private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
@@ -59,7 +59,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="httpsOnly")
-    private final @Nullable Boolean httpsOnly;
+      private final @Nullable Boolean httpsOnly;
 
     public Optional<Boolean> getHttpsOnly() {
         return this.httpsOnly == null ? Optional.empty() : Optional.ofNullable(this.httpsOnly);
@@ -70,7 +70,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="persistentDisk")
-    private final @Nullable PersistentDiskResponse persistentDisk;
+      private final @Nullable PersistentDiskResponse persistentDisk;
 
     public Optional<PersistentDiskResponse> getPersistentDisk() {
         return this.persistentDisk == null ? Optional.empty() : Optional.ofNullable(this.persistentDisk);
@@ -81,7 +81,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -92,7 +92,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="public")
-    private final @Nullable Boolean $public;
+      private final @Nullable Boolean $public;
 
     public Optional<Boolean> get$public() {
         return this.$public == null ? Optional.empty() : Optional.ofNullable(this.$public);
@@ -103,7 +103,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="temporaryDisk")
-    private final @Nullable TemporaryDiskResponse temporaryDisk;
+      private final @Nullable TemporaryDiskResponse temporaryDisk;
 
     public Optional<TemporaryDiskResponse> getTemporaryDisk() {
         return this.temporaryDisk == null ? Optional.empty() : Optional.ofNullable(this.temporaryDisk);
@@ -114,7 +114,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -233,7 +233,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public AppResourcePropertiesResponse build() {
             return new AppResourcePropertiesResponse(activeDeploymentName, createdTime, fqdn, httpsOnly, persistentDisk, provisioningState, $public, temporaryDisk, url);
         }

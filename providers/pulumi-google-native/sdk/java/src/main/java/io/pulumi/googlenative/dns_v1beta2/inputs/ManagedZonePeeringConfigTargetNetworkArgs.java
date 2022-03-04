@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="deactivateTime")
-    private final @Nullable Input<String> deactivateTime;
+      private final @Nullable Input<String> deactivateTime;
 
     public Input<String> getDeactivateTime() {
         return this.deactivateTime == null ? Input.empty() : this.deactivateTime;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -37,7 +37,7 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="networkUrl")
-    private final @Nullable Input<String> networkUrl;
+      private final @Nullable Input<String> networkUrl;
 
     public Input<String> getNetworkUrl() {
         return this.networkUrl == null ? Input.empty() : this.networkUrl;
@@ -111,7 +111,6 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
             this.networkUrl = Input.ofNullable(networkUrl);
             return this;
         }
-
         public ManagedZonePeeringConfigTargetNetworkArgs build() {
             return new ManagedZonePeeringConfigTargetNetworkArgs(deactivateTime, kind, networkUrl);
         }

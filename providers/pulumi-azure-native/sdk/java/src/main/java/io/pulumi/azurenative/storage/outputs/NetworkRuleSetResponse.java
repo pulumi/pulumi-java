@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.outputs;
 import io.pulumi.azurenative.storage.outputs.IPRuleResponse;
 import io.pulumi.azurenative.storage.outputs.ResourceAccessRuleResponse;
 import io.pulumi.azurenative.storage.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,35 +58,35 @@ public final class NetworkRuleSetResponse {
     /**
      * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
      * 
-     */
+    */
     public Optional<String> getBypass() {
         return Optional.ofNullable(this.bypass);
     }
     /**
      * Specifies the default action of allow or deny when no other rules match.
      * 
-     */
+    */
     public String getDefaultAction() {
         return this.defaultAction;
     }
     /**
      * Sets the IP ACL rules
      * 
-     */
+    */
     public List<IPRuleResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
      * Sets the resource access rules
      * 
-     */
+    */
     public List<ResourceAccessRuleResponse> getResourceAccessRules() {
         return this.resourceAccessRules == null ? List.of() : this.resourceAccessRules;
     }
     /**
      * Sets the virtual network rules
      * 
-     */
+    */
     public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }
@@ -143,7 +143,6 @@ public final class NetworkRuleSetResponse {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(bypass, defaultAction, ipRules, resourceAccessRules, virtualNetworkRules);
         }

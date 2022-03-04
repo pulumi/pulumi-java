@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaimTemplate;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -40,7 +40,7 @@ public final class EphemeralVolumeSource {
     /**
      * Specifies a read-only configuration for the volume. Defaults to false (read/write).
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -53,7 +53,7 @@ public final class EphemeralVolumeSource {
      * 
      * Required, must not be nil.
      * 
-     */
+    */
     public Optional<PersistentVolumeClaimTemplate> getVolumeClaimTemplate() {
         return Optional.ofNullable(this.volumeClaimTemplate);
     }
@@ -89,7 +89,6 @@ public final class EphemeralVolumeSource {
             this.volumeClaimTemplate = volumeClaimTemplate;
             return this;
         }
-
         public EphemeralVolumeSource build() {
             return new EphemeralVolumeSource(readOnly, volumeClaimTemplate);
         }

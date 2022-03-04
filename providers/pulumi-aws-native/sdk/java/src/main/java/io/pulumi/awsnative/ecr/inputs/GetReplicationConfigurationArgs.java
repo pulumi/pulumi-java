@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecr.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetReplicationConfigurationArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="registryId", required=true)
-    private final String registryId;
+      private final String registryId;
 
     public String getRegistryId() {
         return this.registryId;
@@ -55,7 +55,6 @@ public final class GetReplicationConfigurationArgs extends io.pulumi.resources.I
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public GetReplicationConfigurationArgs build() {
             return new GetReplicationConfigurationArgs(registryId);
         }

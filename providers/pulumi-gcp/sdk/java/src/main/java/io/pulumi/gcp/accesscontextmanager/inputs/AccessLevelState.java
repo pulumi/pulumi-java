@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelCustomGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basic")
-    private final @Nullable Input<AccessLevelBasicGetArgs> basic;
+      private final @Nullable Input<AccessLevelBasicGetArgs> basic;
 
     public Input<AccessLevelBasicGetArgs> getBasic() {
         return this.basic == null ? Input.empty() : this.basic;
@@ -35,7 +35,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="custom")
-    private final @Nullable Input<AccessLevelCustomGetArgs> custom;
+      private final @Nullable Input<AccessLevelCustomGetArgs> custom;
 
     public Input<AccessLevelCustomGetArgs> getCustom() {
         return this.custom == null ? Input.empty() : this.custom;
@@ -46,7 +46,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -59,7 +59,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -71,7 +71,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -82,7 +82,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -201,7 +201,6 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public AccessLevelState build() {
             return new AccessLevelState(basic, custom, description, name, parent, title);
         }

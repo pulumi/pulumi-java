@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="qualifier", required=true)
-    private final String qualifier;
+      private final String qualifier;
 
     public String getQualifier() {
         return this.qualifier;
@@ -32,7 +32,7 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BusinessIdentityResponse build() {
             return new BusinessIdentityResponse(qualifier, value);
         }

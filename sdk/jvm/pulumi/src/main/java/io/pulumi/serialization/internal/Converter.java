@@ -13,11 +13,11 @@ import io.pulumi.core.Archive.InvalidArchive;
 import io.pulumi.core.Asset.InvalidAsset;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Either;
+import io.pulumi.core.TypeShape;
+import io.pulumi.core.annotations.EnumType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Maps;
-import io.pulumi.core.internal.Reflection.TypeShape;
-import io.pulumi.core.internal.annotations.EnumType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;

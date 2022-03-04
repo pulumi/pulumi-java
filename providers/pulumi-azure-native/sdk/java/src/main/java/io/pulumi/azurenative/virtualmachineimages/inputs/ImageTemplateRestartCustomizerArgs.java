@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="restartCheckCommand")
-    private final @Nullable Input<String> restartCheckCommand;
+      private final @Nullable Input<String> restartCheckCommand;
 
     public Input<String> getRestartCheckCommand() {
         return this.restartCheckCommand == null ? Input.empty() : this.restartCheckCommand;
@@ -45,7 +45,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="restartCommand")
-    private final @Nullable Input<String> restartCommand;
+      private final @Nullable Input<String> restartCommand;
 
     public Input<String> getRestartCommand() {
         return this.restartCommand == null ? Input.empty() : this.restartCommand;
@@ -56,7 +56,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="restartTimeout")
-    private final @Nullable Input<String> restartTimeout;
+      private final @Nullable Input<String> restartTimeout;
 
     public Input<String> getRestartTimeout() {
         return this.restartTimeout == null ? Input.empty() : this.restartTimeout;
@@ -68,7 +68,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -172,7 +172,6 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ImageTemplateRestartCustomizerArgs build() {
             return new ImageTemplateRestartCustomizerArgs(name, restartCheckCommand, restartCommand, restartTimeout, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class DataDiskImageEncryptionResponse {
     /**
      * A relative URI containing the resource ID of the disk encryption set.
      * 
-     */
+    */
     public Optional<String> getDiskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
     /**
      * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
      * 
-     */
+    */
     public Integer getLun() {
         return this.lun;
     }
@@ -77,7 +77,6 @@ public final class DataDiskImageEncryptionResponse {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public DataDiskImageEncryptionResponse build() {
             return new DataDiskImageEncryptionResponse(diskEncryptionSetId, lun);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BucketingConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CharacterMaskConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoDeterministicConfigArgs;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="bucketingConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig;
 
     public Input<GooglePrivacyDlpV2BucketingConfigArgs> getBucketingConfig() {
         return this.bucketingConfig == null ? Input.empty() : this.bucketingConfig;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="characterMaskConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig;
 
     public Input<GooglePrivacyDlpV2CharacterMaskConfigArgs> getCharacterMaskConfig() {
         return this.characterMaskConfig == null ? Input.empty() : this.characterMaskConfig;
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="cryptoDeterministicConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig;
 
     public Input<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> getCryptoDeterministicConfig() {
         return this.cryptoDeterministicConfig == null ? Input.empty() : this.cryptoDeterministicConfig;
@@ -67,7 +67,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="cryptoHashConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig;
 
     public Input<GooglePrivacyDlpV2CryptoHashConfigArgs> getCryptoHashConfig() {
         return this.cryptoHashConfig == null ? Input.empty() : this.cryptoHashConfig;
@@ -78,7 +78,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="cryptoReplaceFfxFpeConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig;
 
     public Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> getCryptoReplaceFfxFpeConfig() {
         return this.cryptoReplaceFfxFpeConfig == null ? Input.empty() : this.cryptoReplaceFfxFpeConfig;
@@ -89,7 +89,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="dateShiftConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig;
 
     public Input<GooglePrivacyDlpV2DateShiftConfigArgs> getDateShiftConfig() {
         return this.dateShiftConfig == null ? Input.empty() : this.dateShiftConfig;
@@ -100,7 +100,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="fixedSizeBucketingConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig;
 
     public Input<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> getFixedSizeBucketingConfig() {
         return this.fixedSizeBucketingConfig == null ? Input.empty() : this.fixedSizeBucketingConfig;
@@ -111,7 +111,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="redactConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2RedactConfigArgs> redactConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2RedactConfigArgs> redactConfig;
 
     public Input<GooglePrivacyDlpV2RedactConfigArgs> getRedactConfig() {
         return this.redactConfig == null ? Input.empty() : this.redactConfig;
@@ -122,7 +122,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="replaceConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig;
 
     public Input<GooglePrivacyDlpV2ReplaceValueConfigArgs> getReplaceConfig() {
         return this.replaceConfig == null ? Input.empty() : this.replaceConfig;
@@ -133,7 +133,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="replaceDictionaryConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig;
 
     public Input<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> getReplaceDictionaryConfig() {
         return this.replaceDictionaryConfig == null ? Input.empty() : this.replaceDictionaryConfig;
@@ -144,7 +144,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="replaceWithInfoTypeConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig;
 
     public Input<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> getReplaceWithInfoTypeConfig() {
         return this.replaceWithInfoTypeConfig == null ? Input.empty() : this.replaceWithInfoTypeConfig;
@@ -155,7 +155,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="timePartConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig;
 
     public Input<GooglePrivacyDlpV2TimePartConfigArgs> getTimePartConfig() {
         return this.timePartConfig == null ? Input.empty() : this.timePartConfig;
@@ -364,7 +364,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
             this.timePartConfig = Input.ofNullable(timePartConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2PrimitiveTransformationArgs build() {
             return new GooglePrivacyDlpV2PrimitiveTransformationArgs(bucketingConfig, characterMaskConfig, cryptoDeterministicConfig, cryptoHashConfig, cryptoReplaceFfxFpeConfig, dateShiftConfig, fixedSizeBucketingConfig, redactConfig, replaceConfig, replaceDictionaryConfig, replaceWithInfoTypeConfig, timePartConfig);
         }

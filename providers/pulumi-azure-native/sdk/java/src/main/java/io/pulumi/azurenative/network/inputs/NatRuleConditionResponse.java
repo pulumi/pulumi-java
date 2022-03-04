@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="destinationAddresses")
-    private final @Nullable List<String> destinationAddresses;
+      private final @Nullable List<String> destinationAddresses;
 
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
@@ -46,7 +46,7 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="destinationPorts")
-    private final @Nullable List<String> destinationPorts;
+      private final @Nullable List<String> destinationPorts;
 
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
@@ -57,7 +57,7 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipProtocols")
-    private final @Nullable List<String> ipProtocols;
+      private final @Nullable List<String> ipProtocols;
 
     public List<String> getIpProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
@@ -68,7 +68,7 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -80,7 +80,7 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ruleConditionType", required=true)
-    private final String ruleConditionType;
+      private final String ruleConditionType;
 
     public String getRuleConditionType() {
         return this.ruleConditionType;
@@ -91,7 +91,7 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sourceAddresses")
-    private final @Nullable List<String> sourceAddresses;
+      private final @Nullable List<String> sourceAddresses;
 
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
@@ -102,7 +102,7 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sourceIpGroups")
-    private final @Nullable List<String> sourceIpGroups;
+      private final @Nullable List<String> sourceIpGroups;
 
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
@@ -211,7 +211,6 @@ public final class NatRuleConditionResponse extends io.pulumi.resources.InvokeAr
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public NatRuleConditionResponse build() {
             return new NatRuleConditionResponse(description, destinationAddresses, destinationPorts, ipProtocols, name, ruleConditionType, sourceAddresses, sourceIpGroups);
         }

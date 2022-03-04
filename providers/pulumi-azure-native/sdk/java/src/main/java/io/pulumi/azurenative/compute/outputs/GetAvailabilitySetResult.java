@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.SkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -102,77 +102,77 @@ public final class GetAvailabilitySetResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Fault Domain count.
      * 
-     */
+    */
     public Optional<Integer> getPlatformFaultDomainCount() {
         return Optional.ofNullable(this.platformFaultDomainCount);
     }
     /**
      * Update Domain count.
      * 
-     */
+    */
     public Optional<Integer> getPlatformUpdateDomainCount() {
         return Optional.ofNullable(this.platformUpdateDomainCount);
     }
     /**
      * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getProximityPlacementGroup() {
         return Optional.ofNullable(this.proximityPlacementGroup);
     }
     /**
      * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A list of references to all virtual machines in the availability set.
      * 
-     */
+    */
     public List<SubResourceResponse> getVirtualMachines() {
         return this.virtualMachines == null ? List.of() : this.virtualMachines;
     }
@@ -271,7 +271,6 @@ public final class GetAvailabilitySetResult {
             this.virtualMachines = virtualMachines;
             return this;
         }
-
         public GetAvailabilitySetResult build() {
             return new GetAvailabilitySetResult(id, location, name, platformFaultDomainCount, platformUpdateDomainCount, proximityPlacementGroup, sku, statuses, tags, type, virtualMachines);
         }

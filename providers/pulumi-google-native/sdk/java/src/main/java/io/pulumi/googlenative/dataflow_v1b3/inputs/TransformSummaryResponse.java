@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="displayData", required=true)
-    private final List<DisplayDataResponse> displayData;
+      private final List<DisplayDataResponse> displayData;
 
     public List<DisplayDataResponse> getDisplayData() {
         return this.displayData;
@@ -34,7 +34,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="inputCollectionName", required=true)
-    private final List<String> inputCollectionName;
+      private final List<String> inputCollectionName;
 
     public List<String> getInputCollectionName() {
         return this.inputCollectionName;
@@ -45,7 +45,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -56,7 +56,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -67,7 +67,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="outputCollectionName", required=true)
-    private final List<String> outputCollectionName;
+      private final List<String> outputCollectionName;
 
     public List<String> getOutputCollectionName() {
         return this.outputCollectionName;
@@ -146,7 +146,6 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
             this.outputCollectionName = Objects.requireNonNull(outputCollectionName);
             return this;
         }
-
         public TransformSummaryResponse build() {
             return new TransformSummaryResponse(displayData, inputCollectionName, kind, name, outputCollectionName);
         }

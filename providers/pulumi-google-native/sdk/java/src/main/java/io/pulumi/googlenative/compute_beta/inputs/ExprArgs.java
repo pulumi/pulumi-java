@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression")
-    private final @Nullable Input<String> expression;
+      private final @Nullable Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression == null ? Input.empty() : this.expression;
@@ -45,7 +45,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -56,7 +56,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -145,7 +145,6 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public ExprArgs build() {
             return new ExprArgs(description, expression, location, title);
         }

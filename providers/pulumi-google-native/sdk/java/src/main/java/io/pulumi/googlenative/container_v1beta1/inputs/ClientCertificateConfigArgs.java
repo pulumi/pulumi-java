@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="issueClientCertificate")
-    private final @Nullable Input<Boolean> issueClientCertificate;
+      private final @Nullable Input<Boolean> issueClientCertificate;
 
     public Input<Boolean> getIssueClientCertificate() {
         return this.issueClientCertificate == null ? Input.empty() : this.issueClientCertificate;
@@ -66,7 +66,6 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
             this.issueClientCertificate = Input.ofNullable(issueClientCertificate);
             return this;
         }
-
         public ClientCertificateConfigArgs build() {
             return new ClientCertificateConfigArgs(issueClientCertificate);
         }

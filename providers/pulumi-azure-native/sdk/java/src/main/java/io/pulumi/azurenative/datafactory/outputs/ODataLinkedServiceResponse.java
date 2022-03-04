@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -161,112 +161,112 @@ public final class ODataLinkedServiceResponse {
     /**
      * Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getAadResourceId() {
         return Optional.ofNullable(this.aadResourceId);
     }
     /**
      * Specify the credential type (key or cert) is used for service principal.
      * 
-     */
+    */
     public Optional<String> getAadServicePrincipalCredentialType() {
         return Optional.ofNullable(this.aadServicePrincipalCredentialType);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
      * 
-     */
+    */
     public Optional<Object> getAuthHeaders() {
         return Optional.ofNullable(this.authHeaders);
     }
     /**
      * Type of authentication used to connect to the OData service.
      * 
-     */
+    */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getAzureCloudType() {
         return Optional.ofNullable(this.azureCloudType);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password of the OData service.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalEmbeddedCert() {
         return Optional.ofNullable(this.servicePrincipalEmbeddedCert);
     }
     /**
      * Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalEmbeddedCertPassword() {
         return Optional.ofNullable(this.servicePrincipalEmbeddedCertPassword);
     }
     /**
      * Specify the application id of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getServicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
      * Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
      * Specify the tenant information (domain name or tenant ID) under which your application resides. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getTenant() {
         return Optional.ofNullable(this.tenant);
     }
@@ -274,21 +274,21 @@ public final class ODataLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'OData'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The URL of the OData service endpoint. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getUrl() {
         return this.url;
     }
     /**
      * User name of the OData service. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getUserName() {
         return Optional.ofNullable(this.userName);
     }
@@ -443,7 +443,6 @@ public final class ODataLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public ODataLinkedServiceResponse build() {
             return new ODataLinkedServiceResponse(aadResourceId, aadServicePrincipalCredentialType, annotations, authHeaders, authenticationType, azureCloudType, connectVia, description, encryptedCredential, parameters, password, servicePrincipalEmbeddedCert, servicePrincipalEmbeddedCertPassword, servicePrincipalId, servicePrincipalKey, tenant, type, url, userName);
         }

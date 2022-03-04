@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceHealthCheckConfigurationProtocol;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class ServiceHealthCheckConfiguration {
     /**
      * Health check Healthy Threshold
      * 
-     */
+    */
     public Optional<Integer> getHealthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
     /**
      * Health check Interval
      * 
-     */
+    */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * Health check Path
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Health Check Protocol
      * 
-     */
+    */
     public Optional<ServiceHealthCheckConfigurationProtocol> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * Health check Timeout
      * 
-     */
+    */
     public Optional<Integer> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * Health check Unhealthy Threshold
      * 
-     */
+    */
     public Optional<Integer> getUnhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }
@@ -162,7 +162,6 @@ public final class ServiceHealthCheckConfiguration {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public ServiceHealthCheckConfiguration build() {
             return new ServiceHealthCheckConfiguration(healthyThreshold, interval, path, protocol, timeout, unhealthyThreshold);
         }

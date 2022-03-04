@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.DatasetResponseFolder;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -96,63 +96,63 @@ public final class AmazonRedshiftTableDatasetResponse {
     /**
      * List of tags that can be used for describing the Dataset.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Dataset description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-     */
+    */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * Parameters for dataset.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-     */
+    */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-     */
+    */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
     }
     /**
      * The Amazon Redshift table name. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getTable() {
         return Optional.ofNullable(this.table);
     }
     /**
      * This property will be retired. Please consider using schema + table properties instead.
      * 
-     */
+    */
     public Optional<Object> getTableName() {
         return Optional.ofNullable(this.tableName);
     }
@@ -160,7 +160,7 @@ public final class AmazonRedshiftTableDatasetResponse {
      * Type of dataset.
      * Expected value is 'AmazonRedshiftTable'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -252,7 +252,6 @@ public final class AmazonRedshiftTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonRedshiftTableDatasetResponse build() {
             return new AmazonRedshiftTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.outputs.ApiResourceBackendServiceResponse;
 import io.pulumi.azurenative.web.outputs.ApiResourceDefinitionsResponse;
 import io.pulumi.azurenative.web.outputs.ConnectionParameterResponse;
 import io.pulumi.azurenative.web.outputs.WsdlDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -110,84 +110,84 @@ public final class CustomApiPropertiesDefinitionResponse {
     /**
      * API Definitions
      * 
-     */
+    */
     public Optional<ApiResourceDefinitionsResponse> getApiDefinitions() {
         return Optional.ofNullable(this.apiDefinitions);
     }
     /**
      * The API type
      * 
-     */
+    */
     public Optional<String> getApiType() {
         return Optional.ofNullable(this.apiType);
     }
     /**
      * The API backend service
      * 
-     */
+    */
     public Optional<ApiResourceBackendServiceResponse> getBackendService() {
         return Optional.ofNullable(this.backendService);
     }
     /**
      * Brand color
      * 
-     */
+    */
     public Optional<String> getBrandColor() {
         return Optional.ofNullable(this.brandColor);
     }
     /**
      * The custom API capabilities
      * 
-     */
+    */
     public List<String> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
     /**
      * Connection parameters
      * 
-     */
+    */
     public Map<String,ConnectionParameterResponse> getConnectionParameters() {
         return this.connectionParameters == null ? Map.of() : this.connectionParameters;
     }
     /**
      * The custom API description
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The icon URI
      * 
-     */
+    */
     public Optional<String> getIconUri() {
         return Optional.ofNullable(this.iconUri);
     }
     /**
      * Runtime URLs
      * 
-     */
+    */
     public List<String> getRuntimeUrls() {
         return this.runtimeUrls == null ? List.of() : this.runtimeUrls;
     }
     /**
      * The JSON representation of the swagger
      * 
-     */
+    */
     public Optional<Object> getSwagger() {
         return Optional.ofNullable(this.swagger);
     }
     /**
      * The WSDL definition
      * 
-     */
+    */
     public Optional<WsdlDefinitionResponse> getWsdlDefinition() {
         return Optional.ofNullable(this.wsdlDefinition);
     }
@@ -293,7 +293,6 @@ public final class CustomApiPropertiesDefinitionResponse {
             this.wsdlDefinition = wsdlDefinition;
             return this;
         }
-
         public CustomApiPropertiesDefinitionResponse build() {
             return new CustomApiPropertiesDefinitionResponse(apiDefinitions, apiType, backendService, brandColor, capabilities, connectionParameters, description, displayName, iconUri, runtimeUrls, swagger, wsdlDefinition);
         }

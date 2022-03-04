@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -56,35 +56,35 @@ public final class SuppressionScheduleResponse {
     /**
      * End date for suppression
      * 
-     */
+    */
     public Optional<String> getEndDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
      * End date for suppression
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Specifies the values for recurrence pattern
      * 
-     */
+    */
     public List<Integer> getRecurrenceValues() {
         return this.recurrenceValues == null ? List.of() : this.recurrenceValues;
     }
     /**
      * Start date for suppression
      * 
-     */
+    */
     public Optional<String> getStartDate() {
         return Optional.ofNullable(this.startDate);
     }
     /**
      * Start time for suppression
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -141,7 +141,6 @@ public final class SuppressionScheduleResponse {
             this.startTime = startTime;
             return this;
         }
-
         public SuppressionScheduleResponse build() {
             return new SuppressionScheduleResponse(endDate, endTime, recurrenceValues, startDate, startTime);
         }

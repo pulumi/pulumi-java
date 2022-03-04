@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class PrivateEndpointResponse {
     /**
      * The ARM identifier for Private Endpoint
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -52,7 +52,6 @@ public final class PrivateEndpointResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public PrivateEndpointResponse build() {
             return new PrivateEndpointResponse(id);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -84,49 +84,49 @@ public final class SqlConnectionInfoResponse {
     /**
      * Additional connection settings
      * 
-     */
+    */
     public Optional<String> getAdditionalSettings() {
         return Optional.ofNullable(this.additionalSettings);
     }
     /**
      * Authentication type to use for connection
      * 
-     */
+    */
     public Optional<String> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
      * 
-     */
+    */
     public String getDataSource() {
         return this.dataSource;
     }
     /**
      * Whether to encrypt the connection
      * 
-     */
+    */
     public Optional<Boolean> getEncryptConnection() {
         return Optional.ofNullable(this.encryptConnection);
     }
     /**
      * Password credential.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Server platform type for connection
      * 
-     */
+    */
     public Optional<String> getPlatform() {
         return Optional.ofNullable(this.platform);
     }
     /**
      * Whether to trust the server certificate
      * 
-     */
+    */
     public Optional<Boolean> getTrustServerCertificate() {
         return Optional.ofNullable(this.trustServerCertificate);
     }
@@ -134,14 +134,14 @@ public final class SqlConnectionInfoResponse {
      * Type of connection info
      * Expected value is 'SqlConnectionInfo'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * User name
      * 
-     */
+    */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }
@@ -226,7 +226,6 @@ public final class SqlConnectionInfoResponse {
             this.userName = userName;
             return this;
         }
-
         public SqlConnectionInfoResponse build() {
             return new SqlConnectionInfoResponse(additionalSettings, authentication, dataSource, encryptConnection, password, platform, trustServerCertificate, type, userName);
         }

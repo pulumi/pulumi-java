@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="premierAddOnName", required=true)
-    private final String premierAddOnName;
+      private final String premierAddOnName;
 
     public String getPremierAddOnName() {
         return this.premierAddOnName;
@@ -39,7 +39,7 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetWebAppPremierAddOnArgs build() {
             return new GetWebAppPremierAddOnArgs(name, premierAddOnName, resourceGroupName);
         }

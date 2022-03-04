@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.PrimaryStepArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multistepNumber")
-    private final @Nullable Input<Integer> multistepNumber;
+      private final @Nullable Input<Integer> multistepNumber;
 
     public Input<Integer> getMultistepNumber() {
         return this.multistepNumber == null ? Input.empty() : this.multistepNumber;
@@ -36,7 +36,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryStep")
-    private final @Nullable Input<PrimaryStepArgs> primaryStep;
+      private final @Nullable Input<PrimaryStepArgs> primaryStep;
 
     public Input<PrimaryStepArgs> getPrimaryStep() {
         return this.primaryStep == null ? Input.empty() : this.primaryStep;
@@ -47,7 +47,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryStepId")
-    private final @Nullable Input<String> primaryStepId;
+      private final @Nullable Input<String> primaryStepId;
 
     public Input<String> getPrimaryStepId() {
         return this.primaryStepId == null ? Input.empty() : this.primaryStepId;
@@ -121,7 +121,6 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
             this.primaryStepId = Input.ofNullable(primaryStepId);
             return this;
         }
-
         public MultiStepArgs build() {
             return new MultiStepArgs(multistepNumber, primaryStep, primaryStepId);
         }

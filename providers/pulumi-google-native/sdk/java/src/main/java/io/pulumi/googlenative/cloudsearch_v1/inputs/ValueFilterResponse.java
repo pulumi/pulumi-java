@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.ValueResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ValueFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operatorName", required=true)
-    private final String operatorName;
+      private final String operatorName;
 
     public String getOperatorName() {
         return this.operatorName;
@@ -29,7 +29,7 @@ public final class ValueFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final ValueResponse value;
+      private final ValueResponse value;
 
     public ValueResponse getValue() {
         return this.value;
@@ -78,7 +78,6 @@ public final class ValueFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ValueFilterResponse build() {
             return new ValueFilterResponse(operatorName, value);
         }

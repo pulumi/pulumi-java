@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.MABContainerHealthDetailsAr
 import io.pulumi.azurenative.recoveryservices.inputs.MabContainerExtendedInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentVersion")
-    private final @Nullable Input<String> agentVersion;
+      private final @Nullable Input<String> agentVersion;
 
     public Input<String> getAgentVersion() {
         return this.agentVersion == null ? Input.empty() : this.agentVersion;
@@ -41,7 +41,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -52,7 +52,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="canReRegister")
-    private final @Nullable Input<Boolean> canReRegister;
+      private final @Nullable Input<Boolean> canReRegister;
 
     public Input<Boolean> getCanReRegister() {
         return this.canReRegister == null ? Input.empty() : this.canReRegister;
@@ -63,7 +63,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerHealthState")
-    private final @Nullable Input<String> containerHealthState;
+      private final @Nullable Input<String> containerHealthState;
 
     public Input<String> getContainerHealthState() {
         return this.containerHealthState == null ? Input.empty() : this.containerHealthState;
@@ -74,7 +74,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerId")
-    private final @Nullable Input<Double> containerId;
+      private final @Nullable Input<Double> containerId;
 
     public Input<Double> getContainerId() {
         return this.containerId == null ? Input.empty() : this.containerId;
@@ -89,7 +89,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerType", required=true)
-    private final Input<String> containerType;
+      private final Input<String> containerType;
 
     public Input<String> getContainerType() {
         return this.containerType;
@@ -100,7 +100,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedInfo")
-    private final @Nullable Input<MabContainerExtendedInfoArgs> extendedInfo;
+      private final @Nullable Input<MabContainerExtendedInfoArgs> extendedInfo;
 
     public Input<MabContainerExtendedInfoArgs> getExtendedInfo() {
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
@@ -111,7 +111,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -122,7 +122,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthStatus")
-    private final @Nullable Input<String> healthStatus;
+      private final @Nullable Input<String> healthStatus;
 
     public Input<String> getHealthStatus() {
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
@@ -133,7 +133,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mabContainerHealthDetails")
-    private final @Nullable Input<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
+      private final @Nullable Input<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
 
     public Input<List<MABContainerHealthDetailsArgs>> getMabContainerHealthDetails() {
         return this.mabContainerHealthDetails == null ? Input.empty() : this.mabContainerHealthDetails;
@@ -144,7 +144,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectedItemCount")
-    private final @Nullable Input<Double> protectedItemCount;
+      private final @Nullable Input<Double> protectedItemCount;
 
     public Input<Double> getProtectedItemCount() {
         return this.protectedItemCount == null ? Input.empty() : this.protectedItemCount;
@@ -155,7 +155,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationStatus")
-    private final @Nullable Input<String> registrationStatus;
+      private final @Nullable Input<String> registrationStatus;
 
     public Input<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
@@ -364,7 +364,6 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.registrationStatus = Input.ofNullable(registrationStatus);
             return this;
         }
-
         public MabContainerArgs build() {
             return new MabContainerArgs(agentVersion, backupManagementType, canReRegister, containerHealthState, containerId, containerType, extendedInfo, friendlyName, healthStatus, mabContainerHealthDetails, protectedItemCount, registrationStatus);
         }

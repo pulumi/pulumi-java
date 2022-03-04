@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.RouterBgpAdvertiseMode;
 import io.pulumi.googlenative.compute_beta.enums.RouterBgpAdvertisedGroupsItem;
 import io.pulumi.googlenative.compute_beta.inputs.RouterAdvertisedIpRangeArgs;
@@ -23,7 +23,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertiseMode")
-    private final @Nullable Input<RouterBgpAdvertiseMode> advertiseMode;
+      private final @Nullable Input<RouterBgpAdvertiseMode> advertiseMode;
 
     public Input<RouterBgpAdvertiseMode> getAdvertiseMode() {
         return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
@@ -34,7 +34,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedGroups")
-    private final @Nullable Input<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
+      private final @Nullable Input<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
 
     public Input<List<RouterBgpAdvertisedGroupsItem>> getAdvertisedGroups() {
         return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
@@ -45,7 +45,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedIpRanges")
-    private final @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
+      private final @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
     public Input<List<RouterAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
         return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
@@ -56,7 +56,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asn")
-    private final @Nullable Input<Integer> asn;
+      private final @Nullable Input<Integer> asn;
 
     public Input<Integer> getAsn() {
         return this.asn == null ? Input.empty() : this.asn;
@@ -67,7 +67,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepaliveInterval")
-    private final @Nullable Input<Integer> keepaliveInterval;
+      private final @Nullable Input<Integer> keepaliveInterval;
 
     public Input<Integer> getKeepaliveInterval() {
         return this.keepaliveInterval == null ? Input.empty() : this.keepaliveInterval;
@@ -171,7 +171,6 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
             this.keepaliveInterval = Input.ofNullable(keepaliveInterval);
             return this;
         }
-
         public RouterBgpArgs build() {
             return new RouterBgpArgs(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);
         }

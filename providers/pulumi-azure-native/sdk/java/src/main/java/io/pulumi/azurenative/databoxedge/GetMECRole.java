@@ -6,21 +6,41 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.inputs.GetMECRoleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.GetMECRoleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMECRole {
-/**
- * MEC role.
+    private GetMECRole() {}
+    public interface BuilderApplicator {
+        public void apply(GetMECRoleArgs.Builder a);
+    }
+    private static GetMECRoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMECRoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * MEC role.
  * API Version: 2020-12-01.
  * 
- *
- * MEC role.
+     *
+     * MEC role.
  * 
- */
+     */
+    public static CompletableFuture<GetMECRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * MEC role.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * MEC role.
+     * 
+     */
     public static CompletableFuture<GetMECRoleResult> invokeAsync(GetMECRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getMECRole", TypeShape.of(GetMECRoleResult.class), args == null ? GetMECRoleArgs.Empty : args, Utilities.withVersion(options));
     }

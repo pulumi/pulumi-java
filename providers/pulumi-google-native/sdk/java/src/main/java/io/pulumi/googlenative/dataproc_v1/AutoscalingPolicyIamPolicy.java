@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataproc_v1.AutoscalingPolicyIamPolicyArgs;
 import io.pulumi.googlenative.dataproc_v1.outputs.BindingResponse;
@@ -66,6 +66,37 @@ public class AutoscalingPolicyIamPolicy extends io.pulumi.resources.CustomResour
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AutoscalingPolicyIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.dataproc_v1.AutoscalingPolicyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.dataproc_v1.AutoscalingPolicyIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AutoscalingPolicyIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AutoscalingPolicyIamPolicy(String name) {
+        this(name, AutoscalingPolicyIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AutoscalingPolicyIamPolicy(String name, AutoscalingPolicyIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

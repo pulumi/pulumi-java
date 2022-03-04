@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class DataSetFieldFolderMap {
         public Builder(DataSetFieldFolderMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DataSetFieldFolderMap build() {
             return new DataSetFieldFolderMap();
         }

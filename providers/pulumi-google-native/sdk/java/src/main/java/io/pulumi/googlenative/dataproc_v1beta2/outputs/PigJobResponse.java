@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.LoggingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.QueryListResponse;
 import java.lang.Boolean;
@@ -71,49 +71,49 @@ public final class PigJobResponse {
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
      * 
-     */
+    */
     public Boolean getContinueOnFailure() {
         return this.continueOnFailure;
     }
     /**
      * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris;
     }
     /**
      * Optional. The runtime log config for job execution.
      * 
-     */
+    */
     public LoggingConfigResponse getLoggingConfig() {
         return this.loggingConfig;
     }
     /**
      * Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties;
     }
     /**
      * The HCFS URI of the script that contains the Pig queries.
      * 
-     */
+    */
     public String getQueryFileUri() {
         return this.queryFileUri;
     }
     /**
      * A list of queries.
      * 
-     */
+    */
     public QueryListResponse getQueryList() {
         return this.queryList;
     }
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Pig command: name=[value]).
      * 
-     */
+    */
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables;
     }
@@ -184,7 +184,6 @@ public final class PigJobResponse {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
         }
-
         public PigJobResponse build() {
             return new PigJobResponse(continueOnFailure, jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }

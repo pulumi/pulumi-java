@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.VersionResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class LocationResponse {
     /**
      * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
      * 
-     */
+    */
     public String getCpeUri() {
         return this.cpeUri;
     }
     /**
      * The path from which we gathered that this package/version is installed.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The version installed at this location.
      * 
-     */
+    */
     public VersionResponse getVersion() {
         return this.version;
     }
@@ -96,7 +96,6 @@ public final class LocationResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public LocationResponse build() {
             return new LocationResponse(cpeUri, path, version);
         }

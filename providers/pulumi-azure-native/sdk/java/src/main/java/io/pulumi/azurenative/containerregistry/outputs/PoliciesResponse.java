@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 import io.pulumi.azurenative.containerregistry.outputs.QuarantinePolicyResponse;
 import io.pulumi.azurenative.containerregistry.outputs.RetentionPolicyResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TrustPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -42,21 +42,21 @@ public final class PoliciesResponse {
     /**
      * The quarantine policy for a container registry.
      * 
-     */
+    */
     public Optional<QuarantinePolicyResponse> getQuarantinePolicy() {
         return Optional.ofNullable(this.quarantinePolicy);
     }
     /**
      * The retention policy for a container registry.
      * 
-     */
+    */
     public Optional<RetentionPolicyResponse> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * The content trust policy for a container registry.
      * 
-     */
+    */
     public Optional<TrustPolicyResponse> getTrustPolicy() {
         return Optional.ofNullable(this.trustPolicy);
     }
@@ -99,7 +99,6 @@ public final class PoliciesResponse {
             this.trustPolicy = trustPolicy;
             return this;
         }
-
         public PoliciesResponse build() {
             return new PoliciesResponse(quarantinePolicy, retentionPolicy, trustPolicy);
         }

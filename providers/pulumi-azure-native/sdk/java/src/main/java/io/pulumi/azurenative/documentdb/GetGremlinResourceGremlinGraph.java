@@ -6,21 +6,41 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.inputs.GetGremlinResourceGremlinGraphArgs;
 import io.pulumi.azurenative.documentdb.outputs.GetGremlinResourceGremlinGraphResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGremlinResourceGremlinGraph {
-/**
- * An Azure Cosmos DB Gremlin graph.
+    private GetGremlinResourceGremlinGraph() {}
+    public interface BuilderApplicator {
+        public void apply(GetGremlinResourceGremlinGraphArgs.Builder a);
+    }
+    private static GetGremlinResourceGremlinGraphArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGremlinResourceGremlinGraphArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Cosmos DB Gremlin graph.
  * API Version: 2021-03-15.
  * 
- *
- * An Azure Cosmos DB Gremlin graph.
+     *
+     * An Azure Cosmos DB Gremlin graph.
  * 
- */
+     */
+    public static CompletableFuture<GetGremlinResourceGremlinGraphResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Cosmos DB Gremlin graph.
+     * API Version: 2021-03-15.
+     * 
+     *
+         * An Azure Cosmos DB Gremlin graph.
+     * 
+     */
     public static CompletableFuture<GetGremlinResourceGremlinGraphResult> invokeAsync(GetGremlinResourceGremlinGraphArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getGremlinResourceGremlinGraph", TypeShape.of(GetGremlinResourceGremlinGraphResult.class), args == null ? GetGremlinResourceGremlinGraphArgs.Empty : args, Utilities.withVersion(options));
     }

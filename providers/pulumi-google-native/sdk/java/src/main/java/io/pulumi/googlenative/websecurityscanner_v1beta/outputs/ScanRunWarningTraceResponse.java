@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ScanRunWarningTraceResponse {
     /**
      * Indicates the warning code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
@@ -52,7 +52,6 @@ public final class ScanRunWarningTraceResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public ScanRunWarningTraceResponse build() {
             return new ScanRunWarningTraceResponse(code);
         }

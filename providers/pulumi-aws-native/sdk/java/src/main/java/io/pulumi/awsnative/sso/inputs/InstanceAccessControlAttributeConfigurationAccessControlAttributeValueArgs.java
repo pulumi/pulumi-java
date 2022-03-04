@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sso.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     public static final InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs Empty = new InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs();
 
     @InputImport(name="source", required=true)
-    private final Input<List<String>> source;
+      private final Input<List<String>> source;
 
     public Input<List<String>> getSource() {
         return this.source;
@@ -58,7 +58,6 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs build() {
             return new InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs(source);
         }

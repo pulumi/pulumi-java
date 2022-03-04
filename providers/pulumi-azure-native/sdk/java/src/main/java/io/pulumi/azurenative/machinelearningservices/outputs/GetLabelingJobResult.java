@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.LabelingJobPropertiesResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,35 +54,35 @@ public final class GetLabelingJobResult {
     /**
      * The resource URL of the entity (not URL encoded).
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource entity.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Definition of a labeling job.
      * 
-     */
+    */
     public LabelingJobPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The resource provider and type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetLabelingJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLabelingJobResult build() {
             return new GetLabelingJobResult(id, name, properties, systemData, type);
         }

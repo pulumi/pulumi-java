@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.ManagedDiskParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -64,42 +64,42 @@ public final class RestorePointSourceVMDataDiskResponse {
     /**
      * Gets the caching type.
      * 
-     */
+    */
     public Optional<String> getCaching() {
         return Optional.ofNullable(this.caching);
     }
     /**
      * Gets the disk restore point Id.
      * 
-     */
+    */
     public Optional<ApiEntityReferenceResponse> getDiskRestorePoint() {
         return Optional.ofNullable(this.diskRestorePoint);
     }
     /**
      * Gets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * Gets the logical unit number.
      * 
-     */
+    */
     public Optional<Integer> getLun() {
         return Optional.ofNullable(this.lun);
     }
     /**
      * Gets the managed disk details
      * 
-     */
+    */
     public Optional<ManagedDiskParametersResponse> getManagedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
      * Gets the disk name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -163,7 +163,6 @@ public final class RestorePointSourceVMDataDiskResponse {
             this.name = name;
             return this;
         }
-
         public RestorePointSourceVMDataDiskResponse build() {
             return new RestorePointSourceVMDataDiskResponse(caching, diskRestorePoint, diskSizeGB, lun, managedDisk, name);
         }

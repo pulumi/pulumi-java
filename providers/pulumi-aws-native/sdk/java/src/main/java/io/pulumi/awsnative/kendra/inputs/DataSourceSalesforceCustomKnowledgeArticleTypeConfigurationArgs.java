@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationAr
     public static final DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs Empty = new DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs();
 
     @InputImport(name="documentDataFieldName", required=true)
-    private final Input<String> documentDataFieldName;
+      private final Input<String> documentDataFieldName;
 
     public Input<String> getDocumentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @InputImport(name="documentTitleFieldName")
-    private final @Nullable Input<String> documentTitleFieldName;
+      private final @Nullable Input<String> documentTitleFieldName;
 
     public Input<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Input.empty() : this.documentTitleFieldName;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+      private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -127,7 +127,6 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationAr
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs build() {
             return new DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs(documentDataFieldName, documentTitleFieldName, fieldMappings, name);
         }

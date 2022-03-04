@@ -34,7 +34,6 @@ public final class AvailabilityCriteriaArgs extends io.pulumi.resources.Resource
         public Builder(AvailabilityCriteriaArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AvailabilityCriteriaArgs build() {
             return new AvailabilityCriteriaArgs();
         }

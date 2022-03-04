@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TransferManifestResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -59,7 +59,6 @@ public final class TransferManifestResponse extends io.pulumi.resources.InvokeAr
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public TransferManifestResponse build() {
             return new TransferManifestResponse(location);
         }

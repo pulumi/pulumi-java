@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1SystemTimestampsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="filePath", required=true)
-    private final String filePath;
+      private final String filePath;
 
     public String getFilePath() {
         return this.filePath;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="gcsTimestamps", required=true)
-    private final GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps;
+      private final GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps;
 
     public GoogleCloudDatacatalogV1SystemTimestampsResponse getGcsTimestamps() {
         return this.gcsTimestamps;
@@ -44,7 +44,7 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="sizeBytes", required=true)
-    private final String sizeBytes;
+      private final String sizeBytes;
 
     public String getSizeBytes() {
         return this.sizeBytes;
@@ -103,7 +103,6 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends io.pulumi
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
-
         public GoogleCloudDatacatalogV1GcsFileSpecResponse build() {
             return new GoogleCloudDatacatalogV1GcsFileSpecResponse(filePath, gcsTimestamps, sizeBytes);
         }

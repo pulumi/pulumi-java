@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class HealthCheckLogConfigResponse {
     /**
      * Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.
      * 
-     */
+    */
     public Boolean getEnable() {
         return this.enable;
     }
@@ -52,7 +52,6 @@ public final class HealthCheckLogConfigResponse {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public HealthCheckLogConfigResponse build() {
             return new HealthCheckLogConfigResponse(enable);
         }

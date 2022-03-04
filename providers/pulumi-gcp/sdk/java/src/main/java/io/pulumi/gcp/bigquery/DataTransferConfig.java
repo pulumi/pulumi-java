@@ -5,8 +5,8 @@ package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DataTransferConfigArgs;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigState;
@@ -314,6 +314,37 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
         return this.serviceAccountName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DataTransferConfigArgs.Builder a);
+    }
+    private static io.pulumi.gcp.bigquery.DataTransferConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.bigquery.DataTransferConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DataTransferConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DataTransferConfig(String name) {
+        this(name, DataTransferConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DataTransferConfig(String name, DataTransferConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

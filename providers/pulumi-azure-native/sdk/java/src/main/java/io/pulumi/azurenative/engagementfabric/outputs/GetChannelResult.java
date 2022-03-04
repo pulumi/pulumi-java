@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.engagementfabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -62,42 +62,42 @@ public final class GetChannelResult {
     /**
      * The functions to be enabled for the channel
      * 
-     */
+    */
     public List<String> getChannelFunctions() {
         return this.channelFunctions == null ? List.of() : this.channelFunctions;
     }
     /**
      * The channel type
      * 
-     */
+    */
     public String getChannelType() {
         return this.channelType;
     }
     /**
      * The channel credentials
      * 
-     */
+    */
     public Map<String,String> getCredentials() {
         return this.credentials == null ? Map.of() : this.credentials;
     }
     /**
      * The ID of the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The fully qualified type of the resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class GetChannelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(channelFunctions, channelType, credentials, id, name, type);
         }

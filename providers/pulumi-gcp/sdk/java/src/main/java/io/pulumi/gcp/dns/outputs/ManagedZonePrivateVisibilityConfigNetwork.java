@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +27,7 @@ public final class ManagedZonePrivateVisibilityConfigNetwork {
      * This should be formatted like `projects/{project}/global/networks/{network}` or
      * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
      * 
-     */
+    */
     public String getNetworkUrl() {
         return this.networkUrl;
     }
@@ -56,7 +56,6 @@ public final class ManagedZonePrivateVisibilityConfigNetwork {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigNetwork build() {
             return new ManagedZonePrivateVisibilityConfigNetwork(networkUrl);
         }

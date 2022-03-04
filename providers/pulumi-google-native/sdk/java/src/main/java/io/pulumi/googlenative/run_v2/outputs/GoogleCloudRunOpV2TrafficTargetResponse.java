@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
     /**
      * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
      * 
-     */
+    */
     public Integer getPercent() {
         return this.percent;
     }
     /**
      * Revision to which to send this portion of traffic, if traffic allocation is by revision.
      * 
-     */
+    */
     public String getRevision() {
         return this.revision;
     }
     /**
      * Indicates a string to be part of the URI to exclusively reference this target.
      * 
-     */
+    */
     public String getTag() {
         return this.tag;
     }
     /**
      * The allocation type for this traffic target.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudRunOpV2TrafficTargetResponse build() {
             return new GoogleCloudRunOpV2TrafficTargetResponse(percent, revision, tag, type);
         }

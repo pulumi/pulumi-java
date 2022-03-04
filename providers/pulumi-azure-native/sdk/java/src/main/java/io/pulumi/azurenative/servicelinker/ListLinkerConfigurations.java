@@ -6,21 +6,41 @@ package io.pulumi.azurenative.servicelinker;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicelinker.inputs.ListLinkerConfigurationsArgs;
 import io.pulumi.azurenative.servicelinker.outputs.ListLinkerConfigurationsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListLinkerConfigurations {
-/**
- * Configurations for source resource, include appSettings, connectionString and serviceBindings
+    private ListLinkerConfigurations() {}
+    public interface BuilderApplicator {
+        public void apply(ListLinkerConfigurationsArgs.Builder a);
+    }
+    private static ListLinkerConfigurationsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListLinkerConfigurationsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Configurations for source resource, include appSettings, connectionString and serviceBindings
  * API Version: 2021-11-01-preview.
  * 
- *
- * Configurations for source resource, include appSettings, connectionString and serviceBindings
+     *
+     * Configurations for source resource, include appSettings, connectionString and serviceBindings
  * 
- */
+     */
+    public static CompletableFuture<ListLinkerConfigurationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Configurations for source resource, include appSettings, connectionString and serviceBindings
+     * API Version: 2021-11-01-preview.
+     * 
+     *
+         * Configurations for source resource, include appSettings, connectionString and serviceBindings
+     * 
+     */
     public static CompletableFuture<ListLinkerConfigurationsResult> invokeAsync(ListLinkerConfigurationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicelinker:listLinkerConfigurations", TypeShape.of(ListLinkerConfigurationsResult.class), args == null ? ListLinkerConfigurationsArgs.Empty : args, Utilities.withVersion(options));
     }

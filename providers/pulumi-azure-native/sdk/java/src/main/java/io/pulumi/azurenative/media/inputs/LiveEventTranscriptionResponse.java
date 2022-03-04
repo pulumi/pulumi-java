@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.LiveEventInputTrackSelectionResponse;
 import io.pulumi.azurenative.media.inputs.LiveEventOutputTranscriptionTrackResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LiveEventTranscriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="inputTrackSelection")
-    private final @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection;
+      private final @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection;
 
     public List<LiveEventInputTrackSelectionResponse> getInputTrackSelection() {
         return this.inputTrackSelection == null ? List.of() : this.inputTrackSelection;
@@ -37,7 +37,7 @@ public final class LiveEventTranscriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="language")
-    private final @Nullable String language;
+      private final @Nullable String language;
 
     public Optional<String> getLanguage() {
         return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
@@ -48,7 +48,7 @@ public final class LiveEventTranscriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="outputTranscriptionTrack")
-    private final @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack;
+      private final @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack;
 
     public Optional<LiveEventOutputTranscriptionTrackResponse> getOutputTranscriptionTrack() {
         return this.outputTranscriptionTrack == null ? Optional.empty() : Optional.ofNullable(this.outputTranscriptionTrack);
@@ -107,7 +107,6 @@ public final class LiveEventTranscriptionResponse extends io.pulumi.resources.In
             this.outputTranscriptionTrack = outputTranscriptionTrack;
             return this;
         }
-
         public LiveEventTranscriptionResponse build() {
             return new LiveEventTranscriptionResponse(inputTrackSelection, language, outputTranscriptionTrack);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ObjectFieldSelector {
     /**
      * Version of the schema the FieldPath is written in terms of, defaults to "v1".
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Path of the field to select in the specified API version.
      * 
-     */
+    */
     public String getFieldPath() {
         return this.fieldPath;
     }
@@ -76,7 +76,6 @@ public final class ObjectFieldSelector {
             this.fieldPath = Objects.requireNonNull(fieldPath);
             return this;
         }
-
         public ObjectFieldSelector build() {
             return new ObjectFieldSelector(apiVersion, fieldPath);
         }

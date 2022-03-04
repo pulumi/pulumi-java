@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.features.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="approvedTime", required=true)
-    private final String approvedTime;
+      private final String approvedTime;
 
     public String getApprovedTime() {
         return this.approvedTime;
@@ -32,7 +32,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="approver", required=true)
-    private final String approver;
+      private final String approver;
 
     public String getApprover() {
         return this.approver;
@@ -43,7 +43,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="requestedTime", required=true)
-    private final String requestedTime;
+      private final String requestedTime;
 
     public String getRequestedTime() {
         return this.requestedTime;
@@ -54,7 +54,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="requester", required=true)
-    private final String requester;
+      private final String requester;
 
     public String getRequester() {
         return this.requester;
@@ -65,7 +65,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="requesterObjectId", required=true)
-    private final String requesterObjectId;
+      private final String requesterObjectId;
 
     public String getRequesterObjectId() {
         return this.requesterObjectId;
@@ -144,7 +144,6 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
             this.requesterObjectId = Objects.requireNonNull(requesterObjectId);
             return this;
         }
-
         public AuthorizationProfileResponse build() {
             return new AuthorizationProfileResponse(approvedTime, approver, requestedTime, requester, requesterObjectId);
         }

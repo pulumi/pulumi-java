@@ -5,7 +5,7 @@ package io.pulumi.awsnative.glue;
 
 import io.pulumi.awsnative.glue.inputs.SchemaVersionSchemaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     public static final SchemaVersionArgs Empty = new SchemaVersionArgs();
 
     @InputImport(name="schema", required=true)
-    private final Input<SchemaVersionSchemaArgs> schema;
+      private final Input<SchemaVersionSchemaArgs> schema;
 
     public Input<SchemaVersionSchemaArgs> getSchema() {
         return this.schema;
@@ -26,7 +26,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaDefinition", required=true)
-    private final Input<String> schemaDefinition;
+      private final Input<String> schemaDefinition;
 
     public Input<String> getSchemaDefinition() {
         return this.schemaDefinition;
@@ -85,7 +85,6 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.schemaDefinition = Input.of(Objects.requireNonNull(schemaDefinition));
             return this;
         }
-
         public SchemaVersionArgs build() {
             return new SchemaVersionArgs(schema, schemaDefinition);
         }

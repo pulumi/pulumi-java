@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
     /**
      * AWS Key ID.
      * 
-     */
+    */
     public String getAccessKeyId() {
         return this.accessKeyId;
     }
     /**
      * AWS Secret Access Key.
      * 
-     */
+    */
     public String getSecretAccessKey() {
         return this.secretAccessKey;
     }
@@ -74,7 +74,6 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
-
         public TransferJobTransferSpecAwsS3DataSourceAwsAccessKey build() {
             return new TransferJobTransferSpecAwsS3DataSourceAwsAccessKey(accessKeyId, secretAccessKey);
         }

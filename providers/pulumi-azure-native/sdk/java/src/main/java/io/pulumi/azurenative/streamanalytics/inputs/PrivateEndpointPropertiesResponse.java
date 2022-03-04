@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.PrivateLinkServiceConnectionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PrivateEndpointPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="createdDate", required=true)
-    private final String createdDate;
+      private final String createdDate;
 
     public String getCreatedDate() {
         return this.createdDate;
@@ -36,7 +36,7 @@ public final class PrivateEndpointPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="manualPrivateLinkServiceConnections")
-    private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
+      private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
     public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
@@ -85,7 +85,6 @@ public final class PrivateEndpointPropertiesResponse extends io.pulumi.resources
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-
         public PrivateEndpointPropertiesResponse build() {
             return new PrivateEndpointPropertiesResponse(createdDate, manualPrivateLinkServiceConnections);
         }

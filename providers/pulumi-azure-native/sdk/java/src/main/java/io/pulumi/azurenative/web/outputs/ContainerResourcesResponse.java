@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ContainerResourcesResponse {
     /**
      * Required CPU in cores, e.g. 0.5
      * 
-     */
+    */
     public Optional<Double> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * Required memory, e.g. "250Mb"
      * 
-     */
+    */
     public Optional<String> getMemory() {
         return Optional.ofNullable(this.memory);
     }
@@ -77,7 +77,6 @@ public final class ContainerResourcesResponse {
             this.memory = memory;
             return this;
         }
-
         public ContainerResourcesResponse build() {
             return new ContainerResourcesResponse(cpu, memory);
         }

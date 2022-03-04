@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.NicIpConfigurationResourceSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -51,14 +51,14 @@ public final class NetworkInterfaceResourceSettingsResponse {
     /**
      * Gets or sets a value indicating whether accelerated networking is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
     /**
      * Gets or sets the IP configurations of the NIC.
      * 
-     */
+    */
     public List<NicIpConfigurationResourceSettingsResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
@@ -66,14 +66,14 @@ public final class NetworkInterfaceResourceSettingsResponse {
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Network/networkInterfaces'.
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets the target Resource name.
      * 
-     */
+    */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }
@@ -123,7 +123,6 @@ public final class NetworkInterfaceResourceSettingsResponse {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public NetworkInterfaceResourceSettingsResponse build() {
             return new NetworkInterfaceResourceSettingsResponse(enableAcceleratedNetworking, ipConfigurations, resourceType, targetResourceName);
         }

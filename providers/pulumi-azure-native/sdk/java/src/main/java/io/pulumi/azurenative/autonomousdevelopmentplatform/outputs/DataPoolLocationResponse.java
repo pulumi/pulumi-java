@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.autonomousdevelopmentplatform.outputs;
 
 import io.pulumi.azurenative.autonomousdevelopmentplatform.outputs.DataPoolEncryptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class DataPoolLocationResponse {
     /**
      * Encryption properties of a Data Pool location
      * 
-     */
+    */
     public Optional<DataPoolEncryptionResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * The location name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -77,7 +77,6 @@ public final class DataPoolLocationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DataPoolLocationResponse build() {
             return new DataPoolLocationResponse(encryption, name);
         }

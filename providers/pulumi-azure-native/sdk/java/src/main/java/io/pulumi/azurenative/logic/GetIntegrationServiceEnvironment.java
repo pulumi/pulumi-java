@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.inputs.GetIntegrationServiceEnvironmentArgs;
 import io.pulumi.azurenative.logic.outputs.GetIntegrationServiceEnvironmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationServiceEnvironment {
-/**
- * The integration service environment.
+    private GetIntegrationServiceEnvironment() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationServiceEnvironmentArgs.Builder a);
+    }
+    private static GetIntegrationServiceEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationServiceEnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The integration service environment.
  * API Version: 2019-05-01.
  * 
- *
- * The integration service environment.
+     *
+     * The integration service environment.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationServiceEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The integration service environment.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The integration service environment.
+     * 
+     */
     public static CompletableFuture<GetIntegrationServiceEnvironmentResult> invokeAsync(GetIntegrationServiceEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationServiceEnvironment", TypeShape.of(GetIntegrationServiceEnvironmentResult.class), args == null ? GetIntegrationServiceEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class ResourceTypeExtensionResponse extends io.pulumi.resources.Inv
     public static final ResourceTypeExtensionResponse Empty = new ResourceTypeExtensionResponse();
 
     @InputImport(name="endpointUri")
-    private final @Nullable String endpointUri;
+      private final @Nullable String endpointUri;
 
     public Optional<String> getEndpointUri() {
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
     }
 
     @InputImport(name="extensionCategories")
-    private final @Nullable List<String> extensionCategories;
+      private final @Nullable List<String> extensionCategories;
 
     public List<String> getExtensionCategories() {
         return this.extensionCategories == null ? List.of() : this.extensionCategories;
     }
 
     @InputImport(name="timeout")
-    private final @Nullable String timeout;
+      private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -89,7 +89,6 @@ public final class ResourceTypeExtensionResponse extends io.pulumi.resources.Inv
             this.timeout = timeout;
             return this;
         }
-
         public ResourceTypeExtensionResponse build() {
             return new ResourceTypeExtensionResponse(endpointUri, extensionCategories, timeout);
         }

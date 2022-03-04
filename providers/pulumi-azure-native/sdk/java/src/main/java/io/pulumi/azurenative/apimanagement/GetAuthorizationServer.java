@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetAuthorizationServerArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetAuthorizationServerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorizationServer {
-/**
- * External OAuth authorization server settings.
+    private GetAuthorizationServer() {}
+    public interface BuilderApplicator {
+        public void apply(GetAuthorizationServerArgs.Builder a);
+    }
+    private static GetAuthorizationServerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAuthorizationServerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * External OAuth authorization server settings.
  * API Version: 2020-12-01.
  * 
- *
- * External OAuth authorization server settings.
+     *
+     * External OAuth authorization server settings.
  * 
- */
+     */
+    public static CompletableFuture<GetAuthorizationServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * External OAuth authorization server settings.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * External OAuth authorization server settings.
+     * 
+     */
     public static CompletableFuture<GetAuthorizationServerResult> invokeAsync(GetAuthorizationServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getAuthorizationServer", TypeShape.of(GetAuthorizationServerResult.class), args == null ? GetAuthorizationServerArgs.Empty : args, Utilities.withVersion(options));
     }

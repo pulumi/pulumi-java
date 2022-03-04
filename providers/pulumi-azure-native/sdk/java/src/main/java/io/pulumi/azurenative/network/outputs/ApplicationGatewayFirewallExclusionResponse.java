@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ApplicationGatewayFirewallExclusionResponse {
     /**
      * The variable to be excluded.
      * 
-     */
+    */
     public String getMatchVariable() {
         return this.matchVariable;
     }
     /**
      * When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
      * 
-     */
+    */
     public String getSelector() {
         return this.selector;
     }
     /**
      * When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
      * 
-     */
+    */
     public String getSelectorMatchOperator() {
         return this.selectorMatchOperator;
     }
@@ -95,7 +95,6 @@ public final class ApplicationGatewayFirewallExclusionResponse {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
-
         public ApplicationGatewayFirewallExclusionResponse build() {
             return new ApplicationGatewayFirewallExclusionResponse(matchVariable, selector, selectorMatchOperator);
         }

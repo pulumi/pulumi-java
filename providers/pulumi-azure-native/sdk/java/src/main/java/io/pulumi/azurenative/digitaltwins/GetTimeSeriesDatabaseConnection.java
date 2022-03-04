@@ -6,21 +6,41 @@ package io.pulumi.azurenative.digitaltwins;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.digitaltwins.inputs.GetTimeSeriesDatabaseConnectionArgs;
 import io.pulumi.azurenative.digitaltwins.outputs.GetTimeSeriesDatabaseConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTimeSeriesDatabaseConnection {
-/**
- * Describes a time series database connection resource.
+    private GetTimeSeriesDatabaseConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetTimeSeriesDatabaseConnectionArgs.Builder a);
+    }
+    private static GetTimeSeriesDatabaseConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTimeSeriesDatabaseConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a time series database connection resource.
  * API Version: 2021-06-30-preview.
  * 
- *
- * Describes a time series database connection resource.
+     *
+     * Describes a time series database connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetTimeSeriesDatabaseConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a time series database connection resource.
+     * API Version: 2021-06-30-preview.
+     * 
+     *
+         * Describes a time series database connection resource.
+     * 
+     */
     public static CompletableFuture<GetTimeSeriesDatabaseConnectionResult> invokeAsync(GetTimeSeriesDatabaseConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getTimeSeriesDatabaseConnection", TypeShape.of(GetTimeSeriesDatabaseConnectionResult.class), args == null ? GetTimeSeriesDatabaseConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

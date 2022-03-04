@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.enums.PartitionKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Either<String,PartitionKind>> kind;
+      private final @Nullable Input<Either<String,PartitionKind>> kind;
 
     public Input<Either<String,PartitionKind>> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -38,7 +38,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="paths")
-    private final @Nullable Input<List<String>> paths;
+      private final @Nullable Input<List<String>> paths;
 
     public Input<List<String>> getPaths() {
         return this.paths == null ? Input.empty() : this.paths;
@@ -49,7 +49,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -123,7 +123,6 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ContainerPartitionKeyArgs build() {
             return new ContainerPartitionKeyArgs(kind, paths, version);
         }

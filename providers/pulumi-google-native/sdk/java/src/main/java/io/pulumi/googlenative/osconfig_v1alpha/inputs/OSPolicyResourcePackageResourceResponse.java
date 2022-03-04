@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourcePackageResourceAPTResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourcePackageResourceDebResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourcePackageResourceGooGetResponse;
@@ -28,7 +28,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="apt", required=true)
-    private final OSPolicyResourcePackageResourceAPTResponse apt;
+      private final OSPolicyResourcePackageResourceAPTResponse apt;
 
     public OSPolicyResourcePackageResourceAPTResponse getApt() {
         return this.apt;
@@ -39,7 +39,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="deb", required=true)
-    private final OSPolicyResourcePackageResourceDebResponse deb;
+      private final OSPolicyResourcePackageResourceDebResponse deb;
 
     public OSPolicyResourcePackageResourceDebResponse getDeb() {
         return this.deb;
@@ -50,7 +50,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="desiredState", required=true)
-    private final String desiredState;
+      private final String desiredState;
 
     public String getDesiredState() {
         return this.desiredState;
@@ -61,7 +61,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="googet", required=true)
-    private final OSPolicyResourcePackageResourceGooGetResponse googet;
+      private final OSPolicyResourcePackageResourceGooGetResponse googet;
 
     public OSPolicyResourcePackageResourceGooGetResponse getGooget() {
         return this.googet;
@@ -72,7 +72,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="msi", required=true)
-    private final OSPolicyResourcePackageResourceMSIResponse msi;
+      private final OSPolicyResourcePackageResourceMSIResponse msi;
 
     public OSPolicyResourcePackageResourceMSIResponse getMsi() {
         return this.msi;
@@ -83,7 +83,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="rpm", required=true)
-    private final OSPolicyResourcePackageResourceRPMResponse rpm;
+      private final OSPolicyResourcePackageResourceRPMResponse rpm;
 
     public OSPolicyResourcePackageResourceRPMResponse getRpm() {
         return this.rpm;
@@ -94,7 +94,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="yum", required=true)
-    private final OSPolicyResourcePackageResourceYUMResponse yum;
+      private final OSPolicyResourcePackageResourceYUMResponse yum;
 
     public OSPolicyResourcePackageResourceYUMResponse getYum() {
         return this.yum;
@@ -105,7 +105,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="zypper", required=true)
-    private final OSPolicyResourcePackageResourceZypperResponse zypper;
+      private final OSPolicyResourcePackageResourceZypperResponse zypper;
 
     public OSPolicyResourcePackageResourceZypperResponse getZypper() {
         return this.zypper;
@@ -214,7 +214,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public OSPolicyResourcePackageResourceResponse build() {
             return new OSPolicyResourcePackageResourceResponse(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }

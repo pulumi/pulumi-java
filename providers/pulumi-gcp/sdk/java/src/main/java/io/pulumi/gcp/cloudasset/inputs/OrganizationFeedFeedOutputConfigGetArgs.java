@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudasset.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudasset.inputs.OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class OrganizationFeedFeedOutputConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="pubsubDestination", required=true)
-    private final Input<OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
+      private final Input<OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
 
     public Input<OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs> getPubsubDestination() {
         return this.pubsubDestination;
@@ -62,7 +62,6 @@ public final class OrganizationFeedFeedOutputConfigGetArgs extends io.pulumi.res
             this.pubsubDestination = Input.of(Objects.requireNonNull(pubsubDestination));
             return this;
         }
-
         public OrganizationFeedFeedOutputConfigGetArgs build() {
             return new OrganizationFeedFeedOutputConfigGetArgs(pubsubDestination);
         }

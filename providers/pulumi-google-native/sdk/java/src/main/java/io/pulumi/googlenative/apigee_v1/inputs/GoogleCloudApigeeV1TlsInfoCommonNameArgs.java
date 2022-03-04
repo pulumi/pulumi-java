@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -31,7 +31,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="wildcardMatch")
-    private final @Nullable Input<Boolean> wildcardMatch;
+      private final @Nullable Input<Boolean> wildcardMatch;
 
     public Input<Boolean> getWildcardMatch() {
         return this.wildcardMatch == null ? Input.empty() : this.wildcardMatch;
@@ -90,7 +90,6 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
             this.wildcardMatch = Input.ofNullable(wildcardMatch);
             return this;
         }
-
         public GoogleCloudApigeeV1TlsInfoCommonNameArgs build() {
             return new GoogleCloudApigeeV1TlsInfoCommonNameArgs(value, wildcardMatch);
         }

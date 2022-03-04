@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final String factoryName;
+      private final String factoryName;
 
     public String getFactoryName() {
         return this.factoryName;
@@ -30,7 +30,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
      * 
      */
     @InputImport(name="featureName")
-    private final @Nullable String featureName;
+      private final @Nullable String featureName;
 
     public Optional<String> getFeatureName() {
         return this.featureName == null ? Optional.empty() : Optional.ofNullable(this.featureName);
@@ -41,7 +41,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
      * 
      */
     @InputImport(name="featureType")
-    private final @Nullable String featureType;
+      private final @Nullable String featureType;
 
     public Optional<String> getFeatureType() {
         return this.featureType == null ? Optional.empty() : Optional.ofNullable(this.featureType);
@@ -52,7 +52,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -121,7 +121,6 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetExposureControlFeatureValueByFactoryArgs build() {
             return new GetExposureControlFeatureValueByFactoryArgs(factoryName, featureName, featureType, resourceGroupName);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.LBBackendAddressPoolResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.outputs.LBFrontendIPConfigurationResourceSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -66,14 +66,14 @@ public final class LoadBalancerResourceSettingsResponse {
     /**
      * Gets or sets the backend address pools of the load balancer.
      * 
-     */
+    */
     public List<LBBackendAddressPoolResourceSettingsResponse> getBackendAddressPools() {
         return this.backendAddressPools == null ? List.of() : this.backendAddressPools;
     }
     /**
      * Gets or sets the frontend IP configurations of the load balancer.
      * 
-     */
+    */
     public List<LBFrontendIPConfigurationResourceSettingsResponse> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations == null ? List.of() : this.frontendIPConfigurations;
     }
@@ -81,21 +81,21 @@ public final class LoadBalancerResourceSettingsResponse {
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Network/loadBalancers'.
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets load balancer sku (Basic/Standard).
      * 
-     */
+    */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Gets or sets the target Resource name.
      * 
-     */
+    */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }
@@ -103,7 +103,7 @@ public final class LoadBalancerResourceSettingsResponse {
      * Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
      *  precedence only if frontend IP configurations settings are not present.
      * 
-     */
+    */
     public Optional<String> getZones() {
         return Optional.ofNullable(this.zones);
     }
@@ -167,7 +167,6 @@ public final class LoadBalancerResourceSettingsResponse {
             this.zones = zones;
             return this;
         }
-
         public LoadBalancerResourceSettingsResponse build() {
             return new LoadBalancerResourceSettingsResponse(backendAddressPools, frontendIPConfigurations, resourceType, sku, targetResourceName, zones);
         }

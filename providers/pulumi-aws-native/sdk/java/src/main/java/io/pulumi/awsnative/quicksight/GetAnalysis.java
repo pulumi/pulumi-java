@@ -6,17 +6,33 @@ package io.pulumi.awsnative.quicksight;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.quicksight.inputs.GetAnalysisArgs;
 import io.pulumi.awsnative.quicksight.outputs.GetAnalysisResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnalysis {
-/**
- * Definition of the AWS::QuickSight::Analysis Resource Type.
+    private GetAnalysis() {}
+    public interface BuilderApplicator {
+        public void apply(GetAnalysisArgs.Builder a);
+    }
+    private static GetAnalysisArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAnalysisArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the AWS::QuickSight::Analysis Resource Type.
  * 
- */
+     */
+    public static CompletableFuture<GetAnalysisResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the AWS::QuickSight::Analysis Resource Type.
+     * 
+     */
     public static CompletableFuture<GetAnalysisResult> invokeAsync(GetAnalysisArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getAnalysis", TypeShape.of(GetAnalysisResult.class), args == null ? GetAnalysisArgs.Empty : args, Utilities.withVersion(options));
     }

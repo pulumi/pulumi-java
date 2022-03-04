@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CrossSiteAccessPoliciesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="clientAccessPolicy")
-    private final @Nullable String clientAccessPolicy;
+      private final @Nullable String clientAccessPolicy;
 
     public Optional<String> getClientAccessPolicy() {
         return this.clientAccessPolicy == null ? Optional.empty() : Optional.ofNullable(this.clientAccessPolicy);
@@ -34,7 +34,7 @@ public final class CrossSiteAccessPoliciesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="crossDomainPolicy")
-    private final @Nullable String crossDomainPolicy;
+      private final @Nullable String crossDomainPolicy;
 
     public Optional<String> getCrossDomainPolicy() {
         return this.crossDomainPolicy == null ? Optional.empty() : Optional.ofNullable(this.crossDomainPolicy);
@@ -83,7 +83,6 @@ public final class CrossSiteAccessPoliciesResponse extends io.pulumi.resources.I
             this.crossDomainPolicy = crossDomainPolicy;
             return this;
         }
-
         public CrossSiteAccessPoliciesResponse build() {
             return new CrossSiteAccessPoliciesResponse(clientAccessPolicy, crossDomainPolicy);
         }

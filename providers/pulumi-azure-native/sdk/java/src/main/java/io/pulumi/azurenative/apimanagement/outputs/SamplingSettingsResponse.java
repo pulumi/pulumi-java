@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class SamplingSettingsResponse {
     /**
      * Rate of sampling for fixed-rate sampling.
      * 
-     */
+    */
     public Optional<Double> getPercentage() {
         return Optional.ofNullable(this.percentage);
     }
     /**
      * Sampling type.
      * 
-     */
+    */
     public Optional<String> getSamplingType() {
         return Optional.ofNullable(this.samplingType);
     }
@@ -77,7 +77,6 @@ public final class SamplingSettingsResponse {
             this.samplingType = samplingType;
             return this;
         }
-
         public SamplingSettingsResponse build() {
             return new SamplingSettingsResponse(percentage, samplingType);
         }

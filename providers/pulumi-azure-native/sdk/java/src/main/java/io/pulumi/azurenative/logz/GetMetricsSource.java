@@ -6,17 +6,33 @@ package io.pulumi.azurenative.logz;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logz.inputs.GetMetricsSourceArgs;
 import io.pulumi.azurenative.logz.outputs.GetMetricsSourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMetricsSource {
-/**
- * API Version: 2022-01-01-preview.
+    private GetMetricsSource() {}
+    public interface BuilderApplicator {
+        public void apply(GetMetricsSourceArgs.Builder a);
+    }
+    private static GetMetricsSourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMetricsSourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2022-01-01-preview.
  * 
- */
+     */
+    public static CompletableFuture<GetMetricsSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2022-01-01-preview.
+     * 
+     */
     public static CompletableFuture<GetMetricsSourceResult> invokeAsync(GetMetricsSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getMetricsSource", TypeShape.of(GetMetricsSourceResult.class), args == null ? GetMetricsSourceArgs.Empty : args, Utilities.withVersion(options));
     }

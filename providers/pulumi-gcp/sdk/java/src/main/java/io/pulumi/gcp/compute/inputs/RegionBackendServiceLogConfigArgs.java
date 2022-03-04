@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegionBackendServiceLogConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -34,7 +34,7 @@ public final class RegionBackendServiceLogConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sampleRate")
-    private final @Nullable Input<Double> sampleRate;
+      private final @Nullable Input<Double> sampleRate;
 
     public Input<Double> getSampleRate() {
         return this.sampleRate == null ? Input.empty() : this.sampleRate;
@@ -93,7 +93,6 @@ public final class RegionBackendServiceLogConfigArgs extends io.pulumi.resources
             this.sampleRate = Input.ofNullable(sampleRate);
             return this;
         }
-
         public RegionBackendServiceLogConfigArgs build() {
             return new RegionBackendServiceLogConfigArgs(enable, sampleRate);
         }

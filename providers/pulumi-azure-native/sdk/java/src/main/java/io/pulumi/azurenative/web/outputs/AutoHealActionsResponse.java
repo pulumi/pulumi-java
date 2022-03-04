@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AutoHealCustomActionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,14 +42,14 @@ public final class AutoHealActionsResponse {
     /**
      * Predefined action to be taken.
      * 
-     */
+    */
     public Optional<String> getActionType() {
         return Optional.ofNullable(this.actionType);
     }
     /**
      * Custom action to be taken.
      * 
-     */
+    */
     public Optional<AutoHealCustomActionResponse> getCustomAction() {
         return Optional.ofNullable(this.customAction);
     }
@@ -57,7 +57,7 @@ public final class AutoHealActionsResponse {
      * Minimum time the process must execute
      * before taking the action
      * 
-     */
+    */
     public Optional<String> getMinProcessExecutionTime() {
         return Optional.ofNullable(this.minProcessExecutionTime);
     }
@@ -100,7 +100,6 @@ public final class AutoHealActionsResponse {
             this.minProcessExecutionTime = minProcessExecutionTime;
             return this;
         }
-
         public AutoHealActionsResponse build() {
             return new AutoHealActionsResponse(actionType, customAction, minProcessExecutionTime);
         }

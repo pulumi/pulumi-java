@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class StackSetTag {
     /**
      * A string used to identify this tag. You can specify a maximum of 127 characters for a tag key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * A string containing the value for this tag. You can specify a maximum of 256 characters for a tag value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class StackSetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StackSetTag build() {
             return new StackSetTag(key, value);
         }

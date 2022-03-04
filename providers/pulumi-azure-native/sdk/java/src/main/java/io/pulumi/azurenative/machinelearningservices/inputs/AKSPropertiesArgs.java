@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.AksNetworkingConfigu
 import io.pulumi.azurenative.machinelearningservices.inputs.SslConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentCount")
-    private final @Nullable Input<Integer> agentCount;
+      private final @Nullable Input<Integer> agentCount;
 
     public Input<Integer> getAgentCount() {
         return this.agentCount == null ? Input.empty() : this.agentCount;
@@ -39,7 +39,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentVmSize")
-    private final @Nullable Input<String> agentVmSize;
+      private final @Nullable Input<String> agentVmSize;
 
     public Input<String> getAgentVmSize() {
         return this.agentVmSize == null ? Input.empty() : this.agentVmSize;
@@ -50,7 +50,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aksNetworkingConfiguration")
-    private final @Nullable Input<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
+      private final @Nullable Input<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
 
     public Input<AksNetworkingConfigurationArgs> getAksNetworkingConfiguration() {
         return this.aksNetworkingConfiguration == null ? Input.empty() : this.aksNetworkingConfiguration;
@@ -61,7 +61,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterFqdn")
-    private final @Nullable Input<String> clusterFqdn;
+      private final @Nullable Input<String> clusterFqdn;
 
     public Input<String> getClusterFqdn() {
         return this.clusterFqdn == null ? Input.empty() : this.clusterFqdn;
@@ -72,7 +72,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterPurpose")
-    private final @Nullable Input<Either<String,ClusterPurpose>> clusterPurpose;
+      private final @Nullable Input<Either<String,ClusterPurpose>> clusterPurpose;
 
     public Input<Either<String,ClusterPurpose>> getClusterPurpose() {
         return this.clusterPurpose == null ? Input.empty() : this.clusterPurpose;
@@ -83,7 +83,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslConfiguration")
-    private final @Nullable Input<SslConfigurationArgs> sslConfiguration;
+      private final @Nullable Input<SslConfigurationArgs> sslConfiguration;
 
     public Input<SslConfigurationArgs> getSslConfiguration() {
         return this.sslConfiguration == null ? Input.empty() : this.sslConfiguration;
@@ -202,7 +202,6 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.sslConfiguration = Input.ofNullable(sslConfiguration);
             return this;
         }
-
         public AKSPropertiesArgs build() {
             return new AKSPropertiesArgs(agentCount, agentVmSize, aksNetworkingConfiguration, clusterFqdn, clusterPurpose, sslConfiguration);
         }

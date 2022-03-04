@@ -5,8 +5,8 @@ package io.pulumi.gcp.artifactregistry;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.artifactregistry.RepositoryIamPolicyArgs;
 import io.pulumi.gcp.artifactregistry.inputs.RepositoryIamPolicyState;
@@ -134,6 +134,37 @@ public class RepositoryIamPolicy extends io.pulumi.resources.CustomResource {
         return this.repository;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RepositoryIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.artifactregistry.RepositoryIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.artifactregistry.RepositoryIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RepositoryIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RepositoryIamPolicy(String name) {
+        this(name, RepositoryIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RepositoryIamPolicy(String name, RepositoryIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

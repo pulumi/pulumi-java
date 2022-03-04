@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuResourcePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     public static final SkusArgs Empty = new SkusArgs();
 
     @InputImport(name="properties")
-    private final @Nullable Input<SkuResourcePropertiesArgs> properties;
+      private final @Nullable Input<SkuResourcePropertiesArgs> properties;
 
     public Input<SkuResourcePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -27,7 +27,7 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final Input<String> providerNamespace;
+      private final Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace;
@@ -38,7 +38,7 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -49,7 +49,7 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<String> sku;
+      private final @Nullable Input<String> sku;
 
     public Input<String> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -138,7 +138,6 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
             this.sku = Input.ofNullable(sku);
             return this;
         }
-
         public SkusArgs build() {
             return new SkusArgs(properties, providerNamespace, resourceType, sku);
         }

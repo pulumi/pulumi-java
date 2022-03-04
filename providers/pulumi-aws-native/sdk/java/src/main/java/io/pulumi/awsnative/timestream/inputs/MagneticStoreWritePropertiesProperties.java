@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.inputs.MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class MagneticStoreWritePropertiesProperties extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableMagneticStoreWrites", required=true)
-    private final Boolean enableMagneticStoreWrites;
+      private final Boolean enableMagneticStoreWrites;
 
     public Boolean getEnableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites;
@@ -35,7 +35,7 @@ public final class MagneticStoreWritePropertiesProperties extends io.pulumi.reso
      * 
      */
     @InputImport(name="magneticStoreRejectedDataLocation")
-    private final @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation;
+      private final @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation;
 
     public Optional<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties> getMagneticStoreRejectedDataLocation() {
         return this.magneticStoreRejectedDataLocation == null ? Optional.empty() : Optional.ofNullable(this.magneticStoreRejectedDataLocation);
@@ -84,7 +84,6 @@ public final class MagneticStoreWritePropertiesProperties extends io.pulumi.reso
             this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
             return this;
         }
-
         public MagneticStoreWritePropertiesProperties build() {
             return new MagneticStoreWritePropertiesProperties(enableMagneticStoreWrites, magneticStoreRejectedDataLocation);
         }

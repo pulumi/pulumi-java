@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressPrefixes")
-    private final @Nullable Input<List<String>> addressPrefixes;
+      private final @Nullable Input<List<String>> addressPrefixes;
 
     public Input<List<String>> getAddressPrefixes() {
         return this.addressPrefixes == null ? Input.empty() : this.addressPrefixes;
@@ -35,7 +35,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopIpAddress")
-    private final @Nullable Input<String> nextHopIpAddress;
+      private final @Nullable Input<String> nextHopIpAddress;
 
     public Input<String> getNextHopIpAddress() {
         return this.nextHopIpAddress == null ? Input.empty() : this.nextHopIpAddress;
@@ -120,7 +120,6 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
             this.nextHopIpAddress = Input.ofNullable(nextHopIpAddress);
             return this;
         }
-
         public StaticRouteArgs build() {
             return new StaticRouteArgs(addressPrefixes, name, nextHopIpAddress);
         }

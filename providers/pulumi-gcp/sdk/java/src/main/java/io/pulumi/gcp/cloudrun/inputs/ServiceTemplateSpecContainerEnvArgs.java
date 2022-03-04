@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvValueFromArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -38,7 +38,7 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -50,7 +50,7 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="valueFrom")
-    private final @Nullable Input<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom;
+      private final @Nullable Input<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom;
 
     public Input<ServiceTemplateSpecContainerEnvValueFromArgs> getValueFrom() {
         return this.valueFrom == null ? Input.empty() : this.valueFrom;
@@ -124,7 +124,6 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
             this.valueFrom = Input.ofNullable(valueFrom);
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvArgs build() {
             return new ServiceTemplateSpecContainerEnvArgs(name, value, valueFrom);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.notebooks.outputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -152,7 +152,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * when the instance is deleted (but not when the disk is
      * detached from the instance).
      * 
-     */
+    */
     public Optional<Boolean> getAutoDelete() {
         return Optional.ofNullable(this.autoDelete);
     }
@@ -162,7 +162,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * machine will use the first partition of the disk for its
      * root filesystem.
      * 
-     */
+    */
     public Optional<Boolean> getBoot() {
         return Optional.ofNullable(this.boot);
     }
@@ -178,7 +178,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * x is a number assigned by Google Compute Engine. This field
      * is only applicable for persistent disks.
      * 
-     */
+    */
     public Optional<String> getDeviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -190,7 +190,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * images/create-delete-deprecate-private-images#guest-os-features`
      * options. ``
      * 
-     */
+    */
     public List<String> getGuestOsFeatures() {
         return this.guestOsFeatures == null ? List.of() : this.guestOsFeatures;
     }
@@ -200,7 +200,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * reserved for the boot disk. If you have many disks attached
      * to an instance, each disk would have a unique index number.
      * 
-     */
+    */
     public Optional<Integer> getIndex() {
         return Optional.ofNullable(this.index);
     }
@@ -213,7 +213,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * both.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams> getInitializeParams() {
         return Optional.ofNullable(this.initializeParams);
     }
@@ -225,7 +225,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * can use either NVME or SCSI. For performance characteristics of SCSI
      * over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
      * 
-     */
+    */
     public Optional<String> get$interface() {
         return Optional.ofNullable(this.$interface);
     }
@@ -234,7 +234,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * Type of the resource. Always compute#attachedDisk for attached
      * disks.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
@@ -242,7 +242,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * - 
      * Output only. Any valid publicly visible licenses.
      * 
-     */
+    */
     public List<String> getLicenses() {
         return this.licenses == null ? List.of() : this.licenses;
     }
@@ -251,7 +251,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * or READ_ONLY. If not specified, the default is to attach
      * the disk in READ_WRITE mode.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
@@ -259,7 +259,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * Specifies a valid partial or full URL to an existing
      * Persistent Disk resource.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
@@ -268,7 +268,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
      * rest/v1/projects.locations.runtimes#AcceleratorType`
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -374,7 +374,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
             this.type = type;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigDataDisk build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDisk(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
         }

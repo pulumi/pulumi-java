@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRuntimeIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetRuntimeIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetRuntimeIamPolicyArgs.Builder a);
+    }
+    private static GetRuntimeIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRuntimeIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetRuntimeIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetRuntimeIamPolicyResult> invokeAsync(GetRuntimeIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:notebooks/v1:getRuntimeIamPolicy", TypeShape.of(GetRuntimeIamPolicyResult.class), args == null ? GetRuntimeIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

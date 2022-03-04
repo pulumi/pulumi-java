@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BotAliasTag {
     /**
      * A string used to identify this tag
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * A string containing the value for the tag
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class BotAliasTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BotAliasTag build() {
             return new BotAliasTag(key, value);
         }

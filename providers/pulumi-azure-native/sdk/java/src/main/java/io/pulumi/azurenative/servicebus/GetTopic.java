@@ -6,21 +6,41 @@ package io.pulumi.azurenative.servicebus;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicebus.inputs.GetTopicArgs;
 import io.pulumi.azurenative.servicebus.outputs.GetTopicResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTopic {
-/**
- * Description of topic resource.
+    private GetTopic() {}
+    public interface BuilderApplicator {
+        public void apply(GetTopicArgs.Builder a);
+    }
+    private static GetTopicArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTopicArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of topic resource.
  * API Version: 2017-04-01.
  * 
- *
- * Description of topic resource.
+     *
+     * Description of topic resource.
  * 
- */
+     */
+    public static CompletableFuture<GetTopicResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of topic resource.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of topic resource.
+     * 
+     */
     public static CompletableFuture<GetTopicResult> invokeAsync(GetTopicArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getTopic", TypeShape.of(GetTopicResult.class), args == null ? GetTopicArgs.Empty : args, Utilities.withVersion(options));
     }

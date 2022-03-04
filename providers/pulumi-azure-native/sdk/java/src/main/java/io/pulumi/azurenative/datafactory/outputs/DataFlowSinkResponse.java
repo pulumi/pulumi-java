@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.DataFlowReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -64,42 +64,42 @@ public final class DataFlowSinkResponse {
     /**
      * Dataset reference.
      * 
-     */
+    */
     public Optional<DatasetReferenceResponse> getDataset() {
         return Optional.ofNullable(this.dataset);
     }
     /**
      * Transformation description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Flowlet Reference
      * 
-     */
+    */
     public Optional<DataFlowReferenceResponse> getFlowlet() {
         return Optional.ofNullable(this.flowlet);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
         return Optional.ofNullable(this.linkedService);
     }
     /**
      * Transformation name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Schema linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getSchemaLinkedService() {
         return Optional.ofNullable(this.schemaLinkedService);
     }
@@ -163,7 +163,6 @@ public final class DataFlowSinkResponse {
             this.schemaLinkedService = schemaLinkedService;
             return this;
         }
-
         public DataFlowSinkResponse build() {
             return new DataFlowSinkResponse(dataset, description, flowlet, linkedService, name, schemaLinkedService);
         }

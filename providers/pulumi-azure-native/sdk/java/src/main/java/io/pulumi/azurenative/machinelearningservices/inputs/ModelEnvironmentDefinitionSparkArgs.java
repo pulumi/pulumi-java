@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.SparkMavenPackageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ModelEnvironmentDefinitionSparkArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="packages")
-    private final @Nullable Input<List<SparkMavenPackageArgs>> packages;
+      private final @Nullable Input<List<SparkMavenPackageArgs>> packages;
 
     public Input<List<SparkMavenPackageArgs>> getPackages() {
         return this.packages == null ? Input.empty() : this.packages;
@@ -37,7 +37,7 @@ public final class ModelEnvironmentDefinitionSparkArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="precachePackages")
-    private final @Nullable Input<Boolean> precachePackages;
+      private final @Nullable Input<Boolean> precachePackages;
 
     public Input<Boolean> getPrecachePackages() {
         return this.precachePackages == null ? Input.empty() : this.precachePackages;
@@ -48,7 +48,7 @@ public final class ModelEnvironmentDefinitionSparkArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="repositories")
-    private final @Nullable Input<List<String>> repositories;
+      private final @Nullable Input<List<String>> repositories;
 
     public Input<List<String>> getRepositories() {
         return this.repositories == null ? Input.empty() : this.repositories;
@@ -122,7 +122,6 @@ public final class ModelEnvironmentDefinitionSparkArgs extends io.pulumi.resourc
             this.repositories = Input.ofNullable(repositories);
             return this;
         }
-
         public ModelEnvironmentDefinitionSparkArgs build() {
             return new ModelEnvironmentDefinitionSparkArgs(packages, precachePackages, repositories);
         }

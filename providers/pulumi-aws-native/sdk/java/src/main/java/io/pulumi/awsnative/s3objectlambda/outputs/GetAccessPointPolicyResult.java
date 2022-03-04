@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3objectlambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetAccessPointPolicyResult {
     /**
      * A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
      * 
-     */
+    */
     public Optional<Object> getPolicyDocument() {
         return Optional.ofNullable(this.policyDocument);
     }
@@ -54,7 +54,6 @@ public final class GetAccessPointPolicyResult {
             this.policyDocument = policyDocument;
             return this;
         }
-
         public GetAccessPointPolicyResult build() {
             return new GetAccessPointPolicyResult(policyDocument);
         }

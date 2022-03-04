@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ec2.SpotFleetArgs;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetRequestConfigData;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
 /**
@@ -25,6 +25,37 @@ public class SpotFleet extends io.pulumi.resources.CustomResource {
         return this.spotFleetRequestConfigData;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SpotFleetArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ec2.SpotFleetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ec2.SpotFleetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SpotFleet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SpotFleet(String name) {
+        this(name, SpotFleetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SpotFleet(String name, SpotFleetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

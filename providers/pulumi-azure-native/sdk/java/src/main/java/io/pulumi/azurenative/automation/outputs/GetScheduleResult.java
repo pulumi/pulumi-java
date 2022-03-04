@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.AdvancedScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -142,119 +142,119 @@ public final class GetScheduleResult {
     /**
      * Gets or sets the advanced schedule.
      * 
-     */
+    */
     public Optional<AdvancedScheduleResponse> getAdvancedSchedule() {
         return Optional.ofNullable(this.advancedSchedule);
     }
     /**
      * Gets or sets the creation time.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the end time of the schedule.
      * 
-     */
+    */
     public Optional<String> getExpiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
     /**
      * Gets or sets the expiry time's offset in minutes.
      * 
-     */
+    */
     public Optional<Double> getExpiryTimeOffsetMinutes() {
         return Optional.ofNullable(this.expiryTimeOffsetMinutes);
     }
     /**
      * Gets or sets the frequency of the schedule.
      * 
-     */
+    */
     public Optional<String> getFrequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the interval of the schedule.
      * 
-     */
+    */
     public Optional<Object> getInterval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * Gets or sets a value indicating whether this schedule is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
      * Gets or sets the last modified time.
      * 
-     */
+    */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the next run time of the schedule.
      * 
-     */
+    */
     public Optional<String> getNextRun() {
         return Optional.ofNullable(this.nextRun);
     }
     /**
      * Gets or sets the next run time's offset in minutes.
      * 
-     */
+    */
     public Optional<Double> getNextRunOffsetMinutes() {
         return Optional.ofNullable(this.nextRunOffsetMinutes);
     }
     /**
      * Gets or sets the start time of the schedule.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * Gets the start time's offset in minutes.
      * 
-     */
+    */
     public Double getStartTimeOffsetMinutes() {
         return this.startTimeOffsetMinutes;
     }
     /**
      * Gets or sets the time zone of the schedule.
      * 
-     */
+    */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -395,7 +395,6 @@ public final class GetScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScheduleResult build() {
             return new GetScheduleResult(advancedSchedule, creationTime, description, expiryTime, expiryTimeOffsetMinutes, frequency, id, interval, isEnabled, lastModifiedTime, name, nextRun, nextRunOffsetMinutes, startTime, startTimeOffsetMinutes, timeZone, type);
         }

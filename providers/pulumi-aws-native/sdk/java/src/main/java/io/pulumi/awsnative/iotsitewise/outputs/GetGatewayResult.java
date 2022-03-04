@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayCapabilitySummary;
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class GetGatewayResult {
     /**
      * A list of gateway capability summaries that each contain a namespace and status.
      * 
-     */
+    */
     public List<GatewayCapabilitySummary> getGatewayCapabilitySummaries() {
         return this.gatewayCapabilitySummaries == null ? List.of() : this.gatewayCapabilitySummaries;
     }
     /**
      * The ID of the gateway device.
      * 
-     */
+    */
     public Optional<String> getGatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
     /**
      * A unique, friendly name for the gateway.
      * 
-     */
+    */
     public Optional<String> getGatewayName() {
         return Optional.ofNullable(this.gatewayName);
     }
     /**
      * A list of key-value pairs that contain metadata for the gateway.
      * 
-     */
+    */
     public List<GatewayTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -121,7 +121,6 @@ public final class GetGatewayResult {
             this.tags = tags;
             return this;
         }
-
         public GetGatewayResult build() {
             return new GetGatewayResult(gatewayCapabilitySummaries, gatewayId, gatewayName, tags);
         }

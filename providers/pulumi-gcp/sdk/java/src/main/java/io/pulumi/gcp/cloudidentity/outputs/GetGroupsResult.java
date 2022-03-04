@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupsGroup;
 import java.lang.String;
 import java.util.List;
@@ -36,14 +36,14 @@ public final class GetGroupsResult {
     /**
      * The list of groups under the provided customer or namespace. Structure is documented below.
      * 
-     */
+    */
     public List<GetGroupsGroup> getGroups() {
         return this.groups;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -89,7 +89,6 @@ public final class GetGroupsResult {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public GetGroupsResult build() {
             return new GetGroupsResult(groups, id, parent);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BucketEncryptionConfiguration {
     /**
      * Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.
      * 
-     */
+    */
     public String getReplicaKmsKeyID() {
         return this.replicaKmsKeyID;
     }
@@ -52,7 +52,6 @@ public final class BucketEncryptionConfiguration {
             this.replicaKmsKeyID = Objects.requireNonNull(replicaKmsKeyID);
             return this;
         }
-
         public BucketEncryptionConfiguration build() {
             return new BucketEncryptionConfiguration(replicaKmsKeyID);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAgentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="agentArn", required=true)
-    private final String agentArn;
+      private final String agentArn;
 
     public String getAgentArn() {
         return this.agentArn;
@@ -55,7 +55,6 @@ public final class GetAgentArgs extends io.pulumi.resources.InvokeArgs {
             this.agentArn = Objects.requireNonNull(agentArn);
             return this;
         }
-
         public GetAgentArgs build() {
             return new GetAgentArgs(agentArn);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryptionA
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final Input<String> kmsKeyName;
+      private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -61,7 +61,6 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryptionA
             this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
-
         public SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs build() {
             return new SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs(kmsKeyName);
         }

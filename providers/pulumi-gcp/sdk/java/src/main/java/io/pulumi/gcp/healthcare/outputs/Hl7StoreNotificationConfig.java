@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +33,7 @@ public final class Hl7StoreNotificationConfig {
      * project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
      * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
      * 
-     */
+    */
     public String getPubsubTopic() {
         return this.pubsubTopic;
     }
@@ -62,7 +62,6 @@ public final class Hl7StoreNotificationConfig {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Hl7StoreNotificationConfig build() {
             return new Hl7StoreNotificationConfig(pubsubTopic);
         }

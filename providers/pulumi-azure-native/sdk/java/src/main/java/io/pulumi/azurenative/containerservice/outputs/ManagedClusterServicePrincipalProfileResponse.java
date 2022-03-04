@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ManagedClusterServicePrincipalProfileResponse {
     /**
      * The ID for the service principal.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The secret password associated with the service principal in plain text.
      * 
-     */
+    */
     public Optional<String> getSecret() {
         return Optional.ofNullable(this.secret);
     }
@@ -76,7 +76,6 @@ public final class ManagedClusterServicePrincipalProfileResponse {
             this.secret = secret;
             return this;
         }
-
         public ManagedClusterServicePrincipalProfileResponse build() {
             return new ManagedClusterServicePrincipalProfileResponse(clientId, secret);
         }

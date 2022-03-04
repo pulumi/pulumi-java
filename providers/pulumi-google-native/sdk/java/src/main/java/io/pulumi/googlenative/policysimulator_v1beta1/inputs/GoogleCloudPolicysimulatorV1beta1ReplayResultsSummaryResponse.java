@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.policysimulator_v1beta1.inputs.GoogleTypeDateResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @InputImport(name="differenceCount", required=true)
-    private final Integer differenceCount;
+      private final Integer differenceCount;
 
     public Integer getDifferenceCount() {
         return this.differenceCount;
@@ -33,7 +33,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @InputImport(name="errorCount", required=true)
-    private final Integer errorCount;
+      private final Integer errorCount;
 
     public Integer getErrorCount() {
         return this.errorCount;
@@ -44,7 +44,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @InputImport(name="logCount", required=true)
-    private final Integer logCount;
+      private final Integer logCount;
 
     public Integer getLogCount() {
         return this.logCount;
@@ -55,7 +55,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @InputImport(name="newestDate", required=true)
-    private final GoogleTypeDateResponse newestDate;
+      private final GoogleTypeDateResponse newestDate;
 
     public GoogleTypeDateResponse getNewestDate() {
         return this.newestDate;
@@ -66,7 +66,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @InputImport(name="oldestDate", required=true)
-    private final GoogleTypeDateResponse oldestDate;
+      private final GoogleTypeDateResponse oldestDate;
 
     public GoogleTypeDateResponse getOldestDate() {
         return this.oldestDate;
@@ -77,7 +77,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @InputImport(name="unchangedCount", required=true)
-    private final Integer unchangedCount;
+      private final Integer unchangedCount;
 
     public Integer getUnchangedCount() {
         return this.unchangedCount;
@@ -166,7 +166,6 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
             this.unchangedCount = Objects.requireNonNull(unchangedCount);
             return this;
         }
-
         public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse build() {
             return new GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse(differenceCount, errorCount, logCount, newestDate, oldestDate, unchangedCount);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="install", required=true)
-    private final Input<String> install;
+      private final Input<String> install;
 
     public Input<String> getInstall() {
         return this.install;
@@ -30,7 +30,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="remove", required=true)
-    private final Input<String> remove;
+      private final Input<String> remove;
 
     public Input<String> getRemove() {
         return this.remove;
@@ -41,7 +41,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="update")
-    private final @Nullable Input<String> update;
+      private final @Nullable Input<String> update;
 
     public Input<String> getUpdate() {
         return this.update == null ? Input.empty() : this.update;
@@ -115,7 +115,6 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
             this.update = Input.ofNullable(update);
             return this;
         }
-
         public UserArtifactManageArgs build() {
             return new UserArtifactManageArgs(install, remove, update);
         }

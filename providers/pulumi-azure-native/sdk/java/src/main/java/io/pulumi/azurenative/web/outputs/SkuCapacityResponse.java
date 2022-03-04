@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class SkuCapacityResponse {
     /**
      * Default number of workers for this App Service plan SKU.
      * 
-     */
+    */
     public Optional<Integer> get$default() {
         return Optional.ofNullable(this.$default);
     }
     /**
      * Maximum number of Elastic workers for this App Service plan SKU.
      * 
-     */
+    */
     public Optional<Integer> getElasticMaximum() {
         return Optional.ofNullable(this.elasticMaximum);
     }
     /**
      * Maximum number of workers for this App Service plan SKU.
      * 
-     */
+    */
     public Optional<Integer> getMaximum() {
         return Optional.ofNullable(this.maximum);
     }
     /**
      * Minimum number of workers for this App Service plan SKU.
      * 
-     */
+    */
     public Optional<Integer> getMinimum() {
         return Optional.ofNullable(this.minimum);
     }
     /**
      * Available scale configurations for an App Service plan.
      * 
-     */
+    */
     public Optional<String> getScaleType() {
         return Optional.ofNullable(this.scaleType);
     }
@@ -140,7 +140,6 @@ public final class SkuCapacityResponse {
             this.scaleType = scaleType;
             return this;
         }
-
         public SkuCapacityResponse build() {
             return new SkuCapacityResponse($default, elasticMaximum, maximum, minimum, scaleType);
         }

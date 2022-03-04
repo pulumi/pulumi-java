@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayClientAuthConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewaySslPolicyResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -79,56 +79,56 @@ public final class ApplicationGatewaySslProfileResponse {
     /**
      * Client authentication configuration of the application gateway resource.
      * 
-     */
+    */
     public Optional<ApplicationGatewayClientAuthConfigurationResponse> getClientAuthConfiguration() {
         return Optional.ofNullable(this.clientAuthConfiguration);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the SSL profile that is unique within an Application Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the HTTP listener resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * SSL policy of the application gateway resource.
      * 
-     */
+    */
     public Optional<ApplicationGatewaySslPolicyResponse> getSslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
     /**
      * Array of references to application gateway trusted client certificates.
      * 
-     */
+    */
     public List<SubResourceResponse> getTrustedClientCertificates() {
         return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -206,7 +206,6 @@ public final class ApplicationGatewaySslProfileResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewaySslProfileResponse build() {
             return new ApplicationGatewaySslProfileResponse(clientAuthConfiguration, etag, id, name, provisioningState, sslPolicy, trustedClientCertificates, type);
         }

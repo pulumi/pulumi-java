@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.inputs.NetworkRuleSetIpRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class NetworkRuleSetPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="applyToBuiltInEventHubEndpoint", required=true)
-    private final Boolean applyToBuiltInEventHubEndpoint;
+      private final Boolean applyToBuiltInEventHubEndpoint;
 
     public Boolean getApplyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
@@ -37,7 +37,7 @@ public final class NetworkRuleSetPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultAction")
-    private final @Nullable String defaultAction;
+      private final @Nullable String defaultAction;
 
     public Optional<String> getDefaultAction() {
         return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
@@ -48,7 +48,7 @@ public final class NetworkRuleSetPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipRules", required=true)
-    private final List<NetworkRuleSetIpRuleResponse> ipRules;
+      private final List<NetworkRuleSetIpRuleResponse> ipRules;
 
     public List<NetworkRuleSetIpRuleResponse> getIpRules() {
         return this.ipRules;
@@ -107,7 +107,6 @@ public final class NetworkRuleSetPropertiesResponse extends io.pulumi.resources.
             this.ipRules = Objects.requireNonNull(ipRules);
             return this;
         }
-
         public NetworkRuleSetPropertiesResponse build() {
             return new NetworkRuleSetPropertiesResponse(applyToBuiltInEventHubEndpoint, defaultAction, ipRules);
         }

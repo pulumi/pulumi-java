@@ -6,21 +6,41 @@ package io.pulumi.azurenative.cache;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cache.inputs.ListRedisKeysArgs;
 import io.pulumi.azurenative.cache.outputs.ListRedisKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListRedisKeys {
-/**
- * Redis cache access keys.
+    private ListRedisKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListRedisKeysArgs.Builder a);
+    }
+    private static ListRedisKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListRedisKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Redis cache access keys.
  * API Version: 2020-06-01.
  * 
- *
- * Redis cache access keys.
+     *
+     * Redis cache access keys.
  * 
- */
+     */
+    public static CompletableFuture<ListRedisKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Redis cache access keys.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * Redis cache access keys.
+     * 
+     */
     public static CompletableFuture<ListRedisKeysResult> invokeAsync(ListRedisKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:listRedisKeys", TypeShape.of(ListRedisKeysResult.class), args == null ? ListRedisKeysArgs.Empty : args, Utilities.withVersion(options));
     }

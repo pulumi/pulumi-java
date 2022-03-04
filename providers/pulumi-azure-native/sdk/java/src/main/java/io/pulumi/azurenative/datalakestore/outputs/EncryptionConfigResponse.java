@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakestore.outputs;
 
 import io.pulumi.azurenative.datalakestore.outputs.KeyVaultMetaInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class EncryptionConfigResponse {
     /**
      * The Key Vault information for connecting to user managed encryption keys.
      * 
-     */
+    */
     public Optional<KeyVaultMetaInfoResponse> getKeyVaultMetaInfo() {
         return Optional.ofNullable(this.keyVaultMetaInfo);
     }
     /**
      * The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -77,7 +77,6 @@ public final class EncryptionConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(keyVaultMetaInfo, type);
         }

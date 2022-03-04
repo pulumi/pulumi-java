@@ -5,7 +5,7 @@ package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.GuestOSNICCustomizationResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualNetworkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -79,56 +79,56 @@ public final class VirtualNicResponse {
     /**
      * guest OS customization for nic
      * 
-     */
+    */
     public Optional<GuestOSNICCustomizationResponse> getCustomization() {
         return Optional.ofNullable(this.customization);
     }
     /**
      * NIC ip address
      * 
-     */
+    */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
      * NIC MAC address
      * 
-     */
+    */
     public Optional<String> getMacAddress() {
         return Optional.ofNullable(this.macAddress);
     }
     /**
      * Virtual Network
      * 
-     */
+    */
     public VirtualNetworkResponse getNetwork() {
         return this.network;
     }
     /**
      * NIC type
      * 
-     */
+    */
     public String getNicType() {
         return this.nicType;
     }
     /**
      * Is NIC powered on/off on boot
      * 
-     */
+    */
     public Optional<Boolean> getPowerOnBoot() {
         return Optional.ofNullable(this.powerOnBoot);
     }
     /**
      * NIC id
      * 
-     */
+    */
     public Optional<String> getVirtualNicId() {
         return Optional.ofNullable(this.virtualNicId);
     }
     /**
      * NIC name
      * 
-     */
+    */
     public String getVirtualNicName() {
         return this.virtualNicName;
     }
@@ -206,7 +206,6 @@ public final class VirtualNicResponse {
             this.virtualNicName = Objects.requireNonNull(virtualNicName);
             return this;
         }
-
         public VirtualNicResponse build() {
             return new VirtualNicResponse(customization, ipAddresses, macAddress, network, nicType, powerOnBoot, virtualNicId, virtualNicName);
         }

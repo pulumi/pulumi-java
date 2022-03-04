@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DiskInstantiationConfigResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SourceInstanceParamsResponse {
     /**
      * Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
      * 
-     */
+    */
     public List<DiskInstantiationConfigResponse> getDiskConfigs() {
         return this.diskConfigs;
     }
@@ -53,7 +53,6 @@ public final class SourceInstanceParamsResponse {
             this.diskConfigs = Objects.requireNonNull(diskConfigs);
             return this;
         }
-
         public SourceInstanceParamsResponse build() {
             return new SourceInstanceParamsResponse(diskConfigs);
         }

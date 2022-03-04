@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse {
     /**
      * The text shown the in the suggestion chip.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSuggestionResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageSuggestionResponse(title);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ImageArgs;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<ImageArgs> image;
+      private final @Nullable Input<ImageArgs> image;
 
     public Input<ImageArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -36,7 +36,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -47,7 +47,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signatureTime")
-    private final @Nullable Input<String> signatureTime;
+      private final @Nullable Input<String> signatureTime;
 
     public Input<String> getSignatureTime() {
         return this.signatureTime == null ? Input.empty() : this.signatureTime;
@@ -58,7 +58,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId", required=true)
-    private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;
@@ -147,7 +147,6 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }
-
         public SignatureArgs build() {
             return new SignatureArgs(image, metadata, signatureTime, userId);
         }

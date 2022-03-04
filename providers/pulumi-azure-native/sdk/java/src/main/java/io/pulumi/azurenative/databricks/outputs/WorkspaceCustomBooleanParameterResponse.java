@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class WorkspaceCustomBooleanParameterResponse {
     /**
      * The type of variable that this is
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The value which should be used for this field.
      * 
-     */
+    */
     public Boolean getValue() {
         return this.value;
     }
@@ -75,7 +75,6 @@ public final class WorkspaceCustomBooleanParameterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkspaceCustomBooleanParameterResponse build() {
             return new WorkspaceCustomBooleanParameterResponse(type, value);
         }

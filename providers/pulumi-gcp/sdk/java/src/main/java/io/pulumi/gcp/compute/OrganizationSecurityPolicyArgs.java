@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,7 +30,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -42,7 +42,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -57,7 +57,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -146,7 +146,6 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public OrganizationSecurityPolicyArgs build() {
             return new OrganizationSecurityPolicyArgs(description, displayName, parent, type);
         }

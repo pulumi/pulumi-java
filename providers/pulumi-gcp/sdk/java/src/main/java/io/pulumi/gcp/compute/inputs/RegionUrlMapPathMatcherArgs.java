@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherDefaultUrlRedirectArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleArgs;
@@ -25,7 +25,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultService")
-    private final @Nullable Input<String> defaultService;
+      private final @Nullable Input<String> defaultService;
 
     public Input<String> getDefaultService() {
         return this.defaultService == null ? Input.empty() : this.defaultService;
@@ -39,7 +39,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultUrlRedirect")
-    private final @Nullable Input<RegionUrlMapPathMatcherDefaultUrlRedirectArgs> defaultUrlRedirect;
+      private final @Nullable Input<RegionUrlMapPathMatcherDefaultUrlRedirectArgs> defaultUrlRedirect;
 
     public Input<RegionUrlMapPathMatcherDefaultUrlRedirectArgs> getDefaultUrlRedirect() {
         return this.defaultUrlRedirect == null ? Input.empty() : this.defaultUrlRedirect;
@@ -50,7 +50,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -62,7 +62,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -79,7 +79,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pathRules")
-    private final @Nullable Input<List<RegionUrlMapPathMatcherPathRuleArgs>> pathRules;
+      private final @Nullable Input<List<RegionUrlMapPathMatcherPathRuleArgs>> pathRules;
 
     public Input<List<RegionUrlMapPathMatcherPathRuleArgs>> getPathRules() {
         return this.pathRules == null ? Input.empty() : this.pathRules;
@@ -96,7 +96,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="routeRules")
-    private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleArgs>> routeRules;
+      private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleArgs>> routeRules;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleArgs>> getRouteRules() {
         return this.routeRules == null ? Input.empty() : this.routeRules;
@@ -215,7 +215,6 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
             this.routeRules = Input.ofNullable(routeRules);
             return this;
         }
-
         public RegionUrlMapPathMatcherArgs build() {
             return new RegionUrlMapPathMatcherArgs(defaultService, defaultUrlRedirect, description, name, pathRules, routeRules);
         }

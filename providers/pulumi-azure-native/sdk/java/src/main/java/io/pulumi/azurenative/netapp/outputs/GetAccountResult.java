@@ -6,7 +6,7 @@ package io.pulumi.azurenative.netapp.outputs;
 import io.pulumi.azurenative.netapp.outputs.AccountEncryptionResponse;
 import io.pulumi.azurenative.netapp.outputs.ActiveDirectoryResponse;
 import io.pulumi.azurenative.netapp.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -87,63 +87,63 @@ public final class GetAccountResult {
     /**
      * Active Directories
      * 
-     */
+    */
     public List<ActiveDirectoryResponse> getActiveDirectories() {
         return this.activeDirectories == null ? List.of() : this.activeDirectories;
     }
     /**
      * Encryption settings
      * 
-     */
+    */
     public Optional<AccountEncryptionResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system meta data relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -228,7 +228,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(activeDirectories, encryption, id, location, name, provisioningState, systemData, tags, type);
         }

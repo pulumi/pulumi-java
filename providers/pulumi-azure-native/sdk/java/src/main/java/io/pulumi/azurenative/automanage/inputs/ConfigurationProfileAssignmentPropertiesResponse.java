@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automanage.inputs;
 
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfileAssignmentComplianceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable String accountId;
+      private final @Nullable String accountId;
 
     public Optional<String> getAccountId() {
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
@@ -35,7 +35,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="compliance")
-    private final @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
+      private final @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
 
     public Optional<ConfigurationProfileAssignmentComplianceResponse> getCompliance() {
         return this.compliance == null ? Optional.empty() : Optional.ofNullable(this.compliance);
@@ -46,7 +46,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="configurationProfile")
-    private final @Nullable String configurationProfile;
+      private final @Nullable String configurationProfile;
 
     public Optional<String> getConfigurationProfile() {
         return this.configurationProfile == null ? Optional.empty() : Optional.ofNullable(this.configurationProfile);
@@ -57,7 +57,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="configurationProfilePreferenceId")
-    private final @Nullable String configurationProfilePreferenceId;
+      private final @Nullable String configurationProfilePreferenceId;
 
     public Optional<String> getConfigurationProfilePreferenceId() {
         return this.configurationProfilePreferenceId == null ? Optional.empty() : Optional.ofNullable(this.configurationProfilePreferenceId);
@@ -68,7 +68,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -79,7 +79,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="targetId")
-    private final @Nullable String targetId;
+      private final @Nullable String targetId;
 
     public Optional<String> getTargetId() {
         return this.targetId == null ? Optional.empty() : Optional.ofNullable(this.targetId);
@@ -168,7 +168,6 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
             this.targetId = targetId;
             return this;
         }
-
         public ConfigurationProfileAssignmentPropertiesResponse build() {
             return new ConfigurationProfileAssignmentPropertiesResponse(accountId, compliance, configurationProfile, configurationProfilePreferenceId, provisioningState, targetId);
         }

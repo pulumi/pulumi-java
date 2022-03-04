@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ApiDeploymentParameterMetadataSetResponse;
 import io.pulumi.azurenative.logic.outputs.WsdlServiceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -92,70 +92,70 @@ public final class ApiResourceMetadataResponse {
     /**
      * The api type.
      * 
-     */
+    */
     public Optional<String> getApiType() {
         return Optional.ofNullable(this.apiType);
     }
     /**
      * The brand color.
      * 
-     */
+    */
     public Optional<String> getBrandColor() {
         return Optional.ofNullable(this.brandColor);
     }
     /**
      * The connection type.
      * 
-     */
+    */
     public Optional<String> getConnectionType() {
         return Optional.ofNullable(this.connectionType);
     }
     /**
      * The connector deployment parameters metadata.
      * 
-     */
+    */
     public Optional<ApiDeploymentParameterMetadataSetResponse> getDeploymentParameters() {
         return Optional.ofNullable(this.deploymentParameters);
     }
     /**
      * The hide key.
      * 
-     */
+    */
     public Optional<String> getHideKey() {
         return Optional.ofNullable(this.hideKey);
     }
     /**
      * The provisioning state.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The source.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The WSDL import method.
      * 
-     */
+    */
     public Optional<String> getWsdlImportMethod() {
         return Optional.ofNullable(this.wsdlImportMethod);
     }
     /**
      * The WSDL service.
      * 
-     */
+    */
     public Optional<WsdlServiceResponse> getWsdlService() {
         return Optional.ofNullable(this.wsdlService);
     }
@@ -247,7 +247,6 @@ public final class ApiResourceMetadataResponse {
             this.wsdlService = wsdlService;
             return this;
         }
-
         public ApiResourceMetadataResponse build() {
             return new ApiResourceMetadataResponse(apiType, brandColor, connectionType, deploymentParameters, hideKey, provisioningState, source, tags, wsdlImportMethod, wsdlService);
         }

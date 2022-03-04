@@ -9,7 +9,7 @@ import io.pulumi.awsnative.s3.outputs.BucketNoncurrentVersionExpiration;
 import io.pulumi.awsnative.s3.outputs.BucketNoncurrentVersionTransition;
 import io.pulumi.awsnative.s3.outputs.BucketTagFilter;
 import io.pulumi.awsnative.s3.outputs.BucketTransition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -251,7 +251,6 @@ public final class BucketRule {
             this.transitions = transitions;
             return this;
         }
-
         public BucketRule build() {
             return new BucketRule(abortIncompleteMultipartUpload, expirationDate, expirationInDays, expiredObjectDeleteMarker, id, noncurrentVersionExpiration, noncurrentVersionExpirationInDays, noncurrentVersionTransition, noncurrentVersionTransitions, objectSizeGreaterThan, objectSizeLessThan, prefix, status, tagFilters, transition, transitions);
         }

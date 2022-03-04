@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetCustomerGatewayAssociationResult {
         public Builder(GetCustomerGatewayAssociationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetCustomerGatewayAssociationResult build() {
             return new GetCustomerGatewayAssociationResult();
         }

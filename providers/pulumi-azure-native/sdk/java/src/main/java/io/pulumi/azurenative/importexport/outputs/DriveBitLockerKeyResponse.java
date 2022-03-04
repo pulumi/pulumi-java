@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DriveBitLockerKeyResponse {
     /**
      * BitLocker recovery key or password
      * 
-     */
+    */
     public Optional<String> getBitLockerKey() {
         return Optional.ofNullable(this.bitLockerKey);
     }
     /**
      * Drive ID
      * 
-     */
+    */
     public Optional<String> getDriveId() {
         return Optional.ofNullable(this.driveId);
     }
@@ -76,7 +76,6 @@ public final class DriveBitLockerKeyResponse {
             this.driveId = driveId;
             return this;
         }
-
         public DriveBitLockerKeyResponse build() {
             return new DriveBitLockerKeyResponse(bitLockerKey, driveId);
         }

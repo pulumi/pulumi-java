@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.FileShareResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
     /**
      * The list of backup files to be used in case of existing backups.
      * 
-     */
+    */
     public List<String> getBackupFilePaths() {
         return this.backupFilePaths == null ? List.of() : this.backupFilePaths;
     }
     /**
      * Backup file share information for backing up this database.
      * 
-     */
+    */
     public Optional<FileShareResponse> getBackupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
     /**
      * Name of the database
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Name of the database at destination
      * 
-     */
+    */
     public String getRestoreDatabaseName() {
         return this.restoreDatabaseName;
     }
@@ -120,7 +120,6 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
             this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
             return this;
         }
-
         public MigrateSqlServerSqlMIDatabaseInputResponse build() {
             return new MigrateSqlServerSqlMIDatabaseInputResponse(backupFilePaths, backupFileShare, name, restoreDatabaseName);
         }

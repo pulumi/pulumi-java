@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ContainerStateResponse {
     /**
      * Human-readable status of this state.
      * 
-     */
+    */
     public Optional<String> getDetailStatus() {
         return Optional.ofNullable(this.detailStatus);
     }
     /**
      * The container exit code.
      * 
-     */
+    */
     public Optional<String> getExitCode() {
         return Optional.ofNullable(this.exitCode);
     }
     /**
      * Date/time when the container state finished.
      * 
-     */
+    */
     public Optional<String> getFinishTime() {
         return Optional.ofNullable(this.finishTime);
     }
     /**
      * Date/time when the container state started.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The state of this container
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -139,7 +139,6 @@ public final class ContainerStateResponse {
             this.state = state;
             return this;
         }
-
         public ContainerStateResponse build() {
             return new ContainerStateResponse(detailStatus, exitCode, finishTime, startTime, state);
         }

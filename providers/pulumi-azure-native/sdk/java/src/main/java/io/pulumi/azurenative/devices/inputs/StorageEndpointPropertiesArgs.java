@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
+      private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
 
     public Input<Either<String,AuthenticationType>> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -36,7 +36,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectionString", required=true)
-    private final Input<String> connectionString;
+      private final Input<String> connectionString;
 
     public Input<String> getConnectionString() {
         return this.connectionString;
@@ -47,7 +47,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+      private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -58,7 +58,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sasTtlAsIso8601")
-    private final @Nullable Input<String> sasTtlAsIso8601;
+      private final @Nullable Input<String> sasTtlAsIso8601;
 
     public Input<String> getSasTtlAsIso8601() {
         return this.sasTtlAsIso8601 == null ? Input.empty() : this.sasTtlAsIso8601;
@@ -147,7 +147,6 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
             this.sasTtlAsIso8601 = Input.ofNullable(sasTtlAsIso8601);
             return this;
         }
-
         public StorageEndpointPropertiesArgs build() {
             return new StorageEndpointPropertiesArgs(authenticationType, connectionString, containerName, sasTtlAsIso8601);
         }

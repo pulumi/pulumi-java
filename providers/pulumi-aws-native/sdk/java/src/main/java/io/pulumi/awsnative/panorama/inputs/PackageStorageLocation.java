@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.panorama.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class PackageStorageLocation extends io.pulumi.resources.InvokeArgs
     public static final PackageStorageLocation Empty = new PackageStorageLocation();
 
     @InputImport(name="binaryPrefixLocation")
-    private final @Nullable String binaryPrefixLocation;
+      private final @Nullable String binaryPrefixLocation;
 
     public Optional<String> getBinaryPrefixLocation() {
         return this.binaryPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.binaryPrefixLocation);
     }
 
     @InputImport(name="bucket")
-    private final @Nullable String bucket;
+      private final @Nullable String bucket;
 
     public Optional<String> getBucket() {
         return this.bucket == null ? Optional.empty() : Optional.ofNullable(this.bucket);
     }
 
     @InputImport(name="generatedPrefixLocation")
-    private final @Nullable String generatedPrefixLocation;
+      private final @Nullable String generatedPrefixLocation;
 
     public Optional<String> getGeneratedPrefixLocation() {
         return this.generatedPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.generatedPrefixLocation);
     }
 
     @InputImport(name="manifestPrefixLocation")
-    private final @Nullable String manifestPrefixLocation;
+      private final @Nullable String manifestPrefixLocation;
 
     public Optional<String> getManifestPrefixLocation() {
         return this.manifestPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.manifestPrefixLocation);
     }
 
     @InputImport(name="repoPrefixLocation")
-    private final @Nullable String repoPrefixLocation;
+      private final @Nullable String repoPrefixLocation;
 
     public Optional<String> getRepoPrefixLocation() {
         return this.repoPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.repoPrefixLocation);
@@ -122,7 +122,6 @@ public final class PackageStorageLocation extends io.pulumi.resources.InvokeArgs
             this.repoPrefixLocation = repoPrefixLocation;
             return this;
         }
-
         public PackageStorageLocation build() {
             return new PackageStorageLocation(binaryPrefixLocation, bucket, generatedPrefixLocation, manifestPrefixLocation, repoPrefixLocation);
         }

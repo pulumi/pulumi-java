@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.binaryauthorization_v1.outputs.UserOwnedGrafeasNoteResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GetAttestorResult {
     /**
      * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Time when the attestor was last updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * This specifies how an attestation will be read, and how it will be used during policy enforcement.
      * 
-     */
+    */
     public UserOwnedGrafeasNoteResponse getUserOwnedGrafeasNote() {
         return this.userOwnedGrafeasNote;
     }
@@ -117,7 +117,6 @@ public final class GetAttestorResult {
             this.userOwnedGrafeasNote = Objects.requireNonNull(userOwnedGrafeasNote);
             return this;
         }
-
         public GetAttestorResult build() {
             return new GetAttestorResult(description, name, updateTime, userOwnedGrafeasNote);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.route53.outputs.HostedZoneConfig;
 import io.pulumi.awsnative.route53.outputs.HostedZoneQueryLoggingConfig;
 import io.pulumi.awsnative.route53.outputs.HostedZoneTag;
 import io.pulumi.awsnative.route53.outputs.HostedZoneVPC;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,7 +57,7 @@ public final class GetHostedZoneResult {
      * 
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
      * 
-     */
+    */
     public List<HostedZoneTag> getHostedZoneTags() {
         return this.hostedZoneTags == null ? List.of() : this.hostedZoneTags;
     }
@@ -73,7 +73,7 @@ public final class GetHostedZoneResult {
     /**
      * A complex type that contains information about the VPCs that are associated with the specified hosted zone.
      * 
-     */
+    */
     public List<HostedZoneVPC> getVPCs() {
         return this.vPCs == null ? List.of() : this.vPCs;
     }
@@ -137,7 +137,6 @@ public final class GetHostedZoneResult {
             this.vPCs = vPCs;
             return this;
         }
-
         public GetHostedZoneResult build() {
             return new GetHostedZoneResult(hostedZoneConfig, hostedZoneTags, id, nameServers, queryLoggingConfig, vPCs);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplateIdentityConstraintsArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePassthroughExtensionsArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesArgs;
@@ -23,7 +23,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="identityConstraints")
-    private final @Nullable Input<CertificateTemplateIdentityConstraintsArgs> identityConstraints;
+      private final @Nullable Input<CertificateTemplateIdentityConstraintsArgs> identityConstraints;
 
     public Input<CertificateTemplateIdentityConstraintsArgs> getIdentityConstraints() {
         return this.identityConstraints == null ? Input.empty() : this.identityConstraints;
@@ -45,7 +45,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -56,7 +56,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -67,7 +67,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="passthroughExtensions")
-    private final @Nullable Input<CertificateTemplatePassthroughExtensionsArgs> passthroughExtensions;
+      private final @Nullable Input<CertificateTemplatePassthroughExtensionsArgs> passthroughExtensions;
 
     public Input<CertificateTemplatePassthroughExtensionsArgs> getPassthroughExtensions() {
         return this.passthroughExtensions == null ? Input.empty() : this.passthroughExtensions;
@@ -89,7 +89,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="predefinedValues")
-    private final @Nullable Input<CertificateTemplatePredefinedValuesArgs> predefinedValues;
+      private final @Nullable Input<CertificateTemplatePredefinedValuesArgs> predefinedValues;
 
     public Input<CertificateTemplatePredefinedValuesArgs> getPredefinedValues() {
         return this.predefinedValues == null ? Input.empty() : this.predefinedValues;
@@ -100,7 +100,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -249,7 +249,6 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public CertificateTemplateArgs build() {
             return new CertificateTemplateArgs(description, identityConstraints, labels, location, name, passthroughExtensions, predefinedValues, project);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ConnectorScaleOutPolicy extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="cpuUtilizationPercentage", required=true)
-    private final Integer cpuUtilizationPercentage;
+      private final Integer cpuUtilizationPercentage;
 
     public Integer getCpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
@@ -59,7 +59,6 @@ public final class ConnectorScaleOutPolicy extends io.pulumi.resources.InvokeArg
             this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
             return this;
         }
-
         public ConnectorScaleOutPolicy build() {
             return new ConnectorScaleOutPolicy(cpuUtilizationPercentage);
         }

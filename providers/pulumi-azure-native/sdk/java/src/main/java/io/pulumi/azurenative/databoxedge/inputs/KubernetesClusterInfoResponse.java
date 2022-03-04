@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.EtcdInfoResponse;
 import io.pulumi.azurenative.databoxedge.inputs.NodeInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class KubernetesClusterInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="etcdInfo", required=true)
-    private final EtcdInfoResponse etcdInfo;
+      private final EtcdInfoResponse etcdInfo;
 
     public EtcdInfoResponse getEtcdInfo() {
         return this.etcdInfo;
@@ -35,7 +35,7 @@ public final class KubernetesClusterInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="nodes", required=true)
-    private final List<NodeInfoResponse> nodes;
+      private final List<NodeInfoResponse> nodes;
 
     public List<NodeInfoResponse> getNodes() {
         return this.nodes;
@@ -46,7 +46,7 @@ public final class KubernetesClusterInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -105,7 +105,6 @@ public final class KubernetesClusterInfoResponse extends io.pulumi.resources.Inv
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public KubernetesClusterInfoResponse build() {
             return new KubernetesClusterInfoResponse(etcdInfo, nodes, version);
         }

@@ -8,8 +8,8 @@ import io.pulumi.awsnative.cloudfront.RealtimeLogConfigArgs;
 import io.pulumi.awsnative.cloudfront.outputs.RealtimeLogConfigEndPoint;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -52,6 +52,37 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
         return this.samplingRate;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RealtimeLogConfigArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.cloudfront.RealtimeLogConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.cloudfront.RealtimeLogConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RealtimeLogConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RealtimeLogConfig(String name) {
+        this(name, RealtimeLogConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RealtimeLogConfig(String name, RealtimeLogConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

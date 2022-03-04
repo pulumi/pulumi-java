@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ErrorResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectJobConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TriggerResponse;
@@ -91,70 +91,70 @@ public final class GetJobTriggerResult {
     /**
      * The creation timestamp of a triggeredJob.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * User provided description (max 256 chars)
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Display name (max 100 chars)
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * A stream of errors encountered when the trigger was activated. Repeated errors may result in the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the JobTrigger is modified this list will be cleared.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2ErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * For inspect jobs, a snapshot of the configuration.
      * 
-     */
+    */
     public GooglePrivacyDlpV2InspectJobConfigResponse getInspectJob() {
         return this.inspectJob;
     }
     /**
      * The timestamp of the last time this trigger executed.
      * 
-     */
+    */
     public String getLastRunTime() {
         return this.lastRunTime;
     }
     /**
      * Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A status for this trigger.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2TriggerResponse> getTriggers() {
         return this.triggers;
     }
     /**
      * The last update timestamp of a triggeredJob.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -246,7 +246,6 @@ public final class GetJobTriggerResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetJobTriggerResult build() {
             return new GetJobTriggerResult(createTime, description, displayName, errors, inspectJob, lastRunTime, name, status, triggers, updateTime);
         }

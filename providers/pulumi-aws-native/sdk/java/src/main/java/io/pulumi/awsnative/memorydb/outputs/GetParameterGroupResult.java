@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.ParameterGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class GetParameterGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the parameter group.
      * 
-     */
+    */
     public Optional<String> getARN() {
         return Optional.ofNullable(this.aRN);
     }
     /**
      * An array of key-value pairs to apply to this parameter group.
      * 
-     */
+    */
     public List<ParameterGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -78,7 +78,6 @@ public final class GetParameterGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetParameterGroupResult build() {
             return new GetParameterGroupResult(aRN, tags);
         }

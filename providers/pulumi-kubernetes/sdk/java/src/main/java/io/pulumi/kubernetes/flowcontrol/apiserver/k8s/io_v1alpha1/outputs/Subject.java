@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.GroupSubject;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.ServiceAccountSubject;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.UserSubject;
@@ -41,7 +41,7 @@ public final class Subject {
     /**
      * Required
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
@@ -97,7 +97,6 @@ public final class Subject {
             this.user = user;
             return this;
         }
-
         public Subject build() {
             return new Subject(group, kind, serviceAccount, user);
         }

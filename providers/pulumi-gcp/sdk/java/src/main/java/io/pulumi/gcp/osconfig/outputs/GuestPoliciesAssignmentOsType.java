@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class GuestPoliciesAssignmentOsType {
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS architecture.
      * 
-     */
+    */
     public Optional<String> getOsArchitecture() {
         return Optional.ofNullable(this.osArchitecture);
     }
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
      * 
-     */
+    */
     public Optional<String> getOsShortName() {
         return Optional.ofNullable(this.osShortName);
     }
     /**
      * Targets VM instances with OS Inventory enabled and having the following following OS version.
      * 
-     */
+    */
     public Optional<String> getOsVersion() {
         return Optional.ofNullable(this.osVersion);
     }
@@ -97,7 +97,6 @@ public final class GuestPoliciesAssignmentOsType {
             this.osVersion = osVersion;
             return this;
         }
-
         public GuestPoliciesAssignmentOsType build() {
             return new GuestPoliciesAssignmentOsType(osArchitecture, osShortName, osVersion);
         }

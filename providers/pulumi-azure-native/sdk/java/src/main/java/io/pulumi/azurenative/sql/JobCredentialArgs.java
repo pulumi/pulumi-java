@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialName")
-    private final @Nullable Input<String> credentialName;
+      private final @Nullable Input<String> credentialName;
 
     public Input<String> getCredentialName() {
         return this.credentialName == null ? Input.empty() : this.credentialName;
@@ -30,7 +30,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobAgentName", required=true)
-    private final Input<String> jobAgentName;
+      private final Input<String> jobAgentName;
 
     public Input<String> getJobAgentName() {
         return this.jobAgentName;
@@ -41,7 +41,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -52,7 +52,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -74,7 +74,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -193,7 +193,6 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public JobCredentialArgs build() {
             return new JobCredentialArgs(credentialName, jobAgentName, password, resourceGroupName, serverName, username);
         }

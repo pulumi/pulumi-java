@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class UploadServicePrincipalResponse {
     /**
      * Authority for the service principal. Example: https://login.microsoftonline.com/
      * 
-     */
+    */
     public Optional<String> getAuthority() {
         return Optional.ofNullable(this.authority);
     }
     /**
      * Client ID of the service principal for uploading data.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * Tenant ID of the service principal.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -97,7 +97,6 @@ public final class UploadServicePrincipalResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public UploadServicePrincipalResponse build() {
             return new UploadServicePrincipalResponse(authority, clientId, tenantId);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetContentTypeArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetContentTypeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContentType {
-/**
- * Content type contract details.
+    private GetContentType() {}
+    public interface BuilderApplicator {
+        public void apply(GetContentTypeArgs.Builder a);
+    }
+    private static GetContentTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetContentTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Content type contract details.
  * API Version: 2020-12-01.
  * 
- *
- * Content type contract details.
+     *
+     * Content type contract details.
  * 
- */
+     */
+    public static CompletableFuture<GetContentTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Content type contract details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Content type contract details.
+     * 
+     */
     public static CompletableFuture<GetContentTypeResult> invokeAsync(GetContentTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getContentType", TypeShape.of(GetContentTypeResult.class), args == null ? GetContentTypeArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class TopicRuleTimestreamTimestamp extends io.pulumi.resources.Invo
     public static final TopicRuleTimestreamTimestamp Empty = new TopicRuleTimestreamTimestamp();
 
     @InputImport(name="unit", required=true)
-    private final String unit;
+      private final String unit;
 
     public String getUnit() {
         return this.unit;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -69,7 +69,6 @@ public final class TopicRuleTimestreamTimestamp extends io.pulumi.resources.Invo
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TopicRuleTimestreamTimestamp build() {
             return new TopicRuleTimestreamTimestamp(unit, value);
         }

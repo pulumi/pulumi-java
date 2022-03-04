@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     public static final BackupArgs Empty = new BackupArgs();
 
     @InputImport(name="backupId", required=true)
-    private final Input<String> backupId;
+      private final Input<String> backupId;
 
     public Input<String> getBackupId() {
         return this.backupId;
@@ -26,14 +26,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -44,28 +44,28 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="serviceId", required=true)
-    private final Input<String> serviceId;
+      private final Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId;
@@ -199,7 +199,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceId = Input.of(Objects.requireNonNull(serviceId));
             return this;
         }
-
         public BackupArgs build() {
             return new BackupArgs(backupId, description, location, name, project, requestId, serviceId);
         }

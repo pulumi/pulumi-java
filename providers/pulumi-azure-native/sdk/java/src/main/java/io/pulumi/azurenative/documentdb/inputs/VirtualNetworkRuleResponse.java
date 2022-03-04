@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -35,7 +35,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ignoreMissingVNetServiceEndpoint")
-    private final @Nullable Boolean ignoreMissingVNetServiceEndpoint;
+      private final @Nullable Boolean ignoreMissingVNetServiceEndpoint;
 
     public Optional<Boolean> getIgnoreMissingVNetServiceEndpoint() {
         return this.ignoreMissingVNetServiceEndpoint == null ? Optional.empty() : Optional.ofNullable(this.ignoreMissingVNetServiceEndpoint);
@@ -84,7 +84,6 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
             this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, ignoreMissingVNetServiceEndpoint);
         }

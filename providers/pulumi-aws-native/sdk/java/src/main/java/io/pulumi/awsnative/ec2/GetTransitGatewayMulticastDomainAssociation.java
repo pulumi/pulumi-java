@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetTransitGatewayMulticastDomainAssociationArgs;
 import io.pulumi.awsnative.ec2.outputs.GetTransitGatewayMulticastDomainAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGatewayMulticastDomainAssociation {
-/**
- * The AWS::EC2::TransitGatewayMulticastDomainAssociation type
+    private GetTransitGatewayMulticastDomainAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransitGatewayMulticastDomainAssociationArgs.Builder a);
+    }
+    private static GetTransitGatewayMulticastDomainAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransitGatewayMulticastDomainAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::EC2::TransitGatewayMulticastDomainAssociation type
  * 
- */
+     */
+    public static CompletableFuture<GetTransitGatewayMulticastDomainAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::EC2::TransitGatewayMulticastDomainAssociation type
+     * 
+     */
     public static CompletableFuture<GetTransitGatewayMulticastDomainAssociationResult> invokeAsync(GetTransitGatewayMulticastDomainAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getTransitGatewayMulticastDomainAssociation", TypeShape.of(GetTransitGatewayMulticastDomainAssociationResult.class), args == null ? GetTransitGatewayMulticastDomainAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

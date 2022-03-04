@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,42 +61,42 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
     /**
      * List of agent jobs on the target server.
      * 
-     */
+    */
     public List<String> getAgentJobs() {
         return this.agentJobs;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of logins on the target server.
      * 
-     */
+    */
     public List<String> getLogins() {
         return this.logins;
     }
     /**
      * Target server brand version
      * 
-     */
+    */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Target server version
      * 
-     */
+    */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }
     /**
      * Validation errors
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }
@@ -160,7 +160,6 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToTargetSqlMITaskOutputResponse build() {
             return new ConnectToTargetSqlMITaskOutputResponse(agentJobs, id, logins, targetServerBrandVersion, targetServerVersion, validationErrors);
         }

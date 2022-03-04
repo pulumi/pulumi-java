@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cpuCount", required=true)
-    private final Integer cpuCount;
+      private final Integer cpuCount;
 
     public Integer getCpuCount() {
         return this.cpuCount;
@@ -32,7 +32,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="memorySizeMb", required=true)
-    private final Integer memorySizeMb;
+      private final Integer memorySizeMb;
 
     public Integer getMemorySizeMb() {
         return this.memorySizeMb;
@@ -81,7 +81,6 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }
-
         public NodeConfigResponse build() {
             return new NodeConfigResponse(cpuCount, memorySizeMb);
         }

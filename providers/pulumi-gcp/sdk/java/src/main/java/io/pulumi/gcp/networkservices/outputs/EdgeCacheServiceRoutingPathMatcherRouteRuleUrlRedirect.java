@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -69,7 +69,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
     /**
      * The host that will be used in the redirect response instead of the one that was supplied in the request.
      * 
-     */
+    */
     public Optional<String> getHostRedirect() {
         return Optional.ofNullable(this.hostRedirect);
     }
@@ -77,7 +77,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
      * If set to true, the URL scheme in the redirected request is set to https. If set to false, the URL scheme of the redirected request will remain the same as that of the request.
      * This can only be set if there is at least one (1) edgeSslCertificate set on the service.
      * 
-     */
+    */
     public Optional<Boolean> getHttpsRedirect() {
         return Optional.ofNullable(this.httpsRedirect);
     }
@@ -86,7 +86,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
      * pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
      * The path value must be between 1 and 1024 characters.
      * 
-     */
+    */
     public Optional<String> getPathRedirect() {
         return Optional.ofNullable(this.pathRedirect);
     }
@@ -94,7 +94,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
      * The prefix that replaces the prefixMatch specified in the routeRule, retaining the remaining portion of the URL before redirecting the request.
      * prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
      * 
-     */
+    */
     public Optional<String> getPrefixRedirect() {
         return Optional.ofNullable(this.prefixRedirect);
     }
@@ -104,14 +104,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
      * - `MOVED_PERMANENTLY_DEFAULT`, which is the default value and corresponds to 301.
      * - `FOUND`, which corresponds to 302.
      * 
-     */
+    */
     public Optional<String> getRedirectResponseCode() {
         return Optional.ofNullable(this.redirectResponseCode);
     }
     /**
      * If set to true, any accompanying query portion of the original URL is removed prior to redirecting the request. If set to false, the query portion of the original URL is retained.
      * 
-     */
+    */
     public Optional<Boolean> getStripQuery() {
         return Optional.ofNullable(this.stripQuery);
     }
@@ -175,7 +175,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
             this.stripQuery = stripQuery;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

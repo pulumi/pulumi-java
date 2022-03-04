@@ -6,7 +6,7 @@ package io.pulumi.azurenative.digitaltwins.outputs;
 import io.pulumi.azurenative.digitaltwins.outputs.EventGridResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.EventHubResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.ServiceBusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class GetDigitalTwinsEndpointResult {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Extension resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * DigitalTwinsInstance endpoint resource properties.
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -120,7 +120,6 @@ public final class GetDigitalTwinsEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDigitalTwinsEndpointResult build() {
             return new GetDigitalTwinsEndpointResult(id, name, properties, type);
         }

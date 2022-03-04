@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SqlServerAuditConfigResponse {
     /**
      * The name of the destination bucket (e.g., gs://mybucket).
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * This is always sql#sqlServerAuditConfig
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
@@ -74,7 +74,6 @@ public final class SqlServerAuditConfigResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public SqlServerAuditConfigResponse build() {
             return new SqlServerAuditConfigResponse(bucket, kind);
         }

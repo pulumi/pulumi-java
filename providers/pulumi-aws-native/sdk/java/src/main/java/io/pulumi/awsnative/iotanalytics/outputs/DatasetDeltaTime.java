@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class DatasetDeltaTime {
             this.timeExpression = Objects.requireNonNull(timeExpression);
             return this;
         }
-
         public DatasetDeltaTime build() {
             return new DatasetDeltaTime(offsetSeconds, timeExpression);
         }

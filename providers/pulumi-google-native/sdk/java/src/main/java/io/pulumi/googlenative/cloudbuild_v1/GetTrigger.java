@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTrigger {
-/**
- * Returns information about a `BuildTrigger`. This API is experimental.
+    private GetTrigger() {}
+    public interface BuilderApplicator {
+        public void apply(GetTriggerArgs.Builder a);
+    }
+    private static GetTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTriggerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns information about a `BuildTrigger`. This API is experimental.
  * 
- */
+     */
+    public static CompletableFuture<GetTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns information about a `BuildTrigger`. This API is experimental.
+     * 
+     */
     public static CompletableFuture<GetTriggerResult> invokeAsync(GetTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getTrigger", TypeShape.of(GetTriggerResult.class), args == null ? GetTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

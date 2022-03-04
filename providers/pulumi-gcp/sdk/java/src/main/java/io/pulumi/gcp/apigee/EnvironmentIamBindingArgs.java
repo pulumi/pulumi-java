@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
     public static final EnvironmentIamBindingArgs Empty = new EnvironmentIamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<EnvironmentIamBindingConditionArgs> condition;
+      private final @Nullable Input<EnvironmentIamBindingConditionArgs> condition;
 
     public Input<EnvironmentIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,21 +28,21 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="envId", required=true)
-    private final Input<String> envId;
+      private final Input<String> envId;
 
     public Input<String> getEnvId() {
         return this.envId;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
     }
 
     @InputImport(name="orgId", required=true)
-    private final Input<String> orgId;
+      private final Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId;
@@ -55,7 +55,7 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -159,7 +159,6 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public EnvironmentIamBindingArgs build() {
             return new EnvironmentIamBindingArgs(condition, envId, members, orgId, role);
         }

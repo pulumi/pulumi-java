@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,7 +42,7 @@ public final class AzureFabricSpecificDetailsResponse {
     /**
      * The container Ids for the Azure fabric.
      * 
-     */
+    */
     public List<String> getContainerIds() {
         return this.containerIds == null ? List.of() : this.containerIds;
     }
@@ -50,14 +50,14 @@ public final class AzureFabricSpecificDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'Azure'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The Location for the Azure fabric.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
@@ -100,7 +100,6 @@ public final class AzureFabricSpecificDetailsResponse {
             this.location = location;
             return this;
         }
-
         public AzureFabricSpecificDetailsResponse build() {
             return new AzureFabricSpecificDetailsResponse(containerIds, instanceType, location);
         }

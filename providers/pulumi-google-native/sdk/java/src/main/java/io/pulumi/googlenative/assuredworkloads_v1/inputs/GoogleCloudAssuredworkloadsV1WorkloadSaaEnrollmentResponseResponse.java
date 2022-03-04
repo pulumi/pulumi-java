@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
      * 
      */
     @InputImport(name="setupErrors", required=true)
-    private final List<String> setupErrors;
+      private final List<String> setupErrors;
 
     public List<String> getSetupErrors() {
         return this.setupErrors;
@@ -33,7 +33,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
      * 
      */
     @InputImport(name="setupStatus", required=true)
-    private final String setupStatus;
+      private final String setupStatus;
 
     public String getSetupStatus() {
         return this.setupStatus;
@@ -82,7 +82,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
             this.setupStatus = Objects.requireNonNull(setupStatus);
             return this;
         }
-
         public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(setupErrors, setupStatus);
         }

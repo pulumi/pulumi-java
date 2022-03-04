@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class LivenessCheckResponse {
     /**
      * Interval between health checks.
      * 
-     */
+    */
     public String getCheckInterval() {
         return this.checkInterval;
     }
     /**
      * Number of consecutive failed checks required before considering the VM unhealthy.
      * 
-     */
+    */
     public Integer getFailureThreshold() {
         return this.failureThreshold;
     }
     /**
      * Host header to send when performing a HTTP Liveness check. Example: "myapp.appspot.com"
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * The initial delay before starting to execute the checks.
      * 
-     */
+    */
     public String getInitialDelay() {
         return this.initialDelay;
     }
     /**
      * The request path.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * Number of consecutive successful checks required before considering the VM healthy.
      * 
-     */
+    */
     public Integer getSuccessThreshold() {
         return this.successThreshold;
     }
     /**
      * Time before the check is considered failed.
      * 
-     */
+    */
     public String getTimeout() {
         return this.timeout;
     }
@@ -180,7 +180,6 @@ public final class LivenessCheckResponse {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public LivenessCheckResponse build() {
             return new LivenessCheckResponse(checkInterval, failureThreshold, host, initialDelay, path, successThreshold, timeout);
         }

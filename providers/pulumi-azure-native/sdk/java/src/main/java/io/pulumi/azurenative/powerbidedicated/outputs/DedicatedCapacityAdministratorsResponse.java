@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerbidedicated.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DedicatedCapacityAdministratorsResponse {
     /**
      * An array of administrator user identities.
      * 
-     */
+    */
     public List<String> getMembers() {
         return this.members == null ? List.of() : this.members;
     }
@@ -54,7 +54,6 @@ public final class DedicatedCapacityAdministratorsResponse {
             this.members = members;
             return this;
         }
-
         public DedicatedCapacityAdministratorsResponse build() {
             return new DedicatedCapacityAdministratorsResponse(members);
         }

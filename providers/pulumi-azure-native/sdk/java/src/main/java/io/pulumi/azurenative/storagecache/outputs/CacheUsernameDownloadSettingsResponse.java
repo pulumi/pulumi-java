@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.CacheUsernameDownloadSettingsResponseCredentials;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -105,84 +105,84 @@ public final class CacheUsernameDownloadSettingsResponse {
     /**
      * Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.
      * 
-     */
+    */
     public Optional<Boolean> getAutoDownloadCertificate() {
         return Optional.ofNullable(this.autoDownloadCertificate);
     }
     /**
      * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.
      * 
-     */
+    */
     public Optional<String> getCaCertificateURI() {
         return Optional.ofNullable(this.caCertificateURI);
     }
     /**
      * When present, these are the credentials for the secure LDAP connection.
      * 
-     */
+    */
     public Optional<CacheUsernameDownloadSettingsResponseCredentials> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * Whether or not the LDAP connection should be encrypted.
      * 
-     */
+    */
     public Optional<Boolean> getEncryptLdapConnection() {
         return Optional.ofNullable(this.encryptLdapConnection);
     }
     /**
      * Whether or not Extended Groups is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getExtendedGroups() {
         return Optional.ofNullable(this.extendedGroups);
     }
     /**
      * The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.
      * 
-     */
+    */
     public Optional<String> getGroupFileURI() {
         return Optional.ofNullable(this.groupFileURI);
     }
     /**
      * The base distinguished name for the LDAP domain.
      * 
-     */
+    */
     public Optional<String> getLdapBaseDN() {
         return Optional.ofNullable(this.ldapBaseDN);
     }
     /**
      * The fully qualified domain name or IP address of the LDAP server to use.
      * 
-     */
+    */
     public Optional<String> getLdapServer() {
         return Optional.ofNullable(this.ldapServer);
     }
     /**
      * Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
      * 
-     */
+    */
     public Optional<Boolean> getRequireValidCertificate() {
         return Optional.ofNullable(this.requireValidCertificate);
     }
     /**
      * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.
      * 
-     */
+    */
     public Optional<String> getUserFileURI() {
         return Optional.ofNullable(this.userFileURI);
     }
     /**
      * Indicates whether or not the HPC Cache has performed the username download successfully.
      * 
-     */
+    */
     public String getUsernameDownloaded() {
         return this.usernameDownloaded;
     }
     /**
      * This setting determines how the cache gets username and group names for clients.
      * 
-     */
+    */
     public Optional<String> getUsernameSource() {
         return Optional.ofNullable(this.usernameSource);
     }
@@ -288,7 +288,6 @@ public final class CacheUsernameDownloadSettingsResponse {
             this.usernameSource = usernameSource;
             return this;
         }
-
         public CacheUsernameDownloadSettingsResponse build() {
             return new CacheUsernameDownloadSettingsResponse(autoDownloadCertificate, caCertificateURI, credentials, encryptLdapConnection, extendedGroups, groupFileURI, ldapBaseDN, ldapServer, requireValidCertificate, userFileURI, usernameDownloaded, usernameSource);
         }

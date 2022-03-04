@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.FieldResponse;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionResponse;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.SourceContextResponse;
@@ -25,7 +25,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-    private final List<FieldResponse> fields;
+      private final List<FieldResponse> fields;
 
     public List<FieldResponse> getFields() {
         return this.fields;
@@ -36,7 +36,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oneofs", required=true)
-    private final List<String> oneofs;
+      private final List<String> oneofs;
 
     public List<String> getOneofs() {
         return this.oneofs;
@@ -58,7 +58,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="options", required=true)
-    private final List<OptionResponse> options;
+      private final List<OptionResponse> options;
 
     public List<OptionResponse> getOptions() {
         return this.options;
@@ -69,7 +69,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceContext", required=true)
-    private final SourceContextResponse sourceContext;
+      private final SourceContextResponse sourceContext;
 
     public SourceContextResponse getSourceContext() {
         return this.sourceContext;
@@ -80,7 +80,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="syntax", required=true)
-    private final String syntax;
+      private final String syntax;
 
     public String getSyntax() {
         return this.syntax;
@@ -169,7 +169,6 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }
-
         public TypeResponse build() {
             return new TypeResponse(fields, name, oneofs, options, sourceContext, syntax);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.ListShareSubscriptionSynchronizationsArgs;
 import io.pulumi.azurenative.datashare.outputs.ListShareSubscriptionSynchronizationsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListShareSubscriptionSynchronizations {
-/**
- * A consumer side list of share subscription synchronizations
+    private ListShareSubscriptionSynchronizations() {}
+    public interface BuilderApplicator {
+        public void apply(ListShareSubscriptionSynchronizationsArgs.Builder a);
+    }
+    private static ListShareSubscriptionSynchronizationsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListShareSubscriptionSynchronizationsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A consumer side list of share subscription synchronizations
  * API Version: 2020-09-01.
  * 
- *
- * A consumer side list of share subscription synchronizations
+     *
+     * A consumer side list of share subscription synchronizations
  * 
- */
+     */
+    public static CompletableFuture<ListShareSubscriptionSynchronizationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A consumer side list of share subscription synchronizations
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A consumer side list of share subscription synchronizations
+     * 
+     */
     public static CompletableFuture<ListShareSubscriptionSynchronizationsResult> invokeAsync(ListShareSubscriptionSynchronizationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSubscriptionSynchronizations", TypeShape.of(ListShareSubscriptionSynchronizationsResult.class), args == null ? ListShareSubscriptionSynchronizationsArgs.Empty : args, Utilities.withVersion(options));
     }

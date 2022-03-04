@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpnGateway {
-/**
- * Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
+    private GetVpnGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpnGatewayArgs.Builder a);
+    }
+    private static GetVpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpnGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetVpnGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetVpnGatewayResult> invokeAsync(GetVpnGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args == null ? GetVpnGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

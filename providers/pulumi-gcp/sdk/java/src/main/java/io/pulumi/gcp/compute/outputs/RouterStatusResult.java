@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RouterStatusBestRoute;
 import io.pulumi.gcp.compute.outputs.RouterStatusBestRoutesForRouter;
 import java.lang.String;
@@ -58,7 +58,7 @@ public final class RouterStatusResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -69,7 +69,7 @@ public final class RouterStatusResult {
      * The network name or resource link to the parent
      * network of this subnetwork.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
@@ -146,7 +146,6 @@ public final class RouterStatusResult {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public RouterStatusResult build() {
             return new RouterStatusResult(bestRoutes, bestRoutesForRouters, id, name, network, project, region);
         }

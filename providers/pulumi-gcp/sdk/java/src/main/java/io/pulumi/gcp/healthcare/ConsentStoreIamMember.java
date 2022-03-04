@@ -5,8 +5,8 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.ConsentStoreIamMemberArgs;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberState;
@@ -135,6 +135,37 @@ public class ConsentStoreIamMember extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ConsentStoreIamMemberArgs.Builder a);
+    }
+    private static io.pulumi.gcp.healthcare.ConsentStoreIamMemberArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.healthcare.ConsentStoreIamMemberArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ConsentStoreIamMember(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ConsentStoreIamMember(String name) {
+        this(name, ConsentStoreIamMemberArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ConsentStoreIamMember(String name, ConsentStoreIamMemberArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

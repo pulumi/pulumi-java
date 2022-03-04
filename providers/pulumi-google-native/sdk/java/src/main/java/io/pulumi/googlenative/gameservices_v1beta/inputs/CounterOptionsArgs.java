@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.CustomFieldArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customFields")
-    private final @Nullable Input<List<CustomFieldArgs>> customFields;
+      private final @Nullable Input<List<CustomFieldArgs>> customFields;
 
     public Input<List<CustomFieldArgs>> getCustomFields() {
         return this.customFields == null ? Input.empty() : this.customFields;
@@ -36,7 +36,7 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+      private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -47,7 +47,7 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metric")
-    private final @Nullable Input<String> metric;
+      private final @Nullable Input<String> metric;
 
     public Input<String> getMetric() {
         return this.metric == null ? Input.empty() : this.metric;
@@ -121,7 +121,6 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.metric = Input.ofNullable(metric);
             return this;
         }
-
         public CounterOptionsArgs build() {
             return new CounterOptionsArgs(customFields, field, metric);
         }

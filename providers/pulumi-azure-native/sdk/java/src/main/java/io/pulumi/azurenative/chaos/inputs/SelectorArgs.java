@@ -6,7 +6,7 @@ package io.pulumi.azurenative.chaos.inputs;
 import io.pulumi.azurenative.chaos.enums.SelectorType;
 import io.pulumi.azurenative.chaos.inputs.TargetReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -36,7 +36,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targets", required=true)
-    private final Input<List<TargetReferenceArgs>> targets;
+      private final Input<List<TargetReferenceArgs>> targets;
 
     public Input<List<TargetReferenceArgs>> getTargets() {
         return this.targets;
@@ -47,7 +47,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<SelectorType> type;
+      private final Input<SelectorType> type;
 
     public Input<SelectorType> getType() {
         return this.type;
@@ -121,7 +121,6 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SelectorArgs build() {
             return new SelectorArgs(id, targets, type);
         }

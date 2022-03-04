@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.outputs.RecommendedActionImpactRecordResponse;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionImplementationInfoResponse;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionMetricInfoResponse;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionStateInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -223,196 +223,196 @@ public final class RecommendedActionResponse {
     /**
      * Gets additional details specific to this recommended action.
      * 
-     */
+    */
     public Map<String,Object> getDetails() {
         return this.details;
     }
     /**
      * Gets the error details if and why this recommended action is put to error state.
      * 
-     */
+    */
     public RecommendedActionErrorInfoResponse getErrorDetails() {
         return this.errorDetails;
     }
     /**
      * Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
      * 
-     */
+    */
     public List<RecommendedActionImpactRecordResponse> getEstimatedImpact() {
         return this.estimatedImpact;
     }
     /**
      * Gets the time taken for applying this recommended action on user resource. e.g., time taken for index creation
      * 
-     */
+    */
     public String getExecuteActionDuration() {
         return this.executeActionDuration;
     }
     /**
      * Gets if approval for applying this recommended action was given by user/system.
      * 
-     */
+    */
     public String getExecuteActionInitiatedBy() {
         return this.executeActionInitiatedBy;
     }
     /**
      * Gets the time when this recommended action was approved for execution.
      * 
-     */
+    */
     public String getExecuteActionInitiatedTime() {
         return this.executeActionInitiatedTime;
     }
     /**
      * Gets the time when system started applying this recommended action on the user resource. e.g., index creation start time
      * 
-     */
+    */
     public String getExecuteActionStartTime() {
         return this.executeActionStartTime;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets the implementation details of this recommended action for user to apply it manually.
      * 
-     */
+    */
     public RecommendedActionImplementationInfoResponse getImplementationDetails() {
         return this.implementationDetails;
     }
     /**
      * Gets if this recommended action was suggested some time ago but user chose to ignore this and system added a new recommended action again.
      * 
-     */
+    */
     public Boolean getIsArchivedAction() {
         return this.isArchivedAction;
     }
     /**
      * Gets if this recommended action is actionable by user
      * 
-     */
+    */
     public Boolean getIsExecutableAction() {
         return this.isExecutableAction;
     }
     /**
      * Gets if changes applied by this recommended action can be reverted by user
      * 
-     */
+    */
     public Boolean getIsRevertableAction() {
         return this.isRevertableAction;
     }
     /**
      * Resource kind.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Gets time when this recommended action was last refreshed.
      * 
-     */
+    */
     public String getLastRefresh() {
         return this.lastRefresh;
     }
     /**
      * Gets the linked objects, if any.
      * 
-     */
+    */
     public List<String> getLinkedObjects() {
         return this.linkedObjects;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
      * 
-     */
+    */
     public List<RecommendedActionImpactRecordResponse> getObservedImpact() {
         return this.observedImpact;
     }
     /**
      * Gets the reason for recommending this action. e.g., DuplicateIndex
      * 
-     */
+    */
     public String getRecommendationReason() {
         return this.recommendationReason;
     }
     /**
      * Gets the time taken for reverting changes of this recommended action on user resource. e.g., time taken for dropping the created index.
      * 
-     */
+    */
     public String getRevertActionDuration() {
         return this.revertActionDuration;
     }
     /**
      * Gets if approval for reverting this recommended action was given by user/system.
      * 
-     */
+    */
     public String getRevertActionInitiatedBy() {
         return this.revertActionInitiatedBy;
     }
     /**
      * Gets the time when this recommended action was approved for revert.
      * 
-     */
+    */
     public String getRevertActionInitiatedTime() {
         return this.revertActionInitiatedTime;
     }
     /**
      * Gets the time when system started reverting changes of this recommended action on user resource. e.g., time when index drop is executed.
      * 
-     */
+    */
     public String getRevertActionStartTime() {
         return this.revertActionStartTime;
     }
     /**
      * Gets the impact of this recommended action. Possible values are 1 - Low impact, 2 - Medium Impact and 3 - High Impact
      * 
-     */
+    */
     public Integer getScore() {
         return this.score;
     }
     /**
      * Gets the info of the current state the recommended action is in.
      * 
-     */
+    */
     public RecommendedActionStateInfoResponse getState() {
         return this.state;
     }
     /**
      * Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
      * 
-     */
+    */
     public List<RecommendedActionMetricInfoResponse> getTimeSeries() {
         return this.timeSeries;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets the time since when this recommended action is valid.
      * 
-     */
+    */
     public String getValidSince() {
         return this.validSince;
     }
@@ -630,7 +630,6 @@ public final class RecommendedActionResponse {
             this.validSince = Objects.requireNonNull(validSince);
             return this;
         }
-
         public RecommendedActionResponse build() {
             return new RecommendedActionResponse(details, errorDetails, estimatedImpact, executeActionDuration, executeActionInitiatedBy, executeActionInitiatedTime, executeActionStartTime, id, implementationDetails, isArchivedAction, isExecutableAction, isRevertableAction, kind, lastRefresh, linkedObjects, location, name, observedImpact, recommendationReason, revertActionDuration, revertActionInitiatedBy, revertActionInitiatedTime, revertActionStartTime, score, state, timeSeries, type, validSince);
         }

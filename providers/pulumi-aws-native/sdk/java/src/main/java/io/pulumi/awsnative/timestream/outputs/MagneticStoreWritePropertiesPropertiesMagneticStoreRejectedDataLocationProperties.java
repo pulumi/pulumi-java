@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     /**
      * S3 configuration for location to store rejections from magnetic store writes
      * 
-     */
+    */
     public Optional<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties> getS3Configuration() {
         return Optional.ofNullable(this.s3Configuration);
     }
@@ -54,7 +54,6 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
             this.s3Configuration = s3Configuration;
             return this;
         }
-
         public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties build() {
             return new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties(s3Configuration);
         }

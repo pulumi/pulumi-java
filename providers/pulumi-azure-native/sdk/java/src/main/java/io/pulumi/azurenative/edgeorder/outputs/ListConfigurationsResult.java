@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.ConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ListConfigurationsResult {
     /**
      * Link for the next set of configurations.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of configurations.
      * 
-     */
+    */
     public List<ConfigurationResponse> getValue() {
         return this.value;
     }
@@ -78,7 +78,6 @@ public final class ListConfigurationsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListConfigurationsResult build() {
             return new ListConfigurationsResult(nextLink, value);
         }

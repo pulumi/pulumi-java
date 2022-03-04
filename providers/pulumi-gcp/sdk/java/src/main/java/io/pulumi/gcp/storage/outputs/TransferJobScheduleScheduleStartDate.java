@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class TransferJobScheduleScheduleStartDate {
     /**
      * Day of month. Must be from 1 to 31 and valid for the year and month.
      * 
-     */
+    */
     public Integer getDay() {
         return this.day;
     }
     /**
      * Month of year. Must be from 1 to 12.
      * 
-     */
+    */
     public Integer getMonth() {
         return this.month;
     }
     /**
      * Year of date. Must be from 1 to 9999.
      * 
-     */
+    */
     public Integer getYear() {
         return this.year;
     }
@@ -95,7 +95,6 @@ public final class TransferJobScheduleScheduleStartDate {
             this.year = Objects.requireNonNull(year);
             return this;
         }
-
         public TransferJobScheduleScheduleStartDate build() {
             return new TransferJobScheduleScheduleStartDate(day, month, year);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class AcceleratorConfigResponse {
     /**
      * The number of the accelerator cards exposed to an instance.
      * 
-     */
+    */
     public String getAcceleratorCount() {
         return this.acceleratorCount;
     }
     /**
      * The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus)
      * 
-     */
+    */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }
     /**
      * Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
      * 
-     */
+    */
     public String getGpuPartitionSize() {
         return this.gpuPartitionSize;
     }
@@ -95,7 +95,6 @@ public final class AcceleratorConfigResponse {
             this.gpuPartitionSize = Objects.requireNonNull(gpuPartitionSize);
             return this;
         }
-
         public AcceleratorConfigResponse build() {
             return new AcceleratorConfigResponse(acceleratorCount, acceleratorType, gpuPartitionSize);
         }

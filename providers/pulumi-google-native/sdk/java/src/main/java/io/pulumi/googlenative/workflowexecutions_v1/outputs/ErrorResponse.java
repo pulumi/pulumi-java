@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.workflowexecutions_v1.outputs.StackTraceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ErrorResponse {
     /**
      * Human-readable stack trace string.
      * 
-     */
+    */
     public String getContext() {
         return this.context;
     }
     /**
      * Error message and data returned represented as a JSON string.
      * 
-     */
+    */
     public String getPayload() {
         return this.payload;
     }
     /**
      * Stack trace with detailed information of where error was generated.
      * 
-     */
+    */
     public StackTraceResponse getStackTrace() {
         return this.stackTrace;
     }
@@ -96,7 +96,6 @@ public final class ErrorResponse {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }
-
         public ErrorResponse build() {
             return new ErrorResponse(context, payload, stackTrace);
         }

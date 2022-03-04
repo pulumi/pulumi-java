@@ -6,17 +6,33 @@ package io.pulumi.awsnative.accessanalyzer;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.accessanalyzer.inputs.GetAnalyzerArgs;
 import io.pulumi.awsnative.accessanalyzer.outputs.GetAnalyzerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnalyzer {
-/**
- * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user's account
+    private GetAnalyzer() {}
+    public interface BuilderApplicator {
+        public void apply(GetAnalyzerArgs.Builder a);
+    }
+    private static GetAnalyzerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAnalyzerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user's account
  * 
- */
+     */
+    public static CompletableFuture<GetAnalyzerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user's account
+     * 
+     */
     public static CompletableFuture<GetAnalyzerResult> invokeAsync(GetAnalyzerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:accessanalyzer:getAnalyzer", TypeShape.of(GetAnalyzerResult.class), args == null ? GetAnalyzerArgs.Empty : args, Utilities.withVersion(options));
     }

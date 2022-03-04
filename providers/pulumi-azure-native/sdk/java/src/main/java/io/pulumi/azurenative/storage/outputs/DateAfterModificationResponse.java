@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DateAfterModificationResponse {
     /**
      * Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
      * 
-     */
+    */
     public Optional<Double> getDaysAfterLastAccessTimeGreaterThan() {
         return Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
     }
     /**
      * Value indicating the age in days after last modification
      * 
-     */
+    */
     public Optional<Double> getDaysAfterModificationGreaterThan() {
         return Optional.ofNullable(this.daysAfterModificationGreaterThan);
     }
@@ -76,7 +76,6 @@ public final class DateAfterModificationResponse {
             this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;
         }
-
         public DateAfterModificationResponse build() {
             return new DateAfterModificationResponse(daysAfterLastAccessTimeGreaterThan, daysAfterModificationGreaterThan);
         }

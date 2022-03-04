@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.AsymmetricEncryptedSecretResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -106,84 +106,84 @@ public final class GetVolumeContainerResult {
     /**
      * The bandwidth-rate set on the volume container.
      * 
-     */
+    */
     public Optional<Integer> getBandWidthRateInMbps() {
         return Optional.ofNullable(this.bandWidthRateInMbps);
     }
     /**
      * The ID of the bandwidth setting associated with the volume container.
      * 
-     */
+    */
     public Optional<String> getBandwidthSettingId() {
         return Optional.ofNullable(this.bandwidthSettingId);
     }
     /**
      * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
      * 
-     */
+    */
     public Optional<AsymmetricEncryptedSecretResponse> getEncryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
      * The flag to denote whether encryption is enabled or not.
      * 
-     */
+    */
     public String getEncryptionStatus() {
         return this.encryptionStatus;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
      * 
-     */
+    */
     public String getOwnerShipStatus() {
         return this.ownerShipStatus;
     }
     /**
      * The path ID of storage account associated with the volume container.
      * 
-     */
+    */
     public String getStorageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
     /**
      * The total cloud storage for the volume container.
      * 
-     */
+    */
     public Double getTotalCloudStorageUsageInBytes() {
         return this.totalCloudStorageUsageInBytes;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The number of volumes in the volume Container.
      * 
-     */
+    */
     public Integer getVolumeCount() {
         return this.volumeCount;
     }
@@ -289,7 +289,6 @@ public final class GetVolumeContainerResult {
             this.volumeCount = Objects.requireNonNull(volumeCount);
             return this;
         }
-
         public GetVolumeContainerResult build() {
             return new GetVolumeContainerResult(bandWidthRateInMbps, bandwidthSettingId, encryptionKey, encryptionStatus, id, kind, name, ownerShipStatus, storageAccountCredentialId, totalCloudStorageUsageInBytes, type, volumeCount);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RestResponseRegexArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<RestResponseRegexArgs> regex;
+      private final @Nullable Input<RestResponseRegexArgs> regex;
 
     public Input<RestResponseRegexArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -36,7 +36,7 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successStatusCodes")
-    private final @Nullable Input<List<String>> successStatusCodes;
+      private final @Nullable Input<List<String>> successStatusCodes;
 
     public Input<List<String>> getSuccessStatusCodes() {
         return this.successStatusCodes == null ? Input.empty() : this.successStatusCodes;
@@ -95,7 +95,6 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
             this.successStatusCodes = Input.ofNullable(successStatusCodes);
             return this;
         }
-
         public RestResponseArgs build() {
             return new RestResponseArgs(regex, successStatusCodes);
         }

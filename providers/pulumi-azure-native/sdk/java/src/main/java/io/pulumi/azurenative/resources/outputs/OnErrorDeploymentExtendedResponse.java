@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class OnErrorDeploymentExtendedResponse {
     /**
      * The deployment to be used on error case.
      * 
-     */
+    */
     public Optional<String> getDeploymentName() {
         return Optional.ofNullable(this.deploymentName);
     }
     /**
      * The state of the provisioning for the on error deployment.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class OnErrorDeploymentExtendedResponse {
             this.type = type;
             return this;
         }
-
         public OnErrorDeploymentExtendedResponse build() {
             return new OnErrorDeploymentExtendedResponse(deploymentName, provisioningState, type);
         }

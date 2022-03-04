@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class RevocationDetailsResponse {
     /**
      * Indicates why a Certificate was revoked.
      * 
-     */
+    */
     public String getRevocationState() {
         return this.revocationState;
     }
     /**
      * The time at which this Certificate was revoked.
      * 
-     */
+    */
     public String getRevocationTime() {
         return this.revocationTime;
     }
@@ -74,7 +74,6 @@ public final class RevocationDetailsResponse {
             this.revocationTime = Objects.requireNonNull(revocationTime);
             return this;
         }
-
         public RevocationDetailsResponse build() {
             return new RevocationDetailsResponse(revocationState, revocationTime);
         }

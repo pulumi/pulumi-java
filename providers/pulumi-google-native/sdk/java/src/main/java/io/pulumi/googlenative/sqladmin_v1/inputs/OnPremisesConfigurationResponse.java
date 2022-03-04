@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.inputs.InstanceReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="caCertificate", required=true)
-    private final String caCertificate;
+      private final String caCertificate;
 
     public String getCaCertificate() {
         return this.caCertificate;
@@ -33,7 +33,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="clientCertificate", required=true)
-    private final String clientCertificate;
+      private final String clientCertificate;
 
     public String getClientCertificate() {
         return this.clientCertificate;
@@ -44,7 +44,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="clientKey", required=true)
-    private final String clientKey;
+      private final String clientKey;
 
     public String getClientKey() {
         return this.clientKey;
@@ -55,7 +55,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="dumpFilePath", required=true)
-    private final String dumpFilePath;
+      private final String dumpFilePath;
 
     public String getDumpFilePath() {
         return this.dumpFilePath;
@@ -66,7 +66,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="hostPort", required=true)
-    private final String hostPort;
+      private final String hostPort;
 
     public String getHostPort() {
         return this.hostPort;
@@ -77,7 +77,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -88,7 +88,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -99,7 +99,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sourceInstance", required=true)
-    private final InstanceReferenceResponse sourceInstance;
+      private final InstanceReferenceResponse sourceInstance;
 
     public InstanceReferenceResponse getSourceInstance() {
         return this.sourceInstance;
@@ -110,7 +110,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -229,7 +229,6 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public OnPremisesConfigurationResponse build() {
             return new OnPremisesConfigurationResponse(caCertificate, clientCertificate, clientKey, dumpFilePath, hostPort, kind, password, sourceInstance, username);
         }

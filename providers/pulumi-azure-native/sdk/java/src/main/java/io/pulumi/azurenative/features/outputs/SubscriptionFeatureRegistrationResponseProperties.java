@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.features.outputs;
 
 import io.pulumi.azurenative.features.outputs.AuthorizationProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -120,98 +120,98 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
     /**
      * The feature approval type.
      * 
-     */
+    */
     public String getApprovalType() {
         return this.approvalType;
     }
     /**
      * Authorization Profile
      * 
-     */
+    */
     public Optional<AuthorizationProfileResponse> getAuthorizationProfile() {
         return Optional.ofNullable(this.authorizationProfile);
     }
     /**
      * The feature description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The featureDisplayName.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The feature documentation link.
      * 
-     */
+    */
     public String getDocumentationLink() {
         return this.documentationLink;
     }
     /**
      * The featureName.
      * 
-     */
+    */
     public String getFeatureName() {
         return this.featureName;
     }
     /**
      * Key-value pairs for meta data.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The providerNamespace.
      * 
-     */
+    */
     public String getProviderNamespace() {
         return this.providerNamespace;
     }
     /**
      * The feature registration date.
      * 
-     */
+    */
     public String getRegistrationDate() {
         return this.registrationDate;
     }
     /**
      * The feature release date.
      * 
-     */
+    */
     public String getReleaseDate() {
         return this.releaseDate;
     }
     /**
      * Indicates whether feature should be displayed in Portal.
      * 
-     */
+    */
     public Optional<Boolean> getShouldFeatureDisplayInPortal() {
         return Optional.ofNullable(this.shouldFeatureDisplayInPortal);
     }
     /**
      * The state.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The subscriptionId.
      * 
-     */
+    */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * The tenantId.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
@@ -331,7 +331,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public SubscriptionFeatureRegistrationResponseProperties build() {
             return new SubscriptionFeatureRegistrationResponseProperties(approvalType, authorizationProfile, description, displayName, documentationLink, featureName, metadata, providerNamespace, registrationDate, releaseDate, shouldFeatureDisplayInPortal, state, subscriptionId, tenantId);
         }

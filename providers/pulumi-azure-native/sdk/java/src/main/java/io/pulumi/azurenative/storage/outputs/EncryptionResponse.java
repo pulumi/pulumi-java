@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.outputs;
 import io.pulumi.azurenative.storage.outputs.EncryptionIdentityResponse;
 import io.pulumi.azurenative.storage.outputs.EncryptionServicesResponse;
 import io.pulumi.azurenative.storage.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -58,35 +58,35 @@ public final class EncryptionResponse {
     /**
      * The identity to be used with service-side encryption at rest.
      * 
-     */
+    */
     public Optional<EncryptionIdentityResponse> getEncryptionIdentity() {
         return Optional.ofNullable(this.encryptionIdentity);
     }
     /**
      * The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
      * 
-     */
+    */
     public String getKeySource() {
         return this.keySource;
     }
     /**
      * Properties provided by key vault.
      * 
-     */
+    */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
      * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
      * 
-     */
+    */
     public Optional<Boolean> getRequireInfrastructureEncryption() {
         return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
     /**
      * List of services which support encryption.
      * 
-     */
+    */
     public Optional<EncryptionServicesResponse> getServices() {
         return Optional.ofNullable(this.services);
     }
@@ -143,7 +143,6 @@ public final class EncryptionResponse {
             this.services = services;
             return this;
         }
-
         public EncryptionResponse build() {
             return new EncryptionResponse(encryptionIdentity, keySource, keyVaultProperties, requireInfrastructureEncryption, services);
         }

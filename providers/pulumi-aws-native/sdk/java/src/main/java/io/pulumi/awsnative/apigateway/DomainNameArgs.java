@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.inputs.DomainNameEndpointConfigurationArgs
 import io.pulumi.awsnative.apigateway.inputs.DomainNameMutualTlsAuthenticationArgs;
 import io.pulumi.awsnative.apigateway.inputs.DomainNameTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,56 +19,56 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     public static final DomainNameArgs Empty = new DomainNameArgs();
 
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
     }
 
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
     @InputImport(name="endpointConfiguration")
-    private final @Nullable Input<DomainNameEndpointConfigurationArgs> endpointConfiguration;
+      private final @Nullable Input<DomainNameEndpointConfigurationArgs> endpointConfiguration;
 
     public Input<DomainNameEndpointConfigurationArgs> getEndpointConfiguration() {
         return this.endpointConfiguration == null ? Input.empty() : this.endpointConfiguration;
     }
 
     @InputImport(name="mutualTlsAuthentication")
-    private final @Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
+      private final @Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
     public Input<DomainNameMutualTlsAuthenticationArgs> getMutualTlsAuthentication() {
         return this.mutualTlsAuthentication == null ? Input.empty() : this.mutualTlsAuthentication;
     }
 
     @InputImport(name="ownershipVerificationCertificateArn")
-    private final @Nullable Input<String> ownershipVerificationCertificateArn;
+      private final @Nullable Input<String> ownershipVerificationCertificateArn;
 
     public Input<String> getOwnershipVerificationCertificateArn() {
         return this.ownershipVerificationCertificateArn == null ? Input.empty() : this.ownershipVerificationCertificateArn;
     }
 
     @InputImport(name="regionalCertificateArn")
-    private final @Nullable Input<String> regionalCertificateArn;
+      private final @Nullable Input<String> regionalCertificateArn;
 
     public Input<String> getRegionalCertificateArn() {
         return this.regionalCertificateArn == null ? Input.empty() : this.regionalCertificateArn;
     }
 
     @InputImport(name="securityPolicy")
-    private final @Nullable Input<String> securityPolicy;
+      private final @Nullable Input<String> securityPolicy;
 
     public Input<String> getSecurityPolicy() {
         return this.securityPolicy == null ? Input.empty() : this.securityPolicy;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<DomainNameTagArgs>> tags;
+      private final @Nullable Input<List<DomainNameTagArgs>> tags;
 
     public Input<List<DomainNameTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -217,7 +217,6 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DomainNameArgs build() {
             return new DomainNameArgs(certificateArn, domainName, endpointConfiguration, mutualTlsAuthentication, ownershipVerificationCertificateArn, regionalCertificateArn, securityPolicy, tags);
         }

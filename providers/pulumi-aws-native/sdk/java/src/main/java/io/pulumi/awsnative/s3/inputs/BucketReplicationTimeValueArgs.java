@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class BucketReplicationTimeValueArgs extends io.pulumi.resources.Re
     public static final BucketReplicationTimeValueArgs Empty = new BucketReplicationTimeValueArgs();
 
     @InputImport(name="minutes", required=true)
-    private final Input<Integer> minutes;
+      private final Input<Integer> minutes;
 
     public Input<Integer> getMinutes() {
         return this.minutes;
@@ -57,7 +57,6 @@ public final class BucketReplicationTimeValueArgs extends io.pulumi.resources.Re
             this.minutes = Input.of(Objects.requireNonNull(minutes));
             return this;
         }
-
         public BucketReplicationTimeValueArgs build() {
             return new BucketReplicationTimeValueArgs(minutes);
         }

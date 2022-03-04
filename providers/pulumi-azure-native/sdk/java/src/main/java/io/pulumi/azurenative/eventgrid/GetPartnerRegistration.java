@@ -6,21 +6,41 @@ package io.pulumi.azurenative.eventgrid;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventgrid.inputs.GetPartnerRegistrationArgs;
 import io.pulumi.azurenative.eventgrid.outputs.GetPartnerRegistrationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPartnerRegistration {
-/**
- * Information about a partner registration.
+    private GetPartnerRegistration() {}
+    public interface BuilderApplicator {
+        public void apply(GetPartnerRegistrationArgs.Builder a);
+    }
+    private static GetPartnerRegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPartnerRegistrationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Information about a partner registration.
  * API Version: 2021-06-01-preview.
  * 
- *
- * Information about a partner registration.
+     *
+     * Information about a partner registration.
  * 
- */
+     */
+    public static CompletableFuture<GetPartnerRegistrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Information about a partner registration.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * Information about a partner registration.
+     * 
+     */
     public static CompletableFuture<GetPartnerRegistrationResult> invokeAsync(GetPartnerRegistrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerRegistration", TypeShape.of(GetPartnerRegistrationResult.class), args == null ? GetPartnerRegistrationArgs.Empty : args, Utilities.withVersion(options));
     }

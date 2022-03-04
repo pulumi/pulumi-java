@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
     /**
      * Describes the possible values
      * 
-     */
+    */
     public List<String> getFilterValues() {
         return this.filterValues == null ? List.of() : this.filterValues;
     }
@@ -54,7 +54,6 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
             this.filterValues = filterValues;
             return this;
         }
-
         public ListFirewallPolicyIdpsSignaturesFilterValueResult build() {
             return new ListFirewallPolicyIdpsSignaturesFilterValueResult(filterValues);
         }

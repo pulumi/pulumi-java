@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class MitigationActionPublishFindingToSnsParams {
     /**
      * The ARN of the topic to which you want to publish the findings.
      * 
-     */
+    */
     public String getTopicArn() {
         return this.topicArn;
     }
@@ -52,7 +52,6 @@ public final class MitigationActionPublishFindingToSnsParams {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
-
         public MitigationActionPublishFindingToSnsParams build() {
             return new MitigationActionPublishFindingToSnsParams(topicArn);
         }

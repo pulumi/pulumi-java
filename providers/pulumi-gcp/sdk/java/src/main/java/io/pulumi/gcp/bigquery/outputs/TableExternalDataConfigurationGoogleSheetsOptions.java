@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +38,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
      * Information required to partition based on ranges.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<String> getRange() {
         return Optional.ofNullable(this.range);
     }
@@ -47,7 +47,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
      * that BigQuery will skip when reading the data. At least one of `range` or
      * `skip_leading_rows` must be set.
      * 
-     */
+    */
     public Optional<Integer> getSkipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }
@@ -83,7 +83,6 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
-
         public TableExternalDataConfigurationGoogleSheetsOptions build() {
             return new TableExternalDataConfigurationGoogleSheetsOptions(range, skipLeadingRows);
         }

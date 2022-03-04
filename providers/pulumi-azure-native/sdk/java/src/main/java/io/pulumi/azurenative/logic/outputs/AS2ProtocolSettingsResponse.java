@@ -10,7 +10,7 @@ import io.pulumi.azurenative.logic.outputs.AS2MdnSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.AS2MessageConnectionSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.AS2SecuritySettingsResponse;
 import io.pulumi.azurenative.logic.outputs.AS2ValidationSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -72,49 +72,49 @@ public final class AS2ProtocolSettingsResponse {
     /**
      * The acknowledgement connection settings.
      * 
-     */
+    */
     public AS2AcknowledgementConnectionSettingsResponse getAcknowledgementConnectionSettings() {
         return this.acknowledgementConnectionSettings;
     }
     /**
      * The envelope settings.
      * 
-     */
+    */
     public AS2EnvelopeSettingsResponse getEnvelopeSettings() {
         return this.envelopeSettings;
     }
     /**
      * The error settings.
      * 
-     */
+    */
     public AS2ErrorSettingsResponse getErrorSettings() {
         return this.errorSettings;
     }
     /**
      * The MDN settings.
      * 
-     */
+    */
     public AS2MdnSettingsResponse getMdnSettings() {
         return this.mdnSettings;
     }
     /**
      * The message connection settings.
      * 
-     */
+    */
     public AS2MessageConnectionSettingsResponse getMessageConnectionSettings() {
         return this.messageConnectionSettings;
     }
     /**
      * The security settings.
      * 
-     */
+    */
     public AS2SecuritySettingsResponse getSecuritySettings() {
         return this.securitySettings;
     }
     /**
      * The validation settings.
      * 
-     */
+    */
     public AS2ValidationSettingsResponse getValidationSettings() {
         return this.validationSettings;
     }
@@ -185,7 +185,6 @@ public final class AS2ProtocolSettingsResponse {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public AS2ProtocolSettingsResponse build() {
             return new AS2ProtocolSettingsResponse(acknowledgementConnectionSettings, envelopeSettings, errorSettings, mdnSettings, messageConnectionSettings, securitySettings, validationSettings);
         }

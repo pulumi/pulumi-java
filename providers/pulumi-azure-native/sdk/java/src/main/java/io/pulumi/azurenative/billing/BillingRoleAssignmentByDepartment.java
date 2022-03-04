@@ -8,8 +8,8 @@ import io.pulumi.azurenative.billing.BillingRoleAssignmentByDepartmentArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -200,6 +200,37 @@ public class BillingRoleAssignmentByDepartment extends io.pulumi.resources.Custo
         return this.userEmailAddress;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BillingRoleAssignmentByDepartmentArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.billing.BillingRoleAssignmentByDepartmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.billing.BillingRoleAssignmentByDepartmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public BillingRoleAssignmentByDepartment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BillingRoleAssignmentByDepartment(String name) {
+        this(name, BillingRoleAssignmentByDepartmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BillingRoleAssignmentByDepartment(String name, BillingRoleAssignmentByDepartmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

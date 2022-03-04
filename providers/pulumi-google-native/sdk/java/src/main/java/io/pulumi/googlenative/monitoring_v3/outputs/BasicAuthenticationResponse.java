@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class BasicAuthenticationResponse {
     /**
      * The password to use when authenticating with the HTTP server.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The username to use when authenticating with the HTTP server.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -74,7 +74,6 @@ public final class BasicAuthenticationResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public BasicAuthenticationResponse build() {
             return new BasicAuthenticationResponse(password, username);
         }

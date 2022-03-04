@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DataSourceSslProperties {
     /**
      * <p>A Boolean option to control whether SSL should be disabled.</p>
      * 
-     */
+    */
     public Optional<Boolean> getDisableSsl() {
         return Optional.ofNullable(this.disableSsl);
     }
@@ -54,7 +54,6 @@ public final class DataSourceSslProperties {
             this.disableSsl = disableSsl;
             return this;
         }
-
         public DataSourceSslProperties build() {
             return new DataSourceSslProperties(disableSsl);
         }

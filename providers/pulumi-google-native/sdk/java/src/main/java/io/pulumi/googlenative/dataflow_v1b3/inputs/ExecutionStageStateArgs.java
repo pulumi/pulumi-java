@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageStateExecutionStageState;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="currentStateTime")
-    private final @Nullable Input<String> currentStateTime;
+      private final @Nullable Input<String> currentStateTime;
 
     public Input<String> getCurrentStateTime() {
         return this.currentStateTime == null ? Input.empty() : this.currentStateTime;
@@ -35,7 +35,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="executionStageName")
-    private final @Nullable Input<String> executionStageName;
+      private final @Nullable Input<String> executionStageName;
 
     public Input<String> getExecutionStageName() {
         return this.executionStageName == null ? Input.empty() : this.executionStageName;
@@ -46,7 +46,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="executionStageState")
-    private final @Nullable Input<ExecutionStageStateExecutionStageState> executionStageState;
+      private final @Nullable Input<ExecutionStageStateExecutionStageState> executionStageState;
 
     public Input<ExecutionStageStateExecutionStageState> getExecutionStageState() {
         return this.executionStageState == null ? Input.empty() : this.executionStageState;
@@ -120,7 +120,6 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
             this.executionStageState = Input.ofNullable(executionStageState);
             return this;
         }
-
         public ExecutionStageStateArgs build() {
             return new ExecutionStageStateArgs(currentStateTime, executionStageName, executionStageState);
         }

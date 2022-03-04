@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1.inputs.ContactResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="adminContact", required=true)
-    private final ContactResponse adminContact;
+      private final ContactResponse adminContact;
 
     public ContactResponse getAdminContact() {
         return this.adminContact;
@@ -33,7 +33,7 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="privacy", required=true)
-    private final String privacy;
+      private final String privacy;
 
     public String getPrivacy() {
         return this.privacy;
@@ -44,7 +44,7 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="registrantContact", required=true)
-    private final ContactResponse registrantContact;
+      private final ContactResponse registrantContact;
 
     public ContactResponse getRegistrantContact() {
         return this.registrantContact;
@@ -55,7 +55,7 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="technicalContact", required=true)
-    private final ContactResponse technicalContact;
+      private final ContactResponse technicalContact;
 
     public ContactResponse getTechnicalContact() {
         return this.technicalContact;
@@ -124,7 +124,6 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
             this.technicalContact = Objects.requireNonNull(technicalContact);
             return this;
         }
-
         public ContactSettingsResponse build() {
             return new ContactSettingsResponse(adminContact, privacy, registrantContact, technicalContact);
         }

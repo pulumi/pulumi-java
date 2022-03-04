@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetGcpUserAccessBindingArgs extends io.pulumi.resources.Invok
     public static final GetGcpUserAccessBindingArgs Empty = new GetGcpUserAccessBindingArgs();
 
     @InputImport(name="gcpUserAccessBindingId", required=true)
-    private final String gcpUserAccessBindingId;
+      private final String gcpUserAccessBindingId;
 
     public String getGcpUserAccessBindingId() {
         return this.gcpUserAccessBindingId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -69,7 +69,6 @@ public final class GetGcpUserAccessBindingArgs extends io.pulumi.resources.Invok
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetGcpUserAccessBindingArgs build() {
             return new GetGcpUserAccessBindingArgs(gcpUserAccessBindingId, organizationId);
         }

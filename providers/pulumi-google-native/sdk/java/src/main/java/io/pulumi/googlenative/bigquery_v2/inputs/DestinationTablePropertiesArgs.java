@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+      private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -42,7 +42,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -53,7 +53,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -142,7 +142,6 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public DestinationTablePropertiesArgs build() {
             return new DestinationTablePropertiesArgs(description, expirationTime, friendlyName, labels);
         }

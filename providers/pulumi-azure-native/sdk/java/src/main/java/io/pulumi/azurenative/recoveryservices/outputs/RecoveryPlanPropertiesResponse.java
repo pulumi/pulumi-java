@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.CurrentScenarioDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanA2ADetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanGroupResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -135,112 +135,112 @@ public final class RecoveryPlanPropertiesResponse {
     /**
      * The list of allowed operations.
      * 
-     */
+    */
     public List<String> getAllowedOperations() {
         return this.allowedOperations == null ? List.of() : this.allowedOperations;
     }
     /**
      * The current scenario details.
      * 
-     */
+    */
     public Optional<CurrentScenarioDetailsResponse> getCurrentScenario() {
         return Optional.ofNullable(this.currentScenario);
     }
     /**
      * The recovery plan status.
      * 
-     */
+    */
     public Optional<String> getCurrentScenarioStatus() {
         return Optional.ofNullable(this.currentScenarioStatus);
     }
     /**
      * The recovery plan status description.
      * 
-     */
+    */
     public Optional<String> getCurrentScenarioStatusDescription() {
         return Optional.ofNullable(this.currentScenarioStatusDescription);
     }
     /**
      * The failover deployment model.
      * 
-     */
+    */
     public Optional<String> getFailoverDeploymentModel() {
         return Optional.ofNullable(this.failoverDeploymentModel);
     }
     /**
      * The friendly name.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The recovery plan groups.
      * 
-     */
+    */
     public List<RecoveryPlanGroupResponse> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * The start time of the last planned failover.
      * 
-     */
+    */
     public Optional<String> getLastPlannedFailoverTime() {
         return Optional.ofNullable(this.lastPlannedFailoverTime);
     }
     /**
      * The start time of the last test failover.
      * 
-     */
+    */
     public Optional<String> getLastTestFailoverTime() {
         return Optional.ofNullable(this.lastTestFailoverTime);
     }
     /**
      * The start time of the last unplanned failover.
      * 
-     */
+    */
     public Optional<String> getLastUnplannedFailoverTime() {
         return Optional.ofNullable(this.lastUnplannedFailoverTime);
     }
     /**
      * The primary fabric friendly name.
      * 
-     */
+    */
     public Optional<String> getPrimaryFabricFriendlyName() {
         return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
     /**
      * The primary fabric Id.
      * 
-     */
+    */
     public Optional<String> getPrimaryFabricId() {
         return Optional.ofNullable(this.primaryFabricId);
     }
     /**
      * The provider id and provider specific details.
      * 
-     */
+    */
     public List<RecoveryPlanA2ADetailsResponse> getProviderSpecificDetails() {
         return this.providerSpecificDetails;
     }
     /**
      * The recovery fabric friendly name.
      * 
-     */
+    */
     public Optional<String> getRecoveryFabricFriendlyName() {
         return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
     /**
      * The recovery fabric Id.
      * 
-     */
+    */
     public Optional<String> getRecoveryFabricId() {
         return Optional.ofNullable(this.recoveryFabricId);
     }
     /**
      * The list of replication providers.
      * 
-     */
+    */
     public List<String> getReplicationProviders() {
         return this.replicationProviders == null ? List.of() : this.replicationProviders;
     }
@@ -374,7 +374,6 @@ public final class RecoveryPlanPropertiesResponse {
             this.replicationProviders = replicationProviders;
             return this;
         }
-
         public RecoveryPlanPropertiesResponse build() {
             return new RecoveryPlanPropertiesResponse(allowedOperations, currentScenario, currentScenarioStatus, currentScenarioStatusDescription, failoverDeploymentModel, friendlyName, groups, lastPlannedFailoverTime, lastTestFailoverTime, lastUnplannedFailoverTime, primaryFabricFriendlyName, primaryFabricId, providerSpecificDetails, recoveryFabricFriendlyName, recoveryFabricId, replicationProviders);
         }

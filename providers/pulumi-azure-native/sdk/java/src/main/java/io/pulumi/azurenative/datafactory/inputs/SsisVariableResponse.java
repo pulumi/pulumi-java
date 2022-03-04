@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataType")
-    private final @Nullable String dataType;
+      private final @Nullable String dataType;
 
     public Optional<String> getDataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
@@ -36,7 +36,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -47,7 +47,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Double id;
+      private final @Nullable Double id;
 
     public Optional<Double> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -58,7 +58,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -69,7 +69,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sensitive")
-    private final @Nullable Boolean sensitive;
+      private final @Nullable Boolean sensitive;
 
     public Optional<Boolean> getSensitive() {
         return this.sensitive == null ? Optional.empty() : Optional.ofNullable(this.sensitive);
@@ -80,7 +80,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sensitiveValue")
-    private final @Nullable String sensitiveValue;
+      private final @Nullable String sensitiveValue;
 
     public Optional<String> getSensitiveValue() {
         return this.sensitiveValue == null ? Optional.empty() : Optional.ofNullable(this.sensitiveValue);
@@ -91,7 +91,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -190,7 +190,6 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public SsisVariableResponse build() {
             return new SsisVariableResponse(dataType, description, id, name, sensitive, sensitiveValue, value);
         }

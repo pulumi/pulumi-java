@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CxAgentSpeechToTextSettings {
     /**
      * Whether to use speech adaptation for speech recognition.
      * 
-     */
+    */
     public Optional<Boolean> getEnableSpeechAdaptation() {
         return Optional.ofNullable(this.enableSpeechAdaptation);
     }
@@ -54,7 +54,6 @@ public final class CxAgentSpeechToTextSettings {
             this.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
         }
-
         public CxAgentSpeechToTextSettings build() {
             return new CxAgentSpeechToTextSettings(enableSpeechAdaptation);
         }

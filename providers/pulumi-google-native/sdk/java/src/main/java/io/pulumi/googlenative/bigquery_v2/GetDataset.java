@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataset {
-/**
- * Returns the dataset specified by datasetID.
+    private GetDataset() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatasetArgs.Builder a);
+    }
+    private static GetDatasetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatasetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the dataset specified by datasetID.
  * 
- */
+     */
+    public static CompletableFuture<GetDatasetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the dataset specified by datasetID.
+     * 
+     */
     public static CompletableFuture<GetDatasetResult> invokeAsync(GetDatasetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigquery/v2:getDataset", TypeShape.of(GetDatasetResult.class), args == null ? GetDatasetArgs.Empty : args, Utilities.withVersion(options));
     }

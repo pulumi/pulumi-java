@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -69,7 +69,7 @@ public final class ClusterClusterConfigSoftwareConfig {
      * latest version. For a list of valid versions see
      * [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
      * 
-     */
+    */
     public Optional<String> getImageVersion() {
         return Optional.ofNullable(this.imageVersion);
     }
@@ -88,7 +88,7 @@ public final class ClusterClusterConfigSoftwareConfig {
      * * ZEPPELIN
      * * ZOOKEEPER
      * 
-     */
+    */
     public List<String> getOptionalComponents() {
         return this.optionalComponents == null ? List.of() : this.optionalComponents;
     }
@@ -98,7 +98,7 @@ public final class ClusterClusterConfigSoftwareConfig {
      * a cluster. For a list of valid properties please see
      * [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
      * 
-     */
+    */
     public Map<String,String> getOverrideProperties() {
         return this.overrideProperties == null ? Map.of() : this.overrideProperties;
     }
@@ -151,7 +151,6 @@ public final class ClusterClusterConfigSoftwareConfig {
             this.properties = properties;
             return this;
         }
-
         public ClusterClusterConfigSoftwareConfig build() {
             return new ClusterClusterConfigSoftwareConfig(imageVersion, optionalComponents, overrideProperties, properties);
         }

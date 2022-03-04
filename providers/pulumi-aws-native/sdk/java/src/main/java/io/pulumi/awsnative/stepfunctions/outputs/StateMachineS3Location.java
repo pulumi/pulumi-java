@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.stepfunctions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class StateMachineS3Location {
             this.version = version;
             return this;
         }
-
         public StateMachineS3Location build() {
             return new StateMachineS3Location(bucket, key, version);
         }

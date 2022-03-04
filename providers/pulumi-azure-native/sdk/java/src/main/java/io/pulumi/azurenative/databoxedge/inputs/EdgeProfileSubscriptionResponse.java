@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.SubscriptionRegisteredFeaturesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,35 +25,35 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @InputImport(name="locationPlacementId")
-    private final @Nullable String locationPlacementId;
+      private final @Nullable String locationPlacementId;
 
     public Optional<String> getLocationPlacementId() {
         return this.locationPlacementId == null ? Optional.empty() : Optional.ofNullable(this.locationPlacementId);
     }
 
     @InputImport(name="quotaId")
-    private final @Nullable String quotaId;
+      private final @Nullable String quotaId;
 
     public Optional<String> getQuotaId() {
         return this.quotaId == null ? Optional.empty() : Optional.ofNullable(this.quotaId);
     }
 
     @InputImport(name="registeredFeatures")
-    private final @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures;
+      private final @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures;
 
     public List<SubscriptionRegisteredFeaturesResponse> getRegisteredFeatures() {
         return this.registeredFeatures == null ? List.of() : this.registeredFeatures;
     }
 
     @InputImport(name="registrationDate")
-    private final @Nullable String registrationDate;
+      private final @Nullable String registrationDate;
 
     public Optional<String> getRegistrationDate() {
         return this.registrationDate == null ? Optional.empty() : Optional.ofNullable(this.registrationDate);
@@ -64,35 +64,35 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="registrationId")
-    private final @Nullable String registrationId;
+      private final @Nullable String registrationId;
 
     public Optional<String> getRegistrationId() {
         return this.registrationId == null ? Optional.empty() : Optional.ofNullable(this.registrationId);
     }
 
     @InputImport(name="serializedDetails")
-    private final @Nullable String serializedDetails;
+      private final @Nullable String serializedDetails;
 
     public Optional<String> getSerializedDetails() {
         return this.serializedDetails == null ? Optional.empty() : Optional.ofNullable(this.serializedDetails);
     }
 
     @InputImport(name="state")
-    private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+      private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+      private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -221,7 +221,6 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
             this.tenantId = tenantId;
             return this;
         }
-
         public EdgeProfileSubscriptionResponse build() {
             return new EdgeProfileSubscriptionResponse(id, locationPlacementId, quotaId, registeredFeatures, registrationDate, registrationId, serializedDetails, state, subscriptionId, tenantId);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinationConfigLogDestinationType;
 import io.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinationConfigLogType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class LoggingConfigurationLogDestinationConfig {
     /**
      * A key-value pair to configure the logDestinations.
      * 
-     */
+    */
     public Object getLogDestination() {
         return this.logDestination;
     }
@@ -81,7 +81,6 @@ public final class LoggingConfigurationLogDestinationConfig {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public LoggingConfigurationLogDestinationConfig build() {
             return new LoggingConfigurationLogDestinationConfig(logDestination, logDestinationType, logType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="firewallRuleName", required=true)
-    private final String firewallRuleName;
+      private final String firewallRuleName;
 
     public String getFirewallRuleName() {
         return this.firewallRuleName;
@@ -39,7 +39,7 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetFirewallRuleArgs build() {
             return new GetFirewallRuleArgs(accountName, firewallRuleName, resourceGroupName);
         }

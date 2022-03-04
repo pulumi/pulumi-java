@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class GetSyncGroupResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Sync group status
      * 
-     */
+    */
     public String getSyncGroupStatus() {
         return this.syncGroupStatus;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Unique Id
      * 
-     */
+    */
     public String getUniqueId() {
         return this.uniqueId;
     }
@@ -137,7 +137,6 @@ public final class GetSyncGroupResult {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public GetSyncGroupResult build() {
             return new GetSyncGroupResult(id, name, syncGroupStatus, type, uniqueId);
         }

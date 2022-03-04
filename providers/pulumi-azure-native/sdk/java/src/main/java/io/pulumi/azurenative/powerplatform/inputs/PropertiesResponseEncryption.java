@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.inputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class PropertiesResponseEncryption extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyVault")
-    private final @Nullable KeyVaultPropertiesResponse keyVault;
+      private final @Nullable KeyVaultPropertiesResponse keyVault;
 
     public Optional<KeyVaultPropertiesResponse> getKeyVault() {
         return this.keyVault == null ? Optional.empty() : Optional.ofNullable(this.keyVault);
@@ -35,7 +35,7 @@ public final class PropertiesResponseEncryption extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -84,7 +84,6 @@ public final class PropertiesResponseEncryption extends io.pulumi.resources.Invo
             this.state = state;
             return this;
         }
-
         public PropertiesResponseEncryption build() {
             return new PropertiesResponseEncryption(keyVault, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.redis.outputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime;
 import java.lang.String;
 import java.util.Objects;
@@ -66,7 +66,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      * - SUNDAY: Sunday
      *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-     */
+    */
     public String getDay() {
         return this.day;
     }
@@ -77,7 +77,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      * A duration in seconds with up to nine fractional digits,
      * terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getDuration() {
         return Optional.ofNullable(this.duration);
     }
@@ -87,7 +87,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-     */
+    */
     public InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime getStartTime() {
         return this.startTime;
     }
@@ -130,7 +130,6 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public InstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
             return new InstanceMaintenancePolicyWeeklyMaintenanceWindow(day, duration, startTime);
         }

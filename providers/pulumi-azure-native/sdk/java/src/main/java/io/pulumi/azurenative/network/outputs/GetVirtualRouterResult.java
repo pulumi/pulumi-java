@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -107,84 +107,84 @@ public final class GetVirtualRouterResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The Gateway on which VirtualRouter is hosted.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getHostedGateway() {
         return Optional.ofNullable(this.hostedGateway);
     }
     /**
      * The Subnet on which VirtualRouter is hosted.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getHostedSubnet() {
         return Optional.ofNullable(this.hostedSubnet);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of references to VirtualRouterPeerings.
      * 
-     */
+    */
     public List<SubResourceResponse> getPeerings() {
         return this.peerings;
     }
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * VirtualRouter ASN.
      * 
-     */
+    */
     public Optional<Double> getVirtualRouterAsn() {
         return Optional.ofNullable(this.virtualRouterAsn);
     }
     /**
      * VirtualRouter IPs.
      * 
-     */
+    */
     public List<String> getVirtualRouterIps() {
         return this.virtualRouterIps == null ? List.of() : this.virtualRouterIps;
     }
@@ -290,7 +290,6 @@ public final class GetVirtualRouterResult {
             this.virtualRouterIps = virtualRouterIps;
             return this;
         }
-
         public GetVirtualRouterResult build() {
             return new GetVirtualRouterResult(etag, hostedGateway, hostedSubnet, id, location, name, peerings, provisioningState, tags, type, virtualRouterAsn, virtualRouterIps);
         }

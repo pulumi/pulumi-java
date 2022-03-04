@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.PolicyAlternativeNameServerConfigResponse;
 import io.pulumi.googlenative.dns_v1.outputs.PolicyNetworkResponse;
 import java.lang.Boolean;
@@ -66,28 +66,28 @@ public final class GetPolicyResult {
     /**
      * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
      * 
-     */
+    */
     public PolicyAlternativeNameServerConfigResponse getAlternativeNameServerConfig() {
         return this.alternativeNameServerConfig;
     }
     /**
      * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
      * 
-     */
+    */
     public Boolean getEnableInboundForwarding() {
         return this.enableInboundForwarding;
     }
     /**
      * Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
      * 
-     */
+    */
     public Boolean getEnableLogging() {
         return this.enableLogging;
     }
@@ -97,14 +97,14 @@ public final class GetPolicyResult {
     /**
      * User-assigned name for this policy.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of network names specifying networks to which this policy is applied.
      * 
-     */
+    */
     public List<PolicyNetworkResponse> getNetworks() {
         return this.networks;
     }
@@ -175,7 +175,6 @@ public final class GetPolicyResult {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(alternativeNameServerConfig, description, enableInboundForwarding, enableLogging, kind, name, networks);
         }

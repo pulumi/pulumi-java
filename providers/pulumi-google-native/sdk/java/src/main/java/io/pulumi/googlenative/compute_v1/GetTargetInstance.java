@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetInstance {
-/**
- * Returns the specified TargetInstance resource. Gets a list of available target instances by making a list() request.
+    private GetTargetInstance() {}
+    public interface BuilderApplicator {
+        public void apply(GetTargetInstanceArgs.Builder a);
+    }
+    private static GetTargetInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTargetInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified TargetInstance resource. Gets a list of available target instances by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetTargetInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified TargetInstance resource. Gets a list of available target instances by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetTargetInstanceResult> invokeAsync(GetTargetInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetInstance", TypeShape.of(GetTargetInstanceResult.class), args == null ? GetTargetInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfig;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfig;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class PatchDeploymentPatchConfigPreStep {
      * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigPreStepLinuxExecStepConfig> getLinuxExecStepConfig() {
         return Optional.ofNullable(this.linuxExecStepConfig);
     }
@@ -45,7 +45,7 @@ public final class PatchDeploymentPatchConfigPreStep {
      * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigPreStepWindowsExecStepConfig> getWindowsExecStepConfig() {
         return Optional.ofNullable(this.windowsExecStepConfig);
     }
@@ -81,7 +81,6 @@ public final class PatchDeploymentPatchConfigPreStep {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
-
         public PatchDeploymentPatchConfigPreStep build() {
             return new PatchDeploymentPatchConfigPreStep(linuxExecStepConfig, windowsExecStepConfig);
         }

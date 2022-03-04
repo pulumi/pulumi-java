@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.budgets.inputs;
 
 import io.pulumi.awsnative.budgets.enums.BudgetsActionActionThresholdType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class BudgetsActionActionThreshold extends io.pulumi.resources.Invo
     public static final BudgetsActionActionThreshold Empty = new BudgetsActionActionThreshold();
 
     @InputImport(name="type", required=true)
-    private final BudgetsActionActionThresholdType type;
+      private final BudgetsActionActionThresholdType type;
 
     public BudgetsActionActionThresholdType getType() {
         return this.type;
     }
 
     @InputImport(name="value", required=true)
-    private final Double value;
+      private final Double value;
 
     public Double getValue() {
         return this.value;
@@ -70,7 +70,6 @@ public final class BudgetsActionActionThreshold extends io.pulumi.resources.Invo
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BudgetsActionActionThreshold build() {
             return new BudgetsActionActionThreshold(type, value);
         }

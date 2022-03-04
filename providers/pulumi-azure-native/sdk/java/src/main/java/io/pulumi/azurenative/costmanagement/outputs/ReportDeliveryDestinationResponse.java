@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ReportDeliveryDestinationResponse {
     /**
      * The name of the container where reports will be uploaded.
      * 
-     */
+    */
     public String getContainer() {
         return this.container;
     }
     /**
      * The resource id of the storage account where reports will be delivered.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * The name of the directory where reports will be uploaded.
      * 
-     */
+    */
     public Optional<String> getRootFolderPath() {
         return Optional.ofNullable(this.rootFolderPath);
     }
@@ -97,7 +97,6 @@ public final class ReportDeliveryDestinationResponse {
             this.rootFolderPath = rootFolderPath;
             return this;
         }
-
         public ReportDeliveryDestinationResponse build() {
             return new ReportDeliveryDestinationResponse(container, resourceId, rootFolderPath);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class NetworkRoutingConfigResponse {
     /**
      * The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.
      * 
-     */
+    */
     public String getRoutingMode() {
         return this.routingMode;
     }
@@ -52,7 +52,6 @@ public final class NetworkRoutingConfigResponse {
             this.routingMode = Objects.requireNonNull(routingMode);
             return this;
         }
-
         public NetworkRoutingConfigResponse build() {
             return new NetworkRoutingConfigResponse(routingMode);
         }

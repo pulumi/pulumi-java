@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class HealthAlertActionResponse {
     /**
      * the id of the action group to use.
      * 
-     */
+    */
     public Optional<String> getActionGroupId() {
         return Optional.ofNullable(this.actionGroupId);
     }
     /**
      * The properties of a webhook object.
      * 
-     */
+    */
     public Map<String,String> getWebHookProperties() {
         return this.webHookProperties == null ? Map.of() : this.webHookProperties;
     }
@@ -77,7 +77,6 @@ public final class HealthAlertActionResponse {
             this.webHookProperties = webHookProperties;
             return this;
         }
-
         public HealthAlertActionResponse build() {
             return new HealthAlertActionResponse(actionGroupId, webHookProperties);
         }

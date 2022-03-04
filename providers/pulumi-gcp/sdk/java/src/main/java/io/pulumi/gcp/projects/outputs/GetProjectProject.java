@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -61,7 +61,7 @@ public final class GetProjectProject {
     /**
      * The project id of the project.
      * 
-     */
+    */
     public String getProjectId() {
         return this.projectId;
     }
@@ -132,7 +132,6 @@ public final class GetProjectProject {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public GetProjectProject build() {
             return new GetProjectProject(createTime, labels, lifecycleState, name, number, parent, projectId);
         }

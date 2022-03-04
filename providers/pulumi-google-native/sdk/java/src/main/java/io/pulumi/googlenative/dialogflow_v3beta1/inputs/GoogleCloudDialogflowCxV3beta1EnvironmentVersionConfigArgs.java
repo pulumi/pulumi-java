@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs ex
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs ex
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs build() {
             return new GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs(version);
         }

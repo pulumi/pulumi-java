@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class HttpsTriggerResponse {
     /**
      * The security level for the function.
      * 
-     */
+    */
     public String getSecurityLevel() {
         return this.securityLevel;
     }
     /**
      * The deployed url for the function.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -74,7 +74,6 @@ public final class HttpsTriggerResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public HttpsTriggerResponse build() {
             return new HttpsTriggerResponse(securityLevel, url);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class GetHubResult {
     /**
      * Time when the Hub was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Short description of the hub resource.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * User-defined labels.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Immutable. The name of a Hub resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current lifecycle state of this Hub.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Google-generated UUID for this resource. This is unique across all Hub resources. If a Hub resource is deleted and another with the same name is created, it gets a different unique_id.
      * 
-     */
+    */
     public String getUniqueId() {
         return this.uniqueId;
     }
     /**
      * Time when the Hub was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -180,7 +180,6 @@ public final class GetHubResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetHubResult build() {
             return new GetHubResult(createTime, description, labels, name, state, uniqueId, updateTime);
         }

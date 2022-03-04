@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,21 +42,21 @@ public final class DnsSettingsResponse {
     /**
      * Enable DNS Proxy on Firewalls attached to the Firewall Policy.
      * 
-     */
+    */
     public Optional<Boolean> getEnableProxy() {
         return Optional.ofNullable(this.enableProxy);
     }
     /**
      * FQDNs in Network Rules are supported when set to true.
      * 
-     */
+    */
     public Optional<Boolean> getRequireProxyForNetworkRules() {
         return Optional.ofNullable(this.requireProxyForNetworkRules);
     }
     /**
      * List of Custom DNS Servers.
      * 
-     */
+    */
     public List<String> getServers() {
         return this.servers == null ? List.of() : this.servers;
     }
@@ -99,7 +99,6 @@ public final class DnsSettingsResponse {
             this.servers = servers;
             return this;
         }
-
         public DnsSettingsResponse build() {
             return new DnsSettingsResponse(enableProxy, requireProxyForNetworkRules, servers);
         }

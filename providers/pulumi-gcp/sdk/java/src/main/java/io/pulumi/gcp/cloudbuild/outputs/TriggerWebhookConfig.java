@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,7 +37,7 @@ public final class TriggerWebhookConfig {
      * Secrets to decrypt using Cloud Key Management Service.
      * Structure is documented below.
      * 
-     */
+    */
     public String getSecret() {
         return this.secret;
     }
@@ -46,7 +46,7 @@ public final class TriggerWebhookConfig {
      * Potential issues with the underlying Pub/Sub subscription configuration.
      * Only populated on get requests.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -82,7 +82,6 @@ public final class TriggerWebhookConfig {
             this.state = state;
             return this;
         }
-
         public TriggerWebhookConfig build() {
             return new TriggerWebhookConfig(secret, state);
         }

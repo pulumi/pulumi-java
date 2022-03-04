@@ -6,7 +6,7 @@ package io.pulumi.awsnative.pinpoint;
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateLayout;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateInAppMessageContentArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,42 +19,42 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
     public static final InAppTemplateArgs Empty = new InAppTemplateArgs();
 
     @InputImport(name="content")
-    private final @Nullable Input<List<InAppTemplateInAppMessageContentArgs>> content;
+      private final @Nullable Input<List<InAppTemplateInAppMessageContentArgs>> content;
 
     public Input<List<InAppTemplateInAppMessageContentArgs>> getContent() {
         return this.content == null ? Input.empty() : this.content;
     }
 
     @InputImport(name="customConfig")
-    private final @Nullable Input<Object> customConfig;
+      private final @Nullable Input<Object> customConfig;
 
     public Input<Object> getCustomConfig() {
         return this.customConfig == null ? Input.empty() : this.customConfig;
     }
 
     @InputImport(name="layout")
-    private final @Nullable Input<InAppTemplateLayout> layout;
+      private final @Nullable Input<InAppTemplateLayout> layout;
 
     public Input<InAppTemplateLayout> getLayout() {
         return this.layout == null ? Input.empty() : this.layout;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<Object> tags;
+      private final @Nullable Input<Object> tags;
 
     public Input<Object> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="templateDescription")
-    private final @Nullable Input<String> templateDescription;
+      private final @Nullable Input<String> templateDescription;
 
     public Input<String> getTemplateDescription() {
         return this.templateDescription == null ? Input.empty() : this.templateDescription;
     }
 
     @InputImport(name="templateName", required=true)
-    private final Input<String> templateName;
+      private final Input<String> templateName;
 
     public Input<String> getTemplateName() {
         return this.templateName;
@@ -173,7 +173,6 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.templateName = Input.of(Objects.requireNonNull(templateName));
             return this;
         }
-
         public InAppTemplateArgs build() {
             return new InAppTemplateArgs(content, customConfig, layout, tags, templateDescription, templateName);
         }

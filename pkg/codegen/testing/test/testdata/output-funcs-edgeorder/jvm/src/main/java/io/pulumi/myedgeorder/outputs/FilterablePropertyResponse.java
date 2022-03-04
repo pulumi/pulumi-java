@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class FilterablePropertyResponse {
     /**
      * Values to be filtered.
      * 
-     */
+    */
     public List<String> getSupportedValues() {
         return this.supportedValues;
     }
     /**
      * Type of product filter.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -75,7 +75,6 @@ public final class FilterablePropertyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FilterablePropertyResponse build() {
             return new FilterablePropertyResponse(supportedValues, type);
         }

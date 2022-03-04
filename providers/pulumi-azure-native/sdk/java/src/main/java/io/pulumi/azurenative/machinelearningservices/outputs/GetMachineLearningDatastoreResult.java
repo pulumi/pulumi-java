@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 import io.pulumi.azurenative.machinelearningservices.outputs.DatastoreResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.IdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -79,56 +79,56 @@ public final class GetMachineLearningDatastoreResult {
     /**
      * Specifies the resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the resource.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Datastore properties
      * 
-     */
+    */
     public DatastoreResponse getProperties() {
         return this.properties;
     }
     /**
      * The sku of the workspace.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -206,7 +206,6 @@ public final class GetMachineLearningDatastoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMachineLearningDatastoreResult build() {
             return new GetMachineLearningDatastoreResult(id, identity, location, name, properties, sku, tags, type);
         }

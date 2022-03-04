@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetProfileArgs;
 import io.pulumi.azurenative.network.outputs.GetProfileResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProfile {
-/**
- * Class representing a Traffic Manager profile.
+    private GetProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetProfileArgs.Builder a);
+    }
+    private static GetProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing a Traffic Manager profile.
  * API Version: 2018-08-01.
  * 
- *
- * Class representing a Traffic Manager profile.
+     *
+     * Class representing a Traffic Manager profile.
  * 
- */
+     */
+    public static CompletableFuture<GetProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing a Traffic Manager profile.
+     * API Version: 2018-08-01.
+     * 
+     *
+         * Class representing a Traffic Manager profile.
+     * 
+     */
     public static CompletableFuture<GetProfileResult> invokeAsync(GetProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getProfile", TypeShape.of(GetProfileResult.class), args == null ? GetProfileArgs.Empty : args, Utilities.withVersion(options));
     }

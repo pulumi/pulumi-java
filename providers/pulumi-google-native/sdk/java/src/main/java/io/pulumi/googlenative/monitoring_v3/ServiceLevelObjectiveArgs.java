@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.ServiceLevelObjectiveCalendarPeriod;
 import io.pulumi.googlenative.monitoring_v3.inputs.ServiceLevelIndicatorArgs;
 import java.lang.Double;
@@ -23,7 +23,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="calendarPeriod")
-    private final @Nullable Input<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
+      private final @Nullable Input<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
 
     public Input<ServiceLevelObjectiveCalendarPeriod> getCalendarPeriod() {
         return this.calendarPeriod == null ? Input.empty() : this.calendarPeriod;
@@ -34,7 +34,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -45,7 +45,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="goal")
-    private final @Nullable Input<Double> goal;
+      private final @Nullable Input<Double> goal;
 
     public Input<Double> getGoal() {
         return this.goal == null ? Input.empty() : this.goal;
@@ -56,7 +56,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,14 +67,14 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rollingPeriod")
-    private final @Nullable Input<String> rollingPeriod;
+      private final @Nullable Input<String> rollingPeriod;
 
     public Input<String> getRollingPeriod() {
         return this.rollingPeriod == null ? Input.empty() : this.rollingPeriod;
     }
 
     @InputImport(name="serviceId", required=true)
-    private final Input<String> serviceId;
+      private final Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId;
@@ -85,14 +85,14 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceLevelIndicator")
-    private final @Nullable Input<ServiceLevelIndicatorArgs> serviceLevelIndicator;
+      private final @Nullable Input<ServiceLevelIndicatorArgs> serviceLevelIndicator;
 
     public Input<ServiceLevelIndicatorArgs> getServiceLevelIndicator() {
         return this.serviceLevelIndicator == null ? Input.empty() : this.serviceLevelIndicator;
     }
 
     @InputImport(name="serviceLevelObjectiveId")
-    private final @Nullable Input<String> serviceLevelObjectiveId;
+      private final @Nullable Input<String> serviceLevelObjectiveId;
 
     public Input<String> getServiceLevelObjectiveId() {
         return this.serviceLevelObjectiveId == null ? Input.empty() : this.serviceLevelObjectiveId;
@@ -103,21 +103,21 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userLabels")
-    private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Input<Map<String,String>> userLabels;
 
     public Input<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Input.empty() : this.userLabels;
     }
 
     @InputImport(name="v3Id", required=true)
-    private final Input<String> v3Id;
+      private final Input<String> v3Id;
 
     public Input<String> getV3Id() {
         return this.v3Id;
     }
 
     @InputImport(name="v3Id1", required=true)
-    private final Input<String> v3Id1;
+      private final Input<String> v3Id1;
 
     public Input<String> getV3Id1() {
         return this.v3Id1;
@@ -311,7 +311,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
             this.v3Id1 = Input.of(Objects.requireNonNull(v3Id1));
             return this;
         }
-
         public ServiceLevelObjectiveArgs build() {
             return new ServiceLevelObjectiveArgs(calendarPeriod, displayName, goal, name, rollingPeriod, serviceId, serviceLevelIndicator, serviceLevelObjectiveId, userLabels, v3Id, v3Id1);
         }

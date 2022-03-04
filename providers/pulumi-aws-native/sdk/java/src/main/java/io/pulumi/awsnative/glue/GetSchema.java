@@ -6,17 +6,33 @@ package io.pulumi.awsnative.glue;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.glue.inputs.GetSchemaArgs;
 import io.pulumi.awsnative.glue.outputs.GetSchemaResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchema {
-/**
- * This resource represents a schema of Glue Schema Registry.
+    private GetSchema() {}
+    public interface BuilderApplicator {
+        public void apply(GetSchemaArgs.Builder a);
+    }
+    private static GetSchemaArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSchemaArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This resource represents a schema of Glue Schema Registry.
  * 
- */
+     */
+    public static CompletableFuture<GetSchemaResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This resource represents a schema of Glue Schema Registry.
+     * 
+     */
     public static CompletableFuture<GetSchemaResult> invokeAsync(GetSchemaArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:glue:getSchema", TypeShape.of(GetSchemaResult.class), args == null ? GetSchemaArgs.Empty : args, Utilities.withVersion(options));
     }

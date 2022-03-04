@@ -6,21 +6,41 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.migrate.inputs.GetAssessmentArgs;
 import io.pulumi.azurenative.migrate.outputs.GetAssessmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssessment {
-/**
- * An assessment created for a group in the Migration project.
+    private GetAssessment() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssessmentArgs.Builder a);
+    }
+    private static GetAssessmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssessmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An assessment created for a group in the Migration project.
  * API Version: 2019-10-01.
  * 
- *
- * An assessment created for a group in the Migration project.
+     *
+     * An assessment created for a group in the Migration project.
  * 
- */
+     */
+    public static CompletableFuture<GetAssessmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An assessment created for a group in the Migration project.
+     * API Version: 2019-10-01.
+     * 
+     *
+         * An assessment created for a group in the Migration project.
+     * 
+     */
     public static CompletableFuture<GetAssessmentResult> invokeAsync(GetAssessmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getAssessment", TypeShape.of(GetAssessmentResult.class), args == null ? GetAssessmentArgs.Empty : args, Utilities.withVersion(options));
     }

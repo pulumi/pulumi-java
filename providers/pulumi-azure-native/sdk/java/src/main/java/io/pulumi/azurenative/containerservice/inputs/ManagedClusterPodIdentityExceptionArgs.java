@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -41,7 +41,7 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="podLabels", required=true)
-    private final Input<Map<String,String>> podLabels;
+      private final Input<Map<String,String>> podLabels;
 
     public Input<Map<String,String>> getPodLabels() {
         return this.podLabels;
@@ -115,7 +115,6 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
             this.podLabels = Input.of(Objects.requireNonNull(podLabels));
             return this;
         }
-
         public ManagedClusterPodIdentityExceptionArgs build() {
             return new ManagedClusterPodIdentityExceptionArgs(name, namespace, podLabels);
         }

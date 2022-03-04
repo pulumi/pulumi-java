@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.CapabilityResponse;
 import io.pulumi.azurenative.web.outputs.SkuCapacityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -79,56 +79,56 @@ public final class SkuDescriptionResponse {
     /**
      * Capabilities of the SKU, e.g., is traffic manager enabled?
      * 
-     */
+    */
     public List<CapabilityResponse> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
     /**
      * Current number of instances assigned to the resource.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Family code of the resource SKU.
      * 
-     */
+    */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * Locations of the SKU.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * Name of the resource SKU.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Size specifier of the resource SKU.
      * 
-     */
+    */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * Min, max, and default scale values of the SKU.
      * 
-     */
+    */
     public Optional<SkuCapacityResponse> getSkuCapacity() {
         return Optional.ofNullable(this.skuCapacity);
     }
     /**
      * Service tier of the resource SKU.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -206,7 +206,6 @@ public final class SkuDescriptionResponse {
             this.tier = tier;
             return this;
         }
-
         public SkuDescriptionResponse build() {
             return new SkuDescriptionResponse(capabilities, capacity, family, locations, name, size, skuCapacity, tier);
         }

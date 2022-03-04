@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateMySqlAzureDbForMySqlSyn
 import io.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandPropertiesResponse;
 import io.pulumi.azurenative.datamigration.inputs.ODataErrorResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
      * 
      */
     @InputImport(name="commands", required=true)
-    private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
+      private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
@@ -46,7 +46,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
      * 
      */
     @InputImport(name="errors", required=true)
-    private final List<ODataErrorResponse> errors;
+      private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
@@ -57,7 +57,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
      * 
      */
     @InputImport(name="input")
-    private final @Nullable MigrateMySqlAzureDbForMySqlSyncTaskInputResponse input;
+      private final @Nullable MigrateMySqlAzureDbForMySqlSyncTaskInputResponse input;
 
     public Optional<MigrateMySqlAzureDbForMySqlSyncTaskInputResponse> getInput() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
@@ -68,7 +68,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
      * 
      */
     @InputImport(name="output", required=true)
-    private final List<Object> output;
+      private final List<Object> output;
 
     public List<Object> getOutput() {
         return this.output;
@@ -79,7 +79,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -91,7 +91,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final String taskType;
+      private final String taskType;
 
     public String getTaskType() {
         return this.taskType;
@@ -180,7 +180,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class DataMaskingEntityResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+      private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -30,7 +30,7 @@ public final class DataMaskingEntityResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -79,7 +79,6 @@ public final class DataMaskingEntityResponse extends io.pulumi.resources.InvokeA
             this.value = value;
             return this;
         }
-
         public DataMaskingEntityResponse build() {
             return new DataMaskingEntityResponse(mode, value);
         }

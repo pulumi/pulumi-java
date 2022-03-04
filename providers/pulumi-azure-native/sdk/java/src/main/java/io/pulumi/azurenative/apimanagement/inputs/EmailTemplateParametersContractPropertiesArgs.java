@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EmailTemplateParametersContractPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class EmailTemplateParametersContractPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class EmailTemplateParametersContractPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -119,7 +119,6 @@ public final class EmailTemplateParametersContractPropertiesArgs extends io.pulu
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public EmailTemplateParametersContractPropertiesArgs build() {
             return new EmailTemplateParametersContractPropertiesArgs(description, name, title);
         }

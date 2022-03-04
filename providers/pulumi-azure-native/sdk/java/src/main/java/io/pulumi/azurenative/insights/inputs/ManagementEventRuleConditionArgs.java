@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="aggregation")
-    private final @Nullable Input<ManagementEventAggregationConditionArgs> aggregation;
+      private final @Nullable Input<ManagementEventAggregationConditionArgs> aggregation;
 
     public Input<ManagementEventAggregationConditionArgs> getAggregation() {
         return this.aggregation == null ? Input.empty() : this.aggregation;
@@ -38,7 +38,7 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataSource")
-    private final @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+      private final @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
     public Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
         return this.dataSource == null ? Input.empty() : this.dataSource;
@@ -50,7 +50,7 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -124,7 +124,6 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public ManagementEventRuleConditionArgs build() {
             return new ManagementEventRuleConditionArgs(aggregation, dataSource, odataType);
         }

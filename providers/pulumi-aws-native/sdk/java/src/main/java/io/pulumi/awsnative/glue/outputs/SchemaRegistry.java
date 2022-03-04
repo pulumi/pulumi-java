@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.glue.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class SchemaRegistry {
     /**
      * Amazon Resource Name for the Registry.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Name of the registry in which the schema will be created.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -76,7 +76,6 @@ public final class SchemaRegistry {
             this.name = name;
             return this;
         }
-
         public SchemaRegistry build() {
             return new SchemaRegistry(arn, name);
         }

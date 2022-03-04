@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -83,63 +83,63 @@ public final class GetCertificateResult {
     /**
      * Gets the creation time.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets the expiry time of the certificate.
      * 
-     */
+    */
     public String getExpiryTime() {
         return this.expiryTime;
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets the is exportable flag of the certificate.
      * 
-     */
+    */
     public Boolean getIsExportable() {
         return this.isExportable;
     }
     /**
      * Gets the last modified time.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the thumbprint of the certificate.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -224,7 +224,6 @@ public final class GetCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(creationTime, description, expiryTime, id, isExportable, lastModifiedTime, name, thumbprint, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FeatureResourceStateResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -59,7 +59,6 @@ public final class FeatureResourceStateResponse extends io.pulumi.resources.Invo
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public FeatureResourceStateResponse build() {
             return new FeatureResourceStateResponse(state);
         }

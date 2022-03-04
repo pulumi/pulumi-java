@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class OneTimeScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="executeTime", required=true)
-    private final Input<String> executeTime;
+      private final Input<String> executeTime;
 
     public Input<String> getExecuteTime() {
         return this.executeTime;
@@ -65,7 +65,6 @@ public final class OneTimeScheduleArgs extends io.pulumi.resources.ResourceArgs 
             this.executeTime = Input.of(Objects.requireNonNull(executeTime));
             return this;
         }
-
         public OneTimeScheduleArgs build() {
             return new OneTimeScheduleArgs(executeTime);
         }

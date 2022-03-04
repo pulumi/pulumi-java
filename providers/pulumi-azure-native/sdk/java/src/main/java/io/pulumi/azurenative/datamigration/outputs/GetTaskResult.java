@@ -24,7 +24,7 @@ import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlMITaskProp
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -76,35 +76,35 @@ public final class GetTaskResult {
     /**
      * HTTP strong entity tag value. This is ignored if submitted.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Custom task properties
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class GetTaskResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTaskResult build() {
             return new GetTaskResult(etag, id, name, properties, type);
         }

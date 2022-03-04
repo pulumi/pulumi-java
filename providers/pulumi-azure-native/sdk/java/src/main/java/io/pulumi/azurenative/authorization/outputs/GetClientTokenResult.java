@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GetClientTokenResult {
     /**
      * OAuth token for Azure Management API and SDK authentication.
      * 
-     */
+    */
     public String getToken() {
         return this.token;
     }
@@ -52,7 +52,6 @@ public final class GetClientTokenResult {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public GetClientTokenResult build() {
             return new GetClientTokenResult(token);
         }

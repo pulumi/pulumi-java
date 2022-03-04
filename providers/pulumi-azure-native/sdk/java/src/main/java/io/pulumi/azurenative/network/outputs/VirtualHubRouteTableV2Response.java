@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteV2Response;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class VirtualHubRouteTableV2Response {
     /**
      * List of all connections attached to this route table v2.
      * 
-     */
+    */
     public List<String> getAttachedConnections() {
         return this.attachedConnections == null ? List.of() : this.attachedConnections;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the virtual hub route table v2 resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * List of all routes.
      * 
-     */
+    */
     public List<VirtualHubRouteV2Response> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
     }
@@ -162,7 +162,6 @@ public final class VirtualHubRouteTableV2Response {
             this.routes = routes;
             return this;
         }
-
         public VirtualHubRouteTableV2Response build() {
             return new VirtualHubRouteTableV2Response(attachedConnections, etag, id, name, provisioningState, routes);
         }

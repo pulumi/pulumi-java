@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -48,28 +48,28 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse {
     /**
      * Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
      * 
-     */
+    */
     public Boolean getEnableTextToSpeech() {
         return this.enableTextToSpeech;
     }
     /**
      * Audio encoding of the synthesized audio content.
      * 
-     */
+    */
     public String getOutputAudioEncoding() {
         return this.outputAudioEncoding;
     }
     /**
      * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice's natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
      * 
-     */
+    */
     public Integer getSampleRateHertz() {
         return this.sampleRateHertz;
     }
     /**
      * Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
      * 
-     */
+    */
     public Map<String,String> getSynthesizeSpeechConfigs() {
         return this.synthesizeSpeechConfigs;
     }
@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse {
             this.synthesizeSpeechConfigs = Objects.requireNonNull(synthesizeSpeechConfigs);
             return this;
         }
-
         public GoogleCloudDialogflowV2TextToSpeechSettingsResponse build() {
             return new GoogleCloudDialogflowV2TextToSpeechSettingsResponse(enableTextToSpeech, outputAudioEncoding, sampleRateHertz, synthesizeSpeechConfigs);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 import io.pulumi.azurenative.videoanalyzer.outputs.TlsEndpointResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.UnsecuredEndpointResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -51,21 +51,21 @@ public final class RtspSourceResponse {
     /**
      * RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
      * 
-     */
+    */
     public Either<TlsEndpointResponse,UnsecuredEndpointResponse> getEndpoint() {
         return this.endpoint;
     }
     /**
      * Node name. Must be unique within the topology.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
      * 
-     */
+    */
     public Optional<String> getTransport() {
         return Optional.ofNullable(this.transport);
     }
@@ -73,7 +73,7 @@ public final class RtspSourceResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.RtspSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -123,7 +123,6 @@ public final class RtspSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RtspSourceResponse build() {
             return new RtspSourceResponse(endpoint, name, transport, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ClusterKeyResponse {
     /**
      * Name of the Cosmos DB Cassandra table cluster key
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
      * 
-     */
+    */
     public Optional<String> getOrderBy() {
         return Optional.ofNullable(this.orderBy);
     }
@@ -76,7 +76,6 @@ public final class ClusterKeyResponse {
             this.orderBy = orderBy;
             return this;
         }
-
         public ClusterKeyResponse build() {
             return new ClusterKeyResponse(name, orderBy);
         }

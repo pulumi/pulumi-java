@@ -5,8 +5,8 @@ package io.pulumi.gcp.gkehub;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gkehub.MembershipArgs;
 import io.pulumi.gcp.gkehub.inputs.MembershipState;
@@ -61,7 +61,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
     /**
      * The name of this entity type to be displayed on the console. This field is unavailable in v1 of the API.
      * 
-     * @deprecated
+     * @Deprecated
      * This field is unavailable in the GA provider and will be removed from the beta provider in a future release.
      * 
      */
@@ -151,6 +151,37 @@ public class Membership extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(MembershipArgs.Builder a);
+    }
+    private static io.pulumi.gcp.gkehub.MembershipArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.gkehub.MembershipArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Membership(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Membership(String name) {
+        this(name, MembershipArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Membership(String name, MembershipArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

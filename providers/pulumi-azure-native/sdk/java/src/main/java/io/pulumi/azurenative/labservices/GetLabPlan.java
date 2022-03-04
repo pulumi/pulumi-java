@@ -6,21 +6,41 @@ package io.pulumi.azurenative.labservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.labservices.inputs.GetLabPlanArgs;
 import io.pulumi.azurenative.labservices.outputs.GetLabPlanResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLabPlan {
-/**
- * Lab Plans act as a permission container for creating labs via labs.azure.com. Additionally, they can provide a set of default configurations that will apply at the time of creating a lab, but these defaults can still be overwritten.
+    private GetLabPlan() {}
+    public interface BuilderApplicator {
+        public void apply(GetLabPlanArgs.Builder a);
+    }
+    private static GetLabPlanArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLabPlanArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Lab Plans act as a permission container for creating labs via labs.azure.com. Additionally, they can provide a set of default configurations that will apply at the time of creating a lab, but these defaults can still be overwritten.
  * API Version: 2021-10-01-preview.
  * 
- *
- * Lab Plans act as a permission container for creating labs via labs.azure.com. Additionally, they can provide a set of default configurations that will apply at the time of creating a lab, but these defaults can still be overwritten.
+     *
+     * Lab Plans act as a permission container for creating labs via labs.azure.com. Additionally, they can provide a set of default configurations that will apply at the time of creating a lab, but these defaults can still be overwritten.
  * 
- */
+     */
+    public static CompletableFuture<GetLabPlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Lab Plans act as a permission container for creating labs via labs.azure.com. Additionally, they can provide a set of default configurations that will apply at the time of creating a lab, but these defaults can still be overwritten.
+     * API Version: 2021-10-01-preview.
+     * 
+     *
+         * Lab Plans act as a permission container for creating labs via labs.azure.com. Additionally, they can provide a set of default configurations that will apply at the time of creating a lab, but these defaults can still be overwritten.
+     * 
+     */
     public static CompletableFuture<GetLabPlanResult> invokeAsync(GetLabPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getLabPlan", TypeShape.of(GetLabPlanResult.class), args == null ? GetLabPlanArgs.Empty : args, Utilities.withVersion(options));
     }

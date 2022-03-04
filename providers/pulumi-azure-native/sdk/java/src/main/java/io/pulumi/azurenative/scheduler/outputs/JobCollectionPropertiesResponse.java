@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.outputs;
 
 import io.pulumi.azurenative.scheduler.outputs.JobCollectionQuotaResponse;
 import io.pulumi.azurenative.scheduler.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class JobCollectionPropertiesResponse {
     /**
      * Gets or sets the job collection quota.
      * 
-     */
+    */
     public Optional<JobCollectionQuotaResponse> getQuota() {
         return Optional.ofNullable(this.quota);
     }
     /**
      * Gets or sets the SKU.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Gets or sets the state.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -99,7 +99,6 @@ public final class JobCollectionPropertiesResponse {
             this.state = state;
             return this;
         }
-
         public JobCollectionPropertiesResponse build() {
             return new JobCollectionPropertiesResponse(quota, sku, state);
         }

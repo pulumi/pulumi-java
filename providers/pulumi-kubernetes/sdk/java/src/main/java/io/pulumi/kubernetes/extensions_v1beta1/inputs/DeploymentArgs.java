@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.DeploymentSpecArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.DeploymentStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -48,7 +48,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -59,7 +59,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -70,7 +70,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -81,7 +81,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<DeploymentSpecArgs> spec;
+      private final @Nullable Input<DeploymentSpecArgs> spec;
 
     public Input<DeploymentSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -92,7 +92,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<DeploymentStatusArgs> status;
+      private final @Nullable Input<DeploymentStatusArgs> status;
 
     public Input<DeploymentStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -196,7 +196,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public DeploymentArgs build() {
             return new DeploymentArgs(apiVersion, kind, metadata, spec, status);
         }

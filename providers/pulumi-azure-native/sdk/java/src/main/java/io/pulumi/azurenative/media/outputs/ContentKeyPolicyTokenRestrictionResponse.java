@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.ContentKeyPolicyRsaTokenKeyResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicySymmetricTokenKeyResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyTokenClaimResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyX509CertificateTokenKeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -82,21 +82,21 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
     /**
      * A list of alternative verification keys.
      * 
-     */
+    */
     public List<Object> getAlternateVerificationKeys() {
         return this.alternateVerificationKeys == null ? List.of() : this.alternateVerificationKeys;
     }
     /**
      * The audience for the token.
      * 
-     */
+    */
     public String getAudience() {
         return this.audience;
     }
     /**
      * The token issuer.
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }
@@ -104,35 +104,35 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The OpenID connect discovery document.
      * 
-     */
+    */
     public Optional<String> getOpenIdConnectDiscoveryDocument() {
         return Optional.ofNullable(this.openIdConnectDiscoveryDocument);
     }
     /**
      * The primary verification key.
      * 
-     */
+    */
     public Object getPrimaryVerificationKey() {
         return this.primaryVerificationKey;
     }
     /**
      * A list of required token claims.
      * 
-     */
+    */
     public List<ContentKeyPolicyTokenClaimResponse> getRequiredClaims() {
         return this.requiredClaims == null ? List.of() : this.requiredClaims;
     }
     /**
      * The type of token.
      * 
-     */
+    */
     public String getRestrictionTokenType() {
         return this.restrictionTokenType;
     }
@@ -210,7 +210,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
             this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
             return this;
         }
-
         public ContentKeyPolicyTokenRestrictionResponse build() {
             return new ContentKeyPolicyTokenRestrictionResponse(alternateVerificationKeys, audience, issuer, odataType, openIdConnectDiscoveryDocument, primaryVerificationKey, requiredClaims, restrictionTokenType);
         }

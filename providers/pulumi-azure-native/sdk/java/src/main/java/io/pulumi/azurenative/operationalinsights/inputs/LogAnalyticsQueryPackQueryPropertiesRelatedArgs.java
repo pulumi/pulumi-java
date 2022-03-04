@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
      * 
      */
     @InputImport(name="categories")
-    private final @Nullable Input<List<String>> categories;
+      private final @Nullable Input<List<String>> categories;
 
     public Input<List<String>> getCategories() {
         return this.categories == null ? Input.empty() : this.categories;
@@ -35,7 +35,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
      * 
      */
     @InputImport(name="resourceTypes")
-    private final @Nullable Input<List<String>> resourceTypes;
+      private final @Nullable Input<List<String>> resourceTypes;
 
     public Input<List<String>> getResourceTypes() {
         return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
@@ -46,7 +46,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
      * 
      */
     @InputImport(name="solutions")
-    private final @Nullable Input<List<String>> solutions;
+      private final @Nullable Input<List<String>> solutions;
 
     public Input<List<String>> getSolutions() {
         return this.solutions == null ? Input.empty() : this.solutions;
@@ -120,7 +120,6 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
             this.solutions = Input.ofNullable(solutions);
             return this;
         }
-
         public LogAnalyticsQueryPackQueryPropertiesRelatedArgs build() {
             return new LogAnalyticsQueryPackQueryPropertiesRelatedArgs(categories, resourceTypes, solutions);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -34,7 +34,7 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="time")
-    private final @Nullable Input<String> time;
+      private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;
@@ -93,7 +93,6 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
             this.time = Input.ofNullable(time);
             return this;
         }
-
         public VolumeErrorArgs build() {
             return new VolumeErrorArgs(message, time);
         }

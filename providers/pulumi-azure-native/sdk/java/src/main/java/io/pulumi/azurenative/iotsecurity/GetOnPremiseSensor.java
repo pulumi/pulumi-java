@@ -6,21 +6,41 @@ package io.pulumi.azurenative.iotsecurity;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.iotsecurity.inputs.GetOnPremiseSensorArgs;
 import io.pulumi.azurenative.iotsecurity.outputs.GetOnPremiseSensorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOnPremiseSensor {
-/**
- * On-premise IoT sensor
+    private GetOnPremiseSensor() {}
+    public interface BuilderApplicator {
+        public void apply(GetOnPremiseSensorArgs.Builder a);
+    }
+    private static GetOnPremiseSensorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOnPremiseSensorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * On-premise IoT sensor
  * API Version: 2021-02-01-preview.
  * 
- *
- * On-premise IoT sensor
+     *
+     * On-premise IoT sensor
  * 
- */
+     */
+    public static CompletableFuture<GetOnPremiseSensorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * On-premise IoT sensor
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * On-premise IoT sensor
+     * 
+     */
     public static CompletableFuture<GetOnPremiseSensorResult> invokeAsync(GetOnPremiseSensorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getOnPremiseSensor", TypeShape.of(GetOnPremiseSensorResult.class), args == null ? GetOnPremiseSensorArgs.Empty : args, Utilities.withVersion(options));
     }

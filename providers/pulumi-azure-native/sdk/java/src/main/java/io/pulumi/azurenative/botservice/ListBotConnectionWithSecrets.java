@@ -6,21 +6,41 @@ package io.pulumi.azurenative.botservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.botservice.inputs.ListBotConnectionWithSecretsArgs;
 import io.pulumi.azurenative.botservice.outputs.ListBotConnectionWithSecretsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBotConnectionWithSecrets {
-/**
- * Bot channel resource definition
+    private ListBotConnectionWithSecrets() {}
+    public interface BuilderApplicator {
+        public void apply(ListBotConnectionWithSecretsArgs.Builder a);
+    }
+    private static ListBotConnectionWithSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListBotConnectionWithSecretsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Bot channel resource definition
  * API Version: 2021-03-01.
  * 
- *
- * Bot channel resource definition
+     *
+     * Bot channel resource definition
  * 
- */
+     */
+    public static CompletableFuture<ListBotConnectionWithSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Bot channel resource definition
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Bot channel resource definition
+     * 
+     */
     public static CompletableFuture<ListBotConnectionWithSecretsResult> invokeAsync(ListBotConnectionWithSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:listBotConnectionWithSecrets", TypeShape.of(ListBotConnectionWithSecretsResult.class), args == null ? ListBotConnectionWithSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

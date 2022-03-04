@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigSubjectAltNameGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigSubjectGetArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CertificateConfigSubjectConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subject", required=true)
-    private final Input<CertificateConfigSubjectConfigSubjectGetArgs> subject;
+      private final Input<CertificateConfigSubjectConfigSubjectGetArgs> subject;
 
     public Input<CertificateConfigSubjectConfigSubjectGetArgs> getSubject() {
         return this.subject;
@@ -33,7 +33,7 @@ public final class CertificateConfigSubjectConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subjectAltName")
-    private final @Nullable Input<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
+      private final @Nullable Input<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
 
     public Input<CertificateConfigSubjectConfigSubjectAltNameGetArgs> getSubjectAltName() {
         return this.subjectAltName == null ? Input.empty() : this.subjectAltName;
@@ -92,7 +92,6 @@ public final class CertificateConfigSubjectConfigGetArgs extends io.pulumi.resou
             this.subjectAltName = Input.ofNullable(subjectAltName);
             return this;
         }
-
         public CertificateConfigSubjectConfigGetArgs build() {
             return new CertificateConfigSubjectConfigGetArgs(subject, subjectAltName);
         }

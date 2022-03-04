@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -46,7 +46,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -57,7 +57,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -146,7 +146,6 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
             this.port = Input.ofNullable(port);
             return this;
         }
-
         public ServiceReferenceArgs build() {
             return new ServiceReferenceArgs(name, namespace, path, port);
         }

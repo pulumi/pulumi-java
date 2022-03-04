@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -32,7 +32,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="details", required=true)
-    private final String details;
+      private final String details;
 
     public String getDetails() {
         return this.details;
@@ -43,7 +43,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="symptomType", required=true)
-    private final String symptomType;
+      private final String symptomType;
 
     public String getSymptomType() {
         return this.symptomType;
@@ -54,7 +54,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workerId", required=true)
-    private final String workerId;
+      private final String workerId;
 
     public String getWorkerId() {
         return this.workerId;
@@ -123,7 +123,6 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
             this.workerId = Objects.requireNonNull(workerId);
             return this;
         }
-
         public SymptomResponse build() {
             return new SymptomResponse(createTime, details, symptomType, workerId);
         }

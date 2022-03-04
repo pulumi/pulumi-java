@@ -6,17 +6,33 @@ package io.pulumi.awsnative.datasync;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.datasync.inputs.GetAgentArgs;
 import io.pulumi.awsnative.datasync.outputs.GetAgentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAgent {
-/**
- * Resource schema for AWS::DataSync::Agent.
+    private GetAgent() {}
+    public interface BuilderApplicator {
+        public void apply(GetAgentArgs.Builder a);
+    }
+    private static GetAgentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAgentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::DataSync::Agent.
  * 
- */
+     */
+    public static CompletableFuture<GetAgentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::DataSync::Agent.
+     * 
+     */
     public static CompletableFuture<GetAgentResult> invokeAsync(GetAgentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getAgent", TypeShape.of(GetAgentResult.class), args == null ? GetAgentArgs.Empty : args, Utilities.withVersion(options));
     }

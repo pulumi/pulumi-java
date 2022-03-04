@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cdn.enums.CustomRuleEnabledState;
 import io.pulumi.azurenative.cdn.inputs.MatchConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<Either<String,ActionType>> action;
+      private final Input<Either<String,ActionType>> action;
 
     public Input<Either<String,ActionType>> getAction() {
         return this.action;
@@ -40,7 +40,7 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable Input<Either<String,CustomRuleEnabledState>> enabledState;
+      private final @Nullable Input<Either<String,CustomRuleEnabledState>> enabledState;
 
     public Input<Either<String,CustomRuleEnabledState>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -51,7 +51,7 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchConditions", required=true)
-    private final Input<List<MatchConditionArgs>> matchConditions;
+      private final Input<List<MatchConditionArgs>> matchConditions;
 
     public Input<List<MatchConditionArgs>> getMatchConditions() {
         return this.matchConditions;
@@ -62,7 +62,7 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -73,7 +73,7 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -84,7 +84,7 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimitDurationInMinutes", required=true)
-    private final Input<Integer> rateLimitDurationInMinutes;
+      private final Input<Integer> rateLimitDurationInMinutes;
 
     public Input<Integer> getRateLimitDurationInMinutes() {
         return this.rateLimitDurationInMinutes;
@@ -95,7 +95,7 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimitThreshold", required=true)
-    private final Input<Integer> rateLimitThreshold;
+      private final Input<Integer> rateLimitThreshold;
 
     public Input<Integer> getRateLimitThreshold() {
         return this.rateLimitThreshold;
@@ -229,7 +229,6 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.rateLimitThreshold = Input.of(Objects.requireNonNull(rateLimitThreshold));
             return this;
         }
-
         public RateLimitRuleArgs build() {
             return new RateLimitRuleArgs(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold);
         }

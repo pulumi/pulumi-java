@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DSSEHintResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="humanReadableName", required=true)
-    private final String humanReadableName;
+      private final String humanReadableName;
 
     public String getHumanReadableName() {
         return this.humanReadableName;
@@ -59,7 +59,6 @@ public final class DSSEHintResponse extends io.pulumi.resources.InvokeArgs {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
-
         public DSSEHintResponse build() {
             return new DSSEHintResponse(humanReadableName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EncryptionPreferencesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="doubleEncryptionStatus")
-    private final @Nullable String doubleEncryptionStatus;
+      private final @Nullable String doubleEncryptionStatus;
 
     public Optional<String> getDoubleEncryptionStatus() {
         return this.doubleEncryptionStatus == null ? Optional.empty() : Optional.ofNullable(this.doubleEncryptionStatus);
@@ -61,7 +61,6 @@ public final class EncryptionPreferencesResponse extends io.pulumi.resources.Inv
             this.doubleEncryptionStatus = doubleEncryptionStatus;
             return this;
         }
-
         public EncryptionPreferencesResponse build() {
             return new EncryptionPreferencesResponse(doubleEncryptionStatus);
         }

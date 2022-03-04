@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class EncoderSystemPresetResponse {
     /**
      * Name of the built-in encoding preset.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -40,7 +40,7 @@ public final class EncoderSystemPresetResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -76,7 +76,6 @@ public final class EncoderSystemPresetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncoderSystemPresetResponse build() {
             return new EncoderSystemPresetResponse(name, type);
         }

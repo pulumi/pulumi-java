@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,21 +13,48 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstance {
-/**
- * Get information about a VM instance resource within GCE. For more information see
+    private GetInstance() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceArgs.Builder a);
+    }
+    private static GetInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information about a VM instance resource within GCE. For more information see
  * [the official documentation](https://cloud.google.com/compute/docs/instances)
  * and
  * [API](https://cloud.google.com/compute/docs/reference/latest/instances).
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getInstance.
+     *
+     * A collection of arguments for invoking getInstance.
  * 
- *
- * A collection of values returned by getInstance.
+     *
+     * A collection of values returned by getInstance.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information about a VM instance resource within GCE. For more information see
+     * [the official documentation](https://cloud.google.com/compute/docs/instances)
+     * and
+     * [API](https://cloud.google.com/compute/docs/reference/latest/instances).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getInstance.
+     * 
+     *
+         * A collection of values returned by getInstance.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> invokeAsync(@Nullable GetInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args == null ? GetInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

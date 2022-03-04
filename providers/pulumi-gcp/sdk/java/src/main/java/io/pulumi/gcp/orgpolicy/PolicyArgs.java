@@ -4,7 +4,7 @@
 package io.pulumi.gcp.orgpolicy;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.orgpolicy.inputs.PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -42,7 +42,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<PolicySpecArgs> spec;
+      private final @Nullable Input<PolicySpecArgs> spec;
 
     public Input<PolicySpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -116,7 +116,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public PolicyArgs build() {
             return new PolicyArgs(name, parent, spec);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.RunCommandInputParameterResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandScriptSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -138,112 +138,112 @@ public final class GetVirtualMachineScaleSetVMRunCommandResult {
     /**
      * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
      * 
-     */
+    */
     public Optional<Boolean> getAsyncExecution() {
         return Optional.ofNullable(this.asyncExecution);
     }
     /**
      * Specifies the Azure storage blob where script error stream will be uploaded.
      * 
-     */
+    */
     public Optional<String> getErrorBlobUri() {
         return Optional.ofNullable(this.errorBlobUri);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The virtual machine run command instance view.
      * 
-     */
+    */
     public VirtualMachineRunCommandInstanceViewResponse getInstanceView() {
         return this.instanceView;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the Azure storage blob where script output stream will be uploaded.
      * 
-     */
+    */
     public Optional<String> getOutputBlobUri() {
         return Optional.ofNullable(this.outputBlobUri);
     }
     /**
      * The parameters used by the script.
      * 
-     */
+    */
     public List<RunCommandInputParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * The parameters used by the script.
      * 
-     */
+    */
     public List<RunCommandInputParameterResponse> getProtectedParameters() {
         return this.protectedParameters == null ? List.of() : this.protectedParameters;
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Specifies the user account password on the VM when executing the run command.
      * 
-     */
+    */
     public Optional<String> getRunAsPassword() {
         return Optional.ofNullable(this.runAsPassword);
     }
     /**
      * Specifies the user account on the VM when executing the run command.
      * 
-     */
+    */
     public Optional<String> getRunAsUser() {
         return Optional.ofNullable(this.runAsUser);
     }
     /**
      * The source of the run command script.
      * 
-     */
+    */
     public Optional<VirtualMachineRunCommandScriptSourceResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The timeout in seconds to execute the run command.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -377,7 +377,6 @@ public final class GetVirtualMachineScaleSetVMRunCommandResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualMachineScaleSetVMRunCommandResult build() {
             return new GetVirtualMachineScaleSetVMRunCommandResult(asyncExecution, errorBlobUri, id, instanceView, location, name, outputBlobUri, parameters, protectedParameters, provisioningState, runAsPassword, runAsUser, source, tags, timeoutInSeconds, type);
         }

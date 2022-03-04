@@ -5,7 +5,7 @@ package io.pulumi.azurenative.netapp;
 
 import io.pulumi.azurenative.netapp.inputs.VolumeBackupsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -35,7 +35,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPolicyName")
-    private final @Nullable Input<String> backupPolicyName;
+      private final @Nullable Input<String> backupPolicyName;
 
     public Input<String> getBackupPolicyName() {
         return this.backupPolicyName == null ? Input.empty() : this.backupPolicyName;
@@ -46,7 +46,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dailyBackupsToKeep")
-    private final @Nullable Input<Integer> dailyBackupsToKeep;
+      private final @Nullable Input<Integer> dailyBackupsToKeep;
 
     public Input<Integer> getDailyBackupsToKeep() {
         return this.dailyBackupsToKeep == null ? Input.empty() : this.dailyBackupsToKeep;
@@ -57,7 +57,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -68,7 +68,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -79,7 +79,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monthlyBackupsToKeep")
-    private final @Nullable Input<Integer> monthlyBackupsToKeep;
+      private final @Nullable Input<Integer> monthlyBackupsToKeep;
 
     public Input<Integer> getMonthlyBackupsToKeep() {
         return this.monthlyBackupsToKeep == null ? Input.empty() : this.monthlyBackupsToKeep;
@@ -90,7 +90,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeBackups")
-    private final @Nullable Input<List<VolumeBackupsArgs>> volumeBackups;
+      private final @Nullable Input<List<VolumeBackupsArgs>> volumeBackups;
 
     public Input<List<VolumeBackupsArgs>> getVolumeBackups() {
         return this.volumeBackups == null ? Input.empty() : this.volumeBackups;
@@ -123,7 +123,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumesAssigned")
-    private final @Nullable Input<Integer> volumesAssigned;
+      private final @Nullable Input<Integer> volumesAssigned;
 
     public Input<Integer> getVolumesAssigned() {
         return this.volumesAssigned == null ? Input.empty() : this.volumesAssigned;
@@ -134,7 +134,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weeklyBackupsToKeep")
-    private final @Nullable Input<Integer> weeklyBackupsToKeep;
+      private final @Nullable Input<Integer> weeklyBackupsToKeep;
 
     public Input<Integer> getWeeklyBackupsToKeep() {
         return this.weeklyBackupsToKeep == null ? Input.empty() : this.weeklyBackupsToKeep;
@@ -145,7 +145,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="yearlyBackupsToKeep")
-    private final @Nullable Input<Integer> yearlyBackupsToKeep;
+      private final @Nullable Input<Integer> yearlyBackupsToKeep;
 
     public Input<Integer> getYearlyBackupsToKeep() {
         return this.yearlyBackupsToKeep == null ? Input.empty() : this.yearlyBackupsToKeep;
@@ -354,7 +354,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.yearlyBackupsToKeep = Input.ofNullable(yearlyBackupsToKeep);
             return this;
         }
-
         public BackupPolicyArgs build() {
             return new BackupPolicyArgs(accountName, backupPolicyName, dailyBackupsToKeep, enabled, location, monthlyBackupsToKeep, resourceGroupName, tags, volumeBackups, volumesAssigned, weeklyBackupsToKeep, yearlyBackupsToKeep);
         }

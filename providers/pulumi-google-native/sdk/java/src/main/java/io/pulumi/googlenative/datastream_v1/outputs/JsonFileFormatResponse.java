@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class JsonFileFormatResponse {
     /**
      * Compression of the loaded JSON file.
      * 
-     */
+    */
     public String getCompression() {
         return this.compression;
     }
     /**
      * The schema file format along JSON data files.
      * 
-     */
+    */
     public String getSchemaFileFormat() {
         return this.schemaFileFormat;
     }
@@ -74,7 +74,6 @@ public final class JsonFileFormatResponse {
             this.schemaFileFormat = Objects.requireNonNull(schemaFileFormat);
             return this;
         }
-
         public JsonFileFormatResponse build() {
             return new JsonFileFormatResponse(compression, schemaFileFormat);
         }

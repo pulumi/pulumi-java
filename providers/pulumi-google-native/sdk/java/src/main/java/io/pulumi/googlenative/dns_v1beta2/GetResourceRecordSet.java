@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceRecordSet {
-/**
- * Fetches the representation of an existing ResourceRecordSet.
+    private GetResourceRecordSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceRecordSetArgs.Builder a);
+    }
+    private static GetResourceRecordSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceRecordSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Fetches the representation of an existing ResourceRecordSet.
  * 
- */
+     */
+    public static CompletableFuture<GetResourceRecordSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Fetches the representation of an existing ResourceRecordSet.
+     * 
+     */
     public static CompletableFuture<GetResourceRecordSetResult> invokeAsync(GetResourceRecordSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getResourceRecordSet", TypeShape.of(GetResourceRecordSetResult.class), args == null ? GetResourceRecordSetArgs.Empty : args, Utilities.withVersion(options));
     }

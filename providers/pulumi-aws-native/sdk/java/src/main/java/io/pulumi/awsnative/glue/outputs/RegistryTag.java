@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.glue.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class RegistryTag {
     /**
      * A key to identify the tag.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Corresponding tag value for the key.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class RegistryTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RegistryTag build() {
             return new RegistryTag(key, value);
         }

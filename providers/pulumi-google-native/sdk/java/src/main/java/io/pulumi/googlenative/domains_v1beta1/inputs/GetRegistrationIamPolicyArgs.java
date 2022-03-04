@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetRegistrationIamPolicyArgs extends io.pulumi.resources.Invo
     public static final GetRegistrationIamPolicyArgs Empty = new GetRegistrationIamPolicyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="registrationId", required=true)
-    private final String registrationId;
+      private final String registrationId;
 
     public String getRegistrationId() {
         return this.registrationId;
@@ -105,7 +105,6 @@ public final class GetRegistrationIamPolicyArgs extends io.pulumi.resources.Invo
             this.registrationId = Objects.requireNonNull(registrationId);
             return this;
         }
-
         public GetRegistrationIamPolicyArgs build() {
             return new GetRegistrationIamPolicyArgs(location, optionsRequestedPolicyVersion, project, registrationId);
         }

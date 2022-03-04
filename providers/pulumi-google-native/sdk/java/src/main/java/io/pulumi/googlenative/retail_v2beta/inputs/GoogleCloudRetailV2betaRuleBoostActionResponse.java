@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaRuleBoostActionResponse extends io.pul
      * 
      */
     @InputImport(name="boost", required=true)
-    private final Double boost;
+      private final Double boost;
 
     public Double getBoost() {
         return this.boost;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2betaRuleBoostActionResponse extends io.pul
      * 
      */
     @InputImport(name="productsFilter", required=true)
-    private final String productsFilter;
+      private final String productsFilter;
 
     public String getProductsFilter() {
         return this.productsFilter;
@@ -82,7 +82,6 @@ public final class GoogleCloudRetailV2betaRuleBoostActionResponse extends io.pul
             this.productsFilter = Objects.requireNonNull(productsFilter);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleBoostActionResponse build() {
             return new GoogleCloudRetailV2betaRuleBoostActionResponse(boost, productsFilter);
         }

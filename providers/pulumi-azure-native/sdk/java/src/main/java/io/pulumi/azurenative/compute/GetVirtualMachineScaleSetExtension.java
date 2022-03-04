@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetExtensionArgs;
 import io.pulumi.azurenative.compute.outputs.GetVirtualMachineScaleSetExtensionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSetExtension {
-/**
- * Describes a Virtual Machine Scale Set Extension.
+    private GetVirtualMachineScaleSetExtension() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineScaleSetExtensionArgs.Builder a);
+    }
+    private static GetVirtualMachineScaleSetExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineScaleSetExtensionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a Virtual Machine Scale Set Extension.
  * API Version: 2021-03-01.
  * 
- *
- * Describes a Virtual Machine Scale Set Extension.
+     *
+     * Describes a Virtual Machine Scale Set Extension.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineScaleSetExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a Virtual Machine Scale Set Extension.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Describes a Virtual Machine Scale Set Extension.
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineScaleSetExtensionResult> invokeAsync(GetVirtualMachineScaleSetExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetExtension", TypeShape.of(GetVirtualMachineScaleSetExtensionResult.class), args == null ? GetVirtualMachineScaleSetExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class Sysctl {
     /**
      * Name of a property to set
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Value of a property to set
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class Sysctl {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Sysctl build() {
             return new Sysctl(name, value);
         }

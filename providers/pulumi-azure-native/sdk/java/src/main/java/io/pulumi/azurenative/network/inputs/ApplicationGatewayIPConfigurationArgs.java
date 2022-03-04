@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubResourceArgs> subnet;
+      private final @Nullable Input<SubResourceArgs> subnet;
 
     public Input<SubResourceArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -120,7 +120,6 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public ApplicationGatewayIPConfigurationArgs build() {
             return new ApplicationGatewayIPConfigurationArgs(id, name, subnet);
         }

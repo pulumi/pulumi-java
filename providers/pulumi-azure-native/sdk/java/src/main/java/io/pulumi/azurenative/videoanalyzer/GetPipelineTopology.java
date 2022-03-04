@@ -6,15 +6,24 @@ package io.pulumi.azurenative.videoanalyzer;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.videoanalyzer.inputs.GetPipelineTopologyArgs;
 import io.pulumi.azurenative.videoanalyzer.outputs.GetPipelineTopologyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPipelineTopology {
-/**
- * Pipeline topology describes the processing steps to be applied when processing content for a particular outcome. The topology should be defined according to the scenario to be achieved and can be reused across many pipeline instances which share the same processing characteristics. For instance, a pipeline topology which captures content from a RTSP camera and archives the content can be reused across many different cameras, as long as the same processing is to be applied across all the cameras. Individual instance properties can be defined through the use of user-defined parameters, which allow for a topology to be parameterized. This allows  individual pipelines refer to different values, such as individual cameras' RTSP endpoints and credentials. Overall a topology is composed of the following:
+    private GetPipelineTopology() {}
+    public interface BuilderApplicator {
+        public void apply(GetPipelineTopologyArgs.Builder a);
+    }
+    private static GetPipelineTopologyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPipelineTopologyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Pipeline topology describes the processing steps to be applied when processing content for a particular outcome. The topology should be defined according to the scenario to be achieved and can be reused across many pipeline instances which share the same processing characteristics. For instance, a pipeline topology which captures content from a RTSP camera and archives the content can be reused across many different cameras, as long as the same processing is to be applied across all the cameras. Individual instance properties can be defined through the use of user-defined parameters, which allow for a topology to be parameterized. This allows  individual pipelines refer to different values, such as individual cameras' RTSP endpoints and credentials. Overall a topology is composed of the following:
  * 
  *   - Parameters: list of user defined parameters that can be references across the topology nodes.
  *   - Sources: list of one or more data sources nodes such as an RTSP source which allows for content to be ingested from cameras.
@@ -22,15 +31,36 @@ public class GetPipelineTopology {
  *   - Sinks: list of one or more data sinks which allow for data to be stored or exported to other destinations.
  *     API Version: 2021-11-01-preview.
  * 
- *
- * Pipeline topology describes the processing steps to be applied when processing content for a particular outcome. The topology should be defined according to the scenario to be achieved and can be reused across many pipeline instances which share the same processing characteristics. For instance, a pipeline topology which captures content from a RTSP camera and archives the content can be reused across many different cameras, as long as the same processing is to be applied across all the cameras. Individual instance properties can be defined through the use of user-defined parameters, which allow for a topology to be parameterized. This allows  individual pipelines refer to different values, such as individual cameras' RTSP endpoints and credentials. Overall a topology is composed of the following:
+     *
+     * Pipeline topology describes the processing steps to be applied when processing content for a particular outcome. The topology should be defined according to the scenario to be achieved and can be reused across many pipeline instances which share the same processing characteristics. For instance, a pipeline topology which captures content from a RTSP camera and archives the content can be reused across many different cameras, as long as the same processing is to be applied across all the cameras. Individual instance properties can be defined through the use of user-defined parameters, which allow for a topology to be parameterized. This allows  individual pipelines refer to different values, such as individual cameras' RTSP endpoints and credentials. Overall a topology is composed of the following:
  * 
  *   - Parameters: list of user defined parameters that can be references across the topology nodes.
  *   - Sources: list of one or more data sources nodes such as an RTSP source which allows for content to be ingested from cameras.
  *   - Processors: list of nodes which perform data analysis or transformations.
  *   - Sinks: list of one or more data sinks which allow for data to be stored or exported to other destinations.
  * 
- */
+     */
+    public static CompletableFuture<GetPipelineTopologyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Pipeline topology describes the processing steps to be applied when processing content for a particular outcome. The topology should be defined according to the scenario to be achieved and can be reused across many pipeline instances which share the same processing characteristics. For instance, a pipeline topology which captures content from a RTSP camera and archives the content can be reused across many different cameras, as long as the same processing is to be applied across all the cameras. Individual instance properties can be defined through the use of user-defined parameters, which allow for a topology to be parameterized. This allows  individual pipelines refer to different values, such as individual cameras' RTSP endpoints and credentials. Overall a topology is composed of the following:
+     * 
+     *   - Parameters: list of user defined parameters that can be references across the topology nodes.
+     *   - Sources: list of one or more data sources nodes such as an RTSP source which allows for content to be ingested from cameras.
+     *   - Processors: list of nodes which perform data analysis or transformations.
+     *   - Sinks: list of one or more data sinks which allow for data to be stored or exported to other destinations.
+     *     API Version: 2021-11-01-preview.
+     * 
+     *
+         * Pipeline topology describes the processing steps to be applied when processing content for a particular outcome. The topology should be defined according to the scenario to be achieved and can be reused across many pipeline instances which share the same processing characteristics. For instance, a pipeline topology which captures content from a RTSP camera and archives the content can be reused across many different cameras, as long as the same processing is to be applied across all the cameras. Individual instance properties can be defined through the use of user-defined parameters, which allow for a topology to be parameterized. This allows  individual pipelines refer to different values, such as individual cameras' RTSP endpoints and credentials. Overall a topology is composed of the following:
+     * 
+     *   - Parameters: list of user defined parameters that can be references across the topology nodes.
+     *   - Sources: list of one or more data sources nodes such as an RTSP source which allows for content to be ingested from cameras.
+     *   - Processors: list of nodes which perform data analysis or transformations.
+     *   - Sinks: list of one or more data sinks which allow for data to be stored or exported to other destinations.
+     * 
+     */
     public static CompletableFuture<GetPipelineTopologyResult> invokeAsync(GetPipelineTopologyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getPipelineTopology", TypeShape.of(GetPipelineTopologyResult.class), args == null ? GetPipelineTopologyArgs.Empty : args, Utilities.withVersion(options));
     }

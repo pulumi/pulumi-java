@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.outputs.WebACLDefaultAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLRule;
 import io.pulumi.awsnative.wafv2.outputs.WebACLTag;
 import io.pulumi.awsnative.wafv2.outputs.WebACLVisibilityConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -88,7 +88,7 @@ public final class GetWebACLResult {
     /**
      * Collection of Rules.
      * 
-     */
+    */
     public List<WebACLRule> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
@@ -193,7 +193,6 @@ public final class GetWebACLResult {
             this.visibilityConfig = visibilityConfig;
             return this;
         }
-
         public GetWebACLResult build() {
             return new GetWebACLResult(arn, capacity, captchaConfig, customResponseBodies, defaultAction, description, id, labelNamespace, rules, tags, visibilityConfig);
         }

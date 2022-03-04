@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -35,7 +35,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filename")
-    private final @Nullable Input<String> filename;
+      private final @Nullable Input<String> filename;
 
     public Input<String> getFilename() {
         return this.filename == null ? Input.empty() : this.filename;
@@ -46,7 +46,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -57,7 +57,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="licenseConcluded")
-    private final @Nullable Input<LicenseArgs> licenseConcluded;
+      private final @Nullable Input<LicenseArgs> licenseConcluded;
 
     public Input<LicenseArgs> getLicenseConcluded() {
         return this.licenseConcluded == null ? Input.empty() : this.licenseConcluded;
@@ -68,7 +68,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceInfo")
-    private final @Nullable Input<String> sourceInfo;
+      private final @Nullable Input<String> sourceInfo;
 
     public Input<String> getSourceInfo() {
         return this.sourceInfo == null ? Input.empty() : this.sourceInfo;
@@ -172,7 +172,6 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
             this.sourceInfo = Input.ofNullable(sourceInfo);
             return this;
         }
-
         public PackageInfoOccurrenceArgs build() {
             return new PackageInfoOccurrenceArgs(comment, filename, id, licenseConcluded, sourceInfo);
         }

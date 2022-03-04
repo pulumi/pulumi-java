@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RouterAdvertisedIpRangeResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.RouterBgpPeerBfdResponse;
 import java.lang.Boolean;
@@ -141,119 +141,119 @@ public final class RouterBgpPeerResponse {
     /**
      * User-specified flag to indicate which mode to use for advertisement.
      * 
-     */
+    */
     public String getAdvertiseMode() {
         return this.advertiseMode;
     }
     /**
      * User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router's own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
      * 
-     */
+    */
     public List<String> getAdvertisedGroups() {
         return this.advertisedGroups;
     }
     /**
      * User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
      * 
-     */
+    */
     public List<RouterAdvertisedIpRangeResponse> getAdvertisedIpRanges() {
         return this.advertisedIpRanges;
     }
     /**
      * The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.
      * 
-     */
+    */
     public Integer getAdvertisedRoutePriority() {
         return this.advertisedRoutePriority;
     }
     /**
      * BFD configuration for the BGP peering.
      * 
-     */
+    */
     public RouterBgpPeerBfdResponse getBfd() {
         return this.bfd;
     }
     /**
      * The status of the BGP peer connection. If set to FALSE, any active session with the peer is terminated and all associated routing information is removed. If set to TRUE, the peer connection can be established with routing information. The default is TRUE.
      * 
-     */
+    */
     public String getEnable() {
         return this.enable;
     }
     /**
      * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
      * 
-     */
+    */
     public Boolean getEnableIpv6() {
         return this.enableIpv6;
     }
     /**
      * Name of the interface the BGP peer is associated with.
      * 
-     */
+    */
     public String getInterfaceName() {
         return this.interfaceName;
     }
     /**
      * IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * IPv6 address of the interface inside Google Cloud Platform.
      * 
-     */
+    */
     public String getIpv6NexthopAddress() {
         return this.ipv6NexthopAddress;
     }
     /**
      * The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
      * 
-     */
+    */
     public String getManagementType() {
         return this.managementType;
     }
     /**
      * Present if MD5 authentication is enabled for the peering. Must be the name of one of the entries in the Router.md5_authentication_keys. The field must comply with RFC1035.
      * 
-     */
+    */
     public String getMd5AuthenticationKeyName() {
         return this.md5AuthenticationKeyName;
     }
     /**
      * Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
      * 
-     */
+    */
     public Integer getPeerAsn() {
         return this.peerAsn;
     }
     /**
      * IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
      * 
-     */
+    */
     public String getPeerIpAddress() {
         return this.peerIpAddress;
     }
     /**
      * IPv6 address of the BGP interface outside Google Cloud Platform.
      * 
-     */
+    */
     public String getPeerIpv6NexthopAddress() {
         return this.peerIpv6NexthopAddress;
     }
     /**
      * URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.
      * 
-     */
+    */
     public String getRouterApplianceInstance() {
         return this.routerApplianceInstance;
     }
@@ -394,7 +394,6 @@ public final class RouterBgpPeerResponse {
             this.routerApplianceInstance = Objects.requireNonNull(routerApplianceInstance);
             return this;
         }
-
         public RouterBgpPeerResponse build() {
             return new RouterBgpPeerResponse(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, enableIpv6, interfaceName, ipAddress, ipv6NexthopAddress, managementType, md5AuthenticationKeyName, name, peerAsn, peerIpAddress, peerIpv6NexthopAddress, routerApplianceInstance);
         }

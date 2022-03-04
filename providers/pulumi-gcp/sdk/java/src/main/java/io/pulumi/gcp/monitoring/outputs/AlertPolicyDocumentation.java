@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,7 +40,7 @@ public final class AlertPolicyDocumentation {
      * exceed more than 10,240 bytes when encoded in UTF-8 format,
      * whichever is smaller.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
@@ -48,7 +48,7 @@ public final class AlertPolicyDocumentation {
      * The format of the content field. Presently, only the value
      * "text/markdown" is supported.
      * 
-     */
+    */
     public Optional<String> getMimeType() {
         return Optional.ofNullable(this.mimeType);
     }
@@ -84,7 +84,6 @@ public final class AlertPolicyDocumentation {
             this.mimeType = mimeType;
             return this;
         }
-
         public AlertPolicyDocumentation build() {
             return new AlertPolicyDocumentation(content, mimeType);
         }

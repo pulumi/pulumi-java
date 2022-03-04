@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,42 +59,42 @@ public final class GetApiIssueAttachmentResult {
     /**
      * An HTTP link or Base64-encoded binary data.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
      * 
-     */
+    */
     public String getContentFormat() {
         return this.contentFormat;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Filename by which the binary data will be saved.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -158,7 +158,6 @@ public final class GetApiIssueAttachmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApiIssueAttachmentResult build() {
             return new GetApiIssueAttachmentResult(content, contentFormat, id, name, title, type);
         }

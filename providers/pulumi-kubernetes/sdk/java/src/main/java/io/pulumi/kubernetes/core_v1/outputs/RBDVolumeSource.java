@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -78,56 +78,56 @@ public final class RBDVolumeSource {
     /**
      * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
      * 
-     */
+    */
     public Optional<String> getFsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
     /**
      * Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-     */
+    */
     public Optional<String> getKeyring() {
         return Optional.ofNullable(this.keyring);
     }
     /**
      * A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-     */
+    */
     public List<String> getMonitors() {
         return this.monitors;
     }
     /**
      * The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-     */
+    */
     public Optional<String> getPool() {
         return Optional.ofNullable(this.pool);
     }
     /**
      * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-     */
+    */
     public Optional<LocalObjectReference> getSecretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
      * The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-     */
+    */
     public Optional<String> getUser() {
         return Optional.ofNullable(this.user);
     }
@@ -205,7 +205,6 @@ public final class RBDVolumeSource {
             this.user = user;
             return this;
         }
-
         public RBDVolumeSource build() {
             return new RBDVolumeSource(fsType, image, keyring, monitors, pool, readOnly, secretRef, user);
         }

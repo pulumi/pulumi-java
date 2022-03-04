@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.enums.TableGranularity;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.SplitArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnFamilies")
-    private final @Nullable Input<Map<String,String>> columnFamilies;
+      private final @Nullable Input<Map<String,String>> columnFamilies;
 
     public Input<Map<String,String>> getColumnFamilies() {
         return this.columnFamilies == null ? Input.empty() : this.columnFamilies;
@@ -34,7 +34,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="granularity")
-    private final @Nullable Input<TableGranularity> granularity;
+      private final @Nullable Input<TableGranularity> granularity;
 
     public Input<TableGranularity> getGranularity() {
         return this.granularity == null ? Input.empty() : this.granularity;
@@ -45,14 +45,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialSplits")
-    private final @Nullable Input<List<SplitArgs>> initialSplits;
+      private final @Nullable Input<List<SplitArgs>> initialSplits;
 
     public Input<List<SplitArgs>> getInitialSplits() {
         return this.initialSplits == null ? Input.empty() : this.initialSplits;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -63,14 +63,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -81,7 +81,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableId", required=true)
-    private final Input<String> tableId;
+      private final Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId;
@@ -215,7 +215,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.tableId = Input.of(Objects.requireNonNull(tableId));
             return this;
         }
-
         public TableArgs build() {
             return new TableArgs(columnFamilies, granularity, initialSplits, instanceId, name, project, tableId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.InboundNatPoolResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PoolEndpointConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="inboundNatPools", required=true)
-    private final List<InboundNatPoolResponse> inboundNatPools;
+      private final List<InboundNatPoolResponse> inboundNatPools;
 
     public List<InboundNatPoolResponse> getInboundNatPools() {
         return this.inboundNatPools;
@@ -56,7 +56,6 @@ public final class PoolEndpointConfigurationResponse extends io.pulumi.resources
             this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
             return this;
         }
-
         public PoolEndpointConfigurationResponse build() {
             return new PoolEndpointConfigurationResponse(inboundNatPools);
         }

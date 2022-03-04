@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AlertSNSConfiguration {
     /**
      * ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * ARN of an SNS topic to send alert notifications to.
      * 
-     */
+    */
     public String getSnsTopicArn() {
         return this.snsTopicArn;
     }
@@ -74,7 +74,6 @@ public final class AlertSNSConfiguration {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
-
         public AlertSNSConfiguration build() {
             return new AlertSNSConfiguration(roleArn, snsTopicArn);
         }

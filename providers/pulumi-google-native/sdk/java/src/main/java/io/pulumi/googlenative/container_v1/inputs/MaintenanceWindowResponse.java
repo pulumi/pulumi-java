@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.DailyMaintenanceWindowResponse;
 import io.pulumi.googlenative.container_v1.inputs.RecurringTimeWindowResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="dailyMaintenanceWindow", required=true)
-    private final DailyMaintenanceWindowResponse dailyMaintenanceWindow;
+      private final DailyMaintenanceWindowResponse dailyMaintenanceWindow;
 
     public DailyMaintenanceWindowResponse getDailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
@@ -35,7 +35,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="maintenanceExclusions", required=true)
-    private final Map<String,String> maintenanceExclusions;
+      private final Map<String,String> maintenanceExclusions;
 
     public Map<String,String> getMaintenanceExclusions() {
         return this.maintenanceExclusions;
@@ -46,7 +46,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="recurringWindow", required=true)
-    private final RecurringTimeWindowResponse recurringWindow;
+      private final RecurringTimeWindowResponse recurringWindow;
 
     public RecurringTimeWindowResponse getRecurringWindow() {
         return this.recurringWindow;
@@ -105,7 +105,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
             this.recurringWindow = Objects.requireNonNull(recurringWindow);
             return this;
         }
-
         public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
         }

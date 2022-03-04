@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DataStoreInfoBaseResponse {
     /**
      * type of datastore; Operational/Vault/Archive
      * 
-     */
+    */
     public String getDataStoreType() {
         return this.dataStoreType;
     }
     /**
      * Type of Datasource object, used to initialize the right inherited type
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
@@ -74,7 +74,6 @@ public final class DataStoreInfoBaseResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public DataStoreInfoBaseResponse build() {
             return new DataStoreInfoBaseResponse(dataStoreType, objectType);
         }

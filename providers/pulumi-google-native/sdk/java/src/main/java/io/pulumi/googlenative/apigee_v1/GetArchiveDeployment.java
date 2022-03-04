@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetArchiveDeployment {
-/**
- * Gets the specified ArchiveDeployment.
+    private GetArchiveDeployment() {}
+    public interface BuilderApplicator {
+        public void apply(GetArchiveDeploymentArgs.Builder a);
+    }
+    private static GetArchiveDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetArchiveDeploymentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified ArchiveDeployment.
  * 
- */
+     */
+    public static CompletableFuture<GetArchiveDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified ArchiveDeployment.
+     * 
+     */
     public static CompletableFuture<GetArchiveDeploymentResult> invokeAsync(GetArchiveDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getArchiveDeployment", TypeShape.of(GetArchiveDeploymentResult.class), args == null ? GetArchiveDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

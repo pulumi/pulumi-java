@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityArgs;
 import io.pulumi.gcp.containeranalysis.inputs.NoteRelatedUrlArgs;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestationAuthority", required=true)
-    private final Input<NoteAttestationAuthorityArgs> attestationAuthority;
+      private final Input<NoteAttestationAuthorityArgs> attestationAuthority;
 
     public Input<NoteAttestationAuthorityArgs> getAttestationAuthority() {
         return this.attestationAuthority;
@@ -42,7 +42,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+      private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -53,7 +53,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="longDescription")
-    private final @Nullable Input<String> longDescription;
+      private final @Nullable Input<String> longDescription;
 
     public Input<String> getLongDescription() {
         return this.longDescription == null ? Input.empty() : this.longDescription;
@@ -64,7 +64,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -87,7 +87,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedNoteNames")
-    private final @Nullable Input<List<String>> relatedNoteNames;
+      private final @Nullable Input<List<String>> relatedNoteNames;
 
     public Input<List<String>> getRelatedNoteNames() {
         return this.relatedNoteNames == null ? Input.empty() : this.relatedNoteNames;
@@ -99,7 +99,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedUrls")
-    private final @Nullable Input<List<NoteRelatedUrlArgs>> relatedUrls;
+      private final @Nullable Input<List<NoteRelatedUrlArgs>> relatedUrls;
 
     public Input<List<NoteRelatedUrlArgs>> getRelatedUrls() {
         return this.relatedUrls == null ? Input.empty() : this.relatedUrls;
@@ -110,7 +110,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortDescription")
-    private final @Nullable Input<String> shortDescription;
+      private final @Nullable Input<String> shortDescription;
 
     public Input<String> getShortDescription() {
         return this.shortDescription == null ? Input.empty() : this.shortDescription;
@@ -259,7 +259,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             this.shortDescription = Input.ofNullable(shortDescription);
             return this;
         }
-
         public NoteArgs build() {
             return new NoteArgs(attestationAuthority, expirationTime, longDescription, name, project, relatedNoteNames, relatedUrls, shortDescription);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CodeSigningConfigAllowedPublishers {
     /**
      * List of Signing profile version Arns
      * 
-     */
+    */
     public List<String> getSigningProfileVersionArns() {
         return this.signingProfileVersionArns;
     }
@@ -53,7 +53,6 @@ public final class CodeSigningConfigAllowedPublishers {
             this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
             return this;
         }
-
         public CodeSigningConfigAllowedPublishers build() {
             return new CodeSigningConfigAllowedPublishers(signingProfileVersionArns);
         }

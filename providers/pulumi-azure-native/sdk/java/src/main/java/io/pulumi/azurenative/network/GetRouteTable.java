@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetRouteTableArgs;
 import io.pulumi.azurenative.network.outputs.GetRouteTableResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouteTable {
-/**
- * Route table resource.
+    private GetRouteTable() {}
+    public interface BuilderApplicator {
+        public void apply(GetRouteTableArgs.Builder a);
+    }
+    private static GetRouteTableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRouteTableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Route table resource.
  * API Version: 2020-11-01.
  * 
- *
- * Route table resource.
+     *
+     * Route table resource.
  * 
- */
+     */
+    public static CompletableFuture<GetRouteTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Route table resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Route table resource.
+     * 
+     */
     public static CompletableFuture<GetRouteTableResult> invokeAsync(GetRouteTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRouteTable", TypeShape.of(GetRouteTableResult.class), args == null ? GetRouteTableArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NodeNetworkConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="createPodRange", required=true)
-    private final Boolean createPodRange;
+      private final Boolean createPodRange;
 
     public Boolean getCreatePodRange() {
         return this.createPodRange;
@@ -33,7 +33,7 @@ public final class NodeNetworkConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="podIpv4CidrBlock", required=true)
-    private final String podIpv4CidrBlock;
+      private final String podIpv4CidrBlock;
 
     public String getPodIpv4CidrBlock() {
         return this.podIpv4CidrBlock;
@@ -44,7 +44,7 @@ public final class NodeNetworkConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="podRange", required=true)
-    private final String podRange;
+      private final String podRange;
 
     public String getPodRange() {
         return this.podRange;
@@ -103,7 +103,6 @@ public final class NodeNetworkConfigResponse extends io.pulumi.resources.InvokeA
             this.podRange = Objects.requireNonNull(podRange);
             return this;
         }
-
         public NodeNetworkConfigResponse build() {
             return new NodeNetworkConfigResponse(createPodRange, podIpv4CidrBlock, podRange);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SqlUpsertSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.StoredProcedureParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -136,77 +136,77 @@ public final class AzureSqlSinkResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * SQL pre-copy script. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPreCopyScript() {
         return Optional.ofNullable(this.preCopyScript);
     }
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
     /**
      * SQL writer stored procedure name. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getSqlWriterStoredProcedureName() {
         return Optional.ofNullable(this.sqlWriterStoredProcedureName);
     }
     /**
      * SQL writer table type. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getSqlWriterTableType() {
         return Optional.ofNullable(this.sqlWriterTableType);
     }
     /**
      * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getSqlWriterUseTableLock() {
         return Optional.ofNullable(this.sqlWriterUseTableLock);
     }
     /**
      * SQL stored procedure parameters.
      * 
-     */
+    */
     public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
     }
     /**
      * The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getStoredProcedureTableTypeParameterName() {
         return Optional.ofNullable(this.storedProcedureTableTypeParameterName);
     }
     /**
      * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getTableOption() {
         return Optional.ofNullable(this.tableOption);
     }
@@ -214,35 +214,35 @@ public final class AzureSqlSinkResponse {
      * Copy sink type.
      * Expected value is 'AzureSqlSink'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * SQL upsert settings.
      * 
-     */
+    */
     public Optional<SqlUpsertSettingsResponse> getUpsertSettings() {
         return Optional.ofNullable(this.upsertSettings);
     }
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getWriteBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getWriteBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
     /**
      * Write behavior when copying data into Azure SQL. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
      * 
-     */
+    */
     public Optional<Object> getWriteBehavior() {
         return Optional.ofNullable(this.writeBehavior);
     }
@@ -376,7 +376,6 @@ public final class AzureSqlSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public AzureSqlSinkResponse build() {
             return new AzureSqlSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterStoredProcedureName, sqlWriterTableType, sqlWriterUseTableLock, storedProcedureParameters, storedProcedureTableTypeParameterName, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

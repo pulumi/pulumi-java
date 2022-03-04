@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DynamicThresholdFailingPeriodsResponse {
     /**
      * The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
      * 
-     */
+    */
     public Double getMinFailingPeriodsToAlert() {
         return this.minFailingPeriodsToAlert;
     }
     /**
      * The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
      * 
-     */
+    */
     public Double getNumberOfEvaluationPeriods() {
         return this.numberOfEvaluationPeriods;
     }
@@ -74,7 +74,6 @@ public final class DynamicThresholdFailingPeriodsResponse {
             this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods);
             return this;
         }
-
         public DynamicThresholdFailingPeriodsResponse build() {
             return new DynamicThresholdFailingPeriodsResponse(minFailingPeriodsToAlert, numberOfEvaluationPeriods);
         }

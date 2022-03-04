@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * 
      */
     @InputImport(name="displayPrice")
-    private final @Nullable Input<Double> displayPrice;
+      private final @Nullable Input<Double> displayPrice;
 
     public Input<Double> getDisplayPrice() {
         return this.displayPrice == null ? Input.empty() : this.displayPrice;
@@ -34,7 +34,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * 
      */
     @InputImport(name="originalPrice")
-    private final @Nullable Input<Double> originalPrice;
+      private final @Nullable Input<Double> originalPrice;
 
     public Input<Double> getOriginalPrice() {
         return this.originalPrice == null ? Input.empty() : this.originalPrice;
@@ -93,7 +93,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
             this.originalPrice = Input.ofNullable(originalPrice);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs(displayPrice, originalPrice);
         }

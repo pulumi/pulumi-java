@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigSpCertificateArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="callbackUri", required=true)
-    private final Input<String> callbackUri;
+      private final Input<String> callbackUri;
 
     public Input<String> getCallbackUri() {
         return this.callbackUri;
@@ -34,7 +34,7 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="spCertificates")
-    private final @Nullable Input<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates;
+      private final @Nullable Input<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates;
 
     public Input<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> getSpCertificates() {
         return this.spCertificates == null ? Input.empty() : this.spCertificates;
@@ -45,7 +45,7 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="spEntityId", required=true)
-    private final Input<String> spEntityId;
+      private final Input<String> spEntityId;
 
     public Input<String> getSpEntityId() {
         return this.spEntityId;
@@ -119,7 +119,6 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
             this.spEntityId = Input.of(Objects.requireNonNull(spEntityId));
             return this;
         }
-
         public TenantInboundSamlConfigSpConfigArgs build() {
             return new TenantInboundSamlConfigSpConfigArgs(callbackUri, spCertificates, spEntityId);
         }

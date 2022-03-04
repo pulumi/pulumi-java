@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.resiliencehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,7 +86,6 @@ public final class AppPhysicalResourceId {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AppPhysicalResourceId build() {
             return new AppPhysicalResourceId(awsAccountId, awsRegion, identifier, type);
         }

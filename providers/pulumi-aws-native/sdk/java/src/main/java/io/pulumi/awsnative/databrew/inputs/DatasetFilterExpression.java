@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterValue;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class DatasetFilterExpression extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="expression", required=true)
-    private final String expression;
+      private final String expression;
 
     public String getExpression() {
         return this.expression;
     }
 
     @InputImport(name="valuesMap", required=true)
-    private final List<DatasetFilterValue> valuesMap;
+      private final List<DatasetFilterValue> valuesMap;
 
     public List<DatasetFilterValue> getValuesMap() {
         return this.valuesMap;
@@ -75,7 +75,6 @@ public final class DatasetFilterExpression extends io.pulumi.resources.InvokeArg
             this.valuesMap = Objects.requireNonNull(valuesMap);
             return this;
         }
-
         public DatasetFilterExpression build() {
             return new DatasetFilterExpression(expression, valuesMap);
         }

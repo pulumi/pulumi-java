@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class TopicRuleKafkaAction {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public TopicRuleKafkaAction build() {
             return new TopicRuleKafkaAction(clientProperties, destinationArn, key, partition, topic);
         }

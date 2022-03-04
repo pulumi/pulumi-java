@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.billing.outputs;
 
 import io.pulumi.azurenative.billing.outputs.InvoiceSectionWithCreateSubPermissionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
     /**
      * The link (url) to the next page of results.
      * 
-     */
+    */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * The list of invoice section properties with create subscription permission.
      * 
-     */
+    */
     public List<InvoiceSectionWithCreateSubPermissionResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -77,7 +77,6 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
             this.value = value;
             return this;
         }
-
         public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult build() {
             return new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult(nextLink, value);
         }

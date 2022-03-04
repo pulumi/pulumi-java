@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+      private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -45,7 +45,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+      private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -56,7 +56,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="username")
-    private final @Nullable String username;
+      private final @Nullable String username;
 
     public Optional<String> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
@@ -125,7 +125,6 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
             this.username = username;
             return this;
         }
-
         public ChannelIngestEndpoint build() {
             return new ChannelIngestEndpoint(id, password, url, username);
         }

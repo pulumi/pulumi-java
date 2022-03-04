@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.ExtensionCategory;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,21 +18,21 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
     public static final ResourceTypeExtensionArgs Empty = new ResourceTypeExtensionArgs();
 
     @InputImport(name="endpointUri")
-    private final @Nullable Input<String> endpointUri;
+      private final @Nullable Input<String> endpointUri;
 
     public Input<String> getEndpointUri() {
         return this.endpointUri == null ? Input.empty() : this.endpointUri;
     }
 
     @InputImport(name="extensionCategories")
-    private final @Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories;
+      private final @Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories;
 
     public Input<List<Either<String,ExtensionCategory>>> getExtensionCategories() {
         return this.extensionCategories == null ? Input.empty() : this.extensionCategories;
     }
 
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -106,7 +106,6 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public ResourceTypeExtensionArgs build() {
             return new ResourceTypeExtensionArgs(endpointUri, extensionCategories, timeout);
         }

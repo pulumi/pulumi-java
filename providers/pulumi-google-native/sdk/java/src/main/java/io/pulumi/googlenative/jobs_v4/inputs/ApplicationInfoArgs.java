@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v4.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="emails")
-    private final @Nullable Input<List<String>> emails;
+      private final @Nullable Input<List<String>> emails;
 
     public Input<List<String>> getEmails() {
         return this.emails == null ? Input.empty() : this.emails;
@@ -35,7 +35,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instruction")
-    private final @Nullable Input<String> instruction;
+      private final @Nullable Input<String> instruction;
 
     public Input<String> getInstruction() {
         return this.instruction == null ? Input.empty() : this.instruction;
@@ -46,7 +46,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uris")
-    private final @Nullable Input<List<String>> uris;
+      private final @Nullable Input<List<String>> uris;
 
     public Input<List<String>> getUris() {
         return this.uris == null ? Input.empty() : this.uris;
@@ -120,7 +120,6 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
             this.uris = Input.ofNullable(uris);
             return this;
         }
-
         public ApplicationInfoArgs build() {
             return new ApplicationInfoArgs(emails, instruction, uris);
         }

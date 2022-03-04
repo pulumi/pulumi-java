@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class FeatureStateResponse {
     /**
      * The high-level, machine-readable status of this Feature.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * A human-readable description of the current status.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The time this status and any related Feature-specific details were updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -95,7 +95,6 @@ public final class FeatureStateResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public FeatureStateResponse build() {
             return new FeatureStateResponse(code, description, updateTime);
         }

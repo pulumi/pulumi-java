@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelEventArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelTransitionEventArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="events")
-    private final @Nullable Input<List<DetectorModelEventArgs>> events;
+      private final @Nullable Input<List<DetectorModelEventArgs>> events;
 
     public Input<List<DetectorModelEventArgs>> getEvents() {
         return this.events == null ? Input.empty() : this.events;
@@ -36,7 +36,7 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="transitionEvents")
-    private final @Nullable Input<List<DetectorModelTransitionEventArgs>> transitionEvents;
+      private final @Nullable Input<List<DetectorModelTransitionEventArgs>> transitionEvents;
 
     public Input<List<DetectorModelTransitionEventArgs>> getTransitionEvents() {
         return this.transitionEvents == null ? Input.empty() : this.transitionEvents;
@@ -95,7 +95,6 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
             this.transitionEvents = Input.ofNullable(transitionEvents);
             return this;
         }
-
         public DetectorModelOnInputArgs build() {
             return new DetectorModelOnInputArgs(events, transitionEvents);
         }

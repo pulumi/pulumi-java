@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="forwardingPath")
-    private final @Nullable Input<String> forwardingPath;
+      private final @Nullable Input<String> forwardingPath;
 
     public Input<String> getForwardingPath() {
         return this.forwardingPath == null ? Input.empty() : this.forwardingPath;
@@ -33,7 +33,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="ipv4Address", required=true)
-    private final Input<String> ipv4Address;
+      private final Input<String> ipv4Address;
 
     public Input<String> getIpv4Address() {
         return this.ipv4Address;
@@ -92,7 +92,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
             this.ipv4Address = Input.of(Objects.requireNonNull(ipv4Address));
             return this;
         }
-
         public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {
             return new PolicyAlternativeNameServerConfigTargetNameServerArgs(forwardingPath, ipv4Address);
         }

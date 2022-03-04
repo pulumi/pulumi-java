@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AssetEgressEndpoint {
     /**
      * The ID of the PackagingConfiguration being applied to the Asset.
      * 
-     */
+    */
     public String getPackagingConfigurationId() {
         return this.packagingConfigurationId;
     }
     /**
      * The URL of the parent manifest for the repackaged Asset.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -74,7 +74,6 @@ public final class AssetEgressEndpoint {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public AssetEgressEndpoint build() {
             return new AssetEgressEndpoint(packagingConfigurationId, url);
         }

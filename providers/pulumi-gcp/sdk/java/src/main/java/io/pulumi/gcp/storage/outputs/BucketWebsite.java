@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public final class BucketWebsite {
      * Behaves as the bucket's directory index where
      * missing objects are treated as potential directories.
      * 
-     */
+    */
     public Optional<String> getMainPageSuffix() {
         return Optional.ofNullable(this.mainPageSuffix);
     }
@@ -44,7 +44,7 @@ public final class BucketWebsite {
      * The custom object to return when a requested
      * resource is not found.
      * 
-     */
+    */
     public Optional<String> getNotFoundPage() {
         return Optional.ofNullable(this.notFoundPage);
     }
@@ -80,7 +80,6 @@ public final class BucketWebsite {
             this.notFoundPage = notFoundPage;
             return this;
         }
-
         public BucketWebsite build() {
             return new BucketWebsite(mainPageSuffix, notFoundPage);
         }

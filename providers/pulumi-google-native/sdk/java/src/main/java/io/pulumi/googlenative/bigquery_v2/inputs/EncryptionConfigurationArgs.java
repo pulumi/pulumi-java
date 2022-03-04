@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -62,7 +62,6 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
-
         public EncryptionConfigurationArgs build() {
             return new EncryptionConfigurationArgs(kmsKeyName);
         }

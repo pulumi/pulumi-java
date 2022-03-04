@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LoadBalancerIngressArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LoadBalancerStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable Input<List<LoadBalancerIngressArgs>> ingress;
+      private final @Nullable Input<List<LoadBalancerIngressArgs>> ingress;
 
     public Input<List<LoadBalancerIngressArgs>> getIngress() {
         return this.ingress == null ? Input.empty() : this.ingress;
@@ -67,7 +67,6 @@ public final class LoadBalancerStatusArgs extends io.pulumi.resources.ResourceAr
             this.ingress = Input.ofNullable(ingress);
             return this;
         }
-
         public LoadBalancerStatusArgs build() {
             return new LoadBalancerStatusArgs(ingress);
         }

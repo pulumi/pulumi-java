@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyTimestampArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyVariantArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,21 +25,21 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="quality")
-    private final @Nullable Input<String> quality;
+      private final @Nullable Input<String> quality;
 
     public Input<String> getQuality() {
         return this.quality == null ? Input.empty() : this.quality;
     }
 
     @InputImport(name="timestamp")
-    private final @Nullable Input<DetectorModelAssetPropertyTimestampArgs> timestamp;
+      private final @Nullable Input<DetectorModelAssetPropertyTimestampArgs> timestamp;
 
     public Input<DetectorModelAssetPropertyTimestampArgs> getTimestamp() {
         return this.timestamp == null ? Input.empty() : this.timestamp;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<DetectorModelAssetPropertyVariantArgs> value;
+      private final Input<DetectorModelAssetPropertyVariantArgs> value;
 
     public Input<DetectorModelAssetPropertyVariantArgs> getValue() {
         return this.value;
@@ -113,7 +113,6 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public DetectorModelAssetPropertyValueArgs build() {
             return new DetectorModelAssetPropertyValueArgs(quality, timestamp, value);
         }

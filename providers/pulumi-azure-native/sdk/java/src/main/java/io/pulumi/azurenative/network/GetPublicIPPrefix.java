@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetPublicIPPrefixArgs;
 import io.pulumi.azurenative.network.outputs.GetPublicIPPrefixResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublicIPPrefix {
-/**
- * Public IP prefix resource.
+    private GetPublicIPPrefix() {}
+    public interface BuilderApplicator {
+        public void apply(GetPublicIPPrefixArgs.Builder a);
+    }
+    private static GetPublicIPPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPublicIPPrefixArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Public IP prefix resource.
  * API Version: 2020-11-01.
  * 
- *
- * Public IP prefix resource.
+     *
+     * Public IP prefix resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPublicIPPrefixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Public IP prefix resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Public IP prefix resource.
+     * 
+     */
     public static CompletableFuture<GetPublicIPPrefixResult> invokeAsync(GetPublicIPPrefixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPublicIPPrefix", TypeShape.of(GetPublicIPPrefixResult.class), args == null ? GetPublicIPPrefixArgs.Empty : args, Utilities.withVersion(options));
     }

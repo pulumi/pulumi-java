@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.outputs.GalleryImageFeatureResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryImageIdentifierResponse;
 import io.pulumi.azurenative.compute.outputs.ImagePurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.RecommendedMachineConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -159,133 +159,133 @@ public final class GetGalleryImageResult {
     /**
      * The description of this gallery image definition resource. This property is updatable.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Describes the disallowed disk types.
      * 
-     */
+    */
     public Optional<DisallowedResponse> getDisallowed() {
         return Optional.ofNullable(this.disallowed);
     }
     /**
      * The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
-     */
+    */
     public Optional<String> getEndOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
     /**
      * The Eula agreement for the gallery image definition.
      * 
-     */
+    */
     public Optional<String> getEula() {
         return Optional.ofNullable(this.eula);
     }
     /**
      * A list of gallery image features.
      * 
-     */
+    */
     public List<GalleryImageFeatureResponse> getFeatures() {
         return this.features == null ? List.of() : this.features;
     }
     /**
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
-     */
+    */
     public Optional<String> getHyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * This is the gallery image definition identifier.
      * 
-     */
+    */
     public GalleryImageIdentifierResponse getIdentifier() {
         return this.identifier;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
      * 
-     */
+    */
     public String getOsState() {
         return this.osState;
     }
     /**
      * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
      * 
-     */
+    */
     public String getOsType() {
         return this.osType;
     }
     /**
      * The privacy statement uri.
      * 
-     */
+    */
     public Optional<String> getPrivacyStatementUri() {
         return Optional.ofNullable(this.privacyStatementUri);
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes the gallery image definition purchase plan. This is used by marketplace images.
      * 
-     */
+    */
     public Optional<ImagePurchasePlanResponse> getPurchasePlan() {
         return Optional.ofNullable(this.purchasePlan);
     }
     /**
      * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
      * 
-     */
+    */
     public Optional<RecommendedMachineConfigurationResponse> getRecommended() {
         return Optional.ofNullable(this.recommended);
     }
     /**
      * The release note uri.
      * 
-     */
+    */
     public Optional<String> getReleaseNoteUri() {
         return Optional.ofNullable(this.releaseNoteUri);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -440,7 +440,6 @@ public final class GetGalleryImageResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGalleryImageResult build() {
             return new GetGalleryImageResult(description, disallowed, endOfLifeDate, eula, features, hyperVGeneration, id, identifier, location, name, osState, osType, privacyStatementUri, provisioningState, purchasePlan, recommended, releaseNoteUri, tags, type);
         }

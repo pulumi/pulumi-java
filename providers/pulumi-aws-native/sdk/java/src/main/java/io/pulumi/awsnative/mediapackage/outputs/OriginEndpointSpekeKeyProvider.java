@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class OriginEndpointSpekeKeyProvider {
     /**
      * An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
      * 
-     */
+    */
     public Optional<String> getCertificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
     /**
      * The resource ID to include in key requests.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The system IDs to include in key requests.
      * 
-     */
+    */
     public List<String> getSystemIds() {
         return this.systemIds;
     }
     /**
      * The URL of the external key provider service.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -140,7 +140,6 @@ public final class OriginEndpointSpekeKeyProvider {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public OriginEndpointSpekeKeyProvider build() {
             return new OriginEndpointSpekeKeyProvider(certificateArn, resourceId, roleArn, systemIds, url);
         }

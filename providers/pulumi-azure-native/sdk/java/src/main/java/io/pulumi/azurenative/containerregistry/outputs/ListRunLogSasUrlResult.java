@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ListRunLogSasUrlResult {
     /**
      * The link to logs in registry for a run on a azure container registry.
      * 
-     */
+    */
     public Optional<String> getLogArtifactLink() {
         return Optional.ofNullable(this.logArtifactLink);
     }
     /**
      * The link to logs for a run on a azure container registry.
      * 
-     */
+    */
     public Optional<String> getLogLink() {
         return Optional.ofNullable(this.logLink);
     }
@@ -76,7 +76,6 @@ public final class ListRunLogSasUrlResult {
             this.logLink = logLink;
             return this;
         }
-
         public ListRunLogSasUrlResult build() {
             return new ListRunLogSasUrlResult(logArtifactLink, logLink);
         }

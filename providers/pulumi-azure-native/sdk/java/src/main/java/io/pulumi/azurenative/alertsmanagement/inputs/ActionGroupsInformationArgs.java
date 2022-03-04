@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customEmailSubject")
-    private final @Nullable Input<String> customEmailSubject;
+      private final @Nullable Input<String> customEmailSubject;
 
     public Input<String> getCustomEmailSubject() {
         return this.customEmailSubject == null ? Input.empty() : this.customEmailSubject;
@@ -35,7 +35,7 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customWebhookPayload")
-    private final @Nullable Input<String> customWebhookPayload;
+      private final @Nullable Input<String> customWebhookPayload;
 
     public Input<String> getCustomWebhookPayload() {
         return this.customWebhookPayload == null ? Input.empty() : this.customWebhookPayload;
@@ -46,7 +46,7 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupIds", required=true)
-    private final Input<List<String>> groupIds;
+      private final Input<List<String>> groupIds;
 
     public Input<List<String>> getGroupIds() {
         return this.groupIds;
@@ -120,7 +120,6 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
             this.groupIds = Input.of(Objects.requireNonNull(groupIds));
             return this;
         }
-
         public ActionGroupsInformationArgs build() {
             return new ActionGroupsInformationArgs(customEmailSubject, customWebhookPayload, groupIds);
         }

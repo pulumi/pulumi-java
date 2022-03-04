@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class BackupPlanAdvancedBackupSettingResourceType extends io.pulumi
     public static final BackupPlanAdvancedBackupSettingResourceType Empty = new BackupPlanAdvancedBackupSettingResourceType();
 
     @InputImport(name="backupOptions", required=true)
-    private final Object backupOptions;
+      private final Object backupOptions;
 
     public Object getBackupOptions() {
         return this.backupOptions;
     }
 
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -70,7 +70,6 @@ public final class BackupPlanAdvancedBackupSettingResourceType extends io.pulumi
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public BackupPlanAdvancedBackupSettingResourceType build() {
             return new BackupPlanAdvancedBackupSettingResourceType(backupOptions, resourceType);
         }

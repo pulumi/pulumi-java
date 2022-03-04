@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolNodeConfigEphemeralStorageConfig;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolNodeConfigGcfsConfig;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolNodeConfigGuestAccelerator;
@@ -357,7 +357,6 @@ public final class GetClusterNodePoolNodeConfig {
             this.workloadMetadataConfigs = Objects.requireNonNull(workloadMetadataConfigs);
             return this;
         }
-
         public GetClusterNodePoolNodeConfig build() {
             return new GetClusterNodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfigs, gcfsConfigs, guestAccelerators, imageType, kubeletConfigs, labels, linuxNodeConfigs, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfigs, serviceAccount, shieldedInstanceConfigs, spot, tags, taints, workloadMetadataConfigs);
         }

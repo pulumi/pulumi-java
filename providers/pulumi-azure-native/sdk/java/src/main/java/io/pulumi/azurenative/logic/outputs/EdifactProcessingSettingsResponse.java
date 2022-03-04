@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class EdifactProcessingSettingsResponse {
     /**
      * The value indicating whether to create empty xml tags for trailing separators.
      * 
-     */
+    */
     public Boolean getCreateEmptyXmlTagsForTrailingSeparators() {
         return this.createEmptyXmlTagsForTrailingSeparators;
     }
     /**
      * The value indicating whether to mask security information.
      * 
-     */
+    */
     public Boolean getMaskSecurityInfo() {
         return this.maskSecurityInfo;
     }
     /**
      * The value indicating whether to preserve interchange.
      * 
-     */
+    */
     public Boolean getPreserveInterchange() {
         return this.preserveInterchange;
     }
     /**
      * The value indicating whether to suspend interchange on error.
      * 
-     */
+    */
     public Boolean getSuspendInterchangeOnError() {
         return this.suspendInterchangeOnError;
     }
     /**
      * The value indicating whether to use dot as decimal separator.
      * 
-     */
+    */
     public Boolean getUseDotAsDecimalSeparator() {
         return this.useDotAsDecimalSeparator;
     }
@@ -137,7 +137,6 @@ public final class EdifactProcessingSettingsResponse {
             this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
             return this;
         }
-
         public EdifactProcessingSettingsResponse build() {
             return new EdifactProcessingSettingsResponse(createEmptyXmlTagsForTrailingSeparators, maskSecurityInfo, preserveInterchange, suspendInterchangeOnError, useDotAsDecimalSeparator);
         }

@@ -17,7 +17,7 @@ import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateVhdDistrib
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateVmProfileArgs;
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateWindowsUpdateCustomizerArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -36,7 +36,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="buildTimeoutInMinutes")
-    private final @Nullable Input<Integer> buildTimeoutInMinutes;
+      private final @Nullable Input<Integer> buildTimeoutInMinutes;
 
     public Input<Integer> getBuildTimeoutInMinutes() {
         return this.buildTimeoutInMinutes == null ? Input.empty() : this.buildTimeoutInMinutes;
@@ -47,7 +47,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customize")
-    private final @Nullable Input<List<Object>> customize;
+      private final @Nullable Input<List<Object>> customize;
 
     public Input<List<Object>> getCustomize() {
         return this.customize == null ? Input.empty() : this.customize;
@@ -58,7 +58,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="distribute", required=true)
-    private final Input<List<Object>> distribute;
+      private final Input<List<Object>> distribute;
 
     public Input<List<Object>> getDistribute() {
         return this.distribute;
@@ -69,7 +69,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="identity", required=true)
-    private final Input<ImageTemplateIdentityArgs> identity;
+      private final Input<ImageTemplateIdentityArgs> identity;
 
     public Input<ImageTemplateIdentityArgs> getIdentity() {
         return this.identity;
@@ -80,7 +80,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="imageTemplateName")
-    private final @Nullable Input<String> imageTemplateName;
+      private final @Nullable Input<String> imageTemplateName;
 
     public Input<String> getImageTemplateName() {
         return this.imageTemplateName == null ? Input.empty() : this.imageTemplateName;
@@ -91,7 +91,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -102,7 +102,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -113,7 +113,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<Object> source;
+      private final Input<Object> source;
 
     public Input<Object> getSource() {
         return this.source;
@@ -124,7 +124,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -135,7 +135,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vmProfile")
-    private final @Nullable Input<ImageTemplateVmProfileArgs> vmProfile;
+      private final @Nullable Input<ImageTemplateVmProfileArgs> vmProfile;
 
     public Input<ImageTemplateVmProfileArgs> getVmProfile() {
         return this.vmProfile == null ? Input.empty() : this.vmProfile;
@@ -314,7 +314,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
             this.vmProfile = Input.ofNullable(vmProfile);
             return this;
         }
-
         public VirtualMachineImageTemplateArgs build() {
             return new VirtualMachineImageTemplateArgs(buildTimeoutInMinutes, customize, distribute, identity, imageTemplateName, location, resourceGroupName, source, tags, vmProfile);
         }

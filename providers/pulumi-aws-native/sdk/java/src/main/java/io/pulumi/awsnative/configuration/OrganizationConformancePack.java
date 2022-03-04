@@ -8,8 +8,8 @@ import io.pulumi.awsnative.configuration.OrganizationConformancePackArgs;
 import io.pulumi.awsnative.configuration.outputs.OrganizationConformancePackConformancePackInputParameter;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -121,6 +121,37 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
         return this.templateS3Uri;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable OrganizationConformancePackArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.configuration.OrganizationConformancePackArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.configuration.OrganizationConformancePackArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public OrganizationConformancePack(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public OrganizationConformancePack(String name) {
+        this(name, OrganizationConformancePackArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OrganizationConformancePack(String name, @Nullable OrganizationConformancePackArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

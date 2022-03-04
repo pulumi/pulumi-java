@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ContentLinkArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="assemblyCulture")
-    private final @Nullable Input<String> assemblyCulture;
+      private final @Nullable Input<String> assemblyCulture;
 
     public Input<String> getAssemblyCulture() {
         return this.assemblyCulture == null ? Input.empty() : this.assemblyCulture;
@@ -36,7 +36,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="assemblyName", required=true)
-    private final Input<String> assemblyName;
+      private final Input<String> assemblyName;
 
     public Input<String> getAssemblyName() {
         return this.assemblyName;
@@ -47,7 +47,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="assemblyPublicKeyToken")
-    private final @Nullable Input<String> assemblyPublicKeyToken;
+      private final @Nullable Input<String> assemblyPublicKeyToken;
 
     public Input<String> getAssemblyPublicKeyToken() {
         return this.assemblyPublicKeyToken == null ? Input.empty() : this.assemblyPublicKeyToken;
@@ -58,7 +58,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="assemblyVersion")
-    private final @Nullable Input<String> assemblyVersion;
+      private final @Nullable Input<String> assemblyVersion;
 
     public Input<String> getAssemblyVersion() {
         return this.assemblyVersion == null ? Input.empty() : this.assemblyVersion;
@@ -69,14 +69,14 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="changedTime")
-    private final @Nullable Input<String> changedTime;
+      private final @Nullable Input<String> changedTime;
 
     public Input<String> getChangedTime() {
         return this.changedTime == null ? Input.empty() : this.changedTime;
     }
 
     @InputImport(name="content")
-    private final @Nullable Input<Object> content;
+      private final @Nullable Input<Object> content;
 
     public Input<Object> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -87,7 +87,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="contentLink")
-    private final @Nullable Input<ContentLinkArgs> contentLink;
+      private final @Nullable Input<ContentLinkArgs> contentLink;
 
     public Input<ContentLinkArgs> getContentLink() {
         return this.contentLink == null ? Input.empty() : this.contentLink;
@@ -98,7 +98,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -109,14 +109,14 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+      private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -295,7 +295,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public AssemblyPropertiesArgs build() {
             return new AssemblyPropertiesArgs(assemblyCulture, assemblyName, assemblyPublicKeyToken, assemblyVersion, changedTime, content, contentLink, contentType, createdTime, metadata);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.EntityReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,14 +32,14 @@ public final class PackageStoreResponse {
     /**
      * The name of the package store
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The package store linked service reference.
      * 
-     */
+    */
     public EntityReferenceResponse getPackageStoreLinkedService() {
         return this.packageStoreLinkedService;
     }
@@ -75,7 +75,6 @@ public final class PackageStoreResponse {
             this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
             return this;
         }
-
         public PackageStoreResponse build() {
             return new PackageStoreResponse(name, packageStoreLinkedService);
         }

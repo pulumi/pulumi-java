@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -83,63 +83,63 @@ public final class TargetResponse {
     /**
      * The digest of the content, as defined by the Registry V2 HTTP API Specification.
      * 
-     */
+    */
     public Optional<String> getDigest() {
         return Optional.ofNullable(this.digest);
     }
     /**
      * The number of bytes of the content. Same as Size field.
      * 
-     */
+    */
     public Optional<Double> getLength() {
         return Optional.ofNullable(this.length);
     }
     /**
      * The MIME type of the referenced object.
      * 
-     */
+    */
     public Optional<String> getMediaType() {
         return Optional.ofNullable(this.mediaType);
     }
     /**
      * The name of the artifact.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The repository name.
      * 
-     */
+    */
     public Optional<String> getRepository() {
         return Optional.ofNullable(this.repository);
     }
     /**
      * The number of bytes of the content. Same as Length field.
      * 
-     */
+    */
     public Optional<Double> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * The tag name.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
     /**
      * The direct URL to the content.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
     /**
      * The version of the artifact.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -224,7 +224,6 @@ public final class TargetResponse {
             this.version = version;
             return this;
         }
-
         public TargetResponse build() {
             return new TargetResponse(digest, length, mediaType, name, repository, size, tag, url, version);
         }

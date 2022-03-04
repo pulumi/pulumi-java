@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+      private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type;
+      private final @Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type;
 
     public Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -120,7 +120,6 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs build() {
             return new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs(database, instanceId, type);
         }

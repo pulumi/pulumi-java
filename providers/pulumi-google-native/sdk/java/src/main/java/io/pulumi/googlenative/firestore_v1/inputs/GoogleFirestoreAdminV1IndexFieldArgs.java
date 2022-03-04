@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firestore_v1.enums.GoogleFirestoreAdminV1IndexFieldArrayConfig;
 import io.pulumi.googlenative.firestore_v1.enums.GoogleFirestoreAdminV1IndexFieldOrder;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="arrayConfig")
-    private final @Nullable Input<GoogleFirestoreAdminV1IndexFieldArrayConfig> arrayConfig;
+      private final @Nullable Input<GoogleFirestoreAdminV1IndexFieldArrayConfig> arrayConfig;
 
     public Input<GoogleFirestoreAdminV1IndexFieldArrayConfig> getArrayConfig() {
         return this.arrayConfig == null ? Input.empty() : this.arrayConfig;
@@ -36,7 +36,7 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fieldPath")
-    private final @Nullable Input<String> fieldPath;
+      private final @Nullable Input<String> fieldPath;
 
     public Input<String> getFieldPath() {
         return this.fieldPath == null ? Input.empty() : this.fieldPath;
@@ -47,7 +47,7 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="order")
-    private final @Nullable Input<GoogleFirestoreAdminV1IndexFieldOrder> order;
+      private final @Nullable Input<GoogleFirestoreAdminV1IndexFieldOrder> order;
 
     public Input<GoogleFirestoreAdminV1IndexFieldOrder> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -121,7 +121,6 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
             this.order = Input.ofNullable(order);
             return this;
         }
-
         public GoogleFirestoreAdminV1IndexFieldArgs build() {
             return new GoogleFirestoreAdminV1IndexFieldArgs(arrayConfig, fieldPath, order);
         }

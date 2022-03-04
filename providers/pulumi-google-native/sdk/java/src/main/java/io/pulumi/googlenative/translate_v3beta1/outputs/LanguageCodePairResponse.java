@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class LanguageCodePairResponse {
     /**
      * The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.
      * 
-     */
+    */
     public String getSourceLanguageCode() {
         return this.sourceLanguageCode;
     }
     /**
      * The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.
      * 
-     */
+    */
     public String getTargetLanguageCode() {
         return this.targetLanguageCode;
     }
@@ -74,7 +74,6 @@ public final class LanguageCodePairResponse {
             this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
             return this;
         }
-
         public LanguageCodePairResponse build() {
             return new LanguageCodePairResponse(sourceLanguageCode, targetLanguageCode);
         }

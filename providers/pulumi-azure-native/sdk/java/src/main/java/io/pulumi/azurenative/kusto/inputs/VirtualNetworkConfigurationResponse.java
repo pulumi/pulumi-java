@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dataManagementPublicIpId", required=true)
-    private final String dataManagementPublicIpId;
+      private final String dataManagementPublicIpId;
 
     public String getDataManagementPublicIpId() {
         return this.dataManagementPublicIpId;
@@ -32,7 +32,7 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enginePublicIpId", required=true)
-    private final String enginePublicIpId;
+      private final String enginePublicIpId;
 
     public String getEnginePublicIpId() {
         return this.enginePublicIpId;
@@ -43,7 +43,7 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final String subnetId;
+      private final String subnetId;
 
     public String getSubnetId() {
         return this.subnetId;
@@ -102,7 +102,6 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public VirtualNetworkConfigurationResponse build() {
             return new VirtualNetworkConfigurationResponse(dataManagementPublicIpId, enginePublicIpId, subnetId);
         }

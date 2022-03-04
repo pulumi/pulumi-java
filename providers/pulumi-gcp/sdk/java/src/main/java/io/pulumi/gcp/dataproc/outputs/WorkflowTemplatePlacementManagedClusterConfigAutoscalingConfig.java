@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
     /**
      * Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
      * 
-     */
+    */
     public Optional<String> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
@@ -54,7 +54,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
             this.policy = policy;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig(policy);
         }

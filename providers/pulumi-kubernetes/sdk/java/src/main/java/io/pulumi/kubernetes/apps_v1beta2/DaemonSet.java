@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.apps_v1beta2;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1beta2.DaemonSetArgs;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.DaemonSetSpec;
@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 /**
  * DaemonSet represents the configuration of a daemon set.
  * 
- * @deprecated
+ * @Deprecated
  * apps/v1beta2/DaemonSet is deprecated by apps/v1/DaemonSet and not supported by Kubernetes v1.16+ clusters.
  * 
  */
@@ -98,6 +98,37 @@ public class DaemonSet extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable DaemonSetArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.apps_v1beta2.DaemonSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.apps_v1beta2.DaemonSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DaemonSet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DaemonSet(String name) {
+        this(name, DaemonSetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DaemonSet(String name, @Nullable DaemonSetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

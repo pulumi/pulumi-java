@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class BaseImageTriggerResponse {
     /**
      * The type of the auto trigger for base image dependency updates.
      * 
-     */
+    */
     public String getBaseImageTriggerType() {
         return this.baseImageTriggerType;
     }
     /**
      * The name of the trigger.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current status of trigger.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The endpoint URL for receiving update triggers.
      * 
-     */
+    */
     public Optional<String> getUpdateTriggerEndpoint() {
         return Optional.ofNullable(this.updateTriggerEndpoint);
     }
     /**
      * Type of Payload body for Base image update triggers.
      * 
-     */
+    */
     public Optional<String> getUpdateTriggerPayloadType() {
         return Optional.ofNullable(this.updateTriggerPayloadType);
     }
@@ -139,7 +139,6 @@ public final class BaseImageTriggerResponse {
             this.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
         }
-
         public BaseImageTriggerResponse build() {
             return new BaseImageTriggerResponse(baseImageTriggerType, name, status, updateTriggerEndpoint, updateTriggerPayloadType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmcontacts.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="channelId", required=true)
-    private final Input<String> channelId;
+      private final Input<String> channelId;
 
     public Input<String> getChannelId() {
         return this.channelId;
@@ -34,7 +34,7 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retryIntervalInMinutes", required=true)
-    private final Input<Integer> retryIntervalInMinutes;
+      private final Input<Integer> retryIntervalInMinutes;
 
     public Input<Integer> getRetryIntervalInMinutes() {
         return this.retryIntervalInMinutes;
@@ -93,7 +93,6 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
             this.retryIntervalInMinutes = Input.of(Objects.requireNonNull(retryIntervalInMinutes));
             return this;
         }
-
         public ContactChannelTargetInfoArgs build() {
             return new ContactChannelTargetInfoArgs(channelId, retryIntervalInMinutes);
         }

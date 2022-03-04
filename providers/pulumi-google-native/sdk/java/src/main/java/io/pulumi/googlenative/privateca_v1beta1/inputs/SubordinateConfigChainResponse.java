@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SubordinateConfigChainResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="pemCertificates", required=true)
-    private final List<String> pemCertificates;
+      private final List<String> pemCertificates;
 
     public List<String> getPemCertificates() {
         return this.pemCertificates;
@@ -60,7 +60,6 @@ public final class SubordinateConfigChainResponse extends io.pulumi.resources.In
             this.pemCertificates = Objects.requireNonNull(pemCertificates);
             return this;
         }
-
         public SubordinateConfigChainResponse build() {
             return new SubordinateConfigChainResponse(pemCertificates);
         }

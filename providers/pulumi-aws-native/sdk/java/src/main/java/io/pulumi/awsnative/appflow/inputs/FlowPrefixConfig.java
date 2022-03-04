@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowPrefixFormat;
 import io.pulumi.awsnative.appflow.enums.FlowPrefixType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class FlowPrefixConfig extends io.pulumi.resources.InvokeArgs {
     public static final FlowPrefixConfig Empty = new FlowPrefixConfig();
 
     @InputImport(name="prefixFormat")
-    private final @Nullable FlowPrefixFormat prefixFormat;
+      private final @Nullable FlowPrefixFormat prefixFormat;
 
     public Optional<FlowPrefixFormat> getPrefixFormat() {
         return this.prefixFormat == null ? Optional.empty() : Optional.ofNullable(this.prefixFormat);
     }
 
     @InputImport(name="prefixType")
-    private final @Nullable FlowPrefixType prefixType;
+      private final @Nullable FlowPrefixType prefixType;
 
     public Optional<FlowPrefixType> getPrefixType() {
         return this.prefixType == null ? Optional.empty() : Optional.ofNullable(this.prefixType);
@@ -72,7 +72,6 @@ public final class FlowPrefixConfig extends io.pulumi.resources.InvokeArgs {
             this.prefixType = prefixType;
             return this;
         }
-
         public FlowPrefixConfig build() {
             return new FlowPrefixConfig(prefixFormat, prefixType);
         }

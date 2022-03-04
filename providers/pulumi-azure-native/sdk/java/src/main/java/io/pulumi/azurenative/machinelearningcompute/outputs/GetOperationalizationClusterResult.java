@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningcompute.outputs.ContainerRegistryPro
 import io.pulumi.azurenative.machinelearningcompute.outputs.ErrorResponseWrapperResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.GlobalServiceConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.StorageAccountPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -139,112 +139,112 @@ public final class GetOperationalizationClusterResult {
     /**
      * AppInsights configuration.
      * 
-     */
+    */
     public Optional<AppInsightsPropertiesResponse> getAppInsights() {
         return Optional.ofNullable(this.appInsights);
     }
     /**
      * The cluster type.
      * 
-     */
+    */
     public String getClusterType() {
         return this.clusterType;
     }
     /**
      * Container Registry properties.
      * 
-     */
+    */
     public Optional<ContainerRegistryPropertiesResponse> getContainerRegistry() {
         return Optional.ofNullable(this.containerRegistry);
     }
     /**
      * Parameters for the Azure Container Service cluster.
      * 
-     */
+    */
     public Optional<AcsClusterPropertiesResponse> getContainerService() {
         return Optional.ofNullable(this.containerService);
     }
     /**
      * The date and time when the cluster was created.
      * 
-     */
+    */
     public String getCreatedOn() {
         return this.createdOn;
     }
     /**
      * The description of the cluster.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Contains global configuration for the web services in the cluster.
      * 
-     */
+    */
     public Optional<GlobalServiceConfigurationResponse> getGlobalServiceConfiguration() {
         return Optional.ofNullable(this.globalServiceConfiguration);
     }
     /**
      * Specifies the resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The date and time when the cluster was last modified.
      * 
-     */
+    */
     public String getModifiedOn() {
         return this.modifiedOn;
     }
     /**
      * Specifies the name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of provisioning errors reported by the resource provider.
      * 
-     */
+    */
     public List<ErrorResponseWrapperResponse> getProvisioningErrors() {
         return this.provisioningErrors;
     }
     /**
      * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Storage Account properties.
      * 
-     */
+    */
     public Optional<StorageAccountPropertiesResponse> getStorageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -378,7 +378,6 @@ public final class GetOperationalizationClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOperationalizationClusterResult build() {
             return new GetOperationalizationClusterResult(appInsights, clusterType, containerRegistry, containerService, createdOn, description, globalServiceConfiguration, id, location, modifiedOn, name, provisioningErrors, provisioningState, storageAccount, tags, type);
         }

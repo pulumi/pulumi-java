@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.EndpointAuthMode;
 import io.pulumi.azurenative.machinelearningservices.inputs.EndpointAuthKeysArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode", required=true)
-    private final Input<Either<String,EndpointAuthMode>> authMode;
+      private final Input<Either<String,EndpointAuthMode>> authMode;
 
     public Input<Either<String,EndpointAuthMode>> getAuthMode() {
         return this.authMode;
@@ -39,7 +39,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -51,7 +51,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<EndpointAuthKeysArgs> keys;
+      private final @Nullable Input<EndpointAuthKeysArgs> keys;
 
     public Input<EndpointAuthKeysArgs> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -62,7 +62,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -74,7 +74,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -85,7 +85,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffic")
-    private final @Nullable Input<Map<String,Integer>> traffic;
+      private final @Nullable Input<Map<String,Integer>> traffic;
 
     public Input<Map<String,Integer>> getTraffic() {
         return this.traffic == null ? Input.empty() : this.traffic;
@@ -204,7 +204,6 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.traffic = Input.ofNullable(traffic);
             return this;
         }
-
         public OnlineEndpointArgs build() {
             return new OnlineEndpointArgs(authMode, description, keys, properties, target, traffic);
         }

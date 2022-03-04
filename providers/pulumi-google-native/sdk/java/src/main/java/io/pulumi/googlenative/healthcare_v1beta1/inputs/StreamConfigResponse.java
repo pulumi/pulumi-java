@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class StreamConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bigqueryDestination", required=true)
-    private final GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination;
+      private final GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination;
 
     public GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse getBigqueryDestination() {
         return this.bigqueryDestination;
@@ -34,7 +34,7 @@ public final class StreamConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceTypes", required=true)
-    private final List<String> resourceTypes;
+      private final List<String> resourceTypes;
 
     public List<String> getResourceTypes() {
         return this.resourceTypes;
@@ -83,7 +83,6 @@ public final class StreamConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
-
         public StreamConfigResponse build() {
             return new StreamConfigResponse(bigqueryDestination, resourceTypes);
         }

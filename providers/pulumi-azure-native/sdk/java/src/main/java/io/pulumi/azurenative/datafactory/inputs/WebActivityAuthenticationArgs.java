@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -39,7 +39,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -50,7 +50,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="pfx")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPfx() {
         return this.pfx == null ? Input.empty() : this.pfx;
@@ -61,7 +61,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<Object> resource;
+      private final @Nullable Input<Object> resource;
 
     public Input<Object> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -72,7 +72,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -83,7 +83,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userTenant")
-    private final @Nullable Input<Object> userTenant;
+      private final @Nullable Input<Object> userTenant;
 
     public Input<Object> getUserTenant() {
         return this.userTenant == null ? Input.empty() : this.userTenant;
@@ -94,7 +94,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<Object> username;
+      private final @Nullable Input<Object> username;
 
     public Input<Object> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -228,7 +228,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public WebActivityAuthenticationArgs build() {
             return new WebActivityAuthenticationArgs(credential, password, pfx, resource, type, userTenant, username);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedHeaders", required=true)
-    private final List<String> allowedHeaders;
+      private final List<String> allowedHeaders;
 
     public List<String> getAllowedHeaders() {
         return this.allowedHeaders;
@@ -34,7 +34,7 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedMethods", required=true)
-    private final List<String> allowedMethods;
+      private final List<String> allowedMethods;
 
     public List<String> getAllowedMethods() {
         return this.allowedMethods;
@@ -45,7 +45,7 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedOrigins", required=true)
-    private final List<String> allowedOrigins;
+      private final List<String> allowedOrigins;
 
     public List<String> getAllowedOrigins() {
         return this.allowedOrigins;
@@ -56,7 +56,7 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exposedHeaders", required=true)
-    private final List<String> exposedHeaders;
+      private final List<String> exposedHeaders;
 
     public List<String> getExposedHeaders() {
         return this.exposedHeaders;
@@ -67,7 +67,7 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxAgeInSeconds", required=true)
-    private final Integer maxAgeInSeconds;
+      private final Integer maxAgeInSeconds;
 
     public Integer getMaxAgeInSeconds() {
         return this.maxAgeInSeconds;
@@ -146,7 +146,6 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.maxAgeInSeconds = Objects.requireNonNull(maxAgeInSeconds);
             return this;
         }
-
         public CorsRuleResponse build() {
             return new CorsRuleResponse(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
         }

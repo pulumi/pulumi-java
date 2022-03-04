@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class VmRecommendationResponse {
     /**
      * The configuration status of the machines group or machine or rule
      * 
-     */
+    */
     public Optional<String> getConfigurationStatus() {
         return Optional.ofNullable(this.configurationStatus);
     }
     /**
      * The machine supportability of Enforce feature
      * 
-     */
+    */
     public Optional<String> getEnforcementSupport() {
         return Optional.ofNullable(this.enforcementSupport);
     }
     /**
      * The recommendation action of the machine or rule
      * 
-     */
+    */
     public Optional<String> getRecommendationAction() {
         return Optional.ofNullable(this.recommendationAction);
     }
     /**
      * The full resource id of the machine
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -118,7 +118,6 @@ public final class VmRecommendationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public VmRecommendationResponse build() {
             return new VmRecommendationResponse(configurationStatus, enforcementSupport, recommendationAction, resourceId);
         }

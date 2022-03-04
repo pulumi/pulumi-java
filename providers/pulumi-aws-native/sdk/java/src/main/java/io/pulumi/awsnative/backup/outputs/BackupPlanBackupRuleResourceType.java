@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupPlanCopyActionResourceType;
 import io.pulumi.awsnative.backup.outputs.BackupPlanLifecycleResourceType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -157,7 +157,6 @@ public final class BackupPlanBackupRuleResourceType {
             this.targetBackupVault = Objects.requireNonNull(targetBackupVault);
             return this;
         }
-
         public BackupPlanBackupRuleResourceType build() {
             return new BackupPlanBackupRuleResourceType(completionWindowMinutes, copyActions, enableContinuousBackup, lifecycle, recoveryPointTags, ruleName, scheduleExpression, startWindowMinutes, targetBackupVault);
         }

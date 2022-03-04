@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class LocalVolumeSource {
     /**
      * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default value is to auto-select a filesystem if unspecified.
      * 
-     */
+    */
     public Optional<String> getFsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
@@ -76,7 +76,6 @@ public final class LocalVolumeSource {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public LocalVolumeSource build() {
             return new LocalVolumeSource(fsType, path);
         }

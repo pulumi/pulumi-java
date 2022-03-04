@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sqlvirtualmachine;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.GetSqlVirtualMachineGroupArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.GetSqlVirtualMachineGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlVirtualMachineGroup {
-/**
- * A SQL virtual machine group.
+    private GetSqlVirtualMachineGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlVirtualMachineGroupArgs.Builder a);
+    }
+    private static GetSqlVirtualMachineGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlVirtualMachineGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A SQL virtual machine group.
  * API Version: 2017-03-01-preview.
  * 
- *
- * A SQL virtual machine group.
+     *
+     * A SQL virtual machine group.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlVirtualMachineGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A SQL virtual machine group.
+     * API Version: 2017-03-01-preview.
+     * 
+     *
+         * A SQL virtual machine group.
+     * 
+     */
     public static CompletableFuture<GetSqlVirtualMachineGroupResult> invokeAsync(GetSqlVirtualMachineGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sqlvirtualmachine:getSqlVirtualMachineGroup", TypeShape.of(GetSqlVirtualMachineGroupResult.class), args == null ? GetSqlVirtualMachineGroupArgs.Empty : args, Utilities.withVersion(options));
     }

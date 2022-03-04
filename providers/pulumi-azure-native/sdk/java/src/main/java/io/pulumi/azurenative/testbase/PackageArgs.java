@@ -6,7 +6,7 @@ package io.pulumi.azurenative.testbase;
 import io.pulumi.azurenative.testbase.inputs.TargetOSInfoArgs;
 import io.pulumi.azurenative.testbase.inputs.TestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName", required=true)
-    private final Input<String> applicationName;
+      private final Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName;
@@ -34,7 +34,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobPath", required=true)
-    private final Input<String> blobPath;
+      private final Input<String> blobPath;
 
     public Input<String> getBlobPath() {
         return this.blobPath;
@@ -45,7 +45,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flightingRing", required=true)
-    private final Input<String> flightingRing;
+      private final Input<String> flightingRing;
 
     public Input<String> getFlightingRing() {
         return this.flightingRing;
@@ -56,7 +56,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,7 +67,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageName")
-    private final @Nullable Input<String> packageName;
+      private final @Nullable Input<String> packageName;
 
     public Input<String> getPackageName() {
         return this.packageName == null ? Input.empty() : this.packageName;
@@ -78,7 +78,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -100,7 +100,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetOSList", required=true)
-    private final Input<List<TargetOSInfoArgs>> targetOSList;
+      private final Input<List<TargetOSInfoArgs>> targetOSList;
 
     public Input<List<TargetOSInfoArgs>> getTargetOSList() {
         return this.targetOSList;
@@ -111,7 +111,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-    private final Input<String> testBaseAccountName;
+      private final Input<String> testBaseAccountName;
 
     public Input<String> getTestBaseAccountName() {
         return this.testBaseAccountName;
@@ -122,7 +122,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tests", required=true)
-    private final Input<List<TestArgs>> tests;
+      private final Input<List<TestArgs>> tests;
 
     public Input<List<TestArgs>> getTests() {
         return this.tests;
@@ -133,7 +133,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -327,7 +327,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public PackageArgs build() {
             return new PackageArgs(applicationName, blobPath, flightingRing, location, packageName, resourceGroupName, tags, targetOSList, testBaseAccountName, tests, version);
         }

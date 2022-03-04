@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.AccessUrlsResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.CertificateAuthorityPolicyResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.CertificateConfigResponse;
@@ -152,126 +152,126 @@ public final class GetCertificateAuthorityResult {
     /**
      * URLs for accessing content published by this CA, such as the CA certificate and CRLs.
      * 
-     */
+    */
     public AccessUrlsResponse getAccessUrls() {
         return this.accessUrls;
     }
     /**
      * A structured description of this CertificateAuthority's CA certificate and its issuers. Ordered as self-to-root.
      * 
-     */
+    */
     public List<CertificateDescriptionResponse> getCaCertificateDescriptions() {
         return this.caCertificateDescriptions;
     }
     /**
      * Optional. The CertificateAuthorityPolicy to enforce when issuing Certificates from this CertificateAuthority.
      * 
-     */
+    */
     public CertificateAuthorityPolicyResponse getCertificatePolicy() {
         return this.certificatePolicy;
     }
     /**
      * Immutable. The config used to create a self-signed X.509 certificate or CSR.
      * 
-     */
+    */
     public CertificateConfigResponse getConfig() {
         return this.config;
     }
     /**
      * The time at which this CertificateAuthority was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The time at which this CertificateAuthority will be deleted, if scheduled for deletion.
      * 
-     */
+    */
     public String getDeleteTime() {
         return this.deleteTime;
     }
     /**
      * Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.
      * 
-     */
+    */
     public String getGcsBucket() {
         return this.gcsBucket;
     }
     /**
      * Optional. The IssuingOptions to follow when issuing Certificates from this CertificateAuthority.
      * 
-     */
+    */
     public IssuingOptionsResponse getIssuingOptions() {
         return this.issuingOptions;
     }
     /**
      * Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.
      * 
-     */
+    */
     public KeyVersionSpecResponse getKeySpec() {
         return this.keySpec;
     }
     /**
      * Optional. Labels with user-defined metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
      * 
-     */
+    */
     public String getLifetime() {
         return this.lifetime;
     }
     /**
      * The resource name for this CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority's certificate.
      * 
-     */
+    */
     public List<String> getPemCaCertificates() {
         return this.pemCaCertificates;
     }
     /**
      * The State for this CertificateAuthority.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.
      * 
-     */
+    */
     public SubordinateConfigResponse getSubordinateConfig() {
         return this.subordinateConfig;
     }
     /**
      * Immutable. The Tier of this CertificateAuthority.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
     /**
      * Immutable. The Type of this CertificateAuthority.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The time at which this CertificateAuthority was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -419,7 +419,6 @@ public final class GetCertificateAuthorityResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCertificateAuthorityResult build() {
             return new GetCertificateAuthorityResult(accessUrls, caCertificateDescriptions, certificatePolicy, config, createTime, deleteTime, gcsBucket, issuingOptions, keySpec, labels, lifetime, name, pemCaCertificates, state, subordinateConfig, tier, type, updateTime);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotMessageGroup;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -39,14 +39,14 @@ public final class BotFulfillmentUpdateResponseSpecification {
     /**
      * Determines whether the user can interrupt an update message while it is playing.
      * 
-     */
+    */
     public Optional<Boolean> getAllowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
     /**
      * The frequency that a message is sent to the user. When the period ends, Amazon Lex chooses a message from the message groups and plays it to the user. If the fulfillment Lambda returns before the first period ends, an update message is not played to the user.
      * 
-     */
+    */
     public Integer getFrequencyInSeconds() {
         return this.frequencyInSeconds;
     }
@@ -92,7 +92,6 @@ public final class BotFulfillmentUpdateResponseSpecification {
             this.messageGroups = Objects.requireNonNull(messageGroups);
             return this;
         }
-
         public BotFulfillmentUpdateResponseSpecification build() {
             return new BotFulfillmentUpdateResponseSpecification(allowInterrupt, frequencyInSeconds, messageGroups);
         }

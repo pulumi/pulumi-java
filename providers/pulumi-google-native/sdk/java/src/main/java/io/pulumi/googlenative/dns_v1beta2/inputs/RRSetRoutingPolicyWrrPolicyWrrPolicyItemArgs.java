@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -21,14 +21,14 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
     public static final RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs Empty = new RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs();
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="rrdatas")
-    private final @Nullable Input<List<String>> rrdatas;
+      private final @Nullable Input<List<String>> rrdatas;
 
     public Input<List<String>> getRrdatas() {
         return this.rrdatas == null ? Input.empty() : this.rrdatas;
@@ -39,7 +39,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
      * 
      */
     @InputImport(name="signatureRrdatas")
-    private final @Nullable Input<List<String>> signatureRrdatas;
+      private final @Nullable Input<List<String>> signatureRrdatas;
 
     public Input<List<String>> getSignatureRrdatas() {
         return this.signatureRrdatas == null ? Input.empty() : this.signatureRrdatas;
@@ -50,7 +50,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Double> weight;
+      private final @Nullable Input<Double> weight;
 
     public Input<Double> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -139,7 +139,6 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs build() {
             return new RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs(kind, rrdatas, signatureRrdatas, weight);
         }

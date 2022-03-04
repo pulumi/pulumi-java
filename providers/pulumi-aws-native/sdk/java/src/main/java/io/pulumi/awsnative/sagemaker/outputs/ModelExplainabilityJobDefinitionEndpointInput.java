@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionEndpointInputS3InputMode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,42 +69,42 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
     /**
      * JSONpath to locate features in JSONlines dataset
      * 
-     */
+    */
     public Optional<String> getFeaturesAttribute() {
         return Optional.ofNullable(this.featuresAttribute);
     }
     /**
      * Index or JSONpath to locate predicted label(s)
      * 
-     */
+    */
     public Optional<String> getInferenceAttribute() {
         return Optional.ofNullable(this.inferenceAttribute);
     }
     /**
      * Path to the filesystem where the endpoint data is available to the container.
      * 
-     */
+    */
     public String getLocalPath() {
         return this.localPath;
     }
     /**
      * Index or JSONpath to locate probabilities
      * 
-     */
+    */
     public Optional<String> getProbabilityAttribute() {
         return Optional.ofNullable(this.probabilityAttribute);
     }
     /**
      * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
      * 
-     */
+    */
     public Optional<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
         return Optional.ofNullable(this.s3DataDistributionType);
     }
     /**
      * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
      * 
-     */
+    */
     public Optional<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
         return Optional.ofNullable(this.s3InputMode);
     }
@@ -175,7 +175,6 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
             this.s3InputMode = s3InputMode;
             return this;
         }
-
         public ModelExplainabilityJobDefinitionEndpointInput build() {
             return new ModelExplainabilityJobDefinitionEndpointInput(endpointName, featuresAttribute, inferenceAttribute, localPath, probabilityAttribute, s3DataDistributionType, s3InputMode);
         }

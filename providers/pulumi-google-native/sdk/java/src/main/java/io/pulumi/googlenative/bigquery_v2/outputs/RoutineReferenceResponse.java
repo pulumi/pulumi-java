@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class RoutineReferenceResponse {
     /**
      * [Required] The ID of the dataset containing this routine.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * [Required] The ID of the project containing this routine.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
      * 
-     */
+    */
     public String getRoutineId() {
         return this.routineId;
     }
@@ -95,7 +95,6 @@ public final class RoutineReferenceResponse {
             this.routineId = Objects.requireNonNull(routineId);
             return this;
         }
-
         public RoutineReferenceResponse build() {
             return new RoutineReferenceResponse(datasetId, project, routineId);
         }

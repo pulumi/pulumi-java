@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class OriginGroupOverrideActionParametersResponse extends io.pulumi
     public static final OriginGroupOverrideActionParametersResponse Empty = new OriginGroupOverrideActionParametersResponse();
 
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -29,7 +29,7 @@ public final class OriginGroupOverrideActionParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="originGroup", required=true)
-    private final ResourceReferenceResponse originGroup;
+      private final ResourceReferenceResponse originGroup;
 
     public ResourceReferenceResponse getOriginGroup() {
         return this.originGroup;
@@ -78,7 +78,6 @@ public final class OriginGroupOverrideActionParametersResponse extends io.pulumi
             this.originGroup = Objects.requireNonNull(originGroup);
             return this;
         }
-
         public OriginGroupOverrideActionParametersResponse build() {
             return new OriginGroupOverrideActionParametersResponse(odataType, originGroup);
         }

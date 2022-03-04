@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParquetFormatArgs;
 import io.pulumi.azurenative.datafactory.inputs.TextFormatArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -46,7 +46,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="compression")
-    private final @Nullable Input<DatasetCompressionArgs> compression;
+      private final @Nullable Input<DatasetCompressionArgs> compression;
 
     public Input<DatasetCompressionArgs> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -57,7 +57,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -68,7 +68,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable Input<Object> fileName;
+      private final @Nullable Input<Object> fileName;
 
     public Input<Object> getFileName() {
         return this.fileName == null ? Input.empty() : this.fileName;
@@ -79,7 +79,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable Input<DatasetFolderArgs> folder;
+      private final @Nullable Input<DatasetFolderArgs> folder;
 
     public Input<DatasetFolderArgs> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
@@ -90,7 +90,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="folderPath")
-    private final @Nullable Input<Object> folderPath;
+      private final @Nullable Input<Object> folderPath;
 
     public Input<Object> getFolderPath() {
         return this.folderPath == null ? Input.empty() : this.folderPath;
@@ -101,7 +101,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<Object> format;
+      private final @Nullable Input<Object> format;
 
     public Input<Object> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -112,7 +112,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -123,7 +123,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -134,7 +134,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<Object> schema;
+      private final @Nullable Input<Object> schema;
 
     public Input<Object> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -145,7 +145,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="structure")
-    private final @Nullable Input<Object> structure;
+      private final @Nullable Input<Object> structure;
 
     public Input<Object> getStructure() {
         return this.structure == null ? Input.empty() : this.structure;
@@ -157,7 +157,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -366,7 +366,6 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureDataLakeStoreDatasetArgs build() {
             return new AzureDataLakeStoreDatasetArgs(annotations, compression, description, fileName, folder, folderPath, format, linkedServiceName, parameters, schema, structure, type);
         }

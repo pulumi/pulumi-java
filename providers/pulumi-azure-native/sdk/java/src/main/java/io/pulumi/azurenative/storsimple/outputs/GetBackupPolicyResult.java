@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -98,77 +98,77 @@ public final class GetBackupPolicyResult {
     /**
      * The backup policy creation type. Indicates whether this was created through SaaS or through StorSimple Snapshot Manager.
      * 
-     */
+    */
     public String getBackupPolicyCreationType() {
         return this.backupPolicyCreationType;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The time of the last backup for the backup policy.
      * 
-     */
+    */
     public String getLastBackupTime() {
         return this.lastBackupTime;
     }
     /**
      * The name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The time of the next backup for the backup policy.
      * 
-     */
+    */
     public String getNextBackupTime() {
         return this.nextBackupTime;
     }
     /**
      * Indicates whether at least one of the schedules in the backup policy is active or not.
      * 
-     */
+    */
     public String getScheduledBackupStatus() {
         return this.scheduledBackupStatus;
     }
     /**
      * The count of schedules the backup policy contains.
      * 
-     */
+    */
     public Double getSchedulesCount() {
         return this.schedulesCount;
     }
     /**
      * If the backup policy was created by StorSimple Snapshot Manager, then this field indicates the hostname of the StorSimple Snapshot Manager.
      * 
-     */
+    */
     public String getSsmHostName() {
         return this.ssmHostName;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The path IDs of the volumes which are part of the backup policy.
      * 
-     */
+    */
     public List<String> getVolumeIds() {
         return this.volumeIds;
     }
@@ -267,7 +267,6 @@ public final class GetBackupPolicyResult {
             this.volumeIds = Objects.requireNonNull(volumeIds);
             return this;
         }
-
         public GetBackupPolicyResult build() {
             return new GetBackupPolicyResult(backupPolicyCreationType, id, kind, lastBackupTime, name, nextBackupTime, scheduledBackupStatus, schedulesCount, ssmHostName, type, volumeIds);
         }

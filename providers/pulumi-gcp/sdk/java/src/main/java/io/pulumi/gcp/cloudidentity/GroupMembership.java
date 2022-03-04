@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudidentity;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudidentity.GroupMembershipArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipState;
@@ -168,6 +168,37 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(GroupMembershipArgs.Builder a);
+    }
+    private static io.pulumi.gcp.cloudidentity.GroupMembershipArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.cloudidentity.GroupMembershipArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public GroupMembership(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public GroupMembership(String name) {
+        this(name, GroupMembershipArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public GroupMembership(String name, GroupMembershipArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

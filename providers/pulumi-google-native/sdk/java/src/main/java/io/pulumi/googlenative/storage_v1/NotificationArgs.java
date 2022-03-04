@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     public static final NotificationArgs Empty = new NotificationArgs();
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -28,7 +28,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAttributes")
-    private final @Nullable Input<Map<String,String>> customAttributes;
+      private final @Nullable Input<Map<String,String>> customAttributes;
 
     public Input<Map<String,String>> getCustomAttributes() {
         return this.customAttributes == null ? Input.empty() : this.customAttributes;
@@ -39,7 +39,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -50,7 +50,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTypes")
-    private final @Nullable Input<List<String>> eventTypes;
+      private final @Nullable Input<List<String>> eventTypes;
 
     public Input<List<String>> getEventTypes() {
         return this.eventTypes == null ? Input.empty() : this.eventTypes;
@@ -61,7 +61,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -72,7 +72,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -83,7 +83,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectNamePrefix")
-    private final @Nullable Input<String> objectNamePrefix;
+      private final @Nullable Input<String> objectNamePrefix;
 
     public Input<String> getObjectNamePrefix() {
         return this.objectNamePrefix == null ? Input.empty() : this.objectNamePrefix;
@@ -94,14 +94,14 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="payloadFormat")
-    private final @Nullable Input<String> payloadFormat;
+      private final @Nullable Input<String> payloadFormat;
 
     public Input<String> getPayloadFormat() {
         return this.payloadFormat == null ? Input.empty() : this.payloadFormat;
     }
 
     @InputImport(name="provisionalUserProject")
-    private final @Nullable Input<String> provisionalUserProject;
+      private final @Nullable Input<String> provisionalUserProject;
 
     public Input<String> getProvisionalUserProject() {
         return this.provisionalUserProject == null ? Input.empty() : this.provisionalUserProject;
@@ -112,7 +112,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -123,14 +123,14 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
     }
 
     @InputImport(name="userProject")
-    private final @Nullable Input<String> userProject;
+      private final @Nullable Input<String> userProject;
 
     public Input<String> getUserProject() {
         return this.userProject == null ? Input.empty() : this.userProject;
@@ -339,7 +339,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             this.userProject = Input.ofNullable(userProject);
             return this;
         }
-
         public NotificationArgs build() {
             return new NotificationArgs(bucket, customAttributes, etag, eventTypes, id, kind, objectNamePrefix, payloadFormat, provisionalUserProject, selfLink, topic, userProject);
         }

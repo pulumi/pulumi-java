@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<String> format;
+      private final Input<String> format;
 
     public Input<String> getFormat() {
         return this.format;
@@ -30,7 +30,7 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="localeCode")
-    private final @Nullable Input<String> localeCode;
+      private final @Nullable Input<String> localeCode;
 
     public Input<String> getLocaleCode() {
         return this.localeCode == null ? Input.empty() : this.localeCode;
@@ -41,7 +41,7 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="timezoneOffset")
-    private final @Nullable Input<String> timezoneOffset;
+      private final @Nullable Input<String> timezoneOffset;
 
     public Input<String> getTimezoneOffset() {
         return this.timezoneOffset == null ? Input.empty() : this.timezoneOffset;
@@ -115,7 +115,6 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
             this.timezoneOffset = Input.ofNullable(timezoneOffset);
             return this;
         }
-
         public DatasetDatetimeOptionsArgs build() {
             return new DatasetDatetimeOptionsArgs(format, localeCode, timezoneOffset);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreColumn;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +16,7 @@ public final class DatastoreSchemaDefinition extends io.pulumi.resources.InvokeA
     public static final DatastoreSchemaDefinition Empty = new DatastoreSchemaDefinition();
 
     @InputImport(name="columns")
-    private final @Nullable List<DatastoreColumn> columns;
+      private final @Nullable List<DatastoreColumn> columns;
 
     public List<DatastoreColumn> getColumns() {
         return this.columns == null ? List.of() : this.columns;
@@ -54,7 +54,6 @@ public final class DatastoreSchemaDefinition extends io.pulumi.resources.InvokeA
             this.columns = columns;
             return this;
         }
-
         public DatastoreSchemaDefinition build() {
             return new DatastoreSchemaDefinition(columns);
         }

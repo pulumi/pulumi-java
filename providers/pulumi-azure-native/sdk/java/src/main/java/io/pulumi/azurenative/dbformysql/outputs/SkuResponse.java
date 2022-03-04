@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbformysql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class SkuResponse {
     /**
      * The scale up/out capacity, representing server's compute units.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The family of hardware.
      * 
-     */
+    */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The size code, to be interpreted by resource as appropriate.
      * 
-     */
+    */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * The tier of the particular SKU, e.g. Basic.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -140,7 +140,6 @@ public final class SkuResponse {
             this.tier = tier;
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(capacity, family, name, size, tier);
         }

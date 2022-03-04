@@ -6,21 +6,41 @@ package io.pulumi.azurenative.keyvault;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.keyvault.inputs.GetMHSMPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.keyvault.outputs.GetMHSMPrivateEndpointConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMHSMPrivateEndpointConnection {
-/**
- * Private endpoint connection resource.
+    private GetMHSMPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetMHSMPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetMHSMPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMHSMPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Private endpoint connection resource.
  * API Version: 2021-06-01-preview.
  * 
- *
- * Private endpoint connection resource.
+     *
+     * Private endpoint connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetMHSMPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Private endpoint connection resource.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * Private endpoint connection resource.
+     * 
+     */
     public static CompletableFuture<GetMHSMPrivateEndpointConnectionResult> invokeAsync(GetMHSMPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:keyvault:getMHSMPrivateEndpointConnection", TypeShape.of(GetMHSMPrivateEndpointConnectionResult.class), args == null ? GetMHSMPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

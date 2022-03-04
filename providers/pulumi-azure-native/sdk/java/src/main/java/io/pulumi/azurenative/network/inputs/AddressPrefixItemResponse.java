@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="addressPrefix")
-    private final @Nullable String addressPrefix;
+      private final @Nullable String addressPrefix;
 
     public Optional<String> getAddressPrefix() {
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
@@ -34,7 +34,7 @@ public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="addressPrefixType")
-    private final @Nullable String addressPrefixType;
+      private final @Nullable String addressPrefixType;
 
     public Optional<String> getAddressPrefixType() {
         return this.addressPrefixType == null ? Optional.empty() : Optional.ofNullable(this.addressPrefixType);
@@ -83,7 +83,6 @@ public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeA
             this.addressPrefixType = addressPrefixType;
             return this;
         }
-
         public AddressPrefixItemResponse build() {
             return new AddressPrefixItemResponse(addressPrefix, addressPrefixType);
         }

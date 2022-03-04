@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
      * 
      */
     @InputImport(name="sessionCount")
-    private final @Nullable Input<Integer> sessionCount;
+      private final @Nullable Input<Integer> sessionCount;
 
     public Input<Integer> getSessionCount() {
         return this.sessionCount == null ? Input.empty() : this.sessionCount;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -122,7 +122,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs(metrics, sessionCount, version);
         }

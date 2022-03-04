@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class JobReferenceResponse {
     /**
      * Optional. The job ID, which must be unique within the project.The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or hyphens (-). The maximum length is 100 characters.If not specified by the caller, the job ID will be provided by the server.
      * 
-     */
+    */
     public String getJobId() {
         return this.jobId;
     }
     /**
      * Optional. The ID of the Google Cloud Platform project that the job belongs to. If specified, must match the request project ID.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
@@ -74,7 +74,6 @@ public final class JobReferenceResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public JobReferenceResponse build() {
             return new JobReferenceResponse(jobId, project);
         }

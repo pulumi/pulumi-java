@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ResourceGroupValueResponse {
     /**
      * Location of the resource group.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the resource group.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -76,7 +76,6 @@ public final class ResourceGroupValueResponse {
             this.name = name;
             return this;
         }
-
         public ResourceGroupValueResponse build() {
             return new ResourceGroupValueResponse(location, name);
         }

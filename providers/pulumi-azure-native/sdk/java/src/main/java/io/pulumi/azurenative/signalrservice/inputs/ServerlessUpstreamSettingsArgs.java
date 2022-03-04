@@ -5,7 +5,7 @@ package io.pulumi.azurenative.signalrservice.inputs;
 
 import io.pulumi.azurenative.signalrservice.inputs.UpstreamTemplateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ServerlessUpstreamSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="templates")
-    private final @Nullable Input<List<UpstreamTemplateArgs>> templates;
+      private final @Nullable Input<List<UpstreamTemplateArgs>> templates;
 
     public Input<List<UpstreamTemplateArgs>> getTemplates() {
         return this.templates == null ? Input.empty() : this.templates;
@@ -67,7 +67,6 @@ public final class ServerlessUpstreamSettingsArgs extends io.pulumi.resources.Re
             this.templates = Input.ofNullable(templates);
             return this;
         }
-
         public ServerlessUpstreamSettingsArgs build() {
             return new ServerlessUpstreamSettingsArgs(templates);
         }

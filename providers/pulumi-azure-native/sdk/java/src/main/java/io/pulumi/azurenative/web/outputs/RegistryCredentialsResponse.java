@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class RegistryCredentialsResponse {
     /**
      * The name of the Secret that contains the registry login password
      * 
-     */
+    */
     public Optional<String> getPasswordSecretRef() {
         return Optional.ofNullable(this.passwordSecretRef);
     }
     /**
      * Container Registry Server
      * 
-     */
+    */
     public Optional<String> getServer() {
         return Optional.ofNullable(this.server);
     }
     /**
      * Container Registry Username
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -97,7 +97,6 @@ public final class RegistryCredentialsResponse {
             this.username = username;
             return this;
         }
-
         public RegistryCredentialsResponse build() {
             return new RegistryCredentialsResponse(passwordSecretRef, server, username);
         }

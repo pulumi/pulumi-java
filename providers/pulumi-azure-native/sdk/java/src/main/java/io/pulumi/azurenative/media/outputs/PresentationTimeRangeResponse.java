@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class PresentationTimeRangeResponse {
     /**
      * The absolute end time boundary.
      * 
-     */
+    */
     public Optional<Double> getEndTimestamp() {
         return Optional.ofNullable(this.endTimestamp);
     }
     /**
      * The indicator of forcing existing of end time stamp.
      * 
-     */
+    */
     public Optional<Boolean> getForceEndTimestamp() {
         return Optional.ofNullable(this.forceEndTimestamp);
     }
     /**
      * The relative to end right edge.
      * 
-     */
+    */
     public Optional<Double> getLiveBackoffDuration() {
         return Optional.ofNullable(this.liveBackoffDuration);
     }
     /**
      * The relative to end sliding window.
      * 
-     */
+    */
     public Optional<Double> getPresentationWindowDuration() {
         return Optional.ofNullable(this.presentationWindowDuration);
     }
     /**
      * The absolute start time boundary.
      * 
-     */
+    */
     public Optional<Double> getStartTimestamp() {
         return Optional.ofNullable(this.startTimestamp);
     }
     /**
      * The time scale of time stamps.
      * 
-     */
+    */
     public Optional<Double> getTimescale() {
         return Optional.ofNullable(this.timescale);
     }
@@ -161,7 +161,6 @@ public final class PresentationTimeRangeResponse {
             this.timescale = timescale;
             return this;
         }
-
         public PresentationTimeRangeResponse build() {
             return new PresentationTimeRangeResponse(endTimestamp, forceEndTimestamp, liveBackoffDuration, presentationWindowDuration, startTimestamp, timescale);
         }

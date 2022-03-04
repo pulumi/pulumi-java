@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<List<String>> properties;
+      private final @Nullable Input<List<String>> properties;
 
     public Input<List<String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -36,7 +36,7 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<OSPolicyResourceFileArgs> source;
+      private final Input<OSPolicyResourceFileArgs> source;
 
     public Input<OSPolicyResourceFileArgs> getSource() {
         return this.source;
@@ -95,7 +95,6 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public OSPolicyResourcePackageResourceMSIArgs build() {
             return new OSPolicyResourcePackageResourceMSIArgs(properties, source);
         }

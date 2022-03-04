@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.StorageProfileResponse;
 import io.pulumi.azurenative.portal.outputs.TerminalSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,35 +54,35 @@ public final class UserPropertiesResponse {
     /**
      * The preferred location of the cloud shell.
      * 
-     */
+    */
     public String getPreferredLocation() {
         return this.preferredLocation;
     }
     /**
      * The operating system type of the cloud shell. Deprecated, use preferredShellType.
      * 
-     */
+    */
     public String getPreferredOsType() {
         return this.preferredOsType;
     }
     /**
      * The shell type of the cloud shell.
      * 
-     */
+    */
     public String getPreferredShellType() {
         return this.preferredShellType;
     }
     /**
      * The storage profile of the user settings.
      * 
-     */
+    */
     public StorageProfileResponse getStorageProfile() {
         return this.storageProfile;
     }
     /**
      * Settings for terminal appearance.
      * 
-     */
+    */
     public TerminalSettingsResponse getTerminalSettings() {
         return this.terminalSettings;
     }
@@ -139,7 +139,6 @@ public final class UserPropertiesResponse {
             this.terminalSettings = Objects.requireNonNull(terminalSettings);
             return this;
         }
-
         public UserPropertiesResponse build() {
             return new UserPropertiesResponse(preferredLocation, preferredOsType, preferredShellType, storageProfile, terminalSettings);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AutoscalingTargetsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="cpuUtilizationPercent", required=true)
-    private final Integer cpuUtilizationPercent;
+      private final Integer cpuUtilizationPercent;
 
     public Integer getCpuUtilizationPercent() {
         return this.cpuUtilizationPercent;
@@ -59,7 +59,6 @@ public final class AutoscalingTargetsResponse extends io.pulumi.resources.Invoke
             this.cpuUtilizationPercent = Objects.requireNonNull(cpuUtilizationPercent);
             return this;
         }
-
         public AutoscalingTargetsResponse build() {
             return new AutoscalingTargetsResponse(cpuUtilizationPercent);
         }

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerAuthenticateOi
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerFixedResponseConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerForwardConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRedirectConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -144,7 +144,6 @@ public final class ListenerAction {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListenerAction build() {
             return new ListenerAction(authenticateCognitoConfig, authenticateOidcConfig, fixedResponseConfig, forwardConfig, order, redirectConfig, targetGroupArn, type);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.importexport.inputs;
 import io.pulumi.azurenative.importexport.enums.DriveState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitLockerKey")
-    private final @Nullable Input<String> bitLockerKey;
+      private final @Nullable Input<String> bitLockerKey;
 
     public Input<String> getBitLockerKey() {
         return this.bitLockerKey == null ? Input.empty() : this.bitLockerKey;
@@ -38,7 +38,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bytesSucceeded")
-    private final @Nullable Input<Double> bytesSucceeded;
+      private final @Nullable Input<Double> bytesSucceeded;
 
     public Input<Double> getBytesSucceeded() {
         return this.bytesSucceeded == null ? Input.empty() : this.bytesSucceeded;
@@ -49,7 +49,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyStatus")
-    private final @Nullable Input<String> copyStatus;
+      private final @Nullable Input<String> copyStatus;
 
     public Input<String> getCopyStatus() {
         return this.copyStatus == null ? Input.empty() : this.copyStatus;
@@ -60,7 +60,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="driveHeaderHash")
-    private final @Nullable Input<String> driveHeaderHash;
+      private final @Nullable Input<String> driveHeaderHash;
 
     public Input<String> getDriveHeaderHash() {
         return this.driveHeaderHash == null ? Input.empty() : this.driveHeaderHash;
@@ -71,7 +71,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="driveId")
-    private final @Nullable Input<String> driveId;
+      private final @Nullable Input<String> driveId;
 
     public Input<String> getDriveId() {
         return this.driveId == null ? Input.empty() : this.driveId;
@@ -82,7 +82,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorLogUri")
-    private final @Nullable Input<String> errorLogUri;
+      private final @Nullable Input<String> errorLogUri;
 
     public Input<String> getErrorLogUri() {
         return this.errorLogUri == null ? Input.empty() : this.errorLogUri;
@@ -93,7 +93,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifestFile")
-    private final @Nullable Input<String> manifestFile;
+      private final @Nullable Input<String> manifestFile;
 
     public Input<String> getManifestFile() {
         return this.manifestFile == null ? Input.empty() : this.manifestFile;
@@ -104,7 +104,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifestHash")
-    private final @Nullable Input<String> manifestHash;
+      private final @Nullable Input<String> manifestHash;
 
     public Input<String> getManifestHash() {
         return this.manifestHash == null ? Input.empty() : this.manifestHash;
@@ -115,7 +115,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifestUri")
-    private final @Nullable Input<String> manifestUri;
+      private final @Nullable Input<String> manifestUri;
 
     public Input<String> getManifestUri() {
         return this.manifestUri == null ? Input.empty() : this.manifestUri;
@@ -126,7 +126,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="percentComplete")
-    private final @Nullable Input<Integer> percentComplete;
+      private final @Nullable Input<Integer> percentComplete;
 
     public Input<Integer> getPercentComplete() {
         return this.percentComplete == null ? Input.empty() : this.percentComplete;
@@ -137,7 +137,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,DriveState>> state;
+      private final @Nullable Input<Either<String,DriveState>> state;
 
     public Input<Either<String,DriveState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -148,7 +148,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verboseLogUri")
-    private final @Nullable Input<String> verboseLogUri;
+      private final @Nullable Input<String> verboseLogUri;
 
     public Input<String> getVerboseLogUri() {
         return this.verboseLogUri == null ? Input.empty() : this.verboseLogUri;
@@ -357,7 +357,6 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.verboseLogUri = Input.ofNullable(verboseLogUri);
             return this;
         }
-
         public DriveStatusArgs build() {
             return new DriveStatusArgs(bitLockerKey, bytesSucceeded, copyStatus, driveHeaderHash, driveId, errorLogUri, manifestFile, manifestHash, manifestUri, percentComplete, state, verboseLogUri);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -97,56 +97,56 @@ public final class DatabricksSparkJarActivityResponse {
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of libraries to be installed on the cluster that will execute the job.
      * 
-     */
+    */
     public List<Map<String,Object>> getLibraries() {
         return this.libraries == null ? List.of() : this.libraries;
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * The full name of the class containing the main method to be executed. This class must be contained in a JAR provided as a library. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getMainClassName() {
         return this.mainClassName;
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Parameters that will be passed to the main method.
      * 
-     */
+    */
     public List<Object> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
@@ -154,14 +154,14 @@ public final class DatabricksSparkJarActivityResponse {
      * Type of activity.
      * Expected value is 'DatabricksSparkJar'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -253,7 +253,6 @@ public final class DatabricksSparkJarActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public DatabricksSparkJarActivityResponse build() {
             return new DatabricksSparkJarActivityResponse(dependsOn, description, libraries, linkedServiceName, mainClassName, name, parameters, policy, type, userProperties);
         }

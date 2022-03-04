@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyInventoryFilterResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class OSPolicyResourceGroupResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="inventoryFilters", required=true)
-    private final List<OSPolicyInventoryFilterResponse> inventoryFilters;
+      private final List<OSPolicyInventoryFilterResponse> inventoryFilters;
 
     public List<OSPolicyInventoryFilterResponse> getInventoryFilters() {
         return this.inventoryFilters;
@@ -34,7 +34,7 @@ public final class OSPolicyResourceGroupResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resources", required=true)
-    private final List<OSPolicyResourceResponse> resources;
+      private final List<OSPolicyResourceResponse> resources;
 
     public List<OSPolicyResourceResponse> getResources() {
         return this.resources;
@@ -83,7 +83,6 @@ public final class OSPolicyResourceGroupResponse extends io.pulumi.resources.Inv
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public OSPolicyResourceGroupResponse build() {
             return new OSPolicyResourceGroupResponse(inventoryFilters, resources);
         }

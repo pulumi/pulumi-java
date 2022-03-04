@@ -6,7 +6,7 @@ package io.pulumi.awsnative.transfer;
 import io.pulumi.awsnative.transfer.inputs.WorkflowStepArgs;
 import io.pulumi.awsnative.transfer.inputs.WorkflowTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onExceptionSteps")
-    private final @Nullable Input<List<WorkflowStepArgs>> onExceptionSteps;
+      private final @Nullable Input<List<WorkflowStepArgs>> onExceptionSteps;
 
     public Input<List<WorkflowStepArgs>> getOnExceptionSteps() {
         return this.onExceptionSteps == null ? Input.empty() : this.onExceptionSteps;
@@ -44,7 +44,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="steps", required=true)
-    private final Input<List<WorkflowStepArgs>> steps;
+      private final Input<List<WorkflowStepArgs>> steps;
 
     public Input<List<WorkflowStepArgs>> getSteps() {
         return this.steps;
@@ -55,7 +55,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<WorkflowTagArgs>> tags;
+      private final @Nullable Input<List<WorkflowTagArgs>> tags;
 
     public Input<List<WorkflowTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,7 +144,6 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public WorkflowArgs build() {
             return new WorkflowArgs(description, onExceptionSteps, steps, tags);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.MigrateProjectPropertiesResponse;
 import io.pulumi.azurenative.migrate.outputs.MigrateProjectResponseTags;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -70,49 +70,49 @@ public final class GetMigrateProjectResult {
     /**
      * Gets or sets the eTag for concurrency control.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Gets the relative URL to get this migrate project.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the Azure location in which migrate project is created.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the name of the migrate project.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the nested properties.
      * 
-     */
+    */
     public MigrateProjectPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Gets or sets the tags.
      * 
-     */
+    */
     public Optional<MigrateProjectResponseTags> getTags() {
         return Optional.ofNullable(this.tags);
     }
     /**
      * Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -183,7 +183,6 @@ public final class GetMigrateProjectResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMigrateProjectResult build() {
             return new GetMigrateProjectResult(eTag, id, location, name, properties, tags, type);
         }

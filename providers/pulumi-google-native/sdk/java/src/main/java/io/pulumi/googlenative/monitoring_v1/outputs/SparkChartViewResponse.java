@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class SparkChartViewResponse {
     /**
      * The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query. For example, if the data is published once every 10 minutes it would not make sense to fetch and align data at one minute intervals. This field is optional and exists only as a hint.
      * 
-     */
+    */
     public String getMinAlignmentPeriod() {
         return this.minAlignmentPeriod;
     }
     /**
      * The type of sparkchart to show in this chartView.
      * 
-     */
+    */
     public String getSparkChartType() {
         return this.sparkChartType;
     }
@@ -74,7 +74,6 @@ public final class SparkChartViewResponse {
             this.sparkChartType = Objects.requireNonNull(sparkChartType);
             return this;
         }
-
         public SparkChartViewResponse build() {
             return new SparkChartViewResponse(minAlignmentPeriod, sparkChartType);
         }

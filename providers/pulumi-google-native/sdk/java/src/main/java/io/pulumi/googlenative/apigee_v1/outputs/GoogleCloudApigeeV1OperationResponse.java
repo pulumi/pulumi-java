@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudApigeeV1OperationResponse {
     /**
      * methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
      * 
-     */
+    */
     public List<String> getMethods() {
         return this.methods;
     }
     /**
      * REST resource path associated with the API proxy or remote service.
      * 
-     */
+    */
     public String getResource() {
         return this.resource;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudApigeeV1OperationResponse {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public GoogleCloudApigeeV1OperationResponse build() {
             return new GoogleCloudApigeeV1OperationResponse(methods, resource);
         }

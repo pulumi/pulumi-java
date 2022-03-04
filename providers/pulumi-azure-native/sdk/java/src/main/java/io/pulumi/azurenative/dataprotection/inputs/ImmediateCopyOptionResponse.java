@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ImmediateCopyOptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -60,7 +60,6 @@ public final class ImmediateCopyOptionResponse extends io.pulumi.resources.Invok
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public ImmediateCopyOptionResponse build() {
             return new ImmediateCopyOptionResponse(objectType);
         }

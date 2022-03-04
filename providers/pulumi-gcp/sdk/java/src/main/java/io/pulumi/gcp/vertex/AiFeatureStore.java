@@ -5,8 +5,8 @@ package io.pulumi.gcp.vertex;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.vertex.AiFeatureStoreArgs;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreState;
@@ -175,6 +175,37 @@ public class AiFeatureStore extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable AiFeatureStoreArgs.Builder a);
+    }
+    private static io.pulumi.gcp.vertex.AiFeatureStoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.vertex.AiFeatureStoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AiFeatureStore(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AiFeatureStore(String name) {
+        this(name, AiFeatureStoreArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AiFeatureStore(String name, @Nullable AiFeatureStoreArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

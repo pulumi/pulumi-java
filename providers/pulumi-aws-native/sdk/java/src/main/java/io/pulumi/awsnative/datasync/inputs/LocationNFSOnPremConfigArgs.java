@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LocationNFSOnPremConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="agentArns", required=true)
-    private final Input<List<String>> agentArns;
+      private final Input<List<String>> agentArns;
 
     public Input<List<String>> getAgentArns() {
         return this.agentArns;
@@ -66,7 +66,6 @@ public final class LocationNFSOnPremConfigArgs extends io.pulumi.resources.Resou
             this.agentArns = Input.of(Objects.requireNonNull(agentArns));
             return this;
         }
-
         public LocationNFSOnPremConfigArgs build() {
             return new LocationNFSOnPremConfigArgs(agentArns);
         }

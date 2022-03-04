@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -88,7 +88,6 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public GlobalTableTargetTrackingScalingPolicyConfiguration build() {
             return new GlobalTableTargetTrackingScalingPolicyConfiguration(disableScaleIn, scaleInCooldown, scaleOutCooldown, targetValue);
         }

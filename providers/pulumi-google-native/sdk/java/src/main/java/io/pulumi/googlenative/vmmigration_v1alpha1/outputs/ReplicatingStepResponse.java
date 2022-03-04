@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ReplicatingStepResponse {
     /**
      * The source disks replication rate for the last 30 minutes in bytes per second.
      * 
-     */
+    */
     public String getLastThirtyMinutesAverageBytesPerSecond() {
         return this.lastThirtyMinutesAverageBytesPerSecond;
     }
     /**
      * The source disks replication rate for the last 2 minutes in bytes per second.
      * 
-     */
+    */
     public String getLastTwoMinutesAverageBytesPerSecond() {
         return this.lastTwoMinutesAverageBytesPerSecond;
     }
     /**
      * Replicated bytes in the step.
      * 
-     */
+    */
     public String getReplicatedBytes() {
         return this.replicatedBytes;
     }
     /**
      * Total bytes to be handled in the step.
      * 
-     */
+    */
     public String getTotalBytes() {
         return this.totalBytes;
     }
@@ -116,7 +116,6 @@ public final class ReplicatingStepResponse {
             this.totalBytes = Objects.requireNonNull(totalBytes);
             return this;
         }
-
         public ReplicatingStepResponse build() {
             return new ReplicatingStepResponse(lastThirtyMinutesAverageBytesPerSecond, lastTwoMinutesAverageBytesPerSecond, replicatedBytes, totalBytes);
         }

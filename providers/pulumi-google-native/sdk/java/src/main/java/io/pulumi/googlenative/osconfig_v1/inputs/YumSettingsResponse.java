@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="excludes", required=true)
-    private final List<String> excludes;
+      private final List<String> excludes;
 
     public List<String> getExcludes() {
         return this.excludes;
@@ -34,7 +34,7 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exclusivePackages", required=true)
-    private final List<String> exclusivePackages;
+      private final List<String> exclusivePackages;
 
     public List<String> getExclusivePackages() {
         return this.exclusivePackages;
@@ -45,7 +45,7 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minimal", required=true)
-    private final Boolean minimal;
+      private final Boolean minimal;
 
     public Boolean getMinimal() {
         return this.minimal;
@@ -56,7 +56,7 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="security", required=true)
-    private final Boolean security;
+      private final Boolean security;
 
     public Boolean getSecurity() {
         return this.security;
@@ -125,7 +125,6 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.security = Objects.requireNonNull(security);
             return this;
         }
-
         public YumSettingsResponse build() {
             return new YumSettingsResponse(excludes, exclusivePackages, minimal, security);
         }

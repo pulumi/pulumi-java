@@ -34,7 +34,6 @@ public final class GoogleCloudDatacatalogV1TableSpecArgs extends io.pulumi.resou
         public Builder(GoogleCloudDatacatalogV1TableSpecArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudDatacatalogV1TableSpecArgs build() {
             return new GoogleCloudDatacatalogV1TableSpecArgs();
         }

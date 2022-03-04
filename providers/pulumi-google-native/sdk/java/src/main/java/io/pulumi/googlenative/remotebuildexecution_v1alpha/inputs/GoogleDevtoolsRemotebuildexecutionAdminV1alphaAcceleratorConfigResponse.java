@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * 
      */
     @InputImport(name="acceleratorCount", required=true)
-    private final String acceleratorCount;
+      private final String acceleratorCount;
 
     public String getAcceleratorCount() {
         return this.acceleratorCount;
@@ -32,7 +32,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * 
      */
     @InputImport(name="acceleratorType", required=true)
-    private final String acceleratorType;
+      private final String acceleratorType;
 
     public String getAcceleratorType() {
         return this.acceleratorType;
@@ -81,7 +81,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse(acceleratorCount, acceleratorType);
         }

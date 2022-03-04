@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class DatastoreRetentionPeriod {
             this.unlimited = unlimited;
             return this;
         }
-
         public DatastoreRetentionPeriod build() {
             return new DatastoreRetentionPeriod(numberOfDays, unlimited);
         }

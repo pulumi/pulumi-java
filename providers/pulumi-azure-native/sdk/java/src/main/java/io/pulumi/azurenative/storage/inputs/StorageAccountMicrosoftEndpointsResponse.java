@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="blob", required=true)
-    private final String blob;
+      private final String blob;
 
     public String getBlob() {
         return this.blob;
@@ -32,7 +32,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="dfs", required=true)
-    private final String dfs;
+      private final String dfs;
 
     public String getDfs() {
         return this.dfs;
@@ -43,7 +43,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="file", required=true)
-    private final String file;
+      private final String file;
 
     public String getFile() {
         return this.file;
@@ -54,7 +54,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="queue", required=true)
-    private final String queue;
+      private final String queue;
 
     public String getQueue() {
         return this.queue;
@@ -65,7 +65,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="table", required=true)
-    private final String table;
+      private final String table;
 
     public String getTable() {
         return this.table;
@@ -76,7 +76,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="web", required=true)
-    private final String web;
+      private final String web;
 
     public String getWeb() {
         return this.web;
@@ -165,7 +165,6 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
             this.web = Objects.requireNonNull(web);
             return this;
         }
-
         public StorageAccountMicrosoftEndpointsResponse build() {
             return new StorageAccountMicrosoftEndpointsResponse(blob, dfs, file, queue, table, web);
         }

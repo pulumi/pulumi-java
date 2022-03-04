@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.DistributionPolicyTargetShape;
 import io.pulumi.googlenative.compute_v1.inputs.DistributionPolicyZoneConfigurationArgs;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetShape")
-    private final @Nullable Input<DistributionPolicyTargetShape> targetShape;
+      private final @Nullable Input<DistributionPolicyTargetShape> targetShape;
 
     public Input<DistributionPolicyTargetShape> getTargetShape() {
         return this.targetShape == null ? Input.empty() : this.targetShape;
@@ -32,7 +32,7 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<DistributionPolicyZoneConfigurationArgs>> zones;
+      private final @Nullable Input<List<DistributionPolicyZoneConfigurationArgs>> zones;
 
     public Input<List<DistributionPolicyZoneConfigurationArgs>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -91,7 +91,6 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public DistributionPolicyArgs build() {
             return new DistributionPolicyArgs(targetShape, zones);
         }

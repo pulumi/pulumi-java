@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.enums.ManagerType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class ManagerIntrinsicSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<ManagerType> type;
+      private final Input<ManagerType> type;
 
     public Input<ManagerType> getType() {
         return this.type;
@@ -65,7 +65,6 @@ public final class ManagerIntrinsicSettingsArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ManagerIntrinsicSettingsArgs build() {
             return new ManagerIntrinsicSettingsArgs(type);
         }

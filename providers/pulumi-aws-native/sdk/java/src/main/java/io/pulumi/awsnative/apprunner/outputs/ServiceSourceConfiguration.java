@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apprunner.outputs;
 import io.pulumi.awsnative.apprunner.outputs.ServiceAuthenticationConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceCodeRepository;
 import io.pulumi.awsnative.apprunner.outputs.ServiceImageRepository;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,7 +41,7 @@ public final class ServiceSourceConfiguration {
     /**
      * Auto Deployment enabled
      * 
-     */
+    */
     public Optional<Boolean> getAutoDeploymentsEnabled() {
         return Optional.ofNullable(this.autoDeploymentsEnabled);
     }
@@ -97,7 +97,6 @@ public final class ServiceSourceConfiguration {
             this.imageRepository = imageRepository;
             return this;
         }
-
         public ServiceSourceConfiguration build() {
             return new ServiceSourceConfiguration(authenticationConfiguration, autoDeploymentsEnabled, codeRepository, imageRepository);
         }

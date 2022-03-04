@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.ManagedRulesDefinitionResponse;
 import io.pulumi.azurenative.network.outputs.PolicySettingsResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.WebApplicationFirewallCustomRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -124,98 +124,98 @@ public final class GetWebApplicationFirewallPolicyResult {
     /**
      * A collection of references to application gateways.
      * 
-     */
+    */
     public List<ApplicationGatewayResponse> getApplicationGateways() {
         return this.applicationGateways;
     }
     /**
      * The custom rules inside the policy.
      * 
-     */
+    */
     public List<WebApplicationFirewallCustomRuleResponse> getCustomRules() {
         return this.customRules == null ? List.of() : this.customRules;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * A collection of references to application gateway http listeners.
      * 
-     */
+    */
     public List<SubResourceResponse> getHttpListeners() {
         return this.httpListeners;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Describes the managedRules structure.
      * 
-     */
+    */
     public ManagedRulesDefinitionResponse getManagedRules() {
         return this.managedRules;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A collection of references to application gateway path rules.
      * 
-     */
+    */
     public List<SubResourceResponse> getPathBasedRules() {
         return this.pathBasedRules;
     }
     /**
      * The PolicySettings for policy.
      * 
-     */
+    */
     public Optional<PolicySettingsResponse> getPolicySettings() {
         return Optional.ofNullable(this.policySettings);
     }
     /**
      * The provisioning state of the web application firewall policy resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the policy.
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -335,7 +335,6 @@ public final class GetWebApplicationFirewallPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebApplicationFirewallPolicyResult build() {
             return new GetWebApplicationFirewallPolicyResult(applicationGateways, customRules, etag, httpListeners, id, location, managedRules, name, pathBasedRules, policySettings, provisioningState, resourceState, tags, type);
         }

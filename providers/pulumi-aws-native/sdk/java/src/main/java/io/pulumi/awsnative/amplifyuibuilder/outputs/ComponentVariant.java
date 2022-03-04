@@ -5,7 +5,7 @@ package io.pulumi.awsnative.amplifyuibuilder.outputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentOverrides;
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentVariantValues;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class ComponentVariant {
             this.variantValues = variantValues;
             return this;
         }
-
         public ComponentVariant build() {
             return new ComponentVariant(overrides, variantValues);
         }

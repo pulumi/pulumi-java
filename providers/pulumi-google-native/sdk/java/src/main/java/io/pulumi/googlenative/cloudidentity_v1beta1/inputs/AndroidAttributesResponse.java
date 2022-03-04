@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AndroidAttributesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="enabledUnknownSources", required=true)
-    private final Boolean enabledUnknownSources;
+      private final Boolean enabledUnknownSources;
 
     public Boolean getEnabledUnknownSources() {
         return this.enabledUnknownSources;
@@ -33,7 +33,7 @@ public final class AndroidAttributesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ownerProfileAccount", required=true)
-    private final Boolean ownerProfileAccount;
+      private final Boolean ownerProfileAccount;
 
     public Boolean getOwnerProfileAccount() {
         return this.ownerProfileAccount;
@@ -44,7 +44,7 @@ public final class AndroidAttributesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ownershipPrivilege", required=true)
-    private final String ownershipPrivilege;
+      private final String ownershipPrivilege;
 
     public String getOwnershipPrivilege() {
         return this.ownershipPrivilege;
@@ -55,7 +55,7 @@ public final class AndroidAttributesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="supportsWorkProfile", required=true)
-    private final Boolean supportsWorkProfile;
+      private final Boolean supportsWorkProfile;
 
     public Boolean getSupportsWorkProfile() {
         return this.supportsWorkProfile;
@@ -124,7 +124,6 @@ public final class AndroidAttributesResponse extends io.pulumi.resources.InvokeA
             this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
             return this;
         }
-
         public AndroidAttributesResponse build() {
             return new AndroidAttributesResponse(enabledUnknownSources, ownerProfileAccount, ownershipPrivilege, supportsWorkProfile);
         }

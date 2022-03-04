@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class EventChannelSourceResponse {
      * The identifier of the resource that's the source of the events.
      * This represents a unique resource in the partner's resource model.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
@@ -56,7 +56,6 @@ public final class EventChannelSourceResponse {
             this.source = source;
             return this;
         }
-
         public EventChannelSourceResponse build() {
             return new EventChannelSourceResponse(source);
         }

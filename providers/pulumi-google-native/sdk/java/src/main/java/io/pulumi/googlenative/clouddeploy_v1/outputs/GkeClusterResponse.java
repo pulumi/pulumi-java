@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GkeClusterResponse {
     /**
      * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
      * 
-     */
+    */
     public String getCluster() {
         return this.cluster;
     }
@@ -52,7 +52,6 @@ public final class GkeClusterResponse {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public GkeClusterResponse build() {
             return new GkeClusterResponse(cluster);
         }

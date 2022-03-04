@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TableDisplayOptionsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="shownColumns", required=true)
-    private final List<String> shownColumns;
+      private final List<String> shownColumns;
 
     public List<String> getShownColumns() {
         return this.shownColumns;
@@ -60,7 +60,6 @@ public final class TableDisplayOptionsResponse extends io.pulumi.resources.Invok
             this.shownColumns = Objects.requireNonNull(shownColumns);
             return this;
         }
-
         public TableDisplayOptionsResponse build() {
             return new TableDisplayOptionsResponse(shownColumns);
         }

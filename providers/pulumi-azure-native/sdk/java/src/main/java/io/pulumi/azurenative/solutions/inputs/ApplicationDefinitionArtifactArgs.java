@@ -7,7 +7,7 @@ import io.pulumi.azurenative.solutions.enums.ApplicationArtifactType;
 import io.pulumi.azurenative.solutions.enums.ApplicationDefinitionArtifactName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,ApplicationDefinitionArtifactName>> name;
+      private final Input<Either<String,ApplicationDefinitionArtifactName>> name;
 
     public Input<Either<String,ApplicationDefinitionArtifactName>> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<ApplicationArtifactType> type;
+      private final Input<ApplicationArtifactType> type;
 
     public Input<ApplicationArtifactType> getType() {
         return this.type;
@@ -47,7 +47,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -121,7 +121,6 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public ApplicationDefinitionArtifactArgs build() {
             return new ApplicationDefinitionArtifactArgs(name, type, uri);
         }

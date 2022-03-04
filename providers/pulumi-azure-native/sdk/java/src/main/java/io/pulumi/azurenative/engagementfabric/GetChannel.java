@@ -6,21 +6,41 @@ package io.pulumi.azurenative.engagementfabric;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.engagementfabric.inputs.GetChannelArgs;
 import io.pulumi.azurenative.engagementfabric.outputs.GetChannelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetChannel {
-/**
- * The EngagementFabric channel
+    private GetChannel() {}
+    public interface BuilderApplicator {
+        public void apply(GetChannelArgs.Builder a);
+    }
+    private static GetChannelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetChannelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The EngagementFabric channel
  * API Version: 2018-09-01-preview.
  * 
- *
- * The EngagementFabric channel
+     *
+     * The EngagementFabric channel
  * 
- */
+     */
+    public static CompletableFuture<GetChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The EngagementFabric channel
+     * API Version: 2018-09-01-preview.
+     * 
+     *
+         * The EngagementFabric channel
+     * 
+     */
     public static CompletableFuture<GetChannelResult> invokeAsync(GetChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:getChannel", TypeShape.of(GetChannelResult.class), args == null ? GetChannelArgs.Empty : args, Utilities.withVersion(options));
     }

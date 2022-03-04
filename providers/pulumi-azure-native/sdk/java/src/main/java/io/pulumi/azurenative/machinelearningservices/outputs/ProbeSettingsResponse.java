@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class ProbeSettingsResponse {
     /**
      * The number of failures to allow before returning an unhealthy status.
      * 
-     */
+    */
     public Optional<Integer> getFailureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
      * The delay before the first probe in ISO 8601 format.
      * 
-     */
+    */
     public Optional<String> getInitialDelay() {
         return Optional.ofNullable(this.initialDelay);
     }
     /**
      * The length of time between probes in ISO 8601 format.
      * 
-     */
+    */
     public Optional<String> getPeriod() {
         return Optional.ofNullable(this.period);
     }
     /**
      * The number of successful probes before returning a healthy status.
      * 
-     */
+    */
     public Optional<Integer> getSuccessThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * The probe timeout in ISO 8601 format.
      * 
-     */
+    */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -140,7 +140,6 @@ public final class ProbeSettingsResponse {
             this.timeout = timeout;
             return this;
         }
-
         public ProbeSettingsResponse build() {
             return new ProbeSettingsResponse(failureThreshold, initialDelay, period, successThreshold, timeout);
         }

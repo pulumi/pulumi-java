@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class VirtualHubRouteV2Response {
     /**
      * The type of destinations.
      * 
-     */
+    */
     public Optional<String> getDestinationType() {
         return Optional.ofNullable(this.destinationType);
     }
     /**
      * List of all destinations.
      * 
-     */
+    */
     public List<String> getDestinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
     /**
      * The type of next hops.
      * 
-     */
+    */
     public Optional<String> getNextHopType() {
         return Optional.ofNullable(this.nextHopType);
     }
     /**
      * NextHops ip address.
      * 
-     */
+    */
     public List<String> getNextHops() {
         return this.nextHops == null ? List.of() : this.nextHops;
     }
@@ -119,7 +119,6 @@ public final class VirtualHubRouteV2Response {
             this.nextHops = nextHops;
             return this;
         }
-
         public VirtualHubRouteV2Response build() {
             return new VirtualHubRouteV2Response(destinationType, destinations, nextHopType, nextHops);
         }

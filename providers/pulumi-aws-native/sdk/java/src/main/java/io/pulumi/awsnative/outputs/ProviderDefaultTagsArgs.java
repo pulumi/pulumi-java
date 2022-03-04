@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.outputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ProviderDefaultTagsArgs {
     /**
      * A group of tags to set across all resources.
      * 
-     */
+    */
     public @Nullable Input<Map<String,String>> getTags() {
         return this.tags;
     }
@@ -55,7 +55,6 @@ public final class ProviderDefaultTagsArgs {
             this.tags = tags;
             return this;
         }
-
         public ProviderDefaultTagsArgs build() {
             return new ProviderDefaultTagsArgs(tags);
         }

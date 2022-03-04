@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
     /**
      * Live Agent chat button ID.
      * 
-     */
+    */
     public String getButtonId() {
         return this.buttonId;
     }
     /**
      * Live Agent deployment ID.
      * 
-     */
+    */
     public String getDeploymentId() {
         return this.deploymentId;
     }
     /**
      * Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
      * 
-     */
+    */
     public String getEndpointDomain() {
         return this.endpointDomain;
     }
     /**
      * The organization ID of the Salesforce account.
      * 
-     */
+    */
     public String getOrganizationId() {
         return this.organizationId;
     }
@@ -116,7 +116,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse(buttonId, deploymentId, endpointDomain, organizationId);
         }

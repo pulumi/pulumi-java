@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,7 +47,7 @@ public final class GetAzureVersionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -60,14 +60,14 @@ public final class GetAzureVersionsResult {
     /**
      * A list of Azure regions that are available for use with this project and GCP location.
      * 
-     */
+    */
     public List<String> getSupportedRegions() {
         return this.supportedRegions;
     }
     /**
      * A list of versions available for use with this project and location.
      * 
-     */
+    */
     public List<String> getValidVersions() {
         return this.validVersions;
     }
@@ -124,7 +124,6 @@ public final class GetAzureVersionsResult {
             this.validVersions = Objects.requireNonNull(validVersions);
             return this;
         }
-
         public GetAzureVersionsResult build() {
             return new GetAzureVersionsResult(id, location, project, supportedRegions, validVersions);
         }

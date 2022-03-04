@@ -6,7 +6,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 import io.pulumi.azurenative.operationalinsights.enums.WorkspaceSkuNameEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityReservationLevel")
-    private final @Nullable Input<Integer> capacityReservationLevel;
+      private final @Nullable Input<Integer> capacityReservationLevel;
 
     public Input<Integer> getCapacityReservationLevel() {
         return this.capacityReservationLevel == null ? Input.empty() : this.capacityReservationLevel;
@@ -37,7 +37,7 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,WorkspaceSkuNameEnum>> name;
+      private final Input<Either<String,WorkspaceSkuNameEnum>> name;
 
     public Input<Either<String,WorkspaceSkuNameEnum>> getName() {
         return this.name;
@@ -96,7 +96,6 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public WorkspaceSkuArgs build() {
             return new WorkspaceSkuArgs(capacityReservationLevel, name);
         }

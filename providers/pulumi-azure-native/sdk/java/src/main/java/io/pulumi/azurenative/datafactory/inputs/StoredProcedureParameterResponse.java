@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StoredProcedureParameterResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -35,7 +35,7 @@ public final class StoredProcedureParameterResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Object value;
+      private final @Nullable Object value;
 
     public Optional<Object> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -84,7 +84,6 @@ public final class StoredProcedureParameterResponse extends io.pulumi.resources.
             this.value = value;
             return this;
         }
-
         public StoredProcedureParameterResponse build() {
             return new StoredProcedureParameterResponse(type, value);
         }

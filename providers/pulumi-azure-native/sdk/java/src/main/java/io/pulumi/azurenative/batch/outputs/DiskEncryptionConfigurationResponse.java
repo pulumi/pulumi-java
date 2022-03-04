@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DiskEncryptionConfigurationResponse {
     /**
      * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
      * 
-     */
+    */
     public List<String> getTargets() {
         return this.targets == null ? List.of() : this.targets;
     }
@@ -54,7 +54,6 @@ public final class DiskEncryptionConfigurationResponse {
             this.targets = targets;
             return this;
         }
-
         public DiskEncryptionConfigurationResponse build() {
             return new DiskEncryptionConfigurationResponse(targets);
         }

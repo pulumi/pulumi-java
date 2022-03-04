@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.AzureFirewallNatRCActionArgs;
 import io.pulumi.azurenative.network.inputs.AzureFirewallNatRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<AzureFirewallNatRCActionArgs> action;
+      private final @Nullable Input<AzureFirewallNatRCActionArgs> action;
 
     public Input<AzureFirewallNatRCActionArgs> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -38,7 +38,7 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -49,7 +49,7 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -60,7 +60,7 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -71,7 +71,7 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<AzureFirewallNatRuleArgs>> rules;
+      private final @Nullable Input<List<AzureFirewallNatRuleArgs>> rules;
 
     public Input<List<AzureFirewallNatRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -175,7 +175,6 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public AzureFirewallNatRuleCollectionArgs build() {
             return new AzureFirewallNatRuleCollectionArgs(action, id, name, priority, rules);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.acmpca;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.acmpca.inputs.GetCertificateArgs;
 import io.pulumi.awsnative.acmpca.outputs.GetCertificateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificate {
-/**
- * A certificate issued via a private certificate authority
+    private GetCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetCertificateArgs.Builder a);
+    }
+    private static GetCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A certificate issued via a private certificate authority
  * 
- */
+     */
+    public static CompletableFuture<GetCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A certificate issued via a private certificate authority
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> invokeAsync(GetCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:acmpca:getCertificate", TypeShape.of(GetCertificateResult.class), args == null ? GetCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OutputFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-    private final List<String> labels;
+      private final List<String> labels;
 
     public List<String> getLabels() {
         return this.labels;
@@ -60,7 +60,6 @@ public final class OutputFileResponse extends io.pulumi.resources.InvokeArgs {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public OutputFileResponse build() {
             return new OutputFileResponse(labels);
         }

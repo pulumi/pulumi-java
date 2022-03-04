@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.FileShareResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="backupFilePaths")
-    private final @Nullable List<String> backupFilePaths;
+      private final @Nullable List<String> backupFilePaths;
 
     public List<String> getBackupFilePaths() {
         return this.backupFilePaths == null ? List.of() : this.backupFilePaths;
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="backupFileShare")
-    private final @Nullable FileShareResponse backupFileShare;
+      private final @Nullable FileShareResponse backupFileShare;
 
     public Optional<FileShareResponse> getBackupFileShare() {
         return this.backupFileShare == null ? Optional.empty() : Optional.ofNullable(this.backupFileShare);
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="restoreDatabaseName", required=true)
-    private final String restoreDatabaseName;
+      private final String restoreDatabaseName;
 
     public String getRestoreDatabaseName() {
         return this.restoreDatabaseName;
@@ -127,7 +127,6 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends io.pulumi.
             this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
             return this;
         }
-
         public MigrateSqlServerSqlMIDatabaseInputResponse build() {
             return new MigrateSqlServerSqlMIDatabaseInputResponse(backupFilePaths, backupFileShare, name, restoreDatabaseName);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.StorageAccountInternetEndpointsResponse;
 import io.pulumi.azurenative.storage.outputs.StorageAccountMicrosoftEndpointsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,56 +77,56 @@ public final class EndpointsResponse {
     /**
      * Gets the blob endpoint.
      * 
-     */
+    */
     public String getBlob() {
         return this.blob;
     }
     /**
      * Gets the dfs endpoint.
      * 
-     */
+    */
     public String getDfs() {
         return this.dfs;
     }
     /**
      * Gets the file endpoint.
      * 
-     */
+    */
     public String getFile() {
         return this.file;
     }
     /**
      * Gets the internet routing storage endpoints
      * 
-     */
+    */
     public Optional<StorageAccountInternetEndpointsResponse> getInternetEndpoints() {
         return Optional.ofNullable(this.internetEndpoints);
     }
     /**
      * Gets the microsoft routing storage endpoints.
      * 
-     */
+    */
     public Optional<StorageAccountMicrosoftEndpointsResponse> getMicrosoftEndpoints() {
         return Optional.ofNullable(this.microsoftEndpoints);
     }
     /**
      * Gets the queue endpoint.
      * 
-     */
+    */
     public String getQueue() {
         return this.queue;
     }
     /**
      * Gets the table endpoint.
      * 
-     */
+    */
     public String getTable() {
         return this.table;
     }
     /**
      * Gets the web endpoint.
      * 
-     */
+    */
     public String getWeb() {
         return this.web;
     }
@@ -204,7 +204,6 @@ public final class EndpointsResponse {
             this.web = Objects.requireNonNull(web);
             return this;
         }
-
         public EndpointsResponse build() {
             return new EndpointsResponse(blob, dfs, file, internetEndpoints, microsoftEndpoints, queue, table, web);
         }

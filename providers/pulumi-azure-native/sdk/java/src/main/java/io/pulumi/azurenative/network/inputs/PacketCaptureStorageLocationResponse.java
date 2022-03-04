@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PacketCaptureStorageLocationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="filePath")
-    private final @Nullable String filePath;
+      private final @Nullable String filePath;
 
     public Optional<String> getFilePath() {
         return this.filePath == null ? Optional.empty() : Optional.ofNullable(this.filePath);
@@ -34,7 +34,7 @@ public final class PacketCaptureStorageLocationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="storageId")
-    private final @Nullable String storageId;
+      private final @Nullable String storageId;
 
     public Optional<String> getStorageId() {
         return this.storageId == null ? Optional.empty() : Optional.ofNullable(this.storageId);
@@ -45,7 +45,7 @@ public final class PacketCaptureStorageLocationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="storagePath")
-    private final @Nullable String storagePath;
+      private final @Nullable String storagePath;
 
     public Optional<String> getStoragePath() {
         return this.storagePath == null ? Optional.empty() : Optional.ofNullable(this.storagePath);
@@ -104,7 +104,6 @@ public final class PacketCaptureStorageLocationResponse extends io.pulumi.resour
             this.storagePath = storagePath;
             return this;
         }
-
         public PacketCaptureStorageLocationResponse build() {
             return new PacketCaptureStorageLocationResponse(filePath, storageId, storagePath);
         }

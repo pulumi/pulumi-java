@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssm.outputs;
 
 import io.pulumi.awsnative.ssm.outputs.AssociationS3OutputLocation;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class AssociationInstanceAssociationOutputLocation {
             this.s3Location = s3Location;
             return this;
         }
-
         public AssociationInstanceAssociationOutputLocation build() {
             return new AssociationInstanceAssociationOutputLocation(s3Location);
         }

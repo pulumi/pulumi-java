@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.ComponentType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetComponentResult {
     /**
      * The Amazon Resource Name (ARN) of the component.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The encryption status of the component.
      * 
-     */
+    */
     public Optional<Boolean> getEncrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
      * The type of the component denotes whether the component is used to build the image or only to test it.
      * 
-     */
+    */
     public Optional<ComponentType> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -99,7 +99,6 @@ public final class GetComponentResult {
             this.type = type;
             return this;
         }
-
         public GetComponentResult build() {
             return new GetComponentResult(arn, encrypted, type);
         }

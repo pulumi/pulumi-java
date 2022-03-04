@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class ItsmReceiverResponse {
     /**
      * Unique identification of ITSM connection among multiple defined in above workspace.
      * 
-     */
+    */
     public String getConnectionId() {
         return this.connectionId;
     }
     /**
      * The name of the Itsm receiver. Names must be unique across all receivers within an action group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
      * 
-     */
+    */
     public String getTicketConfiguration() {
         return this.ticketConfiguration;
     }
     /**
      * OMS LA instance identifier.
      * 
-     */
+    */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
@@ -137,7 +137,6 @@ public final class ItsmReceiverResponse {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public ItsmReceiverResponse build() {
             return new ItsmReceiverResponse(connectionId, name, region, ticketConfiguration, workspaceId);
         }

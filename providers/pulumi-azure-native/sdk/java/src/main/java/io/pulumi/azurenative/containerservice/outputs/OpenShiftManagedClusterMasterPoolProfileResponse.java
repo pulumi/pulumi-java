@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
     /**
      * Number of masters (VMs) to host docker containers. The default value is 3.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * Unique name of the master pool profile in the context of the subscription and resource group.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Subnet CIDR for the peering.
      * 
-     */
+    */
     public Optional<String> getSubnetCidr() {
         return Optional.ofNullable(this.subnetCidr);
     }
     /**
      * Size of agent VMs.
      * 
-     */
+    */
     public String getVmSize() {
         return this.vmSize;
     }
@@ -140,7 +140,6 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
         }
-
         public OpenShiftManagedClusterMasterPoolProfileResponse build() {
             return new OpenShiftManagedClusterMasterPoolProfileResponse(count, name, osType, subnetCidr, vmSize);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.ApplicationLogsConfigResponse;
 import io.pulumi.azurenative.web.outputs.EnabledConfigResponse;
 import io.pulumi.azurenative.web.outputs.HttpLogsConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -78,56 +78,56 @@ public final class GetWebAppDiagnosticLogsConfigurationResult {
     /**
      * Application logs configuration.
      * 
-     */
+    */
     public Optional<ApplicationLogsConfigResponse> getApplicationLogs() {
         return Optional.ofNullable(this.applicationLogs);
     }
     /**
      * Detailed error messages configuration.
      * 
-     */
+    */
     public Optional<EnabledConfigResponse> getDetailedErrorMessages() {
         return Optional.ofNullable(this.detailedErrorMessages);
     }
     /**
      * Failed requests tracing configuration.
      * 
-     */
+    */
     public Optional<EnabledConfigResponse> getFailedRequestsTracing() {
         return Optional.ofNullable(this.failedRequestsTracing);
     }
     /**
      * HTTP logs configuration.
      * 
-     */
+    */
     public Optional<HttpLogsConfigResponse> getHttpLogs() {
         return Optional.ofNullable(this.httpLogs);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -205,7 +205,6 @@ public final class GetWebAppDiagnosticLogsConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppDiagnosticLogsConfigurationResult build() {
             return new GetWebAppDiagnosticLogsConfigurationResult(applicationLogs, detailedErrorMessages, failedRequestsTracing, httpLogs, id, kind, name, type);
         }

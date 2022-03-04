@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetNetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class VirtualMachineScaleSetNetworkProfileResponse {
     /**
      * A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.
      * 
-     */
+    */
     public Optional<ApiEntityReferenceResponse> getHealthProbe() {
         return Optional.ofNullable(this.healthProbe);
     }
     /**
      * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'
      * 
-     */
+    */
     public Optional<String> getNetworkApiVersion() {
         return Optional.ofNullable(this.networkApiVersion);
     }
     /**
      * The list of network configurations.
      * 
-     */
+    */
     public List<VirtualMachineScaleSetNetworkConfigurationResponse> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
     }
@@ -100,7 +100,6 @@ public final class VirtualMachineScaleSetNetworkProfileResponse {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-
         public VirtualMachineScaleSetNetworkProfileResponse build() {
             return new VirtualMachineScaleSetNetworkProfileResponse(healthProbe, networkApiVersion, networkInterfaceConfigurations);
         }

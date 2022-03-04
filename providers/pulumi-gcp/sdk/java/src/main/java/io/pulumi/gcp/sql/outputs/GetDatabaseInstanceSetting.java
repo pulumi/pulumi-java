@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceSettingBackupConfiguration;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceSettingDatabaseFlag;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceSettingInsightsConfig;
@@ -263,7 +263,6 @@ public final class GetDatabaseInstanceSetting {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDatabaseInstanceSetting build() {
             return new GetDatabaseInstanceSetting(activationPolicy, availabilityType, backupConfigurations, collation, databaseFlags, diskAutoresize, diskAutoresizeLimit, diskSize, diskType, insightsConfigs, ipConfigurations, locationPreferences, maintenanceWindows, pricingPlan, tier, userLabels, version);
         }

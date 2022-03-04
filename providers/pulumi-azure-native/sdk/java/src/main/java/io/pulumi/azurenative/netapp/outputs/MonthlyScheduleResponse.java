@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -56,35 +56,35 @@ public final class MonthlyScheduleResponse {
     /**
      * Indicates which days of the month snapshot should be taken. A comma delimited string.
      * 
-     */
+    */
     public Optional<String> getDaysOfMonth() {
         return Optional.ofNullable(this.daysOfMonth);
     }
     /**
      * Indicates which hour in UTC timezone a snapshot should be taken
      * 
-     */
+    */
     public Optional<Integer> getHour() {
         return Optional.ofNullable(this.hour);
     }
     /**
      * Indicates which minute snapshot should be taken
      * 
-     */
+    */
     public Optional<Integer> getMinute() {
         return Optional.ofNullable(this.minute);
     }
     /**
      * Monthly snapshot count to keep
      * 
-     */
+    */
     public Optional<Integer> getSnapshotsToKeep() {
         return Optional.ofNullable(this.snapshotsToKeep);
     }
     /**
      * Resource size in bytes, current storage usage for the volume in bytes
      * 
-     */
+    */
     public Optional<Double> getUsedBytes() {
         return Optional.ofNullable(this.usedBytes);
     }
@@ -141,7 +141,6 @@ public final class MonthlyScheduleResponse {
             this.usedBytes = usedBytes;
             return this;
         }
-
         public MonthlyScheduleResponse build() {
             return new MonthlyScheduleResponse(daysOfMonth, hour, minute, snapshotsToKeep, usedBytes);
         }

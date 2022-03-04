@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eTag", required=true)
-    private final String eTag;
+      private final String eTag;
 
     public String getETag() {
         return this.eTag;
@@ -32,7 +32,7 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -43,7 +43,7 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tagName", required=true)
-    private final String tagName;
+      private final String tagName;
 
     public String getTagName() {
         return this.tagName;
@@ -102,7 +102,6 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }
-
         public RetentionTagResponse build() {
             return new RetentionTagResponse(eTag, id, tagName);
         }

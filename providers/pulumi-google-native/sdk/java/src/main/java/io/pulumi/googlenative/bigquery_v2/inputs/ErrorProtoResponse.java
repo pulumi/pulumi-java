@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="debugInfo", required=true)
-    private final String debugInfo;
+      private final String debugInfo;
 
     public String getDebugInfo() {
         return this.debugInfo;
@@ -28,7 +28,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -39,7 +39,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -50,7 +50,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="reason", required=true)
-    private final String reason;
+      private final String reason;
 
     public String getReason() {
         return this.reason;
@@ -119,7 +119,6 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public ErrorProtoResponse build() {
             return new ErrorProtoResponse(debugInfo, location, message, reason);
         }

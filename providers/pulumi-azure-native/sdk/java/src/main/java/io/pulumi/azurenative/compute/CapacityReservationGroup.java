@@ -10,8 +10,8 @@ import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -147,6 +147,37 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
         return this.zones;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CapacityReservationGroupArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.compute.CapacityReservationGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.compute.CapacityReservationGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CapacityReservationGroup(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CapacityReservationGroup(String name) {
+        this(name, CapacityReservationGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CapacityReservationGroup(String name, CapacityReservationGroupArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hdinsight.outputs.ApplicationGetHttpsEndpointRespon
 import io.pulumi.azurenative.hdinsight.outputs.ComputeProfileResponse;
 import io.pulumi.azurenative.hdinsight.outputs.ErrorsResponse;
 import io.pulumi.azurenative.hdinsight.outputs.RuntimeScriptActionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -102,77 +102,77 @@ public final class ApplicationPropertiesResponse {
     /**
      * The application state.
      * 
-     */
+    */
     public String getApplicationState() {
         return this.applicationState;
     }
     /**
      * The application type.
      * 
-     */
+    */
     public Optional<String> getApplicationType() {
         return Optional.ofNullable(this.applicationType);
     }
     /**
      * The list of roles in the cluster.
      * 
-     */
+    */
     public Optional<ComputeProfileResponse> getComputeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
     /**
      * The application create date time.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The list of errors.
      * 
-     */
+    */
     public List<ErrorsResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * The list of application HTTPS endpoints.
      * 
-     */
+    */
     public List<ApplicationGetHttpsEndpointResponse> getHttpsEndpoints() {
         return this.httpsEndpoints == null ? List.of() : this.httpsEndpoints;
     }
     /**
      * The list of install script actions.
      * 
-     */
+    */
     public List<RuntimeScriptActionResponse> getInstallScriptActions() {
         return this.installScriptActions == null ? List.of() : this.installScriptActions;
     }
     /**
      * The marketplace identifier.
      * 
-     */
+    */
     public String getMarketplaceIdentifier() {
         return this.marketplaceIdentifier;
     }
     /**
      * The provisioning state of the application.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of application SSH endpoints.
      * 
-     */
+    */
     public List<ApplicationGetEndpointResponse> getSshEndpoints() {
         return this.sshEndpoints == null ? List.of() : this.sshEndpoints;
     }
     /**
      * The list of uninstall script actions.
      * 
-     */
+    */
     public List<RuntimeScriptActionResponse> getUninstallScriptActions() {
         return this.uninstallScriptActions == null ? List.of() : this.uninstallScriptActions;
     }
@@ -271,7 +271,6 @@ public final class ApplicationPropertiesResponse {
             this.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
-
         public ApplicationPropertiesResponse build() {
             return new ApplicationPropertiesResponse(applicationState, applicationType, computeProfile, createdDate, errors, httpsEndpoints, installScriptActions, marketplaceIdentifier, provisioningState, sshEndpoints, uninstallScriptActions);
         }

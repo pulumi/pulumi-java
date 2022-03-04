@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,7 +42,7 @@ public final class GetAttributeGroupAssociationResult {
     /**
      * The name or the Id of the Application.
      * 
-     */
+    */
     public Optional<String> getApplication() {
         return Optional.ofNullable(this.application);
     }
@@ -52,7 +52,7 @@ public final class GetAttributeGroupAssociationResult {
     /**
      * The name or the Id of the AttributeGroup.
      * 
-     */
+    */
     public Optional<String> getAttributeGroup() {
         return Optional.ofNullable(this.attributeGroup);
     }
@@ -115,7 +115,6 @@ public final class GetAttributeGroupAssociationResult {
             this.id = id;
             return this;
         }
-
         public GetAttributeGroupAssociationResult build() {
             return new GetAttributeGroupAssociationResult(application, applicationArn, attributeGroup, attributeGroupArn, id);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.DayResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DailyRetentionFormatResponse {
     /**
      * List of days of the month.
      * 
-     */
+    */
     public List<DayResponse> getDaysOfTheMonth() {
         return this.daysOfTheMonth == null ? List.of() : this.daysOfTheMonth;
     }
@@ -54,7 +54,6 @@ public final class DailyRetentionFormatResponse {
             this.daysOfTheMonth = daysOfTheMonth;
             return this;
         }
-
         public DailyRetentionFormatResponse build() {
             return new DailyRetentionFormatResponse(daysOfTheMonth);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,14 +41,14 @@ public final class TableEncryptionConfiguration {
      * `gcp.bigquery.getDefaultServiceAccount` datasource and the
      * `gcp.kms.CryptoKeyIAMBinding` resource.
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * The self link or full name of the kms key version used to encrypt this table.
      * 
-     */
+    */
     public Optional<String> getKmsKeyVersion() {
         return Optional.ofNullable(this.kmsKeyVersion);
     }
@@ -84,7 +84,6 @@ public final class TableEncryptionConfiguration {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
-
         public TableEncryptionConfiguration build() {
             return new TableEncryptionConfiguration(kmsKeyName, kmsKeyVersion);
         }

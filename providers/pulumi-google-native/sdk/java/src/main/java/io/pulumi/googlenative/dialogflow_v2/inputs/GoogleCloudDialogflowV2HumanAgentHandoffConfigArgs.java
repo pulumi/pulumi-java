@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io
      * 
      */
     @InputImport(name="livePersonConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig;
 
     public Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs> getLivePersonConfig() {
         return this.livePersonConfig == null ? Input.empty() : this.livePersonConfig;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io
      * 
      */
     @InputImport(name="salesforceLiveAgentConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig;
 
     public Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> getSalesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig == null ? Input.empty() : this.salesforceLiveAgentConfig;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io
             this.salesforceLiveAgentConfig = Input.ofNullable(salesforceLiveAgentConfig);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs(livePersonConfig, salesforceLiveAgentConfig);
         }

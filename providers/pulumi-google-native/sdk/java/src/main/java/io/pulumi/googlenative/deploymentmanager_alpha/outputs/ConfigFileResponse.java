@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ConfigFileResponse {
     /**
      * The contents of the file.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
@@ -52,7 +52,6 @@ public final class ConfigFileResponse {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public ConfigFileResponse build() {
             return new ConfigFileResponse(content);
         }

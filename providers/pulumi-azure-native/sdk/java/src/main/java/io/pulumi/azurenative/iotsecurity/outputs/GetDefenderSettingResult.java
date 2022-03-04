@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.iotsecurity.outputs;
 
 import io.pulumi.azurenative.iotsecurity.outputs.DefenderSettingsPropertiesResponseMdeIntegration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -76,56 +76,56 @@ public final class GetDefenderSettingResult {
     /**
      * Size of the device quota. Value is required to be in multiples of 100.
      * 
-     */
+    */
     public Integer getDeviceQuota() {
         return this.deviceQuota;
     }
     /**
      * End time of the evaluation period, if such exist
      * 
-     */
+    */
     public String getEvaluationEndTime() {
         return this.evaluationEndTime;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * MDE integration configuration
      * 
-     */
+    */
     public DefenderSettingsPropertiesResponseMdeIntegration getMdeIntegration() {
         return this.mdeIntegration;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The kind of onboarding for the subscription
      * 
-     */
+    */
     public String getOnboardingKind() {
         return this.onboardingKind;
     }
     /**
      * Sentinel Workspace Resource Ids
      * 
-     */
+    */
     public List<String> getSentinelWorkspaceResourceIds() {
         return this.sentinelWorkspaceResourceIds;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -203,7 +203,6 @@ public final class GetDefenderSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDefenderSettingResult build() {
             return new GetDefenderSettingResult(deviceQuota, evaluationEndTime, id, mdeIntegration, name, onboardingKind, sentinelWorkspaceResourceIds, type);
         }

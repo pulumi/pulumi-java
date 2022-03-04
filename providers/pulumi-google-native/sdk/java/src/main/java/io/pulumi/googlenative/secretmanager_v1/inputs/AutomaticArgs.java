@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerManagedEncryption")
-    private final @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption;
+      private final @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
     public Input<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
         return this.customerManagedEncryption == null ? Input.empty() : this.customerManagedEncryption;
@@ -66,7 +66,6 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
             this.customerManagedEncryption = Input.ofNullable(customerManagedEncryption);
             return this;
         }
-
         public AutomaticArgs build() {
             return new AutomaticArgs(customerManagedEncryption);
         }

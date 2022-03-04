@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 import io.pulumi.azurenative.appplatform.outputs.DeploymentInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.DeploymentSettingsResponse;
 import io.pulumi.azurenative.appplatform.outputs.UserSourceInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -80,56 +80,56 @@ public final class DeploymentResourcePropertiesResponse {
     /**
      * Indicates whether the Deployment is active
      * 
-     */
+    */
     public Boolean getActive() {
         return this.active;
     }
     /**
      * App name of the deployment
      * 
-     */
+    */
     public String getAppName() {
         return this.appName;
     }
     /**
      * Date time when the resource is created
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Deployment settings of the Deployment
      * 
-     */
+    */
     public Optional<DeploymentSettingsResponse> getDeploymentSettings() {
         return Optional.ofNullable(this.deploymentSettings);
     }
     /**
      * Collection of instances belong to the Deployment
      * 
-     */
+    */
     public List<DeploymentInstanceResponse> getInstances() {
         return this.instances;
     }
     /**
      * Provisioning state of the Deployment
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Uploaded source information of the deployment.
      * 
-     */
+    */
     public Optional<UserSourceInfoResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Status of the Deployment
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -207,7 +207,6 @@ public final class DeploymentResourcePropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DeploymentResourcePropertiesResponse build() {
             return new DeploymentResourcePropertiesResponse(active, appName, createdTime, deploymentSettings, instances, provisioningState, source, status);
         }

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.auditmanager.outputs.AssessmentReportsDestination;
 import io.pulumi.awsnative.auditmanager.outputs.AssessmentRole;
 import io.pulumi.awsnative.auditmanager.outputs.AssessmentScope;
 import io.pulumi.awsnative.auditmanager.outputs.AssessmentTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -78,14 +78,14 @@ public final class GetAssessmentResult {
     /**
      * The list of delegations.
      * 
-     */
+    */
     public List<AssessmentDelegation> getDelegations() {
         return this.delegations == null ? List.of() : this.delegations;
     }
     /**
      * The list of roles for the specified assessment.
      * 
-     */
+    */
     public List<AssessmentRole> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
@@ -98,7 +98,7 @@ public final class GetAssessmentResult {
     /**
      * The tags associated with the assessment.
      * 
-     */
+    */
     public List<AssessmentTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -183,7 +183,6 @@ public final class GetAssessmentResult {
             this.tags = tags;
             return this;
         }
-
         public GetAssessmentResult build() {
             return new GetAssessmentResult(arn, assessmentId, assessmentReportsDestination, creationTime, delegations, roles, scope, status, tags);
         }

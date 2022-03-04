@@ -8,7 +8,7 @@ import io.pulumi.azurenative.eventgrid.inputs.ConnectionStateArgs;
 import io.pulumi.azurenative.eventgrid.inputs.PrivateEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="groupIds")
-    private final @Nullable Input<List<String>> groupIds;
+      private final @Nullable Input<List<String>> groupIds;
 
     public Input<List<String>> getGroupIds() {
         return this.groupIds == null ? Input.empty() : this.groupIds;
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parentName", required=true)
-    private final Input<String> parentName;
+      private final Input<String> parentName;
 
     public Input<String> getParentName() {
         return this.parentName;
@@ -46,7 +46,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parentType", required=true)
-    private final Input<String> parentType;
+      private final Input<String> parentType;
 
     public Input<String> getParentType() {
         return this.parentType;
@@ -57,7 +57,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
+      private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
     public Input<PrivateEndpointArgs> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
@@ -68,7 +68,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -79,7 +79,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState;
+      private final @Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<ConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -90,7 +90,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ResourceProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,ResourceProvisioningState>> provisioningState;
 
     public Input<Either<String,ResourceProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -101,7 +101,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -250,7 +250,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(groupIds, parentName, parentType, privateEndpoint, privateEndpointConnectionName, privateLinkServiceConnectionState, provisioningState, resourceGroupName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
     /**
      * Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
@@ -53,7 +53,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse(metadata);
         }

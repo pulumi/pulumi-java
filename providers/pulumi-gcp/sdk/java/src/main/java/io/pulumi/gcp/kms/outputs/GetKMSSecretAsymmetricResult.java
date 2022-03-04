@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,7 +49,7 @@ public final class GetKMSSecretAsymmetricResult {
     /**
      * Contains the crc32 checksum of the provided ciphertext.
      * 
-     */
+    */
     public Optional<String> getCrc32() {
         return Optional.ofNullable(this.crc32);
     }
@@ -59,14 +59,14 @@ public final class GetKMSSecretAsymmetricResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Contains the result of decrypting the provided ciphertext.
      * 
-     */
+    */
     public String getPlaintext() {
         return this.plaintext;
     }
@@ -123,7 +123,6 @@ public final class GetKMSSecretAsymmetricResult {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
-
         public GetKMSSecretAsymmetricResult build() {
             return new GetKMSSecretAsymmetricResult(ciphertext, crc32, cryptoKeyVersion, id, plaintext);
         }

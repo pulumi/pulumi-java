@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="viewQuery", required=true)
-    private final String viewQuery;
+      private final String viewQuery;
 
     public String getViewQuery() {
         return this.viewQuery;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse extends io.pulumi.re
             this.viewQuery = Objects.requireNonNull(viewQuery);
             return this;
         }
-
         public GoogleCloudDatacatalogV1ViewSpecResponse build() {
             return new GoogleCloudDatacatalogV1ViewSpecResponse(viewQuery);
         }

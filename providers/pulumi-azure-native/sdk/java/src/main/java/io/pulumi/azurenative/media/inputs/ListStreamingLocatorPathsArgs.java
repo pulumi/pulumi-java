@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListStreamingLocatorPathsArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class ListStreamingLocatorPathsArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListStreamingLocatorPathsArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="streamingLocatorName", required=true)
-    private final String streamingLocatorName;
+      private final String streamingLocatorName;
 
     public String getStreamingLocatorName() {
         return this.streamingLocatorName;
@@ -98,7 +98,6 @@ public final class ListStreamingLocatorPathsArgs extends io.pulumi.resources.Inv
             this.streamingLocatorName = Objects.requireNonNull(streamingLocatorName);
             return this;
         }
-
         public ListStreamingLocatorPathsArgs build() {
             return new ListStreamingLocatorPathsArgs(accountName, resourceGroupName, streamingLocatorName);
         }

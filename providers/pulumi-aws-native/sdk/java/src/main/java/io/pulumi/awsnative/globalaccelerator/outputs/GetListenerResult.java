@@ -6,7 +6,7 @@ package io.pulumi.awsnative.globalaccelerator.outputs;
 import io.pulumi.awsnative.globalaccelerator.enums.ListenerClientAffinity;
 import io.pulumi.awsnative.globalaccelerator.enums.ListenerProtocol;
 import io.pulumi.awsnative.globalaccelerator.outputs.ListenerPortRange;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,14 +47,14 @@ public final class GetListenerResult {
     /**
      * Client affinity lets you direct all requests from a user to the same endpoint.
      * 
-     */
+    */
     public Optional<ListenerClientAffinity> getClientAffinity() {
         return Optional.ofNullable(this.clientAffinity);
     }
     /**
      * The Amazon Resource Name (ARN) of the listener.
      * 
-     */
+    */
     public Optional<String> getListenerArn() {
         return Optional.ofNullable(this.listenerArn);
     }
@@ -64,7 +64,7 @@ public final class GetListenerResult {
     /**
      * The protocol for the listener.
      * 
-     */
+    */
     public Optional<ListenerProtocol> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -114,7 +114,6 @@ public final class GetListenerResult {
             this.protocol = protocol;
             return this;
         }
-
         public GetListenerResult build() {
             return new GetListenerResult(clientAffinity, listenerArn, portRanges, protocol);
         }

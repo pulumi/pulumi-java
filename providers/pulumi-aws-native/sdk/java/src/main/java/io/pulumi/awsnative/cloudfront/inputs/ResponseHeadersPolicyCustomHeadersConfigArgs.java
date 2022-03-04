@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCustomHeaderArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
     public static final ResponseHeadersPolicyCustomHeadersConfigArgs Empty = new ResponseHeadersPolicyCustomHeadersConfigArgs();
 
     @InputImport(name="items", required=true)
-    private final Input<List<ResponseHeadersPolicyCustomHeaderArgs>> items;
+      private final Input<List<ResponseHeadersPolicyCustomHeaderArgs>> items;
 
     public Input<List<ResponseHeadersPolicyCustomHeaderArgs>> getItems() {
         return this.items;
@@ -58,7 +58,6 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }
-
         public ResponseHeadersPolicyCustomHeadersConfigArgs build() {
             return new ResponseHeadersPolicyCustomHeadersConfigArgs(items);
         }

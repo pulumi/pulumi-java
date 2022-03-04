@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.RouterNatSubnetworkToNatSourceIpRangesToNatItem;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -36,7 +36,7 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secondaryIpRangeNames")
-    private final @Nullable Input<List<String>> secondaryIpRangeNames;
+      private final @Nullable Input<List<String>> secondaryIpRangeNames;
 
     public Input<List<String>> getSecondaryIpRangeNames() {
         return this.secondaryIpRangeNames == null ? Input.empty() : this.secondaryIpRangeNames;
@@ -47,7 +47,7 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceIpRangesToNat")
-    private final @Nullable Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
+      private final @Nullable Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
 
     public Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> getSourceIpRangesToNat() {
         return this.sourceIpRangesToNat == null ? Input.empty() : this.sourceIpRangesToNat;
@@ -121,7 +121,6 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
             this.sourceIpRangesToNat = Input.ofNullable(sourceIpRangesToNat);
             return this;
         }
-
         public RouterNatSubnetworkToNatArgs build() {
             return new RouterNatSubnetworkToNatArgs(name, secondaryIpRangeNames, sourceIpRangesToNat);
         }

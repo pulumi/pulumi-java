@@ -8,7 +8,7 @@ import io.pulumi.awsnative.kendra.outputs.IndexCapacityUnitsConfiguration;
 import io.pulumi.awsnative.kendra.outputs.IndexDocumentMetadataConfiguration;
 import io.pulumi.awsnative.kendra.outputs.IndexTag;
 import io.pulumi.awsnative.kendra.outputs.IndexUserTokenConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,21 +74,21 @@ public final class GetIndexResult {
     /**
      * Capacity units
      * 
-     */
+    */
     public Optional<IndexCapacityUnitsConfiguration> getCapacityUnits() {
         return Optional.ofNullable(this.capacityUnits);
     }
     /**
      * A description for the index
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Document metadata configurations
      * 
-     */
+    */
     public List<IndexDocumentMetadataConfiguration> getDocumentMetadataConfigurations() {
         return this.documentMetadataConfigurations == null ? List.of() : this.documentMetadataConfigurations;
     }
@@ -104,7 +104,7 @@ public final class GetIndexResult {
     /**
      * Tags for labeling the index
      * 
-     */
+    */
     public List<IndexTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -202,7 +202,6 @@ public final class GetIndexResult {
             this.userTokenConfigurations = userTokenConfigurations;
             return this;
         }
-
         public GetIndexResult build() {
             return new GetIndexResult(arn, capacityUnits, description, documentMetadataConfigurations, id, name, roleArn, tags, userContextPolicy, userTokenConfigurations);
         }

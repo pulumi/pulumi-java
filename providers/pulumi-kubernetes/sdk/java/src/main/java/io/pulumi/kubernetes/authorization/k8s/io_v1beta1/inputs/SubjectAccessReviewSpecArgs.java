@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs.NonResourceAttributesArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs.ResourceAttributesArgs;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="extra")
-    private final @Nullable Input<Map<String,List<String>>> extra;
+      private final @Nullable Input<Map<String,List<String>>> extra;
 
     public Input<Map<String,List<String>>> getExtra() {
         return this.extra == null ? Input.empty() : this.extra;
@@ -38,7 +38,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="group")
-    private final @Nullable Input<List<String>> group;
+      private final @Nullable Input<List<String>> group;
 
     public Input<List<String>> getGroup() {
         return this.group == null ? Input.empty() : this.group;
@@ -49,7 +49,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="nonResourceAttributes")
-    private final @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
+      private final @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
 
     public Input<NonResourceAttributesArgs> getNonResourceAttributes() {
         return this.nonResourceAttributes == null ? Input.empty() : this.nonResourceAttributes;
@@ -60,7 +60,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceAttributes")
-    private final @Nullable Input<ResourceAttributesArgs> resourceAttributes;
+      private final @Nullable Input<ResourceAttributesArgs> resourceAttributes;
 
     public Input<ResourceAttributesArgs> getResourceAttributes() {
         return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;
@@ -71,7 +71,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -82,7 +82,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="user")
-    private final @Nullable Input<String> user;
+      private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;
@@ -201,7 +201,6 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
             this.user = Input.ofNullable(user);
             return this;
         }
-
         public SubjectAccessReviewSpecArgs build() {
             return new SubjectAccessReviewSpecArgs(extra, group, nonResourceAttributes, resourceAttributes, uid, user);
         }

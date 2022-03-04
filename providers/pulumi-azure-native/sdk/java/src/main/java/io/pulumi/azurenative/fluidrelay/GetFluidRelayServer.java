@@ -6,21 +6,41 @@ package io.pulumi.azurenative.fluidrelay;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.fluidrelay.inputs.GetFluidRelayServerArgs;
 import io.pulumi.azurenative.fluidrelay.outputs.GetFluidRelayServerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFluidRelayServer {
-/**
- * A FluidRelay Server.
+    private GetFluidRelayServer() {}
+    public interface BuilderApplicator {
+        public void apply(GetFluidRelayServerArgs.Builder a);
+    }
+    private static GetFluidRelayServerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFluidRelayServerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A FluidRelay Server.
  * API Version: 2021-03-12-preview.
  * 
- *
- * A FluidRelay Server.
+     *
+     * A FluidRelay Server.
  * 
- */
+     */
+    public static CompletableFuture<GetFluidRelayServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A FluidRelay Server.
+     * API Version: 2021-03-12-preview.
+     * 
+     *
+         * A FluidRelay Server.
+     * 
+     */
     public static CompletableFuture<GetFluidRelayServerResult> invokeAsync(GetFluidRelayServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:fluidrelay:getFluidRelayServer", TypeShape.of(GetFluidRelayServerResult.class), args == null ? GetFluidRelayServerArgs.Empty : args, Utilities.withVersion(options));
     }

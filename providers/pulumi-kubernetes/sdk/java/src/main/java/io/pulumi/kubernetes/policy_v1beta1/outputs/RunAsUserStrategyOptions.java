@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.policy_v1beta1.outputs.IDRange;
 import java.lang.String;
 import java.util.List;
@@ -34,14 +34,14 @@ public final class RunAsUserStrategyOptions {
     /**
      * ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
      * 
-     */
+    */
     public List<IDRange> getRanges() {
         return this.ranges == null ? List.of() : this.ranges;
     }
     /**
      * rule is the strategy that will dictate the allowable RunAsUser values that may be set.
      * 
-     */
+    */
     public String getRule() {
         return this.rule;
     }
@@ -77,7 +77,6 @@ public final class RunAsUserStrategyOptions {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public RunAsUserStrategyOptions build() {
             return new RunAsUserStrategyOptions(ranges, rule);
         }

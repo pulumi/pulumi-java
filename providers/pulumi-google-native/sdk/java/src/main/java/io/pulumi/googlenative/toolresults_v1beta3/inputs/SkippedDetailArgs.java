@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incompatibleAppVersion")
-    private final @Nullable Input<Boolean> incompatibleAppVersion;
+      private final @Nullable Input<Boolean> incompatibleAppVersion;
 
     public Input<Boolean> getIncompatibleAppVersion() {
         return this.incompatibleAppVersion == null ? Input.empty() : this.incompatibleAppVersion;
@@ -34,7 +34,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incompatibleArchitecture")
-    private final @Nullable Input<Boolean> incompatibleArchitecture;
+      private final @Nullable Input<Boolean> incompatibleArchitecture;
 
     public Input<Boolean> getIncompatibleArchitecture() {
         return this.incompatibleArchitecture == null ? Input.empty() : this.incompatibleArchitecture;
@@ -45,7 +45,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incompatibleDevice")
-    private final @Nullable Input<Boolean> incompatibleDevice;
+      private final @Nullable Input<Boolean> incompatibleDevice;
 
     public Input<Boolean> getIncompatibleDevice() {
         return this.incompatibleDevice == null ? Input.empty() : this.incompatibleDevice;
@@ -119,7 +119,6 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.incompatibleDevice = Input.ofNullable(incompatibleDevice);
             return this;
         }
-
         public SkippedDetailArgs build() {
             return new SkippedDetailArgs(incompatibleAppVersion, incompatibleArchitecture, incompatibleDevice);
         }

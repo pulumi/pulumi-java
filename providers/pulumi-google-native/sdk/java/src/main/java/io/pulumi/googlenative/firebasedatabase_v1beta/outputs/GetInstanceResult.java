@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasedatabase_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class GetInstanceResult {
     /**
      * Immutable. The globally unique hostname of the database.
      * 
-     */
+    */
     public String getDatabaseUrl() {
         return this.databaseUrl;
     }
     /**
      * The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * The database's lifecycle state. Read-only.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -137,7 +137,6 @@ public final class GetInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(databaseUrl, name, project, state, type);
         }

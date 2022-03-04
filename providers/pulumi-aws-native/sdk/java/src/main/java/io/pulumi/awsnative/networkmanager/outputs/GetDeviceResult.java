@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkmanager.outputs;
 
 import io.pulumi.awsnative.networkmanager.outputs.DeviceLocation;
 import io.pulumi.awsnative.networkmanager.outputs.DeviceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -92,70 +92,70 @@ public final class GetDeviceResult {
     /**
      * The description of the device.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the device.
      * 
-     */
+    */
     public Optional<String> getDeviceArn() {
         return Optional.ofNullable(this.deviceArn);
     }
     /**
      * The ID of the device.
      * 
-     */
+    */
     public Optional<String> getDeviceId() {
         return Optional.ofNullable(this.deviceId);
     }
     /**
      * The site location.
      * 
-     */
+    */
     public Optional<DeviceLocation> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The device model
      * 
-     */
+    */
     public Optional<String> getModel() {
         return Optional.ofNullable(this.model);
     }
     /**
      * The device serial number.
      * 
-     */
+    */
     public Optional<String> getSerialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
     /**
      * The site ID.
      * 
-     */
+    */
     public Optional<String> getSiteId() {
         return Optional.ofNullable(this.siteId);
     }
     /**
      * The tags for the device.
      * 
-     */
+    */
     public List<DeviceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The device type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The device vendor.
      * 
-     */
+    */
     public Optional<String> getVendor() {
         return Optional.ofNullable(this.vendor);
     }
@@ -247,7 +247,6 @@ public final class GetDeviceResult {
             this.vendor = vendor;
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(description, deviceArn, deviceId, location, model, serialNumber, siteId, tags, type, vendor);
         }

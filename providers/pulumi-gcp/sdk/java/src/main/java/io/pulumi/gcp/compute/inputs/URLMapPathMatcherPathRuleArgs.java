@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherPathRuleRouteActionArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherPathRuleUrlRedirectArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class URLMapPathMatcherPathRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="paths", required=true)
-    private final Input<List<String>> paths;
+      private final Input<List<String>> paths;
 
     public Input<List<String>> getPaths() {
         return this.paths;
@@ -42,7 +42,7 @@ public final class URLMapPathMatcherPathRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="routeAction")
-    private final @Nullable Input<URLMapPathMatcherPathRuleRouteActionArgs> routeAction;
+      private final @Nullable Input<URLMapPathMatcherPathRuleRouteActionArgs> routeAction;
 
     public Input<URLMapPathMatcherPathRuleRouteActionArgs> getRouteAction() {
         return this.routeAction == null ? Input.empty() : this.routeAction;
@@ -53,7 +53,7 @@ public final class URLMapPathMatcherPathRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -67,7 +67,7 @@ public final class URLMapPathMatcherPathRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="urlRedirect")
-    private final @Nullable Input<URLMapPathMatcherPathRuleUrlRedirectArgs> urlRedirect;
+      private final @Nullable Input<URLMapPathMatcherPathRuleUrlRedirectArgs> urlRedirect;
 
     public Input<URLMapPathMatcherPathRuleUrlRedirectArgs> getUrlRedirect() {
         return this.urlRedirect == null ? Input.empty() : this.urlRedirect;
@@ -156,7 +156,6 @@ public final class URLMapPathMatcherPathRuleArgs extends io.pulumi.resources.Res
             this.urlRedirect = Input.ofNullable(urlRedirect);
             return this;
         }
-
         public URLMapPathMatcherPathRuleArgs build() {
             return new URLMapPathMatcherPathRuleArgs(paths, routeAction, service, urlRedirect);
         }

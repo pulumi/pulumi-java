@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class DeploymentResponse {
     /**
      * Address of the runtime element hosting this deployment.
      * 
-     */
+    */
     public String getAddress() {
         return this.address;
     }
     /**
      * Configuration used to create this deployment.
      * 
-     */
+    */
     public String getConfig() {
         return this.config;
     }
     /**
      * Beginning of the lifetime of this deployment.
      * 
-     */
+    */
     public String getDeployTime() {
         return this.deployTime;
     }
     /**
      * Platform hosting this deployment.
      * 
-     */
+    */
     public String getPlatform() {
         return this.platform;
     }
     /**
      * Resource URI for the artifact being deployed taken from the deployable field with the same name.
      * 
-     */
+    */
     public List<String> getResourceUri() {
         return this.resourceUri;
     }
     /**
      * End of the lifetime of this deployment.
      * 
-     */
+    */
     public String getUndeployTime() {
         return this.undeployTime;
     }
     /**
      * Identity of the user that triggered this deployment.
      * 
-     */
+    */
     public String getUserEmail() {
         return this.userEmail;
     }
@@ -180,7 +180,6 @@ public final class DeploymentResponse {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public DeploymentResponse build() {
             return new DeploymentResponse(address, config, deployTime, platform, resourceUri, undeployTime, userEmail);
         }

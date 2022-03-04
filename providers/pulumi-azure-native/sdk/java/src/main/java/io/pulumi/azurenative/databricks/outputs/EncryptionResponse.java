@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class EncryptionResponse {
     /**
      * The name of KeyVault key.
      * 
-     */
+    */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
      * 
-     */
+    */
     public Optional<String> getKeySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
      * The Uri of KeyVault.
      * 
-     */
+    */
     public Optional<String> getKeyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
      * The version of KeyVault key.
      * 
-     */
+    */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -118,7 +118,6 @@ public final class EncryptionResponse {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public EncryptionResponse build() {
             return new EncryptionResponse(keyName, keySource, keyVaultUri, keyVersion);
         }

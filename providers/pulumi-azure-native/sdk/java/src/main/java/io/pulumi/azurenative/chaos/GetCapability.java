@@ -6,21 +6,41 @@ package io.pulumi.azurenative.chaos;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.chaos.inputs.GetCapabilityArgs;
 import io.pulumi.azurenative.chaos.outputs.GetCapabilityResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapability {
-/**
- * Model that represents a Capability resource.
+    private GetCapability() {}
+    public interface BuilderApplicator {
+        public void apply(GetCapabilityArgs.Builder a);
+    }
+    private static GetCapabilityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCapabilityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Model that represents a Capability resource.
  * API Version: 2021-09-15-preview.
  * 
- *
- * Model that represents a Capability resource.
+     *
+     * Model that represents a Capability resource.
  * 
- */
+     */
+    public static CompletableFuture<GetCapabilityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Model that represents a Capability resource.
+     * API Version: 2021-09-15-preview.
+     * 
+     *
+         * Model that represents a Capability resource.
+     * 
+     */
     public static CompletableFuture<GetCapabilityResult> invokeAsync(GetCapabilityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:chaos:getCapability", TypeShape.of(GetCapabilityResult.class), args == null ? GetCapabilityArgs.Empty : args, Utilities.withVersion(options));
     }

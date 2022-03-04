@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1.outputs.APIServiceCondition;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class APIServiceStatus {
     /**
      * Current service state of apiService.
      * 
-     */
+    */
     public List<APIServiceCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
@@ -54,7 +54,6 @@ public final class APIServiceStatus {
             this.conditions = conditions;
             return this;
         }
-
         public APIServiceStatus build() {
             return new APIServiceStatus(conditions);
         }

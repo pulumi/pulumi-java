@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.DSSEHintResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DSSEAttestationNoteResponse {
     /**
      * DSSEHint hints at the purpose of the attestation authority.
      * 
-     */
+    */
     public DSSEHintResponse getHint() {
         return this.hint;
     }
@@ -52,7 +52,6 @@ public final class DSSEAttestationNoteResponse {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public DSSEAttestationNoteResponse build() {
             return new DSSEAttestationNoteResponse(hint);
         }

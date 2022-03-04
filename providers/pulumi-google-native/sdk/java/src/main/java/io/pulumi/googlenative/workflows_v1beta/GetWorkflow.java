@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflows_v1beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkflow {
-/**
- * Gets details of a single Workflow.
+    private GetWorkflow() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkflowArgs.Builder a);
+    }
+    private static GetWorkflowArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkflowArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single Workflow.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkflowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single Workflow.
+     * 
+     */
     public static CompletableFuture<GetWorkflowResult> invokeAsync(GetWorkflowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:workflows/v1beta:getWorkflow", TypeShape.of(GetWorkflowResult.class), args == null ? GetWorkflowArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetHttpsProxy {
-/**
- * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
+    private GetTargetHttpsProxy() {}
+    public interface BuilderApplicator {
+        public void apply(GetTargetHttpsProxyArgs.Builder a);
+    }
+    private static GetTargetHttpsProxyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTargetHttpsProxyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetTargetHttpsProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetTargetHttpsProxyResult> invokeAsync(GetTargetHttpsProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getTargetHttpsProxy", TypeShape.of(GetTargetHttpsProxyResult.class), args == null ? GetTargetHttpsProxyArgs.Empty : args, Utilities.withVersion(options));
     }

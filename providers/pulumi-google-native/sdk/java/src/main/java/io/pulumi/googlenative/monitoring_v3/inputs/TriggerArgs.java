@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="percent")
-    private final @Nullable Input<Double> percent;
+      private final @Nullable Input<Double> percent;
 
     public Input<Double> getPercent() {
         return this.percent == null ? Input.empty() : this.percent;
@@ -94,7 +94,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.percent = Input.ofNullable(percent);
             return this;
         }
-
         public TriggerArgs build() {
             return new TriggerArgs(count, percent);
         }

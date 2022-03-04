@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.RevisionTemplateResponse;
 import io.pulumi.googlenative.run_v1.inputs.TrafficTargetResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ServiceSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="template", required=true)
-    private final RevisionTemplateResponse template;
+      private final RevisionTemplateResponse template;
 
     public RevisionTemplateResponse getTemplate() {
         return this.template;
@@ -34,7 +34,7 @@ public final class ServiceSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="traffic", required=true)
-    private final List<TrafficTargetResponse> traffic;
+      private final List<TrafficTargetResponse> traffic;
 
     public List<TrafficTargetResponse> getTraffic() {
         return this.traffic;
@@ -83,7 +83,6 @@ public final class ServiceSpecResponse extends io.pulumi.resources.InvokeArgs {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }
-
         public ServiceSpecResponse build() {
             return new ServiceSpecResponse(template, traffic);
         }

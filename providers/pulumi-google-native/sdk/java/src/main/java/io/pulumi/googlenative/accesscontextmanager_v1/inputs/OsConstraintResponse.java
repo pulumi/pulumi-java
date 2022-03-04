@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OsConstraintResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minimumVersion", required=true)
-    private final String minimumVersion;
+      private final String minimumVersion;
 
     public String getMinimumVersion() {
         return this.minimumVersion;
@@ -33,7 +33,7 @@ public final class OsConstraintResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osType", required=true)
-    private final String osType;
+      private final String osType;
 
     public String getOsType() {
         return this.osType;
@@ -44,7 +44,7 @@ public final class OsConstraintResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requireVerifiedChromeOs", required=true)
-    private final Boolean requireVerifiedChromeOs;
+      private final Boolean requireVerifiedChromeOs;
 
     public Boolean getRequireVerifiedChromeOs() {
         return this.requireVerifiedChromeOs;
@@ -103,7 +103,6 @@ public final class OsConstraintResponse extends io.pulumi.resources.InvokeArgs {
             this.requireVerifiedChromeOs = Objects.requireNonNull(requireVerifiedChromeOs);
             return this;
         }
-
         public OsConstraintResponse build() {
             return new OsConstraintResponse(minimumVersion, osType, requireVerifiedChromeOs);
         }

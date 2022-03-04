@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class TextMappingResponse {
     /**
      * The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
      * 
-     */
+    */
     public String getAtomKey() {
         return this.atomKey;
     }
     /**
      * The `Input.key` that identifies the input file.
      * 
-     */
+    */
     public String getInputKey() {
         return this.inputKey;
     }
     /**
      * The zero-based index of the track in the input file.
      * 
-     */
+    */
     public Integer getInputTrack() {
         return this.inputTrack;
     }
@@ -96,7 +96,6 @@ public final class TextMappingResponse {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
         }
-
         public TextMappingResponse build() {
             return new TextMappingResponse(atomKey, inputKey, inputTrack);
         }

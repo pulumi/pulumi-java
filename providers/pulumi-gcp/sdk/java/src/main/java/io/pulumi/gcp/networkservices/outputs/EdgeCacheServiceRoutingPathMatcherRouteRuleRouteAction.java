@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite;
@@ -46,7 +46,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
      * The policy to use for defining caching and signed request behaviour for requests that match this route.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy> getCdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
@@ -54,7 +54,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
      * CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy> getCorsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
@@ -62,7 +62,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
      * The URL rewrite configuration for requests that match this route.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite> getUrlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
@@ -105,7 +105,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
             this.urlRewrite = urlRewrite;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction(cdnPolicy, corsPolicy, urlRewrite);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ServicePrincipalPropertiesResponse {
     /**
      * The service principal client ID
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
      * 
-     */
+    */
     public String getSecret() {
         return this.secret;
     }
@@ -74,7 +74,6 @@ public final class ServicePrincipalPropertiesResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public ServicePrincipalPropertiesResponse build() {
             return new ServicePrincipalPropertiesResponse(clientId, secret);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AnimationEndResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTimeOffset", required=true)
-    private final String startTimeOffset;
+      private final String startTimeOffset;
 
     public String getStartTimeOffset() {
         return this.startTimeOffset;
@@ -59,7 +59,6 @@ public final class AnimationEndResponse extends io.pulumi.resources.InvokeArgs {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
-
         public AnimationEndResponse build() {
             return new AnimationEndResponse(startTimeOffset);
         }

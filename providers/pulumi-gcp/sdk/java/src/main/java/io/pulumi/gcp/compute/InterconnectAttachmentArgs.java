@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="adminEnabled")
-    private final @Nullable Input<Boolean> adminEnabled;
+      private final @Nullable Input<Boolean> adminEnabled;
 
     public Input<Boolean> getAdminEnabled() {
         return this.adminEnabled == null ? Input.empty() : this.adminEnabled;
@@ -39,7 +39,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bandwidth")
-    private final @Nullable Input<String> bandwidth;
+      private final @Nullable Input<String> bandwidth;
 
     public Input<String> getBandwidth() {
         return this.bandwidth == null ? Input.empty() : this.bandwidth;
@@ -56,7 +56,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="candidateSubnets")
-    private final @Nullable Input<List<String>> candidateSubnets;
+      private final @Nullable Input<List<String>> candidateSubnets;
 
     public Input<List<String>> getCandidateSubnets() {
         return this.candidateSubnets == null ? Input.empty() : this.candidateSubnets;
@@ -67,7 +67,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -83,7 +83,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="edgeAvailabilityDomain")
-    private final @Nullable Input<String> edgeAvailabilityDomain;
+      private final @Nullable Input<String> edgeAvailabilityDomain;
 
     public Input<String> getEdgeAvailabilityDomain() {
         return this.edgeAvailabilityDomain == null ? Input.empty() : this.edgeAvailabilityDomain;
@@ -106,7 +106,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<String> encryption;
+      private final @Nullable Input<String> encryption;
 
     public Input<String> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -119,7 +119,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="interconnect")
-    private final @Nullable Input<String> interconnect;
+      private final @Nullable Input<String> interconnect;
 
     public Input<String> getInterconnect() {
         return this.interconnect == null ? Input.empty() : this.interconnect;
@@ -145,7 +145,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ipsecInternalAddresses")
-    private final @Nullable Input<List<String>> ipsecInternalAddresses;
+      private final @Nullable Input<List<String>> ipsecInternalAddresses;
 
     public Input<List<String>> getIpsecInternalAddresses() {
         return this.ipsecInternalAddresses == null ? Input.empty() : this.ipsecInternalAddresses;
@@ -157,7 +157,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mtu")
-    private final @Nullable Input<String> mtu;
+      private final @Nullable Input<String> mtu;
 
     public Input<String> getMtu() {
         return this.mtu == null ? Input.empty() : this.mtu;
@@ -173,7 +173,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -185,7 +185,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -196,7 +196,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -210,7 +210,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="router", required=true)
-    private final Input<String> router;
+      private final Input<String> router;
 
     public Input<String> getRouter() {
         return this.router;
@@ -223,7 +223,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -235,7 +235,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vlanTag8021q")
-    private final @Nullable Input<Integer> vlanTag8021q;
+      private final @Nullable Input<Integer> vlanTag8021q;
 
     public Input<Integer> getVlanTag8021q() {
         return this.vlanTag8021q == null ? Input.empty() : this.vlanTag8021q;
@@ -489,7 +489,6 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
             this.vlanTag8021q = Input.ofNullable(vlanTag8021q);
             return this;
         }
-
         public InterconnectAttachmentArgs build() {
             return new InterconnectAttachmentArgs(adminEnabled, bandwidth, candidateSubnets, description, edgeAvailabilityDomain, encryption, interconnect, ipsecInternalAddresses, mtu, name, project, region, router, type, vlanTag8021q);
         }

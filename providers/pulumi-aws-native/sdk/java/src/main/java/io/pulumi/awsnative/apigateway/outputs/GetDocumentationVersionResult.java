@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetDocumentationVersionResult {
     /**
      * The description of the API documentation snapshot.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -54,7 +54,6 @@ public final class GetDocumentationVersionResult {
             this.description = description;
             return this;
         }
-
         public GetDocumentationVersionResult build() {
             return new GetDocumentationVersionResult(description);
         }

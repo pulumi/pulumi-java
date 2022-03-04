@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketNoncurrentVersionTransitionStorageClass;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="newerNoncurrentVersions")
-    private final @Nullable Input<Integer> newerNoncurrentVersions;
+      private final @Nullable Input<Integer> newerNoncurrentVersions;
 
     public Input<Integer> getNewerNoncurrentVersions() {
         return this.newerNoncurrentVersions == null ? Input.empty() : this.newerNoncurrentVersions;
@@ -35,7 +35,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="storageClass", required=true)
-    private final Input<BucketNoncurrentVersionTransitionStorageClass> storageClass;
+      private final Input<BucketNoncurrentVersionTransitionStorageClass> storageClass;
 
     public Input<BucketNoncurrentVersionTransitionStorageClass> getStorageClass() {
         return this.storageClass;
@@ -46,7 +46,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="transitionInDays", required=true)
-    private final Input<Integer> transitionInDays;
+      private final Input<Integer> transitionInDays;
 
     public Input<Integer> getTransitionInDays() {
         return this.transitionInDays;
@@ -120,7 +120,6 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
             this.transitionInDays = Input.of(Objects.requireNonNull(transitionInDays));
             return this;
         }
-
         public BucketNoncurrentVersionTransitionArgs build() {
             return new BucketNoncurrentVersionTransitionArgs(newerNoncurrentVersions, storageClass, transitionInDays);
         }

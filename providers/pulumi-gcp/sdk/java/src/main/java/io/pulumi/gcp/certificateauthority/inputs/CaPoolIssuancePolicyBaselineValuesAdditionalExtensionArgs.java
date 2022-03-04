@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
      * 
      */
     @InputImport(name="critical", required=true)
-    private final Input<Boolean> critical;
+      private final Input<Boolean> critical;
 
     public Input<Boolean> getCritical() {
         return this.critical;
@@ -33,7 +33,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId;
+      private final Input<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId;
 
     public Input<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> getObjectId() {
         return this.objectId;
@@ -44,7 +44,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -118,7 +118,6 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs build() {
             return new CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs(critical, objectId, value);
         }

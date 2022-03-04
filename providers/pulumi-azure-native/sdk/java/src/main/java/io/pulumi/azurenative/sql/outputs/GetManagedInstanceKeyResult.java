@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class GetManagedInstanceKeyResult {
     /**
      * Key auto rotation opt-in flag. Either true or false.
      * 
-     */
+    */
     public Boolean getAutoRotationEnabled() {
         return this.autoRotationEnabled;
     }
     /**
      * The key creation date.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Thumbprint of the key.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -180,7 +180,6 @@ public final class GetManagedInstanceKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedInstanceKeyResult build() {
             return new GetManagedInstanceKeyResult(autoRotationEnabled, creationDate, id, kind, name, thumbprint, type);
         }

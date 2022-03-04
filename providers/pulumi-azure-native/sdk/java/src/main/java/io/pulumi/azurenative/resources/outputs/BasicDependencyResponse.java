@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class BasicDependencyResponse {
     /**
      * The ID of the dependency.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The dependency resource name.
      * 
-     */
+    */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }
     /**
      * The dependency resource type.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -97,7 +97,6 @@ public final class BasicDependencyResponse {
             this.resourceType = resourceType;
             return this;
         }
-
         public BasicDependencyResponse build() {
             return new BasicDependencyResponse(id, resourceName, resourceType);
         }

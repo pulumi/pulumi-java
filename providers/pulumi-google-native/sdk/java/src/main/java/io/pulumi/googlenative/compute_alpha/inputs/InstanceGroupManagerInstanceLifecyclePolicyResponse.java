@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyResponse extends i
      * 
      */
     @InputImport(name="metadataBasedReadinessSignal", required=true)
-    private final InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal;
+      private final InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal;
 
     public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse getMetadataBasedReadinessSignal() {
         return this.metadataBasedReadinessSignal;
@@ -55,7 +55,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyResponse extends i
             this.metadataBasedReadinessSignal = Objects.requireNonNull(metadataBasedReadinessSignal);
             return this;
         }
-
         public InstanceGroupManagerInstanceLifecyclePolicyResponse build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyResponse(metadataBasedReadinessSignal);
         }

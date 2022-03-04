@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ExpressRouteGatewayPropertiesResponseBounds {
     /**
      * Maximum number of scale units deployed for ExpressRoute gateway.
      * 
-     */
+    */
     public Optional<Integer> getMax() {
         return Optional.ofNullable(this.max);
     }
     /**
      * Minimum number of scale units deployed for ExpressRoute gateway.
      * 
-     */
+    */
     public Optional<Integer> getMin() {
         return Optional.ofNullable(this.min);
     }
@@ -76,7 +76,6 @@ public final class ExpressRouteGatewayPropertiesResponseBounds {
             this.min = min;
             return this;
         }
-
         public ExpressRouteGatewayPropertiesResponseBounds build() {
             return new ExpressRouteGatewayPropertiesResponseBounds(max, min);
         }

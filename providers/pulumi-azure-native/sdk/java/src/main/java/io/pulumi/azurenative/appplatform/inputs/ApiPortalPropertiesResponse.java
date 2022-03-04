@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.ApiPortalInstanceResponse;
 import io.pulumi.azurenative.appplatform.inputs.ApiPortalResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.inputs.SsoPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="gatewayIds")
-    private final @Nullable List<String> gatewayIds;
+      private final @Nullable List<String> gatewayIds;
 
     public List<String> getGatewayIds() {
         return this.gatewayIds == null ? List.of() : this.gatewayIds;
@@ -39,7 +39,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="httpsOnly")
-    private final @Nullable Boolean httpsOnly;
+      private final @Nullable Boolean httpsOnly;
 
     public Optional<Boolean> getHttpsOnly() {
         return this.httpsOnly == null ? Optional.empty() : Optional.ofNullable(this.httpsOnly);
@@ -50,7 +50,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="instances", required=true)
-    private final List<ApiPortalInstanceResponse> instances;
+      private final List<ApiPortalInstanceResponse> instances;
 
     public List<ApiPortalInstanceResponse> getInstances() {
         return this.instances;
@@ -61,7 +61,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -72,7 +72,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="public")
-    private final @Nullable Boolean $public;
+      private final @Nullable Boolean $public;
 
     public Optional<Boolean> get$public() {
         return this.$public == null ? Optional.empty() : Optional.ofNullable(this.$public);
@@ -83,7 +83,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceRequests", required=true)
-    private final ApiPortalResourceRequestsResponse resourceRequests;
+      private final ApiPortalResourceRequestsResponse resourceRequests;
 
     public ApiPortalResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
@@ -94,7 +94,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sourceUrls")
-    private final @Nullable List<String> sourceUrls;
+      private final @Nullable List<String> sourceUrls;
 
     public List<String> getSourceUrls() {
         return this.sourceUrls == null ? List.of() : this.sourceUrls;
@@ -105,7 +105,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="ssoProperties")
-    private final @Nullable SsoPropertiesResponse ssoProperties;
+      private final @Nullable SsoPropertiesResponse ssoProperties;
 
     public Optional<SsoPropertiesResponse> getSsoProperties() {
         return this.ssoProperties == null ? Optional.empty() : Optional.ofNullable(this.ssoProperties);
@@ -116,7 +116,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -235,7 +235,6 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ApiPortalPropertiesResponse build() {
             return new ApiPortalPropertiesResponse(gatewayIds, httpsOnly, instances, provisioningState, $public, resourceRequests, sourceUrls, ssoProperties, url);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.servicebus.enums.EntityStatus;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDeleteOnIdle")
-    private final @Nullable Input<String> autoDeleteOnIdle;
+      private final @Nullable Input<String> autoDeleteOnIdle;
 
     public Input<String> getAutoDeleteOnIdle() {
         return this.autoDeleteOnIdle == null ? Input.empty() : this.autoDeleteOnIdle;
@@ -33,7 +33,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetteringOnMessageExpiration")
-    private final @Nullable Input<Boolean> deadLetteringOnMessageExpiration;
+      private final @Nullable Input<Boolean> deadLetteringOnMessageExpiration;
 
     public Input<Boolean> getDeadLetteringOnMessageExpiration() {
         return this.deadLetteringOnMessageExpiration == null ? Input.empty() : this.deadLetteringOnMessageExpiration;
@@ -44,7 +44,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultMessageTimeToLive")
-    private final @Nullable Input<String> defaultMessageTimeToLive;
+      private final @Nullable Input<String> defaultMessageTimeToLive;
 
     public Input<String> getDefaultMessageTimeToLive() {
         return this.defaultMessageTimeToLive == null ? Input.empty() : this.defaultMessageTimeToLive;
@@ -55,7 +55,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="duplicateDetectionHistoryTimeWindow")
-    private final @Nullable Input<String> duplicateDetectionHistoryTimeWindow;
+      private final @Nullable Input<String> duplicateDetectionHistoryTimeWindow;
 
     public Input<String> getDuplicateDetectionHistoryTimeWindow() {
         return this.duplicateDetectionHistoryTimeWindow == null ? Input.empty() : this.duplicateDetectionHistoryTimeWindow;
@@ -66,7 +66,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBatchedOperations")
-    private final @Nullable Input<Boolean> enableBatchedOperations;
+      private final @Nullable Input<Boolean> enableBatchedOperations;
 
     public Input<Boolean> getEnableBatchedOperations() {
         return this.enableBatchedOperations == null ? Input.empty() : this.enableBatchedOperations;
@@ -77,7 +77,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableExpress")
-    private final @Nullable Input<Boolean> enableExpress;
+      private final @Nullable Input<Boolean> enableExpress;
 
     public Input<Boolean> getEnableExpress() {
         return this.enableExpress == null ? Input.empty() : this.enableExpress;
@@ -88,7 +88,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enablePartitioning")
-    private final @Nullable Input<Boolean> enablePartitioning;
+      private final @Nullable Input<Boolean> enablePartitioning;
 
     public Input<Boolean> getEnablePartitioning() {
         return this.enablePartitioning == null ? Input.empty() : this.enablePartitioning;
@@ -99,7 +99,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardDeadLetteredMessagesTo")
-    private final @Nullable Input<String> forwardDeadLetteredMessagesTo;
+      private final @Nullable Input<String> forwardDeadLetteredMessagesTo;
 
     public Input<String> getForwardDeadLetteredMessagesTo() {
         return this.forwardDeadLetteredMessagesTo == null ? Input.empty() : this.forwardDeadLetteredMessagesTo;
@@ -110,7 +110,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardTo")
-    private final @Nullable Input<String> forwardTo;
+      private final @Nullable Input<String> forwardTo;
 
     public Input<String> getForwardTo() {
         return this.forwardTo == null ? Input.empty() : this.forwardTo;
@@ -121,7 +121,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lockDuration")
-    private final @Nullable Input<String> lockDuration;
+      private final @Nullable Input<String> lockDuration;
 
     public Input<String> getLockDuration() {
         return this.lockDuration == null ? Input.empty() : this.lockDuration;
@@ -132,7 +132,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDeliveryCount")
-    private final @Nullable Input<Integer> maxDeliveryCount;
+      private final @Nullable Input<Integer> maxDeliveryCount;
 
     public Input<Integer> getMaxDeliveryCount() {
         return this.maxDeliveryCount == null ? Input.empty() : this.maxDeliveryCount;
@@ -143,7 +143,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSizeInMegabytes")
-    private final @Nullable Input<Integer> maxSizeInMegabytes;
+      private final @Nullable Input<Integer> maxSizeInMegabytes;
 
     public Input<Integer> getMaxSizeInMegabytes() {
         return this.maxSizeInMegabytes == null ? Input.empty() : this.maxSizeInMegabytes;
@@ -154,7 +154,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -165,7 +165,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueName")
-    private final @Nullable Input<String> queueName;
+      private final @Nullable Input<String> queueName;
 
     public Input<String> getQueueName() {
         return this.queueName == null ? Input.empty() : this.queueName;
@@ -176,7 +176,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresDuplicateDetection")
-    private final @Nullable Input<Boolean> requiresDuplicateDetection;
+      private final @Nullable Input<Boolean> requiresDuplicateDetection;
 
     public Input<Boolean> getRequiresDuplicateDetection() {
         return this.requiresDuplicateDetection == null ? Input.empty() : this.requiresDuplicateDetection;
@@ -187,7 +187,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresSession")
-    private final @Nullable Input<Boolean> requiresSession;
+      private final @Nullable Input<Boolean> requiresSession;
 
     public Input<Boolean> getRequiresSession() {
         return this.requiresSession == null ? Input.empty() : this.requiresSession;
@@ -198,7 +198,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -209,7 +209,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<EntityStatus> status;
+      private final @Nullable Input<EntityStatus> status;
 
     public Input<EntityStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -508,7 +508,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public QueueArgs build() {
             return new QueueArgs(autoDeleteOnIdle, deadLetteringOnMessageExpiration, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, enableExpress, enablePartitioning, forwardDeadLetteredMessagesTo, forwardTo, lockDuration, maxDeliveryCount, maxSizeInMegabytes, namespaceName, queueName, requiresDuplicateDetection, requiresSession, resourceGroupName, status);
         }

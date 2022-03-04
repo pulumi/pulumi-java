@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerator;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfig;
@@ -98,21 +98,21 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfig {
     /**
      * Optional. The Compute Engine accelerator configuration for these instances.
      * 
-     */
+    */
     public List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerator> getAccelerators() {
         return this.accelerators == null ? List.of() : this.accelerators;
     }
     /**
      * Optional. Disk option config settings.
      * 
-     */
+    */
     public Optional<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig> getDiskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
     /**
      * Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
      * 
-     */
+    */
     public Optional<String> getImage() {
         return Optional.ofNullable(this.image);
     }
@@ -120,7 +120,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfig {
      * - 
      * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
      * 
-     */
+    */
     public List<String> getInstanceNames() {
         return this.instanceNames == null ? List.of() : this.instanceNames;
     }
@@ -128,14 +128,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfig {
      * - 
      * Output only. Specifies that this instance group contains preemptible instances.
      * 
-     */
+    */
     public Optional<Boolean> getIsPreemptible() {
         return Optional.ofNullable(this.isPreemptible);
     }
     /**
      * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
      * 
-     */
+    */
     public Optional<String> getMachineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -143,28 +143,28 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfig {
      * - 
      * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
      * 
-     */
+    */
     public List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfig> getManagedGroupConfigs() {
         return this.managedGroupConfigs == null ? List.of() : this.managedGroupConfigs;
     }
     /**
      * Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
      * 
-     */
+    */
     public Optional<String> getMinCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
     /**
      * Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
      * 
-     */
+    */
     public Optional<Integer> getNumInstances() {
         return Optional.ofNullable(this.numInstances);
     }
     /**
      * Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
      * 
-     */
+    */
     public Optional<String> getPreemptibility() {
         return Optional.ofNullable(this.preemptibility);
     }
@@ -256,7 +256,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfig {
             this.preemptibility = preemptibility;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigMasterConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigMasterConfig(accelerators, diskConfig, image, instanceNames, isPreemptible, machineType, managedGroupConfigs, minCpuPlatform, numInstances, preemptibility);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupCustomAction;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupStatelessRule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class RuleGroupStatelessRulesAndCustomActions {
             this.statelessRules = Objects.requireNonNull(statelessRules);
             return this;
         }
-
         public RuleGroupStatelessRulesAndCustomActions build() {
             return new RuleGroupStatelessRulesAndCustomActions(customActions, statelessRules);
         }

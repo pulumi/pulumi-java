@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ListMachineLearningComputeKeysResult {
     /**
      * The type of compute
      * 
-     */
+    */
     public String getComputeType() {
         return this.computeType;
     }
@@ -52,7 +52,6 @@ public final class ListMachineLearningComputeKeysResult {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public ListMachineLearningComputeKeysResult build() {
             return new ListMachineLearningComputeKeysResult(computeType);
         }

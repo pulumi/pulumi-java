@@ -6,21 +6,41 @@ package io.pulumi.azurenative.testbase;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.testbase.inputs.GetTestResultVideoDownloadURLArgs;
 import io.pulumi.azurenative.testbase.outputs.GetTestResultVideoDownloadURLResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestResultVideoDownloadURL {
-/**
- * The response of getting a download URL.
+    private GetTestResultVideoDownloadURL() {}
+    public interface BuilderApplicator {
+        public void apply(GetTestResultVideoDownloadURLArgs.Builder a);
+    }
+    private static GetTestResultVideoDownloadURLArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTestResultVideoDownloadURLArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response of getting a download URL.
  * API Version: 2020-12-16-preview.
  * 
- *
- * The response of getting a download URL.
+     *
+     * The response of getting a download URL.
  * 
- */
+     */
+    public static CompletableFuture<GetTestResultVideoDownloadURLResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response of getting a download URL.
+     * API Version: 2020-12-16-preview.
+     * 
+     *
+         * The response of getting a download URL.
+     * 
+     */
     public static CompletableFuture<GetTestResultVideoDownloadURLResult> invokeAsync(GetTestResultVideoDownloadURLArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestResultVideoDownloadURL", TypeShape.of(GetTestResultVideoDownloadURLResult.class), args == null ? GetTestResultVideoDownloadURLArgs.Empty : args, Utilities.withVersion(options));
     }

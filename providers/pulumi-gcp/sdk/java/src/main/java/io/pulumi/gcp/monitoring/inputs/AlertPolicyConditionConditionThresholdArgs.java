@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdAggregationArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdDenominatorAggregationArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdTriggerArgs;
@@ -37,7 +37,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="aggregations")
-    private final @Nullable Input<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations;
+      private final @Nullable Input<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations;
 
     public Input<List<AlertPolicyConditionConditionThresholdAggregationArgs>> getAggregations() {
         return this.aggregations == null ? Input.empty() : this.aggregations;
@@ -56,7 +56,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="comparison", required=true)
-    private final Input<String> comparison;
+      private final Input<String> comparison;
 
     public Input<String> getComparison() {
         return this.comparison;
@@ -83,7 +83,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="denominatorAggregations")
-    private final @Nullable Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations;
+      private final @Nullable Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations;
 
     public Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> getDenominatorAggregations() {
         return this.denominatorAggregations == null ? Input.empty() : this.denominatorAggregations;
@@ -108,7 +108,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="denominatorFilter")
-    private final @Nullable Input<String> denominatorFilter;
+      private final @Nullable Input<String> denominatorFilter;
 
     public Input<String> getDenominatorFilter() {
         return this.denominatorFilter == null ? Input.empty() : this.denominatorFilter;
@@ -133,7 +133,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="duration", required=true)
-    private final Input<String> duration;
+      private final Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration;
@@ -144,7 +144,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -156,7 +156,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="thresholdValue")
-    private final @Nullable Input<Double> thresholdValue;
+      private final @Nullable Input<Double> thresholdValue;
 
     public Input<Double> getThresholdValue() {
         return this.thresholdValue == null ? Input.empty() : this.thresholdValue;
@@ -175,7 +175,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="trigger")
-    private final @Nullable Input<AlertPolicyConditionConditionThresholdTriggerArgs> trigger;
+      private final @Nullable Input<AlertPolicyConditionConditionThresholdTriggerArgs> trigger;
 
     public Input<AlertPolicyConditionConditionThresholdTriggerArgs> getTrigger() {
         return this.trigger == null ? Input.empty() : this.trigger;
@@ -324,7 +324,6 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
             this.trigger = Input.ofNullable(trigger);
             return this;
         }
-
         public AlertPolicyConditionConditionThresholdArgs build() {
             return new AlertPolicyConditionConditionThresholdArgs(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }

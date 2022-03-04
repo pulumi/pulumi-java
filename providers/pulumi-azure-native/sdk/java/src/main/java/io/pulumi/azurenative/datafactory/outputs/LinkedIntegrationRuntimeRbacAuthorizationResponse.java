@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.CredentialReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,21 +43,21 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
      * The authorization type for integration runtime sharing.
      * Expected value is 'RBAC'.
      * 
-     */
+    */
     public String getAuthorizationType() {
         return this.authorizationType;
     }
     /**
      * The credential reference containing authentication information.
      * 
-     */
+    */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * The resource identifier of the integration runtime to be shared.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
@@ -100,7 +100,6 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public LinkedIntegrationRuntimeRbacAuthorizationResponse build() {
             return new LinkedIntegrationRuntimeRbacAuthorizationResponse(authorizationType, credential, resourceId);
         }

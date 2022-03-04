@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class InstanceTemplateShieldedInstanceConfig {
     /**
      * -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
      * 
-     */
+    */
     public Optional<Boolean> getEnableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
     /**
      * -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getEnableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
     /**
      * -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
      * 
-     */
+    */
     public Optional<Boolean> getEnableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }
@@ -97,7 +97,6 @@ public final class InstanceTemplateShieldedInstanceConfig {
             this.enableVtpm = enableVtpm;
             return this;
         }
-
         public InstanceTemplateShieldedInstanceConfig build() {
             return new InstanceTemplateShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1beta1.outputs.GoogleCloudNetworksecurityV1beta1CertificateProviderResponse;
 import io.pulumi.googlenative.networksecurity_v1beta1.outputs.MTLSPolicyResponse;
 import java.lang.Boolean;
@@ -77,56 +77,56 @@ public final class GetServerTlsPolicyResult {
     /**
      *  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
      * 
-     */
+    */
     public Boolean getAllowOpen() {
         return this.allowOpen;
     }
     /**
      * The timestamp when the resource was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Free-text description of the resource.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Set of label tags associated with the resource.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      *  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
      * 
-     */
+    */
     public MTLSPolicyResponse getMtlsPolicy() {
         return this.mtlsPolicy;
     }
     /**
      * Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      *  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
      * 
-     */
+    */
     public GoogleCloudNetworksecurityV1beta1CertificateProviderResponse getServerCertificate() {
         return this.serverCertificate;
     }
     /**
      * The timestamp when the resource was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -204,7 +204,6 @@ public final class GetServerTlsPolicyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetServerTlsPolicyResult build() {
             return new GetServerTlsPolicyResult(allowOpen, createTime, description, labels, mtlsPolicy, name, serverCertificate, updateTime);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageAdvancedMachineFeaturesArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageConfidentialInstanceConfigArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageGuestAcceleratorArgs;
@@ -31,7 +31,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="advancedMachineFeatures")
-    private final @Nullable Input<InstanceFromMachineImageAdvancedMachineFeaturesArgs> advancedMachineFeatures;
+      private final @Nullable Input<InstanceFromMachineImageAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
     public Input<InstanceFromMachineImageAdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
         return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
@@ -43,7 +43,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowStoppingForUpdate")
-    private final @Nullable Input<Boolean> allowStoppingForUpdate;
+      private final @Nullable Input<Boolean> allowStoppingForUpdate;
 
     public Input<Boolean> getAllowStoppingForUpdate() {
         return this.allowStoppingForUpdate == null ? Input.empty() : this.allowStoppingForUpdate;
@@ -54,7 +54,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="canIpForward")
-    private final @Nullable Input<Boolean> canIpForward;
+      private final @Nullable Input<Boolean> canIpForward;
 
     public Input<Boolean> getCanIpForward() {
         return this.canIpForward == null ? Input.empty() : this.canIpForward;
@@ -66,7 +66,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="confidentialInstanceConfig")
-    private final @Nullable Input<InstanceFromMachineImageConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+      private final @Nullable Input<InstanceFromMachineImageConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     public Input<InstanceFromMachineImageConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
         return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
@@ -77,7 +77,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="deletionProtection")
-    private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Input<Boolean> deletionProtection;
 
     public Input<Boolean> getDeletionProtection() {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
@@ -88,7 +88,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -99,7 +99,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="desiredStatus")
-    private final @Nullable Input<String> desiredStatus;
+      private final @Nullable Input<String> desiredStatus;
 
     public Input<String> getDesiredStatus() {
         return this.desiredStatus == null ? Input.empty() : this.desiredStatus;
@@ -110,7 +110,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enableDisplay")
-    private final @Nullable Input<Boolean> enableDisplay;
+      private final @Nullable Input<Boolean> enableDisplay;
 
     public Input<Boolean> getEnableDisplay() {
         return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
@@ -121,7 +121,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="guestAccelerators")
-    private final @Nullable Input<List<InstanceFromMachineImageGuestAcceleratorArgs>> guestAccelerators;
+      private final @Nullable Input<List<InstanceFromMachineImageGuestAcceleratorArgs>> guestAccelerators;
 
     public Input<List<InstanceFromMachineImageGuestAcceleratorArgs>> getGuestAccelerators() {
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
@@ -134,7 +134,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hostname")
-    private final @Nullable Input<String> hostname;
+      private final @Nullable Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname == null ? Input.empty() : this.hostname;
@@ -145,7 +145,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -156,7 +156,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -167,7 +167,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -178,7 +178,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="metadataStartupScript")
-    private final @Nullable Input<String> metadataStartupScript;
+      private final @Nullable Input<String> metadataStartupScript;
 
     public Input<String> getMetadataStartupScript() {
         return this.metadataStartupScript == null ? Input.empty() : this.metadataStartupScript;
@@ -189,7 +189,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="minCpuPlatform")
-    private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -201,7 +201,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -212,7 +212,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<InstanceFromMachineImageNetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Input<List<InstanceFromMachineImageNetworkInterfaceArgs>> networkInterfaces;
 
     public Input<List<InstanceFromMachineImageNetworkInterfaceArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -224,7 +224,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="networkPerformanceConfig")
-    private final @Nullable Input<InstanceFromMachineImageNetworkPerformanceConfigArgs> networkPerformanceConfig;
+      private final @Nullable Input<InstanceFromMachineImageNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
     public Input<InstanceFromMachineImageNetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
         return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
@@ -236,7 +236,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -247,7 +247,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="reservationAffinity")
-    private final @Nullable Input<InstanceFromMachineImageReservationAffinityArgs> reservationAffinity;
+      private final @Nullable Input<InstanceFromMachineImageReservationAffinityArgs> reservationAffinity;
 
     public Input<InstanceFromMachineImageReservationAffinityArgs> getReservationAffinity() {
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
@@ -259,7 +259,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourcePolicies")
-    private final @Nullable Input<String> resourcePolicies;
+      private final @Nullable Input<String> resourcePolicies;
 
     public Input<String> getResourcePolicies() {
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
@@ -270,7 +270,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="scheduling")
-    private final @Nullable Input<InstanceFromMachineImageSchedulingArgs> scheduling;
+      private final @Nullable Input<InstanceFromMachineImageSchedulingArgs> scheduling;
 
     public Input<InstanceFromMachineImageSchedulingArgs> getScheduling() {
         return this.scheduling == null ? Input.empty() : this.scheduling;
@@ -281,7 +281,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<InstanceFromMachineImageServiceAccountArgs> serviceAccount;
+      private final @Nullable Input<InstanceFromMachineImageServiceAccountArgs> serviceAccount;
 
     public Input<InstanceFromMachineImageServiceAccountArgs> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -292,7 +292,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-    private final @Nullable Input<InstanceFromMachineImageShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Input<InstanceFromMachineImageShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Input<InstanceFromMachineImageShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -304,7 +304,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceMachineImage", required=true)
-    private final Input<String> sourceMachineImage;
+      private final Input<String> sourceMachineImage;
 
     public Input<String> getSourceMachineImage() {
         return this.sourceMachineImage;
@@ -315,7 +315,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -327,7 +327,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -761,7 +761,6 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceFromMachineImageArgs build() {
             return new InstanceFromMachineImageArgs(advancedMachineFeatures, allowStoppingForUpdate, canIpForward, confidentialInstanceConfig, deletionProtection, description, desiredStatus, enableDisplay, guestAccelerators, hostname, labels, machineType, metadata, metadataStartupScript, minCpuPlatform, name, networkInterfaces, networkPerformanceConfig, project, reservationAffinity, resourcePolicies, scheduling, serviceAccount, shieldedInstanceConfig, sourceMachineImage, tags, zone);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.UpcomingMaintenanceTimeWindowResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class UpcomingMaintenanceResponse {
     /**
      * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
      * 
-     */
+    */
     public Boolean getCanReschedule() {
         return this.canReschedule;
     }
     /**
      * The start time window of the maintenance disruption.
      * 
-     */
+    */
     public UpcomingMaintenanceTimeWindowResponse getStartTimeWindow() {
         return this.startTimeWindow;
     }
     /**
      * Defines the type of maintenance.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -97,7 +97,6 @@ public final class UpcomingMaintenanceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public UpcomingMaintenanceResponse build() {
             return new UpcomingMaintenanceResponse(canReschedule, startTimeWindow, type);
         }

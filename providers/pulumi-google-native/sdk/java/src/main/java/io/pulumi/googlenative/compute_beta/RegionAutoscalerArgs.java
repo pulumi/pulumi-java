@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.AutoscalingPolicyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoscalingPolicy")
-    private final @Nullable Input<AutoscalingPolicyArgs> autoscalingPolicy;
+      private final @Nullable Input<AutoscalingPolicyArgs> autoscalingPolicy;
 
     public Input<AutoscalingPolicyArgs> getAutoscalingPolicy() {
         return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
@@ -31,7 +31,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,28 +42,28 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -74,7 +74,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -208,7 +208,6 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
             this.target = Input.ofNullable(target);
             return this;
         }
-
         public RegionAutoscalerArgs build() {
             return new RegionAutoscalerArgs(autoscalingPolicy, description, name, project, region, requestId, target);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetApiReleaseArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetApiReleaseResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiRelease {
-/**
- * ApiRelease details.
+    private GetApiRelease() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiReleaseArgs.Builder a);
+    }
+    private static GetApiReleaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiReleaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * ApiRelease details.
  * API Version: 2020-12-01.
  * 
- *
- * ApiRelease details.
+     *
+     * ApiRelease details.
  * 
- */
+     */
+    public static CompletableFuture<GetApiReleaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * ApiRelease details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * ApiRelease details.
+     * 
+     */
     public static CompletableFuture<GetApiReleaseResult> invokeAsync(GetApiReleaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiRelease", TypeShape.of(GetApiReleaseResult.class), args == null ? GetApiReleaseArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class ContactDetailsResponse {
     /**
      * Contact name of the person.
      * 
-     */
+    */
     public String getContactName() {
         return this.contactName;
     }
     /**
      * List of Email-ids to be notified about job progress.
      * 
-     */
+    */
     public List<String> getEmailList() {
         return this.emailList;
     }
     /**
      * Mobile number of the contact person.
      * 
-     */
+    */
     public Optional<String> getMobile() {
         return Optional.ofNullable(this.mobile);
     }
     /**
      * Phone number of the contact person.
      * 
-     */
+    */
     public String getPhone() {
         return this.phone;
     }
     /**
      * Phone extension number of the contact person.
      * 
-     */
+    */
     public Optional<String> getPhoneExtension() {
         return Optional.ofNullable(this.phoneExtension);
     }
@@ -140,7 +140,6 @@ public final class ContactDetailsResponse {
             this.phoneExtension = phoneExtension;
             return this;
         }
-
         public ContactDetailsResponse build() {
             return new ContactDetailsResponse(contactName, emailList, mobile, phone, phoneExtension);
         }

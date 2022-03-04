@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
     public static final TaskDefinitionHostVolumePropertiesArgs Empty = new TaskDefinitionHostVolumePropertiesArgs();
 
     @InputImport(name="sourcePath")
-    private final @Nullable Input<String> sourcePath;
+      private final @Nullable Input<String> sourcePath;
 
     public Input<String> getSourcePath() {
         return this.sourcePath == null ? Input.empty() : this.sourcePath;
@@ -58,7 +58,6 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
             this.sourcePath = Input.ofNullable(sourcePath);
             return this;
         }
-
         public TaskDefinitionHostVolumePropertiesArgs build() {
             return new TaskDefinitionHostVolumePropertiesArgs(sourcePath);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EventSourceMappingFilter extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="pattern")
-    private final @Nullable String pattern;
+      private final @Nullable String pattern;
 
     public Optional<String> getPattern() {
         return this.pattern == null ? Optional.empty() : Optional.ofNullable(this.pattern);
@@ -61,7 +61,6 @@ public final class EventSourceMappingFilter extends io.pulumi.resources.InvokeAr
             this.pattern = pattern;
             return this;
         }
-
         public EventSourceMappingFilter build() {
             return new EventSourceMappingFilter(pattern);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -70,28 +70,28 @@ public final class GetSecretVersionResult {
     /**
      * The time at which the Secret was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The time at which the Secret was destroyed. Only present if state is DESTROYED.
      * 
-     */
+    */
     public String getDestroyTime() {
         return this.destroyTime;
     }
     /**
      * True if the current state of the SecretVersion is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -99,7 +99,7 @@ public final class GetSecretVersionResult {
      * The resource name of the SecretVersion. Format:
      * `projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -112,7 +112,7 @@ public final class GetSecretVersionResult {
     /**
      * The secret data. No larger than 64KiB.
      * 
-     */
+    */
     public String getSecretData() {
         return this.secretData;
     }
@@ -200,7 +200,6 @@ public final class GetSecretVersionResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSecretVersionResult build() {
             return new GetSecretVersionResult(createTime, destroyTime, enabled, id, name, project, secret, secretData, version);
         }

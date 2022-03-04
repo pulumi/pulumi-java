@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="androidModelId", required=true)
-    private final String androidModelId;
+      private final String androidModelId;
 
     public String getAndroidModelId() {
         return this.androidModelId;
@@ -32,7 +32,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="androidVersionId", required=true)
-    private final String androidVersionId;
+      private final String androidVersionId;
 
     public String getAndroidVersionId() {
         return this.androidVersionId;
@@ -43,7 +43,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="locale", required=true)
-    private final String locale;
+      private final String locale;
 
     public String getLocale() {
         return this.locale;
@@ -54,7 +54,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="orientation", required=true)
-    private final String orientation;
+      private final String orientation;
 
     public String getOrientation() {
         return this.orientation;
@@ -123,7 +123,6 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }
-
         public AndroidDeviceResponse build() {
             return new AndroidDeviceResponse(androidModelId, androidVersionId, locale, orientation);
         }

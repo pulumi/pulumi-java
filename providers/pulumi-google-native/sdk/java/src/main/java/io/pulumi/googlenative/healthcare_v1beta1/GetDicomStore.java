@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDicomStore {
-/**
- * Gets the specified DICOM store.
+    private GetDicomStore() {}
+    public interface BuilderApplicator {
+        public void apply(GetDicomStoreArgs.Builder a);
+    }
+    private static GetDicomStoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDicomStoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified DICOM store.
  * 
- */
+     */
+    public static CompletableFuture<GetDicomStoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified DICOM store.
+     * 
+     */
     public static CompletableFuture<GetDicomStoreResult> invokeAsync(GetDicomStoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getDicomStore", TypeShape.of(GetDicomStoreResult.class), args == null ? GetDicomStoreArgs.Empty : args, Utilities.withVersion(options));
     }

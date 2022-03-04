@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -84,7 +84,6 @@ public final class TopicRuleCloudwatchAlarmAction {
             this.stateValue = Objects.requireNonNull(stateValue);
             return this;
         }
-
         public TopicRuleCloudwatchAlarmAction build() {
             return new TopicRuleCloudwatchAlarmAction(alarmName, roleArn, stateReason, stateValue);
         }

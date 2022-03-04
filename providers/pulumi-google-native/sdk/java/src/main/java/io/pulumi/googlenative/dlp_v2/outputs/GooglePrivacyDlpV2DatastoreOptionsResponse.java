@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KindExpressionResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PartitionIdResponse;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
     /**
      * The kind to process.
      * 
-     */
+    */
     public GooglePrivacyDlpV2KindExpressionResponse getKind() {
         return this.kind;
     }
     /**
      * A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
      * 
-     */
+    */
     public GooglePrivacyDlpV2PartitionIdResponse getPartitionId() {
         return this.partitionId;
     }
@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
         }
-
         public GooglePrivacyDlpV2DatastoreOptionsResponse build() {
             return new GooglePrivacyDlpV2DatastoreOptionsResponse(kind, partitionId);
         }

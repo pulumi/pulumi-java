@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.billing.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -110,91 +110,91 @@ public final class GetBillingRoleAssignmentByDepartmentResult {
     /**
      * The principal Id of the user who created the role assignment.
      * 
-     */
+    */
     public String getCreatedByPrincipalId() {
         return this.createdByPrincipalId;
     }
     /**
      * The tenant Id of the user who created the role assignment.
      * 
-     */
+    */
     public String getCreatedByPrincipalTenantId() {
         return this.createdByPrincipalTenantId;
     }
     /**
      * The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
-     */
+    */
     public String getCreatedByUserEmailAddress() {
         return this.createdByUserEmailAddress;
     }
     /**
      * The date the role assignment was created.
      * 
-     */
+    */
     public String getCreatedOn() {
         return this.createdOn;
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The principal id of the user to whom the role was assigned.
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The principal tenant id of the user to whom the role was assigned.
      * 
-     */
+    */
     public Optional<String> getPrincipalTenantId() {
         return Optional.ofNullable(this.principalTenantId);
     }
     /**
      * The ID of the role definition.
      * 
-     */
+    */
     public Optional<String> getRoleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
     /**
      * The scope at which the role was assigned.
      * 
-     */
+    */
     public String getScope() {
         return this.scope;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
-     */
+    */
     public Optional<String> getUserAuthenticationType() {
         return Optional.ofNullable(this.userAuthenticationType);
     }
     /**
      * The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
-     */
+    */
     public Optional<String> getUserEmailAddress() {
         return Optional.ofNullable(this.userEmailAddress);
     }
@@ -307,7 +307,6 @@ public final class GetBillingRoleAssignmentByDepartmentResult {
             this.userEmailAddress = userEmailAddress;
             return this;
         }
-
         public GetBillingRoleAssignmentByDepartmentResult build() {
             return new GetBillingRoleAssignmentByDepartmentResult(createdByPrincipalId, createdByPrincipalTenantId, createdByUserEmailAddress, createdOn, id, name, principalId, principalTenantId, roleDefinitionId, scope, type, userAuthenticationType, userEmailAddress);
         }

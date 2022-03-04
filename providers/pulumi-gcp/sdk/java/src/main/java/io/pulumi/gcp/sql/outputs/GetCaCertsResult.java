@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.sql.outputs.GetCaCertsCert;
 import java.lang.String;
 import java.util.List;
@@ -46,21 +46,21 @@ public final class GetCaCertsResult {
     /**
      * SHA1 fingerprint of the currently active CA certificate.
      * 
-     */
+    */
     public String getActiveVersion() {
         return this.activeVersion;
     }
     /**
      * A list of server CA certificates for the instance. Each contains:
      * 
-     */
+    */
     public List<GetCaCertsCert> getCerts() {
         return this.certs;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -123,7 +123,6 @@ public final class GetCaCertsResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetCaCertsResult build() {
             return new GetCaCertsResult(activeVersion, certs, id, instance, project);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="nonResourceURLs", required=true)
-    private final Input<List<String>> nonResourceURLs;
+      private final Input<List<String>> nonResourceURLs;
 
     public Input<List<String>> getNonResourceURLs() {
         return this.nonResourceURLs;
@@ -40,7 +40,7 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="verbs", required=true)
-    private final Input<List<String>> verbs;
+      private final Input<List<String>> verbs;
 
     public Input<List<String>> getVerbs() {
         return this.verbs;
@@ -99,7 +99,6 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
             this.verbs = Input.of(Objects.requireNonNull(verbs));
             return this;
         }
-
         public NonResourcePolicyRuleArgs build() {
             return new NonResourcePolicyRuleArgs(nonResourceURLs, verbs);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
 import io.pulumi.azurenative.testbase.outputs.TestBaseAccountSKUResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -91,70 +91,70 @@ public final class GetTestBaseAccountResult {
     /**
      * The access level of the Test Base Account.
      * 
-     */
+    */
     public String getAccessLevel() {
         return this.accessLevel;
     }
     /**
      * Resource Etag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the Test Base Account.
      * 
-     */
+    */
     public TestBaseAccountSKUResponse getSku() {
         return this.sku;
     }
     /**
      * The system metadata relating to this resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -246,7 +246,6 @@ public final class GetTestBaseAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTestBaseAccountResult build() {
             return new GetTestBaseAccountResult(accessLevel, etag, id, location, name, provisioningState, sku, systemData, tags, type);
         }

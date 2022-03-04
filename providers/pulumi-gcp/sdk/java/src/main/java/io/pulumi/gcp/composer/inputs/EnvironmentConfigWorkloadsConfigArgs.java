@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigSchedulerArgs;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWebServerArgs;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWorkerArgs;
@@ -17,21 +17,21 @@ public final class EnvironmentConfigWorkloadsConfigArgs extends io.pulumi.resour
     public static final EnvironmentConfigWorkloadsConfigArgs Empty = new EnvironmentConfigWorkloadsConfigArgs();
 
     @InputImport(name="scheduler")
-    private final @Nullable Input<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler;
+      private final @Nullable Input<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler;
 
     public Input<EnvironmentConfigWorkloadsConfigSchedulerArgs> getScheduler() {
         return this.scheduler == null ? Input.empty() : this.scheduler;
     }
 
     @InputImport(name="webServer")
-    private final @Nullable Input<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer;
+      private final @Nullable Input<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer;
 
     public Input<EnvironmentConfigWorkloadsConfigWebServerArgs> getWebServer() {
         return this.webServer == null ? Input.empty() : this.webServer;
     }
 
     @InputImport(name="worker")
-    private final @Nullable Input<EnvironmentConfigWorkloadsConfigWorkerArgs> worker;
+      private final @Nullable Input<EnvironmentConfigWorkloadsConfigWorkerArgs> worker;
 
     public Input<EnvironmentConfigWorkloadsConfigWorkerArgs> getWorker() {
         return this.worker == null ? Input.empty() : this.worker;
@@ -105,7 +105,6 @@ public final class EnvironmentConfigWorkloadsConfigArgs extends io.pulumi.resour
             this.worker = Input.ofNullable(worker);
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfigArgs build() {
             return new EnvironmentConfigWorkloadsConfigArgs(scheduler, webServer, worker);
         }

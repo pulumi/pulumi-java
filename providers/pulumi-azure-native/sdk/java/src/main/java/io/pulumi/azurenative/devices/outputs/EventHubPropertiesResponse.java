@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -57,35 +57,35 @@ public final class EventHubPropertiesResponse {
     /**
      * The Event Hub-compatible endpoint.
      * 
-     */
+    */
     public String getEndpoint() {
         return this.endpoint;
     }
     /**
      * The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
      * 
-     */
+    */
     public Optional<Integer> getPartitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
     /**
      * The partition ids in the Event Hub-compatible endpoint.
      * 
-     */
+    */
     public List<String> getPartitionIds() {
         return this.partitionIds;
     }
     /**
      * The Event Hub-compatible name.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
      * 
-     */
+    */
     public Optional<Double> getRetentionTimeInDays() {
         return Optional.ofNullable(this.retentionTimeInDays);
     }
@@ -142,7 +142,6 @@ public final class EventHubPropertiesResponse {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
-
         public EventHubPropertiesResponse build() {
             return new EventHubPropertiesResponse(endpoint, partitionCount, partitionIds, path, retentionTimeInDays);
         }

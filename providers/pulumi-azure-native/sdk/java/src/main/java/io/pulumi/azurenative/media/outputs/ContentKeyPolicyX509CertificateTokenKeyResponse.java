@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
      * 
-     */
+    */
     public String getRawBody() {
         return this.rawBody;
     }
@@ -76,7 +76,6 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
             this.rawBody = Objects.requireNonNull(rawBody);
             return this;
         }
-
         public ContentKeyPolicyX509CertificateTokenKeyResponse build() {
             return new ContentKeyPolicyX509CertificateTokenKeyResponse(odataType, rawBody);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ExpressRouteConnectionIdResponse {
     /**
      * The ID of the ExpressRouteConnection.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -52,7 +52,6 @@ public final class ExpressRouteConnectionIdResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ExpressRouteConnectionIdResponse build() {
             return new ExpressRouteConnectionIdResponse(id);
         }

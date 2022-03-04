@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.DaprComponentResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable String appId;
+      private final @Nullable String appId;
 
     public Optional<String> getAppId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
@@ -38,7 +38,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appPort")
-    private final @Nullable Integer appPort;
+      private final @Nullable Integer appPort;
 
     public Optional<Integer> getAppPort() {
         return this.appPort == null ? Optional.empty() : Optional.ofNullable(this.appPort);
@@ -49,7 +49,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="components")
-    private final @Nullable List<DaprComponentResponse> components;
+      private final @Nullable List<DaprComponentResponse> components;
 
     public List<DaprComponentResponse> getComponents() {
         return this.components == null ? List.of() : this.components;
@@ -60,7 +60,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -129,7 +129,6 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
             this.enabled = enabled;
             return this;
         }
-
         public DaprResponse build() {
             return new DaprResponse(appId, appPort, components, enabled);
         }

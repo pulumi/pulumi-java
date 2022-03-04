@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.transfer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class WorkflowS3InputFileLocation {
     /**
      * Specifies the S3 bucket that contains the file being copied.
      * 
-     */
+    */
     public Optional<String> getBucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
      * The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
@@ -76,7 +76,6 @@ public final class WorkflowS3InputFileLocation {
             this.key = key;
             return this;
         }
-
         public WorkflowS3InputFileLocation build() {
             return new WorkflowS3InputFileLocation(bucket, key);
         }

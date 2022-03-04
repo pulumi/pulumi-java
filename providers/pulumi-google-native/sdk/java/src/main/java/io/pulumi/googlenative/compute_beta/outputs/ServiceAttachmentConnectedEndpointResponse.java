@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ServiceAttachmentConnectedEndpointResponse {
     /**
      * The url of a connected endpoint.
      * 
-     */
+    */
     public String getEndpoint() {
         return this.endpoint;
     }
     /**
      * The PSC connection id of the connected endpoint.
      * 
-     */
+    */
     public String getPscConnectionId() {
         return this.pscConnectionId;
     }
     /**
      * The status of a connected endpoint to this service attachment.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -95,7 +95,6 @@ public final class ServiceAttachmentConnectedEndpointResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ServiceAttachmentConnectedEndpointResponse build() {
             return new ServiceAttachmentConnectedEndpointResponse(endpoint, pscConnectionId, status);
         }

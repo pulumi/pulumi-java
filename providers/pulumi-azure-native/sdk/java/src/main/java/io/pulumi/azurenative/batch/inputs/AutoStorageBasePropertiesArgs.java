@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-    private final Input<String> storageAccountId;
+      private final Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId;
@@ -65,7 +65,6 @@ public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.Res
             this.storageAccountId = Input.of(Objects.requireNonNull(storageAccountId));
             return this;
         }
-
         public AutoStorageBasePropertiesArgs build() {
             return new AutoStorageBasePropertiesArgs(storageAccountId);
         }

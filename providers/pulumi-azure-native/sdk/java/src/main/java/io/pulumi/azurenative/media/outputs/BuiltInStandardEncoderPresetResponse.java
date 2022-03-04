@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class BuiltInStandardEncoderPresetResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.BuiltInStandardEncoderPreset'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The built-in preset to be used for encoding videos.
      * 
-     */
+    */
     public String getPresetName() {
         return this.presetName;
     }
@@ -76,7 +76,6 @@ public final class BuiltInStandardEncoderPresetResponse {
             this.presetName = Objects.requireNonNull(presetName);
             return this;
         }
-
         public BuiltInStandardEncoderPresetResponse build() {
             return new BuiltInStandardEncoderPresetResponse(odataType, presetName);
         }

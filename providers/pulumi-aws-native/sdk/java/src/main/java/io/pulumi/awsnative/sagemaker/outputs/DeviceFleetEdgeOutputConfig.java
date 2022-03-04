@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DeviceFleetEdgeOutputConfig {
     /**
      * The KMS key id used for encryption on the S3 bucket
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * The Amazon Simple Storage (S3) bucket URI
      * 
-     */
+    */
     public String getS3OutputLocation() {
         return this.s3OutputLocation;
     }
@@ -76,7 +76,6 @@ public final class DeviceFleetEdgeOutputConfig {
             this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
             return this;
         }
-
         public DeviceFleetEdgeOutputConfig build() {
             return new DeviceFleetEdgeOutputConfig(kmsKeyId, s3OutputLocation);
         }

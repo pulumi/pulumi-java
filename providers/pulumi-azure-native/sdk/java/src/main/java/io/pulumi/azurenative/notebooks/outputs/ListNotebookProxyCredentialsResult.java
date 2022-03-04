@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ListNotebookProxyCredentialsResult {
     /**
      * Hostname for the Notebook Proxy resource
      * 
-     */
+    */
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * The primary key of the NotebookProxy resource.
      * 
-     */
+    */
     public Optional<String> getPrimaryAccessKey() {
         return Optional.ofNullable(this.primaryAccessKey);
     }
     /**
      * Notebook Proxy resource id
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The secondary key of the NotebookProxy resource.
      * 
-     */
+    */
     public Optional<String> getSecondaryAccessKey() {
         return Optional.ofNullable(this.secondaryAccessKey);
     }
@@ -118,7 +118,6 @@ public final class ListNotebookProxyCredentialsResult {
             this.secondaryAccessKey = secondaryAccessKey;
             return this;
         }
-
         public ListNotebookProxyCredentialsResult build() {
             return new ListNotebookProxyCredentialsResult(hostname, primaryAccessKey, resourceId, secondaryAccessKey);
         }

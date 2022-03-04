@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="affectedCircuits", required=true)
-    private final List<String> affectedCircuits;
+      private final List<String> affectedCircuits;
 
     public List<String> getAffectedCircuits() {
         return this.affectedCircuits;
@@ -33,7 +33,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -55,7 +55,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="issueType", required=true)
-    private final String issueType;
+      private final String issueType;
 
     public String getIssueType() {
         return this.issueType;
@@ -66,7 +66,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -88,7 +88,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -99,7 +99,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -208,7 +208,6 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public InterconnectOutageNotificationResponse build() {
             return new InterconnectOutageNotificationResponse(affectedCircuits, description, endTime, issueType, name, source, startTime, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class JobRecipe {
     /**
      * Recipe name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Recipe version
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -76,7 +76,6 @@ public final class JobRecipe {
             this.version = version;
             return this;
         }
-
         public JobRecipe build() {
             return new JobRecipe(name, version);
         }

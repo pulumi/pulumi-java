@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.resourcegroups.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class GroupTagFilter extends io.pulumi.resources.InvokeArgs {
     public static final GroupTagFilter Empty = new GroupTagFilter();
 
     @InputImport(name="key")
-    private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @InputImport(name="values")
-    private final @Nullable List<String> values;
+      private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -72,7 +72,6 @@ public final class GroupTagFilter extends io.pulumi.resources.InvokeArgs {
             this.values = values;
             return this;
         }
-
         public GroupTagFilter build() {
             return new GroupTagFilter(key, values);
         }

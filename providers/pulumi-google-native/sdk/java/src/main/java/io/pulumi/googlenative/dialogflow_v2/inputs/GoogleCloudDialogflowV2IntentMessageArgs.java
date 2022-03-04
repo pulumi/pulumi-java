@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessagePlatform;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs;
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="basicCard")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard;
 
     public Input<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> getBasicCard() {
         return this.basicCard == null ? Input.empty() : this.basicCard;
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="browseCarouselCard")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
 
     public Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> getBrowseCarouselCard() {
         return this.browseCarouselCard == null ? Input.empty() : this.browseCarouselCard;
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="card")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageCardArgs> card;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageCardArgs> card;
 
     public Input<GoogleCloudDialogflowV2IntentMessageCardArgs> getCard() {
         return this.card == null ? Input.empty() : this.card;
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="carouselSelect")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect;
 
     public Input<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> getCarouselSelect() {
         return this.carouselSelect == null ? Input.empty() : this.carouselSelect;
@@ -82,7 +82,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
     public Input<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -93,7 +93,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="linkOutSuggestion")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
 
     public Input<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> getLinkOutSuggestion() {
         return this.linkOutSuggestion == null ? Input.empty() : this.linkOutSuggestion;
@@ -104,7 +104,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="listSelect")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect;
 
     public Input<GoogleCloudDialogflowV2IntentMessageListSelectArgs> getListSelect() {
         return this.listSelect == null ? Input.empty() : this.listSelect;
@@ -115,7 +115,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="mediaContent")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent;
 
     public Input<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> getMediaContent() {
         return this.mediaContent == null ? Input.empty() : this.mediaContent;
@@ -126,7 +126,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="payload")
-    private final @Nullable Input<Map<String,String>> payload;
+      private final @Nullable Input<Map<String,String>> payload;
 
     public Input<Map<String,String>> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -137,7 +137,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessagePlatform> platform;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessagePlatform> platform;
 
     public Input<GoogleCloudDialogflowV2IntentMessagePlatform> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -148,7 +148,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="quickReplies")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies;
 
     public Input<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> getQuickReplies() {
         return this.quickReplies == null ? Input.empty() : this.quickReplies;
@@ -159,7 +159,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="simpleResponses")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses;
 
     public Input<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> getSimpleResponses() {
         return this.simpleResponses == null ? Input.empty() : this.simpleResponses;
@@ -170,7 +170,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="suggestions")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions;
 
     public Input<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> getSuggestions() {
         return this.suggestions == null ? Input.empty() : this.suggestions;
@@ -181,7 +181,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tableCard")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard;
 
     public Input<GoogleCloudDialogflowV2IntentMessageTableCardArgs> getTableCard() {
         return this.tableCard == null ? Input.empty() : this.tableCard;
@@ -192,7 +192,7 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageTextArgs> text;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageTextArgs> text;
 
     public Input<GoogleCloudDialogflowV2IntentMessageTextArgs> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -446,7 +446,6 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageArgs(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, simpleResponses, suggestions, tableCard, text);
         }

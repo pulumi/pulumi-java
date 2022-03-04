@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+      private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -35,7 +35,7 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="principalMetadata")
-    private final @Nullable Input<Map<String,String>> principalMetadata;
+      private final @Nullable Input<Map<String,String>> principalMetadata;
 
     public Input<Map<String,String>> getPrincipalMetadata() {
         return this.principalMetadata == null ? Input.empty() : this.principalMetadata;
@@ -46,7 +46,7 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="principalType", required=true)
-    private final Input<String> principalType;
+      private final Input<String> principalType;
 
     public Input<String> getPrincipalType() {
         return this.principalType;
@@ -120,7 +120,6 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
             this.principalType = Input.of(Objects.requireNonNull(principalType));
             return this;
         }
-
         public AssignmentPrincipalArgs build() {
             return new AssignmentPrincipalArgs(principalId, principalMetadata, principalType);
         }

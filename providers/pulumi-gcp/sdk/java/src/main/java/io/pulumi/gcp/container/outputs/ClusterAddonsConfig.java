@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.ClusterAddonsConfigCloudrunConfig;
 import io.pulumi.gcp.container.outputs.ClusterAddonsConfigConfigConnectorConfig;
 import io.pulumi.gcp.container.outputs.ClusterAddonsConfigDnsCacheConfig;
@@ -117,7 +117,7 @@ public final class ClusterAddonsConfig {
     /**
      * . Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterAddonsConfigCloudrunConfig> getCloudrunConfig() {
         return Optional.ofNullable(this.cloudrunConfig);
     }
@@ -125,7 +125,7 @@ public final class ClusterAddonsConfig {
      * .
      * The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
      * 
-     */
+    */
     public Optional<ClusterAddonsConfigConfigConnectorConfig> getConfigConnectorConfig() {
         return Optional.ofNullable(this.configConnectorConfig);
     }
@@ -134,7 +134,7 @@ public final class ClusterAddonsConfig {
      * The status of the NodeLocal DNSCache addon. It is disabled by default.
      * Set `enabled = true` to enable.
      * 
-     */
+    */
     public Optional<ClusterAddonsConfigDnsCacheConfig> getDnsCacheConfig() {
         return Optional.ofNullable(this.dnsCacheConfig);
     }
@@ -142,7 +142,7 @@ public final class ClusterAddonsConfig {
      * .
      * Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
      * 
-     */
+    */
     public Optional<ClusterAddonsConfigGcePersistentDiskCsiDriverConfig> getGcePersistentDiskCsiDriverConfig() {
         return Optional.ofNullable(this.gcePersistentDiskCsiDriverConfig);
     }
@@ -151,7 +151,7 @@ public final class ClusterAddonsConfig {
      * which allows the usage of filestore instance as volumes.
      * It is disbaled by default; set `enabled = true` to enable.
      * 
-     */
+    */
     public Optional<ClusterAddonsConfigGcpFilestoreCsiDriverConfig> getGcpFilestoreCsiDriverConfig() {
         return Optional.ofNullable(this.gcpFilestoreCsiDriverConfig);
     }
@@ -162,7 +162,7 @@ public final class ClusterAddonsConfig {
      * It is enabled by default;
      * set `disabled = true` to disable.
      * 
-     */
+    */
     public Optional<ClusterAddonsConfigHorizontalPodAutoscaling> getHorizontalPodAutoscaling() {
         return Optional.ofNullable(this.horizontalPodAutoscaling);
     }
@@ -171,7 +171,7 @@ public final class ClusterAddonsConfig {
      * controller addon, which makes it easy to set up HTTP load balancers for services in a
      * cluster. It is enabled by default; set `disabled = true` to disable.
      * 
-     */
+    */
     public Optional<ClusterAddonsConfigHttpLoadBalancing> getHttpLoadBalancing() {
         return Optional.ofNullable(this.httpLoadBalancing);
     }
@@ -179,7 +179,7 @@ public final class ClusterAddonsConfig {
      * .
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterAddonsConfigIstioConfig> getIstioConfig() {
         return Optional.ofNullable(this.istioConfig);
     }
@@ -187,7 +187,7 @@ public final class ClusterAddonsConfig {
      * .
      * Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
      * 
-     */
+    */
     public Optional<ClusterAddonsConfigKalmConfig> getKalmConfig() {
         return Optional.ofNullable(this.kalmConfig);
     }
@@ -199,7 +199,7 @@ public final class ClusterAddonsConfig {
      * It can only be disabled if the nodes already do not have network policies enabled.
      * Defaults to disabled; set `disabled = false` to enable.
      * 
-     */
+    */
     public Optional<ClusterAddonsConfigNetworkPolicyConfig> getNetworkPolicyConfig() {
         return Optional.ofNullable(this.networkPolicyConfig);
     }
@@ -291,7 +291,6 @@ public final class ClusterAddonsConfig {
             this.networkPolicyConfig = networkPolicyConfig;
             return this;
         }
-
         public ClusterAddonsConfig build() {
             return new ClusterAddonsConfig(cloudrunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, horizontalPodAutoscaling, httpLoadBalancing, istioConfig, kalmConfig, networkPolicyConfig);
         }

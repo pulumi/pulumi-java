@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.translate_v3beta1.inputs.GcsSourceResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GlossaryInputConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="gcsSource", required=true)
-    private final GcsSourceResponse gcsSource;
+      private final GcsSourceResponse gcsSource;
 
     public GcsSourceResponse getGcsSource() {
         return this.gcsSource;
@@ -59,7 +59,6 @@ public final class GlossaryInputConfigResponse extends io.pulumi.resources.Invok
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }
-
         public GlossaryInputConfigResponse build() {
             return new GlossaryInputConfigResponse(gcsSource);
         }

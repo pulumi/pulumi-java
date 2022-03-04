@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.composer.outputs.GetImageVersionsImageVersion;
 import java.lang.String;
 import java.util.List;
@@ -39,14 +39,14 @@ public final class GetImageVersionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of composer image versions available in the given project and location. Each `image_version` contains:
      * 
-     */
+    */
     public List<GetImageVersionsImageVersion> getImageVersions() {
         return this.imageVersions;
     }
@@ -102,7 +102,6 @@ public final class GetImageVersionsResult {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetImageVersionsResult build() {
             return new GetImageVersionsResult(id, imageVersions, project, region);
         }

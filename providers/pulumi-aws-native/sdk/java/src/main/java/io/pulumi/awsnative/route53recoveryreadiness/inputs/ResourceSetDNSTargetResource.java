@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTargetResource;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable String domainName;
+      private final @Nullable String domainName;
 
     public Optional<String> getDomainName() {
         return this.domainName == null ? Optional.empty() : Optional.ofNullable(this.domainName);
@@ -35,7 +35,7 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="hostedZoneArn")
-    private final @Nullable String hostedZoneArn;
+      private final @Nullable String hostedZoneArn;
 
     public Optional<String> getHostedZoneArn() {
         return this.hostedZoneArn == null ? Optional.empty() : Optional.ofNullable(this.hostedZoneArn);
@@ -46,7 +46,7 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="recordSetId")
-    private final @Nullable String recordSetId;
+      private final @Nullable String recordSetId;
 
     public Optional<String> getRecordSetId() {
         return this.recordSetId == null ? Optional.empty() : Optional.ofNullable(this.recordSetId);
@@ -57,14 +57,14 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="recordType")
-    private final @Nullable String recordType;
+      private final @Nullable String recordType;
 
     public Optional<String> getRecordType() {
         return this.recordType == null ? Optional.empty() : Optional.ofNullable(this.recordType);
     }
 
     @InputImport(name="targetResource")
-    private final @Nullable ResourceSetTargetResource targetResource;
+      private final @Nullable ResourceSetTargetResource targetResource;
 
     public Optional<ResourceSetTargetResource> getTargetResource() {
         return this.targetResource == null ? Optional.empty() : Optional.ofNullable(this.targetResource);
@@ -143,7 +143,6 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
             this.targetResource = targetResource;
             return this;
         }
-
         public ResourceSetDNSTargetResource build() {
             return new ResourceSetDNSTargetResource(domainName, hostedZoneArn, recordSetId, recordType, targetResource);
         }

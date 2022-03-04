@@ -6,17 +6,33 @@ package io.pulumi.awsnative.cloudformation;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudformation.inputs.GetResourceVersionArgs;
 import io.pulumi.awsnative.cloudformation.outputs.GetResourceVersionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceVersion {
-/**
- * A resource that has been registered in the CloudFormation Registry.
+    private GetResourceVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceVersionArgs.Builder a);
+    }
+    private static GetResourceVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A resource that has been registered in the CloudFormation Registry.
  * 
- */
+     */
+    public static CompletableFuture<GetResourceVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A resource that has been registered in the CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetResourceVersionResult> invokeAsync(GetResourceVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getResourceVersion", TypeShape.of(GetResourceVersionResult.class), args == null ? GetResourceVersionArgs.Empty : args, Utilities.withVersion(options));
     }

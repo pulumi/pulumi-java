@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class VpcAccessConnectorResponse {
     /**
      * The egress setting for the connector, controlling what traffic is diverted through it.
      * 
-     */
+    */
     public String getEgressSetting() {
         return this.egressSetting;
     }
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class VpcAccessConnectorResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public VpcAccessConnectorResponse build() {
             return new VpcAccessConnectorResponse(egressSetting, name);
         }

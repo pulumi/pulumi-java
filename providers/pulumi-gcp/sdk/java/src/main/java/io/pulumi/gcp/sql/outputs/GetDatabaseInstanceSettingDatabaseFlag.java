@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +27,7 @@ public final class GetDatabaseInstanceSettingDatabaseFlag {
     /**
      * The name of the instance.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -66,7 +66,6 @@ public final class GetDatabaseInstanceSettingDatabaseFlag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetDatabaseInstanceSettingDatabaseFlag build() {
             return new GetDatabaseInstanceSettingDatabaseFlag(name, value);
         }

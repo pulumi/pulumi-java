@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mwaa.outputs;
 import io.pulumi.awsnative.mwaa.enums.EnvironmentWebserverAccessMode;
 import io.pulumi.awsnative.mwaa.outputs.EnvironmentLoggingConfiguration;
 import io.pulumi.awsnative.mwaa.outputs.EnvironmentNetworkConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -108,7 +108,7 @@ public final class GetEnvironmentResult {
      *     
      *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      * 
-     */
+    */
     public Optional<Object> getAirflowConfigurationOptions() {
         return Optional.ofNullable(this.airflowConfigurationOptions);
     }
@@ -160,7 +160,7 @@ public final class GetEnvironmentResult {
     /**
      * A map of tags for the environment.
      * 
-     */
+    */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }
@@ -331,7 +331,6 @@ public final class GetEnvironmentResult {
             this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(airflowConfigurationOptions, airflowVersion, arn, dagS3Path, environmentClass, executionRoleArn, loggingConfiguration, maxWorkers, minWorkers, networkConfiguration, pluginsS3ObjectVersion, pluginsS3Path, requirementsS3ObjectVersion, requirementsS3Path, schedulers, sourceBucketArn, tags, webserverAccessMode, webserverUrl, weeklyMaintenanceWindowStart);
         }

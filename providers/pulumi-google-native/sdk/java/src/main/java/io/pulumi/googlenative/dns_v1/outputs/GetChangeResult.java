@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ResourceRecordSetResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -58,21 +58,21 @@ public final class GetChangeResult {
     /**
      * Which ResourceRecordSets to add?
      * 
-     */
+    */
     public List<ResourceRecordSetResponse> getAdditions() {
         return this.additions;
     }
     /**
      * Which ResourceRecordSets to remove? Must match existing data exactly.
      * 
-     */
+    */
     public List<ResourceRecordSetResponse> getDeletions() {
         return this.deletions;
     }
     /**
      * If the DNS queries for the zone will be served.
      * 
-     */
+    */
     public Boolean getIsServing() {
         return this.isServing;
     }
@@ -82,14 +82,14 @@ public final class GetChangeResult {
     /**
      * The time that this operation was started by the server (output only). This is in RFC3339 text format.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -153,7 +153,6 @@ public final class GetChangeResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetChangeResult build() {
             return new GetChangeResult(additions, deletions, isServing, kind, startTime, status);
         }

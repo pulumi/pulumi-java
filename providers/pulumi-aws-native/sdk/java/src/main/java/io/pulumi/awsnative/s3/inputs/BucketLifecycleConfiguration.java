@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketRule;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BucketLifecycleConfiguration extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<BucketRule> rules;
+      private final List<BucketRule> rules;
 
     public List<BucketRule> getRules() {
         return this.rules;
@@ -56,7 +56,6 @@ public final class BucketLifecycleConfiguration extends io.pulumi.resources.Invo
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BucketLifecycleConfiguration build() {
             return new BucketLifecycleConfiguration(rules);
         }

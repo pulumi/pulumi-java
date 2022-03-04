@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class GetTestablePermissionsPermission {
     /**
      * Whether the corresponding API has been enabled for the resource.
      * 
-     */
+    */
     public Boolean getApiDisabled() {
         return this.apiDisabled;
     }
     /**
      * The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
      * 
-     */
+    */
     public String getCustomSupportLevel() {
         return this.customSupportLevel;
     }
     /**
      * Name of the permission.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Release stage of the permission.
      * 
-     */
+    */
     public String getStage() {
         return this.stage;
     }
     /**
      * Human readable title of the permission.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -138,7 +138,6 @@ public final class GetTestablePermissionsPermission {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetTestablePermissionsPermission build() {
             return new GetTestablePermissionsPermission(apiDisabled, customSupportLevel, name, stage, title);
         }

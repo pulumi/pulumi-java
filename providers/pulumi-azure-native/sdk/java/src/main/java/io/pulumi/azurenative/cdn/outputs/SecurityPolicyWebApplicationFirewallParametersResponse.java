@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SecurityPolicyWebApplicationFirewallAssociationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,7 +44,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
     /**
      * Waf associations
      * 
-     */
+    */
     public List<SecurityPolicyWebApplicationFirewallAssociationResponse> getAssociations() {
         return this.associations == null ? List.of() : this.associations;
     }
@@ -52,14 +52,14 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
      * The type of the Security policy to create.
      * Expected value is 'WebApplicationFirewall'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<ResourceReferenceResponse> getWafPolicy() {
         return Optional.ofNullable(this.wafPolicy);
     }
@@ -102,7 +102,6 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
             this.wafPolicy = wafPolicy;
             return this;
         }
-
         public SecurityPolicyWebApplicationFirewallParametersResponse build() {
             return new SecurityPolicyWebApplicationFirewallParametersResponse(associations, type, wafPolicy);
         }

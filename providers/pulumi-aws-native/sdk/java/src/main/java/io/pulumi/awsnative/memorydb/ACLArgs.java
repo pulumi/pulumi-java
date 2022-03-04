@@ -5,7 +5,7 @@ package io.pulumi.awsnative.memorydb;
 
 import io.pulumi.awsnative.memorydb.inputs.ACLTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aCLName")
-    private final @Nullable Input<String> aCLName;
+      private final @Nullable Input<String> aCLName;
 
     public Input<String> getACLName() {
         return this.aCLName == null ? Input.empty() : this.aCLName;
@@ -32,7 +32,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ACLTagArgs>> tags;
+      private final @Nullable Input<List<ACLTagArgs>> tags;
 
     public Input<List<ACLTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -43,7 +43,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userNames")
-    private final @Nullable Input<List<String>> userNames;
+      private final @Nullable Input<List<String>> userNames;
 
     public Input<List<String>> getUserNames() {
         return this.userNames == null ? Input.empty() : this.userNames;
@@ -117,7 +117,6 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
             this.userNames = Input.ofNullable(userNames);
             return this;
         }
-
         public ACLArgs build() {
             return new ACLArgs(aCLName, tags, userNames);
         }

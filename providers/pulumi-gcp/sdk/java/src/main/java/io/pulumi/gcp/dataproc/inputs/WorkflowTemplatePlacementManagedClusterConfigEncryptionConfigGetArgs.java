@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
      * 
      */
     @InputImport(name="gcePdKmsKeyName")
-    private final @Nullable Input<String> gcePdKmsKeyName;
+      private final @Nullable Input<String> gcePdKmsKeyName;
 
     public Input<String> getGcePdKmsKeyName() {
         return this.gcePdKmsKeyName == null ? Input.empty() : this.gcePdKmsKeyName;
@@ -62,7 +62,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
             this.gcePdKmsKeyName = Input.ofNullable(gcePdKmsKeyName);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs(gcePdKmsKeyName);
         }

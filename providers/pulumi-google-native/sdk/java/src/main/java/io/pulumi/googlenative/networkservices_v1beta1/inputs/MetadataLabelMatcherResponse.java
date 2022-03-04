@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkservices_v1beta1.inputs.MetadataLabelsResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MetadataLabelMatcherResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="metadataLabelMatchCriteria", required=true)
-    private final String metadataLabelMatchCriteria;
+      private final String metadataLabelMatchCriteria;
 
     public String getMetadataLabelMatchCriteria() {
         return this.metadataLabelMatchCriteria;
@@ -34,7 +34,7 @@ public final class MetadataLabelMatcherResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="metadataLabels", required=true)
-    private final List<MetadataLabelsResponse> metadataLabels;
+      private final List<MetadataLabelsResponse> metadataLabels;
 
     public List<MetadataLabelsResponse> getMetadataLabels() {
         return this.metadataLabels;
@@ -83,7 +83,6 @@ public final class MetadataLabelMatcherResponse extends io.pulumi.resources.Invo
             this.metadataLabels = Objects.requireNonNull(metadataLabels);
             return this;
         }
-
         public MetadataLabelMatcherResponse build() {
             return new MetadataLabelMatcherResponse(metadataLabelMatchCriteria, metadataLabels);
         }

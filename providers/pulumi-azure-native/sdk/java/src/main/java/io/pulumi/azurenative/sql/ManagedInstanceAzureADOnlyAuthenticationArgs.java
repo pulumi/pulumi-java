@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="authenticationName")
-    private final @Nullable Input<String> authenticationName;
+      private final @Nullable Input<String> authenticationName;
 
     public Input<String> getAuthenticationName() {
         return this.authenticationName == null ? Input.empty() : this.authenticationName;
@@ -31,7 +31,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="azureADOnlyAuthentication", required=true)
-    private final Input<Boolean> azureADOnlyAuthentication;
+      private final Input<Boolean> azureADOnlyAuthentication;
 
     public Input<Boolean> getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
@@ -42,7 +42,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-    private final Input<String> managedInstanceName;
+      private final Input<String> managedInstanceName;
 
     public Input<String> getManagedInstanceName() {
         return this.managedInstanceName;
@@ -53,7 +53,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ManagedInstanceAzureADOnlyAuthenticationArgs build() {
             return new ManagedInstanceAzureADOnlyAuthenticationArgs(authenticationName, azureADOnlyAuthentication, managedInstanceName, resourceGroupName);
         }

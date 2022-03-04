@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetActionGroupArgs;
 import io.pulumi.azurenative.insights.outputs.GetActionGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActionGroup {
-/**
- * An action group resource.
+    private GetActionGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetActionGroupArgs.Builder a);
+    }
+    private static GetActionGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetActionGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An action group resource.
  * API Version: 2019-06-01.
  * 
- *
- * An action group resource.
+     *
+     * An action group resource.
  * 
- */
+     */
+    public static CompletableFuture<GetActionGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An action group resource.
+     * API Version: 2019-06-01.
+     * 
+     *
+         * An action group resource.
+     * 
+     */
     public static CompletableFuture<GetActionGroupResult> invokeAsync(GetActionGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getActionGroup", TypeShape.of(GetActionGroupResult.class), args == null ? GetActionGroupArgs.Empty : args, Utilities.withVersion(options));
     }

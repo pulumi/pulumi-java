@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.HintArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AttestationNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hint")
-    private final @Nullable Input<HintArgs> hint;
+      private final @Nullable Input<HintArgs> hint;
 
     public Input<HintArgs> getHint() {
         return this.hint == null ? Input.empty() : this.hint;
@@ -66,7 +66,6 @@ public final class AttestationNoteArgs extends io.pulumi.resources.ResourceArgs 
             this.hint = Input.ofNullable(hint);
             return this;
         }
-
         public AttestationNoteArgs build() {
             return new AttestationNoteArgs(hint);
         }

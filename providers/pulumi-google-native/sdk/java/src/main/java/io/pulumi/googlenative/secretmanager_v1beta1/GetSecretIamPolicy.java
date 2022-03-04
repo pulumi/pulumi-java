@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecretIamPolicy {
-/**
- * Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
+    private GetSecretIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecretIamPolicyArgs.Builder a);
+    }
+    private static GetSecretIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecretIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetSecretIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetSecretIamPolicyResult> invokeAsync(GetSecretIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:secretmanager/v1beta1:getSecretIamPolicy", TypeShape.of(GetSecretIamPolicyResult.class), args == null ? GetSecretIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

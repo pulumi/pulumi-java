@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketStorageClassAnalysis;
 import io.pulumi.awsnative.s3.outputs.BucketTagFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,14 +42,14 @@ public final class BucketAnalyticsConfiguration {
     /**
      * The ID that identifies the analytics configuration.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The prefix that an object must have to be included in the analytics results.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -105,7 +105,6 @@ public final class BucketAnalyticsConfiguration {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public BucketAnalyticsConfiguration build() {
             return new BucketAnalyticsConfiguration(id, prefix, storageClassAnalysis, tagFilters);
         }

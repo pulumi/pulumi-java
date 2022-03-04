@@ -6,17 +6,33 @@ package io.pulumi.awsnative.auditmanager;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.auditmanager.inputs.GetAssessmentArgs;
 import io.pulumi.awsnative.auditmanager.outputs.GetAssessmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssessment {
-/**
- * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
+    private GetAssessment() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssessmentArgs.Builder a);
+    }
+    private static GetAssessmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssessmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
  * 
- */
+     */
+    public static CompletableFuture<GetAssessmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
+     * 
+     */
     public static CompletableFuture<GetAssessmentResult> invokeAsync(GetAssessmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:auditmanager:getAssessment", TypeShape.of(GetAssessmentResult.class), args == null ? GetAssessmentArgs.Empty : args, Utilities.withVersion(options));
     }

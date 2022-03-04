@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse.inputs;
 import io.pulumi.azurenative.synapse.enums.IntegrationRuntimeEntityReferenceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="referenceName")
-    private final @Nullable Input<String> referenceName;
+      private final @Nullable Input<String> referenceName;
 
     public Input<String> getReferenceName() {
         return this.referenceName == null ? Input.empty() : this.referenceName;
@@ -36,7 +36,7 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type;
+      private final @Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type;
 
     public Input<Either<String,IntegrationRuntimeEntityReferenceType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -95,7 +95,6 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public EntityReferenceArgs build() {
             return new EntityReferenceArgs(referenceName, type);
         }

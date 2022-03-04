@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iam.outputs;
 
 import io.pulumi.awsnative.iam.outputs.ServerCertificateTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +34,7 @@ public final class GetServerCertificateResult {
     /**
      * Amazon Resource Name (ARN) of the server certificate
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -83,7 +83,6 @@ public final class GetServerCertificateResult {
             this.tags = tags;
             return this;
         }
-
         public GetServerCertificateResult build() {
             return new GetServerCertificateResult(arn, path, tags);
         }

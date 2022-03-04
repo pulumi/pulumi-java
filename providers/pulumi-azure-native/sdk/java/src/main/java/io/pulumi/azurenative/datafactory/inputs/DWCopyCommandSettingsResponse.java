@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.DWCopyCommandDefaultValueResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class DWCopyCommandSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="additionalOptions")
-    private final @Nullable Map<String,String> additionalOptions;
+      private final @Nullable Map<String,String> additionalOptions;
 
     public Map<String,String> getAdditionalOptions() {
         return this.additionalOptions == null ? Map.of() : this.additionalOptions;
@@ -37,7 +37,7 @@ public final class DWCopyCommandSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="defaultValues")
-    private final @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
+      private final @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
 
     public List<DWCopyCommandDefaultValueResponse> getDefaultValues() {
         return this.defaultValues == null ? List.of() : this.defaultValues;
@@ -86,7 +86,6 @@ public final class DWCopyCommandSettingsResponse extends io.pulumi.resources.Inv
             this.defaultValues = defaultValues;
             return this;
         }
-
         public DWCopyCommandSettingsResponse build() {
             return new DWCopyCommandSettingsResponse(additionalOptions, defaultValues);
         }

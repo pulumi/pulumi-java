@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.AuthenticationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<AuthenticationArgs> authentication;
+      private final @Nullable Input<AuthenticationArgs> authentication;
 
     public Input<AuthenticationArgs> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -35,7 +35,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceId", required=true)
-    private final Input<String> deviceId;
+      private final Input<String> deviceId;
 
     public Input<String> getDeviceId() {
         return this.deviceId;
@@ -46,7 +46,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTHostHub", required=true)
-    private final Input<String> ioTHostHub;
+      private final Input<String> ioTHostHub;
 
     public Input<String> getIoTHostHub() {
         return this.ioTHostHub;
@@ -57,7 +57,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTHostHubId")
-    private final @Nullable Input<String> ioTHostHubId;
+      private final @Nullable Input<String> ioTHostHubId;
 
     public Input<String> getIoTHostHubId() {
         return this.ioTHostHubId == null ? Input.empty() : this.ioTHostHubId;
@@ -146,7 +146,6 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.ioTHostHubId = Input.ofNullable(ioTHostHubId);
             return this;
         }
-
         public IoTDeviceInfoArgs build() {
             return new IoTDeviceInfoArgs(authentication, deviceId, ioTHostHub, ioTHostHubId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,7 +31,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespace {
      * or simply `projects/{project}/locations/{location}/namespaces/{namespace_id}`
      * Ignored for `public` visibility zones.
      * 
-     */
+    */
     public String getNamespaceUrl() {
         return this.namespaceUrl;
     }
@@ -60,7 +60,6 @@ public final class ManagedZoneServiceDirectoryConfigNamespace {
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfigNamespace build() {
             return new ManagedZoneServiceDirectoryConfigNamespace(namespaceUrl);
         }

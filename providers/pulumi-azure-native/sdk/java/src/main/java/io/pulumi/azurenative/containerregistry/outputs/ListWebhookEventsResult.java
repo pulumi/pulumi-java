@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.EventResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ListWebhookEventsResult {
     /**
      * The URI that can be used to request the next list of events.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
      * 
-     */
+    */
     public List<EventResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -78,7 +78,6 @@ public final class ListWebhookEventsResult {
             this.value = value;
             return this;
         }
-
         public ListWebhookEventsResult build() {
             return new ListWebhookEventsResult(nextLink, value);
         }

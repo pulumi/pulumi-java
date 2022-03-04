@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2AuxiliaryTableResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TaggedFieldResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
      * 
      */
     @InputImport(name="auxiliaryTables", required=true)
-    private final List<GooglePrivacyDlpV2AuxiliaryTableResponse> auxiliaryTables;
+      private final List<GooglePrivacyDlpV2AuxiliaryTableResponse> auxiliaryTables;
 
     public List<GooglePrivacyDlpV2AuxiliaryTableResponse> getAuxiliaryTables() {
         return this.auxiliaryTables;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
      * 
      */
     @InputImport(name="quasiIds", required=true)
-    private final List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds;
+      private final List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2TaggedFieldResponse> getQuasiIds() {
         return this.quasiIds;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
      * 
      */
     @InputImport(name="regionCode", required=true)
-    private final String regionCode;
+      private final String regionCode;
 
     public String getRegionCode() {
         return this.regionCode;
@@ -105,7 +105,6 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }
-
         public GooglePrivacyDlpV2KMapEstimationConfigResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationConfigResponse(auxiliaryTables, quasiIds, regionCode);
         }

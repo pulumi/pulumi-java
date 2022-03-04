@@ -15,8 +15,8 @@ import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -279,6 +279,37 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(IntegrationServiceEnvironmentManagedApiArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.logic.IntegrationServiceEnvironmentManagedApiArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.logic.IntegrationServiceEnvironmentManagedApiArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public IntegrationServiceEnvironmentManagedApi(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public IntegrationServiceEnvironmentManagedApi(String name) {
+        this(name, IntegrationServiceEnvironmentManagedApiArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public IntegrationServiceEnvironmentManagedApi(String name, IntegrationServiceEnvironmentManagedApiArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.RunbookAssociationPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -120,98 +120,98 @@ public final class GetWebhookResult {
     /**
      * Gets or sets the creation time.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the expiry time.
      * 
-     */
+    */
     public Optional<String> getExpiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the value of the enabled flag of the webhook.
      * 
-     */
+    */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
      * Gets or sets the last invoked time.
      * 
-     */
+    */
     public Optional<String> getLastInvokedTime() {
         return Optional.ofNullable(this.lastInvokedTime);
     }
     /**
      * Details of the user who last modified the Webhook
      * 
-     */
+    */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * Gets or sets the last modified time.
      * 
-     */
+    */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the parameters of the job that is created when the webhook calls the runbook it is associated with.
      * 
-     */
+    */
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Gets or sets the name of the hybrid worker group the webhook job will run on.
      * 
-     */
+    */
     public Optional<String> getRunOn() {
         return Optional.ofNullable(this.runOn);
     }
     /**
      * Gets or sets the runbook the webhook is associated with.
      * 
-     */
+    */
     public Optional<RunbookAssociationPropertyResponse> getRunbook() {
         return Optional.ofNullable(this.runbook);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets or sets the webhook uri.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }
@@ -331,7 +331,6 @@ public final class GetWebhookResult {
             this.uri = uri;
             return this;
         }
-
         public GetWebhookResult build() {
             return new GetWebhookResult(creationTime, description, expiryTime, id, isEnabled, lastInvokedTime, lastModifiedBy, lastModifiedTime, name, parameters, runOn, runbook, type, uri);
         }

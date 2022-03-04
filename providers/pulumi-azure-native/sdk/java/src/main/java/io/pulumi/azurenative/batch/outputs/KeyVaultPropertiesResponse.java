@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,7 +33,7 @@ public final class KeyVaultPropertiesResponse {
      *  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
      *  The KeyVault has soft-delete and purge protection enabled
      * 
-     */
+    */
     public Optional<String> getKeyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
@@ -62,7 +62,6 @@ public final class KeyVaultPropertiesResponse {
             this.keyIdentifier = keyIdentifier;
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyIdentifier);
         }

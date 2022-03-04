@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesAdditionalExtensionObjectId;
 import java.lang.Boolean;
 import java.lang.String;
@@ -42,21 +42,21 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
     /**
      * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
      * 
-     */
+    */
     public Optional<Boolean> getCritical() {
         return Optional.ofNullable(this.critical);
     }
     /**
      * Required. The OID for this X.509 extension.
      * 
-     */
+    */
     public CertificateTemplatePredefinedValuesAdditionalExtensionObjectId getObjectId() {
         return this.objectId;
     }
     /**
      * Required. The value of this X.509 extension.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -99,7 +99,6 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CertificateTemplatePredefinedValuesAdditionalExtension build() {
             return new CertificateTemplatePredefinedValuesAdditionalExtension(critical, objectId, value);
         }

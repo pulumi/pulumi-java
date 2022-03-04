@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.MigrationItemPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class GetReplicationMigrationItemResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource Location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource Name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The migration item properties.
      * 
-     */
+    */
     public MigrationItemPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetReplicationMigrationItemResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationMigrationItemResult build() {
             return new GetReplicationMigrationItemResult(id, location, name, properties, type);
         }

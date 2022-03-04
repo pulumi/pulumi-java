@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,42 +15,42 @@ public final class InstanceFromMachineImageAttachedDiskArgs extends io.pulumi.re
     public static final InstanceFromMachineImageAttachedDiskArgs Empty = new InstanceFromMachineImageAttachedDiskArgs();
 
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
     @InputImport(name="diskEncryptionKeyRaw")
-    private final @Nullable Input<String> diskEncryptionKeyRaw;
+      private final @Nullable Input<String> diskEncryptionKeyRaw;
 
     public Input<String> getDiskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw == null ? Input.empty() : this.diskEncryptionKeyRaw;
     }
 
     @InputImport(name="diskEncryptionKeySha256")
-    private final @Nullable Input<String> diskEncryptionKeySha256;
+      private final @Nullable Input<String> diskEncryptionKeySha256;
 
     public Input<String> getDiskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256 == null ? Input.empty() : this.diskEncryptionKeySha256;
     }
 
     @InputImport(name="kmsKeySelfLink")
-    private final @Nullable Input<String> kmsKeySelfLink;
+      private final @Nullable Input<String> kmsKeySelfLink;
 
     public Input<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
     }
 
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
     @InputImport(name="source", required=true)
-    private final Input<String> source;
+      private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;
@@ -169,7 +169,6 @@ public final class InstanceFromMachineImageAttachedDiskArgs extends io.pulumi.re
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public InstanceFromMachineImageAttachedDiskArgs build() {
             return new InstanceFromMachineImageAttachedDiskArgs(deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, kmsKeySelfLink, mode, source);
         }

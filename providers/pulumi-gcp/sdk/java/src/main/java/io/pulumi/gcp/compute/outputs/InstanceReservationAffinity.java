@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceReservationAffinitySpecificReservation;
 import java.lang.String;
 import java.util.Objects;
@@ -36,14 +36,14 @@ public final class InstanceReservationAffinity {
      * Specifies the label selector for the reservation to use..
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<InstanceReservationAffinitySpecificReservation> getSpecificReservation() {
         return Optional.ofNullable(this.specificReservation);
     }
     /**
      * The type of reservation from which this instance can consume resources.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -79,7 +79,6 @@ public final class InstanceReservationAffinity {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceReservationAffinity build() {
             return new InstanceReservationAffinity(specificReservation, type);
         }

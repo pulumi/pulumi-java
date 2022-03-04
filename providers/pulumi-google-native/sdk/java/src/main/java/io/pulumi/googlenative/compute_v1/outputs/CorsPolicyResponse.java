@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -76,56 +76,56 @@ public final class CorsPolicyResponse {
     /**
      * In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
      * 
-     */
+    */
     public Boolean getAllowCredentials() {
         return this.allowCredentials;
     }
     /**
      * Specifies the content for the Access-Control-Allow-Headers header.
      * 
-     */
+    */
     public List<String> getAllowHeaders() {
         return this.allowHeaders;
     }
     /**
      * Specifies the content for the Access-Control-Allow-Methods header.
      * 
-     */
+    */
     public List<String> getAllowMethods() {
         return this.allowMethods;
     }
     /**
      * Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
      * 
-     */
+    */
     public List<String> getAllowOriginRegexes() {
         return this.allowOriginRegexes;
     }
     /**
      * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
      * 
-     */
+    */
     public List<String> getAllowOrigins() {
         return this.allowOrigins;
     }
     /**
      * If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
     /**
      * Specifies the content for the Access-Control-Expose-Headers header.
      * 
-     */
+    */
     public List<String> getExposeHeaders() {
         return this.exposeHeaders;
     }
     /**
      * Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
      * 
-     */
+    */
     public Integer getMaxAge() {
         return this.maxAge;
     }
@@ -203,7 +203,6 @@ public final class CorsPolicyResponse {
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
         }
-
         public CorsPolicyResponse build() {
             return new CorsPolicyResponse(allowCredentials, allowHeaders, allowMethods, allowOriginRegexes, allowOrigins, disabled, exposeHeaders, maxAge);
         }

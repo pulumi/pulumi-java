@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.JwtResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SignatureResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AttestationOccurrenceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="jwts", required=true)
-    private final List<JwtResponse> jwts;
+      private final List<JwtResponse> jwts;
 
     public List<JwtResponse> getJwts() {
         return this.jwts;
@@ -35,7 +35,7 @@ public final class AttestationOccurrenceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="serializedPayload", required=true)
-    private final String serializedPayload;
+      private final String serializedPayload;
 
     public String getSerializedPayload() {
         return this.serializedPayload;
@@ -46,7 +46,7 @@ public final class AttestationOccurrenceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="signatures", required=true)
-    private final List<SignatureResponse> signatures;
+      private final List<SignatureResponse> signatures;
 
     public List<SignatureResponse> getSignatures() {
         return this.signatures;
@@ -105,7 +105,6 @@ public final class AttestationOccurrenceResponse extends io.pulumi.resources.Inv
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public AttestationOccurrenceResponse build() {
             return new AttestationOccurrenceResponse(jwts, serializedPayload, signatures);
         }

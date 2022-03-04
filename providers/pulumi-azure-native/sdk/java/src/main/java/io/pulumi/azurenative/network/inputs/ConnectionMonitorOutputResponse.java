@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorWorkspaceSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -35,7 +35,7 @@ public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="workspaceSettings")
-    private final @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
+      private final @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
 
     public Optional<ConnectionMonitorWorkspaceSettingsResponse> getWorkspaceSettings() {
         return this.workspaceSettings == null ? Optional.empty() : Optional.ofNullable(this.workspaceSettings);
@@ -84,7 +84,6 @@ public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.I
             this.workspaceSettings = workspaceSettings;
             return this;
         }
-
         public ConnectionMonitorOutputResponse build() {
             return new ConnectionMonitorOutputResponse(type, workspaceSettings);
         }

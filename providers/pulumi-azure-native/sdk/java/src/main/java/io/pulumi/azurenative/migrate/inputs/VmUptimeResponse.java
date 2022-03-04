@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class VmUptimeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="daysPerMonth")
-    private final @Nullable Double daysPerMonth;
+      private final @Nullable Double daysPerMonth;
 
     public Optional<Double> getDaysPerMonth() {
         return this.daysPerMonth == null ? Optional.empty() : Optional.ofNullable(this.daysPerMonth);
@@ -30,7 +30,7 @@ public final class VmUptimeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hoursPerDay")
-    private final @Nullable Double hoursPerDay;
+      private final @Nullable Double hoursPerDay;
 
     public Optional<Double> getHoursPerDay() {
         return this.hoursPerDay == null ? Optional.empty() : Optional.ofNullable(this.hoursPerDay);
@@ -79,7 +79,6 @@ public final class VmUptimeResponse extends io.pulumi.resources.InvokeArgs {
             this.hoursPerDay = hoursPerDay;
             return this;
         }
-
         public VmUptimeResponse build() {
             return new VmUptimeResponse(daysPerMonth, hoursPerDay);
         }

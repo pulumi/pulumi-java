@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.enums.ManagedZoneForwardingConfigNameServerTargetForwardingPath;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ManagedZoneForwardingConfigNameServerTargetArgs extends io.pu
      * 
      */
     @InputImport(name="forwardingPath")
-    private final @Nullable Input<ManagedZoneForwardingConfigNameServerTargetForwardingPath> forwardingPath;
+      private final @Nullable Input<ManagedZoneForwardingConfigNameServerTargetForwardingPath> forwardingPath;
 
     public Input<ManagedZoneForwardingConfigNameServerTargetForwardingPath> getForwardingPath() {
         return this.forwardingPath == null ? Input.empty() : this.forwardingPath;
@@ -31,14 +31,14 @@ public final class ManagedZoneForwardingConfigNameServerTargetArgs extends io.pu
      * 
      */
     @InputImport(name="ipv4Address")
-    private final @Nullable Input<String> ipv4Address;
+      private final @Nullable Input<String> ipv4Address;
 
     public Input<String> getIpv4Address() {
         return this.ipv4Address == null ? Input.empty() : this.ipv4Address;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -112,7 +112,6 @@ public final class ManagedZoneForwardingConfigNameServerTargetArgs extends io.pu
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public ManagedZoneForwardingConfigNameServerTargetArgs build() {
             return new ManagedZoneForwardingConfigNameServerTargetArgs(forwardingPath, ipv4Address, kind);
         }

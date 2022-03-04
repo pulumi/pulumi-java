@@ -5,7 +5,7 @@ package io.pulumi.azurenative.elastic.inputs;
 
 import io.pulumi.azurenative.elastic.inputs.FilteringTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filteringTags")
-    private final @Nullable Input<List<FilteringTagArgs>> filteringTags;
+      private final @Nullable Input<List<FilteringTagArgs>> filteringTags;
 
     public Input<List<FilteringTagArgs>> getFilteringTags() {
         return this.filteringTags == null ? Input.empty() : this.filteringTags;
@@ -36,7 +36,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendAadLogs")
-    private final @Nullable Input<Boolean> sendAadLogs;
+      private final @Nullable Input<Boolean> sendAadLogs;
 
     public Input<Boolean> getSendAadLogs() {
         return this.sendAadLogs == null ? Input.empty() : this.sendAadLogs;
@@ -47,7 +47,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendActivityLogs")
-    private final @Nullable Input<Boolean> sendActivityLogs;
+      private final @Nullable Input<Boolean> sendActivityLogs;
 
     public Input<Boolean> getSendActivityLogs() {
         return this.sendActivityLogs == null ? Input.empty() : this.sendActivityLogs;
@@ -58,7 +58,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendSubscriptionLogs")
-    private final @Nullable Input<Boolean> sendSubscriptionLogs;
+      private final @Nullable Input<Boolean> sendSubscriptionLogs;
 
     public Input<Boolean> getSendSubscriptionLogs() {
         return this.sendSubscriptionLogs == null ? Input.empty() : this.sendSubscriptionLogs;
@@ -147,7 +147,6 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
             this.sendSubscriptionLogs = Input.ofNullable(sendSubscriptionLogs);
             return this;
         }
-
         public LogRulesArgs build() {
             return new LogRulesArgs(filteringTags, sendAadLogs, sendActivityLogs, sendSubscriptionLogs);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v4;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v4.enums.CompanySize;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="careerSiteUri")
-    private final @Nullable Input<String> careerSiteUri;
+      private final @Nullable Input<String> careerSiteUri;
 
     public Input<String> getCareerSiteUri() {
         return this.careerSiteUri == null ? Input.empty() : this.careerSiteUri;
@@ -33,7 +33,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -44,7 +44,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eeoText")
-    private final @Nullable Input<String> eeoText;
+      private final @Nullable Input<String> eeoText;
 
     public Input<String> getEeoText() {
         return this.eeoText == null ? Input.empty() : this.eeoText;
@@ -55,7 +55,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalId", required=true)
-    private final Input<String> externalId;
+      private final Input<String> externalId;
 
     public Input<String> getExternalId() {
         return this.externalId;
@@ -66,7 +66,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headquartersAddress")
-    private final @Nullable Input<String> headquartersAddress;
+      private final @Nullable Input<String> headquartersAddress;
 
     public Input<String> getHeadquartersAddress() {
         return this.headquartersAddress == null ? Input.empty() : this.headquartersAddress;
@@ -77,7 +77,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hiringAgency")
-    private final @Nullable Input<Boolean> hiringAgency;
+      private final @Nullable Input<Boolean> hiringAgency;
 
     public Input<Boolean> getHiringAgency() {
         return this.hiringAgency == null ? Input.empty() : this.hiringAgency;
@@ -88,7 +88,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageUri")
-    private final @Nullable Input<String> imageUri;
+      private final @Nullable Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri == null ? Input.empty() : this.imageUri;
@@ -99,7 +99,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keywordSearchableJobCustomAttributes")
-    private final @Nullable Input<List<String>> keywordSearchableJobCustomAttributes;
+      private final @Nullable Input<List<String>> keywordSearchableJobCustomAttributes;
 
     public Input<List<String>> getKeywordSearchableJobCustomAttributes() {
         return this.keywordSearchableJobCustomAttributes == null ? Input.empty() : this.keywordSearchableJobCustomAttributes;
@@ -110,14 +110,14 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -128,14 +128,14 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<CompanySize> size;
+      private final @Nullable Input<CompanySize> size;
 
     public Input<CompanySize> getSize() {
         return this.size == null ? Input.empty() : this.size;
     }
 
     @InputImport(name="tenantId", required=true)
-    private final Input<String> tenantId;
+      private final Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId;
@@ -146,7 +146,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="websiteUri")
-    private final @Nullable Input<String> websiteUri;
+      private final @Nullable Input<String> websiteUri;
 
     public Input<String> getWebsiteUri() {
         return this.websiteUri == null ? Input.empty() : this.websiteUri;
@@ -370,7 +370,6 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             this.websiteUri = Input.ofNullable(websiteUri);
             return this;
         }
-
         public CompanyArgs build() {
             return new CompanyArgs(careerSiteUri, displayName, eeoText, externalId, headquartersAddress, hiringAgency, imageUri, keywordSearchableJobCustomAttributes, name, project, size, tenantId, websiteUri);
         }

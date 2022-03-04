@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.inputs.ApiKeyAuthenticationResponse;
 import io.pulumi.azurenative.deploymentmanager.inputs.RolloutIdentityAuthenticationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-    private final Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
+      private final Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
 
     public Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> getAuthentication() {
         return this.authentication;
@@ -35,7 +35,7 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="method", required=true)
-    private final String method;
+      private final String method;
 
     public String getMethod() {
         return this.method;
@@ -46,7 +46,7 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -105,7 +105,6 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RestRequestResponse build() {
             return new RestRequestResponse(authentication, method, uri);
         }

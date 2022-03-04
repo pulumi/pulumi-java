@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetRoutingIntentArgs;
 import io.pulumi.azurenative.network.outputs.GetRoutingIntentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoutingIntent {
-/**
- * The routing intent child resource of a Virtual hub.
+    private GetRoutingIntent() {}
+    public interface BuilderApplicator {
+        public void apply(GetRoutingIntentArgs.Builder a);
+    }
+    private static GetRoutingIntentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRoutingIntentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The routing intent child resource of a Virtual hub.
  * API Version: 2021-05-01.
  * 
- *
- * The routing intent child resource of a Virtual hub.
+     *
+     * The routing intent child resource of a Virtual hub.
  * 
- */
+     */
+    public static CompletableFuture<GetRoutingIntentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The routing intent child resource of a Virtual hub.
+     * API Version: 2021-05-01.
+     * 
+     *
+         * The routing intent child resource of a Virtual hub.
+     * 
+     */
     public static CompletableFuture<GetRoutingIntentResult> invokeAsync(GetRoutingIntentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRoutingIntent", TypeShape.of(GetRoutingIntentResult.class), args == null ? GetRoutingIntentArgs.Empty : args, Utilities.withVersion(options));
     }

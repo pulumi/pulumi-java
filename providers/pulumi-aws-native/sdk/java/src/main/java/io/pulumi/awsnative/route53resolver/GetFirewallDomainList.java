@@ -6,17 +6,33 @@ package io.pulumi.awsnative.route53resolver;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53resolver.inputs.GetFirewallDomainListArgs;
 import io.pulumi.awsnative.route53resolver.outputs.GetFirewallDomainListResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallDomainList {
-/**
- * Resource schema for AWS::Route53Resolver::FirewallDomainList.
+    private GetFirewallDomainList() {}
+    public interface BuilderApplicator {
+        public void apply(GetFirewallDomainListArgs.Builder a);
+    }
+    private static GetFirewallDomainListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFirewallDomainListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::FirewallDomainList.
  * 
- */
+     */
+    public static CompletableFuture<GetFirewallDomainListResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Route53Resolver::FirewallDomainList.
+     * 
+     */
     public static CompletableFuture<GetFirewallDomainListResult> invokeAsync(GetFirewallDomainListArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getFirewallDomainList", TypeShape.of(GetFirewallDomainListResult.class), args == null ? GetFirewallDomainListArgs.Empty : args, Utilities.withVersion(options));
     }

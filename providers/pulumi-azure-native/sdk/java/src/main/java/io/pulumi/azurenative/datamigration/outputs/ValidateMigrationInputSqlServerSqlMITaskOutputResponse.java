@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.DatabaseBackupInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,56 +78,56 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
     /**
      * Errors associated with the BackupFolder path
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getBackupFolderErrors() {
         return this.backupFolderErrors;
     }
     /**
      * Errors associated with backup share user name and password credentials
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getBackupShareCredentialsErrors() {
         return this.backupShareCredentialsErrors;
     }
     /**
      * Errors associated with the storage account provided.
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getBackupStorageAccountErrors() {
         return this.backupStorageAccountErrors;
     }
     /**
      * Information about backup files when existing backup mode is used.
      * 
-     */
+    */
     public Optional<DatabaseBackupInfoResponse> getDatabaseBackupInfo() {
         return Optional.ofNullable(this.databaseBackupInfo);
     }
     /**
      * Errors associated with existing backup files.
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getExistingBackupErrors() {
         return this.existingBackupErrors;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of database
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Errors associated with the RestoreDatabaseName
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getRestoreDatabaseNameErrors() {
         return this.restoreDatabaseNameErrors;
     }
@@ -205,7 +205,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
             this.restoreDatabaseNameErrors = Objects.requireNonNull(restoreDatabaseNameErrors);
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMITaskOutputResponse build() {
             return new ValidateMigrationInputSqlServerSqlMITaskOutputResponse(backupFolderErrors, backupShareCredentialsErrors, backupStorageAccountErrors, databaseBackupInfo, existingBackupErrors, id, name, restoreDatabaseNameErrors);
         }

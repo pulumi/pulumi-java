@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ServiceUnitArtifactsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="parametersArtifactSourceRelativePath")
-    private final @Nullable String parametersArtifactSourceRelativePath;
+      private final @Nullable String parametersArtifactSourceRelativePath;
 
     public Optional<String> getParametersArtifactSourceRelativePath() {
         return this.parametersArtifactSourceRelativePath == null ? Optional.empty() : Optional.ofNullable(this.parametersArtifactSourceRelativePath);
@@ -34,7 +34,7 @@ public final class ServiceUnitArtifactsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="parametersUri")
-    private final @Nullable String parametersUri;
+      private final @Nullable String parametersUri;
 
     public Optional<String> getParametersUri() {
         return this.parametersUri == null ? Optional.empty() : Optional.ofNullable(this.parametersUri);
@@ -45,7 +45,7 @@ public final class ServiceUnitArtifactsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="templateArtifactSourceRelativePath")
-    private final @Nullable String templateArtifactSourceRelativePath;
+      private final @Nullable String templateArtifactSourceRelativePath;
 
     public Optional<String> getTemplateArtifactSourceRelativePath() {
         return this.templateArtifactSourceRelativePath == null ? Optional.empty() : Optional.ofNullable(this.templateArtifactSourceRelativePath);
@@ -56,7 +56,7 @@ public final class ServiceUnitArtifactsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="templateUri")
-    private final @Nullable String templateUri;
+      private final @Nullable String templateUri;
 
     public Optional<String> getTemplateUri() {
         return this.templateUri == null ? Optional.empty() : Optional.ofNullable(this.templateUri);
@@ -125,7 +125,6 @@ public final class ServiceUnitArtifactsResponse extends io.pulumi.resources.Invo
             this.templateUri = templateUri;
             return this;
         }
-
         public ServiceUnitArtifactsResponse build() {
             return new ServiceUnitArtifactsResponse(parametersArtifactSourceRelativePath, parametersUri, templateArtifactSourceRelativePath, templateUri);
         }

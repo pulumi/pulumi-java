@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SnapshotSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class SnapshotSkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-    private final String tier;
+      private final String tier;
 
     public String getTier() {
         return this.tier;
@@ -83,7 +83,6 @@ public final class SnapshotSkuResponse extends io.pulumi.resources.InvokeArgs {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public SnapshotSkuResponse build() {
             return new SnapshotSkuResponse(name, tier);
         }

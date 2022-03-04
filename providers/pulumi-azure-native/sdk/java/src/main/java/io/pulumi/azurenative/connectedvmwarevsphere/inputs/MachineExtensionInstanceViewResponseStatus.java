@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -32,7 +32,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
      * 
      */
     @InputImport(name="displayStatus", required=true)
-    private final String displayStatus;
+      private final String displayStatus;
 
     public String getDisplayStatus() {
         return this.displayStatus;
@@ -43,7 +43,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
      * 
      */
     @InputImport(name="level", required=true)
-    private final String level;
+      private final String level;
 
     public String getLevel() {
         return this.level;
@@ -54,7 +54,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -65,7 +65,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
      * 
      */
     @InputImport(name="time", required=true)
-    private final String time;
+      private final String time;
 
     public String getTime() {
         return this.time;
@@ -144,7 +144,6 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public MachineExtensionInstanceViewResponseStatus build() {
             return new MachineExtensionInstanceViewResponseStatus(code, displayStatus, level, message, time);
         }

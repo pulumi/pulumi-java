@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -65,7 +65,7 @@ public final class CVSSResponse {
     /**
      * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
      * 
-     */
+    */
     public String getAttackVector() {
         return this.attackVector;
     }
@@ -78,7 +78,7 @@ public final class CVSSResponse {
     /**
      * The base score is a function of the base metric scores.
      * 
-     */
+    */
     public Double getBaseScore() {
         return this.baseScore;
     }
@@ -205,7 +205,6 @@ public final class CVSSResponse {
             this.userInteraction = Objects.requireNonNull(userInteraction);
             return this;
         }
-
         public CVSSResponse build() {
             return new CVSSResponse(attackComplexity, attackVector, authentication, availabilityImpact, baseScore, confidentialityImpact, exploitabilityScore, impactScore, integrityImpact, privilegesRequired, scope, userInteraction);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ArtifactObjectsArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="images")
-    private final @Nullable Input<List<String>> images;
+      private final @Nullable Input<List<String>> images;
 
     public Input<List<String>> getImages() {
         return this.images == null ? Input.empty() : this.images;
@@ -36,7 +36,7 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objects")
-    private final @Nullable Input<ArtifactObjectsArgs> objects;
+      private final @Nullable Input<ArtifactObjectsArgs> objects;
 
     public Input<ArtifactObjectsArgs> getObjects() {
         return this.objects == null ? Input.empty() : this.objects;
@@ -95,7 +95,6 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
             this.objects = Input.ofNullable(objects);
             return this;
         }
-
         public ArtifactsArgs build() {
             return new ArtifactsArgs(images, objects);
         }

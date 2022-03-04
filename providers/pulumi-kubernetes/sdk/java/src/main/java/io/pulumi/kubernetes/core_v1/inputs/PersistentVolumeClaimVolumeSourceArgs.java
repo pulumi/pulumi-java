@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="claimName", required=true)
-    private final Input<String> claimName;
+      private final Input<String> claimName;
 
     public Input<String> getClaimName() {
         return this.claimName;
@@ -35,7 +35,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -94,7 +94,6 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
-
         public PersistentVolumeClaimVolumeSourceArgs build() {
             return new PersistentVolumeClaimVolumeSourceArgs(claimName, readOnly);
         }

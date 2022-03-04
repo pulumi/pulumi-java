@@ -5,7 +5,7 @@ package io.pulumi.azurenative.digitaltwins.outputs;
 
 import io.pulumi.azurenative.digitaltwins.outputs.DigitalTwinsIdentityResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -103,49 +103,49 @@ public final class GetDigitalTwinResult {
     /**
      * Time when DigitalTwinsInstance was created.
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Api endpoint to work with DigitalTwinsInstance.
      * 
-     */
+    */
     public String getHostName() {
         return this.hostName;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The managed identity for the DigitalTwinsInstance.
      * 
-     */
+    */
     public Optional<DigitalTwinsIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Time when DigitalTwinsInstance was updated.
      * 
-     */
+    */
     public String getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -155,28 +155,28 @@ public final class GetDigitalTwinResult {
     /**
      * The provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Public network access for the DigitalTwinsInstance.
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -282,7 +282,6 @@ public final class GetDigitalTwinResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDigitalTwinResult build() {
             return new GetDigitalTwinResult(createdTime, hostName, id, identity, lastUpdatedTime, location, name, privateEndpointConnections, provisioningState, publicNetworkAccess, tags, type);
         }

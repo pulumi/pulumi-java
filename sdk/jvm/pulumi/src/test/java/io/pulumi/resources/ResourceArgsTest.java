@@ -2,8 +2,8 @@ package io.pulumi.resources;
 
 import io.pulumi.Log;
 import io.pulumi.core.Input;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.annotations.InputImport;
 import io.pulumi.deployment.internal.DeploymentTests;
 import org.junit.jupiter.api.Test;
 

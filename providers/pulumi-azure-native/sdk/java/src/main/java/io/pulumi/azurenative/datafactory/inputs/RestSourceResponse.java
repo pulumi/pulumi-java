@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalColumns")
-    private final @Nullable Object additionalColumns;
+      private final @Nullable Object additionalColumns;
 
     public Optional<Object> getAdditionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
@@ -35,7 +35,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalHeaders")
-    private final @Nullable Object additionalHeaders;
+      private final @Nullable Object additionalHeaders;
 
     public Optional<Object> getAdditionalHeaders() {
         return this.additionalHeaders == null ? Optional.empty() : Optional.ofNullable(this.additionalHeaders);
@@ -46,7 +46,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+      private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -57,7 +57,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpRequestTimeout")
-    private final @Nullable Object httpRequestTimeout;
+      private final @Nullable Object httpRequestTimeout;
 
     public Optional<Object> getHttpRequestTimeout() {
         return this.httpRequestTimeout == null ? Optional.empty() : Optional.ofNullable(this.httpRequestTimeout);
@@ -68,7 +68,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+      private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -79,7 +79,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="paginationRules")
-    private final @Nullable Object paginationRules;
+      private final @Nullable Object paginationRules;
 
     public Optional<Object> getPaginationRules() {
         return this.paginationRules == null ? Optional.empty() : Optional.ofNullable(this.paginationRules);
@@ -90,7 +90,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requestBody")
-    private final @Nullable Object requestBody;
+      private final @Nullable Object requestBody;
 
     public Optional<Object> getRequestBody() {
         return this.requestBody == null ? Optional.empty() : Optional.ofNullable(this.requestBody);
@@ -101,7 +101,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requestInterval")
-    private final @Nullable Object requestInterval;
+      private final @Nullable Object requestInterval;
 
     public Optional<Object> getRequestInterval() {
         return this.requestInterval == null ? Optional.empty() : Optional.ofNullable(this.requestInterval);
@@ -112,7 +112,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requestMethod")
-    private final @Nullable Object requestMethod;
+      private final @Nullable Object requestMethod;
 
     public Optional<Object> getRequestMethod() {
         return this.requestMethod == null ? Optional.empty() : Optional.ofNullable(this.requestMethod);
@@ -123,7 +123,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Object sourceRetryCount;
+      private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
@@ -134,7 +134,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Object sourceRetryWait;
+      private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
@@ -146,7 +146,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -295,7 +295,6 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RestSourceResponse build() {
             return new RestSourceResponse(additionalColumns, additionalHeaders, disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, paginationRules, requestBody, requestInterval, requestMethod, sourceRetryCount, sourceRetryWait, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class MultichannelResponse {
     /**
      * Indicates whether multichannel is enabled
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,7 +54,6 @@ public final class MultichannelResponse {
             this.enabled = enabled;
             return this;
         }
-
         public MultichannelResponse build() {
             return new MultichannelResponse(enabled);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,28 +47,28 @@ public final class ServicePrincipalSecretAuthInfoResponse {
      * The authentication type.
      * Expected value is 'servicePrincipalSecret'.
      * 
-     */
+    */
     public String getAuthType() {
         return this.authType;
     }
     /**
      * ServicePrincipal application clientId for servicePrincipal auth.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Principal Id for servicePrincipal auth.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * Secret for servicePrincipal auth.
      * 
-     */
+    */
     public String getSecret() {
         return this.secret;
     }
@@ -118,7 +118,6 @@ public final class ServicePrincipalSecretAuthInfoResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public ServicePrincipalSecretAuthInfoResponse build() {
             return new ServicePrincipalSecretAuthInfoResponse(authType, clientId, principalId, secret);
         }

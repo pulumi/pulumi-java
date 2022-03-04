@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.compute.outputs.ImageStorageProfileResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -93,70 +93,70 @@ public final class GetImageResult {
     /**
      * The extended location of the Image.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
      * 
-     */
+    */
     public Optional<String> getHyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The source virtual machine from which Image is created.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getSourceVirtualMachine() {
         return Optional.ofNullable(this.sourceVirtualMachine);
     }
     /**
      * Specifies the storage settings for the virtual machine disks.
      * 
-     */
+    */
     public Optional<ImageStorageProfileResponse> getStorageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -248,7 +248,6 @@ public final class GetImageResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetImageResult build() {
             return new GetImageResult(extendedLocation, hyperVGeneration, id, location, name, provisioningState, sourceVirtualMachine, storageProfile, tags, type);
         }

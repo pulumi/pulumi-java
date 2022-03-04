@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.CacheActiveDirectorySettingsResponse;
 import io.pulumi.azurenative.storagecache.outputs.CacheUsernameDownloadSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class CacheDirectorySettingsResponse {
     /**
      * Specifies settings for joining the HPC Cache to an Active Directory domain.
      * 
-     */
+    */
     public Optional<CacheActiveDirectorySettingsResponse> getActiveDirectory() {
         return Optional.ofNullable(this.activeDirectory);
     }
     /**
      * Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.
      * 
-     */
+    */
     public Optional<CacheUsernameDownloadSettingsResponse> getUsernameDownload() {
         return Optional.ofNullable(this.usernameDownload);
     }
@@ -77,7 +77,6 @@ public final class CacheDirectorySettingsResponse {
             this.usernameDownload = usernameDownload;
             return this;
         }
-
         public CacheDirectorySettingsResponse build() {
             return new CacheDirectorySettingsResponse(activeDirectory, usernameDownload);
         }

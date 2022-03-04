@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class BackendPoolsSettingsResponse {
     /**
      * Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
      * 
-     */
+    */
     public Optional<String> getEnforceCertificateNameCheck() {
         return Optional.ofNullable(this.enforceCertificateNameCheck);
     }
     /**
      * Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
      * 
-     */
+    */
     public Optional<Integer> getSendRecvTimeoutSeconds() {
         return Optional.ofNullable(this.sendRecvTimeoutSeconds);
     }
@@ -77,7 +77,6 @@ public final class BackendPoolsSettingsResponse {
             this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
             return this;
         }
-
         public BackendPoolsSettingsResponse build() {
             return new BackendPoolsSettingsResponse(enforceCertificateNameCheck, sendRecvTimeoutSeconds);
         }

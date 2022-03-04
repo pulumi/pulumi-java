@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ErrorDetailResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.WorkloadInquiryDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +45,7 @@ public final class InquiryInfoResponse {
     /**
      * Error Details if the Status is non-success.
      * 
-     */
+    */
     public Optional<ErrorDetailResponse> getErrorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
@@ -53,7 +53,7 @@ public final class InquiryInfoResponse {
      * Inquiry Details which will have workload specific details.
      * For e.g. - For SQL and oracle this will contain different details.
      * 
-     */
+    */
     public List<WorkloadInquiryDetailsResponse> getInquiryDetails() {
         return this.inquiryDetails == null ? List.of() : this.inquiryDetails;
     }
@@ -61,7 +61,7 @@ public final class InquiryInfoResponse {
      * Inquiry Status for this container such as
      * InProgress | Failed | Succeeded
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -104,7 +104,6 @@ public final class InquiryInfoResponse {
             this.status = status;
             return this;
         }
-
         public InquiryInfoResponse build() {
             return new InquiryInfoResponse(errorDetail, inquiryDetails, status);
         }

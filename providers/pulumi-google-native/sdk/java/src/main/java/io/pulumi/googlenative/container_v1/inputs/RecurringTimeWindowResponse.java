@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.TimeWindowResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RecurringTimeWindowResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="recurrence", required=true)
-    private final String recurrence;
+      private final String recurrence;
 
     public String getRecurrence() {
         return this.recurrence;
@@ -33,7 +33,7 @@ public final class RecurringTimeWindowResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="window", required=true)
-    private final TimeWindowResponse window;
+      private final TimeWindowResponse window;
 
     public TimeWindowResponse getWindow() {
         return this.window;
@@ -82,7 +82,6 @@ public final class RecurringTimeWindowResponse extends io.pulumi.resources.Invok
             this.window = Objects.requireNonNull(window);
             return this;
         }
-
         public RecurringTimeWindowResponse build() {
             return new RecurringTimeWindowResponse(recurrence, window);
         }

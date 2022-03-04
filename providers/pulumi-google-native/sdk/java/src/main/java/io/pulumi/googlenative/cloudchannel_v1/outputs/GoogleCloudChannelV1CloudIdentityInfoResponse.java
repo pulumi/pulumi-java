@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1EduDataResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -75,56 +75,56 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
     /**
      * URI of Customer's Admin console dashboard.
      * 
-     */
+    */
     public String getAdminConsoleUri() {
         return this.adminConsoleUri;
     }
     /**
      * The alternate email.
      * 
-     */
+    */
     public String getAlternateEmail() {
         return this.alternateEmail;
     }
     /**
      * CustomerType indicates verification type needed for using services.
      * 
-     */
+    */
     public String getCustomerType() {
         return this.customerType;
     }
     /**
      * Edu information about the customer.
      * 
-     */
+    */
     public GoogleCloudChannelV1EduDataResponse getEduData() {
         return this.eduData;
     }
     /**
      * Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
      * 
-     */
+    */
     public Boolean getIsDomainVerified() {
         return this.isDomainVerified;
     }
     /**
      * Language code.
      * 
-     */
+    */
     public String getLanguageCode() {
         return this.languageCode;
     }
     /**
      * Phone number associated with the Cloud Identity.
      * 
-     */
+    */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
     /**
      * The primary domain name.
      * 
-     */
+    */
     public String getPrimaryDomain() {
         return this.primaryDomain;
     }
@@ -202,7 +202,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
             this.primaryDomain = Objects.requireNonNull(primaryDomain);
             return this;
         }
-
         public GoogleCloudChannelV1CloudIdentityInfoResponse build() {
             return new GoogleCloudChannelV1CloudIdentityInfoResponse(adminConsoleUri, alternateEmail, customerType, eduData, isDomainVerified, languageCode, phoneNumber, primaryDomain);
         }

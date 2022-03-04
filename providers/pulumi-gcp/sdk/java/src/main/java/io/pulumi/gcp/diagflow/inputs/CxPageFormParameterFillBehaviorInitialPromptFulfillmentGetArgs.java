@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArg
      * 
      */
     @InputImport(name="messages")
-    private final @Nullable Input<List<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs>> messages;
+      private final @Nullable Input<List<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs>> messages;
 
     public Input<List<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs>> getMessages() {
         return this.messages == null ? Input.empty() : this.messages;
@@ -34,7 +34,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArg
      * 
      */
     @InputImport(name="returnPartialResponses")
-    private final @Nullable Input<Boolean> returnPartialResponses;
+      private final @Nullable Input<Boolean> returnPartialResponses;
 
     public Input<Boolean> getReturnPartialResponses() {
         return this.returnPartialResponses == null ? Input.empty() : this.returnPartialResponses;
@@ -45,7 +45,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArg
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -56,7 +56,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArg
      * 
      */
     @InputImport(name="webhook")
-    private final @Nullable Input<String> webhook;
+      private final @Nullable Input<String> webhook;
 
     public Input<String> getWebhook() {
         return this.webhook == null ? Input.empty() : this.webhook;
@@ -145,7 +145,6 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArg
             this.webhook = Input.ofNullable(webhook);
             return this;
         }
-
         public CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs build() {
             return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs(messages, returnPartialResponses, tag, webhook);
         }

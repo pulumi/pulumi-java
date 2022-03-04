@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.engagementfabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ChannelTypeDescriptionResponse {
     /**
      * Text description for the channel
      * 
-     */
+    */
     public Optional<String> getChannelDescription() {
         return Optional.ofNullable(this.channelDescription);
     }
     /**
      * All the available functions for the channel
      * 
-     */
+    */
     public List<String> getChannelFunctions() {
         return this.channelFunctions == null ? List.of() : this.channelFunctions;
     }
     /**
      * Channel type
      * 
-     */
+    */
     public Optional<String> getChannelType() {
         return Optional.ofNullable(this.channelType);
     }
@@ -98,7 +98,6 @@ public final class ChannelTypeDescriptionResponse {
             this.channelType = channelType;
             return this;
         }
-
         public ChannelTypeDescriptionResponse build() {
             return new ChannelTypeDescriptionResponse(channelDescription, channelFunctions, channelType);
         }

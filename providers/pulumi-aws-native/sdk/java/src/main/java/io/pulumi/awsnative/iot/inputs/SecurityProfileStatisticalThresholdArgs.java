@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileStatisticalThresholdStatistic;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class SecurityProfileStatisticalThresholdArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="statistic")
-    private final @Nullable Input<SecurityProfileStatisticalThresholdStatistic> statistic;
+      private final @Nullable Input<SecurityProfileStatisticalThresholdStatistic> statistic;
 
     public Input<SecurityProfileStatisticalThresholdStatistic> getStatistic() {
         return this.statistic == null ? Input.empty() : this.statistic;
@@ -66,7 +66,6 @@ public final class SecurityProfileStatisticalThresholdArgs extends io.pulumi.res
             this.statistic = Input.ofNullable(statistic);
             return this;
         }
-
         public SecurityProfileStatisticalThresholdArgs build() {
             return new SecurityProfileStatisticalThresholdArgs(statistic);
         }

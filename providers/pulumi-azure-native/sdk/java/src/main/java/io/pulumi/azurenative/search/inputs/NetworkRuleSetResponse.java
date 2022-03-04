@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.search.inputs;
 
 import io.pulumi.azurenative.search.inputs.IpRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ipRules")
-    private final @Nullable List<IpRuleResponse> ipRules;
+      private final @Nullable List<IpRuleResponse> ipRules;
 
     public List<IpRuleResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
@@ -62,7 +62,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
             this.ipRules = ipRules;
             return this;
         }
-
         public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(ipRules);
         }

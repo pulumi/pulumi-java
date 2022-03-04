@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1alpha.enums.HiveMetastoreConfigEndpointProtocol;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.KerberosConfigArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="auxiliaryVersions")
-    private final @Nullable Input<Map<String,String>> auxiliaryVersions;
+      private final @Nullable Input<Map<String,String>> auxiliaryVersions;
 
     public Input<Map<String,String>> getAuxiliaryVersions() {
         return this.auxiliaryVersions == null ? Input.empty() : this.auxiliaryVersions;
@@ -37,7 +37,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configOverrides")
-    private final @Nullable Input<Map<String,String>> configOverrides;
+      private final @Nullable Input<Map<String,String>> configOverrides;
 
     public Input<Map<String,String>> getConfigOverrides() {
         return this.configOverrides == null ? Input.empty() : this.configOverrides;
@@ -48,7 +48,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="endpointProtocol")
-    private final @Nullable Input<HiveMetastoreConfigEndpointProtocol> endpointProtocol;
+      private final @Nullable Input<HiveMetastoreConfigEndpointProtocol> endpointProtocol;
 
     public Input<HiveMetastoreConfigEndpointProtocol> getEndpointProtocol() {
         return this.endpointProtocol == null ? Input.empty() : this.endpointProtocol;
@@ -59,7 +59,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kerberosConfig")
-    private final @Nullable Input<KerberosConfigArgs> kerberosConfig;
+      private final @Nullable Input<KerberosConfigArgs> kerberosConfig;
 
     public Input<KerberosConfigArgs> getKerberosConfig() {
         return this.kerberosConfig == null ? Input.empty() : this.kerberosConfig;
@@ -70,7 +70,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -174,7 +174,6 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public HiveMetastoreConfigArgs build() {
             return new HiveMetastoreConfigArgs(auxiliaryVersions, configOverrides, endpointProtocol, kerberosConfig, version);
         }

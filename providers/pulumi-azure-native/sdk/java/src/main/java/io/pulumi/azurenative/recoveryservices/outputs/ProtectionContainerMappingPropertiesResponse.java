@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.A2AProtectionContainerMapp
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareCbtProtectionContainerMappingDetailsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -101,77 +101,77 @@ public final class ProtectionContainerMappingPropertiesResponse {
     /**
      * Health of pairing.
      * 
-     */
+    */
     public Optional<String> getHealth() {
         return Optional.ofNullable(this.health);
     }
     /**
      * Health error.
      * 
-     */
+    */
     public List<HealthErrorResponse> getHealthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
     /**
      * Friendly name of replication policy.
      * 
-     */
+    */
     public Optional<String> getPolicyFriendlyName() {
         return Optional.ofNullable(this.policyFriendlyName);
     }
     /**
      * Policy ARM Id.
      * 
-     */
+    */
     public Optional<String> getPolicyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
      * Provider specific provider details.
      * 
-     */
+    */
     public Optional<Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse>> getProviderSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
     /**
      * Friendly name of source fabric.
      * 
-     */
+    */
     public Optional<String> getSourceFabricFriendlyName() {
         return Optional.ofNullable(this.sourceFabricFriendlyName);
     }
     /**
      * Friendly name of source protection container.
      * 
-     */
+    */
     public Optional<String> getSourceProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.sourceProtectionContainerFriendlyName);
     }
     /**
      * Association Status
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Friendly name of target fabric.
      * 
-     */
+    */
     public Optional<String> getTargetFabricFriendlyName() {
         return Optional.ofNullable(this.targetFabricFriendlyName);
     }
     /**
      * Friendly name of paired container.
      * 
-     */
+    */
     public Optional<String> getTargetProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.targetProtectionContainerFriendlyName);
     }
     /**
      * Paired protection container ARM ID.
      * 
-     */
+    */
     public Optional<String> getTargetProtectionContainerId() {
         return Optional.ofNullable(this.targetProtectionContainerId);
     }
@@ -270,7 +270,6 @@ public final class ProtectionContainerMappingPropertiesResponse {
             this.targetProtectionContainerId = targetProtectionContainerId;
             return this;
         }
-
         public ProtectionContainerMappingPropertiesResponse build() {
             return new ProtectionContainerMappingPropertiesResponse(health, healthErrorDetails, policyFriendlyName, policyId, providerSpecificDetails, sourceFabricFriendlyName, sourceProtectionContainerFriendlyName, state, targetFabricFriendlyName, targetProtectionContainerFriendlyName, targetProtectionContainerId);
         }

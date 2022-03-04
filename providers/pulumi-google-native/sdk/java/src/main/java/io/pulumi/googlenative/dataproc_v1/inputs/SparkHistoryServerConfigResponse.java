@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SparkHistoryServerConfigResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataprocCluster", required=true)
-    private final String dataprocCluster;
+      private final String dataprocCluster;
 
     public String getDataprocCluster() {
         return this.dataprocCluster;
@@ -59,7 +59,6 @@ public final class SparkHistoryServerConfigResponse extends io.pulumi.resources.
             this.dataprocCluster = Objects.requireNonNull(dataprocCluster);
             return this;
         }
-
         public SparkHistoryServerConfigResponse build() {
             return new SparkHistoryServerConfigResponse(dataprocCluster);
         }

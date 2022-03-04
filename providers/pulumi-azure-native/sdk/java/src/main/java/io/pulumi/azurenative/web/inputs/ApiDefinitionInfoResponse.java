@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApiDefinitionInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+      private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -61,7 +61,6 @@ public final class ApiDefinitionInfoResponse extends io.pulumi.resources.InvokeA
             this.url = url;
             return this;
         }
-
         public ApiDefinitionInfoResponse build() {
             return new ApiDefinitionInfoResponse(url);
         }

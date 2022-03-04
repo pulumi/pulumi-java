@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.relay.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="hybridConnectionName", required=true)
-    private final String hybridConnectionName;
+      private final String hybridConnectionName;
 
     public String getHybridConnectionName() {
         return this.hybridConnectionName;
@@ -28,7 +28,7 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+      private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetHybridConnectionArgs build() {
             return new GetHybridConnectionArgs(hybridConnectionName, namespaceName, resourceGroupName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class SeedNodeResponse {
     /**
      * IP address of this seed node.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -54,7 +54,6 @@ public final class SeedNodeResponse {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public SeedNodeResponse build() {
             return new SeedNodeResponse(ipAddress);
         }

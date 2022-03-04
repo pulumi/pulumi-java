@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.RecipeParametersInputProperties;
 import io.pulumi.awsnative.databrew.inputs.RecipeSecondaryInput;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,203 +20,203 @@ public final class RecipeParameters extends io.pulumi.resources.InvokeArgs {
     public static final RecipeParameters Empty = new RecipeParameters();
 
     @InputImport(name="aggregateFunction")
-    private final @Nullable String aggregateFunction;
+      private final @Nullable String aggregateFunction;
 
     public Optional<String> getAggregateFunction() {
         return this.aggregateFunction == null ? Optional.empty() : Optional.ofNullable(this.aggregateFunction);
     }
 
     @InputImport(name="base")
-    private final @Nullable String base;
+      private final @Nullable String base;
 
     public Optional<String> getBase() {
         return this.base == null ? Optional.empty() : Optional.ofNullable(this.base);
     }
 
     @InputImport(name="caseStatement")
-    private final @Nullable String caseStatement;
+      private final @Nullable String caseStatement;
 
     public Optional<String> getCaseStatement() {
         return this.caseStatement == null ? Optional.empty() : Optional.ofNullable(this.caseStatement);
     }
 
     @InputImport(name="categoryMap")
-    private final @Nullable String categoryMap;
+      private final @Nullable String categoryMap;
 
     public Optional<String> getCategoryMap() {
         return this.categoryMap == null ? Optional.empty() : Optional.ofNullable(this.categoryMap);
     }
 
     @InputImport(name="charsToRemove")
-    private final @Nullable String charsToRemove;
+      private final @Nullable String charsToRemove;
 
     public Optional<String> getCharsToRemove() {
         return this.charsToRemove == null ? Optional.empty() : Optional.ofNullable(this.charsToRemove);
     }
 
     @InputImport(name="collapseConsecutiveWhitespace")
-    private final @Nullable String collapseConsecutiveWhitespace;
+      private final @Nullable String collapseConsecutiveWhitespace;
 
     public Optional<String> getCollapseConsecutiveWhitespace() {
         return this.collapseConsecutiveWhitespace == null ? Optional.empty() : Optional.ofNullable(this.collapseConsecutiveWhitespace);
     }
 
     @InputImport(name="columnDataType")
-    private final @Nullable String columnDataType;
+      private final @Nullable String columnDataType;
 
     public Optional<String> getColumnDataType() {
         return this.columnDataType == null ? Optional.empty() : Optional.ofNullable(this.columnDataType);
     }
 
     @InputImport(name="columnRange")
-    private final @Nullable String columnRange;
+      private final @Nullable String columnRange;
 
     public Optional<String> getColumnRange() {
         return this.columnRange == null ? Optional.empty() : Optional.ofNullable(this.columnRange);
     }
 
     @InputImport(name="count")
-    private final @Nullable String count;
+      private final @Nullable String count;
 
     public Optional<String> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
     @InputImport(name="customCharacters")
-    private final @Nullable String customCharacters;
+      private final @Nullable String customCharacters;
 
     public Optional<String> getCustomCharacters() {
         return this.customCharacters == null ? Optional.empty() : Optional.ofNullable(this.customCharacters);
     }
 
     @InputImport(name="customStopWords")
-    private final @Nullable String customStopWords;
+      private final @Nullable String customStopWords;
 
     public Optional<String> getCustomStopWords() {
         return this.customStopWords == null ? Optional.empty() : Optional.ofNullable(this.customStopWords);
     }
 
     @InputImport(name="customValue")
-    private final @Nullable String customValue;
+      private final @Nullable String customValue;
 
     public Optional<String> getCustomValue() {
         return this.customValue == null ? Optional.empty() : Optional.ofNullable(this.customValue);
     }
 
     @InputImport(name="datasetsColumns")
-    private final @Nullable String datasetsColumns;
+      private final @Nullable String datasetsColumns;
 
     public Optional<String> getDatasetsColumns() {
         return this.datasetsColumns == null ? Optional.empty() : Optional.ofNullable(this.datasetsColumns);
     }
 
     @InputImport(name="dateAddValue")
-    private final @Nullable String dateAddValue;
+      private final @Nullable String dateAddValue;
 
     public Optional<String> getDateAddValue() {
         return this.dateAddValue == null ? Optional.empty() : Optional.ofNullable(this.dateAddValue);
     }
 
     @InputImport(name="dateTimeFormat")
-    private final @Nullable String dateTimeFormat;
+      private final @Nullable String dateTimeFormat;
 
     public Optional<String> getDateTimeFormat() {
         return this.dateTimeFormat == null ? Optional.empty() : Optional.ofNullable(this.dateTimeFormat);
     }
 
     @InputImport(name="dateTimeParameters")
-    private final @Nullable String dateTimeParameters;
+      private final @Nullable String dateTimeParameters;
 
     public Optional<String> getDateTimeParameters() {
         return this.dateTimeParameters == null ? Optional.empty() : Optional.ofNullable(this.dateTimeParameters);
     }
 
     @InputImport(name="deleteOtherRows")
-    private final @Nullable String deleteOtherRows;
+      private final @Nullable String deleteOtherRows;
 
     public Optional<String> getDeleteOtherRows() {
         return this.deleteOtherRows == null ? Optional.empty() : Optional.ofNullable(this.deleteOtherRows);
     }
 
     @InputImport(name="delimiter")
-    private final @Nullable String delimiter;
+      private final @Nullable String delimiter;
 
     public Optional<String> getDelimiter() {
         return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
     }
 
     @InputImport(name="endPattern")
-    private final @Nullable String endPattern;
+      private final @Nullable String endPattern;
 
     public Optional<String> getEndPattern() {
         return this.endPattern == null ? Optional.empty() : Optional.ofNullable(this.endPattern);
     }
 
     @InputImport(name="endPosition")
-    private final @Nullable String endPosition;
+      private final @Nullable String endPosition;
 
     public Optional<String> getEndPosition() {
         return this.endPosition == null ? Optional.empty() : Optional.ofNullable(this.endPosition);
     }
 
     @InputImport(name="endValue")
-    private final @Nullable String endValue;
+      private final @Nullable String endValue;
 
     public Optional<String> getEndValue() {
         return this.endValue == null ? Optional.empty() : Optional.ofNullable(this.endValue);
     }
 
     @InputImport(name="expandContractions")
-    private final @Nullable String expandContractions;
+      private final @Nullable String expandContractions;
 
     public Optional<String> getExpandContractions() {
         return this.expandContractions == null ? Optional.empty() : Optional.ofNullable(this.expandContractions);
     }
 
     @InputImport(name="exponent")
-    private final @Nullable String exponent;
+      private final @Nullable String exponent;
 
     public Optional<String> getExponent() {
         return this.exponent == null ? Optional.empty() : Optional.ofNullable(this.exponent);
     }
 
     @InputImport(name="falseString")
-    private final @Nullable String falseString;
+      private final @Nullable String falseString;
 
     public Optional<String> getFalseString() {
         return this.falseString == null ? Optional.empty() : Optional.ofNullable(this.falseString);
     }
 
     @InputImport(name="groupByAggFunctionOptions")
-    private final @Nullable String groupByAggFunctionOptions;
+      private final @Nullable String groupByAggFunctionOptions;
 
     public Optional<String> getGroupByAggFunctionOptions() {
         return this.groupByAggFunctionOptions == null ? Optional.empty() : Optional.ofNullable(this.groupByAggFunctionOptions);
     }
 
     @InputImport(name="groupByColumns")
-    private final @Nullable String groupByColumns;
+      private final @Nullable String groupByColumns;
 
     public Optional<String> getGroupByColumns() {
         return this.groupByColumns == null ? Optional.empty() : Optional.ofNullable(this.groupByColumns);
     }
 
     @InputImport(name="hiddenColumns")
-    private final @Nullable String hiddenColumns;
+      private final @Nullable String hiddenColumns;
 
     public Optional<String> getHiddenColumns() {
         return this.hiddenColumns == null ? Optional.empty() : Optional.ofNullable(this.hiddenColumns);
     }
 
     @InputImport(name="ignoreCase")
-    private final @Nullable String ignoreCase;
+      private final @Nullable String ignoreCase;
 
     public Optional<String> getIgnoreCase() {
         return this.ignoreCase == null ? Optional.empty() : Optional.ofNullable(this.ignoreCase);
     }
 
     @InputImport(name="includeInSplit")
-    private final @Nullable String includeInSplit;
+      private final @Nullable String includeInSplit;
 
     public Optional<String> getIncludeInSplit() {
         return this.includeInSplit == null ? Optional.empty() : Optional.ofNullable(this.includeInSplit);
@@ -227,504 +227,504 @@ public final class RecipeParameters extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="input")
-    private final @Nullable RecipeParametersInputProperties input;
+      private final @Nullable RecipeParametersInputProperties input;
 
     public Optional<RecipeParametersInputProperties> getInput() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
     @InputImport(name="interval")
-    private final @Nullable String interval;
+      private final @Nullable String interval;
 
     public Optional<String> getInterval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
     @InputImport(name="isText")
-    private final @Nullable String isText;
+      private final @Nullable String isText;
 
     public Optional<String> getIsText() {
         return this.isText == null ? Optional.empty() : Optional.ofNullable(this.isText);
     }
 
     @InputImport(name="joinKeys")
-    private final @Nullable String joinKeys;
+      private final @Nullable String joinKeys;
 
     public Optional<String> getJoinKeys() {
         return this.joinKeys == null ? Optional.empty() : Optional.ofNullable(this.joinKeys);
     }
 
     @InputImport(name="joinType")
-    private final @Nullable String joinType;
+      private final @Nullable String joinType;
 
     public Optional<String> getJoinType() {
         return this.joinType == null ? Optional.empty() : Optional.ofNullable(this.joinType);
     }
 
     @InputImport(name="leftColumns")
-    private final @Nullable String leftColumns;
+      private final @Nullable String leftColumns;
 
     public Optional<String> getLeftColumns() {
         return this.leftColumns == null ? Optional.empty() : Optional.ofNullable(this.leftColumns);
     }
 
     @InputImport(name="limit")
-    private final @Nullable String limit;
+      private final @Nullable String limit;
 
     public Optional<String> getLimit() {
         return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
     }
 
     @InputImport(name="lowerBound")
-    private final @Nullable String lowerBound;
+      private final @Nullable String lowerBound;
 
     public Optional<String> getLowerBound() {
         return this.lowerBound == null ? Optional.empty() : Optional.ofNullable(this.lowerBound);
     }
 
     @InputImport(name="mapType")
-    private final @Nullable String mapType;
+      private final @Nullable String mapType;
 
     public Optional<String> getMapType() {
         return this.mapType == null ? Optional.empty() : Optional.ofNullable(this.mapType);
     }
 
     @InputImport(name="modeType")
-    private final @Nullable String modeType;
+      private final @Nullable String modeType;
 
     public Optional<String> getModeType() {
         return this.modeType == null ? Optional.empty() : Optional.ofNullable(this.modeType);
     }
 
     @InputImport(name="multiLine")
-    private final @Nullable Boolean multiLine;
+      private final @Nullable Boolean multiLine;
 
     public Optional<Boolean> getMultiLine() {
         return this.multiLine == null ? Optional.empty() : Optional.ofNullable(this.multiLine);
     }
 
     @InputImport(name="numRows")
-    private final @Nullable String numRows;
+      private final @Nullable String numRows;
 
     public Optional<String> getNumRows() {
         return this.numRows == null ? Optional.empty() : Optional.ofNullable(this.numRows);
     }
 
     @InputImport(name="numRowsAfter")
-    private final @Nullable String numRowsAfter;
+      private final @Nullable String numRowsAfter;
 
     public Optional<String> getNumRowsAfter() {
         return this.numRowsAfter == null ? Optional.empty() : Optional.ofNullable(this.numRowsAfter);
     }
 
     @InputImport(name="numRowsBefore")
-    private final @Nullable String numRowsBefore;
+      private final @Nullable String numRowsBefore;
 
     public Optional<String> getNumRowsBefore() {
         return this.numRowsBefore == null ? Optional.empty() : Optional.ofNullable(this.numRowsBefore);
     }
 
     @InputImport(name="orderByColumn")
-    private final @Nullable String orderByColumn;
+      private final @Nullable String orderByColumn;
 
     public Optional<String> getOrderByColumn() {
         return this.orderByColumn == null ? Optional.empty() : Optional.ofNullable(this.orderByColumn);
     }
 
     @InputImport(name="orderByColumns")
-    private final @Nullable String orderByColumns;
+      private final @Nullable String orderByColumns;
 
     public Optional<String> getOrderByColumns() {
         return this.orderByColumns == null ? Optional.empty() : Optional.ofNullable(this.orderByColumns);
     }
 
     @InputImport(name="other")
-    private final @Nullable String other;
+      private final @Nullable String other;
 
     public Optional<String> getOther() {
         return this.other == null ? Optional.empty() : Optional.ofNullable(this.other);
     }
 
     @InputImport(name="pattern")
-    private final @Nullable String pattern;
+      private final @Nullable String pattern;
 
     public Optional<String> getPattern() {
         return this.pattern == null ? Optional.empty() : Optional.ofNullable(this.pattern);
     }
 
     @InputImport(name="patternOption1")
-    private final @Nullable String patternOption1;
+      private final @Nullable String patternOption1;
 
     public Optional<String> getPatternOption1() {
         return this.patternOption1 == null ? Optional.empty() : Optional.ofNullable(this.patternOption1);
     }
 
     @InputImport(name="patternOption2")
-    private final @Nullable String patternOption2;
+      private final @Nullable String patternOption2;
 
     public Optional<String> getPatternOption2() {
         return this.patternOption2 == null ? Optional.empty() : Optional.ofNullable(this.patternOption2);
     }
 
     @InputImport(name="patternOptions")
-    private final @Nullable String patternOptions;
+      private final @Nullable String patternOptions;
 
     public Optional<String> getPatternOptions() {
         return this.patternOptions == null ? Optional.empty() : Optional.ofNullable(this.patternOptions);
     }
 
     @InputImport(name="period")
-    private final @Nullable String period;
+      private final @Nullable String period;
 
     public Optional<String> getPeriod() {
         return this.period == null ? Optional.empty() : Optional.ofNullable(this.period);
     }
 
     @InputImport(name="position")
-    private final @Nullable String position;
+      private final @Nullable String position;
 
     public Optional<String> getPosition() {
         return this.position == null ? Optional.empty() : Optional.ofNullable(this.position);
     }
 
     @InputImport(name="removeAllPunctuation")
-    private final @Nullable String removeAllPunctuation;
+      private final @Nullable String removeAllPunctuation;
 
     public Optional<String> getRemoveAllPunctuation() {
         return this.removeAllPunctuation == null ? Optional.empty() : Optional.ofNullable(this.removeAllPunctuation);
     }
 
     @InputImport(name="removeAllQuotes")
-    private final @Nullable String removeAllQuotes;
+      private final @Nullable String removeAllQuotes;
 
     public Optional<String> getRemoveAllQuotes() {
         return this.removeAllQuotes == null ? Optional.empty() : Optional.ofNullable(this.removeAllQuotes);
     }
 
     @InputImport(name="removeAllWhitespace")
-    private final @Nullable String removeAllWhitespace;
+      private final @Nullable String removeAllWhitespace;
 
     public Optional<String> getRemoveAllWhitespace() {
         return this.removeAllWhitespace == null ? Optional.empty() : Optional.ofNullable(this.removeAllWhitespace);
     }
 
     @InputImport(name="removeCustomCharacters")
-    private final @Nullable String removeCustomCharacters;
+      private final @Nullable String removeCustomCharacters;
 
     public Optional<String> getRemoveCustomCharacters() {
         return this.removeCustomCharacters == null ? Optional.empty() : Optional.ofNullable(this.removeCustomCharacters);
     }
 
     @InputImport(name="removeCustomValue")
-    private final @Nullable String removeCustomValue;
+      private final @Nullable String removeCustomValue;
 
     public Optional<String> getRemoveCustomValue() {
         return this.removeCustomValue == null ? Optional.empty() : Optional.ofNullable(this.removeCustomValue);
     }
 
     @InputImport(name="removeLeadingAndTrailingPunctuation")
-    private final @Nullable String removeLeadingAndTrailingPunctuation;
+      private final @Nullable String removeLeadingAndTrailingPunctuation;
 
     public Optional<String> getRemoveLeadingAndTrailingPunctuation() {
         return this.removeLeadingAndTrailingPunctuation == null ? Optional.empty() : Optional.ofNullable(this.removeLeadingAndTrailingPunctuation);
     }
 
     @InputImport(name="removeLeadingAndTrailingQuotes")
-    private final @Nullable String removeLeadingAndTrailingQuotes;
+      private final @Nullable String removeLeadingAndTrailingQuotes;
 
     public Optional<String> getRemoveLeadingAndTrailingQuotes() {
         return this.removeLeadingAndTrailingQuotes == null ? Optional.empty() : Optional.ofNullable(this.removeLeadingAndTrailingQuotes);
     }
 
     @InputImport(name="removeLeadingAndTrailingWhitespace")
-    private final @Nullable String removeLeadingAndTrailingWhitespace;
+      private final @Nullable String removeLeadingAndTrailingWhitespace;
 
     public Optional<String> getRemoveLeadingAndTrailingWhitespace() {
         return this.removeLeadingAndTrailingWhitespace == null ? Optional.empty() : Optional.ofNullable(this.removeLeadingAndTrailingWhitespace);
     }
 
     @InputImport(name="removeLetters")
-    private final @Nullable String removeLetters;
+      private final @Nullable String removeLetters;
 
     public Optional<String> getRemoveLetters() {
         return this.removeLetters == null ? Optional.empty() : Optional.ofNullable(this.removeLetters);
     }
 
     @InputImport(name="removeNumbers")
-    private final @Nullable String removeNumbers;
+      private final @Nullable String removeNumbers;
 
     public Optional<String> getRemoveNumbers() {
         return this.removeNumbers == null ? Optional.empty() : Optional.ofNullable(this.removeNumbers);
     }
 
     @InputImport(name="removeSourceColumn")
-    private final @Nullable String removeSourceColumn;
+      private final @Nullable String removeSourceColumn;
 
     public Optional<String> getRemoveSourceColumn() {
         return this.removeSourceColumn == null ? Optional.empty() : Optional.ofNullable(this.removeSourceColumn);
     }
 
     @InputImport(name="removeSpecialCharacters")
-    private final @Nullable String removeSpecialCharacters;
+      private final @Nullable String removeSpecialCharacters;
 
     public Optional<String> getRemoveSpecialCharacters() {
         return this.removeSpecialCharacters == null ? Optional.empty() : Optional.ofNullable(this.removeSpecialCharacters);
     }
 
     @InputImport(name="rightColumns")
-    private final @Nullable String rightColumns;
+      private final @Nullable String rightColumns;
 
     public Optional<String> getRightColumns() {
         return this.rightColumns == null ? Optional.empty() : Optional.ofNullable(this.rightColumns);
     }
 
     @InputImport(name="sampleSize")
-    private final @Nullable String sampleSize;
+      private final @Nullable String sampleSize;
 
     public Optional<String> getSampleSize() {
         return this.sampleSize == null ? Optional.empty() : Optional.ofNullable(this.sampleSize);
     }
 
     @InputImport(name="sampleType")
-    private final @Nullable String sampleType;
+      private final @Nullable String sampleType;
 
     public Optional<String> getSampleType() {
         return this.sampleType == null ? Optional.empty() : Optional.ofNullable(this.sampleType);
     }
 
     @InputImport(name="secondInput")
-    private final @Nullable String secondInput;
+      private final @Nullable String secondInput;
 
     public Optional<String> getSecondInput() {
         return this.secondInput == null ? Optional.empty() : Optional.ofNullable(this.secondInput);
     }
 
     @InputImport(name="secondaryInputs")
-    private final @Nullable List<RecipeSecondaryInput> secondaryInputs;
+      private final @Nullable List<RecipeSecondaryInput> secondaryInputs;
 
     public List<RecipeSecondaryInput> getSecondaryInputs() {
         return this.secondaryInputs == null ? List.of() : this.secondaryInputs;
     }
 
     @InputImport(name="sheetIndexes")
-    private final @Nullable List<Integer> sheetIndexes;
+      private final @Nullable List<Integer> sheetIndexes;
 
     public List<Integer> getSheetIndexes() {
         return this.sheetIndexes == null ? List.of() : this.sheetIndexes;
     }
 
     @InputImport(name="sheetNames")
-    private final @Nullable List<String> sheetNames;
+      private final @Nullable List<String> sheetNames;
 
     public List<String> getSheetNames() {
         return this.sheetNames == null ? List.of() : this.sheetNames;
     }
 
     @InputImport(name="sourceColumn")
-    private final @Nullable String sourceColumn;
+      private final @Nullable String sourceColumn;
 
     public Optional<String> getSourceColumn() {
         return this.sourceColumn == null ? Optional.empty() : Optional.ofNullable(this.sourceColumn);
     }
 
     @InputImport(name="sourceColumn1")
-    private final @Nullable String sourceColumn1;
+      private final @Nullable String sourceColumn1;
 
     public Optional<String> getSourceColumn1() {
         return this.sourceColumn1 == null ? Optional.empty() : Optional.ofNullable(this.sourceColumn1);
     }
 
     @InputImport(name="sourceColumn2")
-    private final @Nullable String sourceColumn2;
+      private final @Nullable String sourceColumn2;
 
     public Optional<String> getSourceColumn2() {
         return this.sourceColumn2 == null ? Optional.empty() : Optional.ofNullable(this.sourceColumn2);
     }
 
     @InputImport(name="sourceColumns")
-    private final @Nullable String sourceColumns;
+      private final @Nullable String sourceColumns;
 
     public Optional<String> getSourceColumns() {
         return this.sourceColumns == null ? Optional.empty() : Optional.ofNullable(this.sourceColumns);
     }
 
     @InputImport(name="startColumnIndex")
-    private final @Nullable String startColumnIndex;
+      private final @Nullable String startColumnIndex;
 
     public Optional<String> getStartColumnIndex() {
         return this.startColumnIndex == null ? Optional.empty() : Optional.ofNullable(this.startColumnIndex);
     }
 
     @InputImport(name="startPattern")
-    private final @Nullable String startPattern;
+      private final @Nullable String startPattern;
 
     public Optional<String> getStartPattern() {
         return this.startPattern == null ? Optional.empty() : Optional.ofNullable(this.startPattern);
     }
 
     @InputImport(name="startPosition")
-    private final @Nullable String startPosition;
+      private final @Nullable String startPosition;
 
     public Optional<String> getStartPosition() {
         return this.startPosition == null ? Optional.empty() : Optional.ofNullable(this.startPosition);
     }
 
     @InputImport(name="startValue")
-    private final @Nullable String startValue;
+      private final @Nullable String startValue;
 
     public Optional<String> getStartValue() {
         return this.startValue == null ? Optional.empty() : Optional.ofNullable(this.startValue);
     }
 
     @InputImport(name="stemmingMode")
-    private final @Nullable String stemmingMode;
+      private final @Nullable String stemmingMode;
 
     public Optional<String> getStemmingMode() {
         return this.stemmingMode == null ? Optional.empty() : Optional.ofNullable(this.stemmingMode);
     }
 
     @InputImport(name="stepCount")
-    private final @Nullable String stepCount;
+      private final @Nullable String stepCount;
 
     public Optional<String> getStepCount() {
         return this.stepCount == null ? Optional.empty() : Optional.ofNullable(this.stepCount);
     }
 
     @InputImport(name="stepIndex")
-    private final @Nullable String stepIndex;
+      private final @Nullable String stepIndex;
 
     public Optional<String> getStepIndex() {
         return this.stepIndex == null ? Optional.empty() : Optional.ofNullable(this.stepIndex);
     }
 
     @InputImport(name="stopWordsMode")
-    private final @Nullable String stopWordsMode;
+      private final @Nullable String stopWordsMode;
 
     public Optional<String> getStopWordsMode() {
         return this.stopWordsMode == null ? Optional.empty() : Optional.ofNullable(this.stopWordsMode);
     }
 
     @InputImport(name="strategy")
-    private final @Nullable String strategy;
+      private final @Nullable String strategy;
 
     public Optional<String> getStrategy() {
         return this.strategy == null ? Optional.empty() : Optional.ofNullable(this.strategy);
     }
 
     @InputImport(name="targetColumn")
-    private final @Nullable String targetColumn;
+      private final @Nullable String targetColumn;
 
     public Optional<String> getTargetColumn() {
         return this.targetColumn == null ? Optional.empty() : Optional.ofNullable(this.targetColumn);
     }
 
     @InputImport(name="targetColumnNames")
-    private final @Nullable String targetColumnNames;
+      private final @Nullable String targetColumnNames;
 
     public Optional<String> getTargetColumnNames() {
         return this.targetColumnNames == null ? Optional.empty() : Optional.ofNullable(this.targetColumnNames);
     }
 
     @InputImport(name="targetDateFormat")
-    private final @Nullable String targetDateFormat;
+      private final @Nullable String targetDateFormat;
 
     public Optional<String> getTargetDateFormat() {
         return this.targetDateFormat == null ? Optional.empty() : Optional.ofNullable(this.targetDateFormat);
     }
 
     @InputImport(name="targetIndex")
-    private final @Nullable String targetIndex;
+      private final @Nullable String targetIndex;
 
     public Optional<String> getTargetIndex() {
         return this.targetIndex == null ? Optional.empty() : Optional.ofNullable(this.targetIndex);
     }
 
     @InputImport(name="timeZone")
-    private final @Nullable String timeZone;
+      private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 
     @InputImport(name="tokenizerPattern")
-    private final @Nullable String tokenizerPattern;
+      private final @Nullable String tokenizerPattern;
 
     public Optional<String> getTokenizerPattern() {
         return this.tokenizerPattern == null ? Optional.empty() : Optional.ofNullable(this.tokenizerPattern);
     }
 
     @InputImport(name="trueString")
-    private final @Nullable String trueString;
+      private final @Nullable String trueString;
 
     public Optional<String> getTrueString() {
         return this.trueString == null ? Optional.empty() : Optional.ofNullable(this.trueString);
     }
 
     @InputImport(name="udfLang")
-    private final @Nullable String udfLang;
+      private final @Nullable String udfLang;
 
     public Optional<String> getUdfLang() {
         return this.udfLang == null ? Optional.empty() : Optional.ofNullable(this.udfLang);
     }
 
     @InputImport(name="units")
-    private final @Nullable String units;
+      private final @Nullable String units;
 
     public Optional<String> getUnits() {
         return this.units == null ? Optional.empty() : Optional.ofNullable(this.units);
     }
 
     @InputImport(name="unpivotColumn")
-    private final @Nullable String unpivotColumn;
+      private final @Nullable String unpivotColumn;
 
     public Optional<String> getUnpivotColumn() {
         return this.unpivotColumn == null ? Optional.empty() : Optional.ofNullable(this.unpivotColumn);
     }
 
     @InputImport(name="upperBound")
-    private final @Nullable String upperBound;
+      private final @Nullable String upperBound;
 
     public Optional<String> getUpperBound() {
         return this.upperBound == null ? Optional.empty() : Optional.ofNullable(this.upperBound);
     }
 
     @InputImport(name="useNewDataFrame")
-    private final @Nullable String useNewDataFrame;
+      private final @Nullable String useNewDataFrame;
 
     public Optional<String> getUseNewDataFrame() {
         return this.useNewDataFrame == null ? Optional.empty() : Optional.ofNullable(this.useNewDataFrame);
     }
 
     @InputImport(name="value")
-    private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 
     @InputImport(name="value1")
-    private final @Nullable String value1;
+      private final @Nullable String value1;
 
     public Optional<String> getValue1() {
         return this.value1 == null ? Optional.empty() : Optional.ofNullable(this.value1);
     }
 
     @InputImport(name="value2")
-    private final @Nullable String value2;
+      private final @Nullable String value2;
 
     public Optional<String> getValue2() {
         return this.value2 == null ? Optional.empty() : Optional.ofNullable(this.value2);
     }
 
     @InputImport(name="valueColumn")
-    private final @Nullable String valueColumn;
+      private final @Nullable String valueColumn;
 
     public Optional<String> getValueColumn() {
         return this.valueColumn == null ? Optional.empty() : Optional.ofNullable(this.valueColumn);
     }
 
     @InputImport(name="viewFrame")
-    private final @Nullable String viewFrame;
+      private final @Nullable String viewFrame;
 
     public Optional<String> getViewFrame() {
         return this.viewFrame == null ? Optional.empty() : Optional.ofNullable(this.viewFrame);
@@ -1763,7 +1763,6 @@ public final class RecipeParameters extends io.pulumi.resources.InvokeArgs {
             this.viewFrame = viewFrame;
             return this;
         }
-
         public RecipeParameters build() {
             return new RecipeParameters(aggregateFunction, base, caseStatement, categoryMap, charsToRemove, collapseConsecutiveWhitespace, columnDataType, columnRange, count, customCharacters, customStopWords, customValue, datasetsColumns, dateAddValue, dateTimeFormat, dateTimeParameters, deleteOtherRows, delimiter, endPattern, endPosition, endValue, expandContractions, exponent, falseString, groupByAggFunctionOptions, groupByColumns, hiddenColumns, ignoreCase, includeInSplit, input, interval, isText, joinKeys, joinType, leftColumns, limit, lowerBound, mapType, modeType, multiLine, numRows, numRowsAfter, numRowsBefore, orderByColumn, orderByColumns, other, pattern, patternOption1, patternOption2, patternOptions, period, position, removeAllPunctuation, removeAllQuotes, removeAllWhitespace, removeCustomCharacters, removeCustomValue, removeLeadingAndTrailingPunctuation, removeLeadingAndTrailingQuotes, removeLeadingAndTrailingWhitespace, removeLetters, removeNumbers, removeSourceColumn, removeSpecialCharacters, rightColumns, sampleSize, sampleType, secondInput, secondaryInputs, sheetIndexes, sheetNames, sourceColumn, sourceColumn1, sourceColumn2, sourceColumns, startColumnIndex, startPattern, startPosition, startValue, stemmingMode, stepCount, stepIndex, stopWordsMode, strategy, targetColumn, targetColumnNames, targetDateFormat, targetIndex, timeZone, tokenizerPattern, trueString, udfLang, units, unpivotColumn, upperBound, useNewDataFrame, value, value1, value2, valueColumn, viewFrame);
         }

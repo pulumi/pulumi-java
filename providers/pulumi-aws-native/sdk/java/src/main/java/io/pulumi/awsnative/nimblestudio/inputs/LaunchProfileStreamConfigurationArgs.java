@@ -7,7 +7,7 @@ import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingClipboardMod
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingInstanceType;
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamConfigurationSessionStorageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
     public static final LaunchProfileStreamConfigurationArgs Empty = new LaunchProfileStreamConfigurationArgs();
 
     @InputImport(name="clipboardMode", required=true)
-    private final Input<LaunchProfileStreamingClipboardMode> clipboardMode;
+      private final Input<LaunchProfileStreamingClipboardMode> clipboardMode;
 
     public Input<LaunchProfileStreamingClipboardMode> getClipboardMode() {
         return this.clipboardMode;
@@ -36,7 +36,7 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ec2InstanceTypes", required=true)
-    private final Input<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes;
+      private final Input<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes;
 
     public Input<List<LaunchProfileStreamingInstanceType>> getEc2InstanceTypes() {
         return this.ec2InstanceTypes;
@@ -50,7 +50,7 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxSessionLengthInMinutes")
-    private final @Nullable Input<Double> maxSessionLengthInMinutes;
+      private final @Nullable Input<Double> maxSessionLengthInMinutes;
 
     public Input<Double> getMaxSessionLengthInMinutes() {
         return this.maxSessionLengthInMinutes == null ? Input.empty() : this.maxSessionLengthInMinutes;
@@ -70,14 +70,14 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxStoppedSessionLengthInMinutes")
-    private final @Nullable Input<Double> maxStoppedSessionLengthInMinutes;
+      private final @Nullable Input<Double> maxStoppedSessionLengthInMinutes;
 
     public Input<Double> getMaxStoppedSessionLengthInMinutes() {
         return this.maxStoppedSessionLengthInMinutes == null ? Input.empty() : this.maxStoppedSessionLengthInMinutes;
     }
 
     @InputImport(name="sessionStorage")
-    private final @Nullable Input<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage;
+      private final @Nullable Input<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage;
 
     public Input<LaunchProfileStreamConfigurationSessionStorageArgs> getSessionStorage() {
         return this.sessionStorage == null ? Input.empty() : this.sessionStorage;
@@ -89,7 +89,7 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="streamingImageIds", required=true)
-    private final Input<List<String>> streamingImageIds;
+      private final Input<List<String>> streamingImageIds;
 
     public Input<List<String>> getStreamingImageIds() {
         return this.streamingImageIds;
@@ -208,7 +208,6 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
             this.streamingImageIds = Input.of(Objects.requireNonNull(streamingImageIds));
             return this;
         }
-
         public LaunchProfileStreamConfigurationArgs build() {
             return new LaunchProfileStreamConfigurationArgs(clipboardMode, ec2InstanceTypes, maxSessionLengthInMinutes, maxStoppedSessionLengthInMinutes, sessionStorage, streamingImageIds);
         }

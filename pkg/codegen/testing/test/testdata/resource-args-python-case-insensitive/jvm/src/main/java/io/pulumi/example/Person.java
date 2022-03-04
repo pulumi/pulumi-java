@@ -5,8 +5,8 @@ package io.pulumi.example;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.PersonArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.outputs.Pet;
@@ -29,6 +29,37 @@ public class Person extends io.pulumi.resources.CustomResource {
         return this.pets;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable PersonArgs.Builder a);
+    }
+    private static io.pulumi.example.PersonArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.example.PersonArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Person(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Person(String name) {
+        this(name, PersonArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Person(String name, @Nullable PersonArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

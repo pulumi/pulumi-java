@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowBranchToBranchTraffic")
-    private final @Nullable Input<Boolean> allowBranchToBranchTraffic;
+      private final @Nullable Input<Boolean> allowBranchToBranchTraffic;
 
     public Input<Boolean> getAllowBranchToBranchTraffic() {
         return this.allowBranchToBranchTraffic == null ? Input.empty() : this.allowBranchToBranchTraffic;
@@ -32,7 +32,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowVnetToVnetTraffic")
-    private final @Nullable Input<Boolean> allowVnetToVnetTraffic;
+      private final @Nullable Input<Boolean> allowVnetToVnetTraffic;
 
     public Input<Boolean> getAllowVnetToVnetTraffic() {
         return this.allowVnetToVnetTraffic == null ? Input.empty() : this.allowVnetToVnetTraffic;
@@ -43,7 +43,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableVpnEncryption")
-    private final @Nullable Input<Boolean> disableVpnEncryption;
+      private final @Nullable Input<Boolean> disableVpnEncryption;
 
     public Input<Boolean> getDisableVpnEncryption() {
         return this.disableVpnEncryption == null ? Input.empty() : this.disableVpnEncryption;
@@ -54,7 +54,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -65,7 +65,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -76,7 +76,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -98,7 +98,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -109,7 +109,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualWANName")
-    private final @Nullable Input<String> virtualWANName;
+      private final @Nullable Input<String> virtualWANName;
 
     public Input<String> getVirtualWANName() {
         return this.virtualWANName == null ? Input.empty() : this.virtualWANName;
@@ -273,7 +273,6 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualWANName = Input.ofNullable(virtualWANName);
             return this;
         }
-
         public VirtualWanArgs build() {
             return new VirtualWanArgs(allowBranchToBranchTraffic, allowVnetToVnetTraffic, disableVpnEncryption, id, location, resourceGroupName, tags, type, virtualWANName);
         }

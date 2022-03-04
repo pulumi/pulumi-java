@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.auditmanager.outputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class AssessmentRole {
             this.roleType = roleType;
             return this;
         }
-
         public AssessmentRole build() {
             return new AssessmentRole(roleArn, roleType);
         }

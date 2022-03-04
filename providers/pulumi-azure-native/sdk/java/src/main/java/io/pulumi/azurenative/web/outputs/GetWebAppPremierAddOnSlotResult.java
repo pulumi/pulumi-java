@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -97,77 +97,77 @@ public final class GetWebAppPremierAddOnSlotResult {
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Premier add on Marketplace offer.
      * 
-     */
+    */
     public Optional<String> getMarketplaceOffer() {
         return Optional.ofNullable(this.marketplaceOffer);
     }
     /**
      * Premier add on Marketplace publisher.
      * 
-     */
+    */
     public Optional<String> getMarketplacePublisher() {
         return Optional.ofNullable(this.marketplacePublisher);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Premier add on Product.
      * 
-     */
+    */
     public Optional<String> getProduct() {
         return Optional.ofNullable(this.product);
     }
     /**
      * Premier add on SKU.
      * 
-     */
+    */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Premier add on Vendor.
      * 
-     */
+    */
     public Optional<String> getVendor() {
         return Optional.ofNullable(this.vendor);
     }
@@ -266,7 +266,6 @@ public final class GetWebAppPremierAddOnSlotResult {
             this.vendor = vendor;
             return this;
         }
-
         public GetWebAppPremierAddOnSlotResult build() {
             return new GetWebAppPremierAddOnSlotResult(id, kind, location, marketplaceOffer, marketplacePublisher, name, product, sku, tags, type, vendor);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class DatabaseFileInfoResponse {
     /**
      * Name of the database
      * 
-     */
+    */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Database file type
      * 
-     */
+    */
     public Optional<String> getFileType() {
         return Optional.ofNullable(this.fileType);
     }
     /**
      * Unique identifier for database file
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Logical name of the file
      * 
-     */
+    */
     public Optional<String> getLogicalName() {
         return Optional.ofNullable(this.logicalName);
     }
     /**
      * Operating-system full path of the file
      * 
-     */
+    */
     public Optional<String> getPhysicalFullName() {
         return Optional.ofNullable(this.physicalFullName);
     }
     /**
      * Suggested full path of the file for restoring
      * 
-     */
+    */
     public Optional<String> getRestoreFullName() {
         return Optional.ofNullable(this.restoreFullName);
     }
     /**
      * Size of the file in megabytes
      * 
-     */
+    */
     public Optional<Double> getSizeMB() {
         return Optional.ofNullable(this.sizeMB);
     }
@@ -182,7 +182,6 @@ public final class DatabaseFileInfoResponse {
             this.sizeMB = sizeMB;
             return this;
         }
-
         public DatabaseFileInfoResponse build() {
             return new DatabaseFileInfoResponse(databaseName, fileType, id, logicalName, physicalFullName, restoreFullName, sizeMB);
         }

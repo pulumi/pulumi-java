@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__ContainerPortResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="containerPort", required=true)
-    private final Integer containerPort;
+      private final Integer containerPort;
 
     public Integer getContainerPort() {
         return this.containerPort;
@@ -59,7 +59,6 @@ public final class GoogleCloudMlV1__ContainerPortResponse extends io.pulumi.reso
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public GoogleCloudMlV1__ContainerPortResponse build() {
             return new GoogleCloudMlV1__ContainerPortResponse(containerPort);
         }

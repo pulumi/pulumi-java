@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Object count;
+      private final @Nullable Object count;
 
     public Optional<Object> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -35,7 +35,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="intervalInSeconds")
-    private final @Nullable Integer intervalInSeconds;
+      private final @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
@@ -84,7 +84,6 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public RetryPolicyResponse build() {
             return new RetryPolicyResponse(count, intervalInSeconds);
         }

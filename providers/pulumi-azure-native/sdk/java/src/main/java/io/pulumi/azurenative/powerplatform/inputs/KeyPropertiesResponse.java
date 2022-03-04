@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class KeyPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class KeyPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -83,7 +83,6 @@ public final class KeyPropertiesResponse extends io.pulumi.resources.InvokeArgs 
             this.version = version;
             return this;
         }
-
         public KeyPropertiesResponse build() {
             return new KeyPropertiesResponse(name, version);
         }

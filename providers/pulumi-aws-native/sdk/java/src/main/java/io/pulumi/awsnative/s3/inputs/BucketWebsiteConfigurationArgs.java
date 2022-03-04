@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketRedirectAllRequestsToArgs;
 import io.pulumi.awsnative.s3.inputs.BucketRoutingRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="errorDocument")
-    private final @Nullable Input<String> errorDocument;
+      private final @Nullable Input<String> errorDocument;
 
     public Input<String> getErrorDocument() {
         return this.errorDocument == null ? Input.empty() : this.errorDocument;
@@ -37,21 +37,21 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="indexDocument")
-    private final @Nullable Input<String> indexDocument;
+      private final @Nullable Input<String> indexDocument;
 
     public Input<String> getIndexDocument() {
         return this.indexDocument == null ? Input.empty() : this.indexDocument;
     }
 
     @InputImport(name="redirectAllRequestsTo")
-    private final @Nullable Input<BucketRedirectAllRequestsToArgs> redirectAllRequestsTo;
+      private final @Nullable Input<BucketRedirectAllRequestsToArgs> redirectAllRequestsTo;
 
     public Input<BucketRedirectAllRequestsToArgs> getRedirectAllRequestsTo() {
         return this.redirectAllRequestsTo == null ? Input.empty() : this.redirectAllRequestsTo;
     }
 
     @InputImport(name="routingRules")
-    private final @Nullable Input<List<BucketRoutingRuleArgs>> routingRules;
+      private final @Nullable Input<List<BucketRoutingRuleArgs>> routingRules;
 
     public Input<List<BucketRoutingRuleArgs>> getRoutingRules() {
         return this.routingRules == null ? Input.empty() : this.routingRules;
@@ -140,7 +140,6 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
             this.routingRules = Input.ofNullable(routingRules);
             return this;
         }
-
         public BucketWebsiteConfigurationArgs build() {
             return new BucketWebsiteConfigurationArgs(errorDocument, indexDocument, redirectAllRequestsTo, routingRules);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetVersion", required=true)
-    private final String targetVersion;
+      private final String targetVersion;
 
     public String getTargetVersion() {
         return this.targetVersion;
@@ -98,7 +98,6 @@ public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources
             this.targetVersion = Objects.requireNonNull(targetVersion);
             return this;
         }
-
         public ListListUpgradableVersionPostArgs build() {
             return new ListListUpgradableVersionPostArgs(clusterName, resourceGroupName, targetVersion);
         }

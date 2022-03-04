@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class Uint128Response {
             this.low = Objects.requireNonNull(low);
             return this;
         }
-
         public Uint128Response build() {
             return new Uint128Response(high, low);
         }

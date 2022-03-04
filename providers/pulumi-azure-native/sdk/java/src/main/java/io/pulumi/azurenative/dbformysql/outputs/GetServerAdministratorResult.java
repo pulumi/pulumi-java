@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbformysql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -66,49 +66,49 @@ public final class GetServerAdministratorResult {
     /**
      * The type of administrator.
      * 
-     */
+    */
     public String getAdministratorType() {
         return this.administratorType;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The server administrator login account name.
      * 
-     */
+    */
     public String getLogin() {
         return this.login;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The server administrator Sid (Secure ID).
      * 
-     */
+    */
     public String getSid() {
         return this.sid;
     }
     /**
      * The server Active Directory Administrator tenant id.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -179,7 +179,6 @@ public final class GetServerAdministratorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerAdministratorResult build() {
             return new GetServerAdministratorResult(administratorType, id, login, name, sid, tenantId, type);
         }

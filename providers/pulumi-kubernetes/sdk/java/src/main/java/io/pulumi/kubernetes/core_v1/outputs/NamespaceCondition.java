@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -58,7 +58,7 @@ public final class NamespaceCondition {
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -72,7 +72,7 @@ public final class NamespaceCondition {
      *  - `"NamespaceDeletionGroupVersionParsingFailure"` contains information about namespace deleter errors parsing GV for legacy types.
      *  - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -129,7 +129,6 @@ public final class NamespaceCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NamespaceCondition build() {
             return new NamespaceCondition(lastTransitionTime, message, reason, status, type);
         }

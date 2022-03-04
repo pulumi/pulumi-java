@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ddosProtectionPlanName")
-    private final @Nullable Input<String> ddosProtectionPlanName;
+      private final @Nullable Input<String> ddosProtectionPlanName;
 
     public Input<String> getDdosProtectionPlanName() {
         return this.ddosProtectionPlanName == null ? Input.empty() : this.ddosProtectionPlanName;
@@ -31,7 +31,7 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -42,7 +42,7 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -142,7 +142,6 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DdosProtectionPlanArgs build() {
             return new DdosProtectionPlanArgs(ddosProtectionPlanName, location, resourceGroupName, tags);
         }

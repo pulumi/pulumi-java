@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datafactory;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datafactory.inputs.GetLinkedServiceArgs;
 import io.pulumi.azurenative.datafactory.outputs.GetLinkedServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinkedService {
-/**
- * Linked service resource type.
+    private GetLinkedService() {}
+    public interface BuilderApplicator {
+        public void apply(GetLinkedServiceArgs.Builder a);
+    }
+    private static GetLinkedServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLinkedServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Linked service resource type.
  * API Version: 2018-06-01.
  * 
- *
- * Linked service resource type.
+     *
+     * Linked service resource type.
  * 
- */
+     */
+    public static CompletableFuture<GetLinkedServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Linked service resource type.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * Linked service resource type.
+     * 
+     */
     public static CompletableFuture<GetLinkedServiceResult> invokeAsync(GetLinkedServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args == null ? GetLinkedServiceArgs.Empty : args, Utilities.withVersion(options));
     }

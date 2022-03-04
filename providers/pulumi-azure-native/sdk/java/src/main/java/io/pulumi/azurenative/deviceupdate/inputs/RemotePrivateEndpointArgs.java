@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionArgs;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceProxyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -37,7 +37,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="manualPrivateLinkServiceConnections")
-    private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
+      private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
     public Input<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? Input.empty() : this.manualPrivateLinkServiceConnections;
@@ -48,7 +48,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="privateLinkServiceConnections")
-    private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
+      private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
     public Input<List<PrivateLinkServiceConnectionArgs>> getPrivateLinkServiceConnections() {
         return this.privateLinkServiceConnections == null ? Input.empty() : this.privateLinkServiceConnections;
@@ -59,7 +59,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="privateLinkServiceProxies")
-    private final @Nullable Input<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies;
+      private final @Nullable Input<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies;
 
     public Input<List<PrivateLinkServiceProxyArgs>> getPrivateLinkServiceProxies() {
         return this.privateLinkServiceProxies == null ? Input.empty() : this.privateLinkServiceProxies;
@@ -148,7 +148,6 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
             this.privateLinkServiceProxies = Input.ofNullable(privateLinkServiceProxies);
             return this;
         }
-
         public RemotePrivateEndpointArgs build() {
             return new RemotePrivateEndpointArgs(id, manualPrivateLinkServiceConnections, privateLinkServiceConnections, privateLinkServiceProxies);
         }

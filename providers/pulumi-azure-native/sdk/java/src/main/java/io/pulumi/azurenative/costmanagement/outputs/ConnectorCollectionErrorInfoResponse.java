@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class ConnectorCollectionErrorInfoResponse {
     /**
      * Short error code
      * 
-     */
+    */
     public String getErrorCode() {
         return this.errorCode;
     }
     /**
      * External Provider error message
      * 
-     */
+    */
     public String getErrorInnerMessage() {
         return this.errorInnerMessage;
     }
     /**
      * Detailed error message
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * Time the error started occurring (Last time error occurred in lastChecked)
      * 
-     */
+    */
     public String getErrorStartTime() {
         return this.errorStartTime;
     }
@@ -116,7 +116,6 @@ public final class ConnectorCollectionErrorInfoResponse {
             this.errorStartTime = Objects.requireNonNull(errorStartTime);
             return this;
         }
-
         public ConnectorCollectionErrorInfoResponse build() {
             return new ConnectorCollectionErrorInfoResponse(errorCode, errorInnerMessage, errorMessage, errorStartTime);
         }

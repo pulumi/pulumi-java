@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ScaleRuleAuthResponse {
     /**
      * Name of the Container App secret from which to pull the auth params.
      * 
-     */
+    */
     public Optional<String> getSecretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
      * Trigger Parameter that uses the secret
      * 
-     */
+    */
     public Optional<String> getTriggerParameter() {
         return Optional.ofNullable(this.triggerParameter);
     }
@@ -76,7 +76,6 @@ public final class ScaleRuleAuthResponse {
             this.triggerParameter = triggerParameter;
             return this;
         }
-
         public ScaleRuleAuthResponse build() {
             return new ScaleRuleAuthResponse(secretRef, triggerParameter);
         }

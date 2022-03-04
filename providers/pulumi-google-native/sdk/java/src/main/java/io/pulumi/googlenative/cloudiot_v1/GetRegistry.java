@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistry {
-/**
- * Gets a device registry configuration.
+    private GetRegistry() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegistryArgs.Builder a);
+    }
+    private static GetRegistryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegistryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a device registry configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetRegistryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a device registry configuration.
+     * 
+     */
     public static CompletableFuture<GetRegistryResult> invokeAsync(GetRegistryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getRegistry", TypeShape.of(GetRegistryResult.class), args == null ? GetRegistryArgs.Empty : args, Utilities.withVersion(options));
     }

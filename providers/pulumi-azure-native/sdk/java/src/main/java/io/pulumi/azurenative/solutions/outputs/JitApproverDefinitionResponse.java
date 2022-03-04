@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class JitApproverDefinitionResponse {
     /**
      * The approver display name.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The approver service principal Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The approver type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -97,7 +97,6 @@ public final class JitApproverDefinitionResponse {
             this.type = type;
             return this;
         }
-
         public JitApproverDefinitionResponse build() {
             return new JitApproverDefinitionResponse(displayName, id, type);
         }

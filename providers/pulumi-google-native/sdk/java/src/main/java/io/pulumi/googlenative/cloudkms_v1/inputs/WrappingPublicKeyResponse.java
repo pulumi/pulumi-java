@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WrappingPublicKeyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="pem", required=true)
-    private final String pem;
+      private final String pem;
 
     public String getPem() {
         return this.pem;
@@ -59,7 +59,6 @@ public final class WrappingPublicKeyResponse extends io.pulumi.resources.InvokeA
             this.pem = Objects.requireNonNull(pem);
             return this;
         }
-
         public WrappingPublicKeyResponse build() {
             return new WrappingPublicKeyResponse(pem);
         }

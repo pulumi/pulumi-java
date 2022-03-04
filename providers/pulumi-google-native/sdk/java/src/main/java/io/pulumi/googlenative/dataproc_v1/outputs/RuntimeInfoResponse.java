@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class RuntimeInfoResponse {
     /**
      * A URI pointing to the location of the diagnostics tarball.
      * 
-     */
+    */
     public String getDiagnosticOutputUri() {
         return this.diagnosticOutputUri;
     }
     /**
      * Map of remote access endpoints (such as web interfaces and APIs) to their URIs.
      * 
-     */
+    */
     public Map<String,String> getEndpoints() {
         return this.endpoints;
     }
     /**
      * A URI pointing to the location of the stdout and stderr of the workload.
      * 
-     */
+    */
     public String getOutputUri() {
         return this.outputUri;
     }
@@ -96,7 +96,6 @@ public final class RuntimeInfoResponse {
             this.outputUri = Objects.requireNonNull(outputUri);
             return this;
         }
-
         public RuntimeInfoResponse build() {
             return new RuntimeInfoResponse(diagnosticOutputUri, endpoints, outputUri);
         }

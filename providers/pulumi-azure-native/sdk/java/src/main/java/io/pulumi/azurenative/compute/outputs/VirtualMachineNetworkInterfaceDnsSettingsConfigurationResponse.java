@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationRespons
     /**
      * List of DNS servers IP addresses
      * 
-     */
+    */
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
@@ -54,7 +54,6 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationRespons
             this.dnsServers = dnsServers;
             return this;
         }
-
         public VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse build() {
             return new VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse(dnsServers);
         }

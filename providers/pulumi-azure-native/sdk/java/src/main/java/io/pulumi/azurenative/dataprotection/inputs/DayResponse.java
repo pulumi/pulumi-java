@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="date")
-    private final @Nullable Integer date;
+      private final @Nullable Integer date;
 
     public Optional<Integer> getDate() {
         return this.date == null ? Optional.empty() : Optional.ofNullable(this.date);
@@ -35,7 +35,7 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isLast")
-    private final @Nullable Boolean isLast;
+      private final @Nullable Boolean isLast;
 
     public Optional<Boolean> getIsLast() {
         return this.isLast == null ? Optional.empty() : Optional.ofNullable(this.isLast);
@@ -84,7 +84,6 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
             this.isLast = isLast;
             return this;
         }
-
         public DayResponse build() {
             return new DayResponse(date, isLast);
         }

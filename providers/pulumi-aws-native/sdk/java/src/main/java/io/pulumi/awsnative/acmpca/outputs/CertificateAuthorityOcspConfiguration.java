@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class CertificateAuthorityOcspConfiguration {
             this.ocspCustomCname = ocspCustomCname;
             return this;
         }
-
         public CertificateAuthorityOcspConfiguration build() {
             return new CertificateAuthorityOcspConfiguration(enabled, ocspCustomCname);
         }

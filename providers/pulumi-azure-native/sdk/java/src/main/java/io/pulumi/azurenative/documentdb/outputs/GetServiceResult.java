@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.outputs;
 import io.pulumi.azurenative.documentdb.outputs.DataTransferServiceResourcePropertiesResponse;
 import io.pulumi.azurenative.documentdb.outputs.SqlDedicatedGatewayServiceResourcePropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,28 +48,28 @@ public final class GetServiceResult {
     /**
      * The unique resource identifier of the database account.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the database account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Services response resource.
      * 
-     */
+    */
     public Either<DataTransferServiceResourcePropertiesResponse,SqlDedicatedGatewayServiceResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of Azure resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -119,7 +119,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(id, name, properties, type);
         }

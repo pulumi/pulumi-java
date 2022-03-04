@@ -5,7 +5,7 @@ package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.inputs.KeyValuePairArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<List<KeyValuePairArgs>> parameters;
+      private final Input<List<KeyValuePairArgs>> parameters;
 
     public Input<List<KeyValuePairArgs>> getParameters() {
         return this.parameters;
@@ -46,7 +46,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selectorId", required=true)
-    private final Input<String> selectorId;
+      private final Input<String> selectorId;
 
     public Input<String> getSelectorId() {
         return this.selectorId;
@@ -58,7 +58,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -147,7 +147,6 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DiscreteActionArgs build() {
             return new DiscreteActionArgs(name, parameters, selectorId, type);
         }

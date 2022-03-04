@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<String> dependsOn;
+      private final @Nullable List<String> dependsOn;
 
     public List<String> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -36,7 +36,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -47,7 +47,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -58,7 +58,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -69,7 +69,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -80,7 +80,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="strongType")
-    private final @Nullable String strongType;
+      private final @Nullable String strongType;
 
     public Optional<String> getStrongType() {
         return this.strongType == null ? Optional.empty() : Optional.ofNullable(this.strongType);
@@ -91,7 +91,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -190,7 +190,6 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
             this.tags = tags;
             return this;
         }
-
         public ResourceGroupDefinitionResponse build() {
             return new ResourceGroupDefinitionResponse(dependsOn, description, displayName, location, name, strongType, tags);
         }

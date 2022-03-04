@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="runAsUser")
-    private final @Nullable Input<Integer> runAsUser;
+      private final @Nullable Input<Integer> runAsUser;
 
     public Input<Integer> getRunAsUser() {
         return this.runAsUser == null ? Input.empty() : this.runAsUser;
@@ -66,7 +66,6 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             this.runAsUser = Input.ofNullable(runAsUser);
             return this;
         }
-
         public SecurityContextArgs build() {
             return new SecurityContextArgs(runAsUser);
         }

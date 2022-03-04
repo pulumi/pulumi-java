@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class GetBucketRetentionPolicy {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }
-
         public GetBucketRetentionPolicy build() {
             return new GetBucketRetentionPolicy(isLocked, retentionPeriod);
         }

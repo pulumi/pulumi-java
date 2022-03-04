@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class ApplicationGatewayBackendHealthServerResponse {
     /**
      * IP address or FQDN of backend server.
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Health of backend server.
      * 
-     */
+    */
     public Optional<String> getHealth() {
         return Optional.ofNullable(this.health);
     }
     /**
      * Health Probe Log.
      * 
-     */
+    */
     public Optional<String> getHealthProbeLog() {
         return Optional.ofNullable(this.healthProbeLog);
     }
     /**
      * Reference to IP configuration of backend server.
      * 
-     */
+    */
     public Optional<NetworkInterfaceIPConfigurationResponse> getIpConfiguration() {
         return Optional.ofNullable(this.ipConfiguration);
     }
@@ -119,7 +119,6 @@ public final class ApplicationGatewayBackendHealthServerResponse {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
         public ApplicationGatewayBackendHealthServerResponse build() {
             return new ApplicationGatewayBackendHealthServerResponse(address, health, healthProbeLog, ipConfiguration);
         }

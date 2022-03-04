@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AdBreakArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTimeOffset")
-    private final @Nullable Input<String> startTimeOffset;
+      private final @Nullable Input<String> startTimeOffset;
 
     public Input<String> getStartTimeOffset() {
         return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
@@ -66,7 +66,6 @@ public final class AdBreakArgs extends io.pulumi.resources.ResourceArgs {
             this.startTimeOffset = Input.ofNullable(startTimeOffset);
             return this;
         }
-
         public AdBreakArgs build() {
             return new AdBreakArgs(startTimeOffset);
         }

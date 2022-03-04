@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="active")
-    private final @Nullable Input<Boolean> active;
+      private final @Nullable Input<Boolean> active;
 
     public Input<Boolean> getActive() {
         return this.active == null ? Input.empty() : this.active;
@@ -32,7 +32,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="author")
-    private final @Nullable Input<String> author;
+      private final @Nullable Input<String> author;
 
     public Input<String> getAuthor() {
         return this.author == null ? Input.empty() : this.author;
@@ -43,7 +43,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="authorEmail")
-    private final @Nullable Input<String> authorEmail;
+      private final @Nullable Input<String> authorEmail;
 
     public Input<String> getAuthorEmail() {
         return this.authorEmail == null ? Input.empty() : this.authorEmail;
@@ -54,7 +54,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="deployer")
-    private final @Nullable Input<String> deployer;
+      private final @Nullable Input<String> deployer;
 
     public Input<String> getDeployer() {
         return this.deployer == null ? Input.empty() : this.deployer;
@@ -65,7 +65,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="details")
-    private final @Nullable Input<String> details;
+      private final @Nullable Input<String> details;
 
     public Input<String> getDetails() {
         return this.details == null ? Input.empty() : this.details;
@@ -76,7 +76,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -87,7 +87,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -98,7 +98,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -109,7 +109,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -120,7 +120,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -131,7 +131,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+      private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -153,7 +153,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -164,7 +164,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Integer> status;
+      private final @Nullable Input<Integer> status;
 
     public Input<Integer> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -403,7 +403,6 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public WebAppDeploymentSlotArgs build() {
             return new WebAppDeploymentSlotArgs(active, author, authorEmail, deployer, details, endTime, id, kind, message, name, resourceGroupName, slot, startTime, status);
         }

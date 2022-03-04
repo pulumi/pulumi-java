@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperation;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +42,7 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo {
      * if it contains an operation/service in this list.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperation> getOperations() {
         return this.operations == null ? List.of() : this.operations;
     }
@@ -53,7 +53,7 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo {
      * then this `EgressTo` rule will authorize access to all resources outside
      * the perimeter.
      * 
-     */
+    */
     public List<String> getResources() {
         return this.resources == null ? List.of() : this.resources;
     }
@@ -89,7 +89,6 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo {
             this.resources = resources;
             return this;
         }
-
         public ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo build() {
             return new ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo(operations, resources);
         }

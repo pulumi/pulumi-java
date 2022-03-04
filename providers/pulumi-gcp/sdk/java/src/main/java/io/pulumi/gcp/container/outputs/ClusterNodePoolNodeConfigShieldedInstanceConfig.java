@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfig {
     /**
      * Defines if the instance has integrity monitoring enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
     /**
      * Defines if the instance has Secure Boot enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
@@ -76,7 +76,6 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfig {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public ClusterNodePoolNodeConfigShieldedInstanceConfig build() {
             return new ClusterNodePoolNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
         }

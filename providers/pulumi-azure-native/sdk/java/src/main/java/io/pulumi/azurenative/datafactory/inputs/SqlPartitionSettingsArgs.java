@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SqlPartitionSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="partitionColumnName")
-    private final @Nullable Input<Object> partitionColumnName;
+      private final @Nullable Input<Object> partitionColumnName;
 
     public Input<Object> getPartitionColumnName() {
         return this.partitionColumnName == null ? Input.empty() : this.partitionColumnName;
@@ -34,7 +34,7 @@ public final class SqlPartitionSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="partitionLowerBound")
-    private final @Nullable Input<Object> partitionLowerBound;
+      private final @Nullable Input<Object> partitionLowerBound;
 
     public Input<Object> getPartitionLowerBound() {
         return this.partitionLowerBound == null ? Input.empty() : this.partitionLowerBound;
@@ -45,7 +45,7 @@ public final class SqlPartitionSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="partitionUpperBound")
-    private final @Nullable Input<Object> partitionUpperBound;
+      private final @Nullable Input<Object> partitionUpperBound;
 
     public Input<Object> getPartitionUpperBound() {
         return this.partitionUpperBound == null ? Input.empty() : this.partitionUpperBound;
@@ -119,7 +119,6 @@ public final class SqlPartitionSettingsArgs extends io.pulumi.resources.Resource
             this.partitionUpperBound = Input.ofNullable(partitionUpperBound);
             return this;
         }
-
         public SqlPartitionSettingsArgs build() {
             return new SqlPartitionSettingsArgs(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }

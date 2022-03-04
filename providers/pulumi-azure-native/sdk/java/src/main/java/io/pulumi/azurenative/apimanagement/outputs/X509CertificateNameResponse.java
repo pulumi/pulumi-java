@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class X509CertificateNameResponse {
     /**
      * Thumbprint for the Issuer of the Certificate.
      * 
-     */
+    */
     public Optional<String> getIssuerCertificateThumbprint() {
         return Optional.ofNullable(this.issuerCertificateThumbprint);
     }
     /**
      * Common Name of the Certificate.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -76,7 +76,6 @@ public final class X509CertificateNameResponse {
             this.name = name;
             return this;
         }
-
         public X509CertificateNameResponse build() {
             return new X509CertificateNameResponse(issuerCertificateThumbprint, name);
         }

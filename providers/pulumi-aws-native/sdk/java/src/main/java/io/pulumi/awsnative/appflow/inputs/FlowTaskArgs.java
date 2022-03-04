@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowTaskType;
 import io.pulumi.awsnative.appflow.inputs.FlowConnectorOperatorArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTaskPropertiesObjectArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorOperator")
-    private final @Nullable Input<FlowConnectorOperatorArgs> connectorOperator;
+      private final @Nullable Input<FlowConnectorOperatorArgs> connectorOperator;
 
     public Input<FlowConnectorOperatorArgs> getConnectorOperator() {
         return this.connectorOperator == null ? Input.empty() : this.connectorOperator;
@@ -34,7 +34,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationField")
-    private final @Nullable Input<String> destinationField;
+      private final @Nullable Input<String> destinationField;
 
     public Input<String> getDestinationField() {
         return this.destinationField == null ? Input.empty() : this.destinationField;
@@ -45,7 +45,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceFields", required=true)
-    private final Input<List<String>> sourceFields;
+      private final Input<List<String>> sourceFields;
 
     public Input<List<String>> getSourceFields() {
         return this.sourceFields;
@@ -56,7 +56,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskProperties")
-    private final @Nullable Input<List<FlowTaskPropertiesObjectArgs>> taskProperties;
+      private final @Nullable Input<List<FlowTaskPropertiesObjectArgs>> taskProperties;
 
     public Input<List<FlowTaskPropertiesObjectArgs>> getTaskProperties() {
         return this.taskProperties == null ? Input.empty() : this.taskProperties;
@@ -67,7 +67,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final Input<FlowTaskType> taskType;
+      private final Input<FlowTaskType> taskType;
 
     public Input<FlowTaskType> getTaskType() {
         return this.taskType;
@@ -171,7 +171,6 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }
-
         public FlowTaskArgs build() {
             return new FlowTaskArgs(connectorOperator, destinationField, sourceFields, taskProperties, taskType);
         }

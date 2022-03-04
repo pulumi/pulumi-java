@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__ManualScalingResponse {
     /**
      * The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
      * 
-     */
+    */
     public Integer getNodes() {
         return this.nodes;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudMlV1__ManualScalingResponse {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
         public GoogleCloudMlV1__ManualScalingResponse build() {
             return new GoogleCloudMlV1__ManualScalingResponse(nodes);
         }

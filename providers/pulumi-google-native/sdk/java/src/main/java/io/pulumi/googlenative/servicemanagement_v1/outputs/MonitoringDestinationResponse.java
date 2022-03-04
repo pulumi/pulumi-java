@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class MonitoringDestinationResponse {
     /**
      * Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
      * 
-     */
+    */
     public List<String> getMetrics() {
         return this.metrics;
     }
     /**
      * The monitored resource type. The type must be defined in Service.monitored_resources section.
      * 
-     */
+    */
     public String getMonitoredResource() {
         return this.monitoredResource;
     }
@@ -75,7 +75,6 @@ public final class MonitoringDestinationResponse {
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
         }
-
         public MonitoringDestinationResponse build() {
             return new MonitoringDestinationResponse(metrics, monitoredResource);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1.inputs.EntityKeyArgs;
 import io.pulumi.googlenative.cloudidentity_v1.inputs.MembershipRoleArgs;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     public static final MembershipArgs Empty = new MembershipArgs();
 
     @InputImport(name="groupId", required=true)
-    private final Input<String> groupId;
+      private final Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId;
@@ -29,7 +29,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredMemberKey", required=true)
-    private final Input<EntityKeyArgs> preferredMemberKey;
+      private final Input<EntityKeyArgs> preferredMemberKey;
 
     public Input<EntityKeyArgs> getPreferredMemberKey() {
         return this.preferredMemberKey;
@@ -40,7 +40,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable Input<List<MembershipRoleArgs>> roles;
+      private final @Nullable Input<List<MembershipRoleArgs>> roles;
 
     public Input<List<MembershipRoleArgs>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -114,7 +114,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             this.roles = Input.ofNullable(roles);
             return this;
         }
-
         public MembershipArgs build() {
             return new MembershipArgs(groupId, preferredMemberKey, roles);
         }

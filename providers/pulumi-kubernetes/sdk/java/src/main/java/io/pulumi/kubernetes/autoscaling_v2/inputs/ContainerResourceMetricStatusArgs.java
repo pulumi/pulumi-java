@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricValueStatusArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="container", required=true)
-    private final Input<String> container;
+      private final Input<String> container;
 
     public Input<String> getContainer() {
         return this.container;
@@ -34,7 +34,7 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="current", required=true)
-    private final Input<MetricValueStatusArgs> current;
+      private final Input<MetricValueStatusArgs> current;
 
     public Input<MetricValueStatusArgs> getCurrent() {
         return this.current;
@@ -45,7 +45,7 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -119,7 +119,6 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ContainerResourceMetricStatusArgs build() {
             return new ContainerResourceMetricStatusArgs(container, current, name);
         }

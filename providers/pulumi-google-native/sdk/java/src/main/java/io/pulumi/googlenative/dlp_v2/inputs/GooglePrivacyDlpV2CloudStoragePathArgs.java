@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CloudStoragePathArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2CloudStoragePathArgs extends io.pulumi.reso
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStoragePathArgs build() {
             return new GooglePrivacyDlpV2CloudStoragePathArgs(path);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Object metadata;
+      private final @Nullable Object metadata;
 
     public Optional<Object> getMetadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
@@ -46,7 +46,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -57,7 +57,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Object value;
+      private final @Nullable Object value;
 
     public Optional<Object> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -126,7 +126,6 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
             this.value = value;
             return this;
         }
-
         public WorkflowParameterResponse build() {
             return new WorkflowParameterResponse(description, metadata, type, value);
         }

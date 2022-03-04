@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.RowArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rows")
-    private final @Nullable Input<List<RowArgs>> rows;
+      private final @Nullable Input<List<RowArgs>> rows;
 
     public Input<List<RowArgs>> getRows() {
         return this.rows == null ? Input.empty() : this.rows;
@@ -67,7 +67,6 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
             this.rows = Input.ofNullable(rows);
             return this;
         }
-
         public RowLayoutArgs build() {
             return new RowLayoutArgs(rows);
         }

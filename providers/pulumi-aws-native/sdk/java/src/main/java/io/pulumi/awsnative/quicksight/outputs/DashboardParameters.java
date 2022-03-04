@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.outputs.DashboardDateTimeParameter;
 import io.pulumi.awsnative.quicksight.outputs.DashboardDecimalParameter;
 import io.pulumi.awsnative.quicksight.outputs.DashboardIntegerParameter;
 import io.pulumi.awsnative.quicksight.outputs.DashboardStringParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -50,28 +50,28 @@ public final class DashboardParameters {
     /**
      * <p>Date-time parameters.</p>
      * 
-     */
+    */
     public List<DashboardDateTimeParameter> getDateTimeParameters() {
         return this.dateTimeParameters == null ? List.of() : this.dateTimeParameters;
     }
     /**
      * <p>Decimal parameters.</p>
      * 
-     */
+    */
     public List<DashboardDecimalParameter> getDecimalParameters() {
         return this.decimalParameters == null ? List.of() : this.decimalParameters;
     }
     /**
      * <p>Integer parameters.</p>
      * 
-     */
+    */
     public List<DashboardIntegerParameter> getIntegerParameters() {
         return this.integerParameters == null ? List.of() : this.integerParameters;
     }
     /**
      * <p>String parameters.</p>
      * 
-     */
+    */
     public List<DashboardStringParameter> getStringParameters() {
         return this.stringParameters == null ? List.of() : this.stringParameters;
     }
@@ -121,7 +121,6 @@ public final class DashboardParameters {
             this.stringParameters = stringParameters;
             return this;
         }
-
         public DashboardParameters build() {
             return new DashboardParameters(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
         }

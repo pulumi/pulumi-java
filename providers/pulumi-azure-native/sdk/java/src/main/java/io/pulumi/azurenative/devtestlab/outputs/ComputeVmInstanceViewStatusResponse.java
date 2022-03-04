@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ComputeVmInstanceViewStatusResponse {
     /**
      * Gets the status Code.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Gets the short localizable label for the status.
      * 
-     */
+    */
     public Optional<String> getDisplayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
     /**
      * Gets the message associated with the status.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
@@ -97,7 +97,6 @@ public final class ComputeVmInstanceViewStatusResponse {
             this.message = message;
             return this;
         }
-
         public ComputeVmInstanceViewStatusResponse build() {
             return new ComputeVmInstanceViewStatusResponse(code, displayStatus, message);
         }

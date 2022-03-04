@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.DayResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -72,28 +72,28 @@ public final class ScheduleBasedBackupCriteriaResponse {
      * it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
      * and should be part of AbsoluteMarker enum
      * 
-     */
+    */
     public List<String> getAbsoluteCriteria() {
         return this.absoluteCriteria == null ? List.of() : this.absoluteCriteria;
     }
     /**
      * This is day of the month from 1 to 28 other wise last of month
      * 
-     */
+    */
     public List<DayResponse> getDaysOfMonth() {
         return this.daysOfMonth == null ? List.of() : this.daysOfMonth;
     }
     /**
      * It should be Sunday/Monday/T..../Saturday
      * 
-     */
+    */
     public List<String> getDaysOfTheWeek() {
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
     }
     /**
      * It should be January/February/....../December
      * 
-     */
+    */
     public List<String> getMonthsOfYear() {
         return this.monthsOfYear == null ? List.of() : this.monthsOfYear;
     }
@@ -101,21 +101,21 @@ public final class ScheduleBasedBackupCriteriaResponse {
      * Type of the specific object - used for deserializing
      * Expected value is 'ScheduleBasedBackupCriteria'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * List of schedule times for backup
      * 
-     */
+    */
     public List<String> getScheduleTimes() {
         return this.scheduleTimes == null ? List.of() : this.scheduleTimes;
     }
     /**
      * It should be First/Second/Third/Fourth/Last
      * 
-     */
+    */
     public List<String> getWeeksOfTheMonth() {
         return this.weeksOfTheMonth == null ? List.of() : this.weeksOfTheMonth;
     }
@@ -186,7 +186,6 @@ public final class ScheduleBasedBackupCriteriaResponse {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
-
         public ScheduleBasedBackupCriteriaResponse build() {
             return new ScheduleBasedBackupCriteriaResponse(absoluteCriteria, daysOfMonth, daysOfTheWeek, monthsOfYear, objectType, scheduleTimes, weeksOfTheMonth);
         }

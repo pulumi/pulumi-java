@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class NetworkInterfaceIPConfigurationResponse {
     /**
      * The list of DNS servers IP addresses.
      * 
-     */
+    */
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
      * The value of the gateway.
      * 
-     */
+    */
     public Optional<String> getGateway() {
         return Optional.ofNullable(this.gateway);
     }
     /**
      * The value of the IP address.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * IP address allocation method.
      * 
-     */
+    */
     public Optional<String> getIpAllocationMethod() {
         return Optional.ofNullable(this.ipAllocationMethod);
     }
     /**
      * IP address version.
      * 
-     */
+    */
     public Optional<String> getIpVersion() {
         return Optional.ofNullable(this.ipVersion);
     }
     /**
      * The value of the subnet.
      * 
-     */
+    */
     public Optional<String> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -161,7 +161,6 @@ public final class NetworkInterfaceIPConfigurationResponse {
             this.subnet = subnet;
             return this;
         }
-
         public NetworkInterfaceIPConfigurationResponse build() {
             return new NetworkInterfaceIPConfigurationResponse(dnsServers, gateway, ipAddress, ipAllocationMethod, ipVersion, subnet);
         }

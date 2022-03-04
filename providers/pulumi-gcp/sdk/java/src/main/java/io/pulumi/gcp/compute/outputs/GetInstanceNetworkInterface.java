@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceNetworkInterfaceAccessConfig;
 import io.pulumi.gcp.compute.outputs.GetInstanceNetworkInterfaceAliasIpRange;
 import io.pulumi.gcp.compute.outputs.GetInstanceNetworkInterfaceIpv6AccessConfig;
@@ -88,14 +88,14 @@ public final class GetInstanceNetworkInterface {
      * Access configurations, i.e. IPs via which this
      * instance can be accessed via the Internet. Structure documented below.
      * 
-     */
+    */
     public List<GetInstanceNetworkInterfaceAccessConfig> getAccessConfigs() {
         return this.accessConfigs;
     }
     /**
      * An array of alias IP ranges for this network interface. Structure documented below.
      * 
-     */
+    */
     public List<GetInstanceNetworkInterfaceAliasIpRange> getAliasIpRanges() {
         return this.aliasIpRanges;
     }
@@ -108,21 +108,21 @@ public final class GetInstanceNetworkInterface {
     /**
      * The name of the instance. One of `name` or `self_link` must be provided.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name or self_link of the network attached to this interface.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
     /**
      * The private IP address assigned to the instance.
      * 
-     */
+    */
     public String getNetworkIp() {
         return this.networkIp;
     }
@@ -138,14 +138,14 @@ public final class GetInstanceNetworkInterface {
     /**
      * The name or self_link of the subnetwork attached to this interface.
      * 
-     */
+    */
     public String getSubnetwork() {
         return this.subnetwork;
     }
     /**
      * The project in which the subnetwork belongs.
      * 
-     */
+    */
     public String getSubnetworkProject() {
         return this.subnetworkProject;
     }
@@ -251,7 +251,6 @@ public final class GetInstanceNetworkInterface {
             this.subnetworkProject = Objects.requireNonNull(subnetworkProject);
             return this;
         }
-
         public GetInstanceNetworkInterface build() {
             return new GetInstanceNetworkInterface(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
         }

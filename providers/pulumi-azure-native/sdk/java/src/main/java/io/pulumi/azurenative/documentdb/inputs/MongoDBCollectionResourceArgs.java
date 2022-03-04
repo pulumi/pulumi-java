@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="analyticalStorageTtl")
-    private final @Nullable Input<Integer> analyticalStorageTtl;
+      private final @Nullable Input<Integer> analyticalStorageTtl;
 
     public Input<Integer> getAnalyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Input.empty() : this.analyticalStorageTtl;
@@ -38,7 +38,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -49,7 +49,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="indexes")
-    private final @Nullable Input<List<MongoIndexArgs>> indexes;
+      private final @Nullable Input<List<MongoIndexArgs>> indexes;
 
     public Input<List<MongoIndexArgs>> getIndexes() {
         return this.indexes == null ? Input.empty() : this.indexes;
@@ -60,7 +60,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="shardKey")
-    private final @Nullable Input<Map<String,String>> shardKey;
+      private final @Nullable Input<Map<String,String>> shardKey;
 
     public Input<Map<String,String>> getShardKey() {
         return this.shardKey == null ? Input.empty() : this.shardKey;
@@ -149,7 +149,6 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
             this.shardKey = Input.ofNullable(shardKey);
             return this;
         }
-
         public MongoDBCollectionResourceArgs build() {
             return new MongoDBCollectionResourceArgs(analyticalStorageTtl, id, indexes, shardKey);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.datacatalog.outputs.TagTemplateFieldTypeEnumTypeAllowedValue;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +34,7 @@ public final class TagTemplateFieldTypeEnumType {
      * Can have up to 500 allowed values.
      * Structure is documented below.
      * 
-     */
+    */
     public List<TagTemplateFieldTypeEnumTypeAllowedValue> getAllowedValues() {
         return this.allowedValues;
     }
@@ -63,7 +63,6 @@ public final class TagTemplateFieldTypeEnumType {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
-
         public TagTemplateFieldTypeEnumType build() {
             return new TagTemplateFieldTypeEnumType(allowedValues);
         }

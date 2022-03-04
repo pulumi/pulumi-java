@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetReferenceResponse;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class DatasetAccessEntryResponse {
     /**
      * [Required] The dataset this entry applies to.
      * 
-     */
+    */
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
     }
@@ -68,7 +68,6 @@ public final class DatasetAccessEntryResponse {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
-
         public DatasetAccessEntryResponse build() {
             return new DatasetAccessEntryResponse(dataset, targetTypes);
         }

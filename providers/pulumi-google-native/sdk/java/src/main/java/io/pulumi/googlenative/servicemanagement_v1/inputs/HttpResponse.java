@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.HttpRuleResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class HttpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fullyDecodeReservedExpansion", required=true)
-    private final Boolean fullyDecodeReservedExpansion;
+      private final Boolean fullyDecodeReservedExpansion;
 
     public Boolean getFullyDecodeReservedExpansion() {
         return this.fullyDecodeReservedExpansion;
@@ -34,7 +34,7 @@ public final class HttpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<HttpRuleResponse> rules;
+      private final List<HttpRuleResponse> rules;
 
     public List<HttpRuleResponse> getRules() {
         return this.rules;
@@ -83,7 +83,6 @@ public final class HttpResponse extends io.pulumi.resources.InvokeArgs {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public HttpResponse build() {
             return new HttpResponse(fullyDecodeReservedExpansion, rules);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,7 +35,7 @@ public final class ContainerRegistryResponse {
     /**
      * If omitted, the default is "docker.io".
      * 
-     */
+    */
     public Optional<String> getRegistryServer() {
         return Optional.ofNullable(this.registryServer);
     }
@@ -81,7 +81,6 @@ public final class ContainerRegistryResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ContainerRegistryResponse build() {
             return new ContainerRegistryResponse(password, registryServer, userName);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerbidedicated.outputs;
 
 import io.pulumi.azurenative.powerbidedicated.outputs.AutoScaleVCoreSkuResponse;
 import io.pulumi.azurenative.powerbidedicated.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -93,70 +93,70 @@ public final class GetAutoScaleVCoreResult {
     /**
      * The maximum capacity of an auto scale v-core resource.
      * 
-     */
+    */
     public Optional<Integer> getCapacityLimit() {
         return Optional.ofNullable(this.capacityLimit);
     }
     /**
      * The object ID of the capacity resource associated with the auto scale v-core resource.
      * 
-     */
+    */
     public Optional<String> getCapacityObjectId() {
         return Optional.ofNullable(this.capacityObjectId);
     }
     /**
      * An identifier that represents the PowerBI Dedicated resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Location of the PowerBI Dedicated resource.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the PowerBI Dedicated resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the auto scale v-core resource.
      * 
-     */
+    */
     public AutoScaleVCoreSkuResponse getSku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public Optional<SystemDataResponse> getSystemData() {
         return Optional.ofNullable(this.systemData);
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the PowerBI Dedicated resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -248,7 +248,6 @@ public final class GetAutoScaleVCoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutoScaleVCoreResult build() {
             return new GetAutoScaleVCoreResult(capacityLimit, capacityObjectId, id, location, name, provisioningState, sku, systemData, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class PurviewConfigurationResponse {
     /**
      * Purview Resource ID
      * 
-     */
+    */
     public Optional<String> getPurviewResourceId() {
         return Optional.ofNullable(this.purviewResourceId);
     }
@@ -54,7 +54,6 @@ public final class PurviewConfigurationResponse {
             this.purviewResourceId = purviewResourceId;
             return this;
         }
-
         public PurviewConfigurationResponse build() {
             return new PurviewConfigurationResponse(purviewResourceId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,7 +30,7 @@ public final class GetFunctionSourceRepository {
     /**
      * The URL pointing to the hosted repository where the function is defined.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -66,7 +66,6 @@ public final class GetFunctionSourceRepository {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetFunctionSourceRepository build() {
             return new GetFunctionSourceRepository(deployedUrl, url);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.DurationResponse;
 import java.lang.Double;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class HttpFaultDelayResponse {
     /**
      * Specifies the value of the fixed delay interval.
      * 
-     */
+    */
     public DurationResponse getFixedDelay() {
         return this.fixedDelay;
     }
     /**
      * The percentage of traffic for connections, operations, or requests for which a delay is introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
      * 
-     */
+    */
     public Double getPercentage() {
         return this.percentage;
     }
@@ -75,7 +75,6 @@ public final class HttpFaultDelayResponse {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public HttpFaultDelayResponse build() {
             return new HttpFaultDelayResponse(fixedDelay, percentage);
         }

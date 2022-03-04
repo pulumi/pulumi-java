@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.JwtClaimChecksResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class AzureActiveDirectoryValidationResponse {
     /**
      * The list of audiences that can make successful authentication/authorization requests.
      * 
-     */
+    */
     public List<String> getAllowedAudiences() {
         return this.allowedAudiences == null ? List.of() : this.allowedAudiences;
     }
     /**
      * The configuration settings of the checks that should be made while validating the JWT Claims.
      * 
-     */
+    */
     public Optional<JwtClaimChecksResponse> getJwtClaimChecks() {
         return Optional.ofNullable(this.jwtClaimChecks);
     }
@@ -78,7 +78,6 @@ public final class AzureActiveDirectoryValidationResponse {
             this.jwtClaimChecks = jwtClaimChecks;
             return this;
         }
-
         public AzureActiveDirectoryValidationResponse build() {
             return new AzureActiveDirectoryValidationResponse(allowedAudiences, jwtClaimChecks);
         }

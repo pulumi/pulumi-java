@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.HttpVersionOperator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class HttpVersionMatchConditionParametersArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="matchValues")
-    private final @Nullable Input<List<String>> matchValues;
+      private final @Nullable Input<List<String>> matchValues;
 
     public Input<List<String>> getMatchValues() {
         return this.matchValues == null ? Input.empty() : this.matchValues;
@@ -38,14 +38,14 @@ public final class HttpVersionMatchConditionParametersArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="negateCondition")
-    private final @Nullable Input<Boolean> negateCondition;
+      private final @Nullable Input<Boolean> negateCondition;
 
     public Input<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -56,7 +56,7 @@ public final class HttpVersionMatchConditionParametersArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<Either<String,HttpVersionOperator>> operator;
+      private final Input<Either<String,HttpVersionOperator>> operator;
 
     public Input<Either<String,HttpVersionOperator>> getOperator() {
         return this.operator;
@@ -145,7 +145,6 @@ public final class HttpVersionMatchConditionParametersArgs extends io.pulumi.res
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public HttpVersionMatchConditionParametersArgs build() {
             return new HttpVersionMatchConditionParametersArgs(matchValues, negateCondition, odataType, operator);
         }

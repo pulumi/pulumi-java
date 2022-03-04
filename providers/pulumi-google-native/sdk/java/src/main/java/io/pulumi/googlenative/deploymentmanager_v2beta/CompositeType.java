@@ -5,8 +5,8 @@ package io.pulumi.googlenative.deploymentmanager_v2beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.deploymentmanager_v2beta.CompositeTypeArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.CompositeTypeLabelEntryResponse;
@@ -127,6 +127,37 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
         return this.templateContents;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable CompositeTypeArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.deploymentmanager_v2beta.CompositeTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.deploymentmanager_v2beta.CompositeTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CompositeType(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CompositeType(String name) {
+        this(name, CompositeTypeArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CompositeType(String name, @Nullable CompositeTypeArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointRecallErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -41,21 +41,21 @@ public final class ServerEndpointRecallStatusResponse {
     /**
      * Last updated timestamp
      * 
-     */
+    */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Array of recall errors
      * 
-     */
+    */
     public List<ServerEndpointRecallErrorResponse> getRecallErrors() {
         return this.recallErrors;
     }
     /**
      * Total count of recall errors.
      * 
-     */
+    */
     public Double getTotalRecallErrorsCount() {
         return this.totalRecallErrorsCount;
     }
@@ -98,7 +98,6 @@ public final class ServerEndpointRecallStatusResponse {
             this.totalRecallErrorsCount = Objects.requireNonNull(totalRecallErrorsCount);
             return this;
         }
-
         public ServerEndpointRecallStatusResponse build() {
             return new ServerEndpointRecallStatusResponse(lastUpdatedTimestamp, recallErrors, totalRecallErrorsCount);
         }

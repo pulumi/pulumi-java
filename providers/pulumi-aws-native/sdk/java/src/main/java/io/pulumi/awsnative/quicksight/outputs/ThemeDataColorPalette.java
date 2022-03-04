@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,7 +42,7 @@ public final class ThemeDataColorPalette {
     /**
      * <p>The hexadecimal codes for the colors.</p>
      * 
-     */
+    */
     public List<String> getColors() {
         return this.colors == null ? List.of() : this.colors;
     }
@@ -50,14 +50,14 @@ public final class ThemeDataColorPalette {
      * <p>The hexadecimal code of a color that applies to charts where a lack of data is
      *             highlighted.</p>
      * 
-     */
+    */
     public Optional<String> getEmptyFillColor() {
         return Optional.ofNullable(this.emptyFillColor);
     }
     /**
      * <p>The minimum and maximum hexadecimal codes that describe a color gradient. </p>
      * 
-     */
+    */
     public List<String> getMinMaxGradient() {
         return this.minMaxGradient == null ? List.of() : this.minMaxGradient;
     }
@@ -100,7 +100,6 @@ public final class ThemeDataColorPalette {
             this.minMaxGradient = minMaxGradient;
             return this;
         }
-
         public ThemeDataColorPalette build() {
             return new ThemeDataColorPalette(colors, emptyFillColor, minMaxGradient);
         }

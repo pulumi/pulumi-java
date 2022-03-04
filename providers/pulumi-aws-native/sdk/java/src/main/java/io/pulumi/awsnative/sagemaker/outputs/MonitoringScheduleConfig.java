@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringType;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringJobDefinition;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleScheduleConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,7 +41,7 @@ public final class MonitoringScheduleConfig {
     /**
      * Name of the job definition
      * 
-     */
+    */
     public Optional<String> getMonitoringJobDefinitionName() {
         return Optional.ofNullable(this.monitoringJobDefinitionName);
     }
@@ -97,7 +97,6 @@ public final class MonitoringScheduleConfig {
             this.scheduleConfig = scheduleConfig;
             return this;
         }
-
         public MonitoringScheduleConfig build() {
             return new MonitoringScheduleConfig(monitoringJobDefinition, monitoringJobDefinitionName, monitoringType, scheduleConfig);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ImageDataDiskResponse;
 import io.pulumi.azurenative.compute.outputs.ImageOSDiskResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class ImageStorageProfileResponse {
     /**
      * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
      * 
-     */
+    */
     public List<ImageDataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
      * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
      * 
-     */
+    */
     public Optional<ImageOSDiskResponse> getOsDisk() {
         return Optional.ofNullable(this.osDisk);
     }
     /**
      * Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
      * 
-     */
+    */
     public Optional<Boolean> getZoneResilient() {
         return Optional.ofNullable(this.zoneResilient);
     }
@@ -100,7 +100,6 @@ public final class ImageStorageProfileResponse {
             this.zoneResilient = zoneResilient;
             return this;
         }
-
         public ImageStorageProfileResponse build() {
             return new ImageStorageProfileResponse(dataDisks, osDisk, zoneResilient);
         }

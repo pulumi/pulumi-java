@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class DeblockResponse {
     /**
      * Enable deblocker. The default is `false`.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
      * 
-     */
+    */
     public Double getStrength() {
         return this.strength;
     }
@@ -75,7 +75,6 @@ public final class DeblockResponse {
             this.strength = Objects.requireNonNull(strength);
             return this;
         }
-
         public DeblockResponse build() {
             return new DeblockResponse(enabled, strength);
         }

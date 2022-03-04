@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="agreeToInstallHANADBClient", required=true)
-    private final Input<Boolean> agreeToInstallHANADBClient;
+      private final Input<Boolean> agreeToInstallHANADBClient;
 
     public Input<Boolean> getAgreeToInstallHANADBClient() {
         return this.agreeToInstallHANADBClient;
@@ -35,7 +35,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hANAPort", required=true)
-    private final Input<String> hANAPort;
+      private final Input<String> hANAPort;
 
     public Input<String> getHANAPort() {
         return this.hANAPort;
@@ -46,7 +46,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hANASID", required=true)
-    private final Input<String> hANASID;
+      private final Input<String> hANASID;
 
     public Input<String> getHANASID() {
         return this.hANASID;
@@ -60,7 +60,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hANASecretName", required=true)
-    private final Input<String> hANASecretName;
+      private final Input<String> hANASecretName;
 
     public Input<String> getHANASecretName() {
         return this.hANASecretName;
@@ -71,7 +71,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="prometheusPort")
-    private final @Nullable Input<String> prometheusPort;
+      private final @Nullable Input<String> prometheusPort;
 
     public Input<String> getPrometheusPort() {
         return this.prometheusPort == null ? Input.empty() : this.prometheusPort;
@@ -175,7 +175,6 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
             this.prometheusPort = Input.ofNullable(prometheusPort);
             return this;
         }
-
         public ApplicationHANAPrometheusExporterArgs build() {
             return new ApplicationHANAPrometheusExporterArgs(agreeToInstallHANADBClient, hANAPort, hANASID, hANASecretName, prometheusPort);
         }

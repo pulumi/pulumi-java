@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DefenderForContainersAwsOfferingKubernetesServiceArgs extends
      * 
      */
     @InputImport(name="cloudRoleArn")
-    private final @Nullable Input<String> cloudRoleArn;
+      private final @Nullable Input<String> cloudRoleArn;
 
     public Input<String> getCloudRoleArn() {
         return this.cloudRoleArn == null ? Input.empty() : this.cloudRoleArn;
@@ -66,7 +66,6 @@ public final class DefenderForContainersAwsOfferingKubernetesServiceArgs extends
             this.cloudRoleArn = Input.ofNullable(cloudRoleArn);
             return this;
         }
-
         public DefenderForContainersAwsOfferingKubernetesServiceArgs build() {
             return new DefenderForContainersAwsOfferingKubernetesServiceArgs(cloudRoleArn);
         }

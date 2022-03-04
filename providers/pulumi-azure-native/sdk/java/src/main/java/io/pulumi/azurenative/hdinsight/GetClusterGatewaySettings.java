@@ -6,21 +6,41 @@ package io.pulumi.azurenative.hdinsight;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hdinsight.inputs.GetClusterGatewaySettingsArgs;
 import io.pulumi.azurenative.hdinsight.outputs.GetClusterGatewaySettingsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClusterGatewaySettings {
-/**
- * Gateway settings.
+    private GetClusterGatewaySettings() {}
+    public interface BuilderApplicator {
+        public void apply(GetClusterGatewaySettingsArgs.Builder a);
+    }
+    private static GetClusterGatewaySettingsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetClusterGatewaySettingsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gateway settings.
  * API Version: 2018-06-01-preview.
  * 
- *
- * Gateway settings.
+     *
+     * Gateway settings.
  * 
- */
+     */
+    public static CompletableFuture<GetClusterGatewaySettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gateway settings.
+     * API Version: 2018-06-01-preview.
+     * 
+     *
+         * Gateway settings.
+     * 
+     */
     public static CompletableFuture<GetClusterGatewaySettingsResult> invokeAsync(GetClusterGatewaySettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getClusterGatewaySettings", TypeShape.of(GetClusterGatewaySettingsResult.class), args == null ? GetClusterGatewaySettingsArgs.Empty : args, Utilities.withVersion(options));
     }

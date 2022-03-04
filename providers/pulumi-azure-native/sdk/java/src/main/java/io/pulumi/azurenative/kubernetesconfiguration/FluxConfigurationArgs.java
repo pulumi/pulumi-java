@@ -9,7 +9,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.inputs.GitRepositoryDefinit
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.KustomizationDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -37,7 +37,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterResourceName", required=true)
-    private final Input<String> clusterResourceName;
+      private final Input<String> clusterResourceName;
 
     public Input<String> getClusterResourceName() {
         return this.clusterResourceName;
@@ -48,7 +48,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterRp", required=true)
-    private final Input<String> clusterRp;
+      private final Input<String> clusterRp;
 
     public Input<String> getClusterRp() {
         return this.clusterRp;
@@ -59,7 +59,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configurationProtectedSettings")
-    private final @Nullable Input<Map<String,String>> configurationProtectedSettings;
+      private final @Nullable Input<Map<String,String>> configurationProtectedSettings;
 
     public Input<Map<String,String>> getConfigurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Input.empty() : this.configurationProtectedSettings;
@@ -70,7 +70,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fluxConfigurationName")
-    private final @Nullable Input<String> fluxConfigurationName;
+      private final @Nullable Input<String> fluxConfigurationName;
 
     public Input<String> getFluxConfigurationName() {
         return this.fluxConfigurationName == null ? Input.empty() : this.fluxConfigurationName;
@@ -81,7 +81,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gitRepository")
-    private final @Nullable Input<GitRepositoryDefinitionArgs> gitRepository;
+      private final @Nullable Input<GitRepositoryDefinitionArgs> gitRepository;
 
     public Input<GitRepositoryDefinitionArgs> getGitRepository() {
         return this.gitRepository == null ? Input.empty() : this.gitRepository;
@@ -92,7 +92,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kustomizations")
-    private final @Nullable Input<Map<String,KustomizationDefinitionArgs>> kustomizations;
+      private final @Nullable Input<Map<String,KustomizationDefinitionArgs>> kustomizations;
 
     public Input<Map<String,KustomizationDefinitionArgs>> getKustomizations() {
         return this.kustomizations == null ? Input.empty() : this.kustomizations;
@@ -103,7 +103,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -114,7 +114,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -125,7 +125,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<Either<String,ScopeType>> scope;
+      private final @Nullable Input<Either<String,ScopeType>> scope;
 
     public Input<Either<String,ScopeType>> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -136,7 +136,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceKind")
-    private final @Nullable Input<Either<String,SourceKindType>> sourceKind;
+      private final @Nullable Input<Either<String,SourceKindType>> sourceKind;
 
     public Input<Either<String,SourceKindType>> getSourceKind() {
         return this.sourceKind == null ? Input.empty() : this.sourceKind;
@@ -147,7 +147,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="suspend")
-    private final @Nullable Input<Boolean> suspend;
+      private final @Nullable Input<Boolean> suspend;
 
     public Input<Boolean> getSuspend() {
         return this.suspend == null ? Input.empty() : this.suspend;
@@ -356,7 +356,6 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
             this.suspend = Input.ofNullable(suspend);
             return this;
         }
-
         public FluxConfigurationArgs build() {
             return new FluxConfigurationArgs(clusterName, clusterResourceName, clusterRp, configurationProtectedSettings, fluxConfigurationName, gitRepository, kustomizations, namespace, resourceGroupName, scope, sourceKind, suspend);
         }

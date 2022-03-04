@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class SlotSwapStatusResponse {
     /**
      * The destination slot of the last swap operation.
      * 
-     */
+    */
     public String getDestinationSlotName() {
         return this.destinationSlotName;
     }
     /**
      * The source slot of the last swap operation.
      * 
-     */
+    */
     public String getSourceSlotName() {
         return this.sourceSlotName;
     }
     /**
      * The time the last successful slot swap completed.
      * 
-     */
+    */
     public String getTimestampUtc() {
         return this.timestampUtc;
     }
@@ -95,7 +95,6 @@ public final class SlotSwapStatusResponse {
             this.timestampUtc = Objects.requireNonNull(timestampUtc);
             return this;
         }
-
         public SlotSwapStatusResponse build() {
             return new SlotSwapStatusResponse(destinationSlotName, sourceSlotName, timestampUtc);
         }

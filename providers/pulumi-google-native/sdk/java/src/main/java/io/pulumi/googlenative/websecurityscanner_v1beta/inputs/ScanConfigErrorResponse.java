@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -32,7 +32,7 @@ public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="fieldName", required=true)
-    private final String fieldName;
+      private final String fieldName;
 
     public String getFieldName() {
         return this.fieldName;
@@ -81,7 +81,6 @@ public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArg
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
-
         public ScanConfigErrorResponse build() {
             return new ScanConfigErrorResponse(code, fieldName);
         }

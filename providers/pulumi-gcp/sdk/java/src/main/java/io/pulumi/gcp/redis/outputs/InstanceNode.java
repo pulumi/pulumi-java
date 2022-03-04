@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +29,7 @@ public final class InstanceNode {
     /**
      * an identifier for the resource with format `projects/{{project}}/locations/{{region}}/instances/{{name}}`
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -68,7 +68,6 @@ public final class InstanceNode {
             this.zone = zone;
             return this;
         }
-
         public InstanceNode build() {
             return new InstanceNode(id, zone);
         }

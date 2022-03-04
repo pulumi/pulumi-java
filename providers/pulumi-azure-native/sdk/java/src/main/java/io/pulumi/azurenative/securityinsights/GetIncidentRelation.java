@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.inputs.GetIncidentRelationArgs;
 import io.pulumi.azurenative.securityinsights.outputs.GetIncidentRelationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIncidentRelation {
-/**
- * Represents a relation between two resources
+    private GetIncidentRelation() {}
+    public interface BuilderApplicator {
+        public void apply(GetIncidentRelationArgs.Builder a);
+    }
+    private static GetIncidentRelationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIncidentRelationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a relation between two resources
  * API Version: 2021-03-01-preview.
  * 
- *
- * Represents a relation between two resources
+     *
+     * Represents a relation between two resources
  * 
- */
+     */
+    public static CompletableFuture<GetIncidentRelationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a relation between two resources
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Represents a relation between two resources
+     * 
+     */
     public static CompletableFuture<GetIncidentRelationResult> invokeAsync(GetIncidentRelationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncidentRelation", TypeShape.of(GetIncidentRelationResult.class), args == null ? GetIncidentRelationArgs.Empty : args, Utilities.withVersion(options));
     }

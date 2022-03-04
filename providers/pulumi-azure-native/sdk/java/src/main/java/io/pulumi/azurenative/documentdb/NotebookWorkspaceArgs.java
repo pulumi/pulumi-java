@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="notebookWorkspaceName")
-    private final @Nullable Input<String> notebookWorkspaceName;
+      private final @Nullable Input<String> notebookWorkspaceName;
 
     public Input<String> getNotebookWorkspaceName() {
         return this.notebookWorkspaceName == null ? Input.empty() : this.notebookWorkspaceName;
@@ -41,7 +41,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -115,7 +115,6 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public NotebookWorkspaceArgs build() {
             return new NotebookWorkspaceArgs(accountName, notebookWorkspaceName, resourceGroupName);
         }

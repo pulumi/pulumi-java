@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="eventHubName")
-    private final @Nullable Input<String> eventHubName;
+      private final @Nullable Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
@@ -34,7 +34,7 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="partitionKey")
-    private final @Nullable Input<String> partitionKey;
+      private final @Nullable Input<String> partitionKey;
 
     public Input<String> getPartitionKey() {
         return this.partitionKey == null ? Input.empty() : this.partitionKey;
@@ -45,7 +45,7 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serviceBusNamespace")
-    private final @Nullable Input<String> serviceBusNamespace;
+      private final @Nullable Input<String> serviceBusNamespace;
 
     public Input<String> getServiceBusNamespace() {
         return this.serviceBusNamespace == null ? Input.empty() : this.serviceBusNamespace;
@@ -56,7 +56,7 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-    private final @Nullable Input<String> sharedAccessPolicyKey;
+      private final @Nullable Input<String> sharedAccessPolicyKey;
 
     public Input<String> getSharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Input.empty() : this.sharedAccessPolicyKey;
@@ -67,7 +67,7 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-    private final @Nullable Input<String> sharedAccessPolicyName;
+      private final @Nullable Input<String> sharedAccessPolicyName;
 
     public Input<String> getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Input.empty() : this.sharedAccessPolicyName;
@@ -79,7 +79,7 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -198,7 +198,6 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public EventHubOutputDataSourceArgs build() {
             return new EventHubOutputDataSourceArgs(eventHubName, partitionKey, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }

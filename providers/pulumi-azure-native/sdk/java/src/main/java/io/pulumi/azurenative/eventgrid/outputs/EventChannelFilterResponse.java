@@ -22,7 +22,7 @@ import io.pulumi.azurenative.eventgrid.outputs.StringNotBeginsWithAdvancedFilter
 import io.pulumi.azurenative.eventgrid.outputs.StringNotContainsAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StringNotEndsWithAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StringNotInAdvancedFilterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.List;
@@ -54,14 +54,14 @@ public final class EventChannelFilterResponse {
     /**
      * An array of advanced filters that are used for filtering event channels.
      * 
-     */
+    */
     public List<Object> getAdvancedFilters() {
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
     }
     /**
      * Allows advanced filters to be evaluated against an array of values instead of expecting a singular value. The default value is either false or null.
      * 
-     */
+    */
     public Optional<Boolean> getEnableAdvancedFilteringOnArrays() {
         return Optional.ofNullable(this.enableAdvancedFilteringOnArrays);
     }
@@ -97,7 +97,6 @@ public final class EventChannelFilterResponse {
             this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
             return this;
         }
-
         public EventChannelFilterResponse build() {
             return new EventChannelFilterResponse(advancedFilters, enableAdvancedFilteringOnArrays);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,56 +16,56 @@ public final class ListenerAuthenticateCognitoConfig extends io.pulumi.resources
     public static final ListenerAuthenticateCognitoConfig Empty = new ListenerAuthenticateCognitoConfig();
 
     @InputImport(name="authenticationRequestExtraParams")
-    private final @Nullable Object authenticationRequestExtraParams;
+      private final @Nullable Object authenticationRequestExtraParams;
 
     public Optional<Object> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Optional.empty() : Optional.ofNullable(this.authenticationRequestExtraParams);
     }
 
     @InputImport(name="onUnauthenticatedRequest")
-    private final @Nullable String onUnauthenticatedRequest;
+      private final @Nullable String onUnauthenticatedRequest;
 
     public Optional<String> getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Optional.empty() : Optional.ofNullable(this.onUnauthenticatedRequest);
     }
 
     @InputImport(name="scope")
-    private final @Nullable String scope;
+      private final @Nullable String scope;
 
     public Optional<String> getScope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 
     @InputImport(name="sessionCookieName")
-    private final @Nullable String sessionCookieName;
+      private final @Nullable String sessionCookieName;
 
     public Optional<String> getSessionCookieName() {
         return this.sessionCookieName == null ? Optional.empty() : Optional.ofNullable(this.sessionCookieName);
     }
 
     @InputImport(name="sessionTimeout")
-    private final @Nullable String sessionTimeout;
+      private final @Nullable String sessionTimeout;
 
     public Optional<String> getSessionTimeout() {
         return this.sessionTimeout == null ? Optional.empty() : Optional.ofNullable(this.sessionTimeout);
     }
 
     @InputImport(name="userPoolArn", required=true)
-    private final String userPoolArn;
+      private final String userPoolArn;
 
     public String getUserPoolArn() {
         return this.userPoolArn;
     }
 
     @InputImport(name="userPoolClientId", required=true)
-    private final String userPoolClientId;
+      private final String userPoolClientId;
 
     public String getUserPoolClientId() {
         return this.userPoolClientId;
     }
 
     @InputImport(name="userPoolDomain", required=true)
-    private final String userPoolDomain;
+      private final String userPoolDomain;
 
     public String getUserPoolDomain() {
         return this.userPoolDomain;
@@ -174,7 +174,6 @@ public final class ListenerAuthenticateCognitoConfig extends io.pulumi.resources
             this.userPoolDomain = Objects.requireNonNull(userPoolDomain);
             return this;
         }
-
         public ListenerAuthenticateCognitoConfig build() {
             return new ListenerAuthenticateCognitoConfig(authenticationRequestExtraParams, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, userPoolArn, userPoolClientId, userPoolDomain);
         }

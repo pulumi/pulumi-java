@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="devicePath", required=true)
-    private final Input<String> devicePath;
+      private final Input<String> devicePath;
 
     public Input<String> getDevicePath() {
         return this.devicePath;
@@ -33,7 +33,7 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -92,7 +92,6 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public AttachedVolumeArgs build() {
             return new AttachedVolumeArgs(devicePath, name);
         }

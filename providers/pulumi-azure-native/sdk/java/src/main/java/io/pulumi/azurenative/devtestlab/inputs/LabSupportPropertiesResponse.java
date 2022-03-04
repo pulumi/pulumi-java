@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LabSupportPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable String enabled;
+      private final @Nullable String enabled;
 
     public Optional<String> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -34,7 +34,7 @@ public final class LabSupportPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="markdown")
-    private final @Nullable String markdown;
+      private final @Nullable String markdown;
 
     public Optional<String> getMarkdown() {
         return this.markdown == null ? Optional.empty() : Optional.ofNullable(this.markdown);
@@ -83,7 +83,6 @@ public final class LabSupportPropertiesResponse extends io.pulumi.resources.Invo
             this.markdown = markdown;
             return this;
         }
-
         public LabSupportPropertiesResponse build() {
             return new LabSupportPropertiesResponse(enabled, markdown);
         }

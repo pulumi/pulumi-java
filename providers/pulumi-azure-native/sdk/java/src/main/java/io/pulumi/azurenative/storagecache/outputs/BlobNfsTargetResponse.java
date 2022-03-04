@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class BlobNfsTargetResponse {
     /**
      * Resource ID of the storage container.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * Identifies the StorageCache usage model to be used for this storage target.
      * 
-     */
+    */
     public Optional<String> getUsageModel() {
         return Optional.ofNullable(this.usageModel);
     }
@@ -76,7 +76,6 @@ public final class BlobNfsTargetResponse {
             this.usageModel = usageModel;
             return this;
         }
-
         public BlobNfsTargetResponse build() {
             return new BlobNfsTargetResponse(target, usageModel);
         }

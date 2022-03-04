@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.outputs.CardinalityResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EndConditionResponse {
     /**
      * The cardinality of the `EndCondition`.
      * 
-     */
+    */
     public CardinalityResponse getCardinality() {
         return this.cardinality;
     }
@@ -52,7 +52,6 @@ public final class EndConditionResponse {
             this.cardinality = Objects.requireNonNull(cardinality);
             return this;
         }
-
         public EndConditionResponse build() {
             return new EndConditionResponse(cardinality);
         }

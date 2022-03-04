@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.detective.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class GetMemberInvitationResult {
     /**
      * When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
      * 
-     */
+    */
     public Optional<Boolean> getDisableEmailNotification() {
         return Optional.ofNullable(this.disableEmailNotification);
     }
     /**
      * The root email address for the account to be invited, for validation. Updating this field has no effect.
      * 
-     */
+    */
     public Optional<String> getMemberEmailAddress() {
         return Optional.ofNullable(this.memberEmailAddress);
     }
     /**
      * A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
@@ -98,7 +98,6 @@ public final class GetMemberInvitationResult {
             this.message = message;
             return this;
         }
-
         public GetMemberInvitationResult build() {
             return new GetMemberInvitationResult(disableEmailNotification, memberEmailAddress, message);
         }

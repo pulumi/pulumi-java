@@ -6,7 +6,7 @@ package io.pulumi.awsnative.servicecatalog.outputs;
 import io.pulumi.awsnative.servicecatalog.enums.ServiceActionAcceptLanguage;
 import io.pulumi.awsnative.servicecatalog.enums.ServiceActionDefinitionType;
 import io.pulumi.awsnative.servicecatalog.outputs.ServiceActionDefinitionParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -116,7 +116,6 @@ public final class GetServiceActionResult {
             this.name = name;
             return this;
         }
-
         public GetServiceActionResult build() {
             return new GetServiceActionResult(acceptLanguage, definition, definitionType, description, id, name);
         }

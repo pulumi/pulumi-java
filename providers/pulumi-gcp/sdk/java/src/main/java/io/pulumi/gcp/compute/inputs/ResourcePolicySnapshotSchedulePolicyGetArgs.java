@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleGetArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs;
@@ -22,7 +22,7 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy;
+      private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy;
 
     public Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
@@ -33,7 +33,7 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule;
+      private final Input<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule;
 
     public Input<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> getSchedule() {
         return this.schedule;
@@ -45,7 +45,7 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="snapshotProperties")
-    private final @Nullable Input<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties;
+      private final @Nullable Input<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties;
 
     public Input<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> getSnapshotProperties() {
         return this.snapshotProperties == null ? Input.empty() : this.snapshotProperties;
@@ -119,7 +119,6 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends io.pulumi
             this.snapshotProperties = Input.ofNullable(snapshotProperties);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyGetArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyGetArgs(retentionPolicy, schedule, snapshotProperties);
         }

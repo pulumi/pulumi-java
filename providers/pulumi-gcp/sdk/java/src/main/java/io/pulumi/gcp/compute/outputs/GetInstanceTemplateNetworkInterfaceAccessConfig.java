@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,7 +38,7 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
      * The IP address that will be 1:1 mapped to the instance's
      * network ip. If not given, one will be generated.
      * 
-     */
+    */
     public String getNatIp() {
         return this.natIp;
     }
@@ -47,7 +47,7 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
      * this instance template. This field can take the following values: PREMIUM or
      * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
      * 
-     */
+    */
     public String getNetworkTier() {
         return this.networkTier;
     }
@@ -93,7 +93,6 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
         }
-
         public GetInstanceTemplateNetworkInterfaceAccessConfig build() {
             return new GetInstanceTemplateNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }

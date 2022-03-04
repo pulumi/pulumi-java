@@ -6,17 +6,33 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.security.inputs.GetJitNetworkAccessPolicyArgs;
 import io.pulumi.azurenative.security.outputs.GetJitNetworkAccessPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJitNetworkAccessPolicy {
-/**
- * API Version: 2020-01-01.
+    private GetJitNetworkAccessPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetJitNetworkAccessPolicyArgs.Builder a);
+    }
+    private static GetJitNetworkAccessPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJitNetworkAccessPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2020-01-01.
  * 
- */
+     */
+    public static CompletableFuture<GetJitNetworkAccessPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2020-01-01.
+     * 
+     */
     public static CompletableFuture<GetJitNetworkAccessPolicyResult> invokeAsync(GetJitNetworkAccessPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getJitNetworkAccessPolicy", TypeShape.of(GetJitNetworkAccessPolicyResult.class), args == null ? GetJitNetworkAccessPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

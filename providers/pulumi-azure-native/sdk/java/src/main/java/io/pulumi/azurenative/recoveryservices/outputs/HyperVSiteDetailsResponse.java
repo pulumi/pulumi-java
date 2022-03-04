@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class HyperVSiteDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'HyperVSite'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
@@ -54,7 +54,6 @@ public final class HyperVSiteDetailsResponse {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public HyperVSiteDetailsResponse build() {
             return new HyperVSiteDetailsResponse(instanceType);
         }

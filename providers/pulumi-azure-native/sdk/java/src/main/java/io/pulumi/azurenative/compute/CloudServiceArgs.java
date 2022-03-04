@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.CloudServicePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudServiceName")
-    private final @Nullable Input<String> cloudServiceName;
+      private final @Nullable Input<String> cloudServiceName;
 
     public Input<String> getCloudServiceName() {
         return this.cloudServiceName == null ? Input.empty() : this.cloudServiceName;
@@ -32,7 +32,7 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -43,7 +43,7 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<CloudServicePropertiesArgs> properties;
+      private final @Nullable Input<CloudServicePropertiesArgs> properties;
 
     public Input<CloudServicePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -54,7 +54,7 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,6 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public CloudServiceArgs build() {
             return new CloudServiceArgs(cloudServiceName, location, properties, resourceGroupName, tags);
         }

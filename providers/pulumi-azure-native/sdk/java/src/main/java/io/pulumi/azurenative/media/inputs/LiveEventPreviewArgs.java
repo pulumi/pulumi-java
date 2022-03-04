@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.LiveEventEndpointArgs;
 import io.pulumi.azurenative.media.inputs.LiveEventPreviewAccessControlArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accessControl")
-    private final @Nullable Input<LiveEventPreviewAccessControlArgs> accessControl;
+      private final @Nullable Input<LiveEventPreviewAccessControlArgs> accessControl;
 
     public Input<LiveEventPreviewAccessControlArgs> getAccessControl() {
         return this.accessControl == null ? Input.empty() : this.accessControl;
@@ -37,7 +37,7 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="alternativeMediaId")
-    private final @Nullable Input<String> alternativeMediaId;
+      private final @Nullable Input<String> alternativeMediaId;
 
     public Input<String> getAlternativeMediaId() {
         return this.alternativeMediaId == null ? Input.empty() : this.alternativeMediaId;
@@ -48,7 +48,7 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable Input<List<LiveEventEndpointArgs>> endpoints;
+      private final @Nullable Input<List<LiveEventEndpointArgs>> endpoints;
 
     public Input<List<LiveEventEndpointArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -59,7 +59,7 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="previewLocator")
-    private final @Nullable Input<String> previewLocator;
+      private final @Nullable Input<String> previewLocator;
 
     public Input<String> getPreviewLocator() {
         return this.previewLocator == null ? Input.empty() : this.previewLocator;
@@ -70,7 +70,7 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="streamingPolicyName")
-    private final @Nullable Input<String> streamingPolicyName;
+      private final @Nullable Input<String> streamingPolicyName;
 
     public Input<String> getStreamingPolicyName() {
         return this.streamingPolicyName == null ? Input.empty() : this.streamingPolicyName;
@@ -174,7 +174,6 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
             this.streamingPolicyName = Input.ofNullable(streamingPolicyName);
             return this;
         }
-
         public LiveEventPreviewArgs build() {
             return new LiveEventPreviewArgs(accessControl, alternativeMediaId, endpoints, previewLocator, streamingPolicyName);
         }

@@ -147,7 +147,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebSourceResponse;
 import io.pulumi.azurenative.datafactory.inputs.XeroSourceResponse;
 import io.pulumi.azurenative.datafactory.inputs.XmlSourceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ZohoSourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -169,7 +169,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataIntegrationUnits")
-    private final @Nullable Object dataIntegrationUnits;
+      private final @Nullable Object dataIntegrationUnits;
 
     public Optional<Object> getDataIntegrationUnits() {
         return this.dataIntegrationUnits == null ? Optional.empty() : Optional.ofNullable(this.dataIntegrationUnits);
@@ -180,7 +180,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+      private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -191,7 +191,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -202,7 +202,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableSkipIncompatibleRow")
-    private final @Nullable Object enableSkipIncompatibleRow;
+      private final @Nullable Object enableSkipIncompatibleRow;
 
     public Optional<Object> getEnableSkipIncompatibleRow() {
         return this.enableSkipIncompatibleRow == null ? Optional.empty() : Optional.ofNullable(this.enableSkipIncompatibleRow);
@@ -213,7 +213,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableStaging")
-    private final @Nullable Object enableStaging;
+      private final @Nullable Object enableStaging;
 
     public Optional<Object> getEnableStaging() {
         return this.enableStaging == null ? Optional.empty() : Optional.ofNullable(this.enableStaging);
@@ -224,7 +224,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable List<DatasetReferenceResponse> inputs;
+      private final @Nullable List<DatasetReferenceResponse> inputs;
 
     public List<DatasetReferenceResponse> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
@@ -235,7 +235,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
@@ -246,7 +246,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logSettings")
-    private final @Nullable LogSettingsResponse logSettings;
+      private final @Nullable LogSettingsResponse logSettings;
 
     public Optional<LogSettingsResponse> getLogSettings() {
         return this.logSettings == null ? Optional.empty() : Optional.ofNullable(this.logSettings);
@@ -257,7 +257,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logStorageSettings")
-    private final @Nullable LogStorageSettingsResponse logStorageSettings;
+      private final @Nullable LogStorageSettingsResponse logStorageSettings;
 
     public Optional<LogStorageSettingsResponse> getLogStorageSettings() {
         return this.logStorageSettings == null ? Optional.empty() : Optional.ofNullable(this.logStorageSettings);
@@ -268,7 +268,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -279,7 +279,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputs")
-    private final @Nullable List<DatasetReferenceResponse> outputs;
+      private final @Nullable List<DatasetReferenceResponse> outputs;
 
     public List<DatasetReferenceResponse> getOutputs() {
         return this.outputs == null ? List.of() : this.outputs;
@@ -290,7 +290,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parallelCopies")
-    private final @Nullable Object parallelCopies;
+      private final @Nullable Object parallelCopies;
 
     public Optional<Object> getParallelCopies() {
         return this.parallelCopies == null ? Optional.empty() : Optional.ofNullable(this.parallelCopies);
@@ -301,7 +301,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable ActivityPolicyResponse policy;
+      private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -312,7 +312,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preserve")
-    private final @Nullable List<Object> preserve;
+      private final @Nullable List<Object> preserve;
 
     public List<Object> getPreserve() {
         return this.preserve == null ? List.of() : this.preserve;
@@ -323,7 +323,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preserveRules")
-    private final @Nullable List<Object> preserveRules;
+      private final @Nullable List<Object> preserveRules;
 
     public List<Object> getPreserveRules() {
         return this.preserveRules == null ? List.of() : this.preserveRules;
@@ -334,7 +334,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="redirectIncompatibleRowSettings")
-    private final @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings;
+      private final @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings;
 
     public Optional<RedirectIncompatibleRowSettingsResponse> getRedirectIncompatibleRowSettings() {
         return this.redirectIncompatibleRowSettings == null ? Optional.empty() : Optional.ofNullable(this.redirectIncompatibleRowSettings);
@@ -345,7 +345,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sink", required=true)
-    private final Object sink;
+      private final Object sink;
 
     public Object getSink() {
         return this.sink;
@@ -356,7 +356,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="skipErrorFile")
-    private final @Nullable SkipErrorFileResponse skipErrorFile;
+      private final @Nullable SkipErrorFileResponse skipErrorFile;
 
     public Optional<SkipErrorFileResponse> getSkipErrorFile() {
         return this.skipErrorFile == null ? Optional.empty() : Optional.ofNullable(this.skipErrorFile);
@@ -367,7 +367,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final Object source;
+      private final Object source;
 
     public Object getSource() {
         return this.source;
@@ -378,7 +378,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stagingSettings")
-    private final @Nullable StagingSettingsResponse stagingSettings;
+      private final @Nullable StagingSettingsResponse stagingSettings;
 
     public Optional<StagingSettingsResponse> getStagingSettings() {
         return this.stagingSettings == null ? Optional.empty() : Optional.ofNullable(this.stagingSettings);
@@ -389,7 +389,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="translator")
-    private final @Nullable Object translator;
+      private final @Nullable Object translator;
 
     public Optional<Object> getTranslator() {
         return this.translator == null ? Optional.empty() : Optional.ofNullable(this.translator);
@@ -401,7 +401,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -412,7 +412,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+      private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -423,7 +423,7 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="validateDataConsistency")
-    private final @Nullable Object validateDataConsistency;
+      private final @Nullable Object validateDataConsistency;
 
     public Optional<Object> getValidateDataConsistency() {
         return this.validateDataConsistency == null ? Optional.empty() : Optional.ofNullable(this.validateDataConsistency);
@@ -692,7 +692,6 @@ public final class CopyActivityResponse extends io.pulumi.resources.InvokeArgs {
             this.validateDataConsistency = validateDataConsistency;
             return this;
         }
-
         public CopyActivityResponse build() {
             return new CopyActivityResponse(dataIntegrationUnits, dependsOn, description, enableSkipIncompatibleRow, enableStaging, inputs, linkedServiceName, logSettings, logStorageSettings, name, outputs, parallelCopies, policy, preserve, preserveRules, redirectIncompatibleRowSettings, sink, skipErrorFile, source, stagingSettings, translator, type, userProperties, validateDataConsistency);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ManagedZonePrivateVisibilityConfigNetworkResponse;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
     /**
      * The list of VPC networks that can see this zone.
      * 
-     */
+    */
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> getNetworks() {
         return this.networks;
     }
@@ -68,7 +68,6 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigResponse build() {
             return new ManagedZonePrivateVisibilityConfigResponse(kind, networks);
         }

@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.storage.k8s.io_v1beta1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.CSINodeArgs;
@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 /**
  * CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need to create the CSINode object directly. As long as they use the node-driver-registrar sidecar container, the kubelet will automatically populate the CSINode object for the CSI driver as part of kubelet plugin registration. CSINode has the same name as a node. If the object is missing, it means either there are no CSI Drivers available on the node, or the Kubelet version is low enough that it doesn't create this object. CSINode has an OwnerReference that points to the corresponding node object.
  * 
- * @deprecated
+ * @Deprecated
  * storage/v1beta1/CSINode is deprecated by storage.k8s.io/v1/CSINode.
  * 
  */
@@ -83,6 +83,37 @@ public class CSINode extends io.pulumi.resources.CustomResource {
         return this.spec;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CSINodeArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.storage.k8s.io_v1beta1.CSINodeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.storage.k8s.io_v1beta1.CSINodeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CSINode(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CSINode(String name) {
+        this(name, CSINodeArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CSINode(String name, CSINodeArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

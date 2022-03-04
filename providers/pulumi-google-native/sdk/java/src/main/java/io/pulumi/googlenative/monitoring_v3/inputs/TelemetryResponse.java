@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TelemetryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -59,7 +59,6 @@ public final class TelemetryResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public TelemetryResponse build() {
             return new TelemetryResponse(resourceName);
         }

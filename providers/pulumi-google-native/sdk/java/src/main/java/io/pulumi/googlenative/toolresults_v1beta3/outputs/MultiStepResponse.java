@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.PrimaryStepResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class MultiStepResponse {
     /**
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
      * 
-     */
+    */
     public Integer getMultistepNumber() {
         return this.multistepNumber;
     }
     /**
      * Present if it is a primary (original) step.
      * 
-     */
+    */
     public PrimaryStepResponse getPrimaryStep() {
         return this.primaryStep;
     }
     /**
      * Step Id of the primary (original) step, which might be this step.
      * 
-     */
+    */
     public String getPrimaryStepId() {
         return this.primaryStepId;
     }
@@ -97,7 +97,6 @@ public final class MultiStepResponse {
             this.primaryStepId = Objects.requireNonNull(primaryStepId);
             return this;
         }
-
         public MultiStepResponse build() {
             return new MultiStepResponse(multistepNumber, primaryStep, primaryStepId);
         }

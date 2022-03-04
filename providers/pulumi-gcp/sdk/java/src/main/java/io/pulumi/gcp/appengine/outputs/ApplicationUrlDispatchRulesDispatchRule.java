@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,7 +44,7 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
      * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
      * Defaults to matching all domains: "*".
      * 
-     */
+    */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
@@ -52,7 +52,7 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
      * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
      * The sum of the lengths of the domain and path may not exceed 100 characters.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
@@ -60,7 +60,7 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
      * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
      * The sum of the lengths of the domain and path may not exceed 100 characters.
      * 
-     */
+    */
     public String getService() {
         return this.service;
     }
@@ -103,7 +103,6 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public ApplicationUrlDispatchRulesDispatchRule build() {
             return new ApplicationUrlDispatchRulesDispatchRule(domain, path, service);
         }

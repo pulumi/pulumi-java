@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ServiceProviderParameterResponseMetadata;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -67,49 +67,49 @@ public final class ServiceProviderParameterResponse {
     /**
      * Default Name for the Service Provider
      * 
-     */
+    */
     public String get$default() {
         return this.$default;
     }
     /**
      * Description of the Service Provider
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Display Name of the Service Provider
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Help Url for the  Service Provider
      * 
-     */
+    */
     public String getHelpUrl() {
         return this.helpUrl;
     }
     /**
      * Meta data for the Service Provider
      * 
-     */
+    */
     public ServiceProviderParameterResponseMetadata getMetadata() {
         return this.metadata;
     }
     /**
      * Name of the Service Provider
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Type of the Service Provider
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -180,7 +180,6 @@ public final class ServiceProviderParameterResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceProviderParameterResponse build() {
             return new ServiceProviderParameterResponse($default, description, displayName, helpUrl, metadata, name, type);
         }

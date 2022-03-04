@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetGameServerGroupArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="gameServerGroupArn", required=true)
-    private final String gameServerGroupArn;
+      private final String gameServerGroupArn;
 
     public String getGameServerGroupArn() {
         return this.gameServerGroupArn;
@@ -55,7 +55,6 @@ public final class GetGameServerGroupArgs extends io.pulumi.resources.InvokeArgs
             this.gameServerGroupArn = Objects.requireNonNull(gameServerGroupArn);
             return this;
         }
-
         public GetGameServerGroupArgs build() {
             return new GetGameServerGroupArgs(gameServerGroupArn);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.scheduling.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -37,7 +37,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalDefault")
-    private final @Nullable Input<Boolean> globalDefault;
+      private final @Nullable Input<Boolean> globalDefault;
 
     public Input<Boolean> getGlobalDefault() {
         return this.globalDefault == null ? Input.empty() : this.globalDefault;
@@ -59,7 +59,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -70,7 +70,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -81,7 +81,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preemptionPolicy")
-    private final @Nullable Input<String> preemptionPolicy;
+      private final @Nullable Input<String> preemptionPolicy;
 
     public Input<String> getPreemptionPolicy() {
         return this.preemptionPolicy == null ? Input.empty() : this.preemptionPolicy;
@@ -92,7 +92,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<Integer> value;
+      private final Input<Integer> value;
 
     public Input<Integer> getValue() {
         return this.value;
@@ -226,7 +226,6 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public PriorityClassArgs build() {
             return new PriorityClassArgs(apiVersion, description, globalDefault, kind, metadata, preemptionPolicy, value);
         }

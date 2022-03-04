@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResource;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="targetResources")
-    private final @Nullable List<SubResource> targetResources;
+      private final @Nullable List<SubResource> targetResources;
 
     public List<SubResource> getTargetResources() {
         return this.targetResources == null ? List.of() : this.targetResources;
@@ -58,7 +58,6 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends io.pulumi.r
             this.targetResources = targetResources;
             return this;
         }
-
         public GetDnsResourceReferenceByTarResourcesArgs build() {
             return new GetDnsResourceReferenceByTarResourcesArgs(targetResources);
         }

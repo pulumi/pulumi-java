@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="complexity", required=true)
-    private final String complexity;
+      private final String complexity;
 
     public String getComplexity() {
         return this.complexity;
@@ -34,7 +34,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disallowUsernameSubstring", required=true)
-    private final Boolean disallowUsernameSubstring;
+      private final Boolean disallowUsernameSubstring;
 
     public Boolean getDisallowUsernameSubstring() {
         return this.disallowUsernameSubstring;
@@ -45,7 +45,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="minLength", required=true)
-    private final Integer minLength;
+      private final Integer minLength;
 
     public Integer getMinLength() {
         return this.minLength;
@@ -56,7 +56,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="passwordChangeInterval", required=true)
-    private final String passwordChangeInterval;
+      private final String passwordChangeInterval;
 
     public String getPasswordChangeInterval() {
         return this.passwordChangeInterval;
@@ -67,7 +67,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="reuseInterval", required=true)
-    private final Integer reuseInterval;
+      private final Integer reuseInterval;
 
     public Integer getReuseInterval() {
         return this.reuseInterval;
@@ -146,7 +146,6 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
             this.reuseInterval = Objects.requireNonNull(reuseInterval);
             return this;
         }
-
         public PasswordValidationPolicyResponse build() {
             return new PasswordValidationPolicyResponse(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);
         }

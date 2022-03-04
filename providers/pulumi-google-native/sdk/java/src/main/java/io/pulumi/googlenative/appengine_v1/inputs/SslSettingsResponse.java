@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="certificateId", required=true)
-    private final String certificateId;
+      private final String certificateId;
 
     public String getCertificateId() {
         return this.certificateId;
@@ -32,7 +32,7 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pendingManagedCertificateId", required=true)
-    private final String pendingManagedCertificateId;
+      private final String pendingManagedCertificateId;
 
     public String getPendingManagedCertificateId() {
         return this.pendingManagedCertificateId;
@@ -43,7 +43,7 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sslManagementType", required=true)
-    private final String sslManagementType;
+      private final String sslManagementType;
 
     public String getSslManagementType() {
         return this.sslManagementType;
@@ -102,7 +102,6 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
         }
-
         public SslSettingsResponse build() {
             return new SslSettingsResponse(certificateId, pendingManagedCertificateId, sslManagementType);
         }

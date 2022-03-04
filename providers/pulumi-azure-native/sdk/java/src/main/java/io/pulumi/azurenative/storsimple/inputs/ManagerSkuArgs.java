@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.enums.ManagerSkuType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<ManagerSkuType> name;
+      private final Input<ManagerSkuType> name;
 
     public Input<ManagerSkuType> getName() {
         return this.name;
@@ -65,7 +65,6 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ManagerSkuArgs build() {
             return new ManagerSkuArgs(name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -51,28 +51,28 @@ public final class GetNetblockIPRangesResult {
     /**
      * Retrieve list of all CIDR blocks.
      * 
-     */
+    */
     public List<String> getCidrBlocks() {
         return this.cidrBlocks;
     }
     /**
      * Retrieve list of the IPv4 CIDR blocks
      * 
-     */
+    */
     public List<String> getCidrBlocksIpv4s() {
         return this.cidrBlocksIpv4s;
     }
     /**
      * Retrieve list of the IPv6 CIDR blocks, if available.
      * 
-     */
+    */
     public List<String> getCidrBlocksIpv6s() {
         return this.cidrBlocksIpv6s;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -132,7 +132,6 @@ public final class GetNetblockIPRangesResult {
             this.rangeType = rangeType;
             return this;
         }
-
         public GetNetblockIPRangesResult build() {
             return new GetNetblockIPRangesResult(cidrBlocks, cidrBlocksIpv4s, cidrBlocksIpv6s, id, rangeType);
         }

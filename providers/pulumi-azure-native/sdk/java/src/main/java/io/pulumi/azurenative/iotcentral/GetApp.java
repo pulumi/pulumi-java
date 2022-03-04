@@ -6,21 +6,41 @@ package io.pulumi.azurenative.iotcentral;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.iotcentral.inputs.GetAppArgs;
 import io.pulumi.azurenative.iotcentral.outputs.GetAppResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApp {
-/**
- * The IoT Central application.
+    private GetApp() {}
+    public interface BuilderApplicator {
+        public void apply(GetAppArgs.Builder a);
+    }
+    private static GetAppArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAppArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The IoT Central application.
  * API Version: 2018-09-01.
  * 
- *
- * The IoT Central application.
+     *
+     * The IoT Central application.
  * 
- */
+     */
+    public static CompletableFuture<GetAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The IoT Central application.
+     * API Version: 2018-09-01.
+     * 
+     *
+         * The IoT Central application.
+     * 
+     */
     public static CompletableFuture<GetAppResult> invokeAsync(GetAppArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotcentral:getApp", TypeShape.of(GetAppResult.class), args == null ? GetAppArgs.Empty : args, Utilities.withVersion(options));
     }

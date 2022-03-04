@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="archiveUris", required=true)
-    private final List<String> archiveUris;
+      private final List<String> archiveUris;
 
     public List<String> getArchiveUris() {
         return this.archiveUris;
@@ -33,7 +33,7 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="args", required=true)
-    private final List<String> args;
+      private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
@@ -44,7 +44,7 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileUris", required=true)
-    private final List<String> fileUris;
+      private final List<String> fileUris;
 
     public List<String> getFileUris() {
         return this.fileUris;
@@ -55,7 +55,7 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mainRFileUri", required=true)
-    private final String mainRFileUri;
+      private final String mainRFileUri;
 
     public String getMainRFileUri() {
         return this.mainRFileUri;
@@ -124,7 +124,6 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
             this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
             return this;
         }
-
         public SparkRBatchResponse build() {
             return new SparkRBatchResponse(archiveUris, args, fileUris, mainRFileUri);
         }

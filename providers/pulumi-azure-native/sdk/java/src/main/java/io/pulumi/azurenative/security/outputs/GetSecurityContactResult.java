@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.SecurityContactPropertiesResponseAlertNotifications;
 import io.pulumi.azurenative.security.outputs.SecurityContactPropertiesResponseNotificationsByRole;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -70,49 +70,49 @@ public final class GetSecurityContactResult {
     /**
      * Defines whether to send email notifications about new security alerts
      * 
-     */
+    */
     public Optional<SecurityContactPropertiesResponseAlertNotifications> getAlertNotifications() {
         return Optional.ofNullable(this.alertNotifications);
     }
     /**
      * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
      * 
-     */
+    */
     public Optional<String> getEmails() {
         return Optional.ofNullable(this.emails);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
      * 
-     */
+    */
     public Optional<SecurityContactPropertiesResponseNotificationsByRole> getNotificationsByRole() {
         return Optional.ofNullable(this.notificationsByRole);
     }
     /**
      * The security contact's phone number
      * 
-     */
+    */
     public Optional<String> getPhone() {
         return Optional.ofNullable(this.phone);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -183,7 +183,6 @@ public final class GetSecurityContactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecurityContactResult build() {
             return new GetSecurityContactResult(alertNotifications, emails, id, name, notificationsByRole, phone, type);
         }

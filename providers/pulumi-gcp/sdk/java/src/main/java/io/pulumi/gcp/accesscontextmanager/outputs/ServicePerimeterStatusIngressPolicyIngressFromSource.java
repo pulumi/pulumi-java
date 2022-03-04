@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -52,7 +52,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSource {
      * Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.`
      * If * is specified, then all IngressSources will be allowed.
      * 
-     */
+    */
     public Optional<String> getAccessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
@@ -64,7 +64,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSource {
      * organization that the perimeter is defined in. `*` is not allowed, the case
      * of allowing all Google Cloud resources only is not supported.
      * 
-     */
+    */
     public Optional<String> getResource() {
         return Optional.ofNullable(this.resource);
     }
@@ -100,7 +100,6 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSource {
             this.resource = resource;
             return this;
         }
-
         public ServicePerimeterStatusIngressPolicyIngressFromSource build() {
             return new ServicePerimeterStatusIngressPolicyIngressFromSource(accessLevel, resource);
         }

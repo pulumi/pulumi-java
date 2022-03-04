@@ -6,21 +6,41 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.inputs.GetCassandraClusterArgs;
 import io.pulumi.azurenative.documentdb.outputs.GetCassandraClusterResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCassandraCluster {
-/**
- * Representation of a managed Cassandra cluster.
+    private GetCassandraCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetCassandraClusterArgs.Builder a);
+    }
+    private static GetCassandraClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCassandraClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Representation of a managed Cassandra cluster.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Representation of a managed Cassandra cluster.
+     *
+     * Representation of a managed Cassandra cluster.
  * 
- */
+     */
+    public static CompletableFuture<GetCassandraClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Representation of a managed Cassandra cluster.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Representation of a managed Cassandra cluster.
+     * 
+     */
     public static CompletableFuture<GetCassandraClusterResult> invokeAsync(GetCassandraClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraCluster", TypeShape.of(GetCassandraClusterResult.class), args == null ? GetCassandraClusterArgs.Empty : args, Utilities.withVersion(options));
     }

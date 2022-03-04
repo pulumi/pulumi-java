@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.ScopeElementResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class SuppressionAlertsScopeResponse {
     /**
      * All the conditions inside need to be true in order to suppress the alert
      * 
-     */
+    */
     public List<ScopeElementResponse> getAllOf() {
         return this.allOf;
     }
@@ -53,7 +53,6 @@ public final class SuppressionAlertsScopeResponse {
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }
-
         public SuppressionAlertsScopeResponse build() {
             return new SuppressionAlertsScopeResponse(allOf);
         }

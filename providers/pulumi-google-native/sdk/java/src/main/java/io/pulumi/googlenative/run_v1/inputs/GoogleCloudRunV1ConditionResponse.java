@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="lastTransitionTime", required=true)
-    private final String lastTransitionTime;
+      private final String lastTransitionTime;
 
     public String getLastTransitionTime() {
         return this.lastTransitionTime;
@@ -32,7 +32,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -43,7 +43,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="reason", required=true)
-    private final String reason;
+      private final String reason;
 
     public String getReason() {
         return this.reason;
@@ -54,7 +54,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="severity", required=true)
-    private final String severity;
+      private final String severity;
 
     public String getSeverity() {
         return this.severity;
@@ -65,7 +65,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -76,7 +76,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -165,7 +165,6 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudRunV1ConditionResponse build() {
             return new GoogleCloudRunV1ConditionResponse(lastTransitionTime, message, reason, severity, status, type);
         }

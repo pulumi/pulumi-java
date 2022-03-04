@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.inputs.GetIntegrationAccountBatchConfigurationArgs;
 import io.pulumi.azurenative.logic.outputs.GetIntegrationAccountBatchConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationAccountBatchConfiguration {
-/**
- * The batch configuration resource definition.
+    private GetIntegrationAccountBatchConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationAccountBatchConfigurationArgs.Builder a);
+    }
+    private static GetIntegrationAccountBatchConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationAccountBatchConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The batch configuration resource definition.
  * API Version: 2019-05-01.
  * 
- *
- * The batch configuration resource definition.
+     *
+     * The batch configuration resource definition.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationAccountBatchConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The batch configuration resource definition.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The batch configuration resource definition.
+     * 
+     */
     public static CompletableFuture<GetIntegrationAccountBatchConfigurationResult> invokeAsync(GetIntegrationAccountBatchConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountBatchConfiguration", TypeShape.of(GetIntegrationAccountBatchConfigurationResult.class), args == null ? GetIntegrationAccountBatchConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

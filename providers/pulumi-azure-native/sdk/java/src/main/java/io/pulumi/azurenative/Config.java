@@ -3,8 +3,8 @@
 
 package io.pulumi.azurenative;
 
+import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.Optionals;
-import io.pulumi.core.internal.Reflection.TypeShape;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

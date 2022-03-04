@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunErrorTraceCode;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScanConfigErrorArgs;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<ScanRunErrorTraceCode> code;
+      private final @Nullable Input<ScanRunErrorTraceCode> code;
 
     public Input<ScanRunErrorTraceCode> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -36,7 +36,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mostCommonHttpErrorCode")
-    private final @Nullable Input<Integer> mostCommonHttpErrorCode;
+      private final @Nullable Input<Integer> mostCommonHttpErrorCode;
 
     public Input<Integer> getMostCommonHttpErrorCode() {
         return this.mostCommonHttpErrorCode == null ? Input.empty() : this.mostCommonHttpErrorCode;
@@ -47,7 +47,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scanConfigError")
-    private final @Nullable Input<ScanConfigErrorArgs> scanConfigError;
+      private final @Nullable Input<ScanConfigErrorArgs> scanConfigError;
 
     public Input<ScanConfigErrorArgs> getScanConfigError() {
         return this.scanConfigError == null ? Input.empty() : this.scanConfigError;
@@ -121,7 +121,6 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
             this.scanConfigError = Input.ofNullable(scanConfigError);
             return this;
         }
-
         public ScanRunErrorTraceArgs build() {
             return new ScanRunErrorTraceArgs(code, mostCommonHttpErrorCode, scanConfigError);
         }

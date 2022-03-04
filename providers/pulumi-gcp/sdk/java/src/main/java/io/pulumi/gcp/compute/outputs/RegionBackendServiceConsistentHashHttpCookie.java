@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceConsistentHashHttpCookieTtl;
 import java.lang.String;
 import java.util.Objects;
@@ -42,14 +42,14 @@ public final class RegionBackendServiceConsistentHashHttpCookie {
     /**
      * Name of the cookie.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Path to set for the cookie.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -57,7 +57,7 @@ public final class RegionBackendServiceConsistentHashHttpCookie {
      * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
      * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
      * 
-     */
+    */
     public Optional<RegionBackendServiceConsistentHashHttpCookieTtl> getTtl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -100,7 +100,6 @@ public final class RegionBackendServiceConsistentHashHttpCookie {
             this.ttl = ttl;
             return this;
         }
-
         public RegionBackendServiceConsistentHashHttpCookie build() {
             return new RegionBackendServiceConsistentHashHttpCookie(name, path, ttl);
         }

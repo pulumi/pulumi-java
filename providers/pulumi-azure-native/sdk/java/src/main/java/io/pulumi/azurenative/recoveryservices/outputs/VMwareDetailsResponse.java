@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.MasterTargetServerResponse
 import io.pulumi.azurenative.recoveryservices.outputs.ProcessServerResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RunAsAccountResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VersionDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -258,84 +258,84 @@ public final class VMwareDetailsResponse {
     /**
      * The number of source and target servers configured to talk to this CS.
      * 
-     */
+    */
     public Optional<String> getAgentCount() {
         return Optional.ofNullable(this.agentCount);
     }
     /**
      * Agent expiry date.
      * 
-     */
+    */
     public Optional<String> getAgentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
     /**
      * The agent Version.
      * 
-     */
+    */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * The agent version details.
      * 
-     */
+    */
     public Optional<VersionDetailsResponse> getAgentVersionDetails() {
         return Optional.ofNullable(this.agentVersionDetails);
     }
     /**
      * The available memory.
      * 
-     */
+    */
     public Optional<Double> getAvailableMemoryInBytes() {
         return Optional.ofNullable(this.availableMemoryInBytes);
     }
     /**
      * The available space.
      * 
-     */
+    */
     public Optional<Double> getAvailableSpaceInBytes() {
         return Optional.ofNullable(this.availableSpaceInBytes);
     }
     /**
      * The percentage of the CPU load.
      * 
-     */
+    */
     public Optional<String> getCpuLoad() {
         return Optional.ofNullable(this.cpuLoad);
     }
     /**
      * The CPU load status.
      * 
-     */
+    */
     public Optional<String> getCpuLoadStatus() {
         return Optional.ofNullable(this.cpuLoadStatus);
     }
     /**
      * The CS service status.
      * 
-     */
+    */
     public Optional<String> getCsServiceStatus() {
         return Optional.ofNullable(this.csServiceStatus);
     }
     /**
      * The database server load.
      * 
-     */
+    */
     public Optional<String> getDatabaseServerLoad() {
         return Optional.ofNullable(this.databaseServerLoad);
     }
     /**
      * The database server load status.
      * 
-     */
+    */
     public Optional<String> getDatabaseServerLoadStatus() {
         return Optional.ofNullable(this.databaseServerLoadStatus);
     }
     /**
      * The host name.
      * 
-     */
+    */
     public Optional<String> getHostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -343,147 +343,147 @@ public final class VMwareDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'VMware'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The IP address.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The last heartbeat received from CS server.
      * 
-     */
+    */
     public Optional<String> getLastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
      * The list of Master Target servers associated with the fabric.
      * 
-     */
+    */
     public List<MasterTargetServerResponse> getMasterTargetServers() {
         return this.masterTargetServers == null ? List.of() : this.masterTargetServers;
     }
     /**
      * The memory usage status.
      * 
-     */
+    */
     public Optional<String> getMemoryUsageStatus() {
         return Optional.ofNullable(this.memoryUsageStatus);
     }
     /**
      * The number of process servers.
      * 
-     */
+    */
     public Optional<String> getProcessServerCount() {
         return Optional.ofNullable(this.processServerCount);
     }
     /**
      * The list of Process Servers associated with the fabric.
      * 
-     */
+    */
     public List<ProcessServerResponse> getProcessServers() {
         return this.processServers == null ? List.of() : this.processServers;
     }
     /**
      * The number of protected servers.
      * 
-     */
+    */
     public Optional<String> getProtectedServers() {
         return Optional.ofNullable(this.protectedServers);
     }
     /**
      * PS template version.
      * 
-     */
+    */
     public Optional<String> getPsTemplateVersion() {
         return Optional.ofNullable(this.psTemplateVersion);
     }
     /**
      * The number of replication pairs configured in this CS.
      * 
-     */
+    */
     public Optional<String> getReplicationPairCount() {
         return Optional.ofNullable(this.replicationPairCount);
     }
     /**
      * The list of run as accounts created on the server.
      * 
-     */
+    */
     public List<RunAsAccountResponse> getRunAsAccounts() {
         return this.runAsAccounts == null ? List.of() : this.runAsAccounts;
     }
     /**
      * The space usage status.
      * 
-     */
+    */
     public Optional<String> getSpaceUsageStatus() {
         return Optional.ofNullable(this.spaceUsageStatus);
     }
     /**
      * CS SSL cert expiry date.
      * 
-     */
+    */
     public Optional<String> getSslCertExpiryDate() {
         return Optional.ofNullable(this.sslCertExpiryDate);
     }
     /**
      * CS SSL cert expiry date.
      * 
-     */
+    */
     public Optional<Integer> getSslCertExpiryRemainingDays() {
         return Optional.ofNullable(this.sslCertExpiryRemainingDays);
     }
     /**
      * The percentage of the system load.
      * 
-     */
+    */
     public Optional<String> getSystemLoad() {
         return Optional.ofNullable(this.systemLoad);
     }
     /**
      * The system load status.
      * 
-     */
+    */
     public Optional<String> getSystemLoadStatus() {
         return Optional.ofNullable(this.systemLoadStatus);
     }
     /**
      * The total memory.
      * 
-     */
+    */
     public Optional<Double> getTotalMemoryInBytes() {
         return Optional.ofNullable(this.totalMemoryInBytes);
     }
     /**
      * The total space.
      * 
-     */
+    */
     public Optional<Double> getTotalSpaceInBytes() {
         return Optional.ofNullable(this.totalSpaceInBytes);
     }
     /**
      * Version status
      * 
-     */
+    */
     public Optional<String> getVersionStatus() {
         return Optional.ofNullable(this.versionStatus);
     }
     /**
      * The web load.
      * 
-     */
+    */
     public Optional<String> getWebLoad() {
         return Optional.ofNullable(this.webLoad);
     }
     /**
      * The web load status.
      * 
-     */
+    */
     public Optional<String> getWebLoadStatus() {
         return Optional.ofNullable(this.webLoadStatus);
     }
@@ -736,7 +736,6 @@ public final class VMwareDetailsResponse {
             this.webLoadStatus = webLoadStatus;
             return this;
         }
-
         public VMwareDetailsResponse build() {
             return new VMwareDetailsResponse(agentCount, agentExpiryDate, agentVersion, agentVersionDetails, availableMemoryInBytes, availableSpaceInBytes, cpuLoad, cpuLoadStatus, csServiceStatus, databaseServerLoad, databaseServerLoadStatus, hostName, instanceType, ipAddress, lastHeartbeat, masterTargetServers, memoryUsageStatus, processServerCount, processServers, protectedServers, psTemplateVersion, replicationPairCount, runAsAccounts, spaceUsageStatus, sslCertExpiryDate, sslCertExpiryRemainingDays, systemLoad, systemLoadStatus, totalMemoryInBytes, totalSpaceInBytes, versionStatus, webLoad, webLoadStatus);
         }

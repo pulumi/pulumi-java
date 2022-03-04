@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.search.outputs;
 
 import io.pulumi.azurenative.search.outputs.QueryKeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ListQueryKeyBySearchServiceResult {
     /**
      * Request URL that can be used to query next page of query keys. Returned when the total number of requested query keys exceed maximum page size.
      * 
-     */
+    */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * The query keys for the Azure Cognitive Search service.
      * 
-     */
+    */
     public List<QueryKeyResponse> getValue() {
         return this.value;
     }
@@ -76,7 +76,6 @@ public final class ListQueryKeyBySearchServiceResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListQueryKeyBySearchServiceResult build() {
             return new ListQueryKeyBySearchServiceResult(nextLink, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DataLakeStorageAccountDetailsResponse {
     /**
      * Account URL
      * 
-     */
+    */
     public Optional<String> getAccountUrl() {
         return Optional.ofNullable(this.accountUrl);
     }
     /**
      * Filesystem name
      * 
-     */
+    */
     public Optional<String> getFilesystem() {
         return Optional.ofNullable(this.filesystem);
     }
@@ -76,7 +76,6 @@ public final class DataLakeStorageAccountDetailsResponse {
             this.filesystem = filesystem;
             return this;
         }
-
         public DataLakeStorageAccountDetailsResponse build() {
             return new DataLakeStorageAccountDetailsResponse(accountUrl, filesystem);
         }

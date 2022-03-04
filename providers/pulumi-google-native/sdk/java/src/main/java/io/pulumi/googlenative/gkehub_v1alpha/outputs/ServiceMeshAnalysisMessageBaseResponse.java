@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.ServiceMeshTypeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ServiceMeshAnalysisMessageBaseResponse {
     /**
      * A url pointing to the Service Mesh or Istio documentation for this specific error type.
      * 
-     */
+    */
     public String getDocumentationUrl() {
         return this.documentationUrl;
     }
     /**
      * Represents how severe a message is.
      * 
-     */
+    */
     public String getLevel() {
         return this.level;
     }
     /**
      * Represents the specific type of a message.
      * 
-     */
+    */
     public ServiceMeshTypeResponse getType() {
         return this.type;
     }
@@ -96,7 +96,6 @@ public final class ServiceMeshAnalysisMessageBaseResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceMeshAnalysisMessageBaseResponse build() {
             return new ServiceMeshAnalysisMessageBaseResponse(documentationUrl, level, type);
         }

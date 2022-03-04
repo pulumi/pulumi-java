@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse {
     /**
      * The header field name to match on when bypassing cache. Values are case-insensitive.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
@@ -52,7 +52,6 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse build() {
             return new BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse(headerName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class RepositoryRefDefinitionResponse {
     /**
      * The git repository branch name to checkout.
      * 
-     */
+    */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
      * 
-     */
+    */
     public Optional<String> getCommit() {
         return Optional.ofNullable(this.commit);
     }
     /**
      * The semver range used to match against git repository tags. This takes precedence over tag.
      * 
-     */
+    */
     public Optional<String> getSemver() {
         return Optional.ofNullable(this.semver);
     }
     /**
      * The git repository tag name to checkout. This takes precedence over branch.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
@@ -118,7 +118,6 @@ public final class RepositoryRefDefinitionResponse {
             this.tag = tag;
             return this;
         }
-
         public RepositoryRefDefinitionResponse build() {
             return new RepositoryRefDefinitionResponse(branch, commit, semver, tag);
         }

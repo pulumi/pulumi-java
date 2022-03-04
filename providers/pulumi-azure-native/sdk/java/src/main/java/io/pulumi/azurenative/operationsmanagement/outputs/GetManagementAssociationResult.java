@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement.outputs;
 
 import io.pulumi.azurenative.operationsmanagement.outputs.ManagementAssociationPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class GetManagementAssociationResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
      * 
-     */
+    */
     public ManagementAssociationPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetManagementAssociationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementAssociationResult build() {
             return new GetManagementAssociationResult(id, location, name, properties, type);
         }

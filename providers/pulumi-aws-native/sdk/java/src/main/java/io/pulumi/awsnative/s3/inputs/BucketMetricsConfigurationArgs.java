@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class BucketMetricsConfigurationArgs extends io.pulumi.resources.Re
     public static final BucketMetricsConfigurationArgs Empty = new BucketMetricsConfigurationArgs();
 
     @InputImport(name="accessPointArn")
-    private final @Nullable Input<String> accessPointArn;
+      private final @Nullable Input<String> accessPointArn;
 
     public Input<String> getAccessPointArn() {
         return this.accessPointArn == null ? Input.empty() : this.accessPointArn;
     }
 
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
     }
 
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
     @InputImport(name="tagFilters")
-    private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
+      private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
 
     public Input<List<BucketTagFilterArgs>> getTagFilters() {
         return this.tagFilters == null ? Input.empty() : this.tagFilters;
@@ -127,7 +127,6 @@ public final class BucketMetricsConfigurationArgs extends io.pulumi.resources.Re
             this.tagFilters = Input.ofNullable(tagFilters);
             return this;
         }
-
         public BucketMetricsConfigurationArgs build() {
             return new BucketMetricsConfigurationArgs(accessPointArn, id, prefix, tagFilters);
         }

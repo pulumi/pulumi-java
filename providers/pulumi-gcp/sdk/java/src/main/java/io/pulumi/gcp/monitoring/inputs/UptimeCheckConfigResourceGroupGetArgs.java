@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UptimeCheckConfigResourceGroupGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable Input<String> groupId;
+      private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -31,7 +31,7 @@ public final class UptimeCheckConfigResourceGroupGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -90,7 +90,6 @@ public final class UptimeCheckConfigResourceGroupGetArgs extends io.pulumi.resou
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
-
         public UptimeCheckConfigResourceGroupGetArgs build() {
             return new UptimeCheckConfigResourceGroupGetArgs(groupId, resourceType);
         }

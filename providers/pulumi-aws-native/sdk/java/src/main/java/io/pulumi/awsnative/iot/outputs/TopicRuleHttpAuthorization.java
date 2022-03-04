@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRuleSigV4Authorization;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class TopicRuleHttpAuthorization {
             this.sigv4 = sigv4;
             return this;
         }
-
         public TopicRuleHttpAuthorization build() {
             return new TopicRuleHttpAuthorization(sigv4);
         }

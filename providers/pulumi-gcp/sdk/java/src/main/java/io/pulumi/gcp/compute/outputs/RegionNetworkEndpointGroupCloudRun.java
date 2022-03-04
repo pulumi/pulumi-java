@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -52,7 +52,7 @@ public final class RegionNetworkEndpointGroupCloudRun {
      * The service name must be 1-63 characters long, and comply with RFC1035.
      * Example value: "default", "my-service".
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
@@ -62,7 +62,7 @@ public final class RegionNetworkEndpointGroupCloudRun {
      * The tag must be 1-63 characters long, and comply with RFC1035.
      * Example value: "revision-0010".
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
@@ -74,7 +74,7 @@ public final class RegionNetworkEndpointGroupCloudRun {
      * can be backed by the same Serverless NEG with URL mask "/". The URL mask
      * will parse them to { function = "function1" } and { function = "function2" } respectively.
      * 
-     */
+    */
     public Optional<String> getUrlMask() {
         return Optional.ofNullable(this.urlMask);
     }
@@ -117,7 +117,6 @@ public final class RegionNetworkEndpointGroupCloudRun {
             this.urlMask = urlMask;
             return this;
         }
-
         public RegionNetworkEndpointGroupCloudRun build() {
             return new RegionNetworkEndpointGroupCloudRun(service, tag, urlMask);
         }

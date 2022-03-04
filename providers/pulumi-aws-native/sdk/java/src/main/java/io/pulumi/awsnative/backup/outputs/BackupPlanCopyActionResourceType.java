@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupPlanLifecycleResourceType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class BackupPlanCopyActionResourceType {
             this.lifecycle = lifecycle;
             return this;
         }
-
         public BackupPlanCopyActionResourceType build() {
             return new BackupPlanCopyActionResourceType(destinationBackupVaultArn, lifecycle);
         }

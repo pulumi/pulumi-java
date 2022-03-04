@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 import io.pulumi.azurenative.servicefabric.enums.ServicePlacementPolicyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ServicePlacementPolicyType>> type;
+      private final Input<Either<String,ServicePlacementPolicyType>> type;
 
     public Input<Either<String,ServicePlacementPolicyType>> getType() {
         return this.type;
@@ -67,7 +67,6 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ServicePlacementPolicyDescriptionArgs build() {
             return new ServicePlacementPolicyDescriptionArgs(type);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.enums.ServerVersion;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverVersion")
-    private final @Nullable Input<Either<String,ServerVersion>> serverVersion;
+      private final @Nullable Input<Either<String,ServerVersion>> serverVersion;
 
     public Input<Either<String,ServerVersion>> getServerVersion() {
         return this.serverVersion == null ? Input.empty() : this.serverVersion;
@@ -64,7 +64,6 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.serverVersion = Input.ofNullable(serverVersion);
             return this;
         }
-
         public ApiPropertiesArgs build() {
             return new ApiPropertiesArgs(serverVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,14 +41,14 @@ public final class GetProjectServiceAccountResult {
      * The email address of the service account. This value is often used to refer to the service account
      * in order to grant IAM permissions.
      * 
-     */
+    */
     public String getEmailAddress() {
         return this.emailAddress;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -104,7 +104,6 @@ public final class GetProjectServiceAccountResult {
             this.userProject = userProject;
             return this;
         }
-
         public GetProjectServiceAccountResult build() {
             return new GetProjectServiceAccountResult(emailAddress, id, project, userProject);
         }

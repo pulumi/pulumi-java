@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.eks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class FargateProfileLabel {
     /**
      * The key name of the label.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value for the label.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class FargateProfileLabel {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FargateProfileLabel build() {
             return new FargateProfileLabel(key, value);
         }

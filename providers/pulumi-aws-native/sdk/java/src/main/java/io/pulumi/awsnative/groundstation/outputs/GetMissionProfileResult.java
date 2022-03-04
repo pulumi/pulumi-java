@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.outputs.MissionProfileDataflowEdge;
 import io.pulumi.awsnative.groundstation.outputs.MissionProfileTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -72,14 +72,14 @@ public final class GetMissionProfileResult {
     /**
      * Post-pass time needed after the contact.
      * 
-     */
+    */
     public Optional<Integer> getContactPostPassDurationSeconds() {
         return Optional.ofNullable(this.contactPostPassDurationSeconds);
     }
     /**
      * Pre-pass time needed before the contact.
      * 
-     */
+    */
     public Optional<Integer> getContactPrePassDurationSeconds() {
         return Optional.ofNullable(this.contactPrePassDurationSeconds);
     }
@@ -92,14 +92,14 @@ public final class GetMissionProfileResult {
     /**
      * Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
      * 
-     */
+    */
     public Optional<Integer> getMinimumViableContactDurationSeconds() {
         return Optional.ofNullable(this.minimumViableContactDurationSeconds);
     }
     /**
      * A name used to identify a mission profile.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -200,7 +200,6 @@ public final class GetMissionProfileResult {
             this.trackingConfigArn = trackingConfigArn;
             return this;
         }
-
         public GetMissionProfileResult build() {
             return new GetMissionProfileResult(arn, contactPostPassDurationSeconds, contactPrePassDurationSeconds, dataflowEdges, id, minimumViableContactDurationSeconds, name, region, tags, trackingConfigArn);
         }

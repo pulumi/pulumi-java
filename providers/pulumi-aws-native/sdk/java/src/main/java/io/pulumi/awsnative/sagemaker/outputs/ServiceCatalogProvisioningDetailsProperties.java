@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ProjectProvisioningParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +46,7 @@ public final class ServiceCatalogProvisioningDetailsProperties {
     /**
      * Parameters specified by the administrator that are required for provisioning the product.
      * 
-     */
+    */
     public List<ProjectProvisioningParameter> getProvisioningParameters() {
         return this.provisioningParameters == null ? List.of() : this.provisioningParameters;
     }
@@ -96,7 +96,6 @@ public final class ServiceCatalogProvisioningDetailsProperties {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
-
         public ServiceCatalogProvisioningDetailsProperties build() {
             return new ServiceCatalogProvisioningDetailsProperties(pathId, productId, provisioningArtifactId, provisioningParameters);
         }

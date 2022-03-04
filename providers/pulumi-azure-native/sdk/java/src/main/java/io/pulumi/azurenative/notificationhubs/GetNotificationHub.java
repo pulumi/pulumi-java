@@ -6,21 +6,41 @@ package io.pulumi.azurenative.notificationhubs;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.notificationhubs.inputs.GetNotificationHubArgs;
 import io.pulumi.azurenative.notificationhubs.outputs.GetNotificationHubResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationHub {
-/**
- * Description of a NotificationHub Resource.
+    private GetNotificationHub() {}
+    public interface BuilderApplicator {
+        public void apply(GetNotificationHubArgs.Builder a);
+    }
+    private static GetNotificationHubArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNotificationHubArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of a NotificationHub Resource.
  * API Version: 2017-04-01.
  * 
- *
- * Description of a NotificationHub Resource.
+     *
+     * Description of a NotificationHub Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetNotificationHubResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of a NotificationHub Resource.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of a NotificationHub Resource.
+     * 
+     */
     public static CompletableFuture<GetNotificationHubResult> invokeAsync(GetNotificationHubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHub", TypeShape.of(GetNotificationHubResult.class), args == null ? GetNotificationHubArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineExtensionInstanceViewArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-    private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
     public Input<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
@@ -33,7 +33,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="enableAutomaticUpgrade")
-    private final @Nullable Input<Boolean> enableAutomaticUpgrade;
+      private final @Nullable Input<Boolean> enableAutomaticUpgrade;
 
     public Input<Boolean> getEnableAutomaticUpgrade() {
         return this.enableAutomaticUpgrade == null ? Input.empty() : this.enableAutomaticUpgrade;
@@ -44,7 +44,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="forceUpdateTag")
-    private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Input<String> forceUpdateTag;
 
     public Input<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
@@ -55,7 +55,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -66,7 +66,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="instanceView")
-    private final @Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView;
+      private final @Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView;
 
     public Input<VirtualMachineExtensionInstanceViewArgs> getInstanceView() {
         return this.instanceView == null ? Input.empty() : this.instanceView;
@@ -77,7 +77,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="protectedSettings")
-    private final @Nullable Input<Object> protectedSettings;
+      private final @Nullable Input<Object> protectedSettings;
 
     public Input<Object> getProtectedSettings() {
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
@@ -88,7 +88,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable Input<String> publisher;
+      private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -99,7 +99,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -110,7 +110,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<Object> settings;
+      private final @Nullable Input<Object> settings;
 
     public Input<Object> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -121,7 +121,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -132,7 +132,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="typeHandlerVersion")
-    private final @Nullable Input<String> typeHandlerVersion;
+      private final @Nullable Input<String> typeHandlerVersion;
 
     public Input<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
@@ -143,7 +143,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="vmExtensionName")
-    private final @Nullable Input<String> vmExtensionName;
+      private final @Nullable Input<String> vmExtensionName;
 
     public Input<String> getVmExtensionName() {
         return this.vmExtensionName == null ? Input.empty() : this.vmExtensionName;
@@ -154,7 +154,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="vmScaleSetName", required=true)
-    private final Input<String> vmScaleSetName;
+      private final Input<String> vmScaleSetName;
 
     public Input<String> getVmScaleSetName() {
         return this.vmScaleSetName;
@@ -378,7 +378,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
             this.vmScaleSetName = Input.of(Objects.requireNonNull(vmScaleSetName));
             return this;
         }
-
         public VirtualMachineScaleSetVMExtensionArgs build() {
             return new VirtualMachineScaleSetVMExtensionArgs(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, instanceId, instanceView, protectedSettings, publisher, resourceGroupName, settings, type, typeHandlerVersion, vmExtensionName, vmScaleSetName);
         }

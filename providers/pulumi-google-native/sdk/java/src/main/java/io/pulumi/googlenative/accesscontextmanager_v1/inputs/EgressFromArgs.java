@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.EgressFromIdentityType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identities")
-    private final @Nullable Input<List<String>> identities;
+      private final @Nullable Input<List<String>> identities;
 
     public Input<List<String>> getIdentities() {
         return this.identities == null ? Input.empty() : this.identities;
@@ -36,7 +36,7 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityType")
-    private final @Nullable Input<EgressFromIdentityType> identityType;
+      private final @Nullable Input<EgressFromIdentityType> identityType;
 
     public Input<EgressFromIdentityType> getIdentityType() {
         return this.identityType == null ? Input.empty() : this.identityType;
@@ -95,7 +95,6 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
             this.identityType = Input.ofNullable(identityType);
             return this;
         }
-
         public EgressFromArgs build() {
             return new EgressFromArgs(identities, identityType);
         }

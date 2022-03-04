@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.iot.outputs.DeviceCredentialPublicKey;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class DeviceCredential {
     /**
      * The time at which this credential becomes invalid.
      * 
-     */
+    */
     public Optional<String> getExpirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -43,7 +43,7 @@ public final class DeviceCredential {
      * A public key used to verify the signature of JSON Web Tokens (JWTs).
      * Structure is documented below.
      * 
-     */
+    */
     public DeviceCredentialPublicKey getPublicKey() {
         return this.publicKey;
     }
@@ -79,7 +79,6 @@ public final class DeviceCredential {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public DeviceCredential build() {
             return new DeviceCredential(expirationTime, publicKey);
         }

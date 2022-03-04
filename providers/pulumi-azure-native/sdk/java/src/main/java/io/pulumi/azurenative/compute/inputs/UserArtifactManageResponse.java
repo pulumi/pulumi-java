@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="install", required=true)
-    private final String install;
+      private final String install;
 
     public String getInstall() {
         return this.install;
@@ -30,7 +30,7 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="remove", required=true)
-    private final String remove;
+      private final String remove;
 
     public String getRemove() {
         return this.remove;
@@ -41,7 +41,7 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="update")
-    private final @Nullable String update;
+      private final @Nullable String update;
 
     public Optional<String> getUpdate() {
         return this.update == null ? Optional.empty() : Optional.ofNullable(this.update);
@@ -100,7 +100,6 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
             this.update = update;
             return this;
         }
-
         public UserArtifactManageResponse build() {
             return new UserArtifactManageResponse(install, remove, update);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -85,63 +85,63 @@ public final class GetEndpointAuthorizationResult {
     /**
      * Indicates whether all VPCs in the grantee account are allowed access to the cluster.
      * 
-     */
+    */
     public Optional<Boolean> getAllowedAllVPCs() {
         return Optional.ofNullable(this.allowedAllVPCs);
     }
     /**
      * The VPCs allowed access to the cluster.
      * 
-     */
+    */
     public List<String> getAllowedVPCs() {
         return this.allowedVPCs == null ? List.of() : this.allowedVPCs;
     }
     /**
      * The time (UTC) when the authorization was created.
      * 
-     */
+    */
     public Optional<String> getAuthorizeTime() {
         return Optional.ofNullable(this.authorizeTime);
     }
     /**
      * The status of the cluster.
      * 
-     */
+    */
     public Optional<String> getClusterStatus() {
         return Optional.ofNullable(this.clusterStatus);
     }
     /**
      * The number of Redshift-managed VPC endpoints created for the authorization.
      * 
-     */
+    */
     public Optional<Integer> getEndpointCount() {
         return Optional.ofNullable(this.endpointCount);
     }
     /**
      * The AWS account ID of the grantee of the cluster.
      * 
-     */
+    */
     public Optional<String> getGrantee() {
         return Optional.ofNullable(this.grantee);
     }
     /**
      * The AWS account ID of the cluster owner.
      * 
-     */
+    */
     public Optional<String> getGrantor() {
         return Optional.ofNullable(this.grantor);
     }
     /**
      * The status of the authorization action.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The virtual private cloud (VPC) identifiers to grant or revoke access to.
      * 
-     */
+    */
     public List<String> getVpcIds() {
         return this.vpcIds == null ? List.of() : this.vpcIds;
     }
@@ -226,7 +226,6 @@ public final class GetEndpointAuthorizationResult {
             this.vpcIds = vpcIds;
             return this;
         }
-
         public GetEndpointAuthorizationResult build() {
             return new GetEndpointAuthorizationResult(allowedAllVPCs, allowedVPCs, authorizeTime, clusterStatus, endpointCount, grantee, grantor, status, vpcIds);
         }

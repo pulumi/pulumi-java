@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SourceVaultResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class KeyForDiskEncryptionSetResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="keyUrl", required=true)
-    private final String keyUrl;
+      private final String keyUrl;
 
     public String getKeyUrl() {
         return this.keyUrl;
@@ -35,7 +35,7 @@ public final class KeyForDiskEncryptionSetResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sourceVault")
-    private final @Nullable SourceVaultResponse sourceVault;
+      private final @Nullable SourceVaultResponse sourceVault;
 
     public Optional<SourceVaultResponse> getSourceVault() {
         return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
@@ -84,7 +84,6 @@ public final class KeyForDiskEncryptionSetResponse extends io.pulumi.resources.I
             this.sourceVault = sourceVault;
             return this;
         }
-
         public KeyForDiskEncryptionSetResponse build() {
             return new KeyForDiskEncryptionSetResponse(keyUrl, sourceVault);
         }

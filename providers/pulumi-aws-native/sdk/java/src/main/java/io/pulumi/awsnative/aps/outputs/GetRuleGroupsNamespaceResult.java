@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.aps.outputs;
 
 import io.pulumi.awsnative.aps.outputs.RuleGroupsNamespaceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class GetRuleGroupsNamespaceResult {
     /**
      * The RuleGroupsNamespace ARN.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The RuleGroupsNamespace data.
      * 
-     */
+    */
     public Optional<String> getData() {
         return Optional.ofNullable(this.data);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<RuleGroupsNamespaceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
      * 
-     */
+    */
     public Optional<String> getWorkspace() {
         return Optional.ofNullable(this.workspace);
     }
@@ -120,7 +120,6 @@ public final class GetRuleGroupsNamespaceResult {
             this.workspace = workspace;
             return this;
         }
-
         public GetRuleGroupsNamespaceResult build() {
             return new GetRuleGroupsNamespaceResult(arn, data, tags, workspace);
         }

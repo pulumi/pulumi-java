@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automanage.inputs;
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceAntiMalwareArgs;
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceVmBackupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="antiMalware")
-    private final @Nullable Input<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
+      private final @Nullable Input<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
 
     public Input<ConfigurationProfilePreferenceAntiMalwareArgs> getAntiMalware() {
         return this.antiMalware == null ? Input.empty() : this.antiMalware;
@@ -35,7 +35,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="vmBackup")
-    private final @Nullable Input<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
+      private final @Nullable Input<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
 
     public Input<ConfigurationProfilePreferenceVmBackupArgs> getVmBackup() {
         return this.vmBackup == null ? Input.empty() : this.vmBackup;
@@ -94,7 +94,6 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
             this.vmBackup = Input.ofNullable(vmBackup);
             return this;
         }
-
         public ConfigurationProfilePreferencePropertiesArgs build() {
             return new ConfigurationProfilePreferencePropertiesArgs(antiMalware, vmBackup);
         }

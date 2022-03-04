@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class ClusterAddonsConfigIstioConfig {
     /**
      * The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
      * 
-     */
+    */
     public Optional<String> getAuth() {
         return Optional.ofNullable(this.auth);
     }
@@ -43,7 +43,7 @@ public final class ClusterAddonsConfigIstioConfig {
      * The status of the Istio addon, which makes it easy to set up Istio for services in a
      * cluster. It is disabled by default. Set `disabled = false` to enable.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
@@ -79,7 +79,6 @@ public final class ClusterAddonsConfigIstioConfig {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public ClusterAddonsConfigIstioConfig build() {
             return new ClusterAddonsConfigIstioConfig(auth, disabled);
         }

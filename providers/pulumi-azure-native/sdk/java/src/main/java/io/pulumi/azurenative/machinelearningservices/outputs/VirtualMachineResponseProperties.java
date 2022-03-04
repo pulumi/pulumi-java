@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.VirtualMachineSshCredentialsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class VirtualMachineResponseProperties {
     /**
      * Public IP address of the virtual machine.
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Admin credentials for virtual machine
      * 
-     */
+    */
     public Optional<VirtualMachineSshCredentialsResponse> getAdministratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
     /**
      * Port open for ssh connections.
      * 
-     */
+    */
     public Optional<Integer> getSshPort() {
         return Optional.ofNullable(this.sshPort);
     }
     /**
      * Virtual Machine size
      * 
-     */
+    */
     public Optional<String> getVirtualMachineSize() {
         return Optional.ofNullable(this.virtualMachineSize);
     }
@@ -120,7 +120,6 @@ public final class VirtualMachineResponseProperties {
             this.virtualMachineSize = virtualMachineSize;
             return this;
         }
-
         public VirtualMachineResponseProperties build() {
             return new VirtualMachineResponseProperties(address, administratorAccount, sshPort, virtualMachineSize);
         }

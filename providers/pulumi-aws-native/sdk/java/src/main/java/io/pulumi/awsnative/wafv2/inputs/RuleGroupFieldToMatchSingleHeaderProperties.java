@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class RuleGroupFieldToMatchSingleHeaderProperties extends io.pulumi
     public static final RuleGroupFieldToMatchSingleHeaderProperties Empty = new RuleGroupFieldToMatchSingleHeaderProperties();
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -51,7 +51,6 @@ public final class RuleGroupFieldToMatchSingleHeaderProperties extends io.pulumi
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RuleGroupFieldToMatchSingleHeaderProperties build() {
             return new RuleGroupFieldToMatchSingleHeaderProperties(name);
         }

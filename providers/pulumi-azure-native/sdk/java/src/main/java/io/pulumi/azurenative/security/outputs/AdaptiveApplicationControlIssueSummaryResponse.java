@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class AdaptiveApplicationControlIssueSummaryResponse {
     /**
      * An alert that machines within a group can have
      * 
-     */
+    */
     public Optional<String> getIssue() {
         return Optional.ofNullable(this.issue);
     }
     /**
      * The number of machines in the group that have this alert
      * 
-     */
+    */
     public Optional<Double> getNumberOfVms() {
         return Optional.ofNullable(this.numberOfVms);
     }
@@ -77,7 +77,6 @@ public final class AdaptiveApplicationControlIssueSummaryResponse {
             this.numberOfVms = numberOfVms;
             return this;
         }
-
         public AdaptiveApplicationControlIssueSummaryResponse build() {
             return new AdaptiveApplicationControlIssueSummaryResponse(issue, numberOfVms);
         }

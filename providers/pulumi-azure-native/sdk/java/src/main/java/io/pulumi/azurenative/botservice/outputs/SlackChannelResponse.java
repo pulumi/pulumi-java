@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.SlackChannelPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,35 +57,35 @@ public final class SlackChannelResponse {
      * The channel name
      * Expected value is 'SlackChannel'.
      * 
-     */
+    */
     public String getChannelName() {
         return this.channelName;
     }
     /**
      * Entity Tag of the resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The set of properties specific to Slack channel resource
      * 
-     */
+    */
     public Optional<SlackChannelPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Provisioning state of the resource
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -142,7 +142,6 @@ public final class SlackChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public SlackChannelResponse build() {
             return new SlackChannelResponse(channelName, etag, location, properties, provisioningState);
         }

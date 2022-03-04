@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -119,77 +119,77 @@ public final class FtpServerLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The authentication type to be used to connect to the FTP server.
      * 
-     */
+    */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getEnableServerCertificateValidation() {
         return Optional.ofNullable(this.enableServerCertificateValidation);
     }
     /**
      * If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getEnableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Host name of the FTP server. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getHost() {
         return this.host;
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password to logon the FTP server.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -197,14 +197,14 @@ public final class FtpServerLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'FtpServer'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Username to logon the FTP server. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getUserName() {
         return Optional.ofNullable(this.userName);
     }
@@ -317,7 +317,6 @@ public final class FtpServerLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public FtpServerLinkedServiceResponse build() {
             return new FtpServerLinkedServiceResponse(annotations, authenticationType, connectVia, description, enableServerCertificateValidation, enableSsl, encryptedCredential, host, parameters, password, port, type, userName);
         }

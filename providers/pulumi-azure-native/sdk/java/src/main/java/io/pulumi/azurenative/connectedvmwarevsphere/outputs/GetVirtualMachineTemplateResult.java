@@ -8,7 +8,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.NetworkInterfaceResp
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.VirtualDiskResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -218,77 +218,77 @@ public final class GetVirtualMachineTemplateResult {
     /**
      * Gets the name of the corresponding resource in Kubernetes.
      * 
-     */
+    */
     public String getCustomResourceName() {
         return this.customResourceName;
     }
     /**
      * Gets or sets the disks the template.
      * 
-     */
+    */
     public List<VirtualDiskResponse> getDisks() {
         return this.disks;
     }
     /**
      * Gets or sets the extended location.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Firmware type
      * 
-     */
+    */
     public String getFirmwareType() {
         return this.firmwareType;
     }
     /**
      * Gets or sets the folder path of the template.
      * 
-     */
+    */
     public String getFolderPath() {
         return this.folderPath;
     }
     /**
      * Gets or sets the Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the inventory Item ID for the virtual machine template.
      * 
-     */
+    */
     public Optional<String> getInventoryItemId() {
         return Optional.ofNullable(this.inventoryItemId);
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Gets or sets the location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Gets or sets memory size in MBs for the template.
      * 
-     */
+    */
     public Integer getMemorySizeMB() {
         return this.memorySizeMB;
     }
     /**
      * Gets or sets the vCenter Managed Object name for the virtual machine template.
      * 
-     */
+    */
     public String getMoName() {
         return this.moName;
     }
@@ -296,28 +296,28 @@ public final class GetVirtualMachineTemplateResult {
      * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine
      * template.
      * 
-     */
+    */
     public Optional<String> getMoRefId() {
         return Optional.ofNullable(this.moRefId);
     }
     /**
      * Gets or sets the name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the network interfaces of the template.
      * 
-     */
+    */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * Gets or sets the number of vCPUs for the template.
      * 
-     */
+    */
     public Integer getNumCPUs() {
         return this.numCPUs;
     }
@@ -325,84 +325,84 @@ public final class GetVirtualMachineTemplateResult {
      * Gets or sets the number of cores per socket for the template.
      * Defaults to 1 if unspecified.
      * 
-     */
+    */
     public Integer getNumCoresPerSocket() {
         return this.numCoresPerSocket;
     }
     /**
      * Gets or sets os name.
      * 
-     */
+    */
     public String getOsName() {
         return this.osName;
     }
     /**
      * Gets or sets the type of the os.
      * 
-     */
+    */
     public String getOsType() {
         return this.osType;
     }
     /**
      * Gets or sets the provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<ResourceStatusResponse> getStatuses() {
         return this.statuses;
     }
     /**
      * The system data.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Gets or sets the Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets or sets the current version of VMware Tools.
      * 
-     */
+    */
     public String getToolsVersion() {
         return this.toolsVersion;
     }
     /**
      * Gets or sets the current version status of VMware Tools installed in the guest operating system.
      * 
-     */
+    */
     public String getToolsVersionStatus() {
         return this.toolsVersionStatus;
     }
     /**
      * Gets or sets the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets or sets a unique identifier for this resource.
      * 
-     */
+    */
     public String getUuid() {
         return this.uuid;
     }
     /**
      * Gets or sets the ARM Id of the vCenter resource in which this template resides.
      * 
-     */
+    */
     public Optional<String> getVCenterId() {
         return Optional.ofNullable(this.vCenterId);
     }
@@ -613,7 +613,6 @@ public final class GetVirtualMachineTemplateResult {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public GetVirtualMachineTemplateResult build() {
             return new GetVirtualMachineTemplateResult(customResourceName, disks, extendedLocation, firmwareType, folderPath, id, inventoryItemId, kind, location, memorySizeMB, moName, moRefId, name, networkInterfaces, numCPUs, numCoresPerSocket, osName, osType, provisioningState, statuses, systemData, tags, toolsVersion, toolsVersionStatus, type, uuid, vCenterId);
         }

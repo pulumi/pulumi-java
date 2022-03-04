@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class UserInfoResponse {
     /**
      * The email of the user.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The name of the user.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The object id of the user.
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -97,7 +97,6 @@ public final class UserInfoResponse {
             this.objectId = objectId;
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(email, name, objectId);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kafkaconnect.outputs;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorCloudWatchLogsLogDelivery;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorFirehoseLogDelivery;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorS3LogDelivery;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -75,7 +75,6 @@ public final class ConnectorWorkerLogDelivery {
             this.s3 = s3;
             return this;
         }
-
         public ConnectorWorkerLogDelivery build() {
             return new ConnectorWorkerLogDelivery(cloudWatchLogs, firehose, s3);
         }

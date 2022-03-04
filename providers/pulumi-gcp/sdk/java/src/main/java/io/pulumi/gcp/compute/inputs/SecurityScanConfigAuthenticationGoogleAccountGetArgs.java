@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SecurityScanConfigAuthenticationGoogleAccountGetArgs extends 
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -31,7 +31,7 @@ public final class SecurityScanConfigAuthenticationGoogleAccountGetArgs extends 
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -90,7 +90,6 @@ public final class SecurityScanConfigAuthenticationGoogleAccountGetArgs extends 
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public SecurityScanConfigAuthenticationGoogleAccountGetArgs build() {
             return new SecurityScanConfigAuthenticationGoogleAccountGetArgs(password, username);
         }

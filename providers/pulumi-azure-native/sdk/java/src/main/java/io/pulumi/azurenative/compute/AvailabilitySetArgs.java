@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.inputs.SkuArgs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="availabilitySetName")
-    private final @Nullable Input<String> availabilitySetName;
+      private final @Nullable Input<String> availabilitySetName;
 
     public Input<String> getAvailabilitySetName() {
         return this.availabilitySetName == null ? Input.empty() : this.availabilitySetName;
@@ -35,7 +35,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="platformFaultDomainCount")
-    private final @Nullable Input<Integer> platformFaultDomainCount;
+      private final @Nullable Input<Integer> platformFaultDomainCount;
 
     public Input<Integer> getPlatformFaultDomainCount() {
         return this.platformFaultDomainCount == null ? Input.empty() : this.platformFaultDomainCount;
@@ -57,7 +57,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="platformUpdateDomainCount")
-    private final @Nullable Input<Integer> platformUpdateDomainCount;
+      private final @Nullable Input<Integer> platformUpdateDomainCount;
 
     public Input<Integer> getPlatformUpdateDomainCount() {
         return this.platformUpdateDomainCount == null ? Input.empty() : this.platformUpdateDomainCount;
@@ -68,7 +68,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proximityPlacementGroup")
-    private final @Nullable Input<SubResourceArgs> proximityPlacementGroup;
+      private final @Nullable Input<SubResourceArgs> proximityPlacementGroup;
 
     public Input<SubResourceArgs> getProximityPlacementGroup() {
         return this.proximityPlacementGroup == null ? Input.empty() : this.proximityPlacementGroup;
@@ -79,7 +79,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -101,7 +101,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="virtualMachines")
-    private final @Nullable Input<List<SubResourceArgs>> virtualMachines;
+      private final @Nullable Input<List<SubResourceArgs>> virtualMachines;
 
     public Input<List<SubResourceArgs>> getVirtualMachines() {
         return this.virtualMachines == null ? Input.empty() : this.virtualMachines;
@@ -276,7 +276,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
             this.virtualMachines = Input.ofNullable(virtualMachines);
             return this;
         }
-
         public AvailabilitySetArgs build() {
             return new AvailabilitySetArgs(availabilitySetName, location, platformFaultDomainCount, platformUpdateDomainCount, proximityPlacementGroup, resourceGroupName, sku, tags, virtualMachines);
         }

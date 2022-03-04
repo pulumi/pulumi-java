@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DataMaskingEntityResponse {
     /**
      * Data masking mode.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name of an entity to mask (e.g. a name of a header or a query parameter).
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class DataMaskingEntityResponse {
             this.value = value;
             return this;
         }
-
         public DataMaskingEntityResponse build() {
             return new DataMaskingEntityResponse(mode, value);
         }

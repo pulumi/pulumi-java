@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.EnvelopeResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.InTotoStatementResponse;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class DSSEAttestationOccurrenceResponse {
     /**
      * If doing something security critical, make sure to verify the signatures in this metadata.
      * 
-     */
+    */
     public EnvelopeResponse getEnvelope() {
         return this.envelope;
     }
@@ -67,7 +67,6 @@ public final class DSSEAttestationOccurrenceResponse {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public DSSEAttestationOccurrenceResponse build() {
             return new DSSEAttestationOccurrenceResponse(envelope, statement);
         }

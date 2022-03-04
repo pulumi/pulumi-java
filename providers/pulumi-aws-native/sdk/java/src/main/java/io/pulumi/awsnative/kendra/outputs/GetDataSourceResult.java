@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -77,7 +77,7 @@ public final class GetDataSourceResult {
     /**
      * Tags for labeling the data source
      * 
-     */
+    */
     public List<DataSourceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -162,7 +162,6 @@ public final class GetDataSourceResult {
             this.tags = tags;
             return this;
         }
-
         public GetDataSourceResult build() {
             return new GetDataSourceResult(arn, dataSourceConfiguration, description, id, indexId, name, roleArn, schedule, tags);
         }

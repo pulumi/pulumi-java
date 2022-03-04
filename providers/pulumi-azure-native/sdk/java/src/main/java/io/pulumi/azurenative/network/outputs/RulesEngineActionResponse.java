@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ForwardingConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.HeaderActionResponse;
 import io.pulumi.azurenative.network.outputs.RedirectConfigurationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,21 +44,21 @@ public final class RulesEngineActionResponse {
     /**
      * A list of header actions to apply from the request from AFD to the origin.
      * 
-     */
+    */
     public List<HeaderActionResponse> getRequestHeaderActions() {
         return this.requestHeaderActions == null ? List.of() : this.requestHeaderActions;
     }
     /**
      * A list of header actions to apply from the response from AFD to the client.
      * 
-     */
+    */
     public List<HeaderActionResponse> getResponseHeaderActions() {
         return this.responseHeaderActions == null ? List.of() : this.responseHeaderActions;
     }
     /**
      * Override the route configuration.
      * 
-     */
+    */
     public Optional<Either<ForwardingConfigurationResponse,RedirectConfigurationResponse>> getRouteConfigurationOverride() {
         return Optional.ofNullable(this.routeConfigurationOverride);
     }
@@ -101,7 +101,6 @@ public final class RulesEngineActionResponse {
             this.routeConfigurationOverride = routeConfigurationOverride;
             return this;
         }
-
         public RulesEngineActionResponse build() {
             return new RulesEngineActionResponse(requestHeaderActions, responseHeaderActions, routeConfigurationOverride);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class ApplicationScopedVolumeResponse {
     /**
      * Describes parameters for creating application-scoped volumes.
      * 
-     */
+    */
     public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse getCreationParameters() {
         return this.creationParameters;
     }
     /**
      * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
      * 
-     */
+    */
     public String getDestinationPath() {
         return this.destinationPath;
     }
     /**
      * Name of the volume being referenced.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The flag indicating whether the volume is read only. Default is 'false'.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -120,7 +120,6 @@ public final class ApplicationScopedVolumeResponse {
             this.readOnly = readOnly;
             return this;
         }
-
         public ApplicationScopedVolumeResponse build() {
             return new ApplicationScopedVolumeResponse(creationParameters, destinationPath, name, readOnly);
         }

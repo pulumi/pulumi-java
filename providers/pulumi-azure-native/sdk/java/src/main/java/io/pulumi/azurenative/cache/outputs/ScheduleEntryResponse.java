@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ScheduleEntryResponse {
     /**
      * Day of the week when a cache can be patched.
      * 
-     */
+    */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }
     /**
      * ISO8601 timespan specifying how much time cache patching can take.
      * 
-     */
+    */
     public Optional<String> getMaintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
     /**
      * Start hour after which cache patching can start.
      * 
-     */
+    */
     public Integer getStartHourUtc() {
         return this.startHourUtc;
     }
@@ -98,7 +98,6 @@ public final class ScheduleEntryResponse {
             this.startHourUtc = Objects.requireNonNull(startHourUtc);
             return this;
         }
-
         public ScheduleEntryResponse build() {
             return new ScheduleEntryResponse(dayOfWeek, maintenanceWindow, startHourUtc);
         }

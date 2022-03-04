@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class IndexesResponse {
     /**
      * The datatype for which the indexing behavior is applied to.
      * 
-     */
+    */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Indicates the type of index.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The precision of the index. -1 is maximum precision.
      * 
-     */
+    */
     public Optional<Integer> getPrecision() {
         return Optional.ofNullable(this.precision);
     }
@@ -98,7 +98,6 @@ public final class IndexesResponse {
             this.precision = precision;
             return this;
         }
-
         public IndexesResponse build() {
             return new IndexesResponse(dataType, kind, precision);
         }

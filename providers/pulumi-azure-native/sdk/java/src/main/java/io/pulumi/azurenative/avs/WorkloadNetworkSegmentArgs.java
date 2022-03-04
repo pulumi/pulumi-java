@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.inputs.WorkloadNetworkSegmentSubnetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="connectedGateway")
-    private final @Nullable Input<String> connectedGateway;
+      private final @Nullable Input<String> connectedGateway;
 
     public Input<String> getConnectedGateway() {
         return this.connectedGateway == null ? Input.empty() : this.connectedGateway;
@@ -32,7 +32,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -43,7 +43,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+      private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -54,7 +54,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<Double> revision;
+      private final @Nullable Input<Double> revision;
 
     public Input<Double> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -76,7 +76,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="segmentId")
-    private final @Nullable Input<String> segmentId;
+      private final @Nullable Input<String> segmentId;
 
     public Input<String> getSegmentId() {
         return this.segmentId == null ? Input.empty() : this.segmentId;
@@ -87,7 +87,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<WorkloadNetworkSegmentSubnetArgs> subnet;
+      private final @Nullable Input<WorkloadNetworkSegmentSubnetArgs> subnet;
 
     public Input<WorkloadNetworkSegmentSubnetArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -221,7 +221,6 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public WorkloadNetworkSegmentArgs build() {
             return new WorkloadNetworkSegmentArgs(connectedGateway, displayName, privateCloudName, resourceGroupName, revision, segmentId, subnet);
         }

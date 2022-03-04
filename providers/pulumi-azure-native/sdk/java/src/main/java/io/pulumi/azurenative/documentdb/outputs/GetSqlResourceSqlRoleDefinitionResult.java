@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.PermissionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class GetSqlResourceSqlRoleDefinitionResult {
     /**
      * A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
      * 
-     */
+    */
     public List<String> getAssignableScopes() {
         return this.assignableScopes == null ? List.of() : this.assignableScopes;
     }
     /**
      * The unique resource identifier of the database account.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the database account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The set of operations allowed through this Role Definition.
      * 
-     */
+    */
     public List<PermissionResponse> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
      * A user-friendly name for the Role Definition. Must be unique for the database account.
      * 
-     */
+    */
     public Optional<String> getRoleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
      * The type of Azure resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class GetSqlResourceSqlRoleDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlResourceSqlRoleDefinitionResult build() {
             return new GetSqlResourceSqlRoleDefinitionResult(assignableScopes, id, name, permissions, roleName, type);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.refactorspaces;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.refactorspaces.inputs.GetEnvironmentArgs;
 import io.pulumi.awsnative.refactorspaces.outputs.GetEnvironmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnvironment {
-/**
- * Definition of AWS::RefactorSpaces::Environment Resource Type
+    private GetEnvironment() {}
+    public interface BuilderApplicator {
+        public void apply(GetEnvironmentArgs.Builder a);
+    }
+    private static GetEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of AWS::RefactorSpaces::Environment Resource Type
  * 
- */
+     */
+    public static CompletableFuture<GetEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of AWS::RefactorSpaces::Environment Resource Type
+     * 
+     */
     public static CompletableFuture<GetEnvironmentResult> invokeAsync(GetEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:refactorspaces:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args == null ? GetEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

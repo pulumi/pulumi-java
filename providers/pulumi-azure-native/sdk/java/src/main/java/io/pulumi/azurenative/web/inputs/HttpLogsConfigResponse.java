@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.AzureBlobStorageHttpLogsConfigResponse;
 import io.pulumi.azurenative.web.inputs.FileSystemHttpLogsConfigResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class HttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="azureBlobStorage")
-    private final @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage;
+      private final @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage;
 
     public Optional<AzureBlobStorageHttpLogsConfigResponse> getAzureBlobStorage() {
         return this.azureBlobStorage == null ? Optional.empty() : Optional.ofNullable(this.azureBlobStorage);
@@ -35,7 +35,7 @@ public final class HttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="fileSystem")
-    private final @Nullable FileSystemHttpLogsConfigResponse fileSystem;
+      private final @Nullable FileSystemHttpLogsConfigResponse fileSystem;
 
     public Optional<FileSystemHttpLogsConfigResponse> getFileSystem() {
         return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);
@@ -84,7 +84,6 @@ public final class HttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs
             this.fileSystem = fileSystem;
             return this;
         }
-
         public HttpLogsConfigResponse build() {
             return new HttpLogsConfigResponse(azureBlobStorage, fileSystem);
         }

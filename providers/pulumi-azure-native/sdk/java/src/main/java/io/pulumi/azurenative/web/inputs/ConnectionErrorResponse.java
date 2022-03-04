@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="code")
-    private final @Nullable String code;
+      private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -35,7 +35,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable String etag;
+      private final @Nullable String etag;
 
     public Optional<String> getEtag() {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
@@ -46,7 +46,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -57,7 +57,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -68,7 +68,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -79,7 +79,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -90,7 +90,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -101,7 +101,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -210,7 +210,6 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ConnectionErrorResponse build() {
             return new ConnectionErrorResponse(code, etag, id, location, message, name, tags, type);
         }

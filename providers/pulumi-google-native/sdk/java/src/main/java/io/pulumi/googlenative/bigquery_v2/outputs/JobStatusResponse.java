@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ErrorProtoResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class JobStatusResponse {
     /**
      * Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
      * 
-     */
+    */
     public ErrorProtoResponse getErrorResult() {
         return this.errorResult;
     }
     /**
      * The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
      * 
-     */
+    */
     public List<ErrorProtoResponse> getErrors() {
         return this.errors;
     }
     /**
      * Running state of the job.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -97,7 +97,6 @@ public final class JobStatusResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(errorResult, errors, state);
         }

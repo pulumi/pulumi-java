@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabel {
     /**
      * Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
@@ -54,7 +54,6 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabel {
             this.labels = labels;
             return this;
         }
-
         public OsPolicyAssignmentInstanceFilterInclusionLabel build() {
             return new OsPolicyAssignmentInstanceFilterInclusionLabel(labels);
         }

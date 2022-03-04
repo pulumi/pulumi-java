@@ -6,21 +6,41 @@ package io.pulumi.azurenative.eventgrid;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventgrid.inputs.GetDomainArgs;
 import io.pulumi.azurenative.eventgrid.outputs.GetDomainResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomain {
-/**
- * EventGrid Domain.
+    private GetDomain() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainArgs.Builder a);
+    }
+    private static GetDomainArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * EventGrid Domain.
  * API Version: 2020-06-01.
  * 
- *
- * EventGrid Domain.
+     *
+     * EventGrid Domain.
  * 
- */
+     */
+    public static CompletableFuture<GetDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * EventGrid Domain.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * EventGrid Domain.
+     * 
+     */
     public static CompletableFuture<GetDomainResult> invokeAsync(GetDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomain", TypeShape.of(GetDomainResult.class), args == null ? GetDomainArgs.Empty : args, Utilities.withVersion(options));
     }

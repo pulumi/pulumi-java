@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs ex
      * 
      */
     @InputImport(name="audioUri", required=true)
-    private final Input<String> audioUri;
+      private final Input<String> audioUri;
 
     public Input<String> getAudioUri() {
         return this.audioUri;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs ex
             this.audioUri = Input.of(Objects.requireNonNull(audioUri));
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs(audioUri);
         }

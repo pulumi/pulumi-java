@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TransientCryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2UnwrappedCryptoKeyResponse;
@@ -40,21 +40,21 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
     /**
      * Key wrapped using Cloud KMS
      * 
-     */
+    */
     public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse getKmsWrapped() {
         return this.kmsWrapped;
     }
     /**
      * Transient crypto key
      * 
-     */
+    */
     public GooglePrivacyDlpV2TransientCryptoKeyResponse get$transient() {
         return this.$transient;
     }
     /**
      * Unwrapped crypto key
      * 
-     */
+    */
     public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse getUnwrapped() {
         return this.unwrapped;
     }
@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
             this.unwrapped = Objects.requireNonNull(unwrapped);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoKeyResponse build() {
             return new GooglePrivacyDlpV2CryptoKeyResponse(kmsWrapped, $transient, unwrapped);
         }

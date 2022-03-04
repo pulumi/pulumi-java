@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RemediationFiltersResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable List<String> locations;
+      private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
@@ -62,7 +62,6 @@ public final class RemediationFiltersResponse extends io.pulumi.resources.Invoke
             this.locations = locations;
             return this;
         }
-
         public RemediationFiltersResponse build() {
             return new RemediationFiltersResponse(locations);
         }

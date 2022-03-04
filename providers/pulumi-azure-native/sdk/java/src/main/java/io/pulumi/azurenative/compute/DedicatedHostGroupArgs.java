@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hostGroupName")
-    private final @Nullable Input<String> hostGroupName;
+      private final @Nullable Input<String> hostGroupName;
 
     public Input<String> getHostGroupName() {
         return this.hostGroupName == null ? Input.empty() : this.hostGroupName;
@@ -34,7 +34,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -45,7 +45,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="platformFaultDomainCount", required=true)
-    private final Input<Integer> platformFaultDomainCount;
+      private final Input<Integer> platformFaultDomainCount;
 
     public Input<Integer> getPlatformFaultDomainCount() {
         return this.platformFaultDomainCount;
@@ -56,7 +56,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="supportAutomaticPlacement")
-    private final @Nullable Input<Boolean> supportAutomaticPlacement;
+      private final @Nullable Input<Boolean> supportAutomaticPlacement;
 
     public Input<Boolean> getSupportAutomaticPlacement() {
         return this.supportAutomaticPlacement == null ? Input.empty() : this.supportAutomaticPlacement;
@@ -78,7 +78,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -223,7 +223,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public DedicatedHostGroupArgs build() {
             return new DedicatedHostGroupArgs(hostGroupName, location, platformFaultDomainCount, resourceGroupName, supportAutomaticPlacement, tags, zones);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,98 +19,98 @@ public final class CertificateSubjectArgs extends io.pulumi.resources.ResourceAr
     public static final CertificateSubjectArgs Empty = new CertificateSubjectArgs();
 
     @InputImport(name="commonName")
-    private final @Nullable Input<String> commonName;
+      private final @Nullable Input<String> commonName;
 
     public Input<String> getCommonName() {
         return this.commonName == null ? Input.empty() : this.commonName;
     }
 
     @InputImport(name="country")
-    private final @Nullable Input<String> country;
+      private final @Nullable Input<String> country;
 
     public Input<String> getCountry() {
         return this.country == null ? Input.empty() : this.country;
     }
 
     @InputImport(name="distinguishedNameQualifier")
-    private final @Nullable Input<String> distinguishedNameQualifier;
+      private final @Nullable Input<String> distinguishedNameQualifier;
 
     public Input<String> getDistinguishedNameQualifier() {
         return this.distinguishedNameQualifier == null ? Input.empty() : this.distinguishedNameQualifier;
     }
 
     @InputImport(name="generationQualifier")
-    private final @Nullable Input<String> generationQualifier;
+      private final @Nullable Input<String> generationQualifier;
 
     public Input<String> getGenerationQualifier() {
         return this.generationQualifier == null ? Input.empty() : this.generationQualifier;
     }
 
     @InputImport(name="givenName")
-    private final @Nullable Input<String> givenName;
+      private final @Nullable Input<String> givenName;
 
     public Input<String> getGivenName() {
         return this.givenName == null ? Input.empty() : this.givenName;
     }
 
     @InputImport(name="initials")
-    private final @Nullable Input<String> initials;
+      private final @Nullable Input<String> initials;
 
     public Input<String> getInitials() {
         return this.initials == null ? Input.empty() : this.initials;
     }
 
     @InputImport(name="locality")
-    private final @Nullable Input<String> locality;
+      private final @Nullable Input<String> locality;
 
     public Input<String> getLocality() {
         return this.locality == null ? Input.empty() : this.locality;
     }
 
     @InputImport(name="organization")
-    private final @Nullable Input<String> organization;
+      private final @Nullable Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization == null ? Input.empty() : this.organization;
     }
 
     @InputImport(name="organizationalUnit")
-    private final @Nullable Input<String> organizationalUnit;
+      private final @Nullable Input<String> organizationalUnit;
 
     public Input<String> getOrganizationalUnit() {
         return this.organizationalUnit == null ? Input.empty() : this.organizationalUnit;
     }
 
     @InputImport(name="pseudonym")
-    private final @Nullable Input<String> pseudonym;
+      private final @Nullable Input<String> pseudonym;
 
     public Input<String> getPseudonym() {
         return this.pseudonym == null ? Input.empty() : this.pseudonym;
     }
 
     @InputImport(name="serialNumber")
-    private final @Nullable Input<String> serialNumber;
+      private final @Nullable Input<String> serialNumber;
 
     public Input<String> getSerialNumber() {
         return this.serialNumber == null ? Input.empty() : this.serialNumber;
     }
 
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
     }
 
     @InputImport(name="surname")
-    private final @Nullable Input<String> surname;
+      private final @Nullable Input<String> surname;
 
     public Input<String> getSurname() {
         return this.surname == null ? Input.empty() : this.surname;
     }
 
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -349,7 +349,6 @@ public final class CertificateSubjectArgs extends io.pulumi.resources.ResourceAr
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public CertificateSubjectArgs build() {
             return new CertificateSubjectArgs(commonName, country, distinguishedNameQualifier, generationQualifier, givenName, initials, locality, organization, organizationalUnit, pseudonym, serialNumber, state, surname, title);
         }

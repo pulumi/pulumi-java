@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,63 +82,63 @@ public final class WorkspaceRepositoryConfigurationResponse {
     /**
      * Account name
      * 
-     */
+    */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * Collaboration branch
      * 
-     */
+    */
     public Optional<String> getCollaborationBranch() {
         return Optional.ofNullable(this.collaborationBranch);
     }
     /**
      * GitHub Enterprise host name. For example: https://github.mydomain.com
      * 
-     */
+    */
     public Optional<String> getHostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
      * The last commit ID
      * 
-     */
+    */
     public Optional<String> getLastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
     /**
      * VSTS project name
      * 
-     */
+    */
     public Optional<String> getProjectName() {
         return Optional.ofNullable(this.projectName);
     }
     /**
      * Repository name
      * 
-     */
+    */
     public Optional<String> getRepositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
     /**
      * Root folder to use in the repository
      * 
-     */
+    */
     public Optional<String> getRootFolder() {
         return Optional.ofNullable(this.rootFolder);
     }
     /**
      * The VSTS tenant ID
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -223,7 +223,6 @@ public final class WorkspaceRepositoryConfigurationResponse {
             this.type = type;
             return this;
         }
-
         public WorkspaceRepositoryConfigurationResponse build() {
             return new WorkspaceRepositoryConfigurationResponse(accountName, collaborationBranch, hostName, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
         }

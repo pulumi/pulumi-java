@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.PeeringServicePrefixEventResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -91,70 +91,70 @@ public final class GetPrefixResult {
     /**
      * The error message for validation state
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * The list of events for peering service prefix
      * 
-     */
+    */
     public List<PeeringServicePrefixEventResponse> getEvents() {
         return this.events;
     }
     /**
      * The ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The prefix learned type
      * 
-     */
+    */
     public String getLearnedType() {
         return this.learnedType;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The peering service prefix key
      * 
-     */
+    */
     public Optional<String> getPeeringServicePrefixKey() {
         return Optional.ofNullable(this.peeringServicePrefixKey);
     }
     /**
      * The prefix from which your traffic originates.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The prefix validation state
      * 
-     */
+    */
     public String getPrefixValidationState() {
         return this.prefixValidationState;
     }
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -246,7 +246,6 @@ public final class GetPrefixResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrefixResult build() {
             return new GetPrefixResult(errorMessage, events, id, learnedType, name, peeringServicePrefixKey, prefix, prefixValidationState, provisioningState, type);
         }

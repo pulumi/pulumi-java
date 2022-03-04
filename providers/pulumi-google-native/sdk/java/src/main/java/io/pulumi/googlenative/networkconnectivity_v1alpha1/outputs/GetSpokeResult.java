@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.RouterApplianceInstanceResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,77 +97,77 @@ public final class GetSpokeResult {
     /**
      * The time when the Spoke was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Short description of the spoke resource
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The resource URL of the hub resource that the spoke is attached to
      * 
-     */
+    */
     public String getHub() {
         return this.hub;
     }
     /**
      * User-defined labels.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The URIs of linked interconnect attachment resources
      * 
-     */
+    */
     public List<String> getLinkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
     /**
      * The URIs of linked Router appliance resources
      * 
-     */
+    */
     public List<RouterApplianceInstanceResponse> getLinkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
     /**
      * The URIs of linked VPN tunnel resources
      * 
-     */
+    */
     public List<String> getLinkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
     /**
      * Immutable. The name of a Spoke resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current lifecycle state of this Hub.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Google-generated UUID for this resource. This is unique across all Spoke resources. If a Spoke resource is deleted and another with the same name is created, it gets a different unique_id.
      * 
-     */
+    */
     public String getUniqueId() {
         return this.uniqueId;
     }
     /**
      * The time when the Spoke was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -266,7 +266,6 @@ public final class GetSpokeResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetSpokeResult build() {
             return new GetSpokeResult(createTime, description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, name, state, uniqueId, updateTime);
         }

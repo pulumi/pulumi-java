@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse {
     /**
      * Cannot contain duplicates or the query term. Can specify up to 100 terms.
      * 
-     */
+    */
     public List<String> getDoNotAssociateTerms() {
         return this.doNotAssociateTerms;
     }
     /**
      * Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
      * 
-     */
+    */
     public List<String> getQueryTerms() {
         return this.queryTerms;
     }
     /**
      * Will be [deprecated = true] post migration;
      * 
-     */
+    */
     public List<String> getTerms() {
         return this.terms;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse {
             this.terms = Objects.requireNonNull(terms);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse build() {
             return new GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse(doNotAssociateTerms, queryTerms, terms);
         }

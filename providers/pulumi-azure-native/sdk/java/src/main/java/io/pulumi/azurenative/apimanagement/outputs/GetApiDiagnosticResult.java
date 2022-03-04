@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.PipelineDiagnosticSettingsResponse;
 import io.pulumi.azurenative.apimanagement.outputs.SamplingSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -106,84 +106,84 @@ public final class GetApiDiagnosticResult {
     /**
      * Specifies for what type of messages sampling settings should not apply.
      * 
-     */
+    */
     public Optional<String> getAlwaysLog() {
         return Optional.ofNullable(this.alwaysLog);
     }
     /**
      * Diagnostic settings for incoming/outgoing HTTP messages to the Backend
      * 
-     */
+    */
     public Optional<PipelineDiagnosticSettingsResponse> getBackend() {
         return Optional.ofNullable(this.backend);
     }
     /**
      * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
      * 
-     */
+    */
     public Optional<PipelineDiagnosticSettingsResponse> getFrontend() {
         return Optional.ofNullable(this.frontend);
     }
     /**
      * Sets correlation protocol to use for Application Insights diagnostics.
      * 
-     */
+    */
     public Optional<String> getHttpCorrelationProtocol() {
         return Optional.ofNullable(this.httpCorrelationProtocol);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Log the ClientIP. Default is false.
      * 
-     */
+    */
     public Optional<Boolean> getLogClientIp() {
         return Optional.ofNullable(this.logClientIp);
     }
     /**
      * Resource Id of a target logger.
      * 
-     */
+    */
     public String getLoggerId() {
         return this.loggerId;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The format of the Operation Name for Application Insights telemetries. Default is Name.
      * 
-     */
+    */
     public Optional<String> getOperationNameFormat() {
         return Optional.ofNullable(this.operationNameFormat);
     }
     /**
      * Sampling settings for Diagnostic.
      * 
-     */
+    */
     public Optional<SamplingSettingsResponse> getSampling() {
         return Optional.ofNullable(this.sampling);
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The verbosity level applied to traces emitted by trace policies.
      * 
-     */
+    */
     public Optional<String> getVerbosity() {
         return Optional.ofNullable(this.verbosity);
     }
@@ -289,7 +289,6 @@ public final class GetApiDiagnosticResult {
             this.verbosity = verbosity;
             return this;
         }
-
         public GetApiDiagnosticResult build() {
             return new GetApiDiagnosticResult(alwaysLog, backend, frontend, httpCorrelationProtocol, id, logClientIp, loggerId, name, operationNameFormat, sampling, type, verbosity);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appplatform.inputs.GetGatewayArgs;
 import io.pulumi.azurenative.appplatform.outputs.GetGatewayResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGateway {
-/**
- * Spring Cloud Gateway resource
+    private GetGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetGatewayArgs.Builder a);
+    }
+    private static GetGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Spring Cloud Gateway resource
  * API Version: 2022-01-01-preview.
  * 
- *
- * Spring Cloud Gateway resource
+     *
+     * Spring Cloud Gateway resource
  * 
- */
+     */
+    public static CompletableFuture<GetGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Spring Cloud Gateway resource
+     * API Version: 2022-01-01-preview.
+     * 
+     *
+         * Spring Cloud Gateway resource
+     * 
+     */
     public static CompletableFuture<GetGatewayResult> invokeAsync(GetGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getGateway", TypeShape.of(GetGatewayResult.class), args == null ? GetGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

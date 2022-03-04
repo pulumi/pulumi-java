@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<String> arguments;
+      private final @Nullable Input<String> arguments;
 
     public Input<String> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -34,7 +34,7 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directive", required=true)
-    private final Input<String> directive;
+      private final Input<String> directive;
 
     public Input<String> getDirective() {
         return this.directive;
@@ -93,7 +93,6 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
             this.directive = Input.of(Objects.requireNonNull(directive));
             return this;
         }
-
         public LayerArgs build() {
             return new LayerArgs(arguments, directive);
         }

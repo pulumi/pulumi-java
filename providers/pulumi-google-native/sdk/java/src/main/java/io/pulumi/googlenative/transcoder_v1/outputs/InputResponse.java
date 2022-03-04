@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.PreprocessingConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class InputResponse {
     /**
      * A unique key for this input. Must be specified when using advanced mapping and edit lists.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Preprocessing configurations.
      * 
-     */
+    */
     public PreprocessingConfigResponse getPreprocessingConfig() {
         return this.preprocessingConfig;
     }
     /**
      * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -96,7 +96,6 @@ public final class InputResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public InputResponse build() {
             return new InputResponse(key, preprocessingConfig, uri);
         }

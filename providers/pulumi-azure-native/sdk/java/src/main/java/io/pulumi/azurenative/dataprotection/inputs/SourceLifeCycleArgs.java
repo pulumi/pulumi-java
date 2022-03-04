@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dataprotection.inputs.AbsoluteDeleteOptionArgs;
 import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import io.pulumi.azurenative.dataprotection.inputs.TargetCopySettingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deleteAfter", required=true)
-    private final Input<AbsoluteDeleteOptionArgs> deleteAfter;
+      private final Input<AbsoluteDeleteOptionArgs> deleteAfter;
 
     public Input<AbsoluteDeleteOptionArgs> getDeleteAfter() {
         return this.deleteAfter;
@@ -37,14 +37,14 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceDataStore", required=true)
-    private final Input<DataStoreInfoBaseArgs> sourceDataStore;
+      private final Input<DataStoreInfoBaseArgs> sourceDataStore;
 
     public Input<DataStoreInfoBaseArgs> getSourceDataStore() {
         return this.sourceDataStore;
     }
 
     @InputImport(name="targetDataStoreCopySettings")
-    private final @Nullable Input<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
+      private final @Nullable Input<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
 
     public Input<List<TargetCopySettingArgs>> getTargetDataStoreCopySettings() {
         return this.targetDataStoreCopySettings == null ? Input.empty() : this.targetDataStoreCopySettings;
@@ -118,7 +118,6 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
             this.targetDataStoreCopySettings = Input.ofNullable(targetDataStoreCopySettings);
             return this;
         }
-
         public SourceLifeCycleArgs build() {
             return new SourceLifeCycleArgs(deleteAfter, sourceDataStore, targetDataStoreCopySettings);
         }

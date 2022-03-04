@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesAssignmentGroupLabel;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesAssignmentOsType;
 import java.lang.String;
@@ -70,7 +70,7 @@ public final class GuestPoliciesAssignment {
      * for example "env=prod or env=staging".
      * Structure is documented below.
      * 
-     */
+    */
     public List<GuestPoliciesAssignmentGroupLabel> getGroupLabels() {
         return this.groupLabels == null ? List.of() : this.groupLabels;
     }
@@ -80,7 +80,7 @@ public final class GuestPoliciesAssignment {
      * for example prefix="prod-".
      * Only supported for project-level policies.
      * 
-     */
+    */
     public List<String> getInstanceNamePrefixes() {
         return this.instanceNamePrefixes == null ? List.of() : this.instanceNamePrefixes;
     }
@@ -91,7 +91,7 @@ public final class GuestPoliciesAssignment {
      * by the instance or to target specific VM instances for development and testing.
      * Only supported for project-level policies and must reference instances within this project.
      * 
-     */
+    */
     public List<String> getInstances() {
         return this.instances == null ? List.of() : this.instances;
     }
@@ -100,7 +100,7 @@ public final class GuestPoliciesAssignment {
      * VM instances must match all supplied criteria for a given OsType to be included.
      * Structure is documented below.
      * 
-     */
+    */
     public List<GuestPoliciesAssignmentOsType> getOsTypes() {
         return this.osTypes == null ? List.of() : this.osTypes;
     }
@@ -108,7 +108,7 @@ public final class GuestPoliciesAssignment {
      * Targets instances in any of these zones. Leave empty to target instances in any zone.
      * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }
@@ -165,7 +165,6 @@ public final class GuestPoliciesAssignment {
             this.zones = zones;
             return this;
         }
-
         public GuestPoliciesAssignment build() {
             return new GuestPoliciesAssignment(groupLabels, instanceNamePrefixes, instances, osTypes, zones);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.streamanalytics.outputs;
 import io.pulumi.azurenative.streamanalytics.outputs.ReferenceInputPropertiesResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.StreamInputPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -50,28 +50,28 @@ public final class InputResponse {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse>> getProperties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -121,7 +121,6 @@ public final class InputResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InputResponse build() {
             return new InputResponse(id, name, properties, type);
         }

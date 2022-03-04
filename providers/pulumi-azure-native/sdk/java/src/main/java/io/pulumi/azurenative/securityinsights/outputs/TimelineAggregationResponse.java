@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class TimelineAggregationResponse {
     /**
      * the total items found for a kind
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * the query kind
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
@@ -75,7 +75,6 @@ public final class TimelineAggregationResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public TimelineAggregationResponse build() {
             return new TimelineAggregationResponse(count, kind);
         }

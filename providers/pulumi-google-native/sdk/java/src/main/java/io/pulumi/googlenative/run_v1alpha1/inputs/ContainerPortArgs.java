@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerPort")
-    private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort == null ? Input.empty() : this.containerPort;
@@ -35,7 +35,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -120,7 +120,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
-
         public ContainerPortArgs build() {
             return new ContainerPortArgs(containerPort, name, protocol);
         }

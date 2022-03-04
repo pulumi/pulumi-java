@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1alpha2.enums.ContactSettingsPrivacy;
 import io.pulumi.googlenative.domains_v1alpha2.inputs.ContactArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="adminContact", required=true)
-    private final Input<ContactArgs> adminContact;
+      private final Input<ContactArgs> adminContact;
 
     public Input<ContactArgs> getAdminContact() {
         return this.adminContact;
@@ -34,7 +34,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privacy", required=true)
-    private final Input<ContactSettingsPrivacy> privacy;
+      private final Input<ContactSettingsPrivacy> privacy;
 
     public Input<ContactSettingsPrivacy> getPrivacy() {
         return this.privacy;
@@ -45,7 +45,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="registrantContact", required=true)
-    private final Input<ContactArgs> registrantContact;
+      private final Input<ContactArgs> registrantContact;
 
     public Input<ContactArgs> getRegistrantContact() {
         return this.registrantContact;
@@ -56,7 +56,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="technicalContact", required=true)
-    private final Input<ContactArgs> technicalContact;
+      private final Input<ContactArgs> technicalContact;
 
     public Input<ContactArgs> getTechnicalContact() {
         return this.technicalContact;
@@ -145,7 +145,6 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.technicalContact = Input.of(Objects.requireNonNull(technicalContact));
             return this;
         }
-
         public ContactSettingsArgs build() {
             return new ContactSettingsArgs(adminContact, privacy, registrantContact, technicalContact);
         }

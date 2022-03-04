@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayConnectionArgs;
 import io.pulumi.azurenative.network.outputs.GetVirtualNetworkGatewayConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayConnection {
-/**
- * A common class for general resource information.
+    private GetVirtualNetworkGatewayConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkGatewayConnectionArgs.Builder a);
+    }
+    private static GetVirtualNetworkGatewayConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkGatewayConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A common class for general resource information.
  * API Version: 2020-11-01.
  * 
- *
- * A common class for general resource information.
+     *
+     * A common class for general resource information.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkGatewayConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A common class for general resource information.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * A common class for general resource information.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkGatewayConnectionResult> invokeAsync(GetVirtualNetworkGatewayConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayConnection", TypeShape.of(GetVirtualNetworkGatewayConnectionResult.class), args == null ? GetVirtualNetworkGatewayConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

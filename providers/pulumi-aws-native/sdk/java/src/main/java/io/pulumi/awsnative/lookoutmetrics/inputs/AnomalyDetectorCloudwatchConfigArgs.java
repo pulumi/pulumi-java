@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class AnomalyDetectorCloudwatchConfigArgs extends io.pulumi.resourc
     public static final AnomalyDetectorCloudwatchConfigArgs Empty = new AnomalyDetectorCloudwatchConfigArgs();
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -57,7 +57,6 @@ public final class AnomalyDetectorCloudwatchConfigArgs extends io.pulumi.resourc
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public AnomalyDetectorCloudwatchConfigArgs build() {
             return new AnomalyDetectorCloudwatchConfigArgs(roleArn);
         }

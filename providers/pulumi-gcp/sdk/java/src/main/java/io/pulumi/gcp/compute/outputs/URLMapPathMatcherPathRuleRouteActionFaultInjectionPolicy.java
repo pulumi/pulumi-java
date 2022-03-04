@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
      * The specification for how client requests are aborted as part of fault injection.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort> getAbort() {
         return Optional.ofNullable(this.abort);
     }
@@ -45,7 +45,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
      * The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay> getDelay() {
         return Optional.ofNullable(this.delay);
     }
@@ -81,7 +81,6 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
             this.delay = delay;
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy build() {
             return new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy(abort, delay);
         }

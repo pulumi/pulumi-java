@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class ContainerEventResponse {
     /**
      * The count of the event.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Date/time of the first event.
      * 
-     */
+    */
     public Optional<String> getFirstTimestamp() {
         return Optional.ofNullable(this.firstTimestamp);
     }
     /**
      * Date/time of the last event.
      * 
-     */
+    */
     public Optional<String> getLastTimestamp() {
         return Optional.ofNullable(this.lastTimestamp);
     }
     /**
      * The event message
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The name of the container event.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The event type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -161,7 +161,6 @@ public final class ContainerEventResponse {
             this.type = type;
             return this;
         }
-
         public ContainerEventResponse build() {
             return new ContainerEventResponse(count, firstTimestamp, lastTimestamp, message, name, type);
         }

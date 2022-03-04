@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KpiParticipantProfilesMetadataResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="typeName", required=true)
-    private final String typeName;
+      private final String typeName;
 
     public String getTypeName() {
         return this.typeName;
@@ -59,7 +59,6 @@ public final class KpiParticipantProfilesMetadataResponse extends io.pulumi.reso
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public KpiParticipantProfilesMetadataResponse build() {
             return new KpiParticipantProfilesMetadataResponse(typeName);
         }

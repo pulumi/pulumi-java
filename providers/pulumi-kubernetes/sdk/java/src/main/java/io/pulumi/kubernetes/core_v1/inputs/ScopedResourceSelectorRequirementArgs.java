@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<String> operator;
+      private final Input<String> operator;
 
     public Input<String> getOperator() {
         return this.operator;
@@ -49,7 +49,7 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scopeName", required=true)
-    private final Input<String> scopeName;
+      private final Input<String> scopeName;
 
     public Input<String> getScopeName() {
         return this.scopeName;
@@ -60,7 +60,7 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -134,7 +134,6 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public ScopedResourceSelectorRequirementArgs build() {
             return new ScopedResourceSelectorRequirementArgs(operator, scopeName, values);
         }

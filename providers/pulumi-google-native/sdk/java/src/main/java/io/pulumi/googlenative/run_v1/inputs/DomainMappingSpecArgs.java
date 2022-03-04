@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.enums.DomainMappingSpecCertificateMode;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certificateMode")
-    private final @Nullable Input<DomainMappingSpecCertificateMode> certificateMode;
+      private final @Nullable Input<DomainMappingSpecCertificateMode> certificateMode;
 
     public Input<DomainMappingSpecCertificateMode> getCertificateMode() {
         return this.certificateMode == null ? Input.empty() : this.certificateMode;
@@ -36,7 +36,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="forceOverride")
-    private final @Nullable Input<Boolean> forceOverride;
+      private final @Nullable Input<Boolean> forceOverride;
 
     public Input<Boolean> getForceOverride() {
         return this.forceOverride == null ? Input.empty() : this.forceOverride;
@@ -47,7 +47,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routeName")
-    private final @Nullable Input<String> routeName;
+      private final @Nullable Input<String> routeName;
 
     public Input<String> getRouteName() {
         return this.routeName == null ? Input.empty() : this.routeName;
@@ -121,7 +121,6 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
             this.routeName = Input.ofNullable(routeName);
             return this;
         }
-
         public DomainMappingSpecArgs build() {
             return new DomainMappingSpecArgs(certificateMode, forceOverride, routeName);
         }

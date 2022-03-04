@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
     /**
      * If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
      * 
-     */
+    */
     public Boolean getEnableInsightsExport() {
         return this.enableInsightsExport;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
             this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(enableInsightsExport);
         }

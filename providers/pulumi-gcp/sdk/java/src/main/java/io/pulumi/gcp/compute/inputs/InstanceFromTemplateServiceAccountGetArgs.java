@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class InstanceFromTemplateServiceAccountGetArgs extends io.pulumi.r
     public static final InstanceFromTemplateServiceAccountGetArgs Empty = new InstanceFromTemplateServiceAccountGetArgs();
 
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
     }
 
     @InputImport(name="scopes", required=true)
-    private final Input<List<String>> scopes;
+      private final Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes;
@@ -82,7 +82,6 @@ public final class InstanceFromTemplateServiceAccountGetArgs extends io.pulumi.r
             this.scopes = Input.of(Objects.requireNonNull(scopes));
             return this;
         }
-
         public InstanceFromTemplateServiceAccountGetArgs build() {
             return new InstanceFromTemplateServiceAccountGetArgs(email, scopes);
         }

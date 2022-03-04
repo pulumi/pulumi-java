@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1beta.inputs.SecretArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keytab")
-    private final @Nullable Input<SecretArgs> keytab;
+      private final @Nullable Input<SecretArgs> keytab;
 
     public Input<SecretArgs> getKeytab() {
         return this.keytab == null ? Input.empty() : this.keytab;
@@ -35,7 +35,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="krb5ConfigGcsUri")
-    private final @Nullable Input<String> krb5ConfigGcsUri;
+      private final @Nullable Input<String> krb5ConfigGcsUri;
 
     public Input<String> getKrb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri == null ? Input.empty() : this.krb5ConfigGcsUri;
@@ -46,7 +46,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principal")
-    private final @Nullable Input<String> principal;
+      private final @Nullable Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal == null ? Input.empty() : this.principal;
@@ -120,7 +120,6 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.principal = Input.ofNullable(principal);
             return this;
         }
-
         public KerberosConfigArgs build() {
             return new KerberosConfigArgs(keytab, krb5ConfigGcsUri, principal);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.RegexValidationArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.ValueValidationArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<RegexValidationArgs> regex;
+      private final @Nullable Input<RegexValidationArgs> regex;
 
     public Input<RegexValidationArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -35,7 +35,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<ValueValidationArgs> values;
+      private final @Nullable Input<ValueValidationArgs> values;
 
     public Input<ValueValidationArgs> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -94,7 +94,6 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public ParameterValidationArgs build() {
             return new ParameterValidationArgs(regex, values);
         }

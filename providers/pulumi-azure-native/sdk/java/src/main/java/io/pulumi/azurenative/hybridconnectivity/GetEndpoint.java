@@ -6,21 +6,41 @@ package io.pulumi.azurenative.hybridconnectivity;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hybridconnectivity.inputs.GetEndpointArgs;
 import io.pulumi.azurenative.hybridconnectivity.outputs.GetEndpointResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEndpoint {
-/**
- * The endpoint for the target resource.
+    private GetEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetEndpointArgs.Builder a);
+    }
+    private static GetEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The endpoint for the target resource.
  * API Version: 2021-10-06-preview.
  * 
- *
- * The endpoint for the target resource.
+     *
+     * The endpoint for the target resource.
  * 
- */
+     */
+    public static CompletableFuture<GetEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The endpoint for the target resource.
+     * API Version: 2021-10-06-preview.
+     * 
+     *
+         * The endpoint for the target resource.
+     * 
+     */
     public static CompletableFuture<GetEndpointResult> invokeAsync(GetEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:getEndpoint", TypeShape.of(GetEndpointResult.class), args == null ? GetEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

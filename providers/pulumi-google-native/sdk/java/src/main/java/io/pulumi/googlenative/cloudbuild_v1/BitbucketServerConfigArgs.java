@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BitbucketServerSecretsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="apiKey", required=true)
-    private final Input<String> apiKey;
+      private final Input<String> apiKey;
 
     public Input<String> getApiKey() {
         return this.apiKey;
     }
 
     @InputImport(name="bitbucketServerConfigId")
-    private final @Nullable Input<String> bitbucketServerConfigId;
+      private final @Nullable Input<String> bitbucketServerConfigId;
 
     public Input<String> getBitbucketServerConfigId() {
         return this.bitbucketServerConfigId == null ? Input.empty() : this.bitbucketServerConfigId;
@@ -38,7 +38,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -49,14 +49,14 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostUri", required=true)
-    private final Input<String> hostUri;
+      private final Input<String> hostUri;
 
     public Input<String> getHostUri() {
         return this.hostUri;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,7 +67,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,14 +78,14 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="peeredNetwork")
-    private final @Nullable Input<String> peeredNetwork;
+      private final @Nullable Input<String> peeredNetwork;
 
     public Input<String> getPeeredNetwork() {
         return this.peeredNetwork == null ? Input.empty() : this.peeredNetwork;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -96,7 +96,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secrets", required=true)
-    private final Input<BitbucketServerSecretsArgs> secrets;
+      private final Input<BitbucketServerSecretsArgs> secrets;
 
     public Input<BitbucketServerSecretsArgs> getSecrets() {
         return this.secrets;
@@ -107,7 +107,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sslCa")
-    private final @Nullable Input<String> sslCa;
+      private final @Nullable Input<String> sslCa;
 
     public Input<String> getSslCa() {
         return this.sslCa == null ? Input.empty() : this.sslCa;
@@ -118,7 +118,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -312,7 +312,6 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public BitbucketServerConfigArgs build() {
             return new BitbucketServerConfigArgs(apiKey, bitbucketServerConfigId, createTime, hostUri, location, name, peeredNetwork, project, secrets, sslCa, username);
         }

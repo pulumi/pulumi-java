@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="command")
-    private final @Nullable Input<List<String>> command;
+      private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -36,7 +36,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -47,7 +47,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="retries")
-    private final @Nullable Input<Integer> retries;
+      private final @Nullable Input<Integer> retries;
 
     public Input<Integer> getRetries() {
         return this.retries == null ? Input.empty() : this.retries;
@@ -58,7 +58,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="startPeriod")
-    private final @Nullable Input<Integer> startPeriod;
+      private final @Nullable Input<Integer> startPeriod;
 
     public Input<Integer> getStartPeriod() {
         return this.startPeriod == null ? Input.empty() : this.startPeriod;
@@ -69,7 +69,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+      private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -173,7 +173,6 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public TaskDefinitionHealthCheckArgs build() {
             return new TaskDefinitionHealthCheckArgs(command, interval, retries, startPeriod, timeout);
         }

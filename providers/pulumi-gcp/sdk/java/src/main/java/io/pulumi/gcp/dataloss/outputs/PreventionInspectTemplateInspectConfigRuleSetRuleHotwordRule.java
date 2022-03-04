@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity;
@@ -48,7 +48,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      * Regular expression pattern defining what qualifies as a hotword.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex getHotwordRegex() {
         return this.hotwordRegex;
     }
@@ -56,7 +56,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      * Likelihood adjustment to apply to all matching findings.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment getLikelihoodAdjustment() {
         return this.likelihoodAdjustment;
     }
@@ -68,7 +68,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      * office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity getProximity() {
         return this.proximity;
     }
@@ -111,7 +111,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
             this.proximity = Objects.requireNonNull(proximity);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule(hotwordRegex, likelihoodAdjustment, proximity);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetTagTemplateArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTagTemplateArgs Empty = new GetTagTemplateArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="tagTemplateId", required=true)
-    private final String tagTemplateId;
+      private final String tagTemplateId;
 
     public String getTagTemplateId() {
         return this.tagTemplateId;
@@ -88,7 +88,6 @@ public final class GetTagTemplateArgs extends io.pulumi.resources.InvokeArgs {
             this.tagTemplateId = Objects.requireNonNull(tagTemplateId);
             return this;
         }
-
         public GetTagTemplateArgs build() {
             return new GetTagTemplateArgs(location, project, tagTemplateId);
         }

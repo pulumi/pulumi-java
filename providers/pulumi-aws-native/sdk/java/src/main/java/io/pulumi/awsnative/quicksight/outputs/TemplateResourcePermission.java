@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +46,7 @@ public final class TemplateResourcePermission {
     /**
      * <p>The IAM action to grant or revoke permissions on.</p>
      * 
-     */
+    */
     public List<String> getActions() {
         return this.actions;
     }
@@ -67,7 +67,7 @@ public final class TemplateResourcePermission {
      *             </li>
      *          </ul>
      * 
-     */
+    */
     public String getPrincipal() {
         return this.principal;
     }
@@ -103,7 +103,6 @@ public final class TemplateResourcePermission {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public TemplateResourcePermission build() {
             return new TemplateResourcePermission(actions, principal);
         }

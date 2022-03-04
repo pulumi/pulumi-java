@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -86,7 +86,6 @@ public final class GetBucketCor {
             this.responseHeaders = Objects.requireNonNull(responseHeaders);
             return this;
         }
-
         public GetBucketCor build() {
             return new GetBucketCor(maxAgeSeconds, methods, origins, responseHeaders);
         }

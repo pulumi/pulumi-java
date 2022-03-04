@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.LoggingComponentConfigResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="componentConfig", required=true)
-    private final LoggingComponentConfigResponse componentConfig;
+      private final LoggingComponentConfigResponse componentConfig;
 
     public LoggingComponentConfigResponse getComponentConfig() {
         return this.componentConfig;
@@ -59,7 +59,6 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
         }
-
         public LoggingConfigResponse build() {
             return new LoggingConfigResponse(componentConfig);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -255,7 +255,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile {
             this.skipNodesWithSystemPods = skipNodesWithSystemPods;
             return this;
         }
-
         public ManagedClusterPropertiesResponseAutoScalerProfile build() {
             return new ManagedClusterPropertiesResponseAutoScalerProfile(balanceSimilarNodeGroups, expander, maxEmptyBulkDelete, maxGracefulTerminationSec, maxNodeProvisionTime, maxTotalUnreadyPercentage, newPodScaleUpDelay, okTotalUnreadyCount, scaleDownDelayAfterAdd, scaleDownDelayAfterDelete, scaleDownDelayAfterFailure, scaleDownUnneededTime, scaleDownUnreadyTime, scaleDownUtilizationThreshold, scanInterval, skipNodesWithLocalStorage, skipNodesWithSystemPods);
         }

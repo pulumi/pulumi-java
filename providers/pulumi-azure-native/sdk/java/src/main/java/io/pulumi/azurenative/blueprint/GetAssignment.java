@@ -6,21 +6,41 @@ package io.pulumi.azurenative.blueprint;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.blueprint.inputs.GetAssignmentArgs;
 import io.pulumi.azurenative.blueprint.outputs.GetAssignmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssignment {
-/**
- * Represents a blueprint assignment.
+    private GetAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssignmentArgs.Builder a);
+    }
+    private static GetAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a blueprint assignment.
  * API Version: 2018-11-01-preview.
  * 
- *
- * Represents a blueprint assignment.
+     *
+     * Represents a blueprint assignment.
  * 
- */
+     */
+    public static CompletableFuture<GetAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a blueprint assignment.
+     * API Version: 2018-11-01-preview.
+     * 
+     *
+         * Represents a blueprint assignment.
+     * 
+     */
     public static CompletableFuture<GetAssignmentResult> invokeAsync(GetAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getAssignment", TypeShape.of(GetAssignmentResult.class), args == null ? GetAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.FrontendIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceTapConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -109,84 +109,84 @@ public final class VirtualNetworkTapResponse {
     /**
      * The reference to the private IP address on the internal Load Balancer that will receive the tap.
      * 
-     */
+    */
     public Optional<FrontendIPConfigurationResponse> getDestinationLoadBalancerFrontEndIPConfiguration() {
         return Optional.ofNullable(this.destinationLoadBalancerFrontEndIPConfiguration);
     }
     /**
      * The reference to the private IP Address of the collector nic that will receive the tap.
      * 
-     */
+    */
     public Optional<NetworkInterfaceIPConfigurationResponse> getDestinationNetworkInterfaceIPConfiguration() {
         return Optional.ofNullable(this.destinationNetworkInterfaceIPConfiguration);
     }
     /**
      * The VXLAN destination port that will receive the tapped traffic.
      * 
-     */
+    */
     public Optional<Integer> getDestinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
      * 
-     */
+    */
     public List<NetworkInterfaceTapConfigurationResponse> getNetworkInterfaceTapConfigurations() {
         return this.networkInterfaceTapConfigurations;
     }
     /**
      * The provisioning state of the virtual network tap resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the virtual network tap resource.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -292,7 +292,6 @@ public final class VirtualNetworkTapResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualNetworkTapResponse build() {
             return new VirtualNetworkTapResponse(destinationLoadBalancerFrontEndIPConfiguration, destinationNetworkInterfaceIPConfiguration, destinationPort, etag, id, location, name, networkInterfaceTapConfigurations, provisioningState, resourceGuid, tags, type);
         }

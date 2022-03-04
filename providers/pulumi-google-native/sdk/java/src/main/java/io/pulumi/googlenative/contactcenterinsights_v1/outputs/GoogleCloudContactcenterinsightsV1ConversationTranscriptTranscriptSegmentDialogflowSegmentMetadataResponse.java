@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     /**
      * Whether the transcript segment was covered under the configured smart reply allowlist in Agent Assist.
      * 
-     */
+    */
     public Boolean getSmartReplyAllowlistCovered() {
         return this.smartReplyAllowlistCovered;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             this.smartReplyAllowlistCovered = Objects.requireNonNull(smartReplyAllowlistCovered);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(smartReplyAllowlistCovered);
         }

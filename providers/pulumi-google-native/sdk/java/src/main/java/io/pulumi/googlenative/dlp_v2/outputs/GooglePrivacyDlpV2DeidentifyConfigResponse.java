@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeTransformationsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RecordTransformationsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TransformationErrorHandlingResponse;
@@ -40,21 +40,21 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
     /**
      * Treat the dataset as free-form text and apply the same free text transformation everywhere.
      * 
-     */
+    */
     public GooglePrivacyDlpV2InfoTypeTransformationsResponse getInfoTypeTransformations() {
         return this.infoTypeTransformations;
     }
     /**
      * Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table.
      * 
-     */
+    */
     public GooglePrivacyDlpV2RecordTransformationsResponse getRecordTransformations() {
         return this.recordTransformations;
     }
     /**
      * Mode for handling transformation errors. If left unspecified, the default mode is `TransformationErrorHandling.ThrowError`.
      * 
-     */
+    */
     public GooglePrivacyDlpV2TransformationErrorHandlingResponse getTransformationErrorHandling() {
         return this.transformationErrorHandling;
     }
@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
             this.transformationErrorHandling = Objects.requireNonNull(transformationErrorHandling);
             return this;
         }
-
         public GooglePrivacyDlpV2DeidentifyConfigResponse build() {
             return new GooglePrivacyDlpV2DeidentifyConfigResponse(infoTypeTransformations, recordTransformations, transformationErrorHandling);
         }

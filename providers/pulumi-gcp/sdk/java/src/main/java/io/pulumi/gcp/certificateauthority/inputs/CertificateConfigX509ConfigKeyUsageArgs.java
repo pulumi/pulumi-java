@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs;
@@ -23,7 +23,7 @@ public final class CertificateConfigX509ConfigKeyUsageArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="baseKeyUsage", required=true)
-    private final Input<CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs> baseKeyUsage;
+      private final Input<CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs> baseKeyUsage;
 
     public Input<CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs> getBaseKeyUsage() {
         return this.baseKeyUsage;
@@ -35,7 +35,7 @@ public final class CertificateConfigX509ConfigKeyUsageArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="extendedKeyUsage", required=true)
-    private final Input<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
+      private final Input<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
 
     public Input<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs> getExtendedKeyUsage() {
         return this.extendedKeyUsage;
@@ -47,7 +47,7 @@ public final class CertificateConfigX509ConfigKeyUsageArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="unknownExtendedKeyUsages")
-    private final @Nullable Input<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
+      private final @Nullable Input<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
 
     public Input<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs>> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? Input.empty() : this.unknownExtendedKeyUsages;
@@ -121,7 +121,6 @@ public final class CertificateConfigX509ConfigKeyUsageArgs extends io.pulumi.res
             this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-
         public CertificateConfigX509ConfigKeyUsageArgs build() {
             return new CertificateConfigX509ConfigKeyUsageArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

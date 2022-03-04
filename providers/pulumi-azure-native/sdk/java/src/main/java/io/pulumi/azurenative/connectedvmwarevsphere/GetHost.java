@@ -6,21 +6,41 @@ package io.pulumi.azurenative.connectedvmwarevsphere;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetHostArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.GetHostResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHost {
-/**
- * Define the host.
+    private GetHost() {}
+    public interface BuilderApplicator {
+        public void apply(GetHostArgs.Builder a);
+    }
+    private static GetHostArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHostArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Define the host.
  * API Version: 2020-10-01-preview.
  * 
- *
- * Define the host.
+     *
+     * Define the host.
  * 
- */
+     */
+    public static CompletableFuture<GetHostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Define the host.
+     * API Version: 2020-10-01-preview.
+     * 
+     *
+         * Define the host.
+     * 
+     */
     public static CompletableFuture<GetHostResult> invokeAsync(GetHostArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getHost", TypeShape.of(GetHostResult.class), args == null ? GetHostArgs.Empty : args, Utilities.withVersion(options));
     }

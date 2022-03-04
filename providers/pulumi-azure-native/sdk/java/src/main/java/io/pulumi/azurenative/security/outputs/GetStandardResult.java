@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.StandardComponentPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -114,91 +114,91 @@ public final class GetStandardResult {
     /**
      * category of the standard provided
      * 
-     */
+    */
     public Optional<String> getCategory() {
         return Optional.ofNullable(this.category);
     }
     /**
      * List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
      * 
-     */
+    */
     public List<StandardComponentPropertiesResponse> getComponents() {
         return this.components == null ? List.of() : this.components;
     }
     /**
      * description of the standard
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * display name of the standard, equivalent to the standardId
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of the resource
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Location where the resource is stored
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * standard type (Custom or BuiltIn only currently)
      * 
-     */
+    */
     public String getStandardType() {
         return this.standardType;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * A list of key value pairs that describe the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -311,7 +311,6 @@ public final class GetStandardResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStandardResult build() {
             return new GetStandardResult(category, components, description, displayName, etag, id, kind, location, name, standardType, systemData, tags, type);
         }

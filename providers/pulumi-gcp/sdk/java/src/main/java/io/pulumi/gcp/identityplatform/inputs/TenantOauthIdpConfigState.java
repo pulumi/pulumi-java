@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -31,7 +31,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+      private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -42,7 +42,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -53,7 +53,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -64,7 +64,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="issuer")
-    private final @Nullable Input<String> issuer;
+      private final @Nullable Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer == null ? Input.empty() : this.issuer;
@@ -75,7 +75,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -98,7 +98,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tenant")
-    private final @Nullable Input<String> tenant;
+      private final @Nullable Input<String> tenant;
 
     public Input<String> getTenant() {
         return this.tenant == null ? Input.empty() : this.tenant;
@@ -247,7 +247,6 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
             this.tenant = Input.ofNullable(tenant);
             return this;
         }
-
         public TenantOauthIdpConfigState build() {
             return new TenantOauthIdpConfigState(clientId, clientSecret, displayName, enabled, issuer, name, project, tenant);
         }

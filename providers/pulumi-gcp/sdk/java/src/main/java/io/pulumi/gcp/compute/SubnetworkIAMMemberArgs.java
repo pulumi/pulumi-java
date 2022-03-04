@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SubnetworkIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class SubnetworkIAMMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<SubnetworkIAMMemberConditionArgs> condition;
+      private final @Nullable Input<SubnetworkIAMMemberConditionArgs> condition;
 
     public Input<SubnetworkIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -40,7 +40,7 @@ public final class SubnetworkIAMMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -54,7 +54,7 @@ public final class SubnetworkIAMMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -67,7 +67,7 @@ public final class SubnetworkIAMMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -78,7 +78,7 @@ public final class SubnetworkIAMMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subnetwork", required=true)
-    private final Input<String> subnetwork;
+      private final Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork;
@@ -197,7 +197,6 @@ public final class SubnetworkIAMMemberArgs extends io.pulumi.resources.ResourceA
             this.subnetwork = Input.of(Objects.requireNonNull(subnetwork));
             return this;
         }
-
         public SubnetworkIAMMemberArgs build() {
             return new SubnetworkIAMMemberArgs(condition, member, project, region, role, subnetwork);
         }

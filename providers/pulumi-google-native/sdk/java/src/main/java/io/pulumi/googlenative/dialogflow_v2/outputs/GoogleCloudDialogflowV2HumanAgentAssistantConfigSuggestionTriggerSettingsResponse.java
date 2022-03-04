@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
     /**
      * Do not trigger if last utterance is small talk.
      * 
-     */
+    */
     public Boolean getNoSmalltalk() {
         return this.noSmalltalk;
     }
     /**
      * Only trigger suggestion if participant role of last utterance is END_USER.
      * 
-     */
+    */
     public Boolean getOnlyEndUser() {
         return this.onlyEndUser;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
             this.onlyEndUser = Objects.requireNonNull(onlyEndUser);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(noSmalltalk, onlyEndUser);
         }

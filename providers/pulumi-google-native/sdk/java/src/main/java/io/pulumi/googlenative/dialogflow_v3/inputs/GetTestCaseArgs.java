@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetTestCaseArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTestCaseArgs Empty = new GetTestCaseArgs();
 
     @InputImport(name="agentId", required=true)
-    private final String agentId;
+      private final String agentId;
 
     public String getAgentId() {
         return this.agentId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="testCaseId", required=true)
-    private final String testCaseId;
+      private final String testCaseId;
 
     public String getTestCaseId() {
         return this.testCaseId;
@@ -105,7 +105,6 @@ public final class GetTestCaseArgs extends io.pulumi.resources.InvokeArgs {
             this.testCaseId = Objects.requireNonNull(testCaseId);
             return this;
         }
-
         public GetTestCaseArgs build() {
             return new GetTestCaseArgs(agentId, location, project, testCaseId);
         }

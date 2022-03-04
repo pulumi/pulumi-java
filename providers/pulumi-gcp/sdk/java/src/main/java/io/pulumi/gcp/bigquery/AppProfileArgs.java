@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.AppProfileSingleClusterRoutingArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appProfileId", required=true)
-    private final Input<String> appProfileId;
+      private final Input<String> appProfileId;
 
     public Input<String> getAppProfileId() {
         return this.appProfileId;
@@ -32,7 +32,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreWarnings")
-    private final @Nullable Input<Boolean> ignoreWarnings;
+      private final @Nullable Input<Boolean> ignoreWarnings;
 
     public Input<Boolean> getIgnoreWarnings() {
         return this.ignoreWarnings == null ? Input.empty() : this.ignoreWarnings;
@@ -54,7 +54,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -67,7 +67,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiClusterRoutingUseAny")
-    private final @Nullable Input<Boolean> multiClusterRoutingUseAny;
+      private final @Nullable Input<Boolean> multiClusterRoutingUseAny;
 
     public Input<Boolean> getMultiClusterRoutingUseAny() {
         return this.multiClusterRoutingUseAny == null ? Input.empty() : this.multiClusterRoutingUseAny;
@@ -79,7 +79,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -91,7 +91,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleClusterRouting")
-    private final @Nullable Input<AppProfileSingleClusterRoutingArgs> singleClusterRouting;
+      private final @Nullable Input<AppProfileSingleClusterRoutingArgs> singleClusterRouting;
 
     public Input<AppProfileSingleClusterRoutingArgs> getSingleClusterRouting() {
         return this.singleClusterRouting == null ? Input.empty() : this.singleClusterRouting;
@@ -225,7 +225,6 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.singleClusterRouting = Input.ofNullable(singleClusterRouting);
             return this;
         }
-
         public AppProfileArgs build() {
             return new AppProfileArgs(appProfileId, description, ignoreWarnings, instance, multiClusterRoutingUseAny, project, singleClusterRouting);
         }

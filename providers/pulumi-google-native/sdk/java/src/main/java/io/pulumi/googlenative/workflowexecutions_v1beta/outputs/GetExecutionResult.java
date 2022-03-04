@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.workflowexecutions_v1beta.outputs.ErrorResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -81,63 +81,63 @@ public final class GetExecutionResult {
     /**
      * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
      * 
-     */
+    */
     public String getArgument() {
         return this.argument;
     }
     /**
      * The call logging level associated to this execution.
      * 
-     */
+    */
     public String getCallLogLevel() {
         return this.callLogLevel;
     }
     /**
      * Marks the end of execution, successful or not.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.
      * 
-     */
+    */
     public ErrorResponse getError() {
         return this.error;
     }
     /**
      * The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Output of the execution represented as a JSON string. The value can only be present if the execution's state is `SUCCEEDED`.
      * 
-     */
+    */
     public String getResult() {
         return this.result;
     }
     /**
      * Marks the beginning of execution.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Current state of the execution.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Revision of the workflow this execution is using.
      * 
-     */
+    */
     public String getWorkflowRevisionId() {
         return this.workflowRevisionId;
     }
@@ -222,7 +222,6 @@ public final class GetExecutionResult {
             this.workflowRevisionId = Objects.requireNonNull(workflowRevisionId);
             return this;
         }
-
         public GetExecutionResult build() {
             return new GetExecutionResult(argument, callLogLevel, endTime, error, name, result, startTime, state, workflowRevisionId);
         }

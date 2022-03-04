@@ -6,7 +6,7 @@ package io.pulumi.azurenative.changeanalysis.inputs;
 import io.pulumi.azurenative.changeanalysis.enums.ChangeDetailsMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="includeChangeDetails")
-    private final @Nullable Input<Either<String,ChangeDetailsMode>> includeChangeDetails;
+      private final @Nullable Input<Either<String,ChangeDetailsMode>> includeChangeDetails;
 
     public Input<Either<String,ChangeDetailsMode>> getIncludeChangeDetails() {
         return this.includeChangeDetails == null ? Input.empty() : this.includeChangeDetails;
@@ -36,7 +36,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workspaceId")
-    private final @Nullable Input<String> workspaceId;
+      private final @Nullable Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId == null ? Input.empty() : this.workspaceId;
@@ -47,7 +47,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workspaceResourceId")
-    private final @Nullable Input<String> workspaceResourceId;
+      private final @Nullable Input<String> workspaceResourceId;
 
     public Input<String> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Input.empty() : this.workspaceResourceId;
@@ -121,7 +121,6 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
             this.workspaceResourceId = Input.ofNullable(workspaceResourceId);
             return this;
         }
-
         public AzureMonitorWorkspacePropertiesArgs build() {
             return new AzureMonitorWorkspacePropertiesArgs(includeChangeDetails, workspaceId, workspaceResourceId);
         }

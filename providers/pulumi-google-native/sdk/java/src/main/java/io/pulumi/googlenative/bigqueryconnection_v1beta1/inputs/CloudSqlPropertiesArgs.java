@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.enums.CloudSqlPropertiesType;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.CloudSqlCredentialArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<CloudSqlCredentialArgs> credential;
+      private final @Nullable Input<CloudSqlCredentialArgs> credential;
 
     public Input<CloudSqlCredentialArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -36,7 +36,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+      private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -47,7 +47,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -58,7 +58,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<CloudSqlPropertiesType> type;
+      private final @Nullable Input<CloudSqlPropertiesType> type;
 
     public Input<CloudSqlPropertiesType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -147,7 +147,6 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public CloudSqlPropertiesArgs build() {
             return new CloudSqlPropertiesArgs(credential, database, instanceId, type);
         }

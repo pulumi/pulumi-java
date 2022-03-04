@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
     /**
      * Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
      * 
-     */
+    */
     public List<String> getQueryTerms() {
         return this.queryTerms;
     }
     /**
      * Term that will be used for replacement.
      * 
-     */
+    */
     public String getReplacementTerm() {
         return this.replacementTerm;
     }
     /**
      * Will be [deprecated = true] post migration;
      * 
-     */
+    */
     public String getTerm() {
         return this.term;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
             this.term = Objects.requireNonNull(term);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleReplacementActionResponse build() {
             return new GoogleCloudRetailV2betaRuleReplacementActionResponse(queryTerms, replacementTerm, term);
         }

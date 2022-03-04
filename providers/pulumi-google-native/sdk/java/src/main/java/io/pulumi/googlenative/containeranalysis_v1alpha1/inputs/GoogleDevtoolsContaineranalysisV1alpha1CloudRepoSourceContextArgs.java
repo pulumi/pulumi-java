@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * 
      */
     @InputImport(name="aliasContext")
-    private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
+      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
 
     public Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> getAliasContext() {
         return this.aliasContext == null ? Input.empty() : this.aliasContext;
@@ -36,7 +36,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * 
      */
     @InputImport(name="repoId")
-    private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> repoId;
+      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> repoId;
 
     public Input<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> getRepoId() {
         return this.repoId == null ? Input.empty() : this.repoId;
@@ -47,7 +47,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * 
      */
     @InputImport(name="revisionId")
-    private final @Nullable Input<String> revisionId;
+      private final @Nullable Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId == null ? Input.empty() : this.revisionId;
@@ -121,7 +121,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
             this.revisionId = Input.ofNullable(revisionId);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs(aliasContext, repoId, revisionId);
         }

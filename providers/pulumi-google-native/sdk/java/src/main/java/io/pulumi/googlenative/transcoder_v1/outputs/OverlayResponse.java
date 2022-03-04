@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AnimationResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.ImageResponse;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class OverlayResponse {
     /**
      * List of Animations. The list should be chronological, without any time overlap.
      * 
-     */
+    */
     public List<AnimationResponse> getAnimations() {
         return this.animations;
     }
     /**
      * Image overlay.
      * 
-     */
+    */
     public ImageResponse getImage() {
         return this.image;
     }
@@ -76,7 +76,6 @@ public final class OverlayResponse {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public OverlayResponse build() {
             return new OverlayResponse(animations, image);
         }

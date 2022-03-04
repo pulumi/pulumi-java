@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class WarmStoreConfigurationPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dataRetention", required=true)
-    private final Input<String> dataRetention;
+      private final Input<String> dataRetention;
 
     public Input<String> getDataRetention() {
         return this.dataRetention;
@@ -65,7 +65,6 @@ public final class WarmStoreConfigurationPropertiesArgs extends io.pulumi.resour
             this.dataRetention = Input.of(Objects.requireNonNull(dataRetention));
             return this;
         }
-
         public WarmStoreConfigurationPropertiesArgs build() {
             return new WarmStoreConfigurationPropertiesArgs(dataRetention);
         }

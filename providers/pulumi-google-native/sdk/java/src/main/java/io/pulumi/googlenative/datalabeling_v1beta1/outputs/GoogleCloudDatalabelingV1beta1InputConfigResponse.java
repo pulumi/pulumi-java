@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1BigQuerySourceResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1GcsSourceResponse;
@@ -63,42 +63,42 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
     /**
      * Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
      * 
-     */
+    */
     public String getAnnotationType() {
         return this.annotationType;
     }
     /**
      * Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.
      * 
-     */
+    */
     public GoogleCloudDatalabelingV1beta1BigQuerySourceResponse getBigquerySource() {
         return this.bigquerySource;
     }
     /**
      * Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.
      * 
-     */
+    */
     public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse getClassificationMetadata() {
         return this.classificationMetadata;
     }
     /**
      * Data type must be specifed when user tries to import data.
      * 
-     */
+    */
     public String getDataType() {
         return this.dataType;
     }
     /**
      * Source located in Cloud Storage.
      * 
-     */
+    */
     public GoogleCloudDatalabelingV1beta1GcsSourceResponse getGcsSource() {
         return this.gcsSource;
     }
     /**
      * Required for text import, as language code must be specified.
      * 
-     */
+    */
     public GoogleCloudDatalabelingV1beta1TextMetadataResponse getTextMetadata() {
         return this.textMetadata;
     }
@@ -162,7 +162,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
             this.textMetadata = Objects.requireNonNull(textMetadata);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1InputConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1InputConfigResponse(annotationType, bigquerySource, classificationMetadata, dataType, gcsSource, textMetadata);
         }

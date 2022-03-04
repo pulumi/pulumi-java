@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetApplicationSecurityGroupArgs;
 import io.pulumi.azurenative.network.outputs.GetApplicationSecurityGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationSecurityGroup {
-/**
- * An application security group in a resource group.
+    private GetApplicationSecurityGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetApplicationSecurityGroupArgs.Builder a);
+    }
+    private static GetApplicationSecurityGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApplicationSecurityGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An application security group in a resource group.
  * API Version: 2020-11-01.
  * 
- *
- * An application security group in a resource group.
+     *
+     * An application security group in a resource group.
  * 
- */
+     */
+    public static CompletableFuture<GetApplicationSecurityGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An application security group in a resource group.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * An application security group in a resource group.
+     * 
+     */
     public static CompletableFuture<GetApplicationSecurityGroupResult> invokeAsync(GetApplicationSecurityGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getApplicationSecurityGroup", TypeShape.of(GetApplicationSecurityGroupResult.class), args == null ? GetApplicationSecurityGroupArgs.Empty : args, Utilities.withVersion(options));
     }

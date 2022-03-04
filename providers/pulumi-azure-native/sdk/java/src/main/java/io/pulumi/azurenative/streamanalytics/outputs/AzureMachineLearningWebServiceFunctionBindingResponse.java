@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.AzureMachineLearningWebServiceInputsResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.AzureMachineLearningWebServiceOutputColumnResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -66,35 +66,35 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
     /**
      * The API key used to authenticate with Request-Response endpoint.
      * 
-     */
+    */
     public Optional<String> getApiKey() {
         return Optional.ofNullable(this.apiKey);
     }
     /**
      * Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
      * 
-     */
+    */
     public Optional<Integer> getBatchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
      * The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
      * 
-     */
+    */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * The inputs for the Azure Machine Learning web service endpoint.
      * 
-     */
+    */
     public Optional<AzureMachineLearningWebServiceInputsResponse> getInputs() {
         return Optional.ofNullable(this.inputs);
     }
     /**
      * A list of outputs from the Azure Machine Learning web service endpoint execution.
      * 
-     */
+    */
     public List<AzureMachineLearningWebServiceOutputColumnResponse> getOutputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
@@ -102,7 +102,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
      * Indicates the function binding type.
      * Expected value is 'Microsoft.MachineLearning/WebService'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -166,7 +166,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureMachineLearningWebServiceFunctionBindingResponse build() {
             return new AzureMachineLearningWebServiceFunctionBindingResponse(apiKey, batchSize, endpoint, inputs, outputs, type);
         }

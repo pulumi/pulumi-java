@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.ListActiveSecurityUserRuleArgs;
 import io.pulumi.azurenative.network.outputs.ListActiveSecurityUserRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListActiveSecurityUserRule {
-/**
- * Result of the request to list active security user rules. It contains a list of active security user rules and a skiptoken to get the next set of results.
+    private ListActiveSecurityUserRule() {}
+    public interface BuilderApplicator {
+        public void apply(ListActiveSecurityUserRuleArgs.Builder a);
+    }
+    private static ListActiveSecurityUserRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListActiveSecurityUserRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Result of the request to list active security user rules. It contains a list of active security user rules and a skiptoken to get the next set of results.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Result of the request to list active security user rules. It contains a list of active security user rules and a skiptoken to get the next set of results.
+     *
+     * Result of the request to list active security user rules. It contains a list of active security user rules and a skiptoken to get the next set of results.
  * 
- */
+     */
+    public static CompletableFuture<ListActiveSecurityUserRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Result of the request to list active security user rules. It contains a list of active security user rules and a skiptoken to get the next set of results.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Result of the request to list active security user rules. It contains a list of active security user rules and a skiptoken to get the next set of results.
+     * 
+     */
     public static CompletableFuture<ListActiveSecurityUserRuleResult> invokeAsync(ListActiveSecurityUserRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listActiveSecurityUserRule", TypeShape.of(ListActiveSecurityUserRuleResult.class), args == null ? ListActiveSecurityUserRuleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final String dataset;
+      private final String dataset;
 
     public String getDataset() {
         return this.dataset;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * 
      */
     @InputImport(name="latestShardResource", required=true)
-    private final String latestShardResource;
+      private final String latestShardResource;
 
     public String getLatestShardResource() {
         return this.latestShardResource;
@@ -43,7 +43,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * 
      */
     @InputImport(name="shardCount", required=true)
-    private final String shardCount;
+      private final String shardCount;
 
     public String getShardCount() {
         return this.shardCount;
@@ -54,7 +54,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * 
      */
     @InputImport(name="tablePrefix", required=true)
-    private final String tablePrefix;
+      private final String tablePrefix;
 
     public String getTablePrefix() {
         return this.tablePrefix;
@@ -123,7 +123,6 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
             this.tablePrefix = Objects.requireNonNull(tablePrefix);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse(dataset, latestShardResource, shardCount, tablePrefix);
         }

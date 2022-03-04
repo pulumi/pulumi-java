@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.BasicAutoscalingAlgorithmResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.InstanceGroupAutoscalingPolicyConfigResponse;
 import java.lang.String;
@@ -54,28 +54,28 @@ public final class GetAutoscalingPolicyResult {
     /**
      * Optional. The labels to associate with this autoscaling policy. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with an autoscaling policy.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The "resource name" of the autoscaling policy, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies, the resource name of the policy has the following format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For projects.locations.autoscalingPolicies, the resource name of the policy has the following format: projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. Describes how the autoscaler will operate for secondary workers.
      * 
-     */
+    */
     public InstanceGroupAutoscalingPolicyConfigResponse getSecondaryWorkerConfig() {
         return this.secondaryWorkerConfig;
     }
     /**
      * Describes how the autoscaler will operate for primary workers.
      * 
-     */
+    */
     public InstanceGroupAutoscalingPolicyConfigResponse getWorkerConfig() {
         return this.workerConfig;
     }
@@ -132,7 +132,6 @@ public final class GetAutoscalingPolicyResult {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public GetAutoscalingPolicyResult build() {
             return new GetAutoscalingPolicyResult(basicAlgorithm, labels, name, secondaryWorkerConfig, workerConfig);
         }

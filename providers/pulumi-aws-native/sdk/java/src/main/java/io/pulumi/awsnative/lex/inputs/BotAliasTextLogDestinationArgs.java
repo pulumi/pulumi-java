@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasCloudWatchLogGroupLogDestinationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
     public static final BotAliasTextLogDestinationArgs Empty = new BotAliasTextLogDestinationArgs();
 
     @InputImport(name="cloudWatch")
-    private final @Nullable Input<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
+      private final @Nullable Input<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
 
     public Input<BotAliasCloudWatchLogGroupLogDestinationArgs> getCloudWatch() {
         return this.cloudWatch == null ? Input.empty() : this.cloudWatch;
@@ -62,7 +62,6 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
             this.cloudWatch = Input.ofNullable(cloudWatch);
             return this;
         }
-
         public BotAliasTextLogDestinationArgs build() {
             return new BotAliasTextLogDestinationArgs(cloudWatch);
         }

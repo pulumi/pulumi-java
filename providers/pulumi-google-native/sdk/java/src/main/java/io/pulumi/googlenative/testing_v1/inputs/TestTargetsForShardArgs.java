@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="testTargets")
-    private final @Nullable Input<List<String>> testTargets;
+      private final @Nullable Input<List<String>> testTargets;
 
     public Input<List<String>> getTestTargets() {
         return this.testTargets == null ? Input.empty() : this.testTargets;
@@ -67,7 +67,6 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
             this.testTargets = Input.ofNullable(testTargets);
             return this;
         }
-
         public TestTargetsForShardArgs build() {
             return new TestTargetsForShardArgs(testTargets);
         }

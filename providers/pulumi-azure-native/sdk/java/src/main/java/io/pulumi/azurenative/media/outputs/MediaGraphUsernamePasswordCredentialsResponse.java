@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,21 +40,21 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphUsernamePasswordCredentials'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Password for a username/password pair.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * Username for a username/password pair.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -97,7 +97,6 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MediaGraphUsernamePasswordCredentialsResponse build() {
             return new MediaGraphUsernamePasswordCredentialsResponse(odataType, password, username);
         }

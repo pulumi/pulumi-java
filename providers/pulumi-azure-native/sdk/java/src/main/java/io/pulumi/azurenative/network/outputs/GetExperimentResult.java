@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExperimentEndpointResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -105,84 +105,84 @@ public final class GetExperimentResult {
     /**
      * The description of the details or intents of the Experiment
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The state of the Experiment
      * 
-     */
+    */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * The endpoint A of an experiment
      * 
-     */
+    */
     public Optional<ExperimentEndpointResponse> getEndpointA() {
         return Optional.ofNullable(this.endpointA);
     }
     /**
      * The endpoint B of an experiment
      * 
-     */
+    */
     public Optional<ExperimentEndpointResponse> getEndpointB() {
         return Optional.ofNullable(this.endpointB);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource status.
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * The uri to the Script used in the Experiment
      * 
-     */
+    */
     public String getScriptFileUri() {
         return this.scriptFileUri;
     }
     /**
      * The description of Experiment status from the server side
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -288,7 +288,6 @@ public final class GetExperimentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExperimentResult build() {
             return new GetExperimentResult(description, enabledState, endpointA, endpointB, id, location, name, resourceState, scriptFileUri, status, tags, type);
         }

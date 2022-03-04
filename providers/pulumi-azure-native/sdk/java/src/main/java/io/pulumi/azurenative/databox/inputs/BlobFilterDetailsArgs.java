@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="blobPathList")
-    private final @Nullable Input<List<String>> blobPathList;
+      private final @Nullable Input<List<String>> blobPathList;
 
     public Input<List<String>> getBlobPathList() {
         return this.blobPathList == null ? Input.empty() : this.blobPathList;
@@ -35,7 +35,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="blobPrefixList")
-    private final @Nullable Input<List<String>> blobPrefixList;
+      private final @Nullable Input<List<String>> blobPrefixList;
 
     public Input<List<String>> getBlobPrefixList() {
         return this.blobPrefixList == null ? Input.empty() : this.blobPrefixList;
@@ -46,7 +46,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="containerList")
-    private final @Nullable Input<List<String>> containerList;
+      private final @Nullable Input<List<String>> containerList;
 
     public Input<List<String>> getContainerList() {
         return this.containerList == null ? Input.empty() : this.containerList;
@@ -120,7 +120,6 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
             this.containerList = Input.ofNullable(containerList);
             return this;
         }
-
         public BlobFilterDetailsArgs build() {
             return new BlobFilterDetailsArgs(blobPathList, blobPrefixList, containerList);
         }

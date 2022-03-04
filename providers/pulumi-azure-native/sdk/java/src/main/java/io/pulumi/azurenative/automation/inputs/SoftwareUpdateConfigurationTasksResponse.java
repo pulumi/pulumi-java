@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.TaskPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SoftwareUpdateConfigurationTasksResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="postTask")
-    private final @Nullable TaskPropertiesResponse postTask;
+      private final @Nullable TaskPropertiesResponse postTask;
 
     public Optional<TaskPropertiesResponse> getPostTask() {
         return this.postTask == null ? Optional.empty() : Optional.ofNullable(this.postTask);
@@ -34,7 +34,7 @@ public final class SoftwareUpdateConfigurationTasksResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="preTask")
-    private final @Nullable TaskPropertiesResponse preTask;
+      private final @Nullable TaskPropertiesResponse preTask;
 
     public Optional<TaskPropertiesResponse> getPreTask() {
         return this.preTask == null ? Optional.empty() : Optional.ofNullable(this.preTask);
@@ -83,7 +83,6 @@ public final class SoftwareUpdateConfigurationTasksResponse extends io.pulumi.re
             this.preTask = preTask;
             return this;
         }
-
         public SoftwareUpdateConfigurationTasksResponse build() {
             return new SoftwareUpdateConfigurationTasksResponse(postTask, preTask);
         }

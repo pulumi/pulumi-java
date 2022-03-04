@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.file_v1.inputs.NfsExportOptionsArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="capacityGb")
-    private final @Nullable Input<String> capacityGb;
+      private final @Nullable Input<String> capacityGb;
 
     public Input<String> getCapacityGb() {
         return this.capacityGb == null ? Input.empty() : this.capacityGb;
@@ -36,7 +36,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="nfsExportOptions")
-    private final @Nullable Input<List<NfsExportOptionsArgs>> nfsExportOptions;
+      private final @Nullable Input<List<NfsExportOptionsArgs>> nfsExportOptions;
 
     public Input<List<NfsExportOptionsArgs>> getNfsExportOptions() {
         return this.nfsExportOptions == null ? Input.empty() : this.nfsExportOptions;
@@ -58,7 +58,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceBackup")
-    private final @Nullable Input<String> sourceBackup;
+      private final @Nullable Input<String> sourceBackup;
 
     public Input<String> getSourceBackup() {
         return this.sourceBackup == null ? Input.empty() : this.sourceBackup;
@@ -147,7 +147,6 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.sourceBackup = Input.ofNullable(sourceBackup);
             return this;
         }
-
         public FileShareConfigArgs build() {
             return new FileShareConfigArgs(capacityGb, name, nfsExportOptions, sourceBackup);
         }

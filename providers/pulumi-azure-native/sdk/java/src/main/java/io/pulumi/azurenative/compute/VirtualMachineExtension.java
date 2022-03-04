@@ -9,8 +9,8 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineExtensionInstanceView
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -215,6 +215,37 @@ public class VirtualMachineExtension extends io.pulumi.resources.CustomResource 
         return this.typeHandlerVersion;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VirtualMachineExtensionArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.compute.VirtualMachineExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.compute.VirtualMachineExtensionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VirtualMachineExtension(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VirtualMachineExtension(String name) {
+        this(name, VirtualMachineExtensionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VirtualMachineExtension(String name, VirtualMachineExtensionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

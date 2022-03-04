@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ProtectionModeResponse {
     /**
      * The application control policy enforcement/protection mode of the machine group
      * 
-     */
+    */
     public Optional<String> getExe() {
         return Optional.ofNullable(this.exe);
     }
     /**
      * The application control policy enforcement/protection mode of the machine group
      * 
-     */
+    */
     public Optional<String> getExecutable() {
         return Optional.ofNullable(this.executable);
     }
     /**
      * The application control policy enforcement/protection mode of the machine group
      * 
-     */
+    */
     public Optional<String> getMsi() {
         return Optional.ofNullable(this.msi);
     }
     /**
      * The application control policy enforcement/protection mode of the machine group
      * 
-     */
+    */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);
     }
@@ -118,7 +118,6 @@ public final class ProtectionModeResponse {
             this.script = script;
             return this;
         }
-
         public ProtectionModeResponse build() {
             return new ProtectionModeResponse(exe, executable, msi, script);
         }

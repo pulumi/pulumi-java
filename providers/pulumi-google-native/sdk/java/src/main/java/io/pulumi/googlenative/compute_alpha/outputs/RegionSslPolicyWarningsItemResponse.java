@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RegionSslPolicyWarningsItemDataItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class RegionSslPolicyWarningsItemResponse {
     /**
      * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
      * 
-     */
+    */
     public List<RegionSslPolicyWarningsItemDataItemResponse> getData() {
         return this.data;
     }
     /**
      * A human-readable description of the warning code.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -97,7 +97,6 @@ public final class RegionSslPolicyWarningsItemResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public RegionSslPolicyWarningsItemResponse build() {
             return new RegionSslPolicyWarningsItemResponse(code, data, message);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="actionRuleName", required=true)
-    private final String actionRuleName;
+      private final String actionRuleName;
 
     public String getActionRuleName() {
         return this.actionRuleName;
@@ -28,7 +28,7 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetActionRuleByNameArgs build() {
             return new GetActionRuleByNameArgs(actionRuleName, resourceGroupName);
         }

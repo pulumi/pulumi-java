@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FlavorDataResponse {
     /**
      * Model flavor-specific data.
      * 
-     */
+    */
     public Map<String,String> getData() {
         return this.data == null ? Map.of() : this.data;
     }
@@ -54,7 +54,6 @@ public final class FlavorDataResponse {
             this.data = data;
             return this;
         }
-
         public FlavorDataResponse build() {
             return new FlavorDataResponse(data);
         }

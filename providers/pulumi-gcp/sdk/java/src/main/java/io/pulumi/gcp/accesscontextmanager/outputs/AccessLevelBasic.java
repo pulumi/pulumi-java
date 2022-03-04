@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelBasicCondition;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +48,7 @@ public final class AccessLevelBasic {
      * Default value is `AND`.
      * Possible values are `AND` and `OR`.
      * 
-     */
+    */
     public Optional<String> getCombiningFunction() {
         return Optional.ofNullable(this.combiningFunction);
     }
@@ -56,7 +56,7 @@ public final class AccessLevelBasic {
      * A set of requirements for the AccessLevel to be granted.
      * Structure is documented below.
      * 
-     */
+    */
     public List<AccessLevelBasicCondition> getConditions() {
         return this.conditions;
     }
@@ -92,7 +92,6 @@ public final class AccessLevelBasic {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public AccessLevelBasic build() {
             return new AccessLevelBasic(combiningFunction, conditions);
         }

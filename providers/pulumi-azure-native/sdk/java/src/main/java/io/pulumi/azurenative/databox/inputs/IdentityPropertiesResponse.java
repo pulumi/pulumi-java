@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.UserAssignedPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -35,7 +35,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="userAssigned")
-    private final @Nullable UserAssignedPropertiesResponse userAssigned;
+      private final @Nullable UserAssignedPropertiesResponse userAssigned;
 
     public Optional<UserAssignedPropertiesResponse> getUserAssigned() {
         return this.userAssigned == null ? Optional.empty() : Optional.ofNullable(this.userAssigned);
@@ -84,7 +84,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
             this.userAssigned = userAssigned;
             return this;
         }
-
         public IdentityPropertiesResponse build() {
             return new IdentityPropertiesResponse(type, userAssigned);
         }

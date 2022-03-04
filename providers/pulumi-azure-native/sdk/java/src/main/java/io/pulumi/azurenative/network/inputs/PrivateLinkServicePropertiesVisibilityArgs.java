@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivateLinkServicePropertiesVisibilityArgs extends io.pulumi.
      * 
      */
     @InputImport(name="subscriptions")
-    private final @Nullable Input<List<String>> subscriptions;
+      private final @Nullable Input<List<String>> subscriptions;
 
     public Input<List<String>> getSubscriptions() {
         return this.subscriptions == null ? Input.empty() : this.subscriptions;
@@ -67,7 +67,6 @@ public final class PrivateLinkServicePropertiesVisibilityArgs extends io.pulumi.
             this.subscriptions = Input.ofNullable(subscriptions);
             return this;
         }
-
         public PrivateLinkServicePropertiesVisibilityArgs build() {
             return new PrivateLinkServicePropertiesVisibilityArgs(subscriptions);
         }

@@ -34,7 +34,6 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs extends i
         public Builder(GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs build() {
             return new GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs();
         }

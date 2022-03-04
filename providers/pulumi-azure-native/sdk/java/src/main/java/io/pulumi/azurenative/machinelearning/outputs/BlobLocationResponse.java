@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class BlobLocationResponse {
     /**
      * Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
      * 
-     */
+    */
     public Optional<String> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -76,7 +76,6 @@ public final class BlobLocationResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public BlobLocationResponse build() {
             return new BlobLocationResponse(credentials, uri);
         }

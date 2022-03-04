@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.ConfigFileResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.ImportFileResponse;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class TargetConfigurationResponse {
     /**
      * The configuration to use for this deployment.
      * 
-     */
+    */
     public ConfigFileResponse getConfig() {
         return this.config;
     }
     /**
      * Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
      * 
-     */
+    */
     public List<ImportFileResponse> getImports() {
         return this.imports;
     }
@@ -76,7 +76,6 @@ public final class TargetConfigurationResponse {
             this.imports = Objects.requireNonNull(imports);
             return this;
         }
-
         public TargetConfigurationResponse build() {
             return new TargetConfigurationResponse(config, imports);
         }

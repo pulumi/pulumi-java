@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetPrivateEndpointArgs;
 import io.pulumi.azurenative.network.outputs.GetPrivateEndpointResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpoint {
-/**
- * Private endpoint resource.
+    private GetPrivateEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointArgs.Builder a);
+    }
+    private static GetPrivateEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Private endpoint resource.
  * API Version: 2020-11-01.
  * 
- *
- * Private endpoint resource.
+     *
+     * Private endpoint resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Private endpoint resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Private endpoint resource.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointResult> invokeAsync(GetPrivateEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateEndpoint", TypeShape.of(GetPrivateEndpointResult.class), args == null ? GetPrivateEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -156,42 +156,42 @@ public final class GetScheduledAlertRuleResult {
     /**
      * The Name of the alert rule template used to create this rule.
      * 
-     */
+    */
     public Optional<String> getAlertRuleTemplateName() {
         return Optional.ofNullable(this.alertRuleTemplateName);
     }
     /**
      * The description of the alert rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name for alerts created by this alert rule.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Determines whether this alert rule is enabled or disabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -199,91 +199,91 @@ public final class GetScheduledAlertRuleResult {
      * The kind of the alert rule
      * Expected value is 'Scheduled'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The last time that this alert rule has been modified.
      * 
-     */
+    */
     public String getLastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The query that creates alerts for this rule.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
     /**
      * The frequency (in ISO 8601 duration format) for this alert rule to run.
      * 
-     */
+    */
     public String getQueryFrequency() {
         return this.queryFrequency;
     }
     /**
      * The period (in ISO 8601 duration format) that this alert rule looks at.
      * 
-     */
+    */
     public String getQueryPeriod() {
         return this.queryPeriod;
     }
     /**
      * The severity for alerts created by this alert rule.
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
      * 
-     */
+    */
     public String getSuppressionDuration() {
         return this.suppressionDuration;
     }
     /**
      * Determines whether the suppression for this alert rule is enabled or disabled.
      * 
-     */
+    */
     public Boolean getSuppressionEnabled() {
         return this.suppressionEnabled;
     }
     /**
      * The tactics of the alert rule
      * 
-     */
+    */
     public List<String> getTactics() {
         return this.tactics == null ? List.of() : this.tactics;
     }
     /**
      * The operation against the threshold that triggers alert rule.
      * 
-     */
+    */
     public String getTriggerOperator() {
         return this.triggerOperator;
     }
     /**
      * The threshold triggers this alert rule.
      * 
-     */
+    */
     public Integer getTriggerThreshold() {
         return this.triggerThreshold;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -438,7 +438,6 @@ public final class GetScheduledAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScheduledAlertRuleResult build() {
             return new GetScheduledAlertRuleResult(alertRuleTemplateName, description, displayName, enabled, etag, id, kind, lastModifiedUtc, name, query, queryFrequency, queryPeriod, severity, suppressionDuration, suppressionEnabled, tactics, triggerOperator, triggerThreshold, type);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefi
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionResponseResponsePython;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionResponseResponseR;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionResponseResponseSpark;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * 
      */
     @InputImport(name="docker")
-    private final @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
+      private final @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
 
     public Optional<ModelEnvironmentDefinitionResponseResponseDocker> getDocker() {
         return this.docker == null ? Optional.empty() : Optional.ofNullable(this.docker);
@@ -39,7 +39,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Map<String,String> environmentVariables;
+      private final @Nullable Map<String,String> environmentVariables;
 
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
@@ -50,7 +50,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * 
      */
     @InputImport(name="inferencingStackVersion")
-    private final @Nullable String inferencingStackVersion;
+      private final @Nullable String inferencingStackVersion;
 
     public Optional<String> getInferencingStackVersion() {
         return this.inferencingStackVersion == null ? Optional.empty() : Optional.ofNullable(this.inferencingStackVersion);
@@ -61,7 +61,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -72,7 +72,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * 
      */
     @InputImport(name="python")
-    private final @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
+      private final @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
 
     public Optional<ModelEnvironmentDefinitionResponseResponsePython> getPython() {
         return this.python == null ? Optional.empty() : Optional.ofNullable(this.python);
@@ -83,7 +83,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * 
      */
     @InputImport(name="r")
-    private final @Nullable ModelEnvironmentDefinitionResponseResponseR r;
+      private final @Nullable ModelEnvironmentDefinitionResponseResponseR r;
 
     public Optional<ModelEnvironmentDefinitionResponseResponseR> getR() {
         return this.r == null ? Optional.empty() : Optional.ofNullable(this.r);
@@ -94,7 +94,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * 
      */
     @InputImport(name="spark")
-    private final @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
+      private final @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
 
     public Optional<ModelEnvironmentDefinitionResponseResponseSpark> getSpark() {
         return this.spark == null ? Optional.empty() : Optional.ofNullable(this.spark);
@@ -105,7 +105,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -214,7 +214,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
             this.version = version;
             return this;
         }
-
         public EnvironmentImageResponseResponseEnvironment build() {
             return new EnvironmentImageResponseResponseEnvironment(docker, environmentVariables, inferencingStackVersion, name, python, r, spark, version);
         }

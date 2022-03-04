@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.UpcomingMaintenanceTimeWindowResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="canReschedule", required=true)
-    private final Boolean canReschedule;
+      private final Boolean canReschedule;
 
     public Boolean getCanReschedule() {
         return this.canReschedule;
@@ -34,7 +34,7 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="startTimeWindow", required=true)
-    private final UpcomingMaintenanceTimeWindowResponse startTimeWindow;
+      private final UpcomingMaintenanceTimeWindowResponse startTimeWindow;
 
     public UpcomingMaintenanceTimeWindowResponse getStartTimeWindow() {
         return this.startTimeWindow;
@@ -45,7 +45,7 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -104,7 +104,6 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public UpcomingMaintenanceResponse build() {
             return new UpcomingMaintenanceResponse(canReschedule, startTimeWindow, type);
         }

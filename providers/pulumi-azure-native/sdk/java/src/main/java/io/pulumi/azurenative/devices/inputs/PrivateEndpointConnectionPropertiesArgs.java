@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-    private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -65,7 +65,6 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
             this.privateLinkServiceConnectionState = Input.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesArgs build() {
             return new PrivateEndpointConnectionPropertiesArgs(privateLinkServiceConnectionState);
         }

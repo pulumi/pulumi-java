@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class GetContentItemResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the content item.
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GetContentItemResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContentItemResult build() {
             return new GetContentItemResult(id, name, properties, type);
         }

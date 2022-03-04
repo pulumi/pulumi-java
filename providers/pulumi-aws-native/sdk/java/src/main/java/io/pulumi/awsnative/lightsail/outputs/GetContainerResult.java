@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.outputs;
 import io.pulumi.awsnative.lightsail.outputs.ContainerPublicDomainName;
 import io.pulumi.awsnative.lightsail.outputs.ContainerServiceDeployment;
 import io.pulumi.awsnative.lightsail.outputs.ContainerTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -80,49 +80,49 @@ public final class GetContainerResult {
     /**
      * Describes a container deployment configuration of an Amazon Lightsail container service.
      * 
-     */
+    */
     public Optional<ContainerServiceDeployment> getContainerServiceDeployment() {
         return Optional.ofNullable(this.containerServiceDeployment);
     }
     /**
      * A Boolean value to indicate whether the container service is disabled.
      * 
-     */
+    */
     public Optional<Boolean> getIsDisabled() {
         return Optional.ofNullable(this.isDisabled);
     }
     /**
      * The power specification for the container service.
      * 
-     */
+    */
     public Optional<String> getPower() {
         return Optional.ofNullable(this.power);
     }
     /**
      * The public domain names to use with the container service, such as example.com and www.example.com.
      * 
-     */
+    */
     public List<ContainerPublicDomainName> getPublicDomainNames() {
         return this.publicDomainNames == null ? List.of() : this.publicDomainNames;
     }
     /**
      * The scale specification for the container service.
      * 
-     */
+    */
     public Optional<Integer> getScale() {
         return Optional.ofNullable(this.scale);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<ContainerTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The publicly accessible URL of the container service.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
@@ -200,7 +200,6 @@ public final class GetContainerResult {
             this.url = url;
             return this;
         }
-
         public GetContainerResult build() {
             return new GetContainerResult(containerArn, containerServiceDeployment, isDisabled, power, publicDomainNames, scale, tags, url);
         }

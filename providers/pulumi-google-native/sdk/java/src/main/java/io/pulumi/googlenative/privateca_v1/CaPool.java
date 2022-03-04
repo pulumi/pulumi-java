@@ -5,8 +5,8 @@ package io.pulumi.googlenative.privateca_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1.CaPoolArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.IssuancePolicyResponse;
@@ -93,6 +93,37 @@ public class CaPool extends io.pulumi.resources.CustomResource {
         return this.tier;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CaPoolArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.privateca_v1.CaPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.privateca_v1.CaPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CaPool(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CaPool(String name) {
+        this(name, CaPoolArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CaPool(String name, CaPoolArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

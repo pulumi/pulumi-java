@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleModifyPropertiesActionResponseActionConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AutomationRuleModifyPropertiesActionResponse extends io.pulum
      * 
      */
     @InputImport(name="actionConfiguration", required=true)
-    private final AutomationRuleModifyPropertiesActionResponseActionConfiguration actionConfiguration;
+      private final AutomationRuleModifyPropertiesActionResponseActionConfiguration actionConfiguration;
 
     public AutomationRuleModifyPropertiesActionResponseActionConfiguration getActionConfiguration() {
         return this.actionConfiguration;
@@ -35,7 +35,7 @@ public final class AutomationRuleModifyPropertiesActionResponse extends io.pulum
      * 
      */
     @InputImport(name="actionType", required=true)
-    private final String actionType;
+      private final String actionType;
 
     public String getActionType() {
         return this.actionType;
@@ -46,7 +46,7 @@ public final class AutomationRuleModifyPropertiesActionResponse extends io.pulum
      * 
      */
     @InputImport(name="order", required=true)
-    private final Integer order;
+      private final Integer order;
 
     public Integer getOrder() {
         return this.order;
@@ -105,7 +105,6 @@ public final class AutomationRuleModifyPropertiesActionResponse extends io.pulum
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public AutomationRuleModifyPropertiesActionResponse build() {
             return new AutomationRuleModifyPropertiesActionResponse(actionConfiguration, actionType, order);
         }

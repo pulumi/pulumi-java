@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -33,7 +33,7 @@ public final class ClusterClusterConfigEndpointConfig {
      * The flag to enable http access to specific ports
      * on the cluster from external sources (aka Component Gateway). Defaults to false.
      * 
-     */
+    */
     public Boolean getEnableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
@@ -72,7 +72,6 @@ public final class ClusterClusterConfigEndpointConfig {
             this.httpPorts = httpPorts;
             return this;
         }
-
         public ClusterClusterConfigEndpointConfig build() {
             return new ClusterClusterConfigEndpointConfig(enableHttpPortAccess, httpPorts);
         }

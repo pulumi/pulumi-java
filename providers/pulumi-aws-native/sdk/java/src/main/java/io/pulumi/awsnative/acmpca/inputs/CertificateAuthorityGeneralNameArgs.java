@@ -7,7 +7,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityEdiPartyNameArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityOtherNameArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthoritySubjectArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,56 +22,56 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
     public static final CertificateAuthorityGeneralNameArgs Empty = new CertificateAuthorityGeneralNameArgs();
 
     @InputImport(name="directoryName")
-    private final @Nullable Input<CertificateAuthoritySubjectArgs> directoryName;
+      private final @Nullable Input<CertificateAuthoritySubjectArgs> directoryName;
 
     public Input<CertificateAuthoritySubjectArgs> getDirectoryName() {
         return this.directoryName == null ? Input.empty() : this.directoryName;
     }
 
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+      private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
     }
 
     @InputImport(name="ediPartyName")
-    private final @Nullable Input<CertificateAuthorityEdiPartyNameArgs> ediPartyName;
+      private final @Nullable Input<CertificateAuthorityEdiPartyNameArgs> ediPartyName;
 
     public Input<CertificateAuthorityEdiPartyNameArgs> getEdiPartyName() {
         return this.ediPartyName == null ? Input.empty() : this.ediPartyName;
     }
 
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
     @InputImport(name="otherName")
-    private final @Nullable Input<CertificateAuthorityOtherNameArgs> otherName;
+      private final @Nullable Input<CertificateAuthorityOtherNameArgs> otherName;
 
     public Input<CertificateAuthorityOtherNameArgs> getOtherName() {
         return this.otherName == null ? Input.empty() : this.otherName;
     }
 
     @InputImport(name="registeredId")
-    private final @Nullable Input<String> registeredId;
+      private final @Nullable Input<String> registeredId;
 
     public Input<String> getRegisteredId() {
         return this.registeredId == null ? Input.empty() : this.registeredId;
     }
 
     @InputImport(name="rfc822Name")
-    private final @Nullable Input<String> rfc822Name;
+      private final @Nullable Input<String> rfc822Name;
 
     public Input<String> getRfc822Name() {
         return this.rfc822Name == null ? Input.empty() : this.rfc822Name;
     }
 
     @InputImport(name="uniformResourceIdentifier")
-    private final @Nullable Input<String> uniformResourceIdentifier;
+      private final @Nullable Input<String> uniformResourceIdentifier;
 
     public Input<String> getUniformResourceIdentifier() {
         return this.uniformResourceIdentifier == null ? Input.empty() : this.uniformResourceIdentifier;
@@ -220,7 +220,6 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
             this.uniformResourceIdentifier = Input.ofNullable(uniformResourceIdentifier);
             return this;
         }
-
         public CertificateAuthorityGeneralNameArgs build() {
             return new CertificateAuthorityGeneralNameArgs(directoryName, dnsName, ediPartyName, ipAddress, otherName, registeredId, rfc822Name, uniformResourceIdentifier);
         }

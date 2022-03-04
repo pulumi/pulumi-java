@@ -5,7 +5,7 @@ package io.pulumi.azurenative.relay;
 
 import io.pulumi.azurenative.relay.enums.Relaytype;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -32,7 +32,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relayName")
-    private final @Nullable Input<String> relayName;
+      private final @Nullable Input<String> relayName;
 
     public Input<String> getRelayName() {
         return this.relayName == null ? Input.empty() : this.relayName;
@@ -43,7 +43,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relayType")
-    private final @Nullable Input<Relaytype> relayType;
+      private final @Nullable Input<Relaytype> relayType;
 
     public Input<Relaytype> getRelayType() {
         return this.relayType == null ? Input.empty() : this.relayType;
@@ -54,7 +54,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresClientAuthorization")
-    private final @Nullable Input<Boolean> requiresClientAuthorization;
+      private final @Nullable Input<Boolean> requiresClientAuthorization;
 
     public Input<Boolean> getRequiresClientAuthorization() {
         return this.requiresClientAuthorization == null ? Input.empty() : this.requiresClientAuthorization;
@@ -65,7 +65,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresTransportSecurity")
-    private final @Nullable Input<Boolean> requiresTransportSecurity;
+      private final @Nullable Input<Boolean> requiresTransportSecurity;
 
     public Input<Boolean> getRequiresTransportSecurity() {
         return this.requiresTransportSecurity == null ? Input.empty() : this.requiresTransportSecurity;
@@ -76,7 +76,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userMetadata")
-    private final @Nullable Input<String> userMetadata;
+      private final @Nullable Input<String> userMetadata;
 
     public Input<String> getUserMetadata() {
         return this.userMetadata == null ? Input.empty() : this.userMetadata;
@@ -221,7 +221,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
             this.userMetadata = Input.ofNullable(userMetadata);
             return this;
         }
-
         public WCFRelayArgs build() {
             return new WCFRelayArgs(namespaceName, relayName, relayType, requiresClientAuthorization, requiresTransportSecurity, resourceGroupName, userMetadata);
         }

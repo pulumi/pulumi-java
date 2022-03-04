@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class IngressClassParametersReference {
     /**
      * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
      * 
-     */
+    */
     public Optional<String> getApiGroup() {
         return Optional.ofNullable(this.apiGroup);
     }
     /**
      * Kind is the type of resource being referenced.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name is the name of resource being referenced.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Namespace is the namespace of the resource being referenced. This field is required when scope is set to "Namespace" and must be unset when scope is set to "Cluster".
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Scope represents if this refers to a cluster or namespace scoped resource. This may be set to "Cluster" (default) or "Namespace".
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
@@ -139,7 +139,6 @@ public final class IngressClassParametersReference {
             this.scope = scope;
             return this;
         }
-
         public IngressClassParametersReference build() {
             return new IngressClassParametersReference(apiGroup, kind, name, namespace, scope);
         }

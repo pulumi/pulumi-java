@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
     /**
      * If set to true, allowed_package_names are not enforced.
      * 
-     */
+    */
     public Boolean getAllowAllPackageNames() {
         return this.allowAllPackageNames;
     }
     /**
      * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
      * 
-     */
+    */
     public List<String> getAllowedPackageNames() {
         return this.allowedPackageNames;
     }
@@ -76,7 +76,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
             this.allowedPackageNames = Objects.requireNonNull(allowedPackageNames);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(allowAllPackageNames, allowedPackageNames);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EntityKeyResponse {
     /**
      * The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source}`.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
@@ -52,7 +52,6 @@ public final class EntityKeyResponse {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public EntityKeyResponse build() {
             return new EntityKeyResponse(namespace);
         }

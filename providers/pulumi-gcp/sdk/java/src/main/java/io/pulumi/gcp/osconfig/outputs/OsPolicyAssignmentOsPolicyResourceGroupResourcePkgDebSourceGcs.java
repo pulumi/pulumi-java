@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGc
     /**
      * Required. Bucket of the Cloud Storage object.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * Generation number of the Cloud Storage object.
      * 
-     */
+    */
     public Optional<Integer> getGeneration() {
         return Optional.ofNullable(this.generation);
     }
     /**
      * Required. Name of the Cloud Storage object.
      * 
-     */
+    */
     public String getObject() {
         return this.object;
     }
@@ -98,7 +98,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGc
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs(bucket, generation, object);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.RestorePointCollectionSourcePropertiesResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -86,63 +86,63 @@ public final class GetRestorePointCollectionResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the restore point collection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The unique id of the restore point collection.
      * 
-     */
+    */
     public String getRestorePointCollectionId() {
         return this.restorePointCollectionId;
     }
     /**
      * A list containing all restore points created under this restore point collection.
      * 
-     */
+    */
     public List<RestorePointResponse> getRestorePoints() {
         return this.restorePoints;
     }
     /**
      * The properties of the source resource that this restore point collection is created from.
      * 
-     */
+    */
     public Optional<RestorePointCollectionSourcePropertiesResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -227,7 +227,6 @@ public final class GetRestorePointCollectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRestorePointCollectionResult build() {
             return new GetRestorePointCollectionResult(id, location, name, provisioningState, restorePointCollectionId, restorePoints, source, tags, type);
         }

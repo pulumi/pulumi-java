@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -37,7 +37,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="binaryData")
-    private final @Nullable Input<Map<String,String>> binaryData;
+      private final @Nullable Input<Map<String,String>> binaryData;
 
     public Input<Map<String,String>> getBinaryData() {
         return this.binaryData == null ? Input.empty() : this.binaryData;
@@ -48,7 +48,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<Map<String,String>> data;
+      private final @Nullable Input<Map<String,String>> data;
 
     public Input<Map<String,String>> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -59,7 +59,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="immutable")
-    private final @Nullable Input<Boolean> immutable;
+      private final @Nullable Input<Boolean> immutable;
 
     public Input<Boolean> getImmutable() {
         return this.immutable == null ? Input.empty() : this.immutable;
@@ -70,7 +70,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -81,7 +81,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -200,7 +200,6 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public ConfigMapArgs build() {
             return new ConfigMapArgs(apiVersion, binaryData, data, immutable, kind, metadata);
         }

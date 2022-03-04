@@ -10,7 +10,7 @@ import io.pulumi.awsnative.dynamodb.inputs.GlobalTableReplicaGlobalSecondaryInde
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableReplicaSSESpecificationArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,49 +22,49 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
     public static final GlobalTableReplicaSpecificationArgs Empty = new GlobalTableReplicaSpecificationArgs();
 
     @InputImport(name="contributorInsightsSpecification")
-    private final @Nullable Input<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
+      private final @Nullable Input<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
 
     public Input<GlobalTableContributorInsightsSpecificationArgs> getContributorInsightsSpecification() {
         return this.contributorInsightsSpecification == null ? Input.empty() : this.contributorInsightsSpecification;
     }
 
     @InputImport(name="globalSecondaryIndexes")
-    private final @Nullable Input<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes;
+      private final @Nullable Input<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes;
 
     public Input<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> getGlobalSecondaryIndexes() {
         return this.globalSecondaryIndexes == null ? Input.empty() : this.globalSecondaryIndexes;
     }
 
     @InputImport(name="pointInTimeRecoverySpecification")
-    private final @Nullable Input<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification;
+      private final @Nullable Input<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification;
 
     public Input<GlobalTablePointInTimeRecoverySpecificationArgs> getPointInTimeRecoverySpecification() {
         return this.pointInTimeRecoverySpecification == null ? Input.empty() : this.pointInTimeRecoverySpecification;
     }
 
     @InputImport(name="readProvisionedThroughputSettings")
-    private final @Nullable Input<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
+      private final @Nullable Input<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
 
     public Input<GlobalTableReadProvisionedThroughputSettingsArgs> getReadProvisionedThroughputSettings() {
         return this.readProvisionedThroughputSettings == null ? Input.empty() : this.readProvisionedThroughputSettings;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="sSESpecification")
-    private final @Nullable Input<GlobalTableReplicaSSESpecificationArgs> sSESpecification;
+      private final @Nullable Input<GlobalTableReplicaSSESpecificationArgs> sSESpecification;
 
     public Input<GlobalTableReplicaSSESpecificationArgs> getSSESpecification() {
         return this.sSESpecification == null ? Input.empty() : this.sSESpecification;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<GlobalTableTagArgs>> tags;
+      private final @Nullable Input<List<GlobalTableTagArgs>> tags;
 
     public Input<List<GlobalTableTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -198,7 +198,6 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public GlobalTableReplicaSpecificationArgs build() {
             return new GlobalTableReplicaSpecificationArgs(contributorInsightsSpecification, globalSecondaryIndexes, pointInTimeRecoverySpecification, readProvisionedThroughputSettings, region, sSESpecification, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.MetadataFilterLabelMatchResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class MetadataFilterResponse {
     /**
      * The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries.
      * 
-     */
+    */
     public List<MetadataFilterLabelMatchResponse> getFilterLabels() {
         return this.filterLabels;
     }
     /**
      * Specifies how individual filter label matches within the list of filterLabels and contributes toward the overall metadataFilter match. Supported values are: - MATCH_ANY: at least one of the filterLabels must have a matching label in the provided metadata. - MATCH_ALL: all filterLabels must have matching labels in the provided metadata.
      * 
-     */
+    */
     public String getFilterMatchCriteria() {
         return this.filterMatchCriteria;
     }
@@ -76,7 +76,6 @@ public final class MetadataFilterResponse {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
-
         public MetadataFilterResponse build() {
             return new MetadataFilterResponse(filterLabels, filterMatchCriteria);
         }

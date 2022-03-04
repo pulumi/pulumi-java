@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class ImageRepositoryCredentialResponse {
     /**
      * Image repository url (e.g.: mcr.microsoft.com).
      * 
-     */
+    */
     public String getImageRepositoryUrl() {
         return this.imageRepositoryUrl;
     }
     /**
      * Repository user password.
      * 
-     */
+    */
     public Optional<AsymmetricEncryptedSecretResponse> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Repository user name.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
@@ -98,7 +98,6 @@ public final class ImageRepositoryCredentialResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ImageRepositoryCredentialResponse build() {
             return new ImageRepositoryCredentialResponse(imageRepositoryUrl, password, userName);
         }

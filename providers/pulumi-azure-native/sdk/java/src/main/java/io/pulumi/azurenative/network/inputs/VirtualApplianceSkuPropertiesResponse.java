@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="bundledScaleUnit")
-    private final @Nullable String bundledScaleUnit;
+      private final @Nullable String bundledScaleUnit;
 
     public Optional<String> getBundledScaleUnit() {
         return this.bundledScaleUnit == null ? Optional.empty() : Optional.ofNullable(this.bundledScaleUnit);
@@ -34,7 +34,7 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="marketPlaceVersion")
-    private final @Nullable String marketPlaceVersion;
+      private final @Nullable String marketPlaceVersion;
 
     public Optional<String> getMarketPlaceVersion() {
         return this.marketPlaceVersion == null ? Optional.empty() : Optional.ofNullable(this.marketPlaceVersion);
@@ -45,7 +45,7 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="vendor")
-    private final @Nullable String vendor;
+      private final @Nullable String vendor;
 
     public Optional<String> getVendor() {
         return this.vendor == null ? Optional.empty() : Optional.ofNullable(this.vendor);
@@ -104,7 +104,6 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
             this.vendor = vendor;
             return this;
         }
-
         public VirtualApplianceSkuPropertiesResponse build() {
             return new VirtualApplianceSkuPropertiesResponse(bundledScaleUnit, marketPlaceVersion, vendor);
         }

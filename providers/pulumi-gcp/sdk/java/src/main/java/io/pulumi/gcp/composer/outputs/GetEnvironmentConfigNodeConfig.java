@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigNodeConfigIpAllocationPolicy;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -179,7 +179,6 @@ public final class GetEnvironmentConfigNodeConfig {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetEnvironmentConfigNodeConfig build() {
             return new GetEnvironmentConfigNodeConfig(diskSizeGb, enableIpMasqAgent, ipAllocationPolicies, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags, zone);
         }

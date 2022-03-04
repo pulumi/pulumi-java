@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -153,133 +153,133 @@ public final class GetShareSubscriptionResult {
     /**
      * Time at which the share subscription was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The expiration date of the share subscription.
      * 
-     */
+    */
     public Optional<String> getExpirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The invitation id.
      * 
-     */
+    */
     public String getInvitationId() {
         return this.invitationId;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Email of the provider who created the resource
      * 
-     */
+    */
     public String getProviderEmail() {
         return this.providerEmail;
     }
     /**
      * Name of the provider who created the resource
      * 
-     */
+    */
     public String getProviderName() {
         return this.providerName;
     }
     /**
      * Tenant name of the provider who created the resource
      * 
-     */
+    */
     public String getProviderTenantName() {
         return this.providerTenantName;
     }
     /**
      * Provisioning state of the share subscription
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Description of share
      * 
-     */
+    */
     public String getShareDescription() {
         return this.shareDescription;
     }
     /**
      * Kind of share
      * 
-     */
+    */
     public String getShareKind() {
         return this.shareKind;
     }
     /**
      * Name of the share
      * 
-     */
+    */
     public String getShareName() {
         return this.shareName;
     }
     /**
      * Gets the current status of share subscription.
      * 
-     */
+    */
     public String getShareSubscriptionStatus() {
         return this.shareSubscriptionStatus;
     }
     /**
      * Terms of a share
      * 
-     */
+    */
     public String getShareTerms() {
         return this.shareTerms;
     }
     /**
      * Source share location.
      * 
-     */
+    */
     public String getSourceShareLocation() {
         return this.sourceShareLocation;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Email of the user who created the resource
      * 
-     */
+    */
     public String getUserEmail() {
         return this.userEmail;
     }
     /**
      * Name of the user who created the resource
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
@@ -434,7 +434,6 @@ public final class GetShareSubscriptionResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetShareSubscriptionResult build() {
             return new GetShareSubscriptionResult(createdAt, expirationDate, id, invitationId, name, providerEmail, providerName, providerTenantName, provisioningState, shareDescription, shareKind, shareName, shareSubscriptionStatus, shareTerms, sourceShareLocation, systemData, type, userEmail, userName);
         }

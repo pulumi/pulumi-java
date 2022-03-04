@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunResponse;
 import io.pulumi.googlenative.bigquery_v2.inputs.ModelDefinitionModelOptionsResponse;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="modelOptions", required=true)
-    private final ModelDefinitionModelOptionsResponse modelOptions;
+      private final ModelDefinitionModelOptionsResponse modelOptions;
 
     public ModelDefinitionModelOptionsResponse getModelOptions() {
         return this.modelOptions;
@@ -30,7 +30,7 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="trainingRuns", required=true)
-    private final List<BqmlTrainingRunResponse> trainingRuns;
+      private final List<BqmlTrainingRunResponse> trainingRuns;
 
     public List<BqmlTrainingRunResponse> getTrainingRuns() {
         return this.trainingRuns;
@@ -79,7 +79,6 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
             this.trainingRuns = Objects.requireNonNull(trainingRuns);
             return this;
         }
-
         public ModelDefinitionResponse build() {
             return new ModelDefinitionResponse(modelOptions, trainingRuns);
         }

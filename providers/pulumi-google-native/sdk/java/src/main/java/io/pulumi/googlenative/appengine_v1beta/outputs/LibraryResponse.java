@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class LibraryResponse {
     /**
      * Name of the library. Example: "django".
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Version of the library to select, or "latest".
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -74,7 +74,6 @@ public final class LibraryResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public LibraryResponse build() {
             return new LibraryResponse(name, version);
         }

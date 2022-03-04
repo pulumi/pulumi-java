@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
      * 
      */
     @InputImport(name="allowMultiLabel", required=true)
-    private final Boolean allowMultiLabel;
+      private final Boolean allowMultiLabel;
 
     public Boolean getAllowMultiLabel() {
         return this.allowMultiLabel;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
      * 
      */
     @InputImport(name="annotationSpecSet", required=true)
-    private final String annotationSpecSet;
+      private final String annotationSpecSet;
 
     public String getAnnotationSpecSet() {
         return this.annotationSpecSet;
@@ -44,7 +44,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
      * 
      */
     @InputImport(name="answerAggregationType", required=true)
-    private final String answerAggregationType;
+      private final String answerAggregationType;
 
     public String getAnswerAggregationType() {
         return this.answerAggregationType;
@@ -103,7 +103,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
             this.answerAggregationType = Objects.requireNonNull(answerAggregationType);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse(allowMultiLabel, annotationSpecSet, answerAggregationType);
         }

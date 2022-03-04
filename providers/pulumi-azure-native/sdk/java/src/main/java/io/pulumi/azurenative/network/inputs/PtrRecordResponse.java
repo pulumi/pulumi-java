@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PtrRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ptrdname")
-    private final @Nullable String ptrdname;
+      private final @Nullable String ptrdname;
 
     public Optional<String> getPtrdname() {
         return this.ptrdname == null ? Optional.empty() : Optional.ofNullable(this.ptrdname);
@@ -61,7 +61,6 @@ public final class PtrRecordResponse extends io.pulumi.resources.InvokeArgs {
             this.ptrdname = ptrdname;
             return this;
         }
-
         public PtrRecordResponse build() {
             return new PtrRecordResponse(ptrdname);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.projects.inputs.OrganizationPolicyBooleanPolicyArgs;
 import io.pulumi.gcp.projects.inputs.OrganizationPolicyListPolicyArgs;
 import io.pulumi.gcp.projects.inputs.OrganizationPolicyRestorePolicyArgs;
@@ -23,7 +23,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="booleanPolicy")
-    private final @Nullable Input<OrganizationPolicyBooleanPolicyArgs> booleanPolicy;
+      private final @Nullable Input<OrganizationPolicyBooleanPolicyArgs> booleanPolicy;
 
     public Input<OrganizationPolicyBooleanPolicyArgs> getBooleanPolicy() {
         return this.booleanPolicy == null ? Input.empty() : this.booleanPolicy;
@@ -34,7 +34,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="constraint", required=true)
-    private final Input<String> constraint;
+      private final Input<String> constraint;
 
     public Input<String> getConstraint() {
         return this.constraint;
@@ -45,7 +45,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="listPolicy")
-    private final @Nullable Input<OrganizationPolicyListPolicyArgs> listPolicy;
+      private final @Nullable Input<OrganizationPolicyListPolicyArgs> listPolicy;
 
     public Input<OrganizationPolicyListPolicyArgs> getListPolicy() {
         return this.listPolicy == null ? Input.empty() : this.listPolicy;
@@ -56,7 +56,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+      private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -67,7 +67,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="restorePolicy")
-    private final @Nullable Input<OrganizationPolicyRestorePolicyArgs> restorePolicy;
+      private final @Nullable Input<OrganizationPolicyRestorePolicyArgs> restorePolicy;
 
     public Input<OrganizationPolicyRestorePolicyArgs> getRestorePolicy() {
         return this.restorePolicy == null ? Input.empty() : this.restorePolicy;
@@ -78,7 +78,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -197,7 +197,6 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public OrganizationPolicyArgs build() {
             return new OrganizationPolicyArgs(booleanPolicy, constraint, listPolicy, project, restorePolicy, version);
         }

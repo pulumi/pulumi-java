@@ -6,7 +6,7 @@ package io.pulumi.azurenative.keyvault;
 import io.pulumi.azurenative.keyvault.inputs.MHSMPrivateLinkServiceConnectionStateArgs;
 import io.pulumi.azurenative.keyvault.inputs.ManagedHsmSkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -33,7 +33,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -55,7 +55,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<MHSMPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final @Nullable Input<MHSMPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<MHSMPrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -66,7 +66,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<ManagedHsmSkuArgs> sku;
+      private final @Nullable Input<ManagedHsmSkuArgs> sku;
 
     public Input<ManagedHsmSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -88,7 +88,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,6 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public MHSMPrivateEndpointConnectionArgs build() {
             return new MHSMPrivateEndpointConnectionArgs(location, name, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName, sku, tags);
         }

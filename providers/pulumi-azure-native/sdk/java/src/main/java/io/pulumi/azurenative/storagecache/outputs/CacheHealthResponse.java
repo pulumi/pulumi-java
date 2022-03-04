@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.ConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class CacheHealthResponse {
     /**
      * Outstanding conditions that need to be investigated and resolved.
      * 
-     */
+    */
     public List<ConditionResponse> getConditions() {
         return this.conditions;
     }
     /**
      * List of Cache health states.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Describes explanation of state.
      * 
-     */
+    */
     public Optional<String> getStatusDescription() {
         return Optional.ofNullable(this.statusDescription);
     }
@@ -99,7 +99,6 @@ public final class CacheHealthResponse {
             this.statusDescription = statusDescription;
             return this;
         }
-
         public CacheHealthResponse build() {
             return new CacheHealthResponse(conditions, state, statusDescription);
         }

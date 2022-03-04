@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ConnectorWorkerConfiguration {
     /**
      * The revision of the worker configuration to use.
      * 
-     */
+    */
     public Integer getRevision() {
         return this.revision;
     }
     /**
      * The Amazon Resource Name (ARN) of the worker configuration to use.
      * 
-     */
+    */
     public String getWorkerConfigurationArn() {
         return this.workerConfigurationArn;
     }
@@ -75,7 +75,6 @@ public final class ConnectorWorkerConfiguration {
             this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn);
             return this;
         }
-
         public ConnectorWorkerConfiguration build() {
             return new ConnectorWorkerConfiguration(revision, workerConfigurationArn);
         }

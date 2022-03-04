@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs extends io.pu
      * 
      */
     @InputImport(name="sysctls", required=true)
-    private final Input<Map<String,String>> sysctls;
+      private final Input<Map<String,String>> sysctls;
 
     public Input<Map<String,String>> getSysctls() {
         return this.sysctls;
@@ -64,7 +64,6 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs extends io.pu
             this.sysctls = Input.of(Objects.requireNonNull(sysctls));
             return this;
         }
-
         public ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs build() {
             return new ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs(sysctls);
         }

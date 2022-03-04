@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,21 +42,21 @@ public final class TrafficWeightResponse {
     /**
      * Indicates that the traffic weight belongs to a latest stable revision
      * 
-     */
+    */
     public Optional<Boolean> getLatestRevision() {
         return Optional.ofNullable(this.latestRevision);
     }
     /**
      * Name of a revision
      * 
-     */
+    */
     public Optional<String> getRevisionName() {
         return Optional.ofNullable(this.revisionName);
     }
     /**
      * Traffic weight assigned to a revision
      * 
-     */
+    */
     public Optional<Integer> getWeight() {
         return Optional.ofNullable(this.weight);
     }
@@ -99,7 +99,6 @@ public final class TrafficWeightResponse {
             this.weight = weight;
             return this;
         }
-
         public TrafficWeightResponse build() {
             return new TrafficWeightResponse(latestRevision, revisionName, weight);
         }

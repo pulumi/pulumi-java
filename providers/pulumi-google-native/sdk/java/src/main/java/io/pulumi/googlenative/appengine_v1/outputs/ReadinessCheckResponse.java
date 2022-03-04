@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class ReadinessCheckResponse {
     /**
      * A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
      * 
-     */
+    */
     public String getAppStartTimeout() {
         return this.appStartTimeout;
     }
     /**
      * Interval between health checks.
      * 
-     */
+    */
     public String getCheckInterval() {
         return this.checkInterval;
     }
     /**
      * Number of consecutive failed checks required before removing traffic.
      * 
-     */
+    */
     public Integer getFailureThreshold() {
         return this.failureThreshold;
     }
     /**
      * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * The request path.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * Number of consecutive successful checks required before receiving traffic.
      * 
-     */
+    */
     public Integer getSuccessThreshold() {
         return this.successThreshold;
     }
     /**
      * Time before the check is considered failed.
      * 
-     */
+    */
     public String getTimeout() {
         return this.timeout;
     }
@@ -180,7 +180,6 @@ public final class ReadinessCheckResponse {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public ReadinessCheckResponse build() {
             return new ReadinessCheckResponse(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
         }

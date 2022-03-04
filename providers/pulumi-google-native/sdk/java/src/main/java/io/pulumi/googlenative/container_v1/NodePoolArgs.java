@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.MaxPodsConstraintArgs;
 import io.pulumi.googlenative.container_v1.inputs.NodeConfigArgs;
 import io.pulumi.googlenative.container_v1.inputs.NodeManagementArgs;
@@ -28,14 +28,14 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscaling")
-    private final @Nullable Input<NodePoolAutoscalingArgs> autoscaling;
+      private final @Nullable Input<NodePoolAutoscalingArgs> autoscaling;
 
     public Input<NodePoolAutoscalingArgs> getAutoscaling() {
         return this.autoscaling == null ? Input.empty() : this.autoscaling;
     }
 
     @InputImport(name="clusterId", required=true)
-    private final Input<String> clusterId;
+      private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;
@@ -46,7 +46,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<StatusConditionArgs>> conditions;
+      private final @Nullable Input<List<StatusConditionArgs>> conditions;
 
     public Input<List<StatusConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -57,7 +57,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<NodeConfigArgs> config;
+      private final @Nullable Input<NodeConfigArgs> config;
 
     public Input<NodeConfigArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -68,14 +68,14 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialNodeCount")
-    private final @Nullable Input<Integer> initialNodeCount;
+      private final @Nullable Input<Integer> initialNodeCount;
 
     public Input<Integer> getInitialNodeCount() {
         return this.initialNodeCount == null ? Input.empty() : this.initialNodeCount;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -86,7 +86,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -97,7 +97,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="management")
-    private final @Nullable Input<NodeManagementArgs> management;
+      private final @Nullable Input<NodeManagementArgs> management;
 
     public Input<NodeManagementArgs> getManagement() {
         return this.management == null ? Input.empty() : this.management;
@@ -108,7 +108,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxPodsConstraint")
-    private final @Nullable Input<MaxPodsConstraintArgs> maxPodsConstraint;
+      private final @Nullable Input<MaxPodsConstraintArgs> maxPodsConstraint;
 
     public Input<MaxPodsConstraintArgs> getMaxPodsConstraint() {
         return this.maxPodsConstraint == null ? Input.empty() : this.maxPodsConstraint;
@@ -119,7 +119,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -130,7 +130,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-    private final @Nullable Input<NodeNetworkConfigArgs> networkConfig;
+      private final @Nullable Input<NodeNetworkConfigArgs> networkConfig;
 
     public Input<NodeNetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -141,14 +141,14 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -159,7 +159,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradeSettings")
-    private final @Nullable Input<UpgradeSettingsArgs> upgradeSettings;
+      private final @Nullable Input<UpgradeSettingsArgs> upgradeSettings;
 
     public Input<UpgradeSettingsArgs> getUpgradeSettings() {
         return this.upgradeSettings == null ? Input.empty() : this.upgradeSettings;
@@ -170,7 +170,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -424,7 +424,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public NodePoolArgs build() {
             return new NodePoolArgs(autoscaling, clusterId, conditions, config, initialNodeCount, location, locations, management, maxPodsConstraint, name, networkConfig, parent, project, upgradeSettings, version);
         }

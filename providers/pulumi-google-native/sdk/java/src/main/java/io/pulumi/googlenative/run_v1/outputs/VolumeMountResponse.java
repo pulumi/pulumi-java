@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class VolumeMountResponse {
     /**
      * Path within the container at which the volume should be mounted. Must not contain ':'.
      * 
-     */
+    */
     public String getMountPath() {
         return this.mountPath;
     }
     /**
      * The name of the volume. There must be a corresponding Volume with the same name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * (Optional) Only true is accepted. Defaults to true.
      * 
-     */
+    */
     public Boolean getReadOnly() {
         return this.readOnly;
     }
     /**
      * (Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
      * 
-     */
+    */
     public String getSubPath() {
         return this.subPath;
     }
@@ -117,7 +117,6 @@ public final class VolumeMountResponse {
             this.subPath = Objects.requireNonNull(subPath);
             return this;
         }
-
         public VolumeMountResponse build() {
             return new VolumeMountResponse(mountPath, name, readOnly, subPath);
         }

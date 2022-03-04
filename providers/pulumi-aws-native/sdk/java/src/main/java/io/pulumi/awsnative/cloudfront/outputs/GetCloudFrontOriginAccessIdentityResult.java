@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.CloudFrontOriginAccessIdentityConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class GetCloudFrontOriginAccessIdentityResult {
             this.s3CanonicalUserId = s3CanonicalUserId;
             return this;
         }
-
         public GetCloudFrontOriginAccessIdentityResult build() {
             return new GetCloudFrontOriginAccessIdentityResult(cloudFrontOriginAccessIdentityConfig, id, s3CanonicalUserId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.maps.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ListAccountKeysResult {
     /**
      * The full Azure resource identifier of the Maps Account.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The primary key for accessing the Maps REST APIs.
      * 
-     */
+    */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * The secondary key for accessing the Maps REST APIs.
      * 
-     */
+    */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }
@@ -95,7 +95,6 @@ public final class ListAccountKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListAccountKeysResult build() {
             return new ListAccountKeysResult(id, primaryKey, secondaryKey);
         }

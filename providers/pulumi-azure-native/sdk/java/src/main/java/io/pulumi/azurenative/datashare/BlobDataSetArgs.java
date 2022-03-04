@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+      private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -41,7 +41,7 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSetName")
-    private final @Nullable Input<String> dataSetName;
+      private final @Nullable Input<String> dataSetName;
 
     public Input<String> getDataSetName() {
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
@@ -52,7 +52,7 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filePath", required=true)
-    private final Input<String> filePath;
+      private final Input<String> filePath;
 
     public Input<String> getFilePath() {
         return this.filePath;
@@ -64,7 +64,7 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -75,7 +75,7 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-    private final Input<String> resourceGroup;
+      private final Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup;
@@ -86,7 +86,7 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -97,7 +97,7 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final Input<String> shareName;
+      private final Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName;
@@ -108,7 +108,7 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountName", required=true)
-    private final Input<String> storageAccountName;
+      private final Input<String> storageAccountName;
 
     public Input<String> getStorageAccountName() {
         return this.storageAccountName;
@@ -119,7 +119,7 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-    private final Input<String> subscriptionId;
+      private final Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId;
@@ -298,7 +298,6 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
             this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
-
         public BlobDataSetArgs build() {
             return new BlobDataSetArgs(accountName, containerName, dataSetName, filePath, kind, resourceGroup, resourceGroupName, shareName, storageAccountName, subscriptionId);
         }

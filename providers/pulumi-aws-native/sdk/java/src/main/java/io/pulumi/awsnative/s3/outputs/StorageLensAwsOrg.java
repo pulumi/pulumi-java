@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class StorageLensAwsOrg {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public StorageLensAwsOrg build() {
             return new StorageLensAwsOrg(arn);
         }

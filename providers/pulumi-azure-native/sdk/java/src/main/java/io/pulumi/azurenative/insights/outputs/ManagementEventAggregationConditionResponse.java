@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ManagementEventAggregationConditionResponse {
     /**
      * the condition operator.
      * 
-     */
+    */
     public Optional<String> getOperator() {
         return Optional.ofNullable(this.operator);
     }
     /**
      * The threshold value that activates the alert.
      * 
-     */
+    */
     public Optional<Double> getThreshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
      * 
-     */
+    */
     public Optional<String> getWindowSize() {
         return Optional.ofNullable(this.windowSize);
     }
@@ -98,7 +98,6 @@ public final class ManagementEventAggregationConditionResponse {
             this.windowSize = windowSize;
             return this;
         }
-
         public ManagementEventAggregationConditionResponse build() {
             return new ManagementEventAggregationConditionResponse(operator, threshold, windowSize);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.CVSSv3AttackComplexity;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.CVSSv3AttackVector;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.CVSSv3AvailabilityImpact;
@@ -27,7 +27,7 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
     public static final CVSSv3Args Empty = new CVSSv3Args();
 
     @InputImport(name="attackComplexity")
-    private final @Nullable Input<CVSSv3AttackComplexity> attackComplexity;
+      private final @Nullable Input<CVSSv3AttackComplexity> attackComplexity;
 
     public Input<CVSSv3AttackComplexity> getAttackComplexity() {
         return this.attackComplexity == null ? Input.empty() : this.attackComplexity;
@@ -38,14 +38,14 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attackVector")
-    private final @Nullable Input<CVSSv3AttackVector> attackVector;
+      private final @Nullable Input<CVSSv3AttackVector> attackVector;
 
     public Input<CVSSv3AttackVector> getAttackVector() {
         return this.attackVector == null ? Input.empty() : this.attackVector;
     }
 
     @InputImport(name="availabilityImpact")
-    private final @Nullable Input<CVSSv3AvailabilityImpact> availabilityImpact;
+      private final @Nullable Input<CVSSv3AvailabilityImpact> availabilityImpact;
 
     public Input<CVSSv3AvailabilityImpact> getAvailabilityImpact() {
         return this.availabilityImpact == null ? Input.empty() : this.availabilityImpact;
@@ -56,56 +56,56 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseScore")
-    private final @Nullable Input<Double> baseScore;
+      private final @Nullable Input<Double> baseScore;
 
     public Input<Double> getBaseScore() {
         return this.baseScore == null ? Input.empty() : this.baseScore;
     }
 
     @InputImport(name="confidentialityImpact")
-    private final @Nullable Input<CVSSv3ConfidentialityImpact> confidentialityImpact;
+      private final @Nullable Input<CVSSv3ConfidentialityImpact> confidentialityImpact;
 
     public Input<CVSSv3ConfidentialityImpact> getConfidentialityImpact() {
         return this.confidentialityImpact == null ? Input.empty() : this.confidentialityImpact;
     }
 
     @InputImport(name="exploitabilityScore")
-    private final @Nullable Input<Double> exploitabilityScore;
+      private final @Nullable Input<Double> exploitabilityScore;
 
     public Input<Double> getExploitabilityScore() {
         return this.exploitabilityScore == null ? Input.empty() : this.exploitabilityScore;
     }
 
     @InputImport(name="impactScore")
-    private final @Nullable Input<Double> impactScore;
+      private final @Nullable Input<Double> impactScore;
 
     public Input<Double> getImpactScore() {
         return this.impactScore == null ? Input.empty() : this.impactScore;
     }
 
     @InputImport(name="integrityImpact")
-    private final @Nullable Input<CVSSv3IntegrityImpact> integrityImpact;
+      private final @Nullable Input<CVSSv3IntegrityImpact> integrityImpact;
 
     public Input<CVSSv3IntegrityImpact> getIntegrityImpact() {
         return this.integrityImpact == null ? Input.empty() : this.integrityImpact;
     }
 
     @InputImport(name="privilegesRequired")
-    private final @Nullable Input<CVSSv3PrivilegesRequired> privilegesRequired;
+      private final @Nullable Input<CVSSv3PrivilegesRequired> privilegesRequired;
 
     public Input<CVSSv3PrivilegesRequired> getPrivilegesRequired() {
         return this.privilegesRequired == null ? Input.empty() : this.privilegesRequired;
     }
 
     @InputImport(name="scope")
-    private final @Nullable Input<CVSSv3Scope> scope;
+      private final @Nullable Input<CVSSv3Scope> scope;
 
     public Input<CVSSv3Scope> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
     @InputImport(name="userInteraction")
-    private final @Nullable Input<CVSSv3UserInteraction> userInteraction;
+      private final @Nullable Input<CVSSv3UserInteraction> userInteraction;
 
     public Input<CVSSv3UserInteraction> getUserInteraction() {
         return this.userInteraction == null ? Input.empty() : this.userInteraction;
@@ -299,7 +299,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
             this.userInteraction = Input.ofNullable(userInteraction);
             return this;
         }
-
         public CVSSv3Args build() {
             return new CVSSv3Args(attackComplexity, attackVector, availabilityImpact, baseScore, confidentialityImpact, exploitabilityScore, impactScore, integrityImpact, privilegesRequired, scope, userInteraction);
         }

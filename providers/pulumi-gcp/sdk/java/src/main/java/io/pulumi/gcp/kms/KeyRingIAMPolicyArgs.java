@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyRingId", required=true)
-    private final Input<String> keyRingId;
+      private final Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId;
@@ -33,7 +33,7 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -92,7 +92,6 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public KeyRingIAMPolicyArgs build() {
             return new KeyRingIAMPolicyArgs(keyRingId, policyData);
         }

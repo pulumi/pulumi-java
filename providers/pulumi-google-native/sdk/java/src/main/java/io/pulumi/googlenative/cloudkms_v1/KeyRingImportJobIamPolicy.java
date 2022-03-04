@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.KeyRingImportJobIamPolicyArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.AuditConfigResponse;
@@ -81,6 +81,37 @@ public class KeyRingImportJobIamPolicy extends io.pulumi.resources.CustomResourc
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(KeyRingImportJobIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.cloudkms_v1.KeyRingImportJobIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.cloudkms_v1.KeyRingImportJobIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public KeyRingImportJobIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public KeyRingImportJobIamPolicy(String name) {
+        this(name, KeyRingImportJobIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public KeyRingImportJobIamPolicy(String name, KeyRingImportJobIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

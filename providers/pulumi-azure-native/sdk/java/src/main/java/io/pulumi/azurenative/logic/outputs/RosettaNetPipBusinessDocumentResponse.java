@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class RosettaNetPipBusinessDocumentResponse {
     /**
      * The business document description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The business document name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The business document version.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -97,7 +97,6 @@ public final class RosettaNetPipBusinessDocumentResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public RosettaNetPipBusinessDocumentResponse build() {
             return new RosettaNetPipBusinessDocumentResponse(description, name, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay;
 import java.lang.Double;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
      * Specifies the value of the fixed delay interval.
      * Structure is documented below.
      * 
-     */
+    */
     public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay getFixedDelay() {
         return this.fixedDelay;
     }
@@ -43,7 +43,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
      * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
      * The value must be between 0.0 and 100.0 inclusive.
      * 
-     */
+    */
     public Double getPercentage() {
         return this.percentage;
     }
@@ -79,7 +79,6 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay build() {
             return new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay(fixedDelay, percentage);
         }

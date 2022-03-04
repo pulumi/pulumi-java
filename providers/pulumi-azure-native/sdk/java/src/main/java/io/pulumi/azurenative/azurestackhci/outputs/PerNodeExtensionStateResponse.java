@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestackhci.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class PerNodeExtensionStateResponse {
     /**
      * Fully qualified resource ID for the particular Arc Extension on this node.
      * 
-     */
+    */
     public String getExtension() {
         return this.extension;
     }
     /**
      * Name of the node in HCI Cluster.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of Arc Extension in this node.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -95,7 +95,6 @@ public final class PerNodeExtensionStateResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public PerNodeExtensionStateResponse build() {
             return new PerNodeExtensionStateResponse(extension, name, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AssessmentStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="cause")
-    private final @Nullable String cause;
+      private final @Nullable String cause;
 
     public Optional<String> getCause() {
         return this.cause == null ? Optional.empty() : Optional.ofNullable(this.cause);
@@ -34,7 +34,7 @@ public final class AssessmentStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -45,7 +45,7 @@ public final class AssessmentStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -104,7 +104,6 @@ public final class AssessmentStatusResponse extends io.pulumi.resources.InvokeAr
             this.description = description;
             return this;
         }
-
         public AssessmentStatusResponse build() {
             return new AssessmentStatusResponse(cause, code, description);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -35,7 +35,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockOwnerDeletion")
-    private final @Nullable Input<Boolean> blockOwnerDeletion;
+      private final @Nullable Input<Boolean> blockOwnerDeletion;
 
     public Input<Boolean> getBlockOwnerDeletion() {
         return this.blockOwnerDeletion == null ? Input.empty() : this.blockOwnerDeletion;
@@ -46,7 +46,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controller")
-    private final @Nullable Input<Boolean> controller;
+      private final @Nullable Input<Boolean> controller;
 
     public Input<Boolean> getController() {
         return this.controller == null ? Input.empty() : this.controller;
@@ -57,7 +57,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -68,7 +68,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -198,7 +198,6 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.uid = Input.ofNullable(uid);
             return this;
         }
-
         public OwnerReferenceArgs build() {
             return new OwnerReferenceArgs(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }

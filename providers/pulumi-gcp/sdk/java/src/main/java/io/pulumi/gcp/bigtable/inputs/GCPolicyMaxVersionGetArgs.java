@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GCPolicyMaxVersionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="number", required=true)
-    private final Input<Integer> number;
+      private final Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number;
@@ -61,7 +61,6 @@ public final class GCPolicyMaxVersionGetArgs extends io.pulumi.resources.Resourc
             this.number = Input.of(Objects.requireNonNull(number));
             return this;
         }
-
         public GCPolicyMaxVersionGetArgs build() {
             return new GCPolicyMaxVersionGetArgs(number);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +33,7 @@ public final class DatabaseInstanceSettingsDatabaseFlag {
     /**
      * A name for this whitelist entry.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -42,7 +42,7 @@ public final class DatabaseInstanceSettingsDatabaseFlag {
      * access this instance. Must be set even if other two attributes are not for
      * the whitelist to become active.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -78,7 +78,6 @@ public final class DatabaseInstanceSettingsDatabaseFlag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DatabaseInstanceSettingsDatabaseFlag build() {
             return new DatabaseInstanceSettingsDatabaseFlag(name, value);
         }

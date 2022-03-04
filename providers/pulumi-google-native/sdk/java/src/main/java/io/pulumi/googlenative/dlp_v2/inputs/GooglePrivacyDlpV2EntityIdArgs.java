@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2EntityIdArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
+      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Input<GooglePrivacyDlpV2FieldIdArgs> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2EntityIdArgs extends io.pulumi.resources.Re
             this.field = Input.ofNullable(field);
             return this;
         }
-
         public GooglePrivacyDlpV2EntityIdArgs build() {
             return new GooglePrivacyDlpV2EntityIdArgs(field);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class APIServiceCondition {
     /**
      * Last time the condition transitioned from one status to another.
      * 
-     */
+    */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * Human-readable message indicating details about last transition.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Unique, one-word, CamelCase reason for the condition's last transition.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status is the status of the condition. Can be True, False, Unknown.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Type is the type of the condition.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class APIServiceCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public APIServiceCondition build() {
             return new APIServiceCondition(lastTransitionTime, message, reason, status, type);
         }

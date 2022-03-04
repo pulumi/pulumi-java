@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * 
      */
     @InputImport(name="deleteOption")
-    private final @Nullable String deleteOption;
+      private final @Nullable String deleteOption;
 
     public Optional<String> getDeleteOption() {
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
@@ -39,14 +39,14 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * 
      */
     @InputImport(name="dnsSettings")
-    private final @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings;
+      private final @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings;
 
     public Optional<VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse> getDnsSettings() {
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
     }
 
     @InputImport(name="dscpConfiguration")
-    private final @Nullable SubResourceResponse dscpConfiguration;
+      private final @Nullable SubResourceResponse dscpConfiguration;
 
     public Optional<SubResourceResponse> getDscpConfiguration() {
         return this.dscpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.dscpConfiguration);
@@ -57,7 +57,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * 
      */
     @InputImport(name="enableAcceleratedNetworking")
-    private final @Nullable Boolean enableAcceleratedNetworking;
+      private final @Nullable Boolean enableAcceleratedNetworking;
 
     public Optional<Boolean> getEnableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
@@ -68,7 +68,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * 
      */
     @InputImport(name="enableFpga")
-    private final @Nullable Boolean enableFpga;
+      private final @Nullable Boolean enableFpga;
 
     public Optional<Boolean> getEnableFpga() {
         return this.enableFpga == null ? Optional.empty() : Optional.ofNullable(this.enableFpga);
@@ -79,7 +79,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * 
      */
     @InputImport(name="enableIPForwarding")
-    private final @Nullable Boolean enableIPForwarding;
+      private final @Nullable Boolean enableIPForwarding;
 
     public Optional<Boolean> getEnableIPForwarding() {
         return this.enableIPForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableIPForwarding);
@@ -90,7 +90,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * 
      */
     @InputImport(name="ipConfigurations", required=true)
-    private final List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations;
+      private final List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
     public List<VirtualMachineNetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations;
@@ -101,7 +101,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -112,7 +112,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * 
      */
     @InputImport(name="networkSecurityGroup")
-    private final @Nullable SubResourceResponse networkSecurityGroup;
+      private final @Nullable SubResourceResponse networkSecurityGroup;
 
     public Optional<SubResourceResponse> getNetworkSecurityGroup() {
         return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
@@ -123,7 +123,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * 
      */
     @InputImport(name="primary")
-    private final @Nullable Boolean primary;
+      private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
@@ -252,7 +252,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
             this.primary = primary;
             return this;
         }
-
         public VirtualMachineNetworkInterfaceConfigurationResponse build() {
             return new VirtualMachineNetworkInterfaceConfigurationResponse(deleteOption, dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableFpga, enableIPForwarding, ipConfigurations, name, networkSecurityGroup, primary);
         }

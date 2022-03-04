@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.PropagatedRouteTableArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VnetRouteArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="associatedRouteTable")
-    private final @Nullable Input<SubResourceArgs> associatedRouteTable;
+      private final @Nullable Input<SubResourceArgs> associatedRouteTable;
 
     public Input<SubResourceArgs> getAssociatedRouteTable() {
         return this.associatedRouteTable == null ? Input.empty() : this.associatedRouteTable;
@@ -36,7 +36,7 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="propagatedRouteTables")
-    private final @Nullable Input<PropagatedRouteTableArgs> propagatedRouteTables;
+      private final @Nullable Input<PropagatedRouteTableArgs> propagatedRouteTables;
 
     public Input<PropagatedRouteTableArgs> getPropagatedRouteTables() {
         return this.propagatedRouteTables == null ? Input.empty() : this.propagatedRouteTables;
@@ -47,7 +47,7 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vnetRoutes")
-    private final @Nullable Input<VnetRouteArgs> vnetRoutes;
+      private final @Nullable Input<VnetRouteArgs> vnetRoutes;
 
     public Input<VnetRouteArgs> getVnetRoutes() {
         return this.vnetRoutes == null ? Input.empty() : this.vnetRoutes;
@@ -121,7 +121,6 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
             this.vnetRoutes = Input.ofNullable(vnetRoutes);
             return this;
         }
-
         public RoutingConfigurationArgs build() {
             return new RoutingConfigurationArgs(associatedRouteTable, propagatedRouteTables, vnetRoutes);
         }

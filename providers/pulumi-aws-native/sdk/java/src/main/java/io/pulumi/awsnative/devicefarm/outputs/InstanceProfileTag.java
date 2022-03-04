@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.devicefarm.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class InstanceProfileTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public InstanceProfileTag build() {
             return new InstanceProfileTag(key, value);
         }

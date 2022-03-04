@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<Integer> end;
+      private final @Nullable Input<Integer> end;
 
     public Input<Integer> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -34,7 +34,7 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start")
-    private final @Nullable Input<Integer> start;
+      private final @Nullable Input<Integer> start;
 
     public Input<Integer> getStart() {
         return this.start == null ? Input.empty() : this.start;
@@ -93,7 +93,6 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.start = Input.ofNullable(start);
             return this;
         }
-
         public QosPortRangeArgs build() {
             return new QosPortRangeArgs(end, start);
         }

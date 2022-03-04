@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntent {
-/**
- * Retrieves the specified intent.
+    private GetIntent() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntentArgs.Builder a);
+    }
+    private static GetIntentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified intent.
  * 
- */
+     */
+    public static CompletableFuture<GetIntentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified intent.
+     * 
+     */
     public static CompletableFuture<GetIntentResult> invokeAsync(GetIntentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getIntent", TypeShape.of(GetIntentResult.class), args == null ? GetIntentArgs.Empty : args, Utilities.withVersion(options));
     }

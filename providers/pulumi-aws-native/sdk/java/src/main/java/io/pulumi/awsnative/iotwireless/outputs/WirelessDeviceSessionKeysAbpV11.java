@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -84,7 +84,6 @@ public final class WirelessDeviceSessionKeysAbpV11 {
             this.sNwkSIntKey = Objects.requireNonNull(sNwkSIntKey);
             return this;
         }
-
         public WirelessDeviceSessionKeysAbpV11 build() {
             return new WirelessDeviceSessionKeysAbpV11(appSKey, fNwkSIntKey, nwkSEncKey, sNwkSIntKey);
         }

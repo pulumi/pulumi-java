@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleCloudBillingBudgetsV1LastPeriodAmountResponse;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleTypeMoneyResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse extends io.pu
      * 
      */
     @InputImport(name="lastPeriodAmount", required=true)
-    private final GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount;
+      private final GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount;
 
     public GoogleCloudBillingBudgetsV1LastPeriodAmountResponse getLastPeriodAmount() {
         return this.lastPeriodAmount;
@@ -33,7 +33,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse extends io.pu
      * 
      */
     @InputImport(name="specifiedAmount", required=true)
-    private final GoogleTypeMoneyResponse specifiedAmount;
+      private final GoogleTypeMoneyResponse specifiedAmount;
 
     public GoogleTypeMoneyResponse getSpecifiedAmount() {
         return this.specifiedAmount;
@@ -82,7 +82,6 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse extends io.pu
             this.specifiedAmount = Objects.requireNonNull(specifiedAmount);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1BudgetAmountResponse build() {
             return new GoogleCloudBillingBudgetsV1BudgetAmountResponse(lastPeriodAmount, specifiedAmount);
         }

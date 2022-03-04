@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -33,14 +33,14 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
     /**
      * Determines whether CPU should be throttled or not outside of requests.
      * 
-     */
+    */
     public Boolean getCpuIdle() {
         return this.cpuIdle;
     }
     /**
      * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
      * 
-     */
+    */
     public Map<String,String> getLimits() {
         return this.limits;
     }
@@ -76,7 +76,6 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
-
         public GoogleCloudRunOpV2ResourceRequirementsResponse build() {
             return new GoogleCloudRunOpV2ResourceRequirementsResponse(cpuIdle, limits);
         }

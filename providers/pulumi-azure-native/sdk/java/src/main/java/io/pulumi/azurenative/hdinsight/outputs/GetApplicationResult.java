@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.ApplicationPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class GetApplicationResult {
     /**
      * The ETag for the application
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of the application.
      * 
-     */
+    */
     public ApplicationPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The tags for the application.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class GetApplicationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(etag, id, name, properties, tags, type);
         }

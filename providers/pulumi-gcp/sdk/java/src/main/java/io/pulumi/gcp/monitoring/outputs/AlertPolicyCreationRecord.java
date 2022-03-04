@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class AlertPolicyCreationRecord {
             this.mutatedBy = mutatedBy;
             return this;
         }
-
         public AlertPolicyCreationRecord build() {
             return new AlertPolicyCreationRecord(mutateTime, mutatedBy);
         }

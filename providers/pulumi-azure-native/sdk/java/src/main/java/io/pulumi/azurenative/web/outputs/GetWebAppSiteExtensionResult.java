@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -186,147 +186,147 @@ public final class GetWebAppSiteExtensionResult {
     /**
      * List of authors.
      * 
-     */
+    */
     public List<String> getAuthors() {
         return this.authors == null ? List.of() : this.authors;
     }
     /**
      * Site Extension comment.
      * 
-     */
+    */
     public Optional<String> getComment() {
         return Optional.ofNullable(this.comment);
     }
     /**
      * Detailed description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Count of downloads.
      * 
-     */
+    */
     public Optional<Integer> getDownloadCount() {
         return Optional.ofNullable(this.downloadCount);
     }
     /**
      * Site extension ID.
      * 
-     */
+    */
     public Optional<String> getExtensionId() {
         return Optional.ofNullable(this.extensionId);
     }
     /**
      * Site extension type.
      * 
-     */
+    */
     public Optional<String> getExtensionType() {
         return Optional.ofNullable(this.extensionType);
     }
     /**
      * Extension URL.
      * 
-     */
+    */
     public Optional<String> getExtensionUrl() {
         return Optional.ofNullable(this.extensionUrl);
     }
     /**
      * Feed URL.
      * 
-     */
+    */
     public Optional<String> getFeedUrl() {
         return Optional.ofNullable(this.feedUrl);
     }
     /**
      * Icon URL.
      * 
-     */
+    */
     public Optional<String> getIconUrl() {
         return Optional.ofNullable(this.iconUrl);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Installed timestamp.
      * 
-     */
+    */
     public Optional<String> getInstalledDateTime() {
         return Optional.ofNullable(this.installedDateTime);
     }
     /**
      * Installer command line parameters.
      * 
-     */
+    */
     public Optional<String> getInstallerCommandLineParams() {
         return Optional.ofNullable(this.installerCommandLineParams);
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * License URL.
      * 
-     */
+    */
     public Optional<String> getLicenseUrl() {
         return Optional.ofNullable(this.licenseUrl);
     }
     /**
      * <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
      * 
-     */
+    */
     public Optional<Boolean> getLocalIsLatestVersion() {
         return Optional.ofNullable(this.localIsLatestVersion);
     }
     /**
      * Local path.
      * 
-     */
+    */
     public Optional<String> getLocalPath() {
         return Optional.ofNullable(this.localPath);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Project URL.
      * 
-     */
+    */
     public Optional<String> getProjectUrl() {
         return Optional.ofNullable(this.projectUrl);
     }
     /**
      * Provisioning state.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Published timestamp.
      * 
-     */
+    */
     public Optional<String> getPublishedDateTime() {
         return Optional.ofNullable(this.publishedDateTime);
     }
     /**
      * Summary description.
      * 
-     */
+    */
     public Optional<String> getSummary() {
         return Optional.ofNullable(this.summary);
     }
@@ -336,14 +336,14 @@ public final class GetWebAppSiteExtensionResult {
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Version information.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -533,7 +533,6 @@ public final class GetWebAppSiteExtensionResult {
             this.version = version;
             return this;
         }
-
         public GetWebAppSiteExtensionResult build() {
             return new GetWebAppSiteExtensionResult(authors, comment, description, downloadCount, extensionId, extensionType, extensionUrl, feedUrl, iconUrl, id, installedDateTime, installerCommandLineParams, kind, licenseUrl, localIsLatestVersion, localPath, name, projectUrl, provisioningState, publishedDateTime, summary, title, type, version);
         }

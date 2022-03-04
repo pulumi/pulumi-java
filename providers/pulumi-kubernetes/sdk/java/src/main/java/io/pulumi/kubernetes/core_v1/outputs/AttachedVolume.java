@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AttachedVolume {
     /**
      * DevicePath represents the device path where the volume should be available
      * 
-     */
+    */
     public String getDevicePath() {
         return this.devicePath;
     }
     /**
      * Name of the attached volume
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class AttachedVolume {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AttachedVolume build() {
             return new AttachedVolume(devicePath, name);
         }

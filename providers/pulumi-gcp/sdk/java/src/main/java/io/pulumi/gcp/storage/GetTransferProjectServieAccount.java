@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransferProjectServieAccount {
-/**
- * Use this data source to retrieve Storage Transfer service account for this project
+    private GetTransferProjectServieAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransferProjectServieAccountArgs.Builder a);
+    }
+    private static GetTransferProjectServieAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransferProjectServieAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to retrieve Storage Transfer service account for this project
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getTransferProjectServieAccount.
+     *
+     * A collection of arguments for invoking getTransferProjectServieAccount.
  * 
- *
- * A collection of values returned by getTransferProjectServieAccount.
+     *
+     * A collection of values returned by getTransferProjectServieAccount.
  * 
- */
+     */
+    public static CompletableFuture<GetTransferProjectServieAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to retrieve Storage Transfer service account for this project
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getTransferProjectServieAccount.
+     * 
+     *
+         * A collection of values returned by getTransferProjectServieAccount.
+     * 
+     */
     public static CompletableFuture<GetTransferProjectServieAccountResult> invokeAsync(@Nullable GetTransferProjectServieAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getTransferProjectServieAccount:getTransferProjectServieAccount", TypeShape.of(GetTransferProjectServieAccountResult.class), args == null ? GetTransferProjectServieAccountArgs.Empty : args, Utilities.withVersion(options));
     }

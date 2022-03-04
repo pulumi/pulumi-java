@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.VirtualDirectoryResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,28 +50,28 @@ public final class VirtualApplicationResponse {
     /**
      * Physical path.
      * 
-     */
+    */
     public Optional<String> getPhysicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
     /**
      * <code>true</code> if preloading is enabled; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getPreloadEnabled() {
         return Optional.ofNullable(this.preloadEnabled);
     }
     /**
      * Virtual directories for virtual application.
      * 
-     */
+    */
     public List<VirtualDirectoryResponse> getVirtualDirectories() {
         return this.virtualDirectories == null ? List.of() : this.virtualDirectories;
     }
     /**
      * Virtual path.
      * 
-     */
+    */
     public Optional<String> getVirtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }
@@ -121,7 +121,6 @@ public final class VirtualApplicationResponse {
             this.virtualPath = virtualPath;
             return this;
         }
-
         public VirtualApplicationResponse build() {
             return new VirtualApplicationResponse(physicalPath, preloadEnabled, virtualDirectories, virtualPath);
         }

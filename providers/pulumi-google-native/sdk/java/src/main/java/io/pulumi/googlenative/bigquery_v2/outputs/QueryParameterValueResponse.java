@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -40,21 +40,21 @@ public final class QueryParameterValueResponse {
     /**
      * [Optional] The array values, if this is an array type.
      * 
-     */
+    */
     public List<QueryParameterValueResponse> getArrayValues() {
         return this.arrayValues;
     }
     /**
      * [Optional] The struct field values, in order of the struct type's declaration.
      * 
-     */
+    */
     public Map<String,String> getStructValues() {
         return this.structValues;
     }
     /**
      * [Optional] The value of this value, if a simple scalar type.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -97,7 +97,6 @@ public final class QueryParameterValueResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public QueryParameterValueResponse build() {
             return new QueryParameterValueResponse(arrayValues, structValues, value);
         }

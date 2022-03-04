@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
     /**
      * Query result will be unaccessable after this time.
      * 
-     */
+    */
     public String getExpires() {
         return this.expires;
     }
     /**
      * Self link of the query results. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
      * 
-     */
+    */
     public String getSelf() {
         return this.self;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
             this.self = Objects.requireNonNull(self);
             return this;
         }
-
         public GoogleCloudApigeeV1AsyncQueryResultResponse build() {
             return new GoogleCloudApigeeV1AsyncQueryResultResponse(expires, self);
         }

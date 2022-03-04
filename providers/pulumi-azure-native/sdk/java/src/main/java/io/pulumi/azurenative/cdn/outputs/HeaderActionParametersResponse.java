@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,14 +43,14 @@ public final class HeaderActionParametersResponse {
     /**
      * Action to perform
      * 
-     */
+    */
     public String getHeaderAction() {
         return this.headerAction;
     }
     /**
      * Name of the header to modify
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
@@ -60,7 +60,7 @@ public final class HeaderActionParametersResponse {
     /**
      * Value for the specified action
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -110,7 +110,6 @@ public final class HeaderActionParametersResponse {
             this.value = value;
             return this;
         }
-
         public HeaderActionParametersResponse build() {
             return new HeaderActionParametersResponse(headerAction, headerName, odataType, value);
         }

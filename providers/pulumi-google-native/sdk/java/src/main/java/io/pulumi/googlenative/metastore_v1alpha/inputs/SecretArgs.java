@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudSecret")
-    private final @Nullable Input<String> cloudSecret;
+      private final @Nullable Input<String> cloudSecret;
 
     public Input<String> getCloudSecret() {
         return this.cloudSecret == null ? Input.empty() : this.cloudSecret;
@@ -66,7 +66,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudSecret = Input.ofNullable(cloudSecret);
             return this;
         }
-
         public SecretArgs build() {
             return new SecretArgs(cloudSecret);
         }

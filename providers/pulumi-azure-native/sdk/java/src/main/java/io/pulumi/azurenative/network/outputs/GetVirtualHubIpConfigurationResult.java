@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.PublicIPAddressResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -84,63 +84,63 @@ public final class GetVirtualHubIpConfigurationResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the Ip Configuration.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The private IP address of the IP configuration.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The private IP address allocation method.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
      * The provisioning state of the IP configuration resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The reference to the public IP resource.
      * 
-     */
+    */
     public Optional<PublicIPAddressResponse> getPublicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
      * The reference to the subnet resource.
      * 
-     */
+    */
     public Optional<SubnetResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Ipconfiguration type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -225,7 +225,6 @@ public final class GetVirtualHubIpConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualHubIpConfigurationResult build() {
             return new GetVirtualHubIpConfigurationResult(etag, id, name, privateIPAddress, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet, type);
         }

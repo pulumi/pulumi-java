@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeArtifactGcsResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeArtifactRemoteResponse;
 import java.lang.Boolean;
@@ -40,21 +40,21 @@ public final class SoftwareRecipeArtifactResponse {
     /**
      * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
      * 
-     */
+    */
     public Boolean getAllowInsecure() {
         return this.allowInsecure;
     }
     /**
      * A Google Cloud Storage artifact.
      * 
-     */
+    */
     public SoftwareRecipeArtifactGcsResponse getGcs() {
         return this.gcs;
     }
     /**
      * A generic remote artifact.
      * 
-     */
+    */
     public SoftwareRecipeArtifactRemoteResponse getRemote() {
         return this.remote;
     }
@@ -97,7 +97,6 @@ public final class SoftwareRecipeArtifactResponse {
             this.remote = Objects.requireNonNull(remote);
             return this;
         }
-
         public SoftwareRecipeArtifactResponse build() {
             return new SoftwareRecipeArtifactResponse(allowInsecure, gcs, remote);
         }

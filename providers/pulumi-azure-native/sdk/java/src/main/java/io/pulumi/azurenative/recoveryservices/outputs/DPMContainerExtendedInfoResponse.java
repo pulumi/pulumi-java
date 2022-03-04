@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DPMContainerExtendedInfoResponse {
     /**
      * Last refresh time of the DPMContainer.
      * 
-     */
+    */
     public Optional<String> getLastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
@@ -54,7 +54,6 @@ public final class DPMContainerExtendedInfoResponse {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
-
         public DPMContainerExtendedInfoResponse build() {
             return new DPMContainerExtendedInfoResponse(lastRefreshedAt);
         }

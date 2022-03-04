@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPolicyAssignmentArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="policyAssignmentName", required=true)
-    private final String policyAssignmentName;
+      private final String policyAssignmentName;
 
     public String getPolicyAssignmentName() {
         return this.policyAssignmentName;
@@ -28,7 +28,7 @@ public final class GetPolicyAssignmentArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -77,7 +77,6 @@ public final class GetPolicyAssignmentArgs extends io.pulumi.resources.InvokeArg
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetPolicyAssignmentArgs build() {
             return new GetPolicyAssignmentArgs(policyAssignmentName, scope);
         }

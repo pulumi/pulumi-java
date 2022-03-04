@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVendorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vendorName", required=true)
-    private final String vendorName;
+      private final String vendorName;
 
     public String getVendorName() {
         return this.vendorName;
@@ -55,7 +55,6 @@ public final class GetVendorArgs extends io.pulumi.resources.InvokeArgs {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
-
         public GetVendorArgs build() {
             return new GetVendorArgs(vendorName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -33,7 +33,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="destinationPorts")
-    private final @Nullable List<String> destinationPorts;
+      private final @Nullable List<String> destinationPorts;
 
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
@@ -44,7 +44,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable Integer direction;
+      private final @Nullable Integer direction;
 
     public Optional<Integer> getDirection() {
         return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
@@ -55,7 +55,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="group")
-    private final @Nullable String group;
+      private final @Nullable String group;
 
     public Optional<String> getGroup() {
         return this.group == null ? Optional.empty() : Optional.ofNullable(this.group);
@@ -66,7 +66,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="inheritedFromParentPolicy")
-    private final @Nullable Boolean inheritedFromParentPolicy;
+      private final @Nullable Boolean inheritedFromParentPolicy;
 
     public Optional<Boolean> getInheritedFromParentPolicy() {
         return this.inheritedFromParentPolicy == null ? Optional.empty() : Optional.ofNullable(this.inheritedFromParentPolicy);
@@ -77,7 +77,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="lastUpdated")
-    private final @Nullable String lastUpdated;
+      private final @Nullable String lastUpdated;
 
     public Optional<String> getLastUpdated() {
         return this.lastUpdated == null ? Optional.empty() : Optional.ofNullable(this.lastUpdated);
@@ -88,7 +88,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Integer mode;
+      private final @Nullable Integer mode;
 
     public Optional<Integer> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -99,7 +99,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+      private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -110,7 +110,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="severity")
-    private final @Nullable Integer severity;
+      private final @Nullable Integer severity;
 
     public Optional<Integer> getSeverity() {
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
@@ -121,7 +121,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="signatureId")
-    private final @Nullable Integer signatureId;
+      private final @Nullable Integer signatureId;
 
     public Optional<Integer> getSignatureId() {
         return this.signatureId == null ? Optional.empty() : Optional.ofNullable(this.signatureId);
@@ -132,7 +132,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sourcePorts")
-    private final @Nullable List<String> sourcePorts;
+      private final @Nullable List<String> sourcePorts;
 
     public List<String> getSourcePorts() {
         return this.sourcePorts == null ? List.of() : this.sourcePorts;
@@ -271,7 +271,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
             this.sourcePorts = sourcePorts;
             return this;
         }
-
         public SingleQueryResultResponse build() {
             return new SingleQueryResultResponse(description, destinationPorts, direction, group, inheritedFromParentPolicy, lastUpdated, mode, protocol, severity, signatureId, sourcePorts);
         }

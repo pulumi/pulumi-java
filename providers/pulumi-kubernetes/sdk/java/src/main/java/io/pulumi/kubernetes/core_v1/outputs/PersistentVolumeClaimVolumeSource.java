@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class PersistentVolumeClaimVolumeSource {
     /**
      * ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
-     */
+    */
     public String getClaimName() {
         return this.claimName;
     }
     /**
      * Will force the ReadOnly setting in VolumeMounts. Default false.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -77,7 +77,6 @@ public final class PersistentVolumeClaimVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public PersistentVolumeClaimVolumeSource build() {
             return new PersistentVolumeClaimVolumeSource(claimName, readOnly);
         }

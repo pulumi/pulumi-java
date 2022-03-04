@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final String apiId;
+      private final String apiId;
 
     public String getApiId() {
         return this.apiId;
@@ -28,7 +28,7 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="commentId", required=true)
-    private final String commentId;
+      private final String commentId;
 
     public String getCommentId() {
         return this.commentId;
@@ -39,7 +39,7 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="issueId", required=true)
-    private final String issueId;
+      private final String issueId;
 
     public String getIssueId() {
         return this.issueId;
@@ -50,7 +50,7 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -140,7 +140,6 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetApiIssueCommentArgs build() {
             return new GetApiIssueCommentArgs(apiId, commentId, issueId, resourceGroupName, serviceName);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.webpubsub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubArgs;
 import io.pulumi.azurenative.webpubsub.outputs.GetWebPubSubResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebPubSub {
-/**
- * A class represent a resource.
+    private GetWebPubSub() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebPubSubArgs.Builder a);
+    }
+    private static GetWebPubSubArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebPubSubArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A class represent a resource.
  * API Version: 2021-04-01-preview.
  * 
- *
- * A class represent a resource.
+     *
+     * A class represent a resource.
  * 
- */
+     */
+    public static CompletableFuture<GetWebPubSubResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A class represent a resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * A class represent a resource.
+     * 
+     */
     public static CompletableFuture<GetWebPubSubResult> invokeAsync(GetWebPubSubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSub", TypeShape.of(GetWebPubSubResult.class), args == null ? GetWebPubSubArgs.Empty : args, Utilities.withVersion(options));
     }

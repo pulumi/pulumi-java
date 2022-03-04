@@ -10,7 +10,7 @@ import io.pulumi.azurenative.edgeorder.outputs.ProductDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ResourceProviderDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ReverseShippingDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.StageDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -139,112 +139,112 @@ public final class OrderItemDetailsResponse {
     /**
      * Cancellation reason.
      * 
-     */
+    */
     public String getCancellationReason() {
         return this.cancellationReason;
     }
     /**
      * Describes whether the order item is cancellable or not.
      * 
-     */
+    */
     public String getCancellationStatus() {
         return this.cancellationStatus;
     }
     /**
      * Current Order item Status
      * 
-     */
+    */
     public StageDetailsResponse getCurrentStage() {
         return this.currentStage;
     }
     /**
      * Describes whether the order item is deletable or not.
      * 
-     */
+    */
     public String getDeletionStatus() {
         return this.deletionStatus;
     }
     /**
      * Top level error for the job.
      * 
-     */
+    */
     public ErrorDetailResponse getError() {
         return this.error;
     }
     /**
      * Forward Package Shipping details
      * 
-     */
+    */
     public ForwardShippingDetailsResponse getForwardShippingDetails() {
         return this.forwardShippingDetails;
     }
     /**
      * Parent RP details - this returns only the first or default parent RP from the entire list
      * 
-     */
+    */
     public ResourceProviderDetailsResponse getManagementRpDetails() {
         return this.managementRpDetails;
     }
     /**
      * List of parent RP details supported for configuration.
      * 
-     */
+    */
     public List<ResourceProviderDetailsResponse> getManagementRpDetailsList() {
         return this.managementRpDetailsList;
     }
     /**
      * Additional notification email list
      * 
-     */
+    */
     public List<String> getNotificationEmailList() {
         return this.notificationEmailList == null ? List.of() : this.notificationEmailList;
     }
     /**
      * Order item status history
      * 
-     */
+    */
     public List<StageDetailsResponse> getOrderItemStageHistory() {
         return this.orderItemStageHistory;
     }
     /**
      * Order item type.
      * 
-     */
+    */
     public String getOrderItemType() {
         return this.orderItemType;
     }
     /**
      * Customer notification Preferences
      * 
-     */
+    */
     public Optional<PreferencesResponse> getPreferences() {
         return Optional.ofNullable(this.preferences);
     }
     /**
      * Unique identifier for configuration.
      * 
-     */
+    */
     public ProductDetailsResponse getProductDetails() {
         return this.productDetails;
     }
     /**
      * Return reason.
      * 
-     */
+    */
     public String getReturnReason() {
         return this.returnReason;
     }
     /**
      * Describes whether the order item is returnable or not.
      * 
-     */
+    */
     public String getReturnStatus() {
         return this.returnStatus;
     }
     /**
      * Reverse Package Shipping details
      * 
-     */
+    */
     public ReverseShippingDetailsResponse getReverseShippingDetails() {
         return this.reverseShippingDetails;
     }
@@ -378,7 +378,6 @@ public final class OrderItemDetailsResponse {
             this.reverseShippingDetails = Objects.requireNonNull(reverseShippingDetails);
             return this;
         }
-
         public OrderItemDetailsResponse build() {
             return new OrderItemDetailsResponse(cancellationReason, cancellationStatus, currentStage, deletionStatus, error, forwardShippingDetails, managementRpDetails, managementRpDetailsList, notificationEmailList, orderItemStageHistory, orderItemType, preferences, productDetails, returnReason, returnStatus, reverseShippingDetails);
         }

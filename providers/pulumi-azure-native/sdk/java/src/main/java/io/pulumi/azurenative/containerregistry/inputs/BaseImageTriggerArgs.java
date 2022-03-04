@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.azurenative.containerregistry.enums.UpdateTriggerPayloadType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="baseImageTriggerType", required=true)
-    private final Input<Either<String,BaseImageTriggerType>> baseImageTriggerType;
+      private final Input<Either<String,BaseImageTriggerType>> baseImageTriggerType;
 
     public Input<Either<String,BaseImageTriggerType>> getBaseImageTriggerType() {
         return this.baseImageTriggerType;
@@ -38,7 +38,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -49,7 +49,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,TriggerStatus>> status;
+      private final @Nullable Input<Either<String,TriggerStatus>> status;
 
     public Input<Either<String,TriggerStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -60,7 +60,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="updateTriggerEndpoint")
-    private final @Nullable Input<String> updateTriggerEndpoint;
+      private final @Nullable Input<String> updateTriggerEndpoint;
 
     public Input<String> getUpdateTriggerEndpoint() {
         return this.updateTriggerEndpoint == null ? Input.empty() : this.updateTriggerEndpoint;
@@ -71,7 +71,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="updateTriggerPayloadType")
-    private final @Nullable Input<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType;
+      private final @Nullable Input<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType;
 
     public Input<Either<String,UpdateTriggerPayloadType>> getUpdateTriggerPayloadType() {
         return this.updateTriggerPayloadType == null ? Input.empty() : this.updateTriggerPayloadType;
@@ -175,7 +175,6 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
             this.updateTriggerPayloadType = Input.ofNullable(updateTriggerPayloadType);
             return this;
         }
-
         public BaseImageTriggerArgs build() {
             return new BaseImageTriggerArgs(baseImageTriggerType, name, status, updateTriggerEndpoint, updateTriggerPayloadType);
         }

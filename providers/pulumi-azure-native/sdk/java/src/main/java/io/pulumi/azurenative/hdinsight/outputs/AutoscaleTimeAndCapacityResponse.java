@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class AutoscaleTimeAndCapacityResponse {
     /**
      * The maximum instance count of the cluster
      * 
-     */
+    */
     public Optional<Integer> getMaxInstanceCount() {
         return Optional.ofNullable(this.maxInstanceCount);
     }
     /**
      * The minimum instance count of the cluster
      * 
-     */
+    */
     public Optional<Integer> getMinInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
     /**
      * 24-hour time in the form xx:xx
      * 
-     */
+    */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);
     }
@@ -98,7 +98,6 @@ public final class AutoscaleTimeAndCapacityResponse {
             this.time = time;
             return this;
         }
-
         public AutoscaleTimeAndCapacityResponse build() {
             return new AutoscaleTimeAndCapacityResponse(maxInstanceCount, minInstanceCount, time);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ClientCertificateConfigResponse {
     /**
      * Issue a client certificate.
      * 
-     */
+    */
     public Boolean getIssueClientCertificate() {
         return this.issueClientCertificate;
     }
@@ -52,7 +52,6 @@ public final class ClientCertificateConfigResponse {
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
         }
-
         public ClientCertificateConfigResponse build() {
             return new ClientCertificateConfigResponse(issueClientCertificate);
         }

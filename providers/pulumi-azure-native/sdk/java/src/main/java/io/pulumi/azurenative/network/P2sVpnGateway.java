@@ -11,8 +11,8 @@ import io.pulumi.azurenative.network.outputs.VpnClientConnectionHealthResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -220,6 +220,37 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
         return this.vpnServerConfiguration;
     }
 
+    public interface BuilderApplicator {
+        public void apply(P2sVpnGatewayArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.P2sVpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.P2sVpnGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public P2sVpnGateway(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public P2sVpnGateway(String name) {
+        this(name, P2sVpnGatewayArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public P2sVpnGateway(String name, P2sVpnGatewayArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

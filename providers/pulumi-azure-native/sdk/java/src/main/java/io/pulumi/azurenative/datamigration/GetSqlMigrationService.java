@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datamigration;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datamigration.inputs.GetSqlMigrationServiceArgs;
 import io.pulumi.azurenative.datamigration.outputs.GetSqlMigrationServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlMigrationService {
-/**
- * A SQL Migration Service.
+    private GetSqlMigrationService() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlMigrationServiceArgs.Builder a);
+    }
+    private static GetSqlMigrationServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlMigrationServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A SQL Migration Service.
  * API Version: 2021-10-30-preview.
  * 
- *
- * A SQL Migration Service.
+     *
+     * A SQL Migration Service.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlMigrationServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A SQL Migration Service.
+     * API Version: 2021-10-30-preview.
+     * 
+     *
+         * A SQL Migration Service.
+     * 
+     */
     public static CompletableFuture<GetSqlMigrationServiceResult> invokeAsync(GetSqlMigrationServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getSqlMigrationService", TypeShape.of(GetSqlMigrationServiceResult.class), args == null ? GetSqlMigrationServiceArgs.Empty : args, Utilities.withVersion(options));
     }

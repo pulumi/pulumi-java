@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcce
      * 
      */
     @InputImport(name="acceleratorCount")
-    private final @Nullable Input<Integer> acceleratorCount;
+      private final @Nullable Input<Integer> acceleratorCount;
 
     public Input<Integer> getAcceleratorCount() {
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
@@ -31,7 +31,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcce
      * 
      */
     @InputImport(name="acceleratorType")
-    private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
@@ -90,7 +90,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcce
             this.acceleratorType = Input.ofNullable(acceleratorType);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorArgs(acceleratorCount, acceleratorType);
         }

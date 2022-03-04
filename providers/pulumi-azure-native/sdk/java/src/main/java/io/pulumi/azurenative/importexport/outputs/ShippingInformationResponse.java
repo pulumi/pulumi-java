@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,63 +82,63 @@ public final class ShippingInformationResponse {
     /**
      * Additional shipping information for customer, specific to datacenter to which customer should send their disks.
      * 
-     */
+    */
     public String getAdditionalInformation() {
         return this.additionalInformation;
     }
     /**
      * The city name to use when returning the drives.
      * 
-     */
+    */
     public Optional<String> getCity() {
         return Optional.ofNullable(this.city);
     }
     /**
      * The country or region to use when returning the drives.
      * 
-     */
+    */
     public Optional<String> getCountryOrRegion() {
         return Optional.ofNullable(this.countryOrRegion);
     }
     /**
      * Phone number of the recipient of the returned drives.
      * 
-     */
+    */
     public Optional<String> getPhone() {
         return Optional.ofNullable(this.phone);
     }
     /**
      * The postal code to use when returning the drives.
      * 
-     */
+    */
     public Optional<String> getPostalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
      * The name of the recipient who will receive the hard drives when they are returned.
      * 
-     */
+    */
     public Optional<String> getRecipientName() {
         return Optional.ofNullable(this.recipientName);
     }
     /**
      * The state or province to use when returning the drives.
      * 
-     */
+    */
     public Optional<String> getStateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
     /**
      * The first line of the street address to use when returning the drives.
      * 
-     */
+    */
     public Optional<String> getStreetAddress1() {
         return Optional.ofNullable(this.streetAddress1);
     }
     /**
      * The second line of the street address to use when returning the drives.
      * 
-     */
+    */
     public Optional<String> getStreetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }
@@ -223,7 +223,6 @@ public final class ShippingInformationResponse {
             this.streetAddress2 = streetAddress2;
             return this;
         }
-
         public ShippingInformationResponse build() {
             return new ShippingInformationResponse(additionalInformation, city, countryOrRegion, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DataLakeAnalyticsResponseProperties {
     /**
      * DataLake Store Account Name
      * 
-     */
+    */
     public Optional<String> getDataLakeStoreAccountName() {
         return Optional.ofNullable(this.dataLakeStoreAccountName);
     }
@@ -54,7 +54,6 @@ public final class DataLakeAnalyticsResponseProperties {
             this.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
         }
-
         public DataLakeAnalyticsResponseProperties build() {
             return new DataLakeAnalyticsResponseProperties(dataLakeStoreAccountName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,7 @@ public final class GuestPoliciesPackage {
      * Default value is `INSTALLED`.
      * Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
      * 
-     */
+    */
     public Optional<String> getDesiredState() {
         return Optional.ofNullable(this.desiredState);
     }
@@ -74,7 +74,7 @@ public final class GuestPoliciesPackage {
      * Default value is `ANY`.
      * Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
      * 
-     */
+    */
     public Optional<String> getManager() {
         return Optional.ofNullable(this.manager);
     }
@@ -84,7 +84,7 @@ public final class GuestPoliciesPackage {
      * This means that requests to create multiple recipes with the same name and version are rejected since they
      * could potentially have conflicting assignments.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -127,7 +127,6 @@ public final class GuestPoliciesPackage {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GuestPoliciesPackage build() {
             return new GuestPoliciesPackage(desiredState, manager, name);
         }

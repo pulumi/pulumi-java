@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ClientIPConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
@@ -66,7 +66,6 @@ public final class ClientIPConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }
-
         public ClientIPConfigArgs build() {
             return new ClientIPConfigArgs(timeoutSeconds);
         }

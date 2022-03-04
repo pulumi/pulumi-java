@@ -6,17 +6,33 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.networkmanager.inputs.GetTransitGatewayRegistrationArgs;
 import io.pulumi.awsnative.networkmanager.outputs.GetTransitGatewayRegistrationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGatewayRegistration {
-/**
- * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
+    private GetTransitGatewayRegistration() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransitGatewayRegistrationArgs.Builder a);
+    }
+    private static GetTransitGatewayRegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransitGatewayRegistrationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
  * 
- */
+     */
+    public static CompletableFuture<GetTransitGatewayRegistrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
+     * 
+     */
     public static CompletableFuture<GetTransitGatewayRegistrationResult> invokeAsync(GetTransitGatewayRegistrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getTransitGatewayRegistration", TypeShape.of(GetTransitGatewayRegistrationResult.class), args == null ? GetTransitGatewayRegistrationArgs.Empty : args, Utilities.withVersion(options));
     }

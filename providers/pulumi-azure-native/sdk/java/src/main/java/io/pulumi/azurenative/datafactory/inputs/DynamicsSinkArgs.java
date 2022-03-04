@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.DynamicsSinkWriteBehavior;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alternateKeyName")
-    private final @Nullable Input<Object> alternateKeyName;
+      private final @Nullable Input<Object> alternateKeyName;
 
     public Input<Object> getAlternateKeyName() {
         return this.alternateKeyName == null ? Input.empty() : this.alternateKeyName;
@@ -37,7 +37,7 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -48,7 +48,7 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreNullValues")
-    private final @Nullable Input<Object> ignoreNullValues;
+      private final @Nullable Input<Object> ignoreNullValues;
 
     public Input<Object> getIgnoreNullValues() {
         return this.ignoreNullValues == null ? Input.empty() : this.ignoreNullValues;
@@ -59,7 +59,7 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -70,7 +70,7 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRetryCount")
-    private final @Nullable Input<Object> sinkRetryCount;
+      private final @Nullable Input<Object> sinkRetryCount;
 
     public Input<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
@@ -81,7 +81,7 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRetryWait")
-    private final @Nullable Input<Object> sinkRetryWait;
+      private final @Nullable Input<Object> sinkRetryWait;
 
     public Input<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
@@ -93,7 +93,7 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -104,7 +104,7 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBatchSize")
-    private final @Nullable Input<Object> writeBatchSize;
+      private final @Nullable Input<Object> writeBatchSize;
 
     public Input<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
@@ -115,7 +115,7 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBatchTimeout")
-    private final @Nullable Input<Object> writeBatchTimeout;
+      private final @Nullable Input<Object> writeBatchTimeout;
 
     public Input<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;
@@ -126,7 +126,7 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBehavior", required=true)
-    private final Input<Either<String,DynamicsSinkWriteBehavior>> writeBehavior;
+      private final Input<Either<String,DynamicsSinkWriteBehavior>> writeBehavior;
 
     public Input<Either<String,DynamicsSinkWriteBehavior>> getWriteBehavior() {
         return this.writeBehavior;
@@ -305,7 +305,6 @@ public final class DynamicsSinkArgs extends io.pulumi.resources.ResourceArgs {
             this.writeBehavior = Input.of(Objects.requireNonNull(writeBehavior));
             return this;
         }
-
         public DynamicsSinkArgs build() {
             return new DynamicsSinkArgs(alternateKeyName, disableMetricsCollection, ignoreNullValues, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

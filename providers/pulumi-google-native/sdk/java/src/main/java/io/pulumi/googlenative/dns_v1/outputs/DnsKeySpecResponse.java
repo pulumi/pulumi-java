@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class DnsKeySpecResponse {
     /**
      * String mnemonic specifying the DNSSEC algorithm of this key.
      * 
-     */
+    */
     public String getAlgorithm() {
         return this.algorithm;
     }
     /**
      * Length of the keys in bits.
      * 
-     */
+    */
     public Integer getKeyLength() {
         return this.keyLength;
     }
     /**
      * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.
      * 
-     */
+    */
     public String getKeyType() {
         return this.keyType;
     }
@@ -109,7 +109,6 @@ public final class DnsKeySpecResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public DnsKeySpecResponse build() {
             return new DnsKeySpecResponse(algorithm, keyLength, keyType, kind);
         }

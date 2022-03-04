@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SiteLimitsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxDiskSizeInMb")
-    private final @Nullable Double maxDiskSizeInMb;
+      private final @Nullable Double maxDiskSizeInMb;
 
     public Optional<Double> getMaxDiskSizeInMb() {
         return this.maxDiskSizeInMb == null ? Optional.empty() : Optional.ofNullable(this.maxDiskSizeInMb);
@@ -34,7 +34,7 @@ public final class SiteLimitsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxMemoryInMb")
-    private final @Nullable Double maxMemoryInMb;
+      private final @Nullable Double maxMemoryInMb;
 
     public Optional<Double> getMaxMemoryInMb() {
         return this.maxMemoryInMb == null ? Optional.empty() : Optional.ofNullable(this.maxMemoryInMb);
@@ -45,7 +45,7 @@ public final class SiteLimitsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxPercentageCpu")
-    private final @Nullable Double maxPercentageCpu;
+      private final @Nullable Double maxPercentageCpu;
 
     public Optional<Double> getMaxPercentageCpu() {
         return this.maxPercentageCpu == null ? Optional.empty() : Optional.ofNullable(this.maxPercentageCpu);
@@ -104,7 +104,6 @@ public final class SiteLimitsResponse extends io.pulumi.resources.InvokeArgs {
             this.maxPercentageCpu = maxPercentageCpu;
             return this;
         }
-
         public SiteLimitsResponse build() {
             return new SiteLimitsResponse(maxDiskSizeInMb, maxMemoryInMb, maxPercentageCpu);
         }

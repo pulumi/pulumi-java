@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldTransformationArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordSuppressionArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends io.pulumi
      * 
      */
     @InputImport(name="fieldTransformations")
-    private final @Nullable Input<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations;
+      private final @Nullable Input<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations;
 
     public Input<List<GooglePrivacyDlpV2FieldTransformationArgs>> getFieldTransformations() {
         return this.fieldTransformations == null ? Input.empty() : this.fieldTransformations;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends io.pulumi
      * 
      */
     @InputImport(name="recordSuppressions")
-    private final @Nullable Input<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions;
+      private final @Nullable Input<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions;
 
     public Input<List<GooglePrivacyDlpV2RecordSuppressionArgs>> getRecordSuppressions() {
         return this.recordSuppressions == null ? Input.empty() : this.recordSuppressions;
@@ -95,7 +95,6 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends io.pulumi
             this.recordSuppressions = Input.ofNullable(recordSuppressions);
             return this;
         }
-
         public GooglePrivacyDlpV2RecordTransformationsArgs build() {
             return new GooglePrivacyDlpV2RecordTransformationsArgs(fieldTransformations, recordSuppressions);
         }

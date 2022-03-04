@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -34,14 +34,14 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
     /**
      * Mapping from certificate name to base 64 encoded format.
      * 
-     */
+    */
     public Map<String,List<String>> getBase64EncodedCertificates() {
         return this.base64EncodedCertificates;
     }
     /**
      * Validation errors
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }
@@ -77,7 +77,6 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public GetTdeCertificatesSqlTaskOutputResponse build() {
             return new GetTdeCertificatesSqlTaskOutputResponse(base64EncodedCertificates, validationErrors);
         }

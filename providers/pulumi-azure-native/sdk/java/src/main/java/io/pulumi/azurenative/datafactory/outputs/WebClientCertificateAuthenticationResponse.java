@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -51,28 +51,28 @@ public final class WebClientCertificateAuthenticationResponse {
      * Type of authentication used to connect to the web table source.
      * Expected value is 'ClientCertificate'.
      * 
-     */
+    */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * Password for the PFX file.
      * 
-     */
+    */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password;
     }
     /**
      * Base64-encoded contents of a PFX file.
      * 
-     */
+    */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPfx() {
         return this.pfx;
     }
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getUrl() {
         return this.url;
     }
@@ -122,7 +122,6 @@ public final class WebClientCertificateAuthenticationResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public WebClientCertificateAuthenticationResponse build() {
             return new WebClientCertificateAuthenticationResponse(authenticationType, password, pfx, url);
         }

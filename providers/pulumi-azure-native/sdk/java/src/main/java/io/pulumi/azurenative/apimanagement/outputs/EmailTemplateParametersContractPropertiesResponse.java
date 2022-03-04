@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class EmailTemplateParametersContractPropertiesResponse {
     /**
      * Template parameter description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Template parameter name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Template parameter title.
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
@@ -97,7 +97,6 @@ public final class EmailTemplateParametersContractPropertiesResponse {
             this.title = title;
             return this;
         }
-
         public EmailTemplateParametersContractPropertiesResponse build() {
             return new EmailTemplateParametersContractPropertiesResponse(description, name, title);
         }

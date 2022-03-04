@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.RetentionTagResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AdhocBasedTaggingCriteriaResponse {
     /**
      * Retention tag information
      * 
-     */
+    */
     public Optional<RetentionTagResponse> getTagInfo() {
         return Optional.ofNullable(this.tagInfo);
     }
@@ -54,7 +54,6 @@ public final class AdhocBasedTaggingCriteriaResponse {
             this.tagInfo = tagInfo;
             return this;
         }
-
         public AdhocBasedTaggingCriteriaResponse build() {
             return new AdhocBasedTaggingCriteriaResponse(tagInfo);
         }

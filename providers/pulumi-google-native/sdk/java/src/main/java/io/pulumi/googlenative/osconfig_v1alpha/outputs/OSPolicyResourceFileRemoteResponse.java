@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class OSPolicyResourceFileRemoteResponse {
     /**
      * SHA256 checksum of the remote file.
      * 
-     */
+    */
     public String getSha256Checksum() {
         return this.sha256Checksum;
     }
     /**
      * URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -74,7 +74,6 @@ public final class OSPolicyResourceFileRemoteResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OSPolicyResourceFileRemoteResponse build() {
             return new OSPolicyResourceFileRemoteResponse(sha256Checksum, uri);
         }

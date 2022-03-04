@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="associationName", required=true)
-    private final String associationName;
+      private final String associationName;
 
     public String getAssociationName() {
         return this.associationName;
@@ -28,7 +28,7 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -77,7 +77,6 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public GetGuestDiagnosticsSettingsAssociationArgs build() {
             return new GetGuestDiagnosticsSettingsAssociationArgs(associationName, resourceUri);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -47,14 +47,14 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
     /**
      * The Application Insights resource Id.
      * 
-     */
+    */
     public String getComponentId() {
         return this.componentId;
     }
     /**
      * The number of failed locations.
      * 
-     */
+    */
     public Double getFailedLocationCount() {
         return this.failedLocationCount;
     }
@@ -62,14 +62,14 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
      * specifies the type of the alert criteria.
      * Expected value is 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The Application Insights web test Id.
      * 
-     */
+    */
     public String getWebTestId() {
         return this.webTestId;
     }
@@ -119,7 +119,6 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
             this.webTestId = Objects.requireNonNull(webTestId);
             return this;
         }
-
         public WebtestLocationAvailabilityCriteriaResponse build() {
             return new WebtestLocationAvailabilityCriteriaResponse(componentId, failedLocationCount, odataType, webTestId);
         }

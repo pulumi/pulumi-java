@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.PublicKeyResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.SubjectConfigResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.X509ParametersResponse;
@@ -40,21 +40,21 @@ public final class CertificateConfigResponse {
     /**
      * Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
      * 
-     */
+    */
     public PublicKeyResponse getPublicKey() {
         return this.publicKey;
     }
     /**
      * Specifies some of the values in a certificate that are related to the subject.
      * 
-     */
+    */
     public SubjectConfigResponse getSubjectConfig() {
         return this.subjectConfig;
     }
     /**
      * Describes how some of the technical X.509 fields in a certificate should be populated.
      * 
-     */
+    */
     public X509ParametersResponse getX509Config() {
         return this.x509Config;
     }
@@ -97,7 +97,6 @@ public final class CertificateConfigResponse {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
-
         public CertificateConfigResponse build() {
             return new CertificateConfigResponse(publicKey, subjectConfig, x509Config);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ServiceEndpointPropertiesFormatResponse {
     /**
      * A list of locations.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * The provisioning state of the service endpoint resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the endpoint service.
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
@@ -98,7 +98,6 @@ public final class ServiceEndpointPropertiesFormatResponse {
             this.service = service;
             return this;
         }
-
         public ServiceEndpointPropertiesFormatResponse build() {
             return new ServiceEndpointPropertiesFormatResponse(locations, provisioningState, service);
         }

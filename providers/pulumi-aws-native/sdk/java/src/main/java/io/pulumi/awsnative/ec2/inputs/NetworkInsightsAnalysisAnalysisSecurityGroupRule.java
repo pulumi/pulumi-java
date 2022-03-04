@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,42 +16,42 @@ public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule extends io.p
     public static final NetworkInsightsAnalysisAnalysisSecurityGroupRule Empty = new NetworkInsightsAnalysisAnalysisSecurityGroupRule();
 
     @InputImport(name="cidr")
-    private final @Nullable String cidr;
+      private final @Nullable String cidr;
 
     public Optional<String> getCidr() {
         return this.cidr == null ? Optional.empty() : Optional.ofNullable(this.cidr);
     }
 
     @InputImport(name="direction")
-    private final @Nullable String direction;
+      private final @Nullable String direction;
 
     public Optional<String> getDirection() {
         return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
     }
 
     @InputImport(name="portRange")
-    private final @Nullable NetworkInsightsAnalysisPortRange portRange;
+      private final @Nullable NetworkInsightsAnalysisPortRange portRange;
 
     public Optional<NetworkInsightsAnalysisPortRange> getPortRange() {
         return this.portRange == null ? Optional.empty() : Optional.ofNullable(this.portRange);
     }
 
     @InputImport(name="prefixListId")
-    private final @Nullable String prefixListId;
+      private final @Nullable String prefixListId;
 
     public Optional<String> getPrefixListId() {
         return this.prefixListId == null ? Optional.empty() : Optional.ofNullable(this.prefixListId);
     }
 
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+      private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
     @InputImport(name="securityGroupId")
-    private final @Nullable String securityGroupId;
+      private final @Nullable String securityGroupId;
 
     public Optional<String> getSecurityGroupId() {
         return this.securityGroupId == null ? Optional.empty() : Optional.ofNullable(this.securityGroupId);
@@ -140,7 +140,6 @@ public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule extends io.p
             this.securityGroupId = securityGroupId;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisSecurityGroupRule build() {
             return new NetworkInsightsAnalysisAnalysisSecurityGroupRule(cidr, direction, portRange, prefixListId, protocol, securityGroupId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCredentialArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+      private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -35,7 +35,7 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<PublicKeyCredentialArgs> publicKey;
+      private final @Nullable Input<PublicKeyCredentialArgs> publicKey;
 
     public Input<PublicKeyCredentialArgs> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -94,7 +94,6 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
             this.publicKey = Input.ofNullable(publicKey);
             return this;
         }
-
         public DeviceCredentialArgs build() {
             return new DeviceCredentialArgs(expirationTime, publicKey);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MeshCertificatesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enableCertificates", required=true)
-    private final Boolean enableCertificates;
+      private final Boolean enableCertificates;
 
     public Boolean getEnableCertificates() {
         return this.enableCertificates;
@@ -59,7 +59,6 @@ public final class MeshCertificatesResponse extends io.pulumi.resources.InvokeAr
             this.enableCertificates = Objects.requireNonNull(enableCertificates);
             return this;
         }
-
         public MeshCertificatesResponse build() {
             return new MeshCertificatesResponse(enableCertificates);
         }

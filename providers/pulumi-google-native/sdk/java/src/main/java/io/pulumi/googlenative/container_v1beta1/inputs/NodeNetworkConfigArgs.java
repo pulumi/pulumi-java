@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createPodRange")
-    private final @Nullable Input<Boolean> createPodRange;
+      private final @Nullable Input<Boolean> createPodRange;
 
     public Input<Boolean> getCreatePodRange() {
         return this.createPodRange == null ? Input.empty() : this.createPodRange;
@@ -35,7 +35,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="podIpv4CidrBlock")
-    private final @Nullable Input<String> podIpv4CidrBlock;
+      private final @Nullable Input<String> podIpv4CidrBlock;
 
     public Input<String> getPodIpv4CidrBlock() {
         return this.podIpv4CidrBlock == null ? Input.empty() : this.podIpv4CidrBlock;
@@ -46,7 +46,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="podRange")
-    private final @Nullable Input<String> podRange;
+      private final @Nullable Input<String> podRange;
 
     public Input<String> getPodRange() {
         return this.podRange == null ? Input.empty() : this.podRange;
@@ -120,7 +120,6 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
             this.podRange = Input.ofNullable(podRange);
             return this;
         }
-
         public NodeNetworkConfigArgs build() {
             return new NodeNetworkConfigArgs(createPodRange, podIpv4CidrBlock, podRange);
         }

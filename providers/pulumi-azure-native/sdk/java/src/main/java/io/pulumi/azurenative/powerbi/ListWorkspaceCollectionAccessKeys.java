@@ -6,17 +6,33 @@ package io.pulumi.azurenative.powerbi;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.powerbi.inputs.ListWorkspaceCollectionAccessKeysArgs;
 import io.pulumi.azurenative.powerbi.outputs.ListWorkspaceCollectionAccessKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWorkspaceCollectionAccessKeys {
-/**
- * API Version: 2016-01-29.
+    private ListWorkspaceCollectionAccessKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListWorkspaceCollectionAccessKeysArgs.Builder a);
+    }
+    private static ListWorkspaceCollectionAccessKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWorkspaceCollectionAccessKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2016-01-29.
  * 
- */
+     */
+    public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2016-01-29.
+     * 
+     */
     public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> invokeAsync(ListWorkspaceCollectionAccessKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbi:listWorkspaceCollectionAccessKeys", TypeShape.of(ListWorkspaceCollectionAccessKeysResult.class), args == null ? ListWorkspaceCollectionAccessKeysArgs.Empty : args, Utilities.withVersion(options));
     }

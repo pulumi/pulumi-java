@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
     /**
      * The last time the schedule successfully ran. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public String getLastRunStartTime() {
         return this.lastRunStartTime;
     }
     /**
      * The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public String getNextRunStartTime() {
         return this.nextRunStartTime;
     }
@@ -74,7 +74,6 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
             this.nextRunStartTime = Objects.requireNonNull(nextRunStartTime);
             return this;
         }
-
         public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse build() {
             return new ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(lastRunStartTime, nextRunStartTime);
         }

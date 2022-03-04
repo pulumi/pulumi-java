@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class RuleGroupDimension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RuleGroupDimension build() {
             return new RuleGroupDimension(value);
         }

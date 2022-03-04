@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopePacketHeaderStatementRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeResourceStatementRequestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,14 +16,14 @@ public final class NetworkInsightsAccessScopePathStatementRequestArgs extends io
     public static final NetworkInsightsAccessScopePathStatementRequestArgs Empty = new NetworkInsightsAccessScopePathStatementRequestArgs();
 
     @InputImport(name="packetHeaderStatement")
-    private final @Nullable Input<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement;
+      private final @Nullable Input<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement;
 
     public Input<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> getPacketHeaderStatement() {
         return this.packetHeaderStatement == null ? Input.empty() : this.packetHeaderStatement;
     }
 
     @InputImport(name="resourceStatement")
-    private final @Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
+      private final @Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
     public Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> getResourceStatement() {
         return this.resourceStatement == null ? Input.empty() : this.resourceStatement;
@@ -82,7 +82,6 @@ public final class NetworkInsightsAccessScopePathStatementRequestArgs extends io
             this.resourceStatement = Input.ofNullable(resourceStatement);
             return this;
         }
-
         public NetworkInsightsAccessScopePathStatementRequestArgs build() {
             return new NetworkInsightsAccessScopePathStatementRequestArgs(packetHeaderStatement, resourceStatement);
         }

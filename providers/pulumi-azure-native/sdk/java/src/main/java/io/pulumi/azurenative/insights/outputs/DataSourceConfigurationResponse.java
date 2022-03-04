@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.outputs;
 import io.pulumi.azurenative.insights.outputs.EtwProviderConfigurationResponse;
 import io.pulumi.azurenative.insights.outputs.EventLogConfigurationResponse;
 import io.pulumi.azurenative.insights.outputs.PerformanceCounterConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -42,21 +42,21 @@ public final class DataSourceConfigurationResponse {
     /**
      * Windows event logs configuration.
      * 
-     */
+    */
     public List<EventLogConfigurationResponse> getEventLogs() {
         return this.eventLogs == null ? List.of() : this.eventLogs;
     }
     /**
      * Performance counter configuration
      * 
-     */
+    */
     public List<PerformanceCounterConfigurationResponse> getPerfCounters() {
         return this.perfCounters == null ? List.of() : this.perfCounters;
     }
     /**
      * ETW providers configuration
      * 
-     */
+    */
     public List<EtwProviderConfigurationResponse> getProviders() {
         return this.providers == null ? List.of() : this.providers;
     }
@@ -99,7 +99,6 @@ public final class DataSourceConfigurationResponse {
             this.providers = providers;
             return this;
         }
-
         public DataSourceConfigurationResponse build() {
             return new DataSourceConfigurationResponse(eventLogs, perfCounters, providers);
         }

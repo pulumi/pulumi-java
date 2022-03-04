@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.DatabasePrincipalResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ListDatabasePrincipalsResult {
     /**
      * The list of Kusto database principals.
      * 
-     */
+    */
     public List<DatabasePrincipalResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -54,7 +54,6 @@ public final class ListDatabasePrincipalsResult {
             this.value = value;
             return this;
         }
-
         public ListDatabasePrincipalsResult build() {
             return new ListDatabasePrincipalsResult(value);
         }

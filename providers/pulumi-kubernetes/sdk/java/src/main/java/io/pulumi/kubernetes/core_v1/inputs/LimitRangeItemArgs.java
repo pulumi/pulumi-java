@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="default")
-    private final @Nullable Input<Map<String,String>> $default;
+      private final @Nullable Input<Map<String,String>> $default;
 
     public Input<Map<String,String>> get$default() {
         return this.$default == null ? Input.empty() : this.$default;
@@ -35,7 +35,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRequest")
-    private final @Nullable Input<Map<String,String>> defaultRequest;
+      private final @Nullable Input<Map<String,String>> defaultRequest;
 
     public Input<Map<String,String>> getDefaultRequest() {
         return this.defaultRequest == null ? Input.empty() : this.defaultRequest;
@@ -46,7 +46,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="max")
-    private final @Nullable Input<Map<String,String>> max;
+      private final @Nullable Input<Map<String,String>> max;
 
     public Input<Map<String,String>> getMax() {
         return this.max == null ? Input.empty() : this.max;
@@ -57,7 +57,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxLimitRequestRatio")
-    private final @Nullable Input<Map<String,String>> maxLimitRequestRatio;
+      private final @Nullable Input<Map<String,String>> maxLimitRequestRatio;
 
     public Input<Map<String,String>> getMaxLimitRequestRatio() {
         return this.maxLimitRequestRatio == null ? Input.empty() : this.maxLimitRequestRatio;
@@ -68,7 +68,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="min")
-    private final @Nullable Input<Map<String,String>> min;
+      private final @Nullable Input<Map<String,String>> min;
 
     public Input<Map<String,String>> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -84,7 +84,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -203,7 +203,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public LimitRangeItemArgs build() {
             return new LimitRangeItemArgs($default, defaultRequest, max, maxLimitRequestRatio, min, type);
         }

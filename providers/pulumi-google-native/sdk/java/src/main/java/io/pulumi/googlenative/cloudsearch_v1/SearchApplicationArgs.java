@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.DataSourceRestrictionArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FacetOptionsArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.QueryInterpretationConfigArgs;
@@ -27,7 +27,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataSourceRestrictions")
-    private final @Nullable Input<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
+      private final @Nullable Input<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
 
     public Input<List<DataSourceRestrictionArgs>> getDataSourceRestrictions() {
         return this.dataSourceRestrictions == null ? Input.empty() : this.dataSourceRestrictions;
@@ -38,7 +38,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultFacetOptions")
-    private final @Nullable Input<List<FacetOptionsArgs>> defaultFacetOptions;
+      private final @Nullable Input<List<FacetOptionsArgs>> defaultFacetOptions;
 
     public Input<List<FacetOptionsArgs>> getDefaultFacetOptions() {
         return this.defaultFacetOptions == null ? Input.empty() : this.defaultFacetOptions;
@@ -49,7 +49,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultSortOptions")
-    private final @Nullable Input<SortOptionsArgs> defaultSortOptions;
+      private final @Nullable Input<SortOptionsArgs> defaultSortOptions;
 
     public Input<SortOptionsArgs> getDefaultSortOptions() {
         return this.defaultSortOptions == null ? Input.empty() : this.defaultSortOptions;
@@ -60,7 +60,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -71,7 +71,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableAuditLog")
-    private final @Nullable Input<Boolean> enableAuditLog;
+      private final @Nullable Input<Boolean> enableAuditLog;
 
     public Input<Boolean> getEnableAuditLog() {
         return this.enableAuditLog == null ? Input.empty() : this.enableAuditLog;
@@ -82,7 +82,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="queryInterpretationConfig")
-    private final @Nullable Input<QueryInterpretationConfigArgs> queryInterpretationConfig;
+      private final @Nullable Input<QueryInterpretationConfigArgs> queryInterpretationConfig;
 
     public Input<QueryInterpretationConfigArgs> getQueryInterpretationConfig() {
         return this.queryInterpretationConfig == null ? Input.empty() : this.queryInterpretationConfig;
@@ -104,7 +104,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="returnResultThumbnailUrls")
-    private final @Nullable Input<Boolean> returnResultThumbnailUrls;
+      private final @Nullable Input<Boolean> returnResultThumbnailUrls;
 
     public Input<Boolean> getReturnResultThumbnailUrls() {
         return this.returnResultThumbnailUrls == null ? Input.empty() : this.returnResultThumbnailUrls;
@@ -115,7 +115,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scoringConfig")
-    private final @Nullable Input<ScoringConfigArgs> scoringConfig;
+      private final @Nullable Input<ScoringConfigArgs> scoringConfig;
 
     public Input<ScoringConfigArgs> getScoringConfig() {
         return this.scoringConfig == null ? Input.empty() : this.scoringConfig;
@@ -126,7 +126,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceConfig")
-    private final @Nullable Input<List<SourceConfigArgs>> sourceConfig;
+      private final @Nullable Input<List<SourceConfigArgs>> sourceConfig;
 
     public Input<List<SourceConfigArgs>> getSourceConfig() {
         return this.sourceConfig == null ? Input.empty() : this.sourceConfig;
@@ -305,7 +305,6 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             this.sourceConfig = Input.ofNullable(sourceConfig);
             return this;
         }
-
         public SearchApplicationArgs build() {
             return new SearchApplicationArgs(dataSourceRestrictions, defaultFacetOptions, defaultSortOptions, displayName, enableAuditLog, name, queryInterpretationConfig, returnResultThumbnailUrls, scoringConfig, sourceConfig);
         }

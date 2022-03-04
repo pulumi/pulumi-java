@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -105,63 +105,63 @@ public final class SapBWLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getClientId() {
         return this.clientId;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password to access the SAP BW server.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Host name of the SAP BW instance. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getServer() {
         return this.server;
     }
     /**
      * System number of the BW system. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getSystemNumber() {
         return this.systemNumber;
     }
@@ -169,14 +169,14 @@ public final class SapBWLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'SapBW'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Username to access the SAP BW server. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getUserName() {
         return Optional.ofNullable(this.userName);
     }
@@ -275,7 +275,6 @@ public final class SapBWLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public SapBWLinkedServiceResponse build() {
             return new SapBWLinkedServiceResponse(annotations, clientId, connectVia, description, encryptedCredential, parameters, password, server, systemNumber, type, userName);
         }

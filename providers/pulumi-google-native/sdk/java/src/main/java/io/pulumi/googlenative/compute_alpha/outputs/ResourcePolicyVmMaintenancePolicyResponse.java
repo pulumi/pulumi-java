@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
     /**
      * Maintenance windows that are applied to VMs covered by this policy.
      * 
-     */
+    */
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse getMaintenanceWindow() {
         return this.maintenanceWindow;
     }
@@ -67,7 +67,6 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
-
         public ResourcePolicyVmMaintenancePolicyResponse build() {
             return new ResourcePolicyVmMaintenancePolicyResponse(concurrencyControlGroup, maintenanceWindow);
         }

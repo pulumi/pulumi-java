@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.IPSetScope;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,21 +14,21 @@ public final class GetIPSetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetIPSetArgs Empty = new GetIPSetArgs();
 
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="scope", required=true)
-    private final IPSetScope scope;
+      private final IPSetScope scope;
 
     public IPSetScope getScope() {
         return this.scope;
@@ -87,7 +87,6 @@ public final class GetIPSetArgs extends io.pulumi.resources.InvokeArgs {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetIPSetArgs build() {
             return new GetIPSetArgs(id, name, scope);
         }

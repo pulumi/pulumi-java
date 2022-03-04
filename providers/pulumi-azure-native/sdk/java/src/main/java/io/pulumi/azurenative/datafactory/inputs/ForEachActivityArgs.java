@@ -44,7 +44,7 @@ import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -67,7 +67,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="activities", required=true)
-    private final Input<List<Object>> activities;
+      private final Input<List<Object>> activities;
 
     public Input<List<Object>> getActivities() {
         return this.activities;
@@ -78,7 +78,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="batchCount")
-    private final @Nullable Input<Integer> batchCount;
+      private final @Nullable Input<Integer> batchCount;
 
     public Input<Integer> getBatchCount() {
         return this.batchCount == null ? Input.empty() : this.batchCount;
@@ -89,7 +89,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -100,7 +100,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -111,7 +111,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isSequential")
-    private final @Nullable Input<Boolean> isSequential;
+      private final @Nullable Input<Boolean> isSequential;
 
     public Input<Boolean> getIsSequential() {
         return this.isSequential == null ? Input.empty() : this.isSequential;
@@ -122,7 +122,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="items", required=true)
-    private final Input<ExpressionArgs> items;
+      private final Input<ExpressionArgs> items;
 
     public Input<ExpressionArgs> getItems() {
         return this.items;
@@ -133,7 +133,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -145,7 +145,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -156,7 +156,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -320,7 +320,6 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public ForEachActivityArgs build() {
             return new ForEachActivityArgs(activities, batchCount, dependsOn, description, isSequential, items, name, type, userProperties);
         }

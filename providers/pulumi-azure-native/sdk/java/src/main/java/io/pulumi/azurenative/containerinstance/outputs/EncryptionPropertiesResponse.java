@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class EncryptionPropertiesResponse {
     /**
      * The encryption key name.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * The encryption key version.
      * 
-     */
+    */
     public String getKeyVersion() {
         return this.keyVersion;
     }
     /**
      * The keyvault base url.
      * 
-     */
+    */
     public String getVaultBaseUrl() {
         return this.vaultBaseUrl;
     }
@@ -95,7 +95,6 @@ public final class EncryptionPropertiesResponse {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
-
         public EncryptionPropertiesResponse build() {
             return new EncryptionPropertiesResponse(keyName, keyVersion, vaultBaseUrl);
         }

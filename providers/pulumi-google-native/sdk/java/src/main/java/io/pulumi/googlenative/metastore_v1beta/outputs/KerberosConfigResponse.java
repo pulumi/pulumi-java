@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1beta.outputs.SecretResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class KerberosConfigResponse {
     /**
      * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
      * 
-     */
+    */
     public SecretResponse getKeytab() {
         return this.keytab;
     }
     /**
      * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
      * 
-     */
+    */
     public String getKrb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
     }
     /**
      * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.
      * 
-     */
+    */
     public String getPrincipal() {
         return this.principal;
     }
@@ -96,7 +96,6 @@ public final class KerberosConfigResponse {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public KerberosConfigResponse build() {
             return new KerberosConfigResponse(keytab, krb5ConfigGcsUri, principal);
         }

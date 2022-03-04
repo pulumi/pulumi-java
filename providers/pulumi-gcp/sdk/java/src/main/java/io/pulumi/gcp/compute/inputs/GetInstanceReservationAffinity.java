@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.GetInstanceReservationAffinitySpecificReservation;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ public final class GetInstanceReservationAffinity extends io.pulumi.resources.In
     public static final GetInstanceReservationAffinity Empty = new GetInstanceReservationAffinity();
 
     @InputImport(name="specificReservations", required=true)
-    private final List<GetInstanceReservationAffinitySpecificReservation> specificReservations;
+      private final List<GetInstanceReservationAffinitySpecificReservation> specificReservations;
 
     public List<GetInstanceReservationAffinitySpecificReservation> getSpecificReservations() {
         return this.specificReservations;
@@ -26,7 +26,7 @@ public final class GetInstanceReservationAffinity extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -75,7 +75,6 @@ public final class GetInstanceReservationAffinity extends io.pulumi.resources.In
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceReservationAffinity build() {
             return new GetInstanceReservationAffinity(specificReservations, type);
         }

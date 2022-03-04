@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange;
 import java.lang.String;
 import java.util.Objects;
@@ -44,7 +44,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * Must have ValueType = DISTRIBUTION and
      * MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-     */
+    */
     public String getDistributionFilter() {
         return this.distributionFilter;
     }
@@ -57,7 +57,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * `range.min <= X <= range.max` for a good window.
      * Structure is documented below.
      * 
-     */
+    */
     public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange getRange() {
         return this.range;
     }
@@ -93,7 +93,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut(distributionFilter, range);
         }

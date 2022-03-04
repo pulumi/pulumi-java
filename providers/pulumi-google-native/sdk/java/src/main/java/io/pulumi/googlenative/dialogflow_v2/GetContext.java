@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContext {
-/**
- * Retrieves the specified context.
+    private GetContext() {}
+    public interface BuilderApplicator {
+        public void apply(GetContextArgs.Builder a);
+    }
+    private static GetContextArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetContextArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified context.
  * 
- */
+     */
+    public static CompletableFuture<GetContextResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified context.
+     * 
+     */
     public static CompletableFuture<GetContextResult> invokeAsync(GetContextArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getContext", TypeShape.of(GetContextResult.class), args == null ? GetContextArgs.Empty : args, Utilities.withVersion(options));
     }

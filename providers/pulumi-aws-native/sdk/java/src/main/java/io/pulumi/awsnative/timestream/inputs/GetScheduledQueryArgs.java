@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.timestream.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetScheduledQueryArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetScheduledQueryArgs Empty = new GetScheduledQueryArgs();
 
     @InputImport(name="arn", required=true)
-    private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -51,7 +51,6 @@ public final class GetScheduledQueryArgs extends io.pulumi.resources.InvokeArgs 
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public GetScheduledQueryArgs build() {
             return new GetScheduledQueryArgs(arn);
         }

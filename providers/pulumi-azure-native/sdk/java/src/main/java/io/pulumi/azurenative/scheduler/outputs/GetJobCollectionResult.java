@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.outputs;
 
 import io.pulumi.azurenative.scheduler.outputs.JobCollectionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -63,42 +63,42 @@ public final class GetJobCollectionResult {
     /**
      * Gets the job collection resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the storage account location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets or sets the job collection resource name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets or sets the job collection properties.
      * 
-     */
+    */
     public JobCollectionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Gets or sets the tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the job collection resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class GetJobCollectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobCollectionResult build() {
             return new GetJobCollectionResult(id, location, name, properties, tags, type);
         }

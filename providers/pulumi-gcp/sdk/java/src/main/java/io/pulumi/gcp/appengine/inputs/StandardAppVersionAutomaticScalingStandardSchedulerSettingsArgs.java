@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * 
      */
     @InputImport(name="maxInstances")
-    private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
@@ -31,7 +31,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * 
      */
     @InputImport(name="minInstances")
-    private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Input<Integer> minInstances;
 
     public Input<Integer> getMinInstances() {
         return this.minInstances == null ? Input.empty() : this.minInstances;
@@ -42,7 +42,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * 
      */
     @InputImport(name="targetCpuUtilization")
-    private final @Nullable Input<Double> targetCpuUtilization;
+      private final @Nullable Input<Double> targetCpuUtilization;
 
     public Input<Double> getTargetCpuUtilization() {
         return this.targetCpuUtilization == null ? Input.empty() : this.targetCpuUtilization;
@@ -53,7 +53,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * 
      */
     @InputImport(name="targetThroughputUtilization")
-    private final @Nullable Input<Double> targetThroughputUtilization;
+      private final @Nullable Input<Double> targetThroughputUtilization;
 
     public Input<Double> getTargetThroughputUtilization() {
         return this.targetThroughputUtilization == null ? Input.empty() : this.targetThroughputUtilization;
@@ -142,7 +142,6 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
             this.targetThroughputUtilization = Input.ofNullable(targetThroughputUtilization);
             return this;
         }
-
         public StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs build() {
             return new StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs(maxInstances, minInstances, targetCpuUtilization, targetThroughputUtilization);
         }

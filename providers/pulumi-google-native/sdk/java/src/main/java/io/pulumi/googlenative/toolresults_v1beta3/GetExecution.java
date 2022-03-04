@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExecution {
-/**
- * Gets an Execution. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution does not exist
+    private GetExecution() {}
+    public interface BuilderApplicator {
+        public void apply(GetExecutionArgs.Builder a);
+    }
+    private static GetExecutionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExecutionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an Execution. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution does not exist
  * 
- */
+     */
+    public static CompletableFuture<GetExecutionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an Execution. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution does not exist
+     * 
+     */
     public static CompletableFuture<GetExecutionResult> invokeAsync(GetExecutionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getExecution", TypeShape.of(GetExecutionResult.class), args == null ? GetExecutionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs.ValidatingWebhook;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
@@ -50,28 +50,28 @@ public final class ValidatingWebhookConfiguration {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
      * 
-     */
+    */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Webhooks is a list of webhooks and the affected resources and operations.
      * 
-     */
+    */
     public List<ValidatingWebhook> getWebhooks() {
         return this.webhooks == null ? List.of() : this.webhooks;
     }
@@ -121,7 +121,6 @@ public final class ValidatingWebhookConfiguration {
             this.webhooks = webhooks;
             return this;
         }
-
         public ValidatingWebhookConfiguration build() {
             return new ValidatingWebhookConfiguration(apiVersion, kind, metadata, webhooks);
         }

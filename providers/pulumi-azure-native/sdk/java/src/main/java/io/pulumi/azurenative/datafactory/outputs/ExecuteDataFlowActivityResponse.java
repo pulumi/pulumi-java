@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datafactory.outputs.ExecuteDataFlowActivityTypeProp
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -128,84 +128,84 @@ public final class ExecuteDataFlowActivityResponse {
     /**
      * Compute properties for data flow activity.
      * 
-     */
+    */
     public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> getCompute() {
         return Optional.ofNullable(this.compute);
     }
     /**
      * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
      * 
-     */
+    */
     public Optional<Object> getContinueOnError() {
         return Optional.ofNullable(this.continueOnError);
     }
     /**
      * Data flow reference.
      * 
-     */
+    */
     public DataFlowReferenceResponse getDataFlow() {
         return this.dataFlow;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getIntegrationRuntime() {
         return Optional.ofNullable(this.integrationRuntime);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
      * 
-     */
+    */
     public Optional<Object> getRunConcurrently() {
         return Optional.ofNullable(this.runConcurrently);
     }
     /**
      * Staging info for execute data flow activity.
      * 
-     */
+    */
     public Optional<DataFlowStagingInfoResponse> getStaging() {
         return Optional.ofNullable(this.staging);
     }
     /**
      * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Optional<Object> getTraceLevel() {
         return Optional.ofNullable(this.traceLevel);
     }
@@ -213,14 +213,14 @@ public final class ExecuteDataFlowActivityResponse {
      * Type of activity.
      * Expected value is 'ExecuteDataFlow'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -340,7 +340,6 @@ public final class ExecuteDataFlowActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ExecuteDataFlowActivityResponse build() {
             return new ExecuteDataFlowActivityResponse(compute, continueOnError, dataFlow, dependsOn, description, integrationRuntime, linkedServiceName, name, policy, runConcurrently, staging, traceLevel, type, userProperties);
         }

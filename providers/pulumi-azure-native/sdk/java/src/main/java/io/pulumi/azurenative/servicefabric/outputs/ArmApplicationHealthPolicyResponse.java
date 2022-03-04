@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ArmServiceTypeHealthPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,14 +54,14 @@ public final class ArmApplicationHealthPolicyResponse {
     /**
      * Indicates whether warnings are treated with the same severity as errors.
      * 
-     */
+    */
     public Optional<Boolean> getConsiderWarningAsError() {
         return Optional.ofNullable(this.considerWarningAsError);
     }
     /**
      * The health policy used by default to evaluate the health of a service type.
      * 
-     */
+    */
     public Optional<ArmServiceTypeHealthPolicyResponse> getDefaultServiceTypeHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
@@ -71,14 +71,14 @@ public final class ArmApplicationHealthPolicyResponse {
      * This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
      * The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
      * 
-     */
+    */
     public Optional<Integer> getMaxPercentUnhealthyDeployedApplications() {
         return Optional.ofNullable(this.maxPercentUnhealthyDeployedApplications);
     }
     /**
      * The map with service type health policy per service type name. The map is empty by default.
      * 
-     */
+    */
     public Map<String,ArmServiceTypeHealthPolicyResponse> getServiceTypeHealthPolicyMap() {
         return this.serviceTypeHealthPolicyMap == null ? Map.of() : this.serviceTypeHealthPolicyMap;
     }
@@ -128,7 +128,6 @@ public final class ArmApplicationHealthPolicyResponse {
             this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
             return this;
         }
-
         public ArmApplicationHealthPolicyResponse build() {
             return new ArmApplicationHealthPolicyResponse(considerWarningAsError, defaultServiceTypeHealthPolicy, maxPercentUnhealthyDeployedApplications, serviceTypeHealthPolicyMap);
         }

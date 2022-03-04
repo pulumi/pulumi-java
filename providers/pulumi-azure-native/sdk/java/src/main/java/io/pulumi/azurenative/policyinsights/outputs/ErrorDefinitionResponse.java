@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.policyinsights.outputs;
 
 import io.pulumi.azurenative.policyinsights.outputs.TypedErrorInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,35 +54,35 @@ public final class ErrorDefinitionResponse {
     /**
      * Additional scenario specific error details.
      * 
-     */
+    */
     public List<TypedErrorInfoResponse> getAdditionalInfo() {
         return this.additionalInfo;
     }
     /**
      * Service specific error code which serves as the substatus for the HTTP error code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Internal error details.
      * 
-     */
+    */
     public List<ErrorDefinitionResponse> getDetails() {
         return this.details;
     }
     /**
      * Description of the error.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * The target of the error.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }
@@ -139,7 +139,6 @@ public final class ErrorDefinitionResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ErrorDefinitionResponse build() {
             return new ErrorDefinitionResponse(additionalInfo, code, details, message, target);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -84,35 +84,35 @@ public final class DocumentDbCollectionSinkResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Nested properties separator. Default is . (dot). Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getNestingSeparator() {
         return Optional.ofNullable(this.nestingSeparator);
     }
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
@@ -120,28 +120,28 @@ public final class DocumentDbCollectionSinkResponse {
      * Copy sink type.
      * Expected value is 'DocumentDbCollectionSink'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getWriteBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getWriteBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
     /**
      * Describes how to write data to Azure Cosmos DB. Type: string (or Expression with resultType string). Allowed values: insert and upsert.
      * 
-     */
+    */
     public Optional<Object> getWriteBehavior() {
         return Optional.ofNullable(this.writeBehavior);
     }
@@ -226,7 +226,6 @@ public final class DocumentDbCollectionSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public DocumentDbCollectionSinkResponse build() {
             return new DocumentDbCollectionSinkResponse(disableMetricsCollection, maxConcurrentConnections, nestingSeparator, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

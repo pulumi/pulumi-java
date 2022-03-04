@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.CommitmentQuotaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class CommitmentPeriodResponse {
     /**
      * Commitment period commitment count.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Commitment period end date.
      * 
-     */
+    */
     public String getEndDate() {
         return this.endDate;
     }
     /**
      * Cognitive Services account commitment quota.
      * 
-     */
+    */
     public CommitmentQuotaResponse getQuota() {
         return this.quota;
     }
     /**
      * Commitment period start date.
      * 
-     */
+    */
     public String getStartDate() {
         return this.startDate;
     }
     /**
      * Commitment period commitment tier.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -141,7 +141,6 @@ public final class CommitmentPeriodResponse {
             this.tier = tier;
             return this;
         }
-
         public CommitmentPeriodResponse build() {
             return new CommitmentPeriodResponse(count, endDate, quota, startDate, tier);
         }

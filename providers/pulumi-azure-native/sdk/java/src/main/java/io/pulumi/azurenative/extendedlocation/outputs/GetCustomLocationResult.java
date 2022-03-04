@@ -5,7 +5,7 @@ package io.pulumi.azurenative.extendedlocation.outputs;
 
 import io.pulumi.azurenative.extendedlocation.outputs.CustomLocationPropertiesResponseAuthentication;
 import io.pulumi.azurenative.extendedlocation.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -114,91 +114,91 @@ public final class GetCustomLocationResult {
     /**
      * This is optional input that contains the authentication that should be used to generate the namespace.
      * 
-     */
+    */
     public Optional<CustomLocationPropertiesResponseAuthentication> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * Contains the reference to the add-on that contains charts to deploy CRDs and operators.
      * 
-     */
+    */
     public List<String> getClusterExtensionIds() {
         return this.clusterExtensionIds == null ? List.of() : this.clusterExtensionIds;
     }
     /**
      * Display name for the Custom Locations location.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
      * 
-     */
+    */
     public Optional<String> getHostResourceId() {
         return Optional.ofNullable(this.hostResourceId);
     }
     /**
      * Type of host the Custom Locations is referencing (Kubernetes, etc...).
      * 
-     */
+    */
     public Optional<String> getHostType() {
         return Optional.ofNullable(this.hostType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Kubernetes namespace that will be created on the specified cluster.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Provisioning State for the Custom Location.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -311,7 +311,6 @@ public final class GetCustomLocationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCustomLocationResult build() {
             return new GetCustomLocationResult(authentication, clusterExtensionIds, displayName, hostResourceId, hostType, id, location, name, namespace, provisioningState, systemData, tags, type);
         }

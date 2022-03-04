@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DatasetStateResponseDeprecatedBy {
     /**
      * Unique Dataset identifier.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * Definition Version
      * 
-     */
+    */
     public Optional<String> getDefinitionVersion() {
         return Optional.ofNullable(this.definitionVersion);
     }
@@ -76,7 +76,6 @@ public final class DatasetStateResponseDeprecatedBy {
             this.definitionVersion = definitionVersion;
             return this;
         }
-
         public DatasetStateResponseDeprecatedBy build() {
             return new DatasetStateResponseDeprecatedBy(datasetId, definitionVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__BuiltInAlgorithmOutputResponse;
 import java.lang.Boolean;
@@ -92,70 +92,70 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse {
     /**
      * All recorded object metrics for this trial. This field is not currently populated.
      * 
-     */
+    */
     public List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> getAllMetrics() {
         return this.allMetrics;
     }
     /**
      * Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
      * 
-     */
+    */
     public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse getBuiltInAlgorithmOutput() {
         return this.builtInAlgorithmOutput;
     }
     /**
      * End time for the trial.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The final objective metric seen for this trial.
      * 
-     */
+    */
     public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse getFinalMetric() {
         return this.finalMetric;
     }
     /**
      * The hyperparameters given to this trial.
      * 
-     */
+    */
     public Map<String,String> getHyperparameters() {
         return this.hyperparameters;
     }
     /**
      * True if the trial is stopped early.
      * 
-     */
+    */
     public Boolean getIsTrialStoppedEarly() {
         return this.isTrialStoppedEarly;
     }
     /**
      * Start time for the trial.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The detailed state of the trial.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The trial id for these results.
      * 
-     */
+    */
     public String getTrialId() {
         return this.trialId;
     }
     /**
      * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job's training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node's interactive shell.
      * 
-     */
+    */
     public Map<String,String> getWebAccessUris() {
         return this.webAccessUris;
     }
@@ -247,7 +247,6 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse {
             this.webAccessUris = Objects.requireNonNull(webAccessUris);
             return this;
         }
-
         public GoogleCloudMlV1__HyperparameterOutputResponse build() {
             return new GoogleCloudMlV1__HyperparameterOutputResponse(allMetrics, builtInAlgorithmOutput, endTime, finalMetric, hyperparameters, isTrialStoppedEarly, startTime, state, trialId, webAccessUris);
         }

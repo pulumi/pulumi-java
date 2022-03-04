@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1.TriggerArgs;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ApprovalConfigResponse;
@@ -353,6 +353,37 @@ public class Trigger extends io.pulumi.resources.CustomResource {
         return this.webhookConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TriggerArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.cloudbuild_v1.TriggerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.cloudbuild_v1.TriggerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Trigger(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Trigger(String name) {
+        this(name, TriggerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Trigger(String name, TriggerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

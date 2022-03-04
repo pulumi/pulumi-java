@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.CertificatePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,28 +46,28 @@ public final class GetCertificateResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the certificate resource payload.
      * 
-     */
+    */
     public CertificatePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GetCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(id, name, properties, type);
         }

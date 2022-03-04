@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.devicefarm.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class TestGridProjectVpcConfig {
     /**
      * A list of VPC security group IDs in your Amazon VPC.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * A list of VPC subnet IDs in your Amazon VPC.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
@@ -88,7 +88,6 @@ public final class TestGridProjectVpcConfig {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public TestGridProjectVpcConfig build() {
             return new TestGridProjectVpcConfig(securityGroupIds, subnetIds, vpcId);
         }

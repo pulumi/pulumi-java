@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,21 +40,21 @@ public final class AzureResourceErrorInfoResponse {
     /**
      * The error code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * The error details.
      * 
-     */
+    */
     public List<AzureResourceErrorInfoResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * The error message.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -97,7 +97,6 @@ public final class AzureResourceErrorInfoResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public AzureResourceErrorInfoResponse build() {
             return new AzureResourceErrorInfoResponse(code, details, message);
         }

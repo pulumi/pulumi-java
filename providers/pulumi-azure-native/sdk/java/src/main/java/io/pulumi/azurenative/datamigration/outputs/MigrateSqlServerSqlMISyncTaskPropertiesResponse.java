@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlMISyncTask
 import io.pulumi.azurenative.datamigration.outputs.MigrateSyncCompleteCommandPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -72,35 +72,35 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
     /**
      * Array of command properties.
      * 
-     */
+    */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
-     */
+    */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Task input
      * 
-     */
+    */
     public Optional<MigrateSqlServerSqlMISyncTaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
-     */
+    */
     public List<Object> getOutput() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -108,7 +108,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
      * Task type.
      * Expected value is 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS'.
      * 
-     */
+    */
     public String getTaskType() {
         return this.taskType;
     }
@@ -172,7 +172,6 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public MigrateSqlServerSqlMISyncTaskPropertiesResponse build() {
             return new MigrateSqlServerSqlMISyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

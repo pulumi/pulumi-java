@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ApplicationUserAssignedIdentityResponse {
     /**
      * The friendly name of user assigned identity.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The principal id of user assigned identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -74,7 +74,6 @@ public final class ApplicationUserAssignedIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ApplicationUserAssignedIdentityResponse build() {
             return new ApplicationUserAssignedIdentityResponse(name, principalId);
         }

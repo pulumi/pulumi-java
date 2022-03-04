@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GetNatAddressResult {
     /**
      * The static IPV4 address.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * Resource ID of the NAT address.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of the nat address.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -95,7 +95,6 @@ public final class GetNatAddressResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetNatAddressResult build() {
             return new GetNatAddressResult(ipAddress, name, state);
         }

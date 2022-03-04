@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MultichannelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -61,7 +61,6 @@ public final class MultichannelResponse extends io.pulumi.resources.InvokeArgs {
             this.enabled = enabled;
             return this;
         }
-
         public MultichannelResponse build() {
             return new MultichannelResponse(enabled);
         }

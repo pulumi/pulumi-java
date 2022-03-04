@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attachmentTarget", required=true)
-    private final Input<String> attachmentTarget;
+      private final Input<String> attachmentTarget;
 
     public Input<String> getAttachmentTarget() {
         return this.attachmentTarget;
@@ -30,7 +30,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="firewallPolicy", required=true)
-    private final Input<String> firewallPolicy;
+      private final Input<String> firewallPolicy;
 
     public Input<String> getFirewallPolicy() {
         return this.firewallPolicy;
@@ -41,7 +41,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -115,7 +115,6 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public FirewallPolicyAssociationArgs build() {
             return new FirewallPolicyAssociationArgs(attachmentTarget, firewallPolicy, name);
         }

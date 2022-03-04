@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.LimitedPriorityLevelConfiguration;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class PriorityLevelConfigurationSpec {
     /**
      * `limited` specifies how requests are handled for a Limited priority level. This field must be non-empty if and only if `type` is `"Limited"`.
      * 
-     */
+    */
     public Optional<LimitedPriorityLevelConfiguration> getLimited() {
         return Optional.ofNullable(this.limited);
     }
     /**
      * `type` indicates whether this priority level is subject to limitation on request execution.  A value of `"Exempt"` means that requests of this priority level are not subject to a limit (and thus are never queued) and do not detract from the capacity made available to other priority levels.  A value of `"Limited"` means that (a) requests of this priority level _are_ subject to limits and (b) some of the server's limited capacity is made available exclusively to this priority level. Required.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -77,7 +77,6 @@ public final class PriorityLevelConfigurationSpec {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PriorityLevelConfigurationSpec build() {
             return new PriorityLevelConfigurationSpec(limited, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse extends io.
      * 
      */
     @InputImport(name="fullMatch", required=true)
-    private final Boolean fullMatch;
+      private final Boolean fullMatch;
 
     public Boolean getFullMatch() {
         return this.fullMatch;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse extends io.
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -82,7 +82,6 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse extends io.
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudRetailV2betaConditionQueryTermResponse build() {
             return new GoogleCloudRetailV2betaConditionQueryTermResponse(fullMatch, value);
         }

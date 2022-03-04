@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class NetworkInterfaceInstanceIpv6Address {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
-
         public NetworkInterfaceInstanceIpv6Address build() {
             return new NetworkInterfaceInstanceIpv6Address(ipv6Address);
         }

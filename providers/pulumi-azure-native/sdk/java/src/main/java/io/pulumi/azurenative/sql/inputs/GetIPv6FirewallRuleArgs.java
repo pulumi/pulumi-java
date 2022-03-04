@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="firewallRuleName", required=true)
-    private final String firewallRuleName;
+      private final String firewallRuleName;
 
     public String getFirewallRuleName() {
         return this.firewallRuleName;
@@ -28,7 +28,7 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -98,7 +98,6 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public GetIPv6FirewallRuleArgs build() {
             return new GetIPv6FirewallRuleArgs(firewallRuleName, resourceGroupName, serverName);
         }

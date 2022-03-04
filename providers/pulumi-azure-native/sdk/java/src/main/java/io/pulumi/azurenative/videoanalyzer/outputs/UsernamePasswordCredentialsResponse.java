@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -39,7 +39,7 @@ public final class UsernamePasswordCredentialsResponse {
     /**
      * Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
@@ -47,14 +47,14 @@ public final class UsernamePasswordCredentialsResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Username to be presented as part of the credentials.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
@@ -97,7 +97,6 @@ public final class UsernamePasswordCredentialsResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public UsernamePasswordCredentialsResponse build() {
             return new UsernamePasswordCredentialsResponse(password, type, username);
         }

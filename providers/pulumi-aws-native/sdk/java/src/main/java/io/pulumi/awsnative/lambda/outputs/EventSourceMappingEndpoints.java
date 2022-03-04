@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class EventSourceMappingEndpoints {
     /**
      * A list of Kafka server endpoints.
      * 
-     */
+    */
     public List<String> getKafkaBootstrapServers() {
         return this.kafkaBootstrapServers == null ? List.of() : this.kafkaBootstrapServers;
     }
@@ -54,7 +54,6 @@ public final class EventSourceMappingEndpoints {
             this.kafkaBootstrapServers = kafkaBootstrapServers;
             return this;
         }
-
         public EventSourceMappingEndpoints build() {
             return new EventSourceMappingEndpoints(kafkaBootstrapServers);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -90,70 +90,70 @@ public final class GetSecurityUserConfigurationResult {
     /**
      * Flag if need to delete existing network security groups.
      * 
-     */
+    */
     public Optional<String> getDeleteExistingNSGs() {
         return Optional.ofNullable(this.deleteExistingNSGs);
     }
     /**
      * A description of the security configuration.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A display name of the security configuration.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Security Type.
      * 
-     */
+    */
     public Optional<String> getSecurityType() {
         return Optional.ofNullable(this.securityType);
     }
     /**
      * The system metadata related to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -245,7 +245,6 @@ public final class GetSecurityUserConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecurityUserConfigurationResult build() {
             return new GetSecurityUserConfigurationResult(deleteExistingNSGs, description, displayName, etag, id, name, provisioningState, securityType, systemData, type);
         }

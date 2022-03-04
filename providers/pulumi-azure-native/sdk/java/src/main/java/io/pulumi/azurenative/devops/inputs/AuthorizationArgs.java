@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devops.inputs;
 import io.pulumi.azurenative.devops.enums.AuthorizationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationType", required=true)
-    private final Input<Either<String,AuthorizationType>> authorizationType;
+      private final Input<Either<String,AuthorizationType>> authorizationType;
 
     public Input<Either<String,AuthorizationType>> getAuthorizationType() {
         return this.authorizationType;
@@ -37,7 +37,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -96,7 +96,6 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public AuthorizationArgs build() {
             return new AuthorizationArgs(authorizationType, parameters);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetTestResultFileArgs;
 import io.pulumi.azurenative.insights.outputs.GetTestResultFileResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestResultFile {
-/**
- * Test result.
+    private GetTestResultFile() {}
+    public interface BuilderApplicator {
+        public void apply(GetTestResultFileArgs.Builder a);
+    }
+    private static GetTestResultFileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTestResultFileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Test result.
  * API Version: 2020-02-10-preview.
  * 
- *
- * Test result.
+     *
+     * Test result.
  * 
- */
+     */
+    public static CompletableFuture<GetTestResultFileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Test result.
+     * API Version: 2020-02-10-preview.
+     * 
+     *
+         * Test result.
+     * 
+     */
     public static CompletableFuture<GetTestResultFileResult> invokeAsync(GetTestResultFileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getTestResultFile", TypeShape.of(GetTestResultFileResult.class), args == null ? GetTestResultFileArgs.Empty : args, Utilities.withVersion(options));
     }

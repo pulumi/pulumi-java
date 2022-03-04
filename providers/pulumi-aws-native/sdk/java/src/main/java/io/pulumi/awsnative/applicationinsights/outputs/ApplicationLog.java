@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationLogEncoding;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,35 +55,35 @@ public final class ApplicationLog {
     /**
      * The type of encoding of the logs to be monitored.
      * 
-     */
+    */
     public Optional<ApplicationLogEncoding> getEncoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
      * The CloudWatch log group name to be associated to the monitored log.
      * 
-     */
+    */
     public Optional<String> getLogGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
     /**
      * The path of the logs to be monitored.
      * 
-     */
+    */
     public Optional<String> getLogPath() {
         return Optional.ofNullable(this.logPath);
     }
     /**
      * The log type decides the log patterns against which Application Insights analyzes the log.
      * 
-     */
+    */
     public String getLogType() {
         return this.logType;
     }
     /**
      * The name of the log pattern set.
      * 
-     */
+    */
     public Optional<String> getPatternSet() {
         return Optional.ofNullable(this.patternSet);
     }
@@ -140,7 +140,6 @@ public final class ApplicationLog {
             this.patternSet = patternSet;
             return this;
         }
-
         public ApplicationLog build() {
             return new ApplicationLog(encoding, logGroupName, logPath, logType, patternSet);
         }

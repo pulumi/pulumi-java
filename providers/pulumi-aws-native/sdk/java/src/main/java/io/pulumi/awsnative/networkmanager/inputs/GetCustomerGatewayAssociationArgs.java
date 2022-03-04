@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetCustomerGatewayAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="customerGatewayArn", required=true)
-    private final String customerGatewayArn;
+      private final String customerGatewayArn;
 
     public String getCustomerGatewayArn() {
         return this.customerGatewayArn;
@@ -28,7 +28,7 @@ public final class GetCustomerGatewayAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-    private final String globalNetworkId;
+      private final String globalNetworkId;
 
     public String getGlobalNetworkId() {
         return this.globalNetworkId;
@@ -77,7 +77,6 @@ public final class GetCustomerGatewayAssociationArgs extends io.pulumi.resources
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
-
         public GetCustomerGatewayAssociationArgs build() {
             return new GetCustomerGatewayAssociationArgs(customerGatewayArn, globalNetworkId);
         }

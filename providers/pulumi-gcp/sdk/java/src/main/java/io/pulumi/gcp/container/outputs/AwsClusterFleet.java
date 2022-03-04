@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class AwsClusterFleet {
      * - 
      * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
      * 
-     */
+    */
     public Optional<String> getMembership() {
         return Optional.ofNullable(this.membership);
     }
     /**
      * The project for the resource
      * 
-     */
+    */
     public Optional<String> getProject() {
         return Optional.ofNullable(this.project);
     }
@@ -78,7 +78,6 @@ public final class AwsClusterFleet {
             this.project = project;
             return this;
         }
-
         public AwsClusterFleet build() {
             return new AwsClusterFleet(membership, project);
         }

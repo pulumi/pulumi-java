@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class KpiPropertiesResponse {
     /**
      * show the KPI in the UI?
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * ID of resource related to metric (budget).
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * KPI type (Forecast, Budget).
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -98,7 +98,6 @@ public final class KpiPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public KpiPropertiesResponse build() {
             return new KpiPropertiesResponse(enabled, id, type);
         }

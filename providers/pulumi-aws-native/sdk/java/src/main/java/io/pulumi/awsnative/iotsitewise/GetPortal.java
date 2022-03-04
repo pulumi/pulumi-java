@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iotsitewise;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotsitewise.inputs.GetPortalArgs;
 import io.pulumi.awsnative.iotsitewise.outputs.GetPortalResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPortal {
-/**
- * Resource schema for AWS::IoTSiteWise::Portal
+    private GetPortal() {}
+    public interface BuilderApplicator {
+        public void apply(GetPortalArgs.Builder a);
+    }
+    private static GetPortalArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPortalArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::IoTSiteWise::Portal
  * 
- */
+     */
+    public static CompletableFuture<GetPortalResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::IoTSiteWise::Portal
+     * 
+     */
     public static CompletableFuture<GetPortalResult> invokeAsync(GetPortalArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getPortal", TypeShape.of(GetPortalResult.class), args == null ? GetPortalArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class WebhookReceiverResponse {
     /**
      * Indicates the identifier uri for aad auth.
      * 
-     */
+    */
     public Optional<String> getIdentifierUri() {
         return Optional.ofNullable(this.identifierUri);
     }
     /**
      * The name of the webhook receiver. Names must be unique across all receivers within an action group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Indicates the webhook app object Id for aad auth.
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * The URI where webhooks should be sent.
      * 
-     */
+    */
     public String getServiceUri() {
         return this.serviceUri;
     }
     /**
      * Indicates the tenant id for aad auth.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Indicates whether or not use AAD authentication.
      * 
-     */
+    */
     public Optional<Boolean> getUseAadAuth() {
         return Optional.ofNullable(this.useAadAuth);
     }
     /**
      * Indicates whether to use common alert schema.
      * 
-     */
+    */
     public Optional<Boolean> getUseCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -182,7 +182,6 @@ public final class WebhookReceiverResponse {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public WebhookReceiverResponse build() {
             return new WebhookReceiverResponse(identifierUri, name, objectId, serviceUri, tenantId, useAadAuth, useCommonAlertSchema);
         }

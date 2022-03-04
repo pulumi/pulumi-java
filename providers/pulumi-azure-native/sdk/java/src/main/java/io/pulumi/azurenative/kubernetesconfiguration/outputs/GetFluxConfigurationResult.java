@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.outputs.GitRepositoryDefini
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.KustomizationDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectStatusDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -152,126 +152,126 @@ public final class GetFluxConfigurationResult {
     /**
      * Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
      * 
-     */
+    */
     public String getComplianceState() {
         return this.complianceState;
     }
     /**
      * Key-value pairs of protected configuration settings for the configuration
      * 
-     */
+    */
     public Map<String,String> getConfigurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Map.of() : this.configurationProtectedSettings;
     }
     /**
      * Error message returned to the user in the case of provisioning failure.
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * Parameters to reconcile to the GitRepository source kind type.
      * 
-     */
+    */
     public Optional<GitRepositoryDefinitionResponse> getGitRepository() {
         return Optional.ofNullable(this.gitRepository);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
      * 
-     */
+    */
     public Map<String,KustomizationDefinitionResponse> getKustomizations() {
         return this.kustomizations == null ? Map.of() : this.kustomizations;
     }
     /**
      * Datetime the fluxConfiguration last synced its source on the cluster.
      * 
-     */
+    */
     public String getLastSourceSyncedAt() {
         return this.lastSourceSyncedAt;
     }
     /**
      * Branch and SHA of the last source commit synced with the cluster.
      * 
-     */
+    */
     public String getLastSourceSyncedCommitId() {
         return this.lastSourceSyncedCommitId;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Status of the creation of the fluxConfiguration.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
      * 
-     */
+    */
     public String getRepositoryPublicKey() {
         return this.repositoryPublicKey;
     }
     /**
      * Scope at which the operator will be installed.
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Source Kind to pull the configuration data from.
      * 
-     */
+    */
     public Optional<String> getSourceKind() {
         return Optional.ofNullable(this.sourceKind);
     }
     /**
      * Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
      * 
-     */
+    */
     public List<ObjectStatusDefinitionResponse> getStatuses() {
         return this.statuses;
     }
     /**
      * Whether this configuration should suspend its reconciliation of its kustomizations and sources.
      * 
-     */
+    */
     public Optional<Boolean> getSuspend() {
         return Optional.ofNullable(this.suspend);
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -419,7 +419,6 @@ public final class GetFluxConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFluxConfigurationResult build() {
             return new GetFluxConfigurationResult(complianceState, configurationProtectedSettings, errorMessage, gitRepository, id, kustomizations, lastSourceSyncedAt, lastSourceSyncedCommitId, name, namespace, provisioningState, repositoryPublicKey, scope, sourceKind, statuses, suspend, systemData, type);
         }

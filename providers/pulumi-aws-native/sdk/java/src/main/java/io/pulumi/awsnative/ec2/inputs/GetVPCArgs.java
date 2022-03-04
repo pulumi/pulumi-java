@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVPCArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final String vpcId;
+      private final String vpcId;
 
     public String getVpcId() {
         return this.vpcId;
@@ -55,7 +55,6 @@ public final class GetVPCArgs extends io.pulumi.resources.InvokeArgs {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public GetVPCArgs build() {
             return new GetVPCArgs(vpcId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gatewayAuthMethod")
-    private final @Nullable Input<String> gatewayAuthMethod;
+      private final @Nullable Input<String> gatewayAuthMethod;
 
     public Input<String> getGatewayAuthMethod() {
         return this.gatewayAuthMethod == null ? Input.empty() : this.gatewayAuthMethod;
@@ -33,7 +33,7 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gatewayType")
-    private final @Nullable Input<String> gatewayType;
+      private final @Nullable Input<String> gatewayType;
 
     public Input<String> getGatewayType() {
         return this.gatewayType == null ? Input.empty() : this.gatewayType;
@@ -45,7 +45,7 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lastAccessedGatewayId")
-    private final @Nullable Input<String> lastAccessedGatewayId;
+      private final @Nullable Input<String> lastAccessedGatewayId;
 
     public Input<String> getLastAccessedGatewayId() {
         return this.lastAccessedGatewayId == null ? Input.empty() : this.lastAccessedGatewayId;
@@ -57,7 +57,7 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lastAccessedGatewayTime")
-    private final @Nullable Input<String> lastAccessedGatewayTime;
+      private final @Nullable Input<String> lastAccessedGatewayTime;
 
     public Input<String> getLastAccessedGatewayTime() {
         return this.lastAccessedGatewayTime == null ? Input.empty() : this.lastAccessedGatewayTime;
@@ -146,7 +146,6 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
             this.lastAccessedGatewayTime = Input.ofNullable(lastAccessedGatewayTime);
             return this;
         }
-
         public DeviceGatewayConfigGetArgs build() {
             return new DeviceGatewayConfigGetArgs(gatewayAuthMethod, gatewayType, lastAccessedGatewayId, lastAccessedGatewayTime);
         }

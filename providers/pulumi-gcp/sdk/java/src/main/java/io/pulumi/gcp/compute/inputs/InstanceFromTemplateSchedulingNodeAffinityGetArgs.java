@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class InstanceFromTemplateSchedulingNodeAffinityGetArgs extends io.
     public static final InstanceFromTemplateSchedulingNodeAffinityGetArgs Empty = new InstanceFromTemplateSchedulingNodeAffinityGetArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="operator", required=true)
-    private final Input<String> operator;
+      private final Input<String> operator;
 
     public Input<String> getOperator() {
         return this.operator;
     }
 
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+      private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -103,7 +103,6 @@ public final class InstanceFromTemplateSchedulingNodeAffinityGetArgs extends io.
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public InstanceFromTemplateSchedulingNodeAffinityGetArgs build() {
             return new InstanceFromTemplateSchedulingNodeAffinityGetArgs(key, operator, values);
         }

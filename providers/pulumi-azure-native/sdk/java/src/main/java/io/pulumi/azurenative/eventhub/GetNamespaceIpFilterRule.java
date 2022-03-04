@@ -6,21 +6,41 @@ package io.pulumi.azurenative.eventhub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventhub.inputs.GetNamespaceIpFilterRuleArgs;
 import io.pulumi.azurenative.eventhub.outputs.GetNamespaceIpFilterRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamespaceIpFilterRule {
-/**
- * Single item in a List or Get IpFilterRules operation
+    private GetNamespaceIpFilterRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetNamespaceIpFilterRuleArgs.Builder a);
+    }
+    private static GetNamespaceIpFilterRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNamespaceIpFilterRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Single item in a List or Get IpFilterRules operation
  * API Version: 2018-01-01-preview.
  * 
- *
- * Single item in a List or Get IpFilterRules operation
+     *
+     * Single item in a List or Get IpFilterRules operation
  * 
- */
+     */
+    public static CompletableFuture<GetNamespaceIpFilterRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Single item in a List or Get IpFilterRules operation
+     * API Version: 2018-01-01-preview.
+     * 
+     *
+         * Single item in a List or Get IpFilterRules operation
+     * 
+     */
     public static CompletableFuture<GetNamespaceIpFilterRuleResult> invokeAsync(GetNamespaceIpFilterRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getNamespaceIpFilterRule", TypeShape.of(GetNamespaceIpFilterRuleResult.class), args == null ? GetNamespaceIpFilterRuleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable String authenticationType;
+      private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
@@ -34,7 +34,7 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable String connectionString;
+      private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
@@ -45,7 +45,7 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="endpointUri")
-    private final @Nullable String endpointUri;
+      private final @Nullable String endpointUri;
 
     public Optional<String> getEndpointUri() {
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
@@ -56,7 +56,7 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="entityPath")
-    private final @Nullable String entityPath;
+      private final @Nullable String entityPath;
 
     public Optional<String> getEntityPath() {
         return this.entityPath == null ? Optional.empty() : Optional.ofNullable(this.entityPath);
@@ -67,7 +67,7 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -78,7 +78,7 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -89,7 +89,7 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable String resourceGroup;
+      private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
@@ -100,7 +100,7 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+      private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -209,7 +209,6 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public RoutingServiceBusTopicEndpointPropertiesResponse build() {
             return new RoutingServiceBusTopicEndpointPropertiesResponse(authenticationType, connectionString, endpointUri, entityPath, id, name, resourceGroup, subscriptionId);
         }

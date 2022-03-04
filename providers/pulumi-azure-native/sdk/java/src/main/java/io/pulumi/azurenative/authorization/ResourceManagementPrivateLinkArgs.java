@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -30,7 +30,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="rmplName")
-    private final @Nullable Input<String> rmplName;
+      private final @Nullable Input<String> rmplName;
 
     public Input<String> getRmplName() {
         return this.rmplName == null ? Input.empty() : this.rmplName;
@@ -115,7 +115,6 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
             this.rmplName = Input.ofNullable(rmplName);
             return this;
         }
-
         public ResourceManagementPrivateLinkArgs build() {
             return new ResourceManagementPrivateLinkArgs(location, resourceGroupName, rmplName);
         }

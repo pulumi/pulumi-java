@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.TopicRuleDestinationStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class GetTopicRuleDestinationResult {
     /**
      * Amazon Resource Name (ARN).
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The status of the TopicRuleDestination.
      * 
-     */
+    */
     public Optional<TopicRuleDestinationStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The reasoning for the current status of the TopicRuleDestination.
      * 
-     */
+    */
     public Optional<String> getStatusReason() {
         return Optional.ofNullable(this.statusReason);
     }
@@ -98,7 +98,6 @@ public final class GetTopicRuleDestinationResult {
             this.statusReason = statusReason;
             return this;
         }
-
         public GetTopicRuleDestinationResult build() {
             return new GetTopicRuleDestinationResult(arn, status, statusReason);
         }

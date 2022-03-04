@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.kms.outputs.GetKMSCryptoKeyVersionTemplate;
 import java.lang.Boolean;
 import java.lang.String;
@@ -68,7 +68,7 @@ public final class GetKMSCryptoKeyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -87,7 +87,7 @@ public final class GetKMSCryptoKeyResult {
     /**
      * Defines the cryptographic capabilities of the key.
      * 
-     */
+    */
     public String getPurpose() {
         return this.purpose;
     }
@@ -96,7 +96,7 @@ public final class GetKMSCryptoKeyResult {
      * the primary. The first rotation will take place after the specified period. The rotation period has the format
      * of a decimal number with up to 9 fractional digits, followed by the letter s (seconds).
      * 
-     */
+    */
     public String getRotationPeriod() {
         return this.rotationPeriod;
     }
@@ -194,7 +194,6 @@ public final class GetKMSCryptoKeyResult {
             this.versionTemplates = Objects.requireNonNull(versionTemplates);
             return this;
         }
-
         public GetKMSCryptoKeyResult build() {
             return new GetKMSCryptoKeyResult(destroyScheduledDuration, id, importOnly, keyRing, labels, name, purpose, rotationPeriod, skipInitialVersionCreation, versionTemplates);
         }

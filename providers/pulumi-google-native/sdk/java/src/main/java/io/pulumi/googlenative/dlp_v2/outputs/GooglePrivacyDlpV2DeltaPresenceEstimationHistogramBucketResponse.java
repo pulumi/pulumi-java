@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -55,35 +55,35 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     /**
      * Number of records within these probability bounds.
      * 
-     */
+    */
     public String getBucketSize() {
         return this.bucketSize;
     }
     /**
      * Total number of distinct quasi-identifier tuple values in this bucket.
      * 
-     */
+    */
     public String getBucketValueCount() {
         return this.bucketValueCount;
     }
     /**
      * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> getBucketValues() {
         return this.bucketValues;
     }
     /**
      * Always greater than or equal to min_probability.
      * 
-     */
+    */
     public Double getMaxProbability() {
         return this.maxProbability;
     }
     /**
      * Between 0 and 1.
      * 
-     */
+    */
     public Double getMinProbability() {
         return this.minProbability;
     }
@@ -140,7 +140,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
             this.minProbability = Objects.requireNonNull(minProbability);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxProbability, minProbability);
         }

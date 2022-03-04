@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.inputs.HelmReleaseSettingsArgs;
 import io.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
@@ -23,7 +23,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-    private final @Nullable Input<String> cluster;
+      private final @Nullable Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
@@ -34,7 +34,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Input<String> context;
+      private final @Nullable Input<String> context;
 
     public Input<String> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -46,7 +46,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDryRun", json=true)
-    private final @Nullable Input<Boolean> enableDryRun;
+      private final @Nullable Input<Boolean> enableDryRun;
 
     public Input<Boolean> getEnableDryRun() {
         return this.enableDryRun == null ? Input.empty() : this.enableDryRun;
@@ -58,7 +58,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableReplaceCRD", json=true)
-    private final @Nullable Input<Boolean> enableReplaceCRD;
+      private final @Nullable Input<Boolean> enableReplaceCRD;
 
     public Input<Boolean> getEnableReplaceCRD() {
         return this.enableReplaceCRD == null ? Input.empty() : this.enableReplaceCRD;
@@ -69,7 +69,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="helmReleaseSettings", json=true)
-    private final @Nullable Input<HelmReleaseSettingsArgs> helmReleaseSettings;
+      private final @Nullable Input<HelmReleaseSettingsArgs> helmReleaseSettings;
 
     public Input<HelmReleaseSettingsArgs> getHelmReleaseSettings() {
         return this.helmReleaseSettings == null ? Input.empty() : this.helmReleaseSettings;
@@ -80,7 +80,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeClientSettings", json=true)
-    private final @Nullable Input<KubeClientSettingsArgs> kubeClientSettings;
+      private final @Nullable Input<KubeClientSettingsArgs> kubeClientSettings;
 
     public Input<KubeClientSettingsArgs> getKubeClientSettings() {
         return this.kubeClientSettings == null ? Input.empty() : this.kubeClientSettings;
@@ -91,7 +91,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeconfig")
-    private final @Nullable Input<String> kubeconfig;
+      private final @Nullable Input<String> kubeconfig;
 
     public Input<String> getKubeconfig() {
         return this.kubeconfig == null ? Input.empty() : this.kubeconfig;
@@ -107,7 +107,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -125,7 +125,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="renderYamlToDirectory")
-    private final @Nullable Input<String> renderYamlToDirectory;
+      private final @Nullable Input<String> renderYamlToDirectory;
 
     public Input<String> getRenderYamlToDirectory() {
         return this.renderYamlToDirectory == null ? Input.empty() : this.renderYamlToDirectory;
@@ -136,7 +136,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suppressDeprecationWarnings", json=true)
-    private final @Nullable Input<Boolean> suppressDeprecationWarnings;
+      private final @Nullable Input<Boolean> suppressDeprecationWarnings;
 
     public Input<Boolean> getSuppressDeprecationWarnings() {
         return this.suppressDeprecationWarnings == null ? Input.empty() : this.suppressDeprecationWarnings;
@@ -147,7 +147,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suppressHelmHookWarnings", json=true)
-    private final @Nullable Input<Boolean> suppressHelmHookWarnings;
+      private final @Nullable Input<Boolean> suppressHelmHookWarnings;
 
     public Input<Boolean> getSuppressHelmHookWarnings() {
         return this.suppressHelmHookWarnings == null ? Input.empty() : this.suppressHelmHookWarnings;
@@ -341,7 +341,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.suppressHelmHookWarnings = Input.ofNullable(suppressHelmHookWarnings);
             return this;
         }
-
         public ProviderArgs build() {
             return new ProviderArgs(cluster, context, enableDryRun, enableReplaceCRD, helmReleaseSettings, kubeClientSettings, kubeconfig, namespace, renderYamlToDirectory, suppressDeprecationWarnings, suppressHelmHookWarnings);
         }

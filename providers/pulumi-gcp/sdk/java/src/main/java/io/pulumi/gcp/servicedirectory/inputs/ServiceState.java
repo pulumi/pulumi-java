@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -34,7 +34,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -57,7 +57,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceId")
-    private final @Nullable Input<String> serviceId;
+      private final @Nullable Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId == null ? Input.empty() : this.serviceId;
@@ -146,7 +146,6 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
             this.serviceId = Input.ofNullable(serviceId);
             return this;
         }
-
         public ServiceState build() {
             return new ServiceState(metadata, name, namespace, serviceId);
         }

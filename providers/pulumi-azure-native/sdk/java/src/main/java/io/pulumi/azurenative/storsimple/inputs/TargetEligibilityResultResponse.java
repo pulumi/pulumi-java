@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.inputs.TargetEligibilityErrorMessageResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="eligibilityStatus")
-    private final @Nullable String eligibilityStatus;
+      private final @Nullable String eligibilityStatus;
 
     public Optional<String> getEligibilityStatus() {
         return this.eligibilityStatus == null ? Optional.empty() : Optional.ofNullable(this.eligibilityStatus);
@@ -36,7 +36,7 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="messages")
-    private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
+      private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
 
     public List<TargetEligibilityErrorMessageResponse> getMessages() {
         return this.messages == null ? List.of() : this.messages;
@@ -85,7 +85,6 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
             this.messages = messages;
             return this;
         }
-
         public TargetEligibilityResultResponse build() {
             return new TargetEligibilityResultResponse(eligibilityStatus, messages);
         }

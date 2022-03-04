@@ -6,21 +6,41 @@ package io.pulumi.azurenative.peering;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.peering.inputs.GetRegisteredPrefixArgs;
 import io.pulumi.azurenative.peering.outputs.GetRegisteredPrefixResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegisteredPrefix {
-/**
- * The customer's prefix that is registered by the peering service provider.
+    private GetRegisteredPrefix() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegisteredPrefixArgs.Builder a);
+    }
+    private static GetRegisteredPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegisteredPrefixArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The customer's prefix that is registered by the peering service provider.
  * API Version: 2021-01-01.
  * 
- *
- * The customer's prefix that is registered by the peering service provider.
+     *
+     * The customer's prefix that is registered by the peering service provider.
  * 
- */
+     */
+    public static CompletableFuture<GetRegisteredPrefixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The customer's prefix that is registered by the peering service provider.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * The customer's prefix that is registered by the peering service provider.
+     * 
+     */
     public static CompletableFuture<GetRegisteredPrefixResult> invokeAsync(GetRegisteredPrefixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getRegisteredPrefix", TypeShape.of(GetRegisteredPrefixResult.class), args == null ? GetRegisteredPrefixArgs.Empty : args, Utilities.withVersion(options));
     }

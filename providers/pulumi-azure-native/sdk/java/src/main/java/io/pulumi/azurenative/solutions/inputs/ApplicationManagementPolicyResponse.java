@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApplicationManagementPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+      private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -61,7 +61,6 @@ public final class ApplicationManagementPolicyResponse extends io.pulumi.resourc
             this.mode = mode;
             return this;
         }
-
         public ApplicationManagementPolicyResponse build() {
             return new ApplicationManagementPolicyResponse(mode);
         }

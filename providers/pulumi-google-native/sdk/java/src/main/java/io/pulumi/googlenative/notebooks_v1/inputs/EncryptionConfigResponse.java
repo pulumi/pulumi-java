@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="kmsKey", required=true)
-    private final String kmsKey;
+      private final String kmsKey;
 
     public String getKmsKey() {
         return this.kmsKey;
@@ -59,7 +59,6 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
-
         public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(kmsKey);
         }

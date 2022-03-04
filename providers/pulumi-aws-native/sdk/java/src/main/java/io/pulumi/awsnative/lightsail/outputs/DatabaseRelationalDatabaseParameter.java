@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class DatabaseRelationalDatabaseParameter {
     /**
      * Specifies the valid range of values for the parameter.
      * 
-     */
+    */
     public Optional<String> getAllowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
     /**
      * Indicates when parameter updates are applied. Can be immediate or pending-reboot.
      * 
-     */
+    */
     public Optional<String> getApplyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
     /**
      * Specifies the engine-specific parameter type.
      * 
-     */
+    */
     public Optional<String> getApplyType() {
         return Optional.ofNullable(this.applyType);
     }
     /**
      * Specifies the valid data type for the parameter.
      * 
-     */
+    */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Provides a description of the parameter.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A Boolean value indicating whether the parameter can be modified.
      * 
-     */
+    */
     public Optional<Boolean> getIsModifiable() {
         return Optional.ofNullable(this.isModifiable);
     }
     /**
      * Specifies the name of the parameter.
      * 
-     */
+    */
     public Optional<String> getParameterName() {
         return Optional.ofNullable(this.parameterName);
     }
     /**
      * Specifies the value of the parameter.
      * 
-     */
+    */
     public Optional<String> getParameterValue() {
         return Optional.ofNullable(this.parameterValue);
     }
@@ -203,7 +203,6 @@ public final class DatabaseRelationalDatabaseParameter {
             this.parameterValue = parameterValue;
             return this;
         }
-
         public DatabaseRelationalDatabaseParameter build() {
             return new DatabaseRelationalDatabaseParameter(allowedValues, applyMethod, applyType, dataType, description, isModifiable, parameterName, parameterValue);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.CacheActiveDirectorySettingsResponseCredentials;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,49 +69,49 @@ public final class CacheActiveDirectorySettingsResponse {
     /**
      * The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
      * 
-     */
+    */
     public String getCacheNetBiosName() {
         return this.cacheNetBiosName;
     }
     /**
      * Active Directory admin credentials used to join the HPC Cache to a domain.
      * 
-     */
+    */
     public Optional<CacheActiveDirectorySettingsResponseCredentials> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * True if the HPC Cache is joined to the Active Directory domain.
      * 
-     */
+    */
     public String getDomainJoined() {
         return this.domainJoined;
     }
     /**
      * The fully qualified domain name of the Active Directory domain controller.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * The Active Directory domain's NetBIOS name.
      * 
-     */
+    */
     public String getDomainNetBiosName() {
         return this.domainNetBiosName;
     }
     /**
      * Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
      * 
-     */
+    */
     public String getPrimaryDnsIpAddress() {
         return this.primaryDnsIpAddress;
     }
     /**
      * Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
      * 
-     */
+    */
     public Optional<String> getSecondaryDnsIpAddress() {
         return Optional.ofNullable(this.secondaryDnsIpAddress);
     }
@@ -182,7 +182,6 @@ public final class CacheActiveDirectorySettingsResponse {
             this.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
         }
-
         public CacheActiveDirectorySettingsResponse build() {
             return new CacheActiveDirectorySettingsResponse(cacheNetBiosName, credentials, domainJoined, domainName, domainNetBiosName, primaryDnsIpAddress, secondaryDnsIpAddress);
         }

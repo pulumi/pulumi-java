@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sqladmin_v1.outputs.MySqlReplicaConfigurationResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -40,21 +40,21 @@ public final class ReplicaConfigurationResponse {
     /**
      * Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
      * 
-     */
+    */
     public Boolean getFailoverTarget() {
         return this.failoverTarget;
     }
     /**
      * This is always `sql#replicaConfiguration`.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named `master.info` in the data directory.
      * 
-     */
+    */
     public MySqlReplicaConfigurationResponse getMysqlReplicaConfiguration() {
         return this.mysqlReplicaConfiguration;
     }
@@ -97,7 +97,6 @@ public final class ReplicaConfigurationResponse {
             this.mysqlReplicaConfiguration = Objects.requireNonNull(mysqlReplicaConfiguration);
             return this;
         }
-
         public ReplicaConfigurationResponse build() {
             return new ReplicaConfigurationResponse(failoverTarget, kind, mysqlReplicaConfiguration);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dns_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1.ManagedZoneArgs;
 import io.pulumi.googlenative.dns_v1.outputs.ManagedZoneCloudLoggingConfigResponse;
@@ -236,6 +236,37 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
         return this.visibility;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ManagedZoneArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.dns_v1.ManagedZoneArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.dns_v1.ManagedZoneArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ManagedZone(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ManagedZone(String name) {
+        this(name, ManagedZoneArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ManagedZone(String name, @Nullable ManagedZoneArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

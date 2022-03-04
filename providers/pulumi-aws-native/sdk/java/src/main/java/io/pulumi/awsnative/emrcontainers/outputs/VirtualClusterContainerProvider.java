@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.emrcontainers.outputs;
 
 import io.pulumi.awsnative.emrcontainers.outputs.VirtualClusterContainerInfo;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,7 +35,7 @@ public final class VirtualClusterContainerProvider {
     /**
      * The ID of the container cluster
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -45,7 +45,7 @@ public final class VirtualClusterContainerProvider {
     /**
      * The type of the container provider
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -88,7 +88,6 @@ public final class VirtualClusterContainerProvider {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualClusterContainerProvider build() {
             return new VirtualClusterContainerProvider(id, info, type);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessLevelArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelState;
@@ -141,6 +141,37 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
         return this.title;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AccessLevelArgs.Builder a);
+    }
+    private static io.pulumi.gcp.accesscontextmanager.AccessLevelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.accesscontextmanager.AccessLevelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AccessLevel(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AccessLevel(String name) {
+        this(name, AccessLevelArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AccessLevel(String name, AccessLevelArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

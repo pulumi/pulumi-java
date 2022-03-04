@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,14 +41,14 @@ public final class DynamicDeliveryAttributeMappingResponse {
     /**
      * Name of the delivery attribute or header.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * JSON path in the event which contains attribute value.
      * 
-     */
+    */
     public Optional<String> getSourceField() {
         return Optional.ofNullable(this.sourceField);
     }
@@ -56,7 +56,7 @@ public final class DynamicDeliveryAttributeMappingResponse {
      * Type of the delivery attribute or header name.
      * Expected value is 'Dynamic'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -99,7 +99,6 @@ public final class DynamicDeliveryAttributeMappingResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DynamicDeliveryAttributeMappingResponse build() {
             return new DynamicDeliveryAttributeMappingResponse(name, sourceField, type);
         }

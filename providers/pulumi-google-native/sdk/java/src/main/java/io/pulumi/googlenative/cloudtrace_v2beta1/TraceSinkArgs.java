@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtrace_v2beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtrace_v2beta1.inputs.OutputConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,14 +31,14 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputConfig", required=true)
-    private final Input<OutputConfigArgs> outputConfig;
+      private final Input<OutputConfigArgs> outputConfig;
 
     public Input<OutputConfigArgs> getOutputConfig() {
         return this.outputConfig;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -112,7 +112,6 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public TraceSinkArgs build() {
             return new TraceSinkArgs(name, outputConfig, project);
         }

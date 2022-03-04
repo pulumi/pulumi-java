@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudSecret", required=true)
-    private final String cloudSecret;
+      private final String cloudSecret;
 
     public String getCloudSecret() {
         return this.cloudSecret;
@@ -59,7 +59,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
             this.cloudSecret = Objects.requireNonNull(cloudSecret);
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(cloudSecret);
         }

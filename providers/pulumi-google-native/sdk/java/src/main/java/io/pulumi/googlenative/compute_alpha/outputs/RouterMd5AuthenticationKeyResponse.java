@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class RouterMd5AuthenticationKeyResponse {
     /**
      * [Input only] Value of the key. For patch and update calls, it can be skipped to copy the value from the previous configuration. This is allowed if the key with the same name existed before the operation. Maximum length is 80 characters. Can only contain printable ASCII characters.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Name used to identify the key. Must be unique within a router. Must be referenced by at least one bgpPeer. Must comply with RFC1035.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class RouterMd5AuthenticationKeyResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RouterMd5AuthenticationKeyResponse build() {
             return new RouterMd5AuthenticationKeyResponse(key, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,7 +40,7 @@ public final class InstanceSchedulingNodeAffinity {
     /**
      * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
@@ -48,14 +48,14 @@ public final class InstanceSchedulingNodeAffinity {
      * The operator. Can be `IN` for node-affinities
      * or `NOT_IN` for anti-affinities.
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Corresponds to the label values of a reservation resource.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -98,7 +98,6 @@ public final class InstanceSchedulingNodeAffinity {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public InstanceSchedulingNodeAffinity build() {
             return new InstanceSchedulingNodeAffinity(key, operator, values);
         }

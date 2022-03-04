@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="waitCount", required=true)
-    private final Double waitCount;
+      private final Double waitCount;
 
     public Double getWaitCount() {
         return this.waitCount;
@@ -33,7 +33,7 @@ public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="waitTimeMs", required=true)
-    private final Double waitTimeMs;
+      private final Double waitTimeMs;
 
     public Double getWaitTimeMs() {
         return this.waitTimeMs;
@@ -44,7 +44,7 @@ public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="waitType", required=true)
-    private final String waitType;
+      private final String waitType;
 
     public String getWaitType() {
         return this.waitType;
@@ -103,7 +103,6 @@ public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs
             this.waitType = Objects.requireNonNull(waitType);
             return this;
         }
-
         public WaitStatisticsResponse build() {
             return new WaitStatisticsResponse(waitCount, waitTimeMs, waitType);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azureactivedirectory.inputs;
 import io.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUName;
 import io.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUTier;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<B2CResourceSKUName> name;
+      private final @Nullable Input<B2CResourceSKUName> name;
 
     public Input<B2CResourceSKUName> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<B2CResourceSKUTier> tier;
+      private final @Nullable Input<B2CResourceSKUTier> tier;
 
     public Input<B2CResourceSKUTier> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -94,7 +94,6 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public B2CResourceSKUArgs build() {
             return new B2CResourceSKUArgs(name, tier);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -36,7 +36,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
      * 
      */
     @InputImport(name="metric")
-    private final @Nullable Input<String> metric;
+      private final @Nullable Input<String> metric;
 
     public Input<String> getMetric() {
         return this.metric == null ? Input.empty() : this.metric;
@@ -47,7 +47,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
      * 
      */
     @InputImport(name="singleInstanceAssignment")
-    private final @Nullable Input<Double> singleInstanceAssignment;
+      private final @Nullable Input<Double> singleInstanceAssignment;
 
     public Input<Double> getSingleInstanceAssignment() {
         return this.singleInstanceAssignment == null ? Input.empty() : this.singleInstanceAssignment;
@@ -58,7 +58,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
      * 
      */
     @InputImport(name="utilizationTarget")
-    private final @Nullable Input<Double> utilizationTarget;
+      private final @Nullable Input<Double> utilizationTarget;
 
     public Input<Double> getUtilizationTarget() {
         return this.utilizationTarget == null ? Input.empty() : this.utilizationTarget;
@@ -69,7 +69,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
      * 
      */
     @InputImport(name="utilizationTargetType")
-    private final @Nullable Input<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType;
+      private final @Nullable Input<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType;
 
     public Input<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> getUtilizationTargetType() {
         return this.utilizationTargetType == null ? Input.empty() : this.utilizationTargetType;
@@ -173,7 +173,6 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
             this.utilizationTargetType = Input.ofNullable(utilizationTargetType);
             return this;
         }
-
         public AutoscalingPolicyCustomMetricUtilizationArgs build() {
             return new AutoscalingPolicyCustomMetricUtilizationArgs(filter, metric, singleInstanceAssignment, utilizationTarget, utilizationTargetType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionObjectId {
     /**
      * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * 
-     */
+    */
     public List<Integer> getObjectIdPaths() {
         return this.objectIdPaths;
     }
@@ -53,7 +53,6 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionObjectId {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public AuthorityConfigX509ConfigAdditionalExtensionObjectId build() {
             return new AuthorityConfigX509ConfigAdditionalExtensionObjectId(objectIdPaths);
         }

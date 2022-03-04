@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class InstanceTemplateGuestAccelerator {
     /**
      * The number of the guest accelerator cards exposed to this instance.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * The type of reservation from which this instance can consume resources.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -75,7 +75,6 @@ public final class InstanceTemplateGuestAccelerator {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceTemplateGuestAccelerator build() {
             return new InstanceTemplateGuestAccelerator(count, type);
         }

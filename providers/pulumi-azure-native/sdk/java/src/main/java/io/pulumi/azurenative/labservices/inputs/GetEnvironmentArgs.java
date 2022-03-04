@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentName", required=true)
-    private final String environmentName;
+      private final String environmentName;
 
     public String getEnvironmentName() {
         return this.environmentName;
@@ -30,7 +30,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentSettingName", required=true)
-    private final String environmentSettingName;
+      private final String environmentSettingName;
 
     public String getEnvironmentSettingName() {
         return this.environmentSettingName;
@@ -41,7 +41,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -52,7 +52,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labAccountName", required=true)
-    private final String labAccountName;
+      private final String labAccountName;
 
     public String getLabAccountName() {
         return this.labAccountName;
@@ -63,7 +63,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-    private final String labName;
+      private final String labName;
 
     public String getLabName() {
         return this.labName;
@@ -74,7 +74,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -163,7 +163,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetEnvironmentArgs build() {
             return new GetEnvironmentArgs(environmentName, environmentSettingName, expand, labAccountName, labName, resourceGroupName);
         }

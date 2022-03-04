@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managementpartner;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerId")
-    private final @Nullable Input<String> partnerId;
+      private final @Nullable Input<String> partnerId;
 
     public Input<String> getPartnerId() {
         return this.partnerId == null ? Input.empty() : this.partnerId;
@@ -62,7 +62,6 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
             this.partnerId = Input.ofNullable(partnerId);
             return this;
         }
-
         public PartnerArgs build() {
             return new PartnerArgs(partnerId);
         }

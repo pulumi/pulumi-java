@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.MetricCounterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class MetricCounterSetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="counters", required=true)
-    private final List<MetricCounterResponse> counters;
+      private final List<MetricCounterResponse> counters;
 
     public List<MetricCounterResponse> getCounters() {
         return this.counters;
@@ -60,7 +60,6 @@ public final class MetricCounterSetResponse extends io.pulumi.resources.InvokeAr
             this.counters = Objects.requireNonNull(counters);
             return this;
         }
-
         public MetricCounterSetResponse build() {
             return new MetricCounterSetResponse(counters);
         }

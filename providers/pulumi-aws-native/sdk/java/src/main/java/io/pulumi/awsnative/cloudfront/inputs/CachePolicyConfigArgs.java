@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,42 +17,42 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
     public static final CachePolicyConfigArgs Empty = new CachePolicyConfigArgs();
 
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
     }
 
     @InputImport(name="defaultTTL", required=true)
-    private final Input<Double> defaultTTL;
+      private final Input<Double> defaultTTL;
 
     public Input<Double> getDefaultTTL() {
         return this.defaultTTL;
     }
 
     @InputImport(name="maxTTL", required=true)
-    private final Input<Double> maxTTL;
+      private final Input<Double> maxTTL;
 
     public Input<Double> getMaxTTL() {
         return this.maxTTL;
     }
 
     @InputImport(name="minTTL", required=true)
-    private final Input<Double> minTTL;
+      private final Input<Double> minTTL;
 
     public Input<Double> getMinTTL() {
         return this.minTTL;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
-    private final Input<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
+      private final Input<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
 
     public Input<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> getParametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin;
@@ -171,7 +171,6 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
             this.parametersInCacheKeyAndForwardedToOrigin = Input.of(Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin));
             return this;
         }
-
         public CachePolicyConfigArgs build() {
             return new CachePolicyConfigArgs(comment, defaultTTL, maxTTL, minTTL, name, parametersInCacheKeyAndForwardedToOrigin);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.GetIAMPolicyAuditConfig;
 import io.pulumi.gcp.organizations.inputs.GetIAMPolicyBinding;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetIAMPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
+      private final @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
 
     public List<GetIAMPolicyAuditConfig> getAuditConfigs() {
         return this.auditConfigs == null ? List.of() : this.auditConfigs;
@@ -34,7 +34,7 @@ public final class GetIAMPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable List<GetIAMPolicyBinding> bindings;
+      private final @Nullable List<GetIAMPolicyBinding> bindings;
 
     public List<GetIAMPolicyBinding> getBindings() {
         return this.bindings == null ? List.of() : this.bindings;
@@ -83,7 +83,6 @@ public final class GetIAMPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.bindings = bindings;
             return this;
         }
-
         public GetIAMPolicyArgs build() {
             return new GetIAMPolicyArgs(auditConfigs, bindings);
         }

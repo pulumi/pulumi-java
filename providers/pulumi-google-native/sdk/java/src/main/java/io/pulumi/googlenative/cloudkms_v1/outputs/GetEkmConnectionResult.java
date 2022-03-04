@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.ServiceResolverResponse;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class GetEkmConnectionResult {
     /**
      * The time at which the EkmConnection was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update requests to ensure the client has an up-to-date value before proceeding.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource name for the EkmConnection in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
      * 
-     */
+    */
     public List<ServiceResolverResponse> getServiceResolvers() {
         return this.serviceResolvers;
     }
@@ -118,7 +118,6 @@ public final class GetEkmConnectionResult {
             this.serviceResolvers = Objects.requireNonNull(serviceResolvers);
             return this;
         }
-
         public GetEkmConnectionResult build() {
             return new GetEkmConnectionResult(createTime, etag, name, serviceResolvers);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2WordListResponse {
     /**
      * Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
      * 
-     */
+    */
     public List<String> getWords() {
         return this.words;
     }
@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2WordListResponse {
             this.words = Objects.requireNonNull(words);
             return this;
         }
-
         public GooglePrivacyDlpV2WordListResponse build() {
             return new GooglePrivacyDlpV2WordListResponse(words);
         }

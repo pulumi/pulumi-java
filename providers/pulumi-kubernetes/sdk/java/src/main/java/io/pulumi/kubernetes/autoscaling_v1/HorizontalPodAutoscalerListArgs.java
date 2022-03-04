@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v1.inputs.HorizontalPodAutoscalerArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -33,7 +33,7 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="items", required=true)
-    private final Input<List<HorizontalPodAutoscalerArgs>> items;
+      private final Input<List<HorizontalPodAutoscalerArgs>> items;
 
     public Input<List<HorizontalPodAutoscalerArgs>> getItems() {
         return this.items;
@@ -44,7 +44,7 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -55,7 +55,7 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ListMetaArgs> metadata;
+      private final @Nullable Input<ListMetaArgs> metadata;
 
     public Input<ListMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -144,7 +144,6 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public HorizontalPodAutoscalerListArgs build() {
             return new HorizontalPodAutoscalerListArgs(apiVersion, items, kind, metadata);
         }

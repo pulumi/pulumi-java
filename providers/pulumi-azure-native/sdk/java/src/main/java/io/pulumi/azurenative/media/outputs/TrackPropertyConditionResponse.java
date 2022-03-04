@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class TrackPropertyConditionResponse {
     /**
      * Track property condition operation
      * 
-     */
+    */
     public String getOperation() {
         return this.operation;
     }
     /**
      * Track property type
      * 
-     */
+    */
     public String getProperty() {
         return this.property;
     }
     /**
      * Track property value
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -97,7 +97,6 @@ public final class TrackPropertyConditionResponse {
             this.value = value;
             return this;
         }
-
         public TrackPropertyConditionResponse build() {
             return new TrackPropertyConditionResponse(operation, property, value);
         }

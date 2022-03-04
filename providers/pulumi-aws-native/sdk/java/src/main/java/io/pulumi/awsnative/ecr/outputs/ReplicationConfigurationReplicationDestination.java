@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecr.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class ReplicationConfigurationReplicationDestination {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public ReplicationConfigurationReplicationDestination build() {
             return new ReplicationConfigurationReplicationDestination(region, registryId);
         }

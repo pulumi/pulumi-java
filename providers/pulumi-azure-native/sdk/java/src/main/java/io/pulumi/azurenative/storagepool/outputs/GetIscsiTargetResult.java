@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagepool.outputs;
 
 import io.pulumi.azurenative.storagepool.outputs.TargetPortalGroupResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -68,49 +68,49 @@ public final class GetIscsiTargetResult {
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of the operation on the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Operational status of the iSCSI target.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
      * 
-     */
+    */
     public String getTargetIqn() {
         return this.targetIqn;
     }
     /**
      * List of iSCSI target portal groups. Can have 1 portal group at most.
      * 
-     */
+    */
     public List<TargetPortalGroupResponse> getTpgs() {
         return this.tpgs;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -181,7 +181,6 @@ public final class GetIscsiTargetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIscsiTargetResult build() {
             return new GetIscsiTargetResult(id, name, provisioningState, status, targetIqn, tpgs, type);
         }

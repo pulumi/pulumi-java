@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ManagedRuleGroupOverrideResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -50,28 +50,28 @@ public final class ManagedRuleSetResponse {
     /**
      * Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
      * 
-     */
+    */
     public Optional<Integer> getAnomalyScore() {
         return Optional.ofNullable(this.anomalyScore);
     }
     /**
      * Defines the rule overrides to apply to the rule set.
      * 
-     */
+    */
     public List<ManagedRuleGroupOverrideResponse> getRuleGroupOverrides() {
         return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
     }
     /**
      * Defines the rule set type to use.
      * 
-     */
+    */
     public String getRuleSetType() {
         return this.ruleSetType;
     }
     /**
      * Defines the version of the rule set to use.
      * 
-     */
+    */
     public String getRuleSetVersion() {
         return this.ruleSetVersion;
     }
@@ -121,7 +121,6 @@ public final class ManagedRuleSetResponse {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
-
         public ManagedRuleSetResponse build() {
             return new ManagedRuleSetResponse(anomalyScore, ruleGroupOverrides, ruleSetType, ruleSetVersion);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.InnerErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -82,35 +82,35 @@ public final class UserFacingErrorResponse {
     /**
      * Unique code for this error
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Additional related Errors
      * 
-     */
+    */
     public List<UserFacingErrorResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * Inner Error
      * 
-     */
+    */
     public Optional<InnerErrorResponse> getInnerError() {
         return Optional.ofNullable(this.innerError);
     }
     /**
      * Whether the operation will be retryable or not
      * 
-     */
+    */
     public Optional<Boolean> getIsRetryable() {
         return Optional.ofNullable(this.isRetryable);
     }
     /**
      * Whether the operation is due to a user error or service error
      * 
-     */
+    */
     public Optional<Boolean> getIsUserError() {
         return Optional.ofNullable(this.isUserError);
     }
@@ -120,21 +120,21 @@ public final class UserFacingErrorResponse {
     /**
      * Any key value pairs that can be injected inside error object
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * RecommendedAction � localized.
      * 
-     */
+    */
     public List<String> getRecommendedAction() {
         return this.recommendedAction == null ? List.of() : this.recommendedAction;
     }
     /**
      * Target of the error.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -219,7 +219,6 @@ public final class UserFacingErrorResponse {
             this.target = target;
             return this;
         }
-
         public UserFacingErrorResponse build() {
             return new UserFacingErrorResponse(code, details, innerError, isRetryable, isUserError, message, properties, recommendedAction, target);
         }

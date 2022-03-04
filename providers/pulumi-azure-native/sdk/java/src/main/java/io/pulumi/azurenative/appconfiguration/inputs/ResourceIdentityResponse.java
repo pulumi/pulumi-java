@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appconfiguration.inputs;
 
 import io.pulumi.azurenative.appconfiguration.inputs.UserIdentityResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -36,7 +36,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -47,7 +47,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -58,7 +58,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Map<String,UserIdentityResponse> userAssignedIdentities;
+      private final @Nullable Map<String,UserIdentityResponse> userAssignedIdentities;
 
     public Map<String,UserIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
@@ -127,7 +127,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ResourceIdentityResponse build() {
             return new ResourceIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

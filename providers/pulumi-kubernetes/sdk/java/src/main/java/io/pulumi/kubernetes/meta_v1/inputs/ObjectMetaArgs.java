@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ManagedFieldsEntryArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.OwnerReferenceArgs;
 import java.lang.Integer;
@@ -28,7 +28,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -39,7 +39,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -52,7 +52,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -63,7 +63,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionGracePeriodSeconds")
-    private final @Nullable Input<Integer> deletionGracePeriodSeconds;
+      private final @Nullable Input<Integer> deletionGracePeriodSeconds;
 
     public Input<Integer> getDeletionGracePeriodSeconds() {
         return this.deletionGracePeriodSeconds == null ? Input.empty() : this.deletionGracePeriodSeconds;
@@ -76,7 +76,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionTimestamp")
-    private final @Nullable Input<String> deletionTimestamp;
+      private final @Nullable Input<String> deletionTimestamp;
 
     public Input<String> getDeletionTimestamp() {
         return this.deletionTimestamp == null ? Input.empty() : this.deletionTimestamp;
@@ -87,7 +87,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="finalizers")
-    private final @Nullable Input<List<String>> finalizers;
+      private final @Nullable Input<List<String>> finalizers;
 
     public Input<List<String>> getFinalizers() {
         return this.finalizers == null ? Input.empty() : this.finalizers;
@@ -102,7 +102,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="generateName")
-    private final @Nullable Input<String> generateName;
+      private final @Nullable Input<String> generateName;
 
     public Input<String> getGenerateName() {
         return this.generateName == null ? Input.empty() : this.generateName;
@@ -113,7 +113,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="generation")
-    private final @Nullable Input<Integer> generation;
+      private final @Nullable Input<Integer> generation;
 
     public Input<Integer> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -124,7 +124,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -135,7 +135,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedFields")
-    private final @Nullable Input<List<ManagedFieldsEntryArgs>> managedFields;
+      private final @Nullable Input<List<ManagedFieldsEntryArgs>> managedFields;
 
     public Input<List<ManagedFieldsEntryArgs>> getManagedFields() {
         return this.managedFields == null ? Input.empty() : this.managedFields;
@@ -146,7 +146,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -159,7 +159,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -170,7 +170,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerReferences")
-    private final @Nullable Input<List<OwnerReferenceArgs>> ownerReferences;
+      private final @Nullable Input<List<OwnerReferenceArgs>> ownerReferences;
 
     public Input<List<OwnerReferenceArgs>> getOwnerReferences() {
         return this.ownerReferences == null ? Input.empty() : this.ownerReferences;
@@ -183,7 +183,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceVersion")
-    private final @Nullable Input<String> resourceVersion;
+      private final @Nullable Input<String> resourceVersion;
 
     public Input<String> getResourceVersion() {
         return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
@@ -196,7 +196,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -209,7 +209,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -478,7 +478,6 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
             this.uid = Input.ofNullable(uid);
             return this;
         }
-
         public ObjectMetaArgs build() {
             return new ObjectMetaArgs(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, managedFields, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
         }

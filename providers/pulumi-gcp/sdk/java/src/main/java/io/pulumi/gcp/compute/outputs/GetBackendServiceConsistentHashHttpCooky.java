@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceConsistentHashHttpCookyTtl;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class GetBackendServiceConsistentHashHttpCooky {
     /**
      * The name of the Backend Service.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -81,7 +81,6 @@ public final class GetBackendServiceConsistentHashHttpCooky {
             this.ttls = Objects.requireNonNull(ttls);
             return this;
         }
-
         public GetBackendServiceConsistentHashHttpCooky build() {
             return new GetBackendServiceConsistentHashHttpCooky(name, path, ttls);
         }

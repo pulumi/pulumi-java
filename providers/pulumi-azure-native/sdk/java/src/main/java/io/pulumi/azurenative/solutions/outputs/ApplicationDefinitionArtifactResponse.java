@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ApplicationDefinitionArtifactResponse {
     /**
      * The managed application definition artifact name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The managed application definition artifact type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The managed application definition artifact blob uri.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -95,7 +95,6 @@ public final class ApplicationDefinitionArtifactResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ApplicationDefinitionArtifactResponse build() {
             return new ApplicationDefinitionArtifactResponse(name, type, uri);
         }

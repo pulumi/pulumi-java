@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GameServerGroupTargetTrackingConfiguration extends io.pulumi.
     public static final GameServerGroupTargetTrackingConfiguration Empty = new GameServerGroupTargetTrackingConfiguration();
 
     @InputImport(name="targetValue", required=true)
-    private final Double targetValue;
+      private final Double targetValue;
 
     public Double getTargetValue() {
         return this.targetValue;
@@ -55,7 +55,6 @@ public final class GameServerGroupTargetTrackingConfiguration extends io.pulumi.
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public GameServerGroupTargetTrackingConfiguration build() {
             return new GameServerGroupTargetTrackingConfiguration(targetValue);
         }

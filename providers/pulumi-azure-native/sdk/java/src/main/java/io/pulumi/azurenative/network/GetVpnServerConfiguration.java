@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetVpnServerConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.GetVpnServerConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpnServerConfiguration {
-/**
- * VpnServerConfiguration Resource.
+    private GetVpnServerConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpnServerConfigurationArgs.Builder a);
+    }
+    private static GetVpnServerConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpnServerConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * VpnServerConfiguration Resource.
  * API Version: 2020-11-01.
  * 
- *
- * VpnServerConfiguration Resource.
+     *
+     * VpnServerConfiguration Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetVpnServerConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * VpnServerConfiguration Resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * VpnServerConfiguration Resource.
+     * 
+     */
     public static CompletableFuture<GetVpnServerConfigurationResult> invokeAsync(GetVpnServerConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVpnServerConfiguration", TypeShape.of(GetVpnServerConfigurationResult.class), args == null ? GetVpnServerConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

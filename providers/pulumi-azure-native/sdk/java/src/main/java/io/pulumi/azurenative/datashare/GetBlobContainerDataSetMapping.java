@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetBlobContainerDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.GetBlobContainerDataSetMappingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobContainerDataSetMapping {
-/**
- * A Blob container data set mapping.
+    private GetBlobContainerDataSetMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetBlobContainerDataSetMappingArgs.Builder a);
+    }
+    private static GetBlobContainerDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBlobContainerDataSetMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Blob container data set mapping.
  * API Version: 2020-09-01.
  * 
- *
- * A Blob container data set mapping.
+     *
+     * A Blob container data set mapping.
  * 
- */
+     */
+    public static CompletableFuture<GetBlobContainerDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Blob container data set mapping.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A Blob container data set mapping.
+     * 
+     */
     public static CompletableFuture<GetBlobContainerDataSetMappingResult> invokeAsync(GetBlobContainerDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobContainerDataSetMapping", TypeShape.of(GetBlobContainerDataSetMappingResult.class), args == null ? GetBlobContainerDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

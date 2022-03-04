@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageCardButtonArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
      * 
      */
     @InputImport(name="buttons")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs>> buttons;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs>> buttons;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs>> getButtons() {
         return this.buttons == null ? Input.empty() : this.buttons;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
      * 
      */
     @InputImport(name="imageUri")
-    private final @Nullable Input<String> imageUri;
+      private final @Nullable Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri == null ? Input.empty() : this.imageUri;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
      * 
      */
     @InputImport(name="subtitle")
-    private final @Nullable Input<String> subtitle;
+      private final @Nullable Input<String> subtitle;
 
     public Input<String> getSubtitle() {
         return this.subtitle == null ? Input.empty() : this.subtitle;
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -147,7 +147,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageCardArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageCardArgs(buttons, imageUri, subtitle, title);
         }

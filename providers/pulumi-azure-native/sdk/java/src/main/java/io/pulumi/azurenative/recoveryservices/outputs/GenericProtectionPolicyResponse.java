@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.SubProtectionPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -59,35 +59,35 @@ public final class GenericProtectionPolicyResponse {
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'GenericProtectionPolicy'.
      * 
-     */
+    */
     public String getBackupManagementType() {
         return this.backupManagementType;
     }
     /**
      * Name of this policy's fabric.
      * 
-     */
+    */
     public Optional<String> getFabricName() {
         return Optional.ofNullable(this.fabricName);
     }
     /**
      * Number of items associated with this policy.
      * 
-     */
+    */
     public Optional<Integer> getProtectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
      * List of sub-protection policies which includes schedule and retention
      * 
-     */
+    */
     public List<SubProtectionPolicyResponse> getSubProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
     /**
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
      * 
-     */
+    */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -144,7 +144,6 @@ public final class GenericProtectionPolicyResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public GenericProtectionPolicyResponse build() {
             return new GenericProtectionPolicyResponse(backupManagementType, fabricName, protectedItemsCount, subProtectionPolicy, timeZone);
         }

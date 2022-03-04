@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ContactDetailResponse {
     /**
      * The e-mail address of the contact.
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * The phone number of the contact.
      * 
-     */
+    */
     public Optional<String> getPhone() {
         return Optional.ofNullable(this.phone);
     }
     /**
      * The role of the contact.
      * 
-     */
+    */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }
@@ -97,7 +97,6 @@ public final class ContactDetailResponse {
             this.role = role;
             return this;
         }
-
         public ContactDetailResponse build() {
             return new ContactDetailResponse(email, phone, role);
         }

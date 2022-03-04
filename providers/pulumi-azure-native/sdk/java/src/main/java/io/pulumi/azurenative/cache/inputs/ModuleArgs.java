@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<String> args;
+      private final @Nullable Input<String> args;
 
     public Input<String> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -34,7 +34,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -93,7 +93,6 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ModuleArgs build() {
             return new ModuleArgs(args, name);
         }

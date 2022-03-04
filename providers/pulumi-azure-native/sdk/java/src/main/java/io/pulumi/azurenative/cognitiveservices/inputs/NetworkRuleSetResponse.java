@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.IpRuleResponse;
 import io.pulumi.azurenative.cognitiveservices.inputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="defaultAction")
-    private final @Nullable String defaultAction;
+      private final @Nullable String defaultAction;
 
     public Optional<String> getDefaultAction() {
         return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
@@ -37,7 +37,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ipRules")
-    private final @Nullable List<IpRuleResponse> ipRules;
+      private final @Nullable List<IpRuleResponse> ipRules;
 
     public List<IpRuleResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
@@ -48,7 +48,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="virtualNetworkRules")
-    private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
+      private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
     public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
@@ -107,7 +107,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(defaultAction, ipRules, virtualNetworkRules);
         }

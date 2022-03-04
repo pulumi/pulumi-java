@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class KpiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -35,7 +35,7 @@ public final class KpiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -46,7 +46,7 @@ public final class KpiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -105,7 +105,6 @@ public final class KpiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
             this.type = type;
             return this;
         }
-
         public KpiPropertiesResponse build() {
             return new KpiPropertiesResponse(enabled, id, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ComponentSourceResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ComponentTransformResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.StageSourceResponse;
@@ -25,7 +25,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="componentSource", required=true)
-    private final List<ComponentSourceResponse> componentSource;
+      private final List<ComponentSourceResponse> componentSource;
 
     public List<ComponentSourceResponse> getComponentSource() {
         return this.componentSource;
@@ -36,7 +36,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="componentTransform", required=true)
-    private final List<ComponentTransformResponse> componentTransform;
+      private final List<ComponentTransformResponse> componentTransform;
 
     public List<ComponentTransformResponse> getComponentTransform() {
         return this.componentTransform;
@@ -47,7 +47,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="inputSource", required=true)
-    private final List<StageSourceResponse> inputSource;
+      private final List<StageSourceResponse> inputSource;
 
     public List<StageSourceResponse> getInputSource() {
         return this.inputSource;
@@ -58,7 +58,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -69,7 +69,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -80,7 +80,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="outputSource", required=true)
-    private final List<StageSourceResponse> outputSource;
+      private final List<StageSourceResponse> outputSource;
 
     public List<StageSourceResponse> getOutputSource() {
         return this.outputSource;
@@ -91,7 +91,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="prerequisiteStage", required=true)
-    private final List<String> prerequisiteStage;
+      private final List<String> prerequisiteStage;
 
     public List<String> getPrerequisiteStage() {
         return this.prerequisiteStage;
@@ -190,7 +190,6 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
             this.prerequisiteStage = Objects.requireNonNull(prerequisiteStage);
             return this;
         }
-
         public ExecutionStageSummaryResponse build() {
             return new ExecutionStageSummaryResponse(componentSource, componentTransform, inputSource, kind, name, outputSource, prerequisiteStage);
         }

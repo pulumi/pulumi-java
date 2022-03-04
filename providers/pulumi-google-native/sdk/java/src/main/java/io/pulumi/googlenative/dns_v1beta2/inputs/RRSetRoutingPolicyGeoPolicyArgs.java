@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,14 +25,14 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
+      private final @Nullable Input<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
 
     public Input<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -91,7 +91,6 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public RRSetRoutingPolicyGeoPolicyArgs build() {
             return new RRSetRoutingPolicyGeoPolicyArgs(items, kind);
         }

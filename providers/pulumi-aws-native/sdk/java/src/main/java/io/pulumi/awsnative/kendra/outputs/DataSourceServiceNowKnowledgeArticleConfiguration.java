@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -128,7 +128,6 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
-
         public DataSourceServiceNowKnowledgeArticleConfiguration build() {
             return new DataSourceServiceNowKnowledgeArticleConfiguration(crawlAttachments, documentDataFieldName, documentTitleFieldName, excludeAttachmentFilePatterns, fieldMappings, filterQuery, includeAttachmentFilePatterns);
         }

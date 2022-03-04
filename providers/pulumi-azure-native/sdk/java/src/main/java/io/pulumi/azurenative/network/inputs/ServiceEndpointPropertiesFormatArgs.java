@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -35,7 +35,7 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -94,7 +94,6 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public ServiceEndpointPropertiesFormatArgs build() {
             return new ServiceEndpointPropertiesFormatArgs(locations, service);
         }

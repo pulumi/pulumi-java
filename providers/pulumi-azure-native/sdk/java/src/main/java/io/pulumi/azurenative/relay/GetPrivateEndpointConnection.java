@@ -6,21 +6,41 @@ package io.pulumi.azurenative.relay;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.relay.inputs.GetPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.relay.outputs.GetPrivateEndpointConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnection {
-/**
- * Private endpoint connection resource.
+    private GetPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Private endpoint connection resource.
  * API Version: 2018-01-01-preview.
  * 
- *
- * Private endpoint connection resource.
+     *
+     * Private endpoint connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Private endpoint connection resource.
+     * API Version: 2018-01-01-preview.
+     * 
+     *
+         * Private endpoint connection resource.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(GetPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args == null ? GetPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

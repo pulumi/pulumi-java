@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EphemeralStorageConfigResponse {
     /**
      * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
      * 
-     */
+    */
     public Integer getLocalSsdCount() {
         return this.localSsdCount;
     }
@@ -52,7 +52,6 @@ public final class EphemeralStorageConfigResponse {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
-
         public EphemeralStorageConfigResponse build() {
             return new EphemeralStorageConfigResponse(localSsdCount);
         }

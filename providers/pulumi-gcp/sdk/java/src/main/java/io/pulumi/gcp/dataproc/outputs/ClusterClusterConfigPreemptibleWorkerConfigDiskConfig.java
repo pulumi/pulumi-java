@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +49,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
      * computed value if not set (currently 500GB). Note: If SSDs are not
      * attached, it also contains the HDFS data blocks and Hadoop working directories.
      * 
-     */
+    */
     public Optional<Integer> getBootDiskSizeGb() {
         return Optional.ofNullable(this.bootDiskSizeGb);
     }
@@ -57,7 +57,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
      * The disk type of the primary disk attached to each preemptible worker node.
      * One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
      * 
-     */
+    */
     public Optional<String> getBootDiskType() {
         return Optional.ofNullable(this.bootDiskType);
     }
@@ -65,7 +65,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
      * The amount of local SSD disks that will be
      * attached to each preemptible worker node. Defaults to 0.
      * 
-     */
+    */
     public Optional<Integer> getNumLocalSsds() {
         return Optional.ofNullable(this.numLocalSsds);
     }
@@ -108,7 +108,6 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
             this.numLocalSsds = numLocalSsds;
             return this;
         }
-
         public ClusterClusterConfigPreemptibleWorkerConfigDiskConfig build() {
             return new ClusterClusterConfigPreemptibleWorkerConfigDiskConfig(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }

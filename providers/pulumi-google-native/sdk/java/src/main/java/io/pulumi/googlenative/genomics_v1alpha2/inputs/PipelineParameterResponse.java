@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.LocalCopyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="defaultValue", required=true)
-    private final String defaultValue;
+      private final String defaultValue;
 
     public String getDefaultValue() {
         return this.defaultValue;
@@ -33,7 +33,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="localCopy", required=true)
-    private final LocalCopyResponse localCopy;
+      private final LocalCopyResponse localCopy;
 
     public LocalCopyResponse getLocalCopy() {
         return this.localCopy;
@@ -55,7 +55,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -124,7 +124,6 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PipelineParameterResponse build() {
             return new PipelineParameterResponse(defaultValue, description, localCopy, name);
         }

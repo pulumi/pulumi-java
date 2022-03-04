@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rule", required=true)
-    private final Input<String> rule;
+      private final Input<String> rule;
 
     public Input<String> getRule() {
         return this.rule;
@@ -35,7 +35,7 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="seLinuxOptions")
-    private final @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
+      private final @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
 
     public Input<SELinuxOptionsArgs> getSeLinuxOptions() {
         return this.seLinuxOptions == null ? Input.empty() : this.seLinuxOptions;
@@ -94,7 +94,6 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
             this.seLinuxOptions = Input.ofNullable(seLinuxOptions);
             return this;
         }
-
         public SELinuxStrategyOptionsArgs build() {
             return new SELinuxStrategyOptionsArgs(rule, seLinuxOptions);
         }

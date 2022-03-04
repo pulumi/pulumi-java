@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ClusterNodeConfigGuestAccelerator {
     /**
      * The number of the guest accelerator cards exposed to this instance.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
      * 
-     */
+    */
     public Optional<String> getGpuPartitionSize() {
         return Optional.ofNullable(this.gpuPartitionSize);
     }
     /**
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -98,7 +98,6 @@ public final class ClusterNodeConfigGuestAccelerator {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ClusterNodeConfigGuestAccelerator build() {
             return new ClusterNodeConfigGuestAccelerator(count, gpuPartitionSize, type);
         }

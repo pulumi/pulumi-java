@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.SharedAccessSignatureAuthorizationRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ListIotHubResourceKeysResult {
     /**
      * The next link.
      * 
-     */
+    */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * The list of shared access policies.
      * 
-     */
+    */
     public List<SharedAccessSignatureAuthorizationRuleResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -77,7 +77,6 @@ public final class ListIotHubResourceKeysResult {
             this.value = value;
             return this;
         }
-
         public ListIotHubResourceKeysResult build() {
             return new ListIotHubResourceKeysResult(nextLink, value);
         }

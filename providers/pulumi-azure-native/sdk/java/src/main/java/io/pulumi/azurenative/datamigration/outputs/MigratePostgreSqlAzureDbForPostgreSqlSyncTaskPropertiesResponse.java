@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datamigration.outputs.MigratePostgreSqlAzureDbForPo
 import io.pulumi.azurenative.datamigration.outputs.MigrateSyncCompleteCommandPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -74,35 +74,35 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
     /**
      * Array of command properties.
      * 
-     */
+    */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
-     */
+    */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Task input
      * 
-     */
+    */
     public Optional<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
-     */
+    */
     public List<Object> getOutput() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -110,7 +110,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * Task type.
      * Expected value is 'Migrate.PostgreSql.AzureDbForPostgreSql.Sync'.
      * 
-     */
+    */
     public String getTaskType() {
         return this.taskType;
     }
@@ -174,7 +174,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

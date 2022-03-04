@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class DnsResourceReferenceResponse {
     /**
      * A list of dns Records
      * 
-     */
+    */
     public List<SubResourceResponse> getDnsResources() {
         return this.dnsResources == null ? List.of() : this.dnsResources;
     }
     /**
      * A reference to an azure resource from where the dns resource value is taken.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getTargetResource() {
         return Optional.ofNullable(this.targetResource);
     }
@@ -77,7 +77,6 @@ public final class DnsResourceReferenceResponse {
             this.targetResource = targetResource;
             return this;
         }
-
         public DnsResourceReferenceResponse build() {
             return new DnsResourceReferenceResponse(dnsResources, targetResource);
         }

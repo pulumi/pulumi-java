@@ -8,8 +8,8 @@ import io.pulumi.azurenative.insights.ComponentLinkedStorageAccountArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -74,6 +74,37 @@ public class ComponentLinkedStorageAccount extends io.pulumi.resources.CustomRes
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ComponentLinkedStorageAccountArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.insights.ComponentLinkedStorageAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.insights.ComponentLinkedStorageAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ComponentLinkedStorageAccount(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ComponentLinkedStorageAccount(String name) {
+        this(name, ComponentLinkedStorageAccountArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ComponentLinkedStorageAccount(String name, ComponentLinkedStorageAccountArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

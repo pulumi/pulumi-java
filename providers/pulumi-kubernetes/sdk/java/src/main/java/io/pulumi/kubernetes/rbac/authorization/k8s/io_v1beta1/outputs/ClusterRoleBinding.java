@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.outputs.RoleRef;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.outputs.Subject;
@@ -58,35 +58,35 @@ public final class ClusterRoleBinding {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Standard object's metadata.
      * 
-     */
+    */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.
      * 
-     */
+    */
     public RoleRef getRoleRef() {
         return this.roleRef;
     }
     /**
      * Subjects holds references to the objects the role applies to.
      * 
-     */
+    */
     public List<Subject> getSubjects() {
         return this.subjects == null ? List.of() : this.subjects;
     }
@@ -143,7 +143,6 @@ public final class ClusterRoleBinding {
             this.subjects = subjects;
             return this;
         }
-
         public ClusterRoleBinding build() {
             return new ClusterRoleBinding(apiVersion, kind, metadata, roleRef, subjects);
         }

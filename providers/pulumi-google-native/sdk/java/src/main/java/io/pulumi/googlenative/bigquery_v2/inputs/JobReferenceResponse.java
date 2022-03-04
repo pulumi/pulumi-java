@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class JobReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobId", required=true)
-    private final String jobId;
+      private final String jobId;
 
     public String getJobId() {
         return this.jobId;
@@ -28,7 +28,7 @@ public final class JobReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -39,7 +39,7 @@ public final class JobReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -98,7 +98,6 @@ public final class JobReferenceResponse extends io.pulumi.resources.InvokeArgs {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public JobReferenceResponse build() {
             return new JobReferenceResponse(jobId, location, project);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotevents.outputs;
 import io.pulumi.awsnative.iotevents.enums.DetectorModelEvaluationMethod;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelDefinition;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -59,21 +59,21 @@ public final class GetDetectorModelResult {
     /**
      * A brief description of the detector model.
      * 
-     */
+    */
     public Optional<String> getDetectorModelDescription() {
         return Optional.ofNullable(this.detectorModelDescription);
     }
     /**
      * Information about the order in which events are evaluated and how actions are executed.
      * 
-     */
+    */
     public Optional<DetectorModelEvaluationMethod> getEvaluationMethod() {
         return Optional.ofNullable(this.evaluationMethod);
     }
     /**
      * The ARN of the role that grants permission to AWS IoT Events to perform its operations.
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -82,7 +82,7 @@ public final class GetDetectorModelResult {
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
-     */
+    */
     public List<DetectorModelTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -139,7 +139,6 @@ public final class GetDetectorModelResult {
             this.tags = tags;
             return this;
         }
-
         public GetDetectorModelResult build() {
             return new GetDetectorModelResult(detectorModelDefinition, detectorModelDescription, evaluationMethod, roleArn, tags);
         }

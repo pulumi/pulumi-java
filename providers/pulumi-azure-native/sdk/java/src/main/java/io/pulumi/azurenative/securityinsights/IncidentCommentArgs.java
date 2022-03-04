@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="incidentCommentId")
-    private final @Nullable Input<String> incidentCommentId;
+      private final @Nullable Input<String> incidentCommentId;
 
     public Input<String> getIncidentCommentId() {
         return this.incidentCommentId == null ? Input.empty() : this.incidentCommentId;
@@ -30,7 +30,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="incidentId", required=true)
-    private final Input<String> incidentId;
+      private final Input<String> incidentId;
 
     public Input<String> getIncidentId() {
         return this.incidentId;
@@ -41,7 +41,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="message", required=true)
-    private final Input<String> message;
+      private final Input<String> message;
 
     public Input<String> getMessage() {
         return this.message;
@@ -52,7 +52,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+      private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -63,7 +63,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -74,7 +74,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -193,7 +193,6 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public IncidentCommentArgs build() {
             return new IncidentCommentArgs(incidentCommentId, incidentId, message, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
         }

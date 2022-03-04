@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class DataDiskImageResponse {
     /**
      * The LUN.
      * 
-     */
+    */
     public Integer getLun() {
         return this.lun;
     }
     /**
      * SAS key for source blob.
      * 
-     */
+    */
     public String getSourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }
@@ -75,7 +75,6 @@ public final class DataDiskImageResponse {
             this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
             return this;
         }
-
         public DataDiskImageResponse build() {
             return new DataDiskImageResponse(lun, sourceBlobSasUri);
         }

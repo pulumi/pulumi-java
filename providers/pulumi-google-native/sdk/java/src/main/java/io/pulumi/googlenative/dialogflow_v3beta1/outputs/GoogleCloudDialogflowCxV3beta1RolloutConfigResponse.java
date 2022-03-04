@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigResponse {
     /**
      * The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
-     */
+    */
     public String getFailureCondition() {
         return this.failureCondition;
     }
     /**
      * The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. "containment_rate > 60% AND callback_rate < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
-     */
+    */
     public String getRolloutCondition() {
         return this.rolloutCondition;
     }
     /**
      * Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse> getRolloutSteps() {
         return this.rolloutSteps;
     }
@@ -97,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigResponse {
             this.rolloutSteps = Objects.requireNonNull(rolloutSteps);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1RolloutConfigResponse build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutConfigResponse(failureCondition, rolloutCondition, rolloutSteps);
         }

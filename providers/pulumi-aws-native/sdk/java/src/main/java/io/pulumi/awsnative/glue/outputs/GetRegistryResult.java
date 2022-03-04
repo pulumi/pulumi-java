@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.glue.outputs;
 
 import io.pulumi.awsnative.glue.outputs.RegistryTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetRegistryResult {
     /**
      * Amazon Resource Name for the created Registry.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A description of the registry. If description is not provided, there will not be any default value for this.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of tags to tag the Registry
      * 
-     */
+    */
     public List<RegistryTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -99,7 +99,6 @@ public final class GetRegistryResult {
             this.tags = tags;
             return this;
         }
-
         public GetRegistryResult build() {
             return new GetRegistryResult(arn, description, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +33,7 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork {
     /**
      * The name of the instance.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -79,7 +79,6 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork build() {
             return new GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork(expirationTime, name, value);
         }

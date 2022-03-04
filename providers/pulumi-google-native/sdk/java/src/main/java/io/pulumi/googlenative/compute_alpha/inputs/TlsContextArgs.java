@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificateContextArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsValidationContextArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateContext")
-    private final @Nullable Input<TlsCertificateContextArgs> certificateContext;
+      private final @Nullable Input<TlsCertificateContextArgs> certificateContext;
 
     public Input<TlsCertificateContextArgs> getCertificateContext() {
         return this.certificateContext == null ? Input.empty() : this.certificateContext;
@@ -35,7 +35,7 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationContext")
-    private final @Nullable Input<TlsValidationContextArgs> validationContext;
+      private final @Nullable Input<TlsValidationContextArgs> validationContext;
 
     public Input<TlsValidationContextArgs> getValidationContext() {
         return this.validationContext == null ? Input.empty() : this.validationContext;
@@ -94,7 +94,6 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
             this.validationContext = Input.ofNullable(validationContext);
             return this;
         }
-
         public TlsContextArgs build() {
             return new TlsContextArgs(certificateContext, validationContext);
         }

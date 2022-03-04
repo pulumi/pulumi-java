@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class AccessLevelsAccessLevelCustomExpr {
     /**
      * Description of the expression
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Textual representation of an expression in Common Expression Language syntax.
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }
     /**
      * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Title for the expression, i.e. a short string describing its purpose.
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
@@ -118,7 +118,6 @@ public final class AccessLevelsAccessLevelCustomExpr {
             this.title = title;
             return this;
         }
-
         public AccessLevelsAccessLevelCustomExpr build() {
             return new AccessLevelsAccessLevelCustomExpr(description, expression, location, title);
         }

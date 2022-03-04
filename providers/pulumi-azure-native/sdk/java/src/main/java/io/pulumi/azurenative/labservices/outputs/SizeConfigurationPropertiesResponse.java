@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.EnvironmentSizeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SizeConfigurationPropertiesResponse {
     /**
      * Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
      * 
-     */
+    */
     public List<EnvironmentSizeResponse> getEnvironmentSizes() {
         return this.environmentSizes == null ? List.of() : this.environmentSizes;
     }
@@ -54,7 +54,6 @@ public final class SizeConfigurationPropertiesResponse {
             this.environmentSizes = environmentSizes;
             return this;
         }
-
         public SizeConfigurationPropertiesResponse build() {
             return new SizeConfigurationPropertiesResponse(environmentSizes);
         }

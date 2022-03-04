@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class GetAccessControlRecordResult {
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The iSCSI initiator name (IQN).
      * 
-     */
+    */
     public String getInitiatorName() {
         return this.initiatorName;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The number of volumes using the access control record.
      * 
-     */
+    */
     public Integer getVolumeCount() {
         return this.volumeCount;
     }
@@ -161,7 +161,6 @@ public final class GetAccessControlRecordResult {
             this.volumeCount = Objects.requireNonNull(volumeCount);
             return this;
         }
-
         public GetAccessControlRecordResult build() {
             return new GetAccessControlRecordResult(id, initiatorName, kind, name, type, volumeCount);
         }

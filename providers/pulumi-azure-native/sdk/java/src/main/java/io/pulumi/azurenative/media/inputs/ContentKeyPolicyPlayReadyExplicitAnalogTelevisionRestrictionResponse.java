@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
      * 
      */
     @InputImport(name="bestEffort", required=true)
-    private final Boolean bestEffort;
+      private final Boolean bestEffort;
 
     public Boolean getBestEffort() {
         return this.bestEffort;
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
      * 
      */
     @InputImport(name="configurationData", required=true)
-    private final Integer configurationData;
+      private final Integer configurationData;
 
     public Integer getConfigurationData() {
         return this.configurationData;
@@ -82,7 +82,6 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
             this.configurationData = Objects.requireNonNull(configurationData);
             return this;
         }
-
         public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse build() {
             return new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(bestEffort, configurationData);
         }

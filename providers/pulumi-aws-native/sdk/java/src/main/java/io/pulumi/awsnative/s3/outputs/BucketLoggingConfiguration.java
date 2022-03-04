@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +29,7 @@ public final class BucketLoggingConfiguration {
     /**
      * The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.
      * 
-     */
+    */
     public Optional<String> getDestinationBucketName() {
         return Optional.ofNullable(this.destinationBucketName);
     }
@@ -68,7 +68,6 @@ public final class BucketLoggingConfiguration {
             this.logFilePrefix = logFilePrefix;
             return this;
         }
-
         public BucketLoggingConfiguration build() {
             return new BucketLoggingConfiguration(destinationBucketName, logFilePrefix);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressServiceBackendArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<TypedLocalObjectReferenceArgs> resource;
+      private final @Nullable Input<TypedLocalObjectReferenceArgs> resource;
 
     public Input<TypedLocalObjectReferenceArgs> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -35,7 +35,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<IngressServiceBackendArgs> service;
+      private final @Nullable Input<IngressServiceBackendArgs> service;
 
     public Input<IngressServiceBackendArgs> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -94,7 +94,6 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public IngressBackendArgs build() {
             return new IngressBackendArgs(resource, service);
         }

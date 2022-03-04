@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.DefenderForServersAwsOfferingResponseArcAutoProvisioning;
 import io.pulumi.azurenative.security.outputs.DefenderForServersAwsOfferingResponseDefenderForServers;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -50,21 +50,21 @@ public final class DefenderForServersAwsOfferingResponse {
     /**
      * The ARC autoprovisioning configuration
      * 
-     */
+    */
     public Optional<DefenderForServersAwsOfferingResponseArcAutoProvisioning> getArcAutoProvisioning() {
         return Optional.ofNullable(this.arcAutoProvisioning);
     }
     /**
      * The Defender for servers connection configuration
      * 
-     */
+    */
     public Optional<DefenderForServersAwsOfferingResponseDefenderForServers> getDefenderForServers() {
         return Optional.ofNullable(this.defenderForServers);
     }
     /**
      * The offering description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -72,7 +72,7 @@ public final class DefenderForServersAwsOfferingResponse {
      * The type of the security offering.
      * Expected value is 'DefenderForServersAWS'.
      * 
-     */
+    */
     public String getOfferingType() {
         return this.offeringType;
     }
@@ -122,7 +122,6 @@ public final class DefenderForServersAwsOfferingResponse {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public DefenderForServersAwsOfferingResponse build() {
             return new DefenderForServersAwsOfferingResponse(arcAutoProvisioning, defenderForServers, description, offeringType);
         }

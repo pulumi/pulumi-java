@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.RecipeStep;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class GetRecipeResult {
     /**
      * Description of the recipe
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -70,7 +70,6 @@ public final class GetRecipeResult {
             this.steps = steps;
             return this;
         }
-
         public GetRecipeResult build() {
             return new GetRecipeResult(description, steps);
         }

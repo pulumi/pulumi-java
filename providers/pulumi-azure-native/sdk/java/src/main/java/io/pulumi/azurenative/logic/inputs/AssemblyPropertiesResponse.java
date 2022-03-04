@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ContentLinkResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="assemblyCulture")
-    private final @Nullable String assemblyCulture;
+      private final @Nullable String assemblyCulture;
 
     public Optional<String> getAssemblyCulture() {
         return this.assemblyCulture == null ? Optional.empty() : Optional.ofNullable(this.assemblyCulture);
@@ -36,7 +36,7 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="assemblyName", required=true)
-    private final String assemblyName;
+      private final String assemblyName;
 
     public String getAssemblyName() {
         return this.assemblyName;
@@ -47,7 +47,7 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="assemblyPublicKeyToken")
-    private final @Nullable String assemblyPublicKeyToken;
+      private final @Nullable String assemblyPublicKeyToken;
 
     public Optional<String> getAssemblyPublicKeyToken() {
         return this.assemblyPublicKeyToken == null ? Optional.empty() : Optional.ofNullable(this.assemblyPublicKeyToken);
@@ -58,7 +58,7 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="assemblyVersion")
-    private final @Nullable String assemblyVersion;
+      private final @Nullable String assemblyVersion;
 
     public Optional<String> getAssemblyVersion() {
         return this.assemblyVersion == null ? Optional.empty() : Optional.ofNullable(this.assemblyVersion);
@@ -69,14 +69,14 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="changedTime")
-    private final @Nullable String changedTime;
+      private final @Nullable String changedTime;
 
     public Optional<String> getChangedTime() {
         return this.changedTime == null ? Optional.empty() : Optional.ofNullable(this.changedTime);
     }
 
     @InputImport(name="content")
-    private final @Nullable Object content;
+      private final @Nullable Object content;
 
     public Optional<Object> getContent() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
@@ -87,7 +87,7 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="contentLink")
-    private final @Nullable ContentLinkResponse contentLink;
+      private final @Nullable ContentLinkResponse contentLink;
 
     public Optional<ContentLinkResponse> getContentLink() {
         return this.contentLink == null ? Optional.empty() : Optional.ofNullable(this.contentLink);
@@ -98,7 +98,7 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable String contentType;
+      private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
@@ -109,14 +109,14 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable String createdTime;
+      private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Object metadata;
+      private final @Nullable Object metadata;
 
     public Optional<Object> getMetadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
@@ -245,7 +245,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
             this.metadata = metadata;
             return this;
         }
-
         public AssemblyPropertiesResponse build() {
             return new AssemblyPropertiesResponse(assemblyCulture, assemblyName, assemblyPublicKeyToken, assemblyVersion, changedTime, content, contentLink, contentType, createdTime, metadata);
         }

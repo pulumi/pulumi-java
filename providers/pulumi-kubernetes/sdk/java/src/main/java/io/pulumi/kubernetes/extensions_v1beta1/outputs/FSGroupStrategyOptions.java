@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.IDRange;
 import java.lang.String;
 import java.util.List;
@@ -35,14 +35,14 @@ public final class FSGroupStrategyOptions {
     /**
      * ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
      * 
-     */
+    */
     public List<IDRange> getRanges() {
         return this.ranges == null ? List.of() : this.ranges;
     }
     /**
      * rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
      * 
-     */
+    */
     public Optional<String> getRule() {
         return Optional.ofNullable(this.rule);
     }
@@ -78,7 +78,6 @@ public final class FSGroupStrategyOptions {
             this.rule = rule;
             return this;
         }
-
         public FSGroupStrategyOptions build() {
             return new FSGroupStrategyOptions(ranges, rule);
         }

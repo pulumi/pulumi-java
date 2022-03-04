@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+      private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -35,7 +35,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="autoKeyConfigUrl")
-    private final @Nullable Input<String> autoKeyConfigUrl;
+      private final @Nullable Input<String> autoKeyConfigUrl;
 
     public Input<String> getAutoKeyConfigUrl() {
         return this.autoKeyConfigUrl == null ? Input.empty() : this.autoKeyConfigUrl;
@@ -46,7 +46,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="fluentdConfigUrl")
-    private final @Nullable Input<Object> fluentdConfigUrl;
+      private final @Nullable Input<Object> fluentdConfigUrl;
 
     public Input<Object> getFluentdConfigUrl() {
         return this.fluentdConfigUrl == null ? Input.empty() : this.fluentdConfigUrl;
@@ -69,7 +69,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -80,7 +80,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="maConfigUrl")
-    private final @Nullable Input<String> maConfigUrl;
+      private final @Nullable Input<String> maConfigUrl;
 
     public Input<String> getMaConfigUrl() {
         return this.maConfigUrl == null ? Input.empty() : this.maConfigUrl;
@@ -91,7 +91,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -102,7 +102,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -251,7 +251,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
-
         public AzureInternalMonitoringPipelineSinkDescriptionArgs build() {
             return new AzureInternalMonitoringPipelineSinkDescriptionArgs(accountName, autoKeyConfigUrl, description, fluentdConfigUrl, kind, maConfigUrl, name, namespace);
         }

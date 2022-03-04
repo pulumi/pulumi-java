@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.DiagnosticResponse;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="diagnostics", required=true)
-    private final List<DiagnosticResponse> diagnostics;
+      private final List<DiagnosticResponse> diagnostics;
 
     public List<DiagnosticResponse> getDiagnostics() {
         return this.diagnostics;
@@ -30,7 +30,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="failCondition", required=true)
-    private final String failCondition;
+      private final String failCondition;
 
     public String getFailCondition() {
         return this.failCondition;
@@ -41,7 +41,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="finishCondition", required=true)
-    private final String finishCondition;
+      private final String finishCondition;
 
     public String getFinishCondition() {
         return this.finishCondition;
@@ -52,7 +52,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="pollingLink", required=true)
-    private final String pollingLink;
+      private final String pollingLink;
 
     public String getPollingLink() {
         return this.pollingLink;
@@ -63,7 +63,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="targetLink", required=true)
-    private final String targetLink;
+      private final String targetLink;
 
     public String getTargetLink() {
         return this.targetLink;
@@ -142,7 +142,6 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
             this.targetLink = Objects.requireNonNull(targetLink);
             return this;
         }
-
         public PollingOptionsResponse build() {
             return new PollingOptionsResponse(diagnostics, failCondition, finishCondition, pollingLink, targetLink);
         }

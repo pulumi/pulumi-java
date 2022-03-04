@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyRuleConditionApplicationProtocolArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="destinationAddresses")
-    private final @Nullable Input<List<String>> destinationAddresses;
+      private final @Nullable Input<List<String>> destinationAddresses;
 
     public Input<List<String>> getDestinationAddresses() {
         return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
@@ -47,7 +47,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="fqdnTags")
-    private final @Nullable Input<List<String>> fqdnTags;
+      private final @Nullable Input<List<String>> fqdnTags;
 
     public Input<List<String>> getFqdnTags() {
         return this.fqdnTags == null ? Input.empty() : this.fqdnTags;
@@ -58,7 +58,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,7 +69,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protocols")
-    private final @Nullable Input<List<FirewallPolicyRuleConditionApplicationProtocolArgs>> protocols;
+      private final @Nullable Input<List<FirewallPolicyRuleConditionApplicationProtocolArgs>> protocols;
 
     public Input<List<FirewallPolicyRuleConditionApplicationProtocolArgs>> getProtocols() {
         return this.protocols == null ? Input.empty() : this.protocols;
@@ -81,7 +81,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ruleConditionType", required=true)
-    private final Input<String> ruleConditionType;
+      private final Input<String> ruleConditionType;
 
     public Input<String> getRuleConditionType() {
         return this.ruleConditionType;
@@ -92,7 +92,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceAddresses")
-    private final @Nullable Input<List<String>> sourceAddresses;
+      private final @Nullable Input<List<String>> sourceAddresses;
 
     public Input<List<String>> getSourceAddresses() {
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
@@ -103,7 +103,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceIpGroups")
-    private final @Nullable Input<List<String>> sourceIpGroups;
+      private final @Nullable Input<List<String>> sourceIpGroups;
 
     public Input<List<String>> getSourceIpGroups() {
         return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
@@ -114,7 +114,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetFqdns")
-    private final @Nullable Input<List<String>> targetFqdns;
+      private final @Nullable Input<List<String>> targetFqdns;
 
     public Input<List<String>> getTargetFqdns() {
         return this.targetFqdns == null ? Input.empty() : this.targetFqdns;
@@ -278,7 +278,6 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
             this.targetFqdns = Input.ofNullable(targetFqdns);
             return this;
         }
-
         public ApplicationRuleConditionArgs build() {
             return new ApplicationRuleConditionArgs(description, destinationAddresses, fqdnTags, name, protocols, ruleConditionType, sourceAddresses, sourceIpGroups, targetFqdns);
         }

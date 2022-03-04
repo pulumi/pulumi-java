@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecContainerEnvFromConfigMapRef;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecContainerEnvFromSecretRef;
 import java.lang.String;
@@ -16,21 +16,21 @@ public final class GetServiceTemplateSpecContainerEnvFrom extends io.pulumi.reso
     public static final GetServiceTemplateSpecContainerEnvFrom Empty = new GetServiceTemplateSpecContainerEnvFrom();
 
     @InputImport(name="configMapReves", required=true)
-    private final List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves;
+      private final List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves;
 
     public List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> getConfigMapReves() {
         return this.configMapReves;
     }
 
     @InputImport(name="prefix", required=true)
-    private final String prefix;
+      private final String prefix;
 
     public String getPrefix() {
         return this.prefix;
     }
 
     @InputImport(name="secretReves", required=true)
-    private final List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves;
+      private final List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves;
 
     public List<GetServiceTemplateSpecContainerEnvFromSecretRef> getSecretReves() {
         return this.secretReves;
@@ -89,7 +89,6 @@ public final class GetServiceTemplateSpecContainerEnvFrom extends io.pulumi.reso
             this.secretReves = Objects.requireNonNull(secretReves);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvFrom build() {
             return new GetServiceTemplateSpecContainerEnvFrom(configMapReves, prefix, secretReves);
         }

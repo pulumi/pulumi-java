@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class ProtocolCustomSettingsFormatResponse {
     /**
      * The protocol for which the DDoS protection policy is being customized.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The customized DDoS protection source rate.
      * 
-     */
+    */
     public Optional<String> getSourceRateOverride() {
         return Optional.ofNullable(this.sourceRateOverride);
     }
     /**
      * The customized DDoS protection trigger rate.
      * 
-     */
+    */
     public Optional<String> getTriggerRateOverride() {
         return Optional.ofNullable(this.triggerRateOverride);
     }
     /**
      * The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
      * 
-     */
+    */
     public Optional<String> getTriggerSensitivityOverride() {
         return Optional.ofNullable(this.triggerSensitivityOverride);
     }
@@ -118,7 +118,6 @@ public final class ProtocolCustomSettingsFormatResponse {
             this.triggerSensitivityOverride = triggerSensitivityOverride;
             return this;
         }
-
         public ProtocolCustomSettingsFormatResponse build() {
             return new ProtocolCustomSettingsFormatResponse(protocol, sourceRateOverride, triggerRateOverride, triggerSensitivityOverride);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LoggingPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="auditLogStatus")
-    private final @Nullable String auditLogStatus;
+      private final @Nullable String auditLogStatus;
 
     public Optional<String> getAuditLogStatus() {
         return this.auditLogStatus == null ? Optional.empty() : Optional.ofNullable(this.auditLogStatus);
@@ -34,7 +34,7 @@ public final class LoggingPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable String logLevel;
+      private final @Nullable String logLevel;
 
     public Optional<String> getLogLevel() {
         return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
@@ -83,7 +83,6 @@ public final class LoggingPropertiesResponse extends io.pulumi.resources.InvokeA
             this.logLevel = logLevel;
             return this;
         }
-
         public LoggingPropertiesResponse build() {
             return new LoggingPropertiesResponse(auditLogStatus, logLevel);
         }

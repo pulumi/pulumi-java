@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class FileShareResponse {
     /**
      * Password credential used to connect to the share location.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The folder path for this share.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * User name credential to connect to the share location
      * 
-     */
+    */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }
@@ -97,7 +97,6 @@ public final class FileShareResponse {
             this.userName = userName;
             return this;
         }
-
         public FileShareResponse build() {
             return new FileShareResponse(password, path, userName);
         }

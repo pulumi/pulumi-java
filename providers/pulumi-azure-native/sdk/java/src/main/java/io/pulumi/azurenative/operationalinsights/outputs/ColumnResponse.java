@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class ColumnResponse {
     /**
      * Column data type logical hint.
      * 
-     */
+    */
     public Optional<String> getDataTypeHint() {
         return Optional.ofNullable(this.dataTypeHint);
     }
     /**
      * Column description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Column display name.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Is displayed by default.
      * 
-     */
+    */
     public Boolean getIsDefaultDisplay() {
         return this.isDefaultDisplay;
     }
     /**
      * Is column hidden.
      * 
-     */
+    */
     public Boolean getIsHidden() {
         return this.isHidden;
     }
     /**
      * Column name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Column data type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -182,7 +182,6 @@ public final class ColumnResponse {
             this.type = type;
             return this;
         }
-
         public ColumnResponse build() {
             return new ColumnResponse(dataTypeHint, description, displayName, isDefaultDisplay, isHidden, name, type);
         }

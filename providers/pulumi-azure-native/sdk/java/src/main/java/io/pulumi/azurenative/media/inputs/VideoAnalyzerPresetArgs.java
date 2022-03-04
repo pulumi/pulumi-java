@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.AudioAnalysisMode;
 import io.pulumi.azurenative.media.enums.InsightsType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="audioLanguage")
-    private final @Nullable Input<String> audioLanguage;
+      private final @Nullable Input<String> audioLanguage;
 
     public Input<String> getAudioLanguage() {
         return this.audioLanguage == null ? Input.empty() : this.audioLanguage;
@@ -38,7 +38,7 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="experimentalOptions")
-    private final @Nullable Input<Map<String,String>> experimentalOptions;
+      private final @Nullable Input<Map<String,String>> experimentalOptions;
 
     public Input<Map<String,String>> getExperimentalOptions() {
         return this.experimentalOptions == null ? Input.empty() : this.experimentalOptions;
@@ -49,7 +49,7 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="insightsToExtract")
-    private final @Nullable Input<Either<String,InsightsType>> insightsToExtract;
+      private final @Nullable Input<Either<String,InsightsType>> insightsToExtract;
 
     public Input<Either<String,InsightsType>> getInsightsToExtract() {
         return this.insightsToExtract == null ? Input.empty() : this.insightsToExtract;
@@ -60,7 +60,7 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,AudioAnalysisMode>> mode;
+      private final @Nullable Input<Either<String,AudioAnalysisMode>> mode;
 
     public Input<Either<String,AudioAnalysisMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -72,7 +72,7 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -176,7 +176,6 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public VideoAnalyzerPresetArgs build() {
             return new VideoAnalyzerPresetArgs(audioLanguage, experimentalOptions, insightsToExtract, mode, odataType);
         }

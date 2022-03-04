@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1DialogflowSourceArgs;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1GcsSourceArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
      * 
      */
     @InputImport(name="dialogflowSource")
-    private final @Nullable Input<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
+      private final @Nullable Input<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
 
     public Input<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> getDialogflowSource() {
         return this.dialogflowSource == null ? Input.empty() : this.dialogflowSource;
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
      * 
      */
     @InputImport(name="gcsSource")
-    private final @Nullable Input<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
+      private final @Nullable Input<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
 
     public Input<GoogleCloudContactcenterinsightsV1GcsSourceArgs> getGcsSource() {
         return this.gcsSource == null ? Input.empty() : this.gcsSource;
@@ -94,7 +94,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
             this.gcsSource = Input.ofNullable(gcsSource);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs build() {
             return new GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs(dialogflowSource, gcsSource);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class BackupVaultLockConfigurationType {
             this.minRetentionDays = Objects.requireNonNull(minRetentionDays);
             return this;
         }
-
         public BackupVaultLockConfigurationType build() {
             return new BackupVaultLockConfigurationType(changeableForDays, maxRetentionDays, minRetentionDays);
         }

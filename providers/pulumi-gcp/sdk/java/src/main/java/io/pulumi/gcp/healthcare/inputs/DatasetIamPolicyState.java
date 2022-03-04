@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="datasetId")
-    private final @Nullable Input<String> datasetId;
+      private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -33,7 +33,7 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -45,7 +45,7 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -119,7 +119,6 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
             this.policyData = Input.ofNullable(policyData);
             return this;
         }
-
         public DatasetIamPolicyState build() {
             return new DatasetIamPolicyState(datasetId, etag, policyData);
         }

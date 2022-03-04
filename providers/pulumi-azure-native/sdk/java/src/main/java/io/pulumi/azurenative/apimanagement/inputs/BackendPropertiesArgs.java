@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.BackendServiceFabricClusterPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceFabricCluster")
-    private final @Nullable Input<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
+      private final @Nullable Input<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
 
     public Input<BackendServiceFabricClusterPropertiesArgs> getServiceFabricCluster() {
         return this.serviceFabricCluster == null ? Input.empty() : this.serviceFabricCluster;
@@ -66,7 +66,6 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.serviceFabricCluster = Input.ofNullable(serviceFabricCluster);
             return this;
         }
-
         public BackendPropertiesArgs build() {
             return new BackendPropertiesArgs(serviceFabricCluster);
         }

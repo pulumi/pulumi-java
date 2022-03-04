@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.inputs.GetAddonArgs;
 import io.pulumi.azurenative.databoxedge.outputs.GetAddonResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ArcAddon, IoTAddon. */
 public class GetAddon {
-/**
- * Role Addon
+    private GetAddon() {}
+    public interface BuilderApplicator {
+        public void apply(GetAddonArgs.Builder a);
+    }
+    private static GetAddonArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAddonArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Role Addon
  * API Version: 2020-12-01.
  * 
- *
- * Role Addon
+     *
+     * Role Addon
  * 
- * @deprecated
- * Please use one of the variants: ArcAddon, IoTAddon.
+     * @Deprecated
+     * Please use one of the variants: ArcAddon, IoTAddon.
  * 
- */
+     */
+    public static CompletableFuture<GetAddonResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Role Addon
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Role Addon
+     * 
+     * @Deprecated
+         * Please use one of the variants: ArcAddon, IoTAddon.
+     * 
+     */
     @Deprecated /* Please use one of the variants: ArcAddon, IoTAddon. */
     public static CompletableFuture<GetAddonResult> invokeAsync(GetAddonArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getAddon", TypeShape.of(GetAddonResult.class), args == null ? GetAddonArgs.Empty : args, Utilities.withVersion(options));

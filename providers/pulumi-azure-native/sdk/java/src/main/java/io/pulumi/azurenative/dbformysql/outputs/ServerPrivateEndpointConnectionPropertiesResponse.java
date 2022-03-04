@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbformysql.outputs;
 
 import io.pulumi.azurenative.dbformysql.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbformysql.outputs.ServerPrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse {
     /**
      * Private endpoint which the connection belongs to.
      * 
-     */
+    */
     public Optional<PrivateEndpointPropertyResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Connection state of the private endpoint connection.
      * 
-     */
+    */
     public Optional<ServerPrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * State of the private endpoint connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -99,7 +99,6 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ServerPrivateEndpointConnectionPropertiesResponse build() {
             return new ServerPrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class LogAnalyticsDestinationResponse {
      * A friendly name for the destination.
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Customer ID of the Log Analytics workspace.
      * 
-     */
+    */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * The resource ID of the Log Analytics workspace.
      * 
-     */
+    */
     public Optional<String> getWorkspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -99,7 +99,6 @@ public final class LogAnalyticsDestinationResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public LogAnalyticsDestinationResponse build() {
             return new LogAnalyticsDestinationResponse(name, workspaceId, workspaceResourceId);
         }

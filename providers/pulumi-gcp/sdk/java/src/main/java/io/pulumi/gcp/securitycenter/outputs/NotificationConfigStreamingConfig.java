@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.securitycenter.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,7 +59,7 @@ public final class NotificationConfigStreamingConfig {
      *   [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
      *   for information on how to write a filter.
      * 
-     */
+    */
     public String getFilter() {
         return this.filter;
     }
@@ -88,7 +88,6 @@ public final class NotificationConfigStreamingConfig {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public NotificationConfigStreamingConfig build() {
             return new NotificationConfigStreamingConfig(filter);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class V2ApiTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="methods", required=true)
-    private final List<String> methods;
+      private final List<String> methods;
 
     public List<String> getMethods() {
         return this.methods;
@@ -33,7 +33,7 @@ public final class V2ApiTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -82,7 +82,6 @@ public final class V2ApiTargetResponse extends io.pulumi.resources.InvokeArgs {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public V2ApiTargetResponse build() {
             return new V2ApiTargetResponse(methods, service);
         }

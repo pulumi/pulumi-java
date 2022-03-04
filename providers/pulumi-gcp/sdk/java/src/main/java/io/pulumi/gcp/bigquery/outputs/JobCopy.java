@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.JobCopyDestinationEncryptionConfiguration;
 import io.pulumi.gcp.bigquery.outputs.JobCopyDestinationTable;
 import io.pulumi.gcp.bigquery.outputs.JobCopySourceTable;
@@ -78,7 +78,7 @@ public final class JobCopy {
      * Default value is `CREATE_IF_NEEDED`.
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
      * 
-     */
+    */
     public Optional<String> getCreateDisposition() {
         return Optional.ofNullable(this.createDisposition);
     }
@@ -86,7 +86,7 @@ public final class JobCopy {
      * Custom encryption configuration (e.g., Cloud KMS keys)
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<JobCopyDestinationEncryptionConfiguration> getDestinationEncryptionConfiguration() {
         return Optional.ofNullable(this.destinationEncryptionConfiguration);
     }
@@ -94,7 +94,7 @@ public final class JobCopy {
      * The destination table.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<JobCopyDestinationTable> getDestinationTable() {
         return Optional.ofNullable(this.destinationTable);
     }
@@ -102,7 +102,7 @@ public final class JobCopy {
      * Source tables to copy.
      * Structure is documented below.
      * 
-     */
+    */
     public List<JobCopySourceTable> getSourceTables() {
         return this.sourceTables;
     }
@@ -116,7 +116,7 @@ public final class JobCopy {
      * Default value is `WRITE_EMPTY`.
      * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
      * 
-     */
+    */
     public Optional<String> getWriteDisposition() {
         return Optional.ofNullable(this.writeDisposition);
     }
@@ -173,7 +173,6 @@ public final class JobCopy {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public JobCopy build() {
             return new JobCopy(createDisposition, destinationEncryptionConfiguration, destinationTable, sourceTables, writeDisposition);
         }

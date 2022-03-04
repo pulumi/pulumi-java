@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromSecretRefArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="configMapRef")
-    private final @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef;
+      private final @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef;
 
     public Input<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> getConfigMapRef() {
         return this.configMapRef == null ? Input.empty() : this.configMapRef;
@@ -33,7 +33,7 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -45,7 +45,7 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef;
+      private final @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef;
 
     public Input<ServiceTemplateSpecContainerEnvFromSecretRefArgs> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;
@@ -119,7 +119,6 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
             this.secretRef = Input.ofNullable(secretRef);
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvFromArgs build() {
             return new ServiceTemplateSpecContainerEnvFromArgs(configMapRef, prefix, secretRef);
         }

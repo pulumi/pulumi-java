@@ -6,17 +6,33 @@ package io.pulumi.awsnative.lambda;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lambda.inputs.GetCodeSigningConfigArgs;
 import io.pulumi.awsnative.lambda.outputs.GetCodeSigningConfigResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCodeSigningConfig {
-/**
- * Resource Type definition for AWS::Lambda::CodeSigningConfig.
+    private GetCodeSigningConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetCodeSigningConfigArgs.Builder a);
+    }
+    private static GetCodeSigningConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCodeSigningConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Lambda::CodeSigningConfig.
  * 
- */
+     */
+    public static CompletableFuture<GetCodeSigningConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Lambda::CodeSigningConfig.
+     * 
+     */
     public static CompletableFuture<GetCodeSigningConfigResult> invokeAsync(GetCodeSigningConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getCodeSigningConfig", TypeShape.of(GetCodeSigningConfigResult.class), args == null ? GetCodeSigningConfigArgs.Empty : args, Utilities.withVersion(options));
     }

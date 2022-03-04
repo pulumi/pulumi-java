@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.robomaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class RobotApplicationTags {
         public Builder(RobotApplicationTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RobotApplicationTags build() {
             return new RobotApplicationTags();
         }

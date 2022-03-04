@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.ResourcePolicyPolicy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -87,7 +87,6 @@ public final class GetResourcePolicyResult {
             this.revisionId = revisionId;
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(id, policy, resourceArn, revisionId);
         }

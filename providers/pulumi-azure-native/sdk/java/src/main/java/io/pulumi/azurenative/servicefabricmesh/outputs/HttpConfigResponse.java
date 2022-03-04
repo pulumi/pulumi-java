@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.HttpHostConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -41,21 +41,21 @@ public final class HttpConfigResponse {
     /**
      * description for routing.
      * 
-     */
+    */
     public List<HttpHostConfigResponse> getHosts() {
         return this.hosts;
     }
     /**
      * http gateway config name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the port at which the service endpoint below needs to be exposed.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -98,7 +98,6 @@ public final class HttpConfigResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public HttpConfigResponse build() {
             return new HttpConfigResponse(hosts, name, port);
         }

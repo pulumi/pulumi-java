@@ -5,8 +5,8 @@ package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.toolresults_v1beta3.PerfSampleSeriesArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.BasicPerfSampleSeriesResponse;
@@ -107,6 +107,37 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
         return this.stepId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PerfSampleSeriesArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.toolresults_v1beta3.PerfSampleSeriesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.toolresults_v1beta3.PerfSampleSeriesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PerfSampleSeries(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PerfSampleSeries(String name) {
+        this(name, PerfSampleSeriesArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PerfSampleSeries(String name, PerfSampleSeriesArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

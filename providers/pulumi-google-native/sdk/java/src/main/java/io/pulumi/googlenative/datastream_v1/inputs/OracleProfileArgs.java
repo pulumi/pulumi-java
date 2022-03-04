@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionAttributes")
-    private final @Nullable Input<Map<String,String>> connectionAttributes;
+      private final @Nullable Input<Map<String,String>> connectionAttributes;
 
     public Input<Map<String,String>> getConnectionAttributes() {
         return this.connectionAttributes == null ? Input.empty() : this.connectionAttributes;
@@ -36,7 +36,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseService", required=true)
-    private final Input<String> databaseService;
+      private final Input<String> databaseService;
 
     public Input<String> getDatabaseService() {
         return this.databaseService;
@@ -47,7 +47,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostname", required=true)
-    private final Input<String> hostname;
+      private final Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname;
@@ -58,7 +58,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -69,7 +69,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -80,7 +80,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -199,7 +199,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public OracleProfileArgs build() {
             return new OracleProfileArgs(connectionAttributes, databaseService, hostname, password, port, username);
         }

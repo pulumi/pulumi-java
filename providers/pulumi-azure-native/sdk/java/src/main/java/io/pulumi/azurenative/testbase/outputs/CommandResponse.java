@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -91,70 +91,70 @@ public final class CommandResponse {
     /**
      * The action of the command.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * Specifies whether to run the command even if a previous command is failed.
      * 
-     */
+    */
     public Optional<Boolean> getAlwaysRun() {
         return Optional.ofNullable(this.alwaysRun);
     }
     /**
      * Specifies whether to apply update before the command.
      * 
-     */
+    */
     public Optional<Boolean> getApplyUpdateBefore() {
         return Optional.ofNullable(this.applyUpdateBefore);
     }
     /**
      * The content of the command. The content depends on source type.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * The type of command content.
      * 
-     */
+    */
     public String getContentType() {
         return this.contentType;
     }
     /**
      * Specifies the max run time of the command.
      * 
-     */
+    */
     public Optional<Integer> getMaxRunTime() {
         return Optional.ofNullable(this.maxRunTime);
     }
     /**
      * The name of the command.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies whether to restart the VM after the command executed.
      * 
-     */
+    */
     public Optional<Boolean> getRestartAfter() {
         return Optional.ofNullable(this.restartAfter);
     }
     /**
      * Specifies whether to run the command in interactive mode.
      * 
-     */
+    */
     public Optional<Boolean> getRunAsInteractive() {
         return Optional.ofNullable(this.runAsInteractive);
     }
     /**
      * Specifies whether to run the command as administrator.
      * 
-     */
+    */
     public Optional<Boolean> getRunElevated() {
         return Optional.ofNullable(this.runElevated);
     }
@@ -246,7 +246,6 @@ public final class CommandResponse {
             this.runElevated = runElevated;
             return this;
         }
-
         public CommandResponse build() {
             return new CommandResponse(action, alwaysRun, applyUpdateBefore, content, contentType, maxRunTime, name, restartAfter, runAsInteractive, runElevated);
         }

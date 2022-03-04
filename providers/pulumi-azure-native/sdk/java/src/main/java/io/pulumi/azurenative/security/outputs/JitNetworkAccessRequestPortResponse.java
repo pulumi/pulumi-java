@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -66,28 +66,28 @@ public final class JitNetworkAccessRequestPortResponse {
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
      * 
-     */
+    */
     public Optional<String> getAllowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
      * 
-     */
+    */
     public List<String> getAllowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
     /**
      * The date & time at which the request ends in UTC
      * 
-     */
+    */
     public String getEndTimeUtc() {
         return this.endTimeUtc;
     }
     /**
      * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
      * 
-     */
+    */
     public Optional<Integer> getMappedPort() {
         return Optional.ofNullable(this.mappedPort);
     }
@@ -97,14 +97,14 @@ public final class JitNetworkAccessRequestPortResponse {
     /**
      * The status of the port
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * A description of why the `status` has its value
      * 
-     */
+    */
     public String getStatusReason() {
         return this.statusReason;
     }
@@ -175,7 +175,6 @@ public final class JitNetworkAccessRequestPortResponse {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }
-
         public JitNetworkAccessRequestPortResponse build() {
             return new JitNetworkAccessRequestPortResponse(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, endTimeUtc, mappedPort, number, status, statusReason);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,28 +74,28 @@ public final class ActivityTimelineItemResponse {
     /**
      * The grouping bucket end time.
      * 
-     */
+    */
     public String getBucketEndTimeUTC() {
         return this.bucketEndTimeUTC;
     }
     /**
      * The grouping bucket start time.
      * 
-     */
+    */
     public String getBucketStartTimeUTC() {
         return this.bucketStartTimeUTC;
     }
     /**
      * The activity timeline content.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * The time of the first activity in the grouping bucket.
      * 
-     */
+    */
     public String getFirstActivityTimeUTC() {
         return this.firstActivityTimeUTC;
     }
@@ -103,28 +103,28 @@ public final class ActivityTimelineItemResponse {
      * The entity query kind
      * Expected value is 'Activity'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The time of the last activity in the grouping bucket.
      * 
-     */
+    */
     public String getLastActivityTimeUTC() {
         return this.lastActivityTimeUTC;
     }
     /**
      * The activity query id.
      * 
-     */
+    */
     public String getQueryId() {
         return this.queryId;
     }
     /**
      * The activity timeline title.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -202,7 +202,6 @@ public final class ActivityTimelineItemResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ActivityTimelineItemResponse build() {
             return new ActivityTimelineItemResponse(bucketEndTimeUTC, bucketStartTimeUTC, content, firstActivityTimeUTC, kind, lastActivityTimeUTC, queryId, title);
         }

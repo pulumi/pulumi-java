@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotButton;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class BotImageResponseCard {
     /**
      * A list of buttons that should be displayed on the response card.
      * 
-     */
+    */
     public List<BotButton> getButtons() {
         return this.buttons == null ? List.of() : this.buttons;
     }
     /**
      * The URL of an image to display on the response card.
      * 
-     */
+    */
     public Optional<String> getImageUrl() {
         return Optional.ofNullable(this.imageUrl);
     }
     /**
      * The subtitle to display on the response card.
      * 
-     */
+    */
     public Optional<String> getSubtitle() {
         return Optional.ofNullable(this.subtitle);
     }
     /**
      * The title to display on the response card.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -120,7 +120,6 @@ public final class BotImageResponseCard {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public BotImageResponseCard build() {
             return new BotImageResponseCard(buttons, imageUrl, subtitle, title);
         }

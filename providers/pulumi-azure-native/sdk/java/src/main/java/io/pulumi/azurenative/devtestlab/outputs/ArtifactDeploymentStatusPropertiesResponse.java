@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ArtifactDeploymentStatusPropertiesResponse {
     /**
      * The total count of the artifacts that were successfully applied.
      * 
-     */
+    */
     public Optional<Integer> getArtifactsApplied() {
         return Optional.ofNullable(this.artifactsApplied);
     }
     /**
      * The deployment status of the artifact.
      * 
-     */
+    */
     public Optional<String> getDeploymentStatus() {
         return Optional.ofNullable(this.deploymentStatus);
     }
     /**
      * The total count of the artifacts that were tentatively applied.
      * 
-     */
+    */
     public Optional<Integer> getTotalArtifacts() {
         return Optional.ofNullable(this.totalArtifacts);
     }
@@ -98,7 +98,6 @@ public final class ArtifactDeploymentStatusPropertiesResponse {
             this.totalArtifacts = totalArtifacts;
             return this;
         }
-
         public ArtifactDeploymentStatusPropertiesResponse build() {
             return new ArtifactDeploymentStatusPropertiesResponse(artifactsApplied, deploymentStatus, totalArtifacts);
         }

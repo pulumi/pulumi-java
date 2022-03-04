@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PubsubResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subscription", required=true)
-    private final String subscription;
+      private final String subscription;
 
     public String getSubscription() {
         return this.subscription;
@@ -32,7 +32,7 @@ public final class PubsubResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="topic", required=true)
-    private final String topic;
+      private final String topic;
 
     public String getTopic() {
         return this.topic;
@@ -81,7 +81,6 @@ public final class PubsubResponse extends io.pulumi.resources.InvokeArgs {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubsubResponse build() {
             return new PubsubResponse(subscription, topic);
         }

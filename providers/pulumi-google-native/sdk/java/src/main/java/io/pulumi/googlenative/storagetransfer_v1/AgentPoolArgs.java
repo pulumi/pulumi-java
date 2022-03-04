@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.BandwidthLimitArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     public static final AgentPoolArgs Empty = new AgentPoolArgs();
 
     @InputImport(name="agentPoolId", required=true)
-    private final Input<String> agentPoolId;
+      private final Input<String> agentPoolId;
 
     public Input<String> getAgentPoolId() {
         return this.agentPoolId;
@@ -27,7 +27,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bandwidthLimit")
-    private final @Nullable Input<BandwidthLimitArgs> bandwidthLimit;
+      private final @Nullable Input<BandwidthLimitArgs> bandwidthLimit;
 
     public Input<BandwidthLimitArgs> getBandwidthLimit() {
         return this.bandwidthLimit == null ? Input.empty() : this.bandwidthLimit;
@@ -38,7 +38,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -49,14 +49,14 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -160,7 +160,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public AgentPoolArgs build() {
             return new AgentPoolArgs(agentPoolId, bandwidthLimit, displayName, name, project);
         }

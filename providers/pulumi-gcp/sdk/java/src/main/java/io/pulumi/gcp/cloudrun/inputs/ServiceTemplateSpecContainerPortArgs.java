@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="containerPort", required=true)
-    private final Input<Integer> containerPort;
+      private final Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort;
@@ -31,7 +31,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -116,7 +116,6 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
-
         public ServiceTemplateSpecContainerPortArgs build() {
             return new ServiceTemplateSpecContainerPortArgs(containerPort, name, protocol);
         }

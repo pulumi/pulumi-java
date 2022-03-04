@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse {
     /**
      * aggregate function
      * 
-     */
+    */
     public String getFunction() {
         return this.function;
     }
     /**
      * name of the metric
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudApigeeV1CustomReportMetricResponse build() {
             return new GoogleCloudApigeeV1CustomReportMetricResponse(function, name);
         }

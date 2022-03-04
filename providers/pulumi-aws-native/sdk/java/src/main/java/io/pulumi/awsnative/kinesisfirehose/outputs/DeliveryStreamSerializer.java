@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamOrcSerDe;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamParquetSerDe;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class DeliveryStreamSerializer {
             this.parquetSerDe = parquetSerDe;
             return this;
         }
-
         public DeliveryStreamSerializer build() {
             return new DeliveryStreamSerializer(orcSerDe, parquetSerDe);
         }

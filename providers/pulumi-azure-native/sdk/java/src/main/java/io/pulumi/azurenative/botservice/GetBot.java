@@ -6,21 +6,41 @@ package io.pulumi.azurenative.botservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.botservice.inputs.GetBotArgs;
 import io.pulumi.azurenative.botservice.outputs.GetBotResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBot {
-/**
- * Bot resource definition
+    private GetBot() {}
+    public interface BuilderApplicator {
+        public void apply(GetBotArgs.Builder a);
+    }
+    private static GetBotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Bot resource definition
  * API Version: 2021-03-01.
  * 
- *
- * Bot resource definition
+     *
+     * Bot resource definition
  * 
- */
+     */
+    public static CompletableFuture<GetBotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Bot resource definition
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Bot resource definition
+     * 
+     */
     public static CompletableFuture<GetBotResult> invokeAsync(GetBotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:getBot", TypeShape.of(GetBotResult.class), args == null ? GetBotArgs.Empty : args, Utilities.withVersion(options));
     }

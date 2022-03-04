@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.TypeResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.VersionSourceResponse;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class Hl7TypesConfigResponse {
     /**
      * The HL7v2 type definitions.
      * 
-     */
+    */
     public List<TypeResponse> getType() {
         return this.type;
     }
     /**
      * The version selectors that this config applies to. A message must match ALL version sources to apply.
      * 
-     */
+    */
     public List<VersionSourceResponse> getVersion() {
         return this.version;
     }
@@ -76,7 +76,6 @@ public final class Hl7TypesConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Hl7TypesConfigResponse build() {
             return new Hl7TypesConfigResponse(type, version);
         }

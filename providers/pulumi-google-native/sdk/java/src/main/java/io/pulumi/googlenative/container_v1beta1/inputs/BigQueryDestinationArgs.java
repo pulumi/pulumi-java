@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="datasetId")
-    private final @Nullable Input<String> datasetId;
+      private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -66,7 +66,6 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
             this.datasetId = Input.ofNullable(datasetId);
             return this;
         }
-
         public BigQueryDestinationArgs build() {
             return new BigQueryDestinationArgs(datasetId);
         }

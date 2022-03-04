@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class VaultPrivateLinkServiceConnectionStateResponse {
     /**
      * Gets or sets actions required.
      * 
-     */
+    */
     public String getActionsRequired() {
         return this.actionsRequired;
     }
     /**
      * Gets or sets description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Gets or sets the status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -95,7 +95,6 @@ public final class VaultPrivateLinkServiceConnectionStateResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public VaultPrivateLinkServiceConnectionStateResponse build() {
             return new VaultPrivateLinkServiceConnectionStateResponse(actionsRequired, description, status);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributions")
-    private final @Nullable Input<List<String>> attributions;
+      private final @Nullable Input<List<String>> attributions;
 
     public Input<List<String>> getAttributions() {
         return this.attributions == null ? Input.empty() : this.attributions;
@@ -36,7 +36,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -47,7 +47,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contributors")
-    private final @Nullable Input<List<String>> contributors;
+      private final @Nullable Input<List<String>> contributors;
 
     public Input<List<String>> getContributors() {
         return this.contributors == null ? Input.empty() : this.contributors;
@@ -58,7 +58,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyright")
-    private final @Nullable Input<String> copyright;
+      private final @Nullable Input<String> copyright;
 
     public Input<String> getCopyright() {
         return this.copyright == null ? Input.empty() : this.copyright;
@@ -69,7 +69,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filesLicenseInfo")
-    private final @Nullable Input<List<String>> filesLicenseInfo;
+      private final @Nullable Input<List<String>> filesLicenseInfo;
 
     public Input<List<String>> getFilesLicenseInfo() {
         return this.filesLicenseInfo == null ? Input.empty() : this.filesLicenseInfo;
@@ -80,7 +80,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -91,7 +91,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseConcluded")
-    private final @Nullable Input<LicenseArgs> licenseConcluded;
+      private final @Nullable Input<LicenseArgs> licenseConcluded;
 
     public Input<LicenseArgs> getLicenseConcluded() {
         return this.licenseConcluded == null ? Input.empty() : this.licenseConcluded;
@@ -102,7 +102,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notice")
-    private final @Nullable Input<String> notice;
+      private final @Nullable Input<String> notice;
 
     public Input<String> getNotice() {
         return this.notice == null ? Input.empty() : this.notice;
@@ -251,7 +251,6 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.notice = Input.ofNullable(notice);
             return this;
         }
-
         public FileOccurrenceArgs build() {
             return new FileOccurrenceArgs(attributions, comment, contributors, copyright, filesLicenseInfo, id, licenseConcluded, notice);
         }

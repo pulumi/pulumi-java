@@ -5,8 +5,8 @@ package io.pulumi.googlenative.assuredworkloads_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.assuredworkloads_v1.WorkloadArgs;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse;
@@ -222,6 +222,37 @@ public class Workload extends io.pulumi.resources.CustomResource {
         return this.saaEnrollmentResponse;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WorkloadArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.assuredworkloads_v1.WorkloadArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.assuredworkloads_v1.WorkloadArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Workload(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Workload(String name) {
+        this(name, WorkloadArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Workload(String name, WorkloadArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

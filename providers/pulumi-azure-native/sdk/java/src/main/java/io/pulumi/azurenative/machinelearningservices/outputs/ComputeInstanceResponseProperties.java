@@ -12,7 +12,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.MachineLearningServ
 import io.pulumi.azurenative.machinelearningservices.outputs.PersonalComputeInstanceSettingsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ResourceIdResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SetupScriptsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -120,91 +120,91 @@ public final class ComputeInstanceResponseProperties {
     /**
      * Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
      * 
-     */
+    */
     public Optional<String> getApplicationSharingPolicy() {
         return Optional.ofNullable(this.applicationSharingPolicy);
     }
     /**
      * Describes available applications and their endpoints on this ComputeInstance.
      * 
-     */
+    */
     public List<ComputeInstanceApplicationResponse> getApplications() {
         return this.applications;
     }
     /**
      * The Compute Instance Authorization type. Available values are personal (default).
      * 
-     */
+    */
     public Optional<String> getComputeInstanceAuthorizationType() {
         return Optional.ofNullable(this.computeInstanceAuthorizationType);
     }
     /**
      * Describes all connectivity endpoints available for this ComputeInstance.
      * 
-     */
+    */
     public ComputeInstanceConnectivityEndpointsResponse getConnectivityEndpoints() {
         return this.connectivityEndpoints;
     }
     /**
      * Describes information on user who created this ComputeInstance.
      * 
-     */
+    */
     public ComputeInstanceCreatedByResponse getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Collection of errors encountered on this ComputeInstance.
      * 
-     */
+    */
     public List<MachineLearningServiceErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * The last operation on ComputeInstance.
      * 
-     */
+    */
     public ComputeInstanceLastOperationResponse getLastOperation() {
         return this.lastOperation;
     }
     /**
      * Settings for a personal compute instance.
      * 
-     */
+    */
     public Optional<PersonalComputeInstanceSettingsResponse> getPersonalComputeInstanceSettings() {
         return Optional.ofNullable(this.personalComputeInstanceSettings);
     }
     /**
      * Details of customized scripts to execute for setting up the cluster.
      * 
-     */
+    */
     public Optional<SetupScriptsResponse> getSetupScripts() {
         return Optional.ofNullable(this.setupScripts);
     }
     /**
      * Specifies policy and settings for SSH access.
      * 
-     */
+    */
     public Optional<ComputeInstanceSshSettingsResponse> getSshSettings() {
         return Optional.ofNullable(this.sshSettings);
     }
     /**
      * The current state of this ComputeInstance.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Virtual network subnet resource ID the compute nodes belong to.
      * 
-     */
+    */
     public Optional<ResourceIdResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Virtual Machine Size
      * 
-     */
+    */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -317,7 +317,6 @@ public final class ComputeInstanceResponseProperties {
             this.vmSize = vmSize;
             return this;
         }
-
         public ComputeInstanceResponseProperties build() {
             return new ComputeInstanceResponseProperties(applicationSharingPolicy, applications, computeInstanceAuthorizationType, connectivityEndpoints, createdBy, errors, lastOperation, personalComputeInstanceSettings, setupScripts, sshSettings, state, subnet, vmSize);
         }

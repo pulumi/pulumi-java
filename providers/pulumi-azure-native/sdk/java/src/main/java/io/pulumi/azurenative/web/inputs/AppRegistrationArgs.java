@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -34,7 +34,7 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appSecretSettingName")
-    private final @Nullable Input<String> appSecretSettingName;
+      private final @Nullable Input<String> appSecretSettingName;
 
     public Input<String> getAppSecretSettingName() {
         return this.appSecretSettingName == null ? Input.empty() : this.appSecretSettingName;
@@ -93,7 +93,6 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
             this.appSecretSettingName = Input.ofNullable(appSecretSettingName);
             return this;
         }
-
         public AppRegistrationArgs build() {
             return new AppRegistrationArgs(appId, appSecretSettingName);
         }

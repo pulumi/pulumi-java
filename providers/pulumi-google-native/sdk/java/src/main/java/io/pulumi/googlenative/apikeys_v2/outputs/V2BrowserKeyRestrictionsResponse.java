@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class V2BrowserKeyRestrictionsResponse {
     /**
      * A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
      * 
-     */
+    */
     public List<String> getAllowedReferrers() {
         return this.allowedReferrers;
     }
@@ -53,7 +53,6 @@ public final class V2BrowserKeyRestrictionsResponse {
             this.allowedReferrers = Objects.requireNonNull(allowedReferrers);
             return this;
         }
-
         public V2BrowserKeyRestrictionsResponse build() {
             return new V2BrowserKeyRestrictionsResponse(allowedReferrers);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hero")
-    private final @Nullable String hero;
+      private final @Nullable String hero;
 
     public Optional<String> getHero() {
         return this.hero == null ? Optional.empty() : Optional.ofNullable(this.hero);
@@ -34,7 +34,7 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="large")
-    private final @Nullable String large;
+      private final @Nullable String large;
 
     public Optional<String> getLarge() {
         return this.large == null ? Optional.empty() : Optional.ofNullable(this.large);
@@ -45,7 +45,7 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="medium")
-    private final @Nullable String medium;
+      private final @Nullable String medium;
 
     public Optional<String> getMedium() {
         return this.medium == null ? Optional.empty() : Optional.ofNullable(this.medium);
@@ -56,7 +56,7 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="small")
-    private final @Nullable String small;
+      private final @Nullable String small;
 
     public Optional<String> getSmall() {
         return this.small == null ? Optional.empty() : Optional.ofNullable(this.small);
@@ -67,7 +67,7 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="wide")
-    private final @Nullable String wide;
+      private final @Nullable String wide;
 
     public Optional<String> getWide() {
         return this.wide == null ? Optional.empty() : Optional.ofNullable(this.wide);
@@ -146,7 +146,6 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
             this.wide = wide;
             return this;
         }
-
         public IconUrisResponse build() {
             return new IconUrisResponse(hero, large, medium, small, wide);
         }

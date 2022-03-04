@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="enableAutoPopulationOfTimespanConfig")
-    private final @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
+      private final @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
 
     public Input<Boolean> getEnableAutoPopulationOfTimespanConfig() {
         return this.enableAutoPopulationOfTimespanConfig == null ? Input.empty() : this.enableAutoPopulationOfTimespanConfig;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="timestampField")
-    private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> timestampField;
+      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> timestampField;
 
     public Input<GooglePrivacyDlpV2FieldIdArgs> getTimestampField() {
         return this.timestampField == null ? Input.empty() : this.timestampField;
@@ -147,7 +147,6 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
             this.timestampField = Input.ofNullable(timestampField);
             return this;
         }
-
         public GooglePrivacyDlpV2TimespanConfigArgs build() {
             return new GooglePrivacyDlpV2TimespanConfigArgs(enableAutoPopulationOfTimespanConfig, endTime, startTime, timestampField);
         }

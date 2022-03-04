@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,35 +54,35 @@ public final class PasswordValidationPolicyResponse {
     /**
      * The complexity of the password.
      * 
-     */
+    */
     public String getComplexity() {
         return this.complexity;
     }
     /**
      * Disallow username as a part of the password.
      * 
-     */
+    */
     public Boolean getDisallowUsernameSubstring() {
         return this.disallowUsernameSubstring;
     }
     /**
      * Minimum number of characters allowed.
      * 
-     */
+    */
     public Integer getMinLength() {
         return this.minLength;
     }
     /**
      * Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
      * 
-     */
+    */
     public String getPasswordChangeInterval() {
         return this.passwordChangeInterval;
     }
     /**
      * Number of previous passwords that cannot be reused.
      * 
-     */
+    */
     public Integer getReuseInterval() {
         return this.reuseInterval;
     }
@@ -139,7 +139,6 @@ public final class PasswordValidationPolicyResponse {
             this.reuseInterval = Objects.requireNonNull(reuseInterval);
             return this;
         }
-
         public PasswordValidationPolicyResponse build() {
             return new PasswordValidationPolicyResponse(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);
         }

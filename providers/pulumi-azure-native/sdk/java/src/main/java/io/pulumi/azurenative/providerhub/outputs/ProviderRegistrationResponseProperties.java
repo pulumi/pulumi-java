@@ -12,7 +12,7 @@ import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropert
 import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropertiesResponseProviderAuthentication;
 import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropertiesResponseRequestHeaderOptions;
 import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -240,7 +240,6 @@ public final class ProviderRegistrationResponseProperties {
             this.templateDeploymentOptions = templateDeploymentOptions;
             return this;
         }
-
         public ProviderRegistrationResponseProperties build() {
             return new ProviderRegistrationResponseProperties(capabilities, featuresRule, management, metadata, namespace, providerAuthentication, providerAuthorizations, providerHubMetadata, providerType, providerVersion, provisioningState, requestHeaderOptions, requiredFeatures, subscriptionLifecycleNotificationSpecifications, templateDeploymentOptions);
         }

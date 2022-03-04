@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ApplicationPackageSupportUrlsResponse {
     /**
      * The government cloud support URL.
      * 
-     */
+    */
     public Optional<String> getGovernmentCloud() {
         return Optional.ofNullable(this.governmentCloud);
     }
     /**
      * The public azure support URL.
      * 
-     */
+    */
     public Optional<String> getPublicAzure() {
         return Optional.ofNullable(this.publicAzure);
     }
@@ -76,7 +76,6 @@ public final class ApplicationPackageSupportUrlsResponse {
             this.publicAzure = publicAzure;
             return this;
         }
-
         public ApplicationPackageSupportUrlsResponse build() {
             return new ApplicationPackageSupportUrlsResponse(governmentCloud, publicAzure);
         }

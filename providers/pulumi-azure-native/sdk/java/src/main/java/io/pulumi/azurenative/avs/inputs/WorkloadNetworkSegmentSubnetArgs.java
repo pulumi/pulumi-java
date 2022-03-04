@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dhcpRanges")
-    private final @Nullable Input<List<String>> dhcpRanges;
+      private final @Nullable Input<List<String>> dhcpRanges;
 
     public Input<List<String>> getDhcpRanges() {
         return this.dhcpRanges == null ? Input.empty() : this.dhcpRanges;
@@ -35,7 +35,7 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="gatewayAddress")
-    private final @Nullable Input<String> gatewayAddress;
+      private final @Nullable Input<String> gatewayAddress;
 
     public Input<String> getGatewayAddress() {
         return this.gatewayAddress == null ? Input.empty() : this.gatewayAddress;
@@ -94,7 +94,6 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
             this.gatewayAddress = Input.ofNullable(gatewayAddress);
             return this;
         }
-
         public WorkloadNetworkSegmentSubnetArgs build() {
             return new WorkloadNetworkSegmentSubnetArgs(dhcpRanges, gatewayAddress);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apprunner.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ServiceInstanceConfiguration {
     /**
      * CPU
      * 
-     */
+    */
     public Optional<String> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * Instance Role Arn
      * 
-     */
+    */
     public Optional<String> getInstanceRoleArn() {
         return Optional.ofNullable(this.instanceRoleArn);
     }
     /**
      * Memory
      * 
-     */
+    */
     public Optional<String> getMemory() {
         return Optional.ofNullable(this.memory);
     }
@@ -97,7 +97,6 @@ public final class ServiceInstanceConfiguration {
             this.memory = memory;
             return this;
         }
-
         public ServiceInstanceConfiguration build() {
             return new ServiceInstanceConfiguration(cpu, instanceRoleArn, memory);
         }

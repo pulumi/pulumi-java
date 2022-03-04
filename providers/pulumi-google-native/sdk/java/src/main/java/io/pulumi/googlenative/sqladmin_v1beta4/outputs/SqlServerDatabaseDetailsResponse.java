@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class SqlServerDatabaseDetailsResponse {
     /**
      * The version of SQL Server with which the database is to be made compatible
      * 
-     */
+    */
     public Integer getCompatibilityLevel() {
         return this.compatibilityLevel;
     }
     /**
      * The recovery model of a SQL Server database
      * 
-     */
+    */
     public String getRecoveryModel() {
         return this.recoveryModel;
     }
@@ -75,7 +75,6 @@ public final class SqlServerDatabaseDetailsResponse {
             this.recoveryModel = Objects.requireNonNull(recoveryModel);
             return this;
         }
-
         public SqlServerDatabaseDetailsResponse build() {
             return new SqlServerDatabaseDetailsResponse(compatibilityLevel, recoveryModel);
         }

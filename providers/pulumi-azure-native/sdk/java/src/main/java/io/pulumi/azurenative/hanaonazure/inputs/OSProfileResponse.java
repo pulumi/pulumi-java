@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="computerName")
-    private final @Nullable String computerName;
+      private final @Nullable String computerName;
 
     public Optional<String> getComputerName() {
         return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
@@ -34,7 +34,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osType", required=true)
-    private final String osType;
+      private final String osType;
 
     public String getOsType() {
         return this.osType;
@@ -45,7 +45,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sshPublicKey")
-    private final @Nullable String sshPublicKey;
+      private final @Nullable String sshPublicKey;
 
     public Optional<String> getSshPublicKey() {
         return this.sshPublicKey == null ? Optional.empty() : Optional.ofNullable(this.sshPublicKey);
@@ -56,7 +56,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -125,7 +125,6 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public OSProfileResponse build() {
             return new OSProfileResponse(computerName, osType, sshPublicKey, version);
         }

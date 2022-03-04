@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datafactory;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datafactory.inputs.GetFactoryDataPlaneAccessArgs;
 import io.pulumi.azurenative.datafactory.outputs.GetFactoryDataPlaneAccessResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFactoryDataPlaneAccess {
-/**
- * Get Data Plane read only token response definition.
+    private GetFactoryDataPlaneAccess() {}
+    public interface BuilderApplicator {
+        public void apply(GetFactoryDataPlaneAccessArgs.Builder a);
+    }
+    private static GetFactoryDataPlaneAccessArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFactoryDataPlaneAccessArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get Data Plane read only token response definition.
  * API Version: 2018-06-01.
  * 
- *
- * Get Data Plane read only token response definition.
+     *
+     * Get Data Plane read only token response definition.
  * 
- */
+     */
+    public static CompletableFuture<GetFactoryDataPlaneAccessResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get Data Plane read only token response definition.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * Get Data Plane read only token response definition.
+     * 
+     */
     public static CompletableFuture<GetFactoryDataPlaneAccessResult> invokeAsync(GetFactoryDataPlaneAccessArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactoryDataPlaneAccess", TypeShape.of(GetFactoryDataPlaneAccessResult.class), args == null ? GetFactoryDataPlaneAccessArgs.Empty : args, Utilities.withVersion(options));
     }

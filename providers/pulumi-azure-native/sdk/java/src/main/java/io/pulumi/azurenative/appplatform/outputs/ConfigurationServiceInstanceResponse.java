@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ConfigurationServiceInstanceResponse {
     /**
      * Name of the Application Configuration Service instance
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Status of the Application Configuration Service instance
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -74,7 +74,6 @@ public final class ConfigurationServiceInstanceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ConfigurationServiceInstanceResponse build() {
             return new ConfigurationServiceInstanceResponse(name, status);
         }

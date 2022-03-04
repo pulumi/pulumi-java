@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.EncryptionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-    private final @Nullable Input<String> diskEncryptionSetId;
+      private final @Nullable Input<String> diskEncryptionSetId;
 
     public Input<String> getDiskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
@@ -36,7 +36,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,EncryptionType>> type;
+      private final @Nullable Input<Either<String,EncryptionType>> type;
 
     public Input<Either<String,EncryptionType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -95,7 +95,6 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public EncryptionArgs build() {
             return new EncryptionArgs(diskEncryptionSetId, type);
         }

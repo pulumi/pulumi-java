@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,21 +42,21 @@ public final class VolumeBackupsResponse {
     /**
      * Total count of backups for volume
      * 
-     */
+    */
     public Optional<Integer> getBackupsCount() {
         return Optional.ofNullable(this.backupsCount);
     }
     /**
      * Policy enabled
      * 
-     */
+    */
     public Optional<Boolean> getPolicyEnabled() {
         return Optional.ofNullable(this.policyEnabled);
     }
     /**
      * Volume name
      * 
-     */
+    */
     public Optional<String> getVolumeName() {
         return Optional.ofNullable(this.volumeName);
     }
@@ -99,7 +99,6 @@ public final class VolumeBackupsResponse {
             this.volumeName = volumeName;
             return this;
         }
-
         public VolumeBackupsResponse build() {
             return new VolumeBackupsResponse(backupsCount, policyEnabled, volumeName);
         }

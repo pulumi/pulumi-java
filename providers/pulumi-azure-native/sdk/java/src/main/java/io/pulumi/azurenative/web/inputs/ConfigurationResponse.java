@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.IngressResponse;
 import io.pulumi.azurenative.web.inputs.RegistryCredentialsResponse;
 import io.pulumi.azurenative.web.inputs.SecretResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="activeRevisionsMode")
-    private final @Nullable String activeRevisionsMode;
+      private final @Nullable String activeRevisionsMode;
 
     public Optional<String> getActiveRevisionsMode() {
         return this.activeRevisionsMode == null ? Optional.empty() : Optional.ofNullable(this.activeRevisionsMode);
@@ -39,7 +39,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable IngressResponse ingress;
+      private final @Nullable IngressResponse ingress;
 
     public Optional<IngressResponse> getIngress() {
         return this.ingress == null ? Optional.empty() : Optional.ofNullable(this.ingress);
@@ -50,7 +50,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="registries")
-    private final @Nullable List<RegistryCredentialsResponse> registries;
+      private final @Nullable List<RegistryCredentialsResponse> registries;
 
     public List<RegistryCredentialsResponse> getRegistries() {
         return this.registries == null ? List.of() : this.registries;
@@ -61,7 +61,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable List<SecretResponse> secrets;
+      private final @Nullable List<SecretResponse> secrets;
 
     public List<SecretResponse> getSecrets() {
         return this.secrets == null ? List.of() : this.secrets;
@@ -130,7 +130,6 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
             this.secrets = secrets;
             return this;
         }
-
         public ConfigurationResponse build() {
             return new ConfigurationResponse(activeRevisionsMode, ingress, registries, secrets);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ReplicationObjectResponse {
     /**
      * Indicates whether the local volume is the source or destination for the Volume Replication
      * 
-     */
+    */
     public Optional<String> getEndpointType() {
         return Optional.ofNullable(this.endpointType);
     }
     /**
      * The remote region for the other end of the Volume Replication.
      * 
-     */
+    */
     public Optional<String> getRemoteVolumeRegion() {
         return Optional.ofNullable(this.remoteVolumeRegion);
     }
     /**
      * The resource ID of the remote volume.
      * 
-     */
+    */
     public String getRemoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
     }
     /**
      * Id
      * 
-     */
+    */
     public Optional<String> getReplicationId() {
         return Optional.ofNullable(this.replicationId);
     }
     /**
      * Schedule
      * 
-     */
+    */
     public String getReplicationSchedule() {
         return this.replicationSchedule;
     }
@@ -139,7 +139,6 @@ public final class ReplicationObjectResponse {
             this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
             return this;
         }
-
         public ReplicationObjectResponse build() {
             return new ReplicationObjectResponse(endpointType, remoteVolumeRegion, remoteVolumeResourceId, replicationId, replicationSchedule);
         }

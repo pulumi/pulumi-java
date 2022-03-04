@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class FhirServiceAuthenticationConfigurationResponse {
     /**
      * The audience url for the service
      * 
-     */
+    */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * The authority url for the service
      * 
-     */
+    */
     public Optional<String> getAuthority() {
         return Optional.ofNullable(this.authority);
     }
     /**
      * If the SMART on FHIR proxy is enabled
      * 
-     */
+    */
     public Optional<Boolean> getSmartProxyEnabled() {
         return Optional.ofNullable(this.smartProxyEnabled);
     }
@@ -98,7 +98,6 @@ public final class FhirServiceAuthenticationConfigurationResponse {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
         }
-
         public FhirServiceAuthenticationConfigurationResponse build() {
             return new FhirServiceAuthenticationConfigurationResponse(audience, authority, smartProxyEnabled);
         }

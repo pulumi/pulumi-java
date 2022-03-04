@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionAutoscalerAutoscalingPolicyCpuUtilization;
 import io.pulumi.gcp.compute.outputs.RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization;
 import io.pulumi.gcp.compute.outputs.RegionAutoscalerAutoscalingPolicyMetric;
@@ -131,7 +131,7 @@ public final class RegionAutoscalerAutoscalingPolicy {
      * instance may take to initialize. To do this, create an instance
      * and time the startup process.
      * 
-     */
+    */
     public Optional<Integer> getCooldownPeriod() {
         return Optional.ofNullable(this.cooldownPeriod);
     }
@@ -141,7 +141,7 @@ public final class RegionAutoscalerAutoscalingPolicy {
      * group.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionAutoscalerAutoscalingPolicyCpuUtilization> getCpuUtilization() {
         return Optional.ofNullable(this.cpuUtilization);
     }
@@ -149,7 +149,7 @@ public final class RegionAutoscalerAutoscalingPolicy {
      * Configuration parameters of autoscaling based on a load balancer.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization> getLoadBalancingUtilization() {
         return Optional.ofNullable(this.loadBalancingUtilization);
     }
@@ -159,7 +159,7 @@ public final class RegionAutoscalerAutoscalingPolicy {
      * maximum number of replicas should not be lower than minimal number
      * of replicas.
      * 
-     */
+    */
     public Integer getMaxReplicas() {
         return this.maxReplicas;
     }
@@ -167,7 +167,7 @@ public final class RegionAutoscalerAutoscalingPolicy {
      * Configuration parameters of autoscaling based on a custom metric.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionAutoscalerAutoscalingPolicyMetric> getMetrics() {
         return this.metrics == null ? List.of() : this.metrics;
     }
@@ -177,7 +177,7 @@ public final class RegionAutoscalerAutoscalingPolicy {
      * choose a default value depending on maximum number of instances
      * allowed.
      * 
-     */
+    */
     public Integer getMinReplicas() {
         return this.minReplicas;
     }
@@ -186,7 +186,7 @@ public final class RegionAutoscalerAutoscalingPolicy {
      * Default value is `ON`.
      * Possible values are `OFF`, `ONLY_UP`, and `ON`.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
@@ -195,7 +195,7 @@ public final class RegionAutoscalerAutoscalingPolicy {
      * and outages due to abrupt scale-in events
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionAutoscalerAutoscalingPolicyScaleDownControl> getScaleDownControl() {
         return Optional.ofNullable(this.scaleDownControl);
     }
@@ -204,7 +204,7 @@ public final class RegionAutoscalerAutoscalingPolicy {
      * and outages due to abrupt scale-in events
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionAutoscalerAutoscalingPolicyScaleInControl> getScaleInControl() {
         return Optional.ofNullable(this.scaleInControl);
     }
@@ -212,7 +212,7 @@ public final class RegionAutoscalerAutoscalingPolicy {
      * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionAutoscalerAutoscalingPolicyScalingSchedule> getScalingSchedules() {
         return this.scalingSchedules == null ? List.of() : this.scalingSchedules;
     }
@@ -304,7 +304,6 @@ public final class RegionAutoscalerAutoscalingPolicy {
             this.scalingSchedules = scalingSchedules;
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicy build() {
             return new RegionAutoscalerAutoscalingPolicy(cooldownPeriod, cpuUtilization, loadBalancingUtilization, maxReplicas, metrics, minReplicas, mode, scaleDownControl, scaleInControl, scalingSchedules);
         }

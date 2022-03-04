@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,42 +15,42 @@ public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetMessageArgs Empty = new GetMessageArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="hl7V2StoreId", required=true)
-    private final String hl7V2StoreId;
+      private final String hl7V2StoreId;
 
     public String getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="messageId", required=true)
-    private final String messageId;
+      private final String messageId;
 
     public String getMessageId() {
         return this.messageId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="view")
-    private final @Nullable String view;
+      private final @Nullable String view;
 
     public Optional<String> getView() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
@@ -139,7 +139,6 @@ public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
             this.view = view;
             return this;
         }
-
         public GetMessageArgs build() {
             return new GetMessageArgs(datasetId, hl7V2StoreId, location, messageId, project, view);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.features;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.features.inputs.GetSubscriptionFeatureRegistrationArgs;
 import io.pulumi.azurenative.features.outputs.GetSubscriptionFeatureRegistrationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubscriptionFeatureRegistration {
-/**
- * Subscription feature registration details
+    private GetSubscriptionFeatureRegistration() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubscriptionFeatureRegistrationArgs.Builder a);
+    }
+    private static GetSubscriptionFeatureRegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubscriptionFeatureRegistrationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Subscription feature registration details
  * API Version: 2021-07-01.
  * 
- *
- * Subscription feature registration details
+     *
+     * Subscription feature registration details
  * 
- */
+     */
+    public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Subscription feature registration details
+     * API Version: 2021-07-01.
+     * 
+     *
+         * Subscription feature registration details
+     * 
+     */
     public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> invokeAsync(GetSubscriptionFeatureRegistrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:features:getSubscriptionFeatureRegistration", TypeShape.of(GetSubscriptionFeatureRegistrationResult.class), args == null ? GetSubscriptionFeatureRegistrationArgs.Empty : args, Utilities.withVersion(options));
     }

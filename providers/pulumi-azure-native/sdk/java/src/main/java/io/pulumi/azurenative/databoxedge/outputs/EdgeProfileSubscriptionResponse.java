@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SubscriptionRegisteredFeaturesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -59,7 +59,7 @@ public final class EdgeProfileSubscriptionResponse {
     /**
      * ARM ID of the subscription
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -78,7 +78,7 @@ public final class EdgeProfileSubscriptionResponse {
     /**
      * Edge Subscription Registration ID
      * 
-     */
+    */
     public Optional<String> getRegistrationId() {
         return Optional.ofNullable(this.registrationId);
     }
@@ -182,7 +182,6 @@ public final class EdgeProfileSubscriptionResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public EdgeProfileSubscriptionResponse build() {
             return new EdgeProfileSubscriptionResponse(id, locationPlacementId, quotaId, registeredFeatures, registrationDate, registrationId, serializedDetails, state, subscriptionId, tenantId);
         }

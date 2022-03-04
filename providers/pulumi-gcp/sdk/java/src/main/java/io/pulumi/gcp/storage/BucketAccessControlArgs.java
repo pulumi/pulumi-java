@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -44,7 +44,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entity", required=true)
-    private final Input<String> entity;
+      private final Input<String> entity;
 
     public Input<String> getEntity() {
         return this.entity;
@@ -56,7 +56,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -130,7 +130,6 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public BucketAccessControlArgs build() {
             return new BucketAccessControlArgs(bucket, entity, role);
         }

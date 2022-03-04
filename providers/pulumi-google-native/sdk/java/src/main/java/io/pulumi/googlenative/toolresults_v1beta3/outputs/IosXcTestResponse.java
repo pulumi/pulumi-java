@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class IosXcTestResponse {
     /**
      * Bundle ID of the app.
      * 
-     */
+    */
     public String getBundleId() {
         return this.bundleId;
     }
     /**
      * Xcode version that the test was run with.
      * 
-     */
+    */
     public String getXcodeVersion() {
         return this.xcodeVersion;
     }
@@ -74,7 +74,6 @@ public final class IosXcTestResponse {
             this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
             return this;
         }
-
         public IosXcTestResponse build() {
             return new IosXcTestResponse(bundleId, xcodeVersion);
         }

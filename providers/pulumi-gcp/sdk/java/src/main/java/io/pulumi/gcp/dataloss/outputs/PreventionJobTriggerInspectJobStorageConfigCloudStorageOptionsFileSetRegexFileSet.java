@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,7 +44,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     /**
      * The name of a Cloud Storage bucket.
      * 
-     */
+    */
     public String getBucketName() {
         return this.bucketName;
     }
@@ -52,7 +52,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * A list of regular expressions matching file paths to exclude. All files in the bucket that match at
      * least one of these regular expressions will be excluded from the scan.
      * 
-     */
+    */
     public List<String> getExcludeRegexes() {
         return this.excludeRegexes == null ? List.of() : this.excludeRegexes;
     }
@@ -62,7 +62,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * except for those that also match an item in excludeRegex. Leaving this field empty will
      * match all files by default (this is equivalent to including .* in the list)
      * 
-     */
+    */
     public List<String> getIncludeRegexes() {
         return this.includeRegexes == null ? List.of() : this.includeRegexes;
     }
@@ -105,7 +105,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.includeRegexes = includeRegexes;
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet(bucketName, excludeRegexes, includeRegexes);
         }

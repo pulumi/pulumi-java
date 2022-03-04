@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -97,7 +97,6 @@ public final class TopicRuleOpenSearchAction {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TopicRuleOpenSearchAction build() {
             return new TopicRuleOpenSearchAction(endpoint, id, index, roleArn, type);
         }

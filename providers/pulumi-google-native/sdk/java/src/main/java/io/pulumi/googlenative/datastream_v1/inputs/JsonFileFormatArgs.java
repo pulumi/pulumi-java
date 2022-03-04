@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.enums.JsonFileFormatCompression;
 import io.pulumi.googlenative.datastream_v1.enums.JsonFileFormatSchemaFileFormat;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compression")
-    private final @Nullable Input<JsonFileFormatCompression> compression;
+      private final @Nullable Input<JsonFileFormatCompression> compression;
 
     public Input<JsonFileFormatCompression> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -35,7 +35,7 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaFileFormat")
-    private final @Nullable Input<JsonFileFormatSchemaFileFormat> schemaFileFormat;
+      private final @Nullable Input<JsonFileFormatSchemaFileFormat> schemaFileFormat;
 
     public Input<JsonFileFormatSchemaFileFormat> getSchemaFileFormat() {
         return this.schemaFileFormat == null ? Input.empty() : this.schemaFileFormat;
@@ -94,7 +94,6 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
             this.schemaFileFormat = Input.ofNullable(schemaFileFormat);
             return this;
         }
-
         public JsonFileFormatArgs build() {
             return new JsonFileFormatArgs(compression, schemaFileFormat);
         }

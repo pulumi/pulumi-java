@@ -5,7 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationEventLevel;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="eventLevels", required=true)
-    private final Input<List<ApplicationEventLevel>> eventLevels;
+      private final Input<List<ApplicationEventLevel>> eventLevels;
 
     public Input<List<ApplicationEventLevel>> getEventLevels() {
         return this.eventLevels;
@@ -36,7 +36,7 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="eventName", required=true)
-    private final Input<String> eventName;
+      private final Input<String> eventName;
 
     public Input<String> getEventName() {
         return this.eventName;
@@ -47,7 +47,7 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="logGroupName", required=true)
-    private final Input<String> logGroupName;
+      private final Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName;
@@ -58,7 +58,7 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="patternSet")
-    private final @Nullable Input<String> patternSet;
+      private final @Nullable Input<String> patternSet;
 
     public Input<String> getPatternSet() {
         return this.patternSet == null ? Input.empty() : this.patternSet;
@@ -147,7 +147,6 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
             this.patternSet = Input.ofNullable(patternSet);
             return this;
         }
-
         public ApplicationWindowsEventArgs build() {
             return new ApplicationWindowsEventArgs(eventLevels, eventName, logGroupName, patternSet);
         }

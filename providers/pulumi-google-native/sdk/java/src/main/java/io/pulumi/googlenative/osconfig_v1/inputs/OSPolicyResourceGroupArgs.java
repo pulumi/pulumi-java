@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyInventoryFilterArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="inventoryFilters")
-    private final @Nullable Input<List<OSPolicyInventoryFilterArgs>> inventoryFilters;
+      private final @Nullable Input<List<OSPolicyInventoryFilterArgs>> inventoryFilters;
 
     public Input<List<OSPolicyInventoryFilterArgs>> getInventoryFilters() {
         return this.inventoryFilters == null ? Input.empty() : this.inventoryFilters;
@@ -36,7 +36,7 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resources", required=true)
-    private final Input<List<OSPolicyResourceArgs>> resources;
+      private final Input<List<OSPolicyResourceArgs>> resources;
 
     public Input<List<OSPolicyResourceArgs>> getResources() {
         return this.resources;
@@ -95,7 +95,6 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
             this.resources = Input.of(Objects.requireNonNull(resources));
             return this;
         }
-
         public OSPolicyResourceGroupArgs build() {
             return new OSPolicyResourceGroupArgs(inventoryFilters, resources);
         }

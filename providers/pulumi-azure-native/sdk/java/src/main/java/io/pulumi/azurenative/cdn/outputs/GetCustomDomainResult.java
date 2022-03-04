@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.outputs.CdnManagedHttpsParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UserManagedHttpsParametersResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -100,77 +100,77 @@ public final class GetCustomDomainResult {
     /**
      * Certificate parameters for securing custom HTTPS
      * 
-     */
+    */
     public Optional<Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>> getCustomHttpsParameters() {
         return Optional.ofNullable(this.customHttpsParameters);
     }
     /**
      * Provisioning status of Custom Https of the custom domain.
      * 
-     */
+    */
     public String getCustomHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
     }
     /**
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
-     */
+    */
     public String getCustomHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
     }
     /**
      * The host name of the custom domain. Must be a domain name.
      * 
-     */
+    */
     public String getHostName() {
         return this.hostName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning status of the custom domain.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the custom domain.
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
      * 
-     */
+    */
     public Optional<String> getValidationData() {
         return Optional.ofNullable(this.validationData);
     }
@@ -269,7 +269,6 @@ public final class GetCustomDomainResult {
             this.validationData = validationData;
             return this;
         }
-
         public GetCustomDomainResult build() {
             return new GetCustomDomainResult(customHttpsParameters, customHttpsProvisioningState, customHttpsProvisioningSubstate, hostName, id, name, provisioningState, resourceState, systemData, type, validationData);
         }

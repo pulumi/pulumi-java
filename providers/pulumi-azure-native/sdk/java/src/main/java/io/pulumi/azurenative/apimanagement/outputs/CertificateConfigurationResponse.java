@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.CertificateInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class CertificateConfigurationResponse {
     /**
      * Certificate information.
      * 
-     */
+    */
     public Optional<CertificateInformationResponse> getCertificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
      * Certificate Password.
      * 
-     */
+    */
     public Optional<String> getCertificatePassword() {
         return Optional.ofNullable(this.certificatePassword);
     }
     /**
      * Base64 Encoded certificate.
      * 
-     */
+    */
     public Optional<String> getEncodedCertificate() {
         return Optional.ofNullable(this.encodedCertificate);
     }
     /**
      * The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
      * 
-     */
+    */
     public String getStoreName() {
         return this.storeName;
     }
@@ -119,7 +119,6 @@ public final class CertificateConfigurationResponse {
             this.storeName = Objects.requireNonNull(storeName);
             return this;
         }
-
         public CertificateConfigurationResponse build() {
             return new CertificateConfigurationResponse(certificate, certificatePassword, encodedCertificate, storeName);
         }

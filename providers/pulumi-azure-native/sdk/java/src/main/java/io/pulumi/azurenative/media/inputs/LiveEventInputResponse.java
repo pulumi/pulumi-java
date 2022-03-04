@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.LiveEventEndpointResponse;
 import io.pulumi.azurenative.media.inputs.LiveEventInputAccessControlResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="accessControl")
-    private final @Nullable LiveEventInputAccessControlResponse accessControl;
+      private final @Nullable LiveEventInputAccessControlResponse accessControl;
 
     public Optional<LiveEventInputAccessControlResponse> getAccessControl() {
         return this.accessControl == null ? Optional.empty() : Optional.ofNullable(this.accessControl);
@@ -37,7 +37,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="accessToken")
-    private final @Nullable String accessToken;
+      private final @Nullable String accessToken;
 
     public Optional<String> getAccessToken() {
         return this.accessToken == null ? Optional.empty() : Optional.ofNullable(this.accessToken);
@@ -48,7 +48,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable List<LiveEventEndpointResponse> endpoints;
+      private final @Nullable List<LiveEventEndpointResponse> endpoints;
 
     public List<LiveEventEndpointResponse> getEndpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
@@ -59,7 +59,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keyFrameIntervalDuration")
-    private final @Nullable String keyFrameIntervalDuration;
+      private final @Nullable String keyFrameIntervalDuration;
 
     public Optional<String> getKeyFrameIntervalDuration() {
         return this.keyFrameIntervalDuration == null ? Optional.empty() : Optional.ofNullable(this.keyFrameIntervalDuration);
@@ -70,7 +70,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="streamingProtocol", required=true)
-    private final String streamingProtocol;
+      private final String streamingProtocol;
 
     public String getStreamingProtocol() {
         return this.streamingProtocol;
@@ -149,7 +149,6 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
         }
-
         public LiveEventInputResponse build() {
             return new LiveEventInputResponse(accessControl, accessToken, endpoints, keyFrameIntervalDuration, streamingProtocol);
         }

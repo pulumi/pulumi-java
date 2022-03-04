@@ -11,7 +11,7 @@ import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamCloudWatchLoggi
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessingConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamS3DestinationConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamVpcConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -211,7 +211,6 @@ public final class DeliveryStreamAmazonopensearchserviceDestinationConfiguration
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public DeliveryStreamAmazonopensearchserviceDestinationConfiguration build() {
             return new DeliveryStreamAmazonopensearchserviceDestinationConfiguration(bufferingHints, cloudWatchLoggingOptions, clusterEndpoint, domainARN, indexName, indexRotationPeriod, processingConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration, typeName, vpcConfiguration);
         }

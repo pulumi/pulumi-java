@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse {
     /**
      * Migration settings which tune the migration behavior
      * 
-     */
+    */
     public Map<String,String> getMigrationSetting() {
         return this.migrationSetting == null ? Map.of() : this.migrationSetting;
     }
     /**
      * Name of the database
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Source settings to tune source endpoint migration behavior
      * 
-     */
+    */
     public Map<String,String> getSourceSetting() {
         return this.sourceSetting == null ? Map.of() : this.sourceSetting;
     }
     /**
      * Name of target database. Note: Target database will be truncated before starting migration.
      * 
-     */
+    */
     public Optional<String> getTargetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
     /**
      * Target settings to tune target endpoint migration behavior
      * 
-     */
+    */
     public Map<String,String> getTargetSetting() {
         return this.targetSetting == null ? Map.of() : this.targetSetting;
     }
@@ -140,7 +140,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse {
             this.targetSetting = targetSetting;
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse(migrationSetting, name, sourceSetting, targetDatabaseName, targetSetting);
         }

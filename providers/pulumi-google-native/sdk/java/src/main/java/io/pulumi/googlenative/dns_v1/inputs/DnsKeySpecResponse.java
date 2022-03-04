@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -33,7 +33,7 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyLength", required=true)
-    private final Integer keyLength;
+      private final Integer keyLength;
 
     public Integer getKeyLength() {
         return this.keyLength;
@@ -44,14 +44,14 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyType", required=true)
-    private final String keyType;
+      private final String keyType;
 
     public String getKeyType() {
         return this.keyType;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -120,7 +120,6 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public DnsKeySpecResponse build() {
             return new DnsKeySpecResponse(algorithm, keyLength, keyType, kind);
         }

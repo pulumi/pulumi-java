@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetFactoryGitHubAccessTokenResult {
     /**
      * GitHub access token.
      * 
-     */
+    */
     public Optional<String> getGitHubAccessToken() {
         return Optional.ofNullable(this.gitHubAccessToken);
     }
@@ -54,7 +54,6 @@ public final class GetFactoryGitHubAccessTokenResult {
             this.gitHubAccessToken = gitHubAccessToken;
             return this;
         }
-
         public GetFactoryGitHubAccessTokenResult build() {
             return new GetFactoryGitHubAccessTokenResult(gitHubAccessToken);
         }

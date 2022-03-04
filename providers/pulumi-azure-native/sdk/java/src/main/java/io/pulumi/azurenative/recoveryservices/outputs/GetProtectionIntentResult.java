@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureRecoveryServiceVaultP
 import io.pulumi.azurenative.recoveryservices.outputs.AzureResourceProtectionIntentResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureWorkloadAutoProtectionIntentResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureWorkloadSQLAutoProtectionIntentResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -74,49 +74,49 @@ public final class GetProtectionIntentResult {
     /**
      * Optional ETag.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Resource Id represents the complete path to the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name associated with the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * ProtectionIntentResource properties
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -187,7 +187,6 @@ public final class GetProtectionIntentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProtectionIntentResult build() {
             return new GetProtectionIntentResult(eTag, id, location, name, properties, tags, type);
         }

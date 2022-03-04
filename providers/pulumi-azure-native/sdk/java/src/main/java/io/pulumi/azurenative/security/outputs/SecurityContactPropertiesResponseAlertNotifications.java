@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class SecurityContactPropertiesResponseAlertNotifications {
     /**
      * Defines the minimal alert severity which will be sent as email notifications
      * 
-     */
+    */
     public Optional<String> getMinimalSeverity() {
         return Optional.ofNullable(this.minimalSeverity);
     }
     /**
      * Defines if email notifications will be sent about new security alerts
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -76,7 +76,6 @@ public final class SecurityContactPropertiesResponseAlertNotifications {
             this.state = state;
             return this;
         }
-
         public SecurityContactPropertiesResponseAlertNotifications build() {
             return new SecurityContactPropertiesResponseAlertNotifications(minimalSeverity, state);
         }

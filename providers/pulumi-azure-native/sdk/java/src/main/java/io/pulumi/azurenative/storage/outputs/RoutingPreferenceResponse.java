@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class RoutingPreferenceResponse {
     /**
      * A boolean flag which indicates whether internet routing storage endpoints are to be published
      * 
-     */
+    */
     public Optional<Boolean> getPublishInternetEndpoints() {
         return Optional.ofNullable(this.publishInternetEndpoints);
     }
     /**
      * A boolean flag which indicates whether microsoft routing storage endpoints are to be published
      * 
-     */
+    */
     public Optional<Boolean> getPublishMicrosoftEndpoints() {
         return Optional.ofNullable(this.publishMicrosoftEndpoints);
     }
     /**
      * Routing Choice defines the kind of network routing opted by the user.
      * 
-     */
+    */
     public Optional<String> getRoutingChoice() {
         return Optional.ofNullable(this.routingChoice);
     }
@@ -98,7 +98,6 @@ public final class RoutingPreferenceResponse {
             this.routingChoice = routingChoice;
             return this;
         }
-
         public RoutingPreferenceResponse build() {
             return new RoutingPreferenceResponse(publishInternetEndpoints, publishMicrosoftEndpoints, routingChoice);
         }

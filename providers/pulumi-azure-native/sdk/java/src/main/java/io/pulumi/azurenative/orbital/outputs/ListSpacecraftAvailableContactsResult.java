@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.AvailableContactsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ListSpacecraftAvailableContactsResult {
     /**
      * The URL to get the next set of results.
      * 
-     */
+    */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * A list of available contacts
      * 
-     */
+    */
     public List<AvailableContactsResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -77,7 +77,6 @@ public final class ListSpacecraftAvailableContactsResult {
             this.value = value;
             return this;
         }
-
         public ListSpacecraftAvailableContactsResult build() {
             return new ListSpacecraftAvailableContactsResult(nextLink, value);
         }

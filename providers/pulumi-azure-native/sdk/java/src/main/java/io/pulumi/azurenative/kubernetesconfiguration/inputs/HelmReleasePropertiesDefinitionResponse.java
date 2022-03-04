@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ObjectReferenceDefinitionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="failureCount")
-    private final @Nullable Double failureCount;
+      private final @Nullable Double failureCount;
 
     public Optional<Double> getFailureCount() {
         return this.failureCount == null ? Optional.empty() : Optional.ofNullable(this.failureCount);
@@ -31,7 +31,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="helmChartRef")
-    private final @Nullable ObjectReferenceDefinitionResponse helmChartRef;
+      private final @Nullable ObjectReferenceDefinitionResponse helmChartRef;
 
     public Optional<ObjectReferenceDefinitionResponse> getHelmChartRef() {
         return this.helmChartRef == null ? Optional.empty() : Optional.ofNullable(this.helmChartRef);
@@ -42,7 +42,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="installFailureCount")
-    private final @Nullable Double installFailureCount;
+      private final @Nullable Double installFailureCount;
 
     public Optional<Double> getInstallFailureCount() {
         return this.installFailureCount == null ? Optional.empty() : Optional.ofNullable(this.installFailureCount);
@@ -53,7 +53,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastRevisionApplied")
-    private final @Nullable Double lastRevisionApplied;
+      private final @Nullable Double lastRevisionApplied;
 
     public Optional<Double> getLastRevisionApplied() {
         return this.lastRevisionApplied == null ? Optional.empty() : Optional.ofNullable(this.lastRevisionApplied);
@@ -64,7 +64,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="upgradeFailureCount")
-    private final @Nullable Double upgradeFailureCount;
+      private final @Nullable Double upgradeFailureCount;
 
     public Optional<Double> getUpgradeFailureCount() {
         return this.upgradeFailureCount == null ? Optional.empty() : Optional.ofNullable(this.upgradeFailureCount);
@@ -143,7 +143,6 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
             this.upgradeFailureCount = upgradeFailureCount;
             return this;
         }
-
         public HelmReleasePropertiesDefinitionResponse build() {
             return new HelmReleasePropertiesDefinitionResponse(failureCount, helmChartRef, installFailureCount, lastRevisionApplied, upgradeFailureCount);
         }

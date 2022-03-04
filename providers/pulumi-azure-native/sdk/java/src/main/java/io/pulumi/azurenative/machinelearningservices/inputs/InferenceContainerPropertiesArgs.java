@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.RouteArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="livenessRoute")
-    private final @Nullable Input<RouteArgs> livenessRoute;
+      private final @Nullable Input<RouteArgs> livenessRoute;
 
     public Input<RouteArgs> getLivenessRoute() {
         return this.livenessRoute == null ? Input.empty() : this.livenessRoute;
@@ -30,7 +30,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="readinessRoute")
-    private final @Nullable Input<RouteArgs> readinessRoute;
+      private final @Nullable Input<RouteArgs> readinessRoute;
 
     public Input<RouteArgs> getReadinessRoute() {
         return this.readinessRoute == null ? Input.empty() : this.readinessRoute;
@@ -41,7 +41,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scoringRoute")
-    private final @Nullable Input<RouteArgs> scoringRoute;
+      private final @Nullable Input<RouteArgs> scoringRoute;
 
     public Input<RouteArgs> getScoringRoute() {
         return this.scoringRoute == null ? Input.empty() : this.scoringRoute;
@@ -115,7 +115,6 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
             this.scoringRoute = Input.ofNullable(scoringRoute);
             return this;
         }
-
         public InferenceContainerPropertiesArgs build() {
             return new InferenceContainerPropertiesArgs(livenessRoute, readinessRoute, scoringRoute);
         }

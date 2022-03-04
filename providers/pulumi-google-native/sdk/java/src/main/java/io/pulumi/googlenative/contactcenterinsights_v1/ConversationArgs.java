@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.ConversationMedium;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs;
@@ -23,7 +23,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentId")
-    private final @Nullable Input<String> agentId;
+      private final @Nullable Input<String> agentId;
 
     public Input<String> getAgentId() {
         return this.agentId == null ? Input.empty() : this.agentId;
@@ -34,14 +34,14 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callMetadata")
-    private final @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata;
+      private final @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata;
 
     public Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> getCallMetadata() {
         return this.callMetadata == null ? Input.empty() : this.callMetadata;
     }
 
     @InputImport(name="conversationId")
-    private final @Nullable Input<String> conversationId;
+      private final @Nullable Input<String> conversationId;
 
     public Input<String> getConversationId() {
         return this.conversationId == null ? Input.empty() : this.conversationId;
@@ -52,7 +52,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSource")
-    private final @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource;
+      private final @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource;
 
     public Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> getDataSource() {
         return this.dataSource == null ? Input.empty() : this.dataSource;
@@ -63,7 +63,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+      private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
@@ -74,7 +74,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -85,14 +85,14 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -103,7 +103,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="medium")
-    private final @Nullable Input<ConversationMedium> medium;
+      private final @Nullable Input<ConversationMedium> medium;
 
     public Input<ConversationMedium> getMedium() {
         return this.medium == null ? Input.empty() : this.medium;
@@ -114,7 +114,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -125,14 +125,14 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="obfuscatedUserId")
-    private final @Nullable Input<String> obfuscatedUserId;
+      private final @Nullable Input<String> obfuscatedUserId;
 
     public Input<String> getObfuscatedUserId() {
         return this.obfuscatedUserId == null ? Input.empty() : this.obfuscatedUserId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -143,7 +143,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -154,7 +154,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<String> ttl;
+      private final @Nullable Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -393,7 +393,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public ConversationArgs build() {
             return new ConversationArgs(agentId, callMetadata, conversationId, dataSource, expireTime, labels, languageCode, location, medium, name, obfuscatedUserId, project, startTime, ttl);
         }

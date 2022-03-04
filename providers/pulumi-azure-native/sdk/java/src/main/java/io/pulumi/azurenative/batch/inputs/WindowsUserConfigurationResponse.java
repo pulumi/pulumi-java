@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class WindowsUserConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="loginMode")
-    private final @Nullable String loginMode;
+      private final @Nullable String loginMode;
 
     public Optional<String> getLoginMode() {
         return this.loginMode == null ? Optional.empty() : Optional.ofNullable(this.loginMode);
@@ -57,7 +57,6 @@ public final class WindowsUserConfigurationResponse extends io.pulumi.resources.
             this.loginMode = loginMode;
             return this;
         }
-
         public WindowsUserConfigurationResponse build() {
             return new WindowsUserConfigurationResponse(loginMode);
         }

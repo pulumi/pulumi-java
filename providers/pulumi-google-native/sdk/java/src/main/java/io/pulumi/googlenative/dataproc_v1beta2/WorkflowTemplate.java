@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dataproc_v1beta2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataproc_v1beta2.WorkflowTemplateArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.OrderedJobResponse;
@@ -152,6 +152,37 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WorkflowTemplateArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.dataproc_v1beta2.WorkflowTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.dataproc_v1beta2.WorkflowTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WorkflowTemplate(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WorkflowTemplate(String name) {
+        this(name, WorkflowTemplateArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WorkflowTemplate(String name, WorkflowTemplateArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

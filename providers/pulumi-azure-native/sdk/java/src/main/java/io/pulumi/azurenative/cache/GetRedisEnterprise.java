@@ -6,21 +6,41 @@ package io.pulumi.azurenative.cache;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cache.inputs.GetRedisEnterpriseArgs;
 import io.pulumi.azurenative.cache.outputs.GetRedisEnterpriseResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRedisEnterprise {
-/**
- * Describes the RedisEnterprise cluster
+    private GetRedisEnterprise() {}
+    public interface BuilderApplicator {
+        public void apply(GetRedisEnterpriseArgs.Builder a);
+    }
+    private static GetRedisEnterpriseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRedisEnterpriseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes the RedisEnterprise cluster
  * API Version: 2021-03-01.
  * 
- *
- * Describes the RedisEnterprise cluster
+     *
+     * Describes the RedisEnterprise cluster
  * 
- */
+     */
+    public static CompletableFuture<GetRedisEnterpriseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes the RedisEnterprise cluster
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Describes the RedisEnterprise cluster
+     * 
+     */
     public static CompletableFuture<GetRedisEnterpriseResult> invokeAsync(GetRedisEnterpriseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getRedisEnterprise", TypeShape.of(GetRedisEnterpriseResult.class), args == null ? GetRedisEnterpriseArgs.Empty : args, Utilities.withVersion(options));
     }

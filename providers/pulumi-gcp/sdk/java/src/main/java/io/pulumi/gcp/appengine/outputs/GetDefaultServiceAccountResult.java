@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -55,28 +55,28 @@ public final class GetDefaultServiceAccountResult {
     /**
      * The display name for the service account.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Email address of the default service account used by App Engine in this project.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The fully-qualified name of the service account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -86,7 +86,7 @@ public final class GetDefaultServiceAccountResult {
     /**
      * The unique id of the service account.
      * 
-     */
+    */
     public String getUniqueId() {
         return this.uniqueId;
     }
@@ -150,7 +150,6 @@ public final class GetDefaultServiceAccountResult {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public GetDefaultServiceAccountResult build() {
             return new GetDefaultServiceAccountResult(displayName, email, id, name, project, uniqueId);
         }

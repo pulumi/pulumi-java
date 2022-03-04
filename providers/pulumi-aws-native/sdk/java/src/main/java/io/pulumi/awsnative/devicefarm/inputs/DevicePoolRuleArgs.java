@@ -6,7 +6,7 @@ package io.pulumi.awsnative.devicefarm.inputs;
 import io.pulumi.awsnative.devicefarm.enums.DevicePoolRuleAttribute;
 import io.pulumi.awsnative.devicefarm.enums.DevicePoolRuleOperator;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attribute")
-    private final @Nullable Input<DevicePoolRuleAttribute> attribute;
+      private final @Nullable Input<DevicePoolRuleAttribute> attribute;
 
     public Input<DevicePoolRuleAttribute> getAttribute() {
         return this.attribute == null ? Input.empty() : this.attribute;
@@ -36,7 +36,7 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator")
-    private final @Nullable Input<DevicePoolRuleOperator> operator;
+      private final @Nullable Input<DevicePoolRuleOperator> operator;
 
     public Input<DevicePoolRuleOperator> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -47,7 +47,7 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -121,7 +121,6 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public DevicePoolRuleArgs build() {
             return new DevicePoolRuleArgs(attribute, operator, value);
         }

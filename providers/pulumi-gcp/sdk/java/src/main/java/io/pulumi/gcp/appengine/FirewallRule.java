@@ -5,8 +5,8 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.FirewallRuleArgs;
 import io.pulumi.gcp.appengine.inputs.FirewallRuleState;
@@ -128,6 +128,37 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
         return this.sourceRange;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FirewallRuleArgs.Builder a);
+    }
+    private static io.pulumi.gcp.appengine.FirewallRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.appengine.FirewallRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FirewallRule(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FirewallRule(String name) {
+        this(name, FirewallRuleArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FirewallRule(String name, FirewallRuleArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanNotificationTargetItem;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -57,35 +57,35 @@ public final class ResponsePlanIncidentTemplate {
     /**
      * The deduplication string.
      * 
-     */
+    */
     public Optional<String> getDedupeString() {
         return Optional.ofNullable(this.dedupeString);
     }
     /**
      * The impact value.
      * 
-     */
+    */
     public Integer getImpact() {
         return this.impact;
     }
     /**
      * The list of notification targets.
      * 
-     */
+    */
     public List<ResponsePlanNotificationTargetItem> getNotificationTargets() {
         return this.notificationTargets == null ? List.of() : this.notificationTargets;
     }
     /**
      * The summary string.
      * 
-     */
+    */
     public Optional<String> getSummary() {
         return Optional.ofNullable(this.summary);
     }
     /**
      * The title string.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -142,7 +142,6 @@ public final class ResponsePlanIncidentTemplate {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ResponsePlanIncidentTemplate build() {
             return new ResponsePlanIncidentTemplate(dedupeString, impact, notificationTargets, summary, title);
         }

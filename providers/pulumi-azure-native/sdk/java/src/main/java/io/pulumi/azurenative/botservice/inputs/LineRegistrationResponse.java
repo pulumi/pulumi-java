@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LineRegistrationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="channelAccessToken")
-    private final @Nullable String channelAccessToken;
+      private final @Nullable String channelAccessToken;
 
     public Optional<String> getChannelAccessToken() {
         return this.channelAccessToken == null ? Optional.empty() : Optional.ofNullable(this.channelAccessToken);
@@ -34,7 +34,7 @@ public final class LineRegistrationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="channelSecret")
-    private final @Nullable String channelSecret;
+      private final @Nullable String channelSecret;
 
     public Optional<String> getChannelSecret() {
         return this.channelSecret == null ? Optional.empty() : Optional.ofNullable(this.channelSecret);
@@ -45,7 +45,7 @@ public final class LineRegistrationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="generatedId", required=true)
-    private final String generatedId;
+      private final String generatedId;
 
     public String getGeneratedId() {
         return this.generatedId;
@@ -104,7 +104,6 @@ public final class LineRegistrationResponse extends io.pulumi.resources.InvokeAr
             this.generatedId = Objects.requireNonNull(generatedId);
             return this;
         }
-
         public LineRegistrationResponse build() {
             return new LineRegistrationResponse(channelAccessToken, channelSecret, generatedId);
         }

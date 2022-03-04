@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.PermissionsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class AccessPolicyEntryResponse {
     /**
      *  Application ID of the client making request on behalf of a principal
      * 
-     */
+    */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
      * 
-     */
+    */
     public String getObjectId() {
         return this.objectId;
     }
     /**
      * Permissions the identity has for keys, secrets and certificates.
      * 
-     */
+    */
     public PermissionsResponse getPermissions() {
         return this.permissions;
     }
     /**
      * The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
@@ -119,7 +119,6 @@ public final class AccessPolicyEntryResponse {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public AccessPolicyEntryResponse build() {
             return new AccessPolicyEntryResponse(applicationId, objectId, permissions, tenantId);
         }

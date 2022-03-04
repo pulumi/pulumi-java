@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetEbsBlockDeviceVolumeType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,42 +18,42 @@ public final class SpotFleetEbsBlockDeviceArgs extends io.pulumi.resources.Resou
     public static final SpotFleetEbsBlockDeviceArgs Empty = new SpotFleetEbsBlockDeviceArgs();
 
     @InputImport(name="deleteOnTermination")
-    private final @Nullable Input<Boolean> deleteOnTermination;
+      private final @Nullable Input<Boolean> deleteOnTermination;
 
     public Input<Boolean> getDeleteOnTermination() {
         return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
     }
 
     @InputImport(name="encrypted")
-    private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Input<Boolean> encrypted;
 
     public Input<Boolean> getEncrypted() {
         return this.encrypted == null ? Input.empty() : this.encrypted;
     }
 
     @InputImport(name="iops")
-    private final @Nullable Input<Integer> iops;
+      private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
     }
 
     @InputImport(name="snapshotId")
-    private final @Nullable Input<String> snapshotId;
+      private final @Nullable Input<String> snapshotId;
 
     public Input<String> getSnapshotId() {
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
     }
 
     @InputImport(name="volumeSize")
-    private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Input<Integer> volumeSize;
 
     public Input<Integer> getVolumeSize() {
         return this.volumeSize == null ? Input.empty() : this.volumeSize;
     }
 
     @InputImport(name="volumeType")
-    private final @Nullable Input<SpotFleetEbsBlockDeviceVolumeType> volumeType;
+      private final @Nullable Input<SpotFleetEbsBlockDeviceVolumeType> volumeType;
 
     public Input<SpotFleetEbsBlockDeviceVolumeType> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;
@@ -172,7 +172,6 @@ public final class SpotFleetEbsBlockDeviceArgs extends io.pulumi.resources.Resou
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }
-
         public SpotFleetEbsBlockDeviceArgs build() {
             return new SpotFleetEbsBlockDeviceArgs(deleteOnTermination, encrypted, iops, snapshotId, volumeSize, volumeType);
         }

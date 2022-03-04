@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSkusNestedResourceTypeThirdArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nestedResourceTypeFirst", required=true)
-    private final String nestedResourceTypeFirst;
+      private final String nestedResourceTypeFirst;
 
     public String getNestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
@@ -28,7 +28,7 @@ public final class GetSkusNestedResourceTypeThirdArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nestedResourceTypeSecond", required=true)
-    private final String nestedResourceTypeSecond;
+      private final String nestedResourceTypeSecond;
 
     public String getNestedResourceTypeSecond() {
         return this.nestedResourceTypeSecond;
@@ -39,7 +39,7 @@ public final class GetSkusNestedResourceTypeThirdArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nestedResourceTypeThird", required=true)
-    private final String nestedResourceTypeThird;
+      private final String nestedResourceTypeThird;
 
     public String getNestedResourceTypeThird() {
         return this.nestedResourceTypeThird;
@@ -50,7 +50,7 @@ public final class GetSkusNestedResourceTypeThirdArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final String providerNamespace;
+      private final String providerNamespace;
 
     public String getProviderNamespace() {
         return this.providerNamespace;
@@ -61,7 +61,7 @@ public final class GetSkusNestedResourceTypeThirdArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -72,7 +72,7 @@ public final class GetSkusNestedResourceTypeThirdArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sku", required=true)
-    private final String sku;
+      private final String sku;
 
     public String getSku() {
         return this.sku;
@@ -161,7 +161,6 @@ public final class GetSkusNestedResourceTypeThirdArgs extends io.pulumi.resource
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public GetSkusNestedResourceTypeThirdArgs build() {
             return new GetSkusNestedResourceTypeThirdArgs(nestedResourceTypeFirst, nestedResourceTypeSecond, nestedResourceTypeThird, providerNamespace, resourceType, sku);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ReservationAffinityResponse {
     /**
      * Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved instances for examples.
      * 
-     */
+    */
     public String getConsumeReservationType() {
         return this.consumeReservationType;
     }
     /**
      * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify googleapis.com/reservation-name as the key and specify the name of your reservation as its value.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Corresponds to the label values of a reservation resource. This can be either a name to a reservation in the same project or "projects/different-project/reservations/some-reservation-name" to target a shared reservation in the same zone but in a different project.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -96,7 +96,6 @@ public final class ReservationAffinityResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ReservationAffinityResponse build() {
             return new ReservationAffinityResponse(consumeReservationType, key, values);
         }

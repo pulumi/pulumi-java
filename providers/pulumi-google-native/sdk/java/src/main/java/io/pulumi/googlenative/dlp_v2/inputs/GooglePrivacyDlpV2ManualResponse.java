@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2ManualResponse extends io.pulumi.resources.
         public Builder(GooglePrivacyDlpV2ManualResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2ManualResponse build() {
             return new GooglePrivacyDlpV2ManualResponse();
         }

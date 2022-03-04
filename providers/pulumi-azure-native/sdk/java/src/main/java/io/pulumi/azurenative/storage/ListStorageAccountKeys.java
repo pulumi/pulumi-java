@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.inputs.ListStorageAccountKeysArgs;
 import io.pulumi.azurenative.storage.outputs.ListStorageAccountKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStorageAccountKeys {
-/**
- * The response from the ListKeys operation.
+    private ListStorageAccountKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListStorageAccountKeysArgs.Builder a);
+    }
+    private static ListStorageAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListStorageAccountKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response from the ListKeys operation.
  * API Version: 2021-02-01.
  * 
- *
- * The response from the ListKeys operation.
+     *
+     * The response from the ListKeys operation.
  * 
- */
+     */
+    public static CompletableFuture<ListStorageAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response from the ListKeys operation.
+     * API Version: 2021-02-01.
+     * 
+     *
+         * The response from the ListKeys operation.
+     * 
+     */
     public static CompletableFuture<ListStorageAccountKeysResult> invokeAsync(ListStorageAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args == null ? ListStorageAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

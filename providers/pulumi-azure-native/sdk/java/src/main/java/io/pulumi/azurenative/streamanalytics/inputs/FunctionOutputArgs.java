@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType")
-    private final @Nullable Input<String> dataType;
+      private final @Nullable Input<String> dataType;
 
     public Input<String> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
@@ -66,7 +66,6 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
             this.dataType = Input.ofNullable(dataType);
             return this;
         }
-
         public FunctionOutputArgs build() {
             return new FunctionOutputArgs(dataType);
         }

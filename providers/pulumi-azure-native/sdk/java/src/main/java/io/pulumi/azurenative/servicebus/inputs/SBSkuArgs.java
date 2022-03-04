@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicebus.inputs;
 import io.pulumi.azurenative.servicebus.enums.SkuName;
 import io.pulumi.azurenative.servicebus.enums.SkuTier;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+      private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -36,7 +36,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<SkuName> name;
+      private final Input<SkuName> name;
 
     public Input<SkuName> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<SkuTier> tier;
+      private final @Nullable Input<SkuTier> tier;
 
     public Input<SkuTier> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -121,7 +121,6 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public SBSkuArgs build() {
             return new SBSkuArgs(capacity, name, tier);
         }

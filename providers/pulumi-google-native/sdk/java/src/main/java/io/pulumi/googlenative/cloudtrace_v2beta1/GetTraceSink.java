@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtrace_v2beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTraceSink {
-/**
- * Get a trace sink by name under the parent resource (GCP project).
+    private GetTraceSink() {}
+    public interface BuilderApplicator {
+        public void apply(GetTraceSinkArgs.Builder a);
+    }
+    private static GetTraceSinkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTraceSinkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a trace sink by name under the parent resource (GCP project).
  * 
- */
+     */
+    public static CompletableFuture<GetTraceSinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a trace sink by name under the parent resource (GCP project).
+     * 
+     */
     public static CompletableFuture<GetTraceSinkResult> invokeAsync(GetTraceSinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtrace/v2beta1:getTraceSink", TypeShape.of(GetTraceSinkResult.class), args == null ? GetTraceSinkArgs.Empty : args, Utilities.withVersion(options));
     }

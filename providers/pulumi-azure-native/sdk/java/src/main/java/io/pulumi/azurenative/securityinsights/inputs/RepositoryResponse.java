@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.ContentPathMapResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable String branch;
+      private final @Nullable String branch;
 
     public Optional<String> getBranch() {
         return this.branch == null ? Optional.empty() : Optional.ofNullable(this.branch);
@@ -36,7 +36,7 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deploymentLogsUrl")
-    private final @Nullable String deploymentLogsUrl;
+      private final @Nullable String deploymentLogsUrl;
 
     public Optional<String> getDeploymentLogsUrl() {
         return this.deploymentLogsUrl == null ? Optional.empty() : Optional.ofNullable(this.deploymentLogsUrl);
@@ -47,7 +47,7 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayUrl")
-    private final @Nullable String displayUrl;
+      private final @Nullable String displayUrl;
 
     public Optional<String> getDisplayUrl() {
         return this.displayUrl == null ? Optional.empty() : Optional.ofNullable(this.displayUrl);
@@ -58,7 +58,7 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pathMapping")
-    private final @Nullable List<ContentPathMapResponse> pathMapping;
+      private final @Nullable List<ContentPathMapResponse> pathMapping;
 
     public List<ContentPathMapResponse> getPathMapping() {
         return this.pathMapping == null ? List.of() : this.pathMapping;
@@ -69,7 +69,7 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+      private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -148,7 +148,6 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
             this.url = url;
             return this;
         }
-
         public RepositoryResponse build() {
             return new RepositoryResponse(branch, deploymentLogsUrl, displayUrl, pathMapping, url);
         }

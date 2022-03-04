@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -93,70 +93,70 @@ public final class GetNetworkProfileResult {
     /**
      * List of chid container network interface configurations.
      * 
-     */
+    */
     public List<ContainerNetworkInterfaceConfigurationResponse> getContainerNetworkInterfaceConfigurations() {
         return this.containerNetworkInterfaceConfigurations == null ? List.of() : this.containerNetworkInterfaceConfigurations;
     }
     /**
      * List of child container network interfaces.
      * 
-     */
+    */
     public List<ContainerNetworkInterfaceResponse> getContainerNetworkInterfaces() {
         return this.containerNetworkInterfaces;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the network profile resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the network profile resource.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -248,7 +248,6 @@ public final class GetNetworkProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkProfileResult build() {
             return new GetNetworkProfileResult(containerNetworkInterfaceConfigurations, containerNetworkInterfaces, etag, id, location, name, provisioningState, resourceGuid, tags, type);
         }

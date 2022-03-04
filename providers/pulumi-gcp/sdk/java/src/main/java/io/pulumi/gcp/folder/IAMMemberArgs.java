@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.folder.inputs.IAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     public static final IAMMemberArgs Empty = new IAMMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<IAMMemberConditionArgs> condition;
+      private final @Nullable Input<IAMMemberConditionArgs> condition;
 
     public Input<IAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="folder", required=true)
-    private final Input<String> folder;
+      private final Input<String> folder;
 
     public Input<String> getFolder() {
         return this.folder;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
     }
 
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -126,7 +126,6 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public IAMMemberArgs build() {
             return new IAMMemberArgs(condition, folder, member, role);
         }

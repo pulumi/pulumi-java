@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class SpotFleetIamInstanceProfileSpecification {
             this.arn = arn;
             return this;
         }
-
         public SpotFleetIamInstanceProfileSpecification build() {
             return new SpotFleetIamInstanceProfileSpecification(arn);
         }

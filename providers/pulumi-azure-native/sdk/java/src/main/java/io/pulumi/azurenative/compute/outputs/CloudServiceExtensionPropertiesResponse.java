@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CloudServiceVaultAndSecretReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -92,7 +92,7 @@ public final class CloudServiceExtensionPropertiesResponse {
     /**
      * Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
      * 
-     */
+    */
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
@@ -103,14 +103,14 @@ public final class CloudServiceExtensionPropertiesResponse {
      * If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
      * it is up to handler implementation whether to re-run it or not
      * 
-     */
+    */
     public Optional<String> getForceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
      * Protected settings for the extension which are encrypted before sent to the role instance.
      * 
-     */
+    */
     public Optional<String> getProtectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
@@ -120,42 +120,42 @@ public final class CloudServiceExtensionPropertiesResponse {
     /**
      * The provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The name of the extension handler publisher.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.
      * 
-     */
+    */
     public List<String> getRolesAppliedTo() {
         return this.rolesAppliedTo == null ? List.of() : this.rolesAppliedTo;
     }
     /**
      * Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
      * 
-     */
+    */
     public Optional<String> getSettings() {
         return Optional.ofNullable(this.settings);
     }
     /**
      * Specifies the type of the extension.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.
      * 
-     */
+    */
     public Optional<String> getTypeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
@@ -247,7 +247,6 @@ public final class CloudServiceExtensionPropertiesResponse {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public CloudServiceExtensionPropertiesResponse build() {
             return new CloudServiceExtensionPropertiesResponse(autoUpgradeMinorVersion, forceUpdateTag, protectedSettings, protectedSettingsFromKeyVault, provisioningState, publisher, rolesAppliedTo, settings, type, typeHandlerVersion);
         }

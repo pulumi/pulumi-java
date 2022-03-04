@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpc")
-    private final @Nullable Input<String> vpc;
+      private final @Nullable Input<String> vpc;
 
     public Input<String> getVpc() {
         return this.vpc == null ? Input.empty() : this.vpc;
@@ -66,7 +66,6 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
             this.vpc = Input.ofNullable(vpc);
             return this;
         }
-
         public VpcPeeringConnectivityArgs build() {
             return new VpcPeeringConnectivityArgs(vpc);
         }

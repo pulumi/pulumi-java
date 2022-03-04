@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activatedPolicyTypes")
-    private final @Nullable Input<List<String>> activatedPolicyTypes;
+      private final @Nullable Input<List<String>> activatedPolicyTypes;
 
     public Input<List<String>> getActivatedPolicyTypes() {
         return this.activatedPolicyTypes == null ? Input.empty() : this.activatedPolicyTypes;
@@ -35,7 +35,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -61,7 +61,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -72,7 +72,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -176,7 +176,6 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public TaxonomyArgs build() {
             return new TaxonomyArgs(activatedPolicyTypes, description, displayName, project, region);
         }

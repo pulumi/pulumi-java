@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class PredictionResponseMappings {
     /**
      * The grade of the link mapping.
      * 
-     */
+    */
     public String getGrade() {
         return this.grade;
     }
     /**
      * The reason of the link mapping.
      * 
-     */
+    */
     public String getReason() {
         return this.reason;
     }
     /**
      * The score of the link mapping.
      * 
-     */
+    */
     public String getScore() {
         return this.score;
     }
@@ -95,7 +95,6 @@ public final class PredictionResponseMappings {
             this.score = Objects.requireNonNull(score);
             return this;
         }
-
         public PredictionResponseMappings build() {
             return new PredictionResponseMappings(grade, reason, score);
         }

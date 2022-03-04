@@ -5,7 +5,7 @@ package io.pulumi.azurenative.aad.outputs;
 
 import io.pulumi.azurenative.aad.outputs.HealthAlertResponse;
 import io.pulumi.azurenative.aad.outputs.HealthMonitorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -92,70 +92,70 @@ public final class ReplicaSetResponse {
     /**
      * List of Domain Controller IP Address
      * 
-     */
+    */
     public List<String> getDomainControllerIpAddress() {
         return this.domainControllerIpAddress;
     }
     /**
      * External access ip address.
      * 
-     */
+    */
     public String getExternalAccessIpAddress() {
         return this.externalAccessIpAddress;
     }
     /**
      * List of Domain Health Alerts
      * 
-     */
+    */
     public List<HealthAlertResponse> getHealthAlerts() {
         return this.healthAlerts;
     }
     /**
      * Last domain evaluation run DateTime
      * 
-     */
+    */
     public String getHealthLastEvaluated() {
         return this.healthLastEvaluated;
     }
     /**
      * List of Domain Health Monitors
      * 
-     */
+    */
     public List<HealthMonitorResponse> getHealthMonitors() {
         return this.healthMonitors;
     }
     /**
      * Virtual network location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * ReplicaSet Id
      * 
-     */
+    */
     public String getReplicaSetId() {
         return this.replicaSetId;
     }
     /**
      * Status of Domain Service instance
      * 
-     */
+    */
     public String getServiceStatus() {
         return this.serviceStatus;
     }
     /**
      * The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * Virtual network site id
      * 
-     */
+    */
     public String getVnetSiteId() {
         return this.vnetSiteId;
     }
@@ -247,7 +247,6 @@ public final class ReplicaSetResponse {
             this.vnetSiteId = Objects.requireNonNull(vnetSiteId);
             return this;
         }
-
         public ReplicaSetResponse build() {
             return new ReplicaSetResponse(domainControllerIpAddress, externalAccessIpAddress, healthAlerts, healthLastEvaluated, healthMonitors, location, replicaSetId, serviceStatus, subnetId, vnetSiteId);
         }

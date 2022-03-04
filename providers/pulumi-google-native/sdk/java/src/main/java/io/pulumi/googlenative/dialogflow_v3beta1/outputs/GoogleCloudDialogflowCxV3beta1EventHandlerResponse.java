@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FulfillmentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
     /**
      * The name of the event to handle.
      * 
-     */
+    */
     public String getEvent() {
         return this.event;
     }
     /**
      * The unique identifier of this event handler.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The target flow to transition to. Format: `projects//locations//agents//flows/`.
      * 
-     */
+    */
     public String getTargetFlow() {
         return this.targetFlow;
     }
     /**
      * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
      * 
-     */
+    */
     public String getTargetPage() {
         return this.targetPage;
     }
     /**
      * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3beta1FulfillmentResponse getTriggerFulfillment() {
         return this.triggerFulfillment;
     }
@@ -138,7 +138,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
             this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1EventHandlerResponse build() {
             return new GoogleCloudDialogflowCxV3beta1EventHandlerResponse(event, name, targetFlow, targetPage, triggerFulfillment);
         }

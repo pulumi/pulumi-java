@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.outputs.ServiceCodeConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceSourceCodeVersion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,7 +37,7 @@ public final class ServiceCodeRepository {
     /**
      * Repository Url
      * 
-     */
+    */
     public String getRepositoryUrl() {
         return this.repositoryUrl;
     }
@@ -83,7 +83,6 @@ public final class ServiceCodeRepository {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }
-
         public ServiceCodeRepository build() {
             return new ServiceCodeRepository(codeConfiguration, repositoryUrl, sourceCodeVersion);
         }

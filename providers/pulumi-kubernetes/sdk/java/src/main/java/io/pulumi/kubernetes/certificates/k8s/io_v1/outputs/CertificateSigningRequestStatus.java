@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.outputs.CertificateSigningRequestCondition;
 import java.lang.String;
 import java.util.List;
@@ -77,14 +77,14 @@ public final class CertificateSigningRequestStatus {
      *     -----END CERTIFICATE-----
      *     )
      * 
-     */
+    */
     public Optional<String> getCertificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
      * conditions applied to the request. Known conditions are "Approved", "Denied", and "Failed".
      * 
-     */
+    */
     public List<CertificateSigningRequestCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
@@ -120,7 +120,6 @@ public final class CertificateSigningRequestStatus {
             this.conditions = conditions;
             return this;
         }
-
         public CertificateSigningRequestStatus build() {
             return new CertificateSigningRequestStatus(certificate, conditions);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.DurationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -46,7 +46,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<DurationArgs> ttl;
+      private final @Nullable Input<DurationArgs> ttl;
 
     public Input<DurationArgs> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -120,7 +120,6 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public ConsistentHashLoadBalancerSettingsHttpCookieArgs build() {
             return new ConsistentHashLoadBalancerSettingsHttpCookieArgs(name, path, ttl);
         }

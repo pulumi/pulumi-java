@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.ApiConnectionTestLinkResponse;
 import io.pulumi.azurenative.web.outputs.ApiReferenceResponse;
 import io.pulumi.azurenative.web.outputs.ConnectionStatusDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -86,56 +86,56 @@ public final class ApiConnectionDefinitionResponseProperties {
     /**
      * Timestamp of last connection change
      * 
-     */
+    */
     public Optional<String> getChangedTime() {
         return Optional.ofNullable(this.changedTime);
     }
     /**
      * Timestamp of the connection creation
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * Dictionary of custom parameter values
      * 
-     */
+    */
     public Map<String,String> getCustomParameterValues() {
         return this.customParameterValues == null ? Map.of() : this.customParameterValues;
     }
     /**
      * Display name
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Dictionary of nonsecret parameter values
      * 
-     */
+    */
     public Map<String,String> getNonSecretParameterValues() {
         return this.nonSecretParameterValues == null ? Map.of() : this.nonSecretParameterValues;
     }
     /**
      * Dictionary of parameter values
      * 
-     */
+    */
     public Map<String,String> getParameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }
     /**
      * Status of the connection
      * 
-     */
+    */
     public List<ConnectionStatusDefinitionResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * Links to test the API connection
      * 
-     */
+    */
     public List<ApiConnectionTestLinkResponse> getTestLinks() {
         return this.testLinks == null ? List.of() : this.testLinks;
     }
@@ -220,7 +220,6 @@ public final class ApiConnectionDefinitionResponseProperties {
             this.testLinks = testLinks;
             return this;
         }
-
         public ApiConnectionDefinitionResponseProperties build() {
             return new ApiConnectionDefinitionResponseProperties(api, changedTime, createdTime, customParameterValues, displayName, nonSecretParameterValues, parameterValues, statuses, testLinks);
         }

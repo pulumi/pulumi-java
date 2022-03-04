@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -80,63 +80,63 @@ public final class GetHmacKeyResult {
     /**
      * The ID of the HMAC Key.
      * 
-     */
+    */
     public String getAccessId() {
         return this.accessId;
     }
     /**
      * HTTP 1.1 Entity tag for the HMAC key.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The kind of item this is. For HMAC Key metadata, this is always storage#hmacKeyMetadata.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Project ID owning the service account to which the key authenticates.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * The link to this resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * The email address of the key's associated service account.
      * 
-     */
+    */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
      * The state of the key. Can be one of ACTIVE, INACTIVE, or DELETED.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The creation time of the HMAC key in RFC 3339 format.
      * 
-     */
+    */
     public String getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * The last modification time of the HMAC key metadata in RFC 3339 format.
      * 
-     */
+    */
     public String getUpdated() {
         return this.updated;
     }
@@ -221,7 +221,6 @@ public final class GetHmacKeyResult {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public GetHmacKeyResult build() {
             return new GetHmacKeyResult(accessId, etag, kind, project, selfLink, serviceAccountEmail, state, timeCreated, updated);
         }

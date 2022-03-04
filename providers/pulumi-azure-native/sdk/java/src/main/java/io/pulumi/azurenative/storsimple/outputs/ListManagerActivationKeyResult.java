@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ListManagerActivationKeyResult {
     /**
      * The activation key for the device.
      * 
-     */
+    */
     public String getActivationKey() {
         return this.activationKey;
     }
@@ -52,7 +52,6 @@ public final class ListManagerActivationKeyResult {
             this.activationKey = Objects.requireNonNull(activationKey);
             return this;
         }
-
         public ListManagerActivationKeyResult build() {
             return new ListManagerActivationKeyResult(activationKey);
         }

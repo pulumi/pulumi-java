@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class HeaderActionResponse {
     /**
      * Which type of manipulation to apply to the header.
      * 
-     */
+    */
     public String getHeaderActionType() {
         return this.headerActionType;
     }
     /**
      * The name of the header this action will apply to.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
     /**
      * The value to update the given header name with. This value is not used if the actionType is Delete.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -97,7 +97,6 @@ public final class HeaderActionResponse {
             this.value = value;
             return this;
         }
-
         public HeaderActionResponse build() {
             return new HeaderActionResponse(headerActionType, headerName, value);
         }

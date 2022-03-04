@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ImageRegistryCredentialResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+      private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -34,7 +34,7 @@ public final class ImageRegistryCredentialResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="server", required=true)
-    private final String server;
+      private final String server;
 
     public String getServer() {
         return this.server;
@@ -45,7 +45,7 @@ public final class ImageRegistryCredentialResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -104,7 +104,6 @@ public final class ImageRegistryCredentialResponse extends io.pulumi.resources.I
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ImageRegistryCredentialResponse build() {
             return new ImageRegistryCredentialResponse(password, server, username);
         }

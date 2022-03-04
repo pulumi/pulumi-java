@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -35,7 +35,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricSelector")
-    private final @Nullable Input<LabelSelectorArgs> metricSelector;
+      private final @Nullable Input<LabelSelectorArgs> metricSelector;
 
     public Input<LabelSelectorArgs> getMetricSelector() {
         return this.metricSelector == null ? Input.empty() : this.metricSelector;
@@ -46,7 +46,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="targetAverageValue")
-    private final @Nullable Input<String> targetAverageValue;
+      private final @Nullable Input<String> targetAverageValue;
 
     public Input<String> getTargetAverageValue() {
         return this.targetAverageValue == null ? Input.empty() : this.targetAverageValue;
@@ -57,7 +57,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="targetValue")
-    private final @Nullable Input<String> targetValue;
+      private final @Nullable Input<String> targetValue;
 
     public Input<String> getTargetValue() {
         return this.targetValue == null ? Input.empty() : this.targetValue;
@@ -146,7 +146,6 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
             this.targetValue = Input.ofNullable(targetValue);
             return this;
         }
-
         public ExternalMetricSourceArgs build() {
             return new ExternalMetricSourceArgs(metricName, metricSelector, targetAverageValue, targetValue);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entity")
-    private final @Nullable Input<String> entity;
+      private final @Nullable Input<String> entity;
 
     public Input<String> getEntity() {
         return this.entity == null ? Input.empty() : this.entity;
@@ -34,7 +34,7 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityId")
-    private final @Nullable Input<String> entityId;
+      private final @Nullable Input<String> entityId;
 
     public Input<String> getEntityId() {
         return this.entityId == null ? Input.empty() : this.entityId;
@@ -93,7 +93,6 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
             this.entityId = Input.ofNullable(entityId);
             return this;
         }
-
         public BucketOwnerArgs build() {
             return new BucketOwnerArgs(entity, entityId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class FeatureSpecMulticlusteringressGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="configMembership", required=true)
-    private final Input<String> configMembership;
+      private final Input<String> configMembership;
 
     public Input<String> getConfigMembership() {
         return this.configMembership;
@@ -61,7 +61,6 @@ public final class FeatureSpecMulticlusteringressGetArgs extends io.pulumi.resou
             this.configMembership = Input.of(Objects.requireNonNull(configMembership));
             return this;
         }
-
         public FeatureSpecMulticlusteringressGetArgs build() {
             return new FeatureSpecMulticlusteringressGetArgs(configMembership);
         }

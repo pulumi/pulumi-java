@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecEgressPolicyEgressTo;
 import java.util.Objects;
@@ -38,7 +38,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicy {
      * Defines conditions on the source of a request causing this `EgressPolicy` to apply.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom> getEgressFrom() {
         return Optional.ofNullable(this.egressFrom);
     }
@@ -47,7 +47,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicy {
      * cause this `EgressPolicy` to apply.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimetersServicePerimeterSpecEgressPolicyEgressTo> getEgressTo() {
         return Optional.ofNullable(this.egressTo);
     }
@@ -83,7 +83,6 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicy {
             this.egressTo = egressTo;
             return this;
         }
-
         public ServicePerimetersServicePerimeterSpecEgressPolicy build() {
             return new ServicePerimetersServicePerimeterSpecEgressPolicy(egressFrom, egressTo);
         }

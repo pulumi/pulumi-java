@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ParameterValidationArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fields", required=true)
-    private final Input<List<String>> fields;
+      private final Input<List<String>> fields;
 
     public Input<List<String>> getFields() {
         return this.fields;
@@ -47,7 +47,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="validation")
-    private final @Nullable Input<ParameterValidationArgs> validation;
+      private final @Nullable Input<ParameterValidationArgs> validation;
 
     public Input<ParameterValidationArgs> getValidation() {
         return this.validation == null ? Input.empty() : this.validation;
@@ -147,7 +147,6 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
             this.validation = Input.ofNullable(validation);
             return this;
         }
-
         public TemplateParameterArgs build() {
             return new TemplateParameterArgs(description, fields, name, validation);
         }

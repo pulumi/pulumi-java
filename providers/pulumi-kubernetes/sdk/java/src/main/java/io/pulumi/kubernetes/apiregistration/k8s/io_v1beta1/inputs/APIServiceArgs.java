@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs.APIServiceSpecArgs;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs.APIServiceStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -26,7 +26,7 @@ public final class APIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -37,14 +37,14 @@ public final class APIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -55,7 +55,7 @@ public final class APIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<APIServiceSpecArgs> spec;
+      private final @Nullable Input<APIServiceSpecArgs> spec;
 
     public Input<APIServiceSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -66,7 +66,7 @@ public final class APIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<APIServiceStatusArgs> status;
+      private final @Nullable Input<APIServiceStatusArgs> status;
 
     public Input<APIServiceStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -170,7 +170,6 @@ public final class APIServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public APIServiceArgs build() {
             return new APIServiceArgs(apiVersion, kind, metadata, spec, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class ConditionResponse {
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getIam() {
         return this.iam;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getOp() {
         return this.op;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getSvc() {
         return this.svc;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getSys() {
         return this.sys;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -138,7 +138,6 @@ public final class ConditionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(iam, op, svc, sys, values);
         }

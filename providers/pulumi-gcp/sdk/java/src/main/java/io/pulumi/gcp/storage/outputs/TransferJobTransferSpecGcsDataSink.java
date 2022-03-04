@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class TransferJobTransferSpecGcsDataSink {
     /**
      * S3 Bucket name.
      * 
-     */
+    */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -76,7 +76,6 @@ public final class TransferJobTransferSpecGcsDataSink {
             this.path = path;
             return this;
         }
-
         public TransferJobTransferSpecGcsDataSink build() {
             return new TransferJobTransferSpecGcsDataSink(bucketName, path);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceExtensionPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<CloudServiceExtensionPropertiesArgs> properties;
+      private final @Nullable Input<CloudServiceExtensionPropertiesArgs> properties;
 
     public Input<CloudServiceExtensionPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -94,7 +94,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public ExtensionArgs build() {
             return new ExtensionArgs(name, properties);
         }

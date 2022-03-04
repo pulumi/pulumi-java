@@ -5,8 +5,8 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.ApplicationUrlDispatchRulesArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesState;
@@ -68,6 +68,37 @@ public class ApplicationUrlDispatchRules extends io.pulumi.resources.CustomResou
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ApplicationUrlDispatchRulesArgs.Builder a);
+    }
+    private static io.pulumi.gcp.appengine.ApplicationUrlDispatchRulesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.appengine.ApplicationUrlDispatchRulesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ApplicationUrlDispatchRules(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ApplicationUrlDispatchRules(String name) {
+        this(name, ApplicationUrlDispatchRulesArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApplicationUrlDispatchRules(String name, ApplicationUrlDispatchRulesArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

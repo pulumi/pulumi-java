@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
     /**
      * Optional. The text to display.
      * 
-     */
+    */
     public String getDisplayText() {
         return this.displayText;
     }
     /**
      * One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
      * 
-     */
+    */
     public String getSsml() {
         return this.ssml;
     }
     /**
      * One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
      * 
-     */
+    */
     public String getTextToSpeech() {
         return this.textToSpeech;
     }
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
             this.textToSpeech = Objects.requireNonNull(textToSpeech);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse(displayText, ssml, textToSpeech);
         }

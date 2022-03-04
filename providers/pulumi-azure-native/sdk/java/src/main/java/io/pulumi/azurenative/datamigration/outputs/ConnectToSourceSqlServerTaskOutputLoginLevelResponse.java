@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigrationEligibilityInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -69,42 +69,42 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
     /**
      * The default database for the login.
      * 
-     */
+    */
     public String getDefaultDatabase() {
         return this.defaultDatabase;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The state of the login.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The type of login.
      * 
-     */
+    */
     public String getLoginType() {
         return this.loginType;
     }
     /**
      * Information about eligibility of login for migration.
      * 
-     */
+    */
     public MigrationEligibilityInfoResponse getMigrationEligibility() {
         return this.migrationEligibility;
     }
     /**
      * Login name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -112,7 +112,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
      * Type of result - database level or task level
      * Expected value is 'LoginLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
@@ -183,7 +183,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputLoginLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputLoginLevelResponse(defaultDatabase, id, isEnabled, loginType, migrationEligibility, name, resultType);
         }

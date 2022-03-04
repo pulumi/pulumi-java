@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.DimensionTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetDimensionResult {
     /**
      * The ARN (Amazon resource name) of the created dimension.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Specifies the value or list of values for the dimension.
      * 
-     */
+    */
     public List<String> getStringValues() {
         return this.stringValues == null ? List.of() : this.stringValues;
     }
     /**
      * Metadata that can be used to manage the dimension.
      * 
-     */
+    */
     public List<DimensionTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -99,7 +99,6 @@ public final class GetDimensionResult {
             this.tags = tags;
             return this;
         }
-
         public GetDimensionResult build() {
             return new GetDimensionResult(arn, stringValues, tags);
         }

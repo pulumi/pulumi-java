@@ -4,7 +4,7 @@
 package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InstanceMemcacheParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -32,7 +32,7 @@ public final class InstanceMemcacheParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="params")
-    private final @Nullable Input<Map<String,String>> params;
+      private final @Nullable Input<Map<String,String>> params;
 
     public Input<Map<String,String>> getParams() {
         return this.params == null ? Input.empty() : this.params;
@@ -91,7 +91,6 @@ public final class InstanceMemcacheParametersArgs extends io.pulumi.resources.Re
             this.params = Input.ofNullable(params);
             return this;
         }
-
         public InstanceMemcacheParametersArgs build() {
             return new InstanceMemcacheParametersArgs(id, params);
         }

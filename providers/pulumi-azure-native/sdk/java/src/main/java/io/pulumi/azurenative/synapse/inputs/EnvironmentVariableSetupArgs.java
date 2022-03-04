@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -34,7 +34,7 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="variableName", required=true)
-    private final Input<String> variableName;
+      private final Input<String> variableName;
 
     public Input<String> getVariableName() {
         return this.variableName;
@@ -45,7 +45,7 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="variableValue", required=true)
-    private final Input<String> variableValue;
+      private final Input<String> variableValue;
 
     public Input<String> getVariableValue() {
         return this.variableValue;
@@ -119,7 +119,6 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
             this.variableValue = Input.of(Objects.requireNonNull(variableValue));
             return this;
         }
-
         public EnvironmentVariableSetupArgs build() {
             return new EnvironmentVariableSetupArgs(type, variableName, variableValue);
         }

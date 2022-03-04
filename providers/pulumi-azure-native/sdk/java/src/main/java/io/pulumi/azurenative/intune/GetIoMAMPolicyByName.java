@@ -6,21 +6,41 @@ package io.pulumi.azurenative.intune;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.intune.inputs.GetIoMAMPolicyByNameArgs;
 import io.pulumi.azurenative.intune.outputs.GetIoMAMPolicyByNameResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIoMAMPolicyByName {
-/**
- * iOS Policy entity for Intune MAM.
+    private GetIoMAMPolicyByName() {}
+    public interface BuilderApplicator {
+        public void apply(GetIoMAMPolicyByNameArgs.Builder a);
+    }
+    private static GetIoMAMPolicyByNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIoMAMPolicyByNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * iOS Policy entity for Intune MAM.
  * API Version: 2015-01-14-preview.
  * 
- *
- * iOS Policy entity for Intune MAM.
+     *
+     * iOS Policy entity for Intune MAM.
  * 
- */
+     */
+    public static CompletableFuture<GetIoMAMPolicyByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * iOS Policy entity for Intune MAM.
+     * API Version: 2015-01-14-preview.
+     * 
+     *
+         * iOS Policy entity for Intune MAM.
+     * 
+     */
     public static CompletableFuture<GetIoMAMPolicyByNameResult> invokeAsync(GetIoMAMPolicyByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:intune:getIoMAMPolicyByName", TypeShape.of(GetIoMAMPolicyByNameResult.class), args == null ? GetIoMAMPolicyByNameArgs.Empty : args, Utilities.withVersion(options));
     }

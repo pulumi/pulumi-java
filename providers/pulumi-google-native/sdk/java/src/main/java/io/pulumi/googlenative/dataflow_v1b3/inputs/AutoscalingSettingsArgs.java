@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.AutoscalingSettingsAlgorithm;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutoscalingSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="algorithm")
-    private final @Nullable Input<AutoscalingSettingsAlgorithm> algorithm;
+      private final @Nullable Input<AutoscalingSettingsAlgorithm> algorithm;
 
     public Input<AutoscalingSettingsAlgorithm> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
@@ -35,7 +35,7 @@ public final class AutoscalingSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxNumWorkers")
-    private final @Nullable Input<Integer> maxNumWorkers;
+      private final @Nullable Input<Integer> maxNumWorkers;
 
     public Input<Integer> getMaxNumWorkers() {
         return this.maxNumWorkers == null ? Input.empty() : this.maxNumWorkers;
@@ -94,7 +94,6 @@ public final class AutoscalingSettingsArgs extends io.pulumi.resources.ResourceA
             this.maxNumWorkers = Input.ofNullable(maxNumWorkers);
             return this;
         }
-
         public AutoscalingSettingsArgs build() {
             return new AutoscalingSettingsArgs(algorithm, maxNumWorkers);
         }

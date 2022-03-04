@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.enums.DefaultPrincipalsModificationKind;
 import io.pulumi.azurenative.synapse.inputs.TableLevelSharingPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="attachedDatabaseConfigurationName")
-    private final @Nullable Input<String> attachedDatabaseConfigurationName;
+      private final @Nullable Input<String> attachedDatabaseConfigurationName;
 
     public Input<String> getAttachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName == null ? Input.empty() : this.attachedDatabaseConfigurationName;
@@ -33,7 +33,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -44,7 +44,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="defaultPrincipalsModificationKind", required=true)
-    private final Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
+      private final Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
     public Input<Either<String,DefaultPrincipalsModificationKind>> getDefaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
@@ -55,7 +55,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="kustoPoolName", required=true)
-    private final Input<String> kustoPoolName;
+      private final Input<String> kustoPoolName;
 
     public Input<String> getKustoPoolName() {
         return this.kustoPoolName;
@@ -66,7 +66,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="kustoPoolResourceId", required=true)
-    private final Input<String> kustoPoolResourceId;
+      private final Input<String> kustoPoolResourceId;
 
     public Input<String> getKustoPoolResourceId() {
         return this.kustoPoolResourceId;
@@ -77,7 +77,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -88,7 +88,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="tableLevelSharingProperties")
-    private final @Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
+      private final @Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
     public Input<TableLevelSharingPropertiesArgs> getTableLevelSharingProperties() {
         return this.tableLevelSharingProperties == null ? Input.empty() : this.tableLevelSharingProperties;
@@ -110,7 +110,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -274,7 +274,6 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public KustoPoolAttachedDatabaseConfigurationArgs build() {
             return new KustoPoolAttachedDatabaseConfigurationArgs(attachedDatabaseConfigurationName, databaseName, defaultPrincipalsModificationKind, kustoPoolName, kustoPoolResourceId, location, resourceGroupName, tableLevelSharingProperties, workspaceName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="memorySizeMB")
-    private final @Nullable Input<Integer> memorySizeMB;
+      private final @Nullable Input<Integer> memorySizeMB;
 
     public Input<Integer> getMemorySizeMB() {
         return this.memorySizeMB == null ? Input.empty() : this.memorySizeMB;
@@ -34,7 +34,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numCPUs")
-    private final @Nullable Input<Integer> numCPUs;
+      private final @Nullable Input<Integer> numCPUs;
 
     public Input<Integer> getNumCPUs() {
         return this.numCPUs == null ? Input.empty() : this.numCPUs;
@@ -45,7 +45,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numCoresPerSocket")
-    private final @Nullable Input<Integer> numCoresPerSocket;
+      private final @Nullable Input<Integer> numCoresPerSocket;
 
     public Input<Integer> getNumCoresPerSocket() {
         return this.numCoresPerSocket == null ? Input.empty() : this.numCoresPerSocket;
@@ -119,7 +119,6 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.numCoresPerSocket = Input.ofNullable(numCoresPerSocket);
             return this;
         }
-
         public HardwareProfileArgs build() {
             return new HardwareProfileArgs(memorySizeMB, numCPUs, numCoresPerSocket);
         }

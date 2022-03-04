@@ -6,21 +6,41 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.inputs.GetCassandraResourceCassandraViewArgs;
 import io.pulumi.azurenative.documentdb.outputs.GetCassandraResourceCassandraViewResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCassandraResourceCassandraView {
-/**
- * An Azure Cosmos DB Cassandra view.
+    private GetCassandraResourceCassandraView() {}
+    public interface BuilderApplicator {
+        public void apply(GetCassandraResourceCassandraViewArgs.Builder a);
+    }
+    private static GetCassandraResourceCassandraViewArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCassandraResourceCassandraViewArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Cosmos DB Cassandra view.
  * API Version: 2021-07-01-preview.
  * 
- *
- * An Azure Cosmos DB Cassandra view.
+     *
+     * An Azure Cosmos DB Cassandra view.
  * 
- */
+     */
+    public static CompletableFuture<GetCassandraResourceCassandraViewResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Cosmos DB Cassandra view.
+     * API Version: 2021-07-01-preview.
+     * 
+     *
+         * An Azure Cosmos DB Cassandra view.
+     * 
+     */
     public static CompletableFuture<GetCassandraResourceCassandraViewResult> invokeAsync(GetCassandraResourceCassandraViewArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraResourceCassandraView", TypeShape.of(GetCassandraResourceCassandraViewResult.class), args == null ? GetCassandraResourceCassandraViewArgs.Empty : args, Utilities.withVersion(options));
     }

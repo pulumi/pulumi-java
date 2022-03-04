@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TaxonomyIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -32,14 +32,14 @@ public final class TaxonomyIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -50,7 +50,7 @@ public final class TaxonomyIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="taxonomy", required=true)
-    private final Input<String> taxonomy;
+      private final Input<String> taxonomy;
 
     public Input<String> getTaxonomy() {
         return this.taxonomy;
@@ -139,7 +139,6 @@ public final class TaxonomyIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.taxonomy = Input.of(Objects.requireNonNull(taxonomy));
             return this;
         }
-
         public TaxonomyIamPolicyArgs build() {
             return new TaxonomyIamPolicyArgs(policyData, project, region, taxonomy);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,14 +34,14 @@ public final class GetTransferProjectServieAccountResult {
     /**
      * Email address of the default service account used by Storage Transfer Jobs running in this project
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -87,7 +87,6 @@ public final class GetTransferProjectServieAccountResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetTransferProjectServieAccountResult build() {
             return new GetTransferProjectServieAccountResult(email, id, project);
         }

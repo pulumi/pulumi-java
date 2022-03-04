@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FulfillmentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse {
     /**
      * The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
      * 
-     */
+    */
     public String getCondition() {
         return this.condition;
     }
     /**
      * The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
      * 
-     */
+    */
     public String getIntent() {
         return this.intent;
     }
     /**
      * The unique identifier of this transition route.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The target flow to transition to. Format: `projects//locations//agents//flows/`.
      * 
-     */
+    */
     public String getTargetFlow() {
         return this.targetFlow;
     }
     /**
      * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
      * 
-     */
+    */
     public String getTargetPage() {
         return this.targetPage;
     }
     /**
      * The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3beta1FulfillmentResponse getTriggerFulfillment() {
         return this.triggerFulfillment;
     }
@@ -159,7 +159,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse {
             this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1TransitionRouteResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TransitionRouteResponse(condition, intent, name, targetFlow, targetPage, triggerFulfillment);
         }

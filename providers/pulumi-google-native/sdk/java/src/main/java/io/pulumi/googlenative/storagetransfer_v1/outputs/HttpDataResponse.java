@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class HttpDataResponse {
     /**
      * The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
      * 
-     */
+    */
     public String getListUrl() {
         return this.listUrl;
     }
@@ -52,7 +52,6 @@ public final class HttpDataResponse {
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
         }
-
         public HttpDataResponse build() {
             return new HttpDataResponse(listUrl);
         }

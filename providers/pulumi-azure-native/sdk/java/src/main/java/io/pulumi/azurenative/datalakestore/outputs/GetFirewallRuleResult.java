@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class GetFirewallRuleResult {
     /**
      * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
-     */
+    */
     public String getEndIpAddress() {
         return this.endIpAddress;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
-     */
+    */
     public String getStartIpAddress() {
         return this.startIpAddress;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -137,7 +137,6 @@ public final class GetFirewallRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFirewallRuleResult build() {
             return new GetFirewallRuleResult(endIpAddress, id, name, startIpAddress, type);
         }

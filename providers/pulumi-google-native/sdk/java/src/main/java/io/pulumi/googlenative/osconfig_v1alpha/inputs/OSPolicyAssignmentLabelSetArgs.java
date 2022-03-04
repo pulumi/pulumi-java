@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OSPolicyAssignmentLabelSetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -67,7 +67,6 @@ public final class OSPolicyAssignmentLabelSetArgs extends io.pulumi.resources.Re
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public OSPolicyAssignmentLabelSetArgs build() {
             return new OSPolicyAssignmentLabelSetArgs(labels);
         }

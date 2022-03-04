@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GetRegionInstanceGroupInstanceNamedPort {
     /**
      * The name of the instance group.  One of `name` or `self_link` must be provided.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Integer port number
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -75,7 +75,6 @@ public final class GetRegionInstanceGroupInstanceNamedPort {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public GetRegionInstanceGroupInstanceNamedPort build() {
             return new GetRegionInstanceGroupInstanceNamedPort(name, port);
         }

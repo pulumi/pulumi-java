@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public final class ServicePerimeterSpecVpcAccessibleServices {
      * The list of APIs usable within the Service Perimeter.
      * Must be empty unless `enableRestriction` is True.
      * 
-     */
+    */
     public List<String> getAllowedServices() {
         return this.allowedServices == null ? List.of() : this.allowedServices;
     }
@@ -46,7 +46,7 @@ public final class ServicePerimeterSpecVpcAccessibleServices {
      * Whether to restrict API calls within the Service Perimeter to the
      * list of APIs specified in 'allowedServices'.
      * 
-     */
+    */
     public Optional<Boolean> getEnableRestriction() {
         return Optional.ofNullable(this.enableRestriction);
     }
@@ -82,7 +82,6 @@ public final class ServicePerimeterSpecVpcAccessibleServices {
             this.enableRestriction = enableRestriction;
             return this;
         }
-
         public ServicePerimeterSpecVpcAccessibleServices build() {
             return new ServicePerimeterSpecVpcAccessibleServices(allowedServices, enableRestriction);
         }

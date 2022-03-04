@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class WebTypeAppEngingIamBindingCondition {
     /**
      * An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Textual representation of an expression in Common Expression Language syntax.
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }
     /**
      * A title for the expression, i.e. a short string describing its purpose.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -97,7 +97,6 @@ public final class WebTypeAppEngingIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public WebTypeAppEngingIamBindingCondition build() {
             return new WebTypeAppEngingIamBindingCondition(description, expression, title);
         }

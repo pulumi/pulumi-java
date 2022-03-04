@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -35,7 +35,7 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subclasses")
-    private final @Nullable Input<Map<String,LabelClassArgs>> subclasses;
+      private final @Nullable Input<Map<String,LabelClassArgs>> subclasses;
 
     public Input<Map<String,LabelClassArgs>> getSubclasses() {
         return this.subclasses == null ? Input.empty() : this.subclasses;
@@ -94,7 +94,6 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
             this.subclasses = Input.ofNullable(subclasses);
             return this;
         }
-
         public LabelClassArgs build() {
             return new LabelClassArgs(displayName, subclasses);
         }

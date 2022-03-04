@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2BigQueryOptionsSampleMethod;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="excludedFields")
-    private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> excludedFields;
+      private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> excludedFields;
 
     public Input<List<GooglePrivacyDlpV2FieldIdArgs>> getExcludedFields() {
         return this.excludedFields == null ? Input.empty() : this.excludedFields;
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="identifyingFields")
-    private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
+      private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
 
     public Input<List<GooglePrivacyDlpV2FieldIdArgs>> getIdentifyingFields() {
         return this.identifyingFields == null ? Input.empty() : this.identifyingFields;
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="includedFields")
-    private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> includedFields;
+      private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> includedFields;
 
     public Input<List<GooglePrivacyDlpV2FieldIdArgs>> getIncludedFields() {
         return this.includedFields == null ? Input.empty() : this.includedFields;
@@ -61,7 +61,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="rowsLimit")
-    private final @Nullable Input<String> rowsLimit;
+      private final @Nullable Input<String> rowsLimit;
 
     public Input<String> getRowsLimit() {
         return this.rowsLimit == null ? Input.empty() : this.rowsLimit;
@@ -72,14 +72,14 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="rowsLimitPercent")
-    private final @Nullable Input<Integer> rowsLimitPercent;
+      private final @Nullable Input<Integer> rowsLimitPercent;
 
     public Input<Integer> getRowsLimitPercent() {
         return this.rowsLimitPercent == null ? Input.empty() : this.rowsLimitPercent;
     }
 
     @InputImport(name="sampleMethod")
-    private final @Nullable Input<GooglePrivacyDlpV2BigQueryOptionsSampleMethod> sampleMethod;
+      private final @Nullable Input<GooglePrivacyDlpV2BigQueryOptionsSampleMethod> sampleMethod;
 
     public Input<GooglePrivacyDlpV2BigQueryOptionsSampleMethod> getSampleMethod() {
         return this.sampleMethod == null ? Input.empty() : this.sampleMethod;
@@ -90,7 +90,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="tableReference")
-    private final @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> tableReference;
+      private final @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> tableReference;
 
     public Input<GooglePrivacyDlpV2BigQueryTableArgs> getTableReference() {
         return this.tableReference == null ? Input.empty() : this.tableReference;
@@ -224,7 +224,6 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
             this.tableReference = Input.ofNullable(tableReference);
             return this;
         }
-
         public GooglePrivacyDlpV2BigQueryOptionsArgs build() {
             return new GooglePrivacyDlpV2BigQueryOptionsArgs(excludedFields, identifyingFields, includedFields, rowsLimit, rowsLimitPercent, sampleMethod, tableReference);
         }

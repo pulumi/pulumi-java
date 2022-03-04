@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class VMResourcesResponse {
     /**
      * Version of the Logz agent installed on the VM.
      * 
-     */
+    */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * Request of a list vm host update operation.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -76,7 +76,6 @@ public final class VMResourcesResponse {
             this.id = id;
             return this;
         }
-
         public VMResourcesResponse build() {
             return new VMResourcesResponse(agentVersion, id);
         }

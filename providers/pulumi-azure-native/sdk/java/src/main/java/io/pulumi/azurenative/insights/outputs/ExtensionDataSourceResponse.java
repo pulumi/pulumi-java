@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -58,21 +58,21 @@ public final class ExtensionDataSourceResponse {
     /**
      * The name of the VM extension.
      * 
-     */
+    */
     public String getExtensionName() {
         return this.extensionName;
     }
     /**
      * The extension settings. The format is specific for particular extension.
      * 
-     */
+    */
     public Optional<Object> getExtensionSettings() {
         return Optional.ofNullable(this.extensionSettings);
     }
     /**
      * The list of data sources this extension needs data from.
      * 
-     */
+    */
     public List<String> getInputDataSources() {
         return this.inputDataSources == null ? List.of() : this.inputDataSources;
     }
@@ -80,7 +80,7 @@ public final class ExtensionDataSourceResponse {
      * A friendly name for the data source.
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -88,7 +88,7 @@ public final class ExtensionDataSourceResponse {
      * List of streams that this data source will be sent to.
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
-     */
+    */
     public List<String> getStreams() {
         return this.streams == null ? List.of() : this.streams;
     }
@@ -145,7 +145,6 @@ public final class ExtensionDataSourceResponse {
             this.streams = streams;
             return this;
         }
-
         public ExtensionDataSourceResponse build() {
             return new ExtensionDataSourceResponse(extensionName, extensionSettings, inputDataSources, name, streams);
         }

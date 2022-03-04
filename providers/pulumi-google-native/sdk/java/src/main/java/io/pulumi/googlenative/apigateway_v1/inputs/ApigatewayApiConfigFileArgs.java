@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="contents")
-    private final @Nullable Input<String> contents;
+      private final @Nullable Input<String> contents;
 
     public Input<String> getContents() {
         return this.contents == null ? Input.empty() : this.contents;
@@ -34,7 +34,7 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -93,7 +93,6 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public ApigatewayApiConfigFileArgs build() {
             return new ApigatewayApiConfigFileArgs(contents, path);
         }

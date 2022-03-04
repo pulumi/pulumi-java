@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class AndroidAppInfoResponse {
     /**
      * The name of the app. Optional
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The package name of the app. Required.
      * 
-     */
+    */
     public String getPackageName() {
         return this.packageName;
     }
     /**
      * The internal version code of the app. Optional.
      * 
-     */
+    */
     public String getVersionCode() {
         return this.versionCode;
     }
     /**
      * The version name of the app. Optional.
      * 
-     */
+    */
     public String getVersionName() {
         return this.versionName;
     }
@@ -116,7 +116,6 @@ public final class AndroidAppInfoResponse {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
-
         public AndroidAppInfoResponse build() {
             return new AndroidAppInfoResponse(name, packageName, versionCode, versionName);
         }

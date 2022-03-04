@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class StatusCodesBasedTriggerResponse {
     /**
      * Request Count.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Request Path
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * HTTP status code.
      * 
-     */
+    */
     public Optional<Integer> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Request Sub Status.
      * 
-     */
+    */
     public Optional<Integer> getSubStatus() {
         return Optional.ofNullable(this.subStatus);
     }
     /**
      * Time interval.
      * 
-     */
+    */
     public Optional<String> getTimeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
     /**
      * Win32 error code.
      * 
-     */
+    */
     public Optional<Integer> getWin32Status() {
         return Optional.ofNullable(this.win32Status);
     }
@@ -161,7 +161,6 @@ public final class StatusCodesBasedTriggerResponse {
             this.win32Status = win32Status;
             return this;
         }
-
         public StatusCodesBasedTriggerResponse build() {
             return new StatusCodesBasedTriggerResponse(count, path, status, subStatus, timeInterval, win32Status);
         }

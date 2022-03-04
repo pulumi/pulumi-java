@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.DashboardPartsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Map<String,Object> metadata;
+      private final @Nullable Map<String,Object> metadata;
 
     public Map<String,Object> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
@@ -39,7 +39,7 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="order", required=true)
-    private final Integer order;
+      private final Integer order;
 
     public Integer getOrder() {
         return this.order;
@@ -50,7 +50,7 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="parts", required=true)
-    private final List<DashboardPartsResponse> parts;
+      private final List<DashboardPartsResponse> parts;
 
     public List<DashboardPartsResponse> getParts() {
         return this.parts;
@@ -109,7 +109,6 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-
         public DashboardLensResponse build() {
             return new DashboardLensResponse(metadata, order, parts);
         }

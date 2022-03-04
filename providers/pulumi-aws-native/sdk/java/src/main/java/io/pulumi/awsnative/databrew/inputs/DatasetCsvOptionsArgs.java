@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArg
     public static final DatasetCsvOptionsArgs Empty = new DatasetCsvOptionsArgs();
 
     @InputImport(name="delimiter")
-    private final @Nullable Input<String> delimiter;
+      private final @Nullable Input<String> delimiter;
 
     public Input<String> getDelimiter() {
         return this.delimiter == null ? Input.empty() : this.delimiter;
     }
 
     @InputImport(name="headerRow")
-    private final @Nullable Input<Boolean> headerRow;
+      private final @Nullable Input<Boolean> headerRow;
 
     public Input<Boolean> getHeaderRow() {
         return this.headerRow == null ? Input.empty() : this.headerRow;
@@ -86,7 +86,6 @@ public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArg
             this.headerRow = Input.ofNullable(headerRow);
             return this;
         }
-
         public DatasetCsvOptionsArgs build() {
             return new DatasetCsvOptionsArgs(delimiter, headerRow);
         }

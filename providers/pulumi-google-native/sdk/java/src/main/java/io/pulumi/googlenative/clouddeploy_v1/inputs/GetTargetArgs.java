@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTargetArgs Empty = new GetTargetArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="targetId", required=true)
-    private final String targetId;
+      private final String targetId;
 
     public String getTargetId() {
         return this.targetId;
@@ -88,7 +88,6 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public GetTargetArgs build() {
             return new GetTargetArgs(location, project, targetId);
         }

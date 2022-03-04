@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 import io.pulumi.azurenative.deviceupdate.outputs.ConnectionDetailsResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceConnectionResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceProxyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -65,42 +65,42 @@ public final class RemotePrivateEndpointResponse {
     /**
      * List of connection details.
      * 
-     */
+    */
     public List<ConnectionDetailsResponse> getConnectionDetails() {
         return this.connectionDetails == null ? List.of() : this.connectionDetails;
     }
     /**
      * Remote endpoint resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * List of private link service connections that need manual approval.
      * 
-     */
+    */
     public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
     }
     /**
      * List of automatically approved private link service connections.
      * 
-     */
+    */
     public List<PrivateLinkServiceConnectionResponse> getPrivateLinkServiceConnections() {
         return this.privateLinkServiceConnections == null ? List.of() : this.privateLinkServiceConnections;
     }
     /**
      * List of private link service proxies.
      * 
-     */
+    */
     public List<PrivateLinkServiceProxyResponse> getPrivateLinkServiceProxies() {
         return this.privateLinkServiceProxies == null ? List.of() : this.privateLinkServiceProxies;
     }
     /**
      * Virtual network traffic tag.
      * 
-     */
+    */
     public String getVnetTrafficTag() {
         return this.vnetTrafficTag;
     }
@@ -164,7 +164,6 @@ public final class RemotePrivateEndpointResponse {
             this.vnetTrafficTag = Objects.requireNonNull(vnetTrafficTag);
             return this;
         }
-
         public RemotePrivateEndpointResponse build() {
             return new RemotePrivateEndpointResponse(connectionDetails, id, manualPrivateLinkServiceConnections, privateLinkServiceConnections, privateLinkServiceProxies, vnetTrafficTag);
         }

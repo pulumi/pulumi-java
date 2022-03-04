@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayload;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DetectorModelDynamoDBv2 extends io.pulumi.resources.InvokeArg
     public static final DetectorModelDynamoDBv2 Empty = new DetectorModelDynamoDBv2();
 
     @InputImport(name="payload")
-    private final @Nullable DetectorModelPayload payload;
+      private final @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> getPayload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
@@ -33,7 +33,7 @@ public final class DetectorModelDynamoDBv2 extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -82,7 +82,6 @@ public final class DetectorModelDynamoDBv2 extends io.pulumi.resources.InvokeArg
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public DetectorModelDynamoDBv2 build() {
             return new DetectorModelDynamoDBv2(payload, tableName);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.enums.RecurrenceFrequency;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="frequency")
-    private final @Nullable Input<RecurrenceFrequency> frequency;
+      private final @Nullable Input<RecurrenceFrequency> frequency;
 
     public Input<RecurrenceFrequency> getFrequency() {
         return this.frequency == null ? Input.empty() : this.frequency;
@@ -31,7 +31,7 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -90,7 +90,6 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
             this.interval = Input.ofNullable(interval);
             return this;
         }
-
         public JobMaxRecurrenceArgs build() {
             return new JobMaxRecurrenceArgs(frequency, interval);
         }

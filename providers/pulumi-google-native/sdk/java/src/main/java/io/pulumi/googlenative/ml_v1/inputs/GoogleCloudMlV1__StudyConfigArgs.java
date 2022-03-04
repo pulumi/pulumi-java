@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__StudyConfigAlgorithm;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_MetricSpecArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_ParameterSpecArgs;
@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="algorithm")
-    private final @Nullable Input<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm;
+      private final @Nullable Input<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm;
 
     public Input<GoogleCloudMlV1__StudyConfigAlgorithm> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="automatedStoppingConfig")
-    private final @Nullable Input<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig;
+      private final @Nullable Input<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig;
 
     public Input<GoogleCloudMlV1__AutomatedStoppingConfigArgs> getAutomatedStoppingConfig() {
         return this.automatedStoppingConfig == null ? Input.empty() : this.automatedStoppingConfig;
@@ -49,7 +49,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable Input<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics;
+      private final @Nullable Input<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics;
 
     public Input<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -60,7 +60,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters;
+      private final Input<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters;
 
     public Input<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> getParameters() {
         return this.parameters;
@@ -149,7 +149,6 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public GoogleCloudMlV1__StudyConfigArgs build() {
             return new GoogleCloudMlV1__StudyConfigArgs(algorithm, automatedStoppingConfig, metrics, parameters);
         }

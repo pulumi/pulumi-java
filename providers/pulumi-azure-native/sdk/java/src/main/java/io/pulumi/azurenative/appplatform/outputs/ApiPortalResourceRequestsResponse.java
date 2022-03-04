@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ApiPortalResourceRequestsResponse {
     /**
      * Cpu allocated to each API portal instance
      * 
-     */
+    */
     public String getCpu() {
         return this.cpu;
     }
     /**
      * Memory allocated to each API portal instance
      * 
-     */
+    */
     public String getMemory() {
         return this.memory;
     }
@@ -74,7 +74,6 @@ public final class ApiPortalResourceRequestsResponse {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }
-
         public ApiPortalResourceRequestsResponse build() {
             return new ApiPortalResourceRequestsResponse(cpu, memory);
         }

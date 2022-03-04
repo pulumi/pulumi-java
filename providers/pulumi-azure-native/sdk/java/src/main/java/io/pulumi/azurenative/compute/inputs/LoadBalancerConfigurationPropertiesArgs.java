@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.LoadBalancerFrontendIPConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class LoadBalancerConfigurationPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="frontendIPConfigurations", required=true)
-    private final Input<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
+      private final Input<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
 
     public Input<List<LoadBalancerFrontendIPConfigurationArgs>> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations;
@@ -62,7 +62,6 @@ public final class LoadBalancerConfigurationPropertiesArgs extends io.pulumi.res
             this.frontendIPConfigurations = Input.of(Objects.requireNonNull(frontendIPConfigurations));
             return this;
         }
-
         public LoadBalancerConfigurationPropertiesArgs build() {
             return new LoadBalancerConfigurationPropertiesArgs(frontendIPConfigurations);
         }

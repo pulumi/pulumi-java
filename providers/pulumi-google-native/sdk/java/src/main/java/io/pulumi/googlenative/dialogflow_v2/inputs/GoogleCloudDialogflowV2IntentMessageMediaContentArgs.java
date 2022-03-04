@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessageMediaContentMediaType;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
      * 
      */
     @InputImport(name="mediaObjects", required=true)
-    private final Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
+      private final Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> getMediaObjects() {
         return this.mediaObjects;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
      * 
      */
     @InputImport(name="mediaType")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType;
 
     public Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> getMediaType() {
         return this.mediaType == null ? Input.empty() : this.mediaType;
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
             this.mediaType = Input.ofNullable(mediaType);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageMediaContentArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageMediaContentArgs(mediaObjects, mediaType);
         }

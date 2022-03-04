@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -79,42 +79,42 @@ public final class ListWebAppSitePushSettingsResult {
     /**
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
      * 
-     */
+    */
     public Optional<String> getDynamicTagsJson() {
         return Optional.ofNullable(this.dynamicTagsJson);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
      * 
-     */
+    */
     public Boolean getIsPushEnabled() {
         return this.isPushEnabled;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
      * 
-     */
+    */
     public Optional<String> getTagWhitelistJson() {
         return Optional.ofNullable(this.tagWhitelistJson);
     }
@@ -124,14 +124,14 @@ public final class ListWebAppSitePushSettingsResult {
      * '_', '@', '#', '.', ':', '-'.
      * Validation should be performed at the PushRequestHandler.
      * 
-     */
+    */
     public Optional<String> getTagsRequiringAuth() {
         return Optional.ofNullable(this.tagsRequiringAuth);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -209,7 +209,6 @@ public final class ListWebAppSitePushSettingsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppSitePushSettingsResult build() {
             return new ListWebAppSitePushSettingsResult(dynamicTagsJson, id, isPushEnabled, kind, name, tagWhitelistJson, tagsRequiringAuth, type);
         }

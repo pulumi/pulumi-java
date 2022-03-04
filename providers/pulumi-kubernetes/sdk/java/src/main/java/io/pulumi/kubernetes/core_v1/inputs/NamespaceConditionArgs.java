@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +19,21 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
     public static final NamespaceConditionArgs Empty = new NamespaceConditionArgs();
 
     @InputImport(name="lastTransitionTime")
-    private final @Nullable Input<String> lastTransitionTime;
+      private final @Nullable Input<String> lastTransitionTime;
 
     public Input<String> getLastTransitionTime() {
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
     }
 
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+      private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -44,7 +44,7 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<String> status;
+      private final Input<String> status;
 
     public Input<String> getStatus() {
         return this.status;
@@ -62,7 +62,7 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -166,7 +166,6 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public NamespaceConditionArgs build() {
             return new NamespaceConditionArgs(lastTransitionTime, message, reason, status, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetOrganizationArgs Empty = new GetOrganizationArgs();
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -51,7 +51,6 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetOrganizationArgs build() {
             return new GetOrganizationArgs(organizationId);
         }

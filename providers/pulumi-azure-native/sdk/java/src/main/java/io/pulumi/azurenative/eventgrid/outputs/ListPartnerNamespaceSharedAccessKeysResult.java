@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ListPartnerNamespaceSharedAccessKeysResult {
     /**
      * Shared access key1 for the partner namespace.
      * 
-     */
+    */
     public Optional<String> getKey1() {
         return Optional.ofNullable(this.key1);
     }
     /**
      * Shared access key2 for the partner namespace.
      * 
-     */
+    */
     public Optional<String> getKey2() {
         return Optional.ofNullable(this.key2);
     }
@@ -76,7 +76,6 @@ public final class ListPartnerNamespaceSharedAccessKeysResult {
             this.key2 = key2;
             return this;
         }
-
         public ListPartnerNamespaceSharedAccessKeysResult build() {
             return new ListPartnerNamespaceSharedAccessKeysResult(key1, key2);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.servicecatalogappregistry;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalogappregistry.inputs.GetApplicationArgs;
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.GetApplicationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplication {
-/**
- * Resource Schema for AWS::ServiceCatalogAppRegistry::Application
+    private GetApplication() {}
+    public interface BuilderApplicator {
+        public void apply(GetApplicationArgs.Builder a);
+    }
+    private static GetApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApplicationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema for AWS::ServiceCatalogAppRegistry::Application
  * 
- */
+     */
+    public static CompletableFuture<GetApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema for AWS::ServiceCatalogAppRegistry::Application
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> invokeAsync(GetApplicationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getApplication", TypeShape.of(GetApplicationResult.class), args == null ? GetApplicationArgs.Empty : args, Utilities.withVersion(options));
     }

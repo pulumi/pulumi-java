@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ParallelismConfigurationProperties;
 import io.pulumi.awsnative.sagemaker.outputs.PipelineTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -59,21 +59,21 @@ public final class GetPipelineResult {
     /**
      * The description of the Pipeline.
      * 
-     */
+    */
     public Optional<String> getPipelineDescription() {
         return Optional.ofNullable(this.pipelineDescription);
     }
     /**
      * The display name of the Pipeline.
      * 
-     */
+    */
     public Optional<String> getPipelineDisplayName() {
         return Optional.ofNullable(this.pipelineDisplayName);
     }
     /**
      * Role Arn
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -140,7 +140,6 @@ public final class GetPipelineResult {
             this.tags = tags;
             return this;
         }
-
         public GetPipelineResult build() {
             return new GetPipelineResult(parallelismConfiguration, pipelineDefinition, pipelineDescription, pipelineDisplayName, roleArn, tags);
         }

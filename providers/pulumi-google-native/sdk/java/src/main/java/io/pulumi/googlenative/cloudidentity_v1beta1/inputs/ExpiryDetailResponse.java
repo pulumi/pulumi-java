@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ExpiryDetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expireTime", required=true)
-    private final String expireTime;
+      private final String expireTime;
 
     public String getExpireTime() {
         return this.expireTime;
@@ -59,7 +59,6 @@ public final class ExpiryDetailResponse extends io.pulumi.resources.InvokeArgs {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public ExpiryDetailResponse build() {
             return new ExpiryDetailResponse(expireTime);
         }

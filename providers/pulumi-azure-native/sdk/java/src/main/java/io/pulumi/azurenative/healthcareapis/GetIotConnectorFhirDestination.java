@@ -6,21 +6,41 @@ package io.pulumi.azurenative.healthcareapis;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.healthcareapis.inputs.GetIotConnectorFhirDestinationArgs;
 import io.pulumi.azurenative.healthcareapis.outputs.GetIotConnectorFhirDestinationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIotConnectorFhirDestination {
-/**
- * IoT Connector FHIR destination definition.
+    private GetIotConnectorFhirDestination() {}
+    public interface BuilderApplicator {
+        public void apply(GetIotConnectorFhirDestinationArgs.Builder a);
+    }
+    private static GetIotConnectorFhirDestinationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIotConnectorFhirDestinationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * IoT Connector FHIR destination definition.
  * API Version: 2021-06-01-preview.
  * 
- *
- * IoT Connector FHIR destination definition.
+     *
+     * IoT Connector FHIR destination definition.
  * 
- */
+     */
+    public static CompletableFuture<GetIotConnectorFhirDestinationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * IoT Connector FHIR destination definition.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * IoT Connector FHIR destination definition.
+     * 
+     */
     public static CompletableFuture<GetIotConnectorFhirDestinationResult> invokeAsync(GetIotConnectorFhirDestinationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getIotConnectorFhirDestination", TypeShape.of(GetIotConnectorFhirDestinationResult.class), args == null ? GetIotConnectorFhirDestinationArgs.Empty : args, Utilities.withVersion(options));
     }

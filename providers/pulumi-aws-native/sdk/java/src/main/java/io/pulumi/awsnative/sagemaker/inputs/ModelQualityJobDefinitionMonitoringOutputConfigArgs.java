@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionMonitoringOutputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfigArgs extends i
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -36,7 +36,7 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfigArgs extends i
      * 
      */
     @InputImport(name="monitoringOutputs", required=true)
-    private final Input<List<ModelQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+      private final Input<List<ModelQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
     public Input<List<ModelQualityJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
         return this.monitoringOutputs;
@@ -95,7 +95,6 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfigArgs extends i
             this.monitoringOutputs = Input.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }
-
         public ModelQualityJobDefinitionMonitoringOutputConfigArgs build() {
             return new ModelQualityJobDefinitionMonitoringOutputConfigArgs(kmsKeyId, monitoringOutputs);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class GetClusterNodeConfigShieldedInstanceConfig {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }
-
         public GetClusterNodeConfigShieldedInstanceConfig build() {
             return new GetClusterNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
         }

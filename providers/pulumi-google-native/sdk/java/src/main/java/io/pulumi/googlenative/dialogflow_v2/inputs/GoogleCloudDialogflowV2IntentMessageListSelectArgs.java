@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageListSelectItemArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
      * 
      */
     @InputImport(name="items", required=true)
-    private final Input<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items;
+      private final Input<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> getItems() {
         return this.items;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
      * 
      */
     @InputImport(name="subtitle")
-    private final @Nullable Input<String> subtitle;
+      private final @Nullable Input<String> subtitle;
 
     public Input<String> getSubtitle() {
         return this.subtitle == null ? Input.empty() : this.subtitle;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -121,7 +121,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageListSelectArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageListSelectArgs(items, subtitle, title);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class AzureResourceDetailsResponse {
     /**
      * Azure resource Id of the assessed resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -40,7 +40,7 @@ public final class AzureResourceDetailsResponse {
      * The platform where the assessed resource resides
      * Expected value is 'Azure'.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
@@ -76,7 +76,6 @@ public final class AzureResourceDetailsResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public AzureResourceDetailsResponse build() {
             return new AzureResourceDetailsResponse(id, source);
         }

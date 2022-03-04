@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationSignatureArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class OccurenceAttestationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="serializedPayload", required=true)
-    private final Input<String> serializedPayload;
+      private final Input<String> serializedPayload;
 
     public Input<String> getSerializedPayload() {
         return this.serializedPayload;
@@ -37,7 +37,7 @@ public final class OccurenceAttestationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="signatures", required=true)
-    private final Input<List<OccurenceAttestationSignatureArgs>> signatures;
+      private final Input<List<OccurenceAttestationSignatureArgs>> signatures;
 
     public Input<List<OccurenceAttestationSignatureArgs>> getSignatures() {
         return this.signatures;
@@ -96,7 +96,6 @@ public final class OccurenceAttestationArgs extends io.pulumi.resources.Resource
             this.signatures = Input.of(Objects.requireNonNull(signatures));
             return this;
         }
-
         public OccurenceAttestationArgs build() {
             return new OccurenceAttestationArgs(serializedPayload, signatures);
         }

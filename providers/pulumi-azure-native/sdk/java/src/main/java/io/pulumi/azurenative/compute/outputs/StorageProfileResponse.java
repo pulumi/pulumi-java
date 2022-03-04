@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.DataDiskResponse;
 import io.pulumi.azurenative.compute.outputs.ImageReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.OSDiskResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,21 +43,21 @@ public final class StorageProfileResponse {
     /**
      * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
-     */
+    */
     public List<DataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
      * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
      * 
-     */
+    */
     public Optional<ImageReferenceResponse> getImageReference() {
         return Optional.ofNullable(this.imageReference);
     }
     /**
      * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
-     */
+    */
     public Optional<OSDiskResponse> getOsDisk() {
         return Optional.ofNullable(this.osDisk);
     }
@@ -100,7 +100,6 @@ public final class StorageProfileResponse {
             this.osDisk = osDisk;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(dataDisks, imageReference, osDisk);
         }

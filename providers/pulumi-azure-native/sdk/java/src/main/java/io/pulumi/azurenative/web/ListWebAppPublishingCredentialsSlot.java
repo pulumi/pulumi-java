@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListWebAppPublishingCredentialsSlotArgs;
 import io.pulumi.azurenative.web.outputs.ListWebAppPublishingCredentialsSlotResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppPublishingCredentialsSlot {
-/**
- * User credentials used for publishing activity.
+    private ListWebAppPublishingCredentialsSlot() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppPublishingCredentialsSlotArgs.Builder a);
+    }
+    private static ListWebAppPublishingCredentialsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppPublishingCredentialsSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * User credentials used for publishing activity.
  * API Version: 2020-12-01.
  * 
- *
- * User credentials used for publishing activity.
+     *
+     * User credentials used for publishing activity.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppPublishingCredentialsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * User credentials used for publishing activity.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * User credentials used for publishing activity.
+     * 
+     */
     public static CompletableFuture<ListWebAppPublishingCredentialsSlotResult> invokeAsync(ListWebAppPublishingCredentialsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppPublishingCredentialsSlot", TypeShape.of(ListWebAppPublishingCredentialsSlotResult.class), args == null ? ListWebAppPublishingCredentialsSlotArgs.Empty : args, Utilities.withVersion(options));
     }

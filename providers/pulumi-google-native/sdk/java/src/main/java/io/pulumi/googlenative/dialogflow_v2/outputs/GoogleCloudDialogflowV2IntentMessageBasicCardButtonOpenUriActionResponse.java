@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
     /**
      * The HTTP or HTTPS scheme URI.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse(uri);
         }

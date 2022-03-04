@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.stepfunctions.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class StateMachineTracingConfigurationArgs extends io.pulumi.resour
     public static final StateMachineTracingConfigurationArgs Empty = new StateMachineTracingConfigurationArgs();
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -58,7 +58,6 @@ public final class StateMachineTracingConfigurationArgs extends io.pulumi.resour
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public StateMachineTracingConfigurationArgs build() {
             return new StateMachineTracingConfigurationArgs(enabled);
         }

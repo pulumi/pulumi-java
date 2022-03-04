@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class CustomFieldResponse {
     /**
      * Name is the field name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class CustomFieldResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CustomFieldResponse build() {
             return new CustomFieldResponse(name, value);
         }

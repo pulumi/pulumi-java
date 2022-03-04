@@ -5,7 +5,7 @@ package io.pulumi.azurenative.peering.inputs;
 
 import io.pulumi.azurenative.peering.inputs.ExchangeConnectionResponse;
 import io.pulumi.azurenative.peering.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class PeeringPropertiesExchangeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="connections")
-    private final @Nullable List<ExchangeConnectionResponse> connections;
+      private final @Nullable List<ExchangeConnectionResponse> connections;
 
     public List<ExchangeConnectionResponse> getConnections() {
         return this.connections == null ? List.of() : this.connections;
@@ -36,7 +36,7 @@ public final class PeeringPropertiesExchangeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="peerAsn")
-    private final @Nullable SubResourceResponse peerAsn;
+      private final @Nullable SubResourceResponse peerAsn;
 
     public Optional<SubResourceResponse> getPeerAsn() {
         return this.peerAsn == null ? Optional.empty() : Optional.ofNullable(this.peerAsn);
@@ -85,7 +85,6 @@ public final class PeeringPropertiesExchangeResponse extends io.pulumi.resources
             this.peerAsn = peerAsn;
             return this;
         }
-
         public PeeringPropertiesExchangeResponse build() {
             return new PeeringPropertiesExchangeResponse(connections, peerAsn);
         }

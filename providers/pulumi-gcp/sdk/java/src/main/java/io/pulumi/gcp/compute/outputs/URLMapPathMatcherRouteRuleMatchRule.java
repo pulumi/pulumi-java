@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRuleMetadataFilter;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch;
@@ -102,7 +102,7 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
      * and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
      * be specified.
      * 
-     */
+    */
     public Optional<String> getFullPathMatch() {
         return Optional.ofNullable(this.fullPathMatch);
     }
@@ -111,7 +111,7 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
      * headers in the request.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatch> getHeaderMatches() {
         return this.headerMatches == null ? List.of() : this.headerMatches;
     }
@@ -119,7 +119,7 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
      * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
      * Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getIgnoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
@@ -137,7 +137,7 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
      * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilter> getMetadataFilters() {
         return this.metadataFilters == null ? List.of() : this.metadataFilters;
     }
@@ -146,7 +146,7 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
      * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
      * must be set.
      * 
-     */
+    */
     public Optional<String> getPrefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -155,7 +155,7 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
      * corresponding query parameters in the request.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> getQueryParameterMatches() {
         return this.queryParameterMatches == null ? List.of() : this.queryParameterMatches;
     }
@@ -165,7 +165,7 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
      * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
      * exactMatch and regexMatch must be set.
      * 
-     */
+    */
     public Optional<String> getRegexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }
@@ -236,7 +236,6 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
             this.regexMatch = regexMatch;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRule build() {
             return new URLMapPathMatcherRouteRuleMatchRule(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }

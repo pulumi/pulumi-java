@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.outputs.EventTypeEntityType;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeEventVariable;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeLabel;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -68,21 +68,21 @@ public final class GetEventTypeResult {
     /**
      * The ARN of the event type.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the event type was created.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description of the event type.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -98,14 +98,14 @@ public final class GetEventTypeResult {
     /**
      * The time when the event type was last updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Tags associated with this event type.
      * 
-     */
+    */
     public List<EventTypeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -183,7 +183,6 @@ public final class GetEventTypeResult {
             this.tags = tags;
             return this;
         }
-
         public GetEventTypeResult build() {
             return new GetEventTypeResult(arn, createdTime, description, entityTypes, eventVariables, labels, lastUpdatedTime, tags);
         }

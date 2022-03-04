@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,14 +41,14 @@ public final class OutputPathAssetReferenceResponse {
     /**
      * ARM resource ID of the job.
      * 
-     */
+    */
     public Optional<String> getJobId() {
         return Optional.ofNullable(this.jobId);
     }
     /**
      * The path of the file/directory in the job output.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -56,7 +56,7 @@ public final class OutputPathAssetReferenceResponse {
      * Enum to determine which reference method to use for an asset.
      * Expected value is 'OutputPath'.
      * 
-     */
+    */
     public String getReferenceType() {
         return this.referenceType;
     }
@@ -99,7 +99,6 @@ public final class OutputPathAssetReferenceResponse {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
-
         public OutputPathAssetReferenceResponse build() {
             return new OutputPathAssetReferenceResponse(jobId, path, referenceType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ContainerAppSecretResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ListContainerAppSecretsResult {
     /**
      * Collection of resources.
      * 
-     */
+    */
     public List<ContainerAppSecretResponse> getValue() {
         return this.value;
     }
@@ -53,7 +53,6 @@ public final class ListContainerAppSecretsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListContainerAppSecretsResult build() {
             return new ListContainerAppSecretsResult(value);
         }

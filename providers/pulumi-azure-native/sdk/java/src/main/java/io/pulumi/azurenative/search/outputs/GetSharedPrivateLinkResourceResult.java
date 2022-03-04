@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.search.outputs;
 
 import io.pulumi.azurenative.search.outputs.SharedPrivateLinkResourcePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,28 +46,28 @@ public final class GetSharedPrivateLinkResourceResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
      * 
-     */
+    */
     public SharedPrivateLinkResourcePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GetSharedPrivateLinkResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSharedPrivateLinkResourceResult build() {
             return new GetSharedPrivateLinkResourceResult(id, name, properties, type);
         }

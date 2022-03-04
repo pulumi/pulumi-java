@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="containerPort")
-    private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort == null ? Input.empty() : this.containerPort;
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -94,7 +94,6 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public GoogleCloudRunOpV2ContainerPortArgs build() {
             return new GoogleCloudRunOpV2ContainerPortArgs(containerPort, name);
         }

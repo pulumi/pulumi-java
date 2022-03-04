@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="code")
-    private final @Nullable String code;
+      private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -34,7 +34,7 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="displayStatus")
-    private final @Nullable String displayStatus;
+      private final @Nullable String displayStatus;
 
     public Optional<String> getDisplayStatus() {
         return this.displayStatus == null ? Optional.empty() : Optional.ofNullable(this.displayStatus);
@@ -45,7 +45,7 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="level")
-    private final @Nullable String level;
+      private final @Nullable String level;
 
     public Optional<String> getLevel() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
@@ -56,7 +56,7 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -67,7 +67,7 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="time")
-    private final @Nullable String time;
+      private final @Nullable String time;
 
     public Optional<String> getTime() {
         return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);
@@ -146,7 +146,6 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
             this.time = time;
             return this;
         }
-
         public ExtensionStatusResponse build() {
             return new ExtensionStatusResponse(code, displayStatus, level, message, time);
         }

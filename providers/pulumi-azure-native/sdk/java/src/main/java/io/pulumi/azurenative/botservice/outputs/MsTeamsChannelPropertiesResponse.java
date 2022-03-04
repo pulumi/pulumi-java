@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class MsTeamsChannelPropertiesResponse {
     /**
      * Whether this channel accepted terms
      * 
-     */
+    */
     public Optional<Boolean> getAcceptedTerms() {
         return Optional.ofNullable(this.acceptedTerms);
     }
     /**
      * Webhook for Microsoft Teams channel calls
      * 
-     */
+    */
     public Optional<String> getCallingWebHook() {
         return Optional.ofNullable(this.callingWebHook);
     }
     /**
      * Deployment environment for Microsoft Teams channel calls
      * 
-     */
+    */
     public Optional<String> getDeploymentEnvironment() {
         return Optional.ofNullable(this.deploymentEnvironment);
     }
     /**
      * Enable calling for Microsoft Teams channel
      * 
-     */
+    */
     public Optional<Boolean> getEnableCalling() {
         return Optional.ofNullable(this.enableCalling);
     }
     /**
      * Webhook for Microsoft Teams channel calls
      * 
-     */
+    */
     public Optional<String> getIncomingCallRoute() {
         return Optional.ofNullable(this.incomingCallRoute);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -161,7 +161,6 @@ public final class MsTeamsChannelPropertiesResponse {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public MsTeamsChannelPropertiesResponse build() {
             return new MsTeamsChannelPropertiesResponse(acceptedTerms, callingWebHook, deploymentEnvironment, enableCalling, incomingCallRoute, isEnabled);
         }

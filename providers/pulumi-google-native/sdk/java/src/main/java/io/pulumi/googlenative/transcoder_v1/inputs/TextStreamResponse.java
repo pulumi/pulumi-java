@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.TextMappingResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TextStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="codec", required=true)
-    private final String codec;
+      private final String codec;
 
     public String getCodec() {
         return this.codec;
@@ -34,7 +34,7 @@ public final class TextStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mapping", required=true)
-    private final List<TextMappingResponse> mapping;
+      private final List<TextMappingResponse> mapping;
 
     public List<TextMappingResponse> getMapping() {
         return this.mapping;
@@ -83,7 +83,6 @@ public final class TextStreamResponse extends io.pulumi.resources.InvokeArgs {
             this.mapping = Objects.requireNonNull(mapping);
             return this;
         }
-
         public TextStreamResponse build() {
             return new TextStreamResponse(codec, mapping);
         }

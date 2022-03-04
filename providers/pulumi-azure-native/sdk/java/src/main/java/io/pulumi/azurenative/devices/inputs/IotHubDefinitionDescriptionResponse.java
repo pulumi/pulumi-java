@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="allocationWeight")
-    private final @Nullable Integer allocationWeight;
+      private final @Nullable Integer allocationWeight;
 
     public Optional<Integer> getAllocationWeight() {
         return this.allocationWeight == null ? Optional.empty() : Optional.ofNullable(this.allocationWeight);
@@ -36,7 +36,7 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applyAllocationPolicy")
-    private final @Nullable Boolean applyAllocationPolicy;
+      private final @Nullable Boolean applyAllocationPolicy;
 
     public Optional<Boolean> getApplyAllocationPolicy() {
         return this.applyAllocationPolicy == null ? Optional.empty() : Optional.ofNullable(this.applyAllocationPolicy);
@@ -47,7 +47,7 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectionString", required=true)
-    private final String connectionString;
+      private final String connectionString;
 
     public String getConnectionString() {
         return this.connectionString;
@@ -58,7 +58,7 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -69,7 +69,7 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -148,7 +148,6 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public IotHubDefinitionDescriptionResponse build() {
             return new IotHubDefinitionDescriptionResponse(allocationWeight, applyAllocationPolicy, connectionString, location, name);
         }

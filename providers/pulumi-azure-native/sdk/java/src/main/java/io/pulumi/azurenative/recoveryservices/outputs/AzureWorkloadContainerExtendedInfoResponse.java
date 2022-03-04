@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.DistributedNodesInfoResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InquiryInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,21 +43,21 @@ public final class AzureWorkloadContainerExtendedInfoResponse {
     /**
      * Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
      * 
-     */
+    */
     public Optional<String> getHostServerName() {
         return Optional.ofNullable(this.hostServerName);
     }
     /**
      * Inquiry Status for the container.
      * 
-     */
+    */
     public Optional<InquiryInfoResponse> getInquiryInfo() {
         return Optional.ofNullable(this.inquiryInfo);
     }
     /**
      * List of the nodes in case of distributed container.
      * 
-     */
+    */
     public List<DistributedNodesInfoResponse> getNodesList() {
         return this.nodesList == null ? List.of() : this.nodesList;
     }
@@ -100,7 +100,6 @@ public final class AzureWorkloadContainerExtendedInfoResponse {
             this.nodesList = nodesList;
             return this;
         }
-
         public AzureWorkloadContainerExtendedInfoResponse build() {
             return new AzureWorkloadContainerExtendedInfoResponse(hostServerName, inquiryInfo, nodesList);
         }

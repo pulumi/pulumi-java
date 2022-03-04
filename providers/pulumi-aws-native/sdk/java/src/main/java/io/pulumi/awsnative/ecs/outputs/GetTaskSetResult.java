@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.TaskSetScale;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class GetTaskSetResult {
     /**
      * The ID of the task set.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * A floating-point percentage of the desired number of tasks to place and keep running in the task set.
      * 
-     */
+    */
     public Optional<TaskSetScale> getScale() {
         return Optional.ofNullable(this.scale);
     }
@@ -77,7 +77,6 @@ public final class GetTaskSetResult {
             this.scale = scale;
             return this;
         }
-
         public GetTaskSetResult build() {
             return new GetTaskSetResult(id, scale);
         }

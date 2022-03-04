@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.BaseImageDependencyResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="baseImageDependencies", required=true)
-    private final List<BaseImageDependencyResponse> baseImageDependencies;
+      private final List<BaseImageDependencyResponse> baseImageDependencies;
 
     public List<BaseImageDependencyResponse> getBaseImageDependencies() {
         return this.baseImageDependencies;
@@ -37,7 +37,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="contextAccessToken")
-    private final @Nullable String contextAccessToken;
+      private final @Nullable String contextAccessToken;
 
     public Optional<String> getContextAccessToken() {
         return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
@@ -48,7 +48,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="contextPath")
-    private final @Nullable String contextPath;
+      private final @Nullable String contextPath;
 
     public Optional<String> getContextPath() {
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
@@ -59,7 +59,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="encodedTaskContent", required=true)
-    private final String encodedTaskContent;
+      private final String encodedTaskContent;
 
     public String getEncodedTaskContent() {
         return this.encodedTaskContent;
@@ -70,7 +70,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="encodedValuesContent")
-    private final @Nullable String encodedValuesContent;
+      private final @Nullable String encodedValuesContent;
 
     public Optional<String> getEncodedValuesContent() {
         return this.encodedValuesContent == null ? Optional.empty() : Optional.ofNullable(this.encodedValuesContent);
@@ -82,7 +82,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -93,7 +93,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="values")
-    private final @Nullable List<SetValueResponse> values;
+      private final @Nullable List<SetValueResponse> values;
 
     public List<SetValueResponse> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -192,7 +192,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
             this.values = values;
             return this;
         }
-
         public EncodedTaskStepResponse build() {
             return new EncodedTaskStepResponse(baseImageDependencies, contextAccessToken, contextPath, encodedTaskContent, encodedValuesContent, type, values);
         }

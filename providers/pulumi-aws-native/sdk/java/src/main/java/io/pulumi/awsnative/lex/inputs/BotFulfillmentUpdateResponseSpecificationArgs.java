@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends io.pulu
      * 
      */
     @InputImport(name="allowInterrupt")
-    private final @Nullable Input<Boolean> allowInterrupt;
+      private final @Nullable Input<Boolean> allowInterrupt;
 
     public Input<Boolean> getAllowInterrupt() {
         return this.allowInterrupt == null ? Input.empty() : this.allowInterrupt;
@@ -37,14 +37,14 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends io.pulu
      * 
      */
     @InputImport(name="frequencyInSeconds", required=true)
-    private final Input<Integer> frequencyInSeconds;
+      private final Input<Integer> frequencyInSeconds;
 
     public Input<Integer> getFrequencyInSeconds() {
         return this.frequencyInSeconds;
     }
 
     @InputImport(name="messageGroups", required=true)
-    private final Input<List<BotMessageGroupArgs>> messageGroups;
+      private final Input<List<BotMessageGroupArgs>> messageGroups;
 
     public Input<List<BotMessageGroupArgs>> getMessageGroups() {
         return this.messageGroups;
@@ -118,7 +118,6 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends io.pulu
             this.messageGroups = Input.of(Objects.requireNonNull(messageGroups));
             return this;
         }
-
         public BotFulfillmentUpdateResponseSpecificationArgs build() {
             return new BotFulfillmentUpdateResponseSpecificationArgs(allowInterrupt, frequencyInSeconds, messageGroups);
         }

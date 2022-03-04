@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -51,7 +51,7 @@ public final class PatchDeploymentPatchConfigYum {
     /**
      * List of KBs to exclude from update.
      * 
-     */
+    */
     public List<String> getExcludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
@@ -60,21 +60,21 @@ public final class PatchDeploymentPatchConfigYum {
      * If these packages are not installed, they will be ignored. This field cannot be specified with
      * any other patch configuration fields.
      * 
-     */
+    */
     public List<String> getExclusivePackages() {
         return this.exclusivePackages == null ? List.of() : this.exclusivePackages;
     }
     /**
      * Will cause patch to run yum update-minimal instead.
      * 
-     */
+    */
     public Optional<Boolean> getMinimal() {
         return Optional.ofNullable(this.minimal);
     }
     /**
      * Adds the --security flag to yum update. Not supported on all platforms.
      * 
-     */
+    */
     public Optional<Boolean> getSecurity() {
         return Optional.ofNullable(this.security);
     }
@@ -124,7 +124,6 @@ public final class PatchDeploymentPatchConfigYum {
             this.security = security;
             return this;
         }
-
         public PatchDeploymentPatchConfigYum build() {
             return new PatchDeploymentPatchConfigYum(excludes, exclusivePackages, minimal, security);
         }

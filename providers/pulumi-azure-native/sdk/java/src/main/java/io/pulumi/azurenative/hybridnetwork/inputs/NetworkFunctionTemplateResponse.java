@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionRoleConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class NetworkFunctionTemplateResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="networkFunctionRoleConfigurations")
-    private final @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations;
+      private final @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations;
 
     public List<NetworkFunctionRoleConfigurationResponse> getNetworkFunctionRoleConfigurations() {
         return this.networkFunctionRoleConfigurations == null ? List.of() : this.networkFunctionRoleConfigurations;
@@ -62,7 +62,6 @@ public final class NetworkFunctionTemplateResponse extends io.pulumi.resources.I
             this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
             return this;
         }
-
         public NetworkFunctionTemplateResponse build() {
             return new NetworkFunctionTemplateResponse(networkFunctionRoleConfigurations);
         }

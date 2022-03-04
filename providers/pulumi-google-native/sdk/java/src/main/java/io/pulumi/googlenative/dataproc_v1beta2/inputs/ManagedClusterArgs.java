@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ClusterConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -36,7 +36,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<ClusterConfigArgs> config;
+      private final Input<ClusterConfigArgs> config;
 
     public Input<ClusterConfigArgs> getConfig() {
         return this.config;
@@ -47,7 +47,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -121,7 +121,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public ManagedClusterArgs build() {
             return new ManagedClusterArgs(clusterName, config, labels);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EncryptionIdentityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="encryptionUserAssignedIdentity")
-    private final @Nullable String encryptionUserAssignedIdentity;
+      private final @Nullable String encryptionUserAssignedIdentity;
 
     public Optional<String> getEncryptionUserAssignedIdentity() {
         return this.encryptionUserAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.encryptionUserAssignedIdentity);
@@ -61,7 +61,6 @@ public final class EncryptionIdentityResponse extends io.pulumi.resources.Invoke
             this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;
         }
-
         public EncryptionIdentityResponse build() {
             return new EncryptionIdentityResponse(encryptionUserAssignedIdentity);
         }

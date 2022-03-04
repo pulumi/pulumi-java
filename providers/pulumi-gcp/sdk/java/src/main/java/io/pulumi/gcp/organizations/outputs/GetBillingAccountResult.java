@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -57,14 +57,14 @@ public final class GetBillingAccountResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,7 @@ public final class GetBillingAccountResult {
     /**
      * The IDs of any projects associated with the billing account.
      * 
-     */
+    */
     public List<String> getProjectIds() {
         return this.projectIds;
     }
@@ -138,7 +138,6 @@ public final class GetBillingAccountResult {
             this.projectIds = Objects.requireNonNull(projectIds);
             return this;
         }
-
         public GetBillingAccountResult build() {
             return new GetBillingAccountResult(billingAccount, displayName, id, name, open, projectIds);
         }

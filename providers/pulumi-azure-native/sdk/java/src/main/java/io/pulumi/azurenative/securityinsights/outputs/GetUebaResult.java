@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,21 +71,21 @@ public final class GetUebaResult {
     /**
      * The relevant data sources that enriched by ueba
      * 
-     */
+    */
     public List<String> getDataSources() {
         return this.dataSources == null ? List.of() : this.dataSources;
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -93,28 +93,28 @@ public final class GetUebaResult {
      * The kind of the setting
      * Expected value is 'Ueba'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -185,7 +185,6 @@ public final class GetUebaResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetUebaResult build() {
             return new GetUebaResult(dataSources, etag, id, kind, name, systemData, type);
         }

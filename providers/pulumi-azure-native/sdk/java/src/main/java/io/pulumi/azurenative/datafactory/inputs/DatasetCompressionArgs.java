@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="level")
-    private final @Nullable Input<Object> level;
+      private final @Nullable Input<Object> level;
 
     public Input<Object> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -34,7 +34,7 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Object> type;
+      private final Input<Object> type;
 
     public Input<Object> getType() {
         return this.type;
@@ -93,7 +93,6 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DatasetCompressionArgs build() {
             return new DatasetCompressionArgs(level, type);
         }

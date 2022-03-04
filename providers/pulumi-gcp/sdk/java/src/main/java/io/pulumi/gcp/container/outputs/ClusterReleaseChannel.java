@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +33,7 @@ public final class ClusterReleaseChannel {
      * * REGULAR: Multiple per month upgrade cadence; Production users who need features not yet offered in the Stable channel.
      * * STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.
      * 
-     */
+    */
     public String getChannel() {
         return this.channel;
     }
@@ -62,7 +62,6 @@ public final class ClusterReleaseChannel {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
-
         public ClusterReleaseChannel build() {
             return new ClusterReleaseChannel(channel);
         }

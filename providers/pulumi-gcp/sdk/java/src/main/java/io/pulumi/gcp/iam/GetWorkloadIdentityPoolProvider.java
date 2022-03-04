@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadIdentityPoolProvider {
-/**
- * Get a IAM workload identity provider from Google Cloud by its id.
+    private GetWorkloadIdentityPoolProvider() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkloadIdentityPoolProviderArgs.Builder a);
+    }
+    private static GetWorkloadIdentityPoolProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkloadIdentityPoolProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a IAM workload identity provider from Google Cloud by its id.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getWorkloadIdentityPoolProvider.
+     *
+     * A collection of arguments for invoking getWorkloadIdentityPoolProvider.
  * 
- *
- * A collection of values returned by getWorkloadIdentityPoolProvider.
+     *
+     * A collection of values returned by getWorkloadIdentityPoolProvider.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkloadIdentityPoolProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a IAM workload identity provider from Google Cloud by its id.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getWorkloadIdentityPoolProvider.
+     * 
+     *
+         * A collection of values returned by getWorkloadIdentityPoolProvider.
+     * 
+     */
     public static CompletableFuture<GetWorkloadIdentityPoolProviderResult> invokeAsync(GetWorkloadIdentityPoolProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:iam/getWorkloadIdentityPoolProvider:getWorkloadIdentityPoolProvider", TypeShape.of(GetWorkloadIdentityPoolProviderResult.class), args == null ? GetWorkloadIdentityPoolProviderArgs.Empty : args, Utilities.withVersion(options));
     }

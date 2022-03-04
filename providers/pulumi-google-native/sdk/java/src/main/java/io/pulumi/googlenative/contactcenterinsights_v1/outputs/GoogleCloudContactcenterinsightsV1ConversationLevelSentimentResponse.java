@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1SentimentDataResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
     /**
      * The channel of the audio that the data applies to.
      * 
-     */
+    */
     public Integer getChannelTag() {
         return this.channelTag;
     }
     /**
      * Data specifying sentiment.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentimentData() {
         return this.sentimentData;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
             this.sentimentData = Objects.requireNonNull(sentimentData);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(channelTag, sentimentData);
         }

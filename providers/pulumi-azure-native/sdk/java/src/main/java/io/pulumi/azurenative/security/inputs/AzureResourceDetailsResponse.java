@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AzureResourceDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -33,7 +33,7 @@ public final class AzureResourceDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -82,7 +82,6 @@ public final class AzureResourceDetailsResponse extends io.pulumi.resources.Invo
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public AzureResourceDetailsResponse build() {
             return new AzureResourceDetailsResponse(id, source);
         }

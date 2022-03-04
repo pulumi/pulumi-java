@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class EncryptionIdentityResponse {
     /**
      * Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
      * 
-     */
+    */
     public Optional<String> getEncryptionUserAssignedIdentity() {
         return Optional.ofNullable(this.encryptionUserAssignedIdentity);
     }
@@ -54,7 +54,6 @@ public final class EncryptionIdentityResponse {
             this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;
         }
-
         public EncryptionIdentityResponse build() {
             return new EncryptionIdentityResponse(encryptionUserAssignedIdentity);
         }

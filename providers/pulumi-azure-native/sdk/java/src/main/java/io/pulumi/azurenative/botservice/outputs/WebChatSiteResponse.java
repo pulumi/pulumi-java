@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class WebChatSiteResponse {
     /**
      * Whether this site is enabled for DirectLine channel
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Whether this site is enabled for preview versions of Webchat
      * 
-     */
+    */
     public Boolean getIsWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
     /**
      * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public String getKey2() {
         return this.key2;
     }
     /**
      * Site Id
      * 
-     */
+    */
     public String getSiteId() {
         return this.siteId;
     }
     /**
      * Site name
      * 
-     */
+    */
     public String getSiteName() {
         return this.siteName;
     }
@@ -159,7 +159,6 @@ public final class WebChatSiteResponse {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
-
         public WebChatSiteResponse build() {
             return new WebChatSiteResponse(isEnabled, isWebchatPreviewEnabled, key, key2, siteId, siteName);
         }

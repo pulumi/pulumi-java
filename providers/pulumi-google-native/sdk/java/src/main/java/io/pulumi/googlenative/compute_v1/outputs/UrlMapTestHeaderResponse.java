@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class UrlMapTestHeaderResponse {
     /**
      * Header name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Header value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class UrlMapTestHeaderResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public UrlMapTestHeaderResponse build() {
             return new UrlMapTestHeaderResponse(name, value);
         }

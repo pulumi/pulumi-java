@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.LiteSubscriptionDeliveryConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deliveryConfig")
-    private final @Nullable Input<LiteSubscriptionDeliveryConfigArgs> deliveryConfig;
+      private final @Nullable Input<LiteSubscriptionDeliveryConfigArgs> deliveryConfig;
 
     public Input<LiteSubscriptionDeliveryConfigArgs> getDeliveryConfig() {
         return this.deliveryConfig == null ? Input.empty() : this.deliveryConfig;
@@ -32,7 +32,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -55,7 +55,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -66,7 +66,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="topic", required=true)
-    private final Input<String> topic;
+      private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;
@@ -77,7 +77,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -196,7 +196,6 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public LiteSubscriptionArgs build() {
             return new LiteSubscriptionArgs(deliveryConfig, name, project, region, topic, zone);
         }

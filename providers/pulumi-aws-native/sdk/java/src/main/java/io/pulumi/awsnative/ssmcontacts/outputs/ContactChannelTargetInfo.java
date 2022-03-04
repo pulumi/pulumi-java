@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmcontacts.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ContactChannelTargetInfo {
     /**
      * The Amazon Resource Name (ARN) of the contact channel.
      * 
-     */
+    */
     public String getChannelId() {
         return this.channelId;
     }
     /**
      * The number of minutes to wait to retry sending engagement in the case the engagement initially fails.
      * 
-     */
+    */
     public Integer getRetryIntervalInMinutes() {
         return this.retryIntervalInMinutes;
     }
@@ -75,7 +75,6 @@ public final class ContactChannelTargetInfo {
             this.retryIntervalInMinutes = Objects.requireNonNull(retryIntervalInMinutes);
             return this;
         }
-
         public ContactChannelTargetInfo build() {
             return new ContactChannelTargetInfo(channelId, retryIntervalInMinutes);
         }

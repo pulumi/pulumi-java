@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.AllowedConfigListArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.AllowedSubjectAltNamesArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.IssuanceModesArgs;
@@ -29,7 +29,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedCommonNames")
-    private final @Nullable Input<List<String>> allowedCommonNames;
+      private final @Nullable Input<List<String>> allowedCommonNames;
 
     public Input<List<String>> getAllowedCommonNames() {
         return this.allowedCommonNames == null ? Input.empty() : this.allowedCommonNames;
@@ -40,7 +40,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedConfigList")
-    private final @Nullable Input<AllowedConfigListArgs> allowedConfigList;
+      private final @Nullable Input<AllowedConfigListArgs> allowedConfigList;
 
     public Input<AllowedConfigListArgs> getAllowedConfigList() {
         return this.allowedConfigList == null ? Input.empty() : this.allowedConfigList;
@@ -51,7 +51,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedIssuanceModes")
-    private final @Nullable Input<IssuanceModesArgs> allowedIssuanceModes;
+      private final @Nullable Input<IssuanceModesArgs> allowedIssuanceModes;
 
     public Input<IssuanceModesArgs> getAllowedIssuanceModes() {
         return this.allowedIssuanceModes == null ? Input.empty() : this.allowedIssuanceModes;
@@ -62,7 +62,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedLocationsAndOrganizations")
-    private final @Nullable Input<List<SubjectArgs>> allowedLocationsAndOrganizations;
+      private final @Nullable Input<List<SubjectArgs>> allowedLocationsAndOrganizations;
 
     public Input<List<SubjectArgs>> getAllowedLocationsAndOrganizations() {
         return this.allowedLocationsAndOrganizations == null ? Input.empty() : this.allowedLocationsAndOrganizations;
@@ -73,7 +73,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedSans")
-    private final @Nullable Input<AllowedSubjectAltNamesArgs> allowedSans;
+      private final @Nullable Input<AllowedSubjectAltNamesArgs> allowedSans;
 
     public Input<AllowedSubjectAltNamesArgs> getAllowedSans() {
         return this.allowedSans == null ? Input.empty() : this.allowedSans;
@@ -84,7 +84,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maximumLifetime")
-    private final @Nullable Input<String> maximumLifetime;
+      private final @Nullable Input<String> maximumLifetime;
 
     public Input<String> getMaximumLifetime() {
         return this.maximumLifetime == null ? Input.empty() : this.maximumLifetime;
@@ -95,7 +95,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="overwriteConfigValues")
-    private final @Nullable Input<ReusableConfigWrapperArgs> overwriteConfigValues;
+      private final @Nullable Input<ReusableConfigWrapperArgs> overwriteConfigValues;
 
     public Input<ReusableConfigWrapperArgs> getOverwriteConfigValues() {
         return this.overwriteConfigValues == null ? Input.empty() : this.overwriteConfigValues;
@@ -229,7 +229,6 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
             this.overwriteConfigValues = Input.ofNullable(overwriteConfigValues);
             return this;
         }
-
         public CertificateAuthorityPolicyArgs build() {
             return new CertificateAuthorityPolicyArgs(allowedCommonNames, allowedConfigList, allowedIssuanceModes, allowedLocationsAndOrganizations, allowedSans, maximumLifetime, overwriteConfigValues);
         }

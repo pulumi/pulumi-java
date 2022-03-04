@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetVirtualMachineScaleSetVMArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetVirtualMachineScaleSetVMArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
@@ -41,7 +41,7 @@ public final class GetVirtualMachineScaleSetVMArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class GetVirtualMachineScaleSetVMArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="vmScaleSetName", required=true)
-    private final String vmScaleSetName;
+      private final String vmScaleSetName;
 
     public String getVmScaleSetName() {
         return this.vmScaleSetName;
@@ -121,7 +121,6 @@ public final class GetVirtualMachineScaleSetVMArgs extends io.pulumi.resources.I
             this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
             return this;
         }
-
         public GetVirtualMachineScaleSetVMArgs build() {
             return new GetVirtualMachineScaleSetVMArgs(expand, instanceId, resourceGroupName, vmScaleSetName);
         }

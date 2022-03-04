@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.inputs.JobCollectionQuotaResponse;
 import io.pulumi.azurenative.scheduler.inputs.SkuResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class JobCollectionPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="quota")
-    private final @Nullable JobCollectionQuotaResponse quota;
+      private final @Nullable JobCollectionQuotaResponse quota;
 
     public Optional<JobCollectionQuotaResponse> getQuota() {
         return this.quota == null ? Optional.empty() : Optional.ofNullable(this.quota);
@@ -32,7 +32,7 @@ public final class JobCollectionPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable SkuResponse sku;
+      private final @Nullable SkuResponse sku;
 
     public Optional<SkuResponse> getSku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
@@ -43,7 +43,7 @@ public final class JobCollectionPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -102,7 +102,6 @@ public final class JobCollectionPropertiesResponse extends io.pulumi.resources.I
             this.state = state;
             return this;
         }
-
         public JobCollectionPropertiesResponse build() {
             return new JobCollectionPropertiesResponse(quota, sku, state);
         }

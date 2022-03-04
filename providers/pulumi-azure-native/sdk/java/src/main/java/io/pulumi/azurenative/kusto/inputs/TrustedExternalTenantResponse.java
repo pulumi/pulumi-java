@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class TrustedExternalTenantResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -61,7 +61,6 @@ public final class TrustedExternalTenantResponse extends io.pulumi.resources.Inv
             this.value = value;
             return this;
         }
-
         public TrustedExternalTenantResponse build() {
             return new TrustedExternalTenantResponse(value);
         }

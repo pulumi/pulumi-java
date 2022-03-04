@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetSpotCapacityRebalance;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class SpotFleetSpotMaintenanceStrategies {
             this.capacityRebalance = capacityRebalance;
             return this;
         }
-
         public SpotFleetSpotMaintenanceStrategies build() {
             return new SpotFleetSpotMaintenanceStrategies(capacityRebalance);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BotInputContext {
     /**
      * The name of the context.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -52,7 +52,6 @@ public final class BotInputContext {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BotInputContext build() {
             return new BotInputContext(name);
         }

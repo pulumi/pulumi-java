@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigAdditionalExtensionArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigCaOptionsArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageArgs;
@@ -25,7 +25,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="additionalExtensions")
-    private final @Nullable Input<List<AuthorityConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
+      private final @Nullable Input<List<AuthorityConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
 
     public Input<List<AuthorityConfigX509ConfigAdditionalExtensionArgs>> getAdditionalExtensions() {
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
@@ -37,7 +37,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="aiaOcspServers")
-    private final @Nullable Input<List<String>> aiaOcspServers;
+      private final @Nullable Input<List<String>> aiaOcspServers;
 
     public Input<List<String>> getAiaOcspServers() {
         return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
@@ -49,7 +49,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="caOptions", required=true)
-    private final Input<AuthorityConfigX509ConfigCaOptionsArgs> caOptions;
+      private final Input<AuthorityConfigX509ConfigCaOptionsArgs> caOptions;
 
     public Input<AuthorityConfigX509ConfigCaOptionsArgs> getCaOptions() {
         return this.caOptions;
@@ -61,7 +61,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="keyUsage", required=true)
-    private final Input<AuthorityConfigX509ConfigKeyUsageArgs> keyUsage;
+      private final Input<AuthorityConfigX509ConfigKeyUsageArgs> keyUsage;
 
     public Input<AuthorityConfigX509ConfigKeyUsageArgs> getKeyUsage() {
         return this.keyUsage;
@@ -73,7 +73,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyIds")
-    private final @Nullable Input<List<AuthorityConfigX509ConfigPolicyIdArgs>> policyIds;
+      private final @Nullable Input<List<AuthorityConfigX509ConfigPolicyIdArgs>> policyIds;
 
     public Input<List<AuthorityConfigX509ConfigPolicyIdArgs>> getPolicyIds() {
         return this.policyIds == null ? Input.empty() : this.policyIds;
@@ -177,7 +177,6 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
             this.policyIds = Input.ofNullable(policyIds);
             return this;
         }
-
         public AuthorityConfigX509ConfigArgs build() {
             return new AuthorityConfigX509ConfigArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

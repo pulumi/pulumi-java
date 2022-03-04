@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.inspectorv2.outputs;
 
 import io.pulumi.awsnative.inspectorv2.enums.FilterStringComparison;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class FilterStringFilter {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FilterStringFilter build() {
             return new FilterStringFilter(comparison, value);
         }

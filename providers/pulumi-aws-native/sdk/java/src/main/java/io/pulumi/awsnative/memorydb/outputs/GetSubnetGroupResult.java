@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.SubnetGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class GetSubnetGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the subnet group.
      * 
-     */
+    */
     public Optional<String> getARN() {
         return Optional.ofNullable(this.aRN);
     }
     /**
      * An optional description of the subnet group.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of VPC subnet IDs for the subnet group.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
     /**
      * An array of key-value pairs to apply to this subnet group.
      * 
-     */
+    */
     public List<SubnetGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -120,7 +120,6 @@ public final class GetSubnetGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetSubnetGroupResult build() {
             return new GetSubnetGroupResult(aRN, description, subnetIds, tags);
         }

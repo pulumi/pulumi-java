@@ -6,7 +6,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityAccessMethodArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityGeneralNameArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -19,14 +19,14 @@ public final class CertificateAuthorityAccessDescriptionArgs extends io.pulumi.r
     public static final CertificateAuthorityAccessDescriptionArgs Empty = new CertificateAuthorityAccessDescriptionArgs();
 
     @InputImport(name="accessLocation", required=true)
-    private final Input<CertificateAuthorityGeneralNameArgs> accessLocation;
+      private final Input<CertificateAuthorityGeneralNameArgs> accessLocation;
 
     public Input<CertificateAuthorityGeneralNameArgs> getAccessLocation() {
         return this.accessLocation;
     }
 
     @InputImport(name="accessMethod", required=true)
-    private final Input<CertificateAuthorityAccessMethodArgs> accessMethod;
+      private final Input<CertificateAuthorityAccessMethodArgs> accessMethod;
 
     public Input<CertificateAuthorityAccessMethodArgs> getAccessMethod() {
         return this.accessMethod;
@@ -85,7 +85,6 @@ public final class CertificateAuthorityAccessDescriptionArgs extends io.pulumi.r
             this.accessMethod = Input.of(Objects.requireNonNull(accessMethod));
             return this;
         }
-
         public CertificateAuthorityAccessDescriptionArgs build() {
             return new CertificateAuthorityAccessDescriptionArgs(accessLocation, accessMethod);
         }

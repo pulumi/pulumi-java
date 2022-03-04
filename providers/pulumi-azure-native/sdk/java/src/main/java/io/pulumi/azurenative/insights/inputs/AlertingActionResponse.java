@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.AzNsActionGroupResponse;
 import io.pulumi.azurenative.insights.inputs.TriggerConditionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="aznsAction")
-    private final @Nullable AzNsActionGroupResponse aznsAction;
+      private final @Nullable AzNsActionGroupResponse aznsAction;
 
     public Optional<AzNsActionGroupResponse> getAznsAction() {
         return this.aznsAction == null ? Optional.empty() : Optional.ofNullable(this.aznsAction);
@@ -38,7 +38,7 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -49,7 +49,7 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="severity", required=true)
-    private final String severity;
+      private final String severity;
 
     public String getSeverity() {
         return this.severity;
@@ -60,7 +60,7 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="throttlingInMin")
-    private final @Nullable Integer throttlingInMin;
+      private final @Nullable Integer throttlingInMin;
 
     public Optional<Integer> getThrottlingInMin() {
         return this.throttlingInMin == null ? Optional.empty() : Optional.ofNullable(this.throttlingInMin);
@@ -71,7 +71,7 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="trigger", required=true)
-    private final TriggerConditionResponse trigger;
+      private final TriggerConditionResponse trigger;
 
     public TriggerConditionResponse getTrigger() {
         return this.trigger;
@@ -150,7 +150,6 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public AlertingActionResponse build() {
             return new AlertingActionResponse(aznsAction, odataType, severity, throttlingInMin, trigger);
         }

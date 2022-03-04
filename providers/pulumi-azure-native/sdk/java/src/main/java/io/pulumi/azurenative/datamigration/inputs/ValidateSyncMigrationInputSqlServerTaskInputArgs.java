@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbSyncDatabaseInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-    private final Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
+      private final Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
 
     public Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -35,7 +35,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
+      private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -46,7 +46,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
+      private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -120,7 +120,6 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
-
         public ValidateSyncMigrationInputSqlServerTaskInputArgs build() {
             return new ValidateSyncMigrationInputSqlServerTaskInputArgs(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }

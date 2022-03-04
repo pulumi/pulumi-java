@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.inputs.GetIntegrationAccountAssemblyArgs;
 import io.pulumi.azurenative.logic.outputs.GetIntegrationAccountAssemblyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationAccountAssembly {
-/**
- * The assembly definition.
+    private GetIntegrationAccountAssembly() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationAccountAssemblyArgs.Builder a);
+    }
+    private static GetIntegrationAccountAssemblyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationAccountAssemblyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The assembly definition.
  * API Version: 2019-05-01.
  * 
- *
- * The assembly definition.
+     *
+     * The assembly definition.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationAccountAssemblyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The assembly definition.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The assembly definition.
+     * 
+     */
     public static CompletableFuture<GetIntegrationAccountAssemblyResult> invokeAsync(GetIntegrationAccountAssemblyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountAssembly", TypeShape.of(GetIntegrationAccountAssemblyResult.class), args == null ? GetIntegrationAccountAssemblyArgs.Empty : args, Utilities.withVersion(options));
     }

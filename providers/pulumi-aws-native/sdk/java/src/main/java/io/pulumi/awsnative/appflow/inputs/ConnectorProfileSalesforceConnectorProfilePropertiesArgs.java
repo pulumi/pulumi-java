@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
      * 
      */
     @InputImport(name="instanceUrl")
-    private final @Nullable Input<String> instanceUrl;
+      private final @Nullable Input<String> instanceUrl;
 
     public Input<String> getInstanceUrl() {
         return this.instanceUrl == null ? Input.empty() : this.instanceUrl;
     }
 
     @InputImport(name="isSandboxEnvironment")
-    private final @Nullable Input<Boolean> isSandboxEnvironment;
+      private final @Nullable Input<Boolean> isSandboxEnvironment;
 
     public Input<Boolean> getIsSandboxEnvironment() {
         return this.isSandboxEnvironment == null ? Input.empty() : this.isSandboxEnvironment;
@@ -86,7 +86,6 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
             this.isSandboxEnvironment = Input.ofNullable(isSandboxEnvironment);
             return this;
         }
-
         public ConnectorProfileSalesforceConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileSalesforceConnectorProfilePropertiesArgs(instanceUrl, isSandboxEnvironment);
         }

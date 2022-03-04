@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentInstanceFilterGroupLabelGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="all")
-    private final @Nullable Input<Boolean> all;
+      private final @Nullable Input<Boolean> all;
 
     public Input<Boolean> getAll() {
         return this.all == null ? Input.empty() : this.all;
@@ -34,7 +34,7 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="groupLabels")
-    private final @Nullable Input<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels;
+      private final @Nullable Input<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels;
 
     public Input<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> getGroupLabels() {
         return this.groupLabels == null ? Input.empty() : this.groupLabels;
@@ -46,7 +46,7 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instanceNamePrefixes")
-    private final @Nullable Input<List<String>> instanceNamePrefixes;
+      private final @Nullable Input<List<String>> instanceNamePrefixes;
 
     public Input<List<String>> getInstanceNamePrefixes() {
         return this.instanceNamePrefixes == null ? Input.empty() : this.instanceNamePrefixes;
@@ -59,7 +59,7 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<String>> instances;
+      private final @Nullable Input<List<String>> instances;
 
     public Input<List<String>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -70,7 +70,7 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -174,7 +174,6 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public PatchDeploymentInstanceFilterGetArgs build() {
             return new PatchDeploymentInstanceFilterGetArgs(all, groupLabels, instanceNamePrefixes, instances, zones);
         }

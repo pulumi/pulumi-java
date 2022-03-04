@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends;
 import io.pulumi.googlenative.compute_alpha.enums.BackendServiceConnectionTrackingPolicyTrackingMode;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="connectionPersistenceOnUnhealthyBackends")
-    private final @Nullable Input<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
+      private final @Nullable Input<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
 
     public Input<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> getConnectionPersistenceOnUnhealthyBackends() {
         return this.connectionPersistenceOnUnhealthyBackends == null ? Input.empty() : this.connectionPersistenceOnUnhealthyBackends;
@@ -37,7 +37,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enableStrongAffinity")
-    private final @Nullable Input<Boolean> enableStrongAffinity;
+      private final @Nullable Input<Boolean> enableStrongAffinity;
 
     public Input<Boolean> getEnableStrongAffinity() {
         return this.enableStrongAffinity == null ? Input.empty() : this.enableStrongAffinity;
@@ -48,7 +48,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="idleTimeoutSec")
-    private final @Nullable Input<Integer> idleTimeoutSec;
+      private final @Nullable Input<Integer> idleTimeoutSec;
 
     public Input<Integer> getIdleTimeoutSec() {
         return this.idleTimeoutSec == null ? Input.empty() : this.idleTimeoutSec;
@@ -59,7 +59,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="trackingMode")
-    private final @Nullable Input<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
+      private final @Nullable Input<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
 
     public Input<BackendServiceConnectionTrackingPolicyTrackingMode> getTrackingMode() {
         return this.trackingMode == null ? Input.empty() : this.trackingMode;
@@ -148,7 +148,6 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
             this.trackingMode = Input.ofNullable(trackingMode);
             return this;
         }
-
         public BackendServiceConnectionTrackingPolicyArgs build() {
             return new BackendServiceConnectionTrackingPolicyArgs(connectionPersistenceOnUnhealthyBackends, enableStrongAffinity, idleTimeoutSec, trackingMode);
         }

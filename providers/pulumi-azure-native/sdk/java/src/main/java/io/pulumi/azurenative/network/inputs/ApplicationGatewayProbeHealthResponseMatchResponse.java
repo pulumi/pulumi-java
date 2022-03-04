@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse extends io
      * 
      */
     @InputImport(name="body")
-    private final @Nullable String body;
+      private final @Nullable String body;
 
     public Optional<String> getBody() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
@@ -35,7 +35,7 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse extends io
      * 
      */
     @InputImport(name="statusCodes")
-    private final @Nullable List<String> statusCodes;
+      private final @Nullable List<String> statusCodes;
 
     public List<String> getStatusCodes() {
         return this.statusCodes == null ? List.of() : this.statusCodes;
@@ -84,7 +84,6 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse extends io
             this.statusCodes = statusCodes;
             return this;
         }
-
         public ApplicationGatewayProbeHealthResponseMatchResponse build() {
             return new ApplicationGatewayProbeHealthResponseMatchResponse(body, statusCodes);
         }

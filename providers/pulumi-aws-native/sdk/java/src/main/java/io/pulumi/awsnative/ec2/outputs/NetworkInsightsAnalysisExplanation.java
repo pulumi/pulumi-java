@@ -10,7 +10,7 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisLoadBalanc
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisRouteTableRoute;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisSecurityGroupRule;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -628,7 +628,6 @@ public final class NetworkInsightsAnalysisExplanation {
             this.vpnGateway = vpnGateway;
             return this;
         }
-
         public NetworkInsightsAnalysisExplanation build() {
             return new NetworkInsightsAnalysisExplanation(acl, aclRule, address, addresses, attachedTo, availabilityZones, cidrs, classicLoadBalancerListener, component, customerGateway, destination, destinationVpc, direction, elasticLoadBalancerListener, explanationCode, ingressRouteTable, internetGateway, loadBalancerArn, loadBalancerListenerPort, loadBalancerTarget, loadBalancerTargetGroup, loadBalancerTargetGroups, loadBalancerTargetPort, missingComponent, natGateway, networkInterface, packetField, port, portRanges, prefixList, protocols, routeTable, routeTableRoute, securityGroup, securityGroupRule, securityGroups, sourceVpc, state, subnet, subnetRouteTable, vpc, vpcEndpoint, vpcPeeringConnection, vpnConnection, vpnGateway);
         }

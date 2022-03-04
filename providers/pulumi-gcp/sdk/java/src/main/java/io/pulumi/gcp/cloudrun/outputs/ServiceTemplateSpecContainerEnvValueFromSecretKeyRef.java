@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
      * The Cloud Secret Manager secret version.
      * Can be 'latest' for the latest value or an integer for a specific version.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Volume's name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -76,7 +76,6 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvValueFromSecretKeyRef build() {
             return new ServiceTemplateSpecContainerEnvValueFromSecretKeyRef(key, name);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.AttestationOccurrenceArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.BuildOccurrenceArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.ComplianceOccurrenceArgs;
@@ -30,7 +30,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation")
-    private final @Nullable Input<AttestationOccurrenceArgs> attestation;
+      private final @Nullable Input<AttestationOccurrenceArgs> attestation;
 
     public Input<AttestationOccurrenceArgs> getAttestation() {
         return this.attestation == null ? Input.empty() : this.attestation;
@@ -41,7 +41,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="build")
-    private final @Nullable Input<BuildOccurrenceArgs> build;
+      private final @Nullable Input<BuildOccurrenceArgs> build;
 
     public Input<BuildOccurrenceArgs> getBuild() {
         return this.build == null ? Input.empty() : this.build;
@@ -52,7 +52,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compliance")
-    private final @Nullable Input<ComplianceOccurrenceArgs> compliance;
+      private final @Nullable Input<ComplianceOccurrenceArgs> compliance;
 
     public Input<ComplianceOccurrenceArgs> getCompliance() {
         return this.compliance == null ? Input.empty() : this.compliance;
@@ -63,7 +63,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployment")
-    private final @Nullable Input<DeploymentOccurrenceArgs> deployment;
+      private final @Nullable Input<DeploymentOccurrenceArgs> deployment;
 
     public Input<DeploymentOccurrenceArgs> getDeployment() {
         return this.deployment == null ? Input.empty() : this.deployment;
@@ -74,7 +74,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="discovery")
-    private final @Nullable Input<DiscoveryOccurrenceArgs> discovery;
+      private final @Nullable Input<DiscoveryOccurrenceArgs> discovery;
 
     public Input<DiscoveryOccurrenceArgs> getDiscovery() {
         return this.discovery == null ? Input.empty() : this.discovery;
@@ -85,7 +85,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dsseAttestation")
-    private final @Nullable Input<DSSEAttestationOccurrenceArgs> dsseAttestation;
+      private final @Nullable Input<DSSEAttestationOccurrenceArgs> dsseAttestation;
 
     public Input<DSSEAttestationOccurrenceArgs> getDsseAttestation() {
         return this.dsseAttestation == null ? Input.empty() : this.dsseAttestation;
@@ -96,7 +96,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envelope")
-    private final @Nullable Input<EnvelopeArgs> envelope;
+      private final @Nullable Input<EnvelopeArgs> envelope;
 
     public Input<EnvelopeArgs> getEnvelope() {
         return this.envelope == null ? Input.empty() : this.envelope;
@@ -107,7 +107,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<ImageOccurrenceArgs> image;
+      private final @Nullable Input<ImageOccurrenceArgs> image;
 
     public Input<ImageOccurrenceArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -118,7 +118,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noteName", required=true)
-    private final Input<String> noteName;
+      private final Input<String> noteName;
 
     public Input<String> getNoteName() {
         return this.noteName;
@@ -129,14 +129,14 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="package")
-    private final @Nullable Input<PackageOccurrenceArgs> $package;
+      private final @Nullable Input<PackageOccurrenceArgs> $package;
 
     public Input<PackageOccurrenceArgs> get$package() {
         return this.$package == null ? Input.empty() : this.$package;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -147,7 +147,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remediation")
-    private final @Nullable Input<String> remediation;
+      private final @Nullable Input<String> remediation;
 
     public Input<String> getRemediation() {
         return this.remediation == null ? Input.empty() : this.remediation;
@@ -158,7 +158,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final Input<String> resourceUri;
+      private final Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri;
@@ -169,7 +169,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgrade")
-    private final @Nullable Input<UpgradeOccurrenceArgs> upgrade;
+      private final @Nullable Input<UpgradeOccurrenceArgs> upgrade;
 
     public Input<UpgradeOccurrenceArgs> getUpgrade() {
         return this.upgrade == null ? Input.empty() : this.upgrade;
@@ -180,7 +180,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vulnerability")
-    private final @Nullable Input<VulnerabilityOccurrenceArgs> vulnerability;
+      private final @Nullable Input<VulnerabilityOccurrenceArgs> vulnerability;
 
     public Input<VulnerabilityOccurrenceArgs> getVulnerability() {
         return this.vulnerability == null ? Input.empty() : this.vulnerability;
@@ -434,7 +434,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.vulnerability = Input.ofNullable(vulnerability);
             return this;
         }
-
         public OccurrenceArgs build() {
             return new OccurrenceArgs(attestation, build, compliance, deployment, discovery, dsseAttestation, envelope, image, noteName, $package, project, remediation, resourceUri, upgrade, vulnerability);
         }

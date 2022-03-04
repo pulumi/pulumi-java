@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="exactMatch")
-    private final @Nullable Input<String> exactMatch;
+      private final @Nullable Input<String> exactMatch;
 
     public Input<String> getExactMatch() {
         return this.exactMatch == null ? Input.empty() : this.exactMatch;
@@ -35,7 +35,7 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="presentMatch")
-    private final @Nullable Input<Boolean> presentMatch;
+      private final @Nullable Input<Boolean> presentMatch;
 
     public Input<Boolean> getPresentMatch() {
         return this.presentMatch == null ? Input.empty() : this.presentMatch;
@@ -57,7 +57,7 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="regexMatch")
-    private final @Nullable Input<String> regexMatch;
+      private final @Nullable Input<String> regexMatch;
 
     public Input<String> getRegexMatch() {
         return this.regexMatch == null ? Input.empty() : this.regexMatch;
@@ -146,7 +146,6 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
             this.regexMatch = Input.ofNullable(regexMatch);
             return this;
         }
-
         public HttpQueryParameterMatchArgs build() {
             return new HttpQueryParameterMatchArgs(exactMatch, name, presentMatch, regexMatch);
         }

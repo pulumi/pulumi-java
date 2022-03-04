@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AnyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="category", required=true)
-    private final String category;
+      private final String category;
 
     public String getCategory() {
         return this.category;
@@ -33,7 +33,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorMessage", required=true)
-    private final String errorMessage;
+      private final String errorMessage;
 
     public String getErrorMessage() {
         return this.errorMessage;
@@ -44,7 +44,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-    private final String severity;
+      private final String severity;
 
     public String getSeverity() {
         return this.severity;
@@ -55,7 +55,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -66,7 +66,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="warning", required=true)
-    private final AnyResponse warning;
+      private final AnyResponse warning;
 
     public AnyResponse getWarning() {
         return this.warning;
@@ -145,7 +145,6 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
             this.warning = Objects.requireNonNull(warning);
             return this;
         }
-
         public TestIssueResponse build() {
             return new TestIssueResponse(category, errorMessage, severity, type, warning);
         }

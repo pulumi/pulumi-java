@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class X12SchemaReferenceResponse {
     /**
      * The message id.
      * 
-     */
+    */
     public String getMessageId() {
         return this.messageId;
     }
     /**
      * The schema name.
      * 
-     */
+    */
     public String getSchemaName() {
         return this.schemaName;
     }
     /**
      * The schema version.
      * 
-     */
+    */
     public String getSchemaVersion() {
         return this.schemaVersion;
     }
     /**
      * The sender application id.
      * 
-     */
+    */
     public Optional<String> getSenderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
@@ -118,7 +118,6 @@ public final class X12SchemaReferenceResponse {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
-
         public X12SchemaReferenceResponse build() {
             return new X12SchemaReferenceResponse(messageId, schemaName, schemaVersion, senderApplicationId);
         }

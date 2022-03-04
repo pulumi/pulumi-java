@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceFileGcsResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceFileRemoteResponse;
 import java.lang.Boolean;
@@ -48,28 +48,28 @@ public final class OSPolicyResourceFileResponse {
     /**
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
      * 
-     */
+    */
     public Boolean getAllowInsecure() {
         return this.allowInsecure;
     }
     /**
      * A Cloud Storage object.
      * 
-     */
+    */
     public OSPolicyResourceFileGcsResponse getGcs() {
         return this.gcs;
     }
     /**
      * A local path within the VM to use.
      * 
-     */
+    */
     public String getLocalPath() {
         return this.localPath;
     }
     /**
      * A generic remote file.
      * 
-     */
+    */
     public OSPolicyResourceFileRemoteResponse getRemote() {
         return this.remote;
     }
@@ -119,7 +119,6 @@ public final class OSPolicyResourceFileResponse {
             this.remote = Objects.requireNonNull(remote);
             return this;
         }
-
         public OSPolicyResourceFileResponse build() {
             return new OSPolicyResourceFileResponse(allowInsecure, gcs, localPath, remote);
         }

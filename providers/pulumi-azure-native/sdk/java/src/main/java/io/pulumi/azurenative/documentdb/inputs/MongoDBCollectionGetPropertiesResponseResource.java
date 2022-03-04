@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * 
      */
     @InputImport(name="analyticalStorageTtl")
-    private final @Nullable Integer analyticalStorageTtl;
+      private final @Nullable Integer analyticalStorageTtl;
 
     public Optional<Integer> getAnalyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
@@ -35,7 +35,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -46,7 +46,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -57,7 +57,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * 
      */
     @InputImport(name="indexes")
-    private final @Nullable List<MongoIndexResponse> indexes;
+      private final @Nullable List<MongoIndexResponse> indexes;
 
     public List<MongoIndexResponse> getIndexes() {
         return this.indexes == null ? List.of() : this.indexes;
@@ -68,7 +68,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * 
      */
     @InputImport(name="rid", required=true)
-    private final String rid;
+      private final String rid;
 
     public String getRid() {
         return this.rid;
@@ -79,7 +79,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * 
      */
     @InputImport(name="shardKey")
-    private final @Nullable Map<String,String> shardKey;
+      private final @Nullable Map<String,String> shardKey;
 
     public Map<String,String> getShardKey() {
         return this.shardKey == null ? Map.of() : this.shardKey;
@@ -90,7 +90,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * 
      */
     @InputImport(name="ts", required=true)
-    private final Double ts;
+      private final Double ts;
 
     public Double getTs() {
         return this.ts;
@@ -189,7 +189,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public MongoDBCollectionGetPropertiesResponseResource build() {
             return new MongoDBCollectionGetPropertiesResponseResource(analyticalStorageTtl, etag, id, indexes, rid, shardKey, ts);
         }

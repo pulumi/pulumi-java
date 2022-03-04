@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class FunctionCode {
     /**
      * ImageUri.
      * 
-     */
+    */
     public Optional<String> getImageUri() {
         return Optional.ofNullable(this.imageUri);
     }
     /**
      * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
      * 
-     */
+    */
     public Optional<String> getS3Bucket() {
         return Optional.ofNullable(this.s3Bucket);
     }
     /**
      * The Amazon S3 key of the deployment package.
      * 
-     */
+    */
     public Optional<String> getS3Key() {
         return Optional.ofNullable(this.s3Key);
     }
     /**
      * For versioned objects, the version of the deployment package object to use.
      * 
-     */
+    */
     public Optional<String> getS3ObjectVersion() {
         return Optional.ofNullable(this.s3ObjectVersion);
     }
     /**
      * The source code of your Lambda function. If you include your function source inline with this parameter, AWS CloudFormation places it in a file named index and zips it to create a deployment package..
      * 
-     */
+    */
     public Optional<String> getZipFile() {
         return Optional.ofNullable(this.zipFile);
     }
@@ -139,7 +139,6 @@ public final class FunctionCode {
             this.zipFile = zipFile;
             return this;
         }
-
         public FunctionCode build() {
             return new FunctionCode(imageUri, s3Bucket, s3Key, s3ObjectVersion, zipFile);
         }

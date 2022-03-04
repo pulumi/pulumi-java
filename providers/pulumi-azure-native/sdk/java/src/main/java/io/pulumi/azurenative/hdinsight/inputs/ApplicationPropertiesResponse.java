@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hdinsight.inputs.ApplicationGetHttpsEndpointRespons
 import io.pulumi.azurenative.hdinsight.inputs.ComputeProfileResponse;
 import io.pulumi.azurenative.hdinsight.inputs.ErrorsResponse;
 import io.pulumi.azurenative.hdinsight.inputs.RuntimeScriptActionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="applicationState", required=true)
-    private final String applicationState;
+      private final String applicationState;
 
     public String getApplicationState() {
         return this.applicationState;
@@ -40,7 +40,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="applicationType")
-    private final @Nullable String applicationType;
+      private final @Nullable String applicationType;
 
     public Optional<String> getApplicationType() {
         return this.applicationType == null ? Optional.empty() : Optional.ofNullable(this.applicationType);
@@ -51,7 +51,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="computeProfile")
-    private final @Nullable ComputeProfileResponse computeProfile;
+      private final @Nullable ComputeProfileResponse computeProfile;
 
     public Optional<ComputeProfileResponse> getComputeProfile() {
         return this.computeProfile == null ? Optional.empty() : Optional.ofNullable(this.computeProfile);
@@ -62,7 +62,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="createdDate", required=true)
-    private final String createdDate;
+      private final String createdDate;
 
     public String getCreatedDate() {
         return this.createdDate;
@@ -73,7 +73,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="errors")
-    private final @Nullable List<ErrorsResponse> errors;
+      private final @Nullable List<ErrorsResponse> errors;
 
     public List<ErrorsResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
@@ -84,7 +84,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="httpsEndpoints")
-    private final @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
+      private final @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
 
     public List<ApplicationGetHttpsEndpointResponse> getHttpsEndpoints() {
         return this.httpsEndpoints == null ? List.of() : this.httpsEndpoints;
@@ -95,7 +95,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="installScriptActions")
-    private final @Nullable List<RuntimeScriptActionResponse> installScriptActions;
+      private final @Nullable List<RuntimeScriptActionResponse> installScriptActions;
 
     public List<RuntimeScriptActionResponse> getInstallScriptActions() {
         return this.installScriptActions == null ? List.of() : this.installScriptActions;
@@ -106,7 +106,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="marketplaceIdentifier", required=true)
-    private final String marketplaceIdentifier;
+      private final String marketplaceIdentifier;
 
     public String getMarketplaceIdentifier() {
         return this.marketplaceIdentifier;
@@ -117,7 +117,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -128,7 +128,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sshEndpoints")
-    private final @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
+      private final @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
 
     public List<ApplicationGetEndpointResponse> getSshEndpoints() {
         return this.sshEndpoints == null ? List.of() : this.sshEndpoints;
@@ -139,7 +139,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="uninstallScriptActions")
-    private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
+      private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
 
     public List<RuntimeScriptActionResponse> getUninstallScriptActions() {
         return this.uninstallScriptActions == null ? List.of() : this.uninstallScriptActions;
@@ -278,7 +278,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
             this.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
-
         public ApplicationPropertiesResponse build() {
             return new ApplicationPropertiesResponse(applicationState, applicationType, computeProfile, createdDate, errors, httpsEndpoints, installScriptActions, marketplaceIdentifier, provisioningState, sshEndpoints, uninstallScriptActions);
         }

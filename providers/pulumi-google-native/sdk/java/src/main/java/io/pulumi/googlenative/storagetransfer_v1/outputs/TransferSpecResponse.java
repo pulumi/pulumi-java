@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.AwsS3DataResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.AzureBlobStorageDataResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.GcsDataResponse;
@@ -116,91 +116,91 @@ public final class TransferSpecResponse {
     /**
      * An AWS S3 data source.
      * 
-     */
+    */
     public AwsS3DataResponse getAwsS3DataSource() {
         return this.awsS3DataSource;
     }
     /**
      * An Azure Blob Storage data source.
      * 
-     */
+    */
     public AzureBlobStorageDataResponse getAzureBlobStorageDataSource() {
         return this.azureBlobStorageDataSource;
     }
     /**
      * A Cloud Storage data sink.
      * 
-     */
+    */
     public GcsDataResponse getGcsDataSink() {
         return this.gcsDataSink;
     }
     /**
      * A Cloud Storage data source.
      * 
-     */
+    */
     public GcsDataResponse getGcsDataSource() {
         return this.gcsDataSource;
     }
     /**
      * Cloud Storage intermediate data location.
      * 
-     */
+    */
     public GcsDataResponse getGcsIntermediateDataLocation() {
         return this.gcsIntermediateDataLocation;
     }
     /**
      * An HTTP URL data source.
      * 
-     */
+    */
     public HttpDataResponse getHttpDataSource() {
         return this.httpDataSource;
     }
     /**
      * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.
      * 
-     */
+    */
     public ObjectConditionsResponse getObjectConditions() {
         return this.objectConditions;
     }
     /**
      * A POSIX Filesystem data sink.
      * 
-     */
+    */
     public PosixFilesystemResponse getPosixDataSink() {
         return this.posixDataSink;
     }
     /**
      * A POSIX Filesystem data source.
      * 
-     */
+    */
     public PosixFilesystemResponse getPosixDataSource() {
         return this.posixDataSource;
     }
     /**
      * Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
      * 
-     */
+    */
     public String getSinkAgentPoolName() {
         return this.sinkAgentPoolName;
     }
     /**
      * Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
      * 
-     */
+    */
     public String getSourceAgentPoolName() {
         return this.sourceAgentPoolName;
     }
     /**
      * A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
      * 
-     */
+    */
     public TransferManifestResponse getTransferManifest() {
         return this.transferManifest;
     }
     /**
      * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
      * 
-     */
+    */
     public TransferOptionsResponse getTransferOptions() {
         return this.transferOptions;
     }
@@ -313,7 +313,6 @@ public final class TransferSpecResponse {
             this.transferOptions = Objects.requireNonNull(transferOptions);
             return this;
         }
-
         public TransferSpecResponse build() {
             return new TransferSpecResponse(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, gcsIntermediateDataLocation, httpDataSource, objectConditions, posixDataSink, posixDataSource, sinkAgentPoolName, sourceAgentPoolName, transferManifest, transferOptions);
         }

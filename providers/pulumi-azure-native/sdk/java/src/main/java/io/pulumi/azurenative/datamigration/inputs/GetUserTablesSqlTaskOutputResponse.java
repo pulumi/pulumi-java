@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.DatabaseTableResponse;
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="databasesToTables", required=true)
-    private final Map<String,List<DatabaseTableResponse>> databasesToTables;
+      private final Map<String,List<DatabaseTableResponse>> databasesToTables;
 
     public Map<String,List<DatabaseTableResponse>> getDatabasesToTables() {
         return this.databasesToTables;
@@ -36,7 +36,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -47,7 +47,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="validationErrors", required=true)
-    private final List<ReportableExceptionResponse> validationErrors;
+      private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
@@ -106,7 +106,6 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public GetUserTablesSqlTaskOutputResponse build() {
             return new GetUserTablesSqlTaskOutputResponse(databasesToTables, id, validationErrors);
         }

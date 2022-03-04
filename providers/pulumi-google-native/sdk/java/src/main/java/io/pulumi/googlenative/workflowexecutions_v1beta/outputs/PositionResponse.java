@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class PositionResponse {
     /**
      * The source code column position (of the line) the current instruction was generated from.
      * 
-     */
+    */
     public String getColumn() {
         return this.column;
     }
     /**
      * The number of bytes of source code making up this stack trace element.
      * 
-     */
+    */
     public String getLength() {
         return this.length;
     }
     /**
      * The source code line number the current instruction was generated from.
      * 
-     */
+    */
     public String getLine() {
         return this.line;
     }
@@ -95,7 +95,6 @@ public final class PositionResponse {
             this.line = Objects.requireNonNull(line);
             return this;
         }
-
         public PositionResponse build() {
             return new PositionResponse(column, length, line);
         }

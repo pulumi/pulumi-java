@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetStateResponseDeprecatedBy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class DatasetStateResponse {
     /**
      * Reference to better Dataset or a Definition
      * 
-     */
+    */
     public Optional<DatasetStateResponseDeprecatedBy> getDeprecatedBy() {
         return Optional.ofNullable(this.deprecatedBy);
     }
     /**
      * eTag description
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Dataset state
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -98,7 +98,6 @@ public final class DatasetStateResponse {
             this.state = state;
             return this;
         }
-
         public DatasetStateResponse build() {
             return new DatasetStateResponse(deprecatedBy, etag, state);
         }

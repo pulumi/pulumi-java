@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identityProvider", required=true)
-    private final String identityProvider;
+      private final String identityProvider;
 
     public String getIdentityProvider() {
         return this.identityProvider;
@@ -32,7 +32,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final String issuer;
+      private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
@@ -43,7 +43,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oidcJwks", required=true)
-    private final String oidcJwks;
+      private final String oidcJwks;
 
     public String getOidcJwks() {
         return this.oidcJwks;
@@ -54,7 +54,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workloadIdentityPool", required=true)
-    private final String workloadIdentityPool;
+      private final String workloadIdentityPool;
 
     public String getWorkloadIdentityPool() {
         return this.workloadIdentityPool;
@@ -123,7 +123,6 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
             this.workloadIdentityPool = Objects.requireNonNull(workloadIdentityPool);
             return this;
         }
-
         public AuthorityResponse build() {
             return new AuthorityResponse(identityProvider, issuer, oidcJwks, workloadIdentityPool);
         }

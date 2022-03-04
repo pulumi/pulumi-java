@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class LicenseResourceCommitmentResponse {
     /**
      * The number of licenses purchased.
      * 
-     */
+    */
     public String getAmount() {
         return this.amount;
     }
     /**
      * Specifies the core range of the instance for which this license applies.
      * 
-     */
+    */
     public String getCoresPerLicense() {
         return this.coresPerLicense;
     }
     /**
      * Any applicable license URI.
      * 
-     */
+    */
     public String getLicense() {
         return this.license;
     }
@@ -95,7 +95,6 @@ public final class LicenseResourceCommitmentResponse {
             this.license = Objects.requireNonNull(license);
             return this;
         }
-
         public LicenseResourceCommitmentResponse build() {
             return new LicenseResourceCommitmentResponse(amount, coresPerLicense, license);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="voiceId", required=true)
-    private final Input<String> voiceId;
+      private final Input<String> voiceId;
 
     public Input<String> getVoiceId() {
         return this.voiceId;
@@ -65,7 +65,6 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.voiceId = Input.of(Objects.requireNonNull(voiceId));
             return this;
         }
-
         public BotVoiceSettingsArgs build() {
             return new BotVoiceSettingsArgs(voiceId);
         }

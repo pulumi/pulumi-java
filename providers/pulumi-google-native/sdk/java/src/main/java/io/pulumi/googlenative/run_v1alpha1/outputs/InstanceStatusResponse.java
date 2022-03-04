@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.InstanceAttemptResultResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -75,56 +75,56 @@ public final class InstanceStatusResponse {
     /**
      * Optional. Represents time when the instance was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
-     */
+    */
     public String getCompletionTime() {
         return this.completionTime;
     }
     /**
      * Optional. The number of times this instance exited with code > 0; +optional
      * 
-     */
+    */
     public Integer getFailed() {
         return this.failed;
     }
     /**
      * Index of the instance, unique per Job, and beginning at 0.
      * 
-     */
+    */
     public Integer getIndex() {
         return this.index;
     }
     /**
      * Optional. Result of the last attempt of this instance. +optional
      * 
-     */
+    */
     public InstanceAttemptResultResponse getLastAttemptResult() {
         return this.lastAttemptResult;
     }
     /**
      * Optional. Last exit code seen for this instance. +optional
      * 
-     */
+    */
     public Integer getLastExitCode() {
         return this.lastExitCode;
     }
     /**
      * Optional. The number of times this instance was restarted. Instances are restarted according the restartPolicy configured in the Job template. +optional
      * 
-     */
+    */
     public Integer getRestarted() {
         return this.restarted;
     }
     /**
      * Optional. Represents time when the instance was created by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Optional. The number of times this instance exited with code == 0. +optional
      * 
-     */
+    */
     public Integer getSucceeded() {
         return this.succeeded;
     }
@@ -202,7 +202,6 @@ public final class InstanceStatusResponse {
             this.succeeded = Objects.requireNonNull(succeeded);
             return this;
         }
-
         public InstanceStatusResponse build() {
             return new InstanceStatusResponse(completionTime, failed, index, lastAttemptResult, lastExitCode, restarted, startTime, succeeded);
         }

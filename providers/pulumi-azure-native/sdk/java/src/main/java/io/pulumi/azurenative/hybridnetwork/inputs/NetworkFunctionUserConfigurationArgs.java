@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurationOsProfileArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkInterfaceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Input<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -38,7 +38,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="osProfile")
-    private final @Nullable Input<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
+      private final @Nullable Input<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
 
     public Input<NetworkFunctionUserConfigurationOsProfileArgs> getOsProfile() {
         return this.osProfile == null ? Input.empty() : this.osProfile;
@@ -49,7 +49,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="roleName")
-    private final @Nullable Input<String> roleName;
+      private final @Nullable Input<String> roleName;
 
     public Input<String> getRoleName() {
         return this.roleName == null ? Input.empty() : this.roleName;
@@ -60,7 +60,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userDataParameters")
-    private final @Nullable Input<Object> userDataParameters;
+      private final @Nullable Input<Object> userDataParameters;
 
     public Input<Object> getUserDataParameters() {
         return this.userDataParameters == null ? Input.empty() : this.userDataParameters;
@@ -149,7 +149,6 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
             this.userDataParameters = Input.ofNullable(userDataParameters);
             return this;
         }
-
         public NetworkFunctionUserConfigurationArgs build() {
             return new NetworkFunctionUserConfigurationArgs(networkInterfaces, osProfile, roleName, userDataParameters);
         }

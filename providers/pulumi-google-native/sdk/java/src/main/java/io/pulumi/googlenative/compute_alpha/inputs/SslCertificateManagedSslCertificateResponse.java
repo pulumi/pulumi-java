@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class SslCertificateManagedSslCertificateResponse extends io.pulumi
      * 
      */
     @InputImport(name="domainStatus", required=true)
-    private final Map<String,String> domainStatus;
+      private final Map<String,String> domainStatus;
 
     public Map<String,String> getDomainStatus() {
         return this.domainStatus;
@@ -34,7 +34,7 @@ public final class SslCertificateManagedSslCertificateResponse extends io.pulumi
      * 
      */
     @InputImport(name="domains", required=true)
-    private final List<String> domains;
+      private final List<String> domains;
 
     public List<String> getDomains() {
         return this.domains;
@@ -45,7 +45,7 @@ public final class SslCertificateManagedSslCertificateResponse extends io.pulumi
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -104,7 +104,6 @@ public final class SslCertificateManagedSslCertificateResponse extends io.pulumi
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public SslCertificateManagedSslCertificateResponse build() {
             return new SslCertificateManagedSslCertificateResponse(domainStatus, domains, status);
         }

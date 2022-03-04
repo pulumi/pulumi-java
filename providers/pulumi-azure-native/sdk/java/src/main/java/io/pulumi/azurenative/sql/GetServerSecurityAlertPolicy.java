@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.inputs.GetServerSecurityAlertPolicyArgs;
 import io.pulumi.azurenative.sql.outputs.GetServerSecurityAlertPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerSecurityAlertPolicy {
-/**
- * A server security alert policy.
+    private GetServerSecurityAlertPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerSecurityAlertPolicyArgs.Builder a);
+    }
+    private static GetServerSecurityAlertPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerSecurityAlertPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A server security alert policy.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A server security alert policy.
+     *
+     * A server security alert policy.
  * 
- */
+     */
+    public static CompletableFuture<GetServerSecurityAlertPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A server security alert policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A server security alert policy.
+     * 
+     */
     public static CompletableFuture<GetServerSecurityAlertPolicyResult> invokeAsync(GetServerSecurityAlertPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerSecurityAlertPolicy", TypeShape.of(GetServerSecurityAlertPolicyResult.class), args == null ? GetServerSecurityAlertPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

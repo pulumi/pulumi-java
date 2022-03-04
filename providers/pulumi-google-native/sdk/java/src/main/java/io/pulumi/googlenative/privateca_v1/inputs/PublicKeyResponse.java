@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PublicKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="format", required=true)
-    private final String format;
+      private final String format;
 
     public String getFormat() {
         return this.format;
@@ -32,7 +32,7 @@ public final class PublicKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -81,7 +81,6 @@ public final class PublicKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public PublicKeyResponse build() {
             return new PublicKeyResponse(format, key);
         }

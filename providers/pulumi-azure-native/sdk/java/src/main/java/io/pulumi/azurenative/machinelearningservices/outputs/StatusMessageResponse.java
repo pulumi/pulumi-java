@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class StatusMessageResponse {
     /**
      * Service-defined message code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Time in UTC at which the message was created.
      * 
-     */
+    */
     public String getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * Severity level of the status message.
      * 
-     */
+    */
     public String getLevel() {
         return this.level;
     }
     /**
      * A human-readable representation of the message code.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
@@ -116,7 +116,6 @@ public final class StatusMessageResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public StatusMessageResponse build() {
             return new StatusMessageResponse(code, createdTimeUtc, level, message);
         }

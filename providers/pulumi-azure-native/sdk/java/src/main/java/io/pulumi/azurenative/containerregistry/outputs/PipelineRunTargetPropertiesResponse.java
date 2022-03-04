@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class PipelineRunTargetPropertiesResponse {
     /**
      * The name of the target.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the target.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -76,7 +76,6 @@ public final class PipelineRunTargetPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public PipelineRunTargetPropertiesResponse build() {
             return new PipelineRunTargetPropertiesResponse(name, type);
         }

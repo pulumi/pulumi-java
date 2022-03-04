@@ -5,8 +5,8 @@ package io.pulumi.gcp.tpu;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tpu.NodeArgs;
 import io.pulumi.gcp.tpu.inputs.NodeState;
@@ -269,6 +269,37 @@ public class Node extends io.pulumi.resources.CustomResource {
         return this.zone;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NodeArgs.Builder a);
+    }
+    private static io.pulumi.gcp.tpu.NodeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.tpu.NodeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Node(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Node(String name) {
+        this(name, NodeArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Node(String name, NodeArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

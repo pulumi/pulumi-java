@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.ContentLinkArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final Input<String> automationAccountName;
+      private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -32,7 +32,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentLink", required=true)
-    private final Input<ContentLinkArgs> contentLink;
+      private final Input<ContentLinkArgs> contentLink;
 
     public Input<ContentLinkArgs> getContentLink() {
         return this.contentLink;
@@ -43,7 +43,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageName")
-    private final @Nullable Input<String> packageName;
+      private final @Nullable Input<String> packageName;
 
     public Input<String> getPackageName() {
         return this.packageName == null ? Input.empty() : this.packageName;
@@ -54,7 +54,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,6 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public Python2PackageArgs build() {
             return new Python2PackageArgs(automationAccountName, contentLink, packageName, resourceGroupName, tags);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devops.inputs;
 
 import io.pulumi.azurenative.devops.inputs.CodeRepositoryResponse;
 import io.pulumi.azurenative.devops.inputs.PipelineTemplateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class BootstrapConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sourceRepository")
-    private final @Nullable CodeRepositoryResponse sourceRepository;
+      private final @Nullable CodeRepositoryResponse sourceRepository;
 
     public Optional<CodeRepositoryResponse> getSourceRepository() {
         return this.sourceRepository == null ? Optional.empty() : Optional.ofNullable(this.sourceRepository);
@@ -35,7 +35,7 @@ public final class BootstrapConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="template", required=true)
-    private final PipelineTemplateResponse template;
+      private final PipelineTemplateResponse template;
 
     public PipelineTemplateResponse getTemplate() {
         return this.template;
@@ -84,7 +84,6 @@ public final class BootstrapConfigurationResponse extends io.pulumi.resources.In
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public BootstrapConfigurationResponse build() {
             return new BootstrapConfigurationResponse(sourceRepository, template);
         }

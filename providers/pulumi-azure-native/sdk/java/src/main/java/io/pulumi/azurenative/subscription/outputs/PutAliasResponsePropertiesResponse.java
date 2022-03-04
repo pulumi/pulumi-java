@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.subscription.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class PutAliasResponsePropertiesResponse {
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Newly created subscription Id.
      * 
-     */
+    */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
@@ -76,7 +76,6 @@ public final class PutAliasResponsePropertiesResponse {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public PutAliasResponsePropertiesResponse build() {
             return new PutAliasResponsePropertiesResponse(provisioningState, subscriptionId);
         }

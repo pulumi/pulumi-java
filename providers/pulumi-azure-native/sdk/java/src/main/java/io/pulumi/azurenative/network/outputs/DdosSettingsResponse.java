@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class DdosSettingsResponse {
     /**
      * The DDoS custom policy associated with the public IP.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getDdosCustomPolicy() {
         return Optional.ofNullable(this.ddosCustomPolicy);
     }
     /**
      * Enables DDoS protection on the public IP.
      * 
-     */
+    */
     public Optional<Boolean> getProtectedIP() {
         return Optional.ofNullable(this.protectedIP);
     }
     /**
      * The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
      * 
-     */
+    */
     public Optional<String> getProtectionCoverage() {
         return Optional.ofNullable(this.protectionCoverage);
     }
@@ -99,7 +99,6 @@ public final class DdosSettingsResponse {
             this.protectionCoverage = protectionCoverage;
             return this;
         }
-
         public DdosSettingsResponse build() {
             return new DdosSettingsResponse(ddosCustomPolicy, protectedIP, protectionCoverage);
         }

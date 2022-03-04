@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -87,7 +87,7 @@ public final class AzureStorageContainerResponse {
     /**
      * Type of backup management for the container.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -98,56 +98,56 @@ public final class AzureStorageContainerResponse {
      * Backup is VMAppContainer
      * Expected value is 'StorageContainer'.
      * 
-     */
+    */
     public String getContainerType() {
         return this.containerType;
     }
     /**
      * Friendly name of the container.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
-     */
+    */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Number of items backed up in this container.
      * 
-     */
+    */
     public Optional<Double> getProtectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
-     */
+    */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
      * Resource group name of Recovery Services Vault.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * Fully qualified ARM url.
      * 
-     */
+    */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Storage account version.
      * 
-     */
+    */
     public Optional<String> getStorageAccountVersion() {
         return Optional.ofNullable(this.storageAccountVersion);
     }
@@ -232,7 +232,6 @@ public final class AzureStorageContainerResponse {
             this.storageAccountVersion = storageAccountVersion;
             return this;
         }
-
         public AzureStorageContainerResponse build() {
             return new AzureStorageContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, protectedItemCount, registrationStatus, resourceGroup, sourceResourceId, storageAccountVersion);
         }

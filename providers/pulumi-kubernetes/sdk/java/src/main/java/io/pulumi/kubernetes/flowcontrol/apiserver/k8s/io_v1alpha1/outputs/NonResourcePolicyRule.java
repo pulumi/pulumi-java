@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,14 +44,14 @@ public final class NonResourcePolicyRule {
      *   - "/healthz/*" matches all per-component health checks.
      *     "*" matches all non-resource urls. if it is present, it must be the only entry. Required.
      * 
-     */
+    */
     public List<String> getNonResourceURLs() {
         return this.nonResourceURLs;
     }
     /**
      * `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.
      * 
-     */
+    */
     public List<String> getVerbs() {
         return this.verbs;
     }
@@ -87,7 +87,6 @@ public final class NonResourcePolicyRule {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-
         public NonResourcePolicyRule build() {
             return new NonResourcePolicyRule(nonResourceURLs, verbs);
         }

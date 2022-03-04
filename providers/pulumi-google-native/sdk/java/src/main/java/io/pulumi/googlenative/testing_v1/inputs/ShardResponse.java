@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.TestTargetsForShardResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="numShards", required=true)
-    private final Integer numShards;
+      private final Integer numShards;
 
     public Integer getNumShards() {
         return this.numShards;
@@ -33,7 +33,7 @@ public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="shardIndex", required=true)
-    private final Integer shardIndex;
+      private final Integer shardIndex;
 
     public Integer getShardIndex() {
         return this.shardIndex;
@@ -44,7 +44,7 @@ public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="testTargetsForShard", required=true)
-    private final TestTargetsForShardResponse testTargetsForShard;
+      private final TestTargetsForShardResponse testTargetsForShard;
 
     public TestTargetsForShardResponse getTestTargetsForShard() {
         return this.testTargetsForShard;
@@ -103,7 +103,6 @@ public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
             this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
             return this;
         }
-
         public ShardResponse build() {
             return new ShardResponse(numShards, shardIndex, testTargetsForShard);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.RetentionPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -92,70 +92,70 @@ public final class GetLogProfileResult {
     /**
      * the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
      * 
-     */
+    */
     public List<String> getCategories() {
         return this.categories;
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * the retention policy for the events in the log.
      * 
-     */
+    */
     public RetentionPolicyResponse getRetentionPolicy() {
         return this.retentionPolicy;
     }
     /**
      * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
      * 
-     */
+    */
     public Optional<String> getServiceBusRuleId() {
         return Optional.ofNullable(this.serviceBusRuleId);
     }
     /**
      * the resource id of the storage account to which you would like to send the Activity Log.
      * 
-     */
+    */
     public Optional<String> getStorageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -247,7 +247,6 @@ public final class GetLogProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLogProfileResult build() {
             return new GetLogProfileResult(categories, id, location, locations, name, retentionPolicy, serviceBusRuleId, storageAccountId, tags, type);
         }

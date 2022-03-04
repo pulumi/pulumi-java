@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudtrail.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetTrailArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTrailArgs Empty = new GetTrailArgs();
 
     @InputImport(name="trailName", required=true)
-    private final String trailName;
+      private final String trailName;
 
     public String getTrailName() {
         return this.trailName;
@@ -51,7 +51,6 @@ public final class GetTrailArgs extends io.pulumi.resources.InvokeArgs {
             this.trailName = Objects.requireNonNull(trailName);
             return this;
         }
-
         public GetTrailArgs build() {
             return new GetTrailArgs(trailName);
         }

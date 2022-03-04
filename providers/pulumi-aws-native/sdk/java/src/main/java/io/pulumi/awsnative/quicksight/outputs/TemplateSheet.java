@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class TemplateSheet {
      * <p>The name of a sheet. This name is displayed on the sheet's tab in the QuickSight
      *             console.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>The unique identifier associated with a sheet.</p>
      * 
-     */
+    */
     public Optional<String> getSheetId() {
         return Optional.ofNullable(this.sheetId);
     }
@@ -78,7 +78,6 @@ public final class TemplateSheet {
             this.sheetId = sheetId;
             return this;
         }
-
         public TemplateSheet build() {
             return new TemplateSheet(name, sheetId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="commonName")
-    private final @Nullable String commonName;
+      private final @Nullable String commonName;
 
     public Optional<String> getCommonName() {
         return this.commonName == null ? Optional.empty() : Optional.ofNullable(this.commonName);
@@ -35,7 +35,7 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="isAdmin", required=true)
-    private final Boolean isAdmin;
+      private final Boolean isAdmin;
 
     public Boolean getIsAdmin() {
         return this.isAdmin;
@@ -46,7 +46,7 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="issuerThumbprint")
-    private final @Nullable String issuerThumbprint;
+      private final @Nullable String issuerThumbprint;
 
     public Optional<String> getIssuerThumbprint() {
         return this.issuerThumbprint == null ? Optional.empty() : Optional.ofNullable(this.issuerThumbprint);
@@ -57,7 +57,7 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable String thumbprint;
+      private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
@@ -126,7 +126,6 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
             this.thumbprint = thumbprint;
             return this;
         }
-
         public ClientCertificateResponse build() {
             return new ClientCertificateResponse(commonName, isAdmin, issuerThumbprint, thumbprint);
         }

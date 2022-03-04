@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorCapacity;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,7 +33,7 @@ public final class GetConnectorResult {
     /**
      * Amazon Resource Name for the created Connector.
      * 
-     */
+    */
     public Optional<String> getConnectorArn() {
         return Optional.ofNullable(this.connectorArn);
     }
@@ -69,7 +69,6 @@ public final class GetConnectorResult {
             this.connectorArn = connectorArn;
             return this;
         }
-
         public GetConnectorResult build() {
             return new GetConnectorResult(capacity, connectorArn);
         }

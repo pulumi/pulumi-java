@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     /**
      * The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
      * 
-     */
+    */
     public String getSsml() {
         return this.ssml;
     }
     /**
      * The raw text to be synthesized.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(ssml, text);
         }

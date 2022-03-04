@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,28 +53,28 @@ public final class RsaTokenKeyResponse {
     /**
      * RSA algorithm to be used: RS256, RS384 or RS512.
      * 
-     */
+    */
     public String getAlg() {
         return this.alg;
     }
     /**
      * RSA public key exponent.
      * 
-     */
+    */
     public String getE() {
         return this.e;
     }
     /**
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
      * 
-     */
+    */
     public String getKid() {
         return this.kid;
     }
     /**
      * RSA public key modulus.
      * 
-     */
+    */
     public String getN() {
         return this.n;
     }
@@ -82,7 +82,7 @@ public final class RsaTokenKeyResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.RsaTokenKey'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class RsaTokenKeyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RsaTokenKeyResponse build() {
             return new RsaTokenKeyResponse(alg, e, kid, n, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.AttachedVolumeArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerImageArgs;
 import io.pulumi.kubernetes.core_v1.inputs.NodeAddressArgs;
@@ -32,7 +32,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addresses")
-    private final @Nullable Input<List<NodeAddressArgs>> addresses;
+      private final @Nullable Input<List<NodeAddressArgs>> addresses;
 
     public Input<List<NodeAddressArgs>> getAddresses() {
         return this.addresses == null ? Input.empty() : this.addresses;
@@ -43,7 +43,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocatable")
-    private final @Nullable Input<Map<String,String>> allocatable;
+      private final @Nullable Input<Map<String,String>> allocatable;
 
     public Input<Map<String,String>> getAllocatable() {
         return this.allocatable == null ? Input.empty() : this.allocatable;
@@ -54,7 +54,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Map<String,String>> capacity;
+      private final @Nullable Input<Map<String,String>> capacity;
 
     public Input<Map<String,String>> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -65,7 +65,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<NodeConditionArgs>> conditions;
+      private final @Nullable Input<List<NodeConditionArgs>> conditions;
 
     public Input<List<NodeConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -76,7 +76,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<NodeConfigStatusArgs> config;
+      private final @Nullable Input<NodeConfigStatusArgs> config;
 
     public Input<NodeConfigStatusArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -87,7 +87,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="daemonEndpoints")
-    private final @Nullable Input<NodeDaemonEndpointsArgs> daemonEndpoints;
+      private final @Nullable Input<NodeDaemonEndpointsArgs> daemonEndpoints;
 
     public Input<NodeDaemonEndpointsArgs> getDaemonEndpoints() {
         return this.daemonEndpoints == null ? Input.empty() : this.daemonEndpoints;
@@ -98,7 +98,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="images")
-    private final @Nullable Input<List<ContainerImageArgs>> images;
+      private final @Nullable Input<List<ContainerImageArgs>> images;
 
     public Input<List<ContainerImageArgs>> getImages() {
         return this.images == null ? Input.empty() : this.images;
@@ -109,7 +109,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeInfo")
-    private final @Nullable Input<NodeSystemInfoArgs> nodeInfo;
+      private final @Nullable Input<NodeSystemInfoArgs> nodeInfo;
 
     public Input<NodeSystemInfoArgs> getNodeInfo() {
         return this.nodeInfo == null ? Input.empty() : this.nodeInfo;
@@ -125,7 +125,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phase")
-    private final @Nullable Input<String> phase;
+      private final @Nullable Input<String> phase;
 
     public Input<String> getPhase() {
         return this.phase == null ? Input.empty() : this.phase;
@@ -136,7 +136,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumesAttached")
-    private final @Nullable Input<List<AttachedVolumeArgs>> volumesAttached;
+      private final @Nullable Input<List<AttachedVolumeArgs>> volumesAttached;
 
     public Input<List<AttachedVolumeArgs>> getVolumesAttached() {
         return this.volumesAttached == null ? Input.empty() : this.volumesAttached;
@@ -147,7 +147,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumesInUse")
-    private final @Nullable Input<List<String>> volumesInUse;
+      private final @Nullable Input<List<String>> volumesInUse;
 
     public Input<List<String>> getVolumesInUse() {
         return this.volumesInUse == null ? Input.empty() : this.volumesInUse;
@@ -341,7 +341,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.volumesInUse = Input.ofNullable(volumesInUse);
             return this;
         }
-
         public NodeStatusArgs build() {
             return new NodeStatusArgs(addresses, allocatable, capacity, conditions, config, daemonEndpoints, images, nodeInfo, phase, volumesAttached, volumesInUse);
         }

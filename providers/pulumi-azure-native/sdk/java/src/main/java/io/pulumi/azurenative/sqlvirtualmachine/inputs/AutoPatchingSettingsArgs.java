@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.enums.DayOfWeek;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dayOfWeek")
-    private final @Nullable Input<DayOfWeek> dayOfWeek;
+      private final @Nullable Input<DayOfWeek> dayOfWeek;
 
     public Input<DayOfWeek> getDayOfWeek() {
         return this.dayOfWeek == null ? Input.empty() : this.dayOfWeek;
@@ -36,7 +36,7 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -47,7 +47,7 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maintenanceWindowDuration")
-    private final @Nullable Input<Integer> maintenanceWindowDuration;
+      private final @Nullable Input<Integer> maintenanceWindowDuration;
 
     public Input<Integer> getMaintenanceWindowDuration() {
         return this.maintenanceWindowDuration == null ? Input.empty() : this.maintenanceWindowDuration;
@@ -58,7 +58,7 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maintenanceWindowStartingHour")
-    private final @Nullable Input<Integer> maintenanceWindowStartingHour;
+      private final @Nullable Input<Integer> maintenanceWindowStartingHour;
 
     public Input<Integer> getMaintenanceWindowStartingHour() {
         return this.maintenanceWindowStartingHour == null ? Input.empty() : this.maintenanceWindowStartingHour;
@@ -147,7 +147,6 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
             this.maintenanceWindowStartingHour = Input.ofNullable(maintenanceWindowStartingHour);
             return this;
         }
-
         public AutoPatchingSettingsArgs build() {
             return new AutoPatchingSettingsArgs(dayOfWeek, enable, maintenanceWindowDuration, maintenanceWindowStartingHour);
         }

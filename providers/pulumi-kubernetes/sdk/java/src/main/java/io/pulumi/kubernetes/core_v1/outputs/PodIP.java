@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class PodIP {
     /**
      * ip is an IP address (IPv4 or IPv6) assigned to the pod
      * 
-     */
+    */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
@@ -54,7 +54,6 @@ public final class PodIP {
             this.ip = ip;
             return this;
         }
-
         public PodIP build() {
             return new PodIP(ip);
         }

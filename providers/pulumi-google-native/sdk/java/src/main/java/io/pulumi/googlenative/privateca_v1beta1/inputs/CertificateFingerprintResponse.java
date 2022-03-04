@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CertificateFingerprintResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sha256Hash", required=true)
-    private final String sha256Hash;
+      private final String sha256Hash;
 
     public String getSha256Hash() {
         return this.sha256Hash;
@@ -59,7 +59,6 @@ public final class CertificateFingerprintResponse extends io.pulumi.resources.In
             this.sha256Hash = Objects.requireNonNull(sha256Hash);
             return this;
         }
-
         public CertificateFingerprintResponse build() {
             return new CertificateFingerprintResponse(sha256Hash);
         }

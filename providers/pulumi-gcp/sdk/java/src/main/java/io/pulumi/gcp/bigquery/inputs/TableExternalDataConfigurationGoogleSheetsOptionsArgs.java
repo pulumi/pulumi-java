@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Input<String> range;
+      private final @Nullable Input<String> range;
 
     public Input<String> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -34,7 +34,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
      * 
      */
     @InputImport(name="skipLeadingRows")
-    private final @Nullable Input<Integer> skipLeadingRows;
+      private final @Nullable Input<Integer> skipLeadingRows;
 
     public Input<Integer> getSkipLeadingRows() {
         return this.skipLeadingRows == null ? Input.empty() : this.skipLeadingRows;
@@ -93,7 +93,6 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
             this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
             return this;
         }
-
         public TableExternalDataConfigurationGoogleSheetsOptionsArgs build() {
             return new TableExternalDataConfigurationGoogleSheetsOptionsArgs(range, skipLeadingRows);
         }

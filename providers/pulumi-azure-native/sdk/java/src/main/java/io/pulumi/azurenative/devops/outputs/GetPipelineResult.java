@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devops.outputs;
 
 import io.pulumi.azurenative.devops.outputs.BootstrapConfigurationResponse;
 import io.pulumi.azurenative.devops.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -86,63 +86,63 @@ public final class GetPipelineResult {
     /**
      * Configuration used to bootstrap the Pipeline.
      * 
-     */
+    */
     public BootstrapConfigurationResponse getBootstrapConfiguration() {
         return this.bootstrapConfiguration;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource Location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource Name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Unique identifier of the Pipeline
      * 
-     */
+    */
     public Integer getPipelineId() {
         return this.pipelineId;
     }
     /**
      * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
      * 
-     */
+    */
     public String getPipelineType() {
         return this.pipelineType;
     }
     /**
      * The system metadata pertaining to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource Tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource Type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -227,7 +227,6 @@ public final class GetPipelineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPipelineResult build() {
             return new GetPipelineResult(bootstrapConfiguration, id, location, name, pipelineId, pipelineType, systemData, tags, type);
         }

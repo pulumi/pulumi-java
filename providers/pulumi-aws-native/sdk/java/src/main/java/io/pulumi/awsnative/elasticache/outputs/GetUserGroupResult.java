@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class GetUserGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the user account.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates user group status. Can be "creating", "active", "modifying", "deleting".
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * List of users associated to this user group.
      * 
-     */
+    */
     public List<String> getUserIds() {
         return this.userIds == null ? List.of() : this.userIds;
     }
@@ -98,7 +98,6 @@ public final class GetUserGroupResult {
             this.userIds = userIds;
             return this;
         }
-
         public GetUserGroupResult build() {
             return new GetUserGroupResult(arn, status, userIds);
         }

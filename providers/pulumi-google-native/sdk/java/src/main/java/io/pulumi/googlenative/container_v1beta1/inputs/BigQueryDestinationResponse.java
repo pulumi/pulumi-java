@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BigQueryDestinationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
@@ -59,7 +59,6 @@ public final class BigQueryDestinationResponse extends io.pulumi.resources.Invok
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public BigQueryDestinationResponse build() {
             return new BigQueryDestinationResponse(datasetId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AppImageConfigKernelSpec {
     /**
      * The display name of the kernel.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The name of the kernel.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -76,7 +76,6 @@ public final class AppImageConfigKernelSpec {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AppImageConfigKernelSpec build() {
             return new AppImageConfigKernelSpec(displayName, name);
         }

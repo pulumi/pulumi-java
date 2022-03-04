@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ConfigMapVolumeSourceArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.SecretVolumeSourceArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     public static final VolumeArgs Empty = new VolumeArgs();
 
     @InputImport(name="configMap")
-    private final @Nullable Input<ConfigMapVolumeSourceArgs> configMap;
+      private final @Nullable Input<ConfigMapVolumeSourceArgs> configMap;
 
     public Input<ConfigMapVolumeSourceArgs> getConfigMap() {
         return this.configMap == null ? Input.empty() : this.configMap;
@@ -32,14 +32,14 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="secret")
-    private final @Nullable Input<SecretVolumeSourceArgs> secret;
+      private final @Nullable Input<SecretVolumeSourceArgs> secret;
 
     public Input<SecretVolumeSourceArgs> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -113,7 +113,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.secret = Input.ofNullable(secret);
             return this;
         }
-
         public VolumeArgs build() {
             return new VolumeArgs(configMap, name, secret);
         }

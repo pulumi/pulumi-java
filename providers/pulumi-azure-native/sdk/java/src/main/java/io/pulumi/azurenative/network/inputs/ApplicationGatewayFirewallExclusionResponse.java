@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApplicationGatewayFirewallExclusionResponse extends io.pulumi
      * 
      */
     @InputImport(name="matchVariable", required=true)
-    private final String matchVariable;
+      private final String matchVariable;
 
     public String getMatchVariable() {
         return this.matchVariable;
@@ -32,7 +32,7 @@ public final class ApplicationGatewayFirewallExclusionResponse extends io.pulumi
      * 
      */
     @InputImport(name="selector", required=true)
-    private final String selector;
+      private final String selector;
 
     public String getSelector() {
         return this.selector;
@@ -43,7 +43,7 @@ public final class ApplicationGatewayFirewallExclusionResponse extends io.pulumi
      * 
      */
     @InputImport(name="selectorMatchOperator", required=true)
-    private final String selectorMatchOperator;
+      private final String selectorMatchOperator;
 
     public String getSelectorMatchOperator() {
         return this.selectorMatchOperator;
@@ -102,7 +102,6 @@ public final class ApplicationGatewayFirewallExclusionResponse extends io.pulumi
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
-
         public ApplicationGatewayFirewallExclusionResponse build() {
             return new ApplicationGatewayFirewallExclusionResponse(matchVariable, selector, selectorMatchOperator);
         }

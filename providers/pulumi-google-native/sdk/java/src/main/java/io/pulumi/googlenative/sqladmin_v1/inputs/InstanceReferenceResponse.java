@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -43,7 +43,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -102,7 +102,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public InstanceReferenceResponse build() {
             return new InstanceReferenceResponse(name, project, region);
         }

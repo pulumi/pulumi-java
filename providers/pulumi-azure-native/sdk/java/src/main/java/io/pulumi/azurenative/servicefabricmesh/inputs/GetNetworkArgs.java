@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetNetworkArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkResourceName", required=true)
-    private final String networkResourceName;
+      private final String networkResourceName;
 
     public String getNetworkResourceName() {
         return this.networkResourceName;
@@ -28,7 +28,7 @@ public final class GetNetworkArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetNetworkArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetNetworkArgs build() {
             return new GetNetworkArgs(networkResourceName, resourceGroupName);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudtrail.outputs;
 
 import io.pulumi.awsnative.cloudtrail.enums.TrailEventSelectorReadWriteType;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailDataResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,21 +50,21 @@ public final class TrailEventSelector {
     /**
      * An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing "kms.amazonaws.com". By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
      * 
-     */
+    */
     public List<String> getExcludeManagementEventSources() {
         return this.excludeManagementEventSources == null ? List.of() : this.excludeManagementEventSources;
     }
     /**
      * Specify if you want your event selector to include management events for your trail.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeManagementEvents() {
         return Optional.ofNullable(this.includeManagementEvents);
     }
     /**
      * Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
      * 
-     */
+    */
     public Optional<TrailEventSelectorReadWriteType> getReadWriteType() {
         return Optional.ofNullable(this.readWriteType);
     }
@@ -114,7 +114,6 @@ public final class TrailEventSelector {
             this.readWriteType = readWriteType;
             return this;
         }
-
         public TrailEventSelector build() {
             return new TrailEventSelector(dataResources, excludeManagementEventSources, includeManagementEvents, readWriteType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebase_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetWebAppArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetWebAppArgs Empty = new GetWebAppArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="webAppId", required=true)
-    private final String webAppId;
+      private final String webAppId;
 
     public String getWebAppId() {
         return this.webAppId;
@@ -71,7 +71,6 @@ public final class GetWebAppArgs extends io.pulumi.resources.InvokeArgs {
             this.webAppId = Objects.requireNonNull(webAppId);
             return this;
         }
-
         public GetWebAppArgs build() {
             return new GetWebAppArgs(project, webAppId);
         }

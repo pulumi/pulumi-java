@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datamigration_v1beta1.inputs.SslConfigResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="cloudSqlId", required=true)
-    private final String cloudSqlId;
+      private final String cloudSqlId;
 
     public String getCloudSqlId() {
         return this.cloudSqlId;
@@ -35,7 +35,7 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -46,7 +46,7 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -57,7 +57,7 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="passwordSet", required=true)
-    private final Boolean passwordSet;
+      private final Boolean passwordSet;
 
     public Boolean getPasswordSet() {
         return this.passwordSet;
@@ -68,7 +68,7 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -79,7 +79,7 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="ssl", required=true)
-    private final SslConfigResponse ssl;
+      private final SslConfigResponse ssl;
 
     public SslConfigResponse getSsl() {
         return this.ssl;
@@ -90,7 +90,7 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -189,7 +189,6 @@ public final class MySqlConnectionProfileResponse extends io.pulumi.resources.In
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MySqlConnectionProfileResponse build() {
             return new MySqlConnectionProfileResponse(cloudSqlId, host, password, passwordSet, port, ssl, username);
         }

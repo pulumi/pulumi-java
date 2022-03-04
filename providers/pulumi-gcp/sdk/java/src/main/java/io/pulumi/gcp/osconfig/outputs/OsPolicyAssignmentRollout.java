@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentRolloutDisruptionBudget;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class OsPolicyAssignmentRollout {
     /**
      * Required. The maximum number (or percentage) of VMs per zone to disrupt at any given moment.
      * 
-     */
+    */
     public OsPolicyAssignmentRolloutDisruptionBudget getDisruptionBudget() {
         return this.disruptionBudget;
     }
     /**
      * Required. This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.
      * 
-     */
+    */
     public String getMinWaitDuration() {
         return this.minWaitDuration;
     }
@@ -75,7 +75,6 @@ public final class OsPolicyAssignmentRollout {
             this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
             return this;
         }
-
         public OsPolicyAssignmentRollout build() {
             return new OsPolicyAssignmentRollout(disruptionBudget, minWaitDuration);
         }

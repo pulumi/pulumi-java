@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.TerminateNotificationProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ScheduledEventsProfileResponse {
     /**
      * Specifies Terminate Scheduled Event related configurations.
      * 
-     */
+    */
     public Optional<TerminateNotificationProfileResponse> getTerminateNotificationProfile() {
         return Optional.ofNullable(this.terminateNotificationProfile);
     }
@@ -54,7 +54,6 @@ public final class ScheduledEventsProfileResponse {
             this.terminateNotificationProfile = terminateNotificationProfile;
             return this;
         }
-
         public ScheduledEventsProfileResponse build() {
             return new ScheduledEventsProfileResponse(terminateNotificationProfile);
         }

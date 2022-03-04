@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.inputs.AclEntryArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="allocatedIpRange")
-    private final @Nullable Input<String> allocatedIpRange;
+      private final @Nullable Input<String> allocatedIpRange;
 
     public Input<String> getAllocatedIpRange() {
         return this.allocatedIpRange == null ? Input.empty() : this.allocatedIpRange;
@@ -37,7 +37,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="authorizedNetworks")
-    private final @Nullable Input<List<AclEntryArgs>> authorizedNetworks;
+      private final @Nullable Input<List<AclEntryArgs>> authorizedNetworks;
 
     public Input<List<AclEntryArgs>> getAuthorizedNetworks() {
         return this.authorizedNetworks == null ? Input.empty() : this.authorizedNetworks;
@@ -48,7 +48,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipv4Enabled")
-    private final @Nullable Input<Boolean> ipv4Enabled;
+      private final @Nullable Input<Boolean> ipv4Enabled;
 
     public Input<Boolean> getIpv4Enabled() {
         return this.ipv4Enabled == null ? Input.empty() : this.ipv4Enabled;
@@ -59,7 +59,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateNetwork")
-    private final @Nullable Input<String> privateNetwork;
+      private final @Nullable Input<String> privateNetwork;
 
     public Input<String> getPrivateNetwork() {
         return this.privateNetwork == null ? Input.empty() : this.privateNetwork;
@@ -70,7 +70,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="requireSsl")
-    private final @Nullable Input<Boolean> requireSsl;
+      private final @Nullable Input<Boolean> requireSsl;
 
     public Input<Boolean> getRequireSsl() {
         return this.requireSsl == null ? Input.empty() : this.requireSsl;
@@ -174,7 +174,6 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
             this.requireSsl = Input.ofNullable(requireSsl);
             return this;
         }
-
         public IpConfigurationArgs build() {
             return new IpConfigurationArgs(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }

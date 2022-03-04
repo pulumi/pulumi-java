@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -82,14 +82,14 @@ public final class GetKustoClusterDataSetResult {
     /**
      * Unique id for identifying a data set resource
      * 
-     */
+    */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -97,49 +97,49 @@ public final class GetKustoClusterDataSetResult {
      * Kind of data set.
      * Expected value is 'KustoCluster'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource id of the kusto cluster.
      * 
-     */
+    */
     public String getKustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
     /**
      * Location of the kusto cluster.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the kusto cluster data set.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -224,7 +224,6 @@ public final class GetKustoClusterDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKustoClusterDataSetResult build() {
             return new GetKustoClusterDataSetResult(dataSetId, id, kind, kustoClusterResourceId, location, name, provisioningState, systemData, type);
         }

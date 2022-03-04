@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FirewallPolicyRuleApplicationProtocolResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -107,35 +107,35 @@ public final class ApplicationRuleResponse {
     /**
      * Description of the rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or Service Tags.
      * 
-     */
+    */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of FQDN Tags for this rule.
      * 
-     */
+    */
     public List<String> getFqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
     /**
      * Name of the rule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Array of Application Protocols.
      * 
-     */
+    */
     public List<FirewallPolicyRuleApplicationProtocolResponse> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
@@ -143,49 +143,49 @@ public final class ApplicationRuleResponse {
      * Rule Type.
      * Expected value is 'ApplicationRule'.
      * 
-     */
+    */
     public String getRuleType() {
         return this.ruleType;
     }
     /**
      * List of source IP addresses for this rule.
      * 
-     */
+    */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
      * 
-     */
+    */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
     /**
      * List of FQDNs for this rule.
      * 
-     */
+    */
     public List<String> getTargetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
     }
     /**
      * List of Urls for this rule condition.
      * 
-     */
+    */
     public List<String> getTargetUrls() {
         return this.targetUrls == null ? List.of() : this.targetUrls;
     }
     /**
      * Terminate TLS connections for this rule.
      * 
-     */
+    */
     public Optional<Boolean> getTerminateTLS() {
         return Optional.ofNullable(this.terminateTLS);
     }
     /**
      * List of destination azure web categories.
      * 
-     */
+    */
     public List<String> getWebCategories() {
         return this.webCategories == null ? List.of() : this.webCategories;
     }
@@ -291,7 +291,6 @@ public final class ApplicationRuleResponse {
             this.webCategories = webCategories;
             return this;
         }
-
         public ApplicationRuleResponse build() {
             return new ApplicationRuleResponse(description, destinationAddresses, fqdnTags, name, protocols, ruleType, sourceAddresses, sourceIpGroups, targetFqdns, targetUrls, terminateTLS, webCategories);
         }

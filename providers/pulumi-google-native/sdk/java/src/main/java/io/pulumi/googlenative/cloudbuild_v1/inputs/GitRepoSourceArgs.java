@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.GitRepoSourceRepoType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ref")
-    private final @Nullable Input<String> ref;
+      private final @Nullable Input<String> ref;
 
     public Input<String> getRef() {
         return this.ref == null ? Input.empty() : this.ref;
@@ -35,7 +35,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoType")
-    private final @Nullable Input<GitRepoSourceRepoType> repoType;
+      private final @Nullable Input<GitRepoSourceRepoType> repoType;
 
     public Input<GitRepoSourceRepoType> getRepoType() {
         return this.repoType == null ? Input.empty() : this.repoType;
@@ -46,7 +46,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -120,7 +120,6 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public GitRepoSourceArgs build() {
             return new GitRepoSourceArgs(ref, repoType, uri);
         }

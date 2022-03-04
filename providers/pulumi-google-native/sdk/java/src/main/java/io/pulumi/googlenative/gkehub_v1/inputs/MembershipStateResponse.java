@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -59,7 +59,6 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public MembershipStateResponse build() {
             return new MembershipStateResponse(code);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ReportAggregationResponse {
     /**
      * The name of the aggregation function to use.
      * 
-     */
+    */
     public String getFunction() {
         return this.function;
     }
     /**
      * The name of the column to aggregate.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,6 @@ public final class ReportAggregationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ReportAggregationResponse build() {
             return new ReportAggregationResponse(function, name);
         }

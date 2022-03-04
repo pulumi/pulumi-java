@@ -6,21 +6,41 @@ package io.pulumi.azurenative.videoanalyzer;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.videoanalyzer.inputs.GetEdgeModuleArgs;
 import io.pulumi.azurenative.videoanalyzer.outputs.GetEdgeModuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEdgeModule {
-/**
- * The representation of an edge module.
+    private GetEdgeModule() {}
+    public interface BuilderApplicator {
+        public void apply(GetEdgeModuleArgs.Builder a);
+    }
+    private static GetEdgeModuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEdgeModuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The representation of an edge module.
  * API Version: 2021-05-01-preview.
  * 
- *
- * The representation of an edge module.
+     *
+     * The representation of an edge module.
  * 
- */
+     */
+    public static CompletableFuture<GetEdgeModuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The representation of an edge module.
+     * API Version: 2021-05-01-preview.
+     * 
+     *
+         * The representation of an edge module.
+     * 
+     */
     public static CompletableFuture<GetEdgeModuleResult> invokeAsync(GetEdgeModuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getEdgeModule", TypeShape.of(GetEdgeModuleResult.class), args == null ? GetEdgeModuleArgs.Empty : args, Utilities.withVersion(options));
     }

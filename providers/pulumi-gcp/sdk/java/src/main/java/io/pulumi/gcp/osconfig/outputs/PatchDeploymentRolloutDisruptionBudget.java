@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class PatchDeploymentRolloutDisruptionBudget {
     /**
      * Specifies a fixed value.
      * 
-     */
+    */
     public Optional<Integer> getFixed() {
         return Optional.ofNullable(this.fixed);
     }
     /**
      * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
      * 
-     */
+    */
     public Optional<Integer> getPercentage() {
         return Optional.ofNullable(this.percentage);
     }
@@ -76,7 +76,6 @@ public final class PatchDeploymentRolloutDisruptionBudget {
             this.percentage = percentage;
             return this;
         }
-
         public PatchDeploymentRolloutDisruptionBudget build() {
             return new PatchDeploymentRolloutDisruptionBudget(fixed, percentage);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessPolicyVirtualMachineResponse;
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessRequestResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,35 +74,35 @@ public final class GetJitNetworkAccessPolicyResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of the resource
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Location where the resource is stored
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the provisioning state of the Just-in-Time policy.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -112,14 +112,14 @@ public final class GetJitNetworkAccessPolicyResult {
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Configurations for Microsoft.Compute/virtualMachines resource type.
      * 
-     */
+    */
     public List<JitNetworkAccessPolicyVirtualMachineResponse> getVirtualMachines() {
         return this.virtualMachines;
     }
@@ -197,7 +197,6 @@ public final class GetJitNetworkAccessPolicyResult {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-
         public GetJitNetworkAccessPolicyResult build() {
             return new GetJitNetworkAccessPolicyResult(id, kind, location, name, provisioningState, requests, type, virtualMachines);
         }

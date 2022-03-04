@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetRestorePointArgs;
 import io.pulumi.azurenative.compute.outputs.GetRestorePointResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRestorePoint {
-/**
- * Restore Point details.
+    private GetRestorePoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetRestorePointArgs.Builder a);
+    }
+    private static GetRestorePointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRestorePointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Restore Point details.
  * API Version: 2021-03-01.
  * 
- *
- * Restore Point details.
+     *
+     * Restore Point details.
  * 
- */
+     */
+    public static CompletableFuture<GetRestorePointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Restore Point details.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Restore Point details.
+     * 
+     */
     public static CompletableFuture<GetRestorePointResult> invokeAsync(GetRestorePointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getRestorePoint", TypeShape.of(GetRestorePointResult.class), args == null ? GetRestorePointArgs.Empty : args, Utilities.withVersion(options));
     }

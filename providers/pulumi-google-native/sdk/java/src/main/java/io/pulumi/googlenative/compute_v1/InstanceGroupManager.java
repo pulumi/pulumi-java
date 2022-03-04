@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.InstanceGroupManagerArgs;
 import io.pulumi.googlenative.compute_v1.outputs.DistributionPolicyResponse;
@@ -323,6 +323,37 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
         return this.zone;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable InstanceGroupManagerArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.compute_v1.InstanceGroupManagerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.compute_v1.InstanceGroupManagerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public InstanceGroupManager(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public InstanceGroupManager(String name) {
+        this(name, InstanceGroupManagerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public InstanceGroupManager(String name, @Nullable InstanceGroupManagerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

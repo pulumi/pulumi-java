@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.ContainerHealthCheckConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class ContainerPublicEndpoint {
     /**
      * The name of the container for the endpoint.
      * 
-     */
+    */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * The port of the container to which traffic is forwarded to.
      * 
-     */
+    */
     public Optional<Integer> getContainerPort() {
         return Optional.ofNullable(this.containerPort);
     }
     /**
      * An object that describes the health check configuration of the container.
      * 
-     */
+    */
     public Optional<ContainerHealthCheckConfig> getHealthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }
@@ -99,7 +99,6 @@ public final class ContainerPublicEndpoint {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
-
         public ContainerPublicEndpoint build() {
             return new ContainerPublicEndpoint(containerName, containerPort, healthCheckConfig);
         }

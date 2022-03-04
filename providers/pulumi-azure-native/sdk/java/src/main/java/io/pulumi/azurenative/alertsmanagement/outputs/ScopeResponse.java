@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ScopeResponse {
     /**
      * type of target scope
      * 
-     */
+    */
     public Optional<String> getScopeType() {
         return Optional.ofNullable(this.scopeType);
     }
     /**
      * list of ARM IDs of the given scope type which will be the target of the given action rule.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }
@@ -77,7 +77,6 @@ public final class ScopeResponse {
             this.values = values;
             return this;
         }
-
         public ScopeResponse build() {
             return new ScopeResponse(scopeType, values);
         }

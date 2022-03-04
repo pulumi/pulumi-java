@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ListNotebookKeysResultResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.RegistryListCredentialsResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -99,7 +99,6 @@ public final class ListWorkspaceKeysResult {
             this.userStorageResourceId = Objects.requireNonNull(userStorageResourceId);
             return this;
         }
-
         public ListWorkspaceKeysResult build() {
             return new ListWorkspaceKeysResult(appInsightsInstrumentationKey, containerRegistryCredentials, notebookAccessKeys, userStorageKey, userStorageResourceId);
         }

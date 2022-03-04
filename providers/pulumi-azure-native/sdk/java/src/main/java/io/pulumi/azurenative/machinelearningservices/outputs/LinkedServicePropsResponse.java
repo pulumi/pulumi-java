@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class LinkedServicePropsResponse {
     /**
      * The creation time of the linked service.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * Type of the link target.
      * 
-     */
+    */
     public Optional<String> getLinkType() {
         return Optional.ofNullable(this.linkType);
     }
     /**
      * ResourceId of the link target of the linked service.
      * 
-     */
+    */
     public String getLinkedServiceResourceId() {
         return this.linkedServiceResourceId;
     }
     /**
      * The last modified time of the linked service.
      * 
-     */
+    */
     public Optional<String> getModifiedTime() {
         return Optional.ofNullable(this.modifiedTime);
     }
@@ -118,7 +118,6 @@ public final class LinkedServicePropsResponse {
             this.modifiedTime = modifiedTime;
             return this;
         }
-
         public LinkedServicePropsResponse build() {
             return new LinkedServicePropsResponse(createdTime, linkType, linkedServiceResourceId, modifiedTime);
         }

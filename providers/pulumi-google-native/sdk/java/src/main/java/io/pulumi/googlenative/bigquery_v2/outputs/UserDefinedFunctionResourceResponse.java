@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class UserDefinedFunctionResourceResponse {
     /**
      * [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
      * 
-     */
+    */
     public String getInlineCode() {
         return this.inlineCode;
     }
     /**
      * [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
      * 
-     */
+    */
     public String getResourceUri() {
         return this.resourceUri;
     }
@@ -74,7 +74,6 @@ public final class UserDefinedFunctionResourceResponse {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public UserDefinedFunctionResourceResponse build() {
             return new UserDefinedFunctionResourceResponse(inlineCode, resourceUri);
         }

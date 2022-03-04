@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
     /**
      * The phone number to transfer the call to in [E.164 format](https://en.wikipedia.org/wiki/E.164). We currently only allow transferring to US numbers (+1xxxyyyzzzz).
      * 
-     */
+    */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse(phoneNumber);
         }

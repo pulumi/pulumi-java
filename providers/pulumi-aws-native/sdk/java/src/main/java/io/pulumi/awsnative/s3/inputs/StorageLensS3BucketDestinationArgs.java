@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationFormat;
 import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationOutputSchemaVersion;
 import io.pulumi.awsnative.s3.inputs.StorageLensEncryptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -37,14 +37,14 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
     }
 
     @InputImport(name="encryption")
-    private final @Nullable Input<StorageLensEncryptionArgs> encryption;
+      private final @Nullable Input<StorageLensEncryptionArgs> encryption;
 
     public Input<StorageLensEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -55,7 +55,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<StorageLensS3BucketDestinationFormat> format;
+      private final Input<StorageLensS3BucketDestinationFormat> format;
 
     public Input<StorageLensS3BucketDestinationFormat> getFormat() {
         return this.format;
@@ -66,7 +66,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="outputSchemaVersion", required=true)
-    private final Input<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
+      private final Input<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
 
     public Input<StorageLensS3BucketDestinationOutputSchemaVersion> getOutputSchemaVersion() {
         return this.outputSchemaVersion;
@@ -77,7 +77,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -196,7 +196,6 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
-
         public StorageLensS3BucketDestinationArgs build() {
             return new StorageLensS3BucketDestinationArgs(accountId, arn, encryption, format, outputSchemaVersion, prefix);
         }

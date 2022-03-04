@@ -12,8 +12,8 @@ import io.pulumi.awsnative.appflow.outputs.FlowTask;
 import io.pulumi.awsnative.appflow.outputs.FlowTriggerConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -153,6 +153,37 @@ public class Flow extends io.pulumi.resources.CustomResource {
         return this.triggerConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FlowArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.appflow.FlowArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.appflow.FlowArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Flow(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Flow(String name) {
+        this(name, FlowArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Flow(String name, FlowArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

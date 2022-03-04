@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayFirewallDisabledRuleGroupResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayFirewallExclusionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -94,70 +94,70 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     /**
      * The disabled rule groups.
      * 
-     */
+    */
     public List<ApplicationGatewayFirewallDisabledRuleGroupResponse> getDisabledRuleGroups() {
         return this.disabledRuleGroups == null ? List.of() : this.disabledRuleGroups;
     }
     /**
      * Whether the web application firewall is enabled or not.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The exclusion list.
      * 
-     */
+    */
     public List<ApplicationGatewayFirewallExclusionResponse> getExclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
      * Maximum file upload size in Mb for WAF.
      * 
-     */
+    */
     public Optional<Integer> getFileUploadLimitInMb() {
         return Optional.ofNullable(this.fileUploadLimitInMb);
     }
     /**
      * Web application firewall mode.
      * 
-     */
+    */
     public String getFirewallMode() {
         return this.firewallMode;
     }
     /**
      * Maximum request body size for WAF.
      * 
-     */
+    */
     public Optional<Integer> getMaxRequestBodySize() {
         return Optional.ofNullable(this.maxRequestBodySize);
     }
     /**
      * Maximum request body size in Kb for WAF.
      * 
-     */
+    */
     public Optional<Integer> getMaxRequestBodySizeInKb() {
         return Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
     /**
      * Whether allow WAF to check request Body.
      * 
-     */
+    */
     public Optional<Boolean> getRequestBodyCheck() {
         return Optional.ofNullable(this.requestBodyCheck);
     }
     /**
      * The type of the web application firewall rule set. Possible values are: 'OWASP'.
      * 
-     */
+    */
     public String getRuleSetType() {
         return this.ruleSetType;
     }
     /**
      * The version of the rule set type.
      * 
-     */
+    */
     public String getRuleSetVersion() {
         return this.ruleSetVersion;
     }
@@ -249,7 +249,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
-
         public ApplicationGatewayWebApplicationFirewallConfigurationResponse build() {
             return new ApplicationGatewayWebApplicationFirewallConfigurationResponse(disabledRuleGroups, enabled, exclusions, fileUploadLimitInMb, firewallMode, maxRequestBodySize, maxRequestBodySizeInKb, requestBodyCheck, ruleSetType, ruleSetVersion);
         }

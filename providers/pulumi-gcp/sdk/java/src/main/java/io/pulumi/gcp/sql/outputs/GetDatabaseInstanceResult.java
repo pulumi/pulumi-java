@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceClone;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceIpAddress;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceReplicaConfiguration;
@@ -112,7 +112,7 @@ public final class GetDatabaseInstanceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -323,7 +323,6 @@ public final class GetDatabaseInstanceResult {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
-
         public GetDatabaseInstanceResult build() {
             return new GetDatabaseInstanceResult(clones, connectionName, databaseVersion, deletionProtection, encryptionKeyName, firstIpAddress, id, ipAddresses, masterInstanceName, name, privateIpAddress, project, publicIpAddress, region, replicaConfigurations, restoreBackupContexts, rootPassword, selfLink, serverCaCerts, serviceAccountEmailAddress, settings);
         }

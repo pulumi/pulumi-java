@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.inputs.GetExtendedDatabaseBlobAuditingPolicyArgs;
 import io.pulumi.azurenative.sql.outputs.GetExtendedDatabaseBlobAuditingPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExtendedDatabaseBlobAuditingPolicy {
-/**
- * An extended database blob auditing policy.
+    private GetExtendedDatabaseBlobAuditingPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetExtendedDatabaseBlobAuditingPolicyArgs.Builder a);
+    }
+    private static GetExtendedDatabaseBlobAuditingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExtendedDatabaseBlobAuditingPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An extended database blob auditing policy.
  * API Version: 2020-11-01-preview.
  * 
- *
- * An extended database blob auditing policy.
+     *
+     * An extended database blob auditing policy.
  * 
- */
+     */
+    public static CompletableFuture<GetExtendedDatabaseBlobAuditingPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An extended database blob auditing policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * An extended database blob auditing policy.
+     * 
+     */
     public static CompletableFuture<GetExtendedDatabaseBlobAuditingPolicyResult> invokeAsync(GetExtendedDatabaseBlobAuditingPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getExtendedDatabaseBlobAuditingPolicy", TypeShape.of(GetExtendedDatabaseBlobAuditingPolicyResult.class), args == null ? GetExtendedDatabaseBlobAuditingPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

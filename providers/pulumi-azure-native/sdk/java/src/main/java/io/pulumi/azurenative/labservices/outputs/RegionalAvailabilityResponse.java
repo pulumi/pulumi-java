@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.SizeAvailabilityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class RegionalAvailabilityResponse {
     /**
      * Corresponding region
      * 
-     */
+    */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
     /**
      * List of all the size information for the region
      * 
-     */
+    */
     public List<SizeAvailabilityResponse> getSizeAvailabilities() {
         return this.sizeAvailabilities == null ? List.of() : this.sizeAvailabilities;
     }
@@ -78,7 +78,6 @@ public final class RegionalAvailabilityResponse {
             this.sizeAvailabilities = sizeAvailabilities;
             return this;
         }
-
         public RegionalAvailabilityResponse build() {
             return new RegionalAvailabilityResponse(region, sizeAvailabilities);
         }

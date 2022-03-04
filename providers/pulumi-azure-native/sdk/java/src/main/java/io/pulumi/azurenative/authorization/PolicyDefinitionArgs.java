@@ -7,7 +7,7 @@ import io.pulumi.azurenative.authorization.enums.PolicyType;
 import io.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -46,7 +46,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+      private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -57,7 +57,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -68,7 +68,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
     public Input<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -79,7 +79,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyDefinitionName")
-    private final @Nullable Input<String> policyDefinitionName;
+      private final @Nullable Input<String> policyDefinitionName;
 
     public Input<String> getPolicyDefinitionName() {
         return this.policyDefinitionName == null ? Input.empty() : this.policyDefinitionName;
@@ -90,7 +90,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyRule")
-    private final @Nullable Input<Object> policyRule;
+      private final @Nullable Input<Object> policyRule;
 
     public Input<Object> getPolicyRule() {
         return this.policyRule == null ? Input.empty() : this.policyRule;
@@ -101,7 +101,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyType")
-    private final @Nullable Input<Either<String,PolicyType>> policyType;
+      private final @Nullable Input<Either<String,PolicyType>> policyType;
 
     public Input<Either<String,PolicyType>> getPolicyType() {
         return this.policyType == null ? Input.empty() : this.policyType;
@@ -250,7 +250,6 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
             this.policyType = Input.ofNullable(policyType);
             return this;
         }
-
         public PolicyDefinitionArgs build() {
             return new PolicyDefinitionArgs(description, displayName, metadata, mode, parameters, policyDefinitionName, policyRule, policyType);
         }

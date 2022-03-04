@@ -5,7 +5,7 @@ package io.pulumi.awsnative.licensemanager.inputs;
 
 import io.pulumi.awsnative.licensemanager.inputs.LicenseBorrowConfiguration;
 import io.pulumi.awsnative.licensemanager.inputs.LicenseProvisionalConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,21 +17,21 @@ public final class LicenseConsumptionConfiguration extends io.pulumi.resources.I
     public static final LicenseConsumptionConfiguration Empty = new LicenseConsumptionConfiguration();
 
     @InputImport(name="borrowConfiguration")
-    private final @Nullable LicenseBorrowConfiguration borrowConfiguration;
+      private final @Nullable LicenseBorrowConfiguration borrowConfiguration;
 
     public Optional<LicenseBorrowConfiguration> getBorrowConfiguration() {
         return this.borrowConfiguration == null ? Optional.empty() : Optional.ofNullable(this.borrowConfiguration);
     }
 
     @InputImport(name="provisionalConfiguration")
-    private final @Nullable LicenseProvisionalConfiguration provisionalConfiguration;
+      private final @Nullable LicenseProvisionalConfiguration provisionalConfiguration;
 
     public Optional<LicenseProvisionalConfiguration> getProvisionalConfiguration() {
         return this.provisionalConfiguration == null ? Optional.empty() : Optional.ofNullable(this.provisionalConfiguration);
     }
 
     @InputImport(name="renewType")
-    private final @Nullable String renewType;
+      private final @Nullable String renewType;
 
     public Optional<String> getRenewType() {
         return this.renewType == null ? Optional.empty() : Optional.ofNullable(this.renewType);
@@ -90,7 +90,6 @@ public final class LicenseConsumptionConfiguration extends io.pulumi.resources.I
             this.renewType = renewType;
             return this;
         }
-
         public LicenseConsumptionConfiguration build() {
             return new LicenseConsumptionConfiguration(borrowConfiguration, provisionalConfiguration, renewType);
         }

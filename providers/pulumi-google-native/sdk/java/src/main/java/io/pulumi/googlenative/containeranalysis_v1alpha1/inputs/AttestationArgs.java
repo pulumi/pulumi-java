@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.PgpSignedAttestationArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     public static final AttestationArgs Empty = new AttestationArgs();
 
     @InputImport(name="pgpSignedAttestation")
-    private final @Nullable Input<PgpSignedAttestationArgs> pgpSignedAttestation;
+      private final @Nullable Input<PgpSignedAttestationArgs> pgpSignedAttestation;
 
     public Input<PgpSignedAttestationArgs> getPgpSignedAttestation() {
         return this.pgpSignedAttestation == null ? Input.empty() : this.pgpSignedAttestation;
@@ -62,7 +62,6 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
             this.pgpSignedAttestation = Input.ofNullable(pgpSignedAttestation);
             return this;
         }
-
         public AttestationArgs build() {
             return new AttestationArgs(pgpSignedAttestation);
         }

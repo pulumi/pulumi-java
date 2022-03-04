@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.AzureNodePoolConfigRootVolume;
 import io.pulumi.gcp.container.outputs.AzureNodePoolConfigSshConfig;
 import java.lang.String;
@@ -50,28 +50,28 @@ public final class AzureNodePoolConfig {
     /**
      * Optional. Configuration related to the root volume provisioned for each node pool machine. When unspecified, it defaults to a 32-GiB Azure Disk.
      * 
-     */
+    */
     public Optional<AzureNodePoolConfigRootVolume> getRootVolume() {
         return Optional.ofNullable(this.rootVolume);
     }
     /**
      * Required. SSH configuration for how to access the node pool machines.
      * 
-     */
+    */
     public AzureNodePoolConfigSshConfig getSshConfig() {
         return this.sshConfig;
     }
     /**
      * Optional. A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
      * 
-     */
+    */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -121,7 +121,6 @@ public final class AzureNodePoolConfig {
             this.vmSize = vmSize;
             return this;
         }
-
         public AzureNodePoolConfig build() {
             return new AzureNodePoolConfig(rootVolume, sshConfig, tags, vmSize);
         }

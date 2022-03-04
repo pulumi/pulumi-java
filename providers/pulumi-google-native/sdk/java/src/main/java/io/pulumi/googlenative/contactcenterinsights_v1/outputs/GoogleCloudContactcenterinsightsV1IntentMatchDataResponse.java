@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse {
     /**
      * The id of the matched intent. Can be used to retrieve the corresponding intent information.
      * 
-     */
+    */
     public String getIntentUniqueId() {
         return this.intentUniqueId;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse {
             this.intentUniqueId = Objects.requireNonNull(intentUniqueId);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(intentUniqueId);
         }

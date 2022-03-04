@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionS3Output;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutput {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionMonitoringOutput build() {
             return new ModelExplainabilityJobDefinitionMonitoringOutput(s3Output);
         }

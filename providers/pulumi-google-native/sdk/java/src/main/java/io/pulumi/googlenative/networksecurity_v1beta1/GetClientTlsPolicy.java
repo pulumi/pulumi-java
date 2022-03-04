@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClientTlsPolicy {
-/**
- * Gets details of a single ClientTlsPolicy.
+    private GetClientTlsPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetClientTlsPolicyArgs.Builder a);
+    }
+    private static GetClientTlsPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetClientTlsPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single ClientTlsPolicy.
  * 
- */
+     */
+    public static CompletableFuture<GetClientTlsPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single ClientTlsPolicy.
+     * 
+     */
     public static CompletableFuture<GetClientTlsPolicyResult> invokeAsync(GetClientTlsPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networksecurity/v1beta1:getClientTlsPolicy", TypeShape.of(GetClientTlsPolicyResult.class), args == null ? GetClientTlsPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

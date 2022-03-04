@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ConsolePropertiesResponse {
     /**
      * The operating system type of the cloud shell.
      * 
-     */
+    */
     public String getOsType() {
         return this.osType;
     }
     /**
      * Provisioning state of the console.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Uri of the console.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -95,7 +95,6 @@ public final class ConsolePropertiesResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ConsolePropertiesResponse build() {
             return new ConsolePropertiesResponse(osType, provisioningState, uri);
         }

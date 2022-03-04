@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
 import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ImageTemplateIdentityResponse {
     /**
      * The type of identity used for the image template. The type 'None' will remove any identities from the image template.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
-     */
+    */
     public Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
@@ -78,7 +78,6 @@ public final class ImageTemplateIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ImageTemplateIdentityResponse build() {
             return new ImageTemplateIdentityResponse(type, userAssignedIdentities);
         }

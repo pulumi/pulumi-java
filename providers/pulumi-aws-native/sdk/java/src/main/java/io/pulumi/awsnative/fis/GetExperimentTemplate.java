@@ -6,17 +6,33 @@ package io.pulumi.awsnative.fis;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.fis.inputs.GetExperimentTemplateArgs;
 import io.pulumi.awsnative.fis.outputs.GetExperimentTemplateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExperimentTemplate {
-/**
- * Resource schema for AWS::FIS::ExperimentTemplate
+    private GetExperimentTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetExperimentTemplateArgs.Builder a);
+    }
+    private static GetExperimentTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExperimentTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::FIS::ExperimentTemplate
  * 
- */
+     */
+    public static CompletableFuture<GetExperimentTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::FIS::ExperimentTemplate
+     * 
+     */
     public static CompletableFuture<GetExperimentTemplateResult> invokeAsync(GetExperimentTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:fis:getExperimentTemplate", TypeShape.of(GetExperimentTemplateResult.class), args == null ? GetExperimentTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

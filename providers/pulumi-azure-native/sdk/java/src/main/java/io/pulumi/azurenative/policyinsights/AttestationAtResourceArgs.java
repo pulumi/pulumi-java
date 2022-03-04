@@ -7,7 +7,7 @@ import io.pulumi.azurenative.policyinsights.enums.ComplianceState;
 import io.pulumi.azurenative.policyinsights.inputs.AttestationEvidenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="attestationName")
-    private final @Nullable Input<String> attestationName;
+      private final @Nullable Input<String> attestationName;
 
     public Input<String> getAttestationName() {
         return this.attestationName == null ? Input.empty() : this.attestationName;
@@ -34,7 +34,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="comments")
-    private final @Nullable Input<String> comments;
+      private final @Nullable Input<String> comments;
 
     public Input<String> getComments() {
         return this.comments == null ? Input.empty() : this.comments;
@@ -45,7 +45,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="complianceState")
-    private final @Nullable Input<Either<String,ComplianceState>> complianceState;
+      private final @Nullable Input<Either<String,ComplianceState>> complianceState;
 
     public Input<Either<String,ComplianceState>> getComplianceState() {
         return this.complianceState == null ? Input.empty() : this.complianceState;
@@ -56,7 +56,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="evidence")
-    private final @Nullable Input<List<AttestationEvidenceArgs>> evidence;
+      private final @Nullable Input<List<AttestationEvidenceArgs>> evidence;
 
     public Input<List<AttestationEvidenceArgs>> getEvidence() {
         return this.evidence == null ? Input.empty() : this.evidence;
@@ -67,7 +67,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="expiresOn")
-    private final @Nullable Input<String> expiresOn;
+      private final @Nullable Input<String> expiresOn;
 
     public Input<String> getExpiresOn() {
         return this.expiresOn == null ? Input.empty() : this.expiresOn;
@@ -78,7 +78,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -89,7 +89,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyAssignmentId", required=true)
-    private final Input<String> policyAssignmentId;
+      private final Input<String> policyAssignmentId;
 
     public Input<String> getPolicyAssignmentId() {
         return this.policyAssignmentId;
@@ -100,7 +100,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyDefinitionReferenceId")
-    private final @Nullable Input<String> policyDefinitionReferenceId;
+      private final @Nullable Input<String> policyDefinitionReferenceId;
 
     public Input<String> getPolicyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;
@@ -111,7 +111,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -275,7 +275,6 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public AttestationAtResourceArgs build() {
             return new AttestationAtResourceArgs(attestationName, comments, complianceState, evidence, expiresOn, owner, policyAssignmentId, policyDefinitionReferenceId, resourceId);
         }

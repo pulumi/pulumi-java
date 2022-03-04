@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class OSDetailsResponse {
     /**
      * The OS Major Version.
      * 
-     */
+    */
     public Optional<String> getOSMajorVersion() {
         return Optional.ofNullable(this.oSMajorVersion);
     }
     /**
      * The OS Minor Version.
      * 
-     */
+    */
     public Optional<String> getOSMinorVersion() {
         return Optional.ofNullable(this.oSMinorVersion);
     }
     /**
      * The OS Version.
      * 
-     */
+    */
     public Optional<String> getOSVersion() {
         return Optional.ofNullable(this.oSVersion);
     }
     /**
      * The OSEdition.
      * 
-     */
+    */
     public Optional<String> getOsEdition() {
         return Optional.ofNullable(this.osEdition);
     }
     /**
      * VM Disk details.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Product type.
      * 
-     */
+    */
     public Optional<String> getProductType() {
         return Optional.ofNullable(this.productType);
     }
@@ -160,7 +160,6 @@ public final class OSDetailsResponse {
             this.productType = productType;
             return this;
         }
-
         public OSDetailsResponse build() {
             return new OSDetailsResponse(oSMajorVersion, oSMinorVersion, oSVersion, osEdition, osType, productType);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.speech_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.speech_v1.PhraseSetArgs;
 import io.pulumi.googlenative.speech_v1.outputs.PhraseResponse;
@@ -64,6 +64,37 @@ public class PhraseSet extends io.pulumi.resources.CustomResource {
         return this.phrases;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PhraseSetArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.speech_v1.PhraseSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.speech_v1.PhraseSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PhraseSet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PhraseSet(String name) {
+        this(name, PhraseSetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PhraseSet(String name, PhraseSetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

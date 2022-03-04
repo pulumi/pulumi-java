@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class LabelDescriptorResponse {
     /**
      * A human-readable description for the label.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The label key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The type of data that can be assigned to the label.
      * 
-     */
+    */
     public String getValueType() {
         return this.valueType;
     }
@@ -95,7 +95,6 @@ public final class LabelDescriptorResponse {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public LabelDescriptorResponse build() {
             return new LabelDescriptorResponse(description, key, valueType);
         }

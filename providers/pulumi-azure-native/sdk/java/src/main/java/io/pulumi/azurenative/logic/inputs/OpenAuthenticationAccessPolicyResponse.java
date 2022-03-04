@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationPolicyClaimResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class OpenAuthenticationAccessPolicyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="claims")
-    private final @Nullable List<OpenAuthenticationPolicyClaimResponse> claims;
+      private final @Nullable List<OpenAuthenticationPolicyClaimResponse> claims;
 
     public List<OpenAuthenticationPolicyClaimResponse> getClaims() {
         return this.claims == null ? List.of() : this.claims;
@@ -36,7 +36,7 @@ public final class OpenAuthenticationAccessPolicyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -85,7 +85,6 @@ public final class OpenAuthenticationAccessPolicyResponse extends io.pulumi.reso
             this.type = type;
             return this;
         }
-
         public OpenAuthenticationAccessPolicyResponse build() {
             return new OpenAuthenticationAccessPolicyResponse(claims, type);
         }

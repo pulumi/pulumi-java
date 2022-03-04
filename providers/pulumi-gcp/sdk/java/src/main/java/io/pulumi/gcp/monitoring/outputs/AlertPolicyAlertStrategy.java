@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyAlertStrategyNotificationRateLimit;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class AlertPolicyAlertStrategy {
     /**
      * If an alert policy that was active has no data for this long, any open incidents will close.
      * 
-     */
+    */
     public Optional<String> getAutoClose() {
         return Optional.ofNullable(this.autoClose);
     }
@@ -45,7 +45,7 @@ public final class AlertPolicyAlertStrategy {
      * This limit is not implemented for alert policies that are not log-based.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AlertPolicyAlertStrategyNotificationRateLimit> getNotificationRateLimit() {
         return Optional.ofNullable(this.notificationRateLimit);
     }
@@ -81,7 +81,6 @@ public final class AlertPolicyAlertStrategy {
             this.notificationRateLimit = notificationRateLimit;
             return this;
         }
-
         public AlertPolicyAlertStrategy build() {
             return new AlertPolicyAlertStrategy(autoClose, notificationRateLimit);
         }

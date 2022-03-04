@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CanaryBaseScreenshot extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ignoreCoordinates")
-    private final @Nullable List<String> ignoreCoordinates;
+      private final @Nullable List<String> ignoreCoordinates;
 
     public List<String> getIgnoreCoordinates() {
         return this.ignoreCoordinates == null ? List.of() : this.ignoreCoordinates;
@@ -31,7 +31,7 @@ public final class CanaryBaseScreenshot extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="screenshotName", required=true)
-    private final String screenshotName;
+      private final String screenshotName;
 
     public String getScreenshotName() {
         return this.screenshotName;
@@ -80,7 +80,6 @@ public final class CanaryBaseScreenshot extends io.pulumi.resources.InvokeArgs {
             this.screenshotName = Objects.requireNonNull(screenshotName);
             return this;
         }
-
         public CanaryBaseScreenshot build() {
             return new CanaryBaseScreenshot(ignoreCoordinates, screenshotName);
         }

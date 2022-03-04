@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.mixedreality.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ListRemoteRenderingAccountKeysResult {
     /**
      * value of primary key.
      * 
-     */
+    */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * value of secondary key.
      * 
-     */
+    */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }
@@ -74,7 +74,6 @@ public final class ListRemoteRenderingAccountKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListRemoteRenderingAccountKeysResult build() {
             return new ListRemoteRenderingAccountKeysResult(primaryKey, secondaryKey);
         }

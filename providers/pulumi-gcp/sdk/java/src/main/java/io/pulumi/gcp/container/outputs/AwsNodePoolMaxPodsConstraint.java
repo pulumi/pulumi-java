@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AwsNodePoolMaxPodsConstraint {
     /**
      * Required. The maximum number of pods to schedule on a single node.
      * 
-     */
+    */
     public Integer getMaxPodsPerNode() {
         return this.maxPodsPerNode;
     }
@@ -52,7 +52,6 @@ public final class AwsNodePoolMaxPodsConstraint {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }
-
         public AwsNodePoolMaxPodsConstraint build() {
             return new AwsNodePoolMaxPodsConstraint(maxPodsPerNode);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class OrganizationConformancePackConformancePackInputParameter {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public OrganizationConformancePackConformancePackInputParameter build() {
             return new OrganizationConformancePackConformancePackInputParameter(parameterName, parameterValue);
         }

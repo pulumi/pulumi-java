@@ -6,7 +6,7 @@ package io.pulumi.azurenative.iotsecurity.inputs;
 import io.pulumi.azurenative.iotsecurity.enums.MdeIntegration;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<Either<String,MdeIntegration>> status;
+      private final Input<Either<String,MdeIntegration>> status;
 
     public Input<Either<String,MdeIntegration>> getStatus() {
         return this.status;
@@ -67,7 +67,6 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public DefenderSettingsPropertiesMdeIntegrationArgs build() {
             return new DefenderSettingsPropertiesMdeIntegrationArgs(status);
         }

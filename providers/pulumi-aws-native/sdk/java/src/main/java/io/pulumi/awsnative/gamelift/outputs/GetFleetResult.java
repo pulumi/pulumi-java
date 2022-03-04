@@ -8,7 +8,7 @@ import io.pulumi.awsnative.gamelift.outputs.FleetIpPermission;
 import io.pulumi.awsnative.gamelift.outputs.FleetLocationConfiguration;
 import io.pulumi.awsnative.gamelift.outputs.FleetResourceCreationLimitPolicy;
 import io.pulumi.awsnative.gamelift.outputs.FleetRuntimeConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -108,28 +108,28 @@ public final class GetFleetResult {
     /**
      * A human-readable description of a fleet.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to "1" and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
      * 
-     */
+    */
     public Optional<Integer> getDesiredEC2Instances() {
         return Optional.ofNullable(this.desiredEC2Instances);
     }
     /**
      * A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift server.
      * 
-     */
+    */
     public List<FleetIpPermission> getEC2InboundPermissions() {
         return this.eC2InboundPermissions == null ? List.of() : this.eC2InboundPermissions;
     }
     /**
      * Unique fleet ID
      * 
-     */
+    */
     public Optional<String> getFleetId() {
         return Optional.ofNullable(this.fleetId);
     }
@@ -139,42 +139,42 @@ public final class GetFleetResult {
     /**
      * [DEPRECATED] The maximum value that is allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
      * 
-     */
+    */
     public Optional<Integer> getMaxSize() {
         return Optional.ofNullable(this.maxSize);
     }
     /**
      * The name of an Amazon CloudWatch metric group. A metric group aggregates the metrics for all fleets in the group. Specify a string containing the metric group name. You can use an existing name or use a new name to create a new metric group. Currently, this parameter can have only one string.
      * 
-     */
+    */
     public List<String> getMetricGroups() {
         return this.metricGroups == null ? List.of() : this.metricGroups;
     }
     /**
      * [DEPRECATED] The minimum value allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
      * 
-     */
+    */
     public Optional<Integer> getMinSize() {
         return Optional.ofNullable(this.minSize);
     }
     /**
      * A descriptive label that is associated with a fleet. Fleet names do not need to be unique.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet's protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
      * 
-     */
+    */
     public Optional<FleetNewGameSessionProtectionPolicy> getNewGameSessionProtectionPolicy() {
         return Optional.ofNullable(this.newGameSessionProtectionPolicy);
     }
     /**
      * A policy that limits the number of game sessions an individual player can create over a span of time for this fleet.
      * 
-     */
+    */
     public Optional<FleetResourceCreationLimitPolicy> getResourceCreationLimitPolicy() {
         return Optional.ofNullable(this.resourceCreationLimitPolicy);
     }
@@ -183,7 +183,7 @@ public final class GetFleetResult {
      * 
      * This parameter is required unless the parameters ServerLaunchPath and ServerLaunchParameters are defined. Runtime configuration has replaced these parameters, but fleets that use them will continue to work.
      * 
-     */
+    */
     public Optional<FleetRuntimeConfiguration> getRuntimeConfiguration() {
         return Optional.ofNullable(this.runtimeConfiguration);
     }
@@ -289,7 +289,6 @@ public final class GetFleetResult {
             this.runtimeConfiguration = runtimeConfiguration;
             return this;
         }
-
         public GetFleetResult build() {
             return new GetFleetResult(description, desiredEC2Instances, eC2InboundPermissions, fleetId, locations, maxSize, metricGroups, minSize, name, newGameSessionProtectionPolicy, resourceCreationLimitPolicy, runtimeConfiguration);
         }

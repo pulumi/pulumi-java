@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.awsnative.synthetics.inputs.CanaryBaseScreenshot;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CanaryVisualReference extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="baseCanaryRunId", required=true)
-    private final String baseCanaryRunId;
+      private final String baseCanaryRunId;
 
     public String getBaseCanaryRunId() {
         return this.baseCanaryRunId;
@@ -32,7 +32,7 @@ public final class CanaryVisualReference extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="baseScreenshots")
-    private final @Nullable List<CanaryBaseScreenshot> baseScreenshots;
+      private final @Nullable List<CanaryBaseScreenshot> baseScreenshots;
 
     public List<CanaryBaseScreenshot> getBaseScreenshots() {
         return this.baseScreenshots == null ? List.of() : this.baseScreenshots;
@@ -81,7 +81,6 @@ public final class CanaryVisualReference extends io.pulumi.resources.InvokeArgs 
             this.baseScreenshots = baseScreenshots;
             return this;
         }
-
         public CanaryVisualReference build() {
             return new CanaryVisualReference(baseCanaryRunId, baseScreenshots);
         }

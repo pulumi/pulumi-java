@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ExclusionRuleMatchingType;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExcludeInfoTypesArgs;
@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dictionary")
-    private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
+      private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
     public Input<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
         return this.dictionary == null ? Input.empty() : this.dictionary;
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="excludeInfoTypes")
-    private final @Nullable Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
+      private final @Nullable Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
 
     public Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> getExcludeInfoTypes() {
         return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="matchingType")
-    private final @Nullable Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
+      private final @Nullable Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
 
     public Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> getMatchingType() {
         return this.matchingType == null ? Input.empty() : this.matchingType;
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
+      private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
 
     public Input<GooglePrivacyDlpV2RegexArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -148,7 +148,6 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
             this.regex = Input.ofNullable(regex);
             return this;
         }
-
         public GooglePrivacyDlpV2ExclusionRuleArgs build() {
             return new GooglePrivacyDlpV2ExclusionRuleArgs(dictionary, excludeInfoTypes, matchingType, regex);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlIterationResultArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunTrainingOptionsArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="iterationResults")
-    private final @Nullable Input<List<BqmlIterationResultArgs>> iterationResults;
+      private final @Nullable Input<List<BqmlIterationResultArgs>> iterationResults;
 
     public Input<List<BqmlIterationResultArgs>> getIterationResults() {
         return this.iterationResults == null ? Input.empty() : this.iterationResults;
@@ -33,7 +33,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -44,7 +44,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -55,7 +55,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="trainingOptions")
-    private final @Nullable Input<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
+      private final @Nullable Input<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
 
     public Input<BqmlTrainingRunTrainingOptionsArgs> getTrainingOptions() {
         return this.trainingOptions == null ? Input.empty() : this.trainingOptions;
@@ -144,7 +144,6 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
             this.trainingOptions = Input.ofNullable(trainingOptions);
             return this;
         }
-
         public BqmlTrainingRunArgs build() {
             return new BqmlTrainingRunArgs(iterationResults, startTime, state, trainingOptions);
         }

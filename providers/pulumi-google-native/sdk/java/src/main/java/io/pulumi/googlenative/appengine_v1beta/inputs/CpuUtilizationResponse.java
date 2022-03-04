@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="aggregationWindowLength", required=true)
-    private final String aggregationWindowLength;
+      private final String aggregationWindowLength;
 
     public String getAggregationWindowLength() {
         return this.aggregationWindowLength;
@@ -33,7 +33,7 @@ public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="targetUtilization", required=true)
-    private final Double targetUtilization;
+      private final Double targetUtilization;
 
     public Double getTargetUtilization() {
         return this.targetUtilization;
@@ -82,7 +82,6 @@ public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
-
         public CpuUtilizationResponse build() {
             return new CpuUtilizationResponse(aggregationWindowLength, targetUtilization);
         }

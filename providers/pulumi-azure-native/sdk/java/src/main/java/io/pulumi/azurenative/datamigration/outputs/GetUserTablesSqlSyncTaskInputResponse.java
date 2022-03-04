@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,28 +47,28 @@ public final class GetUserTablesSqlSyncTaskInputResponse {
     /**
      * List of source database names to collect tables for
      * 
-     */
+    */
     public List<String> getSelectedSourceDatabases() {
         return this.selectedSourceDatabases;
     }
     /**
      * List of target database names to collect tables for
      * 
-     */
+    */
     public List<String> getSelectedTargetDatabases() {
         return this.selectedTargetDatabases;
     }
     /**
      * Connection information for SQL Server
      * 
-     */
+    */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Connection information for SQL DB
      * 
-     */
+    */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -118,7 +118,6 @@ public final class GetUserTablesSqlSyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public GetUserTablesSqlSyncTaskInputResponse build() {
             return new GetUserTablesSqlSyncTaskInputResponse(selectedSourceDatabases, selectedTargetDatabases, sourceConnectionInfo, targetConnectionInfo);
         }

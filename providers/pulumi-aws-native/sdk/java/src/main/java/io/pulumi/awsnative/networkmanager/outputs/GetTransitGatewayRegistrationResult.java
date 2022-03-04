@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetTransitGatewayRegistrationResult {
         public Builder(GetTransitGatewayRegistrationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetTransitGatewayRegistrationResult build() {
             return new GetTransitGatewayRegistrationResult();
         }

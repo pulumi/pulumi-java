@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -49,21 +49,21 @@ public final class AzureBlobFSLocationResponse {
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -71,7 +71,7 @@ public final class AzureBlobFSLocationResponse {
      * Type of dataset storage location.
      * Expected value is 'AzureBlobFSLocation'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -121,7 +121,6 @@ public final class AzureBlobFSLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureBlobFSLocationResponse build() {
             return new AzureBlobFSLocationResponse(fileName, fileSystem, folderPath, type);
         }

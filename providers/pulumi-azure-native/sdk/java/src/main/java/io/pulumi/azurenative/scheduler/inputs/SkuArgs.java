@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.enums.SkuDefinition;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<SkuDefinition> name;
+      private final @Nullable Input<SkuDefinition> name;
 
     public Input<SkuDefinition> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public SkuArgs build() {
             return new SkuArgs(name);
         }

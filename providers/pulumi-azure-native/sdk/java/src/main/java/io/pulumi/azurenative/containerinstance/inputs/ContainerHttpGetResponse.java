@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.HttpHeadersResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="httpHeaders")
-    private final @Nullable HttpHeadersResponse httpHeaders;
+      private final @Nullable HttpHeadersResponse httpHeaders;
 
     public Optional<HttpHeadersResponse> getHttpHeaders() {
         return this.httpHeaders == null ? Optional.empty() : Optional.ofNullable(this.httpHeaders);
@@ -36,7 +36,7 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+      private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -47,7 +47,7 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -58,7 +58,7 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="scheme")
-    private final @Nullable String scheme;
+      private final @Nullable String scheme;
 
     public Optional<String> getScheme() {
         return this.scheme == null ? Optional.empty() : Optional.ofNullable(this.scheme);
@@ -127,7 +127,6 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
             this.scheme = scheme;
             return this;
         }
-
         public ContainerHttpGetResponse build() {
             return new ContainerHttpGetResponse(httpHeaders, path, port, scheme);
         }

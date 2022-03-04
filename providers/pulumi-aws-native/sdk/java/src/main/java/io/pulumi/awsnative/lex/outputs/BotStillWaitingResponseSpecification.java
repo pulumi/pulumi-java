@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotMessageGroup;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -38,7 +38,7 @@ public final class BotStillWaitingResponseSpecification {
     /**
      * Indicates whether the user can interrupt a speech prompt from the bot.
      * 
-     */
+    */
     public Optional<Boolean> getAllowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
@@ -97,7 +97,6 @@ public final class BotStillWaitingResponseSpecification {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }
-
         public BotStillWaitingResponseSpecification build() {
             return new BotStillWaitingResponseSpecification(allowInterrupt, frequencyInSeconds, messageGroupsList, timeoutInSeconds);
         }

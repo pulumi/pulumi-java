@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ec2.inputs.EC2FleetSpotOptionsRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetTagSpecificationArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetTargetCapacitySpecificationRequestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,84 +24,84 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
     public static final EC2FleetArgs Empty = new EC2FleetArgs();
 
     @InputImport(name="context")
-    private final @Nullable Input<String> context;
+      private final @Nullable Input<String> context;
 
     public Input<String> getContext() {
         return this.context == null ? Input.empty() : this.context;
     }
 
     @InputImport(name="excessCapacityTerminationPolicy")
-    private final @Nullable Input<EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy;
+      private final @Nullable Input<EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy;
 
     public Input<EC2FleetExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy == null ? Input.empty() : this.excessCapacityTerminationPolicy;
     }
 
     @InputImport(name="launchTemplateConfigs", required=true)
-    private final Input<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> launchTemplateConfigs;
+      private final Input<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> launchTemplateConfigs;
 
     public Input<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> getLaunchTemplateConfigs() {
         return this.launchTemplateConfigs;
     }
 
     @InputImport(name="onDemandOptions")
-    private final @Nullable Input<EC2FleetOnDemandOptionsRequestArgs> onDemandOptions;
+      private final @Nullable Input<EC2FleetOnDemandOptionsRequestArgs> onDemandOptions;
 
     public Input<EC2FleetOnDemandOptionsRequestArgs> getOnDemandOptions() {
         return this.onDemandOptions == null ? Input.empty() : this.onDemandOptions;
     }
 
     @InputImport(name="replaceUnhealthyInstances")
-    private final @Nullable Input<Boolean> replaceUnhealthyInstances;
+      private final @Nullable Input<Boolean> replaceUnhealthyInstances;
 
     public Input<Boolean> getReplaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances == null ? Input.empty() : this.replaceUnhealthyInstances;
     }
 
     @InputImport(name="spotOptions")
-    private final @Nullable Input<EC2FleetSpotOptionsRequestArgs> spotOptions;
+      private final @Nullable Input<EC2FleetSpotOptionsRequestArgs> spotOptions;
 
     public Input<EC2FleetSpotOptionsRequestArgs> getSpotOptions() {
         return this.spotOptions == null ? Input.empty() : this.spotOptions;
     }
 
     @InputImport(name="tagSpecifications")
-    private final @Nullable Input<List<EC2FleetTagSpecificationArgs>> tagSpecifications;
+      private final @Nullable Input<List<EC2FleetTagSpecificationArgs>> tagSpecifications;
 
     public Input<List<EC2FleetTagSpecificationArgs>> getTagSpecifications() {
         return this.tagSpecifications == null ? Input.empty() : this.tagSpecifications;
     }
 
     @InputImport(name="targetCapacitySpecification", required=true)
-    private final Input<EC2FleetTargetCapacitySpecificationRequestArgs> targetCapacitySpecification;
+      private final Input<EC2FleetTargetCapacitySpecificationRequestArgs> targetCapacitySpecification;
 
     public Input<EC2FleetTargetCapacitySpecificationRequestArgs> getTargetCapacitySpecification() {
         return this.targetCapacitySpecification;
     }
 
     @InputImport(name="terminateInstancesWithExpiration")
-    private final @Nullable Input<Boolean> terminateInstancesWithExpiration;
+      private final @Nullable Input<Boolean> terminateInstancesWithExpiration;
 
     public Input<Boolean> getTerminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration == null ? Input.empty() : this.terminateInstancesWithExpiration;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<EC2FleetType> type;
+      private final @Nullable Input<EC2FleetType> type;
 
     public Input<EC2FleetType> getType() {
         return this.type == null ? Input.empty() : this.type;
     }
 
     @InputImport(name="validFrom")
-    private final @Nullable Input<String> validFrom;
+      private final @Nullable Input<String> validFrom;
 
     public Input<String> getValidFrom() {
         return this.validFrom == null ? Input.empty() : this.validFrom;
     }
 
     @InputImport(name="validUntil")
-    private final @Nullable Input<String> validUntil;
+      private final @Nullable Input<String> validUntil;
 
     public Input<String> getValidUntil() {
         return this.validUntil == null ? Input.empty() : this.validUntil;
@@ -310,7 +310,6 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             this.validUntil = Input.ofNullable(validUntil);
             return this;
         }
-
         public EC2FleetArgs build() {
             return new EC2FleetArgs(context, excessCapacityTerminationPolicy, launchTemplateConfigs, onDemandOptions, replaceUnhealthyInstances, spotOptions, tagSpecifications, targetCapacitySpecification, terminateInstancesWithExpiration, type, validFrom, validUntil);
         }

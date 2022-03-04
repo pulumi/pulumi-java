@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TunnelInstanceIAMMemberArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<TunnelInstanceIAMMemberConditionArgs> condition;
+      private final @Nullable Input<TunnelInstanceIAMMemberConditionArgs> condition;
 
     public Input<TunnelInstanceIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -32,14 +32,14 @@ public final class TunnelInstanceIAMMemberArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+      private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -51,7 +51,7 @@ public final class TunnelInstanceIAMMemberArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,14 +64,14 @@ public final class TunnelInstanceIAMMemberArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -190,7 +190,6 @@ public final class TunnelInstanceIAMMemberArgs extends io.pulumi.resources.Resou
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public TunnelInstanceIAMMemberArgs build() {
             return new TunnelInstanceIAMMemberArgs(condition, instance, member, project, role, zone);
         }

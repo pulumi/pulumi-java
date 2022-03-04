@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.BackupInfoResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backupInfo", required=true)
-    private final BackupInfoResponse backupInfo;
+      private final BackupInfoResponse backupInfo;
 
     public BackupInfoResponse getBackupInfo() {
         return this.backupInfo;
@@ -33,7 +33,7 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceType", required=true)
-    private final String sourceType;
+      private final String sourceType;
 
     public String getSourceType() {
         return this.sourceType;
@@ -82,7 +82,6 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public RestoreInfoResponse build() {
             return new RestoreInfoResponse(backupInfo, sourceType);
         }

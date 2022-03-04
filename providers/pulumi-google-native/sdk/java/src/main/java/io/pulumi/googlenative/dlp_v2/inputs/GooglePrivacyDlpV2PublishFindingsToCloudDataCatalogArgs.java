@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs exten
         public Builder(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs build() {
             return new GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs();
         }

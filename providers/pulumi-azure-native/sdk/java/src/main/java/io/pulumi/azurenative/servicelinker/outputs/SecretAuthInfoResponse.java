@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class SecretAuthInfoResponse {
      * The authentication type.
      * Expected value is 'secret'.
      * 
-     */
+    */
     public String getAuthType() {
         return this.authType;
     }
     /**
      * Username or account name for secret auth.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Password or account key for secret auth.
      * 
-     */
+    */
     public Optional<String> getSecret() {
         return Optional.ofNullable(this.secret);
     }
@@ -99,7 +99,6 @@ public final class SecretAuthInfoResponse {
             this.secret = secret;
             return this;
         }
-
         public SecretAuthInfoResponse build() {
             return new SecretAuthInfoResponse(authType, name, secret);
         }

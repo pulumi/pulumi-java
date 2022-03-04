@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowWriteOperationType;
 import io.pulumi.awsnative.appflow.outputs.FlowErrorHandlingConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,7 +41,7 @@ public final class FlowSalesforceDestinationProperties {
     /**
      * List of fields used as ID when performing a write operation.
      * 
-     */
+    */
     public List<String> getIdFieldNames() {
         return this.idFieldNames == null ? List.of() : this.idFieldNames;
     }
@@ -97,7 +97,6 @@ public final class FlowSalesforceDestinationProperties {
             this.writeOperationType = writeOperationType;
             return this;
         }
-
         public FlowSalesforceDestinationProperties build() {
             return new FlowSalesforceDestinationProperties(errorHandlingConfig, idFieldNames, object, writeOperationType);
         }

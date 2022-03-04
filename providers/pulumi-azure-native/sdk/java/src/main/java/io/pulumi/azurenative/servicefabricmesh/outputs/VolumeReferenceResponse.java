@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class VolumeReferenceResponse {
     /**
      * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
      * 
-     */
+    */
     public String getDestinationPath() {
         return this.destinationPath;
     }
     /**
      * Name of the volume being referenced.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The flag indicating whether the volume is read only. Default is 'false'.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -98,7 +98,6 @@ public final class VolumeReferenceResponse {
             this.readOnly = readOnly;
             return this;
         }
-
         public VolumeReferenceResponse build() {
             return new VolumeReferenceResponse(destinationPath, name, readOnly);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ServiceProviderPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ServiceProviderResponse {
     /**
      * The Properties of a Service Provider Object
      * 
-     */
+    */
     public Optional<ServiceProviderPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
@@ -54,7 +54,6 @@ public final class ServiceProviderResponse {
             this.properties = properties;
             return this;
         }
-
         public ServiceProviderResponse build() {
             return new ServiceProviderResponse(properties);
         }

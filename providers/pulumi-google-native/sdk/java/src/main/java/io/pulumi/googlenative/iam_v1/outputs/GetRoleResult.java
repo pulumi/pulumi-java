@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -68,49 +68,49 @@ public final class GetRoleResult {
     /**
      * The current deleted state of the role. This field is read only. It will be ignored in calls to CreateRole and UpdateRole.
      * 
-     */
+    */
     public Boolean getDeleted() {
         return this.deleted;
     }
     /**
      * Optional. A human-readable description for the role.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Used to perform a consistent read-modify-write.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The names of the permissions this role grants when bound in an IAM policy.
      * 
-     */
+    */
     public List<String> getIncludedPermissions() {
         return this.includedPermissions;
     }
     /**
      * The name of the role. When Role is used in CreateRole, the role name must not be set. When Role is used in output and other input such as UpdateRole, the role name is the complete path, e.g., roles/logging.viewer for predefined roles and organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.
      * 
-     */
+    */
     public String getStage() {
         return this.stage;
     }
     /**
      * Optional. A human-readable title for the role. Typically this is limited to 100 UTF-8 bytes.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -181,7 +181,6 @@ public final class GetRoleResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetRoleResult build() {
             return new GetRoleResult(deleted, description, etag, includedPermissions, name, stage, title);
         }

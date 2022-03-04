@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -112,7 +112,6 @@ public final class NotebookResourceSystemDataResponse {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public NotebookResourceSystemDataResponse build() {
             return new NotebookResourceSystemDataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -42,14 +42,14 @@ public final class SnowflakeImportCopyCommandResponse {
     /**
      * Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalCopyOptions": { "DATE_FORMAT": "MM/DD/YYYY", "TIME_FORMAT": "'HH24:MI:SS.FF'" }
      * 
-     */
+    */
     public Map<String,Object> getAdditionalCopyOptions() {
         return this.additionalCopyOptions == null ? Map.of() : this.additionalCopyOptions;
     }
     /**
      * Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalFormatOptions": { "FORCE": "TRUE", "LOAD_UNCERTAIN_FILES": "'FALSE'" }
      * 
-     */
+    */
     public Map<String,Object> getAdditionalFormatOptions() {
         return this.additionalFormatOptions == null ? Map.of() : this.additionalFormatOptions;
     }
@@ -57,7 +57,7 @@ public final class SnowflakeImportCopyCommandResponse {
      * The import setting type.
      * Expected value is 'SnowflakeImportCopyCommand'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -100,7 +100,6 @@ public final class SnowflakeImportCopyCommandResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SnowflakeImportCopyCommandResponse build() {
             return new SnowflakeImportCopyCommandResponse(additionalCopyOptions, additionalFormatOptions, type);
         }

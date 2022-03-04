@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.TimelineAggregationResponse;
 import io.pulumi.azurenative.securityinsights.outputs.TimelineErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class TimelineResultsMetadataResponse {
     /**
      * timeline aggregation per kind
      * 
-     */
+    */
     public List<TimelineAggregationResponse> getAggregations() {
         return this.aggregations;
     }
     /**
      * information about the failure queries
      * 
-     */
+    */
     public List<TimelineErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * the total items found for the timeline request
      * 
-     */
+    */
     public Integer getTotalCount() {
         return this.totalCount;
     }
@@ -99,7 +99,6 @@ public final class TimelineResultsMetadataResponse {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public TimelineResultsMetadataResponse build() {
             return new TimelineResultsMetadataResponse(aggregations, errors, totalCount);
         }

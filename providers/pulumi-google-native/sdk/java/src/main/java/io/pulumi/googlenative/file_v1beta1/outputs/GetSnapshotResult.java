@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -60,42 +60,42 @@ public final class GetSnapshotResult {
     /**
      * The time when the snapshot was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The amount of bytes needed to allocate a full copy of the snapshot content
      * 
-     */
+    */
     public String getFilesystemUsedBytes() {
         return this.filesystemUsedBytes;
     }
     /**
      * Resource labels to represent user provided metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the snapshot, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The snapshot state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -159,7 +159,6 @@ public final class GetSnapshotResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(createTime, description, filesystemUsedBytes, labels, name, state);
         }

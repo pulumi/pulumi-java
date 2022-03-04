@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorVpcConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,56 +16,56 @@ public final class AnomalyDetectorRDSSourceConfigArgs extends io.pulumi.resource
     public static final AnomalyDetectorRDSSourceConfigArgs Empty = new AnomalyDetectorRDSSourceConfigArgs();
 
     @InputImport(name="dBInstanceIdentifier", required=true)
-    private final Input<String> dBInstanceIdentifier;
+      private final Input<String> dBInstanceIdentifier;
 
     public Input<String> getDBInstanceIdentifier() {
         return this.dBInstanceIdentifier;
     }
 
     @InputImport(name="databaseHost", required=true)
-    private final Input<String> databaseHost;
+      private final Input<String> databaseHost;
 
     public Input<String> getDatabaseHost() {
         return this.databaseHost;
     }
 
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="databasePort", required=true)
-    private final Input<Integer> databasePort;
+      private final Input<Integer> databasePort;
 
     public Input<Integer> getDatabasePort() {
         return this.databasePort;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="secretManagerArn", required=true)
-    private final Input<String> secretManagerArn;
+      private final Input<String> secretManagerArn;
 
     public Input<String> getSecretManagerArn() {
         return this.secretManagerArn;
     }
 
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
     }
 
     @InputImport(name="vpcConfiguration", required=true)
-    private final Input<AnomalyDetectorVpcConfigurationArgs> vpcConfiguration;
+      private final Input<AnomalyDetectorVpcConfigurationArgs> vpcConfiguration;
 
     public Input<AnomalyDetectorVpcConfigurationArgs> getVpcConfiguration() {
         return this.vpcConfiguration;
@@ -214,7 +214,6 @@ public final class AnomalyDetectorRDSSourceConfigArgs extends io.pulumi.resource
             this.vpcConfiguration = Input.of(Objects.requireNonNull(vpcConfiguration));
             return this;
         }
-
         public AnomalyDetectorRDSSourceConfigArgs build() {
             return new AnomalyDetectorRDSSourceConfigArgs(dBInstanceIdentifier, databaseHost, databaseName, databasePort, roleArn, secretManagerArn, tableName, vpcConfiguration);
         }

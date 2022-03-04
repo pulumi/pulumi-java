@@ -5,8 +5,8 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.EntryArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryState;
@@ -283,6 +283,37 @@ public class Entry extends io.pulumi.resources.CustomResource {
         return this.userSpecifiedType;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EntryArgs.Builder a);
+    }
+    private static io.pulumi.gcp.datacatalog.EntryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.datacatalog.EntryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Entry(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Entry(String name) {
+        this(name, EntryArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Entry(String name, EntryArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

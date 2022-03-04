@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.ChannelIngestEndpoint;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ChannelHlsIngest {
     /**
      * A list of endpoints to which the source stream should be sent.
      * 
-     */
+    */
     public List<ChannelIngestEndpoint> getIngestEndpoints() {
         return this.ingestEndpoints == null ? List.of() : this.ingestEndpoints;
     }
@@ -54,7 +54,6 @@ public final class ChannelHlsIngest {
             this.ingestEndpoints = ingestEndpoints;
             return this;
         }
-
         public ChannelHlsIngest build() {
             return new ChannelHlsIngest(ingestEndpoints);
         }

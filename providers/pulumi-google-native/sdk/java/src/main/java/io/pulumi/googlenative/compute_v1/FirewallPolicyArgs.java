@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.FirewallPolicyAssociationArgs;
 import io.pulumi.googlenative.compute_v1.inputs.FirewallPolicyRuleArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associations")
-    private final @Nullable Input<List<FirewallPolicyAssociationArgs>> associations;
+      private final @Nullable Input<List<FirewallPolicyAssociationArgs>> associations;
 
     public Input<List<FirewallPolicyAssociationArgs>> getAssociations() {
         return this.associations == null ? Input.empty() : this.associations;
@@ -33,21 +33,21 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="parentId")
-    private final @Nullable Input<String> parentId;
+      private final @Nullable Input<String> parentId;
 
     public Input<String> getParentId() {
         return this.parentId == null ? Input.empty() : this.parentId;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -58,7 +58,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<FirewallPolicyRuleArgs>> rules;
+      private final @Nullable Input<List<FirewallPolicyRuleArgs>> rules;
 
     public Input<List<FirewallPolicyRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -69,7 +69,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName")
-    private final @Nullable Input<String> shortName;
+      private final @Nullable Input<String> shortName;
 
     public Input<String> getShortName() {
         return this.shortName == null ? Input.empty() : this.shortName;
@@ -188,7 +188,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.shortName = Input.ofNullable(shortName);
             return this;
         }
-
         public FirewallPolicyArgs build() {
             return new FirewallPolicyArgs(associations, description, parentId, requestId, rules, shortName);
         }

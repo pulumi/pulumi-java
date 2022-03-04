@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="newerNoncurrentVersions")
-    private final @Nullable Input<Integer> newerNoncurrentVersions;
+      private final @Nullable Input<Integer> newerNoncurrentVersions;
 
     public Input<Integer> getNewerNoncurrentVersions() {
         return this.newerNoncurrentVersions == null ? Input.empty() : this.newerNoncurrentVersions;
@@ -34,7 +34,7 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="noncurrentDays", required=true)
-    private final Input<Integer> noncurrentDays;
+      private final Input<Integer> noncurrentDays;
 
     public Input<Integer> getNoncurrentDays() {
         return this.noncurrentDays;
@@ -93,7 +93,6 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
             this.noncurrentDays = Input.of(Objects.requireNonNull(noncurrentDays));
             return this;
         }
-
         public BucketNoncurrentVersionExpirationArgs build() {
             return new BucketNoncurrentVersionExpirationArgs(newerNoncurrentVersions, noncurrentDays);
         }

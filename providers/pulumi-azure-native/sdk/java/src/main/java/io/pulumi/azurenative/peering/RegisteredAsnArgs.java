@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asn")
-    private final @Nullable Input<Integer> asn;
+      private final @Nullable Input<Integer> asn;
 
     public Input<Integer> getAsn() {
         return this.asn == null ? Input.empty() : this.asn;
@@ -31,7 +31,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringName", required=true)
-    private final Input<String> peeringName;
+      private final Input<String> peeringName;
 
     public Input<String> getPeeringName() {
         return this.peeringName;
@@ -42,7 +42,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registeredAsnName")
-    private final @Nullable Input<String> registeredAsnName;
+      private final @Nullable Input<String> registeredAsnName;
 
     public Input<String> getRegisteredAsnName() {
         return this.registeredAsnName == null ? Input.empty() : this.registeredAsnName;
@@ -53,7 +53,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public RegisteredAsnArgs build() {
             return new RegisteredAsnArgs(asn, peeringName, registeredAsnName, resourceGroupName);
         }

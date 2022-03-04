@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.servicebus.enums.AccessRights;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="authorizationRuleName")
-    private final @Nullable Input<String> authorizationRuleName;
+      private final @Nullable Input<String> authorizationRuleName;
 
     public Input<String> getAuthorizationRuleName() {
         return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
@@ -32,7 +32,7 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+      private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -43,7 +43,7 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="queueName", required=true)
-    private final Input<String> queueName;
+      private final Input<String> queueName;
 
     public Input<String> getQueueName() {
         return this.queueName;
@@ -54,7 +54,7 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rights", required=true)
-    private final Input<List<AccessRights>> rights;
+      private final Input<List<AccessRights>> rights;
 
     public Input<List<AccessRights>> getRights() {
         return this.rights;
@@ -169,7 +169,6 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
             this.rights = Input.of(Objects.requireNonNull(rights));
             return this;
         }
-
         public QueueAuthorizationRuleArgs build() {
             return new QueueAuthorizationRuleArgs(authorizationRuleName, namespaceName, queueName, resourceGroupName, rights);
         }

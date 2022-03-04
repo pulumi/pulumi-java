@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ManualScaleSettingsResponse {
     /**
      * Fixed number of instances for this deployment.
      * 
-     */
+    */
     public Optional<Integer> getInstanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
      * Maximum number of instances for this deployment.
      * 
-     */
+    */
     public Optional<Integer> getMaxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
     /**
      * Minimum number of instances for this deployment.
      * 
-     */
+    */
     public Optional<Integer> getMinInstances() {
         return Optional.ofNullable(this.minInstances);
     }
     /**
      * Expected value is 'Manual'.
      * 
-     */
+    */
     public String getScaleType() {
         return this.scaleType;
     }
@@ -119,7 +119,6 @@ public final class ManualScaleSettingsResponse {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
-
         public ManualScaleSettingsResponse build() {
             return new ManualScaleSettingsResponse(instanceCount, maxInstances, minInstances, scaleType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class KubeEnvironmentProfileResponse {
     /**
      * Resource ID of the Kubernetes Environment.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the Kubernetes Environment.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type of the Kubernetes Environment.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -97,7 +97,6 @@ public final class KubeEnvironmentProfileResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public KubeEnvironmentProfileResponse build() {
             return new KubeEnvironmentProfileResponse(id, name, type);
         }

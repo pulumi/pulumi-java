@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.RuntimeMetadataResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.StatusResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.TemplateMetadataResponse;
@@ -48,28 +48,28 @@ public final class GetTemplateResult {
     /**
      * The template metadata describing the template name, available parameters, etc.
      * 
-     */
+    */
     public TemplateMetadataResponse getMetadata() {
         return this.metadata;
     }
     /**
      * Describes the runtime metadata with SDKInfo and available parameters.
      * 
-     */
+    */
     public RuntimeMetadataResponse getRuntimeMetadata() {
         return this.runtimeMetadata;
     }
     /**
      * The status of the get template request. Any problems with the request will be indicated in the error_details.
      * 
-     */
+    */
     public StatusResponse getStatus() {
         return this.status;
     }
     /**
      * Template Type.
      * 
-     */
+    */
     public String getTemplateType() {
         return this.templateType;
     }
@@ -119,7 +119,6 @@ public final class GetTemplateResult {
             this.templateType = Objects.requireNonNull(templateType);
             return this;
         }
-
         public GetTemplateResult build() {
             return new GetTemplateResult(metadata, runtimeMetadata, status, templateType);
         }

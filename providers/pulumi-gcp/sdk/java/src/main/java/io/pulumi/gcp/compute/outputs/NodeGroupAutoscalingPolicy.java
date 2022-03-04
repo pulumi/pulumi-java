@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -50,7 +50,7 @@ public final class NodeGroupAutoscalingPolicy {
      * Maximum size of the node group. Set to a value less than or equal
      * to 100 and greater than or equal to min-nodes.
      * 
-     */
+    */
     public Optional<Integer> getMaxNodes() {
         return Optional.ofNullable(this.maxNodes);
     }
@@ -58,7 +58,7 @@ public final class NodeGroupAutoscalingPolicy {
      * Minimum size of the node group. Must be less
      * than or equal to max-nodes. The default value is 0.
      * 
-     */
+    */
     public Optional<Integer> getMinNodes() {
         return Optional.ofNullable(this.minNodes);
     }
@@ -71,7 +71,7 @@ public final class NodeGroupAutoscalingPolicy {
      *   restart their hosted VMs on minimal servers.
      *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
@@ -114,7 +114,6 @@ public final class NodeGroupAutoscalingPolicy {
             this.mode = mode;
             return this;
         }
-
         public NodeGroupAutoscalingPolicy build() {
             return new NodeGroupAutoscalingPolicy(maxNodes, minNodes, mode);
         }

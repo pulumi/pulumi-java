@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AddressSpaceResponse {
     /**
      * A list of address blocks reserved for this virtual network in CIDR notation.
      * 
-     */
+    */
     public List<String> getAddressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
@@ -54,7 +54,6 @@ public final class AddressSpaceResponse {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-
         public AddressSpaceResponse build() {
             return new AddressSpaceResponse(addressPrefixes);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TxtRecordResponse {
     /**
      * The text value of this TXT record.
      * 
-     */
+    */
     public List<String> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -54,7 +54,6 @@ public final class TxtRecordResponse {
             this.value = value;
             return this;
         }
-
         public TxtRecordResponse build() {
             return new TxtRecordResponse(value);
         }

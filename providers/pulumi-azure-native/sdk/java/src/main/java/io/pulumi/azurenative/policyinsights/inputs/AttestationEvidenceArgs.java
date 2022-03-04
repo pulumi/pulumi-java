@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.policyinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceUri")
-    private final @Nullable Input<String> sourceUri;
+      private final @Nullable Input<String> sourceUri;
 
     public Input<String> getSourceUri() {
         return this.sourceUri == null ? Input.empty() : this.sourceUri;
@@ -93,7 +93,6 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
             this.sourceUri = Input.ofNullable(sourceUri);
             return this;
         }
-
         public AttestationEvidenceArgs build() {
             return new AttestationEvidenceArgs(description, sourceUri);
         }

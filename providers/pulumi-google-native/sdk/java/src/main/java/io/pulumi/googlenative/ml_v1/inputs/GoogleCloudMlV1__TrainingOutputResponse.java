@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__BuiltInAlgorithmOutputResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__HyperparameterOutputResponse;
 import java.lang.Boolean;
@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="builtInAlgorithmOutput", required=true)
-    private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
+      private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
 
     public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse getBuiltInAlgorithmOutput() {
         return this.builtInAlgorithmOutput;
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="completedTrialCount", required=true)
-    private final String completedTrialCount;
+      private final String completedTrialCount;
 
     public String getCompletedTrialCount() {
         return this.completedTrialCount;
@@ -49,7 +49,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="consumedMLUnits", required=true)
-    private final Double consumedMLUnits;
+      private final Double consumedMLUnits;
 
     public Double getConsumedMLUnits() {
         return this.consumedMLUnits;
@@ -60,7 +60,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="hyperparameterMetricTag", required=true)
-    private final String hyperparameterMetricTag;
+      private final String hyperparameterMetricTag;
 
     public String getHyperparameterMetricTag() {
         return this.hyperparameterMetricTag;
@@ -71,7 +71,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="isBuiltInAlgorithmJob", required=true)
-    private final Boolean isBuiltInAlgorithmJob;
+      private final Boolean isBuiltInAlgorithmJob;
 
     public Boolean getIsBuiltInAlgorithmJob() {
         return this.isBuiltInAlgorithmJob;
@@ -82,7 +82,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="isHyperparameterTuningJob", required=true)
-    private final Boolean isHyperparameterTuningJob;
+      private final Boolean isHyperparameterTuningJob;
 
     public Boolean getIsHyperparameterTuningJob() {
         return this.isHyperparameterTuningJob;
@@ -93,7 +93,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="trials", required=true)
-    private final List<GoogleCloudMlV1__HyperparameterOutputResponse> trials;
+      private final List<GoogleCloudMlV1__HyperparameterOutputResponse> trials;
 
     public List<GoogleCloudMlV1__HyperparameterOutputResponse> getTrials() {
         return this.trials;
@@ -104,7 +104,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="webAccessUris", required=true)
-    private final Map<String,String> webAccessUris;
+      private final Map<String,String> webAccessUris;
 
     public Map<String,String> getWebAccessUris() {
         return this.webAccessUris;
@@ -213,7 +213,6 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
             this.webAccessUris = Objects.requireNonNull(webAccessUris);
             return this;
         }
-
         public GoogleCloudMlV1__TrainingOutputResponse build() {
             return new GoogleCloudMlV1__TrainingOutputResponse(builtInAlgorithmOutput, completedTrialCount, consumedMLUnits, hyperparameterMetricTag, isBuiltInAlgorithmJob, isHyperparameterTuningJob, trials, webAccessUris);
         }

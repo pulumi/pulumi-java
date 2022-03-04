@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class IssuingOptionsResponse {
     /**
      * When true, includes a URL to the issuing CA certificate in the "authority information access" X.509 extension.
      * 
-     */
+    */
     public Boolean getIncludeCaCertUrl() {
         return this.includeCaCertUrl;
     }
     /**
      * When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
      * 
-     */
+    */
     public Boolean getIncludeCrlAccessUrl() {
         return this.includeCrlAccessUrl;
     }
@@ -74,7 +74,6 @@ public final class IssuingOptionsResponse {
             this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl);
             return this;
         }
-
         public IssuingOptionsResponse build() {
             return new IssuingOptionsResponse(includeCaCertUrl, includeCrlAccessUrl);
         }

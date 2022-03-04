@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class DeviceFleetEdgeOutputConfig extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable String kmsKeyId;
+      private final @Nullable String kmsKeyId;
 
     public Optional<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
@@ -30,7 +30,7 @@ public final class DeviceFleetEdgeOutputConfig extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="s3OutputLocation", required=true)
-    private final String s3OutputLocation;
+      private final String s3OutputLocation;
 
     public String getS3OutputLocation() {
         return this.s3OutputLocation;
@@ -79,7 +79,6 @@ public final class DeviceFleetEdgeOutputConfig extends io.pulumi.resources.Invok
             this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
             return this;
         }
-
         public DeviceFleetEdgeOutputConfig build() {
             return new DeviceFleetEdgeOutputConfig(kmsKeyId, s3OutputLocation);
         }

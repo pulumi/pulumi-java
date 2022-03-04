@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketNotificationFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class BucketLambdaConfiguration {
     /**
      * The Amazon S3 bucket event for which to invoke the AWS Lambda function.
      * 
-     */
+    */
     public String getEvent() {
         return this.event;
     }
     /**
      * The filtering rules that determine which objects invoke the AWS Lambda function.
      * 
-     */
+    */
     public Optional<BucketNotificationFilter> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
      * 
-     */
+    */
     public String getFunction() {
         return this.function;
     }
@@ -98,7 +98,6 @@ public final class BucketLambdaConfiguration {
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public BucketLambdaConfiguration build() {
             return new BucketLambdaConfiguration(event, filter, function);
         }

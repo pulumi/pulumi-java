@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="accessTokenString")
-    private final @Nullable String accessTokenString;
+      private final @Nullable String accessTokenString;
 
     public Optional<String> getAccessTokenString() {
         return this.accessTokenString == null ? Optional.empty() : Optional.ofNullable(this.accessTokenString);
@@ -33,7 +33,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="bMSActiveRegion")
-    private final @Nullable String bMSActiveRegion;
+      private final @Nullable String bMSActiveRegion;
 
     public Optional<String> getBMSActiveRegion() {
         return this.bMSActiveRegion == null ? Optional.empty() : Optional.ofNullable(this.bMSActiveRegion);
@@ -44,7 +44,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable String backupManagementType;
+      private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
@@ -55,7 +55,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="containerId")
-    private final @Nullable String containerId;
+      private final @Nullable String containerId;
 
     public Optional<String> getContainerId() {
         return this.containerId == null ? Optional.empty() : Optional.ofNullable(this.containerId);
@@ -66,7 +66,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable String containerName;
+      private final @Nullable String containerName;
 
     public Optional<String> getContainerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
@@ -77,7 +77,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="containerType")
-    private final @Nullable String containerType;
+      private final @Nullable String containerType;
 
     public Optional<String> getContainerType() {
         return this.containerType == null ? Optional.empty() : Optional.ofNullable(this.containerType);
@@ -88,7 +88,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="coordinatorServiceStampId")
-    private final @Nullable String coordinatorServiceStampId;
+      private final @Nullable String coordinatorServiceStampId;
 
     public Optional<String> getCoordinatorServiceStampId() {
         return this.coordinatorServiceStampId == null ? Optional.empty() : Optional.ofNullable(this.coordinatorServiceStampId);
@@ -99,7 +99,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="coordinatorServiceStampUri")
-    private final @Nullable String coordinatorServiceStampUri;
+      private final @Nullable String coordinatorServiceStampUri;
 
     public Optional<String> getCoordinatorServiceStampUri() {
         return this.coordinatorServiceStampUri == null ? Optional.empty() : Optional.ofNullable(this.coordinatorServiceStampUri);
@@ -110,7 +110,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="datasourceContainerName")
-    private final @Nullable String datasourceContainerName;
+      private final @Nullable String datasourceContainerName;
 
     public Optional<String> getDatasourceContainerName() {
         return this.datasourceContainerName == null ? Optional.empty() : Optional.ofNullable(this.datasourceContainerName);
@@ -121,7 +121,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="datasourceId")
-    private final @Nullable String datasourceId;
+      private final @Nullable String datasourceId;
 
     public Optional<String> getDatasourceId() {
         return this.datasourceId == null ? Optional.empty() : Optional.ofNullable(this.datasourceId);
@@ -132,7 +132,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="datasourceName")
-    private final @Nullable String datasourceName;
+      private final @Nullable String datasourceName;
 
     public Optional<String> getDatasourceName() {
         return this.datasourceName == null ? Optional.empty() : Optional.ofNullable(this.datasourceName);
@@ -143,7 +143,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="datasourceType")
-    private final @Nullable String datasourceType;
+      private final @Nullable String datasourceType;
 
     public Optional<String> getDatasourceType() {
         return this.datasourceType == null ? Optional.empty() : Optional.ofNullable(this.datasourceType);
@@ -155,7 +155,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -166,7 +166,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable String policyId;
+      private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
@@ -177,49 +177,49 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable String policyName;
+      private final @Nullable String policyName;
 
     public Optional<String> getPolicyName() {
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
     }
 
     @InputImport(name="protectableObjectContainerHostOsName")
-    private final @Nullable String protectableObjectContainerHostOsName;
+      private final @Nullable String protectableObjectContainerHostOsName;
 
     public Optional<String> getProtectableObjectContainerHostOsName() {
         return this.protectableObjectContainerHostOsName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectContainerHostOsName);
     }
 
     @InputImport(name="protectableObjectFriendlyName")
-    private final @Nullable String protectableObjectFriendlyName;
+      private final @Nullable String protectableObjectFriendlyName;
 
     public Optional<String> getProtectableObjectFriendlyName() {
         return this.protectableObjectFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectFriendlyName);
     }
 
     @InputImport(name="protectableObjectParentLogicalContainerName")
-    private final @Nullable String protectableObjectParentLogicalContainerName;
+      private final @Nullable String protectableObjectParentLogicalContainerName;
 
     public Optional<String> getProtectableObjectParentLogicalContainerName() {
         return this.protectableObjectParentLogicalContainerName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectParentLogicalContainerName);
     }
 
     @InputImport(name="protectableObjectProtectionState")
-    private final @Nullable String protectableObjectProtectionState;
+      private final @Nullable String protectableObjectProtectionState;
 
     public Optional<String> getProtectableObjectProtectionState() {
         return this.protectableObjectProtectionState == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectProtectionState);
     }
 
     @InputImport(name="protectableObjectUniqueName")
-    private final @Nullable String protectableObjectUniqueName;
+      private final @Nullable String protectableObjectUniqueName;
 
     public Optional<String> getProtectableObjectUniqueName() {
         return this.protectableObjectUniqueName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectUniqueName);
     }
 
     @InputImport(name="protectableObjectWorkloadType")
-    private final @Nullable String protectableObjectWorkloadType;
+      private final @Nullable String protectableObjectWorkloadType;
 
     public Optional<String> getProtectableObjectWorkloadType() {
         return this.protectableObjectWorkloadType == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectWorkloadType);
@@ -230,7 +230,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="protectionContainerId")
-    private final @Nullable Double protectionContainerId;
+      private final @Nullable Double protectionContainerId;
 
     public Optional<Double> getProtectionContainerId() {
         return this.protectionContainerId == null ? Optional.empty() : Optional.ofNullable(this.protectionContainerId);
@@ -241,7 +241,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="protectionServiceStampId")
-    private final @Nullable String protectionServiceStampId;
+      private final @Nullable String protectionServiceStampId;
 
     public Optional<String> getProtectionServiceStampId() {
         return this.protectionServiceStampId == null ? Optional.empty() : Optional.ofNullable(this.protectionServiceStampId);
@@ -252,7 +252,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="protectionServiceStampUri")
-    private final @Nullable String protectionServiceStampUri;
+      private final @Nullable String protectionServiceStampUri;
 
     public Optional<String> getProtectionServiceStampUri() {
         return this.protectionServiceStampUri == null ? Optional.empty() : Optional.ofNullable(this.protectionServiceStampUri);
@@ -263,7 +263,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="recoveryPointId")
-    private final @Nullable String recoveryPointId;
+      private final @Nullable String recoveryPointId;
 
     public Optional<String> getRecoveryPointId() {
         return this.recoveryPointId == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointId);
@@ -274,7 +274,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="recoveryPointTime")
-    private final @Nullable String recoveryPointTime;
+      private final @Nullable String recoveryPointTime;
 
     public Optional<String> getRecoveryPointTime() {
         return this.recoveryPointTime == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointTime);
@@ -285,7 +285,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName")
-    private final @Nullable String resourceGroupName;
+      private final @Nullable String resourceGroupName;
 
     public Optional<String> getResourceGroupName() {
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
@@ -296,7 +296,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+      private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -307,7 +307,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable String resourceName;
+      private final @Nullable String resourceName;
 
     public Optional<String> getPropResourceName() {
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
@@ -318,7 +318,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="rpIsManagedVirtualMachine")
-    private final @Nullable Boolean rpIsManagedVirtualMachine;
+      private final @Nullable Boolean rpIsManagedVirtualMachine;
 
     public Optional<Boolean> getRpIsManagedVirtualMachine() {
         return this.rpIsManagedVirtualMachine == null ? Optional.empty() : Optional.ofNullable(this.rpIsManagedVirtualMachine);
@@ -329,7 +329,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="rpOriginalSAOption")
-    private final @Nullable Boolean rpOriginalSAOption;
+      private final @Nullable Boolean rpOriginalSAOption;
 
     public Optional<Boolean> getRpOriginalSAOption() {
         return this.rpOriginalSAOption == null ? Optional.empty() : Optional.ofNullable(this.rpOriginalSAOption);
@@ -340,7 +340,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="rpTierInformation")
-    private final @Nullable Map<String,String> rpTierInformation;
+      private final @Nullable Map<String,String> rpTierInformation;
 
     public Map<String,String> getRpTierInformation() {
         return this.rpTierInformation == null ? Map.of() : this.rpTierInformation;
@@ -351,7 +351,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="rpVMSizeDescription")
-    private final @Nullable String rpVMSizeDescription;
+      private final @Nullable String rpVMSizeDescription;
 
     public Optional<String> getRpVMSizeDescription() {
         return this.rpVMSizeDescription == null ? Optional.empty() : Optional.ofNullable(this.rpVMSizeDescription);
@@ -362,7 +362,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+      private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -373,7 +373,7 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="tokenExtendedInformation")
-    private final @Nullable String tokenExtendedInformation;
+      private final @Nullable String tokenExtendedInformation;
 
     public Optional<String> getTokenExtendedInformation() {
         return this.tokenExtendedInformation == null ? Optional.empty() : Optional.ofNullable(this.tokenExtendedInformation);
@@ -752,7 +752,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
             this.tokenExtendedInformation = tokenExtendedInformation;
             return this;
         }
-
         public WorkloadCrrAccessTokenResponse build() {
             return new WorkloadCrrAccessTokenResponse(accessTokenString, bMSActiveRegion, backupManagementType, containerId, containerName, containerType, coordinatorServiceStampId, coordinatorServiceStampUri, datasourceContainerName, datasourceId, datasourceName, datasourceType, objectType, policyId, policyName, protectableObjectContainerHostOsName, protectableObjectFriendlyName, protectableObjectParentLogicalContainerName, protectableObjectProtectionState, protectableObjectUniqueName, protectableObjectWorkloadType, protectionContainerId, protectionServiceStampId, protectionServiceStampUri, recoveryPointId, recoveryPointTime, resourceGroupName, resourceId, resourceName, rpIsManagedVirtualMachine, rpOriginalSAOption, rpTierInformation, rpVMSizeDescription, subscriptionId, tokenExtendedInformation);
         }

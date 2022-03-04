@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateEndpointConnectionName", required=true)
-    private final String privateEndpointConnectionName;
+      private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
@@ -39,7 +39,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetPrivateEndpointConnectionArgs build() {
             return new GetPrivateEndpointConnectionArgs(accountName, privateEndpointConnectionName, resourceGroupName);
         }

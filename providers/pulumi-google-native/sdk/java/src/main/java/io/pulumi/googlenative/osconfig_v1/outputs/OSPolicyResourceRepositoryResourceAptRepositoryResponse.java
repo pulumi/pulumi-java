@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
     /**
      * Type of archive files in this repository.
      * 
-     */
+    */
     public String getArchiveType() {
         return this.archiveType;
     }
     /**
      * List of components for this repository. Must contain at least one item.
      * 
-     */
+    */
     public List<String> getComponents() {
         return this.components;
     }
     /**
      * Distribution of this repository.
      * 
-     */
+    */
     public String getDistribution() {
         return this.distribution;
     }
     /**
      * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
      * 
-     */
+    */
     public String getGpgKey() {
         return this.gpgKey;
     }
     /**
      * URI for this repository.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -138,7 +138,6 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceAptRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceAptRepositoryResponse(archiveType, components, distribution, gpgKey, uri);
         }

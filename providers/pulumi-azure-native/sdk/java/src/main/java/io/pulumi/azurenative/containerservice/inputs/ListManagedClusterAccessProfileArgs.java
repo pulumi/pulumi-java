@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListManagedClusterAccessProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListManagedClusterAccessProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -39,7 +39,7 @@ public final class ListManagedClusterAccessProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="roleName", required=true)
-    private final String roleName;
+      private final String roleName;
 
     public String getRoleName() {
         return this.roleName;
@@ -98,7 +98,6 @@ public final class ListManagedClusterAccessProfileArgs extends io.pulumi.resourc
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
-
         public ListManagedClusterAccessProfileArgs build() {
             return new ListManagedClusterAccessProfileArgs(resourceGroupName, resourceName, roleName);
         }

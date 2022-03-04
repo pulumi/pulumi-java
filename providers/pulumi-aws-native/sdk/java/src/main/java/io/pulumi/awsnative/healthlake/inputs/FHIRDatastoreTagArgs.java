@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.healthlake.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class FHIRDatastoreTagArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -33,7 +33,7 @@ public final class FHIRDatastoreTagArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -92,7 +92,6 @@ public final class FHIRDatastoreTagArgs extends io.pulumi.resources.ResourceArgs
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public FHIRDatastoreTagArgs build() {
             return new FHIRDatastoreTagArgs(key, value);
         }

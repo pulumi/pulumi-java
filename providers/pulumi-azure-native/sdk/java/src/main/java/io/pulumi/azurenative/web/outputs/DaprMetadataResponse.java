@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class DaprMetadataResponse {
     /**
      * Metadata property name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Name of the Container App secret from which to pull the metadata property value.
      * 
-     */
+    */
     public Optional<String> getSecretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
      * Metadata property value.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -97,7 +97,6 @@ public final class DaprMetadataResponse {
             this.value = value;
             return this;
         }
-
         public DaprMetadataResponse build() {
             return new DaprMetadataResponse(name, secretRef, value);
         }

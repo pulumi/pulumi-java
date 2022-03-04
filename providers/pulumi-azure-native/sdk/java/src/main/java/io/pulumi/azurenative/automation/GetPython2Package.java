@@ -6,21 +6,41 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automation.inputs.GetPython2PackageArgs;
 import io.pulumi.azurenative.automation.outputs.GetPython2PackageResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPython2Package {
-/**
- * Definition of the module type.
+    private GetPython2Package() {}
+    public interface BuilderApplicator {
+        public void apply(GetPython2PackageArgs.Builder a);
+    }
+    private static GetPython2PackageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPython2PackageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the module type.
  * API Version: 2019-06-01.
  * 
- *
- * Definition of the module type.
+     *
+     * Definition of the module type.
  * 
- */
+     */
+    public static CompletableFuture<GetPython2PackageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the module type.
+     * API Version: 2019-06-01.
+     * 
+     *
+         * Definition of the module type.
+     * 
+     */
     public static CompletableFuture<GetPython2PackageResult> invokeAsync(GetPython2PackageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getPython2Package", TypeShape.of(GetPython2PackageResult.class), args == null ? GetPython2PackageArgs.Empty : args, Utilities.withVersion(options));
     }

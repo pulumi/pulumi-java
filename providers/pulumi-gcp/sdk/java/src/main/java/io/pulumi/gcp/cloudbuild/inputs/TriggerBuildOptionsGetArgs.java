@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildOptionsVolumeGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -39,7 +39,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dynamicSubstitutions")
-    private final @Nullable Input<Boolean> dynamicSubstitutions;
+      private final @Nullable Input<Boolean> dynamicSubstitutions;
 
     public Input<Boolean> getDynamicSubstitutions() {
         return this.dynamicSubstitutions == null ? Input.empty() : this.dynamicSubstitutions;
@@ -53,7 +53,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="envs")
-    private final @Nullable Input<List<String>> envs;
+      private final @Nullable Input<List<String>> envs;
 
     public Input<List<String>> getEnvs() {
         return this.envs == null ? Input.empty() : this.envs;
@@ -65,7 +65,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="logStreamingOption")
-    private final @Nullable Input<String> logStreamingOption;
+      private final @Nullable Input<String> logStreamingOption;
 
     public Input<String> getLogStreamingOption() {
         return this.logStreamingOption == null ? Input.empty() : this.logStreamingOption;
@@ -77,7 +77,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="logging")
-    private final @Nullable Input<String> logging;
+      private final @Nullable Input<String> logging;
 
     public Input<String> getLogging() {
         return this.logging == null ? Input.empty() : this.logging;
@@ -89,7 +89,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -101,7 +101,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="requestedVerifyOption")
-    private final @Nullable Input<String> requestedVerifyOption;
+      private final @Nullable Input<String> requestedVerifyOption;
 
     public Input<String> getRequestedVerifyOption() {
         return this.requestedVerifyOption == null ? Input.empty() : this.requestedVerifyOption;
@@ -114,7 +114,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="secretEnvs")
-    private final @Nullable Input<List<String>> secretEnvs;
+      private final @Nullable Input<List<String>> secretEnvs;
 
     public Input<List<String>> getSecretEnvs() {
         return this.secretEnvs == null ? Input.empty() : this.secretEnvs;
@@ -126,7 +126,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceProvenanceHashes")
-    private final @Nullable Input<List<String>> sourceProvenanceHashes;
+      private final @Nullable Input<List<String>> sourceProvenanceHashes;
 
     public Input<List<String>> getSourceProvenanceHashes() {
         return this.sourceProvenanceHashes == null ? Input.empty() : this.sourceProvenanceHashes;
@@ -140,7 +140,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="substitutionOption")
-    private final @Nullable Input<String> substitutionOption;
+      private final @Nullable Input<String> substitutionOption;
 
     public Input<String> getSubstitutionOption() {
         return this.substitutionOption == null ? Input.empty() : this.substitutionOption;
@@ -157,7 +157,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<TriggerBuildOptionsVolumeGetArgs>> volumes;
+      private final @Nullable Input<List<TriggerBuildOptionsVolumeGetArgs>> volumes;
 
     public Input<List<TriggerBuildOptionsVolumeGetArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -169,7 +169,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workerPool")
-    private final @Nullable Input<String> workerPool;
+      private final @Nullable Input<String> workerPool;
 
     public Input<String> getWorkerPool() {
         return this.workerPool == null ? Input.empty() : this.workerPool;
@@ -378,7 +378,6 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
             this.workerPool = Input.ofNullable(workerPool);
             return this;
         }
-
         public TriggerBuildOptionsGetArgs build() {
             return new TriggerBuildOptionsGetArgs(diskSizeGb, dynamicSubstitutions, envs, logStreamingOption, logging, machineType, requestedVerifyOption, secretEnvs, sourceProvenanceHashes, substitutionOption, volumes, workerPool);
         }

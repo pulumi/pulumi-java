@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.enums.DatasetFormat;
 import io.pulumi.awsnative.databrew.outputs.DatasetFormatOptions;
 import io.pulumi.awsnative.databrew.outputs.DatasetInput;
 import io.pulumi.awsnative.databrew.outputs.DatasetPathOptions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -50,28 +50,28 @@ public final class GetDatasetResult {
     /**
      * Dataset format
      * 
-     */
+    */
     public Optional<DatasetFormat> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Format options for dataset
      * 
-     */
+    */
     public Optional<DatasetFormatOptions> getFormatOptions() {
         return Optional.ofNullable(this.formatOptions);
     }
     /**
      * Input
      * 
-     */
+    */
     public Optional<DatasetInput> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * PathOptions
      * 
-     */
+    */
     public Optional<DatasetPathOptions> getPathOptions() {
         return Optional.ofNullable(this.pathOptions);
     }
@@ -121,7 +121,6 @@ public final class GetDatasetResult {
             this.pathOptions = pathOptions;
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(format, formatOptions, input, pathOptions);
         }

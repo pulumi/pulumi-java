@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ResourceRangeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -33,14 +33,14 @@ public final class RecommendedMachineConfigurationResponse {
     /**
      * Describes the resource range.
      * 
-     */
+    */
     public Optional<ResourceRangeResponse> getMemory() {
         return Optional.ofNullable(this.memory);
     }
     /**
      * Describes the resource range.
      * 
-     */
+    */
     public Optional<ResourceRangeResponse> getVCPUs() {
         return Optional.ofNullable(this.vCPUs);
     }
@@ -76,7 +76,6 @@ public final class RecommendedMachineConfigurationResponse {
             this.vCPUs = vCPUs;
             return this;
         }
-
         public RecommendedMachineConfigurationResponse build() {
             return new RecommendedMachineConfigurationResponse(memory, vCPUs);
         }

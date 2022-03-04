@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TriggerBuildSecretGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final Input<String> kmsKeyName;
+      private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -33,7 +33,7 @@ public final class TriggerBuildSecretGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secretEnv")
-    private final @Nullable Input<Map<String,String>> secretEnv;
+      private final @Nullable Input<Map<String,String>> secretEnv;
 
     public Input<Map<String,String>> getSecretEnv() {
         return this.secretEnv == null ? Input.empty() : this.secretEnv;
@@ -92,7 +92,6 @@ public final class TriggerBuildSecretGetArgs extends io.pulumi.resources.Resourc
             this.secretEnv = Input.ofNullable(secretEnv);
             return this;
         }
-
         public TriggerBuildSecretGetArgs build() {
             return new TriggerBuildSecretGetArgs(kmsKeyName, secretEnv);
         }

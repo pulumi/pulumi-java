@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class DestinationResponse {
     /**
      * Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
      * 
-     */
+    */
     public Optional<String> getArchiveNameFormat() {
         return Optional.ofNullable(this.archiveNameFormat);
     }
     /**
      * Blob container Name
      * 
-     */
+    */
     public Optional<String> getBlobContainer() {
         return Optional.ofNullable(this.blobContainer);
     }
     /**
      * Name for capture destination
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Resource id of the storage account to be used to create the blobs
      * 
-     */
+    */
     public Optional<String> getStorageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }
@@ -118,7 +118,6 @@ public final class DestinationResponse {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(archiveNameFormat, blobContainer, name, storageAccountResourceId);
         }

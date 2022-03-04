@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="samplingRatio")
-    private final @Nullable Input<Double> samplingRatio;
+      private final @Nullable Input<Double> samplingRatio;
 
     public Input<Double> getSamplingRatio() {
         return this.samplingRatio == null ? Input.empty() : this.samplingRatio;
@@ -66,7 +66,6 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
             this.samplingRatio = Input.ofNullable(samplingRatio);
             return this;
         }
-
         public StackdriverLoggingConfigArgs build() {
             return new StackdriverLoggingConfigArgs(samplingRatio);
         }

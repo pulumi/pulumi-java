@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.BackupFileInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -92,70 +92,70 @@ public final class BackupSetInfoResponse {
     /**
      * Date and time that the backup operation finished
      * 
-     */
+    */
     public Optional<String> getBackupFinishedDate() {
         return Optional.ofNullable(this.backupFinishedDate);
     }
     /**
      * Id for the set of backup files
      * 
-     */
+    */
     public Optional<String> getBackupSetId() {
         return Optional.ofNullable(this.backupSetId);
     }
     /**
      * Date and time that the backup operation began
      * 
-     */
+    */
     public Optional<String> getBackupStartDate() {
         return Optional.ofNullable(this.backupStartDate);
     }
     /**
      * Enum of the different backup types
      * 
-     */
+    */
     public Optional<String> getBackupType() {
         return Optional.ofNullable(this.backupType);
     }
     /**
      * Name of the database to which the backup set belongs
      * 
-     */
+    */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * First log sequence number of the backup file
      * 
-     */
+    */
     public Optional<String> getFirstLsn() {
         return Optional.ofNullable(this.firstLsn);
     }
     /**
      * Whether the backup set is restored or not
      * 
-     */
+    */
     public Optional<Boolean> getIsBackupRestored() {
         return Optional.ofNullable(this.isBackupRestored);
     }
     /**
      * Last log sequence number of the backup file
      * 
-     */
+    */
     public Optional<String> getLastLsn() {
         return Optional.ofNullable(this.lastLsn);
     }
     /**
      * Last modified time of the backup file in share location
      * 
-     */
+    */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * List of files in the backup set
      * 
-     */
+    */
     public List<BackupFileInfoResponse> getListOfBackupFiles() {
         return this.listOfBackupFiles == null ? List.of() : this.listOfBackupFiles;
     }
@@ -247,7 +247,6 @@ public final class BackupSetInfoResponse {
             this.listOfBackupFiles = listOfBackupFiles;
             return this;
         }
-
         public BackupSetInfoResponse build() {
             return new BackupSetInfoResponse(backupFinishedDate, backupSetId, backupStartDate, backupType, databaseName, firstLsn, isBackupRestored, lastLsn, lastModifiedTime, listOfBackupFiles);
         }

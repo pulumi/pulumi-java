@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DiskEncryptionConfigurationResponse {
     /**
      * This is always `sql#diskEncryptionConfiguration`.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource name of KMS key for disk encryption
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
@@ -74,7 +74,6 @@ public final class DiskEncryptionConfigurationResponse {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public DiskEncryptionConfigurationResponse build() {
             return new DiskEncryptionConfigurationResponse(kind, kmsKeyName);
         }

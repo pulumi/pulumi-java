@@ -9,7 +9,7 @@ import io.pulumi.azurenative.databoxedge.outputs.MountPointMapResponse;
 import io.pulumi.azurenative.databoxedge.outputs.RefreshDetailsResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.azurenative.databoxedge.outputs.UserAccessRightResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -124,98 +124,98 @@ public final class GetShareResult {
     /**
      * Access protocol to be used by the share.
      * 
-     */
+    */
     public String getAccessProtocol() {
         return this.accessProtocol;
     }
     /**
      * Azure container mapping for the share.
      * 
-     */
+    */
     public Optional<AzureContainerInfoResponse> getAzureContainerInfo() {
         return Optional.ofNullable(this.azureContainerInfo);
     }
     /**
      * List of IP addresses and corresponding access rights on the share(required for NFS protocol).
      * 
-     */
+    */
     public List<ClientAccessRightResponse> getClientAccessRights() {
         return this.clientAccessRights == null ? List.of() : this.clientAccessRights;
     }
     /**
      * Data policy of the share.
      * 
-     */
+    */
     public Optional<String> getDataPolicy() {
         return Optional.ofNullable(this.dataPolicy);
     }
     /**
      * Description for the share.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Current monitoring status of the share.
      * 
-     */
+    */
     public String getMonitoringStatus() {
         return this.monitoringStatus;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Details of the refresh job on this share.
      * 
-     */
+    */
     public Optional<RefreshDetailsResponse> getRefreshDetails() {
         return Optional.ofNullable(this.refreshDetails);
     }
     /**
      * Share mount point to the role.
      * 
-     */
+    */
     public List<MountPointMapResponse> getShareMappings() {
         return this.shareMappings;
     }
     /**
      * Current status of the share.
      * 
-     */
+    */
     public String getShareStatus() {
         return this.shareStatus;
     }
     /**
      * Share on ASE device
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Mapping of users and corresponding access rights on the share (required for SMB protocol).
      * 
-     */
+    */
     public List<UserAccessRightResponse> getUserAccessRights() {
         return this.userAccessRights == null ? List.of() : this.userAccessRights;
     }
@@ -335,7 +335,6 @@ public final class GetShareResult {
             this.userAccessRights = userAccessRights;
             return this;
         }
-
         public GetShareResult build() {
             return new GetShareResult(accessProtocol, azureContainerInfo, clientAccessRights, dataPolicy, description, id, monitoringStatus, name, refreshDetails, shareMappings, shareStatus, systemData, type, userAccessRights);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetGlobalNetworkEndpointGroupArgs extends io.pulumi.resources
     public static final GetGlobalNetworkEndpointGroupArgs Empty = new GetGlobalNetworkEndpointGroupArgs();
 
     @InputImport(name="networkEndpointGroup", required=true)
-    private final String networkEndpointGroup;
+      private final String networkEndpointGroup;
 
     public String getNetworkEndpointGroup() {
         return this.networkEndpointGroup;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetGlobalNetworkEndpointGroupArgs extends io.pulumi.resources
             this.project = project;
             return this;
         }
-
         public GetGlobalNetworkEndpointGroupArgs build() {
             return new GetGlobalNetworkEndpointGroupArgs(networkEndpointGroup, project);
         }

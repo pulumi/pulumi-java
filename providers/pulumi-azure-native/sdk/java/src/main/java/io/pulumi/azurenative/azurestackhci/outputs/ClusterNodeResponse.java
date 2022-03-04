@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestackhci.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -81,63 +81,63 @@ public final class ClusterNodeResponse {
     /**
      * Number of physical cores on the cluster node.
      * 
-     */
+    */
     public Double getCoreCount() {
         return this.coreCount;
     }
     /**
      * Id of the node in the cluster.
      * 
-     */
+    */
     public Double getId() {
         return this.id;
     }
     /**
      * Manufacturer of the cluster node hardware.
      * 
-     */
+    */
     public String getManufacturer() {
         return this.manufacturer;
     }
     /**
      * Total available memory on the cluster node (in GiB).
      * 
-     */
+    */
     public Double getMemoryInGiB() {
         return this.memoryInGiB;
     }
     /**
      * Model name of the cluster node hardware.
      * 
-     */
+    */
     public String getModel() {
         return this.model;
     }
     /**
      * Name of the cluster node.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Operating system running on the cluster node.
      * 
-     */
+    */
     public String getOsName() {
         return this.osName;
     }
     /**
      * Version of the operating system running on the cluster node.
      * 
-     */
+    */
     public String getOsVersion() {
         return this.osVersion;
     }
     /**
      * Immutable id of the cluster node.
      * 
-     */
+    */
     public String getSerialNumber() {
         return this.serialNumber;
     }
@@ -222,7 +222,6 @@ public final class ClusterNodeResponse {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public ClusterNodeResponse build() {
             return new ClusterNodeResponse(coreCount, id, manufacturer, memoryInGiB, model, name, osName, osVersion, serialNumber);
         }

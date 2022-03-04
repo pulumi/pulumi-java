@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -48,28 +48,28 @@ public final class FactoryIdentityResponse {
     /**
      * The principal id of the identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The client tenant id of the identity.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The identity type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * List of user assigned identities for the factory.
      * 
-     */
+    */
     public Map<String,Object> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
@@ -119,7 +119,6 @@ public final class FactoryIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public FactoryIdentityResponse build() {
             return new FactoryIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

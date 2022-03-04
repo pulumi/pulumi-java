@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterPodIdentityExceptionResponse;
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterPodIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class ManagedClusterPodIdentityProfileResponse {
     /**
      * Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
      * 
-     */
+    */
     public Optional<Boolean> getAllowNetworkPluginKubenet() {
         return Optional.ofNullable(this.allowNetworkPluginKubenet);
     }
     /**
      * Whether the pod identity addon is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * User assigned pod identity settings.
      * 
-     */
+    */
     public List<ManagedClusterPodIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? List.of() : this.userAssignedIdentities;
     }
     /**
      * User assigned pod identity exception settings.
      * 
-     */
+    */
     public List<ManagedClusterPodIdentityExceptionResponse> getUserAssignedIdentityExceptions() {
         return this.userAssignedIdentityExceptions == null ? List.of() : this.userAssignedIdentityExceptions;
     }
@@ -121,7 +121,6 @@ public final class ManagedClusterPodIdentityProfileResponse {
             this.userAssignedIdentityExceptions = userAssignedIdentityExceptions;
             return this;
         }
-
         public ManagedClusterPodIdentityProfileResponse build() {
             return new ManagedClusterPodIdentityProfileResponse(allowNetworkPluginKubenet, enabled, userAssignedIdentities, userAssignedIdentityExceptions);
         }

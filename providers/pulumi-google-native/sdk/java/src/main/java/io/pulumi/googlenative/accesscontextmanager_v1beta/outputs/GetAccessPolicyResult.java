@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GetAccessPolicyResult {
     /**
      * Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
      * 
-     */
+    */
     public String getParent() {
         return this.parent;
     }
     /**
      * Human readable title. Does not affect behavior.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -95,7 +95,6 @@ public final class GetAccessPolicyResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetAccessPolicyResult build() {
             return new GetAccessPolicyResult(name, parent, title);
         }

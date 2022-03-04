@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="subnetName")
-    private final @Nullable Input<String> subnetName;
+      private final @Nullable Input<String> subnetName;
 
     public Input<String> getSubnetName() {
         return this.subnetName == null ? Input.empty() : this.subnetName;
@@ -34,7 +34,7 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="vnetName")
-    private final @Nullable Input<String> vnetName;
+      private final @Nullable Input<String> vnetName;
 
     public Input<String> getVnetName() {
         return this.vnetName == null ? Input.empty() : this.vnetName;
@@ -93,7 +93,6 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
             this.vnetName = Input.ofNullable(vnetName);
             return this;
         }
-
         public ACIServiceCreateRequestVnetConfigurationArgs build() {
             return new ACIServiceCreateRequestVnetConfigurationArgs(subnetName, vnetName);
         }

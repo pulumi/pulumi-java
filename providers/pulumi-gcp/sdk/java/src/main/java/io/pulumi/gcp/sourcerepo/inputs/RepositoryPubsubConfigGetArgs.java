@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sourcerepo.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="messageFormat", required=true)
-    private final Input<String> messageFormat;
+      private final Input<String> messageFormat;
 
     public Input<String> getMessageFormat() {
         return this.messageFormat;
@@ -36,7 +36,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serviceAccountEmail")
-    private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -47,7 +47,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="topic", required=true)
-    private final Input<String> topic;
+      private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;
@@ -121,7 +121,6 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }
-
         public RepositoryPubsubConfigGetArgs build() {
             return new RepositoryPubsubConfigGetArgs(messageFormat, serviceAccountEmail, topic);
         }

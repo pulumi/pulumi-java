@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RulesEngineRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class GetRulesEngineResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource status.
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * A list of rules that define a particular Rules Engine Configuration.
      * 
-     */
+    */
     public List<RulesEngineRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -140,7 +140,6 @@ public final class GetRulesEngineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRulesEngineResult build() {
             return new GetRulesEngineResult(id, name, resourceState, rules, type);
         }

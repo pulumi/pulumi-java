@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blockchain.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+      private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -66,7 +66,6 @@ public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.Reso
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
-
         public BlockchainMemberNodesSkuArgs build() {
             return new BlockchainMemberNodesSkuArgs(capacity);
         }

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.forecast.inputs.EncryptionConfigPropertiesArgs;
 import io.pulumi.awsnative.forecast.inputs.SchemaPropertiesArgs;
 import io.pulumi.awsnative.forecast.inputs.TagsItemPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataFrequency")
-    private final @Nullable Input<String> dataFrequency;
+      private final @Nullable Input<String> dataFrequency;
 
     public Input<String> getDataFrequency() {
         return this.dataFrequency == null ? Input.empty() : this.dataFrequency;
@@ -36,7 +36,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetName")
-    private final @Nullable Input<String> datasetName;
+      private final @Nullable Input<String> datasetName;
 
     public Input<String> getDatasetName() {
         return this.datasetName == null ? Input.empty() : this.datasetName;
@@ -47,7 +47,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetType", required=true)
-    private final Input<DatasetType> datasetType;
+      private final Input<DatasetType> datasetType;
 
     public Input<DatasetType> getDatasetType() {
         return this.datasetType;
@@ -58,28 +58,28 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<DatasetDomain> domain;
+      private final Input<DatasetDomain> domain;
 
     public Input<DatasetDomain> getDomain() {
         return this.domain;
     }
 
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<EncryptionConfigPropertiesArgs> encryptionConfig;
+      private final @Nullable Input<EncryptionConfigPropertiesArgs> encryptionConfig;
 
     public Input<EncryptionConfigPropertiesArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
     @InputImport(name="schema", required=true)
-    private final Input<SchemaPropertiesArgs> schema;
+      private final Input<SchemaPropertiesArgs> schema;
 
     public Input<SchemaPropertiesArgs> getSchema() {
         return this.schema;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<TagsItemPropertiesArgs>> tags;
+      private final @Nullable Input<List<TagsItemPropertiesArgs>> tags;
 
     public Input<List<TagsItemPropertiesArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -213,7 +213,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DatasetArgs build() {
             return new DatasetArgs(dataFrequency, datasetName, datasetType, domain, encryptionConfig, schema, tags);
         }

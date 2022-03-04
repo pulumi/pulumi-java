@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.enums.AddressType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="addressType")
-    private final @Nullable Input<Either<String,AddressType>> addressType;
+      private final @Nullable Input<Either<String,AddressType>> addressType;
 
     public Input<Either<String,AddressType>> getAddressType() {
         return this.addressType == null ? Input.empty() : this.addressType;
@@ -36,7 +36,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="city")
-    private final @Nullable Input<String> city;
+      private final @Nullable Input<String> city;
 
     public Input<String> getCity() {
         return this.city == null ? Input.empty() : this.city;
@@ -47,7 +47,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="companyName")
-    private final @Nullable Input<String> companyName;
+      private final @Nullable Input<String> companyName;
 
     public Input<String> getCompanyName() {
         return this.companyName == null ? Input.empty() : this.companyName;
@@ -58,7 +58,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="country", required=true)
-    private final Input<String> country;
+      private final Input<String> country;
 
     public Input<String> getCountry() {
         return this.country;
@@ -69,7 +69,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="postalCode")
-    private final @Nullable Input<String> postalCode;
+      private final @Nullable Input<String> postalCode;
 
     public Input<String> getPostalCode() {
         return this.postalCode == null ? Input.empty() : this.postalCode;
@@ -80,7 +80,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="stateOrProvince")
-    private final @Nullable Input<String> stateOrProvince;
+      private final @Nullable Input<String> stateOrProvince;
 
     public Input<String> getStateOrProvince() {
         return this.stateOrProvince == null ? Input.empty() : this.stateOrProvince;
@@ -91,7 +91,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="streetAddress1", required=true)
-    private final Input<String> streetAddress1;
+      private final Input<String> streetAddress1;
 
     public Input<String> getStreetAddress1() {
         return this.streetAddress1;
@@ -102,7 +102,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="streetAddress2")
-    private final @Nullable Input<String> streetAddress2;
+      private final @Nullable Input<String> streetAddress2;
 
     public Input<String> getStreetAddress2() {
         return this.streetAddress2 == null ? Input.empty() : this.streetAddress2;
@@ -113,7 +113,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="streetAddress3")
-    private final @Nullable Input<String> streetAddress3;
+      private final @Nullable Input<String> streetAddress3;
 
     public Input<String> getStreetAddress3() {
         return this.streetAddress3 == null ? Input.empty() : this.streetAddress3;
@@ -124,7 +124,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="zipExtendedCode")
-    private final @Nullable Input<String> zipExtendedCode;
+      private final @Nullable Input<String> zipExtendedCode;
 
     public Input<String> getZipExtendedCode() {
         return this.zipExtendedCode == null ? Input.empty() : this.zipExtendedCode;
@@ -303,7 +303,6 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
             this.zipExtendedCode = Input.ofNullable(zipExtendedCode);
             return this;
         }
-
         public ShippingAddressArgs build() {
             return new ShippingAddressArgs(addressType, city, companyName, country, postalCode, stateOrProvince, streetAddress1, streetAddress2, streetAddress3, zipExtendedCode);
         }

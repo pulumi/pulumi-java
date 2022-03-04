@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.IotHubPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.IotHubSkuInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -78,56 +78,56 @@ public final class GetIotHubResourceResult {
     /**
      * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * IotHub properties
      * 
-     */
+    */
     public IotHubPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * IotHub SKU info
      * 
-     */
+    */
     public IotHubSkuInfoResponse getSku() {
         return this.sku;
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -205,7 +205,6 @@ public final class GetIotHubResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotHubResourceResult build() {
             return new GetIotHubResourceResult(etag, id, location, name, properties, sku, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class PacketMirroringNetworkInfoResponse {
     /**
      * Unique identifier for the network; defined by the server.
      * 
-     */
+    */
     public String getCanonicalUrl() {
         return this.canonicalUrl;
     }
     /**
      * URL of the network resource.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -74,7 +74,6 @@ public final class PacketMirroringNetworkInfoResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PacketMirroringNetworkInfoResponse build() {
             return new PacketMirroringNetworkInfoResponse(canonicalUrl, url);
         }

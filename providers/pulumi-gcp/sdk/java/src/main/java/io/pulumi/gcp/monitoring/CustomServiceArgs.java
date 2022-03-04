@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.CustomServiceTelemetryArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -32,7 +32,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -44,7 +44,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceId")
-    private final @Nullable Input<String> serviceId;
+      private final @Nullable Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId == null ? Input.empty() : this.serviceId;
@@ -56,7 +56,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="telemetry")
-    private final @Nullable Input<CustomServiceTelemetryArgs> telemetry;
+      private final @Nullable Input<CustomServiceTelemetryArgs> telemetry;
 
     public Input<CustomServiceTelemetryArgs> getTelemetry() {
         return this.telemetry == null ? Input.empty() : this.telemetry;
@@ -145,7 +145,6 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.telemetry = Input.ofNullable(telemetry);
             return this;
         }
-
         public CustomServiceArgs build() {
             return new CustomServiceArgs(displayName, project, serviceId, telemetry);
         }

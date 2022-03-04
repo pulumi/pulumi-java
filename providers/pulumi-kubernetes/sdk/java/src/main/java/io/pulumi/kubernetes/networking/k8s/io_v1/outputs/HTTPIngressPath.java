@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.IngressBackend;
 import java.lang.String;
 import java.util.Objects;
@@ -51,14 +51,14 @@ public final class HTTPIngressPath {
     /**
      * Backend defines the referenced service endpoint to which the traffic will be forwarded to.
      * 
-     */
+    */
     public IngressBackend getBackend() {
         return this.backend;
     }
     /**
      * Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/' and must be present when using PathType with value "Exact" or "Prefix".
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -75,7 +75,7 @@ public final class HTTPIngressPath {
      *   or treat it identically to Prefix or Exact path types.
      *   Implementations are required to support all path types.
      * 
-     */
+    */
     public String getPathType() {
         return this.pathType;
     }
@@ -118,7 +118,6 @@ public final class HTTPIngressPath {
             this.pathType = Objects.requireNonNull(pathType);
             return this;
         }
-
         public HTTPIngressPath build() {
             return new HTTPIngressPath(backend, path, pathType);
         }

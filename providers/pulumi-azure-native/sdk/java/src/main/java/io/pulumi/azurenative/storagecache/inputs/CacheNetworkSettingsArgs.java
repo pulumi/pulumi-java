@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dnsSearchDomain")
-    private final @Nullable Input<String> dnsSearchDomain;
+      private final @Nullable Input<String> dnsSearchDomain;
 
     public Input<String> getDnsSearchDomain() {
         return this.dnsSearchDomain == null ? Input.empty() : this.dnsSearchDomain;
@@ -36,7 +36,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -47,7 +47,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mtu")
-    private final @Nullable Input<Integer> mtu;
+      private final @Nullable Input<Integer> mtu;
 
     public Input<Integer> getMtu() {
         return this.mtu == null ? Input.empty() : this.mtu;
@@ -58,7 +58,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ntpServer")
-    private final @Nullable Input<String> ntpServer;
+      private final @Nullable Input<String> ntpServer;
 
     public Input<String> getNtpServer() {
         return this.ntpServer == null ? Input.empty() : this.ntpServer;
@@ -147,7 +147,6 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
             this.ntpServer = Input.ofNullable(ntpServer);
             return this;
         }
-
         public CacheNetworkSettingsArgs build() {
             return new CacheNetworkSettingsArgs(dnsSearchDomain, dnsServers, mtu, ntpServer);
         }

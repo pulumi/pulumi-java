@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.AppDevExperienceFeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.FeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.ServiceMeshFeatureStateResponse;
@@ -23,7 +23,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="appdevexperience", required=true)
-    private final AppDevExperienceFeatureStateResponse appdevexperience;
+      private final AppDevExperienceFeatureStateResponse appdevexperience;
 
     public AppDevExperienceFeatureStateResponse getAppdevexperience() {
         return this.appdevexperience;
@@ -34,7 +34,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="servicemesh", required=true)
-    private final ServiceMeshFeatureStateResponse servicemesh;
+      private final ServiceMeshFeatureStateResponse servicemesh;
 
     public ServiceMeshFeatureStateResponse getServicemesh() {
         return this.servicemesh;
@@ -45,7 +45,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="state", required=true)
-    private final FeatureStateResponse state;
+      private final FeatureStateResponse state;
 
     public FeatureStateResponse getState() {
         return this.state;
@@ -104,7 +104,6 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public CommonFeatureStateResponse build() {
             return new CommonFeatureStateResponse(appdevexperience, servicemesh, state);
         }

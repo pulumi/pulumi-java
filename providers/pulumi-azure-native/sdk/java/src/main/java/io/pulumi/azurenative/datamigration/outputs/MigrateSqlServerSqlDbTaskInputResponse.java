@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlDbDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrationValidationOptionsResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -52,21 +52,21 @@ public final class MigrateSqlServerSqlDbTaskInputResponse {
     /**
      * Databases to migrate
      * 
-     */
+    */
     public List<MigrateSqlServerSqlDbDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Information for connecting to source
      * 
-     */
+    */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Information for connecting to target
      * 
-     */
+    */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -75,7 +75,7 @@ public final class MigrateSqlServerSqlDbTaskInputResponse {
      *  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data.
      *  2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database.
      * 
-     */
+    */
     public Optional<MigrationValidationOptionsResponse> getValidationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }
@@ -125,7 +125,6 @@ public final class MigrateSqlServerSqlDbTaskInputResponse {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskInputResponse build() {
             return new MigrateSqlServerSqlDbTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);
         }

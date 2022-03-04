@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.appplatform.inputs.DeploymentResourcePropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appName", required=true)
-    private final Input<String> appName;
+      private final Input<String> appName;
 
     public Input<String> getAppName() {
         return this.appName;
@@ -32,7 +32,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentName")
-    private final @Nullable Input<String> deploymentName;
+      private final @Nullable Input<String> deploymentName;
 
     public Input<String> getDeploymentName() {
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
@@ -43,7 +43,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<DeploymentResourcePropertiesArgs> properties;
+      private final @Nullable Input<DeploymentResourcePropertiesArgs> properties;
 
     public Input<DeploymentResourcePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -54,7 +54,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -76,7 +76,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -195,7 +195,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.sku = Input.ofNullable(sku);
             return this;
         }
-
         public DeploymentArgs build() {
             return new DeploymentArgs(appName, deploymentName, properties, resourceGroupName, serviceName, sku);
         }

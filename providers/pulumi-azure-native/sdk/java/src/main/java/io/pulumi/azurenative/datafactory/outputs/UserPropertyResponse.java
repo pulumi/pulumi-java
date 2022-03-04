@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class UserPropertyResponse {
     /**
      * User property name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * User property value. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getValue() {
         return this.value;
     }
@@ -75,7 +75,6 @@ public final class UserPropertyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public UserPropertyResponse build() {
             return new UserPropertyResponse(name, value);
         }

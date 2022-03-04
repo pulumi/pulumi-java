@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleMatchConfig;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleMatchExpr;
 import java.lang.String;
@@ -50,7 +50,7 @@ public final class SecurityPolicyRuleMatch {
      * This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SecurityPolicyRuleMatchConfig> getConfig() {
         return Optional.ofNullable(this.config);
     }
@@ -59,7 +59,7 @@ public final class SecurityPolicyRuleMatch {
      * such as origin.ip, source.region_code and contents in the request header.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SecurityPolicyRuleMatchExpr> getExpr() {
         return Optional.ofNullable(this.expr);
     }
@@ -68,7 +68,7 @@ public final class SecurityPolicyRuleMatch {
      * Available options:
      * * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
      * 
-     */
+    */
     public Optional<String> getVersionedExpr() {
         return Optional.ofNullable(this.versionedExpr);
     }
@@ -111,7 +111,6 @@ public final class SecurityPolicyRuleMatch {
             this.versionedExpr = versionedExpr;
             return this;
         }
-
         public SecurityPolicyRuleMatch build() {
             return new SecurityPolicyRuleMatch(config, expr, versionedExpr);
         }

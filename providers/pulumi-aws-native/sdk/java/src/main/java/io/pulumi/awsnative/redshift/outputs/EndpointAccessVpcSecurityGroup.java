@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class EndpointAccessVpcSecurityGroup {
     /**
      * The status of the VPC security group.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The identifier of the VPC security group.
      * 
-     */
+    */
     public Optional<String> getVpcSecurityGroupId() {
         return Optional.ofNullable(this.vpcSecurityGroupId);
     }
@@ -76,7 +76,6 @@ public final class EndpointAccessVpcSecurityGroup {
             this.vpcSecurityGroupId = vpcSecurityGroupId;
             return this;
         }
-
         public EndpointAccessVpcSecurityGroup build() {
             return new EndpointAccessVpcSecurityGroup(status, vpcSecurityGroupId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SortOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operatorName", required=true)
-    private final String operatorName;
+      private final String operatorName;
 
     public String getOperatorName() {
         return this.operatorName;
@@ -28,7 +28,7 @@ public final class SortOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sortOrder", required=true)
-    private final String sortOrder;
+      private final String sortOrder;
 
     public String getSortOrder() {
         return this.sortOrder;
@@ -77,7 +77,6 @@ public final class SortOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }
-
         public SortOptionsResponse build() {
             return new SortOptionsResponse(operatorName, sortOrder);
         }

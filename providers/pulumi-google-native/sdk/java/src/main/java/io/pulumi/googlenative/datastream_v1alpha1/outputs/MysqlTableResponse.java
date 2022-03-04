@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.MysqlColumnResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class MysqlTableResponse {
     /**
      * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
      * 
-     */
+    */
     public List<MysqlColumnResponse> getMysqlColumns() {
         return this.mysqlColumns;
     }
     /**
      * Table name.
      * 
-     */
+    */
     public String getTableName() {
         return this.tableName;
     }
@@ -76,7 +76,6 @@ public final class MysqlTableResponse {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public MysqlTableResponse build() {
             return new MysqlTableResponse(mysqlColumns, tableName);
         }

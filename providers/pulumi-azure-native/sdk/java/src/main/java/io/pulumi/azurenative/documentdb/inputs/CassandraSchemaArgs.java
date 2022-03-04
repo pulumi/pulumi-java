@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.CassandraPartitionKeyArgs;
 import io.pulumi.azurenative.documentdb.inputs.ClusterKeyArgs;
 import io.pulumi.azurenative.documentdb.inputs.ColumnArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterKeys")
-    private final @Nullable Input<List<ClusterKeyArgs>> clusterKeys;
+      private final @Nullable Input<List<ClusterKeyArgs>> clusterKeys;
 
     public Input<List<ClusterKeyArgs>> getClusterKeys() {
         return this.clusterKeys == null ? Input.empty() : this.clusterKeys;
@@ -37,7 +37,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable Input<List<ColumnArgs>> columns;
+      private final @Nullable Input<List<ColumnArgs>> columns;
 
     public Input<List<ColumnArgs>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;
@@ -48,7 +48,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="partitionKeys")
-    private final @Nullable Input<List<CassandraPartitionKeyArgs>> partitionKeys;
+      private final @Nullable Input<List<CassandraPartitionKeyArgs>> partitionKeys;
 
     public Input<List<CassandraPartitionKeyArgs>> getPartitionKeys() {
         return this.partitionKeys == null ? Input.empty() : this.partitionKeys;
@@ -122,7 +122,6 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
             this.partitionKeys = Input.ofNullable(partitionKeys);
             return this;
         }
-
         public CassandraSchemaArgs build() {
             return new CassandraSchemaArgs(clusterKeys, columns, partitionKeys);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.inputs.GetSqlPoolTransparentDataEncryptionArgs;
 import io.pulumi.azurenative.synapse.outputs.GetSqlPoolTransparentDataEncryptionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlPoolTransparentDataEncryption {
-/**
- * Represents a Sql pool transparent data encryption configuration.
+    private GetSqlPoolTransparentDataEncryption() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlPoolTransparentDataEncryptionArgs.Builder a);
+    }
+    private static GetSqlPoolTransparentDataEncryptionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlPoolTransparentDataEncryptionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a Sql pool transparent data encryption configuration.
  * API Version: 2021-03-01.
  * 
- *
- * Represents a Sql pool transparent data encryption configuration.
+     *
+     * Represents a Sql pool transparent data encryption configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlPoolTransparentDataEncryptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a Sql pool transparent data encryption configuration.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Represents a Sql pool transparent data encryption configuration.
+     * 
+     */
     public static CompletableFuture<GetSqlPoolTransparentDataEncryptionResult> invokeAsync(GetSqlPoolTransparentDataEncryptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolTransparentDataEncryption", TypeShape.of(GetSqlPoolTransparentDataEncryptionResult.class), args == null ? GetSqlPoolTransparentDataEncryptionArgs.Empty : args, Utilities.withVersion(options));
     }

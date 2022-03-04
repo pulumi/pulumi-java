@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ParticipantProfilePropertyReferenceResponse {
     /**
      * The source interaction property that maps to the target profile property.
      * 
-     */
+    */
     public String getInteractionPropertyName() {
         return this.interactionPropertyName;
     }
     /**
      * The target profile property that maps to the source interaction property.
      * 
-     */
+    */
     public String getProfilePropertyName() {
         return this.profilePropertyName;
     }
@@ -74,7 +74,6 @@ public final class ParticipantProfilePropertyReferenceResponse {
             this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
             return this;
         }
-
         public ParticipantProfilePropertyReferenceResponse build() {
             return new ParticipantProfilePropertyReferenceResponse(interactionPropertyName, profilePropertyName);
         }

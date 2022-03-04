@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionHostName")
-    private final @Nullable Input<String> actionHostName;
+      private final @Nullable Input<String> actionHostName;
 
     public Input<String> getActionHostName() {
         return this.actionHostName == null ? Input.empty() : this.actionHostName;
@@ -37,7 +37,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="changeDecisionCallbackUrl")
-    private final @Nullable Input<String> changeDecisionCallbackUrl;
+      private final @Nullable Input<String> changeDecisionCallbackUrl;
 
     public Input<String> getChangeDecisionCallbackUrl() {
         return this.changeDecisionCallbackUrl == null ? Input.empty() : this.changeDecisionCallbackUrl;
@@ -48,7 +48,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="changeIntervalInMinutes")
-    private final @Nullable Input<Integer> changeIntervalInMinutes;
+      private final @Nullable Input<Integer> changeIntervalInMinutes;
 
     public Input<Integer> getChangeIntervalInMinutes() {
         return this.changeIntervalInMinutes == null ? Input.empty() : this.changeIntervalInMinutes;
@@ -61,7 +61,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="changeStep")
-    private final @Nullable Input<Double> changeStep;
+      private final @Nullable Input<Double> changeStep;
 
     public Input<Double> getChangeStep() {
         return this.changeStep == null ? Input.empty() : this.changeStep;
@@ -72,7 +72,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxReroutePercentage")
-    private final @Nullable Input<Double> maxReroutePercentage;
+      private final @Nullable Input<Double> maxReroutePercentage;
 
     public Input<Double> getMaxReroutePercentage() {
         return this.maxReroutePercentage == null ? Input.empty() : this.maxReroutePercentage;
@@ -83,7 +83,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minReroutePercentage")
-    private final @Nullable Input<Double> minReroutePercentage;
+      private final @Nullable Input<Double> minReroutePercentage;
 
     public Input<Double> getMinReroutePercentage() {
         return this.minReroutePercentage == null ? Input.empty() : this.minReroutePercentage;
@@ -94,7 +94,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -105,7 +105,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reroutePercentage")
-    private final @Nullable Input<Double> reroutePercentage;
+      private final @Nullable Input<Double> reroutePercentage;
 
     public Input<Double> getReroutePercentage() {
         return this.reroutePercentage == null ? Input.empty() : this.reroutePercentage;
@@ -254,7 +254,6 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.reroutePercentage = Input.ofNullable(reroutePercentage);
             return this;
         }
-
         public RampUpRuleArgs build() {
             return new RampUpRuleArgs(actionHostName, changeDecisionCallbackUrl, changeIntervalInMinutes, changeStep, maxReroutePercentage, minReroutePercentage, name, reroutePercentage);
         }

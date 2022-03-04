@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="synonyms")
-    private final @Nullable Input<List<String>> synonyms;
+      private final @Nullable Input<List<String>> synonyms;
 
     public Input<List<String>> getSynonyms() {
         return this.synonyms == null ? Input.empty() : this.synonyms;
@@ -32,7 +32,7 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -91,7 +91,6 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public CxEntityTypeEntityGetArgs build() {
             return new CxEntityTypeEntityGetArgs(synonyms, value);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -48,7 +48,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentPolicyTag")
-    private final @Nullable Input<String> parentPolicyTag;
+      private final @Nullable Input<String> parentPolicyTag;
 
     public Input<String> getParentPolicyTag() {
         return this.parentPolicyTag == null ? Input.empty() : this.parentPolicyTag;
@@ -59,7 +59,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taxonomy", required=true)
-    private final Input<String> taxonomy;
+      private final Input<String> taxonomy;
 
     public Input<String> getTaxonomy() {
         return this.taxonomy;
@@ -148,7 +148,6 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
             this.taxonomy = Input.of(Objects.requireNonNull(taxonomy));
             return this;
         }
-
         public PolicyTagArgs build() {
             return new PolicyTagArgs(description, displayName, parentPolicyTag, taxonomy);
         }

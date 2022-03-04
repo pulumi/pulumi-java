@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetMonitoringScheduleArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="monitoringScheduleArn", required=true)
-    private final String monitoringScheduleArn;
+      private final String monitoringScheduleArn;
 
     public String getMonitoringScheduleArn() {
         return this.monitoringScheduleArn;
@@ -55,7 +55,6 @@ public final class GetMonitoringScheduleArgs extends io.pulumi.resources.InvokeA
             this.monitoringScheduleArn = Objects.requireNonNull(monitoringScheduleArn);
             return this;
         }
-
         public GetMonitoringScheduleArgs build() {
             return new GetMonitoringScheduleArgs(monitoringScheduleArn);
         }

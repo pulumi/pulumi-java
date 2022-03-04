@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,42 +62,42 @@ public final class PrivateLinkResourceResponse {
     /**
      * The group ID of the resource.
      * 
-     */
+    */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * The ID of the private link resource.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the private link resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The private link service ID of the resource, this field is exposed only to NRP internally.
      * 
-     */
+    */
     public String getPrivateLinkServiceID() {
         return this.privateLinkServiceID;
     }
     /**
      * RequiredMembers of the resource
      * 
-     */
+    */
     public List<String> getRequiredMembers() {
         return this.requiredMembers == null ? List.of() : this.requiredMembers;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -161,7 +161,6 @@ public final class PrivateLinkResourceResponse {
             this.type = type;
             return this;
         }
-
         public PrivateLinkResourceResponse build() {
             return new PrivateLinkResourceResponse(groupId, id, name, privateLinkServiceID, requiredMembers, type);
         }

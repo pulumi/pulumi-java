@@ -6,17 +6,33 @@ package io.pulumi.awsnative.datasync;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.datasync.inputs.GetLocationNFSArgs;
 import io.pulumi.awsnative.datasync.outputs.GetLocationNFSResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocationNFS {
-/**
- * Resource schema for AWS::DataSync::LocationNFS
+    private GetLocationNFS() {}
+    public interface BuilderApplicator {
+        public void apply(GetLocationNFSArgs.Builder a);
+    }
+    private static GetLocationNFSArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLocationNFSArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::DataSync::LocationNFS
  * 
- */
+     */
+    public static CompletableFuture<GetLocationNFSResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::DataSync::LocationNFS
+     * 
+     */
     public static CompletableFuture<GetLocationNFSResult> invokeAsync(GetLocationNFSArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationNFS", TypeShape.of(GetLocationNFSResult.class), args == null ? GetLocationNFSArgs.Empty : args, Utilities.withVersion(options));
     }

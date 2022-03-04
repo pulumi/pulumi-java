@@ -5,8 +5,8 @@ package io.pulumi.googlenative.servicemanagement_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.servicemanagement_v1.RolloutArgs;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.DeleteServiceStrategyResponse;
@@ -108,6 +108,37 @@ public class Rollout extends io.pulumi.resources.CustomResource {
         return this.trafficPercentStrategy;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RolloutArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.servicemanagement_v1.RolloutArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.servicemanagement_v1.RolloutArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Rollout(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Rollout(String name) {
+        this(name, RolloutArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Rollout(String name, RolloutArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DataSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -74,35 +74,35 @@ public final class GetguestDiagnosticsSettingResult {
     /**
      * the array of data source object which are configured to collect and send data
      * 
-     */
+    */
     public List<DataSourceResponse> getDataSources() {
         return this.dataSources == null ? List.of() : this.dataSources;
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Operating system type for the configuration
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
@@ -112,14 +112,14 @@ public final class GetguestDiagnosticsSettingResult {
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -197,7 +197,6 @@ public final class GetguestDiagnosticsSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetguestDiagnosticsSettingResult build() {
             return new GetguestDiagnosticsSettingResult(dataSources, id, location, name, osType, proxySetting, tags, type);
         }

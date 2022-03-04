@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.BastionShareableLinkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class GetBastionShareableLinkResult {
     /**
      * The URL to get the next set of results.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of Bastion Shareable Links for the request.
      * 
-     */
+    */
     public List<BastionShareableLinkResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }
@@ -78,7 +78,6 @@ public final class GetBastionShareableLinkResult {
             this.value = value;
             return this;
         }
-
         public GetBastionShareableLinkResult build() {
             return new GetBastionShareableLinkResult(nextLink, value);
         }

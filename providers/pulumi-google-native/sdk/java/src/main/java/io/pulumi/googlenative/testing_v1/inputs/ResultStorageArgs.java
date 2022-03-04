@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.GoogleCloudStorageArgs;
 import io.pulumi.googlenative.testing_v1.inputs.ToolResultsHistoryArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleCloudStorage", required=true)
-    private final Input<GoogleCloudStorageArgs> googleCloudStorage;
+      private final Input<GoogleCloudStorageArgs> googleCloudStorage;
 
     public Input<GoogleCloudStorageArgs> getGoogleCloudStorage() {
         return this.googleCloudStorage;
@@ -35,7 +35,7 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toolResultsHistory")
-    private final @Nullable Input<ToolResultsHistoryArgs> toolResultsHistory;
+      private final @Nullable Input<ToolResultsHistoryArgs> toolResultsHistory;
 
     public Input<ToolResultsHistoryArgs> getToolResultsHistory() {
         return this.toolResultsHistory == null ? Input.empty() : this.toolResultsHistory;
@@ -94,7 +94,6 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
             this.toolResultsHistory = Input.ofNullable(toolResultsHistory);
             return this;
         }
-
         public ResultStorageArgs build() {
             return new ResultStorageArgs(googleCloudStorage, toolResultsHistory);
         }

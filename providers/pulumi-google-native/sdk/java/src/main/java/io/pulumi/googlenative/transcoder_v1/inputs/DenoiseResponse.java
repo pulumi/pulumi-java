@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="strength", required=true)
-    private final Double strength;
+      private final Double strength;
 
     public Double getStrength() {
         return this.strength;
@@ -33,7 +33,7 @@ public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tune", required=true)
-    private final String tune;
+      private final String tune;
 
     public String getTune() {
         return this.tune;
@@ -82,7 +82,6 @@ public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
             this.tune = Objects.requireNonNull(tune);
             return this;
         }
-
         public DenoiseResponse build() {
             return new DenoiseResponse(strength, tune);
         }

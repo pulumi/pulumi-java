@@ -8,7 +8,7 @@ import io.pulumi.azurenative.labservices.inputs.ConnectionProfileArgs;
 import io.pulumi.azurenative.labservices.inputs.LabPlanNetworkProfileArgs;
 import io.pulumi.azurenative.labservices.inputs.SupportInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedRegions")
-    private final @Nullable Input<List<String>> allowedRegions;
+      private final @Nullable Input<List<String>> allowedRegions;
 
     public Input<List<String>> getAllowedRegions() {
         return this.allowedRegions == null ? Input.empty() : this.allowedRegions;
@@ -36,7 +36,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAutoShutdownProfile")
-    private final @Nullable Input<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
+      private final @Nullable Input<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
 
     public Input<AutoShutdownProfileArgs> getDefaultAutoShutdownProfile() {
         return this.defaultAutoShutdownProfile == null ? Input.empty() : this.defaultAutoShutdownProfile;
@@ -47,7 +47,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultConnectionProfile")
-    private final @Nullable Input<ConnectionProfileArgs> defaultConnectionProfile;
+      private final @Nullable Input<ConnectionProfileArgs> defaultConnectionProfile;
 
     public Input<ConnectionProfileArgs> getDefaultConnectionProfile() {
         return this.defaultConnectionProfile == null ? Input.empty() : this.defaultConnectionProfile;
@@ -58,7 +58,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultNetworkProfile")
-    private final @Nullable Input<LabPlanNetworkProfileArgs> defaultNetworkProfile;
+      private final @Nullable Input<LabPlanNetworkProfileArgs> defaultNetworkProfile;
 
     public Input<LabPlanNetworkProfileArgs> getDefaultNetworkProfile() {
         return this.defaultNetworkProfile == null ? Input.empty() : this.defaultNetworkProfile;
@@ -69,7 +69,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labPlanName")
-    private final @Nullable Input<String> labPlanName;
+      private final @Nullable Input<String> labPlanName;
 
     public Input<String> getLabPlanName() {
         return this.labPlanName == null ? Input.empty() : this.labPlanName;
@@ -80,7 +80,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedLmsInstance")
-    private final @Nullable Input<String> linkedLmsInstance;
+      private final @Nullable Input<String> linkedLmsInstance;
 
     public Input<String> getLinkedLmsInstance() {
         return this.linkedLmsInstance == null ? Input.empty() : this.linkedLmsInstance;
@@ -91,7 +91,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -102,7 +102,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -113,7 +113,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharedGalleryId")
-    private final @Nullable Input<String> sharedGalleryId;
+      private final @Nullable Input<String> sharedGalleryId;
 
     public Input<String> getSharedGalleryId() {
         return this.sharedGalleryId == null ? Input.empty() : this.sharedGalleryId;
@@ -124,7 +124,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportInfo")
-    private final @Nullable Input<SupportInfoArgs> supportInfo;
+      private final @Nullable Input<SupportInfoArgs> supportInfo;
 
     public Input<SupportInfoArgs> getSupportInfo() {
         return this.supportInfo == null ? Input.empty() : this.supportInfo;
@@ -135,7 +135,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -329,7 +329,6 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public LabPlanArgs build() {
             return new LabPlanArgs(allowedRegions, defaultAutoShutdownProfile, defaultConnectionProfile, defaultNetworkProfile, labPlanName, linkedLmsInstance, location, resourceGroupName, sharedGalleryId, supportInfo, tags);
         }

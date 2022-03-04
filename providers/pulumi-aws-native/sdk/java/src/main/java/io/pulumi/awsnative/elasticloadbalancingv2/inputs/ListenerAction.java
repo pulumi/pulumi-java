@@ -8,7 +8,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerAuthenticateOid
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerFixedResponseConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerForwardConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRedirectConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,56 +21,56 @@ public final class ListenerAction extends io.pulumi.resources.InvokeArgs {
     public static final ListenerAction Empty = new ListenerAction();
 
     @InputImport(name="authenticateCognitoConfig")
-    private final @Nullable ListenerAuthenticateCognitoConfig authenticateCognitoConfig;
+      private final @Nullable ListenerAuthenticateCognitoConfig authenticateCognitoConfig;
 
     public Optional<ListenerAuthenticateCognitoConfig> getAuthenticateCognitoConfig() {
         return this.authenticateCognitoConfig == null ? Optional.empty() : Optional.ofNullable(this.authenticateCognitoConfig);
     }
 
     @InputImport(name="authenticateOidcConfig")
-    private final @Nullable ListenerAuthenticateOidcConfig authenticateOidcConfig;
+      private final @Nullable ListenerAuthenticateOidcConfig authenticateOidcConfig;
 
     public Optional<ListenerAuthenticateOidcConfig> getAuthenticateOidcConfig() {
         return this.authenticateOidcConfig == null ? Optional.empty() : Optional.ofNullable(this.authenticateOidcConfig);
     }
 
     @InputImport(name="fixedResponseConfig")
-    private final @Nullable ListenerFixedResponseConfig fixedResponseConfig;
+      private final @Nullable ListenerFixedResponseConfig fixedResponseConfig;
 
     public Optional<ListenerFixedResponseConfig> getFixedResponseConfig() {
         return this.fixedResponseConfig == null ? Optional.empty() : Optional.ofNullable(this.fixedResponseConfig);
     }
 
     @InputImport(name="forwardConfig")
-    private final @Nullable ListenerForwardConfig forwardConfig;
+      private final @Nullable ListenerForwardConfig forwardConfig;
 
     public Optional<ListenerForwardConfig> getForwardConfig() {
         return this.forwardConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardConfig);
     }
 
     @InputImport(name="order")
-    private final @Nullable Integer order;
+      private final @Nullable Integer order;
 
     public Optional<Integer> getOrder() {
         return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
     }
 
     @InputImport(name="redirectConfig")
-    private final @Nullable ListenerRedirectConfig redirectConfig;
+      private final @Nullable ListenerRedirectConfig redirectConfig;
 
     public Optional<ListenerRedirectConfig> getRedirectConfig() {
         return this.redirectConfig == null ? Optional.empty() : Optional.ofNullable(this.redirectConfig);
     }
 
     @InputImport(name="targetGroupArn")
-    private final @Nullable String targetGroupArn;
+      private final @Nullable String targetGroupArn;
 
     public Optional<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Optional.empty() : Optional.ofNullable(this.targetGroupArn);
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -179,7 +179,6 @@ public final class ListenerAction extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListenerAction build() {
             return new ListenerAction(authenticateCognitoConfig, authenticateOidcConfig, fixedResponseConfig, forwardConfig, order, redirectConfig, targetGroupArn, type);
         }

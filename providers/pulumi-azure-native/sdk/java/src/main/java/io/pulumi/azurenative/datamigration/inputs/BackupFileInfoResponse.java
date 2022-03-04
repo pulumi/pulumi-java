@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="familySequenceNumber")
-    private final @Nullable Integer familySequenceNumber;
+      private final @Nullable Integer familySequenceNumber;
 
     public Optional<Integer> getFamilySequenceNumber() {
         return this.familySequenceNumber == null ? Optional.empty() : Optional.ofNullable(this.familySequenceNumber);
@@ -35,7 +35,7 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="fileLocation")
-    private final @Nullable String fileLocation;
+      private final @Nullable String fileLocation;
 
     public Optional<String> getFileLocation() {
         return this.fileLocation == null ? Optional.empty() : Optional.ofNullable(this.fileLocation);
@@ -46,7 +46,7 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -105,7 +105,6 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
             this.status = status;
             return this;
         }
-
         public BackupFileInfoResponse build() {
             return new BackupFileInfoResponse(familySequenceNumber, fileLocation, status);
         }

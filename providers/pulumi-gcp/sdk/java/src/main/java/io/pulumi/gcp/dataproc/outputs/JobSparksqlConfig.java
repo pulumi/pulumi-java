@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.JobSparksqlConfigLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -62,7 +62,7 @@ public final class JobSparksqlConfig {
     /**
      * HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
@@ -72,7 +72,7 @@ public final class JobSparksqlConfig {
     /**
      * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
@@ -80,7 +80,7 @@ public final class JobSparksqlConfig {
      * The HCFS URI of the script that contains SQL queries.
      * Conflicts with `query_list`
      * 
-     */
+    */
     public Optional<String> getQueryFileUri() {
         return Optional.ofNullable(this.queryFileUri);
     }
@@ -88,14 +88,14 @@ public final class JobSparksqlConfig {
      * The list of SQL queries or statements to execute as part of the job.
      * Conflicts with `query_file_uri`
      * 
-     */
+    */
     public List<String> getQueryLists() {
         return this.queryLists == null ? List.of() : this.queryLists;
     }
     /**
      * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
      * 
-     */
+    */
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables == null ? Map.of() : this.scriptVariables;
     }
@@ -159,7 +159,6 @@ public final class JobSparksqlConfig {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public JobSparksqlConfig build() {
             return new JobSparksqlConfig(jarFileUris, loggingConfig, properties, queryFileUri, queryLists, scriptVariables);
         }

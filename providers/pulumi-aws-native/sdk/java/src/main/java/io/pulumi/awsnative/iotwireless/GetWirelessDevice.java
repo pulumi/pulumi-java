@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotwireless.inputs.GetWirelessDeviceArgs;
 import io.pulumi.awsnative.iotwireless.outputs.GetWirelessDeviceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWirelessDevice {
-/**
- * Create and manage wireless gateways, including LoRa gateways.
+    private GetWirelessDevice() {}
+    public interface BuilderApplicator {
+        public void apply(GetWirelessDeviceArgs.Builder a);
+    }
+    private static GetWirelessDeviceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWirelessDeviceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Create and manage wireless gateways, including LoRa gateways.
  * 
- */
+     */
+    public static CompletableFuture<GetWirelessDeviceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Create and manage wireless gateways, including LoRa gateways.
+     * 
+     */
     public static CompletableFuture<GetWirelessDeviceResult> invokeAsync(GetWirelessDeviceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getWirelessDevice", TypeShape.of(GetWirelessDeviceResult.class), args == null ? GetWirelessDeviceArgs.Empty : args, Utilities.withVersion(options));
     }

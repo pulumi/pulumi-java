@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -90,70 +90,70 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
     /**
      * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
      * 
-     */
+    */
     public Optional<String> getAadClientId() {
         return Optional.ofNullable(this.aadClientId);
     }
     /**
      * (Metrics Advisor Only) The Azure AD Tenant Id.
      * 
-     */
+    */
     public Optional<String> getAadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
     /**
      * (Personalization Only) The flag to enable statistics of Bing Search.
      * 
-     */
+    */
     public Optional<String> getEventHubConnectionString() {
         return Optional.ofNullable(this.eventHubConnectionString);
     }
     /**
      * (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
      * 
-     */
+    */
     public Optional<String> getQnaAzureSearchEndpointId() {
         return Optional.ofNullable(this.qnaAzureSearchEndpointId);
     }
     /**
      * (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
      * 
-     */
+    */
     public Optional<String> getQnaAzureSearchEndpointKey() {
         return Optional.ofNullable(this.qnaAzureSearchEndpointKey);
     }
     /**
      * (QnAMaker Only) The runtime endpoint of QnAMaker.
      * 
-     */
+    */
     public Optional<String> getQnaRuntimeEndpoint() {
         return Optional.ofNullable(this.qnaRuntimeEndpoint);
     }
     /**
      * (Bing Search Only) The flag to enable statistics of Bing Search.
      * 
-     */
+    */
     public Optional<Boolean> getStatisticsEnabled() {
         return Optional.ofNullable(this.statisticsEnabled);
     }
     /**
      * (Personalization Only) The storage account connection string.
      * 
-     */
+    */
     public Optional<String> getStorageAccountConnectionString() {
         return Optional.ofNullable(this.storageAccountConnectionString);
     }
     /**
      * (Metrics Advisor Only) The super user of Metrics Advisor.
      * 
-     */
+    */
     public Optional<String> getSuperUser() {
         return Optional.ofNullable(this.superUser);
     }
     /**
      * (Metrics Advisor Only) The website name of Metrics Advisor.
      * 
-     */
+    */
     public Optional<String> getWebsiteName() {
         return Optional.ofNullable(this.websiteName);
     }
@@ -245,7 +245,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
             this.websiteName = websiteName;
             return this;
         }
-
         public CognitiveServicesAccountApiPropertiesResponse build() {
             return new CognitiveServicesAccountApiPropertiesResponse(aadClientId, aadTenantId, eventHubConnectionString, qnaAzureSearchEndpointId, qnaAzureSearchEndpointKey, qnaRuntimeEndpoint, statisticsEnabled, storageAccountConnectionString, superUser, websiteName);
         }

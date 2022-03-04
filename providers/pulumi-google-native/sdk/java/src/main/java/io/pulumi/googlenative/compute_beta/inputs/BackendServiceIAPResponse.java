@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="oauth2ClientId", required=true)
-    private final String oauth2ClientId;
+      private final String oauth2ClientId;
 
     public String getOauth2ClientId() {
         return this.oauth2ClientId;
@@ -44,7 +44,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="oauth2ClientSecret", required=true)
-    private final String oauth2ClientSecret;
+      private final String oauth2ClientSecret;
 
     public String getOauth2ClientSecret() {
         return this.oauth2ClientSecret;
@@ -55,7 +55,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="oauth2ClientSecretSha256", required=true)
-    private final String oauth2ClientSecretSha256;
+      private final String oauth2ClientSecretSha256;
 
     public String getOauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256;
@@ -124,7 +124,6 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
             this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
             return this;
         }
-
         public BackendServiceIAPResponse build() {
             return new BackendServiceIAPResponse(enabled, oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

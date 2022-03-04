@@ -4,7 +4,7 @@
 package io.pulumi.gcp.activedirectory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="admin")
-    private final @Nullable Input<String> admin;
+      private final @Nullable Input<String> admin;
 
     public Input<String> getAdmin() {
         return this.admin == null ? Input.empty() : this.admin;
@@ -34,7 +34,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetworks")
-    private final @Nullable Input<List<String>> authorizedNetworks;
+      private final @Nullable Input<List<String>> authorizedNetworks;
 
     public Input<List<String>> getAuthorizedNetworks() {
         return this.authorizedNetworks == null ? Input.empty() : this.authorizedNetworks;
@@ -46,7 +46,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -58,7 +58,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable Input<String> fqdn;
+      private final @Nullable Input<String> fqdn;
 
     public Input<String> getFqdn() {
         return this.fqdn == null ? Input.empty() : this.fqdn;
@@ -69,7 +69,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -81,7 +81,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -92,7 +92,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -104,7 +104,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -116,7 +116,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedIpRange")
-    private final @Nullable Input<String> reservedIpRange;
+      private final @Nullable Input<String> reservedIpRange;
 
     public Input<String> getReservedIpRange() {
         return this.reservedIpRange == null ? Input.empty() : this.reservedIpRange;
@@ -280,7 +280,6 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             this.reservedIpRange = Input.ofNullable(reservedIpRange);
             return this;
         }
-
         public DomainState build() {
             return new DomainState(admin, authorizedNetworks, domainName, fqdn, labels, locations, name, project, reservedIpRange);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="speechModelVariant")
-    private final @Nullable Input<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant;
+      private final @Nullable Input<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant;
 
     public Input<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> getSpeechModelVariant() {
         return this.speechModelVariant == null ? Input.empty() : this.speechModelVariant;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfigArgs extends io.pulu
             this.speechModelVariant = Input.ofNullable(speechModelVariant);
             return this;
         }
-
         public GoogleCloudDialogflowV2SpeechToTextConfigArgs build() {
             return new GoogleCloudDialogflowV2SpeechToTextConfigArgs(speechModelVariant);
         }

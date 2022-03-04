@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.SharedPublicIpAddressConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable String dnsName;
+      private final @Nullable String dnsName;
 
     public Optional<String> getDnsName() {
         return this.dnsName == null ? Optional.empty() : Optional.ofNullable(this.dnsName);
@@ -35,7 +35,7 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable String privateIpAddress;
+      private final @Nullable String privateIpAddress;
 
     public Optional<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
@@ -46,7 +46,7 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="publicIpAddress")
-    private final @Nullable String publicIpAddress;
+      private final @Nullable String publicIpAddress;
 
     public Optional<String> getPublicIpAddress() {
         return this.publicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddress);
@@ -57,7 +57,7 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="publicIpAddressId")
-    private final @Nullable String publicIpAddressId;
+      private final @Nullable String publicIpAddressId;
 
     public Optional<String> getPublicIpAddressId() {
         return this.publicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressId);
@@ -68,7 +68,7 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="rdpAuthority")
-    private final @Nullable String rdpAuthority;
+      private final @Nullable String rdpAuthority;
 
     public Optional<String> getRdpAuthority() {
         return this.rdpAuthority == null ? Optional.empty() : Optional.ofNullable(this.rdpAuthority);
@@ -79,7 +79,7 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sharedPublicIpAddressConfiguration")
-    private final @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
+      private final @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
 
     public Optional<SharedPublicIpAddressConfigurationResponse> getSharedPublicIpAddressConfiguration() {
         return this.sharedPublicIpAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
@@ -90,7 +90,7 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sshAuthority")
-    private final @Nullable String sshAuthority;
+      private final @Nullable String sshAuthority;
 
     public Optional<String> getSshAuthority() {
         return this.sshAuthority == null ? Optional.empty() : Optional.ofNullable(this.sshAuthority);
@@ -101,7 +101,7 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable String subnetId;
+      private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
@@ -112,7 +112,7 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="virtualNetworkId")
-    private final @Nullable String virtualNetworkId;
+      private final @Nullable String virtualNetworkId;
 
     public Optional<String> getVirtualNetworkId() {
         return this.virtualNetworkId == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkId);
@@ -231,7 +231,6 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
-
         public NetworkInterfacePropertiesResponse build() {
             return new NetworkInterfacePropertiesResponse(dnsName, privateIpAddress, publicIpAddress, publicIpAddressId, rdpAuthority, sharedPublicIpAddressConfiguration, sshAuthority, subnetId, virtualNetworkId);
         }

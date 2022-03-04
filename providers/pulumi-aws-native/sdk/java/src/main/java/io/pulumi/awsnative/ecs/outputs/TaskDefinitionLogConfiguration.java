@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionSecret;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class TaskDefinitionLogConfiguration {
             this.secretOptions = secretOptions;
             return this;
         }
-
         public TaskDefinitionLogConfiguration build() {
             return new TaskDefinitionLogConfiguration(logDriver, options, secretOptions);
         }

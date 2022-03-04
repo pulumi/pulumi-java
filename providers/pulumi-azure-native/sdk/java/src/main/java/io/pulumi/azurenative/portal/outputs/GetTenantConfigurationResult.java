@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class GetTenantConfigurationResult {
     /**
      * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
      * 
-     */
+    */
     public Optional<Boolean> getEnforcePrivateMarkdownStorage() {
         return Optional.ofNullable(this.enforcePrivateMarkdownStorage);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -119,7 +119,6 @@ public final class GetTenantConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTenantConfigurationResult build() {
             return new GetTenantConfigurationResult(enforcePrivateMarkdownStorage, id, name, type);
         }

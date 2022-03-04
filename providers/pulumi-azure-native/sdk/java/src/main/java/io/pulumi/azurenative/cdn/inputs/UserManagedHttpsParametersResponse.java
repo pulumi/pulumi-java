@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.KeyVaultCertificateSourceParametersResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class UserManagedHttpsParametersResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificateSource", required=true)
-    private final String certificateSource;
+      private final String certificateSource;
 
     public String getCertificateSource() {
         return this.certificateSource;
@@ -36,7 +36,7 @@ public final class UserManagedHttpsParametersResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificateSourceParameters", required=true)
-    private final KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
+      private final KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
 
     public KeyVaultCertificateSourceParametersResponse getCertificateSourceParameters() {
         return this.certificateSourceParameters;
@@ -47,7 +47,7 @@ public final class UserManagedHttpsParametersResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="minimumTlsVersion")
-    private final @Nullable String minimumTlsVersion;
+      private final @Nullable String minimumTlsVersion;
 
     public Optional<String> getMinimumTlsVersion() {
         return this.minimumTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minimumTlsVersion);
@@ -58,7 +58,7 @@ public final class UserManagedHttpsParametersResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="protocolType", required=true)
-    private final String protocolType;
+      private final String protocolType;
 
     public String getProtocolType() {
         return this.protocolType;
@@ -127,7 +127,6 @@ public final class UserManagedHttpsParametersResponse extends io.pulumi.resource
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }
-
         public UserManagedHttpsParametersResponse build() {
             return new UserManagedHttpsParametersResponse(certificateSource, certificateSourceParameters, minimumTlsVersion, protocolType);
         }

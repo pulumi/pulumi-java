@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -80,63 +80,63 @@ public final class UpgradeDetailsResponse {
     /**
      * UTC time at which the upgrade operation has ended.
      * 
-     */
+    */
     public String getEndTimeUtc() {
         return this.endTimeUtc;
     }
     /**
      * UTC time at which the upgrade operation status was last updated.
      * 
-     */
+    */
     public String getLastUpdatedTimeUtc() {
         return this.lastUpdatedTimeUtc;
     }
     /**
      * Message to the user containing information about the upgrade operation.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * ID of the vault upgrade operation.
      * 
-     */
+    */
     public String getOperationId() {
         return this.operationId;
     }
     /**
      * Resource ID of the vault before the upgrade.
      * 
-     */
+    */
     public String getPreviousResourceId() {
         return this.previousResourceId;
     }
     /**
      * UTC time at which the upgrade operation has started.
      * 
-     */
+    */
     public String getStartTimeUtc() {
         return this.startTimeUtc;
     }
     /**
      * Status of the vault upgrade operation.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The way the vault upgrade was triggered.
      * 
-     */
+    */
     public String getTriggerType() {
         return this.triggerType;
     }
     /**
      * Resource ID of the upgraded vault.
      * 
-     */
+    */
     public String getUpgradedResourceId() {
         return this.upgradedResourceId;
     }
@@ -221,7 +221,6 @@ public final class UpgradeDetailsResponse {
             this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId);
             return this;
         }
-
         public UpgradeDetailsResponse build() {
             return new UpgradeDetailsResponse(endTimeUtc, lastUpdatedTimeUtc, message, operationId, previousResourceId, startTimeUtc, status, triggerType, upgradedResourceId);
         }

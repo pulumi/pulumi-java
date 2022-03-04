@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1beta1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationReplay {
-/**
- * Gets the specified Replay. Each `Replay` is available for at least 7 days.
+    private GetOrganizationReplay() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrganizationReplayArgs.Builder a);
+    }
+    private static GetOrganizationReplayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrganizationReplayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified Replay. Each `Replay` is available for at least 7 days.
  * 
- */
+     */
+    public static CompletableFuture<GetOrganizationReplayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified Replay. Each `Replay` is available for at least 7 days.
+     * 
+     */
     public static CompletableFuture<GetOrganizationReplayResult> invokeAsync(GetOrganizationReplayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:policysimulator/v1beta1:getOrganizationReplay", TypeShape.of(GetOrganizationReplayResult.class), args == null ? GetOrganizationReplayArgs.Empty : args, Utilities.withVersion(options));
     }

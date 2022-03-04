@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisComponent;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -88,7 +88,6 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerTarget {
             this.port = port;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisLoadBalancerTarget build() {
             return new NetworkInsightsAnalysisAnalysisLoadBalancerTarget(address, availabilityZone, instance, port);
         }

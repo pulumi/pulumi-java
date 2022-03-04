@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confluent.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class OrganizationResourcePropertiesResponseOfferDetail {
     /**
      * Offer Id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Offer Plan Id
      * 
-     */
+    */
     public Optional<String> getPlanId() {
         return Optional.ofNullable(this.planId);
     }
     /**
      * Offer Plan Name
      * 
-     */
+    */
     public Optional<String> getPlanName() {
         return Optional.ofNullable(this.planName);
     }
     /**
      * Publisher Id
      * 
-     */
+    */
     public Optional<String> getPublisherId() {
         return Optional.ofNullable(this.publisherId);
     }
     /**
      * SaaS Offer Status
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Offer Plan Term unit
      * 
-     */
+    */
     public Optional<String> getTermUnit() {
         return Optional.ofNullable(this.termUnit);
     }
@@ -160,7 +160,6 @@ public final class OrganizationResourcePropertiesResponseOfferDetail {
             this.termUnit = termUnit;
             return this;
         }
-
         public OrganizationResourcePropertiesResponseOfferDetail build() {
             return new OrganizationResourcePropertiesResponseOfferDetail(id, planId, planName, publisherId, status, termUnit);
         }

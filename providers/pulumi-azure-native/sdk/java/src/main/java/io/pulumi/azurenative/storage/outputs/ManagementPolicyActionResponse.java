@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.outputs;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyBaseBlobResponse;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicySnapShotResponse;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyVersionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -42,21 +42,21 @@ public final class ManagementPolicyActionResponse {
     /**
      * The management policy action for base blob
      * 
-     */
+    */
     public Optional<ManagementPolicyBaseBlobResponse> getBaseBlob() {
         return Optional.ofNullable(this.baseBlob);
     }
     /**
      * The management policy action for snapshot
      * 
-     */
+    */
     public Optional<ManagementPolicySnapShotResponse> getSnapshot() {
         return Optional.ofNullable(this.snapshot);
     }
     /**
      * The management policy action for version
      * 
-     */
+    */
     public Optional<ManagementPolicyVersionResponse> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -99,7 +99,6 @@ public final class ManagementPolicyActionResponse {
             this.version = version;
             return this;
         }
-
         public ManagementPolicyActionResponse build() {
             return new ManagementPolicyActionResponse(baseBlob, snapshot, version);
         }

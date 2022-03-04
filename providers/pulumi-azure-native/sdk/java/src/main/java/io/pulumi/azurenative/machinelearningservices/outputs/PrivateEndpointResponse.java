@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class PrivateEndpointResponse {
     /**
      * The ARM identifier for Private Endpoint
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ARM identifier for Subnet resource that private endpoint links to
      * 
-     */
+    */
     public String getSubnetArmId() {
         return this.subnetArmId;
     }
@@ -74,7 +74,6 @@ public final class PrivateEndpointResponse {
             this.subnetArmId = Objects.requireNonNull(subnetArmId);
             return this;
         }
-
         public PrivateEndpointResponse build() {
             return new PrivateEndpointResponse(id, subnetArmId);
         }

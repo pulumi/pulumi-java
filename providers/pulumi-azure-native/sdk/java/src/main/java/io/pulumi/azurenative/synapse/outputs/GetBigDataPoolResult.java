@@ -8,7 +8,7 @@ import io.pulumi.azurenative.synapse.outputs.AutoScalePropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.DynamicExecutorAllocationResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryInfoResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryRequirementsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -189,161 +189,161 @@ public final class GetBigDataPoolResult {
     /**
      * Auto-pausing properties
      * 
-     */
+    */
     public Optional<AutoPausePropertiesResponse> getAutoPause() {
         return Optional.ofNullable(this.autoPause);
     }
     /**
      * Auto-scaling properties
      * 
-     */
+    */
     public Optional<AutoScalePropertiesResponse> getAutoScale() {
         return Optional.ofNullable(this.autoScale);
     }
     /**
      * The cache size
      * 
-     */
+    */
     public Optional<Integer> getCacheSize() {
         return Optional.ofNullable(this.cacheSize);
     }
     /**
      * The time when the Big Data pool was created.
      * 
-     */
+    */
     public Optional<String> getCreationDate() {
         return Optional.ofNullable(this.creationDate);
     }
     /**
      * List of custom libraries/packages associated with the spark pool.
      * 
-     */
+    */
     public List<LibraryInfoResponse> getCustomLibraries() {
         return this.customLibraries == null ? List.of() : this.customLibraries;
     }
     /**
      * The default folder where Spark logs will be written.
      * 
-     */
+    */
     public Optional<String> getDefaultSparkLogFolder() {
         return Optional.ofNullable(this.defaultSparkLogFolder);
     }
     /**
      * Dynamic Executor Allocation
      * 
-     */
+    */
     public Optional<DynamicExecutorAllocationResponse> getDynamicExecutorAllocation() {
         return Optional.ofNullable(this.dynamicExecutorAllocation);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Whether compute isolation is required or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsComputeIsolationEnabled() {
         return Optional.ofNullable(this.isComputeIsolationEnabled);
     }
     /**
      * The time when the Big Data pool was updated successfully.
      * 
-     */
+    */
     public String getLastSucceededTimestamp() {
         return this.lastSucceededTimestamp;
     }
     /**
      * Library version requirements
      * 
-     */
+    */
     public Optional<LibraryRequirementsResponse> getLibraryRequirements() {
         return Optional.ofNullable(this.libraryRequirements);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The number of nodes in the Big Data pool.
      * 
-     */
+    */
     public Optional<Integer> getNodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
     /**
      * The level of compute power that each node in the Big Data pool has.
      * 
-     */
+    */
     public Optional<String> getNodeSize() {
         return Optional.ofNullable(this.nodeSize);
     }
     /**
      * The kind of nodes that the Big Data pool provides.
      * 
-     */
+    */
     public Optional<String> getNodeSizeFamily() {
         return Optional.ofNullable(this.nodeSizeFamily);
     }
     /**
      * The state of the Big Data pool.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Whether session level packages enabled.
      * 
-     */
+    */
     public Optional<Boolean> getSessionLevelPackagesEnabled() {
         return Optional.ofNullable(this.sessionLevelPackagesEnabled);
     }
     /**
      * Spark configuration file to specify additional properties
      * 
-     */
+    */
     public Optional<LibraryRequirementsResponse> getSparkConfigProperties() {
         return Optional.ofNullable(this.sparkConfigProperties);
     }
     /**
      * The Spark events folder
      * 
-     */
+    */
     public Optional<String> getSparkEventsFolder() {
         return Optional.ofNullable(this.sparkEventsFolder);
     }
     /**
      * The Apache Spark version.
      * 
-     */
+    */
     public Optional<String> getSparkVersion() {
         return Optional.ofNullable(this.sparkVersion);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -526,7 +526,6 @@ public final class GetBigDataPoolResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBigDataPoolResult build() {
             return new GetBigDataPoolResult(autoPause, autoScale, cacheSize, creationDate, customLibraries, defaultSparkLogFolder, dynamicExecutorAllocation, id, isComputeIsolationEnabled, lastSucceededTimestamp, libraryRequirements, location, name, nodeCount, nodeSize, nodeSizeFamily, provisioningState, sessionLevelPackagesEnabled, sparkConfigProperties, sparkEventsFolder, sparkVersion, tags, type);
         }

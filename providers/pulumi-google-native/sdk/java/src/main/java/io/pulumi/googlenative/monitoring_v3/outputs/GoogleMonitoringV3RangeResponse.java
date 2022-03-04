@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleMonitoringV3RangeResponse {
     /**
      * Range maximum.
      * 
-     */
+    */
     public Double getMax() {
         return this.max;
     }
     /**
      * Range minimum.
      * 
-     */
+    */
     public Double getMin() {
         return this.min;
     }
@@ -74,7 +74,6 @@ public final class GoogleMonitoringV3RangeResponse {
             this.min = Objects.requireNonNull(min);
             return this;
         }
-
         public GoogleMonitoringV3RangeResponse build() {
             return new GoogleMonitoringV3RangeResponse(max, min);
         }

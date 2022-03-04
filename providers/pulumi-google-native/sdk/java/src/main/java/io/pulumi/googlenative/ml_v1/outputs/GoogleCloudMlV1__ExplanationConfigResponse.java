@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__IntegratedGradientsAttributionResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__SampledShapleyAttributionResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__XraiAttributionResponse;
@@ -40,21 +40,21 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
     /**
      * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
      * 
-     */
+    */
     public GoogleCloudMlV1__IntegratedGradientsAttributionResponse getIntegratedGradientsAttribution() {
         return this.integratedGradientsAttribution;
     }
     /**
      * An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.
      * 
-     */
+    */
     public GoogleCloudMlV1__SampledShapleyAttributionResponse getSampledShapleyAttribution() {
         return this.sampledShapleyAttribution;
     }
     /**
      * Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
      * 
-     */
+    */
     public GoogleCloudMlV1__XraiAttributionResponse getXraiAttribution() {
         return this.xraiAttribution;
     }
@@ -97,7 +97,6 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
             this.xraiAttribution = Objects.requireNonNull(xraiAttribution);
             return this;
         }
-
         public GoogleCloudMlV1__ExplanationConfigResponse build() {
             return new GoogleCloudMlV1__ExplanationConfigResponse(integratedGradientsAttribution, sampledShapleyAttribution, xraiAttribution);
         }

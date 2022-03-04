@@ -5,8 +5,8 @@ package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.TenantDefaultSupportedIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.TenantDefaultSupportedIdpConfigState;
@@ -163,6 +163,37 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
         return this.tenant;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TenantDefaultSupportedIdpConfigArgs.Builder a);
+    }
+    private static io.pulumi.gcp.identityplatform.TenantDefaultSupportedIdpConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.identityplatform.TenantDefaultSupportedIdpConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TenantDefaultSupportedIdpConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TenantDefaultSupportedIdpConfig(String name) {
+        this(name, TenantDefaultSupportedIdpConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TenantDefaultSupportedIdpConfig(String name, TenantDefaultSupportedIdpConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

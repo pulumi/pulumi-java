@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
     /**
      * Indicates whether this restriction is enforced on a Best Effort basis.
      * 
-     */
+    */
     public Boolean getBestEffort() {
         return this.bestEffort;
     }
     /**
      * Configures the restriction control bits. Must be between 0 and 3 inclusive.
      * 
-     */
+    */
     public Integer getConfigurationData() {
         return this.configurationData;
     }
@@ -75,7 +75,6 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
             this.configurationData = Objects.requireNonNull(configurationData);
             return this;
         }
-
         public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse build() {
             return new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(bestEffort, configurationData);
         }

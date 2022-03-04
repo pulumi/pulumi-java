@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,14 +62,14 @@ public final class SecretResourcePropertiesResponse {
     /**
      * The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
      * 
-     */
+    */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * User readable description of the secret.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -77,28 +77,28 @@ public final class SecretResourcePropertiesResponse {
      * Describes the kind of secret.
      * Expected value is 'SecretResourceProperties'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * State of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Status of the resource.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Gives additional information about the current status of the secret.
      * 
-     */
+    */
     public String getStatusDetails() {
         return this.statusDetails;
     }
@@ -162,7 +162,6 @@ public final class SecretResourcePropertiesResponse {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
-
         public SecretResourcePropertiesResponse build() {
             return new SecretResourcePropertiesResponse(contentType, description, kind, provisioningState, status, statusDetails);
         }

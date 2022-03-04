@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetCapacityReservationFleetArgs;
 import io.pulumi.awsnative.ec2.outputs.GetCapacityReservationFleetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapacityReservationFleet {
-/**
- * Resource Type definition for AWS::EC2::CapacityReservationFleet
+    private GetCapacityReservationFleet() {}
+    public interface BuilderApplicator {
+        public void apply(GetCapacityReservationFleetArgs.Builder a);
+    }
+    private static GetCapacityReservationFleetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCapacityReservationFleetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::EC2::CapacityReservationFleet
  * 
- */
+     */
+    public static CompletableFuture<GetCapacityReservationFleetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::EC2::CapacityReservationFleet
+     * 
+     */
     public static CompletableFuture<GetCapacityReservationFleetResult> invokeAsync(GetCapacityReservationFleetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getCapacityReservationFleet", TypeShape.of(GetCapacityReservationFleetResult.class), args == null ? GetCapacityReservationFleetArgs.Empty : args, Utilities.withVersion(options));
     }

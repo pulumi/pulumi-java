@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class GetBucketObjectCustomerEncryption {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }
-
         public GetBucketObjectCustomerEncryption build() {
             return new GetBucketObjectCustomerEncryption(encryptionAlgorithm, encryptionKey);
         }

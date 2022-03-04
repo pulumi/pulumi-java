@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,14 +40,14 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputErrorResponse {
     /**
      * Migration error
      * 
-     */
+    */
     public ReportableExceptionResponse getError() {
         return this.error;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -55,7 +55,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputErrorResponse {
      * Result type
      * Expected value is 'ErrorOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
@@ -98,7 +98,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputErrorResponse {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public MigrateSqlServerSqlDbSyncTaskOutputErrorResponse build() {
             return new MigrateSqlServerSqlDbSyncTaskOutputErrorResponse(error, id, resultType);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.enums.SnapshotType;
 import io.pulumi.azurenative.containerservice.inputs.CreationDataArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationData")
-    private final @Nullable Input<CreationDataArgs> creationData;
+      private final @Nullable Input<CreationDataArgs> creationData;
 
     public Input<CreationDataArgs> getCreationData() {
         return this.creationData == null ? Input.empty() : this.creationData;
@@ -34,7 +34,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -45,7 +45,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -56,7 +56,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -67,7 +67,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotType")
-    private final @Nullable Input<Either<String,SnapshotType>> snapshotType;
+      private final @Nullable Input<Either<String,SnapshotType>> snapshotType;
 
     public Input<Either<String,SnapshotType>> getSnapshotType() {
         return this.snapshotType == null ? Input.empty() : this.snapshotType;
@@ -78,7 +78,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -197,7 +197,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SnapshotArgs build() {
             return new SnapshotArgs(creationData, location, resourceGroupName, resourceName, snapshotType, tags);
         }

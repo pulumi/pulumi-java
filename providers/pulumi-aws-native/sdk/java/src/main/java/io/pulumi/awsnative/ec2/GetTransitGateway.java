@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetTransitGatewayArgs;
 import io.pulumi.awsnative.ec2.outputs.GetTransitGatewayResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGateway {
-/**
- * Resource Type definition for AWS::EC2::TransitGateway
+    private GetTransitGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransitGatewayArgs.Builder a);
+    }
+    private static GetTransitGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransitGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::EC2::TransitGateway
  * 
- */
+     */
+    public static CompletableFuture<GetTransitGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::EC2::TransitGateway
+     * 
+     */
     public static CompletableFuture<GetTransitGatewayResult> invokeAsync(GetTransitGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getTransitGateway", TypeShape.of(GetTransitGatewayResult.class), args == null ? GetTransitGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

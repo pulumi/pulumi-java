@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class AuthenticatorGroupsConfigResponse {
     /**
      * Whether this cluster should return group membership lookups during authentication using a group of security groups.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The name of the security group-of-groups to be used. Only relevant if enabled = true.
      * 
-     */
+    */
     public String getSecurityGroup() {
         return this.securityGroup;
     }
@@ -75,7 +75,6 @@ public final class AuthenticatorGroupsConfigResponse {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }
-
         public AuthenticatorGroupsConfigResponse build() {
             return new AuthenticatorGroupsConfigResponse(enabled, securityGroup);
         }

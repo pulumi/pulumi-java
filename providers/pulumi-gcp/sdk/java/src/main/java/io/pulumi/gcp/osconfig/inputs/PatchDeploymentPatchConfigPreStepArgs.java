@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PatchDeploymentPatchConfigPreStepArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="linuxExecStepConfig")
-    private final @Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs> linuxExecStepConfig;
+      private final @Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs> linuxExecStepConfig;
 
     public Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs> getLinuxExecStepConfig() {
         return this.linuxExecStepConfig == null ? Input.empty() : this.linuxExecStepConfig;
@@ -33,7 +33,7 @@ public final class PatchDeploymentPatchConfigPreStepArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="windowsExecStepConfig")
-    private final @Nullable Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs> windowsExecStepConfig;
+      private final @Nullable Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs> windowsExecStepConfig;
 
     public Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs> getWindowsExecStepConfig() {
         return this.windowsExecStepConfig == null ? Input.empty() : this.windowsExecStepConfig;
@@ -92,7 +92,6 @@ public final class PatchDeploymentPatchConfigPreStepArgs extends io.pulumi.resou
             this.windowsExecStepConfig = Input.ofNullable(windowsExecStepConfig);
             return this;
         }
-
         public PatchDeploymentPatchConfigPreStepArgs build() {
             return new PatchDeploymentPatchConfigPreStepArgs(linuxExecStepConfig, windowsExecStepConfig);
         }

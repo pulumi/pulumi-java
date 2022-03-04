@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginGroupFailoverCriteria;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginGroupMembers;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -73,7 +73,6 @@ public final class DistributionOriginGroup {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public DistributionOriginGroup build() {
             return new DistributionOriginGroup(failoverCriteria, id, members);
         }

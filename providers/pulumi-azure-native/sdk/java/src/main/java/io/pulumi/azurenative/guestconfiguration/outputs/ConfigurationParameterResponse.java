@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ConfigurationParameterResponse {
     /**
      * Name of the configuration parameter.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Value of the configuration parameter.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -76,7 +76,6 @@ public final class ConfigurationParameterResponse {
             this.value = value;
             return this;
         }
-
         public ConfigurationParameterResponse build() {
             return new ConfigurationParameterResponse(name, value);
         }

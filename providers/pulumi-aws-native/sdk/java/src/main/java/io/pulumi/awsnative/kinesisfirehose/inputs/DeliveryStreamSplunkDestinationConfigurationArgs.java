@@ -9,7 +9,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessingConfig
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfigurationArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSplunkRetryOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,63 +21,63 @@ public final class DeliveryStreamSplunkDestinationConfigurationArgs extends io.p
     public static final DeliveryStreamSplunkDestinationConfigurationArgs Empty = new DeliveryStreamSplunkDestinationConfigurationArgs();
 
     @InputImport(name="cloudWatchLoggingOptions")
-    private final @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
+      private final @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
     public Input<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Input.empty() : this.cloudWatchLoggingOptions;
     }
 
     @InputImport(name="hECAcknowledgmentTimeoutInSeconds")
-    private final @Nullable Input<Integer> hECAcknowledgmentTimeoutInSeconds;
+      private final @Nullable Input<Integer> hECAcknowledgmentTimeoutInSeconds;
 
     public Input<Integer> getHECAcknowledgmentTimeoutInSeconds() {
         return this.hECAcknowledgmentTimeoutInSeconds == null ? Input.empty() : this.hECAcknowledgmentTimeoutInSeconds;
     }
 
     @InputImport(name="hECEndpoint", required=true)
-    private final Input<String> hECEndpoint;
+      private final Input<String> hECEndpoint;
 
     public Input<String> getHECEndpoint() {
         return this.hECEndpoint;
     }
 
     @InputImport(name="hECEndpointType", required=true)
-    private final Input<DeliveryStreamSplunkDestinationConfigurationHECEndpointType> hECEndpointType;
+      private final Input<DeliveryStreamSplunkDestinationConfigurationHECEndpointType> hECEndpointType;
 
     public Input<DeliveryStreamSplunkDestinationConfigurationHECEndpointType> getHECEndpointType() {
         return this.hECEndpointType;
     }
 
     @InputImport(name="hECToken", required=true)
-    private final Input<String> hECToken;
+      private final Input<String> hECToken;
 
     public Input<String> getHECToken() {
         return this.hECToken;
     }
 
     @InputImport(name="processingConfiguration")
-    private final @Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
+      private final @Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
     public Input<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
     }
 
     @InputImport(name="retryOptions")
-    private final @Nullable Input<DeliveryStreamSplunkRetryOptionsArgs> retryOptions;
+      private final @Nullable Input<DeliveryStreamSplunkRetryOptionsArgs> retryOptions;
 
     public Input<DeliveryStreamSplunkRetryOptionsArgs> getRetryOptions() {
         return this.retryOptions == null ? Input.empty() : this.retryOptions;
     }
 
     @InputImport(name="s3BackupMode")
-    private final @Nullable Input<String> s3BackupMode;
+      private final @Nullable Input<String> s3BackupMode;
 
     public Input<String> getS3BackupMode() {
         return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;
     }
 
     @InputImport(name="s3Configuration", required=true)
-    private final Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
+      private final Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
     public Input<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
         return this.s3Configuration;
@@ -241,7 +241,6 @@ public final class DeliveryStreamSplunkDestinationConfigurationArgs extends io.p
             this.s3Configuration = Input.of(Objects.requireNonNull(s3Configuration));
             return this;
         }
-
         public DeliveryStreamSplunkDestinationConfigurationArgs build() {
             return new DeliveryStreamSplunkDestinationConfigurationArgs(cloudWatchLoggingOptions, hECAcknowledgmentTimeoutInSeconds, hECEndpoint, hECEndpointType, hECToken, processingConfiguration, retryOptions, s3BackupMode, s3Configuration);
         }

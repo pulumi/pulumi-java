@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.inputs.GetActivityCustomEntityQueryArgs;
 import io.pulumi.azurenative.securityinsights.outputs.GetActivityCustomEntityQueryResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActivityCustomEntityQuery {
-/**
- * Represents Activity entity query.
+    private GetActivityCustomEntityQuery() {}
+    public interface BuilderApplicator {
+        public void apply(GetActivityCustomEntityQueryArgs.Builder a);
+    }
+    private static GetActivityCustomEntityQueryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetActivityCustomEntityQueryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents Activity entity query.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Represents Activity entity query.
+     *
+     * Represents Activity entity query.
  * 
- */
+     */
+    public static CompletableFuture<GetActivityCustomEntityQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents Activity entity query.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Represents Activity entity query.
+     * 
+     */
     public static CompletableFuture<GetActivityCustomEntityQueryResult> invokeAsync(GetActivityCustomEntityQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getActivityCustomEntityQuery", TypeShape.of(GetActivityCustomEntityQueryResult.class), args == null ? GetActivityCustomEntityQueryArgs.Empty : args, Utilities.withVersion(options));
     }

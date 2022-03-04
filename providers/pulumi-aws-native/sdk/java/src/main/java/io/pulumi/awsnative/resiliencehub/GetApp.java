@@ -6,17 +6,33 @@ package io.pulumi.awsnative.resiliencehub;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.resiliencehub.inputs.GetAppArgs;
 import io.pulumi.awsnative.resiliencehub.outputs.GetAppResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApp {
-/**
- * Resource Type Definition for AWS::ResilienceHub::App.
+    private GetApp() {}
+    public interface BuilderApplicator {
+        public void apply(GetAppArgs.Builder a);
+    }
+    private static GetAppArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAppArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type Definition for AWS::ResilienceHub::App.
  * 
- */
+     */
+    public static CompletableFuture<GetAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type Definition for AWS::ResilienceHub::App.
+     * 
+     */
     public static CompletableFuture<GetAppResult> invokeAsync(GetAppArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:resiliencehub:getApp", TypeShape.of(GetAppResult.class), args == null ? GetAppArgs.Empty : args, Utilities.withVersion(options));
     }

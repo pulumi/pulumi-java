@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse {
     /**
      * The part of the time to keep.
      * 
-     */
+    */
     public String getPartToExtract() {
         return this.partToExtract;
     }
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse {
             this.partToExtract = Objects.requireNonNull(partToExtract);
             return this;
         }
-
         public GooglePrivacyDlpV2TimePartConfigResponse build() {
             return new GooglePrivacyDlpV2TimePartConfigResponse(partToExtract);
         }

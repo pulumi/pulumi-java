@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.FaqTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,7 +40,7 @@ public final class GetFaqResult {
     /**
      * Tags for labeling the FAQ
      * 
-     */
+    */
     public List<FaqTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -83,7 +83,6 @@ public final class GetFaqResult {
             this.tags = tags;
             return this;
         }
-
         public GetFaqResult build() {
             return new GetFaqResult(arn, id, tags);
         }

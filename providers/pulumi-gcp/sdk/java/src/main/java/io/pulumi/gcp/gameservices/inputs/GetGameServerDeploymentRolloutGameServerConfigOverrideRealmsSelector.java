@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsS
     public static final GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector Empty = new GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector();
 
     @InputImport(name="realms", required=true)
-    private final List<String> realms;
+      private final List<String> realms;
 
     public List<String> getRealms() {
         return this.realms;
@@ -52,7 +52,6 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsS
             this.realms = Objects.requireNonNull(realms);
             return this;
         }
-
         public GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector build() {
             return new GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(realms);
         }

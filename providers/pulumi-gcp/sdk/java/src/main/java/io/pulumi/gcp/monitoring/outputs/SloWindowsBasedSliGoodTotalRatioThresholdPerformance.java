@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio;
 import java.util.Objects;
@@ -49,7 +49,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformance {
      * measuring good service and total service.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut> getDistributionCut() {
         return Optional.ofNullable(this.distributionCut);
     }
@@ -61,7 +61,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformance {
      * will be assumed.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio> getGoodTotalRatio() {
         return Optional.ofNullable(this.goodTotalRatio);
     }
@@ -97,7 +97,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformance {
             this.goodTotalRatio = goodTotalRatio;
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdPerformance build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformance(distributionCut, goodTotalRatio);
         }

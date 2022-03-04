@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -124,14 +124,14 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
      * TimeSeries are returned upon the query execution, the autoscaler
      * will sum their respective values to obtain its scaling value.
      * 
-     */
+    */
     public Optional<String> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The identifier for this object. Format specified above.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -151,7 +151,7 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
      * single instance, it could be better used with utilization_target
      * instead.
      * 
-     */
+    */
     public Optional<Double> getSingleInstanceAssignment() {
         return Optional.ofNullable(this.singleInstanceAssignment);
     }
@@ -160,7 +160,7 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
      * balancing configuration) that autoscaler should maintain. Must
      * be a positive float value. If not defined, the default is 0.8.
      * 
-     */
+    */
     public Optional<Double> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -169,7 +169,7 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
      * Stackdriver Monitoring metric.
      * Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -226,7 +226,6 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
             this.type = type;
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyMetric build() {
             return new RegionAutoscalerAutoscalingPolicyMetric(filter, name, singleInstanceAssignment, target, type);
         }

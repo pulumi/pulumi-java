@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.search.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
     /**
      * The group id from the provider of resource the shared private link resource is for.
      * 
-     */
+    */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * The resource id of the resource the shared private link resource is for.
      * 
-     */
+    */
     public Optional<String> getPrivateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
      * The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The request message for requesting approval of the shared private link resource.
      * 
-     */
+    */
     public Optional<String> getRequestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
      * Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
      * 
-     */
+    */
     public Optional<String> getResourceRegion() {
         return Optional.ofNullable(this.resourceRegion);
     }
     /**
      * Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -160,7 +160,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
             this.status = status;
             return this;
         }
-
         public SharedPrivateLinkResourcePropertiesResponse build() {
             return new SharedPrivateLinkResourcePropertiesResponse(groupId, privateLinkResourceId, provisioningState, requestMessage, resourceRegion, status);
         }

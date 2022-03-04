@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.assuredworkloads_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs extends 
      * 
      */
     @InputImport(name="nextRotationTime", required=true)
-    private final Input<String> nextRotationTime;
+      private final Input<String> nextRotationTime;
 
     public Input<String> getNextRotationTime() {
         return this.nextRotationTime;
@@ -33,7 +33,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs extends 
      * 
      */
     @InputImport(name="rotationPeriod", required=true)
-    private final Input<String> rotationPeriod;
+      private final Input<String> rotationPeriod;
 
     public Input<String> getRotationPeriod() {
         return this.rotationPeriod;
@@ -92,7 +92,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs extends 
             this.rotationPeriod = Input.of(Objects.requireNonNull(rotationPeriod));
             return this;
         }
-
         public GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs(nextRotationTime, rotationPeriod);
         }

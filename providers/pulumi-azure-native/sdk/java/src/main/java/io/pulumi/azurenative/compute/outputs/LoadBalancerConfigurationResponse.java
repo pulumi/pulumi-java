@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LoadBalancerConfigurationPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class LoadBalancerConfigurationResponse {
     /**
      * Resource Id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the Load balancer
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the load balancer configuration.
      * 
-     */
+    */
     public LoadBalancerConfigurationPropertiesResponse getProperties() {
         return this.properties;
     }
@@ -98,7 +98,6 @@ public final class LoadBalancerConfigurationResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public LoadBalancerConfigurationResponse build() {
             return new LoadBalancerConfigurationResponse(id, name, properties);
         }

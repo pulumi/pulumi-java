@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="countryCode", required=true)
-    private final String countryCode;
+      private final String countryCode;
 
     public String getCountryCode() {
         return this.countryCode;
@@ -32,7 +32,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locality", required=true)
-    private final String locality;
+      private final String locality;
 
     public String getLocality() {
         return this.locality;
@@ -43,7 +43,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="organization", required=true)
-    private final String organization;
+      private final String organization;
 
     public String getOrganization() {
         return this.organization;
@@ -54,7 +54,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="organizationalUnit", required=true)
-    private final String organizationalUnit;
+      private final String organizationalUnit;
 
     public String getOrganizationalUnit() {
         return this.organizationalUnit;
@@ -65,7 +65,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="postalCode", required=true)
-    private final String postalCode;
+      private final String postalCode;
 
     public String getPostalCode() {
         return this.postalCode;
@@ -76,7 +76,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="province", required=true)
-    private final String province;
+      private final String province;
 
     public String getProvince() {
         return this.province;
@@ -87,7 +87,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="streetAddress", required=true)
-    private final String streetAddress;
+      private final String streetAddress;
 
     public String getStreetAddress() {
         return this.streetAddress;
@@ -186,7 +186,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
             this.streetAddress = Objects.requireNonNull(streetAddress);
             return this;
         }
-
         public SubjectResponse build() {
             return new SubjectResponse(countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }

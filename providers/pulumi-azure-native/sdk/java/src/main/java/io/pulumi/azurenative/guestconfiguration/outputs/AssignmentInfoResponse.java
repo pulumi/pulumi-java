@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
 import io.pulumi.azurenative.guestconfiguration.outputs.ConfigurationInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class AssignmentInfoResponse {
     /**
      * Information about the configuration.
      * 
-     */
+    */
     public Optional<ConfigurationInfoResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Name of the guest configuration assignment.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -77,7 +77,6 @@ public final class AssignmentInfoResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AssignmentInfoResponse build() {
             return new AssignmentInfoResponse(configuration, name);
         }

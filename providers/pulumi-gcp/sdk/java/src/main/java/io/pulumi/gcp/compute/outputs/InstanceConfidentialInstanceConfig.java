@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class InstanceConfidentialInstanceConfig {
     /**
      * Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
      * 
-     */
+    */
     public Boolean getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
@@ -52,7 +52,6 @@ public final class InstanceConfidentialInstanceConfig {
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }
-
         public InstanceConfidentialInstanceConfig build() {
             return new InstanceConfidentialInstanceConfig(enableConfidentialCompute);
         }

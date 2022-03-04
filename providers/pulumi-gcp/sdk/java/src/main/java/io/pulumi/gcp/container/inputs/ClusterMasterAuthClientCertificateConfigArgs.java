@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class ClusterMasterAuthClientCertificateConfigArgs extends io.pulum
     public static final ClusterMasterAuthClientCertificateConfigArgs Empty = new ClusterMasterAuthClientCertificateConfigArgs();
 
     @InputImport(name="issueClientCertificate", required=true)
-    private final Input<Boolean> issueClientCertificate;
+      private final Input<Boolean> issueClientCertificate;
 
     public Input<Boolean> getIssueClientCertificate() {
         return this.issueClientCertificate;
@@ -57,7 +57,6 @@ public final class ClusterMasterAuthClientCertificateConfigArgs extends io.pulum
             this.issueClientCertificate = Input.of(Objects.requireNonNull(issueClientCertificate));
             return this;
         }
-
         public ClusterMasterAuthClientCertificateConfigArgs build() {
             return new ClusterMasterAuthClientCertificateConfigArgs(issueClientCertificate);
         }

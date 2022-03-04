@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class OnPremiseResourceDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="machineName", required=true)
-    private final String machineName;
+      private final String machineName;
 
     public String getMachineName() {
         return this.machineName;
@@ -33,7 +33,7 @@ public final class OnPremiseResourceDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -44,7 +44,7 @@ public final class OnPremiseResourceDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceComputerId", required=true)
-    private final String sourceComputerId;
+      private final String sourceComputerId;
 
     public String getSourceComputerId() {
         return this.sourceComputerId;
@@ -55,7 +55,7 @@ public final class OnPremiseResourceDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vmuuid", required=true)
-    private final String vmuuid;
+      private final String vmuuid;
 
     public String getVmuuid() {
         return this.vmuuid;
@@ -66,7 +66,7 @@ public final class OnPremiseResourceDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workspaceId", required=true)
-    private final String workspaceId;
+      private final String workspaceId;
 
     public String getWorkspaceId() {
         return this.workspaceId;
@@ -145,7 +145,6 @@ public final class OnPremiseResourceDetailsResponse extends io.pulumi.resources.
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public OnPremiseResourceDetailsResponse build() {
             return new OnPremiseResourceDetailsResponse(machineName, source, sourceComputerId, vmuuid, workspaceId);
         }

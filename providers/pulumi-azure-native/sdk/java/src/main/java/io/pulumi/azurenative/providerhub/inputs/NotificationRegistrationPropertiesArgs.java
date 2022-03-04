@@ -9,7 +9,7 @@ import io.pulumi.azurenative.providerhub.enums.ProvisioningState;
 import io.pulumi.azurenative.providerhub.inputs.NotificationEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,35 +21,35 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
     public static final NotificationRegistrationPropertiesArgs Empty = new NotificationRegistrationPropertiesArgs();
 
     @InputImport(name="includedEvents")
-    private final @Nullable Input<List<String>> includedEvents;
+      private final @Nullable Input<List<String>> includedEvents;
 
     public Input<List<String>> getIncludedEvents() {
         return this.includedEvents == null ? Input.empty() : this.includedEvents;
     }
 
     @InputImport(name="messageScope")
-    private final @Nullable Input<Either<String,MessageScope>> messageScope;
+      private final @Nullable Input<Either<String,MessageScope>> messageScope;
 
     public Input<Either<String,MessageScope>> getMessageScope() {
         return this.messageScope == null ? Input.empty() : this.messageScope;
     }
 
     @InputImport(name="notificationEndpoints")
-    private final @Nullable Input<List<NotificationEndpointArgs>> notificationEndpoints;
+      private final @Nullable Input<List<NotificationEndpointArgs>> notificationEndpoints;
 
     public Input<List<NotificationEndpointArgs>> getNotificationEndpoints() {
         return this.notificationEndpoints == null ? Input.empty() : this.notificationEndpoints;
     }
 
     @InputImport(name="notificationMode")
-    private final @Nullable Input<Either<String,NotificationMode>> notificationMode;
+      private final @Nullable Input<Either<String,NotificationMode>> notificationMode;
 
     public Input<Either<String,NotificationMode>> getNotificationMode() {
         return this.notificationMode == null ? Input.empty() : this.notificationMode;
     }
 
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -153,7 +153,6 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
-
         public NotificationRegistrationPropertiesArgs build() {
             return new NotificationRegistrationPropertiesArgs(includedEvents, messageScope, notificationEndpoints, notificationMode, provisioningState);
         }

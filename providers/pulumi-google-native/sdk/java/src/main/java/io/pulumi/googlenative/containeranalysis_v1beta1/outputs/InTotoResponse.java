@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.ArtifactRuleResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.SigningKeyResponse;
 import java.lang.String;
@@ -58,14 +58,14 @@ public final class InTotoResponse {
     /**
      * This field contains the expected command used to perform the step.
      * 
-     */
+    */
     public List<String> getExpectedCommand() {
         return this.expectedCommand;
     }
     /**
      * The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
      * 
-     */
+    */
     public List<ArtifactRuleResponse> getExpectedMaterials() {
         return this.expectedMaterials;
     }
@@ -75,21 +75,21 @@ public final class InTotoResponse {
     /**
      * This field contains the public keys that can be used to verify the signatures on the step metadata.
      * 
-     */
+    */
     public List<SigningKeyResponse> getSigningKeys() {
         return this.signingKeys;
     }
     /**
      * This field identifies the name of the step in the supply chain.
      * 
-     */
+    */
     public String getStepName() {
         return this.stepName;
     }
     /**
      * This field contains a value that indicates the minimum number of keys that need to be used to sign the step's in-toto link.
      * 
-     */
+    */
     public String getThreshold() {
         return this.threshold;
     }
@@ -153,7 +153,6 @@ public final class InTotoResponse {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public InTotoResponse build() {
             return new InTotoResponse(expectedCommand, expectedMaterials, expectedProducts, signingKeys, stepName, threshold);
         }

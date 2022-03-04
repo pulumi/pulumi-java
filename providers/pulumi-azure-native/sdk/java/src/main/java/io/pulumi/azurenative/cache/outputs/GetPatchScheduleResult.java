@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cache.outputs;
 
 import io.pulumi.azurenative.cache.outputs.ScheduleEntryResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,28 +47,28 @@ public final class GetPatchScheduleResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of patch schedules for a Redis cache.
      * 
-     */
+    */
     public List<ScheduleEntryResponse> getScheduleEntries() {
         return this.scheduleEntries;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -118,7 +118,6 @@ public final class GetPatchScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPatchScheduleResult build() {
             return new GetPatchScheduleResult(id, name, scheduleEntries, type);
         }

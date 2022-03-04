@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="companyName", required=true)
-    private final Input<String> companyName;
+      private final Input<String> companyName;
 
     public Input<String> getCompanyName() {
         return this.companyName;
@@ -34,7 +34,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactPerson", required=true)
-    private final Input<String> contactPerson;
+      private final Input<String> contactPerson;
 
     public Input<String> getContactPerson() {
         return this.contactPerson;
@@ -45,7 +45,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailList", required=true)
-    private final Input<List<String>> emailList;
+      private final Input<List<String>> emailList;
 
     public Input<List<String>> getEmailList() {
         return this.emailList;
@@ -56,7 +56,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone", required=true)
-    private final Input<String> phone;
+      private final Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone;
@@ -145,7 +145,6 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.phone = Input.of(Objects.requireNonNull(phone));
             return this;
         }
-
         public ContactDetailsArgs build() {
             return new ContactDetailsArgs(companyName, contactPerson, emailList, phone);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.kusto.enums.IotHubDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -33,7 +33,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="consumerGroup", required=true)
-    private final Input<String> consumerGroup;
+      private final Input<String> consumerGroup;
 
     public Input<String> getConsumerGroup() {
         return this.consumerGroup;
@@ -44,7 +44,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataConnectionName")
-    private final @Nullable Input<String> dataConnectionName;
+      private final @Nullable Input<String> dataConnectionName;
 
     public Input<String> getDataConnectionName() {
         return this.dataConnectionName == null ? Input.empty() : this.dataConnectionName;
@@ -55,7 +55,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataFormat")
-    private final @Nullable Input<Either<String,IotHubDataFormat>> dataFormat;
+      private final @Nullable Input<Either<String,IotHubDataFormat>> dataFormat;
 
     public Input<Either<String,IotHubDataFormat>> getDataFormat() {
         return this.dataFormat == null ? Input.empty() : this.dataFormat;
@@ -66,7 +66,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -77,7 +77,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="eventSystemProperties")
-    private final @Nullable Input<List<String>> eventSystemProperties;
+      private final @Nullable Input<List<String>> eventSystemProperties;
 
     public Input<List<String>> getEventSystemProperties() {
         return this.eventSystemProperties == null ? Input.empty() : this.eventSystemProperties;
@@ -88,7 +88,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="iotHubResourceId", required=true)
-    private final Input<String> iotHubResourceId;
+      private final Input<String> iotHubResourceId;
 
     public Input<String> getIotHubResourceId() {
         return this.iotHubResourceId;
@@ -100,7 +100,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -111,7 +111,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -122,7 +122,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mappingRuleName")
-    private final @Nullable Input<String> mappingRuleName;
+      private final @Nullable Input<String> mappingRuleName;
 
     public Input<String> getMappingRuleName() {
         return this.mappingRuleName == null ? Input.empty() : this.mappingRuleName;
@@ -133,7 +133,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -144,7 +144,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sharedAccessPolicyName", required=true)
-    private final Input<String> sharedAccessPolicyName;
+      private final Input<String> sharedAccessPolicyName;
 
     public Input<String> getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName;
@@ -155,7 +155,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
@@ -379,7 +379,6 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
             this.tableName = Input.ofNullable(tableName);
             return this;
         }
-
         public IotHubDataConnectionArgs build() {
             return new IotHubDataConnectionArgs(clusterName, consumerGroup, dataConnectionName, dataFormat, databaseName, eventSystemProperties, iotHubResourceId, kind, location, mappingRuleName, resourceGroupName, sharedAccessPolicyName, tableName);
         }

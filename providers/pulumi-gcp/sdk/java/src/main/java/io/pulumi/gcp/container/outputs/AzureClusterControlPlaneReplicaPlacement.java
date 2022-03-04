@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AzureClusterControlPlaneReplicaPlacement {
     /**
      * For a given replica, the Azure availability zone where to provision the control plane VM and the ETCD disk.
      * 
-     */
+    */
     public String getAzureAvailabilityZone() {
         return this.azureAvailabilityZone;
     }
     /**
      * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it's a subnet under the virtual network in the cluster configuration.
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }
@@ -74,7 +74,6 @@ public final class AzureClusterControlPlaneReplicaPlacement {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public AzureClusterControlPlaneReplicaPlacement build() {
             return new AzureClusterControlPlaneReplicaPlacement(azureAvailabilityZone, subnetId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1alpha.outputs.ResourceRecordResponse;
 import io.pulumi.googlenative.appengine_v1alpha.outputs.SslSettingsResponse;
 import java.lang.String;
@@ -41,21 +41,21 @@ public final class GetDomainMappingResult {
     /**
      * Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
      * 
-     */
+    */
     public List<ResourceRecordResponse> getResourceRecords() {
         return this.resourceRecords;
     }
     /**
      * SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
      * 
-     */
+    */
     public SslSettingsResponse getSslSettings() {
         return this.sslSettings;
     }
@@ -98,7 +98,6 @@ public final class GetDomainMappingResult {
             this.sslSettings = Objects.requireNonNull(sslSettings);
             return this;
         }
-
         public GetDomainMappingResult build() {
             return new GetDomainMappingResult(name, resourceRecords, sslSettings);
         }

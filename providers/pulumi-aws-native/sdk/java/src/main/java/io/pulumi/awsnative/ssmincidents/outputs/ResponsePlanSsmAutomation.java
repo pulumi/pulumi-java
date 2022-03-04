@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.enums.ResponsePlanSsmAutomationTargetAccount;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanSsmParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,35 +57,35 @@ public final class ResponsePlanSsmAutomation {
     /**
      * The document name to use when starting the SSM automation document.
      * 
-     */
+    */
     public String getDocumentName() {
         return this.documentName;
     }
     /**
      * The version of the document to use when starting the SSM automation document.
      * 
-     */
+    */
     public Optional<String> getDocumentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
      * The parameters to set when starting the SSM automation document.
      * 
-     */
+    */
     public List<ResponsePlanSsmParameter> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * The role ARN to use when starting the SSM automation document.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The account type to use when starting the SSM automation document.
      * 
-     */
+    */
     public Optional<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {
         return Optional.ofNullable(this.targetAccount);
     }
@@ -142,7 +142,6 @@ public final class ResponsePlanSsmAutomation {
             this.targetAccount = targetAccount;
             return this;
         }
-
         public ResponsePlanSsmAutomation build() {
             return new ResponsePlanSsmAutomation(documentName, documentVersion, parameters, roleArn, targetAccount);
         }

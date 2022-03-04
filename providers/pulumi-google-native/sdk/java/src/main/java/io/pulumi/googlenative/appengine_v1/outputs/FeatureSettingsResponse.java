@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class FeatureSettingsResponse {
     /**
      * Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to 'readiness_check' and 'liveness_check' values instead of 'health_check' ones. Once the legacy 'health_check' behavior is deprecated, and this value is always true, this setting can be removed.
      * 
-     */
+    */
     public Boolean getSplitHealthChecks() {
         return this.splitHealthChecks;
     }
     /**
      * If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.
      * 
-     */
+    */
     public Boolean getUseContainerOptimizedOs() {
         return this.useContainerOptimizedOs;
     }
@@ -74,7 +74,6 @@ public final class FeatureSettingsResponse {
             this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs);
             return this;
         }
-
         public FeatureSettingsResponse build() {
             return new FeatureSettingsResponse(splitHealthChecks, useContainerOptimizedOs);
         }

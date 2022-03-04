@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1IntentParameterArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs;
 import java.lang.Boolean;
@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="isFallback")
-    private final @Nullable Input<Boolean> isFallback;
+      private final @Nullable Input<Boolean> isFallback;
 
     public Input<Boolean> getIsFallback() {
         return this.isFallback == null ? Input.empty() : this.isFallback;
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -84,7 +84,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs>> parameters;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs>> parameters;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -95,7 +95,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -106,7 +106,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="trainingPhrases")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs>> trainingPhrases;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs>> trainingPhrases;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs>> getTrainingPhrases() {
         return this.trainingPhrases == null ? Input.empty() : this.trainingPhrases;
@@ -255,7 +255,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
             this.trainingPhrases = Input.ofNullable(trainingPhrases);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentArgs build() {
             return new GoogleCloudDialogflowCxV3beta1IntentArgs(description, displayName, isFallback, labels, name, parameters, priority, trainingPhrases);
         }

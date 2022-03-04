@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
     public static final LoggingRuleHiddenPropertyPathsArgs Empty = new LoggingRuleHiddenPropertyPathsArgs();
 
     @InputImport(name="hiddenPathsOnRequest")
-    private final @Nullable Input<List<String>> hiddenPathsOnRequest;
+      private final @Nullable Input<List<String>> hiddenPathsOnRequest;
 
     public Input<List<String>> getHiddenPathsOnRequest() {
         return this.hiddenPathsOnRequest == null ? Input.empty() : this.hiddenPathsOnRequest;
     }
 
     @InputImport(name="hiddenPathsOnResponse")
-    private final @Nullable Input<List<String>> hiddenPathsOnResponse;
+      private final @Nullable Input<List<String>> hiddenPathsOnResponse;
 
     public Input<List<String>> getHiddenPathsOnResponse() {
         return this.hiddenPathsOnResponse == null ? Input.empty() : this.hiddenPathsOnResponse;
@@ -82,7 +82,6 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
             this.hiddenPathsOnResponse = Input.ofNullable(hiddenPathsOnResponse);
             return this;
         }
-
         public LoggingRuleHiddenPropertyPathsArgs build() {
             return new LoggingRuleHiddenPropertyPathsArgs(hiddenPathsOnRequest, hiddenPathsOnResponse);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class OnPremClusterResponse {
     /**
      * Immutable. Whether the cluster is an admin cluster.
      * 
-     */
+    */
     public Boolean getAdminCluster() {
         return this.adminCluster;
     }
     /**
      * If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.
      * 
-     */
+    */
     public Boolean getClusterMissing() {
         return this.clusterMissing;
     }
     /**
      * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
      * 
-     */
+    */
     public String getResourceLink() {
         return this.resourceLink;
     }
@@ -96,7 +96,6 @@ public final class OnPremClusterResponse {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public OnPremClusterResponse build() {
             return new OnPremClusterResponse(adminCluster, clusterMissing, resourceLink);
         }

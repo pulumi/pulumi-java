@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.outputs.BoundObjectReference;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,21 +43,21 @@ public final class TokenRequestSpec {
     /**
      * Audiences are the intendend audiences of the token. A recipient of a token must identitfy themself with an identifier in the list of audiences of the token, and otherwise should reject the token. A token issued for multiple audiences may be used to authenticate against any of the audiences listed but implies a high degree of trust between the target audiences.
      * 
-     */
+    */
     public List<String> getAudiences() {
         return this.audiences;
     }
     /**
      * BoundObjectRef is a reference to an object that the token will be bound to. The token will only be valid for as long as the bound object exists. NOTE: The API server's TokenReview endpoint will validate the BoundObjectRef, but other audiences may not. Keep ExpirationSeconds small if you want prompt revocation.
      * 
-     */
+    */
     public Optional<BoundObjectReference> getBoundObjectRef() {
         return Optional.ofNullable(this.boundObjectRef);
     }
     /**
      * ExpirationSeconds is the requested duration of validity of the request. The token issuer may return a token with a different validity duration so a client needs to check the 'expiration' field in a response.
      * 
-     */
+    */
     public Optional<Integer> getExpirationSeconds() {
         return Optional.ofNullable(this.expirationSeconds);
     }
@@ -100,7 +100,6 @@ public final class TokenRequestSpec {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
-
         public TokenRequestSpec build() {
             return new TokenRequestSpec(audiences, boundObjectRef, expirationSeconds);
         }

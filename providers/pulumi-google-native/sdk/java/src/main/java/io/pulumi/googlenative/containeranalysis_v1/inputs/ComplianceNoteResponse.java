@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CisBenchmarkResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.ComplianceVersionResponse;
 import java.lang.String;
@@ -16,7 +16,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
     public static final ComplianceNoteResponse Empty = new ComplianceNoteResponse();
 
     @InputImport(name="cisBenchmark", required=true)
-    private final CisBenchmarkResponse cisBenchmark;
+      private final CisBenchmarkResponse cisBenchmark;
 
     public CisBenchmarkResponse getCisBenchmark() {
         return this.cisBenchmark;
@@ -27,7 +27,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -38,7 +38,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="rationale", required=true)
-    private final String rationale;
+      private final String rationale;
 
     public String getRationale() {
         return this.rationale;
@@ -49,7 +49,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="remediation", required=true)
-    private final String remediation;
+      private final String remediation;
 
     public String getRemediation() {
         return this.remediation;
@@ -60,7 +60,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="scanInstructions", required=true)
-    private final String scanInstructions;
+      private final String scanInstructions;
 
     public String getScanInstructions() {
         return this.scanInstructions;
@@ -71,7 +71,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -82,7 +82,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="version", required=true)
-    private final List<ComplianceVersionResponse> version;
+      private final List<ComplianceVersionResponse> version;
 
     public List<ComplianceVersionResponse> getVersion() {
         return this.version;
@@ -181,7 +181,6 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ComplianceNoteResponse build() {
             return new ComplianceNoteResponse(cisBenchmark, description, rationale, remediation, scanInstructions, title, version);
         }

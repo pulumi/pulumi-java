@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse {
     /**
      * Optional. The text to send back to the Dialogflow API or a URI to open.
      * 
-     */
+    */
     public String getPostback() {
         return this.postback;
     }
     /**
      * Optional. The text to show on the button.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse(postback, text);
         }

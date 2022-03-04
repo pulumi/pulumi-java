@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.LinkedIntegrationRuntimeKeyAuthorizationResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedIntegrationRuntimeRbacAuthorizationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,14 +44,14 @@ public final class SelfHostedIntegrationRuntimeResponse {
     /**
      * Integration runtime description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The base definition of a linked integration runtime.
      * 
-     */
+    */
     public Optional<Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse>> getLinkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
@@ -59,7 +59,7 @@ public final class SelfHostedIntegrationRuntimeResponse {
      * The type of integration runtime.
      * Expected value is 'SelfHosted'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -102,7 +102,6 @@ public final class SelfHostedIntegrationRuntimeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SelfHostedIntegrationRuntimeResponse build() {
             return new SelfHostedIntegrationRuntimeResponse(description, linkedInfo, type);
         }

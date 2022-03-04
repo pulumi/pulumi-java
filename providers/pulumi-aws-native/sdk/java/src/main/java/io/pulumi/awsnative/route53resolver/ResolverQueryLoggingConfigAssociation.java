@@ -9,8 +9,8 @@ import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssoc
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationStatus;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -105,6 +105,37 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ResolverQueryLoggingConfigAssociationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.route53resolver.ResolverQueryLoggingConfigAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.route53resolver.ResolverQueryLoggingConfigAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ResolverQueryLoggingConfigAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ResolverQueryLoggingConfigAssociation(String name) {
+        this(name, ResolverQueryLoggingConfigAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ResolverQueryLoggingConfigAssociation(String name, @Nullable ResolverQueryLoggingConfigAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

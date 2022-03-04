@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AwsClusterControlPlaneProxyConfig {
     /**
      * The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
      * 
-     */
+    */
     public String getSecretArn() {
         return this.secretArn;
     }
     /**
      * The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
      * 
-     */
+    */
     public String getSecretVersion() {
         return this.secretVersion;
     }
@@ -74,7 +74,6 @@ public final class AwsClusterControlPlaneProxyConfig {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }
-
         public AwsClusterControlPlaneProxyConfig build() {
             return new AwsClusterControlPlaneProxyConfig(secretArn, secretVersion);
         }

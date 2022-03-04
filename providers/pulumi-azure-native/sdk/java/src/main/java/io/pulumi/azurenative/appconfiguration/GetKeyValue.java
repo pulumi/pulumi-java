@@ -6,21 +6,41 @@ package io.pulumi.azurenative.appconfiguration;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appconfiguration.inputs.GetKeyValueArgs;
 import io.pulumi.azurenative.appconfiguration.outputs.GetKeyValueResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeyValue {
-/**
- * The key-value resource along with all resource properties.
+    private GetKeyValue() {}
+    public interface BuilderApplicator {
+        public void apply(GetKeyValueArgs.Builder a);
+    }
+    private static GetKeyValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKeyValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The key-value resource along with all resource properties.
  * API Version: 2020-07-01-preview.
  * 
- *
- * The key-value resource along with all resource properties.
+     *
+     * The key-value resource along with all resource properties.
  * 
- */
+     */
+    public static CompletableFuture<GetKeyValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The key-value resource along with all resource properties.
+     * API Version: 2020-07-01-preview.
+     * 
+     *
+         * The key-value resource along with all resource properties.
+     * 
+     */
     public static CompletableFuture<GetKeyValueResult> invokeAsync(GetKeyValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:getKeyValue", TypeShape.of(GetKeyValueResult.class), args == null ? GetKeyValueArgs.Empty : args, Utilities.withVersion(options));
     }

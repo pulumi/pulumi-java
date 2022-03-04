@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -56,7 +56,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Characters to skip when doing de-identification of a value. These will be left alone and skipped.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> getCharactersToIgnores() {
         return this.charactersToIgnores == null ? List.of() : this.charactersToIgnores;
     }
@@ -65,14 +65,14 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
      * strings, and 0 for digits.
      * 
-     */
+    */
     public Optional<String> getMaskingCharacter() {
         return Optional.ofNullable(this.maskingCharacter);
     }
     /**
      * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
      * 
-     */
+    */
     public Optional<Integer> getNumberToMask() {
         return Optional.ofNullable(this.numberToMask);
     }
@@ -80,7 +80,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
      * input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
      * 
-     */
+    */
     public Optional<Boolean> getReverseOrder() {
         return Optional.ofNullable(this.reverseOrder);
     }
@@ -130,7 +130,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.reverseOrder = reverseOrder;
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig(charactersToIgnores, maskingCharacter, numberToMask, reverseOrder);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.CryptoKeyArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CryptoKeyVersionResponse;
@@ -180,6 +180,37 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
         return this.versionTemplate;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CryptoKeyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.cloudkms_v1.CryptoKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.cloudkms_v1.CryptoKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CryptoKey(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CryptoKey(String name) {
+        this(name, CryptoKeyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CryptoKey(String name, CryptoKeyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

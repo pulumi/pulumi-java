@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addr")
-    private final @Nullable String addr;
+      private final @Nullable String addr;
 
     public Optional<String> getAddr() {
         return this.addr == null ? Optional.empty() : Optional.ofNullable(this.addr);
@@ -34,7 +34,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable String host;
+      private final @Nullable String host;
 
     public Optional<String> getHost() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
@@ -45,7 +45,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -56,7 +56,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="method")
-    private final @Nullable String method;
+      private final @Nullable String method;
 
     public Optional<String> getMethod() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
@@ -67,7 +67,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="useragent")
-    private final @Nullable String useragent;
+      private final @Nullable String useragent;
 
     public Optional<String> getUseragent() {
         return this.useragent == null ? Optional.empty() : Optional.ofNullable(this.useragent);
@@ -146,7 +146,6 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
             this.useragent = useragent;
             return this;
         }
-
         public RequestResponse build() {
             return new RequestResponse(addr, host, id, method, useragent);
         }

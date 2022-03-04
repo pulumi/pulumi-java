@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+      private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -34,7 +34,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storagePolicyID")
-    private final @Nullable Input<String> storagePolicyID;
+      private final @Nullable Input<String> storagePolicyID;
 
     public Input<String> getStoragePolicyID() {
         return this.storagePolicyID == null ? Input.empty() : this.storagePolicyID;
@@ -45,7 +45,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storagePolicyName")
-    private final @Nullable Input<String> storagePolicyName;
+      private final @Nullable Input<String> storagePolicyName;
 
     public Input<String> getStoragePolicyName() {
         return this.storagePolicyName == null ? Input.empty() : this.storagePolicyName;
@@ -56,7 +56,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumePath", required=true)
-    private final Input<String> volumePath;
+      private final Input<String> volumePath;
 
     public Input<String> getVolumePath() {
         return this.volumePath;
@@ -145,7 +145,6 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
             this.volumePath = Input.of(Objects.requireNonNull(volumePath));
             return this;
         }
-
         public VsphereVirtualDiskVolumeSourceArgs build() {
             return new VsphereVirtualDiskVolumeSourceArgs(fsType, storagePolicyID, storagePolicyName, volumePath);
         }

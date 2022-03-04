@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class DataStoreResponse {
     /**
      * The capacity of data store in GBs.
      * 
-     */
+    */
     public Optional<String> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The free space of data store in GBs.
      * 
-     */
+    */
     public Optional<String> getFreeSpace() {
         return Optional.ofNullable(this.freeSpace);
     }
     /**
      * The symbolic name of data store.
      * 
-     */
+    */
     public Optional<String> getSymbolicName() {
         return Optional.ofNullable(this.symbolicName);
     }
     /**
      * The type of data store.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The uuid of data store.
      * 
-     */
+    */
     public Optional<String> getUuid() {
         return Optional.ofNullable(this.uuid);
     }
@@ -139,7 +139,6 @@ public final class DataStoreResponse {
             this.uuid = uuid;
             return this;
         }
-
         public DataStoreResponse build() {
             return new DataStoreResponse(capacity, freeSpace, symbolicName, type, uuid);
         }

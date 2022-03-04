@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.secretmanager_v1.outputs.ReplicaResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class UserManagedResponse {
     /**
      * The list of Replicas for this Secret. Cannot be empty.
      * 
-     */
+    */
     public List<ReplicaResponse> getReplicas() {
         return this.replicas;
     }
@@ -53,7 +53,6 @@ public final class UserManagedResponse {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public UserManagedResponse build() {
             return new UserManagedResponse(replicas);
         }

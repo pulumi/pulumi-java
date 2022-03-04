@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
      * 
      */
     @InputImport(name="offset", required=true)
-    private final String offset;
+      private final String offset;
 
     public String getOffset() {
         return this.offset;
@@ -34,7 +34,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
      * 
      */
     @InputImport(name="size")
-    private final @Nullable String size;
+      private final @Nullable String size;
 
     public Optional<String> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
@@ -46,7 +46,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -105,7 +105,6 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SelfDependencyTumblingWindowTriggerReferenceResponse build() {
             return new SelfDependencyTumblingWindowTriggerReferenceResponse(offset, size, type);
         }

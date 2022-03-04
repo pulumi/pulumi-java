@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gcsUri", required=true)
-    private final String gcsUri;
+      private final String gcsUri;
 
     public String getGcsUri() {
         return this.gcsUri;
@@ -32,7 +32,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rawBytes", required=true)
-    private final String rawBytes;
+      private final String rawBytes;
 
     public String getRawBytes() {
         return this.rawBytes;
@@ -81,7 +81,6 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
             this.rawBytes = Objects.requireNonNull(rawBytes);
             return this;
         }
-
         public ImageResponse build() {
             return new ImageResponse(gcsUri, rawBytes);
         }

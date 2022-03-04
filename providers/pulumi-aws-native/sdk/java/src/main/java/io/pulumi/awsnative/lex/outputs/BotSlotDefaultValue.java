@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BotSlotDefaultValue {
     /**
      * The default value to use when a user doesn't provide a value for a slot.
      * 
-     */
+    */
     public String getDefaultValue() {
         return this.defaultValue;
     }
@@ -52,7 +52,6 @@ public final class BotSlotDefaultValue {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
-
         public BotSlotDefaultValue build() {
             return new BotSlotDefaultValue(defaultValue);
         }

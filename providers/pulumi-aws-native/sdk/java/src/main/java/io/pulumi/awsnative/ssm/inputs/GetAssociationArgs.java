@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssm.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="associationId", required=true)
-    private final String associationId;
+      private final String associationId;
 
     public String getAssociationId() {
         return this.associationId;
@@ -55,7 +55,6 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
             this.associationId = Objects.requireNonNull(associationId);
             return this;
         }
-
         public GetAssociationArgs build() {
             return new GetAssociationArgs(associationId);
         }

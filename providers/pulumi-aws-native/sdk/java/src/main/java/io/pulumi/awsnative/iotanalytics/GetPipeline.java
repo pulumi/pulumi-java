@@ -6,17 +6,33 @@ package io.pulumi.awsnative.iotanalytics;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotanalytics.inputs.GetPipelineArgs;
 import io.pulumi.awsnative.iotanalytics.outputs.GetPipelineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPipeline {
-/**
- * Resource Type definition for AWS::IoTAnalytics::Pipeline
+    private GetPipeline() {}
+    public interface BuilderApplicator {
+        public void apply(GetPipelineArgs.Builder a);
+    }
+    private static GetPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPipelineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::IoTAnalytics::Pipeline
  * 
- */
+     */
+    public static CompletableFuture<GetPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::IoTAnalytics::Pipeline
+     * 
+     */
     public static CompletableFuture<GetPipelineResult> invokeAsync(GetPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotanalytics:getPipeline", TypeShape.of(GetPipelineResult.class), args == null ? GetPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

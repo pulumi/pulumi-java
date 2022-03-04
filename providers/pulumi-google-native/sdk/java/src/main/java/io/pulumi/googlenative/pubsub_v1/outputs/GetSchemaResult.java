@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GetSchemaResult {
     /**
      * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
      * 
-     */
+    */
     public String getDefinition() {
         return this.definition;
     }
     /**
      * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the schema definition.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -95,7 +95,6 @@ public final class GetSchemaResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSchemaResult build() {
             return new GetSchemaResult(definition, name, type);
         }

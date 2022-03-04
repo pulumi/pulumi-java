@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerbi.outputs;
 
 import io.pulumi.azurenative.powerbi.outputs.AzureSkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -63,28 +63,28 @@ public final class GetWorkspaceCollectionResult {
     /**
      * Resource id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Azure location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Workspace collection name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Properties
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
@@ -97,7 +97,7 @@ public final class GetWorkspaceCollectionResult {
     /**
      * Resource type
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -168,7 +168,6 @@ public final class GetWorkspaceCollectionResult {
             this.type = type;
             return this;
         }
-
         public GetWorkspaceCollectionResult build() {
             return new GetWorkspaceCollectionResult(id, location, name, properties, sku, tags, type);
         }

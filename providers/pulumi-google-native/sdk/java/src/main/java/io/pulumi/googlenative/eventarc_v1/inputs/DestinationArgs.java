@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.eventarc_v1.inputs.CloudRunArgs;
 import io.pulumi.googlenative.eventarc_v1.inputs.GKEArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudFunction")
-    private final @Nullable Input<String> cloudFunction;
+      private final @Nullable Input<String> cloudFunction;
 
     public Input<String> getCloudFunction() {
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
@@ -36,7 +36,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudRun")
-    private final @Nullable Input<CloudRunArgs> cloudRun;
+      private final @Nullable Input<CloudRunArgs> cloudRun;
 
     public Input<CloudRunArgs> getCloudRun() {
         return this.cloudRun == null ? Input.empty() : this.cloudRun;
@@ -47,7 +47,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gke")
-    private final @Nullable Input<GKEArgs> gke;
+      private final @Nullable Input<GKEArgs> gke;
 
     public Input<GKEArgs> getGke() {
         return this.gke == null ? Input.empty() : this.gke;
@@ -121,7 +121,6 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             this.gke = Input.ofNullable(gke);
             return this;
         }
-
         public DestinationArgs build() {
             return new DestinationArgs(cloudFunction, cloudRun, gke);
         }

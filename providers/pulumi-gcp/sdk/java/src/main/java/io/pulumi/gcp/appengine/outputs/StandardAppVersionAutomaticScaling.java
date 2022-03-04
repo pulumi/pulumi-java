@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionAutomaticScalingStandardSchedulerSettings;
 import java.lang.Integer;
 import java.lang.String;
@@ -68,14 +68,14 @@ public final class StandardAppVersionAutomaticScaling {
      * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
      * Defaults to a runtime-specific value.
      * 
-     */
+    */
     public Optional<Integer> getMaxConcurrentRequests() {
         return Optional.ofNullable(this.maxConcurrentRequests);
     }
     /**
      * Maximum number of idle instances that should be maintained for this version.
      * 
-     */
+    */
     public Optional<Integer> getMaxIdleInstances() {
         return Optional.ofNullable(this.maxIdleInstances);
     }
@@ -83,14 +83,14 @@ public final class StandardAppVersionAutomaticScaling {
      * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getMaxPendingLatency() {
         return Optional.ofNullable(this.maxPendingLatency);
     }
     /**
      * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
-     */
+    */
     public Optional<Integer> getMinIdleInstances() {
         return Optional.ofNullable(this.minIdleInstances);
     }
@@ -98,7 +98,7 @@ public final class StandardAppVersionAutomaticScaling {
      * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getMinPendingLatency() {
         return Optional.ofNullable(this.minPendingLatency);
     }
@@ -106,7 +106,7 @@ public final class StandardAppVersionAutomaticScaling {
      * Scheduler settings for standard environment.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<StandardAppVersionAutomaticScalingStandardSchedulerSettings> getStandardSchedulerSettings() {
         return Optional.ofNullable(this.standardSchedulerSettings);
     }
@@ -170,7 +170,6 @@ public final class StandardAppVersionAutomaticScaling {
             this.standardSchedulerSettings = standardSchedulerSettings;
             return this;
         }
-
         public StandardAppVersionAutomaticScaling build() {
             return new StandardAppVersionAutomaticScaling(maxConcurrentRequests, maxIdleInstances, maxPendingLatency, minIdleInstances, minPendingLatency, standardSchedulerSettings);
         }

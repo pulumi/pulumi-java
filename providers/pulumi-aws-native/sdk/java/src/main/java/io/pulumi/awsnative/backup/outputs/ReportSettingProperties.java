@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ReportSettingProperties {
     /**
      * The Amazon Resource Names (ARNs) of the frameworks a report covers.
      * 
-     */
+    */
     public List<String> getFrameworkArns() {
         return this.frameworkArns == null ? List.of() : this.frameworkArns;
     }
     /**
      * Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`
      * 
-     */
+    */
     public String getReportTemplate() {
         return this.reportTemplate;
     }
@@ -76,7 +76,6 @@ public final class ReportSettingProperties {
             this.reportTemplate = Objects.requireNonNull(reportTemplate);
             return this;
         }
-
         public ReportSettingProperties build() {
             return new ReportSettingProperties(frameworkArns, reportTemplate);
         }

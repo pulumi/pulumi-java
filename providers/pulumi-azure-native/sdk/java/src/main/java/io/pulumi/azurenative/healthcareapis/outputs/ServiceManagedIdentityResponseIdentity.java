@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ServiceManagedIdentityResponseIdentity {
     /**
      * Type of identity being specified, currently SystemAssigned and None are allowed.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -54,7 +54,6 @@ public final class ServiceManagedIdentityResponseIdentity {
             this.type = type;
             return this;
         }
-
         public ServiceManagedIdentityResponseIdentity build() {
             return new ServiceManagedIdentityResponseIdentity(type);
         }

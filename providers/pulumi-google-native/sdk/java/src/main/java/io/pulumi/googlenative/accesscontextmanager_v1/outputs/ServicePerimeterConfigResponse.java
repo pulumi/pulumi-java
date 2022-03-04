@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.EgressPolicyResponse;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.IngressPolicyResponse;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.VpcAccessibleServicesResponse;
@@ -63,42 +63,42 @@ public final class ServicePerimeterConfigResponse {
     /**
      * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.
      * 
-     */
+    */
     public List<String> getAccessLevels() {
         return this.accessLevels;
     }
     /**
      * List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.
      * 
-     */
+    */
     public List<EgressPolicyResponse> getEgressPolicies() {
         return this.egressPolicies;
     }
     /**
      * List of IngressPolicies to apply to the perimeter. A perimeter may have multiple IngressPolicies, each of which is evaluated separately. Access is granted if any Ingress Policy grants it. Must be empty for a perimeter bridge.
      * 
-     */
+    */
     public List<IngressPolicyResponse> getIngressPolicies() {
         return this.ingressPolicies;
     }
     /**
      * A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`
      * 
-     */
+    */
     public List<String> getResources() {
         return this.resources;
     }
     /**
      * Google Cloud services that are subject to the Service Perimeter restrictions. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.
      * 
-     */
+    */
     public List<String> getRestrictedServices() {
         return this.restrictedServices;
     }
     /**
      * Configuration for APIs allowed within Perimeter.
      * 
-     */
+    */
     public VpcAccessibleServicesResponse getVpcAccessibleServices() {
         return this.vpcAccessibleServices;
     }
@@ -162,7 +162,6 @@ public final class ServicePerimeterConfigResponse {
             this.vpcAccessibleServices = Objects.requireNonNull(vpcAccessibleServices);
             return this;
         }
-
         public ServicePerimeterConfigResponse build() {
             return new ServicePerimeterConfigResponse(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }

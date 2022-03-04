@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class SecurityScanConfigSchedule {
     /**
      * The duration of time between executions in days
      * 
-     */
+    */
     public Integer getIntervalDurationDays() {
         return this.intervalDurationDays;
     }
@@ -45,7 +45,7 @@ public final class SecurityScanConfigSchedule {
      * by the server after each run. If unspecified, it will default to current server time,
      * which means the scan will be scheduled to start immediately.
      * 
-     */
+    */
     public Optional<String> getScheduleTime() {
         return Optional.ofNullable(this.scheduleTime);
     }
@@ -81,7 +81,6 @@ public final class SecurityScanConfigSchedule {
             this.scheduleTime = scheduleTime;
             return this;
         }
-
         public SecurityScanConfigSchedule build() {
             return new SecurityScanConfigSchedule(intervalDurationDays, scheduleTime);
         }

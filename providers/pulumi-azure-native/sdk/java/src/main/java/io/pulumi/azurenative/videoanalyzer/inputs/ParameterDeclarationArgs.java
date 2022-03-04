@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="default")
-    private final @Nullable Input<String> $default;
+      private final @Nullable Input<String> $default;
 
     public Input<String> get$default() {
         return this.$default == null ? Input.empty() : this.$default;
@@ -36,7 +36,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ParameterType>> type;
+      private final Input<Either<String,ParameterType>> type;
 
     public Input<Either<String,ParameterType>> getType() {
         return this.type;
@@ -147,7 +147,6 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ParameterDeclarationArgs build() {
             return new ParameterDeclarationArgs($default, description, name, type);
         }

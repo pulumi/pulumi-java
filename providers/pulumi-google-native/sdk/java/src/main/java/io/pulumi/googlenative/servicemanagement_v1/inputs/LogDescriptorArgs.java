@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -47,7 +47,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<LabelDescriptorArgs>> labels;
+      private final @Nullable Input<List<LabelDescriptorArgs>> labels;
 
     public Input<List<LabelDescriptorArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -58,7 +58,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -147,7 +147,6 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public LogDescriptorArgs build() {
             return new LogDescriptorArgs(description, displayName, labels, name);
         }

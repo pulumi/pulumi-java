@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.outputs.AzureBlobFileSystemConfigurationRespo
 import io.pulumi.azurenative.batch.outputs.AzureFileShareConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.CIFSMountConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.NFSMountConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -50,28 +50,28 @@ public final class MountConfigurationResponse {
     /**
      * This property is mutually exclusive with all other properties.
      * 
-     */
+    */
     public Optional<AzureBlobFileSystemConfigurationResponse> getAzureBlobFileSystemConfiguration() {
         return Optional.ofNullable(this.azureBlobFileSystemConfiguration);
     }
     /**
      * This property is mutually exclusive with all other properties.
      * 
-     */
+    */
     public Optional<AzureFileShareConfigurationResponse> getAzureFileShareConfiguration() {
         return Optional.ofNullable(this.azureFileShareConfiguration);
     }
     /**
      * This property is mutually exclusive with all other properties.
      * 
-     */
+    */
     public Optional<CIFSMountConfigurationResponse> getCifsMountConfiguration() {
         return Optional.ofNullable(this.cifsMountConfiguration);
     }
     /**
      * This property is mutually exclusive with all other properties.
      * 
-     */
+    */
     public Optional<NFSMountConfigurationResponse> getNfsMountConfiguration() {
         return Optional.ofNullable(this.nfsMountConfiguration);
     }
@@ -121,7 +121,6 @@ public final class MountConfigurationResponse {
             this.nfsMountConfiguration = nfsMountConfiguration;
             return this;
         }
-
         public MountConfigurationResponse build() {
             return new MountConfigurationResponse(azureBlobFileSystemConfiguration, azureFileShareConfiguration, cifsMountConfiguration, nfsMountConfiguration);
         }

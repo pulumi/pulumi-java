@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetPrimaryTaskSetResult {
     /**
      * The ID or full Amazon Resource Name (ARN) of the task set.
      * 
-     */
+    */
     public Optional<String> getTaskSetId() {
         return Optional.ofNullable(this.taskSetId);
     }
@@ -54,7 +54,6 @@ public final class GetPrimaryTaskSetResult {
             this.taskSetId = taskSetId;
             return this;
         }
-
         public GetPrimaryTaskSetResult build() {
             return new GetPrimaryTaskSetResult(taskSetId);
         }

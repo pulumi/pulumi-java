@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.pubsub.outputs.GetTopicMessageStoragePolicy;
 import io.pulumi.gcp.pubsub.outputs.GetTopicSchemaSetting;
 import java.lang.String;
@@ -51,7 +51,7 @@ public final class GetTopicResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -150,7 +150,6 @@ public final class GetTopicResult {
             this.schemaSettings = Objects.requireNonNull(schemaSettings);
             return this;
         }
-
         public GetTopicResult build() {
             return new GetTopicResult(id, kmsKeyName, labels, messageRetentionDuration, messageStoragePolicies, name, project, schemaSettings);
         }

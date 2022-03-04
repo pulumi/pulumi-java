@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.IntegrationAccountSkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class IntegrationAccountSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,IntegrationAccountSkuName>> name;
+      private final Input<Either<String,IntegrationAccountSkuName>> name;
 
     public Input<Either<String,IntegrationAccountSkuName>> getName() {
         return this.name;
@@ -67,7 +67,6 @@ public final class IntegrationAccountSkuArgs extends io.pulumi.resources.Resourc
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public IntegrationAccountSkuArgs build() {
             return new IntegrationAccountSkuArgs(name);
         }

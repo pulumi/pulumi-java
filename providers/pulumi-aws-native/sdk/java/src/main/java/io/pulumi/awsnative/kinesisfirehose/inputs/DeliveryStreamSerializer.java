@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOrcSerDe;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamParquetSerDe;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class DeliveryStreamSerializer extends io.pulumi.resources.InvokeAr
     public static final DeliveryStreamSerializer Empty = new DeliveryStreamSerializer();
 
     @InputImport(name="orcSerDe")
-    private final @Nullable DeliveryStreamOrcSerDe orcSerDe;
+      private final @Nullable DeliveryStreamOrcSerDe orcSerDe;
 
     public Optional<DeliveryStreamOrcSerDe> getOrcSerDe() {
         return this.orcSerDe == null ? Optional.empty() : Optional.ofNullable(this.orcSerDe);
     }
 
     @InputImport(name="parquetSerDe")
-    private final @Nullable DeliveryStreamParquetSerDe parquetSerDe;
+      private final @Nullable DeliveryStreamParquetSerDe parquetSerDe;
 
     public Optional<DeliveryStreamParquetSerDe> getParquetSerDe() {
         return this.parquetSerDe == null ? Optional.empty() : Optional.ofNullable(this.parquetSerDe);
@@ -72,7 +72,6 @@ public final class DeliveryStreamSerializer extends io.pulumi.resources.InvokeAr
             this.parquetSerDe = parquetSerDe;
             return this;
         }
-
         public DeliveryStreamSerializer build() {
             return new DeliveryStreamSerializer(orcSerDe, parquetSerDe);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse extends 
      * 
      */
     @InputImport(name="disableDefaultIamRecipients", required=true)
-    private final Boolean disableDefaultIamRecipients;
+      private final Boolean disableDefaultIamRecipients;
 
     public Boolean getDisableDefaultIamRecipients() {
         return this.disableDefaultIamRecipients;
@@ -34,7 +34,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse extends 
      * 
      */
     @InputImport(name="monitoringNotificationChannels", required=true)
-    private final List<String> monitoringNotificationChannels;
+      private final List<String> monitoringNotificationChannels;
 
     public List<String> getMonitoringNotificationChannels() {
         return this.monitoringNotificationChannels;
@@ -45,7 +45,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse extends 
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-    private final String pubsubTopic;
+      private final String pubsubTopic;
 
     public String getPubsubTopic() {
         return this.pubsubTopic;
@@ -56,7 +56,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse extends 
      * 
      */
     @InputImport(name="schemaVersion", required=true)
-    private final String schemaVersion;
+      private final String schemaVersion;
 
     public String getSchemaVersion() {
         return this.schemaVersion;
@@ -125,7 +125,6 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse extends 
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1NotificationsRuleResponse build() {
             return new GoogleCloudBillingBudgetsV1NotificationsRuleResponse(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);
         }

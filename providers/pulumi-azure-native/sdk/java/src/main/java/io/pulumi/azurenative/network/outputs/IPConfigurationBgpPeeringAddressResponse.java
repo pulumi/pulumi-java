@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class IPConfigurationBgpPeeringAddressResponse {
     /**
      * The list of custom BGP peering addresses which belong to IP configuration.
      * 
-     */
+    */
     public List<String> getCustomBgpIpAddresses() {
         return this.customBgpIpAddresses == null ? List.of() : this.customBgpIpAddresses;
     }
     /**
      * The list of default BGP peering addresses which belong to IP configuration.
      * 
-     */
+    */
     public List<String> getDefaultBgpIpAddresses() {
         return this.defaultBgpIpAddresses;
     }
     /**
      * The ID of IP configuration which belongs to gateway.
      * 
-     */
+    */
     public Optional<String> getIpconfigurationId() {
         return Optional.ofNullable(this.ipconfigurationId);
     }
     /**
      * The list of tunnel public IP addresses which belong to IP configuration.
      * 
-     */
+    */
     public List<String> getTunnelIpAddresses() {
         return this.tunnelIpAddresses;
     }
@@ -119,7 +119,6 @@ public final class IPConfigurationBgpPeeringAddressResponse {
             this.tunnelIpAddresses = Objects.requireNonNull(tunnelIpAddresses);
             return this;
         }
-
         public IPConfigurationBgpPeeringAddressResponse build() {
             return new IPConfigurationBgpPeeringAddressResponse(customBgpIpAddresses, defaultBgpIpAddresses, ipconfigurationId, tunnelIpAddresses);
         }

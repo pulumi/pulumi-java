@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbformariadb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ServerPrivateLinkServiceConnectionStatePropertyResponse {
     /**
      * The actions required for private link service connection.
      * 
-     */
+    */
     public String getActionsRequired() {
         return this.actionsRequired;
     }
     /**
      * The private link service connection description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The private link service connection status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -95,7 +95,6 @@ public final class ServerPrivateLinkServiceConnectionStatePropertyResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ServerPrivateLinkServiceConnectionStatePropertyResponse build() {
             return new ServerPrivateLinkServiceConnectionStatePropertyResponse(actionsRequired, description, status);
         }

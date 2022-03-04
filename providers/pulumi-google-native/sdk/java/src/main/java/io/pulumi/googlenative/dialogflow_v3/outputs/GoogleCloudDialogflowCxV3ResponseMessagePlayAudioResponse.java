@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse {
     /**
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
      * 
-     */
+    */
     public Boolean getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
     /**
      * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
      * 
-     */
+    */
     public String getAudioUri() {
         return this.audioUri;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse {
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse(allowPlaybackInterruption, audioUri);
         }

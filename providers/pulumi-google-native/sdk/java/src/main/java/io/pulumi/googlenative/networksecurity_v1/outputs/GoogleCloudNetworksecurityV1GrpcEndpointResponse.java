@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudNetworksecurityV1GrpcEndpointResponse {
     /**
      * The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
      * 
-     */
+    */
     public String getTargetUri() {
         return this.targetUri;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudNetworksecurityV1GrpcEndpointResponse {
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
-
         public GoogleCloudNetworksecurityV1GrpcEndpointResponse build() {
             return new GoogleCloudNetworksecurityV1GrpcEndpointResponse(targetUri);
         }

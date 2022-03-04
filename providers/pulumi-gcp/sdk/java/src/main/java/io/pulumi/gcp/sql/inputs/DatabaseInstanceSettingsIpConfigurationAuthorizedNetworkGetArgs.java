@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+      private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -31,7 +31,7 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -118,7 +118,6 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs build() {
             return new DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs(expirationTime, name, value);
         }

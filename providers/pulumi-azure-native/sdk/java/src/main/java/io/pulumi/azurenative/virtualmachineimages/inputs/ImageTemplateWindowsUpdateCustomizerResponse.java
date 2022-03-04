@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<String> filters;
+      private final @Nullable List<String> filters;
 
     public List<String> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -36,7 +36,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -47,7 +47,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
      * 
      */
     @InputImport(name="searchCriteria")
-    private final @Nullable String searchCriteria;
+      private final @Nullable String searchCriteria;
 
     public Optional<String> getSearchCriteria() {
         return this.searchCriteria == null ? Optional.empty() : Optional.ofNullable(this.searchCriteria);
@@ -59,7 +59,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -70,7 +70,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
      * 
      */
     @InputImport(name="updateLimit")
-    private final @Nullable Integer updateLimit;
+      private final @Nullable Integer updateLimit;
 
     public Optional<Integer> getUpdateLimit() {
         return this.updateLimit == null ? Optional.empty() : Optional.ofNullable(this.updateLimit);
@@ -149,7 +149,6 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
             this.updateLimit = updateLimit;
             return this;
         }
-
         public ImageTemplateWindowsUpdateCustomizerResponse build() {
             return new ImageTemplateWindowsUpdateCustomizerResponse(filters, name, searchCriteria, type, updateLimit);
         }

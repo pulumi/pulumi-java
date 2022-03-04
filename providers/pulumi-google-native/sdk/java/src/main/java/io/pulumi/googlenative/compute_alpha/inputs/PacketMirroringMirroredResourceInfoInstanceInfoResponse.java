@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse exten
      * 
      */
     @InputImport(name="canonicalUrl", required=true)
-    private final String canonicalUrl;
+      private final String canonicalUrl;
 
     public String getCanonicalUrl() {
         return this.canonicalUrl;
@@ -28,7 +28,7 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse exten
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -77,7 +77,6 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse exten
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PacketMirroringMirroredResourceInfoInstanceInfoResponse build() {
             return new PacketMirroringMirroredResourceInfoInstanceInfoResponse(canonicalUrl, url);
         }

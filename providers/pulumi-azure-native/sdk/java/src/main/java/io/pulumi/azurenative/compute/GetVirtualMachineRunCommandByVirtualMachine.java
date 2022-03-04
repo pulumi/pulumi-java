@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetVirtualMachineRunCommandByVirtualMachineArgs;
 import io.pulumi.azurenative.compute.outputs.GetVirtualMachineRunCommandByVirtualMachineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineRunCommandByVirtualMachine {
-/**
- * Describes a Virtual Machine run command.
+    private GetVirtualMachineRunCommandByVirtualMachine() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineRunCommandByVirtualMachineArgs.Builder a);
+    }
+    private static GetVirtualMachineRunCommandByVirtualMachineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineRunCommandByVirtualMachineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a Virtual Machine run command.
  * API Version: 2021-03-01.
  * 
- *
- * Describes a Virtual Machine run command.
+     *
+     * Describes a Virtual Machine run command.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineRunCommandByVirtualMachineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a Virtual Machine run command.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Describes a Virtual Machine run command.
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineRunCommandByVirtualMachineResult> invokeAsync(GetVirtualMachineRunCommandByVirtualMachineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineRunCommandByVirtualMachine", TypeShape.of(GetVirtualMachineRunCommandByVirtualMachineResult.class), args == null ? GetVirtualMachineRunCommandByVirtualMachineArgs.Empty : args, Utilities.withVersion(options));
     }

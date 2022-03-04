@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidModelIds", required=true)
-    private final Input<List<String>> androidModelIds;
+      private final Input<List<String>> androidModelIds;
 
     public Input<List<String>> getAndroidModelIds() {
         return this.androidModelIds;
@@ -34,7 +34,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidVersionIds", required=true)
-    private final Input<List<String>> androidVersionIds;
+      private final Input<List<String>> androidVersionIds;
 
     public Input<List<String>> getAndroidVersionIds() {
         return this.androidVersionIds;
@@ -45,7 +45,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locales", required=true)
-    private final Input<List<String>> locales;
+      private final Input<List<String>> locales;
 
     public Input<List<String>> getLocales() {
         return this.locales;
@@ -56,7 +56,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orientations", required=true)
-    private final Input<List<String>> orientations;
+      private final Input<List<String>> orientations;
 
     public Input<List<String>> getOrientations() {
         return this.orientations;
@@ -145,7 +145,6 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
             this.orientations = Input.of(Objects.requireNonNull(orientations));
             return this;
         }
-
         public AndroidMatrixArgs build() {
             return new AndroidMatrixArgs(androidModelIds, androidVersionIds, locales, orientations);
         }

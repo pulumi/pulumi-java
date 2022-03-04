@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricMeanInRangeRangeGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SloWindowsBasedSliMetricMeanInRangeGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="range", required=true)
-    private final Input<SloWindowsBasedSliMetricMeanInRangeRangeGetArgs> range;
+      private final Input<SloWindowsBasedSliMetricMeanInRangeRangeGetArgs> range;
 
     public Input<SloWindowsBasedSliMetricMeanInRangeRangeGetArgs> getRange() {
         return this.range;
@@ -42,7 +42,7 @@ public final class SloWindowsBasedSliMetricMeanInRangeGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="timeSeries", required=true)
-    private final Input<String> timeSeries;
+      private final Input<String> timeSeries;
 
     public Input<String> getTimeSeries() {
         return this.timeSeries;
@@ -101,7 +101,6 @@ public final class SloWindowsBasedSliMetricMeanInRangeGetArgs extends io.pulumi.
             this.timeSeries = Input.of(Objects.requireNonNull(timeSeries));
             return this;
         }
-
         public SloWindowsBasedSliMetricMeanInRangeGetArgs build() {
             return new SloWindowsBasedSliMetricMeanInRangeGetArgs(range, timeSeries);
         }

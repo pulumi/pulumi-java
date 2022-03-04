@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleRouteAction;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleUrlRedirect;
 import java.lang.String;
@@ -65,7 +65,7 @@ public final class URLMapPathMatcherPathRule {
      * does not include any text after the first ? or #, and those chars are not
      * allowed here.
      * 
-     */
+    */
     public List<String> getPaths() {
         return this.paths;
     }
@@ -78,14 +78,14 @@ public final class URLMapPathMatcherPathRule {
      * or urlRedirect must be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherPathRuleRouteAction> getRouteAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
      * The backend service or backend bucket link that should be matched by this test.
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
@@ -95,7 +95,7 @@ public final class URLMapPathMatcherPathRule {
      * set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherPathRuleUrlRedirect> getUrlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
@@ -145,7 +145,6 @@ public final class URLMapPathMatcherPathRule {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public URLMapPathMatcherPathRule build() {
             return new URLMapPathMatcherPathRule(paths, routeAction, service, urlRedirect);
         }

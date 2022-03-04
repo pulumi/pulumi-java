@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleRateLimitOptionsThresholdResponse;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleRedirectOptionsResponse;
 import java.lang.Integer;
@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="banDurationSec", required=true)
-    private final Integer banDurationSec;
+      private final Integer banDurationSec;
 
     public Integer getBanDurationSec() {
         return this.banDurationSec;
@@ -31,7 +31,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="banThreshold", required=true)
-    private final SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold;
+      private final SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold;
 
     public SecurityPolicyRuleRateLimitOptionsThresholdResponse getBanThreshold() {
         return this.banThreshold;
@@ -42,7 +42,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="conformAction", required=true)
-    private final String conformAction;
+      private final String conformAction;
 
     public String getConformAction() {
         return this.conformAction;
@@ -53,7 +53,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="enforceOnKey", required=true)
-    private final String enforceOnKey;
+      private final String enforceOnKey;
 
     public String getEnforceOnKey() {
         return this.enforceOnKey;
@@ -64,7 +64,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="enforceOnKeyName", required=true)
-    private final String enforceOnKeyName;
+      private final String enforceOnKeyName;
 
     public String getEnforceOnKeyName() {
         return this.enforceOnKeyName;
@@ -75,7 +75,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="exceedAction", required=true)
-    private final String exceedAction;
+      private final String exceedAction;
 
     public String getExceedAction() {
         return this.exceedAction;
@@ -86,7 +86,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="exceedRedirectOptions", required=true)
-    private final SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions;
+      private final SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions;
 
     public SecurityPolicyRuleRedirectOptionsResponse getExceedRedirectOptions() {
         return this.exceedRedirectOptions;
@@ -97,7 +97,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="rateLimitThreshold", required=true)
-    private final SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold;
+      private final SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold;
 
     public SecurityPolicyRuleRateLimitOptionsThresholdResponse getRateLimitThreshold() {
         return this.rateLimitThreshold;
@@ -206,7 +206,6 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
             this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
             return this;
         }
-
         public SecurityPolicyRuleRateLimitOptionsResponse build() {
             return new SecurityPolicyRuleRateLimitOptionsResponse(banDurationSec, banThreshold, conformAction, enforceOnKey, enforceOnKeyName, exceedAction, exceedRedirectOptions, rateLimitThreshold);
         }

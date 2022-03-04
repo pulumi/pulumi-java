@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -42,14 +42,14 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse {
     /**
      * Specify the date format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getDateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
     /**
      * Specify the timestamp format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getTimestampFormat() {
         return Optional.ofNullable(this.timestampFormat);
     }
@@ -57,7 +57,7 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse {
      * The export setting type.
      * Expected value is 'AzureDatabricksDeltaLakeExportCommand'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -100,7 +100,6 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDatabricksDeltaLakeExportCommandResponse build() {
             return new AzureDatabricksDeltaLakeExportCommandResponse(dateFormat, timestampFormat, type);
         }

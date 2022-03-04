@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceResp
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable CredentialReferenceResponse credential;
+      private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
@@ -39,7 +39,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password == null ? null : this.password;
@@ -50,7 +50,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="pfx")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPfx() {
         return this.pfx == null ? null : this.pfx;
@@ -61,7 +61,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Object resource;
+      private final @Nullable Object resource;
 
     public Optional<Object> getResource() {
         return this.resource == null ? Optional.empty() : Optional.ofNullable(this.resource);
@@ -72,7 +72,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -83,7 +83,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="userTenant")
-    private final @Nullable Object userTenant;
+      private final @Nullable Object userTenant;
 
     public Optional<Object> getUserTenant() {
         return this.userTenant == null ? Optional.empty() : Optional.ofNullable(this.userTenant);
@@ -94,7 +94,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Object username;
+      private final @Nullable Object username;
 
     public Optional<Object> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
@@ -193,7 +193,6 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
             this.username = username;
             return this;
         }
-
         public WebActivityAuthenticationResponse build() {
             return new WebActivityAuthenticationResponse(credential, password, pfx, resource, type, userTenant, username);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.GetMeshIstioServiceTelemetry;
 import java.lang.String;
 import java.util.List;
@@ -55,7 +55,7 @@ public final class GetMeshIstioServiceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -161,7 +161,6 @@ public final class GetMeshIstioServiceResult {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }
-
         public GetMeshIstioServiceResult build() {
             return new GetMeshIstioServiceResult(displayName, id, meshUid, name, project, serviceId, serviceName, serviceNamespace, telemetries);
         }

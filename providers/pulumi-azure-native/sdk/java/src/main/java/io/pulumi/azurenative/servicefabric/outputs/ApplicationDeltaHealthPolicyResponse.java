@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ServiceTypeDeltaHealthPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ApplicationDeltaHealthPolicyResponse {
     /**
      * The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.
      * 
-     */
+    */
     public Optional<ServiceTypeDeltaHealthPolicyResponse> getDefaultServiceTypeDeltaHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeDeltaHealthPolicy);
     }
     /**
      * The map with service type delta health policy per service type name. The map is empty by default.
      * 
-     */
+    */
     public Map<String,ServiceTypeDeltaHealthPolicyResponse> getServiceTypeDeltaHealthPolicies() {
         return this.serviceTypeDeltaHealthPolicies == null ? Map.of() : this.serviceTypeDeltaHealthPolicies;
     }
@@ -78,7 +78,6 @@ public final class ApplicationDeltaHealthPolicyResponse {
             this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
             return this;
         }
-
         public ApplicationDeltaHealthPolicyResponse build() {
             return new ApplicationDeltaHealthPolicyResponse(defaultServiceTypeDeltaHealthPolicy, serviceTypeDeltaHealthPolicies);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.LocalObjectReferenceResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -47,28 +47,28 @@ public final class ConfigMapKeySelectorResponse {
     /**
      * The key to select.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
      * 
-     */
+    */
     public LocalObjectReferenceResponse getLocalObjectReference() {
         return this.localObjectReference;
     }
     /**
      * The ConfigMap to select from.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * (Optional) Specify whether the ConfigMap or its key must be defined
      * 
-     */
+    */
     public Boolean getOptional() {
         return this.optional;
     }
@@ -118,7 +118,6 @@ public final class ConfigMapKeySelectorResponse {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public ConfigMapKeySelectorResponse build() {
             return new ConfigMapKeySelectorResponse(key, localObjectReference, name, optional);
         }

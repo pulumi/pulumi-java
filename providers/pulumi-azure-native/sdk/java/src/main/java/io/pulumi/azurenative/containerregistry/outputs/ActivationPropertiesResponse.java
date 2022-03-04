@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ActivationPropertiesResponse {
     /**
      * The activation status of the connected registry.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -52,7 +52,6 @@ public final class ActivationPropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ActivationPropertiesResponse build() {
             return new ActivationPropertiesResponse(status);
         }

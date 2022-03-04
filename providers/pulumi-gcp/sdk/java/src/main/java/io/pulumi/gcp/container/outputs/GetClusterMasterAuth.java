@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterMasterAuthClientCertificateConfig;
 import java.lang.String;
 import java.util.List;
@@ -86,7 +86,6 @@ public final class GetClusterMasterAuth {
             this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate);
             return this;
         }
-
         public GetClusterMasterAuth build() {
             return new GetClusterMasterAuth(clientCertificate, clientCertificateConfigs, clientKey, clusterCaCertificate);
         }

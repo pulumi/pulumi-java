@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class MigrationReportResultResponse {
     /**
      * Migration validation result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The url of the report.
      * 
-     */
+    */
     public String getReportUrl() {
         return this.reportUrl;
     }
@@ -74,7 +74,6 @@ public final class MigrationReportResultResponse {
             this.reportUrl = Objects.requireNonNull(reportUrl);
             return this;
         }
-
         public MigrationReportResultResponse build() {
             return new MigrationReportResultResponse(id, reportUrl);
         }

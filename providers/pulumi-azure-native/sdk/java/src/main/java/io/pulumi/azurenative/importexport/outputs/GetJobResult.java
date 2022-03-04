@@ -6,7 +6,7 @@ package io.pulumi.azurenative.importexport.outputs;
 import io.pulumi.azurenative.importexport.outputs.IdentityDetailsResponse;
 import io.pulumi.azurenative.importexport.outputs.JobDetailsResponse;
 import io.pulumi.azurenative.importexport.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -79,56 +79,56 @@ public final class GetJobResult {
     /**
      * Specifies the resource identifier of the job.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Specifies the job identity details
      * 
-     */
+    */
     public Optional<IdentityDetailsResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Specifies the Azure location where the job is created.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the job.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the job properties
      * 
-     */
+    */
     public JobDetailsResponse getProperties() {
         return this.properties;
     }
     /**
      * SystemData of ImportExport Jobs.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Specifies the tags that are assigned to the job.
      * 
-     */
+    */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }
     /**
      * Specifies the type of the job resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -206,7 +206,6 @@ public final class GetJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(id, identity, location, name, properties, systemData, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managednetwork.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetScopeAssignmentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -28,7 +28,7 @@ public final class GetScopeAssignmentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="scopeAssignmentName", required=true)
-    private final String scopeAssignmentName;
+      private final String scopeAssignmentName;
 
     public String getScopeAssignmentName() {
         return this.scopeAssignmentName;
@@ -77,7 +77,6 @@ public final class GetScopeAssignmentArgs extends io.pulumi.resources.InvokeArgs
             this.scopeAssignmentName = Objects.requireNonNull(scopeAssignmentName);
             return this;
         }
-
         public GetScopeAssignmentArgs build() {
             return new GetScopeAssignmentArgs(scope, scopeAssignmentName);
         }

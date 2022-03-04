@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,56 +75,56 @@ public final class JobStepOutputResponse {
     /**
      * The resource ID of the credential to use to connect to the output destination.
      * 
-     */
+    */
     public String getCredential() {
         return this.credential;
     }
     /**
      * The output destination database.
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * The output destination resource group.
      * 
-     */
+    */
     public Optional<String> getResourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
     /**
      * The output destination schema.
      * 
-     */
+    */
     public Optional<String> getSchemaName() {
         return Optional.ofNullable(this.schemaName);
     }
     /**
      * The output destination server name.
      * 
-     */
+    */
     public String getServerName() {
         return this.serverName;
     }
     /**
      * The output destination subscription id.
      * 
-     */
+    */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * The output destination table.
      * 
-     */
+    */
     public String getTableName() {
         return this.tableName;
     }
     /**
      * The output destination type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -202,7 +202,6 @@ public final class JobStepOutputResponse {
             this.type = type;
             return this;
         }
-
         public JobStepOutputResponse build() {
             return new JobStepOutputResponse(credential, databaseName, resourceGroupName, schemaName, serverName, subscriptionId, tableName, type);
         }

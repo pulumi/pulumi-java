@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTypeProvider {
-/**
- * Gets information about a specific type provider.
+    private GetTypeProvider() {}
+    public interface BuilderApplicator {
+        public void apply(GetTypeProviderArgs.Builder a);
+    }
+    private static GetTypeProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTypeProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets information about a specific type provider.
  * 
- */
+     */
+    public static CompletableFuture<GetTypeProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets information about a specific type provider.
+     * 
+     */
     public static CompletableFuture<GetTypeProviderResult> invokeAsync(GetTypeProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:deploymentmanager/v2beta:getTypeProvider", TypeShape.of(GetTypeProviderResult.class), args == null ? GetTypeProviderArgs.Empty : args, Utilities.withVersion(options));
     }

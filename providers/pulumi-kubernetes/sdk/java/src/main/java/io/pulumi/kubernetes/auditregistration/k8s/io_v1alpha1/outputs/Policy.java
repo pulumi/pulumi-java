@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class Policy {
     /**
      * The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
      * 
-     */
+    */
     public String getLevel() {
         return this.level;
     }
     /**
      * Stages is a list of stages for which events are created.
      * 
-     */
+    */
     public List<String> getStages() {
         return this.stages == null ? List.of() : this.stages;
     }
@@ -76,7 +76,6 @@ public final class Policy {
             this.stages = stages;
             return this;
         }
-
         public Policy build() {
             return new Policy(level, stages);
         }

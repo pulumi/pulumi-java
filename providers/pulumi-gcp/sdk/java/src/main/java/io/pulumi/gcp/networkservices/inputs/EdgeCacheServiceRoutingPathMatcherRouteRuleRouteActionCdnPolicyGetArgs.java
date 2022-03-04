@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @InputImport(name="cacheKeyPolicy")
-    private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyGetArgs> cacheKeyPolicy;
+      private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyGetArgs> cacheKeyPolicy;
 
     public Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyGetArgs> getCacheKeyPolicy() {
         return this.cacheKeyPolicy == null ? Input.empty() : this.cacheKeyPolicy;
@@ -36,7 +36,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @InputImport(name="cacheMode")
-    private final @Nullable Input<String> cacheMode;
+      private final @Nullable Input<String> cacheMode;
 
     public Input<String> getCacheMode() {
         return this.cacheMode == null ? Input.empty() : this.cacheMode;
@@ -53,7 +53,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @InputImport(name="clientTtl")
-    private final @Nullable Input<String> clientTtl;
+      private final @Nullable Input<String> clientTtl;
 
     public Input<String> getClientTtl() {
         return this.clientTtl == null ? Input.empty() : this.clientTtl;
@@ -73,7 +73,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @InputImport(name="defaultTtl")
-    private final @Nullable Input<String> defaultTtl;
+      private final @Nullable Input<String> defaultTtl;
 
     public Input<String> getDefaultTtl() {
         return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
@@ -92,7 +92,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @InputImport(name="maxTtl")
-    private final @Nullable Input<String> maxTtl;
+      private final @Nullable Input<String> maxTtl;
 
     public Input<String> getMaxTtl() {
         return this.maxTtl == null ? Input.empty() : this.maxTtl;
@@ -108,7 +108,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @InputImport(name="negativeCaching")
-    private final @Nullable Input<Boolean> negativeCaching;
+      private final @Nullable Input<Boolean> negativeCaching;
 
     public Input<Boolean> getNegativeCaching() {
         return this.negativeCaching == null ? Input.empty() : this.negativeCaching;
@@ -122,7 +122,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @InputImport(name="negativeCachingPolicy")
-    private final @Nullable Input<Map<String,String>> negativeCachingPolicy;
+      private final @Nullable Input<Map<String,String>> negativeCachingPolicy;
 
     public Input<Map<String,String>> getNegativeCachingPolicy() {
         return this.negativeCachingPolicy == null ? Input.empty() : this.negativeCachingPolicy;
@@ -133,7 +133,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @InputImport(name="signedRequestKeyset")
-    private final @Nullable Input<String> signedRequestKeyset;
+      private final @Nullable Input<String> signedRequestKeyset;
 
     public Input<String> getSignedRequestKeyset() {
         return this.signedRequestKeyset == null ? Input.empty() : this.signedRequestKeyset;
@@ -147,7 +147,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @InputImport(name="signedRequestMode")
-    private final @Nullable Input<String> signedRequestMode;
+      private final @Nullable Input<String> signedRequestMode;
 
     public Input<String> getSignedRequestMode() {
         return this.signedRequestMode == null ? Input.empty() : this.signedRequestMode;
@@ -311,7 +311,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
             this.signedRequestMode = Input.ofNullable(signedRequestMode);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs(cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicy, signedRequestKeyset, signedRequestMode);
         }

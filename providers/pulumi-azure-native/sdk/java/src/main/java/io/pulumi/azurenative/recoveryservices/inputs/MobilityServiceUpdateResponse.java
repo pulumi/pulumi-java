@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable String osType;
+      private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -34,7 +34,7 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="rebootStatus")
-    private final @Nullable String rebootStatus;
+      private final @Nullable String rebootStatus;
 
     public Optional<String> getRebootStatus() {
         return this.rebootStatus == null ? Optional.empty() : Optional.ofNullable(this.rebootStatus);
@@ -45,7 +45,7 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -104,7 +104,6 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
             this.version = version;
             return this;
         }
-
         public MobilityServiceUpdateResponse build() {
             return new MobilityServiceUpdateResponse(osType, rebootStatus, version);
         }

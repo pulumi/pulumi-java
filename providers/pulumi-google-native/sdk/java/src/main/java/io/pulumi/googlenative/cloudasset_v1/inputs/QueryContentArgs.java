@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudasset_v1.inputs.IamPolicyAnalysisQueryArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamPolicyAnalysisQuery")
-    private final @Nullable Input<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
+      private final @Nullable Input<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
 
     public Input<IamPolicyAnalysisQueryArgs> getIamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery == null ? Input.empty() : this.iamPolicyAnalysisQuery;
@@ -66,7 +66,6 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
             this.iamPolicyAnalysisQuery = Input.ofNullable(iamPolicyAnalysisQuery);
             return this;
         }
-
         public QueryContentArgs build() {
             return new QueryContentArgs(iamPolicyAnalysisQuery);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.CustomHttpsConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -99,77 +99,77 @@ public final class FrontendEndpointResponse {
     /**
      * The configuration specifying how to enable HTTPS
      * 
-     */
+    */
     public CustomHttpsConfigurationResponse getCustomHttpsConfiguration() {
         return this.customHttpsConfiguration;
     }
     /**
      * Provisioning status of Custom Https of the frontendEndpoint.
      * 
-     */
+    */
     public String getCustomHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
     }
     /**
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
-     */
+    */
     public String getCustomHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
     }
     /**
      * The host name of the frontendEndpoint. Must be a domain name.
      * 
-     */
+    */
     public Optional<String> getHostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Resource status.
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
      * 
-     */
+    */
     public Optional<String> getSessionAffinityEnabledState() {
         return Optional.ofNullable(this.sessionAffinityEnabledState);
     }
     /**
      * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
      * 
-     */
+    */
     public Optional<Integer> getSessionAffinityTtlSeconds() {
         return Optional.ofNullable(this.sessionAffinityTtlSeconds);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Defines the Web Application Firewall policy for each host (if applicable)
      * 
-     */
+    */
     public Optional<FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {
         return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
@@ -268,7 +268,6 @@ public final class FrontendEndpointResponse {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-
         public FrontendEndpointResponse build() {
             return new FrontendEndpointResponse(customHttpsConfiguration, customHttpsProvisioningState, customHttpsProvisioningSubstate, hostName, id, name, resourceState, sessionAffinityEnabledState, sessionAffinityTtlSeconds, type, webApplicationFirewallPolicyLink);
         }

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.customerprofiles.enums.IntegrationS3ConnectorOperator
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationSalesforceConnectorOperator;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationServiceNowConnectorOperator;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationZendeskConnectorOperator;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -103,7 +103,6 @@ public final class IntegrationConnectorOperator {
             this.zendesk = zendesk;
             return this;
         }
-
         public IntegrationConnectorOperator build() {
             return new IntegrationConnectorOperator(marketo, s3, salesforce, serviceNow, zendesk);
         }

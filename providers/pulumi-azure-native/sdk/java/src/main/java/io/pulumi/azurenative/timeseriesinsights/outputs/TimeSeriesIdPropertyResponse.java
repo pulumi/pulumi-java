@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class TimeSeriesIdPropertyResponse {
     /**
      * The name of the property.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the property.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -76,7 +76,6 @@ public final class TimeSeriesIdPropertyResponse {
             this.type = type;
             return this;
         }
-
         public TimeSeriesIdPropertyResponse build() {
             return new TimeSeriesIdPropertyResponse(name, type);
         }

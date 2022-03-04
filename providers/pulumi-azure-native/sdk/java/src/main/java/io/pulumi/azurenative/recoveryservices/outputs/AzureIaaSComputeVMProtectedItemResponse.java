@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSVMHealthDetailsRe
 import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSVMProtectedItemExtendedInfoResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.ExtendedPropertiesResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.KPIResourceHealthDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -209,140 +209,140 @@ public final class AzureIaaSComputeVMProtectedItemResponse {
     /**
      * Type of backup management for the backed up item.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * Name of the backup set the backup item belongs to
      * 
-     */
+    */
     public Optional<String> getBackupSetName() {
         return Optional.ofNullable(this.backupSetName);
     }
     /**
      * Unique name of container
      * 
-     */
+    */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
      * 
-     */
+    */
     public Optional<String> getCreateMode() {
         return Optional.ofNullable(this.createMode);
     }
     /**
      * Time for deferred deletion in UTC
      * 
-     */
+    */
     public Optional<String> getDeferredDeleteTimeInUTC() {
         return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
      * 
-     */
+    */
     public Optional<String> getDeferredDeleteTimeRemaining() {
         return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
     /**
      * Additional information for this backup item.
      * 
-     */
+    */
     public Optional<AzureIaaSVMProtectedItemExtendedInfoResponse> getExtendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Extended Properties for Azure IaasVM Backup.
      * 
-     */
+    */
     public Optional<ExtendedPropertiesResponse> getExtendedProperties() {
         return Optional.ofNullable(this.extendedProperties);
     }
     /**
      * Friendly name of the VM represented by this backup item.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Health details on this backup item.
      * 
-     */
+    */
     public List<AzureIaaSVMHealthDetailsResponse> getHealthDetails() {
         return this.healthDetails == null ? List.of() : this.healthDetails;
     }
     /**
      * Health status of protected item.
      * 
-     */
+    */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
      * 
-     */
+    */
     public Optional<Boolean> getIsDeferredDeleteScheduleUpcoming() {
         return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
      * 
-     */
+    */
     public Optional<Boolean> getIsRehydrate() {
         return Optional.ofNullable(this.isRehydrate);
     }
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
      * 
-     */
+    */
     public Optional<Boolean> getIsScheduledForDeferredDelete() {
         return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
     /**
      * Health details of different KPIs
      * 
-     */
+    */
     public Map<String,KPIResourceHealthDetailsResponse> getKpisHealths() {
         return this.kpisHealths == null ? Map.of() : this.kpisHealths;
     }
     /**
      * Last backup operation status.
      * 
-     */
+    */
     public Optional<String> getLastBackupStatus() {
         return Optional.ofNullable(this.lastBackupStatus);
     }
     /**
      * Timestamp of the last backup operation on this backup item.
      * 
-     */
+    */
     public Optional<String> getLastBackupTime() {
         return Optional.ofNullable(this.lastBackupTime);
     }
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
      * 
-     */
+    */
     public Optional<String> getLastRecoveryPoint() {
         return Optional.ofNullable(this.lastRecoveryPoint);
     }
     /**
      * ID of the backup policy with which this item is backed up.
      * 
-     */
+    */
     public Optional<String> getPolicyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
      * Data ID of the protected item.
      * 
-     */
+    */
     public Optional<String> getProtectedItemDataId() {
         return Optional.ofNullable(this.protectedItemDataId);
     }
@@ -350,42 +350,42 @@ public final class AzureIaaSComputeVMProtectedItemResponse {
      * backup item type.
      * Expected value is 'Microsoft.Compute/virtualMachines'.
      * 
-     */
+    */
     public String getProtectedItemType() {
         return this.protectedItemType;
     }
     /**
      * Backup state of this backup item.
      * 
-     */
+    */
     public Optional<String> getProtectionState() {
         return Optional.ofNullable(this.protectionState);
     }
     /**
      * Backup status of this backup item.
      * 
-     */
+    */
     public Optional<String> getProtectionStatus() {
         return Optional.ofNullable(this.protectionStatus);
     }
     /**
      * ARM ID of the resource to be backed up.
      * 
-     */
+    */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Fully qualified ARM ID of the virtual machine represented by this item.
      * 
-     */
+    */
     public Optional<String> getVirtualMachineId() {
         return Optional.ofNullable(this.virtualMachineId);
     }
     /**
      * Type of workload this item represents.
      * 
-     */
+    */
     public Optional<String> getWorkloadType() {
         return Optional.ofNullable(this.workloadType);
     }
@@ -589,7 +589,6 @@ public final class AzureIaaSComputeVMProtectedItemResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureIaaSComputeVMProtectedItemResponse build() {
             return new AzureIaaSComputeVMProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, extendedProperties, friendlyName, healthDetails, healthStatus, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemDataId, protectedItemType, protectionState, protectionStatus, sourceResourceId, virtualMachineId, workloadType);
         }

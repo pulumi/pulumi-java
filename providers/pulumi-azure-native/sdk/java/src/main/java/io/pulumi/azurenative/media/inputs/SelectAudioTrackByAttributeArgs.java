@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.enums.ChannelMapping;
 import io.pulumi.azurenative.media.enums.TrackAttribute;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="attribute", required=true)
-    private final Input<Either<String,TrackAttribute>> attribute;
+      private final Input<Either<String,TrackAttribute>> attribute;
 
     public Input<Either<String,TrackAttribute>> getAttribute() {
         return this.attribute;
@@ -38,7 +38,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="channelMapping")
-    private final @Nullable Input<Either<String,ChannelMapping>> channelMapping;
+      private final @Nullable Input<Either<String,ChannelMapping>> channelMapping;
 
     public Input<Either<String,ChannelMapping>> getChannelMapping() {
         return this.channelMapping == null ? Input.empty() : this.channelMapping;
@@ -49,7 +49,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<Either<String,AttributeFilter>> filter;
+      private final Input<Either<String,AttributeFilter>> filter;
 
     public Input<Either<String,AttributeFilter>> getFilter() {
         return this.filter;
@@ -60,7 +60,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="filterValue")
-    private final @Nullable Input<String> filterValue;
+      private final @Nullable Input<String> filterValue;
 
     public Input<String> getFilterValue() {
         return this.filterValue == null ? Input.empty() : this.filterValue;
@@ -72,7 +72,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -176,7 +176,6 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public SelectAudioTrackByAttributeArgs build() {
             return new SelectAudioTrackByAttributeArgs(attribute, channelMapping, filter, filterValue, odataType);
         }

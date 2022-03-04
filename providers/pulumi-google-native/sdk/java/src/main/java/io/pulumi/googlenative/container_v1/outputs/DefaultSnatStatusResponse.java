@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DefaultSnatStatusResponse {
     /**
      * Disables cluster default sNAT rules.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
@@ -52,7 +52,6 @@ public final class DefaultSnatStatusResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public DefaultSnatStatusResponse build() {
             return new DefaultSnatStatusResponse(disabled);
         }

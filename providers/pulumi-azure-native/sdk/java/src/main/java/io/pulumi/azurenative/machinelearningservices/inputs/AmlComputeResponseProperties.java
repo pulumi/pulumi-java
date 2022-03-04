@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ResourceIdResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ScaleSettingsResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.UserAccountCredentialsResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineImageResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="allocationState", required=true)
-    private final String allocationState;
+      private final String allocationState;
 
     public String getAllocationState() {
         return this.allocationState;
@@ -43,7 +43,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="allocationStateTransitionTime", required=true)
-    private final String allocationStateTransitionTime;
+      private final String allocationStateTransitionTime;
 
     public String getAllocationStateTransitionTime() {
         return this.allocationStateTransitionTime;
@@ -54,7 +54,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="currentNodeCount", required=true)
-    private final Integer currentNodeCount;
+      private final Integer currentNodeCount;
 
     public Integer getCurrentNodeCount() {
         return this.currentNodeCount;
@@ -65,7 +65,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enableNodePublicIp")
-    private final @Nullable Boolean enableNodePublicIp;
+      private final @Nullable Boolean enableNodePublicIp;
 
     public Optional<Boolean> getEnableNodePublicIp() {
         return this.enableNodePublicIp == null ? Optional.empty() : Optional.ofNullable(this.enableNodePublicIp);
@@ -76,7 +76,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="errors", required=true)
-    private final List<MachineLearningServiceErrorResponse> errors;
+      private final List<MachineLearningServiceErrorResponse> errors;
 
     public List<MachineLearningServiceErrorResponse> getErrors() {
         return this.errors;
@@ -87,7 +87,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="isolatedNetwork")
-    private final @Nullable Boolean isolatedNetwork;
+      private final @Nullable Boolean isolatedNetwork;
 
     public Optional<Boolean> getIsolatedNetwork() {
         return this.isolatedNetwork == null ? Optional.empty() : Optional.ofNullable(this.isolatedNetwork);
@@ -98,7 +98,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="nodeStateCounts", required=true)
-    private final NodeStateCountsResponse nodeStateCounts;
+      private final NodeStateCountsResponse nodeStateCounts;
 
     public NodeStateCountsResponse getNodeStateCounts() {
         return this.nodeStateCounts;
@@ -109,7 +109,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable String osType;
+      private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -120,7 +120,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="remoteLoginPortPublicAccess")
-    private final @Nullable String remoteLoginPortPublicAccess;
+      private final @Nullable String remoteLoginPortPublicAccess;
 
     public Optional<String> getRemoteLoginPortPublicAccess() {
         return this.remoteLoginPortPublicAccess == null ? Optional.empty() : Optional.ofNullable(this.remoteLoginPortPublicAccess);
@@ -131,7 +131,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="scaleSettings")
-    private final @Nullable ScaleSettingsResponse scaleSettings;
+      private final @Nullable ScaleSettingsResponse scaleSettings;
 
     public Optional<ScaleSettingsResponse> getScaleSettings() {
         return this.scaleSettings == null ? Optional.empty() : Optional.ofNullable(this.scaleSettings);
@@ -142,7 +142,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable ResourceIdResponse subnet;
+      private final @Nullable ResourceIdResponse subnet;
 
     public Optional<ResourceIdResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -153,7 +153,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="targetNodeCount", required=true)
-    private final Integer targetNodeCount;
+      private final Integer targetNodeCount;
 
     public Integer getTargetNodeCount() {
         return this.targetNodeCount;
@@ -164,7 +164,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userAccountCredentials")
-    private final @Nullable UserAccountCredentialsResponse userAccountCredentials;
+      private final @Nullable UserAccountCredentialsResponse userAccountCredentials;
 
     public Optional<UserAccountCredentialsResponse> getUserAccountCredentials() {
         return this.userAccountCredentials == null ? Optional.empty() : Optional.ofNullable(this.userAccountCredentials);
@@ -175,7 +175,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="virtualMachineImage")
-    private final @Nullable VirtualMachineImageResponse virtualMachineImage;
+      private final @Nullable VirtualMachineImageResponse virtualMachineImage;
 
     public Optional<VirtualMachineImageResponse> getVirtualMachineImage() {
         return this.virtualMachineImage == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineImage);
@@ -186,7 +186,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="vmPriority")
-    private final @Nullable String vmPriority;
+      private final @Nullable String vmPriority;
 
     public Optional<String> getVmPriority() {
         return this.vmPriority == null ? Optional.empty() : Optional.ofNullable(this.vmPriority);
@@ -197,7 +197,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="vmSize")
-    private final @Nullable String vmSize;
+      private final @Nullable String vmSize;
 
     public Optional<String> getVmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
@@ -386,7 +386,6 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
             this.vmSize = vmSize;
             return this;
         }
-
         public AmlComputeResponseProperties build() {
             return new AmlComputeResponseProperties(allocationState, allocationStateTransitionTime, currentNodeCount, enableNodePublicIp, errors, isolatedNetwork, nodeStateCounts, osType, remoteLoginPortPublicAccess, scaleSettings, subnet, targetNodeCount, userAccountCredentials, virtualMachineImage, vmPriority, vmSize);
         }

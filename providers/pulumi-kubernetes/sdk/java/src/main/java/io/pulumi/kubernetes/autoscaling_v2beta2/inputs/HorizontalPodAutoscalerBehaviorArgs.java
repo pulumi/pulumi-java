@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.HPAScalingRulesArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="scaleDown")
-    private final @Nullable Input<HPAScalingRulesArgs> scaleDown;
+      private final @Nullable Input<HPAScalingRulesArgs> scaleDown;
 
     public Input<HPAScalingRulesArgs> getScaleDown() {
         return this.scaleDown == null ? Input.empty() : this.scaleDown;
@@ -37,7 +37,7 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="scaleUp")
-    private final @Nullable Input<HPAScalingRulesArgs> scaleUp;
+      private final @Nullable Input<HPAScalingRulesArgs> scaleUp;
 
     public Input<HPAScalingRulesArgs> getScaleUp() {
         return this.scaleUp == null ? Input.empty() : this.scaleUp;
@@ -96,7 +96,6 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
             this.scaleUp = Input.ofNullable(scaleUp);
             return this;
         }
-
         public HorizontalPodAutoscalerBehaviorArgs build() {
             return new HorizontalPodAutoscalerBehaviorArgs(scaleDown, scaleUp);
         }

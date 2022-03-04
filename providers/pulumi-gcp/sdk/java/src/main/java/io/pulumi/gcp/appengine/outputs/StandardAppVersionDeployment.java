@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionDeploymentFile;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionDeploymentZip;
 import java.util.List;
@@ -40,7 +40,7 @@ public final class StandardAppVersionDeployment {
      * All files must be readable using the credentials supplied with this call.
      * Structure is documented below.
      * 
-     */
+    */
     public List<StandardAppVersionDeploymentFile> getFiles() {
         return this.files == null ? List.of() : this.files;
     }
@@ -48,7 +48,7 @@ public final class StandardAppVersionDeployment {
      * Zip File
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<StandardAppVersionDeploymentZip> getZip() {
         return Optional.ofNullable(this.zip);
     }
@@ -84,7 +84,6 @@ public final class StandardAppVersionDeployment {
             this.zip = zip;
             return this;
         }
-
         public StandardAppVersionDeployment build() {
             return new StandardAppVersionDeployment(files, zip);
         }

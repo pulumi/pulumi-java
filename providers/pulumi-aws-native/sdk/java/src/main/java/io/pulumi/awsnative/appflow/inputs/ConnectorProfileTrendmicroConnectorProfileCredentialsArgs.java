@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="apiSecretKey", required=true)
-    private final Input<String> apiSecretKey;
+      private final Input<String> apiSecretKey;
 
     public Input<String> getApiSecretKey() {
         return this.apiSecretKey;
@@ -61,7 +61,6 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
             this.apiSecretKey = Input.of(Objects.requireNonNull(apiSecretKey));
             return this;
         }
-
         public ConnectorProfileTrendmicroConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileTrendmicroConnectorProfileCredentialsArgs(apiSecretKey);
         }

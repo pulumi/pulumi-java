@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class OperationBatchStatusResponseItemResponse {
     /**
      * status of the long running operation for an environment
      * 
-     */
+    */
     public String getOperationUrl() {
         return this.operationUrl;
     }
     /**
      * status of the long running operation for an environment
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -74,7 +74,6 @@ public final class OperationBatchStatusResponseItemResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public OperationBatchStatusResponseItemResponse build() {
             return new OperationBatchStatusResponseItemResponse(operationUrl, status);
         }

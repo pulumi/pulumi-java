@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ClusterSelectorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="clusterLabels", required=true)
-    private final Map<String,String> clusterLabels;
+      private final Map<String,String> clusterLabels;
 
     public Map<String,String> getClusterLabels() {
         return this.clusterLabels;
@@ -33,7 +33,7 @@ public final class ClusterSelectorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -82,7 +82,6 @@ public final class ClusterSelectorResponse extends io.pulumi.resources.InvokeArg
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ClusterSelectorResponse build() {
             return new ClusterSelectorResponse(clusterLabels, zone);
         }

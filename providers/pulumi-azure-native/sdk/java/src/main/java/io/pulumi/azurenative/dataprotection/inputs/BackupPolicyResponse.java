@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.AzureBackupRuleResponse;
 import io.pulumi.azurenative.dataprotection.inputs.AzureRetentionRuleResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datasourceTypes", required=true)
-    private final List<String> datasourceTypes;
+      private final List<String> datasourceTypes;
 
     public List<String> getDatasourceTypes() {
         return this.datasourceTypes;
@@ -36,7 +36,7 @@ public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -47,7 +47,7 @@ public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyRules", required=true)
-    private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
+      private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
 
     public List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> getPolicyRules() {
         return this.policyRules;
@@ -106,7 +106,6 @@ public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.policyRules = Objects.requireNonNull(policyRules);
             return this;
         }
-
         public BackupPolicyResponse build() {
             return new BackupPolicyResponse(datasourceTypes, objectType, policyRules);
         }

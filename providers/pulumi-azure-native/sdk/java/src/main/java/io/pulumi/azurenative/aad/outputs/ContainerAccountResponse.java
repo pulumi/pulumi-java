@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ContainerAccountResponse {
     /**
      * The account name
      * 
-     */
+    */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * The account password
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The account spn
      * 
-     */
+    */
     public Optional<String> getSpn() {
         return Optional.ofNullable(this.spn);
     }
@@ -97,7 +97,6 @@ public final class ContainerAccountResponse {
             this.spn = spn;
             return this;
         }
-
         public ContainerAccountResponse build() {
             return new ContainerAccountResponse(accountName, password, spn);
         }

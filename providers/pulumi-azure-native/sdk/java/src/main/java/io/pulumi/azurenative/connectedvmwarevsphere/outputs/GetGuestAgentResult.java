@@ -7,7 +7,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.GuestCredentialRespo
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.HttpProxyConfigurationResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -108,84 +108,84 @@ public final class GetGuestAgentResult {
     /**
      * Username / Password Credentials to provision guest agent.
      * 
-     */
+    */
     public Optional<GuestCredentialResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * Gets the name of the corresponding resource in Kubernetes.
      * 
-     */
+    */
     public String getCustomResourceName() {
         return this.customResourceName;
     }
     /**
      * HTTP Proxy configuration for the VM.
      * 
-     */
+    */
     public Optional<HttpProxyConfigurationResponse> getHttpProxyConfig() {
         return Optional.ofNullable(this.httpProxyConfig);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the guest agent provisioning action.
      * 
-     */
+    */
     public Optional<String> getProvisioningAction() {
         return Optional.ofNullable(this.provisioningAction);
     }
     /**
      * Gets or sets the provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the guest agent status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<ResourceStatusResponse> getStatuses() {
         return this.statuses;
     }
     /**
      * The system data.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets or sets a unique identifier for this resource.
      * 
-     */
+    */
     public String getUuid() {
         return this.uuid;
     }
@@ -291,7 +291,6 @@ public final class GetGuestAgentResult {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public GetGuestAgentResult build() {
             return new GetGuestAgentResult(credentials, customResourceName, httpProxyConfig, id, name, provisioningAction, provisioningState, status, statuses, systemData, type, uuid);
         }

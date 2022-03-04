@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApp {
-/**
- * Gets information about an application.
+    private GetApp() {}
+    public interface BuilderApplicator {
+        public void apply(GetAppArgs.Builder a);
+    }
+    private static GetAppArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAppArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets information about an application.
  * 
- */
+     */
+    public static CompletableFuture<GetAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets information about an application.
+     * 
+     */
     public static CompletableFuture<GetAppResult> invokeAsync(GetAppArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1:getApp", TypeShape.of(GetAppResult.class), args == null ? GetAppArgs.Empty : args, Utilities.withVersion(options));
     }

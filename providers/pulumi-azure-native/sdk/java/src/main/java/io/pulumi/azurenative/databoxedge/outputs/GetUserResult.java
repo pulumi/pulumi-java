@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ShareAccessRightResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -72,49 +72,49 @@ public final class GetUserResult {
     /**
      * The password details.
      * 
-     */
+    */
     public Optional<AsymmetricEncryptedSecretResponse> getEncryptedPassword() {
         return Optional.ofNullable(this.encryptedPassword);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of shares that the user has rights on. This field should not be specified during user creation.
      * 
-     */
+    */
     public List<ShareAccessRightResponse> getShareAccessRights() {
         return this.shareAccessRights;
     }
     /**
      * User in DataBoxEdge Resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Type of the user.
      * 
-     */
+    */
     public String getUserType() {
         return this.userType;
     }
@@ -185,7 +185,6 @@ public final class GetUserResult {
             this.userType = Objects.requireNonNull(userType);
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(encryptedPassword, id, name, shareAccessRights, systemData, type, userType);
         }

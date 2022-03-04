@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -78,42 +78,42 @@ public final class OnlineEndpointResponse {
     /**
      * Inference endpoint authentication mode type
      * 
-     */
+    */
     public String getAuthMode() {
         return this.authMode;
     }
     /**
      * Description of the inference endpoint.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * State of endpoint provisioning.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Endpoint URI.
      * 
-     */
+    */
     public String getScoringUri() {
         return this.scoringUri;
     }
     /**
      * Endpoint Swagger URI.
      * 
-     */
+    */
     public String getSwaggerUri() {
         return this.swaggerUri;
     }
@@ -121,14 +121,14 @@ public final class OnlineEndpointResponse {
      * ARM resource ID of the compute if it exists.
      * optional
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * Traffic rules on how the traffic will be routed across deployments.
      * 
-     */
+    */
     public Map<String,Integer> getTraffic() {
         return this.traffic == null ? Map.of() : this.traffic;
     }
@@ -206,7 +206,6 @@ public final class OnlineEndpointResponse {
             this.traffic = traffic;
             return this;
         }
-
         public OnlineEndpointResponse build() {
             return new OnlineEndpointResponse(authMode, description, properties, provisioningState, scoringUri, swaggerUri, target, traffic);
         }

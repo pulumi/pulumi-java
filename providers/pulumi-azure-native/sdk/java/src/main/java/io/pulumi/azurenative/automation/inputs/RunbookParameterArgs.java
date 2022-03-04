@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<String> defaultValue;
+      private final @Nullable Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -36,7 +36,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="isMandatory")
-    private final @Nullable Input<Boolean> isMandatory;
+      private final @Nullable Input<Boolean> isMandatory;
 
     public Input<Boolean> getIsMandatory() {
         return this.isMandatory == null ? Input.empty() : this.isMandatory;
@@ -47,7 +47,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="position")
-    private final @Nullable Input<Integer> position;
+      private final @Nullable Input<Integer> position;
 
     public Input<Integer> getPosition() {
         return this.position == null ? Input.empty() : this.position;
@@ -58,7 +58,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -147,7 +147,6 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public RunbookParameterArgs build() {
             return new RunbookParameterArgs(defaultValue, isMandatory, position, type);
         }

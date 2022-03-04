@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -58,7 +58,7 @@ public final class VMExtensionResponse {
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
-     */
+    */
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
@@ -68,14 +68,14 @@ public final class VMExtensionResponse {
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
-     */
+    */
     public Optional<Object> getProtectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
     /**
      * Collection of extension names after which this extension needs to be provisioned.
      * 
-     */
+    */
     public List<String> getProvisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }
@@ -165,7 +165,6 @@ public final class VMExtensionResponse {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public VMExtensionResponse build() {
             return new VMExtensionResponse(autoUpgradeMinorVersion, name, protectedSettings, provisionAfterExtensions, publisher, settings, type, typeHandlerVersion);
         }

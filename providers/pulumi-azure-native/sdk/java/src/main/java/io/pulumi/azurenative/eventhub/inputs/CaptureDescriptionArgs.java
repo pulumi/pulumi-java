@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventhub.inputs;
 import io.pulumi.azurenative.eventhub.enums.EncodingCaptureDescription;
 import io.pulumi.azurenative.eventhub.inputs.DestinationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<DestinationArgs> destination;
+      private final @Nullable Input<DestinationArgs> destination;
 
     public Input<DestinationArgs> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -37,7 +37,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -48,7 +48,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<EncodingCaptureDescription> encoding;
+      private final @Nullable Input<EncodingCaptureDescription> encoding;
 
     public Input<EncodingCaptureDescription> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -59,7 +59,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="intervalInSeconds")
-    private final @Nullable Input<Integer> intervalInSeconds;
+      private final @Nullable Input<Integer> intervalInSeconds;
 
     public Input<Integer> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
@@ -70,7 +70,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sizeLimitInBytes")
-    private final @Nullable Input<Integer> sizeLimitInBytes;
+      private final @Nullable Input<Integer> sizeLimitInBytes;
 
     public Input<Integer> getSizeLimitInBytes() {
         return this.sizeLimitInBytes == null ? Input.empty() : this.sizeLimitInBytes;
@@ -81,7 +81,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="skipEmptyArchives")
-    private final @Nullable Input<Boolean> skipEmptyArchives;
+      private final @Nullable Input<Boolean> skipEmptyArchives;
 
     public Input<Boolean> getSkipEmptyArchives() {
         return this.skipEmptyArchives == null ? Input.empty() : this.skipEmptyArchives;
@@ -200,7 +200,6 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
             this.skipEmptyArchives = Input.ofNullable(skipEmptyArchives);
             return this;
         }
-
         public CaptureDescriptionArgs build() {
             return new CaptureDescriptionArgs(destination, enabled, encoding, intervalInSeconds, sizeLimitInBytes, skipEmptyArchives);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetUserRuleCollectionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="configurationName", required=true)
-    private final String configurationName;
+      private final String configurationName;
 
     public String getConfigurationName() {
         return this.configurationName;
@@ -28,7 +28,7 @@ public final class GetUserRuleCollectionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final String networkManagerName;
+      private final String networkManagerName;
 
     public String getNetworkManagerName() {
         return this.networkManagerName;
@@ -39,7 +39,7 @@ public final class GetUserRuleCollectionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetUserRuleCollectionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ruleCollectionName", required=true)
-    private final String ruleCollectionName;
+      private final String ruleCollectionName;
 
     public String getRuleCollectionName() {
         return this.ruleCollectionName;
@@ -119,7 +119,6 @@ public final class GetUserRuleCollectionArgs extends io.pulumi.resources.InvokeA
             this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
             return this;
         }
-
         public GetUserRuleCollectionArgs build() {
             return new GetUserRuleCollectionArgs(configurationName, networkManagerName, resourceGroupName, ruleCollectionName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetInstanceNode extends io.pulumi.resources.InvokeArgs {
     public static final GetInstanceNode Empty = new GetInstanceNode();
 
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -69,7 +69,6 @@ public final class GetInstanceNode extends io.pulumi.resources.InvokeArgs {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceNode build() {
             return new GetInstanceNode(id, zone);
         }

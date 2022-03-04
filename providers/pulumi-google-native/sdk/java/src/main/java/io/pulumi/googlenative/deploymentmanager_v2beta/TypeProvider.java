@@ -5,8 +5,8 @@ package io.pulumi.googlenative.deploymentmanager_v2beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.deploymentmanager_v2beta.TypeProviderArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.CollectionOverrideResponse;
@@ -179,6 +179,37 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
         return this.selfLink;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable TypeProviderArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.deploymentmanager_v2beta.TypeProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.deploymentmanager_v2beta.TypeProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TypeProvider(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TypeProvider(String name) {
+        this(name, TypeProviderArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TypeProvider(String name, @Nullable TypeProviderArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

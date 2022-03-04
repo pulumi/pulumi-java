@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.BasicLevelCombiningFunction;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ConditionArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="combiningFunction")
-    private final @Nullable Input<BasicLevelCombiningFunction> combiningFunction;
+      private final @Nullable Input<BasicLevelCombiningFunction> combiningFunction;
 
     public Input<BasicLevelCombiningFunction> getCombiningFunction() {
         return this.combiningFunction == null ? Input.empty() : this.combiningFunction;
@@ -36,7 +36,7 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final Input<List<ConditionArgs>> conditions;
+      private final Input<List<ConditionArgs>> conditions;
 
     public Input<List<ConditionArgs>> getConditions() {
         return this.conditions;
@@ -95,7 +95,6 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
             this.conditions = Input.of(Objects.requireNonNull(conditions));
             return this;
         }
-
         public BasicLevelArgs build() {
             return new BasicLevelArgs(combiningFunction, conditions);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningcompute.outputs.ContainerServiceCred
 import io.pulumi.azurenative.machinelearningcompute.outputs.ServiceAuthConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.SslConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.StorageAccountCredentialsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -66,42 +66,42 @@ public final class ListOperationalizationClusterKeysResult {
     /**
      * Credentials for Azure AppInsights.
      * 
-     */
+    */
     public Optional<AppInsightsCredentialsResponse> getAppInsights() {
         return Optional.ofNullable(this.appInsights);
     }
     /**
      * Credentials for Azure Container Registry.
      * 
-     */
+    */
     public Optional<ContainerRegistryCredentialsResponse> getContainerRegistry() {
         return Optional.ofNullable(this.containerRegistry);
     }
     /**
      * Credentials for Azure Container Service.
      * 
-     */
+    */
     public Optional<ContainerServiceCredentialsResponse> getContainerService() {
         return Optional.ofNullable(this.containerService);
     }
     /**
      * Global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
      * 
-     */
+    */
     public Optional<ServiceAuthConfigurationResponse> getServiceAuthConfiguration() {
         return Optional.ofNullable(this.serviceAuthConfiguration);
     }
     /**
      * The SSL configuration for the services.
      * 
-     */
+    */
     public Optional<SslConfigurationResponse> getSslConfiguration() {
         return Optional.ofNullable(this.sslConfiguration);
     }
     /**
      * Credentials for the Storage Account.
      * 
-     */
+    */
     public Optional<StorageAccountCredentialsResponse> getStorageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
@@ -165,7 +165,6 @@ public final class ListOperationalizationClusterKeysResult {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public ListOperationalizationClusterKeysResult build() {
             return new ListOperationalizationClusterKeysResult(appInsights, containerRegistry, containerService, serviceAuthConfiguration, sslConfiguration, storageAccount);
         }

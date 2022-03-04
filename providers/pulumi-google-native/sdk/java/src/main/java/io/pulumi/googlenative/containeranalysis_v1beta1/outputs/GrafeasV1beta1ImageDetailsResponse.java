@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DerivedResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GrafeasV1beta1ImageDetailsResponse {
     /**
      * Immutable. The child image derived from the base image.
      * 
-     */
+    */
     public DerivedResponse getDerivedImage() {
         return this.derivedImage;
     }
@@ -52,7 +52,6 @@ public final class GrafeasV1beta1ImageDetailsResponse {
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
         }
-
         public GrafeasV1beta1ImageDetailsResponse build() {
             return new GrafeasV1beta1ImageDetailsResponse(derivedImage);
         }

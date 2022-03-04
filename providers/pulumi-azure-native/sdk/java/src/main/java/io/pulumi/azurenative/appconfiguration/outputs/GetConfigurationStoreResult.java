@@ -7,7 +7,7 @@ import io.pulumi.azurenative.appconfiguration.outputs.EncryptionPropertiesRespon
 import io.pulumi.azurenative.appconfiguration.outputs.PrivateEndpointConnectionReferenceResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -116,91 +116,91 @@ public final class GetConfigurationStoreResult {
     /**
      * The creation date of configuration store.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The encryption settings of the configuration store.
      * 
-     */
+    */
     public Optional<EncryptionPropertiesResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * The DNS endpoint where the configuration store API will be available.
      * 
-     */
+    */
     public String getEndpoint() {
         return this.endpoint;
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The managed identity information, if configured.
      * 
-     */
+    */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of private endpoint connections that are set up for this resource.
      * 
-     */
+    */
     public List<PrivateEndpointConnectionReferenceResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The provisioning state of the configuration store.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The sku of the configuration store.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -313,7 +313,6 @@ public final class GetConfigurationStoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationStoreResult build() {
             return new GetConfigurationStoreResult(creationDate, encryption, endpoint, id, identity, location, name, privateEndpointConnections, provisioningState, publicNetworkAccess, sku, tags, type);
         }

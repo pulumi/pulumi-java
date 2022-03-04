@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DetailsResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DocumentOccurrenceResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.FileOccurrenceResponse;
@@ -163,133 +163,133 @@ public final class GetOccurrenceResult {
     /**
      * Describes an attestation of an artifact.
      * 
-     */
+    */
     public DetailsResponse getAttestation() {
         return this.attestation;
     }
     /**
      * Describes a verifiable build.
      * 
-     */
+    */
     public GrafeasV1beta1BuildDetailsResponse getBuild() {
         return this.build;
     }
     /**
      * The time this occurrence was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Describes the deployment of an artifact on a runtime.
      * 
-     */
+    */
     public GrafeasV1beta1DeploymentDetailsResponse getDeployment() {
         return this.deployment;
     }
     /**
      * Describes how this resource derives from the basis in the associated note.
      * 
-     */
+    */
     public GrafeasV1beta1ImageDetailsResponse getDerivedImage() {
         return this.derivedImage;
     }
     /**
      * Describes when a resource was discovered.
      * 
-     */
+    */
     public GrafeasV1beta1DiscoveryDetailsResponse getDiscovered() {
         return this.discovered;
     }
     /**
      * Describes the installation of a package on the linked resource.
      * 
-     */
+    */
     public GrafeasV1beta1PackageDetailsResponse getInstallation() {
         return this.installation;
     }
     /**
      * Describes a specific in-toto link.
      * 
-     */
+    */
     public GrafeasV1beta1IntotoDetailsResponse getIntoto() {
         return this.intoto;
     }
     /**
      * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
      * 
-     */
+    */
     public String getNoteName() {
         return this.noteName;
     }
     /**
      * A description of actions that can be taken to remedy the note.
      * 
-     */
+    */
     public String getRemediation() {
         return this.remediation;
     }
     /**
      * Immutable. The resource for which the occurrence applies.
      * 
-     */
+    */
     public ResourceResponse getResource() {
         return this.resource;
     }
     /**
      * Describes a specific software bill of materials document.
      * 
-     */
+    */
     public DocumentOccurrenceResponse getSbom() {
         return this.sbom;
     }
     /**
      * Describes a specific SPDX File.
      * 
-     */
+    */
     public FileOccurrenceResponse getSpdxFile() {
         return this.spdxFile;
     }
     /**
      * Describes a specific SPDX Package.
      * 
-     */
+    */
     public PackageInfoOccurrenceResponse getSpdxPackage() {
         return this.spdxPackage;
     }
     /**
      * Describes a specific SPDX Relationship.
      * 
-     */
+    */
     public RelationshipOccurrenceResponse getSpdxRelationship() {
         return this.spdxRelationship;
     }
     /**
      * The time this occurrence was last updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Describes a security vulnerability.
      * 
-     */
+    */
     public GrafeasV1beta1VulnerabilityDetailsResponse getVulnerability() {
         return this.vulnerability;
     }
@@ -444,7 +444,6 @@ public final class GetOccurrenceResult {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }
-
         public GetOccurrenceResult build() {
             return new GetOccurrenceResult(attestation, build, createTime, deployment, derivedImage, discovered, installation, intoto, kind, name, noteName, remediation, resource, sbom, spdxFile, spdxPackage, spdxRelationship, updateTime, vulnerability);
         }

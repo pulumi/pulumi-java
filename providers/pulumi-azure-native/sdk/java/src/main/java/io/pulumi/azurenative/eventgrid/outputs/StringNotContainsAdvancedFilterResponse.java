@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,7 +42,7 @@ public final class StringNotContainsAdvancedFilterResponse {
     /**
      * The field/property in the event based on which you want to filter.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
@@ -50,14 +50,14 @@ public final class StringNotContainsAdvancedFilterResponse {
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'StringNotContains'.
      * 
-     */
+    */
     public String getOperatorType() {
         return this.operatorType;
     }
     /**
      * The set of filter values.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }
@@ -100,7 +100,6 @@ public final class StringNotContainsAdvancedFilterResponse {
             this.values = values;
             return this;
         }
-
         public StringNotContainsAdvancedFilterResponse build() {
             return new StringNotContainsAdvancedFilterResponse(key, operatorType, values);
         }

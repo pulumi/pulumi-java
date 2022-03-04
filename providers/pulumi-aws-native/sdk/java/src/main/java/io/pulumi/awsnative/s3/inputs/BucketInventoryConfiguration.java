@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationIncludedObjectVe
 import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationOptionalFieldsItem;
 import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationScheduleFrequency;
 import io.pulumi.awsnative.s3.inputs.BucketDestination;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
     public static final BucketInventoryConfiguration Empty = new BucketInventoryConfiguration();
 
     @InputImport(name="destination", required=true)
-    private final BucketDestination destination;
+      private final BucketDestination destination;
 
     public BucketDestination getDestination() {
         return this.destination;
@@ -32,7 +32,7 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -43,7 +43,7 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -54,7 +54,7 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="includedObjectVersions", required=true)
-    private final BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions;
+      private final BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions;
 
     public BucketInventoryConfigurationIncludedObjectVersions getIncludedObjectVersions() {
         return this.includedObjectVersions;
@@ -65,7 +65,7 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="optionalFields")
-    private final @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields;
+      private final @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields;
 
     public List<BucketInventoryConfigurationOptionalFieldsItem> getOptionalFields() {
         return this.optionalFields == null ? List.of() : this.optionalFields;
@@ -76,7 +76,7 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable String prefix;
+      private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
@@ -87,7 +87,7 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="scheduleFrequency", required=true)
-    private final BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
+      private final BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
 
     public BucketInventoryConfigurationScheduleFrequency getScheduleFrequency() {
         return this.scheduleFrequency;
@@ -186,7 +186,6 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
             this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency);
             return this;
         }
-
         public BucketInventoryConfiguration build() {
             return new BucketInventoryConfiguration(destination, enabled, id, includedObjectVersions, optionalFields, prefix, scheduleFrequency);
         }

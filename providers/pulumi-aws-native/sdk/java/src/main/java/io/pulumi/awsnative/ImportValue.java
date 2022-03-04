@@ -6,13 +6,25 @@ package io.pulumi.awsnative;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.inputs.ImportValueArgs;
 import io.pulumi.awsnative.outputs.ImportValueResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ImportValue {
+    private ImportValue() {}
+    public interface BuilderApplicator {
+        public void apply(ImportValueArgs.Builder a);
+    }
+    private static ImportValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ImportValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<ImportValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<ImportValueResult> invokeAsync(ImportValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:importValue", TypeShape.of(ImportValueResult.class), args == null ? ImportValueArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.pubsublite_v1.outputs.PartitionConfigResponse;
 import io.pulumi.googlenative.pubsublite_v1.outputs.ReservationConfigResponse;
 import io.pulumi.googlenative.pubsublite_v1.outputs.RetentionConfigResponse;
@@ -48,28 +48,28 @@ public final class GetTopicResult {
     /**
      * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The settings for this topic's partitions.
      * 
-     */
+    */
     public PartitionConfigResponse getPartitionConfig() {
         return this.partitionConfig;
     }
     /**
      * The settings for this topic's Reservation usage.
      * 
-     */
+    */
     public ReservationConfigResponse getReservationConfig() {
         return this.reservationConfig;
     }
     /**
      * The settings for this topic's message retention.
      * 
-     */
+    */
     public RetentionConfigResponse getRetentionConfig() {
         return this.retentionConfig;
     }
@@ -119,7 +119,6 @@ public final class GetTopicResult {
             this.retentionConfig = Objects.requireNonNull(retentionConfig);
             return this;
         }
-
         public GetTopicResult build() {
             return new GetTopicResult(name, partitionConfig, reservationConfig, retentionConfig);
         }

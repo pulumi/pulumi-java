@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceAccount {
-/**
- * Gets a ServiceAccount.
+    private GetServiceAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceAccountArgs.Builder a);
+    }
+    private static GetServiceAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a ServiceAccount.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a ServiceAccount.
+     * 
+     */
     public static CompletableFuture<GetServiceAccountResult> invokeAsync(GetServiceAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args == null ? GetServiceAccountArgs.Empty : args, Utilities.withVersion(options));
     }

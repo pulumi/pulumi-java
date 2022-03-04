@@ -6,17 +6,33 @@ package io.pulumi.awsnative.macie;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.macie.inputs.GetSessionArgs;
 import io.pulumi.awsnative.macie.outputs.GetSessionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSession {
-/**
- * The AWS::Macie::Session resource specifies a new Amazon Macie session. A session is an object that represents the Amazon Macie service. A session is required for Amazon Macie to become operational.
+    private GetSession() {}
+    public interface BuilderApplicator {
+        public void apply(GetSessionArgs.Builder a);
+    }
+    private static GetSessionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSessionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::Macie::Session resource specifies a new Amazon Macie session. A session is an object that represents the Amazon Macie service. A session is required for Amazon Macie to become operational.
  * 
- */
+     */
+    public static CompletableFuture<GetSessionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::Macie::Session resource specifies a new Amazon Macie session. A session is an object that represents the Amazon Macie service. A session is required for Amazon Macie to become operational.
+     * 
+     */
     public static CompletableFuture<GetSessionResult> invokeAsync(GetSessionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:macie:getSession", TypeShape.of(GetSessionResult.class), args == null ? GetSessionArgs.Empty : args, Utilities.withVersion(options));
     }

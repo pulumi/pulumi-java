@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.ExecutionTemplateJobType;
 import io.pulumi.googlenative.notebooks_v1.inputs.DataprocParametersArgs;
 import io.pulumi.googlenative.notebooks_v1.inputs.SchedulerAcceleratorConfigArgs;
@@ -28,7 +28,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorConfig")
-    private final @Nullable Input<SchedulerAcceleratorConfigArgs> acceleratorConfig;
+      private final @Nullable Input<SchedulerAcceleratorConfigArgs> acceleratorConfig;
 
     public Input<SchedulerAcceleratorConfigArgs> getAcceleratorConfig() {
         return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
@@ -39,7 +39,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="containerImageUri")
-    private final @Nullable Input<String> containerImageUri;
+      private final @Nullable Input<String> containerImageUri;
 
     public Input<String> getContainerImageUri() {
         return this.containerImageUri == null ? Input.empty() : this.containerImageUri;
@@ -50,7 +50,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataprocParameters")
-    private final @Nullable Input<DataprocParametersArgs> dataprocParameters;
+      private final @Nullable Input<DataprocParametersArgs> dataprocParameters;
 
     public Input<DataprocParametersArgs> getDataprocParameters() {
         return this.dataprocParameters == null ? Input.empty() : this.dataprocParameters;
@@ -61,7 +61,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="inputNotebookFile")
-    private final @Nullable Input<String> inputNotebookFile;
+      private final @Nullable Input<String> inputNotebookFile;
 
     public Input<String> getInputNotebookFile() {
         return this.inputNotebookFile == null ? Input.empty() : this.inputNotebookFile;
@@ -72,7 +72,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="jobType")
-    private final @Nullable Input<ExecutionTemplateJobType> jobType;
+      private final @Nullable Input<ExecutionTemplateJobType> jobType;
 
     public Input<ExecutionTemplateJobType> getJobType() {
         return this.jobType == null ? Input.empty() : this.jobType;
@@ -83,7 +83,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kernelSpec")
-    private final @Nullable Input<String> kernelSpec;
+      private final @Nullable Input<String> kernelSpec;
 
     public Input<String> getKernelSpec() {
         return this.kernelSpec == null ? Input.empty() : this.kernelSpec;
@@ -94,7 +94,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -105,7 +105,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="masterType")
-    private final @Nullable Input<String> masterType;
+      private final @Nullable Input<String> masterType;
 
     public Input<String> getMasterType() {
         return this.masterType == null ? Input.empty() : this.masterType;
@@ -116,7 +116,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="outputNotebookFolder")
-    private final @Nullable Input<String> outputNotebookFolder;
+      private final @Nullable Input<String> outputNotebookFolder;
 
     public Input<String> getOutputNotebookFolder() {
         return this.outputNotebookFolder == null ? Input.empty() : this.outputNotebookFolder;
@@ -127,7 +127,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<String> parameters;
+      private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -138,7 +138,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="paramsYamlFile")
-    private final @Nullable Input<String> paramsYamlFile;
+      private final @Nullable Input<String> paramsYamlFile;
 
     public Input<String> getParamsYamlFile() {
         return this.paramsYamlFile == null ? Input.empty() : this.paramsYamlFile;
@@ -149,7 +149,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -160,7 +160,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vertexAiParameters")
-    private final @Nullable Input<VertexAIParametersArgs> vertexAiParameters;
+      private final @Nullable Input<VertexAIParametersArgs> vertexAiParameters;
 
     public Input<VertexAIParametersArgs> getVertexAiParameters() {
         return this.vertexAiParameters == null ? Input.empty() : this.vertexAiParameters;
@@ -384,7 +384,6 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
             this.vertexAiParameters = Input.ofNullable(vertexAiParameters);
             return this;
         }
-
         public ExecutionTemplateArgs build() {
             return new ExecutionTemplateArgs(acceleratorConfig, containerImageUri, dataprocParameters, inputNotebookFile, jobType, kernelSpec, labels, masterType, outputNotebookFolder, parameters, paramsYamlFile, serviceAccount, vertexAiParameters);
         }

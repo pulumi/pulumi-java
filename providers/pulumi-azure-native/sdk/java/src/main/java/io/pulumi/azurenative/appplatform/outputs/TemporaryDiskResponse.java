@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class TemporaryDiskResponse {
     /**
      * Mount path of the temporary disk
      * 
-     */
+    */
     public Optional<String> getMountPath() {
         return Optional.ofNullable(this.mountPath);
     }
     /**
      * Size of the temporary disk in GB
      * 
-     */
+    */
     public Optional<Integer> getSizeInGB() {
         return Optional.ofNullable(this.sizeInGB);
     }
@@ -77,7 +77,6 @@ public final class TemporaryDiskResponse {
             this.sizeInGB = sizeInGB;
             return this;
         }
-
         public TemporaryDiskResponse build() {
             return new TemporaryDiskResponse(mountPath, sizeInGB);
         }

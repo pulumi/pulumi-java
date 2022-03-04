@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowedPersistenceRegions")
-    private final @Nullable Input<List<String>> allowedPersistenceRegions;
+      private final @Nullable Input<List<String>> allowedPersistenceRegions;
 
     public Input<List<String>> getAllowedPersistenceRegions() {
         return this.allowedPersistenceRegions == null ? Input.empty() : this.allowedPersistenceRegions;
@@ -67,7 +67,6 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
             this.allowedPersistenceRegions = Input.ofNullable(allowedPersistenceRegions);
             return this;
         }
-
         public MessageStoragePolicyArgs build() {
             return new MessageStoragePolicyArgs(allowedPersistenceRegions);
         }

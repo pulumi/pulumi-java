@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3outposts.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetBucketPolicyResult {
     /**
      * A policy document containing permissions to add to the specified bucket.
      * 
-     */
+    */
     public Optional<Object> getPolicyDocument() {
         return Optional.ofNullable(this.policyDocument);
     }
@@ -54,7 +54,6 @@ public final class GetBucketPolicyResult {
             this.policyDocument = policyDocument;
             return this;
         }
-
         public GetBucketPolicyResult build() {
             return new GetBucketPolicyResult(policyDocument);
         }

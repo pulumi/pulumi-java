@@ -6,17 +6,33 @@ package io.pulumi.awsnative.logs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.logs.inputs.GetQueryDefinitionArgs;
 import io.pulumi.awsnative.logs.outputs.GetQueryDefinitionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueryDefinition {
-/**
- * The resource schema for AWSLogs QueryDefinition
+    private GetQueryDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetQueryDefinitionArgs.Builder a);
+    }
+    private static GetQueryDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetQueryDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The resource schema for AWSLogs QueryDefinition
  * 
- */
+     */
+    public static CompletableFuture<GetQueryDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The resource schema for AWSLogs QueryDefinition
+     * 
+     */
     public static CompletableFuture<GetQueryDefinitionResult> invokeAsync(GetQueryDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:logs:getQueryDefinition", TypeShape.of(GetQueryDefinitionResult.class), args == null ? GetQueryDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

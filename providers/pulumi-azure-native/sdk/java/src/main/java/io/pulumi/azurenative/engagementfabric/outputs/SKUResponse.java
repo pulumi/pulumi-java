@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.engagementfabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class SKUResponse {
     /**
      * The name of the SKU
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The price tier of the SKU
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -76,7 +76,6 @@ public final class SKUResponse {
             this.tier = tier;
             return this;
         }
-
         public SKUResponse build() {
             return new SKUResponse(name, tier);
         }

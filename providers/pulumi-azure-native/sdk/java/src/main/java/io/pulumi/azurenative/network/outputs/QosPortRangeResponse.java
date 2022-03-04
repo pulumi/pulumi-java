@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class QosPortRangeResponse {
     /**
      * Qos Port Range end.
      * 
-     */
+    */
     public Optional<Integer> getEnd() {
         return Optional.ofNullable(this.end);
     }
     /**
      * Qos Port Range start.
      * 
-     */
+    */
     public Optional<Integer> getStart() {
         return Optional.ofNullable(this.start);
     }
@@ -76,7 +76,6 @@ public final class QosPortRangeResponse {
             this.start = start;
             return this;
         }
-
         public QosPortRangeResponse build() {
             return new QosPortRangeResponse(end, start);
         }

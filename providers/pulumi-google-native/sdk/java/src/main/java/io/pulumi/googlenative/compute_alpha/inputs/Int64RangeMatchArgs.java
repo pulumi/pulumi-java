@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rangeEnd")
-    private final @Nullable Input<String> rangeEnd;
+      private final @Nullable Input<String> rangeEnd;
 
     public Input<String> getRangeEnd() {
         return this.rangeEnd == null ? Input.empty() : this.rangeEnd;
@@ -34,7 +34,7 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rangeStart")
-    private final @Nullable Input<String> rangeStart;
+      private final @Nullable Input<String> rangeStart;
 
     public Input<String> getRangeStart() {
         return this.rangeStart == null ? Input.empty() : this.rangeStart;
@@ -93,7 +93,6 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
             this.rangeStart = Input.ofNullable(rangeStart);
             return this;
         }
-
         public Int64RangeMatchArgs build() {
             return new Int64RangeMatchArgs(rangeEnd, rangeStart);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class AS2AcknowledgementConnectionSettingsResponse {
     /**
      * Indicates whether to ignore mismatch in certificate name.
      * 
-     */
+    */
     public Boolean getIgnoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
     /**
      * Indicates whether to keep the connection alive.
      * 
-     */
+    */
     public Boolean getKeepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
     /**
      * Indicates whether to support HTTP status code 'CONTINUE'.
      * 
-     */
+    */
     public Boolean getSupportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
     /**
      * Indicates whether to unfold the HTTP headers.
      * 
-     */
+    */
     public Boolean getUnfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }
@@ -116,7 +116,6 @@ public final class AS2AcknowledgementConnectionSettingsResponse {
             this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
             return this;
         }
-
         public AS2AcknowledgementConnectionSettingsResponse build() {
             return new AS2AcknowledgementConnectionSettingsResponse(ignoreCertificateNameMismatch, keepHttpConnectionAlive, supportHttpStatusCodeContinue, unfoldHttpHeaders);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.DataSourceConfigurationResponse;
 import io.pulumi.azurenative.insights.inputs.SinkConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DataSourceResponse extends io.pulumi.resources.InvokeArgs {
     public static final DataSourceResponse Empty = new DataSourceResponse();
 
     @InputImport(name="configuration", required=true)
-    private final DataSourceConfigurationResponse configuration;
+      private final DataSourceConfigurationResponse configuration;
 
     public DataSourceConfigurationResponse getConfiguration() {
         return this.configuration;
@@ -31,14 +31,14 @@ public final class DataSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
     }
 
     @InputImport(name="sinks", required=true)
-    private final List<SinkConfigurationResponse> sinks;
+      private final List<SinkConfigurationResponse> sinks;
 
     public List<SinkConfigurationResponse> getSinks() {
         return this.sinks;
@@ -97,7 +97,6 @@ public final class DataSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
-
         public DataSourceResponse build() {
             return new DataSourceResponse(configuration, kind, sinks);
         }

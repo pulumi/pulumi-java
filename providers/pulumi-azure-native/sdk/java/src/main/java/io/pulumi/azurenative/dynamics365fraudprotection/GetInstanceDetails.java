@@ -6,21 +6,41 @@ package io.pulumi.azurenative.dynamics365fraudprotection;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dynamics365fraudprotection.inputs.GetInstanceDetailsArgs;
 import io.pulumi.azurenative.dynamics365fraudprotection.outputs.GetInstanceDetailsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceDetails {
-/**
- * Represents an instance of a DFP instance resource.
+    private GetInstanceDetails() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceDetailsArgs.Builder a);
+    }
+    private static GetInstanceDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceDetailsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents an instance of a DFP instance resource.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Represents an instance of a DFP instance resource.
+     *
+     * Represents an instance of a DFP instance resource.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents an instance of a DFP instance resource.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Represents an instance of a DFP instance resource.
+     * 
+     */
     public static CompletableFuture<GetInstanceDetailsResult> invokeAsync(GetInstanceDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dynamics365fraudprotection:getInstanceDetails", TypeShape.of(GetInstanceDetailsResult.class), args == null ? GetInstanceDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

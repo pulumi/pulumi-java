@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.awsnative.cloudformation.inputs.ResourceVersionLoggingConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ResourceVersionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="executionRoleArn")
-    private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
@@ -31,7 +31,7 @@ public final class ResourceVersionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<ResourceVersionLoggingConfigArgs> loggingConfig;
+      private final @Nullable Input<ResourceVersionLoggingConfigArgs> loggingConfig;
 
     public Input<ResourceVersionLoggingConfigArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -44,7 +44,7 @@ public final class ResourceVersionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="schemaHandlerPackage", required=true)
-    private final Input<String> schemaHandlerPackage;
+      private final Input<String> schemaHandlerPackage;
 
     public Input<String> getSchemaHandlerPackage() {
         return this.schemaHandlerPackage;
@@ -57,7 +57,7 @@ public final class ResourceVersionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="typeName", required=true)
-    private final Input<String> typeName;
+      private final Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName;
@@ -146,7 +146,6 @@ public final class ResourceVersionArgs extends io.pulumi.resources.ResourceArgs 
             this.typeName = Input.of(Objects.requireNonNull(typeName));
             return this;
         }
-
         public ResourceVersionArgs build() {
             return new ResourceVersionArgs(executionRoleArn, loggingConfig, schemaHandlerPackage, typeName);
         }

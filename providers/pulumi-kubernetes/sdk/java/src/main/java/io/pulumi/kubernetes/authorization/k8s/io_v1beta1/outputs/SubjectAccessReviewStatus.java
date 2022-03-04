@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class SubjectAccessReviewStatus {
     /**
      * Allowed is required. True if the action would be allowed, false otherwise.
      * 
-     */
+    */
     public Boolean getAllowed() {
         return this.allowed;
     }
     /**
      * Denied is optional. True if the action would be denied, otherwise false. If both allowed is false and denied is false, then the authorizer has no opinion on whether to authorize the action. Denied may not be true if Allowed is true.
      * 
-     */
+    */
     public Optional<Boolean> getDenied() {
         return Optional.ofNullable(this.denied);
     }
     /**
      * EvaluationError is an indication that some error occurred during the authorization check. It is entirely possible to get an error and be able to continue determine authorization status in spite of it. For instance, RBAC can be missing a role, but enough roles are still present and bound to reason about the request.
      * 
-     */
+    */
     public Optional<String> getEvaluationError() {
         return Optional.ofNullable(this.evaluationError);
     }
     /**
      * Reason is optional.  It indicates why a request was allowed or denied.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
@@ -119,7 +119,6 @@ public final class SubjectAccessReviewStatus {
             this.reason = reason;
             return this;
         }
-
         public SubjectAccessReviewStatus build() {
             return new SubjectAccessReviewStatus(allowed, denied, evaluationError, reason);
         }

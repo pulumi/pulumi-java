@@ -6,17 +6,33 @@ package io.pulumi.awsnative.devopsguru;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devopsguru.inputs.GetNotificationChannelArgs;
 import io.pulumi.awsnative.devopsguru.outputs.GetNotificationChannelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationChannel {
-/**
- * This resource schema represents the NotificationChannel resource in the Amazon DevOps Guru.
+    private GetNotificationChannel() {}
+    public interface BuilderApplicator {
+        public void apply(GetNotificationChannelArgs.Builder a);
+    }
+    private static GetNotificationChannelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNotificationChannelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This resource schema represents the NotificationChannel resource in the Amazon DevOps Guru.
  * 
- */
+     */
+    public static CompletableFuture<GetNotificationChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This resource schema represents the NotificationChannel resource in the Amazon DevOps Guru.
+     * 
+     */
     public static CompletableFuture<GetNotificationChannelResult> invokeAsync(GetNotificationChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devopsguru:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args == null ? GetNotificationChannelArgs.Empty : args, Utilities.withVersion(options));
     }

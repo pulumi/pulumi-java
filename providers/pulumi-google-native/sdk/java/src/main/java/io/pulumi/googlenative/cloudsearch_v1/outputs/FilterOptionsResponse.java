@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.FilterResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class FilterOptionsResponse {
     /**
      * Generic filter to restrict the search, such as `lang:en`, `site:xyz`.
      * 
-     */
+    */
     public FilterResponse getFilter() {
         return this.filter;
     }
     /**
      * If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
@@ -75,7 +75,6 @@ public final class FilterOptionsResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public FilterOptionsResponse build() {
             return new FilterOptionsResponse(filter, objectType);
         }

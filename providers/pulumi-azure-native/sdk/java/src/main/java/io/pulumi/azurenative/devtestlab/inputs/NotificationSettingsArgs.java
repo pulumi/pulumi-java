@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="emailRecipient")
-    private final @Nullable Input<String> emailRecipient;
+      private final @Nullable Input<String> emailRecipient;
 
     public Input<String> getEmailRecipient() {
         return this.emailRecipient == null ? Input.empty() : this.emailRecipient;
@@ -37,7 +37,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="notificationLocale")
-    private final @Nullable Input<String> notificationLocale;
+      private final @Nullable Input<String> notificationLocale;
 
     public Input<String> getNotificationLocale() {
         return this.notificationLocale == null ? Input.empty() : this.notificationLocale;
@@ -48,7 +48,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,EnableStatus>> status;
+      private final @Nullable Input<Either<String,EnableStatus>> status;
 
     public Input<Either<String,EnableStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -59,7 +59,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="timeInMinutes")
-    private final @Nullable Input<Integer> timeInMinutes;
+      private final @Nullable Input<Integer> timeInMinutes;
 
     public Input<Integer> getTimeInMinutes() {
         return this.timeInMinutes == null ? Input.empty() : this.timeInMinutes;
@@ -70,7 +70,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="webhookUrl")
-    private final @Nullable Input<String> webhookUrl;
+      private final @Nullable Input<String> webhookUrl;
 
     public Input<String> getWebhookUrl() {
         return this.webhookUrl == null ? Input.empty() : this.webhookUrl;
@@ -174,7 +174,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             this.webhookUrl = Input.ofNullable(webhookUrl);
             return this;
         }
-
         public NotificationSettingsArgs build() {
             return new NotificationSettingsArgs(emailRecipient, notificationLocale, status, timeInMinutes, webhookUrl);
         }

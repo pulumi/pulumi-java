@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.outputs;
 import io.pulumi.azurenative.edgeorder.outputs.Pav2MeterDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.PurchaseMeterDetailsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,28 +48,28 @@ public final class BillingMeterDetailsResponse {
     /**
      * Frequency of recurrence
      * 
-     */
+    */
     public String getFrequency() {
         return this.frequency;
     }
     /**
      * Represents MeterDetails
      * 
-     */
+    */
     public Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> getMeterDetails() {
         return this.meterDetails;
     }
     /**
      * Represents Metering type (eg one-time or recurrent)
      * 
-     */
+    */
     public String getMeteringType() {
         return this.meteringType;
     }
     /**
      * Represents Billing type name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -119,7 +119,6 @@ public final class BillingMeterDetailsResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BillingMeterDetailsResponse build() {
             return new BillingMeterDetailsResponse(frequency, meterDetails, meteringType, name);
         }

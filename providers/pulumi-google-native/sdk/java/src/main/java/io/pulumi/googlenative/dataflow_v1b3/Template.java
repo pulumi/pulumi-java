@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dataflow_v1b3;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataflow_v1b3.TemplateArgs;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.RuntimeMetadataResponse;
@@ -81,6 +81,37 @@ public class Template extends io.pulumi.resources.CustomResource {
         return this.templateType;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TemplateArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.dataflow_v1b3.TemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.dataflow_v1b3.TemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Template(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Template(String name) {
+        this(name, TemplateArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Template(String name, TemplateArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

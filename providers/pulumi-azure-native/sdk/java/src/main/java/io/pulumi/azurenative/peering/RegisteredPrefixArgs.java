@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="peeringName", required=true)
-    private final Input<String> peeringName;
+      private final Input<String> peeringName;
 
     public Input<String> getPeeringName() {
         return this.peeringName;
@@ -30,7 +30,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -41,7 +41,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="registeredPrefixName")
-    private final @Nullable Input<String> registeredPrefixName;
+      private final @Nullable Input<String> registeredPrefixName;
 
     public Input<String> getRegisteredPrefixName() {
         return this.registeredPrefixName == null ? Input.empty() : this.registeredPrefixName;
@@ -52,7 +52,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -141,7 +141,6 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public RegisteredPrefixArgs build() {
             return new RegisteredPrefixArgs(peeringName, prefix, registeredPrefixName, resourceGroupName);
         }

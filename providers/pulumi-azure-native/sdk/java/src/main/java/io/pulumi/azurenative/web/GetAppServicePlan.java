@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetAppServicePlanArgs;
 import io.pulumi.azurenative.web.outputs.GetAppServicePlanResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppServicePlan {
-/**
- * App Service plan.
+    private GetAppServicePlan() {}
+    public interface BuilderApplicator {
+        public void apply(GetAppServicePlanArgs.Builder a);
+    }
+    private static GetAppServicePlanArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAppServicePlanArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * App Service plan.
  * API Version: 2020-12-01.
  * 
- *
- * App Service plan.
+     *
+     * App Service plan.
  * 
- */
+     */
+    public static CompletableFuture<GetAppServicePlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * App Service plan.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * App Service plan.
+     * 
+     */
     public static CompletableFuture<GetAppServicePlanResult> invokeAsync(GetAppServicePlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getAppServicePlan", TypeShape.of(GetAppServicePlanResult.class), args == null ? GetAppServicePlanArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLBlockActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLCaptchaActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLCountActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,28 +22,28 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
     public static final WebACLRuleActionArgs Empty = new WebACLRuleActionArgs();
 
     @InputImport(name="allow")
-    private final @Nullable Input<WebACLAllowActionArgs> allow;
+      private final @Nullable Input<WebACLAllowActionArgs> allow;
 
     public Input<WebACLAllowActionArgs> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
     }
 
     @InputImport(name="block")
-    private final @Nullable Input<WebACLBlockActionArgs> block;
+      private final @Nullable Input<WebACLBlockActionArgs> block;
 
     public Input<WebACLBlockActionArgs> getBlock() {
         return this.block == null ? Input.empty() : this.block;
     }
 
     @InputImport(name="captcha")
-    private final @Nullable Input<WebACLCaptchaActionArgs> captcha;
+      private final @Nullable Input<WebACLCaptchaActionArgs> captcha;
 
     public Input<WebACLCaptchaActionArgs> getCaptcha() {
         return this.captcha == null ? Input.empty() : this.captcha;
     }
 
     @InputImport(name="count")
-    private final @Nullable Input<WebACLCountActionArgs> count;
+      private final @Nullable Input<WebACLCountActionArgs> count;
 
     public Input<WebACLCountActionArgs> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -132,7 +132,6 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
             this.count = Input.ofNullable(count);
             return this;
         }
-
         public WebACLRuleActionArgs build() {
             return new WebACLRuleActionArgs(allow, block, captcha, count);
         }

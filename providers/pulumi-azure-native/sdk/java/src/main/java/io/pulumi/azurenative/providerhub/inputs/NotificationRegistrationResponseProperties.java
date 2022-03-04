@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.NotificationEndpointResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,35 +17,35 @@ public final class NotificationRegistrationResponseProperties extends io.pulumi.
     public static final NotificationRegistrationResponseProperties Empty = new NotificationRegistrationResponseProperties();
 
     @InputImport(name="includedEvents")
-    private final @Nullable List<String> includedEvents;
+      private final @Nullable List<String> includedEvents;
 
     public List<String> getIncludedEvents() {
         return this.includedEvents == null ? List.of() : this.includedEvents;
     }
 
     @InputImport(name="messageScope")
-    private final @Nullable String messageScope;
+      private final @Nullable String messageScope;
 
     public Optional<String> getMessageScope() {
         return this.messageScope == null ? Optional.empty() : Optional.ofNullable(this.messageScope);
     }
 
     @InputImport(name="notificationEndpoints")
-    private final @Nullable List<NotificationEndpointResponse> notificationEndpoints;
+      private final @Nullable List<NotificationEndpointResponse> notificationEndpoints;
 
     public List<NotificationEndpointResponse> getNotificationEndpoints() {
         return this.notificationEndpoints == null ? List.of() : this.notificationEndpoints;
     }
 
     @InputImport(name="notificationMode")
-    private final @Nullable String notificationMode;
+      private final @Nullable String notificationMode;
 
     public Optional<String> getNotificationMode() {
         return this.notificationMode == null ? Optional.empty() : Optional.ofNullable(this.notificationMode);
     }
 
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+      private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -124,7 +124,6 @@ public final class NotificationRegistrationResponseProperties extends io.pulumi.
             this.provisioningState = provisioningState;
             return this;
         }
-
         public NotificationRegistrationResponseProperties build() {
             return new NotificationRegistrationResponseProperties(includedEvents, messageScope, notificationEndpoints, notificationMode, provisioningState);
         }

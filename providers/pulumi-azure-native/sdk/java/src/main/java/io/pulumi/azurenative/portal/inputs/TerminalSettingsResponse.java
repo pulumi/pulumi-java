@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fontSize")
-    private final @Nullable String fontSize;
+      private final @Nullable String fontSize;
 
     public Optional<String> getFontSize() {
         return this.fontSize == null ? Optional.empty() : Optional.ofNullable(this.fontSize);
@@ -34,7 +34,7 @@ public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fontStyle")
-    private final @Nullable String fontStyle;
+      private final @Nullable String fontStyle;
 
     public Optional<String> getFontStyle() {
         return this.fontStyle == null ? Optional.empty() : Optional.ofNullable(this.fontStyle);
@@ -83,7 +83,6 @@ public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeAr
             this.fontStyle = fontStyle;
             return this;
         }
-
         public TerminalSettingsResponse build() {
             return new TerminalSettingsResponse(fontSize, fontStyle);
         }

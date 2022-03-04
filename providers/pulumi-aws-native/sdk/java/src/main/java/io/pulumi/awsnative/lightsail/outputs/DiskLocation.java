@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DiskLocation {
     /**
      * The Availability Zone in which to create your disk. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
-     */
+    */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * The Region Name in which to create your disk.
      * 
-     */
+    */
     public Optional<String> getRegionName() {
         return Optional.ofNullable(this.regionName);
     }
@@ -76,7 +76,6 @@ public final class DiskLocation {
             this.regionName = regionName;
             return this;
         }
-
         public DiskLocation build() {
             return new DiskLocation(availabilityZone, regionName);
         }

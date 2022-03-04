@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class AliasPatternResponse {
     /**
      * The alias pattern phrase.
      * 
-     */
+    */
     public Optional<String> getPhrase() {
         return Optional.ofNullable(this.phrase);
     }
     /**
      * The type of alias pattern
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The alias pattern variable.
      * 
-     */
+    */
     public Optional<String> getVariable() {
         return Optional.ofNullable(this.variable);
     }
@@ -97,7 +97,6 @@ public final class AliasPatternResponse {
             this.variable = variable;
             return this;
         }
-
         public AliasPatternResponse build() {
             return new AliasPatternResponse(phrase, type, variable);
         }

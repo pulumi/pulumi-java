@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.EnvelopeResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.InTotoStatementResponse;
 import java.util.Objects;
@@ -22,14 +22,14 @@ public final class DSSEAttestationOccurrenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="envelope", required=true)
-    private final EnvelopeResponse envelope;
+      private final EnvelopeResponse envelope;
 
     public EnvelopeResponse getEnvelope() {
         return this.envelope;
     }
 
     @InputImport(name="statement", required=true)
-    private final InTotoStatementResponse statement;
+      private final InTotoStatementResponse statement;
 
     public InTotoStatementResponse getStatement() {
         return this.statement;
@@ -78,7 +78,6 @@ public final class DSSEAttestationOccurrenceResponse extends io.pulumi.resources
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public DSSEAttestationOccurrenceResponse build() {
             return new DSSEAttestationOccurrenceResponse(envelope, statement);
         }

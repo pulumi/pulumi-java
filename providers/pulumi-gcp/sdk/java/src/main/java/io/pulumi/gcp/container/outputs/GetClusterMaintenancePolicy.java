@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterMaintenancePolicyDailyMaintenanceWindow;
 import io.pulumi.gcp.container.outputs.GetClusterMaintenancePolicyMaintenanceExclusion;
 import io.pulumi.gcp.container.outputs.GetClusterMaintenancePolicyRecurringWindow;
@@ -74,7 +74,6 @@ public final class GetClusterMaintenancePolicy {
             this.recurringWindows = Objects.requireNonNull(recurringWindows);
             return this;
         }
-
         public GetClusterMaintenancePolicy build() {
             return new GetClusterMaintenancePolicy(dailyMaintenanceWindows, maintenanceExclusions, recurringWindows);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetFolderArgs Empty = new GetFolderArgs();
 
     @InputImport(name="folderId", required=true)
-    private final String folderId;
+      private final String folderId;
 
     public String getFolderId() {
         return this.folderId;
@@ -51,7 +51,6 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
-
         public GetFolderArgs build() {
             return new GetFolderArgs(folderId);
         }

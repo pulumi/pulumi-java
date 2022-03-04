@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.analysisservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ResourceSkuResponse {
     /**
      * The number of instances in the read only query pool.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Name of the SKU level.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the Azure pricing tier to which the SKU applies.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -98,7 +98,6 @@ public final class ResourceSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public ResourceSkuResponse build() {
             return new ResourceSkuResponse(capacity, name, tier);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -45,7 +45,7 @@ public final class GetAccountKeyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -61,7 +61,7 @@ public final class GetAccountKeyResult {
     /**
      * The public key, base64 encoded
      * 
-     */
+    */
     public String getPublicKey() {
         return this.publicKey;
     }
@@ -128,7 +128,6 @@ public final class GetAccountKeyResult {
             this.publicKeyType = publicKeyType;
             return this;
         }
-
         public GetAccountKeyResult build() {
             return new GetAccountKeyResult(id, keyAlgorithm, name, project, publicKey, publicKeyType);
         }

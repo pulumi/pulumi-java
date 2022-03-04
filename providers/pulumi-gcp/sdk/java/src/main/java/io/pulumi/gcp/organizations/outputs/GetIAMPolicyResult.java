@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.organizations.outputs.GetIAMPolicyAuditConfig;
 import io.pulumi.gcp.organizations.outputs.GetIAMPolicyBinding;
 import java.lang.String;
@@ -48,7 +48,7 @@ public final class GetIAMPolicyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -56,7 +56,7 @@ public final class GetIAMPolicyResult {
      * The above bindings serialized in a format suitable for
      * referencing from a resource that supports IAM.
      * 
-     */
+    */
     public String getPolicyData() {
         return this.policyData;
     }
@@ -106,7 +106,6 @@ public final class GetIAMPolicyResult {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public GetIAMPolicyResult build() {
             return new GetIAMPolicyResult(auditConfigs, bindings, id, policyData);
         }

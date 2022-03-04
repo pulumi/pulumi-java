@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class VmStateDetailsResponse {
     /**
      * Last known compute power state captured in DTL
      * 
-     */
+    */
     public String getLastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
      * The power state of the reference virtual machine.
      * 
-     */
+    */
     public String getPowerState() {
         return this.powerState;
     }
     /**
      * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
      * 
-     */
+    */
     public String getRdpAuthority() {
         return this.rdpAuthority;
     }
     /**
      * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
      * 
-     */
+    */
     public String getSshAuthority() {
         return this.sshAuthority;
     }
@@ -116,7 +116,6 @@ public final class VmStateDetailsResponse {
             this.sshAuthority = Objects.requireNonNull(sshAuthority);
             return this;
         }
-
         public VmStateDetailsResponse build() {
             return new VmStateDetailsResponse(lastKnownPowerState, powerState, rdpAuthority, sshAuthority);
         }

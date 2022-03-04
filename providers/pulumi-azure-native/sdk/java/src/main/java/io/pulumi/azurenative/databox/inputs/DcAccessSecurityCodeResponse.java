@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="forwardDCAccessCode")
-    private final @Nullable String forwardDCAccessCode;
+      private final @Nullable String forwardDCAccessCode;
 
     public Optional<String> getForwardDCAccessCode() {
         return this.forwardDCAccessCode == null ? Optional.empty() : Optional.ofNullable(this.forwardDCAccessCode);
@@ -34,7 +34,7 @@ public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="reverseDCAccessCode")
-    private final @Nullable String reverseDCAccessCode;
+      private final @Nullable String reverseDCAccessCode;
 
     public Optional<String> getReverseDCAccessCode() {
         return this.reverseDCAccessCode == null ? Optional.empty() : Optional.ofNullable(this.reverseDCAccessCode);
@@ -83,7 +83,6 @@ public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.Invo
             this.reverseDCAccessCode = reverseDCAccessCode;
             return this;
         }
-
         public DcAccessSecurityCodeResponse build() {
             return new DcAccessSecurityCodeResponse(forwardDCAccessCode, reverseDCAccessCode);
         }

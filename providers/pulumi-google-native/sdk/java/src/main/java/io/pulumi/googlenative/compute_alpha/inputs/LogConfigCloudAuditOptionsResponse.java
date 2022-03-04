@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.AuthorizationLoggingOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LogConfigCloudAuditOptionsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="authorizationLoggingOptions", required=true)
-    private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
+      private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
 
     public AuthorizationLoggingOptionsResponse getAuthorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
@@ -33,7 +33,7 @@ public final class LogConfigCloudAuditOptionsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="logName", required=true)
-    private final String logName;
+      private final String logName;
 
     public String getLogName() {
         return this.logName;
@@ -82,7 +82,6 @@ public final class LogConfigCloudAuditOptionsResponse extends io.pulumi.resource
             this.logName = Objects.requireNonNull(logName);
             return this;
         }
-
         public LogConfigCloudAuditOptionsResponse build() {
             return new LogConfigCloudAuditOptionsResponse(authorizationLoggingOptions, logName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TransferJobTransferSpecGcsDataSourceGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -30,7 +30,7 @@ public final class TransferJobTransferSpecGcsDataSourceGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -89,7 +89,6 @@ public final class TransferJobTransferSpecGcsDataSourceGetArgs extends io.pulumi
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public TransferJobTransferSpecGcsDataSourceGetArgs build() {
             return new TransferJobTransferSpecGcsDataSourceGetArgs(bucketName, path);
         }

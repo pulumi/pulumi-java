@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.CellTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class GetCellResult {
     /**
      * The Amazon Resource Name (ARN) of the cell.
      * 
-     */
+    */
     public Optional<String> getCellArn() {
         return Optional.ofNullable(this.cellArn);
     }
     /**
      * A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
      * 
-     */
+    */
     public List<String> getCells() {
         return this.cells == null ? List.of() : this.cells;
     }
     /**
      * The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is a list but currently can have only one element.
      * 
-     */
+    */
     public List<String> getParentReadinessScopes() {
         return this.parentReadinessScopes == null ? List.of() : this.parentReadinessScopes;
     }
     /**
      * A collection of tags associated with a resource
      * 
-     */
+    */
     public List<CellTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -120,7 +120,6 @@ public final class GetCellResult {
             this.tags = tags;
             return this;
         }
-
         public GetCellResult build() {
             return new GetCellResult(cellArn, cells, parentReadinessScopes, tags);
         }

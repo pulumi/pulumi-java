@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch {
     /**
      * The end of the range (exclusive).
      * 
-     */
+    */
     public Integer getRangeEnd() {
         return this.rangeEnd;
     }
     /**
      * The start of the range (inclusive).
      * 
-     */
+    */
     public Integer getRangeStart() {
         return this.rangeStart;
     }
@@ -74,7 +74,6 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch {
             this.rangeStart = Objects.requireNonNull(rangeStart);
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch build() {
             return new URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch(rangeEnd, rangeStart);
         }

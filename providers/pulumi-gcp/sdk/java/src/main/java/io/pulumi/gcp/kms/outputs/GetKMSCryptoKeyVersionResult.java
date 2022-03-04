@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.kms.outputs.GetKMSCryptoKeyVersionPublicKey;
 import java.lang.Integer;
 import java.lang.String;
@@ -70,7 +70,7 @@ public final class GetKMSCryptoKeyVersionResult {
     /**
      * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
      * 
-     */
+    */
     public String getAlgorithm() {
         return this.algorithm;
     }
@@ -80,35 +80,35 @@ public final class GetKMSCryptoKeyVersionResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion. See the [protection_level reference](https://cloud.google.com/kms/docs/reference/rest/v1/ProtectionLevel) for possible outputs.
      * 
-     */
+    */
     public String getProtectionLevel() {
         return this.protectionLevel;
     }
     /**
      * If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
      * 
-     */
+    */
     public List<GetKMSCryptoKeyVersionPublicKey> getPublicKeys() {
         return this.publicKeys;
     }
     /**
      * The current state of the CryptoKeyVersion. See the [state reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions#CryptoKeyVersion.CryptoKeyVersionState) for possible outputs.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -189,7 +189,6 @@ public final class GetKMSCryptoKeyVersionResult {
             this.version = version;
             return this;
         }
-
         public GetKMSCryptoKeyVersionResult build() {
             return new GetKMSCryptoKeyVersionResult(algorithm, cryptoKey, id, name, protectionLevel, publicKeys, state, version);
         }

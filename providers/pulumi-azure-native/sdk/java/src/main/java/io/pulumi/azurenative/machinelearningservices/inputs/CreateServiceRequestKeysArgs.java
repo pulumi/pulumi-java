@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="primaryKey")
-    private final @Nullable Input<String> primaryKey;
+      private final @Nullable Input<String> primaryKey;
 
     public Input<String> getPrimaryKey() {
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
@@ -34,7 +34,7 @@ public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secondaryKey")
-    private final @Nullable Input<String> secondaryKey;
+      private final @Nullable Input<String> secondaryKey;
 
     public Input<String> getSecondaryKey() {
         return this.secondaryKey == null ? Input.empty() : this.secondaryKey;
@@ -93,7 +93,6 @@ public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.Reso
             this.secondaryKey = Input.ofNullable(secondaryKey);
             return this;
         }
-
         public CreateServiceRequestKeysArgs build() {
             return new CreateServiceRequestKeysArgs(primaryKey, secondaryKey);
         }

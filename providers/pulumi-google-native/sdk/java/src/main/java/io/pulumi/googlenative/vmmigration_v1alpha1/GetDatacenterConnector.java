@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatacenterConnector {
-/**
- * Gets details of a single DatacenterConnector.
+    private GetDatacenterConnector() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatacenterConnectorArgs.Builder a);
+    }
+    private static GetDatacenterConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatacenterConnectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single DatacenterConnector.
  * 
- */
+     */
+    public static CompletableFuture<GetDatacenterConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single DatacenterConnector.
+     * 
+     */
     public static CompletableFuture<GetDatacenterConnectorResult> invokeAsync(GetDatacenterConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vmmigration/v1alpha1:getDatacenterConnector", TypeShape.of(GetDatacenterConnectorResult.class), args == null ? GetDatacenterConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

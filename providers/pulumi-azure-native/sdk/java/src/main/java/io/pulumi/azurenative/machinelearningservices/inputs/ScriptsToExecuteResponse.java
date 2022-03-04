@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ScriptReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ScriptsToExecuteResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="creationScript")
-    private final @Nullable ScriptReferenceResponse creationScript;
+      private final @Nullable ScriptReferenceResponse creationScript;
 
     public Optional<ScriptReferenceResponse> getCreationScript() {
         return this.creationScript == null ? Optional.empty() : Optional.ofNullable(this.creationScript);
@@ -34,7 +34,7 @@ public final class ScriptsToExecuteResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startupScript")
-    private final @Nullable ScriptReferenceResponse startupScript;
+      private final @Nullable ScriptReferenceResponse startupScript;
 
     public Optional<ScriptReferenceResponse> getStartupScript() {
         return this.startupScript == null ? Optional.empty() : Optional.ofNullable(this.startupScript);
@@ -83,7 +83,6 @@ public final class ScriptsToExecuteResponse extends io.pulumi.resources.InvokeAr
             this.startupScript = startupScript;
             return this;
         }
-
         public ScriptsToExecuteResponse build() {
             return new ScriptsToExecuteResponse(creationScript, startupScript);
         }

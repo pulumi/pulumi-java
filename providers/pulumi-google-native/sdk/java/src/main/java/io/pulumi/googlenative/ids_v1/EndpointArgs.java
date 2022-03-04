@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ids_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ids_v1.enums.EndpointSeverity;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="endpointId", required=true)
-    private final Input<String> endpointId;
+      private final Input<String> endpointId;
 
     public Input<String> getEndpointId() {
         return this.endpointId;
@@ -40,14 +40,14 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -58,21 +58,21 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final Input<String> network;
+      private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -83,7 +83,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-    private final Input<EndpointSeverity> severity;
+      private final Input<EndpointSeverity> severity;
 
     public Input<EndpointSeverity> getSeverity() {
         return this.severity;
@@ -94,7 +94,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficLogs")
-    private final @Nullable Input<Boolean> trafficLogs;
+      private final @Nullable Input<Boolean> trafficLogs;
 
     public Input<Boolean> getTrafficLogs() {
         return this.trafficLogs == null ? Input.empty() : this.trafficLogs;
@@ -258,7 +258,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.trafficLogs = Input.ofNullable(trafficLogs);
             return this;
         }
-
         public EndpointArgs build() {
             return new EndpointArgs(description, endpointId, labels, location, network, project, requestId, severity, trafficLogs);
         }

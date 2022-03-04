@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RowLevelSecurityStatisticsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="rowLevelSecurityApplied", required=true)
-    private final Boolean rowLevelSecurityApplied;
+      private final Boolean rowLevelSecurityApplied;
 
     public Boolean getRowLevelSecurityApplied() {
         return this.rowLevelSecurityApplied;
@@ -55,7 +55,6 @@ public final class RowLevelSecurityStatisticsResponse extends io.pulumi.resource
             this.rowLevelSecurityApplied = Objects.requireNonNull(rowLevelSecurityApplied);
             return this;
         }
-
         public RowLevelSecurityStatisticsResponse build() {
             return new RowLevelSecurityStatisticsResponse(rowLevelSecurityApplied);
         }

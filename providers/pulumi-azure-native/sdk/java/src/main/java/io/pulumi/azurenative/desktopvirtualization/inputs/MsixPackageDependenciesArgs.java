@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dependencyName")
-    private final @Nullable Input<String> dependencyName;
+      private final @Nullable Input<String> dependencyName;
 
     public Input<String> getDependencyName() {
         return this.dependencyName == null ? Input.empty() : this.dependencyName;
@@ -34,7 +34,7 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="minVersion")
-    private final @Nullable Input<String> minVersion;
+      private final @Nullable Input<String> minVersion;
 
     public Input<String> getMinVersion() {
         return this.minVersion == null ? Input.empty() : this.minVersion;
@@ -45,7 +45,7 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable Input<String> publisher;
+      private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -119,7 +119,6 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
             this.publisher = Input.ofNullable(publisher);
             return this;
         }
-
         public MsixPackageDependenciesArgs build() {
             return new MsixPackageDependenciesArgs(dependencyName, minVersion, publisher);
         }

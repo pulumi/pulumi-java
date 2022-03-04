@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetFeedArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetFeedArgs Empty = new GetFeedArgs();
 
     @InputImport(name="feedId", required=true)
-    private final String feedId;
+      private final String feedId;
 
     public String getFeedId() {
         return this.feedId;
     }
 
     @InputImport(name="v1Id", required=true)
-    private final String v1Id;
+      private final String v1Id;
 
     public String getV1Id() {
         return this.v1Id;
     }
 
     @InputImport(name="v1Id1", required=true)
-    private final String v1Id1;
+      private final String v1Id1;
 
     public String getV1Id1() {
         return this.v1Id1;
@@ -86,7 +86,6 @@ public final class GetFeedArgs extends io.pulumi.resources.InvokeArgs {
             this.v1Id1 = Objects.requireNonNull(v1Id1);
             return this;
         }
-
         public GetFeedArgs build() {
             return new GetFeedArgs(feedId, v1Id, v1Id1);
         }

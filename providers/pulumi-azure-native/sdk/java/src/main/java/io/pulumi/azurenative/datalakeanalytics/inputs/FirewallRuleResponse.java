@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endIpAddress", required=true)
-    private final String endIpAddress;
+      private final String endIpAddress;
 
     public String getEndIpAddress() {
         return this.endIpAddress;
@@ -32,7 +32,7 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -43,7 +43,7 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -54,7 +54,7 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startIpAddress", required=true)
-    private final String startIpAddress;
+      private final String startIpAddress;
 
     public String getStartIpAddress() {
         return this.startIpAddress;
@@ -65,7 +65,7 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -144,7 +144,6 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FirewallRuleResponse build() {
             return new FirewallRuleResponse(endIpAddress, id, name, startIpAddress, type);
         }

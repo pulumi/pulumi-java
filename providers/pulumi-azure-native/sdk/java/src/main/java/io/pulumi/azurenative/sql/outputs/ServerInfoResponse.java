@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ServerInfoResponse {
     /**
      * Server Id.
      * 
-     */
+    */
     public String getServerId() {
         return this.serverId;
     }
@@ -52,7 +52,6 @@ public final class ServerInfoResponse {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
-
         public ServerInfoResponse build() {
             return new ServerInfoResponse(serverId);
         }

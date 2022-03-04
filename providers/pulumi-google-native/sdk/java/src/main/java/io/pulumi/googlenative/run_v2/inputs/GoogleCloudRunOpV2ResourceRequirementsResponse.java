@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse extends io.pul
      * 
      */
     @InputImport(name="cpuIdle", required=true)
-    private final Boolean cpuIdle;
+      private final Boolean cpuIdle;
 
     public Boolean getCpuIdle() {
         return this.cpuIdle;
@@ -34,7 +34,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse extends io.pul
      * 
      */
     @InputImport(name="limits", required=true)
-    private final Map<String,String> limits;
+      private final Map<String,String> limits;
 
     public Map<String,String> getLimits() {
         return this.limits;
@@ -83,7 +83,6 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse extends io.pul
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
-
         public GoogleCloudRunOpV2ResourceRequirementsResponse build() {
             return new GoogleCloudRunOpV2ResourceRequirementsResponse(cpuIdle, limits);
         }

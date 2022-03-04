@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetEntryGroupIamPolicyArgs extends io.pulumi.resources.Invoke
     public static final GetEntryGroupIamPolicyArgs Empty = new GetEntryGroupIamPolicyArgs();
 
     @InputImport(name="entryGroupId", required=true)
-    private final String entryGroupId;
+      private final String entryGroupId;
 
     public String getEntryGroupId() {
         return this.entryGroupId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetEntryGroupIamPolicyArgs extends io.pulumi.resources.Invoke
             this.project = project;
             return this;
         }
-
         public GetEntryGroupIamPolicyArgs build() {
             return new GetEntryGroupIamPolicyArgs(entryGroupId, location, project);
         }

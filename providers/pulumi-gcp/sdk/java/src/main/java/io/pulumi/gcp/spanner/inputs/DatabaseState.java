@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.spanner.inputs.DatabaseEncryptionConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ddls")
-    private final @Nullable Input<List<String>> ddls;
+      private final @Nullable Input<List<String>> ddls;
 
     public Input<List<String>> getDdls() {
         return this.ddls == null ? Input.empty() : this.ddls;
@@ -37,7 +37,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionProtection")
-    private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Input<Boolean> deletionProtection;
 
     public Input<Boolean> getDeletionProtection() {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
@@ -49,7 +49,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<DatabaseEncryptionConfigGetArgs> encryptionConfig;
+      private final @Nullable Input<DatabaseEncryptionConfigGetArgs> encryptionConfig;
 
     public Input<DatabaseEncryptionConfigGetArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -60,7 +60,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -72,7 +72,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -84,7 +84,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -95,7 +95,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -229,7 +229,6 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public DatabaseState build() {
             return new DatabaseState(ddls, deletionProtection, encryptionConfig, instance, name, project, state);
         }

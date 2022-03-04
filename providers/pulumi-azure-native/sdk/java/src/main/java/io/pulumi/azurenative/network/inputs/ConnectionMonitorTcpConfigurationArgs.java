@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.DestinationPortBehavior;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="destinationPortBehavior")
-    private final @Nullable Input<Either<String,DestinationPortBehavior>> destinationPortBehavior;
+      private final @Nullable Input<Either<String,DestinationPortBehavior>> destinationPortBehavior;
 
     public Input<Either<String,DestinationPortBehavior>> getDestinationPortBehavior() {
         return this.destinationPortBehavior == null ? Input.empty() : this.destinationPortBehavior;
@@ -38,7 +38,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="disableTraceRoute")
-    private final @Nullable Input<Boolean> disableTraceRoute;
+      private final @Nullable Input<Boolean> disableTraceRoute;
 
     public Input<Boolean> getDisableTraceRoute() {
         return this.disableTraceRoute == null ? Input.empty() : this.disableTraceRoute;
@@ -49,7 +49,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -123,7 +123,6 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
             this.port = Input.ofNullable(port);
             return this;
         }
-
         public ConnectionMonitorTcpConfigurationArgs build() {
             return new ConnectionMonitorTcpConfigurationArgs(destinationPortBehavior, disableTraceRoute, port);
         }

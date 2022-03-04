@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileStatisticalThresholdStatistic;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SecurityProfileStatisticalThreshold {
     /**
      * The percentile which resolves to a threshold value by which compliance with a behavior is determined
      * 
-     */
+    */
     public Optional<SecurityProfileStatisticalThresholdStatistic> getStatistic() {
         return Optional.ofNullable(this.statistic);
     }
@@ -54,7 +54,6 @@ public final class SecurityProfileStatisticalThreshold {
             this.statistic = statistic;
             return this;
         }
-
         public SecurityProfileStatisticalThreshold build() {
             return new SecurityProfileStatisticalThreshold(statistic);
         }

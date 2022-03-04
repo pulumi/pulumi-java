@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRef
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,6 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRef
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference build() {
             return new GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference(name);
         }

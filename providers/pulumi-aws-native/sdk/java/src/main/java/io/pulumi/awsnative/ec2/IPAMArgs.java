@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.IPAMIpamOperatingRegionArgs;
 import io.pulumi.awsnative.ec2.inputs.IPAMTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
     public static final IPAMArgs Empty = new IPAMArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -29,7 +29,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingRegions")
-    private final @Nullable Input<List<IPAMIpamOperatingRegionArgs>> operatingRegions;
+      private final @Nullable Input<List<IPAMIpamOperatingRegionArgs>> operatingRegions;
 
     public Input<List<IPAMIpamOperatingRegionArgs>> getOperatingRegions() {
         return this.operatingRegions == null ? Input.empty() : this.operatingRegions;
@@ -40,7 +40,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<IPAMTagArgs>> tags;
+      private final @Nullable Input<List<IPAMTagArgs>> tags;
 
     public Input<List<IPAMTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -114,7 +114,6 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public IPAMArgs build() {
             return new IPAMArgs(description, operatingRegions, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -62,7 +62,6 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
-
         public TransitGatewayConnectOptionsArgs build() {
             return new TransitGatewayConnectOptionsArgs(protocol);
         }

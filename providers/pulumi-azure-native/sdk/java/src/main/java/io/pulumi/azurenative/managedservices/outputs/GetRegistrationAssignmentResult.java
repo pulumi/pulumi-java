@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.RegistrationAssignmentPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,28 +46,28 @@ public final class GetRegistrationAssignmentResult {
     /**
      * The fully qualified path of the registration assignment.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the registration assignment.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of a registration assignment.
      * 
-     */
+    */
     public RegistrationAssignmentPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GetRegistrationAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegistrationAssignmentResult build() {
             return new GetRegistrationAssignmentResult(id, name, properties, type);
         }

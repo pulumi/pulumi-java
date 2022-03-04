@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointCmafEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointHlsManifest;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointStreamSelection;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -54,21 +54,21 @@ public final class OriginEndpointCmafPackage {
     /**
      * A list of HLS manifest configurations
      * 
-     */
+    */
     public List<OriginEndpointHlsManifest> getHlsManifests() {
         return this.hlsManifests == null ? List.of() : this.hlsManifests;
     }
     /**
      * Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
      * 
-     */
+    */
     public Optional<Integer> getSegmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
     /**
      * An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
      * 
-     */
+    */
     public Optional<String> getSegmentPrefix() {
         return Optional.ofNullable(this.segmentPrefix);
     }
@@ -128,7 +128,6 @@ public final class OriginEndpointCmafPackage {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public OriginEndpointCmafPackage build() {
             return new OriginEndpointCmafPackage(encryption, hlsManifests, segmentDurationSeconds, segmentPrefix, streamSelection);
         }

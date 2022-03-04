@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class WebServerConfigResponse {
     /**
      * Optional. Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. If not specified, composer-n1-webserver-2 will be used. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.
      * 
-     */
+    */
     public String getMachineType() {
         return this.machineType;
     }
@@ -52,7 +52,6 @@ public final class WebServerConfigResponse {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public WebServerConfigResponse build() {
             return new WebServerConfigResponse(machineType);
         }

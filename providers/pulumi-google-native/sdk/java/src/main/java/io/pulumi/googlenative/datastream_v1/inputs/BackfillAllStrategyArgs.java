@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.inputs.MysqlRdbmsArgs;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mysqlExcludedObjects")
-    private final @Nullable Input<MysqlRdbmsArgs> mysqlExcludedObjects;
+      private final @Nullable Input<MysqlRdbmsArgs> mysqlExcludedObjects;
 
     public Input<MysqlRdbmsArgs> getMysqlExcludedObjects() {
         return this.mysqlExcludedObjects == null ? Input.empty() : this.mysqlExcludedObjects;
@@ -35,7 +35,7 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="oracleExcludedObjects")
-    private final @Nullable Input<OracleRdbmsArgs> oracleExcludedObjects;
+      private final @Nullable Input<OracleRdbmsArgs> oracleExcludedObjects;
 
     public Input<OracleRdbmsArgs> getOracleExcludedObjects() {
         return this.oracleExcludedObjects == null ? Input.empty() : this.oracleExcludedObjects;
@@ -94,7 +94,6 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
             this.oracleExcludedObjects = Input.ofNullable(oracleExcludedObjects);
             return this;
         }
-
         public BackfillAllStrategyArgs build() {
             return new BackfillAllStrategyArgs(mysqlExcludedObjects, oracleExcludedObjects);
         }

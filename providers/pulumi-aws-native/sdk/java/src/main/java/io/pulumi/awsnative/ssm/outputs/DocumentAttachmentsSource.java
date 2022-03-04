@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssm.outputs;
 
 import io.pulumi.awsnative.ssm.enums.DocumentAttachmentsSourceKey;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class DocumentAttachmentsSource {
     /**
      * The key of a key-value pair that identifies the location of an attachment to a document.
      * 
-     */
+    */
     public Optional<DocumentAttachmentsSourceKey> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The name of the document attachment file.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }
@@ -99,7 +99,6 @@ public final class DocumentAttachmentsSource {
             this.values = values;
             return this;
         }
-
         public DocumentAttachmentsSource build() {
             return new DocumentAttachmentsSource(key, name, values);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.EncoderCustomPresetResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.EncoderSystemPresetResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.NodeInputResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -51,21 +51,21 @@ public final class EncoderProcessorResponse {
     /**
      * An array of upstream node references within the topology to be used as inputs for this node.
      * 
-     */
+    */
     public List<NodeInputResponse> getInputs() {
         return this.inputs;
     }
     /**
      * Node name. Must be unique within the topology.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The encoder preset, which defines the recipe or instructions on how the input content should be processed.
      * 
-     */
+    */
     public Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> getPreset() {
         return this.preset;
     }
@@ -73,7 +73,7 @@ public final class EncoderProcessorResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderProcessor'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -123,7 +123,6 @@ public final class EncoderProcessorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncoderProcessorResponse build() {
             return new EncoderProcessorResponse(inputs, name, preset, type);
         }

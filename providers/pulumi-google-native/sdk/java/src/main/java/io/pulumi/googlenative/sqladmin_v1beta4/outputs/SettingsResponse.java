@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.BackupConfigurationResponse;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.DatabaseFlagsResponse;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.DenyMaintenancePeriodResponse;
@@ -198,168 +198,168 @@ public final class SettingsResponse {
     /**
      * The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * `ALWAYS`: The instance is on, and remains so even in the absence of connection requests. * `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
      * 
-     */
+    */
     public String getActivationPolicy() {
         return this.activationPolicy;
     }
     /**
      * Active Directory configuration, relevant only for Cloud SQL for SQL Server.
      * 
-     */
+    */
     public SqlActiveDirectoryConfigResponse getActiveDirectoryConfig() {
         return this.activeDirectoryConfig;
     }
     /**
      * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone. Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).
      * 
-     */
+    */
     public String getAvailabilityType() {
         return this.availabilityType;
     }
     /**
      * The daily backup configuration for the instance.
      * 
-     */
+    */
     public BackupConfigurationResponse getBackupConfiguration() {
         return this.backupConfiguration;
     }
     /**
      * The name of server Instance collation.
      * 
-     */
+    */
     public String getCollation() {
         return this.collation;
     }
     /**
      * Configuration specific to read replica instances. Indicates whether database flags for crash-safe replication are enabled. This property was only applicable to First Generation instances.
      * 
-     */
+    */
     public Boolean getCrashSafeReplicationEnabled() {
         return this.crashSafeReplicationEnabled;
     }
     /**
      * The size of data disk, in GB. The data disk size minimum is 10GB.
      * 
-     */
+    */
     public String getDataDiskSizeGb() {
         return this.dataDiskSizeGb;
     }
     /**
      * The type of data disk: `PD_SSD` (default) or `PD_HDD`. Not used for First Generation instances.
      * 
-     */
+    */
     public String getDataDiskType() {
         return this.dataDiskType;
     }
     /**
      * The database flags passed to the instance at startup.
      * 
-     */
+    */
     public List<DatabaseFlagsResponse> getDatabaseFlags() {
         return this.databaseFlags;
     }
     /**
      * Configuration specific to read replica instances. Indicates whether replication is enabled or not. WARNING: Changing this restarts the instance.
      * 
-     */
+    */
     public Boolean getDatabaseReplicationEnabled() {
         return this.databaseReplicationEnabled;
     }
     /**
      * Deny maintenance periods
      * 
-     */
+    */
     public List<DenyMaintenancePeriodResponse> getDenyMaintenancePeriods() {
         return this.denyMaintenancePeriods;
     }
     /**
      * Insights configuration, for now relevant only for Postgres.
      * 
-     */
+    */
     public InsightsConfigResponse getInsightsConfig() {
         return this.insightsConfig;
     }
     /**
      * The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled for Second Generation instances.
      * 
-     */
+    */
     public IpConfigurationResponse getIpConfiguration() {
         return this.ipConfiguration;
     }
     /**
      * This is always `sql#settings`.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The location preference settings. This allows the instance to be located as near as possible to either an App Engine app or Compute Engine zone for better performance. App Engine co-location was only applicable to First Generation instances.
      * 
-     */
+    */
     public LocationPreferenceResponse getLocationPreference() {
         return this.locationPreference;
     }
     /**
      * The maintenance window for this instance. This specifies when the instance can be restarted for maintenance purposes.
      * 
-     */
+    */
     public MaintenanceWindowResponse getMaintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
      * The local user password validation policy of the instance.
      * 
-     */
+    */
     public PasswordValidationPolicyResponse getPasswordValidationPolicy() {
         return this.passwordValidationPolicy;
     }
     /**
      * The pricing plan for this instance. This can be either `PER_USE` or `PACKAGE`. Only `PER_USE` is supported for Second Generation instances.
      * 
-     */
+    */
     public String getPricingPlan() {
         return this.pricingPlan;
     }
     /**
      * The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.
      * 
-     */
+    */
     public String getSettingsVersion() {
         return this.settingsVersion;
     }
     /**
      * SQL Server specific audit configuration.
      * 
-     */
+    */
     public SqlServerAuditConfigResponse getSqlServerAuditConfig() {
         return this.sqlServerAuditConfig;
     }
     /**
      * Configuration to increase storage size automatically. The default value is true.
      * 
-     */
+    */
     public Boolean getStorageAutoResize() {
         return this.storageAutoResize;
     }
     /**
      * The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
      * 
-     */
+    */
     public String getStorageAutoResizeLimit() {
         return this.storageAutoResizeLimit;
     }
     /**
      * The tier (or machine type) for this instance, for example `db-custom-1-3840`. WARNING: Changing this restarts the instance.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
     /**
      * User-provided labels, represented as a dictionary where each label is a single key value pair.
      * 
-     */
+    */
     public Map<String,String> getUserLabels() {
         return this.userLabels;
     }
@@ -549,7 +549,6 @@ public final class SettingsResponse {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public SettingsResponse build() {
             return new SettingsResponse(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
         }

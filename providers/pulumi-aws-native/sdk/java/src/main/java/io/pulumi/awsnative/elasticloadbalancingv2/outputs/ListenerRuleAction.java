@@ -8,7 +8,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleAuthentica
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleFixedResponseConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleForwardConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleRedirectConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -144,7 +144,6 @@ public final class ListenerRuleAction {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListenerRuleAction build() {
             return new ListenerRuleAction(authenticateCognitoConfig, authenticateOidcConfig, fixedResponseConfig, forwardConfig, order, redirectConfig, targetGroupArn, type);
         }

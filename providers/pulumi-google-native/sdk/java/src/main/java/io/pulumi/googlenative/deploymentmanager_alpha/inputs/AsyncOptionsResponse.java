@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.PollingOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AsyncOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="methodMatch", required=true)
-    private final String methodMatch;
+      private final String methodMatch;
 
     public String getMethodMatch() {
         return this.methodMatch;
@@ -33,7 +33,7 @@ public final class AsyncOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pollingOptions", required=true)
-    private final PollingOptionsResponse pollingOptions;
+      private final PollingOptionsResponse pollingOptions;
 
     public PollingOptionsResponse getPollingOptions() {
         return this.pollingOptions;
@@ -82,7 +82,6 @@ public final class AsyncOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.pollingOptions = Objects.requireNonNull(pollingOptions);
             return this;
         }
-
         public AsyncOptionsResponse build() {
             return new AsyncOptionsResponse(methodMatch, pollingOptions);
         }

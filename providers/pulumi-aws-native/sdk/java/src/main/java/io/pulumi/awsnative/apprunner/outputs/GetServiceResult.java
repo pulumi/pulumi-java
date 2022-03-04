@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apprunner.outputs;
 import io.pulumi.awsnative.apprunner.outputs.ServiceHealthCheckConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceInstanceConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceSourceConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -65,21 +65,21 @@ public final class GetServiceResult {
     /**
      * The Amazon Resource Name (ARN) of the AppRunner Service.
      * 
-     */
+    */
     public Optional<String> getServiceArn() {
         return Optional.ofNullable(this.serviceArn);
     }
     /**
      * The AppRunner Service Id
      * 
-     */
+    */
     public Optional<String> getServiceId() {
         return Optional.ofNullable(this.serviceId);
     }
     /**
      * The Service Url of the AppRunner Service.
      * 
-     */
+    */
     public Optional<String> getServiceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
@@ -89,7 +89,7 @@ public final class GetServiceResult {
     /**
      * AppRunner Service status.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -160,7 +160,6 @@ public final class GetServiceResult {
             this.status = status;
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(healthCheckConfiguration, instanceConfiguration, serviceArn, serviceId, serviceUrl, sourceConfiguration, status);
         }

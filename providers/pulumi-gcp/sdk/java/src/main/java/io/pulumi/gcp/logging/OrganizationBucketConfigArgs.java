@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bucketId", required=true)
-    private final Input<String> bucketId;
+      private final Input<String> bucketId;
 
     public Input<String> getBucketId() {
         return this.bucketId;
@@ -31,7 +31,7 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -53,7 +53,7 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="organization", required=true)
-    private final Input<String> organization;
+      private final Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization;
@@ -64,7 +64,7 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retentionDays")
-    private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -168,7 +168,6 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }
-
         public OrganizationBucketConfigArgs build() {
             return new OrganizationBucketConfigArgs(bucketId, description, location, organization, retentionDays);
         }

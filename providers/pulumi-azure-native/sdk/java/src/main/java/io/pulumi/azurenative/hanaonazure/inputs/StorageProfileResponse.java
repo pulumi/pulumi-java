@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.azurenative.hanaonazure.inputs.DiskResponse;
 import io.pulumi.azurenative.hanaonazure.inputs.SAPSystemIDResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="hanaSids")
-    private final @Nullable List<SAPSystemIDResponse> hanaSids;
+      private final @Nullable List<SAPSystemIDResponse> hanaSids;
 
     public List<SAPSystemIDResponse> getHanaSids() {
         return this.hanaSids == null ? List.of() : this.hanaSids;
@@ -37,7 +37,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="nfsIpAddress", required=true)
-    private final String nfsIpAddress;
+      private final String nfsIpAddress;
 
     public String getNfsIpAddress() {
         return this.nfsIpAddress;
@@ -48,7 +48,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="osDisks")
-    private final @Nullable List<DiskResponse> osDisks;
+      private final @Nullable List<DiskResponse> osDisks;
 
     public List<DiskResponse> getOsDisks() {
         return this.osDisks == null ? List.of() : this.osDisks;
@@ -107,7 +107,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
             this.osDisks = osDisks;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(hanaSids, nfsIpAddress, osDisks);
         }

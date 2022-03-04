@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class TypedLocalObjectReference {
     /**
      * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
      * 
-     */
+    */
     public Optional<String> getApiGroup() {
         return Optional.ofNullable(this.apiGroup);
     }
     /**
      * Kind is the type of resource being referenced
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name is the name of resource being referenced
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -97,7 +97,6 @@ public final class TypedLocalObjectReference {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public TypedLocalObjectReference build() {
             return new TypedLocalObjectReference(apiGroup, kind, name);
         }

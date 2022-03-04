@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="customLicenseAcquisitionUrlTemplate")
-    private final @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
+      private final @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
 
     public Input<String> getCustomLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Input.empty() : this.customLicenseAcquisitionUrlTemplate;
@@ -34,7 +34,7 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="playReadyCustomAttributes")
-    private final @Nullable Input<String> playReadyCustomAttributes;
+      private final @Nullable Input<String> playReadyCustomAttributes;
 
     public Input<String> getPlayReadyCustomAttributes() {
         return this.playReadyCustomAttributes == null ? Input.empty() : this.playReadyCustomAttributes;
@@ -93,7 +93,6 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
             this.playReadyCustomAttributes = Input.ofNullable(playReadyCustomAttributes);
             return this;
         }
-
         public StreamingPolicyPlayReadyConfigurationArgs build() {
             return new StreamingPolicyPlayReadyConfigurationArgs(customLicenseAcquisitionUrlTemplate, playReadyCustomAttributes);
         }

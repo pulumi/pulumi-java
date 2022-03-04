@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorEndpointScopeItemResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,14 +33,14 @@ public final class ConnectionMonitorEndpointScopeResponse {
     /**
      * List of items which needs to be excluded from the endpoint scope.
      * 
-     */
+    */
     public List<ConnectionMonitorEndpointScopeItemResponse> getExclude() {
         return this.exclude == null ? List.of() : this.exclude;
     }
     /**
      * List of items which needs to be included to the endpoint scope.
      * 
-     */
+    */
     public List<ConnectionMonitorEndpointScopeItemResponse> getInclude() {
         return this.include == null ? List.of() : this.include;
     }
@@ -76,7 +76,6 @@ public final class ConnectionMonitorEndpointScopeResponse {
             this.include = include;
             return this;
         }
-
         public ConnectionMonitorEndpointScopeResponse build() {
             return new ConnectionMonitorEndpointScopeResponse(exclude, include);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azuredata;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cores")
-    private final @Nullable Input<Integer> cores;
+      private final @Nullable Input<Integer> cores;
 
     public Input<Integer> getCores() {
         return this.cores == null ? Input.empty() : this.cores;
@@ -31,7 +31,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="edition")
-    private final @Nullable Input<String> edition;
+      private final @Nullable Input<String> edition;
 
     public Input<String> getEdition() {
         return this.edition == null ? Input.empty() : this.edition;
@@ -42,7 +42,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="propertyBag")
-    private final @Nullable Input<String> propertyBag;
+      private final @Nullable Input<String> propertyBag;
 
     public Input<String> getPropertyBag() {
         return this.propertyBag == null ? Input.empty() : this.propertyBag;
@@ -53,7 +53,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationID")
-    private final @Nullable Input<String> registrationID;
+      private final @Nullable Input<String> registrationID;
 
     public Input<String> getRegistrationID() {
         return this.registrationID == null ? Input.empty() : this.registrationID;
@@ -64,7 +64,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlServerName")
-    private final @Nullable Input<String> sqlServerName;
+      private final @Nullable Input<String> sqlServerName;
 
     public Input<String> getSqlServerName() {
         return this.sqlServerName == null ? Input.empty() : this.sqlServerName;
@@ -86,7 +86,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlServerRegistrationName", required=true)
-    private final Input<String> sqlServerRegistrationName;
+      private final Input<String> sqlServerRegistrationName;
 
     public Input<String> getSqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
@@ -97,7 +97,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -246,7 +246,6 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public SqlServerArgs build() {
             return new SqlServerArgs(cores, edition, propertyBag, registrationID, resourceGroupName, sqlServerName, sqlServerRegistrationName, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ModuleResponse {
     /**
      * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
      * 
-     */
+    */
     public Optional<String> getArgs() {
         return Optional.ofNullable(this.args);
     }
     /**
      * The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The version of the module, e.g. '1.0'.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -97,7 +97,6 @@ public final class ModuleResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ModuleResponse build() {
             return new ModuleResponse(args, name, version);
         }

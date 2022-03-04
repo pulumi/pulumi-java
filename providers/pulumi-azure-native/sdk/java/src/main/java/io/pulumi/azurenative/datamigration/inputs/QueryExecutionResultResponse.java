@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ExecutionStatisticsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="queryText", required=true)
-    private final String queryText;
+      private final String queryText;
 
     public String getQueryText() {
         return this.queryText;
@@ -34,7 +34,7 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sourceResult", required=true)
-    private final ExecutionStatisticsResponse sourceResult;
+      private final ExecutionStatisticsResponse sourceResult;
 
     public ExecutionStatisticsResponse getSourceResult() {
         return this.sourceResult;
@@ -45,7 +45,7 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="statementsInBatch", required=true)
-    private final Double statementsInBatch;
+      private final Double statementsInBatch;
 
     public Double getStatementsInBatch() {
         return this.statementsInBatch;
@@ -56,7 +56,7 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="targetResult", required=true)
-    private final ExecutionStatisticsResponse targetResult;
+      private final ExecutionStatisticsResponse targetResult;
 
     public ExecutionStatisticsResponse getTargetResult() {
         return this.targetResult;
@@ -125,7 +125,6 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
             this.targetResult = Objects.requireNonNull(targetResult);
             return this;
         }
-
         public QueryExecutionResultResponse build() {
             return new QueryExecutionResultResponse(queryText, sourceResult, statementsInBatch, targetResult);
         }

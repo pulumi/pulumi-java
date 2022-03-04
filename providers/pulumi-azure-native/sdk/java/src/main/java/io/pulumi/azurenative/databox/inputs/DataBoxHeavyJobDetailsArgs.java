@@ -10,7 +10,7 @@ import io.pulumi.azurenative.databox.inputs.KeyEncryptionKeyArgs;
 import io.pulumi.azurenative.databox.inputs.PreferencesArgs;
 import io.pulumi.azurenative.databox.inputs.ShippingAddressArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="contactDetails", required=true)
-    private final Input<ContactDetailsArgs> contactDetails;
+      private final Input<ContactDetailsArgs> contactDetails;
 
     public Input<ContactDetailsArgs> getContactDetails() {
         return this.contactDetails;
@@ -42,7 +42,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataExportDetails")
-    private final @Nullable Input<List<DataExportDetailsArgs>> dataExportDetails;
+      private final @Nullable Input<List<DataExportDetailsArgs>> dataExportDetails;
 
     public Input<List<DataExportDetailsArgs>> getDataExportDetails() {
         return this.dataExportDetails == null ? Input.empty() : this.dataExportDetails;
@@ -53,7 +53,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataImportDetails")
-    private final @Nullable Input<List<DataImportDetailsArgs>> dataImportDetails;
+      private final @Nullable Input<List<DataImportDetailsArgs>> dataImportDetails;
 
     public Input<List<DataImportDetailsArgs>> getDataImportDetails() {
         return this.dataImportDetails == null ? Input.empty() : this.dataImportDetails;
@@ -64,7 +64,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="devicePassword")
-    private final @Nullable Input<String> devicePassword;
+      private final @Nullable Input<String> devicePassword;
 
     public Input<String> getDevicePassword() {
         return this.devicePassword == null ? Input.empty() : this.devicePassword;
@@ -75,7 +75,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="expectedDataSizeInTeraBytes")
-    private final @Nullable Input<Integer> expectedDataSizeInTeraBytes;
+      private final @Nullable Input<Integer> expectedDataSizeInTeraBytes;
 
     public Input<Integer> getExpectedDataSizeInTeraBytes() {
         return this.expectedDataSizeInTeraBytes == null ? Input.empty() : this.expectedDataSizeInTeraBytes;
@@ -87,7 +87,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="jobDetailsType", required=true)
-    private final Input<String> jobDetailsType;
+      private final Input<String> jobDetailsType;
 
     public Input<String> getJobDetailsType() {
         return this.jobDetailsType;
@@ -98,7 +98,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="keyEncryptionKey")
-    private final @Nullable Input<KeyEncryptionKeyArgs> keyEncryptionKey;
+      private final @Nullable Input<KeyEncryptionKeyArgs> keyEncryptionKey;
 
     public Input<KeyEncryptionKeyArgs> getKeyEncryptionKey() {
         return this.keyEncryptionKey == null ? Input.empty() : this.keyEncryptionKey;
@@ -109,7 +109,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="preferences")
-    private final @Nullable Input<PreferencesArgs> preferences;
+      private final @Nullable Input<PreferencesArgs> preferences;
 
     public Input<PreferencesArgs> getPreferences() {
         return this.preferences == null ? Input.empty() : this.preferences;
@@ -120,7 +120,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="shippingAddress")
-    private final @Nullable Input<ShippingAddressArgs> shippingAddress;
+      private final @Nullable Input<ShippingAddressArgs> shippingAddress;
 
     public Input<ShippingAddressArgs> getShippingAddress() {
         return this.shippingAddress == null ? Input.empty() : this.shippingAddress;
@@ -284,7 +284,6 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
             this.shippingAddress = Input.ofNullable(shippingAddress);
             return this;
         }
-
         public DataBoxHeavyJobDetailsArgs build() {
             return new DataBoxHeavyJobDetailsArgs(contactDetails, dataExportDetails, dataImportDetails, devicePassword, expectedDataSizeInTeraBytes, jobDetailsType, keyEncryptionKey, preferences, shippingAddress);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.relay.outputs;
 
 import io.pulumi.azurenative.relay.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -94,35 +94,35 @@ public final class GetNamespaceResult {
     /**
      * The time the namespace was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Identifier for Azure Insights metrics.
      * 
-     */
+    */
     public String getMetricId() {
         return this.metricId;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -132,35 +132,35 @@ public final class GetNamespaceResult {
     /**
      * Endpoint you can use to perform Service Bus operations.
      * 
-     */
+    */
     public String getServiceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
      * SKU of the namespace.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
      * 
-     */
+    */
     public String getUpdatedAt() {
         return this.updatedAt;
     }
@@ -259,7 +259,6 @@ public final class GetNamespaceResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetNamespaceResult build() {
             return new GetNamespaceResult(createdAt, id, location, metricId, name, provisioningState, serviceBusEndpoint, sku, tags, type, updatedAt);
         }

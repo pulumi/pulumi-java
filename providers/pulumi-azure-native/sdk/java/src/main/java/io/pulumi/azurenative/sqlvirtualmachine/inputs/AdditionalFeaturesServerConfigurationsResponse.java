@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AdditionalFeaturesServerConfigurationsResponse extends io.pul
      * 
      */
     @InputImport(name="isRServicesEnabled")
-    private final @Nullable Boolean isRServicesEnabled;
+      private final @Nullable Boolean isRServicesEnabled;
 
     public Optional<Boolean> getIsRServicesEnabled() {
         return this.isRServicesEnabled == null ? Optional.empty() : Optional.ofNullable(this.isRServicesEnabled);
@@ -61,7 +61,6 @@ public final class AdditionalFeaturesServerConfigurationsResponse extends io.pul
             this.isRServicesEnabled = isRServicesEnabled;
             return this;
         }
-
         public AdditionalFeaturesServerConfigurationsResponse build() {
             return new AdditionalFeaturesServerConfigurationsResponse(isRServicesEnabled);
         }

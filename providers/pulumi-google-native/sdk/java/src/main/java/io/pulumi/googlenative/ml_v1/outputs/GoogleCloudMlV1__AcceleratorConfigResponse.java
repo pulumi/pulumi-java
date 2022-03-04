@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse {
     /**
      * The number of accelerators to attach to each machine running the job.
      * 
-     */
+    */
     public String getCount() {
         return this.count;
     }
     /**
      * The type of accelerator to use.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudMlV1__AcceleratorConfigResponse build() {
             return new GoogleCloudMlV1__AcceleratorConfigResponse(count, type);
         }

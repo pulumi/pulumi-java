@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ContainerPortResponse {
     /**
      * The port number exposed within the container group.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * The protocol associated with the port.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -77,7 +77,6 @@ public final class ContainerPortResponse {
             this.protocol = protocol;
             return this;
         }
-
         public ContainerPortResponse build() {
             return new ContainerPortResponse(port, protocol);
         }

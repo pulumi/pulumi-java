@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonRespo
      * 
      */
     @InputImport(name="openUriAction", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
+      private final GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
 
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse getOpenUriAction() {
         return this.openUriAction;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonRespo
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonRespo
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse(openUriAction, title);
         }

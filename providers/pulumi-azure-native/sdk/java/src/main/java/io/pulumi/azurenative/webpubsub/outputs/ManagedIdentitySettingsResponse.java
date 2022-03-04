@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class ManagedIdentitySettingsResponse {
      * The Resource indicating the App ID URI of the target resource.
      * It also appears in the aud (audience) claim of the issued token.
      * 
-     */
+    */
     public Optional<String> getResource() {
         return Optional.ofNullable(this.resource);
     }
@@ -56,7 +56,6 @@ public final class ManagedIdentitySettingsResponse {
             this.resource = resource;
             return this;
         }
-
         public ManagedIdentitySettingsResponse build() {
             return new ManagedIdentitySettingsResponse(resource);
         }

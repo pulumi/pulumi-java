@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.healthlake.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class FHIRDatastoreTag {
     /**
      * The key of the tag.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value of the tag.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class FHIRDatastoreTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FHIRDatastoreTag build() {
             return new FHIRDatastoreTag(key, value);
         }

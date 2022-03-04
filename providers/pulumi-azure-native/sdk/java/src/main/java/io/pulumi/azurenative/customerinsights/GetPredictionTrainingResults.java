@@ -6,21 +6,41 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.customerinsights.inputs.GetPredictionTrainingResultsArgs;
 import io.pulumi.azurenative.customerinsights.outputs.GetPredictionTrainingResultsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPredictionTrainingResults {
-/**
- * The training results of the prediction.
+    private GetPredictionTrainingResults() {}
+    public interface BuilderApplicator {
+        public void apply(GetPredictionTrainingResultsArgs.Builder a);
+    }
+    private static GetPredictionTrainingResultsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPredictionTrainingResultsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The training results of the prediction.
  * API Version: 2017-04-26.
  * 
- *
- * The training results of the prediction.
+     *
+     * The training results of the prediction.
  * 
- */
+     */
+    public static CompletableFuture<GetPredictionTrainingResultsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The training results of the prediction.
+     * API Version: 2017-04-26.
+     * 
+     *
+         * The training results of the prediction.
+     * 
+     */
     public static CompletableFuture<GetPredictionTrainingResultsResult> invokeAsync(GetPredictionTrainingResultsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getPredictionTrainingResults", TypeShape.of(GetPredictionTrainingResultsResult.class), args == null ? GetPredictionTrainingResultsArgs.Empty : args, Utilities.withVersion(options));
     }

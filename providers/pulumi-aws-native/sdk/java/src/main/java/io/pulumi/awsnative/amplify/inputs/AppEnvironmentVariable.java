@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplify.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class AppEnvironmentVariable extends io.pulumi.resources.InvokeArgs
     public static final AppEnvironmentVariable Empty = new AppEnvironmentVariable();
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -69,7 +69,6 @@ public final class AppEnvironmentVariable extends io.pulumi.resources.InvokeArgs
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AppEnvironmentVariable build() {
             return new AppEnvironmentVariable(name, value);
         }

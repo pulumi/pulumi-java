@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.DataIntegrityValidationResultResponse;
 import io.pulumi.azurenative.datamigration.outputs.QueryAnalysisValidationResultResponse;
 import io.pulumi.azurenative.datamigration.outputs.SchemaComparisonValidationResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -98,35 +98,35 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     /**
      * Provides data integrity validation result between the source and target tables that are migrated.
      * 
-     */
+    */
     public DataIntegrityValidationResultResponse getDataIntegrityValidationResult() {
         return this.dataIntegrityValidationResult;
     }
     /**
      * Validation end time
      * 
-     */
+    */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Migration Identifier
      * 
-     */
+    */
     public String getMigrationId() {
         return this.migrationId;
     }
     /**
      * Results of some of the query execution result between source and target database
      * 
-     */
+    */
     public QueryAnalysisValidationResultResponse getQueryAnalysisValidationResult() {
         return this.queryAnalysisValidationResult;
     }
@@ -134,42 +134,42 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * Result type
      * Expected value is 'MigrationDatabaseLevelValidationOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Provides schema comparison result between source and target database
      * 
-     */
+    */
     public SchemaComparisonValidationResultResponse getSchemaValidationResult() {
         return this.schemaValidationResult;
     }
     /**
      * Name of the source database
      * 
-     */
+    */
     public String getSourceDatabaseName() {
         return this.sourceDatabaseName;
     }
     /**
      * Validation start time
      * 
-     */
+    */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Current status of validation at the database level
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Name of the target database
      * 
-     */
+    */
     public String getTargetDatabaseName() {
         return this.targetDatabaseName;
     }
@@ -268,7 +268,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
             this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(dataIntegrityValidationResult, endedOn, id, migrationId, queryAnalysisValidationResult, resultType, schemaValidationResult, sourceDatabaseName, startedOn, status, targetDatabaseName);
         }

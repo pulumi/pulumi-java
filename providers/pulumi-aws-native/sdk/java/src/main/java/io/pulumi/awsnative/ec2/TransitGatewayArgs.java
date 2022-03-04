@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,84 +18,84 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
     public static final TransitGatewayArgs Empty = new TransitGatewayArgs();
 
     @InputImport(name="amazonSideAsn")
-    private final @Nullable Input<Integer> amazonSideAsn;
+      private final @Nullable Input<Integer> amazonSideAsn;
 
     public Input<Integer> getAmazonSideAsn() {
         return this.amazonSideAsn == null ? Input.empty() : this.amazonSideAsn;
     }
 
     @InputImport(name="associationDefaultRouteTableId")
-    private final @Nullable Input<String> associationDefaultRouteTableId;
+      private final @Nullable Input<String> associationDefaultRouteTableId;
 
     public Input<String> getAssociationDefaultRouteTableId() {
         return this.associationDefaultRouteTableId == null ? Input.empty() : this.associationDefaultRouteTableId;
     }
 
     @InputImport(name="autoAcceptSharedAttachments")
-    private final @Nullable Input<String> autoAcceptSharedAttachments;
+      private final @Nullable Input<String> autoAcceptSharedAttachments;
 
     public Input<String> getAutoAcceptSharedAttachments() {
         return this.autoAcceptSharedAttachments == null ? Input.empty() : this.autoAcceptSharedAttachments;
     }
 
     @InputImport(name="defaultRouteTableAssociation")
-    private final @Nullable Input<String> defaultRouteTableAssociation;
+      private final @Nullable Input<String> defaultRouteTableAssociation;
 
     public Input<String> getDefaultRouteTableAssociation() {
         return this.defaultRouteTableAssociation == null ? Input.empty() : this.defaultRouteTableAssociation;
     }
 
     @InputImport(name="defaultRouteTablePropagation")
-    private final @Nullable Input<String> defaultRouteTablePropagation;
+      private final @Nullable Input<String> defaultRouteTablePropagation;
 
     public Input<String> getDefaultRouteTablePropagation() {
         return this.defaultRouteTablePropagation == null ? Input.empty() : this.defaultRouteTablePropagation;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="dnsSupport")
-    private final @Nullable Input<String> dnsSupport;
+      private final @Nullable Input<String> dnsSupport;
 
     public Input<String> getDnsSupport() {
         return this.dnsSupport == null ? Input.empty() : this.dnsSupport;
     }
 
     @InputImport(name="multicastSupport")
-    private final @Nullable Input<String> multicastSupport;
+      private final @Nullable Input<String> multicastSupport;
 
     public Input<String> getMulticastSupport() {
         return this.multicastSupport == null ? Input.empty() : this.multicastSupport;
     }
 
     @InputImport(name="propagationDefaultRouteTableId")
-    private final @Nullable Input<String> propagationDefaultRouteTableId;
+      private final @Nullable Input<String> propagationDefaultRouteTableId;
 
     public Input<String> getPropagationDefaultRouteTableId() {
         return this.propagationDefaultRouteTableId == null ? Input.empty() : this.propagationDefaultRouteTableId;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<TransitGatewayTagArgs>> tags;
+      private final @Nullable Input<List<TransitGatewayTagArgs>> tags;
 
     public Input<List<TransitGatewayTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="transitGatewayCidrBlocks")
-    private final @Nullable Input<List<String>> transitGatewayCidrBlocks;
+      private final @Nullable Input<List<String>> transitGatewayCidrBlocks;
 
     public Input<List<String>> getTransitGatewayCidrBlocks() {
         return this.transitGatewayCidrBlocks == null ? Input.empty() : this.transitGatewayCidrBlocks;
     }
 
     @InputImport(name="vpnEcmpSupport")
-    private final @Nullable Input<String> vpnEcmpSupport;
+      private final @Nullable Input<String> vpnEcmpSupport;
 
     public Input<String> getVpnEcmpSupport() {
         return this.vpnEcmpSupport == null ? Input.empty() : this.vpnEcmpSupport;
@@ -304,7 +304,6 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.vpnEcmpSupport = Input.ofNullable(vpnEcmpSupport);
             return this;
         }
-
         public TransitGatewayArgs build() {
             return new TransitGatewayArgs(amazonSideAsn, associationDefaultRouteTableId, autoAcceptSharedAttachments, defaultRouteTableAssociation, defaultRouteTablePropagation, description, dnsSupport, multicastSupport, propagationDefaultRouteTableId, tags, transitGatewayCidrBlocks, vpnEcmpSupport);
         }

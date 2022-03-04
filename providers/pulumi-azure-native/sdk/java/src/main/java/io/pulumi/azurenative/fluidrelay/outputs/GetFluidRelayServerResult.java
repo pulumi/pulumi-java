@@ -5,7 +5,7 @@ package io.pulumi.azurenative.fluidrelay.outputs;
 
 import io.pulumi.azurenative.fluidrelay.outputs.FluidRelayEndpointsResponse;
 import io.pulumi.azurenative.fluidrelay.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -85,63 +85,63 @@ public final class GetFluidRelayServerResult {
     /**
      * The Fluid Relay Service endpoints for this server.
      * 
-     */
+    */
     public FluidRelayEndpointsResponse getFluidRelayEndpoints() {
         return this.fluidRelayEndpoints;
     }
     /**
      * The Fluid tenantId for this server
      * 
-     */
+    */
     public String getFrsTenantId() {
         return this.frsTenantId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provision states for FluidRelay RP
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * System meta data for this resource, including creation and modification information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -226,7 +226,6 @@ public final class GetFluidRelayServerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFluidRelayServerResult build() {
             return new GetFluidRelayServerResult(fluidRelayEndpoints, frsTenantId, id, location, name, provisioningState, systemData, tags, type);
         }

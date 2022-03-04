@@ -6,17 +6,33 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.migrate.inputs.GetHyperVCollectorArgs;
 import io.pulumi.azurenative.migrate.outputs.GetHyperVCollectorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHyperVCollector {
-/**
- * API Version: 2019-10-01.
+    private GetHyperVCollector() {}
+    public interface BuilderApplicator {
+        public void apply(GetHyperVCollectorArgs.Builder a);
+    }
+    private static GetHyperVCollectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHyperVCollectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2019-10-01.
  * 
- */
+     */
+    public static CompletableFuture<GetHyperVCollectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2019-10-01.
+     * 
+     */
     public static CompletableFuture<GetHyperVCollectorResult> invokeAsync(GetHyperVCollectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getHyperVCollector", TypeShape.of(GetHyperVCollectorResult.class), args == null ? GetHyperVCollectorArgs.Empty : args, Utilities.withVersion(options));
     }

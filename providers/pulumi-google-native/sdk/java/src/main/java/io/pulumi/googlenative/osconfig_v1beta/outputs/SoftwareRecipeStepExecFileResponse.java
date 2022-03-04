@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -47,28 +47,28 @@ public final class SoftwareRecipeStepExecFileResponse {
     /**
      * Defaults to [0]. A list of possible return values that the program can return to indicate a success.
      * 
-     */
+    */
     public List<Integer> getAllowedExitCodes() {
         return this.allowedExitCodes;
     }
     /**
      * Arguments to be passed to the provided executable.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args;
     }
     /**
      * The id of the relevant artifact in the recipe.
      * 
-     */
+    */
     public String getArtifactId() {
         return this.artifactId;
     }
     /**
      * The absolute path of the file on the local filesystem.
      * 
-     */
+    */
     public String getLocalPath() {
         return this.localPath;
     }
@@ -118,7 +118,6 @@ public final class SoftwareRecipeStepExecFileResponse {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public SoftwareRecipeStepExecFileResponse build() {
             return new SoftwareRecipeStepExecFileResponse(allowedExitCodes, args, artifactId, localPath);
         }

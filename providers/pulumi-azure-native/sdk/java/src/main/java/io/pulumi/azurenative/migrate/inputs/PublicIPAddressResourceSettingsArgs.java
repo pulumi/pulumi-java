@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="domainNameLabel")
-    private final @Nullable Input<String> domainNameLabel;
+      private final @Nullable Input<String> domainNameLabel;
 
     public Input<String> getDomainNameLabel() {
         return this.domainNameLabel == null ? Input.empty() : this.domainNameLabel;
@@ -34,7 +34,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable Input<String> fqdn;
+      private final @Nullable Input<String> fqdn;
 
     public Input<String> getFqdn() {
         return this.fqdn == null ? Input.empty() : this.fqdn;
@@ -45,7 +45,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="publicIpAllocationMethod")
-    private final @Nullable Input<String> publicIpAllocationMethod;
+      private final @Nullable Input<String> publicIpAllocationMethod;
 
     public Input<String> getPublicIpAllocationMethod() {
         return this.publicIpAllocationMethod == null ? Input.empty() : this.publicIpAllocationMethod;
@@ -57,7 +57,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -68,7 +68,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<String> sku;
+      private final @Nullable Input<String> sku;
 
     public Input<String> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -79,7 +79,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-    private final Input<String> targetResourceName;
+      private final Input<String> targetResourceName;
 
     public Input<String> getTargetResourceName() {
         return this.targetResourceName;
@@ -90,7 +90,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<String> zones;
+      private final @Nullable Input<String> zones;
 
     public Input<String> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -224,7 +224,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public PublicIPAddressResourceSettingsArgs build() {
             return new PublicIPAddressResourceSettingsArgs(domainNameLabel, fqdn, publicIpAllocationMethod, resourceType, sku, targetResourceName, zones);
         }

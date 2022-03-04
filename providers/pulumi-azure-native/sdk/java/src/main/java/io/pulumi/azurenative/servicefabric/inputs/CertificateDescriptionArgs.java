@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="thumbprint", required=true)
-    private final Input<String> thumbprint;
+      private final Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint;
@@ -34,7 +34,7 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="thumbprintSecondary")
-    private final @Nullable Input<String> thumbprintSecondary;
+      private final @Nullable Input<String> thumbprintSecondary;
 
     public Input<String> getThumbprintSecondary() {
         return this.thumbprintSecondary == null ? Input.empty() : this.thumbprintSecondary;
@@ -45,7 +45,7 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="x509StoreName")
-    private final @Nullable Input<String> x509StoreName;
+      private final @Nullable Input<String> x509StoreName;
 
     public Input<String> getX509StoreName() {
         return this.x509StoreName == null ? Input.empty() : this.x509StoreName;
@@ -119,7 +119,6 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
             this.x509StoreName = Input.ofNullable(x509StoreName);
             return this;
         }
-
         public CertificateDescriptionArgs build() {
             return new CertificateDescriptionArgs(thumbprint, thumbprintSecondary, x509StoreName);
         }

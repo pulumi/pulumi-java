@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.BuildpacksGroupPropertiesResponse;
 import io.pulumi.azurenative.appplatform.inputs.StackPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="buildpackGroups")
-    private final @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups;
+      private final @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups;
 
     public List<BuildpacksGroupPropertiesResponse> getBuildpackGroups() {
         return this.buildpackGroups == null ? List.of() : this.buildpackGroups;
@@ -37,7 +37,7 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -48,7 +48,7 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="stack")
-    private final @Nullable StackPropertiesResponse stack;
+      private final @Nullable StackPropertiesResponse stack;
 
     public Optional<StackPropertiesResponse> getStack() {
         return this.stack == null ? Optional.empty() : Optional.ofNullable(this.stack);
@@ -107,7 +107,6 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
             this.stack = stack;
             return this;
         }
-
         public BuilderPropertiesResponse build() {
             return new BuilderPropertiesResponse(buildpackGroups, provisioningState, stack);
         }

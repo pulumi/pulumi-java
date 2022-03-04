@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apnsCertificate")
-    private final @Nullable Input<String> apnsCertificate;
+      private final @Nullable Input<String> apnsCertificate;
 
     public Input<String> getApnsCertificate() {
         return this.apnsCertificate == null ? Input.empty() : this.apnsCertificate;
@@ -34,7 +34,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -45,7 +45,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appName")
-    private final @Nullable Input<String> appName;
+      private final @Nullable Input<String> appName;
 
     public Input<String> getAppName() {
         return this.appName == null ? Input.empty() : this.appName;
@@ -56,7 +56,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateKey")
-    private final @Nullable Input<String> certificateKey;
+      private final @Nullable Input<String> certificateKey;
 
     public Input<String> getCertificateKey() {
         return this.certificateKey == null ? Input.empty() : this.certificateKey;
@@ -67,7 +67,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -78,7 +78,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -89,7 +89,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable Input<String> thumbprint;
+      private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
@@ -100,7 +100,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="token")
-    private final @Nullable Input<String> token;
+      private final @Nullable Input<String> token;
 
     public Input<String> getToken() {
         return this.token == null ? Input.empty() : this.token;
@@ -249,7 +249,6 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.token = Input.ofNullable(token);
             return this;
         }
-
         public ApnsCredentialArgs build() {
             return new ApnsCredentialArgs(apnsCertificate, appId, appName, certificateKey, endpoint, keyId, thumbprint, token);
         }

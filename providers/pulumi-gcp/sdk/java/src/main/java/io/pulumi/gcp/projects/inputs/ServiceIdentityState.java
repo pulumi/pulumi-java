@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -31,7 +31,7 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -42,7 +42,7 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -116,7 +116,6 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public ServiceIdentityState build() {
             return new ServiceIdentityState(email, project, service);
         }

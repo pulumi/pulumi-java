@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.VulnerabilityLocationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="affectedLocation", required=true)
-    private final VulnerabilityLocationResponse affectedLocation;
+      private final VulnerabilityLocationResponse affectedLocation;
 
     public VulnerabilityLocationResponse getAffectedLocation() {
         return this.affectedLocation;
@@ -33,7 +33,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="effectiveSeverity", required=true)
-    private final String effectiveSeverity;
+      private final String effectiveSeverity;
 
     public String getEffectiveSeverity() {
         return this.effectiveSeverity;
@@ -44,7 +44,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fixedLocation", required=true)
-    private final VulnerabilityLocationResponse fixedLocation;
+      private final VulnerabilityLocationResponse fixedLocation;
 
     public VulnerabilityLocationResponse getFixedLocation() {
         return this.fixedLocation;
@@ -55,7 +55,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="packageType", required=true)
-    private final String packageType;
+      private final String packageType;
 
     public String getPackageType() {
         return this.packageType;
@@ -124,7 +124,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
-
         public PackageIssueResponse build() {
             return new PackageIssueResponse(affectedLocation, effectiveSeverity, fixedLocation, packageType);
         }

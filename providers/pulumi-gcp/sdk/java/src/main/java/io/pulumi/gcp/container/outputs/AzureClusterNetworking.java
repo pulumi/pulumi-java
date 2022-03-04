@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class AzureClusterNetworking {
     /**
      * Required. The IP address range of the pods in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All pods in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
      * 
-     */
+    */
     public List<String> getPodAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
     }
     /**
      * Required. The IP address range for services in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All services in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creating a cluster.
      * 
-     */
+    */
     public List<String> getServiceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
     }
     /**
      * Required. The Azure Resource Manager (ARM) ID of the VNet associated with your cluster. All components in the cluster (i.e. control plane and node pools) run on a single VNet. Example: `/subscriptions/*{@literal /}resourceGroups/*{@literal /}providers/Microsoft.Network/virtualNetworks/*` This field cannot be changed after creation.
      * 
-     */
+    */
     public String getVirtualNetworkId() {
         return this.virtualNetworkId;
     }
@@ -96,7 +96,6 @@ public final class AzureClusterNetworking {
             this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId);
             return this;
         }
-
         public AzureClusterNetworking build() {
             return new AzureClusterNetworking(podAddressCidrBlocks, serviceAddressCidrBlocks, virtualNetworkId);
         }

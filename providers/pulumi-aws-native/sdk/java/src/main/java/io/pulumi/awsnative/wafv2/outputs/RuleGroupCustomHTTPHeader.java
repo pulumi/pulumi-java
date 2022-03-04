@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class RuleGroupCustomHTTPHeader {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RuleGroupCustomHTTPHeader build() {
             return new RuleGroupCustomHTTPHeader(name, value);
         }

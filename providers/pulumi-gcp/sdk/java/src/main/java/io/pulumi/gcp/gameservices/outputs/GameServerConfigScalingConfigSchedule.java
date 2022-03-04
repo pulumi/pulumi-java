@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,7 +55,7 @@ public final class GameServerConfigScalingConfigSchedule {
      * after the cron job's start time.
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getCronJobDuration() {
         return Optional.ofNullable(this.cronJobDuration);
     }
@@ -64,7 +64,7 @@ public final class GameServerConfigScalingConfigSchedule {
      * https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
      * defined by the realm.
      * 
-     */
+    */
     public Optional<String> getCronSpec() {
         return Optional.ofNullable(this.cronSpec);
     }
@@ -72,7 +72,7 @@ public final class GameServerConfigScalingConfigSchedule {
      * The end time of the event.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -80,7 +80,7 @@ public final class GameServerConfigScalingConfigSchedule {
      * The start time of the event.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -130,7 +130,6 @@ public final class GameServerConfigScalingConfigSchedule {
             this.startTime = startTime;
             return this;
         }
-
         public GameServerConfigScalingConfigSchedule build() {
             return new GameServerConfigScalingConfigSchedule(cronJobDuration, cronSpec, endTime, startTime);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.FormatTypes;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -35,7 +35,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arraySeparator")
-    private final @Nullable Input<String> arraySeparator;
+      private final @Nullable Input<String> arraySeparator;
 
     public Input<String> getArraySeparator() {
         return this.arraySeparator == null ? Input.empty() : this.arraySeparator;
@@ -46,7 +46,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="columnDelimiter")
-    private final @Nullable Input<String> columnDelimiter;
+      private final @Nullable Input<String> columnDelimiter;
 
     public Input<String> getColumnDelimiter() {
         return this.columnDelimiter == null ? Input.empty() : this.columnDelimiter;
@@ -57,7 +57,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="formatType", required=true)
-    private final Input<FormatTypes> formatType;
+      private final Input<FormatTypes> formatType;
 
     public Input<FormatTypes> getFormatType() {
         return this.formatType;
@@ -68,7 +68,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="quoteCharacter")
-    private final @Nullable Input<String> quoteCharacter;
+      private final @Nullable Input<String> quoteCharacter;
 
     public Input<String> getQuoteCharacter() {
         return this.quoteCharacter == null ? Input.empty() : this.quoteCharacter;
@@ -79,7 +79,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="quoteEscapeCharacter")
-    private final @Nullable Input<String> quoteEscapeCharacter;
+      private final @Nullable Input<String> quoteEscapeCharacter;
 
     public Input<String> getQuoteEscapeCharacter() {
         return this.quoteEscapeCharacter == null ? Input.empty() : this.quoteEscapeCharacter;
@@ -198,7 +198,6 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
             this.quoteEscapeCharacter = Input.ofNullable(quoteEscapeCharacter);
             return this;
         }
-
         public ConnectorMappingFormatArgs build() {
             return new ConnectorMappingFormatArgs(acceptLanguage, arraySeparator, columnDelimiter, formatType, quoteCharacter, quoteEscapeCharacter);
         }

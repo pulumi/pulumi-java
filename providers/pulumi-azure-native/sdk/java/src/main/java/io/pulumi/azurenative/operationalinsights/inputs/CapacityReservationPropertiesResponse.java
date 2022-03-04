@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CapacityReservationPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="lastSkuUpdate", required=true)
-    private final String lastSkuUpdate;
+      private final String lastSkuUpdate;
 
     public String getLastSkuUpdate() {
         return this.lastSkuUpdate;
@@ -33,7 +33,7 @@ public final class CapacityReservationPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="minCapacity", required=true)
-    private final Double minCapacity;
+      private final Double minCapacity;
 
     public Double getMinCapacity() {
         return this.minCapacity;
@@ -82,7 +82,6 @@ public final class CapacityReservationPropertiesResponse extends io.pulumi.resou
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
-
         public CapacityReservationPropertiesResponse build() {
             return new CapacityReservationPropertiesResponse(lastSkuUpdate, minCapacity);
         }

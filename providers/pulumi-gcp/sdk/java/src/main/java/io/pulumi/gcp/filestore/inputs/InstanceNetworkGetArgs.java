@@ -4,7 +4,7 @@
 package io.pulumi.gcp.filestore.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectMode")
-    private final @Nullable Input<String> connectMode;
+      private final @Nullable Input<String> connectMode;
 
     public Input<String> getConnectMode() {
         return this.connectMode == null ? Input.empty() : this.connectMode;
@@ -36,7 +36,7 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ipAddresses")
-    private final @Nullable Input<List<String>> ipAddresses;
+      private final @Nullable Input<List<String>> ipAddresses;
 
     public Input<List<String>> getIpAddresses() {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
@@ -49,7 +49,7 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="modes", required=true)
-    private final Input<List<String>> modes;
+      private final Input<List<String>> modes;
 
     public Input<List<String>> getModes() {
         return this.modes;
@@ -61,7 +61,7 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="network", required=true)
-    private final Input<String> network;
+      private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -73,7 +73,7 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="reservedIpRange")
-    private final @Nullable Input<String> reservedIpRange;
+      private final @Nullable Input<String> reservedIpRange;
 
     public Input<String> getReservedIpRange() {
         return this.reservedIpRange == null ? Input.empty() : this.reservedIpRange;
@@ -177,7 +177,6 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
             this.reservedIpRange = Input.ofNullable(reservedIpRange);
             return this;
         }
-
         public InstanceNetworkGetArgs build() {
             return new InstanceNetworkGetArgs(connectMode, ipAddresses, modes, network, reservedIpRange);
         }

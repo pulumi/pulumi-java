@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ApplicationGatewayBackendAddressResponse {
     /**
      * Fully qualified domain name (FQDN).
      * 
-     */
+    */
     public Optional<String> getFqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * IP address.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -76,7 +76,6 @@ public final class ApplicationGatewayBackendAddressResponse {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public ApplicationGatewayBackendAddressResponse build() {
             return new ApplicationGatewayBackendAddressResponse(fqdn, ipAddress);
         }

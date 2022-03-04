@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.SSISChildPackageArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accessCredential")
-    private final @Nullable Input<SSISAccessCredentialArgs> accessCredential;
+      private final @Nullable Input<SSISAccessCredentialArgs> accessCredential;
 
     public Input<SSISAccessCredentialArgs> getAccessCredential() {
         return this.accessCredential == null ? Input.empty() : this.accessCredential;
@@ -42,7 +42,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="childPackages")
-    private final @Nullable Input<List<SSISChildPackageArgs>> childPackages;
+      private final @Nullable Input<List<SSISChildPackageArgs>> childPackages;
 
     public Input<List<SSISChildPackageArgs>> getChildPackages() {
         return this.childPackages == null ? Input.empty() : this.childPackages;
@@ -53,7 +53,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configurationAccessCredential")
-    private final @Nullable Input<SSISAccessCredentialArgs> configurationAccessCredential;
+      private final @Nullable Input<SSISAccessCredentialArgs> configurationAccessCredential;
 
     public Input<SSISAccessCredentialArgs> getConfigurationAccessCredential() {
         return this.configurationAccessCredential == null ? Input.empty() : this.configurationAccessCredential;
@@ -64,7 +64,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configurationPath")
-    private final @Nullable Input<Object> configurationPath;
+      private final @Nullable Input<Object> configurationPath;
 
     public Input<Object> getConfigurationPath() {
         return this.configurationPath == null ? Input.empty() : this.configurationPath;
@@ -75,7 +75,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="packageContent")
-    private final @Nullable Input<Object> packageContent;
+      private final @Nullable Input<Object> packageContent;
 
     public Input<Object> getPackageContent() {
         return this.packageContent == null ? Input.empty() : this.packageContent;
@@ -86,7 +86,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="packageLastModifiedDate")
-    private final @Nullable Input<String> packageLastModifiedDate;
+      private final @Nullable Input<String> packageLastModifiedDate;
 
     public Input<String> getPackageLastModifiedDate() {
         return this.packageLastModifiedDate == null ? Input.empty() : this.packageLastModifiedDate;
@@ -97,7 +97,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="packageName")
-    private final @Nullable Input<String> packageName;
+      private final @Nullable Input<String> packageName;
 
     public Input<String> getPackageName() {
         return this.packageName == null ? Input.empty() : this.packageName;
@@ -108,7 +108,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="packagePassword")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPackagePassword() {
         return this.packagePassword == null ? Input.empty() : this.packagePassword;
@@ -119,7 +119,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="packagePath")
-    private final @Nullable Input<Object> packagePath;
+      private final @Nullable Input<Object> packagePath;
 
     public Input<Object> getPackagePath() {
         return this.packagePath == null ? Input.empty() : this.packagePath;
@@ -130,7 +130,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,SsisPackageLocationType>> type;
+      private final @Nullable Input<Either<String,SsisPackageLocationType>> type;
 
     public Input<Either<String,SsisPackageLocationType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -309,7 +309,6 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public SSISPackageLocationArgs build() {
             return new SSISPackageLocationArgs(accessCredential, childPackages, configurationAccessCredential, configurationPath, packageContent, packageLastModifiedDate, packageName, packagePassword, packagePath, type);
         }

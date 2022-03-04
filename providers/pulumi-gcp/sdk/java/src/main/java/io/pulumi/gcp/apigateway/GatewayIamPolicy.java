@@ -5,8 +5,8 @@ package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.GatewayIamPolicyArgs;
 import io.pulumi.gcp.apigateway.inputs.GatewayIamPolicyState;
@@ -130,6 +130,37 @@ public class GatewayIamPolicy extends io.pulumi.resources.CustomResource {
         return this.region;
     }
 
+    public interface BuilderApplicator {
+        public void apply(GatewayIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.apigateway.GatewayIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.apigateway.GatewayIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public GatewayIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public GatewayIamPolicy(String name) {
+        this(name, GatewayIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public GatewayIamPolicy(String name, GatewayIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

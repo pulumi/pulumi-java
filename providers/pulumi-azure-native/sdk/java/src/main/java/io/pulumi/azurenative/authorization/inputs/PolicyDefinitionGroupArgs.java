@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="additionalMetadataId")
-    private final @Nullable Input<String> additionalMetadataId;
+      private final @Nullable Input<String> additionalMetadataId;
 
     public Input<String> getAdditionalMetadataId() {
         return this.additionalMetadataId == null ? Input.empty() : this.additionalMetadataId;
@@ -34,7 +34,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="category")
-    private final @Nullable Input<String> category;
+      private final @Nullable Input<String> category;
 
     public Input<String> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -45,7 +45,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -56,7 +56,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -67,7 +67,7 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -171,7 +171,6 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public PolicyDefinitionGroupArgs build() {
             return new PolicyDefinitionGroupArgs(additionalMetadataId, category, description, displayName, name);
         }

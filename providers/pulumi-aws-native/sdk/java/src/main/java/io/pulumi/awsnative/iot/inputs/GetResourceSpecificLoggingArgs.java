@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetResourceSpecificLoggingArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="targetId", required=true)
-    private final String targetId;
+      private final String targetId;
 
     public String getTargetId() {
         return this.targetId;
@@ -55,7 +55,6 @@ public final class GetResourceSpecificLoggingArgs extends io.pulumi.resources.In
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public GetResourceSpecificLoggingArgs build() {
             return new GetResourceSpecificLoggingArgs(targetId);
         }

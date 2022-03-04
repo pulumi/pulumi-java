@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class AutomationActionWorkspaceResponse {
      * The type of the action that will be triggered by the Automation
      * Expected value is 'Workspace'.
      * 
-     */
+    */
     public String getActionType() {
         return this.actionType;
     }
     /**
      * The fully qualified Log Analytics Workspace Azure Resource ID.
      * 
-     */
+    */
     public Optional<String> getWorkspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -78,7 +78,6 @@ public final class AutomationActionWorkspaceResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public AutomationActionWorkspaceResponse build() {
             return new AutomationActionWorkspaceResponse(actionType, workspaceResourceId);
         }

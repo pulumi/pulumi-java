@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -47,28 +47,28 @@ public final class GetConsentStoreResult {
     /**
      * Optional. Default time to live for Consents created in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
      * 
-     */
+    */
     public String getDefaultConsentTtl() {
         return this.defaultConsentTtl;
     }
     /**
      * Optional. If `true`, UpdateConsent creates the Consent if it does not already exist. If unspecified, defaults to `false`.
      * 
-     */
+    */
     public Boolean getEnableConsentCreateOnUpdate() {
         return this.enableConsentCreateOnUpdate;
     }
     /**
      * Optional. User-supplied key-value pairs used to organize consent stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be associated with a given store. For more information: https://cloud.google.com/healthcare/docs/how-tos/labeling-resources
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -118,7 +118,6 @@ public final class GetConsentStoreResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetConsentStoreResult build() {
             return new GetConsentStoreResult(defaultConsentTtl, enableConsentCreateOnUpdate, labels, name);
         }

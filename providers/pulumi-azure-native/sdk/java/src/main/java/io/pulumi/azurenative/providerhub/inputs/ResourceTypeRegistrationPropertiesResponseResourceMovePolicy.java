@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
     public static final ResourceTypeRegistrationPropertiesResponseResourceMovePolicy Empty = new ResourceTypeRegistrationPropertiesResponseResourceMovePolicy();
 
     @InputImport(name="crossResourceGroupMoveEnabled")
-    private final @Nullable Boolean crossResourceGroupMoveEnabled;
+      private final @Nullable Boolean crossResourceGroupMoveEnabled;
 
     public Optional<Boolean> getCrossResourceGroupMoveEnabled() {
         return this.crossResourceGroupMoveEnabled == null ? Optional.empty() : Optional.ofNullable(this.crossResourceGroupMoveEnabled);
     }
 
     @InputImport(name="crossSubscriptionMoveEnabled")
-    private final @Nullable Boolean crossSubscriptionMoveEnabled;
+      private final @Nullable Boolean crossSubscriptionMoveEnabled;
 
     public Optional<Boolean> getCrossSubscriptionMoveEnabled() {
         return this.crossSubscriptionMoveEnabled == null ? Optional.empty() : Optional.ofNullable(this.crossSubscriptionMoveEnabled);
     }
 
     @InputImport(name="validationRequired")
-    private final @Nullable Boolean validationRequired;
+      private final @Nullable Boolean validationRequired;
 
     public Optional<Boolean> getValidationRequired() {
         return this.validationRequired == null ? Optional.empty() : Optional.ofNullable(this.validationRequired);
@@ -88,7 +88,6 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
             this.validationRequired = validationRequired;
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseResourceMovePolicy build() {
             return new ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(crossResourceGroupMoveEnabled, crossSubscriptionMoveEnabled, validationRequired);
         }

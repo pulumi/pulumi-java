@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.enums.AgentEndpointType;
 import io.pulumi.awsnative.datasync.outputs.AgentTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class GetAgentResult {
     /**
      * The DataSync Agent ARN.
      * 
-     */
+    */
     public Optional<String> getAgentArn() {
         return Optional.ofNullable(this.agentArn);
     }
     /**
      * The name configured for the agent. Text reference used to identify the agent in the console.
      * 
-     */
+    */
     public Optional<String> getAgentName() {
         return Optional.ofNullable(this.agentName);
     }
     /**
      * The service endpoints that the agent will connect to.
      * 
-     */
+    */
     public Optional<AgentEndpointType> getEndpointType() {
         return Optional.ofNullable(this.endpointType);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<AgentTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -121,7 +121,6 @@ public final class GetAgentResult {
             this.tags = tags;
             return this;
         }
-
         public GetAgentResult build() {
             return new GetAgentResult(agentArn, agentName, endpointType, tags);
         }

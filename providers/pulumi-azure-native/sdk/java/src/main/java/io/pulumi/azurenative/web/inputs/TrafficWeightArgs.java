@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRevision")
-    private final @Nullable Input<Boolean> latestRevision;
+      private final @Nullable Input<Boolean> latestRevision;
 
     public Input<Boolean> getLatestRevision() {
         return this.latestRevision == null ? Input.empty() : this.latestRevision;
@@ -36,7 +36,7 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionName")
-    private final @Nullable Input<String> revisionName;
+      private final @Nullable Input<String> revisionName;
 
     public Input<String> getRevisionName() {
         return this.revisionName == null ? Input.empty() : this.revisionName;
@@ -47,7 +47,7 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+      private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -121,7 +121,6 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public TrafficWeightArgs build() {
             return new TrafficWeightArgs(latestRevision, revisionName, weight);
         }

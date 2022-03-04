@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class VmwareSourceDetailsResponse {
     /**
      * Input only. The credentials password. This is write only and can not be read in a GET operation.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The thumbprint representing the certificate for the vcenter.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * The credentials username.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }
     /**
      * The ip address of the vcenter this Source represents.
      * 
-     */
+    */
     public String getVcenterIp() {
         return this.vcenterIp;
     }
@@ -116,7 +116,6 @@ public final class VmwareSourceDetailsResponse {
             this.vcenterIp = Objects.requireNonNull(vcenterIp);
             return this;
         }
-
         public VmwareSourceDetailsResponse build() {
             return new VmwareSourceDetailsResponse(password, thumbprint, username, vcenterIp);
         }

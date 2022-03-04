@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.DistributionPolicyZoneConfigurationResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class DistributionPolicyResponse {
     /**
      * The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
      * 
-     */
+    */
     public String getTargetShape() {
         return this.targetShape;
     }
     /**
      * Zones where the regional managed instance group will create and manage its instances.
      * 
-     */
+    */
     public List<DistributionPolicyZoneConfigurationResponse> getZones() {
         return this.zones;
     }
@@ -76,7 +76,6 @@ public final class DistributionPolicyResponse {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public DistributionPolicyResponse build() {
             return new DistributionPolicyResponse(targetShape, zones);
         }

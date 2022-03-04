@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.TestBaseAccountSKUCapabilityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class TestBaseAccountSKUResponse {
     /**
      * The capabilities of a SKU.
      * 
-     */
+    */
     public List<TestBaseAccountSKUCapabilityResponse> getCapabilities() {
         return this.capabilities;
     }
     /**
      * The locations that the SKU is available.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * The name of the SKU. This is typically a letter + number code, such as B0 or S0.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of resource the SKU applies to.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * The tier of this particular SKU.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
@@ -141,7 +141,6 @@ public final class TestBaseAccountSKUResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public TestBaseAccountSKUResponse build() {
             return new TestBaseAccountSKUResponse(capabilities, locations, name, resourceType, tier);
         }

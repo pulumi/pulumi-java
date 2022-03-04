@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetOpenIdConnectProviderArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetOpenIdConnectProviderResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOpenIdConnectProvider {
-/**
- * OpenId Connect Provider details.
+    private GetOpenIdConnectProvider() {}
+    public interface BuilderApplicator {
+        public void apply(GetOpenIdConnectProviderArgs.Builder a);
+    }
+    private static GetOpenIdConnectProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOpenIdConnectProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * OpenId Connect Provider details.
  * API Version: 2020-12-01.
  * 
- *
- * OpenId Connect Provider details.
+     *
+     * OpenId Connect Provider details.
  * 
- */
+     */
+    public static CompletableFuture<GetOpenIdConnectProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * OpenId Connect Provider details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * OpenId Connect Provider details.
+     * 
+     */
     public static CompletableFuture<GetOpenIdConnectProviderResult> invokeAsync(GetOpenIdConnectProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getOpenIdConnectProvider", TypeShape.of(GetOpenIdConnectProviderResult.class), args == null ? GetOpenIdConnectProviderArgs.Empty : args, Utilities.withVersion(options));
     }

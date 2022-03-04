@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable String domain;
+      private final @Nullable String domain;
 
     public Optional<String> getDomain() {
         return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
@@ -34,7 +34,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="pullSecret")
-    private final @Nullable String pullSecret;
+      private final @Nullable String pullSecret;
 
     public Optional<String> getPullSecret() {
         return this.pullSecret == null ? Optional.empty() : Optional.ofNullable(this.pullSecret);
@@ -45,7 +45,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupId")
-    private final @Nullable String resourceGroupId;
+      private final @Nullable String resourceGroupId;
 
     public Optional<String> getResourceGroupId() {
         return this.resourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupId);
@@ -56,7 +56,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -125,7 +125,6 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
             this.version = version;
             return this;
         }
-
         public ClusterProfileResponse build() {
             return new ClusterProfileResponse(domain, pullSecret, resourceGroupId, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.AnnotationSourceResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ImageAnnotationResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ResourceAnnotationResponse;
@@ -64,42 +64,42 @@ public final class GetAnnotationResult {
     /**
      * Details of the source.
      * 
-     */
+    */
     public AnnotationSourceResponse getAnnotationSource() {
         return this.annotationSource;
     }
     /**
      * Additional information for this annotation record, such as annotator and verifier information or study campaign.
      * 
-     */
+    */
     public Map<String,String> getCustomData() {
         return this.customData;
     }
     /**
      * Annotations for images. For example, bounding polygons.
      * 
-     */
+    */
     public ImageAnnotationResponse getImageAnnotation() {
         return this.imageAnnotation;
     }
     /**
      * Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Annotations for resource. For example, classification tags.
      * 
-     */
+    */
     public ResourceAnnotationResponse getResourceAnnotation() {
         return this.resourceAnnotation;
     }
     /**
      * Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
      * 
-     */
+    */
     public SensitiveTextAnnotationResponse getTextAnnotation() {
         return this.textAnnotation;
     }
@@ -163,7 +163,6 @@ public final class GetAnnotationResult {
             this.textAnnotation = Objects.requireNonNull(textAnnotation);
             return this;
         }
-
         public GetAnnotationResult build() {
             return new GetAnnotationResult(annotationSource, customData, imageAnnotation, name, resourceAnnotation, textAnnotation);
         }

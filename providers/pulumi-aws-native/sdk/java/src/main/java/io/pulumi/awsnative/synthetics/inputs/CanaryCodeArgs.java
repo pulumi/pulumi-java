@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,35 +15,35 @@ public final class CanaryCodeArgs extends io.pulumi.resources.ResourceArgs {
     public static final CanaryCodeArgs Empty = new CanaryCodeArgs();
 
     @InputImport(name="handler", required=true)
-    private final Input<String> handler;
+      private final Input<String> handler;
 
     public Input<String> getHandler() {
         return this.handler;
     }
 
     @InputImport(name="s3Bucket")
-    private final @Nullable Input<String> s3Bucket;
+      private final @Nullable Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
     }
 
     @InputImport(name="s3Key")
-    private final @Nullable Input<String> s3Key;
+      private final @Nullable Input<String> s3Key;
 
     public Input<String> getS3Key() {
         return this.s3Key == null ? Input.empty() : this.s3Key;
     }
 
     @InputImport(name="s3ObjectVersion")
-    private final @Nullable Input<String> s3ObjectVersion;
+      private final @Nullable Input<String> s3ObjectVersion;
 
     public Input<String> getS3ObjectVersion() {
         return this.s3ObjectVersion == null ? Input.empty() : this.s3ObjectVersion;
     }
 
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+      private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -147,7 +147,6 @@ public final class CanaryCodeArgs extends io.pulumi.resources.ResourceArgs {
             this.script = Input.ofNullable(script);
             return this;
         }
-
         public CanaryCodeArgs build() {
             return new CanaryCodeArgs(handler, s3Bucket, s3Key, s3ObjectVersion, script);
         }

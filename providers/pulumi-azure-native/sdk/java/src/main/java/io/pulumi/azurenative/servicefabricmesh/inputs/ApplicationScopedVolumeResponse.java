@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationScopedVolumeResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="creationParameters", required=true)
-    private final ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters;
+      private final ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters;
 
     public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse getCreationParameters() {
         return this.creationParameters;
@@ -36,7 +36,7 @@ public final class ApplicationScopedVolumeResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="destinationPath", required=true)
-    private final String destinationPath;
+      private final String destinationPath;
 
     public String getDestinationPath() {
         return this.destinationPath;
@@ -47,7 +47,7 @@ public final class ApplicationScopedVolumeResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class ApplicationScopedVolumeResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Boolean readOnly;
+      private final @Nullable Boolean readOnly;
 
     public Optional<Boolean> getReadOnly() {
         return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
@@ -127,7 +127,6 @@ public final class ApplicationScopedVolumeResponse extends io.pulumi.resources.I
             this.readOnly = readOnly;
             return this;
         }
-
         public ApplicationScopedVolumeResponse build() {
             return new ApplicationScopedVolumeResponse(creationParameters, destinationPath, name, readOnly);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkDhcpArgs;
 import io.pulumi.azurenative.avs.outputs.GetWorkloadNetworkDhcpResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkDhcp {
-/**
- * NSX DHCP
+    private GetWorkloadNetworkDhcp() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkloadNetworkDhcpArgs.Builder a);
+    }
+    private static GetWorkloadNetworkDhcpArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkloadNetworkDhcpArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * NSX DHCP
  * API Version: 2020-07-17-preview.
  * 
- *
- * NSX DHCP
+     *
+     * NSX DHCP
  * 
- */
+     */
+    public static CompletableFuture<GetWorkloadNetworkDhcpResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * NSX DHCP
+     * API Version: 2020-07-17-preview.
+     * 
+     *
+         * NSX DHCP
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkDhcpResult> invokeAsync(GetWorkloadNetworkDhcpArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkDhcp", TypeShape.of(GetWorkloadNetworkDhcpResult.class), args == null ? GetWorkloadNetworkDhcpArgs.Empty : args, Utilities.withVersion(options));
     }

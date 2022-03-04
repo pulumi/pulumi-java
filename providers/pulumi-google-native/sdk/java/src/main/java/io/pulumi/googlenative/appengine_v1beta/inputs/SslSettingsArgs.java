@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1beta.enums.SslSettingsSslManagementType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateId")
-    private final @Nullable Input<String> certificateId;
+      private final @Nullable Input<String> certificateId;
 
     public Input<String> getCertificateId() {
         return this.certificateId == null ? Input.empty() : this.certificateId;
@@ -35,7 +35,7 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslManagementType")
-    private final @Nullable Input<SslSettingsSslManagementType> sslManagementType;
+      private final @Nullable Input<SslSettingsSslManagementType> sslManagementType;
 
     public Input<SslSettingsSslManagementType> getSslManagementType() {
         return this.sslManagementType == null ? Input.empty() : this.sslManagementType;
@@ -94,7 +94,6 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.sslManagementType = Input.ofNullable(sslManagementType);
             return this;
         }
-
         public SslSettingsArgs build() {
             return new SslSettingsArgs(certificateId, sslManagementType);
         }

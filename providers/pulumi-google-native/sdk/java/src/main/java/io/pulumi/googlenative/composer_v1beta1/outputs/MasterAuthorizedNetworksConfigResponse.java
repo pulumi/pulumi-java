@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.composer_v1beta1.outputs.CidrBlockResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class MasterAuthorizedNetworksConfigResponse {
     /**
      * cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
      * 
-     */
+    */
     public List<CidrBlockResponse> getCidrBlocks() {
         return this.cidrBlocks;
     }
     /**
      * Whether or not master authorized networks is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -76,7 +76,6 @@ public final class MasterAuthorizedNetworksConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public MasterAuthorizedNetworksConfigResponse build() {
             return new MasterAuthorizedNetworksConfigResponse(cidrBlocks, enabled);
         }

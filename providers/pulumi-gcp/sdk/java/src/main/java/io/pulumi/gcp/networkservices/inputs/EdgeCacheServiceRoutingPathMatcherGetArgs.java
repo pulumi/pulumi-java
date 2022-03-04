@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class EdgeCacheServiceRoutingPathMatcherGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class EdgeCacheServiceRoutingPathMatcherGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class EdgeCacheServiceRoutingPathMatcherGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="routeRules", required=true)
-    private final Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules;
+      private final Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules;
 
     public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> getRouteRules() {
         return this.routeRules;
@@ -118,7 +118,6 @@ public final class EdgeCacheServiceRoutingPathMatcherGetArgs extends io.pulumi.r
             this.routeRules = Input.of(Objects.requireNonNull(routeRules));
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherGetArgs(description, name, routeRules);
         }

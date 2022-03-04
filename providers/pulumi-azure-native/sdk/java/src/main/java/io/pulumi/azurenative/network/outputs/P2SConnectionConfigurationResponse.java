@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class P2SConnectionConfigurationResponse {
     /**
      * Flag indicating whether the enable internet security flag is turned on for the P2S Connections or not.
      * 
-     */
+    */
     public Optional<Boolean> getEnableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the P2SConnectionConfiguration resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
-     */
+    */
     public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }
     /**
      * The reference to the address space resource which represents Address space for P2S VpnClient.
      * 
-     */
+    */
     public Optional<AddressSpaceResponse> getVpnClientAddressPool() {
         return Optional.ofNullable(this.vpnClientAddressPool);
     }
@@ -184,7 +184,6 @@ public final class P2SConnectionConfigurationResponse {
             this.vpnClientAddressPool = vpnClientAddressPool;
             return this;
         }
-
         public P2SConnectionConfigurationResponse build() {
             return new P2SConnectionConfigurationResponse(enableInternetSecurity, etag, id, name, provisioningState, routingConfiguration, vpnClientAddressPool);
         }

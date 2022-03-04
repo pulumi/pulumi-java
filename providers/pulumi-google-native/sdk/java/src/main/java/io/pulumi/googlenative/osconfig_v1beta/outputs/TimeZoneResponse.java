@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class TimeZoneResponse {
     /**
      * Optional. IANA Time Zone Database version number, e.g. "2019a".
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -52,7 +52,6 @@ public final class TimeZoneResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public TimeZoneResponse build() {
             return new TimeZoneResponse(version);
         }

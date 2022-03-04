@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ThrottlingInformationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable String duration;
+      private final @Nullable String duration;
 
     public Optional<String> getDuration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
@@ -61,7 +61,6 @@ public final class ThrottlingInformationResponse extends io.pulumi.resources.Inv
             this.duration = duration;
             return this;
         }
-
         public ThrottlingInformationResponse build() {
             return new ThrottlingInformationResponse(duration);
         }

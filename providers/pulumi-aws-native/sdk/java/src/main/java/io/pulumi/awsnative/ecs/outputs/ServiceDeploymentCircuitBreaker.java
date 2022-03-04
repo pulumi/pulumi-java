@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class ServiceDeploymentCircuitBreaker {
             this.rollback = Objects.requireNonNull(rollback);
             return this;
         }
-
         public ServiceDeploymentCircuitBreaker build() {
             return new ServiceDeploymentCircuitBreaker(enable, rollback);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.DataDiskArgs;
 import io.pulumi.azurenative.compute.inputs.ImageReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.OSDiskArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDisks")
-    private final @Nullable Input<List<DataDiskArgs>> dataDisks;
+      private final @Nullable Input<List<DataDiskArgs>> dataDisks;
 
     public Input<List<DataDiskArgs>> getDataDisks() {
         return this.dataDisks == null ? Input.empty() : this.dataDisks;
@@ -37,7 +37,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageReference")
-    private final @Nullable Input<ImageReferenceArgs> imageReference;
+      private final @Nullable Input<ImageReferenceArgs> imageReference;
 
     public Input<ImageReferenceArgs> getImageReference() {
         return this.imageReference == null ? Input.empty() : this.imageReference;
@@ -48,7 +48,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osDisk")
-    private final @Nullable Input<OSDiskArgs> osDisk;
+      private final @Nullable Input<OSDiskArgs> osDisk;
 
     public Input<OSDiskArgs> getOsDisk() {
         return this.osDisk == null ? Input.empty() : this.osDisk;
@@ -122,7 +122,6 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.osDisk = Input.ofNullable(osDisk);
             return this;
         }
-
         public StorageProfileArgs build() {
             return new StorageProfileArgs(dataDisks, imageReference, osDisk);
         }

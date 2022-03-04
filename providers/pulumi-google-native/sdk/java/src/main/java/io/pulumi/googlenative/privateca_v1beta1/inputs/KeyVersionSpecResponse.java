@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -32,7 +32,7 @@ public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="cloudKmsKeyVersion", required=true)
-    private final String cloudKmsKeyVersion;
+      private final String cloudKmsKeyVersion;
 
     public String getCloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion;
@@ -81,7 +81,6 @@ public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs
             this.cloudKmsKeyVersion = Objects.requireNonNull(cloudKmsKeyVersion);
             return this;
         }
-
         public KeyVersionSpecResponse build() {
             return new KeyVersionSpecResponse(algorithm, cloudKmsKeyVersion);
         }

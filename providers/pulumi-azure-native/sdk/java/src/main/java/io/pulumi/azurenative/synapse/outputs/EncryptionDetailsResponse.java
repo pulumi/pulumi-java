@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.CustomerManagedKeyDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class EncryptionDetailsResponse {
     /**
      * Customer Managed Key Details
      * 
-     */
+    */
     public Optional<CustomerManagedKeyDetailsResponse> getCmk() {
         return Optional.ofNullable(this.cmk);
     }
     /**
      * Double Encryption enabled
      * 
-     */
+    */
     public Boolean getDoubleEncryptionEnabled() {
         return this.doubleEncryptionEnabled;
     }
@@ -77,7 +77,6 @@ public final class EncryptionDetailsResponse {
             this.doubleEncryptionEnabled = Objects.requireNonNull(doubleEncryptionEnabled);
             return this;
         }
-
         public EncryptionDetailsResponse build() {
             return new EncryptionDetailsResponse(cmk, doubleEncryptionEnabled);
         }

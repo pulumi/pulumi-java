@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo 
     /**
      * Required. The name of the repository.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Required. The url of the repository.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -74,7 +74,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo 
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo(name, url);
         }

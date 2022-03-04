@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class HttpHeaderOptionResponse {
     /**
      * The name of the header.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
     /**
      * The value of the header to add.
      * 
-     */
+    */
     public String getHeaderValue() {
         return this.headerValue;
     }
     /**
      * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false.
      * 
-     */
+    */
     public Boolean getReplace() {
         return this.replace;
     }
@@ -96,7 +96,6 @@ public final class HttpHeaderOptionResponse {
             this.replace = Objects.requireNonNull(replace);
             return this;
         }
-
         public HttpHeaderOptionResponse build() {
             return new HttpHeaderOptionResponse(headerName, headerValue, replace);
         }

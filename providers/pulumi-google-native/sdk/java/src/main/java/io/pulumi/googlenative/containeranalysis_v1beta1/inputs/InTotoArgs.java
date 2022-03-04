@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactRuleArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SigningKeyArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedCommand")
-    private final @Nullable Input<List<String>> expectedCommand;
+      private final @Nullable Input<List<String>> expectedCommand;
 
     public Input<List<String>> getExpectedCommand() {
         return this.expectedCommand == null ? Input.empty() : this.expectedCommand;
@@ -37,14 +37,14 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedMaterials")
-    private final @Nullable Input<List<ArtifactRuleArgs>> expectedMaterials;
+      private final @Nullable Input<List<ArtifactRuleArgs>> expectedMaterials;
 
     public Input<List<ArtifactRuleArgs>> getExpectedMaterials() {
         return this.expectedMaterials == null ? Input.empty() : this.expectedMaterials;
     }
 
     @InputImport(name="expectedProducts")
-    private final @Nullable Input<List<ArtifactRuleArgs>> expectedProducts;
+      private final @Nullable Input<List<ArtifactRuleArgs>> expectedProducts;
 
     public Input<List<ArtifactRuleArgs>> getExpectedProducts() {
         return this.expectedProducts == null ? Input.empty() : this.expectedProducts;
@@ -55,7 +55,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingKeys")
-    private final @Nullable Input<List<SigningKeyArgs>> signingKeys;
+      private final @Nullable Input<List<SigningKeyArgs>> signingKeys;
 
     public Input<List<SigningKeyArgs>> getSigningKeys() {
         return this.signingKeys == null ? Input.empty() : this.signingKeys;
@@ -66,7 +66,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepName")
-    private final @Nullable Input<String> stepName;
+      private final @Nullable Input<String> stepName;
 
     public Input<String> getStepName() {
         return this.stepName == null ? Input.empty() : this.stepName;
@@ -77,7 +77,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold")
-    private final @Nullable Input<String> threshold;
+      private final @Nullable Input<String> threshold;
 
     public Input<String> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;
@@ -196,7 +196,6 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
             this.threshold = Input.ofNullable(threshold);
             return this;
         }
-
         public InTotoArgs build() {
             return new InTotoArgs(expectedCommand, expectedMaterials, expectedProducts, signingKeys, stepName, threshold);
         }

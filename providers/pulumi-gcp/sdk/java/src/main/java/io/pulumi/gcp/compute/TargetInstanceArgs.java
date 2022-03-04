@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+      private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
@@ -52,7 +52,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natPolicy")
-    private final @Nullable Input<String> natPolicy;
+      private final @Nullable Input<String> natPolicy;
 
     public Input<String> getNatPolicy() {
         return this.natPolicy == null ? Input.empty() : this.natPolicy;
@@ -77,7 +77,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -89,7 +89,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -100,7 +100,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -234,7 +234,6 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public TargetInstanceArgs build() {
             return new TargetInstanceArgs(description, instance, name, natPolicy, network, project, zone);
         }

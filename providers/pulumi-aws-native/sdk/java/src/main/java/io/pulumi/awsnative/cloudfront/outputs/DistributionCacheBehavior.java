@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.outputs;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionForwardedValues;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionFunctionAssociation;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionLambdaFunctionAssociation;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -300,7 +300,6 @@ public final class DistributionCacheBehavior {
             this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy);
             return this;
         }
-
         public DistributionCacheBehavior build() {
             return new DistributionCacheBehavior(allowedMethods, cachePolicyId, cachedMethods, compress, defaultTTL, fieldLevelEncryptionId, forwardedValues, functionAssociations, lambdaFunctionAssociations, maxTTL, minTTL, originRequestPolicyId, pathPattern, realtimeLogConfigArn, responseHeadersPolicyId, smoothStreaming, targetOriginId, trustedKeyGroups, trustedSigners, viewerProtocolPolicy);
         }

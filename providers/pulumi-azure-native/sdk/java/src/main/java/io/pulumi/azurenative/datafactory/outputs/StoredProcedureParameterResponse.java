@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class StoredProcedureParameterResponse {
     /**
      * Stored procedure parameter type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Stored procedure parameter value. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -77,7 +77,6 @@ public final class StoredProcedureParameterResponse {
             this.value = value;
             return this;
         }
-
         public StoredProcedureParameterResponse build() {
             return new StoredProcedureParameterResponse(type, value);
         }

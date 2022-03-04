@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.AvailablePatchSummaryResponse;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.LastPatchInstallationSummaryResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,21 +43,21 @@ public final class VirtualMachinePatchStatusResponse {
     /**
      * The available patch summary of the latest assessment operation for the virtual machine.
      * 
-     */
+    */
     public Optional<AvailablePatchSummaryResponse> getAvailablePatchSummary() {
         return Optional.ofNullable(this.availablePatchSummary);
     }
     /**
      * The enablement status of the specified patchMode
      * 
-     */
+    */
     public List<InstanceViewStatusResponse> getConfigurationStatuses() {
         return this.configurationStatuses;
     }
     /**
      * The installation summary of the latest installation operation for the virtual machine.
      * 
-     */
+    */
     public Optional<LastPatchInstallationSummaryResponse> getLastPatchInstallationSummary() {
         return Optional.ofNullable(this.lastPatchInstallationSummary);
     }
@@ -100,7 +100,6 @@ public final class VirtualMachinePatchStatusResponse {
             this.lastPatchInstallationSummary = lastPatchInstallationSummary;
             return this;
         }
-
         public VirtualMachinePatchStatusResponse build() {
             return new VirtualMachinePatchStatusResponse(availablePatchSummary, configurationStatuses, lastPatchInstallationSummary);
         }

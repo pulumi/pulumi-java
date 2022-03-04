@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
     /**
      * Defines whether instances have integrity monitoring enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
     /**
      * Defines whether instances have Secure Boot enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
     /**
      * Defines whether instances have the [vTPM](https://cloud.google.com/security/shielded-cloud/shielded-vm#vtpm) enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }
@@ -97,7 +97,6 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
             this.enableVtpm = enableVtpm;
             return this;
         }
-
         public ClusterClusterConfigGceClusterConfigShieldedInstanceConfig build() {
             return new ClusterClusterConfigGceClusterConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

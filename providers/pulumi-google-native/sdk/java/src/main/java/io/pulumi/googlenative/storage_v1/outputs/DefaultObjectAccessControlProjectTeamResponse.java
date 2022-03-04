@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DefaultObjectAccessControlProjectTeamResponse {
     /**
      * The project number.
      * 
-     */
+    */
     public String getProjectNumber() {
         return this.projectNumber;
     }
     /**
      * The team.
      * 
-     */
+    */
     public String getTeam() {
         return this.team;
     }
@@ -74,7 +74,6 @@ public final class DefaultObjectAccessControlProjectTeamResponse {
             this.team = Objects.requireNonNull(team);
             return this;
         }
-
         public DefaultObjectAccessControlProjectTeamResponse build() {
             return new DefaultObjectAccessControlProjectTeamResponse(projectNumber, team);
         }

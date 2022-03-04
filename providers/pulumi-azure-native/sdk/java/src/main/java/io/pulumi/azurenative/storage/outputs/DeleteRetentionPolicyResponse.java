@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class DeleteRetentionPolicyResponse {
     /**
      * Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
      * 
-     */
+    */
     public Optional<Integer> getDays() {
         return Optional.ofNullable(this.days);
     }
     /**
      * Indicates whether DeleteRetentionPolicy is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -77,7 +77,6 @@ public final class DeleteRetentionPolicyResponse {
             this.enabled = enabled;
             return this;
         }
-
         public DeleteRetentionPolicyResponse build() {
             return new DeleteRetentionPolicyResponse(days, enabled);
         }

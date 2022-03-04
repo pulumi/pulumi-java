@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSharedflow {
-/**
- * Gets a shared flow by name, including a list of its revisions.
+    private GetSharedflow() {}
+    public interface BuilderApplicator {
+        public void apply(GetSharedflowArgs.Builder a);
+    }
+    private static GetSharedflowArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSharedflowArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a shared flow by name, including a list of its revisions.
  * 
- */
+     */
+    public static CompletableFuture<GetSharedflowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a shared flow by name, including a list of its revisions.
+     * 
+     */
     public static CompletableFuture<GetSharedflowResult> invokeAsync(GetSharedflowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getSharedflow", TypeShape.of(GetSharedflowResult.class), args == null ? GetSharedflowArgs.Empty : args, Utilities.withVersion(options));
     }

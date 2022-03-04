@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreJsonConfiguration;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreParquetConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class DatastoreFileFormatConfiguration extends io.pulumi.resources.
     public static final DatastoreFileFormatConfiguration Empty = new DatastoreFileFormatConfiguration();
 
     @InputImport(name="jsonConfiguration")
-    private final @Nullable DatastoreJsonConfiguration jsonConfiguration;
+      private final @Nullable DatastoreJsonConfiguration jsonConfiguration;
 
     public Optional<DatastoreJsonConfiguration> getJsonConfiguration() {
         return this.jsonConfiguration == null ? Optional.empty() : Optional.ofNullable(this.jsonConfiguration);
     }
 
     @InputImport(name="parquetConfiguration")
-    private final @Nullable DatastoreParquetConfiguration parquetConfiguration;
+      private final @Nullable DatastoreParquetConfiguration parquetConfiguration;
 
     public Optional<DatastoreParquetConfiguration> getParquetConfiguration() {
         return this.parquetConfiguration == null ? Optional.empty() : Optional.ofNullable(this.parquetConfiguration);
@@ -72,7 +72,6 @@ public final class DatastoreFileFormatConfiguration extends io.pulumi.resources.
             this.parquetConfiguration = parquetConfiguration;
             return this;
         }
-
         public DatastoreFileFormatConfiguration build() {
             return new DatastoreFileFormatConfiguration(jsonConfiguration, parquetConfiguration);
         }

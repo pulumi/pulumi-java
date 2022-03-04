@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public final class DetectorModelLambda {
     /**
      * The ARN of the Lambda function that is executed.
      * 
-     */
+    */
     public String getFunctionArn() {
         return this.functionArn;
     }
@@ -69,7 +69,6 @@ public final class DetectorModelLambda {
             this.payload = payload;
             return this;
         }
-
         public DetectorModelLambda build() {
             return new DetectorModelLambda(functionArn, payload);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -93,7 +93,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public PrivateLinkServiceConnectionStateArgs build() {
             return new PrivateLinkServiceConnectionStateArgs(description, status);
         }

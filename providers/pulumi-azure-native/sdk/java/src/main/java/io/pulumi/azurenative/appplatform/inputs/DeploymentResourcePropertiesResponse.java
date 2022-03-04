@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.DeploymentInstanceResponse;
 import io.pulumi.azurenative.appplatform.inputs.DeploymentSettingsResponse;
 import io.pulumi.azurenative.appplatform.inputs.UserSourceInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="active", required=true)
-    private final Boolean active;
+      private final Boolean active;
 
     public Boolean getActive() {
         return this.active;
@@ -39,7 +39,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="appName", required=true)
-    private final String appName;
+      private final String appName;
 
     public String getAppName() {
         return this.appName;
@@ -50,7 +50,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="createdTime", required=true)
-    private final String createdTime;
+      private final String createdTime;
 
     public String getCreatedTime() {
         return this.createdTime;
@@ -61,7 +61,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="deploymentSettings")
-    private final @Nullable DeploymentSettingsResponse deploymentSettings;
+      private final @Nullable DeploymentSettingsResponse deploymentSettings;
 
     public Optional<DeploymentSettingsResponse> getDeploymentSettings() {
         return this.deploymentSettings == null ? Optional.empty() : Optional.ofNullable(this.deploymentSettings);
@@ -72,7 +72,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="instances", required=true)
-    private final List<DeploymentInstanceResponse> instances;
+      private final List<DeploymentInstanceResponse> instances;
 
     public List<DeploymentInstanceResponse> getInstances() {
         return this.instances;
@@ -83,7 +83,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -94,7 +94,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="source")
-    private final @Nullable UserSourceInfoResponse source;
+      private final @Nullable UserSourceInfoResponse source;
 
     public Optional<UserSourceInfoResponse> getSource() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
@@ -105,7 +105,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -214,7 +214,6 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DeploymentResourcePropertiesResponse build() {
             return new DeploymentResourcePropertiesResponse(active, appName, createdTime, deploymentSettings, instances, provisioningState, source, status);
         }

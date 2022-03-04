@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class CurrentJobDetailsResponse {
     /**
      * The ARM Id of the job being executed.
      * 
-     */
+    */
     public Optional<String> getJobId() {
         return Optional.ofNullable(this.jobId);
     }
     /**
      * The job name.
      * 
-     */
+    */
     public Optional<String> getJobName() {
         return Optional.ofNullable(this.jobName);
     }
     /**
      * The start time of the job.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -97,7 +97,6 @@ public final class CurrentJobDetailsResponse {
             this.startTime = startTime;
             return this;
         }
-
         public CurrentJobDetailsResponse build() {
             return new CurrentJobDetailsResponse(jobId, jobName, startTime);
         }

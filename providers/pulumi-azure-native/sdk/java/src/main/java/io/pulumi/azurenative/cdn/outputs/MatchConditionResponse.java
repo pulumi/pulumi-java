@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -63,42 +63,42 @@ public final class MatchConditionResponse {
     /**
      * List of possible match values.
      * 
-     */
+    */
     public List<String> getMatchValue() {
         return this.matchValue;
     }
     /**
      * Match variable to compare against.
      * 
-     */
+    */
     public String getMatchVariable() {
         return this.matchVariable;
     }
     /**
      * Describes if the result of this condition should be negated.
      * 
-     */
+    */
     public Optional<Boolean> getNegateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
     /**
      * Describes operator to be matched
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
      * 
-     */
+    */
     public Optional<String> getSelector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * List of transforms.
      * 
-     */
+    */
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
@@ -162,7 +162,6 @@ public final class MatchConditionResponse {
             this.transforms = transforms;
             return this;
         }
-
         public MatchConditionResponse build() {
             return new MatchConditionResponse(matchValue, matchVariable, negateCondition, operator, selector, transforms);
         }

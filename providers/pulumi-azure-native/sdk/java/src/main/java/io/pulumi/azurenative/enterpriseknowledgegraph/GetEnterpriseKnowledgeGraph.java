@@ -6,21 +6,41 @@ package io.pulumi.azurenative.enterpriseknowledgegraph;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.enterpriseknowledgegraph.inputs.GetEnterpriseKnowledgeGraphArgs;
 import io.pulumi.azurenative.enterpriseknowledgegraph.outputs.GetEnterpriseKnowledgeGraphResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnterpriseKnowledgeGraph {
-/**
- * EnterpriseKnowledgeGraph resource definition
+    private GetEnterpriseKnowledgeGraph() {}
+    public interface BuilderApplicator {
+        public void apply(GetEnterpriseKnowledgeGraphArgs.Builder a);
+    }
+    private static GetEnterpriseKnowledgeGraphArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEnterpriseKnowledgeGraphArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * EnterpriseKnowledgeGraph resource definition
  * API Version: 2018-12-03.
  * 
- *
- * EnterpriseKnowledgeGraph resource definition
+     *
+     * EnterpriseKnowledgeGraph resource definition
  * 
- */
+     */
+    public static CompletableFuture<GetEnterpriseKnowledgeGraphResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * EnterpriseKnowledgeGraph resource definition
+     * API Version: 2018-12-03.
+     * 
+     *
+         * EnterpriseKnowledgeGraph resource definition
+     * 
+     */
     public static CompletableFuture<GetEnterpriseKnowledgeGraphResult> invokeAsync(GetEnterpriseKnowledgeGraphArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:enterpriseknowledgegraph:getEnterpriseKnowledgeGraph", TypeShape.of(GetEnterpriseKnowledgeGraphResult.class), args == null ? GetEnterpriseKnowledgeGraphArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.AllocationSpecificSKUReservationResponse;
 import io.pulumi.googlenative.compute_v1.inputs.ShareSettingsResponse;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="commitment", required=true)
-    private final String commitment;
+      private final String commitment;
 
     public String getCommitment() {
         return this.commitment;
@@ -35,7 +35,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="creationTimestamp", required=true)
-    private final String creationTimestamp;
+      private final String creationTimestamp;
 
     public String getCreationTimestamp() {
         return this.creationTimestamp;
@@ -46,7 +46,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -57,7 +57,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -68,7 +68,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -79,7 +79,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="satisfiesPzs", required=true)
-    private final Boolean satisfiesPzs;
+      private final Boolean satisfiesPzs;
 
     public Boolean getSatisfiesPzs() {
         return this.satisfiesPzs;
@@ -90,7 +90,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selfLink", required=true)
-    private final String selfLink;
+      private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
@@ -101,7 +101,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="shareSettings", required=true)
-    private final ShareSettingsResponse shareSettings;
+      private final ShareSettingsResponse shareSettings;
 
     public ShareSettingsResponse getShareSettings() {
         return this.shareSettings;
@@ -112,7 +112,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="specificReservation", required=true)
-    private final AllocationSpecificSKUReservationResponse specificReservation;
+      private final AllocationSpecificSKUReservationResponse specificReservation;
 
     public AllocationSpecificSKUReservationResponse getSpecificReservation() {
         return this.specificReservation;
@@ -123,7 +123,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="specificReservationRequired", required=true)
-    private final Boolean specificReservationRequired;
+      private final Boolean specificReservationRequired;
 
     public Boolean getSpecificReservationRequired() {
         return this.specificReservationRequired;
@@ -134,7 +134,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -145,7 +145,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -294,7 +294,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ReservationResponse build() {
             return new ReservationResponse(commitment, creationTimestamp, description, kind, name, satisfiesPzs, selfLink, shareSettings, specificReservation, specificReservationRequired, status, zone);
         }

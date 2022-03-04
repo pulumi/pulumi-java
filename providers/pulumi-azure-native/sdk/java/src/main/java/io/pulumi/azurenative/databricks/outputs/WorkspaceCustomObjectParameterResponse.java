@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class WorkspaceCustomObjectParameterResponse {
     /**
      * The type of variable that this is
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The value which should be used for this field.
      * 
-     */
+    */
     public Object getValue() {
         return this.value;
     }
@@ -75,7 +75,6 @@ public final class WorkspaceCustomObjectParameterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkspaceCustomObjectParameterResponse build() {
             return new WorkspaceCustomObjectParameterResponse(type, value);
         }

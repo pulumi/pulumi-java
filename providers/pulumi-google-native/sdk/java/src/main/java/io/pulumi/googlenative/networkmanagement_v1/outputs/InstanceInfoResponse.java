@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,56 +74,56 @@ public final class InstanceInfoResponse {
     /**
      * Name of a Compute Engine instance.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * External IP address of the network interface.
      * 
-     */
+    */
     public String getExternalIp() {
         return this.externalIp;
     }
     /**
      * Name of the network interface of a Compute Engine instance.
      * 
-     */
+    */
     public String get$interface() {
         return this.$interface;
     }
     /**
      * Internal IP address of the network interface.
      * 
-     */
+    */
     public String getInternalIp() {
         return this.internalIp;
     }
     /**
      * Network tags configured on the instance.
      * 
-     */
+    */
     public List<String> getNetworkTags() {
         return this.networkTags;
     }
     /**
      * URI of a Compute Engine network.
      * 
-     */
+    */
     public String getNetworkUri() {
         return this.networkUri;
     }
     /**
      * Service account authorized for the instance.
      * 
-     */
+    */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * URI of a Compute Engine instance.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -201,7 +201,6 @@ public final class InstanceInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public InstanceInfoResponse build() {
             return new InstanceInfoResponse(displayName, externalIp, $interface, internalIp, networkTags, networkUri, serviceAccount, uri);
         }

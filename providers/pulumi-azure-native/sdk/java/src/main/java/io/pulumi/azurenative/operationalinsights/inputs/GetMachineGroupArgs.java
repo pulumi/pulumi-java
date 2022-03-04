@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable String endTime;
+      private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
@@ -30,7 +30,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="machineGroupName", required=true)
-    private final String machineGroupName;
+      private final String machineGroupName;
 
     public String getMachineGroupName() {
         return this.machineGroupName;
@@ -41,7 +41,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+      private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -63,7 +63,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -142,7 +142,6 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetMachineGroupArgs build() {
             return new GetMachineGroupArgs(endTime, machineGroupName, resourceGroupName, startTime, workspaceName);
         }

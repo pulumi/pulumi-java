@@ -5,8 +5,8 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.DebugSessionArgs;
 import java.lang.Integer;
@@ -106,6 +106,37 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
         return this.validity;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DebugSessionArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.apigee_v1.DebugSessionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.apigee_v1.DebugSessionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DebugSession(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DebugSession(String name) {
+        this(name, DebugSessionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DebugSession(String name, DebugSessionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

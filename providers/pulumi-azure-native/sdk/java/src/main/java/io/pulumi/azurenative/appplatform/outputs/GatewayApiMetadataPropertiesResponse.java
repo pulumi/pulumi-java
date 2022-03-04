@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class GatewayApiMetadataPropertiesResponse {
     /**
      * Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Location of additional documentation for the APIs available on the Gateway instance
      * 
-     */
+    */
     public Optional<String> getDocumentation() {
         return Optional.ofNullable(this.documentation);
     }
     /**
      * Base URL that API consumers will use to access APIs on the Gateway instance.
      * 
-     */
+    */
     public Optional<String> getServerUrl() {
         return Optional.ofNullable(this.serverUrl);
     }
     /**
      * Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
     /**
      * Version of APIs available on this Gateway instance (default: `unspecified`).
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -139,7 +139,6 @@ public final class GatewayApiMetadataPropertiesResponse {
             this.version = version;
             return this;
         }
-
         public GatewayApiMetadataPropertiesResponse build() {
             return new GatewayApiMetadataPropertiesResponse(description, documentation, serverUrl, title, version);
         }

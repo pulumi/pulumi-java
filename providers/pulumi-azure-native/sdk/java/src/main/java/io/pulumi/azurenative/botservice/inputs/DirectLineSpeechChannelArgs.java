@@ -5,7 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.DirectLineSpeechChannelPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="channelName", required=true)
-    private final Input<String> channelName;
+      private final Input<String> channelName;
 
     public Input<String> getChannelName() {
         return this.channelName;
@@ -36,7 +36,7 @@ public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -47,7 +47,7 @@ public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -58,7 +58,7 @@ public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<DirectLineSpeechChannelPropertiesArgs> properties;
+      private final @Nullable Input<DirectLineSpeechChannelPropertiesArgs> properties;
 
     public Input<DirectLineSpeechChannelPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -147,7 +147,6 @@ public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.Resou
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public DirectLineSpeechChannelArgs build() {
             return new DirectLineSpeechChannelArgs(channelName, etag, location, properties);
         }

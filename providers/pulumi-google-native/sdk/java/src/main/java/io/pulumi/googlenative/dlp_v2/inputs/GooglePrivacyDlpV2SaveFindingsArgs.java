@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2OutputStorageConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="outputConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
 
     public Input<GooglePrivacyDlpV2OutputStorageConfigArgs> getOutputConfig() {
         return this.outputConfig == null ? Input.empty() : this.outputConfig;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
             this.outputConfig = Input.ofNullable(outputConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2SaveFindingsArgs build() {
             return new GooglePrivacyDlpV2SaveFindingsArgs(outputConfig);
         }

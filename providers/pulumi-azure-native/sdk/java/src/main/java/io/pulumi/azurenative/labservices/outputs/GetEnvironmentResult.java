@@ -6,7 +6,7 @@ package io.pulumi.azurenative.labservices.outputs;
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.labservices.outputs.ResourceSetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -143,119 +143,119 @@ public final class GetEnvironmentResult {
     /**
      * The name or email address of the user who has claimed the environment
      * 
-     */
+    */
     public String getClaimedByUserName() {
         return this.claimedByUserName;
     }
     /**
      * The AAD object Id of the user who has claimed the environment
      * 
-     */
+    */
     public String getClaimedByUserObjectId() {
         return this.claimedByUserObjectId;
     }
     /**
      * The user principal Id of the user who has claimed the environment
      * 
-     */
+    */
     public String getClaimedByUserPrincipalId() {
         return this.claimedByUserPrincipalId;
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Is the environment claimed or not
      * 
-     */
+    */
     public Boolean getIsClaimed() {
         return this.isClaimed;
     }
     /**
      * Last known power state of the environment
      * 
-     */
+    */
     public String getLastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
-     */
+    */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Network details of the environment
      * 
-     */
+    */
     public NetworkInterfaceResponse getNetworkInterface() {
         return this.networkInterface;
     }
     /**
      * When the password was last reset on the environment.
      * 
-     */
+    */
     public String getPasswordLastReset() {
         return this.passwordLastReset;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The set of a VM and the setting id it was created for
      * 
-     */
+    */
     public Optional<ResourceSetResponse> getResourceSets() {
         return Optional.ofNullable(this.resourceSets);
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * How long the environment has been used by a lab user
      * 
-     */
+    */
     public String getTotalUsage() {
         return this.totalUsage;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public Optional<String> getUniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }
@@ -396,7 +396,6 @@ public final class GetEnvironmentResult {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(claimedByUserName, claimedByUserObjectId, claimedByUserPrincipalId, id, isClaimed, lastKnownPowerState, latestOperationResult, location, name, networkInterface, passwordLastReset, provisioningState, resourceSets, tags, totalUsage, type, uniqueIdentifier);
         }

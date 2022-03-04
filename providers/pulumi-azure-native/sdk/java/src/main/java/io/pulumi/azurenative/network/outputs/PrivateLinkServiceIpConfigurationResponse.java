@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -91,70 +91,70 @@ public final class PrivateLinkServiceIpConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of private link service ip configuration.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Whether the ip configuration is primary or not.
      * 
-     */
+    */
     public Optional<Boolean> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
     /**
      * The private IP address of the IP configuration.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
     /**
      * The private IP address allocation method.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
      * The provisioning state of the private link service IP configuration resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The reference to the subnet resource.
      * 
-     */
+    */
     public Optional<SubnetResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -246,7 +246,6 @@ public final class PrivateLinkServiceIpConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateLinkServiceIpConfigurationResponse build() {
             return new PrivateLinkServiceIpConfigurationResponse(etag, id, name, primary, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, provisioningState, subnet, type);
         }

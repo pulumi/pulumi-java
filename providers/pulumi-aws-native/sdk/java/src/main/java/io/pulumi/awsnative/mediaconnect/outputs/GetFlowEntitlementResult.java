@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEntitlementStatus;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowEntitlementEncryption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -64,42 +64,42 @@ public final class GetFlowEntitlementResult {
     /**
      * A description of the entitlement.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The type of encryption that will be used on the output that is associated with this entitlement.
      * 
-     */
+    */
     public Optional<FlowEntitlementEncryption> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * The ARN of the entitlement.
      * 
-     */
+    */
     public Optional<String> getEntitlementArn() {
         return Optional.ofNullable(this.entitlementArn);
     }
     /**
      *  An indication of whether the entitlement is enabled.
      * 
-     */
+    */
     public Optional<FlowEntitlementEntitlementStatus> getEntitlementStatus() {
         return Optional.ofNullable(this.entitlementStatus);
     }
     /**
      * The ARN of the flow.
      * 
-     */
+    */
     public Optional<String> getFlowArn() {
         return Optional.ofNullable(this.flowArn);
     }
     /**
      * The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
      * 
-     */
+    */
     public List<String> getSubscribers() {
         return this.subscribers == null ? List.of() : this.subscribers;
     }
@@ -163,7 +163,6 @@ public final class GetFlowEntitlementResult {
             this.subscribers = subscribers;
             return this;
         }
-
         public GetFlowEntitlementResult build() {
             return new GetFlowEntitlementResult(description, encryption, entitlementArn, entitlementStatus, flowArn, subscribers);
         }

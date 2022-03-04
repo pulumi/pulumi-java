@@ -4,7 +4,7 @@
 package io.pulumi.gcp.oslogin;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTimeUsec")
-    private final @Nullable Input<String> expirationTimeUsec;
+      private final @Nullable Input<String> expirationTimeUsec;
 
     public Input<String> getExpirationTimeUsec() {
         return this.expirationTimeUsec == null ? Input.empty() : this.expirationTimeUsec;
@@ -30,7 +30,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -41,7 +41,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -52,7 +52,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="user", required=true)
-    private final Input<String> user;
+      private final Input<String> user;
 
     public Input<String> getUser() {
         return this.user;
@@ -141,7 +141,6 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.user = Input.of(Objects.requireNonNull(user));
             return this;
         }
-
         public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(expirationTimeUsec, key, project, user);
         }

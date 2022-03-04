@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class TemplateLinkResponse {
     /**
      * If included, must match the ContentVersion in the template.
      * 
-     */
+    */
     public Optional<String> getContentVersion() {
         return Optional.ofNullable(this.contentVersion);
     }
     /**
      * The resource id of a Template Spec. Use either the id or uri property, but not both.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The query string (for example, a SAS token) to be used with the templateLink URI.
      * 
-     */
+    */
     public Optional<String> getQueryString() {
         return Optional.ofNullable(this.queryString);
     }
     /**
      * The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs
      * 
-     */
+    */
     public Optional<String> getRelativePath() {
         return Optional.ofNullable(this.relativePath);
     }
     /**
      * The URI of the template to deploy. Use either the uri or id property, but not both.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }
@@ -139,7 +139,6 @@ public final class TemplateLinkResponse {
             this.uri = uri;
             return this;
         }
-
         public TemplateLinkResponse build() {
             return new TemplateLinkResponse(contentVersion, id, queryString, relativePath, uri);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.InterconnectInterconnectType;
 import io.pulumi.googlenative.compute_beta.enums.InterconnectLinkType;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminEnabled")
-    private final @Nullable Input<Boolean> adminEnabled;
+      private final @Nullable Input<Boolean> adminEnabled;
 
     public Input<Boolean> getAdminEnabled() {
         return this.adminEnabled == null ? Input.empty() : this.adminEnabled;
@@ -35,7 +35,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerName")
-    private final @Nullable Input<String> customerName;
+      private final @Nullable Input<String> customerName;
 
     public Input<String> getCustomerName() {
         return this.customerName == null ? Input.empty() : this.customerName;
@@ -46,7 +46,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interconnectType")
-    private final @Nullable Input<InterconnectInterconnectType> interconnectType;
+      private final @Nullable Input<InterconnectInterconnectType> interconnectType;
 
     public Input<InterconnectInterconnectType> getInterconnectType() {
         return this.interconnectType == null ? Input.empty() : this.interconnectType;
@@ -68,7 +68,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -79,7 +79,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkType")
-    private final @Nullable Input<InterconnectLinkType> linkType;
+      private final @Nullable Input<InterconnectLinkType> linkType;
 
     public Input<InterconnectLinkType> getLinkType() {
         return this.linkType == null ? Input.empty() : this.linkType;
@@ -90,7 +90,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -101,7 +101,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,21 +112,21 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nocContactEmail")
-    private final @Nullable Input<String> nocContactEmail;
+      private final @Nullable Input<String> nocContactEmail;
 
     public Input<String> getNocContactEmail() {
         return this.nocContactEmail == null ? Input.empty() : this.nocContactEmail;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -137,7 +137,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestedLinkCount")
-    private final @Nullable Input<Integer> requestedLinkCount;
+      private final @Nullable Input<Integer> requestedLinkCount;
 
     public Input<Integer> getRequestedLinkCount() {
         return this.requestedLinkCount == null ? Input.empty() : this.requestedLinkCount;
@@ -346,7 +346,6 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             this.requestedLinkCount = Input.ofNullable(requestedLinkCount);
             return this;
         }
-
         public InterconnectArgs build() {
             return new InterconnectArgs(adminEnabled, customerName, description, interconnectType, labels, linkType, location, name, nocContactEmail, project, requestId, requestedLinkCount);
         }

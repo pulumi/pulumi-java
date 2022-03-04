@@ -6,21 +6,41 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automation.inputs.GetSoftwareUpdateConfigurationByNameArgs;
 import io.pulumi.azurenative.automation.outputs.GetSoftwareUpdateConfigurationByNameResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSoftwareUpdateConfigurationByName {
-/**
- * Software update configuration properties.
+    private GetSoftwareUpdateConfigurationByName() {}
+    public interface BuilderApplicator {
+        public void apply(GetSoftwareUpdateConfigurationByNameArgs.Builder a);
+    }
+    private static GetSoftwareUpdateConfigurationByNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSoftwareUpdateConfigurationByNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Software update configuration properties.
  * API Version: 2019-06-01.
  * 
- *
- * Software update configuration properties.
+     *
+     * Software update configuration properties.
  * 
- */
+     */
+    public static CompletableFuture<GetSoftwareUpdateConfigurationByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Software update configuration properties.
+     * API Version: 2019-06-01.
+     * 
+     *
+         * Software update configuration properties.
+     * 
+     */
     public static CompletableFuture<GetSoftwareUpdateConfigurationByNameResult> invokeAsync(GetSoftwareUpdateConfigurationByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getSoftwareUpdateConfigurationByName", TypeShape.of(GetSoftwareUpdateConfigurationByNameResult.class), args == null ? GetSoftwareUpdateConfigurationByNameArgs.Empty : args, Utilities.withVersion(options));
     }

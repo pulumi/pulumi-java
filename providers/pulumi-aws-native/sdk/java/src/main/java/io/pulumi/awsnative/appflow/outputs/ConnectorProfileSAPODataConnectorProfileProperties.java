@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileOAuthProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -127,7 +127,6 @@ public final class ConnectorProfileSAPODataConnectorProfileProperties {
             this.privateLinkServiceName = privateLinkServiceName;
             return this;
         }
-
         public ConnectorProfileSAPODataConnectorProfileProperties build() {
             return new ConnectorProfileSAPODataConnectorProfileProperties(applicationHostUrl, applicationServicePath, clientNumber, logonLanguage, oAuthProperties, portNumber, privateLinkServiceName);
         }

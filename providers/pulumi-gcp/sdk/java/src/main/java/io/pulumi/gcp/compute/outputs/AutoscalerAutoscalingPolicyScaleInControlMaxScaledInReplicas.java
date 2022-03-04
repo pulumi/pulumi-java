@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public final class AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas 
      * Specifies a fixed number of VM instances. This must be a positive
      * integer.
      * 
-     */
+    */
     public Optional<Integer> getFixed() {
         return Optional.ofNullable(this.fixed);
     }
@@ -44,7 +44,7 @@ public final class AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas 
      * Specifies a percentage of instances between 0 to 100%, inclusive.
      * For example, specify 80 for 80%.
      * 
-     */
+    */
     public Optional<Integer> getPercent() {
         return Optional.ofNullable(this.percent);
     }
@@ -80,7 +80,6 @@ public final class AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas 
             this.percent = percent;
             return this;
         }
-
         public AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas build() {
             return new AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas(fixed, percent);
         }

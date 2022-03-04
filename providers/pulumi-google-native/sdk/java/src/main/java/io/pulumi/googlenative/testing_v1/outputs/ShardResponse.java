@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.TestTargetsForShardResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ShardResponse {
     /**
      * The total number of shards.
      * 
-     */
+    */
     public Integer getNumShards() {
         return this.numShards;
     }
     /**
      * The index of the shard among all the shards.
      * 
-     */
+    */
     public Integer getShardIndex() {
         return this.shardIndex;
     }
     /**
      * Test targets for each shard.
      * 
-     */
+    */
     public TestTargetsForShardResponse getTestTargetsForShard() {
         return this.testTargetsForShard;
     }
@@ -96,7 +96,6 @@ public final class ShardResponse {
             this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
             return this;
         }
-
         public ShardResponse build() {
             return new ShardResponse(numShards, shardIndex, testTargetsForShard);
         }

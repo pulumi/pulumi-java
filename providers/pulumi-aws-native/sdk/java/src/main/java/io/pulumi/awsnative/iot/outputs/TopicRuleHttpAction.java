@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRuleHttpActionHeader;
 import io.pulumi.awsnative.iot.outputs.TopicRuleHttpAuthorization;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -89,7 +89,6 @@ public final class TopicRuleHttpAction {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public TopicRuleHttpAction build() {
             return new TopicRuleHttpAction(auth, confirmationUrl, headers, url);
         }

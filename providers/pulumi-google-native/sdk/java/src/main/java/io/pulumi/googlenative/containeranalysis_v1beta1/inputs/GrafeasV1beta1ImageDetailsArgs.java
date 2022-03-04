@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DerivedArgs;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="derivedImage", required=true)
-    private final Input<DerivedArgs> derivedImage;
+      private final Input<DerivedArgs> derivedImage;
 
     public Input<DerivedArgs> getDerivedImage() {
         return this.derivedImage;
@@ -65,7 +65,6 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
             this.derivedImage = Input.of(Objects.requireNonNull(derivedImage));
             return this;
         }
-
         public GrafeasV1beta1ImageDetailsArgs build() {
             return new GrafeasV1beta1ImageDetailsArgs(derivedImage);
         }

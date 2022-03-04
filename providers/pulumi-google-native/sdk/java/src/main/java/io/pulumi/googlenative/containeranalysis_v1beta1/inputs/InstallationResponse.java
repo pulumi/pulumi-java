@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LocationResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final List<LocationResponse> location;
+      private final List<LocationResponse> location;
 
     public List<LocationResponse> getLocation() {
         return this.location;
@@ -34,7 +34,7 @@ public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -83,7 +83,6 @@ public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public InstallationResponse build() {
             return new InstallationResponse(location, name);
         }

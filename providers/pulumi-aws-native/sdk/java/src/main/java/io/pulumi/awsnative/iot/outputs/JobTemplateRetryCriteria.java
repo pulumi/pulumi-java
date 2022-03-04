@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.JobTemplateJobRetryFailureType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class JobTemplateRetryCriteria {
             this.numberOfRetries = numberOfRetries;
             return this;
         }
-
         public JobTemplateRetryCriteria build() {
             return new JobTemplateRetryCriteria(failureType, numberOfRetries);
         }

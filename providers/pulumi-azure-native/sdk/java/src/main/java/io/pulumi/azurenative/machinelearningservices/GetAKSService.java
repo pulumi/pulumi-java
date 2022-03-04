@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.inputs.GetAKSServiceArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.GetAKSServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAKSService {
-/**
- * Machine Learning service object wrapped into ARM resource envelope.
+    private GetAKSService() {}
+    public interface BuilderApplicator {
+        public void apply(GetAKSServiceArgs.Builder a);
+    }
+    private static GetAKSServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAKSServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Machine Learning service object wrapped into ARM resource envelope.
  * API Version: 2021-01-01.
  * 
- *
- * Machine Learning service object wrapped into ARM resource envelope.
+     *
+     * Machine Learning service object wrapped into ARM resource envelope.
  * 
- */
+     */
+    public static CompletableFuture<GetAKSServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Machine Learning service object wrapped into ARM resource envelope.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Machine Learning service object wrapped into ARM resource envelope.
+     * 
+     */
     public static CompletableFuture<GetAKSServiceResult> invokeAsync(GetAKSServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getAKSService", TypeShape.of(GetAKSServiceResult.class), args == null ? GetAKSServiceArgs.Empty : args, Utilities.withVersion(options));
     }

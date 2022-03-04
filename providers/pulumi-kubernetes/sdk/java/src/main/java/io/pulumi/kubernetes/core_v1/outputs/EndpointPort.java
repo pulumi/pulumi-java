@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -53,21 +53,21 @@ public final class EndpointPort {
     /**
      * The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
      * 
-     */
+    */
     public Optional<String> getAppProtocol() {
         return Optional.ofNullable(this.appProtocol);
     }
     /**
      * The name of this port.  This must match the 'name' field in the corresponding ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The port number of the endpoint.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -79,7 +79,7 @@ public final class EndpointPort {
      *  - `"TCP"` is the TCP protocol.
      *  - `"UDP"` is the UDP protocol.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -129,7 +129,6 @@ public final class EndpointPort {
             this.protocol = protocol;
             return this;
         }
-
         public EndpointPort build() {
             return new EndpointPort(appProtocol, name, port, protocol);
         }

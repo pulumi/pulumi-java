@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApplicationNotificationEndpointResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -59,7 +59,6 @@ public final class ApplicationNotificationEndpointResponse extends io.pulumi.res
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ApplicationNotificationEndpointResponse build() {
             return new ApplicationNotificationEndpointResponse(uri);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.security.inputs.GetCustomEntityStoreAssignmentArgs;
 import io.pulumi.azurenative.security.outputs.GetCustomEntityStoreAssignmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomEntityStoreAssignment {
-/**
- * Custom entity store assignment
+    private GetCustomEntityStoreAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetCustomEntityStoreAssignmentArgs.Builder a);
+    }
+    private static GetCustomEntityStoreAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCustomEntityStoreAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Custom entity store assignment
  * API Version: 2021-07-01-preview.
  * 
- *
- * Custom entity store assignment
+     *
+     * Custom entity store assignment
  * 
- */
+     */
+    public static CompletableFuture<GetCustomEntityStoreAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Custom entity store assignment
+     * API Version: 2021-07-01-preview.
+     * 
+     *
+         * Custom entity store assignment
+     * 
+     */
     public static CompletableFuture<GetCustomEntityStoreAssignmentResult> invokeAsync(GetCustomEntityStoreAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getCustomEntityStoreAssignment", TypeShape.of(GetCustomEntityStoreAssignmentResult.class), args == null ? GetCustomEntityStoreAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

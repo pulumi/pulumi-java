@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
     public static final GetOutboundFirewallRuleArgs Empty = new GetOutboundFirewallRuleArgs();
 
     @InputImport(name="outboundRuleFqdn", required=true)
-    private final String outboundRuleFqdn;
+      private final String outboundRuleFqdn;
 
     public String getOutboundRuleFqdn() {
         return this.outboundRuleFqdn;
@@ -24,7 +24,7 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -35,7 +35,7 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -94,7 +94,6 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public GetOutboundFirewallRuleArgs build() {
             return new GetOutboundFirewallRuleArgs(outboundRuleFqdn, resourceGroupName, serverName);
         }

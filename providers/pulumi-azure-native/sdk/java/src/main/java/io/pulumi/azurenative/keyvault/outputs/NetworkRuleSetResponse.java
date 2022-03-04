@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.IPRuleResponse;
 import io.pulumi.azurenative.keyvault.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class NetworkRuleSetResponse {
     /**
      * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
      * 
-     */
+    */
     public Optional<String> getBypass() {
         return Optional.ofNullable(this.bypass);
     }
     /**
      * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
      * 
-     */
+    */
     public Optional<String> getDefaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
      * The list of IP address rules.
      * 
-     */
+    */
     public List<IPRuleResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
      * The list of virtual network rules.
      * 
-     */
+    */
     public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }
@@ -121,7 +121,6 @@ public final class NetworkRuleSetResponse {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(bypass, defaultAction, ipRules, virtualNetworkRules);
         }

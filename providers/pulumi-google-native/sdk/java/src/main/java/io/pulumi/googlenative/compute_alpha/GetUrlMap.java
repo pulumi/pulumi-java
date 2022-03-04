@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUrlMap {
-/**
- * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+    private GetUrlMap() {}
+    public interface BuilderApplicator {
+        public void apply(GetUrlMapArgs.Builder a);
+    }
+    private static GetUrlMapArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUrlMapArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetUrlMapResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetUrlMapResult> invokeAsync(GetUrlMapArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getUrlMap", TypeShape.of(GetUrlMapResult.class), args == null ? GetUrlMapArgs.Empty : args, Utilities.withVersion(options));
     }

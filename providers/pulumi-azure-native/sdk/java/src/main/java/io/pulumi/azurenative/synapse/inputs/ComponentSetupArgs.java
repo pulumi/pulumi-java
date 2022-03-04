@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.SecureStringArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="componentName", required=true)
-    private final Input<String> componentName;
+      private final Input<String> componentName;
 
     public Input<String> getComponentName() {
         return this.componentName;
@@ -35,7 +35,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseKey")
-    private final @Nullable Input<SecureStringArgs> licenseKey;
+      private final @Nullable Input<SecureStringArgs> licenseKey;
 
     public Input<SecureStringArgs> getLicenseKey() {
         return this.licenseKey == null ? Input.empty() : this.licenseKey;
@@ -47,7 +47,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -121,7 +121,6 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ComponentSetupArgs build() {
             return new ComponentSetupArgs(componentName, licenseKey, type);
         }

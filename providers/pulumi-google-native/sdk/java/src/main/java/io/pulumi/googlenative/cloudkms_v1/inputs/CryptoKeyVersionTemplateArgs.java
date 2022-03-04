@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionTemplateAlgorithm;
 import io.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionTemplateProtectionLevel;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final Input<CryptoKeyVersionTemplateAlgorithm> algorithm;
+      private final Input<CryptoKeyVersionTemplateAlgorithm> algorithm;
 
     public Input<CryptoKeyVersionTemplateAlgorithm> getAlgorithm() {
         return this.algorithm;
@@ -35,7 +35,7 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protectionLevel")
-    private final @Nullable Input<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
+      private final @Nullable Input<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
 
     public Input<CryptoKeyVersionTemplateProtectionLevel> getProtectionLevel() {
         return this.protectionLevel == null ? Input.empty() : this.protectionLevel;
@@ -94,7 +94,6 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
             this.protectionLevel = Input.ofNullable(protectionLevel);
             return this;
         }
-
         public CryptoKeyVersionTemplateArgs build() {
             return new CryptoKeyVersionTemplateArgs(algorithm, protectionLevel);
         }

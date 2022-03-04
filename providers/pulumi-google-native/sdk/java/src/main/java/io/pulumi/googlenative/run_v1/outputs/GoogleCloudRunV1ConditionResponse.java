@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,42 +59,42 @@ public final class GoogleCloudRunV1ConditionResponse {
     /**
      * Optional. Last time the condition transitioned from one status to another.
      * 
-     */
+    */
     public String getLastTransitionTime() {
         return this.lastTransitionTime;
     }
     /**
      * Optional. Human readable message indicating details about the current status.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Optional. One-word CamelCase reason for the condition's last transition.
      * 
-     */
+    */
     public String getReason() {
         return this.reason;
     }
     /**
      * Optional. How to interpret failures of this condition, one of Error, Warning, Info
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -158,7 +158,6 @@ public final class GoogleCloudRunV1ConditionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudRunV1ConditionResponse build() {
             return new GoogleCloudRunV1ConditionResponse(lastTransitionTime, message, reason, severity, status, type);
         }

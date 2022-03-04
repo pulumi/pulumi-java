@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -34,7 +34,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -45,7 +45,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+      private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -56,7 +56,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -67,7 +67,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provider", required=true)
-    private final String provider;
+      private final String provider;
 
     public String getProvider() {
         return this.provider;
@@ -78,7 +78,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable String roles;
+      private final @Nullable String roles;
 
     public Optional<String> getRoles() {
         return this.roles == null ? Optional.empty() : Optional.ofNullable(this.roles);
@@ -89,7 +89,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -100,7 +100,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="userId", required=true)
-    private final String userId;
+      private final String userId;
 
     public String getUserId() {
         return this.userId;
@@ -209,7 +209,6 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public StaticSiteUserARMResourceResponse build() {
             return new StaticSiteUserARMResourceResponse(displayName, id, kind, name, provider, roles, type, userId);
         }

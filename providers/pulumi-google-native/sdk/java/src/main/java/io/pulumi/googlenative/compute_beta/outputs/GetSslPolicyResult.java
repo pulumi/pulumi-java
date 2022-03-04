@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.SslPolicyWarningsItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -96,77 +96,77 @@ public final class GetSslPolicyResult {
     /**
      * Creation timestamp in RFC3339 text format.
      * 
-     */
+    */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * A list of features enabled when the selected profile is CUSTOM. The method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.
      * 
-     */
+    */
     public List<String> getCustomFeatures() {
         return this.customFeatures;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The list of features enabled in the SSL policy.
      * 
-     */
+    */
     public List<String> getEnabledFeatures() {
         return this.enabledFeatures;
     }
     /**
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an SslPolicy.
      * 
-     */
+    */
     public String getFingerprint() {
         return this.fingerprint;
     }
     /**
      * [Output only] Type of the resource. Always compute#sslPolicyfor SSL policies.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.
      * 
-     */
+    */
     public String getMinTlsVersion() {
         return this.minTlsVersion;
     }
     /**
      * Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.
      * 
-     */
+    */
     public String getProfile() {
         return this.profile;
     }
     /**
      * Server-defined URL for the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.
      * 
-     */
+    */
     public List<SslPolicyWarningsItemResponse> getWarnings() {
         return this.warnings;
     }
@@ -265,7 +265,6 @@ public final class GetSslPolicyResult {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-
         public GetSslPolicyResult build() {
             return new GetSslPolicyResult(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, kind, minTlsVersion, name, profile, selfLink, warnings);
         }

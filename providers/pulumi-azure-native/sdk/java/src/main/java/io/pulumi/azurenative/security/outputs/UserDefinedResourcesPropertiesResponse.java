@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class UserDefinedResourcesPropertiesResponse {
     /**
      * Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
     /**
      * List of Azure subscription ids on which the user defined resources query should be executed.
      * 
-     */
+    */
     public List<String> getQuerySubscriptions() {
         return this.querySubscriptions;
     }
@@ -75,7 +75,6 @@ public final class UserDefinedResourcesPropertiesResponse {
             this.querySubscriptions = Objects.requireNonNull(querySubscriptions);
             return this;
         }
-
         public UserDefinedResourcesPropertiesResponse build() {
             return new UserDefinedResourcesPropertiesResponse(query, querySubscriptions);
         }

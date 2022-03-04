@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class FrontEndConfigurationResponse extends io.pulumi.resources.Inv
     public static final FrontEndConfigurationResponse Empty = new FrontEndConfigurationResponse();
 
     @InputImport(name="kind")
-    private final @Nullable String kind;
+      private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -53,7 +53,6 @@ public final class FrontEndConfigurationResponse extends io.pulumi.resources.Inv
             this.kind = kind;
             return this;
         }
-
         public FrontEndConfigurationResponse build() {
             return new FrontEndConfigurationResponse(kind);
         }

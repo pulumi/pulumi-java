@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.StreamingPolicyPlayReadyConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyWidevineConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class CencDrmConfigurationResponse {
     /**
      * PlayReady configurations
      * 
-     */
+    */
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> getPlayReady() {
         return Optional.ofNullable(this.playReady);
     }
     /**
      * Widevine configurations
      * 
-     */
+    */
     public Optional<StreamingPolicyWidevineConfigurationResponse> getWidevine() {
         return Optional.ofNullable(this.widevine);
     }
@@ -77,7 +77,6 @@ public final class CencDrmConfigurationResponse {
             this.widevine = widevine;
             return this;
         }
-
         public CencDrmConfigurationResponse build() {
             return new CencDrmConfigurationResponse(playReady, widevine);
         }

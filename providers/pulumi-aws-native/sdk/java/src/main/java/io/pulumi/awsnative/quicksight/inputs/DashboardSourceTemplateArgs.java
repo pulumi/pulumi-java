@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DashboardDataSetReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -35,7 +35,7 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataSetReferences", required=true)
-    private final Input<List<DashboardDataSetReferenceArgs>> dataSetReferences;
+      private final Input<List<DashboardDataSetReferenceArgs>> dataSetReferences;
 
     public Input<List<DashboardDataSetReferenceArgs>> getDataSetReferences() {
         return this.dataSetReferences;
@@ -94,7 +94,6 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
             this.dataSetReferences = Input.of(Objects.requireNonNull(dataSetReferences));
             return this;
         }
-
         public DashboardSourceTemplateArgs build() {
             return new DashboardSourceTemplateArgs(arn, dataSetReferences);
         }

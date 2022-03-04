@@ -4,7 +4,7 @@
 package io.pulumi.gcp.runtimeconfig;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -44,7 +44,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -58,14 +58,14 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<String> text;
+      private final @Nullable Input<String> text;
 
     public Input<String> getText() {
         return this.text == null ? Input.empty() : this.text;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -169,7 +169,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public VariableArgs build() {
             return new VariableArgs(name, parent, project, text, value);
         }

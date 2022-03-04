@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class PredictionDistributionDefinitionResponseDistributions {
     /**
      * Number of negatives.
      * 
-     */
+    */
     public Optional<Double> getNegatives() {
         return Optional.ofNullable(this.negatives);
     }
     /**
      * Number of negatives above threshold.
      * 
-     */
+    */
     public Optional<Double> getNegativesAboveThreshold() {
         return Optional.ofNullable(this.negativesAboveThreshold);
     }
     /**
      * Number of positives.
      * 
-     */
+    */
     public Optional<Double> getPositives() {
         return Optional.ofNullable(this.positives);
     }
     /**
      * Number of positives above threshold.
      * 
-     */
+    */
     public Optional<Double> getPositivesAboveThreshold() {
         return Optional.ofNullable(this.positivesAboveThreshold);
     }
     /**
      * Score threshold.
      * 
-     */
+    */
     public Optional<Integer> getScoreThreshold() {
         return Optional.ofNullable(this.scoreThreshold);
     }
@@ -140,7 +140,6 @@ public final class PredictionDistributionDefinitionResponseDistributions {
             this.scoreThreshold = scoreThreshold;
             return this;
         }
-
         public PredictionDistributionDefinitionResponseDistributions build() {
             return new PredictionDistributionDefinitionResponseDistributions(negatives, negativesAboveThreshold, positives, positivesAboveThreshold, scoreThreshold);
         }

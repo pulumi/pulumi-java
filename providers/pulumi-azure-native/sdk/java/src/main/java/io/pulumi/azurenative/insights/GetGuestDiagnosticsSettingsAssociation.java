@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetGuestDiagnosticsSettingsAssociationArgs;
 import io.pulumi.azurenative.insights.outputs.GetGuestDiagnosticsSettingsAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGuestDiagnosticsSettingsAssociation {
-/**
- * Virtual machine guest diagnostic settings resource.
+    private GetGuestDiagnosticsSettingsAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetGuestDiagnosticsSettingsAssociationArgs.Builder a);
+    }
+    private static GetGuestDiagnosticsSettingsAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGuestDiagnosticsSettingsAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Virtual machine guest diagnostic settings resource.
  * API Version: 2018-06-01-preview.
  * 
- *
- * Virtual machine guest diagnostic settings resource.
+     *
+     * Virtual machine guest diagnostic settings resource.
  * 
- */
+     */
+    public static CompletableFuture<GetGuestDiagnosticsSettingsAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Virtual machine guest diagnostic settings resource.
+     * API Version: 2018-06-01-preview.
+     * 
+     *
+         * Virtual machine guest diagnostic settings resource.
+     * 
+     */
     public static CompletableFuture<GetGuestDiagnosticsSettingsAssociationResult> invokeAsync(GetGuestDiagnosticsSettingsAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getGuestDiagnosticsSettingsAssociation", TypeShape.of(GetGuestDiagnosticsSettingsAssociationResult.class), args == null ? GetGuestDiagnosticsSettingsAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

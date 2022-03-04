@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ConnectionStatePropertiesResponse {
     /**
      * The actions required on the managed private endpoint
      * 
-     */
+    */
     public String getActionsRequired() {
         return this.actionsRequired;
     }
     /**
      * The managed private endpoint description
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The approval status
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -95,7 +95,6 @@ public final class ConnectionStatePropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ConnectionStatePropertiesResponse build() {
             return new ConnectionStatePropertiesResponse(actionsRequired, description, status);
         }

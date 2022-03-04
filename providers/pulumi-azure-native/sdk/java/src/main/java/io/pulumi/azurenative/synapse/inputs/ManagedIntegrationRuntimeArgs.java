@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse.inputs;
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeComputePropertiesArgs;
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeSsisPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="computeProperties")
-    private final @Nullable Input<IntegrationRuntimeComputePropertiesArgs> computeProperties;
+      private final @Nullable Input<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
     public Input<IntegrationRuntimeComputePropertiesArgs> getComputeProperties() {
         return this.computeProperties == null ? Input.empty() : this.computeProperties;
@@ -36,7 +36,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ssisProperties")
-    private final @Nullable Input<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
+      private final @Nullable Input<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
     public Input<IntegrationRuntimeSsisPropertiesArgs> getSsisProperties() {
         return this.ssisProperties == null ? Input.empty() : this.ssisProperties;
@@ -59,7 +59,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -148,7 +148,6 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ManagedIntegrationRuntimeArgs build() {
             return new ManagedIntegrationRuntimeArgs(computeProperties, description, ssisProperties, type);
         }

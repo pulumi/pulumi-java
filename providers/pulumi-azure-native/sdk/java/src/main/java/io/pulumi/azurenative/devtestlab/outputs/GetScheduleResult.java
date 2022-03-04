@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devtestlab.outputs.DayDetailsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.HourDetailsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.WeekDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -136,112 +136,112 @@ public final class GetScheduleResult {
     /**
      * The creation date of the schedule.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * If the schedule will occur once each day of the week, specify the daily recurrence.
      * 
-     */
+    */
     public Optional<DayDetailsResponse> getDailyRecurrence() {
         return Optional.ofNullable(this.dailyRecurrence);
     }
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
      * 
-     */
+    */
     public Optional<HourDetailsResponse> getHourlyRecurrence() {
         return Optional.ofNullable(this.hourlyRecurrence);
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Notification settings.
      * 
-     */
+    */
     public Optional<NotificationSettingsResponse> getNotificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The status of the schedule (i.e. Enabled, Disabled)
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource ID to which the schedule belongs
      * 
-     */
+    */
     public Optional<String> getTargetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
      * 
-     */
+    */
     public Optional<String> getTaskType() {
         return Optional.ofNullable(this.taskType);
     }
     /**
      * The time zone ID (e.g. Pacific Standard time).
      * 
-     */
+    */
     public Optional<String> getTimeZoneId() {
         return Optional.ofNullable(this.timeZoneId);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
      * 
-     */
+    */
     public Optional<WeekDetailsResponse> getWeeklyRecurrence() {
         return Optional.ofNullable(this.weeklyRecurrence);
     }
@@ -375,7 +375,6 @@ public final class GetScheduleResult {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }
-
         public GetScheduleResult build() {
             return new GetScheduleResult(createdDate, dailyRecurrence, hourlyRecurrence, id, location, name, notificationSettings, provisioningState, status, tags, targetResourceId, taskType, timeZoneId, type, uniqueIdentifier, weeklyRecurrence);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -100,77 +100,77 @@ public final class OutboundRuleResponse {
     /**
      * The number of outbound ports to be used for NAT.
      * 
-     */
+    */
     public Optional<Integer> getAllocatedOutboundPorts() {
         return Optional.ofNullable(this.allocatedOutboundPorts);
     }
     /**
      * A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
      * 
-     */
+    */
     public SubResourceResponse getBackendAddressPool() {
         return this.backendAddressPool;
     }
     /**
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
-     */
+    */
     public Optional<Boolean> getEnableTcpReset() {
         return Optional.ofNullable(this.enableTcpReset);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The Frontend IP addresses of the load balancer.
      * 
-     */
+    */
     public List<SubResourceResponse> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The timeout for the TCP idle connection.
      * 
-     */
+    */
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
      * The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The protocol for the outbound rule in load balancer.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * The provisioning state of the outbound rule resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -269,7 +269,6 @@ public final class OutboundRuleResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OutboundRuleResponse build() {
             return new OutboundRuleResponse(allocatedOutboundPorts, backendAddressPool, enableTcpReset, etag, frontendIPConfigurations, id, idleTimeoutInMinutes, name, protocol, provisioningState, type);
         }

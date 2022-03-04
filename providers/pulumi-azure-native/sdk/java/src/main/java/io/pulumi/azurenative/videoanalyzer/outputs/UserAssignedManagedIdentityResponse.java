@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class UserAssignedManagedIdentityResponse {
     /**
      * The client ID.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The principal ID.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -74,7 +74,6 @@ public final class UserAssignedManagedIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public UserAssignedManagedIdentityResponse build() {
             return new UserAssignedManagedIdentityResponse(clientId, principalId);
         }

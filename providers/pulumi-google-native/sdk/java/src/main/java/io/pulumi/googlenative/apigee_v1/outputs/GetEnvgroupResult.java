@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class GetEnvgroupResult {
     /**
      * The time at which the environment group was created as milliseconds since epoch.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Host names for this environment group.
      * 
-     */
+    */
     public List<String> getHostnames() {
         return this.hostnames;
     }
     /**
      * The time at which the environment group was last updated as milliseconds since epoch.
      * 
-     */
+    */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * ID of the environment group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of the environment group. Values other than ACTIVE means the resource is not ready to use.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -138,7 +138,6 @@ public final class GetEnvgroupResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetEnvgroupResult build() {
             return new GetEnvgroupResult(createdAt, hostnames, lastModifiedAt, name, state);
         }

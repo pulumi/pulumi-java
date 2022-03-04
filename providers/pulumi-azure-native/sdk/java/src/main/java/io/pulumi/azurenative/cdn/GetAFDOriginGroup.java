@@ -6,21 +6,41 @@ package io.pulumi.azurenative.cdn;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cdn.inputs.GetAFDOriginGroupArgs;
 import io.pulumi.azurenative.cdn.outputs.GetAFDOriginGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAFDOriginGroup {
-/**
- * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+    private GetAFDOriginGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetAFDOriginGroupArgs.Builder a);
+    }
+    private static GetAFDOriginGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAFDOriginGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
  * API Version: 2020-09-01.
  * 
- *
- * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+     *
+     * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
  * 
- */
+     */
+    public static CompletableFuture<GetAFDOriginGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
+     * 
+     */
     public static CompletableFuture<GetAFDOriginGroupResult> invokeAsync(GetAFDOriginGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getAFDOriginGroup", TypeShape.of(GetAFDOriginGroupResult.class), args == null ? GetAFDOriginGroupArgs.Empty : args, Utilities.withVersion(options));
     }

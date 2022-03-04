@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.TemplateColumnGroupSchema;
 import io.pulumi.awsnative.quicksight.outputs.TemplateDataSetSchema;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +39,7 @@ public final class TemplateDataSetConfiguration {
     /**
      * <p>A structure containing the list of column group schemas.</p>
      * 
-     */
+    */
     public List<TemplateColumnGroupSchema> getColumnGroupSchemaList() {
         return this.columnGroupSchemaList == null ? List.of() : this.columnGroupSchemaList;
     }
@@ -49,7 +49,7 @@ public final class TemplateDataSetConfiguration {
     /**
      * <p>Placeholder.</p>
      * 
-     */
+    */
     public Optional<String> getPlaceholder() {
         return Optional.ofNullable(this.placeholder);
     }
@@ -92,7 +92,6 @@ public final class TemplateDataSetConfiguration {
             this.placeholder = placeholder;
             return this;
         }
-
         public TemplateDataSetConfiguration build() {
             return new TemplateDataSetConfiguration(columnGroupSchemaList, dataSetSchema, placeholder);
         }

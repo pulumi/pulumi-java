@@ -6,21 +6,41 @@ package io.pulumi.azurenative.labservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.labservices.inputs.GetLabAccountArgs;
 import io.pulumi.azurenative.labservices.outputs.GetLabAccountResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLabAccount {
-/**
- * Represents a lab account.
+    private GetLabAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetLabAccountArgs.Builder a);
+    }
+    private static GetLabAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLabAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a lab account.
  * API Version: 2018-10-15.
  * 
- *
- * Represents a lab account.
+     *
+     * Represents a lab account.
  * 
- */
+     */
+    public static CompletableFuture<GetLabAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a lab account.
+     * API Version: 2018-10-15.
+     * 
+     *
+         * Represents a lab account.
+     * 
+     */
     public static CompletableFuture<GetLabAccountResult> invokeAsync(GetLabAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getLabAccount", TypeShape.of(GetLabAccountResult.class), args == null ? GetLabAccountArgs.Empty : args, Utilities.withVersion(options));
     }

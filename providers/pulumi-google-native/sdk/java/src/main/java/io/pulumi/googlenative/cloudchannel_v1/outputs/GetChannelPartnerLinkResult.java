@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CloudIdentityInfoResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -74,56 +74,56 @@ public final class GetChannelPartnerLinkResult {
     /**
      * Cloud Identity info of the channel partner (IR).
      * 
-     */
+    */
     public GoogleCloudChannelV1CloudIdentityInfoResponse getChannelPartnerCloudIdentityInfo() {
         return this.channelPartnerCloudIdentityInfo;
     }
     /**
      * Timestamp of when the channel partner link is created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * URI of the web page where partner accepts the link invitation.
      * 
-     */
+    */
     public String getInviteLinkUri() {
         return this.inviteLinkUri;
     }
     /**
      * State of the channel partner link.
      * 
-     */
+    */
     public String getLinkState() {
         return this.linkState;
     }
     /**
      * Resource name for the channel partner link, in the format accounts/{account_id}/channelPartnerLinks/{id}.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Public identifier that a customer must use to generate a transfer token to move to this distributor-reseller combination.
      * 
-     */
+    */
     public String getPublicId() {
         return this.publicId;
     }
     /**
      * Cloud Identity ID of the linked reseller.
      * 
-     */
+    */
     public String getResellerCloudIdentityId() {
         return this.resellerCloudIdentityId;
     }
     /**
      * Timestamp of when the channel partner link is updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -201,7 +201,6 @@ public final class GetChannelPartnerLinkResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetChannelPartnerLinkResult build() {
             return new GetChannelPartnerLinkResult(channelPartnerCloudIdentityInfo, createTime, inviteLinkUri, linkState, name, publicId, resellerCloudIdentityId, updateTime);
         }

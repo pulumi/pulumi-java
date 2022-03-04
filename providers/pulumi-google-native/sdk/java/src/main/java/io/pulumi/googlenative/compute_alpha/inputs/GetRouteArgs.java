@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRouteArgs Empty = new GetRouteArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="route", required=true)
-    private final String route;
+      private final String route;
 
     public String getRoute() {
         return this.route;
@@ -71,7 +71,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
             this.route = Objects.requireNonNull(route);
             return this;
         }
-
         public GetRouteArgs build() {
             return new GetRouteArgs(project, route);
         }

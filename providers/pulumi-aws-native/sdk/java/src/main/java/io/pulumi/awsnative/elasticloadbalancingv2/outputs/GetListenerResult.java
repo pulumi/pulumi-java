@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerAction;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerCertificate;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -129,7 +129,6 @@ public final class GetListenerResult {
             this.sslPolicy = sslPolicy;
             return this;
         }
-
         public GetListenerResult build() {
             return new GetListenerResult(alpnPolicy, certificates, defaultActions, listenerArn, port, protocol, sslPolicy);
         }

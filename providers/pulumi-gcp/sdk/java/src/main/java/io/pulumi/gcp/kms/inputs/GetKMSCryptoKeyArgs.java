@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetKMSCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyRing", required=true)
-    private final String keyRing;
+      private final String keyRing;
 
     public String getKeyRing() {
         return this.keyRing;
@@ -29,7 +29,7 @@ public final class GetKMSCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -78,7 +78,6 @@ public final class GetKMSCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetKMSCryptoKeyArgs build() {
             return new GetKMSCryptoKeyArgs(keyRing, name);
         }

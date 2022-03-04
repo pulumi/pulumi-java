@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -92,28 +92,28 @@ public final class GetRoleAssignmentArtifactResult {
     /**
      * Artifacts which need to be deployed before the specified artifact.
      * 
-     */
+    */
     public List<String> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Multi-line explain this resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -121,42 +121,42 @@ public final class GetRoleAssignmentArtifactResult {
      * Specifies the kind of blueprint artifact.
      * Expected value is 'roleAssignment'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of this resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
      * 
-     */
+    */
     public Object getPrincipalIds() {
         return this.principalIds;
     }
     /**
      * RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * Azure resource ID of the RoleDefinition.
      * 
-     */
+    */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
      * Type of this resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -248,7 +248,6 @@ public final class GetRoleAssignmentArtifactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRoleAssignmentArtifactResult build() {
             return new GetRoleAssignmentArtifactResult(dependsOn, description, displayName, id, kind, name, principalIds, resourceGroup, roleDefinitionId, type);
         }

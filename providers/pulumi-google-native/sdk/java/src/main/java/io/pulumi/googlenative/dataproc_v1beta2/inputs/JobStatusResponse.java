@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="details", required=true)
-    private final String details;
+      private final String details;
 
     public String getDetails() {
         return this.details;
@@ -32,7 +32,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -43,7 +43,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stateStartTime", required=true)
-    private final String stateStartTime;
+      private final String stateStartTime;
 
     public String getStateStartTime() {
         return this.stateStartTime;
@@ -54,7 +54,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="substate", required=true)
-    private final String substate;
+      private final String substate;
 
     public String getSubstate() {
         return this.substate;
@@ -123,7 +123,6 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
             this.substate = Objects.requireNonNull(substate);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(details, state, stateStartTime, substate);
         }

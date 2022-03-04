@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -36,7 +36,7 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRefs")
-    private final @Nullable Input<List<String>> sinkRefs;
+      private final @Nullable Input<List<String>> sinkRefs;
 
     public Input<List<String>> getSinkRefs() {
         return this.sinkRefs == null ? Input.empty() : this.sinkRefs;
@@ -95,7 +95,6 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
             this.sinkRefs = Input.ofNullable(sinkRefs);
             return this;
         }
-
         public DiagnosticsRefArgs build() {
             return new DiagnosticsRefArgs(enabled, sinkRefs);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -105,84 +105,84 @@ public final class GetPoolResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * UUID v4 used to identify the Pool
      * 
-     */
+    */
     public String getPoolId() {
         return this.poolId;
     }
     /**
      * Azure lifecycle management
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The qos type of the pool
      * 
-     */
+    */
     public Optional<String> getQosType() {
         return Optional.ofNullable(this.qosType);
     }
     /**
      * The service level of the file system
      * 
-     */
+    */
     public String getServiceLevel() {
         return this.serviceLevel;
     }
     /**
      * Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
      * 
-     */
+    */
     public Double getSize() {
         return this.size;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Total throughput of pool in Mibps
      * 
-     */
+    */
     public Double getTotalThroughputMibps() {
         return this.totalThroughputMibps;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Utilized throughput of pool in Mibps
      * 
-     */
+    */
     public Double getUtilizedThroughputMibps() {
         return this.utilizedThroughputMibps;
     }
@@ -288,7 +288,6 @@ public final class GetPoolResult {
             this.utilizedThroughputMibps = Objects.requireNonNull(utilizedThroughputMibps);
             return this;
         }
-
         public GetPoolResult build() {
             return new GetPoolResult(id, location, name, poolId, provisioningState, qosType, serviceLevel, size, tags, totalThroughputMibps, type, utilizedThroughputMibps);
         }

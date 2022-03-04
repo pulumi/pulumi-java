@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -97,77 +97,77 @@ public final class BgpSessionResponse {
     /**
      * The maximum number of prefixes advertised over the IPv4 session.
      * 
-     */
+    */
     public Optional<Integer> getMaxPrefixesAdvertisedV4() {
         return Optional.ofNullable(this.maxPrefixesAdvertisedV4);
     }
     /**
      * The maximum number of prefixes advertised over the IPv6 session.
      * 
-     */
+    */
     public Optional<Integer> getMaxPrefixesAdvertisedV6() {
         return Optional.ofNullable(this.maxPrefixesAdvertisedV6);
     }
     /**
      * The MD5 authentication key of the session.
      * 
-     */
+    */
     public Optional<String> getMd5AuthenticationKey() {
         return Optional.ofNullable(this.md5AuthenticationKey);
     }
     /**
      * The IPv4 session address on Microsoft's end.
      * 
-     */
+    */
     public Optional<String> getMicrosoftSessionIPv4Address() {
         return Optional.ofNullable(this.microsoftSessionIPv4Address);
     }
     /**
      * The IPv6 session address on Microsoft's end.
      * 
-     */
+    */
     public Optional<String> getMicrosoftSessionIPv6Address() {
         return Optional.ofNullable(this.microsoftSessionIPv6Address);
     }
     /**
      * The IPv4 session address on peer's end.
      * 
-     */
+    */
     public Optional<String> getPeerSessionIPv4Address() {
         return Optional.ofNullable(this.peerSessionIPv4Address);
     }
     /**
      * The IPv6 session address on peer's end.
      * 
-     */
+    */
     public Optional<String> getPeerSessionIPv6Address() {
         return Optional.ofNullable(this.peerSessionIPv6Address);
     }
     /**
      * The IPv4 prefix that contains both ends' IPv4 addresses.
      * 
-     */
+    */
     public Optional<String> getSessionPrefixV4() {
         return Optional.ofNullable(this.sessionPrefixV4);
     }
     /**
      * The IPv6 prefix that contains both ends' IPv6 addresses.
      * 
-     */
+    */
     public Optional<String> getSessionPrefixV6() {
         return Optional.ofNullable(this.sessionPrefixV6);
     }
     /**
      * The state of the IPv4 session.
      * 
-     */
+    */
     public String getSessionStateV4() {
         return this.sessionStateV4;
     }
     /**
      * The state of the IPv6 session.
      * 
-     */
+    */
     public String getSessionStateV6() {
         return this.sessionStateV6;
     }
@@ -266,7 +266,6 @@ public final class BgpSessionResponse {
             this.sessionStateV6 = Objects.requireNonNull(sessionStateV6);
             return this;
         }
-
         public BgpSessionResponse build() {
             return new BgpSessionResponse(maxPrefixesAdvertisedV4, maxPrefixesAdvertisedV6, md5AuthenticationKey, microsoftSessionIPv4Address, microsoftSessionIPv6Address, peerSessionIPv4Address, peerSessionIPv6Address, sessionPrefixV4, sessionPrefixV6, sessionStateV4, sessionStateV6);
         }

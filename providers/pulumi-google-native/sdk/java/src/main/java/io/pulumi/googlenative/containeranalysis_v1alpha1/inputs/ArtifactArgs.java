@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checksum")
-    private final @Nullable Input<String> checksum;
+      private final @Nullable Input<String> checksum;
 
     public Input<String> getChecksum() {
         return this.checksum == null ? Input.empty() : this.checksum;
@@ -35,7 +35,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -46,7 +46,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="names")
-    private final @Nullable Input<List<String>> names;
+      private final @Nullable Input<List<String>> names;
 
     public Input<List<String>> getNames() {
         return this.names == null ? Input.empty() : this.names;
@@ -120,7 +120,6 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
             this.names = Input.ofNullable(names);
             return this;
         }
-
         public ArtifactArgs build() {
             return new ArtifactArgs(checksum, id, names);
         }

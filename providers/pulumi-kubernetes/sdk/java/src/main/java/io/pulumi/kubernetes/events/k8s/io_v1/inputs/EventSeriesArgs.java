@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.events.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count", required=true)
-    private final Input<Integer> count;
+      private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -34,7 +34,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastObservedTime", required=true)
-    private final Input<String> lastObservedTime;
+      private final Input<String> lastObservedTime;
 
     public Input<String> getLastObservedTime() {
         return this.lastObservedTime;
@@ -93,7 +93,6 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
             this.lastObservedTime = Input.of(Objects.requireNonNull(lastObservedTime));
             return this;
         }
-
         public EventSeriesArgs build() {
             return new EventSeriesArgs(count, lastObservedTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class InMageAgentDetailsResponse {
     /**
      * Agent expiry date.
      * 
-     */
+    */
     public Optional<String> getAgentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
     /**
      * A value indicating whether installed agent needs to be updated.
      * 
-     */
+    */
     public Optional<String> getAgentUpdateStatus() {
         return Optional.ofNullable(this.agentUpdateStatus);
     }
     /**
      * The agent version.
      * 
-     */
+    */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * A value indicating whether reboot is required after update is applied.
      * 
-     */
+    */
     public Optional<String> getPostUpdateRebootStatus() {
         return Optional.ofNullable(this.postUpdateRebootStatus);
     }
@@ -118,7 +118,6 @@ public final class InMageAgentDetailsResponse {
             this.postUpdateRebootStatus = postUpdateRebootStatus;
             return this;
         }
-
         public InMageAgentDetailsResponse build() {
             return new InMageAgentDetailsResponse(agentExpiryDate, agentUpdateStatus, agentVersion, postUpdateRebootStatus);
         }

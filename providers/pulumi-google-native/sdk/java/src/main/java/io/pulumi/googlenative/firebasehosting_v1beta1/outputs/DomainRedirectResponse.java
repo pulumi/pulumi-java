@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DomainRedirectResponse {
     /**
      * The domain name to redirect to.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * The redirect status code.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class DomainRedirectResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DomainRedirectResponse build() {
             return new DomainRedirectResponse(domainName, type);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.m365securityandcompliance;
 
 import io.pulumi.azurenative.m365securityandcompliance.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PrivateEndpointConnectionsForEDMArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -31,7 +31,7 @@ public final class PrivateEndpointConnectionsForEDMArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-    private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -42,7 +42,7 @@ public final class PrivateEndpointConnectionsForEDMArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class PrivateEndpointConnectionsForEDMArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -142,7 +142,6 @@ public final class PrivateEndpointConnectionsForEDMArgs extends io.pulumi.resour
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public PrivateEndpointConnectionsForEDMArgs build() {
             return new PrivateEndpointConnectionsForEDMArgs(privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName, resourceName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -78,14 +78,14 @@ public final class GetFolderResult {
     /**
      * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The folder's display name.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
@@ -98,14 +98,14 @@ public final class GetFolderResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Folder's current lifecycle state.
      * 
-     */
+    */
     public String getLifecycleState() {
         return this.lifecycleState;
     }
@@ -115,21 +115,21 @@ public final class GetFolderResult {
     /**
      * The resource name of the Folder in the form `folders/{folder_id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * If `lookup_organization` is enable, the resource name of the Organization that the folder belongs.
      * 
-     */
+    */
     public String getOrganization() {
         return this.organization;
     }
     /**
      * The resource name of the parent Folder or Organization.
      * 
-     */
+    */
     public String getParent() {
         return this.parent;
     }
@@ -221,7 +221,6 @@ public final class GetFolderResult {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public GetFolderResult build() {
             return new GetFolderResult(createTime, displayName, folder, folderId, id, lifecycleState, lookupOrganization, name, organization, parent);
         }

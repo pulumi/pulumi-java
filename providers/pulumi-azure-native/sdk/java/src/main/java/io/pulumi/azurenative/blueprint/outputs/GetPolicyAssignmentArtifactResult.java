@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.outputs;
 
 import io.pulumi.azurenative.blueprint.outputs.ParameterValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -93,28 +93,28 @@ public final class GetPolicyAssignmentArtifactResult {
     /**
      * Artifacts which need to be deployed before the specified artifact.
      * 
-     */
+    */
     public List<String> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Multi-line explain this resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -122,42 +122,42 @@ public final class GetPolicyAssignmentArtifactResult {
      * Specifies the kind of blueprint artifact.
      * Expected value is 'policyAssignment'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of this resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Parameter values for the policy definition.
      * 
-     */
+    */
     public Map<String,ParameterValueResponse> getParameters() {
         return this.parameters;
     }
     /**
      * Azure resource ID of the policy definition.
      * 
-     */
+    */
     public String getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
      * Name of the resource group placeholder to which the policy will be assigned.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * Type of this resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -249,7 +249,6 @@ public final class GetPolicyAssignmentArtifactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyAssignmentArtifactResult build() {
             return new GetPolicyAssignmentArtifactResult(dependsOn, description, displayName, id, kind, name, parameters, policyDefinitionId, resourceGroup, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,35 +62,35 @@ public final class EventHubOutputDataSourceResponse {
     /**
      * The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getEventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
     /**
      * The key/column that is used to determine to which partition to send event data.
      * 
-     */
+    */
     public Optional<String> getPartitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getServiceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getSharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
     /**
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getSharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
@@ -98,7 +98,7 @@ public final class EventHubOutputDataSourceResponse {
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.ServiceBus/EventHub'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -162,7 +162,6 @@ public final class EventHubOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EventHubOutputDataSourceResponse build() {
             return new EventHubOutputDataSourceResponse(eventHubName, partitionKey, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }

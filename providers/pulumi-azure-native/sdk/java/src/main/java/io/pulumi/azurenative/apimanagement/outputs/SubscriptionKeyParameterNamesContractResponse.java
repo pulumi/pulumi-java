@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class SubscriptionKeyParameterNamesContractResponse {
     /**
      * Subscription key header name.
      * 
-     */
+    */
     public Optional<String> getHeader() {
         return Optional.ofNullable(this.header);
     }
     /**
      * Subscription key query string parameter name.
      * 
-     */
+    */
     public Optional<String> getQuery() {
         return Optional.ofNullable(this.query);
     }
@@ -76,7 +76,6 @@ public final class SubscriptionKeyParameterNamesContractResponse {
             this.query = query;
             return this;
         }
-
         public SubscriptionKeyParameterNamesContractResponse build() {
             return new SubscriptionKeyParameterNamesContractResponse(header, query);
         }

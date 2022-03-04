@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1.outputs.DsRecordResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class GoogleDomainsDnsResponse {
     /**
      * The list of DS records published for this domain. The list is automatically populated when `ds_state` is `DS_RECORDS_PUBLISHED`, otherwise it remains empty.
      * 
-     */
+    */
     public List<DsRecordResponse> getDsRecords() {
         return this.dsRecords;
     }
     /**
      * The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
      * 
-     */
+    */
     public String getDsState() {
         return this.dsState;
     }
     /**
      * A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format. This field is automatically populated with the name servers assigned to the Google Domains DNS zone.
      * 
-     */
+    */
     public List<String> getNameServers() {
         return this.nameServers;
     }
@@ -97,7 +97,6 @@ public final class GoogleDomainsDnsResponse {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
         public GoogleDomainsDnsResponse build() {
             return new GoogleDomainsDnsResponse(dsRecords, dsState, nameServers);
         }

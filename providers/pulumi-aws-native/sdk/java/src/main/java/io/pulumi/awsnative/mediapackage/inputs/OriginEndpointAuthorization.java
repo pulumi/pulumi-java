@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class OriginEndpointAuthorization extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="cdnIdentifierSecret", required=true)
-    private final String cdnIdentifierSecret;
+      private final String cdnIdentifierSecret;
 
     public String getCdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
@@ -32,7 +32,7 @@ public final class OriginEndpointAuthorization extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="secretsRoleArn", required=true)
-    private final String secretsRoleArn;
+      private final String secretsRoleArn;
 
     public String getSecretsRoleArn() {
         return this.secretsRoleArn;
@@ -81,7 +81,6 @@ public final class OriginEndpointAuthorization extends io.pulumi.resources.Invok
             this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
             return this;
         }
-
         public OriginEndpointAuthorization build() {
             return new OriginEndpointAuthorization(cdnIdentifierSecret, secretsRoleArn);
         }

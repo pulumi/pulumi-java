@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.FirewallPolicyNatRuleActionArgs;
 import io.pulumi.azurenative.network.inputs.NatRuleConditionArgs;
 import io.pulumi.azurenative.network.inputs.NetworkRuleConditionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<FirewallPolicyNatRuleActionArgs> action;
+      private final @Nullable Input<FirewallPolicyNatRuleActionArgs> action;
 
     public Input<FirewallPolicyNatRuleActionArgs> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -40,7 +40,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -51,7 +51,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -62,7 +62,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ruleCondition")
-    private final @Nullable Input<Object> ruleCondition;
+      private final @Nullable Input<Object> ruleCondition;
 
     public Input<Object> getRuleCondition() {
         return this.ruleCondition == null ? Input.empty() : this.ruleCondition;
@@ -74,7 +74,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final Input<String> ruleType;
+      private final Input<String> ruleType;
 
     public Input<String> getRuleType() {
         return this.ruleType;
@@ -85,7 +85,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="translatedAddress")
-    private final @Nullable Input<String> translatedAddress;
+      private final @Nullable Input<String> translatedAddress;
 
     public Input<String> getTranslatedAddress() {
         return this.translatedAddress == null ? Input.empty() : this.translatedAddress;
@@ -96,7 +96,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="translatedPort")
-    private final @Nullable Input<String> translatedPort;
+      private final @Nullable Input<String> translatedPort;
 
     public Input<String> getTranslatedPort() {
         return this.translatedPort == null ? Input.empty() : this.translatedPort;
@@ -230,7 +230,6 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
             this.translatedPort = Input.ofNullable(translatedPort);
             return this;
         }
-
         public FirewallPolicyNatRuleArgs build() {
             return new FirewallPolicyNatRuleArgs(action, name, priority, ruleCondition, ruleType, translatedAddress, translatedPort);
         }

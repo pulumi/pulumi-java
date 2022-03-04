@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -33,7 +33,7 @@ public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -82,7 +82,6 @@ public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArg
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public TCPSocketActionResponse build() {
             return new TCPSocketActionResponse(host, port);
         }

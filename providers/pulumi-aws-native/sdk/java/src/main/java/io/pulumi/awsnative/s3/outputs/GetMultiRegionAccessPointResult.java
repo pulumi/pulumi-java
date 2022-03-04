@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetMultiRegionAccessPointResult {
     /**
      * The alias is a unique identifier to, and is part of the public DNS name for this Multi Region Access Point
      * 
-     */
+    */
     public Optional<String> getAlias() {
         return Optional.ofNullable(this.alias);
     }
     /**
      * The timestamp of the when the Multi Region Access Point is created
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -76,7 +76,6 @@ public final class GetMultiRegionAccessPointResult {
             this.createdAt = createdAt;
             return this;
         }
-
         public GetMultiRegionAccessPointResult build() {
             return new GetMultiRegionAccessPointResult(alias, createdAt);
         }

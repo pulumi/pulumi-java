@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class AuditLogConfigResponse {
     /**
      * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
      * 
-     */
+    */
     public List<String> getExemptedMembers() {
         return this.exemptedMembers;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public Boolean getIgnoreChildExemptions() {
         return this.ignoreChildExemptions;
     }
     /**
      * The log type that this config enables.
      * 
-     */
+    */
     public String getLogType() {
         return this.logType;
     }
@@ -97,7 +97,6 @@ public final class AuditLogConfigResponse {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public AuditLogConfigResponse build() {
             return new AuditLogConfigResponse(exemptedMembers, ignoreChildExemptions, logType);
         }

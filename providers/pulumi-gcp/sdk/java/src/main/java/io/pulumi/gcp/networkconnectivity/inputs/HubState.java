@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkconnectivity.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkconnectivity.inputs.HubRoutingVpcGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -33,7 +33,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -55,7 +55,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -79,7 +79,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingVpcs")
-    private final @Nullable Input<List<HubRoutingVpcGetArgs>> routingVpcs;
+      private final @Nullable Input<List<HubRoutingVpcGetArgs>> routingVpcs;
 
     public Input<List<HubRoutingVpcGetArgs>> getRoutingVpcs() {
         return this.routingVpcs == null ? Input.empty() : this.routingVpcs;
@@ -90,7 +90,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -102,7 +102,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniqueId")
-    private final @Nullable Input<String> uniqueId;
+      private final @Nullable Input<String> uniqueId;
 
     public Input<String> getUniqueId() {
         return this.uniqueId == null ? Input.empty() : this.uniqueId;
@@ -113,7 +113,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -277,7 +277,6 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public HubState build() {
             return new HubState(createTime, description, labels, name, project, routingVpcs, state, uniqueId, updateTime);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.cloudformation;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudformation.inputs.GetResourceDefaultVersionArgs;
 import io.pulumi.awsnative.cloudformation.outputs.GetResourceDefaultVersionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceDefaultVersion {
-/**
- * The default version of a resource that has been registered in the CloudFormation Registry.
+    private GetResourceDefaultVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceDefaultVersionArgs.Builder a);
+    }
+    private static GetResourceDefaultVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceDefaultVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The default version of a resource that has been registered in the CloudFormation Registry.
  * 
- */
+     */
+    public static CompletableFuture<GetResourceDefaultVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The default version of a resource that has been registered in the CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetResourceDefaultVersionResult> invokeAsync(GetResourceDefaultVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getResourceDefaultVersion", TypeShape.of(GetResourceDefaultVersionResult.class), args == null ? GetResourceDefaultVersionArgs.Empty : args, Utilities.withVersion(options));
     }

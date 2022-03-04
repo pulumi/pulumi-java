@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.FingerprintArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LayerArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-    private final @Nullable Input<FingerprintArgs> fingerprint;
+      private final @Nullable Input<FingerprintArgs> fingerprint;
 
     public Input<FingerprintArgs> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -36,7 +36,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="layerInfo")
-    private final @Nullable Input<List<LayerArgs>> layerInfo;
+      private final @Nullable Input<List<LayerArgs>> layerInfo;
 
     public Input<List<LayerArgs>> getLayerInfo() {
         return this.layerInfo == null ? Input.empty() : this.layerInfo;
@@ -95,7 +95,6 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
             this.layerInfo = Input.ofNullable(layerInfo);
             return this;
         }
-
         public DerivedArgs build() {
             return new DerivedArgs(fingerprint, layerInfo);
         }

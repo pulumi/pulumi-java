@@ -7,7 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.ProvisioningState;
 import io.pulumi.azurenative.providerhub.inputs.SkuSettingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
     public static final SkuResourcePropertiesArgs Empty = new SkuResourcePropertiesArgs();
 
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
     @InputImport(name="skuSettings", required=true)
-    private final Input<List<SkuSettingArgs>> skuSettings;
+      private final Input<List<SkuSettingArgs>> skuSettings;
 
     public Input<List<SkuSettingArgs>> getSkuSettings() {
         return this.skuSettings;
@@ -85,7 +85,6 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
             this.skuSettings = Input.of(Objects.requireNonNull(skuSettings));
             return this;
         }
-
         public SkuResourcePropertiesArgs build() {
             return new SkuResourcePropertiesArgs(provisioningState, skuSettings);
         }

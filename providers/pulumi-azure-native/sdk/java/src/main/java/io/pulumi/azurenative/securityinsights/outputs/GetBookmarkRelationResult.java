@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,56 +75,56 @@ public final class GetBookmarkRelationResult {
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource ID of the related resource
      * 
-     */
+    */
     public String getRelatedResourceId() {
         return this.relatedResourceId;
     }
     /**
      * The resource kind of the related resource
      * 
-     */
+    */
     public String getRelatedResourceKind() {
         return this.relatedResourceKind;
     }
     /**
      * The name of the related resource
      * 
-     */
+    */
     public String getRelatedResourceName() {
         return this.relatedResourceName;
     }
     /**
      * The resource type of the related resource
      * 
-     */
+    */
     public String getRelatedResourceType() {
         return this.relatedResourceType;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -202,7 +202,6 @@ public final class GetBookmarkRelationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBookmarkRelationResult build() {
             return new GetBookmarkRelationResult(etag, id, name, relatedResourceId, relatedResourceKind, relatedResourceName, relatedResourceType, type);
         }

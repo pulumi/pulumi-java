@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parentResourcePath", required=true)
-    private final String parentResourcePath;
+      private final String parentResourcePath;
 
     public String getParentResourcePath() {
         return this.parentResourcePath;
@@ -28,7 +28,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -50,7 +50,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceProviderNamespace", required=true)
-    private final String resourceProviderNamespace;
+      private final String resourceProviderNamespace;
 
     public String getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
@@ -61,7 +61,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -140,7 +140,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GetResourceArgs build() {
             return new GetResourceArgs(parentResourcePath, resourceGroupName, resourceName, resourceProviderNamespace, resourceType);
         }

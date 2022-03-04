@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class RedirectConfigurationResponse {
     /**
      * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
      * 
-     */
+    */
     public Optional<String> getCustomFragment() {
         return Optional.ofNullable(this.customFragment);
     }
     /**
      * Host to redirect. Leave empty to use the incoming host as the destination host.
      * 
-     */
+    */
     public Optional<String> getCustomHost() {
         return Optional.ofNullable(this.customHost);
     }
     /**
      * The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
      * 
-     */
+    */
     public Optional<String> getCustomPath() {
         return Optional.ofNullable(this.customPath);
     }
     /**
      * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
      * 
-     */
+    */
     public Optional<String> getCustomQueryString() {
         return Optional.ofNullable(this.customQueryString);
     }
     /**
      * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The protocol of the destination to where the traffic is redirected
      * 
-     */
+    */
     public Optional<String> getRedirectProtocol() {
         return Optional.ofNullable(this.redirectProtocol);
     }
     /**
      * The redirect type the rule will use when redirecting traffic.
      * 
-     */
+    */
     public Optional<String> getRedirectType() {
         return Optional.ofNullable(this.redirectType);
     }
@@ -181,7 +181,6 @@ public final class RedirectConfigurationResponse {
             this.redirectType = redirectType;
             return this;
         }
-
         public RedirectConfigurationResponse build() {
             return new RedirectConfigurationResponse(customFragment, customHost, customPath, customQueryString, odataType, redirectProtocol, redirectType);
         }

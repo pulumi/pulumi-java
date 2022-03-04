@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -34,7 +34,7 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -93,7 +93,6 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
-
         public SqlStoredProcedureResourceArgs build() {
             return new SqlStoredProcedureResourceArgs(body, id);
         }

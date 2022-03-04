@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.TemplateColumnSchema;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class TemplateDataSetSchema {
     /**
      * <p>A structure containing the list of column schemas.</p>
      * 
-     */
+    */
     public List<TemplateColumnSchema> getColumnSchemaList() {
         return this.columnSchemaList == null ? List.of() : this.columnSchemaList;
     }
@@ -54,7 +54,6 @@ public final class TemplateDataSetSchema {
             this.columnSchemaList = columnSchemaList;
             return this;
         }
-
         public TemplateDataSetSchema build() {
             return new TemplateDataSetSchema(columnSchemaList);
         }

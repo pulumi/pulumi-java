@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ListMediaServiceKeysResult {
     /**
      * The primary authorization endpoint.
      * 
-     */
+    */
     public Optional<String> getPrimaryAuthEndpoint() {
         return Optional.ofNullable(this.primaryAuthEndpoint);
     }
     /**
      * The primary key for the Media Service resource.
      * 
-     */
+    */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * The authorization scope.
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The secondary authorization endpoint.
      * 
-     */
+    */
     public Optional<String> getSecondaryAuthEndpoint() {
         return Optional.ofNullable(this.secondaryAuthEndpoint);
     }
     /**
      * The secondary key for the Media Service resource.
      * 
-     */
+    */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -139,7 +139,6 @@ public final class ListMediaServiceKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListMediaServiceKeysResult build() {
             return new ListMediaServiceKeysResult(primaryAuthEndpoint, primaryKey, scope, secondaryAuthEndpoint, secondaryKey);
         }

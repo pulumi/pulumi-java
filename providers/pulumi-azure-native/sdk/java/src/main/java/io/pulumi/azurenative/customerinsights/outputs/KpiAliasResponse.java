@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class KpiAliasResponse {
     /**
      * KPI alias name.
      * 
-     */
+    */
     public String getAliasName() {
         return this.aliasName;
     }
     /**
      * The expression.
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }
@@ -74,7 +74,6 @@ public final class KpiAliasResponse {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public KpiAliasResponse build() {
             return new KpiAliasResponse(aliasName, expression);
         }

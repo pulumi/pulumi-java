@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -132,91 +132,91 @@ public final class HDInsightMapReduceActivityResponse {
     /**
      * User specified arguments to HDInsightActivity.
      * 
-     */
+    */
     public List<Object> getArguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
      * Class name. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getClassName() {
         return this.className;
     }
     /**
      * Allows user to specify defines for the MapReduce job request.
      * 
-     */
+    */
     public Map<String,Object> getDefines() {
         return this.defines == null ? Map.of() : this.defines;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Debug info option.
      * 
-     */
+    */
     public Optional<String> getGetDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
      * Jar path. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getJarFilePath() {
         return this.jarFilePath;
     }
     /**
      * Jar libs.
      * 
-     */
+    */
     public List<Object> getJarLibs() {
         return this.jarLibs == null ? List.of() : this.jarLibs;
     }
     /**
      * Jar linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getJarLinkedService() {
         return Optional.ofNullable(this.jarLinkedService);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Storage linked service references.
      * 
-     */
+    */
     public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
@@ -224,14 +224,14 @@ public final class HDInsightMapReduceActivityResponse {
      * Type of activity.
      * Expected value is 'HDInsightMapReduce'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -358,7 +358,6 @@ public final class HDInsightMapReduceActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public HDInsightMapReduceActivityResponse build() {
             return new HDInsightMapReduceActivityResponse(arguments, className, defines, dependsOn, description, getDebugInfo, jarFilePath, jarLibs, jarLinkedService, linkedServiceName, name, policy, storageLinkedServices, type, userProperties);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.glue.outputs;
 import io.pulumi.awsnative.glue.enums.SchemaCompatibility;
 import io.pulumi.awsnative.glue.outputs.SchemaTag;
 import io.pulumi.awsnative.glue.outputs.SchemaVersion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +61,7 @@ public final class GetSchemaResult {
     /**
      * Amazon Resource Name for the Schema.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -71,28 +71,28 @@ public final class GetSchemaResult {
     /**
      * Compatibility setting for the schema.
      * 
-     */
+    */
     public Optional<SchemaCompatibility> getCompatibility() {
         return Optional.ofNullable(this.compatibility);
     }
     /**
      * A description of the schema. If description is not provided, there will not be any default value for this.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Represents the version ID associated with the initial schema version.
      * 
-     */
+    */
     public Optional<String> getInitialSchemaVersionId() {
         return Optional.ofNullable(this.initialSchemaVersionId);
     }
     /**
      * List of tags to tag the schema
      * 
-     */
+    */
     public List<SchemaTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -156,7 +156,6 @@ public final class GetSchemaResult {
             this.tags = tags;
             return this;
         }
-
         public GetSchemaResult build() {
             return new GetSchemaResult(arn, checkpointVersion, compatibility, description, initialSchemaVersionId, tags);
         }

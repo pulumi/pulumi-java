@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.MetadataCredentialsFromPluginResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CallCredentialsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="callCredentialType", required=true)
-    private final String callCredentialType;
+      private final String callCredentialType;
 
     public String getCallCredentialType() {
         return this.callCredentialType;
@@ -33,7 +33,7 @@ public final class CallCredentialsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="fromPlugin", required=true)
-    private final MetadataCredentialsFromPluginResponse fromPlugin;
+      private final MetadataCredentialsFromPluginResponse fromPlugin;
 
     public MetadataCredentialsFromPluginResponse getFromPlugin() {
         return this.fromPlugin;
@@ -82,7 +82,6 @@ public final class CallCredentialsResponse extends io.pulumi.resources.InvokeArg
             this.fromPlugin = Objects.requireNonNull(fromPlugin);
             return this;
         }
-
         public CallCredentialsResponse build() {
             return new CallCredentialsResponse(callCredentialType, fromPlugin);
         }

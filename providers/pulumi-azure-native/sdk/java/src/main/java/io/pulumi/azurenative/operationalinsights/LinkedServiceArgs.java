@@ -6,7 +6,7 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.operationalinsights.enums.LinkedServiceEntityStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<String> linkedServiceName;
+      private final @Nullable Input<String> linkedServiceName;
 
     public Input<String> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -33,7 +33,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,LinkedServiceEntityStatus>> provisioningState;
+      private final @Nullable Input<Either<String,LinkedServiceEntityStatus>> provisioningState;
 
     public Input<Either<String,LinkedServiceEntityStatus>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -44,7 +44,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -66,7 +66,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -88,7 +88,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeAccessResourceId")
-    private final @Nullable Input<String> writeAccessResourceId;
+      private final @Nullable Input<String> writeAccessResourceId;
 
     public Input<String> getWriteAccessResourceId() {
         return this.writeAccessResourceId == null ? Input.empty() : this.writeAccessResourceId;
@@ -222,7 +222,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.writeAccessResourceId = Input.ofNullable(writeAccessResourceId);
             return this;
         }
-
         public LinkedServiceArgs build() {
             return new LinkedServiceArgs(linkedServiceName, provisioningState, resourceGroupName, resourceId, tags, workspaceName, writeAccessResourceId);
         }

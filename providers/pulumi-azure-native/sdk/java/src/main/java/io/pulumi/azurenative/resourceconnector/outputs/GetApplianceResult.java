@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resourceconnector.outputs;
 import io.pulumi.azurenative.resourceconnector.outputs.AppliancePropertiesResponseInfrastructureConfig;
 import io.pulumi.azurenative.resourceconnector.outputs.IdentityResponse;
 import io.pulumi.azurenative.resourceconnector.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -114,91 +114,91 @@ public final class GetApplianceResult {
     /**
      * Represents a supported Fabric/Infra. (AKSEdge etc...).
      * 
-     */
+    */
     public Optional<String> getDistro() {
         return Optional.ofNullable(this.distro);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Contains infrastructure information about the Appliance
      * 
-     */
+    */
     public Optional<AppliancePropertiesResponseInfrastructureConfig> getInfrastructureConfig() {
         return Optional.ofNullable(this.infrastructureConfig);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current deployment or provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Certificates pair used to download MSI certificate from HIS
      * 
-     */
+    */
     public Optional<String> getPublicKey() {
         return Optional.ofNullable(this.publicKey);
     }
     /**
      * Appliance’s health and state of connection to on-prem
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Version of the Appliance
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -311,7 +311,6 @@ public final class GetApplianceResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetApplianceResult build() {
             return new GetApplianceResult(distro, id, identity, infrastructureConfig, location, name, provisioningState, publicKey, status, systemData, tags, type, version);
         }

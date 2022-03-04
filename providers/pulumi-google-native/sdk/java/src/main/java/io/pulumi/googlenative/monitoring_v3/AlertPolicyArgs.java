@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.AlertPolicyCombiner;
 import io.pulumi.googlenative.monitoring_v3.inputs.AlertStrategyArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.ConditionArgs;
@@ -28,7 +28,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertStrategy")
-    private final @Nullable Input<AlertStrategyArgs> alertStrategy;
+      private final @Nullable Input<AlertStrategyArgs> alertStrategy;
 
     public Input<AlertStrategyArgs> getAlertStrategy() {
         return this.alertStrategy == null ? Input.empty() : this.alertStrategy;
@@ -39,7 +39,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="combiner")
-    private final @Nullable Input<AlertPolicyCombiner> combiner;
+      private final @Nullable Input<AlertPolicyCombiner> combiner;
 
     public Input<AlertPolicyCombiner> getCombiner() {
         return this.combiner == null ? Input.empty() : this.combiner;
@@ -50,7 +50,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<ConditionArgs>> conditions;
+      private final @Nullable Input<List<ConditionArgs>> conditions;
 
     public Input<List<ConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -61,7 +61,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationRecord")
-    private final @Nullable Input<MutationRecordArgs> creationRecord;
+      private final @Nullable Input<MutationRecordArgs> creationRecord;
 
     public Input<MutationRecordArgs> getCreationRecord() {
         return this.creationRecord == null ? Input.empty() : this.creationRecord;
@@ -72,7 +72,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -83,7 +83,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentation")
-    private final @Nullable Input<DocumentationArgs> documentation;
+      private final @Nullable Input<DocumentationArgs> documentation;
 
     public Input<DocumentationArgs> getDocumentation() {
         return this.documentation == null ? Input.empty() : this.documentation;
@@ -94,7 +94,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -105,7 +105,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutationRecord")
-    private final @Nullable Input<MutationRecordArgs> mutationRecord;
+      private final @Nullable Input<MutationRecordArgs> mutationRecord;
 
     public Input<MutationRecordArgs> getMutationRecord() {
         return this.mutationRecord == null ? Input.empty() : this.mutationRecord;
@@ -116,7 +116,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -127,14 +127,14 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationChannels")
-    private final @Nullable Input<List<String>> notificationChannels;
+      private final @Nullable Input<List<String>> notificationChannels;
 
     public Input<List<String>> getNotificationChannels() {
         return this.notificationChannels == null ? Input.empty() : this.notificationChannels;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -145,7 +145,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userLabels")
-    private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Input<Map<String,String>> userLabels;
 
     public Input<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Input.empty() : this.userLabels;
@@ -156,7 +156,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validity")
-    private final @Nullable Input<StatusArgs> validity;
+      private final @Nullable Input<StatusArgs> validity;
 
     public Input<StatusArgs> getValidity() {
         return this.validity == null ? Input.empty() : this.validity;
@@ -380,7 +380,6 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.validity = Input.ofNullable(validity);
             return this;
         }
-
         public AlertPolicyArgs build() {
             return new AlertPolicyArgs(alertStrategy, combiner, conditions, creationRecord, displayName, documentation, enabled, mutationRecord, name, notificationChannels, project, userLabels, validity);
         }

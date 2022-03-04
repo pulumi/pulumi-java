@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 import io.pulumi.azurenative.deviceupdate.outputs.GroupConnectivityInformationResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -51,28 +51,28 @@ public final class PrivateLinkServiceProxyResponse {
     /**
      * Group connectivity information.
      * 
-     */
+    */
     public List<GroupConnectivityInformationResponse> getGroupConnectivityInformation() {
         return this.groupConnectivityInformation == null ? List.of() : this.groupConnectivityInformation;
     }
     /**
      * NRP resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Remote private endpoint connection details.
      * 
-     */
+    */
     public Optional<PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection> getRemotePrivateEndpointConnection() {
         return Optional.ofNullable(this.remotePrivateEndpointConnection);
     }
     /**
      * Remote private link service connection state
      * 
-     */
+    */
     public Optional<PrivateLinkServiceConnectionStateResponse> getRemotePrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);
     }
@@ -122,7 +122,6 @@ public final class PrivateLinkServiceProxyResponse {
             this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;
         }
-
         public PrivateLinkServiceProxyResponse build() {
             return new PrivateLinkServiceProxyResponse(groupConnectivityInformation, id, remotePrivateEndpointConnection, remotePrivateLinkServiceConnectionState);
         }

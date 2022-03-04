@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DatabaseAccountConnectionStringResponse {
     /**
      * Value of the connection string
      * 
-     */
+    */
     public String getConnectionString() {
         return this.connectionString;
     }
     /**
      * Description of the connection string
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -74,7 +74,6 @@ public final class DatabaseAccountConnectionStringResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public DatabaseAccountConnectionStringResponse build() {
             return new DatabaseAccountConnectionStringResponse(connectionString, description);
         }

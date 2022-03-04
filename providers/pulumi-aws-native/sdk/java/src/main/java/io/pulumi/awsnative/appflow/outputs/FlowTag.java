@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class FlowTag {
     /**
      * A string used to identify this tag
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * A string containing the value for the tag
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class FlowTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FlowTag build() {
             return new FlowTag(key, value);
         }

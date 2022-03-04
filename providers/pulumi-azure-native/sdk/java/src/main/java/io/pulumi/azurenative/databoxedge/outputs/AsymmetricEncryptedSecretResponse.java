@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class AsymmetricEncryptedSecretResponse {
     /**
      * The algorithm used to encrypt "Value".
      * 
-     */
+    */
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
      * Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
      * 
-     */
+    */
     public Optional<String> getEncryptionCertThumbprint() {
         return Optional.ofNullable(this.encryptionCertThumbprint);
     }
     /**
      * The value of the secret.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -97,7 +97,6 @@ public final class AsymmetricEncryptedSecretResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AsymmetricEncryptedSecretResponse build() {
             return new AsymmetricEncryptedSecretResponse(encryptionAlgorithm, encryptionCertThumbprint, value);
         }

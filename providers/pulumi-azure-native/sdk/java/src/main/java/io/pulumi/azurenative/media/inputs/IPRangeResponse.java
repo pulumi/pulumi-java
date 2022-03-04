@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable String address;
+      private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
@@ -35,7 +35,7 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -46,7 +46,7 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetPrefixLength")
-    private final @Nullable Integer subnetPrefixLength;
+      private final @Nullable Integer subnetPrefixLength;
 
     public Optional<Integer> getSubnetPrefixLength() {
         return this.subnetPrefixLength == null ? Optional.empty() : Optional.ofNullable(this.subnetPrefixLength);
@@ -105,7 +105,6 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
             this.subnetPrefixLength = subnetPrefixLength;
             return this;
         }
-
         public IPRangeResponse build() {
             return new IPRangeResponse(address, name, subnetPrefixLength);
         }

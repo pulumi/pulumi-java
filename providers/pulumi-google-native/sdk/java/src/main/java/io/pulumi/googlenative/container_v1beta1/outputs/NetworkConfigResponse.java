@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.DNSConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.DefaultSnatStatusResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.ServiceExternalIPsConfigResponse;
@@ -84,63 +84,63 @@ public final class NetworkConfigResponse {
     /**
      * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
      * 
-     */
+    */
     public String getDatapathProvider() {
         return this.datapathProvider;
     }
     /**
      * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
      * 
-     */
+    */
     public DefaultSnatStatusResponse getDefaultSnatStatus() {
         return this.defaultSnatStatus;
     }
     /**
      * DNSConfig contains clusterDNS config for this cluster.
      * 
-     */
+    */
     public DNSConfigResponse getDnsConfig() {
         return this.dnsConfig;
     }
     /**
      * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
      * 
-     */
+    */
     public Boolean getEnableIntraNodeVisibility() {
         return this.enableIntraNodeVisibility;
     }
     /**
      * Whether L4ILB Subsetting is enabled for this cluster.
      * 
-     */
+    */
     public Boolean getEnableL4ilbSubsetting() {
         return this.enableL4ilbSubsetting;
     }
     /**
      * The relative name of the Google Compute Engine network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. Example: projects/my-project/global/networks/my-network
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
     /**
      * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
      * 
-     */
+    */
     public String getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
     /**
      * ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
      * 
-     */
+    */
     public ServiceExternalIPsConfigResponse getServiceExternalIpsConfig() {
         return this.serviceExternalIpsConfig;
     }
     /**
      * The relative name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
      * 
-     */
+    */
     public String getSubnetwork() {
         return this.subnetwork;
     }
@@ -225,7 +225,6 @@ public final class NetworkConfigResponse {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public NetworkConfigResponse build() {
             return new NetworkConfigResponse(datapathProvider, defaultSnatStatus, dnsConfig, enableIntraNodeVisibility, enableL4ilbSubsetting, network, privateIpv6GoogleAccess, serviceExternalIpsConfig, subnetwork);
         }

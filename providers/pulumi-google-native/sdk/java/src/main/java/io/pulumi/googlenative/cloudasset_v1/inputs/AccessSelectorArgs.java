@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<List<String>> permissions;
+      private final @Nullable Input<List<String>> permissions;
 
     public Input<List<String>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -35,7 +35,7 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable Input<List<String>> roles;
+      private final @Nullable Input<List<String>> roles;
 
     public Input<List<String>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -94,7 +94,6 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
             this.roles = Input.ofNullable(roles);
             return this;
         }
-
         public AccessSelectorArgs build() {
             return new AccessSelectorArgs(permissions, roles);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudkms_v1.inputs.CertificateChainsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="certChains", required=true)
-    private final CertificateChainsResponse certChains;
+      private final CertificateChainsResponse certChains;
 
     public CertificateChainsResponse getCertChains() {
         return this.certChains;
@@ -33,7 +33,7 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+      private final String content;
 
     public String getContent() {
         return this.content;
@@ -44,7 +44,7 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="format", required=true)
-    private final String format;
+      private final String format;
 
     public String getFormat() {
         return this.format;
@@ -103,7 +103,6 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public KeyOperationAttestationResponse build() {
             return new KeyOperationAttestationResponse(certChains, content, format);
         }

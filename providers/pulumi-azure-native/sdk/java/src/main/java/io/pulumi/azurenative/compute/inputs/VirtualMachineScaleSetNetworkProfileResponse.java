@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="healthProbe")
-    private final @Nullable ApiEntityReferenceResponse healthProbe;
+      private final @Nullable ApiEntityReferenceResponse healthProbe;
 
     public Optional<ApiEntityReferenceResponse> getHealthProbe() {
         return this.healthProbe == null ? Optional.empty() : Optional.ofNullable(this.healthProbe);
@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="networkApiVersion")
-    private final @Nullable String networkApiVersion;
+      private final @Nullable String networkApiVersion;
 
     public Optional<String> getNetworkApiVersion() {
         return this.networkApiVersion == null ? Optional.empty() : Optional.ofNullable(this.networkApiVersion);
@@ -48,7 +48,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-    private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
+      private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
     public List<VirtualMachineScaleSetNetworkConfigurationResponse> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
@@ -107,7 +107,6 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-
         public VirtualMachineScaleSetNetworkProfileResponse build() {
             return new VirtualMachineScaleSetNetworkProfileResponse(healthProbe, networkApiVersion, networkInterfaceConfigurations);
         }

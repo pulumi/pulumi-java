@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.logging.inputs.FolderSinkBigqueryOptionsGetArgs;
 import io.pulumi.gcp.logging.inputs.FolderSinkExclusionGetArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigqueryOptions")
-    private final @Nullable Input<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions;
+      private final @Nullable Input<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
     public Input<FolderSinkBigqueryOptionsGetArgs> getBigqueryOptions() {
         return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
@@ -34,7 +34,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+      private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -59,7 +59,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -70,7 +70,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exclusions")
-    private final @Nullable Input<List<FolderSinkExclusionGetArgs>> exclusions;
+      private final @Nullable Input<List<FolderSinkExclusionGetArgs>> exclusions;
 
     public Input<List<FolderSinkExclusionGetArgs>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -82,7 +82,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -94,7 +94,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable Input<String> folder;
+      private final @Nullable Input<String> folder;
 
     public Input<String> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
@@ -106,7 +106,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeChildren")
-    private final @Nullable Input<Boolean> includeChildren;
+      private final @Nullable Input<Boolean> includeChildren;
 
     public Input<Boolean> getIncludeChildren() {
         return this.includeChildren == null ? Input.empty() : this.includeChildren;
@@ -117,7 +117,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -129,7 +129,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writerIdentity")
-    private final @Nullable Input<String> writerIdentity;
+      private final @Nullable Input<String> writerIdentity;
 
     public Input<String> getWriterIdentity() {
         return this.writerIdentity == null ? Input.empty() : this.writerIdentity;
@@ -308,7 +308,6 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
             this.writerIdentity = Input.ofNullable(writerIdentity);
             return this;
         }
-
         public FolderSinkState build() {
             return new FolderSinkState(bigqueryOptions, description, destination, disabled, exclusions, filter, folder, includeChildren, name, writerIdentity);
         }

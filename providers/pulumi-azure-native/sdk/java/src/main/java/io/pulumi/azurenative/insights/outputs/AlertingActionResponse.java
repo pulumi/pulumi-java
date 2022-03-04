@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.AzNsActionGroupResponse;
 import io.pulumi.azurenative.insights.outputs.TriggerConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -58,7 +58,7 @@ public final class AlertingActionResponse {
     /**
      * Azure action group reference.
      * 
-     */
+    */
     public Optional<AzNsActionGroupResponse> getAznsAction() {
         return Optional.ofNullable(this.aznsAction);
     }
@@ -66,28 +66,28 @@ public final class AlertingActionResponse {
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
      * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Severity of the alert
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * time (in minutes) for which Alerts should be throttled or suppressed.
      * 
-     */
+    */
     public Optional<Integer> getThrottlingInMin() {
         return Optional.ofNullable(this.throttlingInMin);
     }
     /**
      * The trigger condition that results in the alert rule being.
      * 
-     */
+    */
     public TriggerConditionResponse getTrigger() {
         return this.trigger;
     }
@@ -144,7 +144,6 @@ public final class AlertingActionResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public AlertingActionResponse build() {
             return new AlertingActionResponse(aznsAction, odataType, severity, throttlingInMin, trigger);
         }

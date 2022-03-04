@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamEncryptionConfigurationInputKeyType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class DeliveryStreamEncryptionConfigurationInput {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public DeliveryStreamEncryptionConfigurationInput build() {
             return new DeliveryStreamEncryptionConfigurationInput(keyARN, keyType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ResponsePolicyNetworkResponse;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +43,7 @@ public final class GetResponsePolicyResult {
     /**
      * User-provided description for this Response Policy.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -53,14 +53,14 @@ public final class GetResponsePolicyResult {
     /**
      * List of network names specifying networks to which this policy is applied.
      * 
-     */
+    */
     public List<ResponsePolicyNetworkResponse> getNetworks() {
         return this.networks;
     }
     /**
      * User assigned name for this Response Policy.
      * 
-     */
+    */
     public String getResponsePolicyName() {
         return this.responsePolicyName;
     }
@@ -110,7 +110,6 @@ public final class GetResponsePolicyResult {
             this.responsePolicyName = Objects.requireNonNull(responsePolicyName);
             return this;
         }
-
         public GetResponsePolicyResult build() {
             return new GetResponsePolicyResult(description, kind, networks, responsePolicyName);
         }

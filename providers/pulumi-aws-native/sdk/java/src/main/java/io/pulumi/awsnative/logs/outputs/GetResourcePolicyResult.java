@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.logs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetResourcePolicyResult {
     /**
      * The policy document
      * 
-     */
+    */
     public Optional<String> getPolicyDocument() {
         return Optional.ofNullable(this.policyDocument);
     }
@@ -54,7 +54,6 @@ public final class GetResourcePolicyResult {
             this.policyDocument = policyDocument;
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(policyDocument);
         }

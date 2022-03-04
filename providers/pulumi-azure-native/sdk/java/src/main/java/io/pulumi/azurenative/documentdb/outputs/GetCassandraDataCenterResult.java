@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.DataCenterResourceResponseProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,28 +46,28 @@ public final class GetCassandraDataCenterResult {
     /**
      * The unique resource identifier of the database account.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the database account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of a managed Cassandra data center.
      * 
-     */
+    */
     public DataCenterResourceResponseProperties getProperties() {
         return this.properties;
     }
     /**
      * The type of Azure resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -117,7 +117,6 @@ public final class GetCassandraDataCenterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCassandraDataCenterResult build() {
             return new GetCassandraDataCenterResult(id, name, properties, type);
         }

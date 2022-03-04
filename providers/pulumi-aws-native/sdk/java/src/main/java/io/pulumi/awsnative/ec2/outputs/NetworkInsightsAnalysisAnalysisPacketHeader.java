@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -101,7 +101,6 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisPacketHeader build() {
             return new NetworkInsightsAnalysisAnalysisPacketHeader(destinationAddresses, destinationPortRanges, protocol, sourceAddresses, sourcePortRanges);
         }

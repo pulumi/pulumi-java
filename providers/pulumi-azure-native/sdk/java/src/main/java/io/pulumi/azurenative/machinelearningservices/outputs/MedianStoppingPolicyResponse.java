@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class MedianStoppingPolicyResponse {
     /**
      * Number of intervals by which to delay the first evaluation.
      * 
-     */
+    */
     public Optional<Integer> getDelayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
     /**
      * Interval (number of runs) between policy evaluations.
      * 
-     */
+    */
     public Optional<Integer> getEvaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
     /**
      * Expected value is 'MedianStopping'.
      * 
-     */
+    */
     public String getPolicyType() {
         return this.policyType;
     }
@@ -98,7 +98,6 @@ public final class MedianStoppingPolicyResponse {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
-
         public MedianStoppingPolicyResponse build() {
             return new MedianStoppingPolicyResponse(delayEvaluation, evaluationInterval, policyType);
         }

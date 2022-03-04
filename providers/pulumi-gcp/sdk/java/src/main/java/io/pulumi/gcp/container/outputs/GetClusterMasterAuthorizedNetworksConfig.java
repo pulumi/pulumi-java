@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterMasterAuthorizedNetworksConfigCidrBlock;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +45,6 @@ public final class GetClusterMasterAuthorizedNetworksConfig {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
-
         public GetClusterMasterAuthorizedNetworksConfig build() {
             return new GetClusterMasterAuthorizedNetworksConfig(cidrBlocks);
         }

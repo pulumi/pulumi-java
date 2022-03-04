@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.enums.PublicCertificateLocation;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="blob")
-    private final @Nullable Input<String> blob;
+      private final @Nullable Input<String> blob;
 
     public Input<String> getBlob() {
         return this.blob == null ? Input.empty() : this.blob;
@@ -31,7 +31,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -42,7 +42,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -53,7 +53,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="publicCertificateLocation")
-    private final @Nullable Input<PublicCertificateLocation> publicCertificateLocation;
+      private final @Nullable Input<PublicCertificateLocation> publicCertificateLocation;
 
     public Input<PublicCertificateLocation> getPublicCertificateLocation() {
         return this.publicCertificateLocation == null ? Input.empty() : this.publicCertificateLocation;
@@ -64,7 +64,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="publicCertificateName")
-    private final @Nullable Input<String> publicCertificateName;
+      private final @Nullable Input<String> publicCertificateName;
 
     public Input<String> getPublicCertificateName() {
         return this.publicCertificateName == null ? Input.empty() : this.publicCertificateName;
@@ -75,7 +75,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+      private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -220,7 +220,6 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
-
         public WebAppPublicCertificateSlotArgs build() {
             return new WebAppPublicCertificateSlotArgs(blob, kind, name, publicCertificateLocation, publicCertificateName, resourceGroupName, slot);
         }

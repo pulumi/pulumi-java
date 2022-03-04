@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.analysisservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class GatewayDetailsResponse {
     /**
      * Uri of the DMTS cluster.
      * 
-     */
+    */
     public String getDmtsClusterUri() {
         return this.dmtsClusterUri;
     }
     /**
      * Gateway object id from in the DMTS cluster for the gateway resource.
      * 
-     */
+    */
     public String getGatewayObjectId() {
         return this.gatewayObjectId;
     }
     /**
      * Gateway resource to be associated with the server.
      * 
-     */
+    */
     public Optional<String> getGatewayResourceId() {
         return Optional.ofNullable(this.gatewayResourceId);
     }
@@ -97,7 +97,6 @@ public final class GatewayDetailsResponse {
             this.gatewayResourceId = gatewayResourceId;
             return this;
         }
-
         public GatewayDetailsResponse build() {
             return new GatewayDetailsResponse(dmtsClusterUri, gatewayObjectId, gatewayResourceId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.billingbudgets_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1.enums.GoogleCloudBillingBudgetsV1FilterCalendarPeriod;
 import io.pulumi.googlenative.billingbudgets_v1.enums.GoogleCloudBillingBudgetsV1FilterCreditTypesTreatment;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleCloudBillingBudgetsV1CustomPeriodArgs;
@@ -28,7 +28,7 @@ public final class GoogleCloudBillingBudgetsV1FilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="calendarPeriod")
-    private final @Nullable Input<GoogleCloudBillingBudgetsV1FilterCalendarPeriod> calendarPeriod;
+      private final @Nullable Input<GoogleCloudBillingBudgetsV1FilterCalendarPeriod> calendarPeriod;
 
     public Input<GoogleCloudBillingBudgetsV1FilterCalendarPeriod> getCalendarPeriod() {
         return this.calendarPeriod == null ? Input.empty() : this.calendarPeriod;
@@ -39,7 +39,7 @@ public final class GoogleCloudBillingBudgetsV1FilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="creditTypes")
-    private final @Nullable Input<List<String>> creditTypes;
+      private final @Nullable Input<List<String>> creditTypes;
 
     public Input<List<String>> getCreditTypes() {
         return this.creditTypes == null ? Input.empty() : this.creditTypes;
@@ -50,7 +50,7 @@ public final class GoogleCloudBillingBudgetsV1FilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="creditTypesTreatment")
-    private final @Nullable Input<GoogleCloudBillingBudgetsV1FilterCreditTypesTreatment> creditTypesTreatment;
+      private final @Nullable Input<GoogleCloudBillingBudgetsV1FilterCreditTypesTreatment> creditTypesTreatment;
 
     public Input<GoogleCloudBillingBudgetsV1FilterCreditTypesTreatment> getCreditTypesTreatment() {
         return this.creditTypesTreatment == null ? Input.empty() : this.creditTypesTreatment;
@@ -61,7 +61,7 @@ public final class GoogleCloudBillingBudgetsV1FilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="customPeriod")
-    private final @Nullable Input<GoogleCloudBillingBudgetsV1CustomPeriodArgs> customPeriod;
+      private final @Nullable Input<GoogleCloudBillingBudgetsV1CustomPeriodArgs> customPeriod;
 
     public Input<GoogleCloudBillingBudgetsV1CustomPeriodArgs> getCustomPeriod() {
         return this.customPeriod == null ? Input.empty() : this.customPeriod;
@@ -72,7 +72,7 @@ public final class GoogleCloudBillingBudgetsV1FilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -83,7 +83,7 @@ public final class GoogleCloudBillingBudgetsV1FilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="projects")
-    private final @Nullable Input<List<String>> projects;
+      private final @Nullable Input<List<String>> projects;
 
     public Input<List<String>> getProjects() {
         return this.projects == null ? Input.empty() : this.projects;
@@ -94,7 +94,7 @@ public final class GoogleCloudBillingBudgetsV1FilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="services")
-    private final @Nullable Input<List<String>> services;
+      private final @Nullable Input<List<String>> services;
 
     public Input<List<String>> getServices() {
         return this.services == null ? Input.empty() : this.services;
@@ -105,7 +105,7 @@ public final class GoogleCloudBillingBudgetsV1FilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subaccounts")
-    private final @Nullable Input<List<String>> subaccounts;
+      private final @Nullable Input<List<String>> subaccounts;
 
     public Input<List<String>> getSubaccounts() {
         return this.subaccounts == null ? Input.empty() : this.subaccounts;
@@ -254,7 +254,6 @@ public final class GoogleCloudBillingBudgetsV1FilterArgs extends io.pulumi.resou
             this.subaccounts = Input.ofNullable(subaccounts);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1FilterArgs build() {
             return new GoogleCloudBillingBudgetsV1FilterArgs(calendarPeriod, creditTypes, creditTypesTreatment, customPeriod, labels, projects, services, subaccounts);
         }

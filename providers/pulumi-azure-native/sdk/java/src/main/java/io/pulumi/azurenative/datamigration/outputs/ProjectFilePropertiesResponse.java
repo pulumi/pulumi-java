@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class ProjectFilePropertiesResponse {
     /**
      * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
      * 
-     */
+    */
     public Optional<String> getExtension() {
         return Optional.ofNullable(this.extension);
     }
     /**
      * Relative path of this file resource. This property can be set when creating or updating the file resource.
      * 
-     */
+    */
     public Optional<String> getFilePath() {
         return Optional.ofNullable(this.filePath);
     }
     /**
      * Modification DateTime.
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * File content type. This property can be modified to reflect the file content type.
      * 
-     */
+    */
     public Optional<String> getMediaType() {
         return Optional.ofNullable(this.mediaType);
     }
     /**
      * File size.
      * 
-     */
+    */
     public Double getSize() {
         return this.size;
     }
@@ -140,7 +140,6 @@ public final class ProjectFilePropertiesResponse {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public ProjectFilePropertiesResponse build() {
             return new ProjectFilePropertiesResponse(extension, filePath, lastModified, mediaType, size);
         }

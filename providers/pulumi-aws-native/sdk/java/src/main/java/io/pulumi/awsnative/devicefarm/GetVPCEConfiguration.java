@@ -6,17 +6,33 @@ package io.pulumi.awsnative.devicefarm;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devicefarm.inputs.GetVPCEConfigurationArgs;
 import io.pulumi.awsnative.devicefarm.outputs.GetVPCEConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVPCEConfiguration {
-/**
- * AWS::DeviceFarm::VPCEConfiguration creates a new Device Farm VPCE Configuration
+    private GetVPCEConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetVPCEConfigurationArgs.Builder a);
+    }
+    private static GetVPCEConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVPCEConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AWS::DeviceFarm::VPCEConfiguration creates a new Device Farm VPCE Configuration
  * 
- */
+     */
+    public static CompletableFuture<GetVPCEConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AWS::DeviceFarm::VPCEConfiguration creates a new Device Farm VPCE Configuration
+     * 
+     */
     public static CompletableFuture<GetVPCEConfigurationResult> invokeAsync(GetVPCEConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getVPCEConfiguration", TypeShape.of(GetVPCEConfigurationResult.class), args == null ? GetVPCEConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

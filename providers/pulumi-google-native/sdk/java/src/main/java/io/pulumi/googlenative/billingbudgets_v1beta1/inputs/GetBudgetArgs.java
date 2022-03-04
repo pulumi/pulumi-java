@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetBudgetArgs Empty = new GetBudgetArgs();
 
     @InputImport(name="billingAccountId", required=true)
-    private final String billingAccountId;
+      private final String billingAccountId;
 
     public String getBillingAccountId() {
         return this.billingAccountId;
     }
 
     @InputImport(name="budgetId", required=true)
-    private final String budgetId;
+      private final String budgetId;
 
     public String getBudgetId() {
         return this.budgetId;
@@ -69,7 +69,6 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
             this.budgetId = Objects.requireNonNull(budgetId);
             return this;
         }
-
         public GetBudgetArgs build() {
             return new GetBudgetArgs(billingAccountId, budgetId);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.documentdb.enums.RoleDefinitionType;
 import io.pulumi.azurenative.documentdb.inputs.PermissionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="assignableScopes")
-    private final @Nullable Input<List<String>> assignableScopes;
+      private final @Nullable Input<List<String>> assignableScopes;
 
     public Input<List<String>> getAssignableScopes() {
         return this.assignableScopes == null ? Input.empty() : this.assignableScopes;
@@ -44,7 +44,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<List<PermissionArgs>> permissions;
+      private final @Nullable Input<List<PermissionArgs>> permissions;
 
     public Input<List<PermissionArgs>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -55,7 +55,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="roleDefinitionId")
-    private final @Nullable Input<String> roleDefinitionId;
+      private final @Nullable Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
@@ -77,7 +77,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="roleName")
-    private final @Nullable Input<String> roleName;
+      private final @Nullable Input<String> roleName;
 
     public Input<String> getRoleName() {
         return this.roleName == null ? Input.empty() : this.roleName;
@@ -88,7 +88,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<RoleDefinitionType> type;
+      private final @Nullable Input<RoleDefinitionType> type;
 
     public Input<RoleDefinitionType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -222,7 +222,6 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public SqlResourceSqlRoleDefinitionArgs build() {
             return new SqlResourceSqlRoleDefinitionArgs(accountName, assignableScopes, permissions, resourceGroupName, roleDefinitionId, roleName, type);
         }

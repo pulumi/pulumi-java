@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListWebAppBackupConfigurationArgs;
 import io.pulumi.azurenative.web.outputs.ListWebAppBackupConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppBackupConfiguration {
-/**
- * Description of a backup which will be performed.
+    private ListWebAppBackupConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppBackupConfigurationArgs.Builder a);
+    }
+    private static ListWebAppBackupConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppBackupConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of a backup which will be performed.
  * API Version: 2020-12-01.
  * 
- *
- * Description of a backup which will be performed.
+     *
+     * Description of a backup which will be performed.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppBackupConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of a backup which will be performed.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Description of a backup which will be performed.
+     * 
+     */
     public static CompletableFuture<ListWebAppBackupConfigurationResult> invokeAsync(ListWebAppBackupConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupConfiguration", TypeShape.of(ListWebAppBackupConfigurationResult.class), args == null ? ListWebAppBackupConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

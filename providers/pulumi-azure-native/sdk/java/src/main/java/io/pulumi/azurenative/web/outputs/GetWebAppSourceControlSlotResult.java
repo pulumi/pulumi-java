@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.GitHubActionConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -98,77 +98,77 @@ public final class GetWebAppSourceControlSlotResult {
     /**
      * Name of branch to use for deployment.
      * 
-     */
+    */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getDeploymentRollbackEnabled() {
         return Optional.ofNullable(this.deploymentRollbackEnabled);
     }
     /**
      * If GitHub Action is selected, than the associated configuration.
      * 
-     */
+    */
     public Optional<GitHubActionConfigurationResponse> getGitHubActionConfiguration() {
         return Optional.ofNullable(this.gitHubActionConfiguration);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * <code>true</code> if this is deployed via GitHub action.
      * 
-     */
+    */
     public Optional<Boolean> getIsGitHubAction() {
         return Optional.ofNullable(this.isGitHubAction);
     }
     /**
      * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
-     */
+    */
     public Optional<Boolean> getIsManualIntegration() {
         return Optional.ofNullable(this.isManualIntegration);
     }
     /**
      * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
      * 
-     */
+    */
     public Optional<Boolean> getIsMercurial() {
         return Optional.ofNullable(this.isMercurial);
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Repository or source control URL.
      * 
-     */
+    */
     public Optional<String> getRepoUrl() {
         return Optional.ofNullable(this.repoUrl);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -267,7 +267,6 @@ public final class GetWebAppSourceControlSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppSourceControlSlotResult build() {
             return new GetWebAppSourceControlSlotResult(branch, deploymentRollbackEnabled, gitHubActionConfiguration, id, isGitHubAction, isManualIntegration, isMercurial, kind, name, repoUrl, type);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityAccessDescription;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityKeyUsage;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,7 +62,6 @@ public final class CertificateAuthorityCsrExtensions {
             this.subjectInformationAccess = subjectInformationAccess;
             return this;
         }
-
         public CertificateAuthorityCsrExtensions build() {
             return new CertificateAuthorityCsrExtensions(keyUsage, subjectInformationAccess);
         }

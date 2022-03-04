@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.budgets.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetBudgetsActionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetBudgetsActionArgs Empty = new GetBudgetsActionArgs();
 
     @InputImport(name="actionId", required=true)
-    private final String actionId;
+      private final String actionId;
 
     public String getActionId() {
         return this.actionId;
     }
 
     @InputImport(name="budgetName", required=true)
-    private final String budgetName;
+      private final String budgetName;
 
     public String getBudgetName() {
         return this.budgetName;
@@ -69,7 +69,6 @@ public final class GetBudgetsActionArgs extends io.pulumi.resources.InvokeArgs {
             this.budgetName = Objects.requireNonNull(budgetName);
             return this;
         }
-
         public GetBudgetsActionArgs build() {
             return new GetBudgetsActionArgs(actionId, budgetName);
         }

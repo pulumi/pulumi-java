@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,14 +41,14 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
     /**
      * Timespan applied to the start time of a tumbling window when evaluating dependency.
      * 
-     */
+    */
     public String getOffset() {
         return this.offset;
     }
     /**
      * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
      * 
-     */
+    */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
@@ -56,7 +56,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
      * The type of dependency reference.
      * Expected value is 'SelfDependencyTumblingWindowTriggerReference'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -99,7 +99,6 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SelfDependencyTumblingWindowTriggerReferenceResponse build() {
             return new SelfDependencyTumblingWindowTriggerReferenceResponse(offset, size, type);
         }

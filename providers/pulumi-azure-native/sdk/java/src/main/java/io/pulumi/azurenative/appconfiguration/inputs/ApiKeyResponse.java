@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connectionString", required=true)
-    private final String connectionString;
+      private final String connectionString;
 
     public String getConnectionString() {
         return this.connectionString;
@@ -33,7 +33,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -44,7 +44,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastModified", required=true)
-    private final String lastModified;
+      private final String lastModified;
 
     public String getLastModified() {
         return this.lastModified;
@@ -55,7 +55,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -66,7 +66,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="readOnly", required=true)
-    private final Boolean readOnly;
+      private final Boolean readOnly;
 
     public Boolean getReadOnly() {
         return this.readOnly;
@@ -77,7 +77,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -166,7 +166,6 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ApiKeyResponse build() {
             return new ApiKeyResponse(connectionString, id, lastModified, name, readOnly, value);
         }

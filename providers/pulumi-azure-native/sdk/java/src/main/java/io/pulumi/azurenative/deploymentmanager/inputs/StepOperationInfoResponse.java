@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.CloudErrorBodyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="correlationId", required=true)
-    private final String correlationId;
+      private final String correlationId;
 
     public String getCorrelationId() {
         return this.correlationId;
@@ -35,7 +35,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="deploymentName", required=true)
-    private final String deploymentName;
+      private final String deploymentName;
 
     public String getDeploymentName() {
         return this.deploymentName;
@@ -46,7 +46,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -57,7 +57,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="error")
-    private final @Nullable CloudErrorBodyResponse error;
+      private final @Nullable CloudErrorBodyResponse error;
 
     public Optional<CloudErrorBodyResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -68,7 +68,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="lastUpdatedTime", required=true)
-    private final String lastUpdatedTime;
+      private final String lastUpdatedTime;
 
     public String getLastUpdatedTime() {
         return this.lastUpdatedTime;
@@ -79,7 +79,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -168,7 +168,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public StepOperationInfoResponse build() {
             return new StepOperationInfoResponse(correlationId, deploymentName, endTime, error, lastUpdatedTime, startTime);
         }

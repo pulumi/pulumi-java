@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="checkInterval", required=true)
-    private final String checkInterval;
+      private final String checkInterval;
 
     public String getCheckInterval() {
         return this.checkInterval;
@@ -34,7 +34,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disableHealthCheck", required=true)
-    private final Boolean disableHealthCheck;
+      private final Boolean disableHealthCheck;
 
     public Boolean getDisableHealthCheck() {
         return this.disableHealthCheck;
@@ -45,7 +45,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="healthyThreshold", required=true)
-    private final Integer healthyThreshold;
+      private final Integer healthyThreshold;
 
     public Integer getHealthyThreshold() {
         return this.healthyThreshold;
@@ -56,7 +56,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -67,7 +67,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restartThreshold", required=true)
-    private final Integer restartThreshold;
+      private final Integer restartThreshold;
 
     public Integer getRestartThreshold() {
         return this.restartThreshold;
@@ -78,7 +78,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeout", required=true)
-    private final String timeout;
+      private final String timeout;
 
     public String getTimeout() {
         return this.timeout;
@@ -89,7 +89,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="unhealthyThreshold", required=true)
-    private final Integer unhealthyThreshold;
+      private final Integer unhealthyThreshold;
 
     public Integer getUnhealthyThreshold() {
         return this.unhealthyThreshold;
@@ -188,7 +188,6 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
-
         public HealthCheckResponse build() {
             return new HealthCheckResponse(checkInterval, disableHealthCheck, healthyThreshold, host, restartThreshold, timeout, unhealthyThreshold);
         }

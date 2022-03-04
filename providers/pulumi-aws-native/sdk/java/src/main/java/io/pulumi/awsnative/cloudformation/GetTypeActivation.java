@@ -6,17 +6,33 @@ package io.pulumi.awsnative.cloudformation;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudformation.inputs.GetTypeActivationArgs;
 import io.pulumi.awsnative.cloudformation.outputs.GetTypeActivationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTypeActivation {
-/**
- * Enable a resource that has been published in the CloudFormation Registry.
+    private GetTypeActivation() {}
+    public interface BuilderApplicator {
+        public void apply(GetTypeActivationArgs.Builder a);
+    }
+    private static GetTypeActivationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTypeActivationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Enable a resource that has been published in the CloudFormation Registry.
  * 
- */
+     */
+    public static CompletableFuture<GetTypeActivationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Enable a resource that has been published in the CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetTypeActivationResult> invokeAsync(GetTypeActivationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getTypeActivation", TypeShape.of(GetTypeActivationResult.class), args == null ? GetTypeActivationArgs.Empty : args, Utilities.withVersion(options));
     }

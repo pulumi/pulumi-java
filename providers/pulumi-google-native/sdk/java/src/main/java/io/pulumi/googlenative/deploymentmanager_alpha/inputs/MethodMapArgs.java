@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="create")
-    private final @Nullable Input<String> create;
+      private final @Nullable Input<String> create;
 
     public Input<String> getCreate() {
         return this.create == null ? Input.empty() : this.create;
@@ -34,7 +34,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delete")
-    private final @Nullable Input<String> delete;
+      private final @Nullable Input<String> delete;
 
     public Input<String> getDelete() {
         return this.delete == null ? Input.empty() : this.delete;
@@ -45,7 +45,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="get")
-    private final @Nullable Input<String> get;
+      private final @Nullable Input<String> get;
 
     public Input<String> getGet() {
         return this.get == null ? Input.empty() : this.get;
@@ -56,7 +56,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="setIamPolicy")
-    private final @Nullable Input<String> setIamPolicy;
+      private final @Nullable Input<String> setIamPolicy;
 
     public Input<String> getSetIamPolicy() {
         return this.setIamPolicy == null ? Input.empty() : this.setIamPolicy;
@@ -67,7 +67,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="update")
-    private final @Nullable Input<String> update;
+      private final @Nullable Input<String> update;
 
     public Input<String> getUpdate() {
         return this.update == null ? Input.empty() : this.update;
@@ -171,7 +171,6 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
             this.update = Input.ofNullable(update);
             return this;
         }
-
         public MethodMapArgs build() {
             return new MethodMapArgs(create, delete, get, setIamPolicy, update);
         }

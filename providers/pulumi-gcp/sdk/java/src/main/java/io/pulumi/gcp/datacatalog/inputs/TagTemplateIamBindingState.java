@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,49 +17,49 @@ public final class TagTemplateIamBindingState extends io.pulumi.resources.Resour
     public static final TagTemplateIamBindingState Empty = new TagTemplateIamBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<TagTemplateIamBindingConditionGetArgs> condition;
+      private final @Nullable Input<TagTemplateIamBindingConditionGetArgs> condition;
 
     public Input<TagTemplateIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
     }
 
     @InputImport(name="tagTemplate")
-    private final @Nullable Input<String> tagTemplate;
+      private final @Nullable Input<String> tagTemplate;
 
     public Input<String> getTagTemplate() {
         return this.tagTemplate == null ? Input.empty() : this.tagTemplate;
@@ -193,7 +193,6 @@ public final class TagTemplateIamBindingState extends io.pulumi.resources.Resour
             this.tagTemplate = Input.ofNullable(tagTemplate);
             return this;
         }
-
         public TagTemplateIamBindingState build() {
             return new TagTemplateIamBindingState(condition, etag, members, project, region, role, tagTemplate);
         }

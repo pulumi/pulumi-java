@@ -11,7 +11,7 @@ import io.pulumi.azurenative.compute.inputs.ManagedDiskParametersArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualHardDiskArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caching")
-    private final @Nullable Input<CachingTypes> caching;
+      private final @Nullable Input<CachingTypes> caching;
 
     public Input<CachingTypes> getCaching() {
         return this.caching == null ? Input.empty() : this.caching;
@@ -43,7 +43,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createOption", required=true)
-    private final Input<Either<String,DiskCreateOptionTypes>> createOption;
+      private final Input<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Input<Either<String,DiskCreateOptionTypes>> getCreateOption() {
         return this.createOption;
@@ -54,7 +54,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteOption")
-    private final @Nullable Input<Either<String,DiskDeleteOptionTypes>> deleteOption;
+      private final @Nullable Input<Either<String,DiskDeleteOptionTypes>> deleteOption;
 
     public Input<Either<String,DiskDeleteOptionTypes>> getDeleteOption() {
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
@@ -65,7 +65,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detachOption")
-    private final @Nullable Input<Either<String,DiskDetachOptionTypes>> detachOption;
+      private final @Nullable Input<Either<String,DiskDetachOptionTypes>> detachOption;
 
     public Input<Either<String,DiskDetachOptionTypes>> getDetachOption() {
         return this.detachOption == null ? Input.empty() : this.detachOption;
@@ -76,7 +76,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-    private final @Nullable Input<Integer> diskSizeGB;
+      private final @Nullable Input<Integer> diskSizeGB;
 
     public Input<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
@@ -87,7 +87,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<VirtualHardDiskArgs> image;
+      private final @Nullable Input<VirtualHardDiskArgs> image;
 
     public Input<VirtualHardDiskArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -98,7 +98,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lun", required=true)
-    private final Input<Integer> lun;
+      private final Input<Integer> lun;
 
     public Input<Integer> getLun() {
         return this.lun;
@@ -109,7 +109,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedDisk")
-    private final @Nullable Input<ManagedDiskParametersArgs> managedDisk;
+      private final @Nullable Input<ManagedDiskParametersArgs> managedDisk;
 
     public Input<ManagedDiskParametersArgs> getManagedDisk() {
         return this.managedDisk == null ? Input.empty() : this.managedDisk;
@@ -120,7 +120,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -131,7 +131,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toBeDetached")
-    private final @Nullable Input<Boolean> toBeDetached;
+      private final @Nullable Input<Boolean> toBeDetached;
 
     public Input<Boolean> getToBeDetached() {
         return this.toBeDetached == null ? Input.empty() : this.toBeDetached;
@@ -142,7 +142,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vhd")
-    private final @Nullable Input<VirtualHardDiskArgs> vhd;
+      private final @Nullable Input<VirtualHardDiskArgs> vhd;
 
     public Input<VirtualHardDiskArgs> getVhd() {
         return this.vhd == null ? Input.empty() : this.vhd;
@@ -153,7 +153,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeAcceleratorEnabled")
-    private final @Nullable Input<Boolean> writeAcceleratorEnabled;
+      private final @Nullable Input<Boolean> writeAcceleratorEnabled;
 
     public Input<Boolean> getWriteAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Input.empty() : this.writeAcceleratorEnabled;
@@ -362,7 +362,6 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.writeAcceleratorEnabled = Input.ofNullable(writeAcceleratorEnabled);
             return this;
         }
-
         public DataDiskArgs build() {
             return new DataDiskArgs(caching, createOption, deleteOption, detachOption, diskSizeGB, image, lun, managedDisk, name, toBeDetached, vhd, writeAcceleratorEnabled);
         }

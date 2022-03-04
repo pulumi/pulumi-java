@@ -5,8 +5,8 @@ package io.pulumi.googlenative.networkservices_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkservices_v1.EdgeCacheOriginIamPolicyArgs;
 import io.pulumi.googlenative.networkservices_v1.outputs.AuditConfigResponse;
@@ -81,6 +81,37 @@ public class EdgeCacheOriginIamPolicy extends io.pulumi.resources.CustomResource
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EdgeCacheOriginIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.networkservices_v1.EdgeCacheOriginIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.networkservices_v1.EdgeCacheOriginIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public EdgeCacheOriginIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EdgeCacheOriginIamPolicy(String name) {
+        this(name, EdgeCacheOriginIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EdgeCacheOriginIamPolicy(String name, EdgeCacheOriginIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

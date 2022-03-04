@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.DHCPOptionsTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +34,7 @@ public final class GetDHCPOptionsResult {
     /**
      * Any tags assigned to the DHCP options set.
      * 
-     */
+    */
     public List<DHCPOptionsTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -70,7 +70,6 @@ public final class GetDHCPOptionsResult {
             this.tags = tags;
             return this;
         }
-
         public GetDHCPOptionsResult build() {
             return new GetDHCPOptionsResult(dhcpOptionsId, tags);
         }

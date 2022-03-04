@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GalleryArtifactVersionSourceResponse {
     /**
      * The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }
@@ -76,7 +76,6 @@ public final class GalleryArtifactVersionSourceResponse {
             this.uri = uri;
             return this;
         }
-
         public GalleryArtifactVersionSourceResponse build() {
             return new GalleryArtifactVersionSourceResponse(id, uri);
         }

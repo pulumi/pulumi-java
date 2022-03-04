@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetGroupMembershipsArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="group", required=true)
-    private final String group;
+      private final String group;
 
     public String getGroup() {
         return this.group;
@@ -55,7 +55,6 @@ public final class GetGroupMembershipsArgs extends io.pulumi.resources.InvokeArg
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public GetGroupMembershipsArgs build() {
             return new GetGroupMembershipsArgs(group);
         }

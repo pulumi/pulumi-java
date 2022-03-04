@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.MaintenanceWindowUpdateTrack;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="day")
-    private final @Nullable Input<Integer> day;
+      private final @Nullable Input<Integer> day;
 
     public Input<Integer> getDay() {
         return this.day == null ? Input.empty() : this.day;
@@ -36,7 +36,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hour")
-    private final @Nullable Input<Integer> hour;
+      private final @Nullable Input<Integer> hour;
 
     public Input<Integer> getHour() {
         return this.hour == null ? Input.empty() : this.hour;
@@ -47,7 +47,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -58,7 +58,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updateTrack")
-    private final @Nullable Input<MaintenanceWindowUpdateTrack> updateTrack;
+      private final @Nullable Input<MaintenanceWindowUpdateTrack> updateTrack;
 
     public Input<MaintenanceWindowUpdateTrack> getUpdateTrack() {
         return this.updateTrack == null ? Input.empty() : this.updateTrack;
@@ -147,7 +147,6 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             this.updateTrack = Input.ofNullable(updateTrack);
             return this;
         }
-
         public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(day, hour, kind, updateTrack);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="billingType", required=true)
-    private final String billingType;
+      private final String billingType;
 
     public String getBillingType() {
         return this.billingType;
@@ -34,7 +34,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="chargingType", required=true)
-    private final String chargingType;
+      private final String chargingType;
 
     public String getChargingType() {
         return this.chargingType;
@@ -45,7 +45,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="multiplier", required=true)
-    private final Double multiplier;
+      private final Double multiplier;
 
     public Double getMultiplier() {
         return this.multiplier;
@@ -56,7 +56,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="productId", required=true)
-    private final String productId;
+      private final String productId;
 
     public String getProductId() {
         return this.productId;
@@ -67,7 +67,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="skuId", required=true)
-    private final String skuId;
+      private final String skuId;
 
     public String getSkuId() {
         return this.skuId;
@@ -78,7 +78,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="termId", required=true)
-    private final String termId;
+      private final String termId;
 
     public String getTermId() {
         return this.termId;
@@ -167,7 +167,6 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
             this.termId = Objects.requireNonNull(termId);
             return this;
         }
-
         public PurchaseMeterDetailsResponse build() {
             return new PurchaseMeterDetailsResponse(billingType, chargingType, multiplier, productId, skuId, termId);
         }

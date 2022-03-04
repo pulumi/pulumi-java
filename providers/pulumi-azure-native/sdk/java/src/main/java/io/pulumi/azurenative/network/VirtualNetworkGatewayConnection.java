@@ -14,8 +14,8 @@ import io.pulumi.azurenative.network.outputs.VirtualNetworkGatewayResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -434,6 +434,37 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
         return this.virtualNetworkGateway2;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VirtualNetworkGatewayConnectionArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.VirtualNetworkGatewayConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.VirtualNetworkGatewayConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VirtualNetworkGatewayConnection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VirtualNetworkGatewayConnection(String name) {
+        this(name, VirtualNetworkGatewayConnectionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VirtualNetworkGatewayConnection(String name, VirtualNetworkGatewayConnectionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

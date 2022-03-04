@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environment", required=true)
-    private final Input<String> environment;
+      private final Input<String> environment;
 
     public Input<String> getEnvironment() {
         return this.environment;
@@ -30,7 +30,7 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -89,7 +89,6 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public InstanceAttachmentArgs build() {
             return new InstanceAttachmentArgs(environment, instanceId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class JobStatusResponse {
     /**
      * Optional. Output only. Job state details, such as an error description if the state is ERROR.
      * 
-     */
+    */
     public String getDetails() {
         return this.details;
     }
     /**
      * A state message specifying the overall job state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The time when this state was entered.
      * 
-     */
+    */
     public String getStateStartTime() {
         return this.stateStartTime;
     }
     /**
      * Additional state information, which includes status reported by the agent.
      * 
-     */
+    */
     public String getSubstate() {
         return this.substate;
     }
@@ -116,7 +116,6 @@ public final class JobStatusResponse {
             this.substate = Objects.requireNonNull(substate);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(details, state, stateStartTime, substate);
         }

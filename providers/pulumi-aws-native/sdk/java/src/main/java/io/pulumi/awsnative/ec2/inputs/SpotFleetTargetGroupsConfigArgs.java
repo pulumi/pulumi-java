@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTargetGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public final class SpotFleetTargetGroupsConfigArgs extends io.pulumi.resources.R
     public static final SpotFleetTargetGroupsConfigArgs Empty = new SpotFleetTargetGroupsConfigArgs();
 
     @InputImport(name="targetGroups", required=true)
-    private final Input<List<SpotFleetTargetGroupArgs>> targetGroups;
+      private final Input<List<SpotFleetTargetGroupArgs>> targetGroups;
 
     public Input<List<SpotFleetTargetGroupArgs>> getTargetGroups() {
         return this.targetGroups;
@@ -58,7 +58,6 @@ public final class SpotFleetTargetGroupsConfigArgs extends io.pulumi.resources.R
             this.targetGroups = Input.of(Objects.requireNonNull(targetGroups));
             return this;
         }
-
         public SpotFleetTargetGroupsConfigArgs build() {
             return new SpotFleetTargetGroupsConfigArgs(targetGroups);
         }

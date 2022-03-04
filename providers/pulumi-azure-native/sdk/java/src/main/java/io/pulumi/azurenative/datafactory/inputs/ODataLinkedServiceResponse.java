@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="aadResourceId")
-    private final @Nullable Object aadResourceId;
+      private final @Nullable Object aadResourceId;
 
     public Optional<Object> getAadResourceId() {
         return this.aadResourceId == null ? Optional.empty() : Optional.ofNullable(this.aadResourceId);
@@ -42,7 +42,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="aadServicePrincipalCredentialType")
-    private final @Nullable String aadServicePrincipalCredentialType;
+      private final @Nullable String aadServicePrincipalCredentialType;
 
     public Optional<String> getAadServicePrincipalCredentialType() {
         return this.aadServicePrincipalCredentialType == null ? Optional.empty() : Optional.ofNullable(this.aadServicePrincipalCredentialType);
@@ -53,7 +53,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -64,7 +64,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="authHeaders")
-    private final @Nullable Object authHeaders;
+      private final @Nullable Object authHeaders;
 
     public Optional<Object> getAuthHeaders() {
         return this.authHeaders == null ? Optional.empty() : Optional.ofNullable(this.authHeaders);
@@ -75,7 +75,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable String authenticationType;
+      private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
@@ -86,7 +86,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="azureCloudType")
-    private final @Nullable Object azureCloudType;
+      private final @Nullable Object azureCloudType;
 
     public Optional<Object> getAzureCloudType() {
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
@@ -97,7 +97,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -108,7 +108,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -119,7 +119,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -130,7 +130,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -141,7 +141,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password == null ? null : this.password;
@@ -152,7 +152,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="servicePrincipalEmbeddedCert")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCert;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCert;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalEmbeddedCert() {
         return this.servicePrincipalEmbeddedCert == null ? null : this.servicePrincipalEmbeddedCert;
@@ -163,7 +163,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="servicePrincipalEmbeddedCertPassword")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCertPassword;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCertPassword;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalEmbeddedCertPassword() {
         return this.servicePrincipalEmbeddedCertPassword == null ? null : this.servicePrincipalEmbeddedCertPassword;
@@ -174,7 +174,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="servicePrincipalId")
-    private final @Nullable Object servicePrincipalId;
+      private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
@@ -185,7 +185,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="servicePrincipalKey")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
@@ -196,7 +196,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tenant")
-    private final @Nullable Object tenant;
+      private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
@@ -208,7 +208,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -219,7 +219,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="url", required=true)
-    private final Object url;
+      private final Object url;
 
     public Object getUrl() {
         return this.url;
@@ -230,7 +230,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Object userName;
+      private final @Nullable Object userName;
 
     public Optional<Object> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
@@ -449,7 +449,6 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
             this.userName = userName;
             return this;
         }
-
         public ODataLinkedServiceResponse build() {
             return new ODataLinkedServiceResponse(aadResourceId, aadServicePrincipalCredentialType, annotations, authHeaders, authenticationType, azureCloudType, connectVia, description, encryptedCredential, parameters, password, servicePrincipalEmbeddedCert, servicePrincipalEmbeddedCertPassword, servicePrincipalId, servicePrincipalKey, tenant, type, url, userName);
         }

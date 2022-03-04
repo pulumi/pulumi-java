@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.OperationErrorResponse;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.OperationWarningsItemResponse;
 import java.lang.Integer;
@@ -175,154 +175,154 @@ public final class OperationResponse {
     /**
      * The value of `requestId` if you provided it in the request. Not present otherwise.
      * 
-     */
+    */
     public String getClientOperationId() {
         return this.clientOperationId;
     }
     /**
      * A textual description of the operation, which is set when the operation is created.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The time that this operation was completed. This value is in RFC3339 text format.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * If errors are generated during processing of the operation, this field will be populated.
      * 
-     */
+    */
     public OperationErrorResponse getError() {
         return this.error;
     }
     /**
      * If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.
      * 
-     */
+    */
     public String getHttpErrorMessage() {
         return this.httpErrorMessage;
     }
     /**
      * If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.
      * 
-     */
+    */
     public Integer getHttpErrorStatusCode() {
         return this.httpErrorStatusCode;
     }
     /**
      * The time that this operation was requested. This value is in RFC3339 text format.
      * 
-     */
+    */
     public String getInsertTime() {
         return this.insertTime;
     }
     /**
      * Type of the resource. Always `compute#operation` for Operation resources.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the operation.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.
      * 
-     */
+    */
     public String getOperationGroupId() {
         return this.operationGroupId;
     }
     /**
      * The type of operation, such as `insert`, `update`, or `delete`, and so on.
      * 
-     */
+    */
     public String getOperationType() {
         return this.operationType;
     }
     /**
      * An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.
      * 
-     */
+    */
     public Integer getProgress() {
         return this.progress;
     }
     /**
      * The URL of the region where the operation resides. Only applicable when performing regional operations.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * Server-defined URL for the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * The time that this operation was started by the server. This value is in RFC3339 text format.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * An optional textual description of the current status of the operation.
      * 
-     */
+    */
     public String getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * The unique target ID, which identifies a specific incarnation of the target resource.
      * 
-     */
+    */
     public String getTargetId() {
         return this.targetId;
     }
     /**
      * The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.
      * 
-     */
+    */
     public String getTargetLink() {
         return this.targetLink;
     }
     /**
      * User who requested the operation, for example: `user@example.com`.
      * 
-     */
+    */
     public String getUser() {
         return this.user;
     }
     /**
      * If warning messages are generated during processing of the operation, this field will be populated.
      * 
-     */
+    */
     public List<OperationWarningsItemResponse> getWarnings() {
         return this.warnings;
     }
     /**
      * The URL of the zone where the operation resides. Only applicable when performing per-zone operations.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }
@@ -498,7 +498,6 @@ public final class OperationResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public OperationResponse build() {
             return new OperationResponse(clientOperationId, description, endTime, error, httpErrorMessage, httpErrorStatusCode, insertTime, kind, name, operationGroupId, operationType, progress, region, selfLink, startTime, status, statusMessage, targetId, targetLink, user, warnings, zone);
         }

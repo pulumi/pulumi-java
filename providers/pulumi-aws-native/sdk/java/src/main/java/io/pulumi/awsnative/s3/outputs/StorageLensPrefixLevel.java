@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.StorageLensPrefixLevelStorageMetrics;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class StorageLensPrefixLevel {
             this.storageMetrics = Objects.requireNonNull(storageMetrics);
             return this;
         }
-
         public StorageLensPrefixLevel build() {
             return new StorageLensPrefixLevel(storageMetrics);
         }

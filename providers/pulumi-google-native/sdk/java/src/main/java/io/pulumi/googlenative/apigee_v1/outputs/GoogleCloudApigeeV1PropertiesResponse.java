@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1PropertyResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1PropertiesResponse {
     /**
      * List of all properties in the object
      * 
-     */
+    */
     public List<GoogleCloudApigeeV1PropertyResponse> getProperty() {
         return this.property;
     }
@@ -53,7 +53,6 @@ public final class GoogleCloudApigeeV1PropertiesResponse {
             this.property = Objects.requireNonNull(property);
             return this;
         }
-
         public GoogleCloudApigeeV1PropertiesResponse build() {
             return new GoogleCloudApigeeV1PropertiesResponse(property);
         }

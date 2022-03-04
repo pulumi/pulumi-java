@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetIPAMAllocationResult {
     /**
      * Id of the allocation.
      * 
-     */
+    */
     public Optional<String> getIpamPoolAllocationId() {
         return Optional.ofNullable(this.ipamPoolAllocationId);
     }
@@ -54,7 +54,6 @@ public final class GetIPAMAllocationResult {
             this.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
         }
-
         public GetIPAMAllocationResult build() {
             return new GetIPAMAllocationResult(ipamPoolAllocationId);
         }

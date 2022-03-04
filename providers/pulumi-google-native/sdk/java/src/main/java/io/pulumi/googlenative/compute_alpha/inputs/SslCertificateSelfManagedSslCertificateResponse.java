@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SslCertificateSelfManagedSslCertificateResponse extends io.pu
      * 
      */
     @InputImport(name="certificate", required=true)
-    private final String certificate;
+      private final String certificate;
 
     public String getCertificate() {
         return this.certificate;
@@ -32,7 +32,7 @@ public final class SslCertificateSelfManagedSslCertificateResponse extends io.pu
      * 
      */
     @InputImport(name="privateKey", required=true)
-    private final String privateKey;
+      private final String privateKey;
 
     public String getPrivateKey() {
         return this.privateKey;
@@ -81,7 +81,6 @@ public final class SslCertificateSelfManagedSslCertificateResponse extends io.pu
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public SslCertificateSelfManagedSslCertificateResponse build() {
             return new SslCertificateSelfManagedSslCertificateResponse(certificate, privateKey);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ListWebAppSyncFunctionTriggersResult {
     /**
      * Secret key.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Trigger URL.
      * 
-     */
+    */
     public Optional<String> getTriggerUrl() {
         return Optional.ofNullable(this.triggerUrl);
     }
@@ -76,7 +76,6 @@ public final class ListWebAppSyncFunctionTriggersResult {
             this.triggerUrl = triggerUrl;
             return this;
         }
-
         public ListWebAppSyncFunctionTriggersResult build() {
             return new ListWebAppSyncFunctionTriggersResult(key, triggerUrl);
         }

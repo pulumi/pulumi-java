@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.VM;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class BastionShareableLink extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vm", required=true)
-    private final VM vm;
+      private final VM vm;
 
     public VM getVm() {
         return this.vm;
@@ -59,7 +59,6 @@ public final class BastionShareableLink extends io.pulumi.resources.InvokeArgs {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }
-
         public BastionShareableLink build() {
             return new BastionShareableLink(vm);
         }

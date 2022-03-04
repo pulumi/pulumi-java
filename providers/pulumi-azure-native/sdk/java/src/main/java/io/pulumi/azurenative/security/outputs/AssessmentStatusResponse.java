@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class AssessmentStatusResponse {
     /**
      * Programmatic code for the cause of the assessment status
      * 
-     */
+    */
     public Optional<String> getCause() {
         return Optional.ofNullable(this.cause);
     }
     /**
      * Programmatic code for the status of the assessment
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Human readable description of the assessment status
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -97,7 +97,6 @@ public final class AssessmentStatusResponse {
             this.description = description;
             return this;
         }
-
         public AssessmentStatusResponse build() {
             return new AssessmentStatusResponse(cause, code, description);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.CacheBehavior;
 import io.pulumi.azurenative.cdn.enums.CacheType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cacheBehavior", required=true)
-    private final Input<Either<String,CacheBehavior>> cacheBehavior;
+      private final Input<Either<String,CacheBehavior>> cacheBehavior;
 
     public Input<Either<String,CacheBehavior>> getCacheBehavior() {
         return this.cacheBehavior;
@@ -37,7 +37,7 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cacheDuration")
-    private final @Nullable Input<String> cacheDuration;
+      private final @Nullable Input<String> cacheDuration;
 
     public Input<String> getCacheDuration() {
         return this.cacheDuration == null ? Input.empty() : this.cacheDuration;
@@ -48,14 +48,14 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cacheType", required=true)
-    private final Input<Either<String,CacheType>> cacheType;
+      private final Input<Either<String,CacheType>> cacheType;
 
     public Input<Either<String,CacheType>> getCacheType() {
         return this.cacheType;
     }
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -144,7 +144,6 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public CacheExpirationActionParametersArgs build() {
             return new CacheExpirationActionParametersArgs(cacheBehavior, cacheDuration, cacheType, odataType);
         }

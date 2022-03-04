@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.RateLimitRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class RateLimitRuleListResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable List<RateLimitRuleResponse> rules;
+      private final @Nullable List<RateLimitRuleResponse> rules;
 
     public List<RateLimitRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
@@ -62,7 +62,6 @@ public final class RateLimitRuleListResponse extends io.pulumi.resources.InvokeA
             this.rules = rules;
             return this;
         }
-
         public RateLimitRuleListResponse build() {
             return new RateLimitRuleListResponse(rules);
         }

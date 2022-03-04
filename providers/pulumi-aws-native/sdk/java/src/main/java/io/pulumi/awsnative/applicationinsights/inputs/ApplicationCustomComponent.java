@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ApplicationCustomComponent extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="componentName", required=true)
-    private final String componentName;
+      private final String componentName;
 
     public String getComponentName() {
         return this.componentName;
@@ -33,7 +33,7 @@ public final class ApplicationCustomComponent extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceList", required=true)
-    private final List<String> resourceList;
+      private final List<String> resourceList;
 
     public List<String> getResourceList() {
         return this.resourceList;
@@ -82,7 +82,6 @@ public final class ApplicationCustomComponent extends io.pulumi.resources.Invoke
             this.resourceList = Objects.requireNonNull(resourceList);
             return this;
         }
-
         public ApplicationCustomComponent build() {
             return new ApplicationCustomComponent(componentName, resourceList);
         }

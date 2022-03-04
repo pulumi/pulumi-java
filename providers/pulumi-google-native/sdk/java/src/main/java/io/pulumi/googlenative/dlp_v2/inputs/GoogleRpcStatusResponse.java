@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleRpcStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="code", required=true)
-    private final Integer code;
+      private final Integer code;
 
     public Integer getCode() {
         return this.code;
@@ -35,7 +35,7 @@ public final class GoogleRpcStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="details", required=true)
-    private final List<Map<String,String>> details;
+      private final List<Map<String,String>> details;
 
     public List<Map<String,String>> getDetails() {
         return this.details;
@@ -46,7 +46,7 @@ public final class GoogleRpcStatusResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -105,7 +105,6 @@ public final class GoogleRpcStatusResponse extends io.pulumi.resources.InvokeArg
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public GoogleRpcStatusResponse build() {
             return new GoogleRpcStatusResponse(code, details, message);
         }

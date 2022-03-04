@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ForestTrustResponse {
     /**
      * Friendly Name
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Remote Dns ips
      * 
-     */
+    */
     public Optional<String> getRemoteDnsIps() {
         return Optional.ofNullable(this.remoteDnsIps);
     }
     /**
      * Trust Direction
      * 
-     */
+    */
     public Optional<String> getTrustDirection() {
         return Optional.ofNullable(this.trustDirection);
     }
     /**
      * Trust Password
      * 
-     */
+    */
     public Optional<String> getTrustPassword() {
         return Optional.ofNullable(this.trustPassword);
     }
     /**
      * Trusted Domain FQDN
      * 
-     */
+    */
     public Optional<String> getTrustedDomainFqdn() {
         return Optional.ofNullable(this.trustedDomainFqdn);
     }
@@ -139,7 +139,6 @@ public final class ForestTrustResponse {
             this.trustedDomainFqdn = trustedDomainFqdn;
             return this;
         }
-
         public ForestTrustResponse build() {
             return new ForestTrustResponse(friendlyName, remoteDnsIps, trustDirection, trustPassword, trustedDomainFqdn);
         }

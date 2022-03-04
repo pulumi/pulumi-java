@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class KeyVaultSecretReferenceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="secretUrl", required=true)
-    private final String secretUrl;
+      private final String secretUrl;
 
     public String getSecretUrl() {
         return this.secretUrl;
@@ -33,7 +33,7 @@ public final class KeyVaultSecretReferenceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sourceVault", required=true)
-    private final SubResourceResponse sourceVault;
+      private final SubResourceResponse sourceVault;
 
     public SubResourceResponse getSourceVault() {
         return this.sourceVault;
@@ -82,7 +82,6 @@ public final class KeyVaultSecretReferenceResponse extends io.pulumi.resources.I
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
-
         public KeyVaultSecretReferenceResponse build() {
             return new KeyVaultSecretReferenceResponse(secretUrl, sourceVault);
         }

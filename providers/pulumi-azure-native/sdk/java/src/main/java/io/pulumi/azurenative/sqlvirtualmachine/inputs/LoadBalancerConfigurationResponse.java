@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.PrivateIPAddressResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="loadBalancerResourceId")
-    private final @Nullable String loadBalancerResourceId;
+      private final @Nullable String loadBalancerResourceId;
 
     public Optional<String> getLoadBalancerResourceId() {
         return this.loadBalancerResourceId == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerResourceId);
@@ -37,7 +37,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable PrivateIPAddressResponse privateIpAddress;
+      private final @Nullable PrivateIPAddressResponse privateIpAddress;
 
     public Optional<PrivateIPAddressResponse> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
@@ -48,7 +48,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="probePort")
-    private final @Nullable Integer probePort;
+      private final @Nullable Integer probePort;
 
     public Optional<Integer> getProbePort() {
         return this.probePort == null ? Optional.empty() : Optional.ofNullable(this.probePort);
@@ -59,7 +59,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicIpAddressResourceId")
-    private final @Nullable String publicIpAddressResourceId;
+      private final @Nullable String publicIpAddressResourceId;
 
     public Optional<String> getPublicIpAddressResourceId() {
         return this.publicIpAddressResourceId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressResourceId);
@@ -70,7 +70,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="sqlVirtualMachineInstances")
-    private final @Nullable List<String> sqlVirtualMachineInstances;
+      private final @Nullable List<String> sqlVirtualMachineInstances;
 
     public List<String> getSqlVirtualMachineInstances() {
         return this.sqlVirtualMachineInstances == null ? List.of() : this.sqlVirtualMachineInstances;
@@ -149,7 +149,6 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
             this.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
             return this;
         }
-
         public LoadBalancerConfigurationResponse build() {
             return new LoadBalancerConfigurationResponse(loadBalancerResourceId, privateIpAddress, probePort, publicIpAddressResourceId, sqlVirtualMachineInstances);
         }

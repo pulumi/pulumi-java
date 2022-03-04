@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.HadoopJobResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.HiveJobResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.JobSchedulingResponse;
@@ -112,84 +112,84 @@ public final class OrderedJobResponse {
     /**
      * Optional. Job is a Hadoop job.
      * 
-     */
+    */
     public HadoopJobResponse getHadoopJob() {
         return this.hadoopJob;
     }
     /**
      * Optional. Job is a Hive job.
      * 
-     */
+    */
     public HiveJobResponse getHiveJob() {
         return this.hiveJob;
     }
     /**
      * Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Optional. Job is a Pig job.
      * 
-     */
+    */
     public PigJobResponse getPigJob() {
         return this.pigJob;
     }
     /**
      * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
      * 
-     */
+    */
     public List<String> getPrerequisiteStepIds() {
         return this.prerequisiteStepIds;
     }
     /**
      * Optional. Job is a Presto job.
      * 
-     */
+    */
     public PrestoJobResponse getPrestoJob() {
         return this.prestoJob;
     }
     /**
      * Optional. Job is a PySpark job.
      * 
-     */
+    */
     public PySparkJobResponse getPysparkJob() {
         return this.pysparkJob;
     }
     /**
      * Optional. Job scheduling configuration.
      * 
-     */
+    */
     public JobSchedulingResponse getScheduling() {
         return this.scheduling;
     }
     /**
      * Optional. Job is a Spark job.
      * 
-     */
+    */
     public SparkJobResponse getSparkJob() {
         return this.sparkJob;
     }
     /**
      * Optional. Job is a SparkR job.
      * 
-     */
+    */
     public SparkRJobResponse getSparkRJob() {
         return this.sparkRJob;
     }
     /**
      * Optional. Job is a SparkSql job.
      * 
-     */
+    */
     public SparkSqlJobResponse getSparkSqlJob() {
         return this.sparkSqlJob;
     }
     /**
      * The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
      * 
-     */
+    */
     public String getStepId() {
         return this.stepId;
     }
@@ -295,7 +295,6 @@ public final class OrderedJobResponse {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public OrderedJobResponse build() {
             return new OrderedJobResponse(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }

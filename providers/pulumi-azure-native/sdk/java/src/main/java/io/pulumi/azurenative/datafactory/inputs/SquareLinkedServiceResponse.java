@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -42,7 +42,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Object clientId;
+      private final @Nullable Object clientId;
 
     public Optional<Object> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -53,7 +53,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getClientSecret() {
         return this.clientSecret == null ? null : this.clientSecret;
@@ -64,7 +64,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -75,7 +75,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="connectionProperties")
-    private final @Nullable Object connectionProperties;
+      private final @Nullable Object connectionProperties;
 
     public Optional<Object> getConnectionProperties() {
         return this.connectionProperties == null ? Optional.empty() : Optional.ofNullable(this.connectionProperties);
@@ -86,7 +86,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -97,7 +97,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -108,7 +108,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Object host;
+      private final @Nullable Object host;
 
     public Optional<Object> getHost() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
@@ -119,7 +119,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -130,7 +130,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="redirectUri")
-    private final @Nullable Object redirectUri;
+      private final @Nullable Object redirectUri;
 
     public Optional<Object> getRedirectUri() {
         return this.redirectUri == null ? Optional.empty() : Optional.ofNullable(this.redirectUri);
@@ -142,7 +142,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -153,7 +153,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-    private final @Nullable Object useEncryptedEndpoints;
+      private final @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> getUseEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
@@ -164,7 +164,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="useHostVerification")
-    private final @Nullable Object useHostVerification;
+      private final @Nullable Object useHostVerification;
 
     public Optional<Object> getUseHostVerification() {
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
@@ -175,7 +175,7 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="usePeerVerification")
-    private final @Nullable Object usePeerVerification;
+      private final @Nullable Object usePeerVerification;
 
     public Optional<Object> getUsePeerVerification() {
         return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
@@ -344,7 +344,6 @@ public final class SquareLinkedServiceResponse extends io.pulumi.resources.Invok
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public SquareLinkedServiceResponse build() {
             return new SquareLinkedServiceResponse(annotations, clientId, clientSecret, connectVia, connectionProperties, description, encryptedCredential, host, parameters, redirectUri, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

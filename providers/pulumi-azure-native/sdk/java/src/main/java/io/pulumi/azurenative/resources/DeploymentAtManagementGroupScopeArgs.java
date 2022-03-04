@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.resources.inputs.DeploymentPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="deploymentName")
-    private final @Nullable Input<String> deploymentName;
+      private final @Nullable Input<String> deploymentName;
 
     public Input<String> getDeploymentName() {
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
@@ -32,7 +32,7 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final Input<String> groupId;
+      private final Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId;
@@ -43,7 +43,7 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<DeploymentPropertiesArgs> properties;
+      private final Input<DeploymentPropertiesArgs> properties;
 
     public Input<DeploymentPropertiesArgs> getProperties() {
         return this.properties;
@@ -65,7 +65,7 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,6 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DeploymentAtManagementGroupScopeArgs build() {
             return new DeploymentAtManagementGroupScopeArgs(deploymentName, groupId, location, properties, tags);
         }

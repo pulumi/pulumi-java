@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.BucketIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -33,7 +33,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<BucketIAMBindingConditionArgs> condition;
+      private final @Nullable Input<BucketIAMBindingConditionArgs> condition;
 
     public Input<BucketIAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -54,7 +54,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -67,7 +67,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -156,7 +156,6 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public BucketIAMBindingArgs build() {
             return new BucketIAMBindingArgs(bucket, condition, members, role);
         }

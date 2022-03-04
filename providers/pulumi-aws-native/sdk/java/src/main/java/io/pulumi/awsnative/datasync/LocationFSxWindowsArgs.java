@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync;
 
 import io.pulumi.awsnative.datasync.inputs.LocationFSxWindowsTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -32,7 +32,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fsxFilesystemArn", required=true)
-    private final Input<String> fsxFilesystemArn;
+      private final Input<String> fsxFilesystemArn;
 
     public Input<String> getFsxFilesystemArn() {
         return this.fsxFilesystemArn;
@@ -43,7 +43,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -54,7 +54,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="securityGroupArns", required=true)
-    private final Input<List<String>> securityGroupArns;
+      private final Input<List<String>> securityGroupArns;
 
     public Input<List<String>> getSecurityGroupArns() {
         return this.securityGroupArns;
@@ -65,7 +65,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subdirectory")
-    private final @Nullable Input<String> subdirectory;
+      private final @Nullable Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
@@ -76,7 +76,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<LocationFSxWindowsTagArgs>> tags;
+      private final @Nullable Input<List<LocationFSxWindowsTagArgs>> tags;
 
     public Input<List<LocationFSxWindowsTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="user", required=true)
-    private final Input<String> user;
+      private final Input<String> user;
 
     public Input<String> getUser() {
         return this.user;
@@ -221,7 +221,6 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
             this.user = Input.of(Objects.requireNonNull(user));
             return this;
         }
-
         public LocationFSxWindowsArgs build() {
             return new LocationFSxWindowsArgs(domain, fsxFilesystemArn, password, securityGroupArns, subdirectory, tags, user);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ConnectionSettingPropertiesResponse;
 import io.pulumi.azurenative.botservice.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -93,70 +93,70 @@ public final class GetBotConnectionResult {
     /**
      * Entity Tag
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Specifies the resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Required. Gets or sets the Kind of the resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The set of properties specific to bot channel resource
      * 
-     */
+    */
     public ConnectionSettingPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Gets or sets the SKU of the resource.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Entity zones
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones;
     }
@@ -248,7 +248,6 @@ public final class GetBotConnectionResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public GetBotConnectionResult build() {
             return new GetBotConnectionResult(etag, id, kind, location, name, properties, sku, tags, type, zones);
         }

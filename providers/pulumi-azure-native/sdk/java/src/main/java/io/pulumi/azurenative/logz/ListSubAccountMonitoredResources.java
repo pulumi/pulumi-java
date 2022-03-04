@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logz;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logz.inputs.ListSubAccountMonitoredResourcesArgs;
 import io.pulumi.azurenative.logz.outputs.ListSubAccountMonitoredResourcesResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSubAccountMonitoredResources {
-/**
- * Response of a list operation.
+    private ListSubAccountMonitoredResources() {}
+    public interface BuilderApplicator {
+        public void apply(ListSubAccountMonitoredResourcesArgs.Builder a);
+    }
+    private static ListSubAccountMonitoredResourcesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListSubAccountMonitoredResourcesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response of a list operation.
  * API Version: 2020-10-01.
  * 
- *
- * Response of a list operation.
+     *
+     * Response of a list operation.
  * 
- */
+     */
+    public static CompletableFuture<ListSubAccountMonitoredResourcesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response of a list operation.
+     * API Version: 2020-10-01.
+     * 
+     *
+         * Response of a list operation.
+     * 
+     */
     public static CompletableFuture<ListSubAccountMonitoredResourcesResult> invokeAsync(ListSubAccountMonitoredResourcesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listSubAccountMonitoredResources", TypeShape.of(ListSubAccountMonitoredResourcesResult.class), args == null ? ListSubAccountMonitoredResourcesArgs.Empty : args, Utilities.withVersion(options));
     }

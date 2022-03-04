@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class AzureSkuResponse {
     /**
      * The number of instances of the cluster.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * SKU name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * SKU tier.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
@@ -98,7 +98,6 @@ public final class AzureSkuResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public AzureSkuResponse build() {
             return new AzureSkuResponse(capacity, name, tier);
         }

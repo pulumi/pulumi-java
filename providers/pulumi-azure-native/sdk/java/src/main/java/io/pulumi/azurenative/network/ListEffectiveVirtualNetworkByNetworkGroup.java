@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.ListEffectiveVirtualNetworkByNetworkGroupArgs;
 import io.pulumi.azurenative.network.outputs.ListEffectiveVirtualNetworkByNetworkGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListEffectiveVirtualNetworkByNetworkGroup {
-/**
- * Result of the request to list Effective Virtual Network. It contains a list of groups and a URL link to get the next set of results.
+    private ListEffectiveVirtualNetworkByNetworkGroup() {}
+    public interface BuilderApplicator {
+        public void apply(ListEffectiveVirtualNetworkByNetworkGroupArgs.Builder a);
+    }
+    private static ListEffectiveVirtualNetworkByNetworkGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListEffectiveVirtualNetworkByNetworkGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Result of the request to list Effective Virtual Network. It contains a list of groups and a URL link to get the next set of results.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Result of the request to list Effective Virtual Network. It contains a list of groups and a URL link to get the next set of results.
+     *
+     * Result of the request to list Effective Virtual Network. It contains a list of groups and a URL link to get the next set of results.
  * 
- */
+     */
+    public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Result of the request to list Effective Virtual Network. It contains a list of groups and a URL link to get the next set of results.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Result of the request to list Effective Virtual Network. It contains a list of groups and a URL link to get the next set of results.
+     * 
+     */
     public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkGroupResult> invokeAsync(ListEffectiveVirtualNetworkByNetworkGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listEffectiveVirtualNetworkByNetworkGroup", TypeShape.of(ListEffectiveVirtualNetworkByNetworkGroupResult.class), args == null ? ListEffectiveVirtualNetworkByNetworkGroupArgs.Empty : args, Utilities.withVersion(options));
     }

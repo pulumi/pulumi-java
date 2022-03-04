@@ -34,7 +34,6 @@ public final class ExperimentTemplateActionMapArgs extends io.pulumi.resources.R
         public Builder(ExperimentTemplateActionMapArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ExperimentTemplateActionMapArgs build() {
             return new ExperimentTemplateActionMapArgs();
         }

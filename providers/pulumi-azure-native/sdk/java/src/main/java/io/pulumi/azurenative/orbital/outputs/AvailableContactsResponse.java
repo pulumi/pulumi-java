@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -98,77 +98,77 @@ public final class AvailableContactsResponse {
     /**
      * Azimuth of the antenna at the end of the contact in decimal degrees.
      * 
-     */
+    */
     public Double getEndAzimuthDegrees() {
         return this.endAzimuthDegrees;
     }
     /**
      * Spacecraft elevation above the horizon at contact end.
      * 
-     */
+    */
     public Double getEndElevationDegrees() {
         return this.endElevationDegrees;
     }
     /**
      * Name of Azure Ground Station.
      * 
-     */
+    */
     public String getGroundStationName() {
         return this.groundStationName;
     }
     /**
      * Maximum elevation of the antenna during the contact in decimal degrees.
      * 
-     */
+    */
     public Double getMaximumElevationDegrees() {
         return this.maximumElevationDegrees;
     }
     /**
      * Time to lost receiving a signal.
      * 
-     */
+    */
     public String getRxEndTime() {
         return this.rxEndTime;
     }
     /**
      * Earliest time to receive a signal.
      * 
-     */
+    */
     public String getRxStartTime() {
         return this.rxStartTime;
     }
     /**
      * The reference to the spacecraft resource.
      * 
-     */
+    */
     public Optional<ResourceReferenceResponse> getSpacecraft() {
         return Optional.ofNullable(this.spacecraft);
     }
     /**
      * Azimuth of the antenna at the start of the contact in decimal degrees.
      * 
-     */
+    */
     public Double getStartAzimuthDegrees() {
         return this.startAzimuthDegrees;
     }
     /**
      * Spacecraft elevation above the horizon at contact start.
      * 
-     */
+    */
     public Double getStartElevationDegrees() {
         return this.startElevationDegrees;
     }
     /**
      * Time at which antenna transmit will be disabled.
      * 
-     */
+    */
     public String getTxEndTime() {
         return this.txEndTime;
     }
     /**
      * Time at which antenna transmit will be enabled.
      * 
-     */
+    */
     public String getTxStartTime() {
         return this.txStartTime;
     }
@@ -267,7 +267,6 @@ public final class AvailableContactsResponse {
             this.txStartTime = Objects.requireNonNull(txStartTime);
             return this;
         }
-
         public AvailableContactsResponse build() {
             return new AvailableContactsResponse(endAzimuthDegrees, endElevationDegrees, groundStationName, maximumElevationDegrees, rxEndTime, rxStartTime, spacecraft, startAzimuthDegrees, startElevationDegrees, txEndTime, txStartTime);
         }

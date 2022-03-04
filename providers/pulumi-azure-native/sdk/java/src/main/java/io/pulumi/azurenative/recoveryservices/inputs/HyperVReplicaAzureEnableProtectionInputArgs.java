@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="disksToInclude")
-    private final @Nullable Input<List<String>> disksToInclude;
+      private final @Nullable Input<List<String>> disksToInclude;
 
     public Input<List<String>> getDisksToInclude() {
         return this.disksToInclude == null ? Input.empty() : this.disksToInclude;
@@ -35,7 +35,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="enableRdpOnTargetOption")
-    private final @Nullable Input<String> enableRdpOnTargetOption;
+      private final @Nullable Input<String> enableRdpOnTargetOption;
 
     public Input<String> getEnableRdpOnTargetOption() {
         return this.enableRdpOnTargetOption == null ? Input.empty() : this.enableRdpOnTargetOption;
@@ -46,7 +46,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="hvHostVmId")
-    private final @Nullable Input<String> hvHostVmId;
+      private final @Nullable Input<String> hvHostVmId;
 
     public Input<String> getHvHostVmId() {
         return this.hvHostVmId == null ? Input.empty() : this.hvHostVmId;
@@ -58,7 +58,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -69,7 +69,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="logStorageAccountId")
-    private final @Nullable Input<String> logStorageAccountId;
+      private final @Nullable Input<String> logStorageAccountId;
 
     public Input<String> getLogStorageAccountId() {
         return this.logStorageAccountId == null ? Input.empty() : this.logStorageAccountId;
@@ -80,7 +80,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable Input<String> osType;
+      private final @Nullable Input<String> osType;
 
     public Input<String> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -91,7 +91,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetAvailabilitySetId")
-    private final @Nullable Input<String> targetAvailabilitySetId;
+      private final @Nullable Input<String> targetAvailabilitySetId;
 
     public Input<String> getTargetAvailabilitySetId() {
         return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
@@ -102,7 +102,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetAvailabilityZone")
-    private final @Nullable Input<String> targetAvailabilityZone;
+      private final @Nullable Input<String> targetAvailabilityZone;
 
     public Input<String> getTargetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Input.empty() : this.targetAvailabilityZone;
@@ -113,7 +113,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetAzureNetworkId")
-    private final @Nullable Input<String> targetAzureNetworkId;
+      private final @Nullable Input<String> targetAzureNetworkId;
 
     public Input<String> getTargetAzureNetworkId() {
         return this.targetAzureNetworkId == null ? Input.empty() : this.targetAzureNetworkId;
@@ -124,7 +124,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetAzureSubnetId")
-    private final @Nullable Input<String> targetAzureSubnetId;
+      private final @Nullable Input<String> targetAzureSubnetId;
 
     public Input<String> getTargetAzureSubnetId() {
         return this.targetAzureSubnetId == null ? Input.empty() : this.targetAzureSubnetId;
@@ -135,7 +135,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetAzureV1ResourceGroupId")
-    private final @Nullable Input<String> targetAzureV1ResourceGroupId;
+      private final @Nullable Input<String> targetAzureV1ResourceGroupId;
 
     public Input<String> getTargetAzureV1ResourceGroupId() {
         return this.targetAzureV1ResourceGroupId == null ? Input.empty() : this.targetAzureV1ResourceGroupId;
@@ -146,7 +146,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetAzureV2ResourceGroupId")
-    private final @Nullable Input<String> targetAzureV2ResourceGroupId;
+      private final @Nullable Input<String> targetAzureV2ResourceGroupId;
 
     public Input<String> getTargetAzureV2ResourceGroupId() {
         return this.targetAzureV2ResourceGroupId == null ? Input.empty() : this.targetAzureV2ResourceGroupId;
@@ -157,7 +157,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetAzureVmName")
-    private final @Nullable Input<String> targetAzureVmName;
+      private final @Nullable Input<String> targetAzureVmName;
 
     public Input<String> getTargetAzureVmName() {
         return this.targetAzureVmName == null ? Input.empty() : this.targetAzureVmName;
@@ -168,7 +168,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetProximityPlacementGroupId")
-    private final @Nullable Input<String> targetProximityPlacementGroupId;
+      private final @Nullable Input<String> targetProximityPlacementGroupId;
 
     public Input<String> getTargetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId == null ? Input.empty() : this.targetProximityPlacementGroupId;
@@ -179,7 +179,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetStorageAccountId")
-    private final @Nullable Input<String> targetStorageAccountId;
+      private final @Nullable Input<String> targetStorageAccountId;
 
     public Input<String> getTargetStorageAccountId() {
         return this.targetStorageAccountId == null ? Input.empty() : this.targetStorageAccountId;
@@ -190,7 +190,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetVmSize")
-    private final @Nullable Input<String> targetVmSize;
+      private final @Nullable Input<String> targetVmSize;
 
     public Input<String> getTargetVmSize() {
         return this.targetVmSize == null ? Input.empty() : this.targetVmSize;
@@ -201,7 +201,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="useManagedDisks")
-    private final @Nullable Input<String> useManagedDisks;
+      private final @Nullable Input<String> useManagedDisks;
 
     public Input<String> getUseManagedDisks() {
         return this.useManagedDisks == null ? Input.empty() : this.useManagedDisks;
@@ -212,7 +212,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="vhdId")
-    private final @Nullable Input<String> vhdId;
+      private final @Nullable Input<String> vhdId;
 
     public Input<String> getVhdId() {
         return this.vhdId == null ? Input.empty() : this.vhdId;
@@ -223,7 +223,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="vmName")
-    private final @Nullable Input<String> vmName;
+      private final @Nullable Input<String> vmName;
 
     public Input<String> getVmName() {
         return this.vmName == null ? Input.empty() : this.vmName;
@@ -537,7 +537,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
             this.vmName = Input.ofNullable(vmName);
             return this;
         }
-
         public HyperVReplicaAzureEnableProtectionInputArgs build() {
             return new HyperVReplicaAzureEnableProtectionInputArgs(disksToInclude, enableRdpOnTargetOption, hvHostVmId, instanceType, logStorageAccountId, osType, targetAvailabilitySetId, targetAvailabilityZone, targetAzureNetworkId, targetAzureSubnetId, targetAzureV1ResourceGroupId, targetAzureV2ResourceGroupId, targetAzureVmName, targetProximityPlacementGroupId, targetStorageAccountId, targetVmSize, useManagedDisks, vhdId, vmName);
         }

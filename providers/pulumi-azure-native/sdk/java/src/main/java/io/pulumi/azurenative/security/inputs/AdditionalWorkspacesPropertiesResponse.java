@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="dataTypes")
-    private final @Nullable List<String> dataTypes;
+      private final @Nullable List<String> dataTypes;
 
     public List<String> getDataTypes() {
         return this.dataTypes == null ? List.of() : this.dataTypes;
@@ -35,7 +35,7 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -46,7 +46,7 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="workspace")
-    private final @Nullable String workspace;
+      private final @Nullable String workspace;
 
     public Optional<String> getWorkspace() {
         return this.workspace == null ? Optional.empty() : Optional.ofNullable(this.workspace);
@@ -105,7 +105,6 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
             this.workspace = workspace;
             return this;
         }
-
         public AdditionalWorkspacesPropertiesResponse build() {
             return new AdditionalWorkspacesPropertiesResponse(dataTypes, type, workspace);
         }

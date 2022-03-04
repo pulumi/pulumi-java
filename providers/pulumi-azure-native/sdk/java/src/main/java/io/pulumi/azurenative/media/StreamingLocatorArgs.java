@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.media.inputs.StreamingLocatorContentKeyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="alternativeMediaId")
-    private final @Nullable Input<String> alternativeMediaId;
+      private final @Nullable Input<String> alternativeMediaId;
 
     public Input<String> getAlternativeMediaId() {
         return this.alternativeMediaId == null ? Input.empty() : this.alternativeMediaId;
@@ -43,7 +43,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="assetName", required=true)
-    private final Input<String> assetName;
+      private final Input<String> assetName;
 
     public Input<String> getAssetName() {
         return this.assetName;
@@ -54,7 +54,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="contentKeys")
-    private final @Nullable Input<List<StreamingLocatorContentKeyArgs>> contentKeys;
+      private final @Nullable Input<List<StreamingLocatorContentKeyArgs>> contentKeys;
 
     public Input<List<StreamingLocatorContentKeyArgs>> getContentKeys() {
         return this.contentKeys == null ? Input.empty() : this.contentKeys;
@@ -65,7 +65,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="defaultContentKeyPolicyName")
-    private final @Nullable Input<String> defaultContentKeyPolicyName;
+      private final @Nullable Input<String> defaultContentKeyPolicyName;
 
     public Input<String> getDefaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName == null ? Input.empty() : this.defaultContentKeyPolicyName;
@@ -76,7 +76,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -87,7 +87,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable Input<List<String>> filters;
+      private final @Nullable Input<List<String>> filters;
 
     public Input<List<String>> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
@@ -98,7 +98,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -109,7 +109,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -120,7 +120,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="streamingLocatorId")
-    private final @Nullable Input<String> streamingLocatorId;
+      private final @Nullable Input<String> streamingLocatorId;
 
     public Input<String> getStreamingLocatorId() {
         return this.streamingLocatorId == null ? Input.empty() : this.streamingLocatorId;
@@ -131,7 +131,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="streamingLocatorName")
-    private final @Nullable Input<String> streamingLocatorName;
+      private final @Nullable Input<String> streamingLocatorName;
 
     public Input<String> getStreamingLocatorName() {
         return this.streamingLocatorName == null ? Input.empty() : this.streamingLocatorName;
@@ -142,7 +142,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="streamingPolicyName", required=true)
-    private final Input<String> streamingPolicyName;
+      private final Input<String> streamingPolicyName;
 
     public Input<String> getStreamingPolicyName() {
         return this.streamingPolicyName;
@@ -351,7 +351,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
             this.streamingPolicyName = Input.of(Objects.requireNonNull(streamingPolicyName));
             return this;
         }
-
         public StreamingLocatorArgs build() {
             return new StreamingLocatorArgs(accountName, alternativeMediaId, assetName, contentKeys, defaultContentKeyPolicyName, endTime, filters, resourceGroupName, startTime, streamingLocatorId, streamingLocatorName, streamingPolicyName);
         }

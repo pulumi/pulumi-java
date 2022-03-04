@@ -6,21 +6,41 @@ package io.pulumi.azurenative.relay;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.relay.inputs.ListWCFRelayKeysArgs;
 import io.pulumi.azurenative.relay.outputs.ListWCFRelayKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWCFRelayKeys {
-/**
- * Namespace/Relay Connection String
+    private ListWCFRelayKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListWCFRelayKeysArgs.Builder a);
+    }
+    private static ListWCFRelayKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWCFRelayKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Namespace/Relay Connection String
  * API Version: 2017-04-01.
  * 
- *
- * Namespace/Relay Connection String
+     *
+     * Namespace/Relay Connection String
  * 
- */
+     */
+    public static CompletableFuture<ListWCFRelayKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Namespace/Relay Connection String
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Namespace/Relay Connection String
+     * 
+     */
     public static CompletableFuture<ListWCFRelayKeysResult> invokeAsync(ListWCFRelayKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:listWCFRelayKeys", TypeShape.of(ListWCFRelayKeysResult.class), args == null ? ListWCFRelayKeysArgs.Empty : args, Utilities.withVersion(options));
     }

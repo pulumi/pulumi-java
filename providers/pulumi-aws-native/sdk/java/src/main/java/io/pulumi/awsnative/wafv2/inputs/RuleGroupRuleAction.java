@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionAllowProperties;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionBlockProperties;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionCaptchaProperties;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionCountProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable RuleGroupRuleActionAllowProperties allow;
+      private final @Nullable RuleGroupRuleActionAllowProperties allow;
 
     public Optional<RuleGroupRuleActionAllowProperties> getAllow() {
         return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
@@ -37,7 +37,7 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="block")
-    private final @Nullable RuleGroupRuleActionBlockProperties block;
+      private final @Nullable RuleGroupRuleActionBlockProperties block;
 
     public Optional<RuleGroupRuleActionBlockProperties> getBlock() {
         return this.block == null ? Optional.empty() : Optional.ofNullable(this.block);
@@ -48,7 +48,7 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="captcha")
-    private final @Nullable RuleGroupRuleActionCaptchaProperties captcha;
+      private final @Nullable RuleGroupRuleActionCaptchaProperties captcha;
 
     public Optional<RuleGroupRuleActionCaptchaProperties> getCaptcha() {
         return this.captcha == null ? Optional.empty() : Optional.ofNullable(this.captcha);
@@ -59,7 +59,7 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="count")
-    private final @Nullable RuleGroupRuleActionCountProperties count;
+      private final @Nullable RuleGroupRuleActionCountProperties count;
 
     public Optional<RuleGroupRuleActionCountProperties> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -128,7 +128,6 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
             this.count = count;
             return this;
         }
-
         public RuleGroupRuleAction build() {
             return new RuleGroupRuleAction(allow, block, captcha, count);
         }

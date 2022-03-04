@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,7 +34,7 @@ public final class CustomCopyOptionResponse {
     /**
      * Data copied after given timespan
      * 
-     */
+    */
     public Optional<String> getDuration() {
         return Optional.ofNullable(this.duration);
     }
@@ -42,7 +42,7 @@ public final class CustomCopyOptionResponse {
      * Type of the specific object - used for deserializing
      * Expected value is 'CustomCopyOption'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
@@ -78,7 +78,6 @@ public final class CustomCopyOptionResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public CustomCopyOptionResponse build() {
             return new CustomCopyOptionResponse(duration, objectType);
         }

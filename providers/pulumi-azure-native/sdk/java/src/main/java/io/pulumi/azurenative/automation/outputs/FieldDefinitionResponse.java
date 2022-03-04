@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class FieldDefinitionResponse {
     /**
      * Gets or sets the isEncrypted flag of the connection field definition.
      * 
-     */
+    */
     public Optional<Boolean> getIsEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
     /**
      * Gets or sets the isOptional flag of the connection field definition.
      * 
-     */
+    */
     public Optional<Boolean> getIsOptional() {
         return Optional.ofNullable(this.isOptional);
     }
     /**
      * Gets or sets the type of the connection field definition.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -98,7 +98,6 @@ public final class FieldDefinitionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FieldDefinitionResponse build() {
             return new FieldDefinitionResponse(isEncrypted, isOptional, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.NonResourceAttributes;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.ResourceAttributes;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class SelfSubjectAccessReviewSpec {
     /**
      * NonResourceAttributes describes information for a non-resource access request
      * 
-     */
+    */
     public Optional<NonResourceAttributes> getNonResourceAttributes() {
         return Optional.ofNullable(this.nonResourceAttributes);
     }
     /**
      * ResourceAuthorizationAttributes describes information for a resource access request
      * 
-     */
+    */
     public Optional<ResourceAttributes> getResourceAttributes() {
         return Optional.ofNullable(this.resourceAttributes);
     }
@@ -77,7 +77,6 @@ public final class SelfSubjectAccessReviewSpec {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
-
         public SelfSubjectAccessReviewSpec build() {
             return new SelfSubjectAccessReviewSpec(nonResourceAttributes, resourceAttributes);
         }

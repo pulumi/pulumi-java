@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileConnectorOAuthRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class ConnectorProfileMarketoConnectorProfileCredentials {
     /**
      * The credentials used to access protected resources.
      * 
-     */
+    */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * The identiﬁer for the desired client.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The client secret used by the oauth client to authenticate to the authorization server.
      * 
-     */
+    */
     public String getClientSecret() {
         return this.clientSecret;
     }
     /**
      * The oauth needed to request security tokens from the connector endpoint.
      * 
-     */
+    */
     public Optional<ConnectorProfileConnectorOAuthRequest> getConnectorOAuthRequest() {
         return Optional.ofNullable(this.connectorOAuthRequest);
     }
@@ -119,7 +119,6 @@ public final class ConnectorProfileMarketoConnectorProfileCredentials {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-
         public ConnectorProfileMarketoConnectorProfileCredentials build() {
             return new ConnectorProfileMarketoConnectorProfileCredentials(accessToken, clientId, clientSecret, connectorOAuthRequest);
         }

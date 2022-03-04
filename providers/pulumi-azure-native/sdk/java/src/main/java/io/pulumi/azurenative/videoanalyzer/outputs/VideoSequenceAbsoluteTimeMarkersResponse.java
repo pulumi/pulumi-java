@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
     /**
      * The sequence of datetime ranges. Example: '[["2021-10-05T03:30:00Z", "2021-10-05T03:40:00Z"]]'.
      * 
-     */
+    */
     public String getRanges() {
         return this.ranges;
     }
@@ -40,7 +40,7 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSequenceAbsoluteTimeMarkers'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -76,7 +76,6 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VideoSequenceAbsoluteTimeMarkersResponse build() {
             return new VideoSequenceAbsoluteTimeMarkersResponse(ranges, type);
         }

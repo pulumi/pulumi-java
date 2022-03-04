@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -41,7 +41,7 @@ public final class ServiceTemplateSpecContainerResources {
      * The values of the map is string form of the 'quantity' k8s type:
      * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
      * 
-     */
+    */
     public Map<String,String> getLimits() {
         return this.limits == null ? Map.of() : this.limits;
     }
@@ -52,7 +52,7 @@ public final class ServiceTemplateSpecContainerResources {
      * The values of the map is string form of the 'quantity' k8s type:
      * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
      * 
-     */
+    */
     public Map<String,String> getRequests() {
         return this.requests == null ? Map.of() : this.requests;
     }
@@ -88,7 +88,6 @@ public final class ServiceTemplateSpecContainerResources {
             this.requests = requests;
             return this;
         }
-
         public ServiceTemplateSpecContainerResources build() {
             return new ServiceTemplateSpecContainerResources(limits, requests);
         }

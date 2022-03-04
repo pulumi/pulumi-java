@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -82,63 +82,63 @@ public final class GetQueryPackResult {
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The unique ID of your application. This field cannot be changed.
      * 
-     */
+    */
     public String getQueryPackId() {
         return this.queryPackId;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
      * 
-     */
+    */
     public String getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
      * 
-     */
+    */
     public String getTimeModified() {
         return this.timeModified;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -223,7 +223,6 @@ public final class GetQueryPackResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueryPackResult build() {
             return new GetQueryPackResult(id, location, name, provisioningState, queryPackId, tags, timeCreated, timeModified, type);
         }

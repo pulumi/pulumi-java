@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ImageRawDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="containerType", required=true)
-    private final String containerType;
+      private final String containerType;
 
     public String getContainerType() {
         return this.containerType;
@@ -32,7 +32,7 @@ public final class ImageRawDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -81,7 +81,6 @@ public final class ImageRawDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public ImageRawDiskResponse build() {
             return new ImageRawDiskResponse(containerType, source);
         }

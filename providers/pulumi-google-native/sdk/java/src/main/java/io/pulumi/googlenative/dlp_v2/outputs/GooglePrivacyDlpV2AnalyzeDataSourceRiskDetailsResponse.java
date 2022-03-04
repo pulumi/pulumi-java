@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CategoricalStatsResultResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse;
@@ -88,63 +88,63 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
     /**
      * Categorical stats result
      * 
-     */
+    */
     public GooglePrivacyDlpV2CategoricalStatsResultResponse getCategoricalStatsResult() {
         return this.categoricalStatsResult;
     }
     /**
      * Delta-presence result
      * 
-     */
+    */
     public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse getDeltaPresenceEstimationResult() {
         return this.deltaPresenceEstimationResult;
     }
     /**
      * K-anonymity result
      * 
-     */
+    */
     public GooglePrivacyDlpV2KAnonymityResultResponse getKAnonymityResult() {
         return this.kAnonymityResult;
     }
     /**
      * K-map result
      * 
-     */
+    */
     public GooglePrivacyDlpV2KMapEstimationResultResponse getKMapEstimationResult() {
         return this.kMapEstimationResult;
     }
     /**
      * L-divesity result
      * 
-     */
+    */
     public GooglePrivacyDlpV2LDiversityResultResponse getLDiversityResult() {
         return this.lDiversityResult;
     }
     /**
      * Numerical stats result
      * 
-     */
+    */
     public GooglePrivacyDlpV2NumericalStatsResultResponse getNumericalStatsResult() {
         return this.numericalStatsResult;
     }
     /**
      * The configuration used for this job.
      * 
-     */
+    */
     public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse getRequestedOptions() {
         return this.requestedOptions;
     }
     /**
      * Privacy metric to compute.
      * 
-     */
+    */
     public GooglePrivacyDlpV2PrivacyMetricResponse getRequestedPrivacyMetric() {
         return this.requestedPrivacyMetric;
     }
     /**
      * Input dataset to compute metrics over.
      * 
-     */
+    */
     public GooglePrivacyDlpV2BigQueryTableResponse getRequestedSourceTable() {
         return this.requestedSourceTable;
     }
@@ -229,7 +229,6 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
             this.requestedSourceTable = Objects.requireNonNull(requestedSourceTable);
             return this;
         }
-
         public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse build() {
             return new GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse(categoricalStatsResult, deltaPresenceEstimationResult, kAnonymityResult, kMapEstimationResult, lDiversityResult, numericalStatsResult, requestedOptions, requestedPrivacyMetric, requestedSourceTable);
         }

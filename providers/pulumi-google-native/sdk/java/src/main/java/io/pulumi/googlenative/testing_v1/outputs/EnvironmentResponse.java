@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidDeviceResponse;
 import io.pulumi.googlenative.testing_v1.outputs.IosDeviceResponse;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class EnvironmentResponse {
     /**
      * An Android device which must be used with an Android test.
      * 
-     */
+    */
     public AndroidDeviceResponse getAndroidDevice() {
         return this.androidDevice;
     }
     /**
      * An iOS device which must be used with an iOS test.
      * 
-     */
+    */
     public IosDeviceResponse getIosDevice() {
         return this.iosDevice;
     }
@@ -75,7 +75,6 @@ public final class EnvironmentResponse {
             this.iosDevice = Objects.requireNonNull(iosDevice);
             return this;
         }
-
         public EnvironmentResponse build() {
             return new EnvironmentResponse(androidDevice, iosDevice);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
     /**
      * The ID of the project.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * The name of the repo. Leave empty for the default repo.
      * 
-     */
+    */
     public String getRepoName() {
         return this.repoName;
     }
@@ -74,7 +74,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
             this.repoName = Objects.requireNonNull(repoName);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse(project, repoName);
         }

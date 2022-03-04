@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
      * 
      */
     @InputImport(name="deletionTime")
-    private final @Nullable Input<String> deletionTime;
+      private final @Nullable Input<String> deletionTime;
 
     public Input<String> getDeletionTime() {
         return this.deletionTime == null ? Input.empty() : this.deletionTime;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -37,7 +37,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
      * 
      */
     @InputImport(name="namespaceUrl")
-    private final @Nullable Input<String> namespaceUrl;
+      private final @Nullable Input<String> namespaceUrl;
 
     public Input<String> getNamespaceUrl() {
         return this.namespaceUrl == null ? Input.empty() : this.namespaceUrl;
@@ -111,7 +111,6 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
             this.namespaceUrl = Input.ofNullable(namespaceUrl);
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfigNamespaceArgs build() {
             return new ManagedZoneServiceDirectoryConfigNamespaceArgs(deletionTime, kind, namespaceUrl);
         }

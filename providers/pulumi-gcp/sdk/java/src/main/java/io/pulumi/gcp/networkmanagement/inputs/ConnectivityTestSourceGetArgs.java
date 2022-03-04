@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkmanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConnectivityTestSourceGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -33,7 +33,7 @@ public final class ConnectivityTestSourceGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -44,7 +44,7 @@ public final class ConnectivityTestSourceGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -56,7 +56,7 @@ public final class ConnectivityTestSourceGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkType")
-    private final @Nullable Input<String> networkType;
+      private final @Nullable Input<String> networkType;
 
     public Input<String> getNetworkType() {
         return this.networkType == null ? Input.empty() : this.networkType;
@@ -68,7 +68,7 @@ public final class ConnectivityTestSourceGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -86,7 +86,7 @@ public final class ConnectivityTestSourceGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+      private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -205,7 +205,6 @@ public final class ConnectivityTestSourceGetArgs extends io.pulumi.resources.Res
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
-
         public ConnectivityTestSourceGetArgs build() {
             return new ConnectivityTestSourceGetArgs(instance, ipAddress, network, networkType, port, projectId);
         }

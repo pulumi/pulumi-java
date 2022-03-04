@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sourcerepo_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sourcerepo_v1.outputs.MirrorConfigResponse;
 import java.lang.String;
 import java.util.Map;
@@ -54,35 +54,35 @@ public final class GetRepoResult {
     /**
      * How this repository mirrors a repository managed by another service. Read-only field.
      * 
-     */
+    */
     public MirrorConfigResponse getMirrorConfig() {
         return this.mirrorConfig;
     }
     /**
      * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
      * 
-     */
+    */
     public Map<String,String> getPubsubConfigs() {
         return this.pubsubConfigs;
     }
     /**
      * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
      * 
-     */
+    */
     public String getSize() {
         return this.size;
     }
     /**
      * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -139,7 +139,6 @@ public final class GetRepoResult {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetRepoResult build() {
             return new GetRepoResult(mirrorConfig, name, pubsubConfigs, size, url);
         }

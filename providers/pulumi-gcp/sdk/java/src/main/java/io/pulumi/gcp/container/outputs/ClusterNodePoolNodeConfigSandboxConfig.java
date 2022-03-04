@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ClusterNodePoolNodeConfigSandboxConfig {
      * Which sandbox to use for pods in the node pool.
      * Accepted values are:
      * 
-     */
+    */
     public String getSandboxType() {
         return this.sandboxType;
     }
@@ -54,7 +54,6 @@ public final class ClusterNodePoolNodeConfigSandboxConfig {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }
-
         public ClusterNodePoolNodeConfigSandboxConfig build() {
             return new ClusterNodePoolNodeConfigSandboxConfig(sandboxType);
         }

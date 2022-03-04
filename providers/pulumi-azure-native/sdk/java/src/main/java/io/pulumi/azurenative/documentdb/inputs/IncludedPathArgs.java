@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.IndexesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexes")
-    private final @Nullable Input<List<IndexesArgs>> indexes;
+      private final @Nullable Input<List<IndexesArgs>> indexes;
 
     public Input<List<IndexesArgs>> getIndexes() {
         return this.indexes == null ? Input.empty() : this.indexes;
@@ -36,7 +36,7 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -95,7 +95,6 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public IncludedPathArgs build() {
             return new IncludedPathArgs(indexes, path);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.CloudServiceConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.VirtualMachineConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DeploymentConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="cloudServiceConfiguration")
-    private final @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration;
+      private final @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration;
 
     public Optional<CloudServiceConfigurationResponse> getCloudServiceConfiguration() {
         return this.cloudServiceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cloudServiceConfiguration);
@@ -31,7 +31,7 @@ public final class DeploymentConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="virtualMachineConfiguration")
-    private final @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration;
+      private final @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration;
 
     public Optional<VirtualMachineConfigurationResponse> getVirtualMachineConfiguration() {
         return this.virtualMachineConfiguration == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineConfiguration);
@@ -80,7 +80,6 @@ public final class DeploymentConfigurationResponse extends io.pulumi.resources.I
             this.virtualMachineConfiguration = virtualMachineConfiguration;
             return this;
         }
-
         public DeploymentConfigurationResponse build() {
             return new DeploymentConfigurationResponse(cloudServiceConfiguration, virtualMachineConfiguration);
         }

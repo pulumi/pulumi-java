@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.PriorityLevelConfigurationConditionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions;
+      private final @Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions;
 
     public Input<List<PriorityLevelConfigurationConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -67,7 +67,6 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
-
         public PriorityLevelConfigurationStatusArgs build() {
             return new PriorityLevelConfigurationStatusArgs(conditions);
         }

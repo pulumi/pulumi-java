@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CapacityReservationGroupInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -85,63 +85,63 @@ public final class GetCapacityReservationGroupResult {
     /**
      * A list of all capacity reservation resource ids that belong to capacity reservation group.
      * 
-     */
+    */
     public List<SubResourceReadOnlyResponse> getCapacityReservations() {
         return this.capacityReservations;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
      * 
-     */
+    */
     public CapacityReservationGroupInstanceViewResponse getInstanceView() {
         return this.instanceView;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A list of references to all virtual machines associated to the capacity reservation group.
      * 
-     */
+    */
     public List<SubResourceReadOnlyResponse> getVirtualMachinesAssociated() {
         return this.virtualMachinesAssociated;
     }
     /**
      * Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }
@@ -226,7 +226,6 @@ public final class GetCapacityReservationGroupResult {
             this.zones = zones;
             return this;
         }
-
         public GetCapacityReservationGroupResult build() {
             return new GetCapacityReservationGroupResult(capacityReservations, id, instanceView, location, name, tags, type, virtualMachinesAssociated, zones);
         }

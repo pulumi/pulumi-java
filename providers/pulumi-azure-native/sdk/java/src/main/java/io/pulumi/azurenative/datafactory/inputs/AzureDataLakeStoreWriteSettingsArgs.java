@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="copyBehavior")
-    private final @Nullable Input<Object> copyBehavior;
+      private final @Nullable Input<Object> copyBehavior;
 
     public Input<Object> getCopyBehavior() {
         return this.copyBehavior == null ? Input.empty() : this.copyBehavior;
@@ -35,7 +35,7 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -46,7 +46,7 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="expiryDateTime")
-    private final @Nullable Input<Object> expiryDateTime;
+      private final @Nullable Input<Object> expiryDateTime;
 
     public Input<Object> getExpiryDateTime() {
         return this.expiryDateTime == null ? Input.empty() : this.expiryDateTime;
@@ -57,7 +57,7 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -69,7 +69,7 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -173,7 +173,6 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureDataLakeStoreWriteSettingsArgs build() {
             return new AzureDataLakeStoreWriteSettingsArgs(copyBehavior, disableMetricsCollection, expiryDateTime, maxConcurrentConnections, type);
         }

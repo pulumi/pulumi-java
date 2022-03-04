@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.IosDeviceResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IosDeviceListResponse {
     /**
      * A list of iOS devices.
      * 
-     */
+    */
     public List<IosDeviceResponse> getIosDevices() {
         return this.iosDevices;
     }
@@ -53,7 +53,6 @@ public final class IosDeviceListResponse {
             this.iosDevices = Objects.requireNonNull(iosDevices);
             return this;
         }
-
         public IosDeviceListResponse build() {
             return new IosDeviceListResponse(iosDevices);
         }

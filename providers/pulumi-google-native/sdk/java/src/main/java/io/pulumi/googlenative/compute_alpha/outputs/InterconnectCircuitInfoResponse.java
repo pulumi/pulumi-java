@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class InterconnectCircuitInfoResponse {
     /**
      * Customer-side demarc ID for this circuit.
      * 
-     */
+    */
     public String getCustomerDemarcId() {
         return this.customerDemarcId;
     }
     /**
      * Google-assigned unique ID for this circuit. Assigned at circuit turn-up.
      * 
-     */
+    */
     public String getGoogleCircuitId() {
         return this.googleCircuitId;
     }
     /**
      * Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.
      * 
-     */
+    */
     public String getGoogleDemarcId() {
         return this.googleDemarcId;
     }
@@ -95,7 +95,6 @@ public final class InterconnectCircuitInfoResponse {
             this.googleDemarcId = Objects.requireNonNull(googleDemarcId);
             return this;
         }
-
         public InterconnectCircuitInfoResponse build() {
             return new InterconnectCircuitInfoResponse(customerDemarcId, googleCircuitId, googleDemarcId);
         }

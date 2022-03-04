@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="accessToken")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getAccessToken() {
         return this.accessToken == null ? null : this.accessToken;
@@ -42,7 +42,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -53,7 +53,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -64,7 +64,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -75,7 +75,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -86,7 +86,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="host", required=true)
-    private final Object host;
+      private final Object host;
 
     public Object getHost() {
         return this.host;
@@ -97,7 +97,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -109,7 +109,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -120,7 +120,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-    private final @Nullable Object useEncryptedEndpoints;
+      private final @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> getUseEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
@@ -131,7 +131,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="useHostVerification")
-    private final @Nullable Object useHostVerification;
+      private final @Nullable Object useHostVerification;
 
     public Optional<Object> getUseHostVerification() {
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
@@ -142,7 +142,7 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="usePeerVerification")
-    private final @Nullable Object usePeerVerification;
+      private final @Nullable Object usePeerVerification;
 
     public Optional<Object> getUsePeerVerification() {
         return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
@@ -281,7 +281,6 @@ public final class ShopifyLinkedServiceResponse extends io.pulumi.resources.Invo
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public ShopifyLinkedServiceResponse build() {
             return new ShopifyLinkedServiceResponse(accessToken, annotations, connectVia, description, encryptedCredential, host, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

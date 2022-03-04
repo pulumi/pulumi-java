@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.CorsPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpFaultInjectionArgs;
@@ -26,7 +26,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="corsPolicy")
-    private final @Nullable Input<CorsPolicyArgs> corsPolicy;
+      private final @Nullable Input<CorsPolicyArgs> corsPolicy;
 
     public Input<CorsPolicyArgs> getCorsPolicy() {
         return this.corsPolicy == null ? Input.empty() : this.corsPolicy;
@@ -37,7 +37,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="faultInjectionPolicy")
-    private final @Nullable Input<HttpFaultInjectionArgs> faultInjectionPolicy;
+      private final @Nullable Input<HttpFaultInjectionArgs> faultInjectionPolicy;
 
     public Input<HttpFaultInjectionArgs> getFaultInjectionPolicy() {
         return this.faultInjectionPolicy == null ? Input.empty() : this.faultInjectionPolicy;
@@ -48,7 +48,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxStreamDuration")
-    private final @Nullable Input<DurationArgs> maxStreamDuration;
+      private final @Nullable Input<DurationArgs> maxStreamDuration;
 
     public Input<DurationArgs> getMaxStreamDuration() {
         return this.maxStreamDuration == null ? Input.empty() : this.maxStreamDuration;
@@ -59,7 +59,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="requestMirrorPolicy")
-    private final @Nullable Input<RequestMirrorPolicyArgs> requestMirrorPolicy;
+      private final @Nullable Input<RequestMirrorPolicyArgs> requestMirrorPolicy;
 
     public Input<RequestMirrorPolicyArgs> getRequestMirrorPolicy() {
         return this.requestMirrorPolicy == null ? Input.empty() : this.requestMirrorPolicy;
@@ -70,7 +70,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<HttpRetryPolicyArgs> retryPolicy;
+      private final @Nullable Input<HttpRetryPolicyArgs> retryPolicy;
 
     public Input<HttpRetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -81,7 +81,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<DurationArgs> timeout;
+      private final @Nullable Input<DurationArgs> timeout;
 
     public Input<DurationArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -92,7 +92,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="urlRewrite")
-    private final @Nullable Input<UrlRewriteArgs> urlRewrite;
+      private final @Nullable Input<UrlRewriteArgs> urlRewrite;
 
     public Input<UrlRewriteArgs> getUrlRewrite() {
         return this.urlRewrite == null ? Input.empty() : this.urlRewrite;
@@ -103,7 +103,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="weightedBackendServices")
-    private final @Nullable Input<List<WeightedBackendServiceArgs>> weightedBackendServices;
+      private final @Nullable Input<List<WeightedBackendServiceArgs>> weightedBackendServices;
 
     public Input<List<WeightedBackendServiceArgs>> getWeightedBackendServices() {
         return this.weightedBackendServices == null ? Input.empty() : this.weightedBackendServices;
@@ -252,7 +252,6 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
             this.weightedBackendServices = Input.ofNullable(weightedBackendServices);
             return this;
         }
-
         public HttpRouteActionArgs build() {
             return new HttpRouteActionArgs(corsPolicy, faultInjectionPolicy, maxStreamDuration, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

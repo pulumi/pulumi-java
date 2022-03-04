@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetPool {
-/**
- * Returns the specified target pool. Gets a list of available target pools by making a list() request.
+    private GetTargetPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetTargetPoolArgs.Builder a);
+    }
+    private static GetTargetPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTargetPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified target pool. Gets a list of available target pools by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetTargetPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified target pool. Gets a list of available target pools by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetTargetPoolResult> invokeAsync(GetTargetPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetPool", TypeShape.of(GetTargetPoolResult.class), args == null ? GetTargetPoolArgs.Empty : args, Utilities.withVersion(options));
     }

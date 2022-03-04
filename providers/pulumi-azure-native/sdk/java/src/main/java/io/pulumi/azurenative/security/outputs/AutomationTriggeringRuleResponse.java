@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class AutomationTriggeringRuleResponse {
     /**
      * The expected value.
      * 
-     */
+    */
     public Optional<String> getExpectedValue() {
         return Optional.ofNullable(this.expectedValue);
     }
     /**
      * A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
      * 
-     */
+    */
     public Optional<String> getOperator() {
         return Optional.ofNullable(this.operator);
     }
     /**
      * The JPath of the entity model property that should be checked.
      * 
-     */
+    */
     public Optional<String> getPropertyJPath() {
         return Optional.ofNullable(this.propertyJPath);
     }
     /**
      * The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
      * 
-     */
+    */
     public Optional<String> getPropertyType() {
         return Optional.ofNullable(this.propertyType);
     }
@@ -118,7 +118,6 @@ public final class AutomationTriggeringRuleResponse {
             this.propertyType = propertyType;
             return this;
         }
-
         public AutomationTriggeringRuleResponse build() {
             return new AutomationTriggeringRuleResponse(expectedValue, operator, propertyJPath, propertyType);
         }

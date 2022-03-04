@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -37,14 +37,14 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      * - 
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
      * 
-     */
+    */
     public Optional<Boolean> getAllowPlaybackInterruption() {
         return Optional.ofNullable(this.allowPlaybackInterruption);
     }
     /**
      * A collection of text responses.
      * 
-     */
+    */
     public List<String> getTexts() {
         return this.texts == null ? List.of() : this.texts;
     }
@@ -80,7 +80,6 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
             this.texts = texts;
             return this;
         }
-
         public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText build() {
             return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText(allowPlaybackInterruption, texts);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateConfigResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateDescriptionResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.RevocationDetailsResponse;
@@ -120,98 +120,98 @@ public final class GetCertificateResult {
     /**
      * A structured description of the issued X.509 certificate.
      * 
-     */
+    */
     public CertificateDescriptionResponse getCertificateDescription() {
         return this.certificateDescription;
     }
     /**
      * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
      * 
-     */
+    */
     public String getCertificateTemplate() {
         return this.certificateTemplate;
     }
     /**
      * Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
      * 
-     */
+    */
     public CertificateConfigResponse getConfig() {
         return this.config;
     }
     /**
      * The time at which this Certificate was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The resource name of the issuing CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
      * 
-     */
+    */
     public String getIssuerCertificateAuthority() {
         return this.issuerCertificateAuthority;
     }
     /**
      * Optional. Labels with user-defined metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
      * 
-     */
+    */
     public String getLifetime() {
         return this.lifetime;
     }
     /**
      * The resource name for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificates/*`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The pem-encoded, signed X.509 certificate.
      * 
-     */
+    */
     public String getPemCertificate() {
         return this.pemCertificate;
     }
     /**
      * The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
      * 
-     */
+    */
     public List<String> getPemCertificateChain() {
         return this.pemCertificateChain;
     }
     /**
      * Immutable. A pem-encoded X.509 certificate signing request (CSR).
      * 
-     */
+    */
     public String getPemCsr() {
         return this.pemCsr;
     }
     /**
      * Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
      * 
-     */
+    */
     public RevocationDetailsResponse getRevocationDetails() {
         return this.revocationDetails;
     }
     /**
      * Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
      * 
-     */
+    */
     public String getSubjectMode() {
         return this.subjectMode;
     }
     /**
      * The time at which this Certificate was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -331,7 +331,6 @@ public final class GetCertificateResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(certificateDescription, certificateTemplate, config, createTime, issuerCertificateAuthority, labels, lifetime, name, pemCertificate, pemCertificateChain, pemCsr, revocationDetails, subjectMode, updateTime);
         }

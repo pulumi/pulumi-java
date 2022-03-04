@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -87,70 +87,70 @@ public final class UpgradeHistoryEntryResponse {
     /**
      * Action. Rolloback or Upgrade.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * The container image before this instance upgrade.
      * 
-     */
+    */
     public String getContainerImage() {
         return this.containerImage;
     }
     /**
      * The time that this instance upgrade history entry is created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The framework of this notebook instance.
      * 
-     */
+    */
     public String getFramework() {
         return this.framework;
     }
     /**
      * The snapshot of the boot disk of this notebook instance before upgrade.
      * 
-     */
+    */
     public String getSnapshot() {
         return this.snapshot;
     }
     /**
      * The state of this instance upgrade history entry.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
      * 
-     */
+    */
     public String getTargetImage() {
         return this.targetImage;
     }
     /**
      * Target VM Version, like m63.
      * 
-     */
+    */
     public String getTargetVersion() {
         return this.targetVersion;
     }
     /**
      * The version of the notebook instance before this upgrade.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
     /**
      * The VM image before this instance upgrade.
      * 
-     */
+    */
     public String getVmImage() {
         return this.vmImage;
     }
@@ -242,7 +242,6 @@ public final class UpgradeHistoryEntryResponse {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }
-
         public UpgradeHistoryEntryResponse build() {
             return new UpgradeHistoryEntryResponse(action, containerImage, createTime, framework, snapshot, state, targetImage, targetVersion, version, vmImage);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class UserSecretStoreResponse {
     /**
      * The ID of the user's Key vault.
      * 
-     */
+    */
     public Optional<String> getKeyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
     /**
      * The URI of the user's Key vault.
      * 
-     */
+    */
     public Optional<String> getKeyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
@@ -76,7 +76,6 @@ public final class UserSecretStoreResponse {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
-
         public UserSecretStoreResponse build() {
             return new UserSecretStoreResponse(keyVaultId, keyVaultUri);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse {
     /**
      * Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.
      * 
-     */
+    */
     public String getSpendBasis() {
         return this.spendBasis;
     }
     /**
      * Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.
      * 
-     */
+    */
     public Double getThresholdPercent() {
         return this.thresholdPercent;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse {
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse build() {
             return new GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse(spendBasis, thresholdPercent);
         }

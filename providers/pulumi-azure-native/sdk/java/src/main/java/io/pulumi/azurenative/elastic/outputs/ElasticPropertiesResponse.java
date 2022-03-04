@@ -5,7 +5,7 @@ package io.pulumi.azurenative.elastic.outputs;
 
 import io.pulumi.azurenative.elastic.outputs.ElasticCloudDeploymentResponse;
 import io.pulumi.azurenative.elastic.outputs.ElasticCloudUserResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class ElasticPropertiesResponse {
     /**
      * Details of the elastic cloud deployment.
      * 
-     */
+    */
     public Optional<ElasticCloudDeploymentResponse> getElasticCloudDeployment() {
         return Optional.ofNullable(this.elasticCloudDeployment);
     }
     /**
      * Details of the user's elastic account.
      * 
-     */
+    */
     public Optional<ElasticCloudUserResponse> getElasticCloudUser() {
         return Optional.ofNullable(this.elasticCloudUser);
     }
@@ -77,7 +77,6 @@ public final class ElasticPropertiesResponse {
             this.elasticCloudUser = elasticCloudUser;
             return this;
         }
-
         public ElasticPropertiesResponse build() {
             return new ElasticPropertiesResponse(elasticCloudDeployment, elasticCloudUser);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class ServiceCosmosDbConfigurationInfoResponse {
     /**
      * The URI of the customer-managed key for the backing database.
      * 
-     */
+    */
     public Optional<String> getKeyVaultKeyUri() {
         return Optional.ofNullable(this.keyVaultKeyUri);
     }
     /**
      * The provisioned throughput for the backing database.
      * 
-     */
+    */
     public Optional<Integer> getOfferThroughput() {
         return Optional.ofNullable(this.offerThroughput);
     }
@@ -77,7 +77,6 @@ public final class ServiceCosmosDbConfigurationInfoResponse {
             this.offerThroughput = offerThroughput;
             return this;
         }
-
         public ServiceCosmosDbConfigurationInfoResponse build() {
             return new ServiceCosmosDbConfigurationInfoResponse(keyVaultKeyUri, offerThroughput);
         }

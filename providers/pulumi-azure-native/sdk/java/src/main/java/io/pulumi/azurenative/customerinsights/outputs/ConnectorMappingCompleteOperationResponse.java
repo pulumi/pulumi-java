@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ConnectorMappingCompleteOperationResponse {
     /**
      * The type of completion operation.
      * 
-     */
+    */
     public Optional<String> getCompletionOperationType() {
         return Optional.ofNullable(this.completionOperationType);
     }
     /**
      * The destination folder where files will be moved to once the import is done.
      * 
-     */
+    */
     public Optional<String> getDestinationFolder() {
         return Optional.ofNullable(this.destinationFolder);
     }
@@ -76,7 +76,6 @@ public final class ConnectorMappingCompleteOperationResponse {
             this.destinationFolder = destinationFolder;
             return this;
         }
-
         public ConnectorMappingCompleteOperationResponse build() {
             return new ConnectorMappingCompleteOperationResponse(completionOperationType, destinationFolder);
         }

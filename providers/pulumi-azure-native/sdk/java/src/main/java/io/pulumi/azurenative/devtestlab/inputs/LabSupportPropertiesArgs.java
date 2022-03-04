@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Either<String,EnableStatus>> enabled;
+      private final @Nullable Input<Either<String,EnableStatus>> enabled;
 
     public Input<Either<String,EnableStatus>> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -36,7 +36,7 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="markdown")
-    private final @Nullable Input<String> markdown;
+      private final @Nullable Input<String> markdown;
 
     public Input<String> getMarkdown() {
         return this.markdown == null ? Input.empty() : this.markdown;
@@ -95,7 +95,6 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
             this.markdown = Input.ofNullable(markdown);
             return this;
         }
-
         public LabSupportPropertiesArgs build() {
             return new LabSupportPropertiesArgs(enabled, markdown);
         }

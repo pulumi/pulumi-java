@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="db")
-    private final @Nullable Input<String> db;
+      private final @Nullable Input<String> db;
 
     public Input<String> getDb() {
         return this.db == null ? Input.empty() : this.db;
@@ -34,7 +34,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -93,7 +93,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public RoleArgs build() {
             return new RoleArgs(db, role);
         }

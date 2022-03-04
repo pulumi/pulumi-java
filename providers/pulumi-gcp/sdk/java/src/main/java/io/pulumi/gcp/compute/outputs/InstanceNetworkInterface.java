@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceNetworkInterfaceAccessConfig;
 import io.pulumi.gcp.compute.outputs.InstanceNetworkInterfaceAliasIpRange;
 import io.pulumi.gcp.compute.outputs.InstanceNetworkInterfaceIpv6AccessConfig;
@@ -136,7 +136,7 @@ public final class InstanceNetworkInterface {
      * tunnel or because it is running on another cloud instance on that network).
      * This block can be repeated multiple times. Structure documented below.
      * 
-     */
+    */
     public List<InstanceNetworkInterfaceAccessConfig> getAccessConfigs() {
         return this.accessConfigs == null ? List.of() : this.accessConfigs;
     }
@@ -145,7 +145,7 @@ public final class InstanceNetworkInterface {
      * array of alias IP ranges for this network interface. Can only be specified for network
      * interfaces on subnet-mode networks. Structure documented below.
      * 
-     */
+    */
     public List<InstanceNetworkInterfaceAliasIpRange> getAliasIpRanges() {
         return this.aliasIpRanges == null ? List.of() : this.aliasIpRanges;
     }
@@ -154,7 +154,7 @@ public final class InstanceNetworkInterface {
      * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
      * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
      * 
-     */
+    */
     public List<InstanceNetworkInterfaceIpv6AccessConfig> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? List.of() : this.ipv6AccessConfigs;
     }
@@ -162,7 +162,7 @@ public final class InstanceNetworkInterface {
      * One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the Internet.
      * This field is always inherited from its subnetwork.
      * 
-     */
+    */
     public Optional<String> getIpv6AccessType() {
         return Optional.ofNullable(this.ipv6AccessType);
     }
@@ -170,7 +170,7 @@ public final class InstanceNetworkInterface {
      * A unique name for the resource, required by GCE.
      * Changing this forces a new resource to be created.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -179,7 +179,7 @@ public final class InstanceNetworkInterface {
      * Either `network` or `subnetwork` must be provided. If network isn't provided it will
      * be inferred from the subnetwork.
      * 
-     */
+    */
     public Optional<String> getNetwork() {
         return Optional.ofNullable(this.network);
     }
@@ -187,28 +187,28 @@ public final class InstanceNetworkInterface {
      * The private IP address to assign to the instance. If
      * empty, the address will be automatically assigned.
      * 
-     */
+    */
     public Optional<String> getNetworkIp() {
         return Optional.ofNullable(this.networkIp);
     }
     /**
      * The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
      * 
-     */
+    */
     public Optional<String> getNicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
      * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
      * 
-     */
+    */
     public Optional<Integer> getQueueCount() {
         return Optional.ofNullable(this.queueCount);
     }
     /**
      * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
      * 
-     */
+    */
     public Optional<String> getStackType() {
         return Optional.ofNullable(this.stackType);
     }
@@ -221,7 +221,7 @@ public final class InstanceNetworkInterface {
      * network is in auto subnet mode, specifying the subnetwork is optional. If the network is
      * in custom subnet mode, specifying the subnetwork is required.
      * 
-     */
+    */
     public Optional<String> getSubnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -231,7 +231,7 @@ public final class InstanceNetworkInterface {
      * defined in the subnetwork self_link. If the `subnetwork` is a name and this
      * field is not provided, the provider project is used.
      * 
-     */
+    */
     public Optional<String> getSubnetworkProject() {
         return Optional.ofNullable(this.subnetworkProject);
     }
@@ -337,7 +337,6 @@ public final class InstanceNetworkInterface {
             this.subnetworkProject = subnetworkProject;
             return this;
         }
-
         public InstanceNetworkInterface build() {
             return new InstanceNetworkInterface(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
         }

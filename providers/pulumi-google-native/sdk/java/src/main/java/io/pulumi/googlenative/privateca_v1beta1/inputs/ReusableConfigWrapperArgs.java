@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigValuesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReusableConfigWrapperArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reusableConfig", required=true)
-    private final Input<String> reusableConfig;
+      private final Input<String> reusableConfig;
 
     public Input<String> getReusableConfig() {
         return this.reusableConfig;
@@ -34,7 +34,7 @@ public final class ReusableConfigWrapperArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reusableConfigValues", required=true)
-    private final Input<ReusableConfigValuesArgs> reusableConfigValues;
+      private final Input<ReusableConfigValuesArgs> reusableConfigValues;
 
     public Input<ReusableConfigValuesArgs> getReusableConfigValues() {
         return this.reusableConfigValues;
@@ -93,7 +93,6 @@ public final class ReusableConfigWrapperArgs extends io.pulumi.resources.Resourc
             this.reusableConfigValues = Input.of(Objects.requireNonNull(reusableConfigValues));
             return this;
         }
-
         public ReusableConfigWrapperArgs build() {
             return new ReusableConfigWrapperArgs(reusableConfig, reusableConfigValues);
         }

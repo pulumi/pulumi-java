@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2SecretKeySelectorResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse {
     /**
      * Selects a secret and a specific version from Cloud Secret Manager.
      * 
-     */
+    */
     public GoogleCloudRunOpV2SecretKeySelectorResponse getSecretKeyRef() {
         return this.secretKeyRef;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }
-
         public GoogleCloudRunOpV2EnvVarSourceResponse build() {
             return new GoogleCloudRunOpV2EnvVarSourceResponse(secretKeyRef);
         }

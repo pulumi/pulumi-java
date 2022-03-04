@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="intervalDurationDays", required=true)
-    private final Input<Integer> intervalDurationDays;
+      private final Input<Integer> intervalDurationDays;
 
     public Input<Integer> getIntervalDurationDays() {
         return this.intervalDurationDays;
@@ -33,7 +33,7 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scheduleTime")
-    private final @Nullable Input<String> scheduleTime;
+      private final @Nullable Input<String> scheduleTime;
 
     public Input<String> getScheduleTime() {
         return this.scheduleTime == null ? Input.empty() : this.scheduleTime;
@@ -92,7 +92,6 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
             this.scheduleTime = Input.ofNullable(scheduleTime);
             return this;
         }
-
         public SecurityScanConfigScheduleGetArgs build() {
             return new SecurityScanConfigScheduleGetArgs(intervalDurationDays, scheduleTime);
         }

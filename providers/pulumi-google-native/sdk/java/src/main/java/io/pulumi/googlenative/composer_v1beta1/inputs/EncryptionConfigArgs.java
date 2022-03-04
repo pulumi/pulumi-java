@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -66,7 +66,6 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
-
         public EncryptionConfigArgs build() {
             return new EncryptionConfigArgs(kmsKeyName);
         }

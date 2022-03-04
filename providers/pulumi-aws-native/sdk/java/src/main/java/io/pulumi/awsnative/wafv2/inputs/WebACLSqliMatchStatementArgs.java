@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,14 +20,14 @@ public final class WebACLSqliMatchStatementArgs extends io.pulumi.resources.Reso
     public static final WebACLSqliMatchStatementArgs Empty = new WebACLSqliMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-    private final Input<WebACLFieldToMatchArgs> fieldToMatch;
+      private final Input<WebACLFieldToMatchArgs> fieldToMatch;
 
     public Input<WebACLFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<WebACLTextTransformationArgs>> textTransformations;
+      private final Input<List<WebACLTextTransformationArgs>> textTransformations;
 
     public Input<List<WebACLTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
@@ -86,7 +86,6 @@ public final class WebACLSqliMatchStatementArgs extends io.pulumi.resources.Reso
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-
         public WebACLSqliMatchStatementArgs build() {
             return new WebACLSqliMatchStatementArgs(fieldToMatch, textTransformations);
         }

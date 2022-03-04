@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class GalleryArtifactVersionSourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class GalleryArtifactVersionSourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable String uri;
+      private final @Nullable String uri;
 
     public Optional<String> getUri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
@@ -83,7 +83,6 @@ public final class GalleryArtifactVersionSourceResponse extends io.pulumi.resour
             this.uri = uri;
             return this;
         }
-
         public GalleryArtifactVersionSourceResponse build() {
             return new GalleryArtifactVersionSourceResponse(id, uri);
         }

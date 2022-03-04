@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="primaryKey")
-    private final @Nullable Input<String> primaryKey;
+      private final @Nullable Input<String> primaryKey;
 
     public Input<String> getPrimaryKey() {
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
@@ -34,7 +34,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="workspaceId")
-    private final @Nullable Input<String> workspaceId;
+      private final @Nullable Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId == null ? Input.empty() : this.workspaceId;
@@ -93,7 +93,6 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
             this.workspaceId = Input.ofNullable(workspaceId);
             return this;
         }
-
         public LogAnalyticsWorkspaceConfigArgs build() {
             return new LogAnalyticsWorkspaceConfigArgs(primaryKey, workspaceId);
         }

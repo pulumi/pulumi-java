@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     /**
      * If not empty, the ID of the namespace to which the entities belong.
      * 
-     */
+    */
     public Optional<String> getNamespaceId() {
         return Optional.ofNullable(this.namespaceId);
     }
     /**
      * The Google Cloud Platform project ID of the project containing the table.
      * 
-     */
+    */
     public String getProjectId() {
         return this.projectId;
     }
@@ -76,7 +76,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId(namespaceId, projectId);
         }

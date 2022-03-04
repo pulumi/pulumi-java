@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class GalleryImageReferenceResponse {
     /**
      * The offer of the gallery image.
      * 
-     */
+    */
     public Optional<String> getOffer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * The OS type of the gallery image.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The publisher of the gallery image.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * The SKU of the gallery image.
      * 
-     */
+    */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The version of the gallery image.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -139,7 +139,6 @@ public final class GalleryImageReferenceResponse {
             this.version = version;
             return this;
         }
-
         public GalleryImageReferenceResponse build() {
             return new GalleryImageReferenceResponse(offer, osType, publisher, sku, version);
         }

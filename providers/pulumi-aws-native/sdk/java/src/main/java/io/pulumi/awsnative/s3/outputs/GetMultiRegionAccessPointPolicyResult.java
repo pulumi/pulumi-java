@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.PolicyStatusProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,14 +34,14 @@ public final class GetMultiRegionAccessPointPolicyResult {
     /**
      * Policy document to apply to a Multi Region Access Point
      * 
-     */
+    */
     public Optional<Object> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * The Policy Status associated with this Multi Region Access Point
      * 
-     */
+    */
     public Optional<PolicyStatusProperties> getPolicyStatus() {
         return Optional.ofNullable(this.policyStatus);
     }
@@ -77,7 +77,6 @@ public final class GetMultiRegionAccessPointPolicyResult {
             this.policyStatus = policyStatus;
             return this;
         }
-
         public GetMultiRegionAccessPointPolicyResult build() {
             return new GetMultiRegionAccessPointPolicyResult(policy, policyStatus);
         }

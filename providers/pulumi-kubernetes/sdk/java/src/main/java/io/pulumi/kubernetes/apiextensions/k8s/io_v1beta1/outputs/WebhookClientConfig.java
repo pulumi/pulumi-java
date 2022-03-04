@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.ServiceReference;
 import java.lang.String;
 import java.util.Objects;
@@ -53,7 +53,7 @@ public final class WebhookClientConfig {
     /**
      * caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.
      * 
-     */
+    */
     public Optional<String> getCaBundle() {
         return Optional.ofNullable(this.caBundle);
     }
@@ -62,7 +62,7 @@ public final class WebhookClientConfig {
      * 
      * If the webhook is running within the cluster, then you should use `service`.
      * 
-     */
+    */
     public Optional<ServiceReference> getService() {
         return Optional.ofNullable(this.service);
     }
@@ -79,7 +79,7 @@ public final class WebhookClientConfig {
      * 
      * Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fragments ("#...") and query parameters ("?...") are not allowed, either.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
@@ -122,7 +122,6 @@ public final class WebhookClientConfig {
             this.url = url;
             return this;
         }
-
         public WebhookClientConfig build() {
             return new WebhookClientConfig(caBundle, service, url);
         }

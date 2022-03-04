@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="accountSID", required=true)
-    private final String accountSID;
+      private final String accountSID;
 
     public String getAccountSID() {
         return this.accountSID;
@@ -35,7 +35,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="authToken")
-    private final @Nullable String authToken;
+      private final @Nullable String authToken;
 
     public Optional<String> getAuthToken() {
         return this.authToken == null ? Optional.empty() : Optional.ofNullable(this.authToken);
@@ -46,7 +46,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Boolean isEnabled;
+      private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -57,7 +57,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="isValidated")
-    private final @Nullable Boolean isValidated;
+      private final @Nullable Boolean isValidated;
 
     public Optional<Boolean> getIsValidated() {
         return this.isValidated == null ? Optional.empty() : Optional.ofNullable(this.isValidated);
@@ -68,7 +68,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="phone", required=true)
-    private final String phone;
+      private final String phone;
 
     public String getPhone() {
         return this.phone;
@@ -147,7 +147,6 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public SmsChannelPropertiesResponse build() {
             return new SmsChannelPropertiesResponse(accountSID, authToken, isEnabled, isValidated, phone);
         }

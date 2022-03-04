@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ConditionResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.LogConfigResponse;
 import java.lang.String;
@@ -69,49 +69,49 @@ public final class RuleResponse {
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<ConditionResponse> getConditions() {
         return this.conditions;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<String> getIns() {
         return this.ins;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<LogConfigResponse> getLogConfigs() {
         return this.logConfigs;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<String> getNotIns() {
         return this.notIns;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<String> getPermissions() {
         return this.permissions;
     }
@@ -182,7 +182,6 @@ public final class RuleResponse {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public RuleResponse build() {
             return new RuleResponse(action, conditions, description, ins, logConfigs, notIns, permissions);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class IntegrationServiceEnvironmentSkuResponse {
     /**
      * The sku capacity.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The sku name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -77,7 +77,6 @@ public final class IntegrationServiceEnvironmentSkuResponse {
             this.name = name;
             return this;
         }
-
         public IntegrationServiceEnvironmentSkuResponse build() {
             return new IntegrationServiceEnvironmentSkuResponse(capacity, name);
         }

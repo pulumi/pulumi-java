@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.TargetPoolSessionAffinity;
 import java.lang.Double;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPool")
-    private final @Nullable Input<String> backupPool;
+      private final @Nullable Input<String> backupPool;
 
     public Input<String> getBackupPool() {
         return this.backupPool == null ? Input.empty() : this.backupPool;
@@ -33,7 +33,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failoverRatio")
-    private final @Nullable Input<Double> failoverRatio;
+      private final @Nullable Input<Double> failoverRatio;
 
     public Input<Double> getFailoverRatio() {
         return this.failoverRatio == null ? Input.empty() : this.failoverRatio;
@@ -55,7 +55,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthChecks")
-    private final @Nullable Input<List<String>> healthChecks;
+      private final @Nullable Input<List<String>> healthChecks;
 
     public Input<List<String>> getHealthChecks() {
         return this.healthChecks == null ? Input.empty() : this.healthChecks;
@@ -66,7 +66,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<String>> instances;
+      private final @Nullable Input<List<String>> instances;
 
     public Input<List<String>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -77,28 +77,28 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -109,7 +109,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinity")
-    private final @Nullable Input<TargetPoolSessionAffinity> sessionAffinity;
+      private final @Nullable Input<TargetPoolSessionAffinity> sessionAffinity;
 
     public Input<TargetPoolSessionAffinity> getSessionAffinity() {
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
@@ -288,7 +288,6 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.sessionAffinity = Input.ofNullable(sessionAffinity);
             return this;
         }
-
         public TargetPoolArgs build() {
             return new TargetPoolArgs(backupPool, description, failoverRatio, healthChecks, instances, name, project, region, requestId, sessionAffinity);
         }

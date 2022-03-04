@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datafactory;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datafactory.inputs.GetManagedPrivateEndpointArgs;
 import io.pulumi.azurenative.datafactory.outputs.GetManagedPrivateEndpointResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedPrivateEndpoint {
-/**
- * Managed private endpoint resource type.
+    private GetManagedPrivateEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedPrivateEndpointArgs.Builder a);
+    }
+    private static GetManagedPrivateEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedPrivateEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Managed private endpoint resource type.
  * API Version: 2018-06-01.
  * 
- *
- * Managed private endpoint resource type.
+     *
+     * Managed private endpoint resource type.
  * 
- */
+     */
+    public static CompletableFuture<GetManagedPrivateEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Managed private endpoint resource type.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * Managed private endpoint resource type.
+     * 
+     */
     public static CompletableFuture<GetManagedPrivateEndpointResult> invokeAsync(GetManagedPrivateEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getManagedPrivateEndpoint", TypeShape.of(GetManagedPrivateEndpointResult.class), args == null ? GetManagedPrivateEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

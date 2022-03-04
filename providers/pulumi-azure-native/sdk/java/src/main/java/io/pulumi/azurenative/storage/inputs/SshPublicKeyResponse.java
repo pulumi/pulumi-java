@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -30,7 +30,7 @@ public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -79,7 +79,6 @@ public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public SshPublicKeyResponse build() {
             return new SshPublicKeyResponse(description, key);
         }

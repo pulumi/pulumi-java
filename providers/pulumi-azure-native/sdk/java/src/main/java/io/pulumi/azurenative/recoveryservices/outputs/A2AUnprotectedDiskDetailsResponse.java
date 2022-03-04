@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class A2AUnprotectedDiskDetailsResponse {
     /**
      * The source lun Id for the data disk.
      * 
-     */
+    */
     public Optional<Integer> getDiskLunId() {
         return Optional.ofNullable(this.diskLunId);
     }
@@ -54,7 +54,6 @@ public final class A2AUnprotectedDiskDetailsResponse {
             this.diskLunId = diskLunId;
             return this;
         }
-
         public A2AUnprotectedDiskDetailsResponse build() {
             return new A2AUnprotectedDiskDetailsResponse(diskLunId);
         }

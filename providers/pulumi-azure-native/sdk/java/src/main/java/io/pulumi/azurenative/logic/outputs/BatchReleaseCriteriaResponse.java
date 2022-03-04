@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.WorkflowTriggerRecurrenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,21 +41,21 @@ public final class BatchReleaseCriteriaResponse {
     /**
      * The batch size in bytes.
      * 
-     */
+    */
     public Optional<Integer> getBatchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
      * The message count.
      * 
-     */
+    */
     public Optional<Integer> getMessageCount() {
         return Optional.ofNullable(this.messageCount);
     }
     /**
      * The recurrence.
      * 
-     */
+    */
     public Optional<WorkflowTriggerRecurrenceResponse> getRecurrence() {
         return Optional.ofNullable(this.recurrence);
     }
@@ -98,7 +98,6 @@ public final class BatchReleaseCriteriaResponse {
             this.recurrence = recurrence;
             return this;
         }
-
         public BatchReleaseCriteriaResponse build() {
             return new BatchReleaseCriteriaResponse(batchSize, messageCount, recurrence);
         }

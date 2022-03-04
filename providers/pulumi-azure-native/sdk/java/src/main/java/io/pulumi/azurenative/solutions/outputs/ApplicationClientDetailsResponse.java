@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class ApplicationClientDetailsResponse {
     /**
      * The client application Id.
      * 
-     */
+    */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * The client Oid.
      * 
-     */
+    */
     public Optional<String> getOid() {
         return Optional.ofNullable(this.oid);
     }
     /**
      * The client Puid
      * 
-     */
+    */
     public Optional<String> getPuid() {
         return Optional.ofNullable(this.puid);
     }
@@ -97,7 +97,6 @@ public final class ApplicationClientDetailsResponse {
             this.puid = puid;
             return this;
         }
-
         public ApplicationClientDetailsResponse build() {
             return new ApplicationClientDetailsResponse(applicationId, oid, puid);
         }

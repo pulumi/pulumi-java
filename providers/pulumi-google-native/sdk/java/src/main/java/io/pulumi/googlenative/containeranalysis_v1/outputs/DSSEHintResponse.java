@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DSSEHintResponse {
     /**
      * The human readable name of this attestation authority, for example "cloudbuild-prod".
      * 
-     */
+    */
     public String getHumanReadableName() {
         return this.humanReadableName;
     }
@@ -52,7 +52,6 @@ public final class DSSEHintResponse {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
-
         public DSSEHintResponse build() {
             return new DSSEHintResponse(humanReadableName);
         }

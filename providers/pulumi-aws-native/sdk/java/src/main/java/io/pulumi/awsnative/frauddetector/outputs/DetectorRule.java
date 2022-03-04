@@ -6,7 +6,7 @@ package io.pulumi.awsnative.frauddetector.outputs;
 import io.pulumi.awsnative.frauddetector.enums.DetectorRuleLanguage;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorOutcome;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -75,14 +75,14 @@ public final class DetectorRule {
     /**
      * The time when the event type was created.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -98,7 +98,7 @@ public final class DetectorRule {
     /**
      * The time when the event type was last updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -114,7 +114,7 @@ public final class DetectorRule {
     /**
      * Tags associated with this event type.
      * 
-     */
+    */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -213,7 +213,6 @@ public final class DetectorRule {
             this.tags = tags;
             return this;
         }
-
         public DetectorRule build() {
             return new DetectorRule(arn, createdTime, description, detectorId, expression, language, lastUpdatedTime, outcomes, ruleId, ruleVersion, tags);
         }

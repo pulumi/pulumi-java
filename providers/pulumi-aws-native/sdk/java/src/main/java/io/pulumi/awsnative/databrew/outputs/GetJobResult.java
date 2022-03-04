@@ -13,7 +13,7 @@ import io.pulumi.awsnative.databrew.outputs.JobProfileConfiguration;
 import io.pulumi.awsnative.databrew.outputs.JobRecipe;
 import io.pulumi.awsnative.databrew.outputs.JobSample;
 import io.pulumi.awsnative.databrew.outputs.JobValidationConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -140,56 +140,56 @@ public final class GetJobResult {
     /**
      * Dataset name
      * 
-     */
+    */
     public Optional<String> getDatasetName() {
         return Optional.ofNullable(this.datasetName);
     }
     /**
      * Encryption Key Arn
      * 
-     */
+    */
     public Optional<String> getEncryptionKeyArn() {
         return Optional.ofNullable(this.encryptionKeyArn);
     }
     /**
      * Encryption mode
      * 
-     */
+    */
     public Optional<JobEncryptionMode> getEncryptionMode() {
         return Optional.ofNullable(this.encryptionMode);
     }
     /**
      * Job Sample
      * 
-     */
+    */
     public Optional<JobSample> getJobSample() {
         return Optional.ofNullable(this.jobSample);
     }
     /**
      * Log subscription
      * 
-     */
+    */
     public Optional<JobLogSubscription> getLogSubscription() {
         return Optional.ofNullable(this.logSubscription);
     }
     /**
      * Max capacity
      * 
-     */
+    */
     public Optional<Integer> getMaxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
     /**
      * Max retries
      * 
-     */
+    */
     public Optional<Integer> getMaxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }
     /**
      * Output location
      * 
-     */
+    */
     public Optional<JobOutputLocation> getOutputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
@@ -199,14 +199,14 @@ public final class GetJobResult {
     /**
      * Profile Job configuration
      * 
-     */
+    */
     public Optional<JobProfileConfiguration> getProfileConfiguration() {
         return Optional.ofNullable(this.profileConfiguration);
     }
     /**
      * Project name
      * 
-     */
+    */
     public Optional<String> getProjectName() {
         return Optional.ofNullable(this.projectName);
     }
@@ -216,21 +216,21 @@ public final class GetJobResult {
     /**
      * Role arn
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * Timeout
      * 
-     */
+    */
     public Optional<Integer> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * Data quality rules configuration
      * 
-     */
+    */
     public List<JobValidationConfiguration> getValidationConfigurations() {
         return this.validationConfigurations == null ? List.of() : this.validationConfigurations;
     }
@@ -371,7 +371,6 @@ public final class GetJobResult {
             this.validationConfigurations = validationConfigurations;
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(dataCatalogOutputs, databaseOutputs, datasetName, encryptionKeyArn, encryptionMode, jobSample, logSubscription, maxCapacity, maxRetries, outputLocation, outputs, profileConfiguration, projectName, recipe, roleArn, timeout, validationConfigurations);
         }

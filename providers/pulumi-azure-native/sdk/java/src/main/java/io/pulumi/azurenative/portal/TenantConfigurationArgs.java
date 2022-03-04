@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configurationName")
-    private final @Nullable Input<String> configurationName;
+      private final @Nullable Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName == null ? Input.empty() : this.configurationName;
@@ -31,7 +31,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enforcePrivateMarkdownStorage")
-    private final @Nullable Input<Boolean> enforcePrivateMarkdownStorage;
+      private final @Nullable Input<Boolean> enforcePrivateMarkdownStorage;
 
     public Input<Boolean> getEnforcePrivateMarkdownStorage() {
         return this.enforcePrivateMarkdownStorage == null ? Input.empty() : this.enforcePrivateMarkdownStorage;
@@ -90,7 +90,6 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
             this.enforcePrivateMarkdownStorage = Input.ofNullable(enforcePrivateMarkdownStorage);
             return this;
         }
-
         public TenantConfigurationArgs build() {
             return new TenantConfigurationArgs(configurationName, enforcePrivateMarkdownStorage);
         }

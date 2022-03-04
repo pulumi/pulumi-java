@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
      * Headers to remove from the response prior to sending it back to the client.
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
@@ -54,7 +54,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove(headerName);
         }

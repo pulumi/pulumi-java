@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GetSolutionConfigResult {
     /**
      * Gets or sets the publisher sas uri for the solution.
      * 
-     */
+    */
     public Optional<String> getPublisherSasUri() {
         return Optional.ofNullable(this.publisherSasUri);
     }
@@ -54,7 +54,6 @@ public final class GetSolutionConfigResult {
             this.publisherSasUri = publisherSasUri;
             return this;
         }
-
         public GetSolutionConfigResult build() {
             return new GetSolutionConfigResult(publisherSasUri);
         }

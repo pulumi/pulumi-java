@@ -6,21 +6,41 @@ package io.pulumi.azurenative.healthcareapis;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.healthcareapis.inputs.GetWorkspaceArgs;
 import io.pulumi.azurenative.healthcareapis.outputs.GetWorkspaceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkspace {
-/**
- * Workspace resource.
+    private GetWorkspace() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkspaceArgs.Builder a);
+    }
+    private static GetWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkspaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Workspace resource.
  * API Version: 2021-06-01-preview.
  * 
- *
- * Workspace resource.
+     *
+     * Workspace resource.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Workspace resource.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * Workspace resource.
+     * 
+     */
     public static CompletableFuture<GetWorkspaceResult> invokeAsync(GetWorkspaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args == null ? GetWorkspaceArgs.Empty : args, Utilities.withVersion(options));
     }

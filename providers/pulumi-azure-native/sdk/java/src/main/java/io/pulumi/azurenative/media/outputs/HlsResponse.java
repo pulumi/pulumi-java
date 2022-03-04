@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class HlsResponse {
     /**
      * The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.
      * 
-     */
+    */
     public Optional<Integer> getFragmentsPerTsSegment() {
         return Optional.ofNullable(this.fragmentsPerTsSegment);
     }
@@ -54,7 +54,6 @@ public final class HlsResponse {
             this.fragmentsPerTsSegment = fragmentsPerTsSegment;
             return this;
         }
-
         public HlsResponse build() {
             return new HlsResponse(fragmentsPerTsSegment);
         }

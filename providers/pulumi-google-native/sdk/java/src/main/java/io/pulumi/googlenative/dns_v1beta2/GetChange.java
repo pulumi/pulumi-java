@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetChange {
-/**
- * Fetches the representation of an existing Change.
+    private GetChange() {}
+    public interface BuilderApplicator {
+        public void apply(GetChangeArgs.Builder a);
+    }
+    private static GetChangeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetChangeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Fetches the representation of an existing Change.
  * 
- */
+     */
+    public static CompletableFuture<GetChangeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Fetches the representation of an existing Change.
+     * 
+     */
     public static CompletableFuture<GetChangeResult> invokeAsync(GetChangeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getChange", TypeShape.of(GetChangeResult.class), args == null ? GetChangeArgs.Empty : args, Utilities.withVersion(options));
     }

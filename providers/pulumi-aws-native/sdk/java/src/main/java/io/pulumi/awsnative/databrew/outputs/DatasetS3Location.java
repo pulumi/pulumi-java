@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class DatasetS3Location {
             this.key = key;
             return this;
         }
-
         public DatasetS3Location build() {
             return new DatasetS3Location(bucket, key);
         }

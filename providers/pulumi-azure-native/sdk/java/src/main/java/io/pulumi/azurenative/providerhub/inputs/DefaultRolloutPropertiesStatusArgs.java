@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.enums.TrafficRegionCategory;
 import io.pulumi.azurenative.providerhub.inputs.ExtendedErrorInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,35 +21,35 @@ public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resource
     public static final DefaultRolloutPropertiesStatusArgs Empty = new DefaultRolloutPropertiesStatusArgs();
 
     @InputImport(name="completedRegions")
-    private final @Nullable Input<List<String>> completedRegions;
+      private final @Nullable Input<List<String>> completedRegions;
 
     public Input<List<String>> getCompletedRegions() {
         return this.completedRegions == null ? Input.empty() : this.completedRegions;
     }
 
     @InputImport(name="failedOrSkippedRegions")
-    private final @Nullable Input<Map<String,ExtendedErrorInfoArgs>> failedOrSkippedRegions;
+      private final @Nullable Input<Map<String,ExtendedErrorInfoArgs>> failedOrSkippedRegions;
 
     public Input<Map<String,ExtendedErrorInfoArgs>> getFailedOrSkippedRegions() {
         return this.failedOrSkippedRegions == null ? Input.empty() : this.failedOrSkippedRegions;
     }
 
     @InputImport(name="nextTrafficRegion")
-    private final @Nullable Input<Either<String,TrafficRegionCategory>> nextTrafficRegion;
+      private final @Nullable Input<Either<String,TrafficRegionCategory>> nextTrafficRegion;
 
     public Input<Either<String,TrafficRegionCategory>> getNextTrafficRegion() {
         return this.nextTrafficRegion == null ? Input.empty() : this.nextTrafficRegion;
     }
 
     @InputImport(name="nextTrafficRegionScheduledTime")
-    private final @Nullable Input<String> nextTrafficRegionScheduledTime;
+      private final @Nullable Input<String> nextTrafficRegionScheduledTime;
 
     public Input<String> getNextTrafficRegionScheduledTime() {
         return this.nextTrafficRegionScheduledTime == null ? Input.empty() : this.nextTrafficRegionScheduledTime;
     }
 
     @InputImport(name="subscriptionReregistrationResult")
-    private final @Nullable Input<Either<String,SubscriptionReregistrationResult>> subscriptionReregistrationResult;
+      private final @Nullable Input<Either<String,SubscriptionReregistrationResult>> subscriptionReregistrationResult;
 
     public Input<Either<String,SubscriptionReregistrationResult>> getSubscriptionReregistrationResult() {
         return this.subscriptionReregistrationResult == null ? Input.empty() : this.subscriptionReregistrationResult;
@@ -153,7 +153,6 @@ public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resource
             this.subscriptionReregistrationResult = Input.ofNullable(subscriptionReregistrationResult);
             return this;
         }
-
         public DefaultRolloutPropertiesStatusArgs build() {
             return new DefaultRolloutPropertiesStatusArgs(completedRegions, failedOrSkippedRegions, nextTrafficRegion, nextTrafficRegionScheduledTime, subscriptionReregistrationResult);
         }

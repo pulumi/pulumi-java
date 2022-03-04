@@ -6,21 +6,41 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.security.inputs.GetAssessmentArgs;
 import io.pulumi.azurenative.security.outputs.GetAssessmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssessment {
-/**
- * Security assessment on a resource
+    private GetAssessment() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssessmentArgs.Builder a);
+    }
+    private static GetAssessmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssessmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Security assessment on a resource
  * API Version: 2020-01-01.
  * 
- *
- * Security assessment on a resource
+     *
+     * Security assessment on a resource
  * 
- */
+     */
+    public static CompletableFuture<GetAssessmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Security assessment on a resource
+     * API Version: 2020-01-01.
+     * 
+     *
+         * Security assessment on a resource
+     * 
+     */
     public static CompletableFuture<GetAssessmentResult> invokeAsync(GetAssessmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getAssessment", TypeShape.of(GetAssessmentResult.class), args == null ? GetAssessmentArgs.Empty : args, Utilities.withVersion(options));
     }

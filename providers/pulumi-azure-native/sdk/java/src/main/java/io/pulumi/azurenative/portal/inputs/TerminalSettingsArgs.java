@@ -7,7 +7,7 @@ import io.pulumi.azurenative.portal.enums.FontSize;
 import io.pulumi.azurenative.portal.enums.FontStyle;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fontSize")
-    private final @Nullable Input<Either<String,FontSize>> fontSize;
+      private final @Nullable Input<Either<String,FontSize>> fontSize;
 
     public Input<Either<String,FontSize>> getFontSize() {
         return this.fontSize == null ? Input.empty() : this.fontSize;
@@ -37,7 +37,7 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fontStyle")
-    private final @Nullable Input<Either<String,FontStyle>> fontStyle;
+      private final @Nullable Input<Either<String,FontStyle>> fontStyle;
 
     public Input<Either<String,FontStyle>> getFontStyle() {
         return this.fontStyle == null ? Input.empty() : this.fontStyle;
@@ -96,7 +96,6 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.fontStyle = Input.ofNullable(fontStyle);
             return this;
         }
-
         public TerminalSettingsArgs build() {
             return new TerminalSettingsArgs(fontSize, fontStyle);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="artifacts", required=true)
-    private final List<SoftwareRecipeArtifactResponse> artifacts;
+      private final List<SoftwareRecipeArtifactResponse> artifacts;
 
     public List<SoftwareRecipeArtifactResponse> getArtifacts() {
         return this.artifacts;
@@ -35,7 +35,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="desiredState", required=true)
-    private final String desiredState;
+      private final String desiredState;
 
     public String getDesiredState() {
         return this.desiredState;
@@ -46,7 +46,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="installSteps", required=true)
-    private final List<SoftwareRecipeStepResponse> installSteps;
+      private final List<SoftwareRecipeStepResponse> installSteps;
 
     public List<SoftwareRecipeStepResponse> getInstallSteps() {
         return this.installSteps;
@@ -57,7 +57,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -68,7 +68,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="updateSteps", required=true)
-    private final List<SoftwareRecipeStepResponse> updateSteps;
+      private final List<SoftwareRecipeStepResponse> updateSteps;
 
     public List<SoftwareRecipeStepResponse> getUpdateSteps() {
         return this.updateSteps;
@@ -79,7 +79,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -168,7 +168,6 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SoftwareRecipeResponse build() {
             return new SoftwareRecipeResponse(artifacts, desiredState, installSteps, name, updateSteps, version);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53;
 import io.pulumi.awsnative.route53.inputs.HealthCheckConfigPropertiesArgs;
 import io.pulumi.awsnative.route53.inputs.HealthCheckTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckConfig", required=true)
-    private final Input<HealthCheckConfigPropertiesArgs> healthCheckConfig;
+      private final Input<HealthCheckConfigPropertiesArgs> healthCheckConfig;
 
     public Input<HealthCheckConfigPropertiesArgs> getHealthCheckConfig() {
         return this.healthCheckConfig;
@@ -32,7 +32,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckTags")
-    private final @Nullable Input<List<HealthCheckTagArgs>> healthCheckTags;
+      private final @Nullable Input<List<HealthCheckTagArgs>> healthCheckTags;
 
     public Input<List<HealthCheckTagArgs>> getHealthCheckTags() {
         return this.healthCheckTags == null ? Input.empty() : this.healthCheckTags;
@@ -91,7 +91,6 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.healthCheckTags = Input.ofNullable(healthCheckTags);
             return this;
         }
-
         public HealthCheckArgs build() {
             return new HealthCheckArgs(healthCheckConfig, healthCheckTags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -52,7 +52,7 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptions {
     /**
      * When true, the "CA" in Basic Constraints extension will be set to true.
      * 
-     */
+    */
     public Optional<Boolean> getIsCa() {
         return Optional.ofNullable(this.isCa);
     }
@@ -60,7 +60,7 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptions {
      * Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of
      * subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
      * 
-     */
+    */
     public Optional<Integer> getMaxIssuerPathLength() {
         return Optional.ofNullable(this.maxIssuerPathLength);
     }
@@ -68,7 +68,7 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptions {
      * When true, the "CA" in Basic Constraints extension will be set to false.
      * If both `is_ca` and `non_ca` are unset, the extension will be omitted from the CA certificate.
      * 
-     */
+    */
     public Optional<Boolean> getNonCa() {
         return Optional.ofNullable(this.nonCa);
     }
@@ -77,7 +77,7 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptions {
      * if both `max_issuer_path_length` and `zero_max_issuer_path_length` are unset,
      * the max path length will be omitted from the CA certificate.
      * 
-     */
+    */
     public Optional<Boolean> getZeroMaxIssuerPathLength() {
         return Optional.ofNullable(this.zeroMaxIssuerPathLength);
     }
@@ -127,7 +127,6 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptions {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesCaOptions build() {
             return new CaPoolIssuancePolicyBaselineValuesCaOptions(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);
         }

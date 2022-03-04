@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageImageResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse;
 import java.lang.String;
@@ -47,28 +47,28 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemRe
     /**
      * Optional. The body text of the card.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. The image to display.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
         return this.image;
     }
     /**
      * Additional info about the option item.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse getInfo() {
         return this.info;
     }
     /**
      * Title of the carousel item.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -118,7 +118,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemRe
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse(description, image, info, title);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.IdentityInfoResponse;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -99,77 +99,77 @@ public final class GetSystemTopicResult {
     /**
      * Fully qualified identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identity information for the resource.
      * 
-     */
+    */
     public Optional<IdentityInfoResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Location of the resource.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Metric resource id for the system topic.
      * 
-     */
+    */
     public String getMetricResourceId() {
         return this.metricResourceId;
     }
     /**
      * Name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the system topic.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Source for the system topic.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The system metadata relating to System Topic resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * TopicType for the system topic.
      * 
-     */
+    */
     public Optional<String> getTopicType() {
         return Optional.ofNullable(this.topicType);
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -268,7 +268,6 @@ public final class GetSystemTopicResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSystemTopicResult build() {
             return new GetSystemTopicResult(id, identity, location, metricResourceId, name, provisioningState, source, systemData, tags, topicType, type);
         }

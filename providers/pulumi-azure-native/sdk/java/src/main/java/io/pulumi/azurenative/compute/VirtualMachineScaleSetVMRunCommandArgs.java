@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.inputs.RunCommandInputParameterArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineRunCommandScriptSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="asyncExecution")
-    private final @Nullable Input<Boolean> asyncExecution;
+      private final @Nullable Input<Boolean> asyncExecution;
 
     public Input<Boolean> getAsyncExecution() {
         return this.asyncExecution == null ? Input.empty() : this.asyncExecution;
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="errorBlobUri")
-    private final @Nullable Input<String> errorBlobUri;
+      private final @Nullable Input<String> errorBlobUri;
 
     public Input<String> getErrorBlobUri() {
         return this.errorBlobUri == null ? Input.empty() : this.errorBlobUri;
@@ -47,7 +47,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -58,7 +58,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -69,7 +69,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="outputBlobUri")
-    private final @Nullable Input<String> outputBlobUri;
+      private final @Nullable Input<String> outputBlobUri;
 
     public Input<String> getOutputBlobUri() {
         return this.outputBlobUri == null ? Input.empty() : this.outputBlobUri;
@@ -80,7 +80,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<RunCommandInputParameterArgs>> parameters;
+      private final @Nullable Input<List<RunCommandInputParameterArgs>> parameters;
 
     public Input<List<RunCommandInputParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -91,7 +91,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="protectedParameters")
-    private final @Nullable Input<List<RunCommandInputParameterArgs>> protectedParameters;
+      private final @Nullable Input<List<RunCommandInputParameterArgs>> protectedParameters;
 
     public Input<List<RunCommandInputParameterArgs>> getProtectedParameters() {
         return this.protectedParameters == null ? Input.empty() : this.protectedParameters;
@@ -102,7 +102,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -113,7 +113,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="runAsPassword")
-    private final @Nullable Input<String> runAsPassword;
+      private final @Nullable Input<String> runAsPassword;
 
     public Input<String> getRunAsPassword() {
         return this.runAsPassword == null ? Input.empty() : this.runAsPassword;
@@ -124,7 +124,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="runAsUser")
-    private final @Nullable Input<String> runAsUser;
+      private final @Nullable Input<String> runAsUser;
 
     public Input<String> getRunAsUser() {
         return this.runAsUser == null ? Input.empty() : this.runAsUser;
@@ -135,7 +135,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="runCommandName")
-    private final @Nullable Input<String> runCommandName;
+      private final @Nullable Input<String> runCommandName;
 
     public Input<String> getRunCommandName() {
         return this.runCommandName == null ? Input.empty() : this.runCommandName;
@@ -146,7 +146,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<VirtualMachineRunCommandScriptSourceArgs> source;
+      private final @Nullable Input<VirtualMachineRunCommandScriptSourceArgs> source;
 
     public Input<VirtualMachineRunCommandScriptSourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -157,7 +157,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -168,7 +168,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Input<Integer> timeoutInSeconds;
+      private final @Nullable Input<Integer> timeoutInSeconds;
 
     public Input<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
@@ -179,7 +179,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="vmScaleSetName", required=true)
-    private final Input<String> vmScaleSetName;
+      private final Input<String> vmScaleSetName;
 
     public Input<String> getVmScaleSetName() {
         return this.vmScaleSetName;
@@ -433,7 +433,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
             this.vmScaleSetName = Input.of(Objects.requireNonNull(vmScaleSetName));
             return this;
         }
-
         public VirtualMachineScaleSetVMRunCommandArgs build() {
             return new VirtualMachineScaleSetVMRunCommandArgs(asyncExecution, errorBlobUri, instanceId, location, outputBlobUri, parameters, protectedParameters, resourceGroupName, runAsPassword, runAsUser, runCommandName, source, tags, timeoutInSeconds, vmScaleSetName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
     /**
      * A list of sequential transcript segments that comprise the conversation.
      * 
-     */
+    */
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> getTranscriptSegments() {
         return this.transcriptSegments;
     }
@@ -53,7 +53,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
             this.transcriptSegments = Objects.requireNonNull(transcriptSegments);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(transcriptSegments);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RecordSetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class PrivateDnsZoneConfigResponse {
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The resource id of the private dns zone.
      * 
-     */
+    */
     public Optional<String> getPrivateDnsZoneId() {
         return Optional.ofNullable(this.privateDnsZoneId);
     }
     /**
      * A collection of information regarding a recordSet, holding information to identify private resources.
      * 
-     */
+    */
     public List<RecordSetResponse> getRecordSets() {
         return this.recordSets;
     }
@@ -99,7 +99,6 @@ public final class PrivateDnsZoneConfigResponse {
             this.recordSets = Objects.requireNonNull(recordSets);
             return this;
         }
-
         public PrivateDnsZoneConfigResponse build() {
             return new PrivateDnsZoneConfigResponse(name, privateDnsZoneId, recordSets);
         }

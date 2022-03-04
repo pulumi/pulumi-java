@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accessType")
-    private final @Nullable Input<String> accessType;
+      private final @Nullable Input<String> accessType;
 
     public Input<String> getAccessType() {
         return this.accessType == null ? Input.empty() : this.accessType;
@@ -33,7 +33,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="proxyUri")
-    private final @Nullable Input<String> proxyUri;
+      private final @Nullable Input<String> proxyUri;
 
     public Input<String> getProxyUri() {
         return this.proxyUri == null ? Input.empty() : this.proxyUri;
@@ -45,7 +45,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="runtimeOwner")
-    private final @Nullable Input<String> runtimeOwner;
+      private final @Nullable Input<String> runtimeOwner;
 
     public Input<String> getRuntimeOwner() {
         return this.runtimeOwner == null ? Input.empty() : this.runtimeOwner;
@@ -119,7 +119,6 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
             this.runtimeOwner = Input.ofNullable(runtimeOwner);
             return this;
         }
-
         public RuntimeAccessConfigGetArgs build() {
             return new RuntimeAccessConfigGetArgs(accessType, proxyUri, runtimeOwner);
         }

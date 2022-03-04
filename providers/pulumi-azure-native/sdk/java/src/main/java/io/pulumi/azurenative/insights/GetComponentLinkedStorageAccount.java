@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetComponentLinkedStorageAccountArgs;
 import io.pulumi.azurenative.insights.outputs.GetComponentLinkedStorageAccountResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComponentLinkedStorageAccount {
-/**
- * An Application Insights component linked storage accounts
+    private GetComponentLinkedStorageAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetComponentLinkedStorageAccountArgs.Builder a);
+    }
+    private static GetComponentLinkedStorageAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetComponentLinkedStorageAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Application Insights component linked storage accounts
  * API Version: 2020-03-01-preview.
  * 
- *
- * An Application Insights component linked storage accounts
+     *
+     * An Application Insights component linked storage accounts
  * 
- */
+     */
+    public static CompletableFuture<GetComponentLinkedStorageAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Application Insights component linked storage accounts
+     * API Version: 2020-03-01-preview.
+     * 
+     *
+         * An Application Insights component linked storage accounts
+     * 
+     */
     public static CompletableFuture<GetComponentLinkedStorageAccountResult> invokeAsync(GetComponentLinkedStorageAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getComponentLinkedStorageAccount", TypeShape.of(GetComponentLinkedStorageAccountResult.class), args == null ? GetComponentLinkedStorageAccountArgs.Empty : args, Utilities.withVersion(options));
     }

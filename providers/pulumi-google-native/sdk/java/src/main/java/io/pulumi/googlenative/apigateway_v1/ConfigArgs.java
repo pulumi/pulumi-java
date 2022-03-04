@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigFileArgs;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigGrpcServiceDefinitionArgs;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigOpenApiDocumentArgs;
@@ -20,14 +20,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConfigArgs Empty = new ConfigArgs();
 
     @InputImport(name="apiConfigId", required=true)
-    private final Input<String> apiConfigId;
+      private final Input<String> apiConfigId;
 
     public Input<String> getApiConfigId() {
         return this.apiConfigId;
     }
 
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -38,7 +38,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -49,7 +49,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayServiceAccount")
-    private final @Nullable Input<String> gatewayServiceAccount;
+      private final @Nullable Input<String> gatewayServiceAccount;
 
     public Input<String> getGatewayServiceAccount() {
         return this.gatewayServiceAccount == null ? Input.empty() : this.gatewayServiceAccount;
@@ -60,7 +60,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grpcServices")
-    private final @Nullable Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices;
+      private final @Nullable Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices;
 
     public Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> getGrpcServices() {
         return this.grpcServices == null ? Input.empty() : this.grpcServices;
@@ -71,14 +71,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -89,7 +89,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedServiceConfigs")
-    private final @Nullable Input<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs;
+      private final @Nullable Input<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs;
 
     public Input<List<ApigatewayApiConfigFileArgs>> getManagedServiceConfigs() {
         return this.managedServiceConfigs == null ? Input.empty() : this.managedServiceConfigs;
@@ -100,14 +100,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openapiDocuments")
-    private final @Nullable Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments;
+      private final @Nullable Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments;
 
     public Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> getOpenapiDocuments() {
         return this.openapiDocuments == null ? Input.empty() : this.openapiDocuments;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -286,7 +286,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ConfigArgs build() {
             return new ConfigArgs(apiConfigId, apiId, displayName, gatewayServiceAccount, grpcServices, labels, location, managedServiceConfigs, openapiDocuments, project);
         }

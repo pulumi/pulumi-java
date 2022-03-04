@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ServiceProviderResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class ListBotConnectionServiceProvidersResult {
     /**
      * The link used to get the next page of bot service providers.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Gets the list of bot service providers and their properties.
      * 
-     */
+    */
     public List<ServiceProviderResponse> getValue() {
         return this.value;
     }
@@ -78,7 +78,6 @@ public final class ListBotConnectionServiceProvidersResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListBotConnectionServiceProvidersResult build() {
             return new ListBotConnectionServiceProvidersResult(nextLink, value);
         }

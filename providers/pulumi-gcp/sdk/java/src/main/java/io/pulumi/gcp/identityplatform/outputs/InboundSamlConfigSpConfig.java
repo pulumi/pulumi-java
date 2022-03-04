@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.identityplatform.outputs.InboundSamlConfigSpConfigSpCertificate;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +44,7 @@ public final class InboundSamlConfigSpConfig {
     /**
      * Callback URI where responses from IDP are handled. Must start with `https://`.
      * 
-     */
+    */
     public Optional<String> getCallbackUri() {
         return Optional.ofNullable(this.callbackUri);
     }
@@ -53,14 +53,14 @@ public final class InboundSamlConfigSpConfig {
      * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 
-     */
+    */
     public List<InboundSamlConfigSpConfigSpCertificate> getSpCertificates() {
         return this.spCertificates == null ? List.of() : this.spCertificates;
     }
     /**
      * Unique identifier for all SAML entities.
      * 
-     */
+    */
     public Optional<String> getSpEntityId() {
         return Optional.ofNullable(this.spEntityId);
     }
@@ -103,7 +103,6 @@ public final class InboundSamlConfigSpConfig {
             this.spEntityId = spEntityId;
             return this;
         }
-
         public InboundSamlConfigSpConfig build() {
             return new InboundSamlConfigSpConfig(callbackUri, spCertificates, spEntityId);
         }

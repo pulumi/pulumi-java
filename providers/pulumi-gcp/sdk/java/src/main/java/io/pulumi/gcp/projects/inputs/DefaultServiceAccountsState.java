@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -32,7 +32,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -46,7 +46,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="restorePolicy")
-    private final @Nullable Input<String> restorePolicy;
+      private final @Nullable Input<String> restorePolicy;
 
     public Input<String> getRestorePolicy() {
         return this.restorePolicy == null ? Input.empty() : this.restorePolicy;
@@ -57,7 +57,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceAccounts")
-    private final @Nullable Input<Map<String,Object>> serviceAccounts;
+      private final @Nullable Input<Map<String,Object>> serviceAccounts;
 
     public Input<Map<String,Object>> getServiceAccounts() {
         return this.serviceAccounts == null ? Input.empty() : this.serviceAccounts;
@@ -146,7 +146,6 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
             this.serviceAccounts = Input.ofNullable(serviceAccounts);
             return this;
         }
-
         public DefaultServiceAccountsState build() {
             return new DefaultServiceAccountsState(action, project, restorePolicy, serviceAccounts);
         }

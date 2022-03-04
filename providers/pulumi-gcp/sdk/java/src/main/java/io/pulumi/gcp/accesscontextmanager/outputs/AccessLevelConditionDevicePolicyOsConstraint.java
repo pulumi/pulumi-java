@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,7 +38,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraint {
      * of this OS satisfies the constraint.
      * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
      * 
-     */
+    */
     public Optional<String> getMinimumVersion() {
         return Optional.ofNullable(this.minimumVersion);
     }
@@ -46,7 +46,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraint {
      * The operating system type of the device.
      * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
      * 
-     */
+    */
     public String getOsType() {
         return this.osType;
     }
@@ -82,7 +82,6 @@ public final class AccessLevelConditionDevicePolicyOsConstraint {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public AccessLevelConditionDevicePolicyOsConstraint build() {
             return new AccessLevelConditionDevicePolicyOsConstraint(minimumVersion, osType);
         }

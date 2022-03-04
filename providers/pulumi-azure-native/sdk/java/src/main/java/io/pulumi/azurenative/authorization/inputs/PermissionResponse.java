@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable List<String> actions;
+      private final @Nullable List<String> actions;
 
     public List<String> getActions() {
         return this.actions == null ? List.of() : this.actions;
@@ -35,7 +35,7 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataActions")
-    private final @Nullable List<String> dataActions;
+      private final @Nullable List<String> dataActions;
 
     public List<String> getDataActions() {
         return this.dataActions == null ? List.of() : this.dataActions;
@@ -46,7 +46,7 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="notActions")
-    private final @Nullable List<String> notActions;
+      private final @Nullable List<String> notActions;
 
     public List<String> getNotActions() {
         return this.notActions == null ? List.of() : this.notActions;
@@ -57,7 +57,7 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="notDataActions")
-    private final @Nullable List<String> notDataActions;
+      private final @Nullable List<String> notDataActions;
 
     public List<String> getNotDataActions() {
         return this.notDataActions == null ? List.of() : this.notDataActions;
@@ -126,7 +126,6 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
             this.notDataActions = notDataActions;
             return this;
         }
-
         public PermissionResponse build() {
             return new PermissionResponse(actions, dataActions, notActions, notDataActions);
         }

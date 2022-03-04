@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,42 +61,42 @@ public final class PushInstallerDetailsResponse {
     /**
      * The health of the push installer.
      * 
-     */
+    */
     public String getHealth() {
         return this.health;
     }
     /**
      * The health errors.
      * 
-     */
+    */
     public List<HealthErrorResponse> getHealthErrors() {
         return this.healthErrors;
     }
     /**
      * The push installer Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The last heartbeat received from the push installer.
      * 
-     */
+    */
     public String getLastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
      * The push installer name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The push installer version.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -160,7 +160,6 @@ public final class PushInstallerDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public PushInstallerDetailsResponse build() {
             return new PushInstallerDetailsResponse(health, healthErrors, id, lastHeartbeatUtc, name, version);
         }

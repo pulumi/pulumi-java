@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.outputs;
 
 import io.pulumi.awsnative.gamelift.enums.FleetCertificateConfigurationCertificateType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class FleetCertificateConfiguration {
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }
-
         public FleetCertificateConfiguration build() {
             return new FleetCertificateConfiguration(certificateType);
         }

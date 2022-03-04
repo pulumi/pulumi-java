@@ -5,8 +5,8 @@ package io.pulumi.googlenative.appengine_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.appengine_v1.IngressRuleArgs;
 import java.lang.Integer;
@@ -77,6 +77,37 @@ public class IngressRule extends io.pulumi.resources.CustomResource {
         return this.sourceRange;
     }
 
+    public interface BuilderApplicator {
+        public void apply(IngressRuleArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.appengine_v1.IngressRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.appengine_v1.IngressRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public IngressRule(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public IngressRule(String name) {
+        this(name, IngressRuleArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public IngressRule(String name, IngressRuleArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

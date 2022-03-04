@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCompression")
-    private final @Nullable Input<Boolean> isCompression;
+      private final @Nullable Input<Boolean> isCompression;
 
     public Input<Boolean> getIsCompression() {
         return this.isCompression == null ? Input.empty() : this.isCompression;
@@ -36,7 +36,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issqlcompression")
-    private final @Nullable Input<Boolean> issqlcompression;
+      private final @Nullable Input<Boolean> issqlcompression;
 
     public Input<Boolean> getIssqlcompression() {
         return this.issqlcompression == null ? Input.empty() : this.issqlcompression;
@@ -47,7 +47,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -121,7 +121,6 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public SettingsArgs build() {
             return new SettingsArgs(isCompression, issqlcompression, timeZone);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.PasswordResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class RegistryListCredentialsResultResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public RegistryListCredentialsResultResponse build() {
             return new RegistryListCredentialsResultResponse(location, passwords, username);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DataSetGeoSpatialColumnGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
     public static final DataSetColumnGroupArgs Empty = new DataSetColumnGroupArgs();
 
     @InputImport(name="geoSpatialColumnGroup")
-    private final @Nullable Input<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
+      private final @Nullable Input<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
 
     public Input<DataSetGeoSpatialColumnGroupArgs> getGeoSpatialColumnGroup() {
         return this.geoSpatialColumnGroup == null ? Input.empty() : this.geoSpatialColumnGroup;
@@ -64,7 +64,6 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
             this.geoSpatialColumnGroup = Input.ofNullable(geoSpatialColumnGroup);
             return this;
         }
-
         public DataSetColumnGroupArgs build() {
             return new DataSetColumnGroupArgs(geoSpatialColumnGroup);
         }

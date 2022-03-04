@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingCompleteOp
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingErrorManagementResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingFormatResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingStructureResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -82,56 +82,56 @@ public final class ConnectorMappingPropertiesResponse {
     /**
      * The availability of mapping property.
      * 
-     */
+    */
     public ConnectorMappingAvailabilityResponse getAvailability() {
         return this.availability;
     }
     /**
      * The operation after import is done.
      * 
-     */
+    */
     public ConnectorMappingCompleteOperationResponse getCompleteOperation() {
         return this.completeOperation;
     }
     /**
      * The error management setting for the mapping.
      * 
-     */
+    */
     public ConnectorMappingErrorManagementResponse getErrorManagement() {
         return this.errorManagement;
     }
     /**
      * The file filter for the mapping.
      * 
-     */
+    */
     public Optional<String> getFileFilter() {
         return Optional.ofNullable(this.fileFilter);
     }
     /**
      * The folder path for the mapping.
      * 
-     */
+    */
     public Optional<String> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
      * The format of mapping property.
      * 
-     */
+    */
     public ConnectorMappingFormatResponse getFormat() {
         return this.format;
     }
     /**
      * If the file contains a header or not.
      * 
-     */
+    */
     public Optional<Boolean> getHasHeader() {
         return Optional.ofNullable(this.hasHeader);
     }
     /**
      * Ingestion mapping information at property level.
      * 
-     */
+    */
     public List<ConnectorMappingStructureResponse> getStructure() {
         return this.structure;
     }
@@ -209,7 +209,6 @@ public final class ConnectorMappingPropertiesResponse {
             this.structure = Objects.requireNonNull(structure);
             return this;
         }
-
         public ConnectorMappingPropertiesResponse build() {
             return new ConnectorMappingPropertiesResponse(availability, completeOperation, errorManagement, fileFilter, folderPath, format, hasHeader, structure);
         }

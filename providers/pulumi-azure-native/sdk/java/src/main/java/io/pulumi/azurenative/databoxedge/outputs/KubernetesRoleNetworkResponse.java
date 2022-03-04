@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.CniConfigResponse;
 import io.pulumi.azurenative.databoxedge.outputs.LoadBalancerConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -32,14 +32,14 @@ public final class KubernetesRoleNetworkResponse {
     /**
      * Cni configuration
      * 
-     */
+    */
     public CniConfigResponse getCniConfig() {
         return this.cniConfig;
     }
     /**
      * Load balancer configuration
      * 
-     */
+    */
     public LoadBalancerConfigResponse getLoadBalancerConfig() {
         return this.loadBalancerConfig;
     }
@@ -75,7 +75,6 @@ public final class KubernetesRoleNetworkResponse {
             this.loadBalancerConfig = Objects.requireNonNull(loadBalancerConfig);
             return this;
         }
-
         public KubernetesRoleNetworkResponse build() {
             return new KubernetesRoleNetworkResponse(cniConfig, loadBalancerConfig);
         }

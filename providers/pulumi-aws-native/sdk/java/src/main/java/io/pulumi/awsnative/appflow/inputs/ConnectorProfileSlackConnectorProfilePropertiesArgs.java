@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ConnectorProfileSlackConnectorProfilePropertiesArgs extends i
      * 
      */
     @InputImport(name="instanceUrl", required=true)
-    private final Input<String> instanceUrl;
+      private final Input<String> instanceUrl;
 
     public Input<String> getInstanceUrl() {
         return this.instanceUrl;
@@ -61,7 +61,6 @@ public final class ConnectorProfileSlackConnectorProfilePropertiesArgs extends i
             this.instanceUrl = Input.of(Objects.requireNonNull(instanceUrl));
             return this;
         }
-
         public ConnectorProfileSlackConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileSlackConnectorProfilePropertiesArgs(instanceUrl);
         }

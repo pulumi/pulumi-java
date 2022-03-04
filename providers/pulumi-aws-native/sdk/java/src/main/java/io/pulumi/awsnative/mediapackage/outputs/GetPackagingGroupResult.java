@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupAuthorization;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupLogConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,28 +49,28 @@ public final class GetPackagingGroupResult {
     /**
      * The ARN of the PackagingGroup.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * CDN Authorization
      * 
-     */
+    */
     public Optional<PackagingGroupAuthorization> getAuthorization() {
         return Optional.ofNullable(this.authorization);
     }
     /**
      * The fully qualified domain name for Assets in the PackagingGroup.
      * 
-     */
+    */
     public Optional<String> getDomainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
      * The configuration parameters for egress access logging.
      * 
-     */
+    */
     public Optional<PackagingGroupLogConfiguration> getEgressAccessLogs() {
         return Optional.ofNullable(this.egressAccessLogs);
     }
@@ -120,7 +120,6 @@ public final class GetPackagingGroupResult {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }
-
         public GetPackagingGroupResult build() {
             return new GetPackagingGroupResult(arn, authorization, domainName, egressAccessLogs);
         }

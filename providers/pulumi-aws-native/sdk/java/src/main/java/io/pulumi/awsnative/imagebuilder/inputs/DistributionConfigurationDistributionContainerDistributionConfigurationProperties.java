@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationTargetContainerRepository;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="containerTags")
-    private final @Nullable List<String> containerTags;
+      private final @Nullable List<String> containerTags;
 
     public List<String> getContainerTags() {
         return this.containerTags == null ? List.of() : this.containerTags;
@@ -36,7 +36,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -47,7 +47,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="targetRepository")
-    private final @Nullable DistributionConfigurationTargetContainerRepository targetRepository;
+      private final @Nullable DistributionConfigurationTargetContainerRepository targetRepository;
 
     public Optional<DistributionConfigurationTargetContainerRepository> getTargetRepository() {
         return this.targetRepository == null ? Optional.empty() : Optional.ofNullable(this.targetRepository);
@@ -106,7 +106,6 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             this.targetRepository = targetRepository;
             return this;
         }
-
         public DistributionConfigurationDistributionContainerDistributionConfigurationProperties build() {
             return new DistributionConfigurationDistributionContainerDistributionConfigurationProperties(containerTags, description, targetRepository);
         }

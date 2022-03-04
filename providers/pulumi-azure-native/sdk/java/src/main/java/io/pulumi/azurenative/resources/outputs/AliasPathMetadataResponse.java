@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AliasPathMetadataResponse {
     /**
      * The attributes of the token that the alias path is referring to.
      * 
-     */
+    */
     public String getAttributes() {
         return this.attributes;
     }
     /**
      * The type of the token that the alias path is referring to.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -74,7 +74,6 @@ public final class AliasPathMetadataResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AliasPathMetadataResponse build() {
             return new AliasPathMetadataResponse(attributes, type);
         }

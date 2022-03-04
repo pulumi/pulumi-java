@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LabDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ListGlobalUserLabsResult {
     /**
      * List of all the labs
      * 
-     */
+    */
     public List<LabDetailsResponse> getLabs() {
         return this.labs == null ? List.of() : this.labs;
     }
@@ -54,7 +54,6 @@ public final class ListGlobalUserLabsResult {
             this.labs = labs;
             return this;
         }
-
         public ListGlobalUserLabsResult build() {
             return new ListGlobalUserLabsResult(labs);
         }

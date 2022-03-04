@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse {
     /**
      * Start time of the current step.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Display name of the current auto rollout step.
      * 
-     */
+    */
     public String getStep() {
         return this.step;
     }
     /**
      * Index of the current step in the auto rollout steps list.
      * 
-     */
+    */
     public Integer getStepIndex() {
         return this.stepIndex;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse {
             this.stepIndex = Objects.requireNonNull(stepIndex);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3RolloutStateResponse build() {
             return new GoogleCloudDialogflowCxV3RolloutStateResponse(startTime, step, stepIndex);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
      * 
      */
     @InputImport(name="managementGroupId", required=true)
-    private final String managementGroupId;
+      private final String managementGroupId;
 
     public String getManagementGroupId() {
         return this.managementGroupId;
@@ -31,7 +31,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
      * 
      */
     @InputImport(name="managementGroupsNamespace", required=true)
-    private final String managementGroupsNamespace;
+      private final String managementGroupsNamespace;
 
     public String getManagementGroupsNamespace() {
         return this.managementGroupsNamespace;
@@ -42,7 +42,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
      * 
      */
     @InputImport(name="remediationName", required=true)
-    private final String remediationName;
+      private final String remediationName;
 
     public String getRemediationName() {
         return this.remediationName;
@@ -53,7 +53,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
      * 
      */
     @InputImport(name="top")
-    private final @Nullable Integer top;
+      private final @Nullable Integer top;
 
     public Optional<Integer> getTop() {
         return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
@@ -122,7 +122,6 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
             this.top = top;
             return this;
         }
-
         public ListRemediationDeploymentsAtManagementGroupArgs build() {
             return new ListRemediationDeploymentsAtManagementGroupArgs(managementGroupId, managementGroupsNamespace, remediationName, top);
         }

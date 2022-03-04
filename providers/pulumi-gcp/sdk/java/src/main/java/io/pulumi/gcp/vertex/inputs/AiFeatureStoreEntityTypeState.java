@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -33,7 +33,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -44,7 +44,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="featurestore")
-    private final @Nullable Input<String> featurestore;
+      private final @Nullable Input<String> featurestore;
 
     public Input<String> getFeaturestore() {
         return this.featurestore == null ? Input.empty() : this.featurestore;
@@ -55,7 +55,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -68,7 +68,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="monitoringConfig")
-    private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
+      private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
 
     public Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> getMonitoringConfig() {
         return this.monitoringConfig == null ? Input.empty() : this.monitoringConfig;
@@ -79,7 +79,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -91,7 +91,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -225,7 +225,6 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public AiFeatureStoreEntityTypeState build() {
             return new AiFeatureStoreEntityTypeState(createTime, etag, featurestore, labels, monitoringConfig, name, updateTime);
         }

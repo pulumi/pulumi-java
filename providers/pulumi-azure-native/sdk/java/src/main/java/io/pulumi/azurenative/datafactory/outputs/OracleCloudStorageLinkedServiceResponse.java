@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -91,56 +91,56 @@ public final class OracleCloudStorageLinkedServiceResponse {
     /**
      * The access key identifier of the Oracle Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getAccessKeyId() {
         return Optional.ofNullable(this.accessKeyId);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getSecretAccessKey() {
         return Optional.ofNullable(this.secretAccessKey);
     }
     /**
      * This value specifies the endpoint to access with the Oracle Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getServiceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
@@ -148,7 +148,7 @@ public final class OracleCloudStorageLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'OracleCloudStorage'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -233,7 +233,6 @@ public final class OracleCloudStorageLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OracleCloudStorageLinkedServiceResponse build() {
             return new OracleCloudStorageLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, parameters, secretAccessKey, serviceUrl, type);
         }

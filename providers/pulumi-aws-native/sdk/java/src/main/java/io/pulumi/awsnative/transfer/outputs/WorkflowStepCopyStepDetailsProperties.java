@@ -5,7 +5,7 @@ package io.pulumi.awsnative.transfer.outputs;
 
 import io.pulumi.awsnative.transfer.enums.WorkflowStepCopyStepDetailsPropertiesOverwriteExisting;
 import io.pulumi.awsnative.transfer.outputs.WorkflowInputFileLocation;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,14 +41,14 @@ public final class WorkflowStepCopyStepDetailsProperties {
     /**
      * The name of the step, used as an identifier.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
      * 
-     */
+    */
     public Optional<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> getOverwriteExisting() {
         return Optional.ofNullable(this.overwriteExisting);
     }
@@ -91,7 +91,6 @@ public final class WorkflowStepCopyStepDetailsProperties {
             this.overwriteExisting = overwriteExisting;
             return this;
         }
-
         public WorkflowStepCopyStepDetailsProperties build() {
             return new WorkflowStepCopyStepDetailsProperties(destinationFileLocation, name, overwriteExisting);
         }

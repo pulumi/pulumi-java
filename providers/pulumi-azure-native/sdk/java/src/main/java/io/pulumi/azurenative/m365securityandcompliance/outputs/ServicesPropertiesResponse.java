@@ -9,7 +9,7 @@ import io.pulumi.azurenative.m365securityandcompliance.outputs.ServiceAuthentica
 import io.pulumi.azurenative.m365securityandcompliance.outputs.ServiceCorsConfigurationInfoResponse;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.ServiceCosmosDbConfigurationInfoResponse;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.ServiceExportConfigurationInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -82,56 +82,56 @@ public final class ServicesPropertiesResponse {
     /**
      * The access policies of the service instance.
      * 
-     */
+    */
     public List<ServiceAccessPolicyEntryResponse> getAccessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
     }
     /**
      * The authentication configuration for the service instance.
      * 
-     */
+    */
     public Optional<ServiceAuthenticationConfigurationInfoResponse> getAuthenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
     /**
      * The settings for the CORS configuration of the service instance.
      * 
-     */
+    */
     public Optional<ServiceCorsConfigurationInfoResponse> getCorsConfiguration() {
         return Optional.ofNullable(this.corsConfiguration);
     }
     /**
      * The settings for the Cosmos DB database backing the service.
      * 
-     */
+    */
     public Optional<ServiceCosmosDbConfigurationInfoResponse> getCosmosDbConfiguration() {
         return Optional.ofNullable(this.cosmosDbConfiguration);
     }
     /**
      * The settings for the export operation of the service instance.
      * 
-     */
+    */
     public Optional<ServiceExportConfigurationInfoResponse> getExportConfiguration() {
         return Optional.ofNullable(this.exportConfiguration);
     }
     /**
      * The list of private endpoint connections that are set up for this resource.
      * 
-     */
+    */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
      * The provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -209,7 +209,6 @@ public final class ServicesPropertiesResponse {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public ServicesPropertiesResponse build() {
             return new ServicesPropertiesResponse(accessPolicies, authenticationConfiguration, corsConfiguration, cosmosDbConfiguration, exportConfiguration, privateEndpointConnections, provisioningState, publicNetworkAccess);
         }

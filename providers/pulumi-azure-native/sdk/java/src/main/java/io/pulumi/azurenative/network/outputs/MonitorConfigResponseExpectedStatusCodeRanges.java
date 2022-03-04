@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class MonitorConfigResponseExpectedStatusCodeRanges {
     /**
      * Max status code.
      * 
-     */
+    */
     public Optional<Integer> getMax() {
         return Optional.ofNullable(this.max);
     }
     /**
      * Min status code.
      * 
-     */
+    */
     public Optional<Integer> getMin() {
         return Optional.ofNullable(this.min);
     }
@@ -76,7 +76,6 @@ public final class MonitorConfigResponseExpectedStatusCodeRanges {
             this.min = min;
             return this;
         }
-
         public MonitorConfigResponseExpectedStatusCodeRanges build() {
             return new MonitorConfigResponseExpectedStatusCodeRanges(max, min);
         }

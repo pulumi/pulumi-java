@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitServiceProviderPropertiesResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitSkuResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -176,147 +176,147 @@ public final class GetExpressRouteCircuitResult {
     /**
      * Allow classic operations.
      * 
-     */
+    */
     public Optional<Boolean> getAllowClassicOperations() {
         return Optional.ofNullable(this.allowClassicOperations);
     }
     /**
      * The list of authorizations.
      * 
-     */
+    */
     public List<ExpressRouteCircuitAuthorizationResponse> getAuthorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
     /**
      * The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
      * 
-     */
+    */
     public Optional<Double> getBandwidthInGbps() {
         return Optional.ofNullable(this.bandwidthInGbps);
     }
     /**
      * The CircuitProvisioningState state of the resource.
      * 
-     */
+    */
     public Optional<String> getCircuitProvisioningState() {
         return Optional.ofNullable(this.circuitProvisioningState);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getExpressRoutePort() {
         return Optional.ofNullable(this.expressRoutePort);
     }
     /**
      * The GatewayManager Etag.
      * 
-     */
+    */
     public Optional<String> getGatewayManagerEtag() {
         return Optional.ofNullable(this.gatewayManagerEtag);
     }
     /**
      * Flag denoting global reach status.
      * 
-     */
+    */
     public Optional<Boolean> getGlobalReachEnabled() {
         return Optional.ofNullable(this.globalReachEnabled);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of peerings.
      * 
-     */
+    */
     public List<ExpressRouteCircuitPeeringResponse> getPeerings() {
         return this.peerings == null ? List.of() : this.peerings;
     }
     /**
      * The provisioning state of the express route circuit resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The ServiceKey.
      * 
-     */
+    */
     public Optional<String> getServiceKey() {
         return Optional.ofNullable(this.serviceKey);
     }
     /**
      * The ServiceProviderNotes.
      * 
-     */
+    */
     public Optional<String> getServiceProviderNotes() {
         return Optional.ofNullable(this.serviceProviderNotes);
     }
     /**
      * The ServiceProviderProperties.
      * 
-     */
+    */
     public Optional<ExpressRouteCircuitServiceProviderPropertiesResponse> getServiceProviderProperties() {
         return Optional.ofNullable(this.serviceProviderProperties);
     }
     /**
      * The ServiceProviderProvisioningState state of the resource.
      * 
-     */
+    */
     public Optional<String> getServiceProviderProvisioningState() {
         return Optional.ofNullable(this.serviceProviderProvisioningState);
     }
     /**
      * The SKU.
      * 
-     */
+    */
     public Optional<ExpressRouteCircuitSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
      * 
-     */
+    */
     public Integer getStag() {
         return this.stag;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -485,7 +485,6 @@ public final class GetExpressRouteCircuitResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExpressRouteCircuitResult build() {
             return new GetExpressRouteCircuitResult(allowClassicOperations, authorizations, bandwidthInGbps, circuitProvisioningState, etag, expressRoutePort, gatewayManagerEtag, globalReachEnabled, id, location, name, peerings, provisioningState, serviceKey, serviceProviderNotes, serviceProviderProperties, serviceProviderProvisioningState, sku, stag, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class MessageCountDetailsResponse {
     /**
      * Number of active messages in the queue, topic, or subscription.
      * 
-     */
+    */
     public Double getActiveMessageCount() {
         return this.activeMessageCount;
     }
     /**
      * Number of messages that are dead lettered.
      * 
-     */
+    */
     public Double getDeadLetterMessageCount() {
         return this.deadLetterMessageCount;
     }
     /**
      * Number of scheduled messages.
      * 
-     */
+    */
     public Double getScheduledMessageCount() {
         return this.scheduledMessageCount;
     }
     /**
      * Number of messages transferred into dead letters.
      * 
-     */
+    */
     public Double getTransferDeadLetterMessageCount() {
         return this.transferDeadLetterMessageCount;
     }
     /**
      * Number of messages transferred to another queue, topic, or subscription.
      * 
-     */
+    */
     public Double getTransferMessageCount() {
         return this.transferMessageCount;
     }
@@ -137,7 +137,6 @@ public final class MessageCountDetailsResponse {
             this.transferMessageCount = Objects.requireNonNull(transferMessageCount);
             return this;
         }
-
         public MessageCountDetailsResponse build() {
             return new MessageCountDetailsResponse(activeMessageCount, deadLetterMessageCount, scheduledMessageCount, transferDeadLetterMessageCount, transferMessageCount);
         }

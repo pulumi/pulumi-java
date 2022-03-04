@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -84,7 +84,7 @@ public final class RouterStatusBestRoutesForRouter {
     /**
      * The name of the router.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -92,7 +92,7 @@ public final class RouterStatusBestRoutesForRouter {
      * The network name or resource link to the parent
      * network of this subnetwork.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
@@ -124,7 +124,7 @@ public final class RouterStatusBestRoutesForRouter {
      * The ID of the project in which the resource
      * belongs. If it is not provided, the provider project is used.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
@@ -257,7 +257,6 @@ public final class RouterStatusBestRoutesForRouter {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public RouterStatusBestRoutesForRouter build() {
             return new RouterStatusBestRoutesForRouter(description, destRange, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopInstanceZone, nextHopIp, nextHopNetwork, nextHopVpnTunnel, priority, project, selfLink, tags);
         }

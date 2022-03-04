@@ -8,8 +8,8 @@ import io.pulumi.awsnative.emr.StudioSessionMappingArgs;
 import io.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -76,6 +76,37 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
         return this.studioId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(StudioSessionMappingArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.emr.StudioSessionMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.emr.StudioSessionMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public StudioSessionMapping(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public StudioSessionMapping(String name) {
+        this(name, StudioSessionMappingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public StudioSessionMapping(String name, StudioSessionMappingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

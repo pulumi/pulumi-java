@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="moduleName")
-    private final @Nullable Input<String> moduleName;
+      private final @Nullable Input<String> moduleName;
 
     public Input<String> getModuleName() {
         return this.moduleName == null ? Input.empty() : this.moduleName;
@@ -41,7 +41,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable Input<String> versionId;
+      private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;
@@ -115,7 +115,6 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
             this.versionId = Input.ofNullable(versionId);
             return this;
         }
-
         public ModuleDefaultVersionArgs build() {
             return new ModuleDefaultVersionArgs(arn, moduleName, versionId);
         }

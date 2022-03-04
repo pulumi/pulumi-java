@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class StaticRouteResponse {
     /**
      * List of all address prefixes.
      * 
-     */
+    */
     public List<String> getAddressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
     /**
      * The name of the StaticRoute that is unique within a VnetRoute.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The ip address of the next hop.
      * 
-     */
+    */
     public Optional<String> getNextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
@@ -98,7 +98,6 @@ public final class StaticRouteResponse {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
-
         public StaticRouteResponse build() {
             return new StaticRouteResponse(addressPrefixes, name, nextHopIpAddress);
         }

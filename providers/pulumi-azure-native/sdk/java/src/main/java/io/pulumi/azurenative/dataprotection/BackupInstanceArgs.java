@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupInstanceName")
-    private final @Nullable Input<String> backupInstanceName;
+      private final @Nullable Input<String> backupInstanceName;
 
     public Input<String> getBackupInstanceName() {
         return this.backupInstanceName == null ? Input.empty() : this.backupInstanceName;
@@ -30,7 +30,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties;
+      private final @Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties;
 
     public Input<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -41,7 +41,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final Input<String> vaultName;
+      private final Input<String> vaultName;
 
     public Input<String> getVaultName() {
         return this.vaultName;
@@ -141,7 +141,6 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.vaultName = Input.of(Objects.requireNonNull(vaultName));
             return this;
         }
-
         public BackupInstanceArgs build() {
             return new BackupInstanceArgs(backupInstanceName, properties, resourceGroupName, vaultName);
         }

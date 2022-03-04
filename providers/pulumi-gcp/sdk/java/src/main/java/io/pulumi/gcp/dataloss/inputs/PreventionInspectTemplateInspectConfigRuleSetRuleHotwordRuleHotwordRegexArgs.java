@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
      * 
      */
     @InputImport(name="groupIndexes")
-    private final @Nullable Input<List<Integer>> groupIndexes;
+      private final @Nullable Input<List<Integer>> groupIndexes;
 
     public Input<List<Integer>> getGroupIndexes() {
         return this.groupIndexes == null ? Input.empty() : this.groupIndexes;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
      * 
      */
     @InputImport(name="pattern", required=true)
-    private final Input<String> pattern;
+      private final Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern;
@@ -92,7 +92,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
             this.pattern = Input.of(Objects.requireNonNull(pattern));
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs(groupIndexes, pattern);
         }

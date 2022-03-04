@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.enums.DeviceLogLevel;
 import io.pulumi.googlenative.cloudiot_v1.inputs.DeviceConfigArgs;
 import io.pulumi.googlenative.cloudiot_v1.inputs.DeviceCredentialArgs;
@@ -26,7 +26,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blocked")
-    private final @Nullable Input<Boolean> blocked;
+      private final @Nullable Input<Boolean> blocked;
 
     public Input<Boolean> getBlocked() {
         return this.blocked == null ? Input.empty() : this.blocked;
@@ -37,7 +37,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<DeviceConfigArgs> config;
+      private final @Nullable Input<DeviceConfigArgs> config;
 
     public Input<DeviceConfigArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -48,7 +48,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<List<DeviceCredentialArgs>> credentials;
+      private final @Nullable Input<List<DeviceCredentialArgs>> credentials;
 
     public Input<List<DeviceCredentialArgs>> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -59,7 +59,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayConfig")
-    private final @Nullable Input<GatewayConfigArgs> gatewayConfig;
+      private final @Nullable Input<GatewayConfigArgs> gatewayConfig;
 
     public Input<GatewayConfigArgs> getGatewayConfig() {
         return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
@@ -70,14 +70,14 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -88,7 +88,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<DeviceLogLevel> logLevel;
+      private final @Nullable Input<DeviceLogLevel> logLevel;
 
     public Input<DeviceLogLevel> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -99,7 +99,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -110,21 +110,21 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="registryId", required=true)
-    private final Input<String> registryId;
+      private final Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId;
@@ -318,7 +318,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.registryId = Input.of(Objects.requireNonNull(registryId));
             return this;
         }
-
         public DeviceArgs build() {
             return new DeviceArgs(blocked, config, credentials, gatewayConfig, id, location, logLevel, metadata, name, project, registryId);
         }

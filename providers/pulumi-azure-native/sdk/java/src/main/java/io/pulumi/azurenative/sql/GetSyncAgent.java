@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.inputs.GetSyncAgentArgs;
 import io.pulumi.azurenative.sql.outputs.GetSyncAgentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSyncAgent {
-/**
- * An Azure SQL Database sync agent.
+    private GetSyncAgent() {}
+    public interface BuilderApplicator {
+        public void apply(GetSyncAgentArgs.Builder a);
+    }
+    private static GetSyncAgentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSyncAgentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure SQL Database sync agent.
  * API Version: 2020-11-01-preview.
  * 
- *
- * An Azure SQL Database sync agent.
+     *
+     * An Azure SQL Database sync agent.
  * 
- */
+     */
+    public static CompletableFuture<GetSyncAgentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure SQL Database sync agent.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * An Azure SQL Database sync agent.
+     * 
+     */
     public static CompletableFuture<GetSyncAgentResult> invokeAsync(GetSyncAgentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSyncAgent", TypeShape.of(GetSyncAgentResult.class), args == null ? GetSyncAgentArgs.Empty : args, Utilities.withVersion(options));
     }

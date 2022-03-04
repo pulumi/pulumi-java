@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigFleetConfigGetArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configId")
-    private final @Nullable Input<String> configId;
+      private final @Nullable Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId == null ? Input.empty() : this.configId;
@@ -34,7 +34,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentId")
-    private final @Nullable Input<String> deploymentId;
+      private final @Nullable Input<String> deploymentId;
 
     public Input<String> getDeploymentId() {
         return this.deploymentId == null ? Input.empty() : this.deploymentId;
@@ -45,7 +45,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fleetConfigs")
-    private final @Nullable Input<List<GameServerConfigFleetConfigGetArgs>> fleetConfigs;
+      private final @Nullable Input<List<GameServerConfigFleetConfigGetArgs>> fleetConfigs;
 
     public Input<List<GameServerConfigFleetConfigGetArgs>> getFleetConfigs() {
         return this.fleetConfigs == null ? Input.empty() : this.fleetConfigs;
@@ -69,7 +69,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -80,7 +80,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -91,7 +91,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -103,7 +103,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -115,7 +115,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scalingConfigs")
-    private final @Nullable Input<List<GameServerConfigScalingConfigGetArgs>> scalingConfigs;
+      private final @Nullable Input<List<GameServerConfigScalingConfigGetArgs>> scalingConfigs;
 
     public Input<List<GameServerConfigScalingConfigGetArgs>> getScalingConfigs() {
         return this.scalingConfigs == null ? Input.empty() : this.scalingConfigs;
@@ -279,7 +279,6 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
             this.scalingConfigs = Input.ofNullable(scalingConfigs);
             return this;
         }
-
         public GameServerConfigState build() {
             return new GameServerConfigState(configId, deploymentId, description, fleetConfigs, labels, location, name, project, scalingConfigs);
         }

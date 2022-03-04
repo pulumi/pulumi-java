@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreateArgs extends io.
     public static final TaskDefinitionUpdateWirelessGatewayTaskCreateArgs Empty = new TaskDefinitionUpdateWirelessGatewayTaskCreateArgs();
 
     @InputImport(name="loRaWAN")
-    private final @Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN;
+      private final @Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN;
 
     public Input<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> getLoRaWAN() {
         return this.loRaWAN == null ? Input.empty() : this.loRaWAN;
     }
 
     @InputImport(name="updateDataRole")
-    private final @Nullable Input<String> updateDataRole;
+      private final @Nullable Input<String> updateDataRole;
 
     public Input<String> getUpdateDataRole() {
         return this.updateDataRole == null ? Input.empty() : this.updateDataRole;
     }
 
     @InputImport(name="updateDataSource")
-    private final @Nullable Input<String> updateDataSource;
+      private final @Nullable Input<String> updateDataSource;
 
     public Input<String> getUpdateDataSource() {
         return this.updateDataSource == null ? Input.empty() : this.updateDataSource;
@@ -104,7 +104,6 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreateArgs extends io.
             this.updateDataSource = Input.ofNullable(updateDataSource);
             return this;
         }
-
         public TaskDefinitionUpdateWirelessGatewayTaskCreateArgs build() {
             return new TaskDefinitionUpdateWirelessGatewayTaskCreateArgs(loRaWAN, updateDataRole, updateDataSource);
         }

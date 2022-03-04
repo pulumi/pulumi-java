@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -78,56 +78,56 @@ public final class VirtualMachineRunCommandInstanceViewResponse {
     /**
      * Script end time.
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Script error stream.
      * 
-     */
+    */
     public Optional<String> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Communicate script configuration errors or execution messages.
      * 
-     */
+    */
     public Optional<String> getExecutionMessage() {
         return Optional.ofNullable(this.executionMessage);
     }
     /**
      * Script execution status.
      * 
-     */
+    */
     public Optional<String> getExecutionState() {
         return Optional.ofNullable(this.executionState);
     }
     /**
      * Exit code returned from script execution.
      * 
-     */
+    */
     public Optional<Integer> getExitCode() {
         return Optional.ofNullable(this.exitCode);
     }
     /**
      * Script output stream.
      * 
-     */
+    */
     public Optional<String> getOutput() {
         return Optional.ofNullable(this.output);
     }
     /**
      * Script start time.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
@@ -205,7 +205,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse {
             this.statuses = statuses;
             return this;
         }
-
         public VirtualMachineRunCommandInstanceViewResponse build() {
             return new VirtualMachineRunCommandInstanceViewResponse(endTime, error, executionMessage, executionState, exitCode, output, startTime, statuses);
         }

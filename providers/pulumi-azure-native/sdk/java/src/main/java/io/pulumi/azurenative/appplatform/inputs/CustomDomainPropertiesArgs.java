@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="certName")
-    private final @Nullable Input<String> certName;
+      private final @Nullable Input<String> certName;
 
     public Input<String> getCertName() {
         return this.certName == null ? Input.empty() : this.certName;
@@ -34,7 +34,7 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable Input<String> thumbprint;
+      private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
@@ -93,7 +93,6 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }
-
         public CustomDomainPropertiesArgs build() {
             return new CustomDomainPropertiesArgs(certName, thumbprint);
         }

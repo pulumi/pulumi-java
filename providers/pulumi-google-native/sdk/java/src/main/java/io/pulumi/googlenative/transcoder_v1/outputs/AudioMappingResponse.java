@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -61,42 +61,42 @@ public final class AudioMappingResponse {
     /**
      * The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
      * 
-     */
+    */
     public String getAtomKey() {
         return this.atomKey;
     }
     /**
      * Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
      * 
-     */
+    */
     public Double getGainDb() {
         return this.gainDb;
     }
     /**
      * The zero-based index of the channel in the input audio stream.
      * 
-     */
+    */
     public Integer getInputChannel() {
         return this.inputChannel;
     }
     /**
      * The `Input.key` that identifies the input file.
      * 
-     */
+    */
     public String getInputKey() {
         return this.inputKey;
     }
     /**
      * The zero-based index of the track in the input file.
      * 
-     */
+    */
     public Integer getInputTrack() {
         return this.inputTrack;
     }
     /**
      * The zero-based index of the channel in the output audio stream.
      * 
-     */
+    */
     public Integer getOutputChannel() {
         return this.outputChannel;
     }
@@ -160,7 +160,6 @@ public final class AudioMappingResponse {
             this.outputChannel = Objects.requireNonNull(outputChannel);
             return this;
         }
-
         public AudioMappingResponse build() {
             return new AudioMappingResponse(atomKey, gainDb, inputChannel, inputKey, inputTrack, outputChannel);
         }

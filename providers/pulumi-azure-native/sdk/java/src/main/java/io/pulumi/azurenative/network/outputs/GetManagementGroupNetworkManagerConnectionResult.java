@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,49 +69,49 @@ public final class GetManagementGroupNetworkManagerConnectionResult {
     /**
      * A description of the scope connection.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Network Manager Id.
      * 
-     */
+    */
     public Optional<String> getNetworkManagerId() {
         return Optional.ofNullable(this.networkManagerId);
     }
     /**
      * The system metadata related to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -182,7 +182,6 @@ public final class GetManagementGroupNetworkManagerConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementGroupNetworkManagerConnectionResult build() {
             return new GetManagementGroupNetworkManagerConnectionResult(description, etag, id, name, networkManagerId, systemData, type);
         }

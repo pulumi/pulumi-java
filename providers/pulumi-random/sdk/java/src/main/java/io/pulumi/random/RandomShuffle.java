@@ -5,8 +5,8 @@ package io.pulumi.random;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.RandomShuffleArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomShuffleState;
@@ -96,6 +96,37 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
         return this.seed;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RandomShuffleArgs.Builder a);
+    }
+    private static io.pulumi.random.RandomShuffleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.random.RandomShuffleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RandomShuffle(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RandomShuffle(String name) {
+        this(name, RandomShuffleArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RandomShuffle(String name, RandomShuffleArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

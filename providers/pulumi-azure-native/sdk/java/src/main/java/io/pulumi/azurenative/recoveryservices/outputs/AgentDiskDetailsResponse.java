@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,35 +54,35 @@ public final class AgentDiskDetailsResponse {
     /**
      * The disk capacity in bytes.
      * 
-     */
+    */
     public Double getCapacityInBytes() {
         return this.capacityInBytes;
     }
     /**
      * The disk Id.
      * 
-     */
+    */
     public String getDiskId() {
         return this.diskId;
     }
     /**
      * The disk name.
      * 
-     */
+    */
     public String getDiskName() {
         return this.diskName;
     }
     /**
      * A value indicating whether the disk is the OS disk.
      * 
-     */
+    */
     public String getIsOSDisk() {
         return this.isOSDisk;
     }
     /**
      * The lun of disk.
      * 
-     */
+    */
     public Integer getLunId() {
         return this.lunId;
     }
@@ -139,7 +139,6 @@ public final class AgentDiskDetailsResponse {
             this.lunId = Objects.requireNonNull(lunId);
             return this;
         }
-
         public AgentDiskDetailsResponse build() {
             return new AgentDiskDetailsResponse(capacityInBytes, diskId, diskName, isOSDisk, lunId);
         }

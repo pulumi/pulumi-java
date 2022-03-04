@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
      * 
      */
     @InputImport(name="phraseMatcher", required=true)
-    private final String phraseMatcher;
+      private final String phraseMatcher;
 
     public String getPhraseMatcher() {
         return this.phraseMatcher;
@@ -81,7 +81,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
             this.phraseMatcher = Objects.requireNonNull(phraseMatcher);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(displayName, phraseMatcher);
         }

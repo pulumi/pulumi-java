@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class UserAssignedResourceIdentityResponse {
     /**
      * The principal id of user assigned identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant id of user assigned identity.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
@@ -74,7 +74,6 @@ public final class UserAssignedResourceIdentityResponse {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public UserAssignedResourceIdentityResponse build() {
             return new UserAssignedResourceIdentityResponse(principalId, tenantId);
         }

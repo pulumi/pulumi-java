@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.MediaGraphUsernamePasswordCredentialsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,7 +42,7 @@ public final class MediaGraphClearEndpointResponse {
     /**
      * Polymorphic credentials to present to the endpoint.
      * 
-     */
+    */
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -50,14 +50,14 @@ public final class MediaGraphClearEndpointResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphClearEndpoint'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Url for the endpoint.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -100,7 +100,6 @@ public final class MediaGraphClearEndpointResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public MediaGraphClearEndpointResponse build() {
             return new MediaGraphClearEndpointResponse(credentials, odataType, url);
         }

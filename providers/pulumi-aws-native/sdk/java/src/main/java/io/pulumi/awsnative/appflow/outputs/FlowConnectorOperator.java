@@ -18,7 +18,7 @@ import io.pulumi.awsnative.appflow.enums.FlowSlackConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowTrendmicroConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowVeevaConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowZendeskConnectorOperator;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -243,7 +243,6 @@ public final class FlowConnectorOperator {
             this.zendesk = zendesk;
             return this;
         }
-
         public FlowConnectorOperator build() {
             return new FlowConnectorOperator(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, s3, sAPOData, salesforce, serviceNow, singular, slack, trendmicro, veeva, zendesk);
         }

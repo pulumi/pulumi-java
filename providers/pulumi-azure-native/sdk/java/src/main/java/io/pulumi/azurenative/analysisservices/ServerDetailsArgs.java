@@ -9,7 +9,7 @@ import io.pulumi.azurenative.analysisservices.inputs.IPv4FirewallSettingsArgs;
 import io.pulumi.azurenative.analysisservices.inputs.ResourceSkuArgs;
 import io.pulumi.azurenative.analysisservices.inputs.ServerAdministratorsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asAdministrators")
-    private final @Nullable Input<ServerAdministratorsArgs> asAdministrators;
+      private final @Nullable Input<ServerAdministratorsArgs> asAdministrators;
 
     public Input<ServerAdministratorsArgs> getAsAdministrators() {
         return this.asAdministrators == null ? Input.empty() : this.asAdministrators;
@@ -37,7 +37,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupBlobContainerUri")
-    private final @Nullable Input<String> backupBlobContainerUri;
+      private final @Nullable Input<String> backupBlobContainerUri;
 
     public Input<String> getBackupBlobContainerUri() {
         return this.backupBlobContainerUri == null ? Input.empty() : this.backupBlobContainerUri;
@@ -48,7 +48,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayDetails")
-    private final @Nullable Input<GatewayDetailsArgs> gatewayDetails;
+      private final @Nullable Input<GatewayDetailsArgs> gatewayDetails;
 
     public Input<GatewayDetailsArgs> getGatewayDetails() {
         return this.gatewayDetails == null ? Input.empty() : this.gatewayDetails;
@@ -59,7 +59,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipV4FirewallSettings")
-    private final @Nullable Input<IPv4FirewallSettingsArgs> ipV4FirewallSettings;
+      private final @Nullable Input<IPv4FirewallSettingsArgs> ipV4FirewallSettings;
 
     public Input<IPv4FirewallSettingsArgs> getIpV4FirewallSettings() {
         return this.ipV4FirewallSettings == null ? Input.empty() : this.ipV4FirewallSettings;
@@ -70,7 +70,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -81,7 +81,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedMode")
-    private final @Nullable Input<Integer> managedMode;
+      private final @Nullable Input<Integer> managedMode;
 
     public Input<Integer> getManagedMode() {
         return this.managedMode == null ? Input.empty() : this.managedMode;
@@ -92,7 +92,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="querypoolConnectionMode")
-    private final @Nullable Input<ConnectionMode> querypoolConnectionMode;
+      private final @Nullable Input<ConnectionMode> querypoolConnectionMode;
 
     public Input<ConnectionMode> getQuerypoolConnectionMode() {
         return this.querypoolConnectionMode == null ? Input.empty() : this.querypoolConnectionMode;
@@ -103,7 +103,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -114,7 +114,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverMonitorMode")
-    private final @Nullable Input<Integer> serverMonitorMode;
+      private final @Nullable Input<Integer> serverMonitorMode;
 
     public Input<Integer> getServerMonitorMode() {
         return this.serverMonitorMode == null ? Input.empty() : this.serverMonitorMode;
@@ -125,7 +125,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName")
-    private final @Nullable Input<String> serverName;
+      private final @Nullable Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName == null ? Input.empty() : this.serverName;
@@ -136,7 +136,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<ResourceSkuArgs> sku;
+      private final Input<ResourceSkuArgs> sku;
 
     public Input<ResourceSkuArgs> getSku() {
         return this.sku;
@@ -147,7 +147,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -356,7 +356,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ServerDetailsArgs build() {
             return new ServerDetailsArgs(asAdministrators, backupBlobContainerUri, gatewayDetails, ipV4FirewallSettings, location, managedMode, querypoolConnectionMode, resourceGroupName, serverMonitorMode, serverName, sku, tags);
         }

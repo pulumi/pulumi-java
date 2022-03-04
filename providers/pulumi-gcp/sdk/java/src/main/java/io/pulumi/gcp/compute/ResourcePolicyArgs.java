@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyGroupPlacementPolicyArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyArgs;
@@ -22,7 +22,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupPlacementPolicy")
-    private final @Nullable Input<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
+      private final @Nullable Input<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
 
     public Input<ResourcePolicyGroupPlacementPolicyArgs> getGroupPlacementPolicy() {
         return this.groupPlacementPolicy == null ? Input.empty() : this.groupPlacementPolicy;
@@ -46,7 +46,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceSchedulePolicy")
-    private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
+      private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
 
     public Input<ResourcePolicyInstanceSchedulePolicyArgs> getInstanceSchedulePolicy() {
         return this.instanceSchedulePolicy == null ? Input.empty() : this.instanceSchedulePolicy;
@@ -63,7 +63,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -86,7 +86,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -98,7 +98,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotSchedulePolicy")
-    private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
+      private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
 
     public Input<ResourcePolicySnapshotSchedulePolicyArgs> getSnapshotSchedulePolicy() {
         return this.snapshotSchedulePolicy == null ? Input.empty() : this.snapshotSchedulePolicy;
@@ -232,7 +232,6 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.snapshotSchedulePolicy = Input.ofNullable(snapshotSchedulePolicy);
             return this;
         }
-
         public ResourcePolicyArgs build() {
             return new ResourcePolicyArgs(description, groupPlacementPolicy, instanceSchedulePolicy, name, project, region, snapshotSchedulePolicy);
         }

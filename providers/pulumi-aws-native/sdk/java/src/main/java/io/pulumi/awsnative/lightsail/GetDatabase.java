@@ -6,17 +6,33 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lightsail.inputs.GetDatabaseArgs;
 import io.pulumi.awsnative.lightsail.outputs.GetDatabaseResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatabase {
-/**
- * Resource Type definition for AWS::Lightsail::Database
+    private GetDatabase() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatabaseArgs.Builder a);
+    }
+    private static GetDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatabaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Database
  * 
- */
+     */
+    public static CompletableFuture<GetDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Lightsail::Database
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> invokeAsync(GetDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getDatabase", TypeShape.of(GetDatabaseResult.class), args == null ? GetDatabaseArgs.Empty : args, Utilities.withVersion(options));
     }

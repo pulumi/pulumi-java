@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class PipelineSourceTriggerDescriptorResponse {
     /**
      * The timestamp when the source update happened.
      * 
-     */
+    */
     public Optional<String> getTimestamp() {
         return Optional.ofNullable(this.timestamp);
     }
@@ -54,7 +54,6 @@ public final class PipelineSourceTriggerDescriptorResponse {
             this.timestamp = timestamp;
             return this;
         }
-
         public PipelineSourceTriggerDescriptorResponse build() {
             return new PipelineSourceTriggerDescriptorResponse(timestamp);
         }

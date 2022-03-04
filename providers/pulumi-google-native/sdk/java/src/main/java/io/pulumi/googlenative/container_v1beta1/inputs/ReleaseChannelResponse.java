@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ReleaseChannelResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="channel", required=true)
-    private final String channel;
+      private final String channel;
 
     public String getChannel() {
         return this.channel;
@@ -59,7 +59,6 @@ public final class ReleaseChannelResponse extends io.pulumi.resources.InvokeArgs
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
-
         public ReleaseChannelResponse build() {
             return new ReleaseChannelResponse(channel);
         }

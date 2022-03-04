@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice.outputs;
 import io.pulumi.azurenative.containerservice.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeInWeekResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeSpanResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -64,42 +64,42 @@ public final class GetMaintenanceConfigurationResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Time slots on which upgrade is not allowed.
      * 
-     */
+    */
     public List<TimeSpanResponse> getNotAllowedTime() {
         return this.notAllowedTime == null ? List.of() : this.notAllowedTime;
     }
     /**
      * The system meta data relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Weekday time slots allowed to upgrade.
      * 
-     */
+    */
     public List<TimeInWeekResponse> getTimeInWeek() {
         return this.timeInWeek == null ? List.of() : this.timeInWeek;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -163,7 +163,6 @@ public final class GetMaintenanceConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMaintenanceConfigurationResult build() {
             return new GetMaintenanceConfigurationResult(id, name, notAllowedTime, systemData, timeInWeek, type);
         }

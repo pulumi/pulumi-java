@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.outputs.IdentityResponse;
 import io.pulumi.azurenative.automation.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.automation.outputs.SkuResponse;
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -160,133 +160,133 @@ public final class GetAutomationAccountResult {
     /**
      * URL of automation hybrid service which is used for hybrid worker on-boarding.
      * 
-     */
+    */
     public Optional<String> getAutomationHybridServiceUrl() {
         return Optional.ofNullable(this.automationHybridServiceUrl);
     }
     /**
      * Gets the creation time.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Indicates whether requests using non-AAD authentication are blocked
      * 
-     */
+    */
     public Optional<Boolean> getDisableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
     /**
      * Encryption properties for the automation account
      * 
-     */
+    */
     public Optional<EncryptionPropertiesResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Gets or sets the etag of the resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Gets or sets the last modified by.
      * 
-     */
+    */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * Gets the last modified time.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The Azure Region where the resource lives
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of Automation operations supported by the Automation resource provider.
      * 
-     */
+    */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
      * Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
      * 
-     */
+    */
     public Optional<Boolean> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Gets or sets the SKU of account.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Gets status of account.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Resource system metadata.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -441,7 +441,6 @@ public final class GetAutomationAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutomationAccountResult build() {
             return new GetAutomationAccountResult(automationHybridServiceUrl, creationTime, description, disableLocalAuth, encryption, etag, id, identity, lastModifiedBy, lastModifiedTime, location, name, privateEndpointConnections, publicNetworkAccess, sku, state, systemData, tags, type);
         }

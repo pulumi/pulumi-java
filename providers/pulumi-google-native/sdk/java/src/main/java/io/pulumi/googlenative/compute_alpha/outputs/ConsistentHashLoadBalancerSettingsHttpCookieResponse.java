@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DurationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
     /**
      * Name of the cookie.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Path to set for the cookie.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * Lifetime of the cookie.
      * 
-     */
+    */
     public DurationResponse getTtl() {
         return this.ttl;
     }
@@ -96,7 +96,6 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public ConsistentHashLoadBalancerSettingsHttpCookieResponse build() {
             return new ConsistentHashLoadBalancerSettingsHttpCookieResponse(name, path, ttl);
         }

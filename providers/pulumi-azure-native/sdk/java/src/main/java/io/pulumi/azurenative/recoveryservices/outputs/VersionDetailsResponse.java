@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class VersionDetailsResponse {
     /**
      * Version expiry date.
      * 
-     */
+    */
     public Optional<String> getExpiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
     /**
      * A value indicating whether security update required.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The agent version.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -97,7 +97,6 @@ public final class VersionDetailsResponse {
             this.version = version;
             return this;
         }
-
         public VersionDetailsResponse build() {
             return new VersionDetailsResponse(expiryDate, status, version);
         }

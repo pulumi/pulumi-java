@@ -17,7 +17,7 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineExtensionResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMNetworkProfileConfigurationResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMProtectionPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -225,189 +225,189 @@ public final class GetVirtualMachineScaleSetVMResult {
     /**
      * Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
      * 
-     */
+    */
     public Optional<AdditionalCapabilitiesResponse> getAdditionalCapabilities() {
         return Optional.ofNullable(this.additionalCapabilities);
     }
     /**
      * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). <br><br> For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) <br><br> Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getAvailabilitySet() {
         return Optional.ofNullable(this.availabilitySet);
     }
     /**
      * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
      * 
-     */
+    */
     public Optional<DiagnosticsProfileResponse> getDiagnosticsProfile() {
         return Optional.ofNullable(this.diagnosticsProfile);
     }
     /**
      * Specifies the hardware settings for the virtual machine.
      * 
-     */
+    */
     public Optional<HardwareProfileResponse> getHardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The virtual machine instance ID.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * The virtual machine instance view.
      * 
-     */
+    */
     public VirtualMachineScaleSetVMInstanceViewResponse getInstanceView() {
         return this.instanceView;
     }
     /**
      * Specifies whether the latest model has been applied to the virtual machine.
      * 
-     */
+    */
     public Boolean getLatestModelApplied() {
         return this.latestModelApplied;
     }
     /**
      * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
      * 
-     */
+    */
     public Optional<String> getLicenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Specifies whether the model applied to the virtual machine is the model of the virtual machine scale set or the customized model for the virtual machine.
      * 
-     */
+    */
     public String getModelDefinitionApplied() {
         return this.modelDefinitionApplied;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the network interfaces of the virtual machine.
      * 
-     */
+    */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Specifies the network profile configuration of the virtual machine.
      * 
-     */
+    */
     public Optional<VirtualMachineScaleSetVMNetworkProfileConfigurationResponse> getNetworkProfileConfiguration() {
         return Optional.ofNullable(this.networkProfileConfiguration);
     }
     /**
      * Specifies the operating system settings for the virtual machine.
      * 
-     */
+    */
     public Optional<OSProfileResponse> getOsProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
      * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
      * 
-     */
+    */
     public Optional<PlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * Specifies the protection policy of the virtual machine.
      * 
-     */
+    */
     public Optional<VirtualMachineScaleSetVMProtectionPolicyResponse> getProtectionPolicy() {
         return Optional.ofNullable(this.protectionPolicy);
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The virtual machine child extension resources.
      * 
-     */
+    */
     public List<VirtualMachineExtensionResponse> getResources() {
         return this.resources;
     }
     /**
      * Specifies the Security related profile settings for the virtual machine.
      * 
-     */
+    */
     public Optional<SecurityProfileResponse> getSecurityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
     /**
      * The virtual machine SKU.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * Specifies the storage settings for the virtual machine disks.
      * 
-     */
+    */
     public Optional<StorageProfileResponse> getStorageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
      * 
-     */
+    */
     public Optional<String> getUserData() {
         return Optional.ofNullable(this.userData);
     }
     /**
      * Azure VM unique ID.
      * 
-     */
+    */
     public String getVmId() {
         return this.vmId;
     }
     /**
      * The virtual machine zones.
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones;
     }
@@ -618,7 +618,6 @@ public final class GetVirtualMachineScaleSetVMResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public GetVirtualMachineScaleSetVMResult build() {
             return new GetVirtualMachineScaleSetVMResult(additionalCapabilities, availabilitySet, diagnosticsProfile, hardwareProfile, id, instanceId, instanceView, latestModelApplied, licenseType, location, modelDefinitionApplied, name, networkProfile, networkProfileConfiguration, osProfile, plan, protectionPolicy, provisioningState, resources, securityProfile, sku, storageProfile, tags, type, userData, vmId, zones);
         }

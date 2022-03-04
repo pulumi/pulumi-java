@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class GetPolicyResult {
     /**
      * Format of the policyContent.
      * 
-     */
+    */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Contents of the Policy as defined by the format.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -139,7 +139,6 @@ public final class GetPolicyResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(format, id, name, type, value);
         }

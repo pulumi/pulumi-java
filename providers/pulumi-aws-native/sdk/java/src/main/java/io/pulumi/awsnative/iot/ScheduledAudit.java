@@ -10,8 +10,8 @@ import io.pulumi.awsnative.iot.enums.ScheduledAuditFrequency;
 import io.pulumi.awsnative.iot.outputs.ScheduledAuditTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -123,6 +123,37 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
         return this.targetCheckNames;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ScheduledAuditArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.iot.ScheduledAuditArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.iot.ScheduledAuditArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ScheduledAudit(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ScheduledAudit(String name) {
+        this(name, ScheduledAuditArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ScheduledAudit(String name, ScheduledAuditArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

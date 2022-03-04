@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.StatusResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AppDevExperienceFeatureStateResponse {
     /**
      * Status of subcomponent that detects configured Service Mesh resources.
      * 
-     */
+    */
     public StatusResponse getNetworkingInstallSucceeded() {
         return this.networkingInstallSucceeded;
     }
@@ -52,7 +52,6 @@ public final class AppDevExperienceFeatureStateResponse {
             this.networkingInstallSucceeded = Objects.requireNonNull(networkingInstallSucceeded);
             return this;
         }
-
         public AppDevExperienceFeatureStateResponse build() {
             return new AppDevExperienceFeatureStateResponse(networkingInstallSucceeded);
         }

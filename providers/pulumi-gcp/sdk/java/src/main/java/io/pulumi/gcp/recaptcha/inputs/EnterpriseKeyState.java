@@ -4,7 +4,7 @@
 package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyAndroidSettingsGetArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyIosSettingsGetArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyTestingOptionsGetArgs;
@@ -24,7 +24,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidSettings")
-    private final @Nullable Input<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
+      private final @Nullable Input<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
 
     public Input<EnterpriseKeyAndroidSettingsGetArgs> getAndroidSettings() {
         return this.androidSettings == null ? Input.empty() : this.androidSettings;
@@ -35,7 +35,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -46,7 +46,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -57,7 +57,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosSettings")
-    private final @Nullable Input<EnterpriseKeyIosSettingsGetArgs> iosSettings;
+      private final @Nullable Input<EnterpriseKeyIosSettingsGetArgs> iosSettings;
 
     public Input<EnterpriseKeyIosSettingsGetArgs> getIosSettings() {
         return this.iosSettings == null ? Input.empty() : this.iosSettings;
@@ -68,7 +68,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -79,7 +79,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -90,7 +90,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -101,7 +101,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testingOptions")
-    private final @Nullable Input<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
+      private final @Nullable Input<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
 
     public Input<EnterpriseKeyTestingOptionsGetArgs> getTestingOptions() {
         return this.testingOptions == null ? Input.empty() : this.testingOptions;
@@ -112,7 +112,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webSettings")
-    private final @Nullable Input<EnterpriseKeyWebSettingsGetArgs> webSettings;
+      private final @Nullable Input<EnterpriseKeyWebSettingsGetArgs> webSettings;
 
     public Input<EnterpriseKeyWebSettingsGetArgs> getWebSettings() {
         return this.webSettings == null ? Input.empty() : this.webSettings;
@@ -276,7 +276,6 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             this.webSettings = Input.ofNullable(webSettings);
             return this;
         }
-
         public EnterpriseKeyState build() {
             return new EnterpriseKeyState(androidSettings, createTime, displayName, iosSettings, labels, name, project, testingOptions, webSettings);
         }

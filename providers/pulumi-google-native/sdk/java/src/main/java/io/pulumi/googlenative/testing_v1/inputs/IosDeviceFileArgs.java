@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-    private final @Nullable Input<String> bundleId;
+      private final @Nullable Input<String> bundleId;
 
     public Input<String> getBundleId() {
         return this.bundleId == null ? Input.empty() : this.bundleId;
@@ -35,7 +35,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<FileReferenceArgs> content;
+      private final @Nullable Input<FileReferenceArgs> content;
 
     public Input<FileReferenceArgs> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -46,7 +46,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="devicePath")
-    private final @Nullable Input<String> devicePath;
+      private final @Nullable Input<String> devicePath;
 
     public Input<String> getDevicePath() {
         return this.devicePath == null ? Input.empty() : this.devicePath;
@@ -120,7 +120,6 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
             this.devicePath = Input.ofNullable(devicePath);
             return this;
         }
-
         public IosDeviceFileArgs build() {
             return new IosDeviceFileArgs(bundleId, content, devicePath);
         }

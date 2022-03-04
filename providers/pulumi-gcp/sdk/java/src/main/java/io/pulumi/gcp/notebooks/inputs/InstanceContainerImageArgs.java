@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class InstanceContainerImageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="repository", required=true)
-    private final Input<String> repository;
+      private final Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository;
@@ -31,7 +31,7 @@ public final class InstanceContainerImageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -90,7 +90,6 @@ public final class InstanceContainerImageArgs extends io.pulumi.resources.Resour
             this.tag = Input.ofNullable(tag);
             return this;
         }
-
         public InstanceContainerImageArgs build() {
             return new InstanceContainerImageArgs(repository, tag);
         }

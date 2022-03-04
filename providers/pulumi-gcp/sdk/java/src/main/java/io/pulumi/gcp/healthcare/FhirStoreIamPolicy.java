@@ -5,8 +5,8 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.FhirStoreIamPolicyArgs;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamPolicyState;
@@ -110,6 +110,37 @@ public class FhirStoreIamPolicy extends io.pulumi.resources.CustomResource {
         return this.policyData;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FhirStoreIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.healthcare.FhirStoreIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.healthcare.FhirStoreIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FhirStoreIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FhirStoreIamPolicy(String name) {
+        this(name, FhirStoreIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FhirStoreIamPolicy(String name, FhirStoreIamPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -8,8 +8,8 @@ import io.pulumi.awsnative.cloudformation.HookTypeConfigArgs;
 import io.pulumi.awsnative.cloudformation.enums.HookTypeConfigConfigurationAlias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -94,6 +94,37 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
         return this.typeName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable HookTypeConfigArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.cloudformation.HookTypeConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.cloudformation.HookTypeConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public HookTypeConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public HookTypeConfig(String name) {
+        this(name, HookTypeConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public HookTypeConfig(String name, @Nullable HookTypeConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

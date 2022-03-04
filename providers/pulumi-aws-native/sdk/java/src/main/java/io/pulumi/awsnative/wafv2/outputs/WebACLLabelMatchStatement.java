@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLLabelMatchScope;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class WebACLLabelMatchStatement {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public WebACLLabelMatchStatement build() {
             return new WebACLLabelMatchStatement(key, scope);
         }

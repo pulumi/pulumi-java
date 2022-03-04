@@ -6,21 +6,41 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.compute.inputs.GetDiskEncryptionSetArgs;
 import io.pulumi.azurenative.compute.outputs.GetDiskEncryptionSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiskEncryptionSet {
-/**
- * disk encryption set resource.
+    private GetDiskEncryptionSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetDiskEncryptionSetArgs.Builder a);
+    }
+    private static GetDiskEncryptionSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDiskEncryptionSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * disk encryption set resource.
  * API Version: 2020-12-01.
  * 
- *
- * disk encryption set resource.
+     *
+     * disk encryption set resource.
  * 
- */
+     */
+    public static CompletableFuture<GetDiskEncryptionSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * disk encryption set resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * disk encryption set resource.
+     * 
+     */
     public static CompletableFuture<GetDiskEncryptionSetResult> invokeAsync(GetDiskEncryptionSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDiskEncryptionSet", TypeShape.of(GetDiskEncryptionSetResult.class), args == null ? GetDiskEncryptionSetArgs.Empty : args, Utilities.withVersion(options));
     }

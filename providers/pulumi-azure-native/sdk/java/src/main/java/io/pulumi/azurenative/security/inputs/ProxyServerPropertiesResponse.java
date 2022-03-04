@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ProxyServerPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable String ip;
+      private final @Nullable String ip;
 
     public Optional<String> getIp() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
@@ -34,7 +34,7 @@ public final class ProxyServerPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="port")
-    private final @Nullable String port;
+      private final @Nullable String port;
 
     public Optional<String> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -83,7 +83,6 @@ public final class ProxyServerPropertiesResponse extends io.pulumi.resources.Inv
             this.port = port;
             return this;
         }
-
         public ProxyServerPropertiesResponse build() {
             return new ProxyServerPropertiesResponse(ip, port);
         }

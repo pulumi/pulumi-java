@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SourceControlAuthInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
     /**
      * The value of this property indicates whether the source control commit trigger is enabled or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsCommitTriggerEnabled() {
         return Optional.ofNullable(this.isCommitTriggerEnabled);
     }
     /**
      * The full URL to the source code repository
      * 
-     */
+    */
     public String getRepositoryUrl() {
         return this.repositoryUrl;
     }
     /**
      * The authorization properties for accessing the source code repository.
      * 
-     */
+    */
     public Optional<SourceControlAuthInfoResponse> getSourceControlAuthProperties() {
         return Optional.ofNullable(this.sourceControlAuthProperties);
     }
     /**
      * The type of source control service.
      * 
-     */
+    */
     public String getSourceControlType() {
         return this.sourceControlType;
     }
@@ -120,7 +120,6 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }
-
         public ListBuildTaskSourceRepositoryPropertiesResult build() {
             return new ListBuildTaskSourceRepositoryPropertiesResult(isCommitTriggerEnabled, repositoryUrl, sourceControlAuthProperties, sourceControlType);
         }

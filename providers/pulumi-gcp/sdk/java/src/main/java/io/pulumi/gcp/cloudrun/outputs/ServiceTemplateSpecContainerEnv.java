@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvValueFrom;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +49,7 @@ public final class ServiceTemplateSpecContainerEnv {
     /**
      * Volume's name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -63,7 +63,7 @@ public final class ServiceTemplateSpecContainerEnv {
      * exists or not.
      * Defaults to "".
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -71,7 +71,7 @@ public final class ServiceTemplateSpecContainerEnv {
      * Source for the environment variable's value. Only supports secret_key_ref.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateSpecContainerEnvValueFrom> getValueFrom() {
         return Optional.ofNullable(this.valueFrom);
     }
@@ -114,7 +114,6 @@ public final class ServiceTemplateSpecContainerEnv {
             this.valueFrom = valueFrom;
             return this;
         }
-
         public ServiceTemplateSpecContainerEnv build() {
             return new ServiceTemplateSpecContainerEnv(name, value, valueFrom);
         }

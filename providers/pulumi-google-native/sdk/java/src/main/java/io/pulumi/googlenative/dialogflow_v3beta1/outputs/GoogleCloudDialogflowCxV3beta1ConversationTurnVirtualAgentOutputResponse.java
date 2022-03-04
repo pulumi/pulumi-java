@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1IntentResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1PageResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse;
@@ -73,49 +73,49 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
     /**
      * The Page on which the utterance was spoken. Only name and displayName will be set.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3beta1PageResponse getCurrentPage() {
         return this.currentPage;
     }
     /**
      * Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
      * 
-     */
+    */
     public Map<String,String> getDiagnosticInfo() {
         return this.diagnosticInfo;
     }
     /**
      * If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> getDifferences() {
         return this.differences;
     }
     /**
      * The session parameters available to the bot at this point.
      * 
-     */
+    */
     public Map<String,String> getSessionParameters() {
         return this.sessionParameters;
     }
     /**
      * Response error from the agent in the test result. If set, other output is empty.
      * 
-     */
+    */
     public GoogleRpcStatusResponse getStatus() {
         return this.status;
     }
     /**
      * The text responses from the agent for the turn.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> getTextResponses() {
         return this.textResponses;
     }
     /**
      * The Intent that triggered the response. Only name and displayName will be set.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3beta1IntentResponse getTriggeredIntent() {
         return this.triggeredIntent;
     }
@@ -186,7 +186,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
             this.triggeredIntent = Objects.requireNonNull(triggeredIntent);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse(currentPage, diagnosticInfo, differences, sessionParameters, status, textResponses, triggeredIntent);
         }

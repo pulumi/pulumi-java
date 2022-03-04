@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.essentialcontacts_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.essentialcontacts_v1.enums.ContactNotificationCategorySubscriptionsItem;
 import io.pulumi.googlenative.essentialcontacts_v1.enums.ContactValidationState;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -33,7 +33,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageTag")
-    private final @Nullable Input<String> languageTag;
+      private final @Nullable Input<String> languageTag;
 
     public Input<String> getLanguageTag() {
         return this.languageTag == null ? Input.empty() : this.languageTag;
@@ -44,7 +44,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,14 +55,14 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationCategorySubscriptions")
-    private final @Nullable Input<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
+      private final @Nullable Input<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
 
     public Input<List<ContactNotificationCategorySubscriptionsItem>> getNotificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions == null ? Input.empty() : this.notificationCategorySubscriptions;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -73,7 +73,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validateTime")
-    private final @Nullable Input<String> validateTime;
+      private final @Nullable Input<String> validateTime;
 
     public Input<String> getValidateTime() {
         return this.validateTime == null ? Input.empty() : this.validateTime;
@@ -84,7 +84,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationState")
-    private final @Nullable Input<ContactValidationState> validationState;
+      private final @Nullable Input<ContactValidationState> validationState;
 
     public Input<ContactValidationState> getValidationState() {
         return this.validationState == null ? Input.empty() : this.validationState;
@@ -218,7 +218,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.validationState = Input.ofNullable(validationState);
             return this;
         }
-
         public ContactArgs build() {
             return new ContactArgs(email, languageTag, name, notificationCategorySubscriptions, project, validateTime, validationState);
         }

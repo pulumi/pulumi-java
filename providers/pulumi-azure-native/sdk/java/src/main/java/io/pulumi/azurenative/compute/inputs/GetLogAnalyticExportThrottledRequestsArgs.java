@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="blobContainerSasUri", required=true)
-    private final String blobContainerSasUri;
+      private final String blobContainerSasUri;
 
     public String getBlobContainerSasUri() {
         return this.blobContainerSasUri;
@@ -31,7 +31,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="fromTime", required=true)
-    private final String fromTime;
+      private final String fromTime;
 
     public String getFromTime() {
         return this.fromTime;
@@ -42,7 +42,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="groupByClientApplicationId")
-    private final @Nullable Boolean groupByClientApplicationId;
+      private final @Nullable Boolean groupByClientApplicationId;
 
     public Optional<Boolean> getGroupByClientApplicationId() {
         return this.groupByClientApplicationId == null ? Optional.empty() : Optional.ofNullable(this.groupByClientApplicationId);
@@ -53,7 +53,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="groupByOperationName")
-    private final @Nullable Boolean groupByOperationName;
+      private final @Nullable Boolean groupByOperationName;
 
     public Optional<Boolean> getGroupByOperationName() {
         return this.groupByOperationName == null ? Optional.empty() : Optional.ofNullable(this.groupByOperationName);
@@ -64,7 +64,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="groupByResourceName")
-    private final @Nullable Boolean groupByResourceName;
+      private final @Nullable Boolean groupByResourceName;
 
     public Optional<Boolean> getGroupByResourceName() {
         return this.groupByResourceName == null ? Optional.empty() : Optional.ofNullable(this.groupByResourceName);
@@ -75,7 +75,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="groupByThrottlePolicy")
-    private final @Nullable Boolean groupByThrottlePolicy;
+      private final @Nullable Boolean groupByThrottlePolicy;
 
     public Optional<Boolean> getGroupByThrottlePolicy() {
         return this.groupByThrottlePolicy == null ? Optional.empty() : Optional.ofNullable(this.groupByThrottlePolicy);
@@ -86,7 +86,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="groupByUserAgent")
-    private final @Nullable Boolean groupByUserAgent;
+      private final @Nullable Boolean groupByUserAgent;
 
     public Optional<Boolean> getGroupByUserAgent() {
         return this.groupByUserAgent == null ? Optional.empty() : Optional.ofNullable(this.groupByUserAgent);
@@ -97,7 +97,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -108,7 +108,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="toTime", required=true)
-    private final String toTime;
+      private final String toTime;
 
     public String getToTime() {
         return this.toTime;
@@ -227,7 +227,6 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
             this.toTime = Objects.requireNonNull(toTime);
             return this;
         }
-
         public GetLogAnalyticExportThrottledRequestsArgs build() {
             return new GetLogAnalyticExportThrottledRequestsArgs(blobContainerSasUri, fromTime, groupByClientApplicationId, groupByOperationName, groupByResourceName, groupByThrottlePolicy, groupByUserAgent, location, toTime);
         }

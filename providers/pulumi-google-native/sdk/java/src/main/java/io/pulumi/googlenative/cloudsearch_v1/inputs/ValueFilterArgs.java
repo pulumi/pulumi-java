@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.ValueArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatorName")
-    private final @Nullable Input<String> operatorName;
+      private final @Nullable Input<String> operatorName;
 
     public Input<String> getOperatorName() {
         return this.operatorName == null ? Input.empty() : this.operatorName;
@@ -31,7 +31,7 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<ValueArgs> value;
+      private final @Nullable Input<ValueArgs> value;
 
     public Input<ValueArgs> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -90,7 +90,6 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ValueFilterArgs build() {
             return new ValueFilterArgs(operatorName, value);
         }

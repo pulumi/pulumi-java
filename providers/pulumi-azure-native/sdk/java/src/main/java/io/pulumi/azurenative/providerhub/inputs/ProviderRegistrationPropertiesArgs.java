@@ -16,7 +16,7 @@ import io.pulumi.azurenative.providerhub.inputs.ResourceProviderManifestProperti
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,105 +29,105 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
     public static final ProviderRegistrationPropertiesArgs Empty = new ProviderRegistrationPropertiesArgs();
 
     @InputImport(name="capabilities")
-    private final @Nullable Input<List<ResourceProviderCapabilitiesArgs>> capabilities;
+      private final @Nullable Input<List<ResourceProviderCapabilitiesArgs>> capabilities;
 
     public Input<List<ResourceProviderCapabilitiesArgs>> getCapabilities() {
         return this.capabilities == null ? Input.empty() : this.capabilities;
     }
 
     @InputImport(name="featuresRule")
-    private final @Nullable Input<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule;
+      private final @Nullable Input<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule;
 
     public Input<ResourceProviderManifestPropertiesFeaturesRuleArgs> getFeaturesRule() {
         return this.featuresRule == null ? Input.empty() : this.featuresRule;
     }
 
     @InputImport(name="management")
-    private final @Nullable Input<ResourceProviderManifestPropertiesManagementArgs> management;
+      private final @Nullable Input<ResourceProviderManifestPropertiesManagementArgs> management;
 
     public Input<ResourceProviderManifestPropertiesManagementArgs> getManagement() {
         return this.management == null ? Input.empty() : this.management;
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+      private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
     @InputImport(name="providerAuthentication")
-    private final @Nullable Input<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication;
+      private final @Nullable Input<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication;
 
     public Input<ResourceProviderManifestPropertiesProviderAuthenticationArgs> getProviderAuthentication() {
         return this.providerAuthentication == null ? Input.empty() : this.providerAuthentication;
     }
 
     @InputImport(name="providerAuthorizations")
-    private final @Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
+      private final @Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
 
     public Input<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
         return this.providerAuthorizations == null ? Input.empty() : this.providerAuthorizations;
     }
 
     @InputImport(name="providerHubMetadata")
-    private final @Nullable Input<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata;
+      private final @Nullable Input<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata;
 
     public Input<ProviderRegistrationPropertiesProviderHubMetadataArgs> getProviderHubMetadata() {
         return this.providerHubMetadata == null ? Input.empty() : this.providerHubMetadata;
     }
 
     @InputImport(name="providerType")
-    private final @Nullable Input<Either<String,ResourceProviderType>> providerType;
+      private final @Nullable Input<Either<String,ResourceProviderType>> providerType;
 
     public Input<Either<String,ResourceProviderType>> getProviderType() {
         return this.providerType == null ? Input.empty() : this.providerType;
     }
 
     @InputImport(name="providerVersion")
-    private final @Nullable Input<String> providerVersion;
+      private final @Nullable Input<String> providerVersion;
 
     public Input<String> getProviderVersion() {
         return this.providerVersion == null ? Input.empty() : this.providerVersion;
     }
 
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
     @InputImport(name="requestHeaderOptions")
-    private final @Nullable Input<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
+      private final @Nullable Input<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
 
     public Input<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> getRequestHeaderOptions() {
         return this.requestHeaderOptions == null ? Input.empty() : this.requestHeaderOptions;
     }
 
     @InputImport(name="requiredFeatures")
-    private final @Nullable Input<List<String>> requiredFeatures;
+      private final @Nullable Input<List<String>> requiredFeatures;
 
     public Input<List<String>> getRequiredFeatures() {
         return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
     }
 
     @InputImport(name="subscriptionLifecycleNotificationSpecifications")
-    private final @Nullable Input<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
+      private final @Nullable Input<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
 
     public Input<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> getSubscriptionLifecycleNotificationSpecifications() {
         return this.subscriptionLifecycleNotificationSpecifications == null ? Input.empty() : this.subscriptionLifecycleNotificationSpecifications;
     }
 
     @InputImport(name="templateDeploymentOptions")
-    private final @Nullable Input<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
+      private final @Nullable Input<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
 
     public Input<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> getTemplateDeploymentOptions() {
         return this.templateDeploymentOptions == null ? Input.empty() : this.templateDeploymentOptions;
@@ -381,7 +381,6 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             this.templateDeploymentOptions = Input.ofNullable(templateDeploymentOptions);
             return this;
         }
-
         public ProviderRegistrationPropertiesArgs build() {
             return new ProviderRegistrationPropertiesArgs(capabilities, featuresRule, management, metadata, namespace, providerAuthentication, providerAuthorizations, providerHubMetadata, providerType, providerVersion, provisioningState, requestHeaderOptions, requiredFeatures, subscriptionLifecycleNotificationSpecifications, templateDeploymentOptions);
         }

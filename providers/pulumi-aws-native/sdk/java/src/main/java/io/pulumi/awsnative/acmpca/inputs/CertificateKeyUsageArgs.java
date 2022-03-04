@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,63 +19,63 @@ public final class CertificateKeyUsageArgs extends io.pulumi.resources.ResourceA
     public static final CertificateKeyUsageArgs Empty = new CertificateKeyUsageArgs();
 
     @InputImport(name="cRLSign")
-    private final @Nullable Input<Boolean> cRLSign;
+      private final @Nullable Input<Boolean> cRLSign;
 
     public Input<Boolean> getCRLSign() {
         return this.cRLSign == null ? Input.empty() : this.cRLSign;
     }
 
     @InputImport(name="dataEncipherment")
-    private final @Nullable Input<Boolean> dataEncipherment;
+      private final @Nullable Input<Boolean> dataEncipherment;
 
     public Input<Boolean> getDataEncipherment() {
         return this.dataEncipherment == null ? Input.empty() : this.dataEncipherment;
     }
 
     @InputImport(name="decipherOnly")
-    private final @Nullable Input<Boolean> decipherOnly;
+      private final @Nullable Input<Boolean> decipherOnly;
 
     public Input<Boolean> getDecipherOnly() {
         return this.decipherOnly == null ? Input.empty() : this.decipherOnly;
     }
 
     @InputImport(name="digitalSignature")
-    private final @Nullable Input<Boolean> digitalSignature;
+      private final @Nullable Input<Boolean> digitalSignature;
 
     public Input<Boolean> getDigitalSignature() {
         return this.digitalSignature == null ? Input.empty() : this.digitalSignature;
     }
 
     @InputImport(name="encipherOnly")
-    private final @Nullable Input<Boolean> encipherOnly;
+      private final @Nullable Input<Boolean> encipherOnly;
 
     public Input<Boolean> getEncipherOnly() {
         return this.encipherOnly == null ? Input.empty() : this.encipherOnly;
     }
 
     @InputImport(name="keyAgreement")
-    private final @Nullable Input<Boolean> keyAgreement;
+      private final @Nullable Input<Boolean> keyAgreement;
 
     public Input<Boolean> getKeyAgreement() {
         return this.keyAgreement == null ? Input.empty() : this.keyAgreement;
     }
 
     @InputImport(name="keyCertSign")
-    private final @Nullable Input<Boolean> keyCertSign;
+      private final @Nullable Input<Boolean> keyCertSign;
 
     public Input<Boolean> getKeyCertSign() {
         return this.keyCertSign == null ? Input.empty() : this.keyCertSign;
     }
 
     @InputImport(name="keyEncipherment")
-    private final @Nullable Input<Boolean> keyEncipherment;
+      private final @Nullable Input<Boolean> keyEncipherment;
 
     public Input<Boolean> getKeyEncipherment() {
         return this.keyEncipherment == null ? Input.empty() : this.keyEncipherment;
     }
 
     @InputImport(name="nonRepudiation")
-    private final @Nullable Input<Boolean> nonRepudiation;
+      private final @Nullable Input<Boolean> nonRepudiation;
 
     public Input<Boolean> getNonRepudiation() {
         return this.nonRepudiation == null ? Input.empty() : this.nonRepudiation;
@@ -239,7 +239,6 @@ public final class CertificateKeyUsageArgs extends io.pulumi.resources.ResourceA
             this.nonRepudiation = Input.ofNullable(nonRepudiation);
             return this;
         }
-
         public CertificateKeyUsageArgs build() {
             return new CertificateKeyUsageArgs(cRLSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyCertSign, keyEncipherment, nonRepudiation);
         }

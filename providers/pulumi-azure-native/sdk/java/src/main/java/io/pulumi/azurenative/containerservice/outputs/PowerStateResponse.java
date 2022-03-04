@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class PowerStateResponse {
     /**
      * Tells whether the cluster is Running or Stopped
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
@@ -54,7 +54,6 @@ public final class PowerStateResponse {
             this.code = code;
             return this;
         }
-
         public PowerStateResponse build() {
             return new PowerStateResponse(code);
         }

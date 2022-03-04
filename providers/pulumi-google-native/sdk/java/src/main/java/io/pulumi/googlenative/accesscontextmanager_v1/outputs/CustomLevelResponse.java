@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.ExprResponse;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class CustomLevelResponse {
     /**
      * A Cloud CEL expression evaluating to a boolean.
      * 
-     */
+    */
     public ExprResponse getExpr() {
         return this.expr;
     }
@@ -52,7 +52,6 @@ public final class CustomLevelResponse {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
-
         public CustomLevelResponse build() {
             return new CustomLevelResponse(expr);
         }

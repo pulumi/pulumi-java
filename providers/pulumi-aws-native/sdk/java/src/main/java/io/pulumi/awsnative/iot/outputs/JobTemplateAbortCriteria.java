@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.JobTemplateAction;
 import io.pulumi.awsnative.iot.enums.JobTemplateFailureType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class JobTemplateAbortCriteria {
     /**
      * The type of job action to take to initiate the job abort.
      * 
-     */
+    */
     public JobTemplateAction getAction() {
         return this.action;
     }
     /**
      * The type of job execution failures that can initiate a job abort.
      * 
-     */
+    */
     public JobTemplateFailureType getFailureType() {
         return this.failureType;
     }
     /**
      * The minimum number of things which must receive job execution notifications before the job can be aborted.
      * 
-     */
+    */
     public Integer getMinNumberOfExecutedThings() {
         return this.minNumberOfExecutedThings;
     }
     /**
      * The minimum percentage of job execution failures that must occur to initiate the job abort.
      * 
-     */
+    */
     public Double getThresholdPercentage() {
         return this.thresholdPercentage;
     }
@@ -119,7 +119,6 @@ public final class JobTemplateAbortCriteria {
             this.thresholdPercentage = Objects.requireNonNull(thresholdPercentage);
             return this;
         }
-
         public JobTemplateAbortCriteria build() {
             return new JobTemplateAbortCriteria(action, failureType, minNumberOfExecutedThings, thresholdPercentage);
         }

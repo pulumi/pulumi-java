@@ -20,7 +20,7 @@ import io.pulumi.awsnative.ec2.outputs.EC2FleetMemoryMiBRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetNetworkInterfaceCountRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetTotalLocalStorageGBRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetVCpuCountRangeRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -327,7 +327,6 @@ public final class EC2FleetInstanceRequirementsRequest {
             this.vCpuCount = vCpuCount;
             return this;
         }
-
         public EC2FleetInstanceRequirementsRequest build() {
             return new EC2FleetInstanceRequirementsRequest(acceleratorCount, acceleratorManufacturers, acceleratorNames, acceleratorTotalMemoryMiB, acceleratorTypes, bareMetal, baselineEbsBandwidthMbps, burstablePerformance, cpuManufacturers, excludedInstanceTypes, instanceGenerations, localStorage, localStorageTypes, memoryGiBPerVCpu, memoryMiB, networkInterfaceCount, onDemandMaxPricePercentageOverLowestPrice, requireHibernateSupport, spotMaxPricePercentageOverLowestPrice, totalLocalStorageGB, vCpuCount);
         }

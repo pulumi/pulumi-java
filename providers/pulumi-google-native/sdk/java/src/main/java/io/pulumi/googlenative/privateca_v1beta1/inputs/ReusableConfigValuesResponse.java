@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.CaOptionsResponse;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.KeyUsageResponse;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ObjectIdResponse;
@@ -26,7 +26,7 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="additionalExtensions", required=true)
-    private final List<X509ExtensionResponse> additionalExtensions;
+      private final List<X509ExtensionResponse> additionalExtensions;
 
     public List<X509ExtensionResponse> getAdditionalExtensions() {
         return this.additionalExtensions;
@@ -37,7 +37,7 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="aiaOcspServers", required=true)
-    private final List<String> aiaOcspServers;
+      private final List<String> aiaOcspServers;
 
     public List<String> getAiaOcspServers() {
         return this.aiaOcspServers;
@@ -48,7 +48,7 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="caOptions", required=true)
-    private final CaOptionsResponse caOptions;
+      private final CaOptionsResponse caOptions;
 
     public CaOptionsResponse getCaOptions() {
         return this.caOptions;
@@ -59,7 +59,7 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyUsage", required=true)
-    private final KeyUsageResponse keyUsage;
+      private final KeyUsageResponse keyUsage;
 
     public KeyUsageResponse getKeyUsage() {
         return this.keyUsage;
@@ -70,7 +70,7 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="policyIds", required=true)
-    private final List<ObjectIdResponse> policyIds;
+      private final List<ObjectIdResponse> policyIds;
 
     public List<ObjectIdResponse> getPolicyIds() {
         return this.policyIds;
@@ -149,7 +149,6 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
             this.policyIds = Objects.requireNonNull(policyIds);
             return this;
         }
-
         public ReusableConfigValuesResponse build() {
             return new ReusableConfigValuesResponse(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

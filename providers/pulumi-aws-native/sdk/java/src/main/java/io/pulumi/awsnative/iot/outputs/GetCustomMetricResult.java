@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.CustomMetricTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class GetCustomMetricResult {
     /**
      * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The Amazon Resource Number (ARN) of the custom metric.
      * 
-     */
+    */
     public Optional<String> getMetricArn() {
         return Optional.ofNullable(this.metricArn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<CustomMetricTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -99,7 +99,6 @@ public final class GetCustomMetricResult {
             this.tags = tags;
             return this;
         }
-
         public GetCustomMetricResult build() {
             return new GetCustomMetricResult(displayName, metricArn, tags);
         }

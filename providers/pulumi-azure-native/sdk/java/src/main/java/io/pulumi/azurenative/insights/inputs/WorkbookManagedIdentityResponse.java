@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.WorkbookUserAssignedIdentitiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class WorkbookManagedIdentityResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -35,7 +35,7 @@ public final class WorkbookManagedIdentityResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
+      private final @Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
 
     public Optional<WorkbookUserAssignedIdentitiesResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentities);
@@ -84,7 +84,6 @@ public final class WorkbookManagedIdentityResponse extends io.pulumi.resources.I
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public WorkbookManagedIdentityResponse build() {
             return new WorkbookManagedIdentityResponse(type, userAssignedIdentities);
         }

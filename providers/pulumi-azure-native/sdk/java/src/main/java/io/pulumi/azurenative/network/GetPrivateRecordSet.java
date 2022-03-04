@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetPrivateRecordSetArgs;
 import io.pulumi.azurenative.network.outputs.GetPrivateRecordSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateRecordSet {
-/**
- * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
+    private GetPrivateRecordSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateRecordSetArgs.Builder a);
+    }
+    private static GetPrivateRecordSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateRecordSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
  * API Version: 2020-06-01.
  * 
- *
- * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
+     *
+     * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateRecordSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
+     * 
+     */
     public static CompletableFuture<GetPrivateRecordSetResult> invokeAsync(GetPrivateRecordSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateRecordSet", TypeShape.of(GetPrivateRecordSetResult.class), args == null ? GetPrivateRecordSetArgs.Empty : args, Utilities.withVersion(options));
     }

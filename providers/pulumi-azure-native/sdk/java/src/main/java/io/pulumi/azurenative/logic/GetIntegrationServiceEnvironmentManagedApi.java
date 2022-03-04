@@ -6,21 +6,41 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.inputs.GetIntegrationServiceEnvironmentManagedApiArgs;
 import io.pulumi.azurenative.logic.outputs.GetIntegrationServiceEnvironmentManagedApiResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationServiceEnvironmentManagedApi {
-/**
- * The integration service environment managed api.
+    private GetIntegrationServiceEnvironmentManagedApi() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationServiceEnvironmentManagedApiArgs.Builder a);
+    }
+    private static GetIntegrationServiceEnvironmentManagedApiArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationServiceEnvironmentManagedApiArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The integration service environment managed api.
  * API Version: 2019-05-01.
  * 
- *
- * The integration service environment managed api.
+     *
+     * The integration service environment managed api.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationServiceEnvironmentManagedApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The integration service environment managed api.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The integration service environment managed api.
+     * 
+     */
     public static CompletableFuture<GetIntegrationServiceEnvironmentManagedApiResult> invokeAsync(GetIntegrationServiceEnvironmentManagedApiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationServiceEnvironmentManagedApi", TypeShape.of(GetIntegrationServiceEnvironmentManagedApiResult.class), args == null ? GetIntegrationServiceEnvironmentManagedApiArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.inputs.AzureBlobFileSystemConfigurationRespon
 import io.pulumi.azurenative.batch.inputs.AzureFileShareConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.CIFSMountConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.NFSMountConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="azureBlobFileSystemConfiguration")
-    private final @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
+      private final @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
 
     public Optional<AzureBlobFileSystemConfigurationResponse> getAzureBlobFileSystemConfiguration() {
         return this.azureBlobFileSystemConfiguration == null ? Optional.empty() : Optional.ofNullable(this.azureBlobFileSystemConfiguration);
@@ -33,7 +33,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="azureFileShareConfiguration")
-    private final @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
+      private final @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
 
     public Optional<AzureFileShareConfigurationResponse> getAzureFileShareConfiguration() {
         return this.azureFileShareConfiguration == null ? Optional.empty() : Optional.ofNullable(this.azureFileShareConfiguration);
@@ -44,7 +44,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="cifsMountConfiguration")
-    private final @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
+      private final @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
 
     public Optional<CIFSMountConfigurationResponse> getCifsMountConfiguration() {
         return this.cifsMountConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cifsMountConfiguration);
@@ -55,7 +55,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="nfsMountConfiguration")
-    private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
+      private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
 
     public Optional<NFSMountConfigurationResponse> getNfsMountConfiguration() {
         return this.nfsMountConfiguration == null ? Optional.empty() : Optional.ofNullable(this.nfsMountConfiguration);
@@ -124,7 +124,6 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
             this.nfsMountConfiguration = nfsMountConfiguration;
             return this;
         }
-
         public MountConfigurationResponse build() {
             return new MountConfigurationResponse(azureBlobFileSystemConfiguration, azureFileShareConfiguration, cifsMountConfiguration, nfsMountConfiguration);
         }

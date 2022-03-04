@@ -6,21 +6,41 @@ package io.pulumi.azurenative.timeseriesinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.timeseriesinsights.inputs.GetGen2EnvironmentArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.GetGen2EnvironmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGen2Environment {
-/**
- * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
+    private GetGen2Environment() {}
+    public interface BuilderApplicator {
+        public void apply(GetGen2EnvironmentArgs.Builder a);
+    }
+    private static GetGen2EnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGen2EnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
  * API Version: 2020-05-15.
  * 
- *
- * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
+     *
+     * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
  * 
- */
+     */
+    public static CompletableFuture<GetGen2EnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
+     * API Version: 2020-05-15.
+     * 
+     *
+         * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
+     * 
+     */
     public static CompletableFuture<GetGen2EnvironmentResult> invokeAsync(GetGen2EnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getGen2Environment", TypeShape.of(GetGen2EnvironmentResult.class), args == null ? GetGen2EnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

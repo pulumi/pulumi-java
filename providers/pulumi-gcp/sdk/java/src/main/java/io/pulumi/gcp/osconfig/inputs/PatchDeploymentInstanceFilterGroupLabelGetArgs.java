@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PatchDeploymentInstanceFilterGroupLabelGetArgs extends io.pul
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Input<Map<String,String>> labels;
+      private final Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels;
@@ -62,7 +62,6 @@ public final class PatchDeploymentInstanceFilterGroupLabelGetArgs extends io.pul
             this.labels = Input.of(Objects.requireNonNull(labels));
             return this;
         }
-
         public PatchDeploymentInstanceFilterGroupLabelGetArgs build() {
             return new PatchDeploymentInstanceFilterGroupLabelGetArgs(labels);
         }

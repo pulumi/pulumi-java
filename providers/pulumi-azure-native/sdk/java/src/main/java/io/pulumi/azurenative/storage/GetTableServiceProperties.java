@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.inputs.GetTableServicePropertiesArgs;
 import io.pulumi.azurenative.storage.outputs.GetTableServicePropertiesResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTableServiceProperties {
-/**
- * The properties of a storage account’s Table service.
+    private GetTableServiceProperties() {}
+    public interface BuilderApplicator {
+        public void apply(GetTableServicePropertiesArgs.Builder a);
+    }
+    private static GetTableServicePropertiesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTableServicePropertiesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The properties of a storage account’s Table service.
  * API Version: 2021-02-01.
  * 
- *
- * The properties of a storage account’s Table service.
+     *
+     * The properties of a storage account’s Table service.
  * 
- */
+     */
+    public static CompletableFuture<GetTableServicePropertiesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The properties of a storage account’s Table service.
+     * API Version: 2021-02-01.
+     * 
+     *
+         * The properties of a storage account’s Table service.
+     * 
+     */
     public static CompletableFuture<GetTableServicePropertiesResult> invokeAsync(GetTableServicePropertiesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getTableServiceProperties", TypeShape.of(GetTableServicePropertiesResult.class), args == null ? GetTableServicePropertiesArgs.Empty : args, Utilities.withVersion(options));
     }

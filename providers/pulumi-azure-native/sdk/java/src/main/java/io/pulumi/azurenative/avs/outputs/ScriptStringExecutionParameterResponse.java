@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,7 +41,7 @@ public final class ScriptStringExecutionParameterResponse {
     /**
      * The parameter name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -49,14 +49,14 @@ public final class ScriptStringExecutionParameterResponse {
      * The type of execution parameter
      * Expected value is 'Value'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The value for the passed parameter
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -99,7 +99,6 @@ public final class ScriptStringExecutionParameterResponse {
             this.value = value;
             return this;
         }
-
         public ScriptStringExecutionParameterResponse build() {
             return new ScriptStringExecutionParameterResponse(name, type, value);
         }

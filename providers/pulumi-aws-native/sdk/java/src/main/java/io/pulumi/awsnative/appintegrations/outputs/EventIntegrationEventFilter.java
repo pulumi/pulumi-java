@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appintegrations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EventIntegrationEventFilter {
     /**
      * The source of the events.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
@@ -52,7 +52,6 @@ public final class EventIntegrationEventFilter {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public EventIntegrationEventFilter build() {
             return new EventIntegrationEventFilter(source);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReferenceImage {
-/**
- * Gets information associated with a ReferenceImage. Possible errors: * Returns NOT_FOUND if the specified image does not exist.
+    private GetReferenceImage() {}
+    public interface BuilderApplicator {
+        public void apply(GetReferenceImageArgs.Builder a);
+    }
+    private static GetReferenceImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReferenceImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets information associated with a ReferenceImage. Possible errors: * Returns NOT_FOUND if the specified image does not exist.
  * 
- */
+     */
+    public static CompletableFuture<GetReferenceImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets information associated with a ReferenceImage. Possible errors: * Returns NOT_FOUND if the specified image does not exist.
+     * 
+     */
     public static CompletableFuture<GetReferenceImageResult> invokeAsync(GetReferenceImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vision/v1:getReferenceImage", TypeShape.of(GetReferenceImageResult.class), args == null ? GetReferenceImageArgs.Empty : args, Utilities.withVersion(options));
     }

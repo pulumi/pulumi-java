@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetClusterClusterTelemetry extends io.pulumi.resources.Invoke
     public static final GetClusterClusterTelemetry Empty = new GetClusterClusterTelemetry();
 
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -51,7 +51,6 @@ public final class GetClusterClusterTelemetry extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterClusterTelemetry build() {
             return new GetClusterClusterTelemetry(type);
         }

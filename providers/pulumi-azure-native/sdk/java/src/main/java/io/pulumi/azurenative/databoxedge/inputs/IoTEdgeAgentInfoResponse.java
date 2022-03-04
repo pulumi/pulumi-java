@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.ImageRepositoryCredentialResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="imageName", required=true)
-    private final String imageName;
+      private final String imageName;
 
     public String getImageName() {
         return this.imageName;
@@ -35,7 +35,7 @@ public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="imageRepository")
-    private final @Nullable ImageRepositoryCredentialResponse imageRepository;
+      private final @Nullable ImageRepositoryCredentialResponse imageRepository;
 
     public Optional<ImageRepositoryCredentialResponse> getImageRepository() {
         return this.imageRepository == null ? Optional.empty() : Optional.ofNullable(this.imageRepository);
@@ -46,7 +46,7 @@ public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tag", required=true)
-    private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -105,7 +105,6 @@ public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeAr
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public IoTEdgeAgentInfoResponse build() {
             return new IoTEdgeAgentInfoResponse(imageName, imageRepository, tag);
         }

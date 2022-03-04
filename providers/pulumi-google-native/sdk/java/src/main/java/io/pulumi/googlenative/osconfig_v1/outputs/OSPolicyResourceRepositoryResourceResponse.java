@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceRepositoryResourceAptRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceRepositoryResourceGooRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceRepositoryResourceYumRepositoryResponse;
@@ -48,28 +48,28 @@ public final class OSPolicyResourceRepositoryResourceResponse {
     /**
      * An Apt Repository.
      * 
-     */
+    */
     public OSPolicyResourceRepositoryResourceAptRepositoryResponse getApt() {
         return this.apt;
     }
     /**
      * A Goo Repository.
      * 
-     */
+    */
     public OSPolicyResourceRepositoryResourceGooRepositoryResponse getGoo() {
         return this.goo;
     }
     /**
      * A Yum Repository.
      * 
-     */
+    */
     public OSPolicyResourceRepositoryResourceYumRepositoryResponse getYum() {
         return this.yum;
     }
     /**
      * A Zypper Repository.
      * 
-     */
+    */
     public OSPolicyResourceRepositoryResourceZypperRepositoryResponse getZypper() {
         return this.zypper;
     }
@@ -119,7 +119,6 @@ public final class OSPolicyResourceRepositoryResourceResponse {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceResponse build() {
             return new OSPolicyResourceRepositoryResourceResponse(apt, goo, yum, zypper);
         }

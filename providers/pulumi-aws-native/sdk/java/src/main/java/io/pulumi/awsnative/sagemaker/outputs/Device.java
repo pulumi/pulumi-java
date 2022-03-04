@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class Device {
     /**
      * Description of the device
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The name of the device
      * 
-     */
+    */
     public String getDeviceName() {
         return this.deviceName;
     }
     /**
      * AWS Internet of Things (IoT) object name.
      * 
-     */
+    */
     public Optional<String> getIotThingName() {
         return Optional.ofNullable(this.iotThingName);
     }
@@ -97,7 +97,6 @@ public final class Device {
             this.iotThingName = iotThingName;
             return this;
         }
-
         public Device build() {
             return new Device(description, deviceName, iotThingName);
         }

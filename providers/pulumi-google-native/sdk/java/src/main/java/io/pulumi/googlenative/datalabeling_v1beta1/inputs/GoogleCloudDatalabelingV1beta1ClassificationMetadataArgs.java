@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
      * 
      */
     @InputImport(name="isMultiLabel")
-    private final @Nullable Input<Boolean> isMultiLabel;
+      private final @Nullable Input<Boolean> isMultiLabel;
 
     public Input<Boolean> getIsMultiLabel() {
         return this.isMultiLabel == null ? Input.empty() : this.isMultiLabel;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
             this.isMultiLabel = Input.ofNullable(isMultiLabel);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs build() {
             return new GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(isMultiLabel);
         }

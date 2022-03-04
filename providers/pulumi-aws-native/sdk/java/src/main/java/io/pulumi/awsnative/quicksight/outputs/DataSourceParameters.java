@@ -20,7 +20,7 @@ import io.pulumi.awsnative.quicksight.outputs.DataSourceSnowflakeParameters;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceSparkParameters;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceSqlServerParameters;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceTeradataParameters;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -271,7 +271,6 @@ public final class DataSourceParameters {
             this.teradataParameters = teradataParameters;
             return this;
         }
-
         public DataSourceParameters build() {
             return new DataSourceParameters(amazonElasticsearchParameters, amazonOpenSearchParameters, athenaParameters, auroraParameters, auroraPostgreSqlParameters, mariaDbParameters, mySqlParameters, oracleParameters, postgreSqlParameters, prestoParameters, rdsParameters, redshiftParameters, s3Parameters, snowflakeParameters, sparkParameters, sqlServerParameters, teradataParameters);
         }

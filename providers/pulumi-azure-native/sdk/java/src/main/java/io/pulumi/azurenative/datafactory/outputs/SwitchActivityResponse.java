@@ -44,7 +44,7 @@ import io.pulumi.azurenative.datafactory.outputs.ValidationActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WaitActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebHookActivityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -119,42 +119,42 @@ public final class SwitchActivityResponse {
     /**
      * List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
      * 
-     */
+    */
     public List<SwitchCaseResponse> getCases() {
         return this.cases == null ? List.of() : this.cases;
     }
     /**
      * List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
      * 
-     */
+    */
     public List<Object> getDefaultActivities() {
         return this.defaultActivities == null ? List.of() : this.defaultActivities;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
      * 
-     */
+    */
     public ExpressionResponse getOn() {
         return this.on;
     }
@@ -162,14 +162,14 @@ public final class SwitchActivityResponse {
      * Type of activity.
      * Expected value is 'Switch'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -247,7 +247,6 @@ public final class SwitchActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public SwitchActivityResponse build() {
             return new SwitchActivityResponse(cases, defaultActivities, dependsOn, description, name, on, type, userProperties);
         }

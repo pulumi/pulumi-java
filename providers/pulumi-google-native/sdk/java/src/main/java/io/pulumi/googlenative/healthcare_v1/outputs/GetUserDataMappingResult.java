@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.AttributeResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -62,42 +62,42 @@ public final class GetUserDataMappingResult {
     /**
      * Indicates the time when this mapping was archived.
      * 
-     */
+    */
     public String getArchiveTime() {
         return this.archiveTime;
     }
     /**
      * Indicates whether this mapping is archived.
      * 
-     */
+    */
     public Boolean getArchived() {
         return this.archived;
     }
     /**
      * A unique identifier for the mapped resource.
      * 
-     */
+    */
     public String getDataId() {
         return this.dataId;
     }
     /**
      * Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field "values" in each Attribute.
      * 
-     */
+    */
     public List<AttributeResponse> getResourceAttributes() {
         return this.resourceAttributes;
     }
     /**
      * User's UUID provided by the client.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
@@ -161,7 +161,6 @@ public final class GetUserDataMappingResult {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetUserDataMappingResult build() {
             return new GetUserDataMappingResult(archiveTime, archived, dataId, name, resourceAttributes, userId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class RealtimeConfigurationResponse {
     /**
      * Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
      * 
-     */
+    */
     public Optional<Integer> getMaxConcurrentCalls() {
         return Optional.ofNullable(this.maxConcurrentCalls);
     }
@@ -54,7 +54,6 @@ public final class RealtimeConfigurationResponse {
             this.maxConcurrentCalls = maxConcurrentCalls;
             return this;
         }
-
         public RealtimeConfigurationResponse build() {
             return new RealtimeConfigurationResponse(maxConcurrentCalls);
         }

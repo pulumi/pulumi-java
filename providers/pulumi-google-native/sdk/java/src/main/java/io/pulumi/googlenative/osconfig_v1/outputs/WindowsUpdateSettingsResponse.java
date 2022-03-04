@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class WindowsUpdateSettingsResponse {
     /**
      * Only apply updates of these windows update classifications. If empty, all updates are applied.
      * 
-     */
+    */
     public List<String> getClassifications() {
         return this.classifications;
     }
     /**
      * List of KBs to exclude from update.
      * 
-     */
+    */
     public List<String> getExcludes() {
         return this.excludes;
     }
     /**
      * An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.
      * 
-     */
+    */
     public List<String> getExclusivePatches() {
         return this.exclusivePatches;
     }
@@ -96,7 +96,6 @@ public final class WindowsUpdateSettingsResponse {
             this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
             return this;
         }
-
         public WindowsUpdateSettingsResponse build() {
             return new WindowsUpdateSettingsResponse(classifications, excludes, exclusivePatches);
         }

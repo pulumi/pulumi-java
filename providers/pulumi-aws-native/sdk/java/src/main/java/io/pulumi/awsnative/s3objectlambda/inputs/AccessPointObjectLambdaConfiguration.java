@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3objectlambda.inputs;
 
 import io.pulumi.awsnative.s3objectlambda.inputs.AccessPointTransformationConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,28 +22,28 @@ public final class AccessPointObjectLambdaConfiguration extends io.pulumi.resour
     public static final AccessPointObjectLambdaConfiguration Empty = new AccessPointObjectLambdaConfiguration();
 
     @InputImport(name="allowedFeatures")
-    private final @Nullable List<String> allowedFeatures;
+      private final @Nullable List<String> allowedFeatures;
 
     public List<String> getAllowedFeatures() {
         return this.allowedFeatures == null ? List.of() : this.allowedFeatures;
     }
 
     @InputImport(name="cloudWatchMetricsEnabled")
-    private final @Nullable Boolean cloudWatchMetricsEnabled;
+      private final @Nullable Boolean cloudWatchMetricsEnabled;
 
     public Optional<Boolean> getCloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchMetricsEnabled);
     }
 
     @InputImport(name="supportingAccessPoint", required=true)
-    private final String supportingAccessPoint;
+      private final String supportingAccessPoint;
 
     public String getSupportingAccessPoint() {
         return this.supportingAccessPoint;
     }
 
     @InputImport(name="transformationConfigurations", required=true)
-    private final List<AccessPointTransformationConfiguration> transformationConfigurations;
+      private final List<AccessPointTransformationConfiguration> transformationConfigurations;
 
     public List<AccessPointTransformationConfiguration> getTransformationConfigurations() {
         return this.transformationConfigurations;
@@ -112,7 +112,6 @@ public final class AccessPointObjectLambdaConfiguration extends io.pulumi.resour
             this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
             return this;
         }
-
         public AccessPointObjectLambdaConfiguration build() {
             return new AccessPointObjectLambdaConfiguration(allowedFeatures, cloudWatchMetricsEnabled, supportingAccessPoint, transformationConfigurations);
         }

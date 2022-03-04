@@ -7,7 +7,7 @@ import io.pulumi.azurenative.authorization.enums.LockLevel;
 import io.pulumi.azurenative.authorization.inputs.ManagementLockOwnerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="level", required=true)
-    private final Input<Either<String,LockLevel>> level;
+      private final Input<Either<String,LockLevel>> level;
 
     public Input<Either<String,LockLevel>> getLevel() {
         return this.level;
@@ -34,7 +34,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="lockName")
-    private final @Nullable Input<String> lockName;
+      private final @Nullable Input<String> lockName;
 
     public Input<String> getLockName() {
         return this.lockName == null ? Input.empty() : this.lockName;
@@ -45,7 +45,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="notes")
-    private final @Nullable Input<String> notes;
+      private final @Nullable Input<String> notes;
 
     public Input<String> getNotes() {
         return this.notes == null ? Input.empty() : this.notes;
@@ -56,7 +56,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="owners")
-    private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
+      private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
 
     public Input<List<ManagementLockOwnerArgs>> getOwners() {
         return this.owners == null ? Input.empty() : this.owners;
@@ -67,7 +67,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -171,7 +171,6 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ManagementLockAtResourceGroupLevelArgs build() {
             return new ManagementLockAtResourceGroupLevelArgs(level, lockName, notes, owners, resourceGroupName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="certificatePath")
-    private final @Nullable Input<String> certificatePath;
+      private final @Nullable Input<String> certificatePath;
 
     public Input<String> getCertificatePath() {
         return this.certificatePath == null ? Input.empty() : this.certificatePath;
@@ -34,7 +34,7 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateKeyPath")
-    private final @Nullable Input<String> privateKeyPath;
+      private final @Nullable Input<String> privateKeyPath;
 
     public Input<String> getPrivateKeyPath() {
         return this.privateKeyPath == null ? Input.empty() : this.privateKeyPath;
@@ -93,7 +93,6 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
             this.privateKeyPath = Input.ofNullable(privateKeyPath);
             return this;
         }
-
         public TlsCertificatePathsArgs build() {
             return new TlsCertificatePathsArgs(certificatePath, privateKeyPath);
         }

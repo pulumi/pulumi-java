@@ -6,17 +6,33 @@ package io.pulumi.awsnative.rds;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.rds.inputs.GetDBProxyTargetGroupArgs;
 import io.pulumi.awsnative.rds.outputs.GetDBProxyTargetGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDBProxyTargetGroup {
-/**
- * Resource schema for AWS::RDS::DBProxyTargetGroup
+    private GetDBProxyTargetGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetDBProxyTargetGroupArgs.Builder a);
+    }
+    private static GetDBProxyTargetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDBProxyTargetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::RDS::DBProxyTargetGroup
  * 
- */
+     */
+    public static CompletableFuture<GetDBProxyTargetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::RDS::DBProxyTargetGroup
+     * 
+     */
     public static CompletableFuture<GetDBProxyTargetGroupResult> invokeAsync(GetDBProxyTargetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getDBProxyTargetGroup", TypeShape.of(GetDBProxyTargetGroupResult.class), args == null ? GetDBProxyTargetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

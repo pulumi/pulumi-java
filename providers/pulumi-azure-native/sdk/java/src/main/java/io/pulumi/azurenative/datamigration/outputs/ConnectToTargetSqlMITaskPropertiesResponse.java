@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datamigration.outputs.MigrateMISyncCompleteCommandP
 import io.pulumi.azurenative.datamigration.outputs.MigrateSyncCompleteCommandPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -69,35 +69,35 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse {
     /**
      * Array of command properties.
      * 
-     */
+    */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
-     */
+    */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Task input
      * 
-     */
+    */
     public Optional<ConnectToTargetSqlMITaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
-     */
+    */
     public List<ConnectToTargetSqlMITaskOutputResponse> getOutput() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -105,7 +105,7 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse {
      * Task type.
      * Expected value is 'ConnectToTarget.AzureSqlDbMI'.
      * 
-     */
+    */
     public String getTaskType() {
         return this.taskType;
     }
@@ -169,7 +169,6 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ConnectToTargetSqlMITaskPropertiesResponse build() {
             return new ConnectToTargetSqlMITaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

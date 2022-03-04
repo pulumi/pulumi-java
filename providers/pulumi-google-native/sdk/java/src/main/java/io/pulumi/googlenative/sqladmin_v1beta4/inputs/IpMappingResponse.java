@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -32,7 +32,7 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeToRetire", required=true)
-    private final String timeToRetire;
+      private final String timeToRetire;
 
     public String getTimeToRetire() {
         return this.timeToRetire;
@@ -43,7 +43,7 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,6 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IpMappingResponse build() {
             return new IpMappingResponse(ipAddress, timeToRetire, type);
         }

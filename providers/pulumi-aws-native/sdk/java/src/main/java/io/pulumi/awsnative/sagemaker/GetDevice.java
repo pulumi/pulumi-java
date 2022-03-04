@@ -6,17 +6,33 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.sagemaker.inputs.GetDeviceArgs;
 import io.pulumi.awsnative.sagemaker.outputs.GetDeviceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDevice {
-/**
- * Resource schema for AWS::SageMaker::Device
+    private GetDevice() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeviceArgs.Builder a);
+    }
+    private static GetDeviceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeviceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::SageMaker::Device
  * 
- */
+     */
+    public static CompletableFuture<GetDeviceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::SageMaker::Device
+     * 
+     */
     public static CompletableFuture<GetDeviceResult> invokeAsync(GetDeviceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDevice", TypeShape.of(GetDeviceResult.class), args == null ? GetDeviceArgs.Empty : args, Utilities.withVersion(options));
     }

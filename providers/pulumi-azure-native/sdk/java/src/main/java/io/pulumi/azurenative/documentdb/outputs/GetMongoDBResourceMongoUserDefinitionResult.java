@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.RoleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -84,63 +84,63 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
     /**
      * A custom definition for the USer Definition.
      * 
-     */
+    */
     public Optional<String> getCustomData() {
         return Optional.ofNullable(this.customData);
     }
     /**
      * The database name for which access is being granted for this User Definition.
      * 
-     */
+    */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * The unique resource identifier of the database account.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
      * 
-     */
+    */
     public Optional<String> getMechanisms() {
         return Optional.ofNullable(this.mechanisms);
     }
     /**
      * The name of the database account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The password for User Definition. Response does not contain user password.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The set of roles inherited by the User Definition.
      * 
-     */
+    */
     public List<RoleResponse> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
     /**
      * The type of Azure resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The user name for User Definition.
      * 
-     */
+    */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }
@@ -225,7 +225,6 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
             this.userName = userName;
             return this;
         }
-
         public GetMongoDBResourceMongoUserDefinitionResult build() {
             return new GetMongoDBResourceMongoUserDefinitionResult(customData, databaseName, id, mechanisms, name, password, roles, type, userName);
         }

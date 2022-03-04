@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class QosIpRangeResponse {
     /**
      * End IP Address.
      * 
-     */
+    */
     public Optional<String> getEndIP() {
         return Optional.ofNullable(this.endIP);
     }
     /**
      * Start IP Address.
      * 
-     */
+    */
     public Optional<String> getStartIP() {
         return Optional.ofNullable(this.startIP);
     }
@@ -76,7 +76,6 @@ public final class QosIpRangeResponse {
             this.startIP = startIP;
             return this;
         }
-
         public QosIpRangeResponse build() {
             return new QosIpRangeResponse(endIP, startIP);
         }

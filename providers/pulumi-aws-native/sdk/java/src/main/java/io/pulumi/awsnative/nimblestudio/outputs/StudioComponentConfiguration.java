@@ -7,7 +7,7 @@ import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentActiveDirectoryCo
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentComputeFarmConfiguration;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentLicenseServiceConfiguration;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentSharedFileSystemConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -89,7 +89,6 @@ public final class StudioComponentConfiguration {
             this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
             return this;
         }
-
         public StudioComponentConfiguration build() {
             return new StudioComponentConfiguration(activeDirectoryConfiguration, computeFarmConfiguration, licenseServiceConfiguration, sharedFileSystemConfiguration);
         }

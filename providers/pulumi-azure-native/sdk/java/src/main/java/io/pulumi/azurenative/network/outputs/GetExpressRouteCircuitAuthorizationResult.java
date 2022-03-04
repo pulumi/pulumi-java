@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,49 +68,49 @@ public final class GetExpressRouteCircuitAuthorizationResult {
     /**
      * The authorization key.
      * 
-     */
+    */
     public Optional<String> getAuthorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
      * The authorization use status.
      * 
-     */
+    */
     public Optional<String> getAuthorizationUseStatus() {
         return Optional.ofNullable(this.authorizationUseStatus);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the authorization resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -181,7 +181,6 @@ public final class GetExpressRouteCircuitAuthorizationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExpressRouteCircuitAuthorizationResult build() {
             return new GetExpressRouteCircuitAuthorizationResult(authorizationKey, authorizationUseStatus, etag, id, name, provisioningState, type);
         }

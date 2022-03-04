@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +49,7 @@ public final class DomainMappingSpec {
      * Default value is `AUTOMATIC`.
      * Possible values are `NONE` and `AUTOMATIC`.
      * 
-     */
+    */
     public Optional<String> getCertificateMode() {
         return Optional.ofNullable(this.certificateMode);
     }
@@ -59,7 +59,7 @@ public final class DomainMappingSpec {
      * warning about a potential conflict and only set it once the respective UI
      * has given such a warning.
      * 
-     */
+    */
     public Optional<Boolean> getForceOverride() {
         return Optional.ofNullable(this.forceOverride);
     }
@@ -67,7 +67,7 @@ public final class DomainMappingSpec {
      * The name of the Cloud Run Service that this DomainMapping applies to.
      * The route must exist.
      * 
-     */
+    */
     public String getRouteName() {
         return this.routeName;
     }
@@ -110,7 +110,6 @@ public final class DomainMappingSpec {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
         }
-
         public DomainMappingSpec build() {
             return new DomainMappingSpec(certificateMode, forceOverride, routeName);
         }

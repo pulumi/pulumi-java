@@ -6,21 +6,41 @@ package io.pulumi.azurenative.cdn;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cdn.inputs.GetRuleSetArgs;
 import io.pulumi.azurenative.cdn.outputs.GetRuleSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRuleSet {
-/**
- * Friendly RuleSet name mapping to the any RuleSet or secret related information.
+    private GetRuleSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetRuleSetArgs.Builder a);
+    }
+    private static GetRuleSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRuleSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Friendly RuleSet name mapping to the any RuleSet or secret related information.
  * API Version: 2020-09-01.
  * 
- *
- * Friendly RuleSet name mapping to the any RuleSet or secret related information.
+     *
+     * Friendly RuleSet name mapping to the any RuleSet or secret related information.
  * 
- */
+     */
+    public static CompletableFuture<GetRuleSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Friendly RuleSet name mapping to the any RuleSet or secret related information.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * Friendly RuleSet name mapping to the any RuleSet or secret related information.
+     * 
+     */
     public static CompletableFuture<GetRuleSetResult> invokeAsync(GetRuleSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getRuleSet", TypeShape.of(GetRuleSetResult.class), args == null ? GetRuleSetArgs.Empty : args, Utilities.withVersion(options));
     }

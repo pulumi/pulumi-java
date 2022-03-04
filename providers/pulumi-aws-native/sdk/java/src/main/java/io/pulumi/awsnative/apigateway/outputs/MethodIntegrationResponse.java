@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.outputs;
 
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationResponseContentHandling;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -56,35 +56,35 @@ public final class MethodIntegrationResponse {
     /**
      * Specifies how to handle request payload content type conversions.
      * 
-     */
+    */
     public Optional<MethodIntegrationResponseContentHandling> getContentHandling() {
         return Optional.ofNullable(this.contentHandling);
     }
     /**
      * The response parameters from the backend response that API Gateway sends to the method response.
      * 
-     */
+    */
     public Optional<Object> getResponseParameters() {
         return Optional.ofNullable(this.responseParameters);
     }
     /**
      * The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
      * 
-     */
+    */
     public Optional<Object> getResponseTemplates() {
         return Optional.ofNullable(this.responseTemplates);
     }
     /**
      * A regular expression that specifies which error strings or status codes from the backend map to the integration response.
      * 
-     */
+    */
     public Optional<String> getSelectionPattern() {
         return Optional.ofNullable(this.selectionPattern);
     }
     /**
      * The status code that API Gateway uses to map the integration response to a MethodResponse status code.
      * 
-     */
+    */
     public String getStatusCode() {
         return this.statusCode;
     }
@@ -141,7 +141,6 @@ public final class MethodIntegrationResponse {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public MethodIntegrationResponse build() {
             return new MethodIntegrationResponse(contentHandling, responseParameters, responseTemplates, selectionPattern, statusCode);
         }

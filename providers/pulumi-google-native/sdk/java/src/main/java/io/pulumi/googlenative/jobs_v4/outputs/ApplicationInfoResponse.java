@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ApplicationInfoResponse {
     /**
      * Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
      * 
-     */
+    */
     public List<String> getEmails() {
         return this.emails;
     }
     /**
      * Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
      * 
-     */
+    */
     public String getInstruction() {
         return this.instruction;
     }
     /**
      * Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
      * 
-     */
+    */
     public List<String> getUris() {
         return this.uris;
     }
@@ -96,7 +96,6 @@ public final class ApplicationInfoResponse {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public ApplicationInfoResponse build() {
             return new ApplicationInfoResponse(emails, instruction, uris);
         }

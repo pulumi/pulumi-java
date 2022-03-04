@@ -6,7 +6,7 @@ package io.pulumi.awsnative.datasync.outputs;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSMountOptions;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSOnPremConfig;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,14 +50,14 @@ public final class GetLocationNFSResult {
     /**
      * The Amazon Resource Name (ARN) of the NFS location.
      * 
-     */
+    */
     public Optional<String> getLocationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
      * The URL of the NFS location that was described.
      * 
-     */
+    */
     public Optional<String> getLocationUri() {
         return Optional.ofNullable(this.locationUri);
     }
@@ -70,7 +70,7 @@ public final class GetLocationNFSResult {
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<LocationNFSTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -127,7 +127,6 @@ public final class GetLocationNFSResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocationNFSResult build() {
             return new GetLocationNFSResult(locationArn, locationUri, mountOptions, onPremConfig, tags);
         }

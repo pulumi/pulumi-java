@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ConnectorMappingStructureResponse {
     /**
      * The column name of the import file.
      * 
-     */
+    */
     public String getColumnName() {
         return this.columnName;
     }
     /**
      * Custom format specifier for input parsing.
      * 
-     */
+    */
     public Optional<String> getCustomFormatSpecifier() {
         return Optional.ofNullable(this.customFormatSpecifier);
     }
     /**
      * Indicates if the column is encrypted.
      * 
-     */
+    */
     public Optional<Boolean> getIsEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
     /**
      * The property name of the mapping entity.
      * 
-     */
+    */
     public String getPropertyName() {
         return this.propertyName;
     }
@@ -119,7 +119,6 @@ public final class ConnectorMappingStructureResponse {
             this.propertyName = Objects.requireNonNull(propertyName);
             return this;
         }
-
         public ConnectorMappingStructureResponse build() {
             return new ConnectorMappingStructureResponse(columnName, customFormatSpecifier, isEncrypted, propertyName);
         }

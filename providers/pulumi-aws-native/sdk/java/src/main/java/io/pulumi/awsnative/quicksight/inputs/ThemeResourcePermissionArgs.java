@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ThemeResourcePermissionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<List<String>> actions;
+      private final Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions;
@@ -48,7 +48,7 @@ public final class ThemeResourcePermissionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="principal", required=true)
-    private final Input<String> principal;
+      private final Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal;
@@ -107,7 +107,6 @@ public final class ThemeResourcePermissionArgs extends io.pulumi.resources.Resou
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }
-
         public ThemeResourcePermissionArgs build() {
             return new ThemeResourcePermissionArgs(actions, principal);
         }

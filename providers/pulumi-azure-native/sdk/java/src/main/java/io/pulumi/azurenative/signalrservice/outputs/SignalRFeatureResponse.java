@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -44,21 +44,21 @@ public final class SignalRFeatureResponse {
      * - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
      * - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
      * 
-     */
+    */
     public String getFlag() {
         return this.flag;
     }
     /**
      * Optional properties related to this feature.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -101,7 +101,6 @@ public final class SignalRFeatureResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SignalRFeatureResponse build() {
             return new SignalRFeatureResponse(flag, properties, value);
         }

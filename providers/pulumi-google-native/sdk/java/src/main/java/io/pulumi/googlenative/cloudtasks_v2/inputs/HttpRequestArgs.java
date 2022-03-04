@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2.enums.HttpRequestHttpMethod;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.OAuthTokenArgs;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.OidcTokenArgs;
@@ -27,7 +27,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -38,7 +38,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<Map<String,String>> headers;
+      private final @Nullable Input<Map<String,String>> headers;
 
     public Input<Map<String,String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -49,7 +49,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod")
-    private final @Nullable Input<HttpRequestHttpMethod> httpMethod;
+      private final @Nullable Input<HttpRequestHttpMethod> httpMethod;
 
     public Input<HttpRequestHttpMethod> getHttpMethod() {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
@@ -60,7 +60,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oauthToken")
-    private final @Nullable Input<OAuthTokenArgs> oauthToken;
+      private final @Nullable Input<OAuthTokenArgs> oauthToken;
 
     public Input<OAuthTokenArgs> getOauthToken() {
         return this.oauthToken == null ? Input.empty() : this.oauthToken;
@@ -71,7 +71,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcToken")
-    private final @Nullable Input<OidcTokenArgs> oidcToken;
+      private final @Nullable Input<OidcTokenArgs> oidcToken;
 
     public Input<OidcTokenArgs> getOidcToken() {
         return this.oidcToken == null ? Input.empty() : this.oidcToken;
@@ -82,7 +82,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -201,7 +201,6 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public HttpRequestArgs build() {
             return new HttpRequestArgs(body, headers, httpMethod, oauthToken, oidcToken, url);
         }

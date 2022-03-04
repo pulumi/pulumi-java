@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.Utilities;
@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetForwardingRule {
-/**
- * Get a forwarding rule within GCE from its name.
+    private GetForwardingRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetForwardingRuleArgs.Builder a);
+    }
+    private static GetForwardingRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetForwardingRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a forwarding rule within GCE from its name.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getForwardingRule.
+     *
+     * A collection of arguments for invoking getForwardingRule.
  * 
- *
- * A collection of values returned by getForwardingRule.
+     *
+     * A collection of values returned by getForwardingRule.
  * 
- */
+     */
+    public static CompletableFuture<GetForwardingRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a forwarding rule within GCE from its name.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getForwardingRule.
+     * 
+     *
+         * A collection of values returned by getForwardingRule.
+     * 
+     */
     public static CompletableFuture<GetForwardingRuleResult> invokeAsync(GetForwardingRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getForwardingRule:getForwardingRule", TypeShape.of(GetForwardingRuleResult.class), args == null ? GetForwardingRuleArgs.Empty : args, Utilities.withVersion(options));
     }

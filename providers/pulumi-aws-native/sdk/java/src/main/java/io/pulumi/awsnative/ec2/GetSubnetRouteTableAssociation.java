@@ -6,17 +6,33 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.inputs.GetSubnetRouteTableAssociationArgs;
 import io.pulumi.awsnative.ec2.outputs.GetSubnetRouteTableAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetRouteTableAssociation {
-/**
- * Resource Type definition for AWS::EC2::SubnetRouteTableAssociation
+    private GetSubnetRouteTableAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubnetRouteTableAssociationArgs.Builder a);
+    }
+    private static GetSubnetRouteTableAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubnetRouteTableAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::EC2::SubnetRouteTableAssociation
  * 
- */
+     */
+    public static CompletableFuture<GetSubnetRouteTableAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::EC2::SubnetRouteTableAssociation
+     * 
+     */
     public static CompletableFuture<GetSubnetRouteTableAssociationResult> invokeAsync(GetSubnetRouteTableAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getSubnetRouteTableAssociation", TypeShape.of(GetSubnetRouteTableAssociationResult.class), args == null ? GetSubnetRouteTableAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

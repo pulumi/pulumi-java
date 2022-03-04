@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -90,70 +90,70 @@ public final class GetInventoryItemResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * They inventory type.
      * 
-     */
+    */
     public String getInventoryType() {
         return this.inventoryType;
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Gets or sets the tracked resource id corresponding to the inventory resource.
      * 
-     */
+    */
     public Optional<String> getManagedResourceId() {
         return Optional.ofNullable(this.managedResourceId);
     }
     /**
      * Gets or sets the vCenter Managed Object name for the inventory item.
      * 
-     */
+    */
     public Optional<String> getMoName() {
         return Optional.ofNullable(this.moName);
     }
     /**
      * Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
      * 
-     */
+    */
     public Optional<String> getMoRefId() {
         return Optional.ofNullable(this.moRefId);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system data.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -245,7 +245,6 @@ public final class GetInventoryItemResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInventoryItemResult build() {
             return new GetInventoryItemResult(id, inventoryType, kind, managedResourceId, moName, moRefId, name, provisioningState, systemData, type);
         }

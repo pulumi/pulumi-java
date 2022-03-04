@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.inputs.SkuCostArgs;
 import io.pulumi.azurenative.providerhub.inputs.SkuLocationInfoArgs;
 import io.pulumi.azurenative.providerhub.inputs.SkuSettingCapacityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,84 +20,84 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
     public static final SkuSettingArgs Empty = new SkuSettingArgs();
 
     @InputImport(name="capabilities")
-    private final @Nullable Input<List<SkuCapabilityArgs>> capabilities;
+      private final @Nullable Input<List<SkuCapabilityArgs>> capabilities;
 
     public Input<List<SkuCapabilityArgs>> getCapabilities() {
         return this.capabilities == null ? Input.empty() : this.capabilities;
     }
 
     @InputImport(name="capacity")
-    private final @Nullable Input<SkuSettingCapacityArgs> capacity;
+      private final @Nullable Input<SkuSettingCapacityArgs> capacity;
 
     public Input<SkuSettingCapacityArgs> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
     @InputImport(name="costs")
-    private final @Nullable Input<List<SkuCostArgs>> costs;
+      private final @Nullable Input<List<SkuCostArgs>> costs;
 
     public Input<List<SkuCostArgs>> getCosts() {
         return this.costs == null ? Input.empty() : this.costs;
     }
 
     @InputImport(name="family")
-    private final @Nullable Input<String> family;
+      private final @Nullable Input<String> family;
 
     public Input<String> getFamily() {
         return this.family == null ? Input.empty() : this.family;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="locationInfo")
-    private final @Nullable Input<List<SkuLocationInfoArgs>> locationInfo;
+      private final @Nullable Input<List<SkuLocationInfoArgs>> locationInfo;
 
     public Input<List<SkuLocationInfoArgs>> getLocationInfo() {
         return this.locationInfo == null ? Input.empty() : this.locationInfo;
     }
 
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="requiredFeatures")
-    private final @Nullable Input<List<String>> requiredFeatures;
+      private final @Nullable Input<List<String>> requiredFeatures;
 
     public Input<List<String>> getRequiredFeatures() {
         return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
     }
 
     @InputImport(name="requiredQuotaIds")
-    private final @Nullable Input<List<String>> requiredQuotaIds;
+      private final @Nullable Input<List<String>> requiredQuotaIds;
 
     public Input<List<String>> getRequiredQuotaIds() {
         return this.requiredQuotaIds == null ? Input.empty() : this.requiredQuotaIds;
     }
 
     @InputImport(name="size")
-    private final @Nullable Input<String> size;
+      private final @Nullable Input<String> size;
 
     public Input<String> getSize() {
         return this.size == null ? Input.empty() : this.size;
     }
 
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -306,7 +306,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public SkuSettingArgs build() {
             return new SkuSettingArgs(capabilities, capacity, costs, family, kind, locationInfo, locations, name, requiredFeatures, requiredQuotaIds, size, tier);
         }

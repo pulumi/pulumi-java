@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3ConversationTurnResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3TestCaseResultResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3TestConfigResponse;
@@ -77,56 +77,56 @@ public final class GetTestCaseResult {
     /**
      * When the test was created.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * The human-readable name of the test case, unique within the agent. Limit of 200 characters.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The latest test result.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3TestCaseResultResponse getLastTestResult() {
         return this.lastTestResult;
     }
     /**
      * The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Additional freeform notes about the test case. Limit of 400 characters.
      * 
-     */
+    */
     public String getNotes() {
         return this.notes;
     }
     /**
      * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
      * 
-     */
+    */
     public List<String> getTags() {
         return this.tags;
     }
     /**
      * The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3ConversationTurnResponse> getTestCaseConversationTurns() {
         return this.testCaseConversationTurns;
     }
     /**
      * Config for the test case.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3TestConfigResponse getTestConfig() {
         return this.testConfig;
     }
@@ -204,7 +204,6 @@ public final class GetTestCaseResult {
             this.testConfig = Objects.requireNonNull(testConfig);
             return this;
         }
-
         public GetTestCaseResult build() {
             return new GetTestCaseResult(creationTime, displayName, lastTestResult, name, notes, tags, testCaseConversationTurns, testConfig);
         }

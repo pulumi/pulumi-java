@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceDefinitionCondition;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceDefinitionNames;
 import java.lang.String;
@@ -42,21 +42,21 @@ public final class CustomResourceDefinitionStatus {
     /**
      * acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
      * 
-     */
+    */
     public CustomResourceDefinitionNames getAcceptedNames() {
         return this.acceptedNames;
     }
     /**
      * conditions indicate state for particular aspects of a CustomResourceDefinition
      * 
-     */
+    */
     public List<CustomResourceDefinitionCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
      * 
-     */
+    */
     public List<String> getStoredVersions() {
         return this.storedVersions;
     }
@@ -99,7 +99,6 @@ public final class CustomResourceDefinitionStatus {
             this.storedVersions = Objects.requireNonNull(storedVersions);
             return this;
         }
-
         public CustomResourceDefinitionStatus build() {
             return new CustomResourceDefinitionStatus(acceptedNames, conditions, storedVersions);
         }

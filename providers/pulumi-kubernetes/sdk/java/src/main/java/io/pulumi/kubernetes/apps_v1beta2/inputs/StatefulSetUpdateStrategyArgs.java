@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.RollingUpdateStatefulSetStrategyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rollingUpdate")
-    private final @Nullable Input<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
+      private final @Nullable Input<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
 
     public Input<RollingUpdateStatefulSetStrategyArgs> getRollingUpdate() {
         return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
@@ -35,7 +35,7 @@ public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.Res
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public StatefulSetUpdateStrategyArgs build() {
             return new StatefulSetUpdateStrategyArgs(rollingUpdate, type);
         }

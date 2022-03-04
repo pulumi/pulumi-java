@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.enums.SortOptionsSortOrder;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatorName")
-    private final @Nullable Input<String> operatorName;
+      private final @Nullable Input<String> operatorName;
 
     public Input<String> getOperatorName() {
         return this.operatorName == null ? Input.empty() : this.operatorName;
@@ -31,7 +31,7 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sortOrder")
-    private final @Nullable Input<SortOptionsSortOrder> sortOrder;
+      private final @Nullable Input<SortOptionsSortOrder> sortOrder;
 
     public Input<SortOptionsSortOrder> getSortOrder() {
         return this.sortOrder == null ? Input.empty() : this.sortOrder;
@@ -90,7 +90,6 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.sortOrder = Input.ofNullable(sortOrder);
             return this;
         }
-
         public SortOptionsArgs build() {
             return new SortOptionsArgs(operatorName, sortOrder);
         }

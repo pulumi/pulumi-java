@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.finspace.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class EnvironmentSuperuserParameters {
     /**
      * Email address
      * 
-     */
+    */
     public Optional<String> getEmailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
     /**
      * First name
      * 
-     */
+    */
     public Optional<String> getFirstName() {
         return Optional.ofNullable(this.firstName);
     }
     /**
      * Last name
      * 
-     */
+    */
     public Optional<String> getLastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -97,7 +97,6 @@ public final class EnvironmentSuperuserParameters {
             this.lastName = lastName;
             return this;
         }
-
         public EnvironmentSuperuserParameters build() {
             return new EnvironmentSuperuserParameters(emailAddress, firstName, lastName);
         }

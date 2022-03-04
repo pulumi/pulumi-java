@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -42,7 +42,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -75,7 +75,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceEndpointPolicyDefinitionName")
-    private final @Nullable Input<String> serviceEndpointPolicyDefinitionName;
+      private final @Nullable Input<String> serviceEndpointPolicyDefinitionName;
 
     public Input<String> getServiceEndpointPolicyDefinitionName() {
         return this.serviceEndpointPolicyDefinitionName == null ? Input.empty() : this.serviceEndpointPolicyDefinitionName;
@@ -86,7 +86,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceEndpointPolicyName", required=true)
-    private final Input<String> serviceEndpointPolicyName;
+      private final Input<String> serviceEndpointPolicyName;
 
     public Input<String> getServiceEndpointPolicyName() {
         return this.serviceEndpointPolicyName;
@@ -97,7 +97,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceResources")
-    private final @Nullable Input<List<String>> serviceResources;
+      private final @Nullable Input<List<String>> serviceResources;
 
     public Input<List<String>> getServiceResources() {
         return this.serviceResources == null ? Input.empty() : this.serviceResources;
@@ -246,7 +246,6 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
             this.serviceResources = Input.ofNullable(serviceResources);
             return this;
         }
-
         public ServiceEndpointPolicyDefinitionArgs build() {
             return new ServiceEndpointPolicyDefinitionArgs(description, id, name, resourceGroupName, service, serviceEndpointPolicyDefinitionName, serviceEndpointPolicyName, serviceResources);
         }

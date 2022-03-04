@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.DestinationsSpecResponseAzureMonitorMetrics;
 import io.pulumi.azurenative.insights.inputs.LogAnalyticsDestinationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DataCollectionRuleResponseDestinations extends io.pulumi.reso
      * 
      */
     @InputImport(name="azureMonitorMetrics")
-    private final @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics;
+      private final @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics;
 
     public Optional<DestinationsSpecResponseAzureMonitorMetrics> getAzureMonitorMetrics() {
         return this.azureMonitorMetrics == null ? Optional.empty() : Optional.ofNullable(this.azureMonitorMetrics);
@@ -36,7 +36,7 @@ public final class DataCollectionRuleResponseDestinations extends io.pulumi.reso
      * 
      */
     @InputImport(name="logAnalytics")
-    private final @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
+      private final @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
 
     public List<LogAnalyticsDestinationResponse> getLogAnalytics() {
         return this.logAnalytics == null ? List.of() : this.logAnalytics;
@@ -85,7 +85,6 @@ public final class DataCollectionRuleResponseDestinations extends io.pulumi.reso
             this.logAnalytics = logAnalytics;
             return this;
         }
-
         public DataCollectionRuleResponseDestinations build() {
             return new DataCollectionRuleResponseDestinations(azureMonitorMetrics, logAnalytics);
         }

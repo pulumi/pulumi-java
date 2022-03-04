@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DistributionPolicyZoneConfigurationResponse {
     /**
      * The URL of the zone. The zone must exist in the region where the managed instance group is located.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }
@@ -52,7 +52,6 @@ public final class DistributionPolicyZoneConfigurationResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public DistributionPolicyZoneConfigurationResponse build() {
             return new DistributionPolicyZoneConfigurationResponse(zone);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.HttpHeaderMatchResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -48,28 +48,28 @@ public final class DestinationResponse {
     /**
      * List of host names to match. Matched against the ":authority" header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match "*".
      * 
-     */
+    */
     public List<String> getHosts() {
         return this.hosts;
     }
     /**
      * Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP headers, for potentially advanced use cases. At least one header should match. Avoid using header matches to make authorization decisions unless there is a strong guarantee that requests arrive through a trusted client or proxy.
      * 
-     */
+    */
     public HttpHeaderMatchResponse getHttpHeaderMatch() {
         return this.httpHeaderMatch;
     }
     /**
      * Optional. A list of HTTP methods to match. At least one method should match. Should not be set for gRPC services.
      * 
-     */
+    */
     public List<String> getMethods() {
         return this.methods;
     }
     /**
      * List of destination ports to match. At least one port should match.
      * 
-     */
+    */
     public List<Integer> getPorts() {
         return this.ports;
     }
@@ -119,7 +119,6 @@ public final class DestinationResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(hosts, httpHeaderMatch, methods, ports);
         }

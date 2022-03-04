@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.AuthRequirementResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OAuthRequirementsResponse;
 import java.lang.Boolean;
@@ -49,28 +49,28 @@ public final class AuthenticationRuleResponse {
     /**
      * If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
      * 
-     */
+    */
     public Boolean getAllowWithoutCredential() {
         return this.allowWithoutCredential;
     }
     /**
      * The requirements for OAuth credentials.
      * 
-     */
+    */
     public OAuthRequirementsResponse getOauth() {
         return this.oauth;
     }
     /**
      * Requirements for additional authentication providers.
      * 
-     */
+    */
     public List<AuthRequirementResponse> getRequirements() {
         return this.requirements;
     }
     /**
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
-     */
+    */
     public String getSelector() {
         return this.selector;
     }
@@ -120,7 +120,6 @@ public final class AuthenticationRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public AuthenticationRuleResponse build() {
             return new AuthenticationRuleResponse(allowWithoutCredential, oauth, requirements, selector);
         }

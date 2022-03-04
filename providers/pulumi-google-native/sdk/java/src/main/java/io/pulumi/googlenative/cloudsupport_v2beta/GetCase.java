@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsupport_v2beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCase {
-/**
- * Retrieve the specified case.
+    private GetCase() {}
+    public interface BuilderApplicator {
+        public void apply(GetCaseArgs.Builder a);
+    }
+    private static GetCaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve the specified case.
  * 
- */
+     */
+    public static CompletableFuture<GetCaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve the specified case.
+     * 
+     */
     public static CompletableFuture<GetCaseResult> invokeAsync(GetCaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsupport/v2beta:getCase", TypeShape.of(GetCaseResult.class), args == null ? GetCaseArgs.Empty : args, Utilities.withVersion(options));
     }

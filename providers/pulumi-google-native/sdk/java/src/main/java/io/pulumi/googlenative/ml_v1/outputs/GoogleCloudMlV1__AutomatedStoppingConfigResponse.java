@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse {
             this.medianAutomatedStoppingConfig = Objects.requireNonNull(medianAutomatedStoppingConfig);
             return this;
         }
-
         public GoogleCloudMlV1__AutomatedStoppingConfigResponse build() {
             return new GoogleCloudMlV1__AutomatedStoppingConfigResponse(decayCurveStoppingConfig, medianAutomatedStoppingConfig);
         }

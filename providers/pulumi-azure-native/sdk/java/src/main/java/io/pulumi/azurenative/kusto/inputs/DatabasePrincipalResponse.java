@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable String appId;
+      private final @Nullable String appId;
 
     public Optional<String> getAppId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
@@ -34,7 +34,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="email")
-    private final @Nullable String email;
+      private final @Nullable String email;
 
     public Optional<String> getEmail() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
@@ -45,7 +45,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="fqn")
-    private final @Nullable String fqn;
+      private final @Nullable String fqn;
 
     public Optional<String> getFqn() {
         return this.fqn == null ? Optional.empty() : Optional.ofNullable(this.fqn);
@@ -56,7 +56,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -67,7 +67,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+      private final String role;
 
     public String getRole() {
         return this.role;
@@ -78,7 +78,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tenantName", required=true)
-    private final String tenantName;
+      private final String tenantName;
 
     public String getTenantName() {
         return this.tenantName;
@@ -89,7 +89,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -188,7 +188,6 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DatabasePrincipalResponse build() {
             return new DatabasePrincipalResponse(appId, email, fqn, name, role, tenantName, type);
         }

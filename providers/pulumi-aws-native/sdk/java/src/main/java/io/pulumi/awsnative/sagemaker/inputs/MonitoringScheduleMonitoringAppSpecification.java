@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
      * 
      */
     @InputImport(name="containerArguments")
-    private final @Nullable List<String> containerArguments;
+      private final @Nullable List<String> containerArguments;
 
     public List<String> getContainerArguments() {
         return this.containerArguments == null ? List.of() : this.containerArguments;
@@ -35,7 +35,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
      * 
      */
     @InputImport(name="containerEntrypoint")
-    private final @Nullable List<String> containerEntrypoint;
+      private final @Nullable List<String> containerEntrypoint;
 
     public List<String> getContainerEntrypoint() {
         return this.containerEntrypoint == null ? List.of() : this.containerEntrypoint;
@@ -46,7 +46,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
      * 
      */
     @InputImport(name="imageUri", required=true)
-    private final String imageUri;
+      private final String imageUri;
 
     public String getImageUri() {
         return this.imageUri;
@@ -57,7 +57,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
      * 
      */
     @InputImport(name="postAnalyticsProcessorSourceUri")
-    private final @Nullable String postAnalyticsProcessorSourceUri;
+      private final @Nullable String postAnalyticsProcessorSourceUri;
 
     public Optional<String> getPostAnalyticsProcessorSourceUri() {
         return this.postAnalyticsProcessorSourceUri == null ? Optional.empty() : Optional.ofNullable(this.postAnalyticsProcessorSourceUri);
@@ -68,7 +68,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
      * 
      */
     @InputImport(name="recordPreprocessorSourceUri")
-    private final @Nullable String recordPreprocessorSourceUri;
+      private final @Nullable String recordPreprocessorSourceUri;
 
     public Optional<String> getRecordPreprocessorSourceUri() {
         return this.recordPreprocessorSourceUri == null ? Optional.empty() : Optional.ofNullable(this.recordPreprocessorSourceUri);
@@ -147,7 +147,6 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }
-
         public MonitoringScheduleMonitoringAppSpecification build() {
             return new MonitoringScheduleMonitoringAppSpecification(containerArguments, containerEntrypoint, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);
         }

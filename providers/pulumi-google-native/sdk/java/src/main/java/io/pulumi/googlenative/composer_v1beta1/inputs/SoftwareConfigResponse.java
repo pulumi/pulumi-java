@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="airflowConfigOverrides", required=true)
-    private final Map<String,String> airflowConfigOverrides;
+      private final Map<String,String> airflowConfigOverrides;
 
     public Map<String,String> getAirflowConfigOverrides() {
         return this.airflowConfigOverrides;
@@ -34,7 +34,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="envVariables", required=true)
-    private final Map<String,String> envVariables;
+      private final Map<String,String> envVariables;
 
     public Map<String,String> getEnvVariables() {
         return this.envVariables;
@@ -45,7 +45,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="imageVersion", required=true)
-    private final String imageVersion;
+      private final String imageVersion;
 
     public String getImageVersion() {
         return this.imageVersion;
@@ -56,7 +56,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="pypiPackages", required=true)
-    private final Map<String,String> pypiPackages;
+      private final Map<String,String> pypiPackages;
 
     public Map<String,String> getPypiPackages() {
         return this.pypiPackages;
@@ -67,7 +67,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="pythonVersion", required=true)
-    private final String pythonVersion;
+      private final String pythonVersion;
 
     public String getPythonVersion() {
         return this.pythonVersion;
@@ -78,7 +78,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="schedulerCount", required=true)
-    private final Integer schedulerCount;
+      private final Integer schedulerCount;
 
     public Integer getSchedulerCount() {
         return this.schedulerCount;
@@ -167,7 +167,6 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
             this.schedulerCount = Objects.requireNonNull(schedulerCount);
             return this;
         }
-
         public SoftwareConfigResponse build() {
             return new SoftwareConfigResponse(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
         }

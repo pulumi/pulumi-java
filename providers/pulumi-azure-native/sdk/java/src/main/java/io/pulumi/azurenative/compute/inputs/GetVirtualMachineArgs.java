@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="vmName", required=true)
-    private final String vmName;
+      private final String vmName;
 
     public String getVmName() {
         return this.vmName;
@@ -100,7 +100,6 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
-
         public GetVirtualMachineArgs build() {
             return new GetVirtualMachineArgs(expand, resourceGroupName, vmName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetBucketLogging extends io.pulumi.resources.InvokeArgs {
     public static final GetBucketLogging Empty = new GetBucketLogging();
 
     @InputImport(name="logBucket", required=true)
-    private final String logBucket;
+      private final String logBucket;
 
     public String getLogBucket() {
         return this.logBucket;
     }
 
     @InputImport(name="logObjectPrefix", required=true)
-    private final String logObjectPrefix;
+      private final String logObjectPrefix;
 
     public String getLogObjectPrefix() {
         return this.logObjectPrefix;
@@ -69,7 +69,6 @@ public final class GetBucketLogging extends io.pulumi.resources.InvokeArgs {
             this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
             return this;
         }
-
         public GetBucketLogging build() {
             return new GetBucketLogging(logBucket, logObjectPrefix);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.devices.inputs.EventHubConsumerGroupNameArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="eventHubEndpointName", required=true)
-    private final Input<String> eventHubEndpointName;
+      private final Input<String> eventHubEndpointName;
 
     public Input<String> getEventHubEndpointName() {
         return this.eventHubEndpointName;
@@ -31,7 +31,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<EventHubConsumerGroupNameArgs> properties;
+      private final @Nullable Input<EventHubConsumerGroupNameArgs> properties;
 
     public Input<EventHubConsumerGroupNameArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -168,7 +168,6 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public IotHubResourceEventHubConsumerGroupArgs build() {
             return new IotHubResourceEventHubConsumerGroupArgs(eventHubEndpointName, name, properties, resourceGroupName, resourceName);
         }

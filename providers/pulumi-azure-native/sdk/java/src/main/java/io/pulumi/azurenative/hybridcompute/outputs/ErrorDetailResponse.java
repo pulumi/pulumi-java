@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class ErrorDetailResponse {
     /**
      * The error's code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Additional error details.
      * 
-     */
+    */
     public List<ErrorDetailResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * A human readable error message.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Indicates which property in the request is responsible for the error.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
@@ -119,7 +119,6 @@ public final class ErrorDetailResponse {
             this.target = target;
             return this;
         }
-
         public ErrorDetailResponse build() {
             return new ErrorDetailResponse(code, details, message, target);
         }

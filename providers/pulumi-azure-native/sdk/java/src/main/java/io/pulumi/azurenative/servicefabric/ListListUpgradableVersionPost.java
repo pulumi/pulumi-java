@@ -6,21 +6,41 @@ package io.pulumi.azurenative.servicefabric;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicefabric.inputs.ListListUpgradableVersionPostArgs;
 import io.pulumi.azurenative.servicefabric.outputs.ListListUpgradableVersionPostResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListListUpgradableVersionPost {
-/**
- * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
+    private ListListUpgradableVersionPost() {}
+    public interface BuilderApplicator {
+        public void apply(ListListUpgradableVersionPostArgs.Builder a);
+    }
+    private static ListListUpgradableVersionPostArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListListUpgradableVersionPostArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
  * API Version: 2020-12-01-preview.
  * 
- *
- * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
+     *
+     * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
  * 
- */
+     */
+    public static CompletableFuture<ListListUpgradableVersionPostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
+     * API Version: 2020-12-01-preview.
+     * 
+     *
+         * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
+     * 
+     */
     public static CompletableFuture<ListListUpgradableVersionPostResult> invokeAsync(ListListUpgradableVersionPostArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:listListUpgradableVersionPost", TypeShape.of(ListListUpgradableVersionPostResult.class), args == null ? ListListUpgradableVersionPostArgs.Empty : args, Utilities.withVersion(options));
     }

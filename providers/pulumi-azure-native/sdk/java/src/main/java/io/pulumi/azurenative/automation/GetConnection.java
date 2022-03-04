@@ -6,21 +6,41 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automation.inputs.GetConnectionArgs;
 import io.pulumi.azurenative.automation.outputs.GetConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnection {
-/**
- * Definition of the connection.
+    private GetConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetConnectionArgs.Builder a);
+    }
+    private static GetConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the connection.
  * API Version: 2019-06-01.
  * 
- *
- * Definition of the connection.
+     *
+     * Definition of the connection.
  * 
- */
+     */
+    public static CompletableFuture<GetConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the connection.
+     * API Version: 2019-06-01.
+     * 
+     *
+         * Definition of the connection.
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> invokeAsync(GetConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getConnection", TypeShape.of(GetConnectionResult.class), args == null ? GetConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

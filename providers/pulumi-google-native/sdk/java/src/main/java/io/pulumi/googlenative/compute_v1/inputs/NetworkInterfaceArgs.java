@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.NetworkInterfaceNicType;
 import io.pulumi.googlenative.compute_v1.enums.NetworkInterfaceStackType;
 import io.pulumi.googlenative.compute_v1.inputs.AccessConfigArgs;
@@ -29,7 +29,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accessConfigs")
-    private final @Nullable Input<List<AccessConfigArgs>> accessConfigs;
+      private final @Nullable Input<List<AccessConfigArgs>> accessConfigs;
 
     public Input<List<AccessConfigArgs>> getAccessConfigs() {
         return this.accessConfigs == null ? Input.empty() : this.accessConfigs;
@@ -40,7 +40,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="aliasIpRanges")
-    private final @Nullable Input<List<AliasIpRangeArgs>> aliasIpRanges;
+      private final @Nullable Input<List<AliasIpRangeArgs>> aliasIpRanges;
 
     public Input<List<AliasIpRangeArgs>> getAliasIpRanges() {
         return this.aliasIpRanges == null ? Input.empty() : this.aliasIpRanges;
@@ -51,7 +51,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipv6AccessConfigs")
-    private final @Nullable Input<List<AccessConfigArgs>> ipv6AccessConfigs;
+      private final @Nullable Input<List<AccessConfigArgs>> ipv6AccessConfigs;
 
     public Input<List<AccessConfigArgs>> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? Input.empty() : this.ipv6AccessConfigs;
@@ -62,7 +62,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipv6Address")
-    private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Input<String> ipv6Address;
 
     public Input<String> getIpv6Address() {
         return this.ipv6Address == null ? Input.empty() : this.ipv6Address;
@@ -73,7 +73,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -84,7 +84,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkIP")
-    private final @Nullable Input<String> networkIP;
+      private final @Nullable Input<String> networkIP;
 
     public Input<String> getNetworkIP() {
         return this.networkIP == null ? Input.empty() : this.networkIP;
@@ -95,7 +95,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nicType")
-    private final @Nullable Input<NetworkInterfaceNicType> nicType;
+      private final @Nullable Input<NetworkInterfaceNicType> nicType;
 
     public Input<NetworkInterfaceNicType> getNicType() {
         return this.nicType == null ? Input.empty() : this.nicType;
@@ -106,7 +106,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="queueCount")
-    private final @Nullable Input<Integer> queueCount;
+      private final @Nullable Input<Integer> queueCount;
 
     public Input<Integer> getQueueCount() {
         return this.queueCount == null ? Input.empty() : this.queueCount;
@@ -117,7 +117,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="stackType")
-    private final @Nullable Input<NetworkInterfaceStackType> stackType;
+      private final @Nullable Input<NetworkInterfaceStackType> stackType;
 
     public Input<NetworkInterfaceStackType> getStackType() {
         return this.stackType == null ? Input.empty() : this.stackType;
@@ -128,7 +128,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -307,7 +307,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
-
         public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6Address, network, networkIP, nicType, queueCount, stackType, subnetwork);
         }

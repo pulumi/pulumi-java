@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.DiskDiskEncryptionKeyGetArgs;
 import io.pulumi.gcp.compute.inputs.DiskSourceImageEncryptionKeyGetArgs;
 import io.pulumi.gcp.compute.inputs.DiskSourceSnapshotEncryptionKeyGetArgs;
@@ -26,7 +26,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -38,7 +38,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKey")
-    private final @Nullable Input<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
+      private final @Nullable Input<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
 
     public Input<DiskDiskEncryptionKeyGetArgs> getDiskEncryptionKey() {
         return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
@@ -77,7 +77,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -86,13 +86,13 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
     /**
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
      * 
-     * @deprecated
+     * @Deprecated
      * This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.
      * 
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @InputImport(name="interface")
-    private final @Nullable Input<String> $interface;
+      private final @Nullable Input<String> $interface;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     public Input<String> get$interface() {
@@ -104,7 +104,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelFingerprint")
-    private final @Nullable Input<String> labelFingerprint;
+      private final @Nullable Input<String> labelFingerprint;
 
     public Input<String> getLabelFingerprint() {
         return this.labelFingerprint == null ? Input.empty() : this.labelFingerprint;
@@ -115,7 +115,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -126,7 +126,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastAttachTimestamp")
-    private final @Nullable Input<String> lastAttachTimestamp;
+      private final @Nullable Input<String> lastAttachTimestamp;
 
     public Input<String> getLastAttachTimestamp() {
         return this.lastAttachTimestamp == null ? Input.empty() : this.lastAttachTimestamp;
@@ -137,7 +137,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastDetachTimestamp")
-    private final @Nullable Input<String> lastDetachTimestamp;
+      private final @Nullable Input<String> lastDetachTimestamp;
 
     public Input<String> getLastDetachTimestamp() {
         return this.lastDetachTimestamp == null ? Input.empty() : this.lastDetachTimestamp;
@@ -148,7 +148,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiWriter")
-    private final @Nullable Input<Boolean> multiWriter;
+      private final @Nullable Input<Boolean> multiWriter;
 
     public Input<Boolean> getMultiWriter() {
         return this.multiWriter == null ? Input.empty() : this.multiWriter;
@@ -165,7 +165,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -180,7 +180,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="physicalBlockSizeBytes")
-    private final @Nullable Input<Integer> physicalBlockSizeBytes;
+      private final @Nullable Input<Integer> physicalBlockSizeBytes;
 
     public Input<Integer> getPhysicalBlockSizeBytes() {
         return this.physicalBlockSizeBytes == null ? Input.empty() : this.physicalBlockSizeBytes;
@@ -192,7 +192,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -203,7 +203,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionedIops")
-    private final @Nullable Input<Integer> provisionedIops;
+      private final @Nullable Input<Integer> provisionedIops;
 
     public Input<Integer> getProvisionedIops() {
         return this.provisionedIops == null ? Input.empty() : this.provisionedIops;
@@ -219,7 +219,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePolicies")
-    private final @Nullable Input<List<String>> resourcePolicies;
+      private final @Nullable Input<List<String>> resourcePolicies;
 
     public Input<List<String>> getResourcePolicies() {
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
@@ -230,7 +230,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -251,7 +251,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<Integer> size;
+      private final @Nullable Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -269,7 +269,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshot")
-    private final @Nullable Input<String> snapshot;
+      private final @Nullable Input<String> snapshot;
 
     public Input<String> getSnapshot() {
         return this.snapshot == null ? Input.empty() : this.snapshot;
@@ -282,7 +282,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImageEncryptionKey")
-    private final @Nullable Input<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey;
+      private final @Nullable Input<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey;
 
     public Input<DiskSourceImageEncryptionKeyGetArgs> getSourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey == null ? Input.empty() : this.sourceImageEncryptionKey;
@@ -295,7 +295,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImageId")
-    private final @Nullable Input<String> sourceImageId;
+      private final @Nullable Input<String> sourceImageId;
 
     public Input<String> getSourceImageId() {
         return this.sourceImageId == null ? Input.empty() : this.sourceImageId;
@@ -309,7 +309,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshotEncryptionKey")
-    private final @Nullable Input<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
+      private final @Nullable Input<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
 
     public Input<DiskSourceSnapshotEncryptionKeyGetArgs> getSourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey == null ? Input.empty() : this.sourceSnapshotEncryptionKey;
@@ -322,7 +322,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshotId")
-    private final @Nullable Input<String> sourceSnapshotId;
+      private final @Nullable Input<String> sourceSnapshotId;
 
     public Input<String> getSourceSnapshotId() {
         return this.sourceSnapshotId == null ? Input.empty() : this.sourceSnapshotId;
@@ -334,7 +334,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -345,7 +345,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="users")
-    private final @Nullable Input<List<String>> users;
+      private final @Nullable Input<List<String>> users;
 
     public Input<List<String>> getUsers() {
         return this.users == null ? Input.empty() : this.users;
@@ -356,7 +356,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -760,7 +760,6 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public DiskState build() {
             return new DiskState(creationTimestamp, description, diskEncryptionKey, image, $interface, labelFingerprint, labels, lastAttachTimestamp, lastDetachTimestamp, multiWriter, name, physicalBlockSizeBytes, project, provisionedIops, resourcePolicies, selfLink, size, snapshot, sourceImageEncryptionKey, sourceImageId, sourceSnapshotEncryptionKey, sourceSnapshotId, type, users, zone);
         }

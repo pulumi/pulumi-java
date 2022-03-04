@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EntityTypeEntityResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class GetSessionEntityTypeResult {
     /**
      * The collection of entities to override or supplement the custom entity type.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3EntityTypeEntityResponse> getEntities() {
         return this.entities;
     }
     /**
      * Indicates whether the additional data should override or supplement the custom entity type definition.
      * 
-     */
+    */
     public String getEntityOverrideMode() {
         return this.entityOverrideMode;
     }
     /**
      * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -97,7 +97,6 @@ public final class GetSessionEntityTypeResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSessionEntityTypeResult build() {
             return new GetSessionEntityTypeResult(entities, entityOverrideMode, name);
         }

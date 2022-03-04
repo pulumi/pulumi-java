@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationScheduledTriggerPropertiesDataPullMode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -128,7 +128,6 @@ public final class IntegrationScheduledTriggerProperties {
             this.timezone = timezone;
             return this;
         }
-
         public IntegrationScheduledTriggerProperties build() {
             return new IntegrationScheduledTriggerProperties(dataPullMode, firstExecutionFrom, scheduleEndTime, scheduleExpression, scheduleOffset, scheduleStartTime, timezone);
         }

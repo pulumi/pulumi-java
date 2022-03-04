@@ -4,7 +4,7 @@
 package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EnterpriseKeyTestingOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="testingChallenge")
-    private final @Nullable Input<String> testingChallenge;
+      private final @Nullable Input<String> testingChallenge;
 
     public Input<String> getTestingChallenge() {
         return this.testingChallenge == null ? Input.empty() : this.testingChallenge;
@@ -31,7 +31,7 @@ public final class EnterpriseKeyTestingOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="testingScore")
-    private final @Nullable Input<Double> testingScore;
+      private final @Nullable Input<Double> testingScore;
 
     public Input<Double> getTestingScore() {
         return this.testingScore == null ? Input.empty() : this.testingScore;
@@ -90,7 +90,6 @@ public final class EnterpriseKeyTestingOptionsArgs extends io.pulumi.resources.R
             this.testingScore = Input.ofNullable(testingScore);
             return this;
         }
-
         public EnterpriseKeyTestingOptionsArgs build() {
             return new EnterpriseKeyTestingOptionsArgs(testingChallenge, testingScore);
         }

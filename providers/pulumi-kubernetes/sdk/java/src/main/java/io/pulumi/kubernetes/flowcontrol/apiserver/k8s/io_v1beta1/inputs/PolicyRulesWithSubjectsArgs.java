@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.NonResourcePolicyRuleArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.ResourcePolicyRuleArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.SubjectArgs;
@@ -26,7 +26,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="nonResourceRules")
-    private final @Nullable Input<List<NonResourcePolicyRuleArgs>> nonResourceRules;
+      private final @Nullable Input<List<NonResourcePolicyRuleArgs>> nonResourceRules;
 
     public Input<List<NonResourcePolicyRuleArgs>> getNonResourceRules() {
         return this.nonResourceRules == null ? Input.empty() : this.nonResourceRules;
@@ -37,7 +37,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceRules")
-    private final @Nullable Input<List<ResourcePolicyRuleArgs>> resourceRules;
+      private final @Nullable Input<List<ResourcePolicyRuleArgs>> resourceRules;
 
     public Input<List<ResourcePolicyRuleArgs>> getResourceRules() {
         return this.resourceRules == null ? Input.empty() : this.resourceRules;
@@ -48,7 +48,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subjects", required=true)
-    private final Input<List<SubjectArgs>> subjects;
+      private final Input<List<SubjectArgs>> subjects;
 
     public Input<List<SubjectArgs>> getSubjects() {
         return this.subjects;
@@ -122,7 +122,6 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
             this.subjects = Input.of(Objects.requireNonNull(subjects));
             return this;
         }
-
         public PolicyRulesWithSubjectsArgs build() {
             return new PolicyRulesWithSubjectsArgs(nonResourceRules, resourceRules, subjects);
         }

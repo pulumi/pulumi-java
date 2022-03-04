@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -40,7 +40,7 @@ public final class AlertPolicyConditionConditionAbsentTrigger {
      * that must fail the predicate for the
      * condition to be triggered.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
@@ -49,7 +49,7 @@ public final class AlertPolicyConditionConditionAbsentTrigger {
      * must fail the predicate for the
      * condition to be triggered.
      * 
-     */
+    */
     public Optional<Double> getPercent() {
         return Optional.ofNullable(this.percent);
     }
@@ -85,7 +85,6 @@ public final class AlertPolicyConditionConditionAbsentTrigger {
             this.percent = percent;
             return this;
         }
-
         public AlertPolicyConditionConditionAbsentTrigger build() {
             return new AlertPolicyConditionConditionAbsentTrigger(count, percent);
         }

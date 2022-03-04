@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
      * 
      */
     @InputImport(name="queryTerms")
-    private final @Nullable Input<List<String>> queryTerms;
+      private final @Nullable Input<List<String>> queryTerms;
 
     public Input<List<String>> getQueryTerms() {
         return this.queryTerms == null ? Input.empty() : this.queryTerms;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
      * 
      */
     @InputImport(name="replacementTerm")
-    private final @Nullable Input<String> replacementTerm;
+      private final @Nullable Input<String> replacementTerm;
 
     public Input<String> getReplacementTerm() {
         return this.replacementTerm == null ? Input.empty() : this.replacementTerm;
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
      * 
      */
     @InputImport(name="term")
-    private final @Nullable Input<String> term;
+      private final @Nullable Input<String> term;
 
     public Input<String> getTerm() {
         return this.term == null ? Input.empty() : this.term;
@@ -120,7 +120,6 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
             this.term = Input.ofNullable(term);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleReplacementActionArgs build() {
             return new GoogleCloudRetailV2alphaRuleReplacementActionArgs(queryTerms, replacementTerm, term);
         }

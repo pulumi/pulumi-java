@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TransitGatewayRegistrationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-    private final Input<String> globalNetworkId;
+      private final Input<String> globalNetworkId;
 
     public Input<String> getGlobalNetworkId() {
         return this.globalNetworkId;
@@ -29,7 +29,7 @@ public final class TransitGatewayRegistrationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="transitGatewayArn", required=true)
-    private final Input<String> transitGatewayArn;
+      private final Input<String> transitGatewayArn;
 
     public Input<String> getTransitGatewayArn() {
         return this.transitGatewayArn;
@@ -88,7 +88,6 @@ public final class TransitGatewayRegistrationArgs extends io.pulumi.resources.Re
             this.transitGatewayArn = Input.of(Objects.requireNonNull(transitGatewayArn));
             return this;
         }
-
         public TransitGatewayRegistrationArgs build() {
             return new TransitGatewayRegistrationArgs(globalNetworkId, transitGatewayArn);
         }

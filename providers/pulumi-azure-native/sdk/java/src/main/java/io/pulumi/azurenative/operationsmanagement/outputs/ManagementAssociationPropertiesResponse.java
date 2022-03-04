@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ManagementAssociationPropertiesResponse {
     /**
      * The applicationId of the appliance for this association.
      * 
-     */
+    */
     public String getApplicationId() {
         return this.applicationId;
     }
@@ -52,7 +52,6 @@ public final class ManagementAssociationPropertiesResponse {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public ManagementAssociationPropertiesResponse build() {
             return new ManagementAssociationPropertiesResponse(applicationId);
         }

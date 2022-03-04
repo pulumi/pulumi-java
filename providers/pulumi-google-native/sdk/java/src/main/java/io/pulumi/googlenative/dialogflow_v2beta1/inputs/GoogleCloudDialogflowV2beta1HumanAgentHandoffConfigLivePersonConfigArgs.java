@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePerson
      * 
      */
     @InputImport(name="accountNumber", required=true)
-    private final Input<String> accountNumber;
+      private final Input<String> accountNumber;
 
     public Input<String> getAccountNumber() {
         return this.accountNumber;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePerson
             this.accountNumber = Input.of(Objects.requireNonNull(accountNumber));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs(accountNumber);
         }

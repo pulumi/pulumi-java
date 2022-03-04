@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs ex
      * 
      */
     @InputImport(name="allowedSuccessCodes")
-    private final @Nullable Input<List<Integer>> allowedSuccessCodes;
+      private final @Nullable Input<List<Integer>> allowedSuccessCodes;
 
     public Input<List<Integer>> getAllowedSuccessCodes() {
         return this.allowedSuccessCodes == null ? Input.empty() : this.allowedSuccessCodes;
@@ -34,7 +34,7 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs ex
      * 
      */
     @InputImport(name="gcsObject")
-    private final @Nullable Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectArgs> gcsObject;
+      private final @Nullable Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectArgs> gcsObject;
 
     public Input<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectArgs> getGcsObject() {
         return this.gcsObject == null ? Input.empty() : this.gcsObject;
@@ -47,7 +47,7 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs ex
      * 
      */
     @InputImport(name="interpreter")
-    private final @Nullable Input<String> interpreter;
+      private final @Nullable Input<String> interpreter;
 
     public Input<String> getInterpreter() {
         return this.interpreter == null ? Input.empty() : this.interpreter;
@@ -58,7 +58,7 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs ex
      * 
      */
     @InputImport(name="localPath")
-    private final @Nullable Input<String> localPath;
+      private final @Nullable Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath == null ? Input.empty() : this.localPath;
@@ -147,7 +147,6 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs ex
             this.localPath = Input.ofNullable(localPath);
             return this;
         }
-
         public PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs build() {
             return new PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }

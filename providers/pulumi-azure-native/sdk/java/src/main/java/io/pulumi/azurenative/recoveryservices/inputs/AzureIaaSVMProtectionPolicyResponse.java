@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.LongTermSchedulePolicyRespo
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -33,14 +33,14 @@ public final class AzureIaaSVMProtectionPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-    private final String backupManagementType;
+      private final String backupManagementType;
 
     public String getBackupManagementType() {
         return this.backupManagementType;
     }
 
     @InputImport(name="instantRPDetails")
-    private final @Nullable InstantRPAdditionalDetailsResponse instantRPDetails;
+      private final @Nullable InstantRPAdditionalDetailsResponse instantRPDetails;
 
     public Optional<InstantRPAdditionalDetailsResponse> getInstantRPDetails() {
         return this.instantRPDetails == null ? Optional.empty() : Optional.ofNullable(this.instantRPDetails);
@@ -51,7 +51,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instantRpRetentionRangeInDays")
-    private final @Nullable Integer instantRpRetentionRangeInDays;
+      private final @Nullable Integer instantRpRetentionRangeInDays;
 
     public Optional<Integer> getInstantRpRetentionRangeInDays() {
         return this.instantRpRetentionRangeInDays == null ? Optional.empty() : Optional.ofNullable(this.instantRpRetentionRangeInDays);
@@ -62,7 +62,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectedItemsCount")
-    private final @Nullable Integer protectedItemsCount;
+      private final @Nullable Integer protectedItemsCount;
 
     public Optional<Integer> getProtectedItemsCount() {
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
@@ -73,7 +73,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
+      private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
     public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> getRetentionPolicy() {
         return this.retentionPolicy == null ? null : this.retentionPolicy;
@@ -84,7 +84,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="schedulePolicy")
-    private final @Nullable Object schedulePolicy;
+      private final @Nullable Object schedulePolicy;
 
     public Object getSchedulePolicy() {
         return this.schedulePolicy == null ? null : this.schedulePolicy;
@@ -95,7 +95,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable String timeZone;
+      private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
@@ -194,7 +194,6 @@ public final class AzureIaaSVMProtectionPolicyResponse extends io.pulumi.resourc
             this.timeZone = timeZone;
             return this;
         }
-
         public AzureIaaSVMProtectionPolicyResponse build() {
             return new AzureIaaSVMProtectionPolicyResponse(backupManagementType, instantRPDetails, instantRpRetentionRangeInDays, protectedItemsCount, retentionPolicy, schedulePolicy, timeZone);
         }

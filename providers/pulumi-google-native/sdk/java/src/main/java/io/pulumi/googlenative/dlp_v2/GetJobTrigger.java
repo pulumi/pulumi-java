@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobTrigger {
-/**
- * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+    private GetJobTrigger() {}
+    public interface BuilderApplicator {
+        public void apply(GetJobTriggerArgs.Builder a);
+    }
+    private static GetJobTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJobTriggerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
  * 
- */
+     */
+    public static CompletableFuture<GetJobTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+     * 
+     */
     public static CompletableFuture<GetJobTriggerResult> invokeAsync(GetJobTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getJobTrigger", TypeShape.of(GetJobTriggerResult.class), args == null ? GetJobTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedAudiences")
-    private final @Nullable Input<List<String>> allowedAudiences;
+      private final @Nullable Input<List<String>> allowedAudiences;
 
     public Input<List<String>> getAllowedAudiences() {
         return this.allowedAudiences == null ? Input.empty() : this.allowedAudiences;
@@ -67,7 +67,6 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
             this.allowedAudiences = Input.ofNullable(allowedAudiences);
             return this;
         }
-
         public AllowedAudiencesValidationArgs build() {
             return new AllowedAudiencesValidationArgs(allowedAudiences);
         }

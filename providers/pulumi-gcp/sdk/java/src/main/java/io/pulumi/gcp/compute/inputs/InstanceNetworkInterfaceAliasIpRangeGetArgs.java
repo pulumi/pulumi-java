@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class InstanceNetworkInterfaceAliasIpRangeGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-    private final Input<String> ipCidrRange;
+      private final Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange;
@@ -35,7 +35,7 @@ public final class InstanceNetworkInterfaceAliasIpRangeGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="subnetworkRangeName")
-    private final @Nullable Input<String> subnetworkRangeName;
+      private final @Nullable Input<String> subnetworkRangeName;
 
     public Input<String> getSubnetworkRangeName() {
         return this.subnetworkRangeName == null ? Input.empty() : this.subnetworkRangeName;
@@ -94,7 +94,6 @@ public final class InstanceNetworkInterfaceAliasIpRangeGetArgs extends io.pulumi
             this.subnetworkRangeName = Input.ofNullable(subnetworkRangeName);
             return this;
         }
-
         public InstanceNetworkInterfaceAliasIpRangeGetArgs build() {
             return new InstanceNetworkInterfaceAliasIpRangeGetArgs(ipCidrRange, subnetworkRangeName);
         }

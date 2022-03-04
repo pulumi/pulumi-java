@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FirewallDenyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<String>> ports;
+      private final @Nullable Input<List<String>> ports;
 
     public Input<List<String>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -39,7 +39,7 @@ public final class FirewallDenyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+      private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;
@@ -98,7 +98,6 @@ public final class FirewallDenyArgs extends io.pulumi.resources.ResourceArgs {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public FirewallDenyArgs build() {
             return new FirewallDenyArgs(ports, protocol);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -117,21 +117,21 @@ public final class GcpCredentialsDetailsPropertiesResponse {
     /**
      * Auth provider x509 certificate URL field of the API key (write only)
      * 
-     */
+    */
     public String getAuthProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
     }
     /**
      * Auth URI field of the API key (write only)
      * 
-     */
+    */
     public String getAuthUri() {
         return this.authUri;
     }
     /**
      * State of the multi-cloud connector
      * 
-     */
+    */
     public String getAuthenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
@@ -139,77 +139,77 @@ public final class GcpCredentialsDetailsPropertiesResponse {
      * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
      * Expected value is 'gcpCredentials'.
      * 
-     */
+    */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * Client email field of the API key (write only)
      * 
-     */
+    */
     public String getClientEmail() {
         return this.clientEmail;
     }
     /**
      * Client ID field of the API key (write only)
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Client x509 certificate URL field of the API key (write only)
      * 
-     */
+    */
     public String getClientX509CertUrl() {
         return this.clientX509CertUrl;
     }
     /**
      * The permissions detected in the cloud account.
      * 
-     */
+    */
     public List<String> getGrantedPermissions() {
         return this.grantedPermissions;
     }
     /**
      * The organization ID of the GCP cloud account
      * 
-     */
+    */
     public String getOrganizationId() {
         return this.organizationId;
     }
     /**
      * Private key field of the API key (write only)
      * 
-     */
+    */
     public String getPrivateKey() {
         return this.privateKey;
     }
     /**
      * Private key ID field of the API key (write only)
      * 
-     */
+    */
     public String getPrivateKeyId() {
         return this.privateKeyId;
     }
     /**
      * Project ID field of the API key (write only)
      * 
-     */
+    */
     public String getProjectId() {
         return this.projectId;
     }
     /**
      * Token URI field of the API key (write only)
      * 
-     */
+    */
     public String getTokenUri() {
         return this.tokenUri;
     }
     /**
      * Type field of the API key (write only)
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -329,7 +329,6 @@ public final class GcpCredentialsDetailsPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GcpCredentialsDetailsPropertiesResponse build() {
             return new GcpCredentialsDetailsPropertiesResponse(authProviderX509CertUrl, authUri, authenticationProvisioningState, authenticationType, clientEmail, clientId, clientX509CertUrl, grantedPermissions, organizationId, privateKey, privateKeyId, projectId, tokenUri, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class VirtualDiskResponse {
     /**
      * Disk's Controller id
      * 
-     */
+    */
     public String getControllerId() {
         return this.controllerId;
     }
     /**
      * Disk's independence mode type
      * 
-     */
+    */
     public String getIndependenceMode() {
         return this.independenceMode;
     }
     /**
      * Disk's total size
      * 
-     */
+    */
     public Integer getTotalSize() {
         return this.totalSize;
     }
     /**
      * Disk's id
      * 
-     */
+    */
     public Optional<String> getVirtualDiskId() {
         return Optional.ofNullable(this.virtualDiskId);
     }
     /**
      * Disk's display name
      * 
-     */
+    */
     public String getVirtualDiskName() {
         return this.virtualDiskName;
     }
@@ -140,7 +140,6 @@ public final class VirtualDiskResponse {
             this.virtualDiskName = Objects.requireNonNull(virtualDiskName);
             return this;
         }
-
         public VirtualDiskResponse build() {
             return new VirtualDiskResponse(controllerId, independenceMode, totalSize, virtualDiskId, virtualDiskName);
         }

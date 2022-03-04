@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetApplicationGatewayPrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.network.outputs.GetApplicationGatewayPrivateEndpointConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationGatewayPrivateEndpointConnection {
-/**
- * Private Endpoint connection on an application gateway.
+    private GetApplicationGatewayPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetApplicationGatewayPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetApplicationGatewayPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApplicationGatewayPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Private Endpoint connection on an application gateway.
  * API Version: 2020-11-01.
  * 
- *
- * Private Endpoint connection on an application gateway.
+     *
+     * Private Endpoint connection on an application gateway.
  * 
- */
+     */
+    public static CompletableFuture<GetApplicationGatewayPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Private Endpoint connection on an application gateway.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Private Endpoint connection on an application gateway.
+     * 
+     */
     public static CompletableFuture<GetApplicationGatewayPrivateEndpointConnectionResult> invokeAsync(GetApplicationGatewayPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getApplicationGatewayPrivateEndpointConnection", TypeShape.of(GetApplicationGatewayPrivateEndpointConnectionResult.class), args == null ? GetApplicationGatewayPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

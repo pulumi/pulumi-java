@@ -6,17 +6,33 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.sagemaker.inputs.GetDomainArgs;
 import io.pulumi.awsnative.sagemaker.outputs.GetDomainResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomain {
-/**
- * Resource Type definition for AWS::SageMaker::Domain
+    private GetDomain() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainArgs.Builder a);
+    }
+    private static GetDomainArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::Domain
  * 
- */
+     */
+    public static CompletableFuture<GetDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::SageMaker::Domain
+     * 
+     */
     public static CompletableFuture<GetDomainResult> invokeAsync(GetDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDomain", TypeShape.of(GetDomainResult.class), args == null ? GetDomainArgs.Empty : args, Utilities.withVersion(options));
     }

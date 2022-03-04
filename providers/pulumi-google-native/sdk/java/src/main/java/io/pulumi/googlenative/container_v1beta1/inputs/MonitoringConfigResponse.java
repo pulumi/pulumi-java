@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.ManagedPrometheusConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.inputs.MonitoringComponentConfigResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="componentConfig", required=true)
-    private final MonitoringComponentConfigResponse componentConfig;
+      private final MonitoringComponentConfigResponse componentConfig;
 
     public MonitoringComponentConfigResponse getComponentConfig() {
         return this.componentConfig;
@@ -33,7 +33,7 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="managedPrometheusConfig", required=true)
-    private final ManagedPrometheusConfigResponse managedPrometheusConfig;
+      private final ManagedPrometheusConfigResponse managedPrometheusConfig;
 
     public ManagedPrometheusConfigResponse getManagedPrometheusConfig() {
         return this.managedPrometheusConfig;
@@ -82,7 +82,6 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
             this.managedPrometheusConfig = Objects.requireNonNull(managedPrometheusConfig);
             return this;
         }
-
         public MonitoringConfigResponse build() {
             return new MonitoringConfigResponse(componentConfig, managedPrometheusConfig);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class LabelingJobInstructionsResponse {
     /**
      * The link to a page with detailed labeling instructions for labelers.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }
@@ -54,7 +54,6 @@ public final class LabelingJobInstructionsResponse {
             this.uri = uri;
             return this;
         }
-
         public LabelingJobInstructionsResponse build() {
             return new LabelingJobInstructionsResponse(uri);
         }

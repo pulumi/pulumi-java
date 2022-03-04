@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,42 +61,42 @@ public final class GetAddonResult {
     /**
      * The type of private cloud addon
      * 
-     */
+    */
     public Optional<String> getAddonType() {
         return Optional.ofNullable(this.addonType);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The SRM license
      * 
-     */
+    */
     public Optional<String> getLicenseKey() {
         return Optional.ofNullable(this.licenseKey);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The state of the addon provisioning
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -160,7 +160,6 @@ public final class GetAddonResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAddonResult build() {
             return new GetAddonResult(addonType, id, licenseKey, name, provisioningState, type);
         }

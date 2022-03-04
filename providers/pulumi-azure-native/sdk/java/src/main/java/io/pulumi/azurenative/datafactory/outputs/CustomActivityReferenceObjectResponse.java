@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class CustomActivityReferenceObjectResponse {
     /**
      * Dataset references.
      * 
-     */
+    */
     public List<DatasetReferenceResponse> getDatasets() {
         return this.datasets == null ? List.of() : this.datasets;
     }
     /**
      * Linked service references.
      * 
-     */
+    */
     public List<LinkedServiceReferenceResponse> getLinkedServices() {
         return this.linkedServices == null ? List.of() : this.linkedServices;
     }
@@ -77,7 +77,6 @@ public final class CustomActivityReferenceObjectResponse {
             this.linkedServices = linkedServices;
             return this;
         }
-
         public CustomActivityReferenceObjectResponse build() {
             return new CustomActivityReferenceObjectResponse(datasets, linkedServices);
         }

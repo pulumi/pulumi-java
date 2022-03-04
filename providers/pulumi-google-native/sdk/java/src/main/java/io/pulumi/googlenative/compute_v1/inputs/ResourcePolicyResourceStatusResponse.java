@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourcePolicyResourceStatusResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="instanceSchedulePolicy", required=true)
-    private final ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
+      private final ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
 
     public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse getInstanceSchedulePolicy() {
         return this.instanceSchedulePolicy;
@@ -59,7 +59,6 @@ public final class ResourcePolicyResourceStatusResponse extends io.pulumi.resour
             this.instanceSchedulePolicy = Objects.requireNonNull(instanceSchedulePolicy);
             return this;
         }
-
         public ResourcePolicyResourceStatusResponse build() {
             return new ResourcePolicyResourceStatusResponse(instanceSchedulePolicy);
         }

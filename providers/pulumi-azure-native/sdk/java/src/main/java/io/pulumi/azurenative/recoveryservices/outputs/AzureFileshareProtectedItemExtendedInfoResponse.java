@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
     /**
      * The oldest backup copy available for this item in the service.
      * 
-     */
+    */
     public Optional<String> getOldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
      * Indicates consistency of policy object and policy applied to this backup item.
      * 
-     */
+    */
     public Optional<String> getPolicyState() {
         return Optional.ofNullable(this.policyState);
     }
     /**
      * Number of available backup copies associated with this backup item.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
     /**
      * Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * The resource state sync time for this backup item.
      * 
-     */
+    */
     public String getResourceStateSyncTime() {
         return this.resourceStateSyncTime;
     }
@@ -140,7 +140,6 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
             this.resourceStateSyncTime = Objects.requireNonNull(resourceStateSyncTime);
             return this;
         }
-
         public AzureFileshareProtectedItemExtendedInfoResponse build() {
             return new AzureFileshareProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount, resourceState, resourceStateSyncTime);
         }

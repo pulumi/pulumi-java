@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.CspmMonitorAwsOfferingResponseNativeCloudConnection;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,14 +42,14 @@ public final class CspmMonitorAwsOfferingResponse {
     /**
      * The offering description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The native cloud connection configuration
      * 
-     */
+    */
     public Optional<CspmMonitorAwsOfferingResponseNativeCloudConnection> getNativeCloudConnection() {
         return Optional.ofNullable(this.nativeCloudConnection);
     }
@@ -57,7 +57,7 @@ public final class CspmMonitorAwsOfferingResponse {
      * The type of the security offering.
      * Expected value is 'CspmMonitorAws'.
      * 
-     */
+    */
     public String getOfferingType() {
         return this.offeringType;
     }
@@ -100,7 +100,6 @@ public final class CspmMonitorAwsOfferingResponse {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public CspmMonitorAwsOfferingResponse build() {
             return new CspmMonitorAwsOfferingResponse(description, nativeCloudConnection, offeringType);
         }

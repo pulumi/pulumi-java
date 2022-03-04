@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
     public static final DicomStoreIamMemberState Empty = new DicomStoreIamMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<DicomStoreIamMemberConditionGetArgs> condition;
+      private final @Nullable Input<DicomStoreIamMemberConditionGetArgs> condition;
 
     public Input<DicomStoreIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -30,7 +30,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dicomStoreId")
-    private final @Nullable Input<String> dicomStoreId;
+      private final @Nullable Input<String> dicomStoreId;
 
     public Input<String> getDicomStoreId() {
         return this.dicomStoreId == null ? Input.empty() : this.dicomStoreId;
@@ -41,14 +41,14 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -61,7 +61,7 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -165,7 +165,6 @@ public final class DicomStoreIamMemberState extends io.pulumi.resources.Resource
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public DicomStoreIamMemberState build() {
             return new DicomStoreIamMemberState(condition, dicomStoreId, etag, member, role);
         }

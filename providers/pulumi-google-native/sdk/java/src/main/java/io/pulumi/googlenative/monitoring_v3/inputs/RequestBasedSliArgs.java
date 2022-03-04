@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.DistributionCutArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.TimeSeriesRatioArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="distributionCut")
-    private final @Nullable Input<DistributionCutArgs> distributionCut;
+      private final @Nullable Input<DistributionCutArgs> distributionCut;
 
     public Input<DistributionCutArgs> getDistributionCut() {
         return this.distributionCut == null ? Input.empty() : this.distributionCut;
@@ -35,7 +35,7 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="goodTotalRatio")
-    private final @Nullable Input<TimeSeriesRatioArgs> goodTotalRatio;
+      private final @Nullable Input<TimeSeriesRatioArgs> goodTotalRatio;
 
     public Input<TimeSeriesRatioArgs> getGoodTotalRatio() {
         return this.goodTotalRatio == null ? Input.empty() : this.goodTotalRatio;
@@ -94,7 +94,6 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             this.goodTotalRatio = Input.ofNullable(goodTotalRatio);
             return this;
         }
-
         public RequestBasedSliArgs build() {
             return new RequestBasedSliArgs(distributionCut, goodTotalRatio);
         }

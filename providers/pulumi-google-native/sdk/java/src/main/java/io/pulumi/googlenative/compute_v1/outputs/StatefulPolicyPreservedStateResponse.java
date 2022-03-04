@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StatefulPolicyPreservedStateResponse {
     /**
      * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
      * 
-     */
+    */
     public Map<String,String> getDisks() {
         return this.disks;
     }
@@ -53,7 +53,6 @@ public final class StatefulPolicyPreservedStateResponse {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
         public StatefulPolicyPreservedStateResponse build() {
             return new StatefulPolicyPreservedStateResponse(disks);
         }

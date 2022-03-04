@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class EtcdInfoResponse {
     /**
      * Etcd type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Etcd version
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -74,7 +74,6 @@ public final class EtcdInfoResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public EtcdInfoResponse build() {
             return new EtcdInfoResponse(type, version);
         }

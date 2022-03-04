@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class KeyValueResponse {
     /**
      * The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class KeyValueResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public KeyValueResponse build() {
             return new KeyValueResponse(key, value);
         }

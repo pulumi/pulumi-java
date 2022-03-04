@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget;
@@ -82,56 +82,56 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
     /**
      * An Apt Repository.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt> getApt() {
         return Optional.ofNullable(this.apt);
     }
     /**
      * A deb package file.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb> getDeb() {
         return Optional.ofNullable(this.deb);
     }
     /**
      * Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
      * 
-     */
+    */
     public String getDesiredState() {
         return this.desiredState;
     }
     /**
      * A package managed by GooGet.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget> getGooget() {
         return Optional.ofNullable(this.googet);
     }
     /**
      * An MSI package.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi> getMsi() {
         return Optional.ofNullable(this.msi);
     }
     /**
      * An rpm package file.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm> getRpm() {
         return Optional.ofNullable(this.rpm);
     }
     /**
      * A Yum Repository.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum> getYum() {
         return Optional.ofNullable(this.yum);
     }
     /**
      * A Zypper Repository.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper> getZypper() {
         return Optional.ofNullable(this.zypper);
     }
@@ -209,7 +209,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
             this.zypper = zypper;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkg build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkg(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }

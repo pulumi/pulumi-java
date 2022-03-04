@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -83,63 +83,63 @@ public final class GetSyncAgentResult {
     /**
      * Expiration time of the sync agent version.
      * 
-     */
+    */
     public String getExpiryTime() {
         return this.expiryTime;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * If the sync agent version is up to date.
      * 
-     */
+    */
     public Boolean getIsUpToDate() {
         return this.isUpToDate;
     }
     /**
      * Last alive time of the sync agent.
      * 
-     */
+    */
     public String getLastAliveTime() {
         return this.lastAliveTime;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of the sync agent.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * ARM resource id of the sync database in the sync agent.
      * 
-     */
+    */
     public Optional<String> getSyncDatabaseId() {
         return Optional.ofNullable(this.syncDatabaseId);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Version of the sync agent.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -224,7 +224,6 @@ public final class GetSyncAgentResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSyncAgentResult build() {
             return new GetSyncAgentResult(expiryTime, id, isUpToDate, lastAliveTime, name, state, syncDatabaseId, type, version);
         }

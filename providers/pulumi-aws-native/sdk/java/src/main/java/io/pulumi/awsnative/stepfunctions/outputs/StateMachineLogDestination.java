@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.stepfunctions.outputs;
 
 import io.pulumi.awsnative.stepfunctions.outputs.StateMachineCloudWatchLogsLogGroup;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class StateMachineLogDestination {
             this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
             return this;
         }
-
         public StateMachineLogDestination build() {
             return new StateMachineLogDestination(cloudWatchLogsLogGroup);
         }

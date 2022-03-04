@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -98,77 +98,77 @@ public final class ConfigurationServiceGitRepositoryResponse {
     /**
      * Public sshKey of git repository.
      * 
-     */
+    */
     public Optional<String> getHostKey() {
         return Optional.ofNullable(this.hostKey);
     }
     /**
      * SshKey algorithm of git repository.
      * 
-     */
+    */
     public Optional<String> getHostKeyAlgorithm() {
         return Optional.ofNullable(this.hostKeyAlgorithm);
     }
     /**
      * Label of the repository
      * 
-     */
+    */
     public String getLabel() {
         return this.label;
     }
     /**
      * Name of the repository
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Password of git repository basic auth.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Collection of patterns of the repository
      * 
-     */
+    */
     public List<String> getPatterns() {
         return this.patterns;
     }
     /**
      * Private sshKey algorithm of git repository.
      * 
-     */
+    */
     public Optional<String> getPrivateKey() {
         return Optional.ofNullable(this.privateKey);
     }
     /**
      * Searching path of the repository
      * 
-     */
+    */
     public List<String> getSearchPaths() {
         return this.searchPaths == null ? List.of() : this.searchPaths;
     }
     /**
      * Strict host key checking or not.
      * 
-     */
+    */
     public Optional<Boolean> getStrictHostKeyChecking() {
         return Optional.ofNullable(this.strictHostKeyChecking);
     }
     /**
      * URI of the repository
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * Username of git repository basic auth.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -267,7 +267,6 @@ public final class ConfigurationServiceGitRepositoryResponse {
             this.username = username;
             return this;
         }
-
         public ConfigurationServiceGitRepositoryResponse build() {
             return new ConfigurationServiceGitRepositoryResponse(hostKey, hostKeyAlgorithm, label, name, password, patterns, privateKey, searchPaths, strictHostKeyChecking, uri, username);
         }

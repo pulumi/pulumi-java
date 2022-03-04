@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.GetWebAppSwiftVirtualNetworkConnectionSlotArgs;
 import io.pulumi.azurenative.web.outputs.GetWebAppSwiftVirtualNetworkConnectionSlotResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppSwiftVirtualNetworkConnectionSlot {
-/**
- * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
+    private GetWebAppSwiftVirtualNetworkConnectionSlot() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppSwiftVirtualNetworkConnectionSlotArgs.Builder a);
+    }
+    private static GetWebAppSwiftVirtualNetworkConnectionSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppSwiftVirtualNetworkConnectionSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
  * API Version: 2020-10-01.
  * 
- *
- * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
+     *
+     * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
+     * API Version: 2020-10-01.
+     * 
+     *
+         * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
+     * 
+     */
     public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionSlotResult> invokeAsync(GetWebAppSwiftVirtualNetworkConnectionSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSwiftVirtualNetworkConnectionSlot", TypeShape.of(GetWebAppSwiftVirtualNetworkConnectionSlotResult.class), args == null ? GetWebAppSwiftVirtualNetworkConnectionSlotArgs.Empty : args, Utilities.withVersion(options));
     }

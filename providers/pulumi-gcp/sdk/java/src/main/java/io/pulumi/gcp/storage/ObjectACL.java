@@ -5,8 +5,8 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.ObjectACLArgs;
 import io.pulumi.gcp.storage.inputs.ObjectACLState;
@@ -95,6 +95,37 @@ public class ObjectACL extends io.pulumi.resources.CustomResource {
         return this.roleEntities;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ObjectACLArgs.Builder a);
+    }
+    private static io.pulumi.gcp.storage.ObjectACLArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.storage.ObjectACLArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ObjectACL(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ObjectACL(String name) {
+        this(name, ObjectACLArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ObjectACL(String name, ObjectACLArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

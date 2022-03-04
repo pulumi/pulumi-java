@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGameServerCluster {
-/**
- * Gets details of a single game server cluster.
+    private GetGameServerCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetGameServerClusterArgs.Builder a);
+    }
+    private static GetGameServerClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGameServerClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single game server cluster.
  * 
- */
+     */
+    public static CompletableFuture<GetGameServerClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single game server cluster.
+     * 
+     */
     public static CompletableFuture<GetGameServerClusterResult> invokeAsync(GetGameServerClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gameservices/v1beta:getGameServerCluster", TypeShape.of(GetGameServerClusterResult.class), args == null ? GetGameServerClusterArgs.Empty : args, Utilities.withVersion(options));
     }

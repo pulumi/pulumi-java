@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class PrivateConnectivityResponse {
     /**
      * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
      * 
-     */
+    */
     public String getPrivateConnection() {
         return this.privateConnection;
     }
@@ -52,7 +52,6 @@ public final class PrivateConnectivityResponse {
             this.privateConnection = Objects.requireNonNull(privateConnection);
             return this;
         }
-
         public PrivateConnectivityResponse build() {
             return new PrivateConnectivityResponse(privateConnection);
         }

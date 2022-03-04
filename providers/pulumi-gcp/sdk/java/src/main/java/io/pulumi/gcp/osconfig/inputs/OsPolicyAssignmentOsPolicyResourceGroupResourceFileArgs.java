@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -31,7 +31,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs> file;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs> file;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -42,7 +42,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -54,7 +54,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<String> permissions;
+      private final @Nullable Input<String> permissions;
 
     public Input<String> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -65,7 +65,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<String> state;
+      private final Input<String> state;
 
     public Input<String> getState() {
         return this.state;
@@ -169,7 +169,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs(content, file, path, permissions, state);
         }

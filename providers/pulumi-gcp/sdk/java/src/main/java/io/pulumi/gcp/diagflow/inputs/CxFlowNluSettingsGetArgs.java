@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CxFlowNluSettingsGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="classificationThreshold")
-    private final @Nullable Input<Double> classificationThreshold;
+      private final @Nullable Input<Double> classificationThreshold;
 
     public Input<Double> getClassificationThreshold() {
         return this.classificationThreshold == null ? Input.empty() : this.classificationThreshold;
@@ -35,7 +35,7 @@ public final class CxFlowNluSettingsGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="modelTrainingMode")
-    private final @Nullable Input<String> modelTrainingMode;
+      private final @Nullable Input<String> modelTrainingMode;
 
     public Input<String> getModelTrainingMode() {
         return this.modelTrainingMode == null ? Input.empty() : this.modelTrainingMode;
@@ -49,7 +49,7 @@ public final class CxFlowNluSettingsGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="modelType")
-    private final @Nullable Input<String> modelType;
+      private final @Nullable Input<String> modelType;
 
     public Input<String> getModelType() {
         return this.modelType == null ? Input.empty() : this.modelType;
@@ -123,7 +123,6 @@ public final class CxFlowNluSettingsGetArgs extends io.pulumi.resources.Resource
             this.modelType = Input.ofNullable(modelType);
             return this;
         }
-
         public CxFlowNluSettingsGetArgs build() {
             return new CxFlowNluSettingsGetArgs(classificationThreshold, modelTrainingMode, modelType);
         }

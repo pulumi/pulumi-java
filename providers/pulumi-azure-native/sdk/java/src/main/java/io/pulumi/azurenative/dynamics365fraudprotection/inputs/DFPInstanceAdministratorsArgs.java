@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dynamics365fraudprotection.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -67,7 +67,6 @@ public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.Res
             this.members = Input.ofNullable(members);
             return this;
         }
-
         public DFPInstanceAdministratorsArgs build() {
             return new DFPInstanceAdministratorsArgs(members);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DefaultSnatStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -66,7 +66,6 @@ public final class DefaultSnatStatusArgs extends io.pulumi.resources.ResourceArg
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
-
         public DefaultSnatStatusArgs build() {
             return new DefaultSnatStatusArgs(disabled);
         }

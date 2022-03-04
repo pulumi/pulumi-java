@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionAutoscaler {
-/**
- * Returns the specified autoscaler.
+    private GetRegionAutoscaler() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionAutoscalerArgs.Builder a);
+    }
+    private static GetRegionAutoscalerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionAutoscalerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified autoscaler.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionAutoscalerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified autoscaler.
+     * 
+     */
     public static CompletableFuture<GetRegionAutoscalerResult> invokeAsync(GetRegionAutoscalerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRegionAutoscaler", TypeShape.of(GetRegionAutoscalerResult.class), args == null ? GetRegionAutoscalerArgs.Empty : args, Utilities.withVersion(options));
     }

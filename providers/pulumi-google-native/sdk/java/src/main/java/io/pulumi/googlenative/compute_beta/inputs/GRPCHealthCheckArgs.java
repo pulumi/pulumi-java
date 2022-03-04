@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.GRPCHealthCheckPortSpecification;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="grpcServiceName")
-    private final @Nullable Input<String> grpcServiceName;
+      private final @Nullable Input<String> grpcServiceName;
 
     public Input<String> getGrpcServiceName() {
         return this.grpcServiceName == null ? Input.empty() : this.grpcServiceName;
@@ -32,7 +32,7 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -43,7 +43,7 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="portName")
-    private final @Nullable Input<String> portName;
+      private final @Nullable Input<String> portName;
 
     public Input<String> getPortName() {
         return this.portName == null ? Input.empty() : this.portName;
@@ -54,7 +54,7 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="portSpecification")
-    private final @Nullable Input<GRPCHealthCheckPortSpecification> portSpecification;
+      private final @Nullable Input<GRPCHealthCheckPortSpecification> portSpecification;
 
     public Input<GRPCHealthCheckPortSpecification> getPortSpecification() {
         return this.portSpecification == null ? Input.empty() : this.portSpecification;
@@ -143,7 +143,6 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
             this.portSpecification = Input.ofNullable(portSpecification);
             return this;
         }
-
         public GRPCHealthCheckArgs build() {
             return new GRPCHealthCheckArgs(grpcServiceName, port, portName, portSpecification);
         }

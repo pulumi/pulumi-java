@@ -5,8 +5,8 @@ package io.pulumi.googlenative.firebase_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebase_v1beta1.WebAppArgs;
 import java.lang.String;
@@ -106,6 +106,37 @@ public class WebApp extends io.pulumi.resources.CustomResource {
         return this.webId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable WebAppArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.firebase_v1beta1.WebAppArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.firebase_v1beta1.WebAppArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WebApp(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WebApp(String name) {
+        this(name, WebAppArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WebApp(String name, @Nullable WebAppArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

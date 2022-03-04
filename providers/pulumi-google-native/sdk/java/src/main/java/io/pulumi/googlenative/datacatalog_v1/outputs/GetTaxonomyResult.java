@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1SystemTimestampsResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -62,42 +62,42 @@ public final class GetTaxonomyResult {
     /**
      * Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
      * 
-     */
+    */
     public List<String> getActivatedPolicyTypes() {
         return this.activatedPolicyTypes;
     }
     /**
      * Optional. Description of this taxonomy. If not set, defaults to empty. The description must contain only Unicode characters, tabs, newlines, carriage returns, and page breaks, and be at most 2000 bytes long when encoded in UTF-8.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * User-defined name of this taxonomy. The name can't start or end with spaces, must contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Number of policy tags in this taxonomy.
      * 
-     */
+    */
     public Integer getPolicyTagCount() {
         return this.policyTagCount;
     }
     /**
      * Creation and modification timestamps of this taxonomy.
      * 
-     */
+    */
     public GoogleCloudDatacatalogV1SystemTimestampsResponse getTaxonomyTimestamps() {
         return this.taxonomyTimestamps;
     }
@@ -161,7 +161,6 @@ public final class GetTaxonomyResult {
             this.taxonomyTimestamps = Objects.requireNonNull(taxonomyTimestamps);
             return this;
         }
-
         public GetTaxonomyResult build() {
             return new GetTaxonomyResult(activatedPolicyTypes, description, displayName, name, policyTagCount, taxonomyTimestamps);
         }

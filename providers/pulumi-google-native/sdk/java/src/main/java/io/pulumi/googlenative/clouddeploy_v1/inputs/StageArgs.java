@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profiles")
-    private final @Nullable Input<List<String>> profiles;
+      private final @Nullable Input<List<String>> profiles;
 
     public Input<List<String>> getProfiles() {
         return this.profiles == null ? Input.empty() : this.profiles;
@@ -35,7 +35,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetId")
-    private final @Nullable Input<String> targetId;
+      private final @Nullable Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId == null ? Input.empty() : this.targetId;
@@ -94,7 +94,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             this.targetId = Input.ofNullable(targetId);
             return this;
         }
-
         public StageArgs build() {
             return new StageArgs(profiles, targetId);
         }

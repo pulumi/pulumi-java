@@ -9,8 +9,8 @@ import io.pulumi.azurenative.logic.outputs.KeyVaultKeyReferenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -161,6 +161,37 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(IntegrationAccountCertificateArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.logic.IntegrationAccountCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.logic.IntegrationAccountCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public IntegrationAccountCertificate(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public IntegrationAccountCertificate(String name) {
+        this(name, IntegrationAccountCertificateArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public IntegrationAccountCertificate(String name, IntegrationAccountCertificateArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

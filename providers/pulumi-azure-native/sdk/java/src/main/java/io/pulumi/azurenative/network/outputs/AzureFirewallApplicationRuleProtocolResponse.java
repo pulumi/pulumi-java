@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class AzureFirewallApplicationRuleProtocolResponse {
     /**
      * Port number for the protocol, cannot be greater than 64000. This field is optional.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Protocol type.
      * 
-     */
+    */
     public Optional<String> getProtocolType() {
         return Optional.ofNullable(this.protocolType);
     }
@@ -77,7 +77,6 @@ public final class AzureFirewallApplicationRuleProtocolResponse {
             this.protocolType = protocolType;
             return this;
         }
-
         public AzureFirewallApplicationRuleProtocolResponse build() {
             return new AzureFirewallApplicationRuleProtocolResponse(port, protocolType);
         }

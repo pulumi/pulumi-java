@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigOpenapiDocumentArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="api", required=true)
-    private final Input<String> api;
+      private final Input<String> api;
 
     public Input<String> getApi() {
         return this.api;
@@ -34,7 +34,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiConfigId")
-    private final @Nullable Input<String> apiConfigId;
+      private final @Nullable Input<String> apiConfigId;
 
     public Input<String> getApiConfigId() {
         return this.apiConfigId == null ? Input.empty() : this.apiConfigId;
@@ -46,7 +46,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiConfigIdPrefix")
-    private final @Nullable Input<String> apiConfigIdPrefix;
+      private final @Nullable Input<String> apiConfigIdPrefix;
 
     public Input<String> getApiConfigIdPrefix() {
         return this.apiConfigIdPrefix == null ? Input.empty() : this.apiConfigIdPrefix;
@@ -57,7 +57,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -70,7 +70,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayConfig")
-    private final @Nullable Input<ApiConfigGatewayConfigArgs> gatewayConfig;
+      private final @Nullable Input<ApiConfigGatewayConfigArgs> gatewayConfig;
 
     public Input<ApiConfigGatewayConfigArgs> getGatewayConfig() {
         return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
@@ -81,7 +81,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -93,7 +93,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openapiDocuments", required=true)
-    private final Input<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments;
+      private final Input<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments;
 
     public Input<List<ApiConfigOpenapiDocumentArgs>> getOpenapiDocuments() {
         return this.openapiDocuments;
@@ -105,7 +105,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -254,7 +254,6 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ApiConfigArgs build() {
             return new ApiConfigArgs(api, apiConfigId, apiConfigIdPrefix, displayName, gatewayConfig, labels, openapiDocuments, project);
         }

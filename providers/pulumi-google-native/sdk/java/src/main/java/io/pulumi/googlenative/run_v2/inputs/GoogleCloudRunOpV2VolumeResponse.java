@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2CloudSqlInstanceResponse;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretVolumeSourceResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudSqlInstance", required=true)
-    private final GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance;
+      private final GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance;
 
     public GoogleCloudRunOpV2CloudSqlInstanceResponse getCloudSqlInstance() {
         return this.cloudSqlInstance;
@@ -34,7 +34,7 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secret", required=true)
-    private final GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
+      private final GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
 
     public GoogleCloudRunOpV2SecretVolumeSourceResponse getSecret() {
         return this.secret;
@@ -104,7 +104,6 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public GoogleCloudRunOpV2VolumeResponse build() {
             return new GoogleCloudRunOpV2VolumeResponse(cloudSqlInstance, name, secret);
         }

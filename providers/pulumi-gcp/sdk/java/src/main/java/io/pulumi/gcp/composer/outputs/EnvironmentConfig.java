@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigDatabaseConfig;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigEncryptionConfig;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigMaintenanceWindow;
@@ -240,7 +240,6 @@ public final class EnvironmentConfig {
             this.workloadsConfig = workloadsConfig;
             return this;
         }
-
         public EnvironmentConfig build() {
             return new EnvironmentConfig(airflowUri, dagGcsPrefix, databaseConfig, encryptionConfig, environmentSize, gkeCluster, maintenanceWindow, masterAuthorizedNetworksConfig, nodeConfig, nodeCount, privateEnvironmentConfig, softwareConfig, webServerConfig, webServerNetworkAccessControl, workloadsConfig);
         }

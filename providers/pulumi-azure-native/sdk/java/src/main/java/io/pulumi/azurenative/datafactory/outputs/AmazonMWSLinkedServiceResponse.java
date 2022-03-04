@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -133,77 +133,77 @@ public final class AmazonMWSLinkedServiceResponse {
     /**
      * The access key id used to access data.
      * 
-     */
+    */
     public Object getAccessKeyId() {
         return this.accessKeyId;
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The endpoint of the Amazon MWS server, (i.e. mws.amazonservices.com)
      * 
-     */
+    */
     public Object getEndpoint() {
         return this.endpoint;
     }
     /**
      * The Amazon Marketplace ID you want to retrieve data from. To retrieve data from multiple Marketplace IDs, separate them with a comma (,). (i.e. A2EUQ1WTGCTBG2)
      * 
-     */
+    */
     public Object getMarketplaceID() {
         return this.marketplaceID;
     }
     /**
      * The Amazon MWS authentication token.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getMwsAuthToken() {
         return Optional.ofNullable(this.mwsAuthToken);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The secret key used to access data.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getSecretKey() {
         return Optional.ofNullable(this.secretKey);
     }
     /**
      * The Amazon seller ID.
      * 
-     */
+    */
     public Object getSellerID() {
         return this.sellerID;
     }
@@ -211,28 +211,28 @@ public final class AmazonMWSLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'AmazonMWS'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
-     */
+    */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
-     */
+    */
     public Optional<Object> getUseHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
      * 
-     */
+    */
     public Optional<Object> getUsePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
@@ -359,7 +359,6 @@ public final class AmazonMWSLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public AmazonMWSLinkedServiceResponse build() {
             return new AmazonMWSLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, endpoint, marketplaceID, mwsAuthToken, parameters, secretKey, sellerID, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

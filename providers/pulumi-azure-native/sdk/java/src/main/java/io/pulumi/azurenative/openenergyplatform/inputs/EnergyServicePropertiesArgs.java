@@ -5,7 +5,7 @@ package io.pulumi.azurenative.openenergyplatform.inputs;
 
 import io.pulumi.azurenative.openenergyplatform.inputs.DataPartitionNamesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
     public static final EnergyServicePropertiesArgs Empty = new EnergyServicePropertiesArgs();
 
     @InputImport(name="authAppId")
-    private final @Nullable Input<String> authAppId;
+      private final @Nullable Input<String> authAppId;
 
     public Input<String> getAuthAppId() {
         return this.authAppId == null ? Input.empty() : this.authAppId;
     }
 
     @InputImport(name="dataPartitionNames")
-    private final @Nullable Input<List<DataPartitionNamesArgs>> dataPartitionNames;
+      private final @Nullable Input<List<DataPartitionNamesArgs>> dataPartitionNames;
 
     public Input<List<DataPartitionNamesArgs>> getDataPartitionNames() {
         return this.dataPartitionNames == null ? Input.empty() : this.dataPartitionNames;
@@ -83,7 +83,6 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
             this.dataPartitionNames = Input.ofNullable(dataPartitionNames);
             return this;
         }
-
         public EnergyServicePropertiesArgs build() {
             return new EnergyServicePropertiesArgs(authAppId, dataPartitionNames);
         }

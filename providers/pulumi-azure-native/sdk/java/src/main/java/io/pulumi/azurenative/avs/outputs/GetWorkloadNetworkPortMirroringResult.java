@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -90,70 +90,70 @@ public final class GetWorkloadNetworkPortMirroringResult {
     /**
      * Destination VM Group.
      * 
-     */
+    */
     public Optional<String> getDestination() {
         return Optional.ofNullable(this.destination);
     }
     /**
      * Direction of port mirroring profile.
      * 
-     */
+    */
     public Optional<String> getDirection() {
         return Optional.ofNullable(this.direction);
     }
     /**
      * Display name of the port mirroring profile.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
      * 
-     */
+    */
     public Optional<Double> getRevision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * Source VM Group.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Port Mirroring Status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -245,7 +245,6 @@ public final class GetWorkloadNetworkPortMirroringResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkPortMirroringResult build() {
             return new GetWorkloadNetworkPortMirroringResult(destination, direction, displayName, id, name, provisioningState, revision, source, status, type);
         }

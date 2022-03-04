@@ -8,7 +8,7 @@ public final class MyStack extends Stack {
         var config = Config.of();
         var name = config.require("name");
         var secret = config.require("secret");
-        System.out.println(String.format("Hello, %s!", name));
-        System.out.println(String.format("Psst, %s", secret));
+        System.out.printf("Hello, %s!%n", name);
+        System.out.printf("Psst, %s%n", secret);
     }
 }

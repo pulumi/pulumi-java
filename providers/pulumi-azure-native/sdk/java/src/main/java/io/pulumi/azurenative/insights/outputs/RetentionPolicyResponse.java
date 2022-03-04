@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class RetentionPolicyResponse {
     /**
      * the number of days for the retention in days. A value of 0 will retain the events indefinitely.
      * 
-     */
+    */
     public Integer getDays() {
         return this.days;
     }
     /**
      * a value indicating whether the retention policy is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -75,7 +75,6 @@ public final class RetentionPolicyResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public RetentionPolicyResponse build() {
             return new RetentionPolicyResponse(days, enabled);
         }

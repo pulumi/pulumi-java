@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -17,14 +17,14 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConsentStoreArgs Empty = new ConsentStoreArgs();
 
     @InputImport(name="consentStoreId", required=true)
-    private final Input<String> consentStoreId;
+      private final Input<String> consentStoreId;
 
     public Input<String> getConsentStoreId() {
         return this.consentStoreId;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -35,7 +35,7 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultConsentTtl")
-    private final @Nullable Input<String> defaultConsentTtl;
+      private final @Nullable Input<String> defaultConsentTtl;
 
     public Input<String> getDefaultConsentTtl() {
         return this.defaultConsentTtl == null ? Input.empty() : this.defaultConsentTtl;
@@ -46,7 +46,7 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableConsentCreateOnUpdate")
-    private final @Nullable Input<Boolean> enableConsentCreateOnUpdate;
+      private final @Nullable Input<Boolean> enableConsentCreateOnUpdate;
 
     public Input<Boolean> getEnableConsentCreateOnUpdate() {
         return this.enableConsentCreateOnUpdate == null ? Input.empty() : this.enableConsentCreateOnUpdate;
@@ -57,14 +57,14 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -75,14 +75,14 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -231,7 +231,6 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ConsentStoreArgs build() {
             return new ConsentStoreArgs(consentStoreId, datasetId, defaultConsentTtl, enableConsentCreateOnUpdate, labels, location, name, project);
         }

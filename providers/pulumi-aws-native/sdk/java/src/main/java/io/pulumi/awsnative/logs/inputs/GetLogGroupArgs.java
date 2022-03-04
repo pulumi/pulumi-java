@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.logs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLogGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logGroupName", required=true)
-    private final String logGroupName;
+      private final String logGroupName;
 
     public String getLogGroupName() {
         return this.logGroupName;
@@ -55,7 +55,6 @@ public final class GetLogGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
-
         public GetLogGroupArgs build() {
             return new GetLogGroupArgs(logGroupName);
         }

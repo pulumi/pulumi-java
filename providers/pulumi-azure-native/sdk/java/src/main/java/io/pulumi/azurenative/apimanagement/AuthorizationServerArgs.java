@@ -10,7 +10,7 @@ import io.pulumi.azurenative.apimanagement.enums.GrantType;
 import io.pulumi.azurenative.apimanagement.inputs.TokenBodyParameterContractArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizationEndpoint", required=true)
-    private final Input<String> authorizationEndpoint;
+      private final Input<String> authorizationEndpoint;
 
     public Input<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
@@ -38,7 +38,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizationMethods")
-    private final @Nullable Input<List<AuthorizationMethod>> authorizationMethods;
+      private final @Nullable Input<List<AuthorizationMethod>> authorizationMethods;
 
     public Input<List<AuthorizationMethod>> getAuthorizationMethods() {
         return this.authorizationMethods == null ? Input.empty() : this.authorizationMethods;
@@ -49,7 +49,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authsid")
-    private final @Nullable Input<String> authsid;
+      private final @Nullable Input<String> authsid;
 
     public Input<String> getAuthsid() {
         return this.authsid == null ? Input.empty() : this.authsid;
@@ -60,7 +60,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bearerTokenSendingMethods")
-    private final @Nullable Input<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
+      private final @Nullable Input<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
 
     public Input<List<Either<String,BearerTokenSendingMethod>>> getBearerTokenSendingMethods() {
         return this.bearerTokenSendingMethods == null ? Input.empty() : this.bearerTokenSendingMethods;
@@ -71,7 +71,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientAuthenticationMethod")
-    private final @Nullable Input<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
+      private final @Nullable Input<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
 
     public Input<List<Either<String,ClientAuthenticationMethod>>> getClientAuthenticationMethod() {
         return this.clientAuthenticationMethod == null ? Input.empty() : this.clientAuthenticationMethod;
@@ -82,7 +82,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -93,7 +93,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientRegistrationEndpoint", required=true)
-    private final Input<String> clientRegistrationEndpoint;
+      private final Input<String> clientRegistrationEndpoint;
 
     public Input<String> getClientRegistrationEndpoint() {
         return this.clientRegistrationEndpoint;
@@ -104,7 +104,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+      private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -115,7 +115,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="defaultScope")
-    private final @Nullable Input<String> defaultScope;
+      private final @Nullable Input<String> defaultScope;
 
     public Input<String> getDefaultScope() {
         return this.defaultScope == null ? Input.empty() : this.defaultScope;
@@ -126,7 +126,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -137,7 +137,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -148,7 +148,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="grantTypes", required=true)
-    private final Input<List<Either<String,GrantType>>> grantTypes;
+      private final Input<List<Either<String,GrantType>>> grantTypes;
 
     public Input<List<Either<String,GrantType>>> getGrantTypes() {
         return this.grantTypes;
@@ -159,7 +159,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -170,7 +170,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceOwnerPassword")
-    private final @Nullable Input<String> resourceOwnerPassword;
+      private final @Nullable Input<String> resourceOwnerPassword;
 
     public Input<String> getResourceOwnerPassword() {
         return this.resourceOwnerPassword == null ? Input.empty() : this.resourceOwnerPassword;
@@ -181,7 +181,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceOwnerUsername")
-    private final @Nullable Input<String> resourceOwnerUsername;
+      private final @Nullable Input<String> resourceOwnerUsername;
 
     public Input<String> getResourceOwnerUsername() {
         return this.resourceOwnerUsername == null ? Input.empty() : this.resourceOwnerUsername;
@@ -192,7 +192,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -203,7 +203,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="supportState")
-    private final @Nullable Input<Boolean> supportState;
+      private final @Nullable Input<Boolean> supportState;
 
     public Input<Boolean> getSupportState() {
         return this.supportState == null ? Input.empty() : this.supportState;
@@ -214,7 +214,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tokenBodyParameters")
-    private final @Nullable Input<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
+      private final @Nullable Input<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
 
     public Input<List<TokenBodyParameterContractArgs>> getTokenBodyParameters() {
         return this.tokenBodyParameters == null ? Input.empty() : this.tokenBodyParameters;
@@ -225,7 +225,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tokenEndpoint")
-    private final @Nullable Input<String> tokenEndpoint;
+      private final @Nullable Input<String> tokenEndpoint;
 
     public Input<String> getTokenEndpoint() {
         return this.tokenEndpoint == null ? Input.empty() : this.tokenEndpoint;
@@ -539,7 +539,6 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             this.tokenEndpoint = Input.ofNullable(tokenEndpoint);
             return this;
         }
-
         public AuthorizationServerArgs build() {
             return new AuthorizationServerArgs(authorizationEndpoint, authorizationMethods, authsid, bearerTokenSendingMethods, clientAuthenticationMethod, clientId, clientRegistrationEndpoint, clientSecret, defaultScope, description, displayName, grantTypes, resourceGroupName, resourceOwnerPassword, resourceOwnerUsername, serviceName, supportState, tokenBodyParameters, tokenEndpoint);
         }

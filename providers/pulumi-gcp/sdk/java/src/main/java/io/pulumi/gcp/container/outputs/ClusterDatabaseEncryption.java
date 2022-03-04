@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ClusterDatabaseEncryption {
     /**
      * the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
      * 
-     */
+    */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * `ENCRYPTED` or `DECRYPTED`
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -76,7 +76,6 @@ public final class ClusterDatabaseEncryption {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public ClusterDatabaseEncryption build() {
             return new ClusterDatabaseEncryption(keyName, state);
         }

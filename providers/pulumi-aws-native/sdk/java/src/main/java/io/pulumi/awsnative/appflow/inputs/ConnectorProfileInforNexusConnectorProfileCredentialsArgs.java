@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="accessKeyId", required=true)
-    private final Input<String> accessKeyId;
+      private final Input<String> accessKeyId;
 
     public Input<String> getAccessKeyId() {
         return this.accessKeyId;
@@ -29,7 +29,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="datakey", required=true)
-    private final Input<String> datakey;
+      private final Input<String> datakey;
 
     public Input<String> getDatakey() {
         return this.datakey;
@@ -40,7 +40,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="secretAccessKey", required=true)
-    private final Input<String> secretAccessKey;
+      private final Input<String> secretAccessKey;
 
     public Input<String> getSecretAccessKey() {
         return this.secretAccessKey;
@@ -51,7 +51,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="userId", required=true)
-    private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;
@@ -140,7 +140,6 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }
-
         public ConnectorProfileInforNexusConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileInforNexusConnectorProfileCredentialsArgs(accessKeyId, datakey, secretAccessKey, userId);
         }

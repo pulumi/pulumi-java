@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
      * 
      */
     @InputImport(name="field", required=true)
-    private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field;
+      private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> getField() {
         return this.field;
@@ -32,7 +32,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
      * 
      */
     @InputImport(name="table", required=true)
-    private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table;
+      private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> getTable() {
         return this.table;
@@ -91,7 +91,6 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
             this.table = Input.of(Objects.requireNonNull(table));
             return this;
         }
-
         public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs(field, table);
         }

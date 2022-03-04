@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.FromEachInputFileResponse;
 import io.pulumi.azurenative.media.outputs.InputFileResponse;
 import io.pulumi.azurenative.media.outputs.UtcClipTimeResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -77,35 +77,35 @@ public final class JobInputAssetResponse {
     /**
      * The name of the input Asset.
      * 
-     */
+    */
     public String getAssetName() {
         return this.assetName;
     }
     /**
      * Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
      * 
-     */
+    */
     public Optional<Either<AbsoluteClipTimeResponse,UtcClipTimeResponse>> getEnd() {
         return Optional.ofNullable(this.end);
     }
     /**
      * List of files. Required for JobInputHttp. Maximum of 4000 characters each.
      * 
-     */
+    */
     public List<String> getFiles() {
         return this.files == null ? List.of() : this.files;
     }
     /**
      * Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
      * 
-     */
+    */
     public List<Object> getInputDefinitions() {
         return this.inputDefinitions == null ? List.of() : this.inputDefinitions;
     }
     /**
      * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
@@ -113,14 +113,14 @@ public final class JobInputAssetResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.JobInputAsset'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
      * 
-     */
+    */
     public Optional<Either<AbsoluteClipTimeResponse,UtcClipTimeResponse>> getStart() {
         return Optional.ofNullable(this.start);
     }
@@ -191,7 +191,6 @@ public final class JobInputAssetResponse {
             this.start = start;
             return this;
         }
-
         public JobInputAssetResponse build() {
             return new JobInputAssetResponse(assetName, end, files, inputDefinitions, label, odataType, start);
         }

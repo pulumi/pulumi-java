@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hanaonazure.outputs.HardwareProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.OSProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.StorageProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -129,105 +129,105 @@ public final class GetHanaInstanceResult {
     /**
      * Specifies the HANA instance unique ID.
      * 
-     */
+    */
     public String getHanaInstanceId() {
         return this.hanaInstanceId;
     }
     /**
      * Specifies the hardware settings for the HANA instance.
      * 
-     */
+    */
     public Optional<HardwareProfileResponse> getHardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
     /**
      * Hardware revision of a HANA instance
      * 
-     */
+    */
     public String getHwRevision() {
         return this.hwRevision;
     }
     /**
      * Resource ID
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the network settings for the HANA instance.
      * 
-     */
+    */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Specifies the operating system settings for the HANA instance.
      * 
-     */
+    */
     public Optional<OSProfileResponse> getOsProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
      * ARM ID of another HanaInstance that will share a network with this HanaInstance
      * 
-     */
+    */
     public Optional<String> getPartnerNodeId() {
         return Optional.ofNullable(this.partnerNodeId);
     }
     /**
      * Resource power state
      * 
-     */
+    */
     public String getPowerState() {
         return this.powerState;
     }
     /**
      * State of provisioning of the HanaInstance
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource proximity placement group
      * 
-     */
+    */
     public String getProximityPlacementGroup() {
         return this.proximityPlacementGroup;
     }
     /**
      * Specifies the storage settings for the HANA instance disks.
      * 
-     */
+    */
     public Optional<StorageProfileResponse> getStorageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -354,7 +354,6 @@ public final class GetHanaInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHanaInstanceResult build() {
             return new GetHanaInstanceResult(hanaInstanceId, hardwareProfile, hwRevision, id, location, name, networkProfile, osProfile, partnerNodeId, powerState, provisioningState, proximityPlacementGroup, storageProfile, tags, type);
         }

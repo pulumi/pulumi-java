@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -19,70 +19,70 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
     public static final DeliveryStreamOrcSerDeArgs Empty = new DeliveryStreamOrcSerDeArgs();
 
     @InputImport(name="blockSizeBytes")
-    private final @Nullable Input<Integer> blockSizeBytes;
+      private final @Nullable Input<Integer> blockSizeBytes;
 
     public Input<Integer> getBlockSizeBytes() {
         return this.blockSizeBytes == null ? Input.empty() : this.blockSizeBytes;
     }
 
     @InputImport(name="bloomFilterColumns")
-    private final @Nullable Input<List<String>> bloomFilterColumns;
+      private final @Nullable Input<List<String>> bloomFilterColumns;
 
     public Input<List<String>> getBloomFilterColumns() {
         return this.bloomFilterColumns == null ? Input.empty() : this.bloomFilterColumns;
     }
 
     @InputImport(name="bloomFilterFalsePositiveProbability")
-    private final @Nullable Input<Double> bloomFilterFalsePositiveProbability;
+      private final @Nullable Input<Double> bloomFilterFalsePositiveProbability;
 
     public Input<Double> getBloomFilterFalsePositiveProbability() {
         return this.bloomFilterFalsePositiveProbability == null ? Input.empty() : this.bloomFilterFalsePositiveProbability;
     }
 
     @InputImport(name="compression")
-    private final @Nullable Input<String> compression;
+      private final @Nullable Input<String> compression;
 
     public Input<String> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
     }
 
     @InputImport(name="dictionaryKeyThreshold")
-    private final @Nullable Input<Double> dictionaryKeyThreshold;
+      private final @Nullable Input<Double> dictionaryKeyThreshold;
 
     public Input<Double> getDictionaryKeyThreshold() {
         return this.dictionaryKeyThreshold == null ? Input.empty() : this.dictionaryKeyThreshold;
     }
 
     @InputImport(name="enablePadding")
-    private final @Nullable Input<Boolean> enablePadding;
+      private final @Nullable Input<Boolean> enablePadding;
 
     public Input<Boolean> getEnablePadding() {
         return this.enablePadding == null ? Input.empty() : this.enablePadding;
     }
 
     @InputImport(name="formatVersion")
-    private final @Nullable Input<String> formatVersion;
+      private final @Nullable Input<String> formatVersion;
 
     public Input<String> getFormatVersion() {
         return this.formatVersion == null ? Input.empty() : this.formatVersion;
     }
 
     @InputImport(name="paddingTolerance")
-    private final @Nullable Input<Double> paddingTolerance;
+      private final @Nullable Input<Double> paddingTolerance;
 
     public Input<Double> getPaddingTolerance() {
         return this.paddingTolerance == null ? Input.empty() : this.paddingTolerance;
     }
 
     @InputImport(name="rowIndexStride")
-    private final @Nullable Input<Integer> rowIndexStride;
+      private final @Nullable Input<Integer> rowIndexStride;
 
     public Input<Integer> getRowIndexStride() {
         return this.rowIndexStride == null ? Input.empty() : this.rowIndexStride;
     }
 
     @InputImport(name="stripeSizeBytes")
-    private final @Nullable Input<Integer> stripeSizeBytes;
+      private final @Nullable Input<Integer> stripeSizeBytes;
 
     public Input<Integer> getStripeSizeBytes() {
         return this.stripeSizeBytes == null ? Input.empty() : this.stripeSizeBytes;
@@ -261,7 +261,6 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             this.stripeSizeBytes = Input.ofNullable(stripeSizeBytes);
             return this;
         }
-
         public DeliveryStreamOrcSerDeArgs build() {
             return new DeliveryStreamOrcSerDeArgs(blockSizeBytes, bloomFilterColumns, bloomFilterFalsePositiveProbability, compression, dictionaryKeyThreshold, enablePadding, formatVersion, paddingTolerance, rowIndexStride, stripeSizeBytes);
         }

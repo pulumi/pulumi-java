@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class DeviceDetailsResponse {
     /**
      * Management Resource Id
      * 
-     */
+    */
     public String getManagementResourceId() {
         return this.managementResourceId;
     }
     /**
      * Management Resource Tenant ID
      * 
-     */
+    */
     public String getManagementResourceTenantId() {
         return this.managementResourceTenantId;
     }
     /**
      * device serial number
      * 
-     */
+    */
     public String getSerialNumber() {
         return this.serialNumber;
     }
@@ -95,7 +95,6 @@ public final class DeviceDetailsResponse {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public DeviceDetailsResponse build() {
             return new DeviceDetailsResponse(managementResourceId, managementResourceTenantId, serialNumber);
         }

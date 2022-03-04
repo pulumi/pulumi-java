@@ -5,8 +5,8 @@ package io.pulumi.gcp.networkservices;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkservices.EdgeCacheKeysetArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheKeysetState;
@@ -128,6 +128,37 @@ public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {
         return this.publicKeys;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EdgeCacheKeysetArgs.Builder a);
+    }
+    private static io.pulumi.gcp.networkservices.EdgeCacheKeysetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.networkservices.EdgeCacheKeysetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public EdgeCacheKeyset(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EdgeCacheKeyset(String name) {
+        this(name, EdgeCacheKeysetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EdgeCacheKeyset(String name, EdgeCacheKeysetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

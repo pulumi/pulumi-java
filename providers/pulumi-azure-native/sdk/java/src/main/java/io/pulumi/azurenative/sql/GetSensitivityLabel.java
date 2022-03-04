@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.inputs.GetSensitivityLabelArgs;
 import io.pulumi.azurenative.sql.outputs.GetSensitivityLabelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSensitivityLabel {
-/**
- * A sensitivity label.
+    private GetSensitivityLabel() {}
+    public interface BuilderApplicator {
+        public void apply(GetSensitivityLabelArgs.Builder a);
+    }
+    private static GetSensitivityLabelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSensitivityLabelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A sensitivity label.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A sensitivity label.
+     *
+     * A sensitivity label.
  * 
- */
+     */
+    public static CompletableFuture<GetSensitivityLabelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A sensitivity label.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A sensitivity label.
+     * 
+     */
     public static CompletableFuture<GetSensitivityLabelResult> invokeAsync(GetSensitivityLabelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSensitivityLabel", TypeShape.of(GetSensitivityLabelResult.class), args == null ? GetSensitivityLabelArgs.Empty : args, Utilities.withVersion(options));
     }

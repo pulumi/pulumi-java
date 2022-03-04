@@ -8,7 +8,7 @@ import io.pulumi.awsnative.forecast.enums.DatasetType;
 import io.pulumi.awsnative.forecast.outputs.EncryptionConfigProperties;
 import io.pulumi.awsnative.forecast.outputs.SchemaProperties;
 import io.pulumi.awsnative.forecast.outputs.TagsItemProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,21 +61,21 @@ public final class GetDatasetResult {
     /**
      * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
      * 
-     */
+    */
     public Optional<String> getDataFrequency() {
         return Optional.ofNullable(this.dataFrequency);
     }
     /**
      * The dataset type
      * 
-     */
+    */
     public Optional<DatasetType> getDatasetType() {
         return Optional.ofNullable(this.datasetType);
     }
     /**
      * The domain associated with the dataset
      * 
-     */
+    */
     public Optional<DatasetDomain> getDomain() {
         return Optional.ofNullable(this.domain);
     }
@@ -155,7 +155,6 @@ public final class GetDatasetResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(arn, dataFrequency, datasetType, domain, encryptionConfig, schema, tags);
         }

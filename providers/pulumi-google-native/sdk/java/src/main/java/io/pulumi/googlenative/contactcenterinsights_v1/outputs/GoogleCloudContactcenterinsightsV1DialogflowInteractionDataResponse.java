@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
     /**
      * The confidence of the match ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
-     */
+    */
     public Double getConfidence() {
         return this.confidence;
     }
     /**
      * The Dialogflow intent resource path. Format: projects/{project}/agent/{agent}/intents/{intent}
      * 
-     */
+    */
     public String getDialogflowIntentId() {
         return this.dialogflowIntentId;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
             this.dialogflowIntentId = Objects.requireNonNull(dialogflowIntentId);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(confidence, dialogflowIntentId);
         }

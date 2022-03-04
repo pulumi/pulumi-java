@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class GetDeploymentResult {
     /**
      * Primary Id for this resource
      * 
-     */
+    */
     public Optional<String> getDeploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
     /**
      * A description of the purpose of the API Gateway deployment.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -76,7 +76,6 @@ public final class GetDeploymentResult {
             this.description = description;
             return this;
         }
-
         public GetDeploymentResult build() {
             return new GetDeploymentResult(deploymentId, description);
         }

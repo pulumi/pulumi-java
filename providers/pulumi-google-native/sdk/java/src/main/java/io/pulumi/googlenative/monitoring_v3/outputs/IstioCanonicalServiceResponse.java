@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class IstioCanonicalServiceResponse {
     /**
      * The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
      * 
-     */
+    */
     public String getCanonicalService() {
         return this.canonicalService;
     }
     /**
      * The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
      * 
-     */
+    */
     public String getCanonicalServiceNamespace() {
         return this.canonicalServiceNamespace;
     }
     /**
      * Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
      * 
-     */
+    */
     public String getMeshUid() {
         return this.meshUid;
     }
@@ -95,7 +95,6 @@ public final class IstioCanonicalServiceResponse {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }
-
         public IstioCanonicalServiceResponse build() {
             return new IstioCanonicalServiceResponse(canonicalService, canonicalServiceNamespace, meshUid);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.BucketACLArgs;
 import io.pulumi.gcp.storage.inputs.BucketACLState;
@@ -92,6 +92,37 @@ public class BucketACL extends io.pulumi.resources.CustomResource {
         return this.roleEntities;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BucketACLArgs.Builder a);
+    }
+    private static io.pulumi.gcp.storage.BucketACLArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.storage.BucketACLArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public BucketACL(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BucketACL(String name) {
+        this(name, BucketACLArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BucketACL(String name, BucketACLArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,7 +39,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionTimeout {
      * less than one second are represented with a 0 `seconds` field and a positive
      * `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 
-     */
+    */
     public Optional<Integer> getNanos() {
         return Optional.ofNullable(this.nanos);
     }
@@ -47,7 +47,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionTimeout {
      * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
      * inclusive.
      * 
-     */
+    */
     public String getSeconds() {
         return this.seconds;
     }
@@ -83,7 +83,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionTimeout {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionTimeout build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionTimeout(nanos, seconds);
         }

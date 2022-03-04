@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ResourceRequirements {
     /**
      * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
      * 
-     */
+    */
     public Map<String,String> getLimits() {
         return this.limits == null ? Map.of() : this.limits;
     }
     /**
      * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
      * 
-     */
+    */
     public Map<String,String> getRequests() {
         return this.requests == null ? Map.of() : this.requests;
     }
@@ -76,7 +76,6 @@ public final class ResourceRequirements {
             this.requests = requests;
             return this;
         }
-
         public ResourceRequirements build() {
             return new ResourceRequirements(limits, requests);
         }

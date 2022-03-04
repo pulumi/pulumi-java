@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.PowerQuerySinkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class PowerQuerySinkMappingResponse {
     /**
      * List of sinks mapped to Power Query mashup query.
      * 
-     */
+    */
     public List<PowerQuerySinkResponse> getDataflowSinks() {
         return this.dataflowSinks == null ? List.of() : this.dataflowSinks;
     }
     /**
      * Name of the query in Power Query mashup document.
      * 
-     */
+    */
     public Optional<String> getQueryName() {
         return Optional.ofNullable(this.queryName);
     }
@@ -78,7 +78,6 @@ public final class PowerQuerySinkMappingResponse {
             this.queryName = queryName;
             return this;
         }
-
         public PowerQuerySinkMappingResponse build() {
             return new PowerQuerySinkMappingResponse(dataflowSinks, queryName);
         }

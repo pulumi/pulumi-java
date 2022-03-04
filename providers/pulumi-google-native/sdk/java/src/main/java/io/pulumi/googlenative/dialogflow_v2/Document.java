@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2.DocumentArgs;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2DocumentReloadStatusResponse;
@@ -149,6 +149,37 @@ public class Document extends io.pulumi.resources.CustomResource {
         return this.rawContent;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DocumentArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.dialogflow_v2.DocumentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.dialogflow_v2.DocumentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Document(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Document(String name) {
+        this(name, DocumentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Document(String name, DocumentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

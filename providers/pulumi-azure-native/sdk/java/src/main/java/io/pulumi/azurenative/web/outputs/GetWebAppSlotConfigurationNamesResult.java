@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class GetWebAppSlotConfigurationNamesResult {
     /**
      * List of application settings names.
      * 
-     */
+    */
     public List<String> getAppSettingNames() {
         return this.appSettingNames == null ? List.of() : this.appSettingNames;
     }
     /**
      * List of external Azure storage account identifiers.
      * 
-     */
+    */
     public List<String> getAzureStorageConfigNames() {
         return this.azureStorageConfigNames == null ? List.of() : this.azureStorageConfigNames;
     }
     /**
      * List of connection string names.
      * 
-     */
+    */
     public List<String> getConnectionStringNames() {
         return this.connectionStringNames == null ? List.of() : this.connectionStringNames;
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -182,7 +182,6 @@ public final class GetWebAppSlotConfigurationNamesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppSlotConfigurationNamesResult build() {
             return new GetWebAppSlotConfigurationNamesResult(appSettingNames, azureStorageConfigNames, connectionStringNames, id, kind, name, type);
         }

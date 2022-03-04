@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayload;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="hashKeyField", required=true)
-    private final String hashKeyField;
+      private final String hashKeyField;
 
     public String getHashKeyField() {
         return this.hashKeyField;
@@ -41,7 +41,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="hashKeyType")
-    private final @Nullable String hashKeyType;
+      private final @Nullable String hashKeyType;
 
     public Optional<String> getHashKeyType() {
         return this.hashKeyType == null ? Optional.empty() : Optional.ofNullable(this.hashKeyType);
@@ -52,7 +52,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="hashKeyValue", required=true)
-    private final String hashKeyValue;
+      private final String hashKeyValue;
 
     public String getHashKeyValue() {
         return this.hashKeyValue;
@@ -71,14 +71,14 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="operation")
-    private final @Nullable String operation;
+      private final @Nullable String operation;
 
     public Optional<String> getOperation() {
         return this.operation == null ? Optional.empty() : Optional.ofNullable(this.operation);
     }
 
     @InputImport(name="payload")
-    private final @Nullable DetectorModelPayload payload;
+      private final @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> getPayload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
@@ -91,7 +91,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="payloadField")
-    private final @Nullable String payloadField;
+      private final @Nullable String payloadField;
 
     public Optional<String> getPayloadField() {
         return this.payloadField == null ? Optional.empty() : Optional.ofNullable(this.payloadField);
@@ -102,7 +102,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rangeKeyField")
-    private final @Nullable String rangeKeyField;
+      private final @Nullable String rangeKeyField;
 
     public Optional<String> getRangeKeyField() {
         return this.rangeKeyField == null ? Optional.empty() : Optional.ofNullable(this.rangeKeyField);
@@ -119,7 +119,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rangeKeyType")
-    private final @Nullable String rangeKeyType;
+      private final @Nullable String rangeKeyType;
 
     public Optional<String> getRangeKeyType() {
         return this.rangeKeyType == null ? Optional.empty() : Optional.ofNullable(this.rangeKeyType);
@@ -130,7 +130,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rangeKeyValue")
-    private final @Nullable String rangeKeyValue;
+      private final @Nullable String rangeKeyValue;
 
     public Optional<String> getRangeKeyValue() {
         return this.rangeKeyValue == null ? Optional.empty() : Optional.ofNullable(this.rangeKeyValue);
@@ -141,7 +141,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -270,7 +270,6 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public DetectorModelDynamoDB build() {
             return new DetectorModelDynamoDB(hashKeyField, hashKeyType, hashKeyValue, operation, payload, payloadField, rangeKeyField, rangeKeyType, rangeKeyValue, tableName);
         }

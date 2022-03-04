@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.enums.MethodIntegrationContentHandling;
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationPassthroughBehavior;
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationType;
 import io.pulumi.awsnative.apigateway.outputs.MethodIntegrationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -125,98 +125,98 @@ public final class MethodIntegration {
     /**
      * A list of request parameters whose values API Gateway caches.
      * 
-     */
+    */
     public List<String> getCacheKeyParameters() {
         return this.cacheKeyParameters == null ? List.of() : this.cacheKeyParameters;
     }
     /**
      * An API-specific tag group of related cached parameters.
      * 
-     */
+    */
     public Optional<String> getCacheNamespace() {
         return Optional.ofNullable(this.cacheNamespace);
     }
     /**
      * The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
      * 
-     */
+    */
     public Optional<String> getConnectionId() {
         return Optional.ofNullable(this.connectionId);
     }
     /**
      * The type of the network connection to the integration endpoint.
      * 
-     */
+    */
     public Optional<MethodIntegrationConnectionType> getConnectionType() {
         return Optional.ofNullable(this.connectionType);
     }
     /**
      * Specifies how to handle request payload content type conversions.
      * 
-     */
+    */
     public Optional<MethodIntegrationContentHandling> getContentHandling() {
         return Optional.ofNullable(this.contentHandling);
     }
     /**
      * The credentials that are required for the integration.
      * 
-     */
+    */
     public Optional<String> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * The integration's HTTP method type.
      * 
-     */
+    */
     public Optional<String> getIntegrationHttpMethod() {
         return Optional.ofNullable(this.integrationHttpMethod);
     }
     /**
      * The response that API Gateway provides after a method's backend completes processing a request.
      * 
-     */
+    */
     public List<MethodIntegrationResponse> getIntegrationResponses() {
         return this.integrationResponses == null ? List.of() : this.integrationResponses;
     }
     /**
      * Indicates when API Gateway passes requests to the targeted backend.
      * 
-     */
+    */
     public Optional<MethodIntegrationPassthroughBehavior> getPassthroughBehavior() {
         return Optional.ofNullable(this.passthroughBehavior);
     }
     /**
      * The request parameters that API Gateway sends with the backend request.
      * 
-     */
+    */
     public Optional<Object> getRequestParameters() {
         return Optional.ofNullable(this.requestParameters);
     }
     /**
      * A map of Apache Velocity templates that are applied on the request payload.
      * 
-     */
+    */
     public Optional<Object> getRequestTemplates() {
         return Optional.ofNullable(this.requestTemplates);
     }
     /**
      * Custom timeout between 50 and 29,000 milliseconds.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutInMillis() {
         return Optional.ofNullable(this.timeoutInMillis);
     }
     /**
      * The type of backend that your method is running.
      * 
-     */
+    */
     public MethodIntegrationType getType() {
         return this.type;
     }
     /**
      * The Uniform Resource Identifier (URI) for the integration.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }
@@ -336,7 +336,6 @@ public final class MethodIntegration {
             this.uri = uri;
             return this;
         }
-
         public MethodIntegration build() {
             return new MethodIntegration(cacheKeyParameters, cacheNamespace, connectionId, connectionType, contentHandling, credentials, integrationHttpMethod, integrationResponses, passthroughBehavior, requestParameters, requestTemplates, timeoutInMillis, type, uri);
         }

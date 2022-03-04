@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetApiIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetApiIamPolicyArgs Empty = new GetApiIamPolicyArgs();
 
     @InputImport(name="apiId", required=true)
-    private final String apiId;
+      private final String apiId;
 
     public String getApiId() {
         return this.apiId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetApiIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetApiIamPolicyArgs build() {
             return new GetApiIamPolicyArgs(apiId, location, optionsRequestedPolicyVersion, project);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="gatewayId", required=true)
-    private final Input<String> gatewayId;
+      private final Input<String> gatewayId;
 
     public Input<String> getGatewayId() {
         return this.gatewayId;
@@ -29,7 +29,7 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="routeTableId", required=true)
-    private final Input<String> routeTableId;
+      private final Input<String> routeTableId;
 
     public Input<String> getRouteTableId() {
         return this.routeTableId;
@@ -88,7 +88,6 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
             this.routeTableId = Input.of(Objects.requireNonNull(routeTableId));
             return this;
         }
-
         public GatewayRouteTableAssociationArgs build() {
             return new GatewayRouteTableAssociationArgs(gatewayId, routeTableId);
         }

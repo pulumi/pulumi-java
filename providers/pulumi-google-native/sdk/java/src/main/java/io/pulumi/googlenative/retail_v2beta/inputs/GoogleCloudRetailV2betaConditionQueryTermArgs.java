@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2betaConditionQueryTermArgs extends io.pulu
      * 
      */
     @InputImport(name="fullMatch")
-    private final @Nullable Input<Boolean> fullMatch;
+      private final @Nullable Input<Boolean> fullMatch;
 
     public Input<Boolean> getFullMatch() {
         return this.fullMatch == null ? Input.empty() : this.fullMatch;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2betaConditionQueryTermArgs extends io.pulu
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -94,7 +94,6 @@ public final class GoogleCloudRetailV2betaConditionQueryTermArgs extends io.pulu
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public GoogleCloudRetailV2betaConditionQueryTermArgs build() {
             return new GoogleCloudRetailV2betaConditionQueryTermArgs(fullMatch, value);
         }

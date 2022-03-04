@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.iotsecurity.outputs;
 
 import io.pulumi.azurenative.iotsecurity.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -119,98 +119,98 @@ public final class GetSensorResult {
     /**
      * Last connectivity time of the IoT sensor
      * 
-     */
+    */
     public String getConnectivityTime() {
         return this.connectivityTime;
     }
     /**
      * Dynamic mode status of the IoT sensor
      * 
-     */
+    */
     public Boolean getDynamicLearning() {
         return this.dynamicLearning;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Learning mode status of the IoT sensor
      * 
-     */
+    */
     public Boolean getLearningMode() {
         return this.learningMode;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Status of the IoT sensor
      * 
-     */
+    */
     public String getSensorStatus() {
         return this.sensorStatus;
     }
     /**
      * Type of sensor
      * 
-     */
+    */
     public Optional<String> getSensorType() {
         return Optional.ofNullable(this.sensorType);
     }
     /**
      * Version of the IoT sensor
      * 
-     */
+    */
     public String getSensorVersion() {
         return this.sensorVersion;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * TI Automatic mode status of the IoT sensor
      * 
-     */
+    */
     public Optional<Boolean> getTiAutomaticUpdates() {
         return Optional.ofNullable(this.tiAutomaticUpdates);
     }
     /**
      * TI Status of the IoT sensor
      * 
-     */
+    */
     public String getTiStatus() {
         return this.tiStatus;
     }
     /**
      * TI Version of the IoT sensor
      * 
-     */
+    */
     public String getTiVersion() {
         return this.tiVersion;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Zone of the IoT sensor
      * 
-     */
+    */
     public Optional<String> getZone() {
         return Optional.ofNullable(this.zone);
     }
@@ -330,7 +330,6 @@ public final class GetSensorResult {
             this.zone = zone;
             return this;
         }
-
         public GetSensorResult build() {
             return new GetSensorResult(connectivityTime, dynamicLearning, id, learningMode, name, sensorStatus, sensorType, sensorVersion, systemData, tiAutomaticUpdates, tiStatus, tiVersion, type, zone);
         }

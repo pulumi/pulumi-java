@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.assuredworkloads.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class WorkloadResource {
     /**
      * Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
      * 
-     */
+    */
     public Optional<Integer> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -77,7 +77,6 @@ public final class WorkloadResource {
             this.resourceType = resourceType;
             return this;
         }
-
         public WorkloadResource build() {
             return new WorkloadResource(resourceId, resourceType);
         }

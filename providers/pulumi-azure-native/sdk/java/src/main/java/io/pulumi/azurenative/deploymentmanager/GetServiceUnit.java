@@ -6,21 +6,41 @@ package io.pulumi.azurenative.deploymentmanager;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.deploymentmanager.inputs.GetServiceUnitArgs;
 import io.pulumi.azurenative.deploymentmanager.outputs.GetServiceUnitResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceUnit {
-/**
- * Represents the response of a service unit resource.
+    private GetServiceUnit() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceUnitArgs.Builder a);
+    }
+    private static GetServiceUnitArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceUnitArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents the response of a service unit resource.
  * API Version: 2019-11-01-preview.
  * 
- *
- * Represents the response of a service unit resource.
+     *
+     * Represents the response of a service unit resource.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceUnitResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents the response of a service unit resource.
+     * API Version: 2019-11-01-preview.
+     * 
+     *
+         * Represents the response of a service unit resource.
+     * 
+     */
     public static CompletableFuture<GetServiceUnitResult> invokeAsync(GetServiceUnitArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getServiceUnit", TypeShape.of(GetServiceUnitResult.class), args == null ? GetServiceUnitArgs.Empty : args, Utilities.withVersion(options));
     }

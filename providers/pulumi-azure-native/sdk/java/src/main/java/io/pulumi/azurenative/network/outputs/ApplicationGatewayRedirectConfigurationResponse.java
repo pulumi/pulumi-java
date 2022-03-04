@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -106,84 +106,84 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Include path in the redirected url.
      * 
-     */
+    */
     public Optional<Boolean> getIncludePath() {
         return Optional.ofNullable(this.includePath);
     }
     /**
      * Include query string in the redirected url.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeQueryString() {
         return Optional.ofNullable(this.includeQueryString);
     }
     /**
      * Name of the redirect configuration that is unique within an Application Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Path rules specifying redirect configuration.
      * 
-     */
+    */
     public List<SubResourceResponse> getPathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
     /**
      * HTTP redirection type.
      * 
-     */
+    */
     public Optional<String> getRedirectType() {
         return Optional.ofNullable(this.redirectType);
     }
     /**
      * Request routing specifying redirect configuration.
      * 
-     */
+    */
     public List<SubResourceResponse> getRequestRoutingRules() {
         return this.requestRoutingRules == null ? List.of() : this.requestRoutingRules;
     }
     /**
      * Reference to a listener to redirect the request to.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getTargetListener() {
         return Optional.ofNullable(this.targetListener);
     }
     /**
      * Url to redirect the request to.
      * 
-     */
+    */
     public Optional<String> getTargetUrl() {
         return Optional.ofNullable(this.targetUrl);
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Url path maps specifying default redirect configuration.
      * 
-     */
+    */
     public List<SubResourceResponse> getUrlPathMaps() {
         return this.urlPathMaps == null ? List.of() : this.urlPathMaps;
     }
@@ -289,7 +289,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
             this.urlPathMaps = urlPathMaps;
             return this;
         }
-
         public ApplicationGatewayRedirectConfigurationResponse build() {
             return new ApplicationGatewayRedirectConfigurationResponse(etag, id, includePath, includeQueryString, name, pathRules, redirectType, requestRoutingRules, targetListener, targetUrl, type, urlPathMaps);
         }

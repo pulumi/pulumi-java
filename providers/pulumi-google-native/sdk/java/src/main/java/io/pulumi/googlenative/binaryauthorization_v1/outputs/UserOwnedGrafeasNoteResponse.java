@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.binaryauthorization_v1.outputs.AttestorPublicKeyResponse;
 import java.lang.String;
 import java.util.List;
@@ -40,21 +40,21 @@ public final class UserOwnedGrafeasNoteResponse {
     /**
      * This field will contain the service account email address that this Attestor will use as the principal when querying Container Analysis. Attestor administrators must grant this service account the IAM role needed to read attestations from the note_reference in Container Analysis (`containeranalysis.notes.occurrences.viewer`). This email address is fixed for the lifetime of the Attestor, but callers should not make any other assumptions about the service account email; future versions may use an email based on a different naming pattern.
      * 
-     */
+    */
     public String getDelegationServiceAccountEmail() {
         return this.delegationServiceAccountEmail;
     }
     /**
      * The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*{@literal /}notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.
      * 
-     */
+    */
     public String getNoteReference() {
         return this.noteReference;
     }
     /**
      * Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.
      * 
-     */
+    */
     public List<AttestorPublicKeyResponse> getPublicKeys() {
         return this.publicKeys;
     }
@@ -97,7 +97,6 @@ public final class UserOwnedGrafeasNoteResponse {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-
         public UserOwnedGrafeasNoteResponse build() {
             return new UserOwnedGrafeasNoteResponse(delegationServiceAccountEmail, noteReference, publicKeys);
         }

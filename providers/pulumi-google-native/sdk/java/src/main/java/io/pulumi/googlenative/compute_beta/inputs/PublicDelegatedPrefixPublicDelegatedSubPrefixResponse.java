@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @InputImport(name="delegateeProject", required=true)
-    private final String delegateeProject;
+      private final String delegateeProject;
 
     public String getDelegateeProject() {
         return this.delegateeProject;
@@ -33,7 +33,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-    private final String ipCidrRange;
+      private final String ipCidrRange;
 
     public String getIpCidrRange() {
         return this.ipCidrRange;
@@ -55,7 +55,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @InputImport(name="isAddress", required=true)
-    private final Boolean isAddress;
+      private final Boolean isAddress;
 
     public Boolean getIsAddress() {
         return this.isAddress;
@@ -66,7 +66,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -187,7 +187,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public PublicDelegatedPrefixPublicDelegatedSubPrefixResponse build() {
             return new PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(delegateeProject, description, ipCidrRange, isAddress, name, region, status);
         }

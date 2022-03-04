@@ -8,7 +8,7 @@ import io.pulumi.azurenative.batch.inputs.ResourceFileArgs;
 import io.pulumi.azurenative.batch.inputs.TaskContainerSettingsArgs;
 import io.pulumi.azurenative.batch.inputs.UserIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commandLine")
-    private final @Nullable Input<String> commandLine;
+      private final @Nullable Input<String> commandLine;
 
     public Input<String> getCommandLine() {
         return this.commandLine == null ? Input.empty() : this.commandLine;
@@ -41,14 +41,14 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerSettings")
-    private final @Nullable Input<TaskContainerSettingsArgs> containerSettings;
+      private final @Nullable Input<TaskContainerSettingsArgs> containerSettings;
 
     public Input<TaskContainerSettingsArgs> getContainerSettings() {
         return this.containerSettings == null ? Input.empty() : this.containerSettings;
     }
 
     @InputImport(name="environmentSettings")
-    private final @Nullable Input<List<EnvironmentSettingArgs>> environmentSettings;
+      private final @Nullable Input<List<EnvironmentSettingArgs>> environmentSettings;
 
     public Input<List<EnvironmentSettingArgs>> getEnvironmentSettings() {
         return this.environmentSettings == null ? Input.empty() : this.environmentSettings;
@@ -59,14 +59,14 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxTaskRetryCount")
-    private final @Nullable Input<Integer> maxTaskRetryCount;
+      private final @Nullable Input<Integer> maxTaskRetryCount;
 
     public Input<Integer> getMaxTaskRetryCount() {
         return this.maxTaskRetryCount == null ? Input.empty() : this.maxTaskRetryCount;
     }
 
     @InputImport(name="resourceFiles")
-    private final @Nullable Input<List<ResourceFileArgs>> resourceFiles;
+      private final @Nullable Input<List<ResourceFileArgs>> resourceFiles;
 
     public Input<List<ResourceFileArgs>> getResourceFiles() {
         return this.resourceFiles == null ? Input.empty() : this.resourceFiles;
@@ -77,7 +77,7 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userIdentity")
-    private final @Nullable Input<UserIdentityArgs> userIdentity;
+      private final @Nullable Input<UserIdentityArgs> userIdentity;
 
     public Input<UserIdentityArgs> getUserIdentity() {
         return this.userIdentity == null ? Input.empty() : this.userIdentity;
@@ -88,7 +88,7 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForSuccess")
-    private final @Nullable Input<Boolean> waitForSuccess;
+      private final @Nullable Input<Boolean> waitForSuccess;
 
     public Input<Boolean> getWaitForSuccess() {
         return this.waitForSuccess == null ? Input.empty() : this.waitForSuccess;
@@ -222,7 +222,6 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
             this.waitForSuccess = Input.ofNullable(waitForSuccess);
             return this;
         }
-
         public StartTaskArgs build() {
             return new StartTaskArgs(commandLine, containerSettings, environmentSettings, maxTaskRetryCount, resourceFiles, userIdentity, waitForSuccess);
         }

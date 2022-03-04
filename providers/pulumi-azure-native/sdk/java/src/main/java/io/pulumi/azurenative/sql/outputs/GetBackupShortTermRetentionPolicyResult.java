@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class GetBackupShortTermRetentionPolicyResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
      * 
-     */
+    */
     public Optional<Integer> getRetentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -119,7 +119,6 @@ public final class GetBackupShortTermRetentionPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBackupShortTermRetentionPolicyResult build() {
             return new GetBackupShortTermRetentionPolicyResult(id, name, retentionDays, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DropInfoResponse {
     /**
      * Cause that the packet is dropped.
      * 
-     */
+    */
     public String getCause() {
         return this.cause;
     }
     /**
      * URI of the resource that caused the drop.
      * 
-     */
+    */
     public String getResourceUri() {
         return this.resourceUri;
     }
@@ -74,7 +74,6 @@ public final class DropInfoResponse {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public DropInfoResponse build() {
             return new DropInfoResponse(cause, resourceUri);
         }

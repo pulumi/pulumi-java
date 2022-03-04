@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.SmbSettingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ProtocolSettingsResponse {
     /**
      * Setting for SMB protocol
      * 
-     */
+    */
     public Optional<SmbSettingResponse> getSmb() {
         return Optional.ofNullable(this.smb);
     }
@@ -54,7 +54,6 @@ public final class ProtocolSettingsResponse {
             this.smb = smb;
             return this;
         }
-
         public ProtocolSettingsResponse build() {
             return new ProtocolSettingsResponse(smb);
         }

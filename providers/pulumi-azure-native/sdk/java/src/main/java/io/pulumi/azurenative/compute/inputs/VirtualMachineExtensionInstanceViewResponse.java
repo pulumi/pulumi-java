@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -36,7 +36,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable List<InstanceViewStatusResponse> statuses;
+      private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -47,7 +47,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
      * 
      */
     @InputImport(name="substatuses")
-    private final @Nullable List<InstanceViewStatusResponse> substatuses;
+      private final @Nullable List<InstanceViewStatusResponse> substatuses;
 
     public List<InstanceViewStatusResponse> getSubstatuses() {
         return this.substatuses == null ? List.of() : this.substatuses;
@@ -58,7 +58,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -69,7 +69,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
      * 
      */
     @InputImport(name="typeHandlerVersion")
-    private final @Nullable String typeHandlerVersion;
+      private final @Nullable String typeHandlerVersion;
 
     public Optional<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
@@ -148,7 +148,6 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public VirtualMachineExtensionInstanceViewResponse build() {
             return new VirtualMachineExtensionInstanceViewResponse(name, statuses, substatuses, type, typeHandlerVersion);
         }

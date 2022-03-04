@@ -6,17 +6,33 @@ package io.pulumi.awsnative.evidently;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.evidently.inputs.GetExperimentArgs;
 import io.pulumi.awsnative.evidently.outputs.GetExperimentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExperiment {
-/**
- * Resource Type definition for AWS::Evidently::Experiment.
+    private GetExperiment() {}
+    public interface BuilderApplicator {
+        public void apply(GetExperimentArgs.Builder a);
+    }
+    private static GetExperimentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExperimentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Evidently::Experiment.
  * 
- */
+     */
+    public static CompletableFuture<GetExperimentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Evidently::Experiment.
+     * 
+     */
     public static CompletableFuture<GetExperimentResult> invokeAsync(GetExperimentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:evidently:getExperiment", TypeShape.of(GetExperimentResult.class), args == null ? GetExperimentArgs.Empty : args, Utilities.withVersion(options));
     }

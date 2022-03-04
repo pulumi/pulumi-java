@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio;
 
 import io.pulumi.awsnative.nimblestudio.inputs.StreamingImageTagsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2ImageId", required=true)
-    private final Input<String> ec2ImageId;
+      private final Input<String> ec2ImageId;
 
     public Input<String> getEc2ImageId() {
         return this.ec2ImageId;
@@ -42,7 +42,7 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,14 +53,14 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="studioId", required=true)
-    private final Input<String> studioId;
+      private final Input<String> studioId;
 
     public Input<String> getStudioId() {
         return this.studioId;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<StreamingImageTagsArgs> tags;
+      private final @Nullable Input<StreamingImageTagsArgs> tags;
 
     public Input<StreamingImageTagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -164,7 +164,6 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public StreamingImageArgs build() {
             return new StreamingImageArgs(description, ec2ImageId, name, studioId, tags);
         }

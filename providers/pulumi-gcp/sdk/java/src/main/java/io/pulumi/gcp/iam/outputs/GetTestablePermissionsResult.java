@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.iam.outputs.GetTestablePermissionsPermission;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +48,7 @@ public final class GetTestablePermissionsResult {
     /**
      * The the support level of this permission for custom roles.
      * 
-     */
+    */
     public Optional<String> getCustomSupportLevel() {
         return Optional.ofNullable(this.customSupportLevel);
     }
@@ -58,14 +58,14 @@ public final class GetTestablePermissionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of permissions matching the provided input. Structure is defined below.
      * 
-     */
+    */
     public List<GetTestablePermissionsPermission> getPermissions() {
         return this.permissions;
     }
@@ -125,7 +125,6 @@ public final class GetTestablePermissionsResult {
             this.stages = stages;
             return this;
         }
-
         public GetTestablePermissionsResult build() {
             return new GetTestablePermissionsResult(customSupportLevel, fullResourceName, id, permissions, stages);
         }

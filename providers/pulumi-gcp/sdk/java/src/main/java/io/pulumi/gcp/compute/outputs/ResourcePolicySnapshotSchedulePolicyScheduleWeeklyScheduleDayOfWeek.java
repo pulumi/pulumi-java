@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,14 +33,14 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * The day of the week to create the snapshot. e.g. MONDAY
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-     */
+    */
     public String getDay() {
         return this.day;
     }
     /**
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -76,7 +76,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek(day, startTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class ResourceRecordResponse {
     /**
      * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: 'www'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
      * 
-     */
+    */
     public String getRrdata() {
         return this.rrdata;
     }
     /**
      * Resource record type. Example: `AAAA`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -95,7 +95,6 @@ public final class ResourceRecordResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceRecordResponse build() {
             return new ResourceRecordResponse(name, rrdata, type);
         }

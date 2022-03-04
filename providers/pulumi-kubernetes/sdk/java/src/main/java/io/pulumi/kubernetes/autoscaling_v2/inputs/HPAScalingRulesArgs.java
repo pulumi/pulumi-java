@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.HPAScalingPolicyArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policies")
-    private final @Nullable Input<List<HPAScalingPolicyArgs>> policies;
+      private final @Nullable Input<List<HPAScalingPolicyArgs>> policies;
 
     public Input<List<HPAScalingPolicyArgs>> getPolicies() {
         return this.policies == null ? Input.empty() : this.policies;
@@ -37,7 +37,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selectPolicy")
-    private final @Nullable Input<String> selectPolicy;
+      private final @Nullable Input<String> selectPolicy;
 
     public Input<String> getSelectPolicy() {
         return this.selectPolicy == null ? Input.empty() : this.selectPolicy;
@@ -48,7 +48,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="stabilizationWindowSeconds")
-    private final @Nullable Input<Integer> stabilizationWindowSeconds;
+      private final @Nullable Input<Integer> stabilizationWindowSeconds;
 
     public Input<Integer> getStabilizationWindowSeconds() {
         return this.stabilizationWindowSeconds == null ? Input.empty() : this.stabilizationWindowSeconds;
@@ -122,7 +122,6 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
             this.stabilizationWindowSeconds = Input.ofNullable(stabilizationWindowSeconds);
             return this;
         }
-
         public HPAScalingRulesArgs build() {
             return new HPAScalingRulesArgs(policies, selectPolicy, stabilizationWindowSeconds);
         }

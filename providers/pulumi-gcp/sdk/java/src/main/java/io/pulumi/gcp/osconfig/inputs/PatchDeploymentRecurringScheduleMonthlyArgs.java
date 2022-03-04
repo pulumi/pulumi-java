@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyArgs extends io.pulumi
      * 
      */
     @InputImport(name="monthDay")
-    private final @Nullable Input<Integer> monthDay;
+      private final @Nullable Input<Integer> monthDay;
 
     public Input<Integer> getMonthDay() {
         return this.monthDay == null ? Input.empty() : this.monthDay;
@@ -34,7 +34,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyArgs extends io.pulumi
      * 
      */
     @InputImport(name="weekDayOfMonth")
-    private final @Nullable Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth;
+      private final @Nullable Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth;
 
     public Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> getWeekDayOfMonth() {
         return this.weekDayOfMonth == null ? Input.empty() : this.weekDayOfMonth;
@@ -93,7 +93,6 @@ public final class PatchDeploymentRecurringScheduleMonthlyArgs extends io.pulumi
             this.weekDayOfMonth = Input.ofNullable(weekDayOfMonth);
             return this;
         }
-
         public PatchDeploymentRecurringScheduleMonthlyArgs build() {
             return new PatchDeploymentRecurringScheduleMonthlyArgs(monthDay, weekDayOfMonth);
         }

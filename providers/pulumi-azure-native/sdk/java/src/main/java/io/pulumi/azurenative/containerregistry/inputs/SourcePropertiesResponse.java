@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.AuthInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SourcePropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable String branch;
+      private final @Nullable String branch;
 
     public Optional<String> getBranch() {
         return this.branch == null ? Optional.empty() : Optional.ofNullable(this.branch);
@@ -35,7 +35,7 @@ public final class SourcePropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="repositoryUrl", required=true)
-    private final String repositoryUrl;
+      private final String repositoryUrl;
 
     public String getRepositoryUrl() {
         return this.repositoryUrl;
@@ -47,7 +47,7 @@ public final class SourcePropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sourceControlAuthProperties")
-    private final @Nullable AuthInfoResponse sourceControlAuthProperties;
+      private final @Nullable AuthInfoResponse sourceControlAuthProperties;
 
     public Optional<AuthInfoResponse> getSourceControlAuthProperties() {
         return this.sourceControlAuthProperties == null ? Optional.empty() : Optional.ofNullable(this.sourceControlAuthProperties);
@@ -58,7 +58,7 @@ public final class SourcePropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sourceControlType", required=true)
-    private final String sourceControlType;
+      private final String sourceControlType;
 
     public String getSourceControlType() {
         return this.sourceControlType;
@@ -127,7 +127,6 @@ public final class SourcePropertiesResponse extends io.pulumi.resources.InvokeAr
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }
-
         public SourcePropertiesResponse build() {
             return new SourcePropertiesResponse(branch, repositoryUrl, sourceControlAuthProperties, sourceControlType);
         }

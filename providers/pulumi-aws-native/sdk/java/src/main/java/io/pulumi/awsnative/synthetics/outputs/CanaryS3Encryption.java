@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class CanaryS3Encryption {
     /**
      * Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.
      * 
-     */
+    */
     public Optional<String> getEncryptionMode() {
         return Optional.ofNullable(this.encryptionMode);
     }
     /**
      * KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.
      * 
-     */
+    */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -76,7 +76,6 @@ public final class CanaryS3Encryption {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public CanaryS3Encryption build() {
             return new CanaryS3Encryption(encryptionMode, kmsKeyArn);
         }

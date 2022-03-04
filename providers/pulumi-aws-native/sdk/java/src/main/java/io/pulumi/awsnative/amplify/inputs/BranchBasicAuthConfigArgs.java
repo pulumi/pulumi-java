@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.amplify.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class BranchBasicAuthConfigArgs extends io.pulumi.resources.Resourc
     public static final BranchBasicAuthConfigArgs Empty = new BranchBasicAuthConfigArgs();
 
     @InputImport(name="enableBasicAuth")
-    private final @Nullable Input<Boolean> enableBasicAuth;
+      private final @Nullable Input<Boolean> enableBasicAuth;
 
     public Input<Boolean> getEnableBasicAuth() {
         return this.enableBasicAuth == null ? Input.empty() : this.enableBasicAuth;
     }
 
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
     }
 
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -104,7 +104,6 @@ public final class BranchBasicAuthConfigArgs extends io.pulumi.resources.Resourc
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public BranchBasicAuthConfigArgs build() {
             return new BranchBasicAuthConfigArgs(enableBasicAuth, password, username);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.enums.RuleType;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="definition", required=true)
-    private final Input<ManagementPolicyDefinitionArgs> definition;
+      private final Input<ManagementPolicyDefinitionArgs> definition;
 
     public Input<ManagementPolicyDefinitionArgs> getDefinition() {
         return this.definition;
@@ -38,7 +38,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -49,7 +49,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -60,7 +60,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,RuleType>> type;
+      private final Input<Either<String,RuleType>> type;
 
     public Input<Either<String,RuleType>> getType() {
         return this.type;
@@ -149,7 +149,6 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ManagementPolicyRuleArgs build() {
             return new ManagementPolicyRuleArgs(definition, enabled, name, type);
         }

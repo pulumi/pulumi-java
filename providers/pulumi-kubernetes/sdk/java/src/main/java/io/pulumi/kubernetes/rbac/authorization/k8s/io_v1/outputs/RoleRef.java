@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class RoleRef {
     /**
      * APIGroup is the group for the resource being referenced
      * 
-     */
+    */
     public String getApiGroup() {
         return this.apiGroup;
     }
     /**
      * Kind is the type of resource being referenced
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name is the name of resource being referenced
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -95,7 +95,6 @@ public final class RoleRef {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RoleRef build() {
             return new RoleRef(apiGroup, kind, name);
         }

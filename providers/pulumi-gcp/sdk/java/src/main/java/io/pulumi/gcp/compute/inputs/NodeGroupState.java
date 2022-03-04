@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.NodeGroupAutoscalingPolicyGetArgs;
 import io.pulumi.gcp.compute.inputs.NodeGroupMaintenanceWindowGetArgs;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingPolicy")
-    private final @Nullable Input<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy;
+      private final @Nullable Input<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy;
 
     public Input<NodeGroupAutoscalingPolicyGetArgs> getAutoscalingPolicy() {
         return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
@@ -35,7 +35,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -46,7 +46,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialSize")
-    private final @Nullable Input<Integer> initialSize;
+      private final @Nullable Input<Integer> initialSize;
 
     public Input<Integer> getInitialSize() {
         return this.initialSize == null ? Input.empty() : this.initialSize;
@@ -68,7 +68,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenancePolicy")
-    private final @Nullable Input<String> maintenancePolicy;
+      private final @Nullable Input<String> maintenancePolicy;
 
     public Input<String> getMaintenancePolicy() {
         return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
@@ -80,7 +80,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow;
+      private final @Nullable Input<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow;
 
     public Input<NodeGroupMaintenanceWindowGetArgs> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -91,7 +91,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -102,7 +102,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTemplate")
-    private final @Nullable Input<String> nodeTemplate;
+      private final @Nullable Input<String> nodeTemplate;
 
     public Input<String> getNodeTemplate() {
         return this.nodeTemplate == null ? Input.empty() : this.nodeTemplate;
@@ -114,7 +114,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -125,7 +125,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -136,7 +136,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<Integer> size;
+      private final @Nullable Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -147,7 +147,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -356,7 +356,6 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public NodeGroupState build() {
             return new NodeGroupState(autoscalingPolicy, creationTimestamp, description, initialSize, maintenancePolicy, maintenanceWindow, name, nodeTemplate, project, selfLink, size, zone);
         }

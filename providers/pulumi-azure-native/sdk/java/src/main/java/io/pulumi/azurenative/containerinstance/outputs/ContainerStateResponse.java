@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class ContainerStateResponse {
     /**
      * The human-readable status of the container instance state.
      * 
-     */
+    */
     public String getDetailStatus() {
         return this.detailStatus;
     }
     /**
      * The container instance exit codes correspond to those from the `docker run` command.
      * 
-     */
+    */
     public Integer getExitCode() {
         return this.exitCode;
     }
     /**
      * The date-time when the container instance state finished.
      * 
-     */
+    */
     public String getFinishTime() {
         return this.finishTime;
     }
     /**
      * The date-time when the container instance state started.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The state of the container instance.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -138,7 +138,6 @@ public final class ContainerStateResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public ContainerStateResponse build() {
             return new ContainerStateResponse(detailStatus, exitCode, finishTime, startTime, state);
         }

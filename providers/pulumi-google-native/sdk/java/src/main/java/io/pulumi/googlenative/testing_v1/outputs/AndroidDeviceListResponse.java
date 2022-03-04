@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidDeviceResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AndroidDeviceListResponse {
     /**
      * A list of Android devices.
      * 
-     */
+    */
     public List<AndroidDeviceResponse> getAndroidDevices() {
         return this.androidDevices;
     }
@@ -53,7 +53,6 @@ public final class AndroidDeviceListResponse {
             this.androidDevices = Objects.requireNonNull(androidDevices);
             return this;
         }
-
         public AndroidDeviceListResponse build() {
             return new AndroidDeviceListResponse(androidDevices);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class RedirectResponse {
     /**
      * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
-     */
+    */
     public String getGlob() {
         return this.glob;
     }
     /**
      * The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: "glob": "/:capture*", "statusCode": 301, "location": "https://example.com/foo/:capture"
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The user-supplied RE2 regular expression to match against the request URL path.
      * 
-     */
+    */
     public String getRegex() {
         return this.regex;
     }
     /**
      * The status HTTP code to return in the response. It must be a valid 3xx status code.
      * 
-     */
+    */
     public Integer getStatusCode() {
         return this.statusCode;
     }
@@ -117,7 +117,6 @@ public final class RedirectResponse {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public RedirectResponse build() {
             return new RedirectResponse(glob, location, regex, statusCode);
         }

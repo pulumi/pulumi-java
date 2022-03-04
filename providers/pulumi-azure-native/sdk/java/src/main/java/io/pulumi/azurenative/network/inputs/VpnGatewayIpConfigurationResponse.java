@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable String privateIpAddress;
+      private final @Nullable String privateIpAddress;
 
     public Optional<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
@@ -45,7 +45,7 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicIpAddress")
-    private final @Nullable String publicIpAddress;
+      private final @Nullable String publicIpAddress;
 
     public Optional<String> getPublicIpAddress() {
         return this.publicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddress);
@@ -104,7 +104,6 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public VpnGatewayIpConfigurationResponse build() {
             return new VpnGatewayIpConfigurationResponse(id, privateIpAddress, publicIpAddress);
         }

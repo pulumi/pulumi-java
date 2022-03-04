@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.memcache_v1beta2.outputs.MemcacheParametersResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -69,49 +69,49 @@ public final class NodeResponse {
     /**
      * Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
      * 
-     */
+    */
     public String getNodeId() {
         return this.nodeId;
     }
     /**
      * User defined parameters currently applied to the node.
      * 
-     */
+    */
     public MemcacheParametersResponse getParameters() {
         return this.parameters;
     }
     /**
      * The port number of the Memcached server on this node.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * Current state of the Memcached node.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Returns true if there is an update waiting to be applied
      * 
-     */
+    */
     public Boolean getUpdateAvailable() {
         return this.updateAvailable;
     }
     /**
      * Location (GCP Zone) for the Memcached node.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }
@@ -182,7 +182,6 @@ public final class NodeResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public NodeResponse build() {
             return new NodeResponse(host, nodeId, parameters, port, state, updateAvailable, zone);
         }

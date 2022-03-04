@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.CencDrmConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.EnabledProtocolsResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyContentKeysResponse;
 import io.pulumi.azurenative.media.outputs.TrackSelectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -51,28 +51,28 @@ public final class CommonEncryptionCencResponse {
     /**
      * Representing which tracks should not be encrypted
      * 
-     */
+    */
     public List<TrackSelectionResponse> getClearTracks() {
         return this.clearTracks == null ? List.of() : this.clearTracks;
     }
     /**
      * Representing default content key for each encryption scheme and separate content keys for specific tracks
      * 
-     */
+    */
     public Optional<StreamingPolicyContentKeysResponse> getContentKeys() {
         return Optional.ofNullable(this.contentKeys);
     }
     /**
      * Configuration of DRMs for CommonEncryptionCenc encryption scheme
      * 
-     */
+    */
     public Optional<CencDrmConfigurationResponse> getDrm() {
         return Optional.ofNullable(this.drm);
     }
     /**
      * Representing supported protocols
      * 
-     */
+    */
     public Optional<EnabledProtocolsResponse> getEnabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
@@ -122,7 +122,6 @@ public final class CommonEncryptionCencResponse {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public CommonEncryptionCencResponse build() {
             return new CommonEncryptionCencResponse(clearTracks, contentKeys, drm, enabledProtocols);
         }

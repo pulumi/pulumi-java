@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.NodeGroupAutoscalingPolicyMode;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxNodes")
-    private final @Nullable Input<Integer> maxNodes;
+      private final @Nullable Input<Integer> maxNodes;
 
     public Input<Integer> getMaxNodes() {
         return this.maxNodes == null ? Input.empty() : this.maxNodes;
@@ -31,7 +31,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="minNodes")
-    private final @Nullable Input<Integer> minNodes;
+      private final @Nullable Input<Integer> minNodes;
 
     public Input<Integer> getMinNodes() {
         return this.minNodes == null ? Input.empty() : this.minNodes;
@@ -42,7 +42,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<NodeGroupAutoscalingPolicyMode> mode;
+      private final @Nullable Input<NodeGroupAutoscalingPolicyMode> mode;
 
     public Input<NodeGroupAutoscalingPolicyMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -116,7 +116,6 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public NodeGroupAutoscalingPolicyArgs build() {
             return new NodeGroupAutoscalingPolicyArgs(maxNodes, minNodes, mode);
         }

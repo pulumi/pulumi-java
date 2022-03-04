@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.outputs.CookieExpirationResponse;
 import io.pulumi.azurenative.web.outputs.LoginRoutesResponse;
 import io.pulumi.azurenative.web.outputs.NonceResponse;
 import io.pulumi.azurenative.web.outputs.TokenStoreResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -71,42 +71,42 @@ public final class LoginResponse {
      * This is an advanced setting typically only needed by Windows Store application backends.
      * Note that URLs within the current domain are always implicitly allowed.
      * 
-     */
+    */
     public List<String> getAllowedExternalRedirectUrls() {
         return this.allowedExternalRedirectUrls == null ? List.of() : this.allowedExternalRedirectUrls;
     }
     /**
      * The configuration settings of the session cookie's expiration.
      * 
-     */
+    */
     public Optional<CookieExpirationResponse> getCookieExpiration() {
         return Optional.ofNullable(this.cookieExpiration);
     }
     /**
      * The configuration settings of the nonce used in the login flow.
      * 
-     */
+    */
     public Optional<NonceResponse> getNonce() {
         return Optional.ofNullable(this.nonce);
     }
     /**
      * <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getPreserveUrlFragmentsForLogins() {
         return Optional.ofNullable(this.preserveUrlFragmentsForLogins);
     }
     /**
      * The routes that specify the endpoints used for login and logout requests.
      * 
-     */
+    */
     public Optional<LoginRoutesResponse> getRoutes() {
         return Optional.ofNullable(this.routes);
     }
     /**
      * The configuration settings of the token store.
      * 
-     */
+    */
     public Optional<TokenStoreResponse> getTokenStore() {
         return Optional.ofNullable(this.tokenStore);
     }
@@ -170,7 +170,6 @@ public final class LoginResponse {
             this.tokenStore = tokenStore;
             return this;
         }
-
         public LoginResponse build() {
             return new LoginResponse(allowedExternalRedirectUrls, cookieExpiration, nonce, preserveUrlFragmentsForLogins, routes, tokenStore);
         }

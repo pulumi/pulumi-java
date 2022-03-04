@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyFairPlayConfigurationResponse;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyPlayReadyConfigurationResponse;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyWidevineConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="fairPlay")
-    private final @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
+      private final @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
 
     public Optional<StreamingPolicyFairPlayConfigurationResponse> getFairPlay() {
         return this.fairPlay == null ? Optional.empty() : Optional.ofNullable(this.fairPlay);
@@ -36,7 +36,7 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="playReady")
-    private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
+      private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
 
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> getPlayReady() {
         return this.playReady == null ? Optional.empty() : Optional.ofNullable(this.playReady);
@@ -47,7 +47,7 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="widevine")
-    private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
+      private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
     public Optional<StreamingPolicyWidevineConfigurationResponse> getWidevine() {
         return this.widevine == null ? Optional.empty() : Optional.ofNullable(this.widevine);
@@ -106,7 +106,6 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
             this.widevine = widevine;
             return this;
         }
-
         public CbcsDrmConfigurationResponse build() {
             return new CbcsDrmConfigurationResponse(fairPlay, playReady, widevine);
         }

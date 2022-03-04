@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceGroupNamedPortGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<String>> instances;
+      private final @Nullable Input<List<String>> instances;
 
     public Input<List<String>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -47,7 +47,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -59,7 +59,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namedPorts")
-    private final @Nullable Input<List<InstanceGroupNamedPortGetArgs>> namedPorts;
+      private final @Nullable Input<List<InstanceGroupNamedPortGetArgs>> namedPorts;
 
     public Input<List<InstanceGroupNamedPortGetArgs>> getNamedPorts() {
         return this.namedPorts == null ? Input.empty() : this.namedPorts;
@@ -73,7 +73,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -85,7 +85,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -96,7 +96,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -107,7 +107,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<Integer> size;
+      private final @Nullable Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -118,7 +118,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -282,7 +282,6 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceGroupState build() {
             return new InstanceGroupState(description, instances, name, namedPorts, network, project, selfLink, size, zone);
         }

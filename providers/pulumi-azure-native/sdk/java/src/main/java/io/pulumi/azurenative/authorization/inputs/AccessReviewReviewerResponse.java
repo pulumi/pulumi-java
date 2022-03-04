@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AccessReviewReviewerResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable String principalId;
+      private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
@@ -34,7 +34,7 @@ public final class AccessReviewReviewerResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="principalType", required=true)
-    private final String principalType;
+      private final String principalType;
 
     public String getPrincipalType() {
         return this.principalType;
@@ -83,7 +83,6 @@ public final class AccessReviewReviewerResponse extends io.pulumi.resources.Invo
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public AccessReviewReviewerResponse build() {
             return new AccessReviewReviewerResponse(principalId, principalType);
         }

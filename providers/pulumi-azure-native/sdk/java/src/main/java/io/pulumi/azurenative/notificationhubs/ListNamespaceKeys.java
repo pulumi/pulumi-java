@@ -6,21 +6,41 @@ package io.pulumi.azurenative.notificationhubs;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.notificationhubs.inputs.ListNamespaceKeysArgs;
 import io.pulumi.azurenative.notificationhubs.outputs.ListNamespaceKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNamespaceKeys {
-/**
- * Namespace/NotificationHub Connection String
+    private ListNamespaceKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListNamespaceKeysArgs.Builder a);
+    }
+    private static ListNamespaceKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListNamespaceKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Namespace/NotificationHub Connection String
  * API Version: 2017-04-01.
  * 
- *
- * Namespace/NotificationHub Connection String
+     *
+     * Namespace/NotificationHub Connection String
  * 
- */
+     */
+    public static CompletableFuture<ListNamespaceKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Namespace/NotificationHub Connection String
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Namespace/NotificationHub Connection String
+     * 
+     */
     public static CompletableFuture<ListNamespaceKeysResult> invokeAsync(ListNamespaceKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args == null ? ListNamespaceKeysArgs.Empty : args, Utilities.withVersion(options));
     }

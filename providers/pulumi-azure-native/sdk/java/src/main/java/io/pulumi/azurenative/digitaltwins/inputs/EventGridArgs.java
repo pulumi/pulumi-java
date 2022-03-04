@@ -6,7 +6,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 import io.pulumi.azurenative.digitaltwins.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessKey1", required=true)
-    private final Input<String> accessKey1;
+      private final Input<String> accessKey1;
 
     public Input<String> getAccessKey1() {
         return this.accessKey1;
@@ -36,7 +36,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessKey2")
-    private final @Nullable Input<String> accessKey2;
+      private final @Nullable Input<String> accessKey2;
 
     public Input<String> getAccessKey2() {
         return this.accessKey2 == null ? Input.empty() : this.accessKey2;
@@ -47,7 +47,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
+      private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
 
     public Input<Either<String,AuthenticationType>> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -58,7 +58,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterSecret")
-    private final @Nullable Input<String> deadLetterSecret;
+      private final @Nullable Input<String> deadLetterSecret;
 
     public Input<String> getDeadLetterSecret() {
         return this.deadLetterSecret == null ? Input.empty() : this.deadLetterSecret;
@@ -69,7 +69,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterUri")
-    private final @Nullable Input<String> deadLetterUri;
+      private final @Nullable Input<String> deadLetterUri;
 
     public Input<String> getDeadLetterUri() {
         return this.deadLetterUri == null ? Input.empty() : this.deadLetterUri;
@@ -81,7 +81,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final Input<String> endpointType;
+      private final Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType;
@@ -92,7 +92,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicEndpoint", required=true)
-    private final Input<String> topicEndpoint;
+      private final Input<String> topicEndpoint;
 
     public Input<String> getTopicEndpoint() {
         return this.topicEndpoint;
@@ -226,7 +226,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
             this.topicEndpoint = Input.of(Objects.requireNonNull(topicEndpoint));
             return this;
         }
-
         public EventGridArgs build() {
             return new EventGridArgs(accessKey1, accessKey2, authenticationType, deadLetterSecret, deadLetterUri, endpointType, topicEndpoint);
         }

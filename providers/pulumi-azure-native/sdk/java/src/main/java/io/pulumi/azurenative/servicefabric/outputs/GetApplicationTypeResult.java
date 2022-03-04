@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class GetApplicationTypeResult {
     /**
      * Azure resource etag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Azure resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * It will be deprecated in New API, resource location depends on the parent resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Azure resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current deployment or provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -182,7 +182,6 @@ public final class GetApplicationTypeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationTypeResult build() {
             return new GetApplicationTypeResult(etag, id, location, name, provisioningState, tags, type);
         }

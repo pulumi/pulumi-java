@@ -11,8 +11,8 @@ import io.pulumi.azurenative.m365securityandcompliance.outputs.SystemDataRespons
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -162,6 +162,37 @@ public class PrivateLinkServicesForO365ManagementActivityAPI extends io.pulumi.r
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PrivateLinkServicesForO365ManagementActivityAPIArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.m365securityandcompliance.PrivateLinkServicesForO365ManagementActivityAPIArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.m365securityandcompliance.PrivateLinkServicesForO365ManagementActivityAPIArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PrivateLinkServicesForO365ManagementActivityAPI(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PrivateLinkServicesForO365ManagementActivityAPI(String name) {
+        this(name, PrivateLinkServicesForO365ManagementActivityAPIArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrivateLinkServicesForO365ManagementActivityAPI(String name, PrivateLinkServicesForO365ManagementActivityAPIArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

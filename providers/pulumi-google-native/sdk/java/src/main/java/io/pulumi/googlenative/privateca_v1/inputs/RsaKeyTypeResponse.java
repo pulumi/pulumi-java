@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RsaKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxModulusSize", required=true)
-    private final String maxModulusSize;
+      private final String maxModulusSize;
 
     public String getMaxModulusSize() {
         return this.maxModulusSize;
@@ -32,7 +32,7 @@ public final class RsaKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minModulusSize", required=true)
-    private final String minModulusSize;
+      private final String minModulusSize;
 
     public String getMinModulusSize() {
         return this.minModulusSize;
@@ -81,7 +81,6 @@ public final class RsaKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
             this.minModulusSize = Objects.requireNonNull(minModulusSize);
             return this;
         }
-
         public RsaKeyTypeResponse build() {
             return new RsaKeyTypeResponse(maxModulusSize, minModulusSize);
         }

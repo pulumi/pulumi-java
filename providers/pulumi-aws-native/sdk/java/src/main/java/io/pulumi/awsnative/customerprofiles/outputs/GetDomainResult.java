@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.outputs.DomainTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -64,42 +64,42 @@ public final class GetDomainResult {
     /**
      * The time of this integration got created
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The URL of the SQS dead letter queue
      * 
-     */
+    */
     public Optional<String> getDeadLetterQueueUrl() {
         return Optional.ofNullable(this.deadLetterQueueUrl);
     }
     /**
      * The default encryption key
      * 
-     */
+    */
     public Optional<String> getDefaultEncryptionKey() {
         return Optional.ofNullable(this.defaultEncryptionKey);
     }
     /**
      * The default number of days until the data within the domain expires.
      * 
-     */
+    */
     public Optional<Integer> getDefaultExpirationDays() {
         return Optional.ofNullable(this.defaultExpirationDays);
     }
     /**
      * The time of this integration got last updated at
      * 
-     */
+    */
     public Optional<String> getLastUpdatedAt() {
         return Optional.ofNullable(this.lastUpdatedAt);
     }
     /**
      * The tags (keys and values) associated with the domain
      * 
-     */
+    */
     public List<DomainTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -163,7 +163,6 @@ public final class GetDomainResult {
             this.tags = tags;
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(createdAt, deadLetterQueueUrl, defaultEncryptionKey, defaultExpirationDays, lastUpdatedAt, tags);
         }

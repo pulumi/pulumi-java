@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataSource {
-/**
- * Gets a datasource. **Note:** This API requires an admin account to execute.
+    private GetDataSource() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataSourceArgs.Builder a);
+    }
+    private static GetDataSourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataSourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a datasource. **Note:** This API requires an admin account to execute.
  * 
- */
+     */
+    public static CompletableFuture<GetDataSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a datasource. **Note:** This API requires an admin account to execute.
+     * 
+     */
     public static CompletableFuture<GetDataSourceResult> invokeAsync(GetDataSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsearch/v1:getDataSource", TypeShape.of(GetDataSourceResult.class), args == null ? GetDataSourceArgs.Empty : args, Utilities.withVersion(options));
     }

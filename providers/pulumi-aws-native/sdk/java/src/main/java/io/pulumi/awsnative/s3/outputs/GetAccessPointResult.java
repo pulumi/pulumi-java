@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.AccessPointNetworkOrigin;
 import io.pulumi.awsnative.s3.outputs.PolicyStatusProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -53,28 +53,28 @@ public final class GetAccessPointResult {
     /**
      * The alias of this Access Point. This alias can be used for compatibility purposes with other AWS services and third-party applications.
      * 
-     */
+    */
     public Optional<String> getAlias() {
         return Optional.ofNullable(this.alias);
     }
     /**
      * The Amazon Resource Name (ARN) of the specified accesspoint.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates whether this Access Point allows access from the public Internet. If VpcConfiguration is specified for this Access Point, then NetworkOrigin is VPC, and the Access Point doesn't allow access from the public Internet. Otherwise, NetworkOrigin is Internet, and the Access Point allows access from the public Internet, subject to the Access Point and bucket access policies.
      * 
-     */
+    */
     public Optional<AccessPointNetworkOrigin> getNetworkOrigin() {
         return Optional.ofNullable(this.networkOrigin);
     }
     /**
      * The Access Point Policy you want to apply to this access point.
      * 
-     */
+    */
     public Optional<Object> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
@@ -134,7 +134,6 @@ public final class GetAccessPointResult {
             this.policyStatus = policyStatus;
             return this;
         }
-
         public GetAccessPointResult build() {
             return new GetAccessPointResult(alias, arn, networkOrigin, policy, policyStatus);
         }

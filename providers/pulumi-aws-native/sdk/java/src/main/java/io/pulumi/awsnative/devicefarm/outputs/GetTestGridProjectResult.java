@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devicefarm.outputs;
 
 import io.pulumi.awsnative.devicefarm.outputs.TestGridProjectTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -88,7 +88,6 @@ public final class GetTestGridProjectResult {
             this.tags = tags;
             return this;
         }
-
         public GetTestGridProjectResult build() {
             return new GetTestGridProjectResult(arn, description, name, tags);
         }

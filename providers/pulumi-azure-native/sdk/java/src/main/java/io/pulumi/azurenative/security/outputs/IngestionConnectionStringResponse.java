@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class IngestionConnectionStringResponse {
     /**
      * The region where ingested logs and data resides
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Connection string value
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class IngestionConnectionStringResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IngestionConnectionStringResponse build() {
             return new IngestionConnectionStringResponse(location, value);
         }

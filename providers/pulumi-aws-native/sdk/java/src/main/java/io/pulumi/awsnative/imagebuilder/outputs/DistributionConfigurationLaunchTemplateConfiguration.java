@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class DistributionConfigurationLaunchTemplateConfiguration {
     /**
      * The account ID that this configuration applies to.
      * 
-     */
+    */
     public Optional<String> getAccountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
      * Identifies the EC2 launch template to use.
      * 
-     */
+    */
     public Optional<String> getLaunchTemplateId() {
         return Optional.ofNullable(this.launchTemplateId);
     }
     /**
      * Set the specified EC2 launch template as the default launch template for the specified account.
      * 
-     */
+    */
     public Optional<Boolean> getSetDefaultVersion() {
         return Optional.ofNullable(this.setDefaultVersion);
     }
@@ -98,7 +98,6 @@ public final class DistributionConfigurationLaunchTemplateConfiguration {
             this.setDefaultVersion = setDefaultVersion;
             return this;
         }
-
         public DistributionConfigurationLaunchTemplateConfiguration build() {
             return new DistributionConfigurationLaunchTemplateConfiguration(accountId, launchTemplateId, setDefaultVersion);
         }

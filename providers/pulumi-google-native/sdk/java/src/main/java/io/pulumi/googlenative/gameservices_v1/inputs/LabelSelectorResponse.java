@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LabelSelectorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -60,7 +60,6 @@ public final class LabelSelectorResponse extends io.pulumi.resources.InvokeArgs 
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public LabelSelectorResponse build() {
             return new LabelSelectorResponse(labels);
         }

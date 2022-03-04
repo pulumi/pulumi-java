@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.spanner_v1.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class EncryptionInfoResponse {
     /**
      * If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
      * 
-     */
+    */
     public StatusResponse getEncryptionStatus() {
         return this.encryptionStatus;
     }
     /**
      * The type of encryption.
      * 
-     */
+    */
     public String getEncryptionType() {
         return this.encryptionType;
     }
     /**
      * A Cloud KMS key version that is being used to protect the database or backup.
      * 
-     */
+    */
     public String getKmsKeyVersion() {
         return this.kmsKeyVersion;
     }
@@ -96,7 +96,6 @@ public final class EncryptionInfoResponse {
             this.kmsKeyVersion = Objects.requireNonNull(kmsKeyVersion);
             return this;
         }
-
         public EncryptionInfoResponse build() {
             return new EncryptionInfoResponse(encryptionStatus, encryptionType, kmsKeyVersion);
         }

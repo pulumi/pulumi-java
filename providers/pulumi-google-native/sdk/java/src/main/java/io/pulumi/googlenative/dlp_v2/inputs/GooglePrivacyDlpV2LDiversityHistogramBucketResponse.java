@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LDiversityEquivalenceClassResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
      * 
      */
     @InputImport(name="bucketSize", required=true)
-    private final String bucketSize;
+      private final String bucketSize;
 
     public String getBucketSize() {
         return this.bucketSize;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
      * 
      */
     @InputImport(name="bucketValueCount", required=true)
-    private final String bucketValueCount;
+      private final String bucketValueCount;
 
     public String getBucketValueCount() {
         return this.bucketValueCount;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
      * 
      */
     @InputImport(name="bucketValues", required=true)
-    private final List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues;
+      private final List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> getBucketValues() {
         return this.bucketValues;
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
      * 
      */
     @InputImport(name="sensitiveValueFrequencyLowerBound", required=true)
-    private final String sensitiveValueFrequencyLowerBound;
+      private final String sensitiveValueFrequencyLowerBound;
 
     public String getSensitiveValueFrequencyLowerBound() {
         return this.sensitiveValueFrequencyLowerBound;
@@ -67,7 +67,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
      * 
      */
     @InputImport(name="sensitiveValueFrequencyUpperBound", required=true)
-    private final String sensitiveValueFrequencyUpperBound;
+      private final String sensitiveValueFrequencyUpperBound;
 
     public String getSensitiveValueFrequencyUpperBound() {
         return this.sensitiveValueFrequencyUpperBound;
@@ -146,7 +146,6 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
             this.sensitiveValueFrequencyUpperBound = Objects.requireNonNull(sensitiveValueFrequencyUpperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2LDiversityHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2LDiversityHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, sensitiveValueFrequencyLowerBound, sensitiveValueFrequencyUpperBound);
         }

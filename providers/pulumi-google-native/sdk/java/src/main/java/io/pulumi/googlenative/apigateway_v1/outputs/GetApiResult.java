@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -67,49 +67,49 @@ public final class GetApiResult {
     /**
      * Created time.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. Display name.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be created in the same project as this API.
      * 
-     */
+    */
     public String getManagedService() {
         return this.managedService;
     }
     /**
      * Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of the API.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Updated time.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -180,7 +180,6 @@ public final class GetApiResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetApiResult build() {
             return new GetApiResult(createTime, displayName, labels, managedService, name, state, updateTime);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.outputs;
 import io.pulumi.azurenative.scheduler.outputs.JobActionResponse;
 import io.pulumi.azurenative.scheduler.outputs.JobRecurrenceResponse;
 import io.pulumi.azurenative.scheduler.outputs.JobStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,35 +57,35 @@ public final class JobPropertiesResponse {
     /**
      * Gets or sets the job action.
      * 
-     */
+    */
     public Optional<JobActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Gets or sets the job recurrence.
      * 
-     */
+    */
     public Optional<JobRecurrenceResponse> getRecurrence() {
         return Optional.ofNullable(this.recurrence);
     }
     /**
      * Gets or sets the job start time.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * Gets or set the job state.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Gets the job status.
      * 
-     */
+    */
     public JobStatusResponse getStatus() {
         return this.status;
     }
@@ -142,7 +142,6 @@ public final class JobPropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public JobPropertiesResponse build() {
             return new JobPropertiesResponse(action, recurrence, startTime, state, status);
         }

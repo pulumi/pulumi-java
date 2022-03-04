@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1alpha2.inputs.DsRecordResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dsRecords", required=true)
-    private final List<DsRecordResponse> dsRecords;
+      private final List<DsRecordResponse> dsRecords;
 
     public List<DsRecordResponse> getDsRecords() {
         return this.dsRecords;
@@ -34,7 +34,7 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dsState", required=true)
-    private final String dsState;
+      private final String dsState;
 
     public String getDsState() {
         return this.dsState;
@@ -45,7 +45,7 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="nameServers", required=true)
-    private final List<String> nameServers;
+      private final List<String> nameServers;
 
     public List<String> getNameServers() {
         return this.nameServers;
@@ -104,7 +104,6 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
         public GoogleDomainsDnsResponse build() {
             return new GoogleDomainsDnsResponse(dsRecords, dsState, nameServers);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class OSPolicyResourcePackageResourceGooGetResponse {
     /**
      * Package name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -52,7 +52,6 @@ public final class OSPolicyResourcePackageResourceGooGetResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public OSPolicyResourcePackageResourceGooGetResponse build() {
             return new OSPolicyResourcePackageResourceGooGetResponse(name);
         }

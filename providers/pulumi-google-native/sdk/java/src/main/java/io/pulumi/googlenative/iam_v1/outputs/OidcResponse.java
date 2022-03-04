@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class OidcResponse {
     /**
      * Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ```//iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/```
      * 
-     */
+    */
     public List<String> getAllowedAudiences() {
         return this.allowedAudiences;
     }
     /**
      * The OIDC issuer URL. Must be an HTTPS endpoint.
      * 
-     */
+    */
     public String getIssuerUri() {
         return this.issuerUri;
     }
@@ -75,7 +75,6 @@ public final class OidcResponse {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }
-
         public OidcResponse build() {
             return new OidcResponse(allowedAudiences, issuerUri);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="minReceiveInterval", required=true)
-    private final Integer minReceiveInterval;
+      private final Integer minReceiveInterval;
 
     public Integer getMinReceiveInterval() {
         return this.minReceiveInterval;
@@ -29,7 +29,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="minTransmitInterval", required=true)
-    private final Integer minTransmitInterval;
+      private final Integer minTransmitInterval;
 
     public Integer getMinTransmitInterval() {
         return this.minTransmitInterval;
@@ -40,7 +40,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -51,7 +51,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="multiplier", required=true)
-    private final Integer multiplier;
+      private final Integer multiplier;
 
     public Integer getMultiplier() {
         return this.multiplier;
@@ -62,7 +62,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="packetMode", required=true)
-    private final String packetMode;
+      private final String packetMode;
 
     public String getPacketMode() {
         return this.packetMode;
@@ -73,7 +73,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sessionInitializationMode", required=true)
-    private final String sessionInitializationMode;
+      private final String sessionInitializationMode;
 
     public String getSessionInitializationMode() {
         return this.sessionInitializationMode;
@@ -84,7 +84,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="slowTimerInterval", required=true)
-    private final Integer slowTimerInterval;
+      private final Integer slowTimerInterval;
 
     public Integer getSlowTimerInterval() {
         return this.slowTimerInterval;
@@ -183,7 +183,6 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
             this.slowTimerInterval = Objects.requireNonNull(slowTimerInterval);
             return this;
         }
-
         public RouterBgpPeerBfdResponse build() {
             return new RouterBgpPeerBfdResponse(minReceiveInterval, minTransmitInterval, mode, multiplier, packetMode, sessionInitializationMode, slowTimerInterval);
         }

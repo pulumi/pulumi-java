@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetDefaultUserRuleArgs;
 import io.pulumi.azurenative.network.outputs.GetDefaultUserRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefaultUserRule {
-/**
- * Network security default user rule.
+    private GetDefaultUserRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetDefaultUserRuleArgs.Builder a);
+    }
+    private static GetDefaultUserRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDefaultUserRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Network security default user rule.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Network security default user rule.
+     *
+     * Network security default user rule.
  * 
- */
+     */
+    public static CompletableFuture<GetDefaultUserRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Network security default user rule.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Network security default user rule.
+     * 
+     */
     public static CompletableFuture<GetDefaultUserRuleResult> invokeAsync(GetDefaultUserRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDefaultUserRule", TypeShape.of(GetDefaultUserRuleResult.class), args == null ? GetDefaultUserRuleArgs.Empty : args, Utilities.withVersion(options));
     }

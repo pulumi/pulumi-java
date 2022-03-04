@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class GetIPv6FirewallRuleResult {
     /**
      * The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
      * 
-     */
+    */
     public Optional<String> getEndIPv6Address() {
         return Optional.ofNullable(this.endIPv6Address);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The start IP address of the firewall rule. Must be IPv6 format.
      * 
-     */
+    */
     public Optional<String> getStartIPv6Address() {
         return Optional.ofNullable(this.startIPv6Address);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -139,7 +139,6 @@ public final class GetIPv6FirewallRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIPv6FirewallRuleResult build() {
             return new GetIPv6FirewallRuleResult(endIPv6Address, id, name, startIPv6Address, type);
         }

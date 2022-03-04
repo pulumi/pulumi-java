@@ -5,8 +5,8 @@ package io.pulumi.googlenative.datastream_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastream_v1alpha1.PrivateConnectionArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.ErrorResponse;
@@ -135,6 +135,37 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
         return this.vpcPeeringConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PrivateConnectionArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.datastream_v1alpha1.PrivateConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.datastream_v1alpha1.PrivateConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PrivateConnection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PrivateConnection(String name) {
+        this(name, PrivateConnectionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrivateConnection(String name, PrivateConnectionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

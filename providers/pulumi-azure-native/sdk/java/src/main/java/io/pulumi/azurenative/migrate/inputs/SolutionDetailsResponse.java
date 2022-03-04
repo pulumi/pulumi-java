@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="assessmentCount")
-    private final @Nullable Integer assessmentCount;
+      private final @Nullable Integer assessmentCount;
 
     public Optional<Integer> getAssessmentCount() {
         return this.assessmentCount == null ? Optional.empty() : Optional.ofNullable(this.assessmentCount);
@@ -36,7 +36,7 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="extendedDetails")
-    private final @Nullable Map<String,String> extendedDetails;
+      private final @Nullable Map<String,String> extendedDetails;
 
     public Map<String,String> getExtendedDetails() {
         return this.extendedDetails == null ? Map.of() : this.extendedDetails;
@@ -47,7 +47,7 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="groupCount")
-    private final @Nullable Integer groupCount;
+      private final @Nullable Integer groupCount;
 
     public Optional<Integer> getGroupCount() {
         return this.groupCount == null ? Optional.empty() : Optional.ofNullable(this.groupCount);
@@ -106,7 +106,6 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
             this.groupCount = groupCount;
             return this;
         }
-
         public SolutionDetailsResponse build() {
             return new SolutionDetailsResponse(assessmentCount, extendedDetails, groupCount);
         }

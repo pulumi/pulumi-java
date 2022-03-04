@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.IncidentLabelResponse;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentOwnerInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     /**
      * The reason the incident was closed
      * 
-     */
+    */
     public Optional<String> getClassification() {
         return Optional.ofNullable(this.classification);
     }
     /**
      * Describes the reason the incident was closed
      * 
-     */
+    */
     public Optional<String> getClassificationComment() {
         return Optional.ofNullable(this.classificationComment);
     }
     /**
      * The classification reason to close the incident with
      * 
-     */
+    */
     public Optional<String> getClassificationReason() {
         return Optional.ofNullable(this.classificationReason);
     }
     /**
      * List of labels to add to the incident
      * 
-     */
+    */
     public List<IncidentLabelResponse> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * Describes a user that the incident is assigned to
      * 
-     */
+    */
     public Optional<IncidentOwnerInfoResponse> getOwner() {
         return Optional.ofNullable(this.owner);
     }
     /**
      * The severity of the incident
      * 
-     */
+    */
     public Optional<String> getSeverity() {
         return Optional.ofNullable(this.severity);
     }
     /**
      * The status of the incident
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -184,7 +184,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
             this.status = status;
             return this;
         }
-
         public AutomationRuleModifyPropertiesActionResponseActionConfiguration build() {
             return new AutomationRuleModifyPropertiesActionResponseActionConfiguration(classification, classificationComment, classificationReason, labels, owner, severity, status);
         }

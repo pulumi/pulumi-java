@@ -6,7 +6,7 @@ package io.pulumi.awsnative.forecast;
 import io.pulumi.awsnative.forecast.enums.DatasetGroupDomain;
 import io.pulumi.awsnative.forecast.inputs.DatasetGroupTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetArns")
-    private final @Nullable Input<List<String>> datasetArns;
+      private final @Nullable Input<List<String>> datasetArns;
 
     public Input<List<String>> getDatasetArns() {
         return this.datasetArns == null ? Input.empty() : this.datasetArns;
@@ -33,7 +33,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetGroupName")
-    private final @Nullable Input<String> datasetGroupName;
+      private final @Nullable Input<String> datasetGroupName;
 
     public Input<String> getDatasetGroupName() {
         return this.datasetGroupName == null ? Input.empty() : this.datasetGroupName;
@@ -44,7 +44,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<DatasetGroupDomain> domain;
+      private final Input<DatasetGroupDomain> domain;
 
     public Input<DatasetGroupDomain> getDomain() {
         return this.domain;
@@ -55,7 +55,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DatasetGroupTagArgs>> tags;
+      private final @Nullable Input<List<DatasetGroupTagArgs>> tags;
 
     public Input<List<DatasetGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,7 +144,6 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DatasetGroupArgs build() {
             return new DatasetGroupArgs(datasetArns, datasetGroupName, domain, tags);
         }

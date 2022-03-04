@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -49,28 +49,28 @@ public final class ClusterDefinitionResponse {
     /**
      * The link to the blueprint.
      * 
-     */
+    */
     public Optional<String> getBlueprint() {
         return Optional.ofNullable(this.blueprint);
     }
     /**
      * The versions of different services in the cluster.
      * 
-     */
+    */
     public Map<String,String> getComponentVersion() {
         return this.componentVersion == null ? Map.of() : this.componentVersion;
     }
     /**
      * The cluster configurations.
      * 
-     */
+    */
     public Optional<Object> getConfigurations() {
         return Optional.ofNullable(this.configurations);
     }
     /**
      * The type of cluster.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
@@ -120,7 +120,6 @@ public final class ClusterDefinitionResponse {
             this.kind = kind;
             return this;
         }
-
         public ClusterDefinitionResponse build() {
             return new ClusterDefinitionResponse(blueprint, componentVersion, configurations, kind);
         }

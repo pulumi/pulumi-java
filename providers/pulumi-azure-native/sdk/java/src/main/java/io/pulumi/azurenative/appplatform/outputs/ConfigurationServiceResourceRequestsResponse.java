@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ConfigurationServiceResourceRequestsResponse {
     /**
      * Cpu allocated to each Application Configuration Service instance
      * 
-     */
+    */
     public String getCpu() {
         return this.cpu;
     }
     /**
      * Instance count of the Application Configuration Service
      * 
-     */
+    */
     public Integer getInstanceCount() {
         return this.instanceCount;
     }
     /**
      * Memory allocated to each Application Configuration Service instance
      * 
-     */
+    */
     public String getMemory() {
         return this.memory;
     }
@@ -96,7 +96,6 @@ public final class ConfigurationServiceResourceRequestsResponse {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }
-
         public ConfigurationServiceResourceRequestsResponse build() {
             return new ConfigurationServiceResourceRequestsResponse(cpu, instanceCount, memory);
         }

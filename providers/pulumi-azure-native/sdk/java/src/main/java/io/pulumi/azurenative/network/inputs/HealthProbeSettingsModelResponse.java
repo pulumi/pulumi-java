@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable String enabledState;
+      private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
@@ -35,7 +35,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="healthProbeMethod")
-    private final @Nullable String healthProbeMethod;
+      private final @Nullable String healthProbeMethod;
 
     public Optional<String> getHealthProbeMethod() {
         return this.healthProbeMethod == null ? Optional.empty() : Optional.ofNullable(this.healthProbeMethod);
@@ -46,7 +46,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -57,7 +57,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="intervalInSeconds")
-    private final @Nullable Integer intervalInSeconds;
+      private final @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
@@ -68,7 +68,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -79,7 +79,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+      private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -90,7 +90,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+      private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -101,7 +101,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceState", required=true)
-    private final String resourceState;
+      private final String resourceState;
 
     public String getResourceState() {
         return this.resourceState;
@@ -112,7 +112,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -231,7 +231,6 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HealthProbeSettingsModelResponse build() {
             return new HealthProbeSettingsModelResponse(enabledState, healthProbeMethod, id, intervalInSeconds, name, path, protocol, resourceState, type);
         }

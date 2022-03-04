@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StorageConfigResponse;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="actions", required=true)
-    private final List<GooglePrivacyDlpV2ActionResponse> actions;
+      private final List<GooglePrivacyDlpV2ActionResponse> actions;
 
     public List<GooglePrivacyDlpV2ActionResponse> getActions() {
         return this.actions;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="inspectConfig", required=true)
-    private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
+      private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
     public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
         return this.inspectConfig;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="inspectTemplateName", required=true)
-    private final String inspectTemplateName;
+      private final String inspectTemplateName;
 
     public String getInspectTemplateName() {
         return this.inspectTemplateName;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="storageConfig", required=true)
-    private final GooglePrivacyDlpV2StorageConfigResponse storageConfig;
+      private final GooglePrivacyDlpV2StorageConfigResponse storageConfig;
 
     public GooglePrivacyDlpV2StorageConfigResponse getStorageConfig() {
         return this.storageConfig;
@@ -127,7 +127,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectJobConfigResponse build() {
             return new GooglePrivacyDlpV2InspectJobConfigResponse(actions, inspectConfig, inspectTemplateName, storageConfig);
         }

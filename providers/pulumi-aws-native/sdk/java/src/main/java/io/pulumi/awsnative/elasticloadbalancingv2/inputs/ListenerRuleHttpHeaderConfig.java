@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class ListenerRuleHttpHeaderConfig extends io.pulumi.resources.Invo
     public static final ListenerRuleHttpHeaderConfig Empty = new ListenerRuleHttpHeaderConfig();
 
     @InputImport(name="httpHeaderName")
-    private final @Nullable String httpHeaderName;
+      private final @Nullable String httpHeaderName;
 
     public Optional<String> getHttpHeaderName() {
         return this.httpHeaderName == null ? Optional.empty() : Optional.ofNullable(this.httpHeaderName);
     }
 
     @InputImport(name="values")
-    private final @Nullable List<String> values;
+      private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -72,7 +72,6 @@ public final class ListenerRuleHttpHeaderConfig extends io.pulumi.resources.Invo
             this.values = values;
             return this;
         }
-
         public ListenerRuleHttpHeaderConfig build() {
             return new ListenerRuleHttpHeaderConfig(httpHeaderName, values);
         }

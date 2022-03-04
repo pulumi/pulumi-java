@@ -25,7 +25,7 @@ import io.pulumi.azurenative.cdn.outputs.OriginGroupOverrideActionResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlRedirectActionResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlRewriteActionResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningActionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -72,28 +72,28 @@ public final class DeliveryRuleResponse {
     /**
      * A list of actions that are executed when all the conditions of a rule are satisfied.
      * 
-     */
+    */
     public List<Object> getActions() {
         return this.actions;
     }
     /**
      * A list of conditions that must be matched for the actions to be executed
      * 
-     */
+    */
     public List<Object> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * Name of the rule
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
      * 
-     */
+    */
     public Integer getOrder() {
         return this.order;
     }
@@ -143,7 +143,6 @@ public final class DeliveryRuleResponse {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public DeliveryRuleResponse build() {
             return new DeliveryRuleResponse(actions, conditions, name, order);
         }

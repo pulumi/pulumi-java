@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
     /**
      * If true, DF Interaction logging is currently enabled.
      * 
-     */
+    */
     public Boolean getEnableInteractionLogging() {
         return this.enableInteractionLogging;
     }
     /**
      * If true, StackDriver logging is currently enabled.
      * 
-     */
+    */
     public Boolean getEnableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse(enableInteractionLogging, enableStackdriverLogging);
         }

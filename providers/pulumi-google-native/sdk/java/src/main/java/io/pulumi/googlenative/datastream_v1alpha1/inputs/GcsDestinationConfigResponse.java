@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.AvroFileFormatResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.JsonFileFormatResponse;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="avroFileFormat", required=true)
-    private final AvroFileFormatResponse avroFileFormat;
+      private final AvroFileFormatResponse avroFileFormat;
 
     public AvroFileFormatResponse getAvroFileFormat() {
         return this.avroFileFormat;
@@ -35,7 +35,7 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="fileRotationInterval", required=true)
-    private final String fileRotationInterval;
+      private final String fileRotationInterval;
 
     public String getFileRotationInterval() {
         return this.fileRotationInterval;
@@ -46,7 +46,7 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="fileRotationMb", required=true)
-    private final Integer fileRotationMb;
+      private final Integer fileRotationMb;
 
     public Integer getFileRotationMb() {
         return this.fileRotationMb;
@@ -57,7 +57,7 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="jsonFileFormat", required=true)
-    private final JsonFileFormatResponse jsonFileFormat;
+      private final JsonFileFormatResponse jsonFileFormat;
 
     public JsonFileFormatResponse getJsonFileFormat() {
         return this.jsonFileFormat;
@@ -68,7 +68,7 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -147,7 +147,6 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public GcsDestinationConfigResponse build() {
             return new GcsDestinationConfigResponse(avroFileFormat, fileRotationInterval, fileRotationMb, jsonFileFormat, path);
         }

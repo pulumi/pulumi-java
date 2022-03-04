@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretReplication;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretRotation;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretTopic;
@@ -67,7 +67,7 @@ public final class GetSecretResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -190,7 +190,6 @@ public final class GetSecretResult {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(createTime, expireTime, id, labels, name, project, replications, rotations, secretId, topics, ttl);
         }

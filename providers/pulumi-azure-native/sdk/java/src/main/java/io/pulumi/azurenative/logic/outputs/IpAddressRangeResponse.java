@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class IpAddressRangeResponse {
     /**
      * The IP address range.
      * 
-     */
+    */
     public Optional<String> getAddressRange() {
         return Optional.ofNullable(this.addressRange);
     }
@@ -54,7 +54,6 @@ public final class IpAddressRangeResponse {
             this.addressRange = addressRange;
             return this;
         }
-
         public IpAddressRangeResponse build() {
             return new IpAddressRangeResponse(addressRange);
         }

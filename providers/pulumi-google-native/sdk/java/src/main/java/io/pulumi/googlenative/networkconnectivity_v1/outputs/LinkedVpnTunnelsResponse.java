@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class LinkedVpnTunnelsResponse {
     /**
      * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
      * 
-     */
+    */
     public Boolean getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
     /**
      * The URIs of linked VPN tunnel resources.
      * 
-     */
+    */
     public List<String> getUris() {
         return this.uris;
     }
@@ -76,7 +76,6 @@ public final class LinkedVpnTunnelsResponse {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public LinkedVpnTunnelsResponse build() {
             return new LinkedVpnTunnelsResponse(siteToSiteDataTransfer, uris);
         }

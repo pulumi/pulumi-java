@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -134,112 +134,112 @@ public final class GetLabResult {
     /**
      * Object id of the user that created the lab.
      * 
-     */
+    */
     public String getCreatedByObjectId() {
         return this.createdByObjectId;
     }
     /**
      * Lab creator name
      * 
-     */
+    */
     public String getCreatedByUserPrincipalName() {
         return this.createdByUserPrincipalName;
     }
     /**
      * Creation date for the lab
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Invitation code that users can use to join a lab.
      * 
-     */
+    */
     public String getInvitationCode() {
         return this.invitationCode;
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
-     */
+    */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Maximum number of users allowed in the lab.
      * 
-     */
+    */
     public Optional<Integer> getMaxUsersInLab() {
         return Optional.ofNullable(this.maxUsersInLab);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public Optional<String> getUniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }
     /**
      * Maximum duration a user can use an environment for in the lab.
      * 
-     */
+    */
     public Optional<String> getUsageQuota() {
         return Optional.ofNullable(this.usageQuota);
     }
     /**
      * Lab user access mode (open to all vs. restricted to those listed on the lab).
      * 
-     */
+    */
     public Optional<String> getUserAccessMode() {
         return Optional.ofNullable(this.userAccessMode);
     }
     /**
      * Maximum value MaxUsersInLab can be set to, as specified by the service
      * 
-     */
+    */
     public Integer getUserQuota() {
         return this.userQuota;
     }
@@ -373,7 +373,6 @@ public final class GetLabResult {
             this.userQuota = Objects.requireNonNull(userQuota);
             return this;
         }
-
         public GetLabResult build() {
             return new GetLabResult(createdByObjectId, createdByUserPrincipalName, createdDate, id, invitationCode, latestOperationResult, location, maxUsersInLab, name, provisioningState, tags, type, uniqueIdentifier, usageQuota, userAccessMode, userQuota);
         }

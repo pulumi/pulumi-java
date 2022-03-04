@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class OriginEndpointTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public OriginEndpointTag build() {
             return new OriginEndpointTag(key, value);
         }

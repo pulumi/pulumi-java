@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="contentTypesToCompress")
-    private final @Nullable Input<List<String>> contentTypesToCompress;
+      private final @Nullable Input<List<String>> contentTypesToCompress;
 
     public Input<List<String>> getContentTypesToCompress() {
         return this.contentTypesToCompress == null ? Input.empty() : this.contentTypesToCompress;
@@ -36,7 +36,7 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isCompressionEnabled")
-    private final @Nullable Input<Boolean> isCompressionEnabled;
+      private final @Nullable Input<Boolean> isCompressionEnabled;
 
     public Input<Boolean> getIsCompressionEnabled() {
         return this.isCompressionEnabled == null ? Input.empty() : this.isCompressionEnabled;
@@ -95,7 +95,6 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
             this.isCompressionEnabled = Input.ofNullable(isCompressionEnabled);
             return this;
         }
-
         public CompressionSettingsArgs build() {
             return new CompressionSettingsArgs(contentTypesToCompress, isCompressionEnabled);
         }

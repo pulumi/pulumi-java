@@ -14,7 +14,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.ResourceRequirementsArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.SettingArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.VolumeReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +34,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="commands")
-    private final @Nullable Input<List<String>> commands;
+      private final @Nullable Input<List<String>> commands;
 
     public Input<List<String>> getCommands() {
         return this.commands == null ? Input.empty() : this.commands;
@@ -45,7 +45,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="diagnostics")
-    private final @Nullable Input<DiagnosticsRefArgs> diagnostics;
+      private final @Nullable Input<DiagnosticsRefArgs> diagnostics;
 
     public Input<DiagnosticsRefArgs> getDiagnostics() {
         return this.diagnostics == null ? Input.empty() : this.diagnostics;
@@ -56,7 +56,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable Input<List<EndpointPropertiesArgs>> endpoints;
+      private final @Nullable Input<List<EndpointPropertiesArgs>> endpoints;
 
     public Input<List<EndpointPropertiesArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -67,7 +67,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="entrypoint")
-    private final @Nullable Input<String> entrypoint;
+      private final @Nullable Input<String> entrypoint;
 
     public Input<String> getEntrypoint() {
         return this.entrypoint == null ? Input.empty() : this.entrypoint;
@@ -78,7 +78,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
+      private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Input<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -89,7 +89,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="image", required=true)
-    private final Input<String> image;
+      private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -100,7 +100,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="imageRegistryCredential")
-    private final @Nullable Input<ImageRegistryCredentialArgs> imageRegistryCredential;
+      private final @Nullable Input<ImageRegistryCredentialArgs> imageRegistryCredential;
 
     public Input<ImageRegistryCredentialArgs> getImageRegistryCredential() {
         return this.imageRegistryCredential == null ? Input.empty() : this.imageRegistryCredential;
@@ -111,7 +111,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<ContainerLabelArgs>> labels;
+      private final @Nullable Input<List<ContainerLabelArgs>> labels;
 
     public Input<List<ContainerLabelArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -122,7 +122,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -133,7 +133,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="reliableCollectionsRefs")
-    private final @Nullable Input<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
+      private final @Nullable Input<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
 
     public Input<List<ReliableCollectionsRefArgs>> getReliableCollectionsRefs() {
         return this.reliableCollectionsRefs == null ? Input.empty() : this.reliableCollectionsRefs;
@@ -144,7 +144,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resources", required=true)
-    private final Input<ResourceRequirementsArgs> resources;
+      private final Input<ResourceRequirementsArgs> resources;
 
     public Input<ResourceRequirementsArgs> getResources() {
         return this.resources;
@@ -155,7 +155,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<List<SettingArgs>> settings;
+      private final @Nullable Input<List<SettingArgs>> settings;
 
     public Input<List<SettingArgs>> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -166,7 +166,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumeRefs")
-    private final @Nullable Input<List<VolumeReferenceArgs>> volumeRefs;
+      private final @Nullable Input<List<VolumeReferenceArgs>> volumeRefs;
 
     public Input<List<VolumeReferenceArgs>> getVolumeRefs() {
         return this.volumeRefs == null ? Input.empty() : this.volumeRefs;
@@ -177,7 +177,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<ApplicationScopedVolumeArgs>> volumes;
+      private final @Nullable Input<List<ApplicationScopedVolumeArgs>> volumes;
 
     public Input<List<ApplicationScopedVolumeArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -416,7 +416,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
-
         public ContainerCodePackagePropertiesArgs build() {
             return new ContainerCodePackagePropertiesArgs(commands, diagnostics, endpoints, entrypoint, environmentVariables, image, imageRegistryCredential, labels, name, reliableCollectionsRefs, resources, settings, volumeRefs, volumes);
         }

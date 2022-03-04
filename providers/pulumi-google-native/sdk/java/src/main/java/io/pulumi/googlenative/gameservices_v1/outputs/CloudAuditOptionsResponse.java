@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1.outputs.AuthorizationLoggingOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class CloudAuditOptionsResponse {
     /**
      * Information used by the Cloud Audit Logging pipeline.
      * 
-     */
+    */
     public AuthorizationLoggingOptionsResponse getAuthorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
     /**
      * The log_name to populate in the Cloud Audit Record.
      * 
-     */
+    */
     public String getLogName() {
         return this.logName;
     }
@@ -75,7 +75,6 @@ public final class CloudAuditOptionsResponse {
             this.logName = Objects.requireNonNull(logName);
             return this;
         }
-
         public CloudAuditOptionsResponse build() {
             return new CloudAuditOptionsResponse(authorizationLoggingOptions, logName);
         }

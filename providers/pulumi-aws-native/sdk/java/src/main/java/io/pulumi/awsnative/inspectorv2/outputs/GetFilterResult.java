@@ -5,7 +5,7 @@ package io.pulumi.awsnative.inspectorv2.outputs;
 
 import io.pulumi.awsnative.inspectorv2.enums.FilterAction;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterCriteria;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,35 +56,35 @@ public final class GetFilterResult {
     /**
      * Findings filter ARN.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Findings filter description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Findings filter action.
      * 
-     */
+    */
     public Optional<FilterAction> getFilterAction() {
         return Optional.ofNullable(this.filterAction);
     }
     /**
      * Findings filter criteria.
      * 
-     */
+    */
     public Optional<FilterCriteria> getFilterCriteria() {
         return Optional.ofNullable(this.filterCriteria);
     }
     /**
      * Findings filter name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -141,7 +141,6 @@ public final class GetFilterResult {
             this.name = name;
             return this;
         }
-
         public GetFilterResult build() {
             return new GetFilterResult(arn, description, filterAction, filterCriteria, name);
         }

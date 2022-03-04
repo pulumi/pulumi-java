@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -58,7 +58,7 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rule", required=true)
-    private final Input<String> rule;
+      private final Input<String> rule;
 
     public Input<String> getRule() {
         return this.rule;
@@ -117,7 +117,6 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.rule = Input.of(Objects.requireNonNull(rule));
             return this;
         }
-
         public ValidationRuleArgs build() {
             return new ValidationRuleArgs(message, rule);
         }

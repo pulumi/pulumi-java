@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ClusterClusterConfigWorkerConfigAccelerator {
     /**
      * The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
      * 
-     */
+    */
     public Integer getAcceleratorCount() {
         return this.acceleratorCount;
     }
     /**
      * The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
      * 
-     */
+    */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }
@@ -75,7 +75,6 @@ public final class ClusterClusterConfigWorkerConfigAccelerator {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public ClusterClusterConfigWorkerConfigAccelerator build() {
             return new ClusterClusterConfigWorkerConfigAccelerator(acceleratorCount, acceleratorType);
         }

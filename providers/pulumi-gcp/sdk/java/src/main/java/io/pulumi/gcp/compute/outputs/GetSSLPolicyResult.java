@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -92,42 +92,42 @@ public final class GetSSLPolicyResult {
      * ciphers supported by the profile. If the `profile` is *not* `CUSTOM`, this
      * attribute will be empty.
      * 
-     */
+    */
     public List<String> getCustomFeatures() {
         return this.customFeatures;
     }
     /**
      * Description of this SSL Policy.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The set of enabled encryption ciphers as a result of the policy config
      * 
-     */
+    */
     public List<String> getEnabledFeatures() {
         return this.enabledFeatures;
     }
     /**
      * Fingerprint of this resource.
      * 
-     */
+    */
     public String getFingerprint() {
         return this.fingerprint;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The minimum supported TLS version of this policy.
      * 
-     */
+    */
     public String getMinTlsVersion() {
         return this.minTlsVersion;
     }
@@ -137,7 +137,7 @@ public final class GetSSLPolicyResult {
     /**
      * The Google-curated or custom profile used by this policy.
      * 
-     */
+    */
     public String getProfile() {
         return this.profile;
     }
@@ -147,7 +147,7 @@ public final class GetSSLPolicyResult {
     /**
      * The URI of the created resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
@@ -246,7 +246,6 @@ public final class GetSSLPolicyResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetSSLPolicyResult build() {
             return new GetSSLPolicyResult(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, id, minTlsVersion, name, profile, project, selfLink);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -96,21 +96,21 @@ public final class GetBlobFolderDataSetResult {
     /**
      * Container that has the file path.
      * 
-     */
+    */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * Unique id for identifying a data set resource
      * 
-     */
+    */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -118,56 +118,56 @@ public final class GetBlobFolderDataSetResult {
      * Kind of data set.
      * Expected value is 'BlobFolder'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Prefix for blob folder
      * 
-     */
+    */
     public String getPrefix() {
         return this.prefix;
     }
     /**
      * Resource group of storage account
      * 
-     */
+    */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Storage account name of the source data set
      * 
-     */
+    */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
     /**
      * Subscription id of storage account
      * 
-     */
+    */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -266,7 +266,6 @@ public final class GetBlobFolderDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobFolderDataSetResult build() {
             return new GetBlobFolderDataSetResult(containerName, dataSetId, id, kind, name, prefix, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

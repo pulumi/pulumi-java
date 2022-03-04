@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,14 +55,14 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
     /**
      * The clientId password associated with the provider.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The groupId to be granted cluster admin role.
      * 
-     */
+    */
     public Optional<String> getCustomerAdminGroupId() {
         return Optional.ofNullable(this.customerAdminGroupId);
     }
@@ -70,21 +70,21 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
      * The kind of the provider.
      * Expected value is 'AADIdentityProvider'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The secret password associated with the provider.
      * 
-     */
+    */
     public Optional<String> getSecret() {
         return Optional.ofNullable(this.secret);
     }
     /**
      * The tenantId associated with the provider.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -141,7 +141,6 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public OpenShiftManagedClusterAADIdentityProviderResponse build() {
             return new OpenShiftManagedClusterAADIdentityProviderResponse(clientId, customerAdminGroupId, kind, secret, tenantId);
         }

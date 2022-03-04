@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskInterface;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskMode;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskSavedState;
@@ -32,7 +32,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDelete")
-    private final @Nullable Input<Boolean> autoDelete;
+      private final @Nullable Input<Boolean> autoDelete;
 
     public Input<Boolean> getAutoDelete() {
         return this.autoDelete == null ? Input.empty() : this.autoDelete;
@@ -43,7 +43,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boot")
-    private final @Nullable Input<Boolean> boot;
+      private final @Nullable Input<Boolean> boot;
 
     public Input<Boolean> getBoot() {
         return this.boot == null ? Input.empty() : this.boot;
@@ -54,7 +54,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -65,7 +65,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKey")
-    private final @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey;
+      private final @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
     public Input<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
         return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
@@ -76,7 +76,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Input<String> diskSizeGb;
 
     public Input<String> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -87,7 +87,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceAttach")
-    private final @Nullable Input<Boolean> forceAttach;
+      private final @Nullable Input<Boolean> forceAttach;
 
     public Input<Boolean> getForceAttach() {
         return this.forceAttach == null ? Input.empty() : this.forceAttach;
@@ -98,7 +98,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guestOsFeatures")
-    private final @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
+      private final @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
 
     public Input<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
         return this.guestOsFeatures == null ? Input.empty() : this.guestOsFeatures;
@@ -109,7 +109,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initializeParams")
-    private final @Nullable Input<AttachedDiskInitializeParamsArgs> initializeParams;
+      private final @Nullable Input<AttachedDiskInitializeParamsArgs> initializeParams;
 
     public Input<AttachedDiskInitializeParamsArgs> getInitializeParams() {
         return this.initializeParams == null ? Input.empty() : this.initializeParams;
@@ -120,7 +120,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interface")
-    private final @Nullable Input<AttachedDiskInterface> $interface;
+      private final @Nullable Input<AttachedDiskInterface> $interface;
 
     public Input<AttachedDiskInterface> get$interface() {
         return this.$interface == null ? Input.empty() : this.$interface;
@@ -131,7 +131,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<AttachedDiskMode> mode;
+      private final @Nullable Input<AttachedDiskMode> mode;
 
     public Input<AttachedDiskMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -142,7 +142,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="savedState")
-    private final @Nullable Input<AttachedDiskSavedState> savedState;
+      private final @Nullable Input<AttachedDiskSavedState> savedState;
 
     public Input<AttachedDiskSavedState> getSavedState() {
         return this.savedState == null ? Input.empty() : this.savedState;
@@ -153,7 +153,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -164,7 +164,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<AttachedDiskType> type;
+      private final @Nullable Input<AttachedDiskType> type;
 
     public Input<AttachedDiskType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -388,7 +388,6 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public AttachedDiskArgs build() {
             return new AttachedDiskArgs(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, forceAttach, guestOsFeatures, initializeParams, $interface, mode, savedState, source, type);
         }

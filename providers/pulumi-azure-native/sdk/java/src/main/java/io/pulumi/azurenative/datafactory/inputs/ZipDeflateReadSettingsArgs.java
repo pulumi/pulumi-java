@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="preserveZipFileNameAsFolder")
-    private final @Nullable Input<Object> preserveZipFileNameAsFolder;
+      private final @Nullable Input<Object> preserveZipFileNameAsFolder;
 
     public Input<Object> getPreserveZipFileNameAsFolder() {
         return this.preserveZipFileNameAsFolder == null ? Input.empty() : this.preserveZipFileNameAsFolder;
@@ -36,7 +36,7 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -95,7 +95,6 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ZipDeflateReadSettingsArgs build() {
             return new ZipDeflateReadSettingsArgs(preserveZipFileNameAsFolder, type);
         }

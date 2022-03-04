@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.PermissionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -35,7 +35,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<String> objectId;
+      private final Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId;
@@ -46,7 +46,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final Input<PermissionsArgs> permissions;
+      private final Input<PermissionsArgs> permissions;
 
     public Input<PermissionsArgs> getPermissions() {
         return this.permissions;
@@ -57,7 +57,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final Input<String> tenantId;
+      private final Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId;
@@ -146,7 +146,6 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }
-
         public AccessPolicyEntryArgs build() {
             return new AccessPolicyEntryArgs(applicationId, objectId, permissions, tenantId);
         }

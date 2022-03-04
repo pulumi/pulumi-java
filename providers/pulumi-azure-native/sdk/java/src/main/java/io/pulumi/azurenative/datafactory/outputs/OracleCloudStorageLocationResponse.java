@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -56,21 +56,21 @@ public final class OracleCloudStorageLocationResponse {
     /**
      * Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Optional<Object> getBucketName() {
         return Optional.ofNullable(this.bucketName);
     }
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -78,14 +78,14 @@ public final class OracleCloudStorageLocationResponse {
      * Type of dataset storage location.
      * Expected value is 'OracleCloudStorageLocation'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -142,7 +142,6 @@ public final class OracleCloudStorageLocationResponse {
             this.version = version;
             return this;
         }
-
         public OracleCloudStorageLocationResponse build() {
             return new OracleCloudStorageLocationResponse(bucketName, fileName, folderPath, type, version);
         }

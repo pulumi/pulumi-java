@@ -6,21 +6,41 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.inputs.ListWebAppFunctionSecretsSlotArgs;
 import io.pulumi.azurenative.web.outputs.ListWebAppFunctionSecretsSlotResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppFunctionSecretsSlot {
-/**
- * Function secrets.
+    private ListWebAppFunctionSecretsSlot() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppFunctionSecretsSlotArgs.Builder a);
+    }
+    private static ListWebAppFunctionSecretsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppFunctionSecretsSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Function secrets.
  * API Version: 2020-12-01.
  * 
- *
- * Function secrets.
+     *
+     * Function secrets.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppFunctionSecretsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Function secrets.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Function secrets.
+     * 
+     */
     public static CompletableFuture<ListWebAppFunctionSecretsSlotResult> invokeAsync(ListWebAppFunctionSecretsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionSecretsSlot", TypeShape.of(ListWebAppFunctionSecretsSlotResult.class), args == null ? ListWebAppFunctionSecretsSlotArgs.Empty : args, Utilities.withVersion(options));
     }

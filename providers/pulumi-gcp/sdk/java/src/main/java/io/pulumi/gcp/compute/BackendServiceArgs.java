@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.BackendServiceBackendArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceCdnPolicyArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceCircuitBreakersArgs;
@@ -34,7 +34,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affinityCookieTtlSec")
-    private final @Nullable Input<Integer> affinityCookieTtlSec;
+      private final @Nullable Input<Integer> affinityCookieTtlSec;
 
     public Input<Integer> getAffinityCookieTtlSec() {
         return this.affinityCookieTtlSec == null ? Input.empty() : this.affinityCookieTtlSec;
@@ -46,7 +46,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backends")
-    private final @Nullable Input<List<BackendServiceBackendArgs>> backends;
+      private final @Nullable Input<List<BackendServiceBackendArgs>> backends;
 
     public Input<List<BackendServiceBackendArgs>> getBackends() {
         return this.backends == null ? Input.empty() : this.backends;
@@ -58,7 +58,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cdnPolicy")
-    private final @Nullable Input<BackendServiceCdnPolicyArgs> cdnPolicy;
+      private final @Nullable Input<BackendServiceCdnPolicyArgs> cdnPolicy;
 
     public Input<BackendServiceCdnPolicyArgs> getCdnPolicy() {
         return this.cdnPolicy == null ? Input.empty() : this.cdnPolicy;
@@ -71,7 +71,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="circuitBreakers")
-    private final @Nullable Input<BackendServiceCircuitBreakersArgs> circuitBreakers;
+      private final @Nullable Input<BackendServiceCircuitBreakersArgs> circuitBreakers;
 
     public Input<BackendServiceCircuitBreakersArgs> getCircuitBreakers() {
         return this.circuitBreakers == null ? Input.empty() : this.circuitBreakers;
@@ -83,7 +83,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionDrainingTimeoutSec")
-    private final @Nullable Input<Integer> connectionDrainingTimeoutSec;
+      private final @Nullable Input<Integer> connectionDrainingTimeoutSec;
 
     public Input<Integer> getConnectionDrainingTimeoutSec() {
         return this.connectionDrainingTimeoutSec == null ? Input.empty() : this.connectionDrainingTimeoutSec;
@@ -102,7 +102,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consistentHash")
-    private final @Nullable Input<BackendServiceConsistentHashArgs> consistentHash;
+      private final @Nullable Input<BackendServiceConsistentHashArgs> consistentHash;
 
     public Input<BackendServiceConsistentHashArgs> getConsistentHash() {
         return this.consistentHash == null ? Input.empty() : this.consistentHash;
@@ -114,7 +114,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRequestHeaders")
-    private final @Nullable Input<List<String>> customRequestHeaders;
+      private final @Nullable Input<List<String>> customRequestHeaders;
 
     public Input<List<String>> getCustomRequestHeaders() {
         return this.customRequestHeaders == null ? Input.empty() : this.customRequestHeaders;
@@ -126,7 +126,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customResponseHeaders")
-    private final @Nullable Input<List<String>> customResponseHeaders;
+      private final @Nullable Input<List<String>> customResponseHeaders;
 
     public Input<List<String>> getCustomResponseHeaders() {
         return this.customResponseHeaders == null ? Input.empty() : this.customResponseHeaders;
@@ -138,7 +138,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -149,7 +149,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableCdn")
-    private final @Nullable Input<Boolean> enableCdn;
+      private final @Nullable Input<Boolean> enableCdn;
 
     public Input<Boolean> getEnableCdn() {
         return this.enableCdn == null ? Input.empty() : this.enableCdn;
@@ -165,7 +165,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthChecks")
-    private final @Nullable Input<String> healthChecks;
+      private final @Nullable Input<String> healthChecks;
 
     public Input<String> getHealthChecks() {
         return this.healthChecks == null ? Input.empty() : this.healthChecks;
@@ -177,7 +177,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iap")
-    private final @Nullable Input<BackendServiceIapArgs> iap;
+      private final @Nullable Input<BackendServiceIapArgs> iap;
 
     public Input<BackendServiceIapArgs> getIap() {
         return this.iap == null ? Input.empty() : this.iap;
@@ -193,7 +193,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancingScheme")
-    private final @Nullable Input<String> loadBalancingScheme;
+      private final @Nullable Input<String> loadBalancingScheme;
 
     public Input<String> getLoadBalancingScheme() {
         return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
@@ -223,7 +223,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localityLbPolicy")
-    private final @Nullable Input<String> localityLbPolicy;
+      private final @Nullable Input<String> localityLbPolicy;
 
     public Input<String> getLocalityLbPolicy() {
         return this.localityLbPolicy == null ? Input.empty() : this.localityLbPolicy;
@@ -236,7 +236,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<BackendServiceLogConfigArgs> logConfig;
+      private final @Nullable Input<BackendServiceLogConfigArgs> logConfig;
 
     public Input<BackendServiceLogConfigArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -247,7 +247,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -261,7 +261,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outlierDetection")
-    private final @Nullable Input<BackendServiceOutlierDetectionArgs> outlierDetection;
+      private final @Nullable Input<BackendServiceOutlierDetectionArgs> outlierDetection;
 
     public Input<BackendServiceOutlierDetectionArgs> getOutlierDetection() {
         return this.outlierDetection == null ? Input.empty() : this.outlierDetection;
@@ -274,7 +274,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portName")
-    private final @Nullable Input<String> portName;
+      private final @Nullable Input<String> portName;
 
     public Input<String> getPortName() {
         return this.portName == null ? Input.empty() : this.portName;
@@ -286,7 +286,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -300,7 +300,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -311,7 +311,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityPolicy")
-    private final @Nullable Input<String> securityPolicy;
+      private final @Nullable Input<String> securityPolicy;
 
     public Input<String> getSecurityPolicy() {
         return this.securityPolicy == null ? Input.empty() : this.securityPolicy;
@@ -326,7 +326,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securitySettings")
-    private final @Nullable Input<BackendServiceSecuritySettingsArgs> securitySettings;
+      private final @Nullable Input<BackendServiceSecuritySettingsArgs> securitySettings;
 
     public Input<BackendServiceSecuritySettingsArgs> getSecuritySettings() {
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
@@ -339,7 +339,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinity")
-    private final @Nullable Input<String> sessionAffinity;
+      private final @Nullable Input<String> sessionAffinity;
 
     public Input<String> getSessionAffinity() {
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
@@ -351,7 +351,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutSec")
-    private final @Nullable Input<Integer> timeoutSec;
+      private final @Nullable Input<Integer> timeoutSec;
 
     public Input<Integer> getTimeoutSec() {
         return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
@@ -740,7 +740,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.timeoutSec = Input.ofNullable(timeoutSec);
             return this;
         }
-
         public BackendServiceArgs build() {
             return new BackendServiceArgs(affinityCookieTtlSec, backends, cdnPolicy, circuitBreakers, connectionDrainingTimeoutSec, consistentHash, customRequestHeaders, customResponseHeaders, description, enableCdn, healthChecks, iap, loadBalancingScheme, localityLbPolicy, logConfig, name, outlierDetection, portName, project, protocol, securityPolicy, securitySettings, sessionAffinity, timeoutSec);
         }

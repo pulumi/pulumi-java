@@ -6,21 +6,41 @@ package io.pulumi.azurenative.virtualmachineimages;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.virtualmachineimages.inputs.GetVirtualMachineImageTemplateArgs;
 import io.pulumi.azurenative.virtualmachineimages.outputs.GetVirtualMachineImageTemplateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineImageTemplate {
-/**
- * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
+    private GetVirtualMachineImageTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineImageTemplateArgs.Builder a);
+    }
+    private static GetVirtualMachineImageTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineImageTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
  * API Version: 2020-02-14.
  * 
- *
- * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
+     *
+     * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineImageTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
+     * API Version: 2020-02-14.
+     * 
+     *
+         * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineImageTemplateResult> invokeAsync(GetVirtualMachineImageTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:virtualmachineimages:getVirtualMachineImageTemplate", TypeShape.of(GetVirtualMachineImageTemplateResult.class), args == null ? GetVirtualMachineImageTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

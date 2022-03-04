@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class UptimeCheckConfigTcpCheckGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+      private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -61,7 +61,6 @@ public final class UptimeCheckConfigTcpCheckGetArgs extends io.pulumi.resources.
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
-
         public UptimeCheckConfigTcpCheckGetArgs build() {
             return new UptimeCheckConfigTcpCheckGetArgs(port);
         }

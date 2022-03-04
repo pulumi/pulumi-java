@@ -6,21 +6,41 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.authorization.inputs.GetRoleDefinitionArgs;
 import io.pulumi.azurenative.authorization.outputs.GetRoleDefinitionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoleDefinition {
-/**
- * Role definition.
+    private GetRoleDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetRoleDefinitionArgs.Builder a);
+    }
+    private static GetRoleDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRoleDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Role definition.
  * API Version: 2018-01-01-preview.
  * 
- *
- * Role definition.
+     *
+     * Role definition.
  * 
- */
+     */
+    public static CompletableFuture<GetRoleDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Role definition.
+     * API Version: 2018-01-01-preview.
+     * 
+     *
+         * Role definition.
+     * 
+     */
     public static CompletableFuture<GetRoleDefinitionResult> invokeAsync(GetRoleDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleDefinition", TypeShape.of(GetRoleDefinitionResult.class), args == null ? GetRoleDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

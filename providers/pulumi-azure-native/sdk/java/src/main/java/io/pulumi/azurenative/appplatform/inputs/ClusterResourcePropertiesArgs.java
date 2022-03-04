@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.NetworkProfileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkProfile")
-    private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Input<NetworkProfileArgs> networkProfile;
 
     public Input<NetworkProfileArgs> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -66,7 +66,6 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
-
         public ClusterResourcePropertiesArgs build() {
             return new ClusterResourcePropertiesArgs(networkProfile);
         }

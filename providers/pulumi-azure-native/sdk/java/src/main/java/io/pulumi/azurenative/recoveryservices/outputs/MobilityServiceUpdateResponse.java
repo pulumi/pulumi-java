@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class MobilityServiceUpdateResponse {
     /**
      * The OS type.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The reboot status of the update - whether it is required or not.
      * 
-     */
+    */
     public Optional<String> getRebootStatus() {
         return Optional.ofNullable(this.rebootStatus);
     }
     /**
      * The version of the latest update.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
@@ -97,7 +97,6 @@ public final class MobilityServiceUpdateResponse {
             this.version = version;
             return this;
         }
-
         public MobilityServiceUpdateResponse build() {
             return new MobilityServiceUpdateResponse(osType, rebootStatus, version);
         }

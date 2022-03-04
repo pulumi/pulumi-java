@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDatabaseName", required=true)
-    private final Input<String> sourceDatabaseName;
+      private final Input<String> sourceDatabaseName;
 
     public Input<String> getSourceDatabaseName() {
         return this.sourceDatabaseName;
@@ -65,7 +65,6 @@ public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceDatabaseName = Input.of(Objects.requireNonNull(sourceDatabaseName));
             return this;
         }
-
         public DatabaseInfoArgs build() {
             return new DatabaseInfoArgs(sourceDatabaseName);
         }

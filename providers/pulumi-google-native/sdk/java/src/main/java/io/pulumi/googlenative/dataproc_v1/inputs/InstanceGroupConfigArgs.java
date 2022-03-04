@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.enums.InstanceGroupConfigPreemptibility;
 import io.pulumi.googlenative.dataproc_v1.inputs.AcceleratorConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.DiskConfigArgs;
@@ -28,7 +28,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accelerators")
-    private final @Nullable Input<List<AcceleratorConfigArgs>> accelerators;
+      private final @Nullable Input<List<AcceleratorConfigArgs>> accelerators;
 
     public Input<List<AcceleratorConfigArgs>> getAccelerators() {
         return this.accelerators == null ? Input.empty() : this.accelerators;
@@ -39,7 +39,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="diskConfig")
-    private final @Nullable Input<DiskConfigArgs> diskConfig;
+      private final @Nullable Input<DiskConfigArgs> diskConfig;
 
     public Input<DiskConfigArgs> getDiskConfig() {
         return this.diskConfig == null ? Input.empty() : this.diskConfig;
@@ -50,7 +50,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="imageUri")
-    private final @Nullable Input<String> imageUri;
+      private final @Nullable Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri == null ? Input.empty() : this.imageUri;
@@ -61,7 +61,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="machineTypeUri")
-    private final @Nullable Input<String> machineTypeUri;
+      private final @Nullable Input<String> machineTypeUri;
 
     public Input<String> getMachineTypeUri() {
         return this.machineTypeUri == null ? Input.empty() : this.machineTypeUri;
@@ -72,7 +72,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="minCpuPlatform")
-    private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -83,7 +83,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="numInstances")
-    private final @Nullable Input<Integer> numInstances;
+      private final @Nullable Input<Integer> numInstances;
 
     public Input<Integer> getNumInstances() {
         return this.numInstances == null ? Input.empty() : this.numInstances;
@@ -94,7 +94,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="preemptibility")
-    private final @Nullable Input<InstanceGroupConfigPreemptibility> preemptibility;
+      private final @Nullable Input<InstanceGroupConfigPreemptibility> preemptibility;
 
     public Input<InstanceGroupConfigPreemptibility> getPreemptibility() {
         return this.preemptibility == null ? Input.empty() : this.preemptibility;
@@ -228,7 +228,6 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
             this.preemptibility = Input.ofNullable(preemptibility);
             return this;
         }
-
         public InstanceGroupConfigArgs build() {
             return new InstanceGroupConfigArgs(accelerators, diskConfig, imageUri, machineTypeUri, minCpuPlatform, numInstances, preemptibility);
         }

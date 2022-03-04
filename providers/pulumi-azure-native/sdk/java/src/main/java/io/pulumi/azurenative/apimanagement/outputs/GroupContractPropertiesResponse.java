@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class GroupContractPropertiesResponse {
     /**
      * true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
      * 
-     */
+    */
     public Boolean getBuiltIn() {
         return this.builtIn;
     }
     /**
      * Group description. Can contain HTML formatting tags.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Group name.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
      * 
-     */
+    */
     public Optional<String> getExternalId() {
         return Optional.ofNullable(this.externalId);
     }
     /**
      * Group type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -140,7 +140,6 @@ public final class GroupContractPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public GroupContractPropertiesResponse build() {
             return new GroupContractPropertiesResponse(builtIn, description, displayName, externalId, type);
         }

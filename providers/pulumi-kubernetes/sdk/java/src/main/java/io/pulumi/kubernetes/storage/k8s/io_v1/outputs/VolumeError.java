@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class VolumeError {
     /**
      * String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Time the error was encountered.
      * 
-     */
+    */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);
     }
@@ -76,7 +76,6 @@ public final class VolumeError {
             this.time = time;
             return this;
         }
-
         public VolumeError build() {
             return new VolumeError(message, time);
         }

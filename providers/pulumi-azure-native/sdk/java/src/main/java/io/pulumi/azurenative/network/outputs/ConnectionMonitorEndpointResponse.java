@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorEndpointFilterResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorEndpointScopeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -70,49 +70,49 @@ public final class ConnectionMonitorEndpointResponse {
     /**
      * Address of the connection monitor endpoint (IP or domain name).
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Test coverage for the endpoint.
      * 
-     */
+    */
     public Optional<String> getCoverageLevel() {
         return Optional.ofNullable(this.coverageLevel);
     }
     /**
      * Filter for sub-items within the endpoint.
      * 
-     */
+    */
     public Optional<ConnectionMonitorEndpointFilterResponse> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The name of the connection monitor endpoint.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource ID of the connection monitor endpoint.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Endpoint scope.
      * 
-     */
+    */
     public Optional<ConnectionMonitorEndpointScopeResponse> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The endpoint type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -183,7 +183,6 @@ public final class ConnectionMonitorEndpointResponse {
             this.type = type;
             return this;
         }
-
         public ConnectionMonitorEndpointResponse build() {
             return new ConnectionMonitorEndpointResponse(address, coverageLevel, filter, name, resourceId, scope, type);
         }

@@ -6,17 +6,33 @@ package io.pulumi.awsnative.athena;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.athena.inputs.GetDataCatalogArgs;
 import io.pulumi.awsnative.athena.outputs.GetDataCatalogResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataCatalog {
-/**
- * Resource schema for AWS::Athena::DataCatalog
+    private GetDataCatalog() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataCatalogArgs.Builder a);
+    }
+    private static GetDataCatalogArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataCatalogArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Athena::DataCatalog
  * 
- */
+     */
+    public static CompletableFuture<GetDataCatalogResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Athena::DataCatalog
+     * 
+     */
     public static CompletableFuture<GetDataCatalogResult> invokeAsync(GetDataCatalogArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getDataCatalog", TypeShape.of(GetDataCatalogResult.class), args == null ? GetDataCatalogArgs.Empty : args, Utilities.withVersion(options));
     }

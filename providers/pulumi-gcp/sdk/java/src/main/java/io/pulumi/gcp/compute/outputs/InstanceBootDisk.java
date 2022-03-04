@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceBootDiskInitializeParams;
 import java.lang.Boolean;
 import java.lang.String;
@@ -86,7 +86,7 @@ public final class InstanceBootDisk {
      * Whether the disk will be auto-deleted when the instance
      * is deleted. Defaults to true.
      * 
-     */
+    */
     public Optional<Boolean> getAutoDelete() {
         return Optional.ofNullable(this.autoDelete);
     }
@@ -94,7 +94,7 @@ public final class InstanceBootDisk {
      * Name with which the attached disk will be accessible
      * under `/dev/disk/by-id/google-*`
      * 
-     */
+    */
     public Optional<String> getDeviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -104,7 +104,7 @@ public final class InstanceBootDisk {
      * encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
      * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
      * 
-     */
+    */
     public Optional<String> getDiskEncryptionKeyRaw() {
         return Optional.ofNullable(this.diskEncryptionKeyRaw);
     }
@@ -116,7 +116,7 @@ public final class InstanceBootDisk {
      * alongside the new instance. Either `initialize_params` or `source` must be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<InstanceBootDiskInitializeParams> getInitializeParams() {
         return Optional.ofNullable(this.initializeParams);
     }
@@ -125,7 +125,7 @@ public final class InstanceBootDisk {
      * stored in Google Cloud KMS to encrypt this disk. Only one of `kms_key_self_link`
      * and `disk_encryption_key_raw` may be set.
      * 
-     */
+    */
     public Optional<String> getKmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
@@ -135,14 +135,14 @@ public final class InstanceBootDisk {
      * between multiple instances, detach it from any read-write instances and
      * attach it to one or more instances in read-only mode.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name or self_link of the disk to attach to this instance.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
@@ -220,7 +220,6 @@ public final class InstanceBootDisk {
             this.source = source;
             return this;
         }
-
         public InstanceBootDisk build() {
             return new InstanceBootDisk(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }

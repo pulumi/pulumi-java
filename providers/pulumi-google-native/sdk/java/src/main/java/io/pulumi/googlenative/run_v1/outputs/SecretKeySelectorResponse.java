@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.LocalObjectReferenceResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -47,28 +47,28 @@ public final class SecretKeySelectorResponse {
     /**
      * A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
      * 
-     */
+    */
     public LocalObjectReferenceResponse getLocalObjectReference() {
         return this.localObjectReference;
     }
     /**
      * The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * (Optional) Specify whether the Secret or its key must be defined
      * 
-     */
+    */
     public Boolean getOptional() {
         return this.optional;
     }
@@ -118,7 +118,6 @@ public final class SecretKeySelectorResponse {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public SecretKeySelectorResponse build() {
             return new SecretKeySelectorResponse(key, localObjectReference, name, optional);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsArgs extends io.
      * 
      */
     @InputImport(name="variants")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs>> variants;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs>> variants;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs>> getVariants() {
         return this.variants == null ? Input.empty() : this.variants;
@@ -67,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsArgs extends io.
             this.variants = Input.ofNullable(variants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1VersionVariantsArgs build() {
             return new GoogleCloudDialogflowCxV3beta1VersionVariantsArgs(variants);
         }

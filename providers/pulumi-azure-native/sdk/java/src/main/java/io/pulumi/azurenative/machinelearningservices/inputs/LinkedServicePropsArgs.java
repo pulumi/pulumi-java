@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.enums.LinkedServiceLinkType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -35,7 +35,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkType")
-    private final @Nullable Input<LinkedServiceLinkType> linkType;
+      private final @Nullable Input<LinkedServiceLinkType> linkType;
 
     public Input<LinkedServiceLinkType> getLinkType() {
         return this.linkType == null ? Input.empty() : this.linkType;
@@ -46,7 +46,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkedServiceResourceId", required=true)
-    private final Input<String> linkedServiceResourceId;
+      private final Input<String> linkedServiceResourceId;
 
     public Input<String> getLinkedServiceResourceId() {
         return this.linkedServiceResourceId;
@@ -57,7 +57,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="modifiedTime")
-    private final @Nullable Input<String> modifiedTime;
+      private final @Nullable Input<String> modifiedTime;
 
     public Input<String> getModifiedTime() {
         return this.modifiedTime == null ? Input.empty() : this.modifiedTime;
@@ -146,7 +146,6 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
             this.modifiedTime = Input.ofNullable(modifiedTime);
             return this;
         }
-
         public LinkedServicePropsArgs build() {
             return new LinkedServicePropsArgs(createdTime, linkType, linkedServiceResourceId, modifiedTime);
         }

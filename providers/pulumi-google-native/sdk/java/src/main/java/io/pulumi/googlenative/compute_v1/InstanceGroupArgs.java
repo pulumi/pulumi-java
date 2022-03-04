@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.NamedPortArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,28 +43,28 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namedPorts")
-    private final @Nullable Input<List<NamedPortArgs>> namedPorts;
+      private final @Nullable Input<List<NamedPortArgs>> namedPorts;
 
     public Input<List<NamedPortArgs>> getNamedPorts() {
         return this.namedPorts == null ? Input.empty() : this.namedPorts;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -183,7 +183,6 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceGroupArgs build() {
             return new InstanceGroupArgs(description, name, namedPorts, project, requestId, zone);
         }

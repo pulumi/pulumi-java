@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureResourceStateGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureSpecGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureStateGetArgs;
@@ -24,7 +24,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -35,7 +35,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteTime")
-    private final @Nullable Input<String> deleteTime;
+      private final @Nullable Input<String> deleteTime;
 
     public Input<String> getDeleteTime() {
         return this.deleteTime == null ? Input.empty() : this.deleteTime;
@@ -46,7 +46,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -57,7 +57,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -68,7 +68,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -90,7 +90,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceStates")
-    private final @Nullable Input<List<FeatureResourceStateGetArgs>> resourceStates;
+      private final @Nullable Input<List<FeatureResourceStateGetArgs>> resourceStates;
 
     public Input<List<FeatureResourceStateGetArgs>> getResourceStates() {
         return this.resourceStates == null ? Input.empty() : this.resourceStates;
@@ -101,7 +101,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<FeatureSpecGetArgs> spec;
+      private final @Nullable Input<FeatureSpecGetArgs> spec;
 
     public Input<FeatureSpecGetArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -112,7 +112,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="states")
-    private final @Nullable Input<List<FeatureStateGetArgs>> states;
+      private final @Nullable Input<List<FeatureStateGetArgs>> states;
 
     public Input<List<FeatureStateGetArgs>> getStates() {
         return this.states == null ? Input.empty() : this.states;
@@ -123,7 +123,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -302,7 +302,6 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public FeatureState build() {
             return new FeatureState(createTime, deleteTime, labels, location, name, project, resourceStates, spec, states, updateTime);
         }

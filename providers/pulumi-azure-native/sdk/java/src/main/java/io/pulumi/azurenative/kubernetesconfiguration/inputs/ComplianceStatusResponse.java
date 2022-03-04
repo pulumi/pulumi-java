@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="complianceState", required=true)
-    private final String complianceState;
+      private final String complianceState;
 
     public String getComplianceState() {
         return this.complianceState;
@@ -34,7 +34,7 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="lastConfigApplied")
-    private final @Nullable String lastConfigApplied;
+      private final @Nullable String lastConfigApplied;
 
     public Optional<String> getLastConfigApplied() {
         return this.lastConfigApplied == null ? Optional.empty() : Optional.ofNullable(this.lastConfigApplied);
@@ -45,7 +45,7 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -56,7 +56,7 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="messageLevel")
-    private final @Nullable String messageLevel;
+      private final @Nullable String messageLevel;
 
     public Optional<String> getMessageLevel() {
         return this.messageLevel == null ? Optional.empty() : Optional.ofNullable(this.messageLevel);
@@ -125,7 +125,6 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
             this.messageLevel = messageLevel;
             return this;
         }
-
         public ComplianceStatusResponse build() {
             return new ComplianceStatusResponse(complianceState, lastConfigApplied, message, messageLevel);
         }

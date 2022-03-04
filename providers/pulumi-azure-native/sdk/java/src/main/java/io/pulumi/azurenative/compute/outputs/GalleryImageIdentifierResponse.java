@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GalleryImageIdentifierResponse {
     /**
      * The name of the gallery image definition offer.
      * 
-     */
+    */
     public String getOffer() {
         return this.offer;
     }
     /**
      * The name of the gallery image definition publisher.
      * 
-     */
+    */
     public String getPublisher() {
         return this.publisher;
     }
     /**
      * The name of the gallery image definition SKU.
      * 
-     */
+    */
     public String getSku() {
         return this.sku;
     }
@@ -95,7 +95,6 @@ public final class GalleryImageIdentifierResponse {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public GalleryImageIdentifierResponse build() {
             return new GalleryImageIdentifierResponse(offer, publisher, sku);
         }

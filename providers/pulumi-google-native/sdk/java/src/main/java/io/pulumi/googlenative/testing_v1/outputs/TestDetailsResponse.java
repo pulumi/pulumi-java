@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class TestDetailsResponse {
     /**
      * If the TestState is ERROR, then this string will contain human-readable details about the error.
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * Human-readable, detailed descriptions of the test's progress. For example: "Provisioning a device", "Starting Test". During the course of execution new data may be appended to the end of progress_messages.
      * 
-     */
+    */
     public List<String> getProgressMessages() {
         return this.progressMessages;
     }
@@ -75,7 +75,6 @@ public final class TestDetailsResponse {
             this.progressMessages = Objects.requireNonNull(progressMessages);
             return this;
         }
-
         public TestDetailsResponse build() {
             return new TestDetailsResponse(errorMessage, progressMessages);
         }

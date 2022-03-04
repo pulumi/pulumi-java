@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNotePublicKeyGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="delegationServiceAccountEmail")
-    private final @Nullable Input<String> delegationServiceAccountEmail;
+      private final @Nullable Input<String> delegationServiceAccountEmail;
 
     public Input<String> getDelegationServiceAccountEmail() {
         return this.delegationServiceAccountEmail == null ? Input.empty() : this.delegationServiceAccountEmail;
@@ -47,7 +47,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="noteReference", required=true)
-    private final Input<String> noteReference;
+      private final Input<String> noteReference;
 
     public Input<String> getNoteReference() {
         return this.noteReference;
@@ -65,7 +65,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="publicKeys")
-    private final @Nullable Input<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys;
+      private final @Nullable Input<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys;
 
     public Input<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> getPublicKeys() {
         return this.publicKeys == null ? Input.empty() : this.publicKeys;
@@ -139,7 +139,6 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }
-
         public AttestorAttestationAuthorityNoteGetArgs build() {
             return new AttestorAttestationAuthorityNoteGetArgs(delegationServiceAccountEmail, noteReference, publicKeys);
         }

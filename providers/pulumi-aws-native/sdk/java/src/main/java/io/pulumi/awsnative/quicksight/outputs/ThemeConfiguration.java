@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.outputs.ThemeDataColorPalette;
 import io.pulumi.awsnative.quicksight.outputs.ThemeSheetStyle;
 import io.pulumi.awsnative.quicksight.outputs.ThemeTypography;
 import io.pulumi.awsnative.quicksight.outputs.ThemeUIColorPalette;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -89,7 +89,6 @@ public final class ThemeConfiguration {
             this.uIColorPalette = uIColorPalette;
             return this;
         }
-
         public ThemeConfiguration build() {
             return new ThemeConfiguration(dataColorPalette, sheet, typography, uIColorPalette);
         }

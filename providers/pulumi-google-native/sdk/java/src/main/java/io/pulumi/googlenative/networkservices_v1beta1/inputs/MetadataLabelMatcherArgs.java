@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkservices_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkservices_v1beta1.enums.MetadataLabelMatcherMetadataLabelMatchCriteria;
 import io.pulumi.googlenative.networkservices_v1beta1.inputs.MetadataLabelsArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metadataLabelMatchCriteria")
-    private final @Nullable Input<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
+      private final @Nullable Input<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
 
     public Input<MetadataLabelMatcherMetadataLabelMatchCriteria> getMetadataLabelMatchCriteria() {
         return this.metadataLabelMatchCriteria == null ? Input.empty() : this.metadataLabelMatchCriteria;
@@ -36,7 +36,7 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metadataLabels")
-    private final @Nullable Input<List<MetadataLabelsArgs>> metadataLabels;
+      private final @Nullable Input<List<MetadataLabelsArgs>> metadataLabels;
 
     public Input<List<MetadataLabelsArgs>> getMetadataLabels() {
         return this.metadataLabels == null ? Input.empty() : this.metadataLabels;
@@ -95,7 +95,6 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
             this.metadataLabels = Input.ofNullable(metadataLabels);
             return this;
         }
-
         public MetadataLabelMatcherArgs build() {
             return new MetadataLabelMatcherArgs(metadataLabelMatchCriteria, metadataLabels);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AutomationScopeResponse {
     /**
      * The resources scope description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
      * 
-     */
+    */
     public Optional<String> getScopePath() {
         return Optional.ofNullable(this.scopePath);
     }
@@ -76,7 +76,6 @@ public final class AutomationScopeResponse {
             this.scopePath = scopePath;
             return this;
         }
-
         public AutomationScopeResponse build() {
             return new AutomationScopeResponse(description, scopePath);
         }

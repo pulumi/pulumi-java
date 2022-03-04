@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayload;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,14 +20,14 @@ public final class DetectorModelLambda extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="functionArn", required=true)
-    private final String functionArn;
+      private final String functionArn;
 
     public String getFunctionArn() {
         return this.functionArn;
     }
 
     @InputImport(name="payload")
-    private final @Nullable DetectorModelPayload payload;
+      private final @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> getPayload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
@@ -76,7 +76,6 @@ public final class DetectorModelLambda extends io.pulumi.resources.InvokeArgs {
             this.payload = payload;
             return this;
         }
-
         public DetectorModelLambda build() {
             return new DetectorModelLambda(functionArn, payload);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceGitRepositoryResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ConfigurationServiceGitPropertyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="repositories")
-    private final @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;
+      private final @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;
 
     public List<ConfigurationServiceGitRepositoryResponse> getRepositories() {
         return this.repositories == null ? List.of() : this.repositories;
@@ -62,7 +62,6 @@ public final class ConfigurationServiceGitPropertyResponse extends io.pulumi.res
             this.repositories = repositories;
             return this;
         }
-
         public ConfigurationServiceGitPropertyResponse build() {
             return new ConfigurationServiceGitPropertyResponse(repositories);
         }

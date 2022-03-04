@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.auditmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AssessmentAWSServiceArgs extends io.pulumi.resources.Resource
     public static final AssessmentAWSServiceArgs Empty = new AssessmentAWSServiceArgs();
 
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -62,7 +62,6 @@ public final class AssessmentAWSServiceArgs extends io.pulumi.resources.Resource
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
-
         public AssessmentAWSServiceArgs build() {
             return new AssessmentAWSServiceArgs(serviceName);
         }

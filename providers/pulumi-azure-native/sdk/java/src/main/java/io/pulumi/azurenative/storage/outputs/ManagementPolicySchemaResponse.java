@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ManagementPolicySchemaResponse {
     /**
      * The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
      * 
-     */
+    */
     public List<ManagementPolicyRuleResponse> getRules() {
         return this.rules;
     }
@@ -53,7 +53,6 @@ public final class ManagementPolicySchemaResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public ManagementPolicySchemaResponse build() {
             return new ManagementPolicySchemaResponse(rules);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.PolicyListPolicyAllowGetArgs;
 import io.pulumi.gcp.organizations.inputs.PolicyListPolicyDenyGetArgs;
 import java.lang.Boolean;
@@ -22,14 +22,14 @@ public final class PolicyListPolicyGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable Input<PolicyListPolicyAllowGetArgs> allow;
+      private final @Nullable Input<PolicyListPolicyAllowGetArgs> allow;
 
     public Input<PolicyListPolicyAllowGetArgs> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
     }
 
     @InputImport(name="deny")
-    private final @Nullable Input<PolicyListPolicyDenyGetArgs> deny;
+      private final @Nullable Input<PolicyListPolicyDenyGetArgs> deny;
 
     public Input<PolicyListPolicyDenyGetArgs> getDeny() {
         return this.deny == null ? Input.empty() : this.deny;
@@ -41,7 +41,7 @@ public final class PolicyListPolicyGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="inheritFromParent")
-    private final @Nullable Input<Boolean> inheritFromParent;
+      private final @Nullable Input<Boolean> inheritFromParent;
 
     public Input<Boolean> getInheritFromParent() {
         return this.inheritFromParent == null ? Input.empty() : this.inheritFromParent;
@@ -52,7 +52,7 @@ public final class PolicyListPolicyGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="suggestedValue")
-    private final @Nullable Input<String> suggestedValue;
+      private final @Nullable Input<String> suggestedValue;
 
     public Input<String> getSuggestedValue() {
         return this.suggestedValue == null ? Input.empty() : this.suggestedValue;
@@ -141,7 +141,6 @@ public final class PolicyListPolicyGetArgs extends io.pulumi.resources.ResourceA
             this.suggestedValue = Input.ofNullable(suggestedValue);
             return this;
         }
-
         public PolicyListPolicyGetArgs build() {
             return new PolicyListPolicyGetArgs(allow, deny, inheritFromParent, suggestedValue);
         }

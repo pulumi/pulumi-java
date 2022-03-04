@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.myedgeorder.outputs.AvailabilityInformationResponse;
 import io.pulumi.myedgeorder.outputs.CostInformationResponse;
 import io.pulumi.myedgeorder.outputs.DescriptionResponse;
@@ -89,63 +89,63 @@ public final class ConfigurationResponse {
     /**
      * Availability information of the product system.
      * 
-     */
+    */
     public AvailabilityInformationResponse getAvailabilityInformation() {
         return this.availabilityInformation;
     }
     /**
      * Cost information for the product system.
      * 
-     */
+    */
     public CostInformationResponse getCostInformation() {
         return this.costInformation;
     }
     /**
      * Description related to the product system.
      * 
-     */
+    */
     public DescriptionResponse getDescription() {
         return this.description;
     }
     /**
      * Dimensions of the configuration
      * 
-     */
+    */
     public DimensionsResponse getDimensions() {
         return this.dimensions;
     }
     /**
      * Display Name for the product system.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * list of filters supported for a product
      * 
-     */
+    */
     public List<FilterablePropertyResponse> getFilterableProperties() {
         return this.filterableProperties;
     }
     /**
      * Hierarchy information of a product.
      * 
-     */
+    */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Image information for the product system.
      * 
-     */
+    */
     public List<ImageInformationResponse> getImageInformation() {
         return this.imageInformation;
     }
     /**
      * Specifications of the configuration
      * 
-     */
+    */
     public List<SpecificationResponse> getSpecifications() {
         return this.specifications;
     }
@@ -230,7 +230,6 @@ public final class ConfigurationResponse {
             this.specifications = Objects.requireNonNull(specifications);
             return this;
         }
-
         public ConfigurationResponse build() {
             return new ConfigurationResponse(availabilityInformation, costInformation, description, dimensions, displayName, filterableProperties, hierarchyInformation, imageInformation, specifications);
         }

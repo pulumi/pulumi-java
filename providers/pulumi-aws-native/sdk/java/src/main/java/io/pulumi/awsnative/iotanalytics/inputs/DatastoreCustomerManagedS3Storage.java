@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class DatastoreCustomerManagedS3Storage extends io.pulumi.resources
     public static final DatastoreCustomerManagedS3Storage Empty = new DatastoreCustomerManagedS3Storage();
 
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="keyPrefix")
-    private final @Nullable String keyPrefix;
+      private final @Nullable String keyPrefix;
 
     public Optional<String> getKeyPrefix() {
         return this.keyPrefix == null ? Optional.empty() : Optional.ofNullable(this.keyPrefix);
@@ -71,7 +71,6 @@ public final class DatastoreCustomerManagedS3Storage extends io.pulumi.resources
             this.keyPrefix = keyPrefix;
             return this;
         }
-
         public DatastoreCustomerManagedS3Storage build() {
             return new DatastoreCustomerManagedS3Storage(bucket, keyPrefix);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.B2BPartnerContentResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PartnerContentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="b2b")
-    private final @Nullable B2BPartnerContentResponse b2b;
+      private final @Nullable B2BPartnerContentResponse b2b;
 
     public Optional<B2BPartnerContentResponse> getB2b() {
         return this.b2b == null ? Optional.empty() : Optional.ofNullable(this.b2b);
@@ -61,7 +61,6 @@ public final class PartnerContentResponse extends io.pulumi.resources.InvokeArgs
             this.b2b = b2b;
             return this;
         }
-
         public PartnerContentResponse build() {
             return new PartnerContentResponse(b2b);
         }

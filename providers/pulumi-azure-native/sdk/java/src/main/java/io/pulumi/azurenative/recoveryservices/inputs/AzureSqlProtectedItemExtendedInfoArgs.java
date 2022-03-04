@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-    private final @Nullable Input<String> oldestRecoveryPoint;
+      private final @Nullable Input<String> oldestRecoveryPoint;
 
     public Input<String> getOldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
@@ -35,7 +35,7 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="policyState")
-    private final @Nullable Input<String> policyState;
+      private final @Nullable Input<String> policyState;
 
     public Input<String> getPolicyState() {
         return this.policyState == null ? Input.empty() : this.policyState;
@@ -46,7 +46,7 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="recoveryPointCount")
-    private final @Nullable Input<Integer> recoveryPointCount;
+      private final @Nullable Input<Integer> recoveryPointCount;
 
     public Input<Integer> getRecoveryPointCount() {
         return this.recoveryPointCount == null ? Input.empty() : this.recoveryPointCount;
@@ -120,7 +120,6 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends io.pulumi.resou
             this.recoveryPointCount = Input.ofNullable(recoveryPointCount);
             return this;
         }
-
         public AzureSqlProtectedItemExtendedInfoArgs build() {
             return new AzureSqlProtectedItemExtendedInfoArgs(oldestRecoveryPoint, policyState, recoveryPointCount);
         }

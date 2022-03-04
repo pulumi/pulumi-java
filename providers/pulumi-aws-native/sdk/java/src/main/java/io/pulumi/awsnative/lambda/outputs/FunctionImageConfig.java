@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class FunctionImageConfig {
     /**
      * Command.
      * 
-     */
+    */
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * EntryPoint.
      * 
-     */
+    */
     public List<String> getEntryPoint() {
         return this.entryPoint == null ? List.of() : this.entryPoint;
     }
     /**
      * WorkingDirectory.
      * 
-     */
+    */
     public Optional<String> getWorkingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }
@@ -98,7 +98,6 @@ public final class FunctionImageConfig {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public FunctionImageConfig build() {
             return new FunctionImageConfig(command, entryPoint, workingDirectory);
         }

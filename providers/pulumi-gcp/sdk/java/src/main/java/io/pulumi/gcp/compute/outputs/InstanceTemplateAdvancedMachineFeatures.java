@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -34,14 +34,14 @@ public final class InstanceTemplateAdvancedMachineFeatures {
     /**
      * Defines whether the instance should have nested virtualization enabled. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getEnableNestedVirtualization() {
         return Optional.ofNullable(this.enableNestedVirtualization);
     }
     /**
      * he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
      * 
-     */
+    */
     public Optional<Integer> getThreadsPerCore() {
         return Optional.ofNullable(this.threadsPerCore);
     }
@@ -77,7 +77,6 @@ public final class InstanceTemplateAdvancedMachineFeatures {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
-
         public InstanceTemplateAdvancedMachineFeatures build() {
             return new InstanceTemplateAdvancedMachineFeatures(enableNestedVirtualization, threadsPerCore);
         }

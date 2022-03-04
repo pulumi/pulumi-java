@@ -9,7 +9,7 @@ import io.pulumi.azurenative.securityinsights.enums.RepoType;
 import io.pulumi.azurenative.securityinsights.inputs.RepositoryArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentTypes", required=true)
-    private final Input<List<Either<String,ContentType>>> contentTypes;
+      private final Input<List<Either<String,ContentType>>> contentTypes;
 
     public Input<List<Either<String,ContentType>>> getContentTypes() {
         return this.contentTypes;
@@ -36,7 +36,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -47,7 +47,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-    private final @Nullable Input<String> createdBy;
+      private final @Nullable Input<String> createdBy;
 
     public Input<String> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
@@ -58,7 +58,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdByType")
-    private final @Nullable Input<Either<String,CreatedByType>> createdByType;
+      private final @Nullable Input<Either<String,CreatedByType>> createdByType;
 
     public Input<Either<String,CreatedByType>> getCreatedByType() {
         return this.createdByType == null ? Input.empty() : this.createdByType;
@@ -69,7 +69,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -80,7 +80,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -91,7 +91,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -102,7 +102,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-    private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Input<String> lastModifiedAt;
 
     public Input<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
@@ -113,7 +113,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedBy")
-    private final @Nullable Input<String> lastModifiedBy;
+      private final @Nullable Input<String> lastModifiedBy;
 
     public Input<String> getLastModifiedBy() {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
@@ -124,7 +124,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedByType")
-    private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
+      private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
 
     public Input<Either<String,CreatedByType>> getLastModifiedByType() {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
@@ -135,7 +135,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+      private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -146,7 +146,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoType", required=true)
-    private final Input<Either<String,RepoType>> repoType;
+      private final Input<Either<String,RepoType>> repoType;
 
     public Input<Either<String,RepoType>> getRepoType() {
         return this.repoType;
@@ -157,7 +157,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository", required=true)
-    private final Input<RepositoryArgs> repository;
+      private final Input<RepositoryArgs> repository;
 
     public Input<RepositoryArgs> getRepository() {
         return this.repository;
@@ -168,7 +168,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -179,7 +179,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceControlId")
-    private final @Nullable Input<String> sourceControlId;
+      private final @Nullable Input<String> sourceControlId;
 
     public Input<String> getSourceControlId() {
         return this.sourceControlId == null ? Input.empty() : this.sourceControlId;
@@ -190,7 +190,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -459,7 +459,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public SourceControlArgs build() {
             return new SourceControlArgs(contentTypes, createdAt, createdBy, createdByType, description, displayName, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, operationalInsightsResourceProvider, repoType, repository, resourceGroupName, sourceControlId, workspaceName);
         }

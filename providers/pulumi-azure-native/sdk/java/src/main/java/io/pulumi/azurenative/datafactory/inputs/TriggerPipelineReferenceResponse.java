@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.PipelineReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,Object> parameters;
+      private final @Nullable Map<String,Object> parameters;
 
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -37,7 +37,7 @@ public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pipelineReference")
-    private final @Nullable PipelineReferenceResponse pipelineReference;
+      private final @Nullable PipelineReferenceResponse pipelineReference;
 
     public Optional<PipelineReferenceResponse> getPipelineReference() {
         return this.pipelineReference == null ? Optional.empty() : Optional.ofNullable(this.pipelineReference);
@@ -86,7 +86,6 @@ public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.
             this.pipelineReference = pipelineReference;
             return this;
         }
-
         public TriggerPipelineReferenceResponse build() {
             return new TriggerPipelineReferenceResponse(parameters, pipelineReference);
         }

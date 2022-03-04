@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="isCustomerInitiatedMaintenanceAllowed")
-    private final @Nullable Boolean isCustomerInitiatedMaintenanceAllowed;
+      private final @Nullable Boolean isCustomerInitiatedMaintenanceAllowed;
 
     public Optional<Boolean> getIsCustomerInitiatedMaintenanceAllowed() {
         return this.isCustomerInitiatedMaintenanceAllowed == null ? Optional.empty() : Optional.ofNullable(this.isCustomerInitiatedMaintenanceAllowed);
@@ -35,7 +35,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="lastOperationMessage")
-    private final @Nullable String lastOperationMessage;
+      private final @Nullable String lastOperationMessage;
 
     public Optional<String> getLastOperationMessage() {
         return this.lastOperationMessage == null ? Optional.empty() : Optional.ofNullable(this.lastOperationMessage);
@@ -46,7 +46,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="lastOperationResultCode")
-    private final @Nullable String lastOperationResultCode;
+      private final @Nullable String lastOperationResultCode;
 
     public Optional<String> getLastOperationResultCode() {
         return this.lastOperationResultCode == null ? Optional.empty() : Optional.ofNullable(this.lastOperationResultCode);
@@ -57,7 +57,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="maintenanceWindowEndTime")
-    private final @Nullable String maintenanceWindowEndTime;
+      private final @Nullable String maintenanceWindowEndTime;
 
     public Optional<String> getMaintenanceWindowEndTime() {
         return this.maintenanceWindowEndTime == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowEndTime);
@@ -68,7 +68,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="maintenanceWindowStartTime")
-    private final @Nullable String maintenanceWindowStartTime;
+      private final @Nullable String maintenanceWindowStartTime;
 
     public Optional<String> getMaintenanceWindowStartTime() {
         return this.maintenanceWindowStartTime == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowStartTime);
@@ -79,7 +79,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="preMaintenanceWindowEndTime")
-    private final @Nullable String preMaintenanceWindowEndTime;
+      private final @Nullable String preMaintenanceWindowEndTime;
 
     public Optional<String> getPreMaintenanceWindowEndTime() {
         return this.preMaintenanceWindowEndTime == null ? Optional.empty() : Optional.ofNullable(this.preMaintenanceWindowEndTime);
@@ -90,7 +90,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="preMaintenanceWindowStartTime")
-    private final @Nullable String preMaintenanceWindowStartTime;
+      private final @Nullable String preMaintenanceWindowStartTime;
 
     public Optional<String> getPreMaintenanceWindowStartTime() {
         return this.preMaintenanceWindowStartTime == null ? Optional.empty() : Optional.ofNullable(this.preMaintenanceWindowStartTime);
@@ -189,7 +189,6 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
             this.preMaintenanceWindowStartTime = preMaintenanceWindowStartTime;
             return this;
         }
-
         public MaintenanceRedeployStatusResponse build() {
             return new MaintenanceRedeployStatusResponse(isCustomerInitiatedMaintenanceAllowed, lastOperationMessage, lastOperationResultCode, maintenanceWindowEndTime, maintenanceWindowStartTime, preMaintenanceWindowEndTime, preMaintenanceWindowStartTime);
         }

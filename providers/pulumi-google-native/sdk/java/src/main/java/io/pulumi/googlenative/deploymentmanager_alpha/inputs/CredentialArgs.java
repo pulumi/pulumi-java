@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.BasicAuthArgs;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.ServiceAccountArgs;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basicAuth")
-    private final @Nullable Input<BasicAuthArgs> basicAuth;
+      private final @Nullable Input<BasicAuthArgs> basicAuth;
 
     public Input<BasicAuthArgs> getBasicAuth() {
         return this.basicAuth == null ? Input.empty() : this.basicAuth;
@@ -36,7 +36,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<ServiceAccountArgs> serviceAccount;
+      private final @Nullable Input<ServiceAccountArgs> serviceAccount;
 
     public Input<ServiceAccountArgs> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -47,7 +47,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useProjectDefault")
-    private final @Nullable Input<Boolean> useProjectDefault;
+      private final @Nullable Input<Boolean> useProjectDefault;
 
     public Input<Boolean> getUseProjectDefault() {
         return this.useProjectDefault == null ? Input.empty() : this.useProjectDefault;
@@ -121,7 +121,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.useProjectDefault = Input.ofNullable(useProjectDefault);
             return this;
         }
-
         public CredentialArgs build() {
             return new CredentialArgs(basicAuth, serviceAccount, useProjectDefault);
         }

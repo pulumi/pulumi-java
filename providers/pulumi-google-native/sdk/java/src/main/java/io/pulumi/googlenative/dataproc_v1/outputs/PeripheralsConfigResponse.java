@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.SparkHistoryServerConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class PeripheralsConfigResponse {
     /**
      * Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
      * 
-     */
+    */
     public String getMetastoreService() {
         return this.metastoreService;
     }
     /**
      * Optional. The Spark History Server configuration for the workload.
      * 
-     */
+    */
     public SparkHistoryServerConfigResponse getSparkHistoryServerConfig() {
         return this.sparkHistoryServerConfig;
     }
@@ -75,7 +75,6 @@ public final class PeripheralsConfigResponse {
             this.sparkHistoryServerConfig = Objects.requireNonNull(sparkHistoryServerConfig);
             return this;
         }
-
         public PeripheralsConfigResponse build() {
             return new PeripheralsConfigResponse(metastoreService, sparkHistoryServerConfig);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class CertificateAuthorityOcspConfiguration extends io.pulumi.resou
     public static final CertificateAuthorityOcspConfiguration Empty = new CertificateAuthorityOcspConfiguration();
 
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @InputImport(name="ocspCustomCname")
-    private final @Nullable String ocspCustomCname;
+      private final @Nullable String ocspCustomCname;
 
     public Optional<String> getOcspCustomCname() {
         return this.ocspCustomCname == null ? Optional.empty() : Optional.ofNullable(this.ocspCustomCname);
@@ -76,7 +76,6 @@ public final class CertificateAuthorityOcspConfiguration extends io.pulumi.resou
             this.ocspCustomCname = ocspCustomCname;
             return this;
         }
-
         public CertificateAuthorityOcspConfiguration build() {
             return new CertificateAuthorityOcspConfiguration(enabled, ocspCustomCname);
         }

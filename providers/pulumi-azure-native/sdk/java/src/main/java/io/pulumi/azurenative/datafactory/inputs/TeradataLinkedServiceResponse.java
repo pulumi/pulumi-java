@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -42,7 +42,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable String authenticationType;
+      private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
@@ -53,7 +53,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -64,7 +64,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable Object connectionString;
+      private final @Nullable Object connectionString;
 
     public Optional<Object> getConnectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
@@ -75,7 +75,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -86,7 +86,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -97,7 +97,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -108,7 +108,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password == null ? null : this.password;
@@ -119,7 +119,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="server")
-    private final @Nullable Object server;
+      private final @Nullable Object server;
 
     public Optional<Object> getServer() {
         return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
@@ -131,7 +131,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -142,7 +142,7 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Object username;
+      private final @Nullable Object username;
 
     public Optional<Object> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
@@ -281,7 +281,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
             this.username = username;
             return this;
         }
-
         public TeradataLinkedServiceResponse build() {
             return new TeradataLinkedServiceResponse(annotations, authenticationType, connectVia, connectionString, description, encryptedCredential, parameters, password, server, type, username);
         }

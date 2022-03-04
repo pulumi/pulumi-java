@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -34,7 +34,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
      * 
      */
     @InputImport(name="rawBody", required=true)
-    private final Input<String> rawBody;
+      private final Input<String> rawBody;
 
     public Input<String> getRawBody() {
         return this.rawBody;
@@ -93,7 +93,6 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
             this.rawBody = Input.of(Objects.requireNonNull(rawBody));
             return this;
         }
-
         public ContentKeyPolicyX509CertificateTokenKeyArgs build() {
             return new ContentKeyPolicyX509CertificateTokenKeyArgs(odataType, rawBody);
         }

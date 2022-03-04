@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.BatchPoolIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BatchPoolIdentityResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -36,7 +36,7 @@ public final class BatchPoolIdentityResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
+      private final @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     public Map<String,BatchPoolIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
@@ -85,7 +85,6 @@ public final class BatchPoolIdentityResponse extends io.pulumi.resources.InvokeA
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public BatchPoolIdentityResponse build() {
             return new BatchPoolIdentityResponse(type, userAssignedIdentities);
         }

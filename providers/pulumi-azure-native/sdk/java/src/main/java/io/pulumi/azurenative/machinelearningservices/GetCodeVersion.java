@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.inputs.GetCodeVersionArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.GetCodeVersionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCodeVersion {
-/**
- * Azure Resource Manager resource envelope.
+    private GetCodeVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetCodeVersionArgs.Builder a);
+    }
+    private static GetCodeVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCodeVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Azure Resource Manager resource envelope.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Azure Resource Manager resource envelope.
+     *
+     * Azure Resource Manager resource envelope.
  * 
- */
+     */
+    public static CompletableFuture<GetCodeVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Azure Resource Manager resource envelope.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Azure Resource Manager resource envelope.
+     * 
+     */
     public static CompletableFuture<GetCodeVersionResult> invokeAsync(GetCodeVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getCodeVersion", TypeShape.of(GetCodeVersionResult.class), args == null ? GetCodeVersionArgs.Empty : args, Utilities.withVersion(options));
     }

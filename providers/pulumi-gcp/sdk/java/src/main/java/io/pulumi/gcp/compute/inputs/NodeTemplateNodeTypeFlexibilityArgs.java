@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cpus")
-    private final @Nullable Input<String> cpus;
+      private final @Nullable Input<String> cpus;
 
     public Input<String> getCpus() {
         return this.cpus == null ? Input.empty() : this.cpus;
@@ -31,7 +31,7 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="localSsd")
-    private final @Nullable Input<String> localSsd;
+      private final @Nullable Input<String> localSsd;
 
     public Input<String> getLocalSsd() {
         return this.localSsd == null ? Input.empty() : this.localSsd;
@@ -42,7 +42,7 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="memory")
-    private final @Nullable Input<String> memory;
+      private final @Nullable Input<String> memory;
 
     public Input<String> getMemory() {
         return this.memory == null ? Input.empty() : this.memory;
@@ -116,7 +116,6 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
             this.memory = Input.ofNullable(memory);
             return this;
         }
-
         public NodeTemplateNodeTypeFlexibilityArgs build() {
             return new NodeTemplateNodeTypeFlexibilityArgs(cpus, localSsd, memory);
         }

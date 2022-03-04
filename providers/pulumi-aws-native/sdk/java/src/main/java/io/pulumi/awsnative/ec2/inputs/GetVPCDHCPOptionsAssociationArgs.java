@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVPCDHCPOptionsAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dhcpOptionsId", required=true)
-    private final String dhcpOptionsId;
+      private final String dhcpOptionsId;
 
     public String getDhcpOptionsId() {
         return this.dhcpOptionsId;
@@ -28,7 +28,7 @@ public final class GetVPCDHCPOptionsAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final String vpcId;
+      private final String vpcId;
 
     public String getVpcId() {
         return this.vpcId;
@@ -77,7 +77,6 @@ public final class GetVPCDHCPOptionsAssociationArgs extends io.pulumi.resources.
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public GetVPCDHCPOptionsAssociationArgs build() {
             return new GetVPCDHCPOptionsAssociationArgs(dhcpOptionsId, vpcId);
         }

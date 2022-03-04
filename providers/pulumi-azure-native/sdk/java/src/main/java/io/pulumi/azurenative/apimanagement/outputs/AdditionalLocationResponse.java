@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.ApiManagementServiceSkuPropertiesResponse;
 import io.pulumi.azurenative.apimanagement.outputs.VirtualNetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -79,56 +79,56 @@ public final class AdditionalLocationResponse {
     /**
      * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.
      * 
-     */
+    */
     public Optional<Boolean> getDisableGateway() {
         return Optional.ofNullable(this.disableGateway);
     }
     /**
      * Gateway URL of the API Management service in the Region.
      * 
-     */
+    */
     public String getGatewayRegionalUrl() {
         return this.gatewayRegionalUrl;
     }
     /**
      * The location name of the additional region among Azure Data center regions.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Private Static Load Balanced IP addresses of the API Management service which is deployed in an Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated SKU.
      * 
-     */
+    */
     public List<String> getPrivateIPAddresses() {
         return this.privateIPAddresses;
     }
     /**
      * Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard, Premium and Isolated SKU.
      * 
-     */
+    */
     public List<String> getPublicIPAddresses() {
         return this.publicIPAddresses;
     }
     /**
      * SKU properties of the API Management service.
      * 
-     */
+    */
     public ApiManagementServiceSkuPropertiesResponse getSku() {
         return this.sku;
     }
     /**
      * Virtual network configuration for the location.
      * 
-     */
+    */
     public Optional<VirtualNetworkConfigurationResponse> getVirtualNetworkConfiguration() {
         return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
     /**
      * A list of availability zones denoting where the resource needs to come from.
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }
@@ -206,7 +206,6 @@ public final class AdditionalLocationResponse {
             this.zones = zones;
             return this;
         }
-
         public AdditionalLocationResponse build() {
             return new AdditionalLocationResponse(disableGateway, gatewayRegionalUrl, location, privateIPAddresses, publicIPAddresses, sku, virtualNetworkConfiguration, zones);
         }

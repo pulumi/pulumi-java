@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="collectionsThroughput")
-    private final @Nullable Input<Integer> collectionsThroughput;
+      private final @Nullable Input<Integer> collectionsThroughput;
 
     public Input<Integer> getCollectionsThroughput() {
         return this.collectionsThroughput == null ? Input.empty() : this.collectionsThroughput;
@@ -62,7 +62,6 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.collectionsThroughput = Input.ofNullable(collectionsThroughput);
             return this;
         }
-
         public CosmosDbSettingsArgs build() {
             return new CosmosDbSettingsArgs(collectionsThroughput);
         }

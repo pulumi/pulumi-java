@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -110,91 +110,91 @@ public final class GetDistributedAvailabilityGroupResult {
     /**
      * The distributed availability group id
      * 
-     */
+    */
     public String getDistributedAvailabilityGroupId() {
         return this.distributedAvailabilityGroupId;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The last hardened lsn
      * 
-     */
+    */
     public String getLastHardenedLsn() {
         return this.lastHardenedLsn;
     }
     /**
      * The link state
      * 
-     */
+    */
     public String getLinkState() {
         return this.linkState;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The primary availability group name
      * 
-     */
+    */
     public Optional<String> getPrimaryAvailabilityGroupName() {
         return Optional.ofNullable(this.primaryAvailabilityGroupName);
     }
     /**
      * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
      * 
-     */
+    */
     public Optional<String> getReplicationMode() {
         return Optional.ofNullable(this.replicationMode);
     }
     /**
      * The secondary availability group name
      * 
-     */
+    */
     public Optional<String> getSecondaryAvailabilityGroupName() {
         return Optional.ofNullable(this.secondaryAvailabilityGroupName);
     }
     /**
      * The source endpoint
      * 
-     */
+    */
     public Optional<String> getSourceEndpoint() {
         return Optional.ofNullable(this.sourceEndpoint);
     }
     /**
      * The source replica id
      * 
-     */
+    */
     public String getSourceReplicaId() {
         return this.sourceReplicaId;
     }
     /**
      * The name of the target database
      * 
-     */
+    */
     public Optional<String> getTargetDatabase() {
         return Optional.ofNullable(this.targetDatabase);
     }
     /**
      * The target replica id
      * 
-     */
+    */
     public String getTargetReplicaId() {
         return this.targetReplicaId;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -307,7 +307,6 @@ public final class GetDistributedAvailabilityGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDistributedAvailabilityGroupResult build() {
             return new GetDistributedAvailabilityGroupResult(distributedAvailabilityGroupId, id, lastHardenedLsn, linkState, name, primaryAvailabilityGroupName, replicationMode, secondaryAvailabilityGroupName, sourceEndpoint, sourceReplicaId, targetDatabase, targetReplicaId, type);
         }

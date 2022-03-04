@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.outputs;
 
 import io.pulumi.azurenative.netapp.outputs.VolumeBackupsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -115,91 +115,91 @@ public final class GetBackupPolicyResult {
     /**
      * Daily backups count to keep
      * 
-     */
+    */
     public Optional<Integer> getDailyBackupsToKeep() {
         return Optional.ofNullable(this.dailyBackupsToKeep);
     }
     /**
      * The property to decide policy is enabled or not
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Monthly backups count to keep
      * 
-     */
+    */
     public Optional<Integer> getMonthlyBackupsToKeep() {
         return Optional.ofNullable(this.monthlyBackupsToKeep);
     }
     /**
      * Name of backup policy
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A list of volumes assigned to this policy
      * 
-     */
+    */
     public List<VolumeBackupsResponse> getVolumeBackups() {
         return this.volumeBackups == null ? List.of() : this.volumeBackups;
     }
     /**
      * Volumes using current backup policy
      * 
-     */
+    */
     public Optional<Integer> getVolumesAssigned() {
         return Optional.ofNullable(this.volumesAssigned);
     }
     /**
      * Weekly backups count to keep
      * 
-     */
+    */
     public Optional<Integer> getWeeklyBackupsToKeep() {
         return Optional.ofNullable(this.weeklyBackupsToKeep);
     }
     /**
      * Yearly backups count to keep
      * 
-     */
+    */
     public Optional<Integer> getYearlyBackupsToKeep() {
         return Optional.ofNullable(this.yearlyBackupsToKeep);
     }
@@ -312,7 +312,6 @@ public final class GetBackupPolicyResult {
             this.yearlyBackupsToKeep = yearlyBackupsToKeep;
             return this;
         }
-
         public GetBackupPolicyResult build() {
             return new GetBackupPolicyResult(dailyBackupsToKeep, enabled, id, location, monthlyBackupsToKeep, name, provisioningState, tags, type, volumeBackups, volumesAssigned, weeklyBackupsToKeep, yearlyBackupsToKeep);
         }

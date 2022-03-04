@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class LogStorageSettingsResponse {
     /**
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getEnableReliableLogging() {
         return Optional.ofNullable(this.enableReliableLogging);
     }
     /**
      * Log storage linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getLogLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
      * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -119,7 +119,6 @@ public final class LogStorageSettingsResponse {
             this.path = path;
             return this;
         }
-
         public LogStorageSettingsResponse build() {
             return new LogStorageSettingsResponse(enableReliableLogging, linkedServiceName, logLevel, path);
         }

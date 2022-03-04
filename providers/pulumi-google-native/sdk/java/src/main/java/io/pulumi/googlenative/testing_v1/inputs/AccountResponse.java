@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.GoogleAutoResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AccountResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="googleAuto", required=true)
-    private final GoogleAutoResponse googleAuto;
+      private final GoogleAutoResponse googleAuto;
 
     public GoogleAutoResponse getGoogleAuto() {
         return this.googleAuto;
@@ -59,7 +59,6 @@ public final class AccountResponse extends io.pulumi.resources.InvokeArgs {
             this.googleAuto = Objects.requireNonNull(googleAuto);
             return this;
         }
-
         public AccountResponse build() {
             return new AccountResponse(googleAuto);
         }

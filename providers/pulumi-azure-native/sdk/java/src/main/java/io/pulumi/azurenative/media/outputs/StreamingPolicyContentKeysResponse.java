@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.DefaultKeyResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyContentKeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class StreamingPolicyContentKeysResponse {
     /**
      * Default content key for an encryption scheme
      * 
-     */
+    */
     public Optional<DefaultKeyResponse> getDefaultKey() {
         return Optional.ofNullable(this.defaultKey);
     }
     /**
      * Representing tracks needs separate content key
      * 
-     */
+    */
     public List<StreamingPolicyContentKeyResponse> getKeyToTrackMappings() {
         return this.keyToTrackMappings == null ? List.of() : this.keyToTrackMappings;
     }
@@ -78,7 +78,6 @@ public final class StreamingPolicyContentKeysResponse {
             this.keyToTrackMappings = keyToTrackMappings;
             return this;
         }
-
         public StreamingPolicyContentKeysResponse build() {
             return new StreamingPolicyContentKeysResponse(defaultKey, keyToTrackMappings);
         }

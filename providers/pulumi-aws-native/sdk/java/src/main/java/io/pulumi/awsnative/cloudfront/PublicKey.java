@@ -8,8 +8,8 @@ import io.pulumi.awsnative.cloudfront.PublicKeyArgs;
 import io.pulumi.awsnative.cloudfront.outputs.PublicKeyConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -32,6 +32,37 @@ public class PublicKey extends io.pulumi.resources.CustomResource {
         return this.publicKeyConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PublicKeyArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.cloudfront.PublicKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.cloudfront.PublicKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PublicKey(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PublicKey(String name) {
+        this(name, PublicKeyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PublicKey(String name, PublicKeyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class DetectorModelAssetPropertyVariant {
     /**
      * The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
      * 
-     */
+    */
     public Optional<String> getBooleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
     /**
      * The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
      * 
-     */
+    */
     public Optional<String> getDoubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
     /**
      * The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
      * 
-     */
+    */
     public Optional<String> getIntegerValue() {
         return Optional.ofNullable(this.integerValue);
     }
     /**
      * The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
      * 
-     */
+    */
     public Optional<String> getStringValue() {
         return Optional.ofNullable(this.stringValue);
     }
@@ -118,7 +118,6 @@ public final class DetectorModelAssetPropertyVariant {
             this.stringValue = stringValue;
             return this;
         }
-
         public DetectorModelAssetPropertyVariant build() {
             return new DetectorModelAssetPropertyVariant(booleanValue, doubleValue, integerValue, stringValue);
         }

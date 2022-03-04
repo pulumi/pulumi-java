@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotResponseSpecification;
 import io.pulumi.awsnative.lex.outputs.BotStillWaitingResponseSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,28 +49,28 @@ public final class BotWaitAndContinueSpecification {
     /**
      * The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation.
      * 
-     */
+    */
     public BotResponseSpecification getContinueResponse() {
         return this.continueResponse;
     }
     /**
      * Specifies whether the bot will wait for a user to respond.
      * 
-     */
+    */
     public Optional<Boolean> getIsActive() {
         return Optional.ofNullable(this.isActive);
     }
     /**
      * The response that Amazon Lex sends periodically to the user to indicate that the bot is still waiting for input from the user.
      * 
-     */
+    */
     public Optional<BotStillWaitingResponseSpecification> getStillWaitingResponse() {
         return Optional.ofNullable(this.stillWaitingResponse);
     }
     /**
      * The response that Amazon Lex sends to indicate that the bot is waiting for the conversation to continue.
      * 
-     */
+    */
     public BotResponseSpecification getWaitingResponse() {
         return this.waitingResponse;
     }
@@ -120,7 +120,6 @@ public final class BotWaitAndContinueSpecification {
             this.waitingResponse = Objects.requireNonNull(waitingResponse);
             return this;
         }
-
         public BotWaitAndContinueSpecification build() {
             return new BotWaitAndContinueSpecification(continueResponse, isActive, stillWaitingResponse, waitingResponse);
         }

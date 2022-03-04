@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.memorydb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ClusterTag {
     /**
      * The key for the tag. May not be null.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The tag's value. May be null.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -74,7 +74,6 @@ public final class ClusterTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ClusterTag build() {
             return new ClusterTag(key, value);
         }

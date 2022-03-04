@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -52,21 +52,21 @@ public final class AzureFileShareConfigurationResponse {
     /**
      * This is of the form 'https://{account}.file.core.windows.net/'.
      * 
-     */
+    */
     public String getAzureFileUrl() {
         return this.azureFileUrl;
     }
     /**
      * These are 'net use' options in Windows and 'mount' options in Linux.
      * 
-     */
+    */
     public Optional<String> getMountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
     /**
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
-     */
+    */
     public String getRelativeMountPath() {
         return this.relativeMountPath;
     }
@@ -123,7 +123,6 @@ public final class AzureFileShareConfigurationResponse {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
-
         public AzureFileShareConfigurationResponse build() {
             return new AzureFileShareConfigurationResponse(accountKey, accountName, azureFileUrl, mountOptions, relativeMountPath);
         }

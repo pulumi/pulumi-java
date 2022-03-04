@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class FileResponse {
     /**
      * Textual Content.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * Fingerprint (e.g. github sha) associated with the `File`.
      * 
-     */
+    */
     public String getFingerprint() {
         return this.fingerprint;
     }
     /**
      * File name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -95,7 +95,6 @@ public final class FileResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public FileResponse build() {
             return new FileResponse(content, fingerprint, name);
         }

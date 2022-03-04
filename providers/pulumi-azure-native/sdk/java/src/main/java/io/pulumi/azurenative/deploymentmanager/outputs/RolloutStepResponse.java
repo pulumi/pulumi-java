@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.outputs;
 import io.pulumi.azurenative.deploymentmanager.outputs.MessageResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.ResourceOperationResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.StepOperationInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -65,42 +65,42 @@ public final class RolloutStepResponse {
     /**
      * Supplementary informative messages during rollout.
      * 
-     */
+    */
     public List<MessageResponse> getMessages() {
         return this.messages;
     }
     /**
      * Name of the step.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Detailed information of specific action execution.
      * 
-     */
+    */
     public StepOperationInfoResponse getOperationInfo() {
         return this.operationInfo;
     }
     /**
      * Set of resource operations that were performed, if any, on an Azure resource.
      * 
-     */
+    */
     public List<ResourceOperationResponse> getResourceOperations() {
         return this.resourceOperations;
     }
     /**
      * Current state of the step.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The step group the current step is part of.
      * 
-     */
+    */
     public Optional<String> getStepGroup() {
         return Optional.ofNullable(this.stepGroup);
     }
@@ -164,7 +164,6 @@ public final class RolloutStepResponse {
             this.stepGroup = stepGroup;
             return this;
         }
-
         public RolloutStepResponse build() {
             return new RolloutStepResponse(messages, name, operationInfo, resourceOperations, status, stepGroup);
         }

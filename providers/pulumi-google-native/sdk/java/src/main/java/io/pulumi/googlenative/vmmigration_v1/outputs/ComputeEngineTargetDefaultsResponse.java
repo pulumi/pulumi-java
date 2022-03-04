@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.AppliedLicenseResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.ComputeSchedulingResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.NetworkInterfaceResponse;
@@ -142,119 +142,119 @@ public final class ComputeEngineTargetDefaultsResponse {
     /**
      * Additional licenses to assign to the VM.
      * 
-     */
+    */
     public List<String> getAdditionalLicenses() {
         return this.additionalLicenses;
     }
     /**
      * The OS license returned from the adaptation module report.
      * 
-     */
+    */
     public AppliedLicenseResponse getAppliedLicense() {
         return this.appliedLicense;
     }
     /**
      * The VM Boot Option, as set in the source vm.
      * 
-     */
+    */
     public String getBootOption() {
         return this.bootOption;
     }
     /**
      * Compute instance scheduling information (if empty default is used).
      * 
-     */
+    */
     public ComputeSchedulingResponse getComputeScheduling() {
         return this.computeScheduling;
     }
     /**
      * The disk type to use in the VM.
      * 
-     */
+    */
     public String getDiskType() {
         return this.diskType;
     }
     /**
      * A map of labels to associate with the VM.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The license type to use in OS adaptation.
      * 
-     */
+    */
     public String getLicenseType() {
         return this.licenseType;
     }
     /**
      * The machine type to create the VM with.
      * 
-     */
+    */
     public String getMachineType() {
         return this.machineType;
     }
     /**
      * The machine type series to create the VM with.
      * 
-     */
+    */
     public String getMachineTypeSeries() {
         return this.machineTypeSeries;
     }
     /**
      * The metadata key/value pairs to assign to the VM.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
     /**
      * List of NICs connected to this VM.
      * 
-     */
+    */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * A map of network tags to associate with the VM.
      * 
-     */
+    */
     public List<String> getNetworkTags() {
         return this.networkTags;
     }
     /**
      * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
      * 
-     */
+    */
     public Boolean getSecureBoot() {
         return this.secureBoot;
     }
     /**
      * The service account to associate the VM with.
      * 
-     */
+    */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * The full path of the resource of type TargetProject which represents the Compute Engine project in which to create this VM.
      * 
-     */
+    */
     public String getTargetProject() {
         return this.targetProject;
     }
     /**
      * The name of the VM to create.
      * 
-     */
+    */
     public String getVmName() {
         return this.vmName;
     }
     /**
      * The zone in which to create the VM.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }
@@ -395,7 +395,6 @@ public final class ComputeEngineTargetDefaultsResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ComputeEngineTargetDefaultsResponse build() {
             return new ComputeEngineTargetDefaultsResponse(additionalLicenses, appliedLicense, bootOption, computeScheduling, diskType, labels, licenseType, machineType, machineTypeSeries, metadata, networkInterfaces, networkTags, secureBoot, serviceAccount, targetProject, vmName, zone);
         }

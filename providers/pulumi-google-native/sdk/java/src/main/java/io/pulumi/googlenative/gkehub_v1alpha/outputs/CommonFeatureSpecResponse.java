@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.AppDevExperienceFeatureSpecResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.CloudAuditLoggingFeatureSpecResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.MultiClusterIngressFeatureSpecResponse;
@@ -40,21 +40,21 @@ public final class CommonFeatureSpecResponse {
     /**
      * Appdevexperience specific spec.
      * 
-     */
+    */
     public AppDevExperienceFeatureSpecResponse getAppdevexperience() {
         return this.appdevexperience;
     }
     /**
      * Cloud Audit Logging-specific spec.
      * 
-     */
+    */
     public CloudAuditLoggingFeatureSpecResponse getCloudauditlogging() {
         return this.cloudauditlogging;
     }
     /**
      * Multicluster Ingress-specific spec.
      * 
-     */
+    */
     public MultiClusterIngressFeatureSpecResponse getMulticlusteringress() {
         return this.multiclusteringress;
     }
@@ -97,7 +97,6 @@ public final class CommonFeatureSpecResponse {
             this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
             return this;
         }
-
         public CommonFeatureSpecResponse build() {
             return new CommonFeatureSpecResponse(appdevexperience, cloudauditlogging, multiclusteringress);
         }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storagesync;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storagesync.inputs.GetRegisteredServerArgs;
 import io.pulumi.azurenative.storagesync.outputs.GetRegisteredServerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegisteredServer {
-/**
- * Registered Server resource.
+    private GetRegisteredServer() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegisteredServerArgs.Builder a);
+    }
+    private static GetRegisteredServerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegisteredServerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Registered Server resource.
  * API Version: 2020-03-01.
  * 
- *
- * Registered Server resource.
+     *
+     * Registered Server resource.
  * 
- */
+     */
+    public static CompletableFuture<GetRegisteredServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Registered Server resource.
+     * API Version: 2020-03-01.
+     * 
+     *
+         * Registered Server resource.
+     * 
+     */
     public static CompletableFuture<GetRegisteredServerResult> invokeAsync(GetRegisteredServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getRegisteredServer", TypeShape.of(GetRegisteredServerResult.class), args == null ? GetRegisteredServerArgs.Empty : args, Utilities.withVersion(options));
     }

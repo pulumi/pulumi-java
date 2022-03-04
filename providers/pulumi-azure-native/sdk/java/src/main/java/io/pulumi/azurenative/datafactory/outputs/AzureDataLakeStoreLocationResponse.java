@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -42,14 +42,14 @@ public final class AzureDataLakeStoreLocationResponse {
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -57,7 +57,7 @@ public final class AzureDataLakeStoreLocationResponse {
      * Type of dataset storage location.
      * Expected value is 'AzureDataLakeStoreLocation'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -100,7 +100,6 @@ public final class AzureDataLakeStoreLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataLakeStoreLocationResponse build() {
             return new AzureDataLakeStoreLocationResponse(fileName, folderPath, type);
         }

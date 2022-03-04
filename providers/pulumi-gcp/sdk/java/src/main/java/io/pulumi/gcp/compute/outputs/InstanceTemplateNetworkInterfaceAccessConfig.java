@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,7 +39,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfig {
      * The IP address that will be 1:1 mapped to the instance's
      * network ip. If not given, one will be generated.
      * 
-     */
+    */
     public Optional<String> getNatIp() {
         return Optional.ofNullable(this.natIp);
     }
@@ -47,7 +47,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfig {
      * The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
-     */
+    */
     public Optional<String> getNetworkTier() {
         return Optional.ofNullable(this.networkTier);
     }
@@ -93,7 +93,6 @@ public final class InstanceTemplateNetworkInterfaceAccessConfig {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-
         public InstanceTemplateNetworkInterfaceAccessConfig build() {
             return new InstanceTemplateNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,7 +41,7 @@ public final class BasicAuthenticationResponse {
     /**
      * Gets or sets the password, return value will always be empty.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
@@ -49,14 +49,14 @@ public final class BasicAuthenticationResponse {
      * Gets or sets the HTTP authentication type.
      * Expected value is 'Basic'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Gets or sets the username.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -99,7 +99,6 @@ public final class BasicAuthenticationResponse {
             this.username = username;
             return this;
         }
-
         public BasicAuthenticationResponse build() {
             return new BasicAuthenticationResponse(password, type, username);
         }

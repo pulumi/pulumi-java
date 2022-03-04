@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appintegrations.outputs;
 
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationAssociation;
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,28 +50,28 @@ public final class GetEventIntegrationResult {
     /**
      * The associations with the event integration.
      * 
-     */
+    */
     public List<EventIntegrationAssociation> getAssociations() {
         return this.associations == null ? List.of() : this.associations;
     }
     /**
      * The event integration description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the event integration.
      * 
-     */
+    */
     public Optional<String> getEventIntegrationArn() {
         return Optional.ofNullable(this.eventIntegrationArn);
     }
     /**
      * The tags (keys and values) associated with the event integration.
      * 
-     */
+    */
     public List<EventIntegrationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -121,7 +121,6 @@ public final class GetEventIntegrationResult {
             this.tags = tags;
             return this;
         }
-
         public GetEventIntegrationResult build() {
             return new GetEventIntegrationResult(associations, description, eventIntegrationArn, tags);
         }

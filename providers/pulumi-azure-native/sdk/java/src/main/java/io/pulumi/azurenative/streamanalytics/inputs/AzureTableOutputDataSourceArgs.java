@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accountKey")
-    private final @Nullable Input<String> accountKey;
+      private final @Nullable Input<String> accountKey;
 
     public Input<String> getAccountKey() {
         return this.accountKey == null ? Input.empty() : this.accountKey;
@@ -36,7 +36,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+      private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -47,7 +47,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="batchSize")
-    private final @Nullable Input<Integer> batchSize;
+      private final @Nullable Input<Integer> batchSize;
 
     public Input<Integer> getBatchSize() {
         return this.batchSize == null ? Input.empty() : this.batchSize;
@@ -58,7 +58,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="columnsToRemove")
-    private final @Nullable Input<List<String>> columnsToRemove;
+      private final @Nullable Input<List<String>> columnsToRemove;
 
     public Input<List<String>> getColumnsToRemove() {
         return this.columnsToRemove == null ? Input.empty() : this.columnsToRemove;
@@ -69,7 +69,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="partitionKey")
-    private final @Nullable Input<String> partitionKey;
+      private final @Nullable Input<String> partitionKey;
 
     public Input<String> getPartitionKey() {
         return this.partitionKey == null ? Input.empty() : this.partitionKey;
@@ -80,7 +80,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rowKey")
-    private final @Nullable Input<String> rowKey;
+      private final @Nullable Input<String> rowKey;
 
     public Input<String> getRowKey() {
         return this.rowKey == null ? Input.empty() : this.rowKey;
@@ -91,7 +91,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Input<String> table;
+      private final @Nullable Input<String> table;
 
     public Input<String> getTable() {
         return this.table == null ? Input.empty() : this.table;
@@ -103,7 +103,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -252,7 +252,6 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureTableOutputDataSourceArgs build() {
             return new AzureTableOutputDataSourceArgs(accountKey, accountName, batchSize, columnsToRemove, partitionKey, rowKey, table, type);
         }

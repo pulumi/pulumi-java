@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedClientApplications")
-    private final @Nullable Input<List<String>> allowedClientApplications;
+      private final @Nullable Input<List<String>> allowedClientApplications;
 
     public Input<List<String>> getAllowedClientApplications() {
         return this.allowedClientApplications == null ? Input.empty() : this.allowedClientApplications;
@@ -35,7 +35,7 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedGroups")
-    private final @Nullable Input<List<String>> allowedGroups;
+      private final @Nullable Input<List<String>> allowedGroups;
 
     public Input<List<String>> getAllowedGroups() {
         return this.allowedGroups == null ? Input.empty() : this.allowedGroups;
@@ -94,7 +94,6 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedGroups = Input.ofNullable(allowedGroups);
             return this;
         }
-
         public JwtClaimChecksArgs build() {
             return new JwtClaimChecksArgs(allowedClientApplications, allowedGroups);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicySnapshotSchedulePolicyScheduleResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse;
@@ -40,21 +40,21 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
     /**
      * Retention policy applied to snapshots created by this resource policy.
      * 
-     */
+    */
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse getRetentionPolicy() {
         return this.retentionPolicy;
     }
     /**
      * A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
      * 
-     */
+    */
     public ResourcePolicySnapshotSchedulePolicyScheduleResponse getSchedule() {
         return this.schedule;
     }
     /**
      * Properties with which snapshots are created such as labels, encryption keys.
      * 
-     */
+    */
     public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse getSnapshotProperties() {
         return this.snapshotProperties;
     }
@@ -97,7 +97,6 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
             this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyResponse build() {
             return new ResourcePolicySnapshotSchedulePolicyResponse(retentionPolicy, schedule, snapshotProperties);
         }

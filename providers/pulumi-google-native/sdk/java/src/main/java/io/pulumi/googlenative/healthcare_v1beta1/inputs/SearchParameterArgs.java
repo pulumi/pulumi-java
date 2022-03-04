@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="canonicalUrl")
-    private final @Nullable Input<String> canonicalUrl;
+      private final @Nullable Input<String> canonicalUrl;
 
     public Input<String> getCanonicalUrl() {
         return this.canonicalUrl == null ? Input.empty() : this.canonicalUrl;
@@ -34,7 +34,7 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parameter")
-    private final @Nullable Input<String> parameter;
+      private final @Nullable Input<String> parameter;
 
     public Input<String> getParameter() {
         return this.parameter == null ? Input.empty() : this.parameter;
@@ -93,7 +93,6 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
             this.parameter = Input.ofNullable(parameter);
             return this;
         }
-
         public SearchParameterArgs build() {
             return new SearchParameterArgs(canonicalUrl, parameter);
         }

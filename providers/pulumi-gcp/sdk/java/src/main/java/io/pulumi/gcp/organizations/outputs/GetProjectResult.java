@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -68,7 +68,7 @@ public final class GetProjectResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -81,7 +81,7 @@ public final class GetProjectResult {
     /**
      * The numeric identifier of the project.
      * 
-     */
+    */
     public String getNumber() {
         return this.number;
     }
@@ -182,7 +182,6 @@ public final class GetProjectResult {
             this.skipDelete = Objects.requireNonNull(skipDelete);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(autoCreateNetwork, billingAccount, folderId, id, labels, name, number, orgId, projectId, skipDelete);
         }

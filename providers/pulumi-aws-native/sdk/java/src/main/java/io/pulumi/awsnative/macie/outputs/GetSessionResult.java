@@ -5,7 +5,7 @@ package io.pulumi.awsnative.macie.outputs;
 
 import io.pulumi.awsnative.macie.enums.SessionFindingPublishingFrequency;
 import io.pulumi.awsnative.macie.enums.SessionStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,28 +49,28 @@ public final class GetSessionResult {
     /**
      * AWS account ID of customer
      * 
-     */
+    */
     public Optional<String> getAwsAccountId() {
         return Optional.ofNullable(this.awsAccountId);
     }
     /**
      * A enumeration value that specifies how frequently finding updates are published.
      * 
-     */
+    */
     public Optional<SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
         return Optional.ofNullable(this.findingPublishingFrequency);
     }
     /**
      * Service role used by Macie
      * 
-     */
+    */
     public Optional<String> getServiceRole() {
         return Optional.ofNullable(this.serviceRole);
     }
     /**
      * A enumeration value that specifies the status of the Macie Session.
      * 
-     */
+    */
     public Optional<SessionStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
@@ -120,7 +120,6 @@ public final class GetSessionResult {
             this.status = status;
             return this;
         }
-
         public GetSessionResult build() {
             return new GetSessionResult(awsAccountId, findingPublishingFrequency, serviceRole, status);
         }

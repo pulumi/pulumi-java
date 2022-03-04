@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
      * 
      */
     @InputImport(name="utilizationTarget")
-    private final @Nullable Input<Double> utilizationTarget;
+      private final @Nullable Input<Double> utilizationTarget;
 
     public Input<Double> getUtilizationTarget() {
         return this.utilizationTarget == null ? Input.empty() : this.utilizationTarget;
@@ -66,7 +66,6 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
             this.utilizationTarget = Input.ofNullable(utilizationTarget);
             return this;
         }
-
         public AutoscalingPolicyLoadBalancingUtilizationArgs build() {
             return new AutoscalingPolicyLoadBalancingUtilizationArgs(utilizationTarget);
         }

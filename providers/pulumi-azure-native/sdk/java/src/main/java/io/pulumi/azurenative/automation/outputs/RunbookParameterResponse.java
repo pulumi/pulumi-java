@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -49,28 +49,28 @@ public final class RunbookParameterResponse {
     /**
      * Gets or sets the default value of parameter.
      * 
-     */
+    */
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsMandatory() {
         return Optional.ofNullable(this.isMandatory);
     }
     /**
      * Get or sets the position of the parameter.
      * 
-     */
+    */
     public Optional<Integer> getPosition() {
         return Optional.ofNullable(this.position);
     }
     /**
      * Gets or sets the type of the parameter.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -120,7 +120,6 @@ public final class RunbookParameterResponse {
             this.type = type;
             return this;
         }
-
         public RunbookParameterResponse build() {
             return new RunbookParameterResponse(defaultValue, isMandatory, position, type);
         }

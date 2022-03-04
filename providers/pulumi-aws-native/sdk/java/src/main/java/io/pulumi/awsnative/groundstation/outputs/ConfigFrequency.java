@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigFrequencyUnits;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class ConfigFrequency {
             this.value = value;
             return this;
         }
-
         public ConfigFrequency build() {
             return new ConfigFrequency(units, value);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.EnterpriseChannelNodeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class EnterpriseChannelPropertiesResponse {
     /**
      * The nodes associated with the Enterprise Channel.
      * 
-     */
+    */
     public List<EnterpriseChannelNodeResponse> getNodes() {
         return this.nodes;
     }
     /**
      * The current state of the Enterprise Channel.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
@@ -78,7 +78,6 @@ public final class EnterpriseChannelPropertiesResponse {
             this.state = state;
             return this;
         }
-
         public EnterpriseChannelPropertiesResponse build() {
             return new EnterpriseChannelPropertiesResponse(nodes, state);
         }

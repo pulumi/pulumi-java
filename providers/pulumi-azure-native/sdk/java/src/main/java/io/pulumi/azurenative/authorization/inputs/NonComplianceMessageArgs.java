@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="message", required=true)
-    private final Input<String> message;
+      private final Input<String> message;
 
     public Input<String> getMessage() {
         return this.message;
@@ -34,7 +34,7 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyDefinitionReferenceId")
-    private final @Nullable Input<String> policyDefinitionReferenceId;
+      private final @Nullable Input<String> policyDefinitionReferenceId;
 
     public Input<String> getPolicyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;
@@ -93,7 +93,6 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
             this.policyDefinitionReferenceId = Input.ofNullable(policyDefinitionReferenceId);
             return this;
         }
-
         public NonComplianceMessageArgs build() {
             return new NonComplianceMessageArgs(message, policyDefinitionReferenceId);
         }

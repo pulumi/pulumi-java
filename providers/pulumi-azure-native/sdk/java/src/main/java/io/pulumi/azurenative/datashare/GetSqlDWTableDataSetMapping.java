@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetSqlDWTableDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.GetSqlDWTableDataSetMappingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlDWTableDataSetMapping {
-/**
- * A SQL DW Table data set mapping.
+    private GetSqlDWTableDataSetMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlDWTableDataSetMappingArgs.Builder a);
+    }
+    private static GetSqlDWTableDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlDWTableDataSetMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A SQL DW Table data set mapping.
  * API Version: 2020-09-01.
  * 
- *
- * A SQL DW Table data set mapping.
+     *
+     * A SQL DW Table data set mapping.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlDWTableDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A SQL DW Table data set mapping.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A SQL DW Table data set mapping.
+     * 
+     */
     public static CompletableFuture<GetSqlDWTableDataSetMappingResult> invokeAsync(GetSqlDWTableDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getSqlDWTableDataSetMapping", TypeShape.of(GetSqlDWTableDataSetMappingResult.class), args == null ? GetSqlDWTableDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

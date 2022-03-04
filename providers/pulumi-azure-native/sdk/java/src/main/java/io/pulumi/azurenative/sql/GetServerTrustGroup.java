@@ -6,21 +6,41 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.inputs.GetServerTrustGroupArgs;
 import io.pulumi.azurenative.sql.outputs.GetServerTrustGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerTrustGroup {
-/**
- * A server trust group.
+    private GetServerTrustGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerTrustGroupArgs.Builder a);
+    }
+    private static GetServerTrustGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerTrustGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A server trust group.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A server trust group.
+     *
+     * A server trust group.
  * 
- */
+     */
+    public static CompletableFuture<GetServerTrustGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A server trust group.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A server trust group.
+     * 
+     */
     public static CompletableFuture<GetServerTrustGroupResult> invokeAsync(GetServerTrustGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerTrustGroup", TypeShape.of(GetServerTrustGroupResult.class), args == null ? GetServerTrustGroupArgs.Empty : args, Utilities.withVersion(options));
     }

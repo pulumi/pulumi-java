@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.rds.outputs;
 
 import io.pulumi.awsnative.rds.outputs.DBProxyEndpointTagFormat;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -64,42 +64,42 @@ public final class GetDBProxyEndpointResult {
     /**
      * The Amazon Resource Name (ARN) for the DB proxy endpoint.
      * 
-     */
+    */
     public Optional<String> getDBProxyEndpointArn() {
         return Optional.ofNullable(this.dBProxyEndpointArn);
     }
     /**
      * The endpoint that you can use to connect to the DB proxy. You include the endpoint value in the connection string for a database client application.
      * 
-     */
+    */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * A value that indicates whether this endpoint is the default endpoint for the associated DB proxy. Default DB proxy endpoints always have read/write capability. Other endpoints that you associate with the DB proxy can be either read/write or read-only.
      * 
-     */
+    */
     public Optional<Boolean> getIsDefault() {
         return Optional.ofNullable(this.isDefault);
     }
     /**
      * An optional set of key-value pairs to associate arbitrary data of your choosing with the DB proxy endpoint.
      * 
-     */
+    */
     public List<DBProxyEndpointTagFormat> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * VPC ID to associate with the new DB proxy endpoint.
      * 
-     */
+    */
     public Optional<String> getVpcId() {
         return Optional.ofNullable(this.vpcId);
     }
     /**
      * VPC security group IDs to associate with the new DB proxy endpoint.
      * 
-     */
+    */
     public List<String> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? List.of() : this.vpcSecurityGroupIds;
     }
@@ -163,7 +163,6 @@ public final class GetDBProxyEndpointResult {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public GetDBProxyEndpointResult build() {
             return new GetDBProxyEndpointResult(dBProxyEndpointArn, endpoint, isDefault, tags, vpcId, vpcSecurityGroupIds);
         }

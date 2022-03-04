@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final String authenticationType;
+      private final String authenticationType;
 
     public String getAuthenticationType() {
         return this.authenticationType;
@@ -34,7 +34,7 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable String connectionString;
+      private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
@@ -45,7 +45,7 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -104,7 +104,6 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public DiagnosticStoragePropertiesResponse build() {
             return new DiagnosticStoragePropertiesResponse(authenticationType, connectionString, resourceId);
         }

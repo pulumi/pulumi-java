@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ManagedDiskParametersResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualHardDiskResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -28,7 +28,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="caching")
-    private final @Nullable String caching;
+      private final @Nullable String caching;
 
     public Optional<String> getCaching() {
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
@@ -39,7 +39,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createOption", required=true)
-    private final String createOption;
+      private final String createOption;
 
     public String getCreateOption() {
         return this.createOption;
@@ -50,7 +50,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deleteOption")
-    private final @Nullable String deleteOption;
+      private final @Nullable String deleteOption;
 
     public Optional<String> getDeleteOption() {
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
@@ -61,7 +61,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="detachOption")
-    private final @Nullable String detachOption;
+      private final @Nullable String detachOption;
 
     public Optional<String> getDetachOption() {
         return this.detachOption == null ? Optional.empty() : Optional.ofNullable(this.detachOption);
@@ -72,7 +72,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskIOPSReadWrite", required=true)
-    private final Double diskIOPSReadWrite;
+      private final Double diskIOPSReadWrite;
 
     public Double getDiskIOPSReadWrite() {
         return this.diskIOPSReadWrite;
@@ -83,7 +83,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskMBpsReadWrite", required=true)
-    private final Double diskMBpsReadWrite;
+      private final Double diskMBpsReadWrite;
 
     public Double getDiskMBpsReadWrite() {
         return this.diskMBpsReadWrite;
@@ -94,7 +94,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-    private final @Nullable Integer diskSizeGB;
+      private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
@@ -105,7 +105,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable VirtualHardDiskResponse image;
+      private final @Nullable VirtualHardDiskResponse image;
 
     public Optional<VirtualHardDiskResponse> getImage() {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
@@ -116,7 +116,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lun", required=true)
-    private final Integer lun;
+      private final Integer lun;
 
     public Integer getLun() {
         return this.lun;
@@ -127,7 +127,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="managedDisk")
-    private final @Nullable ManagedDiskParametersResponse managedDisk;
+      private final @Nullable ManagedDiskParametersResponse managedDisk;
 
     public Optional<ManagedDiskParametersResponse> getManagedDisk() {
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
@@ -138,7 +138,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -149,7 +149,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="toBeDetached")
-    private final @Nullable Boolean toBeDetached;
+      private final @Nullable Boolean toBeDetached;
 
     public Optional<Boolean> getToBeDetached() {
         return this.toBeDetached == null ? Optional.empty() : Optional.ofNullable(this.toBeDetached);
@@ -160,7 +160,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vhd")
-    private final @Nullable VirtualHardDiskResponse vhd;
+      private final @Nullable VirtualHardDiskResponse vhd;
 
     public Optional<VirtualHardDiskResponse> getVhd() {
         return this.vhd == null ? Optional.empty() : Optional.ofNullable(this.vhd);
@@ -171,7 +171,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="writeAcceleratorEnabled")
-    private final @Nullable Boolean writeAcceleratorEnabled;
+      private final @Nullable Boolean writeAcceleratorEnabled;
 
     public Optional<Boolean> getWriteAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Optional.empty() : Optional.ofNullable(this.writeAcceleratorEnabled);
@@ -340,7 +340,6 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public DataDiskResponse build() {
             return new DataDiskResponse(caching, createOption, deleteOption, detachOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, image, lun, managedDisk, name, toBeDetached, vhd, writeAcceleratorEnabled);
         }

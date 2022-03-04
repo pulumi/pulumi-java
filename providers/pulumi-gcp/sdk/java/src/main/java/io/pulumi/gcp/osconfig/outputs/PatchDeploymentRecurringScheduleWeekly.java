@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class PatchDeploymentRecurringScheduleWeekly {
      * A day of the week.
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-     */
+    */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }
@@ -54,7 +54,6 @@ public final class PatchDeploymentRecurringScheduleWeekly {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public PatchDeploymentRecurringScheduleWeekly build() {
             return new PatchDeploymentRecurringScheduleWeekly(dayOfWeek);
         }

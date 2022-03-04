@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class JobStepActionResponse {
     /**
      * The source of the action to execute.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Type of action being executed by the job step.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The action value, for example the text of the T-SQL script to execute.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -97,7 +97,6 @@ public final class JobStepActionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public JobStepActionResponse build() {
             return new JobStepActionResponse(source, type, value);
         }

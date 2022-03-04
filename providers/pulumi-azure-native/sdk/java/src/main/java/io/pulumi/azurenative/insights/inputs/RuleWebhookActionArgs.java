@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -36,7 +36,7 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -47,7 +47,7 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceUri")
-    private final @Nullable Input<String> serviceUri;
+      private final @Nullable Input<String> serviceUri;
 
     public Input<String> getServiceUri() {
         return this.serviceUri == null ? Input.empty() : this.serviceUri;
@@ -121,7 +121,6 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
             this.serviceUri = Input.ofNullable(serviceUri);
             return this;
         }
-
         public RuleWebhookActionArgs build() {
             return new RuleWebhookActionArgs(odataType, properties, serviceUri);
         }

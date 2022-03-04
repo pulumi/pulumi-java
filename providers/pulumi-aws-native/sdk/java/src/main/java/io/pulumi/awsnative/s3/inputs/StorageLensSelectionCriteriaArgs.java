@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="delimiter")
-    private final @Nullable Input<String> delimiter;
+      private final @Nullable Input<String> delimiter;
 
     public Input<String> getDelimiter() {
         return this.delimiter == null ? Input.empty() : this.delimiter;
@@ -36,7 +36,7 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxDepth")
-    private final @Nullable Input<Integer> maxDepth;
+      private final @Nullable Input<Integer> maxDepth;
 
     public Input<Integer> getMaxDepth() {
         return this.maxDepth == null ? Input.empty() : this.maxDepth;
@@ -47,7 +47,7 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="minStorageBytesPercentage")
-    private final @Nullable Input<Double> minStorageBytesPercentage;
+      private final @Nullable Input<Double> minStorageBytesPercentage;
 
     public Input<Double> getMinStorageBytesPercentage() {
         return this.minStorageBytesPercentage == null ? Input.empty() : this.minStorageBytesPercentage;
@@ -121,7 +121,6 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
             this.minStorageBytesPercentage = Input.ofNullable(minStorageBytesPercentage);
             return this;
         }
-
         public StorageLensSelectionCriteriaArgs build() {
             return new StorageLensSelectionCriteriaArgs(delimiter, maxDepth, minStorageBytesPercentage);
         }

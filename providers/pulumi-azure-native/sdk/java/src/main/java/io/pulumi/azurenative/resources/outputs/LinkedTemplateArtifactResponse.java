@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class LinkedTemplateArtifactResponse {
     /**
      * A filesystem safe relative path of the artifact.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The Azure Resource Manager template.
      * 
-     */
+    */
     public Object getTemplate() {
         return this.template;
     }
@@ -75,7 +75,6 @@ public final class LinkedTemplateArtifactResponse {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public LinkedTemplateArtifactResponse build() {
             return new LinkedTemplateArtifactResponse(path, template);
         }

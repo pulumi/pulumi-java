@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HealthProbeParametersResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="probeIntervalInSeconds")
-    private final @Nullable Integer probeIntervalInSeconds;
+      private final @Nullable Integer probeIntervalInSeconds;
 
     public Optional<Integer> getProbeIntervalInSeconds() {
         return this.probeIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.probeIntervalInSeconds);
@@ -35,7 +35,7 @@ public final class HealthProbeParametersResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="probePath")
-    private final @Nullable String probePath;
+      private final @Nullable String probePath;
 
     public Optional<String> getProbePath() {
         return this.probePath == null ? Optional.empty() : Optional.ofNullable(this.probePath);
@@ -46,7 +46,7 @@ public final class HealthProbeParametersResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="probeProtocol")
-    private final @Nullable String probeProtocol;
+      private final @Nullable String probeProtocol;
 
     public Optional<String> getProbeProtocol() {
         return this.probeProtocol == null ? Optional.empty() : Optional.ofNullable(this.probeProtocol);
@@ -57,7 +57,7 @@ public final class HealthProbeParametersResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="probeRequestType")
-    private final @Nullable String probeRequestType;
+      private final @Nullable String probeRequestType;
 
     public Optional<String> getProbeRequestType() {
         return this.probeRequestType == null ? Optional.empty() : Optional.ofNullable(this.probeRequestType);
@@ -126,7 +126,6 @@ public final class HealthProbeParametersResponse extends io.pulumi.resources.Inv
             this.probeRequestType = probeRequestType;
             return this;
         }
-
         public HealthProbeParametersResponse build() {
             return new HealthProbeParametersResponse(probeIntervalInSeconds, probePath, probeProtocol, probeRequestType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -48,28 +48,28 @@ public final class FulfillmentGenericWebService {
     /**
      * The password for HTTP Basic authentication.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The HTTP request headers to send together with fulfillment requests.
      * 
-     */
+    */
     public Map<String,String> getRequestHeaders() {
         return this.requestHeaders == null ? Map.of() : this.requestHeaders;
     }
     /**
      * The fulfillment URI for receiving POST requests. It must use https protocol.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * The user name for HTTP Basic authentication.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }
@@ -119,7 +119,6 @@ public final class FulfillmentGenericWebService {
             this.username = username;
             return this;
         }
-
         public FulfillmentGenericWebService build() {
             return new FulfillmentGenericWebService(password, requestHeaders, uri, username);
         }

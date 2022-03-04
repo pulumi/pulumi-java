@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.inputs.GetBackupPolicyArgs;
 import io.pulumi.azurenative.storsimple.outputs.GetBackupPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupPolicy {
-/**
- * The backup policy.
+    private GetBackupPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupPolicyArgs.Builder a);
+    }
+    private static GetBackupPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The backup policy.
  * API Version: 2017-06-01.
  * 
- *
- * The backup policy.
+     *
+     * The backup policy.
  * 
- */
+     */
+    public static CompletableFuture<GetBackupPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The backup policy.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * The backup policy.
+     * 
+     */
     public static CompletableFuture<GetBackupPolicyResult> invokeAsync(GetBackupPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getBackupPolicy", TypeShape.of(GetBackupPolicyResult.class), args == null ? GetBackupPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

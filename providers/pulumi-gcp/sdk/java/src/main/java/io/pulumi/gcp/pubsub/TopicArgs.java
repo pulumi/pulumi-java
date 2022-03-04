@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.TopicMessageStoragePolicyArgs;
 import io.pulumi.gcp.pubsub.inputs.TopicSchemaSettingsArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -37,7 +37,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -54,7 +54,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageRetentionDuration")
-    private final @Nullable Input<String> messageRetentionDuration;
+      private final @Nullable Input<String> messageRetentionDuration;
 
     public Input<String> getMessageRetentionDuration() {
         return this.messageRetentionDuration == null ? Input.empty() : this.messageRetentionDuration;
@@ -68,7 +68,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageStoragePolicy")
-    private final @Nullable Input<TopicMessageStoragePolicyArgs> messageStoragePolicy;
+      private final @Nullable Input<TopicMessageStoragePolicyArgs> messageStoragePolicy;
 
     public Input<TopicMessageStoragePolicyArgs> getMessageStoragePolicy() {
         return this.messageStoragePolicy == null ? Input.empty() : this.messageStoragePolicy;
@@ -79,7 +79,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -91,7 +91,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -103,7 +103,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaSettings")
-    private final @Nullable Input<TopicSchemaSettingsArgs> schemaSettings;
+      private final @Nullable Input<TopicSchemaSettingsArgs> schemaSettings;
 
     public Input<TopicSchemaSettingsArgs> getSchemaSettings() {
         return this.schemaSettings == null ? Input.empty() : this.schemaSettings;
@@ -237,7 +237,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             this.schemaSettings = Input.ofNullable(schemaSettings);
             return this;
         }
-
         public TopicArgs build() {
             return new TopicArgs(kmsKeyName, labels, messageRetentionDuration, messageStoragePolicy, name, project, schemaSettings);
         }

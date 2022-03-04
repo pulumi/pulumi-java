@@ -6,21 +6,41 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.inputs.ListOnlineEndpointKeysArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.ListOnlineEndpointKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListOnlineEndpointKeys {
-/**
- * Keys for endpoint authentication.
+    private ListOnlineEndpointKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListOnlineEndpointKeysArgs.Builder a);
+    }
+    private static ListOnlineEndpointKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListOnlineEndpointKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Keys for endpoint authentication.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Keys for endpoint authentication.
+     *
+     * Keys for endpoint authentication.
  * 
- */
+     */
+    public static CompletableFuture<ListOnlineEndpointKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Keys for endpoint authentication.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Keys for endpoint authentication.
+     * 
+     */
     public static CompletableFuture<ListOnlineEndpointKeysResult> invokeAsync(ListOnlineEndpointKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listOnlineEndpointKeys", TypeShape.of(ListOnlineEndpointKeysResult.class), args == null ? ListOnlineEndpointKeysArgs.Empty : args, Utilities.withVersion(options));
     }

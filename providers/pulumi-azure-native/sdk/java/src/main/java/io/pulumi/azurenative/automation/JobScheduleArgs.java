@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.RunbookAssociationPropertyArgs;
 import io.pulumi.azurenative.automation.inputs.ScheduleAssociationPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final Input<String> automationAccountName;
+      private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -33,7 +33,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobScheduleId")
-    private final @Nullable Input<String> jobScheduleId;
+      private final @Nullable Input<String> jobScheduleId;
 
     public Input<String> getJobScheduleId() {
         return this.jobScheduleId == null ? Input.empty() : this.jobScheduleId;
@@ -44,7 +44,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -55,7 +55,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runOn")
-    private final @Nullable Input<String> runOn;
+      private final @Nullable Input<String> runOn;
 
     public Input<String> getRunOn() {
         return this.runOn == null ? Input.empty() : this.runOn;
@@ -77,7 +77,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runbook", required=true)
-    private final Input<RunbookAssociationPropertyArgs> runbook;
+      private final Input<RunbookAssociationPropertyArgs> runbook;
 
     public Input<RunbookAssociationPropertyArgs> getRunbook() {
         return this.runbook;
@@ -88,7 +88,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<ScheduleAssociationPropertyArgs> schedule;
+      private final Input<ScheduleAssociationPropertyArgs> schedule;
 
     public Input<ScheduleAssociationPropertyArgs> getSchedule() {
         return this.schedule;
@@ -222,7 +222,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public JobScheduleArgs build() {
             return new JobScheduleArgs(automationAccountName, jobScheduleId, parameters, resourceGroupName, runOn, runbook, schedule);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliDistributionCutRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="distributionFilter", required=true)
-    private final Input<String> distributionFilter;
+      private final Input<String> distributionFilter;
 
     public Input<String> getDistributionFilter() {
         return this.distributionFilter;
@@ -39,7 +39,7 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="range", required=true)
-    private final Input<SloRequestBasedSliDistributionCutRangeArgs> range;
+      private final Input<SloRequestBasedSliDistributionCutRangeArgs> range;
 
     public Input<SloRequestBasedSliDistributionCutRangeArgs> getRange() {
         return this.range;
@@ -98,7 +98,6 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
             this.range = Input.of(Objects.requireNonNull(range));
             return this;
         }
-
         public SloRequestBasedSliDistributionCutArgs build() {
             return new SloRequestBasedSliDistributionCutArgs(distributionFilter, range);
         }

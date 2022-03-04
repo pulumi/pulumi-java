@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AzureStaticWebAppsRegistrationResponse {
     /**
      * The Client ID of the app used for login.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -54,7 +54,6 @@ public final class AzureStaticWebAppsRegistrationResponse {
             this.clientId = clientId;
             return this;
         }
-
         public AzureStaticWebAppsRegistrationResponse build() {
             return new AzureStaticWebAppsRegistrationResponse(clientId);
         }

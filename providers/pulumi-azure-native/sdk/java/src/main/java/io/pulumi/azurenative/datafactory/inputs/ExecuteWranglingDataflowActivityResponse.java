@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkMappingResponse;
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="compute")
-    private final @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
+      private final @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
 
     public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> getCompute() {
         return this.compute == null ? Optional.empty() : Optional.ofNullable(this.compute);
@@ -46,7 +46,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="continueOnError")
-    private final @Nullable Object continueOnError;
+      private final @Nullable Object continueOnError;
 
     public Optional<Object> getContinueOnError() {
         return this.continueOnError == null ? Optional.empty() : Optional.ofNullable(this.continueOnError);
@@ -57,7 +57,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="dataFlow", required=true)
-    private final DataFlowReferenceResponse dataFlow;
+      private final DataFlowReferenceResponse dataFlow;
 
     public DataFlowReferenceResponse getDataFlow() {
         return this.dataFlow;
@@ -68,7 +68,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+      private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -79,7 +79,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -90,7 +90,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="integrationRuntime")
-    private final @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
+      private final @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
 
     public Optional<IntegrationRuntimeReferenceResponse> getIntegrationRuntime() {
         return this.integrationRuntime == null ? Optional.empty() : Optional.ofNullable(this.integrationRuntime);
@@ -101,7 +101,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -112,7 +112,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable ActivityPolicyResponse policy;
+      private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -123,7 +123,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="queries")
-    private final @Nullable List<PowerQuerySinkMappingResponse> queries;
+      private final @Nullable List<PowerQuerySinkMappingResponse> queries;
 
     public List<PowerQuerySinkMappingResponse> getQueries() {
         return this.queries == null ? List.of() : this.queries;
@@ -134,7 +134,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="runConcurrently")
-    private final @Nullable Object runConcurrently;
+      private final @Nullable Object runConcurrently;
 
     public Optional<Object> getRunConcurrently() {
         return this.runConcurrently == null ? Optional.empty() : Optional.ofNullable(this.runConcurrently);
@@ -145,7 +145,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="sinks")
-    private final @Nullable Map<String,PowerQuerySinkResponse> sinks;
+      private final @Nullable Map<String,PowerQuerySinkResponse> sinks;
 
     public Map<String,PowerQuerySinkResponse> getSinks() {
         return this.sinks == null ? Map.of() : this.sinks;
@@ -156,7 +156,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="staging")
-    private final @Nullable DataFlowStagingInfoResponse staging;
+      private final @Nullable DataFlowStagingInfoResponse staging;
 
     public Optional<DataFlowStagingInfoResponse> getStaging() {
         return this.staging == null ? Optional.empty() : Optional.ofNullable(this.staging);
@@ -167,7 +167,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="traceLevel")
-    private final @Nullable Object traceLevel;
+      private final @Nullable Object traceLevel;
 
     public Optional<Object> getTraceLevel() {
         return this.traceLevel == null ? Optional.empty() : Optional.ofNullable(this.traceLevel);
@@ -179,7 +179,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -190,7 +190,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+      private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -369,7 +369,6 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
             this.userProperties = userProperties;
             return this;
         }
-
         public ExecuteWranglingDataflowActivityResponse build() {
             return new ExecuteWranglingDataflowActivityResponse(compute, continueOnError, dataFlow, dependsOn, description, integrationRuntime, name, policy, queries, runConcurrently, sinks, staging, traceLevel, type, userProperties);
         }

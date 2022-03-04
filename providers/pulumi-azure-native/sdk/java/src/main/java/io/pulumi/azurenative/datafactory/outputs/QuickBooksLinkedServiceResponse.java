@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -126,84 +126,84 @@ public final class QuickBooksLinkedServiceResponse {
     /**
      * The access token for OAuth 1.0 authentication.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * The access token secret for OAuth 1.0 authentication.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getAccessTokenSecret() {
         return Optional.ofNullable(this.accessTokenSecret);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The company ID of the QuickBooks company to authorize.
      * 
-     */
+    */
     public Optional<Object> getCompanyId() {
         return Optional.ofNullable(this.companyId);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
      * 
-     */
+    */
     public Optional<Object> getConnectionProperties() {
         return Optional.ofNullable(this.connectionProperties);
     }
     /**
      * The consumer key for OAuth 1.0 authentication.
      * 
-     */
+    */
     public Optional<Object> getConsumerKey() {
         return Optional.ofNullable(this.consumerKey);
     }
     /**
      * The consumer secret for OAuth 1.0 authentication.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getConsumerSecret() {
         return Optional.ofNullable(this.consumerSecret);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
      * 
-     */
+    */
     public Optional<Object> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
@@ -211,14 +211,14 @@ public final class QuickBooksLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'QuickBooks'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
-     */
+    */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
@@ -338,7 +338,6 @@ public final class QuickBooksLinkedServiceResponse {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-
         public QuickBooksLinkedServiceResponse build() {
             return new QuickBooksLinkedServiceResponse(accessToken, accessTokenSecret, annotations, companyId, connectVia, connectionProperties, consumerKey, consumerSecret, description, encryptedCredential, endpoint, parameters, type, useEncryptedEndpoints);
         }

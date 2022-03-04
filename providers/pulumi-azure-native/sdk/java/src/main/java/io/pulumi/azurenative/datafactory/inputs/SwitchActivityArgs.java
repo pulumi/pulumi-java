@@ -45,7 +45,7 @@ import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -66,7 +66,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cases")
-    private final @Nullable Input<List<SwitchCaseArgs>> cases;
+      private final @Nullable Input<List<SwitchCaseArgs>> cases;
 
     public Input<List<SwitchCaseArgs>> getCases() {
         return this.cases == null ? Input.empty() : this.cases;
@@ -77,7 +77,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultActivities")
-    private final @Nullable Input<List<Object>> defaultActivities;
+      private final @Nullable Input<List<Object>> defaultActivities;
 
     public Input<List<Object>> getDefaultActivities() {
         return this.defaultActivities == null ? Input.empty() : this.defaultActivities;
@@ -88,7 +88,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -99,7 +99,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -110,7 +110,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -121,7 +121,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="on", required=true)
-    private final Input<ExpressionArgs> on;
+      private final Input<ExpressionArgs> on;
 
     public Input<ExpressionArgs> getOn() {
         return this.on;
@@ -133,7 +133,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -144,7 +144,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -293,7 +293,6 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public SwitchActivityArgs build() {
             return new SwitchActivityArgs(cases, defaultActivities, dependsOn, description, name, on, type, userProperties);
         }

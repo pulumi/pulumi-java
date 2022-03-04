@@ -14,7 +14,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.InMagePolicyDetailsRespons
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmPolicyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RcmAzureMigrationPolicyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VmwareCbtPolicyDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -45,14 +45,14 @@ public final class PolicyPropertiesResponse {
     /**
      * The FriendlyName.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The ReplicationChannelSetting.
      * 
-     */
+    */
     public Optional<Object> getProviderSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
@@ -88,7 +88,6 @@ public final class PolicyPropertiesResponse {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
-
         public PolicyPropertiesResponse build() {
             return new PolicyPropertiesResponse(friendlyName, providerSpecificDetails);
         }

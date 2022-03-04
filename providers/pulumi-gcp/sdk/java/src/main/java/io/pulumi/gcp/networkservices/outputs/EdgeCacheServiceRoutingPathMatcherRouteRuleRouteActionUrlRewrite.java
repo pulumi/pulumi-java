@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -50,14 +50,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
     /**
      * Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of hostRewrite.
      * 
-     */
+    */
     public Optional<String> getHostRewrite() {
         return Optional.ofNullable(this.hostRewrite);
     }
     /**
      * Prior to forwarding the request to the selected origin, the matching portion of the request's path is replaced by pathPrefixRewrite.
      * 
-     */
+    */
     public Optional<String> getPathPrefixRewrite() {
         return Optional.ofNullable(this.pathPrefixRewrite);
     }
@@ -74,7 +74,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * Only one of pathPrefixRewrite and pathTemplateRewrite may be
      * specified.
      * 
-     */
+    */
     public Optional<String> getPathTemplateRewrite() {
         return Optional.ofNullable(this.pathTemplateRewrite);
     }
@@ -117,7 +117,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
             this.pathTemplateRewrite = pathTemplateRewrite;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite(hostRewrite, pathPrefixRewrite, pathTemplateRewrite);
         }

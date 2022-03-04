@@ -6,17 +6,33 @@ package io.pulumi.awsnative.connect;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.connect.inputs.GetHoursOfOperationArgs;
 import io.pulumi.awsnative.connect.outputs.GetHoursOfOperationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHoursOfOperation {
-/**
- * Resource Type definition for AWS::Connect::HoursOfOperation
+    private GetHoursOfOperation() {}
+    public interface BuilderApplicator {
+        public void apply(GetHoursOfOperationArgs.Builder a);
+    }
+    private static GetHoursOfOperationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHoursOfOperationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Connect::HoursOfOperation
  * 
- */
+     */
+    public static CompletableFuture<GetHoursOfOperationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Connect::HoursOfOperation
+     * 
+     */
     public static CompletableFuture<GetHoursOfOperationResult> invokeAsync(GetHoursOfOperationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args == null ? GetHoursOfOperationArgs.Empty : args, Utilities.withVersion(options));
     }

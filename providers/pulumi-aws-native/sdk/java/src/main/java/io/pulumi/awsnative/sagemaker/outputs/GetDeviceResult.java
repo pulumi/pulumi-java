@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.Device;
 import io.pulumi.awsnative.sagemaker.outputs.DeviceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class GetDeviceResult {
     /**
      * The Edge Device you want to register against a device fleet
      * 
-     */
+    */
     public Optional<Device> getDevice() {
         return Optional.ofNullable(this.device);
     }
     /**
      * Associate tags with the resource
      * 
-     */
+    */
     public List<DeviceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -78,7 +78,6 @@ public final class GetDeviceResult {
             this.tags = tags;
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(device, tags);
         }

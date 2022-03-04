@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPigJobLoggingConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPigJobQueryList;
 import java.lang.Boolean;
@@ -73,49 +73,49 @@ public final class WorkflowTemplateJobPigJob {
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
      * 
-     */
+    */
     public Optional<Boolean> getContinueOnFailure() {
         return Optional.ofNullable(this.continueOnFailure);
     }
     /**
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
     /**
      * Optional. The runtime log config for job execution.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobPigJobLoggingConfig> getLoggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
     /**
      * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * The HCFS URI of the script that contains SQL queries.
      * 
-     */
+    */
     public Optional<String> getQueryFileUri() {
         return Optional.ofNullable(this.queryFileUri);
     }
     /**
      * A list of queries.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobPigJobQueryList> getQueryList() {
         return Optional.ofNullable(this.queryList);
     }
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
      * 
-     */
+    */
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables == null ? Map.of() : this.scriptVariables;
     }
@@ -186,7 +186,6 @@ public final class WorkflowTemplateJobPigJob {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public WorkflowTemplateJobPigJob build() {
             return new WorkflowTemplateJobPigJob(continueOnFailure, jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }

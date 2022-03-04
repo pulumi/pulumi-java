@@ -8,7 +8,7 @@ import io.pulumi.awsnative.appflow.outputs.FlowSourceFlowConfig;
 import io.pulumi.awsnative.appflow.outputs.FlowTag;
 import io.pulumi.awsnative.appflow.outputs.FlowTask;
 import io.pulumi.awsnative.appflow.outputs.FlowTriggerConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,49 +74,49 @@ public final class GetFlowResult {
     /**
      * Description of the flow.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of Destination connectors of the flow.
      * 
-     */
+    */
     public List<FlowDestinationFlowConfig> getDestinationFlowConfigList() {
         return this.destinationFlowConfigList == null ? List.of() : this.destinationFlowConfigList;
     }
     /**
      * ARN identifier of the flow.
      * 
-     */
+    */
     public Optional<String> getFlowArn() {
         return Optional.ofNullable(this.flowArn);
     }
     /**
      * Configurations of Source connector of the flow.
      * 
-     */
+    */
     public Optional<FlowSourceFlowConfig> getSourceFlowConfig() {
         return Optional.ofNullable(this.sourceFlowConfig);
     }
     /**
      * List of Tags.
      * 
-     */
+    */
     public List<FlowTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * List of tasks for the flow.
      * 
-     */
+    */
     public List<FlowTask> getTasks() {
         return this.tasks == null ? List.of() : this.tasks;
     }
     /**
      * Trigger settings of the flow.
      * 
-     */
+    */
     public Optional<FlowTriggerConfig> getTriggerConfig() {
         return Optional.ofNullable(this.triggerConfig);
     }
@@ -187,7 +187,6 @@ public final class GetFlowResult {
             this.triggerConfig = triggerConfig;
             return this;
         }
-
         public GetFlowResult build() {
             return new GetFlowResult(description, destinationFlowConfigList, flowArn, sourceFlowConfig, tags, tasks, triggerConfig);
         }

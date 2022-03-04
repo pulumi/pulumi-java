@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
     public static final ServiceApiMethodGetArgs Empty = new ServiceApiMethodGetArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="requestType")
-    private final @Nullable Input<String> requestType;
+      private final @Nullable Input<String> requestType;
 
     public Input<String> getRequestType() {
         return this.requestType == null ? Input.empty() : this.requestType;
     }
 
     @InputImport(name="responseType")
-    private final @Nullable Input<String> responseType;
+      private final @Nullable Input<String> responseType;
 
     public Input<String> getResponseType() {
         return this.responseType == null ? Input.empty() : this.responseType;
     }
 
     @InputImport(name="syntax")
-    private final @Nullable Input<String> syntax;
+      private final @Nullable Input<String> syntax;
 
     public Input<String> getSyntax() {
         return this.syntax == null ? Input.empty() : this.syntax;
@@ -125,7 +125,6 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
             this.syntax = Input.ofNullable(syntax);
             return this;
         }
-
         public ServiceApiMethodGetArgs build() {
             return new ServiceApiMethodGetArgs(name, requestType, responseType, syntax);
         }

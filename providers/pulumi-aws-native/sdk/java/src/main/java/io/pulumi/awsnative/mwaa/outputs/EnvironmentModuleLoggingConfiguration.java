@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mwaa.outputs;
 
 import io.pulumi.awsnative.mwaa.enums.EnvironmentLoggingLevel;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class EnvironmentModuleLoggingConfiguration {
             this.logLevel = logLevel;
             return this;
         }
-
         public EnvironmentModuleLoggingConfiguration build() {
             return new EnvironmentModuleLoggingConfiguration(cloudWatchLogGroupArn, enabled, logLevel);
         }

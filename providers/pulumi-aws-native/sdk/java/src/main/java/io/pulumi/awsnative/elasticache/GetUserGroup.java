@@ -6,17 +6,33 @@ package io.pulumi.awsnative.elasticache;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.elasticache.inputs.GetUserGroupArgs;
 import io.pulumi.awsnative.elasticache.outputs.GetUserGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserGroup {
-/**
- * Resource Type definition for AWS::ElastiCache::UserGroup
+    private GetUserGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserGroupArgs.Builder a);
+    }
+    private static GetUserGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::ElastiCache::UserGroup
  * 
- */
+     */
+    public static CompletableFuture<GetUserGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::ElastiCache::UserGroup
+     * 
+     */
     public static CompletableFuture<GetUserGroupResult> invokeAsync(GetUserGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticache:getUserGroup", TypeShape.of(GetUserGroupResult.class), args == null ? GetUserGroupArgs.Empty : args, Utilities.withVersion(options));
     }

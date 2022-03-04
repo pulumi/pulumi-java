@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetPermissionResult {
         public Builder(GetPermissionResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetPermissionResult build() {
             return new GetPermissionResult();
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.events.outputs.ConnectionApiKeyAuthParameters;
 import io.pulumi.awsnative.events.outputs.ConnectionBasicAuthParameters;
 import io.pulumi.awsnative.events.outputs.ConnectionHttpParameters;
 import io.pulumi.awsnative.events.outputs.ConnectionOAuthParameters;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -89,7 +89,6 @@ public final class AuthParametersProperties {
             this.oAuthParameters = oAuthParameters;
             return this;
         }
-
         public AuthParametersProperties build() {
             return new AuthParametersProperties(apiKeyAuthParameters, basicAuthParameters, invocationHttpParameters, oAuthParameters);
         }

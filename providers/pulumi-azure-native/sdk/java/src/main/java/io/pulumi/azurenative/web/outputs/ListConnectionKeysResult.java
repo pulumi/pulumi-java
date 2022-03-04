@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -35,14 +35,14 @@ public final class ListConnectionKeysResult {
     /**
      * Connection Key
      * 
-     */
+    */
     public Optional<String> getConnectionKey() {
         return Optional.ofNullable(this.connectionKey);
     }
     /**
      * Tokens/Claim
      * 
-     */
+    */
     public Map<String,Object> getParameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }
@@ -78,7 +78,6 @@ public final class ListConnectionKeysResult {
             this.parameterValues = parameterValues;
             return this;
         }
-
         public ListConnectionKeysResult build() {
             return new ListConnectionKeysResult(connectionKey, parameterValues);
         }

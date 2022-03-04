@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class PackagingGroupAuthorization {
     /**
      * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that is used for CDN authorization.
      * 
-     */
+    */
     public String getCdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
     /**
      * The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
      * 
-     */
+    */
     public String getSecretsRoleArn() {
         return this.secretsRoleArn;
     }
@@ -74,7 +74,6 @@ public final class PackagingGroupAuthorization {
             this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
             return this;
         }
-
         public PackagingGroupAuthorization build() {
             return new PackagingGroupAuthorization(cdnIdentifierSecret, secretsRoleArn);
         }

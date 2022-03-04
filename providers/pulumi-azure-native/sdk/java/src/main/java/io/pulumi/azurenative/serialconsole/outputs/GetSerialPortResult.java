@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.serialconsole.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class GetSerialPortResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies whether the port is enabled for a serial console connection.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -118,7 +118,6 @@ public final class GetSerialPortResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSerialPortResult build() {
             return new GetSerialPortResult(id, name, state, type);
         }

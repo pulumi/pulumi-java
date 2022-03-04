@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class AzureActiveDirectoryAppResponse {
     /**
      * Key used to authenticate to the Azure Active Directory Application
      * 
-     */
+    */
     public String getAppKey() {
         return this.appKey;
     }
     /**
      * Application ID of the Azure Active Directory Application
      * 
-     */
+    */
     public String getApplicationId() {
         return this.applicationId;
     }
     /**
      * Tenant id of the customer
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
@@ -95,7 +95,6 @@ public final class AzureActiveDirectoryAppResponse {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public AzureActiveDirectoryAppResponse build() {
             return new AzureActiveDirectoryAppResponse(appKey, applicationId, tenantId);
         }

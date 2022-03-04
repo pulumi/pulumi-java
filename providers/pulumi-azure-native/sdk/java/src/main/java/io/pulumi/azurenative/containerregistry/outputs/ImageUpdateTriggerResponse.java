@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.ImageDescriptorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class ImageUpdateTriggerResponse {
     /**
      * The unique ID of the trigger.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The list of image updates that caused the build.
      * 
-     */
+    */
     public List<ImageDescriptorResponse> getImages() {
         return this.images == null ? List.of() : this.images;
     }
     /**
      * The timestamp when the image update happened.
      * 
-     */
+    */
     public Optional<String> getTimestamp() {
         return Optional.ofNullable(this.timestamp);
     }
@@ -99,7 +99,6 @@ public final class ImageUpdateTriggerResponse {
             this.timestamp = timestamp;
             return this;
         }
-
         public ImageUpdateTriggerResponse build() {
             return new ImageUpdateTriggerResponse(id, images, timestamp);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class CidrBlockResponse {
     /**
      * cidr_block must be specified in CIDR notation.
      * 
-     */
+    */
     public String getCidrBlock() {
         return this.cidrBlock;
     }
     /**
      * display_name is an optional field for users to identify CIDR blocks.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
@@ -74,7 +74,6 @@ public final class CidrBlockResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public CidrBlockResponse build() {
             return new CidrBlockResponse(cidrBlock, displayName);
         }

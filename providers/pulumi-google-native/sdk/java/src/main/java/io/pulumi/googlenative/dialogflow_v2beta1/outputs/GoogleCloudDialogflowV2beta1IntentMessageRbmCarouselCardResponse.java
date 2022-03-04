@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse;
 import java.lang.String;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
     /**
      * The cards in the carousel. A carousel must have at least 2 cards and at most 10.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> getCardContents() {
         return this.cardContents;
     }
     /**
      * The width of the cards in the carousel.
      * 
-     */
+    */
     public String getCardWidth() {
         return this.cardWidth;
     }
@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
             this.cardWidth = Objects.requireNonNull(cardWidth);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse(cardContents, cardWidth);
         }

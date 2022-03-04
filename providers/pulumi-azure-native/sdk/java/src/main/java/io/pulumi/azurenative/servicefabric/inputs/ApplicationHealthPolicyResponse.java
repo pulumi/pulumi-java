@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ServiceTypeHealthPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationHealthPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="defaultServiceTypeHealthPolicy")
-    private final @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
+      private final @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
 
     public Optional<ServiceTypeHealthPolicyResponse> getDefaultServiceTypeHealthPolicy() {
         return this.defaultServiceTypeHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
@@ -36,7 +36,7 @@ public final class ApplicationHealthPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="serviceTypeHealthPolicies")
-    private final @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
+      private final @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
 
     public Map<String,ServiceTypeHealthPolicyResponse> getServiceTypeHealthPolicies() {
         return this.serviceTypeHealthPolicies == null ? Map.of() : this.serviceTypeHealthPolicies;
@@ -85,7 +85,6 @@ public final class ApplicationHealthPolicyResponse extends io.pulumi.resources.I
             this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
             return this;
         }
-
         public ApplicationHealthPolicyResponse build() {
             return new ApplicationHealthPolicyResponse(defaultServiceTypeHealthPolicy, serviceTypeHealthPolicies);
         }

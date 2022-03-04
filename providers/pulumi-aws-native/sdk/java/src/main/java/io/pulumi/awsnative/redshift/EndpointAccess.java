@@ -9,8 +9,8 @@ import io.pulumi.awsnative.redshift.outputs.EndpointAccessVpcSecurityGroup;
 import io.pulumi.awsnative.redshift.outputs.VpcEndpointProperties;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -177,6 +177,37 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
         return this.vpcSecurityGroups;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EndpointAccessArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.redshift.EndpointAccessArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.redshift.EndpointAccessArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public EndpointAccess(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EndpointAccess(String name) {
+        this(name, EndpointAccessArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EndpointAccess(String name, EndpointAccessArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

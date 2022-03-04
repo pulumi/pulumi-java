@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.AdvancedScheduleMonthlyOccurrenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="monthDays")
-    private final @Nullable Input<List<Integer>> monthDays;
+      private final @Nullable Input<List<Integer>> monthDays;
 
     public Input<List<Integer>> getMonthDays() {
         return this.monthDays == null ? Input.empty() : this.monthDays;
@@ -37,7 +37,7 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="monthlyOccurrences")
-    private final @Nullable Input<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
+      private final @Nullable Input<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
 
     public Input<List<AdvancedScheduleMonthlyOccurrenceArgs>> getMonthlyOccurrences() {
         return this.monthlyOccurrences == null ? Input.empty() : this.monthlyOccurrences;
@@ -48,7 +48,7 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="weekDays")
-    private final @Nullable Input<List<String>> weekDays;
+      private final @Nullable Input<List<String>> weekDays;
 
     public Input<List<String>> getWeekDays() {
         return this.weekDays == null ? Input.empty() : this.weekDays;
@@ -122,7 +122,6 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
             this.weekDays = Input.ofNullable(weekDays);
             return this;
         }
-
         public AdvancedScheduleArgs build() {
             return new AdvancedScheduleArgs(monthDays, monthlyOccurrences, weekDays);
         }

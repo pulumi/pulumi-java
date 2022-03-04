@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionFormatVersion;
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionPolicy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -41,7 +41,7 @@ public final class DataSetRowLevelPermissionDataSet {
     /**
      * <p>The Amazon Resource Name (ARN) of the permission dataset.</p>
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -51,7 +51,7 @@ public final class DataSetRowLevelPermissionDataSet {
     /**
      * <p>The namespace associated with the row-level permissions dataset.</p>
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -104,7 +104,6 @@ public final class DataSetRowLevelPermissionDataSet {
             this.permissionPolicy = Objects.requireNonNull(permissionPolicy);
             return this;
         }
-
         public DataSetRowLevelPermissionDataSet build() {
             return new DataSetRowLevelPermissionDataSet(arn, formatVersion, namespace, permissionPolicy);
         }

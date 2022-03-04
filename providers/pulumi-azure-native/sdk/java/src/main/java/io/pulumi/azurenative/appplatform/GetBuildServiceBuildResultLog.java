@@ -6,21 +6,41 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appplatform.inputs.GetBuildServiceBuildResultLogArgs;
 import io.pulumi.azurenative.appplatform.outputs.GetBuildServiceBuildResultLogResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBuildServiceBuildResultLog {
-/**
- * Build result log resource properties payload
+    private GetBuildServiceBuildResultLog() {}
+    public interface BuilderApplicator {
+        public void apply(GetBuildServiceBuildResultLogArgs.Builder a);
+    }
+    private static GetBuildServiceBuildResultLogArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBuildServiceBuildResultLogArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Build result log resource properties payload
  * API Version: 2022-01-01-preview.
  * 
- *
- * Build result log resource properties payload
+     *
+     * Build result log resource properties payload
  * 
- */
+     */
+    public static CompletableFuture<GetBuildServiceBuildResultLogResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Build result log resource properties payload
+     * API Version: 2022-01-01-preview.
+     * 
+     *
+         * Build result log resource properties payload
+     * 
+     */
     public static CompletableFuture<GetBuildServiceBuildResultLogResult> invokeAsync(GetBuildServiceBuildResultLogArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceBuildResultLog", TypeShape.of(GetBuildServiceBuildResultLogResult.class), args == null ? GetBuildServiceBuildResultLogArgs.Empty : args, Utilities.withVersion(options));
     }

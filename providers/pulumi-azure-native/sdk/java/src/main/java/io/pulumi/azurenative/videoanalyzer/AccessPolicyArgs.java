@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.enums.AccessPolicyRole;
 import io.pulumi.azurenative.videoanalyzer.inputs.JwtAuthenticationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicyName")
-    private final @Nullable Input<String> accessPolicyName;
+      private final @Nullable Input<String> accessPolicyName;
 
     public Input<String> getAccessPolicyName() {
         return this.accessPolicyName == null ? Input.empty() : this.accessPolicyName;
@@ -33,7 +33,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -44,7 +44,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<JwtAuthenticationArgs> authentication;
+      private final @Nullable Input<JwtAuthenticationArgs> authentication;
 
     public Input<JwtAuthenticationArgs> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -55,7 +55,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<Either<String,AccessPolicyRole>> role;
+      private final @Nullable Input<Either<String,AccessPolicyRole>> role;
 
     public Input<Either<String,AccessPolicyRole>> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -170,7 +170,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public AccessPolicyArgs build() {
             return new AccessPolicyArgs(accessPolicyName, accountName, authentication, resourceGroupName, role);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class DataSetIngestionWaitPolicy {
      * <p>The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
      *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.</p>
      * 
-     */
+    */
     public Optional<Double> getIngestionWaitTimeInHours() {
         return Optional.ofNullable(this.ingestionWaitTimeInHours);
     }
@@ -45,7 +45,7 @@ public final class DataSetIngestionWaitPolicy {
      * <p>Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
      *   Applicable only when DataSetImportMode mode is set to SPICE.</p>
      * 
-     */
+    */
     public Optional<Boolean> getWaitForSpiceIngestion() {
         return Optional.ofNullable(this.waitForSpiceIngestion);
     }
@@ -81,7 +81,6 @@ public final class DataSetIngestionWaitPolicy {
             this.waitForSpiceIngestion = waitForSpiceIngestion;
             return this;
         }
-
         public DataSetIngestionWaitPolicy build() {
             return new DataSetIngestionWaitPolicy(ingestionWaitTimeInHours, waitForSpiceIngestion);
         }

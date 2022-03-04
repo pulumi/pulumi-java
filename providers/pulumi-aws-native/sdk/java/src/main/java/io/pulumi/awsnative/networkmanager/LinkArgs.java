@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.networkmanager.inputs.LinkBandwidthArgs;
 import io.pulumi.awsnative.networkmanager.inputs.LinkTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bandwidth", required=true)
-    private final Input<LinkBandwidthArgs> bandwidth;
+      private final Input<LinkBandwidthArgs> bandwidth;
 
     public Input<LinkBandwidthArgs> getBandwidth() {
         return this.bandwidth;
@@ -33,7 +33,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-    private final Input<String> globalNetworkId;
+      private final Input<String> globalNetworkId;
 
     public Input<String> getGlobalNetworkId() {
         return this.globalNetworkId;
@@ -55,7 +55,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provider")
-    private final @Nullable Input<String> provider;
+      private final @Nullable Input<String> provider;
 
     public Input<String> getProvider() {
         return this.provider == null ? Input.empty() : this.provider;
@@ -66,7 +66,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteId", required=true)
-    private final Input<String> siteId;
+      private final Input<String> siteId;
 
     public Input<String> getSiteId() {
         return this.siteId;
@@ -77,7 +77,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<LinkTagArgs>> tags;
+      private final @Nullable Input<List<LinkTagArgs>> tags;
 
     public Input<List<LinkTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,7 +88,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -222,7 +222,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public LinkArgs build() {
             return new LinkArgs(bandwidth, description, globalNetworkId, provider, siteId, tags, type);
         }

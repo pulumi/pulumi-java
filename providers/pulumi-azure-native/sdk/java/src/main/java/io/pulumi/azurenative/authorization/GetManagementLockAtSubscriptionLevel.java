@@ -6,21 +6,41 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.authorization.inputs.GetManagementLockAtSubscriptionLevelArgs;
 import io.pulumi.azurenative.authorization.outputs.GetManagementLockAtSubscriptionLevelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementLockAtSubscriptionLevel {
-/**
- * The lock information.
+    private GetManagementLockAtSubscriptionLevel() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagementLockAtSubscriptionLevelArgs.Builder a);
+    }
+    private static GetManagementLockAtSubscriptionLevelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagementLockAtSubscriptionLevelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The lock information.
  * API Version: 2017-04-01.
  * 
- *
- * The lock information.
+     *
+     * The lock information.
  * 
- */
+     */
+    public static CompletableFuture<GetManagementLockAtSubscriptionLevelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The lock information.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * The lock information.
+     * 
+     */
     public static CompletableFuture<GetManagementLockAtSubscriptionLevelResult> invokeAsync(GetManagementLockAtSubscriptionLevelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockAtSubscriptionLevel", TypeShape.of(GetManagementLockAtSubscriptionLevelResult.class), args == null ? GetManagementLockAtSubscriptionLevelArgs.Empty : args, Utilities.withVersion(options));
     }

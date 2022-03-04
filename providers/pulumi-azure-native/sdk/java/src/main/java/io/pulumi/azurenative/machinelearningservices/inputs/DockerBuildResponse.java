@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImagePlatformResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class DockerBuildResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="context")
-    private final @Nullable String context;
+      private final @Nullable String context;
 
     public Optional<String> getContext() {
         return this.context == null ? Optional.empty() : Optional.ofNullable(this.context);
@@ -38,7 +38,7 @@ public final class DockerBuildResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dockerSpecificationType", required=true)
-    private final String dockerSpecificationType;
+      private final String dockerSpecificationType;
 
     public String getDockerSpecificationType() {
         return this.dockerSpecificationType;
@@ -50,7 +50,7 @@ public final class DockerBuildResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dockerfile", required=true)
-    private final String dockerfile;
+      private final String dockerfile;
 
     public String getDockerfile() {
         return this.dockerfile;
@@ -61,7 +61,7 @@ public final class DockerBuildResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable DockerImagePlatformResponse platform;
+      private final @Nullable DockerImagePlatformResponse platform;
 
     public Optional<DockerImagePlatformResponse> getPlatform() {
         return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
@@ -130,7 +130,6 @@ public final class DockerBuildResponse extends io.pulumi.resources.InvokeArgs {
             this.platform = platform;
             return this;
         }
-
         public DockerBuildResponse build() {
             return new DockerBuildResponse(context, dockerSpecificationType, dockerfile, platform);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="badRecords", required=true)
-    private final String badRecords;
+      private final String badRecords;
 
     public String getBadRecords() {
         return this.badRecords;
@@ -28,7 +28,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="inputFileBytes", required=true)
-    private final String inputFileBytes;
+      private final String inputFileBytes;
 
     public String getInputFileBytes() {
         return this.inputFileBytes;
@@ -39,7 +39,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="inputFiles", required=true)
-    private final String inputFiles;
+      private final String inputFiles;
 
     public String getInputFiles() {
         return this.inputFiles;
@@ -50,7 +50,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="outputBytes", required=true)
-    private final String outputBytes;
+      private final String outputBytes;
 
     public String getOutputBytes() {
         return this.outputBytes;
@@ -61,7 +61,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="outputRows", required=true)
-    private final String outputRows;
+      private final String outputRows;
 
     public String getOutputRows() {
         return this.outputRows;
@@ -140,7 +140,6 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
             this.outputRows = Objects.requireNonNull(outputRows);
             return this;
         }
-
         public JobStatistics3Response build() {
             return new JobStatistics3Response(badRecords, inputFileBytes, inputFiles, outputBytes, outputRows);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.pubsub.outputs.SubscriptionPushConfigOidcToken;
 import java.lang.String;
 import java.util.Map;
@@ -80,7 +80,7 @@ public final class SubscriptionPushConfig {
      * - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
      * - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
      * 
-     */
+    */
     public Map<String,String> getAttributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
@@ -89,7 +89,7 @@ public final class SubscriptionPushConfig {
      * an Authorization header in the HTTP request for every pushed message.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SubscriptionPushConfigOidcToken> getOidcToken() {
         return Optional.ofNullable(this.oidcToken);
     }
@@ -98,7 +98,7 @@ public final class SubscriptionPushConfig {
      * For example, a Webhook endpoint might use
      * "https://example.com/push".
      * 
-     */
+    */
     public String getPushEndpoint() {
         return this.pushEndpoint;
     }
@@ -141,7 +141,6 @@ public final class SubscriptionPushConfig {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }
-
         public SubscriptionPushConfig build() {
             return new SubscriptionPushConfig(attributes, oidcToken, pushEndpoint);
         }

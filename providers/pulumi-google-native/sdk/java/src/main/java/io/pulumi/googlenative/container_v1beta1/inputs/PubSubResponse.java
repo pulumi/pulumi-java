@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.FilterResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class PubSubResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -34,7 +34,7 @@ public final class PubSubResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final FilterResponse filter;
+      private final FilterResponse filter;
 
     public FilterResponse getFilter() {
         return this.filter;
@@ -45,7 +45,7 @@ public final class PubSubResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="topic", required=true)
-    private final String topic;
+      private final String topic;
 
     public String getTopic() {
         return this.topic;
@@ -104,7 +104,6 @@ public final class PubSubResponse extends io.pulumi.resources.InvokeArgs {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubSubResponse build() {
             return new PubSubResponse(enabled, filter, topic);
         }

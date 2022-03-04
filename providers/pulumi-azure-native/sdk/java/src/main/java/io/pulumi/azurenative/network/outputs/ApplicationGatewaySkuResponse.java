@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class ApplicationGatewaySkuResponse {
     /**
      * Capacity (instance count) of an application gateway.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Name of an application gateway SKU.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tier of an application gateway.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -98,7 +98,6 @@ public final class ApplicationGatewaySkuResponse {
             this.tier = tier;
             return this;
         }
-
         public ApplicationGatewaySkuResponse build() {
             return new ApplicationGatewaySkuResponse(capacity, name, tier);
         }

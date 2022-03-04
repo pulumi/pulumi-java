@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse {
     /**
      * The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
      * 
-     */
+    */
     public List<String> getConnections() {
         return this.connections;
     }
@@ -53,7 +53,6 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse {
             this.connections = Objects.requireNonNull(connections);
             return this;
         }
-
         public GoogleCloudRunOpV2CloudSqlInstanceResponse build() {
             return new GoogleCloudRunOpV2CloudSqlInstanceResponse(connections);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class AdvancedMachineFeaturesResponse {
     /**
      * Whether to enable nested virtualization or not (default is false).
      * 
-     */
+    */
     public Boolean getEnableNestedVirtualization() {
         return this.enableNestedVirtualization;
     }
     /**
      * Whether to enable UEFI networking for instance creation.
      * 
-     */
+    */
     public Boolean getEnableUefiNetworking() {
         return this.enableUefiNetworking;
     }
     /**
      * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
      * 
-     */
+    */
     public Integer getThreadsPerCore() {
         return this.threadsPerCore;
     }
@@ -96,7 +96,6 @@ public final class AdvancedMachineFeaturesResponse {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }
-
         public AdvancedMachineFeaturesResponse build() {
             return new AdvancedMachineFeaturesResponse(enableNestedVirtualization, enableUefiNetworking, threadsPerCore);
         }

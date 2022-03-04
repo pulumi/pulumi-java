@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetProductArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetProductResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProduct {
-/**
- * Product details.
+    private GetProduct() {}
+    public interface BuilderApplicator {
+        public void apply(GetProductArgs.Builder a);
+    }
+    private static GetProductArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProductArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Product details.
  * API Version: 2020-12-01.
  * 
- *
- * Product details.
+     *
+     * Product details.
  * 
- */
+     */
+    public static CompletableFuture<GetProductResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Product details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Product details.
+     * 
+     */
     public static CompletableFuture<GetProductResult> invokeAsync(GetProductArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getProduct", TypeShape.of(GetProductResult.class), args == null ? GetProductArgs.Empty : args, Utilities.withVersion(options));
     }

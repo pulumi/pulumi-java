@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
     /**
      * The optimization goal of the metric.
      * 
-     */
+    */
     public String getGoal() {
         return this.goal;
     }
     /**
      * The name of the metric.
      * 
-     */
+    */
     public String getMetric() {
         return this.metric;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfig_MetricSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfig_MetricSpecResponse(goal, metric);
         }

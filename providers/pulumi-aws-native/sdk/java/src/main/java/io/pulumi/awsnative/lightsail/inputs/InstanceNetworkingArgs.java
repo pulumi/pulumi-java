@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 import io.pulumi.awsnative.lightsail.inputs.InstanceMonthlyTransferArgs;
 import io.pulumi.awsnative.lightsail.inputs.InstancePortArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
     public static final InstanceNetworkingArgs Empty = new InstanceNetworkingArgs();
 
     @InputImport(name="monthlyTransfer")
-    private final @Nullable Input<InstanceMonthlyTransferArgs> monthlyTransfer;
+      private final @Nullable Input<InstanceMonthlyTransferArgs> monthlyTransfer;
 
     public Input<InstanceMonthlyTransferArgs> getMonthlyTransfer() {
         return this.monthlyTransfer == null ? Input.empty() : this.monthlyTransfer;
@@ -32,7 +32,7 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ports", required=true)
-    private final Input<List<InstancePortArgs>> ports;
+      private final Input<List<InstancePortArgs>> ports;
 
     public Input<List<InstancePortArgs>> getPorts() {
         return this.ports;
@@ -91,7 +91,6 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
             this.ports = Input.of(Objects.requireNonNull(ports));
             return this;
         }
-
         public InstanceNetworkingArgs build() {
             return new InstanceNetworkingArgs(monthlyTransfer, ports);
         }

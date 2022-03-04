@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="disasterRecoveryConfigurationName")
-    private final @Nullable Input<String> disasterRecoveryConfigurationName;
+      private final @Nullable Input<String> disasterRecoveryConfigurationName;
 
     public Input<String> getDisasterRecoveryConfigurationName() {
         return this.disasterRecoveryConfigurationName == null ? Input.empty() : this.disasterRecoveryConfigurationName;
@@ -30,7 +30,7 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -115,7 +115,6 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public DisasterRecoveryConfigurationArgs build() {
             return new DisasterRecoveryConfigurationArgs(disasterRecoveryConfigurationName, resourceGroupName, serverName);
         }

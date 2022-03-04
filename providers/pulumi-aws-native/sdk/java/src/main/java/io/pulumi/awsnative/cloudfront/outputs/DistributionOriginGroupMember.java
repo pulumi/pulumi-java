@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class DistributionOriginGroupMember {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }
-
         public DistributionOriginGroupMember build() {
             return new DistributionOriginGroupMember(originId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class InstanceGroupNamedPort {
     /**
      * The name which the port will be mapped to.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The port number to map the name to.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -75,7 +75,6 @@ public final class InstanceGroupNamedPort {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public InstanceGroupNamedPort build() {
             return new InstanceGroupNamedPort(name, port);
         }

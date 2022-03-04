@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class InstanceViewStatusResponse {
     /**
      * The status code.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * The short localizable label for the status.
      * 
-     */
+    */
     public Optional<String> getDisplayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
     /**
      * The level code.
      * 
-     */
+    */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
     /**
      * The detailed status message, including for alerts and error messages.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The time of the status.
      * 
-     */
+    */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);
     }
@@ -139,7 +139,6 @@ public final class InstanceViewStatusResponse {
             this.time = time;
             return this;
         }
-
         public InstanceViewStatusResponse build() {
             return new InstanceViewStatusResponse(code, displayStatus, level, message, time);
         }

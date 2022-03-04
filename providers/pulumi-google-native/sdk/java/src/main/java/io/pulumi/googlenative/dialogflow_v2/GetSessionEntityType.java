@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSessionEntityType {
-/**
- * Retrieves the specified session entity type. This method doesn't work with Google Assistant integration. Contact Dialogflow support if you need to use session entities with Google Assistant integration.
+    private GetSessionEntityType() {}
+    public interface BuilderApplicator {
+        public void apply(GetSessionEntityTypeArgs.Builder a);
+    }
+    private static GetSessionEntityTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSessionEntityTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified session entity type. This method doesn't work with Google Assistant integration. Contact Dialogflow support if you need to use session entities with Google Assistant integration.
  * 
- */
+     */
+    public static CompletableFuture<GetSessionEntityTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified session entity type. This method doesn't work with Google Assistant integration. Contact Dialogflow support if you need to use session entities with Google Assistant integration.
+     * 
+     */
     public static CompletableFuture<GetSessionEntityTypeResult> invokeAsync(GetSessionEntityTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getSessionEntityType", TypeShape.of(GetSessionEntityTypeResult.class), args == null ? GetSessionEntityTypeArgs.Empty : args, Utilities.withVersion(options));
     }

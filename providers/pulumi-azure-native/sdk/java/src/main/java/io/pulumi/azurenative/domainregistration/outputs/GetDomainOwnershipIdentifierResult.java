@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.domainregistration.outputs;
 
 import io.pulumi.azurenative.domainregistration.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,42 +62,42 @@ public final class GetDomainOwnershipIdentifierResult {
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Ownership Id.
      * 
-     */
+    */
     public Optional<String> getOwnershipId() {
         return Optional.ofNullable(this.ownershipId);
     }
     /**
      * The system metadata relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -161,7 +161,6 @@ public final class GetDomainOwnershipIdentifierResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDomainOwnershipIdentifierResult build() {
             return new GetDomainOwnershipIdentifierResult(id, kind, name, ownershipId, systemData, type);
         }

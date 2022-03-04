@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class PrivateLinkScopedResourceResponse {
     /**
      * The full resource Id of the private link scope resource.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The private link scope unique Identifier.
      * 
-     */
+    */
     public Optional<String> getScopeId() {
         return Optional.ofNullable(this.scopeId);
     }
@@ -76,7 +76,6 @@ public final class PrivateLinkScopedResourceResponse {
             this.scopeId = scopeId;
             return this;
         }
-
         public PrivateLinkScopedResourceResponse build() {
             return new PrivateLinkScopedResourceResponse(resourceId, scopeId);
         }

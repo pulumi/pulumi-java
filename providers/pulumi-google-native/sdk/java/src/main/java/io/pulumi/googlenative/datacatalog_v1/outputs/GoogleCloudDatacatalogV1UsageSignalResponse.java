@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse {
     /**
      * The end timestamp of the duration of usage statistics.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Usage statistics over each of the predefined time ranges. Supported time ranges are `{"24H", "7D", "30D"}`.
      * 
-     */
+    */
     public Map<String,String> getUsageWithinTimeRange() {
         return this.usageWithinTimeRange;
     }
@@ -75,7 +75,6 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse {
             this.usageWithinTimeRange = Objects.requireNonNull(usageWithinTimeRange);
             return this;
         }
-
         public GoogleCloudDatacatalogV1UsageSignalResponse build() {
             return new GoogleCloudDatacatalogV1UsageSignalResponse(updateTime, usageWithinTimeRange);
         }

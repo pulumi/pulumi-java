@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreOnlineServingConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -34,7 +34,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -45,7 +45,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -56,7 +56,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -67,7 +67,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="onlineServingConfig")
-    private final @Nullable Input<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
+      private final @Nullable Input<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
 
     public Input<AiFeatureStoreOnlineServingConfigGetArgs> getOnlineServingConfig() {
         return this.onlineServingConfig == null ? Input.empty() : this.onlineServingConfig;
@@ -91,7 +91,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -102,7 +102,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -114,7 +114,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -278,7 +278,6 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public AiFeatureStoreState build() {
             return new AiFeatureStoreState(createTime, etag, forceDestroy, labels, name, onlineServingConfig, project, region, updateTime);
         }

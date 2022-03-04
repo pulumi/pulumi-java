@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningexperimentation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class StorageAccountPropertiesResponse {
     /**
      * The access key to the storage account.
      * 
-     */
+    */
     public String getAccessKey() {
         return this.accessKey;
     }
     /**
      * The fully qualified arm Id of the storage account.
      * 
-     */
+    */
     public String getStorageAccountId() {
         return this.storageAccountId;
     }
@@ -74,7 +74,6 @@ public final class StorageAccountPropertiesResponse {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public StorageAccountPropertiesResponse build() {
             return new StorageAccountPropertiesResponse(accessKey, storageAccountId);
         }

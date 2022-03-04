@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.HostCaching;
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hostCaching")
-    private final @Nullable Input<HostCaching> hostCaching;
+      private final @Nullable Input<HostCaching> hostCaching;
 
     public Input<HostCaching> getHostCaching() {
         return this.hostCaching == null ? Input.empty() : this.hostCaching;
@@ -35,7 +35,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<GalleryArtifactVersionSourceArgs> source;
+      private final @Nullable Input<GalleryArtifactVersionSourceArgs> source;
 
     public Input<GalleryArtifactVersionSourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -94,7 +94,6 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public GalleryOSDiskImageArgs build() {
             return new GalleryOSDiskImageArgs(hostCaching, source);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,56 +16,56 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
     public static final EC2FleetPlacementArgs Empty = new EC2FleetPlacementArgs();
 
     @InputImport(name="affinity")
-    private final @Nullable Input<String> affinity;
+      private final @Nullable Input<String> affinity;
 
     public Input<String> getAffinity() {
         return this.affinity == null ? Input.empty() : this.affinity;
     }
 
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
     @InputImport(name="groupName")
-    private final @Nullable Input<String> groupName;
+      private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;
     }
 
     @InputImport(name="hostId")
-    private final @Nullable Input<String> hostId;
+      private final @Nullable Input<String> hostId;
 
     public Input<String> getHostId() {
         return this.hostId == null ? Input.empty() : this.hostId;
     }
 
     @InputImport(name="hostResourceGroupArn")
-    private final @Nullable Input<String> hostResourceGroupArn;
+      private final @Nullable Input<String> hostResourceGroupArn;
 
     public Input<String> getHostResourceGroupArn() {
         return this.hostResourceGroupArn == null ? Input.empty() : this.hostResourceGroupArn;
     }
 
     @InputImport(name="partitionNumber")
-    private final @Nullable Input<Integer> partitionNumber;
+      private final @Nullable Input<Integer> partitionNumber;
 
     public Input<Integer> getPartitionNumber() {
         return this.partitionNumber == null ? Input.empty() : this.partitionNumber;
     }
 
     @InputImport(name="spreadDomain")
-    private final @Nullable Input<String> spreadDomain;
+      private final @Nullable Input<String> spreadDomain;
 
     public Input<String> getSpreadDomain() {
         return this.spreadDomain == null ? Input.empty() : this.spreadDomain;
     }
 
     @InputImport(name="tenancy")
-    private final @Nullable Input<String> tenancy;
+      private final @Nullable Input<String> tenancy;
 
     public Input<String> getTenancy() {
         return this.tenancy == null ? Input.empty() : this.tenancy;
@@ -214,7 +214,6 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
             this.tenancy = Input.ofNullable(tenancy);
             return this;
         }
-
         public EC2FleetPlacementArgs build() {
             return new EC2FleetPlacementArgs(affinity, availabilityZone, groupName, hostId, hostResourceGroupArn, partitionNumber, spreadDomain, tenancy);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.CertificateStoreLocation;
 import io.pulumi.azurenative.batch.enums.CertificateVisibility;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     public static final CertificateReferenceArgs Empty = new CertificateReferenceArgs();
 
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -29,7 +29,7 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storeLocation")
-    private final @Nullable Input<CertificateStoreLocation> storeLocation;
+      private final @Nullable Input<CertificateStoreLocation> storeLocation;
 
     public Input<CertificateStoreLocation> getStoreLocation() {
         return this.storeLocation == null ? Input.empty() : this.storeLocation;
@@ -40,14 +40,14 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storeName")
-    private final @Nullable Input<String> storeName;
+      private final @Nullable Input<String> storeName;
 
     public Input<String> getStoreName() {
         return this.storeName == null ? Input.empty() : this.storeName;
     }
 
     @InputImport(name="visibility")
-    private final @Nullable Input<List<CertificateVisibility>> visibility;
+      private final @Nullable Input<List<CertificateVisibility>> visibility;
 
     public Input<List<CertificateVisibility>> getVisibility() {
         return this.visibility == null ? Input.empty() : this.visibility;
@@ -136,7 +136,6 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
             this.visibility = Input.ofNullable(visibility);
             return this;
         }
-
         public CertificateReferenceArgs build() {
             return new CertificateReferenceArgs(id, storeLocation, storeName, visibility);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.outputs;
 import io.pulumi.azurenative.alertsmanagement.outputs.ActionGroupResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.DiagnosticsResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.SuppressionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -65,42 +65,42 @@ public final class GetActionRuleByNameResult {
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * action rule properties
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -164,7 +164,6 @@ public final class GetActionRuleByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetActionRuleByNameResult build() {
             return new GetActionRuleByNameResult(id, location, name, properties, tags, type);
         }

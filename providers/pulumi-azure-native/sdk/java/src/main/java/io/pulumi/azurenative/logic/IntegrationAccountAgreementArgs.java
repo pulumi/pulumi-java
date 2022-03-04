@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.AgreementType;
 import io.pulumi.azurenative.logic.inputs.AgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="agreementName")
-    private final @Nullable Input<String> agreementName;
+      private final @Nullable Input<String> agreementName;
 
     public Input<String> getAgreementName() {
         return this.agreementName == null ? Input.empty() : this.agreementName;
@@ -35,7 +35,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="agreementType", required=true)
-    private final Input<AgreementType> agreementType;
+      private final Input<AgreementType> agreementType;
 
     public Input<AgreementType> getAgreementType() {
         return this.agreementType;
@@ -46,7 +46,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<AgreementContentArgs> content;
+      private final Input<AgreementContentArgs> content;
 
     public Input<AgreementContentArgs> getContent() {
         return this.content;
@@ -57,7 +57,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="guestIdentity", required=true)
-    private final Input<BusinessIdentityArgs> guestIdentity;
+      private final Input<BusinessIdentityArgs> guestIdentity;
 
     public Input<BusinessIdentityArgs> getGuestIdentity() {
         return this.guestIdentity;
@@ -68,7 +68,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="guestPartner", required=true)
-    private final Input<String> guestPartner;
+      private final Input<String> guestPartner;
 
     public Input<String> getGuestPartner() {
         return this.guestPartner;
@@ -79,7 +79,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="hostIdentity", required=true)
-    private final Input<BusinessIdentityArgs> hostIdentity;
+      private final Input<BusinessIdentityArgs> hostIdentity;
 
     public Input<BusinessIdentityArgs> getHostIdentity() {
         return this.hostIdentity;
@@ -90,7 +90,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="hostPartner", required=true)
-    private final Input<String> hostPartner;
+      private final Input<String> hostPartner;
 
     public Input<String> getHostPartner() {
         return this.hostPartner;
@@ -101,7 +101,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-    private final Input<String> integrationAccountName;
+      private final Input<String> integrationAccountName;
 
     public Input<String> getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -112,7 +112,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -123,7 +123,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+      private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -134,7 +134,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -145,7 +145,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -354,7 +354,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public IntegrationAccountAgreementArgs build() {
             return new IntegrationAccountAgreementArgs(agreementName, agreementType, content, guestIdentity, guestPartner, hostIdentity, hostPartner, integrationAccountName, location, metadata, resourceGroupName, tags);
         }

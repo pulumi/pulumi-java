@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AssignmentOsTypeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="osArchitecture")
-    private final @Nullable Input<String> osArchitecture;
+      private final @Nullable Input<String> osArchitecture;
 
     public Input<String> getOsArchitecture() {
         return this.osArchitecture == null ? Input.empty() : this.osArchitecture;
@@ -34,7 +34,7 @@ public final class AssignmentOsTypeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="osShortName")
-    private final @Nullable Input<String> osShortName;
+      private final @Nullable Input<String> osShortName;
 
     public Input<String> getOsShortName() {
         return this.osShortName == null ? Input.empty() : this.osShortName;
@@ -45,7 +45,7 @@ public final class AssignmentOsTypeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="osVersion")
-    private final @Nullable Input<String> osVersion;
+      private final @Nullable Input<String> osVersion;
 
     public Input<String> getOsVersion() {
         return this.osVersion == null ? Input.empty() : this.osVersion;
@@ -119,7 +119,6 @@ public final class AssignmentOsTypeArgs extends io.pulumi.resources.ResourceArgs
             this.osVersion = Input.ofNullable(osVersion);
             return this;
         }
-
         public AssignmentOsTypeArgs build() {
             return new AssignmentOsTypeArgs(osArchitecture, osShortName, osVersion);
         }

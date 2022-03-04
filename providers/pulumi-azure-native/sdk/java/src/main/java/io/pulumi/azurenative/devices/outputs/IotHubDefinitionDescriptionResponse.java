@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -56,35 +56,35 @@ public final class IotHubDefinitionDescriptionResponse {
     /**
      * weight to apply for a given iot h.
      * 
-     */
+    */
     public Optional<Integer> getAllocationWeight() {
         return Optional.ofNullable(this.allocationWeight);
     }
     /**
      * flag for applying allocationPolicy or not for a given iot hub.
      * 
-     */
+    */
     public Optional<Boolean> getApplyAllocationPolicy() {
         return Optional.ofNullable(this.applyAllocationPolicy);
     }
     /**
      * Connection string of the IoT hub.
      * 
-     */
+    */
     public String getConnectionString() {
         return this.connectionString;
     }
     /**
      * ARM region of the IoT hub.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Host name of the IoT hub.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -141,7 +141,6 @@ public final class IotHubDefinitionDescriptionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public IotHubDefinitionDescriptionResponse build() {
             return new IotHubDefinitionDescriptionResponse(allocationWeight, applyAllocationPolicy, connectionString, location, name);
         }

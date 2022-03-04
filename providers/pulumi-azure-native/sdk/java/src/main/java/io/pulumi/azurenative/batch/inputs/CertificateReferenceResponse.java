@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
     public static final CertificateReferenceResponse Empty = new CertificateReferenceResponse();
 
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -27,7 +27,7 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="storeLocation")
-    private final @Nullable String storeLocation;
+      private final @Nullable String storeLocation;
 
     public Optional<String> getStoreLocation() {
         return this.storeLocation == null ? Optional.empty() : Optional.ofNullable(this.storeLocation);
@@ -38,14 +38,14 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="storeName")
-    private final @Nullable String storeName;
+      private final @Nullable String storeName;
 
     public Optional<String> getStoreName() {
         return this.storeName == null ? Optional.empty() : Optional.ofNullable(this.storeName);
     }
 
     @InputImport(name="visibility")
-    private final @Nullable List<String> visibility;
+      private final @Nullable List<String> visibility;
 
     public List<String> getVisibility() {
         return this.visibility == null ? List.of() : this.visibility;
@@ -114,7 +114,6 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
             this.visibility = visibility;
             return this;
         }
-
         public CertificateReferenceResponse build() {
             return new CertificateReferenceResponse(id, storeLocation, storeName, visibility);
         }

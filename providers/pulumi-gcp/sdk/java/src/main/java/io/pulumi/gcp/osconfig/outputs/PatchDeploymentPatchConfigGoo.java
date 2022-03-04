@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class PatchDeploymentPatchConfigGoo {
     /**
      * goo update settings. Use this setting to override the default goo patch rules.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -52,7 +52,6 @@ public final class PatchDeploymentPatchConfigGoo {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public PatchDeploymentPatchConfigGoo build() {
             return new PatchDeploymentPatchConfigGoo(enabled);
         }

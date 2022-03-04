@@ -7,7 +7,7 @@ import io.pulumi.awsnative.redshift.inputs.ScheduledActionPauseClusterMessageArg
 import io.pulumi.awsnative.redshift.inputs.ScheduledActionResizeClusterMessageArgs;
 import io.pulumi.awsnative.redshift.inputs.ScheduledActionResumeClusterMessageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,21 +17,21 @@ public final class ScheduledActionTypeArgs extends io.pulumi.resources.ResourceA
     public static final ScheduledActionTypeArgs Empty = new ScheduledActionTypeArgs();
 
     @InputImport(name="pauseCluster")
-    private final @Nullable Input<ScheduledActionPauseClusterMessageArgs> pauseCluster;
+      private final @Nullable Input<ScheduledActionPauseClusterMessageArgs> pauseCluster;
 
     public Input<ScheduledActionPauseClusterMessageArgs> getPauseCluster() {
         return this.pauseCluster == null ? Input.empty() : this.pauseCluster;
     }
 
     @InputImport(name="resizeCluster")
-    private final @Nullable Input<ScheduledActionResizeClusterMessageArgs> resizeCluster;
+      private final @Nullable Input<ScheduledActionResizeClusterMessageArgs> resizeCluster;
 
     public Input<ScheduledActionResizeClusterMessageArgs> getResizeCluster() {
         return this.resizeCluster == null ? Input.empty() : this.resizeCluster;
     }
 
     @InputImport(name="resumeCluster")
-    private final @Nullable Input<ScheduledActionResumeClusterMessageArgs> resumeCluster;
+      private final @Nullable Input<ScheduledActionResumeClusterMessageArgs> resumeCluster;
 
     public Input<ScheduledActionResumeClusterMessageArgs> getResumeCluster() {
         return this.resumeCluster == null ? Input.empty() : this.resumeCluster;
@@ -105,7 +105,6 @@ public final class ScheduledActionTypeArgs extends io.pulumi.resources.ResourceA
             this.resumeCluster = Input.ofNullable(resumeCluster);
             return this;
         }
-
         public ScheduledActionTypeArgs build() {
             return new ScheduledActionTypeArgs(pauseCluster, resizeCluster, resumeCluster);
         }

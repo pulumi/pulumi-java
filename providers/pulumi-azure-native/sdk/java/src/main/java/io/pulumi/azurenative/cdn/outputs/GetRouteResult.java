@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.outputs;
 import io.pulumi.azurenative.cdn.outputs.CompressionSettingsResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -145,14 +145,14 @@ public final class GetRouteResult {
     /**
      * compression settings.
      * 
-     */
+    */
     public Optional<CompressionSettingsResponse> getCompressionSettings() {
         return Optional.ofNullable(this.compressionSettings);
     }
     /**
      * Domains referenced by this endpoint.
      * 
-     */
+    */
     public List<ResourceReferenceResponse> getCustomDomains() {
         return this.customDomains == null ? List.of() : this.customDomains;
     }
@@ -162,105 +162,105 @@ public final class GetRouteResult {
     /**
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
-     */
+    */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Protocol this rule will use when forwarding traffic to backends.
      * 
-     */
+    */
     public Optional<String> getForwardingProtocol() {
         return Optional.ofNullable(this.forwardingProtocol);
     }
     /**
      * Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
      * 
-     */
+    */
     public Optional<String> getHttpsRedirect() {
         return Optional.ofNullable(this.httpsRedirect);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * whether this route will be linked to the default endpoint domain.
      * 
-     */
+    */
     public Optional<String> getLinkToDefaultDomain() {
         return Optional.ofNullable(this.linkToDefaultDomain);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A reference to the origin group.
      * 
-     */
+    */
     public ResourceReferenceResponse getOriginGroup() {
         return this.originGroup;
     }
     /**
      * A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
-     */
+    */
     public Optional<String> getOriginPath() {
         return Optional.ofNullable(this.originPath);
     }
     /**
      * The route patterns of the rule.
      * 
-     */
+    */
     public List<String> getPatternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
     }
     /**
      * Provisioning status
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
-     */
+    */
     public Optional<String> getQueryStringCachingBehavior() {
         return Optional.ofNullable(this.queryStringCachingBehavior);
     }
     /**
      * rule sets referenced by this endpoint.
      * 
-     */
+    */
     public List<ResourceReferenceResponse> getRuleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
     }
     /**
      * List of supported protocols for this route.
      * 
-     */
+    */
     public List<String> getSupportedProtocols() {
         return this.supportedProtocols == null ? List.of() : this.supportedProtocols;
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -408,7 +408,6 @@ public final class GetRouteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRouteResult build() {
             return new GetRouteResult(compressionSettings, customDomains, deploymentStatus, enabledState, forwardingProtocol, httpsRedirect, id, linkToDefaultDomain, name, originGroup, originPath, patternsToMatch, provisioningState, queryStringCachingBehavior, ruleSets, supportedProtocols, systemData, type);
         }

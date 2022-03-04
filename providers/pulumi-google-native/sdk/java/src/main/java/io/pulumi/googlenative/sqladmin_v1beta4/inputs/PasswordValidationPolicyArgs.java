@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.PasswordValidationPolicyComplexity;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="complexity")
-    private final @Nullable Input<PasswordValidationPolicyComplexity> complexity;
+      private final @Nullable Input<PasswordValidationPolicyComplexity> complexity;
 
     public Input<PasswordValidationPolicyComplexity> getComplexity() {
         return this.complexity == null ? Input.empty() : this.complexity;
@@ -37,7 +37,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="disallowUsernameSubstring")
-    private final @Nullable Input<Boolean> disallowUsernameSubstring;
+      private final @Nullable Input<Boolean> disallowUsernameSubstring;
 
     public Input<Boolean> getDisallowUsernameSubstring() {
         return this.disallowUsernameSubstring == null ? Input.empty() : this.disallowUsernameSubstring;
@@ -48,7 +48,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="minLength")
-    private final @Nullable Input<Integer> minLength;
+      private final @Nullable Input<Integer> minLength;
 
     public Input<Integer> getMinLength() {
         return this.minLength == null ? Input.empty() : this.minLength;
@@ -59,7 +59,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="passwordChangeInterval")
-    private final @Nullable Input<String> passwordChangeInterval;
+      private final @Nullable Input<String> passwordChangeInterval;
 
     public Input<String> getPasswordChangeInterval() {
         return this.passwordChangeInterval == null ? Input.empty() : this.passwordChangeInterval;
@@ -70,7 +70,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="reuseInterval")
-    private final @Nullable Input<Integer> reuseInterval;
+      private final @Nullable Input<Integer> reuseInterval;
 
     public Input<Integer> getReuseInterval() {
         return this.reuseInterval == null ? Input.empty() : this.reuseInterval;
@@ -174,7 +174,6 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
             this.reuseInterval = Input.ofNullable(reuseInterval);
             return this;
         }
-
         public PasswordValidationPolicyArgs build() {
             return new PasswordValidationPolicyArgs(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);
         }

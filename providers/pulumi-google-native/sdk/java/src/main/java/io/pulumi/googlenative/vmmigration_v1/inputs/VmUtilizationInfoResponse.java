@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1.inputs.VmUtilizationMetricsResponse;
 import io.pulumi.googlenative.vmmigration_v1.inputs.VmwareVmDetailsResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="utilization", required=true)
-    private final VmUtilizationMetricsResponse utilization;
+      private final VmUtilizationMetricsResponse utilization;
 
     public VmUtilizationMetricsResponse getUtilization() {
         return this.utilization;
@@ -34,7 +34,7 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="vmId", required=true)
-    private final String vmId;
+      private final String vmId;
 
     public String getVmId() {
         return this.vmId;
@@ -45,7 +45,7 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="vmwareVmDetails", required=true)
-    private final VmwareVmDetailsResponse vmwareVmDetails;
+      private final VmwareVmDetailsResponse vmwareVmDetails;
 
     public VmwareVmDetailsResponse getVmwareVmDetails() {
         return this.vmwareVmDetails;
@@ -104,7 +104,6 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
             this.vmwareVmDetails = Objects.requireNonNull(vmwareVmDetails);
             return this;
         }
-
         public VmUtilizationInfoResponse build() {
             return new VmUtilizationInfoResponse(utilization, vmId, vmwareVmDetails);
         }

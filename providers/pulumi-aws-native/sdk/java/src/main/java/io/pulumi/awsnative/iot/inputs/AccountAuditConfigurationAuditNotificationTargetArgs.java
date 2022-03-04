@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -31,7 +31,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -42,7 +42,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @InputImport(name="targetArn")
-    private final @Nullable Input<String> targetArn;
+      private final @Nullable Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn == null ? Input.empty() : this.targetArn;
@@ -116,7 +116,6 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
             this.targetArn = Input.ofNullable(targetArn);
             return this;
         }
-
         public AccountAuditConfigurationAuditNotificationTargetArgs build() {
             return new AccountAuditConfigurationAuditNotificationTargetArgs(enabled, roleArn, targetArn);
         }

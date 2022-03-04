@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.AzureInternalMonitoringPipelineSinkDescriptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="defaultSinkRefs")
-    private final @Nullable Input<List<String>> defaultSinkRefs;
+      private final @Nullable Input<List<String>> defaultSinkRefs;
 
     public Input<List<String>> getDefaultSinkRefs() {
         return this.defaultSinkRefs == null ? Input.empty() : this.defaultSinkRefs;
@@ -37,7 +37,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -48,7 +48,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sinks")
-    private final @Nullable Input<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;
+      private final @Nullable Input<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;
 
     public Input<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> getSinks() {
         return this.sinks == null ? Input.empty() : this.sinks;
@@ -122,7 +122,6 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
             this.sinks = Input.ofNullable(sinks);
             return this;
         }
-
         public DiagnosticsDescriptionArgs build() {
             return new DiagnosticsDescriptionArgs(defaultSinkRefs, enabled, sinks);
         }

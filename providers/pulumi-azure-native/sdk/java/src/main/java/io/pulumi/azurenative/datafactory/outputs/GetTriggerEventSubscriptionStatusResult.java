@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GetTriggerEventSubscriptionStatusResult {
     /**
      * Event Subscription Status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Trigger name.
      * 
-     */
+    */
     public String getTriggerName() {
         return this.triggerName;
     }
@@ -74,7 +74,6 @@ public final class GetTriggerEventSubscriptionStatusResult {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
         }
-
         public GetTriggerEventSubscriptionStatusResult build() {
             return new GetTriggerEventSubscriptionStatusResult(status, triggerName);
         }

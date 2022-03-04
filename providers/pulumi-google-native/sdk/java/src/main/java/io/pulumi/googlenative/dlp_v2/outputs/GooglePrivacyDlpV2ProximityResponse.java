@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GooglePrivacyDlpV2ProximityResponse {
     /**
      * Number of characters after the finding to consider.
      * 
-     */
+    */
     public Integer getWindowAfter() {
         return this.windowAfter;
     }
     /**
      * Number of characters before the finding to consider.
      * 
-     */
+    */
     public Integer getWindowBefore() {
         return this.windowBefore;
     }
@@ -74,7 +74,6 @@ public final class GooglePrivacyDlpV2ProximityResponse {
             this.windowBefore = Objects.requireNonNull(windowBefore);
             return this;
         }
-
         public GooglePrivacyDlpV2ProximityResponse build() {
             return new GooglePrivacyDlpV2ProximityResponse(windowAfter, windowBefore);
         }

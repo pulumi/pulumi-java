@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
     /**
      * Framework on which the built-in algorithm was trained.
      * 
-     */
+    */
     public String getFramework() {
         return this.framework;
     }
     /**
      * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.
      * 
-     */
+    */
     public String getModelPath() {
         return this.modelPath;
     }
     /**
      * Python version on which the built-in algorithm was trained.
      * 
-     */
+    */
     public String getPythonVersion() {
         return this.pythonVersion;
     }
     /**
      * AI Platform runtime version on which the built-in algorithm was trained.
      * 
-     */
+    */
     public String getRuntimeVersion() {
         return this.runtimeVersion;
     }
@@ -116,7 +116,6 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse build() {
             return new GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(framework, modelPath, pythonVersion, runtimeVersion);
         }

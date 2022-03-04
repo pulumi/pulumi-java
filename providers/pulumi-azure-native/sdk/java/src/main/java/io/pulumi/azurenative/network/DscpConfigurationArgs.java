@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.QosIpRangeArgs;
 import io.pulumi.azurenative.network.inputs.QosPortRangeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationIpRanges")
-    private final @Nullable Input<List<QosIpRangeArgs>> destinationIpRanges;
+      private final @Nullable Input<List<QosIpRangeArgs>> destinationIpRanges;
 
     public Input<List<QosIpRangeArgs>> getDestinationIpRanges() {
         return this.destinationIpRanges == null ? Input.empty() : this.destinationIpRanges;
@@ -37,7 +37,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationPortRanges")
-    private final @Nullable Input<List<QosPortRangeArgs>> destinationPortRanges;
+      private final @Nullable Input<List<QosPortRangeArgs>> destinationPortRanges;
 
     public Input<List<QosPortRangeArgs>> getDestinationPortRanges() {
         return this.destinationPortRanges == null ? Input.empty() : this.destinationPortRanges;
@@ -48,7 +48,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dscpConfigurationName")
-    private final @Nullable Input<String> dscpConfigurationName;
+      private final @Nullable Input<String> dscpConfigurationName;
 
     public Input<String> getDscpConfigurationName() {
         return this.dscpConfigurationName == null ? Input.empty() : this.dscpConfigurationName;
@@ -59,7 +59,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -70,7 +70,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -81,7 +81,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="markings")
-    private final @Nullable Input<List<Integer>> markings;
+      private final @Nullable Input<List<Integer>> markings;
 
     public Input<List<Integer>> getMarkings() {
         return this.markings == null ? Input.empty() : this.markings;
@@ -92,7 +92,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<Either<String,ProtocolType>> protocol;
+      private final @Nullable Input<Either<String,ProtocolType>> protocol;
 
     public Input<Either<String,ProtocolType>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -103,7 +103,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -114,7 +114,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceIpRanges")
-    private final @Nullable Input<List<QosIpRangeArgs>> sourceIpRanges;
+      private final @Nullable Input<List<QosIpRangeArgs>> sourceIpRanges;
 
     public Input<List<QosIpRangeArgs>> getSourceIpRanges() {
         return this.sourceIpRanges == null ? Input.empty() : this.sourceIpRanges;
@@ -125,7 +125,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourcePortRanges")
-    private final @Nullable Input<List<QosPortRangeArgs>> sourcePortRanges;
+      private final @Nullable Input<List<QosPortRangeArgs>> sourcePortRanges;
 
     public Input<List<QosPortRangeArgs>> getSourcePortRanges() {
         return this.sourcePortRanges == null ? Input.empty() : this.sourcePortRanges;
@@ -136,7 +136,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -330,7 +330,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DscpConfigurationArgs build() {
             return new DscpConfigurationArgs(destinationIpRanges, destinationPortRanges, dscpConfigurationName, id, location, markings, protocol, resourceGroupName, sourceIpRanges, sourcePortRanges, tags);
         }

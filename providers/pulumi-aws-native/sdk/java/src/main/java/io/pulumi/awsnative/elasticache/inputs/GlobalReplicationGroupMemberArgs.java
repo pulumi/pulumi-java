@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticache.inputs;
 
 import io.pulumi.awsnative.elasticache.enums.GlobalReplicationGroupMemberRole;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="replicationGroupId")
-    private final @Nullable Input<String> replicationGroupId;
+      private final @Nullable Input<String> replicationGroupId;
 
     public Input<String> getReplicationGroupId() {
         return this.replicationGroupId == null ? Input.empty() : this.replicationGroupId;
@@ -31,7 +31,7 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="replicationGroupRegion")
-    private final @Nullable Input<String> replicationGroupRegion;
+      private final @Nullable Input<String> replicationGroupRegion;
 
     public Input<String> getReplicationGroupRegion() {
         return this.replicationGroupRegion == null ? Input.empty() : this.replicationGroupRegion;
@@ -42,7 +42,7 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<GlobalReplicationGroupMemberRole> role;
+      private final @Nullable Input<GlobalReplicationGroupMemberRole> role;
 
     public Input<GlobalReplicationGroupMemberRole> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -116,7 +116,6 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public GlobalReplicationGroupMemberArgs build() {
             return new GlobalReplicationGroupMemberArgs(replicationGroupId, replicationGroupRegion, role);
         }

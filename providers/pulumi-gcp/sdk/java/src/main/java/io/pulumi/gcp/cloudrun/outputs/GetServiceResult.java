@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceMetadata;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceStatus;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplate;
@@ -59,7 +59,7 @@ public final class GetServiceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -165,7 +165,6 @@ public final class GetServiceResult {
             this.traffics = Objects.requireNonNull(traffics);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(autogenerateRevisionName, id, location, metadatas, name, project, statuses, templates, traffics);
         }

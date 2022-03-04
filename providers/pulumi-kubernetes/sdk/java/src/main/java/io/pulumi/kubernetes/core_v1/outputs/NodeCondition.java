@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,35 +68,35 @@ public final class NodeCondition {
     /**
      * Last time we got an update on a given condition.
      * 
-     */
+    */
     public Optional<String> getLastHeartbeatTime() {
         return Optional.ofNullable(this.lastHeartbeatTime);
     }
     /**
      * Last time the condition transit from one status to another.
      * 
-     */
+    */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * Human readable message indicating details about last transition.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * (brief) reason for the condition's last transition.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -110,7 +110,7 @@ public final class NodeCondition {
      *  - `"PIDPressure"` means the kubelet is under pressure due to insufficient available PID.
      *  - `"Ready"` means kubelet is healthy and ready to accept pods.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -174,7 +174,6 @@ public final class NodeCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NodeCondition build() {
             return new NodeCondition(lastHeartbeatTime, lastTransitionTime, message, reason, status, type);
         }

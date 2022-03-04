@@ -6,21 +6,41 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.security.inputs.ListIngestionSettingConnectionStringsArgs;
 import io.pulumi.azurenative.security.outputs.ListIngestionSettingConnectionStringsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIngestionSettingConnectionStrings {
-/**
- * Connection string for ingesting security data and logs
+    private ListIngestionSettingConnectionStrings() {}
+    public interface BuilderApplicator {
+        public void apply(ListIngestionSettingConnectionStringsArgs.Builder a);
+    }
+    private static ListIngestionSettingConnectionStringsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListIngestionSettingConnectionStringsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Connection string for ingesting security data and logs
  * API Version: 2021-01-15-preview.
  * 
- *
- * Connection string for ingesting security data and logs
+     *
+     * Connection string for ingesting security data and logs
  * 
- */
+     */
+    public static CompletableFuture<ListIngestionSettingConnectionStringsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Connection string for ingesting security data and logs
+     * API Version: 2021-01-15-preview.
+     * 
+     *
+         * Connection string for ingesting security data and logs
+     * 
+     */
     public static CompletableFuture<ListIngestionSettingConnectionStringsResult> invokeAsync(ListIngestionSettingConnectionStringsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:listIngestionSettingConnectionStrings", TypeShape.of(ListIngestionSettingConnectionStringsResult.class), args == null ? ListIngestionSettingConnectionStringsArgs.Empty : args, Utilities.withVersion(options));
     }

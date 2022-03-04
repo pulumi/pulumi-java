@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExec;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFile;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkg;
@@ -58,35 +58,35 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
     /**
      * Exec resource
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceExec> getExec() {
         return Optional.ofNullable(this.exec);
     }
     /**
      * A remote or local source.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceFile> getFile() {
         return Optional.ofNullable(this.file);
     }
     /**
      * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Package resource
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkg> getPkg() {
         return Optional.ofNullable(this.pkg);
     }
     /**
      * Package repository resource
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepository> getRepository() {
         return Optional.ofNullable(this.repository);
     }
@@ -143,7 +143,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
             this.repository = repository;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResource build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResource(exec, file, id, pkg, repository);
         }

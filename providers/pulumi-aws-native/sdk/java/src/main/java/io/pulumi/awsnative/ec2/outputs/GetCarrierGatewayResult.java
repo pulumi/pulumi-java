@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.CarrierGatewayTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class GetCarrierGatewayResult {
     /**
      * The ID of the carrier gateway.
      * 
-     */
+    */
     public Optional<String> getCarrierGatewayId() {
         return Optional.ofNullable(this.carrierGatewayId);
     }
     /**
      * The ID of the owner.
      * 
-     */
+    */
     public Optional<String> getOwnerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * The state of the carrier gateway.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The tags for the carrier gateway.
      * 
-     */
+    */
     public List<CarrierGatewayTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -120,7 +120,6 @@ public final class GetCarrierGatewayResult {
             this.tags = tags;
             return this;
         }
-
         public GetCarrierGatewayResult build() {
             return new GetCarrierGatewayResult(carrierGatewayId, ownerId, state, tags);
         }

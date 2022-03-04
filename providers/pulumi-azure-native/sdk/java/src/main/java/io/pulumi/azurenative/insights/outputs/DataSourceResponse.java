@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DataSourceConfigurationResponse;
 import io.pulumi.azurenative.insights.outputs.SinkConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class DataSourceResponse {
     /**
      * Datasource kind
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
@@ -82,7 +82,6 @@ public final class DataSourceResponse {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
-
         public DataSourceResponse build() {
             return new DataSourceResponse(configuration, kind, sinks);
         }

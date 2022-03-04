@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.myedgeorder.Utilities;
@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListConfigurations {
-/**
- * The list of configurations.
+    private ListConfigurations() {}
+    public interface BuilderApplicator {
+        public void apply(ListConfigurationsArgs.Builder a);
+    }
+    private static ListConfigurationsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListConfigurationsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of configurations.
  * API Version: 2020-12-01-preview.
  * 
- *
- * The list of configurations.
+     *
+     * The list of configurations.
  * 
- */
+     */
+    public static CompletableFuture<ListConfigurationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of configurations.
+     * API Version: 2020-12-01-preview.
+     * 
+     *
+         * The list of configurations.
+     * 
+     */
     public static CompletableFuture<ListConfigurationsResult> invokeAsync(ListConfigurationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args == null ? ListConfigurationsArgs.Empty : args, Utilities.withVersion(options));
     }

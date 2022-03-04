@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ValueValidationResponse {
     /**
      * List of allowed values for the parameter.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }
@@ -53,7 +53,6 @@ public final class ValueValidationResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ValueValidationResponse build() {
             return new ValueValidationResponse(values);
         }

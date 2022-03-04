@@ -15,7 +15,7 @@ import io.pulumi.azurenative.network.inputs.PublicIPAddressSkuArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ddosSettings")
-    private final @Nullable Input<DdosSettingsArgs> ddosSettings;
+      private final @Nullable Input<DdosSettingsArgs> ddosSettings;
 
     public Input<DdosSettingsArgs> getDdosSettings() {
         return this.ddosSettings == null ? Input.empty() : this.ddosSettings;
@@ -44,7 +44,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dnsSettings")
-    private final @Nullable Input<PublicIPAddressDnsSettingsArgs> dnsSettings;
+      private final @Nullable Input<PublicIPAddressDnsSettingsArgs> dnsSettings;
 
     public Input<PublicIPAddressDnsSettingsArgs> getDnsSettings() {
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
@@ -55,7 +55,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -66,7 +66,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -77,7 +77,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-    private final @Nullable Input<Integer> idleTimeoutInMinutes;
+      private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
     public Input<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
@@ -88,7 +88,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -99,7 +99,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipTags")
-    private final @Nullable Input<List<IpTagArgs>> ipTags;
+      private final @Nullable Input<List<IpTagArgs>> ipTags;
 
     public Input<List<IpTagArgs>> getIpTags() {
         return this.ipTags == null ? Input.empty() : this.ipTags;
@@ -110,7 +110,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkedPublicIPAddress")
-    private final @Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
+      private final @Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
 
     public Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> getLinkedPublicIPAddress() {
         return this.linkedPublicIPAddress == null ? Input.empty() : this.linkedPublicIPAddress;
@@ -121,7 +121,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -132,7 +132,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="migrationPhase")
-    private final @Nullable Input<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
+      private final @Nullable Input<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
 
     public Input<Either<String,PublicIPAddressMigrationPhase>> getMigrationPhase() {
         return this.migrationPhase == null ? Input.empty() : this.migrationPhase;
@@ -143,7 +143,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="natGateway")
-    private final @Nullable Input<NatGatewayArgs> natGateway;
+      private final @Nullable Input<NatGatewayArgs> natGateway;
 
     public Input<NatGatewayArgs> getNatGateway() {
         return this.natGateway == null ? Input.empty() : this.natGateway;
@@ -154,7 +154,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicIPAddressVersion")
-    private final @Nullable Input<Either<String,IPVersion>> publicIPAddressVersion;
+      private final @Nullable Input<Either<String,IPVersion>> publicIPAddressVersion;
 
     public Input<Either<String,IPVersion>> getPublicIPAddressVersion() {
         return this.publicIPAddressVersion == null ? Input.empty() : this.publicIPAddressVersion;
@@ -165,7 +165,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicIPAllocationMethod")
-    private final @Nullable Input<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
+      private final @Nullable Input<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
 
     public Input<Either<String,IPAllocationMethod>> getPublicIPAllocationMethod() {
         return this.publicIPAllocationMethod == null ? Input.empty() : this.publicIPAllocationMethod;
@@ -176,7 +176,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicIPPrefix")
-    private final @Nullable Input<SubResourceArgs> publicIPPrefix;
+      private final @Nullable Input<SubResourceArgs> publicIPPrefix;
 
     public Input<SubResourceArgs> getPublicIPPrefix() {
         return this.publicIPPrefix == null ? Input.empty() : this.publicIPPrefix;
@@ -187,7 +187,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicIpAddressName")
-    private final @Nullable Input<String> publicIpAddressName;
+      private final @Nullable Input<String> publicIpAddressName;
 
     public Input<String> getPublicIpAddressName() {
         return this.publicIpAddressName == null ? Input.empty() : this.publicIpAddressName;
@@ -198,7 +198,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -209,7 +209,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="servicePublicIPAddress")
-    private final @Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
+      private final @Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
 
     public Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> getServicePublicIPAddress() {
         return this.servicePublicIPAddress == null ? Input.empty() : this.servicePublicIPAddress;
@@ -220,7 +220,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<PublicIPAddressSkuArgs> sku;
+      private final @Nullable Input<PublicIPAddressSkuArgs> sku;
 
     public Input<PublicIPAddressSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -231,7 +231,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -242,7 +242,7 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -571,7 +571,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public PublicIPAddressArgs build() {
             return new PublicIPAddressArgs(ddosSettings, dnsSettings, extendedLocation, id, idleTimeoutInMinutes, ipAddress, ipTags, linkedPublicIPAddress, location, migrationPhase, natGateway, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, publicIpAddressName, resourceGroupName, servicePublicIPAddress, sku, tags, zones);
         }

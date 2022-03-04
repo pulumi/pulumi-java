@@ -6,17 +6,33 @@ package io.pulumi.awsnative.backup;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.backup.inputs.GetBackupVaultArgs;
 import io.pulumi.awsnative.backup.outputs.GetBackupVaultResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupVault {
-/**
- * Resource Type definition for AWS::Backup::BackupVault
+    private GetBackupVault() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupVaultArgs.Builder a);
+    }
+    private static GetBackupVaultArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupVaultArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Backup::BackupVault
  * 
- */
+     */
+    public static CompletableFuture<GetBackupVaultResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Backup::BackupVault
+     * 
+     */
     public static CompletableFuture<GetBackupVaultResult> invokeAsync(GetBackupVaultArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getBackupVault", TypeShape.of(GetBackupVaultResult.class), args == null ? GetBackupVaultArgs.Empty : args, Utilities.withVersion(options));
     }

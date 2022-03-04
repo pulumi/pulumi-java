@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ComputeIsolationPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableComputeIsolation")
-    private final @Nullable Boolean enableComputeIsolation;
+      private final @Nullable Boolean enableComputeIsolation;
 
     public Optional<Boolean> getEnableComputeIsolation() {
         return this.enableComputeIsolation == null ? Optional.empty() : Optional.ofNullable(this.enableComputeIsolation);
@@ -35,7 +35,7 @@ public final class ComputeIsolationPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="hostSku")
-    private final @Nullable String hostSku;
+      private final @Nullable String hostSku;
 
     public Optional<String> getHostSku() {
         return this.hostSku == null ? Optional.empty() : Optional.ofNullable(this.hostSku);
@@ -84,7 +84,6 @@ public final class ComputeIsolationPropertiesResponse extends io.pulumi.resource
             this.hostSku = hostSku;
             return this;
         }
-
         public ComputeIsolationPropertiesResponse build() {
             return new ComputeIsolationPropertiesResponse(enableComputeIsolation, hostSku);
         }

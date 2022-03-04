@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KeyIdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+      private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
@@ -59,7 +59,6 @@ public final class KeyIdResponse extends io.pulumi.resources.InvokeArgs {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public KeyIdResponse build() {
             return new KeyIdResponse(keyId);
         }

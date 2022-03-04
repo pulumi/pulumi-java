@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -35,7 +35,7 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -46,7 +46,7 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -120,7 +120,6 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
-
         public ConnectionMonitorDestinationArgs build() {
             return new ConnectionMonitorDestinationArgs(address, port, resourceId);
         }

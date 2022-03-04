@@ -6,21 +6,41 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.inputs.GetComponentCurrentBillingFeatureArgs;
 import io.pulumi.azurenative.insights.outputs.GetComponentCurrentBillingFeatureResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComponentCurrentBillingFeature {
-/**
- * An Application Insights component billing features
+    private GetComponentCurrentBillingFeature() {}
+    public interface BuilderApplicator {
+        public void apply(GetComponentCurrentBillingFeatureArgs.Builder a);
+    }
+    private static GetComponentCurrentBillingFeatureArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetComponentCurrentBillingFeatureArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Application Insights component billing features
  * API Version: 2015-05-01.
  * 
- *
- * An Application Insights component billing features
+     *
+     * An Application Insights component billing features
  * 
- */
+     */
+    public static CompletableFuture<GetComponentCurrentBillingFeatureResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Application Insights component billing features
+     * API Version: 2015-05-01.
+     * 
+     *
+         * An Application Insights component billing features
+     * 
+     */
     public static CompletableFuture<GetComponentCurrentBillingFeatureResult> invokeAsync(GetComponentCurrentBillingFeatureArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getComponentCurrentBillingFeature", TypeShape.of(GetComponentCurrentBillingFeatureResult.class), args == null ? GetComponentCurrentBillingFeatureArgs.Empty : args, Utilities.withVersion(options));
     }

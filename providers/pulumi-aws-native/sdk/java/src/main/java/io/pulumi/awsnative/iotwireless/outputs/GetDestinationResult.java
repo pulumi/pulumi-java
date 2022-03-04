@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.enums.DestinationExpressionType;
 import io.pulumi.awsnative.iotwireless.outputs.DestinationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -64,42 +64,42 @@ public final class GetDestinationResult {
     /**
      * Destination arn. Returned after successful create.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Destination description
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Destination expression
      * 
-     */
+    */
     public Optional<String> getExpression() {
         return Optional.ofNullable(this.expression);
     }
     /**
      * Must be RuleName
      * 
-     */
+    */
     public Optional<DestinationExpressionType> getExpressionType() {
         return Optional.ofNullable(this.expressionType);
     }
     /**
      * AWS role ARN that grants access
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * A list of key-value pairs that contain metadata for the destination.
      * 
-     */
+    */
     public List<DestinationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -163,7 +163,6 @@ public final class GetDestinationResult {
             this.tags = tags;
             return this;
         }
-
         public GetDestinationResult build() {
             return new GetDestinationResult(arn, description, expression, expressionType, roleArn, tags);
         }

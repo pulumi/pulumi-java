@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class FunctionEventTriggerFailurePolicy {
     /**
      * Whether the function should be retried on failure. Defaults to `false`.
      * 
-     */
+    */
     public Boolean getRetry() {
         return this.retry;
     }
@@ -52,7 +52,6 @@ public final class FunctionEventTriggerFailurePolicy {
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
-
         public FunctionEventTriggerFailurePolicy build() {
             return new FunctionEventTriggerFailurePolicy(retry);
         }

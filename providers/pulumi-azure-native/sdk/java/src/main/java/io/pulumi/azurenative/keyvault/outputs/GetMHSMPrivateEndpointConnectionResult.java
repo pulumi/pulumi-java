@@ -7,7 +7,7 @@ import io.pulumi.azurenative.keyvault.outputs.MHSMPrivateEndpointResponse;
 import io.pulumi.azurenative.keyvault.outputs.MHSMPrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.keyvault.outputs.ManagedHsmSkuResponse;
 import io.pulumi.azurenative.keyvault.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -101,77 +101,77 @@ public final class GetMHSMPrivateEndpointConnectionResult {
     /**
      * Modified whenever there is a change in the state of private endpoint connection.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The Azure Resource Manager resource ID for the managed HSM Pool.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The supported Azure location where the managed HSM Pool should be created.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the managed HSM Pool.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the private endpoint object.
      * 
-     */
+    */
     public Optional<MHSMPrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Approval state of the private link connection.
      * 
-     */
+    */
     public Optional<MHSMPrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * SKU details
      * 
-     */
+    */
     public Optional<ManagedHsmSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the key vault resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type of the managed HSM Pool.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -270,7 +270,6 @@ public final class GetMHSMPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMHSMPrivateEndpointConnectionResult build() {
             return new GetMHSMPrivateEndpointConnectionResult(etag, id, location, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, sku, systemData, tags, type);
         }

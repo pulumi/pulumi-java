@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecr.enums.RepositoryImageTagMutability;
 import io.pulumi.awsnative.ecr.outputs.RepositoryImageScanningConfiguration;
 import io.pulumi.awsnative.ecr.outputs.RepositoryLifecyclePolicy;
 import io.pulumi.awsnative.ecr.outputs.RepositoryTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -64,7 +64,7 @@ public final class GetRepositoryResult {
     /**
      * The image tag mutability setting for the repository.
      * 
-     */
+    */
     public Optional<RepositoryImageTagMutability> getImageTagMutability() {
         return Optional.ofNullable(this.imageTagMutability);
     }
@@ -74,7 +74,7 @@ public final class GetRepositoryResult {
     /**
      * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
      * 
-     */
+    */
     public Optional<Object> getRepositoryPolicyText() {
         return Optional.ofNullable(this.repositoryPolicyText);
     }
@@ -84,7 +84,7 @@ public final class GetRepositoryResult {
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<RepositoryTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -155,7 +155,6 @@ public final class GetRepositoryResult {
             this.tags = tags;
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(arn, imageScanningConfiguration, imageTagMutability, lifecyclePolicy, repositoryPolicyText, repositoryUri, tags);
         }

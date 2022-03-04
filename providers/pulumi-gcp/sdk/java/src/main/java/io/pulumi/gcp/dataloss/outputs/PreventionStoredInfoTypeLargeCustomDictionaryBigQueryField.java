@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
      * Designated field in the BigQuery table.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField getField() {
         return this.field;
     }
@@ -43,7 +43,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
      * Field in a BigQuery table where each cell represents a dictionary phrase.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable getTable() {
         return this.table;
     }
@@ -79,7 +79,6 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField(field, table);
         }

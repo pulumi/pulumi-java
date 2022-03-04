@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -90,70 +90,70 @@ public final class GetHybridRunbookWorkerResult {
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the assigned machine IP address.
      * 
-     */
+    */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * Last Heartbeat from the Worker
      * 
-     */
+    */
     public Optional<String> getLastSeenDateTime() {
         return Optional.ofNullable(this.lastSeenDateTime);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the registration time of the worker machine.
      * 
-     */
+    */
     public Optional<String> getRegisteredDateTime() {
         return Optional.ofNullable(this.registeredDateTime);
     }
     /**
      * Resource system metadata.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Azure Resource Manager Id for a virtual machine.
      * 
-     */
+    */
     public Optional<String> getVmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }
     /**
      * Name of the HybridWorker.
      * 
-     */
+    */
     public Optional<String> getWorkerName() {
         return Optional.ofNullable(this.workerName);
     }
     /**
      * Type of the HybridWorker.
      * 
-     */
+    */
     public Optional<String> getWorkerType() {
         return Optional.ofNullable(this.workerType);
     }
@@ -245,7 +245,6 @@ public final class GetHybridRunbookWorkerResult {
             this.workerType = workerType;
             return this;
         }
-
         public GetHybridRunbookWorkerResult build() {
             return new GetHybridRunbookWorkerResult(id, ip, lastSeenDateTime, name, registeredDateTime, systemData, type, vmResourceId, workerName, workerType);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ApplicationGatewayRedirectType;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -39,7 +39,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="includePath")
-    private final @Nullable Input<Boolean> includePath;
+      private final @Nullable Input<Boolean> includePath;
 
     public Input<Boolean> getIncludePath() {
         return this.includePath == null ? Input.empty() : this.includePath;
@@ -50,7 +50,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="includeQueryString")
-    private final @Nullable Input<Boolean> includeQueryString;
+      private final @Nullable Input<Boolean> includeQueryString;
 
     public Input<Boolean> getIncludeQueryString() {
         return this.includeQueryString == null ? Input.empty() : this.includeQueryString;
@@ -61,7 +61,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -72,7 +72,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="pathRules")
-    private final @Nullable Input<List<SubResourceArgs>> pathRules;
+      private final @Nullable Input<List<SubResourceArgs>> pathRules;
 
     public Input<List<SubResourceArgs>> getPathRules() {
         return this.pathRules == null ? Input.empty() : this.pathRules;
@@ -83,7 +83,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="redirectType")
-    private final @Nullable Input<Either<String,ApplicationGatewayRedirectType>> redirectType;
+      private final @Nullable Input<Either<String,ApplicationGatewayRedirectType>> redirectType;
 
     public Input<Either<String,ApplicationGatewayRedirectType>> getRedirectType() {
         return this.redirectType == null ? Input.empty() : this.redirectType;
@@ -94,7 +94,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="requestRoutingRules")
-    private final @Nullable Input<List<SubResourceArgs>> requestRoutingRules;
+      private final @Nullable Input<List<SubResourceArgs>> requestRoutingRules;
 
     public Input<List<SubResourceArgs>> getRequestRoutingRules() {
         return this.requestRoutingRules == null ? Input.empty() : this.requestRoutingRules;
@@ -105,7 +105,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetListener")
-    private final @Nullable Input<SubResourceArgs> targetListener;
+      private final @Nullable Input<SubResourceArgs> targetListener;
 
     public Input<SubResourceArgs> getTargetListener() {
         return this.targetListener == null ? Input.empty() : this.targetListener;
@@ -116,7 +116,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetUrl")
-    private final @Nullable Input<String> targetUrl;
+      private final @Nullable Input<String> targetUrl;
 
     public Input<String> getTargetUrl() {
         return this.targetUrl == null ? Input.empty() : this.targetUrl;
@@ -127,7 +127,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="urlPathMaps")
-    private final @Nullable Input<List<SubResourceArgs>> urlPathMaps;
+      private final @Nullable Input<List<SubResourceArgs>> urlPathMaps;
 
     public Input<List<SubResourceArgs>> getUrlPathMaps() {
         return this.urlPathMaps == null ? Input.empty() : this.urlPathMaps;
@@ -306,7 +306,6 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             this.urlPathMaps = Input.ofNullable(urlPathMaps);
             return this;
         }
-
         public ApplicationGatewayRedirectConfigurationArgs build() {
             return new ApplicationGatewayRedirectConfigurationArgs(id, includePath, includeQueryString, name, pathRules, redirectType, requestRoutingRules, targetListener, targetUrl, urlPathMaps);
         }

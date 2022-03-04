@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -34,7 +34,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="downloadUri", required=true)
-    private final String downloadUri;
+      private final String downloadUri;
 
     public String getDownloadUri() {
         return this.downloadUri;
@@ -45,7 +45,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="expiration")
-    private final @Nullable String expiration;
+      private final @Nullable String expiration;
 
     public Optional<String> getExpiration() {
         return this.expiration == null ? Optional.empty() : Optional.ofNullable(this.expiration);
@@ -56,7 +56,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="fulfilledDateTime")
-    private final @Nullable String fulfilledDateTime;
+      private final @Nullable String fulfilledDateTime;
 
     public Optional<String> getFulfilledDateTime() {
         return this.fulfilledDateTime == null ? Optional.empty() : Optional.ofNullable(this.fulfilledDateTime);
@@ -67,7 +67,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -78,7 +78,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -89,7 +89,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="reviewHistoryPeriodEndDateTime")
-    private final @Nullable String reviewHistoryPeriodEndDateTime;
+      private final @Nullable String reviewHistoryPeriodEndDateTime;
 
     public Optional<String> getReviewHistoryPeriodEndDateTime() {
         return this.reviewHistoryPeriodEndDateTime == null ? Optional.empty() : Optional.ofNullable(this.reviewHistoryPeriodEndDateTime);
@@ -100,7 +100,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="reviewHistoryPeriodStartDateTime")
-    private final @Nullable String reviewHistoryPeriodStartDateTime;
+      private final @Nullable String reviewHistoryPeriodStartDateTime;
 
     public Optional<String> getReviewHistoryPeriodStartDateTime() {
         return this.reviewHistoryPeriodStartDateTime == null ? Optional.empty() : Optional.ofNullable(this.reviewHistoryPeriodStartDateTime);
@@ -111,7 +111,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="runDateTime")
-    private final @Nullable String runDateTime;
+      private final @Nullable String runDateTime;
 
     public Optional<String> getRunDateTime() {
         return this.runDateTime == null ? Optional.empty() : Optional.ofNullable(this.runDateTime);
@@ -122,7 +122,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -133,7 +133,7 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -272,7 +272,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccessReviewHistoryInstanceResponse build() {
             return new AccessReviewHistoryInstanceResponse(displayName, downloadUri, expiration, fulfilledDateTime, id, name, reviewHistoryPeriodEndDateTime, reviewHistoryPeriodStartDateTime, runDateTime, status, type);
         }

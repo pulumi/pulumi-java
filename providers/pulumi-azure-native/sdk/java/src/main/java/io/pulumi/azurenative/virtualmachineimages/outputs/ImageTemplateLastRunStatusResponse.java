@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,35 +54,35 @@ public final class ImageTemplateLastRunStatusResponse {
     /**
      * End time of the last run (UTC)
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Verbose information about the last run state
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * State of the last run
      * 
-     */
+    */
     public Optional<String> getRunState() {
         return Optional.ofNullable(this.runState);
     }
     /**
      * Sub-state of the last run
      * 
-     */
+    */
     public Optional<String> getRunSubState() {
         return Optional.ofNullable(this.runSubState);
     }
     /**
      * Start time of the last run (UTC)
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -139,7 +139,6 @@ public final class ImageTemplateLastRunStatusResponse {
             this.startTime = startTime;
             return this;
         }
-
         public ImageTemplateLastRunStatusResponse build() {
             return new ImageTemplateLastRunStatusResponse(endTime, message, runState, runSubState, startTime);
         }

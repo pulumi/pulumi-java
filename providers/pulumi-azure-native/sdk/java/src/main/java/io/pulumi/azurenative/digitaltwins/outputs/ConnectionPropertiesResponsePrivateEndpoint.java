@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ConnectionPropertiesResponsePrivateEndpoint {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -52,7 +52,6 @@ public final class ConnectionPropertiesResponsePrivateEndpoint {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ConnectionPropertiesResponsePrivateEndpoint build() {
             return new ConnectionPropertiesResponsePrivateEndpoint(id);
         }

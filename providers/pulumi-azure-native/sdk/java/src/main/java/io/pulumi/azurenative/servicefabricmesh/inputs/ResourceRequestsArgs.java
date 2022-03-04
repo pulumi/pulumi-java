@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cpu", required=true)
-    private final Input<Double> cpu;
+      private final Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu;
@@ -33,7 +33,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memoryInGB", required=true)
-    private final Input<Double> memoryInGB;
+      private final Input<Double> memoryInGB;
 
     public Input<Double> getMemoryInGB() {
         return this.memoryInGB;
@@ -92,7 +92,6 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
             this.memoryInGB = Input.of(Objects.requireNonNull(memoryInGB));
             return this;
         }
-
         public ResourceRequestsArgs build() {
             return new ResourceRequestsArgs(cpu, memoryInGB);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -55,35 +55,35 @@ public final class ResourceModelWithAllowedPropertySetResponseSku {
     /**
      * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * If the service has different generations of hardware, for the same SKU, then that can be captured here.
      * 
-     */
+    */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The name of the SKU. Ex - P3. It is typically a letter+number code
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
      * 
-     */
+    */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
@@ -140,7 +140,6 @@ public final class ResourceModelWithAllowedPropertySetResponseSku {
             this.tier = tier;
             return this;
         }
-
         public ResourceModelWithAllowedPropertySetResponseSku build() {
             return new ResourceModelWithAllowedPropertySetResponseSku(capacity, family, name, size, tier);
         }

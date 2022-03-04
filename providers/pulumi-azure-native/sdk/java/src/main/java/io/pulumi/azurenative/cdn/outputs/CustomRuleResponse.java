@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.MatchConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -57,35 +57,35 @@ public final class CustomRuleResponse {
     /**
      * Describes what action to be applied when rule matches
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
      * 
-     */
+    */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * List of match conditions.
      * 
-     */
+    */
     public List<MatchConditionResponse> getMatchConditions() {
         return this.matchConditions;
     }
     /**
      * Defines the name of the custom rule
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines in what order this rule be evaluated in the overall list of custom rules
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
@@ -142,7 +142,6 @@ public final class CustomRuleResponse {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public CustomRuleResponse build() {
             return new CustomRuleResponse(action, enabledState, matchConditions, name, priority);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     /**
      * A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
@@ -52,7 +52,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath(path);
         }

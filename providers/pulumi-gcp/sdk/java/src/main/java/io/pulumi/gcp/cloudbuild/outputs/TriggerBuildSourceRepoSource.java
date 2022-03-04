@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -92,14 +92,14 @@ public final class TriggerBuildSourceRepoSource {
      * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
      * described at https://github.com/google/re2/wiki/Syntax
      * 
-     */
+    */
     public Optional<String> getBranchName() {
         return Optional.ofNullable(this.branchName);
     }
     /**
      * Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
      * 
-     */
+    */
     public Optional<String> getCommitSha() {
         return Optional.ofNullable(this.commitSha);
     }
@@ -114,14 +114,14 @@ public final class TriggerBuildSourceRepoSource {
      * which specifies an absolute path, the `RepoSource` `dir` is ignored
      * for the step's execution.
      * 
-     */
+    */
     public Optional<String> getDir() {
         return Optional.ofNullable(this.dir);
     }
     /**
      * Only trigger a build if the revision regex does NOT match the revision regex.
      * 
-     */
+    */
     public Optional<Boolean> getInvertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }
@@ -129,21 +129,21 @@ public final class TriggerBuildSourceRepoSource {
      * ID of the project that owns the Cloud Source Repository.
      * If omitted, the project ID requesting the build is assumed.
      * 
-     */
+    */
     public Optional<String> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }
     /**
      * Name of the Cloud Source Repository.
      * 
-     */
+    */
     public String getRepoName() {
         return this.repoName;
     }
     /**
      * Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
-     */
+    */
     public Map<String,String> getSubstitutions() {
         return this.substitutions == null ? Map.of() : this.substitutions;
     }
@@ -152,7 +152,7 @@ public final class TriggerBuildSourceRepoSource {
      * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
      * described at https://github.com/google/re2/wiki/Syntax
      * 
-     */
+    */
     public Optional<String> getTagName() {
         return Optional.ofNullable(this.tagName);
     }
@@ -230,7 +230,6 @@ public final class TriggerBuildSourceRepoSource {
             this.tagName = tagName;
             return this;
         }
-
         public TriggerBuildSourceRepoSource build() {
             return new TriggerBuildSourceRepoSource(branchName, commitSha, dir, invertRegex, projectId, repoName, substitutions, tagName);
         }

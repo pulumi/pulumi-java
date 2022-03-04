@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.ScalarFunctionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,28 +48,28 @@ public final class FunctionResponse {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The properties that are associated with a function.
      * 
-     */
+    */
     public Optional<ScalarFunctionPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -119,7 +119,6 @@ public final class FunctionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FunctionResponse build() {
             return new FunctionResponse(id, name, properties, type);
         }

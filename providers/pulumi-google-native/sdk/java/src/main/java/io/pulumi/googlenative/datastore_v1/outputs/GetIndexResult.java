@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastore_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastore_v1.outputs.GoogleDatastoreAdminV1IndexedPropertyResponse;
 import java.lang.String;
 import java.util.List;
@@ -61,42 +61,42 @@ public final class GetIndexResult {
     /**
      * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
      * 
-     */
+    */
     public String getAncestor() {
         return this.ancestor;
     }
     /**
      * The resource ID of the index.
      * 
-     */
+    */
     public String getIndexId() {
         return this.indexId;
     }
     /**
      * The entity kind to which this index applies.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Project ID.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * An ordered sequence of property names and their index attributes.
      * 
-     */
+    */
     public List<GoogleDatastoreAdminV1IndexedPropertyResponse> getProperties() {
         return this.properties;
     }
     /**
      * The state of the index.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -160,7 +160,6 @@ public final class GetIndexResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetIndexResult build() {
             return new GetIndexResult(ancestor, indexId, kind, project, properties, state);
         }

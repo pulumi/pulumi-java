@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayBackendAddressPoolResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayBackendHealthHttpSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,14 +34,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandResult {
     /**
      * Reference to an ApplicationGatewayBackendAddressPool resource.
      * 
-     */
+    */
     public Optional<ApplicationGatewayBackendAddressPoolResponse> getBackendAddressPool() {
         return Optional.ofNullable(this.backendAddressPool);
     }
     /**
      * Application gateway BackendHealthHttp settings.
      * 
-     */
+    */
     public Optional<ApplicationGatewayBackendHealthHttpSettingsResponse> getBackendHealthHttpSettings() {
         return Optional.ofNullable(this.backendHealthHttpSettings);
     }
@@ -77,7 +77,6 @@ public final class GetApplicationGatewayBackendHealthOnDemandResult {
             this.backendHealthHttpSettings = backendHealthHttpSettings;
             return this;
         }
-
         public GetApplicationGatewayBackendHealthOnDemandResult build() {
             return new GetApplicationGatewayBackendHealthOnDemandResult(backendAddressPool, backendHealthHttpSettings);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.KeyVaultKeyReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="keyEncryptionKey")
-    private final @Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey;
+      private final @Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
     public Input<KeyVaultKeyReferenceArgs> getKeyEncryptionKey() {
         return this.keyEncryptionKey == null ? Input.empty() : this.keyEncryptionKey;
@@ -66,7 +66,6 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
             this.keyEncryptionKey = Input.ofNullable(keyEncryptionKey);
             return this;
         }
-
         public CacheEncryptionSettingsArgs build() {
             return new CacheEncryptionSettingsArgs(keyEncryptionKey);
         }

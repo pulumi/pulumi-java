@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
+      private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
     public List<NetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
@@ -36,7 +36,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="macAddress")
-    private final @Nullable String macAddress;
+      private final @Nullable String macAddress;
 
     public Optional<String> getMacAddress() {
         return this.macAddress == null ? Optional.empty() : Optional.ofNullable(this.macAddress);
@@ -47,7 +47,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="networkInterfaceName")
-    private final @Nullable String networkInterfaceName;
+      private final @Nullable String networkInterfaceName;
 
     public Optional<String> getNetworkInterfaceName() {
         return this.networkInterfaceName == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceName);
@@ -58,7 +58,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="vmSwitchType")
-    private final @Nullable String vmSwitchType;
+      private final @Nullable String vmSwitchType;
 
     public Optional<String> getVmSwitchType() {
         return this.vmSwitchType == null ? Optional.empty() : Optional.ofNullable(this.vmSwitchType);
@@ -127,7 +127,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
             this.vmSwitchType = vmSwitchType;
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(ipConfigurations, macAddress, networkInterfaceName, vmSwitchType);
         }

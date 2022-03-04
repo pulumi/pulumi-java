@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -63,42 +63,42 @@ public final class DataQualityJobDefinitionDataQualityAppSpecification {
     /**
      * An array of arguments for the container used to run the monitoring job.
      * 
-     */
+    */
     public List<String> getContainerArguments() {
         return this.containerArguments == null ? List.of() : this.containerArguments;
     }
     /**
      * Specifies the entrypoint for a container used to run the monitoring job.
      * 
-     */
+    */
     public List<String> getContainerEntrypoint() {
         return this.containerEntrypoint == null ? List.of() : this.containerEntrypoint;
     }
     /**
      * Sets the environment variables in the Docker container
      * 
-     */
+    */
     public Optional<Object> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
     /**
      * The container image to be run by the monitoring job.
      * 
-     */
+    */
     public String getImageUri() {
         return this.imageUri;
     }
     /**
      * An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
      * 
-     */
+    */
     public Optional<String> getPostAnalyticsProcessorSourceUri() {
         return Optional.ofNullable(this.postAnalyticsProcessorSourceUri);
     }
     /**
      * An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
      * 
-     */
+    */
     public Optional<String> getRecordPreprocessorSourceUri() {
         return Optional.ofNullable(this.recordPreprocessorSourceUri);
     }
@@ -162,7 +162,6 @@ public final class DataQualityJobDefinitionDataQualityAppSpecification {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }
-
         public DataQualityJobDefinitionDataQualityAppSpecification build() {
             return new DataQualityJobDefinitionDataQualityAppSpecification(containerArguments, containerEntrypoint, environment, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);
         }

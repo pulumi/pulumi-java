@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -31,7 +31,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="monthlyRetention")
-    private final @Nullable Input<String> monthlyRetention;
+      private final @Nullable Input<String> monthlyRetention;
 
     public Input<String> getMonthlyRetention() {
         return this.monthlyRetention == null ? Input.empty() : this.monthlyRetention;
@@ -42,7 +42,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+      private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -53,7 +53,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -75,7 +75,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="weekOfYear")
-    private final @Nullable Input<Integer> weekOfYear;
+      private final @Nullable Input<Integer> weekOfYear;
 
     public Input<Integer> getWeekOfYear() {
         return this.weekOfYear == null ? Input.empty() : this.weekOfYear;
@@ -86,7 +86,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="weeklyRetention")
-    private final @Nullable Input<String> weeklyRetention;
+      private final @Nullable Input<String> weeklyRetention;
 
     public Input<String> getWeeklyRetention() {
         return this.weeklyRetention == null ? Input.empty() : this.weeklyRetention;
@@ -97,7 +97,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="yearlyRetention")
-    private final @Nullable Input<String> yearlyRetention;
+      private final @Nullable Input<String> yearlyRetention;
 
     public Input<String> getYearlyRetention() {
         return this.yearlyRetention == null ? Input.empty() : this.yearlyRetention;
@@ -246,7 +246,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
             this.yearlyRetention = Input.ofNullable(yearlyRetention);
             return this;
         }
-
         public LongTermRetentionPolicyArgs build() {
             return new LongTermRetentionPolicyArgs(databaseName, monthlyRetention, policyName, resourceGroupName, serverName, weekOfYear, weeklyRetention, yearlyRetention);
         }

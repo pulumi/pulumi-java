@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLCustomRequestHandling;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WebACLCountAction extends io.pulumi.resources.InvokeArgs {
     public static final WebACLCountAction Empty = new WebACLCountAction();
 
     @InputImport(name="customRequestHandling")
-    private final @Nullable WebACLCustomRequestHandling customRequestHandling;
+      private final @Nullable WebACLCustomRequestHandling customRequestHandling;
 
     public Optional<WebACLCustomRequestHandling> getCustomRequestHandling() {
         return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
@@ -57,7 +57,6 @@ public final class WebACLCountAction extends io.pulumi.resources.InvokeArgs {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public WebACLCountAction build() {
             return new WebACLCountAction(customRequestHandling);
         }

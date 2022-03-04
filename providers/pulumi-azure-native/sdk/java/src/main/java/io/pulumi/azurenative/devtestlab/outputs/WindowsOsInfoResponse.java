@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class WindowsOsInfoResponse {
     /**
      * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
      * 
-     */
+    */
     public Optional<String> getWindowsOsState() {
         return Optional.ofNullable(this.windowsOsState);
     }
@@ -54,7 +54,6 @@ public final class WindowsOsInfoResponse {
             this.windowsOsState = windowsOsState;
             return this;
         }
-
         public WindowsOsInfoResponse build() {
             return new WindowsOsInfoResponse(windowsOsState);
         }

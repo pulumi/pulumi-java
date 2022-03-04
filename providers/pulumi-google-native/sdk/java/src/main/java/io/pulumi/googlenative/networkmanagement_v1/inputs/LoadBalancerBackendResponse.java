@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="healthCheckAllowingFirewallRules", required=true)
-    private final List<String> healthCheckAllowingFirewallRules;
+      private final List<String> healthCheckAllowingFirewallRules;
 
     public List<String> getHealthCheckAllowingFirewallRules() {
         return this.healthCheckAllowingFirewallRules;
@@ -44,7 +44,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="healthCheckBlockingFirewallRules", required=true)
-    private final List<String> healthCheckBlockingFirewallRules;
+      private final List<String> healthCheckBlockingFirewallRules;
 
     public List<String> getHealthCheckBlockingFirewallRules() {
         return this.healthCheckBlockingFirewallRules;
@@ -55,7 +55,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="healthCheckFirewallState", required=true)
-    private final String healthCheckFirewallState;
+      private final String healthCheckFirewallState;
 
     public String getHealthCheckFirewallState() {
         return this.healthCheckFirewallState;
@@ -66,7 +66,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -145,7 +145,6 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public LoadBalancerBackendResponse build() {
             return new LoadBalancerBackendResponse(displayName, healthCheckAllowingFirewallRules, healthCheckBlockingFirewallRules, healthCheckFirewallState, uri);
         }

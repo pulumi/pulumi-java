@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class JwtResponse {
     /**
      * The compact encoding of a JWS, which is always three base64 encoded strings joined by periods. For details, see: https://tools.ietf.org/html/rfc7515.html#section-3.1
      * 
-     */
+    */
     public String getCompactJwt() {
         return this.compactJwt;
     }
@@ -52,7 +52,6 @@ public final class JwtResponse {
             this.compactJwt = Objects.requireNonNull(compactJwt);
             return this;
         }
-
         public JwtResponse build() {
             return new JwtResponse(compactJwt);
         }

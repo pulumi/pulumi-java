@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.databoxedge.inputs.IoTDeviceInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName")
-    private final @Nullable Input<String> addonName;
+      private final @Nullable Input<String> addonName;
 
     public Input<String> getAddonName() {
         return this.addonName == null ? Input.empty() : this.addonName;
@@ -31,7 +31,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -42,7 +42,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTDeviceDetails", required=true)
-    private final Input<IoTDeviceInfoArgs> ioTDeviceDetails;
+      private final Input<IoTDeviceInfoArgs> ioTDeviceDetails;
 
     public Input<IoTDeviceInfoArgs> getIoTDeviceDetails() {
         return this.ioTDeviceDetails;
@@ -53,7 +53,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTEdgeDeviceDetails", required=true)
-    private final Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
+      private final Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
     public Input<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
@@ -65,7 +65,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -76,7 +76,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName", required=true)
-    private final Input<String> roleName;
+      private final Input<String> roleName;
 
     public Input<String> getRoleName() {
         return this.roleName;
@@ -221,7 +221,6 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
             this.roleName = Input.of(Objects.requireNonNull(roleName));
             return this;
         }
-
         public IoTAddonArgs build() {
             return new IoTAddonArgs(addonName, deviceName, ioTDeviceDetails, ioTEdgeDeviceDetails, kind, resourceGroupName, roleName);
         }

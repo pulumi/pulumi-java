@@ -6,21 +6,41 @@ package io.pulumi.azurenative.eventgrid;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionArgs;
 import io.pulumi.azurenative.eventgrid.outputs.GetPartnerTopicEventSubscriptionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPartnerTopicEventSubscription {
-/**
- * Event Subscription
+    private GetPartnerTopicEventSubscription() {}
+    public interface BuilderApplicator {
+        public void apply(GetPartnerTopicEventSubscriptionArgs.Builder a);
+    }
+    private static GetPartnerTopicEventSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPartnerTopicEventSubscriptionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Event Subscription
  * API Version: 2020-04-01-preview.
  * 
- *
- * Event Subscription
+     *
+     * Event Subscription
  * 
- */
+     */
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Event Subscription
+     * API Version: 2020-04-01-preview.
+     * 
+     *
+         * Event Subscription
+     * 
+     */
     public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> invokeAsync(GetPartnerTopicEventSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerTopicEventSubscription", TypeShape.of(GetPartnerTopicEventSubscriptionResult.class), args == null ? GetPartnerTopicEventSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

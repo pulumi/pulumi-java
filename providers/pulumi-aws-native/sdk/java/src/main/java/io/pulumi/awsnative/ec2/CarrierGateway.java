@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ec2.CarrierGatewayArgs;
 import io.pulumi.awsnative.ec2.outputs.CarrierGatewayTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -91,6 +91,37 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
         return this.vpcId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CarrierGatewayArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ec2.CarrierGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ec2.CarrierGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CarrierGateway(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CarrierGateway(String name) {
+        this(name, CarrierGatewayArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CarrierGateway(String name, CarrierGatewayArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

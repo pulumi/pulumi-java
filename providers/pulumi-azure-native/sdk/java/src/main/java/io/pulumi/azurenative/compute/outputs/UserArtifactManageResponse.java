@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class UserArtifactManageResponse {
     /**
      * Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
      * 
-     */
+    */
     public String getInstall() {
         return this.install;
     }
     /**
      * Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
      * 
-     */
+    */
     public String getRemove() {
         return this.remove;
     }
     /**
      * Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
      * 
-     */
+    */
     public Optional<String> getUpdate() {
         return Optional.ofNullable(this.update);
     }
@@ -97,7 +97,6 @@ public final class UserArtifactManageResponse {
             this.update = update;
             return this;
         }
-
         public UserArtifactManageResponse build() {
             return new UserArtifactManageResponse(install, remove, update);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.PhraseMatcherRoleMatch;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.PhraseMatcherType;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs;
@@ -24,7 +24,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-    private final @Nullable Input<Boolean> active;
+      private final @Nullable Input<Boolean> active;
 
     public Input<Boolean> getActive() {
         return this.active == null ? Input.empty() : this.active;
@@ -35,14 +35,14 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -53,7 +53,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -64,14 +64,14 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phraseMatchRuleGroups")
-    private final @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
+      private final @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
 
     public Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> getPhraseMatchRuleGroups() {
         return this.phraseMatchRuleGroups == null ? Input.empty() : this.phraseMatchRuleGroups;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -82,7 +82,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleMatch")
-    private final @Nullable Input<PhraseMatcherRoleMatch> roleMatch;
+      private final @Nullable Input<PhraseMatcherRoleMatch> roleMatch;
 
     public Input<PhraseMatcherRoleMatch> getRoleMatch() {
         return this.roleMatch == null ? Input.empty() : this.roleMatch;
@@ -93,7 +93,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<PhraseMatcherType> type;
+      private final Input<PhraseMatcherType> type;
 
     public Input<PhraseMatcherType> getType() {
         return this.type;
@@ -104,7 +104,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionTag")
-    private final @Nullable Input<String> versionTag;
+      private final @Nullable Input<String> versionTag;
 
     public Input<String> getVersionTag() {
         return this.versionTag == null ? Input.empty() : this.versionTag;
@@ -268,7 +268,6 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
             this.versionTag = Input.ofNullable(versionTag);
             return this;
         }
-
         public PhraseMatcherArgs build() {
             return new PhraseMatcherArgs(active, displayName, location, name, phraseMatchRuleGroups, project, roleMatch, type, versionTag);
         }

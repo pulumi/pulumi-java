@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class AliasIpRangeResponse {
     /**
      * The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. This range may be a single IP address (such as 10.2.3.4), a netmask (such as /24) or a CIDR-formatted string (such as 10.1.2.0/24).
      * 
-     */
+    */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
     /**
      * The name of a subnetwork secondary IP range from which to allocate an IP alias range. If not specified, the primary range of the subnetwork is used.
      * 
-     */
+    */
     public String getSubnetworkRangeName() {
         return this.subnetworkRangeName;
     }
@@ -74,7 +74,6 @@ public final class AliasIpRangeResponse {
             this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
             return this;
         }
-
         public AliasIpRangeResponse build() {
             return new AliasIpRangeResponse(ipCidrRange, subnetworkRangeName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.HadoopJobResponse;
 import io.pulumi.googlenative.dataproc_v1.inputs.HiveJobResponse;
 import io.pulumi.googlenative.dataproc_v1.inputs.JobSchedulingResponse;
@@ -32,7 +32,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hadoopJob", required=true)
-    private final HadoopJobResponse hadoopJob;
+      private final HadoopJobResponse hadoopJob;
 
     public HadoopJobResponse getHadoopJob() {
         return this.hadoopJob;
@@ -43,7 +43,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hiveJob", required=true)
-    private final HiveJobResponse hiveJob;
+      private final HiveJobResponse hiveJob;
 
     public HiveJobResponse getHiveJob() {
         return this.hiveJob;
@@ -54,7 +54,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -65,7 +65,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pigJob", required=true)
-    private final PigJobResponse pigJob;
+      private final PigJobResponse pigJob;
 
     public PigJobResponse getPigJob() {
         return this.pigJob;
@@ -76,7 +76,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="prerequisiteStepIds", required=true)
-    private final List<String> prerequisiteStepIds;
+      private final List<String> prerequisiteStepIds;
 
     public List<String> getPrerequisiteStepIds() {
         return this.prerequisiteStepIds;
@@ -87,7 +87,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="prestoJob", required=true)
-    private final PrestoJobResponse prestoJob;
+      private final PrestoJobResponse prestoJob;
 
     public PrestoJobResponse getPrestoJob() {
         return this.prestoJob;
@@ -98,7 +98,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pysparkJob", required=true)
-    private final PySparkJobResponse pysparkJob;
+      private final PySparkJobResponse pysparkJob;
 
     public PySparkJobResponse getPysparkJob() {
         return this.pysparkJob;
@@ -109,7 +109,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scheduling", required=true)
-    private final JobSchedulingResponse scheduling;
+      private final JobSchedulingResponse scheduling;
 
     public JobSchedulingResponse getScheduling() {
         return this.scheduling;
@@ -120,7 +120,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sparkJob", required=true)
-    private final SparkJobResponse sparkJob;
+      private final SparkJobResponse sparkJob;
 
     public SparkJobResponse getSparkJob() {
         return this.sparkJob;
@@ -131,7 +131,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sparkRJob", required=true)
-    private final SparkRJobResponse sparkRJob;
+      private final SparkRJobResponse sparkRJob;
 
     public SparkRJobResponse getSparkRJob() {
         return this.sparkRJob;
@@ -142,7 +142,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sparkSqlJob", required=true)
-    private final SparkSqlJobResponse sparkSqlJob;
+      private final SparkSqlJobResponse sparkSqlJob;
 
     public SparkSqlJobResponse getSparkSqlJob() {
         return this.sparkSqlJob;
@@ -153,7 +153,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stepId", required=true)
-    private final String stepId;
+      private final String stepId;
 
     public String getStepId() {
         return this.stepId;
@@ -302,7 +302,6 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public OrderedJobResponse build() {
             return new OrderedJobResponse(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }

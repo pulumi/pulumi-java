@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class MsixPackageDependenciesResponse {
     /**
      * Name of package dependency.
      * 
-     */
+    */
     public Optional<String> getDependencyName() {
         return Optional.ofNullable(this.dependencyName);
     }
     /**
      * Dependency version required.
      * 
-     */
+    */
     public Optional<String> getMinVersion() {
         return Optional.ofNullable(this.minVersion);
     }
     /**
      * Name of dependency publisher.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -97,7 +97,6 @@ public final class MsixPackageDependenciesResponse {
             this.publisher = publisher;
             return this;
         }
-
         public MsixPackageDependenciesResponse build() {
             return new MsixPackageDependenciesResponse(dependencyName, minVersion, publisher);
         }

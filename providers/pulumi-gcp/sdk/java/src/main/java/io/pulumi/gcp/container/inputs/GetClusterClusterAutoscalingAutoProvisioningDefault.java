@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,28 +14,28 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault extends i
     public static final GetClusterClusterAutoscalingAutoProvisioningDefault Empty = new GetClusterClusterAutoscalingAutoProvisioningDefault();
 
     @InputImport(name="imageType", required=true)
-    private final String imageType;
+      private final String imageType;
 
     public String getImageType() {
         return this.imageType;
     }
 
     @InputImport(name="minCpuPlatform", required=true)
-    private final String minCpuPlatform;
+      private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
     }
 
     @InputImport(name="oauthScopes", required=true)
-    private final List<String> oauthScopes;
+      private final List<String> oauthScopes;
 
     public List<String> getOauthScopes() {
         return this.oauthScopes;
     }
 
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -104,7 +104,6 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault extends i
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public GetClusterClusterAutoscalingAutoProvisioningDefault build() {
             return new GetClusterClusterAutoscalingAutoProvisioningDefault(imageType, minCpuPlatform, oauthScopes, serviceAccount);
         }

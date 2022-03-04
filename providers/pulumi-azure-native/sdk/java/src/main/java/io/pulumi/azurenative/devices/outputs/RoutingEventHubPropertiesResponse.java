@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,56 +75,56 @@ public final class RoutingEventHubPropertiesResponse {
     /**
      * Method used to authenticate against the event hub endpoint
      * 
-     */
+    */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * The connection string of the event hub endpoint.
      * 
-     */
+    */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The url of the event hub endpoint. It must include the protocol sb://
      * 
-     */
+    */
     public Optional<String> getEndpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
     /**
      * Event hub name on the event hub namespace
      * 
-     */
+    */
     public Optional<String> getEntityPath() {
         return Optional.ofNullable(this.entityPath);
     }
     /**
      * Id of the event hub endpoint
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the resource group of the event hub endpoint.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * The subscription identifier of the event hub endpoint.
      * 
-     */
+    */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -202,7 +202,6 @@ public final class RoutingEventHubPropertiesResponse {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public RoutingEventHubPropertiesResponse build() {
             return new RoutingEventHubPropertiesResponse(authenticationType, connectionString, endpointUri, entityPath, id, name, resourceGroup, subscriptionId);
         }

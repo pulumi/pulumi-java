@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AccountEncryptionResponse {
     /**
      * Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
      * 
-     */
+    */
     public Optional<String> getKeySource() {
         return Optional.ofNullable(this.keySource);
     }
@@ -54,7 +54,6 @@ public final class AccountEncryptionResponse {
             this.keySource = keySource;
             return this;
         }
-
         public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(keySource);
         }

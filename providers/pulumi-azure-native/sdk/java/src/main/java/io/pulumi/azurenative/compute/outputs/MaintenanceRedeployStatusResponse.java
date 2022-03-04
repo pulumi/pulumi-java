@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class MaintenanceRedeployStatusResponse {
     /**
      * True, if customer is allowed to perform Maintenance.
      * 
-     */
+    */
     public Optional<Boolean> getIsCustomerInitiatedMaintenanceAllowed() {
         return Optional.ofNullable(this.isCustomerInitiatedMaintenanceAllowed);
     }
     /**
      * Message returned for the last Maintenance Operation.
      * 
-     */
+    */
     public Optional<String> getLastOperationMessage() {
         return Optional.ofNullable(this.lastOperationMessage);
     }
     /**
      * The Last Maintenance Operation Result Code.
      * 
-     */
+    */
     public Optional<String> getLastOperationResultCode() {
         return Optional.ofNullable(this.lastOperationResultCode);
     }
     /**
      * End Time for the Maintenance Window.
      * 
-     */
+    */
     public Optional<String> getMaintenanceWindowEndTime() {
         return Optional.ofNullable(this.maintenanceWindowEndTime);
     }
     /**
      * Start Time for the Maintenance Window.
      * 
-     */
+    */
     public Optional<String> getMaintenanceWindowStartTime() {
         return Optional.ofNullable(this.maintenanceWindowStartTime);
     }
     /**
      * End Time for the Pre Maintenance Window.
      * 
-     */
+    */
     public Optional<String> getPreMaintenanceWindowEndTime() {
         return Optional.ofNullable(this.preMaintenanceWindowEndTime);
     }
     /**
      * Start Time for the Pre Maintenance Window.
      * 
-     */
+    */
     public Optional<String> getPreMaintenanceWindowStartTime() {
         return Optional.ofNullable(this.preMaintenanceWindowStartTime);
     }
@@ -182,7 +182,6 @@ public final class MaintenanceRedeployStatusResponse {
             this.preMaintenanceWindowStartTime = preMaintenanceWindowStartTime;
             return this;
         }
-
         public MaintenanceRedeployStatusResponse build() {
             return new MaintenanceRedeployStatusResponse(isCustomerInitiatedMaintenanceAllowed, lastOperationMessage, lastOperationResultCode, maintenanceWindowEndTime, maintenanceWindowStartTime, preMaintenanceWindowEndTime, preMaintenanceWindowStartTime);
         }

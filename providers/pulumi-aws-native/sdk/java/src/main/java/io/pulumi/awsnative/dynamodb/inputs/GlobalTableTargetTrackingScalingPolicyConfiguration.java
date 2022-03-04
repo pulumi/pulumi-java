@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -17,28 +17,28 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration extends i
     public static final GlobalTableTargetTrackingScalingPolicyConfiguration Empty = new GlobalTableTargetTrackingScalingPolicyConfiguration();
 
     @InputImport(name="disableScaleIn")
-    private final @Nullable Boolean disableScaleIn;
+      private final @Nullable Boolean disableScaleIn;
 
     public Optional<Boolean> getDisableScaleIn() {
         return this.disableScaleIn == null ? Optional.empty() : Optional.ofNullable(this.disableScaleIn);
     }
 
     @InputImport(name="scaleInCooldown")
-    private final @Nullable Integer scaleInCooldown;
+      private final @Nullable Integer scaleInCooldown;
 
     public Optional<Integer> getScaleInCooldown() {
         return this.scaleInCooldown == null ? Optional.empty() : Optional.ofNullable(this.scaleInCooldown);
     }
 
     @InputImport(name="scaleOutCooldown")
-    private final @Nullable Integer scaleOutCooldown;
+      private final @Nullable Integer scaleOutCooldown;
 
     public Optional<Integer> getScaleOutCooldown() {
         return this.scaleOutCooldown == null ? Optional.empty() : Optional.ofNullable(this.scaleOutCooldown);
     }
 
     @InputImport(name="targetValue", required=true)
-    private final Double targetValue;
+      private final Double targetValue;
 
     public Double getTargetValue() {
         return this.targetValue;
@@ -107,7 +107,6 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration extends i
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public GlobalTableTargetTrackingScalingPolicyConfiguration build() {
             return new GlobalTableTargetTrackingScalingPolicyConfiguration(disableScaleIn, scaleInCooldown, scaleOutCooldown, targetValue);
         }

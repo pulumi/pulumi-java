@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class GetReleaseResult {
     /**
      * Time the release was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Format: `projects/{project_id}/releases/{release_id}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
      * 
-     */
+    */
     public String getRulesetName() {
         return this.rulesetName;
     }
     /**
      * Time the release was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -116,7 +116,6 @@ public final class GetReleaseResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetReleaseResult build() {
             return new GetReleaseResult(createTime, name, rulesetName, updateTime);
         }

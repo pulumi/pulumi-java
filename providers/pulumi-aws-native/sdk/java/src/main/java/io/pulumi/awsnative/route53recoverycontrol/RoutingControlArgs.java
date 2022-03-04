@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoverycontrol;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterArn")
-    private final @Nullable Input<String> clusterArn;
+      private final @Nullable Input<String> clusterArn;
 
     public Input<String> getClusterArn() {
         return this.clusterArn == null ? Input.empty() : this.clusterArn;
@@ -30,7 +30,7 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controlPanelArn")
-    private final @Nullable Input<String> controlPanelArn;
+      private final @Nullable Input<String> controlPanelArn;
 
     public Input<String> getControlPanelArn() {
         return this.controlPanelArn == null ? Input.empty() : this.controlPanelArn;
@@ -41,7 +41,7 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -115,7 +115,6 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public RoutingControlArgs build() {
             return new RoutingControlArgs(clusterArn, controlPanelArn, name);
         }

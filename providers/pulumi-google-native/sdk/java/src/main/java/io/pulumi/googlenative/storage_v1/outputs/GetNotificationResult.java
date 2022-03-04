@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -75,56 +75,56 @@ public final class GetNotificationResult {
     /**
      * An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
      * 
-     */
+    */
     public Map<String,String> getCustomAttributes() {
         return this.customAttributes;
     }
     /**
      * HTTP 1.1 Entity tag for this subscription notification.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * If present, only send notifications about listed event types. If empty, sent notifications for all event types.
      * 
-     */
+    */
     public List<String> getEventTypes() {
         return this.eventTypes;
     }
     /**
      * The kind of item this is. For notifications, this is always storage#notification.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * If present, only apply this notification configuration to object names that begin with this prefix.
      * 
-     */
+    */
     public String getObjectNamePrefix() {
         return this.objectNamePrefix;
     }
     /**
      * The desired content of the Payload.
      * 
-     */
+    */
     public String getPayloadFormat() {
         return this.payloadFormat;
     }
     /**
      * The canonical URL of this notification.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
@@ -202,7 +202,6 @@ public final class GetNotificationResult {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GetNotificationResult build() {
             return new GetNotificationResult(customAttributes, etag, eventTypes, kind, objectNamePrefix, payloadFormat, selfLink, topic);
         }

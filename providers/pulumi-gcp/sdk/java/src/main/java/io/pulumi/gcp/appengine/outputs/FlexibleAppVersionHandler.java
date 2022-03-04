@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionHandlerScript;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionHandlerStaticFiles;
 import java.lang.String;
@@ -81,7 +81,7 @@ public final class FlexibleAppVersionHandler {
      * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
      * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
      * 
-     */
+    */
     public Optional<String> getAuthFailAction() {
         return Optional.ofNullable(this.authFailAction);
     }
@@ -90,7 +90,7 @@ public final class FlexibleAppVersionHandler {
      * Default value is `LOGIN_OPTIONAL`.
      * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
      * 
-     */
+    */
     public Optional<String> getLogin() {
         return Optional.ofNullable(this.login);
     }
@@ -98,14 +98,14 @@ public final class FlexibleAppVersionHandler {
      * 30x code to use when performing redirects for the secure field.
      * Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
      * 
-     */
+    */
     public Optional<String> getRedirectHttpResponseCode() {
         return Optional.ofNullable(this.redirectHttpResponseCode);
     }
     /**
      * Path to the script from the application root directory.
      * 
-     */
+    */
     public Optional<FlexibleAppVersionHandlerScript> getScript() {
         return Optional.ofNullable(this.script);
     }
@@ -113,7 +113,7 @@ public final class FlexibleAppVersionHandler {
      * Security (HTTPS) enforcement for this URL.
      * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
      * 
-     */
+    */
     public Optional<String> getSecurityLevel() {
         return Optional.ofNullable(this.securityLevel);
     }
@@ -122,7 +122,7 @@ public final class FlexibleAppVersionHandler {
      * Static file handlers describe which files in the application directory are static files, and which URLs serve them.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<FlexibleAppVersionHandlerStaticFiles> getStaticFiles() {
         return Optional.ofNullable(this.staticFiles);
     }
@@ -130,7 +130,7 @@ public final class FlexibleAppVersionHandler {
      * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
      * All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
      * 
-     */
+    */
     public Optional<String> getUrlRegex() {
         return Optional.ofNullable(this.urlRegex);
     }
@@ -201,7 +201,6 @@ public final class FlexibleAppVersionHandler {
             this.urlRegex = urlRegex;
             return this;
         }
-
         public FlexibleAppVersionHandler build() {
             return new FlexibleAppVersionHandler(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

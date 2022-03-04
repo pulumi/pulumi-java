@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class FunctionFileSystemConfig {
     /**
      * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the file system.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The path where the function can access the file system, starting with /mnt/.
      * 
-     */
+    */
     public String getLocalMountPath() {
         return this.localMountPath;
     }
@@ -74,7 +74,6 @@ public final class FunctionFileSystemConfig {
             this.localMountPath = Objects.requireNonNull(localMountPath);
             return this;
         }
-
         public FunctionFileSystemConfig build() {
             return new FunctionFileSystemConfig(arn, localMountPath);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.JwtResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SignatureResponse;
 import java.lang.String;
@@ -41,21 +41,21 @@ public final class AttestationOccurrenceResponse {
     /**
      * One or more JWTs encoding a self-contained attestation. Each JWT encodes the payload that it verifies within the JWT itself. Verifier implementation SHOULD ignore the `serialized_payload` field when verifying these JWTs. If only JWTs are present on this AttestationOccurrence, then the `serialized_payload` SHOULD be left empty. Each JWT SHOULD encode a claim specific to the `resource_uri` of this Occurrence, but this is not validated by Grafeas metadata API implementations. The JWT itself is opaque to Grafeas.
      * 
-     */
+    */
     public List<JwtResponse> getJwts() {
         return this.jwts;
     }
     /**
      * The serialized payload that is verified by one or more `signatures`.
      * 
-     */
+    */
     public String getSerializedPayload() {
         return this.serializedPayload;
     }
     /**
      * One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
      * 
-     */
+    */
     public List<SignatureResponse> getSignatures() {
         return this.signatures;
     }
@@ -98,7 +98,6 @@ public final class AttestationOccurrenceResponse {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public AttestationOccurrenceResponse build() {
             return new AttestationOccurrenceResponse(jwts, serializedPayload, signatures);
         }

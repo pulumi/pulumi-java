@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appstream.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetApplicationEntitlementAssociationArgs extends io.pulumi.re
     public static final GetApplicationEntitlementAssociationArgs Empty = new GetApplicationEntitlementAssociationArgs();
 
     @InputImport(name="applicationIdentifier", required=true)
-    private final String applicationIdentifier;
+      private final String applicationIdentifier;
 
     public String getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @InputImport(name="entitlementName", required=true)
-    private final String entitlementName;
+      private final String entitlementName;
 
     public String getEntitlementName() {
         return this.entitlementName;
     }
 
     @InputImport(name="stackName", required=true)
-    private final String stackName;
+      private final String stackName;
 
     public String getStackName() {
         return this.stackName;
@@ -86,7 +86,6 @@ public final class GetApplicationEntitlementAssociationArgs extends io.pulumi.re
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
-
         public GetApplicationEntitlementAssociationArgs build() {
             return new GetApplicationEntitlementAssociationArgs(applicationIdentifier, entitlementName, stackName);
         }

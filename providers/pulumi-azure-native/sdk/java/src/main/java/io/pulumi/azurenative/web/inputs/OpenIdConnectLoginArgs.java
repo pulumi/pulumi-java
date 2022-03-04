@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nameClaimType")
-    private final @Nullable Input<String> nameClaimType;
+      private final @Nullable Input<String> nameClaimType;
 
     public Input<String> getNameClaimType() {
         return this.nameClaimType == null ? Input.empty() : this.nameClaimType;
@@ -35,7 +35,7 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -94,7 +94,6 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
-
         public OpenIdConnectLoginArgs build() {
             return new OpenIdConnectLoginArgs(nameClaimType, scopes);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -69,49 +69,49 @@ public final class AutomationRunbookReceiverResponse {
     /**
      * The Azure automation account Id which holds this runbook and authenticate to Azure resource.
      * 
-     */
+    */
     public String getAutomationAccountId() {
         return this.automationAccountId;
     }
     /**
      * Indicates whether this instance is global runbook.
      * 
-     */
+    */
     public Boolean getIsGlobalRunbook() {
         return this.isGlobalRunbook;
     }
     /**
      * Indicates name of the webhook.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The name for this runbook.
      * 
-     */
+    */
     public String getRunbookName() {
         return this.runbookName;
     }
     /**
      * The URI where webhooks should be sent.
      * 
-     */
+    */
     public Optional<String> getServiceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
     /**
      * Indicates whether to use common alert schema.
      * 
-     */
+    */
     public Optional<Boolean> getUseCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
     /**
      * The resource id for webhook linked to this runbook.
      * 
-     */
+    */
     public String getWebhookResourceId() {
         return this.webhookResourceId;
     }
@@ -182,7 +182,6 @@ public final class AutomationRunbookReceiverResponse {
             this.webhookResourceId = Objects.requireNonNull(webhookResourceId);
             return this;
         }
-
         public AutomationRunbookReceiverResponse build() {
             return new AutomationRunbookReceiverResponse(automationAccountId, isGlobalRunbook, name, runbookName, serviceUri, useCommonAlertSchema, webhookResourceId);
         }

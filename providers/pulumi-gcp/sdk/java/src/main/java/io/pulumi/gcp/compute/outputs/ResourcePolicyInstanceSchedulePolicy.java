@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.ResourcePolicyInstanceSchedulePolicyVmStartSchedule;
 import io.pulumi.gcp.compute.outputs.ResourcePolicyInstanceSchedulePolicyVmStopSchedule;
 import java.lang.String;
@@ -59,14 +59,14 @@ public final class ResourcePolicyInstanceSchedulePolicy {
     /**
      * The expiration time of the schedule. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public Optional<String> getExpirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
     /**
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -74,7 +74,7 @@ public final class ResourcePolicyInstanceSchedulePolicy {
      * Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
      * from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
-     */
+    */
     public String getTimeZone() {
         return this.timeZone;
     }
@@ -82,7 +82,7 @@ public final class ResourcePolicyInstanceSchedulePolicy {
      * Specifies the schedule for starting instances.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ResourcePolicyInstanceSchedulePolicyVmStartSchedule> getVmStartSchedule() {
         return Optional.ofNullable(this.vmStartSchedule);
     }
@@ -90,7 +90,7 @@ public final class ResourcePolicyInstanceSchedulePolicy {
      * Specifies the schedule for stopping instances.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ResourcePolicyInstanceSchedulePolicyVmStopSchedule> getVmStopSchedule() {
         return Optional.ofNullable(this.vmStopSchedule);
     }
@@ -147,7 +147,6 @@ public final class ResourcePolicyInstanceSchedulePolicy {
             this.vmStopSchedule = vmStopSchedule;
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicy build() {
             return new ResourcePolicyInstanceSchedulePolicy(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);
         }

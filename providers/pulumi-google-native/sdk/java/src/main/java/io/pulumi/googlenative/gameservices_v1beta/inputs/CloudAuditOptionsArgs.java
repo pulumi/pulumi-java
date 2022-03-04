@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1beta.enums.CloudAuditOptionsLogName;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.AuthorizationLoggingOptionsArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authorizationLoggingOptions")
-    private final @Nullable Input<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
+      private final @Nullable Input<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
     public Input<AuthorizationLoggingOptionsArgs> getAuthorizationLoggingOptions() {
         return this.authorizationLoggingOptions == null ? Input.empty() : this.authorizationLoggingOptions;
@@ -35,7 +35,7 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logName")
-    private final @Nullable Input<CloudAuditOptionsLogName> logName;
+      private final @Nullable Input<CloudAuditOptionsLogName> logName;
 
     public Input<CloudAuditOptionsLogName> getLogName() {
         return this.logName == null ? Input.empty() : this.logName;
@@ -94,7 +94,6 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
             this.logName = Input.ofNullable(logName);
             return this;
         }
-
         public CloudAuditOptionsArgs build() {
             return new CloudAuditOptionsArgs(authorizationLoggingOptions, logName);
         }

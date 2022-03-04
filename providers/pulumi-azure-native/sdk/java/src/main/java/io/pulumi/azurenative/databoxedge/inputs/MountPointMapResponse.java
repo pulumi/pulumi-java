@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="mountPoint", required=true)
-    private final String mountPoint;
+      private final String mountPoint;
 
     public String getMountPoint() {
         return this.mountPoint;
@@ -32,7 +32,7 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="mountType", required=true)
-    private final String mountType;
+      private final String mountType;
 
     public String getMountType() {
         return this.mountType;
@@ -43,7 +43,7 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="roleId", required=true)
-    private final String roleId;
+      private final String roleId;
 
     public String getRoleId() {
         return this.roleId;
@@ -54,7 +54,7 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="roleType", required=true)
-    private final String roleType;
+      private final String roleType;
 
     public String getRoleType() {
         return this.roleType;
@@ -65,7 +65,7 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="shareId", required=true)
-    private final String shareId;
+      private final String shareId;
 
     public String getShareId() {
         return this.shareId;
@@ -144,7 +144,6 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
-
         public MountPointMapResponse build() {
             return new MountPointMapResponse(mountPoint, mountType, roleId, roleType, shareId);
         }

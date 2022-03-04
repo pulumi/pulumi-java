@@ -6,7 +6,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaLinuxProcessParamsIsolationMode;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaContainerParamsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,14 +16,14 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
     public static final ComponentVersionLambdaLinuxProcessParamsArgs Empty = new ComponentVersionLambdaLinuxProcessParamsArgs();
 
     @InputImport(name="containerParams")
-    private final @Nullable Input<ComponentVersionLambdaContainerParamsArgs> containerParams;
+      private final @Nullable Input<ComponentVersionLambdaContainerParamsArgs> containerParams;
 
     public Input<ComponentVersionLambdaContainerParamsArgs> getContainerParams() {
         return this.containerParams == null ? Input.empty() : this.containerParams;
     }
 
     @InputImport(name="isolationMode")
-    private final @Nullable Input<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode;
+      private final @Nullable Input<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode;
 
     public Input<ComponentVersionLambdaLinuxProcessParamsIsolationMode> getIsolationMode() {
         return this.isolationMode == null ? Input.empty() : this.isolationMode;
@@ -82,7 +82,6 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
             this.isolationMode = Input.ofNullable(isolationMode);
             return this;
         }
-
         public ComponentVersionLambdaLinuxProcessParamsArgs build() {
             return new ComponentVersionLambdaLinuxProcessParamsArgs(containerParams, isolationMode);
         }

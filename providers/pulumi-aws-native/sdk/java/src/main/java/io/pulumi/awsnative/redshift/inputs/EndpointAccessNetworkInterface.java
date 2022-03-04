@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable String availabilityZone;
+      private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
@@ -34,7 +34,7 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable String networkInterfaceId;
+      private final @Nullable String networkInterfaceId;
 
     public Optional<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
@@ -45,7 +45,7 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable String privateIpAddress;
+      private final @Nullable String privateIpAddress;
 
     public Optional<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
@@ -56,7 +56,7 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable String subnetId;
+      private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
@@ -125,7 +125,6 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
             this.subnetId = subnetId;
             return this;
         }
-
         public EndpointAccessNetworkInterface build() {
             return new EndpointAccessNetworkInterface(availabilityZone, networkInterfaceId, privateIpAddress, subnetId);
         }

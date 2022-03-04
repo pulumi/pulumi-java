@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,14 +39,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer {
      * to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
      * Possible values are `default` and `private`.
      * 
-     */
+    */
     public Optional<String> getForwardingPath() {
         return Optional.ofNullable(this.forwardingPath);
     }
     /**
      * IPv4 address to forward to.
      * 
-     */
+    */
     public String getIpv4Address() {
         return this.ipv4Address;
     }
@@ -82,7 +82,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
         }
-
         public PolicyAlternativeNameServerConfigTargetNameServer build() {
             return new PolicyAlternativeNameServerConfigTargetNameServer(forwardingPath, ipv4Address);
         }

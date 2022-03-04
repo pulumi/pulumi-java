@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowPersistentLicense", required=true)
-    private final Input<Boolean> allowPersistentLicense;
+      private final Input<Boolean> allowPersistentLicense;
 
     public Input<Boolean> getAllowPersistentLicense() {
         return this.allowPersistentLicense;
@@ -35,7 +35,7 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="customLicenseAcquisitionUrlTemplate")
-    private final @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
+      private final @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
 
     public Input<String> getCustomLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Input.empty() : this.customLicenseAcquisitionUrlTemplate;
@@ -94,7 +94,6 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends io.pulumi.re
             this.customLicenseAcquisitionUrlTemplate = Input.ofNullable(customLicenseAcquisitionUrlTemplate);
             return this;
         }
-
         public StreamingPolicyFairPlayConfigurationArgs build() {
             return new StreamingPolicyFairPlayConfigurationArgs(allowPersistentLicense, customLicenseAcquisitionUrlTemplate);
         }

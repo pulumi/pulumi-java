@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class DynamicGroupStatusResponse {
     /**
      * Status of the dynamic group.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The latest time at which the dynamic group is guaranteed to be in the given status. If status is `UP_TO_DATE`, the latest time at which the dynamic group was confirmed to be up-to-date. If status is `UPDATING_MEMBERSHIPS`, the time at which dynamic group was created.
      * 
-     */
+    */
     public String getStatusTime() {
         return this.statusTime;
     }
@@ -74,7 +74,6 @@ public final class DynamicGroupStatusResponse {
             this.statusTime = Objects.requireNonNull(statusTime);
             return this;
         }
-
         public DynamicGroupStatusResponse build() {
             return new DynamicGroupStatusResponse(status, statusTime);
         }

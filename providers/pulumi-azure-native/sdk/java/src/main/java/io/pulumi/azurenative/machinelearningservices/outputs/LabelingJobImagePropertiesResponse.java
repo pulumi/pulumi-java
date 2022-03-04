@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class LabelingJobImagePropertiesResponse {
     /**
      * Annotation type of image labeling tasks.
      * 
-     */
+    */
     public Optional<String> getAnnotationType() {
         return Optional.ofNullable(this.annotationType);
     }
     /**
      * Media type of data asset.
      * 
-     */
+    */
     public String getMediaType() {
         return this.mediaType;
     }
@@ -76,7 +76,6 @@ public final class LabelingJobImagePropertiesResponse {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }
-
         public LabelingJobImagePropertiesResponse build() {
             return new LabelingJobImagePropertiesResponse(annotationType, mediaType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SymmetricKeyResponse {
     /**
      * Connection string based on the symmetric key.
      * 
-     */
+    */
     public Optional<AsymmetricEncryptedSecretResponse> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -54,7 +54,6 @@ public final class SymmetricKeyResponse {
             this.connectionString = connectionString;
             return this;
         }
-
         public SymmetricKeyResponse build() {
             return new SymmetricKeyResponse(connectionString);
         }

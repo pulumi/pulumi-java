@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="allowedExitCodes", required=true)
-    private final List<Integer> allowedExitCodes;
+      private final List<Integer> allowedExitCodes;
 
     public List<Integer> getAllowedExitCodes() {
         return this.allowedExitCodes;
@@ -34,7 +34,7 @@ public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="interpreter", required=true)
-    private final String interpreter;
+      private final String interpreter;
 
     public String getInterpreter() {
         return this.interpreter;
@@ -45,7 +45,7 @@ public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="script", required=true)
-    private final String script;
+      private final String script;
 
     public String getScript() {
         return this.script;
@@ -104,7 +104,6 @@ public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resourc
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public SoftwareRecipeStepRunScriptResponse build() {
             return new SoftwareRecipeStepRunScriptResponse(allowedExitCodes, interpreter, script);
         }

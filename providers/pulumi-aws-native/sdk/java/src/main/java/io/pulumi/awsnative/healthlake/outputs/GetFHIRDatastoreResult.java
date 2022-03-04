@@ -6,7 +6,7 @@ package io.pulumi.awsnative.healthlake.outputs;
 import io.pulumi.awsnative.healthlake.enums.FHIRDatastoreDatastoreStatus;
 import io.pulumi.awsnative.healthlake.outputs.FHIRDatastoreCreatedAt;
 import io.pulumi.awsnative.healthlake.outputs.FHIRDatastoreTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -116,7 +116,6 @@ public final class GetFHIRDatastoreResult {
             this.tags = tags;
             return this;
         }
-
         public GetFHIRDatastoreResult build() {
             return new GetFHIRDatastoreResult(createdAt, datastoreArn, datastoreEndpoint, datastoreId, datastoreStatus, tags);
         }

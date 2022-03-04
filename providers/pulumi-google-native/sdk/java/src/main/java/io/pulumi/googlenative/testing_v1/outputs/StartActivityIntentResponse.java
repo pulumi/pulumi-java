@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class StartActivityIntentResponse {
     /**
      * Action name. Required for START_ACTIVITY.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * Intent categories to set on the intent.
      * 
-     */
+    */
     public List<String> getCategories() {
         return this.categories;
     }
     /**
      * URI for the action.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
@@ -96,7 +96,6 @@ public final class StartActivityIntentResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public StartActivityIntentResponse build() {
             return new StartActivityIntentResponse(action, categories, uri);
         }

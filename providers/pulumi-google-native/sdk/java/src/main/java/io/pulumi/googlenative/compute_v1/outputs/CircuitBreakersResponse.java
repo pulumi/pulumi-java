@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class CircuitBreakersResponse {
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
-     */
+    */
     public Integer getMaxConnections() {
         return this.maxConnections;
     }
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
-     */
+    */
     public Integer getMaxPendingRequests() {
         return this.maxPendingRequests;
     }
     /**
      * The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
      * 
-     */
+    */
     public Integer getMaxRequests() {
         return this.maxRequests;
     }
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
-     */
+    */
     public Integer getMaxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
     }
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
-     */
+    */
     public Integer getMaxRetries() {
         return this.maxRetries;
     }
@@ -137,7 +137,6 @@ public final class CircuitBreakersResponse {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public CircuitBreakersResponse build() {
             return new CircuitBreakersResponse(maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }

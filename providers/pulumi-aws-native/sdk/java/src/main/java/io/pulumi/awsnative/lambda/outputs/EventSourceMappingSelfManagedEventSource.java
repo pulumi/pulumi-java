@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.outputs;
 
 import io.pulumi.awsnative.lambda.outputs.EventSourceMappingEndpoints;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EventSourceMappingSelfManagedEventSource {
     /**
      * The endpoints for a self-managed event source.
      * 
-     */
+    */
     public Optional<EventSourceMappingEndpoints> getEndpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -54,7 +54,6 @@ public final class EventSourceMappingSelfManagedEventSource {
             this.endpoints = endpoints;
             return this;
         }
-
         public EventSourceMappingSelfManagedEventSource build() {
             return new EventSourceMappingSelfManagedEventSource(endpoints);
         }

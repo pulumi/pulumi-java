@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class AppRegistrationResponse {
     /**
      * The App ID of the app used for login.
      * 
-     */
+    */
     public Optional<String> getAppId() {
         return Optional.ofNullable(this.appId);
     }
     /**
      * The app setting name that contains the app secret.
      * 
-     */
+    */
     public Optional<String> getAppSecretSettingName() {
         return Optional.ofNullable(this.appSecretSettingName);
     }
@@ -76,7 +76,6 @@ public final class AppRegistrationResponse {
             this.appSecretSettingName = appSecretSettingName;
             return this;
         }
-
         public AppRegistrationResponse build() {
             return new AppRegistrationResponse(appId, appSecretSettingName);
         }

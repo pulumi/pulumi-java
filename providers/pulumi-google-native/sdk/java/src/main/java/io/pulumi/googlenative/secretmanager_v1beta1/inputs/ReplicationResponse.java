@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.AutomaticResponse;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.UserManagedResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="automatic", required=true)
-    private final AutomaticResponse automatic;
+      private final AutomaticResponse automatic;
 
     public AutomaticResponse getAutomatic() {
         return this.automatic;
@@ -33,7 +33,7 @@ public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userManaged", required=true)
-    private final UserManagedResponse userManaged;
+      private final UserManagedResponse userManaged;
 
     public UserManagedResponse getUserManaged() {
         return this.userManaged;
@@ -82,7 +82,6 @@ public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
             this.userManaged = Objects.requireNonNull(userManaged);
             return this;
         }
-
         public ReplicationResponse build() {
             return new ReplicationResponse(automatic, userManaged);
         }

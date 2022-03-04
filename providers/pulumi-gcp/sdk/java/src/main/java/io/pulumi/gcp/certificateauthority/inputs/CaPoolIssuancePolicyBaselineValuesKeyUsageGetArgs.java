@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs;
@@ -23,7 +23,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
      * 
      */
     @InputImport(name="baseKeyUsage", required=true)
-    private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
+      private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
     public Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
         return this.baseKeyUsage;
@@ -35,7 +35,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
      * 
      */
     @InputImport(name="extendedKeyUsage", required=true)
-    private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
+      private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
     public Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
         return this.extendedKeyUsage;
@@ -47,7 +47,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
      * 
      */
     @InputImport(name="unknownExtendedKeyUsages")
-    private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
+      private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
     public Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? Input.empty() : this.unknownExtendedKeyUsages;
@@ -121,7 +121,6 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
             this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

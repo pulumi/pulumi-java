@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableDataSource;
 import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableVariableType;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -77,7 +77,7 @@ public final class DetectorEventVariable {
     /**
      * The time when the event variable was created.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -93,7 +93,7 @@ public final class DetectorEventVariable {
     /**
      * The description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -103,7 +103,7 @@ public final class DetectorEventVariable {
     /**
      * The time when the event variable was last updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -113,7 +113,7 @@ public final class DetectorEventVariable {
     /**
      * Tags associated with this event variable.
      * 
-     */
+    */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -215,7 +215,6 @@ public final class DetectorEventVariable {
             this.variableType = variableType;
             return this;
         }
-
         public DetectorEventVariable build() {
             return new DetectorEventVariable(arn, createdTime, dataSource, dataType, defaultValue, description, inline, lastUpdatedTime, name, tags, variableType);
         }

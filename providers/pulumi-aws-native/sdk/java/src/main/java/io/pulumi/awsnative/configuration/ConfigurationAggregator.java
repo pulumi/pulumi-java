@@ -10,8 +10,8 @@ import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorOrganiza
 import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -77,6 +77,37 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
         return this.tags;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ConfigurationAggregatorArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.configuration.ConfigurationAggregatorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.configuration.ConfigurationAggregatorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ConfigurationAggregator(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ConfigurationAggregator(String name) {
+        this(name, ConfigurationAggregatorArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ConfigurationAggregator(String name, @Nullable ConfigurationAggregatorArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

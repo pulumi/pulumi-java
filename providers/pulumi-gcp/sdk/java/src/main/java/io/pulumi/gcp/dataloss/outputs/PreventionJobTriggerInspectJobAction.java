@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobActionSaveFindings;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class PreventionJobTriggerInspectJobAction {
      * Schedule for triggered jobs
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobActionSaveFindings getSaveFindings() {
         return this.saveFindings;
     }
@@ -54,7 +54,6 @@ public final class PreventionJobTriggerInspectJobAction {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }
-
         public PreventionJobTriggerInspectJobAction build() {
             return new PreventionJobTriggerInspectJobAction(saveFindings);
         }

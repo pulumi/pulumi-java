@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse;
@@ -49,28 +49,28 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     /**
      * A SourceContext referring to a revision in a Google Cloud Source Repo.
      * 
-     */
+    */
     public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse getCloudRepo() {
         return this.cloudRepo;
     }
     /**
      * A SourceContext referring to a Gerrit project.
      * 
-     */
+    */
     public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse getGerrit() {
         return this.gerrit;
     }
     /**
      * A SourceContext referring to any third party Git repo (e.g., GitHub).
      * 
-     */
+    */
     public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse getGit() {
         return this.git;
     }
     /**
      * Labels with user defined metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
@@ -120,7 +120,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(cloudRepo, gerrit, git, labels);
         }

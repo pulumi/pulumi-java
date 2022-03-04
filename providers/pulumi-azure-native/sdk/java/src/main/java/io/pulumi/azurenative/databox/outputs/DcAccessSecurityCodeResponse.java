@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class DcAccessSecurityCodeResponse {
     /**
      * Forward Dc access security code.
      * 
-     */
+    */
     public Optional<String> getForwardDCAccessCode() {
         return Optional.ofNullable(this.forwardDCAccessCode);
     }
     /**
      * Reverse Dc access security code.
      * 
-     */
+    */
     public Optional<String> getReverseDCAccessCode() {
         return Optional.ofNullable(this.reverseDCAccessCode);
     }
@@ -76,7 +76,6 @@ public final class DcAccessSecurityCodeResponse {
             this.reverseDCAccessCode = reverseDCAccessCode;
             return this;
         }
-
         public DcAccessSecurityCodeResponse build() {
             return new DcAccessSecurityCodeResponse(forwardDCAccessCode, reverseDCAccessCode);
         }

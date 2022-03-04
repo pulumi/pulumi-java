@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasCodeHookSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
     public static final BotAliasLocaleSettingsArgs Empty = new BotAliasLocaleSettingsArgs();
 
     @InputImport(name="codeHookSpecification")
-    private final @Nullable Input<BotAliasCodeHookSpecificationArgs> codeHookSpecification;
+      private final @Nullable Input<BotAliasCodeHookSpecificationArgs> codeHookSpecification;
 
     public Input<BotAliasCodeHookSpecificationArgs> getCodeHookSpecification() {
         return this.codeHookSpecification == null ? Input.empty() : this.codeHookSpecification;
@@ -31,7 +31,7 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -90,7 +90,6 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public BotAliasLocaleSettingsArgs build() {
             return new BotAliasLocaleSettingsArgs(codeHookSpecification, enabled);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.essentialcontacts_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.essentialcontacts_v1.enums.FolderContactNotificationCategorySubscriptionsItem;
 import io.pulumi.googlenative.essentialcontacts_v1.enums.FolderContactValidationState;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
     }
 
     @InputImport(name="folderId", required=true)
-    private final Input<String> folderId;
+      private final Input<String> folderId;
 
     public Input<String> getFolderId() {
         return this.folderId;
@@ -40,7 +40,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageTag")
-    private final @Nullable Input<String> languageTag;
+      private final @Nullable Input<String> languageTag;
 
     public Input<String> getLanguageTag() {
         return this.languageTag == null ? Input.empty() : this.languageTag;
@@ -51,7 +51,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationCategorySubscriptions")
-    private final @Nullable Input<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
+      private final @Nullable Input<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
 
     public Input<List<FolderContactNotificationCategorySubscriptionsItem>> getNotificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions == null ? Input.empty() : this.notificationCategorySubscriptions;
@@ -73,7 +73,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validateTime")
-    private final @Nullable Input<String> validateTime;
+      private final @Nullable Input<String> validateTime;
 
     public Input<String> getValidateTime() {
         return this.validateTime == null ? Input.empty() : this.validateTime;
@@ -84,7 +84,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationState")
-    private final @Nullable Input<FolderContactValidationState> validationState;
+      private final @Nullable Input<FolderContactValidationState> validationState;
 
     public Input<FolderContactValidationState> getValidationState() {
         return this.validationState == null ? Input.empty() : this.validationState;
@@ -218,7 +218,6 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
             this.validationState = Input.ofNullable(validationState);
             return this;
         }
-
         public FolderContactArgs build() {
             return new FolderContactArgs(email, folderId, languageTag, name, notificationCategorySubscriptions, validateTime, validationState);
         }

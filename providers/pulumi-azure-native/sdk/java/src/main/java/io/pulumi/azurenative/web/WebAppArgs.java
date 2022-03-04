@@ -11,7 +11,7 @@ import io.pulumi.azurenative.web.inputs.HostingEnvironmentProfileArgs;
 import io.pulumi.azurenative.web.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.web.inputs.SiteConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientAffinityEnabled")
-    private final @Nullable Input<Boolean> clientAffinityEnabled;
+      private final @Nullable Input<Boolean> clientAffinityEnabled;
 
     public Input<Boolean> getClientAffinityEnabled() {
         return this.clientAffinityEnabled == null ? Input.empty() : this.clientAffinityEnabled;
@@ -41,7 +41,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertEnabled")
-    private final @Nullable Input<Boolean> clientCertEnabled;
+      private final @Nullable Input<Boolean> clientCertEnabled;
 
     public Input<Boolean> getClientCertEnabled() {
         return this.clientCertEnabled == null ? Input.empty() : this.clientCertEnabled;
@@ -52,7 +52,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertExclusionPaths")
-    private final @Nullable Input<String> clientCertExclusionPaths;
+      private final @Nullable Input<String> clientCertExclusionPaths;
 
     public Input<String> getClientCertExclusionPaths() {
         return this.clientCertExclusionPaths == null ? Input.empty() : this.clientCertExclusionPaths;
@@ -66,7 +66,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertMode")
-    private final @Nullable Input<ClientCertMode> clientCertMode;
+      private final @Nullable Input<ClientCertMode> clientCertMode;
 
     public Input<ClientCertMode> getClientCertMode() {
         return this.clientCertMode == null ? Input.empty() : this.clientCertMode;
@@ -77,7 +77,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloningInfo")
-    private final @Nullable Input<CloningInfoArgs> cloningInfo;
+      private final @Nullable Input<CloningInfoArgs> cloningInfo;
 
     public Input<CloningInfoArgs> getCloningInfo() {
         return this.cloningInfo == null ? Input.empty() : this.cloningInfo;
@@ -88,7 +88,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerSize")
-    private final @Nullable Input<Integer> containerSize;
+      private final @Nullable Input<Integer> containerSize;
 
     public Input<Integer> getContainerSize() {
         return this.containerSize == null ? Input.empty() : this.containerSize;
@@ -99,7 +99,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDomainVerificationId")
-    private final @Nullable Input<String> customDomainVerificationId;
+      private final @Nullable Input<String> customDomainVerificationId;
 
     public Input<String> getCustomDomainVerificationId() {
         return this.customDomainVerificationId == null ? Input.empty() : this.customDomainVerificationId;
@@ -110,7 +110,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dailyMemoryTimeQuota")
-    private final @Nullable Input<Integer> dailyMemoryTimeQuota;
+      private final @Nullable Input<Integer> dailyMemoryTimeQuota;
 
     public Input<Integer> getDailyMemoryTimeQuota() {
         return this.dailyMemoryTimeQuota == null ? Input.empty() : this.dailyMemoryTimeQuota;
@@ -121,7 +121,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -132,7 +132,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostNameSslStates")
-    private final @Nullable Input<List<HostNameSslStateArgs>> hostNameSslStates;
+      private final @Nullable Input<List<HostNameSslStateArgs>> hostNameSslStates;
 
     public Input<List<HostNameSslStateArgs>> getHostNameSslStates() {
         return this.hostNameSslStates == null ? Input.empty() : this.hostNameSslStates;
@@ -144,7 +144,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostNamesDisabled")
-    private final @Nullable Input<Boolean> hostNamesDisabled;
+      private final @Nullable Input<Boolean> hostNamesDisabled;
 
     public Input<Boolean> getHostNamesDisabled() {
         return this.hostNamesDisabled == null ? Input.empty() : this.hostNamesDisabled;
@@ -155,7 +155,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostingEnvironmentProfile")
-    private final @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
+      private final @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
     public Input<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
         return this.hostingEnvironmentProfile == null ? Input.empty() : this.hostingEnvironmentProfile;
@@ -167,7 +167,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpsOnly")
-    private final @Nullable Input<Boolean> httpsOnly;
+      private final @Nullable Input<Boolean> httpsOnly;
 
     public Input<Boolean> getHttpsOnly() {
         return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
@@ -178,7 +178,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperV")
-    private final @Nullable Input<Boolean> hyperV;
+      private final @Nullable Input<Boolean> hyperV;
 
     public Input<Boolean> getHyperV() {
         return this.hyperV == null ? Input.empty() : this.hyperV;
@@ -189,7 +189,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
     public Input<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -200,7 +200,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isXenon")
-    private final @Nullable Input<Boolean> isXenon;
+      private final @Nullable Input<Boolean> isXenon;
 
     public Input<Boolean> getIsXenon() {
         return this.isXenon == null ? Input.empty() : this.isXenon;
@@ -211,7 +211,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultReferenceIdentity")
-    private final @Nullable Input<String> keyVaultReferenceIdentity;
+      private final @Nullable Input<String> keyVaultReferenceIdentity;
 
     public Input<String> getKeyVaultReferenceIdentity() {
         return this.keyVaultReferenceIdentity == null ? Input.empty() : this.keyVaultReferenceIdentity;
@@ -222,7 +222,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -233,7 +233,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -244,7 +244,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -255,7 +255,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redundancyMode")
-    private final @Nullable Input<RedundancyMode> redundancyMode;
+      private final @Nullable Input<RedundancyMode> redundancyMode;
 
     public Input<RedundancyMode> getRedundancyMode() {
         return this.redundancyMode == null ? Input.empty() : this.redundancyMode;
@@ -266,7 +266,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reserved")
-    private final @Nullable Input<Boolean> reserved;
+      private final @Nullable Input<Boolean> reserved;
 
     public Input<Boolean> getReserved() {
         return this.reserved == null ? Input.empty() : this.reserved;
@@ -277,7 +277,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -288,7 +288,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scmSiteAlsoStopped")
-    private final @Nullable Input<Boolean> scmSiteAlsoStopped;
+      private final @Nullable Input<Boolean> scmSiteAlsoStopped;
 
     public Input<Boolean> getScmSiteAlsoStopped() {
         return this.scmSiteAlsoStopped == null ? Input.empty() : this.scmSiteAlsoStopped;
@@ -299,7 +299,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverFarmId")
-    private final @Nullable Input<String> serverFarmId;
+      private final @Nullable Input<String> serverFarmId;
 
     public Input<String> getServerFarmId() {
         return this.serverFarmId == null ? Input.empty() : this.serverFarmId;
@@ -310,7 +310,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteConfig")
-    private final @Nullable Input<SiteConfigArgs> siteConfig;
+      private final @Nullable Input<SiteConfigArgs> siteConfig;
 
     public Input<SiteConfigArgs> getSiteConfig() {
         return this.siteConfig == null ? Input.empty() : this.siteConfig;
@@ -321,7 +321,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountRequired")
-    private final @Nullable Input<Boolean> storageAccountRequired;
+      private final @Nullable Input<Boolean> storageAccountRequired;
 
     public Input<Boolean> getStorageAccountRequired() {
         return this.storageAccountRequired == null ? Input.empty() : this.storageAccountRequired;
@@ -332,7 +332,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -344,7 +344,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkSubnetId")
-    private final @Nullable Input<String> virtualNetworkSubnetId;
+      private final @Nullable Input<String> virtualNetworkSubnetId;
 
     public Input<String> getVirtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId == null ? Input.empty() : this.virtualNetworkSubnetId;
@@ -808,7 +808,6 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualNetworkSubnetId = Input.ofNullable(virtualNetworkSubnetId);
             return this;
         }
-
         public WebAppArgs build() {
             return new WebAppArgs(clientAffinityEnabled, clientCertEnabled, clientCertExclusionPaths, clientCertMode, cloningInfo, containerSize, customDomainVerificationId, dailyMemoryTimeQuota, enabled, hostNameSslStates, hostNamesDisabled, hostingEnvironmentProfile, httpsOnly, hyperV, identity, isXenon, keyVaultReferenceIdentity, kind, location, name, redundancyMode, reserved, resourceGroupName, scmSiteAlsoStopped, serverFarmId, siteConfig, storageAccountRequired, tags, virtualNetworkSubnetId);
         }

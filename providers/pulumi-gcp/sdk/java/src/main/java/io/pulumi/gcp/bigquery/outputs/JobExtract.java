@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.JobExtractSourceModel;
 import io.pulumi.gcp.bigquery.outputs.JobExtractSourceTable;
 import java.lang.Boolean;
@@ -86,7 +86,7 @@ public final class JobExtract {
      * The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
      * The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
      * 
-     */
+    */
     public Optional<String> getCompression() {
         return Optional.ofNullable(this.compression);
     }
@@ -95,14 +95,14 @@ public final class JobExtract {
      * The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
      * The default value for models is SAVED_MODEL.
      * 
-     */
+    */
     public Optional<String> getDestinationFormat() {
         return Optional.ofNullable(this.destinationFormat);
     }
     /**
      * A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
      * 
-     */
+    */
     public List<String> getDestinationUris() {
         return this.destinationUris;
     }
@@ -110,14 +110,14 @@ public final class JobExtract {
      * When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
      * Default is ','
      * 
-     */
+    */
     public Optional<String> getFieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
     /**
      * Whether to print out a header row in the results. Default is true.
      * 
-     */
+    */
     public Optional<Boolean> getPrintHeader() {
         return Optional.ofNullable(this.printHeader);
     }
@@ -125,7 +125,7 @@ public final class JobExtract {
      * A reference to the model being exported.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<JobExtractSourceModel> getSourceModel() {
         return Optional.ofNullable(this.sourceModel);
     }
@@ -133,14 +133,14 @@ public final class JobExtract {
      * A reference to the table being exported.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<JobExtractSourceTable> getSourceTable() {
         return Optional.ofNullable(this.sourceTable);
     }
     /**
      * Whether to use logical types when extracting to AVRO format.
      * 
-     */
+    */
     public Optional<Boolean> getUseAvroLogicalTypes() {
         return Optional.ofNullable(this.useAvroLogicalTypes);
     }
@@ -218,7 +218,6 @@ public final class JobExtract {
             this.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
-
         public JobExtract build() {
             return new JobExtract(compression, destinationFormat, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
         }

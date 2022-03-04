@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxRetries")
-    private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Input<Integer> maxRetries;
 
     public Input<Integer> getMaxRetries() {
         return this.maxRetries == null ? Input.empty() : this.maxRetries;
@@ -35,7 +35,7 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -94,7 +94,6 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public BatchRetrySettingsArgs build() {
             return new BatchRetrySettingsArgs(maxRetries, timeout);
         }

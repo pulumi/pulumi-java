@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.IAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
     public static final IAMMemberState Empty = new IAMMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<IAMMemberConditionGetArgs> condition;
+      private final @Nullable Input<IAMMemberConditionGetArgs> condition;
 
     public Input<IAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -41,14 +41,14 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId")
-    private final @Nullable Input<String> orgId;
+      private final @Nullable Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId == null ? Input.empty() : this.orgId;
     }
 
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -152,7 +152,6 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public IAMMemberState build() {
             return new IAMMemberState(condition, etag, member, orgId, role);
         }

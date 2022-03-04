@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -49,28 +49,28 @@ public final class MABContainerHealthDetailsResponse {
     /**
      * Health Code
      * 
-     */
+    */
     public Optional<Integer> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Health Message
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Health Recommended Actions
      * 
-     */
+    */
     public List<String> getRecommendations() {
         return this.recommendations == null ? List.of() : this.recommendations;
     }
     /**
      * Health Title
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
@@ -120,7 +120,6 @@ public final class MABContainerHealthDetailsResponse {
             this.title = title;
             return this;
         }
-
         public MABContainerHealthDetailsResponse build() {
             return new MABContainerHealthDetailsResponse(code, message, recommendations, title);
         }

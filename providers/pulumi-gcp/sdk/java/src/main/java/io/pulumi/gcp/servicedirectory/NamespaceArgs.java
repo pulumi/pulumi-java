@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -35,7 +35,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -47,7 +47,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceId", required=true)
-    private final Input<String> namespaceId;
+      private final Input<String> namespaceId;
 
     public Input<String> getNamespaceId() {
         return this.namespaceId;
@@ -59,7 +59,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -148,7 +148,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public NamespaceArgs build() {
             return new NamespaceArgs(labels, location, namespaceId, project);
         }

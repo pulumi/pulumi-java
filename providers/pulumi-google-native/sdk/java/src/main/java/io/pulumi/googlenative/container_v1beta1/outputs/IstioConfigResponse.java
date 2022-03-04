@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class IstioConfigResponse {
     /**
      * The specified Istio auth mode, either none, or mutual TLS.
      * 
-     */
+    */
     public String getAuth() {
         return this.auth;
     }
     /**
      * Whether Istio is enabled for this cluster.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
@@ -75,7 +75,6 @@ public final class IstioConfigResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public IstioConfigResponse build() {
             return new IstioConfigResponse(auth, disabled);
         }

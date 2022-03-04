@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class HealthCheckLogConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -63,7 +63,6 @@ public final class HealthCheckLogConfigArgs extends io.pulumi.resources.Resource
             this.enable = Input.ofNullable(enable);
             return this;
         }
-
         public HealthCheckLogConfigArgs build() {
             return new HealthCheckLogConfigArgs(enable);
         }

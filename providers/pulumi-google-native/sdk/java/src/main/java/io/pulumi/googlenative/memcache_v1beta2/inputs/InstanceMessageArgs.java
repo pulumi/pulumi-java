@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.memcache_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.memcache_v1beta2.enums.InstanceMessageCode;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<InstanceMessageCode> code;
+      private final @Nullable Input<InstanceMessageCode> code;
 
     public Input<InstanceMessageCode> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -31,7 +31,7 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -90,7 +90,6 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
             this.message = Input.ofNullable(message);
             return this;
         }
-
         public InstanceMessageArgs build() {
             return new InstanceMessageArgs(code, message);
         }

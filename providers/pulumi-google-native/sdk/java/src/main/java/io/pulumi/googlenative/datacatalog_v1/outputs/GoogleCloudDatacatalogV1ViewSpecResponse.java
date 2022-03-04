@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse {
     /**
      * The query that defines the table view.
      * 
-     */
+    */
     public String getViewQuery() {
         return this.viewQuery;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse {
             this.viewQuery = Objects.requireNonNull(viewQuery);
             return this;
         }
-
         public GoogleCloudDatacatalogV1ViewSpecResponse build() {
             return new GoogleCloudDatacatalogV1ViewSpecResponse(viewQuery);
         }

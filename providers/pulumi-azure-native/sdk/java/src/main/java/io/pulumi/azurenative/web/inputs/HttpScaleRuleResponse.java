@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class HttpScaleRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="auth")
-    private final @Nullable List<ScaleRuleAuthResponse> auth;
+      private final @Nullable List<ScaleRuleAuthResponse> auth;
 
     public List<ScaleRuleAuthResponse> getAuth() {
         return this.auth == null ? List.of() : this.auth;
@@ -37,7 +37,7 @@ public final class HttpScaleRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Map<String,String> metadata;
+      private final @Nullable Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
@@ -86,7 +86,6 @@ public final class HttpScaleRuleResponse extends io.pulumi.resources.InvokeArgs 
             this.metadata = metadata;
             return this;
         }
-
         public HttpScaleRuleResponse build() {
             return new HttpScaleRuleResponse(auth, metadata);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class GetVendorSkuPreviewResult {
     /**
      * The ARM ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The preview subscription ID.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -95,7 +95,6 @@ public final class GetVendorSkuPreviewResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVendorSkuPreviewResult build() {
             return new GetVendorSkuPreviewResult(id, name, type);
         }

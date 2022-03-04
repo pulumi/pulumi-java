@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends io.pulumi
      * 
      */
     @InputImport(name="lifespanCount", required=true)
-    private final Integer lifespanCount;
+      private final Integer lifespanCount;
 
     public Integer getLifespanCount() {
         return this.lifespanCount;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends io.pulumi
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Map<String,String> parameters;
+      private final Map<String,String> parameters;
 
     public Map<String,String> getParameters() {
         return this.parameters;
@@ -104,7 +104,6 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends io.pulumi
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1ContextResponse build() {
             return new GoogleCloudDialogflowV2beta1ContextResponse(lifespanCount, name, parameters);
         }

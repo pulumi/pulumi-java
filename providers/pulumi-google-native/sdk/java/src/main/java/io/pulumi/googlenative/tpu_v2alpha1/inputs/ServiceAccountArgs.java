@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -35,7 +35,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<List<String>> scope;
+      private final @Nullable Input<List<String>> scope;
 
     public Input<List<String>> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -94,7 +94,6 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.scope = Input.ofNullable(scope);
             return this;
         }
-
         public ServiceAccountArgs build() {
             return new ServiceAccountArgs(email, scope);
         }

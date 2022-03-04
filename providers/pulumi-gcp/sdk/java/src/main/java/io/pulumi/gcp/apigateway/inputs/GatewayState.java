@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiConfig")
-    private final @Nullable Input<String> apiConfig;
+      private final @Nullable Input<String> apiConfig;
 
     public Input<String> getApiConfig() {
         return this.apiConfig == null ? Input.empty() : this.apiConfig;
@@ -32,7 +32,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultHostname")
-    private final @Nullable Input<String> defaultHostname;
+      private final @Nullable Input<String> defaultHostname;
 
     public Input<String> getDefaultHostname() {
         return this.defaultHostname == null ? Input.empty() : this.defaultHostname;
@@ -43,7 +43,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -54,7 +54,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayId")
-    private final @Nullable Input<String> gatewayId;
+      private final @Nullable Input<String> gatewayId;
 
     public Input<String> getGatewayId() {
         return this.gatewayId == null ? Input.empty() : this.gatewayId;
@@ -65,7 +65,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -76,7 +76,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -99,7 +99,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -248,7 +248,6 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public GatewayState build() {
             return new GatewayState(apiConfig, defaultHostname, displayName, gatewayId, labels, name, project, region);
         }

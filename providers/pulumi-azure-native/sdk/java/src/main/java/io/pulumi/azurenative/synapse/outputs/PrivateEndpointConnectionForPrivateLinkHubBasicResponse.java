@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.synapse.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,28 +49,28 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse {
     /**
      * identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The private endpoint which the connection belongs to.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Connection state of the private endpoint connection.
      * 
-     */
+    */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -120,7 +120,6 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionForPrivateLinkHubBasicResponse build() {
             return new PrivateEndpointConnectionForPrivateLinkHubBasicResponse(id, privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

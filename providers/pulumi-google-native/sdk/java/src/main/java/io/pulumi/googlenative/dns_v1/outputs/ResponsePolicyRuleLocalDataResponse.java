@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ResourceRecordSetResponse;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResponsePolicyRuleLocalDataResponse {
     /**
      * All resource record sets for this selector, one per resource record type. The name must match the dns_name.
      * 
-     */
+    */
     public List<ResourceRecordSetResponse> getLocalDatas() {
         return this.localDatas;
     }
@@ -53,7 +53,6 @@ public final class ResponsePolicyRuleLocalDataResponse {
             this.localDatas = Objects.requireNonNull(localDatas);
             return this;
         }
-
         public ResponsePolicyRuleLocalDataResponse build() {
             return new ResponsePolicyRuleLocalDataResponse(localDatas);
         }

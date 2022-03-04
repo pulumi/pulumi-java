@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="limit")
-    private final @Nullable Input<Object> limit;
+      private final @Nullable Input<Object> limit;
 
     public Input<Object> getLimit() {
         return this.limit == null ? Input.empty() : this.limit;
@@ -34,7 +34,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<Object> project;
+      private final @Nullable Input<Object> project;
 
     public Input<Object> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -45,7 +45,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="skip")
-    private final @Nullable Input<Object> skip;
+      private final @Nullable Input<Object> skip;
 
     public Input<Object> getSkip() {
         return this.skip == null ? Input.empty() : this.skip;
@@ -56,7 +56,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sort")
-    private final @Nullable Input<Object> sort;
+      private final @Nullable Input<Object> sort;
 
     public Input<Object> getSort() {
         return this.sort == null ? Input.empty() : this.sort;
@@ -145,7 +145,6 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
             this.sort = Input.ofNullable(sort);
             return this;
         }
-
         public MongoDbCursorMethodsPropertiesArgs build() {
             return new MongoDbCursorMethodsPropertiesArgs(limit, project, skip, sort);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ClusterWorkloadIdentityConfig {
     /**
      * The workload pool to attach all Kubernetes service accounts to.
      * 
-     */
+    */
     public Optional<String> getWorkloadPool() {
         return Optional.ofNullable(this.workloadPool);
     }
@@ -54,7 +54,6 @@ public final class ClusterWorkloadIdentityConfig {
             this.workloadPool = workloadPool;
             return this;
         }
-
         public ClusterWorkloadIdentityConfig build() {
             return new ClusterWorkloadIdentityConfig(workloadPool);
         }

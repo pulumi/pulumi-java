@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class OutputDataBindingResponse {
     /**
      * ARM resource ID of the datastore where the data output will be stored.
      * 
-     */
+    */
     public Optional<String> getDatastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
      * Mechanism for data movement to datastore.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * Location of data inside the container process.
      * 
-     */
+    */
     public Optional<String> getPathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }
     /**
      * Path within the datastore to the data.
      * 
-     */
+    */
     public Optional<String> getPathOnDatastore() {
         return Optional.ofNullable(this.pathOnDatastore);
     }
@@ -118,7 +118,6 @@ public final class OutputDataBindingResponse {
             this.pathOnDatastore = pathOnDatastore;
             return this;
         }
-
         public OutputDataBindingResponse build() {
             return new OutputDataBindingResponse(datastoreId, mode, pathOnCompute, pathOnDatastore);
         }

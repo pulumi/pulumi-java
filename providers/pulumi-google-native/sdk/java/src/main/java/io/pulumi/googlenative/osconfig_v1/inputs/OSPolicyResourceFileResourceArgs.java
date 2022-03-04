@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.enums.OSPolicyResourceFileResourceState;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -36,7 +36,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<OSPolicyResourceFileArgs> file;
+      private final @Nullable Input<OSPolicyResourceFileArgs> file;
 
     public Input<OSPolicyResourceFileArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -47,7 +47,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -58,7 +58,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<String> permissions;
+      private final @Nullable Input<String> permissions;
 
     public Input<String> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -69,7 +69,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<OSPolicyResourceFileResourceState> state;
+      private final Input<OSPolicyResourceFileResourceState> state;
 
     public Input<OSPolicyResourceFileResourceState> getState() {
         return this.state;
@@ -173,7 +173,6 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
-
         public OSPolicyResourceFileResourceArgs build() {
             return new OSPolicyResourceFileResourceArgs(content, file, path, permissions, state);
         }

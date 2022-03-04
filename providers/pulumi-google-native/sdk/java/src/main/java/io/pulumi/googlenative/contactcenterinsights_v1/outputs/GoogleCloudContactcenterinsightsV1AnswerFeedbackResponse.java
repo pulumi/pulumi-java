@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
     /**
      * Indicates whether an answer or item was clicked by the human agent.
      * 
-     */
+    */
     public Boolean getClicked() {
         return this.clicked;
     }
     /**
      * The correctness level of an answer.
      * 
-     */
+    */
     public String getCorrectnessLevel() {
         return this.correctnessLevel;
     }
     /**
      * Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
      * 
-     */
+    */
     public Boolean getDisplayed() {
         return this.displayed;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
             this.displayed = Objects.requireNonNull(displayed);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(clicked, correctnessLevel, displayed);
         }

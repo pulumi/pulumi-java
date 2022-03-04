@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.security.inputs.StandardComponentPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-    private final @Nullable Input<String> category;
+      private final @Nullable Input<String> category;
 
     public Input<String> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -33,7 +33,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="components")
-    private final @Nullable Input<List<StandardComponentPropertiesArgs>> components;
+      private final @Nullable Input<List<StandardComponentPropertiesArgs>> components;
 
     public Input<List<StandardComponentPropertiesArgs>> getComponents() {
         return this.components == null ? Input.empty() : this.components;
@@ -44,7 +44,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -66,7 +66,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -77,7 +77,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -88,7 +88,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="standardId")
-    private final @Nullable Input<String> standardId;
+      private final @Nullable Input<String> standardId;
 
     public Input<String> getStandardId() {
         return this.standardId == null ? Input.empty() : this.standardId;
@@ -110,7 +110,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -274,7 +274,6 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public StandardArgs build() {
             return new StandardArgs(category, components, description, displayName, kind, location, resourceGroupName, standardId, tags);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.AllowedAudiencesValidationArgs;
 import io.pulumi.azurenative.web.inputs.ClientRegistrationArgs;
 import io.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -37,7 +37,7 @@ public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<LoginScopesArgs> login;
+      private final @Nullable Input<LoginScopesArgs> login;
 
     public Input<LoginScopesArgs> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -48,7 +48,7 @@ public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="registration")
-    private final @Nullable Input<ClientRegistrationArgs> registration;
+      private final @Nullable Input<ClientRegistrationArgs> registration;
 
     public Input<ClientRegistrationArgs> getRegistration() {
         return this.registration == null ? Input.empty() : this.registration;
@@ -59,7 +59,7 @@ public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="validation")
-    private final @Nullable Input<AllowedAudiencesValidationArgs> validation;
+      private final @Nullable Input<AllowedAudiencesValidationArgs> validation;
 
     public Input<AllowedAudiencesValidationArgs> getValidation() {
         return this.validation == null ? Input.empty() : this.validation;
@@ -148,7 +148,6 @@ public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.Resour
             this.validation = Input.ofNullable(validation);
             return this;
         }
-
         public LegacyMicrosoftAccountArgs build() {
             return new LegacyMicrosoftAccountArgs(enabled, login, registration, validation);
         }

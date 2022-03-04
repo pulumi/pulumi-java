@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class StorageAccountResponse {
     /**
      * The account name of the Azure Storage Account.
      * 
-     */
+    */
     public String getAccountName() {
         return this.accountName;
     }
@@ -40,7 +40,7 @@ public final class StorageAccountResponse {
      * The type of the storage.
      * Expected value is 'StorageAccount'.
      * 
-     */
+    */
     public String getStorageType() {
         return this.storageType;
     }
@@ -76,7 +76,6 @@ public final class StorageAccountResponse {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(accountName, storageType);
         }

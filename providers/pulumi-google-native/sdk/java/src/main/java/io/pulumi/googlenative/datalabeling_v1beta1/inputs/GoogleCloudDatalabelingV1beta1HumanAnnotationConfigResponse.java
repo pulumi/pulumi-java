@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @InputImport(name="annotatedDatasetDescription", required=true)
-    private final String annotatedDatasetDescription;
+      private final String annotatedDatasetDescription;
 
     public String getAnnotatedDatasetDescription() {
         return this.annotatedDatasetDescription;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @InputImport(name="annotatedDatasetDisplayName", required=true)
-    private final String annotatedDatasetDisplayName;
+      private final String annotatedDatasetDisplayName;
 
     public String getAnnotatedDatasetDisplayName() {
         return this.annotatedDatasetDisplayName;
@@ -45,7 +45,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @InputImport(name="contributorEmails", required=true)
-    private final List<String> contributorEmails;
+      private final List<String> contributorEmails;
 
     public List<String> getContributorEmails() {
         return this.contributorEmails;
@@ -56,7 +56,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @InputImport(name="instruction", required=true)
-    private final String instruction;
+      private final String instruction;
 
     public String getInstruction() {
         return this.instruction;
@@ -67,7 +67,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @InputImport(name="labelGroup", required=true)
-    private final String labelGroup;
+      private final String labelGroup;
 
     public String getLabelGroup() {
         return this.labelGroup;
@@ -78,7 +78,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @InputImport(name="languageCode", required=true)
-    private final String languageCode;
+      private final String languageCode;
 
     public String getLanguageCode() {
         return this.languageCode;
@@ -89,7 +89,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @InputImport(name="questionDuration", required=true)
-    private final String questionDuration;
+      private final String questionDuration;
 
     public String getQuestionDuration() {
         return this.questionDuration;
@@ -100,7 +100,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @InputImport(name="replicaCount", required=true)
-    private final Integer replicaCount;
+      private final Integer replicaCount;
 
     public Integer getReplicaCount() {
         return this.replicaCount;
@@ -111,7 +111,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @InputImport(name="userEmailAddress", required=true)
-    private final String userEmailAddress;
+      private final String userEmailAddress;
 
     public String getUserEmailAddress() {
         return this.userEmailAddress;
@@ -230,7 +230,6 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
             this.userEmailAddress = Objects.requireNonNull(userEmailAddress);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(annotatedDatasetDescription, annotatedDatasetDisplayName, contributorEmails, instruction, labelGroup, languageCode, questionDuration, replicaCount, userEmailAddress);
         }

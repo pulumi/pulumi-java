@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.TopicRuleCannedAccessControlList;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -87,7 +87,6 @@ public final class TopicRuleS3Action {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public TopicRuleS3Action build() {
             return new TopicRuleS3Action(bucketName, cannedAcl, key, roleArn);
         }

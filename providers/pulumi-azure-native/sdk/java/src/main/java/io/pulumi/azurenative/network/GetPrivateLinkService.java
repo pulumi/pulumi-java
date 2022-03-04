@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetPrivateLinkServiceArgs;
 import io.pulumi.azurenative.network.outputs.GetPrivateLinkServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateLinkService {
-/**
- * Private link service resource.
+    private GetPrivateLinkService() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateLinkServiceArgs.Builder a);
+    }
+    private static GetPrivateLinkServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateLinkServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Private link service resource.
  * API Version: 2020-11-01.
  * 
- *
- * Private link service resource.
+     *
+     * Private link service resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateLinkServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Private link service resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Private link service resource.
+     * 
+     */
     public static CompletableFuture<GetPrivateLinkServiceResult> invokeAsync(GetPrivateLinkServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateLinkService", TypeShape.of(GetPrivateLinkServiceResult.class), args == null ? GetPrivateLinkServiceArgs.Empty : args, Utilities.withVersion(options));
     }

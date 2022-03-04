@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class InboundIpRuleResponse {
     /**
      * Action to perform based on the match or no match of the IpMask.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP Address in CIDR notation e.g., 10.0.0.0/8.
      * 
-     */
+    */
     public Optional<String> getIpMask() {
         return Optional.ofNullable(this.ipMask);
     }
@@ -76,7 +76,6 @@ public final class InboundIpRuleResponse {
             this.ipMask = ipMask;
             return this;
         }
-
         public InboundIpRuleResponse build() {
             return new InboundIpRuleResponse(action, ipMask);
         }

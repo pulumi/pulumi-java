@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.LogConfigCloudAuditOptionsResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.LogConfigCounterOptionsResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.LogConfigDataAccessOptionsResponse;
@@ -23,7 +23,7 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudAudit", required=true)
-    private final LogConfigCloudAuditOptionsResponse cloudAudit;
+      private final LogConfigCloudAuditOptionsResponse cloudAudit;
 
     public LogConfigCloudAuditOptionsResponse getCloudAudit() {
         return this.cloudAudit;
@@ -34,7 +34,7 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="counter", required=true)
-    private final LogConfigCounterOptionsResponse counter;
+      private final LogConfigCounterOptionsResponse counter;
 
     public LogConfigCounterOptionsResponse getCounter() {
         return this.counter;
@@ -45,7 +45,7 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataAccess", required=true)
-    private final LogConfigDataAccessOptionsResponse dataAccess;
+      private final LogConfigDataAccessOptionsResponse dataAccess;
 
     public LogConfigDataAccessOptionsResponse getDataAccess() {
         return this.dataAccess;
@@ -104,7 +104,6 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.dataAccess = Objects.requireNonNull(dataAccess);
             return this;
         }
-
         public LogConfigResponse build() {
             return new LogConfigResponse(cloudAudit, counter, dataAccess);
         }

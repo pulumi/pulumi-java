@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -50,28 +50,28 @@ public final class LastAccessTimeTrackingPolicyResponse {
     /**
      * An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
      * 
-     */
+    */
     public List<String> getBlobType() {
         return this.blobType == null ? List.of() : this.blobType;
     }
     /**
      * When set to true last access time based tracking is enabled.
      * 
-     */
+    */
     public Boolean getEnable() {
         return this.enable;
     }
     /**
      * Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
      * 
-     */
+    */
     public Optional<Integer> getTrackingGranularityInDays() {
         return Optional.ofNullable(this.trackingGranularityInDays);
     }
@@ -121,7 +121,6 @@ public final class LastAccessTimeTrackingPolicyResponse {
             this.trackingGranularityInDays = trackingGranularityInDays;
             return this;
         }
-
         public LastAccessTimeTrackingPolicyResponse build() {
             return new LastAccessTimeTrackingPolicyResponse(blobType, enable, name, trackingGranularityInDays);
         }

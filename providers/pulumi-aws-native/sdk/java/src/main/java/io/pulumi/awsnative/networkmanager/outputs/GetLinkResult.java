@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkmanager.outputs;
 
 import io.pulumi.awsnative.networkmanager.outputs.LinkBandwidth;
 import io.pulumi.awsnative.networkmanager.outputs.LinkTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,49 +71,49 @@ public final class GetLinkResult {
     /**
      * The Bandwidth for the link.
      * 
-     */
+    */
     public Optional<LinkBandwidth> getBandwidth() {
         return Optional.ofNullable(this.bandwidth);
     }
     /**
      * The description of the link.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the link.
      * 
-     */
+    */
     public Optional<String> getLinkArn() {
         return Optional.ofNullable(this.linkArn);
     }
     /**
      * The ID of the link.
      * 
-     */
+    */
     public Optional<String> getLinkId() {
         return Optional.ofNullable(this.linkId);
     }
     /**
      * The provider of the link.
      * 
-     */
+    */
     public Optional<String> getProvider() {
         return Optional.ofNullable(this.provider);
     }
     /**
      * The tags for the link.
      * 
-     */
+    */
     public List<LinkTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The type of the link.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -184,7 +184,6 @@ public final class GetLinkResult {
             this.type = type;
             return this;
         }
-
         public GetLinkResult build() {
             return new GetLinkResult(bandwidth, description, linkArn, linkId, provider, tags, type);
         }

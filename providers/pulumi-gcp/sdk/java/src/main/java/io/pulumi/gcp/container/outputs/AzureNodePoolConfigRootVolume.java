@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AzureNodePoolConfigRootVolume {
     /**
      * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
      * 
-     */
+    */
     public Optional<Integer> getSizeGib() {
         return Optional.ofNullable(this.sizeGib);
     }
@@ -54,7 +54,6 @@ public final class AzureNodePoolConfigRootVolume {
             this.sizeGib = sizeGib;
             return this;
         }
-
         public AzureNodePoolConfigRootVolume build() {
             return new AzureNodePoolConfigRootVolume(sizeGib);
         }

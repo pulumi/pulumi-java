@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="packageContent", required=true)
-    private final Object packageContent;
+      private final Object packageContent;
 
     public Object getPackageContent() {
         return this.packageContent;
@@ -35,7 +35,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="packageLastModifiedDate")
-    private final @Nullable String packageLastModifiedDate;
+      private final @Nullable String packageLastModifiedDate;
 
     public Optional<String> getPackageLastModifiedDate() {
         return this.packageLastModifiedDate == null ? Optional.empty() : Optional.ofNullable(this.packageLastModifiedDate);
@@ -46,7 +46,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="packageName")
-    private final @Nullable String packageName;
+      private final @Nullable String packageName;
 
     public Optional<String> getPackageName() {
         return this.packageName == null ? Optional.empty() : Optional.ofNullable(this.packageName);
@@ -57,7 +57,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="packagePath", required=true)
-    private final Object packagePath;
+      private final Object packagePath;
 
     public Object getPackagePath() {
         return this.packagePath;
@@ -126,7 +126,6 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
             this.packagePath = Objects.requireNonNull(packagePath);
             return this;
         }
-
         public SSISChildPackageResponse build() {
             return new SSISChildPackageResponse(packageContent, packageLastModifiedDate, packageName, packagePath);
         }

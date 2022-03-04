@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
      * The HTTP status code used to abort the request.
      * The value must be between 200 and 599 inclusive.
      * 
-     */
+    */
     public Integer getHttpStatus() {
         return this.httpStatus;
     }
@@ -43,7 +43,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
      * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
      * The value must be between 0.0 and 100.0 inclusive.
      * 
-     */
+    */
     public Double getPercentage() {
         return this.percentage;
     }
@@ -79,7 +79,6 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort build() {
             return new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort(httpStatus, percentage);
         }

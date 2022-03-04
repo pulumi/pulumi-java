@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -38,21 +38,21 @@ public final class AwsNodePoolConfigTaint {
     /**
      * Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
      * 
-     */
+    */
     public String getEffect() {
         return this.effect;
     }
     /**
      * Required. Key for the taint.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Required. Value for the taint.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -95,7 +95,6 @@ public final class AwsNodePoolConfigTaint {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AwsNodePoolConfigTaint build() {
             return new AwsNodePoolConfigTaint(effect, key, value);
         }

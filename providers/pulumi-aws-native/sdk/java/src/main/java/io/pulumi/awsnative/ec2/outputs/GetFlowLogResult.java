@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.FlowLogTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class GetFlowLogResult {
     /**
      * The Flow Log ID
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The tags to apply to the flow logs.
      * 
-     */
+    */
     public List<FlowLogTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -78,7 +78,6 @@ public final class GetFlowLogResult {
             this.tags = tags;
             return this;
         }
-
         public GetFlowLogResult build() {
             return new GetFlowLogResult(id, tags);
         }

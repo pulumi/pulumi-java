@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+      private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -48,7 +48,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ParameterType>> type;
+      private final @Nullable Input<Either<String,ParameterType>> type;
 
     public Input<Either<String,ParameterType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -59,7 +59,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Object> value;
+      private final @Nullable Input<Object> value;
 
     public Input<Object> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -148,7 +148,6 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public WorkflowParameterArgs build() {
             return new WorkflowParameterArgs(description, metadata, type, value);
         }

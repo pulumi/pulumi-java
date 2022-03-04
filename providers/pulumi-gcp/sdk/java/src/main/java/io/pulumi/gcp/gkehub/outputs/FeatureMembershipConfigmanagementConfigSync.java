@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementConfigSyncGit;
 import java.lang.String;
 import java.util.Objects;
@@ -36,14 +36,14 @@ public final class FeatureMembershipConfigmanagementConfigSync {
      * - 
      * (Optional) Structure is documented below.
      * 
-     */
+    */
     public Optional<FeatureMembershipConfigmanagementConfigSyncGit> getGit() {
         return Optional.ofNullable(this.git);
     }
     /**
      * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
      * 
-     */
+    */
     public Optional<String> getSourceFormat() {
         return Optional.ofNullable(this.sourceFormat);
     }
@@ -79,7 +79,6 @@ public final class FeatureMembershipConfigmanagementConfigSync {
             this.sourceFormat = sourceFormat;
             return this;
         }
-
         public FeatureMembershipConfigmanagementConfigSync build() {
             return new FeatureMembershipConfigmanagementConfigSync(git, sourceFormat);
         }

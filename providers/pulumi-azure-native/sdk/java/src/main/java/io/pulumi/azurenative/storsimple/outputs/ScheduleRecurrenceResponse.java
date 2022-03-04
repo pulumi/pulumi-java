@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -41,21 +41,21 @@ public final class ScheduleRecurrenceResponse {
     /**
      * The recurrence type.
      * 
-     */
+    */
     public String getRecurrenceType() {
         return this.recurrenceType;
     }
     /**
      * The recurrence value.
      * 
-     */
+    */
     public Integer getRecurrenceValue() {
         return this.recurrenceValue;
     }
     /**
      * The week days list. Applicable only for schedules of recurrence type 'weekly'.
      * 
-     */
+    */
     public List<String> getWeeklyDaysList() {
         return this.weeklyDaysList == null ? List.of() : this.weeklyDaysList;
     }
@@ -98,7 +98,6 @@ public final class ScheduleRecurrenceResponse {
             this.weeklyDaysList = weeklyDaysList;
             return this;
         }
-
         public ScheduleRecurrenceResponse build() {
             return new ScheduleRecurrenceResponse(recurrenceType, recurrenceValue, weeklyDaysList);
         }

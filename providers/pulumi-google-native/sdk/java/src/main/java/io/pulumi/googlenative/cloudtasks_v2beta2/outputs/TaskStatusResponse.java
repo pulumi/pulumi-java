@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AttemptStatusResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class TaskStatusResponse {
     /**
      * The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.
      * 
-     */
+    */
     public Integer getAttemptDispatchCount() {
         return this.attemptDispatchCount;
     }
     /**
      * The number of attempts which have received a response. This field is not calculated for pull tasks.
      * 
-     */
+    */
     public Integer getAttemptResponseCount() {
         return this.attemptResponseCount;
     }
     /**
      * The status of the task's first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.
      * 
-     */
+    */
     public AttemptStatusResponse getFirstAttemptStatus() {
         return this.firstAttemptStatus;
     }
     /**
      * The status of the task's last attempt. This field is not calculated for pull tasks.
      * 
-     */
+    */
     public AttemptStatusResponse getLastAttemptStatus() {
         return this.lastAttemptStatus;
     }
@@ -117,7 +117,6 @@ public final class TaskStatusResponse {
             this.lastAttemptStatus = Objects.requireNonNull(lastAttemptStatus);
             return this;
         }
-
         public TaskStatusResponse build() {
             return new TaskStatusResponse(attemptDispatchCount, attemptResponseCount, firstAttemptStatus, lastAttemptStatus);
         }

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.outputs.WebACLOverrideAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLRuleAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLStatement;
 import io.pulumi.awsnative.wafv2.outputs.WebACLVisibilityConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -70,7 +70,7 @@ public final class WebACLRule {
     /**
      * Collection of Rule Labels.
      * 
-     */
+    */
     public List<WebACLLabel> getRuleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }
@@ -154,7 +154,6 @@ public final class WebACLRule {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public WebACLRule build() {
             return new WebACLRule(action, captchaConfig, name, overrideAction, priority, ruleLabels, statement, visibilityConfig);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -45,28 +45,28 @@ public final class DiskUtilizationResponse {
     /**
      * Target bytes read per second.
      * 
-     */
+    */
     public Integer getTargetReadBytesPerSecond() {
         return this.targetReadBytesPerSecond;
     }
     /**
      * Target ops read per seconds.
      * 
-     */
+    */
     public Integer getTargetReadOpsPerSecond() {
         return this.targetReadOpsPerSecond;
     }
     /**
      * Target bytes written per second.
      * 
-     */
+    */
     public Integer getTargetWriteBytesPerSecond() {
         return this.targetWriteBytesPerSecond;
     }
     /**
      * Target ops written per second.
      * 
-     */
+    */
     public Integer getTargetWriteOpsPerSecond() {
         return this.targetWriteOpsPerSecond;
     }
@@ -116,7 +116,6 @@ public final class DiskUtilizationResponse {
             this.targetWriteOpsPerSecond = Objects.requireNonNull(targetWriteOpsPerSecond);
             return this;
         }
-
         public DiskUtilizationResponse build() {
             return new DiskUtilizationResponse(targetReadBytesPerSecond, targetReadOpsPerSecond, targetWriteBytesPerSecond, targetWriteOpsPerSecond);
         }

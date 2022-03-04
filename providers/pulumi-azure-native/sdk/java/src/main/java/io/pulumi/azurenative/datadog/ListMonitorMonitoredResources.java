@@ -6,21 +6,41 @@ package io.pulumi.azurenative.datadog;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datadog.inputs.ListMonitorMonitoredResourcesArgs;
 import io.pulumi.azurenative.datadog.outputs.ListMonitorMonitoredResourcesResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMonitorMonitoredResources {
-/**
- * Response of a list operation.
+    private ListMonitorMonitoredResources() {}
+    public interface BuilderApplicator {
+        public void apply(ListMonitorMonitoredResourcesArgs.Builder a);
+    }
+    private static ListMonitorMonitoredResourcesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListMonitorMonitoredResourcesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response of a list operation.
  * API Version: 2021-03-01.
  * 
- *
- * Response of a list operation.
+     *
+     * Response of a list operation.
  * 
- */
+     */
+    public static CompletableFuture<ListMonitorMonitoredResourcesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response of a list operation.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Response of a list operation.
+     * 
+     */
     public static CompletableFuture<ListMonitorMonitoredResourcesResult> invokeAsync(ListMonitorMonitoredResourcesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datadog:listMonitorMonitoredResources", TypeShape.of(ListMonitorMonitoredResourcesResult.class), args == null ? ListMonitorMonitoredResourcesArgs.Empty : args, Utilities.withVersion(options));
     }

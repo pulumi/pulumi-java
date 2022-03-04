@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -51,14 +51,14 @@ public final class GetGlobalAddressResult {
     /**
      * The IP of the created resource.
      * 
-     */
+    */
     public String getAddress() {
         return this.address;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -71,14 +71,14 @@ public final class GetGlobalAddressResult {
     /**
      * The URI of the created resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Indicates if the address is used. Possible values are: RESERVED or IN_USE.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -142,7 +142,6 @@ public final class GetGlobalAddressResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetGlobalAddressResult build() {
             return new GetGlobalAddressResult(address, id, name, project, selfLink, status);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.ObjectReplicationPolicyFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="destinationContainer", required=true)
-    private final Input<String> destinationContainer;
+      private final Input<String> destinationContainer;
 
     public Input<String> getDestinationContainer() {
         return this.destinationContainer;
@@ -35,7 +35,7 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable Input<ObjectReplicationPolicyFilterArgs> filters;
+      private final @Nullable Input<ObjectReplicationPolicyFilterArgs> filters;
 
     public Input<ObjectReplicationPolicyFilterArgs> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
@@ -46,7 +46,7 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ruleId")
-    private final @Nullable Input<String> ruleId;
+      private final @Nullable Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId == null ? Input.empty() : this.ruleId;
@@ -57,7 +57,7 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sourceContainer", required=true)
-    private final Input<String> sourceContainer;
+      private final Input<String> sourceContainer;
 
     public Input<String> getSourceContainer() {
         return this.sourceContainer;
@@ -146,7 +146,6 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
             this.sourceContainer = Input.of(Objects.requireNonNull(sourceContainer));
             return this;
         }
-
         public ObjectReplicationPolicyRuleArgs build() {
             return new ObjectReplicationPolicyRuleArgs(destinationContainer, filters, ruleId, sourceContainer);
         }

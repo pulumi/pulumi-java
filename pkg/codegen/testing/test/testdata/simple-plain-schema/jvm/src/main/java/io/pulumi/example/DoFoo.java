@@ -3,7 +3,7 @@
 
 package io.pulumi.example;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.example.Utilities;
@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class DoFoo {
+    private DoFoo() {}
+    public interface BuilderApplicator {
+        public void apply(DoFooArgs.Builder a);
+    }
+    private static DoFooArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = DoFooArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<Void> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<Void> invokeAsync(DoFooArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("example::doFoo", TypeShape.of(Void.class), args == null ? DoFooArgs.Empty : args, Utilities.withVersion(options));
     }

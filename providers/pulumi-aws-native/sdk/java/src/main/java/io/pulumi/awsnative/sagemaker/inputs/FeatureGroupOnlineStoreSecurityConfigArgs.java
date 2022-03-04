@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class FeatureGroupOnlineStoreSecurityConfigArgs extends io.pulumi.r
     public static final FeatureGroupOnlineStoreSecurityConfigArgs Empty = new FeatureGroupOnlineStoreSecurityConfigArgs();
 
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -58,7 +58,6 @@ public final class FeatureGroupOnlineStoreSecurityConfigArgs extends io.pulumi.r
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
-
         public FeatureGroupOnlineStoreSecurityConfigArgs build() {
             return new FeatureGroupOnlineStoreSecurityConfigArgs(kmsKeyId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigtable.inputs.TableColumnFamilyArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnFamilies")
-    private final @Nullable Input<List<TableColumnFamilyArgs>> columnFamilies;
+      private final @Nullable Input<List<TableColumnFamilyArgs>> columnFamilies;
 
     public Input<List<TableColumnFamilyArgs>> getColumnFamilies() {
         return this.columnFamilies == null ? Input.empty() : this.columnFamilies;
@@ -32,7 +32,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceName", required=true)
-    private final Input<String> instanceName;
+      private final Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName;
@@ -43,7 +43,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -68,7 +68,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="splitKeys")
-    private final @Nullable Input<List<String>> splitKeys;
+      private final @Nullable Input<List<String>> splitKeys;
 
     public Input<List<String>> getSplitKeys() {
         return this.splitKeys == null ? Input.empty() : this.splitKeys;
@@ -172,7 +172,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.splitKeys = Input.ofNullable(splitKeys);
             return this;
         }
-
         public TableArgs build() {
             return new TableArgs(columnFamilies, instanceName, name, project, splitKeys);
         }

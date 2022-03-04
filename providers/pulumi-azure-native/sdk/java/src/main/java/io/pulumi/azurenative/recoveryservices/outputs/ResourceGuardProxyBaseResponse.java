@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ResourceGuardOperationDetailResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ResourceGuardProxyBaseResponse {
             this.resourceGuardResourceId = resourceGuardResourceId;
             return this;
         }
-
         public ResourceGuardProxyBaseResponse build() {
             return new ResourceGuardProxyBaseResponse(lastUpdatedTime, resourceGuardOperationDetails, resourceGuardResourceId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ActionGroupResponse {
     /**
      * The resource ID of the Action Group. This cannot be null or empty.
      * 
-     */
+    */
     public String getActionGroupId() {
         return this.actionGroupId;
     }
     /**
      * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
      * 
-     */
+    */
     public Map<String,String> getWebhookProperties() {
         return this.webhookProperties == null ? Map.of() : this.webhookProperties;
     }
@@ -76,7 +76,6 @@ public final class ActionGroupResponse {
             this.webhookProperties = webhookProperties;
             return this;
         }
-
         public ActionGroupResponse build() {
             return new ActionGroupResponse(actionGroupId, webhookProperties);
         }

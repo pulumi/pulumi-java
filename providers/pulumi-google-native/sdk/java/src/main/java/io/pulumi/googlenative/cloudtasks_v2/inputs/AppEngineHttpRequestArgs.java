@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2.enums.AppEngineHttpRequestHttpMethod;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.AppEngineRoutingArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="appEngineRouting")
-    private final @Nullable Input<AppEngineRoutingArgs> appEngineRouting;
+      private final @Nullable Input<AppEngineRoutingArgs> appEngineRouting;
 
     public Input<AppEngineRoutingArgs> getAppEngineRouting() {
         return this.appEngineRouting == null ? Input.empty() : this.appEngineRouting;
@@ -37,7 +37,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -48,7 +48,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<Map<String,String>> headers;
+      private final @Nullable Input<Map<String,String>> headers;
 
     public Input<Map<String,String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -59,7 +59,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="httpMethod")
-    private final @Nullable Input<AppEngineHttpRequestHttpMethod> httpMethod;
+      private final @Nullable Input<AppEngineHttpRequestHttpMethod> httpMethod;
 
     public Input<AppEngineHttpRequestHttpMethod> getHttpMethod() {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
@@ -70,7 +70,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="relativeUri")
-    private final @Nullable Input<String> relativeUri;
+      private final @Nullable Input<String> relativeUri;
 
     public Input<String> getRelativeUri() {
         return this.relativeUri == null ? Input.empty() : this.relativeUri;
@@ -174,7 +174,6 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
             this.relativeUri = Input.ofNullable(relativeUri);
             return this;
         }
-
         public AppEngineHttpRequestArgs build() {
             return new AppEngineHttpRequestArgs(appEngineRouting, body, headers, httpMethod, relativeUri);
         }

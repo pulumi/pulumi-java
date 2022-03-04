@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="max", required=true)
-    private final Input<Integer> max;
+      private final Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max;
@@ -33,7 +33,7 @@ public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="min", required=true)
-    private final Input<Integer> min;
+      private final Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min;
@@ -92,7 +92,6 @@ public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.min = Input.of(Objects.requireNonNull(min));
             return this;
         }
-
         public HostPortRangeArgs build() {
             return new HostPortRangeArgs(max, min);
         }

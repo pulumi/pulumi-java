@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class EnrichmentPropertiesResponse {
     /**
      * The list of endpoints for which the enrichment is applied to the message.
      * 
-     */
+    */
     public List<String> getEndpointNames() {
         return this.endpointNames;
     }
     /**
      * The key or name for the enrichment property.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value for the enrichment property.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
@@ -96,7 +96,6 @@ public final class EnrichmentPropertiesResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EnrichmentPropertiesResponse build() {
             return new EnrichmentPropertiesResponse(endpointNames, key, value);
         }

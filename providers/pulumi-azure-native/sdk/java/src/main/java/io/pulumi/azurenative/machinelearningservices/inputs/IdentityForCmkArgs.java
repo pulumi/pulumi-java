@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class IdentityForCmkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAssignedIdentity", required=true)
-    private final Input<String> userAssignedIdentity;
+      private final Input<String> userAssignedIdentity;
 
     public Input<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity;
@@ -65,7 +65,6 @@ public final class IdentityForCmkArgs extends io.pulumi.resources.ResourceArgs {
             this.userAssignedIdentity = Input.of(Objects.requireNonNull(userAssignedIdentity));
             return this;
         }
-
         public IdentityForCmkArgs build() {
             return new IdentityForCmkArgs(userAssignedIdentity);
         }

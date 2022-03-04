@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DataStoreInfoBaseResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="dataStoreType", required=true)
-    private final String dataStoreType;
+      private final String dataStoreType;
 
     public String getDataStoreType() {
         return this.dataStoreType;
@@ -32,7 +32,7 @@ public final class DataStoreInfoBaseResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -81,7 +81,6 @@ public final class DataStoreInfoBaseResponse extends io.pulumi.resources.InvokeA
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public DataStoreInfoBaseResponse build() {
             return new DataStoreInfoBaseResponse(dataStoreType, objectType);
         }

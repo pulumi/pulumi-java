@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
     /**
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
      * 
-     */
+    */
     public Boolean getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
     /**
      * The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
      * 
-     */
+    */
     public String getSsml() {
         return this.ssml;
     }
     /**
      * The raw text to be synthesized.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }
@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse(allowPlaybackInterruption, ssml, text);
         }

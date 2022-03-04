@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceVaultCertificateResponse;
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CloudServiceVaultSecretGroupResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourceVault")
-    private final @Nullable SubResourceResponse sourceVault;
+      private final @Nullable SubResourceResponse sourceVault;
 
     public Optional<SubResourceResponse> getSourceVault() {
         return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
@@ -36,7 +36,7 @@ public final class CloudServiceVaultSecretGroupResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="vaultCertificates")
-    private final @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates;
+      private final @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates;
 
     public List<CloudServiceVaultCertificateResponse> getVaultCertificates() {
         return this.vaultCertificates == null ? List.of() : this.vaultCertificates;
@@ -85,7 +85,6 @@ public final class CloudServiceVaultSecretGroupResponse extends io.pulumi.resour
             this.vaultCertificates = vaultCertificates;
             return this;
         }
-
         public CloudServiceVaultSecretGroupResponse build() {
             return new CloudServiceVaultSecretGroupResponse(sourceVault, vaultCertificates);
         }

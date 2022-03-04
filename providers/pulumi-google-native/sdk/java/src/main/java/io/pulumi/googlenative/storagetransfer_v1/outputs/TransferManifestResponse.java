@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class TransferManifestResponse {
     /**
      * Specifies the path to the manifest in Cloud Storage. The Google-managed service account for the transfer must have `storage.objects.get` permission for this object. An example path is `gs://bucket_name/path/manifest.csv`.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
@@ -52,7 +52,6 @@ public final class TransferManifestResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public TransferManifestResponse build() {
             return new TransferManifestResponse(location);
         }

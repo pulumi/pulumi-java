@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1;
 
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.googlenative.Utilities;
@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHttpsHealthCheck {
-/**
- * Returns the specified HttpsHealthCheck resource. Gets a list of available HTTPS health checks by making a list() request.
+    private GetHttpsHealthCheck() {}
+    public interface BuilderApplicator {
+        public void apply(GetHttpsHealthCheckArgs.Builder a);
+    }
+    private static GetHttpsHealthCheckArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHttpsHealthCheckArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified HttpsHealthCheck resource. Gets a list of available HTTPS health checks by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetHttpsHealthCheckResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified HttpsHealthCheck resource. Gets a list of available HTTPS health checks by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetHttpsHealthCheckResult> invokeAsync(GetHttpsHealthCheckArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getHttpsHealthCheck", TypeShape.of(GetHttpsHealthCheckResult.class), args == null ? GetHttpsHealthCheckArgs.Empty : args, Utilities.withVersion(options));
     }

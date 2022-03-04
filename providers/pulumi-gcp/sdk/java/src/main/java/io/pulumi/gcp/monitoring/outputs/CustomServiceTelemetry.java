@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +29,7 @@ public final class CustomServiceTelemetry {
      * Formatted as described in
      * https://cloud.google.com/apis/design/resource_names.
      * 
-     */
+    */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -58,7 +58,6 @@ public final class CustomServiceTelemetry {
             this.resourceName = resourceName;
             return this;
         }
-
         public CustomServiceTelemetry build() {
             return new CustomServiceTelemetry(resourceName);
         }

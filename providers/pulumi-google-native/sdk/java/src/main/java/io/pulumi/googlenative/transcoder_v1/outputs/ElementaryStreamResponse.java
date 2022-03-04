@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AudioStreamResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.TextStreamResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.VideoStreamResponse;
@@ -48,28 +48,28 @@ public final class ElementaryStreamResponse {
     /**
      * Encoding of an audio stream.
      * 
-     */
+    */
     public AudioStreamResponse getAudioStream() {
         return this.audioStream;
     }
     /**
      * A unique key for this elementary stream.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Encoding of a text stream. For example, closed captions or subtitles.
      * 
-     */
+    */
     public TextStreamResponse getTextStream() {
         return this.textStream;
     }
     /**
      * Encoding of a video stream.
      * 
-     */
+    */
     public VideoStreamResponse getVideoStream() {
         return this.videoStream;
     }
@@ -119,7 +119,6 @@ public final class ElementaryStreamResponse {
             this.videoStream = Objects.requireNonNull(videoStream);
             return this;
         }
-
         public ElementaryStreamResponse build() {
             return new ElementaryStreamResponse(audioStream, key, textStream, videoStream);
         }

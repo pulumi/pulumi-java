@@ -6,7 +6,7 @@ package io.pulumi.awsnative.groundstation;
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupEndpointDetailsArgs;
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,14 +17,14 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
     public static final DataflowEndpointGroupArgs Empty = new DataflowEndpointGroupArgs();
 
     @InputImport(name="endpointDetails", required=true)
-    private final Input<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
+      private final Input<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
 
     public Input<List<DataflowEndpointGroupEndpointDetailsArgs>> getEndpointDetails() {
         return this.endpointDetails;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<DataflowEndpointGroupTagArgs>> tags;
+      private final @Nullable Input<List<DataflowEndpointGroupTagArgs>> tags;
 
     public Input<List<DataflowEndpointGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -83,7 +83,6 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DataflowEndpointGroupArgs build() {
             return new DataflowEndpointGroupArgs(endpointDetails, tags);
         }

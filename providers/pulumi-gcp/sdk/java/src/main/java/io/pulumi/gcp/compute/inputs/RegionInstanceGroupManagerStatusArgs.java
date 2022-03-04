@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusStatefulArgs;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusVersionTargetArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="isStable")
-    private final @Nullable Input<Boolean> isStable;
+      private final @Nullable Input<Boolean> isStable;
 
     public Input<Boolean> getIsStable() {
         return this.isStable == null ? Input.empty() : this.isStable;
@@ -33,7 +33,7 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="statefuls")
-    private final @Nullable Input<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls;
+      private final @Nullable Input<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls;
 
     public Input<List<RegionInstanceGroupManagerStatusStatefulArgs>> getStatefuls() {
         return this.statefuls == null ? Input.empty() : this.statefuls;
@@ -44,7 +44,7 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="versionTargets")
-    private final @Nullable Input<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
+      private final @Nullable Input<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
 
     public Input<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> getVersionTargets() {
         return this.versionTargets == null ? Input.empty() : this.versionTargets;
@@ -118,7 +118,6 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
             this.versionTargets = Input.ofNullable(versionTargets);
             return this;
         }
-
         public RegionInstanceGroupManagerStatusArgs build() {
             return new RegionInstanceGroupManagerStatusArgs(isStable, statefuls, versionTargets);
         }

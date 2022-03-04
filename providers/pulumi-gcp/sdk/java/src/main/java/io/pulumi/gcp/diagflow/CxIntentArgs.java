@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxIntentParameterArgs;
 import io.pulumi.gcp.diagflow.inputs.CxIntentTrainingPhraseArgs;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -48,7 +48,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isFallback")
-    private final @Nullable Input<Boolean> isFallback;
+      private final @Nullable Input<Boolean> isFallback;
 
     public Input<Boolean> getIsFallback() {
         return this.isFallback == null ? Input.empty() : this.isFallback;
@@ -61,7 +61,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -74,7 +74,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
@@ -86,7 +86,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<CxIntentParameterArgs>> parameters;
+      private final @Nullable Input<List<CxIntentParameterArgs>> parameters;
 
     public Input<List<CxIntentParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -98,7 +98,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -111,7 +111,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -123,7 +123,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trainingPhrases")
-    private final @Nullable Input<List<CxIntentTrainingPhraseArgs>> trainingPhrases;
+      private final @Nullable Input<List<CxIntentTrainingPhraseArgs>> trainingPhrases;
 
     public Input<List<CxIntentTrainingPhraseArgs>> getTrainingPhrases() {
         return this.trainingPhrases == null ? Input.empty() : this.trainingPhrases;
@@ -287,7 +287,6 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
             this.trainingPhrases = Input.ofNullable(trainingPhrases);
             return this;
         }
-
         public CxIntentArgs build() {
             return new CxIntentArgs(description, displayName, isFallback, labels, languageCode, parameters, parent, priority, trainingPhrases);
         }

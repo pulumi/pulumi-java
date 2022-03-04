@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.maps.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class MapsAccountPropertiesResponse {
     /**
      * A unique identifier for the maps account
      * 
-     */
+    */
     public Optional<String> getXMsClientId() {
         return Optional.ofNullable(this.xMsClientId);
     }
@@ -54,7 +54,6 @@ public final class MapsAccountPropertiesResponse {
             this.xMsClientId = xMsClientId;
             return this;
         }
-
         public MapsAccountPropertiesResponse build() {
             return new MapsAccountPropertiesResponse(xMsClientId);
         }

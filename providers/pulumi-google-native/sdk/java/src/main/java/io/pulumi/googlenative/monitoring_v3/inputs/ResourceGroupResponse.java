@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final String groupId;
+      private final String groupId;
 
     public String getGroupId() {
         return this.groupId;
@@ -32,7 +32,7 @@ public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -81,7 +81,6 @@ public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs 
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public ResourceGroupResponse build() {
             return new ResourceGroupResponse(groupId, resourceType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
@@ -33,7 +33,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="contentMd5")
-    private final @Nullable String contentMd5;
+      private final @Nullable String contentMd5;
 
     public Optional<String> getContentMd5() {
         return this.contentMd5 == null ? Optional.empty() : Optional.ofNullable(this.contentMd5);
@@ -44,7 +44,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable String contentType;
+      private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
@@ -56,7 +56,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable String credentials;
+      private final @Nullable String credentials;
 
     public Optional<String> getCredentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
@@ -68,7 +68,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable String duration;
+      private final @Nullable String duration;
 
     public Optional<String> getDuration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
@@ -80,7 +80,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="extensionHeaders")
-    private final @Nullable Map<String,String> extensionHeaders;
+      private final @Nullable Map<String,String> extensionHeaders;
 
     public Map<String,String> getExtensionHeaders() {
         return this.extensionHeaders == null ? Map.of() : this.extensionHeaders;
@@ -91,7 +91,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="httpMethod")
-    private final @Nullable String httpMethod;
+      private final @Nullable String httpMethod;
 
     public Optional<String> getHttpMethod() {
         return this.httpMethod == null ? Optional.empty() : Optional.ofNullable(this.httpMethod);
@@ -102,7 +102,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -211,7 +211,6 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public GetObjectSignedUrlArgs build() {
             return new GetObjectSignedUrlArgs(bucket, contentMd5, contentType, credentials, duration, extensionHeaders, httpMethod, path);
         }

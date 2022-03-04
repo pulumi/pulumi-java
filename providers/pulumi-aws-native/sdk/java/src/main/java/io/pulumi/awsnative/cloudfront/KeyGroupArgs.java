@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.KeyGroupConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -14,7 +14,7 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
     public static final KeyGroupArgs Empty = new KeyGroupArgs();
 
     @InputImport(name="keyGroupConfig", required=true)
-    private final Input<KeyGroupConfigArgs> keyGroupConfig;
+      private final Input<KeyGroupConfigArgs> keyGroupConfig;
 
     public Input<KeyGroupConfigArgs> getKeyGroupConfig() {
         return this.keyGroupConfig;
@@ -57,7 +57,6 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.keyGroupConfig = Input.of(Objects.requireNonNull(keyGroupConfig));
             return this;
         }
-
         public KeyGroupArgs build() {
             return new KeyGroupArgs(keyGroupConfig);
         }

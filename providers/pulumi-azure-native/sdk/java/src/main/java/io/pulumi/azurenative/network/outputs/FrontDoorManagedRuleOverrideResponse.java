@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ManagedRuleExclusionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,28 +49,28 @@ public final class FrontDoorManagedRuleOverrideResponse {
     /**
      * Describes the override action to be applied when rule matches.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
      * 
-     */
+    */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Describes the exclusions that are applied to this specific rule.
      * 
-     */
+    */
     public List<ManagedRuleExclusionResponse> getExclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
      * Identifier for the managed rule.
      * 
-     */
+    */
     public String getRuleId() {
         return this.ruleId;
     }
@@ -120,7 +120,6 @@ public final class FrontDoorManagedRuleOverrideResponse {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public FrontDoorManagedRuleOverrideResponse build() {
             return new FrontDoorManagedRuleOverrideResponse(action, enabledState, exclusions, ruleId);
         }

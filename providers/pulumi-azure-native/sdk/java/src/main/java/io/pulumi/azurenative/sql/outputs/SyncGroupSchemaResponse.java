@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SyncGroupSchemaTableResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class SyncGroupSchemaResponse {
     /**
      * Name of master sync member where the schema is from.
      * 
-     */
+    */
     public Optional<String> getMasterSyncMemberName() {
         return Optional.ofNullable(this.masterSyncMemberName);
     }
     /**
      * List of tables in sync group schema.
      * 
-     */
+    */
     public List<SyncGroupSchemaTableResponse> getTables() {
         return this.tables == null ? List.of() : this.tables;
     }
@@ -78,7 +78,6 @@ public final class SyncGroupSchemaResponse {
             this.tables = tables;
             return this;
         }
-
         public SyncGroupSchemaResponse build() {
             return new SyncGroupSchemaResponse(masterSyncMemberName, tables);
         }

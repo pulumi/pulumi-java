@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.enums.ResponsePlanSsmAutomationTargetAccount;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmParameter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="documentName", required=true)
-    private final String documentName;
+      private final String documentName;
 
     public String getDocumentName() {
         return this.documentName;
@@ -37,7 +37,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="documentVersion")
-    private final @Nullable String documentVersion;
+      private final @Nullable String documentVersion;
 
     public Optional<String> getDocumentVersion() {
         return this.documentVersion == null ? Optional.empty() : Optional.ofNullable(this.documentVersion);
@@ -48,7 +48,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable List<ResponsePlanSsmParameter> parameters;
+      private final @Nullable List<ResponsePlanSsmParameter> parameters;
 
     public List<ResponsePlanSsmParameter> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
@@ -59,7 +59,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -70,7 +70,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="targetAccount")
-    private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
+      private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
 
     public Optional<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {
         return this.targetAccount == null ? Optional.empty() : Optional.ofNullable(this.targetAccount);
@@ -149,7 +149,6 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
             this.targetAccount = targetAccount;
             return this;
         }
-
         public ResponsePlanSsmAutomation build() {
             return new ResponsePlanSsmAutomation(documentName, documentVersion, parameters, roleArn, targetAccount);
         }

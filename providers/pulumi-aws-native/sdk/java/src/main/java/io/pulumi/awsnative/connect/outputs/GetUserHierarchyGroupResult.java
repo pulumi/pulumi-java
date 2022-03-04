@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class GetUserHierarchyGroupResult {
     /**
      * The identifier of the Amazon Connect instance.
      * 
-     */
+    */
     public Optional<String> getInstanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * The name of the user hierarchy group.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Amazon Resource Name (ARN) for the user hierarchy group.
      * 
-     */
+    */
     public Optional<String> getUserHierarchyGroupArn() {
         return Optional.ofNullable(this.userHierarchyGroupArn);
     }
@@ -97,7 +97,6 @@ public final class GetUserHierarchyGroupResult {
             this.userHierarchyGroupArn = userHierarchyGroupArn;
             return this;
         }
-
         public GetUserHierarchyGroupResult build() {
             return new GetUserHierarchyGroupResult(instanceArn, name, userHierarchyGroupArn);
         }

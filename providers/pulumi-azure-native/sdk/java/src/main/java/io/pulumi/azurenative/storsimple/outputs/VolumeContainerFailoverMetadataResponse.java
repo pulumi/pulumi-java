@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.VolumeFailoverMetadataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,14 +35,14 @@ public final class VolumeContainerFailoverMetadataResponse {
     /**
      * The path ID of the volume container.
      * 
-     */
+    */
     public Optional<String> getVolumeContainerId() {
         return Optional.ofNullable(this.volumeContainerId);
     }
     /**
      * The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
      * 
-     */
+    */
     public List<VolumeFailoverMetadataResponse> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
@@ -78,7 +78,6 @@ public final class VolumeContainerFailoverMetadataResponse {
             this.volumes = volumes;
             return this;
         }
-
         public VolumeContainerFailoverMetadataResponse build() {
             return new VolumeContainerFailoverMetadataResponse(volumeContainerId, volumes);
         }

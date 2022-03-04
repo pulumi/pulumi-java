@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     /**
      * The maximum product price.
      * 
-     */
+    */
     public Double getMax() {
         return this.max;
     }
     /**
      * The minimum product price.
      * 
-     */
+    */
     public Double getMin() {
         return this.min;
     }
@@ -74,7 +74,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
             this.min = Objects.requireNonNull(min);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse(max, min);
         }

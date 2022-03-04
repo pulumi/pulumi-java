@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.CreationDataResponse;
 import io.pulumi.azurenative.containerservice.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -78,56 +78,56 @@ public final class GetSnapshotResult {
     /**
      * CreationData to be used to specify the source agent pool resource ID to create this snapshot.
      * 
-     */
+    */
     public Optional<CreationDataResponse> getCreationData() {
         return Optional.ofNullable(this.creationData);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of a snapshot. The default is NodePool.
      * 
-     */
+    */
     public Optional<String> getSnapshotType() {
         return Optional.ofNullable(this.snapshotType);
     }
     /**
      * The system metadata relating to this snapshot.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -205,7 +205,6 @@ public final class GetSnapshotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(creationData, id, location, name, snapshotType, systemData, tags, type);
         }

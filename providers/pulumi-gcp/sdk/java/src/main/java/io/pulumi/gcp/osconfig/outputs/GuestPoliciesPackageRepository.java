@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesPackageRepositoryApt;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesPackageRepositoryGoo;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesPackageRepositoryYum;
@@ -55,7 +55,7 @@ public final class GuestPoliciesPackageRepository {
      * An Apt Repository.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesPackageRepositoryApt> getApt() {
         return Optional.ofNullable(this.apt);
     }
@@ -63,7 +63,7 @@ public final class GuestPoliciesPackageRepository {
      * A Goo Repository.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesPackageRepositoryGoo> getGoo() {
         return Optional.ofNullable(this.goo);
     }
@@ -71,7 +71,7 @@ public final class GuestPoliciesPackageRepository {
      * A Yum Repository.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesPackageRepositoryYum> getYum() {
         return Optional.ofNullable(this.yum);
     }
@@ -79,7 +79,7 @@ public final class GuestPoliciesPackageRepository {
      * A Zypper Repository.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesPackageRepositoryZypper> getZypper() {
         return Optional.ofNullable(this.zypper);
     }
@@ -129,7 +129,6 @@ public final class GuestPoliciesPackageRepository {
             this.zypper = zypper;
             return this;
         }
-
         public GuestPoliciesPackageRepository build() {
             return new GuestPoliciesPackageRepository(apt, goo, yum, zypper);
         }

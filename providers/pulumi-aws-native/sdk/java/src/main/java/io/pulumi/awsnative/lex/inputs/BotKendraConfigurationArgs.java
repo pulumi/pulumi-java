@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
     public static final BotKendraConfigurationArgs Empty = new BotKendraConfigurationArgs();
 
     @InputImport(name="kendraIndex", required=true)
-    private final Input<String> kendraIndex;
+      private final Input<String> kendraIndex;
 
     public Input<String> getKendraIndex() {
         return this.kendraIndex;
     }
 
     @InputImport(name="queryFilterString")
-    private final @Nullable Input<String> queryFilterString;
+      private final @Nullable Input<String> queryFilterString;
 
     public Input<String> getQueryFilterString() {
         return this.queryFilterString == null ? Input.empty() : this.queryFilterString;
@@ -38,7 +38,7 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="queryFilterStringEnabled")
-    private final @Nullable Input<Boolean> queryFilterStringEnabled;
+      private final @Nullable Input<Boolean> queryFilterStringEnabled;
 
     public Input<Boolean> getQueryFilterStringEnabled() {
         return this.queryFilterStringEnabled == null ? Input.empty() : this.queryFilterStringEnabled;
@@ -112,7 +112,6 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
             this.queryFilterStringEnabled = Input.ofNullable(queryFilterStringEnabled);
             return this;
         }
-
         public BotKendraConfigurationArgs build() {
             return new BotKendraConfigurationArgs(kendraIndex, queryFilterString, queryFilterStringEnabled);
         }

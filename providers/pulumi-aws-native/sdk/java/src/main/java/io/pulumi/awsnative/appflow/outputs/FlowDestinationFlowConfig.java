@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.outputs.FlowDestinationConnectorProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,21 +42,21 @@ public final class FlowDestinationFlowConfig {
     /**
      * Name of destination connector profile
      * 
-     */
+    */
     public Optional<String> getConnectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
     /**
      * Destination connector type
      * 
-     */
+    */
     public FlowConnectorType getConnectorType() {
         return this.connectorType;
     }
     /**
      * Destination connector details
      * 
-     */
+    */
     public FlowDestinationConnectorProperties getDestinationConnectorProperties() {
         return this.destinationConnectorProperties;
     }
@@ -99,7 +99,6 @@ public final class FlowDestinationFlowConfig {
             this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
             return this;
         }
-
         public FlowDestinationFlowConfig build() {
             return new FlowDestinationFlowConfig(connectorProfileName, connectorType, destinationConnectorProperties);
         }

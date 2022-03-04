@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupCustomRequestHandling;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class RuleGroupRuleActionAllowProperties {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public RuleGroupRuleActionAllowProperties build() {
             return new RuleGroupRuleActionAllowProperties(customRequestHandling);
         }

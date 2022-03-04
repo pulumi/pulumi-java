@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -30,7 +30,7 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+      private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -44,7 +44,7 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="restorePolicy")
-    private final @Nullable Input<String> restorePolicy;
+      private final @Nullable Input<String> restorePolicy;
 
     public Input<String> getRestorePolicy() {
         return this.restorePolicy == null ? Input.empty() : this.restorePolicy;
@@ -118,7 +118,6 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
             this.restorePolicy = Input.ofNullable(restorePolicy);
             return this;
         }
-
         public DefaultServiceAccountsArgs build() {
             return new DefaultServiceAccountsArgs(action, project, restorePolicy);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2InspectConfigMinLikelihood;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CustomInfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FindingLimitsArgs;
@@ -29,7 +29,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="customInfoTypes")
-    private final @Nullable Input<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes;
+      private final @Nullable Input<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes;
 
     public Input<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> getCustomInfoTypes() {
         return this.customInfoTypes == null ? Input.empty() : this.customInfoTypes;
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="excludeInfoTypes")
-    private final @Nullable Input<Boolean> excludeInfoTypes;
+      private final @Nullable Input<Boolean> excludeInfoTypes;
 
     public Input<Boolean> getExcludeInfoTypes() {
         return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="includeQuote")
-    private final @Nullable Input<Boolean> includeQuote;
+      private final @Nullable Input<Boolean> includeQuote;
 
     public Input<Boolean> getIncludeQuote() {
         return this.includeQuote == null ? Input.empty() : this.includeQuote;
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="infoTypes")
-    private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+      private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
     public Input<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
         return this.infoTypes == null ? Input.empty() : this.infoTypes;
@@ -73,7 +73,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="limits")
-    private final @Nullable Input<GooglePrivacyDlpV2FindingLimitsArgs> limits;
+      private final @Nullable Input<GooglePrivacyDlpV2FindingLimitsArgs> limits;
 
     public Input<GooglePrivacyDlpV2FindingLimitsArgs> getLimits() {
         return this.limits == null ? Input.empty() : this.limits;
@@ -84,7 +84,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="minLikelihood")
-    private final @Nullable Input<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood;
+      private final @Nullable Input<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood;
 
     public Input<GooglePrivacyDlpV2InspectConfigMinLikelihood> getMinLikelihood() {
         return this.minLikelihood == null ? Input.empty() : this.minLikelihood;
@@ -95,7 +95,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ruleSet")
-    private final @Nullable Input<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet;
+      private final @Nullable Input<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet;
 
     public Input<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> getRuleSet() {
         return this.ruleSet == null ? Input.empty() : this.ruleSet;
@@ -229,7 +229,6 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
             this.ruleSet = Input.ofNullable(ruleSet);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectConfigArgs build() {
             return new GooglePrivacyDlpV2InspectConfigArgs(customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSet);
         }

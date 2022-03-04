@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.RegionCommitmentCategory;
 import io.pulumi.googlenative.compute_v1.enums.RegionCommitmentPlan;
 import io.pulumi.googlenative.compute_v1.enums.RegionCommitmentType;
@@ -27,7 +27,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoRenew")
-    private final @Nullable Input<Boolean> autoRenew;
+      private final @Nullable Input<Boolean> autoRenew;
 
     public Input<Boolean> getAutoRenew() {
         return this.autoRenew == null ? Input.empty() : this.autoRenew;
@@ -38,7 +38,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="category")
-    private final @Nullable Input<RegionCommitmentCategory> category;
+      private final @Nullable Input<RegionCommitmentCategory> category;
 
     public Input<RegionCommitmentCategory> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -49,7 +49,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="licenseResource")
-    private final @Nullable Input<LicenseResourceCommitmentArgs> licenseResource;
+      private final @Nullable Input<LicenseResourceCommitmentArgs> licenseResource;
 
     public Input<LicenseResourceCommitmentArgs> getLicenseResource() {
         return this.licenseResource == null ? Input.empty() : this.licenseResource;
@@ -71,7 +71,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -82,28 +82,28 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="plan")
-    private final @Nullable Input<RegionCommitmentPlan> plan;
+      private final @Nullable Input<RegionCommitmentPlan> plan;
 
     public Input<RegionCommitmentPlan> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -114,7 +114,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reservations")
-    private final @Nullable Input<List<ReservationArgs>> reservations;
+      private final @Nullable Input<List<ReservationArgs>> reservations;
 
     public Input<List<ReservationArgs>> getReservations() {
         return this.reservations == null ? Input.empty() : this.reservations;
@@ -125,7 +125,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<ResourceCommitmentArgs>> resources;
+      private final @Nullable Input<List<ResourceCommitmentArgs>> resources;
 
     public Input<List<ResourceCommitmentArgs>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -136,7 +136,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<RegionCommitmentType> type;
+      private final @Nullable Input<RegionCommitmentType> type;
 
     public Input<RegionCommitmentType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -345,7 +345,6 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public RegionCommitmentArgs build() {
             return new RegionCommitmentArgs(autoRenew, category, description, licenseResource, name, plan, project, region, requestId, reservations, resources, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AllocationSpecificSKUAllocationReservedInstancePropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class AllocationSpecificSKUReservationResponse {
     /**
      * Specifies the number of resources that are allocated.
      * 
-     */
+    */
     public String getCount() {
         return this.count;
     }
     /**
      * Indicates how many instances are in use.
      * 
-     */
+    */
     public String getInUseCount() {
         return this.inUseCount;
     }
     /**
      * The instance properties for the reservation.
      * 
-     */
+    */
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse getInstanceProperties() {
         return this.instanceProperties;
     }
@@ -96,7 +96,6 @@ public final class AllocationSpecificSKUReservationResponse {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
-
         public AllocationSpecificSKUReservationResponse build() {
             return new AllocationSpecificSKUReservationResponse(count, inUseCount, instanceProperties);
         }

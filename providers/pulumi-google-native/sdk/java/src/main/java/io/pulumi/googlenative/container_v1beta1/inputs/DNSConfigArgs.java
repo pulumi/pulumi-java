@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.DNSConfigClusterDns;
 import io.pulumi.googlenative.container_v1beta1.enums.DNSConfigClusterDnsScope;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterDns")
-    private final @Nullable Input<DNSConfigClusterDns> clusterDns;
+      private final @Nullable Input<DNSConfigClusterDns> clusterDns;
 
     public Input<DNSConfigClusterDns> getClusterDns() {
         return this.clusterDns == null ? Input.empty() : this.clusterDns;
@@ -36,7 +36,7 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterDnsDomain")
-    private final @Nullable Input<String> clusterDnsDomain;
+      private final @Nullable Input<String> clusterDnsDomain;
 
     public Input<String> getClusterDnsDomain() {
         return this.clusterDnsDomain == null ? Input.empty() : this.clusterDnsDomain;
@@ -47,7 +47,7 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterDnsScope")
-    private final @Nullable Input<DNSConfigClusterDnsScope> clusterDnsScope;
+      private final @Nullable Input<DNSConfigClusterDnsScope> clusterDnsScope;
 
     public Input<DNSConfigClusterDnsScope> getClusterDnsScope() {
         return this.clusterDnsScope == null ? Input.empty() : this.clusterDnsScope;
@@ -121,7 +121,6 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterDnsScope = Input.ofNullable(clusterDnsScope);
             return this;
         }
-
         public DNSConfigArgs build() {
             return new DNSConfigArgs(clusterDns, clusterDnsDomain, clusterDnsScope);
         }

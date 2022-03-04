@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
      * 
      */
     @InputImport(name="targetReceivedBytesPerSecond")
-    private final @Nullable Input<Integer> targetReceivedBytesPerSecond;
+      private final @Nullable Input<Integer> targetReceivedBytesPerSecond;
 
     public Input<Integer> getTargetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond == null ? Input.empty() : this.targetReceivedBytesPerSecond;
@@ -30,7 +30,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
      * 
      */
     @InputImport(name="targetReceivedPacketsPerSecond")
-    private final @Nullable Input<Integer> targetReceivedPacketsPerSecond;
+      private final @Nullable Input<Integer> targetReceivedPacketsPerSecond;
 
     public Input<Integer> getTargetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond == null ? Input.empty() : this.targetReceivedPacketsPerSecond;
@@ -41,7 +41,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
      * 
      */
     @InputImport(name="targetSentBytesPerSecond")
-    private final @Nullable Input<Integer> targetSentBytesPerSecond;
+      private final @Nullable Input<Integer> targetSentBytesPerSecond;
 
     public Input<Integer> getTargetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond == null ? Input.empty() : this.targetSentBytesPerSecond;
@@ -52,7 +52,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
      * 
      */
     @InputImport(name="targetSentPacketsPerSecond")
-    private final @Nullable Input<Integer> targetSentPacketsPerSecond;
+      private final @Nullable Input<Integer> targetSentPacketsPerSecond;
 
     public Input<Integer> getTargetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond == null ? Input.empty() : this.targetSentPacketsPerSecond;
@@ -141,7 +141,6 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
             this.targetSentPacketsPerSecond = Input.ofNullable(targetSentPacketsPerSecond);
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs build() {
             return new FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }

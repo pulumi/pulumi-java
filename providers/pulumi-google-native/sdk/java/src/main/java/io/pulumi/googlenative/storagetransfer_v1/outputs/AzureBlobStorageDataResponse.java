@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.AzureCredentialsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -46,28 +46,28 @@ public final class AzureBlobStorageDataResponse {
     /**
      * Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
      * 
-     */
+    */
     public AzureCredentialsResponse getAzureCredentials() {
         return this.azureCredentials;
     }
     /**
      * The container to transfer from the Azure Storage account.
      * 
-     */
+    */
     public String getContainer() {
         return this.container;
     }
     /**
      * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The name of the Azure Storage account.
      * 
-     */
+    */
     public String getStorageAccount() {
         return this.storageAccount;
     }
@@ -117,7 +117,6 @@ public final class AzureBlobStorageDataResponse {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public AzureBlobStorageDataResponse build() {
             return new AzureBlobStorageDataResponse(azureCredentials, container, path, storageAccount);
         }

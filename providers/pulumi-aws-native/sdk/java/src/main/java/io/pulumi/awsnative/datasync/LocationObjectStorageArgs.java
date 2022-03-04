@@ -6,7 +6,7 @@ package io.pulumi.awsnative.datasync;
 import io.pulumi.awsnative.datasync.enums.LocationObjectStorageServerProtocol;
 import io.pulumi.awsnative.datasync.inputs.LocationObjectStorageTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="accessKey")
-    private final @Nullable Input<String> accessKey;
+      private final @Nullable Input<String> accessKey;
 
     public Input<String> getAccessKey() {
         return this.accessKey == null ? Input.empty() : this.accessKey;
@@ -34,7 +34,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agentArns", required=true)
-    private final Input<List<String>> agentArns;
+      private final Input<List<String>> agentArns;
 
     public Input<List<String>> getAgentArns() {
         return this.agentArns;
@@ -45,7 +45,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -56,7 +56,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secretKey")
-    private final @Nullable Input<String> secretKey;
+      private final @Nullable Input<String> secretKey;
 
     public Input<String> getSecretKey() {
         return this.secretKey == null ? Input.empty() : this.secretKey;
@@ -67,7 +67,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serverHostname", required=true)
-    private final Input<String> serverHostname;
+      private final Input<String> serverHostname;
 
     public Input<String> getServerHostname() {
         return this.serverHostname;
@@ -78,7 +78,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serverPort")
-    private final @Nullable Input<Integer> serverPort;
+      private final @Nullable Input<Integer> serverPort;
 
     public Input<Integer> getServerPort() {
         return this.serverPort == null ? Input.empty() : this.serverPort;
@@ -89,7 +89,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serverProtocol")
-    private final @Nullable Input<LocationObjectStorageServerProtocol> serverProtocol;
+      private final @Nullable Input<LocationObjectStorageServerProtocol> serverProtocol;
 
     public Input<LocationObjectStorageServerProtocol> getServerProtocol() {
         return this.serverProtocol == null ? Input.empty() : this.serverProtocol;
@@ -100,7 +100,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subdirectory")
-    private final @Nullable Input<String> subdirectory;
+      private final @Nullable Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
@@ -111,7 +111,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<LocationObjectStorageTagArgs>> tags;
+      private final @Nullable Input<List<LocationObjectStorageTagArgs>> tags;
 
     public Input<List<LocationObjectStorageTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -275,7 +275,6 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public LocationObjectStorageArgs build() {
             return new LocationObjectStorageArgs(accessKey, agentArns, bucketName, secretKey, serverHostname, serverPort, serverProtocol, subdirectory, tags);
         }

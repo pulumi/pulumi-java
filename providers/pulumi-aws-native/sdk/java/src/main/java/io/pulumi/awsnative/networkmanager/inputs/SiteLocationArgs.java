@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -34,7 +34,7 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latitude")
-    private final @Nullable Input<String> latitude;
+      private final @Nullable Input<String> latitude;
 
     public Input<String> getLatitude() {
         return this.latitude == null ? Input.empty() : this.latitude;
@@ -45,7 +45,7 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="longitude")
-    private final @Nullable Input<String> longitude;
+      private final @Nullable Input<String> longitude;
 
     public Input<String> getLongitude() {
         return this.longitude == null ? Input.empty() : this.longitude;
@@ -119,7 +119,6 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
             this.longitude = Input.ofNullable(longitude);
             return this;
         }
-
         public SiteLocationArgs build() {
             return new SiteLocationArgs(address, latitude, longitude);
         }

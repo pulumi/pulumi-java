@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.outputs;
 import io.pulumi.awsnative.kendra.outputs.DataSourceProxyConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceWebCrawlerAuthenticationConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceWebCrawlerUrls;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -157,7 +157,6 @@ public final class DataSourceWebCrawlerConfiguration {
             this.urls = Objects.requireNonNull(urls);
             return this;
         }
-
         public DataSourceWebCrawlerConfiguration build() {
             return new DataSourceWebCrawlerConfiguration(authenticationConfiguration, crawlDepth, maxContentSizePerPageInMegaBytes, maxLinksPerPage, maxUrlsPerMinuteCrawlRate, proxyConfiguration, urlExclusionPatterns, urlInclusionPatterns, urls);
         }

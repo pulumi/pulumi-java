@@ -7,7 +7,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.ReferenceInputPropertiesArgs
 import io.pulumi.azurenative.streamanalytics.inputs.StreamInputPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputName")
-    private final @Nullable Input<String> inputName;
+      private final @Nullable Input<String> inputName;
 
     public Input<String> getInputName() {
         return this.inputName == null ? Input.empty() : this.inputName;
@@ -33,7 +33,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final Input<String> jobName;
+      private final Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName;
@@ -44,7 +44,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
+      private final @Nullable Input<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
 
     public Input<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -66,7 +66,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -170,7 +170,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public InputArgs build() {
             return new InputArgs(inputName, jobName, name, properties, resourceGroupName);
         }

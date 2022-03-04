@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 import io.pulumi.azurenative.storsimple.enums.DayOfWeek;
 import io.pulumi.azurenative.storsimple.enums.RecurrenceType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="recurrenceType", required=true)
-    private final Input<RecurrenceType> recurrenceType;
+      private final Input<RecurrenceType> recurrenceType;
 
     public Input<RecurrenceType> getRecurrenceType() {
         return this.recurrenceType;
@@ -37,7 +37,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="recurrenceValue", required=true)
-    private final Input<Integer> recurrenceValue;
+      private final Input<Integer> recurrenceValue;
 
     public Input<Integer> getRecurrenceValue() {
         return this.recurrenceValue;
@@ -48,7 +48,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="weeklyDaysList")
-    private final @Nullable Input<List<DayOfWeek>> weeklyDaysList;
+      private final @Nullable Input<List<DayOfWeek>> weeklyDaysList;
 
     public Input<List<DayOfWeek>> getWeeklyDaysList() {
         return this.weeklyDaysList == null ? Input.empty() : this.weeklyDaysList;
@@ -122,7 +122,6 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
             this.weeklyDaysList = Input.ofNullable(weeklyDaysList);
             return this;
         }
-
         public ScheduleRecurrenceArgs build() {
             return new ScheduleRecurrenceArgs(recurrenceType, recurrenceValue, weeklyDaysList);
         }

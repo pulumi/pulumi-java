@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3PageArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageTextArgs;
@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * 
      */
     @InputImport(name="currentPage")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3PageArgs> currentPage;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3PageArgs> currentPage;
 
     public Input<GoogleCloudDialogflowCxV3PageArgs> getCurrentPage() {
         return this.currentPage == null ? Input.empty() : this.currentPage;
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * 
      */
     @InputImport(name="diagnosticInfo", required=true)
-    private final Input<Map<String,String>> diagnosticInfo;
+      private final Input<Map<String,String>> diagnosticInfo;
 
     public Input<Map<String,String>> getDiagnosticInfo() {
         return this.diagnosticInfo;
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * 
      */
     @InputImport(name="sessionParameters")
-    private final @Nullable Input<Map<String,String>> sessionParameters;
+      private final @Nullable Input<Map<String,String>> sessionParameters;
 
     public Input<Map<String,String>> getSessionParameters() {
         return this.sessionParameters == null ? Input.empty() : this.sessionParameters;
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<GoogleRpcStatusArgs> status;
+      private final @Nullable Input<GoogleRpcStatusArgs> status;
 
     public Input<GoogleRpcStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * 
      */
     @InputImport(name="textResponses")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> textResponses;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> textResponses;
 
     public Input<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> getTextResponses() {
         return this.textResponses == null ? Input.empty() : this.textResponses;
@@ -84,7 +84,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * 
      */
     @InputImport(name="triggeredIntent")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3IntentArgs> triggeredIntent;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3IntentArgs> triggeredIntent;
 
     public Input<GoogleCloudDialogflowCxV3IntentArgs> getTriggeredIntent() {
         return this.triggeredIntent == null ? Input.empty() : this.triggeredIntent;
@@ -203,7 +203,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
             this.triggeredIntent = Input.ofNullable(triggeredIntent);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs build() {
             return new GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs(currentPage, diagnosticInfo, sessionParameters, status, textResponses, triggeredIntent);
         }

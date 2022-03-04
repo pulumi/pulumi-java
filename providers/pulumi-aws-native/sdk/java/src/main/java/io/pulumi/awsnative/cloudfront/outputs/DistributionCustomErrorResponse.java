@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -88,7 +88,6 @@ public final class DistributionCustomErrorResponse {
             this.responsePagePath = responsePagePath;
             return this;
         }
-
         public DistributionCustomErrorResponse build() {
             return new DistributionCustomErrorResponse(errorCachingMinTTL, errorCode, responseCode, responsePagePath);
         }

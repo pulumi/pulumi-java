@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class OptionsProperties {
     /**
      * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
      * 
-     */
+    */
     public Optional<String> getApplianceModeSupport() {
         return Optional.ofNullable(this.applianceModeSupport);
     }
     /**
      * Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable
      * 
-     */
+    */
     public Optional<String> getDnsSupport() {
         return Optional.ofNullable(this.dnsSupport);
     }
     /**
      * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
      * 
-     */
+    */
     public Optional<String> getIpv6Support() {
         return Optional.ofNullable(this.ipv6Support);
     }
@@ -97,7 +97,6 @@ public final class OptionsProperties {
             this.ipv6Support = ipv6Support;
             return this;
         }
-
         public OptionsProperties build() {
             return new OptionsProperties(applianceModeSupport, dnsSupport, ipv6Support);
         }

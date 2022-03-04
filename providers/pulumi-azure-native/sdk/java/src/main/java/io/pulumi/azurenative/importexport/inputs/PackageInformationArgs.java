@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.importexport.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="carrierName", required=true)
-    private final Input<String> carrierName;
+      private final Input<String> carrierName;
 
     public Input<String> getCarrierName() {
         return this.carrierName;
@@ -34,7 +34,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="driveCount", required=true)
-    private final Input<Double> driveCount;
+      private final Input<Double> driveCount;
 
     public Input<Double> getDriveCount() {
         return this.driveCount;
@@ -45,7 +45,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="shipDate", required=true)
-    private final Input<String> shipDate;
+      private final Input<String> shipDate;
 
     public Input<String> getShipDate() {
         return this.shipDate;
@@ -56,7 +56,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="trackingNumber", required=true)
-    private final Input<String> trackingNumber;
+      private final Input<String> trackingNumber;
 
     public Input<String> getTrackingNumber() {
         return this.trackingNumber;
@@ -145,7 +145,6 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
             this.trackingNumber = Input.of(Objects.requireNonNull(trackingNumber));
             return this;
         }
-
         public PackageInformationArgs build() {
             return new PackageInformationArgs(carrierName, driveCount, shipDate, trackingNumber);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.AnyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -53,35 +53,35 @@ public final class TestIssueResponse {
     /**
      * Category of issue. Required.
      * 
-     */
+    */
     public String getCategory() {
         return this.category;
     }
     /**
      * A brief human-readable message describing the issue. Required.
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * Severity of issue. Required.
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * Type of issue. Required.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings
      * 
-     */
+    */
     public AnyResponse getWarning() {
         return this.warning;
     }
@@ -138,7 +138,6 @@ public final class TestIssueResponse {
             this.warning = Objects.requireNonNull(warning);
             return this;
         }
-
         public TestIssueResponse build() {
             return new TestIssueResponse(category, errorMessage, severity, type, warning);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable String databaseName;
+      private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
@@ -35,7 +35,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fileType")
-    private final @Nullable String fileType;
+      private final @Nullable String fileType;
 
     public Optional<String> getFileType() {
         return this.fileType == null ? Optional.empty() : Optional.ofNullable(this.fileType);
@@ -46,7 +46,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -57,7 +57,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="logicalName")
-    private final @Nullable String logicalName;
+      private final @Nullable String logicalName;
 
     public Optional<String> getLogicalName() {
         return this.logicalName == null ? Optional.empty() : Optional.ofNullable(this.logicalName);
@@ -68,7 +68,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="physicalFullName")
-    private final @Nullable String physicalFullName;
+      private final @Nullable String physicalFullName;
 
     public Optional<String> getPhysicalFullName() {
         return this.physicalFullName == null ? Optional.empty() : Optional.ofNullable(this.physicalFullName);
@@ -79,7 +79,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="restoreFullName")
-    private final @Nullable String restoreFullName;
+      private final @Nullable String restoreFullName;
 
     public Optional<String> getRestoreFullName() {
         return this.restoreFullName == null ? Optional.empty() : Optional.ofNullable(this.restoreFullName);
@@ -90,7 +90,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sizeMB")
-    private final @Nullable Double sizeMB;
+      private final @Nullable Double sizeMB;
 
     public Optional<Double> getSizeMB() {
         return this.sizeMB == null ? Optional.empty() : Optional.ofNullable(this.sizeMB);
@@ -189,7 +189,6 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
             this.sizeMB = sizeMB;
             return this;
         }
-
         public DatabaseFileInfoResponse build() {
             return new DatabaseFileInfoResponse(databaseName, fileType, id, logicalName, physicalFullName, restoreFullName, sizeMB);
         }

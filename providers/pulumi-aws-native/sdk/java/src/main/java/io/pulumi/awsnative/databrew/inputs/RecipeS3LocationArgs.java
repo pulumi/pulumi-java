@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class RecipeS3LocationArgs extends io.pulumi.resources.ResourceArgs
     public static final RecipeS3LocationArgs Empty = new RecipeS3LocationArgs();
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -85,7 +85,6 @@ public final class RecipeS3LocationArgs extends io.pulumi.resources.ResourceArgs
             this.key = Input.ofNullable(key);
             return this;
         }
-
         public RecipeS3LocationArgs build() {
             return new RecipeS3LocationArgs(bucket, key);
         }

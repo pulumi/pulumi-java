@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LoadBalancerConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -32,7 +32,7 @@ public final class LoadBalancerConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -81,7 +81,6 @@ public final class LoadBalancerConfigResponse extends io.pulumi.resources.Invoke
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public LoadBalancerConfigResponse build() {
             return new LoadBalancerConfigResponse(type, version);
         }

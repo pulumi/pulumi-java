@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="currentCPUUtilizationPercentage")
-    private final @Nullable Input<Integer> currentCPUUtilizationPercentage;
+      private final @Nullable Input<Integer> currentCPUUtilizationPercentage;
 
     public Input<Integer> getCurrentCPUUtilizationPercentage() {
         return this.currentCPUUtilizationPercentage == null ? Input.empty() : this.currentCPUUtilizationPercentage;
@@ -35,7 +35,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="currentReplicas", required=true)
-    private final Input<Integer> currentReplicas;
+      private final Input<Integer> currentReplicas;
 
     public Input<Integer> getCurrentReplicas() {
         return this.currentReplicas;
@@ -46,7 +46,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="desiredReplicas", required=true)
-    private final Input<Integer> desiredReplicas;
+      private final Input<Integer> desiredReplicas;
 
     public Input<Integer> getDesiredReplicas() {
         return this.desiredReplicas;
@@ -57,7 +57,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="lastScaleTime")
-    private final @Nullable Input<String> lastScaleTime;
+      private final @Nullable Input<String> lastScaleTime;
 
     public Input<String> getLastScaleTime() {
         return this.lastScaleTime == null ? Input.empty() : this.lastScaleTime;
@@ -68,7 +68,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
@@ -172,7 +172,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
             this.observedGeneration = Input.ofNullable(observedGeneration);
             return this;
         }
-
         public HorizontalPodAutoscalerStatusArgs build() {
             return new HorizontalPodAutoscalerStatusArgs(currentCPUUtilizationPercentage, currentReplicas, desiredReplicas, lastScaleTime, observedGeneration);
         }

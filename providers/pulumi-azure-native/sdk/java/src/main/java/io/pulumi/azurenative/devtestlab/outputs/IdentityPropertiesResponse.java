@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class IdentityPropertiesResponse {
     /**
      * The client secret URL of the identity.
      * 
-     */
+    */
     public Optional<String> getClientSecretUrl() {
         return Optional.ofNullable(this.clientSecretUrl);
     }
     /**
      * The principal id of resource identity.
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The tenant identifier of resource.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Managed identity.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -118,7 +118,6 @@ public final class IdentityPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public IdentityPropertiesResponse build() {
             return new IdentityPropertiesResponse(clientSecretUrl, principalId, tenantId, type);
         }

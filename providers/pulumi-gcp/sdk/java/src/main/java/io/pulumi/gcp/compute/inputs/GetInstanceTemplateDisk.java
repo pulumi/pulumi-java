@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.GetInstanceTemplateDiskDiskEncryptionKey;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="autoDelete", required=true)
-    private final Boolean autoDelete;
+      private final Boolean autoDelete;
 
     public Boolean getAutoDelete() {
         return this.autoDelete;
@@ -34,7 +34,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="boot", required=true)
-    private final Boolean boot;
+      private final Boolean boot;
 
     public Boolean getBoot() {
         return this.boot;
@@ -47,7 +47,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -58,7 +58,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="diskEncryptionKeys", required=true)
-    private final List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys;
+      private final List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys;
 
     public List<GetInstanceTemplateDiskDiskEncryptionKey> getDiskEncryptionKeys() {
         return this.diskEncryptionKeys;
@@ -70,7 +70,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="diskName", required=true)
-    private final String diskName;
+      private final String diskName;
 
     public String getDiskName() {
         return this.diskName;
@@ -83,7 +83,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final Integer diskSizeGb;
+      private final Integer diskSizeGb;
 
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
@@ -95,7 +95,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -109,7 +109,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="interface", required=true)
-    private final String $interface;
+      private final String $interface;
 
     public String get$interface() {
         return this.$interface;
@@ -121,7 +121,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -134,14 +134,14 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
     }
 
     @InputImport(name="resourcePolicies", required=true)
-    private final List<String> resourcePolicies;
+      private final List<String> resourcePolicies;
 
     public List<String> getResourcePolicies() {
         return this.resourcePolicies;
@@ -154,7 +154,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -171,7 +171,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sourceImage", required=true)
-    private final String sourceImage;
+      private final String sourceImage;
 
     public String getSourceImage() {
         return this.sourceImage;
@@ -182,7 +182,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -351,7 +351,6 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceTemplateDisk build() {
             return new GetInstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKeys, diskName, diskSizeGb, diskType, $interface, labels, mode, resourcePolicies, source, sourceImage, type);
         }

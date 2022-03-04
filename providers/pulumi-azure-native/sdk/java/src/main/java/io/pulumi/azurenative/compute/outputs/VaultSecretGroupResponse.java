@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.VaultCertificateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,14 +35,14 @@ public final class VaultSecretGroupResponse {
     /**
      * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getSourceVault() {
         return Optional.ofNullable(this.sourceVault);
     }
     /**
      * The list of key vault references in SourceVault which contain certificates.
      * 
-     */
+    */
     public List<VaultCertificateResponse> getVaultCertificates() {
         return this.vaultCertificates == null ? List.of() : this.vaultCertificates;
     }
@@ -78,7 +78,6 @@ public final class VaultSecretGroupResponse {
             this.vaultCertificates = vaultCertificates;
             return this;
         }
-
         public VaultSecretGroupResponse build() {
             return new VaultSecretGroupResponse(sourceVault, vaultCertificates);
         }

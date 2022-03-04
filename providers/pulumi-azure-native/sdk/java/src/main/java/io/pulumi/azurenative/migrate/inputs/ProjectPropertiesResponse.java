@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="assessmentSolutionId")
-    private final @Nullable String assessmentSolutionId;
+      private final @Nullable String assessmentSolutionId;
 
     public Optional<String> getAssessmentSolutionId() {
         return this.assessmentSolutionId == null ? Optional.empty() : Optional.ofNullable(this.assessmentSolutionId);
@@ -37,7 +37,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="createdTimestamp", required=true)
-    private final String createdTimestamp;
+      private final String createdTimestamp;
 
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
@@ -48,7 +48,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="customerStorageAccountArmId")
-    private final @Nullable String customerStorageAccountArmId;
+      private final @Nullable String customerStorageAccountArmId;
 
     public Optional<String> getCustomerStorageAccountArmId() {
         return this.customerStorageAccountArmId == null ? Optional.empty() : Optional.ofNullable(this.customerStorageAccountArmId);
@@ -59,7 +59,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="customerWorkspaceId")
-    private final @Nullable String customerWorkspaceId;
+      private final @Nullable String customerWorkspaceId;
 
     public Optional<String> getCustomerWorkspaceId() {
         return this.customerWorkspaceId == null ? Optional.empty() : Optional.ofNullable(this.customerWorkspaceId);
@@ -70,7 +70,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="customerWorkspaceLocation")
-    private final @Nullable String customerWorkspaceLocation;
+      private final @Nullable String customerWorkspaceLocation;
 
     public Optional<String> getCustomerWorkspaceLocation() {
         return this.customerWorkspaceLocation == null ? Optional.empty() : Optional.ofNullable(this.customerWorkspaceLocation);
@@ -81,7 +81,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="lastAssessmentTimestamp", required=true)
-    private final String lastAssessmentTimestamp;
+      private final String lastAssessmentTimestamp;
 
     public String getLastAssessmentTimestamp() {
         return this.lastAssessmentTimestamp;
@@ -92,7 +92,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="numberOfAssessments", required=true)
-    private final Integer numberOfAssessments;
+      private final Integer numberOfAssessments;
 
     public Integer getNumberOfAssessments() {
         return this.numberOfAssessments;
@@ -103,7 +103,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="numberOfGroups", required=true)
-    private final Integer numberOfGroups;
+      private final Integer numberOfGroups;
 
     public Integer getNumberOfGroups() {
         return this.numberOfGroups;
@@ -114,7 +114,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="numberOfMachines", required=true)
-    private final Integer numberOfMachines;
+      private final Integer numberOfMachines;
 
     public Integer getNumberOfMachines() {
         return this.numberOfMachines;
@@ -125,7 +125,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="privateEndpointConnections", required=true)
-    private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+      private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
@@ -136,7 +136,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="projectStatus")
-    private final @Nullable String projectStatus;
+      private final @Nullable String projectStatus;
 
     public Optional<String> getProjectStatus() {
         return this.projectStatus == null ? Optional.empty() : Optional.ofNullable(this.projectStatus);
@@ -147,7 +147,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -158,7 +158,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable String publicNetworkAccess;
+      private final @Nullable String publicNetworkAccess;
 
     public Optional<String> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
@@ -169,7 +169,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="serviceEndpoint", required=true)
-    private final String serviceEndpoint;
+      private final String serviceEndpoint;
 
     public String getServiceEndpoint() {
         return this.serviceEndpoint;
@@ -180,7 +180,7 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="updatedTimestamp", required=true)
-    private final String updatedTimestamp;
+      private final String updatedTimestamp;
 
     public String getUpdatedTimestamp() {
         return this.updatedTimestamp;
@@ -359,7 +359,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }
-
         public ProjectPropertiesResponse build() {
             return new ProjectPropertiesResponse(assessmentSolutionId, createdTimestamp, customerStorageAccountArmId, customerWorkspaceId, customerWorkspaceLocation, lastAssessmentTimestamp, numberOfAssessments, numberOfGroups, numberOfMachines, privateEndpointConnections, projectStatus, provisioningState, publicNetworkAccess, serviceEndpoint, updatedTimestamp);
         }

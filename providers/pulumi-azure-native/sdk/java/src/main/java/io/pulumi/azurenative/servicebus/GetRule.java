@@ -6,21 +6,41 @@ package io.pulumi.azurenative.servicebus;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicebus.inputs.GetRuleArgs;
 import io.pulumi.azurenative.servicebus.outputs.GetRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRule {
-/**
- * Description of Rule Resource.
+    private GetRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetRuleArgs.Builder a);
+    }
+    private static GetRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of Rule Resource.
  * API Version: 2017-04-01.
  * 
- *
- * Description of Rule Resource.
+     *
+     * Description of Rule Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of Rule Resource.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of Rule Resource.
+     * 
+     */
     public static CompletableFuture<GetRuleResult> invokeAsync(GetRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getRule", TypeShape.of(GetRuleResult.class), args == null ? GetRuleArgs.Empty : args, Utilities.withVersion(options));
     }

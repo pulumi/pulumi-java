@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.AppBundleResponse;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceResponse;
 import io.pulumi.googlenative.testing_v1.inputs.RoboDirectiveResponse;
@@ -26,7 +26,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="appApk", required=true)
-    private final FileReferenceResponse appApk;
+      private final FileReferenceResponse appApk;
 
     public FileReferenceResponse getAppApk() {
         return this.appApk;
@@ -37,7 +37,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="appBundle", required=true)
-    private final AppBundleResponse appBundle;
+      private final AppBundleResponse appBundle;
 
     public AppBundleResponse getAppBundle() {
         return this.appBundle;
@@ -48,7 +48,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="appInitialActivity", required=true)
-    private final String appInitialActivity;
+      private final String appInitialActivity;
 
     public String getAppInitialActivity() {
         return this.appInitialActivity;
@@ -59,7 +59,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="appPackageId", required=true)
-    private final String appPackageId;
+      private final String appPackageId;
 
     public String getAppPackageId() {
         return this.appPackageId;
@@ -70,7 +70,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="roboDirectives", required=true)
-    private final List<RoboDirectiveResponse> roboDirectives;
+      private final List<RoboDirectiveResponse> roboDirectives;
 
     public List<RoboDirectiveResponse> getRoboDirectives() {
         return this.roboDirectives;
@@ -81,7 +81,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="roboMode", required=true)
-    private final String roboMode;
+      private final String roboMode;
 
     public String getRoboMode() {
         return this.roboMode;
@@ -92,7 +92,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="roboScript", required=true)
-    private final FileReferenceResponse roboScript;
+      private final FileReferenceResponse roboScript;
 
     public FileReferenceResponse getRoboScript() {
         return this.roboScript;
@@ -103,7 +103,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="startingIntents", required=true)
-    private final List<RoboStartingIntentResponse> startingIntents;
+      private final List<RoboStartingIntentResponse> startingIntents;
 
     public List<RoboStartingIntentResponse> getStartingIntents() {
         return this.startingIntents;
@@ -212,7 +212,6 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
             this.startingIntents = Objects.requireNonNull(startingIntents);
             return this;
         }
-
         public AndroidRoboTestResponse build() {
             return new AndroidRoboTestResponse(appApk, appBundle, appInitialActivity, appPackageId, roboDirectives, roboMode, roboScript, startingIntents);
         }

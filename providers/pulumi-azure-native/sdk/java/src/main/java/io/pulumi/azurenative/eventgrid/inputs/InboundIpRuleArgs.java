@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 import io.pulumi.azurenative.eventgrid.enums.IpActionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<Either<String,IpActionType>> action;
+      private final @Nullable Input<Either<String,IpActionType>> action;
 
     public Input<Either<String,IpActionType>> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -32,7 +32,7 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipMask")
-    private final @Nullable Input<String> ipMask;
+      private final @Nullable Input<String> ipMask;
 
     public Input<String> getIpMask() {
         return this.ipMask == null ? Input.empty() : this.ipMask;
@@ -91,7 +91,6 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.ipMask = Input.ofNullable(ipMask);
             return this;
         }
-
         public InboundIpRuleArgs build() {
             return new InboundIpRuleArgs(action, ipMask);
         }

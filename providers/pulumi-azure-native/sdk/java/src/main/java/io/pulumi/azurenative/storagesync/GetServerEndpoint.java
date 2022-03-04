@@ -6,21 +6,41 @@ package io.pulumi.azurenative.storagesync;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storagesync.inputs.GetServerEndpointArgs;
 import io.pulumi.azurenative.storagesync.outputs.GetServerEndpointResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerEndpoint {
-/**
- * Server Endpoint object.
+    private GetServerEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerEndpointArgs.Builder a);
+    }
+    private static GetServerEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Server Endpoint object.
  * API Version: 2020-03-01.
  * 
- *
- * Server Endpoint object.
+     *
+     * Server Endpoint object.
  * 
- */
+     */
+    public static CompletableFuture<GetServerEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Server Endpoint object.
+     * API Version: 2020-03-01.
+     * 
+     *
+         * Server Endpoint object.
+     * 
+     */
     public static CompletableFuture<GetServerEndpointResult> invokeAsync(GetServerEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getServerEndpoint", TypeShape.of(GetServerEndpointResult.class), args == null ? GetServerEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

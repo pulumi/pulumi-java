@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AwsNodePoolAutoscalingGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maxNodeCount", required=true)
-    private final Input<Integer> maxNodeCount;
+      private final Input<Integer> maxNodeCount;
 
     public Input<Integer> getMaxNodeCount() {
         return this.maxNodeCount;
@@ -29,7 +29,7 @@ public final class AwsNodePoolAutoscalingGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="minNodeCount", required=true)
-    private final Input<Integer> minNodeCount;
+      private final Input<Integer> minNodeCount;
 
     public Input<Integer> getMinNodeCount() {
         return this.minNodeCount;
@@ -88,7 +88,6 @@ public final class AwsNodePoolAutoscalingGetArgs extends io.pulumi.resources.Res
             this.minNodeCount = Input.of(Objects.requireNonNull(minNodeCount));
             return this;
         }
-
         public AwsNodePoolAutoscalingGetArgs build() {
             return new AwsNodePoolAutoscalingGetArgs(maxNodeCount, minNodeCount);
         }

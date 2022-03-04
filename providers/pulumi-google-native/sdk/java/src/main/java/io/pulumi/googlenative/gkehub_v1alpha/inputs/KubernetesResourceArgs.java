@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.ResourceOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="membershipCrManifest")
-    private final @Nullable Input<String> membershipCrManifest;
+      private final @Nullable Input<String> membershipCrManifest;
 
     public Input<String> getMembershipCrManifest() {
         return this.membershipCrManifest == null ? Input.empty() : this.membershipCrManifest;
@@ -35,7 +35,7 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceOptions")
-    private final @Nullable Input<ResourceOptionsArgs> resourceOptions;
+      private final @Nullable Input<ResourceOptionsArgs> resourceOptions;
 
     public Input<ResourceOptionsArgs> getResourceOptions() {
         return this.resourceOptions == null ? Input.empty() : this.resourceOptions;
@@ -94,7 +94,6 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
             this.resourceOptions = Input.ofNullable(resourceOptions);
             return this;
         }
-
         public KubernetesResourceArgs build() {
             return new KubernetesResourceArgs(membershipCrManifest, resourceOptions);
         }

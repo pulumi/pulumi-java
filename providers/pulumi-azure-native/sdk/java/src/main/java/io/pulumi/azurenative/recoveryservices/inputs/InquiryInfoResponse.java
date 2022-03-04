@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.ErrorDetailResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.WorkloadInquiryDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorDetail")
-    private final @Nullable ErrorDetailResponse errorDetail;
+      private final @Nullable ErrorDetailResponse errorDetail;
 
     public Optional<ErrorDetailResponse> getErrorDetail() {
         return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
@@ -38,7 +38,7 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inquiryDetails")
-    private final @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
+      private final @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
 
     public List<WorkloadInquiryDetailsResponse> getInquiryDetails() {
         return this.inquiryDetails == null ? List.of() : this.inquiryDetails;
@@ -50,7 +50,7 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -109,7 +109,6 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.status = status;
             return this;
         }
-
         public InquiryInfoResponse build() {
             return new InquiryInfoResponse(errorDetail, inquiryDetails, status);
         }

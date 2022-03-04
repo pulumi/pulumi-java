@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessPortRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,21 +42,21 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse {
     /**
      * Resource ID of the virtual machine that is linked to this policy
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Port configurations for the virtual machine
      * 
-     */
+    */
     public List<JitNetworkAccessPortRuleResponse> getPorts() {
         return this.ports;
     }
     /**
      * Public IP address of the Azure Firewall that is linked to this policy, if applicable
      * 
-     */
+    */
     public Optional<String> getPublicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
@@ -99,7 +99,6 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public JitNetworkAccessPolicyVirtualMachineResponse build() {
             return new JitNetworkAccessPolicyVirtualMachineResponse(id, ports, publicIpAddress);
         }

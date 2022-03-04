@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.inputs.DataBoxHeavySecretResponse;
 import io.pulumi.azurenative.databox.inputs.DcAccessSecurityCodeResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="cabinetPodSecrets", required=true)
-    private final List<DataBoxHeavySecretResponse> cabinetPodSecrets;
+      private final List<DataBoxHeavySecretResponse> cabinetPodSecrets;
 
     public List<DataBoxHeavySecretResponse> getCabinetPodSecrets() {
         return this.cabinetPodSecrets;
@@ -36,7 +36,7 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="dcAccessSecurityCode", required=true)
-    private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
+      private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
     public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
@@ -47,7 +47,7 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="error", required=true)
-    private final CloudErrorResponse error;
+      private final CloudErrorResponse error;
 
     public CloudErrorResponse getError() {
         return this.error;
@@ -59,7 +59,7 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="jobSecretsType", required=true)
-    private final String jobSecretsType;
+      private final String jobSecretsType;
 
     public String getJobSecretsType() {
         return this.jobSecretsType;
@@ -128,7 +128,6 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }
-
         public DataBoxHeavyJobSecretsResponse build() {
             return new DataBoxHeavyJobSecretsResponse(cabinetPodSecrets, dcAccessSecurityCode, error, jobSecretsType);
         }

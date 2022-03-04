@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class RCranPackageResponse {
     /**
      * The package name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The repository name.
      * 
-     */
+    */
     public Optional<String> getRepository() {
         return Optional.ofNullable(this.repository);
     }
@@ -76,7 +76,6 @@ public final class RCranPackageResponse {
             this.repository = repository;
             return this;
         }
-
         public RCranPackageResponse build() {
             return new RCranPackageResponse(name, repository);
         }

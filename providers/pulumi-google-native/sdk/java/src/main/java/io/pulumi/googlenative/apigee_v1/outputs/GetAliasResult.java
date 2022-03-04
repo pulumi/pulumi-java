@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CertificateResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class GetAliasResult {
     /**
      * Resource ID for this alias. Values must match the regular expression `[^/]{1,255}`.
      * 
-     */
+    */
     public String getAlias() {
         return this.alias;
     }
     /**
      * Chain of certificates under this alias.
      * 
-     */
+    */
     public GoogleCloudApigeeV1CertificateResponse getCertsInfo() {
         return this.certsInfo;
     }
     /**
      * Type of alias.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -96,7 +96,6 @@ public final class GetAliasResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAliasResult build() {
             return new GetAliasResult(alias, certsInfo, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ExampleRequestResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="globalParameters")
-    private final @Nullable Map<String,Object> globalParameters;
+      private final @Nullable Map<String,Object> globalParameters;
 
     public Map<String,Object> getGlobalParameters() {
         return this.globalParameters == null ? Map.of() : this.globalParameters;
@@ -37,7 +37,7 @@ public final class ExampleRequestResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable Map<String,List<List<Object>>> inputs;
+      private final @Nullable Map<String,List<List<Object>>> inputs;
 
     public Map<String,List<List<Object>>> getInputs() {
         return this.inputs == null ? Map.of() : this.inputs;
@@ -86,7 +86,6 @@ public final class ExampleRequestResponse extends io.pulumi.resources.InvokeArgs
             this.inputs = inputs;
             return this;
         }
-
         public ExampleRequestResponse build() {
             return new ExampleRequestResponse(globalParameters, inputs);
         }

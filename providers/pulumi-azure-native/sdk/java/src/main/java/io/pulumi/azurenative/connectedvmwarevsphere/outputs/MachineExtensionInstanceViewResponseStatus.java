@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class MachineExtensionInstanceViewResponseStatus {
     /**
      * The status code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * The short localizable label for the status.
      * 
-     */
+    */
     public String getDisplayStatus() {
         return this.displayStatus;
     }
     /**
      * The level code.
      * 
-     */
+    */
     public String getLevel() {
         return this.level;
     }
     /**
      * The detailed status message, including for alerts and error messages.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * The time of the status.
      * 
-     */
+    */
     public String getTime() {
         return this.time;
     }
@@ -137,7 +137,6 @@ public final class MachineExtensionInstanceViewResponseStatus {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public MachineExtensionInstanceViewResponseStatus build() {
             return new MachineExtensionInstanceViewResponseStatus(code, displayStatus, level, message, time);
         }

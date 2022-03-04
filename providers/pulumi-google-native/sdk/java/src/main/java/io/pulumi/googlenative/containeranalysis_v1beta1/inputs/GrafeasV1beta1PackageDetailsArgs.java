@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.InstallationArgs;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="installation", required=true)
-    private final Input<InstallationArgs> installation;
+      private final Input<InstallationArgs> installation;
 
     public Input<InstallationArgs> getInstallation() {
         return this.installation;
@@ -65,7 +65,6 @@ public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.
             this.installation = Input.of(Objects.requireNonNull(installation));
             return this;
         }
-
         public GrafeasV1beta1PackageDetailsArgs build() {
             return new GrafeasV1beta1PackageDetailsArgs(installation);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="activeStorageAccountId")
-    private final @Nullable String activeStorageAccountId;
+      private final @Nullable String activeStorageAccountId;
 
     public Optional<String> getActiveStorageAccountId() {
         return this.activeStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.activeStorageAccountId);
@@ -35,7 +35,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="applicationConsistentSnapshotFrequencyInHours")
-    private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
+      private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
 
     public Optional<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
         return this.applicationConsistentSnapshotFrequencyInHours == null ? Optional.empty() : Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
@@ -46,7 +46,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable String encryption;
+      private final @Nullable String encryption;
 
     public Optional<String> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -58,7 +58,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -69,7 +69,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="onlineReplicationStartTime")
-    private final @Nullable String onlineReplicationStartTime;
+      private final @Nullable String onlineReplicationStartTime;
 
     public Optional<String> getOnlineReplicationStartTime() {
         return this.onlineReplicationStartTime == null ? Optional.empty() : Optional.ofNullable(this.onlineReplicationStartTime);
@@ -80,7 +80,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryPointHistoryDurationInHours")
-    private final @Nullable Integer recoveryPointHistoryDurationInHours;
+      private final @Nullable Integer recoveryPointHistoryDurationInHours;
 
     public Optional<Integer> getRecoveryPointHistoryDurationInHours() {
         return this.recoveryPointHistoryDurationInHours == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistoryDurationInHours);
@@ -91,7 +91,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="replicationInterval")
-    private final @Nullable Integer replicationInterval;
+      private final @Nullable Integer replicationInterval;
 
     public Optional<Integer> getReplicationInterval() {
         return this.replicationInterval == null ? Optional.empty() : Optional.ofNullable(this.replicationInterval);
@@ -190,7 +190,6 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
             this.replicationInterval = replicationInterval;
             return this;
         }
-
         public HyperVReplicaAzurePolicyDetailsResponse build() {
             return new HyperVReplicaAzurePolicyDetailsResponse(activeStorageAccountId, applicationConsistentSnapshotFrequencyInHours, encryption, instanceType, onlineReplicationStartTime, recoveryPointHistoryDurationInHours, replicationInterval);
         }

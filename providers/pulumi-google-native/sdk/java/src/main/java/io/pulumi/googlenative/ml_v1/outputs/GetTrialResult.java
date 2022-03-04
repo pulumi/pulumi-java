@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_Trial_ParameterResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__MeasurementResponse;
 import java.lang.Boolean;
@@ -91,70 +91,70 @@ public final class GetTrialResult {
     /**
      * The identifier of the client that originally requested this trial.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Time at which the trial's status changed to COMPLETED.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The final measurement containing the objective value.
      * 
-     */
+    */
     public GoogleCloudMlV1__MeasurementResponse getFinalMeasurement() {
         return this.finalMeasurement;
     }
     /**
      * A human readable string describing why the trial is infeasible. This should only be set if trial_infeasible is true.
      * 
-     */
+    */
     public String getInfeasibleReason() {
         return this.infeasibleReason;
     }
     /**
      * A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
      * 
-     */
+    */
     public List<GoogleCloudMlV1__MeasurementResponse> getMeasurements() {
         return this.measurements;
     }
     /**
      * Name of the trial assigned by the service.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The parameters of the trial.
      * 
-     */
+    */
     public List<GoogleCloudMlV1_Trial_ParameterResponse> getParameters() {
         return this.parameters;
     }
     /**
      * Time at which the trial was started.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The detailed state of a trial.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * If true, the parameters in this trial are not attempted again.
      * 
-     */
+    */
     public Boolean getTrialInfeasible() {
         return this.trialInfeasible;
     }
@@ -246,7 +246,6 @@ public final class GetTrialResult {
             this.trialInfeasible = Objects.requireNonNull(trialInfeasible);
             return this;
         }
-
         public GetTrialResult build() {
             return new GetTrialResult(clientId, endTime, finalMeasurement, infeasibleReason, measurements, name, parameters, startTime, state, trialInfeasible);
         }

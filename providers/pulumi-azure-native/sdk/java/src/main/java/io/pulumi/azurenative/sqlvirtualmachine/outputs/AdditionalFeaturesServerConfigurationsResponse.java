@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class AdditionalFeaturesServerConfigurationsResponse {
     /**
      * Enable or disable R services (SQL 2016 onwards).
      * 
-     */
+    */
     public Optional<Boolean> getIsRServicesEnabled() {
         return Optional.ofNullable(this.isRServicesEnabled);
     }
@@ -54,7 +54,6 @@ public final class AdditionalFeaturesServerConfigurationsResponse {
             this.isRServicesEnabled = isRServicesEnabled;
             return this;
         }
-
         public AdditionalFeaturesServerConfigurationsResponse build() {
             return new AdditionalFeaturesServerConfigurationsResponse(isRServicesEnabled);
         }

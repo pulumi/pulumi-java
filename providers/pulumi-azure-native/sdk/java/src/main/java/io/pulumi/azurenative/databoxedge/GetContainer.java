@@ -6,21 +6,41 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.inputs.GetContainerArgs;
 import io.pulumi.azurenative.databoxedge.outputs.GetContainerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContainer {
-/**
- * Represents a container on the  Data Box Edge/Gateway device.
+    private GetContainer() {}
+    public interface BuilderApplicator {
+        public void apply(GetContainerArgs.Builder a);
+    }
+    private static GetContainerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetContainerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a container on the  Data Box Edge/Gateway device.
  * API Version: 2020-12-01.
  * 
- *
- * Represents a container on the  Data Box Edge/Gateway device.
+     *
+     * Represents a container on the  Data Box Edge/Gateway device.
  * 
- */
+     */
+    public static CompletableFuture<GetContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a container on the  Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Represents a container on the  Data Box Edge/Gateway device.
+     * 
+     */
     public static CompletableFuture<GetContainerResult> invokeAsync(GetContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getContainer", TypeShape.of(GetContainerResult.class), args == null ? GetContainerArgs.Empty : args, Utilities.withVersion(options));
     }

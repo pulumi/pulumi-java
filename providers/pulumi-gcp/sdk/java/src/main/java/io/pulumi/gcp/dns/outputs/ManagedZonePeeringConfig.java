@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dns.outputs.ManagedZonePeeringConfigTargetNetwork;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ManagedZonePeeringConfig {
      * The network with which to peer.
      * Structure is documented below.
      * 
-     */
+    */
     public ManagedZonePeeringConfigTargetNetwork getTargetNetwork() {
         return this.targetNetwork;
     }
@@ -54,7 +54,6 @@ public final class ManagedZonePeeringConfig {
             this.targetNetwork = Objects.requireNonNull(targetNetwork);
             return this;
         }
-
         public ManagedZonePeeringConfig build() {
             return new ManagedZonePeeringConfig(targetNetwork);
         }

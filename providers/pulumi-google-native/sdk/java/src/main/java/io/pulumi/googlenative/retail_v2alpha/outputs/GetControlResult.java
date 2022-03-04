@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaRuleResponse;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse;
 import java.lang.String;
@@ -62,42 +62,42 @@ public final class GetControlResult {
     /**
      * List of serving configuration ids that that are associated with this control. Note the association is managed via the ServingConfig, this is an output only denormalizeed view. Assumed to be in the same catalog.
      * 
-     */
+    */
     public List<String> getAssociatedServingConfigIds() {
         return this.associatedServingConfigIds;
     }
     /**
      * The human readable control display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is thrown.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * A facet specification to perform faceted search.
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse getFacetSpec() {
         return this.facetSpec;
     }
     /**
      * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost "gShoe" when query full matches "Running Shoes".
      * 
-     */
+    */
     public GoogleCloudRetailV2alphaRuleResponse getRule() {
         return this.rule;
     }
     /**
      * Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
      * 
-     */
+    */
     public List<String> getSolutionTypes() {
         return this.solutionTypes;
     }
@@ -161,7 +161,6 @@ public final class GetControlResult {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
-
         public GetControlResult build() {
             return new GetControlResult(associatedServingConfigIds, displayName, facetSpec, name, rule, solutionTypes);
         }

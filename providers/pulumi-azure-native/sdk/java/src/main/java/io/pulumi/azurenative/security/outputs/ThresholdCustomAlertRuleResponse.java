@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -62,35 +62,35 @@ public final class ThresholdCustomAlertRuleResponse {
     /**
      * The description of the custom alert.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The display name of the custom alert.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Status of the custom alert.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The maximum threshold.
      * 
-     */
+    */
     public Integer getMaxThreshold() {
         return this.maxThreshold;
     }
     /**
      * The minimum threshold.
      * 
-     */
+    */
     public Integer getMinThreshold() {
         return this.minThreshold;
     }
@@ -98,7 +98,7 @@ public final class ThresholdCustomAlertRuleResponse {
      * The type of the custom alert rule.
      * Expected value is 'ThresholdCustomAlertRule'.
      * 
-     */
+    */
     public String getRuleType() {
         return this.ruleType;
     }
@@ -162,7 +162,6 @@ public final class ThresholdCustomAlertRuleResponse {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public ThresholdCustomAlertRuleResponse build() {
             return new ThresholdCustomAlertRuleResponse(description, displayName, isEnabled, maxThreshold, minThreshold, ruleType);
         }

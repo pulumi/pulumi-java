@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.CidrBlockArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="cidrBlocks")
-    private final @Nullable Input<List<CidrBlockArgs>> cidrBlocks;
+      private final @Nullable Input<List<CidrBlockArgs>> cidrBlocks;
 
     public Input<List<CidrBlockArgs>> getCidrBlocks() {
         return this.cidrBlocks == null ? Input.empty() : this.cidrBlocks;
@@ -36,7 +36,7 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -95,7 +95,6 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public MasterAuthorizedNetworksConfigArgs build() {
             return new MasterAuthorizedNetworksConfigArgs(cidrBlocks, enabled);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="configStoreName", required=true)
-    private final String configStoreName;
+      private final String configStoreName;
 
     public String getConfigStoreName() {
         return this.configStoreName;
@@ -28,7 +28,7 @@ public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyValueName", required=true)
-    private final String keyValueName;
+      private final String keyValueName;
 
     public String getKeyValueName() {
         return this.keyValueName;
@@ -39,7 +39,7 @@ public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetKeyValueArgs build() {
             return new GetKeyValueArgs(configStoreName, keyValueName, resourceGroupName);
         }

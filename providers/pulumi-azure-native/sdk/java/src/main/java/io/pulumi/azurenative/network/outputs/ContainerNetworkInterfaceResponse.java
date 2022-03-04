@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceIpConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ContainerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -79,56 +79,56 @@ public final class ContainerNetworkInterfaceResponse {
     /**
      * Reference to the container to which this container network interface is attached.
      * 
-     */
+    */
     public Optional<ContainerResponse> getContainer() {
         return Optional.ofNullable(this.container);
     }
     /**
      * Container network interface configuration from which this container network interface is created.
      * 
-     */
+    */
     public ContainerNetworkInterfaceConfigurationResponse getContainerNetworkInterfaceConfiguration() {
         return this.containerNetworkInterfaceConfiguration;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reference to the ip configuration on this container nic.
      * 
-     */
+    */
     public List<ContainerNetworkInterfaceIpConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations;
     }
     /**
      * The name of the resource. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the container network interface resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Sub Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -206,7 +206,6 @@ public final class ContainerNetworkInterfaceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContainerNetworkInterfaceResponse build() {
             return new ContainerNetworkInterfaceResponse(container, containerNetworkInterfaceConfiguration, etag, id, ipConfigurations, name, provisioningState, type);
         }

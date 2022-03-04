@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionResponse {
     /**
      * A filter to apply on the matching condition results. Supported features: * filter must be set. * Filter syntax is identical to SearchRequest.filter. See more details at the Retail Search [user guide](/retail/search/docs/filter-and-order#filter). * To filter products with product ID "product_1" or "product_2", and color "Red" or "Blue": *(id: ANY("product_1", "product_2")) * *AND * *(colorFamilies: ANY("Red", "Blue")) *
      * 
-     */
+    */
     public String getFilter() {
         return this.filter;
     }
@@ -52,7 +52,6 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionResponse {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleFilterActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleFilterActionResponse(filter);
         }

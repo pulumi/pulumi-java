@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicenetworking.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
     }
 
     @InputImport(name="peering")
-    private final @Nullable Input<String> peering;
+      private final @Nullable Input<String> peering;
 
     public Input<String> getPeering() {
         return this.peering == null ? Input.empty() : this.peering;
@@ -40,7 +40,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedPeeringRanges")
-    private final @Nullable Input<List<String>> reservedPeeringRanges;
+      private final @Nullable Input<List<String>> reservedPeeringRanges;
 
     public Input<List<String>> getReservedPeeringRanges() {
         return this.reservedPeeringRanges == null ? Input.empty() : this.reservedPeeringRanges;
@@ -53,7 +53,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -142,7 +142,6 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public ConnectionState build() {
             return new ConnectionState(network, peering, reservedPeeringRanges, service);
         }

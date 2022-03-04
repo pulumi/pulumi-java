@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managednetwork.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetManagedNetworkGroupArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="managedNetworkGroupName", required=true)
-    private final String managedNetworkGroupName;
+      private final String managedNetworkGroupName;
 
     public String getManagedNetworkGroupName() {
         return this.managedNetworkGroupName;
@@ -28,7 +28,7 @@ public final class GetManagedNetworkGroupArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="managedNetworkName", required=true)
-    private final String managedNetworkName;
+      private final String managedNetworkName;
 
     public String getManagedNetworkName() {
         return this.managedNetworkName;
@@ -39,7 +39,7 @@ public final class GetManagedNetworkGroupArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetManagedNetworkGroupArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetManagedNetworkGroupArgs build() {
             return new GetManagedNetworkGroupArgs(managedNetworkGroupName, managedNetworkName, resourceGroupName);
         }

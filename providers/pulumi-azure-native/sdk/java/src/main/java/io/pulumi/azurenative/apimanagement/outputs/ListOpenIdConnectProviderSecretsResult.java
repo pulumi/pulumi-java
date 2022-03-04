@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ListOpenIdConnectProviderSecretsResult {
     /**
      * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
      * 
-     */
+    */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -54,7 +54,6 @@ public final class ListOpenIdConnectProviderSecretsResult {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public ListOpenIdConnectProviderSecretsResult build() {
             return new ListOpenIdConnectProviderSecretsResult(clientSecret);
         }

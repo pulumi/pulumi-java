@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -39,14 +39,14 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
     /**
      * The RSA Parameter exponent
      * 
-     */
+    */
     public String getExponent() {
         return this.exponent;
     }
     /**
      * The RSA Parameter modulus
      * 
-     */
+    */
     public String getModulus() {
         return this.modulus;
     }
@@ -54,7 +54,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
@@ -97,7 +97,6 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyRsaTokenKeyResponse build() {
             return new ContentKeyPolicyRsaTokenKeyResponse(exponent, modulus, odataType);
         }

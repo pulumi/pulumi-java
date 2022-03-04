@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -58,21 +58,21 @@ public final class ApplicationHANAPrometheusExporter {
     /**
      * A flag which indicates agreeing to install SAP HANA DB client.
      * 
-     */
+    */
     public Boolean getAgreeToInstallHANADBClient() {
         return this.agreeToInstallHANADBClient;
     }
     /**
      * The HANA DB port.
      * 
-     */
+    */
     public String getHANAPort() {
         return this.hANAPort;
     }
     /**
      * HANA DB SID.
      * 
-     */
+    */
     public String getHANASID() {
         return this.hANASID;
     }
@@ -82,14 +82,14 @@ public final class ApplicationHANAPrometheusExporter {
      *   "password": "<>"
      * }.
      * 
-     */
+    */
     public String getHANASecretName() {
         return this.hANASecretName;
     }
     /**
      * Prometheus exporter port.
      * 
-     */
+    */
     public Optional<String> getPrometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }
@@ -146,7 +146,6 @@ public final class ApplicationHANAPrometheusExporter {
             this.prometheusPort = prometheusPort;
             return this;
         }
-
         public ApplicationHANAPrometheusExporter build() {
             return new ApplicationHANAPrometheusExporter(agreeToInstallHANADBClient, hANAPort, hANASID, hANASecretName, prometheusPort);
         }

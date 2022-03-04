@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,21 +40,21 @@ public final class RecipeConditionExpression {
     /**
      * Input condition to be applied to the target column
      * 
-     */
+    */
     public String getCondition() {
         return this.condition;
     }
     /**
      * Name of the target column
      * 
-     */
+    */
     public String getTargetColumn() {
         return this.targetColumn;
     }
     /**
      * Value of the condition
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
@@ -97,7 +97,6 @@ public final class RecipeConditionExpression {
             this.value = value;
             return this;
         }
-
         public RecipeConditionExpression build() {
             return new RecipeConditionExpression(condition, targetColumn, value);
         }

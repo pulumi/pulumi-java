@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1.inputs.CustomAccountArgs;
 import io.pulumi.googlenative.websecurityscanner_v1.inputs.GoogleAccountArgs;
 import io.pulumi.googlenative.websecurityscanner_v1.inputs.IapCredentialArgs;
@@ -25,7 +25,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAccount")
-    private final @Nullable Input<CustomAccountArgs> customAccount;
+      private final @Nullable Input<CustomAccountArgs> customAccount;
 
     public Input<CustomAccountArgs> getCustomAccount() {
         return this.customAccount == null ? Input.empty() : this.customAccount;
@@ -36,7 +36,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleAccount")
-    private final @Nullable Input<GoogleAccountArgs> googleAccount;
+      private final @Nullable Input<GoogleAccountArgs> googleAccount;
 
     public Input<GoogleAccountArgs> getGoogleAccount() {
         return this.googleAccount == null ? Input.empty() : this.googleAccount;
@@ -47,7 +47,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iapCredential")
-    private final @Nullable Input<IapCredentialArgs> iapCredential;
+      private final @Nullable Input<IapCredentialArgs> iapCredential;
 
     public Input<IapCredentialArgs> getIapCredential() {
         return this.iapCredential == null ? Input.empty() : this.iapCredential;
@@ -121,7 +121,6 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
             this.iapCredential = Input.ofNullable(iapCredential);
             return this;
         }
-
         public AuthenticationArgs build() {
             return new AuthenticationArgs(customAccount, googleAccount, iapCredential);
         }

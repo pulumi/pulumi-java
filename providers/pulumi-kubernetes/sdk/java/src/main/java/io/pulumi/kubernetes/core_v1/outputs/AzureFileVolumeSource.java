@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,21 +41,21 @@ public final class AzureFileVolumeSource {
     /**
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * the name of secret that contains Azure Storage Account Name and Key
      * 
-     */
+    */
     public String getSecretName() {
         return this.secretName;
     }
     /**
      * Share Name
      * 
-     */
+    */
     public String getShareName() {
         return this.shareName;
     }
@@ -98,7 +98,6 @@ public final class AzureFileVolumeSource {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public AzureFileVolumeSource build() {
             return new AzureFileVolumeSource(readOnly, secretName, shareName);
         }

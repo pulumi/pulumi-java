@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,14 +33,14 @@ public final class ListSubscriptionSecretsResult {
     /**
      * Subscription primary key.
      * 
-     */
+    */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Subscription secondary key.
      * 
-     */
+    */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -76,7 +76,6 @@ public final class ListSubscriptionSecretsResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListSubscriptionSecretsResult build() {
             return new ListSubscriptionSecretsResult(primaryKey, secondaryKey);
         }

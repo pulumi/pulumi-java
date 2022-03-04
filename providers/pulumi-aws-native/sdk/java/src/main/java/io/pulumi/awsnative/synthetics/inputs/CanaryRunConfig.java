@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -21,7 +21,7 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="activeTracing")
-    private final @Nullable Boolean activeTracing;
+      private final @Nullable Boolean activeTracing;
 
     public Optional<Boolean> getActiveTracing() {
         return this.activeTracing == null ? Optional.empty() : Optional.ofNullable(this.activeTracing);
@@ -32,7 +32,7 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Object environmentVariables;
+      private final @Nullable Object environmentVariables;
 
     public Optional<Object> getEnvironmentVariables() {
         return this.environmentVariables == null ? Optional.empty() : Optional.ofNullable(this.environmentVariables);
@@ -43,7 +43,7 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="memoryInMB")
-    private final @Nullable Integer memoryInMB;
+      private final @Nullable Integer memoryInMB;
 
     public Optional<Integer> getMemoryInMB() {
         return this.memoryInMB == null ? Optional.empty() : Optional.ofNullable(this.memoryInMB);
@@ -54,7 +54,7 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Integer timeoutInSeconds;
+      private final @Nullable Integer timeoutInSeconds;
 
     public Optional<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
@@ -123,7 +123,6 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public CanaryRunConfig build() {
             return new CanaryRunConfig(activeTracing, environmentVariables, memoryInMB, timeoutInSeconds);
         }

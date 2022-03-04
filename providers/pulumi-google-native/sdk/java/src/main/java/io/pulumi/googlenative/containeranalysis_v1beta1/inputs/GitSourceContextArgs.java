@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="revisionId")
-    private final @Nullable Input<String> revisionId;
+      private final @Nullable Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId == null ? Input.empty() : this.revisionId;
@@ -34,7 +34,7 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -93,7 +93,6 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public GitSourceContextArgs build() {
             return new GitSourceContextArgs(revisionId, url);
         }

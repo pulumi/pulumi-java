@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.BigQueryIODetailsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.BigTableIODetailsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.DatastoreIODetailsResponse;
@@ -73,49 +73,49 @@ public final class JobMetadataResponse {
     /**
      * Identification of a Cloud Bigtable source used in the Dataflow job.
      * 
-     */
+    */
     public List<BigTableIODetailsResponse> getBigTableDetails() {
         return this.bigTableDetails;
     }
     /**
      * Identification of a BigQuery source used in the Dataflow job.
      * 
-     */
+    */
     public List<BigQueryIODetailsResponse> getBigqueryDetails() {
         return this.bigqueryDetails;
     }
     /**
      * Identification of a Datastore source used in the Dataflow job.
      * 
-     */
+    */
     public List<DatastoreIODetailsResponse> getDatastoreDetails() {
         return this.datastoreDetails;
     }
     /**
      * Identification of a File source used in the Dataflow job.
      * 
-     */
+    */
     public List<FileIODetailsResponse> getFileDetails() {
         return this.fileDetails;
     }
     /**
      * Identification of a Pub/Sub source used in the Dataflow job.
      * 
-     */
+    */
     public List<PubSubIODetailsResponse> getPubsubDetails() {
         return this.pubsubDetails;
     }
     /**
      * The SDK version used to run the job.
      * 
-     */
+    */
     public SdkVersionResponse getSdkVersion() {
         return this.sdkVersion;
     }
     /**
      * Identification of a Spanner source used in the Dataflow job.
      * 
-     */
+    */
     public List<SpannerIODetailsResponse> getSpannerDetails() {
         return this.spannerDetails;
     }
@@ -186,7 +186,6 @@ public final class JobMetadataResponse {
             this.spannerDetails = Objects.requireNonNull(spannerDetails);
             return this;
         }
-
         public JobMetadataResponse build() {
             return new JobMetadataResponse(bigTableDetails, bigqueryDetails, datastoreDetails, fileDetails, pubsubDetails, sdkVersion, spannerDetails);
         }

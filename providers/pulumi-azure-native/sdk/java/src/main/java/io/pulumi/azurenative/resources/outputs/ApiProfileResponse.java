@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class ApiProfileResponse {
     /**
      * The API version.
      * 
-     */
+    */
     public String getApiVersion() {
         return this.apiVersion;
     }
     /**
      * The profile version.
      * 
-     */
+    */
     public String getProfileVersion() {
         return this.profileVersion;
     }
@@ -74,7 +74,6 @@ public final class ApiProfileResponse {
             this.profileVersion = Objects.requireNonNull(profileVersion);
             return this;
         }
-
         public ApiProfileResponse build() {
             return new ApiProfileResponse(apiVersion, profileVersion);
         }

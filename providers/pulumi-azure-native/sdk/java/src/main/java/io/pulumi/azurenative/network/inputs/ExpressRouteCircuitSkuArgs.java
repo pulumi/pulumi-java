@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ExpressRouteCircuitSkuFamily;
 import io.pulumi.azurenative.network.enums.ExpressRouteCircuitSkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="family")
-    private final @Nullable Input<Either<String,ExpressRouteCircuitSkuFamily>> family;
+      private final @Nullable Input<Either<String,ExpressRouteCircuitSkuFamily>> family;
 
     public Input<Either<String,ExpressRouteCircuitSkuFamily>> getFamily() {
         return this.family == null ? Input.empty() : this.family;
@@ -37,7 +37,7 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -48,7 +48,7 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<Either<String,ExpressRouteCircuitSkuTier>> tier;
+      private final @Nullable Input<Either<String,ExpressRouteCircuitSkuTier>> tier;
 
     public Input<Either<String,ExpressRouteCircuitSkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -122,7 +122,6 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public ExpressRouteCircuitSkuArgs build() {
             return new ExpressRouteCircuitSkuArgs(family, name, tier);
         }

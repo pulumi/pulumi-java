@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ReverseSshConnectivityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vm", required=true)
-    private final String vm;
+      private final String vm;
 
     public String getVm() {
         return this.vm;
@@ -33,7 +33,7 @@ public final class ReverseSshConnectivityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vmIp", required=true)
-    private final String vmIp;
+      private final String vmIp;
 
     public String getVmIp() {
         return this.vmIp;
@@ -44,7 +44,7 @@ public final class ReverseSshConnectivityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vmPort", required=true)
-    private final Integer vmPort;
+      private final Integer vmPort;
 
     public Integer getVmPort() {
         return this.vmPort;
@@ -55,7 +55,7 @@ public final class ReverseSshConnectivityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vpc", required=true)
-    private final String vpc;
+      private final String vpc;
 
     public String getVpc() {
         return this.vpc;
@@ -124,7 +124,6 @@ public final class ReverseSshConnectivityResponse extends io.pulumi.resources.In
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }
-
         public ReverseSshConnectivityResponse build() {
             return new ReverseSshConnectivityResponse(vm, vmIp, vmPort, vpc);
         }

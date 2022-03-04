@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -30,7 +30,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable Input<String> objectId;
+      private final @Nullable Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId == null ? Input.empty() : this.objectId;
@@ -41,7 +41,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -115,7 +115,6 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
-
         public ManagedClusterPropertiesIdentityProfileArgs build() {
             return new ManagedClusterPropertiesIdentityProfileArgs(clientId, objectId, resourceId);
         }

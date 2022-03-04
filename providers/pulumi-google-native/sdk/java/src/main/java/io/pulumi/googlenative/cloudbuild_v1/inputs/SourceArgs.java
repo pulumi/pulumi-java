@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.RepoSourceArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceManifestArgs;
@@ -25,7 +25,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoSource")
-    private final @Nullable Input<RepoSourceArgs> repoSource;
+      private final @Nullable Input<RepoSourceArgs> repoSource;
 
     public Input<RepoSourceArgs> getRepoSource() {
         return this.repoSource == null ? Input.empty() : this.repoSource;
@@ -36,7 +36,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageSource")
-    private final @Nullable Input<StorageSourceArgs> storageSource;
+      private final @Nullable Input<StorageSourceArgs> storageSource;
 
     public Input<StorageSourceArgs> getStorageSource() {
         return this.storageSource == null ? Input.empty() : this.storageSource;
@@ -47,7 +47,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageSourceManifest")
-    private final @Nullable Input<StorageSourceManifestArgs> storageSourceManifest;
+      private final @Nullable Input<StorageSourceManifestArgs> storageSourceManifest;
 
     public Input<StorageSourceManifestArgs> getStorageSourceManifest() {
         return this.storageSourceManifest == null ? Input.empty() : this.storageSourceManifest;
@@ -121,7 +121,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.storageSourceManifest = Input.ofNullable(storageSourceManifest);
             return this;
         }
-
         public SourceArgs build() {
             return new SourceArgs(repoSource, storageSource, storageSourceManifest);
         }

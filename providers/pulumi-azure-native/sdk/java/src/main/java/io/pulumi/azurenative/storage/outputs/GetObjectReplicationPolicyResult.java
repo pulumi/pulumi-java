@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ObjectReplicationPolicyRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,56 +76,56 @@ public final class GetObjectReplicationPolicyResult {
     /**
      * Required. Destination account name.
      * 
-     */
+    */
     public String getDestinationAccount() {
         return this.destinationAccount;
     }
     /**
      * Indicates when the policy is enabled on the source account.
      * 
-     */
+    */
     public String getEnabledTime() {
         return this.enabledTime;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A unique id for object replication policy.
      * 
-     */
+    */
     public String getPolicyId() {
         return this.policyId;
     }
     /**
      * The storage account object replication rules.
      * 
-     */
+    */
     public List<ObjectReplicationPolicyRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
      * Required. Source account name.
      * 
-     */
+    */
     public String getSourceAccount() {
         return this.sourceAccount;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -203,7 +203,6 @@ public final class GetObjectReplicationPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetObjectReplicationPolicyResult build() {
             return new GetObjectReplicationPolicyResult(destinationAccount, enabledTime, id, name, policyId, rules, sourceAccount, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deleteFilesAfterCompletion")
-    private final @Nullable Input<Object> deleteFilesAfterCompletion;
+      private final @Nullable Input<Object> deleteFilesAfterCompletion;
 
     public Input<Object> getDeleteFilesAfterCompletion() {
         return this.deleteFilesAfterCompletion == null ? Input.empty() : this.deleteFilesAfterCompletion;
@@ -36,7 +36,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -47,7 +47,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enablePartitionDiscovery")
-    private final @Nullable Input<Boolean> enablePartitionDiscovery;
+      private final @Nullable Input<Boolean> enablePartitionDiscovery;
 
     public Input<Boolean> getEnablePartitionDiscovery() {
         return this.enablePartitionDiscovery == null ? Input.empty() : this.enablePartitionDiscovery;
@@ -58,7 +58,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="fileListPath")
-    private final @Nullable Input<Object> fileListPath;
+      private final @Nullable Input<Object> fileListPath;
 
     public Input<Object> getFileListPath() {
         return this.fileListPath == null ? Input.empty() : this.fileListPath;
@@ -69,7 +69,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -80,7 +80,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="modifiedDatetimeEnd")
-    private final @Nullable Input<Object> modifiedDatetimeEnd;
+      private final @Nullable Input<Object> modifiedDatetimeEnd;
 
     public Input<Object> getModifiedDatetimeEnd() {
         return this.modifiedDatetimeEnd == null ? Input.empty() : this.modifiedDatetimeEnd;
@@ -91,7 +91,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="modifiedDatetimeStart")
-    private final @Nullable Input<Object> modifiedDatetimeStart;
+      private final @Nullable Input<Object> modifiedDatetimeStart;
 
     public Input<Object> getModifiedDatetimeStart() {
         return this.modifiedDatetimeStart == null ? Input.empty() : this.modifiedDatetimeStart;
@@ -102,7 +102,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="partitionRootPath")
-    private final @Nullable Input<Object> partitionRootPath;
+      private final @Nullable Input<Object> partitionRootPath;
 
     public Input<Object> getPartitionRootPath() {
         return this.partitionRootPath == null ? Input.empty() : this.partitionRootPath;
@@ -113,7 +113,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<Object> prefix;
+      private final @Nullable Input<Object> prefix;
 
     public Input<Object> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -124,7 +124,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="recursive")
-    private final @Nullable Input<Object> recursive;
+      private final @Nullable Input<Object> recursive;
 
     public Input<Object> getRecursive() {
         return this.recursive == null ? Input.empty() : this.recursive;
@@ -136,7 +136,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -147,7 +147,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="wildcardFileName")
-    private final @Nullable Input<Object> wildcardFileName;
+      private final @Nullable Input<Object> wildcardFileName;
 
     public Input<Object> getWildcardFileName() {
         return this.wildcardFileName == null ? Input.empty() : this.wildcardFileName;
@@ -158,7 +158,7 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="wildcardFolderPath")
-    private final @Nullable Input<Object> wildcardFolderPath;
+      private final @Nullable Input<Object> wildcardFolderPath;
 
     public Input<Object> getWildcardFolderPath() {
         return this.wildcardFolderPath == null ? Input.empty() : this.wildcardFolderPath;
@@ -382,7 +382,6 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
             this.wildcardFolderPath = Input.ofNullable(wildcardFolderPath);
             return this;
         }
-
         public GoogleCloudStorageReadSettingsArgs build() {
             return new GoogleCloudStorageReadSettingsArgs(deleteFilesAfterCompletion, disableMetricsCollection, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, modifiedDatetimeEnd, modifiedDatetimeStart, partitionRootPath, prefix, recursive, type, wildcardFileName, wildcardFolderPath);
         }

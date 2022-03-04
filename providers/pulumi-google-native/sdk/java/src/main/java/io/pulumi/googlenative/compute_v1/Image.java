@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.ImageArgs;
 import io.pulumi.googlenative.compute_v1.outputs.CustomerEncryptionKeyResponse;
@@ -447,6 +447,37 @@ public class Image extends io.pulumi.resources.CustomResource {
         return this.storageLocations;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ImageArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.compute_v1.ImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.compute_v1.ImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Image(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Image(String name) {
+        this(name, ImageArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Image(String name, @Nullable ImageArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

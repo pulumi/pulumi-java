@@ -5,7 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationConfigurationDetails;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentTypeConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ApplicationComponentConfiguration extends io.pulumi.resources
      * 
      */
     @InputImport(name="configurationDetails")
-    private final @Nullable ApplicationConfigurationDetails configurationDetails;
+      private final @Nullable ApplicationConfigurationDetails configurationDetails;
 
     public Optional<ApplicationConfigurationDetails> getConfigurationDetails() {
         return this.configurationDetails == null ? Optional.empty() : Optional.ofNullable(this.configurationDetails);
@@ -36,7 +36,7 @@ public final class ApplicationComponentConfiguration extends io.pulumi.resources
      * 
      */
     @InputImport(name="subComponentTypeConfigurations")
-    private final @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations;
+      private final @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations;
 
     public List<ApplicationSubComponentTypeConfiguration> getSubComponentTypeConfigurations() {
         return this.subComponentTypeConfigurations == null ? List.of() : this.subComponentTypeConfigurations;
@@ -85,7 +85,6 @@ public final class ApplicationComponentConfiguration extends io.pulumi.resources
             this.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }
-
         public ApplicationComponentConfiguration build() {
             return new ApplicationComponentConfiguration(configurationDetails, subComponentTypeConfigurations);
         }

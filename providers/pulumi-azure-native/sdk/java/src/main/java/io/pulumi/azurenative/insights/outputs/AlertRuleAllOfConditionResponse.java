@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.AlertRuleAnyOfOrLeafConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class AlertRuleAllOfConditionResponse {
     /**
      * The list of Activity Log Alert rule conditions.
      * 
-     */
+    */
     public List<AlertRuleAnyOfOrLeafConditionResponse> getAllOf() {
         return this.allOf;
     }
@@ -53,7 +53,6 @@ public final class AlertRuleAllOfConditionResponse {
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }
-
         public AlertRuleAllOfConditionResponse build() {
             return new AlertRuleAllOfConditionResponse(allOf);
         }

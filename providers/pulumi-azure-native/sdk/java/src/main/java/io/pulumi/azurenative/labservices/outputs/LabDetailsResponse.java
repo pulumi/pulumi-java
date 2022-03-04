@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,28 +47,28 @@ public final class LabDetailsResponse {
     /**
      * The Id of the lab.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the lab
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the lab.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The maximum duration a user can use a VM in this lab.
      * 
-     */
+    */
     public String getUsageQuota() {
         return this.usageQuota;
     }
@@ -118,7 +118,6 @@ public final class LabDetailsResponse {
             this.usageQuota = Objects.requireNonNull(usageQuota);
             return this;
         }
-
         public LabDetailsResponse build() {
             return new LabDetailsResponse(id, name, provisioningState, usageQuota);
         }

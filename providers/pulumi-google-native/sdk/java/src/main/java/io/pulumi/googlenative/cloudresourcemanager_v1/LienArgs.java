@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -31,7 +31,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origin")
-    private final @Nullable Input<String> origin;
+      private final @Nullable Input<String> origin;
 
     public Input<String> getOrigin() {
         return this.origin == null ? Input.empty() : this.origin;
@@ -53,7 +53,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -64,7 +64,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+      private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -75,7 +75,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restrictions")
-    private final @Nullable Input<List<String>> restrictions;
+      private final @Nullable Input<List<String>> restrictions;
 
     public Input<List<String>> getRestrictions() {
         return this.restrictions == null ? Input.empty() : this.restrictions;
@@ -194,7 +194,6 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
             this.restrictions = Input.ofNullable(restrictions);
             return this;
         }
-
         public LienArgs build() {
             return new LienArgs(createTime, name, origin, parent, reason, restrictions);
         }

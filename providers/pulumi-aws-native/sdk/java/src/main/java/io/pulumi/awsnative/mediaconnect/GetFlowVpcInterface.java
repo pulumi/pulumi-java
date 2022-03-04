@@ -6,17 +6,33 @@ package io.pulumi.awsnative.mediaconnect;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.mediaconnect.inputs.GetFlowVpcInterfaceArgs;
 import io.pulumi.awsnative.mediaconnect.outputs.GetFlowVpcInterfaceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFlowVpcInterface {
-/**
- * Resource schema for AWS::MediaConnect::FlowVpcInterface
+    private GetFlowVpcInterface() {}
+    public interface BuilderApplicator {
+        public void apply(GetFlowVpcInterfaceArgs.Builder a);
+    }
+    private static GetFlowVpcInterfaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFlowVpcInterfaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::MediaConnect::FlowVpcInterface
  * 
- */
+     */
+    public static CompletableFuture<GetFlowVpcInterfaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::MediaConnect::FlowVpcInterface
+     * 
+     */
     public static CompletableFuture<GetFlowVpcInterfaceResult> invokeAsync(GetFlowVpcInterfaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlowVpcInterface", TypeShape.of(GetFlowVpcInterfaceResult.class), args == null ? GetFlowVpcInterfaceArgs.Empty : args, Utilities.withVersion(options));
     }

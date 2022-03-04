@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListWorkspaceNotebookAccessTokenArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListWorkspaceNotebookAccessTokenArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -77,7 +77,6 @@ public final class ListWorkspaceNotebookAccessTokenArgs extends io.pulumi.resour
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public ListWorkspaceNotebookAccessTokenArgs build() {
             return new ListWorkspaceNotebookAccessTokenArgs(resourceGroupName, workspaceName);
         }

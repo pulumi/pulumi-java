@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SapTablePartitionSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -134,105 +134,105 @@ public final class SapTableSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
-     */
+    */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * Specifies the maximum number of rows that will be retrieved at a time when retrieving data from SAP Table. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getBatchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
      * Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getCustomRfcReadTableFunctionModule() {
         return Optional.ofNullable(this.customRfcReadTableFunctionModule);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * The partition mechanism that will be used for SAP table read in parallel. Possible values include: "None", "PartitionOnInt", "PartitionOnCalendarYear", "PartitionOnCalendarMonth", "PartitionOnCalendarDate", "PartitionOnTime".
      * 
-     */
+    */
     public Optional<Object> getPartitionOption() {
         return Optional.ofNullable(this.partitionOption);
     }
     /**
      * The settings that will be leveraged for SAP table source partitioning.
      * 
-     */
+    */
     public Optional<SapTablePartitionSettingsResponse> getPartitionSettings() {
         return Optional.ofNullable(this.partitionSettings);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * The fields of the SAP table that will be retrieved. For example, column0, column1. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getRfcTableFields() {
         return Optional.ofNullable(this.rfcTableFields);
     }
     /**
      * The options for the filtering of the SAP Table. For example, COLUMN0 EQ SOME VALUE. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getRfcTableOptions() {
         return Optional.ofNullable(this.rfcTableOptions);
     }
     /**
      * The number of rows to be retrieved. Type: integer(or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getRowCount() {
         return Optional.ofNullable(this.rowCount);
     }
     /**
      * The number of rows that will be skipped. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getRowSkips() {
         return Optional.ofNullable(this.rowSkips);
     }
     /**
      * The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getSapDataColumnDelimiter() {
         return Optional.ofNullable(this.sapDataColumnDelimiter);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -240,7 +240,7 @@ public final class SapTableSourceResponse {
      * Copy source type.
      * Expected value is 'SapTableSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -374,7 +374,6 @@ public final class SapTableSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapTableSourceResponse build() {
             return new SapTableSourceResponse(additionalColumns, batchSize, customRfcReadTableFunctionModule, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, queryTimeout, rfcTableFields, rfcTableOptions, rowCount, rowSkips, sapDataColumnDelimiter, sourceRetryCount, sourceRetryWait, type);
         }

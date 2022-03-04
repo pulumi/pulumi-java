@@ -6,21 +6,41 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.inputs.GetManagementGroupNetworkManagerConnectionArgs;
 import io.pulumi.azurenative.network.outputs.GetManagementGroupNetworkManagerConnectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementGroupNetworkManagerConnection {
-/**
- * The Network Manager Connection resource
+    private GetManagementGroupNetworkManagerConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagementGroupNetworkManagerConnectionArgs.Builder a);
+    }
+    private static GetManagementGroupNetworkManagerConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagementGroupNetworkManagerConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Network Manager Connection resource
  * API Version: 2021-05-01-preview.
  * 
- *
- * The Network Manager Connection resource
+     *
+     * The Network Manager Connection resource
  * 
- */
+     */
+    public static CompletableFuture<GetManagementGroupNetworkManagerConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Network Manager Connection resource
+     * API Version: 2021-05-01-preview.
+     * 
+     *
+         * The Network Manager Connection resource
+     * 
+     */
     public static CompletableFuture<GetManagementGroupNetworkManagerConnectionResult> invokeAsync(GetManagementGroupNetworkManagerConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getManagementGroupNetworkManagerConnection", TypeShape.of(GetManagementGroupNetworkManagerConnectionResult.class), args == null ? GetManagementGroupNetworkManagerConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

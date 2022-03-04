@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -48,7 +48,7 @@ public final class RecoveryPlanScriptActionDetailsResponse {
     /**
      * The fabric location.
      * 
-     */
+    */
     public String getFabricLocation() {
         return this.fabricLocation;
     }
@@ -56,21 +56,21 @@ public final class RecoveryPlanScriptActionDetailsResponse {
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is 'ScriptActionDetails'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The script path.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The script timeout.
      * 
-     */
+    */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -120,7 +120,6 @@ public final class RecoveryPlanScriptActionDetailsResponse {
             this.timeout = timeout;
             return this;
         }
-
         public RecoveryPlanScriptActionDetailsResponse build() {
             return new RecoveryPlanScriptActionDetailsResponse(fabricLocation, instanceType, path, timeout);
         }

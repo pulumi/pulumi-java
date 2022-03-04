@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class CaPoolIamMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="caPool")
-    private final @Nullable Input<String> caPool;
+      private final @Nullable Input<String> caPool;
 
     public Input<String> getCaPool() {
         return this.caPool == null ? Input.empty() : this.caPool;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<CaPoolIamMemberConditionGetArgs> condition;
+      private final @Nullable Input<CaPoolIamMemberConditionGetArgs> condition;
 
     public Input<CaPoolIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -38,7 +38,7 @@ public final class CaPoolIamMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -51,14 +51,14 @@ public final class CaPoolIamMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -70,7 +70,7 @@ public final class CaPoolIamMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -83,7 +83,7 @@ public final class CaPoolIamMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -217,7 +217,6 @@ public final class CaPoolIamMemberState extends io.pulumi.resources.ResourceArgs
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public CaPoolIamMemberState build() {
             return new CaPoolIamMemberState(caPool, condition, etag, location, member, project, role);
         }

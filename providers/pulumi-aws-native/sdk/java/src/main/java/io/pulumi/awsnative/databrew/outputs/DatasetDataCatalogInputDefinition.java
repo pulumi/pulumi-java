@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.DatasetS3Location;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,21 +44,21 @@ public final class DatasetDataCatalogInputDefinition {
     /**
      * Catalog id
      * 
-     */
+    */
     public Optional<String> getCatalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
      * Database name
      * 
-     */
+    */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Table name
      * 
-     */
+    */
     public Optional<String> getTableName() {
         return Optional.ofNullable(this.tableName);
     }
@@ -111,7 +111,6 @@ public final class DatasetDataCatalogInputDefinition {
             this.tempDirectory = tempDirectory;
             return this;
         }
-
         public DatasetDataCatalogInputDefinition build() {
             return new DatasetDataCatalogInputDefinition(catalogId, databaseName, tableName, tempDirectory);
         }

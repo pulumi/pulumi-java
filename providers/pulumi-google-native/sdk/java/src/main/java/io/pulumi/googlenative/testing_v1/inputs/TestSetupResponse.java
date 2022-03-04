@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.AccountResponse;
 import io.pulumi.googlenative.testing_v1.inputs.ApkResponse;
 import io.pulumi.googlenative.testing_v1.inputs.DeviceFileResponse;
@@ -27,7 +27,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="account", required=true)
-    private final AccountResponse account;
+      private final AccountResponse account;
 
     public AccountResponse getAccount() {
         return this.account;
@@ -38,7 +38,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalApks", required=true)
-    private final List<ApkResponse> additionalApks;
+      private final List<ApkResponse> additionalApks;
 
     public List<ApkResponse> getAdditionalApks() {
         return this.additionalApks;
@@ -49,7 +49,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="directoriesToPull", required=true)
-    private final List<String> directoriesToPull;
+      private final List<String> directoriesToPull;
 
     public List<String> getDirectoriesToPull() {
         return this.directoriesToPull;
@@ -60,7 +60,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dontAutograntPermissions", required=true)
-    private final Boolean dontAutograntPermissions;
+      private final Boolean dontAutograntPermissions;
 
     public Boolean getDontAutograntPermissions() {
         return this.dontAutograntPermissions;
@@ -71,7 +71,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentVariables", required=true)
-    private final List<EnvironmentVariableResponse> environmentVariables;
+      private final List<EnvironmentVariableResponse> environmentVariables;
 
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
         return this.environmentVariables;
@@ -82,7 +82,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filesToPush", required=true)
-    private final List<DeviceFileResponse> filesToPush;
+      private final List<DeviceFileResponse> filesToPush;
 
     public List<DeviceFileResponse> getFilesToPush() {
         return this.filesToPush;
@@ -93,7 +93,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkProfile", required=true)
-    private final String networkProfile;
+      private final String networkProfile;
 
     public String getNetworkProfile() {
         return this.networkProfile;
@@ -192,7 +192,6 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
             this.networkProfile = Objects.requireNonNull(networkProfile);
             return this;
         }
-
         public TestSetupResponse build() {
             return new TestSetupResponse(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile);
         }

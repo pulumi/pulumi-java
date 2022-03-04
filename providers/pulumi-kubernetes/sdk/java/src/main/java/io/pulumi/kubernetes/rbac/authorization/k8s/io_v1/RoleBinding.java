@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.RoleBindingArgs;
@@ -94,6 +94,37 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
         return this.subjects;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RoleBindingArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.RoleBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.RoleBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RoleBinding(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RoleBinding(String name) {
+        this(name, RoleBindingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RoleBinding(String name, RoleBindingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

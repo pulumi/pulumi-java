@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyDimensionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public final class FirewallPolicyPublishMetricActionArgs extends io.pulumi.resou
     public static final FirewallPolicyPublishMetricActionArgs Empty = new FirewallPolicyPublishMetricActionArgs();
 
     @InputImport(name="dimensions", required=true)
-    private final Input<List<FirewallPolicyDimensionArgs>> dimensions;
+      private final Input<List<FirewallPolicyDimensionArgs>> dimensions;
 
     public Input<List<FirewallPolicyDimensionArgs>> getDimensions() {
         return this.dimensions;
@@ -58,7 +58,6 @@ public final class FirewallPolicyPublishMetricActionArgs extends io.pulumi.resou
             this.dimensions = Input.of(Objects.requireNonNull(dimensions));
             return this;
         }
-
         public FirewallPolicyPublishMetricActionArgs build() {
             return new FirewallPolicyPublishMetricActionArgs(dimensions);
         }

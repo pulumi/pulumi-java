@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="applicationReadable", required=true)
-    private final Boolean applicationReadable;
+      private final Boolean applicationReadable;
 
     public Boolean getApplicationReadable() {
         return this.applicationReadable;
@@ -34,7 +34,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="expiration", required=true)
-    private final String expiration;
+      private final String expiration;
 
     public String getExpiration() {
         return this.expiration;
@@ -45,7 +45,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="httpHeaders", required=true)
-    private final Map<String,String> httpHeaders;
+      private final Map<String,String> httpHeaders;
 
     public Map<String,String> getHttpHeaders() {
         return this.httpHeaders;
@@ -56,7 +56,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="mimeType", required=true)
-    private final String mimeType;
+      private final String mimeType;
 
     public String getMimeType() {
         return this.mimeType;
@@ -67,7 +67,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -78,7 +78,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="requireMatchingFile", required=true)
-    private final Boolean requireMatchingFile;
+      private final Boolean requireMatchingFile;
 
     public Boolean getRequireMatchingFile() {
         return this.requireMatchingFile;
@@ -89,7 +89,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="uploadPathRegex", required=true)
-    private final String uploadPathRegex;
+      private final String uploadPathRegex;
 
     public String getUploadPathRegex() {
         return this.uploadPathRegex;
@@ -188,7 +188,6 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
             this.uploadPathRegex = Objects.requireNonNull(uploadPathRegex);
             return this;
         }
-
         public StaticFilesHandlerResponse build() {
             return new StaticFilesHandlerResponse(applicationReadable, expiration, httpHeaders, mimeType, path, requireMatchingFile, uploadPathRegex);
         }

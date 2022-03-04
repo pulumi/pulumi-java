@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,21 +40,21 @@ public final class AzureFileFilterDetailsResponse {
     /**
      * List of full path of the files to be transferred.
      * 
-     */
+    */
     public List<String> getFilePathList() {
         return this.filePathList == null ? List.of() : this.filePathList;
     }
     /**
      * Prefix list of the Azure files to be transferred.
      * 
-     */
+    */
     public List<String> getFilePrefixList() {
         return this.filePrefixList == null ? List.of() : this.filePrefixList;
     }
     /**
      * List of file shares to be transferred.
      * 
-     */
+    */
     public List<String> getFileShareList() {
         return this.fileShareList == null ? List.of() : this.fileShareList;
     }
@@ -97,7 +97,6 @@ public final class AzureFileFilterDetailsResponse {
             this.fileShareList = fileShareList;
             return this;
         }
-
         public AzureFileFilterDetailsResponse build() {
             return new AzureFileFilterDetailsResponse(filePathList, filePrefixList, fileShareList);
         }

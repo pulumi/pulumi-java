@@ -6,21 +6,41 @@ package io.pulumi.azurenative.portal;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.portal.inputs.GetUserSettingsArgs;
 import io.pulumi.azurenative.portal.outputs.GetUserSettingsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserSettings {
-/**
- * Response to get user settings
+    private GetUserSettings() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserSettingsArgs.Builder a);
+    }
+    private static GetUserSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserSettingsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response to get user settings
  * API Version: 2018-10-01.
  * 
- *
- * Response to get user settings
+     *
+     * Response to get user settings
  * 
- */
+     */
+    public static CompletableFuture<GetUserSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response to get user settings
+     * API Version: 2018-10-01.
+     * 
+     *
+         * Response to get user settings
+     * 
+     */
     public static CompletableFuture<GetUserSettingsResult> invokeAsync(GetUserSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getUserSettings", TypeShape.of(GetUserSettingsResult.class), args == null ? GetUserSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

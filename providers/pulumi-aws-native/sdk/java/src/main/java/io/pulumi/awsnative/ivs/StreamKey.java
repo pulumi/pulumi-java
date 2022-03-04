@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ivs.StreamKeyArgs;
 import io.pulumi.awsnative.ivs.outputs.StreamKeyTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -77,6 +77,37 @@ public class StreamKey extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
+    public interface BuilderApplicator {
+        public void apply(StreamKeyArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ivs.StreamKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ivs.StreamKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public StreamKey(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public StreamKey(String name) {
+        this(name, StreamKeyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public StreamKey(String name, StreamKeyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

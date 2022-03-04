@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.managedidentities_v1alpha1.outputs.TrustResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -112,91 +112,91 @@ public final class GetDomainResult {
     /**
      * Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
      * 
-     */
+    */
     public Boolean getAuditLogsEnabled() {
         return this.auditLogsEnabled;
     }
     /**
      * Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Network can be added using UpdateDomain later. Domain is only available on network part of authorized_networks. Caller needs to make sure that CIDR subnets do not overlap between networks, else domain creation will fail.
      * 
-     */
+    */
     public List<String> getAuthorizedNetworks() {
         return this.authorizedNetworks;
     }
     /**
      * The time the instance was created. Synthetic field is populated automatically by CCFE. go/ccfe-synthetic-field-user-guide
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would be chosen for an Active Directory that is set up on an internal network.
      * 
-     */
+    */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * Optional. Resource labels to represent user provided metadata
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations;
     }
     /**
      * Optional. Name of customer-visible admin used to perform Active Directory operations. If not specified `setupadmin` would be used.
      * 
-     */
+    */
     public String getManagedIdentitiesAdminName() {
         return this.managedIdentitiesAdminName;
     }
     /**
      * Unique name of the domain in this scope including projects and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
      * 
-     */
+    */
     public String getReservedIpRange() {
         return this.reservedIpRange;
     }
     /**
      * The current state of this domain.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Additional information about the current status of this domain, if available.
      * 
-     */
+    */
     public String getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * The current trusts associated with the domain.
      * 
-     */
+    */
     public List<TrustResponse> getTrusts() {
         return this.trusts;
     }
     /**
      * Last update time. Synthetic field is populated automatically by CCFE.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
@@ -309,7 +309,6 @@ public final class GetDomainResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(auditLogsEnabled, authorizedNetworks, createTime, fqdn, labels, locations, managedIdentitiesAdminName, name, reservedIpRange, state, statusMessage, trusts, updateTime);
         }

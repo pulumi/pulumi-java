@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,35 +52,35 @@ public final class ApprovalResultResponse {
     /**
      * The time when the approval decision was made.
      * 
-     */
+    */
     public String getApprovalTime() {
         return this.approvalTime;
     }
     /**
      * Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
      * 
-     */
+    */
     public String getApproverAccount() {
         return this.approverAccount;
     }
     /**
      * Optional. An optional comment for this manual approval result.
      * 
-     */
+    */
     public String getComment() {
         return this.comment;
     }
     /**
      * The decision of this manual approval.
      * 
-     */
+    */
     public String getDecision() {
         return this.decision;
     }
     /**
      * Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
@@ -137,7 +137,6 @@ public final class ApprovalResultResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ApprovalResultResponse build() {
             return new ApprovalResultResponse(approvalTime, approverAccount, comment, decision, url);
         }

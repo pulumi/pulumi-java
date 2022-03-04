@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +72,6 @@ public final class BotOutputContext {
             this.turnsToLive = Objects.requireNonNull(turnsToLive);
             return this;
         }
-
         public BotOutputContext build() {
             return new BotOutputContext(name, timeToLiveInSeconds, turnsToLive);
         }

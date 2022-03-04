@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -32,14 +32,14 @@ public final class ClusterSelectorResponse {
     /**
      * The cluster labels. Cluster must have all labels to match.
      * 
-     */
+    */
     public Map<String,String> getClusterLabels() {
         return this.clusterLabels;
     }
     /**
      * Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }
@@ -75,7 +75,6 @@ public final class ClusterSelectorResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ClusterSelectorResponse build() {
             return new ClusterSelectorResponse(clusterLabels, zone);
         }

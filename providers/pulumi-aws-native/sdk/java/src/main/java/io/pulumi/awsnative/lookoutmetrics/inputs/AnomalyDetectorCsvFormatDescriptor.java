@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorCsvFormatDescriptorFileCompression;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,42 +18,42 @@ public final class AnomalyDetectorCsvFormatDescriptor extends io.pulumi.resource
     public static final AnomalyDetectorCsvFormatDescriptor Empty = new AnomalyDetectorCsvFormatDescriptor();
 
     @InputImport(name="charset")
-    private final @Nullable String charset;
+      private final @Nullable String charset;
 
     public Optional<String> getCharset() {
         return this.charset == null ? Optional.empty() : Optional.ofNullable(this.charset);
     }
 
     @InputImport(name="containsHeader")
-    private final @Nullable Boolean containsHeader;
+      private final @Nullable Boolean containsHeader;
 
     public Optional<Boolean> getContainsHeader() {
         return this.containsHeader == null ? Optional.empty() : Optional.ofNullable(this.containsHeader);
     }
 
     @InputImport(name="delimiter")
-    private final @Nullable String delimiter;
+      private final @Nullable String delimiter;
 
     public Optional<String> getDelimiter() {
         return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
     }
 
     @InputImport(name="fileCompression")
-    private final @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression;
+      private final @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression;
 
     public Optional<AnomalyDetectorCsvFormatDescriptorFileCompression> getFileCompression() {
         return this.fileCompression == null ? Optional.empty() : Optional.ofNullable(this.fileCompression);
     }
 
     @InputImport(name="headerList")
-    private final @Nullable List<String> headerList;
+      private final @Nullable List<String> headerList;
 
     public List<String> getHeaderList() {
         return this.headerList == null ? List.of() : this.headerList;
     }
 
     @InputImport(name="quoteSymbol")
-    private final @Nullable String quoteSymbol;
+      private final @Nullable String quoteSymbol;
 
     public Optional<String> getQuoteSymbol() {
         return this.quoteSymbol == null ? Optional.empty() : Optional.ofNullable(this.quoteSymbol);
@@ -142,7 +142,6 @@ public final class AnomalyDetectorCsvFormatDescriptor extends io.pulumi.resource
             this.quoteSymbol = quoteSymbol;
             return this;
         }
-
         public AnomalyDetectorCsvFormatDescriptor build() {
             return new AnomalyDetectorCsvFormatDescriptor(charset, containsHeader, delimiter, fileCompression, headerList, quoteSymbol);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebTypeComputeIamMemberArgs;
 import io.pulumi.gcp.iap.inputs.WebTypeComputeIamMemberState;
@@ -133,6 +133,37 @@ public class WebTypeComputeIamMember extends io.pulumi.resources.CustomResource 
         return this.role;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WebTypeComputeIamMemberArgs.Builder a);
+    }
+    private static io.pulumi.gcp.iap.WebTypeComputeIamMemberArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.iap.WebTypeComputeIamMemberArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WebTypeComputeIamMember(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WebTypeComputeIamMember(String name) {
+        this(name, WebTypeComputeIamMemberArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WebTypeComputeIamMember(String name, WebTypeComputeIamMemberArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

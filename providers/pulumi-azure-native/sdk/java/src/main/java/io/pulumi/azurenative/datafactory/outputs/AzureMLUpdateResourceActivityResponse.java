@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -96,56 +96,56 @@ public final class AzureMLUpdateResourceActivityResponse {
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getTrainedModelFilePath() {
         return this.trainedModelFilePath;
     }
     /**
      * Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getTrainedModelLinkedServiceName() {
         return this.trainedModelLinkedServiceName;
     }
     /**
      * Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getTrainedModelName() {
         return this.trainedModelName;
     }
@@ -153,14 +153,14 @@ public final class AzureMLUpdateResourceActivityResponse {
      * Type of activity.
      * Expected value is 'AzureMLUpdateResource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
@@ -252,7 +252,6 @@ public final class AzureMLUpdateResourceActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public AzureMLUpdateResourceActivityResponse build() {
             return new AzureMLUpdateResourceActivityResponse(dependsOn, description, linkedServiceName, name, policy, trainedModelFilePath, trainedModelLinkedServiceName, trainedModelName, type, userProperties);
         }

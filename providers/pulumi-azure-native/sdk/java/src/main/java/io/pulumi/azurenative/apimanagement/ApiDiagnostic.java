@@ -10,8 +10,8 @@ import io.pulumi.azurenative.apimanagement.outputs.SamplingSettingsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -189,6 +189,37 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
         return this.verbosity;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ApiDiagnosticArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.apimanagement.ApiDiagnosticArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.apimanagement.ApiDiagnosticArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ApiDiagnostic(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ApiDiagnostic(String name) {
+        this(name, ApiDiagnosticArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApiDiagnostic(String name, ApiDiagnosticArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

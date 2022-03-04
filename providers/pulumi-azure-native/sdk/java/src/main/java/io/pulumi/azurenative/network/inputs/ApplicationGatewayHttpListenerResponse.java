@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayCustomErrorResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="customErrorConfigurations")
-    private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
+      private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
 
     public List<ApplicationGatewayCustomErrorResponse> getCustomErrorConfigurations() {
         return this.customErrorConfigurations == null ? List.of() : this.customErrorConfigurations;
@@ -38,7 +38,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -49,7 +49,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="firewallPolicy")
-    private final @Nullable SubResourceResponse firewallPolicy;
+      private final @Nullable SubResourceResponse firewallPolicy;
 
     public Optional<SubResourceResponse> getFirewallPolicy() {
         return this.firewallPolicy == null ? Optional.empty() : Optional.ofNullable(this.firewallPolicy);
@@ -60,7 +60,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="frontendIPConfiguration")
-    private final @Nullable SubResourceResponse frontendIPConfiguration;
+      private final @Nullable SubResourceResponse frontendIPConfiguration;
 
     public Optional<SubResourceResponse> getFrontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontendIPConfiguration);
@@ -71,7 +71,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="frontendPort")
-    private final @Nullable SubResourceResponse frontendPort;
+      private final @Nullable SubResourceResponse frontendPort;
 
     public Optional<SubResourceResponse> getFrontendPort() {
         return this.frontendPort == null ? Optional.empty() : Optional.ofNullable(this.frontendPort);
@@ -82,7 +82,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="hostName")
-    private final @Nullable String hostName;
+      private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
@@ -93,7 +93,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="hostNames")
-    private final @Nullable List<String> hostNames;
+      private final @Nullable List<String> hostNames;
 
     public List<String> getHostNames() {
         return this.hostNames == null ? List.of() : this.hostNames;
@@ -104,7 +104,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -115,7 +115,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -126,7 +126,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+      private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -137,7 +137,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -148,7 +148,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="requireServerNameIndication")
-    private final @Nullable Boolean requireServerNameIndication;
+      private final @Nullable Boolean requireServerNameIndication;
 
     public Optional<Boolean> getRequireServerNameIndication() {
         return this.requireServerNameIndication == null ? Optional.empty() : Optional.ofNullable(this.requireServerNameIndication);
@@ -159,7 +159,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="sslCertificate")
-    private final @Nullable SubResourceResponse sslCertificate;
+      private final @Nullable SubResourceResponse sslCertificate;
 
     public Optional<SubResourceResponse> getSslCertificate() {
         return this.sslCertificate == null ? Optional.empty() : Optional.ofNullable(this.sslCertificate);
@@ -170,7 +170,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="sslProfile")
-    private final @Nullable SubResourceResponse sslProfile;
+      private final @Nullable SubResourceResponse sslProfile;
 
     public Optional<SubResourceResponse> getSslProfile() {
         return this.sslProfile == null ? Optional.empty() : Optional.ofNullable(this.sslProfile);
@@ -181,7 +181,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -360,7 +360,6 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayHttpListenerResponse build() {
             return new ApplicationGatewayHttpListenerResponse(customErrorConfigurations, etag, firewallPolicy, frontendIPConfiguration, frontendPort, hostName, hostNames, id, name, protocol, provisioningState, requireServerNameIndication, sslCertificate, sslProfile, type);
         }

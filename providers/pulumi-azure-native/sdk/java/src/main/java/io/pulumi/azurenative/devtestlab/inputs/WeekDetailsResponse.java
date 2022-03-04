@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WeekDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="time")
-    private final @Nullable String time;
+      private final @Nullable String time;
 
     public Optional<String> getTime() {
         return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);
@@ -35,7 +35,7 @@ public final class WeekDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="weekdays")
-    private final @Nullable List<String> weekdays;
+      private final @Nullable List<String> weekdays;
 
     public List<String> getWeekdays() {
         return this.weekdays == null ? List.of() : this.weekdays;
@@ -84,7 +84,6 @@ public final class WeekDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.weekdays = weekdays;
             return this;
         }
-
         public WeekDetailsResponse build() {
             return new WeekDetailsResponse(time, weekdays);
         }

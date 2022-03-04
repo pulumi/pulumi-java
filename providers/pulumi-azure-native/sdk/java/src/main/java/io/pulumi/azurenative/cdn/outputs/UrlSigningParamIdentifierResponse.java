@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class UrlSigningParamIdentifierResponse {
     /**
      * Indicates the purpose of the parameter
      * 
-     */
+    */
     public String getParamIndicator() {
         return this.paramIndicator;
     }
     /**
      * Parameter name
      * 
-     */
+    */
     public String getParamName() {
         return this.paramName;
     }
@@ -74,7 +74,6 @@ public final class UrlSigningParamIdentifierResponse {
             this.paramName = Objects.requireNonNull(paramName);
             return this;
         }
-
         public UrlSigningParamIdentifierResponse build() {
             return new UrlSigningParamIdentifierResponse(paramIndicator, paramName);
         }

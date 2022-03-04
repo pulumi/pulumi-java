@@ -6,21 +6,41 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.inputs.GetIdentityProviderArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GetIdentityProviderResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIdentityProvider {
-/**
- * Identity Provider details.
+    private GetIdentityProvider() {}
+    public interface BuilderApplicator {
+        public void apply(GetIdentityProviderArgs.Builder a);
+    }
+    private static GetIdentityProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIdentityProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Identity Provider details.
  * API Version: 2020-12-01.
  * 
- *
- * Identity Provider details.
+     *
+     * Identity Provider details.
  * 
- */
+     */
+    public static CompletableFuture<GetIdentityProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Identity Provider details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Identity Provider details.
+     * 
+     */
     public static CompletableFuture<GetIdentityProviderResult> invokeAsync(GetIdentityProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getIdentityProvider", TypeShape.of(GetIdentityProviderResult.class), args == null ? GetIdentityProviderArgs.Empty : args, Utilities.withVersion(options));
     }

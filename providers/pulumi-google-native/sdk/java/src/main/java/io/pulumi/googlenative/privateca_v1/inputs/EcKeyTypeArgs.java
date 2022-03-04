@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.enums.EcKeyTypeSignatureAlgorithm;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signatureAlgorithm")
-    private final @Nullable Input<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
+      private final @Nullable Input<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
 
     public Input<EcKeyTypeSignatureAlgorithm> getSignatureAlgorithm() {
         return this.signatureAlgorithm == null ? Input.empty() : this.signatureAlgorithm;
@@ -66,7 +66,6 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.signatureAlgorithm = Input.ofNullable(signatureAlgorithm);
             return this;
         }
-
         public EcKeyTypeArgs build() {
             return new EcKeyTypeArgs(signatureAlgorithm);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.dataflow;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataflow.FlexTemplateJobArgs;
 import io.pulumi.gcp.dataflow.inputs.FlexTemplateJobState;
@@ -90,7 +90,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * that begin with `goog-dataflow-provided`. Unless explicitly set in config, these
      * labels will be ignored to prevent diffs on re-apply.
      * 
-     * @deprecated
+     * @Deprecated
      * Deprecated until the API supports this field
      * 
      */
@@ -204,6 +204,37 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FlexTemplateJobArgs.Builder a);
+    }
+    private static io.pulumi.gcp.dataflow.FlexTemplateJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.dataflow.FlexTemplateJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FlexTemplateJob(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FlexTemplateJob(String name) {
+        this(name, FlexTemplateJobArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FlexTemplateJob(String name, FlexTemplateJobArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,21 +39,21 @@ public final class ResourcePolicyHourlyCycleResponse {
     /**
      * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }
     /**
      * Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
      * 
-     */
+    */
     public Integer getHoursInCycle() {
         return this.hoursInCycle;
     }
     /**
      * Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
@@ -96,7 +96,6 @@ public final class ResourcePolicyHourlyCycleResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ResourcePolicyHourlyCycleResponse build() {
             return new ResourcePolicyHourlyCycleResponse(duration, hoursInCycle, startTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.endpoints.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,7 +86,6 @@ public final class ServiceApiMethod {
             this.syntax = syntax;
             return this;
         }
-
         public ServiceApiMethod build() {
             return new ServiceApiMethod(name, requestType, responseType, syntax);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TcpCheckResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -59,7 +59,6 @@ public final class TcpCheckResponse extends io.pulumi.resources.InvokeArgs {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public TcpCheckResponse build() {
             return new TcpCheckResponse(port);
         }

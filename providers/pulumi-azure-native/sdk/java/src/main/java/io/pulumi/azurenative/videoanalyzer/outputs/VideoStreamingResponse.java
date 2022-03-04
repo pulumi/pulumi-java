@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,7 +37,7 @@ public final class VideoStreamingResponse {
      * 
      * Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
      * 
-     */
+    */
     public Optional<String> getArchiveBaseUrl() {
         return Optional.ofNullable(this.archiveBaseUrl);
     }
@@ -66,7 +66,6 @@ public final class VideoStreamingResponse {
             this.archiveBaseUrl = archiveBaseUrl;
             return this;
         }
-
         public VideoStreamingResponse build() {
             return new VideoStreamingResponse(archiveBaseUrl);
         }

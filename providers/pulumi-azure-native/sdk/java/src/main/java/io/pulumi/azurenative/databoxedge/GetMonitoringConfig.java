@@ -6,21 +6,41 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.inputs.GetMonitoringConfigArgs;
 import io.pulumi.azurenative.databoxedge.outputs.GetMonitoringConfigResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMonitoringConfig {
-/**
- * The metric setting details for the role
+    private GetMonitoringConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetMonitoringConfigArgs.Builder a);
+    }
+    private static GetMonitoringConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMonitoringConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The metric setting details for the role
  * API Version: 2020-12-01.
  * 
- *
- * The metric setting details for the role
+     *
+     * The metric setting details for the role
  * 
- */
+     */
+    public static CompletableFuture<GetMonitoringConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The metric setting details for the role
+     * API Version: 2020-12-01.
+     * 
+     *
+         * The metric setting details for the role
+     * 
+     */
     public static CompletableFuture<GetMonitoringConfigResult> invokeAsync(GetMonitoringConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getMonitoringConfig", TypeShape.of(GetMonitoringConfigResult.class), args == null ? GetMonitoringConfigArgs.Empty : args, Utilities.withVersion(options));
     }

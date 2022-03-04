@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -47,28 +47,28 @@ public final class DataBoxDiskCopyProgressResponse {
     /**
      * Bytes copied during the copy of disk.
      * 
-     */
+    */
     public Double getBytesCopied() {
         return this.bytesCopied;
     }
     /**
      * Indicates the percentage completed for the copy of the disk.
      * 
-     */
+    */
     public Integer getPercentComplete() {
         return this.percentComplete;
     }
     /**
      * The serial number of the disk
      * 
-     */
+    */
     public String getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * The Status of the copy
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -118,7 +118,6 @@ public final class DataBoxDiskCopyProgressResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataBoxDiskCopyProgressResponse build() {
             return new DataBoxDiskCopyProgressResponse(bytesCopied, percentComplete, serialNumber, status);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.events.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class ConnectionApiKeyAuthParametersArgs extends io.pulumi.resource
     public static final ConnectionApiKeyAuthParametersArgs Empty = new ConnectionApiKeyAuthParametersArgs();
 
     @InputImport(name="apiKeyName", required=true)
-    private final Input<String> apiKeyName;
+      private final Input<String> apiKeyName;
 
     public Input<String> getApiKeyName() {
         return this.apiKeyName;
     }
 
     @InputImport(name="apiKeyValue", required=true)
-    private final Input<String> apiKeyValue;
+      private final Input<String> apiKeyValue;
 
     public Input<String> getApiKeyValue() {
         return this.apiKeyValue;
@@ -80,7 +80,6 @@ public final class ConnectionApiKeyAuthParametersArgs extends io.pulumi.resource
             this.apiKeyValue = Input.of(Objects.requireNonNull(apiKeyValue));
             return this;
         }
-
         public ConnectionApiKeyAuthParametersArgs build() {
             return new ConnectionApiKeyAuthParametersArgs(apiKeyName, apiKeyValue);
         }

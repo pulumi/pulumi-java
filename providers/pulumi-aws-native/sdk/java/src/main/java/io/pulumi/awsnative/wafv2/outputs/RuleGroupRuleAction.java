@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionAllowProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionBlockProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionCaptchaProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionCountProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -50,28 +50,28 @@ public final class RuleGroupRuleAction {
     /**
      * Allow traffic towards application.
      * 
-     */
+    */
     public Optional<RuleGroupRuleActionAllowProperties> getAllow() {
         return Optional.ofNullable(this.allow);
     }
     /**
      * Block traffic towards application.
      * 
-     */
+    */
     public Optional<RuleGroupRuleActionBlockProperties> getBlock() {
         return Optional.ofNullable(this.block);
     }
     /**
      * Checks valid token exists with request.
      * 
-     */
+    */
     public Optional<RuleGroupRuleActionCaptchaProperties> getCaptcha() {
         return Optional.ofNullable(this.captcha);
     }
     /**
      * Count traffic towards application.
      * 
-     */
+    */
     public Optional<RuleGroupRuleActionCountProperties> getCount() {
         return Optional.ofNullable(this.count);
     }
@@ -121,7 +121,6 @@ public final class RuleGroupRuleAction {
             this.count = count;
             return this;
         }
-
         public RuleGroupRuleAction build() {
             return new RuleGroupRuleAction(allow, block, captcha, count);
         }

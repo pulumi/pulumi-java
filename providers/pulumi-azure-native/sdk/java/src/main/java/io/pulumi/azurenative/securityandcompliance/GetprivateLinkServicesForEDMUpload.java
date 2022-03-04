@@ -6,21 +6,41 @@ package io.pulumi.azurenative.securityandcompliance;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityandcompliance.inputs.GetprivateLinkServicesForEDMUploadArgs;
 import io.pulumi.azurenative.securityandcompliance.outputs.GetprivateLinkServicesForEDMUploadResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetprivateLinkServicesForEDMUpload {
-/**
- * The description of the service.
+    private GetprivateLinkServicesForEDMUpload() {}
+    public interface BuilderApplicator {
+        public void apply(GetprivateLinkServicesForEDMUploadArgs.Builder a);
+    }
+    private static GetprivateLinkServicesForEDMUploadArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetprivateLinkServicesForEDMUploadArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The description of the service.
  * API Version: 2021-03-08.
  * 
- *
- * The description of the service.
+     *
+     * The description of the service.
  * 
- */
+     */
+    public static CompletableFuture<GetprivateLinkServicesForEDMUploadResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The description of the service.
+     * API Version: 2021-03-08.
+     * 
+     *
+         * The description of the service.
+     * 
+     */
     public static CompletableFuture<GetprivateLinkServicesForEDMUploadResult> invokeAsync(GetprivateLinkServicesForEDMUploadArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForEDMUpload", TypeShape.of(GetprivateLinkServicesForEDMUploadResult.class), args == null ? GetprivateLinkServicesForEDMUploadArgs.Empty : args, Utilities.withVersion(options));
     }

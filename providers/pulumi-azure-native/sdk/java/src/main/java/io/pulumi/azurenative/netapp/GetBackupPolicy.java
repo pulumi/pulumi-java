@@ -6,21 +6,41 @@ package io.pulumi.azurenative.netapp;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.netapp.inputs.GetBackupPolicyArgs;
 import io.pulumi.azurenative.netapp.outputs.GetBackupPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupPolicy {
-/**
- * Backup policy information
+    private GetBackupPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupPolicyArgs.Builder a);
+    }
+    private static GetBackupPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Backup policy information
  * API Version: 2020-12-01.
  * 
- *
- * Backup policy information
+     *
+     * Backup policy information
  * 
- */
+     */
+    public static CompletableFuture<GetBackupPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Backup policy information
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Backup policy information
+     * 
+     */
     public static CompletableFuture<GetBackupPolicyResult> invokeAsync(GetBackupPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getBackupPolicy", TypeShape.of(GetBackupPolicyResult.class), args == null ? GetBackupPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -6,21 +6,41 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.inputs.GetServiceArgs;
 import io.pulumi.azurenative.documentdb.outputs.GetServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetService {
-/**
- * Properties for the database account.
+    private GetService() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceArgs.Builder a);
+    }
+    private static GetServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Properties for the database account.
  * API Version: 2021-04-01-preview.
  * 
- *
- * Properties for the database account.
+     *
+     * Properties for the database account.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Properties for the database account.
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * Properties for the database account.
+     * 
+     */
     public static CompletableFuture<GetServiceResult> invokeAsync(GetServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getService", TypeShape.of(GetServiceResult.class), args == null ? GetServiceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigateway.inputs.ApiIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class ApiIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApiIamMemberArgs Empty = new ApiIamMemberArgs();
 
     @InputImport(name="api", required=true)
-    private final Input<String> api;
+      private final Input<String> api;
 
     public Input<String> getApi() {
         return this.api;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<ApiIamMemberConditionArgs> condition;
+      private final @Nullable Input<ApiIamMemberConditionArgs> condition;
 
     public Input<ApiIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -42,7 +42,7 @@ public final class ApiIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -55,7 +55,7 @@ public final class ApiIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -159,7 +159,6 @@ public final class ApiIamMemberArgs extends io.pulumi.resources.ResourceArgs {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public ApiIamMemberArgs build() {
             return new ApiIamMemberArgs(api, condition, member, project, role);
         }

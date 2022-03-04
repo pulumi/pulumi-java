@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ManagerSkuResponse {
     /**
      * Refers to the sku name which should be "Standard"
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -52,7 +52,6 @@ public final class ManagerSkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ManagerSkuResponse build() {
             return new ManagerSkuResponse(name);
         }

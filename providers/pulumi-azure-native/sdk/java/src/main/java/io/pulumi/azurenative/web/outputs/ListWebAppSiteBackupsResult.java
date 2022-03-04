@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.BackupItemResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,14 +33,14 @@ public final class ListWebAppSiteBackupsResult {
     /**
      * Link to next page of resources.
      * 
-     */
+    */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * Collection of resources.
      * 
-     */
+    */
     public List<BackupItemResponse> getValue() {
         return this.value;
     }
@@ -76,7 +76,6 @@ public final class ListWebAppSiteBackupsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListWebAppSiteBackupsResult build() {
             return new ListWebAppSiteBackupsResult(nextLink, value);
         }

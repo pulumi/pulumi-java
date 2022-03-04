@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -48,21 +48,21 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
     /**
      * A JObject containing Conda dependencies.
      * 
-     */
+    */
     public Optional<Object> getCondaDependencies() {
         return Optional.ofNullable(this.condaDependencies);
     }
     /**
      * The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
      * 
-     */
+    */
     public Optional<String> getInterpreterPath() {
         return Optional.ofNullable(this.interpreterPath);
     }
     /**
      * True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
      * 
-     */
+    */
     public Optional<Boolean> getUserManagedDependencies() {
         return Optional.ofNullable(this.userManagedDependencies);
     }
@@ -112,7 +112,6 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
             this.userManagedDependencies = userManagedDependencies;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponsePython build() {
             return new ModelEnvironmentDefinitionResponseResponsePython(baseCondaEnvironment, condaDependencies, interpreterPath, userManagedDependencies);
         }

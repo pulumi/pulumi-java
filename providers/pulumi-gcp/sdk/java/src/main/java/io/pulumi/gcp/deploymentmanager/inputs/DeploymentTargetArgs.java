@@ -4,7 +4,7 @@
 package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetConfigArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetImportArgs;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<DeploymentTargetConfigArgs> config;
+      private final Input<DeploymentTargetConfigArgs> config;
 
     public Input<DeploymentTargetConfigArgs> getConfig() {
         return this.config;
@@ -36,7 +36,7 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="imports")
-    private final @Nullable Input<List<DeploymentTargetImportArgs>> imports;
+      private final @Nullable Input<List<DeploymentTargetImportArgs>> imports;
 
     public Input<List<DeploymentTargetImportArgs>> getImports() {
         return this.imports == null ? Input.empty() : this.imports;
@@ -95,7 +95,6 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
             this.imports = Input.ofNullable(imports);
             return this;
         }
-
         public DeploymentTargetArgs build() {
             return new DeploymentTargetArgs(config, imports);
         }

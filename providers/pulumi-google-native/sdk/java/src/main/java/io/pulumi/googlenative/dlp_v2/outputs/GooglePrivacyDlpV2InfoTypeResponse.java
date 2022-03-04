@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,14 +31,14 @@ public final class GooglePrivacyDlpV2InfoTypeResponse {
     /**
      * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional version name for this InfoType.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
@@ -74,7 +74,6 @@ public final class GooglePrivacyDlpV2InfoTypeResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeResponse build() {
             return new GooglePrivacyDlpV2InfoTypeResponse(name, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LabelSelectorResponse {
     /**
      * Resource labels for this selector.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
@@ -53,7 +53,6 @@ public final class LabelSelectorResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public LabelSelectorResponse build() {
             return new LabelSelectorResponse(labels);
         }

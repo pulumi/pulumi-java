@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -66,49 +66,49 @@ public final class ListDisasterRecoveryConfigKeysResult {
     /**
      * Primary connection string of the alias if GEO DR is enabled
      * 
-     */
+    */
     public String getAliasPrimaryConnectionString() {
         return this.aliasPrimaryConnectionString;
     }
     /**
      * Secondary  connection string of the alias if GEO DR is enabled
      * 
-     */
+    */
     public String getAliasSecondaryConnectionString() {
         return this.aliasSecondaryConnectionString;
     }
     /**
      * A string that describes the AuthorizationRule.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * Primary connection string of the created namespace AuthorizationRule.
      * 
-     */
+    */
     public String getPrimaryConnectionString() {
         return this.primaryConnectionString;
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
-     */
+    */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * Secondary connection string of the created namespace AuthorizationRule.
      * 
-     */
+    */
     public String getSecondaryConnectionString() {
         return this.secondaryConnectionString;
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
-     */
+    */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }
@@ -179,7 +179,6 @@ public final class ListDisasterRecoveryConfigKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListDisasterRecoveryConfigKeysResult build() {
             return new ListDisasterRecoveryConfigKeysResult(aliasPrimaryConnectionString, aliasSecondaryConnectionString, keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

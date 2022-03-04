@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cognitiveservices.outputs;
 import io.pulumi.azurenative.cognitiveservices.outputs.CognitiveServicesAccountPropertiesResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.IdentityResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -93,70 +93,70 @@ public final class GetAccountResult {
     /**
      * Entity Tag
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The id of the created account
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of Cognitive Services account.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The Kind of the resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The location of the resource
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the created account
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of Cognitive Services account.
      * 
-     */
+    */
     public CognitiveServicesAccountPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The SKU of Cognitive Services account.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -248,7 +248,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(etag, id, identity, kind, location, name, properties, sku, tags, type);
         }

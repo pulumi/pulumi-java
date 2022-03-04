@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 import io.pulumi.azurenative.machinelearningservices.outputs.BatchEndpointResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -86,63 +86,63 @@ public final class GetBatchEndpointResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Service identity associated with a resource.
      * 
-     */
+    */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
      * 
-     */
+    */
     public BatchEndpointResponse getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
@@ -227,7 +227,6 @@ public final class GetBatchEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBatchEndpointResult build() {
             return new GetBatchEndpointResult(id, identity, kind, location, name, properties, systemData, tags, type);
         }

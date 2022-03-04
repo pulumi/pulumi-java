@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetClassicLoadBalancerArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public final class SpotFleetClassicLoadBalancersConfigArgs extends io.pulumi.res
     public static final SpotFleetClassicLoadBalancersConfigArgs Empty = new SpotFleetClassicLoadBalancersConfigArgs();
 
     @InputImport(name="classicLoadBalancers", required=true)
-    private final Input<List<SpotFleetClassicLoadBalancerArgs>> classicLoadBalancers;
+      private final Input<List<SpotFleetClassicLoadBalancerArgs>> classicLoadBalancers;
 
     public Input<List<SpotFleetClassicLoadBalancerArgs>> getClassicLoadBalancers() {
         return this.classicLoadBalancers;
@@ -58,7 +58,6 @@ public final class SpotFleetClassicLoadBalancersConfigArgs extends io.pulumi.res
             this.classicLoadBalancers = Input.of(Objects.requireNonNull(classicLoadBalancers));
             return this;
         }
-
         public SpotFleetClassicLoadBalancersConfigArgs build() {
             return new SpotFleetClassicLoadBalancersConfigArgs(classicLoadBalancers);
         }

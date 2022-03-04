@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorCriteriaArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     public static final SecurityProfileBehaviorArgs Empty = new SecurityProfileBehaviorArgs();
 
     @InputImport(name="criteria")
-    private final @Nullable Input<SecurityProfileBehaviorCriteriaArgs> criteria;
+      private final @Nullable Input<SecurityProfileBehaviorCriteriaArgs> criteria;
 
     public Input<SecurityProfileBehaviorCriteriaArgs> getCriteria() {
         return this.criteria == null ? Input.empty() : this.criteria;
@@ -33,14 +33,14 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="metric")
-    private final @Nullable Input<String> metric;
+      private final @Nullable Input<String> metric;
 
     public Input<String> getMetric() {
         return this.metric == null ? Input.empty() : this.metric;
     }
 
     @InputImport(name="metricDimension")
-    private final @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension;
+      private final @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension;
 
     public Input<SecurityProfileMetricDimensionArgs> getMetricDimension() {
         return this.metricDimension == null ? Input.empty() : this.metricDimension;
@@ -51,7 +51,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -62,7 +62,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="suppressAlerts")
-    private final @Nullable Input<Boolean> suppressAlerts;
+      private final @Nullable Input<Boolean> suppressAlerts;
 
     public Input<Boolean> getSuppressAlerts() {
         return this.suppressAlerts == null ? Input.empty() : this.suppressAlerts;
@@ -166,7 +166,6 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
             this.suppressAlerts = Input.ofNullable(suppressAlerts);
             return this;
         }
-
         public SecurityProfileBehaviorArgs build() {
             return new SecurityProfileBehaviorArgs(criteria, metric, metricDimension, name, suppressAlerts);
         }

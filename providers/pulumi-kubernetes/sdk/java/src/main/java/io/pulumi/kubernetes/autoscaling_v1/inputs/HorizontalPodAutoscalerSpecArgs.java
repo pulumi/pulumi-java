@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v1.inputs.CrossVersionObjectReferenceArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="maxReplicas", required=true)
-    private final Input<Integer> maxReplicas;
+      private final Input<Integer> maxReplicas;
 
     public Input<Integer> getMaxReplicas() {
         return this.maxReplicas;
@@ -35,7 +35,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="minReplicas")
-    private final @Nullable Input<Integer> minReplicas;
+      private final @Nullable Input<Integer> minReplicas;
 
     public Input<Integer> getMinReplicas() {
         return this.minReplicas == null ? Input.empty() : this.minReplicas;
@@ -46,7 +46,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scaleTargetRef", required=true)
-    private final Input<CrossVersionObjectReferenceArgs> scaleTargetRef;
+      private final Input<CrossVersionObjectReferenceArgs> scaleTargetRef;
 
     public Input<CrossVersionObjectReferenceArgs> getScaleTargetRef() {
         return this.scaleTargetRef;
@@ -57,7 +57,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetCPUUtilizationPercentage")
-    private final @Nullable Input<Integer> targetCPUUtilizationPercentage;
+      private final @Nullable Input<Integer> targetCPUUtilizationPercentage;
 
     public Input<Integer> getTargetCPUUtilizationPercentage() {
         return this.targetCPUUtilizationPercentage == null ? Input.empty() : this.targetCPUUtilizationPercentage;
@@ -146,7 +146,6 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
             this.targetCPUUtilizationPercentage = Input.ofNullable(targetCPUUtilizationPercentage);
             return this;
         }
-
         public HorizontalPodAutoscalerSpecArgs build() {
             return new HorizontalPodAutoscalerSpecArgs(maxReplicas, minReplicas, scaleTargetRef, targetCPUUtilizationPercentage);
         }

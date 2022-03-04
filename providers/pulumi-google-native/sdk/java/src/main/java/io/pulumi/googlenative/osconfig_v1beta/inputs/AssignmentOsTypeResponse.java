@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="osArchitecture", required=true)
-    private final String osArchitecture;
+      private final String osArchitecture;
 
     public String getOsArchitecture() {
         return this.osArchitecture;
@@ -32,7 +32,7 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="osShortName", required=true)
-    private final String osShortName;
+      private final String osShortName;
 
     public String getOsShortName() {
         return this.osShortName;
@@ -43,7 +43,7 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="osVersion", required=true)
-    private final String osVersion;
+      private final String osVersion;
 
     public String getOsVersion() {
         return this.osVersion;
@@ -102,7 +102,6 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
-
         public AssignmentOsTypeResponse build() {
             return new AssignmentOsTypeResponse(osArchitecture, osShortName, osVersion);
         }

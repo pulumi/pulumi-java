@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation", required=true)
-    private final Input<OccurenceAttestationArgs> attestation;
+      private final Input<OccurenceAttestationArgs> attestation;
 
     public Input<OccurenceAttestationArgs> getAttestation() {
         return this.attestation;
@@ -41,7 +41,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noteName", required=true)
-    private final Input<String> noteName;
+      private final Input<String> noteName;
 
     public Input<String> getNoteName() {
         return this.noteName;
@@ -53,7 +53,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,7 +64,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remediation")
-    private final @Nullable Input<String> remediation;
+      private final @Nullable Input<String> remediation;
 
     public Input<String> getRemediation() {
         return this.remediation == null ? Input.empty() : this.remediation;
@@ -77,7 +77,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final Input<String> resourceUri;
+      private final Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri;
@@ -181,7 +181,6 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
             return this;
         }
-
         public OccurenceArgs build() {
             return new OccurenceArgs(attestation, noteName, project, remediation, resourceUri);
         }
